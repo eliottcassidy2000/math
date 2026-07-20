@@ -1,0 +1,46 @@
+A MIXED-CHARGE P must fall in one of two cases. Test both structurally.
+
+CASE B -- charges of BOTH signs, none zero.  Then for c>0 and d<0 present,
+  taking |d| factors of charge c and c factors of charge d gives total charge 0,
+  so P^(c+|d|) HAS balanced monomials.  Do they cancel?
+   P=z + zb             E[P^m] m=1..6 = [0, 2, 0, 12, 0, 120]   first nonzero at m=2
+   P=z**2 + zb          E[P^m] m=1..6 = [0, 0, 6, 0, 0, 360]   first nonzero at m=3
+   P=z + zb**2          E[P^m] m=1..6 = [0, 0, 6, 0, 0, 360]   first nonzero at m=3
+   P=z**2 + zb**2       E[P^m] m=1..6 = [0, 4, 0, 144, 0, 14400]   first nonzero at m=2
+   P=z - zb             E[P^m] m=1..6 = [0, -2, 0, 12, 0, -120]   first nonzero at m=2
+   P=z**3 + zb          E[P^m] m=1..6 = [0, 0, 0, 24, 0, 0]   first nonzero at m=4
+   P=2*z + zb           E[P^m] m=1..6 = [0, 4, 0, 48, 0, 960]   first nonzero at m=2
+   P=z**2 - zb**2       E[P^m] m=1..6 = [0, -4, 0, 144, 0, -14400]   first nonzero at m=2
+   P=z**2 + z + zb      E[P^m] m=1..6 = [0, 2, 6, 12, 120, 480]   first nonzero at m=2
+   P=z**3 + zb**2       E[P^m] m=1..6 = [0, 0, 0, 0, 7200, 0]   first nonzero at m=5
+   P=z**2 + zb**3       E[P^m] m=1..6 = [0, 0, 0, 0, 7200, 0]   first nonzero at m=5
+
+CASE A -- P contains a CHARGE-0 part P0 (necessarily with E[P0]=0).
+  The natural candidates use P0 = z*zb - 1, or (z*zb)^2 - 2*z*zb, etc.
+   P0=z*zb - 1               +0     : E[P^m]=[0, 1, 2, 9, 44, 265]  first nz m=2
+   P0=z*zb - 1               +z     : E[P^m]=[0, 1, 2, 9, 44, 265]  first nz m=2
+   P0=z*zb - 1               +zb    : E[P^m]=[0, 1, 2, 9, 44, 265]  first nz m=2
+   P0=z*zb - 1               +z**2  : E[P^m]=[0, 1, 2, 9, 44, 265]  first nz m=2
+   P0=z*zb - 1               +z - zb: E[P^m]=[0, -1, -4, -15, -56, -185]  first nz m=2
+   P0=z*zb - 1               +z**3  : E[P^m]=[0, 1, 2, 9, 44, 265]  first nz m=2
+   P0=z**2*zb**2 - 2         +0     : E[P^m]=[0, 20, 592, 35088, 3252608, 437765440]  first nz m=2
+   P0=z**2*zb**2 - 2         +z     : E[P^m]=[0, 20, 592, 35088, 3252608, 437765440]  first nz m=2
+   P0=z**2*zb**2 - 2         +zb    : E[P^m]=[0, 20, 592, 35088, 3252608, 437765440]  first nz m=2
+   P0=z**2*zb**2 - 2         +z**2  : E[P^m]=[0, 20, 592, 35088, 3252608, 437765440]  first nz m=2
+   P0=z**2*zb**2 - 2         +z - zb: E[P^m]=[0, 18, 568, 33900, 3165528, 428064280]  first nz m=2
+   P0=z**2*zb**2 - 2         +z**3  : E[P^m]=[0, 20, 592, 35088, 3252608, 437765440]  first nz m=2
+   P0=z**2*zb**2 - 4*z*zb + 2 +0     : E[P^m]=[0, 4, 80, 4752, 440192, 59245120]  first nz m=2
+   P0=z**2*zb**2 - 4*z*zb + 2 +z     : E[P^m]=[0, 4, 80, 4752, 440192, 59245120]  first nz m=2
+   P0=z**2*zb**2 - 4*z*zb + 2 +zb    : E[P^m]=[0, 4, 80, 4752, 440192, 59245120]  first nz m=2
+   P0=z**2*zb**2 - 4*z*zb + 2 +z**2  : E[P^m]=[0, 4, 80, 4752, 440192, 59245120]  first nz m=2
+   P0=z**2*zb**2 - 4*z*zb + 2 +z - zb: E[P^m]=[0, 2, 80, 4524, 425272, 57653080]  first nz m=2
+   P0=z**2*zb**2 - 4*z*zb + 2 +z**3  : E[P^m]=[0, 4, 80, 4752, 440192, 59245120]  first nz m=2
+   P0=z**2*zb**2 + z*zb - 3  +0     : E[P^m]=[0, 29, 870, 53217, 5015892, 682851645]  first nz m=2
+   P0=z**2*zb**2 + z*zb - 3  +z     : E[P^m]=[0, 29, 870, 53217, 5015892, 682851645]  first nz m=2
+   P0=z**2*zb**2 + z*zb - 3  +zb    : E[P^m]=[0, 29, 870, 53217, 5015892, 682851645]  first nz m=2
+   P0=z**2*zb**2 + z*zb - 3  +z**2  : E[P^m]=[0, 29, 870, 53217, 5015892, 682851645]  first nz m=2
+   P0=z**2*zb**2 + z*zb - 3  +z - zb: E[P^m]=[0, 27, 840, 51609, 4892472, 668675355]  first nz m=2
+   P0=z**2*zb**2 + z*zb - 3  +z**3  : E[P^m]=[0, 29, 870, 53217, 5015892, 682851645]  first nz m=2
+
+CONCLUSION CHECK: any P above with ALL E[P^m]=0 and MIXED charge would refute
+the characterisation.  Scan the 'first nz' column for None on a mixed-charge row.

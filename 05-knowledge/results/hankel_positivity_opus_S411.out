@@ -1,0 +1,29 @@
+THE KEY STEP:  if P has all charges >= 0 and P is in the nullcone, then its
+charge-0 part P0 must VANISH -- so P is strictly charge-definite.
+
+Proof.  With only nonnegative charges present, the charge-0 part of P^2 can only
+come from P_q * P_{-q} with both present, i.e. q = 0.  So  E[P^2] = E[P0^2].
+Write P0 = sum_a c_a (z zbar)^a.  Then
+      E[P0^2] = sum_{a,b} c_a c_b (a+b)!  =  c^T H c,   H_{ab} = (a+b)!
+H is the HANKEL MOMENT MATRIX of the exponential distribution (moments a!),
+hence POSITIVE DEFINITE.  So E[P^2] = 0 forces c = 0, i.e. P0 = 0.  QED
+
+(i) H_{ab} = (a+b)! is positive definite -- eigenvalues for sizes 1..7:
+    N=1: min eigenvalue = 1   all > 0: True
+    N=2: min eigenvalue = 0.381966   all > 0: True
+    N=3: min eigenvalue = 0.136345   all > 0: True
+    N=4: min eigenvalue = 0.0529003   all > 0: True
+    N=5: min eigenvalue = 0.0226704   all > 0: True
+    N=6: min eigenvalue = 0.0104517   all > 0: True
+    N=7: min eigenvalue = 0.00508986   all > 0: True
+
+(ii) check E[P^2] = E[P0^2] on nonneg-charge examples, and that it is > 0:
+    P0=-z*zb + 1  E[P^2]=1  E[P0^2]=1  c^T H c=1  MATCH   E[P0]=0
+    P0=-z*zb + 2  E[P^2]=2  E[P0^2]=2  c^T H c=2  MATCH   E[P0]=1
+    P0=-z**2*zb**2 + 1  E[P^2]=21  E[P0^2]=21  c^T H c=21  MATCH   E[P0]=-1
+    P0=-2*z*zb + 3  E[P^2]=5  E[P0^2]=5  c^T H c=5  MATCH   E[P0]=1
+
+=> CONCLUSION: GMC(2) is PROVED for every P whose charges are all of ONE SIGN
+   (weakly).  Such P in the nullcone are strictly charge-definite, and the charge
+   lemma then gives E[Q P^m] = 0 for all m > (charge deficit of Q).
+   REMAINING: P with charges of BOTH signs -- verified exhaustively, not proved.

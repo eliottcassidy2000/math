@@ -1,0 +1,18 @@
+WHY n=4 ESCAPES THE n=2 ARGUMENT.
+The charge group is Z^(n/2): RANK 1 at n=2, RANK 2 at n=4.
+
+Vector-charge decomposition of the 4-term witness P' = (1+Z2)(W2 - Z1W1):
+   charge (0, -1):  z2b
+   charge (0, 0):  -z1*z1b + z2*z2b
+   charge (0, 1):  -z1*z1b*z2
+
+   charge-0 part P0 = -z1*z1b + z2*z2b   E[P0] = 0  (vanishes: |Z2|^2 and |Z1|^2 cancel)
+   E[P0^2] = 2   <- STRICTLY POSITIVE, as at n=2
+   2*E[P_(0,1) * P_(0,-1)] = -2   <- the OPPOSITE-CHARGE cross term
+   sum = 0   and directly E[P^2] = 0
+
+SO: at n=2 with SIGN-COHERENT charges there is NO opposite charge available, so
+    E[P^2] = E[P0^2] = c^T H c > 0 by Hankel positive-definiteness -- P0 must vanish.
+    At n=4 the charges (0,+1) and (0,-1) BOTH occur, and their cross term is
+    exactly -E[P0^2].  The extra rank of the charge lattice buys the cancellation.
+    THAT is the dimensional mechanism separating GMC(2) from GMC(4).

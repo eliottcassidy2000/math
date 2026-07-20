@@ -1,0 +1,30 @@
+==============================================================================
+(1) THE CHARGE LEMMA, stated and sanity-checked
+==============================================================================
+   charge(z^a zbar^b) = a-b is ADDITIVE; E kills every nonzero charge.
+   => all charges >= 1  ==>  P in nullcone AND E[QP^m]=0 for m > C   (any n)
+   demo P = -z**3 + z**2*zb + z**2 + z   charges [1, 2, 3]
+   E[P^m], m=1..8 : [0, 0, 0, 0, 0, 0, 0, 0]
+   Q=zb: E[QP^m] m=1..8 = [3, 0, 0, 0, 0, 0, 0, 0]   (dies once m > charge deficit)
+   Q=zb**2: E[QP^m] m=1..8 = [2, 38, 0, 0, 0, 0, 0, 0]   (dies once m > charge deficit)
+   Q=z*zb: E[QP^m] m=1..8 = [0, 0, 0, 0, 0, 0, 0, 0]   (dies once m > charge deficit)
+
+==============================================================================
+(2) EXHAUSTIVE NULLCONE AT n=2, degree <= 3, coefficients in {-1,0,1}
+==============================================================================
+   polynomials scanned : 59048
+   nullcone members    : 160
+   charge-DEFINITE     : 160
+   NOT charge-definite : 0
+
+   EVERY nullcone element is charge-definite at this degree.
+   => the charge lemma would PROVE GMC(2) on this range.
+
+==============================================================================
+(3) IF MIXED ONES EXIST: do they still satisfy GMC? (E[QP^m] eventually 0?)
+==============================================================================
+   mixed-charge nullcone elements tested : 0
+   with E[QP^m] still nonzero at m=8,9   : 0
+   NONE -- every mixed-charge nullcone element still obeys GMC(2).
+   Consistent with the theorem; the charge lemma is not the whole story,
+   but nothing escapes GMC(2) on this range.

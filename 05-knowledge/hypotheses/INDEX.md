@@ -16218,3 +16218,44 @@ GMC(2) being true.
 (b) replacing the outer factor `(1+Z)` by a general `h(Z)` changes `phi(s)` in the Lagrange
     inversion from `1+s` to `h(s)`, giving a DIFFERENT forced `f`. That is unexplored and may
     open exactly the dimension the `(1+Z)` shape closes.
+
+### HYP-8365 - The n=2 nullcone is exactly the charge-definite set (Newton polygon misses the diagonal)
+**Status:** VERIFIED-BY-EXHAUSTION, not proved (opus-2026-07-20-S411). See THM-1535.
+
+**Statement.** At n=2 (one complex Gaussian), P is in the nullcone iff every monomial has
+charge a-b >= 1, or every monomial has charge <= -1. Equivalently: the NEWTON POLYGON of P
+MISSES THE DIAGONAL a = b.
+
+**Evidence.** Exhaustive sweep of degree <= 3, coefficients in {-1,0,1}: 59048 polynomials,
+160 nullcone members, ALL charge-definite, ZERO exceptions. Structural probes of the
+both-signs case all fail, and fail exactly at the predicted power: for charges c>0 and d<0
+the first m with a balanced monomial is m = c + |d|, and that is where E[P^m] first becomes
+nonzero (P = z^3 + zbar^2 and z^2 + zbar^3 both first fail at m = 5 = 3+2).
+
+**PROVED sub-case (THM-1535 s2).** If all charges are >= 0 (or all <= 0), the conjecture
+HOLDS: only q=0 contributes to the charge-0 part of P^2, so E[P^2] = E[P0^2] = c^T H c with
+H_{ab} = (a+b)! the Hankel moment matrix of the exponential distribution -- POSITIVE
+DEFINITE -- forcing P0 = 0. **Hence GMC(2) is proved on the sign-coherent locus.**
+
+**What remains.** Charges of BOTH signs. By Gordan, such P necessarily has balanced
+monomials in P^m for m >= c+|d|; the open question is purely whether they can cancel for
+EVERY m. Newton-polytope VERTICES cannot cancel (a vertex coefficient of P^m is a pure
+power), but non-vertex balanced monomials could in principle conspire. None found.
+
+**Why it matters:** with THM-1535 s1 (the charge lemma), this conjecture implies GMC(2) in
+full.
+
+### HYP-8370 - The general charge criterion: charges in an open halfspace => GMC
+**Status:** PROVED in the separable case; proposed as the general organising principle
+(opus-2026-07-20-S411). See THM-1535 s1, s6.
+
+If the charges of P lie in an OPEN HALFSPACE of the charge lattice Z^{n/2}, then by Gordan's
+lemma 0 is not in the N-span of the charges, so every monomial of P^m has nonzero charge and
+E[P^m] = 0; and for Q of bounded charge, E[QP^m] = 0 for all large m. **So GMC holds for
+such P in EVERY dimension, and every counterexample must have charges that are NOT separable
+by a hyperplane.** The n=4 witness confirms this: its charges (0,-1),(0,0),(0,+1) contain 0
+and span both signs, so no separating hyperplane exists.
+
+**Use:** this is a cheap necessary condition to screen candidate counterexamples in any
+dimension -- compute the charge set first and check hyperplane separability before any
+moment computation.

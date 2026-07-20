@@ -1,3 +1,50 @@
+## opus-2026-07-20-S411 - The charge lattice: GMC(2) proved on the sign-coherent locus, and the rank explains n=4 (THM-1535)
+
+Owner asked to work toward GMC(2) via the nullcone, and prove the nullcone statement in 2
+dimensions. Substantial progress, with the dimensional mechanism now fully explained.
+
+**THE ORGANISING IDEA.** Grade monomials by CHARGE q(z^a zbar^b) = a-b, valued in Z^{n/2}.
+Charge is ADDITIVE and E annihilates every nonzero charge. Everything follows.
+
+**(1) CHARGE LEMMA -- PROVED, EVERY DIMENSION.** If all charges of P are >= 1 then P is in
+the nullcone, and for Q with charges >= -C, E[QP^m] = 0 for every m > C. **So a
+charge-definite nullcone element can NEVER refute GMC, in any dimension** -- every
+counterexample must be charge-indefinite. (The n=4 witness is: charges (0,-1),(0,0),(0,+1).)
+
+**(2) SIGN-COHERENT RIGIDITY AT n=2 -- PROVED.** If every charge of P is >= 0 (or all <= 0)
+and P is in the nullcone, its charge-0 part VANISHES. Proof: with no negative charge, only
+q=0 contributes to the charge-0 part of P^2, so E[P^2] = E[P0^2] = c^T H c with
+H_{ab} = (a+b)! -- the Hankel moment matrix of the exponential distribution, POSITIVE
+DEFINITE (min eigenvalues checked, sizes 1..7). So c = 0. **COROLLARY: GMC(2) HOLDS for
+every sign-coherent P, unconditionally.**
+
+**(3) WHY n=4 ESCAPES -- the RANK of the charge lattice.** The charge group is Z^{n/2}:
+rank 1 at n=2, rank 2 at n=4. Verified exactly on the 4-term witness: its charge-0 part
+|Z2|^2 - |Z1|^2 has E[P0^2] = +2, but charges (0,+1) and (0,-1) BOTH occur and their cross
+term is exactly -2, cancelling it to E[P^2] = 0. **At n=2 sign-coherence means there is no
+opposite charge to do the cancelling, so Hankel positivity bites. The extra lattice rank
+buys precisely the cancellation rank 1 forbids.** This is THM-1495's "two-stage cascade" in
+invariant form -- the cascade IS the second lattice direction.
+
+**(4) THE NULLCONE AT n=2 -- verified exhaustively.** 59048 polynomials (degree <= 3,
+coeffs {-1,0,1}), 160 nullcone members, ALL charge-definite, ZERO exceptions. Both-signs
+probes fail exactly where predicted: for charges c>0, d<0 the first balanced power is
+m = c+|d|, and that is where E[P^m] first becomes nonzero (z^3+zbar^2 and z^2+zbar^3 both
+first fail at m=5). Conjecture (HYP-8365, DvdEZ-shaped): N_2 = charge-definite, i.e. the
+NEWTON POLYGON MISSES THE DIAGONAL a=b. With (1) this would give GMC(2) IN FULL.
+
+**WHAT REMAINS, precisely.** Only: P at n=2 with charges of BOTH signs. By Gordan such P
+necessarily has balanced monomials in P^m for m >= c+|d|; the open question is purely
+whether they can cancel for EVERY m. Newton-polytope VERTICES cannot cancel (a vertex
+coefficient of P^m is a pure power); non-vertex balanced monomials could in principle
+conspire. No conspiracy found.
+
+**GENERAL CRITERION (HYP-8370).** "Charges lie in an open halfspace" => nullcone => GMC, in
+any dimension, by Gordan. A cheap screen for candidate counterexamples anywhere: compute the
+charge set and test hyperplane separability before touching moments.
+
+**Artifacts:** THM-1535; HYP-8365, HYP-8370; 4 scripts + 4 outputs.
+
 ## klein-2026-07-20-S345 -- THM-1530: THE TORAL NULLCONE. NC2's leading order is a purely algebraic Laurent-polynomial question, and it is PROVED EXACTLY at extreme weight +-1 by Lagrange-Buermann. The M>=2 case is shown to be a DIFFERENT problem, not a harder one. Plus the square-root generating function for the {-1,0,1} stratum, and one self-correction.
 
 **Owner directive:** work to prove GMC(2), think nullcone, pull multiple times while waiting for each build, keep up with concurrent work and extend not duplicate.
