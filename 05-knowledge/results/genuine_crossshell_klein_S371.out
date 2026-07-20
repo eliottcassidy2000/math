@@ -1,0 +1,63 @@
+======================================================================================
+GENUINE LOCKED CROSS-SHELL: P = alpha Z^3 + beta Zb + gamma Z (top +3 one-sided, h=1 straddles)
+======================================================================================
+ (the assert h%2==0 inside E_locked VERIFIES the lock: charge balance => even radius power)
+
+   E[P^1] = 0
+   E[P^2] = 2*beta*gamma
+   E[P^3] = 0
+   E[P^4] = 24*alpha*beta**3 + 12*beta**2*gamma**2
+   E[P^5] = 0
+   E[P^6] = 720*alpha*beta**4*gamma + 120*beta**3*gamma**3
+   E[P^7] = 0
+   E[P^8] = 20160*alpha**2*beta**6 + 20160*alpha*beta**5*gamma**2 + 1680*beta**4*gamma**4
+
+ Note E[P^m] = 0 for m NOT divisible by... charge balance 3k1 - k2 + k3 = 0 with k1+k2+k3=m
+ forces m even; and it is a polynomial in (alpha,beta,gamma) with INTEGER coefficients (no
+ sqrt(pi)) -- the lock at work.
+
+ Groebner basis size = 2;  beta^k in ideal (=> variety in {beta=0} = one-sided): False
+ => a two-sided (beta != 0) nullcone member exists: True
+    OPEN
+
+======================================================================================
+CORRECTION: the one-sided locus is {beta=0} UNION {alpha=0 AND gamma=0}, NOT {beta=0}
+======================================================================================
+ P = alpha Z^3 + beta Zb + gamma Z is one-sided iff its charge support is single-signed:
+   all >0: beta = 0 (charge -1 absent);   all <0: alpha = gamma = 0 (charges +3,+1 absent).
+ So one-sided locus = V(beta) U V(alpha,gamma) = V(<beta*alpha, beta*gamma>).
+ NO two-sided nullcone member  <=>  V(I) subset one-sided locus  <=>  (beta*alpha)^k and
+ (beta*gamma)^k both lie in I.  (My first run tested only beta^k -- wrong predicate,
+ the same S357/S363 error.)  Correct test:
+
+   (beta*gamma)^k in I : YES at k=1
+   (beta*alpha)^k in I : YES at k=3
+
+ => V(I) subset one-sided locus: True
+    CLOSED: genuine locked cross-shell P=aZ^3+bZb+cZ has NO two-sided nullcone member
+
+ So the genuine cross-shell descent CLOSES here, by integer-moment elimination (no sqrt(pi)),
+ with the CORRECT one-sided predicate.  The mechanism, stated: E[P^2] = 2 beta gamma kills the
+ h=1 straddle pair first (charge +-1), then E[P^4] = 24 alpha beta^3 + 12 beta^2 gamma^2 forces
+ the top shell -- a clean triangular descent from the LOW shell up, opposite to the DvdK
+ top-down direction, which is exactly why the 'top one-sided' configuration is not a real
+ obstruction: the descent runs from the straddling bottom.
+
+======================================================================================
+THE COMPLEX RADIAL (beta-dominant, THM-1670) is the SAME integer-moment nullcone
+======================================================================================
+ On the {-1,0,1} span with alpha = r a c, beta = b, E[P^m] = E_r[L_m(alpha,beta)] with
+ INTEGER moments E_r[r^k] = k! (locked: charge +-1 pair to r).  death-star-S65's pinch
+ locus gamma = r b'^2 < 0 => complex branch: the branch is off the REAL axis, so no real
+ flat term -- but the nullcone is still the same integer-moment elimination.  Fixed alpha=r,
+ beta = b(r), the sign-indefinite/complex case, closed by elimination for deg b <= 3 (THM-1660);
+ here confirm it also closes with a NON-monomial two-sided alpha (a,c non-constant):
+
+   alpha = r(1+r) (non-monomial, two-sided), beta = b0+b1 r:
+   Groebner basis = [1]  -> EMPTY <1>: no b is a nullcone member
+
+ So the complex-radial (beta-dominant) case closes by the SAME integer-moment elimination as the
+ real-radial case -- the real/complex branch distinction (THM-1670) governs the ANALYTIC flat-
+ term route, but the ALGEBRAIC elimination route is blind to it and closes both.  That is the
+ practical resolution of the complex radial at bounded degree.
+

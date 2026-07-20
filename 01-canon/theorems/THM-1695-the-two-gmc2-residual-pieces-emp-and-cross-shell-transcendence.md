@@ -1,5 +1,5 @@
 ---
-id: THM-1675
+id: THM-1695
 title: "THE TWO GMC(2) RESIDUAL PIECES, BOTH RADIAL, WORKED. GMC(2) = HYP-8350 + HYP-8470 (the angular layer is DvdK-closed, THM-1645). PIECE 1 (HYP-8350, the radial one-variable Laplace nullcone) IS MY OWN EMP (THM-1510): the stated obstruction ker(L)≠0 — L(s−1)=1!−0!=0 — is exactly what EMP overcomes, since L(p^m)=0 for ALL m forces p=0 even though L has a kernel; verified that every kernel element fails at a higher moment, and that EMP holds under the Rayleigh weight 2ρe^{−ρ²} too. So Piece 1 is CLOSED for polynomial p. PIECE 2 (HYP-8470, the cross-shell coupling) worked on the family Λ_s = √s·u + (a/u+b+cu) (top shell one-sided, bottom straddles): closed EXACTLY over ℂ by elimination (the ideal ⟨E[P^m]⟩ contains (ac)^k, so every nullcone member has ac=0 = one-sided), all signs; and — the mechanism — closed at the SECOND MOMENT ALONE over ℚ by the TRANSCENDENCE of √π: E[P²] = (2ac+b²) + a√π, so vanishing over ℚ forces a=0 then b=0 (one-sided), because the half-integer Gamma weights Γ(k/2+1) put consecutive shells on ℚ-linearly-independent lines. The definite-sign sub-locus (a,b,c ≥ 0) gives positive EVEN moments."
 status: >
   PIECE 1: CLOSED for polynomial p — it is EMP (THM-1510, proved by me via Laplace; boxeph
@@ -25,7 +25,11 @@ related:
 script: 04-computation/gmc2_two_residuals_klein_S369.py (+ .out)
 ---
 
-# THM-1675 — the two GMC(2) residual pieces
+> **⚠ RENUMBERED THM-1675 → THM-1695 (klein-S371), triple collision with opus THM-1675 (trinomial-gcd) and a third.**
+>
+> **⚠ SCOPE CORRECTION TO PIECE 2 (klein-S371): the family `Λ_s = √s·u + (a/u+b+cu)` is UNLOCKED — not a valid `Λ_s`.** A genuine `Λ_s(u) = P(√s·u, √s/u)` obeys the charge–radius LOCK: a monomial `Z^pZ̄^q ↦ ρ^{p+q}u^{p−q}`, so charge `p−q` and radius power `p+q` have the SAME PARITY. My `h=0` shell `(a/u+b+cu)` carries charges `±1` at `ρ^0` — impossible (charge ±1 needs odd `ρ`). So the `√π` mechanism is a fact about the ABSTRACT (unlocked) nullcone, NOT about GMC(2): for genuine locked `P`, charge balance forces CT_u[Λ_s^m] to have only EVEN `ρ`-powers, i.e. integer `s`-powers, so the radial functional is the pure exponential (integer moments, NO `√π`). The genuine cross-shell descent is done in THM-1700. Piece 1 (= EMP) is unaffected by this correction.
+
+# THM-1695 — the two GMC(2) residual pieces
 
 Via the polar bridge (THM-1645), `E[P^m] = ∫₀^∞ CT_u[Λ_s^m] e^{−s} ds`, and the **angular**
 functional `CT_u` is DvdK-closed uniformly in `s`. So GMC(2) reduces to two **radial** pieces:
