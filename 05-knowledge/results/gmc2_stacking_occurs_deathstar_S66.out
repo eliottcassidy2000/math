@@ -1,0 +1,23 @@
+[b=r^2] b=[0, 0, 1.0]: self-intersections of (g,phi) [=(gamma, 1/t_*)] with r1!=r2:
+   => no real self-intersection found in scan.
+[b=r+r^2] b=[0, 1.0, 1.0]: self-intersections of (g,phi) [=(gamma, 1/t_*)] with r1!=r2:
+   => no real self-intersection found in scan.
+[b=r^3] b=[0, 0, 0, 1.0]: self-intersections of (g,phi) [=(gamma, 1/t_*)] with r1!=r2:
+   => no real self-intersection found in scan.
+[b=r-0.3r^3] b=[0, 1.0, 0, -0.3]: self-intersections of (g,phi) [=(gamma, 1/t_*)] with r1!=r2:
+    r1=0.393, r2=0.55: gamma=0.291, phi=-0.302  => STACKED (same gamma, same fold t_*=1/phi)
+    r1=0.55, r2=0.394: gamma=0.291, phi=-0.3006  => STACKED (same gamma, same fold t_*=1/phi)
+    r1=0.446, r2=0.496: gamma=0.301, phi=-0.313  => STACKED (same gamma, same fold t_*=1/phi)
+    r1=0.496, r2=0.446: gamma=0.301, phi=-0.3129  => STACKED (same gamma, same fold t_*=1/phi)
+   => STACKING OCCURS: 4 distinct real self-crossing(s). Edge NOT empty for this b.
+[b=2r-r^2+0.1r^3] b=[0, 2.0, -1.0, 0.1]: self-intersections of (g,phi) [=(gamma, 1/t_*)] with r1!=r2:
+    r1=0.085, r2=5.248: gamma=0.285, phi=-0.1484  => STACKED (same gamma, same fold t_*=1/phi)
+    r1=5.248, r2=0.085: gamma=0.285, phi=-0.1457  => STACKED (same gamma, same fold t_*=1/phi)
+    r1=0.763, r2=5.236: gamma=0.321, phi=-0.0008  => STACKED (same gamma, same fold t_*=1/phi)
+    r1=5.236, r2=0.763: gamma=0.32, phi=0.002  => STACKED (same gamma, same fold t_*=1/phi)
+    r1=0.291, r2=0.451: gamma=0.606, phi=-0.3401  => STACKED (same gamma, same fold t_*=1/phi)
+    r1=0.451, r2=0.291: gamma=0.606, phi=-0.3379  => STACKED (same gamma, same fold t_*=1/phi)
+   => STACKING OCCURS: 16 distinct real self-crossing(s). Edge NOT empty for this b.
+
+Note: g'=b'(b'+2rb''), phi'=-(b'+2rb''), so g'=-b'*phi' => the curve (g,phi) is generically immersed
+and self-intersects (transversal, distinct slopes -b'(r1)!=-b'(r2)). So stacking is generic, not empty.

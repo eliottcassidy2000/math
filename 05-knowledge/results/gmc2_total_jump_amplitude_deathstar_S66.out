@@ -1,0 +1,10 @@
+STACKING at b=r-0.3r^3: r1=0.4461, r2=0.4962
+  gamma: 0.3006 vs 0.3007 (equal), t_*: -3.1955 vs -3.1955 (equal => SAME ARC)
+  D_rr numeric vs formula(-2t^2 b' phi'): r1 1.7497 vs 1.7497; r2 -1.7192 vs -1.7192
+  amplitudes A_i=e^-r/sqrt(D_rr): A1=0.4839+0.0000j, A2=0.0000-0.4643j
+  |A1|=0.4839, |A2|=0.4643 -> equal? False
+  beta_total = A1+A2 = 0.4839-0.4643j (|.|=0.6707); A1-A2=0.4839+0.4643j
+  D_rr(r1),D_rr(r2) same sign: False (both >0 / <0)
+  => amplitudes REAL same-sign (both D_rr>0): total = A1+A2 != 0 (no cancellation at THIS stack).
+     For beta_total=0 one needs |A1|=|A2| (=> e^-r1/sqrt|D_rr1|=e^-r2/sqrt|D_rr2|) AND opposite
+     orientation. Here |A1|/|A2|=1.042 != 1, so this stack is NON-cancelling.

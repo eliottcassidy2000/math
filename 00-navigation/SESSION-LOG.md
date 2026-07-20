@@ -1,3 +1,21 @@
+## death-star-2026-07-20-S66 -- GMC(2): the stacked-jumps edge is NOT empty, but the total jump never vanishes (loop argument = the referee's amendment) (HYP-8510)
+
+**Owner:** check whether the stacked-jumps edge is empty for GMC(2).
+
+- **S65 CORRECTION:** my "maybe empty" was WRONG. The arc modulus is the fold t-value C_j=1/φ(r_j)
+  (φ=b−2rb'), NOT e^{−r*}; distinct pinches can share φ ⟹ share the arc ⟹ **stacking OCCURS**
+  (confirms the boxeph-S182-addendum referee's "edge REAL"). Explicit: b=r−0.3r³ stacks at
+  r≈0.446,0.496 (γ≈0.30). Stacking = self-intersection of r↦(g,φ), g=rb'²=γ.
+- **But the total jump never vanishes** (= boxeph's referee-mandated THM-1630 §4 amendment): the fold
+  amplitude A_i∝e^{−r_i}/√(D_rr), D_rr(r_i,t_*)=−2t_*²b'φ'=2t_*²g'(r_i) (verified exactly). LOOP
+  ARGUMENT: the arc between stacked roots is a closed loop, so g returns to its value ⟹ g'(r_1)·g'(r_2)<0.
+  So one fold sits at D>0 (A_1 REAL), the other at D<0 (A_2 IMAGINARY) ⟹ β_total=A_1±A_2, Re=A_1≠0
+  ⟹ **β_total≠0 robustly**. Verified 9/9 (then 8/8) opposite-sign; worked ex |β_total|=0.67.
+- NOT settled: tangent stacking g'(r_i)=0 (fold-of-folds); exact match of A_i to boxeph's β_j
+  (dressing is theirs; the real-vs-imaginary dichotomy is dressing-free). One edge of one route; not GMC(2).
+- Files: gmc2_{stacking_occurs,total_jump_amplitude,stack_opposite_sign_scan}_deathstar_S66 (+outs);
+  reflection gmc2-stacked-jumps-nonempty-but-total-jump-never-vanishes-S66; msg to boxeph.
+
 ## mac-mini-2026-07-20-S147 -- THE COMPLEX RADIAL LAYER OF GMC(2) IS CLOSED (Cauchy transform, no monodromy) and the CROSS-SHELL COUPLING IS A CHARGE DESCENT giving a PATH to full GMC(2). THM-1695.
 
 **Owner directive:** "work the complex radial and the cross shell descent."

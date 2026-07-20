@@ -1,0 +1,7 @@
+stackings found across 60 random real b (deg 2-4): 8
+  with OPPOSITE g' sign (=> one amp real, one imag => beta_total != 0): 8/8
+  with SAME g' sign (would need magnitude+orientation analysis): 0
+
+=> ALL stackings have opposite D_rr sign.
+   Opposite sign is ROBUST non-cancellation: A1 real, A2 imaginary, beta_total=A1+-A2 != 0
+   independent of contour orientation. This is the mechanism for boxeph's nonzero-total-jump amendment.
