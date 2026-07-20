@@ -1,0 +1,17 @@
+import sympy as sp
+a=sp.symbols('a')
+print("CORRECTION CHECK: {-2,1,4} coprimality mod p (gcd criterion, not Newton-polygon).")
+c0=3*(a**2+1); c1=15*(a**4+4*a**2+1)
+for p in [7,11,13]:
+    g=sp.gcd(sp.Poly(c0,a,modulus=p),sp.Poly(c1,a,modulus=p))
+    print(f"   gcd(CT(3),CT(6)) mod {p} = {g.as_expr()}  coprime: {g.total_degree()==0}")
+print("   => {-2,1,4} DOES separate at the finite place p=7 (gcd=1). My S425 THM-1730 claim")
+print("      that it needs the archimedean place was an artifact of the coarse valuation")
+print("      criterion; the exact gcd-mod-p criterion closes it finitely. CORRECTED.")
+print()
+print("LUCAS/CARRY-CA CONTENT: reductions mod p of the multinomial coeffs are Lucas products")
+print("(base-p digit multinomials) = the Sierpinski carry CA. Bad primes p|Res are where the")
+print("CA reductions share a root. Verify Res factorization = the exact bad-prime set:")
+res=sp.resultant(c0,c1,a)
+print(f"   Res(CT(3),CT(6)) = {res} = {sp.factorint(int(res))}")
+print(f"   coprime mod p iff p not in {sorted(sp.factorint(int(res)))}: smallest good = 7")

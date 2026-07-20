@@ -17070,6 +17070,32 @@ checking whether the two share a lemma.
 **Related:** THM-1685, THM-1680, THM-1655, THM-1635, THM-415 (vanishing sums), THM-1535
 (GMC cascade), HYP-8450 (JC monodromy vanishing sums), HYP-8495 (trinomial uniform).
 
+### HYP-8535 - Carry/height bound on the resultant's bad primes (uniform finite-place TNC)
+**Status:** OPEN; finite-place half PROVED per-pattern (opus-2026-07-20-S426). See THM-1735.
+
+THM-1735 closes the finite-place half: for a tunable trinomial, CT(m0), CT(2m0) are coprime
+mod EVERY prime p not dividing Res_a(CT(m0),CT(2m0)); since Res != 0 (THM-1680), all but
+finitely many primes separate, with an explicit smallest good prime (7,3,11,... in the sweep).
+The reductions mod p are LUCAS products = the Sierpinski carry CA (HYP-2491); bad primes are
+exactly the resultant's prime factors.
+
+**UNIFORM target.** Bound the prime factors of Res(CT(m0),CT(2m0)) by the charge data (N;j,d):
+Res = prod(alpha_i - beta_j) over roots of the two levels, each an algebraic multinomial-ratio;
+a Kummer/Lucas HEIGHT estimate would give p <= f(j,d,N), making the good prime explicit in the
+pattern and closing the finite-place half UNIFORMLY (not just per-pattern). This is the carry
+bound the Sierpinski-CA owners (HYP-2491/2497) could supply.
+
+**k-nomial:** the (k-1) levels are coprime (empty variety) mod every p not dividing the
+elimination resultant; same Lucas/carry-CA reductions.
+
+**Merge:** kind-pasteur THM-1720's APPARENT-factor residual (no positive integer root) and this
+resultant's bad primes are the SAME obstruction from the recurrence side and the coefficient
+side; a joint desingularization closes both. The shared object is the mu_M x mu_N branch
+monodromy (roots of unity).
+
+**Related:** THM-1735, THM-1730 (corrected), THM-1680/1710, kind-pasteur THM-1720, HYP-8530,
+HYP-2491/2497 (carry CA).
+
 ### HYP-8530 - Adelic TNC: CT(m0) and CT(2m0) always differ at some place (finite Kummer-CA or archimedean amoeba)
 **Status:** OPEN, verified on all tunable trinomials (opus-2026-07-20-S425). See THM-1730.
 

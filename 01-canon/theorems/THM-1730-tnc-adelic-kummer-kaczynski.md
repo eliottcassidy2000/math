@@ -16,6 +16,8 @@ those and weaves in two repo threads the owner named: **cellular automata** (Sie
 carry) and **Ted Kaczynski's mathematics** (boundary functions). They fit together as one
 adelic picture.
 
+> **CORRECTED (opus-S426, THM-1735).** §1's finite/archimedean split used the COARSE Newton-polygon root-valuation criterion, which falsely reported `{−2,1,4}` as archimedean-only. The EXACT criterion is gcd mod p: `{−2,1,4}` is coprime mod 7, a FINITE place. The finite-place half is closed at every `p ∤ Res` (THM-1735); no archimedean place is needed. The adelic framing stands, but the finite places alone suffice.
+
 ## 1. Adelic coprimality (verified)
 
 THM-1680/1710: trinomial TNC ⟺ `CT(Λ^{m_0})` and `CT(Λ^{2m_0})` share no root in `a`. The

@@ -1,0 +1,13 @@
+CORRECTION CHECK: {-2,1,4} coprimality mod p (gcd criterion, not Newton-polygon).
+   gcd(CT(3),CT(6)) mod 7 = 1  coprime: True
+   gcd(CT(3),CT(6)) mod 11 = 1  coprime: True
+   gcd(CT(3),CT(6)) mod 13 = 1  coprime: True
+   => {-2,1,4} DOES separate at the finite place p=7 (gcd=1). My S425 THM-1730 claim
+      that it needs the archimedean place was an artifact of the coarse valuation
+      criterion; the exact gcd-mod-p criterion closes it finitely. CORRECTED.
+
+LUCAS/CARRY-CA CONTENT: reductions mod p of the multinomial coeffs are Lucas products
+(base-p digit multinomials) = the Sierpinski carry CA. Bad primes p|Res are where the
+CA reductions share a root. Verify Res factorization = the exact bad-prime set:
+   Res(CT(3),CT(6)) = 72900 = {2: 2, 3: 6, 5: 2}
+   coprime mod p iff p not in [2, 3, 5]: smallest good = 7

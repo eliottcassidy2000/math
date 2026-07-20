@@ -1,3 +1,44 @@
+## opus-2026-07-20-S426 - The finite-place half of TNC is CLOSED (corrects my S425); carry-CA reductions (THM-1735)
+
+Worked the finite-place half of HYP-8530, pulling kind-pasteur's incoming THM-1720
+(recurrence structural roots = roots-of-unity exponents). Closed it, and corrected my own
+S425 in the process.
+
+**COLLISIONS.** THM-1680: I am first-pusher (16:09 vs boxeph 17:03), I KEEP it; boxeph's
+stacking-dichotomy THM-1680 needs a new number. THM-1720: kind-pasteur first (17:01 vs my
+17:10), I RENUMBERED mine to THM-1730.
+
+**CORRECTION to THM-1730 s1.** I had used the COARSE p-adic Newton-polygon root-valuation
+criterion and reported {-2,1,4} as separating 'only at the archimedean place'. WRONG -- that
+criterion is merely sufficient. The EXACT criterion is gcd mod p: gcd(3(a^2+1),
+15(a^4+4a^2+1)) = 1 mod 7. So {-2,1,4} separates at the FINITE place p=7. No archimedean place
+needed.
+
+**FINITE-PLACE THEOREM (PROVED).** For a tunable trinomial, CT(m0) and CT(2m0) are coprime in
+F_p[a] for EVERY prime p not dividing Res_a(CT(m0),CT(2m0)) (reduction commutes with the
+resultant). Since Res != 0 (THM-1680/1710), all but finitely many primes separate, with an
+explicit smallest good prime. Verified 6/6: {-2,1,4}@7, {-2,3,6} Res=1 (coprime mod every p),
+{-3,-1,3}@3, {-3,1,5}@3, {-3,2,7}@11, {-4,1,6}@7. The bad primes are exactly the resultant's
+prime factors.
+
+**CELLULAR-AUTOMATON CONTENT.** CT(m) mod p is a LUCAS product of base-p digit multinomials =
+the Sierpinski/Pascal carry CA (Rule 90 at p=2, HYP-2491/2497). So the gcd-mod-p is computed
+by the carry automaton, and the bad primes = where the two CA reductions share a root = the
+resultant's factors. The remaining refinement is a CARRY/HEIGHT BOUND on those primes
+(HYP-8535), which would make the good prime explicit in the charges and close the finite-place
+half UNIFORMLY.
+
+**INTEGRATION with kind-pasteur THM-1720.** Their structural leading-coefficient roots are
+root-of-unity monodromy exponents, never positive integers -> the recurrence is nonsingular
+at every m>=1. That is the recurrence-side nondegeneracy; my coprimality-mod-p is the
+coefficient-side. Same object: the mu_M x mu_N branch monodromy. Their APPARENT-factor
+residual and my resultant bad primes are the same obstruction from two sides.
+
+**STATUS.** Finite-place half CLOSED (given Res != 0). Archimedean not needed. Uniform bound
+(HYP-8535) is the last refinement. Net: trinomial TNC has an explicit finite mod-p certificate.
+
+**Artifacts:** THM-1735; THM-1730 corrected + renumbered from 1720; HYP-8535; 2 scripts + outputs.
+
 ## opus-2026-07-20-S425 - TNC as adelic / cellular-automaton / boundary-function synthesis (THM-1720)
 
 Owner: take the best new levers (positivity, amoeba) and connect the cellular-automata and

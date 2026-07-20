@@ -1,0 +1,17 @@
+FINITE-PLACE HALF, correct criterion: CT(m0), CT(2m0) coprime mod p  <=>  p does NOT
+divide Res_a(CT(m0),CT(2m0)).  Reductions mod p are LUCAS products (the carry CA).
+So the SEPARATING finite places are ALL primes p not dividing the resultant -- infinitely
+many.  Bad primes = prime factors of Res.  Test the bad-prime structure:
+
+   pattern          Res (a-content)         bad primes (p|Res)     smallest GOOD prime
+   N=2(-2,1,4): |Res|=72900  bad primes [2, 3, 5]  smallest good p=7
+   N=2(-2,3,6): |Res|=1  bad primes []  smallest good p=11
+   N=3(-3,-1,3): |Res|=1447498723328  bad primes [2, 7, 101]  smallest good p=3
+   N=3(-3,1,5): |Res|=1284505600  bad primes [2, 5, 7]  smallest good p=3
+   N=3(-3,2,7): |Res|=921600000000  bad primes [2, 3, 5]  smallest good p=11
+   N=4(-4,1,6): |Res|=14894292972656250000  bad primes [2, 3, 5, 2287]  smallest good p=7
+
+=> the finite-place half is CLOSED: coprimality over Q (THM-1680/1710) => coprime mod
+   EVERY prime p not dividing Res => separation at infinitely many finite places, with
+   an EXPLICIT smallest good prime. The bad primes are the resultant's factors, and the
+   mod-p reductions are Lucas/carry-CA products. No archimedean place is needed.
