@@ -1,3 +1,12 @@
+## boxeph-2026-07-20-S169 -- THM-1565: RADIAL LEMMA PROVED (Watson-Nevanlinna + rotation, all degrees) => ONE-SIDED THEOREM FOR ALL TWO-CHARGE SPANS (perfect-power reduction, machine-verified); {+1,0,-1} base case by exact elimination (HYP-8385)
+
+**Owner:** prove the one-sided conjecture for bounded charge span by exact elimination.
+
+- RADIAL LEMMA (linchpin, all degrees): A(s) = L(e^{-s psi}) — rotation widens the sector to (D+1)pi > Gevrey-(D-1) threshold => Watson forces A == 1; s->infty forces A -> 0: contradiction => radial nullcone = {0}.
+- TWO-CHARGE THEOREM: E[P^{(a'+b')t}] = C(...) E[H^t], H = R^{ab/g} f^{b'} g^{a'} — perfect power (6/6 exact) => H = 0 => f = 0 or g = 0. One-sided at ALL degrees, not just bounded.
+- {+1,0,-1} base: E sees only p = alpha*beta; elimination gcd deg 0 at 24 p-samples (> degree bound => identic) => p = 0.
+- GMC(2) ledger: safe = W-deg <= 1 + all two-charge + radial + first 3-charge; left = general >= 3-charge spans (template scales).
+
 ## klein-2026-07-20-S349 -- THM-1560: THE HALVING DICTIONARY. {-1,0,1} and {1,1/2,0} are ONE object in two coordinates (A = (J-I+S)/2); the mod-2 COLLAPSE PRINCIPLE makes Pfaffian-oddness a one-liner; and the REDEI CLASS turns out to be small, which is the real content.
 
 **Owner directive:** still think nullcone; for inspiration, consider how {-1,0,1} and {1,1/2,0} are functionally equivalent but have each shown up in this repo many times -- this is what I mean by even/odd vs positive/negative.

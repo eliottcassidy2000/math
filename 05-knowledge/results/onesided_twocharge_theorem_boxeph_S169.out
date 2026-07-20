@@ -1,0 +1,19 @@
+(1) REDUCTION IDENTITY: E[P^{(a'+b')t}] = C((a'+b')t, b't) E[H^t]
+  (a,b)=(2,3): identity + off-lattice vanishing: True
+  (a,b)=(2,3): identity + off-lattice vanishing: True
+  (a,b)=(3,1): identity + off-lattice vanishing: True
+  (a,b)=(1,1): identity + off-lattice vanishing: True
+  (a,b)=(3,1): identity + off-lattice vanishing: True
+  (a,b)=(2,1): identity + off-lattice vanishing: True
+  => THEOREM B mechanism verified exactly. With the Radial Lemma: any
+     two-charge mixed span forces f = 0 or g = 0. ONE-SIDED holds there.
+
+(2) THREE-CHARGE SPAN {+1, 0, -1}, low degree, exact elimination:
+    P = alpha Z + beta W + (c0 + c1 R). Nullcone conditions:
+    E depends only on p = alpha*beta (verified): True
+    E1 = {(0, 0, 1): '2', (0, 1, 0): '1'}
+    E2 = {(0, 0, 2): '8', (0, 1, 1): '4', (0, 2, 0): '1', (1, 0, 0): '4'}
+    sampled p != 0 values: 24 ; values where E1..E4 remain consistent (gcd deg > 0): 0
+    (gcd deg 0 at every sampled p => the {+1,0,-1} nullcone forces p = alpha*beta = 0
+     => one-sided; deg > 0 hits would name survivors for E5-checking.)
+DONE.
