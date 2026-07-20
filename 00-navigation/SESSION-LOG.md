@@ -54,6 +54,16 @@ Prompt (owner): consider schaunels conjecture and the algebraic proof by contrad
 FILES: HYP-8405, 1 script + out. -> all (THE SHAPE, which is the part worth carrying: ONE relation on (sum, product) buys a DISJUNCTION -- 'at least one of e+pi, e*pi is transcendental', and we cannot say which. A ONE-PARAMETER FAMILY of relations buys RIGIDITY -- which is exactly why my THM-1550 nullcone criterion concludes 'R is constant' where the e/pi argument concludes only 'at least one'. Schanuel is precisely the upgrade from disjunction to conjunction. So when a repo result stalls at 'at least one of these fails', the diagnostic question is: do I have a FAMILY of relations available, or only one? CONCRETE LRC FINDING, and it corrects my own first reading: the pair-sum ruler has NO multiplicative companion (q | v_i*v_j essentially never holds), so it gives one symmetric function and not two -- BUT it nevertheless PINS the extremal pair uniquely in 4 of 6 tested families. The dichotomy is by q against max(A): large q ({1..11,13,84} q=89, {1..12,182} q=183, {1..12,26} q=27, {1..12,39} q=40) admits exactly ONE pair, because v_i+v_j must be a multiple of q and at most 2max(A); small q (tight AP q=14, its dilate q=13) admits seven. THE RULER IS THEREFORE MOST INFORMATIVE WHERE THE PROBLEM IS HARDEST, which inverts the usual pattern -- and in particular the wedge's binding case {1..11,13,84} (THM-1380) has extremal pair uniquely (5,84). Anyone working the covering case should use that. My summary line originally said the ruler pins 'never to a point'; the table said otherwise in four families and I corrected it.)
 
 ---
+## boxeph-2026-07-20-S173 -- TNC CLOSED AT N = 1 (all M, self-dual criterion) AND M = N = 2 (exact factorization); THE DICKSON LADDER = the general mechanism; 25/25 Hensel verifications; Lean scoping fixed (HYP-8405)
+
+**Owner:** finish the GMC(2) math; once confident, formalize; pull often.
+
+- PULLED FIRST: klein-S351 Gamma bridge (TNC => NC2 => GMC(2)) + THM-1550 exact criterion adopted; fleet chain assembled, zero duplication.
+- PROOF 1 (N = 1, all M): Vieta constant total product => big root exactly gamma/t (Laurent!) => substitution kills r0. Duality u -> 1/v: re-proves M = 1 and shows self-duality.
+- PROOF 2 (M = N = 2): quadratic factorization; sigma = r1 t/(1+r4 c t^2) vs sigma^2 = ct - r2/r4 => r2 = 0 then c = 0: contradiction.
+- MECHANISM: Dickson ladder G = sum r_k p_{k-2} == 0, val_t p_j = ceil(j/2): triangular overdetermination; finisher = prove the ladder kills all r_{k>=2}.
+- 25/25 exact Hensel instance checks at (2,2),(2,3),(3,2),(3,3),(2,4).
+- Lean deferred one session (math moved); scoping: kernel-pure E + extreme-charge + THM-1550 spine + citation hypotheses for Watson/Radial.
 
 ## boxeph-2026-07-20-S172 -- THM-1575: PL-MULTIPLIER NONVANISHING PROVED (two-sheet + all distinct-rate cases); residual = resonant strata only, three attack routes filed; exhibit A = e^{2s^2} for Z + W (HYP-8400)
 

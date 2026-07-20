@@ -1,0 +1,11 @@
+(M,N) = (2,2): Pi(t) deviates from ct (orders t^2..t^5) in 5/5 random R  => TNC instance-verified
+(M,N) = (2,3): Pi(t) deviates from ct (orders t^2..t^5) in 5/5 random R  => TNC instance-verified
+(M,N) = (3,2): Pi(t) deviates from ct (orders t^2..t^5) in 5/5 random R  => TNC instance-verified
+(M,N) = (3,3): Pi(t) deviates from ct (orders t^2..t^5) in 5/5 random R  => TNC instance-verified
+(M,N) = (2,4): Pi(t) deviates from ct (orders t^2..t^5) in 5/5 random R  => TNC instance-verified
+
+HAND PROOFS THIS SESSION: N = 1 all M (Laurent big root substitution kills r0);
+M = N = 2 (quadratic factorization: sigma = r1 t/(1+r4 c t^2) vs sigma^2 = ct - r2/r4
+forces r2 = 0 then c = 0: contradiction). Chebyshev-ladder structure identified:
+G = sum r_k p_{k-2}(sigma, ct) == 0 with p = Dickson polynomials, val_t p_j = ceil(j/2):
+triangular overdetermination — the route to full TNC.
