@@ -1,0 +1,20 @@
+== gate: reproduce HYP-7955 exact c(p) ==
+  p=29 c=7 want=7 OK
+  p=43 c=9 want=9 OK
+  p=61 c=9 want=9 OK
+  p=71 c=9 want=9 OK
+  p=101 c=10 want=10 OK
+  p=113 c=10 want=10 OK
+  p=127 c=10 want=10 OK
+  p=151 c=11 want=11 OK
+  p=173 c=11 want=11 OK
+
+== phase 1: exact c(p), p = 179..460 (n=14) ==
+  p=179 dk=12 bound=8 c=11 nodes=31541530
+  p=181 dk=12 bound=8 c=12 nodes=150166973
+  p=191 dk=13 bound=8 c=12 nodes=353862340
+  p=193 dk=13 bound=8 c=11 nodes=33175322
+  p=197 dk=14 bound=7 c=11 nodes=330476131
+  p=199 dk=14 bound=8 c=12 nodes=1022877888
+  p=211 dk=15 bound=7 c=12 nodes=2096755315
+  p=223 dk=15 bound=8 c=12 nodes=1297045371
