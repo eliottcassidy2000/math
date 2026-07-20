@@ -1,0 +1,139 @@
+====================================================================================================
+(0) CONTROLS AND NEW EXACT LAWS (asserted)
+====================================================================================================
+CONTROL pascal: shear-1 sums = 2^m OK ; shear-2 sums = Fibonacci OK
+LAW 1 (NEW): proth shear-1 row sums = 2^(m+1)-1 = MERSENNE   [1, 3, 7, 15, 31, 63, 127, 255]...
+LAW 2 (NEW): proth shear-2 sums: even m=2K: 2^(K+2)-K-3 ; odd m=2K+1: 3*2^(K+1)-K-4
+             = [1, 2, 4, 7, 11, 18, 26, 41, 57, 88]...  (Lucas 1,2,4,7,11,18 start, then splits: ~C*sqrt(2)^m)
+             recognizer says: linrec r=5 ['1', '3', '-3', '-2', '2']
+RELATIONAL TRIAD: C(n,2)=triangular, S(n,2)=2^(n-1)-1 MERSENNE, c(n+1,2)/n! = H_n : ALL VERIFIED
+q-TRIANGULAR at q=2 (2-subspaces of F2^n, the BINARY relational count): [0, 0, 1, 7, 35, 155, 651, 2667, 10795, 43435]
+  linrec: UNRECOGNIZED
+
+====================================================================================================
+(1) COMPARISON MATRIX: row sums of each shear (t=0 only for finite-row families)
+====================================================================================================
+pascal      t=1  SUM [1, 2, 4, 8, 16, 32, 64]... -> 2^n[0:]; linrec r=1 ['2']
+                 ALT [1, 0, 0, 0, 0, 0, 0]... -> linrec r=1 ['0']
+pascal      t=2  SUM [1, 1, 2, 3, 5, 8, 13]... -> Fibonacci[1:]; linrec r=2 ['1', '1']
+                 ALT [1, 1, 0, -1, -1, 0, 1]... -> linrec r=2 ['1', '-1']
+pascal      t=3  SUM [1, 1, 1, 2, 3, 4, 6]... -> linrec r=3 ['1', '0', '1']
+                 ALT [1, 1, 1, 0, -1, -2, -2]... -> linrec r=3 ['1', '0', '-1']
+polygonal   t=1  SUM [0, 1, 4, 11, 25, 50, 91]... -> POLY deg 4
+                 ALT [0, 1, 2, 3, 5, 6, 9]... -> linrec r=5 ['1', '2', '-2', '-1', '1']
+polygonal   t=2  SUM [0, 1, 3, 7, 14, 25, 42]... -> UNRECOGNIZED
+                 ALT [0, 1, 3, 5, 6, 7, 10]... -> UNRECOGNIZED
+polygonal   t=3  SUM [0, 1, 3, 6, 11, 19, 30]... -> UNRECOGNIZED
+                 ALT [0, 1, 3, 6, 9, 11, 12]... -> UNRECOGNIZED
+pyramidal   t=1  SUM [0, 1, 5, 16, 41, 91, 182]... -> POLY deg 5
+                 ALT [0, 1, 3, 6, 11, 17, 26]... -> linrec r=6 ['2', '1', '-4', '1', '2', '-1']
+pyramidal   t=2  SUM [0, 1, 4, 11, 25, 50, 92]... -> UNRECOGNIZED
+                 ALT [0, 1, 4, 9, 15, 22, 32]... -> UNRECOGNIZED
+pyramidal   t=3  SUM [0, 1, 4, 10, 21, 40, 70]... -> UNRECOGNIZED
+                 ALT [0, 1, 4, 10, 19, 30, 42]... -> UNRECOGNIZED
+faulhaber   t=1  SUM [0, 1, 3, 7, 16, 39, 105]... -> UNRECOGNIZED
+                 ALT [0, 1, 1, 1, 2, 1, 1]... -> UNRECOGNIZED
+faulhaber   t=2  SUM [0, 1, 2, 4, 7, 12, 21]... -> UNRECOGNIZED
+                 ALT [0, 1, 2, 2, 1, 0, 1]... -> UNRECOGNIZED
+faulhaber   t=3  SUM [0, 1, 2, 3, 5, 8, 12]... -> UNRECOGNIZED
+                 ALT [0, 1, 2, 3, 3, 2, 0]... -> UNRECOGNIZED
+qbinom2     t=1  SUM [0, 0, 1, 4, 14, 59, 322]... -> UNRECOGNIZED
+                 ALT [0, 0, 1, 2, 0, -13, -30]... -> UNRECOGNIZED
+qbinom2     t=2  SUM [0, 0, 1, 3, 7, 17, 51]... -> UNRECOGNIZED
+                 ALT [0, 0, 1, 3, 5, 3, -19]... -> UNRECOGNIZED
+qbinom2     t=3  SUM [0, 0, 1, 3, 6, 11, 22]... -> UNRECOGNIZED
+                 ALT [0, 0, 1, 3, 6, 9, 8]... -> UNRECOGNIZED
+proth       t=1  SUM [1, 3, 7, 15, 31, 63, 127]... -> Mersenne 2^n-1[1:]; linrec r=2 ['3', '-2']
+                 ALT [1, 1, 1, 3, -1, 9, -11]... -> linrec r=4 ['-1', '3', '1', '-2']
+proth       t=2  SUM [1, 2, 4, 7, 11, 18, 26]... -> linrec r=5 ['1', '3', '-3', '-2', '2']
+                 ALT [1, 2, 2, 1, 1, 4, 6]... -> linrec r=6 ['2', '-4', '6', '-5', '4', '-2']
+proth       t=3  SUM [1, 2, 3, 5, 8, 11, 15]... -> UNRECOGNIZED
+                 ALT [1, 2, 3, 3, 2, 1, 1]... -> UNRECOGNIZED
+subsets     t=0  SUM [1, 2, 4, 8, 16, 32, 64]... -> 2^n[0:]; linrec r=1 ['2']
+                 ALT [1, 0, 0, 0, 0, 0, 0]... -> linrec r=1 ['0']
+subsets     t=1  SUM [1, 1, 2, 3, 5, 8, 13]... -> Fibonacci[1:]; linrec r=2 ['1', '1']
+                 ALT [1, 1, 0, -1, -1, 0, 1]... -> linrec r=2 ['1', '-1']
+subsets     t=2  SUM [1, 1, 1, 2, 3, 4, 6]... -> linrec r=3 ['1', '0', '1']
+                 ALT [1, 1, 1, 0, -1, -2, -2]... -> linrec r=3 ['1', '0', '-1']
+subsets     t=3  SUM [1, 1, 1, 1, 2, 3, 4]... -> linrec r=4 ['1', '0', '0', '1']
+                 ALT [1, 1, 1, 1, 0, -1, -2]... -> linrec r=4 ['1', '0', '0', '-1']
+partitions  t=0  SUM [1, 1, 2, 5, 15, 52, 203]... -> Bell[0:]
+                 ALT [1, -1, 0, 1, 1, -2, -9]... -> UNRECOGNIZED
+partitions  t=1  SUM [1, 0, 1, 1, 2, 4, 9]... -> UNRECOGNIZED
+                 ALT [1, 0, -1, -1, 0, 2, 5]... -> UNRECOGNIZED
+partitions  t=2  SUM [1, 0, 0, 1, 1, 1, 2]... -> UNRECOGNIZED
+                 ALT [1, 0, 0, -1, -1, -1, 0]... -> UNRECOGNIZED
+partitions  t=3  SUM [1, 0, 0, 0, 1, 1, 1]... -> UNRECOGNIZED
+                 ALT [1, 0, 0, 0, -1, -1, -1]... -> UNRECOGNIZED
+cycles      t=0  SUM [1, 1, 2, 6, 24, 120, 720]... -> factorial[0:]~14t
+                 ALT [1, -1, 0, 0, 0, 0, 0]... -> linrec r=2 ['0', '0']
+cycles      t=1  SUM [1, 0, 1, 1, 3, 9, 36]... -> UNRECOGNIZED
+                 ALT [1, 0, -1, -1, -1, -3, -14]... -> UNRECOGNIZED
+cycles      t=2  SUM [1, 0, 0, 1, 1, 2, 7]... -> UNRECOGNIZED
+                 ALT [1, 0, 0, -1, -1, -2, -5]... -> UNRECOGNIZED
+cycles      t=3  SUM [1, 0, 0, 0, 1, 1, 2]... -> UNRECOGNIZED
+                 ALT [1, 0, 0, 0, -1, -1, -2]... -> UNRECOGNIZED
+owner       t=0  SUM [1, 3, 7, 16, 39, 106, 317]... -> UNRECOGNIZED
+                 ALT [1, 1, 1, 2, 1, 0, 7]... -> UNRECOGNIZED
+owner       t=1  SUM [1, 2, 4, 7, 12, 21, 37]... -> UNRECOGNIZED
+                 ALT [1, 2, 2, 1, 0, 1, 5]... -> UNRECOGNIZED
+owner       t=2  SUM [1, 2, 3, 5, 8, 12, 18]... -> UNRECOGNIZED
+                 ALT [1, 2, 3, 3, 2, 0, -2]... -> UNRECOGNIZED
+owner       t=3  SUM [1, 2, 3, 4, 6, 9, 13]... -> UNRECOGNIZED
+                 ALT [1, 2, 3, 4, 4, 3, 1]... -> UNRECOGNIZED
+moser       t=1  SUM [1, 2, 4, 7, 12, 20, 33]... -> linrec r=3 ['2', '0', '-1']
+                 ALT [1, 0, 0, -1, 0, 0, 1]... -> linrec r=3 ['0', '0', '-1']
+moser       t=2  SUM [1, 1, 2, 3, 5, 7, 11]... -> linrec r=5 ['1', '1', '0', '0', '-1']
+                 ALT [1, 1, 0, -1, -1, -1, -1]... -> linrec r=5 ['1', '-1', '0', '0', '-1']
+moser       t=3  SUM [1, 1, 1, 2, 3, 4, 6]... -> UNRECOGNIZED
+                 ALT [1, 1, 1, 0, -1, -2, -2]... -> UNRECOGNIZED
+
+====================================================================================================
+(2) ROW PRODUCTS (m <= 8): growth signatures + any small-sequence hits
+====================================================================================================
+pascal      t=1  PROD [1, 1, 2, 9, 96, 2500, 162000]
+pascal      t=2  PROD [1, 1, 1, 2, 3, 12, 30]
+polygonal   t=1  PROD [1, 3, 24, 450, 17280, 1212750, 142248960]
+polygonal   t=2  PROD [1, 3, 6, 40, 135, 1680, 8400]
+pyramidal   t=1  PROD [1, 4, 50, 1680, 132300, 21683200, 6707610000]
+pyramidal   t=2  PROD [1, 4, 10, 100, 490, 10080, 83160]
+faulhaber   t=1  PROD [1, 2, 9, 120, 6300, 1652400, 2614689000]
+faulhaber   t=2  PROD [1, 2, 3, 12, 30, 300, 1470]
+qbinom2     t=1  PROD [1, 3, 42, 4550, 6347250, 183069317970, 165201736263299736]
+qbinom2     t=2  PROD [1, 3, 6, 70, 525, 42315, 2369640]
+proth       t=1  PROD [1, 2, 9, 100, 2835, 202878, 35637525]
+proth       t=2  PROD [1, 2, 3, 12, 25, 210, 567]
+subsets     t=0  PROD [1, 1, 2, 9, 96, 2500, 162000]
+subsets     t=1  PROD [1, 1, 1, 2, 3, 12, 30]
+subsets     t=2  PROD [1, 1, 1, 1, 2, 3, 4]
+partitions  t=0  PROD [1, 1, 1, 3, 42, 3750, 2720250]
+partitions  t=1  PROD [1, 1, 1, 1, 3, 7, 90]
+partitions  t=2  PROD [1, 1, 1, 1, 1, 3, 7]
+cycles      t=0  PROD [1, 1, 1, 6, 396, 420000, 9432450000]
+cycles      t=1  PROD [1, 1, 1, 2, 18, 264, 36000]
+cycles      t=2  PROD [1, 1, 1, 2, 6, 72, 1320]
+owner       t=0  PROD [1, 2, 9, 120, 6300, 1698300, 2667783195]
+owner       t=1  PROD [1, 2, 3, 12, 30, 300, 1470]
+owner       t=2  PROD [1, 2, 3, 4, 15, 36, 70]
+moser       t=1  PROD [1, 1, 2, 6, 32, 280, 4224]
+moser       t=2  PROD [1, 1, 1, 2, 3, 8, 20]
+
+====================================================================================================
+(3) CROSS-FAMILY COINCIDENCES (identical first-10 sum sequences)
+====================================================================================================
+  MATCH pascal.t1 == subsets.t0 : [1, 2, 4, 8, 16, 32]...
+  MATCH pascal.t2 == subsets.t1 : [1, 1, 2, 3, 5, 8]...
+  MATCH pascal.t3 == subsets.t2 : [1, 1, 1, 2, 3, 4]...
+
+====================================================================================================
+(4) THE RELATIONAL AXIS DEEPENED: [n choose 2]_q  (q-deformed 'edges of K_n')
+====================================================================================================
+  q=1: [1, 3, 6, 10, 15, 21, 28, 36, 45]  -> triangular[1:]; POLY deg 2
+  q=2: [1, 7, 35, 155, 651, 2667, 10795, 43435, 174251]  -> linrec r=3 ['7', '-14', '8']
+  q=3: [1, 13, 130, 1210, 11011, 99463, 896260, 8069620, 72636421]  -> linrec r=3 ['13', '-39', '27']
+  q=4: [1, 21, 357, 5797, 93093, 1490853, 23859109, 381767589, 6108368805]  -> linrec r=3 ['21', '-84', '64']
+  q=5: [1, 31, 806, 20306, 508431, 12714681, 317886556, 7947261556, 198682027181]  -> linrec r=3 ['31', '-155', '125']
+  q->1 is SET relations (triangular); q=2 is F2-LINEAR relations (2-subspaces);
+  the q-axis is the fourth continuation: vary the GROUND FIELD of 'relation'.
+
+DONE.

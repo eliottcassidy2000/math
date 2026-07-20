@@ -1,0 +1,55 @@
+================================================================================================
+LAW A: shear-delay law  A_t(m) = A_t(m-1) + A_t(m-t-1)   (subsets grid)
+================================================================================================
+  t=0: [1, 2, 4, 8, 16, 32, 64, 128, 256]...  recurrence a(m)=a(m-1)+a(m-1): OK   [2^m]
+  t=1: [1, 1, 2, 3, 5, 8, 13, 21, 34]...  recurrence a(m)=a(m-1)+a(m-2): OK   [Fibonacci]
+  t=2: [1, 1, 1, 2, 3, 4, 6, 9, 13]...  recurrence a(m)=a(m-1)+a(m-3): OK   [Narayana's cows A000930]
+  t=3: [1, 1, 1, 1, 2, 3, 4, 5, 7]...  recurrence a(m)=a(m-1)+a(m-4): OK   [A003269]
+  t=4: [1, 1, 1, 1, 1, 2, 3, 4, 5]...  recurrence a(m)=a(m-1)+a(m-5): OK   [A003520]
+  t=5: [1, 1, 1, 1, 1, 1, 2, 3, 4]...  recurrence a(m)=a(m-1)+a(m-6): OK   [A005708]
+  t=6: [1, 1, 1, 1, 1, 1, 1, 2, 3]...  recurrence a(m)=a(m-1)+a(m-7): OK   [A005709(delay-7)]
+  PROOF: Pascal on the top index; the two terms re-index to (m-1) and (m-t-1). QED
+
+================================================================================================
+LAW B: moser(trunc) shear-1 sums = F(m+3) - 1
+================================================================================================
+  sums: [1, 2, 4, 7, 12, 20, 33, 54, 88, 143]  = F(m+3)-1: True
+  PROOF: swap sums; hockey-stick sum_{n<=m-i}C(n,i) = C(m-i+1,i+1); shallow
+  diagonals sum to F(m+3); subtract the j=0 term.  QED
+
+================================================================================================
+LAW C: q-confluence -- [n,2]_q has char poly (x-1)(x-q)(x-q^2); q=1 = triple root
+================================================================================================
+  q=2: rec (1+q+q^2, -q(1+q+q^2), q^3) OK=True ; mixture a+b q^n+c q^{2n} with
+        a=1/3 b=-1/2 c=1/6 : True
+  q=3: rec (1+q+q^2, -q(1+q+q^2), q^3) OK=True ; mixture a+b q^n+c q^{2n} with
+        a=1/16 b=-1/12 c=1/48 : True
+  q=4: rec (1+q+q^2, -q(1+q+q^2), q^3) OK=True ; mixture a+b q^n+c q^{2n} with
+        a=1/45 b=-1/36 c=1/180 : True
+  q=5: rec (1+q+q^2, -q(1+q+q^2), q^3) OK=True ; mixture a+b q^n+c q^{2n} with
+        a=1/96 b=-1/80 c=1/480 : True
+  q=6: rec (1+q+q^2, -q(1+q+q^2), q^3) OK=True ; mixture a+b q^n+c q^{2n} with
+        a=1/175 b=-1/150 c=1/1050 : True
+  q=7: rec (1+q+q^2, -q(1+q+q^2), q^3) OK=True ; mixture a+b q^n+c q^{2n} with
+        a=1/288 b=-1/252 c=1/2016 : True
+  => triangular = confluent limit of three geometric strands {1, q, q^2}.
+
+================================================================================================
+LAW D: owner row sums = faulhaber-shear1 + 2^(m-6) cascade  (m>=6)
+================================================================================================
+  rowsum_T(m) = fT1(m) + [m>=6] 2^(m-6): True  e.g. m=6: 106 = 105 + 1 ; m=7: 317 = 315 + 2
+  ownerT1(m) - faulhaberT2(m): [(1, 0), (2, 0), (3, 0), (4, 0), (5, 0), (6, 0), (7, 0), (8, 0), (9, 1), (10, 1), (11, 2), (12, 3)] (cascade joins at m=9: C(m-x-6,x-3))
+  CAVEAT: rows >= 8 of T are the S147 closed form (verified only on the 28 given
+  entries); every law above is exact for the closed-form extension.
+
+================================================================================================
+LAW E: characteristic factorizations of the detected recurrences
+================================================================================================
+  proth-t2 char / (x-1) exact
+  proth-t2 char / (x-1) again exact
+  proth-t2 char / (x+1) exact
+  remaining factor coeffs (ascending): [Fraction(-2, 1), Fraction(0, 1), Fraction(1, 1)]  = x^2 - 2 : True
+  moser-t2 char / (x-1): exact -> [Fraction(-1, 1), Fraction(-1, 1), Fraction(-1, 1), 0, Fraction(1, 1)]
+    then / (x^2-x-1): not a factor (rest [Fraction(0, 1), Fraction(1, 1)])
+
+DONE.

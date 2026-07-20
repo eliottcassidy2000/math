@@ -1,5 +1,10 @@
 # Investigation Backlog
 
+### S148 wide-birth leads (boxeph-2026-07-20-S148, HYP-8175)
+- **q-deformed metagraph invariants** — LAW C says polynomial laws = confluent geometric mixtures ((x-1)(x-q)(x-q^2) at 2-subspaces). Which G_n/E_n polynomial invariants are q->1 confluences? Try [n,2]_q-weighted arc counts. STATUS: open, next step = pick one polynomial invariant (width? level counts?) and hunt its q-family.
+- **Partition/cycle-world Fibonacci analogues** — sum_x S(m-x,x) = 1,0,1,1,2,4,9,22,... and sum_x c(m-x,x) = 1,0,1,1,3,9,36,... proved NOT C-finite (order<=6). What do they count in tournament terms (Hamiltonian analogue in partition/permutation worlds)? STATUS: open.
+- **Primes in sheared Proth rows** — shear-1 Proth rows sum to Mersenne; row PRODUCTS = Proth factorials; prime content of rows vs Sierpinski rows. STATUS: open, engineering-adjacent (primality testbed).
+
 ## Lead kind-pasteur-2026-07-20-S128c101: after THM-1345 (HYP-8150)
 - **(i) Prove the trace module:** conjecture = trace-polynomial monomials are exactly those outside the pure-x cone; suspected proof from z-affinity (z enters fibers linearly), depression (no x^2 term), and the master identity (x^3 reduces with 1/L). Would upgrade THM-1335(4)/1345(3) from computed to explained and settle all towers F^m at once (module closed under Tr => induction).
 - **(ii) The Abel-Ruffini rung:** formalize 'radical-invertible' as a realization-program invariant; the A_5 hunt (2-jet architecture, backlog c99(a)) now carries a second flag: the first non-radical Keller map = the polynomial Abel-Ruffini theorem.

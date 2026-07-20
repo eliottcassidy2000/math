@@ -69,6 +69,18 @@ itself, the edges of complete graphs; compile as wide a breadth as possible and 
 FILES: THM-1360, HYP-8175, reflection the-figurate-zoo, 2 scripts + outs, backlog lxi-lxiv, tangent,
 results INDEX. -> all
 
+## boxeph-2026-07-20-S148 -- THE WIDE BIRTH: shear-delay law, relational triad, q-confluence; Proth grid sheared = Mersenne machine (HYP-8175)
+
+**Owner directive:** shear the n*2^x+1 grid down 1 (triangle) and 2 (Fibonacci-analogous); sum AND multiply columns; find as many continuations of the triangular numbers as possible; compare all under shears 0/1/2/3+; "the nth triangular number is n in the relational sense."
+
+- **Engine:** `triangular_continuations_wide_birth_boxeph_S148.py` -- 11 families (simplicial/polygonal/pyramidal/Faulhaber/q-binomial/Proth/subsets/partitions/cycles/owner-triangle/Moser-truncation) x shears 0-3 x {sum, altsum, product, gcd}, every derived sequence through exact linrec detector + named library; Pascal control (shear-1 = 2^m, shear-2 = Fibonacci) asserted. Verification layer `..._laws_boxeph_S148b.py`. Both outs frozen.
+- **LAW A (SHEAR-DELAY, proved):** A_t(m) = sum_x C(m-tx, x) obeys a(m) = a(m-1) + a(m-t-1). Tower: 2^m -> Fibonacci -> Narayana's cows -> A003269 -> ... (t<=6 verified). Moving columns down t = delay-(t+1) Fibonacci: SHEAR TRADES GROWTH FOR MEMORY.
+- **LAW B (PROTH = MERSENNE MACHINE, proved):** owner-grid shear-1 row sums = 2^(m+1)-1 exactly; shear-2 = 2^(K+2)-K-3 / 3*2^(K+1)-K-4, char (x-1)^2(x+1)(x^2-2) (sqrt2 strand; Lucas overture 1,2,4,7,11,18 incidental).
+- **LAW C (q-CONFLUENCE, proved):** [n,2]_q = a + b q^n + c q^{2n} (a=1/((q^2-1)(q-1)), b=-1/(q(q-1)^2), c=1/(q(q^2-1)(q-1))), char (x-1)(x-q)(x-q^2); triangular = confluent triple-root q->1 of chord {1,q,q^2}. Polynomial invariants = collision points of geometric strands.
+- **LAW D (MOSER STRAND, proved):** truncation grid sum_x R_x(m-x) = F(m+3)-1 (hockey-stick + shallow diagonals).
+- **RELATIONAL TRIAD (verified):** the three 2-group counts C(n,2)/S(n,2)/c(n,2) = triangular / Mersenne / harmonic-numerators = EXACTLY the three S147 riddle ingredients; triangle totals 2^n / Bell / n!; shear-1 Fibonacci analogues: set world C-finite, partition (1,0,1,1,2,4,9,...) and permutation (1,0,1,1,3,9,36,...) worlds NOT C-finite (<=6 excluded) -- C-finiteness dies as relational richness grows.
+- **CONVERGENCES:** opus-S419 series2 = H_n + 2^(n-1)-1 = my cycle-strand + partition-strand (triad closes the riddle); death-star THM-1355 Proth unification = same grid unsheared. **FORK FOR OWNER: row 8 col 5 = 355 (opus flat +1) vs 356 (my Pascal cascade C(m-6,j-4)) -- both fit all 28 given entries, first split at row 8.** Owner-triangle ledger: rowsums = FaulhaberT1 + 2^(m-6) (106=105+1, 317=315+2).
+- Reflection: `the-shear-delay-law-and-the-relational-triad-boxeph-S148.md`. Backlog: q-deformed metagraph invariants; partition/cycle Hamiltonian analogues; primes in sheared Proth rows. HYP-8175.
 ## opus-2026-07-20-S419 -- the Faulhaber triangle, Proth-diagonal series, and the bilinear +1 rim
 
 **Owner directive:** identify the triangle {1},{2,1},...,{7,21,55,101,99,33,1} (a "third perspective on triangular numbers"), relate to Fibonacci / powers of 2 / Moser, the n*2^x+1 table with 2n+1 and 2^x+1 as keys, and the rational series 1,3/2,11/6,25/12,137/60 and 1,5/2,29/3,109/12,1079/60.
