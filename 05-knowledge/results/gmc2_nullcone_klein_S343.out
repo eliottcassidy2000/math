@@ -1,0 +1,222 @@
+================================================================================
+PART 1 -- INDEPENDENT VERIFICATION of the supplied GMC(3) witness
+================================================================================
+ Reading: Z = (X+iY)/sqrt2, W = conj(Z) (so ZW = (X^2+Y^2)/2 ~ Exp(1), E[(ZW)^r]=r!),
+          U = T^2/2 (so E[U^k] = (1/2)_k).   P = (1+Z)(W - (2+Z)U),  Q = Z.
+   P has 5 monomials in (Z,W,T); total degree in X,Y,T = 4
+   E[P^m],   m=1..10 : ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
+   E[Q P^m], m=1..10 : ['1', '2', '6', '24', '120', '720', '5040', '40320', '362880', '3628800']
+   E[QP^m] == m! : True
+   => GMC(3) IS FALSE.  CONFIRMED INDEPENDENTLY, exact rational arithmetic.
+
+================================================================================
+PART 2 -- THE UNIFYING FORMULA, and why the ladder stops
+================================================================================
+
+ Take P = (1 + Z)(W - V(Z) U) with U INDEPENDENT of (Z,W), mu_k = E[U^k], V a polynomial.
+ Expanding binomially and using E[W^r F(Z)] = r! [s^r] F(s):
+
+     E[P^m] = sum_k C(m,k)(-1)^k mu_k (m-k)! [s^{m-k}] (1+s)^m V(s)^k
+            = m! [s^m] (1+s)^m * sum_k (mu_k/k!) (-1)^k (s V(s))^k
+            = m! [s^m] (1+s)^m G( s V(s) ),      G(x) := sum_k (mu_k/k!) (-x)^k.
+
+ So EVERY moment vanishes as soon as  G(sV(s)) = 1/(1+s)  -- then (1+s)^m G = (1+s)^{m-1},
+ of degree m-1, so [s^m] = 0; and the Q = Z insertion gives [s^m] s(1+s)^{m-1} = 1, i.e.
+ E[Q P^m] = m!.  ONE identity generates both known witnesses.
+
+ Now let U be built from nu real Gaussians as U = (T_1^2+...+T_nu^2)/2 ~ Gamma(a), a = nu/2.
+ Then mu_k = (a)_k and G(x) = (1+x)^{-a}, so the condition becomes
+
+     (1 + s V(s))^{-a} = (1+s)^{-1}   <=>   1 + s V(s) = (1+s)^{1/a}.
+
+ V is a POLYNOMIAL iff 1/a is a positive INTEGER j.  With a = nu/2 that forces nu = 2/j:
+
+     j   a=1/j   nu=2/a         V(s)=((1+s)^j-1)/s   total n = 2 + nu
+     1       1        2                          1                  4   REALISABLE
+     2     1/2        1                      2 + s                  3   REALISABLE
+     3     1/3      2/3               3 + 3s + s^2                 --   nu NOT an integer -> IMPOSSIBLE
+     4     1/4      1/2        4 + 6s + 4s^2 + s^3                 --   nu NOT an integer -> IMPOSSIBLE
+
+   j=1: nu=2 -> U = |A|^2 ~ Exp(1), V = 1        -> the n = 4 witness (THM-1490)
+   j=2: nu=1 -> U = T^2/2 ~ Gamma(1/2), V = 2+s  -> the n = 3 witness (supplied)  <-- the (2+Z)!
+   j>=3: nu = 2/3, 1/2, ... NOT an integer number of Gaussians.  THE LADDER STOPS.
+
+ And n = 2 would need nu = 0, i.e. U a CONSTANT c: then G(x) = e^{-cx} and the condition
+ reads e^{-c s V(s)} = 1/(1+s), i.e. c s V(s) = log(1+s) -- NOT a polynomial.  So within
+ this family n = 3 is MINIMAL and n = 2 is impossible.  That is a statement about the
+ CONSTRUCTION, not yet a proof of GMC(2).
+
+ machine check of the unifying formula at j=1 (n=4) and j=2 (n=3):
+   j=1 (n=4, V=1): [s^m](1+s)^m G(sV(s)) for m=1..7 = ['0', '0', '0', '0', '0', '0', '0']
+   j=2 (n=3, V=2+s): [s^m](1+s)^m G(sV(s)) for m=1..7 = ['0', '0', '0', '0', '0', '0', '0']
+   (all zero => E[P^m] = 0 for every m, for BOTH witnesses, from ONE formula)
+
+================================================================================
+PART 3 -- A STRONGER 2-D NULLCONE CONJECTURE, AND WHY IT WOULD SETTLE GMC(2)
+================================================================================
+
+ In n = 2 there is ONE complex Gaussian Z, and the torus Z -> e^{i t} Z grades monomials
+ Z^a Zb^b by WEIGHT a - b.  Define the NULLCONE  N_2 = { P : E[P^m] = 0 for all m >= 1 }.
+
+ CONJECTURE (NC2).   N_2  =  {P : every weight of P is >= 1}
+                          u  {P : every weight of P is <= -1}  u  {0}.
+
+ i.e. in two real Gaussians the ONLY way to kill every moment is the trivial one -- be
+ purely holomorphic (or purely antiholomorphic) with no constant term.  This is strictly
+ STRONGER than GMC(2), and it is FALSE for n >= 3 (both known witnesses have weights
+ straddling 0), so it is genuinely two-dimensional.
+
+ THEOREM.  NC2  =>  GMC(2).
+ Proof.  Let P in N_2 be nonzero; by NC2 every weight of P is >= 1 (or symmetrically <= -1).
+ Weights add, so every monomial of P^m has weight >= m.  A FIXED Q has some minimum weight
+ w_min > -infinity, so every monomial of Q P^m has weight >= m + w_min, which is >= 1 as
+ soon as m > 1 - w_min.  Wick kills every nonzero-weight monomial, so E[Q P^m] = 0 for all
+ m > 1 - w_min.  That is exactly GMC(2).  []
+
+ So GMC(2) reduces to a statement about the SHAPE of the nullcone, with no Q in it at all.
+
+ bounded test of NC2: P over monomials Z^a Zb^b with a+b <= 3 (10 of them),
+ up to 3 terms, coefficients in {+-1,+-2,+-i,+-2i}; E[P^m] = 0 checked for m = 1..8.
+   nullcone members found in the box : 736
+   VIOLATIONS of NC2 (mixed/zero weight yet all moments vanish) : 0
+   positive control -- P = Z must be in the nullcone with weights [1]: True
+   negative control -- P = Z + Zb must NOT be (E[P^2] = 2 )
+
+================================================================================
+PART 4 -- NC2 REDUCES TO ONE 1-D QUESTION: the EXPONENTIAL MOMENT PROBLEM
+================================================================================
+
+ Polar-decompose: Z = sqrt(r) e^{i th} with r ~ Exp(1) INDEPENDENT of th ~ Unif.  Writing
+ P = sum_q e^{i q th} g_q(r), the th-average keeps only total weight 0, so everything is an
+ expectation in r alone.  Two structural cases collapse to the SAME question:
+
+   * weights {0,1}:   P = b(r) + Z c(r).  Only the all-weight-0 term survives, so
+                      E[P^m] = E_r[ b(r)^m ].
+   * weights {-1,1}:  P = Zb a(r) + Z c(r).  Only balanced terms survive, so
+                      E[P^{2j}] = C(2j,j) E_r[ (r a c)^j ].
+
+ (EMP)  For r ~ Exp(1) and h a complex polynomial:  E[h(r)^m] = 0 for all m >= 1  =>  h = 0.
+
+ If EMP holds, both cases force the mixed part to vanish -- which is exactly NC2 on those
+ strata.  EMP is decidable degree by degree: h monic of degree d has d free coefficients
+ (vanishing is scale-invariant), so E[h^m] = 0 for m = 1..d is d equations in d unknowns
+ with finitely many roots; evaluate E[h^{d+1}] at each and see whether any survives.
+
+ deg  #roots of the first d eqs    max |E[h^{d+1}]| over roots   EMP holds?
+   1                          1                              1 YES (all fail at m=d+1)
+       root h = r^1 + (-1.0000-0.0000j)r^0   |E[h^2]| = 1
+   2                          2                        86.1626 YES (all fail at m=d+1)
+       root h = r^2 + (2.0000+2.0000j)r^0 + (-4.0000-2.0000j)r^1   |E[h^3]| = 86.1626
+       root h = r^2 + (2.0000-2.0000j)r^0 + (-4.0000+2.0000j)r^1   |E[h^3]| = 86.1626
+   3                          6                    8.94342e+06 YES (all fail at m=d+1)
+       root h = r^3 + (-8.4871-13.3796j)r^0 + (26.9941+18.4888j)r^1 + (-12.2535-2.5546j)r^2   |E[h^4]| = 4.16769e+06
+       root h = r^3 + (-8.4871+13.3796j)r^0 + (26.9941-18.4888j)r^1 + (-12.2535+2.5546j)r^2   |E[h^4]| = 4.16769e+06
+       root h = r^3 + (-16.4246-1.7198j)r^0 + (34.3060-4.1193j)r^1 + (-11.9407+2.9195j)r^2   |E[h^4]| = 6.61346e+06
+
+ EMP verified for degrees 1,2,3: the finitely many solutions of the first d moment
+ equations ALL fail the very next one.  So no nonzero h of degree <= 3 kills every
+ moment, and NC2 holds on the {0,1}- and {-1,1}-weight strata up to that degree.
+<stdin>:34: RuntimeWarning: overflow encountered in scalar multiply
+<stdin>:34: RuntimeWarning: invalid value encountered in scalar add
+
+================================================================================
+PART 5 -- PROVING EMP BY LAPLACE ASYMPTOTICS (not just degree-by-degree)
+================================================================================
+
+ CLAIM.  h in C[r] of degree d >= 1, leading coeff c_d, next coeff c_{d-1}.  Then
+
+     E[h(r)^m]  =  c_d^m (dm)! exp( c_{d-1} / (c_d d) ) (1 + o(1))    as m -> infinity.
+
+ REASON.  E[h^m] = int_0^inf e^{-r} h(r)^m dr.  Write h(r) = c_d r^d phi(r) with
+ phi(r) = 1 + (c_{d-1}/c_d)/r + O(1/r^2), so beyond the largest root phi is nonvanishing.
+ The integrand e^{-r} r^{dm} peaks at the saddle r = dm, and THERE
+
+     m log phi(r) = m [ (c_{d-1}/c_d)/r + O(1/r^2) ] -> c_{d-1}/(c_d d),
+
+ a CONSTANT -- the subleading coefficients contribute a finite factor, not a growing one.
+ The phase arg h(r) -> arg c_d as r -> infinity, so it is asymptotically CONSTANT across the
+ peak: there is no oscillation to cancel the integral.  Hence
+
+     E[h^m] ~ c_d^m e^{c_{d-1}/(c_d d)} int_0^inf e^{-r} r^{dm} dr = c_d^m e^{...} (dm)!.
+
+ The amplitude is NONZERO, so E[h^m] != 0 for all large m.  Therefore E[h^m] = 0 for every
+ m >= 1 forces h constant, and then E[h] = h = 0.  THAT IS EMP, for every degree.
+
+ NUMERICAL TEST OF THE ASYMPTOTIC (the ratio must -> exp(c_{d-1}/(c_d d)) ):
+
+  h = r^2 + (-2+0.5i) r + (3+i)
+    predicted limit exp(c_(d-1)/(c_d d)) = 0.356443+0.091015j
+      m=  10  E[h^m]/(c_d^m (dm)!) =     0.372240    +0.110971i   |ratio-target| = 2.545e-02
+      m=  20  E[h^m]/(c_d^m (dm)!) =     0.364130    +0.100485i   |ratio-target| = 1.220e-02
+      m=  40  E[h^m]/(c_d^m (dm)!) =     0.360235    +0.095636i   |ratio-target| = 5.978e-03
+      m=  80  E[h^m]/(c_d^m (dm)!) =     0.358326    +0.093298i   |ratio-target| = 2.960e-03
+Traceback (most recent call last):
+  File "<stdin>", line 45, in <module>
+  File "<stdin>", line 34, in Eh
+  File "<stdin>", line 34, in <genexpr>
+OverflowError: int too large to convert to float
+
+================================================================================
+PART 5 (rerun, overflow fixed) -- EMP ASYMPTOTIC:  E[h^m] ~ c_d^m (dm)! e^{c_{d-1}/(c_d d)}
+================================================================================
+
+  h = r^2 + (-2+0.5i)r + (3+i)
+    predicted limit exp(c_(d-1)/(c_d d)) = 0.356443+0.091015j
+      m=  10  ratio =    0.372240   +0.110971i   |err| = 2.545e-02
+      m=  20  ratio =    0.364130   +0.100485i   |err| = 1.220e-02  (err ratio vs prev:  2.09)
+      m=  40  ratio =    0.360235   +0.095636i   |err| = 5.978e-03  (err ratio vs prev:  2.04)
+      m=  80  ratio =    0.358326   +0.093298i   |err| = 2.960e-03  (err ratio vs prev:  2.02)
+      m= 160  ratio =    0.357381   +0.092150i   |err| = 1.473e-03  (err ratio vs prev:  2.01)
+      m= 320  ratio =    0.356911   +0.091581i   |err| = 7.347e-04  (err ratio vs prev:  2.00)
+
+  h = (2-i)r^3 + 1
+    predicted limit exp(c_(d-1)/(c_d d)) = 1.000000+0.000000j
+      m=  10  ratio =    1.000164   +0.000082i   |err| = 1.836e-04
+      m=  20  ratio =    1.000039   +0.000019i   |err| = 4.356e-05  (err ratio vs prev:  4.21)
+      m=  40  ratio =    1.000009   +0.000005i   |err| = 1.062e-05  (err ratio vs prev:  4.10)
+      m=  80  ratio =    1.000002   +0.000001i   |err| = 2.621e-06  (err ratio vs prev:  4.05)
+      m= 160  ratio =    1.000001   +0.000000i   |err| = 6.511e-07  (err ratio vs prev:  4.03)
+      m= 320  ratio =    1.000000   +0.000000i   |err| = 1.623e-07  (err ratio vs prev:  4.01)
+
+  h = r^2 + (-4+2i)r + (2-2i)   [an exact EMP root]
+    predicted limit exp(c_(d-1)/(c_d d)) = 0.073122+0.113881j
+      m=  10  ratio =    0.065300   +0.114492i   |err| = 7.846e-03
+      m=  20  ratio =    0.069285   +0.114241i   |err| = 3.853e-03  (err ratio vs prev:  2.04)
+      m=  40  ratio =    0.071223   +0.114073i   |err| = 1.909e-03  (err ratio vs prev:  2.02)
+      m=  80  ratio =    0.072177   +0.113979i   |err| = 9.501e-04  (err ratio vs prev:  2.01)
+      m= 160  ratio =    0.072651   +0.113931i   |err| = 4.740e-04  (err ratio vs prev:  2.00)
+      m= 320  ratio =    0.072887   +0.113906i   |err| = 2.367e-04  (err ratio vs prev:  2.00)
+
+ The error HALVES each time m doubles -- the O(1/m) decay of a Laplace expansion, which is
+ exactly what the saddle-point derivation predicts.  The limit is NONZERO in every case,
+ including for the exact degree-2 root that kills E[h] and E[h^2]: that polynomial cannot
+ keep killing moments, because the asymptotic amplitude does not vanish.  EMP is PROVED.
+
+================================================================================
+PART 6 -- NC2, HENCE GMC(2), FOR EVERY TWO-WEIGHT P, IN EVERY DEGREE
+================================================================================
+
+ P supported on exactly two weights p < q.  Wick keeps total weight 0, so in P^m only terms
+ with i p + j q = 0, i + j = m survive.
+   (i)  0 < p < q (or p < q < 0): no solution with m >= 1 -- every moment vanishes for FREE.
+        These are precisely the members NC2 permits.
+   (ii) p = 0 < q: forces j = 0, so E[P^m] = E_r[f(r)^m] with f the weight-0 part.  EMP => f = 0.
+   (iii) p < 0 < q: i|p| = j q with i+j = m pins (i,j), and f^i g^j = (f^q g^{|p|})^{m/(q+|p|)}
+        is a POWER, so E[P^m] = C(m,i) E_r[H^k].  EMP => H = 0 => f = 0 or g = 0.
+ In (ii) and (iii) P collapses to a single weight.  So NC2 holds on every two-weight stratum,
+ and with Part 3's implication:   GMC(2) HOLDS FOR EVERY P SUPPORTED ON AT MOST TWO WEIGHTS.
+
+================================================================================
+PART 7 -- THE FIRST UNCOVERED STRATUM IS {-1,0,1} -- the shape of the n>=3 witnesses
+================================================================================
+   P = Zb a(r) + b(r) + Z c(r), a,b,c of degree <= 1, coeffs in {0,+-1,+-2,+-i}
+   triples tested: 117648;   NC2 violations: 0
+   NONE -- consistent with NC2 (bounded box, NOT a proof)
+
+ Bessel form of this stratum, from the polar decomposition (r ~ Exp(1) _|_ theta ~ Unif):
+     sum_m E[P^m] t^m / m!  =  E_r[ e^{b(r) t} I_0( 2 t sqrt( r a(r) c(r) ) ) ]
+ and GMC(2) here is the claim that this equals 1 only when r a c = 0 and b = 0.  THAT is the
+ precise remaining gap: a Bessel-weighted analogue of EMP.  The same saddle-point method
+ should apply -- I_0(x) ~ e^x/sqrt(2 pi x) has no oscillation on the positive axis either --
+ but I have not carried it through, and I am not claiming it.
+
