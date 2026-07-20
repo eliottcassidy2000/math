@@ -1,0 +1,24 @@
+TEST: M* <= 2(K+ + K-)/gcd(K+,K-)  [ESV/TNC bound x2, transported to charges]
+ D  patterns  all closed  bound holds  violations  tight
+ 2         5        True         True           0      0
+ 3        34        True        False           1      6
+    VIOLATION (((0, 2), (0, 3), (3, 0)), [-3, -2, 3], 5, 4)
+ 4       132        True        False           5     18
+    VIOLATION (((0, 1), (0, 4), (4, 0)), [-4, -1, 4], 5, 4)
+    VIOLATION (((0, 2), (0, 3), (3, 0)), [-3, -2, 3], 5, 4)
+    VIOLATION (((0, 3), (0, 4), (4, 0)), [-4, -3, 4], 7, 4)
+
+The formula M* <= 2(K+ + K-)/gcd(K+,K-):
+  K+ = top charge, K- = |bottom charge|; (K+ + K-)/gcd = ESV first-return level m0;
+  factor 2 = opus THM-1685 primitive + second level (CT(m0) + CT(2m0) => unit ideal).
+TEST: M* <= 2 * max_{pos p, neg n} (p+|n|)/gcd(p,|n|)   [max over ALL pairs, not extremes]
+ D   pat  M*<=1x maxpair  M*<=2x maxpair  max M*   max ratio M*/maxpair
+ 2     5            True            True       3                  1.000
+ 3    34           False            True       8                  2.000
+     over 1x: ([-1, 1], 4, 2)
+     over 1x: ([-1, 2], 6, 3)
+     over 1x: ([-1, 1], 4, 2)
+ 4   132           False            True      10                  2.000
+     over 1x: ([-4, -1, 2], 6, 3)
+     over 1x: ([-4, -1, 2], 6, 3)
+     over 1x: ([-1, 1], 4, 2)
