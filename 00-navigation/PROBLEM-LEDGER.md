@@ -1,174 +1,236 @@
-# PROBLEM LEDGER — the repo's novel results across external conjectures, and the frontier for future work
+# PROBLEM LEDGER — the repo's novel results across problems, and the frontier for future work
 
-**Created death-star-2026-07-20-S59u (HYP-8185)**, owner-directed: given the
-Jacobian Conjecture was disproved externally by a singular dim-3 counterexample,
-inventory our NOVEL, non-obvious results on the surrounding problems, expand the
-list with under-the-radar threads, and frame future creative work. This is a
-LIVING index — future sessions should update the grade and frontier of each entry
-and add new problems. Grades: **PROVED** (in-repo proof) · **PARTIAL** (real
-partial result / verified sub-case) · **REFRAMED** (new formulation that relocates
-the difficulty) · **CONJECTURED** (evidence, no proof) · **UNTOUCHED** (named, not
-yet worked — a target). Every claim carries a citation; unproved things are
-labeled. LRC(≤13) is treated as settled by citation per owner directive.
+**Canonical consolidated ledger.** Created death-star-2026-07-20-S59u (HYP-8185),
+owner-directed: given the Jacobian Conjecture was disproved externally, inventory
+our NOVEL, non-obvious results across the surrounding problems, expand the list
+with under-the-radar threads, and set priorities for future creative work.
+
+**This is a CONSOLIDATION.** The owner prompt went fleet-wide and produced several
+overlapping drafts — **klein-S332** (`PROBLEM-LEDGER-2026-07-20-klein-S332.md`, a
+full peer ledger, merged here with credit), **kind-pasteur-S128c104** ("PROBLEM-
+ATLAS", stub), **mac-mini-S140** ("PROBLEM-PORTFOLIO", stub). This file merges them
+plus four death-star-S59u audit sweeps into one living index; the scattered drafts
+should be retired in favor of this one. Grades: **PROVED** (in-repo proof) ·
+**PARTIAL** (verified sub-case / bounded-exact with named residual) · **REFRAMED**
+(new formulation relocating the difficulty) · **CONJECTURED** (evidence, no proof) ·
+**UNTOUCHED** (named, not worked = a target). LRC(≤13) settled by citation.
+**Future sessions: update grades, add problems, keep it honest.**
 
 ---
 
 ## A. The Jacobian ecosystem (van den Essen's world)
 
-### A1. Jacobian Conjecture (JC_n)
-**Status: DISPROVED externally (n ≥ 3); verified in-repo.** The owner-supplied
-map F: ℂ³→ℂ³ has det JF ≡ −2 and a triple collision — **THM-1300** (six
-independent in-repo verifications; JC_n false for all n ≥ 3 by stabilization).
-**JC_2 survives** (see A8). Frontier: the exact classification (A5) and JC_2 (A8).
+### A1. Jacobian Conjecture (JC_n) — DISPROVED (n≥3), verified in-repo.
+THM-1300: the owner map F:ℂ³→ℂ³ has det JF≡−2 + triple collision (six independent
+in-repo verifications). JC_n false ∀n≥3 by stabilization. JC_2 survives (A9).
 
-### A2. Dixmier Conjecture (DC_n)
-**Status: DC_{n≥3} constructively FALSE (PROVED in-repo); DC_1, DC_2 OPEN.**
-- **THM-1300 §1** — the EXPLICIT A_3 Weyl-algebra endomorphism φ(X_i)=F_i,
-  φ(D_j)=Σ_k B_jk D_k with B=(JF^T)^{-1} over ℤ[1/2]; all 18 Weyl/flatness
-  identities verified; non-surjectivity by the module one-liner (X_1 ∉ im φ).
-  A_3 has an explicit proper self-embedding ⟹ DC_{n≥3} false constructively.
-  (Independent constructions: klein's symplectic ℂ⁶ lift; boxeph's lead.)
-- **DC_1** — REFRAMED via tournaments (**S59r, HYP-8160**): A_1's weight triple
-  (N, q, p) IS the oriented 3-cycle (observer = ℏ = the conserved +1); the
-  two-lens strategy (Rédei parity × 2D leading-form bound). DC_1 NOT claimed
-  (open; JC_2 ⟹ DC_1 via BKK). See A8.
-- **DC_2** — OPEN; decoupled from the dead JC side (JC_4 false makes the BKK
-  route vacuous); hangs below JC_2.
+### A2. Dixmier Conjecture (DC_n) — DC_{n≥3} constructively FALSE (PROVED); DC_1, DC_2 OPEN.
+- **THM-1300 §1** — explicit A₃ Weyl endomorphism φ(X_i)=F_i, φ(D_j)=Σ B_jk D_k,
+  B=(JF^T)⁻¹ over ℤ[1/2]; 18 Weyl/flatness identities verified; non-surjectivity by
+  the module one-liner ⟹ A₃ has an explicit proper self-embedding. **The strongest
+  Dixmier result: a held object, not just the classical contrapositive.** Double-
+  constructed (death-star-S59m + mac-mini-S130); klein's symplectic route (A3).
+- **DC_1** — REFRAMED (S59r, HYP-8160): A₁'s weight triple (N,q,p) IS the oriented
+  3-cycle (observer=ℏ=the conserved +1); two-lens strategy (Rédei parity × 2D
+  leading-form bound). OPEN (JC_2 ⟹ DC_1 via BKK); the surviving floor of the tower.
+- **DC_2** — OPEN, genuinely empty (no A₂ construction); decoupled from dead JC_4.
 
-### A3. Stable Poisson Conjecture — **FALSIFIED EXPLICITLY (2026-07-20; status updated by boxeph-S149).**
-Cotangent lift of the kernel: Phi(x_i) = K_i, Phi(p_j) = sum_k M_jk p_k with
-M = (JK^T)^{-1} = adj(JK)^T/(-2). Built/verified independently three times:
-klein-S323 (symplectic form preserved on the nose, det = 1, non-injective;
-VERIFIED-EXACT), mac-mini-S140 (Poisson-endomorphism framing, claim stub), and
-boxeph-S149 (`poisson_conjecture_counterexample_boxeph_S149.py`, HYP-8190: all
-12 generator bracket identities exact, det JPhi = 1, triple collision lifts at
-p = 0) => PC false on C^6, stable PC false for all C^{2n}, n >= 3. Same
-adjugate drives the quantum (THM-1300 Weyl) and classical (this) objects — a
-matched quantum-classical counterexample pair. Survivors: PC on C^2, C^4.
-The symplectic structure IS present (klein's cotangent lift Φ=(F, J^{-T}ξ),
-Φ*ω=ω, an explicit symplectic Keller counterexample in ℂ⁶; THM-1345's
-det JF = {P,Q} Poisson reframing), but the *stable Poisson conjecture by name*
-is not worked. **Tool that could bear on it:** the equivariant/Poisson machinery
-of THM-1345 (weight-additive bracket, leading-form obstruction) applied to the
-Poisson-algebra endomorphism setting.
+### A3. Stable Poisson / "Poisson" Conjecture — witness PROVED; named disproof STATED-not-written.
+The symplectic ℂ⁶ cotangent lift Φ(x,ξ)=(F, J⁻ᵀξ) has det≡1, Φ*ω=ω exactly, 3-to-1
+(klein-S323, VERIFIED) — an explicit symplectic Keller counterexample sitting on the
+BKK/Kontsevich circle. THM-1345: det JF={P,Q} (the Poisson reframing). klein-S332 +
+mac-mini-S140 CLAIM this disproves the "Poisson conjecture (Poisson endos are autos)"
+at n=3 with witness Ψ(q,p)=(F(q),B(q)p) — but **no THM file is written and the
+named-conjecture identification is unverified**. Honest grade: **PARTIAL** (witness
+proved; the disproof-of-the-named-conjecture is an unwritten claim). ★ Next: write
+the one-page Φ*-bracket THM; verify the object IS the literature's stable Poisson
+conjecture; mark the End-vs-Aut boundary (Aut conjectures survive).
 
-### A4. Shao's Vanishing Conjecture — **UNTOUCHED (target).** [verify via miner]
+### A4. Shao's Vanishing Conjecture — **UNTOUCHED (target).** Not named anywhere (the
+only "Shao" is a different tournament author). No content, no witness.
 
-### A5. Exact classification of Jacobian counterexamples
-**Status: DEEP partial results — the repo's strongest Jacobian contribution.**
-- **THM-1305** — the equivariant anatomy: normal form for weight-(1,−1,−k)
-  maps, the s-graded determinant law, c₂=0 forces A=v^{k+1} (the cube is a
-  theorem), infinitesimal RIGIDITY (moduli tangent 0), and the k=3 rung is
-  EMPTY on two validated instruments ⟹ the counterexample is an ISOLATED
-  SPECIES (sporadic, not a family) within the equivariant chart.
-- **THM-1320/THM-1325** — the +1 IS the Yagzhev identity part X (not hidden);
-  the reduction hides the TORUS; the SURGERY WALL (no single-variable
-  stabilization; the +1's zero-hyperplane kills the cofactor field). [THM-1320
-  P3 honesty-amended to det JF(0), trivial.]
-- The fine structure (fleet): S_3 monodromy / Chebotarev split (1/2,1/6,1/3);
-  fiber = 1+2 = Rédei-shape; the resolvent = orientation double-cover, Rédei-sign
-  = discriminant character (opus-S418); the engine curve / cuspidal-cubic
-  trichotomy (mac-mini THM-1340); surjectivity / Jelonek (THM-1315/1330/1335);
-  the radical inverse & Abel-Ruffini dichotomy (kind-pasteur; every known
-  counterexample radical-invertible, an A_5 quintic rung would be the first not).
-  [Details + citations to be refined from the classification miner.]
+### A5. Generalized Differential-Operator Vanishing Conjecture — **UNTOUCHED (target).**
+Not named ("differential operator" hits are a tournament-matrix atlas).
 
-### A6. Generalized Differential-Operator Vanishing Conjecture — **UNTOUCHED (target).** [verify]
+### A6. Zhao's Image Conjecture — **UNTOUCHED as independent work; COROLLARY-false, no witness.**
+klein-S332's cascade: Zhao's Image Conjecture ⟹ JC, so JC_{n≥3} false ⟹ IC false
+by contrapositive — **but this rests on the cited external implication (unverified
+in-repo) and produces NO witness** ("nobody has seen these objects"). Grade honestly
+as UNTOUCHED with a logical corollary. ★ Next: the witness-extraction pipeline
+(F → Yagzhev via THM-1325 → de Bondt–van den Essen symmetrization → Hessian-vanishing
+witness) — the first explicit IC-violating object.
 
-### A7. Zhao's Image Conjecture — **UNTOUCHED (target).** [verify]
+### A7. Mathieu / Mathieu–Zhao Subspace Conjectures — **UNTOUCHED; same corollary, no witness.**
+Same status as A6 (the relevant Mathieu-subspace statements imply JC ⟹ false by
+contrapositive if the implication holds; no independent work, no witness). ★ Same
+pipeline; the radical/Abel-Ruffini structure (A8) is the Mathieu–Zhao-adjacent tool.
 
-### A7b. Mathieu / Mathieu–Zhao Subspace Conjectures — **UNTOUCHED (target).** [verify]
+### A8. Exact classification of Jacobian counterexamples — DEEP (the repo's strongest JC contribution).
+Verdict (4 convergent authors): **sporadic at the core, familial by propagation —
+the counterexample set is the monoid generated by rigid seeds.**
+- **THM-1305** [PROVED/PARTIAL] — equivariant normal form; c₂=0 FORCES the cube
+  A=v^{k+1} at every k; the rationals all DERIVED; infinitesimal RIGIDITY (moduli
+  tangent 0); k=3 rung EMPTY (mod-p + Newton, both k=2-validated) ⟹ ISOLATED SPECIES.
+- **THM-1320/THM-1325** [PROVED] — the +1 IS the Yagzhev X; the reduction hides the
+  TORUS (dim≤3 equivariant cubic-linear Keller maps all injective); the SURGERY WALL
+  (the +1's zero-hyperplane kills the cofactor field). [THM-1320 P3 amended trivial.]
+- **Fine structure** [PROVED]: full ℂ*-torus (collision = λ=1 slice of an orbit,
+  λ↦λ² double-cover; det's "2" = torus weight); S₃ monodromy / Chebotarev (½,⅙,⅓),
+  4 independent proofs; fiber = 1+2 Rédei-shape; the **master quartic L=D=K** triple-
+  derived (x/y/u coords), simultaneously fiber-cubic leading coeff + resolvent
+  conductor + **Jelonek asymptotic variety** (first explicitly computed for any JC
+  counterexample) — THM-1310/1315; resolvent = orientation double-cover, Rédei-sign =
+  discriminant character (opus-S418); surjective + everywhere-étale, ramification
+  entirely at infinity (THM-1315); the **Chebyshev trisection** reading (THM-1335:
+  "JC₃ fails the way angle-trisection fails, cos(θ/3)∉ℚ(cosθ)"); the **cuspidal-cubic
+  engine trichotomy** (mac-mini THM-1340: deg-1 unit / deg-2 impossible / deg-3
+  minimal; all known counterexamples ride ONE projectively-rigid cusp).
+- **Keller monoid & realization** (THM-1330): 𝒳_n=deg⁻¹({≥3}), no degree 2 (Campbell),
+  finite factorization, classifying = the inverse-Jelonek problem; the **Smith
+  selection rule** (klein-S325: deg-2 impossible over every ℂⁿ, deg-3 forces S₃).
+- **Radical inverse & Abel–Ruffini dichotomy** (kind-pasteur, THM-1345-radical):
+  every known counterexample is radical-invertible (Cardano, solvable S₃); an A₅
+  quintic rung would be the FIRST non-radical one — the polynomial incarnation of
+  quintic unsolvability. [REFRAMED/CONJECTURED — the A₅ rung is named, not built.]
+- **Big open questions**: Mount-Everest seed-uniqueness at (3,3) [CONJECTURED];
+  realizability of degrees 4–7 (the n=4 (z,w)-affine hunt has its first obstruction,
+  THM-1340 §5) [PARTIAL negatives]; the order-{1,3} conjecture (z-affine ℂ³ Keller
+  field degree ∈{1,3}) [CONJECTURED]; the resolvent-conductor = Jelonek conjecture.
 
-### A8. The 2-variable Jacobian Conjecture (JC_2)
-**Status: PROVED in the equivariant category; full JC_2 OPEN, difficulty LOCATED.**
-- **THM-1345** — det JF = {P,Q} (Poisson); JC_2 = "a canonical pair is a
-  coordinate system" = the classical shadow of DC_1. Equivariant Keller ⟹
-  invertible for EVERY ℂ*-action (hyperbolic→linear [boxeph-S144], elliptic→
-  triangular). Full JC_2 located as descent through the weight filtration
-  (base = equivariant, settled; step = leading-form propagation, AMS-hard, OPEN).
-- mac-mini-S137 — the golden/worst-approximable degree corner (Lamé-for-polygons);
-  the engine-dimension lemma (n=2 is engine-starved — why n=3 fell first).
-
----
-
-## B. The Lonely Runner cluster
-[To be filled from the LRC miner — headline: covering-min deep well 14/183
-(Φ₆-Eisenstein); the D-graded gate tower / primorial cascade (THM-1285/1286/1271);
-the sharp measure-horn 1/(7L) (THM-1123); the K-ladder (THM-1295); the
-kernel-exact Lean certificate spectrum (3/23, 4/127, 4/247, 4/367); rung theory
-(opus-S410); the observer principle (Rédei = LRC + 1). Frontier: the named walls.]
-
----
-
-## C. Geometry / combinatorics
-(filled boxeph-S149 from the under-the-radar miner)
-
-- **Unit distance / Hadwiger-Nelson / chromatic number of the plane — PRESENT
-  AND LARGE, unaudited.** ~70 `unit_distance_*` + 28 chromatic + 12 spindle
-  files (klein S313/S314/S685-S689 towers: u21/u22 known-graph bounds, n=7 SAT
-  chromatic, Moser-field towers, Lee-Yang chromatic roots). NEXT: audit
-  proven-vs-tangent and extract the citable statements. Nobody has done this.
-- **Finite-field Kakeya / Falconer** (~35 files): the "K(A_5) twin" bridge to
-  the LRC covering spectrum is real but unformalized. NEXT: incidence ledger.
-- **Sylvester-Gallai / Frobenius** (~36 files): mined by count only; identify
-  which theorem the files actually touch.
-- **Doubly-regular tournaments <-> skew-Hadamard** (TANGENTS Reid-Brown,
-  THM-481 remark; n=9 determinant maximizer = DRT, first beta_5 > 0). CONCRETE
-  OPEN: the RM(2,5) / order-32 skew-Hadamard gauge question; also confirm
-  BlackSelf(8) candidate T_657 = Paley P(7) extension (INV-012 partial).
-- **Prouhet-Tarry-Escott** (4 files, load-bearing in HYP-7955 moment-blindness):
-  flagged "name it a problem" — PTE size-13 <=> cage Newton depth.
-- **Markov/Lagrange spectrum deformation** (opus-S408 M_theta): embryonic,
-  high ceiling — the LRC spectrum's classical cousin.
+### A9. Two-variable Jacobian Conjecture (JC_2) — PROVED (equivariant); full JC_2 OPEN, difficulty LOCATED.
+- **THM-1345** [PROVED category-restricted + REFRAMED] — det JF={P,Q}; JC_2 = "a
+  canonical pair is a coordinate system" = classical shadow of DC_1. Equivariant
+  Keller ⟹ invertible for EVERY ℂ*-action (hyperbolic→linear [boxeph-S144],
+  elliptic→triangular). Difficulty located: leading forms Poisson-commute
+  {P_A,Q_B}=0, propagation down the weight filtration = the AMS-hard open content.
+- boxeph-S144: the dim-2 no-go + the **mod-p decision theorem** (Keller automorphy ⟺
+  bijective mod one large prime). mac-mini-S137: the **golden/worst-approximable
+  degree corner** (Lamé-for-polygons) + the engine-dimension lemma (n=2 engine-
+  starved — why n=3 fell first). klein-S329: the Euler–Zariski bootstrap
+  (JC_2@3 ⟺ one ramification parabola cannot be pushed to infinity).
 
 ---
 
-## D. Under-the-radar problems (to promote)
-(filled boxeph-S149; ranked by real-work-then-dropped)
+## B. The Lonely Runner cluster — LRC(14) NOT closed; deep exact structure around the wall.
 
-1. **Caccetta-Häggkvist** — worked S356-S357 (residue probe, TANGENTS T315),
-   consolidation lane named and never run. PROMOTE: run the consolidation +
-   short-cycle transport-residue probe.
-2. **Sidon / B2 / Mian-Chowla** — 64 files; LRC-witness <-> Sidon structure
-   correspondence used but never formalized (Erdős #64 adjacent). PROMOTE:
-   formalize the correspondence as a theorem.
-3. **Sum-product / BGK** — 19 files + kps HYP-8020: a LIVE mod-p descent of
-   LRC Wall A. PROMOTE: push the descent (this is a Wall-A attack vector).
-4. **Collatz** — 39 files of rapidity/two-block machinery, zero citable
-   theorems. PROMOTE: audit for one standalone citable result.
-5. **Erdős 592** (partition calculus, macmini S1-S3 burst: THM-453,
-   HYP-2344-2346) — dropped; tree-grid dichotomy / SAT-verifier frontier open.
-6. **Erdős 870** (used as proof-architecture lens) and **Erdős-Moser #1216**
-   (corrected once, THM-481/483, dropped).
-7. **Rédei generalizations** — the Schweser-Stiebitz-Toft 2025 mixed-graph
-   strengthening is OPEN in-repo (oq:mixed); 2-adic Rédei INV-014 partial
-   (v_2(H) = 0 always).
-8. **Proposed NEW fronts (absent today, tournament-native):** Seymour's second
-   neighborhood conjecture and Sumner's universal tournament conjecture — both
-   live directly on our objects (score sequences, condensation, h-monoid);
-   neither has a single repo file. Also absent: Kelly decompositions,
-   EGZ/Davenport zero-sums (natural fit to our CRT/gate machinery).
-9. **CAUTION (scope honesty):** the S147/S148/S59s-t Proth work concerns the
-   NUMBER FAMILY n*2^x+1 (shear laws, THM-1355), NOT the Sierpinski/Riesel
-   covering-primality problem, which remains absent.
-
-Cross-reference: the full novel-results compilation with per-problem detail is
-`03-artifacts/drafts/problem-web-post-jc-boxeph-S149.md` (boxeph-S149,
-HYP-8190); sibling ledger: PROBLEM-LEDGER-2026-07-20-klein-S332.md.
+Top novel results (full detail: the LRC14-* frontier docs + THM files):
+1. **Covering-min deep well 14/183 = n/Φ₆(n)** [PROVED single-killer closed-form;
+   PARTIAL multi-killer] — Eisenstein norm, Heegner −3; the global bound IS LRC(n)
+   itself (THM-724/726, the Eisenstein reflection).
+2. **The D-graded gate tower = primorial cascade** [PROVED 3 seals, Lean-checked;
+   CONJECTURED general-N] — F_D(N) attains D/((N+1)D−1) iff N≡1 mod L_D, N≢1 mod 2D−1
+   (2D−1 prime), L_next=L_D·(2D−1); a Proth-adjacent gate law. 8 out-of-sample tower
+   confirmations (THM-1285/1286/1271).
+3. **Kernel-exact Lean certificate spectrum** [PROVED] — 3/23, 4/127, 4/247, 4/367,
+   6/1271 machine-checked kernel-pure (3/23 axiom-free).
+4. **The K-ladder M(K_c(N))=c/(cN+1) + the 12m/13s ladders** [PROVED floor + seals;
+   one shared residual with the tower] — THM-1295; the bottom spectrum = two ladders
+   rooted at the AP.
+5. **The cross-N first-gap band** [PROVED single-far N=6..13] — THM-1284; the band-law
+   conjecture refuted by its own author's follow-up (N=31 = 4/127, opening the tower).
+6. **The sharp measure-horn 1/(7L)** [PROVED local; CONJECTURED uniform] — THM-1132/1123.
+7. **Rung theory + the θ-flow + the observer principle** [REFRAMED] — opus-S409/S410;
+   Rédei = LRC + 1 (opus-2026-06-30); the OCF vacuum digit = the +1 = ℏ.
+8. **The Heegner/Eisenstein arithmetic bridge** [PROVED, cross-problem] — the same
+   class-number-1 fields and the "7" govern the LRC floor, the covering-min, the
+   Moser-spindle χ=4 junction, and the three-distance theorem.
+**Frontier — three named walls**: Wall A = the inverse/rigidity Freiman/near-AP core
+(= HYP-7310 = LRC(14) itself; the covering-core gap proved for 95% of spread cores,
+5% rational-time-evasive residual); Wall B = the six-comb phase-transport wall; Wall C
+= the bound-D shell. Bounded height: exhaustive to 55 (THM-1290), floor isolated at
+all heights (THM-1289, published), δ ineffective.
 
 ---
 
-## E. How to use this ledger (for future sessions)
+## C. Geometry / discrete geometry
 
-1. **The biggest untouched targets** (A3, A4, A6, A7, A7b): the exotic van den
-   Essen conjectures are NAMED but unworked. The repo owns machinery aimed
-   straight at them — the equivariant/Poisson calculus (THM-1345), the
-   Mathieu–Zhao-adjacent radical structure (kind-pasteur), the constructive
-   Weyl-endomorphism (THM-1300 §1). A single session could open any of them.
-2. **The deepest live frontiers**: JC_2/DC_1 (the weight-filtration induction,
-   the two-lens tournament strategy), the exact JC-classification (higher-degree
-   realizability, the radical/Abel-Ruffini dichotomy), and LRC(14)'s named walls.
-3. **The connective tissue**: the observer +1 (OCF vacuum digit = ℏ = the
-   Yagzhev X), the doubling/n-vs-2n ladder, parity-protection (Rédei-odd ↔
-   odd-degree), and the Poisson/symplectic frame run ACROSS these problems —
-   progress on one often transfers. Integrate, don't silo.
+- **Unit distance / Hadwiger–Nelson / Moser spindle** [PARTIAL/DEEP] — the largest
+  secondary vein (~70 files). THM-412 density quantization (w | r_Q(D), triangular
+  lattice skips densities 4,5, first density 6 at the split prime D=7); the HN field
+  tower (HYP-2276/2277): the most rigid χ=4 junctions land on the Heegner numbers
+  {7,11,19,43,67,163}; 3n floor bounds (THM-421); u21=57, u22 (THM-431/440); the
+  J₀ spectral floor χ(ℝ²)≥3.48. The self-audit `missed-important-problem-frontier-s657`
+  ranks HN #1 for stride potential. ★ Promote to a first-class thread.
+- **Three-gap / three-distance (Steinhaus)** [REFRAMED, clean] — the Eisenstein/cusp
+  dichotomy IS the three-distance theorem; the LRC-AP tight locus ⟺ ≤3-gap config
+  (HYP-2913, verified n=4..7).
+- **Kakeya / Falconer (finite field)** [MODERATE] — parabola carrier size exact minima
+  7,17,31; Kakeya-as-adaptive-graphic-rank.
+- **Sphere packing dims 8 & 24 (E8/Leech via {7,21})** [MODERATE, cross-problem] —
+  Fano→octonion→[8,4,4]→E8 and T₂₃→Golay→Leech chains; Cohn–Elkies magic function =
+  Chebyshev equioscillation extremal. The "why 7 and 21" narrative.
+- **Zaremba's conjecture** [MENTIONED] — the named target for JC_2's Lamé-for-polygons.
+
+---
+
+## D. Under-the-radar problems (PROMOTE these — genuine results, hidden by LRC file-naming)
+
+- **Collatz conjecture** [DEEP — top promote] — the rapidity conservation law
+  ln n = K ln2 − L ln3 − D(n) with a bounded sign-definite harmonic defect; the exact
+  identity n·3^L·Π(3a_i+1)/(3a_i)=2^K (Fraction-verified); the θ=2 Cramér–Lundberg
+  excursion exponent. Self-contained novel result set (collatz-rapidity-defect,
+  collatz-iterated-log-tower; HYP-2147-2149). **The clearest hidden gem.**
+- **Erdős Problem 592** [DEEP — $1000 problem] — the p=2 Schur-seam theorem (THM-469),
+  R(n,2)=2n+1 linear conjecture, Chang-tower m=3 open; 21 scripts, a survey draft.
+- **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — the only unachievable OCF
+  values; H=7 (THM-029) + H=21 (THM-079) proved; parallels the open LRC {12,24};
+  E8/Golay/octonion home. (OPEN-Q-028.)
+- **GLMY path homology of tournaments** [DEEP] — β₂=0 all tournaments (THM-108/109/285);
+  β₁∈{0,1} by transitive-triple rank; β₄=6 for Paley T₇; the seesaw refuted at n=8.
+  (OPEN-Q-024.)
+- **Tournament reconstruction conjecture** [MODERATE→DEEP] — the (OCF, det) key; first
+  OCF-cospectral twin at n=6; degeneracy metrics. Ranked #2 in the repo self-audit.
+- **Hadwiger's conjecture on the metagraph** [MODERATE] — G_7/Z_2 (272 vtx) has
+  ω=4<χ=6; does it have a K_6 minor? A clean checkable question on the key object.
+- **Caccetta–Häggkvist** [MODERATE] — the return-residue reframe.
+- **Real-rootedness of independence polynomials (Chudnovsky–Seymour)** [MODERATE] —
+  exhaustive n=3..6 (all 56 classes), product formula.
+- **Erdős–Selfridge / odd covering systems** [MODERATE] — covering-systems ↔ danger-arc
+  correspondence (macmini-S97).
+- **Bernoulli 1806 fixed point / von Staudt–Clausen** [MODERATE] — 6→42→1806→1806.
+- **Pisano periods** [MODERATE] — π_F(10)=24 (the JC tripling clock); LRC fibered band.
+- **Doubly-regular / skew-Hadamard tournaments ↔ Golay/Leech codes** [MODERATE].
+- **Lee–Yang zeros / chromatic roots (HN gadget)** [MODERATE].
+- Also present [TANGENTIAL]: Erdős-Straus, Fermat-Catalan/Beal, Erdős-Moser, Erdős-870,
+  Erdős-64 power-of-two cycles, Goldbach/twin-prime lenses, Zeckendorf, the figurate
+  zoo (Moser/Faulhaber, HYP-8165/8170/8175), the "cancellation family" meta-result
+  (THM-406, with an MRDP proof they are NOT one problem).
+**Repo self-audit to start from**: `07-reflections/missed-important-problem-frontier-s657.md`
+(ranks HN > reconstruction > Kakeya/Falconer > sunflower > Caccetta–Häggkvist > … ).
+
+---
+
+## E. Hygiene — collisions to reconcile (this prompt + prior)
+
+- **HYP-8185 is a 4-way collision** (death-star-S59u, klein-S332, kind-pasteur-S128c104,
+  mac-mini-S140) — this file is the consolidation; the others' HYPs should point here.
+- **THM-1345 is a DOUBLE** — `…poisson-reframing-dc1-shadow` (death-star-S59q) and
+  `…plane-family-…-radical-inverse` (kind-pasteur-S128c101), both legitimate, both
+  filed 2026-07-20. **Needs de-collision** (renumber the second, or merge).
+- MISTAKE-199 (fleet-wide-prompt duplication) recurred here; caught mid-session this
+  time. Lesson standing: grep concurrent same-prompt claims BEFORE deep work.
+
+---
+
+## F. Future priorities (for current and future sessions)
+
+1. **The biggest untouched targets — first contact on the exotic conjectures.**
+   Shao's vanishing (A4), the generalized differential-operator vanishing conjecture
+   (A5), Zhao's image (A6), Mathieu/Mathieu–Zhao subspaces (A7): NAMED, unworked, and
+   the repo owns the exact machinery — the witness-extraction pipeline (THM-1325
+   Yagzhev + de Bondt–van den Essen), the equivariant/Poisson calculus (THM-1345), the
+   radical/Abel-Ruffini structure, the constructive Weyl-endomorphism (THM-1300 §1).
+   **The single highest-leverage move: produce the FIRST EXPLICIT WITNESS** for the
+   Image / Mathieu-subspace / stable-Poisson conjectures from F — objects nobody has
+   ever seen. One focused session each.
+2. **The deepest live frontiers.** JC_2/DC_1 (the weight-filtration induction; the
+   two-lens tournament strategy; is propagation length = the CF chain length?); the
+   JC-classification realization program (degrees 4–7; the A₅ Abel-Ruffini rung; the
+   resolvent-conductor=Jelonek conjecture); LRC(14)'s Wall A (the Freiman core).
+3. **Promote the hidden gems** to first-class threads: Collatz, Erdős-592, {7,21},
+   GLMY, reconstruction — each has real results buried under LRC file-naming.
+4. **The connective tissue — integrate, don't silo.** The observer +1 (OCF vacuum
+   digit = ℏ = Yagzhev X), the doubling/n-vs-2n ladder, parity-protection (Rédei-odd
+   ↔ odd-degree), the Poisson/symplectic frame, and the Heegner/Eisenstein arithmetic
+   run ACROSS these problems. Progress on one transfers; the ledger exists to make the
+   transfers visible.
