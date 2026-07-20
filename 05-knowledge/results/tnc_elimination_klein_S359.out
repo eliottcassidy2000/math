@@ -1,0 +1,46 @@
+======================================================================================
+TNC BY EXACT ELIMINATION, span by span
+======================================================================================
+  test: is (c_{-M} * c_N)^k in the ideal <CT(Lam^m) : m=1..K> ?
+  YES  =>  every solution has a collapsed span  =>  TNC HOLDS for that (M,N).
+
+   (M,N)  unknowns    m range   k with (c-M cN)^k in I     TNC?
+  (1, 1)         1       1..4        <1>  INCONSISTENT      YES
+  (1, 2)         2       1..6        <1>  INCONSISTENT      YES
+  (2, 1)         2       1..6        <1>  INCONSISTENT      YES
+  (2, 2)         3       1..6        <1>  INCONSISTENT      YES
+  (3, 1)         3       1..8        <1>  INCONSISTENT      YES
+  (1, 3)         3       1..8        <1>  INCONSISTENT      YES
+  (2, 3)         4      1..10        <1>  INCONSISTENT      YES
+  (3, 2)         4      1..10        <1>  INCONSISTENT      YES
+  (3, 3)         5       1..8        <1>  INCONSISTENT      YES
+
+  NOTE ON THE NORMALISATION.  CT(Lam^m) is invariant under Lam -> mu*Lam only up to mu^m, and
+  under u -> lam*u exactly; together these let me set c_{-M} = c_N = 1 on the open set where
+  BOTH are nonzero.  TNC for span (M,N) is precisely the claim that this open set contains no
+  solution -- i.e. that the normalised system is INCONSISTENT, Groebner basis <1>.  So the
+  test above is the honest one: <1> means TNC holds for that span, anything else means the
+  span is not yet settled by these K moments.
+
+
+======================================================================================
+NORMALISATION AUDIT -- is setting c_{-M} = c_N = 1 actually legitimate?
+======================================================================================
+
+ Two symmetries act on Lam = sum_q c_q u^q without changing whether CT(Lam^m) vanishes:
+   (i)  Lam -> mu*Lam        gives CT -> mu^m CT      -- vanishing preserved for mu != 0
+   (ii) u   -> lam*u         gives c_q -> c_q lam^q, and CT is UNCHANGED, since the constant
+        term collects total exponent 0 and the lam factors multiply to lam^0 = 1.
+ Together: c_q -> mu c_q lam^q.  To reach c_{-M} = c_N = 1 solve
+        mu lam^{-M} c_{-M} = 1,   mu lam^{N} c_N = 1
+ Dividing: lam^{M+N} = c_{-M}/c_N, solvable over C (M+N roots), then mu is determined.
+ So the normalisation is available on exactly the open set where BOTH extremes are nonzero --
+ which is precisely the set TNC claims is empty.  Hence "normalised system inconsistent"
+ IS "TNC holds for that span".  The test is sound.
+
+ machine check, CT(Lam^m) invariant under u -> lam*u at (M,N)=(1,1),(2,1),(2,2), m=2,3,4: True
+
+ VERDICT: the nine spans with M,N <= 3 -- including (2,2), (2,3), (3,2), (3,3), which were the
+ open M,N >= 2 cases -- all give Groebner basis <1>.  TNC IS PROVED ON EVERY SPAN WITH
+ M, N <= 3, exactly and finitely, with no asymptotics and no search.
+
