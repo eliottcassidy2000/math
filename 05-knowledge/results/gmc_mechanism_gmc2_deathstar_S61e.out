@@ -1,0 +1,12 @@
+=== (A) rigidity: only c=2 AND mu_c=(1/2)_c gives the counterexample ===
+  c=2, mu=(1/2)_c  [the counterexample]: E[P^m] m=1..6 = ['0', '0', '0', '0', '0', '0']  ALL ZERO
+  c=3, mu=(1/2)_c  [wrong constant]: E[P^m] m=1..6 = ['-1/2', '7/4', '-51/8', '609/16', '-8745/32', '157095/64']  nonzero
+  c=2, mu=c!       [U~exponential/ZW, wrong EGF]: E[P^m] m=1..6 = ['-1', '0', '0', '0', '0', '0']  nonzero
+  c=2, mu=1        [U~point mass]: E[P^m] m=1..6 = ['-1', '-4', '-8', '20', '428', '3952']  nonzero
+  c=1, mu=(1/2)_c: E[P^m] m=1..6 = ['1/2', '-1/4', '-21/8', '-111/16', '345/32', '14895/64']  nonzero
+  c=4, mu=(1/2)_c: E[P^m] m=1..6 = ['-1', '5', '-33', '321', '-3945', '59445']  nonzero
+
+=== (B) GMC(2): search for P in C[Z,W] (no U) with E[P^m]=0 all m, E[Q P^m]!=0 large m ===
+  E[P^m]=0 for 'W - W^2': True; E[W P^m] m=1..8=['0', '0', '0', '0', '0', '0', '0', '0']; large-m nonzero: False
+  random search: 3950 tried, 532 had E[P^m]=0 for m<=7, GMC(2)-counterexample found: False
+  => NO GMC(2) counterexample found (degree<=3, integer coeffs). Evidence GMC(2) is TRUE.
