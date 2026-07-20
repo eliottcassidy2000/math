@@ -1,0 +1,17 @@
+== (a) the y-affine n=2 lemma ==
+  det J = y*(-a(x)*Derivative(c(x), x) + c(x)*Derivative(a(x), x)) - a(x)*Derivative(d(x), x) + c(x)*Derivative(b(x), x)
+  [y]-coefficient a'c − ac' ≡ 0 ⟹ (a/c)' = 0 ⟹ a = κc (or c ≡ 0):
+  then row reduction by the constant κ makes F triangular ⟹ invertible.
+  ⟹ NO y-affine Keller counterexample in n = 2: the engine P(a:c) is a
+  POINT of P¹ — no room to curve. (Likely classical; the point is the
+  engine-dimension reading: first curved engine needs P², i.e. n = 3.)
+
+== (b) the golden corner census ==
+  pairs with 2 <= m <= n <= 300: survivors of [Magnus + divisibility + Moh]: 14661
+  GOLDEN SURVIVORS g·(F_k, F_{k+1}) among them: 171
+  minimal golden survivors: [(63, 102), (63, 105), (64, 104), (65, 104), (65, 105), (66, 110), (68, 102), (68, 110)]
+  max reduction-chain length among survivors: 9
+  pairs achieving it: [(178, 288)]
+  fraction of longest-chain pairs that are golden (g·Fibonacci): 1.00
+  slopes n/m of the longest-chain pairs: ['144/89']
+  nearest to phi = 1.618034: (5.6460660007306984e-05, '144/89')
