@@ -1,0 +1,47 @@
+==============================================================================
+(A) max_T min-FAS(T)  -- is this mac-mini's 'new invariant' d_sat?
+==============================================================================
+  n = 3 : max over all 8 labelled tournaments of min-FAS = 1
+  n = 4 : max over all 64 labelled tournaments of min-FAS = 1
+  n = 5 : max over all 1024 labelled tournaments of min-FAS = 3
+  n = 6 : max over all 32768 labelled tournaments of min-FAS = 4
+
+  sequence n=3..6 : [1, 1, 3, 4]
+  opus-S306 (07-reflections/diameter-is-feedback-arc-set.md) records
+     diam(G_n) = max_T min-FAS(T) = A003141(n), growth ~n^2/4,
+     and OPEN-QUESTIONS lists it RESOLVED.
+  mac-mini-S126 THM-1390 reports d_sat(n) = 2,3,4,7 for n=4..7 as NEW.
+  merged-metagraph diameters already in canon (waggly_completeness_s301.out)
+     are 1,3,4 at n=4,5,6.
+  -> compare the n=4,5,6 entries of the computed sequence above with 1,3,4.
+
+==============================================================================
+(B1) does the d=2 layer split by weight parity?  (two halved cubes, not one)
+==============================================================================
+  A distance-2 move flips exactly 2 bits, so it PRESERVES Hamming weight
+  parity.  Hence the d=2 graph on 2^m tilings has (at least) two components.
+  m = 4   : 2^m = 16      even 8      odd 8      each C(m,2)-regular, deg = 6
+            d=2 edges total = 2 * (8 * 6 / 2) = 48
+  m = 6   : 2^m = 64      even 32     odd 32     each C(m,2)-regular, deg = 15
+            d=2 edges total = 2 * (32 * 15 / 2) = 480
+  m = 10  : 2^m = 1024    even 512    odd 512    each C(m,2)-regular, deg = 45
+            d=2 edges total = 2 * (512 * 45 / 2) = 23040
+  -> so 'the half-cube IS the d=2 layer' is off by a factor of two:
+     the d=2 layer is a DISJOINT UNION of two halved cubes.
+
+==============================================================================
+(B2) is weight parity a CLASS function?  (does the split survive the quotient)
+==============================================================================
+  n = 4 (m = 3 tiles, 4 iso classes):
+     classes containing BOTH parities : 1 of 4
+     witness: tilings 0b0 (weight 0, EVEN) and 0b1 (weight 1, ODD)
+              are ISOMORPHIC as tournaments -- same class.
+  n = 5 (m = 6 tiles, 12 iso classes):
+     classes containing BOTH parities : 7 of 12
+     witness: tilings 0b0 (weight 0, EVEN) and 0b100101 (weight 3, ODD)
+              are ISOMORPHIC as tournaments -- same class.
+
+  -> if any class is mixed, weight parity is NOT a class function, the
+     even/odd bipartition does NOT descend to the metagraph, and the halved-
+     cube structure is destroyed by exactly the S_n quotient the project is
+     built on.  My 'half-cube = d=2 layer' handoff needs both corrections.
