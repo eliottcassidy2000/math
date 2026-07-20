@@ -1,0 +1,47 @@
+FORCED-ARC DESCENT (HYP-8270): cap_P Gamma_P = coordinate subspace on arcs
+lying on EVERY Hamiltonian path of T (base-path-independent by construction).
+Naive cap over all paths of K_n = 0 for n >= 4 (no universal edge) — the invariant
+lives on T's own path system.  Descent: contract forced arcs, iterate -> core.
+n=4: 4 classes
+  (h, #forced, depth, core_size, SC) distribution:
+   h=1   forced=3 depth=1 core= 1 SC=1  x1
+   h=3   forced=0 depth=0 core= 4 SC=0  x2
+   h=5   forced=0 depth=0 core= 4 SC=1  x1
+n=5: 12 classes
+  (h, #forced, depth, core_size, SC) distribution:
+   h=1   forced=4 depth=1 core= 1 SC=1  x1
+   h=3   forced=0 depth=0 core= 5 SC=1  x1
+   h=3   forced=1 depth=1 core= 4 SC=0  x2
+   h=5   forced=0 depth=0 core= 5 SC=0  x2
+   h=9   forced=0 depth=0 core= 5 SC=1  x2
+   h=11  forced=0 depth=0 core= 5 SC=1  x1
+   h=13  forced=0 depth=0 core= 5 SC=1  x1
+   h=15  forced=0 depth=0 core= 5 SC=1  x2
+n=6: 56 classes
+  (h, #forced, depth, core_size, SC) distribution:
+   h=1   forced=5 depth=1 core= 1 SC=1  x1
+   h=3   forced=1 depth=1 core= 5 SC=0  x2
+   h=3   forced=2 depth=1 core= 4 SC=0  x2
+   h=5   forced=0 depth=0 core= 6 SC=1  x1
+   h=5   forced=1 depth=1 core= 5 SC=0  x2
+   h=9   forced=0 depth=0 core= 6 SC=0  x4
+   h=9   forced=0 depth=0 core= 6 SC=1  x1
+   h=11  forced=0 depth=0 core= 6 SC=0  x2
+   h=13  forced=0 depth=0 core= 6 SC=0  x2
+   h=15  forced=0 depth=0 core= 6 SC=0  x6
+   h=17  forced=0 depth=0 core= 6 SC=1  x2
+   h=19  forced=0 depth=0 core= 6 SC=0  x2
+   h=23  forced=0 depth=0 core= 6 SC=0  x4
+   h=25  forced=0 depth=0 core= 6 SC=0  x2
+   h=27  forced=0 depth=0 core= 6 SC=0  x2
+   h=29  forced=0 depth=0 core= 6 SC=0  x2
+   h=29  forced=0 depth=0 core= 6 SC=1  x2
+   h=31  forced=0 depth=0 core= 6 SC=0  x2
+   h=33  forced=0 depth=0 core= 6 SC=0  x4
+   h=33  forced=0 depth=0 core= 6 SC=1  x1
+   h=37  forced=0 depth=0 core= 6 SC=0  x4
+   h=37  forced=0 depth=0 core= 6 SC=1  x1
+   h=41  forced=0 depth=0 core= 6 SC=1  x1
+   h=43  forced=0 depth=0 core= 6 SC=0  x2
+   h=45  forced=0 depth=0 core= 6 SC=1  x2
+DONE.

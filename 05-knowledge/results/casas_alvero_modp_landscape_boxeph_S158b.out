@@ -1,0 +1,14 @@
+(d, p): genuine CA-counterexamples in F_p / degenerate (some P^(i) = 0) / total monic
+d=3:  p=2: 0/2  p=3: 0/0  p=5: 0/0  p=7: 0/0  p=11: 0/0  p=13: 0/0
+d=4:  p=2: 0/6  p=3: 0/6  p=5: 20/0  p=7: 42/0  p=11: 0/0  p=13: 0/0
+d=5:  p=2: 0/14  p=3: 0/36  p=5: 0/0  p=7: 42/0  p=11: 110/0  p=13: 0/0
+d=6:  p=2: 0/30  p=3: 0/108  p=5: 0/20  p=7: 210/0  (11: skip)  (13: skip)
+d=7:  p=2: 0/62  p=3: 0/318  p=5: 0/200  (7: skip)  (11: skip)  (13: skip)
+d=8:  p=2: 0/126  p=3: 0/1038  p=5: 0/1980  (7: skip)  (11: skip)  (13: skip)
+
+READING: genuine=0 columns are where the mod-p reduction CAN power a char-0 proof
+(d = p^k pattern); nonzero genuine cells are the obstruction — the landscape maps
+exactly which (d,p) reductions are usable. First open char-0 degrees (literature:
+12, 20, 24, ... UNVERIFIED citation) need a p with genuine=0 — the table shows
+whether any small p qualifies for d=8 etc. NEXT: extend d=9..12 with sampling +
+the p-adic lifting criterion (Graf von Bothmer et al. route) on the zero cells.
