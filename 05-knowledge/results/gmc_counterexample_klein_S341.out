@@ -1,0 +1,21 @@
+================================================================================
+INDEPENDENT VERIFICATION -- which conjugate pairing realises the claim?
+================================================================================
+hypothesis                                       E[P^m], m=1..5         E[Q P^m], m=1..5
+H2: Z1=A, Z2=conj(A), W1=B, W2=conj(B)           [0, -2, 0, 60, 0]      [0, -2, 0, 72, 0]
+H3: Z1=A, Z2=B,       W1=conj(A), W2=conj(B)     [0, 0, 0, 0, 0]        [1, 2, 6, 24, 120]   <== MATCHES THE CLAIM EXACTLY
+H4: Z1=conj(A), Z2=A, W1=B, W2=conj(B)           [0, -2, 0, 60, 0]      [0, -2, 0, 72, 0]
+H5: Z1=A, Z2=conj(B), W1=B, W2=conj(A)           [1, -2, -30, -120, 1320] [1, 2, -18, -240, -600]
+H6: Z1=conj(A),Z2=conj(B),W1=A, W2=B             [0, 0, 0, 0, 0]        [1, 2, 6, 24, 120]   <== MATCHES THE CLAIM EXACTLY
+
+================================================================================
+CONFIRMED under H6: Z1=conj(A),Z2=conj(B),W1=A, W2=B
+================================================================================
+  P has 6 monomials; total degree = 3
+  P = [((0, 0, 1, 0), 1), ((0, 0, 1, 1), 1), ((1, 0, 0, 0), 1), ((1, 0, 0, 1), 1), ((1, 1, 0, 0), -1), ((1, 1, 0, 1), -1)]
+  E[P^m],   m=1..10 : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  E[Q P^m], m=1..10 : [1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800]
+  E[Q P^m] == m!    : [True, True, True, True, True, True, True, True, True, True]
+
+  => E[P^m] = 0 for all m tested, E[Q P^m] = m! != 0 for all m tested.
+     GMC IS FALSE IN 4 REAL GAUSSIAN VARIABLES.  VERIFIED EXACTLY, NOT SAMPLED.

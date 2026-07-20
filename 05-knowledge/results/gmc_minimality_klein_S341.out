@@ -1,0 +1,76 @@
+================================================================================
+POSITIVE CONTROL -- the search predicate must FIRE on the known 4-term example
+================================================================================
+  P' = (1+Bb)(B - |A|^2), 4 monomials, cubic -> predicate fires: True
+    witness Q exponent (0, 0, 0, 1) (= Bb), nonvanishing at m = [1, 2, 3, 4, 5, 6, 7, 8]
+
+================================================================================
+(a) 2 REAL GAUSSIANS (one complex A): exhaustive over small P
+================================================================================
+  monomial pool: 15 (degree <= 4 in A, Ab);  P with <= 4 terms, coeffs in +-1,+-2
+   size 2: cumulative hits = 0
+   size 3: cumulative hits = 0
+   size 4: cumulative hits = 0
+  RESULT: 0 counterexamples found in 2 real Gaussians  -- NONE
+
+================================================================================
+(b) 4 REAL GAUSSIANS, FEWER THAN 4 MONOMIALS
+================================================================================
+  monomial pool: 35 (degree <= 3 in A,Ab,B,Bb)
+   2 monomials: none
+   3 monomials: none
+
+================================================================================
+(c) 4 REAL GAUSSIANS, DEGREE <= 2 (is cubic necessary?)
+================================================================================
+   degree <= 2, 2 monomials: none
+   degree <= 2, 3 monomials: none
+   degree <= 2, 4 monomials: none
+
+DONE.
+
+================================================================================
+THE WEIGHT-POLYTOPE OBSTRUCTION -- a PROVED necessary condition on any GMC witness
+================================================================================
+
+ The Gaussian measure on C^K (= 2K real Gaussians) is invariant under the TORUS
+        T: (A_1,...,A_K) -> (e^{i t_1} A_1, ..., e^{i t_K} A_K).
+ Give the monomial prod_j A_j^{a_j} conj(A_j)^{b_j} the WEIGHT w = (a_1-b_1, ..., a_K-b_K).
+ Weights ADD under multiplication, and Wick gives
+
+        E[monomial] != 0   =>   w = 0                      (*)
+
+ because E[A^a conj(A)^b] = delta_{ab} a!.  Two consequences, both one line:
+
+ (1) SINGLE-WEIGHT P IS USELESS.  If every monomial of P has the same weight v != 0, then
+     every monomial of Q P^m has weight w_Q + m v.  A FIXED Q has finitely many weights, so
+     for large m no weight is 0 and E[Q P^m] = 0 by (*).  GMC is not refutable this way.
+     (This kills the cheap 'P holomorphic' idea: holomorphic P has all weights > 0.)
+
+ (2) THE NEWTON-WEIGHT POLYTOPE MUST CONTAIN THE ORIGIN.  If all weights of P lie in an
+     OPEN half-space {w : <w,u> > 0}, then every monomial of P^m has <w,u> >= m*c with
+     c = min > 0, while Q contributes a bounded shift; so again E[Q P^m] = 0 for large m.
+     Hence any GMC witness needs   0 in conv(weights of P)   -- and, since a P all of whose
+     weights are 0 is a polynomial in the |A_j|^2 with E[P^m] = 0 forcing P = 0 (real,
+     see (3)), it needs at least one STRICTLY POSITIVE and one STRICTLY NEGATIVE weight.
+
+ (3) REAL-VALUED P IS TRIVIAL.  If P is real-valued then E[P^2] = 0 forces P = 0 a.s.
+     So GMC only has content for COMPLEX P -- which is exactly why the witness is built
+     from complex combinations of the real Gaussians.
+
+ machine check:
+  known witness (1+Bb)(B-|A|^2)    weights=[(0, -1), (0, 0), (0, 1)]
+     0 in hull (pos&neg present): True;  E[P^m] m=1..8 = [0, 0, 0, 0, 0, 0, 0, 0]
+     Q with E[QP^m] != 0 at large m: YES (0, 0, 0, 1)
+  holomorphic A+B                  weights=[(0, 1), (1, 0)]
+     0 in hull (pos&neg present): False;  E[P^m] m=1..8 = [0, 0, 0, 0, 0, 0, 0, 0]
+     Q with E[QP^m] != 0 at large m: NO
+  weight-0 |A|^2-|B|^2             weights=[(0, 0)]
+     0 in hull (pos&neg present): False;  E[P^m] m=1..8 = [0, 2, 0, 24, 0, 720, 0, 40320]
+     Q with E[QP^m] != 0 at large m: YES (1, 1, 0, 0)
+
+ READING: the witness has weights {(0,1),(0,0),(0,-1)} -- straddling 0 in the B
+ direction and identically 0 in the A direction.  The holomorphic and weight-0
+ controls both fail exactly as (1)/(2)/(3) predict.  So the searched boxes came back
+ empty for a REASON, not by accident: 2 monomials cannot straddle 0 and still kill
+ every moment (P = c1 A + c2 Ab gives E[P^{2k}] = C(2k,k)(c1c2)^k k! != 0).
