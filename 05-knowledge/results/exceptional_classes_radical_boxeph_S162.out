@@ -1,0 +1,36 @@
+==========================================================================================
+n=4 (11 classes): radical structure, quarter law, and quadraticity violators
+  [Aut : R] distribution: {1: 9, 4: 1, 24: 1} ; quarter law f+ in {1/4,1/2,3/4,1}: True
+  quadraticity violators (edges, |Aut|, [Aut:R], f+, eps|R trivial):
+    ([(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)], 24, 24, '3/4', True)
+==========================================================================================
+n=5 (34 classes): radical structure, quarter law, and quadraticity violators
+  [Aut : R] distribution: {1: 30, 4: 2, 24: 1, 120: 1} ; quarter law f+ in {1/4,1/2,3/4,1}: True
+  quadraticity violators (edges, |Aut|, [Aut:R], f+, eps|R trivial):
+    ([(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)], 24, 24, '3/4', True)
+    ([(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)], 120, 120, '3/4', True)
+==========================================================================================
+n=6 (156 classes): radical structure, quarter law, and quadraticity violators
+  [Aut : R] distribution: {1: 139, 4: 9, 24: 5, 120: 1} ; quarter law f+ in {1/4,1/2,3/4,1}: True
+  quadraticity violators (edges, |Aut|, [Aut:R], f+, eps|R trivial):
+    ([(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)], 48, 24, '3/4', True)
+    ([(0, 5), (1, 4), (2, 3)], 48, 24, '1/2', False)
+    ([(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)], 120, 120, '3/4', True)
+    ([(0, 5), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)], 48, 24, '1/2', False)
+    ([(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)], 24, 24, '3/4', True)
+    ([(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (1, 2), (1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5), (3, 4), (3, 5)], 48, 24, '3/4', True)
+DONE.
+eps-mean on S_m (K_m statistic: parity = sum over even cycles of l/2):
+  m= 3: mean eps = 0        f+ = 1/2      QUARTER
+  m= 4: mean eps = 1/2      f+ = 3/4      QUARTER
+  m= 5: mean eps = 1/2      f+ = 3/4      QUARTER
+  m= 6: mean eps = 0        f+ = 1/2      QUARTER
+  m= 7: mean eps = 0        f+ = 1/2      QUARTER
+  m= 8: mean eps = 3/8      f+ = 11/16    *** NON-QUARTER ***
+  m= 9: mean eps = 3/8      f+ = 11/16    *** NON-QUARTER ***
+  m=10: mean eps = 0        f+ = 1/2      QUARTER
+EGF check: means should be Wallis quarter-sequence: m=4,5: 1/2; 6,7: 0; 8,9: 3/8; 10: 0
+=> K6 mass = 0 (was in the n=6 skip set: consistent); FIRST NON-QUARTER at m=8:
+   f+(K8) = 11/16, mass 3/8 — the quarter law is the k<=1 truncation of the
+   WALLIS/FIBER-FRACTION sequence C(2k,k)/4^k (the repo's (1-x)^(-1/2) two-sheeted
+   cover fraction, evaluated on the quarter lattice x^4).

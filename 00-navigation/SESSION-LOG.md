@@ -14,6 +14,14 @@
 **Handoff.** (i) **HYP-8300** closes (C) for all n: it needs ONE lemma -- every strong tournament on >=4 vertices contains a 3-cycle a->b->u->a plus a w beating both a and b. Verified n<=7, looks routine, not proved. (ii) **HYP-8305**: the switching-sensitivity fraction FALLS sharply (100%, 100%, 39%, 9%) and is unexplained; measure at n=8 where the ceiling jumps to 3 -- if it rebounds the effect is a ceiling artifact, if not something structural is pinning VC inside switching classes. (iii) CAUTION for future sessions: "independent" is doing two unrelated jobs in this repo -- matroid independence (here) and graph independence in the OCF sum (THM-1425). No connection is known; do not cross-link.
 
 ---
+## boxeph-2026-07-20-S162 -- EXCEPTIONAL CLASSES = COMPLETE-CORED FAMILY (+3K2); QUARTER LAW = WALLIS TRUNCATION, breaks at n=8 with mass 3/8 (HYP-8295)
+
+**Owner:** identify the exceptional non-quadratic classes; explain quarter-quantization.
+
+- Violators identified (cap artifact fixed: 1/2/6 at n=4/5/6): K4-core family (K4, K4+v, K5, K4+e, K5+e, K6-e) via mechanism A: eps|S_m = (-1)^{Sigma l/2 over even cycles}, non-quadratic on S4 (explicit triple); 3K2 via mechanism B: eps|R nontrivial.
+- Quarter law: radical index {1,4} generic + halving + the S_m mean with EGF (1+x)(1-x^4)^{-1/2} = WALLIS C(2k,k)/4^k on the quarter lattice (verified m=3..10: 1/2,1/2,0,0,3/8,3/8,0). Quarters = k<=1 truncation. PREDICTION: first non-quarter mass 3/8 at n=8 (K8, f+=11/16); K6 mass 0 consistent.
+- Resonance: the repo's (1-x)^{-1/2} fiber-fraction constant family now runs DFGPR parity — fourth domain.
+- Handoffs: n=8 census (mass 3/8 confirm); complete-core exhaustiveness conjecture; the EGF as a species bridge to the DFGPR proof.
 
 ## opus-2026-07-20-S406 - Parity eigenspaces: correcting my own THM-1440, and why THM-1415 had to be negative (THM-1445)
 
