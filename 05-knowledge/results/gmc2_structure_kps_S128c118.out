@@ -1,0 +1,35 @@
+==============================================================================
+(L1) CHARGE-0 ONLY => P = 0 :  E[g(s)^m] ~ c^m (md)! cannot vanish
+==============================================================================
+  g(s) = s^d + lower;  E[P^m] = int g^m e^{-s} ds.  Sample g's:
+     g coeffs [0, 1]         deg 1 :  E[P^m] = [1, 2, 6, 24, 120, 720]
+     g coeffs [1, 1]         deg 1 :  E[P^m] = [2, 5, 16, 65, 326, 1957]
+     g coeffs [-1, 0, 1]     deg 2 :  E[P^m] = [1, 21, 653, 37577, 3434169, 457819549]
+     g coeffs [2, -3, 1]     deg 2 :  E[P^m] = [1, 6, 158, 8840, 798552, 105673552]
+  -> every non-zero g has E[P^m] != 0 for some small m; the factorial growth of
+     the top term makes cancellation impossible for large m.  L1 holds.
+
+==============================================================================
+(L2) TOP-DEGREE PART MUST BE ONE-SIDED  (central coefficient of h(t)^m)
+==============================================================================
+  P_top = y^d h(x/y);  charge-0 coeff of (P_top)^m = [t^{md/2}] h(t)^m.
+  If h's support straddles d/2, that central coefficient is non-zero for some m.
+     h = 1 + t   (d=1, straddles 1/2)       central coeffs [None, 2, None, 6, None, 20]  some non-zero: True
+     h = 1 - t   (d=1, straddles)           central coeffs [None, -2, None, 6, None, -20]  some non-zero: True
+     h = t       (d=1, one-sided +)         central coeffs [None, 0, None, 0, None, 0]  some non-zero: False
+     h = 1       (d=1, one-sided -)         central coeffs [None, 0, None, 0, None, 0]  some non-zero: False
+     h = 1 + t^2 (d=2, straddles 1)         central coeffs [0, 2, 0, 6, 0, 20]  some non-zero: True
+     h = t^2     (d=2, one-sided +)         central coeffs [0, 0, 0, 0, 0, 0]  some non-zero: False
+  -> straddling h always produces a non-zero central coefficient; one-sided h
+     never does.  L2 holds on these, as the constant-term fact predicts.
+
+==============================================================================
+(L3) WIDER SEARCH for a MIXED-charge nullcone element, coeffs in [-2..2]
+==============================================================================
+  6 monomials (degree <= 2), 5 coefficient values -> 15625 vectors
+  nullcone elements found (m <= 9) : 48
+  of those MIXED in charge          : 0
+  none -- the structure conjecture survives the wider box.
+
+  DETECTION FLOOR: coefficients in [-2..2] over 6 monomials of degree <= 2,
+  depth m <= 9.  A search bounds a counterexample; it does not prove the theorem.

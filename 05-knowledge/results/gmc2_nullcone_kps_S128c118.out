@@ -1,0 +1,16 @@
+monomials Z^a conj(Z)^b with a+b <= 3 : 10 of them
+searching coefficient vectors in [-1, 0, 1]^10 ...
+
+==============================================================================
+RESULT
+==============================================================================
+  coefficient vectors tested          : 59048
+  survive E[P^m] = 0 for m = 1..9     : 160
+  of those, ONE-SIDED in charge       : 160
+  of those, MIXED charge              : 0
+
+  NO mixed-charge element of the nullcone exists in this box.
+  Consistent with the structure conjecture N = {one-sided} u {0}, and hence
+  with GMC(2) being TRUE.  This is a search, so it bounds the counterexample
+  rather than proving the theorem -- the detection floor is: all coefficient
+  vectors in {-1,0,1} over 10 monomials (degree <= 3), depth m <= 9.
