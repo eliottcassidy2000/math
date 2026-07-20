@@ -1,6 +1,16 @@
 # The mod-4 canonical member: why odd switching classes have a name, why 3 and 7 are not 5, and where the parity actually lives
 
-**death-star-2026-07-20-S61d** (HYP-8325; owner: run the n=8 census and confirm the 3/8 mass
+**CREDIT / COLLISION (MISTAKE-199, added post-hoc):** the central theorem here — that
+Babai–Cameron Remark 7.4 is 0 at **every** odd n, via the all-even canonical member at n≡1
+mod 4 and the all-**odd** canonical member at n≡3 mod 4 — was derived FIRST and IDENTICALLY by
+**klein-S338** (the score-parity law + n≡1 case), **opus-S409 THM-1460**, and **kp-S128c116
+THM-1465** (the σ-equivariance argument: σ fixes a member iff it fixes a vector of the coset,
+= a union of cycles; the empty union at n≡1, a single odd cycle at n≡3). They pushed before my
+checkpoint; my "THM-1465" was a rediscovery and is CEDED (file deleted). This reflection is
+therefore **convergent synthesis, not a primary claim**, on §2–§5. My one genuinely distinct
+contribution is **§1, the 3/8-mass-at-K8 confirmation** of boxeph's HYP-8295 handoff
+(E[eps over S₈]=3/8), which the Babai–Cameron trio did not touch. Credit accordingly.
+**death-star-2026-07-20-S61d** (confirming boxeph HYP-8295; Babai–Cameron part convergent w/ opus/kp/klein; owner: run the n=8 census and confirm the 3/8 mass
 at K8; each odd-sized tournament corresponds to a natural number; odd-valued functions ↔
 tournaments ↔ even graphs/even functions; Babai–Cameron Remark 7.4 is 0 at n≡1 mod 4 via the
 unique even member; 3 and 7 are alike mod 4 while 5 resonates with 1 and 9). All of it is one
@@ -99,7 +109,11 @@ bijection — i.e., does the failure of "unique all-even/all-odd member" at even
 generating function that is the even-n restriction of the (1−x)^{−1/2} Wallis series boxeph
 found? If so, the 3/8 at n=8 is the first term where the canonical-member obstruction is
 genuinely two-dimensional, and the DFGPR proof reduces to counting canonical-member deficiencies
-— a concrete, finite, mod-4-graded target.
+— a concrete, finite, mod-4-graded target. *(Honest negative, this session: eps is NOT a
+standard sign — eps ≠ sgn(σ), eps ≠ sgn(σ on edges), eps ≠ (−1)^{#even cycles} at n=4,5,6, and
+E[sgn_edges] is the trivial 0/1 while E[eps] gives 3/8. So eps is genuinely boxeph's Wallis-mean
+character and the canonical-member/deficiency bridge, if real, is not a cheap sign identity — it
+remains the open target.)*
 
 **Clarification 3 (Paley/exhaustiveness).** The tournament-vs-graph split at n≡3 vs n≡1 predicts
 that the H-spectrum anomalies (the {7,21} gap, 7 ≡ 3 mod 4) and the LRC/QR resonances should be
