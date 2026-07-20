@@ -5,7 +5,8 @@ The continuum inputs (selection of an endpoint owner, the THM-1267 survivor
 mass, and extraction of THM-1274's terminal tooth) remain paper topology
 providers.  This file checks the complete endpoint arithmetic, both crossing
 orientations, the normalized tax conversion, the integer cut, the compact
-private-owner alternative, and the exact mirrored guardrail.
+private-owner alternative, the exact mirrored guardrail, the complementary
+endpoint/flood partition, and the nested multi-owner inverse quantile.
 """
 
 from __future__ import annotations
@@ -410,6 +411,167 @@ def centered_phase_clock_audit() -> tuple[int, int, int, tuple[int, ...]]:
     return rows, exact_tax_rows, excluded_rows, (lhs, rhs_closed, coarse_closed)
 
 
+def endpoint_flood_partition_audit() -> tuple[int, int]:
+    """Check that inward and outward pieces pay one full tooth quantum."""
+    rows = 0
+    positive_inward_rows = 0
+    for carrier in range(1, 21):
+        slowest = carrier + 1
+        denominator = 14 * carrier
+        for gap in range(carrier):
+            for owner in range(slowest + 1, 8 * carrier + 1):
+                for side in (-1, 1):
+                    endpoint_word = 14 * gap + (1 if side < 0 else 13)
+                    raw = endpoint_word * owner
+                    quotient = raw // denominator
+                    for address in (quotient, quotient + 1):
+                        if abs(raw - denominator * address) >= carrier:
+                            continue
+                        signed_residual = (
+                            raw - denominator * address
+                            if side < 0
+                            else denominator * address - raw
+                        )
+                        endpoint_residual = carrier + signed_residual
+                        full_tooth = F(1, 7 * owner)
+                        outward = F(
+                            endpoint_residual, 14 * carrier * owner
+                        )
+                        inward = full_tooth - outward
+                        require(
+                            inward
+                            == F(
+                                2 * carrier - endpoint_residual,
+                                14 * carrier * owner,
+                            )
+                            > 0,
+                            "endpoint tooth did not split into positive pieces",
+                        )
+
+                        functional_inward = F(7 * carrier, 8) * inward
+                        functional_outward = (
+                            F(3 * carrier, 4 * slowest)
+                            * F(
+                                slowest * endpoint_residual,
+                                12 * carrier * owner,
+                            )
+                        )
+                        require(
+                            functional_inward
+                            == F(2 * carrier - endpoint_residual, 16 * owner),
+                            "wrong functional inward coefficient",
+                        )
+                        require(
+                            functional_outward
+                            == F(endpoint_residual, 16 * owner),
+                            "wrong functional outward coefficient",
+                        )
+                        require(
+                            functional_inward + functional_outward
+                            == F(carrier, 8 * owner),
+                            "functional Q cancellation failed",
+                        )
+
+                        harmonic_inward = F(49, 6) * inward
+                        harmonic_outward = (
+                            F(7, slowest)
+                            * F(
+                                slowest * endpoint_residual,
+                                12 * carrier * owner,
+                            )
+                        )
+                        require(
+                            harmonic_inward
+                            == F(
+                                7 * (2 * carrier - endpoint_residual),
+                                12 * carrier * owner,
+                            ),
+                            "wrong harmonic inward coefficient",
+                        )
+                        require(
+                            harmonic_outward
+                            == F(
+                                7 * endpoint_residual,
+                                12 * carrier * owner,
+                            ),
+                            "wrong harmonic outward coefficient",
+                        )
+                        require(
+                            harmonic_inward + harmonic_outward
+                            == F(7, 6 * owner),
+                            "harmonic Q cancellation failed",
+                        )
+                        positive_inward_rows += inward > 0
+                        rows += 1
+
+    require(rows == positive_inward_rows > 0, "mixed endpoint bank was empty")
+    return rows, positive_inward_rows
+
+
+def endpoint_cumulative_density(length: F) -> F:
+    require(F(0) <= length <= F(2, 3), "endpoint density argument out of range")
+    if length <= F(1, 6):
+        return F(3, 4) * length
+    if length <= F(1, 3):
+        return F(13, 12) * length - F(1, 18)
+    return F(7, 6) * length - F(1, 12)
+
+
+def multiowner_forest_inverse_audit() -> tuple[int, int, int, int]:
+    """Exhaust exact rational samples through all three Hunter inverses."""
+    branch_rows = [0, 0, 0]
+    rows = 0
+    for denominator in range(1, 121):
+        for numerator in range(0, 2 * denominator):
+            theta = F(numerator, denominator)
+            if theta >= F(2, 3):
+                continue
+            lower_mass = F(11, 360) + F(3, 4) * theta
+            if theta <= F(17, 135):
+                inverse = F(11, 270) + theta
+                require(inverse <= F(1, 6), "first inverse crossed its bin")
+                branch = 0
+            elif theta <= F(11, 30):
+                inverse = F(31, 390) + F(9, 13) * theta
+                require(
+                    F(1, 6) < inverse <= F(1, 3),
+                    "second inverse escaped its bin",
+                )
+                branch = 1
+            else:
+                inverse = F(41, 420) + F(9, 14) * theta
+                require(
+                    F(1, 3) < inverse < F(2, 3),
+                    "third inverse escaped its bin",
+                )
+                branch = 2
+            require(
+                endpoint_cumulative_density(inverse) == lower_mass,
+                "piecewise endpoint inverse is not exact",
+            )
+            branch_rows[branch] += 1
+            rows += 1
+
+    require(all(count > 0 for count in branch_rows), "inverse audit missed a branch")
+    return rows, branch_rows[0], branch_rows[1], branch_rows[2]
+
+
+def multiowner_layering_truth_table() -> int:
+    """Check nested unselected labels can be layered with one raw seam."""
+    rows = 0
+    for active_unselected in range(5):
+        for seam in (0, 1):
+            selected_active = 1 + seam
+            multiplicity = active_unselected + selected_active
+            charged_layers = active_unselected + seam
+            require(
+                charged_layers <= multiplicity - 1,
+                "nested endpoint/seam multiplicity layer failed",
+            )
+            rows += 1
+    return rows
+
+
 def source_has_no_assert_nodes() -> int:
     source = Path(__file__).read_text(encoding="utf-8")
     tree = ast.parse(source)
@@ -427,6 +589,9 @@ def main() -> None:
     protected_rows, protected_ratio = protected_needle_tree_audit()
     mirror_rows, mirror_seam, mirror_ell, mirror_eta = mirrored_guardrail_audit()
     phase_rows, phase_pass, phase_excluded, sharp_phase = centered_phase_clock_audit()
+    partition_rows, positive_inward = endpoint_flood_partition_audit()
+    forest_rows = multiowner_forest_inverse_audit()
+    layering_rows = multiowner_layering_truth_table()
 
     print("THM-1283 TERMINAL ENDPOINT TRANSFER / GCD TAX EXACT AUDIT")
     print(f"Python assert nodes = {no_asserts}")
@@ -447,10 +612,17 @@ def main() -> None:
     print(f"center/endpoint clock rows = {phase_rows}")
     print(f"exact-e passing/excluded rows = {phase_pass}/{phase_excluded}")
     print(f"sharp-row exact lhs/rhs/coarse-rhs = {sharp_phase}")
+    print(f"endpoint/flood partition rows = {partition_rows}")
+    print(f"positive inward endpoint pieces = {positive_inward}")
+    print(f"multi-owner inverse rows/branches = {forest_rows}")
+    print(f"multi-owner layering truth rows = {layering_rows}")
     print("exact_tax=ell-eta>11/270")
     print("integer_cut=270*a*x+45*a*Q<=563*c*x-1")
     print("gcd_cut=270*a*x+45*a*gcd(c,x)<=563*c*x-1")
     print("phase_cut=270*a*x+45*a*Q<=(248*c+315*e)*x-1")
+    print("mixed_functional=inward+outward=c/(8h)")
+    print("mixed_harmonic=inward+outward=7/(6h)")
+    print("multiowner_small=ell>11/270+sum(endpoint_eta)")
     print("protected_tree=internal_six_owner_tree+exterior_carrier_edge")
     print("vertices=carrier-wall,event-owner-wall,outer-survivor-obligation")
     print("switch=circle-reflection; tie_Hamiltonian_path=outward-event-order")

@@ -17,10 +17,17 @@ guardrail seam/ell/eta = 1/392/1/12/1/84
 center/endpoint clock rows = 119940
 exact-e passing/excluded rows = 92148/27792
 sharp-row exact lhs/rhs/coarse-rhs = (19522440, 19048959, 20177919)
+endpoint/flood partition rows = 4964
+positive inward endpoint pieces = 4964
+multi-owner inverse rows/branches = (4880, 975, 1749, 2156)
+multi-owner layering truth rows = 10
 exact_tax=ell-eta>11/270
 integer_cut=270*a*x+45*a*Q<=563*c*x-1
 gcd_cut=270*a*x+45*a*gcd(c,x)<=563*c*x-1
 phase_cut=270*a*x+45*a*Q<=(248*c+315*e)*x-1
+mixed_functional=inward+outward=c/(8h)
+mixed_harmonic=inward+outward=7/(6h)
+multiowner_small=ell>11/270+sum(endpoint_eta)
 protected_tree=internal_six_owner_tree+exterior_carrier_edge
 vertices=carrier-wall,event-owner-wall,outer-survivor-obligation
 switch=circle-reflection; tie_Hamiltonian_path=outward-event-order
@@ -28,4 +35,4 @@ tournament_scores=(0,1); cycles=0; SCCs=2; Hamilton_paths=1
 preserves=side,address,residue,proper-crossing,and-survivor-subtraction
 destroys=next mixed-owner safe-component cover
 STATUS=PASS
-source_sha256=357585477891fe1ed1e1fcaf970f7d73d94d860962e3c7961029d0f65e979f61
+source_sha256=b3f47c51fcfbc67c1a20c5aef2bc8c72f231e06f24dfae8c50f2d8201c8236ba

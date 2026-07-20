@@ -11,7 +11,11 @@ import TournamentH7.LRCCenteredSurvivorProtrusion
 This module checks the arithmetic consumer behind the paper endpoint topology:
 the signed endpoint residual, the outward-width bound, the endpoint-suffix
 quantile, normalization of the exterior seam, the strengthened rational tax,
-its gcd weakening, and integer rounding.
+its gcd weakening, and integer rounding.  It also checks the complementary
+endpoint/flood split: the inward and outward pieces of one endpoint-owner tooth
+cancel the residual numerator `Q` exactly when their two independent budgets
+are combined.  Finally it records the small-branch inverse used by the nested
+multi-owner endpoint forest.
 
 Selection of an endpoint owner, proper crossing of the two actual teeth,
 containment of the five-comb survivor beyond the endpoint-owner wall, and
@@ -155,6 +159,82 @@ theorem integer_endpoint_tax_rounding (c a x Q : ℤ)
     270 * a * x + 45 * a * Q ≤ 563 * c * x - 1 := by
   omega
 
+/-! ## Complementary endpoint/flood cancellation -/
+
+/-- In the functional normalization, the inward part of an endpoint-owner
+tooth and the appropriately rescaled outward endpoint seam sum to one complete
+`c/(8h)` fastest-tooth quantum.  The endpoint numerator `Q` disappears. -/
+theorem functional_endpoint_partition_identity (c a h Q : ℚ)
+    (hc : c ≠ 0) (ha : a ≠ 0) (hh : h ≠ 0) :
+    (2 * c - Q) / (16 * h) +
+        (3 * c / (4 * a)) * (a * Q / (12 * c * h)) =
+      c / (8 * h) := by
+  field_simp
+  ring
+
+/-- In the harmonic normalization, the same inward/outward partition is one
+complete `7/(6h)` fastest-tooth quantum, again independently of `Q`. -/
+theorem harmonic_endpoint_partition_identity (c a h Q : ℚ)
+    (hc : c ≠ 0) (ha : a ≠ 0) (hh : h ≠ 0) :
+    7 * (2 * c - Q) / (12 * c * h) +
+        (7 / a) * (a * Q / (12 * c * h)) =
+      7 / (6 * h) := by
+  field_simp
+  ring
+
+/-- Abstract functional two-budget consumer.  The first hypothesis is the
+internal flood invoice (chronological seams plus the inward tooth piece); the
+second is the strict exterior survivor invoice.  Their supports need not be
+identified: once the paper proves the two inequalities independently, the
+complementary partition upgrades them to a full fastest-tooth quantum. -/
+theorem functional_endpoint_flood_consumer
+    (c a h Q seam internal tail : ℚ)
+    (hc : 0 < c) (ha : 0 < a) (hh : 0 < h)
+    (hInternal : (2 * c - Q) / (16 * h) + seam ≤ internal)
+    (hExterior : a * Q / (12 * c * h) < tail) :
+    seam + c / (8 * h) <
+      internal + (3 * c / (4 * a)) * tail := by
+  have hScale : 0 < 3 * c / (4 * a) := by positivity
+  have hExteriorScaled := mul_lt_mul_of_pos_left hExterior hScale
+  have hPartition := functional_endpoint_partition_identity c a h Q
+    (ne_of_gt hc) (ne_of_gt ha) (ne_of_gt hh)
+  linarith
+
+/-- Harmonic counterpart of `functional_endpoint_flood_consumer`. -/
+theorem harmonic_endpoint_flood_consumer
+    (c a h Q seam internal tail : ℚ)
+    (hc : 0 < c) (ha : 0 < a) (hh : 0 < h)
+    (hInternal : 7 * (2 * c - Q) / (12 * c * h) + seam ≤ internal)
+    (hExterior : a * Q / (12 * c * h) < tail) :
+    seam + 7 / (6 * h) < internal + (7 / a) * tail := by
+  have hScale : 0 < 7 / a := by positivity
+  have hExteriorScaled := mul_lt_mul_of_pos_left hExterior hScale
+  have hPartition := harmonic_endpoint_partition_identity c a h Q
+    (ne_of_gt hc) (ne_of_gt ha) (ne_of_gt hh)
+  linarith
+
+/-! ## Nested endpoint-owner forest: small density branch -/
+
+/-- If the star-forest overlap credit contributes `(3/4)S` to the lower mass
+bound while the surviving suffix has density at most `3/4`, inversion gives
+the exact additive endpoint tax `11/270 + S`. -/
+theorem multiowner_small_branch_inverse (S y mass : ℚ)
+    (hLower : 11 / 360 + (3 / 4) * S < mass)
+    (hUpper : mass ≤ (3 / 4) * y) :
+    11 / 270 + S < y := by
+  linarith
+
+/-- Geometric form of `multiowner_small_branch_inverse`: if `etaMax` is the
+longest nested endpoint seam and `S` is the sum of the remaining seams, the
+small-density branch charges their full sum against the carrier tail. -/
+theorem multiowner_small_branch_tail (ell etaMax S mass : ℚ)
+    (hLower : 11 / 360 + (3 / 4) * S < mass)
+    (hUpper : mass ≤ (3 / 4) * (ell - etaMax)) :
+    11 / 270 + S + etaMax < ell := by
+  have hInverse := multiowner_small_branch_inverse S (ell - etaMax) mass
+    hLower hUpper
+  linarith
+
 #print axioms endpoint_residual_bounds
 #print axioms endpoint_width_lt_owner_tooth
 #print axioms owner_tooth_inside_carrier_tooth
@@ -166,5 +246,11 @@ theorem integer_endpoint_tax_rounding (c a x Q : ℤ)
 #print axioms exact_centered_error_tax_consumer
 #print axioms endpoint_gcd_tax_consumer
 #print axioms integer_endpoint_tax_rounding
+#print axioms functional_endpoint_partition_identity
+#print axioms harmonic_endpoint_partition_identity
+#print axioms functional_endpoint_flood_consumer
+#print axioms harmonic_endpoint_flood_consumer
+#print axioms multiowner_small_branch_inverse
+#print axioms multiowner_small_branch_tail
 
 end LRC14.TerminalEndpointTransferGcdTax

@@ -1,10 +1,10 @@
 ---
 id: THM-1283
 title: A PROTRUDING CENTERED SURVIVOR EXPORTS A PROPER CARRIER-ENDPOINT-OWNER SEAM AND A STRICT RESIDUE/GCD TAIL TAX
-status: PROVED (every protruding endpoint has a non-slowest fast owner; exact signed endpoint residual and outward tooth length; mirrored proper carrier-owner crossing; exterior seam disjoint from the full internal chronological invoice; survivor subtraction gives ell-eta>11/270; exact centered-error/residue and gcd integer cuts; center-to-endpoint winding congruence; terminal-word return-or-unique-owner corollary; the THM-1266 sharp five-rung local row is globally excluded; optimization-safe exact referee; sorry-free Lean arithmetic core). This strengthens the centered protrusion constraint and consumes THM-1274's endpoint branch, but does not prove six-comb noncoverage or LRC(14)
+status: PROVED (every protruding endpoint has a non-slowest fast owner; exact signed endpoint residual and outward tooth length; mirrored proper carrier-owner crossing; exterior seam disjoint from the full internal chronological invoice; survivor subtraction gives ell-eta>11/270; a Hunter star converts several nested endpoint owners into an exact piecewise joint tail tax; an unselected fastest endpoint tooth and its exterior seam cancel Q to one full fastest-tooth quantum; exact centered-error/residue and gcd integer cuts; center-to-endpoint winding congruence; terminal-word return-or-unique-owner corollary; the THM-1266 sharp five-rung local row is globally excluded; optimization-safe exact referee; sorry-free Lean arithmetic core). This strengthens the centered protrusion constraint and consumes THM-1274's endpoint branch, but does not prove six-comb noncoverage or LRC(14)
 source: codex-2026-07-19-S82 terminal-endpoint continuation
-depends_on: [THM-1198, THM-1237, THM-1250, THM-1253, THM-1264, THM-1267, THM-1274]
-related: [THM-1199, THM-1252, THM-1266]
+depends_on: [THM-1198, THM-1237, THM-1250, THM-1253, THM-1264, THM-1267, THM-1274, THM-1275]
+related: [THM-1199, THM-1252, THM-1266, THM-1273, THM-1277]
 script: 04-computation/lrc14_terminal_endpoint_transfer_gcd_tax_thm1283.py
 output: 05-knowledge/results/lrc14_terminal_endpoint_transfer_gcd_tax_thm1283.out
 formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCTerminalEndpointTransferGcdTax.lean
@@ -247,10 +247,69 @@ five-comb survivor cannot live.
 
 The argument applies separately to every fast tooth containing the endpoint,
 not only to the selected terminal occurrence.  Their outward segments are
-nested at the common endpoint, and `U` lies beyond all of their walls.  Thus
-one may replace `eta_sigma` in (19) by the maximum endpoint-owner value.  The
-segments must not be summed: nested incidence supplies a maximum tax, not
-several disjoint copies of measure.
+nested at the common endpoint, and `U` lies beyond all of their walls.  Bare
+containment therefore lets one replace `eta_sigma` in (19) by the maximum
+endpoint-owner value.  Nested lengths cannot be summed as disjoint measure.
+The next refinement shows that their **pair intersections**, rather than
+their union length, nevertheless make a joint tax legal.
+
+### 4.1 A Hunter star charges several nested endpoint owners
+
+Suppose `r` of the five owner combs `d_2,...,d_6` strictly contain the
+protruding endpoint.  Write their normalized outward lengths in increasing
+order as
+
+```text
+0<eta_1<=...<=eta_r,
+Theta=sum_(i=1)^(r-1) eta_i.                         (19a)
+```
+
+Use the longest segment as the centre of a star forest on these `r` combs.
+For every `i<r`, the pair intersection of comb `i` with the longest comb
+contains the whole shorter segment.  Since the six-bin density has global
+floor `3/4`, Hunter's forest inequality improves the five-comb survivor mass
+from (2) to
+
+```text
+integral_U f>11/360+(3/4)Theta.                      (19b)
+```
+
+This is not an assertion that the nested segments are disjoint.  It is one
+pair-overlap credit for each edge of an acyclic star, so no intersection is
+used twice.  The survivor avoids all endpoint-owner teeth and hence lies
+beyond the longest wall, in an endpoint suffix of length
+
+```text
+y=ell-eta_r.                                         (19c)
+```
+
+The exact cumulative density from an endpoint is
+
+```text
+M(y)= (3/4)y                         for 0<=y<=1/6,
+      (13/12)y-1/18                 for 1/6<=y<=1/3,
+      (7/6)y-1/12                   for 1/3<=y<=2/3. (19d)
+```
+
+Here `y<ell<7/12`, so these branches suffice.  Inverting
+`11/360+(3/4)Theta<M(y)` gives the exact joint endpoint tax
+
+```text
+ell > 11/270+sum_(i=1)^r eta_i,
+       if Theta<=17/135;                             (19e)
+
+ell > eta_r+31/390+(9/13)Theta,
+       if 17/135<Theta<=11/30;                       (19f)
+
+ell > eta_r+41/420+(9/14)Theta,
+       if 11/30<Theta<2/3.                           (19g)
+```
+
+The last upper bound follows because `r<=5` and every `eta_i<1/6`.  Thus the
+small-density branch really does charge the **sum** of all endpoint seams;
+the later branches retain explicit positive fractions of every shorter seam.
+This is the strongest safe scalar use of several nested endpoint owners
+without resolving higher intersections.
 
 ## 5. Exact residue and gcd cuts
 
@@ -419,6 +478,103 @@ compact, and in both cases it exports the new exterior carrier seam and the
 strict tax (19)--(23).  What is not proved is that the neighboring `x`-safe
 component inherits a slowest-carrier six-fast cover; the owner set on that
 component is mixed above and below `x`.
+
+### 6.1 The fastest endpoint tooth pays one complete quantum
+
+Let `h=d_6`.  Suppose `h` strictly contains the protruding endpoint, but the
+unique selected terminal tooth there has owner `x!=h`.  The endpoint
+`h`-tooth is then unselected.  Its inward part
+
+```text
+J_h=T(h,n_h) intersect G
+```
+
+is a complete interval of exact physical length
+
+```text
+|J_h|=1/(7h)-q_h=(2c-Q_h)/(14ch)>0.                 (26a)
+```
+
+It lies in `G` because `h>c`.  The selected lower teeth cover it.  Moreover,
+at a point where `J_h` meets a raw chronological seam, the seam's two
+selected owners are non-`h`: a different `h` tooth cannot meet `J_h`, and the
+endpoint tooth itself was not selected.  Thus the full-comb multiplicity
+`C(t)` obeys the pointwise layered law
+
+```text
+1_(J_h)(t)+sum_a 1_(W_a)(t)<=C(t)-1.                (26b)
+```
+
+The THM-1275 normalization therefore gives the genuine internal invoices
+
+```text
+F_6 >=(2c-Q_h)/(16h)
+       +(c/16)sum_a 1/lcm(s_a,s_(a+1)),             (26c)
+
+sum_(i=1)^6 1/d_i-1/c
+    >=7(2c-Q_h)/(12ch)
+       +(7/12)sum_a 1/lcm(s_a,s_(a+1)).             (26d)
+```
+
+The endpoint theorem simultaneously gives
+
+```text
+ell-11/270>aQ_h/(12ch).                              (26e)
+```
+
+Multiply (26e) by `3c/(4a)` in the functional normalization, or by `7/a`
+in the harmonic normalization, and add it to (26c) or (26d).  The endpoint
+digit cancels exactly:
+
+```text
+F_6+(3c/(4a))(ell-11/270)
+  >(c/16)sum_a 1/lcm(s_a,s_(a+1))+c/(8h),           (26f)
+
+sum_i 1/d_i-1/c+(7/a)(ell-11/270)
+  >(7/12)sum_a 1/lcm(s_a,s_(a+1))+7/(6h).           (26g)
+```
+
+So `Q_h` only decides how one full fastest-tooth quantum is split between
+the internal multiplicity budget and the exterior survivor budget.  No
+exterior interval has been inserted into `F_6`: (26f)--(26g) add two
+simultaneous inequalities on disjoint sides of the carrier endpoint.
+
+There is a multi-owner version in the small Hunter branch (19e).  Every
+endpoint owner other than the unique selected terminal owner has an
+unselected endpoint tooth.  Even though their inward intervals are nested,
+their indicators can be added to all chronological seams: at a point with
+`r_0` such active unselected labels, coverage supplies one selected label,
+or two on a seam, so the multiplicity is at least `r_0+1`, or `r_0+2`.
+Combining this internal layered invoice with (19e) cancels every unselected
+`Q_i` simultaneously.  In functional form it leaves
+
+```text
+F_6+(3c/(4a))(ell-11/270)
+ >(c/16)sum_a 1/lcm(s_a,s_(a+1))
+   +sum_(unselected endpoint i)c/(8d_i)
+   +Q_x/(16x),                                      (26h)
+```
+
+where `x` is the unique selected endpoint owner.  The harmonic analogue
+replaces the last two terms by
+
+```text
+sum_(unselected endpoint i)7/(6d_i)+7Q_x/(12cx).    (26i)
+```
+
+The fastest endpoint branch is consequently exhaustive:
+
+1. if `h` is not an endpoint owner, use THM-1273 and THM-1277's pure-`K`
+   wall-bank quotient;
+2. if the terminal selected owner is `h`, another selected `h` occurrence
+   gives an endpoint-attached return, while no other occurrence gives
+   `K=1` and hence `h<=7c` by the private count;
+3. if `h` owns the endpoint but another owner is selected there, use the
+   partial-flood cancellation (26f)--(26g).
+
+This removes the endpoint digit from the hardest third branch.  It does not
+yet force the resulting full-tooth quantum to exceed the available global
+functional slack.
 
 ## 7. Exact mirrored guardrail
 
