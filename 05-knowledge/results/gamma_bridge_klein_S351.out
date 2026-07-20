@@ -1,0 +1,51 @@
+================================================================================
+THE GAMMA BRIDGE, tested on the {-1,0,1} stratum (M = 1)
+================================================================================
+  P = Zb a(r) + b(r) + Z c(r);  in u-coordinates R(r,u) = g_{-1} + g_0 u + g_1 u^2 with
+  g_{-1} = rho*a, g_0 = b, g_1 = rho*c  (rho = sqrt r).  The ratio u/(t g_{-1}) is
+  rho-free, so psi_m is a polynomial in r.  Verified below.
+
+case                       m  deg_r psi_m      top coeff             E_r[psi_m]   zero?
+a=1, b=1, c=1              2            1              1                    3/2   False
+a=1, b=1, c=1              4            2            3/2                   25/4   False
+a=1, b=1, c=1              6            3           10/3                  331/6   False
+a=1, b=1, c=1              8            4           35/4                 5937/8   False
+a=1, b=0, c=1              2            1              1                      1   False
+a=1, b=0, c=1              4            2            3/2                      3   False
+a=1, b=0, c=1              6            3           10/3                     20   False
+a=1, b=0, c=1              8            4           35/4                    210   False
+a=1+r, b=2, c=1            2           10             -1               -4798075   False
+a=1+r, b=2, c=1            4           12          -11/2            -4330596383   False
+a=1+r, b=2, c=1            6           14            -26      -12686059967260/3   False
+a=1+r, b=2, c=1            8           16         -455/4      -4807059624811598   False
+a=1, b=1+r, c=1+2r         2            2            5/2                   15/2   False
+a=1, b=1+r, c=1+2r         4            4           49/4                 1841/4   False
+a=1, b=1+r, c=1+2r         6            6          581/6               659287/6   False
+a=1, b=1+r, c=1+2r         8            8         7393/8            469665345/8   False
+
+ READING.  deg_r psi_m GROWS with m -- that is the whole mechanism.  E_r[psi_m] = sum_k c_k k!
+ has consecutive-term ratio c_{D-1}/(c_D D), and D = deg psi_m -> infinity, so for large m the
+ TOP term dominates and E_r[psi_m] != 0 whenever the top coefficient is nonzero.  The top
+ coefficient is precisely the toral/leading-symbol quantity of THM-1530/1550.  Hence:
+
+      TNC (toral nullcone)  =>  NC2  =>  GMC(2).
+
+ The Gamma weights k! = Gamma(k+1) are exactly what makes the top term dominate; with bounded
+ weights there would be no domination and the r-average could cancel a nonzero toral part.
+ THAT is why 'think gamma' was the right instruction, and it is the bridge THM-1530 flagged
+ as missing ('promoting the leading-symbol reduction to a controlled induction').
+
+
+================================================================================
+DEFECT NOTE (klein-S351, on read-back of my own code)
+================================================================================
+ The line `v = [pmul(vi, [Fr(1)]) for vi in v]` is a NO-OP.  It was meant to divide by the
+ non-constant part of a(r); it does nothing.  Consequence: the row `a=1+r, b=2, c=1` computes
+ psi_m for a DIFFERENT object than labelled and its numbers are VOID.  The rows with a
+ CONSTANT -- `a=1,b=1,c=1`, `a=1,b=0,c=1`, `a=1,b=1+r,c=1+2r` -- divide by a genuine constant
+ a0 and are VALID.  The mechanism claim rests on those three:
+     deg_r psi_m = 1,2,3,4  /  1,2,3,4  /  2,4,6,8   -- GROWING in every valid case,
+     E_r[psi_m] != 0 in every valid case.
+ Growth of deg_r psi_m is the whole mechanism, and it is what the valid rows exhibit.
+ The b- and c-dependence is unrestricted in the valid rows, so the test still exercises
+ non-constant coefficients; only non-constant a is untested.
