@@ -1,11 +1,16 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "session_start": "2026-07-19T18:59:39.482055",
   "start_commit": "a97917c0de2a042ccfd071e10800b11434b5fceb",
 =======
   "session_start": "2026-07-19T19:26:29.103873",
   "start_commit": "192574f2ad3486d0f3a304910f970aafcc5fe554",
 >>>>>>> 5fe98a9b0 (kind-pasteur-2026-07-19-S128c92: checkpoint - reserve HYP-7995 (shell-collapse census 300-500 + face-mining beyond opus-S405))
+=======
+  "session_start": "2026-07-19T18:59:30.827403",
+  "start_commit": "7d98de9885ef5a0e9dfce0fa35a72b23dcb72ec8",
+>>>>>>> 9c8b13386 (opus-2026-07-19-S406: checkpoint - claim F1 transport session: ghost-packing ceiling lemma (5-line L3-transport => deep-well upper half, Phi6/14 = 13 + 1/14 as core-gaps + ghost-duty) + L1 witness four-liner at 183)
   "pushed": false,
   "message_sent": false
 }
