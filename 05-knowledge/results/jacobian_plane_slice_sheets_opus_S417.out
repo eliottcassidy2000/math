@@ -1,0 +1,8 @@
+tame point F(0, v, u-4v^2) = [-s**2/16 + v**2/16, v, 0] == (u,v,0): [True, True, True]
+exotic points map to (u,v,0): [[True, True, True], [True, True, True]]
+C == x*T: True
+tame sheet map: [4*y**2 + z, y, 0]  inverse: (u,v) -> (v, u-4v^2)
+on {T=0}: B = 4*y + 6/x  => y = B/4 - 3/(2x): 0 check y-law: True
+on {T=0} with the y-law: A = v**2/16 - 1/(4*x**2)  => x^2 = 4/(v^2 - 16A): True
+deck involution iota(x,y) = (-x, y + 3/x) preserves {T=0} and (A,B): True True
+on-conic example (u,v)=(1,4): tame preimage maps to [1, 4, 0] (fiber drops 3 -> 1: exotic x = +-2/s escapes as s->0)
