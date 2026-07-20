@@ -1,0 +1,19 @@
+=== isotropic harmonic example P=(x0+i x1)^4 (Hessian nilpotent) ===
+  Hessian nilpotent: H = 12 L^2 (1,i)(1,i)^T, (1,i).(1,i)=1+i^2=0 => H^2=0. YES (structural)
+  VC data Delta^m(P^m) and Delta^m(P^{m+1}):
+    m=1: Delta^1(P^1)=0? True;  Delta^1(P^{m+1})=0? True
+    m=2: Delta^2(P^2)=0? True;  Delta^2(P^{m+1})=0? True
+    m=3: Delta^3(P^3)=0? True;  Delta^3(P^{m+1})=0? True
+    m=4: Delta^4(P^4)=0? True;  Delta^4(P^{m+1})=0? True
+  => both always 0 (powers of an isotropic linear form are HARMONIC) => VC HOLDS here.
+     x+grad P is a SHEAR (L preserved) = INVERTIBLE: consistent, NOT a JC counterexample.
+
+=== THE POINT (verification is finite & computable = Lean-able) ===
+  A VC COUNTEREXAMPLE needs a Hessian-nilpotent homogeneous quartic P with
+  Delta^m(P^m)=0 for ALL m (automatic, Zhao) BUT Delta^m(P^{m+1}) != 0 for some m.
+  Such P comes from a NON-invertible Keller map = the JC counterexample F via
+  Yagzhev (cubic-homog) + de Bondt-van den Essen (symmetric quartic) reduction.
+  Once P is produced, the certificate is a FINITE set of Delta^m(P^m) computations
+  (this machinery) -> directly Lean-formalizable as polynomial-identity checks,
+  INDEPENDENT of the VC<=>JC equivalence (the robustness point of the assessment).
+  Feasibility gate = the dimension the F-reduction lands in (pending recipe agent).

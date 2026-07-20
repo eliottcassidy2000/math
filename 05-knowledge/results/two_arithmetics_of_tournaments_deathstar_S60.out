@@ -1,0 +1,29 @@
+=== (II) H is MULTIPLICATIVE under ordinal sum (the multiplicative norm) ===
+  H(T1 (+) T2) = H(T1)*H(T2) on 200 random pairs: True
+  => strong tournaments = multiplicative PRIMES; single vertex = unit (H=1);
+     transitive = ordinal sum of singletons = 1 (all-units product).
+
+=== strong-tournament H-values (the PRIMES) up to n=6, and the monoid ===
+  n=1: strong H-values realized = [1]
+  n=2: strong H-values realized = []
+  n=3: strong H-values realized = [3]
+  n=4: strong H-values realized = [5]
+  n=5: strong H-values realized = [9, 11, 13, 15]
+  n=6: strong H-values realized = [15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  strong H generators (<=n6): [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  monoid <strong H> up to 45: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 39, 41, 43, 45]
+  ODD numbers up to 45 MISSING from the monoid: [7, 21, 35]  <== the {7,21} gap!
+  => 7 = no strong tournament has H=7 (THM-029); 21 = 3*7 needs the absent 7 (THM-079).
+     tournaments realize the odds as a MULTIPLICATIVE MONOID missing exactly {7,21}.
+
+=== (I) the tiling-integer bijection (n=4: 2^3=8 tournaments <-> 0..7) ===
+  n=4: m=C(3,2)=3 tiles, integers 0..7 <-> the 8 base-path tournaments (bijection).
+  XOR of tile-bits = symmetric difference of flipped tiles = wiggly/waggly moves.
+  So {0,1,...,2^m-1} in binary ARE the tournaments; the hypercube Q_m is the
+  additive/2-adic structure of those integers.
+
+=== BRIDGE (THM-466): H in BINARY = the odd-cycle census ===
+  a strong T on 4 vtx: H=5 = binary 0b101 -> the 2-adic digits are its
+    odd-cycle-collection counts alpha_k (THM-466). Multiplicative value, additive digits.
+  a strong T on 5 vtx: H=9 = binary 0b1001 -> the 2-adic digits are its
+    odd-cycle-collection counts alpha_k (THM-466). Multiplicative value, additive digits.

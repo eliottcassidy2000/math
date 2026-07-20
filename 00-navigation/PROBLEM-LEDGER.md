@@ -228,7 +228,8 @@ all heights (THM-1289, published), δ ineffective.
 
 ## F. Future priorities (for current and future sessions)
 
-1. **The biggest untouched targets — first contact on the exotic conjectures.**
+1. **★ THE WITNESS EXTRACTION (assessed S59z: novel, meaningful, the top publishable + Lean-worthy move — DO IT).** Transport F through Yagzhev (cubic-homog) + de Bondt-van den Essen (symmetric quartic, Hessian-nilpotent) to produce the FIRST EXPLICIT counterexample to Zhao's Vanishing Conjecture, the Image Conjecture, and a failing Mathieu subspace. Fleet-unanimous #1, genuinely UNTOUCHED ("no explicit witness exists anywhere", opus-S421). Meaningful because equivalences preserve TRUTH not WITNESSES — the objects are unbuilt. ROBUSTNESS RULE: verify the witness DIRECTLY (finite Δ^m(P^m) certificate — machinery built S59z, Lean-able), NOT via the VC⟺JC equivalence (unverified in-repo). Publishable standalone (conditional on THM-1300 + the JC disproof's acceptance). Feasibility gate = the dimension the F-reduction lands in.
+1. **The other untouched exotic conjectures — first contact.**
    Shao's vanishing (A4), the generalized differential-operator vanishing conjecture
    (A5), Zhao's image (A6), Mathieu/Mathieu–Zhao subspaces (A7): NAMED, unworked, and
    the repo owns the exact machinery — the witness-extraction pipeline (THM-1325
