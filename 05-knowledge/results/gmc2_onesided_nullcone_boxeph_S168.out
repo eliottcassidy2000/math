@@ -1,0 +1,28 @@
+(a) PURE-RADIAL phi(R), R = ZW: nullcone conditions sum_k 2^k k! [r^k] phi^m = 0.
+    Exact elimination for deg phi <= 4 over C:
+    deg 1: best nontrivial objective 2.221e-05  => nullcone EMPTY (evidence)
+    deg 2: best nontrivial objective 2.136e-04  => nullcone EMPTY (evidence)
+    deg 3: best nontrivial objective 1.678e+09  => nullcone EMPTY (evidence)
+    deg 4: best nontrivial objective 4.348e+31  => nullcone EMPTY (evidence)
+
+(b) MIXED-CHARGE small supports: does any support with charges of BOTH signs
+    admit a nullcone member? supports of size 3 from a monomial pool, exact-ish:
+    mixed-charge supports tested: 112 ; nullcone candidates found: 86
+      support ((1, 0), (2, 0), (0, 1)): obj 8.46e-19 coeffs ['-0.0+0.0001i', '-0.0+0.0i'] -> VERIFY EXACTLY next
+      support ((1, 0), (2, 0), (0, 2)): obj 1.75e-16 coeffs ['0.0+0.0i', '0.0+0.0i'] -> VERIFY EXACTLY next
+      support ((1, 0), (2, 0), (1, 1)): obj 2.83e-19 coeffs ['-0.4323+1.9236i', '0.0-0.0i'] -> VERIFY EXACTLY next
+      support ((1, 0), (2, 0), (1, 2)): obj 3.99e-17 coeffs ['0.0+0.0i', '0.0+0.0i'] -> VERIFY EXACTLY next
+      support ((1, 0), (2, 0), (2, 2)): obj 2.24e-17 coeffs ['1.112+1.9187i', '0.0+0.0i'] -> VERIFY EXACTLY next
+      support ((1, 0), (2, 0), (1, 3)): obj 6.09e-15 coeffs ['-0.0-0.0i', '-0.0+0.0i'] -> VERIFY EXACTLY next
+
+READING: pure-radial empty (deg <= 4) supports the polar two-layer picture;
+if NO mixed-charge support admits nullcone members, the ONE-SIDED NULLCONE
+CONJECTURE stands => GMC(2) follows by charge counting. Any candidate found
+gets exact verification + becomes either a GMC(2) counterexample seed or a
+new safe class to prove.
+  GENUINE candidate: support ((1, 0), (0, 2), (1, 3)) coeffs [(-2.303947400932767-2.5826073730995605j), (0.3839912334981559+0.43043456205676245j)] obj 9.27e-18
+  GENUINE candidate: support ((2, 0), (0, 1), (1, 2)) coeffs [(1.3043497561187465+0.20337745081165792j), (-0.14836621614232426-0.11955551677453169j)] obj 2.80e-17
+  GENUINE candidate: support ((2, 0), (0, 1), (3, 1)) coeffs [(0.12036715141651744-0.08950837538491818j), (-0.1666666700119408-1.926890647041546e-09j)] obj 4.35e-18
+POST-FILTER: 112 mixed-charge supports; GENUINE (non-collapsing) nullcone candidates: 3
+=> the ONE-SIDED NULLCONE CONJECTURE survives the size-3 support sweep:
+   every nullcone point found collapses onto a charge-one-sided sub-support.

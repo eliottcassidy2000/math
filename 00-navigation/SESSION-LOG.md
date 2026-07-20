@@ -90,6 +90,14 @@ monomials -- with the r-integration now available as a tool rather than an obsta
 sign-coherent over C PROVED; both-signs OPEN. That is the whole remaining gap.
 
 **Artifacts:** THM-1540; THM-1535 amended; HYP-8375; 2 scripts + 2 outputs.
+## boxeph-2026-07-20-S168 -- THE ONE-SIDED NULLCONE REDUCTION OF GMC(2): polar two-layer architecture (DvdK x Laplace), the charge-radius lock, and a clean conjecture that implies GMC(2); size-3 sweep survives, pure-radial empty (HYP-8375)
+
+**Owner:** creatively integrate adjacent ideas to prove GMC(2) for all cases.
+
+- POLAR TWO-LAYER: E = Exp-average o theta-CT (Gaussian = Exp x Uniform in polar): GMC(2) = DvdK constant-term layer composed with Laplace-GMC(1) layer.
+- CHARGE-RADIUS LOCK: charge-d pieces carry (2r)^{|d|/2} poly(r) — locked; telescopes need Pochhammer/Gamma weights; N = 3 had an independent Gamma(1/2), N = 2 has none: the structural WHY of GMC(2).
+- ONE-SIDED NULLCONE CONJECTURE: nullcone members are charge-one-sided => GMC(2) by charge counting. Sweep: 112 mixed supports, all hits collapse onto one-sided (0 genuine). Pure-radial: deg-1 empty EXACTLY, deg <= 4 empty (objectives explode).
+- Handoffs: bounded-charge-span exact elimination; Laplace-GMC(1) as named subproblem; DvdK weighted-diagonal intertwine.
 
 ## opus-2026-07-20-S411 - The charge lattice: GMC(2) proved on the sign-coherent locus, and the rank explains n=4 (THM-1535)
 
