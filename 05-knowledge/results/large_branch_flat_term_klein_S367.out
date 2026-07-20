@@ -1,0 +1,62 @@
+========================================================================================
+PART 1 -- CONTROL: one-sided P (alpha=0) has NO flat term; two-sided has one
+========================================================================================
+ at t = 0.15:
+   case                                                              r*(t)     Im E_r[D^-1/2]
+   one-sided  alpha=0, beta=0   (IN nullcone)                         none       0.000000e+00
+   one-sided  alpha=0, beta=1   (charge 0 only, still one-sided-in-alpha)         none       0.000000e+00
+   two-sided  alpha=r, beta=0   (the {-1,+1} pair)                  11.111       8.829974e-05
+   two-sided  alpha=r, beta=1   (pair + charge 0)                    8.028       1.927676e-03
+   two-sided  alpha=r, beta=1-r (sign-indefinite, THM-1640 gap)         none       0.000000e+00
+
+   READING: one-sided (alpha=0) -> D = (1-beta t)^2 >= 0, no D<0 region, r* NONE, flat term 0.
+   two-sided (alpha=r) -> D<0 for large r, r* finite, flat term NONZERO.  The flat term is
+   present EXACTLY off the one-sided locus -- which is the nullcone.
+
+========================================================================================
+PART 2 -- THE NEWTON-POLYGON DICHOTOMY: real branch iff B < (A+1)/2, else COMPLEX
+========================================================================================
+ D(r,t) = (1-beta t)^2 - 4 alpha t^2.  At large r, (1-beta t)^2 ~ beta^2 t^2, so
+ D < 0 (a REAL branch on the contour) requires 4 alpha > beta^2 at large r, i.e.
+ deg alpha = A+1 > 2B = deg beta^2, i.e.  B < (A+1)/2  (alpha dominates the polygon).
+ When B > (A+1)/2 (beta dominates), D -> +infinity, NO real branch: r*(t) is COMPLEX.
+ This is EXACTLY boxeph's Case I/II (dodge vs jump) split, read off the polygon.
+
+                 (alpha,beta)     A,B  B vs (A+1)/2  real r*?     branch
+              alpha=r, beta=0     0,0      0 vs 0.5      True       REAL 25.00
+              alpha=r, beta=1     0,0      0 vs 0.5      True       REAL 20.25
+            alpha=r, beta=1-r     0,1      1 vs 0.5     False   CPLX -7.0+5.7i
+            alpha=r, beta=r^2     0,2      2 vs 0.5     False    CPLX 2.6+0.0i
+             alpha=r^3,beta=r     2,1      1 vs 1.5      True        REAL 2.43
+
+   VERDICT.  The Newton polygon B vs (A+1)/2 decides the branch TYPE:
+     B < (A+1)/2  (alpha-dominant):  r*(t) REAL -> a flat term on the contour -> Part 3.
+     B > (A+1)/2  (beta-dominant):   r*(t) COMPLEX -> an OSCILLATORY (Stokes) term, and
+                                     conjugate branches can interfere -- boxeph's hard case.
+   The sign-indefinite THM-1640 gap (beta=1-r) is beta-dominant, so it sits in the COMPLEX
+   regime -- which is exactly why positivity/domination/real-flat-term all miss it.
+
+========================================================================================
+PART 3 -- alpha-DOMINANT: the real flat term ~ e^{-r*(t)} is nonzero (closes that regime)
+========================================================================================
+          t        r*(t)     Im E_r[D^-1/2]          e^{-r*}      ratio
+        0.2        6.250       8.554102e-03     1.930454e-03     4.4311
+       0.15       11.111       8.829974e-05     1.494534e-05     5.9082
+        0.1       25.000       1.230787e-10     1.388794e-11     8.8623
+       0.07       51.020       8.801672e-22     6.952136e-23    12.6604
+
+   The flat term tracks e^{-r*(t)} (ratio O(1)), nonzero at every t.  So in the alpha-dominant
+   regime B < (A+1)/2, E_r[D^{-1/2}] carries a nonzero flat piece off the one-sided locus, so it
+   is NOT == 1 and NC2 fails there.  Rigor of 'nonzero flat => NC2 fails' = Borel-Laplace.
+   The beta-dominant regime (complex branch) is genuinely harder and is boxeph's frontier.
+
+
+================================================================================
+ACCURACY NOTE (klein-S367): the Part-3 "ratio O(1)" is slightly loose.
+================================================================================
+ The ratio |Im E_r[D^-1/2]| / e^{-r*} is 4.4, 5.9, 8.9, 12.7 as r* = 6.25, 11.1, 25, 51 --
+ GROWING like sqrt(r*) (12.7/4.4 = 2.9 vs sqrt(51/6.25) = 2.86).  So the flat term is
+ e^{-r*(t)} times an ALGEBRAIC prefactor ~ r*^{1/2} (the Laplace/saddle amplitude ~ 1/sqrt(D'')),
+ NOT e^{-r*} exactly.  The load-bearing claim -- flat term of exponential order e^{-r*(t)},
+ nonzero at every t -- stands; only "ratio O(1)" was imprecise.  The exponential order (hence
+ the Gevrey class) is set by the large branch r*(t), as the polygon predicts.
