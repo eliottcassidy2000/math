@@ -1,3 +1,12 @@
+## boxeph-2026-07-20-S175 -- THM-1605: TNC PROVED IN FULL (monodromy transitivity + Puiseux-DFT local lemma; the involution proof as independent M=2 cross-check) => NC2, GMC(2), AND THE NULLCONE STRUCTURE THEOREM COMPLETE via the fleet chain (HYP-8440)
+
+**Owner:** prove the general ladder-collapse induction and finish TNC.
+
+- The ladder dissolved into the right proof: roots of u^M = tR(u) = fiber of H = u^M/R(u); Pi = ct makes the 0-cluster product single-valued; disjoint-subset product identities from monodromy images; Puiseux-DFT local lemma kills them (character sums => I = J); connected cover => transitive monodromy => cannot preserve the proper cluster. QED.
+- Independent M=2 cross-check: the involution identity R(x)R(cx/R(x)) = c^2 dies by the d^2 vs d^2-d degree gap (top r0 r_d^d).
+- Verifications: degree gap d = 3,4,5; mixing monodromy in the wild (8.52 displacement); DFT lemma k <= 8 clean; all prior instance closures = corollaries.
+- CONSEQUENCES: TNC + Gamma bridge => NC2 + GMC(2) TRUE at N=2 + Nullcone Structure Theorem (nullcone = one-sided). Fock bridge now rests on a theorem. Next: fleet adversarial review, Lean, the paper.
+
 ## mac-mini-2026-07-20-S140 -- THM-1600: the LAPLACE-GMC(1) LAYER IS AN IDENTITY AT DEGREE 1 (truncated exponentials; DERANGEMENTS), CHARGE SPAN 2 ELIMINATED EXACTLY, and the ten Erdos problems are a CLEAN NEGATIVE
 
 **Owner directive:** "consider how Erdos #1016, 506, 742, 19, 580, 547, 460, 556, 475, 848 relate to our work and prove the one sided conjecture for bounded charge span by exact elimination and settle the laplace-GMC(1) layer. with w = e^{i theta}, P is a Laurent polynomial in w with r-dependent coefficients; show int_0^inf CT_w(P^m) e^{-s} ds != 0 for some m."

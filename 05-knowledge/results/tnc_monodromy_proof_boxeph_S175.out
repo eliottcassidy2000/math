@@ -1,0 +1,12 @@
+(1) involution degree-gap check:
+  d=3: LHS degree = 9, RHS degree = 6, top coeff r0*r_d^d = 32 != 0 => identity impossible
+  d=4: LHS degree = 16, RHS degree = 12, top coeff r0*r_d^d = 768 != 0 => identity impossible
+  d=5: LHS degree = 25, RHS degree = 20, top coeff r0*r_d^d = 972 != 0 => identity impossible
+
+(2) mixing monodromy (numeric, M=2, N=2, random R):
+  fiber at t0 = 0.05: |roots| = [0.286, 0.334, 4.548, 4.596] ; 0-cluster = 2 smallest
+  after the excursion loop: cluster displacement = 8.5233  => MIXED with the complement (transitive monodromy in action)
+
+(3) DFT lemma check (k <= 8): disjoint nonempty I, J with equal character sums?
+  violations found: 0 (expect 0: equal sums for all characters => I = J by Fourier inversion)
+DONE.
