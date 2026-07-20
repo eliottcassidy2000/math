@@ -1,0 +1,16 @@
+
+[a=1,b=1,c=1] klein row (ac>0, s imaginary): s=sqrt(-2ac)=0.0000+1.4142j
+  identity m*E_r[psi_m]==s^m He_m(b/s) for m=1..8: True
+  any E_r[psi_m]==0 (would allow nullcone)? False  => one-sided forced: True
+
+[a=1,b=1,c=-1] SIGN-MIXED a=1,b=1,c=-1: s=sqrt(-2ac)=1.4142+0.0000j
+  identity m*E_r[psi_m]==s^m He_m(b/s) for m=1..8: True
+  any E_r[psi_m]==0 (would allow nullcone)? False  => one-sided forced: True
+
+[a=1,b=3,c=1] b=3: s=sqrt(-2ac)=0.0000+1.4142j
+  identity m*E_r[psi_m]==s^m He_m(b/s) for m=1..8: True
+  any E_r[psi_m]==0 (would allow nullcone)? False  => one-sided forced: True
+
+[a=1,b=2,c=-1] sign-mixed b=2: s=sqrt(-2ac)=1.4142+0.0000j
+  identity m*E_r[psi_m]==s^m He_m(b/s) for m=1..8: True
+  any E_r[psi_m]==0 (would allow nullcone)? False  => one-sided forced: True

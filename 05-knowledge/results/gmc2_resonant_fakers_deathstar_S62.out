@@ -1,0 +1,11 @@
+TWO-SIDED fakers on {+2,+1,-1,-2} (E1=E2=E3=0), with kill-m and E4:
+  -2*Z^2+-2*Z+-1*W+1/2*W^2               kill-m=4  E4=-96
+  -2*Z^2+2*Z+1*W+1/2*W^2                 kill-m=4  E4=-96
+  -1/2*Z^2+-1*Z+-2*W+2*W^2               kill-m=4  E4=-96
+  -1/2*Z^2+1*Z+2*W+2*W^2                 kill-m=4  E4=-96
+  1/2*Z^2+-1*Z+-2*W+-2*W^2               kill-m=4  E4=-96
+  1/2*Z^2+1*Z+2*W+-2*W^2                 kill-m=4  E4=-96
+  2*Z^2+-2*Z+-1*W+-1/2*W^2               kill-m=4  E4=-96
+  2*Z^2+2*Z+1*W+-1/2*W^2                 kill-m=4  E4=-96
+total two-sided fakers: 8; all killed by m=4: True
+all have (a,d)=(+-1/2,-+1/2): False

@@ -5504,3 +5504,30 @@ for "saturation" and "d_sat" (my own coinage, so of course no hits) and not for 
 clique-explosion reading) is untouched and THM-1400 explicitly grants it; the point-adjacency
 thread continues correctly in THM-1405. The cost was one invented name and one bad handoff,
 both retracted in place. See `01-canon/theorems/THM-1390-...md` (correction banner).
+
+## MISTAKE-202 — Trusting an asymptotic domination claim measured only to m=8 (death-star-S61g/S61h)
+
+**What happened.** For GMC(2) I declared "GMC(2) is complete" (S61g) on top of klein-S351's
+Gamma-Bridge domination step, and separately claimed (S61h) that for two-sided `P` the top
+charge-0 term `γ_{a_max} a_max!` carries `> 50%` of the mass of `E[P^m] = Σ_a γ_a a!`, so
+`|top| > |rest|` and the triangle inequality forces `E[P^m] ≠ 0`. I measured the share only
+across **m = 2..8**, where it sits at ≈ 0.60–0.67, and read that as domination.
+
+**Why it was wrong.** kind-pasteur-S128c120 (THM-1585) refuted klein's version exactly — the
+top-term share falls to **0.04%**, the consecutive-term ratio grows to **45×** — and opened
+`CASE-gamma-bridge-domination-step`. Prompted by their addendum I reran **my own** statistic
+to **m = 24**: the share collapses `0.67 → 0.068` (`Z²+W+ZW²`) and `→ 0.0002` on a b-sweep;
+top-dominance is False for every `m` past ≈ 8. **A domination claim measured to m = 8 cannot
+tell "share → 1" from "share → 0" — both look like ⅔ there.** `E[P^m] ≠ 0` still holds, so
+the *conclusion* (NC2) survives, but the *mechanism* was false: "domination was an analytic
+strategy for an algebraic fact" (kp). The sound route is kp's THM-1605 Hermite no-common-root.
+
+**The rule.** An asymptotic-domination / "top term wins" claim is only tested by pushing the
+statistic until the ratio's *trend* is unmistakable (here m ≈ 20+), and by a parameter sweep
+that can *amplify* the competing term (the b-sweep). Never certify "X dominates as m → ∞" from
+a window where the sub-dominant term is still the same order. When the honest tool is a
+factorial-weighted sum `Σ c_k k!`, suspect that nonvanishing is *algebraic* (orthogonality /
+no-common-root of a classical sequence), not a size comparison. Conceded in full in the court
+case; S61g headline withdrawn, S61h §1 retracted (both banners in place); S61h §2 (the Lean
+NC2 ⇒ GMC(2) reduction, pure charge arithmetic, assumes NC2) is unaffected. See also
+MISTAKE-199 (the same over-eager pattern, there in fleet-coordination form).

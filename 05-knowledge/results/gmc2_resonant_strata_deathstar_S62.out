@@ -1,0 +1,15 @@
+boxeph parity fake P=(1/2)Z^2+Z+W-(1/2)W^2, charges [-2, -1, 1, 2] two-sided True
+  E[P^m], m=1..6: ['0', '1', '0', '-15', '0', '345']
+  => fakes null through m=3, killed at m=4: False
+
+span {+2,+1,-1,-2}, half-int box: fakers(E1=E2=E3=0)=168, two-sided=8
+  worst kill-m among fakers that die (m<=9): 4
+  fakers surviving E1..E9=0: 160; all one-sided: True
+   surv: ['-2', '-2', '0', '0'] charges [1, 2]
+   surv: ['-2', '-3/2', '0', '0'] charges [1, 2]
+   surv: ['-2', '-1', '0', '0'] charges [1, 2]
+   surv: ['-2', '-1/2', '0', '0'] charges [1, 2]
+   surv: ['-2', '0', '0', '0'] charges [2]
+   surv: ['-2', '1/2', '0', '0'] charges [1, 2]
+   surv: ['-2', '1', '0', '0'] charges [1, 2]
+   surv: ['-2', '3/2', '0', '0'] charges [1, 2]

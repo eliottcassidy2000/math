@@ -1,0 +1,107 @@
+P = Z^2 + W + Z*W^2  (my S61h example):
+  m : |top|/totalmass   top-dominates(|top|>|rest|)   E[P^m]?=0
+   1: (no charge-0)
+   2: (no charge-0)
+   3: 0.6316            True                     !=0
+   4: (no charge-0)
+   5: (no charge-0)
+   6: 0.6174            True                     !=0
+   7: (no charge-0)
+   8: (no charge-0)
+   9: 0.6135            True                     !=0
+  10: (no charge-0)
+  11: (no charge-0)
+  12: 0.6116            True                     !=0
+  13: (no charge-0)
+  14: (no charge-0)
+  15: 0.6105            True                     !=0
+  16: (no charge-0)
+  17: (no charge-0)
+  18: 0.6098            True                     !=0
+  19: (no charge-0)
+  20: (no charge-0)
+  21: 0.6093            True                     !=0
+  22: (no charge-0)
+  23: (no charge-0)
+  24: 0.6090            True                     !=0
+
+P = Z + W + 1  (charge-0 weight b=1, kp's b-sweep analog):
+  m : |top|/totalmass   top-dominates(|top|>|rest|)   E[P^m]?=0
+   1: 1.0000            True                     !=0
+   2: 0.6667            True                     !=0
+   3: 0.8571            True                     !=0
+   4: 0.4800            False                    !=0
+   5: 0.7407            True                     !=0
+   6: 0.3625            False                    !=0
+   7: 0.6447            True                     !=0
+   8: 0.2830            False                    !=0
+   9: 0.5645            True                     !=0
+  10: 0.2263            False                    !=0
+  11: 0.4970            False                    !=0
+  12: 0.1843            False                    !=0
+  13: 0.4396            False                    !=0
+  14: 0.1524            False                    !=0
+  15: 0.3905            False                    !=0
+  16: 0.1275            False                    !=0
+  17: 0.3483            False                    !=0
+  18: 0.1078            False                    !=0
+  19: 0.3117            False                    !=0
+  20: 0.0919            False                    !=0
+  21: 0.2798            False                    !=0
+  22: 0.0789            False                    !=0
+  23: 0.2519            False                    !=0
+  24: 0.0682            False                    !=0
+
+P = Z + W + 2  (charge-0 weight b=2, kp's b-sweep analog):
+  m : |top|/totalmass   top-dominates(|top|>|rest|)   E[P^m]?=0
+   1: 1.0000            True                     !=0
+   2: 0.3333            False                    !=0
+   3: 0.6000            True                     !=0
+   4: 0.1579            False                    !=0
+   5: 0.3846            False                    !=0
+   6: 0.0867            False                    !=0
+   7: 0.2580            False                    !=0
+   8: 0.0519            False                    !=0
+   9: 0.1789            False                    !=0
+  10: 0.0328            False                    !=0
+  11: 0.1274            False                    !=0
+  12: 0.0217            False                    !=0
+  13: 0.0926            False                    !=0
+  14: 0.0148            False                    !=0
+  15: 0.0685            False                    !=0
+  16: 0.0103            False                    !=0
+  17: 0.0514            False                    !=0
+  18: 0.0074            False                    !=0
+  19: 0.0391            False                    !=0
+  20: 0.0053            False                    !=0
+  21: 0.0301            False                    !=0
+  22: 0.0039            False                    !=0
+  23: 0.0234            False                    !=0
+  24: 0.0029            False                    !=0
+
+P = Z + W + 3  (charge-0 weight b=3, kp's b-sweep analog):
+  m : |top|/totalmass   top-dominates(|top|>|rest|)   E[P^m]?=0
+   1: 1.0000            True                     !=0
+   2: 0.1818            False                    !=0
+   3: 0.4000            False                    !=0
+   4: 0.0597            False                    !=0
+   5: 0.1869            False                    !=0
+   6: 0.0245            False                    !=0
+   7: 0.0960            False                    !=0
+   8: 0.0114            False                    !=0
+   9: 0.0526            False                    !=0
+  10: 0.0058            False                    !=0
+  11: 0.0303            False                    !=0
+  12: 0.0031            False                    !=0
+  13: 0.0181            False                    !=0
+  14: 0.0018            False                    !=0
+  15: 0.0112            False                    !=0
+  16: 0.0010            False                    !=0
+  17: 0.0071            False                    !=0
+  18: 0.0006            False                    !=0
+  19: 0.0046            False                    !=0
+  20: 0.0004            False                    !=0
+  21: 0.0030            False                    !=0
+  22: 0.0002            False                    !=0
+  23: 0.0020            False                    !=0
+  24: 0.0002            False                    !=0

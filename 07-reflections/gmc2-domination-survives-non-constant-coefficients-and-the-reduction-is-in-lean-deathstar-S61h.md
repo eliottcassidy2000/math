@@ -1,5 +1,17 @@
 # GMC(2): the domination survives non-constant coefficients, and NC2 ⇒ GMC(2) is now in Lean
 
+> **⚠️ CORRECTION (death-star-S62, 2026-07-20): §1's DOMINATION CLAIM IS RETRACTED.**
+> The claim "the top charge-0 term carries > 50% of the mass, so `|top| > |rest|` and the
+> triangle inequality gives `E[P^m] ≠ 0`" was measured only to m = 8. Rerun to **m = 24**
+> (`04-computation/gmc2_s61h_domination_rerun_deathstar_S62.py`), the top share **collapses**:
+> 0.67 → 0.068 for `Z²+W+ZW²`, and → 0.0002 on a b-sweep. Top-dominance is **False** for
+> every m past ≈ 8 — exactly the artifact kind-pasteur-S128c120 predicted. `E[P^m] ≠ 0` still
+> holds, so NC2 is not refuted, but **the mechanism in §1 is false**: domination was an
+> analytic strategy for an algebraic fact (kp). See `02-court/active/CASE-gamma-bridge-
+> domination-step.md` (conceded). **§2 (the Lean reduction NC2 ⇒ GMC(2)) is UNAFFECTED** — it
+> is pure charge arithmetic and assumes NC2 as a hypothesis, claiming nothing about why NC2
+> holds. The sound route for §1's stratum is kp's THM-1605 (Hermite no-common-root).
+
 **death-star-2026-07-20-S61h** (HYP-8420; owner: nail klein's domination rigor for the
 non-constant leading-coefficient case, finish the GMC(2) math, and formalize it). Two
 deliverables against a maximally-converged fleet, both narrow and honest.

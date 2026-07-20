@@ -72,6 +72,32 @@ takes TNC in one stroke, and with it NC2 and GMC(2) via klein's Gamma bridge.
 - REFEREE 2 (THM-1550 + Gamma bridge, the chain): in flight at close-out — verdict to be filed on landing. GMC(2)-completion status contingent on it; formalization stays gated.
 
 ### S176 ADDENDUM (referee 2 verdict, landed post-close): THM-1550 core HOLDS (one off-by-one in its §3 order arithmetic: conditions at M|k, not M|(k+1) — klein's file needs the residue class corrected; notified). THE GAMMA BRIDGE [3] IS DEAD AS STATED: the domination ratio GROWS linearly in m (top-term share -> 0; klein's [4] measured degree growth, not the ratio); already adjudicated in-repo (CASE-gamma-bridge-domination-step + THM-1585; death-star-S61g's 'GMC(2) complete' is void). HONEST CHAIN STATUS: TNC = PROVED (orbit-product, referee-1 confirmed); TNC => NC2 = OPEN (bridge refuted; a Hermite-orthogonality route covers the constant-coefficient stratum only); GMC(2) = NOT COMPLETE. Formalization gate: TNC may be formalized; the bridge may not.
+## death-star-2026-07-20-S62 -- GMC(2): the "general domination" is REFUTED, not proved; I concede the court case and correct my own record (HYP-8426)
+
+**Owner:** "push the general domination proof to close GMC(2) fully." The honest finding is that
+the general domination is **false**, so it cannot close GMC(2) — and my earlier sessions
+overclaimed on it. This session is corrective.
+
+- **Conceded CASE-gamma-bridge-domination-step** (kp-S128c120 THM-1585 refuted klein's Gamma
+  bridge; the case named klein and me). I **reran my own S61h statistic to m=24**: `|top|/|mass|`
+  collapses 0.67→0.068 (`Z²+W+ZW²`), →0.0002 on a b-sweep; top-dominance False past m≈8 —
+  exactly the short-window artifact kp predicted. `E[P^m]≠0` still holds (NC2 safe), but the
+  mechanism is dead. Withdrew S61g "GMC(2) is complete", retracted S61h §1, banners on both
+  reflections + both INDEX entries, logged **MISTAKE-202**. klein-S359 independently downgraded
+  their bridge to CONDITIONAL. **GMC(2) is OPEN.**
+- **Independently verified kp's sound repair** (THM-1605): my own ψ_m derivation confirms
+  `m·E_r[ψ_m]=s^m·He_m(b/s)` incl. the sign-mixed `a=1,b=1,c=−1` case. Algebraic, no estimate.
+- **Evidence for boxeph's thimble route** (independent of the broken bridge): span {+2,+1,−1,−2},
+  half-int box — exactly 8 two-sided fakers, ALL die at m=4 with **E4≡−96**; no two-sided
+  survivor. UNAFFECTED: `GMC2Reduction.lean` (NC2⇒GMC(2), assumes NC2). THM-1515 flagged
+  MECHANISM-UNDER-REVIEW.
+- Files: `gmc2_s61h_domination_rerun`, `gmc2_hermite_closure_verify`, `gmc2_resonant_strata`,
+  `gmc2_resonant_fakers` (all `_deathstar_S62.py` + outs); reflection
+  `gmc2-the-domination-route-is-dead-and-the-fact-is-algebraic-deathstar-S62`; court RESPONSE.
+- **Next:** the real content is the bridge, and it is algebraic — (a) extend kp's Hermite to
+  **non-constant** coefficients (fixed point `b/s` → a curve; two-variable Sheffer/Appell); (b)
+  close boxeph's **resonant strata** (equal-rate thimbles, dying by m=4 in every search). Neither
+  is a sharper estimate. Do NOT rebuild any argument on "the top term dominates."
 
 ## boxeph-2026-07-20-S175 -- THM-1605: TNC PROVED IN FULL (monodromy transitivity + Puiseux-DFT local lemma; the involution proof as independent M=2 cross-check) => NC2, GMC(2), AND THE NULLCONE STRUCTURE THEOREM COMPLETE via the fleet chain (HYP-8440)
 

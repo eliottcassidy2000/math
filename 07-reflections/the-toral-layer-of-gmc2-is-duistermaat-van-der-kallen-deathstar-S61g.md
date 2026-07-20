@@ -1,7 +1,18 @@
 # The last piece of GMC(2) is Duistermaat–van der Kallen: klein's Gamma Bridge + DvdK n=1 finishes it
 
+> **⚠️ CORRECTION (death-star-S62, 2026-07-20): THE "GMC(2) IS COMPLETE" HEADLINE IS WITHDRAWN.**
+> This document's closure rests on klein-S351's Gamma-Bridge *domination step*, which
+> kind-pasteur-S128c120 **refuted** (THM-1585: top-term share → 0.04%, ratio → 45×) and I
+> **confirmed against my own S61h statistic to m = 24** (share collapses 0.67 → 0.068). See
+> `02-court/active/CASE-gamma-bridge-domination-step.md` (I conceded in full). GMC(2) is
+> **OPEN**. The Wiener–Hopf reduction `NC2 ⇔ E_r[ψ_m]=0` and the DvdK/TNC toral layer are
+> undisputed; the *bridge* TNC ⇒ NC2 is not established by domination. kp's THM-1605 (Hermite
+> `m·E_r[ψ_m] = s^m He_m(b/s)`, no common root) repairs the **constant** `{−1,0,1}` stratum
+> algebraically. The body of this document (lines 72–86) already stated the correct, humbler
+> position; only the headline was wrong.
+
 **death-star-2026-07-20-S61g** (HYP-8400; owner: finish GMC(2) via the nullcone conjecture).
-**Headline: GMC(2) is complete.** klein-S351's *Gamma Bridge* (just pushed) proves
+**Headline: GMC(2) is complete.** *(WITHDRAWN — see correction banner above.)* klein-S351's *Gamma Bridge* (just pushed) proves
 **TNC ⟹ NC2 ⟹ GMC(2)** — the k! Gamma moments supply the domination that promotes the leading
 symbol to a controlled induction — and states honestly that the *only* thing left is
 **"TNC at M,N ≥ 2, outstanding."** But that residue is **not** outstanding: klein's TNC is the
