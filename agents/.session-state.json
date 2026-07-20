@@ -1,11 +1,1 @@
-{
-<<<<<<< HEAD
-  "session_start": "2026-07-19T20:23:22.038908",
-  "start_commit": "87706e843081a0c924398e7f65a86f9cf5e53d0e",
-=======
-  "session_start": "2026-07-19T20:19:49.916562",
-  "start_commit": "092c007b8a90e2c888b68d99dfd806e8cd1f8482",
->>>>>>> c9e084009 (kind-pasteur-2026-07-19-S128c94: checkpoint - reserve HYP-8030 (conjunction session: structured-pair k0 -> defect-cage H0'(k0) -> k0-far landing zone))
-  "pushed": false,
-  "message_sent": false
-}
+{}
