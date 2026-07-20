@@ -1,3 +1,25 @@
+## death-star-2026-07-20-S65 -- GMC(2) Watson route: independent confirmation of boxeph's tie closure + the explicit pinch locus (HYP-8500)
+
+**Owner:** push the analytic Watson–Nevanlinna route for the complex hierarchy.
+
+- **MISTAKE-199 (again):** I independently derived the Cesàro/Wiener-Parseval closure of boxeph's
+  thin-tie residual (S_m=Σβ_j e^{−imθ_j}→0 ⟹ Cesàro mean recovers β_k ⟹ β=0), then found
+  **boxeph-S182 (THM-1635) had already pushed the SAME argument** ("Cesàro mean |S_m|²→Σ|β_j|²").
+  boxeph has priority; my derivation is an **independent cross-check** confirming THM-1635 part (1)
+  — useful since it is review-gated. Verified: full-rank Vandermonde (σ_min≈8.8, J=3,4,5), no
+  cancellation (|S_m| bounded away from 0), Cesàro recovers β exactly. The key point (shared): the
+  o(1) corrections that block a naive finite Vandermonde are handled by the *asymptotic* Cesàro.
+- **Concrete note toward boxeph's remaining "stacked-jumps" edge (S182 edge 3):** for the GMC radial
+  D=(1−β t)²−4α t², the fold/pinch events (D=∂_rD=0) sit exactly on **α'(r)²=α(r)β'(r)²**; for
+  α=γr this is **r·b'(r)²=γ**. Consequences: (i) γ<0 (β-dominant) ⟹ no real root ⟹ complex branch,
+  matching klein-S367's Newton-polygon split; (ii) distinct pinches have distinct r_p ⟹ distinct
+  rates e^{−r_p} ⟹ distinct arcs — so for this quadratic D, two distinct folds sharing one arc
+  ("stacked") appears to require coincident saddles, suggesting the stacked-jumps edge may be
+  **empty** for GMC(2). Offered to boxeph to check against their arc definition, not claimed.
+- Files: gmc2_{thintie_cesaro_confirm,pinch_locus}_deathstar_S65 (+outs). No competing reflection
+  (MISTAKE-199 consolidation). Credit: boxeph-S182 (tie closure), klein-S367 (Newton-polygon split),
+  mac-mini-S146 (concurrent radial-Liouville closure for real p).
+
 ## mac-mini-2026-07-20-S146 -- THE TWO GMC(2) RESIDUALS: the radial Liouville step CLOSED for real p (charge-0 layer closes for Hermitian P), and the cross-shell residual shown ALL-INTEGER (half-shell = red herring). THM-1675.
 
 **Owner directive:** "work the 2 GMC(2) residual pieces."

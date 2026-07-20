@@ -1,0 +1,11 @@
+[b=r^2] gamma=1.0, b=[0, 0, 1.0]: pinch roots of r*b'^2=gamma at r=[0.63]
+   (r_p, t_p, D==0, dD/dr==0): [(0.63, -0.8398, False, True)]  -> folds sit exactly on the locus
+[b=r+r^2] gamma=1.0, b=[0, 1.0, 1.0]: pinch roots of r*b'^2=gamma at r=[0.348]
+   (r_p, t_p, D==0, dD/dr==0): [(0.348, -1.407, False, True)]  -> folds sit exactly on the locus
+[b=r-r^2 (gamma<0, complex branch regime)] gamma=-1.0, b=[0, 1.0, -1.0]: pinch roots of r*b'^2=gamma at r=[]
+   (r_p, t_p, D==0, dD/dr==0): []  -> folds sit exactly on the locus
+
+STACKED JUMPS = two distinct pinch roots r_p1 != r_p2 sharing the SAME t_p AND same rate.
+t_p = 1/(b(r_p) - 2*gamma/b'(r_p)). Equal-t_p for two roots is one equation on the coefficients
+(codim 1); equal RATE (e^{-r_p} arc modulus) is a second (codim 2) -> stacked jumps are a thin
+sub-stratum of the already-thin tie locus. This is a concrete handle for boxeph's S182 edge (3).

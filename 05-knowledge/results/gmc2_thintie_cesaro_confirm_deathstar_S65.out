@@ -1,0 +1,15 @@
+[3 tied, beta=(1,1,1)]
+   normalized |S_m| at m=10,50,200,1000,5000: [2.4189, 0.8867, 1.6433, 2.9892, 2.8073]  (bounded away from 0 => tie does NOT cancel)
+   Cesaro recovery beta_k: [(1-0j), (1-0j), (1+0j)]  == betas => (a_m->0 forces beta=0)
+[4 tied, mixed beta]
+   normalized |S_m| at m=10,50,200,1000,5000: [1.8029, 1.4985, 0.8536, 1.8867, 2.1782]  (bounded away from 0 => tie does NOT cancel)
+   Cesaro recovery beta_k: [(1-0j), (-0.7-0j), (0.4-0j), (-0+1j)]  == betas => (a_m->0 forces beta=0)
+
+Vandermonde full-rank check (the 'finite linear system per tie'):
+   J=3 tied arcs: smallest singular value = 8.856  (>0 => rank J => only beta=0)
+   J=4 tied arcs: smallest singular value = 8.731  (>0 => rank J => only beta=0)
+   J=5 tied arcs: smallest singular value = 8.808  (>0 => rank J => only beta=0)
+
+CONCLUSION: distinct phases => full-rank Vandermonde => sum_j beta_j e^{-imphi_j}=0 forall m has ONLY beta=0.
+The o(1) (which blocks a naive FINITE Vandermonde) is handled by Cesaro: a_m->0 => beta_k=0 (Wiener).
+=> boxeph's thin-tie residual (>=3 tied moduli, nonzero jumps) has NO nullcone member. CLOSED.
