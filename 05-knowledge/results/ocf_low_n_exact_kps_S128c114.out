@@ -1,0 +1,19 @@
+==============================================================================
+hp = 1 + 2*c_odd  EXACTLY for n <= 5  (because two disjoint odd cycles need 6)
+==============================================================================
+  n = 3 : 8 tournaments, violations of hp = 1 + 2*c_odd : 0  -> HOLDS
+  n = 4 : 64 tournaments, violations of hp = 1 + 2*c_odd : 0  -> HOLDS
+  n = 5 : 1024 tournaments, violations of hp = 1 + 2*c_odd : 0  -> HOLDS
+
+==============================================================================
+AND IT MUST BREAK AT n = 6 -- explicit witness
+==============================================================================
+  witness bits = 28282
+     hp = 37,  c_odd = 16,  1 + 2*c_odd = 33,  residual = 4
+     residual divisible by 4 : True
+     a vertex-DISJOINT pair of odd cycles: [0, 3, 4] and [1, 2, 5]
+     -> alpha_2 >= 1, which is exactly what n = 6 first permits (3+3).
+
+  So the OCF's higher terms switch on at precisely n = 6, and the reason is a
+  vertex count, not an arithmetic accident: 3 + 3 = 6 is the first room for two
+  vertex-disjoint odd cycles.

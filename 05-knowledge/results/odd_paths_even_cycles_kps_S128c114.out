@@ -1,0 +1,53 @@
+==============================================================================
+(A)+(B)  hp odd (Rédei, control) and the PARITY OF hc,  n = 3..6 exhaustive
+==============================================================================
+  n = 3  (8 tournaments)
+     hp always ODD (Rédei control) : True
+     hc parity   : even 6 (75.0%),  odd 2 (25.0%)
+     hc mod 4    : {0: 6, 1: 2}
+     among STRONG    : even 0, odd 2
+     among NON-strong: even 6, odd 0
+  n = 4  (64 tournaments)
+     hp always ODD (Rédei control) : True
+     hc parity   : even 40 (62.5%),  odd 24 (37.5%)
+     hc mod 4    : {0: 40, 1: 24}
+     among STRONG    : even 0, odd 24
+     among NON-strong: even 40, odd 0
+  n = 5  (1024 tournaments)
+     hp always ODD (Rédei control) : True
+     hc parity   : even 624 (60.9%),  odd 400 (39.1%)
+     hc mod 4    : {0: 480, 1: 360, 2: 144, 3: 40}
+     among STRONG    : even 144, odd 400
+     among NON-strong: even 480, odd 0
+  n = 6  (32768 tournaments)
+     hp always ODD (Rédei control) : True
+     hc parity   : even 18368 (56.1%),  odd 14400 (43.9%)
+     hc mod 4    : {0: 14768, 1: 8400, 2: 3600, 3: 6000}
+     among STRONG    : even 7920, odd 14400
+     among NON-strong: even 10448, odd 0
+
+==============================================================================
+(D)  SAMPLING at n = 7, 8 -- is any parity law an n <= 6 artifact?
+==============================================================================
+  n = 7  (3000 samples) : hp always odd True ; hc even 1645, odd 1355
+  n = 8  (3000 samples) : hp always odd True ; hc even 1633, odd 1367
+
+==============================================================================
+(E)  WHERE THE ODD/EVEN SPLIT SITS: the directed-odd-cycle census
+==============================================================================
+  Omega(T)'s vertices are the directed ODD cycles.  hp = I(Omega, 2), so
+  hp = 1 + 2*(number of odd cycles) + 4*(...) -- the 1 is the empty independent
+  set and is the whole reason Rédei's count is odd.
+     n=4  odd-cycle census {3: 2}  sum a_1 = 2     hp = 5      hp - 1 - 2a_1 = 0
+     n=4  odd-cycle census {3: 2}  sum a_1 = 2     hp = 5      hp - 1 - 2a_1 = 0
+     n=4  odd-cycle census {3: 2}  sum a_1 = 2     hp = 5      hp - 1 - 2a_1 = 0
+     n=5  odd-cycle census {3: 3, 5: 1}  sum a_1 = 4     hp = 9      hp - 1 - 2a_1 = 0
+     n=5  odd-cycle census {3: 0, 5: 0}  sum a_1 = 0     hp = 1      hp - 1 - 2a_1 = 0
+     n=5  odd-cycle census {3: 3, 5: 1}  sum a_1 = 4     hp = 9      hp - 1 - 2a_1 = 0
+     n=6  odd-cycle census {3: 7, 5: 7}  sum a_1 = 14    hp = 37     hp - 1 - 2a_1 = 8
+     n=6  odd-cycle census {3: 6, 5: 7}  sum a_1 = 13    hp = 31     hp - 1 - 2a_1 = 4
+     n=6  odd-cycle census {3: 7, 5: 9}  sum a_1 = 16    hp = 37     hp - 1 - 2a_1 = 4
+
+  The residual hp - 1 - 2*a_1 is 4*alpha_2 + 8*alpha_3 + ... , i.e. the
+  higher independent sets of Omega.  Divisible by 4 in every row above is the
+  check that the OCF grading is doing what it should.
