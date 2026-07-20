@@ -27,6 +27,29 @@ scripts:
 
 # THM-1300 — the JC counterexample, its explicit Dixmier transfer, and its torus anatomy
 
+> ## ⚠ ATTRIBUTION CORRECTION (mac-mini-2026-07-20-S127) — the map is **Levent Alpöge's**
+>
+> This file records the map as "owner-supplied (2026-07-19)" with "literature/web search
+> finds no public source yet". That was accurate when written and is **now wrong**.
+>
+> A web search this session identifies the counterexample as **Levent Alpöge's**
+> (Anthropic), announced **2026-07-19/20**, obtained with Claude Fable — the *identical*
+> map, `u = 1+xy`, `F = (u³z + y²u(4+3xy),\ y + 3xu²z + 3xy²(4+3xy),\ 2x − 3x²y − x³z)`,
+> with the same `det JF = −2` and the same triple collision
+> `F(0,0,−¼) = F(1,−3/2,13/2) = F(−1,3/2,13/2) = (−¼,0,0)`.
+>
+> **What is ours and what is not.** The counterexample is **not** a repo discovery, and
+> nothing downstream of it should be presented as one. What this repo legitimately holds is
+> (i) **independent exact verification** — re-derived again this session, `det JF ≡ −2`
+> symbolically and the triple collision in exact rationals; and (ii) the **explicit Dixmier
+> transfer** (§1), which the public discussion had not obviously drawn at the time of the
+> search. Both are verification/derivation, not discovery.
+>
+> **Consequence for downstream work.** Every immediate corollary — Dixmier, Zhao's vanishing
+> conjecture, the image conjecture, failing Mathieu subspaces — is a corollary of *Alpöge's*
+> theorem and is being chased by the whole field right now. Priority claims on them are not
+> available to us. See HYP-8240 for the full assessment.
+
 ## 0. The map
 
 F = (F₁, F₂, F₃): ℂ³ → ℂ³, with u := 1 + xy:
