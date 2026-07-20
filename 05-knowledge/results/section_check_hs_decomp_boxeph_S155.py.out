@@ -1,0 +1,27 @@
+========================================================================================
+(1) p=43 +-SECTION CHECK: the gate structure as a Z/2-quotient object
+========================================================================================
+(a) scales live on (Z/Q \ 0)/± : half-range == full-range on 200 random tuples: True
+(b) improper set is ±-invariant (W ~ -W) on 200 random tuples: True ; controls: True True
+(c) AP13: mod-7 pattern [0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6] ; pattern(-W) [0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6] ; -pattern(W) [0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6] ; paired: True
+(c) GW: mod-7 pattern [0, 1, 1, 2, 2, 3, 3, 3, 4, 4, 5, 6, 6] ; pattern(-W) [0, 1, 1, 2, 3, 3, 4, 4, 4, 5, 5, 6, 6] ; -pattern(W) [0, 1, 1, 2, 3, 3, 4, 4, 4, 5, 5, 6, 6] ; paired: True
+(d) => gate freedom counts live on (Z/7)*/± = 3 pairs + zero class: the '1-of-7'
+    slaving is '1-of-(3 pairs + 0)' on the quotient; the S-T gate spectrum is a
+    Z/2-quotient object, as the index program predicted.  (Structural, verified.)
+
+========================================================================================
+(2) HS-ONLY PAIRS ALONG SPINE/RIBS/SEA (SC-SC / SC-NS / NS-NS)
+========================================================================================
+n=5 (SC classes: 8/12):
+  ALL pairs                    n=66    SC-SC  28 (42.4%)  SC-NS  32 (48.5%)  NS-NS   6 ( 9.1%)
+  HS(B)                        n=39    SC-SC  17 (43.6%)  SC-NS  16 (41.0%)  NS-NS   6 (15.4%)
+  HS-minus-d1                  n=20    SC-SC   8 (40.0%)  SC-NS   8 (40.0%)  NS-NS   4 (20.0%)
+  HS-minus-d<=2                n=0     SC-SC   0 ( 0.0%)  SC-NS   0 ( 0.0%)  NS-NS   0 ( 0.0%)
+  NO-shared-even (complement)  n=27    SC-SC  11 (40.7%)  SC-NS  16 (59.3%)  NS-NS   0 ( 0.0%)
+n=6 (SC classes: 12/56):
+  ALL pairs                    n=1540  SC-SC  66 ( 4.3%)  SC-NS 528 (34.3%)  NS-NS 946 (61.4%)
+  HS(B)                        n=1171  SC-SC  45 ( 3.8%)  SC-NS 372 (31.8%)  NS-NS 754 (64.4%)
+  HS-minus-d1                  n=916   SC-SC  35 ( 3.8%)  SC-NS 296 (32.3%)  NS-NS 585 (63.9%)
+  HS-minus-d<=2                n=257   SC-SC  12 ( 4.7%)  SC-NS  86 (33.5%)  NS-NS 159 (61.9%)
+  NO-shared-even (complement)  n=369   SC-SC  21 ( 5.7%)  SC-NS 156 (42.3%)  NS-NS 192 (52.0%)
+DONE.
