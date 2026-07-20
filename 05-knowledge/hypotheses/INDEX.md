@@ -15725,3 +15725,46 @@ is a tiling function that does not descend to iso classes.
 **Residual (OPEN):** transversality proved only by verification at `n=5,6,7`; only one
 tournament invariant tested; the metagraph fibred over the holonomy bits is unexamined.
 See `01-canon/theorems/THM-1405-star-quotient-is-the-cycle-space-transverse-to-isomorphism.md`.
+
+### HYP-8275 — Casas-Alvero as the polynomial-rigidity sibling of the Jacobian Conjecture
+**Status: ASSESSED, NOT ATTACKED (mac-mini-S129).** Owner prompt: "polynomial-derivative
+rigidity with p-adic partial result — Casas-Alvero."
+**Statement.** `f` monic of degree `d` over char-0 `K`; if `gcd(f, f^{(i)}) ≠ 1` for every
+`i = 1..d−1` then `f = (X−α)^d`. (Casas-Alvero, J. Algebra 240 (2001) 326–337.)
+**Proved degrees (char 0):** `p^k, 2p^k` (Graf von Bothmer–Labs–Schicho–van de Woestijne,
+J. Algebra 316 (2007), arXiv:math/0605090); `3p^k, 4p^k` (Draisma–de Jong 2011); `5p^e`
+(Chellali–Salinier); `5p^k, 6p^k, 7p^k` + degree 12 (Castryck–Laterveer–Ounaïes, Math. Comp.
+83 (2014), arXiv:1208.5404). Smallest open degree was **20**.
+**The p-adic part the prompt names:** GvB Prop 2.2 — CA in degree `d` over char 0 iff the set
+of *bad primes* for `d` is finite; Prop 2.6 — CA in degree `d` char `p` lifts to degree `d·p^k`.
+Draisma–de Jong recast this via **p-adic valuations**, which is what yielded `3p^k, 4p^k`.
+**FALSE in char p**, and genuinely so (Hasse–Schmidt derivatives *strengthen* the hypothesis):
+`X^{p+1} − X^p = X^p(X−1)` (GvB Prop 3.1). Bad primes can be astronomically large.
+**Live claim, UNREFEREED:** Ghosh, arXiv:2501.09272 *"Proof of the Casas-Alvero conjecture"*
+(v1 Jan 2025, **v2 Mar 2026, "major revisions"**) claims all `d ≥ 3` in char 0 via Koszul
+homology + a filtration + the Four Lemma. **No journal reference; no independent verification
+found; the 2024–26 literature still treats CA as open.** Prior claimed proofs that never stuck:
+Dobrowolski arXiv:1705.01704, Fernández de las Heras² arXiv:1306.5656. Also Ghosh
+arXiv:2402.18717 (refereed-track finiteness: the CA variety is ≤2-dimensional; finitely many
+counterexamples per degree up to affine equivalence).
+**Link to JC — NONE in the literature.** Full-text grep of math/0605090, 2402.18717 and
+2501.09272: the string "Jacobian" occurs **zero times** in all three. The rigidity analogy is
+real but is unwritten folklore.
+**The one structural parallel worth recording (unsourced, ours):** both conjectures fail in
+char `p` for **Frobenius-driven** reasons — CA via `X^{p+1}−X^p`, JC via `x ↦ x − x^p`
+(Jacobian ≡ 1, not invertible) — and both reduce to controlling a finite bad-prime set /
+finitely many counterexamples per degree. Given JC has now FALLEN in char 0 (THM-1300), the
+sharp question is whether CA's char-0 truth and JC's char-0 falsity can be reconciled inside
+that shared Frobenius picture, or whether the parallel breaks exactly there.
+**Recommendation: DO NOT attack CA.** A claimed full proof is live but unrefereed; the useful
+repo move is the *comparison*, not the conjecture. Cheap and genuinely novel: write the
+char-`p` Frobenius parallel down properly, since nobody has.
+
+### HYP-8280 — how often is the odd-cycle intersection graph a path?
+**Status: OPEN (raised by THM-1425).** THM-1425 shows `H(T)` is a Jacobsthal number whenever
+the odd-cycle intersection graph is a path `P_m`, since the OCF is the weight-2 shifted-Pascal
+sum. **The identity is exact; its scope is unmeasured.** For most tournaments that graph is
+dense, so the corollary may apply to vanishingly few tournaments at large `n`. Measure the
+fraction at `n = 5..8`, and more usefully classify which intersection-graph *shapes* occur —
+each shape gives its own weight-2 independent-set polynomial, so the OCF is a family of
+identities indexed by realizable intersection graphs, of which the path is one member.

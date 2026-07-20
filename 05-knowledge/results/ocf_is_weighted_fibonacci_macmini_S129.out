@@ -1,0 +1,57 @@
+==========================================================================
+PART 1 -- is H(T) the 2-weighted disjoint-odd-cycle sum?  (all labelled T)
+==========================================================================
+  n=3:      8 tournaments, mismatches = 0   OCF CONFIRMED
+  n=4:     64 tournaments, mismatches = 0   OCF CONFIRMED
+  n=5:   1024 tournaments, mismatches = 0   OCF CONFIRMED
+  n=6:  32768 tournaments, mismatches = 0   OCF CONFIRMED
+
+==========================================================================
+PART 2 -- the shifted-Pascal identity, weight 1 (Fibonacci) vs weight 2
+==========================================================================
+  m  sum C(m-k,k)   F(m+1)   ok    sum C(m-k,k)2^k   J(m+1)   ok  (2^m-(-1)^m)/3
+  0             1        1 True                  1        1 True               0
+  1             1        1 True                  1        1 True               1
+  2             2        2 True                  3        3 True               1
+  3             3        3 True                  5        5 True               3
+  4             5        5 True                 11       11 True               5
+  5             8        8 True                 21       21 True              11
+  6            13       13 True                 43       43 True              21
+  7            21       21 True                 85       85 True              43
+  8            34       34 True                171      171 True              85
+  9            55       55 True                341      341 True             171
+ 10            89       89 True                683      683 True             341
+ 11           144      144 True               1365     1365 True             683
+
+  So: independent sets in the path P_m, weight 1 -> FIBONACCI;
+      the same sum with weight 2 -> JACOBSTHAL = (2^m - (-1)^m)/3.
+      The OCF is exactly this sum on the odd-cycle intersection graph.
+
+==========================================================================
+PART 3 -- Redei as the mod-2 shadow of the OCF
+==========================================================================
+  Every NONEMPTY collection contributes 2^|S| == 0 (mod 2); only S = {} gives 1.
+  Hence H(T) == 1 (mod 2) -- Redei's oddness is one line from the OCF.
+  n=3: every H(T) odd?  True
+  n=4: every H(T) odd?  True
+  n=5: every H(T) odd?  True
+  n=6: every H(T) odd?  True
+
+==========================================================================
+PART 4 -- last-digit periods: Fibonacci 60 vs the repo's 2-weighted analogue
+==========================================================================
+  mod    2:  Fibonacci period =     3 (pre 0)   Jacobsthal period =     1 (pre 1)
+  mod    5:  Fibonacci period =    20 (pre 0)   Jacobsthal period =     4 (pre 0)
+  mod   10:  Fibonacci period =    60 (pre 0)   Jacobsthal period =     4 (pre 1)
+  mod 1001:  Fibonacci period =   560 (pre 0)   Jacobsthal period =    60 (pre 0)
+
+
+  READ THIS OFF THE TABLE, not from intuition:
+    Fibonacci  (weight 1): period  60 mod   10,  period 560 mod 1001
+    Jacobsthal (weight 2): period   4 mod   10,  period  60 mod 1001
+  So the 60 does NOT vanish under the tournament weighting -- it MOVES,
+  from modulus 10 to modulus 1001 = 7*11*13.  Reason: 60 = ord_10(F-recursion)
+  on one side and 60 = ord_1001(2) on the other, and the weight-2 recursion has
+  J(k) = (2^k - (-1)^k)/3, so its period mod q is governed by ord_q(2).
+  That is the honest '1001 <-> three sixties' link: same constant, different modulus,
+  swapped by the weight-1 -> weight-2 substitution that turns Fibonacci into the OCF.

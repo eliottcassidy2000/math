@@ -144,3 +144,52 @@ plainly so it is not carried forward as a lead.
   is too small. The remaining room is between them: subgroups of the cut space that are
   `S_n`-invariant but proper — i.e. `S_n`-submodules of the cut space over `𝔽₂`. That is a
   finite, small representation-theoretic question and it is the right next computation.
+
+
+---
+
+## ADDENDUM (mac-mini-2026-07-20-S129) — §II is too strong: the tournament analogue EXISTS and is named
+
+An independent literature check this session (which reproduced §I's counts `1, 2, 2, 6` at
+`n = 3,4,5,6` by brute-force orbit counting, confirming them) refines §II.
+
+**§II says:** *"1,2,2,6 ≠ A002854 = 2,3,7,16, so the two-graph theorem (switching classes of
+GRAPHS = two-graphs = even graphs) has NO tournament analogue here."*
+
+The premise is right and the conclusion is too strong. The analogue exists — it just is not
+`A002854`, because `A002854` is the *undirected* side:
+
+| side | switching classes | = | OEIS |
+|---|---|---|---|
+| graphs | switching classes of graphs | two-graphs = even graphs | **A002854** — 1,1,2,3,7,16,54,243 |
+| **tournaments** | switching classes of tournaments | **oriented two-graphs** | **A049313** — 1,1,1,2,2,6,12,79,792,19576 |
+
+`A049313` (Peter J. Cameron; terms `n ≤ 8` independently verified this session) is exactly
+`1, 2, 2, 6` at `n = 4,5,6` under its offset-1 indexing — **§I's numbers, with a name.** So
+the correct statement is not "no analogue" but *"the analogue is oriented two-graphs, and it
+is a different sequence from the repo's `E_n`."* §II's refutation of the guess that the
+base-path-free quotient lands on `E_n` **stands and is correct**; only the "no analogue"
+phrasing overshoots.
+
+**Supporting facts, all sourced:**
+
+- **Switching equivalence is exactly "same oriented two-graph."** Concrete complete invariant,
+  verified separating at `n = 3,4,5,6`: fix a vertex order, set `a_ij = ±1` for `i→j` / `j→i`
+  (`i<j`); switching acts by `a_ij ↦ ε_i ε_j a_ij`, and the triple products
+  `τ(i,j,k) = a_ij·a_jk·a_ik` are a complete switching invariant. *Nuance:* `τ` is alternating
+  in the triple's ordering, so it is **not** the cyclic-vs-transitive indicator.
+- **Babai–Cameron** (EJC 7 (2000) #R38): the groups arising as the full automorphism group of a
+  switching class of tournaments are exactly those with **Sylow 2-subgroups cyclic or
+  dihedral** — the switching relaxation of Moon's odd-order theorem for tournaments. This
+  bears directly on THM-1420(D″), whose chirality argument runs through `|Aut(T)|` odd.
+- **`H`, min-FAS and the cyclic-triangle count are all NOT switching-invariant** — verified
+  `64/64` classes non-constant at `n=5` and `1024/1024` at `n=6`; the transitive tournament's
+  switching class contains `H ∈ {1,9,11,15}` at `n=5`. So the switching fibration is
+  **transverse to the `H`-fibration**, which is the same phenomenon THM-1420 proves in
+  general: no proper subgroup of the arc space has iso-invariant orbits.
+- Labelled switching classes `= 2^{C(n−1,2)} = A006125(n−1)`; no separate OEIS entry, and
+  searches for "oriented two-graphs" as an OEIS *name* return null.
+- **Not verified:** any theorem equating tournament switching with local complementation.
+  Limouzy (arXiv:0904.1923) on Seidel complementation and Bouchet's vertex-minor theory are
+  **undirected only** — checked, no tournament results. Treat "switching = local
+  complementation" as unsupported.
