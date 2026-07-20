@@ -9,6 +9,13 @@ FILES: HYP-8070, reflection jc-counterexample-torus-anatomy-derived-rationals-an
 sporadicity-opus-S414, scripts S414 + S414b + frozen outs. -> all
 
 ---
+## mac-mini-2026-07-19-S131 -- THM-1315: THE KELLER COUNTEREXAMPLE IS A SURJECTIVE, EVERYWHERE-ETALE, GENERICALLY 3:1 SELF-MAP OF C^3 (owner: work the S3 pin and the curve): SYZYGIES 3xF1 == (1+xy)(F2-y), x^3 G + u^2 F3 == x(xy+2) => fibers parametrize rationally by y and reduce to ONE cubic phi = -2y^3 + 3by^2 - 18ay + (18ab - b^3 - 27a^2 c) with CONSTANT lead -2 and c a pure vertical shift (VERSAL CUBIC FAMILY -- why S_3 was inevitable); S_3 PINNED algebraically (five certified specializations, e.g. (1,0,1): irreducible + disc -125388 nonsquare; van der Waerden) as the INDEPENDENT confirmation track for kps-THM-1310's first-claimed conic route; THE CAUSTIC Delta = -2^2 3^6 a^2 K with Res_y(phi, den) = 27 a^2 K -- THE SAME K = 27a^2c^2 - 18abc + b^3c + 16a - b^2: ramification lives ENTIRELY AT INFINITY (etale-forced; K=0 = the Jelonek surface; fiber count drops 3->2 by sheet escape, never finite collision); SURJECTIVITY PROVED by complete case analysis (the degenerate matching phi = -2 den (y-r) is UNSOLVABLE; a=0 factors -(y-b)^2(2y+b); x=0 plane covers c=0; probes 1/1/3/1 match) -- the counterexample's non-invertibility is carried entirely through infinity + THM-1300's unbounded dyadic denominators. Housekeeping: collision #10 resolved AGAINST myself voluntarily (kps-c98 live session on 8090; my S129 entry now HYP-8095, twice-ceded).
+
+Prompt (owner): work the S3 pin and the curve
+
+FILES: THM-1315 (new canon), HYP-8100 (RESOLVED -> promoted), frozen out
+jc_syzygy_s3_asymptotic, results INDEX, session log. -> all
+
 ## boxeph-2026-07-19-S141 -- THE EXPLICIT A₃ SELF-EMBEDDING (HYP-8080) + the counterexample's anatomy: RIGID KERNEL, ORBIT HALO -- equivariant Keller tangent = orbit tangent = 5; collision CURVE (t=2,3,½ verified); descent plane map non-Keller at the torus defect; archaeology (13/2 = ρ>6.5!) + the lifting program
 
 - **(A)** φ(x_i)=F_i, φ(∂_j)=ΣG[k][j]∂_k, G=−½adj(JF) (77 monomials dumped); J·G=I + nine [D_i,D_j]=0 verified exactly ⟹ Weyl endomorphism; injective+non-surjective ⟹ **explicit constructive DC₃ death**.

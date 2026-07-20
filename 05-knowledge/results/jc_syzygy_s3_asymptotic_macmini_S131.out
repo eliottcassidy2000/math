@@ -1,0 +1,43 @@
+(0) G-presentation: F1 = uG, F2 = y + 3xG with G = u^2 z + y^2(1+3u)  VERIFIED
+(1) SYZYGY 1: 3x·F1 ≡ (1+xy)(F2 − y)  VERIFIED (identically zero)
+(1b) SYZYGY 2: x^3·G + u^2·F3 = W(x,y) z-free; W = x*(x*y + 2)
+(2) second fiber equation x·Q, Q = -b*x**2 - 3*c*x**2*y**2 - 6*c*x*y - 3*c + 4*x**2*y + 6*x
+(2b) fiber polynomial degree in y: 3
+     leading coefficient (asymptotic locus factor): -2
+     phi factors: -27*a**2*c + 18*a*b - 18*a*y - b**3 + 3*b*y**2 - 2*y**3
+(3) phi(1,1,1) = -2*y**3 + 3*y**2 - 18*y - 10
+    factorization over Q: (-1, [(2*y + 1, 1), (y**2 - 2*y + 10, 1)])
+Traceback (most recent call last):
+  File "<stdin>", line 62, in <module>
+AssertionError: no cubic factor at (1,1,1) — pick another point
+(3') S3 specializations (need irreducible cubic + nonsquare disc):
+    (a,b,c)=(1, 1, 0): irreducible=False, disc=-43740, square=False
+    (a,b,c)=(1, 0, 1): irreducible=True, disc=-125388, square=False
+    (a,b,c)=(2, 1, 1): irreducible=True, disc=-1213056, square=False
+    (a,b,c)=(1, 2, 1): irreducible=True, disc=-32076, square=False
+    (a,b,c)=(1, 1, 2): irreducible=True, disc=-259524, square=False
+    (a,b,c)=(1, 0, 0): irreducible=False, disc=-46656, square=False
+    (a,b,c)=(1, 0, -1): irreducible=True, disc=-125388, square=False
+    => specialization (1, 0, 1): Galois = S_3 there; van der Waerden
+       (specialized ≤ generic ≤ S_3) ⟹ GENERIC MONODROMY = S_3.
+       (Independent syzygy-route confirmation of kps THM-1310's target.)
+
+(4') the caustic (generic discriminant), closed form:
+    Δ(a,b,c) = -2916*a**2*(27*a**2*c**2 - 18*a*b*c + 16*a + b**3*c - b**2)
+    axis check Δ(t,0,0) = -46656*a**3
+
+(5') SURJECTIVITY:
+    lead(φ) = −2 constant ⟹ 3 roots (with mult) for EVERY target;
+    a root y0 fails to give a preimage only on branch loci:
+      x-denominator: 3a − y0(b−y0) = 0  (then x undefined), or
+      x(y0) = 0 with c ≠ 0 (z = (2x−3x²y−c)/x³ needs x ≠ 0).
+    x=0 plane covers {c=0} outright: F(0,y,z) = (z+4y², y, 0).
+    Res_y(φ, 3a − y(b−y)) = 27*a**2*(27*a**2*c**2 - 18*a*b*c + 16*a + b**3*c - b**2)
+    φ = −2(y²−by+3a)(y−r) solvable for (r,c): []
+    ⟹ every target with a ≠ 0 has ≥ 1 preimage from φ's roots;
+      a = 0, c ≠ 0: φ(0,b,c) = −2y³+3by²−b³: root exists, x = −1/y₀ branch;
+      check the residual a = 0 cases + c = 0 plane covered ⟹ probe:
+    target (0, 1, 1): 1 preimages
+    target (0, 0, 1): 1 preimages
+    target (0, 1, 0): 3 preimages
+    target (0, 0, 0): 1 preimages
