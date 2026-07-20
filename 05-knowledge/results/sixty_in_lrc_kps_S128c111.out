@@ -1,0 +1,91 @@
+==============================================================================
+(1) THE DISTANCE SPECTRUM of the extremal AP -- where an lcm naturally sits
+==============================================================================
+  LRC(n): speeds {1,...,n-1}, witness t = 1/n, distances ||k/n|| = min(k,n-k)/n.
+  So the numerators are exactly {1, ..., floor(n/2)}.
+
+  n     #speeds        spectrum   lcm(numerators) 
+  5     4              {1..2     } 2             
+  6     5              {1..3     } 6             
+  7     6              {1..3     } 6             
+  8     7              {1..4     } 12            
+  9     8              {1..4     } 12            
+  10    9              {1..5     } 60            
+  11    10             {1..5     } 60            
+  12    11             {1..6     } 60            
+  13    12             {1..6     } 60              <-- the n=12 AP-uniqueness problem
+  14    13             {1..7     } 420             <-- LRC(14), the actual target
+  15    14             {1..7     } 420           
+  16    15             {1..8     } 840           
+  17    16             {1..8     } 840           
+  18    17             {1..9     } 2520          
+  19    18             {1..9     } 2520          
+  20    19             {1..10    } 2520          
+
+  So the 60 attached to the 12-speed problem is lcm(1..6) -- the n = 13 member
+  of a family.  At the real target n = 14 the same construction gives
+  lcm(1..7) = 420, NOT 60.
+
+==============================================================================
+(2) THE PRIMITIVE-ROOT FACT: ord_13(2) = 12.  Does the witness set see it?
+==============================================================================
+  ord_13(2) = 12   (2 is a primitive root mod 13: True)
+  powers of 2 mod 13 : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  -> they are ALL of {1,...,12}, i.e. the AP itself.  But so is any full
+     residue system, so this alone distinguishes nothing.  The real test:
+
+  n = 11  : witnesses t = j/n attaining the AP optimum 1/11 : j in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            that is ALL 10 units mod 11 ; ord_11(2) = 10
+  n = 13  : witnesses t = j/n attaining the AP optimum 1/13 : j in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+            that is ALL 12 units mod 13 ; ord_13(2) = 12
+  n = 17  : witnesses t = j/n attaining the AP optimum 1/17 : j in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+            that is ALL 16 units mod 17 ; ord_17(2) = 8
+
+  Every unit is a witness, at every n.  No generator is distinguished, so
+  ord_n(2) -- and hence the primitive-root status of 2 -- has NO role in the
+  AP's extremal structure.  The one non-lcm sixty does not enter LRC.
+
+==============================================================================
+(3) THE FAREY GAP (1/13, 2/25) -- is it pure mediant structure?
+==============================================================================
+  mediant(1/13, 1/12) = 2/25   equals 2/25 : True
+  |1/13 * 12 - 1/12 * 13| = 1  (Farey neighbours have determinant 1: True)
+  runner-up gap quoted in canon: 1/156, and 156 = 12*13 = 156 : True
+  -> the interval is Farey structure on 1/13 and its neighbour 1/12.
+     Denominators 13, 12, 25, 156 -- no 60, and no room for one.
+
+==============================================================================
+(4) THE COVERING MODULI lcm(2..Q) -- where a 60 DOES appear
+==============================================================================
+  Q = 2   : lcm(2..Q) = 2           
+  Q = 3   : lcm(2..Q) = 6           
+  Q = 4   : lcm(2..Q) = 12          
+  Q = 5   : lcm(2..Q) = 60             <-- 60
+  Q = 6   : lcm(2..Q) = 60             <-- 60
+  Q = 7   : lcm(2..Q) = 420         
+  Q = 8   : lcm(2..Q) = 840         
+  Q = 9   : lcm(2..Q) = 2520        
+  Q = 10  : lcm(2..Q) = 2520        
+  Q = 11  : lcm(2..Q) = 27720       
+  Q = 12  : lcm(2..Q) = 27720       
+
+  So a 60 does occur, at Q = 5 (and Q = 6), as another INITIAL-SEGMENT LCM.
+  That is the same attractor THM-1415 quantified, not a new phenomenon.
+
+==============================================================================
+VERDICT
+==============================================================================
+  60 appears in the 12-speed problem TWICE, and both are initial-segment lcms:
+     * lcm(1..6) = 60, the distance-spectrum numerators of the extremal AP;
+     * lcm(2..5) = 60, a covering modulus.
+  Neither is a bridge to the other sixties -- they are further instances of
+  the SAME cheap mechanism, 60 = lcm(1..6) being the smallest highly-composite
+  target for lcms of small integers.
+
+  The only sixty with independent content, ord_13(2) = 12 (2 primitive mod 13),
+  provably does NOT enter: every unit j/n is an equally good witness, so no
+  generator is distinguished.
+
+  AND THE PARAMETRISED FORM IS THE USEFUL OUTPUT: the constant attached to
+  LRC(n) is lcm(1..floor(n/2)).  It is 60 at n = 13 and 420 at n = 14.
+  Anything built on '60' would not survive the move to the actual target.
