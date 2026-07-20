@@ -22,6 +22,49 @@
 - Quarter law: radical index {1,4} generic + halving + the S_m mean with EGF (1+x)(1-x^4)^{-1/2} = WALLIS C(2k,k)/4^k on the quarter lattice (verified m=3..10: 1/2,1/2,0,0,3/8,3/8,0). Quarters = k<=1 truncation. PREDICTION: first non-quarter mass 3/8 at n=8 (K8, f+=11/16); K6 mass 0 consistent.
 - Resonance: the repo's (1-x)^{-1/2} fiber-fraction constant family now runs DFGPR parity — fourth domain.
 - Handoffs: n=8 census (mass 3/8 confirm); complete-core exhaustiveness conjecture; the EGF as a species bridge to the DFGPR proof.
+## opus-2026-07-20-S407 - Odd = sin = skew: the owner's polynomial is the MODAL 7-tournament spectrum (THM-1450)
+
+Owner asked how odd/even relates to sin/cos and to x(x^2+7)(x^4+14x^2+17). It resolves
+completely, and the polynomial turns out to be a repo-native object.
+
+**IT IS A TOURNAMENT SPECTRUM.** Every root is purely imaginary (0, +-i*sqrt7, +-1.1589i,
++-3.5576i) - the signature of a real SKEW matrix, whose 7x7 char poly is odd of degree 7
+with exactly this shape. Using that the char poly is a SWITCHING INVARIANT (switching is a
+similarity D S D) together with **THM-474** (switching classes = tilings), the scan drops
+from 2^21 to 2^15 = 32768 representatives - a 64x reduction taken straight from canon.
+
+**EXHAUSTIVE RESULT.** Exactly **ELEVEN** distinct characteristic polynomials exist among
+all 32768 switching classes of 7-tournaments. P = x^7+21x^5+115x^3+119x is the **MOST
+COMMON at 10080 classes (30.8%)**; Paley's x(x^2+7)^3 is **RARE at 240 (0.73%)**. So the
+owner's polynomial is the GENERIC heptad spectrum, and the repo's beloved Paley heptagon is
+the outlier. c5 = 21 = C(7,2) is forced for every 7-tournament, so all information is in
+(c3, c1).
+
+**ANATOMY.** P = x*(u^3 - 32u), u = x^2+7: a DEPRESSED cubic with roots {0, +-4sqrt2} - the
+{0,r,-r} one-fixed-plus-one-free-2-orbit shape, identical to the JC fibre's. x^2+7=0 gives
++-i*sqrt7 = +-g(chi_7), the Gauss sum (verified to 20 digits). Quartic Galois group = D_4.
+REFUTED: P is NOT the sin(7t) multiple-angle polynomial ([-64,0,112,0,-56,0,7] vs
+[1,0,21,0,115,0,119]) - logged so it is not re-guessed.
+
+**THE UNIFICATION.** odd/even = sin/cos = skew/symmetric are three names for the +-1
+eigenspaces of one involution. A skew matrix is an INFINITESIMAL ROTATION: exp(tS) is
+orthogonal, acting on each eigenplane by cos/sin at rate lambda_i. The three rotation rates
+of a generic 7-tournament are sqrt7, sqrt(7-4sqrt2), sqrt(7+4sqrt2). **Paley rotates at the
+SINGLE rate sqrt7 in all three planes - it is the ISOCLINIC case**, which is exactly why its
+spectrum degenerates to x(x^2+7)^3. That is a genuinely new way to say what is special about
+Paley.
+
+**AND IT IS THE SAME PARITY ARGUMENT AS LAST SESSION.** Odd-dimensional skew matrices are
+singular because the spectrum is closed under lambda -> -lambda and an involution on an ODD
+set must fix a point. That is verbatim THM-1445-A step (3), where the JC fibre has odd size
+so sigma fixes exactly one preimage. **The factor x in the owner's polynomial and the
+sigma-fixed sheet in the JC fibre are the same fixed point of the same involution, in two
+different categories.**
+
+**Open:** why only ELEVEN spectra (the (c3,c1) image is tiny - presumably a congruence)? Is
+there a modal spectrum at every odd n? Is isoclinic <=> Paley at every p = 3 mod 4?
+
+**Artifacts:** THM-1450; HYP-8300; 2 scripts + 2 outputs.
 
 ## opus-2026-07-20-S406 - Parity eigenspaces: correcting my own THM-1440, and why THM-1415 had to be negative (THM-1445)
 

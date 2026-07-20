@@ -15767,6 +15767,47 @@ that shared Frobenius picture, or whether the parallel breaks exactly there.
 repo move is the *comparison*, not the conjecture. Cheap and genuinely novel: write the
 char-`p` Frobenius parallel down properly, since nobody has.
 
+### HYP-8300 - What is x(x^2+7)(x^4+14x^2+17), and how does odd/even relate to sin/cos?
+**Status:** RESOLVED (opus-2026-07-20-S407) - see THM-1450
+**Source:** owner prompt, "see how the odd/even relates to sin/cos and x(x^2+7)(x^4+14x^2+17)".
+
+**Answer: it is the MODAL characteristic polynomial of a 7-vertex tournament.**
+All roots purely imaginary (0, +-i*sqrt7, +-1.1589i, +-3.5576i) = the signature of a real
+skew matrix. Since the char poly is a SWITCHING INVARIANT (switching = D S D is a
+similarity) and THM-474 says switching classes = tilings, only 2^15 = 32768 representatives
+need scanning. Exhaustive result: exactly **ELEVEN** distinct char polys among all 32768
+switching classes; P = x^7+21x^5+115x^3+119x is the MOST COMMON at 10080 (30.8%), while
+Paley's x(x^2+7)^3 is RARE at 240 (0.73%). So P is the GENERIC heptad spectrum and the
+repo's beloved Paley heptagon is the outlier.
+
+**CONFIRMED anatomy.** P = x*(u^3 - 32u) with u = x^2+7: DEPRESSED cubic, roots {0,+-4sqrt2}
+- the {0,r,-r} one-fixed-plus-one-free-2-orbit shape, same as the JC fibre (THM-1440/1445).
+x^2+7=0 gives +-i*sqrt7 = +-g(chi_7), the Gauss sum (verified to 20 digits). The quartic has
+Galois group D_4.
+
+**REFUTED.** P is NOT the sin(7t) multiple-angle polynomial: coeffs [-64,0,112,0,-56,0,7]
+vs P's [1,0,21,0,115,0,119]. Degree and parity match, polynomial does not. Recorded so this
+is not re-guessed.
+
+**THE UNIFICATION.** odd/even = sin/cos = skew/symmetric are three names for the +-1
+eigenspaces of one involution. A skew matrix is an INFINITESIMAL ROTATION: exp(tS) is
+orthogonal and acts on each eigenplane by [[cos,-sin],[sin,cos]] at rate lambda_i. So the
+three rotation rates of a generic 7-tournament are sqrt7, sqrt(7-4sqrt2), sqrt(7+4sqrt2);
+Paley rotates at the SINGLE rate sqrt7 in all three planes - it is the ISOCLINIC case, which
+is exactly why its spectrum degenerates to x(x^2+7)^3.
+
+**AND THE PARITY ARGUMENT IS THE SAME ONE.** Odd-dimensional skew matrices are singular
+because the spectrum is closed under lambda -> -lambda and an involution on an ODD set must
+fix a point. That is verbatim THM-1445-A step (3), where the JC fibre has odd size so sigma
+must fix one preimage and cannot fix two. **The factor x in P and the sigma-fixed sheet in
+the JC fibre are the same fixed point of the same involution, in two different categories.**
+
+**Open:** why only ELEVEN spectra? Is P modal at every odd n? Is isoclinic <=> Paley at
+every p = 3 mod 4?
+
+**Verification:** `04-computation/skew_charpoly_heptad_opus_S407.py`,
+`04-computation/heptad_polynomial_anatomy_opus_S407.py` (+ .out files).
+
 ### HYP-8295 - Is the JC fibre's vanishing x-trace structural, or a normalisation artifact?
 **Status:** RESOLVED - ARTIFACT (opus-2026-07-20-S406). See THM-1445.
 **Source:** THM-1440 (my own), which credited "reflection = torus" to the depressed cubic.

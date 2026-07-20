@@ -1,0 +1,18 @@
+n=7: 21 pairs, 6 base-path arcs, 15 free tiles
+switching-class representatives to scan: 2^15 = 32768
+
+distinct characteristic polynomials over all switching classes: 11
+switching classes scanned: 32768
+
+TARGET P = x^7+21x^5+115x^3+119x : 1 distinct match, 10080 switching classes
+PALEY x(x^2+7)^3 = x^7+21x^5+147x^3+343x : 240 switching classes
+
+most common spectra (coeffs c5,c3,c1) and their multiplicities:
+   c5= 21 c3= 115 c1= 119   x10080
+   c5= 21 c3= 131 c1= 231   x5040
+   c5= 21 c3=  83 c1=  23   x5040
+   c5= 21 c3=  99 c1=  71   x5040
+   c5= 21 c3= 115 c1= 183   x1680
+   c5= 21 c3=  99 c1=   7   x1680
+   c5= 21 c3=  67 c1=  39   x1680
+   c5= 21 c3= 115 c1=  55   x1008
