@@ -42,6 +42,32 @@ partitions-opus-S408, script + frozen out (lrc_wild_constructs). -> all
 Prompt (owner): find an even more creative new proof sysnthesis attack angle
 
 ---
+## death-star-2026-07-19-S59k — the certificate-module GENERATOR ships, and member_247_exact is a KERNEL THEOREM: sSup (margin '' [0,1]) = 4/247 for F_4(61) = {1..59, 61, 240} — the THIRD kernel-exact first-gap value, produced by one generator call
+
+Owner: write the generator script and reach 4/247. BOTH DONE. gen_member_module(family, D, Q, witness_a,
+tag, path): Python-side validation FIRST (witness band + Q ∈ pair-sums + the complete per-modulus
+certificate, same semantics as certCheckS — Python pass ⟹ the Lean decides pass; 0.2 s for l247's 181
+moduli, worst S = 480), then TWO-FILE emission: <tag>Checks.lean (defs + one decide per modulus — STABLE,
+built once, cached: 348 s) and <tag>.lean (assembly: the 181-component flat Bool conjunction WORKS at
+this scale with maxRecDepth 8000 / heartbeats 4M; contains-sweep coverage; lazy reflection; floor via
+rung_floor_single at witness 70/247; 131 s, cheap to iterate). TWO GENERATOR-LOOP LESSONS: (1) the
+two-file split is essential — lake caches per-MODULE, so a monofile re-elaborates all decides on every
+assembly fix (~4 min/iteration → ~2 min for assembly-only); (2) `open` doesn't propagate through imports
+— re-emit `open GridAttainment TournamentH7.LRCWitness` per file (the one bug Python validation can't
+catch: it validates arithmetic, not scoping). AXIOMS: check_247 [propext, Quot.sound]; cert_247 and
+member_247_exact kernel-pure [propext, Classical.choice, Quot.sound]. THE LEDGER OF KERNEL-EXACT
+FIRST-GAP VALUES: 3/23 (N=7 canonical mediant), 4/127 (the first tower member), 4/247 (the
+predicted-then-found second D=4 gate member) — each an end-to-end machine-checked exact loneliness
+supremum; the next is one generator call + one build. SCALING: 4/367 (~270 moduli) and 6/1271 (~630
+moduli, worst S = 2520, est. 30-60 min checks) are direct generator runs (lead xxiv); deep members
+(2311+) want per-modulus parallel builds or a batched-decide variant.
+
+Prompt (owner): write the generator script and reach 4/247
+
+FILES: lrc_gen_cert_module_deathstar_S59k.py (+ out), LRCEChannelCert247Checks.lean (GENERATED, 181
+decides), LRCEChannelCert247.lean (GENERATED, assembly + member_247_exact), THM-1271 §7 addendum 2,
+HYP-8010, backlog (xxiv), results INDEX. -> all
+
 ## opus-2026-07-19-S407 -- THREE CONNECTIONS RUN CONCURRENTLY (owner: long session, more connections, own hypotheses): (A) THE REGULARITY BRIDGE CONFIRMED, r = -0.926 -- at the binding t*, the half-turn observer tournament's 3-cycle count c3 anti-correlates with M: EVERY near-floor family at c3 in {108, 112}/112 (AP13, DW, ladder3, ladder5, {1..12,14}, {1..12,15} EXACTLY at the near-regular max 112; the AP's is FORCED -- uniform positions => circulant => regular, one line), loose families 42-92 -- and c3 SEPARATES THE TIGHT PAIR (AP 112 vs GW 108): the first observable distinguishing the two 1/14 families; translation-SENSITIVE so triage-compliant -- the tournament-side floor detector the Singer probe failed to find; conjecture-form to prove: tight => c3 >= 108. (B) slack-2 single-far reconfirmed EMPTY at N <= 14 (0 window hits, independent instrument, consistent with the census) -- the open slack-2 row moves to MULTI-far. (C) THE GHOST LOOP CLOSED, 3/3: delta(ghost) = 1 at the maximizer (DW: delta(13) at 14/183; ladder3: delta(12) at 17/41; F4(31): delta(30) at 55/127) -- the excluded element IS the PENULTIMATE CONVERGENT (the delta = 1 characterization of F1's -1-ray): one sentence now carries F1 + THM-1291 + THM-1292: THE EXTREMAL FAMILY FORBIDS ITS OWN BEST RATIONAL APPROXIMATION, pays the K-duty for the exclusion, and its D is the CF remainder of the convergent it keeps. (D) F5's rhyme RESOLVED to a proved note: the 2-adic mirror stack IS the dyadic sheet tower (tau -> tau + 1/2^m fixes 2^m-divisible distances, shifts the rest; palindrome = the m=1 involution face; parity/witness-at-1/2^m = fixed-point faces); named open: depth-2 action on codex's blocker words.
 
 Prompt (owner): work on seeing more connections between previous threads of work in this

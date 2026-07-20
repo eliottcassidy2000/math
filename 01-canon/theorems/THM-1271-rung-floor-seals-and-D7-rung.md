@@ -202,3 +202,18 @@ Result: **`member_4_127_exact` — `sSup (margin v31 '' [0,1]) = 4/127` for
 kernel-pure). The same recipe scales linearly in the modulus count: 4/247
 (N=61, ~120 moduli, S ≤ 480) is within immediate reach; the large members
 (2311+) need the generator script to emit their modulus sections.
+
+### §7 addendum 2 (S59k): the generator — kernel-exact members on demand
+
+`04-computation/lrc_gen_cert_module_deathstar_S59k.py`:
+`gen_member_module(family, D, Q, witness_a, tag, path)` validates Python-side
+(witness band, Q ∈ pair sums, the full per-modulus certificate — if Python
+passes, the Lean decides pass) and emits TWO files: a stable checks module
+(defs + one decide per pair-sum modulus; built once, cached) and a cheap
+assembly module (Bool-conjunction `moduli_ok`, contains-sweep coverage,
+reflection, floor, exact value). First product: **`member_247_exact` —
+`sSup (margin '' [0,1]) = 4/247` for F₄(61) = {1..59, 61, 240}** (181 moduli,
+worst S = 480; checks 348 s, assembly 131 s; `check_247` axioms
+[propext, Quot.sound], the exact-value chain kernel-pure). The repo now holds
+THREE kernel-exact first-gap values — 3/23, 4/127, 4/247 — and producing the
+next is one generator call plus a build.
