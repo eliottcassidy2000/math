@@ -1,0 +1,6 @@
+(a) G = psi o F o phi, phi=(x,y+z,z), psi=(b,c,2a): radical 1+xy+xz; det J(G) = -4 (direct symbolic)
+    G(0,1/4,-1/4) = G(1,-8,13/2) = G(-1,-5,13/2) = (0, 0, -1/2)  [degree 3 -- F's class, maximally re-dressed]
+(b) H = F o (x,y,z+x) o F: degree 9, det 4 (chain rule, factors verified)
+    H(0,0,-1/4) = H(1,-3/2,13/2) = H(-1,3/2,13/2) = (-1/4, 3/16, -129/256)  [class distinct from F by degree]
+(c) L = F o (x+1,y,z) o F o F: degree 27, det -8 (chain rule)
+    L(same triple) = (-1/2, -3/2, 5/2)  [third distinct class by degree]
