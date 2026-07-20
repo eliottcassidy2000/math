@@ -1,0 +1,44 @@
+================================================================================================
+(i) SAMPLED q=55 slice census: 40000 samples/scale x 20 scales
+================================================================================================
+m= 1 straddle ( 4,51): covering= 3150 survivors=  112 (3.6% of covering)
+m= 2 straddle ( 2,53): covering= 2562 survivors=   23 (0.9% of covering)
+m= 3 straddle (38,17): covering= 2126 survivors=  216 (10.2% of covering)
+m= 4 straddle ( 1,54): covering= 3296 survivors=   54 (1.6% of covering)
+m= 6 straddle (19,36): covering= 7909 survivors=  297 (3.8% of covering)
+m= 7 straddle (32,23): covering= 3451 survivors=  242 (7.0% of covering)
+m= 8 straddle (28,27): covering= 5227 survivors=  110 (2.1% of covering)
+m= 9 straddle (31,24): covering= 6856 survivors=  169 (2.5% of covering)
+m=12 straddle (37,18): covering= 4809 survivors=    5 (0.1% of covering)
+m=13 straddle (13,42): covering= 8906 survivors=  103 (1.2% of covering)
+m=14 straddle (16,39): covering= 7249 survivors=  187 (2.6% of covering)
+m=16 straddle (14,41): covering= 2575 survivors=   27 (1.0% of covering)
+m=17 straddle (52, 3): covering= 6393 survivors=  158 (2.5% of covering)
+m=18 straddle (43,12): covering= 4284 survivors=   52 (1.2% of covering)
+m=19 straddle ( 6,49): covering= 3131 survivors=   32 (1.0% of covering)
+m=21 straddle (29,26): covering= 5826 survivors=   99 (1.7% of covering)
+m=23 straddle (48, 7): covering= 9053 survivors=  173 (1.9% of covering)
+m=24 straddle (46, 9): covering= 2592 survivors=  171 (6.6% of covering)
+m=26 straddle (34,21): covering= 3957 survivors=   71 (1.8% of covering)
+m=27 straddle (47, 8): covering= 4609 survivors=   84 (1.8% of covering)
+
+TOTALS: covering=97961 survivors=2385 (2.43%)
+blocker census (top 8):
+  (17, 19, 23, 25)      : 1295
+  (19, 23, 25)          : 564
+  (17, 23, 25)          : 326
+  (23, 25)              : 123
+  (17, 19, 25)          : 26
+  (17, 19, 23)          : 24
+  (19, 25)              : 9
+  (17, 25)              : 7
+MIN SAMPLED M = 4/37 = 0.1081  (scale m=9, maximizer q=37)
+  family: (2, 9, 14, 19, 20, 23, 24, 25, 26, 31, 32, 33, 34)
+  [window check: 1/14=0.0714 < M? True ; M < 3/41=0.0732? False]
+================================================================================================
+(ii) CAPPED EXHAUSTIVE WINDOW SWEEP: Vmax <= 34, all scales; target M in (1/14, 3/41)
+================================================================================================
+leaf visits=1567421  stack-passing=339724  unbeaten-at-3/41=0  complete=True
+WINDOW MEMBERS (M in (1/14,3/41)): 0  []
+M <= 1/14 leaves (tight-or-below controls): 0  []
+=> NO family in the q=55 slice with Vmax <= 34 has M in (1/14, 3/41).
