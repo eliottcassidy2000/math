@@ -1,0 +1,23 @@
+T1: boundary degeneration of the lift family V_L = {i + L*k_i}, k = (1,2)^6:
+  L=30: M = 31/103 = 0.30097 at t*=1/103 (q/L = 3.433); active slots [1, 12]
+  L=60: M = 61/193 = 0.31606 at t*=1/193 (q/L = 3.217); active slots [1, 12]
+  L=120: M = 121/373 = 0.32440 at t*=1/373 (q/L = 3.108); active slots [1, 12]
+  L=240: M = 241/733 = 0.32879 at t*=1/733 (q/L = 3.054); active slots [1, 12]
+
+T2: CF of the AP13 theta-path maximizers (CF of a/q = [0; ...]):
+  1/14: [0; [14]]
+  3/14: [0; [4, 1, 2]]
+  23/107: [0; [4, 1, 1, 1, 7]]
+  14/65: [0; [4, 1, 1, 1, 4]]
+  11/51: [0; [4, 1, 1, 1, 3]]
+  23/78: [0; [3, 2, 1, 1, 4]]
+  31/112: [0; [3, 1, 1, 1, 1, 2, 2]]
+  21/55: [0; [2, 1, 1, 1, 1, 1, 2]]
+  13/34: [0; [2, 1, 1, 1, 1, 2]]
+
+T3: duty-ledger slack 1 - [(m+1)M + M/K] (extremality = 0):
+  DW: M=14/183; budget slack = 0 = 0.00000  SATURATED
+  ladder3: M=3/41; budget slack = 4/41 = 0.09756
+  ladder4: M=4/53; budget slack = 4/53 = 0.07547
+  GW: M=1/14; budget slack = 3/28 = 0.10714
+  F4(31): M=4/127; budget slack = 6/127 = 0.04724
