@@ -1,0 +1,3 @@
+deg-2 complex (a=c=1, b Gaussian-int box): checked 728, NON-one-sided nullcone members: 0
+deg-3 complex (a=c=1, b box): checked 1295, NON-one-sided nullcone members: 0
+=> NC2 holds (no counterexample) for complex deg-2 and deg-3.

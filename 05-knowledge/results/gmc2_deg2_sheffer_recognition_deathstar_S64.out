@@ -1,0 +1,14 @@
+=== (1) REAL case: E[P^2]=E_r[b^2]+2ac > 0 for real a=c, ANY b (positivity, all degrees) ===
+  b=['1', '0', '1'], a=c=1: E[P^2]=31 (>0: True)  -> killed by positivity regardless of deg
+  b=['0', '0', '1'], a=c=1: E[P^2]=26 (>0: True)  -> killed by positivity regardless of deg
+  b=['-2', '3', '1'], a=c=1: E[P^2]=64 (>0: True)  -> killed by positivity regardless of deg
+
+=== (2) Does the NAIVE curve E[P^m]=E_r[s^m He_m(b/s)] hold? (expect NO for non-const b) ===
+  E[P^m] (true) m=1..6: [2.0, 26.0, 756.0, 41772.0, 3730320.0, 489952920.0]
+  E_r[s^m He_m(b/s)]   : [(2+0j), (26+0j), (756+0j), (41784+0j), (3731040+0j), (490018320+0j)]
+  => naive-curve equals true? False
+
+=== (3) The EXACT Sheffer form: E[P^m]=sum_k m!/(k!(m-2k)!) gamma^k E_{Gamma(k+1)}[b^{m-2k}] ===
+  E[P^m] direct  : ['3', '40', '1206', '67404', '6053100', '797638440', '144979601760', '34759578680400']
+  E[P^m] Sheffer : ['3', '40', '1206', '67404', '6053100', '797638440', '144979601760', '34759578680400']
+  Sheffer form matches: True

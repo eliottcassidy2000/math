@@ -1,0 +1,6 @@
+E[P^m]=E_r[L_m], m=1..9 (alpha=r,beta=r+r^2): ['3', '40', '1206', '67404', '6053100', '797638440', '144979601760', '34759578680400', '10627799616589680']
+
+E_r[b*L_m] m=0..8 (the b-weighted moments the recurrence needs): ['3', '38', '1174', '66348', '5991708', '792005280', '144227233440', '34621561171680', '10594486677880560']
+For constant b, E_r[b L_m]=b*E[P^m]. Here b=r+r^2 is non-constant, so E_r[b L_m] is a
+genuinely NEW sequence not expressible in {E[P^j]} -> the m-recurrence for E[P^m] does NOT close.
+=> Sheffer/Legendre recurrence opens an INFINITE b-weighted-moment hierarchy (no 'common root').
