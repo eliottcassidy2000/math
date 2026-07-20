@@ -1,0 +1,106 @@
+================================================================================
+1. THE DICTIONARY  A = (J - I + S)/2  -- exact, and it needs 1/2
+================================================================================
+   A_ij = (1 + S_ij)/2 for every off-diagonal entry, n = 4,5,6 : True
+   diagonal: S_ii = 0  <->  'A_ii = 1/2'  -- the tie/self entry is the 1/2.
+   So {-1,0,1} (sign) and {1,1/2,0} (fraction) are the SAME data, one halving apart.
+
+================================================================================
+2. THE COLLAPSE PRINCIPLE (a theorem):  S == J - I  (mod 2), for EVERY tournament
+================================================================================
+   Every off-diagonal entry of S is +-1, and +1 == -1 == 1 (mod 2).  So mod 2 the skew
+   adjacency of EVERY tournament is the SAME matrix J - I -- all orientation information is
+   destroyed.  Consequently:
+
+     THEOREM.  If I(T) = F(S) for a polynomial F with INTEGER coefficients, then
+               I(T) == F(J - I)  (mod 2)  is the SAME for every tournament on n vertices.
+
+   Pfaffian oddness (THM-1475) is the corollary F = Pf:  Pf(S) == Pf(J-I) = (n-1)!!, odd.
+   The principle predicts which invariants can and cannot see the tournament mod 2.
+
+================================================================================
+3. THE CENSUS -- which invariants are constant mod 2, and which need the 1/2?
+================================================================================
+  n invariant                  values mod 2 over all T     constant?   integer poly in S?
+  4 Pf(S)                      [1]                              True                  YES
+  4 det(S)                     [1]                              True                  YES
+  4 tr(S^2)                    [0]                              True                  YES
+  4 tr(S^4)                    [0]                              True                  YES
+  4 hp(T)                      [1]                              True       no (needs 1/2)
+  4 c3(T)                      [0, 1]                          False       no (needs 1/2)
+  4 tr(A^3)                    [0, 1]                          False       no (needs 1/2)
+  5 det(S)                     [0]                              True                  YES
+  5 tr(S^2)                    [0]                              True                  YES
+  5 tr(S^4)                    [0]                              True                  YES
+  5 hp(T)                      [1]                              True       no (needs 1/2)
+  5 c3(T)                      [0, 1]                          False       no (needs 1/2)
+  5 tr(A^3)                    [0, 1]                          False       no (needs 1/2)
+  6 Pf(S)                      [1]                              True                  YES
+  6 det(S)                     [1]                              True                  YES
+  6 tr(S^2)                    [0]                              True                  YES
+  6 tr(S^4)                    [0]                              True                  YES
+  6 hp(T)                      [1]                              True       no (needs 1/2)
+  6 c3(T)                      [0, 1]                          False       no (needs 1/2)
+  6 tr(A^3)                    [0, 1]                          False       no (needs 1/2)
+
+   READING: every integer polynomial in S is constant mod 2, exactly as the principle says.
+   The invariants that DO vary mod 2 are precisely those defined in the 0/1 (fraction) world,
+   whose expression in S carries a 1/2.  hp is the interesting middle case -- it needs the
+   1/2, yet is still constant mod 2 (always ODD).  That is REDEI's theorem, and the census
+   shows it is NOT an instance of the collapse principle but an independent fact.
+
+================================================================================
+4. THE SAME TRIPLE ON THE NULLCONE SIDE:  charges {-1,0,1}  vs  Gamma shapes {1,1/2,0}
+================================================================================
+   GMC witnesses (THM-1490/1500/1510): P = (1+Z)(W - g(Z)U) with U ~ Gamma(a), a = nu/2 for
+   nu real Gaussians.  The master equation forces 1 + s g(s) = (1+s)^{1/a}, so g is a
+   POLYNOMIAL iff 1/a is a positive integer.  The realizable ladder is therefore
+
+        a = nu/2  in  {1, 1/2, 0}   <->   nu in {2, 1, 0}   <->   n = 2+nu in {4, 3, 2}
+
+   a = 1   : G(x) = 1/(1+x)         rational      n = 4 witness   (1/a = 1)
+   a = 1/2 : G(x) = (1+x)^{-1/2}    square root   n = 3 witness   (1/a = 2)
+   a = 0   : G(x) = e^{-cx}         DEGENERATE    n = 2           (1/a = infinity)
+
+   And the witnesses' CHARGES are {-1, 0, +1}.  So the same three-element pattern indexes both
+   sides: {1, 1/2, 0} counts HALF-GAUSSIANS (fraction world) and {-1, 0, 1} counts CHARGE
+   (sign world).  HONEST: the shared shape is that both are the image of nu in {2,1,0} under
+   different normalisations -- nu/2 on one side, and 'how many signs are available' on the
+   other.  I am NOT claiming a canonical bijection between charge and Gamma shape; what IS
+   structural is that BOTH degenerate exactly at the same end (a = 0 / n = 2), which is
+   precisely where GMC(2) lives and where 1/a = infinity kills the polynomiality.
+
+================================================================================
+5. THE REDEI CLASS -- which FRACTION-world counts are nonetheless mod-2 BLIND?
+================================================================================
+  The collapse principle explains every integer polynomial in S.  It does NOT explain hp,
+  which needs the 1/2 yet is always ODD.  So there is a third class: 0/1-world counts that
+  are mod-2 constant for their own reasons.  Redei's theorem says hp is in it.  Who else?
+
+  n count                    values mod 2       mod-2 BLIND?
+  4 hp (Ham paths)           [1]                      YES  1
+  4 Ham cycles               [0, 1]                       no
+  4 out-arborescences@0      [0, 1]                       no
+  4 transitive triples       [0, 1]                       no
+  4 4-cycles                 [0, 1]                       no
+  5 hp (Ham paths)           [1]                      YES  1
+  5 Ham cycles               [0, 1]                       no
+  5 out-arborescences@0      [0, 1]                       no
+  5 transitive triples       [0, 1]                       no
+  5 4-cycles                 [0, 1]                       no
+  6 hp (Ham paths)           [1]                      YES  1
+  6 Ham cycles               [0, 1]                       no
+  6 out-arborescences@0      [0, 1]                       no
+  6 transitive triples       [0, 1]                       no
+  6 4-cycles                 [0, 1]                       no
+
+  READING.  hp is mod-2 blind at every n -- Redei.  The others are NOT (except where a count
+  is forced by parity of the index set).  So the Redei class is SMALL: being a 0/1-world
+  count is not enough to be mod-2 blind, and hp's oddness is a genuinely special fact rather
+  than an instance of anything structural here.  That is worth knowing precisely because the
+  collapse principle makes mod-2 blindness look cheap on the SIGN side -- it is cheap there
+  (every integer polynomial in S) and expensive on the FRACTION side (essentially only hp).
+
+  THE ASYMMETRY IS THE POINT.  Sign world: mod-2 blindness is automatic and therefore carries
+  no information.  Fraction world: mod-2 blindness is rare and therefore carries a lot --
+  which is why Redei's theorem is a theorem and Pfaffian-oddness is a one-liner.
