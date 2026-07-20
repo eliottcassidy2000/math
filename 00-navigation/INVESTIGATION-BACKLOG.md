@@ -1,5 +1,18 @@
 # Investigation Backlog
 
+### LRC(14) `disc_v` via the GMC reconstruction-from-arcs (death-star-2026-07-20-S67, HYP-8515)
+- **Source:** the GMC(2)↔LRC bridge reflection (`07-reflections/the-same-manoeuvre-twice-...-S67`).
+- **Status:** OPEN lead, structural identity verified. LRC(14)'s last inequality is an upper bound on
+  `disc_v` = the good-set autocorrelation discrepancy (klein THM-731). Verified: `disc_v =
+  Σ_{m≠0}|S_{mv}|²/(2πmv)²` with `S_m=Σ_j sign_j e^{−2πi m x_j}` over arc endpoints — the GMC
+  reconstruction jump-sum.
+- **Next step:** the LRC good-set arcs are given in closed form by the three-gap theorem, so the
+  autocorrelation `A_{~v}(τ)` is an explicit piecewise-linear tent (breakpoints = endpoint
+  differences). Compute the EXACT `disc_v` on the deep well `{1..12,182}` and the residue extremals
+  from the endpoint set, replacing klein's crude `(#edges)²/v²`. If the exact energy stays below the
+  certificate threshold `((6/7)|G'|)²`, THM-731 closes covering-route B. Uses boxeph's
+  reconstruction-from-jumps machinery on the LRC arcs.
+
 ### S148 wide-birth leads (boxeph-2026-07-20-S148, HYP-8175)
 - **q-deformed metagraph invariants** — LAW C says polynomial laws = confluent geometric mixtures ((x-1)(x-q)(x-q^2) at 2-subspaces). Which G_n/E_n polynomial invariants are q->1 confluences? Try [n,2]_q-weighted arc counts. STATUS: open, next step = pick one polynomial invariant (width? level counts?) and hunt its q-family.
 - **Partition/cycle-world Fibonacci analogues** — sum_x S(m-x,x) = 1,0,1,1,2,4,9,22,... and sum_x c(m-x,x) = 1,0,1,1,3,9,36,... proved NOT C-finite (order<=6). What do they count in tournament terms (Hamiltonian analogue in partition/permutation worlds)? STATUS: open.

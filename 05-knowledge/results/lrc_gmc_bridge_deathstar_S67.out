@@ -1,0 +1,12 @@
+  m= 1: |c_m|=0.09853, |S_m|=0.6191, |c_m*2pi i m - S_m|=0.00e+00  (c_m = S_m/(2pi i m))
+  m= 3: |c_m|=0.13122, |S_m|=2.4735, |c_m*2pi i m - S_m|=2.22e-16  (c_m = S_m/(2pi i m))
+  m= 7: |c_m|=0.08223, |S_m|=3.6166, |c_m*2pi i m - S_m|=0.00e+00  (c_m = S_m/(2pi i m))
+  m=20: |c_m|=0.03385, |S_m|=4.2533, |c_m*2pi i m - S_m|=0.00e+00  (c_m = S_m/(2pi i m))
+  v=5: disc_v spatial=0.020000, Parseval sum|c_mv|^2=0.019996  (equal => Wiener-Khinchin)
+  v=7: disc_v spatial=0.015511, Parseval sum|c_mv|^2=0.015508  (equal => Wiener-Khinchin)
+  v=13: disc_v spatial=0.002603, Parseval sum|c_mv|^2=0.002603  (equal => Wiener-Khinchin)
+
+STRUCTURE: disc_v = sum_{m!=0} |S_{mv}|^2/(2pi m v)^2, S_m = sum_j sign_j e^{-2pi i m x_j}
+  = the GMC reconstruction: S_m is exactly GMC's sum_j beta_j e^{-i m theta_j} (jumps=arc endpoints),
+  the 1/m is the fold/soft-Weyl decay, and disc_v is its Parseval energy (positive-definite).
+  GMC thin-tie closure used Cesaro |S_m|^2 -> sum|beta_j|^2; LRC needs the 1/m^2-WEIGHTED sum bounded.

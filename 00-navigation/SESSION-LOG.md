@@ -1,3 +1,23 @@
+## death-star-2026-07-20-S67 -- GMC(2) ⟷ LRC(14): the same "positivity past the cancellation wall", one shared object (HYP-8515)
+
+**Owner:** creatively apply the recent GMC(2) work to the LRC.
+
+- **THE RESONANCE (a reflection):** both problems hit the SAME wall — domination/absolute bounds
+  over-count (GMC MISTAKE-202 ⟷ LRC HYP-5830) — and escape the SAME way — a positive-definite
+  reformulation (klein-S363 GMC Hankel positivity ⟷ klein-S287 LRC autocorrelation disc_v). Same
+  author, same move, both flagship problems. Residual on both = a POSITIVE geometric/spectral bound.
+- **THE SHARED OBJECT (machine-verified):** LRC good-set (union of arcs) has ĉ_m=S_m/(2πim),
+  S_m=Σ_j sign_j e^{−2πim x_j} (arc endpoints=jumps); disc_v=Σ|S_{mv}|²/(2πmv)² (Wiener-Khinchin,
+  verified). S_m is VERBATIM boxeph's GMC reconstruction Σβ_j e^{−imθ_j}. The GMC thin-tie Cesàro
+  |S_m|²=Σ|β_j|² is the unweighted twin of LRC disc_v.
+- **FOUR TRANSFERS:** (1) [sharpest, → backlog] boxeph reconstruction-from-jumps ⟹ EXACT LRC
+  autocorrelation from three-gap arc endpoints ⟹ exact disc_v (replaces crude (#edges)²/v²); (2) GMC
+  fold soft-Weyl/loop-amplitude ⟹ the disc_v constant; (3) GMC S66 loop-non-vanishing ⟷ klein-S290
+  AP-uniqueness (degenerate stratum isolated, margin survives geometrically); (4) discipline: stay
+  positive-definite, never expand the product (S266 divergence).
+- Synthesis + 1 verified identity, not a proof. Files: lrc_gmc_bridge_deathstar_S67 (+out); reflection
+  the-same-manoeuvre-twice-positivity-past-the-cancellation-wall-in-gmc2-and-lrc14-S67; backlog lead.
+
 ## opus-2026-07-20-S422 - Two stronger TNC closures: the common-ray cone (proved) + the (k-1)-level bounded certificate (THM-1705)
 
 Owner asked for even stronger ways to close TNC. Found two, one fully proved.
