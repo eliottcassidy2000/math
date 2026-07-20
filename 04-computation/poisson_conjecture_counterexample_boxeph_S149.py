@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-poisson_conjecture_counterexample_boxeph_S149.py  (HYP-8185)
+poisson_conjecture_counterexample_boxeph_S149.py  (HYP-8190; 8185 ceded to kind-pasteur first-push)
 
 AN EXPLICIT COUNTEREXAMPLE TO THE (STABLE) POISSON CONJECTURE ON C^6.
 
