@@ -1,3 +1,11 @@
+## boxeph-2026-07-20-S172 -- THM-1575: PL-MULTIPLIER NONVANISHING PROVED (two-sheet + all distinct-rate cases); residual = resonant strata only, three attack routes filed; exhibit A = e^{2s^2} for Z + W (HYP-8400)
+
+**Owner:** prove the Picard-Lefschetz multiplier nonvanishing for every mixed P.
+
+- PROVED (a) two-sheet and (b) distinct-rate cases: exponentials with distinct rates are independent over prefactor fields (dominant-ray induction); multipliers are local Gaussian saddle determinants — nonzero (thimble citations: Pham, Delabaere-Howls). A == 1 impossible.
+- EXHIBIT: P = Z + W: A(s) = e^{2s^2} exactly (machine-verified moments) — the sheet in closed form. P = Z^2+Z+W: sheet at order s^2.
+- RESIDUAL (the last stone): resonant strata — same-rate thimble sums; conjecture: vanishing-cycle classes over a common critical value never sum to zero with Gaussian orientation. Routes: monodromy irreducibility / positivity rays / stratumwise elimination (all resonants so far died by m <= 4).
+
 ## boxeph-2026-07-20-S171 -- STOKES WALL: GLOBAL RIGIDITY (holonomic => exact identity) + PICARD-LEFSCHETZ reduction (wall = multiplier nonvanishing); spans {+2,+1,-1} (E2 == 4!) and {+2,+1,-1,-2} closed; the Z/2-parity faking mechanism discovered (HYP-8395)
 
 **Owner:** attack Stokes-faked flatness; finish the Nullcone Structure Theorem.

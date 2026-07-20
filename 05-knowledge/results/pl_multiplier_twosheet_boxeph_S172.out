@@ -1,0 +1,16 @@
+(1) EXHIBIT: P = Z + W: E[(Z+W)^{2k}] vs C(2k,k) 2^k k! and A(s) = e^{2s^2}:
+    moments match (k <= 6): True  => A(s) = sum (2s^2)^k/k! = e^{2s^2} EXACTLY.
+    The multiplier c = 1 != 0; rate rho = 2s^2. The simplest mixed P is loudly non-null.
+
+(2) 3-charge mixed P = Z^2 + Z + W (span closed in S171 by E2 = 4): numeric A(s):
+    E[P^m] m=0..8: ['1', '0', '4', '24', '48', '960', '6720', '40320', '672000']
+    A(0.1) ~ 1.016129  (partial sum, 25 terms)  != 1
+    A(0.2) ~ 1.049171  (partial sum, 25 terms)  != 1
+    A(0.3) ~ 1.074655  (partial sum, 25 terms)  != 1
+    E2 = 4 => A(s) = 1 + 2s^2 + O(s^3): the sheet shows at second order exactly.
+
+(3) SADDLE-CONSTANT NONVANISHING (structure): for two-sheet A = c+ e^{rho} + c- e^{-rho}
+    + flat, the c± are local Gaussian fluctuation determinants det(Hess)^{-1/2}-type;
+    nondegenerate saddles => c± != 0. Combined with Wronskian independence of
+    e^{±rho} over algebraic prefactors: A == 1 impossible. (Proof in THM file.)
+DONE.
