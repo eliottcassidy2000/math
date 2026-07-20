@@ -1,0 +1,6 @@
+(B) best strong h at n=10 after 1 restarts: 125  (Moon-Busch floor law predicts 125)
+(D) mod-27 rung on 20000 random 3-coprime 13-tuples:
+    spread (lemma constraint satisfied): 1141 ; blocked => M >= 2/27 certified: 18859
+    all block certificates verified exactly (witness t = a/27, ||v a/27|| >= 2/27)
+    index bound: pairs(27) = 9 <= 13 = runners; ladder ends at 27 (pairs(29) = 14 > 13)
+    ladder pair-counts: p=19:9, p=23:11, p=25:10, p=27:9, p=29:14 STOP
