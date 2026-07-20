@@ -1,0 +1,49 @@
+==============================================================================
+INPUT: the THM-1300 counterexample
+==============================================================================
+  det JF = -2   constant: True
+  three points share the image (-1/4, 0, 0) : True
+
+(1) T^{-1}(T(u,v)) - (u,v) = [0, 0, 0, 0, 0, 0]   -> inverse correct: True
+
+==============================================================================
+(2) IS JG SYMMETRIC?  (the gradient property)
+==============================================================================
+  asymmetric entries : 0   -> JG SYMMETRIC : True
+  (on C^6, simply connected, symmetric Jacobian => G - z is a GRADIENT)
+
+==============================================================================
+(3) IS G KELLER?  det JG = (det JF)^2 by block triangularity
+==============================================================================
+  JPhi = [[JF, 0], [*, JF^T]] is block lower triangular, so
+     det JPhi = det JF * det JF^T = (-2)^2 = 4
+  and T linear gives det JG = det JPhi.  Spot-check at random points:
+     point 1 : det JG = 4         equals (det JF)^2 : True
+     point 2 : det JG = 4         equals (det JF)^2 : True
+     point 3 : det JG = 4         equals (det JF)^2 : True
+     point 4 : det JG = 4         equals (det JF)^2 : True
+  all spot-checks agree : True
+
+==============================================================================
+(4) DOES THE COLLISION TRANSPORT?   z_a = (a/2, -i a/2)
+==============================================================================
+  z = (0, 0, -1/8, 0, 0, I/8)                    ->  G(z) = (-1/8, 0, 0, I/8, 0, 0)
+  z = (1/2, -3/4, 13/4, -I/2, 3*I/4, -13*I/4)    ->  G(z) = (-1/8, 0, 0, I/8, 0, 0)
+  z = (-1/2, 3/4, 13/4, I/2, -3*I/4, -13*I/4)    ->  G(z) = (-1/8, 0, 0, I/8, 0, 0)
+  three z distinct        : True
+  all three images equal  : True
+
+  VERDICT: G is an explicit NON-INJECTIVE KELLER map on C^6 whose Jacobian
+  is SYMMETRIC -- i.e. a counterexample in the SYMMETRIC/GRADIENT category.
+
+==============================================================================
+(5) HONEST NEGATIVE -- is Hess P nilpotent?  (Zhao's HN normal form)
+==============================================================================
+  Hess(P)^k != 0 for k <= 7 at the sample point -> NOT nilpotent
+  char poly : (16*lambda**3 + lambda**2*(620 - 6002*I) + lambda*(-1811230 - 657941*I) - 1811802 - 651939*I)**2/256
+
+  Non-nilpotent is EXPECTED here: skipping BCW leaves P inhomogeneous, and
+  Zhao's vanishing conjecture needs a HOMOGENEOUS QUARTIC P with nilpotent
+  Hessian.  So this C^6 object is a symmetric-case counterexample but NOT
+  yet a VC witness; that needs the BCW cubic reduction first, which is the
+  much larger object (the agent's estimate: N = 79 cubic, then 158).
