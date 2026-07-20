@@ -1,0 +1,29 @@
+====================================================================================
+THE PATTERN, CHECKED: when can a group NORMALISE the degenerate locus away?
+====================================================================================
+
+ CLAIM.  A degenerate locus D can be normalised away by a group G iff G acts with D as the
+ COMPLEMENT OF A FREE PART -- i.e. G moves every point of V \ D to a fixed normal form.  Then
+ "is V contained in D?" becomes "is the normalised system INCONSISTENT?", which is a Groebner
+ basis of <1> and is cheap and unambiguous.  Where G cannot do this, one is stuck with RADICAL
+ MEMBERSHIP, which is expensive and easy to get wrong.
+
+ INSTANCE 1 -- TNC (klein-S359).  D = {extreme coefficient vanishes}; G = the two
+   scalings Lam -> mu Lam and u -> lam u.  G acts transitively on the extremes, so
+   c_{-M} = c_N = 1 is reachable on V \ D.  Test becomes inconsistency:
+     (M,N)=(1, 1): normalised Groebner basis = [1]  -> INCONSISTENT, TNC holds
+     (M,N)=(2, 2): normalised Groebner basis = [1]  -> INCONSISTENT, TNC holds
+
+ INSTANCE 2 -- the S357 system.  D = {alpha = beta = 0} is the ORIGIN.  Scaling fixes
+   the origin, so NO group normalisation is available: the origin is always a solution,
+   the ideal is never <1>, and one MUST test radical membership instead.
+     basis = [a0, b0]   is it <1>? False
+     -> NOT <1>, exactly as predicted: the origin is a genuine solution.  The correct
+        test is whether the variety is ONLY the origin, i.e. radical membership --
+        which is where I got the depth wrong in S357 (k <= 6 too shallow).
+
+ SO THE PATTERN PREDICTS ITS OWN APPLICABILITY.  Scaling can normalise "some coordinate is
+ nonzero" (a locus AWAY from the origin) but never "all coordinates vanish" (the origin
+ itself, which every scaling fixes).  That is exactly why S359 could use inconsistency and
+ S357 could not -- and it is checkable in advance, not after the fact.
+
