@@ -1,3 +1,21 @@
+## death-star-2026-07-20-S71 -- The {7,21} rule does NOT transfer to arborescences; exact contrast (HYP-8545)
+
+**Owner:** how is the Ham-path {7,21} forbiddenness reflected for arborescences (A=Σ_r a_r, Matrix-Tree)?
+
+- **7 IS an arborescence count** (n=4 spectrum {6,7,9,10}); 21 absent only trivially (between (n-1)!-bands).
+  So {7,21} is Ham-path-specific — does NOT transfer.
+- **The 3 properties that make {7,21} special all FAIL for arb:** (1) PARITY: Ham always odd (Rédei,
+  auto-forbids evens); arb both parities (transitive=(n-1)! even, 3-cycle=3 odd). (2) SCALE: Ham n-stable
+  (global odd\{7,21}); arb grows as (n-1)!-bands (min=transitive), infinitely many forbidden values. (3)
+  ALGEBRA: Ham multiplicative monoid (ordinal sum); arb NOT (A(T₂⊕T₂)=6≠1), composes FACTORIALLY not by
+  concatenation. Plus Ham #P-hard vs arb poly (THM-1580).
+- **Arb forbidden set** = infinite growth-driven gaps, smallest {4,5,8,11–23,25,27,...}, vs Ham's finite
+  structural {7,21}. **SHARED:** both minimized by transitive (H=1, A=(n-1)!); both count spanning
+  substructures (path=degenerate tree; Ham's multiplicativity = linear shadow of arb's factorial branching).
+- One-liner: {7,21} is a parity+monoid phenomenon of the odd/multiplicative/#P-hard Ham count; the
+  determinant-based poly-time arb count is even-permitting/factorially-growing/non-multiplicative, so no {7,21}.
+- Files: arborescence_spectrum_deathstar_S71 (+out); reflection the-7-21-rule-does-not-transfer-to-arborescences-S71.
+
 ## mac-mini-2026-07-20-S149 -- GMC(2) IS UNCONDITIONALLY TRUE ON EVERY BOUNDED CHARGE-COUNT + DEGREE FAMILY (a finite Groebner test: ALL 132 two-sided trinomials to deg 4 + 40 sampled 4-monomials CLOSE), and the MOMENT-COUNT BOUND is 2*max-pairs of the ESV level. THM-1725.
 
 **Owner directive:** "work the moment-count bound and trinomial-adjacent ideas, in conjunction with unconditional GMC(2) on any bounded charge-count + degree is now a finite Groebner test, and the angular nullcone as a Nullstellensatz emptiness test."
