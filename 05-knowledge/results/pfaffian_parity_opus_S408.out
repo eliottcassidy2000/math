@@ -1,0 +1,19 @@
+(A) WHAT DOES |Pf| = 3 MEAN FOR A 4-VERTEX TOURNAMENT?
+  |Pf| = 1:
+      cyclic-triples=0  scores=(0, 1, 2, 3)  count=24
+      cyclic-triples=2  scores=(1, 1, 2, 2)  count=24
+  |Pf| = 3:
+      cyclic-triples=1  scores=(0, 2, 2, 2)  count=8
+      cyclic-triples=1  scores=(1, 1, 1, 3)  count=8
+
+(B) SO k COUNTS 4-SUBSETS OF A PARTICULAR TYPE. Confirm on 7-tournaments,
+    and check the evenness / the missing k=2.
+    k values observed: [0, 4, 6, 8, 10, 12, 14]
+    k=2 present? False   all even? True
+      k=  0  ->  c3 =   35   (720 switching classes)
+      k=  4  ->  c3 =   67   (1680 switching classes)
+      k=  6  ->  c3 =   83   (5040 switching classes)
+      k=  8  ->  c3 =   99   (7280 switching classes)
+      k= 10  ->  c3 =  115   (12768 switching classes)
+      k= 12  ->  c3 =  131   (5040 switching classes)
+      k= 14  ->  c3 =  147   (240 switching classes)

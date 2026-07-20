@@ -5,6 +5,48 @@ Prompt (owner): work the next step and see how the odd/even relates to sin/cos a
 FILES: THM-1455, HYP-8310, 2 scripts + outs. -> all (the sin/cos link is not a metaphor -- it is the PFAFFIAN. Odd-order skew minors vanish identically and even-order ones enter as SQUARED Pfaffians, so char(S) of the skew adjacency is parity-pure, odd for odd n and even for even n, with purely imaginary spectrum; char(S)(iy) is then real-rooted odd/even, which is exactly what makes sin and cos the archetypes. The owner's x(x^2+7)(x^4+14x^2+17) = x^7+21x^5+115x^3+119x IS realised, by an explicit NON-Paley 7-vertex tournament with hp = 91 -- Paley gives x(x^2+7)^3 = x^7+21x^5+147x^3+343x instead, and the shared 21 is forced since it is C(7,2) for every tournament. NEW PROVED LAW: writing c_{n-4} = C(n,4) + 8*k4 with k4 = #{4-subsets with |Pf|=3}, k4 is EVEN whenever n is ODD, so c_{n-4} = C(n,4) mod 16. Proof is an exhaustive base case over all 1024 labelled 5-tournaments (k4 in {0,2}) plus double counting -- each 4-subset lies in n-4 five-subsets, so (n-4)k4 is even and odd n forces k4 even. It fails for even n and must: 16 of the 64 labelled 4-tournaments have k4 = 1. Also done: alpha_3 = 0 for n <= 8, so hp = 1 + 2 alpha_1 + 4 alpha_2 EXACTLY through n = 8. And a caution: 80,000 samples at n = 7 gave only ELEVEN distinct skew char polys against 456 iso classes, so this invariant is very coarse.)
 
 ---
+## opus-2026-07-20-S408 - Why eleven spectra: a Pfaffian parity count, and k is even because n is odd (THM-1455)
+
+Worked THM-1450's sharpest open question. It resolves, and the answer is the parity theme
+for the fourth session running.
+
+**THE ANSWER.** c3 = 35 + 8k with k = #{4-subsets containing an ODD number of cyclic
+triples}. The engine is a clean Pfaffian dichotomy, exhaustive over all 64 four-vertex
+tournaments: |Pf| = 3 iff the 4-subset has EXACTLY ONE cyclic triple (scores (0,2,2,2) or
+(1,1,1,3)); |Pf| = 1 iff it has zero or two (transitive or strong). Since Pf^2 in {1,9},
+c3 = 35 + 8k and c3 = 3 (mod 8) - satisfied by all seven observed values.
+
+**k IS EVEN, PROVED, AND IT IS AN ODD-n PHENOMENON.** Each triple lies in exactly n-3
+four-subsets, so sum_T (#cyclic in T) = (n-3)(total cyclic). For n=7, n-3=4 is even, hence
+k = sum_T (parity of T) is even. The hypothesis is n-3 EVEN, i.e. **n ODD** - the same
+odd-n condition that makes the switching-class <-> even-graph bijection single-valued in
+THM-1430. The parity of n keeps deciding these questions.
+
+**THE COUNT.** k in {0,4,6,8,10,12,14} gives seven c3 values; c3=99 and c3=115 each split
+into three by c1. **11 = 1+1+1+3+3+1+1.** Paley is the unique k=14 class (240 switching
+classes) - every 4-subset odd, the maximum, which is exactly what doubly-regular buys.
+
+**REFUTED.** I predicted the switching-invariant TRIPLE statistic t = #{triples with
+s_ab s_bc s_ca = +1} would determine the spectrum. It does not. t IS a switching invariant
+(switching flips 0 or 2 arcs of any triangle, so the product around it survives) - that part
+was right - but it takes 24 values against 11 spectra and refines in NEITHER direction:
+t=25 alone yields SEVEN spectra. The controlling statistic is the 4-SUBSET parity, not the
+triple statistic. Recorded because "the obvious switching invariant" is a natural guess and
+it is wrong.
+
+**SCOPED OUT, three clean negatives** (per HYP-8230): the "eleven" is a count
+(1+1+1+3+3+1+1) with no residue/order/character mod 11 anywhere - the repo's existing
+"eleven-cores" thread is a different 11 (size-11 speed subsets) and must not be bridged.
+KAKEYA: repo threads are real but live in LRC covering geometry; this census has no
+direction set, no line-in-every-direction condition, no incidence bound - searched, found
+nothing. MANDELBROT: no connection; a finite exact-integer count has no parameter plane in
+it. Recording clean negatives rather than manufacturing suggestive links.
+
+**Open, and (1) is small and sharp:** (1) why is k=2 unrealisable, when evenness permits it?
+(2) is k even at every odd n and odd-capable at even n? (3) what explains the k=8,10 splits
+into three?
+
+**Artifacts:** THM-1455; HYP-8305; 2 scripts + 2 outputs.
 
 ## mac-mini-2026-07-20-S131 -- THM-1450 LINEARITY TRIVIALISES VC (so the odd side is the hard one, and THM-1420 says it can never be linearised) + the VC=1 locus is EXACTLY TWO tournaments at every n
 

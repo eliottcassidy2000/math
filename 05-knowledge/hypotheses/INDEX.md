@@ -15769,6 +15769,47 @@ that shared Frobenius picture, or whether the parallel breaks exactly there.
 repo move is the *comparison*, not the conjecture. Cheap and genuinely novel: write the
 char-`p` Frobenius parallel down properly, since nobody has.
 
+### HYP-8305 - Why exactly ELEVEN characteristic polynomials among 7-tournament switching classes?
+**Status:** RESOLVED (opus-2026-07-20-S408) - see THM-1455
+**Source:** THM-1450's sharpest open question.
+
+**Answer.** c3 = 35 + 8k, where k = #{4-subsets containing an ODD number of cyclic triples}.
+The engine is a Pfaffian dichotomy, exhaustive over all 64 four-vertex tournaments:
+    |Pf| = 3  <=>  exactly ONE cyclic triple   (scores (0,2,2,2) or (1,1,1,3))
+    |Pf| = 1  <=>  zero or two                 (transitive (0,1,2,3) or strong (1,1,2,2))
+so Pf^2 in {1,9} and c3 = 35 + 8k, forcing c3 = 3 (mod 8).
+
+**k is EVEN - PROVED.** Each triple lies in exactly n-3 four-subsets, so
+sum_T (#cyclic in T) = (n-3)*(total cyclic). For n=7, n-3 = 4 is even, hence
+k = sum_T (parity of T) = sum_T (#cyclic in T) = 0 (mod 2). The hypothesis is n-3 EVEN,
+i.e. **n ODD** - the same odd-n condition that makes the switching-class <-> even-graph
+bijection single-valued (THM-1430). Parity of n keeps deciding these questions.
+
+**The count.** k in {0,4,6,8,10,12,14} -> seven values of c3; c3 = 99 and c3 = 115 each
+split into three by c1. So **11 = 1+1+1+3+3+1+1**. Paley is the unique k=14 class (240
+switching classes): every 4-subset odd, the maximum, which is what doubly-regular buys.
+
+**REFUTED.** My hypothesis that the switching-invariant TRIPLE statistic
+t = #{triples with s_ab s_bc s_ca = +1} determines the spectrum. t IS a switching invariant
+(switching flips 0 or 2 arcs of a triangle, preserving the product), but it takes 24 values
+against 11 spectra and refines in neither direction - t=25 alone yields SEVEN spectra. The
+controlling statistic is the 4-SUBSET parity k, not the triple statistic.
+
+**SCOPED OUT, per HYP-8230's rule.** (i) The "eleven" is a COUNT (1+1+1+3+3+1+1); no
+residue, order, or character mod 11 appears anywhere. The repo's existing "eleven-cores"
+thread (size-11 subsets of the LRC-13 speed set) is a different 11 and is unrelated.
+(ii) KAKEYA: repo threads are real but live in LRC covering geometry; this census has no
+direction set, no line-in-every-direction condition, no incidence bound. Searched, found
+nothing. (iii) MANDELBROT: no connection found - the census is a finite exact-integer count,
+with no dynamical system or parameter plane in it. Clean negatives recorded rather than
+suggestive links.
+
+**Open:** why is k=2 unrealisable? (evenness permits it; tournaments do not realise it).
+Is k even at every odd n, and odd-capable at even n? What explains the k=8,10 triple splits?
+
+**Verification:** `04-computation/why_eleven_spectra_opus_S408.py`,
+`04-computation/pfaffian_parity_opus_S408.py` (+ .out files).
+
 ### HYP-8300 - What is x(x^2+7)(x^4+14x^2+17), and how does odd/even relate to sin/cos?
 **Status:** RESOLVED (opus-2026-07-20-S407) - see THM-1450
 **Source:** owner prompt, "see how the odd/even relates to sin/cos and x(x^2+7)(x^4+14x^2+17)".
