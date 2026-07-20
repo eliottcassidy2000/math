@@ -15589,3 +15589,33 @@ OUTCOMES (same session, all machine-exact; figurate_two_axes_macmini_S109.py/.ou
 - **Statement:** Given ¬JC3 (THM-1300), the correct cascade: DC_n false constructively n>=3; stable JC/DC/Poisson all false (Belov-Kontsevich chain); JC2/DC1/DC2 survive with THM-1345's equivariant rescue + Poisson bridge; Zhao VC/IC universal forms false but NO explicit witness exists yet anywhere (Target 1: transport F through de Bondt-van den Essen symmetric reduction to the first explicit VC/IC/Mathieu counterexample); classification = monoid ideal (THM-1330) + local sporadicity (S414b) + weight-type machine. Expanded list: OCF/CONJ-001, flip-rank, Paley heptagon (HYP-3805), chi(E_n), GLMY, Freiman residual (HYP-7750), Erdos covering systems, view-obstruction, Sierpinski/Proth, jet-illusion taxonomy, unit distance (analogy-cards only -- honest), Mathieu subspaces of repo algebras, q-triangulars, OEIS pipeline.
 - **Evidence:** 03-artifacts/drafts/post-jc-frontier-ledger-and-targets-opus-S421.md (the artifact); sweep of THM-1300..1355 + technique indexes.
 - **See:** Part IV for the six targets with first moves and the assumption each challenges.
+
+### HYP-8220 — Borsuk–Ulam certifies LRC(14) via the free antipodal ℤ/2
+**Status:** REFUTED as stated / REFRAMED (opus-2026-07-20-S401)
+**Source:** kind-pasteur-2026-06-28-S31av (`07-reflections/14-is-the-heptagon-dihedral-group-borsuk-ulam-not-brouwer-kps.md`)
+**Statement tested:** since `14 = |D₇|` and `7 ≡ 3 (mod 4)` makes the reflection an
+anti-automorphism, the ℤ/2 acts freely and Borsuk–Ulam (not Brouwer) is the governing
+theorem for `n = 14`.
+
+**Outcome — two-sided, see THM-1380:**
+- **CONFIRMED:** the reflection `r : t ↦ −t` acts freely on `Argmax(V)` exactly when `V`
+  has an even speed (proved), which covers every LRC-relevant family.
+- **CONFIRMED and non-trivial:** for both extremal families `Argmax = {p/14 : p ∈ (ℤ/14)*}`,
+  the full unit group, `φ(14) = 6` points in 3 antipodal orbits, numerically matching the
+  three 2-dim irreps of `D₇`.
+- **NOT EVIDENCE:** antipodal closure of `Argmax` holds for *every* family trivially, since
+  `‖−x‖ = ‖x‖` makes `g` even. Do not cite closure as support for the `D₇` frame.
+- **REFUTED:** Borsuk–Ulam does not apply. `r` is **not free on the circle** (it fixes `0`
+  and `½`); BU's actual antipodal map on `S¹` is the half-rotation `s : t ↦ t + ½`, which
+  *is* free and *does* supply odd maps (`f_v = ‖vt‖ − ¼` is `s`-odd for odd `v`) — but `g`
+  is not `s`-invariant, so `s` does not organise the witnesses. **The two BU hypotheses sit
+  on different involutions.** That mismatch, not evenness, is the obstruction.
+
+**Why it still matters:** BU is pointwise/topological, hence on the surviving side of the
+THM-1185 triage (measure methods are blind to the extremals). The debt is now precise:
+find one involution that is free *and* carries an odd map. Concrete next task in
+THM-1380 §6 — move to the `k`-torus of the resonance lattice (THM-1075) and use the
+ℤ/2-index/Yang-index form, since `Tᵏ ≠ Sᵏ` blocks plain BU.
+
+**Verification:** `04-computation/borsuk_antipodal_opus_S401.py`,
+`halfrot_involution_opus_S401.py`, `freeness_criterion_opus_S401.py` (+ `.out` in results).

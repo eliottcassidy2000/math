@@ -1,0 +1,24 @@
+(1) ARE THE MAXIMIZERS A FREE Z/2-SET UNDER t -> -t (i.e. t -> 1-t)?
+    Borsuk-Ulam predicts: NO fixed point, and an even count in antipodal pairs.
+
+  {1,...,13}  (extremal)     M=1/14      #maximizers=6
+      maximizers: ['1/14', '3/14', '5/14', '9/14', '11/14', '13/14']
+      closed under t -> 1-t: True   fixed points: []   => 3 antipodal pair(s)
+  {1..11,13,24} (extremal)   M=1/14      #maximizers=6
+      maximizers: ['1/14', '3/14', '5/14', '9/14', '11/14', '13/14']
+      closed under t -> 1-t: True   fixed points: []   => 3 antipodal pair(s)
+  {1..11,13,36} (3/41)       M=3/41      #maximizers=2
+      maximizers: ['17/41', '24/41']
+      closed under t -> 1-t: True   fixed points: []   => 1 antipodal pair(s)
+  {1,...,12,14} (1/13)       M=1/13      #maximizers=12
+      maximizers: ['1/13', '2/13', '3/13', '4/13', '5/13', '6/13', '7/13', '8/13', '9/13', '10/13', '11/13', '12/13']
+      closed under t -> 1-t: True   fixed points: []   => 6 antipodal pair(s)
+  {2,...,14}                 M=1/8       #maximizers=2
+      maximizers: ['1/16', '15/16']
+      closed under t -> 1-t: True   fixed points: []   => 1 antipodal pair(s)
+
+(2) THE D_7 IRREP COUNT: 14 = 1^2 + 1^2 + 2^2 + 2^2 + 2^2 -- THREE 2-dim irreps.
+    kps predicts the free-reflection witnesses organise by those three.
+    {1,...,13}: 6 maximizers = 3 antipodal pairs   == 3, matching the three 2-dim irreps
+    numerators over 14: [1, 3, 5, 9, 11, 13]
+    these are the units mod 14? [1, 3, 5, 9, 11, 13] vs [1, 3, 5, 9, 11, 13]

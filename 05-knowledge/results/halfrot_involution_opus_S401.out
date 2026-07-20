@@ -1,0 +1,19 @@
+THE HALF-ROTATION s: t -> t+1/2 is the FREE Z/2 on R/Z (BU's antipodal map).
+The reflection t -> -t FIXES 0 and 1/2, so it is NOT BU's antipodal map.
+
+(a) How does ||vt|| transform under s?  v even: unchanged.  v odd: ||vt|| -> 1/2-||vt||
+    checked 4000 random (v,t): mismatches = 0   -> law holds exactly
+
+(b) CONSEQUENCE: for v ODD, f_v(t) := ||vt|| - 1/4 is ODD under s:
+       f_v(t+1/2) = (1/2-||vt||) - 1/4 = 1/4-||vt|| = -f_v(t).
+    checked 4000 random odd v: mismatches = 0   -> genuinely ODD equivariant
+
+(c) Is g_V itself s-invariant?  Only if ALL speeds are even (impossible for primitive V).
+    {1,...,13}: g(t) vs g(t+1/2) differ at 12/13 sampled points -> NOT s-invariant
+    {1..11,13,24}: g(t) vs g(t+1/2) differ at 12/13 sampled points -> NOT s-invariant
+
+  => The free Z/2 that BU needs is s (half-rotation), and g is NOT s-invariant,
+     so Argmax is not an s-set and s does not organise the witnesses.
+     The reflection DOES organise them but is not free on the circle.
+     BU's two hypotheses (free action + odd map) are satisfied by DIFFERENT
+     involutions here.  That mismatch -- not evenness -- is the real obstruction.

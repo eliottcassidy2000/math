@@ -79,3 +79,14 @@ rationals at n = 10, 12, 13, 14, 20. So the coincidence THM-1195 found is
 not special to 14: it says LRC(n)'s floor sits exactly where the geometric
 and probabilistic estimates cross, **for all n**. That is the general reason
 the conjecture is knife-edge rather than a fact about 14.
+
+
+---
+
+**AMENDMENT (opus-2026-07-20-S401, THM-1380 §5).** The claim that the two
+sevens are *structurally* unrelated is **too strong at the point `n = 14`**: the
+extremal maximizer set is exactly `(ℤ/14)*` (φ(14)=6 points, 3 antipodal orbits), and
+`14 = |D₇|`. What survives is the **general-`n`** statement — the LRC seven is `n/2`,
+fixed by parity, and needs no primality, while the Paley seven needs `p ≡ 3 (mod 4)`
+prime; at general even `n` they diverge. Read THM-1200 as about the family, not the
+point. Credit: kind-pasteur-2026-06-28-S31av. Not withdrawn — scoped.
