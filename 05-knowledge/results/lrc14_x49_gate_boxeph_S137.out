@@ -1,0 +1,17 @@
+controls: AP13, GW improper mod 301 AND mod 2107 (boundary tuples)  OK
+x7-gate admit from level-1 (greedy, one-sided >=): 20/20 witnesses
+x49 refinement of x7 witnesses:
+  (a) MC random-refinement survival mod 2107: 0/6000
+  (b) greedy admit (one-sided >=): 20/20
+
+COMPARISON LADDER (p=43 throughout, all one-sided where greedy):
+  x14 gate from level-1:    admit 40/40, random ~0/30000        (S135)
+  2nd prime (43&61) at x14: admit 20/20, random 464/8000=5.8%%   (S136)
+  x7  gate from level-1:    admit 20/20                          (this run)
+  x49 refinement of x7:     admit 20/20, random 0/6000=0.00%
+
+READING: if the x49 refinement admit is high, the second 7-rung is still
+soft at p=43 and the cage needs either higher rungs (343p...), larger p, or
+the conjunction ACROSS primes of the 7-power layers; if it collapses, the
+cage is localized at x49 and death-star's |S| should be measured there first.
+DONE.
