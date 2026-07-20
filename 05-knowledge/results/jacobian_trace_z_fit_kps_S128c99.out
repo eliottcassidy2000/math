@@ -1,0 +1,10 @@
+collected 16 samples
+  target (5/4,5/3,9): Tr(z) = -442295/96
+  target (-1,-4,5/2): Tr(z) = -1953/8
+  target (-5,8/3,-8/3): Tr(z) = -164299/27
+  target (3/4,-4/3,-3): Tr(z) = -4809/32
+
+POLYNOMIAL FIT SUCCEEDS: Tr(z) = -81*a**2*g**2/2 + 27*a*b*g - 51*a + 15*b**3*g/8 - 3*b**2/4
+  residuals all zero: True
+
+DONE.

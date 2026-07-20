@@ -1,0 +1,18 @@
+
+==== k=3 CONTROL (must be CONSISTENT): k=3 ====
+  system: 59 eqs, 19 unknowns; det(0) = d0 (Rabinowitsch on d0) [1s]
+  GB size 28 != [1] => CONSISTENT (solutions exist mod 32003) [2s]
+
+==== k=4 REFINED (kappa free, wide R): k=4 ====
+  system: 114 eqs, 27 unknowns; det(0) = d0 (Rabinowitsch on d0) [3s]
+  GB = [1]  =>  EMPTY over GF(32003)-bar (no nonzero-det solution in box) [137s]
+
+==== k=4 TWO-TERM MIDDLE: k=4 ====
+  system: 121 eqs, 25 unknowns; det(0) = d0 (Rabinowitsch on d0) [4s]
+  GB = [1]  =>  EMPTY over GF(32003)-bar (no nonzero-det solution in box) [6s]
+
+==== k=5 REFINED (kappa free): k=5 ====
+  system: 133 eqs, 22 unknowns; det(0) = d0 (Rabinowitsch on d0) [3s]
+  GB = [1]  =>  EMPTY over GF(32003)-bar (no nonzero-det solution in box) [4s]
+
+DONE.

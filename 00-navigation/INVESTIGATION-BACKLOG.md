@@ -1,7 +1,15 @@
 # Investigation Backlog
 
+## Lead kind-pasteur-2026-07-20-S128c99: after THM-1335 -- the trisection/trace follow-ups (HYP-8130)
+- **(a) THE 2-JET ARCHITECTURE (now the priority door):** all z-affine boxes empty at degree != 3 => the degree-4 seed (A_4/S_4 by Smith) needs F = Az^2 + Bz + C. Derive the z-graded det J identities (deg-2 analog of the design equations); the quartic analog of the trisection is the SWALLOWTAIL (A_3) -- W-ADE's next rung. One hard session.
+- **(b) F.F centroid test:** compute the fiber-trace maps of F.F (degree 9) -- polynomial or poled? Decides whether trace-polynomiality is seed-specific or propagates through the monoid (the polynomial-centroid conjecture's first real test).
+- **(c) Resolvent-conductor = Jelonek (general cubic Keller):** prove or refute: for every degree-3 Keller cover of C^3, the quadratic resolvent of the fiber cubic ramifies exactly on the asymptotic variety. True for F (Delta = -4Q^2L, Delta_u = -4E^2L, Jelonek = {L=0}). A clean paper-sized statement.
+- **(d) Lean package v2:** master identities + 108a^2L = (12a-b^2)^3 + E^2 + Tr(y) = 3b/2 -- four pure polynomial identities now carry the entire structural analysis; combine with c97 det/collisions into the certification file.
+- **(e) Trace-polynomiality proof attempt:** why are the COORDINATES trace-polynomial while x^2 is not? Suspect: z-affinity + depression; a direct proof would upgrade THM-1335(4) from computed to explained, and shape the general conjecture.
+- **Status:** OPEN; (a) is the frontier; (b) is quick; (d) is headline-grade formalization.
+
 ## Lead kind-pasteur-2026-07-19-S128c98: after THM-1310 -- the seed hunt refinements (HYP-8090)
-- **(i) W-BASE-MULT k=4 re-run:** the empty k=4 box likely mis-tunes the base point (Bezout 2*4 - mult 3 = 5, not 4); stratify R by x-order at the base (R in x^2u*C[x,u], x^3u*C[x,u]), allow free A_2-coefficient kappa != k, and general homogeneous h(u,x) not of (g,g',-1) form. One session; solver is built (jacobian_design_solver_kps_S128c98.py).
+- **(i) W-BASE-MULT k=4 re-run -- DONE (S128c99): EMPTY at kappa-free + S-free + x^2u-stratified + two-term-middle boxes (GB=[1] mod 32003, k=3 control consistent); order-{1,3} conjecture strengthened; see THM-1335 SS5.**
 - **(ii) The 2-jet architecture:** if z-affine (line congruence) is A_2-only, the degree-4 seed needs z-QUADRATIC maps (congruences of parabolas/planes). Set up F = A z^2 + B z + C with cone conditions; the det J z-graded identities generalize (D1)/(D2). Genuinely new architecture question.
 - **(iii) death-star v(t)-family absorption test:** is their A-side family (HYP-8080/THM-1305) = precomposition by plane tame maps? My B-side box was rigid mod shift. Compute their family's fiber invariants (L, Q, Delta) -- if related to mine by target-automorphism substitution, absorbable; else genuinely new k=3 seeds refuting W-SEED.
 - **(iv) W-CHAR3 reconstruction:** run the lift backwards from F_3: the mod-3 shadow (z(1+(xy)^3) + y^2u, y, -x(1+x^2z)) is Frobenius-triangular with y preserved; solve the char-0 lift equations and see if W = y^2(4+3xy) is FORCED -- would explain the discovery route and cash HYP-8020's philosophy on the flagship example.

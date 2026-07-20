@@ -1,0 +1,30 @@
+== (1) the u-side fiber cubic from the conic pair ==
+  Res_x(C1,C2) in u: a*u_**3*(27*a**2*g**2*u_**3 - 18*a*b*g*u_**3 + 16*a*u_**3 - 12*a*u_ - 4*a + b**3*g*u_**3 - b**2*u_**3 + b**2*u_)
+  u-cubic: 27*a**2*g**2*u_**3 - 18*a*b*g*u_**3 + 16*a*u_**3 - 12*a*u_ - 4*a + b**3*g*u_**3 - b**2*u_**3 + b**2*u_
+  coefficients (deg 3..0): [27*a**2*g**2 - 18*a*b*g + 16*a + b**3*g - b**2, 0, -12*a + b**2, -4*a]
+  matches klein's L*u^3 + (b^2-12a)*u - 4a (up to constant): True
+  DEPRESSED in u as well: u^2-coeff = 0  => trace law Sum u_i = 0 TOO
+
+== (2) THE MASTER IDENTITIES on the source ==
+  x-side: L(F)x^3 + (4-3*F2*F3)x - 2*F3 == 0 identically: True
+  u-side: L(F)u^3 + (F2^2-12*F1)u - 4*F1 == 0 identically: True
+
+== (3) THE CHEBYSHEV MODULUS ==
+  m^2 = 108*a**2*(27*a**2*g**2 - 18*a*b*g + 16*a + b**3*g - b**2)/(12*a - b**2)**3
+  m^2 at collision target (-1/4,0,0): 1  (predict 1 -- klein's T_3(u)=1)
+  m^2 - 1 = (54*a**2*g - 18*a*b + b**3)**2/(12*a - b**2)**3
+  numerator factored: (54*a**2*g - 18*a*b + b**3)**2
+  denominator: (12*a - b**2)**3
+  compare x-side Delta = -4Q^2L: numerator of m^2-1 contains the SAME degeneration data iff
+  num/(Q^2*L) = (54*a**2*g - 18*a*b + b**3)**2/((27*a*g**2 - 9*b*g + 8)**2*(27*a**2*g**2 - 18*a*b*g + 16*a + b**3*g - b**2))
+  => m^2 - 1 = [square] * Q^2 * L / (b^2-12a)^3 : split fibers <=> m in T_3-image structure; m = +-1 <=> Q^2*L*[..] = 0
+  m is a function of the TARGET only => invariant under F -> F o phi (source conjugation):
+  klein's G1 = F o (x, y+x^2, z+y) and G2 = F o Nagata have IDENTICALLY the same m -- the essential-class invariant.
+
+== (4) FIBER-TRACE MAPS (multiplication trace in Q(a,b,g)[x]/(N)) ==
+  Tr(x)   = 0   (exact; THM-1310 trace law)
+  Tr(x^2) = 2*(3*b*g - 4)/(27*a**2*g**2 - 18*a*b*g + 16*a + b**3*g - b**2)   <-- L-POLE
+  Tr(x^3) = 6*g/(27*a**2*g**2 - 18*a*b*g + 16*a + b**3*g - b**2)   <-- L-POLE
+  s(x): deg_x num = 3, deg_x den = 2
+  Tr(y) = 3*b/2
+  Tr(u) = 0   (predict 0: u-cubic depressed)
