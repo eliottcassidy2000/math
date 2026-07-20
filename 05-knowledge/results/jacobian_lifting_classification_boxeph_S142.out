@@ -1,0 +1,38 @@
+================================================================================================
+(M)+(b): machine verification on 6 RANDOM instances of the general ansatz
+================================================================================================
+trial 0: master True ; bracket-decomposition True
+trial 1: master True ; bracket-decomposition True
+trial 2: master True ; bracket-decomposition True
+trial 3: master True ; bracket-decomposition True
+trial 4: master True ; bracket-decomposition True
+trial 5: master True ; bracket-decomposition True
+=> (M) and the closed forms b1, b2, b3 are IDENTITIES of the class.
+
+================================================================================================
+(E1) PHI with two distinct roots: b1 = -c has NO polynomial PSI (exact rank)
+================================================================================================
+  PHI=(s-0)(s-1): homogeneous system rank 11/12; c-column free: False => ONLY c = 0 (log obstruction CONFIRMED)
+  PHI=(s--1)(s-2): homogeneous system rank 11/12; c-column free: False => ONLY c = 0 (log obstruction CONFIRMED)
+  PHI=(s-1/2)(s--3): homogeneous system rank 11/12; c-column free: False => ONLY c = 0 (log obstruction CONFIRMED)
+
+================================================================================================
+(E2) b2 degree-forcing: deg v >= 2 inconsistent (v=1+s+s^2 and v=(1+s)^2 tests)
+================================================================================================
+  v = 1+s+s^2: b2 == 0 solutions over the parameter grid: 0 (deg-2k vs k+1 forcing predicts 0)
+  v = (1+s)^2: b2 == 0 solutions over the parameter grid: 0 (deg-2k vs k+1 forcing predicts 0)
+
+================================================================================================
+(E3) the base class (v = u, PHI linear): reconstruct and match the kernel
+================================================================================================
+  b1 = {(0,): Fraction(2, 1)} (target -c = 2) ; b2 = {} ; b3 = {}
+  reconstructed: g1 = {(0,): Fraction(1, 1), (1,): Fraction(12, 1), (2,): Fraction(9, 1)}  B = {(0,): Fraction(4, 1), (1,): Fraction(7, 1), (2,): Fraction(3, 1)}  (kernel: g1 = 1+12s+9s^2, B = u+3u^2 = 1+7s+... check)
+  => matches the known kernel data exactly: True
+
+CLASSIFICATION (machine-supported sketch): in the equivariant z-linear class,
+PHI is CONSTANT (no axis collision; automorphism-type) or LINEAR; b3 forces the
+cube-square law A = alpha v^3, g2 = gamma v^2; b2 forces deg v = 1.  Up to the
+gauge/orbit freedoms (h0-shift, scalings), THE KERNEL IS UNIQUE IN ITS CLASS,
+and the S3 triple-cover collision structure is UNIVERSAL: no new kernels here.
+The hunt must leave the class: other weight systems, z-degree >= 2, or dim >= 4.
+DONE.

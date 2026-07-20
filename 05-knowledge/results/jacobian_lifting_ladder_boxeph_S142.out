@@ -1,0 +1,11 @@
+================================================================================================
+THE LADDER HUNT: A = u^d, g2 = A', B = u + A'; solve det==const for (g1, h0)
+================================================================================================
+d=2: INCONSISTENT (fixed 0/3 unknowns)
+d=3: not fully solved by triangular pass (fixed 0/5 unknowns)
+d=4: INCONSISTENT (fixed 0/7 unknowns)
+d=5: INCONSISTENT (fixed 0/9 unknowns)
+d=6: INCONSISTENT (fixed 0/11 unknowns)
+d=7: INCONSISTENT (fixed 0/13 unknowns)
+
+DONE.
