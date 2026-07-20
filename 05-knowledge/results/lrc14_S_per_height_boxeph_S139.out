@@ -1,0 +1,32 @@
+Q        p·h    N_mc         complete  size histogram                 nodes
+43       43x1   2702         True      9:308 10:2226 11:168           9620
+61       61x1   66323        True      9:130 10:4698 11:23400 12:29455 13:8640 596086
+86       43x2   >=245364     False     9:1 10:1785 11:29129 12:103795 13:110654 4000001
+301      43x7   >=13         False     13:13                          6000001
+
+READING KEY: 'p·h' = prime x height-multiplier. Watch (i) N_mc growth vs Q,
+(ii) the size histogram's shift toward 13 (slack = 13 - minsize) at the first
+7-rung vs the 2-rung, (iii) whether slack relaxes at greater heights. The
+first-rung collapse conjecture (HYP-8025) predicts the slack squeeze at p->7p
+sharpens as p grows.
+
+=== greedy min-cover-size probe (2000 randomized runs per Q) ===
+Q=  43: best greedy cover size = 9  (<=13: improper tuples EXIST with slack 4)
+Q=  86: best greedy cover size = 9  (<=13: improper tuples EXIST with slack 4)
+Q= 301: best greedy cover size = 9  (<=13: improper tuples EXIST with slack 4)
+        example: [7, 35, 42, 49, 84, 91, 112, 119, 147]
+Q= 602: best greedy cover size = 5  (<=13: improper tuples EXIST with slack 8)
+        example: [43, 129, 172, 215, 301]
+
+=== PRIMITIVE-stratum min-cover probe (degenerate gcd-channels forbidden) ===
+Q= 301 primitive: best size = 99 (NO primitive cover <= 16 found)  example: None
+Q= 602 primitive: best size = 99 (NO primitive cover <= 16 found)  example: None
+Q=  86 primitive: best size = 9 (slack 4)  example: [2, 8, 11, 12, 17, 20, 28, 32, 43]
+         divisibility profile: 6/9 divisible by 2
+         divisibility profile: 1/9 divisible by 43
+
+=== SEEDED primitive probe (seed 1-3 non-degenerate residues, then greedy) ===
+Q= 301 primitive (seeded): best size = 8  example: [7, 36, 50, 79, 93, 122, 129, 136]
+Q= 602 primitive (seeded): best size = 6  example: [43, 86, 129, 177, 215, 301]
+
+(S137's x7 witnesses at p=43 are primitive covers of Q=301 with <= 13 classes -- constructive UB 13.)
