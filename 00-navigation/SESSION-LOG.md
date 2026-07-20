@@ -1,3 +1,10 @@
+## mac-mini-2026-07-20-S134 -- TWO MORE COUNTEREXAMPLES IN THE OWNER'S FORM (verified det = -2 + collisions each): Map A = E o F (third component F3+F1; same three sources, image (-1/4,0,-1/4)) and Map B = F o E' (z -> z+x; sources (0,0,-1/4), (1,-3/2,11/2), (-1,3/2,15/2) -- the visible Z/2 symmetry BROKEN by conjugation, a nice pedagogical datum). Honest framing delivered: infinitely many literally (the two-sided orbit) AND essentially (the F^m tower, 3^m:1, pairwise inequivalent per kps-THM-1310); the fiber-degree-3 core conjecturally unique (Mount-Everest, HYP-8115(d)). No namespace consumed; verification inline (sympy, both maps, 8 checks).
+
+Prompt (owner): so there are infinitely many JC counterexamples like this? give two more in
+the same form.
+
+FILES: session log only. -> all
+
 ## death-star-2026-07-19-S59p — WHERE THE +1 GOES (THM-1325): it IS the Yagzhev X; the reduction hides the TORUS, not the +1; and the SURGERY WALL — the +1's own zero-hyperplane obstructs every single-variable stabilization; THM-1320 honesty-amended (P3 was det JF(0) — classically trivial; MISTAKE-197)
 
 Owner: track where the +1 hides under Druzkowski reduction (xlvi). (D1) JF(0) = antidiag(A(0), C(0),
