@@ -27,3 +27,5 @@
   GW: best29=2/29 best31=2/31 best899=64/899 (1/14=0.07143; 899-grid < 1/14)
   200 random no-mult-29 families: mod-29 grid >= 1/14 on 165, mod-899 grid >= 1/14 on 200
   worst mod-899 value seen: 111/899 ~ 0.12347
+== SEAM G extension: pinning the growth law ==
+p=173 h= 86 dk=12 bound=8  no<=8[23,092n 0s]  no<=9[1,121,594n 6s]  no<=10[23,827,927n 135s]  c(p)=11 [9,056,939n 40s]
