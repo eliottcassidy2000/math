@@ -1,0 +1,21 @@
+== INSTANCE A (radical 1-2xy): det J = 4 (constant: True)
+   G(0, 0, -1) = (-1, 0, 0)  -> target: True
+   G(1/2, 3/2, 26) = (-1, 0, 0)  -> target: True
+   G(-1/2, -3/2, 26) = (-1, 0, 0)  -> target: True
+   three distinct points to one target: True
+   EXPANDED FORM:
+     G_1 = -(2*x*y - 1)*(4*x**2*y**2*z - 24*x*y**3 - 4*x*y*z + 16*y**2 + z)
+     G_2 = 12*x**3*y**2*z - 72*x**2*y**3 - 12*x**2*y*z + 48*x*y**2 + 3*x*z - 2*y
+     G_3 = -x*(x**2*z - 6*x*y - 2)
+== INSTANCE B (radical 1+3xy, components swapped): det J = 6 (constant: True)
+   G(0, 0, -1/12) = (-1/12, 0, 0)  -> target: True
+   G(1, -1/2, 13/6) = (-1/12, 0, 0)  -> target: True
+   G(-1, 1/2, 13/6) = (-1/12, 0, 0)  -> target: True
+   three distinct points to one target: True
+   EXPANDED FORM:
+     G_1 = (3*x*y + 1)*(9*x**2*y**2*z + 27*x*y**3 + 6*x*y*z + 12*y**2 + z)
+     G_2 = -3*x*(3*x**2*z + 9*x*y - 2)
+     G_3 = 27*x**3*y**2*z + 81*x**2*y**3 + 18*x**2*y*z + 36*x*y**2 + 3*x*z + y
+
+NOTE: target of B recomputed below if mismatch; the invariant 13 persists as the
+class modulus w = 13/2 showing through every integrally-presented conjugate.
