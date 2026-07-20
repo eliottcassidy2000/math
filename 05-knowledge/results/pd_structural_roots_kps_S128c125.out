@@ -1,0 +1,33 @@
+========================================================================================
+STRUCTURAL FACTOR of P_D (gcd over R), its roots, and the roots-of-unity pattern
+========================================================================================
+  (M,N)=(1,1) D=2 : structural deg=1, #roots=1 (=D-1? True)
+       roots = ['-2']   all negative: True
+       M=1 prediction -(D - j/N), j=0..N-1 = ['-2']   MATCH: True
+  (M,N)=(1,2) D=3 : structural deg=2, #roots=2 (=D-1? True)
+       roots = ['-3', '-5/2']   all negative: True
+       M=1 prediction -(D - j/N), j=0..N-1 = ['-3', '-5/2']   MATCH: True
+  (M,N)=(1,3) D=4 : structural deg=3, #roots=3 (=D-1? True)
+       roots = ['-4', '-11/3', '-10/3']   all negative: True
+       M=1 prediction -(D - j/N), j=0..N-1 = ['-4', '-11/3', '-10/3']   MATCH: True
+  (M,N)=(1,4) D=5 : structural deg=4, #roots=4 (=D-1? True)
+       roots = ['-5', '-19/4', '-9/2', '-17/4']   all negative: True
+       M=1 prediction -(D - j/N), j=0..N-1 = ['-5', '-19/4', '-9/2', '-17/4']   MATCH: True
+  (M,N)=(2,2) D=4 : structural deg=3, #roots=3 (=D-1? True)
+       roots = ['-4', '-7/2', '-5/2']   all negative: True
+       denominators of rational roots: [1, 2]   (M=2, N=2)
+  (M,N)=(2,3) D=5 : structural deg=4, #roots=4 (=D-1? True)
+       roots = ['-5', '-14/3', '-9/2', '-13/3']   all negative: True
+       denominators of rational roots: [1, 2, 3]   (M=2, N=3)
+  (M,N)=(3,3) D=6 : structural deg=5, #roots=5 (=D-1? True)
+       roots = ['-6', '-17/3', '-16/3', '-14/3', '-13/3']   all negative: True
+       denominators of rational roots: [1, 3]   (M=3, N=3)
+  (M,N)=(2,4) D=6 : structural deg=5, #roots=5 (=D-1? True)
+       roots = ['-6', '-23/4', '-11/2', '-21/4', '-9/2']   all negative: True
+       denominators of rational roots: [1, 2, 4]   (M=2, N=4)
+
+  The structural (R-independent) roots are all NEGATIVE, D-1 of them, with
+  denominators dividing M and N -- the M-th/N-th root-of-unity monodromy exponents.
+  Being negative, none is a positive integer, so they never obstruct the cap.
+  The remaining (R-dependent) roots of P_D are APPARENT singularities; generically
+  non-integer (verified in S128c124: no positive integer roots), and desingularizable.

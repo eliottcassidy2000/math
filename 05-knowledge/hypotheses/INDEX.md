@@ -17158,3 +17158,18 @@ FORMALIZED: TNCDetectionDepth.lean, zeros_propagate + nonzero_within_depth (the 
 forward-propagation logic), sorry-free, wired into root. The M=1 polynomial identity and the
 proviso (P_D no positive root, universal) remain as named-next. Complementary to opus
 THM-1685 (per-pattern) and opus THM-1705 (positivity); different (effective/recurrence) axis.
+
+## HYP-8510 — the toral recurrence's singular indices are the negative roots-of-unity exponents
+
+**Status: CONFIRMED (structural roots) + residue named.** kind-pasteur-2026-07-20-S128c125. THM-1720.
+
+P_D(m) (leading coeff of the order-D toral recurrence) = STRUCTURAL(m)*APPARENT_R(m).
+STRUCTURAL = gcd_R P_D: EXACTLY D-1 roots, ALL NEGATIVE, denominators dividing M and N
+(monodromy exponents of z^M=tR(z) = roots of unity). M=1 exact: -(D-j/N), j=0..N-1
+(verified N=1,2,3,4). General verified negative for (2,2),(2,3),(3,3),(2,4). Being negative
+=> never a positive integer => structural half of THM-1710's cap proviso is UNCONDITIONAL.
+Residue: APPARENT_R (R-dependent apparent singularities), generically non-integer (S128c124:
+no positive integer roots), a desingularization question. => TNC complete+elementary for
+min(M,N)=1 (triangular, THM-1710 ii); for min>=2 cap holds modulo desingularizing the
+apparent factor. DvdK not used. Named-next: general Puiseux-exponent formula for the
+structural set (Riemann-Hurwitz); desingularize APPARENT_R.

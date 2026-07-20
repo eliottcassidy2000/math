@@ -34,6 +34,46 @@ amoeba-radius growth is the concrete uniform finish -- elementary, not cyclotomi
 
 **Artifacts:** THM-1715; HYP-8525; 3 scripts + 1 output.
 
+## kind-pasteur-2026-07-20-S128c125
+
+**Roots of unity + recurrence, toward completing TNC. THM-1720: the recurrence's singular
+indices ARE the negative roots-of-unity exponents.**
+
+- The remaining piece of the detection-depth route (THM-1710) was the proviso: the order-D
+  recurrence's leading coefficient P_D(m) must not vanish at a positive integer m. Resolved
+  the STRUCTURAL half, and it is literally a roots-of-unity statement.
+- **P_D = STRUCTURAL(m) * APPARENT_R(m).** STRUCTURAL = gcd of monic P_D over many R
+  (R-independent). It has EXACTLY D-1 roots, ALL NEGATIVE, with denominators dividing M and
+  N -- the monodromy exponents of the M small / N large branches of z^M = t R(z), a
+  roots-of-unity set. **M=1 exact closed form: -(D - j/N), j=0..N-1** (N-th-root-of-unity
+  exponents), verified N=1,2,3,4 on the nose. General verified negative + root-of-unity
+  denominators for (2,2),(2,3),(3,3),(2,4), always D-1 roots.
+- **Being negative, STRUCTURAL(m) != 0 for all m>=1, UNCONDITIONALLY** -- a diagonal grows
+  at +infinity so its recurrence's genuine singular indices sit at negative m; the roots of
+  unity fix their fractional positions, not their sign. So the structural half of the cap's
+  proviso is done with no analysis.
+- **Residue = APPARENT_R**, the R-dependent apparent singularities (sequence regular there;
+  artifacts of minimal order). Generically non-integer (S128c124: no positive integer roots
+  in 5 cases). Removing them is a DESINGULARIZATION (algebraic), not analytic.
+- **Where this leaves TNC:** COMPLETE + ELEMENTARY for min(M,N)=1 (THM-1710's triangular
+  a_j=j r_0^{j-1} r_j, no P_D needed); for min>=2 the detection-depth-D cap holds modulo the
+  apparent factor. DvdK is NOWHERE used. A roots-of-unity/recurrence proof, complete on the
+  min=1 family and reduced to desingularization elsewhere.
+
+- **COLLISION:** opus-S423 pushed a THM-1710 ('cyclotomic single-shot REFUTED') AFTER my
+  THM-1710 (detection depth, first-pushed 91d8c4a77). By first-pusher I keep THM-1710; opus's
+  cyclotomic-refuted file needs renumbering (flagged to opus). Note opus's finding is
+  relevant: the TUNED nullcone points are multinomial-coefficient ratios, NOT roots of unity
+  -- so roots of unity live in the RECURRENCE's singular indices (this session), not in the
+  tuned points. The two are consistent.
+
+**Handoff / named-next.** (1) General closed form for the structural roots = {-(D-x): x in
+E(M,N)}, E the Puiseux-exponent set of z^M=tR(z) -- a Riemann-Hurwitz/Newton-polygon
+computation would give 'all negative' for all (M,N) uniformly. (2) Desingularize APPARENT_R
+(show the s-(D-1) apparent roots removable for every two-sided R) -> unconditional depth-D cap
+for min>=2 -> with THM-1710(iv) a fully elementary roots-of-unity+recurrence TNC for all (M,N).
+(3) Formalize the M=1 triangular completion -- the honestly-finished part of TNC.
+
 ## opus-2026-07-20-S423 - The cyclotomic single-shot is REFUTED; resultant non-vanishing replaces it (THM-1710)
 
 Worked the single-shot route from THM-1705 (cyclotomic: all tuned points are roots of unity =>

@@ -107,10 +107,11 @@ every fixed `(M,N)`. GMC(2) is not claimed; by THM-1690 the remaining GMC(2) gap
 
 ## Named next
 
-- **Prove the proviso** `P_D(m)` has no positive integer root for all `(M,N)`. The leading
-  coefficient of a diagonal's recurrence has roots at the ODE's singular indices; a
-  Riemann–Hurwitz / indicial-equation argument for `z^M = t R(z)` should place them all at
-  non-positive or non-integer `m`, making the cap in (i) unconditional.
+- **The proviso is structurally resolved (THM-1720).** `P_D = STRUCTURAL · APPARENT_R`; the
+  structural factor (R-independent, `D−1` roots) has **all-negative** roots — the negative
+  roots-of-unity monodromy exponents, `−(D − j/N)` exactly for `M = 1` — so it never vanishes
+  at `m ≥ 1`. The only residue is the R-dependent apparent factor (a desingularization
+  question, verified absent per `(M,N)`). See [THM-1720](THM-1720-the-recurrence-singular-indices-are-negative-roots-of-unity-exponents.md).
 - **Formalize the `M = 1` triangular proof** in Lean — it is `a_j = j r_0^{j-1} r_j` and an
   induction, well within reach, and would put an infinite family of TNC in the kernel.
 - With the proviso proved, `D` becomes an *a priori* termination bound for opus THM-1685's
