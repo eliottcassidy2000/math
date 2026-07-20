@@ -1,3 +1,11 @@
+## boxeph-2026-07-19-S141 -- THE EXPLICIT A₃ SELF-EMBEDDING (HYP-8080) + the counterexample's anatomy: RIGID KERNEL, ORBIT HALO -- equivariant Keller tangent = orbit tangent = 5; collision CURVE (t=2,3,½ verified); descent plane map non-Keller at the torus defect; archaeology (13/2 = ρ>6.5!) + the lifting program
+
+- **(A)** φ(x_i)=F_i, φ(∂_j)=ΣG[k][j]∂_k, G=−½adj(JF) (77 monomials dumped); J·G=I + nine [D_i,D_j]=0 verified exactly ⟹ Weyl endomorphism; injective+non-surjective ⟹ **explicit constructive DC₃ death**.
+- **(B)** z-linear, b=(u³,3xu²,−x³), 4+3xy=1+3u (Pascal 1,3,3,1); ℂ* weights (−1,1,2)→(2,1,−1) (σ/τ = t=−1); **collision curve** verified; descent (s,r)=(xy,x²z) plane map with NON-constant Jacobian ⟹ Keller-ness dies at the torus-fixed defect = why dim 3.
+- **(C)** SPORADIC-VS-FAMILY exact local answer: equivariant Keller tangent 5 = orbit tangent 5 (spans equal) ⟹ **locally rigid mod equivalence**; raw integrations all fail 2nd-order ✓ consistent. Halo: Aut∘F∘Aut, stabilization (BCW cubic-linear), the collision curve = family-of-collisions inside one rigid map.
+- **(D)** Archaeology: 13/2 = clustered ρ-threshold (S58h) = collision z-coeff; deg 7 = apex-7; det −2 = doubling motif; Pascal/staircase; weight-reversal ↔ transpose duality; S₃ cycle types = the two 3-vertex tournaments (WILD, labeled). **Lifting program**: plane data + torus defect classify the equivariant z-linear Keller class; JC₂ no-go via no-free-ℂ*-action — named lead.
+- **FILES:** HYP-8080; script + .out (all frozen); reflection the-counterexamples-anatomy-rigid-kernel-orbit-halo-boxeph-S141.
+
 ## death-star-2026-07-19-S59m-harvest — 4/367 LANDS KERNEL-PURE (fourth ledger member; 96s assembly after the Cov split beat the build-window wall); generator patched natively; 1271 re-emitted Cov-format for a long-window session
 
 The harness reaper killed the detached S59l builds twice; diagnosis: the monolithic sums_covered
