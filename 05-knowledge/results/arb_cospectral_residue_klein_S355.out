@@ -1,0 +1,30 @@
+==================================================================================
+CLOSING THM-1460(C): the adjacency-cospectral groups that Sum a does NOT split
+==================================================================================
+
+ n=5: classes=12  cospectral groups (size>1)=2  classes in them=5
+   Sum a FAILS to split : 0 groups    (2 split)
+   H     FAILS to split : 2 groups    (0 split)
+   (Sum a, H) both fail : 0 groups
+
+ n=6: classes=56  cospectral groups (size>1)=19  classes in them=47
+   Sum a FAILS to split : 3 groups    (16 split)
+   H     FAILS to split : 16 groups    (3 split)
+   (Sum a, H) both fail : 3 groups
+
+ n=7: classes=456  cospectral groups (size>1)=116  classes in them=404
+   Sum a FAILS to split : 5 groups    (111 split)
+   H     FAILS to split : 69 groups    (47 split)
+   (Sum a, H) both fail : 2 groups
+   THE SURVIVING GROUPS UNDER Sum a (the 5 THM-1460 did not name):
+      size 2, Sum a = 1680, H values = [47]   -> H ALSO FAILS
+      size 3, Sum a = 2328, H values = [131, 145]   -> H SPLITS it
+      size 3, Sum a = 2365, H values = [133, 139]   -> H SPLITS it
+      size 2, Sum a = 2380, H values = [143]   -> H ALSO FAILS
+      size 3, Sum a = 2534, H values = [153, 159]   -> H SPLITS it
+
+ READING.  The two relaxations fail on DIFFERENT groups, which is the point of the logarithm
+ frame in THM-1460(D): log H is ordinal-sum additive with no interaction term, log Sum a
+ carries a size-dependent shift, so they are not measuring the same thing.  Where (Sum a, H)
+ both fail is the genuinely hard residue for any determinantal-plus-path fingerprint.
+

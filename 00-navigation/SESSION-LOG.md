@@ -1,3 +1,25 @@
+## klein-2026-07-20-S355 -- THM-1580: HARDNESS IS NOT DISCRIMINATING POWER. The poly-time arborescence count outseparates the #P-hard Hamiltonian-path count 14 to 1 on cospectral classes; closes THM-1460(C) by naming the 5 survivors and isolating a 2-group residue.
+
+**Owner directive:** work on arborescence / Hamiltonian-path / logarithm leads.
+
+THM-1460 already holds the core of that lead -- arborescences as the determinantal relaxation of H, the Matrix-Tree verification, the Paley closed form, the relaxation gap, and the ordinal-sum logarithm law. So I did not redo it; I closed the one gap it named and did not fill. Its section (C) reports that Sum_r a_r differs inside 111 of the 116 adjacency-cospectral groups at n = 7, without saying WHICH 5 survive.
+
+[1] THE TABLE, exhaustive at n = 5,6,7 over all 12/56/456 iso classes, exact integer arithmetic throughout (Faddeev-LeVerrier integer char poly, Sum_r a_r by summing Matrix-Tree cofactors over roots, H by direct enumeration). Cospectral groups: 2 / 19 / 116. Sum a FAILS to split: 0 / 3 / 5. H FAILS to split: 2 / 16 / 69. BOTH fail: 0 / 3 / 2. The n=7 row reproduces THM-1460(C)'s 111/116 from an INDEPENDENT implementation, and that agreement is what validates the rest of the table.
+
+[2] THE INVERSION, which is the actual finding and which I did not expect. THE POLYNOMIAL-TIME INVARIANT IS THE FAR BETTER FINGERPRINT. At n = 7, Sum_r a_r -- a Matrix-Tree determinant, O(n^3) -- fails on 5 cospectral groups, while H, which is #P-hard, fails on 69. A 14x gap in favour of the EASY one, and the same ordering holds at n = 5 and n = 6. The intuition runs the other way: one expects the intractable count to encode more. It does not. Computational hardness and discriminating power are INDEPENDENT AXES, and on adjacency-cospectral classes they point in OPPOSITE directions. THM-1460(D)'s logarithm frame is exactly why they can differ at all -- log H is additive under ordinal sum with NO interaction term, while log Sum a is additive with a SIZE-DEPENDENT SHIFT -- so they are not measuring the same thing, there is no reason for their failure sets to nest, and empirically they do not.
+
+[3] THE 5 SURVIVORS UNDER Sum a, NAMED. (size 2, Sum a = 1680, H = {47}) -- H ALSO FAILS. (size 3, 2328, H = {131,145}) -- H splits it. (size 3, 2365, H = {133,139}) -- H splits it. (size 2, 2380, H = {143}) -- H ALSO FAILS. (size 3, 2534, H = {153,159}) -- H splits it.
+
+[4] THE RESIDUE. Exactly TWO groups at n = 7 resist the whole package (spec(A), Sum_r a_r, H), both of size 2: (Sum a, H) = (1680, 47) and (2380, 143). Since the two failure sets are nearly complementary -- 5 and 69 collapsing to 2 in combination -- the PAIR is a far stronger fingerprint than either alone. Those two pairs are the true wall for any determinantal-plus-path invariant, and they are the right concrete targets for the reconstruction thread: whatever separates them cannot be a function of the adjacency spectrum, of the arborescence count, or of the Hamiltonian-path count.
+
+HONEST SCOPE: exhaustive at n <= 7, exact arithmetic, no sampling; advances no open problem. It closes a named gap in THM-1460, contributes one counterintuitive fact, and isolates a two-element residue worth attacking.
+
+Prompt (owner): work on arboresence/ham path logatrith leads.
+
+FILES: THM-1580, HYP-8415, 1 script + out. -> all (THE COUNTERINTUITIVE ONE, and I would not have guessed it: on adjacency-cospectral classes at n=7, the POLYNOMIAL-TIME arborescence count Sum_r a_r fails to separate only 5 of 116 groups, while the #P-HARD Hamiltonian-path count H fails on 69. The easy invariant outseparates the hard one 14 to 1, and the same ordering holds at n=5 and n=6. Computational hardness and discriminating power are independent axes and here they point OPPOSITE ways. THM-1460(D)'s logarithm law is why they can differ at all -- log H is ordinal-sum additive with no interaction term, log Sum a carries a size-dependent shift -- so their failure sets have no reason to nest, and they do not. CLOSING THM-1460(C): the 5 groups Sum a misses are (2, 1680, H={47}), (3, 2328, H={131,145}), (3, 2365, H={133,139}), (2, 2380, H={143}), (3, 2534, H={153,159}). THE ACTIONABLE BIT: exactly TWO groups resist (spec(A), Sum a, H) altogether -- (1680,47) and (2380,143), both size 2. Because the failure sets are nearly complementary, the PAIR is a far stronger fingerprint than either alone, and those two pairs are the true wall. Anyone on the reconstruction thread should aim at them directly: whatever splits them is not a function of the adjacency spectrum, the arborescence count, or H. My n=7 count independently reproduces THM-1460's 111/116, which is what validates the rest of the table.)
+
+---
+
 ## mac-mini-2026-07-20-S139 -- THM-1580 THE ARBORESCENCE COUNT STRICTLY DOMINATES H AS A FINGERPRINT (298 vs 77 distinct at n=7) AND IS POLYNOMIAL-TIME; my own S138 prime-2 framing REFUTED; HYP-8315 extended to n=8 with its wording corrected
 
 **Owner directive:** "work the arborescence leads."
