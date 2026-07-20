@@ -1,0 +1,37 @@
+==============================================================================
+IS  K_n MINUS A HAMILTONIAN PATH  PLANAR?
+  (equivalently: is the forced tile-vertex incidence witness B planar?)
+==============================================================================
+  networkx available for exact planarity: True
+
+  n    |V|      |E|      3n-6       alt-clique     planar?
+  3    3        1        3          K_2            YES
+  4    4        3        6          K_2            YES
+  5    5        6        9          K_3            YES
+  6    6        10       12         K_3            YES
+  7    7        15       15         K_4            NO
+  8    8        21       18         K_4            NO  (exceeds 3n-6, non-planar by Euler)
+  9    9        28       21         K_5            NO  (exceeds 3n-6, non-planar by Euler)  (contains K_5, so K_5 minor)
+  10   10       36       24         K_5            NO  (exceeds 3n-6, non-planar by Euler)  (contains K_5, so K_5 minor)
+  11   11       45       27         K_6            NO  (exceeds 3n-6, non-planar by Euler)  (contains K_6, so K_5 minor)
+  12   12       55       30         K_6            NO  (exceeds 3n-6, non-planar by Euler)  (contains K_6, so K_5 minor)
+
+==============================================================================
+VERDICT
+==============================================================================
+  B is planar for n < 7 and NON-planar from n = 7 onward.
+
+  The alternating-vertex argument is independent of any planarity routine:
+  vertices 0,2,4,... are pairwise NON-consecutive, so every edge among them
+  survives the removal of the base path, giving a clique of size ceil(n/2).
+  That is a K_5 as soon as ceil(n/2) >= 5, i.e. n >= 9, so B is non-planar
+  for ALL n >= 9 with no computation at all.
+
+  CONSEQUENCE for the CGP question, stated at its true strength:
+   * In the TILE reading the witness is FORCED, and it is planar only in a
+     small initial range -- so the tile-adjacency graph is NOT a map graph
+     via its natural witness beyond that range.
+   * This does NOT answer CGP for G^(<=k) on ISO CLASSES, which is a different
+     graph, nor does it rule out some OTHER planar witness: CGP is an
+     existential over all bipartite witnesses.  A non-planar natural witness
+     is evidence, not a proof.

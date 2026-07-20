@@ -1,0 +1,63 @@
+==============================================================================
+n = 4 :  m = 3 tiles,  2^m = 8 tilings
+==============================================================================
+  sum of all stars = 0  (predicted 0, every tile has two endpoints): True
+  rank(GAMMA) = 3   (predicted n-1 = 3): True
+  quotient  F_2^m / GAMMA  has  2^(m-rank) = 1 cosets
+  isomorphism classes : 4
+
+  (Q1) is the coset b + GAMMA constant on each iso class?
+       classes carrying MORE THAN ONE coset : 0 of 4
+       -> the coset DESCENDS: it is a TOURNAMENT function.
+
+  (Q2) cosets lying entirely inside a single iso class : 0 of 1
+       -> the iso partition REFINES the coset partition (classes are
+          unions of cosets): the coset is a COARSER tournament invariant.
+  merged (complement-quotient) classes : 3
+  quotient cosets : 1   -> equal to merged? False
+
+  does a star move preserve the 3-cycle count c_3?  tilings where it does
+     NOT : 8 of 8 sampled  -> c_3 is NOT a coset invariant
+
+==============================================================================
+n = 5 :  m = 6 tiles,  2^m = 64 tilings
+==============================================================================
+  sum of all stars = 0  (predicted 0, every tile has two endpoints): True
+  rank(GAMMA) = 4   (predicted n-1 = 4): True
+  quotient  F_2^m / GAMMA  has  2^(m-rank) = 4 cosets
+  isomorphism classes : 12
+
+  (Q1) is the coset b + GAMMA constant on each iso class?
+       classes carrying MORE THAN ONE coset : 8 of 12
+       -> the coset does NOT descend: it is only a TILING function.
+       witness class carries cosets [0, 1, 2]
+
+  (Q2) cosets lying entirely inside a single iso class : 0 of 4
+       -> the two partitions CROSS: neither refines the other.
+  merged (complement-quotient) classes : 10
+  quotient cosets : 4   -> equal to merged? False
+
+  does a star move preserve the 3-cycle count c_3?  tilings where it does
+     NOT : 64 of 64 sampled  -> c_3 is NOT a coset invariant
+
+==============================================================================
+n = 6 :  m = 10 tiles,  2^m = 1024 tilings
+==============================================================================
+  sum of all stars = 0  (predicted 0, every tile has two endpoints): True
+  rank(GAMMA) = 5   (predicted n-1 = 5): True
+  quotient  F_2^m / GAMMA  has  2^(m-rank) = 32 cosets
+  isomorphism classes : 56
+
+  (Q1) is the coset b + GAMMA constant on each iso class?
+       classes carrying MORE THAN ONE coset : 50 of 56
+       -> the coset does NOT descend: it is only a TILING function.
+       witness class carries cosets [0, 2, 4]
+
+  (Q2) cosets lying entirely inside a single iso class : 0 of 32
+       -> the two partitions CROSS: neither refines the other.
+  merged (complement-quotient) classes : 34
+  quotient cosets : 32   -> equal to merged? False
+
+  does a star move preserve the 3-cycle count c_3?  tilings where it does
+     NOT : 1018 of 1024 sampled  -> c_3 is NOT a coset invariant
+
