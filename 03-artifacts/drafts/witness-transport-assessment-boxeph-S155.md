@@ -101,3 +101,22 @@ attack: prove the n=5 statement (NS-NS ⟹ shared even class) from the
 cycle-space bijection. Effort S.
 3.5 From the niche sweep (agent report appended when it lands — network
 retried once).
+
+### 3.5 The niche sweep (agent-mined; bodies marked UNVERIFIED were not re-read this session)
+Tier A (verified computationally in-repo, unproved, standalone-paper-shaped):
+cpA=>cpK spectral conjecture (T1546; 0/116 splits; rank-one resolvent attack, M);
+Moser 32nd-region deficit law + A362193 Grassmannian bridge (T1533, M);
+Sequence D not-in-OEIS + A060488 tricovering diagonal (T1532, S/M);
+Faulhaber shear constant (Lambert-W?) + 4 unsubmitted OEIS sequences (T1554, S/M);
+1001 = three sixties (ord_1001(2) = Pisano(10) = |A5| = 60; T1534, S — quotable).
+Tier B (bridges to known problems): Erdos #592 axis R(n,2) = 2n+1 (T831, $1000, L);
+Alcuin escapes minor-closure — finite forbidden-subgraph set without WQO (T828/829, M);
+Heegner<->Rabinowitsch dictionary (T718/719, M, UNVERIFIED); toothpick A139250 corner
+recursion (T1545, M); n=24 Niemeier rung open (T1534, M/L); GLMY-Paley court case
+(HYP-8230, M); Farey-Fibonacci power-payload flip (T1083, S/M).
+Tier C (one-offs, UNVERIFIED): Cayley-Delannoy near-paper (.tex — closest to
+submittable), Grinberg-Stanley note, Napolitano gauge draft, hard-core/idea-gas
+H = 3^alpha, 987-amplituhedron, label-drift coincidence, adelic geometry.
+RECOMMENDED next niche session: (1) Alcuin forbidden-subgraph set k=3;
+(2) Sequence D + shear-constant OEIS submissions (cheap, visible);
+(3) cpA=>cpK proof attempt; (4) read + triage the Cayley-Delannoy tex.

@@ -1,3 +1,12 @@
+## boxeph-2026-07-20-S155 -- ±-SECTION VERIFIED (gate spectrum = Z/2-quotient), HS RIB LAW, WITNESS-TRANSPORT VERDICT (yes: novel+publishable+Lean-staged), 18-thread niche sweep (HYP-8240)
+
+**Owner directive:** run p=43 ±-section; decompose HS-only pairs spine/ribs/sea; assess witness-transport novelty ('think hadwiger'); comprehensive niche-thread hunt.
+
+- **±-section (p=43):** scales = (Z/Q\0)/±; improper set ±-invariant; mod-7 slaving pairs under negation; gate freedom = 1-of-(3 pairs + 0) on the quotient. Index-program dictionary verified.
+- **HS rib law:** even-class disjointness concentrates on the RIBS: n=5 no-shared-even pairs are 59% SC-NS, 0% NS-NS (all NS-NS pairs share an even class); n=6 same enrichment. Attack filed: prove n=5 NS-NS statement from cycle-space bijection.
+- **Witness-transport verdict:** YES — first explicit VC/IC/Mathieu witnesses would be new OBJECTS (untouched everywhere); the de Grey precedent (explicit witness moved CNP); the transport measures constructive cost of the equivalences (final N, deg P = new constants); Lean staged det/collision -> DC -> VC; mod-p dry run first. Proof/Lean queue: THM-1370+completeness (full characterization paper), transport, Mod27 mirror, dihedral-rigidity paper, THM-1365, sliver-BU note.
+- **Niche sweep (18):** Tier A cpA=>cpK, Moser-32nd/A362193, Sequence D, shear constant + 4 OEIS-new, 1001 three-sixties; Tier B Erdos 592, Alcuin minor-closure escape, Heegner-Rabinowitsch, toothpick, Niemeier n=24; Tier C Cayley-Delannoy near-paper. Next niche session: Alcuin k=3 + OEIS submissions + cpA=>cpK.
+
 ## mac-mini-2026-07-20-S127 -- ATTRIBUTION CORRECTION: the JC counterexample is Levent Alpoge's, not ours (THM-1300 fixed). Honest novelty verdict on the de Bondt-van den Essen transport (corollary, not novel) and on my own recent theorems (two are probably folklore). HYP-8240.
 
 TASK (owner): is the transport work novel and meaningful; ask the same of other things; should they be Lean-written-up; what else could we attack that the community would regard well.
