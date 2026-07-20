@@ -1,3 +1,11 @@
+## boxeph-2026-07-20-S147 -- THE OWNER TRIANGLE DECODED (HYP-8165): T(m,j) = S_{j−1}(m−j+1) + C(m−6,j−4) — FAULHABER–PASCAL; columns = power sums (the THIRD perspective: vary the exponent); H_n = the p = −1 column; Mersenne–Moser break 1,3,7,15,29; the (x,n) grid = Proth/Sierpiński
+
+- **DECODE (fits 28/28):** columns = Faulhaber sums S_{j−1} (col2 triangular, col3 pyramidal, col4 = Σk³+corr); the 2^{m−2}+1 diagonal = S(2) automatically; corrections = shifted Pascal C(m−6,j−4) (conjecturally first term of a self-similar cascade; row-8 prediction issued). THE THIRD PERSPECTIVE: polygonal varies the step, polyhedral the dimension, THIS triangle varies the EXPONENT — and the harmonic numbers are the exponent-(−1) column, which is why series1 = H_n exactly (Stirling numerators 1,3,11,50,274 over n!).
+- **VERIFIED:** partial sums cols1–3 = 1,3,7,15,29,... — MERSENNE breaking at term 5 = Moser's doubling-then-breaks with 2^n−1; row sums 1,3,7,16,39,106,317; Fibonacci members {1,2,3,5,21,55}; row 7 opens 7,21 (the H-impossible pair, S146) and alternating-sums to 7.
+- **OPEN:** series2 (1, 5/2, 29/3?, 109/12, 1079/60): three families match through 5/2 and give 29/6 (typo suspected at 29/3) then diverge (53/6 / 103/12 / 107/12 vs 109/12) — exact law unidentified, candidates logged.
+- **GRID:** n·2^x+1 = Proth/Sierpiński table verified (owner's (0,n) = n off-by-one); ties: 2n+1 = LRC pigeonhole moduli, 2^x+1 = Fermat/gate primes, x-direction = the ×2 tower.
+- **FILES:** HYP-8165; owner_triangle_decode_boxeph_S147.py + .out.
+
 ## boxeph-2026-07-20-S146 -- THE H-TEMPLATE (HYP-8160): {7,21} impossibility verified (condensation-monoid law + min-strong growth) ↔ the KELLER-DEGREE MONOID; Euler ledger (dim 2) ⟹ d=2 all-smooth IMPOSSIBLE, S₃-d=3 forced to χ-profile (1,0); THE ODD-DEGREE CONJECTURE
 
 - **TOURNAMENT SIDE (verified, exhaustive n≤6 + 60k n=7):** Rédei parity all; multiplicativity h = Πh(strong) 300/300; attainable = monoid on strong values (exact match); strong minima 3,5,9,15 grow ⟹ {7,21} PERMANENT gaps; 35 enters at n=7 as a new STRONG value (gaps close only from the strong side).
