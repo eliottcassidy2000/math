@@ -1,0 +1,13 @@
+ord(Fib matrix) mod 2, 5, 10: 3 20 60 ; lcm(3,20) = 60
+char poly x^2-x-1 mod 5 discriminant: 0 = 0 (RAMIFIED); double eigenvalue 3;
+Borel order in SL2(F5) = 5*4 = 20 = pi(5): the Fibonacci 20 is a BOREL ORDER  OK
+M^4 mod 5 = [[0, 3], [3, 2]] (eigenvalue 3^4 = 1 => unipotent part, order 5; 4*5 = 20  OK)
+ord_2 mod 7,11,13: 3 10 12 ; lcm = 60 ; ord_1001(2) = 60
+1001 | 2^60 - 1: True
+
+VERDICT: pi(10) = 60 and |A5| = 60 share the PSL(2,5) mechanism through the
+golden prime (5 ramifies in Z[phi]; Fibonacci-mod-5 = Borel of SL2(F5), order 20;
+A5 = PSL(2,5) = the icosahedral/golden group).  ord_1001(2) = 60 shares only the
+numerical lcm-target 2^2*3*5 (7,11,13 have 2-orders 3,10,12).  'Forced equality'
+for the third sixty: REFUTED as structure, explained as 60's lcm-attractor role.
+Two-thirds of the coincidence is one theorem; one-third is divisor-richness.
