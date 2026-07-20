@@ -1,0 +1,14 @@
+=== cap Gamma(P) over all Hamiltonian base paths (kp-S128c109 open computation) ===
+  n=4: 12 Ham base paths; each Gamma(P) dim=3; cap Gamma dim = 0
+    cap Gamma = {0}: NO nonzero base-path-independent star move.
+  n=5: 60 Ham base paths; each Gamma(P) dim=4; cap Gamma dim = 0
+    cap Gamma = {0}: NO nonzero base-path-independent star move.
+  n=6: 360 Ham base paths; each Gamma(P) dim=5; cap Gamma dim = 0
+    cap Gamma = {0}: NO nonzero base-path-independent star move.
+
+=== interpretation ===
+  If cap Gamma = 0: the base-path-independent star subgroup is trivial => confirms
+  kp's diagnosis that cut-space/star constructions are IRREDUCIBLY base-path-relative
+  (the base path is exactly what the iso quotient forgets). The right base-path-free
+  object is then the FULL cut space = SEIDEL SWITCHING (delta(v) with path edges),
+  whose 2^{C(n-1,2)} switching classes ARE the tiling hypercube (base-path picks the rep).

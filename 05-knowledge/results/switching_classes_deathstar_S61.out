@@ -1,0 +1,12 @@
+=== switching classes (= tiling hypercube) and switching-classes-up-to-iso ===
+  n=3: switching classes = 2 (= 2^C(n-1,2) = 2 = #tilings), switching-classes-up-to-iso = 1, iso classes = 2
+  n=4: switching classes = 8 (= 2^C(n-1,2) = 8 = #tilings), switching-classes-up-to-iso = 2, iso classes = 4
+  n=5: switching classes = 64 (= 2^C(n-1,2) = 64 = #tilings), switching-classes-up-to-iso = 2, iso classes = 12
+
+  switching classes = 2^C(n-1,2) = the tiling hypercube (VERIFIED): base-path-FREE
+    (Seidel switching references no path; the base path only picks the class representative).
+  switching-classes-up-to-iso: a base-path-INDEPENDENT tournament invariant -- coarser than
+    iso classes. This is the RIGHT base-path-free star object; kp's cap Gamma(P)=0 because the
+    tile-restricted star DROPS the path edges. Full switching keeps them and is invariant.
+  => the tiling hypercube = switching classes = the base-path-independent 'nature of numbers'
+     structure; iso quotient + switching = two independent base-path-free quotients.

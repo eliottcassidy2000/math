@@ -1,0 +1,30 @@
+=== Fibonacci = summing Pascal's triangle along shifted (shallow) diagonals ===
+  n= 0: sum_k C(0-k,k) =     1   F_1 =     1   OK
+  n= 1: sum_k C(1-k,k) =     1   F_2 =     1   OK
+  n= 2: sum_k C(2-k,k) =     2   F_3 =     2   OK
+  n= 3: sum_k C(3-k,k) =     3   F_4 =     3   OK
+  n= 4: sum_k C(4-k,k) =     5   F_5 =     5   OK
+  n= 5: sum_k C(5-k,k) =     8   F_6 =     8   OK
+  n= 6: sum_k C(6-k,k) =    13   F_7 =    13   OK
+  n= 7: sum_k C(7-k,k) =    21   F_8 =    21   OK
+  n= 8: sum_k C(8-k,k) =    34   F_9 =    34   OK
+  n= 9: sum_k C(9-k,k) =    55   F_10 =    55   OK
+  n=10: sum_k C(10-k,k) =    89   F_11 =    89   OK
+  n=11: sum_k C(11-k,k) =   144   F_12 =   144   OK
+  identity F_(n+1)=sum_k C(n-k,k) holds for n=0..24: True
+
+=== the shear = the +1 stagger = golden recurrence (THM-1360 Pisot ladder) ===
+  x^{s+1}=x^s+1 at s=1 is x^2=x+1 (golden); shifting Pascal's diagonal by 1 step/row
+  realizes the SAME +1 stagger. Fibonacci recurrence F_{n+1}=F_n+F_{n-1} is the s=1 rung.
+
+=== Pisano period mod 10 (last decimal digit) = 60  (= 60 = 2^2*3*5) ===
+  60 = lcm(pi(2)=3, pi(5)=20); the doubling-2 and trisection-3 clocks aligned.
+  1001 = 7*11*13 (three-sixties: 1001 = 16*60 + 41; and 999999/999 ... the 7 = seven-wall).
+
+=== Pascal mod 2 = Sierpinski = the char-2 atom (Kummer/Lucas) ===
+  row  0: #odd entries = 1 = 2^popcount(0)=2^0=1  OK
+  row  1: #odd entries = 2 = 2^popcount(1)=2^1=2  OK
+  row  3: #odd entries = 4 = 2^popcount(3)=2^2=4  OK
+  row  7: #odd entries = 8 = 2^popcount(7)=2^3=8  OK
+  row 15: #odd entries = 16 = 2^popcount(15)=2^4=16  OK
+  the Mersenne rows n=2^k-1 (1,3,7,15) are ALL-ODD -- the char-2 seam, = THM-1355/1360 Mersenne rung.

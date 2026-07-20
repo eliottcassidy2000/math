@@ -126,8 +126,17 @@ blindness: PTE size-13 ⟺ cage Newton depth), Sylvester–Gallai/Frobenius.
 Seymour second-neighborhood, strong perfect graph (odd holes at n=7 — E_n data exists!),
 Erdős 592/625/870, Liu–Zhu, Barba.
 
-**No engagement found:** Sendov, Casas-Alvero, Singmaster, Collatz-adjacent Gilbreath,
+**No engagement found:** Sendov, Singmaster, Collatz-adjacent Gilbreath,
 Schinzel, Cramér, Artin. (Negative space recorded so future scouts don't re-sweep.)
+
+**Casas-Alvero — STATUS CORRECTED (death-star-S61, agent-confirmed):** NOT open/JC-like.
+*Proved TRUE in char 0, all degrees* by Ghosh (arXiv:2501.09272, 2025, rev. Mar 2026,
+Koszul homology) — the OPPOSITE of JC (open→proved, vs JC true→disproved). The prior
+"2-adic ladder adjacency" framing is illusory (CA's p-adics = resultant units mod p, not
+the JC inverse ladder). The only genuine open target is the **char-p (esp. char-2)
+counterexample census** — false-but-finite in char p (Ghosh arXiv:2402.18717, CA variety
+≤ 2-dim), squarely in the repo's explicit-witness wheelhouse. See reflection
+base-path-independence-…-deathstar-S61 §3.
 
 ## Priority frame for future sessions
 
