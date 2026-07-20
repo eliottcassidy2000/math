@@ -11,6 +11,33 @@ DONE-split. -> all
 Prompt (owner): build the k=13 cage analog
 
 ---
+## death-star-2026-07-19-S59h — L1, L2, L3 ALL LEAN-FORMALIZED: TournamentH7/LRCRungFloor.lean, 13 declarations, kernel-pure, sorry-free — including the kernel-checked floor of the 4/127 tower member and the THM-1270 closure lemmas
+
+Owner: Lean-formalize L1-L3. ALL THREE DELIVERED, kernel-pure [propext, Classical.choice, Quot.sound],
+sorry-free, 8 build iterations (~20 s each). (L1, 5 thms): the formalization's key move is the
+DIVISIBILITY-CERTIFICATE form — v + r(N−1) = (N+1)(vD − pr) − Q(v − 2r) is a ring identity, so ONE
+linear_combination replaces every modular-inverse step (cert_dvd); rung_core kills k ∈ {0,1} with explicit
+product hints (the unique danger slot = the deleted N−1 falls out of the r = −1 case); rung_band /
+rung_floor_single (variable-modulus lift of the sieve19_single pattern) / rung_floor_witness give the
+family floor M(F_D(N)) ≥ D/Q; exists_binder_multiplier (Bézout) supplies the witness whenever
+gcd(2D−1, Q) = 1. (L2, 3 thms): dirichlet_step (width-2-box pigeonhole); small_moduli_seal with the three
+escapes — residue-0 killed by x (q | (N−1)a ⟹ q | xa), parity routed through explicit 2-divisibility
+(omega can't see variable products), and the reflected element q−(N−1) ODD hence ≠ N−1 automatically
+(cleaner than the paper). (L3): packing_seal — circle packing with NO SORTING: (u,i) ↦ (u·a+i) % Q
+injective on [0,N]×[0,c) ⟹ (N+1)c ≤ Q by cardinality. Plus THM-1270's Q_dvd_iff_binder_dvd +
+rung_dead_of_common_factor (5 lines each) and member_4_127 — the KERNEL-CHECKED floor half of THM-1285's
+M({1..29,31,120}) = 4/127 at the closed-form witness 55/127 (MISTAKE-186 non-vacuity discipline).
+Recurring fix classes logged in HYP-7935: emod_def linear_combination signs, omega's opaque atoms
+(|·|, variable products), Finset-vs-Set InjOn coercion, ≤-goals fed equality lemmas. The rung floor of
+EVERY tower member (4/127 ... 12/116396303) is now certifiable by kernel: instantiate rung_floor_witness
++ one decide/norm_num of the binder congruence. NEXT Lean leads: the e-channel certificate format
+(lead xx; the L1 certificate style is the template) and the even-N L2 variant (xiii).
+
+Prompt (owner): Lean-formalize L1-L3
+
+FILES: TournamentH7/LRCRungFloor.lean (NEW, 13 kernel-pure declarations), THM-1271 §6, HYP-7935,
+backlog. -> all
+
 ## opus-2026-07-19-S401 -- TWO CREATIVE ANGLES CASHED (owner: keep working angles like HYP-7920): THM-1288 -- S-T CONJECTURE 7.1 REFUTED for every k >= 2 (self-contained 3-step proof: the cluster {d+1,...,d+k} with (k+1) not| d is coprime + non-tight yet has NO witness in (1/d)Z -- the d-grid is TRANSLATION-BLIND and sees only the AP, whose witness set {s/(k+1)} the grid misses; verified exactly to d = 100,003) + HYP-7930 -- the GIRI-KRAVITZ ACCUMULATION REVIVAL (the legitimate half of the MISTAKE-117 citation, dropped entirely in the overcorrection): acc(13-speed M-spectrum) subset [1/13, 1/2] => the n=14 FLOOR IS ISOLATED from above, (1/14, 3/41] contains only FINITELY many values (the accumulation horn of THM-1268's dichotomy DIES by citation), and the 12-speed gap (1/13, 2/25) retypes to "a FINITE LIST is empty"
 
 Owner: keep working creative angles like HYP-7920. Both angles are S400 residue, both are

@@ -133,3 +133,29 @@ in 10⁷ wide. Confirmed rungs now ride the primorials 6, 30, 210, 2310 (D = 3, 
 7). The next rung is D=9 (binder 17; D=8's binder 15 = 3·5 composite, skipped like
 D=5): predicted first opening at N ≡ 1 (mod 30030), N ≢ 1 (mod 17) — N = 30031 =
 59·509; the same machinery computes it (the e-channel scan scales linearly).
+
+## 6. LEAN FORMALIZATION (death-star-S59h) — L1, L2, L3 ALL KERNEL-CHECKED
+
+`TournamentH7/LRCRungFloor.lean` (namespace `LonelyRunner.RungFloor`), thirteen
+declarations, ALL `[propext, Classical.choice, Quot.sound]`, sorry-free:
+
+- **L1**: `cert_dvd` (the divisibility certificate — the ring identity
+  `v + r(N−1) = (N+1)(vD − pr) − Q(v − 2r)` makes the whole modular argument one
+  `linear_combination`, no inverse API), `rung_core`, `rung_band`,
+  `rung_floor_single` (variable-modulus real lift), `rung_floor_witness`
+  (the family floor: every element ≥ D/Q at t = a/Q).
+- **L2**: `small_moduli_seal_low` (q ≤ N), `dirichlet_step` (width-2-box
+  pigeonhole via `Finset.exists_ne_map_eq_of_card_lt_of_maps_to`),
+  `small_moduli_seal` (N < q ≤ 2N, N odd: the x-kills-residue-0, parity, and
+  reflected-element sub-cases).
+- **L3**: `packing_seal` — the circle packing with NO sorting: `(u,i) ↦ (u·a+i) % Q`
+  is injective on `[0,N] × [0,c)`, so `(N+1)·c ≤ Q` by cardinality.
+- `exists_binder_multiplier` (Bézout), and THM-1270's pair:
+  `Q_dvd_iff_binder_dvd`, `rung_dead_of_common_factor`.
+- Non-vacuity (MISTAKE-186 discipline): `member_4_127` — the kernel-checked floor
+  half of THM-1285's `M({1..29,31,120}) = 4/127`, at the closed-form witness 55/127.
+
+The formalization preserved the proofs' structure exactly; the one Lean-side
+discovery is that the certificate form of L1 eliminates modular inverses entirely
+(coprimality enters only through the existence lemma), which should be the template
+for formalizing the general e-channel certificates.
