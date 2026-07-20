@@ -1,0 +1,6 @@
+(1) regression: det J of six-function form = {(0, 0, 0): -2} == -2: True
+(2) symbolic det:  290 terms
+(3a) det at known solution: True
+(3b) linearized constraint matrix: 20 x 22
+(3c) rank = 13, NULLITY (infinitesimal deformations within ansatz) = 9
+     unknown order: ['A0', 'A1', 'A2', 'A3', 'A4', 'B0', 'B1', 'B2', 'B3', 'C0', 'C1', 'C2', 'C3', 'D0', 'D1', 'D2', 'D3', 'E00', 'E01', 'E02', 'E10', 'E11']

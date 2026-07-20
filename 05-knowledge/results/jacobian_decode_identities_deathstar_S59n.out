@@ -1,0 +1,7 @@
+(I) six-function form == F exactly: True
+(II) Phi(t) = tC + E0*D = {(0,): 6, (1,): 4}  == 4t+6: True
+     root t* = -3/2: True
+(III) Psi(t) = E0*A + t^2*B = {(0,): 2, (1,): 3, (2,): 1}  == (1+t)(2+t): True ; Psi(t*) = -1/4 == -1/4: True
+(IV) u(t*) = -1/2 ; (4+3t)(t*) = -1/2 ; crossing (both -1/2): True
+(V) E0(t*) = 13/2 == 13/2 == z* == s*: True
+(VI) 3AD' == 2A'D: True
