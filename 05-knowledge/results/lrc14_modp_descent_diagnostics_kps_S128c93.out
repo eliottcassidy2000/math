@@ -1,0 +1,19 @@
+== (a) the safe-prime / unsmooth-prime caging budget ==
+  SAFE (p=2q+1): 85 primes, 227..7523, sum ln = 665.5 > 657.6 OK
+  UNSMOOTH (lpf(p-1) >= (p-1)/4): 89 primes, 227..4517, sum ln = 659.5 > 657.6 OK
+
+== (b) sea samples: safe {719, 839, 983} vs smooth controls {631, 991, 1009} ==
+  [SAFE] p=719 (lpf-frac 0.500): ok=2/400 distinct=2 N>>2 near-shell {0: 2} [1s]
+  [SAFE] p=839 (lpf-frac 0.500): ok=3/400 distinct=3 N>>4 near-shell {0: 3} [1s]
+  [SAFE] p=983 (lpf-frac 0.500): ok=1/400 distinct=1 N>>0 near-shell {0: 1} [1s]
+  [SMOOTH] p=631 (lpf-frac 0.011): ok=3/400 distinct=2 N~4 near-shell {0: 2} [0s]
+  [SMOOTH] p=991 (lpf-frac 0.011): ok=5/400 distinct=5 N>>12 near-shell {0: 2, 1: 2, 2: 1} [1s]
+  [SMOOTH] p=1009 (lpf-frac 0.007): ok=2/400 distinct=2 N>>2 near-shell {0: 2} [1s]
+
+== (c) resonance-concentration diagnostic (expansion, safe vs smooth) ==
+  [SAFE] p=719: r-mean 7.05 (indep ~7.25) var 3.66 p99 17 max 25  tail-ratio max/mean 3.5
+  [SAFE] p=839: r-mean 8.19 (indep ~8.31) var 4.16 p99 19 max 29  tail-ratio max/mean 3.5
+  [SAFE] p=983: r-mean 9.92 (indep ~9.98) var 7.11 p99 23 max 35  tail-ratio max/mean 3.5
+  [SMOOTH] p=631: r-mean 6.35 (indep ~6.43) var 4.65 p99 15 max 22  tail-ratio max/mean 3.5
+  [SMOOTH] p=991: r-mean 9.75 (indep ~9.90) var 6.03 p99 23 max 35  tail-ratio max/mean 3.6
+  [SMOOTH] p=1009: r-mean 10.23 (indep ~10.29) var 6.40 p99 24 max 36  tail-ratio max/mean 3.5
