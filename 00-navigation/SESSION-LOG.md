@@ -7,6 +7,36 @@
 - **Series 1 = H_n exact (5/5). Series 2 = H_n + 2^(n-1) - 1:** increments 1/k+2^(k-2) = (k*2^(k-2)+1)/k = PROTH numbers over k -- the table's diagonal harmonicized. Printed terms 1,2,4 exact (109/12 kills the rival Erdos-Borwein Sum(2^k-1)/k = Sum C(n,k)/k, which gives 103/12); term 3 = denominator slip (29/6 vs 29/3); term 5 open (1037/60 vs 1079/60). Both series = harmonic transforms of lines of the n*2^x+1 table (all-ones row -> H_n; diagonal -> series 2).
 - **Bilinear +1 rim:** 2n+1, 2^x+1, n*2^x+1, S-T's ns+1, THM-1269's (N+1)D-1, THM-1292's K(m+1)+1, and the deep well's 183 = Phi_6(14) = 13*14+1 are ONE quantization family (m*b +- 1). Moser's circle = the external archetype of MISTAKES category E (width-of-G_n C(n-2,floor) failing at n=7 is the repo's own instance). Micro-instance en route: Proth diagonal 3,7,17,41 = companion Pell for 4 terms, breaks 97 vs 99 -- and 99 = T(7,5) = Moser R(8) (charm-grade, on-theme).
 - Scripts + frozen outs: faulhaber_triangle_series_opus_S419.py, _S419b.py. Reflection: faulhaber-triangle-proth-diagonal-and-bilinear-rim-opus-S419.md. Handoffs: row-8 test; owner-confirm series-2 terms 3/5; bilinear "duty sign" theorem; diagonal-sum law from Faulhaber identity.
+## death-star-2026-07-20-S59s — THE n·2^x+1 PROTH UNIFICATION (THM-1355): the repo's two master +1 constants (observer 2n+1 × hypotenuse 2^x+1) are the axes of ONE Proth table; the owner triangle = the THIRD figurate triangle (power-sum); Moser-break at cubes; cubic-Fibonacci; harmonic = staircase resistance; odd-degree = Rédei. 3 repo-mining pulls
+
+Owner: the triangle {1},{2,1},{3,3,1},{4,6,5,1},{5,10,14,9,1},{6,15,30,37,17,1},{7,21,55,101,99,33,1}
+(third perspective on triangular numbers); Fibonacci / powers of 2 / Moser; 2n+1 and 2^x+1;
+n·2^x+1 table; two rational series; mine past work; how odd degree relates to tournaments. Long
+session, 3 parallel Explore pulls (2^x+1 / 2n+1-observer / Moser-Fibonacci-harmonic). FINDINGS:
+(1) THM-1355: f(x,n)=n·2^x+1 = PROTH numbers UNIFYING the two axes — x=1 = 2n+1 (observer principle
+A_k↔n=2k+1, Rédei-odd, LRC modulus 2n−1/THM-401), n=1 = 2^x+1 (hypotenuse H=1+2^d THM-250/284, Fermat
+rungs THM-871, CD tower THM-448/868, 2-adic vacuum α₀=1 THM-466); Fermat = n=1,x=2^m; Cullen = diagonal;
+ALL ODD (x≥1) = Rédei signature. The shared +1 = the OCF vacuum digit = the observer = the conserved
+u=1+xy of the Jacobian arc. (2) The owner triangle = the THIRD figurate triangle (power-sum: col j =
+Σk^j) completing opus-S317/mac-mini-S109/klein-S313's polyhedral (row sums 2^n) + polygonal (row sums
+Moser A000127); triangular numbers = col1 in ALL THREE = the 'third perspective'. (3) MOSER BREAK: cols
+exact for j≤2, break at cubes (1,9,37,101 vs Σk³ 1,9,36,100) — same grammar as Moser (2^n→31) and the
+hypotenuse full-class (breaks n=7). (4) FIBONACCI→CUBIC: shallow diagonals 1,2,4,7,12,21,37,
+a(n)=2a(n-1)-a(n-2)+a(n-3), growth x³-2x²+x-1 ≈ 1.7549 (Pisot analog of φ). (5) HARMONIC (series 1) =
+STAIRCASE electrical resistance R_{n-2} (HYP-6865); series 2 = 2-power harmonic (owner values
+transcription-noisy — a negative increment proves a typo); log-shadow + exp-shadow = the two axes.
+(6) ODD-DEGREE↔TOURNAMENTS: family odd = Rédei; mirror = boxeph-S146 odd-degree conjecture (JC fiber
+1+2=3). Row sums 1,3,7,16,39,106,317. OPEN: exact form/OEIS of the triangle (A143542? OEIS 403'd).
+Credits: opus-S317, mac-mini-S109, klein-S313, boxeph-S146, HYP-6865, observer principle
+(opus-2026-06-30).
+
+Prompt (owner): consider the triangle {1},{2,1},{3,3,1},{4,6,5,1},{5,10,14,9,1},{6,15,30,37,17,1},
+{7,21,55,101,99,33,1}... third perspective on triangular numbers... Fibonacci, powers of 2, Moser's
+circle problem... 2n+1 and 2^x+1... n·2^x+1 table... rational series 1,3/2,11/6,25/12,137/60 and
+1,5/2,29/3,109/12,1079/60... mine past work... how odd degree relates to tournaments
+
+FILES: THM-1355, HYP-8165, reflection the-third-figurate-triangle, 2 scripts + outs, backlog lvii-lx,
+tangent, results INDEX. -> all
 
 ## boxeph-2026-07-20-S147 -- THE OWNER TRIANGLE DECODED (HYP-8165): T(m,j) = S_{j−1}(m−j+1) + C(m−6,j−4) — FAULHABER–PASCAL; columns = power sums (the THIRD perspective: vary the exponent); H_n = the p = −1 column; Mersenne–Moser break 1,3,7,15,29; the (x,n) grid = Proth/Sierpiński
 

@@ -1,0 +1,38 @@
+=== n*2^x+1 = PROTH NUMBER family: the two repo master-constants as axes ===
+  x=1 slice (2n+1) = ODD NUMBERS = observer principle A_k<->n=2k+1, Redei-odd:
+    [3, 5, 7, 9, 11, 13, 15]
+  n=1 slice (2^x+1) = hypotenuse H=1+2^d / Fermat rungs / CD tower:
+    [3, 5, 9, 17, 33, 65]  (3,5,17,257 = Fermat primes THM-871)
+  DIAGONAL x=n (n*2^n+1) = CULLEN NUMBERS: [3, 9, 25, 65, 161]
+  n=1, x=2^m (2^(2^m)+1) = FERMAT NUMBERS: [3, 5, 17, 257]
+  Proth's theorem: primality of k*2^x+1 (k odd, 2^x>k) is efficiently testable
+  => the family the owner wrote is the PROTH numbers; its two axes are the
+     repo's observer (2n+1) and hypotenuse (2^x+1). All ODD for x>=1 (Redei sig).
+
+=== THE THREE FIGURATE TRIANGLES (columns = a figurate family) ===
+  POLYHEDRAL (Pascal): row sums = 2^(n-1): [1, 2, 4, 8, 16, 32, 64]
+  POLYGONAL: row sums = Moser A000127     : [1, 1, 2, 4, 8, 16, 31] (1,2,4,8,16,31,57)
+  POWER-SUM (owner): row sums             : [1, 3, 7, 16, 39, 106, 317] (1,3,7,16,39,106,317)
+  TRIANGULAR NUMBERS appear as column 1 in ALL THREE (the 'third perspective'):
+    polyhedral col1 = C(n-1,1) = n-1;  polygonal col1;  power-sum col1 = Sum k = triangular
+  Owner col1 (triangular): [1, 3, 6, 10, 15, 21]
+
+=== THE MOSER-BREAK: owner columns = power sums, exact for j<=2, break at cubes ===
+  col j=0: EXACT
+  col j=1: EXACT
+  col j=2: EXACT
+  col j=3: BREAKS (col=[1, 9, 37, 101] vs Sum k^3=[1, 9, 36, 100])
+  <-> Moser: 1,2,4,8,16 looks like 2^n then breaks (31); hypotenuse 2^(n-2)+1
+     is exact single-flip but BREAKS at n=7 for full tiling class (THM/tiling-class).
+     THREE independent 'looks-simple-then-breaks' at the SAME lesson.
+
+=== FIBONACCI: shallow diagonals ===
+  Pascal shallow diagonals -> FIBONACCI (x^2=x+1, phi=1.618)
+  owner-triangle shallow diagonals: [1, 2, 4, 7, 12, 21, 37]  (cubic-Fibonacci)
+  recurrence a(n)=2a(n-1)-a(n-2)+a(n-3); growth root x^3-2x^2+x-1 ~ 1.7549
+  => the power-sum triangle's 'Fibonacci' is a CUBIC Pisot analog of the golden ratio.
+
+=== HARMONIC (series 1) = the STAIRCASE electrical resistance R_{n-2} (HYP-6865) ===
+  H_n: ['1', '3/2', '11/6', '25/12', '137/60']  = R_{n-2} pole resistance of staircase Delta_{n-2}; gamma = growth
+  series 2 (2-power harmonic Sum (2^k-1)/k): ['1', '5/2', '29/6', '103/12', '887/60']
+  the two series = log-shadow (harmonic~ln n) and exp-shadow (~2^n/n): the two axes again.
