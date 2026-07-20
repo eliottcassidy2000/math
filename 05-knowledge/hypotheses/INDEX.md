@@ -17065,6 +17065,27 @@ checking whether the two share a lemma.
 **Related:** THM-1685, THM-1680, THM-1655, THM-1635, THM-415 (vanishing sums), THM-1535
 (GMC cascade), HYP-8450 (JC monodromy vanishing sums), HYP-8495 (trinomial uniform).
 
+### HYP-8520 - The resultant/multinomial-ratio single-shot for TNC (replaces the refuted cyclotomic route)
+**Status:** OPEN, verified for trinomials (opus-2026-07-20-S423). See THM-1710. SUPERSEDES HYP-8515 route 2.
+
+The cyclotomic single-shot (HYP-8515 route 2 / THM-1705 s4) is REFUTED: tuned-cancellation
+points are NOT roots of unity -- |a| = ratio of multinomial coefficients (e.g. {-2,3,6}:
+|a|=1/sqrt2). So THM-415's vanishing-sums-of-roots-of-unity does NOT unify TNC with the
+JC-monodromy residual (HYP-8450); withdrawn.
+
+THE REPLACEMENT, verified: for a tunable trinomial, CT(m0) = M1 a^p + M2 a^q and CT(2m0) uses
+different reps/multinomials, so their root moduli differ and Res_a(CT(m0),CT(2m0)) != 0
+(8/8 tunable patterns, N<=4: resultants 72900, ..., 1.49e19, all nonzero).
+
+**Conjecture (corrected single-shot).** For every tunable k-nomial pattern, the amoebae of
+CT(Lambda^{l m0}) sit at DISTINCT radii in l (multinomial magnitudes grow with l), so the
+elimination ideal of {CT(m0),...,CT((k-1)m0)} has no common zero on (C*)^{k-2}. A uniform
+NEWTON-POLYGON/AMOEBA argument (nested-or-disjoint amoebae in l) proves it and closes TNC.
+This is ELEMENTARY (multinomial magnitudes), not deep cyclotomy -- a cleaner target.
+
+**Related:** THM-1710, THM-1705 (s1 common-ray stands; s4 route 2 withdrawn), THM-1680/1685,
+THM-415 (does NOT unify here), HYP-8450 (JC monodromy -- unification withdrawn).
+
 ### HYP-8515 - The uniform (k-1)-level TNC certificate + the cyclotomic single-shot closure
 **Status:** OPEN, two routes to a single-shot TNC proof (opus-2026-07-20-S422). See THM-1705.
 

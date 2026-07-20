@@ -1,3 +1,40 @@
+## opus-2026-07-20-S423 - The cyclotomic single-shot is REFUTED; resultant non-vanishing replaces it (THM-1710)
+
+Worked the single-shot route from THM-1705 (cyclotomic: all tuned points are roots of unity =>
+TNC via THM-415, unifying with the JC monodromy). TESTED IT FIRST -- and it is FALSE.
+
+**REFUTED.** Over all tunable trinomials R = 1 + a u^j + u^d (N<=4), 6 of 8 have tuned points
+OFF the unit circle: {-2,3,6} -> CT(m0)=5(2a^2+1), |a|=1/sqrt2; {-3,-1,3} -> 2(2a^3+3),
+|a|=(3/2)^{1/3}; {-4,1,6} -> 5(a^4+6a^2+2). The tuned modulus |a| is a RATIO OF MULTINOMIAL
+COEFFICIENTS, generically != 1. So the tuned locus is NOT cyclotomic, and THM-415's
+vanishing-sums-of-roots-of-unity does NOT unify TNC with the JC-monodromy residual (HYP-8450).
+The a^2=-1 of the original {-2,1,4} witness was the SPECIAL case of EQUAL multinomials (both
+reps multinomial 3), not the rule. Recorded so the unification is not re-proposed.
+
+**THE REPLACEMENT, verified.** The refutation reveals the true mechanism. For a tunable
+trinomial CT(m0) = M1 a^p + M2 a^q (multinomials M1,M2), with root moduli (M2/M1)^{1/(p-q)};
+CT(2m0) uses different reps/multinomials, so its root moduli DIFFER -- disjoint amoebae -- and
+Res_a(CT(m0), CT(2m0)) != 0. Confirmed for all 8 tunable trinomial patterns: resultants
+72900, 68062500, -1447498723328, 1284505600, 921600000000, 72900, 1.49e19 -- all nonzero. So
+the trinomial single-shot is a RESULTANT NON-VANISHING, an explicit polynomial-in-pattern
+condition, not a cyclotomic one.
+
+**CORRECTED SINGLE-SHOT CONJECTURE (HYP-8520).** For every tunable k-nomial pattern, the
+amoebae of CT(Lambda^{l m0}) sit at distinct radii in l (multinomial magnitudes grow with l),
+so the elimination ideal of {CT(m0),...,CT((k-1)m0)} has no common zero on (C*)^{k-2}. A
+uniform NEWTON-POLYGON/AMOEBA argument closes it -- ELEMENTARY (multinomial magnitudes), not
+deep cyclotomy. Cleaner target than the dead cyclotomic route.
+
+**STATUS.** THM-1705 s1 (common-ray closure) STANDS. THM-1705 s4 route 2 (cyclotomic) is
+WITHDRAWN. The surviving single-shot is the resultant/multinomial-ratio one (HYP-8520). Honest
+net: proposed a unification, tested it, refuted it, and extracted the real (cleaner) mechanism.
+
+**METHOD NOTE.** The {-2,1,4} witness's roots-of-unity were a coincidence of equal multinomials
+-- a one-example pattern that did not generalize. Testing the conjecture on a BROAD family
+before building on it caught it. (Same discipline as the sin(7t) and three-sixties refutations.)
+
+**Artifacts:** THM-1710; HYP-8520; THM-1705 s4/HYP-8515 route 2 withdrawn; 2 scripts + 2 outputs.
+
 ## death-star-2026-07-20-S67 -- GMC(2) ⟷ LRC(14): the same "positivity past the cancellation wall", one shared object (HYP-8515)
 
 **Owner:** creatively apply the recent GMC(2) work to the LRC.

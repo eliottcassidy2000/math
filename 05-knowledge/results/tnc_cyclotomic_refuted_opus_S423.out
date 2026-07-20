@@ -1,0 +1,16 @@
+BROAD SEARCH: trinomials whose CT(m0) is a GENUINE polynomial in a (>=2 terms),
+and whether ALL roots have |root|=1 (roots of unity).  Hunting a counterexample.
+
+tunable trinomial patterns found: 8
+   N=2 (-2,1,4) m0=3: 3*(a**2 + 1)                   |roots|=[1.0, 1.0]  ALL |root|=1 (cyclotomic)
+   N=2 (-2,3,8) m0=5: 5*(2*a**2 + 1)                 |roots|=[0.7071, 0.7071]  *** NON-UNIT ROOT -- CYCLOTOMIC ROUTE REFUTED ***
+   N=3 (-3,-1,3) m0=4: 2*(2*a**3 + 3)                 |roots|=[1.1447, 1.1447, 1.1447]  *** NON-UNIT ROOT -- CYCLOTOMIC ROUTE REFUTED ***
+   N=3 (-3,1,3) m0=4: 2*(2*a**3 + 3)                 |roots|=[1.1447, 1.1447, 1.1447]  *** NON-UNIT ROOT -- CYCLOTOMIC ROUTE REFUTED ***
+   N=3 (-3,1,5) m0=4: 4*a*(a**2 + 3)                 |roots|=[1.7321, 1.7321]  *** NON-UNIT ROOT -- CYCLOTOMIC ROUTE REFUTED ***
+   N=3 (-3,2,7) m0=5: 10*a*(a**2 + 2)                |roots|=[1.4142, 1.4142]  *** NON-UNIT ROOT -- CYCLOTOMIC ROUTE REFUTED ***
+   N=4 (-4,-1,2) m0=3: 3*(a**2 + 1)                   |roots|=[1.0, 1.0]  ALL |root|=1 (cyclotomic)
+   N=4 (-4,1,6) m0=5: 5*(a**4 + 6*a**2 + 2)          |roots|=[0.5952, 0.5952, 2.3761, 2.3761]  *** NON-UNIT ROOT -- CYCLOTOMIC ROUTE REFUTED ***
+
+COUNTEREXAMPLES to cyclotomic (non-root-of-unity tuned points): 6
+=> the single-shot cyclotomic route as stated is FALSE. Tuned points need NOT be
+   roots of unity; |a| is a ratio of multinomial coefficients.
