@@ -1,0 +1,58 @@
+==============================================================================
+(1) mac-mini's SHARPNESS WITNESS reproduced: a zero-free ODD map T^k -> R^2
+==============================================================================
+  f(t) = (cos 2*pi*t_1, sin 2*pi*t_1),  involution t -> t + h, h = (1/2,0,..,0)
+  k = 1   min |f| = 1.000000  (zero-free)   max oddness error = 1.45e-15
+  k = 2   min |f| = 1.000000  (zero-free)   max oddness error = 1.44e-15
+  k = 3   min |f| = 1.000000  (zero-free)   max oddness error = 1.44e-15
+  k = 5   min |f| = 1.000000  (zero-free)   max oddness error = 1.45e-15
+  k = 8   min |f| = 1.000000  (zero-free)   max oddness error = 1.45e-15
+  -> confirms ind(T^k) <= 1 for the single Z/2: BOTH coordinates carry the
+     SAME character, so the target is really S^1 and an equivariant map exists.
+
+==============================================================================
+(2) THE ALGEBRAIC HEART:  w_1...w_n != 0 in Lambda(F_2^k)  iff  h_i independent
+==============================================================================
+  In an exterior algebra a product of degree-1 classes is non-zero exactly
+  when they are linearly independent.  So the (Z/2)^n index survives to
+  degree n = rank of the half-period subgroup, and dies at n = rank + 1.
+  k = 2 :
+     n = 1   independent set exists : True   ->  w_1..w_n != 0  (index reaches degree 1)
+     n = 2   independent set exists : True   ->  w_1..w_n != 0  (index reaches degree 2)
+     n = 3   independent set exists : False  ->  w_1..w_n = 0  (collapse)
+  k = 3 :
+     n = 1   independent set exists : True   ->  w_1..w_n != 0  (index reaches degree 1)
+     n = 2   independent set exists : True   ->  w_1..w_n != 0  (index reaches degree 2)
+     n = 3   independent set exists : True   ->  w_1..w_n != 0  (index reaches degree 3)
+     n = 4   independent set exists : False  ->  w_1..w_n = 0  (collapse)
+  k = 4 :
+     n = 1   independent set exists : True   ->  w_1..w_n != 0  (index reaches degree 1)
+     n = 2   independent set exists : True   ->  w_1..w_n != 0  (index reaches degree 2)
+     n = 3   independent set exists : True   ->  w_1..w_n != 0  (index reaches degree 3)
+     n = 4   independent set exists : True   ->  w_1..w_n != 0  (index reaches degree 4)
+     n = 5   independent set exists : False  ->  w_1..w_n = 0  (collapse)
+  -> the reachable codimension is exactly k, the rank of the 2-torsion.
+
+==============================================================================
+(3) THE TOPOLOGICAL CLAIM at n = k = 2: DISTINCT characters force a zero
+==============================================================================
+  h_1 = (1/2, 0), h_2 = (0, 1/2).  f_1 odd under h_1 / even under h_2
+  (Fourier support m_1 odd, m_2 even); f_2 the mirror.  Sampling 120 maps.
+  maps with a CERTIFIED zero (non-zero winding on some cell) : 120 / 120
+  -> ALL have zeros, as the index argument predicts
+
+==============================================================================
+(4) THE CONTROL -- can this search FIND a zero-free map when one exists?
+==============================================================================
+  Same machinery, REPEATED character: f_1 and f_2 both odd under h_1 and even
+  under h_2.  Then the target is a single character's R^2 = S^1 and mac-mini's
+  witness applies, so zero-free maps MUST exist and the search must find them.
+  zero-free maps found with REPEATED characters : 1 / 120
+  explicit witness (cos 2pi x, sin 2pi x) is zero-free : True
+
+  INSTRUMENT VALIDATED: the search DOES find zero-free maps when they exist
+  (repeated characters) and finds NONE when the index argument forbids them
+  (distinct characters).  The contrast is the result:
+     Z/2, one character   -> ind = 1, codimension 1   (THM-1385)
+     (Z/2)^n, n distinct  -> codimension n <= k
+  The index-1 collapse is a property of the GROUP, not of the torus.
