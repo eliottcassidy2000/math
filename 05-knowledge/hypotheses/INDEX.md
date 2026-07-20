@@ -17004,3 +17004,33 @@ DONE; the sole remaining gap is radial Laplace determinacy (ker L != 0, L(t-1)=0
 orthogonal route (THM-1660/1620) bypasses ker L where the composite is a classical
 orthogonal family = order-2 = (M,N)=(1,1). Open beyond; matches klein 'sign-indefinite' +
 mac-mini 'Laplace determinacy'. Named next: radial = Laguerre side of the same Askey scheme.
+
+
+### HYP-8350 — FULLY CLOSED (mac-mini-S147, THM-1695). Complex via the Cauchy transform.
+THM-1675 closed the REAL case; THM-1695 closes COMPLEX p, cleaner and with no monodromy:
+`Psi==0 => C_mu(z) = int e^{-v}/(z-p(v))dv == 1/z` for `mu = p_*(e^{-v}dv)`; C_mu and 1/z
+agree off the measure-zero arc {1/p(v)}, hence as DISTRIBUTIONS, and `d_zbar` (with
+`d_zbar 1/(z-w) = pi delta`) gives `mu = delta_0`; but `mu({0}) = meas{p=0} = 0` for
+nonconstant p -- contradiction, so p==0. Verified 0/50610 complex nullcone members.
+**The charge-0/radial layer of GMC(2) is now done for GENERAL (non-Hermitian) P.**
+
+### HYP-8470 — cross-shell coupling IS A CHARGE DESCENT; a path to GMC(2) (THM-1695)
+`E[P^m] = sum L(s^{(sum|k|)/2} prod lambda_{k_i})`; after L a tuple's factorial argument is
+`sum phi(k_i)`, `phi(k) = |k|/2 + deg lambda_k`. The DOMINANT shell as m->inf maximises
+`sum phi` over balanced tuples = the TOP EDGE OF THE CHARGE NEWTON POLYGON. Symmetric top
+(both +-K present): dominant term `C(m,m/2)(lead lam_K lead lam_{-K})^{m/2}(m(K/2+d))!` is
+nonzero, so `E[P^m]=0 for large m => lead lam_K * lead lam_{-K} = 0` -- a DESCENT STEP
+dropping one top charge. Iterating terminates at ONE-SIDED charge (E[P^m]=0 trivially, and
+these P are MATHIEU-ZHAO-HARMLESS) or charge-0-only (killed by the now-closed radial layer).
+**So the GMC(2) nullcone is conjecturally EXACTLY the one-sided-charge polynomials => GMC(2)
+true.** The descent is the charge analogue of the TNC coefficient ladder (THM-1610); the
+one-sided terminus is DvdK's degenerate case.
+**RESIDUAL (what remains for full GMC(2)):**
+(i) rigorous TOP-SHELL DOMINANCE -- the top-edge factorial strictly beats all lower shells,
+    INCLUDING when several tuples tie at the top edge and leading coeffs might cancel (a
+    per-shell Watson estimate, THM-1665's method);
+(ii) the ASYMMETRIC-top LP (|K| != |K'|), where the balancing tuple is not simply +-K and the
+    charge-Newton-polygon top edge must be read from the LP;
+(iii) the uniform-in-Q `m >> 0` bound for 'one-sided => MZ-harmless'.
+These three + the closed radial layer would prove GMC(2). This is the natural full-attack
+target and is now sharply scoped.

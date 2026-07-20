@@ -1,0 +1,56 @@
+/Users/e/Documents/GitHub/math/04-computation/gmc2_complex_radial_and_charge_descent_macmini_S147.py:72: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  return np.trapz(integ, vs)
+==============================================================================
+PART A -- COMPLEX RADIAL: no complex p in the L-nullcone, and the Cauchy proof
+==============================================================================
+  Exhaustive over complex p with coeffs in {a+bi : a,b in [-2,2]}, deg<=3:
+    tested 50610 complex polynomials; nonzero L-nullcone members: 0
+
+  Cauchy-transform proof (rigorous, complex p):
+    Psi==0 => h(t)=int e^{-v}/(1-tp)dv == 1 => C_mu(z)=int e^{-v}/(z-p(v))dv == 1/z.
+    C_mu = 1/z off the measure-zero arc {1/p(v)}, so equal as distributions;
+    d_zbar gives mu = delta_0; but mu({0}) = meas{p=0} = 0 for nonconstant p. QED.
+
+  Illustration: for p not in the nullcone, C_mu(z) != 1/z (measured at a point):
+               p          z              z*C_mu(z)   ==1?
+       i v + v^2       3+1i         0.8229+0.5612i  False
+         1 + i v       3+1i         1.3308+0.3511i  False
+       v + i v^2       3+1i         0.9630+0.3630i  False
+  z*C_mu != 1 for these (nonconstant) p -- consistent with 'not in the nullcone'.
+
+==============================================================================
+PART B -- THE CHARGE DESCENT: the top edge of the charge Newton polygon
+==============================================================================
+  phi(k) = |k|/2 + deg(lambda_k).  Dominant shell maximises sum_i phi(k_i) over
+  balanced m-tuples.  For a SYMMETRIC top (charges +-K present, deg lambda_{+-K}=d),
+  the max is achieved by m/2 copies of +K and m/2 of -K, value m(K/2 + d), and the
+  coefficient is C(m,m/2) (lead lambda_K * lead lambda_{-K})^{m/2} * (that factorial).
+
+  Example: charges {-2,-1,0,1,2}, lambda_2 = a (const), lambda_-2 = b, others set.
+  Top shell (all +-2) dominates; E[P^m] ~ C(m,m/2)(ab)^{m/2}(m)!  as m->inf even.
+    (lam2,lam-2)              E[P^m] even m=2,4,6,8 grows like (ab)^{m/2}?
+          (1, 1) [Fraction(7, 1), Fraction(385, 1), Fraction(56071, 1), Fraction(15395521, 1)] top-charge product ab = 1
+          (1, 0) [Fraction(3, 1), Fraction(49, 1), Fraction(1531, 1), Fraction(63393, 1)] top-charge product ab = 0
+          (2, 3) [Fraction(27, 1), Fraction(6337, 1), Fraction(4143811, 1), Fraction(5300539329, 1)] top-charge product ab = 6
+
+  THE DESCENT STEP.  As m->inf (even), E[P^m] is dominated by the top shell
+  C(m,m/2)(lead lam_K * lead lam_{-K})^{m/2} (m(K/2+d))!.  E[P^m]=0 for all large m
+  forces  lead(lambda_K) * lead(lambda_{-K}) = 0,  i.e. one of the two top charges
+  drops in degree.  Iterate: the charge range shrinks until the top is ONE-SIDED,
+  where CT_w(Lambda^m) = 0 trivially (no balanced tuple uses the lone top charge at
+  full weight).  That is the cross-shell descent -- a charge analogue of the TNC
+  coefficient ladder (THM-1610).
+
+  Verification: with BOTH top charges present (ab != 0), E[P^m] != 0 for some m<=8:
+    (lam2,lam-2)  both present?  some E[P^m]!=0?
+          (1, 1)           True             True
+          (2, 3)           True             True
+          (1, 0)          False             True
+          (0, 1)          False             True
+
+SUMMARY
+  COMPLEX RADIAL: CLOSED -- Cauchy transform C_mu=1/z + d_zbar gives mu=delta_0,
+  no monodromy needed. HYP-8350 fully closed; charge-0 layer done for GENERAL P.
+  CHARGE DESCENT: the dominant shell is the top edge of the charge Newton polygon;
+  E[P^m]=0 for large m forces the top balanced-charge leading product to vanish, a
+  descent step. Symmetric-top step verified; the asymmetric-top LP is the residual.
