@@ -1,0 +1,6 @@
+F: det = -2
+E1: det = -4 ; images: [(0, 0, -1/2), (0, 0, -1/2), (0, 0, -1/2)] ; all == (0,0,-1/2): True
+E2: det = (-2)*1*(-2) = 4 [chain rule on verified factors]; images: [(Fraction(-1, 4), Fraction(3, 16), Fraction(-129, 256)), (Fraction(-1, 4), Fraction(3, 16), Fraction(-129, 256)), (Fraction(-1, 4), Fraction(3, 16), Fraction(-129, 256))] ; all == (-1/4,3/16,-129/256): True
+E3: det = (-2)^3 * 1 = -8 [chain rule]; images: [(Fraction(-1, 2), Fraction(-3, 2), Fraction(5, 2)), (Fraction(-1, 2), Fraction(-3, 2), Fraction(5, 2)), (Fraction(-1, 2), Fraction(-3, 2), Fraction(5, 2))] ; all == (-1/2,-3/2,5/2): True
+G4: det = -6 ; images: [(-3, 0, 0), (-3, 0, 0), (-3, 0, 0)] ; all equal: True (-3, 0, 0)
+G4 factored: [3*(x*y - 1)*(x**2*y**2*z + 3*x*y**3 - 2*x*y*z - 4*y**2 + z), 3*x**3*y**2*z + 9*x**2*y**3 - 6*x**2*y*z - 12*x*y**2 + 3*x*z + y, -x*(x**2*z + 3*x*y + 2)]
