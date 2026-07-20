@@ -16375,3 +16375,38 @@ one that would likely give the forcing directly.
 
 **Related:** THM-1570 (the degree <= 1 proof), THM-1535 s3 (the cross-term mechanism),
 HYP-8375 (the both-signs case).
+
+### HYP-8390 — the prime 2 as the boundary between the two arithmetics
+**Status: OBSERVED and PROVED in the easy direction (mac-mini-S138); the consequences are
+OPEN.** Redei says every `H(T)` is odd, so **2 never divides any H-value** -- the
+MULTIPLICATIVE side of the repo (the H-monoid under ordinal sum, strong tournaments as
+primes) contains no factor of 2 at all. Meanwhile the ADDITIVE side is `F_2^m` (the tiling
+hypercube), hence entirely 2-adic. **The two arithmetics live on DISJOINT sets of primes: 2
+is purely additive, the odd primes purely multiplicative.**
+Measured: `dim_Q span{log H(T)} = #{distinct primes dividing some H(T)}` = 1, 2, 4, 12, 30 at
+n = 3..7 (by unique factorization, elementary).
+**This reframes Redei:** oddness of H is exactly the statement that the multiplicative
+arithmetic avoids the additive one's only prime. Which raises three questions:
+(a) is the disjointness FORCED, or an accident of H? Test other multiplicative tournament
+    invariants under ordinal sum -- does any of them admit a factor of 2? If none does, the
+    disjointness is structural and deserves a theorem.
+(b) THM-1460 showed the arborescence count is NOT multiplicative under ordinal sum (it picks
+    up `det(|T1| I + L_in(T2))`). Its values are NOT all odd -- transitive gives `(n-1)!`,
+    divisible by 2 for n >= 3. **So `sum_r a_r` sits on BOTH sides of the prime split.** Is
+    that why its logarithm gains a size-dependent shift while `log H` does not? That would be
+    a real explanation rather than a restatement.
+(c) does the 2-adic valuation of `sum_r a_r` under ordinal sum have a clean law? `v_2` of
+    `(n-1)!` is Legendre's formula; the general ordinal-sum law is unexamined.
+
+### HYP-8395 — is any repo quantity transcendental for a reason that is not Lindemann?
+**Status: OPEN (raised by the S138 Vieta reflection).** Every transcendental quantity found in
+the repo so far reduces to `log(integer)` (tree entropy, THM-1460) or `e^{rational}`
+(THM-1520's saddle limit) -- both immediate from Lindemann. **A genuinely new transcendence
+would need a ratio of periods or similar, and I found no candidate.**
+Note the repo's own four constants sit on four different rungs of the rationality ladder:
+`sqrt2` algebraic irrational; `e`, `pi` transcendental; **`gamma` not even known irrational**.
+`gamma` enters through `Gamma(1/b)^b ~ b^b e^{-gamma}`, i.e. through exactly the Gamma
+machinery the fiber fraction `(1/2)_k/k!` lives in -- so if any repo constant is going to
+touch a genuinely open irrationality question, it is that one. **Not a research programme,
+a flag:** do not claim novelty for a transcendence that is just Lindemann, and check against
+this entry before doing so.
