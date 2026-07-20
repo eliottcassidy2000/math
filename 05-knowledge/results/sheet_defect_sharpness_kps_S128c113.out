@@ -1,0 +1,53 @@
+==============================================================================
+INSTRUMENT VALIDATION (both halves must pass before anything is reported)
+==============================================================================
+  CONTROL, the known triple collision:
+     q = (-1/4, 0, 0)           fibre = 3   resultant degree = 2   (expect 3: True)
+  GENERIC targets (these must ALSO come out 3 -- the first instrument did not):
+     q = (2, 0, 5/3)                        fibre = 3   resultant degree = 3
+     q = (-5/2, -2/3, -5)                   fibre = 3   resultant degree = 3
+     q = (-2, 2, 1/3)                       fibre = 3   resultant degree = 3
+     q = (-4/3, -2, -1)                     fibre = 3   resultant degree = 3
+     q = (-1, 1, -4)                        fibre = 3   resultant degree = 3
+  instrument validated : True
+
+==============================================================================
+THE NON-PROPERNESS LOCUS
+==============================================================================
+  THM-1315 records the caustic as proportional to a^2 * K, so a = 0 is the
+  cheapest probe; all three target hyperplanes are tried.
+  --- a = F1 = 0 ---
+     q = (0, 2, -3)                           fibre = 3   deg = 3  
+     q = (0, -2, -3/2)                        fibre = 3   deg = 3  
+     q = (0, 1, 5)                            fibre = 3   deg = 3  
+     q = (0, -1, -1)                          fibre = 1   deg = 1     <-- SHEET LOST
+     q = (0, -3, -1)                          fibre = 3   deg = 3  
+  --- b = F2 = 0 ---
+     q = (0, 0, -5/3)                         fibre = 1   deg = 1     <-- SHEET LOST
+     q = (5/3, 0, -1/2)                       fibre = 3   deg = 3  
+     q = (-1/2, 0, 1)                         fibre = 3   deg = 3  
+     q = (-3, 0, 0)                           fibre = 3   deg = 2  
+     q = (-5/3, 0, 1/3)                       fibre = 3   deg = 3  
+  --- c = F3 = 0 ---
+     q = (-5/2, -5/3, 0)                      fibre = 3   deg = 2  
+     q = (-2, -1, 0)                          fibre = 3   deg = 2  
+     q = (0, -1/2, 0)                         fibre = 3   deg = 2  
+     q = (0, -5/2, 0)                         fibre = 3   deg = 2  
+     q = (0, 2, 0)                            fibre = 3   deg = 2  
+
+==============================================================================
+VERDICT
+==============================================================================
+  Fibre size 1 < 3 at q = (0, -1, -1), so the defect there is 2.
+  Minimum defect observed over the probes : 2
+
+  CONSEQUENCE.  (Q_2) -- 'Keller + at most 2 sheet(s) lost at infinity =>
+  automorphism' -- is FALSE, witnessed by this map.  So the classical rung
+  cannot be weakened to allow that many lost sheets; 'no loss' is sharp at
+  that threshold.
+
+  Independent of the outcome above, the structural point stands: rung 2 is
+  stated along the DEFECT axis, and the lattice improves it along three OTHER
+  axes -- Jelonek singularity type, Galois-ness, and the point-stabiliser
+  condition.  A hypothesis can be unimprovable in its own direction and still
+  sit near the bottom of the lattice.
