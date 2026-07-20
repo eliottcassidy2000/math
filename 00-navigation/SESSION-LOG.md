@@ -20,6 +20,28 @@ six-hidden-faces-ghost-channel-shared-gates-and-the-mirror-stack-opus-S405, scri
 frozen out (lrc_hidden_faces_ghost_channel_and_gates). -> all
 
 ---
+## mac-mini-2026-07-19-S125 -- THE TWO-FAR STRATUM IS GAP-EMPTY TO FARS <= 300 (HYP-7985 RESOLVED): complete duty+rung-filtered sweep of W = S u {x,y} (S subset {1..13}, |S|=11, 14 <= x < y <= 300): 2.75M raw combinations, 804,119 scanned, ZERO in-gap, ZERO tight, no two-far 4/55 realizer (prior caps 32/34 -> 300) + THE SMALL-WITNESS UNIFORMITY: every family beaten to >= 3/41 by a witness of denominator q <= 41 (= the gap-top's own modulus; exit-q max over the whole sweep) -- theorem candidate with the axis-5 escape channel PRE-REGISTERED (fars == 0 mod lcm(15..41) kill all small witnesses; the law needs BAD_q residue analysis + a separate duty-saturated argument, exactly kps-c88's requested lift-level kill theorem)
+
+Owner: run the hamming-2 duty-trading sweep (S124 lead (ii)). Method: proved-necessary filters
+(duties {2..13} since 3/41 < 1/13; no 14-multiple since covering => M >= 14/183 > 3/41; rung
+pair-sum since an in-gap maximizer needs an opposite-slope active pair with D = M*s integer);
+superset-grid ascending-modulus scanner with early exit at clearance >= 3/41; per-complement
+core-clearance precompute (0.8 s at Vmax 60, 37 s at Vmax 300). Below-floor/tightness already
+excluded on the stratum by THM-734, so the gap was the only open question and the rung filter
+is sound for exactly it. Controls: AP/GW exact 1/14 (independent path), F_3(13) exits at
+t = 17/41 exactly. Independent exact-M spot-checks on the five most resistant families all
+confirm (9/113, 13/127, 27/277, 3/32, 5/59). Resistant census: exit-q = 39/40/41 families
+cluster at removals {10,12} with duty-split fars ({1..9,11,13,20,108}: 10|20, 12|108) -- the
+named first targets for the three-far frontier. The k=10 multi-killer {1..10,13,22,84} is
+correctly OUTSIDE the stratum's filters (84 = 14*6 => covering => M >= 14/183 > 3/41).
+HANDOFFS: (ii-a) small-witness law proof (78 finite BAD_q analyses + lcm-channel kill);
+(ii-b) three-far stratum (GW-Hamming-2 with 24 retained lives there).
+
+Prompt (owner): run the hamming-2 duty-trading sweep
+
+FILES: HYP-7985 (RESOLVED), script+out lrc14_twofar_stratum_sweep_macmini_S125, backlog S124
+lead (ii) EXECUTED with two new follow-ups, results INDEX. -> all
+
 ## opus-2026-07-19-S404 -- THM-1291: HYP-7970 (the CF ACTIVE-LEG LAW) IS PROVED (owner: prove it, full session). THREE UNCONDITIONAL PIECES + THE LAW UNDER AN EXACT SCOPE: Prop 0 -- at any maximizer t* = a/q the active speeds occupy ONE +- residue class mod q, straddle sums quantize to kq, D = k*(qM); PINCH LEMMA -- both sides are always active (no plateaus, slope argument), so "pinched" is automatic; LEMMA 1 (unimodular basis, self-contained) + (A) -- the FIRST integer u* whose distance at t* drops to <= M is ALWAYS a convergent denominator of a/q (referee: 0 failures / ~200k random instances); (B) THE LAW -- under H (u* is itself a speed <=> no non-speed integer below the smallest active speed beats M): the smallest active speed IS that convergent q_m and every straddling pair through it has s = kq, D = k*delta_m = k*|q_m a - p_m q| -- THE DETERMINANT IS THE CF REMAINDER OF THE ACTIVE CONVERGENT. H is NECESSARY (390 random violations found, (A) intact in every one; S403's two control-failures are exactly H-failures: primes13 u*=1 not a speed, mixed u*=2 not a speed) and holds across the entire known near-floor corpus (which carries {1..11}-type prefixes). COROLLARIES: (1) ladder unification -- {1..11,13,12m} is ONE convergent (leg 5) at growing remainder, and the reduced/represented distinction (MISTAKE-173) is structural (m=5: value reduces to 1/13, maximizer stays at 65 because speed 13 kills every a/13); (2) THE 4/55-HUNT TABLE -- window fractions share CF [0;13,1,k>=2,...], so under H a rung realizer's (smallest-active-speed, numerator) pair is pinned to a FINITE explicit table per rung -- compose with boxeph's CRT stack and death-star's gates: three constraint systems on ONE finite parameter. CONSUMERS AMENDED: THM-1269 now carries the CF-refinement banner ("bound D" = "bound k*delta_m under H" -- Ostrowski territory). FLEET NOTES: mac-mini-S124's log header says "HYP-7970 RESOLVED" for DUTY-QUANTIZATION content -- likely an ID collision (my HYP-7970 = the CF law, pushed at S403 close-out; first-push adjudicates; their duty finding deserves its own number) -- flagged, not unilaterally renumbered; their 12|x dichotomy on the 4/55 single-far candidates converges with Corollary 2's table and their S123 rung-lattice is the dominance face of the same object -- compose.
 
 Prompt (owner): prove HYP-7970, spend a full session on it
