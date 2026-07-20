@@ -18,6 +18,16 @@ exact rational arithmetic on named families; the census part is exhaustive.
 Nothing else. No 3/40, no 4/53, no k ≥ 3 stratum value — through height 36 the
 attained bottom spectrum is exactly {1/14, 2/27, 3/41}.
 
+> **COMPLETION TO HEIGHT 45 (same session, exhaustive):** exactly ONE family joins
+> in [37, 45] — {1..12,39} = K(3) at M = 3/40 (referee-exact), and NOTHING in
+> [41, 45]. So **h_min(3/40) = 39 exactly** (37–38 excluded exhaustively), the
+> complete sub-1/13 table at height ≤ 45 is EIGHT families, and **every one is a
+> rung of the two ladders** — zero off-ladder objects through height 45. The
+> next possible entrants are L(4) = {…,48} (4/53) at 48 and K(4) = {1..12,52}
+> at 52, both verified-exact values; the height-46..64 window is covered for the
+> SUB-GAP by THM-1290 (no (1/14,3/41) member to 64) but the full sub-1/13
+> census beyond 45 is the named next increment.
+
 ## 2. Every one of these families is a rung of a parametrized ladder
 
 - **The 12m-ladder** L_B(m) = B ∪ {12m} over a 12-base B:
