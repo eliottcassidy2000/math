@@ -1,0 +1,45 @@
+== (1) the z-affine det split, verified on F ==
+  det[A_x,A_y,A] = 0   (condition 1: engine degeneracy)
+  mixed term     = 0   (condition 2)
+  det[B_x,B_y,A] = -2   (condition 3: the constant = det JF)
+
+== (2) the engine curve ==
+  A = u³·γ(x/u) with γ(s) = (1, 3s, −s³): [0, 0, 0] (zero ⟹ verified)
+  γ'×γ'' = [-18*s, 0, 0]  — vanishes at s=0 ⟹ CUSP at s=0:
+  the engine is a CUSPIDAL CUBIC (projectively unique class).
+
+== (3) unification: the variant-radical examples' engines ==
+  radical 1+(-2)xy: det[A_x,A_y,A] = 0; P(A) = [1 : 3s : −s³] with s = x/(1+-2xy) — same cuspidal cubic
+  radical 1+(3)xy: det[A_x,A_y,A] = 0; P(A) = [1 : 3s : −s³] with s = x/(1+3xy) — same cuspidal cubic
+
+== (4) which engine curves are allowed? line and conic engines ==
+  line engine A=(1,x,0): condition (1) det = 0 (auto-satisfied)
+  then det[B_x,B_y,A] = Derivative(B2(x, y), x)*Derivative(B3(x, y), y) - Derivative(B2(x, y), y)*Derivative(B3(x, y), x)
+  = x·(∂(B2,B3) minor) − (B3-minor): a solvable transport eq — but the
+  fiber system with a LINE engine is z-linear+affine ⟹ fiber degree of
+  the reduced curve system = 1 ⟹ Keller line-engine maps are BIRATIONAL
+  ⟹ invertible (Keller 1939): LINE ENGINES CANNOT GIVE COUNTEREXAMPLES.
+  File "<stdin>", line 37
+    B2 = sp.Matrix([3*x*u**2, 6*x**2*u? if False else 0, 0, u**3]) if False else sp.Matrix([x*u**2, x**2*u, x**3, u**3])
+                                      ^
+SyntaxError: invalid syntax
+== (2') CORRECTION: the cusp is at s = infinity (s=0 is a hyperflex) ==
+  27p^2 + q^3 at (p,q)=(-1/s^3,-3/s^2): 0  => (2,3)-cusp at infinity  OK
+
+== (5) the n=4 (z,w)-affine det conditions ==
+  shifted double cusp-engine: z2=0, zw=0, w2=0
+  engine + monomial partner: z2=0, zw=0, w2=0
+  engine + y-mirrored engine: z2=0, zw=deg20, w2=0
+
+  (top-block conditions z^2 = zw = w^2 = 0 are the n=4 'engine surface'
+   degeneracy: {A_x, A_y, B_x, B_y, A, B} must span <= 3 dims pointwise —
+   the PENCIL of engines must itself be curve-degenerate. The naive
+   double-engine candidates above measure how far each is from that.)
+basis size (deg<=4): 60
+per-basis condition polynomials computed
+linear system: 214 x 60; computing nullspace...
+nullspace dimension r = 4
+assembling quadratic form (pairwise dets)...
+det[Cx,Cy,A,B] IDENTICALLY 0 on the whole nullspace:
+  NEGATIVE — deg<=4 C over the shifted double cusp-engine cannot
+  give a Keller map (det degenerates). Box-bounded result.
