@@ -1,0 +1,19 @@
+== (A1) universal fiber cubic ==
+resultant = -W**6*c**2*(27*W**3*a**2*c**2 - 18*W**3*a*b*c + 16*W**3*a + W**3*b**3*c - W**3*b**2 - 12*W*a + W*b**2 - 4*a)
+collision target check: -(W - 1)*(2*W + 1)**2  (= -(4W^3 - 3W - 1) = -(T_3(W) - 1))
+
+== (A2) discriminant ==
+disc_W = -4*(54*a**2*c - 18*a*b + b**3)**2*(27*a**2*c**2 - 18*a*b*c + 16*a + b**3*c - b**2)
+dD/dc = 54*a**2*c - 18*a*b + b**3 ; disc == -4*(dD/dc)^2*D: True
+
+== (A3) fiber spectrum spot checks ==
+  (1,1,1) [generic]: fiber = 3
+  (1,1,17/54) [S=0, D=11^3/108]: fiber = 3
+  (-1,2,-2) [D=0]: fiber = 1
+  (-1/4,0,0) [collision target]: fiber = 3
+
+== (A4) k=2 transplant ansatz ==
+20 coefficient equations; solutions: [{s: 0, t: 0, u: 0}]
+  (only s=t=u=0 with det=0: NO nondegenerate k=2 Keller sibling in this shape)
+
+done.
