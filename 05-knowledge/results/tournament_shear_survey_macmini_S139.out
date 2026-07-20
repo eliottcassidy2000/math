@@ -1,0 +1,35 @@
+== (A) Rosetta laws, independent verification ==
+  Faulhaber column law: deviations (row,col)->delta: [((6, 4), 1), ((7, 4), 1), ((7, 5), 1)]
+  kps claim: exactly three +1 deviations at (6,4),(7,4),(7,5): CONFIRMED
+  penultimate diagonal: [2, 3, 5, 9, 17, 33] = 1+2^(n-2): CONFIRMED
+  main diagonal (all 1s): [1, 1, 1, 1, 1, 1, 1]
+  shear-2 anti-diagonal sums (convention 2n-k): [1, 1, 3, 4, 9, 16, 36, 80, 134, 116, 61, 21]
+
+== (B) tournament-native shear survey ==
+  A000568 shear-1 sums: [1, 2, 4, 8, 20, 76, 532, 7412, 198948]  => OEIS: lookup-err
+  A000568 shear-2 sums: [1, 1, 3, 5, 15, 61, 471, 6941, 192007]  => OEIS: lookup-err
+  A000568 shear-2 prods: [1, 1, 2, 4, 24, 224, 10944, 1541120, 2096169984]  => OEIS: lookup-err
+  W(n) shear-1 sums: [1, 3, 11, 43, 201, 1129, 7479, 57231]  => OEIS: lookup-err
+  W(n) shear-2 sums: [1, 2, 9, 34, 167, 962, 6517, 50714]  => OEIS: lookup-err
+  W(n) shear-2 prods: [1, 2, 8, 64, 1264, 59392, 8026400, 2954870784]  => OEIS: lookup-err
+  ladder-denoms shear-1 sums: [14, 41, 81, 122, 175, 241]  => OEIS: lookup-err
+  ladder-denoms shear-1 prods: [14, 378, 15120, 619920, 32855760, 2168480160]  => OEIS: lookup-err
+  ladder-denoms shear-2 sums: [14, 27, 54, 68, 107, 134]  => OEIS: lookup-err
+  ladder-denoms shear-2 prods: [14, 27, 560, 1107, 29680, 73062]  => OEIS: lookup-err
+  cross-table coincidences: none
+== engine calibration: Pascal columns, shear-1 sums = 2^n?, shear-2 = Fibonacci? ==
+  shear-1 sums: [1, 2, 4, 8, 16, 32, 64, 128, 256]  (2^n: [1, 2, 4, 8, 16, 32, 64, 128, 256])
+  shear-2 sums: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]  (Fibonacci: 1,2,3,5,8,13,21,34,55,89)
+
+== the S138 flip table (rows skip s>=2, cols m) under shears ==
+  shear-0 sums:  [67, 136, 424, 1216, 977, 766, 343]  => OEIS: ABSENT
+  shear-1 sums:  [3, 10, 33, 108, 351, 892, 2532]  => OEIS: ABSENT
+  shear-2 sums:  [3, 5, 16, 42, 103, 259, 668, 935, 1021, 877]  => OEIS: ABSENT
+  shear-1 prods: [3, 25, 1287, 471801, 1277551275, 2207341577]...  => OEIS: ABSENT
+
+== flip-table columns as difference structure (bonus) ==
+  skip 2: diffs [2, 6, 18, 36, 84, 194]
+  skip 3: diffs [8, 16, 48, 140, 400]
+  skip 4: diffs [24, 58, 142, 462]
+  skip 5: diffs [68, 208, 584]
+  skip 6: diffs []

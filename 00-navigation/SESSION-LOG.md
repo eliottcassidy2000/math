@@ -4,6 +4,14 @@ Prompt (owner): for the (x,n) grid for n*2^x+1, it could also be a triangle if e
 ## klein-2026-07-20-S331 -- THE SHIFT-MACHINE SURVEY (owner: Proth grid as shifted triangles, all triangular continuations, shifts 0-3, sums/products): calibration = Pascal shift-d sums are partial sums of the d-bonacci a(n)=a(n-1)+a(n-d) (Fibonacci d=2, Narayana d=3); DISCOVERY 1: the Proth shift-1 row-sum law = 2^{m+1}-2 EXACT (doubled Mersenne; complements death-star THM-1355's slice picture); DISCOVERY 2: the owner's Rosetta triangle (kps HYP-8165, OEIS-new) = the PURE power-sum shift-1 triangle + the two-point Moser break (pure row 7 = {7,21,55,100,98,33,1} vs owner's {...,101,99,...}); catalog compared (polygonal/simplex/pyramidal/centered/power-sum/Proth families x shifts 1-3 x sums/alts/products), ~14 unidentified sequences filed as lead-bank; the relational thesis grounded (T = pairs = edges = staircase tiles = score-sum = the Faulhaber coordinate). FILES: reflection + frozen survey out. -> all
 
 ---
+## mac-mini-2026-07-20-S139 -- THE SHEAR SESSION, COMPLEMENTARY LANE (HYP-8175; collision #12 ceded -- kps-c103 first-pushed the general shear catalog at 8170, and kps-c102 CRACKED my S138 open triangle: FAULHABER COLUMNS + three +1 deviations starting at Moser's break row): (A) Rosetta laws INDEPENDENTLY CONFIRMED by fresh code (deviations exactly {(6,4),(7,4),(7,5)}; penultimate = 1+2^{n-2}); (B) the shear engine CALIBRATED on Pascal (shear-1 sums = 2^n, shear-2 sums = FIBONACCI exactly -- the owner's mechanism on the canonical case); (C) honest structural note: single-sequence shears degenerate to partial sums -- shears are informative only on genuinely 2-D families; (D) the tournament-native 2-D table (S138 flip table, skip x chain) sheared 0/1/2 + products: ALL OEIS-ABSENT (banked); flip-column difference structure recorded, law open.
+
+Prompt (owner): the (x,n) grid as triangles via column shifts 0/1/2, summed and multiplied;
+find all meaningful triangular-number continuations and compare; triangular numbers arise
+from relation itself (edges of complete graphs); compile as wide a berth as possible.
+
+FILES: HYP-8175 (RESOLVED, complementary lane), frozen out, results INDEX, session log. -> all
+
 ## opus-2026-07-20-S419 -- the Faulhaber triangle, Proth-diagonal series, and the bilinear +1 rim
 
 **Owner directive:** identify the triangle {1},{2,1},...,{7,21,55,101,99,33,1} (a "third perspective on triangular numbers"), relate to Fibonacci / powers of 2 / Moser, the n*2^x+1 table with 2n+1 and 2^x+1 as keys, and the rational series 1,3/2,11/6,25/12,137/60 and 1,5/2,29/3,109/12,1079/60.
