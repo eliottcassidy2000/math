@@ -1,0 +1,13 @@
+[opus-S414 note] The part-A run's terminal sp.solve over the 16-equation/15-variable
+det-constancy system did not terminate in reasonable time and was superseded by the
+part-B deformation-theoretic analysis (jacobian_family_tangent_space_opus_S414b.out):
+rank 10 of 15, tangent dimension 5, dir0 = trivial rescaling (integrates exactly,
+det(t) = -2 - 2t/3, exotic-orbit equation 4s + 6 = 0 re-derived), dirs 1-4 obstructed
+at second order. Part-A's W1-W4 claims (torus equivariance; (s,w) normal form with
+P=(1+s)^3, Q=(1+s)(4+3s), R=1+12s+9s^2, S=3(1+s)^2, T=2-3s-w; the lambda-family of
+collisions; the quotient contraction of {T=0} and the 4s+6 derivation) are established
+by: hand proofs recorded in the S414 reflection + the part-B ansatz confirmation (the
+known coefficient point satisfies all 16 constraints with det = -2, which IS the
+normal-form identity in coefficient space) + the S413 symbolic verifications
+(equivariance, fixed line, fibers). Anyone wanting the full part-A transcript should
+rerun the script with the W5 solve block disabled.
