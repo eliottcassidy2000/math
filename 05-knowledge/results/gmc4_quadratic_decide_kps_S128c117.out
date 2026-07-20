@@ -1,0 +1,63 @@
+==============================================================================
+THE SURVIVING QUADRATICS: do their Q-moments die?
+==============================================================================
+
+  quad-2  (total degree 2)
+     E[P^m], m=1..11 : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+     E[P^m] = 0 for all m tested : True
+     Q = Z2       E[QP^m] = [-1, 2, 0, 0, 0, 0, 0]                     last non-zero m: 2
+     Q = Z1       E[QP^m] = [-1, 2, 0, 0, 0, 0, 0]                     last non-zero m: 2
+     Q = Z2b      E[QP^m] = [-1, 0, 0, 0, 0, 0, 0]                     last non-zero m: 1
+     Q = Z1b      E[QP^m] = [1, 0, 0, 0, 0, 0, 0]                      last non-zero m: 1
+     Q = Z1Z2     E[QP^m] = [-1, 6, -12, 24, 0, 0, 0]                  last non-zero m: 4
+     Q = Z1bZ2b   E[QP^m] = [0, -2, 0, 0, 0, 0, 0]                     last non-zero m: 2
+     Q = Z1Z2b    E[QP^m] = [-1, 2, -6, 0, 0, 0, 0]                    last non-zero m: 3
+     Q = |Z1|^2   E[QP^m] = [1, -2, 6, 0, 0, 0, 0]                     last non-zero m: 3
+     Q = Z2^2     E[QP^m] = [-2, 6, -12, 24, 0, 0, 0]                  last non-zero m: 4
+     Q = 1        E[QP^m] = [0, 0, 0, 0, 0, 0, 0]                      last non-zero m: None
+     Q's still non-zero near m = 11 : NONE
+     -> every Q tested has E[Q P^m] = 0 for large m, i.e. the MATHIEU
+        PROPERTY HOLDS here.  NOT a counterexample.  The m <= 3 sieve
+        that produced it was too shallow, and the hit is WITHDRAWN.
+
+  quad-3  (total degree 2)
+     E[P^m], m=1..11 : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+     E[P^m] = 0 for all m tested : True
+     Q = Z2       E[QP^m] = [-1, 4, 0, 0, 0, 0, 0]                     last non-zero m: 2
+     Q = Z1       E[QP^m] = [-1, 0, 0, 0, 0, 0, 0]                     last non-zero m: 1
+     Q = Z2b      E[QP^m] = [-1, 0, 0, 0, 0, 0, 0]                     last non-zero m: 1
+     Q = Z1b      E[QP^m] = [1, -4, 0, 0, 0, 0, 0]                     last non-zero m: 2
+     Q = Z1Z2     E[QP^m] = [-1, 2, -12, 0, 0, 0, 0]                   last non-zero m: 3
+     Q = Z1bZ2b   E[QP^m] = [1, -2, 12, 0, 0, 0, 0]                    last non-zero m: 3
+     Q = Z1Z2b    E[QP^m] = [0, 2, 0, 0, 0, 0, 0]                      last non-zero m: 2
+     Q = |Z1|^2   E[QP^m] = [1, -2, 12, 0, 0, 0, 0]                    last non-zero m: 3
+     Q = Z2^2     E[QP^m] = [-2, 10, -24, 96, 0, 0, 0]                 last non-zero m: 4
+     Q = 1        E[QP^m] = [0, 0, 0, 0, 0, 0, 0]                      last non-zero m: None
+     Q's still non-zero near m = 11 : NONE
+     -> every Q tested has E[Q P^m] = 0 for large m, i.e. the MATHIEU
+        PROPERTY HOLDS here.  NOT a counterexample.  The m <= 3 sieve
+        that produced it was too shallow, and the hit is WITHDRAWN.
+
+==============================================================================
+THE 5-TERM COUNTEREXAMPLE (drop one term from the published 6)
+==============================================================================
+
+  drop term 2 -> P = -z1*z1c*z2 - z1*z1c + z1c + z2*z2c + z2c
+     5 terms, degree 3
+     E[P^m] = 0 for m=1..11 : True
+     Q = Z2       E[QP^m] = [1, 2, 6, 24, 120, 720]                  last non-zero: 11
+     Q = Z1       E[QP^m] = [1, -2, 0, 0, 0, 0]                      last non-zero: 2
+     Q = Z2b      E[QP^m] = [-1, 0, 0, 0, 0, 0]                      last non-zero: 1
+     Q = Z1b      E[QP^m] = [0, 0, 0, 0, 0, 0]                       last non-zero: None
+     Q = Z1Z2     E[QP^m] = [0, 2, 0, 0, 0, 0]                       last non-zero: 2
+     Q = Z1bZ2b   E[QP^m] = [0, 0, 0, 0, 0, 0]                       last non-zero: None
+
+  drop term 3 -> P = -z1*z1c*z2 - z1*z1c + z1c*z2 + z2*z2c + z2c
+     5 terms, degree 3
+     E[P^m] = 0 for m=1..11 : True
+     Q = Z2       E[QP^m] = [1, 2, 6, 24, 120, 720]                  last non-zero: 11
+     Q = Z1       E[QP^m] = [0, 2, 0, 0, 0, 0]                       last non-zero: 2
+     Q = Z2b      E[QP^m] = [-1, 0, 0, 0, 0, 0]                      last non-zero: 1
+     Q = Z1b      E[QP^m] = [0, 0, 0, 0, 0, 0]                       last non-zero: None
+     Q = Z1Z2     E[QP^m] = [0, 0, 6, 24, 120, 720]                  last non-zero: 11
+     Q = Z1bZ2b   E[QP^m] = [0, 0, 0, 0, 0, 0]                       last non-zero: None

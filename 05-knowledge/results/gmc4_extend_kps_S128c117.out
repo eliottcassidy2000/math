@@ -1,0 +1,56 @@
+==============================================================================
+(A) GENERATING-FUNCTION FORM
+==============================================================================
+  E[P^m] = 0 for all m  <=>  E[exp(tP)] = 1
+  E[Q P^m] = m!         <=>  E[Q exp(tP)] = sum t^m = 1/(1-t)
+
+  m    E[P^m]/m!      E[Q P^m]/m!   
+  0    1              0             
+  1    0              1             
+  2    0              1             
+  3    0              1             
+  4    0              1             
+  5    0              1             
+  6    0              1             
+
+  So E[exp(tP)] = 1 exactly, and E[Q exp(tP)] = 1 + t + t^2 + ... = 1/(1-t):
+  an mgf that is identically 1, acquiring a SIMPLE POLE AT t = 1 when tilted by Q.
+  The failure is located at a finite t, not at infinity.
+
+==============================================================================
+(B) IS THE CONSTRUCTION RIGID?  P(a,b) = (1 + a Z2)(conj(Z1)(1 - b Z1) + conj(Z2))
+==============================================================================
+  (a,b) with E[P^m] = 0 for m = 1..4:
+     a = -2     b = -2       E[Q P^m] = [1, -4, 24, -192]
+     a = -1     b = -1       E[Q P^m] = [1, -2, 6, -24]
+     a = -1/2   b = -1/2     E[Q P^m] = [1, -1, 3/2, -3]
+     a = 0      b = 0        E[Q P^m] = [1, 0, 0, 0]
+     a = 1/2    b = 1/2      E[Q P^m] = [1, 1, 3/2, 3]
+     a = 1      b = 1        E[Q P^m] = [1, 2, 6, 24]
+     a = 2      b = 2        E[Q P^m] = [1, 4, 24, 192]
+  -> 7 parameter pairs work.
+
+==============================================================================
+(C) MINIMALITY: is every term of the 6-term P load-bearing?
+==============================================================================
+  P has 6 terms.
+  terms whose removal PRESERVES E[P^m] = 0 (m<=4) : [2, 3]
+  -> all six terms load-bearing : False
+
+  charge-balanced QUADRATIC search (all P with monomials of total degree <= 2,
+  coefficients in {-1,0,1}, at least one term):
+  quadratic P with E[P^m]=0 (m<=3) AND some E[Q P^m] != 0 : 3 found
+     P = z1*z1c + z1*z2 + z1*z2c - z1c**2 - z1c*z2 - z1c*z2c - z1c - z2*z2c - z2 - z2c**2 - z2c   E[Q P^m] = [-1, 4, 6]
+     P = z1*z1c + z1*z2c + z1 - z1c*z2 - z1c*z2c - z1c - z2*z2c - z2 - z2c**2 - z2c   E[Q P^m] = [-1, 2, 0]
+     P = z1**2 + z1*z1c + z1*z2 + z1 - z1c*z2c - z1c - z2*z2c - z2 - z2c**2 - z2c   E[Q P^m] = [-1, 4, 0]
+
+==============================================================================
+(D) DOES THE CHAIN EXTEND?  three complex variables
+==============================================================================
+  P3 = (1+Z3)((1+Z2)(conj(Z1)(1-Z1)+conj(Z2)) + conj(Z3))
+     m = 1    E[P3^m] = 1           E[Q3 P3^m] = 1             m! = 1
+     m = 2    E[P3^m] = 2           E[Q3 P3^m] = 4             m! = 2
+     m = 3    E[P3^m] = 6           E[Q3 P3^m] = 18            m! = 6
+     m = 4    E[P3^m] = 24          E[Q3 P3^m] = 96            m! = 24
+  chain still has E[P^m] = 0 : False
+  Q-moments equal m! again   : False

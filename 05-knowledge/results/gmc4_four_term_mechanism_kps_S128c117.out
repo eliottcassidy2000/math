@@ -1,0 +1,56 @@
+==============================================================================
+(1) THE 4-TERM WITNESS  P4 = (1 + Z2)(conj(Z2) - |Z1|^2)
+==============================================================================
+  expanded: -z1*z1c*z2 - z1*z1c + z2*z2c + z2c
+  terms = 4, total degree = 3
+  E[P^m], m=1..9 : [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  E[Z2 P^m]        : [1, 2, 6, 24, 120, 720, 5040, 40320, 362880]
+  E[P^m] = 0 for all m : True
+  E[Z2 P^m] = m!       : True
+
+==============================================================================
+(2) THE MOMENT IDENTITY  E[P^m] = sum_i (-1)^i C(m,i)^2 (m-i)! mu_i
+==============================================================================
+  m = 1    direct = 0        formula (mu_i = i!) = 0        agree: True
+  m = 2    direct = 0        formula (mu_i = i!) = 0        agree: True
+  m = 3    direct = 0        formula (mu_i = i!) = 0        agree: True
+  m = 4    direct = 0        formula (mu_i = i!) = 0        agree: True
+  m = 5    direct = 0        formula (mu_i = i!) = 0        agree: True
+  m = 6    direct = 0        formula (mu_i = i!) = 0        agree: True
+  m = 7    direct = 0        formula (mu_i = i!) = 0        agree: True
+  m = 8    direct = 0        formula (mu_i = i!) = 0        agree: True
+  identity holds : True
+
+  and the collapse:  C(m,i)^2 (m-i)! i! = m! C(m,i), so the sum is
+  m! * sum_i (-1)^i C(m,i) = 0.  Checked:
+     m = 1    C(m,i)^2 (m-i)! i! = m! C(m,i) for all i : True
+     m = 2    C(m,i)^2 (m-i)! i! = m! C(m,i) for all i : True
+     m = 3    C(m,i)^2 (m-i)! i! = m! C(m,i) for all i : True
+     m = 4    C(m,i)^2 (m-i)! i! = m! C(m,i) for all i : True
+     m = 5    C(m,i)^2 (m-i)! i! = m! C(m,i) for all i : True
+
+==============================================================================
+(3) THE MOMENTS OF Y ARE FORCED -- solve (*) = 0 for mu one at a time
+==============================================================================
+  m = 1    forces mu_1 = 1          (m! = 1)  match: True
+  m = 2    forces mu_2 = 2          (m! = 2)  match: True
+  m = 3    forces mu_3 = 6          (m! = 6)  match: True
+  m = 4    forces mu_4 = 24         (m! = 24)  match: True
+  m = 5    forces mu_5 = 120        (m! = 120)  match: True
+  m = 6    forces mu_6 = 720        (m! = 720)  match: True
+  m = 7    forces mu_7 = 5040       (m! = 5040)  match: True
+  m = 8    forces mu_8 = 40320      (m! = 40320)  match: True
+  -> mu_i = i! is the UNIQUE solution, so Y must be Exp(1).
+
+==============================================================================
+(4) COULD ONE REAL GAUSSIAN SUPPLY Y?  (would give n = 3)
+==============================================================================
+  Y = c X^2 with X ~ N(0,1) has E[Y^i] = c^i (2i-1)!!:
+     c = 1     moments [1, 3, 15, 105]   vs i! = [1, 2, 6, 24]   match: False
+     c = 1/2   moments [1/2, 3/4, 15/8, 105/16]   vs i! = [1, 2, 6, 24]   match: False
+     c = 2     moments [2, 12, 120, 1680]   vs i! = [1, 2, 6, 24]   match: False
+  A one-Gaussian square has moments (2i-1)!! c^i, and (2i-1)!! != i! beyond
+  i = 1 for any c (3 vs 2 already at i = 2).  So Y needs a genuine Exp(1),
+  i.e. TWO real Gaussians, and with two more for Z the count n = 4 is FORCED
+  by this construction rather than chosen.  Beating n = 4 requires a different
+  mechanism, not a cheaper Y.

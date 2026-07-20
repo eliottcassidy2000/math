@@ -1,0 +1,49 @@
+==============================================================================
+(1) THE ONE-PARAMETER FAMILY  P_a = (1 + a Z2)(conj(Z1)(1 - a Z1) + conj(Z2))
+==============================================================================
+  a        E[P^m]   E[Q P^m] vs a^{m-1} m!
+  a = 1      E[P^m]=0 all m<=8 : True    E[QP^m] = a^{m-1} m! : True
+           observed  [1, 2, 6, 24, 120]
+           predicted [1, 2, 6, 24, 120]
+  a = 2      E[P^m]=0 all m<=8 : True    E[QP^m] = a^{m-1} m! : True
+           observed  [1, 4, 24, 192, 1920]
+           predicted [1, 4, 24, 192, 1920]
+  a = 1/2    E[P^m]=0 all m<=8 : True    E[QP^m] = a^{m-1} m! : True
+           observed  [1, 1, 3/2, 3, 15/2]
+           predicted [1, 1, 3/2, 3, 15/2]
+  a = -1     E[P^m]=0 all m<=8 : True    E[QP^m] = a^{m-1} m! : True
+           observed  [1, -2, 6, -24, 120]
+           predicted [1, -2, 6, -24, 120]
+  a = 3      E[P^m]=0 all m<=8 : True    E[QP^m] = a^{m-1} m! : True
+           observed  [1, 6, 54, 648, 9720]
+           predicted [1, 6, 54, 648, 9720]
+  a = -3/2   E[P^m]=0 all m<=8 : True    E[QP^m] = a^{m-1} m! : True
+           observed  [1, -3, 27/2, -81, 1215/2]
+           predicted [1, -3, 27/2, -81, 1215/2]
+
+  => E[Q exp(t P_a)] = sum_{m>=1} a^{m-1} t^m = t/(1 - a t):
+     a SIMPLE POLE AT t = 1/a, placeable anywhere non-zero.
+
+==============================================================================
+(2) TERM MINIMALITY -- dropping a term must keep BOTH properties
+==============================================================================
+  drop term 0 (-z1*z1c*z2) : E[P^m]=0 all m<=8 : False ; some E[QP^m]!=0 : True 
+  drop term 1 (-z1*z1c) : E[P^m]=0 all m<=8 : False ; some E[QP^m]!=0 : True 
+  drop term 2 (z1c*z2) : E[P^m]=0 all m<=8 : True  ; some E[QP^m]!=0 : True    <-- STILL A COUNTEREXAMPLE
+  drop term 3 (z1c) : E[P^m]=0 all m<=8 : True  ; some E[QP^m]!=0 : True    <-- STILL A COUNTEREXAMPLE
+  drop term 4 (z2*z2c) : E[P^m]=0 all m<=8 : False ; some E[QP^m]!=0 : True 
+  drop term 5 (z2c) : E[P^m]=0 all m<=8 : False ; some E[QP^m]!=0 : False
+  -> a 5-term counterexample exists : True
+
+==============================================================================
+(3) THE 'QUADRATIC' HITS -- were they real, or a too-shallow sieve?
+==============================================================================
+  candidate 1 : E[P^m] = 0 fails first at m = 4
+  candidate 2 : E[P^m] = 0 fails first at m = never (up to 8)
+  candidate 3 : E[P^m] = 0 fails first at m = never (up to 8)
+
+  If each dies at m = 4 or 5, the m <= 3 sieve was simply too shallow -- three
+  conditions on a coefficient space that large will produce hits by chance.
+  The honest reading is then: NO quadratic counterexample was found, and the
+  earlier hits are withdrawn.  Reporting the death depth is the useful part,
+  because it says how deep a sieve has to be to mean anything here.

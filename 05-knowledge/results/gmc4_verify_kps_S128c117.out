@@ -1,0 +1,45 @@
+==============================================================================
+READING (ii): Z1,Z2,W1,W2 independent complex (8 real) -- self-refuting?
+==============================================================================
+  m = 1 :  E[P^m] = 0 ,  E[Q P^m] = 0
+  m = 2 :  E[P^m] = 0 ,  E[Q P^m] = 0
+  m = 3 :  E[P^m] = 0 ,  E[Q P^m] = 0
+  -> both vanish identically (unbalanced W-charge), so this reading cannot
+     produce E[Q P^m] = m!.  Reading (i) is the intended one.
+
+==============================================================================
+READING (i): W_j = conj(Z_j), so Z1, Z2 complex = 4 REAL Gaussians
+==============================================================================
+  P expanded has 6 terms, total degree 3 :
+     P = -z1*z1c*z2 - z1*z1c + z1c*z2 + z1c + z2*z2c + z2c
+
+  m    E[P^m]           E[Q P^m]         m!        
+  1    0                1                1         
+  2    0                2                2         
+  3    0                6                6         
+  4    0                24               24        
+  5    0                120              120       
+  6    0                720              720       
+  7    0                5040             5040      
+
+  E[P^m] = 0 for all m tested        : True
+  E[Q P^m] = m! for all m tested     : True
+
+  VERDICT: the counterexample is CONFIRMED, exactly, in 4 real Gaussians.
+  {P : E[P^m] = 0 for all m} is therefore NOT a Mathieu subspace at n = 4,
+  so the Gaussian-moment form of Zhao's vanishing conjecture is FALSE there.
+
+==============================================================================
+WHERE THE m! COMES FROM
+==============================================================================
+  For a single standard complex Gaussian, E[Z^m conj(Z)^m] = m!.  So an m! in
+  the answer is the signature of ONE balanced charge-m pair surviving, all other
+  monomials cancelling.  Q = Z2 supplies the single extra +1 of Z2-charge that
+  turns the unique surviving unbalanced monomial of P^m into a balanced one.
+  Checking that reading directly -- the Z2-charge profile of P:
+     z1^0 z1c^0 z2^0 z2c^1  coeff 1      z1-charge +0, z2-charge -1
+     z1^0 z1c^0 z2^1 z2c^1  coeff 1      z1-charge +0, z2-charge +0
+     z1^0 z1c^1 z2^0 z2c^0  coeff 1      z1-charge -1, z2-charge +0
+     z1^0 z1c^1 z2^1 z2c^0  coeff 1      z1-charge -1, z2-charge +1
+     z1^1 z1c^1 z2^0 z2c^0  coeff -1     z1-charge +0, z2-charge +0
+     z1^1 z1c^1 z2^1 z2c^0  coeff -1     z1-charge +0, z2-charge +1
