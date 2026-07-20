@@ -1,0 +1,37 @@
+E1: multi-point ghost ceilings:
+  ladder m=3: M=3/41; old ceiling 3/37, NEW 3/38: M<=new True  (actual 3/41 = m/(12m+5))
+  ladder m=4: M=4/53; old ceiling 4/49, NEW 2/25: M<=new True  (actual 4/53 = m/(12m+5))
+  ladder m=5: M=1/13; old ceiling 5/61, NEW 5/62: M<=new True  (actual 1/13 = m/(12m+5))
+  ladder m=6: M=6/77; old ceiling 6/73, NEW 3/37: M<=new True  (actual 6/77 = m/(12m+5))
+  ladder m=7: M=7/89; old ceiling 7/85, NEW 7/86: M<=new True  (actual 7/89 = m/(12m+5))
+  ladder m=8: M=8/101; old ceiling 8/97, NEW 4/49: M<=new True  (actual 8/101 = m/(12m+5))
+  GW: M=1/14; old ceiling 2/25, NEW 1/13: holds True
+  adversarial (with extra speed, ceiling still applies): violations 0/600
+
+E2: D=3 tower row -- phase-denial anatomy:
+  F_3(19): M=3/59 at t*=23/59; D=2 escape denied (3|39): True; M == 2/(2N+1): False
+  F_3(21): M=1/21 at t*=22/63; D=2 escape denied (3|43): False; M == 2/(2N+1): False
+  F_3(23): M=1/23 at t*=22/69; D=2 escape denied (3|47): False; M == 2/(2N+1): False
+  F_3(25): M=3/77 at t*=16/77; D=2 escape denied (3|51): True; M == 2/(2N+1): False
+  F_3(27): M=1/27 at t*=28/81; D=2 escape denied (3|55): False; M == 2/(2N+1): False
+  F_3(29): M=1/29 at t*=28/87; D=2 escape denied (3|59): False; M == 2/(2N+1): False
+  F_3(31): M=1/32 at t*=1/32; D=2 escape denied (3|63): True; M == 2/(2N+1): False
+
+E3: c-sheet branch lemma, exact verification:
+  c = 2..5, 80 random each: all M >= 1/12: True
+
+E4: cross-N c3 deficit at t = 1/(N+1):
+  N=7: c3(AP)=20, c3(GW)=16, max=20; GW deficit = 4
+  N=13: c3(AP)=112, c3(GW)=108, max=112; GW deficit = 4
+  N=19: c3(AP)=330, c3(GW)=326, max=330; GW deficit = 4
+
+E5: theta-invariance of the AP13 active pair (theta = p/8):
+  theta=0/8: maximizer (1, 14); active speeds [1, 13]
+  theta=1/8: maximizer (3, 14); active speeds [5]
+  theta=2/8: maximizer (23, 107); active speeds [5]
+  theta=3/8: maximizer (14, 65); active speeds [9]
+  theta=4/8: maximizer (11, 51); active speeds [5]
+  theta=5/8: maximizer (23, 78); active speeds [10]
+  theta=6/8: maximizer (31, 112); active speeds [7]
+  theta=7/8: maximizer (21, 55); active speeds [8]
+  theta=8/8: maximizer (13, 34); active speeds [1, 13]
