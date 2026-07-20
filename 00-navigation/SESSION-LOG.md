@@ -4,6 +4,28 @@
 - **KELLER SIDE:** cover-degrees form a monoid under composition; irreducible ↔ strong. EULER LEDGER (dim 2, clean case, proved): Σ(d−kᵢ)χ(Cᵢ) = d−1, kᵢ ≤ Fix(gᵢ), ghosts generate ⟹ (i) d=2 with all-smooth caustic IMPOSSIBLE (LHS ≥ 2 > 1) — degree 2 now cornered by ledger + equivariant no-go + Wang; (ii) ℤ/3-d=3 needs a χ=0 singular ghost; (iii) S₃-d=3 needs ≥2 transposition-ghosts with χ-profile EXACTLY (1,0) — one smooth line + one nodal parametric. **ODD-DEGREE CONJECTURE** (Rédei analogue) stated.
 - **Named next:** general-defect ledger bookkeeping; the silent-component question (S145); a min-irreducible-degree growth theorem ⟹ permanent monoid gaps à la {7,21}.
 - **FILES:** HYP-8160; h_spectrum_keller_monoid_boxeph_S146.py + .out; reflection the-h-template-and-the-keller-degree-monoid-boxeph-S146.
+## death-star-2026-07-20-S59r — CLOSING DC1 VIA TOURNAMENTS (HYP-8160, reflection dc1-and-the-3-cycle): the A1 weight-triple IS the oriented 3-cycle (observer = ℏ = the conserved +1, exact teeth) + the two-lens strategy (Rédei parity × 2D leading-form bound) + three convergent tournament shadows. STRICT HONESTY: DC1 OPEN, not claimed (false-proof graveyard)
+
+Owner: see how the DC1 frontier can be creatively closed by checking analogies with tournaments. DC1
+(Dixmier for A1) = the surviving Dixmier atom; JC2 ⟹ DC1 (BKK n=1); observer principle A1 ↔ n=3 the
+3-cycle. TEETH (exact, operator rep p=d/dx, q=x·, N=qp on monomials): [p,q]=1, [N,q]=+q, [N,p]=−p — the
+weight triple {N (observer/Euler), q (+1), p (−1)} = the oriented n=3 tournament; filed as DICTIONARY not
+theorem (MISTAKE-197 — sl2/Heisenberg rep theory is textbook). IDENTIFICATION unifying 3 threads: the
+observer vertex = ℏ (the RHS 1 of [p,q]=1) = the S59p/q conserved +1 (u=1+xy) — old wild W8 now has a
+bracket under it. STRATEGY (graded speculative, NOT a proof): two-lens DC1 — Lens A Rédei parity
+(fiber-degree odd; JC3 fiber = 1+2 = 3 = ODD verified; necessary-not-sufficient, odd 3 > 1 at higher dim),
+Lens B the 2D leading-form bound (THM-1345 filtration; the open AMS-hard part); ODD ∧ BOUNDED ⟹ deg 1 ⟹
+auto. Why DC1 may hold where DC≥3 fails: dimensional failure vs dimension-blind parity + the seven-wall
+rhyme (exotic tournaments at n≥7). CONVERGENCE — three tournament shadows of ONE hypothetical
+counterexample: golden/worst-approximable degree pair (mac-mini-S137), cyclic-3 fiber orientation +
+Rédei-sign = discriminant character (opus-S418, CREDITED), Rédei-odd fiber count (this session). The
+creative content: not a closure but the recognition that DC1's frontier is STATED IN THE REPO'S NATIVE
+LANGUAGE and the repo owns the instruments to ask it. Wild W9/W10/W11.
+
+Prompt (owner): see how the DC1 frontier can be creatively closed by checking analogies with tournaments
+
+FILES: HYP-8160, reflection dc1-and-the-3-cycle, teeth script + out, backlog liii-lvi, results INDEX.
+Credits: opus-S418, mac-mini-S137, boxeph-S144. -> all
 
 ## death-star-2026-07-20-S59q — THE TWO-VARIABLE CASE (THM-1345): equivariant JC2 COMPLETED to every C*-action (crediting boxeph-S144) + the Poisson reframing det JF = {P,Q} (C*-action = Hamiltonian flow of xy) + the open difficulty LOCATED in the weight filtration + the DC1 shadow. STRICT HONESTY: full JC2 untouched (the false-proof graveyard). CONVERGENT with mac-mini-S137 (same hour, different lens)
 
