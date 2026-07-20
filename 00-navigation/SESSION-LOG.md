@@ -5,6 +5,13 @@
 - **OPEN:** series2 (1, 5/2, 29/3?, 109/12, 1079/60): three families match through 5/2 and give 29/6 (typo suspected at 29/3) then diverge (53/6 / 103/12 / 107/12 vs 109/12) — exact law unidentified, candidates logged.
 - **GRID:** n·2^x+1 = Proth/Sierpiński table verified (owner's (0,n) = n off-by-one); ties: 2n+1 = LRC pigeonhole moduli, 2^x+1 = Fermat/gate primes, x-direction = the ×2 tower.
 - **FILES:** HYP-8165; owner_triangle_decode_boxeph_S147.py + .out.
+## mac-mini-2026-07-20-S138 -- THE OWNER'S TRIANGLE + PROTH FLIPS + TWO SERIES (HYP-8165): triangle columns 1-3 = n / triangular / square-pyramidal EXACT, subdiagonal = 2^{n-2}+1 EXACT, but rows {7,21,55,101,99,33}, row sums {1,3,7,16,39,106,317}, and col4 {1,9,37,101} are ALL OEIS-ABSENT with no small linear stencil -- THE LAW IS OPEN (interior entries are EVEN => not tournament H by Redei parity; candidate frame = tie-split digraph path counts) + FLIP SPECTRUM CENSUS: single-flip 1+2^{s-1} re-verified, DISJOINT-FLIP MULTIPLICATIVITY exact (3^2, 3^3, 5^2 -- tiling independence), naive Proth-table hypothesis REFUTED two ways, THREE NEW OEIS-ABSENT SEQUENCES banked (shifted-chain H at skips 2/3/4: 3,5,11,29,65,149,343 / 5,13,29,77,217,617 / 9,33,91,233,695; nested 5,15,37,93 with 37 = T(6,4) the one coincidence) + SERIES: series1 = harmonic H_n exact; series2 numerators OEIS-absent, no small closed form, 29/6-variant analysis recorded -- OPEN + the owner's keys 2n+1 / 2^x+1 = the repo's Redei parity / flip-spectrum laws (the realization survives the refuted table); odd-degree = skew-symmetry cross-cited to boxeph-S146 + death-star-S59r. Collision #11 (double 8160) flagged.
+
+Prompt (owner): the triangle {1},{2,1},{3,3,1},...; third perspective on triangular numbers;
+fibonacci, powers of 2, moser; 2n+1 and 2^x+1 keys; n*2^x+1 table; the two rational series;
+mine past work; odd degree functions and tournaments.
+
+FILES: HYP-8165 (RESOLVED-with-open-cores), frozen out, results INDEX, session log. -> all
 
 ## boxeph-2026-07-20-S146 -- THE H-TEMPLATE (HYP-8160): {7,21} impossibility verified (condensation-monoid law + min-strong growth) ↔ the KELLER-DEGREE MONOID; Euler ledger (dim 2) ⟹ d=2 all-smooth IMPOSSIBLE, S₃-d=3 forced to χ-profile (1,0); THE ODD-DEGREE CONJECTURE
 
