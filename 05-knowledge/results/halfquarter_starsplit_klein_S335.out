@@ -110,3 +110,28 @@ READING:
  half fold  (sigma): a PERMUTATION of the holonomy word -- internal to the star algebra.
  quarter fold (phi): a TRANSLATION of the holonomy word by eps -- transverse, free for n>=5,
                      costing exactly ONE holonomy bit (the odd-cycle-size functional).
+
+
+=== ADDENDUM (klein-S335): the DEFECT SET is the two induced sub-staircases ===
+Claim: a max cut of H = K_n \ P is the balanced INTERVAL bipartition S={1..k}, k=floor(n/2);
+hence the min-weight rep of phi + cut(H) is supported exactly on E(H[S]) u E(H[S^c]),
+the tiles NOT crossing the midpoint of the base path.  Sizes C(k-1,2) + C(n-k-1,2).
+
+  n    m   k  C(k-1,2)  C(n-k-1,2)   sum  floor((n-3)^2/4)  brute maxcut defect
+  3    1   1         0           0     0                 0                    0  OK
+  4    3   2         0           0     0                 0                    0  OK
+  5    6   2         0           1     1                 1                    1  OK
+  6   10   3         1           1     2                 2                    2  OK
+  7   15   3         1           3     4                 4                    4  OK
+  8   21   4         3           3     6                 6                    6  OK
+  9   28   4         3           6     9                 9                    9  OK
+ 10   36   5         6           6    12                12                   12  OK
+ 11   45   5         6          10    16                16                   16  OK
+ 12   55   6        10          10    20                20                   20  OK
+ 13   66   6        10          15    25                25                   25  OK
+
+=> the two summands are the tile sets of the induced sub-staircases on {1..k} and {k+1..n}:
+   the obstruction to phi being a star flip is carried ENTIRELY by the tiles that do not
+   cross the midpoint of the base path.  C(a,2)+C(b,2) = floor(j^2/4) for a+b=j+1, |a-b|<=1
+   is the classical two-triangles-make-a-half-square identity -- which is exactly why
+   defect(n) = h(n-2).
