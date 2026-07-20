@@ -1,0 +1,16 @@
+== (ii) singular locus of the Jelonek surface {K=0} (Groebner) ==
+  Groebner basis of the singular ideal (2 gens):
+    16*a - b**3*c
+    9*b**2*c**2 - 24*b*c + 16
+
+== (i) THE CUSP SELECTION RULE on a plane section ==
+  section quartic C4(t,s) = K(t, s, 1+t−s)
+  singular points of the section: 3
+    (10.1654-0.0000j, 11.0447-0.0000j): Hessian rank 1 -> CUSP-or-worse (A>=2)
+    (-0.0827+0.0880j, 0.4777+1.1048j): Hessian rank 1 -> CUSP-or-worse (A>=2)
+    (-0.0827-0.0880j, 0.4777-1.1048j): Hessian rank 1 -> CUSP-or-worse (A>=2)
+  Deligne–Fulton: nodal-only ⟹ abelian complement group ⟹ NO S_3;
+  cusps present ⟺ the selection rule is satisfied the expected way.
+
+== (iii) F∘F fiber count (pure numeric) ==
+  |F^-1(tgt)| = 3;  |(F∘F)^-1(tgt)| = 9  (expect 3 and 9)
