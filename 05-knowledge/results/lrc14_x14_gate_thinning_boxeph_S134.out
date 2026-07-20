@@ -1,0 +1,25 @@
+controls OK: {1..13} and GW level-1 improper AND improper mod 602
+AP13 base admits improper 14-lift: True (>=5 solutions found; 25 nodes)
+
+sampled 40 random level-1-improper base tuples (p=43, dk=3)
+bases admitting ANY improper 14-lift: 40/40
+solution counts (capped at 50): [16, 32, 50, 50, 50, 50, 50, 50, 50, 50]
+total CSP nodes: 8382362
+
+zero-budget stratification: WITHDRAWN as unsound in this version. The slot-order
+CSP hits its node cap at small max-zeros without deciding satisfiability, and a cap
+is NOT a refutation: AP13's EXPLICIT lift v=1..13 has z=0 zeros mod 14 (witness),
+while the capped search only found z=10 -- the caps bind exactly where the answer
+is interesting. Min-z stratification needs a SCALE-DRIVEN CSP (branch on the
+least-coverable uncovered scale, not on slots) -- named handoff. What stands:
+  * 40/40 random level-1 bases admit improper 14-lifts, but the found survivors
+    are (quasi-)degenerate: 12 speeds = 0 mod 14 + one free (dilated-core+killer)
+  * fully random lifts essentially never survive (MC 0/30000)
+  * AP13 achieves z=0 (explicit) -- the AP is the extreme non-degenerate survivor
+MC random-lift survival: 0/30000
+example survivor: base(p-parts)=(1, 2, 6, 8, 10, 11, 13, 14, 16, 16, 19, 20, 21) lift mod14=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+example survivor: base(p-parts)=(1, 3, 4, 6, 9, 10, 12, 13, 16, 18, 19, 19, 21) lift mod14=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+example survivor: base(p-parts)=(2, 3, 3, 5, 8, 9, 14, 15, 17, 18, 19, 20, 21) lift mod14=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+summary: the x14 gate multiplies the level-1 sea by (admit-rate x sol-density); pure-14 shadow = the mod-14 spread lemma (0,+-1 window); mixed-scale slaving = the lift-level kill structure (ledger 4b (b)).
+DONE.
