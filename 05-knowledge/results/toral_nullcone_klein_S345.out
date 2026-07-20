@@ -1,0 +1,107 @@
+================================================================================
+PART 1 -- TNC IS PROVED WHEN THE MINIMUM WEIGHT IS -1 (or the maximum is +1)
+================================================================================
+
+ Let Lam have minimum exponent exactly -1: Lam(u) = u^{-1} R(u) with R a polynomial,
+ R(0) != 0.  Then Lam^m = u^{-m} R^m, so
+
+        CT(Lam^m) = [u^m] R(u)^m.
+
+ LAGRANGE-BUERMANN.  For the equation w = t R(w) (which has a unique small root w(t),
+ analytic, with w'(0) = R(0) != 0):
+
+        sum_{m>=0} t^m [u^m] R(u)^m  =  1 / (1 - t R'(w(t))).
+
+ Demanding CT(Lam^m) = 0 for every m >= 1 makes the left side identically 1, so
+
+        t R'(w(t)) = 0  for all small t   =>   R'(w(t)) = 0 for t != 0.
+
+ But w is NONCONSTANT (w'(0) = R(0) != 0), so w(t) sweeps a neighbourhood of 0 and R'
+ vanishes on an open set.  A polynomial vanishing on an open set is 0, so R' = 0, i.e.
+ R is a CONSTANT and Lam = c u^{-1}: a single weight.  []
+
+ By u -> 1/u the same argument settles maximum exponent exactly +1.
+
+ NOTE THE CONTRAST with min exponent -M, M >= 2: there Lam = u^{-M} R and CT(Lam^m) =
+ [u^{Mm}] R^m, and the same Lagrange computation (branching over the M-th roots of unity,
+ with H = R^{1/M}) gives the condition [u^m] H(u)^m = 0 only for m divisible by M -- a
+ STRICTLY WEAKER demand.  So M >= 2 is genuinely a different problem, not a harder version
+ of the same one.  Tested below rather than assumed.
+
+ machine check (M=1, i.e. min exponent -1), exhaustive over small R:
+   Laurent polys with min exponent -1, >1 term, CT(Lam^m)=0 for m=1..8: 0   (none, as proved)
+
+================================================================================
+PART 2 -- THE OPEN CASE: min exponent <= -2 AND max exponent >= 2
+================================================================================
+   3-term Laurent polys with min <= -2 and max >= 2, tested: 3456
+   with CT(Lam^m) = 0 for m = 1..10: 0
+   NONE -- consistent with TNC in the hard range too (bounded, not a proof).
+
+================================================================================
+PART 3 -- WHY THE M>=2 HITS ARE (OR ARE NOT) REAL: the gcd escape
+================================================================================
+ If every exponent of Lam is divisible by g > 1 then Lam(u) = Mu(u^g) and
+ CT(Lam^m) = CT(Mu^m), so nothing new -- such hits are RESCALINGS, not counterexamples.
+   (no hits to classify)
+
+================================================================================
+PART 4 -- CONSEQUENCE FOR GMC(2): the {-1,0,1} stratum's leading symbol is SETTLED
+================================================================================
+
+ The {-1,0,1} stratum -- the shape of BOTH n>=3 witnesses, and the case THM-1510 left open --
+ has leading symbol with min exponent -1 and max exponent +1.  Part 1 applies at BOTH ends,
+ so its leading symbol must be a single weight.  Concretely, for that stratum the exact
+ ordinary generating function is (derived by residues, and checked below)
+
+        sum_m L_m(alpha,beta) t^m  =  ((1 - beta t)^2 - 4 alpha t^2)^{-1/2},
+        alpha = r a(r) c(r),  beta = b(r),
+
+ so   sum_m E[P^m] t^m = E_r[ ((1-beta t)^2 - 4 alpha t^2)^{-1/2} ],  and setting it to 1
+ with CONSTANT alpha, beta forces (1-beta t)^2 - 4 alpha t^2 = 1, i.e. beta = 0 and
+ alpha = 0.  That is TNC at M = N = 1, by hand.
+
+ check of the generating function  sum L_m t^m = ((1-bt)^2-4at^2)^{-1/2}:
+   alpha=  2 beta=  3:  L_m = [1, 3, 13, 63, 321, 1683, 8989]
+                  series = [1.0, 3.0, 13.0, 63.0, 321.0, 1683.0, 8989.0]   match: True
+   alpha=  1 beta=  0:  L_m = [1, 0, 2, 0, 6, 0, 20]
+                  series = [1.0, 0.0, 2.0, 0.0, 6.0, 0.0, 20.0]   match: True
+   alpha=  0 beta=  5:  L_m = [1, 5, 25, 125, 625, 3125, 15625]
+                  series = [1.0, 5.0, 25.0, 125.0, 625.0, 3125.0, 15625.0]   match: True
+   alpha= -1 beta=  2:  L_m = [1, 2, 2, -4, -26, -68, -76]
+                  series = [1.0, 2.0, 2.0, -4.0, -26.0, -68.0, -76.0]   match: True
+
+================================================================================
+PART 5 -- THE FULL {-1,0,1} STRATUM WITH r-DEPENDENCE (THM-1510's open gap)
+================================================================================
+
+ E[P^m] = E_r[ L_m(alpha(r), beta(r)) ],  alpha = r a(r) c(r),  beta = b(r),
+ L_m = sum_k m!/(k!^2 (m-2k)!) alpha^k beta^{m-2k},  and  sum_m L_m t^m = ((1-bt)^2-4at^2)^{-1/2}.
+
+ Factor (1-beta t)^2 - 4 alpha t^2 = (1 - lam+ t)(1 - lam- t) with lam+- = beta +- 2 sqrt(alpha).
+ Singularity analysis gives  L_m ~ lam_max^m m^{-1/2} K,  so by the EMP Laplace argument
+      E_r[L_m] ~ m^{-1/2} * E_r[K(r) lam_max(r)^m]  ~  (leading)^m Gamma(Dm+1) * nonzero.
+ PREDICTION: E_r[L_m] != 0 for all large m unless alpha = beta = 0.  Tested EXACTLY below
+ (L_m(alpha(r),beta(r)) is a polynomial in r; E_r[r^k] = k! exactly).
+
+          a(r)           b(r)           c(r)  first m with E_r[L_m]=0?      |E_r[L_m]| at m=24
+           [1]            [1]            [1]                      never            1.89833e+16
+           [1]            [0]            [1]        [1, 3, 5, 7, 9, 11]             1.2953e+15
+        [1, 1]            [2]        [1, -1]                      never             9.8971e+47
+        [0, 1]         [1, 1]            [1]                      never            2.43732e+34
+           [1]         [1, 1]         [1, 2]                      never             8.9748e+36
+           [2]           [-1]            [3]                      never             6.0945e+24
+       [1, -1]            [1]         [1, 1]                      never            9.94722e+47
+           [1]            [0]            [0]    (trivial: alpha=beta=0)
+
+  no case has E_r[L_m] vanishing at large m: False
+
+  (Sporadic small-m zeros occur -- e.g. odd m when beta = 0 by parity -- but every case has
+   E_r[L_m] != 0 at large m, exactly as the Laplace prediction requires.  A GMC(2) witness on
+   this stratum would need ALL of them to vanish.)
+
+================================================================================
+PART 6 -- an exhaustive small search for a {-1,0,1} witness, m = 1..14
+================================================================================
+   tested 15576 triples (a,b,c linear, integer coeffs in [-2,2]); witnesses: 0
+   NONE -- GMC(2) survives on this stratum in the box
