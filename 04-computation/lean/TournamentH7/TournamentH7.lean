@@ -719,3 +719,4 @@ import TournamentH7.LRCAPCentering  -- boxeph-S118 / THM-1171 companion: kernel-
 import TournamentH7.LRCMod23Spread
 
 import TournamentH7.GMC2HermiteNoCommonRoot  -- kind-pasteur-S128c120 / THM-1585+THM-1605: consecutive Hermite polynomials share no root, so no point kills every He_m. This is the ALGEBRAIC replacement for klein-S351 false Gamma-domination step; closes the sign-mixed branch of the {-1,0,1} M=1 stratum. No sorry/native_decide
+import TournamentH7.GMC2MomentBasics
