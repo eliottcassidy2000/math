@@ -16807,3 +16807,29 @@ the tiling/metagraph side of this repo is heavily `F_2`, and the toral side is c
 let a TNC citation cross that boundary. Related: Offutt arXiv:2504.19031 studies the mod-p
 counterpart (first index where ct(P^n) mod p vanishes, bounded via automaticity) and is the
 right entry point if a mod-p version is ever wanted.
+
+### HYP-8470 — GMC(2)'s radial descent: the one open step, isolated
+**Status: OPEN, and now isolated to a single implication (THM-1645).** Via the polar bridge
+`E[P^m] = L_s(CT_u[Lambda_s^m])`, and with the ANGULAR layer closed by TNC = DvdK (THM-1630,
+proved 1998, applied uniformly in s because the charge support of Lambda_s is s-independent),
+the whole of GMC(2) reduces to ONE radial implication:
+> for two-sided P, DvdK gives `CT_u[Lambda_s^m] != 0` for some m at a.e. s (POINTWISE);
+> GMC(2) needs `L_s(CT_u[Lambda_s^m]) != 0` for some FIXED m (INTEGRATED).
+The obstruction is `ker(L) != 0`: `L(t-1) = 0` with `t-1 != 0`, so integrated vanishing does
+not force pointwise vanishing.
+**The shell-graded form of the descent (concrete):** `Lambda_s = sum_j s^{j/2} lambda_j(u)`;
+`E[P^m]` is dominated as `s -> inf` by the top shell, `(Dm/2)! CT_u[lambda_D^m]`. If
+`lambda_D` two-sided, DvdK on lambda_D makes this eventually nonzero (THM-1540's proved L2).
+**THE OPEN STEP: lambda_D one-sided but lower shells straddle.** Then the top term vanishes and
+the leading contribution is the cross-shell `CT_u[lambda_D^{m-j} lambda_{D'}^j]`, which L mixes.
+That single step is the entire unwritten descent of THM-1540(III).
+**Two routes worth trying:** (a) the generating function `Psi(x) = int_0^inf G_s(x) e^{-s} ds`
+with `G_s` algebraic (DvdK) and singular at `x = 1/v(s)`; as s ranges the singularities fill
+`(0,inf)`, and `Psi = 0` near 0 is a Laplace-transform-of-an-algebraic-family condition -- this
+is the coupled analogue of DvdK's own n>=2 monodromy proof and may be the honest path. (b)
+Sign/positivity on a sub-locus: when the cross-shell CT has definite sign (e.g. lambda_D,
+lambda_{D'} monomials, as in the Z^p+W^q case which IS closed), the integral cannot cancel.
+Characterise the definite-sign locus.
+**Note:** GMC(2) also still needs HYP-8350 (the radial one-variable Laplace nullcone) for the
+charge-0/radial part -- reduced via Watson (THM-1610 E) but not closed. So GMC(2) = HYP-8350 +
+HYP-8470, both radial, neither angular.
