@@ -1,0 +1,8 @@
+primitive element: x + 7
+|D mod 183| = 14; D = [4, 7, 32, 50, 52, 61, 85, 91, 101, 108, 122, 123, 127, 135]
+perfect difference set (every nonzero diff exactly once): True
+speeds (14): [4, 7, 32, 50, 52, 61, 85, 91, 101, 108, 122, 123, 127, 135]
+M(Singer) = 9/47 = 0.19149 at t* = 4/47
+compare: AP 1/14 = 0.07143; deep well 14/183 = 0.07650
+25 random 13-subsets of [1,182]: min 27/154 = 0.1753, median 35/172 = 0.2035, max 28/111 = 0.2523
+sanity deep well {1..12,182}: M = 14/183 at (14, 183) (expect 14/183)

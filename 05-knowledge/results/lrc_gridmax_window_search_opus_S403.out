@@ -1,0 +1,25 @@
+G*0(11)-window search (cyclic subgroups) -- opus-S403
+g=2 q=27: FOUND gridmax = 2/27 = 0.074074 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+g=3 q=40: FOUND gridmax = 3/40 = 0.075000 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+g=3 q=41: FOUND gridmax = 3/41 = 0.073171 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+g=4 q=53: FOUND gridmax = 4/53 = 0.075472 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+g=4 q=54: FOUND gridmax = 4/54 = 0.074074 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+g=4 q=55: FOUND gridmax = 4/55 = 0.072727 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+g=5 q=66: FOUND gridmax = 5/66 = 0.075758 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+g=5 q=67: FOUND gridmax = 5/67 = 0.074627 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+g=5 q=68: FOUND gridmax = 5/68 = 0.073529 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+g=5 q=69: FOUND gridmax = 5/69 = 0.072464 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+g=6 q=79: FOUND gridmax = 6/79 = 0.075949 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+g=6 q=80: FOUND gridmax = 6/80 = 0.075000 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+g=6 q=81: FOUND gridmax = 6/81 = 0.074074 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+g=6 q=82: FOUND gridmax = 6/82 = 0.073171 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+g=6 q=83: FOUND gridmax = 6/83 = 0.072289 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+g=7 q=92: FOUND gridmax = 7/92 = 0.076087 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+g=7 q=93: FOUND gridmax = 7/93 = 0.075269 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+g=7 q=94: FOUND gridmax = 7/94 = 0.074468 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+g=7 q=95: FOUND gridmax = 7/95 = 0.073684 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+g=7 q=96: FOUND gridmax = 7/96 = 0.072917 at (23, 23, 23, 39, 55, 61, 64, 67, 72, 81, 93)
+g=7 q=97: FOUND gridmax = 7/97 = 0.072165 at (9, 11, 17, 19, 23, 24, 37, 37, 42, 92, 95)
+
+window values found: [Fraction(7, 97), Fraction(6, 83), Fraction(5, 69), Fraction(4, 55), Fraction(7, 96), Fraction(3, 41), Fraction(5, 68), Fraction(7, 95), Fraction(2, 27), Fraction(7, 94), Fraction(5, 67), Fraction(3, 40), Fraction(7, 93), Fraction(4, 53), Fraction(5, 66), Fraction(6, 79), Fraction(7, 92)]
+MINIMAL window value found (lowest known candidate accumulation site above 1/14 = 0.071429): 7/97 = 0.072165
