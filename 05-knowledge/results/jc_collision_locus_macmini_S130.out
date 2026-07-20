@@ -1,0 +1,13 @@
+(1) Gamma = A3*B2 - A2*B3 = -2*x**2*(2*x*y + 3)
+    core curve: -2*(2*x*y + 3)
+(2) t along Gamma: -y*(x*y + 1)/(3*x)
+(3) resultant in (x,t): 12*x*(4*t*x**2 + 1)
+(4) THE PARAMETRIC COLLISION FAMILY (symbolic in s):
+    F(axis (0,0,-1/(4s^2))) = (-1/(4s^2), 0, 0): VERIFIED (identity in s)
+    F((+s, -3/(2s), 13/(2s^2))) = (-1/(4s^2), 0, 0): VERIFIED (identity in s)
+    F((-s, +3/(2s), 13/(2s^2))) = (-1/(4s^2), 0, 0): VERIFIED (identity in s)
+    => EVERY axis target (t,0,0), t != 0, has the explicit 3-point
+       fiber; the owner's rationals are the s=1 slice:
+       t=-1/4, y=-3/2, z=13/2;  13 = 4+9 = 2^2+3^2 from 39/8 / (3/4).
+       Fiber over the axis = 1 fixed + quadratic pair (Z/2 = <sigma>),
+       the degenerate locus of kps's generic S_3.

@@ -1,0 +1,10 @@
+(1) B = (J^T)^-1 polynomial over Z[1/2]: True; max deg(-2B_ij) = 11, max #terms = 14
+(2) [Phi p_j, Phi x_i] = delta: B·J^T = I  VERIFIED (9 identities)
+(3) [Phi p_i, Phi p_j] = 0: all 9 flatness identities VERIFIED
+
+=> Phi(x_i)=F_i, Phi(p_j)=sum B_jk p_k IS an endomorphism of A_3;
+   it is NOT an automorphism (an automorphism would make F invertible,
+   contradicting the verified 3-point fiber): THE EXPLICIT DIXMIER
+   COUNTEREXAMPLE — death-star THM-1300 independently REPLICATED.
+   Cross-checks vs THM-1300: 18 identities (9+9) match; B over Z[1/2]
+   matches; stated deg <= 11: our max deg = 11.
