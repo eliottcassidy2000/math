@@ -15760,6 +15760,53 @@ that shared Frobenius picture, or whether the parallel breaks exactly there.
 repo move is the *comparison*, not the conjecture. Cheap and genuinely novel: write the
 char-`p` Frobenius parallel down properly, since nobody has.
 
+### HYP-8285 - The GRAPH switching quotient lands on E_n (where the TOURNAMENT one does not)
+**Status:** CONFIRMED (opus-2026-07-20-S404) - see THM-1430
+**Source:** owner directive to compute Seidel switching classes up to isomorphism, framed
+as "extend not duplicate" against kind-pasteur THM-1415 and mac-mini THM-474.
+
+**Setup.** kps's THM-1415 computed switching classes of TOURNAMENTS up to iso (1, 2, 2, 6
+at n=3..6), proved they are NOT A002854, and recorded as REFUTED their guess that the
+base-path-free quotient lands on the repo's E_n. The undirected side had not been run.
+
+**Confirmed:** Seidel switching classes of GRAPHS up to isomorphism are
+**2, 3, 7, 16, 54** at n = 3..7 = A002854 = V(E_n) exactly. Verified by two independent
+methods agreeing at n <= 6 (descendant union-find; direct canonicalisation of the
+odd-triple bitmask over all 2^C(n,2) graphs). **So E_n IS the set of two-graphs**, and the
+classical two-graph literature applies to it directly. kps's negative result is a genuine
+tournament/graph asymmetry, not a failure of method.
+
+**Sharpened, and this is the useful part:** the even-graph bridge is **ODD-n ONLY**.
+- n odd (3,5,7): every switching class contains exactly ONE even graph. Clean bijection.
+- n even (4,6): classes carry 0 or 2^(n-2) even graphs - n=4 gives {0:1, 4:2}, n=6 gives
+  {0:10, 16:6}. Most classes carry NONE (10 of 16 at n=6).
+The totals still match A002854 at every n (Mallows-Sloane), so this is a COUNT identity
+always but a CANONICAL BIJECTION only at odd n.
+
+**Retro-explains an existing repo restriction:** CLAUDE.md records the projection
+`T_cycle = (I + L(K_n))T mod 2` as odd-n only without saying why. This is why - odd n is
+exactly where the correspondence is single-valued. Also a caution on CLAUDE.md's wording:
+"V(E_n) = A002854 = non-isomorphic even graphs" must not be read as naming a canonical even
+representative per class when n is even.
+
+**Also computed:** Seidel spectra (a switching AND iso invariant, since switching is
+conjugation by diag(+-1)); regular two-graphs for n <= 6 - only trivial ones until n=6,
+which carries the unique genuine one, spectrum +-sqrt(5) with multiplicities [3,3].
+
+**Catalogued, explicitly NOT a bridge:** the order-14 Paley conference matrix exists
+(n-1 = 13 = 1 mod 4), built from QR mod 13 = {1,3,4,9,10,12}; verified symmetric, zero
+diagonal, C C^T = 13 I, spectrum +-sqrt(13) with multiplicities [7,7] - a regular two-graph
+on 14 points. Per HYP-8230's rule this is NOT claimed as an LRC(14) connection: the LRC 14
+is 2*7 from parity, this 14 is 13+1 with 13 = 1 mod 4. And the [7,7] split is FORCED
+(a conference matrix of order n always has eigenvalues +-sqrt(n-1) with multiplicity n/2),
+so it carries no information.
+
+**Open, cheap:** extend the census to n=8 (expect 243) and n=9 (expect 2038); needs a
+better canonical form than brute-force S_n minimisation.
+
+**Verification:** `04-computation/seidel_switching_census_opus_S404.py`,
+`04-computation/seidel_spectra_regular_opus_S404.py` (+ `.out` files).
+
 ### HYP-8280 — how often is the odd-cycle intersection graph a path?
 **Status: OPEN (raised by THM-1425).** THM-1425 shows `H(T)` is a Jacobsthal number whenever
 the odd-cycle intersection graph is a path `P_m`, since the OCF is the weight-2 shifted-Pascal

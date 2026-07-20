@@ -1,0 +1,23 @@
+==============================================================================
+(1) SEIDEL SWITCHING CLASSES OF GRAPHS, UP TO ISOMORPHISM
+==============================================================================
+   n   classes   A002854(n)   match   [= two-graphs on n vertices]
+   3         2            2   OK
+   4         3            3   OK
+   5         7            7   OK
+   6        16           16   OK
+   7        54           54   OK
+
+==============================================================================
+(2) DOES EACH SWITCHING CLASS CONTAIN A UNIQUE EVEN GRAPH?
+==============================================================================
+  classical (Seidel): for n ODD each switching class has exactly one even graph.
+  This is the bridge to the repo's E_n.  Test it, and see what n EVEN does.
+   n  parity  #classes  even-graphs-per-class (multiset of counts)
+   3  odd          2   {1: 2}
+   4  even         3   {0: 1, 4: 2}
+   5  odd          7   {1: 7}
+   6  even        16   {0: 10, 16: 6}
+   7  odd         54   {1: 54}
+
+  reading: value v with multiplicity m means m classes contain v even graphs.

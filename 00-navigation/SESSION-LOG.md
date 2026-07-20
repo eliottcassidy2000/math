@@ -1,3 +1,45 @@
+## opus-2026-07-20-S404 - Graph switching lands exactly on E_n; the even-graph bridge is odd-n only (THM-1430)
+
+Owner asked for Seidel switching classes up to isomorphism, with "pull from other agents
+often and extend not duplicate". Pulled first: THM-1415 (kind-pasteur, same day) had just
+computed the TOURNAMENT switching quotient (1,2,2,6 at n=3..6), proved it is NOT A002854,
+and recorded as REFUTED their own guess that it lands on E_n; THM-474 (mac-mini) had
+established tilings = switching classes of tournaments. **The undirected side was the gap.**
+
+**Result:** Seidel switching classes of GRAPHS up to iso = **2, 3, 7, 16, 54** at n=3..7 =
+A002854 = V(E_n) exactly. Two independent methods agree at n <= 6. **So E_n IS the set of
+two-graphs** - the classical two-graph literature (regular two-graphs, equiangular lines,
+conference matrices) applies to it directly, and kps's negative result is a real
+tournament/graph asymmetry rather than a failed method. The two theorems are complements.
+
+**The sharp part - the even-graph bridge is ODD-n ONLY.** n odd (3,5,7): exactly one even
+graph per class, a clean bijection. n even (4,6): classes carry 0 or 2^(n-2) even graphs
+({0:1,4:2} at n=4; {0:10,16:6} at n=6), most carrying none. Totals still match A002854 at
+every n (Mallows-Sloane) - a COUNT identity always, a BIJECTION only at odd n. **This
+retro-explains why CLAUDE.md's projection T_cycle = (I + L(K_n))T mod 2 is restricted to
+odd n**: that is exactly where the correspondence is single-valued. Also a wording caution
+- "V(E_n) = non-isomorphic even graphs" must not be read as naming a canonical even
+representative per class at even n; at n=6, ten of sixteen classes have none.
+
+**Also:** Seidel spectra are switching+iso invariants (switching = conjugation by
+diag(+-1)); regular two-graphs for n<=6 are trivial until n=6, which carries the unique
+genuine one (+-sqrt(5), multiplicities [3,3]). Constructed and verified the order-14 Paley
+conference matrix from QR mod 13 (C C^T = 13 I, spectrum +-sqrt(13), mult [7,7]) - a
+regular two-graph on 14 points, **catalogued and explicitly NOT claimed as an LRC(14)
+bridge** per HYP-8230: the LRC 14 is 2*7 from parity, this one is 13+1 with 13 = 1 mod 4,
+and the [7,7] split is forced by n/2 so carries no information.
+
+**Method note worth keeping.** First run gave 2,2,3,1,2 - wrong by over-merging. Cause: an
+(n-1)-vertex bitmask reused as an n-vertex one, but pair orderings differ (bit 2 is (1,2)
+in pairs(3), (0,3) in pairs(4)). Brute-force ground truth at n<=6 caught it in one step.
+Always index-lift explicitly between vertex counts; always keep a slow independent method.
+
+**Next:** n=8 (expect 243) and n=9 (expect 2038) need a better canonical form than
+brute-force S_n minimisation. And the real open question: does any two-graph invariant
+transfer to the tournament side, where THM-1415 shows the quotient is far coarser?
+
+**Artifacts:** THM-1430; HYP-8285; 2 scripts + 2 outputs.
+
 ## mac-mini-2026-07-20-S129 -- THM-1420 NO F_2-LINEAR TOURNAMENT INVARIANTS EXIST (so no star-type invariant can ever descend -- one line) + chirality over A_n + THM-1425 the OCF is Fibonacci with weight 2 + JC attribution amendment (co-credit Akhil Mathew; the "3" dissolves)
 
 **Owner directive:** map tiling sets to iso-class nodes exactly; compute nodes/edges/tilings from each other efficiently, find tricks; "a descending star-type invariant has to come from a base-path-independent subgroup -- the natural candidate being \cap Gamma over all spanning paths"; 1001 = three sixties / Fibonacci period 60; Erdos 592 vs the JC counterexample's three parts; Fibonacci from shifted Pascal; Casas-Alvero.

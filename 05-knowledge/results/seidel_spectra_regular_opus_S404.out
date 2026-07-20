@@ -1,0 +1,38 @@
+============================================================================
+(3) SEIDEL SPECTRA of the switching classes, and REGULAR TWO-GRAPHS
+============================================================================
+  A REGULAR two-graph <=> its Seidel matrix has exactly TWO distinct eigenvalues.
+  These are the equiangular-line / conference-matrix objects.
+
+   n  #distinct Seidel spectra  #REGULAR two-graph spectra
+   3                        2                         2   
+        regular spectrum: [np.float64(-1.0), np.float64(2.0)] multiplicities [2, 1]
+        regular spectrum: [np.float64(-2.0), np.float64(1.0)] multiplicities [1, 2]
+   4                        3                         2   
+        regular spectrum: [np.float64(-1.0), np.float64(3.0)] multiplicities [3, 1]
+        regular spectrum: [np.float64(-3.0), np.float64(1.0)] multiplicities [1, 3]
+   5                        7                         2   
+        regular spectrum: [np.float64(-1.0), np.float64(4.0)] multiplicities [4, 1]
+        regular spectrum: [np.float64(-4.0), np.float64(1.0)] multiplicities [1, 4]
+   6                       16                         3   <- the unique regular two-graph on 6 points
+        regular spectrum: [np.float64(-5.0), np.float64(1.0)] multiplicities [1, 5]
+        regular spectrum: [np.float64(-1.0), np.float64(5.0)] multiplicities [5, 1]
+        regular spectrum: [np.float64(-2.236068), np.float64(2.236068)] multiplicities [3, 3]
+
+============================================================================
+(4) THE ORDER-14 PALEY CONFERENCE MATRIX  ->  regular two-graph on 14 points
+============================================================================
+  Symmetric conference matrix of order n <=> regular two-graph on n vertices.
+  Paley construction needs n-1 an odd prime power = 1 mod 4.  n=14: n-1=13, and
+  13 = 1 mod 4.  So C_14 EXISTS, built from the quadratic residues mod 13.
+  QR mod 13 = [1, 3, 4, 9, 10, 12]   (13 = number of LRC speeds; 14 = the repo apex)
+  C is 14x14, symmetric: True
+  zero diagonal: True;  entries in {0,+-1}: {np.int64(0), np.int64(1), np.int64(-1)}
+  C C^T = 13 * I ?  True   (conference-matrix defining identity)
+  Seidel spectrum: [np.float64(-3.605551), np.float64(3.605551)] with multiplicities [7, 7]  -> TWO eigenvalues = REGULAR
+  => a regular two-graph on 14 points exists, eigenvalues +-sqrt(13).
+
+  HONEST NOTE: this is a real object at n=14 built from 13 residues, but the repo
+  rule from HYP-8230 applies -- coincidence of INDEX is not evidence of mechanism.
+  The LRC 14 is 2*7 (parity, lam=1/14); this 14 is 13+1 with 13 = 1 mod 4.
+  Different arithmetic. Recorded as a catalogued object, NOT as a bridge.
