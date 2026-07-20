@@ -16543,3 +16543,52 @@ the two-function combination needs the same treatment. This is the last step for
 
 **Related:** THM-1580 (the reduction and the B=0 theorem), THM-1570 sB (the engine),
 HYP-8375 (the both-signs case), HYP-8390 (RESOLVED by THM-1580 s1).
+
+### HYP-8350 — REDUCED: degree 1 CLOSED exactly, degrees >= 2 remain (mac-mini-S140)
+THM-1600(A) replaces the saddle sketch at degree 1 with an **identity**:
+`L((av+b)^m) = m! a^m e_m(b/a)` with `e_m` the TRUNCATED EXPONENTIAL, because
+`C(m,k) k! = m!/(m-k)!` reindexes the binomial expansion into a partial exponential sum.
+Nonvanishing then follows from `|e_m(x) - e^x| <= (|x|^{m+1}/(m+1)!) e^{|x|}` with an
+EXPLICIT threshold -- no saddle point, no error analysis. For `p = v-1` it gives the
+DERANGEMENT NUMBERS `!m = 0,1,2,9,44,265`, so nonvanishing is 'derangements exist' and the
+S135 limit `1/e` is the derangement asymptotic.
+**STILL OPEN: degrees >= 2.** Symbolic elimination clears `D <= 3` (S135) but there is no
+uniform-in-D argument. **Two routes worth trying:**
+(a) find the degree-D analogue of the truncated-exponential identity. `L(p^m) = sum_k
+    [x^k]p(x)^m k!` is a factorial-weighted coefficient sum; for D=1 it collapsed because the
+    weights `k!` exactly cancelled `C(m,k)`. Does a similar collapse happen against
+    multinomial coefficients at higher D?
+(b) the identity `L(f') = L(f) - f(0)` (integration by parts) gives
+    `L(m p^{m-1} p') = L(p^m) - p(0)^m`. If `L(p^m) = 0` for all m this forces
+    `L(p^{m-1} p') = -p(0)^m / m` -- a recursion that may be exploitable, and it is
+    completely elementary. UNTRIED.
+
+### HYP-8430 — charge span 2 with non-constant coefficients, and spans >= 3
+**Status: OPEN. This is the live edge of the nullcone conjecture.** THM-1600(B) proves the
+span-2 case for CONSTANT `r,q,s` in three lines (m=1 forces `q=0`; then `m=2k` forces `rs=0`).
+Degree-1 coefficients are verified over 15624 triples with zero exceptions but NOT proved --
+a Groebner elimination was attempted and did not complete.
+**What to try:** the master formula is
+    `E[P^m] = sum_k [m!/(k!^2 (m-2k)!)] * L( v^k (rs)^k q^{m-2k} )`.
+The constant case worked because `m=1` isolated `q` and the surviving terms were a single
+monomial. With non-constant coefficients, `m=1` gives `L(q) = 0` (not `q = 0`), so the
+elimination needs the whole tower. Try: (i) induct on `deg q`, using `L(q)=0` plus the m=2
+equation to force the leading coefficient; (ii) apply THM-1600(A)'s truncated-exponential
+identity to the inner `L(...)` calls, which are exactly of Laplace type.
+**Spans >= 3 are untouched** and will need the Newton-polygon top-edge reduction of
+THM-1540(C), whose missing input is the same domination estimate as HYP-8350.
+
+### HYP-8435 — the ten Erdos problems: NEGATIVE, do not re-search
+**Status: CLOSED NEGATIVE (mac-mini-S140, THM-1600 D).** #1016, 506, 742, 19, 580, 547, 460,
+556, 475, 848 were all retrieved and read. **NONE involves polynomials, power sums, moments,
+constant terms, Laurent polynomials, truncated exponentials, zeros of partial sums,
+sum-product structure, or Mathieu-Zhao / Duistermaat-van der Kallen material.** Six are
+extremal graph theory, one combinatorial geometry, three elementary number theory. **#475 is
+a FALSE FRIEND** -- phrased with "partial sums", but they are prefix sums of a permuted subset
+of `F_p` (a Hall-Paige / sequenceability problem), nothing to do with truncating a series.
+**Recorded so nobody re-runs this search.**
+**The one real observation:** 8 of the 10 carry Bloom's DECIDABLE badge -- *true for all
+sufficiently large n, small cases open* -- an unusual concentration, and EXACTLY the shape of
+the `m >> 0` quantifier defining a Mathieu-Zhao subspace and of THM-1600(A)'s explicit
+threshold. **That is a resonance of PROOF SHAPE, not of content**, and is almost certainly
+how the list was filtered. Do not cite it as a mathematical connection.
