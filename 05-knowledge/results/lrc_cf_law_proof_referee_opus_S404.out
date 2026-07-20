@@ -1,0 +1,16 @@
+(R1) u* is a convergent denominator: failures 0/~200k
+(R2) active class is single +- residue class: failures 0/400
+(R4) H-violations found: 390; (A)-failures among them: 0
+
+(R3) corpus:
+  AP13: t*=1/14, mt=1, u*=1 conv:True H(u* in V):True v0=1; straddle sums all = kq: True; D set [Fraction(1, 1)] (delta(u*)=1)
+  GW: t*=1/14, mt=1, u*=1 conv:True H(u* in V):True v0=1; straddle sums all = kq: True; D set [Fraction(1, 1)] (delta(u*)=1)
+  {1..12,14}: t*=1/13, mt=1, u*=1 conv:True H(u* in V):True v0=1; straddle sums all = kq: True; D set [Fraction(1, 1), Fraction(2, 1)] (delta(u*)=1)
+  3/41: t*=17/41, mt=3, u*=5 conv:True H(u* in V):True v0=5; straddle sums all = kq: True; D set [Fraction(3, 1)] (delta(u*)=3)
+  ladder4: t*=22/53, mt=4, u*=5 conv:True H(u* in V):True v0=5; straddle sums all = kq: True; D set [Fraction(4, 1)] (delta(u*)=4)
+  ladder5: t*=27/65, mt=5, u*=5 conv:True H(u* in V):True v0=5; straddle sums all = kq: True; D set [Fraction(5, 1)] (delta(u*)=5)
+  loose {1..12,15}: t*=1/13, mt=1, u*=1 conv:True H(u* in V):True v0=1; straddle sums all = kq: True; D set [Fraction(1, 1)] (delta(u*)=1)
+  primes13: t*=1/4, mt=1, u*=1 conv:True H(u* in V):False v0=3
+  mixed: t*=7/15, mt=4, u*=2 conv:True H(u* in V):False v0=7
+  N19: t*=23/59, mt=3, u*=5 conv:True H(u* in V):True v0=5; straddle sums all = kq: True; D set [Fraction(3, 1)] (delta(u*)=3)
+  N31: t*=55/127, mt=4, u*=7 conv:True H(u* in V):True v0=7; straddle sums all = kq: True; D set [Fraction(4, 1)] (delta(u*)=4)
