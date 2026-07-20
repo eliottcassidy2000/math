@@ -1,0 +1,112 @@
+==============================================================================
+klein-S335: the half fold (sigma) and quarter fold (sigma,phi) vs the star split
+==============================================================================
+
+--- n=3  m=1 ---
+ (A) sigma = rho-induced tile perm, sigma(star v)=star(n+1-v): True;  cut(H) sigma-stable: True
+ (B) phi=all-ones in cut(H): True   H bipartite: True   [must agree]
+ (C) eps != 0: False   translation law hol(t+1)=hol(t)+eps: True   phi free on orbits: False
+ (D) leg(y=1)=1 tiles = star_H(1); leg(x=n)=1 tiles = star_H(n); sigma swaps legs: True
+     Fix(sigma) = [(3, 1)]  (antidiagonal x+y=n+1: True, a matching: True)
+ (E) dim cut=1 (=n-1: False)  dim cycle=0 (=m-n+1: False)
+     star orbits = 2^0;  QUARTER-invariant dim = 0 = m-(n-1)-1
+     maxcut(H)=1, defect of phi from cut(H) = m-maxcut = 0
+
+--- n=4  m=3 ---
+ (A) sigma = rho-induced tile perm, sigma(star v)=star(n+1-v): True;  cut(H) sigma-stable: True
+ (B) phi=all-ones in cut(H): True   H bipartite: True   [must agree]
+ (C) eps != 0: False   translation law hol(t+1)=hol(t)+eps: True   phi free on orbits: False
+ (D) leg(y=1)=2 tiles = star_H(1); leg(x=n)=2 tiles = star_H(n); sigma swaps legs: True
+     Fix(sigma) = [(4, 1)]  (antidiagonal x+y=n+1: True, a matching: True)
+ (E) dim cut=3 (=n-1: True)  dim cycle=0 (=m-n+1: True)
+     star orbits = 2^0;  QUARTER-invariant dim = 0 = m-(n-1)-1
+     maxcut(H)=3, defect of phi from cut(H) = m-maxcut = 0
+
+--- n=5  m=6 ---
+ (A) sigma = rho-induced tile perm, sigma(star v)=star(n+1-v): True;  cut(H) sigma-stable: True
+ (B) phi=all-ones in cut(H): False   H bipartite: False   [must agree]
+ (C) eps != 0: True   translation law hol(t+1)=hol(t)+eps: True   phi free on orbits: True
+ (D) leg(y=1)=3 tiles = star_H(1); leg(x=n)=3 tiles = star_H(n); sigma swaps legs: True
+     Fix(sigma) = [(5, 1), (4, 2)]  (antidiagonal x+y=n+1: True, a matching: True)
+ (E) dim cut=4 (=n-1: True)  dim cycle=2 (=m-n+1: True)
+     star orbits = 2^2;  QUARTER-invariant dim = 1 = m-(n-1)-1
+     maxcut(H)=5, defect of phi from cut(H) = m-maxcut = 1
+
+--- n=6  m=10 ---
+ (A) sigma = rho-induced tile perm, sigma(star v)=star(n+1-v): True;  cut(H) sigma-stable: True
+ (B) phi=all-ones in cut(H): False   H bipartite: False   [must agree]
+ (C) eps != 0: True   translation law hol(t+1)=hol(t)+eps: True   phi free on orbits: True
+ (D) leg(y=1)=4 tiles = star_H(1); leg(x=n)=4 tiles = star_H(n); sigma swaps legs: True
+     Fix(sigma) = [(6, 1), (5, 2)]  (antidiagonal x+y=n+1: True, a matching: True)
+ (E) dim cut=5 (=n-1: True)  dim cycle=5 (=m-n+1: True)
+     star orbits = 2^5;  QUARTER-invariant dim = 4 = m-(n-1)-1
+     maxcut(H)=8, defect of phi from cut(H) = m-maxcut = 2
+
+--- n=7  m=15 ---
+ (A) sigma = rho-induced tile perm, sigma(star v)=star(n+1-v): True;  cut(H) sigma-stable: True
+ (B) phi=all-ones in cut(H): False   H bipartite: False   [must agree]
+ (C) eps != 0: True   translation law hol(t+1)=hol(t)+eps: True   phi free on orbits: True
+ (D) leg(y=1)=5 tiles = star_H(1); leg(x=n)=5 tiles = star_H(n); sigma swaps legs: True
+     Fix(sigma) = [(7, 1), (6, 2), (5, 3)]  (antidiagonal x+y=n+1: True, a matching: True)
+ (E) dim cut=6 (=n-1: True)  dim cycle=9 (=m-n+1: True)
+     star orbits = 2^9;  QUARTER-invariant dim = 8 = m-(n-1)-1
+     maxcut(H)=11, defect of phi from cut(H) = m-maxcut = 4
+
+--- n=8  m=21 ---
+ (A) sigma = rho-induced tile perm, sigma(star v)=star(n+1-v): True;  cut(H) sigma-stable: True
+ (B) phi=all-ones in cut(H): False   H bipartite: False   [must agree]
+ (C) eps != 0: True   translation law hol(t+1)=hol(t)+eps: True   phi free on orbits: True
+ (D) leg(y=1)=6 tiles = star_H(1); leg(x=n)=6 tiles = star_H(n); sigma swaps legs: True
+     Fix(sigma) = [(8, 1), (7, 2), (6, 3)]  (antidiagonal x+y=n+1: True, a matching: True)
+ (E) dim cut=7 (=n-1: True)  dim cycle=14 (=m-n+1: True)
+     star orbits = 2^14;  QUARTER-invariant dim = 13 = m-(n-1)-1
+     maxcut(H)=15, defect of phi from cut(H) = m-maxcut = 6
+
+--- n=9  m=28 ---
+ (A) sigma = rho-induced tile perm, sigma(star v)=star(n+1-v): True;  cut(H) sigma-stable: True
+ (B) phi=all-ones in cut(H): False   H bipartite: False   [must agree]
+ (C) eps != 0: True   translation law hol(t+1)=hol(t)+eps: True   phi free on orbits: True
+ (D) leg(y=1)=7 tiles = star_H(1); leg(x=n)=7 tiles = star_H(n); sigma swaps legs: True
+     Fix(sigma) = [(9, 1), (8, 2), (7, 3), (6, 4)]  (antidiagonal x+y=n+1: True, a matching: True)
+ (E) dim cut=8 (=n-1: True)  dim cycle=20 (=m-n+1: True)
+     star orbits = 2^20;  QUARTER-invariant dim = 19 = m-(n-1)-1
+     maxcut(H)=19, defect of phi from cut(H) = m-maxcut = 9
+
+--- n=10  m=36 ---
+ (A) sigma = rho-induced tile perm, sigma(star v)=star(n+1-v): True;  cut(H) sigma-stable: True
+ (B) phi=all-ones in cut(H): False   H bipartite: False   [must agree]
+ (C) eps != 0: True   translation law hol(t+1)=hol(t)+eps: True   phi free on orbits: True
+ (D) leg(y=1)=8 tiles = star_H(1); leg(x=n)=8 tiles = star_H(n); sigma swaps legs: True
+     Fix(sigma) = [(10, 1), (9, 2), (8, 3), (7, 4)]  (antidiagonal x+y=n+1: True, a matching: True)
+ (E) dim cut=9 (=n-1: True)  dim cycle=27 (=m-n+1: True)
+     star orbits = 2^27;  QUARTER-invariant dim = 26 = m-(n-1)-1
+     maxcut(H)=24, defect of phi from cut(H) = m-maxcut = 12
+
+--- n=11  m=45 ---
+ (A) sigma = rho-induced tile perm, sigma(star v)=star(n+1-v): True;  cut(H) sigma-stable: True
+ (B) phi=all-ones in cut(H): False   H bipartite: False   [must agree]
+ (C) eps != 0: True   translation law hol(t+1)=hol(t)+eps: True   phi free on orbits: True
+ (D) leg(y=1)=9 tiles = star_H(1); leg(x=n)=9 tiles = star_H(n); sigma swaps legs: True
+     Fix(sigma) = [(11, 1), (10, 2), (9, 3), (8, 4), (7, 5)]  (antidiagonal x+y=n+1: True, a matching: True)
+ (E) dim cut=10 (=n-1: True)  dim cycle=35 (=m-n+1: True)
+     star orbits = 2^35;  QUARTER-invariant dim = 34 = m-(n-1)-1
+     maxcut(H)=29, defect of phi from cut(H) = m-maxcut = 16
+
+==============================================================================
+SUMMARY TABLE
+==============================================================================
+  n    m  dim cut  dim cyc  phi in cut   H bip  eps!=0  quarter dim  defect
+  3    1        1        0        True    True   False            0       0
+  4    3        3        0        True    True   False            0       0
+  5    6        4        2       False   False    True            1       1
+  6   10        5        5       False   False    True            4       2
+  7   15        6        9       False   False    True            8       4
+  8   21        7       14       False   False    True           13       6
+  9   28        8       20       False   False    True           19       9
+ 10   36        9       27       False   False    True           26      12
+ 11   45       10       35       False   False    True           34      16
+
+READING:
+ half fold  (sigma): a PERMUTATION of the holonomy word -- internal to the star algebra.
+ quarter fold (phi): a TRANSLATION of the holonomy word by eps -- transverse, free for n>=5,
+                     costing exactly ONE holonomy bit (the odd-cycle-size functional).
