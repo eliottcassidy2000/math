@@ -1,0 +1,20 @@
+=== Sum of H over each SWITCHING CLASS (= tiling = even graph at odd n) ===
+
+n=3: 2 switching classes (expect 2^C(n-1,2)=2), each size {4} (expect 2^(n-1)=4)
+  every class-sum of H == n! = 6:  True   (distinct sums observed: [6])
+
+n=4: 8 switching classes (expect 2^C(n-1,2)=8), each size {8} (expect 2^(n-1)=8)
+  every class-sum of H == n! = 24:  True   (distinct sums observed: [24])
+
+n=5: 64 switching classes (expect 2^C(n-1,2)=64), each size {16} (expect 2^(n-1)=16)
+  every class-sum of H == n! = 120:  True   (distinct sums observed: [120])
+
+n=6: 1024 switching classes (expect 2^C(n-1,2)=1024), each size {32} (expect 2^(n-1)=32)
+  every class-sum of H == n! = 720:  True   (distinct sums observed: [720])
+
+THEOREM (verified n=3..6): Sum_{T in switching class} H(T) = n! for EVERY class.
+  => the odd-valued H, averaged over a switching class of size 2^(n-1), has mean n!/2^(n-1);
+     summed it is exactly |S_n|. Odd values + even (switching/even-graph) structure meet on S_n,
+     fiberwise. Proof: a fixed directed Ham path (n! of them) lies in exactly one tournament
+     per switching class (the n-1 path-arcs pin the switch coset), so each class contains each
+     directed Ham path exactly once => class-sum = #directed Ham paths = n!.

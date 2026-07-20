@@ -1,0 +1,38 @@
+=== H is an ODD-VALUED EVEN FUNCTION, and the odd/even bridge ===
+
+n=3: #tournaments=2^3=8
+  (1) ODD-VALUED (Redei): every H(T) odd = True
+  (2) EVEN FUNCTION (complement-invariant H(T)=H(T^op)): True
+  (3) BRIDGE  Sum_T H(T) = 12   n!*2^C(n-1,2) = 12   match=True
+      avg H = 12/8 = n!/2^(n-1) = 6/4
+  (4) EVEN-GRAPH count |cycle space of K_n| = 2^C(n-1,2) = 2  (= #tilings = #switching classes)
+
+n=4: #tournaments=2^6=64
+  (1) ODD-VALUED (Redei): every H(T) odd = True
+  (2) EVEN FUNCTION (complement-invariant H(T)=H(T^op)): True
+  (3) BRIDGE  Sum_T H(T) = 192   n!*2^C(n-1,2) = 192   match=True
+      avg H = 192/64 = n!/2^(n-1) = 24/8
+  (4) EVEN-GRAPH count |cycle space of K_n| = 2^C(n-1,2) = 8  (= #tilings = #switching classes)
+
+n=5: #tournaments=2^10=1024
+  (1) ODD-VALUED (Redei): every H(T) odd = True
+  (2) EVEN FUNCTION (complement-invariant H(T)=H(T^op)): True
+  (3) BRIDGE  Sum_T H(T) = 7680   n!*2^C(n-1,2) = 7680   match=True
+      avg H = 7680/1024 = n!/2^(n-1) = 120/16
+  (4) EVEN-GRAPH count |cycle space of K_n| = 2^C(n-1,2) = 64  (= #tilings = #switching classes)
+
+n=6: #tournaments=2^15=32768
+  (1) ODD-VALUED (Redei): every H(T) odd = True
+  (2) EVEN FUNCTION (complement-invariant H(T)=H(T^op)): True
+  (3) BRIDGE  Sum_T H(T) = 737280   n!*2^C(n-1,2) = 737280   match=True
+      avg H = 737280/32768 = n!/2^(n-1) = 720/32
+  (4) EVEN-GRAPH count |cycle space of K_n| = 2^C(n-1,2) = 1024  (= #tilings = #switching classes)
+
+=== H is R-EVEN: largest |odd-degree Walsh coefficient| (should be 0) ===
+  n=3: max |odd-degree Walsh coeff of H| = 0.00e+00  (0 => H is an even function)
+  n=4: max |odd-degree Walsh coeff of H| = 0.00e+00  (0 => H is an even function)
+
+=== JC bridge: the counterexample's ODD fiber = H(3-cycle) ===
+  H(3-cycle C_3) = 3  = JC-counterexample fiber size (3) = smallest odd H>1
+  det JF = -2 (EVEN); fiber = 3 (ODD): the JC witness is 'odd fiber over even determinant',
+  the same odd(value)/even(structure) tension as H (odd values, even function).
