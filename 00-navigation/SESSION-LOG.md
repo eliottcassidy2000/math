@@ -1,3 +1,33 @@
+## klein-2026-07-19-S324 -- THE ANATOMY SESSION (owner: long session, deepest understanding of JC counterexamples, sporadic vs families, rational-thread sweep, wild hypotheses licensed): THE MASTER QUARTIC -- every fiber of F is governed by D*W^3 + (b^2-12a)W - 4a = 0 (W = 1+xy, D = 27a^2c^2-18abc+16a+b^3c-b^2, NO W^2 term ever: trace law sum(x_i y_i) = -3 per fiber); disc_W = -4*(dD/dc)^2*D so the Galois twist is sqrt(-D); the collision target IS T_3(W) = 1 AND lies on the S=0 double-root stratum (cubic factors -(W-1)(2W+1)^2, r^3 = 2a/D); fiber spectrum {3 on D!=0, 1 on D=0, NEVER 2} = the C-side of the mod-p N_2 == 0; F conjectured SURJECTIVE; THE MINIMALITY MECHANISM -- degree-2 and Z/3-Galois etale self-covers need fixed-point-free finite-order automorphisms of C^3 (obstructed under linearization, citation to pin) while non-Galois S_3 has trivial deck group and dodges => (degree 3, S_3, sqrt(-D)-twist) is the minimal possible configuration and the k=2 transplant PROVABLY dies (7-param ansatz: only det=0)
+
+Sporadic-vs-families refined: counterexamples breed lawfully (conjugation orbit;
+composition monoid F∘F det 4 9:1; padded/lifted avatars incl. the C^6 symplectic
+lift and phi_F) and the essential moduli live below those structures (opus-S414's
+concurrent coefficient-moduli scan -- complementary claims held disjoint).
+Higher-dim cubic-homogeneous/Druzkowski descendants are forced by the classical
+reductions run in reverse (construction lead). RATIONAL SWEEP (owner directive):
+-1/4 = -prod_j cos(2pi j/3) (MECHANISM -- twins the LRC 3-runner floor 1/4, both
+shadows of Z/3 on the circle); 3/2 = the cosine spread 1-(-1/2) (MED);
+13/2 via 13 = 3^2+2^2 (numerology, flagged LOW); THE REAL PATTERN: every constant
+in map/cubic/discriminant is {2,3}-smooth -- the example lives over Z[1/6],
+|S_3| = 6; wild conjecture: minimal counterexamples are {2,3}-smooth (the
+smallest-primes wall, the same species as LRC(14)'s apex-7). Wild predictions
+filed: all minimal dim-3 counterexamples share (S_3, {3,1} spectrum, -4S^2D
+discriminant shape); S_4/degree-4 existence = the next minimality rung. LEADS:
+linearization citations (upgrade minimality to THEOREM); surjectivity lifting
+lemma; the D-as-discriminant hidden-cubic near-miss; Lang-Weil c in the mod-p
+frac_3 -> 1/6 approach; Druzkowski descendants.
+
+Prompt (owner): since the jacobian conjecture is false, counterexamples must be
+sporadic or families; spend a long session on the deepest possible understanding
++ explicit examples; sweep the rationals through all previous threads; bold
+patterns; wild hypotheses; draw together the broad mathematics.
+
+FILES: T1548, reflection anatomy-of-a-jacobian-counterexample-the-master-quartic,
+jacobian_master_quartic_klein_S324.py + frozen out, claim + 2 checkpoints pushed
+mid-session. -> all
+
+---
 ## opus-2026-07-19-S414 -- THE JC COUNTEREXAMPLE'S ANATOMY (owner: deepest understanding, sporadic vs families, trace every rational through our threads): TORUS NORMAL FORM FOUND -- F is equivariant for (x,y,z) -> (lx, y/l, z/l^2) with target weights (-2,-1,1); over the invariants s = xy, w = x^2 z it reads F = (zP + y^2 Q, yR + xzS, xT) with P=(1+s)^3, Q=(1+s)(4+3s), R=1+12s+9s^2, S=3(1+s)^2, T=2-3s-w. CONSEQUENCES, verified: the published points are the l=1 SLICE of a collision CONTINUUM (for every l != 0: F(l, -3/2l, 13/2l^2) = F(0,0,-1/4l^2) -- one exotic C*-orbit double-covers the target axis, l -> l^-2 being the det's '2', plus the rigid fixed line: S413's second-fiber mirror pair is the SAME orbit at l = +-i/2); the quotient map q = (T(sR+wS), T^2(wP+s^2Q)) CONTRACTS the entire curve {T=0} to the origin (det J(q) non-constant -- the plane shadow is a blowdown, JC_2 untouched); THE RATIONALS ARE DERIVED, NOT DATA: {T=0} cap {sR+wS=0} collapses to the LINEAR equation 4s+6 = 0, whence s = -3/2 and w = 2-3s = 13/2; -1/4 is only the l=1 slice; det -2 is the weight; the owner's number-archaeology closes with every rational structural in-example and the repo echoes (13, 1/4, 3/2, 26=2*13) graded CHARM. SPORADIC OR FAMILY -- ANSWERED (evidence-grade, deformation theory): the 15-coefficient equivariant moduli carries 16 det-constancy constraints of rank 10 at F => TANGENT DIMENSION 5, of which the ONE exactly-integrable direction is the TRIVIAL target rescaling (scales (P,Q) jointly, det moves linearly) and ALL FOUR nontrivial directions are OBSTRUCTED at second order => F is LOCALLY RIGID MODULO EQUIVALENCE within its weight type: the apparent families are reparametrization orbits (the l-continuum, the rescaling line). The route to genuinely new examples is the now-explicit MACHINE: pick a weight system -> invariant-module normal form -> impose det == const -> make T a nonunit -> intersect {T=0} with {sR+wS=0}. PRIORITY: mac-mini-S130 pushed the collision closed form (xy = -3/2, identity in s) minutes earlier -- their priority on that slice, independently confirmed here; normal form + contraction + moduli complementary. Our lore's contribution: the S413 parity lemma is the Z/2 shadow of the full torus fiber law (fixed-line point + orbit pairs), and the observer-lens habit is what surfaced (s, w).
 
 Prompt (owner): since the jacobian conjecture is false, counterexamples to it must be
