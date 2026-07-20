@@ -88,6 +88,37 @@ FILES: THM-1405, HYP-8250, 2 scripts + outs. -> all (the star group has rank exa
 - **HS rib law:** even-class disjointness concentrates on the RIBS: n=5 no-shared-even pairs are 59% SC-NS, 0% NS-NS (all NS-NS pairs share an even class); n=6 same enrichment. Attack filed: prove n=5 NS-NS statement from cycle-space bijection.
 - **Witness-transport verdict:** YES — first explicit VC/IC/Mathieu witnesses would be new OBJECTS (untouched everywhere); the de Grey precedent (explicit witness moved CNP); the transport measures constructive cost of the equivalences (final N, deg P = new constants); Lean staged det/collision -> DC -> VC; mod-p dry run first. Proof/Lean queue: THM-1370+completeness (full characterization paper), transport, Mod27 mirror, dihedral-rigidity paper, THM-1365, sliver-BU note.
 - **Niche sweep (18):** Tier A cpA=>cpK, Moser-32nd/A362193, Sequence D, shear constant + 4 OEIS-new, 1001 three-sixties; Tier B Erdos 592, Alcuin minor-closure escape, Heegner-Rabinowitsch, toothpick, Niemeier n=24; Tier C Cayley-Delannoy near-paper. Next niche session: Alcuin k=3 + OEIS submissions + cpA=>cpK.
+## opus-2026-07-20-S403 - Numerology triage: 1001 / Pisano / Erdos 592 / JC (HYP-8230) + the character motif
+
+Owner probe linking `1001 = "three sixties"`, the 60-periodicity of Fibonacci's last digit,
+Erdos 592, the JC triple collision, and Fibonacci-from-shifted-Pascal. **Mostly does not
+hold; two real facts salvaged.** Full triage in HYP-8230.
+
+**True:** `pi(10) = 60 = lcm(pi(2),pi(5))`; `F(n) = sum_k C(n-1-k,k)` (n=1..39); and the one
+genuine hit - **`1001 = C(14,4)`**, Pascal row 14, the repo's apex (`= 7*11*13 = 10^3+1`).
+
+**False:** "1001 = three sixties" (`3*60 = 180`), and `pi(1001) = 560` - no bridge from 1001
+to the 60-periodicity. **Category mismatch:** Erdos 592 is open, $1000, **set theory /
+Ramsey theory** (partition calculus) - no shared object with polynomial maps of `A^3`.
+Statement not retrieved (site 403s); do not cite one without fetching it.
+
+**Rejected as evidence, deliberately:** the `1+2` rhyme between `1001`'s primes mod 5
+(11 split; 7,13 inert) and the JC fibre's `1 sigma-fixed + 2 free`. A `1+2` split among
+three primes is the *generic* outcome (~3/4 by chance). This is the THM-1380 SS1 trap and I
+applied my own rule against it.
+
+**Salvaged and catalogued:** the Pisano splitting law (`pi(p) | p-1` iff `5` is a QR mod
+`p`, else `pi(p) | 2(p+1)`) is a **fourth** sighting of *quadratic character governs the
+involution* - with Redei sign, `p = 3 (mod 4)` making the complement an anti-automorphism
+(THM-1380 SS3), and the `d=3` fibre discriminant (THM-1375 III). Written to
+`07-reflections/quadratic-character-governs-the-involution-opus-S403.md` as a **pattern,
+explicitly not a unification** - the four settings share no object, only the fact that Z/2
+has two behaviours and Legendre symbols choose between them.
+
+**Operational takeaway:** when a new involution appears, ask which character controls it
+*before* building machinery. In S401-S402 that one question would have saved two sessions.
+
+**Artifacts:** HYP-8230; reflection; script + output.
 
 ## mac-mini-2026-07-20-S127 -- ATTRIBUTION CORRECTION: the JC counterexample is Levent Alpoge's, not ours (THM-1300 fixed). Honest novelty verdict on the de Bondt-van den Essen transport (corollary, not novel) and on my own recent theorems (two are probably folklore). HYP-8240.
 

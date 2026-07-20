@@ -15608,6 +15608,41 @@ OUTCOMES (same session, all machine-exact; figurate_two_axes_macmini_S109.py/.ou
 - **Evidence:** 03-artifacts/drafts/post-jc-frontier-ledger-and-targets-opus-S421.md (the artifact); sweep of THM-1300..1355 + technique indexes.
 - **See:** Part IV for the six targets with first moves and the assumption each challenges.
 
+### HYP-8230 - 1001 / Pisano-60 / Erdos 592 / the JC triple collision form one structure
+**Status:** REFUTED in its stated form (opus-2026-07-20-S403); two true facts salvaged
+**Source:** owner probe, 2026-07-20
+
+**TRUE and verified:** `pi(10) = 60` (last decimal digit of Fibonacci repeats every 60),
+factoring as `lcm(pi(2),pi(5)) = lcm(3,20)`. The shifted-Pascal identity
+`F(n) = sum_k C(n-1-k, k)` (checked `n = 1..39`). And **`1001 = C(14,4)`** - a Pascal entry
+in row 14, the repo's apex; also `1001 = 7*11*13 = 10^3+1`, `ord_1001(10) = 6`.
+
+**FALSE:** "1001 = three sixties." `3*60 = 180 != 1001`; `1001/60 = 16.68`. And
+`pi(1001) = lcm(16,10,28) = 560`, not 180 or 60. There is no arithmetic bridge from 1001 to
+the 60-periodicity.
+
+**CATEGORY MISMATCH:** Erdos problem **592** is *open*, `$1000`, tagged **set theory /
+Ramsey theory** (teorth/erdosproblems metadata; erdosproblems.com returns 403). Infinite
+partition calculus shares no object with polynomial self-maps of `A^3`. Any relation to the
+JC counterexample is almost certainly a mis-remembered problem number. *(Statement not
+retrieved - do not cite a statement for 592 without fetching it.)*
+
+**TRUE but unrelated:** the JC counterexample's "3 parts" is real and sharper than stated -
+THM-1350 proves the triple collision is `1 sigma-fixed + 1 free sigma-orbit`, with
+`|fibre| = 1 (mod 2)` forcing odd, hence >= 3.
+
+**REJECTED AS EVIDENCE:** the tempting `1+2` rhyme (11 split vs 7,13 inert mod 5 <-> 1 fixed
++ 2 free). Each prime is split-or-inert ~50/50, so `1+2` among three primes is the generic
+case (~3/4 by chance). Carries no information. Same trap as THM-1380 SS1.
+
+**SALVAGED:** the Pisano splitting law (`pi(p) | p-1` iff `5` is a QR mod `p`, else
+`pi(p) | 2(p+1)`) is a fourth sighting of the repo's "quadratic character governs the
+involution" motif - catalogued in
+`07-reflections/quadratic-character-governs-the-involution-opus-S403.md`, explicitly as a
+pattern and **not** a unification.
+
+**Verification:** `04-computation/fib_pascal_1001_opus_S403.py` (+ `.out`).
+
 ### HYP-8225 — The ℤ/2-index form of Borsuk–Ulam certifies LRC(14) on the k-torus
 **Status:** REFUTED (opus-2026-07-20-S402) — route closed, see THM-1385
 **Source:** THM-1380 §6 (my own stated next step, from HYP-8220 / kind-pasteur-S31av)
