@@ -16956,3 +16956,27 @@ coeff of lambda_{k_max} lambda_{-k_max}); forcing this to 0 should kill the top 
 induct downward on k_max (a charge-descent, parallel to the TNC coefficient ladder THM-1610
 but on charges rather than radial degree). UNTRIED. This + the complex-p radial case are what
 GMC(2) needs beyond span-2-constant (THM-1600) and the real radial layer (THM-1675).
+### HYP-8495 - Uniform trinomial coprimality: gcd(CT(m0), CT(2m0)) is always a monomial in the gauge parameter
+**Status:** OPEN, would close ALL trinomials at once (opus-2026-07-20-S420). See THM-1675.
+
+THM-1675 reduces TNC for a trinomial charge pattern (N; j, d) to a FINITE GCD: gauge-fix to
+R = 1 + a u^j + u^d, and TNC holds iff the CT(Lambda^m) polynomials in a have no common
+NONZERO root. Verified 10/10 patterns (gcd = c*a^k). To close ALL trinomials, prove the
+uniform statement:
+
+    for every (N; j, d), gcd(CT(m0), CT(2m0)) in a is a monomial a^k (no nonzero root),
+
+where m0 is the first level with CT generically nonzero. Evidence: the witness {-2,1,4} has
+CT(3) = 3(a^2+1), CT(6) = 15((a^2+1)^2 + 2a^2); the '+2a^2' correction is nonzero at every
+root of CT(3). GENERAL FORM CONJECTURED: CT(2m0) = (CT(m0)/c)^2 + D(a) with D not vanishing on
+the zero set of CT(m0) -- the same 'positive correction survives the vertex cancellation'
+mechanism as the GMC n=2 rigidity (THM-1535 s3). If D is a nonzero multiple of a power of a
+plus a constant, coprimality is automatic.
+
+**The doubling law (companion, HYP-8480):** the first surviving level after a tuned CT(m0)=0
+is 2m0 (verified on {-2,1,4}: m0=3 -> 6). Proving this bounds the gcd check to two levels.
+
+**k-nomial generalisation:** the CT ideal in C[a_1,...,a_{k-2}] has no nonzero-coordinate
+zero -- a Groebner/Nullstellensatz check, decidable per charge pattern.
+
+**Related:** THM-1675, THM-1655, THM-1635, THM-1535 (GMC cascade resonance), HYP-8470/8480.

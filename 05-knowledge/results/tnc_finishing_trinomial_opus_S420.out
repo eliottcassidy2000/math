@@ -1,0 +1,24 @@
+==============================================================================
+(0) STRUCTURAL FACT: r_N=0  =>  F(u,t)=u^N - tR(u) is LINEAR in t
+==============================================================================
+   R=1+u**3-u**6    N=2: deg_t F = 1   (linear: True);  [u^N]F = 1
+   R=1+u**2+u**5    N=3: deg_t F = 1   (linear: True);  [u^N]F = 1
+
+==============================================================================
+(1) TRINOMIAL SWEEP: does any non-monomial trinomial kill ALL CT up to a high bound?
+==============================================================================
+   For each charge pattern, tune the middle coeff to cancel CT(m_0), then scan later CT.
+   trinomial charge patterns tested: 53
+   tuned points killing CT through m_0+11: 0
+   NONE.  Every tuned-cancellation trinomial has a surviving later CT.
+   => no non-monomial trinomial is a nullcone element (up to this bound).
+
+==============================================================================
+(2) THE DOUBLING LAW: when CT(m_0)=0 is tuned, where does CT first survive?
+==============================================================================
+   pattern from the witness: m_0 -> next nonzero at a MULTIPLE of m_0?
+   N=2 (charges -2,1,4): m0=3, tuned a=-I, first survivor m=6   = 2*m0
+   N=2 (charges -2,-1,2): m0=2, CT(m0) has NO nonzero tuning (unique rep) -> TNC by THM-1655
+   N=3 (charges -3,-2,2): m0=2, CT(m0) has NO nonzero tuning (unique rep) -> TNC by THM-1655
+   N=2 (charges -2,1,3): m0=3, CT(m0) has NO nonzero tuning (unique rep) -> TNC by THM-1655
+   N=3 (charges -3,-1,4): m0=3, CT(m0) has NO nonzero tuning (unique rep) -> TNC by THM-1655

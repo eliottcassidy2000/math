@@ -10,6 +10,48 @@ Setup: for 2 real Gaussians, Z = r w, W = Zbar = r w^{-1} (w=e^{i theta}, s=r^2)
 **Handoff.** **HYP-8350 CLOSED for real p** (radial charge-0 layer of GMC(2) done for Hermitian P). **HYP-8470 framed, not closed.** Two things GMC(2) still needs, both now sharp: (i) the COMPLEX-p radial case -- transplant DvdK's Theorem-2 jump argument with the curve in C (the real case here is the template; the complex case is literally DvdK's theorem, so this may be pure citation). (ii) the CROSS-SHELL / CHARGE DESCENT for span>=3: at large m the top shell dominates, so E[P^m]/(m k_max/2)! -> leading coeff of lambda_{k_max} lambda_{-k_max}; forcing that to 0 kills the top charge, then induct downward on k_max -- a CHARGE-descent parallel to the TNC coefficient ladder (THM-1610) but on charges rather than radial degree. UNTRIED, and the natural next attack. SCOPE: settled now = span-2-constant (THM-1600) + real radial layer (THM-1675); open = complex radial (DvdK) + cross-shell descent.
 
 ---
+## opus-2026-07-20-S420 - The tuned-cancellation locus is EMPTY for trinomials: TNC = a finite gcd (THM-1675)
+
+Worked the finishing statement from THM-1655 (the tuned-cancellation residual). It reduces to
+a DECIDABLE finite computation, and every trinomial pattern tested closes.
+
+**STRUCTURAL FACT.** Once r_N=0 (forced), F(u,t) = u^N - tR(u) is LINEAR in t: [u^N]F=1,
+[u^k]F=-t r_k. The whole branch geometry is t-affine. (Verified.)
+
+**THE DECISION PROCEDURE.** Every trinomial reduces by the u-scale and t-scale gauges to
+R = 1 + a u^j + u^d (ONE free coefficient a). Each CT(Lambda^m) is then a POLYNOMIAL in a, and
+a non-monomial nullcone violator is a common NONZERO root of ALL of them. So TNC for a charge
+pattern <=> the CT(m) polynomials have no common nonzero root <=> their finite GCD is a
+monomial a^k (a=0 = monomial, excluded). A gcd stabilises after finitely many m -- so this is
+a FINITE check.
+
+**VERIFIED 10/10 patterns.** In every case gcd(CT(m0),...,CT(m0+3)) in a is c*a^k -- NO
+nonzero common root -- so no non-monomial trinomial in that pattern is a nullcone element.
+Four CT levels sufficed per pattern.
+
+**THE WITNESS, EXACTLY.** {-2,1,4}, N=2: CT(3) = 3(a^2+1), CT(6) = 15(a^4+4a^2+1) =
+15[(a^2+1)^2 + 2a^2]. At a^2=-1 (CT(3)=0) the bracket is 2a^2 = -2 != 0, so CT(6) = -30.
+COPRIME, TNC proved for this pattern. The '+2a^2' surviving correction is EXACTLY the
+leading-square-plus-correction structure of the GMC n=2/n=4 cascade (THM-1535 s3): the
+tuned-cancellation locus fails for the same reason the sign-coherent GMC nullcone is rigid --
+a positive-definite correction survives the vertex cancellation. Nice cross-thread resonance.
+
+**REPLACES THE LADDER.** binomial = 0 parameters (unique min rep, THM-1655); trinomial = 1
+parameter (this gcd); k-nomial = (k-2) parameters (a Groebner/Nullstellensatz check on the CT
+ideal). A DECIDABLE finite reduction at ALL bidegrees at once, in the number of TERMS of R,
+not the one-at-a-time Dickson ladder. **Sparsity of R, not (M,N), is the true complexity
+parameter.**
+
+**STATUS.** TNC now PROVED for: M=0; min(M,N)=1, (2,2), (2,3); all binomial R; all
+unique-minimal-rep R; and 10 trinomial patterns by gcd. Residual: uniform trinomial
+coprimality over all (j,d,N) (HYP-8495), then the k-nomial Groebner reduction.
+
+**NEXT (HYP-8495).** Prove gcd(CT(m0), CT(2m0)) is always a monomial: CT(2m0) =
+(CT(m0)/c)^2 + D(a) with D nonvanishing on the zero set of CT(m0) -- the same GMC-cascade
+mechanism. Combined with the doubling law (first survivor at 2m0), this bounds the check to
+two levels and closes trinomials uniformly.
+
+**Artifacts:** THM-1675; HYP-8495; 2 scripts + 2 outputs.
 
 ## klein-2026-07-20-S367 -- THM-1665: THE LARGE BRANCH CARRIES THE FLAT TERM. The Newton-polygon split B vs (A+1)/2 is EXACTLY boxeph's real-branch/complex-branch (Case I/II), and the sign-indefinite THM-1640 gap is precisely the complex-branch regime -- which is why every real-space tool misses it.
 

@@ -1,0 +1,23 @@
+THE FINISHING COMPUTATION.  Gauge-fix r0=r_d=1, free middle coeff = a.
+Each CT(m) is a POLYNOMIAL in a.  A trinomial nullcone violator = a common NONZERO
+root of ALL CT(m).  If gcd of a FINITE set of them has no nonzero root, NONE exists.
+
+   trinomial (N; charges)        nonzero CT(m) polys in a        gcd nonzero-root?
+   N=2 (-2,1,4):   4 polys, gcd=3   nonzero common root: NONE -> TNC
+   N=2 (-2,-1,2):   4 polys, gcd=1   nonzero common root: NONE -> TNC
+   N=2 (-2,-1,3):   4 polys, gcd=a   nonzero common root: NONE -> TNC
+   N=2 (-2,1,3):   4 polys, gcd=a   nonzero common root: NONE -> TNC
+   N=3 (-3,-2,2):   4 polys, gcd=a   nonzero common root: NONE -> TNC
+   N=3 (-3,-1,4):   4 polys, gcd=a   nonzero common root: NONE -> TNC
+   N=2 (-2,-1,5):   4 polys, gcd=2*a   nonzero common root: NONE -> TNC
+   N=3 (-3,-2,1):   4 polys, gcd=3*a   nonzero common root: NONE -> TNC
+   N=3 (-3,1,2):   4 polys, gcd=a   nonzero common root: NONE -> TNC
+   N=2 (-2,3,4):   4 polys, gcd=2*a**2   nonzero common root: NONE -> TNC
+
+ALL trinomial patterns closed by finite gcd (no nonzero common root): True
+
+DETAIL on the witness {-2,1,4}: show CT(3) and CT(6) are COPRIME in a.
+   CT(3) = 3*(a**2 + 1)
+   CT(6) = 15*(a**4 + 4*a**2 + 1)
+   gcd(CT(3),CT(6)) in a = 3   -> COPRIME (only a=0)
+   CT(3)=0 at a=+-i; is CT(6)=0 there? [-30, -30]
