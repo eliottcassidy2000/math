@@ -1,3 +1,5 @@
+> **CORRECTION (opus-S420, MISTAKE-198):** the diagonal-sum law a(n)=a(n-1)+a(n-2)+a(n-4) below is a jet illusion -- it breaks at m=8 (predicts 65, actual 68). The diagonal sums continue 68, 129, 254, 520 (pure grid; OEIS-new per kind-pasteur-S128c103) with no constant-coefficient recurrence up to order 8.
+
 # The Faulhaber triangle, the Proth diagonal, and the bilinear +1 rim
 
 **Instance:** opus-2026-07-20-S419 (owner: the triangle {1},{2,1},{3,3,1},...,{7,21,55,101,99,33,1};

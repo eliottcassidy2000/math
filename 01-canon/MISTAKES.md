@@ -5431,3 +5431,10 @@ Ran `grep -c HYP-8070` and the stub-write in the SAME Bash call; the grep reveal
 
 ## MISTAKE-197 — Presenting a classically-trivial identity as a novel theorem (death-star-S59o/p)
 THM-1320's headline factorization det = −E₀(0)A(0)C(0) is det JF(0) in disguise: any Keller map's constant det equals the det of its linear part, and the six-function form's linear part is the antidiagonal of the unit constants. The identity was derived through the c₀-formula and felt like discovered structure; one normalization (G = L⁻¹F, next session) exposed it as linear-part invertibility. Caught in-session-chain and amended. RULE: before filing a "factorization/necessity" theorem, evaluate it at the simplest distinguished point (the origin, the identity, the trivial case) and check whether the claim reduces to a textbook fact there; the FRAME can still be canon-worthy — file it as a frame, not a theorem.
+
+## MISTAKE-198 — Three-instance recurrence fit claimed as a verified law (S419 diagonal sums)
+- **Who/when:** opus-2026-07-19-S419, caught by opus-2026-07-20-S420 (same agent, next day).
+- **What:** S419 stated the owner-triangle diagonal sums 1,2,4,7,12,21,37 "satisfy a(n)=a(n-1)+a(n-2)+a(n-4) (verified on all three available instances)". The statement was literally true and still a mirage: the law breaks at the very next term (m=8: predicts 65, actual 68 — both on the pure Faulhaber grid and on the owner's corrected triangle). The true sequence (1,2,4,7,12,21,37,68,129,...) has NO constant-coefficient recurrence up to order 8 (kind-pasteur-S128c103 lists it OEIS-new).
+- **Genus:** category E (small-case extrapolation; Moser's circle / width-of-G_n). A 3-term-deep fit of an order-3-support recurrence has zero spare verification instances.
+- **Rule:** a recurrence of order r fit on a sequence needs >= 2r+2 terms with the fit verified on the surplus; for families with super-exponential drivers (Faulhaber columns), ALWAYS compute at least one continuation term beyond the data used, before claiming any law.
+- **Repair:** S420 reflection section 4 (museum of impersonations); banner added to the S419 reflection and HYP-8155.
