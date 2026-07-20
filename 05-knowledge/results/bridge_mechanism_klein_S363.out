@@ -1,0 +1,74 @@
+====================================================================================
+PART 1 -- THE TOP-r-COEFFICIENT IDENTITY (the rigorous algebraic core)
+====================================================================================
+ CLAIM: for P(r,u) = sum_q g_q(r) u^q, D = max_q deg_r g_q, and leading symbol
+        Lam(u) = sum_{deg g_q = D} lc(g_q) u^q,  we have  [r^{mD}] CT_u(P^m) = CT_u(Lam^m).
+ PROOF: CT_u(P^m) = sum_{q_1+...+q_m=0} prod_i g_{q_i}(r); a product has r-degree mD iff
+        every q_i is a top-degree charge, and then its [r^{mD}] coeff is prod lc(g_{q_i}).
+
+   P charges [-1, 0, 1], D=1: [r^{mD}]CT(P^m) = CT(Lam^m) for m=2,3,4 : all match
+   P charges [-2, -1, 0, 1, 2], D=2: [r^{mD}]CT(P^m) = CT(Lam^m) for m=2,3,4 : all match
+   P charges [-1, 0, 1], D=3: [r^{mD}]CT(P^m) = CT(Lam^m) for m=2,3,4 : all match
+
+   IDENTITY HOLDS on every control: True
+
+====================================================================================
+PART 2 -- DOMINATION FAILS: independent check of MISTAKE-202, retracting my S351 mechanism
+====================================================================================
+ P = Zb + 1 + Z  (alpha = r, beta = 1); E[P^m] known nonzero.  Track |top term|/sum|terms|
+ of E_r[L_m] = sum_k ([r^k]L_m) k!  as m grows:
+
+      m         E[P^m]    |top term|/sum|terms|
+      2              3                   0.6667
+      6            331                   0.3625
+     12        3609673                   0.1843
+     18   163716695587                   0.1078
+     24 18983329135883665                   0.0682
+
+   CONFIRMED: the top term's fraction COLLAPSES (matches death-star's 0.068 at m=24).  So the
+   ">50% mass / top term dominates" mechanism is FALSE -- and that was exactly the mechanism my
+   klein-S351 Gamma bridge invoked.  I RETRACT THE MECHANISM.  The bridge's CONCLUSION
+   (E[P^m] != 0) is still true here, but NOT because the top term dominates.  Something else
+   keeps it nonzero.  Part 3 identifies what.
+
+
+====================================================================================
+PART 3 -- POSITIVITY is the real mechanism on the radial {-1,+1} span
+====================================================================================
+ On the {-1,+1} span (beta = 0, charge-0 empty), the {-1,0,1} GF collapses:
+   E[P^{2j}] = C(2j,j) E_r[alpha^j],  alpha = r * a(r) * c(r).
+ For P in C[Z,Zb] the charge +1 and -1 coefficients are conjugate, so a*c = |c|^2 >= 0,
+ whence alpha = r|c|^2 >= 0 pointwise and E_r[alpha^j] > 0 unless c == 0.  NO DOMINATION
+ NEEDED -- every moment is a positive number, so it cannot vanish.  Exhibited:
+
+   c=1: alpha = r*c^2, E_r[alpha^j] for j=1..4 = [1, 2, 6, 24]  (all > 0: True)
+   c=1+r: alpha = r*c^2, E_r[alpha^j] for j=1..4 = [11, 1370, 696750, 923389464]  (all > 0: True)
+   c=r^2-3 (has a sign change!): alpha = r*c^2, E_r[alpha^j] for j=1..4 = [93, 3181410, 1200786759414, 2284388436083583384]  (all > 0: True)
+
+   Note c = r^2 - 3 CHANGES SIGN, yet alpha = r c^2 >= 0 regardless -- the SQUARE is what
+   matters, not c.  So positivity holds for ALL c, no degree bound, matching opus THM-1535/1540
+   (Hankel positive-definiteness) and boxeph's radial route.  This is the correct mechanism,
+   and it is immune to the domination collapse of Part 2 because it never compares terms.
+
+====================================================================================
+PART 4 -- WHY THE BOTH-SIGNS {-1,0,1} CASE ESCAPES POSITIVITY (the precise gap)
+====================================================================================
+ With beta != 0, L_m(alpha,beta) = sum_k C(...) alpha^k beta^{m-2k} is NO LONGER a
+ positive combination: beta^{m-2k} alternates in sign when beta < 0, and even for
+ beta > 0 the r-integrand L_m(r) can take both signs.  Exhibited on alpha=r, beta=1-r:
+
+   alpha=r, beta=1-r:
+      m=2: L_m(r) coefficient signs = ['1']   E_r[L_m] = 3
+      m=3: L_m(r) coefficient signs = ['-1', '1']   E_r[L_m] = -8
+      m=4: L_m(r) coefficient signs = ['-1', '1']   E_r[L_m] = 57
+      m=5: L_m(r) coefficient signs = ['-1', '1']   E_r[L_m] = -384
+
+   So on the both-signs span the integrand L_m(r) is SIGN-INDEFINITE -- positivity is
+   unavailable, and (Part 2) domination is false.  THE PRECISE REMAINING GAP for GMC(2):
+   show E_r[L_m] != 0 for some m when (alpha,beta) is not the trivial (r|c|^2, 0), using
+   NEITHER termwise positivity NOR top-term domination.  The known routes are opus's Hankel
+   argument on the charge-0 sub-block and boxeph's pinch/Watson analysis; this file's
+   contribution is to have (i) made the algebraic core rigorous (Part 1), (ii) killed the
+   domination mechanism cleanly (Part 2, retracting my own S351), and (iii) isolated the gap
+   as sign-indefiniteness of L_m rather than anything about growth rates (Part 4).
+
