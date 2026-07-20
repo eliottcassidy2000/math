@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
   "session_start": "2026-07-19T20:35:05.608030",
   "start_commit": "ec8bab9f20f16619201f4b4f71a7d4b702139d33",
+=======
+  "session_start": "2026-07-19T20:30:45.985958",
+  "start_commit": "97b5c20d5e07311b2e5c23fec42e5f249f325943",
+>>>>>>> 33445d5c4 (opus-2026-07-19-S410: claim - rung theory manifesto session (rung stack, duty calculus, exclusion correspondence, theta-flow) + three in-frame verifications)
   "pushed": false,
   "message_sent": false
 }
