@@ -96,12 +96,38 @@ the NAMED NEXT MOVE.
    (holds at n=4,5 — S132), the inverse Jelonek problem, Mount-Everest, the realizable-
    degree semigroup R, the CB-filtration of LRC spectra, the shear catalog (kps c103).
 
-## Tier 3 — under-the-radar (from the S140 Explore sweep; see addendum below)
+## Tier 3 — under-the-radar (S140 Explore sweep, complete; SISTER LEDGERS EXIST — cross-read
+`PROBLEM-LEDGER.md` and `PROBLEM-LEDGER-2026-07-20-klein-S332.md`, built concurrently today)
 
-*(Filled from the sweep — lens-level engagements worth re-examining: Hadwiger–Nelson /
-unit-distance, Kakeya (simplex-slack forms in MISTAKE-176/THM-1211), Stanley–Stembridge
-e-positivity via Mitrović–Stojadinović, Rédei/OCF Claim A — the project's ORIGINAL central
-problem CONJ-001, and whatever else the sweep surfaces.)*
+**REAL RESULTS the draft missed (from the sweep):** real-rootedness conjecture DISPROVED at
+n=9 (THM-025, explicit counterexample); Chebyshev eigenvalue conjecture FALSE (TANGENTS);
+Savchenko's conjecture partial (c_m(DR) > c_m(RLT) for m ≡ 1,2,3 mod 4); Erdős–Gyárfás #64
+census + dyadic gate ladder (THM-455/456/457, beyond Exoo 2014); Erdős–Straus base-42
+covering reduction; Erdős–Ginzburg–Ziv H-spectrum gaps (H ≢ 2 mod 5 at n=5); skew-Hadamard
+doubling formalized (DRT maximizer); Sierpiński/Proth THM-1355 (klein: the n·2^x+1
+unification + Mersenne antidiagonal law); the repo-POSED tournament-EKR conjecture;
+Rédei formalized (THM-001) and OCF/Claim A (CONJ-001 — the ORIGINAL central problem).
+
+**LENS-LEVEL (worth re-examination with current instruments):** Hodge ("baby Hodge = the
+det/permanent wall"), BSD polygonal ladder, Grothendieck–Katz p-curvature, Hadwiger–Nelson
+(+ Moser-spindle field tower), Kakeya/Falconer finite-field carriers, Collatz (39 files:
+iterated-log tower, rapidity defect), Goldbach+Lemoine normal forms, Freiman/3k−4 (the LRC
+extremal = minimal sumset), Sidon/B_h (64 files), Lee–Yang, Erdős–Szemerédi sum-product
+(via Bloom–Sawin), Pillai, Waring, Zaremba (the JC₂-shared instrument), Zarankiewicz,
+cannonball/Ramanujan–Nagell, sphere packing/Viazovska/E8/kissing (THM-868 + the
+norm-layer dichotomy), Robin/RH, Dehn/scissors/Niven, Pisot substitution towers, Pollock,
+Fermat–Catalan branch tournaments, Zeckendorf/Lucas geometry, Markov–Lagrange spectrum
+deformation, Erdős–Selfridge/Moser, ASM/Robbins/TSSCPP bridge, von Staudt–Clausen (the 42),
+Caccetta–Häggkvist, union-closed (T312 collision at m=4), PTE (LOAD-BEARING for LRC moment
+blindness: PTE size-13 ⟺ cage Newton depth), Sylvester–Gallai/Frobenius.
+
+**RANKED-UNTOUCHED (the S657 scout):** Stanley–Stembridge e-positivity, sunflower
+(Erdős–Rado), Erdős–Hajnal, distinct distances, Rota basis/Ryser rainbow, graceful trees,
+Seymour second-neighborhood, strong perfect graph (odd holes at n=7 — E_n data exists!),
+Erdős 592/625/870, Liu–Zhu, Barba.
+
+**No engagement found:** Sendov, Casas-Alvero, Singmaster, Collatz-adjacent Gilbreath,
+Schinzel, Cramér, Artin. (Negative space recorded so future scouts don't re-sweep.)
 
 ## Priority frame for future sessions
 
