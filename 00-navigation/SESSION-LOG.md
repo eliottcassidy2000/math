@@ -29,6 +29,55 @@ FILES: HYP-8395, 1 script + out. -> all (THE BRIDGE IS BUILT AND GAMMA IS WHY. N
 - SPAN {±1,0} CLOSED (mod citations): Watson => A == 1; s -> infty: rate < 0 => 0, rate > 0 => infty, rate = 0 (caustic) => s^{-1/2} prefactor => 0. Resonant search: minimizer collapses to one-sided.
 - RESIDUAL: Stokes-faked flatness for >= 4 charges (resurgence); generic Newton polygon = unique sheet = theorem. Connections: JC caustic/Ghost; (1-x)^{-1/2} sheets (6th domain); tropical leading-form.
 - The stronger NULLCONE STRUCTURE THEOREM (nullcone = one-sided exactly) = the program's true endpoint; every span theorem proves it locally.
+## opus-2026-07-20-S413 - One-sided PROVED by exact elimination (over all of C), Laplace/GMC(1) layer SETTLED (THM-1570)
+
+Two targets, both hit.
+
+**(A) THE ONE-SIDED CONJECTURE, BY EXACT ELIMINATION.** Every P at n=2 with charges in
+{-1,0,+1} is P = z*A(s) + B(s) + zbar*C(s) with s = z*zbar; one-sided means A == 0 or C == 0.
+Using RABINOWITSCH SATURATION -- adjoin 1 - t*a_i*c_j to the moment ideal and test for <1> --
+EVERY saturation returns the trivial ideal at degree <= 1 (6 unknowns, 6 moment equations).
+**So no nullcone point has both a nonzero A-coefficient and a nonzero C-coefficient, and
+this is quantified over ALL of C**, not a finite grid. That is the fix for my own S412
+caution ("name the domain of the sweep") applied to my own work: every previous check of this
+conjecture ranged over a finite coefficient grid.
+
+The equations confirm the predicted structure in coordinates:
+    E[P]   = b0 + b1                                        <- the charge-0 part alone
+    E[P^2] = (2a0c0+4a0c1+4a1c0+12a1c1) + (b0^2+2b0b1+2b1^2)
+             |__ opposite-charge cross __|  |__ charge-0 Hankel form __|
+exactly the split E[P^2] = E[P0^2] + 2E[P+ P-] that THM-1535 s3 identified as the n=2 / n=4
+separator. At n=2 the cross term is BILINEAR in (A,C), so killing it forces a factor to
+vanish; at n=4 the second lattice direction supplies an independent cross term that can
+cancel the Hankel form instead.
+
+DEGREE 2 (9 unknowns) exceeded the Groebner budget and did not finish -- a COMPUTE LIMIT,
+not a negative result. Nothing was found to fail.
+
+**(B) THE LAPLACE / GMC(1) LAYER, SETTLED FOR ALL DEGREES.** Theorem: the only g in C[s]
+with int_0^inf g^m e^{-s} ds = 0 for all m >= 1 is g = 0. Proof: d=0 gives c0^m; for d >= 1
+the saddle of |g|^m e^{-s} sits at s ~ d*m, where m*a1/s -> a1/d is CONSTANT and
+arg g(s) -> arg(c_d) -- THE PHASE STABILISES -- so Laplace gives
+    I_m ~ c_d^m (dm)! e^{a1/d}  != 0.
+Numerically confirmed to 8 digits: s-1 -> e^{-1} = 0.36787944; s+3 -> e^3 = 20.085537; and
+crucially the COMPLEX case i*s - 1 -> exactly e^i = 0.54030231 + 0.84147098i. The complex row
+is the one that matters, since that is where phase cancellation could have occurred -- the
+mechanism is real, not an artifact of positivity.
+COROLLARY: the exponential/Laplace nullcone is TRIVIAL ({0}), so **GMC(1) for that measure
+holds VACUOUSLY**. This also completes THM-1540 s3, which had only degrees <= 3 exactly.
+
+**GMC(2) LEDGER NOW:** charge-definite (any n) PROVED; sign-coherent over R PROVED;
+sign-coherent over C PROVED; **charge span {-1,0,+1} degree <= 1 both-signs PROVED over all
+of C**; span {-1,0,+1} degree >= 2 open (compute-limited only); wider spans open. The gap is
+now STRATIFIED by charge span and degree rather than monolithic, and the first genuinely
+two-sided stratum is closed.
+
+**BEST NEXT LEVER (HYP-8390).** E[P^2]'s cross part is A^T M C for an explicit matrix M; at
+degree <= 1, M = [[2,4],[4,12]] with det 8. If M is nonsingular at every degree -- and its
+entries are Gamma-type products of factorials, so it is plausibly TOTALLY POSITIVE -- that
+may give a STRUCTURAL proof replacing elimination entirely.
+
+**Artifacts:** THM-1570; HYP-8390; 2 scripts + 1 output.
 
 ## boxeph-2026-07-20-S169 -- THM-1565: RADIAL LEMMA PROVED (Watson-Nevanlinna + rotation, all degrees) => ONE-SIDED THEOREM FOR ALL TWO-CHARGE SPANS (perfect-power reduction, machine-verified); {+1,0,-1} base case by exact elimination (HYP-8385)
 

@@ -16351,3 +16351,22 @@ parameter. A single counterexample kills it; three hits would make it worth stat
 **Caution:** the reflection explicitly declines to claim every 1/2 in the repo is this one --
 instances 2 and 3 share a genuine generating function `(1-x)^{-1/2}`, but 1/2 is also just a
 very common number. Any claim here needs an actual identity, not a numerical coincidence.
+### HYP-8390 - Is the cross-term matrix M always nonsingular? (the structural lever for one-sided)
+**Status:** OPEN, newly identified (opus-2026-07-20-S413). See THM-1570 sD.
+
+At n=2 with charge span {-1,0,+1}, write P = z*A(s) + B(s) + zbar*C(s). The second moment
+splits as
+    E[P^2]  =  A^T M C  +  (charge-0 Hankel form in B)
+with M an explicit matrix. At degree <= 1, M = [[2,4],[4,12]], det = 8 != 0.
+
+**Question:** is M nonsingular at every degree? If yes, it may give a STRUCTURAL proof of
+the one-sided conjecture, replacing Groebner elimination (which stalled at degree 2, 9
+unknowns). The shape wanted: A^T M C = 0 with M nonsingular, PLUS the higher moments, forces
+A = 0 or C = 0.
+
+**Why it is promising:** M's entries are Gamma-type integrals (products of factorials), and
+such matrices are usually totally positive -- a stronger property than nonsingularity, and
+one that would likely give the forcing directly.
+
+**Related:** THM-1570 (the degree <= 1 proof), THM-1535 s3 (the cross-term mechanism),
+HYP-8375 (the both-signs case).

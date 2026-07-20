@@ -1,0 +1,51 @@
+==============================================================================
+(A) ONE-SIDED CONJECTURE, CHARGE SPAN {-1,0,+1}, BY EXACT ELIMINATION
+==============================================================================
+
+  degree D=0: unknowns 3, moment equations used 4
+     E[P^1] = b0
+     E[P^2] = 2*a0*c0 + b0**2
+     E[P^3] = 6*a0*b0*c0 + b0**3
+     ALL saturations give <1>  =>  every nullcone point has A == 0 or C == 0
+     *** ONE-SIDED CONJECTURE PROVED for span {-1,0,1}, deg <= 0, over ALL of C ***
+
+  degree D=1: unknowns 6, moment equations used 6
+     E[P^1] = b0 + b1
+     E[P^2] = 2*a0*c0 + 4*a0*c1 + 4*a1*c0 + 12*a1*c1 + b0**2 + 2*b0*b1 + 2*b1**2
+     E[P^3] = 6*a0*b0*c0 + 12*a0*b0*c1 + 12*a0*b1*c0 + 36*a0*b1*c1 + 12*a1*b0*c0 + 36*a1*b0*c1 + 36*a1*b1*c0 + 144*a1*b1*c1 + b0**3 + 3*b0**2*b1 + 6*b0*b1**2 + 6*b1**3
+     ALL saturations give <1>  =>  every nullcone point has A == 0 or C == 0
+     *** ONE-SIDED CONJECTURE PROVED for span {-1,0,1}, deg <= 1, over ALL of C ***
+
+==============================================================================
+(B) THE LAPLACE / GMC(1) LAYER:  int_0^inf g^m e^{-s} ds = 0 for all m => g = 0
+==============================================================================
+  PROOF (all degrees).  Let d = deg g.
+   d = 0: g = c0 and the integral is c0^m, so c0 = 0.
+   d >= 1: write g(s) = c_d s^d (1 + a1/s + O(1/s^2)).  The weight |g|^m e^{-s} has
+     log-derivative m g'/g - 1 = 0, i.e. m*d/s ~ 1, so the SADDLE is at s ~ d*m.
+     There m*a1/s -> a1/d, a CONSTANT, and arg g(s) -> arg(c_d): THE PHASE
+     STABILISES, so no oscillation remains.  Laplace's method gives
+        int_0^inf g^m e^{-s} ds  ~  c_d^m * (d m)! * e^{a1/d}  != 0  for large m.
+     Hence some moment is nonzero unless g = 0.  QED
+
+  numerical check of the ratio  I_m / (c_d^m (dm)!)  ->  e^{a1/d}:
+   g = S - 1   (d=1, c_d=1, a1=-1, predicted limit e^(a1/d) = 0.36787944)
+      m= 6: I_m/(c_d^m (dm)!) = 0.36805556
+      m=10: I_m/(c_d^m (dm)!) = 0.36787946
+      m=14: I_m/(c_d^m (dm)!) = 0.36787944
+      m=18: I_m/(c_d^m (dm)!) = 0.36787944
+   g = S + 3   (d=1, c_d=1, a1=3, predicted limit e^(a1/d) = 20.085537)
+      m= 6: I_m/(c_d^m (dm)!) = 19.412500
+      m=10: I_m/(c_d^m (dm)!) = 20.079665
+      m=14: I_m/(c_d^m (dm)!) = 20.085523
+      m=18: I_m/(c_d^m (dm)!) = 20.085537
+   g = 2*S**2 - S   (d=2, c_d=2, a1=-1/2, predicted limit e^(a1/d) = 0.77880078)
+      m= 6: I_m/(c_d^m (dm)!) = 0.77659212
+      m=10: I_m/(c_d^m (dm)!) = 0.77752104
+      m=14: I_m/(c_d^m (dm)!) = 0.77789996
+      m=18: I_m/(c_d^m (dm)!) = 0.77810575
+   g = I*S - 1   (d=1, c_d=I, a1=I, predicted limit e^(a1/d) = 0.54030231 + 0.84147098*I)
+      m= 6: I_m/(c_d^m (dm)!) = 0.54027778 + 0.84166667*I
+      m=10: I_m/(c_d^m (dm)!) = 0.5403023 + 0.84147101*I
+      m=14: I_m/(c_d^m (dm)!) = 0.54030231 + 0.84147098*I
+      m=18: I_m/(c_d^m (dm)!) = 0.54030231 + 0.84147098*I
