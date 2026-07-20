@@ -1,0 +1,8 @@
+(1) det JF = -2 identically  VERIFIED
+    total degree of the map: 7
+(2) fiber over (-1/4,0,0) = exactly the three claimed points (Groebner-complete)  VERIFIED
+    => non-injective Keller map: JC(3) FALSE; JC(n) false for all n >= 3; Dixmier DC(n) false for n >= 3 (DC_n => JC_n).
+(3) equivariance F(-x,-y,z) = (F1, -F2, -F3)  VERIFIED
+    fixed axis maps linearly: F(0,0,z) = (z, 0, 0)
+    => every fiber over (u,0,0) has ODD cardinality (Redei-style
+    parity: sigma-stable fiber, one fixed-axis preimage).
