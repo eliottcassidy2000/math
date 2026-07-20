@@ -1,0 +1,11 @@
+=== {-1,0,1} stratum: E[P^m]=0 all m  <=>  a*c==0 and b==0 ===
+  a=1,c=1,b=0 (ac!=0)                   : E[P^m] m=1..6 = ['0', '2', '0', '12', '0', '120']  nonzero
+  a=1,c=0,b=0 (one-sided, ac=0)         : E[P^m] m=1..6 = ['0', '0', '0', '0', '0', '0']  NULLCONE(all 0)
+  a=1,c=0... b=1                        : E[P^m] m=1..6 = ['1', '1', '1', '1', '1', '1']  nonzero
+  a=1+u,c=1,b=0 (ac!=0)                 : E[P^m] m=1..6 = ['0', '6', '0', '228', '0', '23160']  nonzero
+  a=1,c=1,b=u (ac!=0,b!=0)              : E[P^m] m=1..6 = ['1', '4', '18', '108', '780', '6600']  nonzero
+  a=u,c=0,b=0 (one-sided)               : E[P^m] m=1..6 = ['0', '0', '0', '0', '0', '0']  NULLCONE(all 0)
+  a=2,c=3,b=0 (ac!=0)                   : E[P^m] m=1..6 = ['0', '12', '0', '432', '0', '25920']  nonzero
+
+  predicted nullcone iff (a*c==0 poly) and (b==0). Confirm: only the one-sided (c=0 or a=0)
+  with b=0 give all-zero; any ac!=0 or b!=0 gives nonzero. => GMC(2) on {-1,0,1} reduces to one-sided.
