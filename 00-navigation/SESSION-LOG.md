@@ -1,3 +1,34 @@
+## klein-2026-07-19-S323 -- THE JACOBIAN COLLAPSE, VERIFIED IN-REPO (owner-supplied map, owner-directed session): JC(n>=3) FALSE -- det J = -2 EXACT, fiber over (-1/4,0,0) = exactly 3 rational points, generic degree 3 (a 3-to-1 etale self-cover of C^3); DC(n>=3) FALSE with the EXPLICIT Weyl witness phi_F (x -> F, d_i -> sum_k (J^{-1})_{ki} d_k; all A_3 relations verified symbolically; automorphism controls caught a transpose bug); the cotangent lift Phi(x,xi) = (F(x), J^{-T}xi) is an explicit SYMPLECTIC Keller counterexample in C^6 (det = 1, Phi*omega = omega, 3-point collision) -- the n-vs-2n JC/DC doubling made explicit; monodromy = S_3 measured by the fleet's per-prime Chebotarev census (fractions -> (1/6,1/2,1/3), N_2 == 0 structural zero at every p)
+
+Owner: investigate the reported JC counterexample deeply, connect to our work + Dixmier;
+the n-vs-2n resonance. METHOD: verify FIRST (exact, independent), then probe. All claims
+exact-symbolic (sympy): (V1) det == -2; (V2/V3) the collision fiber is exactly the three
+points; (V4) generic fiber degree 3. Web search: NOT yet indexed (newer than crawlers);
+attribution recorded as owner-supplied. PROBES: (P1) quantization -- every Keller map
+quantizes (etale => the pushed-forward D_i commute); phi_F is an honest A_3 endomorphism,
+injective (A_3 simple) and non-surjective via the classical DC=>JC bridge => explicit
+DC(3) witness; named task: exhibit a concrete element outside im(phi_F). (P2) mod-p
+fiber census p = 3..31: profile -> (1/6, 1/2, 1/3), image -> 2/3, N_2 identically 0
+(no S_3 element fixes exactly 2 of 3 letters) => monodromy S_3, ruling out Z/3; the
+LRC census discipline exported to affine geometry. (P3) the cotangent lift verified
+(symplectic, unimodular, non-injective) => symplectic-JC(6) false explicitly -- the
+BKK/Kontsevich interface object. Equivariance F o sigma = tau o F recorded. WHAT
+SURVIVES: JC(2) (the last stand), DC(1), DC(2), Aut-group conjectures, tame/wild.
+RESONANCE (flagged as motif, not theorem): the collapse propagated along the repo's
+own doubling-tower shape (Cayley-Dickson / branched double cover / Z_2 quotients);
+N_2 == 0 is a pigeonhole rigidity of the same species as Redei parity. NOTE: the
+S322 mask-prune re-certification suite (MISTAKE-194) still running through this
+session -- harvest owed next turn.
+
+Prompt (owner): it was recently found that the jacobian conjecture is false.
+investigate deeply connections to our large body of work and the dixmier conjecture.
+tournaments and their recursion is reminiscent of the n vs 2n relationship between
+jacobian and dixmier. [+ the explicit map]
+
+FILES: T1547, reflection the-jacobian-collapse-and-the-doubling-tower-klein-S323,
+jacobian_counterexample_verify + jacobian_dixmier_probe (scripts + frozen outs). -> all
+
+---
 ## opus-2026-07-19-S413 -- THE JACOBIAN COUNTEREXAMPLE, VERIFIED IN-REPO (owner: JC recently refuted; investigate connections to our work and Dixmier; "n vs 2n" ~ tournament recursion). SELF-CONTAINED VERIFICATION, zero literature trust: det J == -2 IDENTICALLY (symbolic) and the three DISTINCT points (0,0,-1/4), (1,-3/2,13/2), (-1,3/2,13/2) all map EXACTLY to (-1/4,0,0) => JC_3 IS FALSE. THE CASCADE, written precisely: stability (F x id) => not-JC_n for all n >= 3 => (van den Essen's D_n => JC_n, contrapositive) NOT-DIXMIER FOR ALL WEYL ALGEBRAS A_n, n >= 3; the surviving frontier is JC_2, D_2, and Dixmier's original D_1, joined by the last bridge standing JC_2 => D_1 -- the n-vs-2n web collapses onto dimensions one and two, the same small-dimension-rigidity shape as Jung-van der Kulk tame (dim 2) vs Nagata wild (dim 3): the counterexample lives exactly at the tame/wild boundary. NEW STRUCTURE FOUND AND PROVED HERE: the map is Z/2-EQUIVARIANT (sigma = (-x,-y,z): F1 even, F2/F3 odd, symbolic) with the fixed line RIGID (F(0,0,z) = (z,0,0), a bijection of the axis) => PARITY LEMMA (three lines): every finite fiber over the fixed axis has ODD cardinality 1 + 2k -- one preimage on the line plus sigma-mirror pairs -- so non-injectivity FORCES fiber >= 3, and the discovery realizes the minimum (its collision = fixed point + one mirror pair). SECOND FIBER VERIFIED: F^{-1}(1,0,0) = {(0,0,1)} u {(+-i/2, +-3i, -26)} -- again 1+2: the map presents as a DEGREE-3 EXOTIC ETALE SELF-COVER. The parity mechanism is the repo's mirror-involution lore (S407-D, LEM-020 Redei pairing, witness-component parity) appearing VERBATIM in affine algebraic geometry -- the session's one theorem-grade connection; the owner's n-vs-2n <-> tournament-recursion instinct graded RHYME with named hooks (BKK's char-p center = symplectic x2 double <-> THM-378's parity-classified SC blowup; the repo's own shift bridge THM-1017 = n <-> n-2; Mode B legs = n-2). Repo-impact audit: ZERO canon dependencies on JC/Dixmier (grep-checked); the meta-lesson is ours already -- a sixty-year conjecture fell to one EXPLICIT SMALL WITNESS checkable in exact arithmetic, the sampler-blind-to-extremal genus at historic scale, and the referee discipline this repo runs on is exactly what verified it in minutes.
 
 Prompt (owner): it was recently found that the jacobian conjecture is false. investigate
