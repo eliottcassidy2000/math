@@ -1,0 +1,18 @@
+(R1) B * JF^T = I: True
+(R2) [V_i, V_j] = 0 (all 9 identities): True
+
+B entry stats (degree / #terms / all coeffs in Z[1/2]):
+  B[0][0]: deg  8,   5 terms, Z[1/2]: True
+  B[0][1]: deg  6,   5 terms, Z[1/2]: True
+  B[0][2]: deg  8,   9 terms, Z[1/2]: True
+  B[1][0]: deg  9,   7 terms, Z[1/2]: True
+  B[1][1]: deg  7,   6 terms, Z[1/2]: True
+  B[1][2]: deg  9,  11 terms, Z[1/2]: True
+  B[2][0]: deg 11,  11 terms, Z[1/2]: True
+  B[2][1]: deg  9,   9 terms, Z[1/2]: True
+  B[2][2]: deg 11,  14 terms, Z[1/2]: True
+all B coefficients in Z[1/2]: True
+
+VERDICT: phi is a well-defined endomorphism of A_3 = True
+=> with the verified non-injectivity of F: phi is injective (A_3 simple),
+   NOT surjective (module one-liner) -- an explicit proper self-embedding.
