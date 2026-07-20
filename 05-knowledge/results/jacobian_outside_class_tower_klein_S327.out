@@ -1,0 +1,6 @@
+shell rigidity: 12 eqs; branches: degenerate + {lam:3, mu:4, nu:3, rho:-2tau, sig:3tau} -> det = 2 tau (F at tau = -1)
+(1,-2,-4) chart: 15 eqs; ALL 5 branches have rho=sig=tau=0, det=0 -> chart DEAD
+tower: T1 = (-1/4,0,0), F(T1) = (0,0,-1/2), F^2(T1) = (-1/2,0,0)
+all three collision points -> F: (-1/4,0,0) -> F^2: (0,0,-1/2) -> F^3: (-1/2,0,0)
+det J_F = -2 re-verified symbolically => det F^2 = 4, det F^3 = -8 (chain rule)
+degrees 3, 9, 27 pairwise distinct => three distinct essential classes (degree is Aut x Aut invariant)
