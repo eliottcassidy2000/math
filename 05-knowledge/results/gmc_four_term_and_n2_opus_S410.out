@@ -1,0 +1,32 @@
+(1) THE 4-TERM COUNTEREXAMPLE  P' = (1+Z2)(W2 - Z1 W1)  = (1+z2)(z2b - z1*z1b)
+    P' = -z1*z1b*z2 - z1*z1b + z2*z2b + z2b    terms: 4   degree: 3
+    m= 1  E[P'^m]=0   E[Z2 P'^m]=1    m!=1   = m!
+    m= 2  E[P'^m]=0   E[Z2 P'^m]=2    m!=2   = m!
+    m= 3  E[P'^m]=0   E[Z2 P'^m]=6    m!=6   = m!
+    m= 4  E[P'^m]=0   E[Z2 P'^m]=24    m!=24   = m!
+    m= 5  E[P'^m]=0   E[Z2 P'^m]=120    m!=120   = m!
+    m= 6  E[P'^m]=0   E[Z2 P'^m]=720    m!=720   = m!
+    m= 7  E[P'^m]=0   E[Z2 P'^m]=5040    m!=5040   = m!
+    m= 8  E[P'^m]=0   E[Z2 P'^m]=40320    m!=40320   = m!
+    m= 9  E[P'^m]=0   E[Z2 P'^m]=362880    m!=362880   = m!
+    m=10  E[P'^m]=0   E[Z2 P'^m]=3628800    m!=3628800   = m!
+    m=11  E[P'^m]=0   E[Z2 P'^m]=39916800    m!=39916800   = m!
+    m=12  E[P'^m]=0   E[Z2 P'^m]=479001600    m!=479001600   = m!
+    all E[P'^m]=0 through m=12: True
+    => 4-TERM COUNTEREXAMPLE CONFIRMED (6 terms -> 4)
+
+(2) THE n=2 'CANDIDATES' -- GMC(2) IS A THEOREM, so they MUST die at higher m.
+    My search only tested m<=4 and flagged ANY nonzero -- too weak, since GMC
+    only requires E[QP^m]=0 for m >> 0.  Re-testing properly:
+    P=-z1**3 - z1**2*z1b - z1**2 - z1
+       E[P^m] m=1..8 : [0, 0, 0, 0, 0, 0, 0, 0]
+       E[QP^m] m=1..8: [-3, 0, 0, 0, 0, 0, 0, 0]
+       -> E[QP^m] dies at large m -> GMC(2) intact
+    P=-z1**3 - z1**2 - z1
+       E[P^m] m=1..8 : [0, 0, 0, 0, 0, 0, 0, 0]
+       E[QP^m] m=1..8: [-1, 0, 0, 0, 0, 0, 0, 0]
+       -> E[QP^m] dies at large m -> GMC(2) intact
+    P=-z1**3 + z1**2*z1b - z1**2 - z1
+       E[P^m] m=1..8 : [0, 0, 0, 0, 0, 0, 0, 0]
+       E[QP^m] m=1..8: [1, 0, 0, 0, 0, 0, 0, 0]
+       -> E[QP^m] dies at large m -> GMC(2) intact

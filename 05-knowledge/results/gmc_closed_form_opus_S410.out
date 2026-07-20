@@ -1,0 +1,43 @@
+==============================================================================
+(A) CLOSED FORM -- check E[P^m]=0 and E[Z2 P^m]=m! far beyond the original range
+==============================================================================
+   m= 1   E[P^m]=0   E[Z2 P^m]=1   m!=1   OK
+   m= 2   E[P^m]=0   E[Z2 P^m]=2   m!=2   OK
+   m= 3   E[P^m]=0   E[Z2 P^m]=6   m!=6   OK
+   m= 4   E[P^m]=0   E[Z2 P^m]=24   m!=24   OK
+   m= 5   E[P^m]=0   E[Z2 P^m]=120   m!=120   OK
+   m= 6   E[P^m]=0   E[Z2 P^m]=720   m!=720   OK
+   m= 7   E[P^m]=0   E[Z2 P^m]=5040   m!=5040   OK
+   m= 8   E[P^m]=0   E[Z2 P^m]=40320   m!=40320   OK
+   m= 9   E[P^m]=0   E[Z2 P^m]=362880   m!=362880   OK
+   m=10   E[P^m]=0   E[Z2 P^m]=3628800   m!=3628800   OK
+   m=11   E[P^m]=0   E[Z2 P^m]=39916800   m!=39916800   OK
+   m=12   E[P^m]=0   E[Z2 P^m]=479001600   m!=479001600   OK
+   => closed form confirmed through m=12
+
+   intermediate step of the derivation, checked symbolically:
+   E_{Z1}[exp(tP)] should equal exp(t*c*d)/(1+t*c) with c=1+Z2, d=conj(Z2).
+   difference of the two t-series through t^8: 0
+   => RESOLVENT FORM CONFIRMED
+
+==============================================================================
+(B) MINIMALITY -- can any PROPER SUBSET of the 6 terms still work?
+==============================================================================
+   proper subsets that still give a counterexample: 7
+      1 terms (5,): E[Q P^m] nonzero at m=[1]
+      2 terms (2, 5): E[Q P^m] nonzero at m=[1]
+      2 terms (3, 5): E[Q P^m] nonzero at m=[1]
+      3 terms (2, 3, 5): E[Q P^m] nonzero at m=[1]
+      4 terms (0, 1, 4, 5): E[Q P^m] nonzero at m=[1, 2, 3, 4, 5]
+      5 terms (0, 1, 2, 4, 5): E[Q P^m] nonzero at m=[1, 2, 3, 4, 5]
+
+==============================================================================
+(C) n = 2 (ONE complex Gaussian): GMC(2) is a THEOREM (Derksen-van den Essen-Zhao)
+==============================================================================
+   consistency check: brute-force search for ANY counterexample in one complex
+   Gaussian, coefficients in {-1,0,1}, degree <= 3.
+      CANDIDATE: P=-z1**3 - z1**2*z1b - z1**2 - z1, Q=z1b
+      CANDIDATE: P=-z1**3 - z1**2 - z1, Q=z1b
+      CANDIDATE: P=-z1**3 + z1**2*z1b - z1**2 - z1, Q=z1b
+   searched 19682 polynomials; counterexample candidates found: 152
+   => CANDIDATES -- inspect (likely higher m needed)

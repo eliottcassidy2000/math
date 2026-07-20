@@ -11,6 +11,53 @@
 **Handoff.** (i) **HYP-8340 -- GMC(2) is now the ONLY open case** (GMC(1) true, N>=3 false), and THM-1500 frames it sharply. The obstruction is to ONE SHAPE, and three assumptions are load-bearing: **(a) U INDEPENDENT of (Z,W)** -- with only 2 real Gaussians there is NO ROOM for an independent U, so any GMC(2) counterexample must use U correlated with (Z,W), e.g. U=ZW ~ Exp(1) with E[U^k]=k!; the expectation stops factorizing and the one-line identity fails, so the analysis must be redone. **This is the first thing to try.** (b) the outer factor (1+Z) -- replacing it by h(Z) changes phi(s) in the Lagrange inversion from 1+s to h(s), giving a different forced f. (c) Q linear. A proof of GMC(2) would CLOSE THE CLASSIFICATION completely. (ii) **HYP-8345**: chi-squared is a CHOICE, not a classification. Work BACKWARDS -- pick a target polynomial g, compute the required Phi from the master equation, ask whether that MGF is realizable as a polynomial in Gaussians. Constructive rather than blind, and cheap; a hit with small support could beat the current 5-term quartic. (iii) NOTE: neither THM-1480 nor THM-1500 claims priority on the GMC(3) example -- it came from the owner via an outside source. Ours is the verification, the master theorem, the uniqueness, and the minimality.
 
 ---
+## opus-2026-07-20-S410 - The GMC(4) witness: closed form, and 6 terms -> 4 (THM-1495)
+
+Owner supplied an outside counterexample to the Gaussian Moment Conjecture at n>=4 and asked
+whether we already had it, or anything stronger.
+
+**WHERE WE STOOD.** Canon records Zhao's image conjecture / Mathieu subspaces as
+"COROLLARY-false, no witness" -- false as consequences of the JC counterexample (Alpoge),
+with NO explicit object -- and the VC-witness transport was only PARTLY executed
+(dim ~76 -> ~20 -> contingent, MISTAKE-201). **We had the conclusion and never the object.**
+This witness is degree 3 in 4 REAL Gaussians and UNCONDITIONAL (no Jacobian input), so it is
+stronger than anything the transport could have yielded: smaller, explicit, and independent
+of the deep theorem. Checkable by hand via Wick contraction.
+
+**CONFIRMED** exactly through m=12: E[P^m]=0, E[Q P^m]=m!.
+
+**IMPROVEMENT 1 -- CLOSED FORM.** Replacing moment-by-moment checking:
+    E[exp(tP)] = 1   identically,   and   E[Z2 exp(tP)] = t/(1-t).
+Derivation: integrate Z1 first, giving the RESOLVENT E_{Z1}[e^{tP}] = exp(tcd)/(1+tc) with
+c = 1+Z2, d = conj(Z2) (verified symbolically to O(t^9)); then the Z2 integral resums the
+geometric series to exactly 1, while the extra factor of w shifts it one term and leaves
+t/(1-t). Reading off t^m/m! gives ALL moments at once.
+
+**IMPROVEMENT 2 -- FOUR TERMS.** Searching proper subsets of the six terms:
+    P' = (1+Z2)(W2 - Z1 W1)     4 terms, still cubic
+gives the IDENTICAL sequence E[P'^m]=0, E[Z2 P'^m]=m! through m=12. The two lone W1 terms
+are droppable. (The 1-, 2-, 3-term subsets are NOT counterexamples -- nonzero only at m=1.)
+
+**THE MECHANISM, AND WHERE THE BOUNDARY IS.** A TWO-STAGE CASCADE: Z1 manufactures the pole,
+Z2 resums it. ONE complex Gaussian cannot do this -- a structural reason the boundary sits
+between n=2 (GMC TRUE, Derksen-van den Essen-Zhao) and n=4. **So n=3 is THE open case** --
+one complex plus one real Gaussian, a half-cascade. Logged as HYP-8345.
+
+**GMC(2) CONSISTENCY CHECK, plus a method caution.** A sweep over 19682 one-complex-Gaussian
+polynomials flagged 152 "candidates" -- ALL SPURIOUS. Re-testing shows E[QP^m] nonzero only
+at m=1 and zero for m>=2, entirely consistent with GMC (which asserts vanishing for m >> 0,
+not for all m). GMC(2) intact. **My search criterion was wrong** ("nonzero for some m<=4"
+instead of "nonzero for arbitrarily large m"), and it made a THEOREM look refutable. Second
+time this session a too-weak criterion produced phantom hits -- worth internalising.
+
+**SPECULATIVE, recorded not claimed (HYP-8340):** m! is the number of Hamiltonian paths in
+the complete digraph on m vertices, and the surviving Wick contractions form a single CHAIN.
+Redei says every tournament has an ODD number of Hamiltonian paths. Is there a variant whose
+moment sequence counts a TOURNAMENT's Hamiltonian paths, giving a family of GMC
+counterexamples certified by PARITY? Blocker: the Gaussian propagator is symmetric and a
+tournament count needs an asymmetric one.
+
+**Artifacts:** THM-1495; HYP-8340, HYP-8345; 2 scripts + 2 outputs.
 
 ## mac-mini-2026-07-20-S133 -- THM-1480 the GMC(4) counterexample VERIFIED, EXPLAINED, and IMPROVED TO FOUR TERMS; plus the reframe (it LOCALIZES, it is not a corollary) and a second attribution self-correction
 

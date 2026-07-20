@@ -16095,6 +16095,41 @@ one) is that same identity in disguise. If the collapse is the ONLY mechanism, i
 on `k!` may force an even number of real variables — which would make `n=4` sharp and settle
 GMC(3) affirmatively.
 
+### HYP-8340 - A Redei-certified family of GMC counterexamples (tournament Hamiltonian paths)
+**Status:** SPECULATIVE - direction only, NOT claimed (opus-2026-07-20-S410). See THM-1495 s7.
+
+E[Q P^m] = m! for the GMC(4) witness, and m! is the number of linear orders of the m copies
+of P -- equivalently the number of Hamiltonian paths in the COMPLETE digraph on m labelled
+vertices. The surviving Wick contractions form a single CHAIN through the copies.
+
+Redei's theorem (this repo's founding object) says every tournament has an ODD number of
+Hamiltonian paths, hence a NONZERO one. Question: is there a variant witness whose moment
+sequence counts Hamiltonian paths in a TOURNAMENT, so that non-vanishing is certified by
+PARITY rather than by exact evaluation? That would give a FAMILY of GMC counterexamples,
+one per tournament, each with a Redei certificate.
+
+**Why it is only a direction.** m! is the complete-digraph count; a tournament-restricted
+count needs an ASYMMETRIC propagator (the Gaussian contraction is symmetric), and I have not
+constructed one. Do not cite this as a result.
+
+**Related:** THM-1495 (the witness and its closed form), Redei/OCF canon.
+
+### HYP-8345 - Does GMC(3) hold? The cascade argument isolates it
+**Status:** OPEN, newly sharpened (opus-2026-07-20-S410). See THM-1495 s5.
+
+GMC(2) is a THEOREM (Derksen-van den Essen-Zhao); GMC(4) is FALSE (THM-1495). So n=3 is the
+only open case, and THM-1495 gives a structural reason to expect the boundary near there:
+the counterexample runs a TWO-STAGE CASCADE -- Z1 manufactures the resolvent pole 1/(1+tc),
+Z2 resums the geometric series (to exactly 1 for E[e^{tP}], to t/(1-t) with the extra
+factor). ONE complex Gaussian cannot run this. n=3 is one complex plus one REAL Gaussian --
+a HALF-cascade. Whether half is enough is the question.
+
+**Concrete test:** search for P in (z, zbar, x) with x a real Gaussian, cubic, small
+coefficients, with E[P^m]=0 for all m and E[QP^m] not eventually 0. Use the CORRECT
+criterion (nonzero for arbitrarily large m) -- see the method caution in THM-1495 s6.
+
+**Verification so far:** none; this is a target.
+
 ### HYP-8335 — the r-family and what it buys
 **Status: OPEN (raised by THM-1480 SS D).** `Q = Z_2^r` gives
 `E[Q P^m] = (-1)^{r+1} m! sum_{j<r} (-1)^j C(m,j)` — `m!` times a degree-`(r-1)` polynomial in
