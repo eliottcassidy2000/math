@@ -159,3 +159,31 @@ The formalization preserved the proofs' structure exactly; the one Lean-side
 discovery is that the certificate form of L1 eliminates modular inverses entirely
 (coprimality enters only through the existence lemma), which should be the template
 for formalizing the general e-channel certificates.
+
+## 7. THE E-CHANNEL CERTIFICATE FORMAT, FORMALIZED (death-star-S59i)
+
+`TournamentH7/LRCEChannelCert.lean` (namespace `LonelyRunner.EChannelCert`) — the
+lead-(xx) deliverable. Kernel-pure throughout:
+
+- **`Cert v D Q`** (the format): for every merge-grid modulus `S = vᵢ + vⱼ` and
+  every multiplier `kk ∈ [0, S)`, some element's residue is within `D·S/Q` of `0`
+  or `S` — the per-candidate KILL, as a Prop.
+- **`margin_le_of_cert`** (soundness): a valid certificate forces
+  `margin v t ≤ D/Q` for EVERY real t. Consumes the repo's formal Pinch chain
+  (`exists_global_max_margin` → `grid_margin_domination` →
+  `mod_of_margin_at_rat`): a putative excess margin lives on the merge grid,
+  where its residue band collides with the certificate's kill.
+- **`margin_sSup_eq_of_cert`** (the exact-value package): floor witness + cert ⟹
+  `sSup (margin '' [0,1]) = D/Q` exactly.
+- **`certCheck` / `cert_of_check`** (the computable side): a ℕ/List checker
+  (kernel-GMP arithmetic) with a reflection lemma into `Cert`.
+- **`member_3_23_exact`** (the flagship): `sSup (margin v7 '' [0,1]) = 3/23` for
+  `v7 = {1,2,3,4,5,7,18}` — the N=7 canonical mediant, the ORIGINAL first-gap
+  member, exact by kernel end-to-end. Floor: the closed-form witness 19/23
+  element-wise through `rung_floor_single`; ceiling: `cert_3_23` via
+  `check_3_23`, which depends on NO AXIOMS AT ALL (pure computation).
+
+Scaling note (honest): the 4/127 member's checker (~2.4M kernel ops) exceeded a
+7 GB box during elaborator `decide` (5.6 GB resident, killed); the named scaling
+path is per-modulus splitting of `certCheck` (one small `decide` per pair-sum
+S), which the reflection lemma already supports structurally.

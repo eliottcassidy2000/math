@@ -152,6 +152,33 @@ frozen outs. -> all
 - **GATE-LAW LADDER (proved structure, verified on every witness):** ×2: some even + 1-of-2 slaving; ×7: some 7-mult + **1-of-7 slaving, ZERO freedom** (band ±⌊p/2⌋ selects one CRT branch — apex-7 = CRT rigidity, the analytic wall reproduced computationally); ×14: mod-14 spread (0,±1) + 2-of-14 slaving; ×14 ⟹ ×7, ×2 inherited.
 - **REFINED PROBLEM SPACE:** per-prime gates SOFT ⟹ the ansatz/cage selectivity lives in (i) large p (constraints ∝ p, freedom fixed: p=191 decisive) and (ii) the CONJUNCTION across the ~107-prime budget — the cage is the intersection, not any single gate. Handoffs: p=191 brackets; two-prime (43∧61) conjunction test; Lean slaving-law sieves (×7 first); death-star |S|.
 - **FILES:** HYP-7975; lrc14_scale_csp_minz_boxeph_S135.py + .out.
+## death-star-2026-07-19-S59i — the E-CHANNEL CERTIFICATE FORMAT formalized (LRCEChannelCert.lean): Cert + soundness through the formal Pinch chain + ℕ/List reflection checker — and the FIRST KERNEL-EXACT first-gap member: sSup (margin '' [0,1]) = 3/23 for {1,2,3,4,5,7,18}, with the checker fact depending on ZERO axioms
+
+Owner: formalize the e-channel certificate format. DONE, with the exact-value chain closed end-to-end.
+RECON: the repo already had the whole Pinch stack formal (exists_global_max_margin, maximizer_on_grid,
+grid_margin_domination, mod_of_margin_at_rat) — the missing piece was exactly the certificate layer.
+(I) FORMAT: Cert v D Q — every merge-grid modulus S = vᵢ+vⱼ, every kk ∈ [0,S): some element's residue
+within D·S/Q of 0 or S. (II) SOUNDNESS (margin_le_of_cert): cert ⟹ margin ≤ D/Q at EVERY real t — an
+excess margin is dominated onto the merge grid, its residue band collides with the kill. (III) EXACT
+PACKAGE (margin_sSup_eq_of_cert): floor witness + cert ⟹ sSup = D/Q. (IV) COMPUTABLE SIDE: the direct
+ℤ/Finset Decidable instance is a TRAP twice over — it drags noncomputable instances (abs was innocent;
+the instance chain wasn't) and its kernel decide STALLS near-idle; the elaborator decide on the 31-speed
+4/127 member then EXPLODED MEMORY (5.6 GB on a 7 GB box, killed). The robust route: certCheck (ℕ/List,
+kernel-GMP arithmetic) + cert_of_check reflection. (V) FLAGSHIP: member_3_23_exact — sSup (margin v7 ''
+Icc 0 1) = 3/23 for v7 = {1,2,3,4,5,7,18}, the N=7 canonical mediant, THE original July-6 first-gap
+member: kernel-exact end-to-end. Floor: witness 19/23 element-wise via rung_floor_single (dodging L1's
+N > 3D−2 edge exactly at (7,3)); ceiling: cert_3_23 via check_3_23 — ZERO-AXIOM pure kernel computation;
+module builds in 17 s; all five main declarations [propext, Classical.choice, Quot.sound]. The repo's
+first machine-checked exact spectrum value above a floor. HYGIENE: the claim went 7940→7950→7970 in a
+rename race (7950 ceded to boxeph-S133) — today's HYP burn rate makes fetch-check-push atomicity
+mandatory. NEXT: (xxi) per-modulus certCheck splitting to reach 4/127 and the tower within memory;
+(xxii) ledger-wire the member.
+
+Prompt (owner): formalize the e-channel certificate format
+
+FILES: TournamentH7/LRCEChannelCert.lean (NEW: Cert, margin_le_of_cert, margin_sSup_eq_of_cert,
+certCheck, cert_of_check, check_3_23 (axiom-free), cert_3_23, member_3_23_exact), THM-1271 §7,
+HYP-7970, backlog (xxi, xxii). -> all
 
 ## mac-mini-2026-07-19-S123 -- THE TWO QUANTIZATIONS (owner: finish LRC(14), synthesize the near-misses, tournament/metagraph focus): the DOMINANCE DEFICIT LAW P(a,b) = meas{||at||>||bt||} = 1/2 - [mixed-parity]/(2(b^2-a^2)) (both-odd pairs tie EXACTLY -- proved + exact referee, 1101 pairs) => the theta=1/2 dominance tournament is the dyadic preorder, BLIND at the floor (axis-3 confirmed by design), but its crossing moduli ARE the (D,s) rung lattices and slack parity = s parity = straddle parity (odd-slack rungs force mixed strict-deficit straddles; both TIGHT families straddle both-odd (1,13), deficit 0) + THE BLOCKER MIRROR PALINDROME (HYP-7965 PROVED): LEM-020's tau<->1-tau acts on THM-1240's blocker data as an exact set-valued palindrome, central column = EVEN pack speeds at tau=1/2 (2-adic depth-1 inside Wall B), parity localization verified 8 families x all carriers; first-draft same-gap tie claim REFUTED by own referee (c=3,d=12: {8} vs {10}) and corrected to the cross-gap pairing
 
