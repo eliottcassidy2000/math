@@ -1,0 +1,35 @@
+== gates ==
+  p= 29: h=14 dk= 2 |cand|=2 dualG1=OK AP-improper=OK GW-improper=OK
+  p= 43: h=21 dk= 3 |cand|=3 dualG1=OK AP-improper=OK GW-improper=OK
+  p= 61: h=30 dk= 4 |cand|=4 dualG1=OK AP-improper=OK GW-improper=OK
+  p= 71: h=35 dk= 5 |cand|=5 dualG1=OK AP-improper=OK GW-improper=OK
+  p=101: h=50 dk= 7 |cand|=7 dualG1=OK AP-improper=OK GW-improper=OK
+  p=191: h=95 dk=13 |cand|=13 dualG1=OK AP-improper=OK GW-improper=OK
+  k=7 p=31 (n=8): dk=3 AP-improper=OK
+
+== completed primes (exact factors) ==
+     p  variant        nodes         covers   time_s done
+    29    A-lex           58             13     0.00 True
+    29    B-mrv          170             13     0.00 True
+    29   C-repo          170             13     0.00 True
+       cover-count agreement A=B=C: OK   factors: A/B=0.3x  B/C=1.00x  A/C=0.3x
+    43    A-lex      262,474         42,497     0.11 True
+    43    B-mrv        6,594         42,497     0.01 True
+    43   C-repo        6,594         42,497     0.03 True
+       cover-count agreement A=B=C: OK   factors: A/B=39.8x  B/C=1.00x  A/C=39.8x
+    61    A-lex   77,090,626      1,901,185    22.13 True
+    61    B-mrv      396,517      1,901,185     0.46 True
+    61   C-repo      386,605      1,901,185     1.04 True
+       cover-count agreement A=B=C: OK   factors: A/B=194.4x  B/C=1.03x  A/C=199.4x
+    71    A-lex  789,608,235     12,264,772   270.14 True
+    71    B-mrv    3,072,524     12,264,772     4.65 True
+    71   C-repo    2,899,413     12,264,772     9.61 True
+       cover-count agreement A=B=C: OK   factors: A/B=257.0x  B/C=1.06x  A/C=272.3x
+
+== the target: p=191 under node budgets ==
+    A-lex: nodes=  3,000,001  covers=0  time=1.1s  rate=2,780,995/s  completed=False
+    B-mrv: nodes=  3,000,001  covers=0  time=9.7s  rate=309,584/s  completed=False
+   C-repo: nodes=  3,000,001  covers=943  time=66.6s  rate=45,077/s  completed=False
+
+  (if C completes and A/B do not, the factor is >= budget/C-nodes;
+   otherwise the completed-prime trend is the measured deliverable)

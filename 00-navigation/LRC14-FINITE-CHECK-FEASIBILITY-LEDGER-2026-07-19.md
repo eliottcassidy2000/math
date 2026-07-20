@@ -108,15 +108,50 @@ That single number decides whether the repo's theorems close the 10^2.4 gap on w
 If the factor is ≥ ~10³, the n=14 finite check is a cluster job, not a research
 program.
 
+
+## 4b. ACCEPTANCE TEST RESULT (S128c88, HYP-7930 — run same day, owner-directed)
+
+The §4 proposal was executed at p = 43, 61, 71 (complete) and p = 191 (budgeted),
+with a 9-gate harness (dual consistency; (1..13) improper mod every tested p; GW
+improper; k=7/p=31 replication; A=B=C cover-count equality at completed primes).
+
+**Verdict 1 — the pruning bet is REFUTED.** Node factors: naive-lex/MRV = 40× / 194× /
+257× (growing), but MRV/(MRV + comb-capacity + slow-gap-run cuts) = **1.00× / 1.03× /
+1.06×** — nowhere near the 10³ threshold. Mechanism: analytic coverage upper bounds are
+subsumed by the search's exact uncovered-set bookkeeping; they can only win by seeing
+future structure, which top-r capacity bounds don't. Level-1 search is NOT where repo
+theorems pay.
+
+**Verdict 2 — level-1 improperness is generic, and the ansatz describes the wrong
+level.** Minimal covers: 1,280 / 25,711 / 260,568 at p = 43/61/71 (×20 per prime
+step); the full known-family ansatz classifies 10 / 0 / 11 of them. The near-AP
+ansatz is a property of tuples surviving the WHOLE lift tower, not of level 1.
+(Caveat: the danger fraction (2·⌊p/14⌋+1)/p is inflated at small p — 0.163 at 43 vs
+0.141 at 191 — so growth should soften at scale.)
+
+**The redirect (what §4's table should have said):** level-1 at p=191 is a
+compiled-code triviality (measured Python MRV rate 310k nodes/s; ~10¹¹–10¹² nodes
+extrapolated ⟹ hours–days single-core in C, per prime, embarrassingly parallel —
+consistent with §2's 50-core-year aggregate). The expensive object is the LIFT TOWER
+fed by a huge level-1 sea. The repo's leverage is therefore **lift-level kill
+theorems**: witness-quantization cages (opus-S400's HYP-7920 is exactly this at k=12
+— every computational certificate strictly above 1/13, forcing AP-congruence mod ~90
+primes at once), spread lemmas at the LIFTED moduli 2ᵃ7ᵇp (the LRCMod19/23Spread
+template, re-aimed), and the primorial gate laws (which p×lift combinations admit
+clean kills). The ×7 lift (§3b) remains the structural risk these theorems must
+address. Scripts + frozen outs: lrc14_I13p1_acceptance_test_kps_S128c88,
+lrc14_I13p1_minimal_covers_kps_S128c88.
+
 ## 5. Honest caveats
 
 1. **The "73 primes to 733" figure from the S–T fetch is arithmetically impossible**
    (73 primes below 733 have Σ ln p ≤ 73·6.6 = 482 < 546) and is likely a misread of
    their Table 1 by the HTML extraction. My greedy reconstruction (~91 primes in
    [167,727], Σ ln p ≈ 545.9 ≈ the target after the lcm credit) is self-consistent and
-   replicates the k=7 ground truth (28 vs paper's 27 primes, same range). **Consult the
-   PDF table directly before citing the k=12 prime count.** The 46× ratio uses my
-   greedy sets on BOTH sides, so it is internally consistent.
+   replicates the k=7 ground truth (28 vs paper's 27 primes, same range). **RESOLVED
+   same day: opus-S400's independent S–T proof-mining session extracted "~90 primes in
+   [167,733]" — confirming the ~91 reconstruction over the fetched 73.** The 46× ratio
+   uses my greedy sets on BOTH sides, so it is internally consistent.
 2. **The heuristic prices the lifting-era cost model**, not wall (a) or (b); treat 50
    core-years as a lower bound on the vanilla method and the walls as the real risk.
 3. **Canon sourcing note:** the session log (klein era) carries the quote
