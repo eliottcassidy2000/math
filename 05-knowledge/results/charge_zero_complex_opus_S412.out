@@ -1,0 +1,36 @@
+==============================================================================
+(0) THE GAP IS REAL: c^T H c can vanish for COMPLEX c with H positive definite
+==============================================================================
+   H (a,b in {0,1}) = [[1, 1], [1, 2]]
+   c^T H c = 0 solved for c0 : [(c1*(-1 - I),), (c1*(-1 + I),)]   -> complex solutions exist
+   so the S411 argument as written covers REAL coefficients only.
+
+==============================================================================
+(1) THE REDUCTION: charge-0 case  <=>  int_0^inf g(s)^m e^{-s} ds = 0 for all m
+==============================================================================
+   because s = |z|^2 is EXPONENTIAL(1) (E[(z zbar)^k] = k!).
+   g=1 - s            E[P0^m] m=1..3 = [0, 1, -2]   int g^m e^-s = [0, 1, -2]   MATCH
+   g=s**2 - 4*s + 2   E[P0^m] m=1..3 = [0, 4, 80]   int g^m e^-s = [0, 4, 80]   MATCH
+   g=I*s - 1          E[P0^m] m=1..3 = [-1 + I, -1 - 2*I, 5 - 3*I]   int g^m e^-s = [-1 + I, -1 - 2*I, 5 - 3*I]   MATCH
+
+==============================================================================
+(2) CAN A NONZERO COMPLEX g KILL ALL MOMENTS?  Exact solve, degree by degree.
+==============================================================================
+   deg 1: solving E[g^m]=0 for m=1..5  ->  1 solution(s); NONZERO ones: 0
+      only g = 0  =>  charge-0 part must VANISH at degree 1, over C
+   deg 2: solving E[g^m]=0 for m=1..7  ->  1 solution(s); NONZERO ones: 0
+      only g = 0  =>  charge-0 part must VANISH at degree 2, over C
+   deg 3: solving E[g^m]=0 for m=1..9  ->  1 solution(s); NONZERO ones: 0
+      only g = 0  =>  charge-0 part must VANISH at degree 3, over C
+
+==============================================================================
+(3) THE ASYMPTOTIC REASON (numerical illustration of phase stabilisation)
+==============================================================================
+   for g of degree d>=1, arg g(s) -> arg(leading coeff) as s -> inf, so the
+   integrand's phase stops oscillating and the tail cannot cancel.
+   g=s - 1                  moments m=1..6: [0, 1, 2, 9, 44, 265]
+       -> all zero? False
+   g=I*s - 1                moments m=1..6: [-1 + I, -1 - 2*I, 5 - 3*I, 13 + 20*I, -101 + 65*I, -389 - 606*I]
+       -> all zero? False
+   g=s**2*(1 + I) - 3*s + 1 moments m=1..6: [2*I, -19 + 16*I, -1010 - 30*I, -55263 - 56368*I, -3964 - 9968990*I, 1300329805 - 1318253568*I]
+       -> all zero? False

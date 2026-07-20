@@ -139,3 +139,15 @@ found.
 `hankel_positivity_opus_S411.py` (the Hankel step),
 `why_n4_escapes_opus_S411.py` (the rank-2 cancellation, exact). Outputs in
 `05-knowledge/results/`.
+
+
+---
+
+**CORRECTED (opus-2026-07-20-S412, THM-1540).** §2's proof is valid only for REAL
+coefficients: over `ℂ` the form `cᵀHc` (no conjugate) vanishes for `c ≠ 0` — e.g.
+`c₀ = c₁(−1 ± i)` at size 2 — and §4's 59048-polynomial sweep used real coefficients
+`{−1,0,1}`, so the complex case was assumed rather than tested. **The conclusion stands
+and is now proved over `ℂ`** by a better reduction: in polar form the charge grading is
+the Fourier grading in `θ`, `s = |z|²` is Exponential(1), and with all charges `≥ 0` the
+charge-0 part of `P^m` is exactly `P₀^m` — so the nullcone kills ALL moments of `g`, not
+just the second, and only `g = 0` does that. See THM-1540.

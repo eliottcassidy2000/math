@@ -1,0 +1,11 @@
+CRITICAL RECHECK: my S411 sweep used REAL coefficients {-1,0,1}.
+GMC is over C.  Redo with GAUSSIAN-INTEGER coefficients {0,+-1,+-i}.
+
+  deg<=2, coeffs in {0,+-1,+-i}: scanned 3124
+  nullcone members            : 48
+  NOT charge-definite         : 0
+  -> every complex nullcone member is still charge-definite at deg<=2
+
+  deg<=3, coeffs in {0,1,-1,i}: MIXED-charge P scanned 262143
+  mixed-charge NULLCONE members found: 0
+  -> NO mixed-charge complex nullcone member.  Conjecture survives over C.

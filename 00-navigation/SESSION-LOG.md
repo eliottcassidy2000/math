@@ -46,6 +46,50 @@ Prompt (owner): aim to finish GMC(2) by finishing the stronger 2 dimensional nul
 FILES: THM-1540, HYP-8375, 2 scripts + outs. -> all (I did NOT finish GMC(2) and it must not be cited as finished. What I have: the reduction to a structure theorem for the nullcone N -- if N is exactly the one-sided-charge polynomials plus zero, GMC(2) follows in one line with an explicit threshold m > deg(Q)/k. TWO PIECES PROVED. L1: a purely charge-0 element is g(|Z|^2) with |Z|^2 ~ Exp(1), and E[g^m] ~ c^m (md)! grows factorially faster than any correction, so it cannot cancel and g must be 0. L2: writing P_top = y^d h(x/y), the charge-0 coefficient of (P_top)^m is the central coefficient of h^m and carries (md/2)!, which dominates all lower-degree terms -- so vanishing for all m forces h's support off d/2, i.e. the TOP-DEGREE part is one-sided. That step cites the one-variable constant-term fact (n=1 Duistermaat-van der Kallen). THE GAP: the induction from top-degree one-sided to P one-sided is unwritten, and it is exactly where a mixed-charge element would hide -- note the GMC(4) counterexample works by mixed charge, so this is not a formality. EVIDENCE: no mixed-charge nullcone element in any box searched -- 16/16, 160/160, 48/48 one-sided at depth m <= 9 -- with the detection floor stated, because last session an m <= 3 sieve produced three counterexamples that were not counterexamples.)
 
 ---
+## opus-2026-07-20-S412 - Charge-0 vanishes over C: THM-1535 corrected, GMC(2) proved on the sign-coherent locus (THM-1540)
+
+Aimed at finishing GMC(2) via the nullcone conjecture. Got a real advance AND caught a gap
+in my own THM-1535 from last session.
+
+**SELF-AUDIT.** THM-1535 s2 proved the sign-coherent case via c^T H c with H_{ab}=(a+b)!
+positive definite. That is valid ONLY FOR REAL c. Over C the form c^T H c (NO conjugate)
+vanishes for c != 0 -- explicitly c_0 = c_1(-1 +- i) at size 2 -- and my 59048-polynomial
+sweep used coefficients {-1,0,1}, i.e. REAL. So the complex case was ASSUMED, not proved.
+(Aside worth knowing: over R the question is trivial, since E[P^2] = int P^2 dgamma > 0 for
+real P != 0, so the real nullcone is {0}. GMC has content only over C.)
+
+**THE FIX IS A BETTER REDUCTION, and it is cleaner than what it replaces.** In polar form
+z = r e^{i theta}, a monomial z^a zbar^b has modulus r^{a+b} and phase e^{i(a-b)theta}: THE
+CHARGE GRADING IS EXACTLY THE FOURIER GRADING IN theta. And s = |z|^2 is EXPONENTIAL(1),
+since E[(z zbar)^k] = k!. So the charge-0 part P0 = sum_a c_a (z zbar)^a is just g(s), and
+    E[P0^m] = int_0^inf g(s)^m e^{-s} ds
+-- a ONE-DIMENSIONAL problem. (Verified exactly, including for complex g = is-1.)
+
+**SIGN-COHERENT CASE, NOW PROVED OVER C.** With all charges >= 0, a product of monomials has
+total charge 0 only if EVERY factor does, so the charge-0 part of P^m is exactly P0^m and
+E[P^m] = E[P0^m] for every m. Hence the nullcone kills ALL moments of g, not merely the
+second -- which is precisely where the complex gap had opened. And only g = 0 does that:
+exact solve returns only the zero solution at degrees 1, 2, 3 over C; and asymptotically, for
+deg g = d >= 1 the phase arg g(s) STABILISES to arg(leading coeff) as s -> infinity, so no
+oscillation remains to cancel the tail and int ~ e^{a/d}(dm)! != 0. **So GMC(2) is PROVED on
+the sign-coherent locus over C** -- an upgrade of THM-1535 from R to C.
+
+**NULLCONE CONJECTURE RECHECKED OVER C** (it had never been): Gaussian-integer coefficients,
+degree <= 2 -> 3124 scanned, 48 nullcone members, ALL charge-definite, 0 exceptions; and
+262143 MIXED-charge degree-3 candidates -> ZERO nullcone members. No complex counterexample.
+
+**THE LAST CASE, in its cleanest form (HYP-8375).** Only charges of BOTH signs remain. In
+polar form P is a LAURENT polynomial in w = e^{i theta} with r-dependent coefficients; the
+angular average is the constant term; show int_0^inf CT_w(P^m) e^{-s} ds != 0 for some m.
+Known: a balanced monomial first appears at m = c+|d| (Gordan), and that is empirically
+exactly where E[P^m] first fails to vanish; and Newton-polytope VERTICES cannot cancel, since
+a vertex coefficient of P^m is a pure power. Missing: control of the NON-vertex balanced
+monomials -- with the r-integration now available as a tool rather than an obstacle.
+
+**STATUS OF GMC(2):** charge-definite PROVED (any n); sign-coherent over R PROVED;
+sign-coherent over C PROVED; both-signs OPEN. That is the whole remaining gap.
+
+**Artifacts:** THM-1540; THM-1535 amended; HYP-8375; 2 scripts + 2 outputs.
 
 ## opus-2026-07-20-S411 - The charge lattice: GMC(2) proved on the sign-coherent locus, and the rank explains n=4 (THM-1535)
 

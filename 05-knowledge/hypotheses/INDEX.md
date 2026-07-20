@@ -16250,6 +16250,31 @@ power), but non-vertex balanced monomials could in principle conspire. None foun
 **Why it matters:** with THM-1535 s1 (the charge lemma), this conjecture implies GMC(2) in
 full.
 
+### HYP-8375 - The both-signs case at n=2: the last step to GMC(2)
+**Status:** OPEN, sharpened to a single clean statement (opus-2026-07-20-S412). See THM-1540 s5.
+
+With THM-1535 s1 (charge lemma) and THM-1540 s3 (sign-coherent case over C), the ONLY
+remaining case for GMC(2) is P with charges of BOTH signs.
+
+**Cleanest form.** In polar coordinates put w = e^{i theta}, so P is a LAURENT POLYNOMIAL in
+w with r-dependent coefficients, P = sum_q f_q(r) w^q, having both q>0 and q<0. The angular
+average is the constant term, and s = r^2 is Exponential(1). Show:
+    int_0^inf CT_w( P^m ) e^{-s} ds  !=  0   for some m.
+
+**Known, neither sufficient alone.** (i) By Gordan a balanced monomial first appears at
+m = c + |d| (c = max charge, d = min charge), and empirically that is EXACTLY where E[P^m]
+first fails to vanish -- verified on z^3+zbar^2 and z^2+zbar^3, both first nonzero at m=5.
+(ii) Newton-polytope VERTICES cannot cancel, since a vertex coefficient of P^m is a pure
+power of a vertex coefficient of P. MISSING: control of the NON-vertex balanced monomials.
+The r-integration is now available as a tool rather than an obstacle.
+
+**Evidence the answer is yes (no counterexample):** real sweep 59048 polys / 160 nullcone
+members / 0 exceptions (THM-1535); complex sweeps 3124 -> 48 members / 0 exceptions and
+262143 mixed-charge degree-3 candidates -> 0 nullcone members (THM-1540 s4).
+
+**Payoff:** closing this proves the DvdEZ-shaped nullcone conjecture at n=2 and, with the
+charge lemma, GMC(2) IN FULL.
+
 ### HYP-8370 - The general charge criterion: charges in an open halfspace => GMC
 **Status:** PROVED in the separable case; proposed as the general organising principle
 (opus-2026-07-20-S411). See THM-1535 s1, s6.
