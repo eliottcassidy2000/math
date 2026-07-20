@@ -25,3 +25,21 @@
   [25/78] removed (3, 9): raw 628877, scanned 130403, survivors 0,  38.3s
   [26/78] removed (3, 10): raw 628877, scanned 112135, survivors 0,  39.1s
   [27/78] removed (3, 11): raw 628877, scanned 112323, survivors 0,  39.2s
+  [69/78] removed (9, 13): raw 628877, scanned 20818, survivors 0,  84.9s
+  [70/78] removed (10, 11): raw 628877, scanned 20706, survivors 0,  85.0s
+  [71/78] removed (8, 12): raw 628877, scanned 54029, survivors 0,  85.3s
+  [72/78] removed (10, 13): raw 628877, scanned 19309, survivors 0,  85.4s
+  [73/78] removed (11, 12): raw 628877, scanned 19335, survivors 0,  85.7s
+  [74/78] removed (9, 12): raw 628877, scanned 35929, survivors 0,  85.7s
+  [75/78] removed (12, 13): raw 628877, scanned 13383, survivors 0,  86.2s
+  [76/78] removed (11, 13): raw 628877, scanned 15075, survivors 0,  86.2s
+  [77/78] removed (10, 12): raw 628877, scanned 26845, survivors 0,  86.5s
+  [78/78] removed (5, 6): raw 628877, scanned 628877, survivors 0,  90.8s
+
+TOTALS: raw 49052406, duty 14546735, rung 14546735, scanned 14546735, max exit-q 49, survivors 0, 90.8s
+
+==== STRIP VERDICT ====
+The mixed strip is EMPTY of gap families.  Together with
+HYP-7985 (x<y ≤ 300) and HYP-8005 (both ≥ 265; y ≥ 23x):
+THE TWO-FAR STRATUM HAS NO FAMILY WITH M ∈ (1/14, 3/41)
+AT ANY HEIGHT (modulo the plateau lemma's independent read).

@@ -10,6 +10,35 @@ FILES: HYP-8020, reflection rung-theory-a-proposed-field-opus-S410, script + fro
 (lrc_rung_theory_teeth). -> all
 
 ---
+## mac-mini-2026-07-19-S127 -- WILD CONSTRUCTS SESSION (owner: hypothesize wildly, combine ideas): FOUR CONSTRUCTS DEFINED AND REFEREED SAME-DAY -- (A) HYP-8010 the LONELINESS TRAJECTORY: c3(t) profile of opus-S407's observer half-turn tournament = the missing base-rate control: c3=112 is MODAL for every family (measure 0.22-0.59 of the circle; AP 0.59), loose {2..14} ALSO maximizes at t* => the r=-0.926 bridge must be re-read as low-c3 EXCURSIONS, profile handed to opus; (B) HYP-8015 the DYADIC DESCENT CHAIN M(sigma^j W), sigma = evens/2: inequality PROVED in one line, chains exact for 10 families (AP = the ceiling chain 1/14,1/7,1/4,1/2; F3 passes EXACTLY through K_3(6)=3/19 -- the S124 tower identity visible inside an invariant; deep well exposes hidden (1,91) K-shape at level 1; POWERS OF 2 = the sigma-FIXED POINT, constant 1/3) -- a new stratifying invariant; (C) HYP-8025 DUTY RIGIDITY INDEX confirmed (high-duty exclusive assignments: 0 = deep well UNIQUELY (stacking kills injectivity), 1 = every near-floor family, >=2 = loose (BF38 3, powers 10)) + DEFICIT LAPLACIAN honestly REFUTED (lambda_2 tracks Vmax -- triage axis-3 as predicted); (D) HYP-8030 the CANTOR-BENDIXSON FILTRATION of the M-spectrum (conjecture: the spectra form an omega-tower under G-K 1.3/1.4; rank >= 2 in-range at n=14). THREE wilder constructs parked as tangents (holonomy monoid, clearance winding index, apex-7 Cech cohomology). Housekeeping: TWO more first-push collisions resolved same-day (opus-S407 8005->8035, own 8020->8030 ceding to kps mod-p descent) -- FIFTH and SIXTH of the day; suggest agents re-grep the INDEX tail immediately before pushing claims.
+
+Prompt (owner): spend a similar session, hypothesize wildly about new mathematical constructs
+you can define and ideas you can combine
+
+FILES: HYP-8010/8015/8025 (RESOLVED), HYP-8030 (conjecture filed), 3 tangents, script+out
+lrc14_wild_constructs_referee_macmini_S127, results INDEX. -> all
+
+## mac-mini-2026-07-19-S126 -- THE THREE-FAR SWEEP + THE GAP-LEVEL MULTI-PEEL + TWO ALL-HEIGHTS CLOSURES (HYP-7990 + HYP-8005): (1) three-far stratum GAP-EMPTY in windows (569M raw, 51.5M scanned, ZERO survivors: main all 286 complements fars<=150, deep 62 duty-trading complements fars<=400; exit ceiling q=41 AGAIN) + (2) THE PLATEAU-DODGING LEMMA (THM-735's Bonferroni multi-peel at level 3/41, fueled by the OWNER-SETTLED LRC(<=13) floors M(S)>=1/(14-k)): all-big bounds B_1..B_6 = 297,265,287,343,468,903, the argument DIES at k=7 exactly (42/41>1 -- apex-7 on cue) + (3) ONE-FAR STRATUM CLOSED AT ALL HEIGHTS (3,679 families exhaustive to 296, sole sub-3/41 event = GW at exactly 1/14, + lemma at 297) + (4) TWO-FAR STRATUM CLOSED AT ALL HEIGHTS (mixed strip {x<=264, 301<=y<23x} swept: 49M raw, 14.5M scanned, zero; + both>=265 + y>=23x + HYP-7985) -- the first and second shape classes fully closed for the gap question, pending one independent read of the half-page lemma
+
+Owner: run the three-far extension. The plateau architecture emerged from asking why the S125
+exits were so uniform; MISTAKE-183 grep-first correctly credited the mechanism to kps THM-735
+before deriving. Constants exact-refereed + 200/200 no-filter spot-checks. Tooling: the
+multiprocess parent died at the Pool boundary with false exit-0 THREE times (once mid-run at
+27/78) -- per-work-unit JOURNALING adopted as the rule; journals are the citable artifacts
+(348/348 three-far complements, 78/78 strip complements). Witness-ceiling calibration: 41
+(two-far <=300, three-far windows) but 49 on the mixed strip -- region-dependent ~40-50, the
+uniformity claim stays honest. HANDOFFS: (a) the plateau lemma needs ONE independent read
+(half a page, constants machine-verified) -- promotion candidate to THM; (b) three-far
+all-heights closure via the same recursion (boxes bigger, duty filters keep them finite);
+(c) k>=7 = the density-route regime, complementarity exact.
+
+Prompt (owner): run the three-far extension
+
+FILES: HYP-7990 (RESOLVED), HYP-8005 (lemma + closures + strip), reflection
+the-gap-level-multipeel-strata-ladder-and-the-first-allheights-closures-macmini-S126, scripts
+lrc14_threefar_stratum_sweep + lrc14_gap_plateau_dodging_lemma + lrc14_onefar_allheights_closure
++ lrc14_twofar_mixed_strip_closure (+ outs + 2 journals), results INDEX. -> all
+
 ## opus-2026-07-19-S409 -- THE CONJUNCTION SESSION (owner: work the next leads in conjunction with each other): (A) THE GW TRICHOTOMY LAW, 16/16 EXACT on N = 5..20 -- M(GW_N) = 1/(N+1) [N == 1 mod 6: TIGHT] / 2/(2N+1) via escape pair (3, 2(N-1)) [N odd, N != 1 mod 3] / 1/N via (2, 2(N-1)) [N even] -- all branches slack <= 1, all escapes through the doubled ghost; THE GATE MECHANISM PROVED IN TWO LINES: the D=2 escape needs 3a == +-2 (mod 2N+1), unsolvable iff 3 | 2N+1 iff N == 1 (mod 3) -- at gated N the escape has NO PHASE TO LIVE AT; and the HOLE IMMUNITY verified 8/8: the only residues that could kill an available escape are +-(N-1) -- exactly the deleted penultimate convergent and its mirror (the S408 lambda box-move hole) -- so every available escape succeeds. The June mod-6 gate, the Young-box move, and the killer-absence are ONE mechanism; mac-mini's THM-1065 criterion is explained, and the GW row of the gate table now has its arithmetic engine. Named residue for the full theorem: per-branch upper halves (ghost-packing-shaped, verified). (B) THE THETA-BAND SURPRISE: exact M_theta at theta = p/8 (integer power-comparison) -- the tight twins AP13/GW are value-TIED at theta in {0, 1/8, 1/4} and {7/8, 1} but SEPARATE throughout the middle band {3/8, 1/2, 5/8, 3/4}: endpoint-degenerate, interior-resolved; the AP maximizer path (1,14)->(3,14)->(23,107)->...->(21,55)->(13,34) exits the Farey-14 cell at theta ~ 1/4 and enters Fibonacci-land at theta ~ 7/8. Interior-theta separation of endpoint-tied pairs is proposed as a general resolution tool for tight-locus questions.
 
 Prompt (owner): work the natural nest leads in conjuction with eachother

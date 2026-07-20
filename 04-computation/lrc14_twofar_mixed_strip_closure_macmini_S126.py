@@ -148,6 +148,10 @@ def main():
             maxq = max(maxq, rq)
             surv += [(removed_tup, W) for W in survivors]
             done += 1
+            with open("05-knowledge/results/lrc14_strip_journal_S126.txt",
+                      "a") as jf:
+                jf.write(f"{removed_tup} stats={stats} rq={rq} "
+                         f"surv={survivors}\n")
             print(f"  [{done}/78] removed {removed_tup}: "
                   f"raw {stats[0]}, scanned {stats[3]}, "
                   f"survivors {len(survivors)}, {time.time()-t0:5.1f}s",
