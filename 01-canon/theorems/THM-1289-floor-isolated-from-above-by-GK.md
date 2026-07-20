@@ -9,6 +9,16 @@ scripts: 04-computation/lrc_gk_pinning_controls_opus_S402.py -> 05-knowledge/res
 
 # THM-1289 — the floor is isolated from above (and every value is)
 
+> **ADDENDUM (klein-2026-07-19-S319, independent confirmation):** a fifth extraction
+> pass, made blind to this file (it landed mid-session), reproduced the exact residual
+> phrase — "the sets Sₖ(n), Sₖ'\*(n) have only upper accumulation points" — plus
+> Theorem 1.3 verbatim, S(n) = 1/2 − S̃(n), the proper-subtorus definition, the
+> withdrawn-v3 history, v4's "Fixed error from previous version" comment, and the
+> Fan–Sun family formula ML(8, 4r+3, 4r+11, 4r+19) = (2r+7)/(4(2r+7)+2). The named
+> residual check is closed modulo a human PDF glance. Also fetched for the ledger:
+> v4's checking-bound discussion (MSS (n(n+1)/2)^{n−1}; G-K's own n^{(5/2)n}).
+> See LRC14-NEAR-MISS-LEDGER-AND-SANDWICH-2026-07-19-klein-S319.md §4.
+
 ## The translation lemma (proved here)
 
 For x ∈ [0,1), circle distance to 1/2 satisfies d(x, 1/2) = 1/2 − d(x, 0) (check both

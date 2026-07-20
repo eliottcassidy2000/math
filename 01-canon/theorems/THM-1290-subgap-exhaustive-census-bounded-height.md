@@ -1,7 +1,7 @@
 ---
 id: THM-1290
 title: "THE (1/14, 3/41) SUB-GAP IS EXHAUSTIVELY EMPTY AT HEIGHT 55 — no 13-subset of [1,55] (primitive or not) has M ∈ (1/14, 3/41) — by COMPLETE ENUMERATION: 43.86 billion DFS nodes, 13.07 billion leaves, 4,693,315,305 filtered primitive families, exactly 50 unit-pinning survivors, every one witness-certified M ≥ 3/41 at a denominator in [43,48], ZERO hard cases. All filters are rigorous canon consequences (covering 2..13; THM-1043 spread σ > 12; THM-1269 active-pair sum D = M·s forcing a pair sum in {55,69,83,96,97,110}; depth-d unit pinning for q ≤ 41). Upgrades the emptiness evidence from search (opus ~12,400 structured + 8.5M random; klein 56k — all with the recorded weakness 'scale, not coverage') to EXHAUSTION 1.5× beyond the height of the deepest known family. BY-CATCH (gate C, exhaustive at heights ≤ 26 for M < 1/13): the complete sub-1/13 spectrum at height ≤ 26 is {1/14 (2 families), 2/27 (3 families)} — including TWO NEW 2/27 realizers {1..9,11,13,20,24} and {1..9,11,12,13,20} (height 20 — lower than the ladder family {1..12,26}), and zero families below the floor"
-status: PROVED-BY-EXHAUSTION at B = 55 (script + frozen consolidated output + independent exact-M referee; six exact-M gates pass; two rediscovery gates re-find {1..11,13,36} → 3/41 and {1..12,26} → 2/27 blind under widened intervals; LRC-mode regression gate exhausts heights ≤ 26 and re-finds all known sub-1/13 families). The pinning filter did essentially all the work: 4.69e9 → 50. COMPANION RUN in flight (same harness, interval (0, 1/14), covering 2..14, spread 13): exhaustive LRC(14) verification at height 55 — will be reported separately when complete; gap-mode CANNOT see M < 1/14 families (their active pair sum is not gap-admissible), which is why the companion run exists.
+status: PROVED-BY-EXHAUSTION at B = 55, BOTH PARTS (script + frozen consolidated output + independent exact-M referee; six exact-M gates pass; two rediscovery gates re-find {1..11,13,36} → 3/41 and {1..12,26} → 2/27 blind under widened intervals; LRC-mode regression gate exhausts heights ≤ 26 and re-finds all known sub-1/13 families). Part (a) sub-gap: 4.69e9 filtered → 50 pinning survivors → all witness-cleared → 0 hard. Part (b) COMPLETED (the companion run; gap-mode cannot see M < 1/14 families since their active pair sum is not gap-admissible): interval (0, 1/14), covering 2..14, spread 13 (THM-405 rung), w_max ∈ [14, 55] — 32.68e9 nodes, 2.4499e9 filtered primitive families, SIX pinning survivors, all witness-certified M ≥ 1/14 (q ∈ {42, 44, 45, 46, 48}), ZERO hard: **no 13-subset of [1,55] has M < 1/14 — LRC(14) verified exhaustively at height 55** (non-primitive reduce to primitive with σ > 13 ⟹ w′_max ≥ 14, enumerated).
 source: klein-2026-07-19-S319 (owner: work to finish LRC(14); see the near-misses, synthesize perspectives)
 depends_on: [THM-1268 (D ≥ 4 forcing, mediant 4/55), THM-1269 (D = M·s, the pair-sum reduction), THM-1043 (spread rung σ ≤ n−1 ⟹ M ≥ 1/n), THM-1230/1235 (the gap edge 3/41, its witness, the slack coordinates), boxeph-S115/S126 (mod-p spread/pinning template), mac-mini-S54 (census harness architecture, lrc_gap_census40_S54.c), THM-405 (n=14 spread rung, used by the companion run)]
 scripts: 04-computation/lrc14_subgap_census_klein_S319.c + 04-computation/lrc14_subgap_referee_klein_S319.py -> 05-knowledge/results/lrc14_subgap_census_klein_S319.out
@@ -11,12 +11,18 @@ scripts: 04-computation/lrc14_subgap_census_klein_S319.c + 04-computation/lrc14_
 
 ## Statement
 
-**No 13-subset of [1, 55] of distinct positive integers — primitive or not —
-has maximum loneliness M in the open interval (1/14, 3/41).**
+**(a) No 13-subset of [1, 55] of distinct positive integers — primitive or
+not — has maximum loneliness M in the open interval (1/14, 3/41).**
+
+**(b) No 13-subset of [1, 55] has M < 1/14: LRC(14) holds exhaustively at
+height 55.** (Companion run, same harness at interval (0, 1/14): 32.68e9
+nodes, 2.45e9 filtered families, 6 pinning survivors, all witness-certified,
+0 hard.)
 
 Consequently the attained 13-speed M-spectrum's second-smallest value, IF any
 value below 3/41 exists at all, requires v_max ≥ 56; equivalently, the gap
-(1/14, 3/41) of THM-1235 is empty through height 55.
+(1/14, 3/41) of THM-1235 is empty through height 55 — and any LRC(14)
+counterexample requires v_max ≥ 56.
 
 ## Proof shape (all filters rigorous, from canon)
 
@@ -83,13 +89,16 @@ above the pinning ceiling 41, and none survives past 48.
   bottom plank at n = 14.
 - **THIS THEOREM**: the full sub-gap, unconditional, to height 55 — the
   middle plank.
-- **opus HYP-7930/G-K Thm 1.4** (pinned this session, see synthesis §4): only
-  FINITELY many attained values in (1/14, 3/41] at all heights — the
-  ineffective top plank. In the Kravitz/Fan–Sun stratification (repo
-  LRCSpectrumWindow), every candidate value in the open sub-gap has stratum
-  k ≥ 3 (4/55, 5/69, 6/83, 7/96, 7/97, …), no k ≤ 2 construction can enter,
-  and the D ≥ 15 tail is Fan–Sun-inadmissible (k = s − 13D ≥ 14 has no
-  representation with k ≤ 13).
+- **THM-1289** (opus-S402, published G-K Thm 1.4, independently re-confirmed
+  this session): the floor is isolated from above at ALL heights —
+  (1/14, 1/14+δ) is spectrum-empty, δ ineffective — the citation top plank.
+  Full finiteness of (1/14, 3/41] is CONDITIONAL on G-K Conjecture 1.5 (the
+  proven chain ends in gridmax values; MISTAKE-190) — the roof. In the
+  Kravitz/Fan–Sun stratification (repo LRCSpectrumWindow), every candidate
+  value in the open sub-gap has stratum k ≥ 3 (4/55, 5/69, 6/83, 7/96, 7/97,
+  …), no k ≤ 2 construction can enter, and sub-gap values with D ≥ 15 are
+  Fan–Sun-inadmissible (k = s − 13D ≥ 14 in every representation), so under
+  Fan–Sun Conj 1.2 the candidate list is finite and explicit (D ≤ 19).
 
 The named missing piece is unchanged but sharpened: an effective height bound
 for the finite G-K list (opus's C4), toward which every increment of B here

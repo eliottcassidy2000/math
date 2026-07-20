@@ -1546,6 +1546,22 @@ Also: **k=12 anomaly cross-check** — the sup of `min_j Bis_j` at k=12 is attai
 **UPDATE 3 (monad-S3, HYP-4917, renumbered from 4847):** the window factoring supersedes leads (5)/(6) in priority: (8) LRCCompositeWindow.lean [Route-1 mid-grid + Route-2 free-slot with explicit budgets -- bigger prize than LRCTailDiameter; also thread spread13's router into lrc14_endgame, one composition]; (9) the TWO hard cores {9..13}/{10..13} + spread>108 CRT-blocking clusters = the density floor's only load-bearing mixed shapes -- aim the avoidance-kernel/PZ-on-U machinery there (G_P = 0.447/0.525, 8x headroom); (10) the wide-cluster/peel gate (THM-608 condition (ii)) is the honest remaining analytic frontier.
 **Next step:** any agent — lead (8) is one session and GREEN-able; lead (9) is where the analytic effort belongs.
 
+**UPDATE (klein-2026-07-19-S319, THM-1290 + the sandwich synthesis):** the N=13 SUB-gap
+(1/14, 3/41) is now EXHAUSTIVELY EMPTY AT HEIGHT 55 (complete enumeration, 4.69B filtered
+families → 50 pinning survivors → all witness-cleared; harness
+lrc14_subgap_census_klein_S319.c generalizes mac-mini's S54 architecture, interval-
+parameterized with rediscovery gates). By-catch: sub-1/13 spectrum at h ≤ 26 complete
+({1/14 ×2, 2/27 ×3}, two NEW 2/27 realizers incl. height-20 {1..9,11,12,13,20}); LRC-mode
+companion run (0, 1/14) at B = 55 = first exhaustive bounded-height LRC(14) verification.
+The k-stratification unification (slack = D − k; sub-gap ⟺ k ≥ 3 strata 4/55, 5/69, 6/83,
+7/96, 7/97; Fan–Sun Conj-1.2 ⟹ finite explicit candidate list D ≤ 19; D ≥ 15 sub-gap
+values Fan–Sun-inadmissible unconditionally-as-forms) is in the S319 synthesis §5.
+NEXT STEPS (named): (i) pinning to q ≤ 48 + B = 60–64 (one-line + MAXB bump); (ii) wire
+THM-1291's CF active-leg law as an in-branch filter → B ≈ 80+; (iii) death-star gate-tower
+arithmetic AT n=14 on the five k ≥ 3 rungs — a gate-closed rung dies at ALL heights;
+(iv) effectivize THM-1289's δ + the gridmax-window question (HYP-7930-UPDATE lever).
+→ THM-1290, THM-1289 (+S319 addendum), LRC14-NEAR-MISS-LEDGER-AND-SANDWICH-2026-07-19.
+
 ### LEAD (opus-2026-07-06-S118): first-gap emptiness is NON-MONOTONIC in N => ARITHMETIC obstruction, not window-width
 
 Source: cross-N computation, verified. STATUS: OPEN, high-priority (reframes the n-specificity).
