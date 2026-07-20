@@ -1,0 +1,96 @@
+==============================================================================
+PART A/C -- THE EXACT FIBRATION, EXHAUSTIVE
+==============================================================================
+
+ n=4  m=3  tilings=8  iso classes=4  SC classes=2
+   |fibre(c)| * |Aut(c)| = H(c) for every class : True
+   checksum  sum_c H/|Aut| = 8  vs 2^m = 8  : True
+   blue (sigma-fixed) tilings total = 4  vs 2^h, h=floor((n-1)^2/4)=2 -> 4  : True
+   any blue tiling over a NON-SC class? no
+   merged nodes = 3   fibre = (2-[SC])*H/|Aut| : True
+   sigma-orbits over merged node = H/|Aut| (non-SC) / (H/|Aut|+B)/2 (SC) : True
+
+ n=5  m=6  tilings=64  iso classes=12  SC classes=8
+   |fibre(c)| * |Aut(c)| = H(c) for every class : True
+   checksum  sum_c H/|Aut| = 64  vs 2^m = 64  : True
+   blue (sigma-fixed) tilings total = 16  vs 2^h, h=floor((n-1)^2/4)=4 -> 16  : True
+   any blue tiling over a NON-SC class? no
+   merged nodes = 10   fibre = (2-[SC])*H/|Aut| : True
+   sigma-orbits over merged node = H/|Aut| (non-SC) / (H/|Aut|+B)/2 (SC) : True
+
+ n=6  m=10  tilings=1024  iso classes=56  SC classes=12
+   |fibre(c)| * |Aut(c)| = H(c) for every class : True
+   checksum  sum_c H/|Aut| = 1024  vs 2^m = 1024  : True
+   blue (sigma-fixed) tilings total = 64  vs 2^h, h=floor((n-1)^2/4)=6 -> 64  : True
+   any blue tiling over a NON-SC class? no
+   merged nodes = 34   fibre = (2-[SC])*H/|Aut| : True
+   sigma-orbits over merged node = H/|Aut| (non-SC) / (H/|Aut|+B)/2 (SC) : True
+
+==============================================================================
+PART B -- THE HAM-PATH TRICK: fibres without touching the 2^m cube
+==============================================================================
+ fibre(c) <-> HamPaths(T_c)/Aut(T_c)  (Aut acts freely on Ham paths, canon LEM-003)
+ so |fibre(c)| = H(c)/|Aut(c)| -- and the fibre ITSELF is enumerable from one rep.
+
+ n=4: classes=4 (A000568)  SC=2  merged=3  G_n edges=5
+   checksum sum H/|Aut| = 8  vs 2^m = 8 : True   [agrees with exhaustive: True]
+   cost: 24 canonicalisations, 0.0s   vs naive 2^C(n,2) = 64 tournaments
+
+ n=5: classes=12 (A000568)  SC=8  merged=10  G_n edges=30
+   checksum sum H/|Aut| = 64  vs 2^m = 64 : True   [agrees with exhaustive: True]
+   cost: 120 canonicalisations, 0.0s   vs naive 2^C(n,2) = 1024 tournaments
+
+ n=6: classes=56 (A000568)  SC=12  merged=34  G_n edges=290
+   checksum sum H/|Aut| = 1024  vs 2^m = 1024 : True   [agrees with exhaustive: True]
+   cost: 840 canonicalisations, 0.0s   vs naive 2^C(n,2) = 32768 tournaments
+
+ n=7: classes=456 (A000568)  SC=88  merged=272  G_n edges=4086
+   checksum sum H/|Aut| = 32768  vs 2^m = 32768 : True   [agrees with exhaustive: n/a]
+   cost: 9576 canonicalisations, 0.6s   vs naive 2^C(n,2) = 2097152 tournaments
+
+==============================================================================
+PART D -- TILINGS ARE THE SWITCHING CLASSES (arc space modulo cut(K_n))
+==============================================================================
+ n=4: distinct switch-canonical tournaments = 8  vs 2^m = 8  : True;  fibre sizes = {8} (expect {8} = 2^(n-1))
+ n=5: distinct switch-canonical tournaments = 64  vs 2^m = 64  : True;  fibre sizes = {16} (expect {16} = 2^(n-1))
+ n=6: distinct switch-canonical tournaments = 1024  vs 2^m = 1024  : True;  fibre sizes = {32} (expect {32} = 2^(n-1))
+
+==============================================================================
+PART E -- THE BASE-PATH-INDEPENDENT SUBGROUP: cap Gamma_P and join Gamma_P
+==============================================================================
+ n=4: #HamPaths=12  E=C(n,2)=6   dim Gamma_P = 3
+        dim JOIN <U Gamma_P> = 6  (= E means the union generates everything)
+        dim CAP  (^ Gamma_P) = 0
+ n=5: #HamPaths=60  E=C(n,2)=10   dim Gamma_P = 4
+        dim JOIN <U Gamma_P> = 10  (= E means the union generates everything)
+        dim CAP  (^ Gamma_P) = 0
+ n=6: #HamPaths=360  E=C(n,2)=15   dim Gamma_P = 5
+        dim JOIN <U Gamma_P> = 15  (= E means the union generates everything)
+        dim CAP  (^ Gamma_P) = 0
+ n=7: #HamPaths=2520  E=C(n,2)=21   dim Gamma_P = 6
+        dim JOIN <U Gamma_P> = 21  (= E means the union generates everything)
+        dim CAP  (^ Gamma_P) = 0
+
+==============================================================================
+PART F -- G_n vs THE d=1 WIGGLY QUOTIENT (which metagraph do tilings see?)
+==============================================================================
+ n=4: G_n (all-arc flips) edges = 5;  d=1 wiggly quotient edges = 5
+        wiggly subset of G_n: True;  equal: True;  missing from wiggly: 0
+ n=5: G_n (all-arc flips) edges = 30;  d=1 wiggly quotient edges = 30
+        wiggly subset of G_n: True;  equal: True;  missing from wiggly: 0
+ n=6: G_n (all-arc flips) edges = 290;  d=1 wiggly quotient edges = 290
+        wiggly subset of G_n: True;  equal: True;  missing from wiggly: 0
+
+DONE.
+
+==============================================================================
+PART H -- how much does the Aut-ORBIT refinement actually save? (honest measurement)
+==============================================================================
+  n  classes  |cls|*C(n,2)  sum #Aut-orbits   saving  rigid classes
+  4        4            24               16    33.3% 2/       4
+  5       12           120               88    26.7% 7/      12
+  6       56           840              704    16.2% 41/      56
+  7      456          9576             8912     6.9% 399/     456
+
+READING: the Aut-orbit refinement is REAL but SMALL, because most tournaments are rigid.
+The dominant saving is the class-BFS itself, not the orbit trick.
