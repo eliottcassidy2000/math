@@ -1,0 +1,21 @@
+SPAN {+2, +1, -1}, constants, gauged to P = a Z^2 + Z + W (one unknown a != 0):
+  E1(a) = {}
+  E2(a) = {0: '4'}
+  E3(a) = {1: '24'}
+  E4(a) = {0: '48'}
+  gcd(E1..E8) degree: 0  -> NO common root: span CLOSED (no mixed nullcone member)
+
+SPAN {+2, +1, -1, -2}, constants, gauged to P = a Z^2 + Z + W + d W^2 (two unknowns):
+  E1 = {}
+  E2 = {(0, 0): '4', (1, 1): '16'}
+  E3 = {(0, 1): '24', (1, 0): '24'}
+4-charge gauged P = aZ^2 + Z + W + dW^2: E2..E5 =
+  E2 = {(0, 0): '4', (1, 1): '16'}
+  E3 = {(0, 1): '24', (1, 0): '24'}
+  E4 = {(0, 0): '48', (1, 1): '1152', (2, 2): '2304'}
+  E5 = {(0, 1): '960', (1, 0): '960', (1, 2): '11520', (2, 1): '11520'}
+  candidate (a, d) = (1/2, -1/2): E2..E7 = ['0', '0', '-96', '0', '15360', '0']
+  candidate (a, d) = (-1/2, 1/2): E2..E7 = ['0', '0', '-96', '0', '15360', '0']
+  => both candidates DIE at E4 (structure: P factors as 2X(1+iY): the Z/2 real-parity
+     grading fakes U(1) through m = 3, fails at m = 4). 4-CHARGE CONSTANT SPAN CLOSED.
+DONE-4CHARGE.

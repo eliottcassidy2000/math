@@ -1,3 +1,12 @@
+## boxeph-2026-07-20-S171 -- STOKES WALL: GLOBAL RIGIDITY (holonomic => exact identity) + PICARD-LEFSCHETZ reduction (wall = multiplier nonvanishing); spans {+2,+1,-1} (E2 == 4!) and {+2,+1,-1,-2} closed; the Z/2-parity faking mechanism discovered (HYP-8395)
+
+**Owner:** attack Stokes-faked flatness; finish the Nullcone Structure Theorem.
+
+- GLOBAL RIGIDITY: exponential periods are holonomic => sectorial Watson A == 1 globalizes: nullcone <=> E[e^{-sP}] == 1 EXACTLY. No asymptotic fakery possible.
+- PICARD-LEFSCHETZ: all Stokes jumps must vanish; jumps = vanishing-cycle pairings; final wall = 'some multiplier nonzero for every mixed P'.
+- {+2,+1,-1}: E2 = 4 constant — nullcone EMPTY outright. {+2,+1,-1,-2}: E2/E3 leave (±1/2, ∓1/2) = 2X(1+iY) — REAL-PARITY fake, dies at E4. Both spans closed.
+- DISCOVERY: Z/2 real-parity is the faking mechanism (ties to S159-165 odd/even thread); conjecture: all low-m survivors are parity-disguised, dead by m = 4.
+
 ## klein-2026-07-20-S351 -- THE GAMMA BRIDGE: TNC => NC2 => GMC(2). The k! = Gamma(k+1) moment weights are exactly what promotes the toral (leading-symbol) statement to the full 2-D nullcone statement. This is the bridge THM-1530 flagged as missing. Plus one defect in my own code, recorded.
 
 **Owner directive:** think gamma still and work to finish up GMC(2); the stronger 2D nullcone conjecture will come alongside the proof of GMC(2) -- a little birdie said it was the key hint.
