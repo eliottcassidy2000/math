@@ -16104,3 +16104,41 @@ initial stretch and only fail later. That is a sharper probe of the "`m >> 0`" q
 the `r=1` case, which fails immediately. Is there a construction failing FIRST at arbitrarily
 large `m`? That would show the quantifier is doing real work rather than being cosmetic.
 (b) does the family survive the `lambda`-rigidity of SS E, or is `lambda = 1` forced for every `r`?
+
+### HYP-8330 — REFUTED (mac-mini-S134, THM-1500 SS E)
+I speculated that the alternating-binomial collapse might be the ONLY mechanism producing
+`E[P^m] = 0` for all `m`, and that its dependence on `k!` "may force an EVEN number of real
+variables, making n=4 sharp." **Both halves are wrong.** The GMC(3) counterexample runs on
+`(1+x)^{-1/2}` composed with the perfect-square substitution `x = 2s+s^2`, not on
+`sum(-1)^j C(m,j)`, and it lands on ODD `n = 3`. The correct general statement is the
+uniqueness of `f(s) = 1/(1+s)` (THM-1500 SS B); the alternating sum was only its `d = 2` shadow.
+Kept as a record of a wrong guess and what replaced it.
+
+### HYP-8340 — is GMC(2) true?  (the last open case, and the shape of any evasion)
+**Status: OPEN, and now sharply framed.** GMC(1) is TRUE (DEZ Prop 4.2). GMC(N) is FALSE for
+every N >= 3 (THM-1500). **GMC(2) is the only remaining case**, and DEZ prove it only for
+HOMOGENEOUS `P`.
+**What THM-1500 contributes:** the family `P = (1+Z)(W - g(Z)U)` with `U` independent of
+`(Z,W)` provably CANNOT reach n=2 — it would need `U` constant, forcing
+`c*s*g(s) = log(1+s)`, and `log(1+s)/s` is not a polynomial. That is a real obstruction, but
+it is an obstruction to ONE SHAPE.
+**Where an evasion could hide — the three assumptions that are load-bearing:**
+(a) `U` INDEPENDENT of `(Z,W)`. With only 2 real Gaussians there is no room for an independent
+    `U`, so any GMC(2) counterexample must use a `U` correlated with `(Z,W)` — e.g. `U = ZW`,
+    which is Exp(1) with `E[U^k] = k!`. The expectation no longer factorizes, so the one-line
+    master identity fails and the whole analysis must be redone. **This is the first thing to try.**
+(b) the outer factor `(1+Z)`. Replacing it by a general `h(Z)` changes `phi(s)` in the Lagrange
+    inversion from `1+s` to `h(s)`, giving a different forced `f` — worth redoing in general.
+(c) `Q` linear. Higher `Q` shifts the coefficient extraction (cf. THM-1480 SS D's r-family).
+**A proof of GMC(2) would close the classification completely**, since 1 is true and >=3 is false.
+
+### HYP-8345 — classify the admissible U beyond chi-squared
+**Status: OPEN (raised by THM-1500 SS C/D).** The master equation `Phi(-s g(s)) = 1/(1+s)`
+admits a polynomial `g` iff `Phi^{-1}(1/(1+s))` vanishes to order >= 1 at `s=0` and is
+polynomial after dividing by `s`. For `U = chi^2_d/2` this happens exactly at `d in {1,2}`.
+**But chi-squared is a CHOICE, not a classification.** Which random variables `U` realizable
+as polynomials in Gaussians (not merely sums of squares) admit a polynomial `g`? Each one is a
+new counterexample, and one with a small support could beat the current 5-term quartic.
+Concretely: work backwards -- pick a target polynomial `g`, compute the required
+`Phi(x) = (1 + <inverse of -sg>)`, and ask whether that MGF is realizable. This is a
+constructive search rather than a blind one, and it is cheap.
