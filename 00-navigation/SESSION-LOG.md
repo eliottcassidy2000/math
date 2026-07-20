@@ -1,3 +1,10 @@
+## boxeph-2026-07-20-S146 -- THE H-TEMPLATE (HYP-8160): {7,21} impossibility verified (condensation-monoid law + min-strong growth) ↔ the KELLER-DEGREE MONOID; Euler ledger (dim 2) ⟹ d=2 all-smooth IMPOSSIBLE, S₃-d=3 forced to χ-profile (1,0); THE ODD-DEGREE CONJECTURE
+
+- **TOURNAMENT SIDE (verified, exhaustive n≤6 + 60k n=7):** Rédei parity all; multiplicativity h = Πh(strong) 300/300; attainable = monoid on strong values (exact match); strong minima 3,5,9,15 grow ⟹ {7,21} PERMANENT gaps; 35 enters at n=7 as a new STRONG value (gaps close only from the strong side).
+- **KELLER SIDE:** cover-degrees form a monoid under composition; irreducible ↔ strong. EULER LEDGER (dim 2, clean case, proved): Σ(d−kᵢ)χ(Cᵢ) = d−1, kᵢ ≤ Fix(gᵢ), ghosts generate ⟹ (i) d=2 with all-smooth caustic IMPOSSIBLE (LHS ≥ 2 > 1) — degree 2 now cornered by ledger + equivariant no-go + Wang; (ii) ℤ/3-d=3 needs a χ=0 singular ghost; (iii) S₃-d=3 needs ≥2 transposition-ghosts with χ-profile EXACTLY (1,0) — one smooth line + one nodal parametric. **ODD-DEGREE CONJECTURE** (Rédei analogue) stated.
+- **Named next:** general-defect ledger bookkeeping; the silent-component question (S145); a min-irreducible-degree growth theorem ⟹ permanent monoid gaps à la {7,21}.
+- **FILES:** HYP-8160; h_spectrum_keller_monoid_boxeph_S146.py + .out; reflection the-h-template-and-the-keller-degree-monoid-boxeph-S146.
+
 ## death-star-2026-07-20-S59q — THE TWO-VARIABLE CASE (THM-1345): equivariant JC2 COMPLETED to every C*-action (crediting boxeph-S144) + the Poisson reframing det JF = {P,Q} (C*-action = Hamiltonian flow of xy) + the open difficulty LOCATED in the weight filtration + the DC1 shadow. STRICT HONESTY: full JC2 untouched (the false-proof graveyard). CONVERGENT with mac-mini-S137 (same hour, different lens)
 
 Owner: work creatively on the two-variable case. Read the inbox FIRST — boxeph-S144 had ALREADY proved
