@@ -1,0 +1,39 @@
+(A) GW trichotomy, N = 5..20:
+  N=5 (mod6=5): M=2/11 pred=2/11 [D=2 escape] match:True; t*=3/11; active=[3, 8]
+  N=6 (mod6=0): M=1/6 pred=1/6 [D=1 escape] match:True; t*=5/12; active=[2, 10]
+  N=7 (mod6=1): M=1/8 pred=1/8 [tight] match:True; t*=1/8; active=[1, 7]
+  N=8 (mod6=2): M=1/8 pred=1/8 [D=1 escape] match:True; t*=7/16; active=[2, 14]
+  N=9 (mod6=3): M=2/19 pred=2/19 [D=2 escape] match:True; t*=7/19; active=[3, 16]
+  N=10 (mod6=4): M=1/10 pred=1/10 [D=1 escape] match:True; t*=9/20; active=[2, 18]
+  N=11 (mod6=5): M=2/23 pred=2/23 [D=2 escape] match:True; t*=7/23; active=[3, 20]
+  N=12 (mod6=0): M=1/12 pred=1/12 [D=1 escape] match:True; t*=11/24; active=[2, 22]
+  N=13 (mod6=1): M=1/14 pred=1/14 [tight] match:True; t*=1/14; active=[1, 13]
+  N=14 (mod6=2): M=1/14 pred=1/14 [D=1 escape] match:True; t*=13/28; active=[2, 26]
+  N=15 (mod6=3): M=2/31 pred=2/31 [D=2 escape] match:True; t*=11/31; active=[3, 28]
+  N=16 (mod6=4): M=1/16 pred=1/16 [D=1 escape] match:True; t*=15/32; active=[2, 30]
+  N=17 (mod6=5): M=2/35 pred=2/35 [D=2 escape] match:True; t*=11/35; active=[3, 32]
+  N=18 (mod6=0): M=1/18 pred=1/18 [D=1 escape] match:True; t*=17/36; active=[2, 34]
+  N=19 (mod6=1): M=1/20 pred=1/20 [tight] match:True; t*=1/20; active=[1, 19]
+  N=20 (mod6=2): M=1/20 pred=1/20 [D=1 escape] match:True; t*=19/40; active=[2, 38]
+  trichotomy exact on N=5..20: True
+
+  escape-blocking checks (odd N):
+  N=5: 3|2N+1: False (N==1 mod 3: False); 3a==+-2 solvable: True; killer residues +-(N-1),(N+2): absent from V: True
+  N=7: 3|2N+1: True (N==1 mod 3: True); 3a==+-2 solvable: False; killer residues +-(N-1),(N+2): absent from V: True
+  N=9: 3|2N+1: False (N==1 mod 3: False); 3a==+-2 solvable: True; killer residues +-(N-1),(N+2): absent from V: True
+  N=11: 3|2N+1: False (N==1 mod 3: False); 3a==+-2 solvable: True; killer residues +-(N-1),(N+2): absent from V: True
+  N=13: 3|2N+1: True (N==1 mod 3: True); 3a==+-2 solvable: False; killer residues +-(N-1),(N+2): absent from V: True
+  N=15: 3|2N+1: False (N==1 mod 3: False); 3a==+-2 solvable: True; killer residues +-(N-1),(N+2): absent from V: True
+  N=17: 3|2N+1: False (N==1 mod 3: False); 3a==+-2 solvable: True; killer residues +-(N-1),(N+2): absent from V: True
+  N=19: 3|2N+1: True (N==1 mod 3: True); 3a==+-2 solvable: False; killer residues +-(N-1),(N+2): absent from V: True
+
+(B) theta phase transition for AP13 (theta = p/8, exact power comparison):
+  theta=0/8: AP maximizer (1, 14); GW maximizer (1, 14); M^8 equal (pair tied): True
+  theta=1/8: AP maximizer (3, 14); GW maximizer (3, 14); M^8 equal (pair tied): True
+  theta=2/8: AP maximizer (23, 107); GW maximizer (23, 107); M^8 equal (pair tied): True
+  theta=3/8: AP maximizer (14, 65); GW maximizer (18, 43); M^8 equal (pair tied): False
+  theta=4/8: AP maximizer (11, 51); GW maximizer (41, 98); M^8 equal (pair tied): False
+  theta=5/8: AP maximizer (23, 78); GW maximizer (23, 55); M^8 equal (pair tied): False
+  theta=6/8: AP maximizer (31, 112); GW maximizer (28, 67); M^8 equal (pair tied): False
+  theta=7/8: AP maximizer (21, 55); GW maximizer (21, 55); M^8 equal (pair tied): True
+  theta=8/8: AP maximizer (13, 34); GW maximizer (13, 34); M^8 equal (pair tied): True
