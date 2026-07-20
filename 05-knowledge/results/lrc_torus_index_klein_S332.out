@@ -1,0 +1,19 @@
+THE INDEX OBSTRUCTION: free translation involution on T^k has Z/2-index 1, for EVERY k.
+
+Explicit witness. c = (1/2,0,...,0) acts freely on T^k (translation by 2-torsion, no fixed pts).
+Define f: T^k -> R^2 by f(x) = (cos 2pi x_1, sin 2pi x_1).  Then f(x+c) = -f(x) and |f| = 1 > 0.
+So there IS an equivariant map T^k -> R^2 minus 0  =>  index <= 1. (Index >= 1 since the action is free.)
+
+  k= 1 : max|f(x+c)+f(x)| = 1.90e-15 (equivariant)   min|f| = 1.000000 (never 0)
+  k= 2 : max|f(x+c)+f(x)| = 1.90e-15 (equivariant)   min|f| = 1.000000 (never 0)
+  k= 3 : max|f(x+c)+f(x)| = 1.90e-15 (equivariant)   min|f| = 1.000000 (never 0)
+  k= 5 : max|f(x+c)+f(x)| = 1.90e-15 (equivariant)   min|f| = 1.000000 (never 0)
+  k=12 : max|f(x+c)+f(x)| = 1.90e-15 (equivariant)   min|f| = 1.000000 (never 0)
+
+CONTRAST with the sphere: on S^k the antipodal action has index k, and NO equivariant map
+S^k -> R^k minus 0 exists (that IS Borsuk-Ulam). The torus fails because H*(T^k;Z/2) is EXTERIOR:
+every degree-1 class squares to zero, so w_1^2 = 0 and the index cannot exceed 1 -- no matter how
+large k is. Dimension buys nothing.
+
+CONSEQUENCE for LRC: an equivariant f: X -> R^m has a guaranteed zero only when m <= index(X).
+On the resonance torus that is m <= 1: BU-type arguments can force ONE constraint, never n of them.
