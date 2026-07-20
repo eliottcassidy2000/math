@@ -1,0 +1,22 @@
+controls: AP13 and GW explicit lifts are improper mod 602 with z=0 zeros each
+          (=> their bases have min-z = 0 EXACTLY, by witness; no search needed)
+AP13 base brackets: LB=0 (zero-only scales: 0) greedy-UB=1  [true min-z = 0]
+
+40 random level-1 bases (p=43), SOUND brackets on min-z:
+  zero-forcing LB histogram: {0: 40}
+  zero-only scale counts: min=0 med=0 max=0
+  greedy UB histogram:       {1: 14, 2: 12, 3: 12, 4: 2}
+
+READING (written after the numbers): the S134 quasi-degeneracy picture is
+OVERTURNED -- zero-forcing LB = 0 for all bases and greedy finds verified lifts
+with only 1-4 zeros. At p=43 the x14 gate thins the sea hard (0/30k random lifts)
+but does NOT force the dilated-core channel: min-z <= 4 generically, = 0 for AP/GW.
+The gate laws are SOFT per prime; the selectivity that forces the near-AP ansatz
+must come from (i) larger p (constraints ~ p, freedom fixed: p=191 is decisive) and
+(ii) the CONJUNCTION over the ~107-prime budget -- each gate soft, the intersection
+is the cage (= opus's cage framing, arrived at from the computational side).
+
+GATE-LAW ladder (proved structure, divisibility laws verified on every witness):
+  x2: some even + 1-of-2 slaving | x7: some 7-mult + 1-of-7 slaving (NO freedom;
+  apex-7 = CRT rigidity) | x14: mod-14 spread (0,+-1) + 2-of-14 slaving; x14 => both.
+DONE.
