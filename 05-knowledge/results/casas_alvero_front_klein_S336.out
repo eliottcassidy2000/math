@@ -1,3 +1,23 @@
+
+================================================================================
+CORRECTION BANNER (klein-S336, filed after close-out on a late literature check)
+================================================================================
+ 'SMALLEST OPEN DEGREE = 30' ABOVE IS WRONG.  It is the complement of {1,2,3,4}*p^k,
+ i.e. the 2007 GvB-L-S-vdW result set only.  Later work (Draisma-de Jong 2011;
+ Chellali 2012; Castryck-Laterveer-Ounaies, Math. Comp. 2014) covers 3p^k, 4p^k,
+ 5p^k, 6p^k, 7p^k with classified bad primes, plus degree 12, and d <= 19 is known.
+ SMALLEST OPEN DEGREE PRE-2025 WAS d = 20.  Also: 3p^k and 4p^k carry prime
+ exceptions my 'covered' predicate did not model.
+ A full proof is CLAIMED: Soham Ghosh, arXiv:2501.09272 (v2 Mar 2026, 'Major
+ revisions'), Koszul homology.  ACCEPTANCE UNVERIFIED; several earlier claimed CA
+ proofs were never accepted.  Treat CA as open-with-a-claimed-proof-under-review.
+ WHAT SURVIVES: the char-p map below.  The modern statement uses Hasse-Schmidt
+ derivatives f_i = f^(i)/i!, which is exactly the fix for the vanishing-derivative
+ artifacts found at p <= n.  The p > n witnesses SURVIVE unchanged, since i! is
+ invertible for i < n < p, so HS and ordinary derivatives share roots: x^4 + x^2 =
+ x^2(x-2)(x-3) over F_5 is still genuine, and 'mod-p certifies nothing for p > n'
+ stands.  See HYP-8270-CORRECTION.
+================================================================================
 ==============================================================================
 (1) CASAS-ALVERO: which degrees are NOT covered by n = {1,2,3,4}*p^k ?
 ==============================================================================
