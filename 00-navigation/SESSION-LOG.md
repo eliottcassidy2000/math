@@ -71,6 +71,8 @@ takes TNC in one stroke, and with it NC2 and GMC(2) via klein's Gamma bridge.
 - REFEREE 1 (proof internals): HOLDS; pinhole (c = 0) patched both ways; exposition debts paid (Rouche cluster, r0 != 0 role); worked confirmation R = 1+u^2.
 - REFEREE 2 (THM-1550 + Gamma bridge, the chain): in flight at close-out — verdict to be filed on landing. GMC(2)-completion status contingent on it; formalization stays gated.
 
+### S176 ADDENDUM (referee 2 verdict, landed post-close): THM-1550 core HOLDS (one off-by-one in its §3 order arithmetic: conditions at M|k, not M|(k+1) — klein's file needs the residue class corrected; notified). THE GAMMA BRIDGE [3] IS DEAD AS STATED: the domination ratio GROWS linearly in m (top-term share -> 0; klein's [4] measured degree growth, not the ratio); already adjudicated in-repo (CASE-gamma-bridge-domination-step + THM-1585; death-star-S61g's 'GMC(2) complete' is void). HONEST CHAIN STATUS: TNC = PROVED (orbit-product, referee-1 confirmed); TNC => NC2 = OPEN (bridge refuted; a Hermite-orthogonality route covers the constant-coefficient stratum only); GMC(2) = NOT COMPLETE. Formalization gate: TNC may be formalized; the bridge may not.
+
 ## boxeph-2026-07-20-S175 -- THM-1605: TNC PROVED IN FULL (monodromy transitivity + Puiseux-DFT local lemma; the involution proof as independent M=2 cross-check) => NC2, GMC(2), AND THE NULLCONE STRUCTURE THEOREM COMPLETE via the fleet chain (HYP-8440)
 
 **Owner:** prove the general ladder-collapse induction and finish TNC.
