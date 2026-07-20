@@ -1,3 +1,27 @@
+## death-star-2026-07-20-S59q — THE TWO-VARIABLE CASE (THM-1345): equivariant JC2 COMPLETED to every C*-action (crediting boxeph-S144) + the Poisson reframing det JF = {P,Q} (C*-action = Hamiltonian flow of xy) + the open difficulty LOCATED in the weight filtration + the DC1 shadow. STRICT HONESTY: full JC2 untouched (the false-proof graveyard). CONVERGENT with mac-mini-S137 (same hour, different lens)
+
+Owner: work creatively on the two-variable case. Read the inbox FIRST — boxeph-S144 had ALREADY proved
+hyperbolic equivariant Keller ⟹ LINEAR; did NOT re-file (MISTAKE-187 trap avoided), CREDITED and built on;
+mac-mini-S137 is ALSO on JC2 this hour (golden corner / Lamé-for-polygons / engine-dimension — a DIFFERENT
+creative pull; convergence noted, not duplicated). MY COMPLEMENTARY CONTRIBUTION: (A) det JF = {P,Q}
+(Poisson bracket, exact) ⟹ JC2 = "a polynomial canonical pair is a coordinate system"; the C*-action
+λ·(x,y)=(λx,λ⁻¹y) is the HAMILTONIAN FLOW of H=xy, so equivariant ⟺ P,Q are ad_{xy}-eigenvectors. (B)
+COMPLETED equivariant JC2 to EVERY C*-action: hyperbolic ⟹ linear (boxeph, re-derived), elliptic ⟹
+triangular (F⁻¹(0)={0} + finite étale over simply-conn C² ⟹ deg 1 ⟹ auto). NET: JC2 is a THEOREM in the
+equivariant category. (C) LOCATED full JC2: bracket is WEIGHT-ADDITIVE ⟹ top-weight {P_A,Q_B}=0 ⟹ leading
+forms Poisson-commute (Abhyankar–Moh obstruction); JC2 = descent through the weight filtration, base =
+equivariant (settled), step = propagate (AMS-hard, OPEN — NOT claimed); instrument validated on a real
+auto. (D) 'no room at n=2' exact: 3D needs ≥2 coupled units to cross, 2D gives ONE (fg=const) — the +1
+can't fit (continues S59p conservation-of-+1 as ABSENCE; ties to mac-mini's 'n=2 engine-starved'). (E)
+DC1 shadow: JC2 = classical limit of DC1; DC2⟹JC2⟹DC1 = three ℏ-values; observer A1↔n=3 (graded). Wild
+W6/W7/W8. NOTE the two JC2 sessions converge: mac-mini's worst-approximable/Euclid-chain-length frame and
+my weight-filtration frame are plausibly two lenses on ONE descent (backlog lii).
+
+Prompt (owner): work creatively on resolving the two variable case of the jacobia conjecture
+
+FILES: THM-1345, HYP-8155, reflection jc2-the-last-conservation-law, script + out, backlog xlviii-lii,
+results INDEX; message to boxeph (credit). -> all
+
 ## mac-mini-2026-07-20-S137 -- JC_2 CREATIVE SESSION (owner: two-variable case, unexpected pulls, Fibonacci): THE GOLDEN CORNER ON THE NOSE -- among 14,661 candidate degree pairs <= 300 surviving the citable battery [Magnus gcd=1, divisibility, Moh<=100], the unique maximal reduction chain (length 9, Euclid proxy) is (178,288) = 2*(89,144) = twice (F_11,F_12), slope 144/89 = the best phi-approximant in range; 100% of longest-chain pairs are golden (Lame's worst case surfacing as JC_2's reduction-resistant corner) + THE ENGINE-DIMENSION LEMMA (y-affine n=2: engine = a POINT of P^1, det y-coeff a'c-ac' == 0 forces triangular => invertible -- n=2 is engine-starved, why n=3 fell first) + THE HURWITZ PRINCIPLE (obstruction objects live at worst-approximable data): JC_2's golden corner + LRC's forbid-your-own-penultimate-convergent ghost law (opus-S407) + klein's g-bonacci kernels = one shape, three problems; the named proof target for JC_2 = LAME-FOR-POLYGONS (the reduction calculus terminates uniformly even at noble slopes) -- a Zaremba/Hurwitz uniform-CF problem, i.e. exactly the LRC corpus's home equipment (the unexpected pull requested).
 
 Prompt (owner): work creatively on resolving the two variable case of the jacobian
