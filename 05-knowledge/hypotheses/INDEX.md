@@ -16579,6 +16579,35 @@ identity to the inner `L(...)` calls, which are exactly of Laplace type.
 **Spans >= 3 are untouched** and will need the Newton-polygon top-edge reduction of
 THM-1540(C), whose missing input is the same domination estimate as HYP-8350.
 
+### HYP-8440 - Is the outside infinite family sigma/tau-equivariant, and does it split 1 + 2(m-1)?
+**Status:** OPEN, concrete and testable (opus-2026-07-20-S415). See THM-1605 s5.
+
+An outside party exhibits E_m : C^3 -> C^3, Keller and non-injective for every m >= 2, with
+deg E_2 = 7 and #E_m^{-1}(c,0,0) = 2m-1 ("every odd fibre cardinality >= 3 occurs"). Their
+m=2 IS our THM-1300 map (degree 7, fibre 3, verified).
+
+**PREDICTION from THM-1350.** If each E_m is sigma/tau-equivariant with dim Fix(sigma) <= 1
+-- which its coordinates t = 1+xy, p = x^2 h strongly suggest -- then for EVERY m:
+  (a) the 2m-1 preimages split as 1 sigma-FIXED + (m-1) FREE sigma-orbits;
+  (b) sigma acts on the fibre as exactly (m-1) disjoint transpositions, fixing one sheet;
+  (c) at a tau-fixed simple Jelonek point where two sheets escape, the meridian monodromy is
+      a transposition inside one of those orbits (THM-1445-A).
+Note 2m-1 = 1 + 2(m-1) already factors correctly, which is evidence for (a) but not proof.
+
+**WHY IT MATTERS.** Their result is the EXISTENCE half (every odd value is attained);
+THM-1350 is the NECESSITY half (no even value can be). Confirming equivariance would make
+their family a family of INSTANCES of our theorem rather than an independent phenomenon, and
+would let us read off the Jelonek/monodromy structure of every member without constructing
+anything.
+
+**TEST.** Reconstruct E_3 from the mangled description (R_m in Z[t,p], alpha a root of
+A_m(p) = R_m(0,p), S(t) the Hensel lift), then check F(sigma p) = tau(F p) for the obvious
+candidate involution, and count sigma-fixed points in the fibre over a tau-fixed target.
+Expected: exactly 1, with the other 4 in two free orbits.
+
+**Related:** THM-1605 (the comparison), THM-1350 (the forcing), THM-1440/1445 (monodromy),
+THM-1330 (Jelonek = Zariski three-cuspidal quartic).
+
 ### HYP-8435 — the ten Erdos problems: NEGATIVE, do not re-search
 **Status: CLOSED NEGATIVE (mac-mini-S140, THM-1600 D).** #1016, 506, 742, 19, 580, 547, 460,
 556, 475, 848 were all retrieved and read. **NONE involves polynomials, power sums, moments,

@@ -19,6 +19,54 @@
 **Handoff.** (i) **HYP-8440**: the TNC obstruction is now precisely localised at the non-multiples of M. Three concrete moves: (a) the first broken equation is a SINGLE QUADRATIC IN ONE UNKNOWN (r_3 at M=2) -- solve it explicitly and feed both roots back into the ladder, which may re-linearise downstream; (b) induct on N with M FIXED, using (M,N-1) as the base rather than inducting on the coefficient index; (c) check whether boxeph's THM-1595 gauged-elimination certificate factors through this same obstruction. (ii) **HYP-8445**: the last input to HYP-8350 is a Gevrey-1 bound -- now a NAMED classical criterion (Watson-Nevanlinna Borel summability) rather than a bespoke saddle estimate. **Cite it as a REDUCTION, not a proof.** (iii) **GMC(2) itself is NOT advanced by this session** -- the Laplace layer is one input; THM-1600's span-2 elimination and spans >= 3 are untouched here.
 
 ---
+## opus-2026-07-20-S415 - The outside infinite family: their m=2 IS our map, and THM-1350 explains their headline count (THM-1605)
+
+Owner supplied a (mangled) description of an outside infinite family of JC counterexamples
+E_m : C^3 -> C^3, Keller and non-injective for all m >= 2, with deg E_2 = 7 and
+#E_m^{-1}(c,0,0) = 2m-1, concluding "every odd fibre cardinality >= 3 occurs". Asked whether
+we already had this, and for an example showing deeper understanding.
+
+**IDENTIFICATION (verified).** Our THM-1300 counterexample has degree 7, det JF = -2, and
+fibre 3 over (1,0,0). Their m=2 has degree 7 and fibre 2m-1 = 3. **THEIR m=2 IS OUR CASE.**
+Their m >= 3 (degrees 13, 26, 43, 64...; fibres 5, 7, 9...) is genuinely new to us.
+
+**ON EXTENT, THEY WIN, and I recorded it plainly.** Their family is STRICTLY BROADER than
+anything this repo holds -- we have ONE map, they have an infinite family realising
+infinitely many degrees and every odd fibre cardinality. Nothing in our canon produces a
+second counterexample. No hedging on that.
+
+**ON MECHANISM, WE ARE AHEAD, and precisely.** Their headline is an EXISTENCE statement:
+those odd values are ATTAINED. THM-1350 proves the matching NECESSITY: for a sigma/tau-
+equivariant Keller map with dim Fix(sigma) <= 1, F|Fix is injective by JC_1 (which is TRUE),
+so every fibre over a tau-fixed target has EXACTLY ONE sigma-fixed preimage and the rest fall
+into free 2-orbits -- |fibre| = 1 + 2k, ODD, a double is IMPOSSIBLE, the minimum is a TRIPLE.
+**Their 2m-1 factors on the nose as 1 + 2(m-1)**: one sigma-fixed preimage plus (m-1) free
+orbits. So the SHAPE of their result is predicted by ours. They show every odd value is
+attained; we show no even value can be. Two halves of one theorem, and only one is a
+construction. Verified at m=2: the tau-fixed fibre cubic 16a x^3 + 4x has roots {0, +-i/(2
+sqrt a)} = 1 sigma-fixed sheet + 1 free orbit.
+
+**THE EXAMPLE THAT CARRIES THE EXTRA STRUCTURE** (THM-1605 s4): on our m=2 map we can state,
+and they do not, that (1) the fibre is the root set of L x^3 + (4-3bc)x - 2c whose LEADING
+COEFFICIENT IS THE JELONEK POLYNOMIAL L = 27a^2c^2 - 18abc + 16a + b^3c - b^2; (2) the
+Jelonek set is ZARISKI'S 1929 THREE-CUSPIDAL QUARTIC, zero nodes, monodromy S_3, stabiliser
+self-normalising -- "non-injective" is the coarse fact, WHICH degeneration occurs is this;
+(3) TWO sheets are lost over {L=0}, not one (fibre drops 3 -> 1); (4) REFLECTION = TORUS --
+the meridian monodromy equals the lambda = -1 involution, for ANY sigma/tau-equivariant
+degree-3 Keller map, because sigma is linear so it permutes the two escaping sheets and
+cannot fix both. Item (4) is the sharpest: a statement about every such map, with no
+construction at all.
+
+**CONCRETE PREDICTION FOR THEIR FAMILY (HYP-8440).** If each E_m is sigma/tau-equivariant --
+its coordinates t = 1+xy, p = x^2 h strongly suggest so -- then for every m the 2m-1
+preimages split as 1 sigma-fixed + (m-1) free orbits, sigma acts as exactly (m-1) disjoint
+transpositions, and the meridian monodromy at a tau-fixed simple Jelonek point is a
+transposition inside one orbit. Testable against their construction; requires none of it.
+
+**VERDICT: not in competition.** Their m=2 IS our map. They extended the object; we explained
+it. The results compose.
+
+**Artifacts:** THM-1605; HYP-8440; 1 script + 1 output.
 
 ## mac-mini-2026-07-20-S140 -- THM-1600: the LAPLACE-GMC(1) LAYER IS AN IDENTITY AT DEGREE 1 (truncated exponentials; DERANGEMENTS), CHARGE SPAN 2 ELIMINATED EXACTLY, and the ten Erdos problems are a CLEAN NEGATIVE
 
