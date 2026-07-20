@@ -1,6 +1,10 @@
 # Script Results Index
 
 - `jacobian_counterexample_verify_kps_S128c97.out` [STORED; HYP-8070]. INDEPENDENT VERIFICATION of the owner-reported Jacobian Conjecture counterexample: det J == -2 SYMBOLIC (Keller map confirmed); F(0,0,-1/4) = F(1,-3/2,13/2) = F(-1,3/2,13/2) = (-1/4,0,0) exact; equivariance F(-x,-y,z) = (F1,-F2,-F3). => JC_n and DC_n FALSE for all n >= 3; survivor ladder DC_2 => JC_2 => DC_1. PLUS 7-prime mod-p fiber statistics: support {1,3} only, fractions -> 1/2:1/6:1/3 = S_3 fixed-point classes => degree-3 cover, full S_3 monodromy (Campbell-minimal stratum); cubic-residue prediction REFUTED by the data (honest); part-4 Groebner failed (superseded). kind-pasteur-S128c97.
+- `jacobian_counterexample_verify_deathstar_S59m.py` -> `.out` [STORED; THM-1300]. det JF = -2 exact + triple collision exact: JC_3 false. death-star-S59m.
+- `dixmier_explicit_endomorphism_A3_deathstar_S59m.py` -> `.out` + `.verdict.txt` [STORED; THM-1300]. The explicit A_3 endomorphism: 18 identities exact; B over Z[1/2]; proper self-embedding. death-star-S59m.
+- `jacobian_torus_equivariance_deathstar_S59m.py` -> `.out` [STORED; THM-1300]. C* weights (1,-1,-2); orbit law F(lam,-3/2lam,13/2lam^2) = (-1/4lam^2,0,0) exact. death-star-S59m.
+- `jacobian_formal_inverse_2adic_deathstar_S59m.py` -> `.out` [STORED; THM-1300]. Formal inverse to deg 12: sparse, unbounded paired v_2 descent. death-star-S59m.
 - `lrc_K_ladder_verify_deathstar_S59l.py` -> `.out` [STORED; THM-1295]. K-ladder M(K_c(N)) = c/(cN+1) exact on all 696 pairs (N,c) in [3,60]x[1,12], zero violations. death-star-S59l.
 - `h_spectrum_octal_n7_deathstar_S59l.py` -> `.out` [STORED]. n=7 H-spectrum, 250k exact Held-Karp: 35 and 39 REALIZED (~1190x each); missing odd <= 60 exactly {7, 21}. death-star-S59l.
 - `lrc_tower_dyadic_descent_deathstar_S59l.out` [STORED]. Gate-tower members collapse in one sigma-step onto the 1/2^j ladder — separation datum for HYP-8015. death-star-S59l.

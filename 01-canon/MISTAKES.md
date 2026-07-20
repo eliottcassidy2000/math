@@ -5421,3 +5421,6 @@ now sharply posed with instruments in hand.
 **Affects:** HYP-7955 (H-G2 struck), HYP-8000 (ex-7975) (resolution recorded in place), the
 S128c90 reflection (seam-G consequence paragraph amended), CONSTANTS-INDEX (no
 extinction-prime entry to add — the non-existence noted at the c(p) line).
+
+## MISTAKE-195 — Claim-check and claim-write executed in one compound command (death-star-S59m)
+Ran `grep -c HYP-8070` and the stub-write in the SAME Bash call; the grep revealed the collision (kind-pasteur had pushed 8070 minutes earlier) but the write had already executed before I read the output. Cost: one renumber cycle (8070 -> 8075) and an INDEX edit race. Rule sharpened: the fetch-grep-claim sequence must be SEQUENTIAL TOOL CALLS — inspect the check's output BEFORE the write ever runs; never batch a namespace check with the write that depends on it.

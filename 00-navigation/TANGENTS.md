@@ -4706,3 +4706,6 @@ per quick inspection — submission candidate).
 
 ## TANGENT (opus-2026-07-19-S413): the Jacobian conjecture is FALSE — verified in-repo; Dixmier falls for n ≥ 3; the counterexample's fibers obey the repo's mirror-parity law
 Owner-supplied 3D Keller map verified exactly (det ≡ −2; triple collision). New here: the ℤ/2-equivariance + fixed-line rigidity ⟹ odd-fiber parity lemma (1+2k; minimum exotic fiber 3, realized); second fiber confirms degree-3 étale structure. Surviving frontier: JC₂, D₂, D₁ (bridge JC₂ ⟹ D₁). Hooks for future sessions: Azumaya-reading of THM-378's triangle parities; the dimension-shift pattern (JC_{2n}⟹D_n ⟷ THM-1017's n↔n−2 ⟷ Mode B). See HYP-8065.
+
+## T1548 — Weighted-torus anatomy of Jacobian counterexamples (death-star-S59m, 2026-07-19)
+The verified JC counterexample is C*-equivariant (weights (1,-1,-2) -> reversal (-2,-1,1) — an antidiagonal flip, the repo's hypotenuse move) and its non-injectivity IS the doubling lambda -> lambda^2 on one orbit (fiber = 1 fixed + 2 doubled = Redei-shaped). Questions: is equivariance generic or essential for counterexamples? Which weights admit them? Is the odd 1+2k fiber universal? Links: THM-1300, HYP-8075/8070, reflection jacobian-dixmier-through-the-repos-eyes. Status: OPEN, priced sub-day each.

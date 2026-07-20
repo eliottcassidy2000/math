@@ -1,3 +1,33 @@
+## death-star-2026-07-19-S59m — THE JACOBIAN/DIXMIER SESSION (THM-1300): owner's JC counterexample verified exactly; the EXPLICIT A_3 Dixmier counterexample (18 identities + the module one-liner closing klein's named task); the C* torus anatomy (collision = fixed + doubled orbit, predicting opus's second fiber in closed form); the formal inverse's unbounded paired dyadic ladder
+
+Owner: JC reported false; investigate deeply, connect to the repo + Dixmier; "tournaments and their
+recursion ~ the n vs 2n relationship." Six agents got the prompt (kind-pasteur/klein/boxeph/mac-mini/
+opus/me); HYP-8070 collision ceded (renumbered 8075; MISTAKE-195: never batch namespace-check with the
+write). UNIQUE STREAMS THIS SESSION: (1) φ(X_i) = F_i, φ(D_j) = Σ B_jk D_k, B = (JF^T)^{-1} over
+Z[1/2] (deg ≤ 11, ≤ 14 terms): all 9 R1 + 9 flatness identities verified EXACTLY, dependency-free
+(pip-less sandbox → hand-rolled exact poly engine); non-surjectivity by the MODULE ONE-LINER (apply to
+1 ∈ C[x,y,z]: X₁ ∈ im forces C[F] = C[X] forces F injective — contradiction) ⟹ X₁ is a CONCRETE
+non-image element: closes klein-S323's named task, executes boxeph-S140's "unowned high-value" lead.
+DC constructively false for A_n, n ≥ 3. (2) The FULL C* equivariance (everyone else found the Z/2):
+weights (1,−1,−2) → reversal (−2,−1,1); u, 4+3xy weight-0; the orbit law F(λ, −3/(2λ), 13/(2λ²)) =
+(−1/(4λ²), 0, 0) verified as an exact Laurent identity ⟹ the fiber over (a,0,0) is {(0,0,a)} ∪
+{λ² = −1/(4a)} in closed form — reproduces the original collision (λ = ±1), opus's second fiber
+(λ = ±i/2 ⟹ (±i/2, ±3i, −26)), and the mod-p 1-vs-3 axis dichotomy (QR split); real non-injectivity
+only on a < 0; the doubling λ ↦ λ² IS the owner's n-vs-2n, inside the map. (3) The formal inverse
+(guaranteed non-polynomial): sparse (grading!), nonzero every degree ≤ 12, v₂ ladder −1,−1,−3,−3,−4,
+−4,−7,−7,−8,−8,−10,−10 — unbounded paired dyadic descent; det ≡ 0 mod 2: the counterexample
+degenerates at p = 2 itself. (4) The essay (jacobian-dixmier-through-the-repos-eyes): Mode A =
+same-level rung (DC_n ⟹ JC_n), Mode B = doubling rung (JC_2n ⟹ DC_n); Cut⊕Cycle = positions⊕momenta;
+Rédei-shaped fibers; the tree series whose tail never dies; frontier now at the BOTTOM (JC₂, DC₂,
+DC₁). S59l carryover: 367Checks BUILT; 1271Checks still compiling at close.
+
+Prompt (owner): it was recently found that the jacobian conjecture is false. investigate deeply
+connections to our large body of work and the dixmier conjecture. tournaments and their recursion is
+reminiscent of the n vs 2n relationship between jacobian and dixmier.
+
+FILES: THM-1300 (+§5 fleet integration), HYP-8075, reflection, 4 scripts + outs, backlog xxxvi-xl,
+T1548, MISTAKE-195, results INDEX. -> all
+
 ## klein-2026-07-19-S323 -- THE JACOBIAN COLLAPSE, VERIFIED IN-REPO (owner-supplied map, owner-directed session): JC(n>=3) FALSE -- det J = -2 EXACT, fiber over (-1/4,0,0) = exactly 3 rational points, generic degree 3 (a 3-to-1 etale self-cover of C^3); DC(n>=3) FALSE with the EXPLICIT Weyl witness phi_F (x -> F, d_i -> sum_k (J^{-1})_{ki} d_k; all A_3 relations verified symbolically; automorphism controls caught a transpose bug); the cotangent lift Phi(x,xi) = (F(x), J^{-T}xi) is an explicit SYMPLECTIC Keller counterexample in C^6 (det = 1, Phi*omega = omega, 3-point collision) -- the n-vs-2n JC/DC doubling made explicit; monodromy = S_3 measured by the fleet's per-prime Chebotarev census (fractions -> (1/6,1/2,1/3), N_2 == 0 structural zero at every p)
 
 Owner: investigate the reported JC counterexample deeply, connect to our work + Dixmier;

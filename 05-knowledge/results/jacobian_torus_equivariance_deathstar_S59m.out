@@ -1,0 +1,15 @@
+Claim 1 -- weight sets under w(x,y,z) = (1,-1,-2):
+  F1: weights [-2]  homogeneous of weight -2: True
+  F2: weights [-1]  homogeneous of weight -1: True
+  F3: weights [1]  homogeneous of weight 1: True
+
+Claim 2 -- F(lam, -3/(2 lam), 13/(2 lam^2)) as Laurent polynomials in lam:
+  F1 = {-2: Fraction(-1, 4)}  (claim: {-2: -1/4})
+  F2 = {}  (claim: 0)
+  F3 = {}  (claim: 0)
+  orbit-branch law F = (-1/(4 lam^2), 0, 0): True
+
+fixed branch: F(0,0,z) = (z, 0, 0) -- read off (x=y=0 => u=1).
+VERDICT: collision = 1 fixed-branch + 2 orbit-branch points; the fiber
+over every point of the punctured a-axis contains exactly this 1+2
+pattern from these two branches; geometric degree >= 3.
