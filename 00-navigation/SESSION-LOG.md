@@ -35,6 +35,32 @@ Prompt (owner): run the TRAP-stratum test on Druzkowski
 FILES: THM-1320, HYP-8110, THM-1305 + reflection amended (−2 row DECODED), backlog xliii completed +
 xlvi filed, script + out, results INDEX. -> all
 
+## klein-2026-07-19-S325 -- THE SMITH SELECTION RULE (owner: explore the wild conjectures, pull from other agents): P.A. Smith's fixed-point theorem lifts the fleet's entire Jacobian anatomy one level -- etale self-covers of C^n have TRIVIAL deck group (degree 2 IMPOSSIBLE over every C^n) and monodromy with SELF-NORMALIZING point stabilizers; computed table d=2..7: d=3 forces S_3 (the four concurrent S_3 proofs = ONE topological necessity), d=4 allows only A_4/S_4, d=5 allows D_5(!), dihedral iff odd degree, Frobenius always, Galois never -- F occupies the minimal allowed cell of a classification topology fixes in advance
+
+Pulled from the fleet (all landed within hours of each other): death-star THM-1305
+(equivariant normal form; ALL the owner's rationals derived; k-polynomial laws:
+4 = k+1, 2 = k-1 => my {2,3}-smoothness conjecture RETIRED into "degree-d constants
+are {p<=d}-smooth"); kps THM-1310 (fiber geometry closed; Jelonek = the quartic
+{L=0} -- their (Q,L) = my (S,D); design equations; linear part singular for k != 3);
+mac-mini THM-1315 (SURJECTIVITY PROVED -- my S324 conjecture -- + etale + 3:1 +
+caustic + S_3 by syzygy); boxeph-S142 (lifting terminates in UNIQUENESS: THE
+counterexample of its class; S3 universal; -1/4 = c/(2phi_1)). SYNTHESIS: the
+sporadic-vs-families answer at depth -- sporadic within its equivariant class
+(unique kernel), k = 3 forced three ways (my ansatz death, kps linear-part, Smith
+degree >= 3), lawful families only by conjugation/composition/padding. NEW:
+the REALIZATION PROGRAM (which R2-allowed monodromies occur over C^3?) with its
+first datum: F∘F (9:1) mod-p fiber profile = sizes {1..7,9} all present, image
+~0.51 -- the composition monoid escapes the minimal cell; identification of the
+wreath subgroup = named next computation. H6 filed: Jelonek degree as monodromy
+invariant.
+
+Prompt (owner): explore these wild conjectures and pull from other agents to
+formulate and explore more
+
+FILES: T1549, reflection the-smith-selection-rule-klein-S325,
+jacobian_smith_selection_rule_klein_S325.py + frozen out (table + F∘F census). -> all
+
+---
 ## death-star-2026-07-19-S59n — SPORADIC OR FAMILY: the equivariant anatomy answers (THM-1305) — normal form + s-graded det law + cube forced at every k + ALL the owner's rationals DERIVED + RIGIDITY on every computed axis + the k=3 obstruction + W3 refuted + the three-sweep rationals archaeology
 
 Owner: deepest understanding of JC counterexamples (sporadic vs families), explicit examples, comprehensive

@@ -1,0 +1,37 @@
+ d group          |G|                  verdict
+ 2 C2               2 GALOIS(regular)  DEAD (deck size 2)
+ 3 C3               3 GALOIS(regular)  DEAD (deck size 3)
+ 3 S3               6                  ALLOWED
+ 4 C4               4 GALOIS(regular)  DEAD (deck size 4)
+ 4 V4               4 GALOIS(regular)  DEAD (deck size 4)
+ 4 D4               8                  DEAD (deck size 2)
+ 4 A4              12                  ALLOWED
+ 4 S4              24                  ALLOWED
+ 5 C5               5 GALOIS(regular)  DEAD (deck size 5)
+ 5 D5              10                  ALLOWED
+ 5 F20             20                  ALLOWED
+ 5 A5              60                  ALLOWED
+ 5 S5             120                  ALLOWED
+ 6 C6               6 GALOIS(regular)  DEAD (deck size 6)
+ 6 S3reg            6 GALOIS(regular)  DEAD (deck size 6)
+ 6 D6              12                  DEAD (deck size 2)
+ 6 PSL(2,5)        60                  ALLOWED
+ 6 PGL(2,5)       120                  ALLOWED
+ 6 A6             360                  ALLOWED
+ 6 S6             720                  ALLOWED
+ 7 C7               7 GALOIS(regular)  DEAD (deck size 7)
+ 7 D7              14                  ALLOWED
+ 7 F21             21                  ALLOWED
+ 7 F42             42                  ALLOWED
+ 7 PSL(3,2)       168                  ALLOWED
+ 7 A7            2520                  ALLOWED
+ 7 S7            5040                  ALLOWED
+
+R1: degree-2 etale self-covers of C^n DO NOT EXIST (any n).
+R2 verdicts above; d=3 forces S_3 -- the fleet's universal S_3 is topology.
+== F∘F fiber-size profile over F_p^3 (9:1 composition; realization-program datum) ==
+  p | profile {k: count} for k>=1 | image/p^3
+  7 | {1: 115, 2: 15, 3: 36, 4: 6, 5: 9, 7: 3} | 0.5364
+ 11 | {1: 419, 2: 54, 3: 147, 4: 37, 5: 32, 6: 3, 7: 4, 9: 1} | 0.5237
+ 13 | {1: 661, 2: 90, 3: 255, 4: 57, 5: 48, 6: 3, 7: 15} | 0.5139
+S3-wreath-compatible check: which fiber sizes appear? (R2-allowed subgroups of S9 constrain)
