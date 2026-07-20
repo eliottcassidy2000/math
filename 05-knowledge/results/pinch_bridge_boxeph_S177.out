@@ -1,0 +1,18 @@
+ r      |t*| branches (sorted)
+  0.01  ['3.327', '3.425', '3.866']
+  0.05  ['1.404', '2.062', '2.062']
+  0.20  ['0.6489', '1.02', '1.02']
+  1.00  ['0.2548', '0.3679', '0.3679']
+  4.00  ['0.1103', '0.1436', '0.1436']
+ 10.00  ['0.0625', '0.0767', '0.0767']
+ 25.00  ['0.0351', '0.04103', '0.04103']
+ 60.00  ['0.02008', '0.02262', '0.02262']
+
+VERIFY: smallest |t*| DECREASES to 0 as r grows and DIVERGES as r -> 0:
+  min|t*|(r): ['3.327', '1.404', '0.6489', '0.2548', '0.1103', '0.0625', '0.0351', '0.02008'] ; sweep confirmed: True
+
+SCALING (the lock exponent): at large r the 2r*u^2 term dominates:
+  balance u ~ r^{-1/2}-zone: t* ~ u/(2r u^3) ~ r^{...}: fit exponent:
+  d log|t*| / d log r ~ -0.638 (negative => algebraic decay ~ r^kappa, kappa < 0)
+  => THE SWEEP LEMMA holds on the test instance: fold curves cross every
+     modulus; a generic Watson-sector ray meets a first pinch. Bridge engine OK.
