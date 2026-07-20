@@ -1,0 +1,27 @@
+========================================================================================
+n=5: m=6, tilings=64, tournament classes=12 (A000568), even classes=7 (A002854)
+  dual (d=1): 30 edges ; d<=2: 60 ; d<=3: 66 ; complete: 66
+  HS(B) ('meet at an even vertex'): 39 edges
+    HS(B) INCOMPARABLE to d=1  (HS-only: 20, d=1-only: 11)
+    HS(B) SUBSET of d<=2  (HS-only: 0, d<=2-only: 21)
+    HS(B) SUBSET of d<=3  (HS-only: 0, d<=3-only: 27)
+    HS(B) SUBSET of complete  (HS-only: 0, complete-only: 27)
+  pure-2 contacts (map-graph edges absent from the dual): 30
+  4-cycle corner stats over all pure-2 contact instances (183):
+    midpoints share EVEN class: 37/183 ; midpoints share TOURNAMENT class: 52/183
+    endpoints share EVEN class: 36/183
+  EVEN side: dual (d=1) 16 ; HS(B^T) 14 ; complete 21 ; HS==dual: False ; HS==complete: False
+========================================================================================
+n=6: m=10, tilings=1024, tournament classes=56 (A000568), even classes=16 (A002854)
+  dual (d=1): 290 edges ; d<=2: 1072 ; d<=3: 1484 ; complete: 1540
+  HS(B) ('meet at an even vertex'): 1171 edges
+    HS(B) INCOMPARABLE to d=1  (HS-only: 916, d=1-only: 35)
+    HS(B) INCOMPARABLE to d<=2  (HS-only: 257, d<=2-only: 158)
+    HS(B) INCOMPARABLE to d<=3  (HS-only: 15, d<=3-only: 328)
+    HS(B) SUBSET of complete  (HS-only: 0, complete-only: 369)
+  pure-2 contacts (map-graph edges absent from the dual): 782
+  4-cycle corner stats over all pure-2 contact instances (14800):
+    midpoints share EVEN class: 1968/14800 ; midpoints share TOURNAMENT class: 507/14800
+    endpoints share EVEN class: 1910/14800
+  EVEN side: dual (d=1) 90 ; HS(B^T) 101 ; complete 120 ; HS==dual: False ; HS==complete: False
+DONE.
