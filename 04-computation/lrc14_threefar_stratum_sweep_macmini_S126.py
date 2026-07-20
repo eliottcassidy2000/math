@@ -34,8 +34,8 @@ import time
 ONE14 = F(1, 14)
 GAP_HI = F(3, 41)
 
-VMAX_MAIN = 200
-VMAX_DEEP = 600          # duty-rich complements only (≥ 2 endangered duties)
+VMAX_MAIN = 150
+VMAX_DEEP = 400          # duty-trading complements only
 
 
 def rung_sums(smax):
@@ -188,11 +188,16 @@ def run_pass(tasks, label):
             all_res += resistant
             all_surv += [(removed_tup, W) for W in survivors]
             done += 1
+            with open("05-knowledge/results/lrc14_threefar_journal_S126.txt",
+                      "a") as jf:
+                jf.write(f"{label} {removed_tup} stats={stats} "
+                         f"nres={len(resistant)} nsurv={len(survivors)} "
+                         f"surv={survivors}\n")
             if done % 40 == 0:
                 print(f"    [{label}] {done}/{len(tasks)} complements, "
-                      f"{time.time()-t0:6.1f}s, scanned {agg[3]}")
+                      f"{time.time()-t0:6.1f}s, scanned {agg[3]}", flush=True)
     all_res.sort(key=lambda t: -t[0])
-    print(f"  PASS {label}: raw {agg[0]}, duty-pass {agg[1]}, "
+    print(f"  PASS {label}: raw {agg[0]}, duty-pass {agg[1]}, ", flush=True) if False else print(f"  PASS {label}: raw {agg[0]}, duty-pass {agg[1]}, "
           f"rung-pass {agg[2]}, scanned {agg[3]}, "
           f"survivors {len(all_surv)}, {time.time()-t0:.1f}s")
     print("  most exit-resistant:")

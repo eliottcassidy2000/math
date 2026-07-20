@@ -1,0 +1,47 @@
+== (A) HYP-8010: trajectory profiles (observer half-turn c3(t)) ==
+   [question: is c3(t*) high because the whole profile is high?]
+  AP (tight)             M=    1/14 c3(t*+)=112  max c3=112 on measure 0.5929  quantile(c3(t*))=0.4071
+  GW (tight)             M=    1/14 c3(t*+)=112  max c3=112 on measure 0.2177  quantile(c3(t*))=0.7823
+  deep well              M=  14/183 c3(t*+)=112  max c3=112 on measure 0.3467  quantile(c3(t*))=0.6533
+  F3 {1..11,13,36}       M=    3/41 c3(t*+)=112  max c3=112 on measure 0.2630  quantile(c3(t*))=0.7370
+  K2 {1..12,26}          M=    2/27 c3(t*+)=112  max c3=112 on measure 0.3811  quantile(c3(t*))=0.6189
+  {1..12,14}             M=    1/13 c3(t*+)=112  max c3=112 on measure 0.3594  quantile(c3(t*))=0.6406
+  translate {2..14}      M=     1/8 c3(t*+)=112  max c3=112 on measure 0.3594  quantile(c3(t*))=0.6406
+
+== (B) HYP-8015: dyadic descent chains (M(σ^j W)); * = equals 1/⌈14/2^j⌉ ==
+  AP (tight)             chain: 1/14* 1/7* 1/4* 1/2*   descent-ineq OK: True
+  GW (tight)             chain: 1/14* 2/13 2/7 1/2*   descent-ineq OK: True
+  deep well              chain: 14/183 13/92 1/4* 1/2*   descent-ineq OK: True
+  F3 {1..11,13,36}       chain: 3/41 3/19 3/10 1/2*   descent-ineq OK: True
+  K2 {1..12,26}          chain: 2/27 1/7* 1/4* 1/2*   descent-ineq OK: True
+  {1..12,14}             chain: 1/13 1/8 1/4* 1/2*   descent-ineq OK: True
+  translate {2..14}      chain: 1/8 1/8 1/4* 1/2*   descent-ineq OK: True
+  BF38 band              chain: 1/8 2/5 2/5 1/2*   descent-ineq OK: True
+  resistant S125         chain: 9/113 2/11 9/28 1/2*   descent-ineq OK: True
+  powers of 2            chain: 1/3 1/3 1/3 1/3 1/3 1/3 1/3 1/3 1/3 1/3 1/3 1/3 1/2   descent-ineq OK: True
+
+== (C) HYP-8025a: duty rigidity census ==
+  AP (tight)             covered q∈[2,14]:12  load=288          high-duty(7..14) exclusive assignments=1
+  GW (tight)             covered q∈[2,14]:12  load=576          high-duty(7..14) exclusive assignments=1
+  deep well              covered q∈[2,14]:13  load=672          high-duty(7..14) exclusive assignments=0
+  F3 {1..11,13,36}       covered q∈[2,14]:12  load=576          high-duty(7..14) exclusive assignments=1
+  K2 {1..12,26}          covered q∈[2,14]:12  load=336          high-duty(7..14) exclusive assignments=1
+  {1..12,14}             covered q∈[2,14]:12  load=672          high-duty(7..14) exclusive assignments=1
+  translate {2..14}      covered q∈[2,14]:13  load=672          high-duty(7..14) exclusive assignments=1
+  BF38 band              covered q∈[2,14]:12  load=360          high-duty(7..14) exclusive assignments=3
+  resistant S125         covered q∈[2,14]:12  load=768          high-duty(7..14) exclusive assignments=1
+  powers of 2            covered q∈[2,14]: 3  load=1320         high-duty(7..14) exclusive assignments=10
+
+== (C) HYP-8025b: deficit Laplacian Fiedler census ==
+  AP (tight)             deficit-Laplacian lambda2 = 4.428e-02
+  GW (tight)             deficit-Laplacian lambda2 = 2.492e-02
+  deep well              deficit-Laplacian lambda2 = 1.077e-03
+  F3 {1..11,13,36}       deficit-Laplacian lambda2 = 2.402e-02
+  K2 {1..12,26}          deficit-Laplacian lambda2 = 1.605e-02
+  {1..12,14}             deficit-Laplacian lambda2 = 7.885e-02
+  translate {2..14}      deficit-Laplacian lambda2 = 6.205e-02
+  BF38 band              deficit-Laplacian lambda2 = 1.248e-02
+  resistant S125         deficit-Laplacian lambda2 = 6.914e-03
+  powers of 2            deficit-Laplacian lambda2 = 2.363e-02
+
+Done; interpretations to the INDEX entries.

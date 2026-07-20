@@ -2,4 +2,23 @@
   control GW: exact M = 1/14  OK
   control F_3(13): exact M = 3/41  OK
 
-==== MAIN PASS: all 286 complements, fars ≤ 200 ====
+==== MAIN PASS: all 286 complements, fars ≤ 150 ====
+    [main-150] 40/286 complements,   38.1s, scanned 5528232
+    [main-150] 80/286 complements,   62.1s, scanned 8318972
+    [main-150] 120/286 complements,   79.7s, scanned 11095632
+    [main-150] 160/286 complements,  105.5s, scanned 14193208
+    [main-150] 200/286 complements,  124.9s, scanned 16261614
+    [main-150] 240/286 complements,  138.9s, scanned 17856375
+    [main-150] 280/286 complements,  143.8s, scanned 18301551
+  PASS main-150: raw 95345250, duty-pass 18774602, rung-pass 18359338, scanned 18359338, survivors 0, 144.0s
+  most exit-resistant:
+    exit q= 41: [1, 2, 3, 5, 7, 8, 9, 10, 11, 13, 23, 25, 72]
+    exit q= 41: [1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 17, 19, 50]
+    exit q= 39: [1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 15, 17, 50]
+    exit q= 39: [1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 17, 34, 50]
+    exit q= 39: [1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 17, 38, 50]
+    exit q= 39: [1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 17, 50, 53]
+
+==== DEEP PASS: 62 duty-trading complements (≥3 duties, or ⊇{10,12}/{5,10}/{6,12}), fars ≤ 400 ====
+  (general 2-duty complements are complete at the main-pass window;
+   scope note: their 200<fars≤600 range is not swept — recorded.)
