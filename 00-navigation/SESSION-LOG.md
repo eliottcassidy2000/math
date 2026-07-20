@@ -1,3 +1,38 @@
+## death-star-2026-07-19-S59n — SPORADIC OR FAMILY: the equivariant anatomy answers (THM-1305) — normal form + s-graded det law + cube forced at every k + ALL the owner's rationals DERIVED + RIGIDITY on every computed axis + the k=3 obstruction + W3 refuted + the three-sweep rationals archaeology
+
+Owner: deepest understanding of JC counterexamples (sporadic vs families), explicit examples, comprehensive
+back-search of every rational in the expression, bold patterns, wild hypotheses. RESULTS: (1) NORMAL FORM
+(proved, 3 lines): weights (1,−1,−k) force F = (zA + y^kB, yC + x^{k−1}zD, x(E₀−E₁s_k)) — six univariate
+functions; det ∈ Q[t,s_k]; the s-grading c₂/c₁/c₀ hand-derived and engine-verified (k=2: 0, 0, −2). (2)
+THE CUBE IS A THEOREM: c₂ = 0 ⟺ (k+1)AD′ = 2A′D ⟺ A = v^{k+1}, D = δv², EVERY k; the witness's D = A′
+is a k=2-only accident that fooled the first seed. (3) THE RATIONALS DECODE (all exact): Φ = tC + E₀D
+collapses deg-5 → 4t+6 (the det-cancellation makes collision UNAVOIDABLE in-class — Keller maps here are
+almost never injective; Campbell-minimal stratum seen from inside); t* = −3/2; Ψ = E₀A + t²B = (1+t)(2+t),
+Ψ(t*) = −1/4; u(t*) = (4+3t)(t*) = −1/2 (unit crossing); E₀(t*) = 13/2; (t*, s*) = (−3/2, 13/2) = the
+collision's coordinates on the invariant plane. 13 is DERIVED (2 + 9/2), not structural. (4) RIGIDITY =
+SPORADIC: moduli tangent 0 (nullity 9 = equivariant orbit 9); per-row solution spaces = exactly the scalar
+line through the witness. (5) k=3 (predicted fiber 1+3): c₁-space 7-dim but c₀-constancy kills the natural
+slice EXACTLY ((e₁+1)² forced, then √13-vs-√305 conflict); W3 (Φ-linearity universal) REFUTED same session;
+full-system verdict LANDED: k=3 EMPTY on both validated
+instruments (mod-p: zero points at p = 5, 7, sampled 11; complex Keller-forced Newton: 0/80; both k=2
+controls pass, the numeric control literally rediscovering the witness orbit modulo the complex torus) —
+the witness is an ISOLATED SPECIES, sporadic at deformation AND weight-type level. (6) ARCHAEOLOGY (3 parallel sweeps): 13 does NOT bridge
+(shared verb "squaring" only — filed rhyme); the DYADIC constants bridge at mechanism level (THM-466
+v₂-ladder, σ = evens/2 char-2 symbol, x↦2x degeneracy at 14 = 2·7); u = 1+xy hits CONTENT (HYP-1992 formal
+group denominator); (1+t)(2+t) NEW to repo; the TRAP template (polysemous-constants) formalizes the
+collision as an unavoidable unit-crossing. Wild set W1–W5 filed graded (W2: any k=3 point must have
+|det| = 3 — sharp falsifier). MISTAKE-196: two instrument bugs caught by known-witness validation gates
+(y^{k+1} weight arithmetic; the degenerate-attractor hunt whose 0/800 was meaningless) — "a search that
+cannot rediscover the known witness has zero evidential weight for emptiness."
+
+Prompt (owner): since the jacobian conjecture is false, counterexamples to it must be either sporadic or
+families, please spend a long session trying to come to the deepest possible understanding of these, and
+as many explicit examples as you can... for each of the rationals... search back through all our previous
+threads... boldly look for patterns... be free in your thinking and wild in your hypothesis proposal
+
+FILES: THM-1305, HYP-8080, reflection sporadic-or-family, 8 scripts + outs, MISTAKE-196, backlog xli-xlv,
+results INDEX. -> all
+
 ## klein-2026-07-19-S324 -- THE ANATOMY SESSION (owner: long session, deepest understanding of JC counterexamples, sporadic vs families, rational-thread sweep, wild hypotheses licensed): THE MASTER QUARTIC -- every fiber of F is governed by D*W^3 + (b^2-12a)W - 4a = 0 (W = 1+xy, D = 27a^2c^2-18abc+16a+b^3c-b^2, NO W^2 term ever: trace law sum(x_i y_i) = -3 per fiber); disc_W = -4*(dD/dc)^2*D so the Galois twist is sqrt(-D); the collision target IS T_3(W) = 1 AND lies on the S=0 double-root stratum (cubic factors -(W-1)(2W+1)^2, r^3 = 2a/D); fiber spectrum {3 on D!=0, 1 on D=0, NEVER 2} = the C-side of the mod-p N_2 == 0; F conjectured SURJECTIVE; THE MINIMALITY MECHANISM -- degree-2 and Z/3-Galois etale self-covers need fixed-point-free finite-order automorphisms of C^3 (obstructed under linearization, citation to pin) while non-Galois S_3 has trivial deck group and dodges => (degree 3, S_3, sqrt(-D)-twist) is the minimal possible configuration and the k=2 transplant PROVABLY dies (7-param ansatz: only det=0)
 
 Sporadic-vs-families refined: counterexamples breed lawfully (conjugation orbit;

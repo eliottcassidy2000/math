@@ -351,3 +351,19 @@ if not best:
         if key in seenc: continue
         seenc.append(key)
         print("   csol:", [f"{v.real:+.4f}{v.imag:+.4f}i" for v in s])
+
+# ---------------- W3 check: is Phi = tC + E0*D forced linear on the c1-space? ----------------
+print("\n--- W3: Phi = tC + E0*D on the 7-dim c1-solution space (k=3) ---")
+# Phi is BILINEAR in (C, E0-with-D-fixed): D = v^2 fixed => tC + E0*D is LINEAR in lambdas!
+Phi = pa(pm(t2, C2_), pm(E02_, D2_))
+by_deg = {}
+for kk, c in Phi.items():
+    td = kk[0]; lam = kk[1:]
+    assert sum(lam) <= 1
+    by_deg.setdefault(td, {})
+    j = lam.index(1) if sum(lam) else -1
+    by_deg[td][j] = by_deg[td].get(j, 0) + c
+for td in sorted(by_deg):
+    nz = {j: str(c) for j, c in by_deg[td].items() if c}
+    print(f"  t^{td}: {nz if nz else '0'}")
+print("  (W3 = TRUE iff coefficients of t^2 and higher vanish identically in lambda)")
