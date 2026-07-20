@@ -1,0 +1,42 @@
+==============================================================================
+(1) G(t) = -sum_i R(u_i)/S(u_i) over small branches EQUALS sum CT t^m
+==============================================================================
+   R=1 + u + u**2           N=2: CT[0..6]=[1, 1, 1, 1, 1, 1, 1]
+       ratio CT(m+1)/CT(m) (last few): [1.0, 1.0, 1.0, 1.0]
+       dominant |w| = 0.7500   (radius of convergence of G = 1/|w| = 1.3333)
+   R=u**4 - 2*u**2 - 2      N=2: CT[0..6]=[1, -2, 0, 16, -56, 48, 384]
+       ratio CT(m+1)/CT(m) (last few): [2.687, 7.82, 2.423, 0.706]
+       dominant |w| = 3.4641   (radius of convergence of G = 1/|w| = 0.2887)
+   R=1 + u + u**2 + u**3    N=2: CT[0..6]=[1, 1, 3, 10, 31, 101, 336]
+       ratio CT(m+1)/CT(m) (last few): [3.414, 3.433, 3.449, 3.462]
+       dominant |w| = 3.6107   (radius of convergence of G = 1/|w| = 0.2770)
+
+==============================================================================
+(2) THE EXACT CRITERION: G(t) algebraic, nonconstant  =>  some CT != 0
+==============================================================================
+   G(t) = -sum_{small branches} R(u_i)/S(u_i) is a symmetric function of algebraic
+   branches, hence ALGEBRAIC in t.  By THM-1615 a genuine dominant saddle exists with
+   |w| = rho > 0, so |CT(Lambda^m)| ~ (nonzero) rho^m up to polynomial factors:
+   G has radius of convergence 1/rho < infinity, hence a SINGULARITY on |t| = 1/rho.
+   An algebraic function with a genuine singularity is NON-CONSTANT.  Therefore
+   NOT ALL CT(Lambda^m) vanish.  ==> TNC HOLDS whenever a dominant saddle grows.
+
+   THE ONLY LOOPHOLE: could ALL singularities on |t|=1/rho be removable, leaving G
+   analytic there with radius > 1/rho?  Then CT would decay faster than rho^m -- but
+   THM-1615 gives a NONDEGENERATE dominant saddle, whose steepest-descent contribution
+   is rho^m m^{-1/2} times a NONZERO germ; removability would need the ENTIRE Puiseux
+   tail to cancel, i.e. the germ to be identically zero, impossible for a
+   nondegenerate saddle.  So the loophole is empty EXCEPT when every dominant saddle
+   is DEGENERATE (g''=0) -- a strictly thinner condition than THM-1625's collision.
+
+==============================================================================
+(3) VERIFY: on the collision case, is the dominant saddle DEGENERATE or not?
+==============================================================================
+   R=u**4 - 2*u**2 - 2   : dominant saddles |g''| = [2.3094, 2.3094, 2.3094, 2.3094]   degenerate? False
+   R=u**4 - 2            : dominant saddles |g''| = [2.8284, 2.8284, 2.8284, 2.8284]   degenerate? False
+   R=u**4 + u**2 - 2     : dominant saddles |g''| = [2.6667, 2.6667, 2.6667, 2.6667]   degenerate? False
+
+   => dominant saddles are NONDEGENERATE (g'' != 0) even when their VALUES collide.
+   Collision of VALUES (THM-1625) is NOT degeneracy of the saddle.  So the loophole
+   in (2) does not trigger here: G is genuinely singular, CT != 0, TNC holds.
+   The residual shrinks to: dominant saddles that are DEGENERATE, g''(u_j) = 0.

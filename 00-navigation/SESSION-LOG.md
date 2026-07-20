@@ -1,3 +1,45 @@
+## opus-2026-07-20-S418 - The generating function collapses to a branch product: TNC <=> Pi(t) = ct, exactly (THM-1635)
+
+Owner said 'try second-order Vandermonde'. I did -- and it failed numerically (conjugate
+dominant saddles make CT oscillate, no clean power visible). That failure was the signal: the
+right object is the EXACT generating function, not the asymptotic series. It collapses.
+
+**THE COLLAPSE (proved, no asymptotics).** G(t) = sum_m CT(Lambda^m) t^m = -sum_i R(u_i)/S(u_i)
+over the N small branches of u^N - tR(u). Along a branch t = u^N/R(u), so t'(u) =
+-u^{N-1}S(u)/R^2, giving R(u_i)/S(u_i) = -t d(log u_i)/dt. Hence
+    G(t) = -t d/dt log Pi(t),   Pi(t) := product of the small branches.
+
+**THE VIETA CONSTANT (proved).** For M >= 1 the product of ALL M+N roots of u^N - tR(u) is
+(-1)^{M+N} r_0/r_{M+N}, CONSTANT in t (verified -2, -1 on M=2 cases; NON-constant exactly at
+M=0, the extreme-weight case THM-1530(B) already handles). So Pi * Pi_large = const, and
+    **TNC <=> G == 1 <=> Pi(t) = c t <=> t * Pi_large(t) = const.**
+This IS klein's Pi(t) = ct (THM-1550), now with Pi identified as the small-branch product and
+dually as const/Pi_large. Clean rederivation.
+
+**SINGULARITY CONFIRMATION (verified).** G is algebraic with radius 1/rho set by the dominant
+saddle. On EVERY THM-1625 collision case the dominant saddles are NONDEGENERATE (g'' = 2.31,
+2.83, 2.67 != 0) even though their VALUES collide -- so G is genuinely singular at 1/rho, CT
+grows like rho^m, and all collision cases satisfy TNC robustly. **Correction to THM-1625:
+collision of saddle VALUES is NOT degeneracy of the saddle; I had conflated them.** Only true
+g''=0 degeneracy could threaten TNC, and that is a strictly thinner condition.
+
+**THE RESIDUAL, now EXACT-ALGEBRAIC (HYP-8470).** Is there a non-monomial R (R(0) != 0) with
+Pi(t) exactly linear? This single condition subsumes every earlier framing -- prefactor
+cancellation, symmetric-vs-asymmetric collisions, degenerate saddles -- with no asymptotic
+tower and no second-order Vandermonde. And it REDUCES: Pi_large involves only the M large
+branches, governed by the TOP of R (degrees M+N..N), a strictly smaller object. t*Pi_large =
+const is an M-fold resultant whose t-dependence beyond 1/t is the whole obstruction.
+
+**NEXT.** Prove t*Pi_large(t) constant => R monomial via the Newton-polygon factorisation of
+the large branches. That closes TNC at ALL bidegrees at once -- the wholesale finish the
+Dickson ladder cannot give -- hence NC2, hence GMC(2).
+
+**METHOD NOTE.** 'try X' where X fails is still progress if the failure names the right tool.
+The oscillation that broke the fit is exactly the conjugate-saddle structure that the branch
+product handles for free.
+
+**Artifacts:** THM-1635; HYP-8470; 3 scripts + 3 outputs (incl. the failed fit, kept).
+
 ## mac-mini-2026-07-20-S142 -- PRIORITY CORRECTION: THE TORAL NULLCONE CONJECTURE IS A THEOREM, PROVED IN 1998 (Duistermaat-van der Kallen, Thm 2 + Rmk 3). The repo has been re-proving it for months. What survives is the EFFECTIVE question, which IS open -- and our ladder already lands on its bound tightly.
 
 **Owner directive:** "keep focusing on the toral nullcone conjecture."

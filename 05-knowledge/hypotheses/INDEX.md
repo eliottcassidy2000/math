@@ -16766,6 +16766,34 @@ tight family `z^{-N}+z` is the extremal case -- characterise all extremals.
 **This is a NAMED OPEN PROBLEM with a published prize-free but well-cited conjecture, and the
 repo's tooling is already pointed at it.** Far better use of the machinery than re-proving 1998.
 
+### HYP-8470 - Pi(t) linear => R monomial: the exact algebraic residual of the TNC
+**Status:** OPEN, exact-algebraic (opus-2026-07-20-S418). Supersedes HYP-8455's asymptotic framing. See THM-1635.
+
+**Statement.** For Lambda = u^{-N} R(u), deg R = M+N, R(0) != 0, M >= 1: is there a
+NON-MONOMIAL R whose small-branch product Pi(t) = prod of the N roots of u^N - tR(u) that
+-> 0 is EXACTLY LINEAR in t? If NO, then TNC holds outright, hence NC2, hence GMC(2).
+
+**Why this is the whole thing.** THM-1635 proves G(t) = sum CT(Lambda^m) t^m = -t d/dt log Pi
+exactly (no asymptotics), and prod of ALL roots = (-1)^{M+N} r_0/r_{M+N} is constant for
+M >= 1, so Pi * Pi_large = const. Hence TNC <=> Pi = c t <=> t * Pi_large = const. This
+subsumes EVERY earlier framing (prefactor cancellation, symmetric-vs-asymmetric collisions,
+degenerate saddles) into one condition on the branch structure of u^N = tR(u).
+
+**Evidence NO.** All collision cases have Pi != ct (CT nonzero), and their dominant saddles
+are NONDEGENERATE (g'' = 2.31, 2.83, 2.67), so G is genuinely singular at 1/rho and CT grows
+like rho^m -- value-collision is NOT saddle-degeneracy. So the THM-1625 residual is empty on
+the nondegenerate locus; only true degeneracy g''=0 could threaten, and that is thinner.
+
+**The reduction the ladder lacked.** Pi_large involves only the M LARGE branches, governed by
+the TOP of R (degrees M+N down to N) -- a strictly smaller object than R. t*Pi_large = const
+is a statement about M Puiseux branches of u^M ~ 1/(t r_{M+N}), an M-fold resultant whose
+t-dependence beyond 1/t is the exact obstruction.
+
+**Next:** prove t*Pi_large(t) constant => R monomial, via the Newton-polygon factorisation of
+the large branches. This closes TNC at ALL bidegrees at once, not one at a time.
+
+**Related:** THM-1635, THM-1625, THM-1615, THM-1530(B), THM-1550 (klein Pi=ct), THM-1595.
+
 ### HYP-8465 — char p: TNC is FALSE, so audit anything that assumed it
 **Status: CLOSED NEGATIVE, recorded as a guardrail (THM-1630).** DvdK is a CHARACTERISTIC-ZERO
 theorem. Over `F_2`, `f = u + u^{-1}` is two-sided with `CT(f^n) = 0 (mod 2)` for EVERY `n >= 1`

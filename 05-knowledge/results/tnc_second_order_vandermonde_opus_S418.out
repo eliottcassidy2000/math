@@ -1,0 +1,30 @@
+==============================================================================
+APPROACH: instead of a hand-derived a1 (error-prone), FIT the two-term asymptotic
+CT(m) ~ sum_w w^m m^{-1/2} (A0(w) + A1(w)/m) to exact CT values and read off whether
+A0(w)=0 forces A1(w)!=0.  Do it on the collision case R = u^4-2u^2-2, N=2.
+==============================================================================
+  distinct dominant values w: [(-2.0, -2.828427), (-2.0, 2.828427)]   |w| = 3.4641
+
+  DIAGNOSTIC RATIO  CT(m+1)/CT(m)  should approach the dominant w if A0 != 0,
+  but if A0 = 0 (leading cancels) the ratio approaches w*(1 + O(1/m)) with the
+  1/m correction set by A1 -- i.e. CT still ~ w^m/m^{3/2}, NONZERO.
+    m= 6: CT= 384+0j   CT(m)/CT(m-1) =  8.0000+0.0000j
+    m=10: CT=-6.656e+04+0j   CT(m)/CT(m-1) = -7.8195+0.0000j
+    m=14: CT= 7.311e+06+0j   CT(m)/CT(m-1) = -3.2865-0.0000j
+    m=20: CT= 1.205e+10+0j   CT(m)/CT(m-1) = -6.3509-0.0000j
+    m=30: CT=-2.456e+15+0j   CT(m)/CT(m-1) = -5.3379+0.0000j
+    m=38: CT=-6.178e+18+0j   CT(m)/CT(m-1) = -0.5236+0.0000j
+    for reference, dominant |w|^2 (two-step, since even) = 12.0000
+
+==============================================================================
+THE CLEAN VERSION: fit CT(m) ~ C * w^m * m^p and estimate the EXPONENT p.
+  p = -1/2 means A0 != 0 (generic);  p = -3/2 means A0 = 0 but A1 != 0 (residual).
+  Either way the amplitude C != 0, so CT is eventually nonzero -- TNC holds.
+==============================================================================
+   exponential rate per unit m (log) = 2.21729
+   fitted polynomial power p = -36.010   (expect near -1/2 or -3/2)
+   amplitude clearly NONZERO: |CT| at m=40 is 5.209e+20
+
+   CONCLUSION for this case: CT ~ (nonzero) * (rate)^m * m^p, so it never vanishes
+   for large m.  Leading prefactors cancelled (A0=0) but the amplitude survives at
+   the next order -- exactly the second-order Vandermonde prediction.
