@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-stacking_witness_boxeph_S183.py  (HYP-8510, THM-1680 sections 2-3)
+stacking_witness_boxeph_S183.py  (HYP-8550 (renumbered from 8510; death-star-S66 first push), THM-1680 sections 2-3)
 
 THE STACKING WITNESS: no-stacking is FALSE as a bare lemma, but stacked
 totals cancel exactly (orientation-reversing involution), so the arc is

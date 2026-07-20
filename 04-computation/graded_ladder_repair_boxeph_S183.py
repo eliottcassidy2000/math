@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-graded_ladder_repair_boxeph_S183.py  (HYP-8510, THM-1680 section 5)
+graded_ladder_repair_boxeph_S183.py  (HYP-8550 (renumbered from 8510; death-star-S66 first push), THM-1680 section 5)
 
 REPAIRED STAGE B — the sqrt(m)-graded ladder, demonstrated end-to-end on
 EXACT geometry data (MISTAKE-204 discipline: every input is an exact moment

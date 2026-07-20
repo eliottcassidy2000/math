@@ -39,3 +39,4 @@ REPAIRED STAGE B on exact circular-pair moments of P_b = Z + b + W
       k= 640   R_k*sqrt(pi k) = 0.999805
 
 DONE.
+note: HYP-8510 renumbered to HYP-8550 post-freeze (death-star-S66 first push); results unchanged

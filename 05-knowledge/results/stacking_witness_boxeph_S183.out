@@ -76,3 +76,4 @@ STACKING WITNESS  Lambda = (w u - a + b w/u)^2 + s^2, a=(0.7+0.3j) b=(0.25+0.1j)
   REINFORCES; (3f): the conjugate/reality stack's B against 2Re(rho).
 
 DONE.
+note: HYP-8510 renumbered to HYP-8550 post-freeze (death-star-S66 first push); results unchanged

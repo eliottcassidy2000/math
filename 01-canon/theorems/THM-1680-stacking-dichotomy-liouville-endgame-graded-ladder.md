@@ -4,7 +4,7 @@
 agreement on every measured law) + PROVED at working grade for the algebraic
 identities; REVIEW-GATED for the two flagged analytic lemmas (L1),(L2) of §4.
 Hostile referee to be launched at close per the standing discipline.
-**Author:** boxeph-2026-07-20-S183 (HYP-8510)
+**Author:** boxeph-2026-07-20-S183 (HYP-8550, renumbered from 8510 — death-star-S66 first push)
 **Owner directive:** "prove the no-stacking lemma and the Re beta rigidity,
 repair the ladder."
 **Answer in one line:** no-stacking is FALSE and unnecessary; Re-β rigidity

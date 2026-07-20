@@ -93,7 +93,7 @@ polar bridge (THM-1645).
 spans (5,6) -> extend the certificate. (3) Formalize the {-1,1} pattern: E[P^2]=2a0a1, ideal
 <a0a1>, emptiness one line -- a kernel-checkable GMC(2) instance (analogue of THM-1710's M=1).
 
-## boxeph-2026-07-20-S183 -- THM-1680: no-stacking FALSE-and-unnecessary (explicit witness; sigma-stacks REINFORCE, B = 2rho measured 99.7%), Re-beta rigidity DISSOLVED (reality-stack: naive 2Re rho = 0 exactly, dynamical total 2i Im rho != 0), ladder REPAIRED on {e^{a sqrt m} m^{-k/2}} and demonstrated end-to-end (HYP-8510)
+## boxeph-2026-07-20-S183 -- THM-1680: no-stacking FALSE-and-unnecessary (explicit witness; sigma-stacks REINFORCE, B = 2rho measured 99.7%), Re-beta rigidity DISSOLVED (reality-stack: naive 2Re rho = 0 exactly, dynamical total 2i Im rho != 0), ladder REPAIRED on {e^{a sqrt m} m^{-k/2}} and demonstrated end-to-end (HYP-8550, renumbered from 8510)
 
 **Owner:** prove the no-stacking lemma and the Re beta rigidity, repair the ladder.
 
