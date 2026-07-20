@@ -1,0 +1,20 @@
+== (V1) Jacobian determinant ==
+det J(F) = -2
+CONFIRMED: det == -2 identically (Keller map).
+
+== (V2) the three-point collision ==
+F(0, 0, -1/4) = (-1/4, 0, 0)
+F(1, -3/2, 13/2) = (-1/4, 0, 0)
+F(-1, 3/2, 13/2) = (-1/4, 0, 0)
+CONFIRMED: three distinct points map to (-1/4, 0, 0) -- F is NOT injective.
+
+== (V3) the full fiber over (-1/4, 0, 0) ==
+solve returned 3 solution(s):
+   {x: -1, y: 3/2, z: 13/2}
+   {x: 0, y: 0, z: -1/4}
+   {x: 1, y: -3/2, z: 13/2}
+
+== (V4) generic fiber probe at target (1, 1, 1) ==
+lex Groebner eliminant in z has degree 3 (counts fiber points with multiplicity over C)
+
+VERDICT: Jacobian Conjecture (n=3) REFUTED by this map, modulo the checks above (all exact).
