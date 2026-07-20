@@ -1,0 +1,5 @@
+det J_G = p + 3t^2 (root cover G(t,p) = (p, -t^3-pt): ramified on one parabola)
+Delta pullback = -(p+3t^2)^2 (4p+3t^2)  [exact factorization]
+Euler ledger: chi(preimage) = 3 chi(J) - 2 = 1, realized (two parabolas meeting once)
+census: p=7/11/13 profiles {1:22,2:6,3:5}/{1:56,2:10,3:15}/{1:79,2:12,3:22}, image -> 2/3
+  (nonzero N2 column = the ramification signature; etale F has N2 == 0)
