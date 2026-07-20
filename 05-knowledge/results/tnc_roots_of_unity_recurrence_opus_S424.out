@@ -1,0 +1,22 @@
+(A) POSITIVE-COEFFICIENT STRUCTURE
+   N=2(-2,1,4) m=3: nonzero coeffs [3, 3]  all>0: True
+   N=2(-2,1,4) m=6: nonzero coeffs [15, 60, 15]  all>0: True
+   N=2(-2,-1,2) m=3: nonzero coeffs [3]  all>0: True
+   N=2(-2,-1,2) m=6: nonzero coeffs [15, 20]  all>0: True
+
+(B) THE RECURRENCE at the witness 1+u^3-u^6, N=2
+   CT(m), m=1..21: [0, 0, 0, 0, 0, -30, 0, 0, 126, 0, 0, 1386, 0, 0, -15015, 0, 0, -33150, 0, 0, 1288770]
+   constant-coeff linear recurrence: order >8, coeffs --
+   (characteristic roots = the saddle values w_j; CT(m)=sum c_j w_j^m.)
+   CT(3)=0 is ONE linear condition on the c_j -> cannot force CT(6)=0 (Vandermonde);
+   indeed CT(6)=-30. This is the recurrence form of THM-1625's distinct-value step.
+
+(C) ROOTS OF UNITY: the witness is g=3 symmetric -> mu_3 descent to a binomial
+   gcd of exponents g = 3;  R = S(u^3) with S(v) = 1 + v - v^2
+   S(v) = 1 + v - v^2 is a BINOMIAL-support-plus-one... actually 3 terms; but the
+   mu_3 branch orbits mean saddle VALUES collide in 3s, and the orbit-sum = the
+   reduced instance.  The witness's TNC follows from the reduced instance (THM-1655/1680).
+
+SUMMARY: trinomial TNC completion = positivity (A) forces nonreal phase; recurrence (B)
+gives distinct-value Vandermonde; roots of unity (C) handle symmetric collisions by
+descent; the resultant (THM-1710) handles the rare asymmetric collision.

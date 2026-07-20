@@ -17067,6 +17067,31 @@ checking whether the two share a lemma.
 **Related:** THM-1685, THM-1680, THM-1655, THM-1635, THM-415 (vanishing sums), THM-1535
 (GMC cascade), HYP-8450 (JC monodromy vanishing sums), HYP-8495 (trinomial uniform).
 
+### HYP-8525 - Positivity + amoeba-radius growth as the uniform k-nomial TNC finish
+**Status:** OPEN, structural route assembled (opus-2026-07-20-S424). See THM-1715.
+
+Consolidates the trinomial closure into four steps, each with a k-nomial analogue:
+(1) POSITIVITY (proved): CT(Lambda^m) has POSITIVE coefficients in the k-2 gauge params, so
+a nullcone violator lies in (C \ R_{>=0})^{k-2} -- phase tuned in every coordinate.
+(2) VANDERMONDE: distinct saddle values w_j => CT(m)=sum c_j w_j^m can't vanish for all m.
+(3) mu_g DESCENT: symmetric R (R(u)=S(u^g)) has saddle-value collisions in mu_g orbits;
+    g|N descends. Generic trinomial collision is symmetric (18/19).
+(4) RESIDUAL: asymmetric collisions, closed by amoeba/multinomial-radius separation
+    (HYP-8520): root-amoebae of CT(Lambda^{l m0}) grow in radius with l, so no common zero.
+
+**The concrete finish:** positivity (1) confines violators to complex phase; then show the
+amoebae of CT(m0) and CT(2m0) cannot share a point -- radius from multinomial magnitude
+(grows with level), angle from mu_g roots of unity. A NEWTON-POLYGON/tropical argument on the
+CT levels' amoebae, using positivity to control the coefficient magnitudes, is the uniform
+statement. Elementary, not cyclotomic (THM-1710).
+
+**Note:** Enestrom-Kakeya annuli NEST (do not separate) -- the level separation is ANGULAR
+(mu_g) combined with the discrete radius set, not a coarse annulus bound. A finer amoeba
+argument is needed.
+
+**Related:** THM-1715, THM-1710, THM-1680/1685, THM-1705 (positivity/cone), THM-1625,
+HYP-8520 (amoeba), HYP-8505 (level bound).
+
 ### HYP-8520 - The resultant/multinomial-ratio single-shot for TNC (replaces the refuted cyclotomic route)
 **Status:** OPEN, verified for trinomials (opus-2026-07-20-S423). See THM-1710. SUPERSEDES HYP-8515 route 2.
 

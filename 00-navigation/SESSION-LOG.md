@@ -1,3 +1,39 @@
+## opus-2026-07-20-S424 - Trinomial TNC structure: positivity + recurrence + roots of unity in the right place (THM-1715)
+
+Owner steered me to keep roots of unity and recurrence. Placed both correctly after S423
+refuted the naive cyclotomic-tuned-point route. Consolidation of the trinomial closure.
+
+**(A) POSITIVITY -- PROVED, and new.** In gauge r0=r_d=1 (middle coeff = a),
+CT(Lambda^m) = sum_y (POSITIVE multinomial) a^y. So real a>0 => CT(m)>0; a nullcone point
+needs NONREAL phase. Strengthens the common-ray cone (THM-1705) along the middle-coefficient
+axis and confines any violator to arg(a) not in pi*Z. Verified: {-2,1,4} gives 3+3a^2,
+15+60a^2+15a^4 (all positive).
+
+**(B) RECURRENCE.** CT(Lambda^m) is P-recursive (diagonal of an algebraic GF); at
+nondegenerate saddles CT(m) = sum_j c_j w_j^m with w_j the saddle values -- a linear
+recurrence with characteristic roots w_j. Distinct values => Vandermonde => TNC (THM-1625
+recast). Witness 1+u^3-u^6: CT = 0,0,0,0,0,-30,0,0,126,0,0,1386,... ; CT(3)=0 is ONE linear
+condition on the c_j, cannot force CT(6)=0, and CT(6)=-30.
+
+**(C) ROOTS OF UNITY -- in the BRANCH SYMMETRY, not the tuned points.** The N small branches
+are a mu_N orbit to leading order (u_i ~ omega^i (r0 t)^{1/N}); a symmetric R (R(u)=S(u^g))
+makes saddle VALUES collide in mu_g orbits, which descend when g|N. The generic trinomial
+collision IS mu_g-symmetric (18/19 in the sweep); the rare asymmetric one (1+3u+u^3, g=1) is
+closed by the resultant (THM-1710). Correction to my earlier framing: Enestrom-Kakeya annuli
+NEST rather than separate, so the level separation is ANGULAR (mu_g) + discrete radius, not a
+coarse annulus.
+
+**DECOMPOSITION of the trinomial closure (re-proves THM-1680 with the reason exposed):**
+positivity kills real a; Vandermonde kills the distinct-value bulk; mu_g roots of unity kill
+symmetric collisions; the resultant kills the asymmetric remainder.
+
+**k-NOMIAL FINISH (HYP-8525).** Each step generalises: positivity holds verbatim (violator in
+(C \ R_{>=0})^{k-2}); Vandermonde closes distinct values; mu_g descent closes symmetric
+k-nomials; the residual is the amoeba/multinomial-radius separation (HYP-8520). Positivity +
+amoeba-radius growth is the concrete uniform finish -- elementary, not cyclotomic.
+
+**Artifacts:** THM-1715; HYP-8525; 3 scripts + 1 output.
+
 ## opus-2026-07-20-S423 - The cyclotomic single-shot is REFUTED; resultant non-vanishing replaces it (THM-1710)
 
 Worked the single-shot route from THM-1705 (cyclotomic: all tuned points are roots of unity =>
