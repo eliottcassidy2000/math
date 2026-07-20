@@ -96,7 +96,7 @@ sign-coherent over C PROVED; both-signs OPEN. That is the whole remaining gap.
 
 - POLAR TWO-LAYER: E = Exp-average o theta-CT (Gaussian = Exp x Uniform in polar): GMC(2) = DvdK constant-term layer composed with Laplace-GMC(1) layer.
 - CHARGE-RADIUS LOCK: charge-d pieces carry (2r)^{|d|/2} poly(r) — locked; telescopes need Pochhammer/Gamma weights; N = 3 had an independent Gamma(1/2), N = 2 has none: the structural WHY of GMC(2).
-- ONE-SIDED NULLCONE CONJECTURE: nullcone members are charge-one-sided => GMC(2) by charge counting. Sweep: 112 mixed supports, all hits collapse onto one-sided (0 genuine). Pure-radial: deg-1 empty EXACTLY, deg <= 4 empty (objectives explode).
+- ONE-SIDED NULLCONE CONJECTURE: nullcone members are charge-one-sided => GMC(2) by charge counting. Sweep: 112 mixed supports; 86 hits collapse onto one-sided; 3 non-collapsing m<=5 fits ALL VERIFIED DEAD at higher m (3|m charge lattice; one is W-linear = THM-1525-provably dead): truncation artifacts, conjecture unrefuted. Pure-radial: deg-1 empty EXACTLY, deg <= 4 empty (objectives explode).
 - Handoffs: bounded-charge-span exact elimination; Laplace-GMC(1) as named subproblem; DvdK weighted-diagonal intertwine.
 
 ## opus-2026-07-20-S411 - The charge lattice: GMC(2) proved on the sign-coherent locus, and the rank explains n=4 (THM-1535)
