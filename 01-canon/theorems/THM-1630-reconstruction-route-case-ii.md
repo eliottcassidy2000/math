@@ -50,3 +50,27 @@ This is not term-vs-sum domination: the reconstruction is an EXACT identity,
 the conditions are EXACT vanishings, and the comparison is between finitely
 many arcs separated EXPONENTIALLY — a function-level argument on the jump
 data (which is itself function-level: the jumps are the alien derivatives).
+
+## 6. AMENDMENT (boxeph-S182 addendum — referee back-propagation from
+THM-1635 §6; check frozen at 04-computation/tie_ladder_scale_referee_boxeph_S182r.py)
+
+(a) **§3's (1+o(1)) law needs a dressed constant.** Half-step Puiseux
+corrections t = C r^{-1/2}(1 + u r^{-1/2} + ...) — generic — multiply the
+localization by e^{-u√(2m)}(1 + O(m^{-1/2})). For Re u < 0 the factor GROWS
+like e^{|u|√m}, so the "(1 + o(1))" form is FALSE for that arc as written;
+β_j(∞) must be read as a dressed/scale-graded coefficient. The §4 domination
+SURVIVES unconditionally: e^{O(√m)} never crosses (C_{j0}/C_j)^m.
+
+(b) **§4's "distinct arc moduli" must be read at GERM level with nonzero
+TOTAL jump per germ.** Two distinct root-pairs can collide simultaneously
+along one (r,t) germ (discriminant divisor non-reduced): one germ, TWO
+stacked jumps, and the reconstruction sees only their SUM. The dominant-arc
+step silently assumed one event per germ; per-event fold simplicity does not
+give total ≠ 0. Stacking is REAL on self-conjugate arcs of real families
+(total = 2 Re β). AMENDED STATEMENT: Case II closes for germs of distinct
+moduli EACH CARRYING NONZERO TOTAL JUMP; the closure is conditional on
+(i) an off-axis no-stacking / reduced-discriminant lemma and (ii) Re β ≠ 0
+on self-conjugate germs (the S178 rigidity lemma). Also: the interleaved
+m, m+1 argument for conjugate pairs presumes odd-m conditions are
+nonvacuous — false for parity families (odd moments vanish identically),
+true status unverified for non-parity P.

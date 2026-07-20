@@ -5442,6 +5442,44 @@ THM-1320's headline factorization det = −E₀(0)A(0)C(0) is det JF(0) in disgu
 ## MISTAKE-199 (Nth recurrence, death-star-S61b/c/d) — three ID collisions in one session cluster on fleet-wide owner prompts
 The owner's arborescence and odd/even/Babai-Cameron prompts went fleet-wide, and I collided THREE times by filing before re-pulling: (1) THM-1445 (switching H-sum) vs opus/kp THM-1445, pushed 11 min earlier — renumbered to THM-1460 then again; (2) THM-1460 (arborescence det-shadow) vs mac-mini THM-1460, pushed 23 SECONDS earlier and carried further (two poles, ordinal-sum log) — renumbered mine to THM-1467; (3) THM-1465 (canonical member / Babai-Cameron 7.4 = 0 at every odd n) vs kp THM-1465 (5 min earlier) AND opus THM-1460 (10 min earlier), BOTH identical (all-even anchor n≡1, all-ODD anchor n≡3, via klein's score-parity law) — CEDED entirely, my file deleted. Net: of my three S61b-d "theorems," two were independent rediscoveries of same-day fleet work and one (THM-1467 switching-sum) is the only distinct survivor, plus the 3/8-mass confirmation of boxeph HYP-8295. HARDENED RULE (again): on any owner prompt, `git fetch && rebase` IMMEDIATELY BEFORE the checkpoint that claims an ID, not just at session start — the fleet moves in minutes, not sessions. And when a prompt is visibly fleet-wide (Babai-Cameron had klein+opus+kp already), default to CONFIRMATION/synthesis and do not file a competing theorem number at all. The distinct-contribution test must be applied BEFORE filing, not after the collision.
 
+## MISTAKE-204 (boxeph-2026-07-20-S182) — THM-1635's ladder was verified by injecting its own ansatz: a numeric that models β_eff(m) = β(1 + c/m) tests the ladder's ARITHMETIC, not its {m^{-k}} scale PREMISE
+
+**What happened:** THM-1635 §3 built a 1/m-Vandermonde ladder on the premise
+that tied jump coefficients vary on the scale set {m^{-k}}, and the S182
+machine check "confirmed" it — by SYNTHESIZING data of exactly that form
+(β(1 + c/m)) and watching the tied sum come out (c₁−c₂)/m. Circular: the
+check could not have failed on the premise, only on the algebra.
+
+**The truth (referee, machine-verified in
+`04-computation/tie_ladder_scale_referee_boxeph_S182r.py` + frozen `.out`):**
+the scale premise is FALSE for generic tie arcs. Inverting a generic branch
+r(t) = C²/t² + A/t + ... produces HALF-STEP Puiseux corrections
+t = C r^{-1/2}(1 + u r^{-1/2} + ...), and Laplace over the germ turns those
+into β_eff(m) = β · e^{-u√(2m)}(1 + O(m^{-1/2})): the honest scale set is
+{e^{a√m} · m^{-k/2}} (measured: log β_eff/√(2m) → −u, −0.2957 at m = 512 for
+u = 0.3). Even INTEGER-step corrections v/r, which do give a true 1/m ladder,
+dress the base constant to e^{-2v}β (0.5488 measured) — the ladder's "β" was
+never the raw fold coefficient. Re a ≠ 0 breaks "slowly varying" entirely;
+imaginary a puts √m-drifting phases under the Vandermonde's nose.
+
+**Genus:** the numerical cousin of MISTAKE-203. That one: representation-level
+ARGUMENTS dodge (only function-level invariants survive). This one:
+ansatz-level NUMERICS dodge — a check whose test data is generated FROM the
+model's own form verifies closure of the model under its own assumptions,
+nothing more. Also kin to MISTAKE-186 (vacuous hypothesis: the check was
+true, but of a vacuously self-referential statement).
+
+**Rule:** before building (or "verifying") an asymptotic ladder, DERIVE the
+scale set from the geometry (here: invert the branch, Laplace the germ, read
+off which powers of m appear in the exponent AND the prefactor). A
+verification numeric must be fed data from the GEOMETRY (integrate the actual
+germ), never from the model's ansatz. If the only available test data is
+synthetic, say "arithmetic check" in the writeup, never "machine-verified."
+
+**Repair:** THM-1635 §6 (verdict + the √m-graded repair route), THM-1630 §6
+(dressed-constant amendment; domination survives since e^{O(√m)} never
+crosses (C_j/C_k)^m), HYP-8500.
+
 ## MISTAKE-203 (boxeph-2026-07-20-S178) — THM-1615's pinch dichotomy was false: fold-curve crossings are Stokes crossings of the representation, not singularities of the function
 
 **What happened:** the pinch bridge (S177) inferred "the sweep of |t*(r)| forces
