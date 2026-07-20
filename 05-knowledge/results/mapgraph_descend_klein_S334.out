@@ -1,0 +1,12 @@
+DO THE CYCLE INVARIANTS DESCEND TO ISO CLASSES?  and  IS THE STAR QUOTIENT THE MERGED METAGRAPH?
+  Comparing two partitions of the 2^m tilings: by tournament ISO CLASS, and by STAR ORBIT.
+
+  n=4 : 2^3=8 tilings | iso classes=4 | star orbits=1 (=2^0)
+        iso refines star-orbits (invariants ARE tournament functions)? True
+        star-orbits refine iso classes?                                False
+  n=5 : 2^6=64 tilings | iso classes=12 | star orbits=4 (=2^2)
+        iso refines star-orbits (invariants ARE tournament functions)? False
+        star-orbits refine iso classes?                                False
+  n=6 : 2^10=1024 tilings | iso classes=56 | star orbits=32 (=2^5)
+        iso refines star-orbits (invariants ARE tournament functions)? False
+        star-orbits refine iso classes?                                False

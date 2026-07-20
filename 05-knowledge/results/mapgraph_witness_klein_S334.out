@@ -1,0 +1,15 @@
+WITNESS: an ISO CLASS whose members sit in DIFFERENT star orbits (n=5, tiles [(3, 1), (4, 1), (5, 1), (4, 2), (5, 2), (5, 3)])
+
+  iso class with 5 tilings spread over 4 star orbits:
+     tiling (0, 0, 0, 0, 1, 0) -> star-orbit rep (0, 0, 0, 0, 1, 0)
+     tiling (0, 0, 0, 0, 1, 1) -> star-orbit rep (0, 0, 0, 0, 1, 1)
+     tiling (0, 0, 0, 1, 1, 0) -> star-orbit rep (0, 0, 0, 0, 0, 0)
+     tiling (0, 0, 0, 1, 1, 1) -> star-orbit rep (0, 0, 0, 0, 0, 1)
+
+  iso class with 9 tilings spread over 3 star orbits:
+     tiling (0, 0, 1, 0, 0, 0) -> star-orbit rep (0, 0, 0, 0, 1, 1)
+     tiling (0, 0, 1, 0, 1, 1) -> star-orbit rep (0, 0, 0, 0, 0, 0)
+     tiling (0, 1, 0, 1, 0, 1) -> star-orbit rep (0, 0, 0, 0, 0, 1)
+
+  => two ISOMORPHIC tournaments can lie in different star orbits, so the cycle invariants
+     are NOT constant on iso classes: they are TILING functions, not tournament functions.
