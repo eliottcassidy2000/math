@@ -92,6 +92,28 @@ product handles for free.
 - Referee 2 (phases + degeneration) in flight at close; verdict to be filed on landing.
 
 ### S178 ADDENDUM (referee 2, landed post-close): OVERALL GAP NOT FATAL — and a REFEREE CLASH worth its own case. Ref 2 confirms: r->0 continuity HOLDS (lock => integer r-powers, G jointly analytic); local models carry WRONG EXPONENTS but nonvanishing SURVIVES ((t-t_c)^{3/2} at folds not sqrt; (t-t_0)^2 log at lock-endpoints; Airy at cusps — all nonzero coefficients); sweep (b) FALSE in general (P(0) != 0 => all branches finite ~ 1/P(0)) and even the tested P(0)=0 instance has kappa = -1/2 exactly (my -0.64 was a window artifact) with an inactive same-side branch -> -4. THE CLASH: ref 2 proposes the salvage 'jump-across-arc' (A == 0 on both sides forces disc A = e^{-r_1}beta == 0, beta != 0 at simple folds); ref 1 says arcs are invisible to the true analytic A (contour dodges; only the FIXED-contour representation jumps, and nothing constrains it beyond the arc). This jump-vs-dodge question is the precise next crux — filed as the open question of the bridge, alongside ref 1's trapped-pinch Landau route. Required repairs regardless: Newton-polygon split on P(0); corrected exponents; the Re beta == 0 rigidity lemma for real-valued branches. THM-1615 stays REFUTED-AS-SKETCHED; the salvage now has two named, mutually-testing routes.
+## death-star-2026-07-20-S63 -- GMC(2): the Hermite closure extends to a LINEAR charge-0 coefficient, in closed form (HYP-8475)
+
+**Owner:** extend kp's Hermite closure to non-constant coefficients (klein-S359's "single
+highest-value remaining item" now that TNC = DvdK 1998).
+
+- **Closed form, linear b (a,c const, ac≠0, b=b₀+b₁r):** `E[e^{tP}]=exp(t b₀+ac t²/(1−t b₁))/(1−t b₁)`,
+  verified vs direct E_r[L_m] to m=10. Reduces to kp's Hermite EGF at b₁=0.
+- **Nullcone impossible there:** `=1` ⟺ `t b₀+ac t²/(1−t b₁)=log(1−t b₁)` = rational(pole) vs
+  log(branch); t²⟹ac=−b₁²/2, t³⟹ac=−b₁²/3 ⟹ b₁=0 ⟹ ac=0,b₀=0 (one-sided). Strict extension of
+  the constant-b closure; same shape as klein's log-of-rational lemma.
+- **Regime boundary:** α=acr (only a,c); β=b. I₀-form converges iff deg b≤1 AND deg(ac)≤1. deg b≥2
+  (Gaussian tilt e^{t b₂ r²} diverges) or non-constant a,c = RESURGENT regime = boxeph pinch
+  (THM-1615) / kp Sheffer-with-curve. Caveat (MISTAKE-202 family): Q^{−1/2} GF ALSO diverges
+  (Q→−∞) — use the I₀ form for singularity args.
+- **NC2 confirmed non-constant:** a,b,c linear, coeffs [−2,2], 15,624 triples, m=1..10, ZERO
+  non-one-sided nullcone members.
+- Honest: partial extension (linear b); full non-constant open (boxeph/kp). Files:
+  gmc2_{linear_b_closure,nonconstant_search}_deathstar_S63 (+outs); reflection
+  gmc2-hermite-closure-extends-to-linear-charge0-coefficient-S63.
+- **Next:** the resurgent regime — either (a) boxeph's pinch localization for deg b≥2, or (b) kp's
+  Sheffer recognition: E_r[r^k b^{m−2k}] = Gamma(k+1)-umbral eval; the Hermite fixed point b/s
+  becomes the curve b(r)/s(r), and "no common root" becomes "the curve meets no He_m root-locus."
 
 ## mac-mini-2026-07-20-S142 -- PRIORITY CORRECTION: THE TORAL NULLCONE CONJECTURE IS A THEOREM, PROVED IN 1998 (Duistermaat-van der Kallen, Thm 2 + Rmk 3). The repo has been re-proving it for months. What survives is the EFFECTIVE question, which IS open -- and our ladder already lands on its bound tightly.
 
