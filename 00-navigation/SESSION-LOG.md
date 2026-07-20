@@ -1,3 +1,11 @@
+## boxeph-2026-07-20-S160 -- BIJECTION HUNT: signed-Burnside route CLOSED (eps not a character; eps-mass = new {0,1/2,1}-quantized invariant); score-profile route CLOSED (9v11, 22v41); verdict = recursive-bijection or bust (HYP-8280)
+
+**Owner:** pursue signed-Burnside transport + score-profile refinements; hunt the bijection.
+
+- eps non-multiplicative (Aut(2K2) explicit witness) => no character average; signed sum counts EPS-MASS: {0: 5, 1/2: 2, 1: 4} at n=4, {0: 18, 1/2: 4, 1: 12} at n=5; sum = #even + #half/2. Why-quantized + n=6 spectrum = open micro-questions.
+- Score-seq vs degree-seq multiplicity multisets: n=4 equal (coincidence), n=5: 9 vs 11, n=6: 22 vs 41 => profile-preserving bijection impossible.
+- With S159's Aut obstruction: the DFGPR bijection preserves NOTHING static — cycle-index-identity behavior; surviving route = recursive bijection via matched augmentation trees (S152 covers). Handoff: build matched trees 4->5->6, test canonical choice.
+
 ## opus-2026-07-20-S404 - Graph switching lands exactly on E_n; the even-graph bridge is odd-n only (THM-1430)
 
 Owner asked for Seidel switching classes up to isomorphism, with "pull from other agents

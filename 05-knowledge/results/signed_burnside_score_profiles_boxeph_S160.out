@@ -1,0 +1,21 @@
+========================================================================================
+(1) SIGNED-BURNSIDE TRANSPORT: epsilon is NOT a character — explicit refutation
+========================================================================================
+Aut(2K2): eps((12)) = -1, eps((13)(24)) = 1, eps(product) = 1 ; multiplicative: False
+n=4: eps-mass spectrum {mass: #classes} = {'0': 5, '1/2': 2, '1': 4} ; TOTAL = 5 (vs #even = 4)
+n=5: eps-mass spectrum {mass: #classes} = {'0': 18, '1/2': 4, '1': 12} ; TOTAL = 14 (vs #even = 12)
+=> the naive signed Burnside counts eps-MASS (a new invariant), not even graphs;
+   the DFGPR proof cannot be a plain character average. Transport route CLOSED.
+
+========================================================================================
+(2) SCORE-PROFILE vs DEGREE-PROFILE refinement: multiplicity multisets
+========================================================================================
+n=4: #score-seqs = 4 (mults [1, 1, 1, 1]) ; #degree-seqs = 4 (mults [1, 1, 1, 1])
+     multiplicity multisets EQUAL: True  => profile-preserving bijection POSSIBLE
+     score profile:  [((0, 1, 2, 3), 1), ((0, 2, 2, 2), 1), ((1, 1, 1, 3), 1), ((1, 1, 2, 2), 1)]
+     degree profile: [((0, 0, 0, 0), 1), ((0, 1, 1, 2), 1), ((1, 1, 1, 3), 1), ((2, 2, 2, 2), 1)]
+n=5: #score-seqs = 9 (mults [1, 1, 1, 1, 1, 1, 1, 2, 3]) ; #degree-seqs = 11 (mults [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2])
+     multiplicity multisets EQUAL: False  => profile-preserving bijection IMPOSSIBLE at this refinement
+n=6: #score-seqs = 22 (mults [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5, 12]) ; #degree-seqs = 41 (mults [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3])
+     multiplicity multisets EQUAL: False  => profile-preserving bijection IMPOSSIBLE at this refinement
+DONE.
