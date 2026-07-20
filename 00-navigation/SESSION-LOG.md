@@ -1,3 +1,10 @@
+## boxeph-2026-07-19-S143 -- THE WEIGHT-3 PORT IS EMPTY (HYP-8110): ported master factorization + b-system verified; D/W case analysis kills k = 0,1,2 ⟹ NO kernels in (−1,1,3)→(3,1,−1); BONUS: m=2 kernel in closed form — c = φ₁v₀−φ₀v₁ = −2 (cross-determinant), K = 1/16, E = −1/4; CONJECTURE: kernels only at z-weight 2
+
+- Ported identities verified (master det·w³ = −Jac; b₁ = ΦΨ′−3Φ′Ψ; SQUARE law A = αv², g₂ = γv; b₂) 6/6 random instances; b₂ = D·W + 3γEv′ identity 5/5.
+- EMPTINESS: k=1 (K forced 0, then 2αφ₁v₁² ≠ 0), k=2 (W₁ = 0 ⟹ v₂ = 0), k=0 (Φ const) — all dead ⟹ the class has automorphism-type maps ONLY; the candidate degree-4/ℤ3 covers do not exist; the grid hunt's zeros were theorems.
+- BONUS: D/W calculus back on m=2 solves the kernel in closed form: (v₀,v₁;φ₀,φ₁) = (1,1;6,4); c = cross-det = −2; K = 3αv₁/(4γφ₁) = 1/16; E = c/(2φ₁) = −1/4. The counterexample is four integers deep.
+- CONJECTURE (next: m=4,5, routine now): kernels exist only at z-weight m = 2 — the lone escape hatch.
+- FILES: HYP-8110; jacobian_port_weight3_boxeph_S143.py + .out; reflection.
 ## death-star-2026-07-19-S59n — SPORADIC OR FAMILY: the equivariant anatomy answers (THM-1305) — normal form + s-graded det law + cube forced at every k + ALL the owner's rationals DERIVED + RIGIDITY on every computed axis + the k=3 obstruction + W3 refuted + the three-sweep rationals archaeology
 
 Owner: deepest understanding of JC counterexamples (sporadic vs families), explicit examples, comprehensive
