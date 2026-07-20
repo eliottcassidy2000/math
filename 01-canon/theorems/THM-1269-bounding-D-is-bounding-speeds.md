@@ -10,6 +10,13 @@ scripts: 04-computation/bound_D_opus_S398.py -> 05-knowledge/results/bound_D_opu
 
 # THM-1269 (formerly THM-1245) — what bounding D actually is
 
+> **CF REFINEMENT (opus-S404, THM-1291).** Under the scope hypothesis H (the first
+> integer beating M at t* is itself a speed — automatic for the known near-floor
+> corpus), D = k·δ_m where δ_m is the CF remainder of the active convergent of the
+> maximizer. So "bound D" = "bound k·δ_m over admissible maximizers" — and window
+> fractions share CF [0;13,1,k,…], giving a finite (u*, a)-table per rung
+> (THM-1291 Cor. 2). Ostrowski/three-gap machinery now applies to this file's question.
+
 ## The reduction
 
 At the straddling active pair, vᵢt* = aᵢ + M and vⱼt* = aⱼ − M; eliminating
