@@ -20,6 +20,30 @@ FILES: THM-1292 (full proofs), HYP-7985-UPDATE, script + frozen out
 Prompt (owner): run the shell-collapse census at p ~ 300-500, look for even more instances of two faces of the same underlying concept, mine the history of the repo work for hidden connections we may have missed between the lines of our investigations
 
 ---
+## death-star-2026-07-19-S59j — the per-modulus split reaches the tower: member_4_127_exact is a KERNEL THEOREM — sSup (margin '' [0,1]) = 4/127 for {1..29, 31, 120}, the first kernel-exact TOWER member (91 per-modulus decides, 92 s, memory bounded where the monolith OOM'd)
+
+Owner: split certCheck per modulus and reach 4/127. DONE. certCheck refactored via certCheckS (one
+pair-sum modulus per declaration); l31's 91 distinct moduli ([2..60] ∪ {62} ∪ [121..149] ∪ {151, 240})
+each get their own small decide (worst S=240 ≈ 7.4k kernel ops) — SEPARATE DECLARATIONS are the memory
+fix: the elaborator GCs between them (92 s total build vs 5.6 GB OOM for the monolith). Assembly WITHOUT
+case dispatch — the session's second Lean-engineering lesson: fin_cases on a 91-literal membership burned
+2M heartbeats (Prop-side decidableBAll rebuilds the big list literals per element); the working shape is
+Bool-level: moduli_ok = the 91 facts as one flat anonymous constructor over simp-only'd List.all_cons /
+Bool.and_eq_true (terminator = True, closed by trivial — not rfl), and sums_covered31 = one Bool
+contains-sweep decide + List.contains_iff_mem. AXIOMS: check_4_127 [propext, Quot.sound]; cert_4_127 and
+member_4_127_exact kernel-pure [propext, Classical.choice, Quot.sound]. Floor per-element via
+rung_floor_single at the closed-form witness 55/127. THE PIPELINE TAXONOMY IS NOW COMPLETE: (1) ℤ/Finset
+Decidable = noncomputable-instance trap + stalled kernel decide; (2) monolithic ℕ-checker = elaborator
+memory explosion; (3) Prop-membership dispatch = heartbeat sink; WORKING STACK = per-modulus Bool decides
++ Bool assembly + lazy reflection. Scaling is linear in modulus count: 4/247 (N=61, ~120 moduli, S ≤ 480)
+is immediate with a generator script (lead xxiii). The repo now holds TWO kernel-exact first-gap values —
+3/23 (the original mediant) and 4/127 (the first tower member) — end-to-end machine-checked.
+
+Prompt (owner): split certCheck per modulus and reach 4/127
+
+FILES: LRCEChannelCert.lean (certCheckS refactor + 91 chk lemmas + moduli_ok + sums_covered31 +
+check/cert/member_4_127_exact), THM-1271 §7 addendum, HYP-7990, backlog (xxiii). -> all
+
 ## opus-2026-07-19-S405 -- SIX HIDDEN FACES MINED FROM THE HISTORY (owner: find more "two faces of one concept" between the lines), graded 2 VERIFIED IDENTITIES + 2 PROVED NOTES + 2 RHYMES: (F1) THE GHOST CHANNEL HAS A JUNE TWIN -- definitions.md's forced-cover obstruction (deep well, June 29) and death-star's THM-1258 L1 (July 19) are ONE ARITHMETIC: in both frames (N-1)*a == -1 (mod Q) -- verified exactly at Q = 183 (13*14 == -1, condemned {13k: k<=13}, patch 182 = n(n-1) sits AT the floor), Q = 127 (30*55 == -1, condemned = {30} = the deleted), Q = 59 (18*36 == -1, = {18}) -- covering-min PATCHES the condemned ray, the F-tower DELETES it; (F2) ONE GATE, TWO GENERATIONS -- exact scan k=4..16 shows the GW slack-0 tightness gate is k == 1 (mod 6) (the June mod-3 phrasing over-predicts at k == 4 mod 6: k = 4, 10, 16 all loose; THM-1065/OPEN-Q-108 had the right form) and this is THE SAME CONGRUENCE as death-star's D=3 slack-1 tower gate N == 1 (mod 6): the June sporadic-tightness gate and the July window gate are one congruence class; (F3) boxeph's antipodal spread lemmas = THM-1291 Prop 0 quantified over rotations (certificate side vs maximizer side of one statement, 2-line proof); (F4) THM-379 owner cycles and codex THM-1240 blocker cycles share the out-degree>=1 engine -- the real content is the two different suppliers, which explains WHY the tournament lens returns at every wall; (F5) the 2-ADIC MIRROR STACK (THM-760 dodge, mac-mini-S123 palindrome, witness-component parity, kps-S259's 2-adic floor) -- RHYME flagged, one precise piece proved (t = 1/2^m witness iff no speed == 0 mod 2^m, m <= 3); (F6) spectrum theory = the observer lens conjugated by the antipode (why the S402 translation was frictionless)
 
 Owner prompt: look for even more instances of "two faces of the same underlying concept",

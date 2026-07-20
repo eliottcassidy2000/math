@@ -152,14 +152,16 @@ theorem margin_sSup_eq_of_cert (v : Fin k → ℤ) (hv : ∀ i, 0 < v i)
 
 /-! ## The concrete kernel-exact tower member: M({1..29, 31, 120}) = 4/127 -/
 
-/-- The computable ℕ/List form of the certificate check (kernel-fast:
-Nat arithmetic is GMP-backed in the kernel). -/
+/-- Per-modulus checker (the computable ℕ/List form; kernel-GMP arithmetic):
+all multipliers at ONE modulus `S` are killed. -/
+def certCheckS (l : List ℕ) (D Q S : ℕ) : Bool :=
+  (List.range S).all fun kk =>
+    l.any fun w =>
+      decide ((w * kk) % S * Q ≤ D * S) ||
+      decide ((S - (w * kk) % S) * Q ≤ D * S)
+
 def certCheck (l : List ℕ) (D Q : ℕ) : Bool :=
-  l.all fun vi => l.all fun vj =>
-    (List.range (vi + vj)).all fun kk =>
-      l.any fun w =>
-        decide ((w * kk) % (vi + vj) * Q ≤ D * (vi + vj)) ||
-        decide (((vi + vj) - (w * kk) % (vi + vj)) * Q ≤ D * (vi + vj))
+  l.all fun vi => l.all fun vj => certCheckS l D Q (vi + vj)
 
 /-- **Reflection**: a passing ℕ-checker yields the `Cert` proposition for any
 positive family whose values all appear in the list and vice versa. -/
@@ -183,7 +185,7 @@ theorem cert_of_check (l : List ℕ) (D Q : ℕ)
   have hkklt : kk.toNat < Sn := by
     have hlt : kk < (Sn : ℤ) := by rw [hScast]; exact hkkS
     omega
-  simp only [certCheck, List.all_eq_true, List.any_eq_true] at hchk
+  simp only [certCheck, certCheckS, List.all_eq_true, List.any_eq_true] at hchk
   obtain ⟨w, hwmem, hwkill⟩ :=
     hchk _ (hmem i) _ (hmem j) kk.toNat (List.mem_range.mpr hkklt)
   obtain ⟨lidx, hlidx⟩ := hall w hwmem
@@ -252,6 +254,171 @@ theorem member_3_23_exact :
     convert h using 2 <;> norm_num
   · exact cert_3_23
 
+
+/-! ### The kernel-exact 4/127 TOWER member, via the per-modulus split.
+Each modulus is its own small `decide` (the monolithic checker exceeded a
+7 GB box); an ordered coverage lemma reassembles `certCheck`. -/
+
+/-- The first D=4 tower member as a `Fin 31` family: `{1,…,29, 31, 120}`. -/
+def v31 : Fin 31 → ℤ := fun i =>
+  if (i : ℕ) < 29 then (i : ℕ) + 1 else if (i : ℕ) = 29 then 31 else 120
+
+/-- The value list of the 4/127 member. -/
+def l31 : List ℕ :=
+  [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,31,120]
+
+/-- The 91 distinct pair-sum moduli of `l31`. -/
+def moduli31 : List ℕ := [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 62, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 151, 240]
+
+section PerModulusChecks
+set_option maxRecDepth 4000
+theorem chk127_2 : certCheckS l31 4 127 2 = true := by decide
+theorem chk127_3 : certCheckS l31 4 127 3 = true := by decide
+theorem chk127_4 : certCheckS l31 4 127 4 = true := by decide
+theorem chk127_5 : certCheckS l31 4 127 5 = true := by decide
+theorem chk127_6 : certCheckS l31 4 127 6 = true := by decide
+theorem chk127_7 : certCheckS l31 4 127 7 = true := by decide
+theorem chk127_8 : certCheckS l31 4 127 8 = true := by decide
+theorem chk127_9 : certCheckS l31 4 127 9 = true := by decide
+theorem chk127_10 : certCheckS l31 4 127 10 = true := by decide
+theorem chk127_11 : certCheckS l31 4 127 11 = true := by decide
+theorem chk127_12 : certCheckS l31 4 127 12 = true := by decide
+theorem chk127_13 : certCheckS l31 4 127 13 = true := by decide
+theorem chk127_14 : certCheckS l31 4 127 14 = true := by decide
+theorem chk127_15 : certCheckS l31 4 127 15 = true := by decide
+theorem chk127_16 : certCheckS l31 4 127 16 = true := by decide
+theorem chk127_17 : certCheckS l31 4 127 17 = true := by decide
+theorem chk127_18 : certCheckS l31 4 127 18 = true := by decide
+theorem chk127_19 : certCheckS l31 4 127 19 = true := by decide
+theorem chk127_20 : certCheckS l31 4 127 20 = true := by decide
+theorem chk127_21 : certCheckS l31 4 127 21 = true := by decide
+theorem chk127_22 : certCheckS l31 4 127 22 = true := by decide
+theorem chk127_23 : certCheckS l31 4 127 23 = true := by decide
+theorem chk127_24 : certCheckS l31 4 127 24 = true := by decide
+theorem chk127_25 : certCheckS l31 4 127 25 = true := by decide
+theorem chk127_26 : certCheckS l31 4 127 26 = true := by decide
+theorem chk127_27 : certCheckS l31 4 127 27 = true := by decide
+theorem chk127_28 : certCheckS l31 4 127 28 = true := by decide
+theorem chk127_29 : certCheckS l31 4 127 29 = true := by decide
+theorem chk127_30 : certCheckS l31 4 127 30 = true := by decide
+theorem chk127_31 : certCheckS l31 4 127 31 = true := by decide
+theorem chk127_32 : certCheckS l31 4 127 32 = true := by decide
+theorem chk127_33 : certCheckS l31 4 127 33 = true := by decide
+theorem chk127_34 : certCheckS l31 4 127 34 = true := by decide
+theorem chk127_35 : certCheckS l31 4 127 35 = true := by decide
+theorem chk127_36 : certCheckS l31 4 127 36 = true := by decide
+theorem chk127_37 : certCheckS l31 4 127 37 = true := by decide
+theorem chk127_38 : certCheckS l31 4 127 38 = true := by decide
+theorem chk127_39 : certCheckS l31 4 127 39 = true := by decide
+theorem chk127_40 : certCheckS l31 4 127 40 = true := by decide
+theorem chk127_41 : certCheckS l31 4 127 41 = true := by decide
+theorem chk127_42 : certCheckS l31 4 127 42 = true := by decide
+theorem chk127_43 : certCheckS l31 4 127 43 = true := by decide
+theorem chk127_44 : certCheckS l31 4 127 44 = true := by decide
+theorem chk127_45 : certCheckS l31 4 127 45 = true := by decide
+theorem chk127_46 : certCheckS l31 4 127 46 = true := by decide
+theorem chk127_47 : certCheckS l31 4 127 47 = true := by decide
+theorem chk127_48 : certCheckS l31 4 127 48 = true := by decide
+theorem chk127_49 : certCheckS l31 4 127 49 = true := by decide
+theorem chk127_50 : certCheckS l31 4 127 50 = true := by decide
+theorem chk127_51 : certCheckS l31 4 127 51 = true := by decide
+theorem chk127_52 : certCheckS l31 4 127 52 = true := by decide
+theorem chk127_53 : certCheckS l31 4 127 53 = true := by decide
+theorem chk127_54 : certCheckS l31 4 127 54 = true := by decide
+theorem chk127_55 : certCheckS l31 4 127 55 = true := by decide
+theorem chk127_56 : certCheckS l31 4 127 56 = true := by decide
+theorem chk127_57 : certCheckS l31 4 127 57 = true := by decide
+theorem chk127_58 : certCheckS l31 4 127 58 = true := by decide
+theorem chk127_59 : certCheckS l31 4 127 59 = true := by decide
+theorem chk127_60 : certCheckS l31 4 127 60 = true := by decide
+theorem chk127_62 : certCheckS l31 4 127 62 = true := by decide
+theorem chk127_121 : certCheckS l31 4 127 121 = true := by decide
+theorem chk127_122 : certCheckS l31 4 127 122 = true := by decide
+theorem chk127_123 : certCheckS l31 4 127 123 = true := by decide
+theorem chk127_124 : certCheckS l31 4 127 124 = true := by decide
+theorem chk127_125 : certCheckS l31 4 127 125 = true := by decide
+theorem chk127_126 : certCheckS l31 4 127 126 = true := by decide
+theorem chk127_127 : certCheckS l31 4 127 127 = true := by decide
+theorem chk127_128 : certCheckS l31 4 127 128 = true := by decide
+theorem chk127_129 : certCheckS l31 4 127 129 = true := by decide
+theorem chk127_130 : certCheckS l31 4 127 130 = true := by decide
+theorem chk127_131 : certCheckS l31 4 127 131 = true := by decide
+theorem chk127_132 : certCheckS l31 4 127 132 = true := by decide
+theorem chk127_133 : certCheckS l31 4 127 133 = true := by decide
+theorem chk127_134 : certCheckS l31 4 127 134 = true := by decide
+theorem chk127_135 : certCheckS l31 4 127 135 = true := by decide
+theorem chk127_136 : certCheckS l31 4 127 136 = true := by decide
+theorem chk127_137 : certCheckS l31 4 127 137 = true := by decide
+theorem chk127_138 : certCheckS l31 4 127 138 = true := by decide
+theorem chk127_139 : certCheckS l31 4 127 139 = true := by decide
+theorem chk127_140 : certCheckS l31 4 127 140 = true := by decide
+theorem chk127_141 : certCheckS l31 4 127 141 = true := by decide
+theorem chk127_142 : certCheckS l31 4 127 142 = true := by decide
+theorem chk127_143 : certCheckS l31 4 127 143 = true := by decide
+theorem chk127_144 : certCheckS l31 4 127 144 = true := by decide
+theorem chk127_145 : certCheckS l31 4 127 145 = true := by decide
+theorem chk127_146 : certCheckS l31 4 127 146 = true := by decide
+theorem chk127_147 : certCheckS l31 4 127 147 = true := by decide
+theorem chk127_148 : certCheckS l31 4 127 148 = true := by decide
+theorem chk127_149 : certCheckS l31 4 127 149 = true := by decide
+theorem chk127_151 : certCheckS l31 4 127 151 = true := by decide
+theorem chk127_240 : certCheckS l31 4 127 240 = true := by decide
+end PerModulusChecks
+
+/-- All 91 listed moduli pass (assembled from the per-modulus facts —
+no case dispatch, just the Bool conjunction). -/
+theorem moduli_ok : moduli31.all (certCheckS l31 4 127) = true := by
+  simp only [moduli31, List.all_cons, List.all_nil, Bool.and_eq_true]
+  exact ⟨chk127_2, chk127_3, chk127_4, chk127_5, chk127_6, chk127_7, chk127_8, chk127_9, chk127_10, chk127_11, chk127_12, chk127_13, chk127_14, chk127_15, chk127_16, chk127_17, chk127_18, chk127_19, chk127_20, chk127_21, chk127_22, chk127_23, chk127_24, chk127_25, chk127_26, chk127_27, chk127_28, chk127_29, chk127_30, chk127_31, chk127_32, chk127_33, chk127_34, chk127_35, chk127_36, chk127_37, chk127_38, chk127_39, chk127_40, chk127_41, chk127_42, chk127_43, chk127_44, chk127_45, chk127_46, chk127_47, chk127_48, chk127_49, chk127_50, chk127_51, chk127_52, chk127_53, chk127_54, chk127_55, chk127_56, chk127_57, chk127_58, chk127_59, chk127_60, chk127_62, chk127_121, chk127_122, chk127_123, chk127_124, chk127_125, chk127_126, chk127_127, chk127_128, chk127_129, chk127_130, chk127_131, chk127_132, chk127_133, chk127_134, chk127_135, chk127_136, chk127_137, chk127_138, chk127_139, chk127_140, chk127_141, chk127_142, chk127_143, chk127_144, chk127_145, chk127_146, chk127_147, chk127_148, chk127_149, chk127_151, chk127_240, trivial⟩
+
+theorem chk127_mem : ∀ S ∈ moduli31, certCheckS l31 4 127 S = true := by
+  have h := moduli_ok
+  rw [List.all_eq_true] at h
+  exact h
+
+set_option maxHeartbeats 2000000 in
+/-- Every pair sum of `l31` is a listed modulus (Bool `contains` sweep). -/
+theorem sums_covered31 : ∀ vi ∈ l31, ∀ vj ∈ l31, (vi + vj) ∈ moduli31 := by
+  have h : (l31.all fun vi => l31.all fun vj => moduli31.contains (vi+vj)) = true := by
+    decide
+  simp only [List.all_eq_true] at h
+  intro vi hvi vj hvj
+  exact List.contains_iff_mem.mp (h vi hvi vj hvj)
+
+/-- The full checker passes on the 4/127 member — assembled, not monolithic. -/
+theorem check_4_127 : certCheck l31 4 127 = true := by
+  simp only [certCheck, List.all_eq_true]
+  intro vi hvi vj hvj
+  exact chk127_mem _ (sums_covered31 vi hvi vj hvj)
+
+/-- The e-channel certificate of the 4/127 member. -/
+theorem cert_4_127 : Cert v31 4 127 := by
+  have h := cert_of_check l31 4 127 check_4_127 v31
+    (by decide) (by decide) (by decide)
+  exact_mod_cast h
+
+/-- **The first kernel-exact TOWER member.**
+`sSup (margin v31 '' [0,1]) = 4/127`: the exact loneliness supremum of
+`{1,…,29, 31, 120}` — THM-1285's D=4 gap member — machine-checked end to
+end.  Floor: the closed-form witness `t₀ = 55/127` element-by-element through
+`rung_floor_single`; ceiling: the per-modulus e-channel certificate through
+the formal Pinch chain. -/
+theorem member_4_127_exact :
+    sSup (margin v31 '' Set.Icc (0:ℝ) 1) = (4 : ℝ) / (127 : ℝ) := by
+  have h4 : ((4:ℤ) : ℝ) = (4:ℝ) := by norm_num
+  have h127 : ((127:ℤ) : ℝ) = (127:ℝ) := by norm_num
+  rw [← h4, ← h127]
+  apply margin_sSup_eq_of_cert v31 (by decide) 4 127 (by norm_num) (by norm_num)
+    ((55 : ℝ) / 127) (by constructor <;> norm_num)
+  · intro i m
+    have hband : 4 ≤ (v31 i * 55) % 127 ∧ (v31 i * 55) % 127 ≤ 127 - 4 := by
+      fin_cases i <;> decide
+    have h := RungFloor.rung_floor_single 127 4 (v31 i) 55 (by norm_num) hband m
+    have hc : ((127 : ℤ) : ℝ) = (127 : ℝ) := by norm_num
+    rw [hc] at h
+    convert h using 2 <;> norm_num
+  · exact cert_4_127
+
 end EChannelCert
 end LonelyRunner
 
@@ -261,3 +428,6 @@ end LonelyRunner
 #print axioms LonelyRunner.EChannelCert.check_3_23
 #print axioms LonelyRunner.EChannelCert.cert_3_23
 #print axioms LonelyRunner.EChannelCert.member_3_23_exact
+#print axioms LonelyRunner.EChannelCert.check_4_127
+#print axioms LonelyRunner.EChannelCert.cert_4_127
+#print axioms LonelyRunner.EChannelCert.member_4_127_exact

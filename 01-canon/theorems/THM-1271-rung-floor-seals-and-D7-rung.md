@@ -187,3 +187,18 @@ Scaling note (honest): the 4/127 member's checker (~2.4M kernel ops) exceeded a
 7 GB box during elaborator `decide` (5.6 GB resident, killed); the named scaling
 path is per-modulus splitting of `certCheck` (one small `decide` per pair-sum
 S), which the reflection lemma already supports structurally.
+
+### §7 addendum (S59j): the per-modulus split reaches the tower
+
+`certCheck` refactored through `certCheckS` (one modulus per declaration): the
+l31 family's 91 distinct pair-sum moduli each get their own small `decide`
+(worst S = 240 ≈ 7.4k kernel ops), assembled by a Bool conjunction
+(`moduli_ok`, no case dispatch) and a `contains`-sweep coverage lemma
+(`sums_covered31`) — the elaborator GCs between declarations, so the build
+stays memory-bounded (92 s total) where the monolithic `decide` exceeded 7 GB.
+Result: **`member_4_127_exact` — `sSup (margin v31 '' [0,1]) = 4/127` for
+`{1,…,29, 31, 120}` — the first TOWER member exact by kernel**
+(`check_4_127` axioms: [propext, Quot.sound] only; the exact-value chain
+kernel-pure). The same recipe scales linearly in the modulus count: 4/247
+(N=61, ~120 moduli, S ≤ 480) is within immediate reach; the large members
+(2311+) need the generator script to emit their modulus sections.
