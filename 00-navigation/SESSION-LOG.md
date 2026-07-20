@@ -1,3 +1,16 @@
+## death-star-2026-07-19-S59m-harvest — 4/367 LANDS KERNEL-PURE (fourth ledger member; 96s assembly after the Cov split beat the build-window wall); generator patched natively; 1271 re-emitted Cov-format for a long-window session
+
+The harness reaper killed the detached S59l builds twice; diagnosis: the monolithic sums_covered
+kernel sweep (91×91×271 contains-ops) blows the 10-minute window. FIX (the S59i lesson, applied one
+level up): hoist coverage into 91 per-element decides behind an OPAQUE covOK predicate in a separate
+cached module (no invalidation of the built 367Checks) — Cov module 315s, assembly then 96s.
+member_367_exact: [propext, Classical.choice, Quot.sound] — KERNEL-PURE. Ledger: 3/23, 4/127, 4/247,
+4/367. Generator patched to emit Cov-split natively (247 originals restored after the self-test
+overwrote them — verified files stay verified); 1271 re-emitted in Cov format while its cache is
+empty (631 moduli revalidated, 9.3s). 6/1271 build (hours of decides) FILED for a long-window or
+owner-run session. FILES: LRCEChannelCert367Cov.lean, patched 367 assembly, patched generator,
+re-emitted 1271 pair, lrc_emit_cov367_deathstar_S59m.py, CONSTANTS-INDEX, HYP-8045 status. -> all
+
 ## death-star-2026-07-19-S59m — THE JACOBIAN/DIXMIER SESSION (THM-1300): owner's JC counterexample verified exactly; the EXPLICIT A_3 Dixmier counterexample (18 identities + the module one-liner closing klein's named task); the C* torus anatomy (collision = fixed + doubled orbit, predicting opus's second fiber in closed form); the formal inverse's unbounded paired dyadic ladder
 
 Owner: JC reported false; investigate deeply, connect to the repo + Dixmier; "tournaments and their

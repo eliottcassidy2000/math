@@ -56,7 +56,7 @@ proof status.
 - `1/(49c)` — five-comb survivor floor in every c-slow gap (THM-1198, codex-S76).
 - `4/55` — the canonical D=4 slack-1 target; unique least-denominator fraction in (1/14, 3/41) (THM-1268, formerly opus THM-1240). OPEN; F₄(13) is binder-gate-closed so any realizer is non-single-far (death-star-S59b, backlog vii).
 - `D = M·s` — the determinant identity at the active pair (THM-1261, ex-opus-1245); LRC(14) ⟺ s ≤ 14D (THM-1205).
-- `4/127`, `4/247`, `4/367` — D=4 slack-1 rungs ATTAINED at N = 31, 61, 91 ({1..29,31,120} etc.; binder 7); the D-graded primorial cascade: D=3 gate mod 6, D=4 gate mod 30 (minus mod-7 exception), D=6 opens at N ≡ 1 mod 210 (6/1271 at N=211), D=5 NEVER (death-star THM-1285/1273, HYP-7900).
+- `4/127`, `4/247`, `4/367` — D=4 slack-1 rungs ATTAINED at N = 31, 61, 91 ({1..29,31,120} etc.; binder 7); the D-graded primorial cascade: D=3 gate mod 6, D=4 gate mod 30 (minus mod-7 exception), D=6 opens at N ≡ 1 mod 210 (6/1271 at N=211), D=5 NEVER (death-star THM-1285/1273, HYP-7900). [KERNEL-EXACT member_367_exact, S59m: propext+Classical.choice+Quot.sound; F_4(91), 91 speeds, 271 cached decides + Cov split]
 
 ## Finite-check route (Rosenfeld/S–T architecture)
 

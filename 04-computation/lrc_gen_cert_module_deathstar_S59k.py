@@ -59,6 +59,10 @@ def gen_member_module(fam, D, Q, a, tag, path, extra_note=""):
     chks = "\n".join(
         f"theorem chk{tag}_{S} : certCheckS l{tag} {D} {Q} {S} = true := by decide"
         for S in sums)
+    covs = "\n".join(
+        f"theorem cov{tag}_{i} : covOK{tag} {v} = true := by decide"
+        for i, v in enumerate(fam))
+    cov_facts = ", ".join(f"cov{tag}_{i}" for i in range(n))
     facts = ", ".join(f"chk{tag}_{S}" for S in sums)
     # the Fin-family definition: consecutive prefix then exceptions
     # (general form: nested ite over the index; here we emit a linear ite chain
@@ -106,9 +110,13 @@ def l{tag} : List ℕ := [{fam_str}]
 /-- The {len(sums)} distinct pair-sum moduli. -/
 def moduli{tag} : List ℕ := [{mod_str}]
 
+/-- vi is covered: every pair sum vi + vj is a listed modulus (opaque for assembly). -/
+def covOK{tag} (vi : ℕ) : Bool := l{tag}.all fun vj => moduli{tag}.contains (vi + vj)
+
 section PerModulusChecks{tag}
 set_option maxRecDepth 8000
 {chks}
+{covs}
 end PerModulusChecks{tag}
 
 end EChannelCert
@@ -138,16 +146,18 @@ theorem chk{tag}_mem : ∀ S ∈ moduli{tag}, certCheckS l{tag} {D} {Q} S = true
   rw [List.all_eq_true] at h
   exact h
 
-set_option maxRecDepth 8000 in
-set_option maxHeartbeats {hb_cov} in
-/-- Every pair sum is a listed modulus (Bool contains sweep). -/
+/-- Every pair sum is a listed modulus (flat assembly of cached per-element decides;
+    S59m lesson: the monolithic 91x91x271 kernel sweep blows the build window). -/
 theorem sums_covered{tag} :
     ∀ vi ∈ l{tag}, ∀ vj ∈ l{tag}, (vi + vj) ∈ moduli{tag} := by
-  have h : (l{tag}.all fun vi => l{tag}.all fun vj =>
-      moduli{tag}.contains (vi+vj)) = true := by decide
+  have h : (l{tag}.all covOK{tag}) = true := by
+    simp only [l{tag}, List.all_cons, List.all_nil, Bool.and_eq_true]
+    exact ⟨{cov_facts}, trivial⟩
   simp only [List.all_eq_true] at h
   intro vi hvi vj hvj
-  exact List.contains_iff_mem.mp (h vi hvi vj hvj)
+  have h2 := h vi hvi
+  simp only [covOK{tag}, List.all_eq_true] at h2
+  exact List.contains_iff_mem.mp (h2 vj hvj)
 
 theorem check_{tag} : certCheck l{tag} {D} {Q} = true := by
   simp only [certCheck, List.all_eq_true]

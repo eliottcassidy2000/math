@@ -2,7 +2,7 @@
   TournamentH7.LRCEChannelCert1271 -- GENERATED (HYP-8010).
   Kernel-exact loneliness value  sSup (margin '' [0,1]) = 6/1271  for the
   family {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,211,1260} (211 speeds), witness t0 = 115/1271.
-  F_6(211), the D=6 tower opening (out-of-sample hit #2, THM-1286).
+  F_6(211), the D=6 rung; S59m Cov-split format (assembly stays in-window).
 -/
 import TournamentH7.LRCEChannelCert1271Checks
 
@@ -23,16 +23,18 @@ theorem chk1271_mem : ∀ S ∈ moduli1271, certCheckS l1271 6 1271 S = true := 
   rw [List.all_eq_true] at h
   exact h
 
-set_option maxRecDepth 8000 in
-set_option maxHeartbeats 112371004 in
-/-- Every pair sum is a listed modulus (Bool contains sweep). -/
+/-- Every pair sum is a listed modulus (flat assembly of cached per-element decides;
+    S59m lesson: the monolithic 91x91x271 kernel sweep blows the build window). -/
 theorem sums_covered1271 :
     ∀ vi ∈ l1271, ∀ vj ∈ l1271, (vi + vj) ∈ moduli1271 := by
-  have h : (l1271.all fun vi => l1271.all fun vj =>
-      moduli1271.contains (vi+vj)) = true := by decide
+  have h : (l1271.all covOK1271) = true := by
+    simp only [l1271, List.all_cons, List.all_nil, Bool.and_eq_true]
+    exact ⟨cov1271_0, cov1271_1, cov1271_2, cov1271_3, cov1271_4, cov1271_5, cov1271_6, cov1271_7, cov1271_8, cov1271_9, cov1271_10, cov1271_11, cov1271_12, cov1271_13, cov1271_14, cov1271_15, cov1271_16, cov1271_17, cov1271_18, cov1271_19, cov1271_20, cov1271_21, cov1271_22, cov1271_23, cov1271_24, cov1271_25, cov1271_26, cov1271_27, cov1271_28, cov1271_29, cov1271_30, cov1271_31, cov1271_32, cov1271_33, cov1271_34, cov1271_35, cov1271_36, cov1271_37, cov1271_38, cov1271_39, cov1271_40, cov1271_41, cov1271_42, cov1271_43, cov1271_44, cov1271_45, cov1271_46, cov1271_47, cov1271_48, cov1271_49, cov1271_50, cov1271_51, cov1271_52, cov1271_53, cov1271_54, cov1271_55, cov1271_56, cov1271_57, cov1271_58, cov1271_59, cov1271_60, cov1271_61, cov1271_62, cov1271_63, cov1271_64, cov1271_65, cov1271_66, cov1271_67, cov1271_68, cov1271_69, cov1271_70, cov1271_71, cov1271_72, cov1271_73, cov1271_74, cov1271_75, cov1271_76, cov1271_77, cov1271_78, cov1271_79, cov1271_80, cov1271_81, cov1271_82, cov1271_83, cov1271_84, cov1271_85, cov1271_86, cov1271_87, cov1271_88, cov1271_89, cov1271_90, cov1271_91, cov1271_92, cov1271_93, cov1271_94, cov1271_95, cov1271_96, cov1271_97, cov1271_98, cov1271_99, cov1271_100, cov1271_101, cov1271_102, cov1271_103, cov1271_104, cov1271_105, cov1271_106, cov1271_107, cov1271_108, cov1271_109, cov1271_110, cov1271_111, cov1271_112, cov1271_113, cov1271_114, cov1271_115, cov1271_116, cov1271_117, cov1271_118, cov1271_119, cov1271_120, cov1271_121, cov1271_122, cov1271_123, cov1271_124, cov1271_125, cov1271_126, cov1271_127, cov1271_128, cov1271_129, cov1271_130, cov1271_131, cov1271_132, cov1271_133, cov1271_134, cov1271_135, cov1271_136, cov1271_137, cov1271_138, cov1271_139, cov1271_140, cov1271_141, cov1271_142, cov1271_143, cov1271_144, cov1271_145, cov1271_146, cov1271_147, cov1271_148, cov1271_149, cov1271_150, cov1271_151, cov1271_152, cov1271_153, cov1271_154, cov1271_155, cov1271_156, cov1271_157, cov1271_158, cov1271_159, cov1271_160, cov1271_161, cov1271_162, cov1271_163, cov1271_164, cov1271_165, cov1271_166, cov1271_167, cov1271_168, cov1271_169, cov1271_170, cov1271_171, cov1271_172, cov1271_173, cov1271_174, cov1271_175, cov1271_176, cov1271_177, cov1271_178, cov1271_179, cov1271_180, cov1271_181, cov1271_182, cov1271_183, cov1271_184, cov1271_185, cov1271_186, cov1271_187, cov1271_188, cov1271_189, cov1271_190, cov1271_191, cov1271_192, cov1271_193, cov1271_194, cov1271_195, cov1271_196, cov1271_197, cov1271_198, cov1271_199, cov1271_200, cov1271_201, cov1271_202, cov1271_203, cov1271_204, cov1271_205, cov1271_206, cov1271_207, cov1271_208, cov1271_209, cov1271_210, trivial⟩
   simp only [List.all_eq_true] at h
   intro vi hvi vj hvj
-  exact List.contains_iff_mem.mp (h vi hvi vj hvj)
+  have h2 := h vi hvi
+  simp only [covOK1271, List.all_eq_true] at h2
+  exact List.contains_iff_mem.mp (h2 vj hvj)
 
 theorem check_1271 : certCheck l1271 6 1271 = true := by
   simp only [certCheck, List.all_eq_true]

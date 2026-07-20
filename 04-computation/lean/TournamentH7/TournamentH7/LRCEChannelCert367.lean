@@ -4,7 +4,7 @@
   family {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,91,360} (91 speeds), witness t0 = 53/367.
   F_4(91), THM-1286's third D=4 gate member (discovered S59c).
 -/
-import TournamentH7.LRCEChannelCert367Checks
+import TournamentH7.LRCEChannelCert367Cov
 
 namespace LonelyRunner
 namespace EChannelCert
@@ -23,16 +23,17 @@ theorem chk367_mem : ∀ S ∈ moduli367, certCheckS l367 4 367 S = true := by
   rw [List.all_eq_true] at h
   exact h
 
-set_option maxRecDepth 8000 in
-set_option maxHeartbeats 8976604 in
-/-- Every pair sum is a listed modulus (Bool contains sweep). -/
+/-- Every pair sum is a listed modulus (assembled from cached per-element decides). -/
 theorem sums_covered367 :
     ∀ vi ∈ l367, ∀ vj ∈ l367, (vi + vj) ∈ moduli367 := by
-  have h : (l367.all fun vi => l367.all fun vj =>
-      moduli367.contains (vi+vj)) = true := by decide
+  have h : (l367.all covOK367) = true := by
+    simp only [l367, List.all_cons, List.all_nil, Bool.and_eq_true]
+    exact ⟨cov367_0, cov367_1, cov367_2, cov367_3, cov367_4, cov367_5, cov367_6, cov367_7, cov367_8, cov367_9, cov367_10, cov367_11, cov367_12, cov367_13, cov367_14, cov367_15, cov367_16, cov367_17, cov367_18, cov367_19, cov367_20, cov367_21, cov367_22, cov367_23, cov367_24, cov367_25, cov367_26, cov367_27, cov367_28, cov367_29, cov367_30, cov367_31, cov367_32, cov367_33, cov367_34, cov367_35, cov367_36, cov367_37, cov367_38, cov367_39, cov367_40, cov367_41, cov367_42, cov367_43, cov367_44, cov367_45, cov367_46, cov367_47, cov367_48, cov367_49, cov367_50, cov367_51, cov367_52, cov367_53, cov367_54, cov367_55, cov367_56, cov367_57, cov367_58, cov367_59, cov367_60, cov367_61, cov367_62, cov367_63, cov367_64, cov367_65, cov367_66, cov367_67, cov367_68, cov367_69, cov367_70, cov367_71, cov367_72, cov367_73, cov367_74, cov367_75, cov367_76, cov367_77, cov367_78, cov367_79, cov367_80, cov367_81, cov367_82, cov367_83, cov367_84, cov367_85, cov367_86, cov367_87, cov367_88, cov367_89, cov367_90, trivial⟩
   simp only [List.all_eq_true] at h
   intro vi hvi vj hvj
-  exact List.contains_iff_mem.mp (h vi hvi vj hvj)
+  have h2 := h vi hvi
+  simp only [covOK367, List.all_eq_true] at h2
+  exact List.contains_iff_mem.mp (h2 vj hvj)
 
 theorem check_367 : certCheck l367 4 367 = true := by
   simp only [certCheck, List.all_eq_true]
