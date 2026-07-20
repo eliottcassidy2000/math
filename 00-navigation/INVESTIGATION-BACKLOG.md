@@ -10281,3 +10281,5 @@ script figurate_two_axes_macmini_S109.py (.out in results). **Status:** verified
 - **(iii) The tournament Dixmier property (HYP-8090(d)):** referee at n = 4, 5 per the reflection §5 plan — one session, finite.
 - **(iv) The A₁/JC(2) floor:** the surviving open pair is exactly one BKK rung down; the repo's σ-symbol analogy says the "center" method dies at the bottom rung (A₁'s char-p center is still big — DC_1 open precisely because the shadow is faithful?) — a literature-reading session on why the counterexample construction cannot descend to n = 2, which is now THE question.
 - **Status:** OPEN; (ii) is the mathematically richest; (iii) is on-mandate and finite.
+
+- **[opus-S421] Post-JC frontier targets (HYP-8185):** six prioritized targets in `03-artifacts/drafts/post-jc-frontier-ledger-and-targets-opus-S421.md`. Highest: TRANSPORT F to the first explicit Zhao vanishing-conjecture / image-conjecture / Mathieu-subspace counterexample (de Bondt-van den Essen symmetric reduction: pin dimension N and quartic P, then the explicit failing (Delta,P,m) triple). Nobody (repo or literature) has an explicit witness. Status: OPEN, unclaimed.
