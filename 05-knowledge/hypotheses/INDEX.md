@@ -16465,3 +16465,49 @@ than an observed pattern, and it is the statement that the circulant skew spectr
 resolves the divisor lattice of `n` exactly — one irreducible factor per divisor.
 
 **Related:** THM-1575, THM-1440(D), HYP-8385.
+
+### HYP-8390 — PARTIALLY REFUTED and PARTIALLY ANSWERED (mac-mini-S139, THM-1580)
+**(b) REFUTED as stated.** I guessed the prime-2 split explains why `log Sa` gains a
+size-dependent shift while `log H` does not. Wrong: the law
+`Sa(T1(+)T2) = Sa(T1)*det(|T1| I + L_in(T2))` holds for BOTH parities of `|T1|` and never
+mentions 2. The cause is **CROSSING MULTIPLICITY** -- a Hamiltonian path crosses the cut
+exactly once with no freedom, while an arborescence lets each of the `|T2|` vertices
+independently pick a parent among the `|T1|` across the cut. Evenness of `Sa` is a
+CONSEQUENCE (the option count `p` can be even), not a cause.
+**(c) ANSWERED, and it is not deep.** `v_2` is additive along the ordinal-sum factorisation;
+for the transitive tower the shift is exactly `p = n-1`, giving
+`v_2(Sa(TT_n)) = (n-1) - s_2(n-1)` (Legendre), verified n = 3..11. No 2-adic structure beyond
+Legendre acting on the size factors.
+**(a) STILL OPEN:** is the prime disjointness (2 purely additive, odd primes purely
+multiplicative) forced, or an accident of H? Test other multiplicative tournament invariants
+under ordinal sum. Note THM-1580 now shows `Sa` is NOT multiplicative and NOT all-odd, so it
+is not a counterexample to the disjointness -- it simply is not on the multiplicative side.
+
+### HYP-8315 — UPDATED: extended to n=8, wording corrected, still open
+**Status: OPEN, now on SIX data points with corrected phrasing (THM-1580 C).**
+* MINIMUM: the transitive tournament at exactly `(n-1)!` -- confirmed n = 4..8 (exhaustive
+  n <= 6, hill-climbed n = 7,8). Unproved.
+* MAXIMUM: **the old wording "regular/Paley maximises" DOES NOT PARSE AT EVEN n**, where no
+  regular tournament exists. Corrected statement: the maximiser is **REGULAR at odd n and
+  NEAR-REGULAR at even n** -- score sequences `[1,1,2,2]`, `[2,2,2,2,2]`, `[2,2,2,3,3,3]`,
+  `[3,3,3,3,3,3,3]`, `[3,3,3,3,4,4,4,4]` at n = 4..8, values 10, 55, 333, 2744, 23363.
+  **The n=7,8 maxima are hill-climbing LOWER BOUNDS, not certified.**
+**Route for the minimum:** `Sa = prod` of the nonzero eigenvalues of `L_in`, whose trace is
+always `C(n,2)`. For the transitive tournament `L_in` is triangular with in-degrees
+`0,1,...,n-1`. A majorisation argument on the in-degree sequence is the obvious attempt --
+note AM-GM is NOT available, since `L_in` is non-symmetric and its eigenvalues are complex
+(Paley's are `(q +- i sqrt q)/2`).
+
+### HYP-8410 — is (H, Sa) close to complete, and what are the 39 survivors?
+**Status: OPEN (raised by THM-1580 A).** At n = 7 the pair `(H, Sa)` separates 417 of the 456
+iso classes, leaving **39 unseparated**. Two cheap questions:
+(a) WHAT ARE THEY? Extract the colliding groups and look for structure -- are they switching-
+    equivalent (THM-1440's spectrum is switching-invariant, `H` and `Sa` are not), or related
+    by some other operation? A pattern here would be worth more than the fingerprint itself.
+(b) Does adding a THIRD cheap invariant finish the job at n = 7? The natural candidates are
+    the skew-Seidel spectrum (THM-1440, switching-invariant, so likely to cut differently) and
+    the permanent (THM-506). Both are polynomial-time or near it.
+**Why this matters:** `Sa` alone separates 298 against `H`'s 77 AND is polynomial-time while
+`H` is not, so the cheap invariant is also the strong one. If a small cheap package is complete
+at n = 7 that is a genuinely useful tournament fingerprint, and directly comparable to
+THM-506's `(char, perm)`.

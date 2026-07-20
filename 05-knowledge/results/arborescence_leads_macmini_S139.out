@@ -1,0 +1,86 @@
+==============================================================================
+PART A -- HYP-8320: is sum_r a_r comparable to H, and does the PAIR beat either?
+==============================================================================
+  n  classes  distinct H  distinct Sa  distinct (H,Sa)  Sa refines H?  H refines Sa?
+  4        4           3            4                4           True          False
+  5       12           7           11               12          False          False
+  6       56          19           43               51          False          False
+  7      456          77          298              417          False          False
+  If neither refines the other, the two are INCOMPARABLE and the PAIR is strictly
+  stronger than either -- exactly the shape of THM-506's (char, perm) result.
+
+==============================================================================
+PART B -- HYP-8390b: is the size-shift about the PRIME 2, or about CROSSINGS?
+==============================================================================
+  My S138 framing guessed the prime-2 story explains why log(sum a) gains a
+  size-dependent shift while log H does not.  Testing the alternative:
+
+  H:  in T1 (+) T2 every Hamiltonian path runs through ALL of T1 and then ALL of T2,
+      because nothing in T2 beats anything in T1.  It CROSSES THE CUT EXACTLY ONCE,
+      with NO choice about where.  Hence H(T1(+)T2) = H(T1)H(T2), no interaction.
+  Sa: an out-arborescence rooted in T1 lets EACH of the |T2| vertices choose its
+      parent independently -- from all |T1| vertices across the cut, or from inside
+      T2.  |T2| independent crossings, each with |T1| options.  THAT is where p
+      enters:  Sa(T1(+)T2) = Sa(T1) * det(p I + L_in(T2)),  p = |T1|.
+
+  Prediction if CROSSINGS is right: the shift factor should be p*prod(p+mu) over the
+  NONZERO mu -- i.e. p appears once per crossing-eligible vertex, regardless of parity.
+ |T1|  |T2|      Sa(T)    Sa(T1)*det(pI+L2)    p*prod(p+mu)  p even?
+    2     2          6                    6          6.0000     True
+    2     3         24                   24         24.0000     True
+    2     3         26                   26         26.0000     True
+    3     2         24                   24         12.0000    False
+    3     2         36                   36         12.0000    False
+    3     3        120                  120         60.0000    False
+    3     3        126                  126         63.0000    False
+    3     3        180                  180         60.0000    False
+    3     3        189                  189         63.0000    False
+    4     2        120                  120         20.0000     True
+    4     2        180                  180         20.0000     True
+    4     3        720                  720        120.0000     True
+    4     3        744                  744        124.0000     True
+    4     3       1080                 1080        120.0000     True
+    4     3       1116                 1116        124.0000     True
+  ordinal-sum law holds throughout: True
+  Note the law holds for BOTH parities of p -- the formula never mentions 2.
+  => the size-dependence is CROSSING MULTIPLICITY, not the prime split.  My S138
+     framing had the causation backwards: evenness of Sa is a CONSEQUENCE (p can be
+     even), not the cause.  HYP-8390b's phrasing is REFUTED as stated.
+
+==============================================================================
+PART C -- HYP-8315: the extremals, pushed to n = 8 (where NO regular T exists)
+==============================================================================
+  n  transitive = (n-1)!      MIN found  min = transitive?        MAX found                 max scores
+  4                    6              6               True               10               [1, 1, 2, 2]
+  5                   24             24               True               55            [2, 2, 2, 2, 2]
+  6                  120            120               True              333         [2, 2, 2, 3, 3, 3]
+  7                  720            720               True             2744      [3, 3, 3, 3, 3, 3, 3]
+  8                 5040           5040               True            23363   [3, 3, 3, 3, 4, 4, 4, 4]
+  n <= 6 rows are EXHAUSTIVE; n = 7,8 are hill-climbing (60 restarts) so the MAX is
+  a lower bound, not certified.  The MIN is compared against the transitive value.
+  At EVEN n there is no regular tournament, so 'Paley maximises' does not even parse
+  -- read off what the maximiser's score sequence actually is.
+
+==============================================================================
+PART D -- HYP-8390c: the 2-adic law for sum_r a_r under ordinal sum
+==============================================================================
+  Sa(T1 (+) T2) = Sa(T1) * det(p I + L_in(T2)),  so  v2 is ADDITIVE:
+      v2(Sa(T1(+)T2)) = v2(Sa(T1)) + v2( det(p I + L_in(T2)) ).
+  For the transitive tower TT_n = TT_{n-1} (+) . the shift is exactly p = n-1, so
+      v2(Sa(TT_n)) = v2((n-1)!) = (n-1) - s_2(n-1)   (Legendre).
+
+  n  Sa(TT_n)=(n-1)!   v2   Legendre (n-1)-s2(n-1)    ok
+  3                2    1                        1  True
+  4                6    1                        1  True
+  5               24    3                        3  True
+  6              120    3                        3  True
+  7              720    4                        4  True
+  8             5040    4                        4  True
+  9            40320    7                        7  True
+ 10           362880    7                        7  True
+ 11          3628800    8                        8  True
+
+  And the general law is just additivity of v2 over the ordinal-sum factorisation --
+  no special 2-adic structure beyond Legendre on the size factors.  So HYP-8390c has
+  a clean answer and it is not deep: v2 is additive because Sa is multiplicative
+  ALONG THE TOWER, with the shift supplying the only new 2-content.
