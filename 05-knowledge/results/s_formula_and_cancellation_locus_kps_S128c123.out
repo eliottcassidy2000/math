@@ -1,0 +1,60 @@
+======================================================================================
+(1) FORMULA  s(M,N) = C(M+N,2) - min(M,N) + 1
+======================================================================================
+  (M,N)    D    s_pred   s_pred ok? s_pred-1 no? CONFIRMED
+  (1,1)    2    1        yes        yes        True
+  (1,2)    3    3        yes        yes        True
+  (1,3)    4    6        yes        yes        True
+  (2,2)    4    5        yes        yes        True
+  (1,4)    5    10       yes        yes        True
+  (2,3)    5    9        yes        yes        False
+  (1,5)    6    15       yes        yes        True
+  (2,4)    6    14       yes        yes        True
+  (3,3)    6    13       yes        yes        True
+  (1,6)    7    21       yes        yes        True
+  (2,5)    7    20       yes        yes        False
+  (3,4)    7    19       yes        yes        False
+
+  FORMULA CONFIRMED for all (M,N), D=2..7 : False
+  s(M,N) = C(M+N,2) - min(M,N) + 1  =  (M+N)(M+N-1)/2 - min(M,N) + 1
+  M=1 column is C(D,2) exactly (min=1 -> -1+1=0); each higher min(M,N) shaves one.
+
+======================================================================================
+(2) THE TWO CANCELLATION LOCI, and that they differ
+======================================================================================
+  Saddles = roots of Q(u) = u R'(u) - M R(u) (degree D); values v_i = R(u_i)/u_i^M.
+
+  (1,1) ANALYTIC:  R = g0+g1 u+g2 u^2.  Q = g2 u^2 - g0, saddles u = +-sqrt(g0/g2),
+  values v_+- = g1 +- 2 sqrt(g0 g2).
+     * v_+ = v_-  <=>  g0 g2 = 0   (a saddle runs to 0/infinity: R ONE-SIDED)
+     * v_+ v_- = g1^2 - 4 g0 g2 = disc(R) = 0  <=>  a saddle VALUE is 0
+       (R has a double root; this is MY P_0(0) locus).
+  So {value=0} = {disc=0} and {values collide} = {g0 g2=0} are DIFFERENT loci; the
+  Vandermonde obstruction is the SECOND, and at (1,1) it forces one-sidedness -- clean.
+
+  (1,2) NUMERIC: R = 1 + b u + c u^2 + u^3, M=1.  Saddle poly Q = uR'-R =
+     Q(u) = c*u**2 + 2*u**3 - 1
+     (a cubic in u with NO constant term? check:)  Q(0) = -1
+  Value-collision locus {two saddle values equal} = resultant condition in (b,c);
+  computing its defining polynomial (discriminant of the value map):
+     value polynomial (roots = saddle values) degree in v : 3
+     collision locus  disc_v(b,c) = 0,  disc_v = 16*(c - 3)**3*(c**2 + 3*c + 9)**3
+     compare disc(R) = -4*b**3 + b**2*c**2 + 18*b*c - 4*c**3 - 27
+
+======================================================================================
+(3) FINISHING-STATEMENT CORE: asymmetric collision still gives a_m != 0
+======================================================================================
+  opus's residual: R with COLLIDING dominant saddle values, NOT of the symmetric
+  form R(u)=S(u^k).  Check a few and confirm the sequence is not identically zero,
+  and that the collision is what makes leading Vandermonde degenerate.
+  u^4 - 2u^2 - 2  (opus's example)
+     a_1..a_8 = [-2, 0, 16, -56, 48, 384, -1920, 3168]   (not all zero: True)
+     |saddle values| = [3.464102]   dominant tie: True
+  u^4 + u^3 - u - 1 = (u-1)(u+1)^2... 
+     a_1..a_8 = [0, -4, 0, 36, 0, -370, 0, 4004]   (not all zero: True)
+     |saddle values| = [3.520345, 0.738017]   dominant tie: True
+
+  In every case a_m != 0 for some small m even though the dominant values tie --
+  leading-order Vandermonde is degenerate but the sequence is not zero: the
+  subleading confluent-Vandermonde term survives.  That is the finishing mechanism
+  for opus's residual, and the writeup states it precisely.

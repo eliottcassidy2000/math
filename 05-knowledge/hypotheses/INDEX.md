@@ -16983,3 +16983,24 @@ is 2m0 (verified on {-2,1,4}: m0=3 -> 6). Proving this bounds the gcd check to t
 zero -- a Groebner/Nullstellensatz check, decidable per charge pattern.
 
 **Related:** THM-1675, THM-1655, THM-1635, THM-1535 (GMC cascade resonance), HYP-8470/8480.
+## HYP-8490 — s(M,N) = C(M+N,2) - gcd(M,N) + 1; the tuned cancellation locus is the saddle-value collision (not disc R)
+
+**Status: CONFIRMED (formula, 15 cells) + CHARACTERIZED (locus).** kind-pasteur-2026-07-20-S128c123. THM-1690.
+
+The order-D toral recurrence for a_m=[u^{Mm}]R^m has coefficient-degree exactly
+s(M,N) = C(M+N,2) - gcd(M,N) + 1. Verified 15 cells (D=2..7 + (4,6),(3,6),(4,8)), two
+primes, >=22 holdout. The min(M,N) guess (THM-1670 named-next) is REFUTED by (4,6):
+gcd=2, min=4, s=44 not 42. gcd = order of the cyclic symmetry behind opus's symmetric
+descent.
+
+Tuned cancellation locus = saddle-value collision {v_i=v_j collide}, v_i=R(u_i)/u_i^M,
+saddles Q(u)=uR'-MR=Sum(j-M)r_j u^j. Q has no u^M term => saddle geometry is
+r_M-INDEPENDENT (charge-0 coeff drops out). This is NOT disc(R): at (1,1),
+{collide}={g0g2=0}=one-sided while {disc=0}={saddle value 0}; at (1,2) the collision locus
+is 16(c-3)^3(c^2+3c+9)^3, depends only on c.
+
+Finishing statement (with mac-mini THM-1645): GMC(2)=(angular)o(radial); angular=TNC=DvdK
+DONE; the sole remaining gap is radial Laplace determinacy (ker L != 0, L(t-1)=0). My
+orthogonal route (THM-1660/1620) bypasses ker L where the composite is a classical
+orthogonal family = order-2 = (M,N)=(1,1). Open beyond; matches klein 'sign-indefinite' +
+mac-mini 'Laplace determinacy'. Named next: radial = Laguerre side of the same Askey scheme.

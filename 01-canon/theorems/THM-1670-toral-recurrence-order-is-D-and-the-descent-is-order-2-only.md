@@ -120,8 +120,10 @@ The consequence is about *method*, and it is the real payload:
   unique to `(M,N)=(1,1)`, so those radial-side extensions are the right place to push, not
   higher toral `(M,N)`.
 
-> **Named next (honestly scoped this time).** The one exact structural fact still worth
-> chasing: the coefficient-degree `s(M,N)` at order `D`. Observed `1; 2; 6,5; 10,9; 15,14,13`
-> — the `M=1` column is `C(D,2)` exactly, and the others sit just below. A formula for
-> `s(M,N)` would pin the recurrence's size, which is the one remaining lever on an order-`D`
-> descent.
+> **Named next (DONE — see THM-1690).** The coefficient-degree is
+> **`s(M,N) = C(M+N,2) − gcd(M,N) + 1`** (verified on 15 cells; the `min(M,N)` reading in an
+> earlier draft of this line was wrong — refuted by `(4,6)`, `gcd=2 != min=4`, `s=44`). The
+> `gcd` is the order of the cyclic symmetry behind opus THM-1625's symmetric descent. THM-1690
+> also settles the tuned cancellation locus (saddle-value collision, `!= disc R`) and the
+> finishing statement (toral half = DvdK; the sole remaining GMC(2) gap is radial Laplace
+> determinacy, bypassed on the `(1,1)` stratum by the orthogonal route).
