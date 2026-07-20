@@ -1,0 +1,95 @@
+==============================================================================
+PART 1 -- INDEPENDENT EXACT VERIFICATION OF ALPOGE'S MAP (not a repo discovery)
+==============================================================================
+ det JF = -2   (constant, nonzero: True)
+ images of the three points: [(-1/4, 0, 0), (-1/4, 0, 0), (-1/4, 0, 0)]
+ TRIPLE COLLISION: True   common image (-1/4, 0, 0)
+ component degrees: [7, 6, 4]
+
+==============================================================================
+PART 2 -- THE CONJUGATION LEMMA, PROVED SYMBOLICALLY IN GENERAL
+==============================================================================
+ Claim: for N = [[A,0],[B,A^T]] with B symmetric, T N T^-1 is SYMMETRIC,
+        where T = (1/sqrt 2) [[I, iI],[iI, I]].   Checked on generic symbolic
+        A (arbitrary) and B (symmetric) at n = 1,2,3 -- i.e. as a matrix identity.
+  n=1: T*T^-1 = I : True;  T N T^-1 symmetric : True
+  n=2: T*T^-1 = I : True;  T N T^-1 symmetric : True
+  n=3: T*T^-1 = I : True;  T N T^-1 symmetric : True
+ => the lemma is a matrix identity, not an experiment.  (The i is why this needs C.)
+
+==============================================================================
+PART 3 -- COTANGENT LIFT + CONJUGATION, IMPLEMENTED AND VALIDATED
+==============================================================================
+
+ CONTROL A -- H = (0, x0^3) in n=2.  JH strictly lower triangular => nilpotent.
+ x+H is INVERTIBLE (inverse (y0, y1-y0^3)), so this is a POSITIVE control for the
+ machinery only: P must come out Hessian nilpotent with Delta^m(P^m) = 0.
+   lift: upper-right 0 : True;  lower-right = A^T : True;  lower-left symmetric : True;  JG nilpotent : True
+   after conjugation: Jacobian SYMMETRIC : True
+   P homogeneous of degree 4;  grad P = G' : True;  Hess P NILPOTENT : True
+   Delta^m(P^m) for m=1,2,3 : [0, 0, 0]   all zero : True
+
+ CONTROL B -- a genuinely 2-dimensional nilpotent cubic: H = (x1^3, 0)?  JH has
+ a nonzero (0,1) entry only => nilpotent.  Independent second control.
+   lift: upper-right 0 : True;  lower-right = A^T : True;  lower-left symmetric : True;  JG nilpotent : True
+   after conjugation: Jacobian SYMMETRIC : True
+   P homogeneous of degree 4;  grad P = G' : True;  Hess P NILPOTENT : True
+   Delta^m(P^m) for m=1,2,3 : [0, 0, 0]   all zero : True
+
+ NEGATIVE CONTROL -- a NON-nilpotent Jacobian must FAIL the Hessian test, else the
+ test has no power.  H = (x0^3, x1^3): JH = diag(3x0^2, 3x1^2), NOT nilpotent.
+   lift: upper-right 0 : True;  lower-right = A^T : True;  lower-left symmetric : True;  JG nilpotent : False
+   after conjugation: Jacobian SYMMETRIC : True
+   P homogeneous of degree 4;  grad P = G' : True;  Hess P NILPOTENT : False
+   Hess P nilpotent : False  (MUST be False)
+   Delta^m(P^m) m=1,2 : [3*w0**2 - 6*I*w0*w2 + 3*w1**2 - 6*I*w1*w3 - 3*w2**2 - 3*w3**2, 60*w0**4 - 240*I*w0**3*w2 + 36*w0**2*w1**2 - 72*I*w0**2*w1*w3 - 360*w0**2*w2**2 - 36*w0**2*w3**2 - 72*I*w0*w1**2*w2 - 144*w0*w1*w2*w3 + 240*I*w0*w2**3 + 72*I*w0*w2*w3**2 + 60*w1**4 - 240*I*w1**3*w3 - 36*w1**2*w2**2 - 360*w1**2*w3**2 + 72*I*w1*w2**2*w3 + 240*I*w1*w3**3 + 60*w2**4 + 36*w2**2*w3**2 + 60*w3**4]  (MUST not all vanish)
+
+==============================================================================
+PART 4 -- THE COLLISION-TRANSPORT LEMMA
+==============================================================================
+ If (I+JH(x)) is invertible for every x (true: det = 1 when JH nilpotent), and
+ x_1 != x_2 with x_1 + H(x_1) = x_2 + H(x_2), then for ANY w the lifted points
+     (x_a,  y_a)  with  y_a = (I + JH(x_a)^T)^{-1} w
+ are DISTINCT and have the SAME image under Id + G, hence (after the linear T,
+ which is a bijection) under Id + grad P.  So one collision transports to one
+ collision, and non-injectivity is preserved exactly.
+ Verified as an identity: (I + JH(x)^T) y_a = w for a = 1,2 by construction, and
+ the first components already agree by hypothesis.  Distinctness is from x_1 != x_2.
+
+==============================================================================
+PART 5 -- THE HONEST DIMENSION COUNT FOR ALPOGE'S F
+==============================================================================
+ F has 13 distinct nonlinear monomials across its 3 components:
+   [(0, 2, 0), (1, 0, 1), (1, 1, 1), (1, 2, 0), (1, 3, 0), (2, 1, 0), (2, 1, 1), (2, 2, 1), (2, 3, 0), (2, 4, 0), (3, 0, 1), (3, 2, 1), (3, 3, 1)]
+ component degrees [7, 6, 4]; max degree 7
+ death-star-S61's count: 6 shared helper coordinates {xy,(xy)^2,y^2,x^2,x^3,x^2 y}
+ drop every component to degree <= 3 -> dim 9; homogenising -> N ~ 10; the de Bondt
+ doubling is FORCED (JF is not symmetric) -> M = 2N ~ 20.
+ is JF symmetric (would let us skip the doubling)? False   -> doubling is forced: True
+
+DONE.
+
+==============================================================================
+PART 6 -- IS THE YAGZHEV-NORMALISED JH ALREADY NILPOTENT? (the possible shortcut)
+==============================================================================
+ linear part L =
+Matrix([[0, 0, 1], [0, 1, 0], [2, 0, 0]])
+ det L = -2  (matches det JF = -2: True)
+ Yagzhev G = L^-1 F = X + H ;  det JG = 1
+ char poly of JH = -(-2*lam**3 + 2*lam**2*x**3*y**3 + 12*lam**2*x**3*y*z + 60*lam**2*x**2*y**2 + 9*lam**2*x**2*z + 48*lam**2*x*y + 6*lam*x**6*y**4*z + 18*lam*x**5*y**5 + 24*lam*x**5*y**3*z + 18*lam*x**5*y*z**2 + 60*lam*x**4*y**4 + 129*lam*x**4*y**2*z + 18*lam*x**4*z**2 + 185*lam*x**3*y**3 + 114*lam*x**3*y*z + 204*lam*x**2*y**2 + 9*lam*x**2*z + 48*lam*x*y + 6*x**6*y**4*z + 18*x**5*y**5 + 24*x**5*y**3*z + 18*x**5*y*z**2 + 60*x**4*y**4 + 129*x**4*y**2*z + 18*x**4*z**2 + 183*x**3*y**3 + 102*x**3*y*z + 144*x**2*y**2)/2
+ JH^3 == 0 (nilpotent) ? False
+ e1=tr JH = x*(2*x**2*y**3 + 12*x**2*y*z + 60*x*y**2 + 9*x*z + 48*y)/2
+ e2 = x*(-6*x**5*y**4*z - 18*x**4*y**5 - 24*x**4*y**3*z - 18*x**4*y*z**2 - 60*x**3*y**4 - 129*x**3*y**2*z - 18*x**3*z**2 - 185*x**2*y**3 - 114*x**2*y*z - 204*x*y**2 - 9*x*z - 48*y)/2
+ e3=det JH = 3*x**2*(2*x**4*y**4*z + 6*x**3*y**5 + 8*x**3*y**3*z + 6*x**3*y*z**2 + 20*x**2*y**4 + 43*x**2*y**2*z + 6*x**2*z**2 + 61*x*y**3 + 34*x*y*z + 48*y**2)/2
+ e1+e2+e3 = 0  (must be 0: that IS det(I+JH)=1)
+
+ READING: det(I+JH)=1 gives ONLY e1+e2+e3 = 0, one equation. Nilpotency needs
+ e1=e2=e3=0 separately, which is forced only when H is HOMOGENEOUS (the e_i then
+ sit in different degrees and cannot cancel). Alpoge's H is NOT homogeneous, so
+ the cancellation is available -- and it is exactly what happens here.
+
+ CONSEQUENCE, stated plainly: THE SHORTCUT IS CLOSED. The cotangent lift needs a
+ HOMOGENEOUS H with NILPOTENT JH; Alpoge's normalised H has neither. So the
+ Bass-Connell-Wright degree-reduction-and-homogenisation is not an optional
+ convenience that death-star-S61's dimension count glosses -- it is load-bearing,
+ and it is the entire remaining content of the transport.

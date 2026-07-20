@@ -1,5 +1,5 @@
 ---
-id: THM-1415
+id: THM-1430
 title: "THE TILING / ISO-CLASS / MERGED-METAGRAPH DICTIONARY, EXACTLY — with the mutual-computation tricks audited for what actually pays. (1) The fibration is complete at all three levels, with a one-line double-count proving the global checksum Σ_c H(c)/|Aut(c)| = 2^{C(n−1,2)}. (2) THE HAM-PATH TRICK: fibre(c) ↔ HamPaths(T_c)/Aut(T_c), so every fibre is enumerable from ONE representative and the 2^m cube never has to be touched. (3) TILINGS ARE THE SWITCHING CLASSES: the tiling cube is arc space modulo cut(K_n), the base path is a spanning-tree transversal, and every switching class contains exactly 2^{n−1} tournaments — a base-path-INDEPENDENT description of the tiling set. (4) THE BASE-PATH-INDEPENDENT SUBGROUP IS DEAD IN BOTH DIRECTIONS: ∩_P Γ_P = 0 and ⟨∪_P Γ_P⟩ = the whole arc space, at n = 4,5,6,7 — so there is neither a common star transformation nor a common star invariant, and kind-pasteur's proposed repair cannot exist. (5) THE d=1 WIGGLY QUOTIENT IS EXACTLY G_n (5/30/290 edges at n=4/5/6), because of the AVOIDABLE-ARC LEMMA: whenever every Hamiltonian path of T uses arc a, flipping a is a self-loop (verified n ≤ 7, zero counterexamples). (6) TRICK AUDIT: the Aut-orbit refinement decays 33%→7% across n=4..7 and is asymptotically worthless because almost all tournaments are rigid; the class-BFS is the trick that pays."
 status: >
   MIXED, stated per part.
@@ -34,7 +34,25 @@ related:
 script: 04-computation/tiling_class_dictionary_klein_S336.py (+ .out)
 ---
 
-# THM-1415 — the dictionary, and which tricks pay
+
+> ## ⚠ RENUMBERED THM-1415 → THM-1430, and §3 has prior art (klein-2026-07-20-S337)
+>
+> **Numbering.** kind-pasteur's `THM-1415-switching-is-the-canonical-star-quotient.md` was
+> first-pushed at 08:10:13, mine at 08:17:01 — they hold the number by seven minutes. Following
+> the convention mac-mini used in the same situation (renumber your own, never someone else's),
+> this file moves to **THM-1430**. References written before 08:17 that say "klein THM-1415"
+> mean this file.
+>
+> **Prior art on §3.** kind-pasteur's THM-1415 is *switching is the canonical star quotient* —
+> the same identification as my §3 ("tilings are the switching classes"), reached independently
+> and pushed first, and carried further there (switching-up-to-iso counts 1, 2, 2, 6 at
+> n = 3..6, the refutation of the A002854 guess, and the `S_n`-submodule next step). **§3 below
+> is a convergent rediscovery and the credit is theirs.** What remains distinctively this
+> file's: §2 (the Ham-path fibre enumeration and its cost accounting), §4 (∩Γ_P = 0 *and* the
+> join = everything — both directions), §5 (the `d=1` wiggly quotient = `G_n`, and the
+> avoidable-arc lemma), and §6 (the trick audit, including the decaying Aut-orbit negative).
+
+# THM-1430 — the dictionary, and which tricks pay
 
 ## 0. What is mine and what is not
 
