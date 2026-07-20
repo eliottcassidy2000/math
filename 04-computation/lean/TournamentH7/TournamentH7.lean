@@ -717,3 +717,5 @@ import TournamentH7.LRCCenteredTailReturnOrTerminal  -- codex-S82 / THM-1274: pr
 import TournamentH7.LRCTerminalEndpointTransferGcdTax  -- codex-S82 / THM-1283: the terminal endpoint exports a proper exterior carrier-owner seam; survivor subtraction yields exact centered-error/residue and gcd taxes, including the sharp-row exclusion. No sorry/native_decide
 import TournamentH7.LRCAPCentering  -- boxeph-S118 / THM-1171 companion: kernel-pure centered-band arithmetic for the twelve-term AP witness. Together with the elementary modular inverse/common-phase proof, closes AP-internal tight rigidity; AP extraction from an arbitrary tight twelve-set remains open. Standard axiom trio
 import TournamentH7.LRCMod23Spread
+
+import TournamentH7.GMC2HermiteNoCommonRoot  -- kind-pasteur-S128c120 / THM-1585+THM-1605: consecutive Hermite polynomials share no root, so no point kills every He_m. This is the ALGEBRAIC replacement for klein-S351 false Gamma-domination step; closes the sign-mixed branch of the {-1,0,1} M=1 stratum. No sorry/native_decide

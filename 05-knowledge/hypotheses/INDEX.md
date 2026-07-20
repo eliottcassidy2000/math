@@ -16655,3 +16655,27 @@ variable. Numerically `|L(p^m)|/(Dm)!` is `O(1)`, i.e. Gevrey-D in `t` = Gevrey-
 that is an OBSERVATION, not a proof.
 **Note this is strictly a REDUCTION**: HYP-8350 now sits on a standard Borel-summability
 theorem rather than on a bespoke saddle estimate. Cite it as a reduction, not a proof.
+## HYP-8425 — the Gamma average is a classical polynomial sequence, not a dominated sum
+
+**Status: CONFIRMED (constant-coefficient {-1,0,1} M=1 stratum) / REFUTES HYP-8400's mechanism.**
+kind-pasteur-2026-07-20-S128c120. THM-1585, THM-1605, CASE-gamma-bridge-domination-step.
+
+*Refuted part.* klein-S351's domination ("E_r[psi_m] = sum c_k k! is dominated by its top
+term, ratio c_{D-1}/(c_D D) -> 0") is FALSE. Measured exactly to m = 20: the ratio grows
+LINEARLY (to 45x), the top term's share falls to 0.04%. Validated only on b = 0, where
+psi_m is a monomial and the test is vacuous. Reason: the top coefficient is the universal
+bounded sequence C(2k,k)/(2k) while the radial average is unbounded in B.
+
+*Confirmed part.* m*E_r[psi_m] = s^m * He_m(b/s) with s = sqrt(-2ac) -- a HERMITE
+polynomial. The nullcone condition therefore demands a COMMON ROOT of every He_m, and
+consecutive Hermite polynomials share none. One-sided conjecture proved on this stratum.
+mac-mini-S140/THM-1600's degree-1 layer is the same shape with truncated exponentials, and
+closes the same way. Both formalized sorry-free in GMC2HermiteNoCommonRoot.lean.
+
+*Why it matters as a failure mode:* domination is an ANALYTIC strategy for an ALGEBRAIC
+fact. That is why the top-term share could collapse to 0.04% while the conclusion stayed
+true -- the conclusion never depended on the top term. When a nonvanishing proof needs an
+estimate, first check whether the sum is a classical polynomial in disguise.
+
+*Open:* non-constant a(r), b(r), c(r) -- E_r[W^k B^{m-2k}] is no longer a product. Target:
+a two-variable Appell/Sheffer family with the fixed point replaced by a curve.

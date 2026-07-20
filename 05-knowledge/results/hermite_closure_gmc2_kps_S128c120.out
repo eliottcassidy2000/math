@@ -1,0 +1,51 @@
+========================================================================================
+STEP 1 CHECK -- Lagrange-Buermann closed form vs the log-series computation
+========================================================================================
+  (a,b,c) = (1, 1, 1)       psi_m agrees for m = 1..16 : True
+  (a,b,c) = (1, 0, 1)       psi_m agrees for m = 1..16 : True
+  (a,b,c) = (1, 3, 1)       psi_m agrees for m = 1..16 : True
+  (a,b,c) = (1, 1, -1)      psi_m agrees for m = 1..16 : True
+  (a,b,c) = (2, 5, -3)      psi_m agrees for m = 1..16 : True
+  (a,b,c) = (1, -2, 4)      psi_m agrees for m = 1..16 : True
+  ALL AGREE: True  -> psi_m = (1/m)[u^m] phi(u)^m confirmed exactly.
+
+========================================================================================
+STEP 2 CHECK -- m * E_r[psi_m] = T_m(b, w) with w = ac, and T_m(b,-1/2) = He_m(b)
+========================================================================================
+  (a,b,c) = (1, 1, 1)      w = 1     m*E_r[psi_m] == T_m(b,w) for m = 2,5,8,11 : True
+  (a,b,c) = (1, 3, 1)      w = 1     m*E_r[psi_m] == T_m(b,w) for m = 2,5,8,11 : True
+  (a,b,c) = (1, 1, -1)     w = -1    m*E_r[psi_m] == T_m(b,w) for m = 2,5,8,11 : True
+  (a,b,c) = (2, 5, -3)     w = -6    m*E_r[psi_m] == T_m(b,w) for m = 2,5,8,11 : True
+  (a,b,c) = (1, -2, 4)     w = 4     m*E_r[psi_m] == T_m(b,w) for m = 2,5,8,11 : True
+  (a,b,c) = (1, 0, 1)      w = 1     m*E_r[psi_m] == T_m(b,w) for m = 2,5,8,11 : True
+  ALL AGREE: True
+
+     b = 1       T_m(b,-1/2) == He_m(b) for m = 1..8 : True
+     b = 3       T_m(b,-1/2) == He_m(b) for m = 1..8 : True
+     b = -2      T_m(b,-1/2) == He_m(b) for m = 1..8 : True
+     b = 1/2     T_m(b,-1/2) == He_m(b) for m = 1..8 : True
+
+========================================================================================
+STEP 3 CHECK -- consecutive Hermite polynomials share no root (the closure)
+========================================================================================
+  m = 2    min |root(He_m) - root(He_{m+1})| = 0.732051
+  m = 3    min |root(He_m) - root(He_{m+1})| = 0.602363
+  m = 4    min |root(He_m) - root(He_{m+1})| = 0.522556
+  m = 5    min |root(He_m) - root(He_{m+1})| = 0.467287
+  m = 6    min |root(He_m) - root(He_{m+1})| = 0.426182
+  m = 7    min |root(He_m) - root(He_{m+1})| = 0.394107
+  m = 8    min |root(He_m) - root(He_{m+1})| = 0.368199
+  m = 9    min |root(He_m) - root(He_{m+1})| = 0.346717
+  m = 10   min |root(He_m) - root(He_{m+1})| = 0.328538
+  m = 11   min |root(He_m) - root(He_{m+1})| = 0.312900
+
+========================================================================================
+CONSEQUENCE -- the one-sided conjecture on this stratum (a, b, c CONSTANT)
+========================================================================================
+  (a,b,c) with ac != 0 tested                  : 252
+  cases with NO nonzero E_r[psi_m] for m <= 24 : 0 
+  largest 'first nonzero m' encountered        : 2
+
+  So on the constant-coefficient {-1,0,1} stratum at M = 1, the nullcone contains
+  ONLY the one-sided P (ac = 0).  No asymptotics, no domination, no ESV saddle:
+  the answer is a Hermite polynomial, and orthogonality does the work.

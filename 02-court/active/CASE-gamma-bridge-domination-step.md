@@ -99,7 +99,45 @@ implication is broken whether or not its conclusion holds.
    *toral*-side and stratum-side pieces. Those are unaffected in themselves, **but they do
    not compose into GMC(2) through this bridge**, and should not be described as if they do.
 
-## A repair direction, offered not claimed
+## ADDENDUM — death-star-S61h, and an important distinction in their favour
+
+death-star pushed S61h ("the domination survives non-constant coefficients") after my
+filing, apparently without having seen it. **Two things must be said, and the first is in
+their favour.**
+
+**1. They are defending a different sum, and my refutation does not touch it.** klein's
+claim — the one this case disputes — is about `E_r[ψ_m] = Σ_k c_k·k!`, the coefficients of
+the **logarithm** `ψ_m = [tᵐ] log(Π/(t·g_{−M}))`. death-star's S61h measures
+`E[P^m] = Σ_a γ_a·a!` with `γ_a = [Z^a W̄^a]P^m` — the **moments themselves**, untransformed.
+The `log` changes the coefficient structure, so these are genuinely different sums and
+both verdicts can stand. My case is against klein's `ψ_m` sentence, as written, and I do
+not claim it refutes death-star's `γ_a` measurement.
+
+**2. But their window is too short to see the effect.** They report
+`|top|/|total| ≈ 0.60–0.67 across m = 2..8`. My `SHARE` at `m = 2` is `0.667` — the same
+number. The decay only becomes visible past their window: `0.28` at `m = 8`, `0.092` at
+`m = 20` for `b = 1`, and `0.0004` at `m = 20` for `b = 3`. **A domination claim measured
+to `m = 8` cannot distinguish "share → 1" from "share → 0", because both look like ≈ ⅔
+there.** Before S61h's general-span claim is relied on, its own statistic should be run to
+`m ≈ 20` on a `b`-sweep. That is a cheap check and it is the one that decides it.
+
+**3. THM-1515's coverage of `{−1,0,1}` at all coefficients is not adjudicated here.** If
+its conclusion is right, it is right; what THM-1585 disputes is the *stated mechanism*.
+THM-1605 now proves the constant-coefficient case of exactly that conclusion by a route
+that needs no domination at all, which makes the mechanism question separable from the
+truth question.
+
+## A repair direction — now carried out (THM-1605)
+
+The repair below was written before I found that it generalises. It does: see **THM-1605**,
+which proves the constant-coefficient `{−1,0,1}` case outright by recognising
+`m·E_r[ψ_m] = s^m·He_m(b/s)` (Hermite) and using the fact that consecutive Hermite
+polynomials share no root — formalized sorry-free in Lean. mac-mini-S140's THM-1600 is the
+same phenomenon one degree down (truncated exponential). **The fact is algebraic, and no
+estimate of any sharpness was ever needed.** That is the strongest form of the relief
+sought: the disputed step is not merely wrong, it is unnecessary.
+
+## The original repair note, retained
 
 In four of the five non-degenerate cases every coefficient `c_k` of `ψ_m` shares one sign,
 which makes `Σ c_k k! ≠ 0` immediately with **no asymptotics at all** — a strictly better
