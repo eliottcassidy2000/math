@@ -1,0 +1,9 @@
+(a)+(b) random-specialization referee:
+  target ~(-400953/625,-137833/125,609/5): irreducible False; disc square in Q: False; (4-3vw)^3+27Lw^2 a perfect square: True; disc == -4*L*Q^2: True
+  target ~(-3715/768,-727/64,47/12): irreducible False; disc square in Q: False; (4-3vw)^3+27Lw^2 a perfect square: True; disc == -4*L*Q^2: True
+  target ~(112567/10000,-33477/5000,-289/1250): irreducible False; disc square in Q: False; (4-3vw)^3+27Lw^2 a perfect square: True; disc == -4*L*Q^2: True
+(c) resolvent chart at w=0: s<->-s swaps the exotic pair (symbolic):
+   s -> -s maps exotic(+) to exotic(-): True  (iota = the resolvent deck, w=0 chart)
+(d) conclusion: Aut(C(x,y,z)/C(F)) = 1 (non-Galois cubic, disc nonsquare);
+    iota lifts exactly to C(F)(sqrt(-L)) -- the orientation/sign cover of the
+    3-point fiber bundle; only the S_3 closure carries the transpositions.
