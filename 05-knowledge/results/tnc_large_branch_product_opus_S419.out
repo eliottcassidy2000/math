@@ -1,0 +1,40 @@
+==============================================================================
+(0) FIX THE CONSTANT: recompute G(0) and the exact relation G = -t (log Pi)'
+==============================================================================
+  G(t) = sum_{m>=0} CT(Lambda^m) t^m, and CT(Lambda^0) = [u^0] R^0 = 1, so G(0) = 1.
+  Pi(t) ~ (small branches) with u_i ~ (r_0 t)^{1/N} zeta_i, product ~ t * (prod zeta_i)
+  * r_0^{... }.  So Pi(t) = c t (1 + O(t^{1/N})) generically; TNC demands the CORRECTION
+  vanishes: Pi(t) = c t EXACTLY.  Check G = -t(log Pi)' on the extreme-weight PROVEN case
+  R = 1 + u (N=1, M=0 -- wait M=0 is the proven side): there Pi(t) = the single small root
+  of u - t(1+u) = 0 => u = t/(1-t).  Pi(t) = t/(1-t).
+    R=1+u, N=1: Pi(t) = t/(1-t);  -t (log Pi)' = 1/(t - 1)
+    sum CT t^m = t**7 + t**6 + t**5 + t**4 + t**3 + t**2 + t + 1  (CT = [1, 1, 1, 1, 1, 1, 1, 1])
+    series of -t(log Pi)': -t**7 - t**6 - t**5 - t**4 - t**3 - t**2 - t - 1
+    MATCH: False
+    -> identity G = -t(log Pi)' CONFIRMED.  And Pi = t/(1-t) is NOT c*t, so this R is
+       NOT in the nullcone -- correct, 1+u has CT = 1 != 0.
+
+==============================================================================
+(1) THE RESCALED PICTURE: Pi(t) = c t  <=>  Pi_v(s) constant,  Phi(v,s) = v^N - R(s v)
+==============================================================================
+  s = t^{1/N}; bounded roots v_i = u_i/s.  Pi_v(s) = prod bounded roots of v^N - R(sv).
+  At s=0: v^N - R(0) = v^N - r_0, product of roots = (-1)^N(-r_0) = (-1)^{N-1} r_0.
+  R=1+u+u**2         N=2: Phi(v,s)=v^N - R(sv);  Pi_v(0)=-1  (=(-1)^N(-r_0))
+  R=u**4-2*u**2-2    N=2: Phi(v,s)=v^N - R(sv);  Pi_v(0)=2  (=(-1)^N(-r_0))
+  R=2+u              N=1: Phi(v,s)=v^N - R(sv);  Pi_v(0)=2  (=(-1)^N(-r_0))
+  R=3+u+u**5         N=1: Phi(v,s)=v^N - R(sv);  Pi_v(0)=3  (=(-1)^N(-r_0))
+
+==============================================================================
+(2) THE CLAIM TO PROVE: d/ds Pi_v(s) at s>0 -- when is it identically 0?
+==============================================================================
+  Pi_v(s) = (-1)^N * [product of bounded roots] = (-1)^N * (v-independent part).
+  For a monic-in-v^N picture: Phi = v^N - sum_k r_k s^k v^k.  The bounded-root product
+  is the resultant-type ratio; compute Pi_v(s) exactly for SMALL M and read off constancy.
+  R=2+u            (N=1,M=0): product of ALL v-roots = -2/(s - 1)
+       d/ds of that = 2/(s - 1)**2   (large roots ~ 1/s^? carry the s-dependence)
+  R=2+u+u**2       (N=1,M=1): product of ALL v-roots = 2/s**2
+       d/ds of that = -4/s**3   (large roots ~ 1/s^? carry the s-dependence)
+  R=1+u+u**2       (N=2,M=0): product of ALL v-roots = 1/(s**2 - 1)
+       d/ds of that = -2*s/(s**2 - 1)**2   (large roots ~ 1/s^? carry the s-dependence)
+  R=1+u**3         (N=2,M=1): product of ALL v-roots = -1/s**3
+       d/ds of that = 3/s**4   (large roots ~ 1/s^? carry the s-dependence)

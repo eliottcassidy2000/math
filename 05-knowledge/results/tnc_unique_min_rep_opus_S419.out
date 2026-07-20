@@ -1,0 +1,24 @@
+SUFFICIENT CONDITION: if 0 has a UNIQUE minimal representation as a sum of charges,
+then CT(m0) is a single nonzero product => Lambda is NOT a nullcone element => TNC.
+
+   R                       N   charges         m0   #minimal-reps   CT(m0)   TNC-forced?
+   2+3*u**2                 1   [-1, 1]          2      1            12       True
+   2+3*u**4                 2   [-2, 2]          2      1            12       True
+   1+u**3+u**4              2   [-2, 1, 2]       2      1            2        True
+   1+u+u**4                 2   [-2, -1, 2]      2      1            2        True
+   1+u**3+u**5              2   [-2, 1, 3]       3      1            3        True
+   1+u**4+u**5              3   [-3, 1, 2]       3      1            6        True
+   1+u**2+u**5              3   [-3, -1, 2]      3      1            3        True
+   1+u+u**2+u**3+u**4       2   [-2, -1, 0, 1, 2] 1      1            1        True
+   1+u**2+u**3+u**5         3   [-3, -1, 0, 2]   1      1            1        True
+
+  => whenever #minimal-reps = 1, CT(m0) != 0 and TNC is FORCED (no all-order argument
+     needed).  This closes: ALL BINOMIALS, and every R with a unique minimal 0-rep.
+
+THE RESIDUAL is exactly #minimal-reps >= 2 with the reps CANCELLING.  Search for a
+trinomial where the minimal representation is NON-UNIQUE (so cancellation is POSSIBLE):
+   u**6 + u**3 + 1  N=2: charges [-2, 1, 4], m0=3, #reps=2, CT(m0)=6
+   u**8 + u**4 + 1  N=3: charges [-3, 1, 5], m0=4, #reps=2, CT(m0)=16
+   trinomials with non-unique minimal rep found: 2
+   -> these are the ONLY place cancellation can even start; with unit coeffs CT!=0,
+      but TUNED coefficients could zero CT(m0). That tuning = the collision locus.

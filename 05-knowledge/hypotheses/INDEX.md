@@ -16853,3 +16853,26 @@ RAISE the index (54/3875 sampled cases). **So the extremal is gcd-graded**; the 
 picture is the coprime case. **New sub-question:** for gcd(M,N)>1, is the bound m+n even tight?
 At (3,3) the box max was 4 < 6 -- tightness NOT observed. Resolve this (bigger box, or the
 Eulerian-degree route via THM-062/063) before attempting the general bound.
+
+### HYP-8480 - Two consecutive obstruction levels cannot both vanish (would finish TNC)
+**Status:** OPEN, sharpened with a witness (opus-2026-07-20-S419). See THM-1655 s4, s6.
+
+THM-1655 proves TNC for all BINOMIAL R and every R with a UNIQUE minimal charge-representation
+of 0 (CT(m_0) is then a single nonzero product). The residual is NON-UNIQUE minimal reps,
+where tuned coefficients can cancel CT(m_0). Explicit first witness: R = 1 + u^3 - u^6, N=2,
+charges {-2,1,4}: CT(3) = 3 r_0(r_0 r_6 + r_3^2) = 0 under the tuning, but CT(6) = -30 != 0.
+So vertex cancellation STARTS but the next level SURVIVES.
+
+**The finishing statement.** When the minimal-representation obstruction CT(m_0) is tuned to
+0, the NEXT obstruction level yields a new polynomial in the coefficients; TNC would follow
+from: these two (or finitely many) consecutive obstruction polynomials have NO common
+nonzero-coefficient solution for non-monomial R. Equivalently (THM-1635): Pi(t) = ct forces R
+monomial. The nondegenerate-saddle argument already handles every case tested (g'' != 0 =>
+G singular => some CT != 0), so the residual is: can ALL obstruction levels vanish
+simultaneously? Measure-zero coefficient variety; conjectured empty for non-monomial R.
+
+**Two routes:** (a) show CT(m_0) = 0 and CT(next) = 0 are incompatible for non-monomial R
+(finite elimination per charge-geometry); (b) the branch-product Pi = ct => monomial
+(HYP-8470), which subsumes it at all orders at once.
+
+**Related:** THM-1655 (binomial + unique-min), THM-1635 (branch product), HYP-8470, THM-1625.

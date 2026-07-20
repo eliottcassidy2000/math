@@ -1,0 +1,39 @@
+THEOREM (to verify): TNC HOLDS for BINOMIAL R = r0 + rd u^d (d=M+N).
+  Lambda = r0 u^{-N} + rd u^{M}, charges {-N, M} ONLY.  CT(Lambda^m) = sum over
+  a+b=m with -Na+Mb=0.  Minimal solution a=M/g, b=N/g (g=gcd(M,N)), m0=(M+N)/g,
+  and CT(m0) = C(m0, M/g) r0^{M/g} rd^{N/g} -- a SINGLE term, no cancellation, != 0.
+  So a binomial is NEVER a nullcone element => TNC holds at every bidegree for 2-term R.
+
+  N   M   d=M+N   g=gcd   m0=(M+N)/g   CT(m0) predicted    CT(m0) actual
+  1   1    2      1       2                12          12   earlier all 0  OK
+  1   2    3      1       3                36          36   earlier all 0  OK
+  1   3    4      1       4                96          96   earlier all 0  OK
+  1   4    5      1       5               240          240   earlier all 0  OK
+  2   1    3      1       3                54          54   earlier all 0  OK
+  2   2    4      2       2                12          12   earlier all 0  OK
+  2   3    5      1       5               720          720   earlier all 0  OK
+  2   4    6      2       3                36          36   earlier all 0  OK
+  3   1    4      1       4               216          216   earlier all 0  OK
+  3   2    5      1       5              1080          1080   earlier all 0  OK
+  3   3    6      3       2                12          12   earlier all 0  OK
+  3   4    7      1       7             15120          15120   earlier all 0  OK
+  4   1    5      1       5               810          810   earlier all 0  OK
+  4   2    6      2       3                54          54   earlier all 0  OK
+  4   3    7      1       7             22680          22680   earlier all 0  OK
+  4   4    8      4       2                12          12   earlier all 0  OK
+
+  binomial theorem holds on all tested (N,M): True
+
+NECESSARY CONDITION r_N = 0 (Lambda has no constant term), since CT(1)=[u^N]R=r_N:
+   R=1+u+u**2         N=2: r_N=1, CT(1)=1  (match: True)
+   R=1+u**3+u**4      N=2: r_N=0, CT(1)=0  (match: True)
+   R=5+u+2*u**4       N=2: r_N=0, CT(1)=0  (match: True)
+
+WHERE IT STAYS OPEN: >=3 charges allow CANCELLATION among representations of 0 at
+the minimal m.  Smallest genuine test: TRINOMIAL with r_N=0.  Find first nonzero CT:
+   R=1+u**3+u**4      N=2 (M=2): first nonzero CT at m=2, value 2
+   R=1+u+u**4         N=2 (M=2): first nonzero CT at m=2, value 2
+   R=1+u**3+u**5      N=2 (M=3): first nonzero CT at m=3, value 3
+   R=2+u**3+u**6      N=3 (M=3): first nonzero CT at m=1, value 1
+   R=1+u**4+u**5      N=3 (M=2): first nonzero CT at m=3, value 6
+   R=1+u**2+u**5      N=3 (M=2): first nonzero CT at m=3, value 3

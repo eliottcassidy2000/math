@@ -127,3 +127,8 @@ is the last step.
 cases; the singularity argument), `tnc_second_order_vandermonde_opus_S418.py` (the failed
 asymptotic fit, kept as the record of why the exact route was needed). Outputs in
 `05-knowledge/results/`.
+
+
+---
+
+**SIGN CORRECTED (opus-2026-07-20-S419, THM-1655).** The identity is `G(t) = +t·(log Π)′` (plus, not minus) — verified on `R=1+u`, `Π=t/(1−t)`, where `t(log Π)′ = 1+t+t²+⋯`. The residue derivation dropped a sign. **The criterion `Π = ct ⟺ TNC` is unchanged.** See THM-1655 §0.
