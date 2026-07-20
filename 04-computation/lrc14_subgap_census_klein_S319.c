@@ -38,7 +38,10 @@
 #define K 13            /* number of speeds (n = 14 runners) */
 #define MAXB 64
 #define QSCAN 200
-#define QPIN 41         /* full pinning up to here (depth <= 2 for HI=3/41) */
+#define QPIN 48         /* full pinning up to here (S320: 41 -> 48; depth 3 at 42..48 for HI=3/41) */
+#define QMLO 14         /* in-branch mask moduli range [QMLO, QMHI]: all q with depth d(q)=1 used */
+#define QMHI 27
+#define NQM  (QMHI-QMLO+1)
 
 static int B = 36;
 /* open interval (LO_N/LO_D, HI_N/HI_D); defaults (1/14, 3/41).
@@ -76,7 +79,7 @@ static void init_admiss(void){
 
 /* ---------- pinning depth per modulus ---------- */
 static int dq[QPIN+1];                     /* d(q) = ceil(HI*q) - 1 */
-static int use23, use25, use27;            /* mask prunes valid only at depth 1 */
+static int useQ[NQM];                      /* mask prune valid only at depth 1 */
 static int covreq;                         /* required bits for moduli 7..14 */
 static void init_dq(void){
     for (int q=2;q<=QPIN;q++){
@@ -84,23 +87,38 @@ static void init_dq(void){
         dq[q] = (int)c - 1;
         if (dq[q] < 0) dq[q] = 0;
     }
-    use23 = (dq[23]==1); use25 = (dq[25]==1); use27 = (dq[27]==1);
+    for (int qi=0;qi<NQM;qi++) useQ[qi] = (dq[qi+QMLO]==1);
     covreq = (dq[14]==0) ? 0xff : 0x7f;    /* track 7..14; require 14 iff d=0 */
 }
 
-/* mask machinery for q = 23, 25, 27 (depth-1 moduli for HI <= 2/27ish).
- * pairid[q][r] = unit-pair index, -1 non-unit, -2 zero. */
-static int pairid23[23], pairid25[25], pairid27[27];
-static int np23, np25, np27;
+/* generalized in-branch mask machinery (S320): one bitmask per modulus
+ * q in [QMLO, QMHI], used only when d(q) == 1.  pairidQ[qi][r] = unit-pair
+ * index, -1 non-unit, -2 zero; bit npQ[qi] = "has a multiple of q".
+ * A family with M < HI and no multiple of q must hit EVERY unit pair mod q
+ * (necessary condition; the leaf pinning_ok remains the authority). */
+static int pairidQ[NQM][QMHI+1];
+static int npQ[NQM];
+static unsigned mkQ[K+1][NQM];      /* mask state per DFS depth */
 static void init_pairs(void){
-    memset(pairid23,-1,sizeof pairid23); pairid23[0]=-2; np23=0;
-    for (int b=1;b<=11;b++){ pairid23[b]=np23; pairid23[23-b]=np23; np23++; }
-    memset(pairid25,-1,sizeof pairid25); pairid25[0]=-2; np25=0;
-    for (int b=1;b<=12;b++){ if (gcd_i(b,25)!=1||pairid25[b]>=0) continue;
-        pairid25[b]=np25; pairid25[25-b]=np25; np25++; }
-    memset(pairid27,-1,sizeof pairid27); pairid27[0]=-2; np27=0;
-    for (int b=1;b<=13;b++){ if (gcd_i(b,27)!=1||pairid27[b]>=0) continue;
-        pairid27[b]=np27; pairid27[27-b]=np27; np27++; }
+    for (int q=QMLO;q<=QMHI;q++){
+        int qi=q-QMLO;
+        for (int r=0;r<=QMHI;r++) pairidQ[qi][r]=-1;
+        pairidQ[qi][0]=-2; npQ[qi]=0;
+        for (int b=1;b<=q/2;b++){
+            if (gcd_i(b,q)!=1 || pairidQ[qi][b]>=0) continue;
+            pairidQ[qi][b]=npQ[qi]; pairidQ[qi][q-b]=npQ[qi]; npQ[qi]++;
+        }
+    }
+}
+/* fill mkQ[pos+1] from mkQ[pos] and the pushed element v */
+static void apply_masks(int pos, int v){
+    for (int qi=0;qi<NQM;qi++){
+        int q=qi+QMLO, r=v%q;
+        unsigned m=mkQ[pos][qi];
+        if (r==0) m |= 1u<<npQ[qi];
+        else if (pairidQ[qi][r]>=0) m |= 1u<<pairidQ[qi][r];
+        mkQ[pos+1][qi]=m;
+    }
 }
 
 static int dist_q(int x,int q){ int r=x%q; if(r<0)r+=q; return r<q-r?r:q-r; }
@@ -143,8 +161,7 @@ static int scan_gate(void){
 }
 
 /* ---------- DFS, elements strictly decreasing ---------- */
-static void dfs(int pos, int maxnext, int cov, int mk23, int mk25, int mk27,
-                int haspair){
+static void dfs(int pos, int maxnext, int cov, int haspair){
     cnt_visit++;
     if (pos == K){
         cnt_leaf++;
@@ -173,7 +190,11 @@ static void dfs(int pos, int maxnext, int cov, int mk23, int mk25, int mk27,
         if (!pinning_ok()) return;
         cnt_f5++;
         { int fq = scan_gate();
-          if (fq){ cnt_scan++; firstq_hist[fq]++; return; } }
+          if (fq){ cnt_scan++; firstq_hist[fq]++;
+                   printf("SURV q=%d :", fq);
+                   for (int i=K-1;i>=0;i--) printf(" %d", W[i]);
+                   printf("\n"); fflush(stdout);
+                   return; } }
         cnt_hard++;
         printf("HARD");
         for (int i=K-1;i>=0;i--) printf(" %d", W[i]);
@@ -181,14 +202,13 @@ static void dfs(int pos, int maxnext, int cov, int mk23, int mk25, int mk27,
         return;
     }
     int slots = K - pos;
-    /* mask prunes (only valid when no multiple of the modulus yet, and only
-     * at pinning depth exactly 1 for that modulus) */
-    if (use23 && !(mk23 & (1<<np23))){
-        if (np23 - __builtin_popcount(mk23 & ((1<<np23)-1)) > slots) return; }
-    if (use25 && !(mk25 & (1<<np25))){
-        if (np25 - __builtin_popcount(mk25 & ((1<<np25)-1)) > slots) return; }
-    if (use27 && !(mk27 & (1<<np27))){
-        if (np27 - __builtin_popcount(mk27 & ((1<<np27)-1)) > slots) return; }
+    /* mask prunes over all depth-1 moduli (only when no multiple present) */
+    for (int qi=0;qi<NQM;qi++){
+        if (!useQ[qi]) continue;
+        unsigned m = mkQ[pos][qi];
+        if (m & (1u<<npQ[qi])) continue;
+        if (npQ[qi] - __builtin_popcount(m & ((1u<<npQ[qi])-1)) > slots) return;
+    }
     /* covering 7..13(..14) feasibility: uncovered required m needs a multiple <= maxnext */
     for (int m=7;m<=14;m++)
         if ((covreq & (1<<(m-7))) && !(cov & (1<<(m-7))) && maxnext < m) return;
@@ -210,13 +230,10 @@ static void dfs(int pos, int maxnext, int cov, int mk23, int mk25, int mk27,
         W[pos] = v;
         int cov2 = cov;
         for (int m=7;m<=14;m++) if (v%m==0) cov2 |= 1<<(m-7);
-        int m23=mk23, m25=mk25, m27=mk27;
-        { int r=v%23; if(!r) m23|=1<<np23; else if(pairid23[r]>=0) m23|=1<<pairid23[r]; }
-        { int r=v%25; if(!r) m25|=1<<np25; else if(pairid25[r]>=0) m25|=1<<pairid25[r]; }
-        { int r=v%27; if(!r) m27|=1<<np27; else if(pairid27[r]>=0) m27|=1<<pairid27[r]; }
+        apply_masks(pos, v);
         int hp2 = haspair;
         if (!hp2) for (int i=0;i<pos;i++) if (admiss[W[i]+v]){ hp2=1; break; }
-        dfs(pos+1, v-1, cov2, m23, m25, m27, hp2);
+        dfs(pos+1, v-1, cov2, hp2);
     }
 }
 
@@ -249,11 +266,9 @@ int main(int argc, char **argv){
         W[0] = w0;
         int cov=0;
         for (int m=7;m<=14;m++) if (w0%m==0) cov |= 1<<(m-7);
-        int m23=0,m25=0,m27=0;
-        { int r=w0%23; if(!r) m23|=1<<np23; else if(pairid23[r]>=0) m23|=1<<pairid23[r]; }
-        { int r=w0%25; if(!r) m25|=1<<np25; else if(pairid25[r]>=0) m25|=1<<pairid25[r]; }
-        { int r=w0%27; if(!r) m27|=1<<np27; else if(pairid27[r]>=0) m27|=1<<pairid27[r]; }
-        dfs(1, w0-1, cov, m23, m25, m27, 0);
+        memset(mkQ[0], 0, sizeof mkQ[0]);
+        apply_masks(0, w0);
+        dfs(1, w0-1, cov, 0);
         fprintf(stderr, "w_max=%d done: visit=%lld leaf=%lld F1=%lld F2=%lld F4=%lld prim=%lld F5=%lld scan=%lld HARD=%lld\n",
                 w0, cnt_visit, cnt_leaf, cnt_f1, cnt_f2, cnt_f4, cnt_prim, cnt_f5, cnt_scan, cnt_hard);
     }
