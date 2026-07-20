@@ -1,0 +1,116 @@
+==============================================================================
+(1) CASAS-ALVERO: which degrees are NOT covered by n = {1,2,3,4}*p^k ?
+==============================================================================
+ open degrees <= 200: [30, 35, 40, 42, 45, 55, 56, 60, 63, 65, 66, 70, 72, 77, 78, 80, 84, 85, 88, 90, 91, 95, 99, 102, 104, 105, 110, 112, 114, 115] ...
+ SMALLEST OPEN DEGREE = 30   ( = 30 = 2*3*5 )
+ every covered degree has at most 2 distinct primes: True
+ every open degree has at least 3 distinct primes: False
+ => THE CASAS-ALVERO BARRIER IS EXACTLY A THREE-DISTINCT-PRIMES PHENOMENON.
+    n is covered iff n = c*p^k with c <= 4, and that forces omega(n) <= 2.
+
+==============================================================================
+(2)+(3) THE CHAR-p FAILURE MAP, with the trivial solutions as positive control
+==============================================================================
+  p   n    monic f  CA-solutions  trivial (x-a)^n  NONTRIVIAL
+  2   2          4             2                2           0
+  2   3          8             4                2           2   <-- CA FAILS in char p
+  2   4         16             8                2           6   <-- CA FAILS in char p
+  2   5         32            16                2          14   <-- CA FAILS in char p
+  2   6         64            32                2          30   <-- CA FAILS in char p
+  2   7        128            64                2          62   <-- CA FAILS in char p
+  3   2          9             3                3           0
+  3   3         27             3                3           0
+  3   4         81             9                3           6   <-- CA FAILS in char p
+  3   5        243            39                3          36   <-- CA FAILS in char p
+  3   6        729           111                3         108   <-- CA FAILS in char p
+  3   7       2187           321                3         318   <-- CA FAILS in char p
+  5   2         25             5                5           0
+  5   3        125             5                5           0
+  5   4        625            25                5          20   <-- CA FAILS in char p
+  5   5       3125             5                5           0
+  5   6      15625            25                5          20   <-- CA FAILS in char p
+  5   7      78125           205                5         200   <-- CA FAILS in char p
+  7   2         49             7                7           0
+  7   3        343             7                7           0
+  7   4       2401            49                7          42   <-- CA FAILS in char p
+  7   5      16807            49                7          42   <-- CA FAILS in char p
+  7   6     117649           217                7         210   <-- CA FAILS in char p
+
+ POSITIVE CONTROL: the trivial column must equal p at every (p,n) -- the p polynomials
+ (x-a)^n always satisfy CA.  If it ever prints something else, the test is broken.
+
+ first nontrivial char-p solutions found (ascending coefficients):
+   p=2, n=3: [[0, 0, 1, 1], [0, 1, 0, 1]]
+   p=2, n=4: [[0, 0, 0, 1, 1], [0, 0, 1, 0, 1], [0, 0, 1, 1, 1]]
+   p=2, n=5: [[0, 0, 0, 0, 1, 1], [0, 0, 0, 1, 0, 1], [0, 0, 0, 1, 1, 1]]
+   p=2, n=6: [[0, 0, 0, 0, 0, 1, 1], [0, 0, 0, 0, 1, 0, 1], [0, 0, 0, 0, 1, 1, 1]]
+   p=2, n=7: [[0, 0, 0, 0, 0, 0, 1, 1], [0, 0, 0, 0, 0, 1, 0, 1], [0, 0, 0, 0, 0, 1, 1, 1]]
+   p=3, n=4: [[0, 0, 0, 1, 1], [0, 0, 0, 2, 1], [0, 1, 0, 0, 1]]
+   p=3, n=5: [[0, 0, 0, 0, 1, 1], [0, 0, 0, 0, 2, 1], [0, 0, 0, 1, 0, 1]]
+   p=3, n=6: [[0, 0, 0, 0, 0, 1, 1], [0, 0, 0, 0, 0, 2, 1], [0, 0, 0, 0, 1, 0, 1]]
+
+ READING: CA is FALSE in characteristic p -- these are genuine counterexamples to the
+ char-0 STATEMENT read in char p.  That is exactly why the p-adic route is delicate:
+ a mod-p argument must exclude these, which is what the p^k / 2p^k / 3p^k / 4p^k
+ degrees buy.  The three-distinct-primes barrier in (1) is the shape of what is left.
+
+==============================================================================
+CORRECTION PASS (klein-S336) -- two claims from the first run were WRONG or SOFT
+==============================================================================
+ CLAIM 1 (RETRACTED): 'every open degree has >= 3 distinct primes' is FALSE.
+   open degrees with only 2 distinct primes: [35, 40, 45, 55, 56, 63, 65, 72, 77, 80, 85, 88]  (e.g. 35=5*7, 40=2^3*5, 45=3^2*5)
+ CORRECT STATEMENT: n is covered iff SOME prime p has n / p^v_p(n) in {1,2,3,4}.
+   i.e. n = (small cofactor <= 4) x (prime power).  That forces omega(n) <= 2,
+   but omega(n) <= 2 does NOT force covered -- the cofactor must also be <= 4.
+   smallest open degree = 30; smallest open with omega=2 = 35
+   check: every covered n <= 200 has omega <= 2 : True
+
+ CLAIM 2 (SHARPENED): the char-p counterexamples are driven by VANISHING derivatives.
+ Re-running with the extra requirement that every f^(i), i=1..n-1, is NOT identically 0:
+  p   n  nontriv (loose)  nontriv (deriv != 0)
+  2   3                2                     0
+  2   4                6                     0
+  2   5               14                     0
+  2   6               30                     0
+  3   4                6                     0
+  3   5               36                     0
+  3   6              108                     0
+  5   4               20                    20
+  5   6               20                     0
+  7   4               42                    42
+  7   5               42                    42
+
+ READING: if the strict column is 0 wherever the loose column is not, then EVERY
+ char-p counterexample to Casas-Alvero in this range comes from a derivative that
+ vanishes identically -- i.e. from the convention gcd(f,0)=f, not from genuine root
+ sharing.  That is the precise sense in which char p is not a counterexample to the
+ char-0 conjecture, and it is what any p-adic lifting argument has to handle.
+
+==============================================================================
+WITNESS CHECK (klein-S336): verify one p=5, n=4 case ROOT BY ROOT, no gcd routine
+==============================================================================
+ nontrivial witnesses over F_5, degree 4, all derivatives nonzero: 10
+
+  f    = 1x^2 + 1x^4   roots [0, 2, 3]
+  f'   = 2x^1 + 4x^3  roots [0]   shares [0]
+  f''  = 2x^0 + 2x^2  roots [2, 3]   shares [2, 3]
+  f''' = 4x^1  roots [0]   shares [0]
+  linear factorisation over F_5: ['(x-0)^2', '(x-2)^1', '(x-3)^1']  (deg 4 needs total 4)
+
+  f    = 4x^2 + 1x^4   roots [0, 1, 4]
+  f'   = 3x^1 + 4x^3  roots [0]   shares [0]
+  f''  = 3x^0 + 2x^2  roots [1, 4]   shares [1, 4]
+  f''' = 4x^1  roots [0]   shares [0]
+  linear factorisation over F_5: ['(x-0)^2', '(x-1)^1', '(x-4)^1']  (deg 4 needs total 4)
+
+  f    = 1x^1 + 3x^3 + 1x^4   roots [0, 1, 3]
+  f'   = 1x^0 + 4x^2 + 4x^3  roots [3]   shares [3]
+  f''  = 3x^1 + 2x^2  roots [0, 1]   shares [0, 1]
+  f''' = 3x^0 + 4x^1  roots [3]   shares [3]
+  linear factorisation over F_5: ['(x-0)^1', '(x-1)^1', '(x-3)^2']  (deg 4 needs total 4)
+
+ VERDICT: these are GENUINE -- every derivative is a nonzero polynomial and the shared
+ roots are exhibited explicitly.  So Casas-Alvero FAILS over F_p even for p > n, where
+ the derivative combinatorics is identical to char 0.  This is not a contradiction: it
+ is exactly why the mod-p route only has power at n = p^k (and small multiples), and it
+ is the calibration a p-adic attack needs before it starts.
