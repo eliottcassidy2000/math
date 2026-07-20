@@ -47,6 +47,15 @@ it. Recording clean negatives rather than manufacturing suggestive links.
 into three?
 
 **Artifacts:** THM-1455; HYP-8305; 2 scripts + 2 outputs.
+## boxeph-2026-07-20-S163 -- EXHAUSTIVENESS CONFIRMED at n=7 (22/22 violators = mechanism A or B; A now a THEOREM by S4-embedding); quarter law holds per Wallis; DFGPR re-verified via mass-1 = 456 (HYP-8310)
+
+**Owner:** 8 = 2*2^2 reset via exponentiation; pursue exhaustiveness + handoffs vigorously.
+
+- Full n=7 census (cover 156x64 -> 1044 classes): 22 non-quadratic, 20 = A (K4-with-S4 — THEOREM: the S4 violation triple embeds; subgroup failure is global; includes K7), 2 = B (3K2+v, eps|R nontrivial). NO third mechanism at n <= 7.
+- Quarter law holds at n=7 ({-1/2: 8, 0: 548, 1/2: 32, 1: 456}) — Wallis truncation break stays scheduled for n=8.
+- BONUS: mass-1 stratum = 456 = A000568(7): the eps-mass machinery re-derives the DFGPR count.
+- 2^2 formalized: quarter lattice = x^{2^2} (two nested squarings); break needs two 4-blocks = m >= 8.
+- Handoffs: n=8 census (who else besides K8 breaks quarters?); B-side exhaustive form; the full iff conjecture.
 
 ## mac-mini-2026-07-20-S131 -- THM-1450 LINEARITY TRIVIALISES VC (so the odd side is the hard one, and THM-1420 says it can never be linearised) + the VC=1 locus is EXACTLY TWO tournaments at every n
 
