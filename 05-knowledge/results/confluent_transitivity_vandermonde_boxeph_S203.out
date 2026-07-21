@@ -1,0 +1,36 @@
+==================================================================================
+(1) det[(a_i+k)!] = prod a_i! * Vandermonde(a)   [the transitivity Vandermonde, THM-1815]
+==================================================================================
+  degrees [0, 1]       det=1         prod(a!)*Vand=1         match=True
+  degrees [0, 2]       det=4         prod(a!)*Vand=4         match=True
+  degrees [0, 1, 2]    det=4         prod(a!)*Vand=4         match=True
+  degrees [0, 1, 3]    det=36        prod(a!)*Vand=36        match=True
+  degrees [0, 2, 3]    det=72        prod(a!)*Vand=72        match=True
+  degrees [1, 3, 4]    det=864       prod(a!)*Vand=864       match=True
+  degrees [0, 1, 2, 3] det=144       prod(a!)*Vand=144       match=True
+
+==================================================================================
+(2) Vandermonde(x) = sum_{tournaments} sgn(T) x^{score(T)}  [signed tournament sum, transitive survive]
+==================================================================================
+  n=3 x=[2, 5, 7] : signed-tournament-sum=30  Vandermonde=30  match=True
+  n=4 x=[1, 3, 4, 9] : signed-tournament-sum=1440  Vandermonde=1440  match=True
+
+==================================================================================
+(3) THE WALL: repeated degrees -> det=0 (Vand factor vanishes), CONFLUENT det nonzero
+==================================================================================
+  degrees [0, 3, 7]   det=2540160
+  degrees [0, 2, 7]   det=705600
+  degrees [0, 1, 7]   det=211680
+  CONFLUENT at a0=a1=0 (derivative row): det=211680  nonzero=True -> the wall's derivative order
+  degrees [0, 3, 8]   det=29030400
+  degrees [0, 2, 8]   det=7741440
+  degrees [0, 1, 8]   det=2257920
+  CONFLUENT at a0=a1=0 (derivative row): det=2257920  nonzero=True -> the wall's derivative order
+  degrees [1, 4, 9]   det=1045094400
+  degrees [1, 3, 9]   det=209018880
+  degrees [1, 2, 9]   det=40642560
+  CONFLUENT at a0=a1=1 (derivative row): det=40642560  nonzero=True -> the wall's derivative order
+
+  => distinct degrees: transitive channel, noncancellation. Coincident (the wall): the ordinary
+     Vandermonde vanishes but the CONFLUENT (derivative/Wronskian) det survives = codex hyper-Bessel
+     / my Laguerre-Polya boundary (HYP-8775). One object: the confluence of the tournament sign-sum.
