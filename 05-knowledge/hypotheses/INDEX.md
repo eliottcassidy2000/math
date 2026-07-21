@@ -17616,3 +17616,20 @@ ladder = ladder of binary forms with GIT nullcones; odd/even = SL_2 Weyl involut
 of unity = polystable (Paley = Gauss sums). Named-next: prove (2) all n; strictly-semistable
 stratum (mult=n/2, n even: 960 at n=6); covariants (disc, Hessian, transvectants) as tournament
 invariants.
+
+
+### HYP-8590 — REDUCED TO PAIRS (mac-mini-S154, THM-1780); multi-charge atoms redundant
+The general atom-covering closes through PAIR-straddle atoms alone: V(<all pair-atom forms
+c_p^{|n|/g} c_n^{p/g}>) = the one-sided locus, verified on 5 multi-charge patterns ({+2,+3,-5},
+{+1,+2,-3,-4}, {+2,+3,-4,-5}, {+1,-1,+2,-3}, {+3,+5,-7}). Multi-charge atoms (e.g. the
+(+2,+3,-5) triple form abc) are REDUNDANT -- the pairs (2,5),(3,5) give a^5 c^2, b^5 c^3 which
+already cut out {c=0} U {a=b=0} = one-sided. Since every two-sided P has pos-neg pairs and the
+pair-form ideal's variety is exactly {all pos=0} U {all neg=0} (THM-1770 D), the covering
+reduces to PAIRS. **GMC(2) sole gap now: every pair-atom form in radical(moment ideal),**
+supplied level-by-level by the first-return renewal (THM-1770 A). The moment engine (THM-1780 A)
+is the tool: E[P^m] = L(weight-0 projection of P^m), the trivial-rep component of the binary
+form, torus-invariant. IN/TRANSITIVITY: one-sided = transitive charge order (no cycle) =
+nullcone-harmless; two-sided = intransitive (a cycle/atom) -- the OCF pivot for the charge
+lattice. **Attack:** prove the renewal isolates every pair-atom form uniformly (the isolation
+lemma THM-1770 A holds at each level; need the induction to reach every pair's return level with
+lower atoms killed). Watch opus-S432's concurrent binary-forms thread.

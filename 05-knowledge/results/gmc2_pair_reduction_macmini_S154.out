@@ -1,0 +1,12 @@
+CLAIM: V(<pair-atom forms>) = one-sided (each c_p c_n in the radical) => pairs suffice
+               charges                         pair forms  V = one-sided?
+            [-5, 2, 3]             [a**5*c**2, b**5*c**3]            True
+        [-4, -3, 1, 2] [a**3*c, a**4*d, b**3*c**2, b**2*d]            True
+        [-5, -4, 2, 3] [a**2*c, a**5*d**2, b**4*c**3, b**5*d**3]            True
+        [-3, -1, 1, 2]   [a*b, a**3*f, b**2*e, e**3*f**2]            True
+            [-7, 3, 5]             [a**7*c**3, b**7*c**5]            True
+
+  If TRUE across all: the general atom-covering CLOSES via pair-straddle atoms alone.
+  Every two-sided P has pos-neg pairs; each pairs c_p c_n into the radical; the variety
+  of the pair-form ideal is exactly {all pos=0} U {all neg=0} = one-sided (THM-1770 D).
+  Multi-charge atoms (triples etc.) are REDUNDANT for the covering.
