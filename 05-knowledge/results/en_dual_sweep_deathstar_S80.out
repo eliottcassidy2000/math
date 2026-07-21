@@ -1,0 +1,15 @@
+E_n DUAL SWEEP (even-graph metagraph; dual of tournament G_n)
+------------------------------------------------------------------
+n=3: V=2 (A002854=2OK) E=1 dens=1.00 alpha=1 omega=2 chi<=2 ecc_avg=1.000 diam=1
+      WOWII-103: b(largest-induced-bipartite)=2, floor(b-ln ecc_avg)=2; alpha=1 <= 2? True
+n=4: V=3 (A002854=3OK) E=3 dens=1.00 alpha=1 omega=3 chi<=3 ecc_avg=1.000 diam=1
+      WOWII-103: b(largest-induced-bipartite)=2, floor(b-ln ecc_avg)=2; alpha=1 <= 2? True
+      DUAL COMPARE: alpha(E_4)=1  vs  alpha(G_4)=2 (klein)
+n=5: V=7 (A002854=7OK) E=16 dens=0.76 alpha=2 omega=5 chi<=5 ecc_avg=1.857 diam=2
+      WOWII-103: b(largest-induced-bipartite)=4, floor(b-ln ecc_avg)=3; alpha=2 <= 3? True
+      DUAL COMPARE: alpha(E_5)=2  vs  alpha(G_5)=5 (klein)
+n=6: V=16 (A002854=16OK) E=90 dens=0.75 alpha=4 omega=10 chi<=10 ecc_avg=2.000 diam=2
+      WOWII-103: b(largest-induced-bipartite)=6, floor(b-ln ecc_avg)=5; alpha=4 <= 5? True
+      DUAL COMPARE: alpha(E_6)=4  vs  alpha(G_6)=18 (klein)
+
+Sanity: V(E_n)=2,3,7,16 must equal A002854. chi(E_n) grows faster than chi(G_n)=n-1.
