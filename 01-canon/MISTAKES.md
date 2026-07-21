@@ -5597,6 +5597,46 @@ NC2 ⇒ GMC(2) reduction, pure charge arithmetic, assumes NC2) is unaffected. Se
 MISTAKE-199 (the same over-eager pattern, there in fleet-coordination form).
 
 
+## MISTAKE-207 (boxeph-2026-07-20-S186r) — THM-1765's pair-sum constant used the symmetric-collision model (missing the Λ''' midpoint shift), and its evidence verified the RATIO, never the CONSEQUENCE object
+
+**What happened:** THM-1765 §1 claimed the far-end pair-sum limit
+(1/t)·2/(u_c²Λ'') and hence the universal constant −2/(d₁d₂). Two errors:
+(a) the merging roots are NOT symmetric about u_c at second order — the
+Λ''' midpoint-shift enters at the SAME order; the correct law is
+PS = (1/t)[2/(u_c²Λ'') + (2/3)Λ'''/(u_cΛ''²)], giving −(2/3)(d₁+d₂)/(d₁d₂)
+on a two-term edge (referee-measured: (1,−1) → 0 — forced exactly by the
+global residue identity Σ_{all roots} 1/(uΛ') = 0; (2,−1) → 1/3; (3,−1) →
+4/9; claimed: 2, 1, 2/3). (b) The frozen evidence (F1–F4) measured only
+the RATIO Λ''u²/v — the identity's hypothesis — and never once measured
+the pair-sum, the object the Consequence is about. The identity was true;
+the Consequence drawn from it was wrong; the check could not have caught
+it because it tested the wrong object.
+
+**Also refuted downstream (same session, same verdict):** "O(1)
+universally" — the charge-0 coefficient p₀ enters v but never Λ'/Λ'':
+VALUE-HIJACKED ends (witness P₄ = ZW + Z⁹W⁷ + W) realize the S183r threat
+with non-integrable s^{−2} pair-sums; and the (L2) two-mechanism
+classification + O(t^{−1/2}) rate (zero-drift mechanism; Θ(T^{−2/5})
+example).
+
+**Genus:** the leading-term trap, third instance (MISTAKE-202: leading
+products; MISTAKE-206: leading odd-coefficient; 207: leading collision
+model), COMPOUNDED with MISTAKE-204's cousin: the numeric verified an
+intermediate quantity, not the concluded one.
+
+**Rule:** (1) at a colliding pair, never use the symmetric local model
+without checking the next Puiseux coefficient (Λ''' here) — or better,
+compute pair-sums by the GLOBAL RESIDUE IDENTITY (sum over all roots is
+zero: pair-sum = −spectator residues), which is exact and model-free.
+(2) Every verification numeric must measure the CONSEQUENCE'S object, not
+the hypothesis' — if the theorem says "hence X is bounded", the script
+must print X.
+
+**Repair:** THM-1765 amended in place (corrected law; value-hijack
+sub-case named; ledger reverted; residue identity canonized; §6 verdict
+archive); THM-1680 §4 pointer corrected; referee checks frozen at
+04-computation/thm1765_referee_{hijack,momenttest}_S186r.py + .outs.
+
 ## MISTAKE-206 (boxeph-2026-07-20-S183r) — THM-1680's deletion biconditional read only the LEADING odd coefficient: "B ≡ 0 ⟺ removable" is false one rung down, and the dichotomy missed the boundary-truncated class
 
 **What happened:** THM-1680 §1/§2 filed "DEFECT ≡ 0 ⟺ B ≡ 0 ⟺ removable" and

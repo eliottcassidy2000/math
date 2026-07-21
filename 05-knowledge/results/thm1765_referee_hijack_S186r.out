@@ -1,0 +1,83 @@
+==============================================================================
+REFEREE S186r: pair-sum law corrected; value-hijacked ends break (L1)/(L2)
+==============================================================================
+
+(R1) corrected pair-sum law  PS_arc = -(2/3)(d1+d2)/(d1 d2)
+     [THM-1765 claims -2/(d1 d2)].  Direct measurement, t = (1-eps)/v:
+  edge (1,-1): Lambda = q0 s + w(p1 u + pm1/u):  claimed +2, corrected 0, exact-residue argument 0:
+     eps=1e-04   PS = 1.819e-12-6.262e-14j
+     eps=1e-06   PS = 1.050e-10+2.874e-11j
+     eps=1e-08   PS = 7.110e-09+5.182e-09j
+  edge (2,-1): Lambda = w^2 p2 u^2 + w pm1/u:  claimed +1, corrected 1/3:
+     eps=1e-04   PS = 0.333348+0.000000j   (pair found: 2)
+     eps=1e-06   PS = 0.333333-0.000000j   (pair found: 2)
+     eps=1e-08   PS = 0.333337+0.000006j   (pair found: 2)
+  edge (3,-1): Lambda = w^3 p3 u^3 + w pm1/u:  claimed +2/3, corrected 4/9:
+     eps=1e-04   PS = 0.444467+0.000000j   (pair found: 2)
+     eps=1e-06   PS = 0.444445-0.000000j   (pair found: 2)
+     eps=1e-08   PS = 0.444473-0.000006j   (pair found: 2)
+     => the file's far-end constant -2/(d1 d2) is FALSE; the corrected
+        law -(2/3)(d1+d2)/(d1d2) fits all three (0, 1/3, 4/9). O(1)-ness
+        for value-EDGE-GOVERNED ends survives with the corrected constant
+        (which VANISHES identically on the (1,-1) pair edge).
+
+(R2) value-hijacked end with spectator root: P4 = ZW + Z^9W^7 + W
+     Lambda = 2s + w^16 u^2 + w/u;  identity would predict ratio
+     L''u_c^2 / v -> -d1 d2 = +2;  exact pair-sum = v/(9 a_s u_c^2):
+     s        ratio L''u^2/v    pair-sum(exact)   *s^2      2^{5/3}/72
+     1e-01   1.406e-01         4.742781e+00     0.047428   0.044094
+     1e-02   1.511e-03         4.412781e+02     0.044128   0.044094
+     1e-03   1.512e-05         4.409481e+04     0.044095   0.044094
+     1e-04   1.512e-07         4.409448e+06     0.044094   0.044094
+     numeric cross-check at s = 1e-2, t = (1-eps)/v, pair near u_c:
+     eps=1e-05   PS_measured = 438.0569   exact v/(9 a u_c^2) = 441.2781  (pair: 2)
+     eps=1e-07   PS_measured = 441.2457   exact v/(9 a u_c^2) = 441.2781  (pair: 2)
+     => pair-sum ~ 0.0441 s^{-2} -> infinity on the far tube;
+        int_0 e^{-s} s^{-2} ds DIVERGES: the (L1) dominated-convergence
+        bound fails; u_c^2 L'' ~ s^3 -> 0 is EXACTLY the S183r threat,
+        and the 1/t = v ~ s weight does NOT cancel it (residual s^{-2}).
+
+(R3) mixedness of the R2 collision (s = 0.01): track 3 roots in tau:
+     tau=1e-4: |roots| = 7.066e-04, 8.842e+07, 8.842e+07  (smallest = 0-group)
+     tau~1:  roots/u_c = 0.9885+0.0000j, 1.0115+0.0000j, -2.0001+0.0000j
+     colliding pair (nearest u_c): labels {0-group, inf-group};  spectator: inf-group at 2.000 u_c
+     => MIXED pinch: True (genuine arc; the far tube of R2 exists).
+
+(R4a) (L2) third mechanism, P1 = ZW + 2Z^3W^2 + 3Z^2W^3: zero-drift:
+     s=1e-02   |z_small| = 8.486e-03   |z L'(z)|/(2s) = 0.999904   weight ~ 5.00e+01
+     s=1e-03   |z_small| = 2.683e-04   |z L'(z)|/(2s) = 1.000000   weight ~ 5.00e+02
+     s=1e-04   |z_small| = 8.485e-06   |z L'(z)|/(2s) = 1.000000   weight ~ 5.00e+03
+     => |z L'(z)| ~ 2 gamma s (zero DRIFTS to 0): weight s^{-1}: a third
+        mechanism, missing from the file's two-mechanism classification;
+        naive per-root bound NOT integrable at s -> 0.
+
+(R4b) coefficient-degenerate small-s law, P2 = 2Z^3W^2 + 3Z^2W^3:
+     s=1e-02   |z L'(z)|/w = 1.960e-03   /w^5 = 4.8990
+     s=1e-04   |z L'(z)|/w = 1.960e-07   /w^5 = 4.8990
+     s=1e-06   |z L'(z)|/w = 1.960e-11   /w^5 = 4.8990
+     => the claimed law |zL'(z)| ~ 2 p1 w fails when p_{+-1}(0) = 0:
+        actual ~ w^5: weight s^{-5/2}, NOT integrable.
+
+(R4c) ray-decay rate for P2 along t = iT (arcs sit on the real axis):
+     T          |A|           |A| T^{2/5}    |A| T^{1/2}
+     1e+02   6.1654e-02       0.38901       0.61654
+     1e+04   1.0215e-02       0.40665       1.02145
+     1e+06   1.6317e-03       0.40987       1.63172
+     1e+08   2.5895e-04       0.41041       2.58951
+     => |A| = Theta(T^{-2/5}): the section-2 headline O(|t|^{-1/2}) is
+        FALSE as stated (decay survives, slower; Liouville unaffected).
+
+(R5) stacked hijack P3 = (Z^3W^2+Z^2W^3)^2 + ZW: Lambda = 2s + w^10(u+1/u)^2
+     folds u = +-i share v = 2s exactly; measure the 4-root residue sum
+     and each fold's 2-root sum at t = (1-eps)/v (s = 0.01):
+     eps=1e-05  fold(+i) 2-root sum = 0.000e+00+0.000e+00j ; fold(-i) = 0.000e+00+0.000e+00j
+     eps=1e-07  fold(+i) 2-root sum = 1.915e-10+0.000e+00j ; fold(-i) = 1.915e-10+0.000e+00j
+     => each fold's pair-sum is ~ 0 (u -> -u symmetry + residue identity),
+        while THM-1765's formula would predict +2 per fold.  The safety of
+        this stacked hijack is NOT the fold-edge identity's doing.
+
+NET: section 1's Consequence is broken twice over -- wrong constant on
+edge-governed ends (R1), and unbounded (non-integrable) pair-sums on
+value-hijacked ends with spectator roots (R2, mixed per R3).  Section 2's
+two-mechanism classification and O(t^{-1/2}) are false as stated (R4).
+DONE.

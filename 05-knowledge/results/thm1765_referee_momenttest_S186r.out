@@ -1,0 +1,29 @@
+==============================================================================
+REFEREE S186r: does the finite-moment-test bound depend only on the SUPPORT?
+==============================================================================
+
+(V) H4 control P = aZ+bZW+cW @ (3/2,-2/3,5/4): order 3 deg 2; leading q_3(m) = (1) m^0   [file: order 3, deg 2, leading 1]
+
+(P) P = aZ + bZ^2 + cW + dW^2, exact moments to m = 58:
+  (a,b,c,d)=(1, 1, 1, 1): order 4, coeff-deg 3; verified all m <= 54
+      leading q_4(m) = (1) m^0
+      integer zeros in [0,400): []  => M = 4
+  (a,b,c,d)=(2, 1, 1, 1): order 5, coeff-deg 4; verified all m <= 53
+      leading q_5(m) = (1) m^0
+      integer zeros in [0,400): []  => M = 5
+  (a,b,c,d)=(1, 3, 1, 2): order 5, coeff-deg 4; verified all m <= 53
+      leading q_5(m) = (1) m^0
+      integer zeros in [0,400): []  => M = 5
+  (a,b,c,d)=(5, 1, 7, 1): order 5, coeff-deg 4; verified all m <= 53
+      leading q_5(m) = (1) m^0
+      integer zeros in [0,400): []  => M = 5
+  (a,b,c,d)=(1, 1, 1, 0): order 3, coeff-deg 2; verified all m <= 55
+      leading q_3(m) = (1) m^0
+      integer zeros in [0,400): []  => M = 3
+
+Reading: if the leading coefficient's structure (degree/zeros) moves
+with (a,b,c,d), the bound M is per-(support, coefficients), refuting the
+'per-support' wording.  If it stays constant here too, the claim remains
+UNPROVEN (all evidence from constant-leading examples; no uniformity
+argument exists in the file, whose own script writes 'M(p)').
+DONE.

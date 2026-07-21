@@ -178,14 +178,17 @@ mac-mini-S146's DvdK Theorem-2 transplant, one level up.)
 - Entire + bounded ⟹ constant (Liouville); the ray limit makes the constant
   0; contradiction with A_fixed(0) = 1. ∎(mod L1, L2)
 
-**[S186 UPDATE — see THM-1765:]** (L1)'s named threat is CLOSED by the
-fold-edge identity Λ''(u_c)u_c² = −d₁d₂·v(1+o(1)) (the 1/t = v weight
-cancels the degeneration with universal constant −d₁d₂); sub-germ-boundary
-spikes are integrable |s−s*|^{−1/2}; remaining: cusp strata + assembly.
-(L2) proved at working grade (O(t^{−1/2}) with the two integrable
-singularity laws); remaining: assembly. Plus the holonomic reframing:
-E[P^m] is P-recursive, the ladder is Birkhoff–Trjitzinsky, per-support
-finite moment tests exist. THM-1765 is review-gated (referee running).
+**[S186 UPDATE, CORRECTED post-verdict — see THM-1765 as amended:]**
+value-edge-governed (L1) ends are closed with the corrected pair-sum
+constant −(2/3)(d₁+d₂)/(d₁d₂); (L1) otherwise REMAINS FLAGGED — the S186r
+referee REALIZED the named threat on VALUE-HIJACKED ends (p₀-dominated v;
+witness P₄ = ZW + Z⁹W⁷ + W, pair-sum ~ s^{−2}) — plus cusp strata. (L2):
+decay → 0 in all examples; the two-regime (st ≶ 1) estimate is a named
+lemma; the O(t^{−1/2}) rate claim was false (Θ(T^{−2/5}) example).
+Holonomic/P-recursive route: conclusion plausible via double-period
+creative telescoping; filed proof gapped. The global residue identity
+Σ_{all roots} 1/(uΛ') = 0 is the correct pair-sum tool (canonized in
+THM-1765 §1). MISTAKE-207.
 
 ## 5. The repaired Stage B: the √m-graded ladder
 
