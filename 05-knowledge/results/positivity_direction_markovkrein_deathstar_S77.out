@@ -1,0 +1,66 @@
+
+========================================================================
+(E) DIRECTION: LRC needs disc_v <= UPPER bound; positivity gives LOWER bounds
+========================================================================
+good set G'=[1, 2, 3, 5, 8] mod 14:  |G'|/r=5/14,  Parseval nonzero energy=0.22959
+   check: |G'|/r - (|G'|/r)^2 = 0.22959  (= total nonzero energy)
+   v=3: disc_v=0.22959,  complement energy = total - disc_v = 0.00000
+   v=5: disc_v=0.22959,  complement energy = total - disc_v = 0.00000
+   v=7: disc_v=0.03571,  complement energy = total - disc_v = 0.19388
+
+  READING:
+   * LRC covering route B needs  disc_v <= (upper bound)   [|eps_v|^2 <= (6/49) disc_v].
+   * Positive-definiteness / Hankel-PD (GMC's escape) yields LOWER bounds, never upper.
+     -> the shared object disc_v is bounded the WRONG WAY by GMC positivity: MISMATCH.
+   * RESCUE (energy conservation): total nonzero energy is FIXED (Parseval), so
+       disc_v <= B   <=>   complement energy >= total - B.
+     An UPPER bound on disc_v is a LOWER bound on the complementary (non-v-resonant)
+     energy -- a LOWER bound, which a sum-of-squares / Fejer positive certificate CAN
+     supply. THIS is the one surviving positivity idea; it is a METHOD, provable
+     directly, and needs NO assumption of GMC(2).
+
+========================================================================
+(F) The moment FLOOR is 1-D Markov-Krein: positivity FREE, crux = the VALUES
+========================================================================
+toy W on [0,6/7], moments E[W^0..4] = ['1', '13/42', '121/588', '1207/8232', '12769/115248']
+3x3 Hankel of E[W^i]: min eig = 3.7221e-03  -> PSD (FREE: moments of a real RV)
+P(W>0) = 1/2 ;  Paley-Zygmund floor B_2 = E[W]^2/E[W^2] = 0.4656  <= P(W>0)=0.5000: True
+
+  READING:
+   * The Hankel of E[W^i] is PSD automatically (W is a real random variable) -- the
+     LRC floor does NOT need any positivity theorem; positivity is free here.
+   * The floor B_d is an LP over the moment cone; its value is fixed by the moment
+     VALUES E[W^i]. The open LRC crux is computing/bounding those values (the
+     decorrelation tail) -- pure harmonic analysis of the SPEED SET (arithmetic).
+   * GMC(2) is a statement about a DIFFERENT measure (Gaussian) and says NOTHING
+     about the values E[W^i] of the LRC scalar W. It cannot discharge this crux.
+
+========================================================================
+VERDICT
+========================================================================
+GMC(2) => LRC(14) does NOT go through, for three now-sharp reasons:
+
+ 1. TWO OBJECTS, neither transfers.
+    - The object that IMPLIES LRC(14) (moment floor B_d) is 1-D Markov-Krein:
+      positivity FREE, crux = moment VALUES (decorrelation) -> GMC(2)-blind.
+    - The object SHARED with GMC (disc_v = jump-sum energy) needs an UPPER bound;
+      GMC positivity gives LOWER bounds. DIRECTION MISMATCH.
+ 2. LAYER MISMATCH. LRC covering is TORAL (constant-term) = DvdK = the PROVED half
+    of GMC(2)=L_s o CT_u; GMC(2)'s OPEN half is the perpendicular RADIAL/Gaussian
+    layer. Assuming the open half is assuming the LRC-irrelevant half.
+ 3. NOT A POSITIVITY. GMC(2) is a nullcone STRUCTURE (variety) conjecture, not a
+    Hankel positivity; the positive reformulation is methodological, so even the
+    first lemma of the transfer (GMC(2) <=> H_GMC >= 0) is not in hand.
+
+WHAT SURVIVES (the honest, creative residue):
+ * The ONE machine-verified link (disc_v = Parseval of the GMC jump-sum) + energy
+   conservation gives a concrete NEW positivity target for LRC alone: bound disc_v
+   from ABOVE by lower-bounding the complementary (non-v-resonant) energy with a
+   sum-of-squares / Fejer certificate. Method transfer, not statement implication.
+ * LRC-AP's extremal config IS a genuine power-sum moment-nullcone (roots of unity,
+   depth 14) -- so LRC sits ADJACENT to the THM-1775 template (shares the jump-sum
+   object + the positivity manoeuvre) but is NOT an instance (its proof uses a
+   Markov-Krein floor + a certificate discrepancy, not a nullcone vanishing).
+ * The strongest TRUE conditional: assuming GMC(2) closes the repo's own GMC(2)
+   program (radial bridge); it does NOT give JC (needs GMC for ALL n) and does NOT
+   give LRC(14).

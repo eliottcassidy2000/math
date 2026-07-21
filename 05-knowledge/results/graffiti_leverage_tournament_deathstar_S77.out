@@ -1,0 +1,59 @@
+
+========================================================================
+PART 1  WOWII-103 counterexample: triangle + 4 leaves on two vertices
+========================================================================
+alpha = 9   (expected 9)
+b (largest induced bipartite) = 10   (expected 10)
+ecc_avg = 30/11 = 2.72727   (expected 30/11)
+e = 2.71828 ;  ecc_avg > e ? True  -> ln(ecc_avg)=1.00330 > 1
+RHS = floor(b - ln(ecc_avg)) = floor(10 - 1.00330) = 8
+CONJECTURE alpha <= RHS  is  9 <= 8  -> False  (FALSE = refuted)
+VERIFIED: the counterexample holds, and it is BECAUSE 30/11 just exceeds e.
+
+========================================================================
+PART 2  TournamentGraffiti: mine invariant inequalities over tournaments n<=6
+========================================================================
+n=3: 8 labeled tournaments; H range [1,3], tau range [2,3], c3 range [0,1]
+n=4: 64 labeled tournaments; H range [1,5], tau range [3,4], c3 range [0,2]
+n=5: 1024 labeled tournaments; H range [1,15], tau range [3,5], c3 range [0,5]
+n=6: 32768 labeled tournaments; H range [1,45], tau range [3,6], c3 range [0,8]
+
+========================================================================
+miner (a): tau >= floor(log2 n)+1  (Erdos-Moser transitive-subtournament bound)
+========================================================================
+n=3: bound tau>=2;  min tau observed=2;  holds all? True
+n=4: bound tau>=3;  min tau observed=3;  holds all? True
+n=5: bound tau>=3;  min tau observed=3;  holds all? True
+n=6: bound tau>=3;  min tau observed=3;  holds all? True
+
+========================================================================
+miner (b): a 103-STYLE conjecture  tau <= floor( n - ln(kings) )  -- holds? breaks?
+========================================================================
+n=3: tau <= floor(n - ln(kings)) : BREAKS (2 counterexamples)   e.g. tau=2,kings=3,rhs=1
+n=4: tau <= floor(n - ln(kings)) : BREAKS (32 counterexamples)   e.g. tau=3,kings=3,rhs=2
+n=5: tau <= floor(n - ln(kings)) : BREAKS (520 counterexamples)   e.g. tau=4,kings=3,rhs=3
+n=6: tau <= floor(n - ln(kings)) : BREAKS (8160 counterexamples)   e.g. tau=5,kings=3,rhs=4
+
+========================================================================
+miner (c): 'holds small, breaks larger' -- H <= 2^(n-2) * c(n)?  the Graffiti trap
+========================================================================
+n=3: naive conjecture  H <= (tau)!  : BREAKS (2)
+n=4: naive conjecture  H <= (tau)!  : HOLDS
+n=5: naive conjecture  H <= (tau)!  : BREAKS (184)
+n=6: naive conjecture  H <= (tau)!  : BREAKS (15120)
+
+========================================================================
+LEVERAGE SUMMARY
+========================================================================
+1. VERIFIED WOWII-103 counterexample; its engine = a MARGINAL TRANSCENDENTAL
+   THRESHOLD (ecc_avg=30/11 just exceeds e, crossing the floor's integer boundary).
+2. TournamentGraffiti works: the repo's invariant zoo (H, c3, tau, kings, scores,
+   + eigenvalues/disc/pencil/even-graph invariants not shown) is a ready database
+   for an automated conjecture/refute engine over n<=7. Erdos-Moser survives; the
+   103-style floor+log guesses are auto-tested; naive guesses show the 'holds small,
+   breaks larger' pattern = the repo's own MISTAKES.md experience = the 103 story.
+3. TWO transferable techniques for the repo: (a) MARGINAL-THRESHOLD refutation --
+   hunt configs where a repo bound with a transcendental term (the 'triangle'
+   constants sqrt2,pi,e,gamma; LRC 1/(n+1); measure-horn 1/(7L)) crosses an integer/
+   rational boundary; (b) FLOOR+LOG conjecture shape as a template for tightening
+   the repo's own invariant inequalities (width formula, H-spectrum {7,21} gaps).

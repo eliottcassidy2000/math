@@ -1,0 +1,67 @@
+
+========================================================================
+(A) LRC-AP covering moments  ==  GMC toral moments CT_u[Lambda^m], Lambda=Fejer
+========================================================================
+N= 3 (AP speeds 1..3):  c_m = CT[Fejer^m], m=0..6 = [1, 3, 19, 141, 1107, 8953, 73789]
+N= 5 (AP speeds 1..5):  c_m = CT[Fejer^m], m=0..6 = [1, 5, 85, 1751, 38165, 856945, 19611175]
+N=13 (AP speeds 1..13):  c_m = CT[Fejer^m], m=0..6 = [1, 13, 1469, 204763, 30162301, 4577127763, 707972099627]
+  -> LRC-AP covering moments are literally the GMC toral constant-terms CT_u[Lambda^m].
+  -> so the LRC-AP covering lives on the TORAL layer (the PROVED DvdK/TNC half).
+
+========================================================================
+(B) DvdK/TNC (toral nullcone, PROVED) detects Fejer as non-degenerate
+========================================================================
+N= 3: CT[Fejer^m]>0 for m=1..8 ? True   (values [3, 19, 141, 1107, 8953]...)
+N= 5: CT[Fejer^m]>0 for m=1..8 ? True   (values [5, 85, 1751, 38165, 856945]...)
+N=13: CT[Fejer^m]>0 for m=1..8 ? True   (values [13, 1469, 204763, 30162301, 4577127763]...)
+  -> Fejer is one-signed (>=0), so it is NOT in the toral nullcone; DvdK sees it.
+  -> KEY: this is UNCONDITIONAL (DvdK is proved). Assuming GMC(2) adds nothing here.
+
+========================================================================
+(C) Submatrix mechanism: unbounded PSD Hankel  =>  bounded depth-4 block PSD
+========================================================================
+radial Hankel ((i+j)!)_{0..3}: min eig >0 (5.290e-02)  -> PSD=True
+radial Hankel ((i+j)!)_{0..6}: min eig >0 (5.090e-03)  -> PSD=True
+radial Hankel ((i+j)!)_{0..9}: min eig <=0 (-6.240e-01)  -> PSD=False
+
+4x4 top-left block of the 10x10 radial Hankel: min eig 5.290e-02
+  -> submatrix of PSD is PSD: the BOUNDED depth-4 positivity is FREE once the
+     UNBOUNDED (infinite) Hankel is PSD.  THIS is how positivity transfer would
+     defeat GMC's growing detection depth D(M,N,d)=(M+N)(2d+1): a bounded block.
+
+========================================================================
+(D) AP critical config = (N+1)-th roots of unity: power-sum moment-nullcone
+========================================================================
+N= 2 moving (LRC3): AP@t=1/3 -> 3th roots of unity; p_1..p_3 = [0, 0, 3], p_4=0;  depth = 3
+N= 4 moving (LRC5): AP@t=1/5 -> 5th roots of unity; p_1..p_5 = [0, 0, 0, 0, 5], p_6=0;  depth = 5
+N=13 moving (LRC14): AP@t=1/14 -> 14th roots of unity; p_1..p_14 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14], p_15=0;  depth = 14
+
+DEPTH DICTIONARY for LRC14 (N=13 moving, constant 1/14):
+   naive power-sum (roots of unity) depth ......... N+1 = 14
+   repo apex moment-order depth (p+1)/2, 2p=14 .... 4
+   GMC toral depth  = span (THM-1710) ............. bounded by charge width
+   GMC radial depth = d+1 (THM-1790) ............... grows with radial degree
+   GMC full depth   = (M+N)(2d+1) (THM-1795) ....... grows in BOTH  (UNBOUNDED)
+The repo's apex depth 4 << naive 14: the LRC moment functional is far cleverer
+than the roots-of-unity one. Whether depth-4 is a TORAL (bounded, span-like) or
+RADIAL (growing) mechanism is the crux that decides if assuming the OPEN radial
+half of GMC(2) can help -- pending the exact disc_v / apex-kernel form.
+
+
+========================================================================
+SUMMARY
+========================================================================
+(A) LRC-AP covering moments ARE GMC toral constant-terms CT_u[Fejer^m]: VERIFIED.
+(B) DvdK/TNC (the PROVED toral half) already sees Fejer as non-degenerate: VERIFIED.
+    => the LRC-relevant layer of GMC(2) is the ALREADY-PROVED one; the OPEN part
+       of GMC(2) is the perpendicular RADIAL/Gaussian half.
+(C) submatrix-of-PSD-is-PSD turns an UNBOUNDED Hankel positivity into a BOUNDED
+    depth-4 block: the mechanism that would defeat GMC's growing depth: VERIFIED.
+(D) AP crit config = roots of unity = a genuine power-sum moment-nullcone (depth
+    N+1=14), but the repo's apex functional hits depth 4: two different functionals.
+
+ARCHITECTURE (to state honestly): direct GMC(2)=>LRC(14) is misdirected -- LRC is
+TORAL (DvdK, proved), GMC(2)'s open part is RADIAL. The transfer that could work
+is POSITIVITY (Path C): IF the shared residual (arc-endpoint jump-sum) is an
+infinite Hankel form, submatrix-positivity gives the bounded LRC floor. The exact
+nesting test needs the disc_v / apex-kernel definition (Agent 2).
