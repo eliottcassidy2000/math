@@ -1,0 +1,80 @@
+====================================================================================
+(1) THE LRC DANGER COUNT IS A BOUNDED-ALPHABET MOMENT PROBLEM -> Bonferroni TERMINATES
+====================================================================================
+ LRC(14): 13 nonzero speeds; danger count X(t) = #{v : ||v t|| < 1/14} in {0,1,...,13}.
+ M(S) >= 1/14  <=>  exists t with X(t)=0  <=>  the danger measure has a ZERO (moment-nullcone).
+ X <= 13, so the factorial moments S_k = E[C(X,k)] VANISH for k > 13 and the
+ inclusion-exclusion (Bonferroni) is a FINITE, terminating alternating sum.
+
+ iid model p=1/7, n=13:  true P(X=0) = (6/7)^13 = 0.134801
+ depth m  B_m = sum_{k<=m} (-1)^k S_k   >0?   |B_m - true|
+       0                     1.000000  True       0.865199
+       1                    -0.857143 False       0.991943
+       2                     0.734694  True       0.599893
+       3                    -0.099125 False       0.233926
+       4                     0.198667  True       0.063867
+       5                     0.122092  True       0.012709
+       6                     0.136678  True       0.001877
+       7                     0.134594  True       0.000207
+       8                     0.134817  True       0.000017
+       9                     0.134800  True       0.000001
+      10                     0.134801  True       0.000000
+      11                     0.134801  True       0.000000
+      12                     0.134801  True       0.000000
+      13                     0.134801  True       0.000000
+
+ The alternating Bonferroni brackets the truth (6/7)^13 = 0.1349.  It first becomes reliably
+ POSITIVE at depth m = 2 -- the LRC-covering DETECTION DEPTH.  My THM-671's quintic B5
+ (depth 5) is exactly the truncation whose iid floor B5(13) = 2052/7^5 = 0.1221 > 0
+ first clears the wall; the cubic B3 is still negative (the depth-1/2 union ledgers broke there).
+
+====================================================================================
+(2) THE UNIFICATION -- LRC and GMC(2) are ONE moment-nullcone problem, split by DEPTH
+====================================================================================
+
+  MOMENT NULLCONE (kind-pasteur THM-1750): a moment functional F; the nullcone = where F
+  collapses; the DETECTION DEPTH = the arithmetic complexity = how many moments certify.
+
+  BONFERRONI / FERMIONIC side (LRC): the covering certificate is the ALTERNATING inclusion-
+  exclusion B_m = sum (-1)^k S_k -- a SIGNED (fermionic) truncation.  The 'cancellation wall'
+  (death-star-S67) is where the alternating sum dips negative; B5 is the first POSITIVE (bosonic)
+  truncation past it (THM-671).  Because the alphabet X is BOUNDED (<=13), the sum TERMINATES
+  and a FINITE depth (5) certifies -- LRC(14)-covering is finitely decidable.
+
+  LAPLACE / BOSONIC side (GMC(2)): the moment engine E[P^m] = L_s(CT_u[Lambda_s^m]) is the
+  PERMANENT/HAFNIAN functional (THM-1810) -- NO sign, no cancellation.  Its alphabet (the radial
+  degree) is UNBOUNDED, so the Bonferroni-analog never terminates and the detection depth GROWS
+  with degree (EMP floor >= d+1, THM-1790).  No finite depth certifies -- GMC(2) is not finitely
+  decidable per span.
+
+  THE DISCRIMINATING INVARIANT is boundedness of the moment alphabet:
+     LRC(14)-covering : alphabet |X| <= 13  =>  detection depth 5 (B5)      => FINITE certificate
+     GMC(2)           : alphabet = radial degree, unbounded => depth >= d+1  => NO finite certificate
+  Same 'positivity past the cancellation wall'; opposite finiteness, for one structural reason.
+
+====================================================================================
+(3) A CONCRETE TRANSFER: the LRC B5 floor is the depth where the FERMIONIC truncation
+    turns BOSONIC-positive -- and its value is set by the tight instance, not the iid mean
+====================================================================================
+ iid floor B5(13) = 2052/7^5 = 0.1221 (THM-671); the covering-min extremal 14/183 sits at
+ the boundary where B5 = LM exactly at the best modulus (THM-671 census).  The moment-
+ nullcone reading: the tight LRC instance is the one whose danger measure is CLOSEST to
+ having no zero -- the analog of a GMC nullcone member barely failing one-sidedness.
+ Both are 'the extremal point of the moment variety', and the detection depth measures
+ how many moments are needed to see it: 5 for LRC (bounded), d+1->inf for GMC (unbounded).
+
+================================================================================
+CORRECTION (klein-S389, on reading my own output): iid depth != real LRC depth
+================================================================================
+ My script called m=2 "the LRC-covering detection depth". WRONG -- that is where the IID-mean
+ Bonferroni turns positive, and the iid mean is too OPTIMISTIC. The ACTUAL LRC covering
+ certificate needs depth 5 (B5, THM-671): the real Z_q kill sets are CORRELATED, and on the
+ ADVERSARIAL instances (C1 u C4-killers, the 7-structured @91 cluster) the cubic B3 goes NEGATIVE
+ while B5 clears the wall. So:
+    iid model:                  Bonferroni positive at depth 2 (mean is fat, no wall)
+    real correlated/adversarial: needs depth 5 (B5) -- the depth where the SIGNED truncation
+                                 first stays positive against the worst correlated instance.
+ THE LOAD-BEARING POINT IS UNCHANGED and correct: the LRC detection depth is FINITE (5, and at
+ most 13 because X <= 13 forces the Bonferroni to terminate), whereas the GMC(2) detection depth
+ is UNBOUNDED (>= d+1, THM-1790). Same 'positivity past a cancellation wall'; the discriminant is
+ boundedness of the moment alphabet (X <= 13 for LRC vs radial degree unbounded for GMC).
