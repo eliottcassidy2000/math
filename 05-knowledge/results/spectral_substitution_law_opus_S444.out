@@ -1,0 +1,22 @@
+SPECTRAL SUBSTITUTION LAW: nz-spec(T[S^m]) = [nz-spec(S) x k] U [m * nz-spec(T)] ?
+======================================================================
+  T=C3[C3^3] (N=9): law holds=True
+  T=C3[T3^3] (N=9): law holds=False
+     actual=[np.float64(0.1325), np.float64(0.1325), np.float64(0.7041), np.float64(0.7041), np.float64(3.0), np.float64(3.0), np.float64(32.1634), np.float64(32.1634)]
+     pred  =[np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(27.0), np.float64(27.0)]
+  T=T3[C3^3] (N=9): law holds=True
+  T=C3[C5^5] (N=15): law holds=True
+  T=C5[C3^3] (N=15): law holds=False
+     actual=[np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(4.7508), np.float64(4.7508), np.float64(85.2492), np.float64(85.2492)]
+     pred  =[np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(4.7511), np.float64(4.7511), np.float64(85.2489), np.float64(85.2489)]
+  T=T3[T3^3] (N=9): law holds=False
+     actual=[np.float64(0.1325), np.float64(0.1325), np.float64(0.7041), np.float64(0.7041), np.float64(3.0), np.float64(3.0), np.float64(32.1634), np.float64(32.1634)]
+     pred  =[np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(27.0), np.float64(27.0)]
+  T=C5[C5^5] (N=25): law holds=False
+     actual=[np.float64(0.5279), np.float64(0.5279), np.float64(0.5279), np.float64(0.5279), np.float64(0.5279), np.float64(0.5279), np.float64(0.5279), np.float64(0.5279), np.float64(0.5279), np.float64(0.5279), np.float64(9.4721), np.float64(9.4721), np.float64(9.4721), np.float64(9.4721), np.float64(9.4721), np.float64(9.4721), np.float64(9.4721), np.float64(9.4721), np.float64(9.4721), np.float64(9.4721), np.float64(13.1966), np.float64(13.1966), np.float64(236.8034), np.float64(236.8034)]
+     pred  =[np.float64(0.5279), np.float64(0.5279), np.float64(0.5279), np.float64(0.5279), np.float64(0.5279), np.float64(0.5279), np.float64(0.5279), np.float64(0.5279), np.float64(0.5279), np.float64(0.5279), np.float64(9.4721), np.float64(9.4721), np.float64(9.4721), np.float64(9.4721), np.float64(9.4721), np.float64(9.4721), np.float64(9.4721), np.float64(9.4721), np.float64(9.4721), np.float64(9.4721), np.float64(13.1975), np.float64(13.1975), np.float64(236.8025), np.float64(236.8025)]
+
+CONSEQUENCE: C3[C3] (n=9) spectrum = seed sqrt3 (mult 3 pairs) + block 3*sqrt3 (=sqrt27) --
+  nz-lambda^2(C3[C3]) = [np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(27.0), np.float64(27.0)]  = [3]*6 (seed, k=3) U [27]*2 (block m^2*3=9*3)
+  => tr(S^8) and every even moment of any substitution object is a CLOSED FORM in the seed
+     moments -- giving exact octonion-wall (degree-8) test objects at n=9,15,21,...

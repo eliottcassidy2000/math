@@ -1,0 +1,31 @@
+(1) SEED (prime/indecomposable) tournament census
+============================================================
+  n=1: 1 iso classes, 1 PRIME (seeds)
+  n=2: 1 iso classes, 1 PRIME (seeds)
+  n=3: 2 iso classes, 1 PRIME (seeds)
+  n=4: 4 iso classes, 0 PRIME (seeds)
+  n=5: 12 iso classes, 3 PRIME (seeds)
+  n=6: 56 iso classes, 15 PRIME (seeds)
+  seed counts n=1..6: [1, 1, 1, 0, 3, 15]  (OEIS: simple tournaments)
+
+  C3 prime? True;  transitive prime? False
+
+(2) SUBSTITUTION composition: C3[S,S,S] (blow up the 3-cycle by S)
+============================================================
+  C3[C1^3]: N=3, regular? True (out-deg 1), charS=(1, 0, 3, 0), SC4=0
+  C3[C3^3]: N=9, regular? True (out-deg 4), charS=(1, 0, 36, 0, 270, 0, 756, 0, 729, 0), SC4=81
+
+(3) THE OCTONION OBJECT C3[C3] (n=9)
+============================================================
+  C3[C3]: N=9, regular=True (out-deg 4); charS=(1, 0, 36, 0, 270, 0, 756, 0, 729, 0)
+  SC4(C3[C3]) = 81; H(C3[C3]) = 3159
+  lambda^2 multiset = [np.float64(0.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(27.0), np.float64(27.0)];  var(lambda^2) = 104.0
+  (transitive n=9 var = 2*C(9,3) = 168; this measures its GIT-instability)
+
+(4) PATTERN: SC4 under substitution (the var/octonion-relevant census)
+============================================================
+  C3[C1^3] (N=3): SC4=0  (per-block SC4=0)
+  C3[C3^3] (N=9): SC4=81  (per-block SC4=0)
+
+ READING: the PRIME seeds are C3 and the larger simple tournaments; C3[C3] (n=9) is the
+ substitution-SQUARE of the smallest seed, a regular tournament at the octonion level.

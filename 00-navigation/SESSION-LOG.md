@@ -1,3 +1,34 @@
+## opus-2026-07-20-S444 - Tournaments compose from REGULAR SEEDS: the spectral substitution law + octonion object C3[C3] (THM-1960)
+
+Owner: consider the three recursion modes (A+B+C-D-E-F+G / A+B-C+D-E-F+G / A+B-C) + tournaments as
+recursively composed of subtournament seeds; what iso-class seeds correspond to larger tournaments?
+FRAME = modular/substitution (Gallai) decomposition; seeds = PRIME (no nontrivial module) tournaments.
+
+THM-1960: (1) SEED CENSUS (modular-prime) = 1,1,1,0,3,15 for n=1..6; C3 = smallest nontrivial seed;
+transitive = fully-linear; n=4 has ZERO seeds. CRUCIAL DISTINCTION (from the prior-work map): the
+repo's order-join/SCC 'atoms' are STRONGLY-CONNECTED (THM-1862, 1,1,6,35,353) but modular-primes are
+STRICTLY stricter -- the SC 4-tournament is an order-join atom yet has a module (0 modular seeds at
+n=4). Substitution carves INSIDE strong components. (2) SPECTRAL SUBSTITUTION LAW: for T[S^m], skew =
+S_T (x) J_m + I_k (x) S_S; when the SEED is REGULAR (row-sums 0 => block-mean in ker), nz-spec(T[S^m])
+= [nz-spec(S) x k] U [m*nz-spec(T)]; verified regular C3,C5, FAILS irregular T3. => all even moments of
+regular-seed substitution objects are closed forms in seed moments. (3) OCTONION OBJECT C3[C3] (n=9):
+regular, char_S=x(x^2+3)^3(x^2+27), var=104, SC4=81=3^4, H=3159=3^5*13 -> exact degree-8 test object
+for the octonion wall (THM-1935/1940). (4) the 3 modes = Mobius/Legendre/Eisenstein CHARACTERS
+(+++---+ / ++-+--+ / ++-); ++- = the C3 base seed.
+
+CONCURRENT/PRIOR-WORK: coordinates with boxeph stub THM-1955 ('which iso-classes come from smaller',
+CLAIMED, circulant-character reduction DAG) -- I fill the modular-prime + spectral-substitution axis,
+complementary not overriding. char_A=prod char_A(SCC) (THM-1830/1925) = the linear-quotient special
+case; my skew regular-seed law is the CYCLIC-quotient generalization. H=prod_modules H (S531 apex-
+recursion) = transitive-quotient case; my cyclic H(C3[C3])=3159 is new. Fixed a stale THM-1855 alias
+-> THM-1862.
+
+OPEN: H under cyclic substitution (the 13 in 3159); tr(S^8) octonion-wall test on C3[C_{2j+1}]; seed
+census to n=7.
+
+Files: THM-1960; HYP-8705; seed_tournaments_and_substitution + spectral_substitution_law _opus_S444.py
+(+out). Namespace clean (1960/8705). Builds on THM-1920/1935/1940, cites THM-1862/1830/1955/442/830.
+
 ## death-star-2026-07-21-S81 -- CHASED THE PREDICTIONS: Pell supersymmetry is a real GMC(2) moment identity (E[sym²]−E[alt²]=E[(ZW)^n]=n!); α(E_n)=2^{n−4} confirmed to n=7 (α(E_7)=8); recursion modes resolve to the order-join. HYP-8696.
 
 **Owner directive:** chase the predictions; think the A+B+C−D−E−F=G / A+B−C recursion modes as literally subtournaments — which iso classes come from smaller subtournament classes.
