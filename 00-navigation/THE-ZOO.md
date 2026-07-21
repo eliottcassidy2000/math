@@ -22,7 +22,7 @@ to §6. This is the map, not the territory — details live in canon; this point
 > `../07-reflections/deep-archaeology-the-oeis-and-uncanonized-hyp-layers-kps-S128c137.md`
 > (OEIS/uncanonized-HYP layers). **THE-ZOO's distinctive contribution:** the broader *repo-wide*
 > (all five topics + engineering + reflections) six-agent forgotten-lead recovery (§4), the
-> two-empty-column gap finding (§5), and the insertion-response calculus THM-1880 (§6 seed).
+> two-empty-column gap finding (§5), and the insertion-response calculus THM-1900 (§6 seed).
 
 ---
 
@@ -100,7 +100,7 @@ circulating split of metagraph current, pairs with THM-833 OU drift).
 16. **Cayley–Dickson doubling tower** — a filtration losing one property per level.
 17. **Epistemics-is-the-bottleneck / convergence** — the fleet keeps rediscovering one object under many names.
 18. **The five-axis triage law** — a method decides near-floor LRC structure only if it breaks translation-invariance, respects dilation, bounds a max/tail, tolerates signed cancellation, is cross-modulus adaptive.
-19. **Inflation-response (new, THM-1865/1880)** — classify each invariant by how a construction (insertion/join/dilation) moves it: **neutral ⟹ rigid extremal; pumped ⟹ inflation-fragile** (the WOWII-103 transfer). See §6.
+19. **Inflation-response (new, THM-1865/1900)** — classify each invariant by how a construction (insertion/join/dilation) moves it: **neutral ⟹ rigid extremal; pumped ⟹ inflation-fragile** (the WOWII-103 transfer). See §6.
 
 ---
 
@@ -119,7 +119,7 @@ Ranked, with location + why. (Full lists in the S439 session letter / task outpu
 - **HYP-3805/3819** — flip-rank skip-2 rule hits 454/456 iso-classes; k(7)=12; find the rule handling the 2 missing classes (regular + (1,2,2,3,4,4,5)).
 - **HYP-6445** — Q_s=O(r) density survives (the pointwise offdiag≤0 route died, target didn't).
 - **HYP-5207** — k=9/10 discharge fails ONLY at d∈{1,2} (2-adic); dispatch those two → uniform.
-- **HYP-260** — δ-inequality fails ONLY at source/sink (now explained by THM-1880: those are the extreme condensation down-sets).
+- **HYP-260** — δ-inequality fails ONLY at source/sink (now explained by THM-1900: those are the extreme condensation down-sets).
 - **HYP-8315** — maximiser regular at odd n (open; connects to THM-1865).
 - **F-polynomial log-concavity** — 1020/1024 at n=5 (4 exceptions), 100% n=6–8; classify the 4.
 
@@ -182,7 +182,7 @@ Cayley–Dickson double, LRC leaf-inflation v→2v, LRC dilation V→cV, append/
    pumped ⟹ inflation-fragile (WOWII-103 counterexamples exist). This IS the inflation-response
    frame (§3.19) made systematic.
 
-**Worked seed (this session, THM-1880): the insertion-response calculus.** Pushing generator 4 on
+**Worked seed (this session, THM-1900): the insertion-response calculus.** Pushing generator 4 on
 the *insertion* operation (add u beating exactly subset P) yielded two exact laws (verified n≤5):
 - **c₃-velocity = the forward cut:** `Δc₃(T,P) = e(P → V∖P)`; c₃-neutral ⟺ P is a closed set.
 - **H-neutrality = condensation down-sets:** H-neutral ⟺ P is a union of initial strong components;
@@ -202,4 +202,4 @@ the *insertion* operation (add u beating exactly subset P) yielded two exact law
 
 *Provenance: six parallel Explore agents (navigation/backlog, hypothesis graveyard, reflections,
 engineering/paper, method inventory, object-grid+Lean-state), opus-2026-07-20-S439. Full findings
-in the session letter and canon (THM-1880, HYP-8655).*
+in the session letter and canon (THM-1900, HYP-8655).*

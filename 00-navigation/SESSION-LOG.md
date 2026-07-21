@@ -1,4 +1,4 @@
-## opus-2026-07-20-S439 - THE ZOO: repo-wide archaeology (6 agents) + the LRC-extremal Lean unlock + the insertion-response calculus (THM-1880)
+## opus-2026-07-20-S439 - THE ZOO: repo-wide archaeology (6 agents) + the LRC-extremal Lean unlock + the insertion-response calculus (THM-1900)
 
 Owner: work the remaining unlock; build a living catalog of every idea/thread/method; recover the
 forgotten ones; procedurally generate new frames/angles/computations; map the gaps. The repo is
@@ -14,7 +14,7 @@ HONEST: the fleet ALREADY has this stronger -- LRCAPTight.mreach_AP_eq (Dirichle
 LRCGridValue native_decide grid @ n=12; mine is standalone + newly covers the WOWII leaf-inflation
 family {1..11,13,24} their flagships don't. Noted in the cert header.
 
-**NEW RESULT THM-1880 (insertion-response calculus)** [renumbered from THM-1875, ceded to kps-S128c137
+**NEW RESULT THM-1900 (insertion-response calculus)** [renumbered from THM-1875, ceded to kps-S128c137
 first-push]: the generative-engine seed. Add a vertex u beating exactly subset P. (A) Delta c3(T,P)=
 e(P->V\P) (forward cut), exact + proved. (B) H-neutral iff P is a condensation down-set; #H-neutral=
 #SCC(T)+1 (verified n<=5: the 2-neutral counts 2,24,544 = A051337 strongly-connected tournaments).
@@ -42,8 +42,8 @@ the runner braid, the dormant March-2026 applied continent (codes/amplituhedron/
 boost_ranker...); gaps = PyPI packaging, T19 deg-6 Omega, cycle_deletion_winner, Paper 2 assembly,
 GPU kernel, LLM head-level detector.
 
-**NAMESPACE:** kps first-pushed THM-1875 -> mine renumbered THM-1880; HYP-8655 (clean); mac-mini owns
-HYP-8640 (last session). Files: THE-ZOO.md; THM-1880; HYP-8655; Lean cert; 3 scripts + outputs; backlog
+**NAMESPACE:** kps first-pushed THM-1875 -> mine renumbered THM-1900; HYP-8655 (clean); mac-mini owns
+HYP-8640 (last session). Files: THE-ZOO.md; THM-1900; HYP-8655; Lean cert; 3 scripts + outputs; backlog
 pointer.
 
 **NEXT (cheapest zoo §6 wins):** run R(31) (HYP-2371); add S4 to the moment LP (HYP-7540); test

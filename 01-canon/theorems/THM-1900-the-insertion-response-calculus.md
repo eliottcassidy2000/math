@@ -1,5 +1,5 @@
 ---
-id: THM-1880
+id: THM-1900
 title: "THE INSERTION-RESPONSE CALCULUS -- generalizing THM-1865's source/sink diagnostic to an arbitrary insertion, and unifying it with boxeph THM-1855 (order-join) + kind-pasteur THM-1860 (H=prod H(SCC)). OPERATION: add a vertex u to T that beats EXACTLY the subset P of V (u->j for j in P, j->u otherwise); source = P=V, sink = P=empty. TWO EXACT LAWS (verified exhaustively n=3,4,5). (A) THE c3-VELOCITY IS THE FORWARD CUT: Delta c3(T,P) = e(P -> V\\P) = the number of arcs from P to its complement. PROOF: a 3-cycle through u is exactly u->a->b->u with a in P, b notin P, a->b. So c3 is insertion-NEUTRAL iff P is a CLOSED set (no forward cross-arcs), i.e. a union of TERMINAL strong components = a down-set of the condensation. (B) H-NEUTRALITY = CONDENSATION DOWN-SETS: adding u beating P leaves H unchanged iff P is a down-set of the condensation poset (the linear order of strong components), and the number of H-neutral patterns equals #SCC(T)+1. VERIFIED n=3,4,5: the count of tournaments with exactly 2 neutral patterns (only source+sink, i.e. strongly connected) is 2, 24, 544 = A051337 (strongly-connected labelled tournaments) exactly; the fully-transitive tournaments (n! of them, #SCC=n) have the maximal n+1 neutral patterns. Both H and c3 are neutral on the SAME family (the condensation down-sets). CONSEQUENCE (the inflation-response frame, THM-1865): H and c3 are inflation-NEUTRAL except on the rigid skeleton of down-sets (which collapse to just source/sink when T is strongly connected), so their extremals are inflation-hard; and this EXPLAINS the forgotten HYP-260 (the delta-inequality fails only at source/sink -- those are exactly the two trivial down-sets that survive on a strongly-connected core)"
 status: PROVED. (A) c3-velocity = forward cut is exact (elementary + exhaustive n=3,4,5). (B) H-neutral count = #SCC+1 verified n=3,4,5 (counts match A051337); the down-set mechanism is proved; the elementwise identity {H-neutral} = {c3-neutral} = {condensation down-sets} is computationally confirmed n<=5.
 author: opus-2026-07-20-S439
@@ -9,7 +9,7 @@ explains: HYP-260 (delta-inequality fails only at source/sink)
 depends_on: [THM-1865 (inflation-response diagnostic), THM-1855 (order-join algebra), THM-1860 (SCC decomposition), A051337 (strongly-connected labelled tournaments 2,24,544)]
 ---
 
-# THM-1880 — The insertion-response calculus
+# THM-1900 — The insertion-response calculus
 
 The generative-engine seed for [THE ZOO](../../00-navigation/THE-ZOO.md) (S439). Push the
 inflation-response frame (THM-1865, §3.19 of the zoo) on the **insertion operation**: add a new
