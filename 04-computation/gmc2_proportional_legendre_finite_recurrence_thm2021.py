@@ -249,7 +249,7 @@ def main() -> None:
     print("ALTERNATE VERTICES considered: return channels, individual roots, moment levels, proof obligations")
     print("CHOSEN quotient: moment levels; observable=degree gcd(A_m,A_n); chronological gauge flips on shared roots")
     print("PRESERVES: exact pairwise root recurrence; DESTROYS: root identity, multiplicity, and analytic location")
-    print("CHALLENGED ASSUMPTION: no-consecutive-zero is not eventual nonvanishing and cannot by itself invoke EMP")
+    print("CHALLENGED ASSUMPTION / MISTAKE-213: finite zero recurrence is not needed for NC2; no-consecutive-zero already gives unbounded toral nonzeros, which meet EMP's cofinite radial tail")
     print("NOTE external 2026 Legendre finiteness is not proved by this computation")
 
 

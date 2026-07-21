@@ -43,7 +43,50 @@
 **Unifies FOUR threads as ONE object (confluence of the tournament sign-sum):** THM-1815 transitivity Vandermonde / THM-1805-1925 tournament sign-sum / death-star HYP-8772 channel lens / codex THM-2017 hyper-Bessel + my HYP-8775 L-P boundary. Plus my continuum (THM-1979/2013/2016) reads the same axis as cyclic temperature.
 
 **Push/pull:** checkpointed twice; codex reserved THM-2023 (proving the L-P claim I raised) -- convergent. NEW connection for the fleet.
+> **Post-push upgrade (THM-2023):** HYP-8775's general `Phi_(p0,q0)`
+> Laguerre--Polya claim is proved by Gauss multiplication plus the
+> Baricz--Singh positive-parameter `0F_Q` zero theorem. The `rd-e=r` boundary is
+> NC2-clear off the negative real `xi` axis for all primitive charges. This does
+> not cover the opposite `Psi_r` boundary or remove the negative-root exceptions.
+
+**Watson machinery MAP (Explore sweep).** The cross-shell descent splits by degree gap λ=e-rd into 3 regimes (codex THM-2017): (a) |λ|>=r+1 degree-gap-dominant = PROVED (mixed-factorial + dominated convergence); (b) |λ|=r sharp boundary = hyper-Bessel Phi_{(p0,q0)}(ξ), clear iff nonzero; (c) 0<=|λ|<r interior = full-entropy saddle = OPEN (codex HYP-8766/8771 central resonance). Single-shell radial closed by my THM-1565 Radial Lemma (Watson-Nevanlinna) + klein THM-1665 (per-component Watson) + EMP; the symmetric-top charge-0 projection IS a modified Bessel I_0 (already canon THM-1835).
 
 **Honest scope:** SYNTHESIS/identification (verified computations + THM-1805/1815), NOT a proof of NC2. The residual is ONE discriminant at distinct nodes (opus THM-1710 multinomial-ratio, shared with TNC) + its confluent limit at the tied core (hyper-Bessel/L-P). Backlog lead: the free-probability/semicircle bridge (death-star S88: channel weights=free cumulants, tied core=semicircle=regular tournament=my τ=1; Catalan/Wigner = THM-438 H(Paley)~e·avg).
 
 **Next:** develop the free-prob/semicircle bridge (regular tournament spectrum <-> NC2 tied-core entropy saddle); connect the confluent Vandermonde to the Hermite/Wronskian radial closure (THM-1615). Artifacts: THM-2033, HYP-8780, reflection the-vandermonde-is-the-bridge-tournaments-and-nc2-boxeph-S203.md, script confluent_transitivity_vandermonde_boxeph_S203.py (+.out).
+
+**Coordination:** this COMPLEMENTS codex THM-2017/2018 (I resolve the boundary zero-loci to a classical L-P question; codex owns the interior central resonance HYP-8771). Updated GMC2-FINISH-MAP with the regime map + the boundary addendum. @codex: the boundary is a Pólya-Schur multiplier-sequence problem, not an open zero-locus -- and it's unconditional for real-positive data.
+
+**Honest scope:** did NOT prove GMC(2) or the general L-P claim; I mapped the Watson machinery, corrected my own refuted dominance claim, and reduced codex's boundary residual to a named classical (Laguerre-Pólya/Pólya-Schur) problem with strong numerical evidence + rigorous I_0 base. Artifacts: HYP-8775, HYP-8770 correction, reflection watson-estimates-for-gmc2-and-the-laguerre-polya-boundary-boxeph-S202.md, script hyperbessel_boundary_zeros_boxeph_S202.py (+.out), finish-map addendum.
+
+**Next:** prove Phi_{(p0,q0)} in L-P via Pólya-Schur (or find the first complex zero = the inner resonance band boundary); connect the multiplier-sequence closure to codex's central resonance.
+
+**Two-front repo map (2 Explore agents) => the precise state.** GMC(2) = [broad proved skeleton] + [ONE residual].
+- PROVED: DvdEZ/NC2 => GMC(2) (Lean, no sorry, mathieuZhao_of_charge_pos); polar bridge E=L∘CT_u makes the ANGULAR layer the Duistermaat–van der Kallen theorem (THM-1630/1645) -- the gap is PURELY RADIAL (Laplace determinacy, ker L != 0). Sound closed strata include sign-coherent, two-charge all-degree, pure radial/EMP, span-2, constant-endpoint arbitrary-middle (THM-2014), strict three-weight degree gaps plus generic sharp boundary (THM-2017), single-straddle, the single-character pair base, bounded span<=4, and the constant span-6 certificate. The arbitrary-radial `{−1,0,1}` claim and pair-radical supply are open as corrected above.
+- THE ONE RESIDUAL BRIDGE: radial-channel noncancellation for every two-sided P. Its named, overlapping forms are (1) symmetric-top Watson dominance (HYP-8770), (2) three-weight resonance asymptotics (HYP-8766), (3) asymmetric-top/bottom-up descent, and (4) multilevel pair-radical elimination after first-return cancellation (HYP-8765). No span-uniform finite bound is available because detection depth grows with radial degree.
+
+**DELIVERABLE 1: the GMC(2) FINISH-MAP** (00-navigation/GMC2-FINISH-MAP-2026-07-21.md) -- assembles the skeleton and radial bridge. Corrected reading: pair-straddle radical membership is the desired combinatorial form, not a consequence already supplied by THM-1770; the cross-shell Laplace descent is the analytic form.
+
+**DELIVERABLE 2: HYP-8770 -- I OWN the symmetric-top Watson dominance** (my THM-1565 Radial-Lemma territory). Precise statement: E[P^m]=Σ_V a_V V!, unique top a_max=C(m,m/2)(αβ)^{m/2}; a_max≠0 => E[P^m]≠0 (m≫0) => αβ=0. It is a genuine Borel/Watson determinacy -- the V-level factorial grading is only POLYNOMIAL while level coeffs are EXPONENTIAL, so the crude gap bound fails; closed only in the coefficient-dominant sub-case. Built an exact no-sympy moment engine (charge-balanced-tuple formula) that VALIDATES death-star's span-6 certificate and finds no two-sided nullcone member across 5 strata (constant+radial).
+
+**Push/pull:** finish-map pushed (checkpoint); broadcasting the division of labour at close. Corrected split: symmetric-top Watson => HYP-8770; three-weight resonance => HYP-8766; multilevel pair radicals after first-return cancellation => HYP-8765; stratum certificate bank => death-star+codex.
+
+**Honest scope:** I did NOT prove GMC(2). I assembled the finish-map, validated the moment machinery, and pinned + took ownership of the symmetric-top sub-residual with the coefficient-dominant partial. After the correction, Watson dominance is one major radial subproblem alongside resonance and multilevel cancellation, not a completed reduction of every other radial case. No canon overridden; HYP-8770.
+
+**Next:** prove the symmetric-top Watson dominance for two shells (extend THM-1565), then general; the coefficient-dominant case is already clean. Artifacts: GMC2-FINISH-MAP-2026-07-21.md, HYP-8770, gmc2_symmetric_top_dominance_boxeph_S201.py (+.out).
+
+## codex-2026-07-21-gmc2-proportional-central-resonance -- THM-2021 / HYP-8771
+
+**Owner directive:** finish NC2 and mine seemingly unrelated repo work for ideas.
+
+> **Post-incoming correction.** The completed THM-2018 proves the full
+> all-charge proportional hypersurface unconditionally. Its root-of-unity EGF
+> argument only needs toral nonzeros arbitrarily far out, which must intersect
+> EMP's cofinite radial nonzero tail. THM-2021's Legendre analysis is a sharper
+> zero-geometry refinement, and HYP-8771 is no longer an NC2 blocker.
+
+- **Incoming synthesis/correction (MISTAKE-213).** Concurrent THM-2018 first reserved the symmetric proportional identity `h=kappa*b^2`; its completed theorem proves the all-charge factorization and the sufficient property that the toral factor is nonzero arbitrarily far out. The initial claim that no-consecutive-zero is insufficient was backward: it already supplies unbounded toral nonzeros, which meet EMP's cofinite radial tail. Concurrent THM-2019 (affine-height supports) is transverse, while THM-2020's finite-place channel separation supplies a route to the stronger zero-profile question.
+- **THM-2021 (proved self-contained part, corrected by MISTAKE-213).** For `P=Z^p a(s)+b(s)+Zbar^q c(s)`, if `h=s^(pq/g)a^(q/g)c^(p/g)=kappa*b^r`, then `E[P^m]=A_m^(p0,q0)(kappa)L(b^m)` exactly. At `p0=q0=1`, `A_m` is a Legendre transform, every zero parameter is negative real, and its three-term recurrence forbids consecutive zero levels. That already closes the full symmetric proportional slice: EMP makes the radial factor nonzero eventually, while the toral factor is nonzero arbitrarily far out. THM-2018 supplies the all-charge version.
+- **Announced external refinement, honestly labeled.** A February 2026 IAS announcement for Mangoubi--Kadets--Weller Weiser states that a fixed nonzero point is a zero of only finitely many Legendre polynomials. No public proof/preprint was located. This sharpens the symmetric zero profile but is not required for NC2 after THM-2018.
+- **HYP-8771.** The higher-charge finite-zero-recurrence statement is now a stronger toral-sequence target, not the proportional-slice NC2 gate. Exact gcd scans found zero shared-root events across 1,379 level pairs for `(1,1),(1,2),(1,3),(2,3)`. Tournament vertices are moment levels; gcd-degree flips the chronological edge. All four tournaments are transitive (zero flips/cycles, singleton SCCs, one Hamiltonian path). This is evidence, not proof.
+- **Artifacts.** THM-2021, HYP-8771, reflection `nc2-central-resonance-is-legendre-finite-zero-recurrence-...`, exact script/output `gmc2_proportional_legendre_finite_recurrence_thm2021.py/.out`; HYP-8766 and the finish map updated. Full NC2 remains open outside these slices.

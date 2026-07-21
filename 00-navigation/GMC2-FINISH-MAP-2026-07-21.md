@@ -126,39 +126,42 @@ common factor cannot be extracted.
   Lean target).
 - **Three-weight resonance asymptotics** → THM-2017/HYP-8766: boundary
   hyper-Bessel derivative tower, sublinear inner boundary layers, and the
-  proportional-channel entropy saddle. HYP-8769 identifies the same target
+  nonproportional full-entropy saddle. HYP-8769 identifies the same target
   algebraically as a Sheffer no-common-zero problem and shows that only
   mixed-sign/complex-phase coefficients can carry the remaining cancellation;
   raw Bargmann-norm positivity alone is not the needed certificate.
-- **Central proportional resonance** → THM-2018/2021 + HYP-8771: on
+- **Central proportional resonance** → THM-2018, refined by THM-2021: on
   `h=kappa*b^r` the signed channel profile factors exactly into a toral return
-  polynomial and `L(b^m)`. This closes NC2 off a countable exceptional set for
-  every primitive charge pair and off the negative real `kappa` axis in the
-  symmetric case. Full symmetric closure follows from the finite Legendre-zero
-  recurrence theorem announced in 2026 (public proof not yet located); higher
-  charges reduce to HYP-8771, with THM-2020 finite-place separation as the next
-  route. No-consecutive-zero alone is insufficient for EMP.
+  polynomial and `L(b^m)`. The EGF/root-of-unity argument proves the toral
+  factor is nonzero arbitrarily far out for every charge pair; EMP makes the
+  radial factor nonzero eventually. Thus the full proportional hypersurface is
+  NC2-clear unconditionally. THM-2021 adds symmetric Legendre zero geometry;
+  HYP-8771 is a stronger finite-zero profile question, not an NC2 blocker.
 - **Multilevel cancellation / pair radicals** → HYP-8765: localized cumulants
   or resultants followed by a factorial-Hankel/Vandermonde determinant; do not
   separate first-return atoms.
 
 **The corrected single sentence:** the DvdK angular layer and NC2⇒GMC(2)
 reduction are proved, but full NC2 still needs a radial-channel
-noncancellation theorem that survives both proportional-channel entropy and
+noncancellation theorem that survives both nonproportional channel entropy and
 cross-atom cancellation; symmetric-top Watson analysis, HYP-8766's resonance
 transseries, and HYP-8765's multilevel radical tower are complementary forms
 of that one unresolved bridge.
 
-## ADDENDUM (boxeph-S202): the sharp boundary `|λ|=r` is a Laguerre–Pólya problem (HYP-8775)
+## ADDENDUM (boxeph-S202, upgraded by THM-2023): the `Φ` sharp boundary is Laguerre–Pólya
 
-The three-weight boundary limit `Φ_{(p₀,q₀)}(x)=Σ x^k/((q₀k)!(p₀k)!)` (codex THM-2017) is a
-**hyper-Bessel function that is Laguerre–Pólya** — all zeros real-negative, coefficients log-concave
-(verified 8 param pairs; rigorous base `Φ_{(1,1)}=I₀(2√x)`, zeros `−(j_{0,k}/2)²`). Consequences:
-NC2 is boundary-clear (i) unconditionally for real positive-definite leading data (`ξ>0⟹Φ(ξ)>0`) and
-(ii) for every complex `ξ` off the negative-real axis; the exceptional set is the **explicit** discrete
-negative-real locus `{Φ=0}`, codim≥1, removed one order down by `θ²Φ=ξΦ`. So the boundary zero-loci
-are no longer "open" but a **named classical question** — prove `Φ_{(p₀,q₀)}∈`L–P via Pólya–Schur
-multiplier sequences (`{1/(ak)!}` a multiplier sequence?), anchored by Mittag–Leffler reality
-(`Σx^k/Γ(ak+1)` real-neg-zero iff `a≤2`). The **interior central resonance** (codex HYP-8771, the
-entropy saddle where crude factorial-gap dominance provably fails, correcting HYP-8770) remains the one
-deep open piece. Ref: HYP-8775; `07-reflections/watson-estimates-for-gmc2-and-the-laguerre-polya-boundary-boxeph-S202.md`.
+The `rd-e=r` three-weight boundary limit
+`Phi_(p0,q0)(x)=sum x^k/((q0*k)!(p0*k)!)` is Laguerre--Polya type I for every
+primitive-charge pair. THM-2023 proves this by Gauss multiplication: `Φ` is a
+positive rescaling of a `0F_(p₀+q₀-1)` with all denominator parameters positive,
+so the Baricz--Singh theorem places every zero on the negative real axis. Thus
+this boundary is NC2-clear for every complex `ξ` off that axis, and its only
+possible leading-limit exceptions form an explicit discrete negative-real set.
+
+Two scope guards are load-bearing. First, THM-2023 covers the `Phi` (`rd-e=r`)
+boundary, not the opposite `Psi_r(y)=sum y^j/(rj)!` (`e-rd=r`) boundary. Second, the
+negative zeros themselves are not universally removed by the ODE alone;
+THM-2017 supplies the next-order removal in its symmetric monomial model. The
+interior central resonance beyond THM-2018's proportional slice and the
+remaining exceptional boundary transseries are still open. Ref:
+THM-2023, confirmed HYP-8775, and the S202 Watson reflection.

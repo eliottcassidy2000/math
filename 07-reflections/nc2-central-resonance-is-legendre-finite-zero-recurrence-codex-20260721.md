@@ -1,11 +1,16 @@
 # NC2 central resonance is finite zero recurrence, not merely no-common-consecutive-zero
 
 **codex-2026-07-21.** Owner directive: work toward finishing NC2, pull often,
-and mine seemingly unrelated work for ideas. Result: THM-2021 proves a new
-arbitrary-degree central-resonance slice outside a countable exceptional set,
-identifies the symmetric residual with finite recurrence of Legendre zeros, and
-connects the higher-charge problem to THM-2020's finite-place channel separation.
-Full NC2 remains open.
+and mine seemingly unrelated work for ideas. THM-2021 independently derived the
+all-charge factorization and its Legendre refinement. Incoming THM-2018 then
+supplied the stronger root-of-unity EGF argument, closing the *entire*
+proportional central slice for every charge pair without finite zero recurrence.
+The nonproportional resonance band, hence full NC2, remains open.
+
+> **Correction after synthesis.** The title records the stronger sequence
+> question discovered en route, not a remaining NC2 dependency. For NC2 it is
+> enough that the toral return factor be nonzero arbitrarily far out; THM-2018
+> proves exactly that, and EMP supplies a cofinite nonzero radial tail.
 
 ## The unrelated-work transfer that survived
 
@@ -33,9 +38,11 @@ channel cancellation into a zero-recurrence question.
 The second transfer came from spectral insertion/interlacing and the repo's
 orthogonal-polynomial thread. The first instinct was the familiar
 no-common-consecutive-zero descent. Challenging it exposed the load-bearing
-logical gap: EMP needs `L(b^m)=0` eventually, while no consecutive toral zeros
-only gives a syndetic subsequence. The correct invariant is **finite recurrence
-of a fixed root**.
+logical gap: no consecutive toral zeros does not itself give finite recurrence.
+The later THM-2018 synthesis exposed a second challenged assumption: NC2 never
+needed that stronger invariant. The exact sufficient invariant is simply that
+the toral factor is **not eventually zero**, because EMP gives a cofinite set of
+nonzero radial levels. The backward support inference is MISTAKE-213.
 
 ## The exact symmetric identification
 
@@ -55,12 +62,12 @@ and therefore is a Legendre transform. Every zero parameter is negative real.
 Thus the proportional central slice is already NC2-clear for every genuinely
 complex phase and every nonnegative phase, with arbitrary radial `b`.
 
-The remaining negative-real points are exactly nonzero recurrent roots of
+The remaining negative-real points are exactly roots of individual transformed
 Legendre polynomials. An official February 2026 IAS announcement for joint work
-of Mangoubi--Kadets--Weller Weiser states the needed finiteness theorem. That
-would close the full symmetric proportional hypersurface, but no public proof
-was located, so THM-2021 labels this corollary conditional on the announced
-input rather than laundering an abstract into a self-contained proof.
+of Mangoubi--Kadets--Weller Weiser states their recurrence is finite. No public
+proof was located, so that stronger sequence theorem remains an external
+announcement. The full symmetric proportional NC2 slice is nevertheless
+unconditional by THM-2018's weaker non-eventual-zero argument.
 
 ## What did not transfer
 
@@ -78,14 +85,18 @@ input rather than laundering an abstract into a self-contained proof.
 
 ## Incoming work synthesized
 
-Concurrent THM-2018 independently found the symmetric proportional
-factorization. Its reservation stub proposed consecutive-root descent; THM-2021
-corrects that step and supplies the finite-recurrence criterion. Concurrent
+Concurrent THM-2018 first reserved the symmetric proportional factorization.
+Its completed theorem proves the all-charge factorization and replaces the
+reservation stub's consecutive-root descent by a stronger EGF symmetry: an
+eventually zero toral sequence would make
+`R(omega*t)/R(t)=exp((omega-1)t)`. This closes the proportional NC2 slice
+unconditionally; THM-2021's finite-recurrence criterion is a zero-profile
+refinement. Concurrent
 THM-2019's affine-height closure is transverse: it handles arbitrarily many
 charges when all balanced words have one Wick height, while THM-2021 allows an
 arbitrary radial polynomial but requires rank-one channel proportionality.
 
-Concurrent THM-2020 suggests the next attack on HYP-8771. Every exceptional
+Concurrent THM-2020 suggests a next attack on the stronger HYP-8771. Every exceptional
 `kappa` is algebraic. At a finite place the channel valuation is factorial
 carry-data plus `k v(kappa)`; a unique minimum forbids cancellation. The
 higher-charge zero-recurrence problem can therefore be attacked with the new
@@ -105,15 +116,15 @@ than a proof of HYP-8771.
 
 ## Net
 
-- **Proved:** exact all-charge factorization; NC2 off a countable exceptional
-  set; in the symmetric case the exceptional set lies on the negative real
-  axis.
-- **Conditional on an announced 2026 theorem:** the entire symmetric
-  proportional central hypersurface is NC2-clear.
-- **Open:** higher-charge finite zero recurrence (HYP-8771) and the rest of the
-  finite resonance band/general NC2.
+- **Proved:** exact all-charge factorization and, by THM-2018, unconditional NC2
+  on the full proportional central hypersurface; in the symmetric case every
+  toral zero parameter lies on the negative real axis.
+- **Announced externally:** the sharper assertion that a fixed nonzero
+  Legendre point recurs only finitely often.
+- **Open:** higher-charge finite zero recurrence (HYP-8771) as a sequence
+  question, and the nonproportional finite resonance band/general NC2.
 
 Artifacts: THM-2021, HYP-8771,
 `gmc2_proportional_legendre_finite_recurrence_thm2021.py/.out`. Cross-links:
 THM-2017/2018/2019/2020, HYP-8766/8769, THM-1510/1660/1670/2005,
-MISTAKE-211.
+MISTAKE-211/213.

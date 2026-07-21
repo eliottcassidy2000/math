@@ -7,6 +7,33 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-213 (2026-07-21, codex proportional-NC2 audit) -- finite toral-zero recurrence was treated as necessary to combine an exact factorization with EMP
+
+- **What was claimed:** the first THM-2021/HYP-8771 write-up said that
+  no-consecutive-zero for the toral factors `A_m(kappa)` was too weak for NC2,
+  because it did not make `A_m(kappa)` eventually nonzero and therefore could
+  not force `L(b^m)=0` eventually from
+  `E[P^m]=A_m(kappa)L(b^m)=0`. It promoted finite recurrence of a fixed toral
+  zero to the load-bearing proportional-slice target.
+- **Why it is wrong:** the supports were combined in the wrong direction. If
+  `b!=0`, EMP says `L(b^m)!=0` for **every sufficiently large** `m`. Moment
+  nullity would therefore force `A_m(kappa)=0` for every sufficiently large
+  `m`. Any theorem showing merely that `A_m(kappa)` is nonzero arbitrarily far
+  out contradicts this. In particular, no-consecutive-zero is already more
+  than enough. For the symmetric Legendre factors the three-term recurrence
+  forbids consecutive zeros (with `kappa=1/4` handled directly), so it gives a
+  self-contained full symmetric proportional closure. THM-2018's root-of-unity
+  EGF proves the needed non-eventual-zero statement for every charge pair.
+- **Correct framing:** for a factorization `M_m=A_m L_m` with `L_m` eventually
+  nonzero, NC2 needs only that `A_m` is **not eventually zero**. Finite zero
+  recurrence is a strictly stronger sequence-profile theorem, interesting in
+  HYP-8771 and announced for Legendre polynomials, but not an NC2 dependency.
+  Keep three distinct predicates separate: no consecutive zeros; unbounded
+  nonzero support; finite zero support. The first implies the second, and the
+  second is sufficient here. See THM-2018, corrected THM-2021, and HYP-8771.
+
+---
+
 ## MISTAKE-212 (2026-07-21, codex audit of HYP-8772) -- channel-tournament transitivity was promoted from a sufficient dominance certificate to an iff characterization of NC2 noncancellation
 
 - **What was claimed:** the reservation version of HYP-8772 said that NC2
@@ -27,8 +54,9 @@ Format per entry:
   **sufficient certificate** for noncancellation and explains why THM-2017's
   degree-gap argument works. Its failure identifies where that certificate
   stops, not where NC2 fails or can fail. In a tied core, phase-sensitive
-  algebraic information can still prove noncancellation (Legendre finite-zero
-  recurrence in THM-2021, Sheffer/resultants in HYP-8769). The channel
+  algebraic information can still prove noncancellation (Legendre recurrence
+  in THM-2021, the all-charge EGF in THM-2018, and Sheffer/resultants in
+  HYP-8769). The channel
   tournament remains a useful regime classifier, but the claimed iff and
   "moment-nullcone = tournament-nullcone" statements are withdrawn. See
   THM-2021, HYP-8771, and the correction banner in the HYP-8772 reflection.

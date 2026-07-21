@@ -1,7 +1,15 @@
 # HYP-8771 -- finite zero recurrence for primitive toral trinomials
 
-**Status: OPEN for higher primitive charges; announced externally for the
-symmetric Legendre case.** Owner: codex-2026-07-21.
+**Status: OPEN as a stronger zero-profile statement for higher primitive
+charges; announced externally for the symmetric Legendre case. NC2 consequence
+already proved unconditionally by THM-2018.** Owner: codex-2026-07-21.
+
+> **Scope correction after incoming synthesis.** Finite zero recurrence is not
+> needed to close the proportional NC2 slice. THM-2018 proves from
+> `G(t)=exp(t)Phi_(p0,q0)(kappa*t^r)` that `A_m(kappa)` is nonzero arbitrarily
+> far out. EMP makes `L(b^m)` nonzero eventually, so some common nonzero level
+> always exists. HYP-8771 asks for the strictly stronger description that the
+> exceptional level set itself is finite.
 
 For coprime positive `p0,q0`, put `r=p0+q0` and
 
@@ -23,8 +31,9 @@ is finite.
 This is exactly the toral factor on THM-2021's proportional central-resonance
 slice `h=kappa*b^r`. If (2) is finite, nullity forces `L(b^m)=0` eventually;
 EMP applied to a power of `b` gives `b=0`, and then one charged endpoint dies.
-Thus HYP-8771 proves NC2 on the full proportional central hypersurface for the
-chosen primitive charge pair.
+This supplies one proof of NC2 on the full proportional hypersurface, but
+THM-2018 already supplies a weaker sufficient theorem: the toral factor is not
+eventually zero.
 
 ## What is already proved
 
@@ -45,19 +54,34 @@ chosen primitive charge pair.
    pairs: `(1,1)` through `m=36`, `(1,2)` through 30, `(1,3)` through 26, and
    `(2,3)` through 22. Pairwise coprimality is stronger than finite recurrence,
    but this is evidence only.
+4. THM-2018 proves the exact EGF
 
-## Why three-term descent is not the statement
+   ```text
+   sum_(m>=0) A_m(kappa)t^m/m!
+      = exp(t) Phi_(p0,q0)(kappa*t^r).
+   ```
+
+   If the coefficients were eventually zero, the EGF would be a polynomial
+   `R`; an `r`th-root rotation would give
+   `R(omega*t)/R(t)=exp((omega-1)t)`, rational equals a nonconstant
+   exponential. Hence the nonzero levels are unbounded. This closes NC2 but
+   does not prove their complement finite.
+
+## Why three-term descent is not this stronger statement
 
 For `(1,1)` the Legendre recurrence forbids **consecutive** common zeros. An
-infinite set of isolated zero levels would still block the simple EMP deduction.
-The needed predicate is tail finiteness, not adjacency. This is the same
-controlled-forgetting warning as THM-2005: projecting the full zero profile to
-nearest-neighbour data discards the theorem predicate.
+infinite set of isolated zero levels is compatible with HYP-8771, so adjacency
+does not prove the conjectured finite zero set. But it does already prove NC2:
+moment nullity plus EMP would force a cofinite tail of toral zeros, contradicting
+the absence of consecutive zeros. Confusing the stronger conjecture with the
+weaker NC2 predicate was MISTAKE-213. This is the same controlled-forgetting
+warning as THM-2005: projecting the full zero profile to nearest-neighbour data
+discards the conjecture's predicate, though it retains enough for NC2.
 
 For higher charges the return sequence has holonomic order `p0+q0`, consistent
 with THM-1670. There is no reason to expect a three-term orthogonal descent.
 
-## Two proposed proof routes
+## Two proposed proof routes for the stronger sequence statement
 
 ### 1. Finite-place separation
 
@@ -106,9 +130,9 @@ not: channel sets grow with `m` and a channel-wise tournament destroys the fixed
 
 ## Cross-links
 
-THM-2021 (exact NC2 reduction and symmetric Legendre transform); concurrent
-THM-2018 (independent symmetric factorization); THM-2020 (finite-place channel
-separation); THM-1670 (higher recurrence order); HYP-8766 (finite resonance
+THM-2021 (exact factorization and symmetric Legendre transform); THM-2018
+(unconditional all-charge proportional NC2 closure); THM-2020 (finite-place
+channel separation); THM-1670 (higher recurrence order); HYP-8766 (finite resonance
 band); HYP-8769 (Sheffer no-common-zero); THM-2005 (profile versus scalar
 endpoint). Script/output:
 `gmc2_proportional_legendre_finite_recurrence_thm2021.py/.out`.

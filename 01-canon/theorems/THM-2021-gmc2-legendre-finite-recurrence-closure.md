@@ -1,21 +1,21 @@
 ---
 id: THM-2021
-title: "GMC(2) PROPORTIONAL CENTRAL RESONANCE: exact toral-times-radial factorization for every primitive charge pair, unconditional NC2 off an explicit countable exceptional set, and the symmetric exceptional set is exactly finite recurrence of Legendre zeros"
+title: "GMC(2) PROPORTIONAL CENTRAL RESONANCE REFINEMENT: exact toral-times-radial factorization, Legendre zero geometry, and finite-zero recurrence"
 status: >
-  PARTS A--C PROVED. For P=Z^p a(s)+b(s)+Zbar^q c(s), h=s^(pq/g)a^(q/g)c^(p/g),
-  r=(p+q)/g, and h=kappa*b^r, every moment factors exactly as
-  E[P^m]=A_m^(p0,q0)(kappa)L(b^m). Hence NC2 holds whenever A_m(kappa) is eventually
-  nonzero; in particular it holds off an explicit countable exceptional set for every
-  primitive charge pair. For p0=q0=1, A_m is a Legendre transform and every possible
-  exceptional kappa is negative real. PART D is CONDITIONAL ON AN ANNOUNCED EXTERNAL
-  RESULT: the February 2026 IAS announcement by Mangoubi--Kadets--Weller Weiser states
-  that a fixed nonzero point is a zero of only finitely many Legendre polynomials; this
-  would close the entire symmetric proportional hypersurface. No public proof/preprint
-  of that new theorem was located, so the full symmetric corollary is not counted as a
-  self-contained canon proof. The higher-charge finite-recurrence statement is HYP-8771.
+  REFINEMENT; PARTS A--C PROVED. The exact all-charge factorization and the
+  symmetric Legendre transform are proved here. THM-2018 now gives the stronger
+  NC2 conclusion on the entire proportional hypersurface h=kappa*b^r for every
+  primitive charge pair: its root-of-unity EGF argument proves A_m(kappa) is
+  nonzero arbitrarily far out, which is enough because EMP makes L(b^m)
+  nonzero eventually. Thus neither the announced Legendre finite-zero theorem
+  nor higher-charge HYP-8771 is an NC2 dependency. In the symmetric case the
+  elementary no-consecutive-zero recurrence itself already gives a
+  self-contained full closure. The external theorem remains a sharper result
+  about the zero profile. Every possible symmetric zero parameter is negative
+  real. See MISTAKE-213.
 source: codex-2026-07-21-gmc2-proportional-central-resonance
-depends_on: [THM-2017, THM-1510, THM-1695]
-related: [THM-2018, THM-2019, THM-2020, THM-1660, THM-1670, HYP-8766, HYP-8769, HYP-8771, HYP-8772, MISTAKE-212]
+depends_on: [THM-2018, THM-2017, THM-1510, THM-1695]
+related: [THM-2018, THM-2019, THM-2020, THM-1660, THM-1670, HYP-8766, HYP-8769, HYP-8771, HYP-8772, MISTAKE-212, MISTAKE-213]
 script: 04-computation/gmc2_proportional_legendre_finite_recurrence_thm2021.py
 output: 05-knowledge/results/gmc2_proportional_legendre_finite_recurrence_thm2021.out
 external:
@@ -25,18 +25,30 @@ external:
 
 # THM-2021 -- proportional central resonance and Legendre finite recurrence
 
+> **Post-incoming-work synthesis.** The completed version of THM-2018 subsumes
+> this theorem's NC2 application. Its exact EGF
+> `exp(t) Phi_(p0,q0)(kappa*t^r)` and a nontrivial `r`th-root rotation show that
+> the toral factor is nonzero at arbitrarily large levels. Since EMP makes the
+> radial factor nonzero at every sufficiently large level, the two sequences
+> intersect. THM-2021 is retained for its independent all-charge factorization,
+> countable exceptional-set description, and sharp symmetric Legendre geometry.
+> Moreover its no-consecutive-zero recurrence already closes the symmetric
+> proportional slice directly; the contrary first reading is MISTAKE-213.
+
 This theorem fills a central part of HYP-8766 by combining three ideas that had
 not previously been put together in the repository:
 
 1. retain the **whole channel profile** before applying the scalar radial
    functional (the support-Dirichlet lesson of THM-2005);
 2. recognize when that profile has rank one in the radial variable; and
-3. ask for **finite recurrence of zeros**, not merely the consecutive-root
-   descent used for Hermite/Legendre base cases.
+3. distinguish **finite recurrence of zeros** from both consecutive-root
+   descent and the still weaker non-eventual-zero property sufficient for NC2.
 
-The third distinction is load-bearing. A sequence with no two consecutive zeros
-can still have infinitely many zeros, so the elementary three-term recurrence
-alone does not give the eventual radial vanishing needed by EMP.
+The distinction is load-bearing. A sequence with no two consecutive zeros can
+still have infinitely many zeros, so the elementary recurrence does not prove
+finite recurrence. The completed THM-2018 also challenges the assumption that
+finite recurrence is needed for NC2: unbounded toral nonzeros already intersect
+EMP's cofinite radial nonzero tail.
 
 ## A. Exact factorization for every primitive charge pair
 
@@ -78,9 +90,10 @@ A_m^(p0,q0)(kappa)
 ```
 
 This is exact, not asymptotic. It includes arbitrary radial degree and genuine
-mixed-sign/complex coefficients. Concurrent THM-2018 found (3) independently
-for `p0=q0=1`; (3)--(4) record the all-charge version and the correct zero-set
-criterion.
+mixed-sign/complex coefficients. Concurrent THM-2018 first reserved the
+symmetric case and subsequently proved the all-charge version together with
+the stronger EGF non-eventual-zero argument. Equations (3)--(4) retain an
+independent derivation and the finer zero-set criterion.
 
 ## B. The eventual-nonzero criterion closes NC2
 
@@ -110,7 +123,9 @@ countable set inside the exact zero-offset resonance band.
 
 More generally, even at a point of (6), NC2 follows as soon as the fixed point is
 a zero of only finitely many members of the family. That finite-recurrence
-property is precisely HYP-8771.
+property is precisely HYP-8771. It is stronger than NC2 needs: THM-2018 proves
+that `A_m(kappa)` is nonzero for arbitrarily large `m`, and those levels must
+eventually meet the cofinite nonzero tail of `L(b^m)`.
 
 ## C. Symmetric primitive charges are Legendre
 
@@ -138,6 +153,16 @@ Equivalently,
 (m+1)S_(m+1)=(2m+1)S_m-m(1-4kappa)S_(m-1).          (10)
 ```
 
+If `kappa!=1/4`, two consecutive zeros in (10) propagate backward to
+`S_0=0`, contradicting `S_0=1`. At `kappa=1/4`, (8) reduces to
+`(1-2t)^(-1/2)` and all coefficients are nonzero. Hence `S_m(kappa)` is
+nonzero at arbitrarily large levels for every finite `kappa`. If all moments
+vanished with `b!=0`, EMP would make `L(b^m)` nonzero on a cofinite tail, so
+(3) would force `S_m(kappa)=0` on that entire tail, a contradiction. Therefore:
+
+> **Self-contained full symmetric closure.** NC2 holds on every
+> arbitrary-degree hypersurface `s*a(s)*c(s)=kappa*b(s)^2`.
+
 All zeros of `P_m` are real and lie in `(-1,1)`. A finite `kappa` for which
 `S_m(kappa)=0` must therefore have
 
@@ -155,31 +180,35 @@ This phase localization is much sharper than coefficient positivity: arbitrary
 complex radial `b` is allowed. Only an exactly opposite-phase proportionality
 can even reach the residual.
 
-## D. The announced 2026 Legendre theorem would close the entire symmetric hypersurface
+## D. The announced 2026 Legendre theorem sharpens the symmetric zero profile
 
 The IAS announcement for joint work of Mangoubi--Kadets--Weller Weiser states:
 for every fixed nonzero `x`, only finitely many Legendre polynomials `P_m` vanish
 at `x`. Applied to (9), this says that `S_m(kappa)` is eventually nonzero for
-every finite `kappa`. Section B would then prove:
+every finite `kappa`. Section B then gives another proof of:
 
-> **Conditional corollary (on the announced Legendre finiteness theorem).** NC2
+> **NC2 corollary (already unconditional by Section C and THM-2018).** NC2
 > holds on the full arbitrary-degree hypersurface
 > `s a(s)c(s)=kappa b(s)^2`.
 
 The official February 2026 seminar page states the result but identifies the
 work as joint work rather than linking a public proof. We therefore record the
-deduction exactly and do not relabel the external input as proved in-repository.
+finite-zero conclusion exactly and do not relabel the external input as proved
+in-repository. The NC2 corollary itself does not depend on it: THM-2018 only
+needs infinitely many nonzero levels, proved by root-of-unity symmetry.
 Stieltjes' stronger 1890 conjecture says that at most one `P_m` can vanish at a
 fixed nonzero `x`; THM-2021 needs only finiteness, not that stronger conjecture.
 
-## E. Why the elementary recurrence is insufficient
+## E. What the elementary recurrence does and does not prove
 
-From (10), consecutive `S_m,S_(m+1)` have no common zero. That proves only that
-the zero set in the index `m` has gaps. It does **not** imply that the zero set is
-finite, and hence does not imply (5). This corrects the proposed closing sentence
-in the reservation version of concurrent THM-2018. The distinction mirrors the
-support-profile lesson: an endpoint or a local adjacency relation can erase the
-tail property the proof actually needs.
+From (10), consecutive `S_m,S_(m+1)` have no common zero. This does **not** imply
+that the zero set in the index `m` is finite, so it does not prove the stronger
+Legendre statement in Section D or HYP-8771. It **does**, however, imply nonzero
+levels arbitrarily far out, exactly what NC2 needs after EMP. The first version
+of this theorem combined the supports backward and called consecutive-root
+descent insufficient; that error is recorded as MISTAKE-213. The completed
+THM-2018 proves the same sufficient non-eventual-zero property for all charges
+by root-of-unity symmetry.
 
 ## F. Verification and Tournament Analysis
 
@@ -206,11 +235,11 @@ the recurrence predicate.
 
 ## G. Scope and next target
 
-This does **not** prove full NC2. It closes a new infinite-dimensional rank-one
-subvariety of the zero-offset three-weight resonance, unconditionally outside a
-countable set, and shows that the symmetric remainder is already the subject of
-a very recent external finiteness theorem. For higher primitive charges the
-right target is HYP-8771. Concurrent THM-2020's finite-place channel separation
-is especially relevant there: every exceptional `kappa` is algebraic, so the
-archimedean recurrence question can be attacked through factorial valuations at
-a finite place rather than by another magnitude estimate.
+This does **not** prove full NC2. Together with THM-2018 it closes the complete
+infinite-dimensional rank-one subvariety `h=kappa*b^r` of the zero-offset
+three-weight resonance for every charge pair. THM-2021 additionally identifies
+the symmetric zero geometry and gives a stronger countable/off-axis statement
+level by level. HYP-8771 remains a literal finite-zero-recurrence problem, not
+an NC2 blocker. THM-2020's finite-place channel separation is still relevant to
+that sharper sequence question: every exceptional `kappa` is algebraic, so its
+recurrence can be attacked through factorial valuations at a finite place.

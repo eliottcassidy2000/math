@@ -1,0 +1,13 @@
+THM-2023 HYPER-BESSEL LAGUERRE-POLYA PARAMETER AUDIT
+PASS Phi_(1,1) = 0F_1(-;[1]; x/1), coefficients k=0..30 exact
+PASS Phi_(1,2) = 0F_2(-;[1, 1/2]; x/4), coefficients k=0..30 exact
+PASS Phi_(1,3) = 0F_3(-;[1, 1/3, 2/3]; x/27), coefficients k=0..30 exact
+PASS Phi_(2,2) = 0F_3(-;[1, 1/2, 1/2]; x/16), coefficients k=0..30 exact
+PASS Phi_(2,3) = 0F_4(-;[1, 1/2, 1/3, 2/3]; x/108), coefficients k=0..30 exact
+PASS Phi_(1,4) = 0F_4(-;[1, 1/4, 1/2, 3/4]; x/256), coefficients k=0..30 exact
+PASS Phi_(3,4) = 0F_6(-;[1, 1/3, 2/3, 1/4, 1/2, 3/4]; x/6912), coefficients k=0..30 exact
+PASS Phi_(3,5) = 0F_7(-;[1, 1/3, 2/3, 1/5, 2/5, 3/5, 4/5]; x/84375), coefficients k=0..30 exact
+PASS all denominator parameters are positive, the hypothesis of the Baricz-Singh 0Fq zero theorem
+SCOPE only Phi_(p,q), the rd-e=r boundary; Psi_r=sum y^j/(rj)! is a different Mittag-Leffler family
+TOURNAMENT ANALYSIS not used: zero location is unary; candidate vertices (zeros, parameters, boundary sides, proof obligations) admit no pairwise orientation preserving the Laguerre-Polya predicate
+CHALLENGED ASSUMPTION the numerical L-P pattern was open; it is a direct classical 0Fq corollary after the correct scaling

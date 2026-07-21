@@ -11,5 +11,5 @@ TOURNAMENT (+2,-3) levels=5..22: pairs=153, edge_flips=0, score_hist=0..17(each 
 ALTERNATE VERTICES considered: return channels, individual roots, moment levels, proof obligations
 CHOSEN quotient: moment levels; observable=degree gcd(A_m,A_n); chronological gauge flips on shared roots
 PRESERVES: exact pairwise root recurrence; DESTROYS: root identity, multiplicity, and analytic location
-CHALLENGED ASSUMPTION: no-consecutive-zero is not eventual nonvanishing and cannot by itself invoke EMP
+CHALLENGED ASSUMPTION / MISTAKE-213: finite zero recurrence is not needed for NC2; no-consecutive-zero already gives unbounded toral nonzeros, which meet EMP's cofinite radial tail
 NOTE external 2026 Legendre finiteness is not proved by this computation

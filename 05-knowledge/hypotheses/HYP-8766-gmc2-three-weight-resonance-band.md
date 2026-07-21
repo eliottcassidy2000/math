@@ -1,7 +1,8 @@
 # HYP-8766 — close the finite three-weight resonance band
 
-**Status:** OPEN, reduced by THM-2017 and THM-2018; exact low-degree and
-proportional-central models are closed by THM-2014/2018.
+**Status:** OPEN, reduced by THM-2017/2018/2023; exact low-degree and
+proportional-central models are closed by THM-2014/2018, and the `rd-e=r`
+boundary zero set is confined to the negative real axis by THM-2023.
 
 **Owner:** codex-2026-07-21-gmc2-degree-gap.
 
@@ -126,6 +127,11 @@ multinomial gain `m^r`, while a degree deficit `Delta` supplies only
   `F(t)=exp(A(t))/sqrt((1-b1*t)^2-4*alpha*t^2)` with `A` algebraic; nullity
   would make the exponential of a nonconstant algebraic germ algebraic. It
   also closes `h=kappa*b^r` for arbitrary charges and arbitrary radial degree.
+- THM-2023 identifies the `rd-e=r` boundary function as a positive-parameter
+  hypergeometric `0F_(p0+q0-1)` and proves it is Laguerre--Polya type I. Thus
+  every leading-limit zero lies on the negative real axis, so the complete
+  boundary is clear off that axis. The opposite `e-rd=r` boundary has the
+  different function `Psi_r(y)=sum_j y^j/(rj)!` and is not covered.
 - HYP-8765 supplies exact finite-support evidence for a multilevel
   radial-channel tower and two counterexamples to naive low cutoffs.
 
@@ -179,20 +185,22 @@ orthogonal to nullity and cannot close the band by itself. This makes
 phase-sensitive Sheffer resultants, rather than another top-term comparison,
 the concrete algebraic companion to the saddle program.
 
-## Exact central proportional slice: THM-2021 / HYP-8771
+## Exact central proportional slice: THM-2018, refined by THM-2021
 
-THM-2021 closes a new arbitrary-degree part of the central offset `lambda=0`.
-On `h=kappa*b^r`, the whole channel sum factors exactly as
-`A_m^(p0,q0)(kappa)L(b^m)`. NC2 follows whenever the fixed toral factor is
-eventually nonzero, hence unconditionally off a countable exceptional set. For
-`p0=q0=1` the factor is a Legendre transform, all exceptional parameters are
-negative real, and the full slice follows from the finite-recurrence theorem
-announced in 2026 by Mangoubi--Kadets--Weller Weiser. Because no public proof of
-that new input was located, the full symmetric closure is recorded as
-conditional on the announcement. HYP-8771 asks for the higher-charge
-finite-recurrence theorem; THM-2020's finite-place separation is the proposed
-route. This replaces the too-weak idea that no consecutive zeros alone can feed
-EMP.
+THM-2018 closes the complete arbitrary-degree central hypersurface
+`h=kappa*b^r` for every primitive charge pair. The channel sum factors exactly
+as `A_m^(p0,q0)(kappa)L(b^m)`, and its toral EGF is
+`exp(t)Phi_(p0,q0)(kappa*t^r)`. If `A_m(kappa)` were eventually zero, an `r`th
+root-of-unity rotation would equate a rational function with a nonconstant
+exponential. Hence the toral factor is nonzero arbitrarily far out, while EMP
+makes the radial factor nonzero eventually; the two supports intersect.
+
+THM-2021 refines this closure by identifying the symmetric toral factor with a
+Legendre transform, placing every zero parameter on the negative real axis, and
+recording the stronger finite-zero-recurrence question. HYP-8771 remains open
+for higher charges as a literal sequence theorem, but it is not an NC2 blocker.
+The 2026 Mangoubi--Kadets--Weller Weiser announcement supplies that stronger
+finiteness statement in the symmetric case; no public proof was located.
 
 ## Relation to HYP-8770
 
