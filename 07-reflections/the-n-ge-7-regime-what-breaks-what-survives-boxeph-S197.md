@@ -96,6 +96,6 @@ that part starts vanishing, and what is left — the strong, modular-prime, asym
 where the wall is. The reduction hierarchy (order-join ⊃ modular ⊃ circulant) is the map of the
 shrinking island of order; the sea is the theorem-resistant n≥7 regime.
 
-Links: THM-1970, THM-1955, THM-1926, THM-1960, THM-1936, THM-1950, THM-1880,
+Links: THM-1978, THM-1955, THM-1926, THM-1960, THM-1936, THM-1950, THM-1880,
 [[the-recursion-modes-are-characters-and-the-reduction-dag-boxeph-S196]],
 [[the-reduction-is-a-product-of-trigonometric-functions-boxeph-S194]].

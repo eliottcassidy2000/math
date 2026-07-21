@@ -1,5 +1,5 @@
 ---
-id: THM-1970
+id: THM-1978
 title: "THE n≥7 REDUCTION HIERARCHY AND THE VANISHING-REACHABLE-FRACTION LAW. Tournament iso classes stratify by three nested reduction principles of increasing fineness — order-join/SCC atoms = STRONG (1,1,6,35,353 for n=3..7), modular/substitution atoms = MODULAR-PRIME seeds (1,1,1,0,3,15,197 for n=1..7, the n=7 entry NEW, completing opus THM-1960's open census), and circulant character-generated (1,0,1,0,2). The reduction-reachable (reducible) fraction FALLS monotonically — strong-fraction 0.25,0.50,0.625,0.774,0.873 (n=4..8), prime-fraction jumps 0.268→0.432 at n=7 — so reduction principles reach an asymptotically null set. This is why n=7 is the wall: the transitive/stability laws (srange≤tr THM-1862, srange≤β THM-1845, GIT-unstable⇔transitive THM-1825) all break at n=7 driven by the SAME THM-1830 witness (3-cycle atom + (n−3) singletons, impossible below n=7), and the spectral completeness facts (skew-Seidel THM-1440, odd-cycle count THM-500) both first fail at n=7 while char-poly-tie collapse goes 89%→99.1% (n=7→8)."
 status: >
   VERIFIED (boxeph-2026-07-21-S197). Modular-prime seed census computed exactly over all iso classes

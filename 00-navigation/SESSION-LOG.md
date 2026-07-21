@@ -129,11 +129,11 @@ Files: THM-1970; HYP-8715; reflection; refined_H_and_harmonic_edge + PH_composes
 Namespace clean (1970/8715). Builds on THM-1935/1940/1945/1960/1930, THM-805.
 
 ## opus-2026-07-20-S444 - Tournaments compose from REGULAR SEEDS: the spectral substitution law + octonion object C3[C3] (THM-1960)
-## boxeph-2026-07-21-S197 -- THM-1970 the n>=7 REGIME: what breaks, what survives, the vanishing-reachable-fraction law
+## boxeph-2026-07-21-S197 -- THM-1978 the n>=7 REGIME: what breaks, what survives, the vanishing-reachable-fraction law
 
 **Owner:** look back through ALL tournament work at size n>=7 for patterns in the hard-to-enumerate larger sizes.
 
-**Method:** 3-agent corpus sweep (canon / reflections+nav / hypotheses+results) + my own structured large-n computation. Synthesized into a reflection + THM-1970.
+**Method:** 3-agent corpus sweep (canon / reflections+nav / hypotheses+results) + my own structured large-n computation. Synthesized into a reflection + THM-1978.
 
 **THE GREAT BREAKING AT n=7** (small-n laws that die at 7, one catalog): metagraph & E_n perfection lost (odd holes, omega<chi); H-gradient stops being a DAG (962 H-decreasing + 136 level edges); width formula 15,49 vs C(n-2,floor)=10,20; srange<=tr/srange<=beta; GIT-unstable=transitive; OCF 2-adic digit-1 dies; homology apex-7 refuted (b1minus 1,7,119,1772); 7|H first; skew-Seidel (THM-1440) AND odd-cycle count (THM-500) both stop being complete spectral invariants at exactly n=7; char-poly-tie collapse 89%->99.1% (n=7->8). COMMON DRIVER: the transitive/stability cluster all break on the SAME THM-1830 witness (one 3-cycle atom + (n-3) singletons), impossible below n=7.
 
@@ -146,9 +146,9 @@ Namespace clean (1970/8715). Builds on THM-1935/1940/1945/1960/1930, THM-805.
 
 **SURVIVING ISLANDS (clean large-n):** Paley T_p doubly-regular self-comp H-max, c3=p(p^2-1)/24, |lambda|^2=(p+1)/4; every regular tournament on m shares c3=m(m^2-1)/24; circulant iso counts 2,4,4,6,16,16,30 (n=7..19) all on Re=-1/2.
 
-**Integrated:** opus THM-1960 (I completed their seed census to n=7), death-star S81 (recursion=order-join, convergent with my S196), mac-mini THM-1936 (signed R), klein THM-1950 (H>=disc strong base), kps THM-1880 (char_S). No collisions; claimed THM-1970 (>max 1965), HYP-8731.
+**Integrated:** opus THM-1960 (I completed their seed census to n=7), death-star S81 (recursion=order-join, convergent with my S196), mac-mini THM-1936 (signed R), klein THM-1950 (H>=disc strong base), kps THM-1880 (char_S). No collisions; claimed THM-1978 (>max 1965), HYP-8731.
 
 **Honest scope:** the modular-prime n=7=197 census + fraction law + circulant formulas are VERIFIED exact this session; the "breaks at n=7" catalog synthesizes cited theorems (each verified in its own source). The unifying observation (common THM-1830 driver + vanishing-fraction) is the contribution.
 
-**Next:** (1) modprime seed census n=8 (needs iso n=8 = 6880, hard); (2) does the prime-fraction have a clean asymptotic (1 - O(1/2^n)?); (3) which surviving-island invariants extend the reduction into the sea. Artifacts: THM-1970, HYP-8731, reflection the-n-ge-7-regime-what-breaks-what-survives-boxeph-S197.md, scripts modular_prime_census_n7 + large_n_circulant_patterns _boxeph_S197.py (+.out).
+**Next:** (1) modprime seed census n=8 (needs iso n=8 = 6880, hard); (2) does the prime-fraction have a clean asymptotic (1 - O(1/2^n)?); (3) which surviving-island invariants extend the reduction into the sea. Artifacts: THM-1978, HYP-8731, reflection the-n-ge-7-regime-what-breaks-what-survives-boxeph-S197.md, scripts modular_prime_census_n7 + large_n_circulant_patterns _boxeph_S197.py (+.out).
 
