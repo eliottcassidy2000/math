@@ -1,0 +1,24 @@
+====================================================================================
+SEQUENCE-LIKE INVARIANTS (n=3,4,5,6) — first terms for OEIS lookup
+====================================================================================
+  iso |V(G_n)| A000568                : [2, 4, 12, 56]
+  |score| distinct                    : [2, 4, 9, 22]
+  |specA| distinct (spectral cls)     : [2, 3, 9, 28]
+  |cyc| distinct                      : [2, 3, 9, 32]
+  |H| distinct (Redei spectrum)       : [2, 3, 7, 19]
+  |R| distinct                        : [2, 2, 6, 8]
+  |disc| distinct                     : [1, 2, 2, 5]
+  |arb_inv| distinct                  : [2, 4, 12, 55]
+  |var(lam2)| distinct                : [1, 2, 2, 5]
+  |Aut| distinct values               : [2, 2, 3, 4]
+  max H (Szele)                       : [3, 5, 15, 45]
+  max |R|                             : [3, 3, 15, 15]
+  max total-arb                       : [3, 10, 55, 333]
+  #strong iso classes                 : [1, 1, 6, 35]
+  #self-complementary iso             : [2, 2, 8, 12]
+  #regular iso classes                : [1, 0, 1, 0]
+  metagraph |E(G_n)| (wiggly)         : [1, 5, 30, 290]
+  metagraph 1-WL color classes        : [1, 2, 10, 34]
+
+Candidates likely UNCATALOGED (invariant-value-counts / metagraph): flagged for OEIS search.
+DONE.

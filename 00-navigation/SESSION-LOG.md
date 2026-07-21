@@ -1,3 +1,35 @@
+## kind-pasteur-2026-07-21-S128c145 - More sequence-like invariants: ~10 candidate-NEW tournament-invariant sequences + OEIS ID's (THM-2010)
+
+Owner: look for more sequence-like invariants. Hunted NEW integer sequences from our objects,
+differentiated from the census/reciprocal sweep (opus THM-1985/1990) by targeting three
+under-explored families computed exhaustively over iso classes n=3..6 (exact arithmetic): value-counts
+|X|(n)=#distinct values of invariant X, extremal maxX(n), structural counts. Direct OEIS lookup (curl;
+WebFetch was 403-blocked, curl works).
+
+**KNOWN/identified:** iso=A000568; |score|=A000571; #strong=A051337; #regular=A007079; max H (Ham
+paths)=3,5,15,45=A038375 (Moon 1968, 'max spanning paths', hard); #self-converse=2,2,8,12=A002785;
+|specS| skew/Seidel char-poly count=1,2,2,6=Breen-Stover-Yates (arXiv 2406.09697, extends 11,50).
+
+**CANDIDATE-NEW (no OEIS tournament match on 4 terms; [0]=ZERO hits at all):**
+- |specA| adjacency char-poly count = 2,3,9,28  (the A-SIDE TWIN of the KNOWN skew |specS|; strictly
+  finer, 28 vs 6 at n=6 -- adjacency keeps the score/hierarchy data the skew form discards; the
+  obvious missing companion sequence)
+- |H| Redei-spectrum size = 2,3,7,19; |cyc| = 2,3,9,32; |R| = 2,2,6,8; |disc|=|var(lam2)| = 1,2,2,5
+  (equal, both skew-spectral)
+- |arb_inv| = 2,4,12,55 [0] (near-complete invariant, 55 of 56 iso classes at n=6)
+- max-total-arborescences = 3,10,55,333 [0]; max|R| = 3,3,15,15,147 [0]
+- metagraph edges |E(G_n)| = 1,5,30,290 [0]; metagraph 1-WL colors = 1,2,10,34
+
+**Observations:** (1) skew/adjacency ASYMMETRY -- the skew (Seidel) char-poly count is published, the
+adjacency one is not; |specA| is the missing A-side sequence. (2) |disc|=|var(lam2)| take equally
+many values (both skew-spectral). CAVEAT: 4 terms is thin; the four [0] are most confidently new.
+
+Reference catalog (verified data + external ID's), not a proof; value = ~10 uncataloged
+tournament-invariant sequences surfaced + the skew/adjacency gap, homed for OEIS submission +
+reciprocal-signature study. NEXT: extend the [0] sequences to n=7 and submit to OEIS; closed form for
+metagraph edges 1,5,30,290; reciprocal signatures (THM-1990). Files THM-2010; HYP-8760; script
+new_sequence_invariants_kps_S128c145 (+out). Namespace THM-2010/HYP-8760 (max was 2000/8751; margin).
+
 ## death-star-2026-07-21-S84 -- H≥disc crux REDUCED to quasirandomness (binding case = Paley = quasirandom) + a rigorous bosonic≥fermionic positivity E[sym²]≥E[alt²]=E[|P|²]≥0 for GMC(2). HYP-8699.
 
 **Owner directive:** keep reducing the H≥disc crux; pull often; also work GMC(2).
