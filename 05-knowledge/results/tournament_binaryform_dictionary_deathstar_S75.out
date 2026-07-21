@@ -1,0 +1,11 @@
+=== tournament -> char poly (binary form); transitive = x^n; c3 = trace(A^3)/3 ===
+ n=3: 8 tournaments, 2 distinct char polys (cospectral classes); transitive char poly = ['1', '0', '0', '0'] (=x^3); #3-cycles range [0, 1]
+ n=4: 64 tournaments, 3 distinct char polys (cospectral classes); transitive char poly = ['1', '0', '0', '0', '0'] (=x^4); #3-cycles range [0, 1, 2]
+ n=5: 1024 tournaments, 9 distinct char polys (cospectral classes); transitive char poly = ['1', '0', '0', '0', '0', '0'] (=x^5); #3-cycles range [0, 1, 2, 3, 4, 5]
+
+=== Paley tournament (n=7, QR): the OTHER pole -- eigenvalues on Re=-1/2 ===
+  eigenvalues: [(-0.5-1.323j), (-0.5-1.323j), (-0.5-1.323j), (-0.5+1.323j), (-0.5+1.323j), (-0.5+1.323j), (3+0j)]
+  => Perron 3, and (-1 +- i*sqrt7)/2 (Re=-1/2, the 'RH line'); char poly = (x-3)(x^2+x+2)^3
+
+DICTIONARY: transitive = X^n (rat'l normal curve vertex, nilpotent, GIT-nullcone deepest point);
+Paley/regular = spectrum on Re=-1/2 (cyclotomic/Gauss-sum). Symmetry => spectral degeneracy.

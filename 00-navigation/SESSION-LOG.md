@@ -37,6 +37,24 @@ doubly-regular = 3-cycle-maximal = the character construction. Sub-questions: hi
 (quartic I,J) <-> higher cycle statistics; H_Paley(p) as a Gauss/Jacobi-sum product.
 
 **Artifacts:** THM-1800; HYP-8600; 1 script + output.
+## death-star-2026-07-20-S75 -- Transitivity IS the rational-normal-curve vertex: tournaments as binary forms (HYP-8605)
+
+**Owner:** rep theory of binary forms ↔ tournaments; what is in/transitivity itself.
+
+- **The map:** tournament A ↦ char poly of A = a binary form φ_T ∈ Sym^n P^1 (roots = eigenvalues, coeffs =
+  power sums tr(A^k)).
+- **Transitivity itself (5 equiv, verified n=3,4,5):** T transitive ⟺ φ_T=X^n ⟺ A nilpotent ⟺ tr(A^k)=0 ∀k
+  (kp THM-1750) ⟺ ℓ^n = VERTEX of the rational normal curve C_n (transitive = unique tournament on C_n) ⟺
+  deepest point of the SL₂-GIT nullcone. So transitivity = a maximally-DEGENERATE object (cusp), not "no cycles."
+- **Intransitivity:** deviation from ℓ^n, graded by cycle length; first = tr(A³)=3·(#3-cycles). Whole char
+  poly = intransitivity spectrum.
+- **Two poles:** transitive (nilpotent, unstable) vs Paley (spectrum on Re=−1/2, Gauss-sum critical line,
+  THM-1555; STABLE, verified n=7). GIT-stability of φ_T = distance from total order.
+- **Rep-theory:** Clebsch-Gordan mult = OCR vertex-deletion analog; discriminant/transvectants = cospectral
+  detector; apolarity. Extends kp THM-1750 (rational floor = literal rational normal curve); ties to S71
+  (φ_T poly-time = tractable shadow, vs #P Ham; transitive minimizes both).
+- Files: tournament_binaryform_dictionary_deathstar_S75 (+out); reflection
+  transitivity-is-the-rational-normal-curve-vertex-tournaments-as-binary-forms-S75.
 
 ## death-star-2026-07-20-S74 -- Consultation: "$X\cong\mathbb A^3$" ⟺ disproving JC(3), the symmetric-product étale witness (HYP-8600)
 
