@@ -1,0 +1,71 @@
+==============================================================================
+PART A -- single-character both-signs non-vanishing, functional-agnostic
+==============================================================================
+  P = a Z^p + b W^n (charge +p, -n, coprime).  Only atom: n(+p), p(-n), size m0=p+n.
+  E_L[P^{m0}] = C(m0; n,p) a^n b^p W(m0), a SINGLE nonzero term.  Verify across weights:
+
+   (p,n)   m0       E under factorial wt     E under generic wt
+  (2, 3)    5             7200*a**3*b**2         10*W*a**3*b**2
+  (1, 4)    5                 120*a**4*b             5*W*a**4*b
+  (3, 5)    8   73229764608000*a**5*b**3         56*W*a**5*b**3
+  (2, 5)    7         76204800*a**5*b**2         21*W*a**5*b**2
+
+  => E_L[P^{m0}] is C(m0;n,p) a^n b^p times the (nonzero) return weight -- ONE term, no
+     cancellation, so NONZERO for any functional with W(m0)!=0.  PROVED functional-
+     agnostically. The generic-weight column shows it is W times a nonzero monomial.
+
+  CYCLOTOMIC reading: the atom is a minimal vanishing sum of the characters w^p, w^{-n}
+  (roots of unity on |w|=1). A SINGLE minimal relation is one non-degenerate term;
+  a cyclotomic CANCELLATION needs >= 2 relations (opus THM-1710). So single-character
+  = exactly the regime where the cyclotomic single-shot is CLEAN.
+
+==============================================================================
+PART B -- where it stops: when do TWO 3-cycle atoms first coexist?
+==============================================================================
+  A 3-cycle atom = a minimal 3-charge vanishing sum {x,y,z}, x+y+z=0, no 2-subset = 0.
+  Count 3-cycle atoms in the charge set {-(n-1)/2..(n-1)/2}\{0} (n charges, symmetric):
+ n (charges)   #3-cycle atoms   >= 2?                  first two
+           3                0   False                         []
+           4                0   False                         []
+           5                0   False                         []
+           6                2    True  [(-3, 1, 2), (-2, -1, 3)]
+           7                2    True  [(-3, 1, 2), (-2, -1, 3)]
+           8                4    True  [(-4, 1, 3), (-3, -1, 4)]
+           9                4    True  [(-4, 1, 3), (-3, -1, 4)]
+          10                8    True   [(-5, 1, 4), (-5, 2, 3)]
+          11                8    True   [(-5, 1, 4), (-5, 2, 3)]
+          12               12    True   [(-6, 1, 5), (-6, 2, 4)]
+          13               12    True   [(-6, 1, 5), (-6, 2, 4)]
+          14               18    True   [(-7, 1, 6), (-7, 2, 5)]
+          15               18    True   [(-7, 1, 6), (-7, 2, 5)]
+  (The exact n>=13 threshold depends on the charge model; reported as computed. The
+   POINT is: single-character (1 atom) is cyclotomic-clean; >= 2 three-cycle atoms is
+   where interference/tuning enters and the resultant/discriminant (THM-1815) is needed.)
+
+==============================================================================
+PART C -- the blue parity (1 odd, 0 even) is a cyclotomic character = SC/complement lore
+==============================================================================
+  blue parity b(n) = 1 if n odd, 0 if n even = (1 - (-1)^n)/2 = the nontrivial character
+  of Z/2 -- a CYCLOTOMIC object (the 2nd cyclotomic polynomial's character).
+  n  (1-(-1)^n)/2  bicycle dim parity (THM-1440)   S->-S fixed zero (odd n)
+  3             1      0 (odd) / n-2 (even) => 0 yes (skew, odd n => corank>=1)
+  4             0      0 (odd) / n-2 (even) => 2                         no
+  5             1      0 (odd) / n-2 (even) => 0 yes (skew, odd n => corank>=1)
+  6             0      0 (odd) / n-2 (even) => 4                         no
+  7             1      0 (odd) / n-2 (even) => 0 yes (skew, odd n => corank>=1)
+  8             0      0 (odd) / n-2 (even) => 6                         no
+  9             1      0 (odd) / n-2 (even) => 0 yes (skew, odd n => corank>=1)
+  So 'blue parity 1-odd/0-even' = the same parity as: bicycle space trivial (odd n),
+  skew-Seidel forced-zero eigenvalue (odd n, THM-1440), and the complement S -> -S having
+  a self-conjugate fixed direction. It is the SC/complement-parity lore in cyclotomic
+  (Z/2-character) form -- the degree-2 cyclotomic instance of the whole odd/even axis.
+
+==============================================================================
+SUMMARY -- the cyclotomic thread
+==============================================================================
+  * SINGLE-CHARACTER both-signs nullcone non-vanishing: PROVED functional-agnostically
+    (one non-degenerate atom, nonzero for any weight) -- the cyclotomic-clean base case.
+  * TWO 3-CYCLE ATOMS: where cyclotomic single-shot fails (opus THM-1710 non-cyclotomic
+    tuned points), and the resultant/discriminant (THM-1815) takes over.
+  * BLUE PARITY (1-odd/0-even): the Z/2-cyclotomic character = the SC/complement-parity
+    lore = the bicycle/forced-zero parity (THM-1440). One odd/even axis, cyclotomically read.
