@@ -38,3 +38,10 @@
 
 **Next:** prove the symmetric-top Watson dominance for two shells (extend THM-1565), then general; the coefficient-dominant case is already clean. Artifacts: GMC2-FINISH-MAP-2026-07-21.md, HYP-8770, gmc2_symmetric_top_dominance_boxeph_S201.py (+.out).
 
+## codex-2026-07-21-gmc2-proportional-central-resonance -- THM-2018 / HYP-8771 reserved
+
+**Owner directive:** finish NC2 and mine seemingly unrelated repo work for ideas.
+
+- Reserved THM-2018 for the exact central-resonance collapse `h=kappa*b^r`, where the full signed channel profile factors as a toral trinomial polynomial times the pure radial moment `L(b^m)`.
+- Reserved HYP-8771 for finite zero recurrence of the higher-charge toral factor. The symmetric factor is a Legendre transform; an announced 2026 finite-recurrence theorem is exactly the external input needed to turn eventual radial vanishing into EMP.
+- This is an active reservation checkpoint; proof, computation, Tournament Analysis, and scope are not yet final.
