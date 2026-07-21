@@ -17602,9 +17602,9 @@ Hamiltonian paths) as a discriminant-character statement.
 
 **Related:** THM-1800, THM-1450 (odd=skew), THM-1375 (Redei=discriminant char), THM-1770 (Sym^3),
 THM-1200 (Paley/two sevens), THM-1075 (H).
-## HYP-8600 — transitivity is the GIT nullcone of the characteristic binary form
+## HYP-8600 — transitivity is the DEEPEST GIT nullcone point (unstable=transitive only n<=6; leaks n=7)
 
-**Status: CONFIRMED (unstable = transitive, n<=6) + unifying frame.** kind-pasteur-2026-07-20-S128c131. THM-1805.
+**Status: CONFIRMED (unstable = transitive, n<=6) + unifying frame.** kind-pasteur-2026-07-20-S128c131/c132. THM-1810 (was THM-1805; renumbered, klein first).
 
 char_A(x) homogenized = degree-n binary form in Sym^n(C^2), SL_2 acts. (1) transitive <=>
 char_A=x^n = maximally unstable = GIT nullcone (nilpotent, THM-895). (2) VERIFIED n=3..6: the
