@@ -17671,3 +17671,31 @@ extremum through the same discriminant. **This is SUPPORT/analogy, not an LRC ad
 pair-generation is elementary; the content is the identification with the moment machinery.
 NOTE: THM-1820 COLLISION -- two files (boxeph 'lrc-is-a-moment-nullcone' + 'intransitivity-is-
 schur-convexity'); flagged for the fleet.
+### HYP-8620 - The pointwise LRC moment: g_V(t*) as a resonance-lattice sum, and finite-place certification
+**Status:** OPEN, concrete transfer of the moment-nullcone machinery (opus-2026-07-20-S435). See THM-1825.
+
+THM-1825: LRC is a moment nullcone problem -- uncovered measure = sum over the resonance lattice
+Lambda(v) = {sum k_i v_i = 0} of prod hhat(k_i), hhat(k) = sin(2 pi k lam)/(pi k), structurally =
+GMC's E[P^m] = sum over charge-0 reps of prod(coeffs). The UNCOVERED MEASURE is BLIND to the
+extremals (measure 0 at t*=1/14), explaining THM-1185.
+
+TWO CONCRETE TRANSFERS TO TRY:
+(1) THE POINTWISE MOMENT. Replace the uncovered measure (blind) with the pointwise value
+    g_V(t*) = min_i ||v_i t*|| written as a LOCALISED resonance-lattice sum evaluated at t* --
+    the LRC analog of E[Q P^m] (Q-weighted, sees the extremal) vs E[P^m] (plain, blind). This
+    localised moment is NOT measure-zero at the extremals, so it should certify where the measure
+    cannot.
+(2) FINITE-PLACE LRC. Apply THM-1735's mod-p reduction to the Lambda(v) moment sum: is there a
+    prime p certifying the gap at t* for {1..13}? The located maximizer t*=1/14, modulus
+    C=2n-1=27 (pinch THM-401), and hhat annihilation at 7|k (THM-1200) all point to p=7 (the
+    resonance prime). A mod-7 Nullstellensatz emptiness test on the resonance lattice would be the
+    LRC analog of THM-1735.
+
+**Why it matters:** LRC and GMC(2) are the SAME kind of problem (charge-0 moment nullcone, both-
+signs hard core, measure-blind extremals). The GMC levers -- resonance/charge lattice, finite-
+place mod-p, Nullstellensatz emptiness -- transfer, and the measure-blindness (THM-1185) is
+EXPLAINED, redirecting the attack to the pointwise/finite-place certificate.
+
+**Related:** THM-1825, THM-1185 (measure blind), THM-1075 (resonance lattice = charge lattice),
+THM-1200 (hhat annihilation), THM-1535 (charge lattice), THM-1685/1735 (Nullstellensatz/finite
+place), THM-1401 (pinch modulus 2n-1).

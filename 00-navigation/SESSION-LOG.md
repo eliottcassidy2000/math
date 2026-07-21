@@ -11,6 +11,44 @@ boxeph THM-1820 (DELIVERED this session) already gave the LRC<->moment dictionar
 **Handoff.** This SUPPORTS boxeph THM-1820 (I re-verified the bridge, added the pair-generation fact and the discriminant reading). It is analogy/structure, NOT an LRC advance -- LRC is not solved here, and the pair-generation is elementary; the content is the identification with the moment machinery (THM-1780/1815). For whoever pushes the LRC<->moment bridge: the pair-reduction means BOTH problems reduce to the C(n,2) pair returns + the transitivity Vandermonde over them, so the moment discriminant machinery (THM-1815) and the LRC covering/three-gap toolkit are working the same object. NOTE: THM-1820 COLLISION -- two canon files (boxeph 'lrc-is-a-moment-nullcone' + an 'intransitivity-is-schur-convexity'); flagged for the fleet, not mine to renumber. GMC(2) status unchanged from S155 (pair-in-radical multiplicity closed by discriminant; residual = uniform Res!=0 shared with TNC + cross-atom isolation).
 
 ---
+## opus-2026-07-20-S435 - LRC is a moment nullcone problem (same as GMC/TNC), and this EXPLAINS THM-1185 (THM-1825)
+
+Owner: think of the LRC as a moment nullcone problem. It IS one -- the same kind of object as
+GMC(2)/TNC -- and the identification explains the repo's measure-blindness.
+
+**THE DICTIONARY.** frequency = charge; the circle average int_0^1 . dt = the moment functional
+(kills nonzero frequency = nonzero charge, exactly as E kills nonzero charge); the RESONANCE
+LATTICE Lambda(v) = {sum k_i v_i = 0} (THM-1075) = the CHARGE-0 lattice; the danger comb
+1_{D_i}(t) = sum_k hhat(k) e^{2pi i k v_i t} with hhat(k) = sin(2 pi k lam)/(pi k) as coefficients;
+hhat(k)=0 <=> (n/2)|k = the parity annihilation (THM-1200).
+
+**THE STRUCTURAL IDENTITY.** The UNCOVERED MEASURE of the danger-comb union = the constant Fourier
+term of prod_i(1 - 1_{D_i}) = sum over the resonance lattice of prod_i c_{k_i} (c_0 = 1-2lam,
+c_k = -hhat(k)) -- STRUCTURALLY IDENTICAL to E[P^m] = sum over charge-0 reps of prod(coeffs). The
+resonance lattice replaces the charge-0 reps, hhat(k) replaces the coefficients. (Verified
+structurally; numerics converge slowly by Gibbs from the sharp cutoff -- an artefact, not a
+defect.)
+
+**THIS EXPLAINS THM-1185.** Measure/LP methods are blind to the LRC extremals because the moment
+functional sees the uncovered MEASURE, which is ZERO at the extremals: for {1..13} the safe time
+is the isolated point t*=1/14 (measure zero, THM-1380 Argmax=(Z/14)*). So uncovered=0 there, and
+any measure test cannot certify the extremal safe point. This is the SAME measure-blindness as
+GMC's charge-0 vanishing -- one phenomenon.
+
+**WHICH LEVERS TRANSFER.** Positivity (THM-1705) does NOT close LRC, and the reframe says why:
+hhat(k)=sin alternates in sign, so LRC is the BOTH-SIGNS (charge-indefinite) hard case, exactly
+the GMC(2) both-signs residual. The union-bound failure 13/7 > 1 is the charge-0-doesn't-vanish
+obstruction. The resonance lattice = the charge lattice (THM-1075 = THM-1535). The finite-place/
+Nullstellensatz machinery (THM-1685/1735) should transfer to the RATIONAL LRC certificates.
+
+**PAYOFF + NEXT (HYP-8620).** Unifies LRC and GMC(2) as charge-0 moment nullcones with the same
+both-signs core and measure-blindness. Redirects the LRC attack to the POINTWISE certificate: (1)
+write g_V(t*) as a localised resonance-lattice sum (the LRC analog of E[Q P^m], not measure-zero
+at extremals); (2) finite-place mod-p on Lambda(v) -- p=7 (the resonance prime, from t*=1/14,
+C=2n-1=27, hhat annihilation at 7|k) is the candidate for a mod-7 Nullstellensatz gap certificate
+for {1..13}.
+
+**Artifacts:** THM-1825; HYP-8620; 1 script + output.
 
 ## boxeph-2026-07-20-S189 -- THM-1820: LRC IS a moment-nullcone problem — relation lattice {k.v=0} = charge lattice (bridge identity verified); tightness = relation-richness (N_R 8.00 vs 2.81); ALL delta-ladder deaths stack in mirror pairs (the reality-stack, baseline!) with the tight family's terminal 4-stack; five wild reframes filed (HYP-8615)\n\n**Owner:** see if LRC is a moment nullcone problem; propose reframes wildly.\n\n- Bridge (Weyl/Poisson) verified: good-set measures = relation-lattice sums with sinc weights; Q-independent = k=0 only = loneliness free = charge-imbalance triviality; LRC = covering-nullcone EMPTY below 1/(n+1) (vs GMC: nullcone = one-sided). Deepens death-star-S67 to the lattice level; mod-q ladders = the finite moment tests.\n- Measured: only delta* = 1/4 families at n=3 are (1,2,3)-scalings, N_R = 8 vs 2.81 mean; delta-ladder deaths ALWAYS mirror-paired (t -> -t reality stack); tight family: terminal multiplicity-4 stack at delta*.\n- Wild proposals to backlog: q-Redei; Landau = Hilbert-Mumford; delta-resurgence program; LRC finite moment test; {7,21} GIT gaps.\n\n## death-star-2026-07-20-S76 -- STRUCTURAL THINKING-WAYS + an application grid across the whole repo, and THREE UNIFICATIONS (reify-everything / one nullcone across four threads / the obstruction is always the symmetric configuration). CONVERGENT with the fleet's live binary-form burst, not prior. HYP-8612.
 ## klein-2026-07-20-S389 -- THM-1820: LRC(14)-COVERING AND GMC(2) ARE ONE MOMENT-NULLCONE PROBLEM, SPLIT BY DETECTION DEPTH. Finite for LRC (bounded danger alphabet X<=13, Bonferroni terminates, B5 certifies), unbounded for GMC (radial degree unbounded, EMP floor grows). Same 'positivity past a cancellation wall'; the discriminant is |alphabet|.

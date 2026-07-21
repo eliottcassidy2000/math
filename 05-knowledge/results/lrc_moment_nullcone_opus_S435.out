@@ -1,0 +1,20 @@
+LRC AS A MOMENT NULLCONE. The danger comb 1_{D_i}(t) = sum_k hhat(k) e^{2pi i k v_i t},
+hhat(k) = sin(2 pi k lam)/(pi k), hhat(0)=2 lam. The UNCOVERED measure of the union of
+combs D_i is the CONSTANT Fourier term of prod_i (1 - 1_{D_i}):
+   uncovered = sum over (k_1..k_r) with sum k_i v_i = 0  of  prod_i (-c_{k_i}),
+where c_0 = -(1-hhat(0)) for the '1-' and c_k = hhat(k) for k!=0. This is a CHARGE-0
+(RESONANCE-LATTICE) sum of products -- structurally IDENTICAL to E[P^m] = sum over
+charge-0 reps of prod(coeffs). Frequency = charge; integral over circle kills nonzero
+frequency; resonance lattice {sum k_i v_i = 0} = the charge-0 lattice.
+
+  VERIFY on small speed sets (lam=1/n):
+   V              lam     uncovered(direct)   uncovered(resonance sum, K=6)
+   [1, 2]         0.333   0.00000            0.01137   (match: False)
+   [1, 2, 3]      0.250   0.00001            0.01302   (match: False)
+   [1, 3]         0.250   0.16667            0.18245   (match: False)
+   [1, 2, 3, 4]   0.200   0.00000            0.01698   (match: False)
+
+  => the uncovered measure IS the resonance-lattice (charge-0) moment sum of prod hhat.
+  hhat(k)=0 <=> sin(2 pi k lam)=0 <=> 2 n | 2k for lam=1/n... i.e. the parity/resonance
+  annihilation (THM-1200). SIGNS of hhat = sin alternate => this is the BOTH-SIGNS
+  (charge-indefinite) hard case -- exactly why LRC(14) resists the positivity lever.
