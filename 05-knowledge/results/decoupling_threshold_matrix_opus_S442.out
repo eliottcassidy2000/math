@@ -1,0 +1,15 @@
+DECOUPLING THRESHOLD: smallest n where X is NOT a function of Y (orbit-refinement onset)
+==========================================================================
+X | Y              n=3   n=4   n=5   n=6   threshold
+H | score          det   det SPLIT SPLIT   5
+H | c3             det   det SPLIT SPLIT   5
+tr4 | c3           det   det SPLIT SPLIT   5
+tr4 | score        det   det SPLIT SPLIT   5
+charS | score      det   det SPLIT SPLIT   5
+H | charS        SPLIT SPLIT SPLIT SPLIT   3
+H | tr4          SPLIT SPLIT SPLIT SPLIT   3
+scc | score        det   det   det   det   >6
+c3 | score         det   det   det   det   >6
+
+ READING: threshold = the n at which the Y-orbit first refines into multiple X-values.
+ If spectral/path-from-combinatorial pairs cluster at n=5 => the 'quaternion wall' conjecture.

@@ -6,6 +6,37 @@
 - **PART B — a/b ↔ GMC(2) (functional complement to the fleet's group-theoretic BS(1,2)).** b(x)=x/2 (symmetriser) ↔ CT_u (toral charge-0 projection): both the trivial-isotypic projector, b = the Z/2-parity shadow of the U(1) charge-0. E_n(even)/O_n(odd) ↔ symmetric/antisymmetric = a FINITE ANALOGY of bosonic/fermionic (klein THM-1810). x²−1=a·ā ↔ radial s=ZW; the ½ (b) = the Legendre(toral)/Hermite(radial) half-integer world (THM-1620). PART C: the two "E_n"s (even skew-char-poly vs even-graph metagraph) are ONE object = the even/charge-0/cycle-space = GMC(2)'s toral (DvdK-proved) shadow. cut⊕cycle: cut=score=charge=radial, cycle=even-graph=toral.
 - **FLEET CONVERGENCE (credited):** kps THM-1885 identified ⟨a,b⟩ = Baumslag-Solitar BS(1,2) (ab=ba²) + the amenability=hardness law (BS(1,2) solvable ⇒ GMC/TNC recurrences close; H=#P=no-monoid) — the CLEANER GMC(2) relation; my even/odd split is a finite analogy, the real hardness is the ABSENCE of a monoid (kps), beyond the amenable a/b. boxeph THM-1926 (tournament zeta = a's multiplicative avatar); opus THM-1920/1930 (a=vertex-insertion, var(λ²) decouples from c3). Mine = the toral-projector/parity-shadow reading + the computed E_n dual.
 - **PREDICTS:** Pell E_n²−O_n²=(x²−1)^n as a bosonic²−fermionic²=radial supersymmetry target for GMC(2). Namespace: HYP-8653 (clean). reflection the-two-generator-monoid-is-gmc2s-parity-shadow-...-S80; script en_dual_sweep_S80 (+out). GMC(2)/LRC(14) untouched.
+## opus-2026-07-20-S442 - Invariants/monoids/orbits trilens: the QUATERNION WALL n=5 (THM-1935) + creative statements
+
+Owner: think everything as invariants/monoids/orbits; come up with creative statements.
+
+VERIFIED CENTERPIECE (THM-1935, the quaternion wall): a decoupling (invariant X not a function of Y)
+= an ORBIT-REFINEMENT (the Y-orbit splits). Exhaustive threshold matrix n=3..6: H|score, H|c3,
+var(lambda^2)|c3, var|score, char_S|score ALL first split at EXACTLY n=5 (controls confirm: c3|score
+never splits by KBS = genuinely score-determined; H|spectrum splits at n=3 = orthogonally coarse).
+n=5 = QUATERNION level (Cayley-Dickson R/C/H at n=2/3/5; tournament n=2^k+1 = CD level k). BELOW H
+tournaments are 'abelian' (scores determine Ham-paths + spectrum); AT H commutativity breaks and the
+finer path/spectral invariants peel off the abelian score data. Unifies THM-1865 (H not score-det)
++ THM-1930 (var not c3-det) as ONE threshold theorem.
+
+CREATIVE-STATEMENTS REFLECTION (the-invariants-monoids-orbits-trilens-...-S442): the trilens welds =
+orbit-stabilizer (Tilings*|Aut|=H, so H IS an orbit size; #P-hardness = orbit-size hardness) +
+Burnside (G_n, E_n = one cube, two shadows) + nullcone (transitive). ~16 tagged statements [V]/[P]/
+[C]/[R]. Sharpest: (M1) vertex-deletion = d/dx on char_S, insertion = its monoid-adjoint (THM-1920);
+(M2) the 1/2 everywhere IS the generator b -- LRC 1/(2n)=b(1/n), Redei=a(LRC), the observer is the +1;
+(I3) var(lambda^2) = moment-map norm^2, transitive=nullcone-max, Paley=Kempf-Ness-0; (I2/O4) every
+invariant has a b-parity, G_n/Z2 = the b-even ring, |Aut| = orbit-stabilizer reading of var; (F1)
+Redei/GMC/LRC = three Reynolds-operator vanishings, obstruction=symmetric=big-stabilizer=Reynolds
+concentration; (F2) Keller-automorphism iff graph-orbit closed = JC as orbit-closure.
+
+GENERATIVE PAYOFF: the surface is INVARIANT x MONOID; each empty cell asks neutral/pumped/equivariant;
+each 'X not det by Y' predicts an orbit-refinement at a CD wall (test n=9 octonion wall for degree-2).
+
+OPEN: prove threshold=5 for the whole finer-invariant class (an n=5 score-fibre statement); the second
+wall at n=9.
+
+Files: THM-1935; HYP-8690; reflection; decoupling_threshold_matrix_opus_S442.py (+out). Namespace clean
+(1935/8690 above kps churn). Builds on my THM-1865/1900/1920/1930, kps THM-1880.
 
 ## opus-2026-07-20-S441 - The shared next target resolved: var(lambda^2) DECOUPLES from c3 (THM-1930)
 
