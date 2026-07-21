@@ -63,6 +63,17 @@ the two-sided `max(1,·)` kernel, proved via the identity `aᵢ + |bᵢ| = 2` (w
 *predicts* it: composition drives `s` toward the `tanh` band `(−1,1)`, so `s<1` is generic and only
 the small-`n` strong atoms sit above 1.
 
+## Two more facts
+
+- **`s` is a regularity coordinate: `s(T)=n ⟺ T regular`** (proved: regular ⟹ `K𝟙=0` ⟹ `x=𝟙`,
+  `s=n`; `s=n` ⟹ Cauchy–Schwarz equality ⟹ `x∥𝟙` ⟹ regular; verified n=3,5,7). So `s∈[0,n]` with the
+  max pinned to regularity (Paley/rotational uniquely maximize `s`; there the base is `H ≥ n·disc`).
+  The velocity law then pushes `s` into `(−1,1)` under `⇒`, so `s` = "distance from regular" in a
+  Möbius-additive coordinate.
+- **The algebraic kernel is machine-checked.** `HgeDiscKernel.kernel_ineq` + `peel_step` build green,
+  kernel-pure `[propext, Classical.choice, Quot.sound]`, in the root manifest — the analogue of
+  THM-1860's `SumLeProd.lean`. The reduction's proved half is now formal; only the strong base is open.
+
 ## Residual and next steps
 
 - **Open base (the content):** `H(C) ≥ max(1,s(C))·disc(C)` for strong `C`. Room grows

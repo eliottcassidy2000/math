@@ -726,3 +726,4 @@ import TournamentH7.TNCDetectionDepth  -- kind-pasteur-S128c124 / THM-1710: TNC 
 import TournamentH7.MomentNullcone  -- kind-pasteur-S128c129 / THM-1775: the moment-nullcone interface. Data structure + detect (= zeros_propagate) + ofMonicRec; the shared detection engine for tournament (Cayley-Hamilton), TNC (THM-1670), GMC (THM-1740). H excluded (not a moment: splits co-spectrally at n=6, THM-1780). No sorry
 
 import TournamentH7.SumLeProd  -- kind-pasteur-S128c135 / THM-1860: sum <= prod for naturals >= 2, the arithmetic kernel of the c3 <= H SCC reduction (WOWII loop). No sorry
+import TournamentH7.HgeDiscKernel  -- klein-S400 / THM-1950: kernel_ineq max(1,x)max(1,y) >= max(1+xy,x+y)/2 + peel_step, the algebraic kernel of the H >= disc SCC reduction (disc SCC-composition + s velocity-addition). No sorry/native_decide

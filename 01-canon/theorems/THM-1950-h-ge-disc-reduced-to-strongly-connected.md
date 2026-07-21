@@ -62,9 +62,23 @@ are `√(1+σ²)≥1`, so `‖(I+K)⁻¹‖≤1`. A singleton has `s=1`.
    frame (THM-1810/1885). (This is why reducible `s` can drop below 1 even when every component
    has `s ≥ 1`.)
 
-3. **Kernel inequality (elementary, 3 cases).** For all `x, y ≥ 0`,
+3. **Kernel inequality (elementary, 3 cases; FORMALIZED in Lean).** For all `x, y ≥ 0`,
    > `max(1,x)·max(1,y) ≥ max(1+xy, x+y)/2.`
    Cases `x,y≥1` (⟺ `xy≥1`), `x,y≤1` (⟺ `xy≤1`), `x≥1≥y` (⟺ `x≥y`) each reduce to a triviality.
+   Machine-checked, `sorry`-free, kernel-pure `[propext, Classical.choice, Quot.sound]`:
+   `HgeDiscKernel.kernel_ineq` and the peel form `HgeDiscKernel.peel_step`
+   (`04-computation/lean/TournamentH7/TournamentH7/HgeDiscKernel.lean`, in the root manifest) —
+   the exact analogue of THM-1860's `SumLeProd.lean` arithmetic kernel.
+
+## `s` is a regularity coordinate: `s(T)=n ⟺ T regular`
+
+Because a regular tournament has `K𝟙 = 0` (row sums `= out−in = 0`), `x=(I+K)⁻¹𝟙=𝟙` and `s=n`; and
+`s=n` forces `x∥𝟙` (equality in Cauchy–Schwarz `s=𝟙ᵀx≤√n‖x‖=√n√s`) hence `K𝟙=0`, i.e. regular.
+Verified exhaustively n=3,5,7 (0 mismatches). So `s ∈ [0,n]` with the top value pinned to regularity;
+regular tournaments (Paley, rotational) uniquely maximize `s`, and there the base reads `H ≥ n·disc`
+(e.g. Paley-7: `H=189 ≥ 7·8=56`). Under `⇒` the velocity law drives `s` into `(−1,1)` (reducible
+`s<1`), so `s` measures how far the top strong component is from regular, in a Möbius-additive
+coordinate.
 
 ## The reduction
 
