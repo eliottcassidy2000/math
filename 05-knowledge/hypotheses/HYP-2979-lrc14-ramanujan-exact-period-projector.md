@@ -157,6 +157,28 @@ stress bank to the full HYP-2963 bank, then interval-enclose the finite list of
 late primitive packets (`q=25,27,34,40,41`) so that they become exact
 certificates rather than just computed witnesses.
 
+## THM-2043 exact update: q=41 is the exit, not a refinement of q=14
+
+THM-2043 theoremizes the strongest magnitude collision in this file. For
+
+```text
+T_n={1,...,11,13,96+3444n},
+```
+
+the full owner-indexed mod-14 phase function, every characteristic-seven
+Hasse jet, the complete blockedness mask through `q=13`, and `q_threshold=14`
+all agree with the tight AP. Nevertheless
+
+```text
+C_(41,17)(T_n)=1,
+```
+
+so `a=17/41` (and by symmetry `24/41`) is strict. No fixed finite `7`-adic
+lift-height truncation repairs the collision. Thus the correct packet handoff
+is horizontal: keep owners and move from the local bad-prime `q=14` chart to
+an adaptive resolved phase such as `q=41`. The old suggestion to deepen only
+the `q=14` packet is now refuted in raw form.
+
 ## Web-derived refinements
 
 The one-hop web pass around HYP-2978 adds three concrete refinements.

@@ -1,0 +1,69 @@
+THM-2043 PERIOD-14 PARITY-HASSE JET AUDIT
+hasse_coordinate_count=14
+hasse_matrix_rank_mod7=14
+factorization_mod7=(X-1)^7*(X+1)^7=X^14-1 PASS
+SHARP MAGNITUDE-BLIND COLLISION
+AP_route=BOUNDARY-TIGHT (pigeonhole upper bound and t=1/14 equality)
+replace12by26_route=STRICT-Q12-WITNESS
+all_three_raw_phase_functions_equal=PASS
+all_fourteen_hasse_coordinates_per_function_equal=PASS
+period12_phase_functions_differ=PASS
+INFINITE COLLISION FAMILY
+S_h=AP with 12 replaced by 12+14h
+period14_packet_equal_for_every_h=by congruence
+strict_q12_witness_when_6_does_not_divide_h=since (12+14h) mod 12=2h
+Q-THRESHOLD-BLIND INFINITE COLLISION FAMILY
+family=T_n=AP with 12 replaced by 96+3444n
+symbolic_periods=3444=lcm(12,14,41)
+q2_to_q13_blocked_mask_equal_AP=True
+q_threshold=14
+uniform_strict_certificate=(q,a,integer_margin)=(41,17,1)
+checked_indices=0..40
+mod7_height_collision=n=1 has lift height 252=0 mod7
+AP_strict_primitive_numerators_q41=()
+T0_strict_primitive_numerators_q41=(17, 24)
+FINITE 7-ADIC HEIGHT TRUNCATION NO-GO
+precision_rows_k_inverse_replacement=((0, 1, 96), (1, 6, 3540), (2, 36, 148188), (3, 11, 316944), (4, 25, 5042112), (5, 27, 38118288), (6, 39, 385418136))
+all_height_mod_7_to_k_equal_AP=True
+all_uniform_q41_margin=1
+BOUNDED SAME-RESIDUE ALIAS AUDIT
+aliases=156
+q_threshold_histogram={8: 9, 9: 11, 10: 10, 11: 11, 12: 10, 13: 12, 14: 93}
+direct_q_le_13=63
+q14_only_in_window=93
+strict_certificate_q_le_42=156
+first_strict_q_histogram={8: 9, 9: 11, 10: 10, 11: 11, 12: 10, 13: 12, 15: 10, 16: 1, 17: 21, 19: 26, 21: 2, 22: 10, 23: 15, 25: 4, 27: 2, 41: 2}
+NAMED HYP-2979 ROUTE-FIBER AUDIT
+named_rows=11
+exact_phase_fibers=3
+mixed_exact_phase_fibers=1
+ap_fiber_size=7
+ap_fiber_route_counts={'BOUNDARY-AP-GW': 2, 'BOUNDARY-PETAL': 2, 'K33-STATE-LIFT': 2, 'Q-WITNESS': 1}
+ap_fiber_names=('AP', 'GW12to24', 'residue_liar12to26', 'near12to36', 'petal10to20', 'P10plusGW', 'P10plusK33')
+jet_depth_census=((0, 3, 1, 7), (1, 3, 1, 7), (2, 3, 1, 7), (3, 3, 1, 7), (4, 3, 1, 7), (5, 3, 1, 7), (6, 3, 1, 7))
+OWNER-LABELLED CRT REPAIR
+height_bound=181
+owner_residue_pairs=181
+collisions=0
+modulus_product=182
+owner_labelled_mod13xmod14_recovers_height=PASS
+NAMED FIRST PERIOD-14 JET DEPTH DIFFERING FROM AP
+AP: first_depth=None
+GW12to24: first_depth=None
+residue_liar12to26: first_depth=None
+near12to36: first_depth=None
+petal10to20: first_depth=None
+covering12to84: first_depth=0
+CHARACTERISTIC-3 COMPONENT VERSUS ENERGY
+danger_collision_components_mod3=both_zero
+ap_weak_energy_mod3=0
+ap_weak_component_mod3=(0, 2, 1, 2, 1, 2, 1, 0, 1, 2, 1, 2, 1, 2)
+ap_weak_component_nonzero=True
+TOURNAMENT ANALYSIS
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count=1
+tie_hamiltonian_path=labelled_packet_sheaf > owner_labelled_13x14_chart > full_jets_plus_height_owner > full_unlabelled_hasse_packet > depth3_unlabelled_hasse_packet > depth1_unlabelled_hasse_packet > parity_values_only > scalar_ramanujan_energy
+assumption_challenge=complete raw Hasse jets cannot recover magnitude or endpoint ownership absent from the phase function
+verdict=PASS; Hasse jets are complete coordinates after mod-7 reduction, but a single period cannot supply LRC magnitude or exit data

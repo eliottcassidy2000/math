@@ -7,12 +7,18 @@ status: >
   packets. THM-2022 now also proves rational Gamma-radial nullcones, and
   THM-346 gains prime-step tiling-walk congruences. For LRC, the missing
   theorem remains production of a nonzero safe/dual seed and its implication
-  to a pointwise lonely time. Two precise new LRC targets are a characteristic-3
-  period-14 propagation lemma and a characteristic-7 parity-Hasse-jet sidecar.
+  to a pointwise lonely time. The characteristic-3 period-14 propagation lemma
+  remains open. THM-2043 now settles the raw characteristic-7 question:
+  parity-Hasse jets are complete local coordinates, but even the full packet
+  plus q-threshold is globally magnitude-blind.
 source: codex-2026-07-21-NC2-transfer
 related:
   - THM-2022
   - THM-2041
+  - THM-2043
+  - THM-2000
+  - THM-1605
+  - THM-2033
   - THM-1820
   - THM-1830
   - THM-2042
@@ -39,6 +45,9 @@ artifacts:
   - 05-knowledge/results/frobenius_exact_period_projectors_codex_20260721.out
   - 04-computation/gamma_radial_frobenius_face_codex_20260721.py
   - 05-knowledge/results/gamma_radial_frobenius_face_codex_20260721.out
+  - 04-computation/lrc14_parity_hasse_jet_packet_audit_codex_20260721.py
+  - 05-knowledge/results/lrc14_parity_hasse_jet_packet_audit_codex_20260721.out
+  - 07-reflections/lrc14-from-local-hasse-charts-to-resolved-phase-sheaves-codex-20260721.md
 reflection: 07-reflections/the-nc2-proof-transfers-to-lrc-only-after-a-frobenius-safe-certificate-is-built-codex-20260721.md
 ---
 
@@ -246,7 +255,7 @@ This target is not proved. In particular, common speed scaling and phase
 permutation alone are LRC gauges. The missing content is covariance of the
 certificate or the polynomial-sieve implication, not orbit arithmetic.
 
-## 6. New target B: use bad-prime Hasse jets at the apex 7
+## 6. Resolved local target B: bad-prime Hasse jets need a resolved-phase sidecar
 
 The good-prime theorem deliberately excludes the most structured period-14
 prime. In characteristic `7`,
@@ -265,21 +274,49 @@ D^(j)F(+1), D^(j)F(-1),        0<=j<=6,
 D^(j)F(a)=sum_x binomial(x,j)f_x a^(x-j).                 (10)
 ```
 
-These Hasse jets are a concrete `parity x seven-depth` side channel. They
-align with LEM-032's parity kill, LEM-033's 7-adic valuation grades,
-HYP-3030's Henselian-unit status gate, and THM-671's finite activation depth.
-
-The next computation should attach (10) to the HYP-2963 residual bank for
-three functions separately: danger count, weak-safe mask, and endpoint-owner
-current. It should report the first jet distinguishing
+These Hasse jets are a concrete `parity x seven-depth` side channel. THM-2043
+proves that the fourteen coordinates in (10) are complete for a period-14
+function after reduction modulo seven. It also proves the sharp limitation.
+Let
 
 ```text
-AP/GW boundary | q-witness | covering-moment | K33/H7 exit.               (11)
+A   = {1,...,13},
+T_n = {1,...,11,13,96+3444n}.                                      (11)
 ```
 
-The theorem target is not "some jet is nonzero." It is that the first
-nonzero endpoint-labelled jet either has a sign/duality implication to safe
-mass or lands in a named boundary/state-lift exit.
+Every `T_n` has exactly the AP's owner-indexed residues modulo fourteen,
+all raw danger/weak/boundary functions, all Hasse jets, the complete blocked
+denominator mask through thirteen, and `q_threshold=14`. Nevertheless the AP
+is tight while every `T_n` has the exact strict certificate
+
+```text
+C_(41,17)(T_n)
+ = min_(v in T_n) (14 min(17v mod 41,41-17v mod 41)-41)
+ = 1.                                                               (11a)
+```
+
+Even a fixed finite `7`-adic height truncation is insufficient: for every
+`k`, one can choose a replacement congruent to `12 mod 14`, divisible by
+`12`, congruent to `14 mod 41`, and with lift height `0 mod 7^k`. The same
+margin-one certificate (11a) survives. Thus deeper jets cannot reconstruct
+height erased before the period-14 pushforward.
+
+The surviving theorem target is therefore not "some Hasse jet is nonzero."
+It is a gluing statement
+
+```text
+endpoint-owner Hasse module
+ + exact height or adaptive resolved (q,a,margin) phase
+ + sign/duality implication
+ -> safe phase or named boundary/state-lift exit.                    (11b)
+```
+
+For bounded heights at most `181`, the owner-labelled residue pair modulo
+`13` and `14` recovers the exact speed by CRT. For the unbounded problem the
+modulus must adapt, or exact height must remain. THM-2043's eleven-row
+HYP-2979 audit also shows that all Hasse depths mix AP/GW, direct-q, petal,
+and K33 labels in one seven-row fiber. Endpoint ownership without actual
+height does not fix this.
 
 This also corrects older repo language. Because
 `Q(zeta_14)=Q(zeta_7)` has conductor `7`, the rational prime `2` is
@@ -312,6 +349,22 @@ nonunit/non-etale group-algebra behavior, not field ramification.
    automatically nonzero when weights are positive. The THM-2022 lesson is to
    retain that entire initial form instead of naming one Kruskal tree. Signed
    LRC currents lose this automatic seed and need a separate theorem.
+5. **Support-measure transform discipline.** THM-2000 separates an atomic
+   support from any one scalar transform. Applied here, the period-14 phase
+   function is a pushforward of the owner-labelled speed support. Its kernel
+   contains every lift direction `v -> v+14`; Fourier and Hasse transforms
+   only change coordinates after that quotient. This gives the exact reason
+   for THM-2043's no-go and points to a modulus-indexed sheaf of phase views.
+6. **Orbit-product monodromy.** THM-1605 turns a local identity on one branch
+   into a global contradiction by transporting it over a connected monodromy
+   orbit and multiplying all conjugates. An LRC analogue would transport a
+   positive resolved-phase margin over an owner packet. It requires a
+   connected cover and a multiplicative invariant; neither is yet supplied.
+7. **Confluent boundary jets.** THM-2033 replaces a vanishing Vandermonde at
+   coincident grades by a nonzero confluent/Hasse determinant. This is an
+   exact boundary-to-next-jet device, but it becomes an LRC exit only if the
+   determinant retains endpoint ownership and controls a positive phase
+   margin rather than merely a signed packet.
 
 ### 7.2 Transfers that stop at a guardrail
 
@@ -345,17 +398,19 @@ nonunit/non-etale group-algebra behavior, not field ramification.
 The leverage order after this audit is:
 
 ```text
-1. THM-671 resolved-modulus/B5 supply            (already has the exit)
-2. familywise Fejer/Toeplitz packet theorem       (computationally universal)
-3. characteristic-3 endpoint-labelled propagation (repairs the orbit)
-4. characteristic-7 parity-Hasse-jet atlas        (retains the bad-prime depth)
-5. LEM-033 conductor-grade + owner-current glue   (exact selector, seed open)
-6. raw Ramanujan energy                            (diagnostic only).        (13)
+1. THM-671 resolved-modulus/B5 supply              (already has the exit)
+2. familywise Fejer/Toeplitz packet theorem         (computationally universal)
+3. characteristic-3 endpoint-labelled propagation  (repairs the orbit)
+4. adaptive {14,27,41,...} resolved-phase sheaf     (THM-2043 gives q=41 exit)
+5. LEM-033 conductor-grade + owner-current glue     (exact selector, seed open)
+6. characteristic-7 Hasse local coordinates         (complete locally only)
+7. raw Ramanujan energy                              (diagnostic only).      (13)
 ```
 
-The first two remain the shortest logical routes to LRC(14). The new
-characteristic-3 and characteristic-7 targets are valuable because they
-explain, rather than rename, why the composite period behaves differently.
+The first two remain the shortest logical routes to LRC(14). Characteristic
+three remains a propagation target. Characteristic seven now supplies a
+proved local chart and a proved no-go; the live content is the adaptive
+cross-denominator gluing in item 4, not additional raw jet depth.
 
 ## 9. Tournament Analysis and assumption challenge
 
@@ -390,6 +445,7 @@ one surviving atom is needed;              false -- whole packets suffice;
 any nonzero harmonic packet is a witness;  false -- (6) is a counterexample;
 even n destroys every Frobenius orbit;      false -- (8) is transitive;
 a good-prime projector sees the apex;       false -- the apex lives in (9);
+a complete apex jet plus q-threshold exits; false -- THM-2043 family (11);
 a scalar tropical face controls all Wick factors; false -- THM-2022 (20).
 ```
 

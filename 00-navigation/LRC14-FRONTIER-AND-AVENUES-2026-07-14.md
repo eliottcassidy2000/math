@@ -608,6 +608,15 @@ at `m`. This closes amplification after a base packet is known nonzero. It does
 not produce that packet, and a signed trace still needs the safe-phase,
 endpoint-owner, and open/boundary labels before it implies an LRC witness.
 
+**THM-2043 update (2026-07-21).** At the bad prime seven, the fourteen
+parity-Hasse jets are complete coordinates for a reduced period-14 function,
+but the raw route is now sharply closed. The infinite family
+`{1,...,11,13,96+3444n}` shares the AP's full mod-14 packet, blockedness through
+`q=13`, and `q_threshold=14`, while `(q,a,margin)=(41,17,1)` is a strict exit.
+No fixed finite `7`-adic height truncation repairs this. Replace the old
+single-period target by an owner-labelled, adaptive resolved-phase sheaf; on
+bounded heights `<=181`, the mod-13 x mod-14 owner chart is lossless.
+
 **C3. Fejer/Toeplitz packet certificate.**  HYP-2981's positive kernels may
 control signed cancellation without the divergent absolute relation sum.
 Attach the kernel to the good-set indicator and demand an explicit error below
@@ -642,6 +651,11 @@ bounded partial quotient forcing an uncovered sheet.
 **C10. p-adic/Hensel scale descent.**  Factor the core scale prime by prime.
 At each p, either lift a witness sheet or prove the exceptional residues
 occupy a rigid p-adic pattern.  Reassemble by CRT with explicit coupling.
+
+THM-2043 guardrail: no *fixed* finite `7`-adic lift-height truncation can be
+the terminal state of this descent. Each finite precision has a strict
+`17/41` alias of the AP. The descent must terminate in exact height, a growing
+precision argument, or a positive resolved-denominator certificate.
 
 THM-2041 suggests the proof-safe unit here: retain the complete exact-period
 or unit-root orbit under Frobenius, not one arbitrarily selected phase/root.

@@ -2441,6 +2441,13 @@ a coprime prime permutes the unit classes. This works even at composite period
 scores or imply a safe phase; Paley smoothness remains a carrier analogy, and
 the safe inequality plus endpoint/open-boundary labels must remain attached.
 
+**THM-2043 audit (2026-07-21):** characteristic-seven parity-Hasse jets are
+complete on the reduced period-14 function but not on the speed support. Even
+full jets plus the q<=13 blockedness mask and `q_threshold` identify the tight
+AP with an infinite strict `17/41` family. Tournament carriers must therefore
+retain an exact height or resolved `(q,a,positive margin)` sidecar. The
+q=14-to-q=41 handoff is exact; increasing raw jet depth is not.
+
 - **Move:** Use Paley and Frobenius tournaments as arithmetic difference
   carriers: quadratic residues orient edges, automorphism groups normalize
   path counts, and Gauss/Ramanujan sums expose exact-period structure.

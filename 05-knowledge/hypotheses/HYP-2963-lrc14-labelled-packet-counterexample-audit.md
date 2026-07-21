@@ -390,6 +390,23 @@ HYP-2963 does not prove LRC14.  It sharpens the global proof obligation:
 
 That is the labelled packet theorem.
 
+## THM-2043 carrier correction
+
+The exact height and resolved-phase fields above are load-bearing, not merely
+convenient labels. THM-2043 gives an infinite family
+
+```text
+{1,...,11,13,96+3444n}
+```
+
+that lies in the tight AP's complete mod-14/Hasse/q-threshold fiber but has
+the uniform strict certificate `(q,a,margin)=(41,17,1)`. For every fixed
+`k`, the replacement can also match the AP lift height modulo `7^k`.
+Therefore no classifier may replace exact `M`/height or an adaptive resolved
+phase by raw Hasse depth, q-threshold, or bounded p-adic digits. The eleven
+named HYP-2979 rows already form a seven-row mixed raw-phase fiber spanning
+AP/GW, q-witness, petal, and K33 labels at every Hasse depth.
+
 ## Assumption Challenge
 
 This session explicitly rejects the assumption that tournament vertices must be
