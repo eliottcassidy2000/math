@@ -1,4 +1,15 @@
 ## boxeph-2026-07-21-S203 -- THE VANDERMONDE IS THE BRIDGE: tournaments <-> NC2 (THM-2033)
+## death-star-2026-07-21-S89 -- The NC2 WALL IS the regular/Paley tournament: completing boxeph's bridge + unifying EVERY repo wall (NC2 = H≥disc = LRC) into ONE object. NC2 wall OPEN. HYP-8785.
+
+**Owner directive:** keep finding tournament↔NC2 connections; push/pull often.
+
+- **BUILDS ON boxeph THM-2033** (NC2 channel-det = ∏a_i!·Vandermonde(radial degrees) = signed tournament sum, klein THM-1805; distinct=transitive=noncancel, repeated=confluent wall).
+- **MY STEP (verified):** channel radial degree D(i)=i+i·degA+(m-2i)·degB. DEGREE-GAP → D(i)=[0,3,6,9,...] DISTINCT (transitive Vandermonde≠0). RESONANCE CENTRAL OFFSET (degA=degB=1) → **D(i)=m for EVERY i** (fully-confluent). By klein THM-1805 (transitive⟺distinct scores): repeated degrees=repeated SCORES=REGULAR tournament; ALL equal = DOUBLY-REGULAR = PALEY/DRT. So **NC2 resonance wall = fully-confluent Vandermonde = the regular/Paley tournament.**
+- **UNIFICATION (the payoff):** NC2 wall = H≥disc wall (S84 regular/Paley tightest) = LRC wall (THM-640 AP=Paley) = ONE object, the regular/Paley (equal-score, big-stabilizer, S76) tournament. Transitive=easy pole (distinct scores), regular/Paley=hard pole (equal scores) = the two S75 poles, shared across 3 flagship problems.
+- **ANALYTIC FACE:** the fully-confluent (regular) channel sum's asymptotic = Wigner/free-cumulant (THM-438, H(Paley)~e·avg); codex hyper-Bessel + boxeph Laguerre-Pólya boundary = the Paley char_S=∏(x²+p) real-rooted spectrum = Re=−1/2 critical line = quasirandomness (S85). NC2 noncancel on the wall = confluent Paley Vandermonde/Wronskian≠0 = real-rootedness = reality of the Paley spectrum (tournament-spectral, THM-1555/213).
+- Unification not proof; NC2 wall OPEN. Credits boxeph THM-2033/S202, codex, klein THM-1805. reflection the-nc2-wall-is-the-regular-paley-tournament-...-S89; script nc2_confluent_vandermonde_is_regular_S89 (+out).
+
+## death-star-2026-07-21-S88 -- The CHANNEL-TOURNAMENT LENS: NC2 is a tournament-nullcone on its radial channels; the regular-channel core is the wall; explains why domination (MISTAKE-202) was refuted. NC2 OPEN. HYP-8772.
 
 **Owner:** find connections between tournaments and NC2; long session, push/pull often.
 

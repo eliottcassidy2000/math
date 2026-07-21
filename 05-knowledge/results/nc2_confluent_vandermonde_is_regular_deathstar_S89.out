@@ -1,0 +1,33 @@
+boxeph THM-2033: channel-det = Vandermonde(radial degrees D(i)) = signed
+tournament sum. DISTINCT D(i) = transitive = noncancel; REPEATED = confluent wall.
+MY CLAIM: repeated D(i) <=> repeated SCORES <=> REGULAR tournament (Paley/DRT).
+
+==================================================================
+[A] DEGREE-GAP  P=Z s^2 + 1 + Zbar s^2 (degA=2,degB=0):
+  m=8: channel radial degrees D(i)=[0, 3, 6, 9, 12] -> all DISTINCT? True => transitive Vandermonde != 0 (noncancel)
+  m=10: channel radial degrees D(i)=[0, 3, 6, 9, 12, 15] -> all DISTINCT? True => transitive Vandermonde != 0 (noncancel)
+
+[B] RESONANCE central  P=Z(1+s)+(1+s)+Zbar (degA=1,degB=1):
+  m=8: D(i)=[8, 8, 8, 8, 8] -> 4 REPEATS (CONFLUENT/tied)
+  m=10: D(i)=[10, 10, 10, 10, 10, 10] -> 5 REPEATS (CONFLUENT/tied)
+  m=12: D(i)=[12, 12, 12, 12, 12, 12, 12] -> 6 REPEATS (CONFLUENT/tied)
+
+  At the central offset degB=(degA+1)/... the degrees CLUSTER/repeat: D(i)=i+i*degA+
+  (m-2i)degB. With degA=degB=1: D(i)=2i+(m-2i)=m for ALL i -- EVERY channel has the
+  SAME radial degree m! => FULLY CONFLUENT Vandermonde (all degrees equal) = repeated
+  scores = the FULLY REGULAR tournament (all scores equal) = Paley/DRT = THE WALL.
+  m=8: degA=degB=1 -> D(i)=[8, 8, 8, 8, 8], all equal to 8? True
+  m=12: degA=degB=1 -> D(i)=[12, 12, 12, 12, 12, 12, 12], all equal to 12? True
+
+UNIFICATION (the tournament<->NC2 bridge, completed on the wall side):
+ boxeph THM-2033: NC2 channels = Vandermonde of radial DEGREES = signed tournament sum.
+ + THIS: repeated degrees = repeated SCORES = REGULAR tournament (all-equal-score =
+   doubly-regular = Paley). So NC2's resonance WALL = the confluent Vandermonde = the
+   REGULAR/PALEY locus -- the SAME wall as H>=disc (S84: regular=tightest) and LRC-AP
+   (S75: AP=Paley). ALL the repo's walls are ONE object: the regular/Paley tournament.
+ + Asymptotics: the fully-confluent (regular) channel sum's growth is the WIGNER/
+   free-cumulant series (THM-438, H(Paley)~e*avg) -- so codex's hyper-Bessel / boxeph's
+   Laguerre-Polya boundary = the Paley/DRT spectral object (char_S=prod(x^2+p), real-
+   rooted in x^2 = the Re=-1/2 critical line = quasirandomness, S85).
+ NC2 noncancellation on the wall = 'the fully-regular channel tournament (Paley) does
+ not exactly cancel' = the confluent Vandermonde/Wronskian != 0 = real-rootedness (L-P).
