@@ -7,13 +7,17 @@ status: >
   three-term support a Z^6+b Zbar^2+c Zbar^18 is closed for arbitrary complex
   coefficients; after its cancellable fourth moment, its eighth moment has an
   explicit unique 3-adic minimum. VERIFIED exactly by the companion script.
-  OPEN: not every two-sided support is yet known to admit infinitely many
-  finite-place separation certificates.
+  SUPERSEDED AS AN NC2 GAP by THM-2022: a unique minimum channel is not needed.
+  The lowest balanced face can be an arbitrary tied layer, whose normalized
+  residue is preserved wholesale as a nonzero Frobenius power. Whether every
+  support has infinitely many unique-channel certificates remains open only as
+  a stronger classification question.
 source: codex-2026-07-21-NC2-followup
 depends_on:
   - THM-1645
 related:
   - THM-2019
+  - THM-2022
   - MISTAKE-211
   - HYP-8765
   - HYP-8766
@@ -237,6 +241,10 @@ Thus \(r^{(0)}=(1,3,0)\), \(R=4\), \(A_0=6\), and the next-channel gap is
 \(\Delta=12\). The wide-gap corollary applies. Therefore (7) is never in the
 nullcone when \(a\ne0\) and at least one of \(b,c\) is nonzero. Including the
 degenerate one-sided cases, NC2 holds on the whole three-monomial family (7).
+Explicitly, if exactly one of \(b,c\) vanishes while \(a\ne0\), the remaining
+opposite-charge two-monomial support has a unique primitive-return channel
+with nonzero Wick weight. If \(a=0\), or if \(b=c=0\), the support is strictly
+one-sided.
 
 This closes the exact support used in MISTAKE-211 without pretending its two
 first-return atoms are separately zero.
@@ -339,8 +347,20 @@ minimum exists.
 
 ## 9. Exact boundary of the theorem
 
-What is now proved is a reusable certificate theorem and one nontrivial
-cross-atom family. A full NC2 proof would follow from the still-open statement
+### Resolution of the former universal-certificate gap
+
+THM-2022 replaces the proposed unique-minimum completion by a
+minimum-*layer* theorem.  At a good prime, after normalizing by the factorial
+of the lowest balanced face, Kummer/Lucas remove every non-dilated or off-face
+channel and Frobenius identifies the complete tied residue with `Q^p != 0`.
+Thus infinitely many unique-channel certificates are unnecessary, and full
+NC2 is proved even when the lowest face contains arbitrarily many colliding
+circuits. The certificate question below remains meaningful as a finer
+support classification, not as the remaining Gaussian-moment conjecture.
+
+What was proved here is a reusable certificate theorem and one nontrivial
+cross-atom family. The original unique-channel route to full NC2 would have
+followed from the still-open stronger statement
 
 > every finite two-sided exact support admits finite-place separation
 > certificates for infinitely many rational primes,

@@ -18,6 +18,7 @@ depends_on:
 related:
   - THM-2014
   - THM-2017
+  - THM-2022
   - HYP-8765
 script: 04-computation/gmc2_affine_height_supports_codex_20260721.py
 ---
@@ -57,8 +58,9 @@ Let (B\in\mathbb C[s]\setminus\{0\}) be arbitrary and set
 > makes every moment vanish.  Thus NC2 holds for every affine-height support
 > and for every one of its common nonzero radial multiples.
 
-The coefficients (c_i) and those of (B) are arbitrary complex numbers.
-Zeros among the (c_i) merely pass to a subset of the same affine line.
+For each fixed nonzero (B), its coefficients and the coefficients (c_i) are
+arbitrary complex numbers. The actual support is taken after deleting zero
+(c_i); such deletion merely passes to a subset of the same affine line.
 
 ## 1. Exact separation of the toral and radial addresses
 
@@ -103,8 +105,12 @@ factor exactly:
  \;}                                                       \tag{8}
 \]
 
-where (L(s^n)=n!).  If no balanced word exists, both constant terms in
-(8) are zero and the assertion is interpreted trivially.  This is the
+where (L(s^n)=n!). Formula (8) is asserted at reachable lengths, for which
+(N_m) is an integer. If no balanced word of length (m) exists, then
+(
+\operatorname{CT}_u(A^m)=\mathbb E[P^m]=0
+\)
+directly, and no fractional power of (s) is formed. This is the
 missing-address repair in its cleanest form: charge decides which words
 survive, while (2) makes their height address constant.
 
@@ -267,5 +273,7 @@ published Gaussian-moment results.  The weighted-homogeneous affine-line
 factorization, especially with an arbitrary common radial multiplier, was
 not previously stated in this repository; no claim of external literature
 novelty is made.  The proof is an exact composition of known DvdK and EMP
-theorems.  It does **not** cover independent radial polynomials attached to
-different charges, and it does not prove full NC2.
+theorems.  It does **not** itself cover independent radial polynomials attached
+to different charges. Those cases, and full NC2, are now proved separately by
+THM-2022's lowest-face Frobenius congruence; the present factorization remains
+a sharper description on its stratum.

@@ -9,7 +9,8 @@ status: >
   vanish exactly when b=h=0. The only imported asymptotic fact is the one-variable
   EMP theorem that L(b^m) is eventually nonzero. Exact direct-Wick, channel,
   Catalan-coefficient, closed-EGF, and proportional-factor checks pass. These are
-  genuine resonance-band strata, not full NC2.
+  genuine resonance-band strata. Full NC2 is now supplied separately by
+  THM-2022's Frobenius lowest-face theorem.
 source: codex-2026-07-21-NC2-followup
 depends_on:
   - THM-1510  # one-variable EMP / eventual nonvanishing of L(b^m)
@@ -17,6 +18,7 @@ depends_on:
   - THM-2017  # three-weight primitive-return notation and channel identity
 related:
   - THM-2014
+  - THM-2022
   - HYP-8766
   - HYP-8769
 script: 04-computation/gmc2_resonance_closures_codex_20260721.py (+ stored .out)
@@ -341,5 +343,6 @@ destroyed coordinate.
 The challenged assumption is the same one exposed by MISTAKE-211: return
 channels are not independent equations. In Part A they are resummed into one
 algebraic-exponential germ; in Part B they are resummed into `H_m`. Neither proof
-declares an individual channel zero. Full NC2 remains open outside these exact
-resonance loci.
+declares an individual channel zero. At the time of this local theorem the
+outside loci were open; THM-2022 now closes them globally by preserving a
+complete lowest-face sum modulo a good prime.

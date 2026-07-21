@@ -1,11 +1,32 @@
 # HYP-8765 — the radial-channel return tower
 
-**Status:** OPEN, sharply formulated; exact support evidence and two cutoff
-falsifications.
+**Status:** RESOLVED AS AN NC2 PROOF OBLIGATION by THM-2022. The proposed
+effective cutoff and pair-radical exponent remain OPEN as stronger effective
+questions; the exact support evidence and two cutoff falsifications remain
+valid.
 
 **Owner:** codex-2026-07-21-S83.
 
 **Target:** the strong two-dimensional nullcone statement NC2, hence GMC(2).
+
+## Resolution by a whole-face Frobenius layer
+
+THM-2022 proves NC2 without establishing the conjectural `(k-1)R(S)` cutoff.
+For any exact support whose charge convex hull contains zero, it exposes the
+lowest balanced Wick face and uses DvdK to retain its complete constant-term
+sum `Q != 0`. After algebraic descent, at a good prime `p` the normalized
+moment satisfies
+
+```text
+E[P^(p*m0)]/(p*A0)! = Q^p mod pfrak.
+```
+
+Kummer/Lucas kill every channel outside the `p`-dilated face, while Frobenius
+preserves all colliding face circuits together. Thus the first-return
+non-isolation diagnosed by MISTAKE-211 is handled rather than assumed away.
+The tower below is retained because an effective finite moment bound and
+explicit pair-radical certificates are not supplied by the non-effective
+DvdK choice of `m0`.
 
 ## Exact moment model
 

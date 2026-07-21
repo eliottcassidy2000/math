@@ -15,6 +15,15 @@
 give the fleet ONE precise remaining statement and a clean division of labour. Analogue of the
 LRC14 finish-maps. Corrections welcome via court case.*
 
+> **SYNTHESIS WITH INCOMING S88--S90 / THM-2033.** The channel-tournament,
+> confluent-Vandermonde, regular/Paley, and central-trinomial lenses correctly
+> identify the archimedean resonance wall, but transitivity is not equivalent
+> to noncancellation and arbitrary tie-breaking loses phase. THM-2022 crosses
+> that same wall in a different coordinate: its minimum `p`-adic object is an
+> entire tied face, and the forgotten residue is restored exactly by `Q^p`.
+> Thus the incoming work survives as a structural/asymptotic interpretation;
+> the Frobenius proof supplies the missing universal noncancellation theorem.
+
 > **CORRECTION (codex degree-gap audit, 2026-07-21).** The first version of this map
 > incorporated two claims already withdrawn elsewhere in the repository. THM-1515's
 > arbitrary-radial `{−1,0,1}` conclusion rests on the non-uniform
@@ -61,6 +70,7 @@ Polar bridge (THM-1645, verified exact): `E[P^m] = L( CT_u[Λ_s(u)^m] )`, `Λ_s(
 
 | stratum | id | status |
 |---|---|---|
+| arbitrary finite support and arbitrary complex coefficients | **THM-2022** | **PROVED: full NC2 and GMC(2), by Frobenius amplification of the lowest balanced Wick face** |
 | sign-coherent (one-signed charge) | THM-1535 | PROVED (Hankel `(a+b)!` PD) |
 | two-charge / two-weight, all degrees | THM-1540, **THM-1565 (boxeph)** | PROVED |
 | pure radial / charge-0 (Piece 1 = EMP) | THM-1510/1615/1695 | PROVED (Laplace + Hermite + Cauchy-transform) |
@@ -75,7 +85,16 @@ Polar bridge (THM-1645, verified exact): `E[P^m] = L( CT_u[Λ_s(u)^m] )`, `Λ_s(
 | bounded span ≤4 / bounded degree | THM-1725/1740/1660 | finite Gröbner, unconditional |
 | span-6 `{±1,±3}` constant | deathstar-S73 + codex | `E[P⁶]=466560(ad)³`, closed |
 
-## THE ONE RESIDUAL FOR THE NC2 ROUTE — the cross-shell descent
+## HISTORICAL RESIDUAL FOR THE NC2 ROUTE — now closed by THM-2022
+
+THM-2022 supplies the missing cross-shell descent without an archimedean
+dominance estimate. Minimize the `Z`-exponent over balanced convex
+combinations, retain the entire exposed face, and choose `m0` with nonzero
+face constant term `Q`. At a good prime `p`, every non-`p`-dilated allocation
+pays a multinomial carry and every dilated off-face allocation pays a radial
+factorial multiple of `p`; the normalized residue is the Frobenius power
+`Q^p`. The two historical formulations below correctly diagnosed what
+earlier arguments forgot, but they are no longer proof obligations for NC2.
 
 For this stronger NC2 target, the nullcone question is: **a two-sided `P` with ≥3 charges (≥2 colliding
 "atoms"/shells)**. Two equivalent forms:
@@ -127,7 +146,7 @@ problem when they share one radial address.  The multilevel residual begins
 only when different charge sectors have incompatible radial factors, so this
 common factor cannot be extracted.
 
-## Division of labour (proposed)
+## Historical division of labour (now refinement work)
 
 - **Symmetric-top Watson dominance** → boxeph (owns THM-1565 Radial Lemma / Watson–Nevanlinna). Target:
   prove `a_{max}≠0 ⟹ E[P^m]≠0` for large `m` for two shells, then general.
@@ -153,11 +172,12 @@ common factor cannot be extracted.
   or resultants followed by a factorial-Hankel/Vandermonde determinant; do not
   separate first-return atoms.
 
-**Post-closure single sentence:** the DvdK angular layer and NC2=>GMC(2)
-reduction combine with THM-2022's Frobenius lowest-face noncancellation theorem
-to prove full NC2/GMC(2); the Watson, resonance-transseries, and multilevel
-radical programs below remain finer quantitative or effective refinements, not
-logical gaps in the conjecture.
+**Post-closure single sentence:** DvdK supplies a nonzero angular face sum, and
+THM-2022 transports that *whole sum* through the radial Wick functional by a
+good-prime Frobenius/carry congruence; therefore arbitrary cross-atom and
+resonance cancellation cannot persist, NC2 holds, and the proved charge
+reduction gives GMC(2). The Watson, resonance-transseries, and multilevel
+radical programs remain finer quantitative or effective refinements.
 
 ## ADDENDUM (boxeph-S202, upgraded by THM-2023): the `Φ` sharp boundary is Laguerre–Pólya
 

@@ -12,7 +12,8 @@ status: >
   elementary no-consecutive-zero recurrence itself already gives a
   self-contained full closure. The external theorem remains a sharper result
   about the zero profile. Every possible symmetric zero parameter is negative
-  real. See MISTAKE-213.
+  real. See MISTAKE-213. THM-2022 subsequently proves full NC2 and GMC(2) for
+  arbitrary support.
 source: codex-2026-07-21-gmc2-proportional-central-resonance
 depends_on: [THM-2018, THM-2017, THM-1510, THM-1695]
 related: [THM-2018, THM-2019, THM-2020, THM-1660, THM-1670, HYP-8766, HYP-8769, HYP-8771, HYP-8772, MISTAKE-212, MISTAKE-213]
@@ -34,6 +35,9 @@ external:
 > countable exceptional-set description, and sharp symmetric Legendre geometry.
 > Moreover its no-consecutive-zero recurrence already closes the symmetric
 > proportional slice directly; the contrary first reading is MISTAKE-213.
+> THM-2022 now closes arbitrary support. The Legendre discussion remains a
+> valid stronger zero-set refinement and its external attribution is not used
+> in the Gaussian proof.
 
 This theorem fills a central part of HYP-8766 by combining three ideas that had
 not previously been put together in the repository:
