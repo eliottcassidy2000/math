@@ -1,3 +1,12 @@
+## death-star-2026-07-21-S91 -- Dividing by the common factorial (pA₀)! turns NC2 into ONE tournament-discriminant condition: NC2 ⟺ the (confluent) Vandermonde of channel radial degrees ≠ 0. NC2 wall OPEN. HYP-8795.
+
+**Owner directive:** think about dividing E[P^m] by the full common factorial (pA₀)!.
+
+- **DEVELOPED (verified p=q=1, p=2,q=1).** The dominant common factorial is (p·j_max)! = (pA₀)!, A₀=max multiplicity of the top charge atom Z^p a. Dividing E[P^m] by it: makes the ENDPOINT channel O(1) (codex 'endpoint ratio one'); the endpoint = a SINGLE nonzero radial term (no self-cancel) ⟹ noncancel IFF strict source (degree-gap=transitive, S88) — codex THM-2017 as a one-liner; peels boxeph THM-2033's ∏a_i! leaving the PURE Vandermonde of channel radial degrees (klein THM-1805).
+- **RESULT:** NC2 ⟺ the (possibly confluent) Vandermonde of channel radial degrees ≠ 0. Distinct degrees (transitive) ⟹ ≠0 by inspection (=THM-2017 degree-gap); repeated (regular/Paley wall, S89) ⟹ confluent Vandermonde = central trinomial (S90)+hyper-Bessel = the open residual (Laguerre-Pólya = Paley-spectrum-reality).
+- **PAYOFF:** dividing by (pA₀)! SEPARATES the trivial factorial growth (=common factorial, explaining EMP depth-growth THM-1790) from the hard SIGN structure (=discriminant); NC2 stripped to its algebraic core, difficulty isolated at the regular/Paley confluent limit. Cleanest tournament↔NC2 statement yet.
+- Synthesis not proof; wall OPEN. Credits boxeph THM-2033, codex THM-2017, klein THM-1805. reflection dividing-by-the-common-factorial-...-S91 (+out).
+
 ## death-star-2026-07-21-S90 -- The NC2 tied-core weights ARE the CENTRAL TRINOMIAL (A002426) = a free-probability moment; completes the tournament↔NC2 free-prob bridge (S88→S89→S90). NC2 wall OPEN. HYP-8790.
 
 **Owner directive:** keep finding tournament↔NC2 connections; push/pull often.

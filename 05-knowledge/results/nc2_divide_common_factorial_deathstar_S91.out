@@ -1,0 +1,40 @@
+Normalizing E[P^m] by the dominant common factorial: what is revealed?
+
+[A] p=q=1, a=c=1, b=1+s:  E[P^m] and E[P^m]/(m!) :
+  m=1: E[P^m]=2, /m! = 2  (float 2.0000)
+  m=2: E[P^m]=7, /m! = 7/2  (float 3.5000)
+  m=3: E[P^m]=34, /m! = 17/3  (float 5.6667)
+  m=4: E[P^m]=209, /m! = 209/24  (float 8.7083)
+  m=5: E[P^m]=1546, /m! = 773/60  (float 12.8833)
+  m=6: E[P^m]=13327, /m! = 13327/720  (float 18.5097)
+  m=7: E[P^m]=130922, /m! = 65461/2520  (float 25.9766)
+  m=8: E[P^m]=1441729, /m! = 1441729/40320  (float 35.7572)
+  -> E[P^m]/m! -> a bounded rational sequence (the factorial growth divided out);
+     the residual is the tournament/free-prob core.
+
+[B] p=2,q=1, a=1,c=1,b=1+s (asymmetric top): E[P^m] / (dominant factorial):
+  m=1: E=2, /(2*floor(m/3))!=2 (float 2.000); jmax=0
+  m=2: E=5, /(2*floor(m/3))!=5 (float 5.000); jmax=0
+  m=3: E=22, /(2*floor(m/3))!=11 (float 11.000); jmax=1
+  m=4: E=161, /(2*floor(m/3))!=161/2 (float 80.500); jmax=1
+  m=5: E=1466, /(2*floor(m/3))!=733 (float 733.000); jmax=1
+  m=6: E=15037, /(2*floor(m/3))!=15037/24 (float 626.542); jmax=2
+  m=7: E=172670, /(2*floor(m/3))!=86335/12 (float 7194.583); jmax=2
+  m=8: E=2221697, /(2*floor(m/3))!=2221697/24 (float 92570.708); jmax=2
+  m=9: E=31810546, /(2*floor(m/3))!=15905273/360 (float 44181.314); jmax=3
+
+READING (the (pA_0)! idea developed):
+ * The dominant common factorial is (p*j_max)! = (p * #Z^p-uses at the top channel)!,
+   i.e. 'p times A_0' where A_0 = the max multiplicity of the Z^p atom. Dividing E[P^m]
+   by it makes the TOP (endpoint) channel O(1) -- codex's 'one endpoint ratio one'.
+ * After dividing, the endpoint channel's coefficient = the leading radial (a^{jmax}
+   c^{kmax}) evaluated = a SINGLE nonzero term (no cancellation possible from ONE term)
+   => noncancellation, IFF the endpoint is a strict source (degree-gap, S88 transitive).
+ * The full normalized sum E[P^m]/(p A_0)! is the signed tournament sum on the channel
+   degrees (boxeph THM-2033 Vandermonde) with the common factorial peeled -- exactly the
+   'divide out the common factorial to expose the discriminant' move. At the resonance
+   wall (equal degrees) the peeled sum is the CONFLUENT Vandermonde = central trinomial
+   (S90) + hyper-Bessel, and noncancellation = that confluent discriminant != 0.
+ * So 'divide by (pA_0)!' = the canonical normalization turning NC2's factorial-heavy
+   moment into the clean tournament-discriminant condition: NC2 <=> the (possibly
+   confluent) Vandermonde of channel radial degrees is nonzero.
