@@ -1,0 +1,106 @@
+========================================================================================
+MARKOV-CHAIN-TREE CHECK: {a_r} proportional to the tournament random-walk stationary dist
+========================================================================================
+   class: a_r=[0, 0, 0, 0, 24]  normalized=[np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(1.0)]  stat.dist=[np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(1.0)]
+   class: a_r=[0, 0, 0, 0, 26]  normalized=[np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(1.0)]  stat.dist=[np.float64(-0.0), np.float64(-0.0), np.float64(0.333), np.float64(0.333), np.float64(0.333)]
+   {a_r} matches the stationary distribution (MCTT) for all n=5 classes: False
+   => the per-root arborescence vector IS a poly-time tournament ranking.
+
+========================================================================================
+SEPARATION at n=7: does {a_r} or charpoly(L_in) crack the (spec A, Sum a, H) residue?
+========================================================================================
+  cospectral groups: 116
+  Sum a fails to split: 5;  H fails: 69;  (Sum a,H) both fail: 2
+  of the (Sum a,H) residue, {a_r} VECTOR also fails: 0  (splits 2)
+  of the (Sum a,H) residue, charpoly(L_in) fails: 2  (splits 0)
+    residue group (Sum a=1680, H=47): |grp|=2
+       distinct {a_r} vectors: 2  -> SPLIT by a_r
+       distinct charpoly(L_in): 1  -> L_in fails
+       the vectors: [(48, 72, 120, 240, 240, 240, 720), (60, 96, 100, 144, 200, 480, 600)]
+    residue group (Sum a=2380, H=143): |grp|=2
+       distinct {a_r} vectors: 2  -> SPLIT by a_r
+       distinct charpoly(L_in): 1  -> L_in fails
+       the vectors: [(140, 220, 236, 340, 348, 532, 564), (172, 196, 236, 340, 348, 476, 612)]
+
+DONE.
+========================================================================================
+MCTT (corrected direction): a_r = OUT-trees from r  =>  proportional to the stationary
+distribution of the AGAINST-THE-ARCS walk (step v -> a vertex that DOMINATES v).
+========================================================================================
+   a_r/Sum=[np.float64(0.1429), np.float64(0.0476), np.float64(0.0952), np.float64(0.2857), np.float64(0.4286)]  stationary=[np.float64(0.1429), np.float64(0.0476), np.float64(0.0952), np.float64(0.2857), np.float64(0.4286)]  match=True
+   a_r/Sum=[np.float64(0.2093), np.float64(0.0698), np.float64(0.0233), np.float64(0.3023), np.float64(0.3953)]  stationary=[np.float64(0.2093), np.float64(0.0698), np.float64(0.0233), np.float64(0.3023), np.float64(0.3953)]  match=True
+   a_r/Sum=[np.float64(0.25), np.float64(0.0833), np.float64(0.1667), np.float64(0.125), np.float64(0.375)]  stationary=[np.float64(0.25), np.float64(0.0833), np.float64(0.1667), np.float64(0.125), np.float64(0.375)]  match=True
+   strongly-connected n=5 classes: 6;  a_r/Sum == against-arcs stationary dist ALL: True
+
+   => on strongly connected tournaments the per-root arborescence vector IS (exactly, up to
+      normalization) the stationary distribution of the 'who-dominates-me' random walk -- a
+      poly-time centrality ranking, source-heavy (the transitive source gets ALL the weight).
+
+========================================================================================
+SUMMARY OF THE SEPARATION FINDING (n=7)
+========================================================================================
+  invariant                         cost         fails on the 2-group residue?
+  spec(A)  (char poly)              O(n^3)       YES (defines the residue)
+  Sum_r a_r                         O(n^3)       YES (both groups)
+  H (Hamiltonian paths)             #P-hard      YES (both groups)
+  charpoly(L_in) (dir. Laplacian)   O(n^3)       YES (both groups)
+  {a_r} VECTOR (arb. ranking)       O(n^4)       NO -- SPLITS BOTH
+  the two residue vectors, Sum a = 1680:
+     (48,72,120,240,240,240,720)  vs  (60,96,100,144,200,480,600)
+  and Sum a = 2380:
+     (140,220,236,340,348,532,564) vs (172,196,236,340,348,476,612)
+  So a single poly-time invariant -- the arborescence RANKING vector, not its sum, not the
+  directed-Laplacian spectrum -- resolves the entire n=7 residue that the #P-hard count cannot.
+
+========================================================================================
+COMPLETENESS: is (spec A, {a_r}) a complete fingerprint on n=7?  and {a_r} alone?
+========================================================================================
+  n=5: classes=12;  distinct {a_r} vectors=12 (collisions 0);  (specA,{a_r}) distinct=12 (collisions 0)  -> (specA,{a_r}) COMPLETE
+  n=6: classes=56;  distinct {a_r} vectors=55 (collisions 1);  (specA,{a_r}) distinct=56 (collisions 0)  -> (specA,{a_r}) COMPLETE
+  n=7: classes=456;  distinct {a_r} vectors=439 (collisions 17);  (specA,{a_r}) distinct=449 (collisions 7)  -> (specA,{a_r}) incomplete
+
+  READING: if (spec A, {a_r}) is complete at n=7 where (spec A, Sum a, H) is NOT, then the
+  poly-time arborescence RANKING vector is a strictly stronger fingerprint than the #P-hard
+  Hamiltonian count -- not just on the residue but outright. {a_r} alone may still collide
+  (it forgets the labelling), but paired with the cheap spec(A) it closes n=7.
+
+========================================================================================
+COMPLEMENTARITY: {a_r} vs H at n=7 -- are they jointly complete with spec(A)?
+========================================================================================
+  (spec A, {a_r})      collisions: 7
+  (spec A, H)          collisions: 221
+  (spec A, {a_r}, H)   collisions: 4  -> still incomplete
+
+  So at n=7:
+    - {a_r} alone leaves 7 cospectral collisions, H alone leaves 221;
+    - together (spec A, {a_r}, H) leave 4: the arborescence RANKING vector and the
+      Hamiltonian count are COMPLEMENTARY -- each covers the other's blind spots, exactly the
+      THM-1580 'nearly complementary failure sets' theme now at the VECTOR level, and the
+      2-group residue (where BOTH the sum Sum a and H fail) is precisely where {a_r} earns
+      its keep.
+
+
+================================================================================
+CORRECTION (klein-S379, on debugging my own summary) -- two DIFFERENT measures
+================================================================================
+ My interim "SUMMARY OF THE SEPARATION FINDING" said {a_r} "resolves the ENTIRE n=7 residue
+ that the #P-hard count cannot." That conflated two different things. The honest picture:
+
+ (a) THM-1580's residue = cospectral GROUPS whose WHOLE membership shares (Sum a, H): exactly 2,
+     namely (Sum a,H) = (1680,47) and (2380,143), both size 2.  {a_r} SPLITS BOTH (verified: 2
+     distinct sorted vectors each).  TRUE and unchanged.
+
+ (b) The COMBINED FINGERPRINT collision count is a different number. Over all 456 classes:
+     - (spec A, Sum a, H) leaves 27 indistinguishable pairs (sub-pairs inside larger cospectral
+       groups that happen to share (Sum a,H) -- NOT what THM-1580 counted);
+     - (spec A, {a_r}, H) leaves 4.  So the finer vector {a_r} resolves 23 of those 27, INCLUDING
+       both THM-1580 groups, but a NEW deeper residue of 4 pairs remains:
+          (Sum a, H) = (1080,23), (1088,29), (1092,31), (1224,43),
+       each a pair sharing spec A, Sum a, {a_r} multiset, AND H.  {a_r} refines Sum a, so 4 <= 27
+       is forced (no contradiction; my earlier "4 > 2" panic was comparing group-count 2 to
+       pair-count 4, apples to oranges).
+
+ CORRECTED FINDING: {a_r} (poly-time) resolves THM-1580's 2-group (Sum a,H)-residue outright, and
+ drops the combined (spec A, *, H) pair-collisions from 27 to 4 -- but is NOT a complete fingerprint;
+ a genuine 4-pair wall resists (spec A, Sum a, {a_r}, H) at n=7.  The vector and the path count are
+ COMPLEMENTARY (THM-1580's theme, now at the vector level), not one dominating the other.
