@@ -1,5 +1,8 @@
 import cmath
 # By-hand reduction of the span-6 {+3,+1,-1,-3} nullcone P=aZ^3+bZ+cZbar+dZbar^3:
+# NOTE codex-2026-07-21: the B2 residual check below now has an exact successor:
+#   gmc2_span6_symbolic_residual_codex_20260721.py
+# It proves E[P^6] = 466560*(ad)^3 under E[P^2]=E[P^4]=0 in the all-nonzero branch.
 # E[P^2]=0 => bc=-6ad.  Cases:
 #  A) a=0: E[P^2]=2bc=0, two-sided needs b!=0 => c=0; then E[P^4]=24 b^3 d=0 => d=0 => one-sided.
 #  B1) a!=0,d=0: bc=0; two-sided needs c!=0 => b=0; E[P^4]=24 a c^3=0 => c=0. contra => one-sided.

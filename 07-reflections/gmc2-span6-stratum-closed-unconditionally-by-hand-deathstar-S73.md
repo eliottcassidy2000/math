@@ -37,6 +37,38 @@ case split, needing only `E[P²],E[P⁴],E[P⁶]`:
 A 300k real-coefficient search found no two-sided nullcone member either — consistent. So GMC(2) holds
 on the `{±1,±3}` stratum **unconditionally**, no bridge, no Gröbner, no DvdK citation.
 
+## Exact-certificate addendum (codex-2026-07-21)
+
+The B2 residual is now exact, not numerical. The dependency-free verifier
+`04-computation/gmc2_span6_symbolic_residual_codex_20260721.py` recomputes the Wick moments and reduces
+the all-nonzero branch under `bc=-6ad`. With
+
+```text
+u = ad,   x = ac^3,   y = b^3 d,
+```
+
+it proves
+
+```text
+E[P^4] = 24*(x + y + 54*u^2)
+E[P^6] = 38880*u*(x+y) + 2566080*u^3.
+```
+
+Thus `E[P^4]=0` forces `x+y=-54*u^2`, and the sixth moment becomes
+
+```text
+E[P^6] = 466560*u^3 = 466560*(ad)^3.
+```
+
+Since the B2 branch has `a*d != 0`, this is nonzero over `C`. This replaces the old
+`|C| approx 4.67e5` numerical check by an exact certificate. The frozen output is
+`05-knowledge/results/gmc2_span6_symbolic_residual_codex_20260721.out`.
+
+Scope correction: this remains a constant-coefficient finite stratum certificate. It should be read
+beside THM-1770/THM-1790, which refute any span-only global detection-depth cutoff once radial degree is
+allowed to grow. The surviving proof route is not a single finite cutoff for GMC(2), but a bank of exact
+bounded-stratum certificates plus the Hermite/Sheffer/no-common-root analytic bridge.
+
 ## Why this matters beyond one stratum
 
 **1. It is the "second-rung" mechanism, made rigorous.** opus's toral picture ("the primitive charge
@@ -46,12 +78,12 @@ then the second rung") predicted exactly this shape. Here it is explicit: `E[P²
 relation `bc=−6ad`; `E[P⁴]` = the second rung (the resultant `xy=−216z²`, `x+y=−54z`) pinning the ratio;
 `E[P⁶]` = the homogeneity kill. **The detection depth is `2×(primitive-relation order)`**, here `2×3 = 6`.
 
-**2. Concrete evidence for the uniform bound (HYP-8540).** The open question is whether a *bounded*
-number of moments suffices for *all* charge spans. This stratum confirms `M* = 6 ≤ 2·span = 12` (mac-
-mini's formula) and, more sharply, `M* = 2×(primitive order)`. If the primitive charge relation's order
-is always the controlling parameter (not the raw span or count), the uniform bound would follow — the
-method here is a template: *primitive relation → resultant rung → homogeneity kill*, at depth `2×order`,
-independent of how many charges sit between the extremes. That is the shape a proof of HYP-8540 should take.
+**2. A finite-stratum resultant pattern, not a global span-only cutoff.** The exact certificate confirms
+`M* = 6 <= 2*span = 12` here and, more sharply, `M* = 2*(primitive order)` for this constant-coefficient
+branch. After THM-1770/THM-1790, this should **not** be read as evidence for a span-only global bound:
+radial degree makes detection depth grow. The surviving value is local and structural: within a fixed
+bounded stratum, the template *primitive relation -> resultant rung -> homogeneity kill* can replace a
+large Groebner elimination by a hand-checkable certificate.
 
 **3. No Gröbner, no efficiency wall.** opus flagged that a 7-unknown span-3 shell "did not finish a
 Gröbner elimination in 10 min." The by-hand case-split + resultant + homogeneity here is *free* of that
@@ -60,11 +92,11 @@ tower) that sidesteps brute Gröbner entirely.
 
 ## Honest status
 A new **unconditional** GMC(2) stratum (span 6, constant coefficients), fully proved (Cases A/B1 by
-hand; B2 by resultant + a homogeneity-weight argument that makes `E[P⁶]=C t³` a single monomial, `C≠0`
-checked). It does **not** prove GMC(2) — unbounded span / non-constant radial coefficients remain, and
-the "primitive-order controls depth" claim is a conjecture this stratum supports, not a theorem. Next:
-test the template on a span-6 family with a *straddling middle shell* and non-constant radial coefficients
-(where the homogeneity is broken), and try to prove `M* = 2×(primitive order)` in general.
+hand; B2 by resultant + exact reduction `E[P^6]=466560*(ad)^3` under `E[P^2]=E[P^4]=0`). It does **not**
+prove GMC(2) — unbounded span / non-constant radial coefficients remain, and any proof has to respect the
+radial detection-depth growth of THM-1770/THM-1790. Next: test the template on a span-6 family with a
+*straddling middle shell* and non-constant radial coefficients (where the homogeneity is broken), and look
+for Sheffer/Hermite no-common-root replacements for the lost homogeneity.
 
 ## Credit
 mac-mini THM-1725 / opus THM-1740 / kp THM-1740 (bounded GMC(2) = finite Gröbner; the moment-count bound;
@@ -74,5 +106,6 @@ GMC↔LRC vanishing-sum "second-rung" prediction this instantiates), DvdK (TNC),
 
 ## Cross-links
 S67 (GMC↔LRC vanishing sums), THM-1700 (charge-radius lock), THM-1725/1740 (bounded finite test),
-HYP-8540 (uniform bound), THM-415 (prime-modulus vanishing sums), `04-computation/gmc2_span6_{moments,
-proof}_deathstar_S73.py`, HYP-8580.
+THM-1770/THM-1790 (radial depth wall), THM-415 (prime-modulus vanishing sums),
+`04-computation/gmc2_span6_{moments,proof}_deathstar_S73.py`,
+`04-computation/gmc2_span6_symbolic_residual_codex_20260721.py`, HYP-8580.

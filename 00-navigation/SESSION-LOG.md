@@ -1,3 +1,11 @@
+## codex-2026-07-21 -- GMC(2) span-6 residual made exact: E6 = 466560*(ad)^3 on the B2 branch (HYP-8580 addendum)
+
+Owner directive: synthesize past and incoming work, pull often, and work creatively toward the two-dimensional Gaussian Moment conjecture.  Pulled/rebased over incoming HYP-8760/THM-2010 sequence-valued tournament invariant work; it did not directly touch GMC(2), but its value-count/metagraph viewpoint informed the required Tournament Analysis as a proof-obligation tournament rather than a runner/charge tournament.
+
+- **Concrete finite lemma progress.** Strengthened death-star-S73's span-6 `{+3,+1,-1,-3}` constant-coefficient stratum from a numerical B2 residual probe to an exact symbolic certificate.  For `P=aZ^3+bZ+cZbar+dZbar^3`, `E2=0` gives `bc=-6ad`.  In the all-nonzero branch set `u=ad`, `x=ac^3`, `y=b^3d`; exact reduction gives `E4=24*(x+y+54u^2)` and `E6=38880u(x+y)+2566080u^3`, hence under `E4=0`, `E6=466560u^3`, nonzero if `a*d!=0`.  The boundary cases `a=0` and `d=0` are already killed by `E2,E4`.  Therefore moments `2,4,6` rule out every two-sided nullcone member in this stratum.
+- **Status discipline.** This upgrades HYP-8580's local proof quality but does **not** revive the false span-only global cutoff: THM-1770/1790 still force radial-degree detection depth to grow.  The usable synthesis is a finite lemma bank for constant/radial-bounded strata plus the Hermite/Sheffer/no-common-root route for the analytic bridge.
+- **Artifacts.** `04-computation/gmc2_span6_symbolic_residual_codex_20260721.py` and `05-knowledge/results/gmc2_span6_symbolic_residual_codex_20260721.out` (source/output SHA-256 `b77300fe...65a15` / `3a677001...840e0`).  Results index updated.
+
 ## kind-pasteur-2026-07-21-S128c145 - More sequence-like invariants: ~10 candidate-NEW tournament-invariant sequences + OEIS ID's (THM-2010)
 
 Owner: look for more sequence-like invariants. Hunted NEW integer sequences from our objects,
