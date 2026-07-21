@@ -1,0 +1,28 @@
+================================================================== 
+(A/B) REGULAR SUB-BASE H(reg) >= n*disc(reg); H vs Szele avg n!/2^{n-1}
+ ==================================================================
+  n=3: 2 regular labeled; H in [3,3], disc max=1.0; min H/(n*disc)=1.000; Szele avg=1.50; min H>=avg? True
+  n=5: 24 regular labeled; H in [15,15], disc max=1.0; min H/(n*disc)=3.000; Szele avg=7.50; min H>=avg? True
+  n=7 Paley: H=189, disc=8.0, n*disc=56.0, ratio=3.375, H>=avg(78.8)? True
+  n=7 rot: H=175, disc=1.0, n*disc=7.0, ratio=25.000, H>=avg(78.8)? True
+  n=7 random regulars: H min=171 (avg=78.8); all >= avg? True
+  n=9 rot: H=3267, disc=1.0, n*disc=9.0, ratio=363.000, H>=avg(1417.5)? True
+  n=9 random regulars: H min=3243 (avg=1417.5); all >= avg? True
+
+(ii) ARITHMETIC (n-1)! >= (n+1)^{(n-1)/2} :
+   n=3: (n-1)!=2 vs (n+1)^{(n-1)/2}=4  -> holds? False
+   n=5: (n-1)!=24 vs (n+1)^{(n-1)/2}=36  -> holds? False
+   n=7: (n-1)!=720 vs (n+1)^{(n-1)/2}=512  -> holds? True
+   n=9: (n-1)!=40320 vs (n+1)^{(n-1)/2}=10000  -> holds? True
+   n=11: (n-1)!=3628800 vs (n+1)^{(n-1)/2}=248832  -> holds? True
+   n=13: (n-1)!=479001600 vs (n+1)^{(n-1)/2}=7529536  -> holds? True
+   n=15: (n-1)!=87178291200 vs (n+1)^{(n-1)/2}=268435456  -> holds? True
+
+(iii) AM-GM: disc(reg) <= (1+n)^{(n-1)/2}/2^{n-1} (max at doubly-regular):
+   n=3: disc=1.00 <= AM-GM bound 1.00? True
+   n=7: disc=8.00 <= AM-GM bound 8.00? True
+   n=11: disc=243.00 <= AM-GM bound 243.00? True
+
+(PF) PFAFFIAN INJECTION slack 2^{n-1}H - det(I+K) >= 0 over strong tournaments:
+   n=5: 544 strong; min(2^{n-1}H - det(I+K))=112 (>=0 confirms 2^{n-1}H>=det=disc*2^{n-1})
+   n=6: 22320 strong; min(2^{n-1}H - det(I+K))=416 (>=0 confirms 2^{n-1}H>=det=disc*2^{n-1})
