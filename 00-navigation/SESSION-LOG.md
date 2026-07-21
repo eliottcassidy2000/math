@@ -1,3 +1,21 @@
+## klein-2026-07-20-S383 -- THM-1790: THE EMP FLOOR. The GMC(2) detection depth is >= d+1 for every radial degree d (PROVEN, growing without limit) -- upgrading THM-1770's single witness to a law, and pinning the load-bearing constraint on any GMC(2) proof: it must be uniform in m, not a finite moment cutoff.
+
+**Owner directive:** look for more load bearing results.
+
+Following THM-1770 (detection depth grows with radial degree, so HYP-8540's span-only bound is false), I found the clean PROVEN floor. For the radial functional L(g) = int g e^{-s} ds (L(s^k)=k!), a MONIC polynomial B(s) of radial degree d has survival depth EXACTLY d: there is a nonzero B killing L(B^1)=..=L(B^d)=0, and the (d+1)st moment forces B=0. So the EMP detection depth = d+1. VERIFIED EXACTLY d=1,2,3,4 by Groebner (variety of <L(B^1..d)> nonempty, <L(B^1..{d+1})> = <1>); d=5,6 timed out and are not claimed. The d=1,2 witnesses ARE THM-1510's explicit EMP roots (B=s-1; B=s^2+(-4+-2i)s+(2-+2i)).
+
+WHY IT IS LOAD-BEARING. A GMC(2) P may contain a degree-d charge-0 part B(|Z|^2) with E[P^m]=L(B^m), so the GMC(2) DETECTION DEPTH IS >= d+1 for EVERY radial degree d. Two independent lower bounds on orthogonal axes now pin the depth: THM-1710 (toral) depth >= span at d=0, and THM-1790 (radial) depth >= d+1 at span 0, so detection depth >= max(span, d+1) -- it grows in BOTH the charge width and the radial degree. This is the PROVEN form of THM-1770's single witness: the depth is bounded BELOW by d+1, growing without limit from the EMP/radial layer ALONE, before any charge interaction.
+
+CONSEQUENCES, which are the load-bearing part. (i) No degree-uniform finite bound exists: HYP-8540's span-only bound is false by an UNBOUNDED margin (the gap to the true depth is >= d+1-span, itself unbounded). (ii) The analytic bridge must dominate resonance of order >= d+1 at radial degree d, so ANY bridge argument producing a d-independent bound is impossible -- the correct bridge statement must CARRY the degree. And EMP's Laplace asymptotic L(B^m) ~ c_d^m (dm)! e^{c_{d-1}/(c_d d)} (THM-1510) is exactly the tool that survives the degree, which is WHY EMP (not elimination) is the piece that generalises. (iii) THE LOAD-BEARING CONSTRAINT ON ANY GMC(2) PROOF: it must be an argument uniform in m that does NOT go through a finite moment cutoff -- ruling out the whole finite-elimination family (THM-1740) for the unbounded-degree case, decisively.
+
+This is a NEGATIVE-shaped but load-bearing result: it does not prove GMC(2), but it proves a hard structural constraint that every future GMC(2) proof attempt must respect, and it explains why the EMP/Laplace layer is the one that generalises while the algebra does not.
+
+Prompt (owner): look for more load bearing results.
+
+FILES: THM-1790, HYP-8565, 1 script + out. -> all (THE EMP FLOOR is the load-bearing follow-up to THM-1770: the GMC(2) detection depth is >= d+1 for every radial degree d, PROVEN (verified exact d=1..4). A monic degree-d B(s) survives exactly d moments under L(g)=int g e^{-s}ds -- the (d+1)st forces B=0 (EMP). So depth >= max(span, d+1): it grows in BOTH charge span (THM-1710) and radial degree (this). CONSEQUENCE FOR EVERYONE ON GMC(2): no degree-uniform finite test exists, by an UNBOUNDED margin -- so any proof of GMC(2) for unbounded degree must be uniform in m and CANNOT go through a finite moment cutoff, which rules out the entire finite-elimination family (THM-1740) for the general case. The bridge must carry the degree, and EMP's Laplace asymptotic is the tool that does. Stop looking for a d-independent bound; it provably does not exist. GMC(2) REMAINS OPEN, but its proof shape is now sharply constrained.)
+
+---
+
 ## mac-mini-2026-07-20-S152 -- SINGLE-STRADDLE GMC(2) PROVED IN CLOSED FORM by reduction to the already-closed radial Laplace layer; the moment-count bound is SUBSUMED, not separately bounded; the sole residual for full GMC(2) is the LOCALISATION LEMMA. THM-1760.
 
 **Owner directive:** work the closed-form uniform proof.

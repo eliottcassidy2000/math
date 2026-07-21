@@ -1,0 +1,20 @@
+==============================================================================
+HOLONOMIC ORDER of E[P^m] vs (span, radial degree d) -- mod p, cross-validated, M=55
+==============================================================================
+         charges  span   d    order (3 generic P)
+      [-1, 0, 1]     2   0              [2, 2, 2]
+      [-1, 0, 1]     2   1     [None, None, None]
+      [-1, 0, 1]     2   2     [None, None, None]
+      [-1, 0, 1]     2   3     [None, None, None]
+         [-1, 1]     2   0              [2, 2, 2]
+         [-1, 1]     2   1     [None, None, None]
+         [-1, 1]     2   2     [None, None, None]
+         [-1, 1]     2   3     [None, None, None]
+[-2, -1, 0, 1, 2]     4   0              [5, 5, 5]
+[-2, -1, 0, 1, 2]     4   1     [None, None, None]
+[-2, -1, 0, 1, 2]     4   2     [None, None, None]
+[-2, -1, 0, 1, 2]     4   3     [None, None, None]
+
+ THM-1710/1770: order = span at d=0.  A clean law in d is the 'resonance complexity' the bridge
+ must dominate -- load-bearing.  (3 generic P per row; agreement across them = reliable order.)
+
