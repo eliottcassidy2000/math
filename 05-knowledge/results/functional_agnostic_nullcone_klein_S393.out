@@ -1,0 +1,58 @@
+====================================================================================
+(1) BINOMIAL: the charge-0 coefficient is a SINGLE term at the return times
+====================================================================================
+   (p,q)   m0=(p+q)/g    m   [u^0]Lam^m (a=2,b=3)  #terms
+  (1, 1)            2    2                     12       1  <- return time, SINGLE nonzero term
+  (1, 1)            2    4                    216       1  <- return time, SINGLE nonzero term
+  (1, 1)            2    3                      0       0  (not a return time)
+  (1, 2)            3    3                     36       1  <- return time, SINGLE nonzero term
+  (1, 2)            3    6                   2160       1  <- return time, SINGLE nonzero term
+  (1, 2)            3    4                      0       0  (not a return time)
+  (2, 3)            5    5                    720       1  <- return time, SINGLE nonzero term
+  (2, 3)            5   10                1088640       1  <- return time, SINGLE nonzero term
+  (2, 3)            5    6                      0       0  (not a return time)
+  (3, 5)            8    8                  48384       1  <- return time, SINGLE nonzero term
+  (3, 5)            8   16             5977939968       1  <- return time, SINGLE nonzero term
+  (3, 5)            8    9                      0       0  (not a return time)
+  (2, 2)            2    2                     12       1  <- return time, SINGLE nonzero term
+  (2, 2)            2    4                    216       1  <- return time, SINGLE nonzero term
+  (2, 2)            2    3                      0       0  (not a return time)
+
+ The charge-0 term is present ONLY when m0=(p+q)/gcd(p,q) divides m, and then it is EXACTLY ONE
+ term -- uncancellable.  m0 is the coprime-pair first-return time.
+
+====================================================================================
+(2) FUNCTIONAL-AGNOSTIC: three DIFFERENT charge-graded functionals, same non-vanishing
+====================================================================================
+ Lambda = 2 u^2 + 3 u^{-3}  (p=2,q=3,m0=5).  Evaluate F(Lambda^5) for:
+   F_CT   : the constant-term (toral/TNC) functional, F(u^j)=delta_{j0}          [angular]
+   F_gau  : charge-graded Gaussian-type, F(u^j)=delta_{j0}*w0 with w0 = 7 (a radial weight)
+   F_bonf : charge-graded 'Bonferroni-type', F(u^j)=delta_{j0}*(-1)^?*W, W = 5
+   [u^0]Lambda^5 = 720  (the charge fact; = C(5,3) a^3 b^2 = 720)
+     F_CT(Lambda^5) = w0 * [u^0] = 1*720 = 720  (nonzero for ANY w0 != 0)
+     F_gau(Lambda^5) = w0 * [u^0] = 7*720 = 5040  (nonzero for ANY w0 != 0)
+     F_bonf(Lambda^5) = w0 * [u^0] = 5*720 = 3600  (nonzero for ANY w0 != 0)
+
+ The non-vanishing is IDENTICAL up to the scalar F(u^0): the functional supplies a nonzero
+ weight, the CHARGE LATTICE supplies the non-vanishing.  This is the functional-agnostic method
+ -- it proves the both-signs single-character nullcone non-vanishing simultaneously for TNC
+ (F=CT), GMC (F = radial-weighted), and LRC (F = Bonferroni-weighted), because all three are
+ charge-graded and faithful on charge 0.
+
+====================================================================================
+(3) GENERAL BOTH-SIGNS: the extreme charges give a return-time term -- unique iff binomial
+====================================================================================
+ For Lambda with charges in [-Q,+P], the extreme pairing (+P with -Q) yields a charge-0
+ term at m0=(P+Q)/gcd(P,Q); it is UNIQUE (uncancellable) exactly in the binomial case.
+ With intermediate charges present it may COLLIDE with other charge-0 terms -- and THAT
+ collision is exactly the GMC-hard many-charge cancellation (THM-1810 bosonic side).
+   Lambda = 1*u^1 + B*u^0 + 1*u^{-1}, m=2: [u^0] = 2*1*1 + B^2 = 2 + B^2
+     B=0: 2   B such that 2+B^2=0 => B=i sqrt2 (the THM-1770 witness!)
+   => the EXTREME-pair term (2) is CANCELLABLE by the charge-0 self-term (B^2) once a
+      middle charge exists.  Binomial (no middle charge) is exactly the uncancellable case.
+
+ SO: the functional-agnostic method CLOSES the both-signs SINGLE-CHARACTER (binomial) nullcone
+ for every functional at once, and PINPOINTS the residual as many-charge cancellation -- the
+ same wall THM-1810 reads as 'bosonic/permanent, no sign to cancel'.  The clean cases are
+ cyclotomic (return times); the hard cases are where several cyclotomic returns collide.
+
