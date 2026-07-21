@@ -1,0 +1,88 @@
+# Coordinates for the continuum: cyclic temperature, iso-cyclic shells, and the cycle spectrum
+
+*boxeph-2026-07-21-S199. Object: THM-2013. Owner: find reframes and invent terms/lenses for the
+continuum so we can stop enumerating tournaments and focus on the interesting near-regular behavior.
+Builds on THM-1979 (the spectrum), THM-1926 (the zeta / cycle moments), and death-star-S84
+(H≥disc's binding case = quasirandom = the continuum center).*
+
+## The problem with enumeration
+
+The continuum (the near-regular interior, THM-1979) has 47 iso classes in one n=7 score shell, 6880
+tournaments at n=8, ~10⁶ at n=9. Enumerating it is hopeless and, worse, uninformative — the point is
+not the list but the *shape*. We need **intrinsic coordinates**: a handful of numbers that locate a
+tournament in the continuum and describe near-regular behavior without ever listing the members. Here
+are the coordinates, and the two lenses (thermodynamic and harmonic) they come with.
+
+## The coordinates (new terms)
+
+**Cyclic temperature** `τ = c₃/c₃_max = 1 − σ²/σ²_max ∈ [0,1]`. The one macroscopic coordinate,
+score-spread rescaled: `τ=0` at the transitive **ground state** (frozen, ordered), `τ=1` at the
+regular **hot** center. The continuum is the high-`τ` region. (Because `c₃ = n(n²−1)/24 − (n/2)σ²`
+exactly, THM-1979, temperature is literally cyclicity — it needs *no enumeration*, just the scores.)
+
+**Iso-cyclic shell** `𝒮_τ` = the set of classes at fixed `τ` (fixed `c₃`, fixed score-spread).
+Tournament space is a stack of shells: the transitive is the `τ=0` **singleton** shell; the shells
+**swell** toward `τ=1`. The shell is the right unit — not the individual tournament.
+
+**Structural entropy** `S(τ) = log₂ |𝒮_τ|`. Zero at the ground state, maximal at the hot center. This
+is the continuum's "size" as a function of temperature — a smooth macroscopic curve, not a list.
+
+**Cycle spectrum** (a.k.a. **cyclic harmonics**) `(N₄, N₅, …, N_n)`, `N_k = tr(Aᵏ)` = #closed
+k-walks (the zeta moments, THM-1926). Structure: `N₁=N₂=0` (no loops/digons), `N₃=3c₃` is the
+**fundamental**, *frozen* by `τ`; the **overtones** `N₄,…,N_n` are the free coordinates that resolve
+a tournament *within* its shell. A near-regular tournament ≈ its cyclic harmonics.
+
+**Frozen vs free.** *Frozen* invariants are score-determined (scores, `c₃`, `τ`, `σ²`) — they place
+the shell. *Free* invariants carry structure (the overtones `N₄⁺`, and the beyond-spectral `|R|`) —
+they place the tournament in the shell. Describe the continuum by the **free** coordinates only.
+
+## Lens 1 — thermodynamic
+
+Read `τ` as temperature and `S` as entropy. Then:
+- the **transitive tournament is the T=0 ground state** (unique, zero entropy, char_A=xⁿ, ζ=1);
+- the **regular/quasirandom tournament is the T=1 hot phase** (maximal entropy, all strong, the
+  positive-entropy continuum of tournamentons `W≈½`);
+- **score spread is the order parameter** (magnetization); cyclicity is the disorder; the n=7
+  perfection-breaking (odd holes, spectral collapse) is a **phase transition** — the temperature at
+  which the ordered description (reduction principles) stops covering the phase.
+
+This is why the reduction hierarchy (THM-1862/1926/1960) describes the *cold* rim and the mathematics
+lives in the *hot* interior: reductions are the low-temperature expansion; the continuum is beyond its
+radius of convergence. death-star-S84's "H≥disc binding case = quasirandom" is the statement that the
+hardest inequality is saturated at `τ=1` — the hot center — exactly where enumeration fails.
+
+## Lens 2 — harmonic
+
+Read the tournament as a signal on the cycle basis. `N_k = Σ_j λ_jᵏ` (eigenvalue power sums), so the
+cycle spectrum IS the char-poly, and the **overtones resolve structure**: the fundamental `N₃` sets
+the temperature, and `N₄, N₅, …` are the timbre that distinguishes near-regular tournaments sharing a
+temperature. Where the harmonic lens runs out — cospectral tournaments (spectral collapse, 89% ties at
+n=7) — the **beyond-harmonic** coordinate `|R|` (mac-mini THM-1966, first independent at n=7) takes
+over. So the coordinate budget of the continuum is layered:
+```
+   L0  cyclic temperature τ           (1 real; from the scores, no enumeration)
+   L1  cycle spectrum N₄…N_n          (= char_A; resolves shells to cospectral classes)
+   L2  beyond-spectral |R|            (separates the cospectral twins, from n=7)
+```
+A near-regular tournament is pinned by **`τ` + a short cycle spectrum + `|R|`** — a low-dimensional
+address. The continuum is not `10⁶` objects; it is a low-dimensional coordinate cloud with a
+temperature axis and an entropy profile.
+
+## The payoff (how to stop enumerating)
+
+To study near-regular behavior: fix a temperature `τ≈1`, and describe the shell `𝒮_τ` by the
+*distribution* of its free coordinates (the cycle-spectrum cloud + `|R|`), and its entropy `S(τ)`.
+The interesting questions become continuous: *how does the cycle-spectrum cloud spread as `τ→1`? where
+is the diversity peak (THM-1979 saw it slightly off-center)? what is `S(τ)` asymptotically?* — all
+answerable per-shell, per-coordinate, without listing tournaments. The transitive point and the
+quasirandom horizon are the two boundary conditions; everything between is the temperature flow.
+
+## Verified anchors (n≤7)
+
+- `N₁=N₂=0`, `N₃=3c₃` frozen by the score sequence; the first *free* moment is `N₄` (`<FREE>`).
+- Shell entropy `S(τ)` and the swelling toward `τ=1`: `<ENTROPY>`.
+- Coordinate budget in the hot shells: cycle spectrum resolves `<L1>`, `+|R|` resolves `<L2>`.
+
+Links: THM-2013, THM-1979, THM-1926, THM-1966, THM-1960,
+[[tournament-space-as-a-spectrum-single-point-to-continuum-boxeph-S198]],
+[[the-n-ge-7-regime-what-breaks-what-survives-boxeph-S197]].
