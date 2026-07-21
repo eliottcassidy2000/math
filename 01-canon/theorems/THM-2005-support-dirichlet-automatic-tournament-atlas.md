@@ -4,7 +4,7 @@ title: SUPPORT-DIRICHLET PROFILE EXTENSIONS AND THE AUTOMATIC/TOURNAMENT RECIPRO
 status: PROVED.  The full support Dirichlet profile and its abscissa, integer Abel--Dini lift, Egyptian conservation hyperplane, ordinary and centered polygonal digamma clocks, maximum-cyclic-triangle mass and condensation-hazard profile, Forcade reciprocal mass, certified tournament-census tail, fibbinary/Moser Mahler block laws, primitive-residue profile, and Sylvester remainder are proved.  The single-file referee passes normally and under Python optimization.  Numerical comparisons use mpmath; unnamed constants receive no unproved arithmetic classification
 source: codex-2026-07-21 reciprocal-sequence continuation and union audit
 depends_on: [THM-2000, THM-785, THM-819, THM-1360, THM-2016, HYP-3724, HYP-3008, HYP-3063]
-related: [THM-488, THM-555, THM-874, THM-900, THM-1127, THM-1985, THM-1990, THM-2016, MISTAKE-209, MISTAKE-210, MISTAKE-217]
+related: [THM-488, THM-555, THM-874, THM-900, THM-1127, THM-1985, THM-1990, THM-2016, MISTAKE-209, MISTAKE-210, MISTAKE-216, MISTAKE-217, MISTAKE-219]
 external:
   - "Lawrence Downey, Boon W. Ong, and James A. Sellers, Beyond the Basel Problem: Sums of Reciprocals of Figurate Numbers, College Mathematics Journal 39 (2008), 391--394, JSTOR stable 27646686, https://www.jstor.org/stable/27646686"
   - "Archived preprint: https://web.archive.org/web/20130529032918/http://www.math.psu.edu/sellersj/downey_ong_sellers_cmj_preprint.pdf"

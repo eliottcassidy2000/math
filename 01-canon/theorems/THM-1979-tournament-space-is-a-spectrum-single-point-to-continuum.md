@@ -10,7 +10,7 @@ status: >
   occurs at both σ²=4/7 and 10/7. Nor are structural statistics monotone in σ²: at n=6,
   σ²=5/4 supports two size-3 all-strong fibers and two size-1 reducible fibers. Thus σ²
   determines c₃ exactly and locates a shell, while forgetting score shape and within-fiber
-  structure. See MISTAKE-215.
+  structure. See MISTAKE-218.
 source: boxeph-2026-07-21-S198 (owner: understand tournament space as a spectrum from a single point (transitive) to a continuum housing the different structure)
 depends_on: []
 related:
@@ -20,7 +20,7 @@ related:
   - THM-1966  # |R| becomes independent of (spectrum,H) at n=7
   - THM-1810  # char_A=xⁿ, the transitive GIT-nullcone vertex (the single point)
   - THM-1880  # kps char_S spread duality: transitive max-spread / Paley zero-spread (the two poles)
-  - MISTAKE-215  # parity seam and false monotonic-richness claim corrected
+  - MISTAKE-218  # parity seam and false monotonic-richness claim corrected
 script: 04-computation/tournament_space_spectrum_boxeph_S198.py (+ .out)
 ---
 

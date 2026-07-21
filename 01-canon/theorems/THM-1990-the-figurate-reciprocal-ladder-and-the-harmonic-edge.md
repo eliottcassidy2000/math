@@ -89,7 +89,7 @@ simplex columns:
 | powers of 2 `2ⁿ`, `n>=1` (Cayley–Dickson) | 1 | geometric |
 | **labeled tournaments `2^{C(n,2)}`, `n>=1`** | **1.6416325607…** | partial theta at `q=½` |
 | **switching classes `2^{C(n−1,2)}`, `n>=1`** | **2.6416325607… termwise** | support equals labeled-tournament support; `+1` is collision tax |
-| A000568 tournaments (unlabeled) | historical prefix retracted | offset/error audit in MISTAKE-213 |
+| A000568 tournaments (unlabeled) | historical prefix retracted | offset/error audit in MISTAKE-219 |
 | A002854 even graphs `V(Eₙ)` | historical prefix only | no canonical tail value here |
 | A000571 score sequences | historical prefix only | no canonical tail value here |
 | A000182 tangent | historical prefix only | no canonical tail value here |

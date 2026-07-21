@@ -143,6 +143,7 @@ Format per entry:
   singleton gives equality.  THM-2016 now contains this repaired proof; its
   ceiling and the THM-2005 condensation identities are unchanged.
 ## MISTAKE-215 (2026-07-21, codex audit of THM-1979/2013) -- score variance was promoted from a cyclicity coordinate to the whole structural axis
+## MISTAKE-218 (2026-07-21, codex audit of THM-1979/2013) -- score variance was promoted from a cyclicity coordinate to the whole structural axis
 
 - **What was claimed:** THM-1979 put `σ²=Var(scores)` in
   `[0,(n²−1)/12]` for every `n`, called zero the regular center, and said
@@ -171,7 +172,7 @@ Format per entry:
 
 ---
 
-## MISTAKE-214 (2026-07-21, codex audit of THM-2013/2016) -- signed Redei data was labeled as the invariant magnitude `|R|`
+## MISTAKE-217 (2026-07-21, codex audit of THM-2013/2016) -- signed Redei data was labeled as the invariant magnitude `|R|`
 
 - **What was done:** the continuum-coordinate scripts grouped tournament
   classes by `signed_redei(A,n)` while their output and THM-2013/2016 called
@@ -192,7 +193,7 @@ Format per entry:
 
 ---
 
-## MISTAKE-212 (2026-07-21, codex audit of THM-2016) -- an SCC sum was bounded by its largest summand
+## MISTAKE-216 (2026-07-21, codex audit of THM-2016) -- an SCC sum was bounded by its largest summand
 
 - **What was claimed:** the proof of the reducibility ceiling used
   `c₃(T)=Σ_SCC c₃(S)≤c₃_max(largest SCC)`.  It then correctly stated that the
@@ -328,7 +329,7 @@ Format per entry:
 
 ---
 
-## MISTAKE-213 (2026-07-21, codex reciprocal-atlas audit) -- finite prefixes, offsets, and proxy supports were promoted to sequence constants or all-n laws
+## MISTAKE-219 (2026-07-21, codex reciprocal-atlas audit) -- finite prefixes, offsets, and proxy supports were promoted to sequence constants or all-n laws
 
 - **What was done:**
   `04-computation/reciprocal_sums_of_repo_sequences_opus_S447.py` labels short

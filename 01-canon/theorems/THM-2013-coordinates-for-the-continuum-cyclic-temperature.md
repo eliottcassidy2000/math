@@ -21,7 +21,7 @@ related:
   - THM-1966  # |R| refines spectrum from n=6 and becomes independent of (spectrum,H) at n=7
   - THM-1960  # opus modular seeds (the cold/reducible rim, through τ_red)
   - THM-2010  # kps sequence-invariant catalog (|cyc|,|R|,|disc| = free-coordinate sequences)
-  - MISTAKE-214  # signed-R carrier was mislabeled as the invariant magnitude |R|
+  - MISTAKE-217  # signed-R carrier was mislabeled as the invariant magnitude |R|
   - "07-reflections/coordinates-for-the-continuum-cyclic-temperature-and-the-cycle-spectrum-boxeph-S199.md"
 script: 04-computation/continuum_coordinates_boxeph_S199.py (+ .out)
 ---

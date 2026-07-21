@@ -144,7 +144,7 @@ destroys prefix-product partition functions.
 
 ## The same missing object reappears in tournament temperature
 
-The correction to THM-1979/2013 (MISTAKE-215) has exactly the same form.
+The correction to THM-1979/2013 (MISTAKE-218) has exactly the same form.
 Score variance determines `c3` and hence cyclic temperature, but equal
 variance can support different score shapes, fiber sizes, and strong behavior.
 At n=6, variance `5/4` carries both all-strong and reducible score fibers.
