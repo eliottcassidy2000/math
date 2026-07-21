@@ -1,0 +1,48 @@
+======================================================================
+A. EXACT H-MAXIMISER, exhaustive n=3..6
+======================================================================
+
+ n=3: max H=3  (2 labelled, 1 iso class)
+     score=(1, 1, 1) REGULAR  |skew|=[np.float64(0.0), np.float64(1.732), np.float64(1.732)]
+
+ n=4: max H=5  (24 labelled, 1 iso class)
+     score=(1, 1, 2, 2)  |skew|=[np.float64(0.414), np.float64(0.414), np.float64(2.414), np.float64(2.414)]
+
+ n=5: max H=15  (64 labelled, 2 iso class)
+     score=(1, 2, 2, 2, 3)  |skew|=[np.float64(0.0), np.float64(1.732), np.float64(1.732), np.float64(2.646), np.float64(2.646)]
+     score=(2, 2, 2, 2, 2) REGULAR  |skew|=[np.float64(0.0), np.float64(0.727), np.float64(0.727), np.float64(3.078), np.float64(3.078)]
+
+ n=6: max H=45  (480 labelled, 2 iso class)
+     score=(2, 2, 2, 3, 3, 3)  |skew|=[np.float64(0.268), np.float64(0.268), np.float64(1.0), np.float64(1.0), np.float64(3.732), np.float64(3.732)]
+     score=(2, 2, 2, 3, 3, 3)  |skew|=[np.float64(1.0), np.float64(1.0), np.float64(2.646), np.float64(2.646), np.float64(2.646), np.float64(2.646)]
+
+======================================================================
+A'. n=7: regular class (scores all=3, forced by max-min<=1) + control
+======================================================================
+ labelled regular tournaments on 7 vertices: 2640
+ max H over regular = 189  (240 labelled, 1 iso class)
+ H(Paley(7)) = 189;  maximiser iso-classes canon == Paley canon?  [True]
+     score=(3, 3, 3, 3, 3, 3, 3)  |skew|=[np.float64(0.0), np.float64(2.646), np.float64(2.646), np.float64(2.646), np.float64(2.646), np.float64(2.646), np.float64(2.646)]
+ random control (200000 tournaments): #beating best-regular = 0
+
+======================================================================
+B. IS H SCORE-DETERMINED?  (refutes 'H Schur-concave in scores')
+======================================================================
+ n=4: 0/4 score sequences carry MULTIPLE distinct H values
+ n=5: 1/9 score sequences carry MULTIPLE distinct H values
+     score=(1, 2, 2, 2, 3): H in [11, 13, 15]  <-- same scores, different H
+ n=6: 9/22 score sequences carry MULTIPLE distinct H values
+     score=(1, 2, 2, 3, 3, 4): H in [23, 25, 29, 31, 33, 37]  <-- same scores, different H
+     score=(1, 2, 2, 2, 3, 5): H in [11, 13, 15]  <-- same scores, different H
+
+======================================================================
+C. INFLATION NEUTRALITY: H(T+source)=H(T)=H(T+sink)?
+======================================================================
+ source/sink inflation H-neutral on ALL tournaments n=3,4,5: True
+   => the WOWII pendant does NOT pump H; the H-maximiser is inflation-UNREACHABLE.
+
+======================================================================
+D. MAX-H SEQUENCE and maximiser type
+======================================================================
+ max H for n=3..7: [3, 5, 15, 45, 189]
+ Szele average n!/2^(n-1) for n=3..7: [1, 3, 7, 22, 78]

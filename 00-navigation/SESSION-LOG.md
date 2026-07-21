@@ -41,6 +41,48 @@ formalize), pulling between rounds. Headline: THM-1860 c3<=H reduced + formalize
 or Moon pancyclicity count). (2) prove diam<=c3+1, scc<=beta (latter is one line). (3) feed the
 refuted C2 back as a LOWER-bound search for the true H-vs-c3 envelope. (4) run the full ~150 WOWII
 list on G_n/E_n (klein-S395 started).
+## opus-2026-07-20-S438 - Working what WOWII-103 unlocks: the H-maximiser + the INFLATION-RESPONSE DIAGNOSTIC (THM-1855)
+
+Owner: "work on what it unlocks" (the S437 WOWII-103 reflection / HYP-8625: inflation-hunt the
+H-extremiser + decoupling audit). H(T) = #directed Hamiltonian paths (definitions.md:15).
+
+**COMPUTED (3 scripts, exhaustive/near):** max H for n=3..7 = 3,5,15,45,189 = OEIS A038375, with
+TWO maximiser iso-classes at n=5 (regular (2,2,2,2,2) AND non-regular (1,2,2,2,3)) and n=6. n=7
+maximiser = Paley(7) unique (canon-verified, 0/200k random beat). n=11: all 32 circulants + 3000
+random regulars confirm Paley(11)=95095 top. n=13: rotation-type top (3711175). This REPRODUCES
+existing canon (LEM-004 circulant census, THM-128 a(13), THM-212 Paley global max n=3,7,11) -- so
+parts A/D VALIDATE, not extend. THM-1820 open Q1 ("what maximises H?") is thereby answered by
+existing canon (Paley n=7,11; rotation n>=13).
+
+**TWO GENUINELY NEW RESULTS (THM-1855, HYP-8640):**
+(B, CORRECTION to THM-1820) H is NOT a function of the score sequence: n=6 score (1,2,2,3,3,4)
+carries SIX H values {23,25,29,31,33,37}. So THM-1820's "H Schur-concave IN THE SCORES" is
+ill-posed (c_3 IS a score function, genuinely Schur-convex; H is not one at all). Its "Paley
+beaten for large n" is CORRECT but via the rotation census (LEM-004), not Schur-concavity. Added a
+correction banner to THM-1820.
+(C, THE DIAGNOSTIC = the WOWII transfer) tournament pendant = SOURCE/SINK. LEMMA (proved +
+exhaustive n=3,4,5): source/sink inflation is H-NEUTRAL (source forced to be path-start, bijection)
+and c_3-NEUTRAL (source in no 3-cycle) but PUMPS score-spread. => WOWII-103-style inflation
+counterexamples exist for an invariant IFF it is inflation-PUMPED. H,c_3 resist inflation, so their
+extremals are rigid balanced objects (Paley/rotation) with no cheap inflation attack -- explains
+WHY the H-maximiser is hard. score-spread pumped => any score-spread<=f(H,c_3) dies to T+source
+(regular T5: spread 0->3, H stays 15, c_3 stays 5). The diagnostic is a ONE-LINE pre-screen for
+invariant-inequality conjectures.
+
+**CONCURRENT WORK INTEGRATED:** klein THM-1850 (S397, TODAY) = directed-WOWII, 10 inequalities
+tested exhaustively n<=7 (incl. H<=2^{n-tr} REFUTED). THM-1855 cites it as complementary: klein
+tests, the diagnostic predicts which tests a construction can settle. HYP-8630 (klein's WOWII
+generator) noted.
+
+**NAMESPACE:** HYP-8625/8630/8635 are multiply-collided (boxeph/mac-mini/klein/me) -- used a clean
+HYP-8640. THM-1855 free (only THM-1850 klein in range).
+
+**STILL OPEN (HYP-8625 item a):** the native_decide Lean certificate for the LRC extremals --
+toolchain confirmed live (lake/lean on PATH, TournamentH7 with mathlib built). Deferred to its own
+session; it is now the sharp remaining unlock.
+
+**Files:** THM-1855; HYP-8640; correction banner on THM-1820; 3 scripts + outputs in
+04-computation / 05-knowledge/results.
 
 ## klein-2026-07-21-S397 -- THM-1850: DIRECTED WOWII. A PROVED domination-transitivity inequality gamma(T) + tr(T) <= n+1 (elementary source-domination), corollary gamma <= fas+1, plus THREE refuted directed-inequality conjectures with explicit witnesses -- the directed-WOWII pipeline producing content, exhaustive n<=7.
 

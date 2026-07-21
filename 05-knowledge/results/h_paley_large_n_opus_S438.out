@@ -1,0 +1,20 @@
+   max H over circulants = 95095   (Paley rank = 1 of 32)
+   #circulants beating Paley = 0
+      H=95095  S=(2, 6, 7, 8, 10)
+      H=95095  S=(1, 3, 4, 5, 9)  <-- PALEY (QR)
+      H=93467  S=(5, 7, 8, 9, 10)
+      H=93467  S=(4, 5, 8, 9, 10)
+   Paley is the (or tied-for) TOP circulant at p=11.
+
+ p=13  (64 circulant tournaments)  [no Paley: p=1 mod 4]
+   max H over circulants = 3711175  (no Paley tournament exists)
+      H=3711175  S=(7, 8, 9, 10, 11, 12)
+      H=3711175  S=(4, 5, 6, 10, 11, 12)
+      H=3711175  S=(3, 4, 7, 8, 11, 12)
+      H=3711175  S=(2, 4, 6, 8, 10, 12)
+
+============================================================
+random NON-circulant regular control at n=11 (vs Paley(11))
+============================================================
+ H(Paley(11)) = 95095
+ best over 3000 random regular tournaments on 11 vertices = 95095  (#beating Paley = 0)

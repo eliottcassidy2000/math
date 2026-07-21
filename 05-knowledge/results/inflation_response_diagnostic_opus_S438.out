@@ -1,0 +1,12 @@
+INFLATION-RESPONSE DIAGNOSTIC (source-inflation), exhaustive n=3,4,5
+==================================================================
+ n=3:  H source-neutral=True   c3 source-neutral=True   score-spread non-decreasing=True
+ n=4:  H source-neutral=True   c3 source-neutral=True   score-spread non-decreasing=True
+ n=5:  H source-neutral=True   c3 source-neutral=True   score-spread non-decreasing=True
+
+ strict pump: score-spread on the n=5 regular tournament
+   regular T5 spread = 0  ->  T5+source spread = 3   (H: 15 -> 15,  c3: 5 -> 5)
+
+ VERDICT: H, c3 are inflation-NEUTRAL (rigid balanced maximiser = Paley/rotation, LEM-004);
+          score-spread is inflation-PUMPED (cheap extremal). WOWII counterexamples exist
+          only for PUMPED invariants. H/c3 resist inflation -> their extremals are hard & rigid.
