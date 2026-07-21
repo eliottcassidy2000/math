@@ -1,0 +1,15 @@
+computing iso reps up to n=7 ...
+iso classes: {1: 1, 2: 1, 3: 2, 4: 4, 5: 12, 6: 56, 7: 456}
+
+ n : total  strong  modular-prime(seed)  reducible  strong-frac  prime-frac
+ 1 :     1      1        1                   0      1.000        1.000
+ 2 :     1      0        1                   1      0.000        1.000
+ 3 :     2      1        1                   1      0.500        0.500
+ 4 :     4      1        0                   3      0.250        0.000
+ 5 :    12      6        3                   6      0.500        0.250
+ 6 :    56     35       15                  21      0.625        0.268
+ 7 :   456    353      197                 103      0.774        0.432
+
+=> opus seed census 1,1,1,0,3,15 (n=1..6) EXTENDED to n=7 (the entry above).
+   strong atoms (SCC) >= modular-prime seeds: substitution carves inside strong components.
+   Both fractions' trend into n=7 quantifies why the hard regime forces enumeration.
