@@ -1,0 +1,4 @@
+n=4: |R| splits 0 co-spectral classes; iso by H=3, |R|=2, (H,|R|)=3, spectrum=3, (spec,H,|R|)=3
+n=5: |R| splits 0 co-spectral classes; iso by H=7, |R|=6, (H,|R|)=9, spectrum=9, (spec,H,|R|)=9
+n=6: |R| splits 3 co-spectral classes; iso by H=19, |R|=8, (H,|R|)=31, spectrum=28, (spec,H)=32, (spec,H,|R|)=32  [documented; |R|=f(spec,H) at n=6]
+n=7 WITNESS: co-spectral, H=81, |R|=1 vs 17, non-iso=True => |R| independent of (spectrum,H) from n=7

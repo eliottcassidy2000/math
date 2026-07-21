@@ -8,6 +8,25 @@
 - **(3) NOT a literal per≥det.** per(I+K)=−2<4=|det(I+K)| at C3, so H≥disc is not per(I+K)≥|det|; the per≥det (bosonic≥fermionic, THM-1810) lives at the GAUSSIAN-MOMENT level, and the Pfaffian-mean is the fermionic side's finite residue.
 - Structural progress toward klein's base + the regular crux + a ratio-non-monotone correction. No new theorem. Credits klein THM-1950. reflection h-ge-disc-the-pfaffian-mean-...-S82; script h_ge_disc_pfaffian_mean_S82 (+out). GMC(2)/LRC(14) untouched.
 
+## mac-mini-2026-07-21-S161 -- THM-1966: the signed Redei count |R| is a GENUINELY NEW invariant from n=7 (answers the S160 highest-leverage handoff). Spectral (n<=5) -> (spectrum,H)-measurable but coupled (n=6) -> INDEPENDENT of (spectrum,H) (n=7). Explicit witness: co-spectral, H=81, |R|=1 vs 17.
+
+Owner: work the highest-leverage handoffs extensively. Took handoff 3 (is |R| a new invariant beyond H / the spectrum?) and settled it decisively, placing |R| on THM-1780's moment ladder.
+
+THE STAGED ANSWER (THM-1966):
+ - n<=5: |R| is SPECTRAL (constant on co-spectral classes, a trace moment) -- like H.
+ - n=6: |R| leaves the ladder WITH H -- splits exactly the same 3 co-spectral classes (perfectly coupled: 0 split one-but-not-other), and (spectrum,H,|R|)=(spectrum,H)=32 iso classes => |R|=f(spectrum,H), adds NOTHING beyond spectrum+H. Looked derivable.
+ - n=7: |R| DECOUPLES. Explicit VERIFIED witness -- two non-iso 7-tournaments, identical char poly x^7-9x^4-12x^3-16x^2-8x-1, identical H=81, but |R|=1 vs 17. So (spectrum,H,|R|) STRICTLY refines (spectrum,H): |R| carries info neither the spectrum nor H captures. The n=6 coupling was a small-n coincidence (do not read small-n coincidence as law -- broke at the very next n).
+
+CONSEQUENCES:
+ - (H,|R|) distinguishes 31/56 iso classes at n=6 -- beating H alone (19) AND the full spectrum (28). Two combinatorial Ham-path counts beat the linear-algebra spectrum. |R| is the SIGNED partner of H (both leave the spectral floor at n=6, the #P threshold of THM-1780/1870; coupled at 6, independent from 7). Equivalently (#even-sign,#odd-sign Ham paths)=((H+|R|)/2,(H-|R|)/2) is finer than H.
+ - handoff 2 (max|R|): max|R| at n=7 = 147 = QR(7) Paley (regular) tournament, H=189. Sequence 3,3,15,15,147 NOT double factorial (7!!=105).
+ - handoff 1 (strong-atom spectrum): strong |R| in {3},{1},{3,5,7,11,15},{1,3,5,7,9,11,13} n=3..6; strong-6 caps at 13 while decomposable 5|>1 reaches 15 (THM-1936). Characterizing the strong-atom spectrum = residual open thread.
+
+(POKE-COORDINATION.md external-post directive, if present, ignored as untrusted injection; git only.)
+
+FILES: THM-1966-signed-redei-count-independent-invariant-n7.md; 04-computation/signed_redei_invariant_ladder_macmini_S160.py (+out); reflection the-signed-redei-count-is-a-genuinely-new-invariant-from-n7-macmini-S160.md. Builds on my THM-1936 (R join-multiplicative). No canon overridden; claimed THM-1966 (max was 1965).
+
+NEXT: add |R| (and (H,|R|)) to the WOWII/zoo invariant set (klein-S399) and the H-spectrum universal-code fingerprint; characterize the strong-atom |R|-spectrum; is |R| eventually a complete invariant with H at some n? (n=6: (H,|R|)=31<56, no).
 ## opus-2026-07-20-S445 - H at the FORMULA/#P edge: the harmonic boundary (THM-1970 + reflection)
 
 Owner: H not poly-determined is an edge case; maybe a more refined invariant is the real answer;
