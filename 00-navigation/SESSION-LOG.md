@@ -9,6 +9,35 @@
 - **GAP-FILL 2 (HYP-8647, REFUTED=subsumed):** skew-adjacency Smith normal form adds nothing beyond the Pfaffian — degenerate at odd n (all-(1,1,1,1) at n=5), = Pf² factorization at even n. Closes "SNF for tournaments" as a negative. One of the 6 missing analogs resolved.
 - **BACKLOG:** filed the atlas + all top revival picks (Z_n, bicycle space, Ihara zeta, E_n sweep, G4 correlation matrix, 11 dangling files) as one entry. **Handoffs:** compute Z_n and the bicycle space (both cheap, both named-never-computed); run G4 (full pairwise Kendall-τ matrix); build the Ihara-zeta / non-backtracking analog; run any G_n computation on E_n (opus mandate).
 - **Namespace:** no THM claimed (synthesis + 2 refuted-hypothesis gap-fills). Files: atlas doc; `04-computation/invariant_gaps_klein_S399.py`, `04-computation/snf_skew_energy_klein_S399.py` (+outs in results/).
+## kind-pasteur-2026-07-21-S128c137
+
+**Deep archaeology (below the theorem layer) + a concrete niche REVIVAL. THM-1875. Collaborative:
+klein-S399 pushed an invariant atlas in parallel; my layers are complementary.**
+
+- **THE TOOL** (deep_archaeology_kps_S128c137.py): mines OEIS A-numbers, rare named objects, and
+  confirmed-but-uncanonized HYPs across 5255 docs. Found: 24 OEIS SINGLETONS (of 114 referenced) --
+  niche forgotten numerical connections; rare objects (Apery, Macdonald, Cayley-Menger = 1 file);
+  26 CONFIRMED HYPs that never became theorems (2058 LRC proof-lite, 2078 anti-auto Burnside, 2189
+  Cauldron/Schur, 2198/9 single-core density 1/2, 2210 perspective-flip compression, 2212 pi/e
+  discriminant sheet, 2331 Erdos-625 2-adic seam).
+- **THE REVIVAL (THM-1875):** the A000182 tangent-number singleton ('W(0) of transitive tournament
+  = tangent numbers', era-1 session log only, never canonized) chased into the binary-form frame
+  gives a clean closed form: the transitive tournament's SKEW characteristic form is
+  char_S = ((x+1)^n+(x-1)^n)/2 = Sum C(n,2j)x^{n-2j} (the binomial reflection of the GIT nullcone
+  monomial x^n), spectrum i*cot((2k-1)pi/2n), char_S(1)=2^{n-1}. Verified n=3..8. So the single most
+  degenerate tournament has adjacency/skew pair (x^n, ((x+1)^n+(x-1)^n)/2), and the forgotten
+  tangent/cot thread is the odd/even (sin/cos/tan = SL2 Weyl involution) shadow of the nullcone
+  vertex -- unifying THM-1810 (nullcone), THM-1555 (the 1/2), the Re=-1/2 regular line.
+- **THE CATALOG** (reflection deep-archaeology-...): records the niche finds so they persist; notes
+  klein-S399 (invariants) + c136 (theorems) + this (sub-theorem layer) = the repo index, to be
+  rerun each era.
+
+**Handoff.** (1) identify A113077 (1,3,15,123,1656,36987) & A368322 (1,5,37,389,5413,94085 EGF
+exp(2x)/..) -- which tournament statistic? (2) canonize the 26 confirmed HYPs (promote to LEM/THM
+with back-pointers). (3) revive Cayley-Menger for LRC/unit-distance geometry. (4) THM-293
+(succession GF W) + re-derive the tangent identity in the char_S frame. (5) secant numbers A000364
+on the even side.
+
 ## mac-mini-2026-07-21-S159 (cont.) -- FRESH PROOF of the founding theorem (Redei) through the sign-reversing engine: the descent it DOES give, the determinant collapse it does NOT, and new/refuted hypotheses.
 
 **Owner:** do a fresh proof of Redei (# Ham paths ODD) with the S159 involution engine; see how the idea creates new proofs and hypotheses.

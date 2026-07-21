@@ -17835,3 +17835,19 @@ Hamiltonian length; c3..c_{n-1} are SL2-invariants of char_A, c_n and H live in 
 forgets. Verified n<=6 (c3,c4,c5 spectral; c6 splits). Atlas reflection catalogs forgotten threads +
 gaps (procedurally: object x functional x method empty cells) + a standing new-angles queue.
 Named-next: c_k-from-traces closed form; n=7,8 boundary; spectral WOWII quadrant; E_n/G_n GIT form.
+
+## HYP-8660 — deep archaeology (OEIS/named-object/uncanonized-HYP layers) + tangent revival THM-1875
+
+**Status: TOOL + revival + catalog.** kind-pasteur-2026-07-21-S128c137.
+
+Deep archaeology below the theorem layer (deep_archaeology_kps_S128c137.py): 114 OEIS A-numbers
+referenced, 24 SINGLETONS (niche forgotten numerical connections); rare named objects (Apery,
+Macdonald, Cayley-Menger = 1 file each); 26 CONFIRMED-but-uncanonized HYPs (proven ideas never
+made theorems: 2058,2078,2189,2198/9,2210,2212,2331,...). REVIVED the A000182 tangent singleton as
+THM-1875: transitive tournament skew char_S = ((x+1)^n+(x-1)^n)/2 (binomial reflection of nullcone
+monomial x^n), spectrum i*cot((2k-1)pi/2n), char_S(1)=2^{n-1}, verified n=3..8. Ties the forgotten
+tangent thread to THM-1810 (nullcone), THM-1555 (half-dictionary 1/2), the odd/even sin-cos-tan
+axis = SL2 Weyl involution. Complements klein-S399 (invariant atlas) + c136 (theorem citations):
+three tools = the repo index, rerun each era. Named-next: identify A113077/A368322 tournament
+seqs; canonize the 26 HYPs; Cayley-Menger for LRC; THM-293 succession-GF W + tangent identity;
+secant A000364 even side.
