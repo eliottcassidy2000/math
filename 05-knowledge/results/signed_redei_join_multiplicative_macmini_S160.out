@@ -1,0 +1,8 @@
+R(T1|>T2)=R(T1)R(T2): VERIFIED
+strong-atom |R| spectra: {2: [], 3: [3], 4: [1], 5: [3, 5, 7, 11, 15], 6: [1, 3, 5, 7, 9, 11, 13]}
+  n=2: |R| = [1]  (products of strong atoms match: True)
+  n=3: |R| = [1, 3]  (products of strong atoms match: True)
+  n=4: |R| = [1, 3]  (products of strong atoms match: True)
+  n=5: |R| = [1, 3, 5, 7, 11, 15]  (products of strong atoms match: True)
+  n=6: |R| = [1, 3, 5, 7, 9, 11, 13, 15]  (products of strong atoms match: True)
+=> 9,13 absent at n=5: 9=3*3 needs >=6 vertices, 13 prime first at strong n=6.

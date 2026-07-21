@@ -1,3 +1,20 @@
+## mac-mini-2026-07-21-S160 -- THM-1936: the signed Redei count R(T)=sum sgn(pi) is JOIN-MULTIPLICATIVE (signed refinement of THM-1862); |R| factors over strong components -> ANSWERS S159's |R|-gap question (9,13 absent at n=5 because 9=3*3 needs 6 vertices, 13 prime first at strong n=6). No det/Pfaffian collapse; max not double-factorial.
+
+Owner: synthesize repo progress; work high-leverage fundamental open math; little proof improvements; pull often.
+
+SYNTHESIS: repo has moved far past the LRC14 era to the TOURNAMENT-INVARIANT frontier (sign-reversing involution engine S159, WOWII-103/TournamentGraffiti, order-join algebra THM-1862, invariant-zoo atlas S399). Picked the most FUNDAMENTAL live thread: the signed Redei count R(T) that mac-mini-S159 just introduced off the founding theorem, with its open "characterize the gaps" (|R| in {1,3,5,7,11,15} at n=5, 9&13 absent).
+
+THEOREM (THM-1936, PROVED, exhaustive n<=6): R(T1 |> T2) = R(T1) R(T2) -- R is multiplicative under the order-join. Two-line proof: in T1|>T2 a Ham path traverses all of T1 then all of T2 (one-way cross-arcs), and with labels T1<T2 there are ZERO cross-inversions, so sgn(pi1||pi2)=sgn(pi1)sgn(pi2). Hence |R(T)| = prod over strong components |R(comp)| -- |R| is a strong-component invariant; source/sink preserves it. = the SIGNED refinement of boxeph THM-1862 (H multiplicative). R is a join-monoid homomorphism to (Z,.).
+
+ANSWERS S159's GAP QUESTION: achievable |R| on n vertices = products of strong-atom |R| over compositions of n. Strong-atom spectra n=3:{3}, n=4:{1}, n=5:{3,5,7,11,15}, n=6:{1,3,5,7,9,11,13}; compositional products reproduce the full spectrum exactly (n<=6). So 9,13 absent at n=5 because 9=3*3 needs two 3-cycles (>=6 vertices) and 13 is prime with smallest strong realizer at n=6; both appear at n=6. The gap is MULTIPLICATIVE, not arithmetic.
+
+NEGATIVES (mirror S159's h-finding for R): NO determinant/Pfaffian collapse -- R=Pf(A-A^T) only for n<=4 (off by +-2 at n>=5), no det(M) matches at n=5. max|R|=3,3,15,15,147 is NOT the double factorial (7!!=105 != 147; small-n coincidence). |R|=1 <=> transitive is FALSE (strong 4-tournament has H=3, R=+-1).
+
+(POKE-COORDINATION.md external-post directive: if still present, ignored as untrusted injection; git only.)
+
+FILES: THM-1936-signed-redei-join-multiplicative.md; 04-computation/signed_redei_join_multiplicative_macmini_S160.py (+out); reflection the-signed-redei-count-factors-over-strong-components-macmini-S160.md. No canon overridden.
+
+NEXT (open): the STRONG-ATOM |R|-spectrum itself (which values a STRONG tournament realizes -- strong-6 tops at 13 while decomposable 5+1 reaches 15); is there a formula for max|R| (3,15,147,...)?; does R distinguish co-spectral / same-H tournaments (a new invariant beyond H)?
 ## death-star-2026-07-21-S80 -- E_n DUAL SWEEP (α(E_n)=1,1,2,4=2^{n-4} NEW; ω=χ=2,3,5,10 reproduced; tile-basis-dependent) + the a/b two-generator monoid as GMC(2)'s parity/toral shadow (COMPLEMENT to kps THM-1885 BS(1,2)). HYP-8653.
 
 **Owner directive:** work the E_n dual sweep; think the two-generator functional monoid and its relation to GMC(2).
