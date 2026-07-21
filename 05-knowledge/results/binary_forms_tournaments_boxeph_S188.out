@@ -1,0 +1,40 @@
+==============================================================================
+(R1) Vandermonde = signed tournament sum; intransitivity cancels
+==============================================================================
+n=3: surviving monomials = permutations with unit signs: True ;
+      3-cycle-reversal involution (score-preserving, sign-reversing,
+      canonical-triangle-preserving) on 2 intransitive T: True
+n=4: surviving monomials = permutations with unit signs: True ;
+      3-cycle-reversal involution (score-preserving, sign-reversing,
+      canonical-triangle-preserving) on 40 intransitive T: False
+n=5: surviving monomials = permutations with unit signs: True ;
+      3-cycle-reversal involution (score-preserving, sign-reversing,
+      canonical-triangle-preserving) on 904 intransitive T: False
+
+==============================================================================
+(R2) E = Fischer/Bargmann pairing ; (R3) one-sided = HM-unstable
+==============================================================================
+E[Z^aW^b] = delta 2^a a! = <z^a,z^b>_{Bargmann,var 2}: definitional check:
+   a=0: 2^a a! = 1
+   a=1: 2^a a! = 2
+   a=2: 2^a a! = 8
+   a=3: 2^a a! = 48
+one-sided P = Z^2 + 3Z under (tZ, W/t): coefficients scale t^2, t -> 0 ✓
+two-sided P = Z + W: coefficients scale t, 1/t: NO 1-PS kills it ✓
+=> GMC(2) == 'analytic moment-nullcone = GIT nullcone' (Kempf-Ness shape)
+
+==============================================================================
+(R4) Cayley-Sylvester dims vs staircase/score-sequence counts
+==============================================================================
+dim Inv_k(binary n-ic) = p_box(k,n;kn/2) - p_box(k,n;kn/2-1):
+  n=2: k=2..6: [1, 0, 1, 0, 1]
+  n=3: k=2..6: [0, 0, 1, 0, 0]
+  n=4: k=2..6: [1, 1, 1, 1, 2]
+  n=5: k=2..6: [0, 0, 1, 0, 0]
+  n=6: k=2..6: [1, 0, 2, 0, 3]
+score sequences of k-tournaments (k=2..6): [1, 2, 4, 9, 22]
+(A000571: 1,2,4,9,22 expected). Relation to Inv-dims: KINSHIP of
+counting frames (partitions in box vs under staircase), no equality
+found — recorded honestly as a lead, not a law.
+
+DONE.
