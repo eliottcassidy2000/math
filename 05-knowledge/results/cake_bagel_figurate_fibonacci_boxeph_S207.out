@@ -1,0 +1,28 @@
+n        : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+caterer  : [1, 2, 4, 7, 11, 16, 22, 29, 37, 46, 56, 67, 79]  (A000124, first 3 Pascal terms)
+CAKE     : [1, 2, 4, 8, 15, 26, 42, 64, 93, 130, 176, 232, 299]  (A000125, first 4 Pascal terms)
+MOSER    : [1, 1, 2, 4, 8, 16, 31, 57, 99, 163, 256, 386, 562]  (A000127 = polygonal row-sum, opus-S317)
+BAGEL    : [1, 2, 6, 13, 24, 40, 62, 91, 128, 174, 230, 297, 376]  (solid torus by n planes)
+2^n      : [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]  (polyhedral/Pascal FULL row-sum)
+
+-- BAGEL vs CAKE: the torus hole adds exactly the triangular numbers minus one --
+  bagel(n) = C(n,3) + n(n+1)  [ball cubic + twice the triangular, from the handle]
+  bagel(n) == C(n,3)+n(n+1) for n>=1 ? True
+  bagel - cake = [0, 0, 2, 5, 9, 14, 20, 27, 35, 44, 54, 65, 77]
+  = T_n - 1 (triangular minus one) for n>=1 ? True   <- the DEFICIT-1 (klein-S313 missing-region boundary effect)
+
+-- FIBONACCI = shallow-diagonal (skip) sum of Pascal (polyhedral) --
+  Pascal skip-sums: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233]  = Fibonacci
+
+-- POLYGONAL triangle skip-sum = the Fibonacci DEVIATION (opus-S317) --
+  polygonal skip-sums: [1, 1, 1, 0, -1, -2, -2, 0, 5, 15, 31, 56, 91]  (deviates from Fibonacci at term 9)
+
+-- g-BONACCI kernels 1/(1 - x - x^{g+1}) : Fibonacci at g=1, and the shadow-lattice family (klein-S313) --
+  g=1 (kernel 1-x-x^{2}): [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233] (g=1 = Fibonacci)
+  g=2 (kernel 1-x-x^{3}): [1, 1, 1, 2, 3, 4, 6, 9, 13, 19, 28, 41, 60] (g=1 = Fibonacci)
+  g=3 (kernel 1-x-x^{4}): [1, 1, 1, 1, 2, 3, 4, 5, 7, 10, 14, 19, 26] (g=1 = Fibonacci)
+
+SUMMARY: cake/caterer/Moser/bagel = truncated-Pascal ROW sums (figurate cutting);
+Fibonacci/g-bonacci = shallow-DIAGONAL sums of the same triangle (g-bonacci kernels, klein-S313).
+Polygonal=first two Vandermonde layers of polyhedral (opus-S317); the cutting sequences and
+Fibonacci are two readings (row vs skip-diagonal) of ONE Pascal/figurate triangle.
