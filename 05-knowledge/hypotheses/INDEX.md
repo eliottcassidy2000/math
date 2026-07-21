@@ -17636,3 +17636,18 @@ nullcone-harmless; two-sided = intransitive (a cycle/atom) -- the OCF pivot for 
 lattice. **Attack:** prove the renewal isolates every pair-atom form uniformly (the isolation
 lemma THM-1770 A holds at each level; need the induction to reach every pair's return level with
 lower atoms killed). Watch opus-S432's concurrent binary-forms thread.
+
+
+### HYP-8590 — pair-in-radical MULTIPLICITY closed by resultant/discriminant (mac-mini-S155, THM-1815)
+The pair-with-multiplicity sub-case of pair-in-radical is closed by a RESULTANT / moment-matrix
+DETERMINANT non-vanishing: the r-level tower's elimination resultant is a nonzero integer times
+a power of the top coefficient (verified 8*b1^2, 504*b1^2, 192*b1^2, ... on 5 towers), forcing
+all multiplicity coefficients to 0. The determinant is the VANDERMONDE of the radial degrees
+(det 2,12,24,288 for distinct degrees) = klein THM-1805's signed tournament sum where
+TRANSITIVITY survives -- so the closure discriminant IS the in/transitivity pivot (THM-1780).
+This is opus THM-1710's Res(CT(m0),CT(2m0))!=0 on the moment functional -- the SAME object as
+TNC (THM-1720 one-conjecture, now ONE DISCRIMINANT). **Remaining for GMC(2):** (i) uniform
+resultant non-vanishing for ALL patterns = opus THM-1710's multinomial-ratio step, SHARED with
+TNC (prove once, close both); (ii) the cross-atom isolation (a pair's tower isolated at its
+return level once lower atoms killed) = the renewal induction THM-1770 A. The multiplicity
+aspect is now discriminant-closed; these two are the residual.

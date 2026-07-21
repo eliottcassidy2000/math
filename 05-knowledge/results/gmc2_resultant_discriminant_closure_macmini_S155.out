@@ -1,0 +1,48 @@
+==============================================================================
+PART A -- the r-level moment system's RESULTANT is a nonzero discriminant
+==============================================================================
+  p   radial degrees   r     resultant of the r levels (in the betas)
+  1           [0, 1]   2                                      8*b1**2
+  1           [0, 2]   2                                    504*b1**2
+  2           [0, 1]   2                             1040449536*b1**8
+  1        [0, 1, 2]   3             4806683083864145475403776*b2**12
+  2        [0, 1, 2]   3 26778246656908054194537820181646274388643932573550169517451693268546237387450406088482979222677292834517265426329739610636511685799567556248486290584958429508429672037495276823282925086242074429824006792140311162536986618591385162581090778085394600309790412151334661761623617527905316495995889341847499551973430419693908690849960901095907401131886479742614940393163975186134952327523464343991447850668947226527531456805316531522413192260029608907970708774453532084286604313237869170128638685298278940929685200154476613885306925338826885341314770726421678613270166548980663372192215801996419006058688452713532643378072411838351409152000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000*b2**192
+  => the resultant is a NONZERO monomial in the top beta (times an integer constant),
+     so all beta_i = 0 forced. The integer constant is the discriminant of the tower.
+
+==============================================================================
+PART B -- the r=2 case in full: Res(E[P^{m0}], E[P^{2m0}]) = (nonzero)*beta^2
+==============================================================================
+  P = alpha Z + b0 W + b1 ZW^2  (charge -1 carried by W (rad0), ZW^2 (rad1))
+  E[P^2] = 2*alpha*b0 + 4*alpha*b1
+  E[P^4] = 12*alpha**2*b0**2 + 72*alpha**2*b0*b1 + 144*alpha**2*b1**2
+  Res_b0(E[P^2]/alpha, E[P^4]/alpha^2) = 192*b1**2   <-- nonzero * b1^2 => b1 = 0 => b0 = 0
+  This is opus THM-1710's Res(CT(m0),CT(2m0)) != 0 mechanism, on the moment functional.
+
+==============================================================================
+PART C -- the determinant IS the Vandermonde = signed tournament sum (klein THM-1805)
+==============================================================================
+  The r-level tower's leading system is linear in the DISTINCT radial-degree 'frequencies'
+  L(V^{a_i + k}) = (a_i + k)!, a Vandermonde-type matrix in the a_i.  Its determinant is
+  prod_{i<j}(x_i - x_j)-shaped, which by THM-1805 = sum_T sgn(T) x^score with the
+  TRANSITIVE tournaments surviving.  So the discriminant that forces the coefficients is
+  literally the transitivity structure of the charge lattice.  Check the Vandermonde
+  determinant of the radial-degree factorial matrix is nonzero for distinct degrees:
+     radial degrees [0, 1]: moment-matrix det = 2  (nonzero <=> distinct degrees)
+     radial degrees [0, 2]: moment-matrix det = 12  (nonzero <=> distinct degrees)
+     radial degrees [0, 1, 2]: moment-matrix det = 24  (nonzero <=> distinct degrees)
+     radial degrees [0, 1, 3]: moment-matrix det = 288  (nonzero <=> distinct degrees)
+  Distinct radial degrees => nonzero determinant => the multiplicity coefficients are
+  forced. Repeated degrees would collapse two terms into one (not a genuine multiplicity).
+
+==============================================================================
+SUMMARY -- discriminants close the general case, sharing TNC's residual
+==============================================================================
+  * Pair-straddle with multiplicity r: the r-level moment tower's RESULTANT / moment-
+    matrix DETERMINANT is a nonzero discriminant (Vandermonde in the radial degrees),
+    forcing the coefficients -- so the pair-atom form is in radical(I). [PART A,B verified]
+  * That Vandermonde IS the signed tournament sum (klein THM-1805): transitivity survives,
+    intransitivity cancels -- the in/transitivity pivot (THM-1780) made a determinant.
+  * The non-vanishing is opus THM-1710's Res(CT(m0),CT(2m0)) != 0, the SAME object as TNC
+    (THM-1720 one-conjecture). GMC(2)'s uniform closure = the uniform resultant-non-
+    vanishing (multinomial-ratio) that TNC also needs -- so proving one closes both.
