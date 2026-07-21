@@ -597,6 +597,13 @@ THM-566.
 primitive and imprimitive multipliers on each pair-sum ruler.  Test whether
 nonunit obligations supply the missing pressure ignored by unit-only scans.
 
+**THM-2041 update (2026-07-21).** Primitive-support and Ramanujan kernels are
+Frobenius-stable whole layers: for every coefficient prime `p` coprime to the
+period, their twisted cyclic constant terms at `p*m` are p-th powers of those
+at `m`. This closes amplification after a base packet is known nonzero. It does
+not produce that packet, and a signed trace still needs the safe-phase,
+endpoint-owner, and open/boundary labels before it implies an LRC witness.
+
 **C3. Fejer/Toeplitz packet certificate.**  HYP-2981's positive kernels may
 control signed cancellation without the divergent absolute relation sum.
 Attach the kernel to the good-set indicator and demand an explicit error below
@@ -631,6 +638,11 @@ bounded partial quotient forcing an uncovered sheet.
 **C10. p-adic/Hensel scale descent.**  Factor the core scale prime by prime.
 At each p, either lift a witness sheet or prove the exceptional residues
 occupy a rigid p-adic pattern.  Reassemble by CRT with explicit coupling.
+
+THM-2041 suggests the proof-safe unit here: retain the complete exact-period
+or unit-root orbit under Frobenius, not one arbitrarily selected phase/root.
+The missing theorem is a strict filtration for off-orbit packets, especially
+at singular roots; orbit preservation itself is now proved.
 
 **C11. Automata for residue packets.**  Build a finite transducer whose state
 is the exceptional residue word plus blocker debt under c -> pc.  A finite

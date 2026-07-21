@@ -77,6 +77,16 @@ rungs are this program's finite tests).
 
 ## 3. Honest verdict
 
+> **2026-07-21 update (THM-2041 / HYP-8800).** One TTNC service is now
+> proved: primitive-support and Ramanujan exact-period twists are fixed as
+> whole layers by every coprime Frobenius prime, so a nonzero twisted cyclic
+> moment propagates through all p-power levels. This does not prove the TTNC
+> instance proposed above. It supplies preservation after base nonvanishing;
+> it does not produce a base nonzero moment, isolate off-period packets, or
+> turn a signed trace into a pointwise safe phase. The sharp next target is a
+> labelled packet whose projected residue is an actual bounded integer safe
+> count, not merely a Ramanujan statistic.
+
 No completed conditional proof of LRC(14) is claimed. What stands: the
 edifice map (section 1, each arrow graded PROVED/CITED/CONJECTURAL); the
 CT-realization lemma (proved); TTNC named with its proved base camp and

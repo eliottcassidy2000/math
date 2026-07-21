@@ -75,4 +75,12 @@ W5. THE {7,21} INSTABILITY GAP: read the h-monoid as a value-semigroup of
 
 ## 4. Files
 
+**Post-THM-2022 transfer audit.** THM-2041 proves that the primitive-period
+projection of this relation-lattice pairing is Frobenius-stable as a complete
+tied packet. HYP-8800 also records why the analogy stops: the finite phase
+function algebra has zero divisors, the danger-count moment alphabet is
+bounded, and signed projector nonzero is not pointwise loneliness. The useful
+next object is therefore a labelled integer safe-count packet with an
+off-packet valuation filtration.
+
 04-computation/lrc_moment_nullcone_boxeph_S189.py + frozen .out (B1-B3).

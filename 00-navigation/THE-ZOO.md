@@ -78,6 +78,14 @@ Vandermonde=signed-tournament-sum (THM-1805 → OCF/Paley signed-cactus cancella
 Hermite (THM-473/1620 → tournament moment hierarchies); Helmholtz–Hodge curl census (THM-895 → reversible/
 circulating split of metagraph current, pairs with THM-833 OU drift).
 
+**New reusable tool (THM-2022/2041): whole-layer Frobenius transport.** Expose
+an invariant initial face or exact-period packet, make every other layer pay a
+finite-place cost, and transport the complete tied residue by Frobenius rather
+than isolating one atom. The method is legal only when a problem-specific
+theorem supplies a nonzero base layer and a filtration removes off-layer
+terms. LRC exact-period projectors satisfy the preservation step; its base
+safe-count/pointwise lift remains open.
+
 ---
 
 ## §3 THE FRAMES (meta-lenses)

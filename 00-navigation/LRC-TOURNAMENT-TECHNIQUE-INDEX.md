@@ -2434,6 +2434,13 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 
 ### LTT-057: Paley / Frobenius Arithmetic Tournament Carrier
 
+**THM-2041 audit (2026-07-21):** the rigorous Frobenius payload is the whole
+primitive-period/Ramanujan projector, which is fixed because multiplication by
+a coprime prime permutes the unit classes. This works even at composite period
+14. It preserves exact-period nonvanishing but does not orient tournament
+scores or imply a safe phase; Paley smoothness remains a carrier analogy, and
+the safe inequality plus endpoint/open-boundary labels must remain attached.
+
 - **Move:** Use Paley and Frobenius tournaments as arithmetic difference
   carriers: quadratic residues orient edges, automorphism groups normalize
   path counts, and Gauss/Ramanujan sums expose exact-period structure.

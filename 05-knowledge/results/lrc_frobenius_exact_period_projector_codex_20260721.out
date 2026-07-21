@@ -1,0 +1,14 @@
+THM-2041 FROBENIUS EXACT-PERIOD AUDIT
+Ramanujan dilation identities checked: 71484
+Cyclic twisted-moment identities checked: 1740
+Non-invariant twist failure (q,p,m,lhs,rhs): (5, 3, 1, 2, 1)
+q=14 primitive phase set: [1, 3, 5, 9, 11, 13]
+  multiply by p=3: [3, 9, 1, 13, 5, 11]
+  multiply by p=5: [5, 1, 11, 3, 13, 9]
+  multiply by p=11: [11, 5, 13, 1, 9, 3]
+  multiply by p=13: [13, 11, 9, 5, 3, 1]
+  multiply by p=17: [3, 9, 1, 13, 5, 11]
+  multiply by p=19: [5, 1, 11, 3, 13, 9]
+  multiply by p=23: [9, 13, 3, 11, 1, 5]
+PASS: primitive/Ramanujan projectors survive as whole Frobenius layers.
+SCOPE: preservation only; no base nonvanishing or pointwise LRC lift is proved.

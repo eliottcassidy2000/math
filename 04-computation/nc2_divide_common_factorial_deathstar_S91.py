@@ -56,6 +56,28 @@ for m in range(1,10):
     # dominant channel j=m//3 uses Z^{2j}, top factorial ~ (2*(m//3))! -- the 'p*A_0' with A_0=#a-uses
     jmax=m//3; domfac=f(2*jmax) if jmax else 1
     print(f"  m={m}: E={E}, /(2*floor(m/3))!={Fr(E,domfac)} (float {float(E)/domfac:.3f}); jmax={jmax}")
+
+wall_checks = 0
+for even_p in (2, 4, 6):
+    for aa, beta, cc in ((1, 1, 1), (2, -3, 5), (-1, 2, 3)):
+        for m in range(1, 9):
+            direct = EPm_general(
+                even_p,
+                even_p,
+                {0: Fr(aa)},
+                {even_p // 2: Fr(beta)},
+                {0: Fr(cc)},
+                m,
+            )
+            residue = sum(
+                Fr(f(m), f(i) * f(i) * f(m - 2 * i))
+                * Fr(aa * cc) ** i
+                * Fr(beta) ** (m - 2 * i)
+                for i in range(m // 2 + 1)
+            )
+            assert direct == f(even_p * m // 2) * residue
+            wall_checks += 1
+print(f"\n[C] THM-2040 corrected symmetric-monomial identities checked: {wall_checks} PASS")
 print("""
 AUDIT (MISTAKE-215):
  * The output above does not establish a common-factorial factorization or a bounded

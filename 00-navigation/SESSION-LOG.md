@@ -121,3 +121,42 @@
 - **MECHANISM:** Descend a fixed-support torus null point to algebraic coefficients. The lowest balanced face has a nonzero DvdK constant term `Q` at some level `m0`, with common Wick height `A0`. At a good prime `p`, normalize `M_(p*m0)` by `(p*A0)!`. Kummer/Lucas remove every channel outside the `p`-dilated face; Frobenius makes the entire tied residue exactly `Q^p != 0`. No first-return atom, unique channel, coefficient sign, radial-degree gap, or asymptotic dominance is assumed.
 - **UNRELATED-WORK TRANSFER:** This is the exact realization of the repo's “retain a side channel under Frobenius twist” and tropical carry-wall ideas. The preserved side channel is the whole face sum, so MISTAKE-211's cross-atom cancellation is absorbed rather than denied. Dimension two is essential because balance leaves one monotone Wick factorial.
 - **AUDIT:** Three independent hostile reconstructions plus the parallel GMC2 task found no gap. Exact verifier covers a cancelled earlier face layer, two colliding minimum channels, 126 off-face channels, a rational intercept, and neutral `A0=0`; stored transcript matches. Commits `fab3b36b7`, `055b68a94`, `c50d86f5f`, `0f0f8e6d4`, `b7dba73a5` (with later integration commits possible).
+
+## codex-2026-07-21-NC2-transfer -- exact-period Frobenius packets and the honest LRC boundary
+
+- **PROVED (THM-2041):** In the cyclic group algebra of period `q` and
+  characteristic `p` coprime to `q`, every `p`-stable integral twist satisfies
+  `ct_q(Theta Lambda^(pm))=ct_q(Theta Lambda^m)^p`. Primitive-support and
+  Ramanujan exact-period kernels are stable because multiplication by `p`
+  permutes the units modulo `q`. This includes composite period `q=14` and
+  propagates any already-nonzero exact-period packet through all `p`-power
+  levels.
+- **LRC SYNTHESIS (HYP-8800):** THM-2022's four services separate into
+  descent, face exposure, off-face filtration, and whole-face Frobenius
+  preservation. LRC finite checking and packet reductions resemble the first
+  two, and THM-2041 supplies the fourth. The missing content is a nonzero
+  integer base safe-count packet, an off-packet filtration, and a lift that
+  retains safe inequalities plus endpoint/boundary ownership.
+- **THREE NO-GOS:** finite phase-function algebras have zero divisors and no
+  DvdK base theorem; LRC danger-count factorial moments terminate at order 13,
+  so prime amplification exits the alphabet; and a nonzero signed Ramanujan
+  trace need not imply any safe phase. The recommended attack amplifies
+  labelled period packets, not intersection order.
+- **OTHER FRONTS:** the same whole-initial-layer principle can preserve unit
+  root orbits in Hensel/CRT work, toral character packets, resultant-unit
+  layers, and finite cyclic counts. Each still needs a problem-specific base
+  nonvanishing theorem and filtration. It does not automatically control
+  Paley tournament scores or higher-dimensional products of Wick factorials.
+- **CORRECTION (MISTAKE-215 / THM-2040):** the incoming global
+  de-factorialization/Paley equivalence was false. A common factorial exists on
+  the exact even symmetric monomial wall, where the quotient is a central
+  trinomial polynomial, but THM-2022 uses only a prime-local minimum-valuation
+  normalization. Scalar moments are not the special moment-matrix
+  determinants.
+- **COMPUTATION:** 71,484 Ramanujan dilation identities and 1,740 cyclic
+  twisted-moment identities passed, with a failing non-invariant-twist control;
+  the corrected de-factorialization audit passed 72 exact monomial-wall cases.
+- **EXTERNAL CHECK:** current primary-source frontier was cross-checked against
+  Sungkawichai--Trakulthongchai (LRC through 13 runners),
+  Malikiosis--Santos--Schymura (finite checking), Giri--Kravitz and
+  Jain--Kravitz (spectra), and Bedert (Riesz products).

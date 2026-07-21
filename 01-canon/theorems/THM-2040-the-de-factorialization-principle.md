@@ -1,30 +1,104 @@
 ---
 id: THM-2040
-title: "THE DE-FACTORIALIZATION PRINCIPLE — divide the NC2 moment by the full common factorial and noncancellation lives in the combinatorial residue. For a symmetric p-charge wall P = a Z^p + b(s) + c Z̄^p with deg b = p/2 (the fully-confluent/central offset, THM-2033), EVERY channel shares one radial degree, so E[P^m] = (mp/2)! · W_p(m) where W_p(m) = Σ_i C(m;i,i,m−2i)(ac)^i β^{m−2i} is the (generalized) CENTRAL TRINOMIAL (A002426 = 1,3,7,19,51,… at a=c=β=1; death-star S90's free-probability moment). The common factorial (pA_0)! is a nonzero background factor IRRELEVANT to noncancellation: E[P^m]=0 ∀m ⟺ W_p(m)=0 ∀m ⟺ the free-cumulant/hyper-Bessel generating series ΣW_p(m)t^m has a real-positive zero ⟺ a Laguerre-Pólya failure (my HYP-8775) ⟺ the Paley spectrum leaves Re=−1/2. This is WHY factorial-domination is the wrong lens (MISTAKE-202): domination stares at the common factorial 'thermal background' (my thermometer THM-2016) instead of the de-factorialized residue W where the tournament structure lives. Generalizes: at every offset, E[P^m]=(common factorial)·(Vandermonde-graded residue) — distinct degrees ⟹ Vandermonde residue (THM-2033), the wall ⟹ central-trinomial residue. CLAIMED — boxeph-S204."
+title: "De-factorialization on the exact symmetric monomial wall, and the prime-local initial-form principle"
 status: >
-  CLAIMED / IN PROGRESS (boxeph-2026-07-21-S204). To be filled: E[P^m]=(mp/2)!·W_p(m) verified via
-  the exact moment engine; W_p = generalized central trinomial (A002426); the de-factorialization as
-  the general principle (common factorial = thermal background; residue = tournament/free-prob object);
-  MISTAKE-202 explained. Synthesis unifying death-star S90 (central trinomial), my THM-2033
-  (Vandermonde), my HYP-8775 (L-P), and my continuum thermometer (THM-2016).
-source: boxeph-2026-07-21-S204 (owner: think about dividing by the full common factorial (pA_0)!)
-depends_on: []
+  PROVED in the corrected scope. For even p and
+  P=a Z^p + beta (Z Zbar)^(p/2) + c Zbar^p, every balanced channel of P^m
+  has radial degree p*m/2, so E[P^m] is exactly (p*m/2)! times a generalized
+  central-trinomial polynomial. For arbitrary support there is no global
+  common-factorial/Vandermonde factorization. THM-2022 instead gives a
+  prime-local normalization of one amplified moment: division by the
+  lowest-face factorial leaves Q^p modulo a good prime. This corrected theorem
+  supersedes the broad S204 stub and is governed by MISTAKE-215.
+source: boxeph-2026-07-21-S204, corrected by codex-2026-07-21-NC2-transfer
+depends_on:
+  - THM-2022
 related:
-  - THM-2033  # the transitivity Vandermonde bridge (the distinct-degree residue)
-  - HYP-8775  # my Laguerre-Pólya boundary (the residue's generating function)
-  - THM-2016  # H is a thermometer; the factorial = the thermal background
-  - HYP-8772  # death-star channel lens; S90 central trinomial / free-prob
-  - THM-2017  # codex degree-gap normalization E[P^m]/L(b^m)
-script: 04-computation/de_factorialization_central_trinomial_boxeph_S204.py (+ .out)
+  - THM-2033
+  - MISTAKE-215
+  - MISTAKE-214
+  - HYP-8795
+script: 04-computation/nc2_divide_common_factorial_deathstar_S91.py
+output: 05-knowledge/results/nc2_divide_common_factorial_deathstar_S91.out
 ---
 
-# THM-2040 — the de-factorialization principle (STUB, in progress)
+# THM-2040 -- corrected de-factorialization principle
 
-> **CORRECTION (MISTAKE-215 / THM-2022).** The broad claim in the imported
-> title/status is withdrawn. There is no global identity expressing every NC2
-> moment as one common factorial times a Vandermonde residue, and no proved
-> equivalence with a positive zero, Laguerre--Polya failure, or Paley spectrum.
-> The valid symmetric special case and the valid prime-local initial-form
-> principle will replace this stub in the completed version.
+## 1. Exact symmetric monomial wall
 
-Placeholder claimed by boxeph-S204. See script + reflection for developing content.
+Let `p` be a positive even integer, put `s=Z*Zbar`, and consider
+
+```text
+P = a Z^p + beta s^(p/2) + c Zbar^p.                  (1)
+```
+
+In a charge-zero term of `P^m`, the number of `Z^p` choices must equal the
+number of `Zbar^p` choices. Write that common number as `i`; the neutral term
+is chosen `m-2i` times. The common `Z` and `Zbar` exponent is then
+
+```text
+p*i + (p/2)*(m-2i) = p*m/2,                           (2)
+```
+
+independent of `i`. Complex Wick evaluation therefore gives the exact identity
+
+```text
+E[P^m] = (p*m/2)! W_m(a,beta,c),                      (3)
+
+W_m = sum_(0<=i<=m/2)
+        m!/(i! i! (m-2i)!) * (a*c)^i * beta^(m-2i).  (4)
+```
+
+At `a=beta=c=1`, `W_m` is the central trinomial coefficient
+
+```text
+[x^0](1+x+x^(-1))^m = 1,3,7,19,51,... .              (5)
+```
+
+Equivalently, its exponential generating function is
+
+```text
+sum_(m>=0) W_m z^m/m!
+  = exp(beta*z) * sum_(i>=0) (a*c*z^2)^i/(i!)^2.     (6)
+```
+
+Equations (3)-(6) are the valid de-factorialization statement. They require an
+exact neutral monomial of degree `p/2`. A lower-term polynomial in `s` produces
+different radial degrees and no longer has the common factorization (3).
+
+The identity is not an NC2 obstruction in this special family: `W_1=beta` and
+`W_2=beta^2+2ac`. If every positive moment vanished, then `beta=0` and
+`ac=0`, so the exact support is one-sided or zero after deleting zero
+coefficients.
+
+## 2. Why the proposed global extension is false
+
+For a general polynomial, balanced channels have different radial heights
+`A(r)` and hence different Wick factors `A(r)!`. Dividing a scalar moment by
+one chosen factorial leaves channel-dependent factorial quotients. It cannot
+turn the scalar sum into the moment-matrix determinant of THM-2033, and that
+determinant's Vandermonde factor is not a universal residue of `E[P^m]`.
+
+The S91 computation already falsifies its own boundedness interpretation: for
+`P=Z+(1+s)+Zbar`, the printed values of `E[P^m]/m!` rise from `2` to about
+`35.76` by `m=8`. MISTAKE-215 records the full correction. The additional
+positive-zero, Laguerre--Polya, and Paley iff claims are also withdrawn; the
+Paley identification separately violates MISTAKE-214.
+
+## 3. The valid general principle is prime-local
+
+THM-2022 chooses a lowest balanced face `F`, a base return level `m0`, and a
+good prime `p`. At the single amplified order `p*m0`, every channel height is
+at least `p*A0`, so division by `(p*A0)!` is termwise integral. The remaining
+factorial quotients are not discarded over the integers. Instead, modulo the
+chosen prime:
+
+- Kummer kills non-p-dilated multinomial channels;
+- strict face height makes every dilated off-face factorial quotient divisible
+  by `p`; and
+- Lucas plus Frobenius turns the complete face residue into `Q^p`.
+
+Thus the reusable general statement is an **initial-form normalization at a
+good finite place**, not a global factorization. Its residue is the whole face
+constant term and need not be a determinant, Vandermonde, central trinomial,
+or tournament invariant.
