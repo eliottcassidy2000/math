@@ -1,0 +1,33 @@
+==============================================================================
+LAWS OF THE LEAF-GRADED FILTRATION
+==============================================================================
+
+(L1) free-action depth: |Aut| divides c_l for all l < p_min(|Aut|);
+     in particular |Aut| | c_1 (=h, known) AND |Aut| | c_2 (NEW):
+   tested 80 classes with |Aut|>1 across n=3..7: violations = 0
+
+(L2) Eulerian pole: leaf poly of transitive = Eulerian row A(n-1, .):
+   n=3: strata [1, 1] vs Eulerian [1, 1] -> True ; c2 = 2^{n-1}-n = 1: True
+   n=4: strata [1, 4, 1] vs Eulerian [1, 4, 1] -> True ; c2 = 2^{n-1}-n = 4: True
+   n=5: strata [1, 11, 11, 1] vs Eulerian [1, 11, 11, 1] -> True ; c2 = 2^{n-1}-n = 11: True
+   n=6: strata [1, 26, 66, 26, 1] vs Eulerian [1, 26, 66, 26, 1] -> True ; c2 = 2^{n-1}-n = 26: True
+   n=7: strata [1, 57, 302, 302, 57, 1] vs Eulerian [1, 57, 302, 302, 57, 1] -> True ; c2 = 2^{n-1}-n = 57: True
+
+   c2 minimizer per n (transitive claims the min for n>=5; n=4 breaks):
+   n=4: min c2 = 3 (h of minimizer = 3); transitive c2 = 4 (transitive NOT min!)
+   n=5: min c2 = 11 (h of minimizer = 1); transitive c2 = 11 (transitive IS min)
+   n=6: min c2 = 26 (h of minimizer = 1); transitive c2 = 26 (transitive IS min)
+
+(L3) graded ordinal-sum law:
+     A_{T(+)S,r}(x) = sum_l c_l(T,r) sum_j C(l,j)(x-1)^j G_S(x, n_T - j)
+   evaluations: 840 ok, 0 mismatches
+
+(L4) the {7,21} window at the first relaxation steps:
+   n=4: c2 values: [3, 4, 5, 6]
+        B(2) values: [5, 6, 9, 10]
+        7 in c2: False ; 7 in B(2): False ; 21 in c2: False ; 21 in B(2): False
+   n=5: c2 values: [11, 12, 15, 16, 21, 24, 25, 27, 29, 30, 35]
+        B(2) values: [16, 18, 21, 23, 30, 35, 36, 38, 45, 46, 55]
+        7 in c2: False ; 7 in B(2): False ; 21 in c2: True ; 21 in B(2): True
+
+DONE.

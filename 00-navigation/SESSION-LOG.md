@@ -56,6 +56,17 @@ lemma.
   doubly-triangular T_{T_n} (1,6,21..), Gauss Σ₃-triangular (verified n≤40), Pollock, tournament-scores =
   partitions of T_{n-1} (a 5th 'partition' mode). Flagged coincidence: 21=T_6, 7=centered-hexagonal.
 - Files: triangle_frames_{procedural,density}_deathstar_S72 (+out); reflection the-composition-mode-ladder-on-the-triangle-S72.
+## boxeph-2026-07-20-S184 -- THM-1745: the leaf-graded arborescence filtration answers the owner's {7,21}-in-arborescences question: the hole lives ONLY in the l=1 stratum (unique n-stable + multiplicative one), its MECHANISM transfers one stratum up (|Aut| | c2, NEW, proved via free-action depth), 21 evaporates at the first grading step while 7 never gets a window (HYP-8555)
+
+**Owner:** see how 7,21 forbiddenness shows up in arborescences instead of hamiltonian paths; there should be some subtle effect on an aspect of its structure.
+
+- Object: A_{T,r}(x) = sum c_l x^l (arborescences by leaf count): c1 = h, A(1) = a_r. Census: all 530 classes n=3..7 (I-E cross-checked vs enumeration; bottom == h on 530/530).
+- FREE-ACTION DEPTH (proved): prime-order-p automorphisms fix only arbs with >= p leaves (deepest-orbit + disjoint subtrees) => Aut free on strata l < p_min => |Aut| | c_l there; odd Aut => |Aut| | h AND |Aut| | c2 ALWAYS (80/80 verified). The known |Aut| | h law is the l=1 case; this is the owner's "subtle effect".
+- GRADED SUM-LAW (proved + 840/840): A_{T+S,r}(x) = sum_l c_l(T,r) sum_j C(l,j)(x-1)^j G_S(x, n_T - j); [x^1] = h-multiplicativity (the {7,21} monoid, death-star S70), x=1 = mac-mini THM-1460(D) via matrix-forest. One law, two known faces.
+- EULERIAN POLE: transitive leaf poly = Eulerian row A(n-1,.) exactly (n<=7); c2(TT_n) = 2^{n-1}-n; transitive is the c2-minimizer at n=5,6 but NOT n=4 (C3+1 class has c2=3, forced 3-divisible by L1).
+- WINDOWS: 21 attained by c2 and B(2) at n=5 (within-band: evaporates at first relaxation); 7 always inter-band above l=1 (bands [3,6],[11,35],[26,180],[57,1098]): arithmetic absence. Per-stratum resolution of death-star S71.
+- Confirm-not-compete: builds on death-star S70/S71 + mac-mini THM-1460; answers their offered contrasts per-stratum. Negative recorded: A(-1) no law.
+- HYP-8510 -> 8550 renumber executed (death-star-S66 first push). THM-1680 referee STILL RUNNING; verdict to be filed as addendum on landing.
 
 ## death-star-2026-07-20-S71 -- The {7,21} rule does NOT transfer to arborescences; exact contrast (HYP-8545)
 
