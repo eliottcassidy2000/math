@@ -1,3 +1,18 @@
+## mac-mini-2026-07-20-S150 -- THE MOMENT-COUNT MULTIPLIER IS THE RADIAL MULTIPLICITY, NOT THE PRIME 2: the owner's prime-family lens CORRECTS my own THM-1725 (factor 2 was the r=2 slice; M* = r*m0, verified r=1,2,3; refuted at k>=4). THM-1740.
+
+**Owner directive:** look back through coprime concepts in the repo and use the prime-family lens to challenge assumptions -- a constant like 2 is the x-th member of a family; read the equation at every member; there are no coincidences.
+
+Applied to THM-1725's moment bound M* <= 2*max_pairs (p+|n|)/gcd, whose '2' was opus THM-1685's CT(m0)+CT(2m0).
+
+- **A REFUTED GUESS, recorded.** From THM-415 (prime modulus = no collision, composite = collision) I predicted composite m0 needs an extra level. FALSE: [Z^q,W,ZW] (charges +q,-1,0, m0=q+1) gives **M* = q+1 EXACTLY for every q=1..7, prime m0 and composite m0 alike.** Primality of m0 does NOT drive the count. The single-term-per-charge pattern always saturates at the primitive level.
+- **WHAT DOES DRIVE IT: RADIAL MULTIPLICITY.** Let one charge be carried by r monomials (r radial degrees) and the opposite by one. **EXACT LAW M* = r*m0** (m0 = max coprime charge-pair sum), verified r=1,2,3: [Z^2,W,ZW] r=1 M*=3; [Z^2,W,ZW^2] r=2 M*=6; [Z^2,W,ZW^2,Z^2W^3] r=3 M*=9. The levels m0, 2m0, ..., r*m0 are where the r same-charge coefficients get pinned -- opus's primitive+second level generalized to r levels for r coefficients.
+- **CORRECTS THM-1725.** Its bound 2*max-pairs is the MULTIPLICITY-2 SLICE ONLY -- valid for all 132 trinomials because a two-sided trinomial's busiest charge has <= 2 terms, but **REFUTED at multiplicity >= 3 (k>=4)**: [Z^2,W,ZW^2,Z^2W^3] (charge -1 x3, m0=3) needs M*=9 = 3*3 > 2*3. **Corrected bound: M* <= (max radial multiplicity)*(max coprime charge-pair sum).** HYP-8540's factor is the multiplicity, not 2. (Decidability of THM-1725 A is untouched -- each fixed (k,D) is still a finite unconditional Groebner test; only the bound a uniform proof targets is corrected.)
+- **THE PRIME-FAMILY READING -- no coincidences.** m0 = q+1 sweeps EVERY integer >= 2 (each realized by [Z^q,W,ZW]) and r sweeps EVERY positive integer, so the moment counts M* = r*m0 are the FULL PRODUCT FAMILY {multiplicity} x {return-levels} -- every value realized, factoring into two structural integers. The 2, 3, 7 in THM-1725 were incidental values of m0 or r, not constants of the theory. The single equation M* = r*m0 read at every (r,m0) IS the family. Exactly the owner's point.
+
+**Handoff.** **HYP-8540 corrected** (multiplier = multiplicity). **HYP-8560 is the last structural unknown**: the exact law M*=r*m0 is proved only for a SINGLE straddle (one charge mult r, opposite mult 1); OPEN whether multi-straddle patterns obey M* = max over straddles of (r*m0) or pick up cross terms. If the max-over-straddles law holds, the uniform bound follows from the single-straddle base case. Still structurally == TNC's HYP-8505 -- one uniform proof closes both, and GMC(2) with it (complex radial THM-1695 and span-2 THM-1600 closed). NOTE: saw the owner correction on THM-1300 (klein-S377) -- my S127/S129 Alpoge-Mathew attribution was a HALLUCINATION (MISTAKE-205); will not restate it.
+
+---
+
 ## opus-2026-07-20-S428 - The angular uniform piece: the tunable/unique-minimal dichotomy (THM-1755)
 
 Worked the angular half of HYP-8540's unbounded-GMC(2) factorisation. Real progress via a

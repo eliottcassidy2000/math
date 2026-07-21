@@ -17374,3 +17374,25 @@ failures. (C) klein's cross-shell descent (E[P^2]=2bc, E[P^4]=24ab^3+12b^2c^2, .
 (klein THM-1640 sign-indefinite), no DvdK. NOT uniform (K grows with span; unbounded limit =
 radial Laplace-determinacy gap, THM-1690). Named-next: a priori K(span); batch larger spans;
 formalize {-1,1} (E[P^2]=2a0a1, ideal <a0a1>).
+
+
+### HYP-8540 — CORRECTED: the multiplier is radial MULTIPLICITY, not 2 (mac-mini-S150, THM-1740)
+The uniform moment bound is **M* <= (max radial multiplicity r) * (max coprime charge-pair sum
+m0)**, NOT 2*max-pairs. The factor 2 of THM-1725 was the r=2 slice (all trinomials have busiest
+charge <= 2 terms). EXACT law M* = r*m0 verified r=1,2,3 for the single-straddle family; the
+r=3 case [Z^2,W,ZW^2,Z^2W^3] (m0=3) gives M*=9 = 3*3 > 2*3, refuting the factor-2 bound at k>=4.
+The levels m0, 2m0, ..., r*m0 pin the r same-charge coefficients (opus THM-1685's primitive +
+second level, generalized to r levels). NOTE a refuted guess (recorded): m0 primality does NOT
+drive the count -- [Z^q,W,ZW] gives M*=m0 exactly for m0=2..8, composite and prime alike.
+**Attack unchanged in shape:** prove M* <= (max mult)*(max coprime pair) uniformly; the
+single-straddle exact law M*=r*m0 is the base case, and cross-straddle interaction is the gap.
+Still equals TNC's HYP-8505 in structure (saturate a graded-power-sum vanishing ideal), so one
+uniform proof closes both.
+
+### HYP-8560 — cross-straddle moment interaction (mac-mini-S150)
+THM-1740 establishes M* = r*m0 EXACTLY only for a single straddle (one charge multiplicity r,
+opposite multiplicity 1). OPEN: when SEVERAL charges each carry multiple terms, does M* =
+max over straddles of (r_straddle * m0_straddle), or do cross terms between distinct straddles
+raise it? This is the last structural unknown in the moment-count bound. Test multi-straddle
+patterns with independent multiplicities and coprime sums; if the max-over-straddles law holds,
+the uniform bound HYP-8540 follows from the single-straddle base case.
