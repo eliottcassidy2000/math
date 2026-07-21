@@ -17578,6 +17578,7 @@ determinacy, THM-1645), not elimination. Named-next: toral+Laplace moment engine
 wall; prove s-degree=2d via THM-1690; bound feeds the analytic bridge.
 
 ### HYP-8600 - Is every H-extremal tournament a binary-form discriminant (character) construction?
+**CONFLATION CORRECTED (S434, THM-1820):** HYP-8600 conflated TWO extremal problems -- 3-cycle-maximal (intransitivity) and H-maximal are DIFFERENT (H is Schur-CONCAVE, doubly-regular Paley is BEATEN for large n as an H-maximiser). Only the INTRANSITIVITY extremal is the regular/character tournament: c_3 = C(n,3) - sum C(s_i,2), Schur-CONVEX, min at regular. 'Max intransitivity = covariant vanishing' corrected to 'max intransitivity = apolar/harmonic = minimal quadratic (catalecticant) invariant'. The H-extremiser is a SEPARATE (spectrally-concentrated) object -- open.
 **SUB-QUESTIONS WORKED (S433, THM-1810):** Q2 answered with a closed form d(Paley)=((p+1)/4)^{(p-1)/2} (Gauss-sum spectrum +-i sqrt p); Q1 = the max-3-cycle 4-tournament is the equianharmonic j=0 (SL(2)-special) stratum = maximal intransitivity at the maximal-symmetry point; Q3 = Redei parity IS the discriminant nonvanishing mod 2 (THM-1425). Refined conjecture: maximal intransitivity = the SL(2)-special stratum at every n.
 **Status:** OPEN, representation-theoretic conjecture (opus-2026-07-20-S432). See THM-1800.
 

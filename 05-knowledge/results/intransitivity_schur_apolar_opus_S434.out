@@ -1,0 +1,29 @@
+SORTING OUT: 3-cycle-maximal (max intransitivity) vs H-maximal -- DIFFERENT problems.
+
+(1) THE 3-CYCLE FORMULA (Kendall-Babington-Smith): for scores s_1..s_n,
+    c_3(T) = C(n,3) - sum_i C(s_i, 2).
+    So MAXIMIZING intransitivity = MINIMIZING sum_i C(s_i,2) = balancing the scores.
+    sum_i C(s_i,2) is SCHUR-CONVEX in the score sequence -> min at the REGULAR tournament
+    (all s_i = (n-1)/2). NOT a covariant vanishing -- a Schur-convexity/variance statement.
+
+    n=3: max c_3=1 (at regular), min c_3=0 (at transitive=0);  regular formula: 1
+    n=4: max c_3=2 (at regular), min c_3=0 (at transitive=0);  regular formula: even n: near-regular
+    n=5: max c_3=5 (at regular), min c_3=0 (at transitive=0);  regular formula: 5
+
+(2) H-MAXIMAL IS DIFFERENT: repo knows 'doubly-regular Paley is provably BEATEN for
+    large n' -- H (determinant) is Schur-CONCAVE and its maximizer is NOT the 3-cycle
+    maximizer. So HYP-8600 conflated two extremal problems. CORRECT:
+      - 3-CYCLE-MAXIMAL (max intransitivity) = REGULAR tournament (Schur-convex min of
+        sum C(s_i,2)); doubly-regular/Paley when n=3 mod 4.
+      - H-MAXIMAL = a distinct Schur-concave extremal (Paley beaten for large n).
+
+(3) THE SL(2) STATEMENT, corrected. The score sequence s_i = the first moments of the
+    configuration. Regular = all s_i equal = the BALANCED/APOLAR point. In binary-form
+    terms sum C(s_i,2) ~ the QUADRATIC INVARIANT (the 'variance' / the catalecticant I
+    of the score-generating form). MAX INTRANSITIVITY = the APOLAR/balanced locus where
+    the score-variance invariant is MINIMIZED -- for a binary form, the harmonic/apolar
+    configuration (roots as spread as possible = regular polygon). n=4 equianharmonic
+    j=0 IS the harmonic 4-point config. So: max intransitivity = the HARMONIC (apolar,
+    minimal-quadratic-invariant) stratum, realised arithmetically by the character
+    (Gauss-sum) tournament. This CORRECTS the 'covariant vanishing' to 'apolar/harmonic
+    = quadratic invariant minimised'.
