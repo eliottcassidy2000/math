@@ -5967,3 +5967,19 @@ false lead — the numbers matched numpy exactly; the real bug was mathematical 
 numerical. Corrected: `|arb_inv|=55` at n=6 (vs 32 rooted-at-0); `arb_inv` refines score. Headline
 findings (score ⟂ cyc, the 2-adic edge THM-1980) use only genuine invariants and are unaffected.
 Banner added to THM-1965.
+## MISTAKE-216 -- confusing Poisson rank two with a DC(2) or planar-JC counterexample
+
+**Error.** From a nonautomorphic Poisson endomorphism of
+`C[x,q,p,z]`, infer either a counterexample to the planar Jacobian conjecture or
+an endomorphism counterexample of the second Weyl algebra merely by replacing
+Poisson brackets with commutators.
+
+**Correction.** The four-variable symplectic map is a Keller counterexample in
+affine dimension four, not two. Quantizing its four output polynomials directly
+in `A_2` requires exact control of ordering corrections; equality of principal
+Poisson symbols does not give exact Weyl commutators. The safe cotangent or
+Hamiltonian-dual construction doubles four classical coordinates to four Weyl
+pairs and therefore lands in conventional `A_4`. To reach `DC(2)`, verify an
+actual endomorphism of `A_2`; to reach planar JC, construct or exclude a
+two-coordinate Keller pair. Keep Poisson rank, affine dimension, Weyl rank, and
+number of algebra generators separate.
