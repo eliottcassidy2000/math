@@ -7,6 +7,33 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-211 (2026-07-21, codex GMC(2) audit) -- distinct return atoms were treated as separate equations inside one scalar Gaussian moment
+
+- **What was claimed:** THM-1770(B) said that because distinct minimal balanced
+  charge multisets give distinct coefficient monomials, the equation
+  `E[P^m]=0` forces every atom monomial to vanish separately.  Part (D) then
+  promoted this to closure of every pair-only/star support, and later work
+  treated twice the primitive return length as a universal detection cutoff.
+- **Why it is wrong:** a polynomial identity in *free variables* separates
+  monomials; a scalar equation at one chosen coefficient point does not.  For
+  `P=aZ^6+bW^2+cW^18`, the first return is `m=4` and
+  `E[P^4]=4*6!*a*b^3+4*18!*a^3*c`.  With all coefficients nonzero, choosing
+  `c=-6!*b^3/(18!*a^2)` cancels the two distinct primitive atoms exactly.
+  Hence first-return minimality removes composite balanced words but does not
+  remove cross-atom cancellation.  Exact radial-channel examples also have
+  moments through `2R` zero and first die at `3R`, so `2R` is not a uniform
+  cutoff.
+- **Correct framing:** THM-1770(A) survives: every balanced word at the least
+  return level is primitive.  Parts (B)--(D) are retracted.  To deduce
+  one-sidedness one must prove that every positive-negative coefficient product
+  lies in the **radical of the full multilevel moment ideal**, using an actual
+  resultant/Hankel/cumulant tower.  The faithful state is at least bivariate
+  `(charge, radial height)`; charge balance alone forgets the factorial weight
+  and coefficient phase that permit cancellation.  See the resolved court case
+  `CASE-gmc2-first-return-cross-atom-cancellation`, THM-2014, and HYP-8765.
+
+---
+
 ## MISTAKE-209 (2026-07-21, codex audit of THM-1985/THM-1990) -- a harmonic SUBSET was computed as a term MULTISET, and the claimed linear-growth iff misses the whole Bertrand boundary
 
 - **What was done:** THM-1985 and THM-1990 correctly found the simplex identity

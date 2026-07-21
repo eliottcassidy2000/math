@@ -1,4 +1,5 @@
 - **HYP-8763 / boxeph-2026-07-21-S200 (CONFIRMED → THM-2016):** (A) L3 coordinate = LOCAL subtournament density (flag/limit); 4&5-profile resolves most of the hot n=7 shells but 3/47 survive (score,char_A,|R|,4-prof,5-prof) — deep center INVARIANT-RESISTANT. (B) REDUCIBILITY CEILING PROVED: max-reducible-c3 = c3_max(n-1) (c3=Σc3(SCC)); τ_c=c3_max(n-1)/c3_max(n)=1/2,2/5,5/8,4/7 (n=4..7)→1. (C) H is a THERMOMETER: mean H rises monotonically 1→178 with τ at n=7; locates death-star H≥disc binding at hot center τ=1. Verified n≤7.
+- **HYP-8765 / codex-2026-07-21-S83 (GMC2 RADIAL-CHANNEL RETURN TOWER):** OPEN corrected endgame after MISTAKE-211. Charge-only first-return isolation is false: atom monomials can cancel in one scalar moment, and exact radial-channel fakers refute the universal `2R` cutoff (return 2 dies at 6; return 3 dies at 9). Candidate theorem for a `k`-monomial support: each pair product enters the radical by level `(k-1)r_ij`, hence `M*(S) <= (k-1)R(S)`. Exact evidence: 8579/8579 trinomial supports through degree 8 close at `2R`; 441/441 degree<=4 quads at `3R` (7 fail `2R`); 65/65 degree<=3 five-monomials at `4R`. Proposed proof: localized cumulant/resultant elimination gives a confluent factorial-Hankel/Vandermonde matrix across radial channels. The faithful Newton state is `(charge,height)`, not charge. THM-2014 proves the infinite slice `aZ+b(ZW)+cW` for arbitrary radial `b` by a uniform entropy-versus-factorial estimate. Detail file `HYP-8765-gmc2-radial-channel-return-tower.md`.
 - **HYP-8580 ADDENDUM / codex-2026-07-21 (GMC(2) span-6 symbolic residual certificate):** Strengthens death-star-S73's constant-coefficient `{+3,+1,-1,-3}` stratum from numerical B2 evidence to an exact certificate.  In the all-nonzero branch, `E2=0` gives `bc=-6ad`; with `u=ad`, `x=ac^3`, `y=b^3d`, exact reduction gives `E4=24*(x+y+54u^2)` and `E6=38880u(x+y)+2566080u^3`, so under `E4=0`, `E6=466560u^3=466560*(ad)^3 != 0`.  Boundary cases `a=0` and `d=0` are killed by `E2,E4`.  Therefore moments `2,4,6` rule out every two-sided nullcone member in this stratum.  Honest scope: local constant-coefficient finite lemma only; THM-1770/1790 still block any span-only global cutoff once radial degree grows.  Files `gmc2_span6_symbolic_residual_codex_20260721.py/.out`; updates HYP-8580.
 - **HYP-8762 / boxeph-2026-07-21-S199 (CONFIRMED → THM-2013):** CONTINUUM COORDINATES. Cyclic temperature τ=c₃/c₃_max (score-only), iso-cyclic shells, cycle spectrum (N₄..N_n)=tr(Aᵏ) with N₃=3c₃ FROZEN, first free N₄. VERIFIED n≤7: structural entropy S(τ) peaks at INTERMEDIATE τ*≈0.7 (n=7: 79 classes at τ=5/7 vs 3 at τ=1); ALL-STRONG condensation threshold τ_c≈0.64 (c₃≥9 at n=7); coordinate budget (τ,char_A,|R|) resolves 36/47 of the hottest big shell (char_A alone 21/47). Continuum = low-dim coordinate cloud, no enumeration. See THM-2013.
 - **HYP-8703 / death-star-2026-07-21-S85 (Deep Paley+quasirandomness recovery: THM-438 essentially CLOSES the H≥disc crux; the Paley Bridge unifies H and LRC):** Owner: deeply investigate past work on quasirandomness and Paley (2 exhaustive sweeps). HEADLINE: my open H≥disc crux (i) "H(reg)≥Szele avg", binding doubly-regular case, is ALREADY answered by **THM-438** (PROVED mod one Weil bound): H(Paley_p)~e·p!/2^{p-1}, ratio→e (my 2.0,2.40,2.44→e=2.718 confirms), DRT-UNIVERSAL (all doubly-regular, from S²=J−nI; Wigner/Catalan cluster integrals = free cumulants of ½(δ_a+δ_{−a})). Since n·disc/avg→0 super-exp, H(DRT)~e·avg≥n·disc for large n. So the binding crux is proved by THM-438; the general quasirandom Ham-path lemma is only CITED not proved in-repo (Agent-2), but not needed for DRT. HONEST OVERLAP: my S82 'disc=mean Pf²' = THM-468's Pfaffian expansion; my S83(iii) AM-GM = THM-472's det ceiling (equality⟺DRT⟺skew-Hadamard n+1⟺n≡3mod4). DEEP UNIFICATION: **THM-640 Paley Bridge** — LRC(p) under QR-cutoff IS T_p, so LRC covering-minimizer(AP)=tournament H-maximizer(Paley)=ONE object, two functionals (M vs H); explains 14=2·7 not-a-Paley-cutoff = why LRC(14) hard. Critical line (S75) = quasirandomness (Paley flat |λ|=√((p+1)/4) = 'RH for y²=x over F_p' = expander gap); the LRC disc_v/THM-729/731/732/Riesz-product/three-gap machinery is the circle-side quasirandomness dual to the tournament Ham-path side. LEADS: THM-130 Paley Betti flagged WRONG (GLMY court case); promote regularity=AP=Paley (=THM-640); Ihara zeta of tournaments; THM-438 non-circulant remainder via expander-mixing. Recovery/synthesis, no new close; connects my H≥disc to the canon answering it. reflection paley-and-quasirandomness-recovered-thm438-closes-the-crux-S85, script paley_hampath_ratio_S85. death-star; S85.
@@ -17615,25 +17616,17 @@ total return level or contributes to an already-killed lower straddle. The LRC r
 return, so at its level it is alone.
 
 
-### HYP-8590 — RESTRUCTURED as first-return renewal; pair-only CLOSED (mac-mini-S153, THM-1770)
-The localisation lemma now has a proved first-return backbone: (A) at the minimal atom size m*,
-E[P^{m*}] = sum over size-m* atoms of their coeff forms, NO composites (minimality: a split
-gives two balanced pieces each >= m*, total >= 2m* > m*); (B) distinct atoms have disjoint
-coeff-monomial supports so each vanishes separately (THM-415); (C) renewal induction bottom-up
-(THM-1700), within-atom multiplicity killed by THM-1740's tower; (D) PAIR-ONLY CLOSED -- if
-every atom is a pos-neg pair (one side has a single distinct charge = star patterns), the ideal
-<c_p c_n> has variety exactly {all pos=0} U {all neg=0} = one-sided, so GMC(2) holds for all
-star patterns in every degree.
-**RESIDUAL, now ONE statement:** V(all atom forms, all levels) = the one-sided locus. For
-multi-charge atoms (minimal vanishing sums like (+2,+3,-5)) this is opus THM-1685's Nullstellensatz
-core, now in first-return order. The gap: hitting every atom form forces one-sidedness when
-multi-charge atoms are present -- e.g. charges {+2,+3,-5} has size-3 atom abc AND size-8 atom
-b^5 c^3, so the renewal must reach ALL levels; killing abc alone leaves {+3,-5} two-sided, but
-its size-8 atom then fires. The full covering (that the union of all atom-hitting = one-sided) is
-the hard combinatorial core. **Attack:** prove it for the star + single multi-charge case, then
-by the renewal peel; or transport opus THM-1685's TNC Nullstellensatz proof (same vanishing-sum
-lattice) to the moment functional. The first-return structure means each level adds finitely many
-new atom forms, so the induction is well-founded -- only the covering completeness is open.
+### HYP-8590 — CORRECTED: first-return primitiveness survives; atomwise renewal does not (MISTAKE-211)
+At the minimal atom size `m*`, every balanced word is primitive, so `E[P^m*]` has no composite
+balanced words. The former next step was false: distinct coefficient monomials in this one scalar
+equation need not vanish separately. Exact star witness:
+`P=aZ^6+bW^2+cW^18` has
+`E[P^4]=4*6!*a*b^3+4*18!*a^3*c`, cancellable with all coefficients nonzero. Therefore THM-1770
+(B)--(D), including general pair-only/star closure, are retracted. The correct residual is to prove
+`(c_p c_n)^N` lies in the radical of the **full multilevel** moment ideal for every positive-negative
+pair. Charge alone preserves angular balance but destroys radial factorial height and phase.
+HYP-8765 replaces atomwise renewal by a rank-`k-1` radial-channel resultant/cumulant tower; its
+candidate bound `(k-1)R` matches current exact sweeps while `2R` is explicitly false.
 
 ## HYP-8595 — GMC(2) detection-depth formula D(M,N,d)=(M+N)(2d+1)
 

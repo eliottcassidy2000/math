@@ -1,0 +1,19 @@
+GMC2 RADIAL-CHANNEL AUDIT - exact gates
+gate first-return star collision: PASS
+  E4 = 25609494822912000*a**3*c + 2880*a*b**3
+  cancelling c = -b**3/(8892185702400*a**2)
+gate R=2 / death-at-6 faker: PASS
+  L(H),L(H^2),L(H^3) = [0, 0, 7776 + 11664*sqrt(3)*I]
+gate R=3 / death-at-9 faker: PASS
+  f(a) = a**4 - 15*a**3 - 240*a**2 - 945*a - 1260
+  E9/60480 mod f = 1281600*a**3 + 13870800*a**2 + 49540680*a + 62838720
+  resultant = 8335804094167484712960000
+gate THM-2014 charge formula vs direct Wick, m=1..8: PASS
+quadratic stress b=u^2-4u+2, gamma=1: M_m/L(b^m)
+  m=10: 1.01466244583
+  m=20: 1.00675865355
+  m=40: 1.00324833045
+  m=80: 1.00159286564
+assumption challenge: charge-only quotient REJECTED; retain (charge,height)
+Tournament Analysis: not mathematically applicable; no canonical pair orientation
+ALL EXACT GATES PASS

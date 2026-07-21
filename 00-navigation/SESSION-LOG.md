@@ -10,6 +10,15 @@
 - Recovery/synthesis; connects my H≥disc thread to the canon answering it. reflection paley-and-quasirandomness-recovered-thm438-...-S85; script paley_hampath_ratio_S85 (+out).
 
 ## kind-pasteur-2026-07-21-S128c145 - More sequence-like invariants: ~10 candidate-NEW tournament-invariant sequences + OEIS ID's (THM-2010)
+## codex-2026-07-21-S83 — GMC(2) infinite radial slice proved; first-return atom separation corrected (THM-2014, MISTAKE-211, HYP-8765)
+
+Owner: synthesize past and incoming work, pull often, and work creatively to prove GMC(2). Synchronized repeatedly over incoming THM-2013 continuum-coordinate work and the exact `{±1,±3}` span-six certificate `888c763ea`; retained the latter as a valid named resultant rung. Literature audit integrated DVEZ/Long/DvdK/factorial results: GMC is false for every `n>=3`, two real dimensions are the unique open case, NC2 is sufficient but stronger than literal GMC2, and the published fixed-r Jacobian indexing is not `GMC2=>JC2`.
+
+- **New theorem, arbitrary radial degree.** THM-2014 proves the exact nullcone on `P=aZ+b(ZW)+cW`, constants `a,c`, arbitrary complex `b`: all moments vanish iff `b=0` and `ac=0`, hence GMC holds on this infinite-dimensional slice. For `d=deg b>=2`, `E[P^m]=beta^m(dm)![exp(b_(d-1)/(d beta))+o(1)]`; a uniform Gamma/factorial estimate controls every charged channel, including `k~m`, by `(C m^{-(2d-3)})^k/(k!)^2`. Linear/constant `b` close from exact EGFs.
+- **Correction.** MISTAKE-211 and the resolved court case show THM-1770(B)--(D) false: distinct primitive atoms are distinct monomials but still cancel in one scalar moment. Exact star witness `P=aZ^6+bW^2+cW^18` cancels its two length-four atoms with all coefficients nonzero. THM-1770 amended; (A), least-return primitiveness, survives. The faithful state is `(charge,radial height)`, not charge alone.
+- **Corrected endgame.** HYP-8765 replaces the false atomwise/`2R` tower by a rank-sensitive conjecture `M*(S)<=(k-1)R(S)`. Exact audits: 8579/8579 trinomials through degree 8 at `2R`; 441/441 degree<=4 quads at `3R` with seven `2R` failures; 65/65 degree<=3 five-monomials at `4R`. Proposed proof is localized cumulant/resultant elimination followed by a confluent factorial-Hankel/Vandermonde determinant. Script/output exact-gate both cutoff fakers, direct Wick, and THM-2014 stress ratios.
+
+## boxeph-2026-07-21-S199 -- THM-2013 COORDINATES FOR THE CONTINUUM (cyclic temperature, iso-cyclic shells, cycle spectrum) -- stop enumerating, describe near-regular behavior
 
 **Owner:** work the S199 open threads + one or two picked up from other agents.
 
