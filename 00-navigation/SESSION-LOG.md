@@ -49,6 +49,38 @@ Applied to THM-1725's moment bound M* <= 2*max_pairs (p+|n|)/gcd, whose '2' was 
 **Handoff.** **HYP-8540 corrected** (multiplier = multiplicity). **HYP-8560 is the last structural unknown**: the exact law M*=r*m0 is proved only for a SINGLE straddle (one charge mult r, opposite mult 1); OPEN whether multi-straddle patterns obey M* = max over straddles of (r*m0) or pick up cross terms. If the max-over-straddles law holds, the uniform bound follows from the single-straddle base case. Still structurally == TNC's HYP-8505 -- one uniform proof closes both, and GMC(2) with it (complex radial THM-1695 and span-2 THM-1600 closed). NOTE: saw the owner correction on THM-1300 (klein-S377) -- my S127/S129 Alpoge-Mathew attribution was a HALLUCINATION (MISTAKE-205); will not restate it.
 
 ---
+## kind-pasteur-2026-07-20-S128c129
+
+**Worked the three named-next of THM-1750 (the moment-nullcone template).**
+
+- **(1) H ON THE LADDER -- it LEAVES at exactly n=6. THM-1765.** Grouping all tournaments by
+  moment vector (tr A^1..tr A^n) = characteristic polynomial: H is constant on every co-spectral
+  class for n<=5 but SPLITS at n=6 -- the class (0,0,12,12,10,48) carries BOTH H=13 and H=17 (two
+  non-isomorphic co-spectral tournaments, both odd per Redei, both in {odd}\{7,21}). So H is NOT
+  a moment: it is the tournament's #P-hard permanent, one rung ABOVE the holonomic ceiling. Ladder
+  extends: rational(trace,depth n) < algebraic(TNC,depth D) < holonomic(GMC,depth K) < #P(H, no
+  spectral detection). The tournament spans the WHOLE ladder -- spectrum at bottom, H at top --
+  which is exactly why the H-spectrum is a strictly finer 'universal code' than the trace
+  spectrum (they first diverge at n=6). THM-133's H=(462-tr A^4)/2 is a Z_7-circulant symmetry
+  collapse, not general. n=6 joins the project's n>=6 phase transitions (per-path identity fails
+  n>=6).
+- **(2) LRC -- HONEST LIMIT + duality.** LRC does NOT instantiate the template: M(S)=max_t min_v
+  ||vt|| is a min-max (extremal value), not a moment sum, and the tight AP is a MAXIMISER of the
+  resonance matrix (THM-894 maximal spectral excess) -- the OPPOSITE pole from a nullcone (where F
+  collapses to nothing). The frame extends to LRC only as a DUALITY: every moment functional has a
+  trivial pole (nullcone: transitive/one-sided/charge-one-sided) and an extremal pole
+  (regular/Paley tournaments, tight AP). Stated so the analogy is not forced.
+- **(3) LEAN INTERFACE built, sorry-free.** MomentNullcone.lean: Data(phi,order,step) +
+  detect(=zeros_propagate, the finite-depth conclusion) + escape_within (contrapositive) +
+  ofMonicRec (build step from a monic recurrence). The three instances feed their own recurrences
+  (Cayley-Hamilton / THM-1670 / THM-1740) into ofMonicRec; H is correctly EXCLUDED. The template
+  is now one reusable engine in the kernel. Wired into root. Reflection updated with all three.
+
+**Handoff / named-next.** (a) Where does H mod 2 (Redei: constant 1) and H mod 4 (blue law,
+THM-790s) sit -- is an intermediate modulus spectral even though H is not? (b) The OCF I(Omega,2)
+reading: is a refined H holonomic in some parameter, one level below #P? (c) The extremal-pole
+dual deserves its own frame (regular/Paley/tight-AP as F-maximisers).
+
 ## boxeph-2026-07-20-S185 -- THM-1760: THE TOURNAMENT PENCIL det(tI + uD_in - vA): score/spectral/forest worlds as faces of ONE determinant; complement functional equation pairs (M, S=adjugate-sum); ordinal-sum law with argument shift; pencil splits klein's 4-pair wall; (pencil, {a_r}, H) COMPLETE at n=7; leaf polys log-concave 530/530 (HYP-8560). PLUS: THM-1680 referee verdict filed (architecture survives; odd-sector-vector + sub-germ trichotomy repairs; MISTAKE-206)
 
 **Owner:** find more unifying laws, explore around thoroughly.

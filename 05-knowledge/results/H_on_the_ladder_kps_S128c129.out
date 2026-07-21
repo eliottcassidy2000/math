@@ -1,0 +1,19 @@
+====================================================================================
+IS H SPECTRAL?  H constant on each moment-vector (co-spectral) class?
+====================================================================================
+  n=4 : 3 distinct moment-vectors; co-spectral classes with SPLIT H: 0
+     H is CONSTANT on every co-spectral class at n=4 (H spectral here)
+  n=5 : 9 distinct moment-vectors; co-spectral classes with SPLIT H: 0
+     H is CONSTANT on every co-spectral class at n=5 (H spectral here)
+  n=6 : 28 distinct moment-vectors; co-spectral classes with SPLIT H: 3
+     example: moment vector (0, 0, 12, 12, 10, 48)  carries H in [13, 17]  -> H is NOT spectral at n=6
+
+====================================================================================
+READING
+====================================================================================
+  If H splits within a co-spectral class, H is NOT determined by the moment vector
+  (tr A^1..tr A^n), so it is NOT on the rational/algebraic/holonomic ladder -- it is
+  the tournament's #P-hard invariant (a permanent), one rung ABOVE the holonomic
+  ceiling.  THM-133's spectral H = (462-tr A^4)/2 is then a SYMMETRY collapse special
+  to Z_7 circulants, not the general law.  If H never splits, H IS spectral and sits
+  on the rational floor with detection depth n -- the stronger unification.

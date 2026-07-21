@@ -17422,3 +17422,22 @@ max over straddles of (r_straddle * m0_straddle), or do cross terms between dist
 raise it? This is the last structural unknown in the moment-count bound. Test multi-straddle
 patterns with independent multiplicities and coprime sums; if the max-over-straddles law holds,
 the uniform bound HYP-8540 follows from the single-straddle base case.
+
+## HYP-8550 — H leaves the spectral ladder at n=6; LRC is extremal-dual not nullcone; Lean interface built
+
+**Status: (1) CONFIRMED, (2) HONEST LIMIT, (3) DONE.** kind-pasteur-2026-07-20-S128c129. THM-1765, THM-1750.
+
+Worked THM-1750's three named-next.
+(1) H ON THE LADDER: grouping tournaments by moment vector (tr A^1..tr A^n) = char poly, H is
+constant on every co-spectral class for n<=5 but SPLITS at n=6 (class (0,0,12,12,10,48) carries
+H=13 AND H=17, both odd per Redei). So H is NOT a moment -- it is the #P-hard permanent, one rung
+ABOVE holonomic. Ladder: rational(trace) < algebraic(TNC) < holonomic(GMC) < #P(H). Tournament
+spans it end to end. THM-133's spectral H=(462-tr A^4)/2 is a Z_7-circulant symmetry collapse.
+n=6 joins the n>=6 phase-transition cluster. THM-1765.
+(2) LRC: HONEST LIMIT. M(S)=max min ||vt|| is min-max (extremal), not a moment sum; the tight AP
+is a MAXIMISER of the resonance matrix (THM-894), the OPPOSITE pole from a nullcone. Frame extends
+to LRC only as a duality (trivial pole = nullcone; extremal pole = regular/Paley/tight-AP), not as
+another nullcone instance. Do not force the analogy.
+(3) LEAN: MomentNullcone.lean built sorry-free -- Data(phi,order,step) + detect(=zeros_propagate)
++ escape_within + ofMonicRec (build step from a monic recurrence). Three instances feed their
+recurrences (Cayley-Hamilton, THM-1670, THM-1740); H excluded. Shared engine in the kernel.

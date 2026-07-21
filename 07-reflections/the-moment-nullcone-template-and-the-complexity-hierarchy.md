@@ -95,6 +95,34 @@ next questions (THM-1750 names them). What it does is make the recent work *cohe
 core*: the project has been studying moment nullcones all along, and the detection-depth
 machinery is the general form of the tool it already trusted for tournaments.
 
+## The three named-next questions, worked (S128c129)
+
+1. **`H` on the ladder — answered: it leaves at `n = 6`.** Grouping all tournaments by their
+   moment vector `(tr A¹,…,tr Aⁿ)`, `H` is constant on every co-spectral class for `n ≤ 5` but
+   **splits at `n = 6`** — the class `(0,0,12,12,10,48)` carries both `H = 13` and `H = 17`
+   (THM-1765). So `H` is not a moment; it is the tournament's `#P`-hard permanent, one rung
+   **above** the holonomic ceiling. The ladder is `rational ⊂ algebraic ⊂ holonomic ⊂ #P`, and
+   the tournament spans it end to end — spectrum at the bottom, `H` at the top. THM-133's
+   spectral `H = (462 − tr A⁴)/2` is a `Z₇`-circulant symmetry collapse, not the general law.
+   `n = 6` joins the project's `n ≥ 6` phase transitions.
+
+2. **LRC — an honest limit, and a dual.** LRC does **not** instantiate the template: its
+   functional `M(S) = max_t min_v ‖vt‖` is a **min–max (an extremal value)**, not a moment sum,
+   and its distinguished configuration — the tight AP — is a *maximiser* (THM-894: maximal
+   spectral excess of the resonance matrix), which is the **opposite pole** from a nullcone.
+   The nullcone is where `F` collapses to *nothing*; the tight AP is where structure is
+   *maximal*. So the frame extends to LRC only as a **duality** — every moment functional has a
+   trivial pole (nullcone: transitive, one-sided, charge-one-sided) and an extremal pole
+   (regular/Paley tournaments, tight AP) — not as another nullcone instance. Stated so the
+   analogy is not forced the wrong way.
+
+3. **The Lean interface exists.** `MomentNullcone.lean` (sorry-free): a `Data` structure
+   (`phi`, `order`, `step`), `detect` (= `zeros_propagate`, the finite-depth conclusion),
+   `escape_within` (contrapositive), and `ofMonicRec` (build the `step` from a monic
+   recurrence). The three instances feed their own recurrences — Cayley–Hamilton, THM-1670,
+   THM-1740 — into `ofMonicRec`; `H` is correctly *excluded* (no governing recurrence). The
+   template is now one reusable engine in the kernel.
+
 ## Cross-links
 
 THM-1750 (the template, tournament instance proved) · THM-895 (`λ=0 ⟺ transitive`) ·
