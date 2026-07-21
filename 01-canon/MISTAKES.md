@@ -7,6 +7,33 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-215 (2026-07-21, codex audit of HYP-8795 / THM-2040) -- a prime-local minimum-face normalization was promoted to a global common-factorial/Vandermonde factorization
+
+- **What was claimed:** dividing every NC2 moment by a purported common
+  factorial `(p*A0)!` was said to leave a bounded residue and to make general
+  NC2 noncancellation equivalent to one (possibly confluent) Vandermonde.
+- **Why it is wrong:** `(p*A0)!` in THM-2022 is attached to one deliberately
+  chosen amplified moment and its lowest balanced face. It divides all channel
+  factorials there, but off-face quotients remain nontrivial; it does not peel
+  every general moment to a universal determinant. The accompanying S91
+  computation itself gives `E[P^m]/m! = 2, 7/2, 17/3, ..., 1441729/40320`
+  for `P=Z+(1+s)+Zbar`, an increasing sequence through the displayed range,
+  contradicting its printed "bounded" conclusion. A moment is a scalar sum of
+  channel monomials, whereas the Vandermonde in THM-2033 is a determinant of a
+  special moment matrix; division by one scalar factorial cannot identify the
+  two in general. The claimed positive-zero / Laguerre--Polya / Paley iff chain
+  also has no logical basis and repeats the type error in MISTAKE-214.
+- **Correct framing:** retain two valid statements. On the exact symmetric
+  monomial wall `P=a Z^p + beta*s^(p/2) + c Zbar^p` (necessarily even `p`),
+  every balanced channel really has radial degree `mp/2`, so the special
+  central-trinomial factorization is exact. In full NC2, THM-2022 provides a
+  **prime-local initial-form normalization** only: at order `p*m0`, division by
+  `(p*A0)!` kills higher/carry layers modulo a good prime and leaves the whole
+  lowest-face residue `Q^p`. That residue is generally a face constant term,
+  not a Vandermonde and not a Paley spectrum.
+
+---
+
 ## MISTAKE-214 (2026-07-21, codex audit of HYP-8785/8790) -- repeated Vandermonde nodes were identified with repeated tournament scores and hence with a regular/Paley tournament
 
 - **What was claimed:** HYP-8785 asserted that equal radial channel degrees on

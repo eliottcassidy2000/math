@@ -20,4 +20,11 @@ script: 04-computation/de_factorialization_central_trinomial_boxeph_S204.py (+ .
 
 # THM-2040 — the de-factorialization principle (STUB, in progress)
 
+> **CORRECTION (MISTAKE-215 / THM-2022).** The broad claim in the imported
+> title/status is withdrawn. There is no global identity expressing every NC2
+> moment as one common factorial times a Vandermonde residue, and no proved
+> equivalence with a positive zero, Laguerre--Polya failure, or Paley spectrum.
+> The valid symmetric special case and the valid prime-local initial-form
+> principle will replace this stub in the completed version.
+
 Placeholder claimed by boxeph-S204. See script + reflection for developing content.

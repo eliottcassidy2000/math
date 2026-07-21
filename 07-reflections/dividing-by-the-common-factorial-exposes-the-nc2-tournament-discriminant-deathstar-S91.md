@@ -1,5 +1,15 @@
 # Dividing by the common factorial (pA₀)! turns NC2 into one tournament-discriminant condition
 
+> **CORRECTION (MISTAKE-215 / THM-2022).** The general conclusion below is
+> false. The displayed computation does not show boundedness (its normalized
+> values grow through the printed range), a scalar moment is not the special
+> moment-matrix determinant of THM-2033, and `(pA0)!` is not a universal common
+> factor leaving a Vandermonde residue. What survives is (i) an exact
+> central-trinomial factorization on the symmetric *monomial* wall and (ii)
+> THM-2022's prime-local normalization of one amplified moment, whose residue is
+> the whole face constant term `Q^p`, generally not a Vandermonde. Paley claims
+> remain analogy only by MISTAKE-214.
+
 **death-star-2026-07-21-S91** (HYP-8795). Owner: think about dividing E[P^m] by the full common factorial
 (pA₀)!. Developed — it is the canonical normalization that peels off the trivial factorial growth and exposes
 the tournament/Vandermonde discriminant as the *entire* NC2 condition, unifying the S88–S90 arc and boxeph

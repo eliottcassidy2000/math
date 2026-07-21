@@ -4,7 +4,11 @@ IDEA (owner): divide E[P^m] by the full common factorial. Develop the normalizat
 that boxeph (det/prod a_i! = Vandermonde) and S90 (E[P^m]/m! -> central trinomial)
 used, for the general three-weight P=Z^p a(s)+b(s)+Zbar^q c(s). Identify the dominant
 common factorial, divide, study the normalized channel sum: does it reveal a clean
-tournament (Vandermonde/discriminant) core + sharpen noncancellation?"""
+tournament (Vandermonde/discriminant) core + sharpen noncancellation?
+
+AUDIT: the interpretation formerly printed at the end is false; see MISTAKE-215.
+This script is retained as a counterexample-producing audit of that interpretation.
+"""
 from math import factorial as f
 from fractions import Fraction as Fr
 
@@ -43,8 +47,7 @@ a={0:Fr(1)}; c={0:Fr(1)}; b={0:Fr(1),1:Fr(1)}
 for m in range(1,9):
     E=EPm_general(1,1,a,b,c,m)
     print(f"  m={m}: E[P^m]={E}, /m! = {Fr(E,f(m))}  (float {float(E)/f(m):.4f})")
-print("  -> E[P^m]/m! -> a bounded rational sequence (the factorial growth divided out);")
-print("     the residual is the tournament/free-prob core.\n")
+print("  -> AUDIT: these displayed values grow, so they do NOT support boundedness.\n")
 
 # ASYMMETRIC p=2,q=1: the (pA_0)! idea -- dominant factorial from the busier (Z^p) charge
 print("[B] p=2,q=1, a=1,c=1,b=1+s (asymmetric top): E[P^m] / (dominant factorial):")
@@ -54,18 +57,13 @@ for m in range(1,10):
     jmax=m//3; domfac=f(2*jmax) if jmax else 1
     print(f"  m={m}: E={E}, /(2*floor(m/3))!={Fr(E,domfac)} (float {float(E)/domfac:.3f}); jmax={jmax}")
 print("""
-READING (the (pA_0)! idea developed):
- * The dominant common factorial is (p*j_max)! = (p * #Z^p-uses at the top channel)!,
-   i.e. 'p times A_0' where A_0 = the max multiplicity of the Z^p atom. Dividing E[P^m]
-   by it makes the TOP (endpoint) channel O(1) -- codex's 'one endpoint ratio one'.
- * After dividing, the endpoint channel's coefficient = the leading radial (a^{jmax}
-   c^{kmax}) evaluated = a SINGLE nonzero term (no cancellation possible from ONE term)
-   => noncancellation, IFF the endpoint is a strict source (degree-gap, S88 transitive).
- * The full normalized sum E[P^m]/(p A_0)! is the signed tournament sum on the channel
-   degrees (boxeph THM-2033 Vandermonde) with the common factorial peeled -- exactly the
-   'divide out the common factorial to expose the discriminant' move. At the resonance
-   wall (equal degrees) the peeled sum is the CONFLUENT Vandermonde = central trinomial
-   (S90) + hyper-Bessel, and noncancellation = that confluent discriminant != 0.
- * So 'divide by (pA_0)!' = the canonical normalization turning NC2's factorial-heavy
-   moment into the clean tournament-discriminant condition: NC2 <=> the (possibly
-   confluent) Vandermonde of channel radial degrees is nonzero.""")
+AUDIT (MISTAKE-215):
+ * The output above does not establish a common-factorial factorization or a bounded
+   normalized sequence.
+ * A scalar moment sum is not the moment-matrix determinant in THM-2033, so dividing
+   by one scalar factorial does not generally leave a Vandermonde.
+ * The valid general normalization is prime-local: THM-2022 chooses one amplified
+   moment p*m0 and divides by the lowest-face factorial (p*A0)!; modulo p, carries and
+   strict face height kill all other layers and the residue is Q^p.
+ * The exact central-trinomial factorization survives only on the symmetric monomial
+   wall where every balanced channel has the same radial degree.""")
