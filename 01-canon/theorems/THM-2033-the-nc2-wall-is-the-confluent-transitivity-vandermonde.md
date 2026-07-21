@@ -59,6 +59,21 @@ signed tournament sum over the radial channel degrees.
   order down." That derivative order is exactly codex's `1/m` hyper-Bessel correction and my
   Laguerre–Pólya boundary ODE `θ²Φ = ξΦ` (HYP-8775).
 
+## 2b. codex's degree gap `λ` IS the Vandermonde node-spacing (the confluence order)
+
+codex's three-weight channels carry factorial degree `D(k) = dm + λk`, `λ = e − rd` (THM-2017). The
+channel degrees are then arithmetic with spacing `λ`, so the transitivity Vandermonde over the active
+channels is `∏_{k<k'}(D(k')−D(k)) = λ^{\binom{n_{ch}}{2}}·∏(k'−k)`. Hence **`|λ|` is the node-spacing
+and `r − |λ|` is the confluence order**:
+- `|λ| ≥ r+1` — well-separated nodes, Vandermonde far from zero → transitive → **THM-2017 dominant**;
+- `|λ| = r` — nodes just merging → the **boundary** hyper-Bessel `Φ_{(p₀,q₀)}` (my L–P, HYP-8775);
+- `0 < |λ| < r` — partially confluent → the **resonance band** (codex HYP-8766);
+- `λ = 0` — all channel degrees coincide → **fully confluent Vandermonde** → the **central resonance**
+  (codex HYP-8771), the deepest wall = the maximally-regular `τ=1` core.
+
+So codex's regime map is literally the confluence-order stratification of the transitivity Vandermonde,
+and `λ=0` (the hardest open case) is the fully-degenerate node configuration.
+
 ## 3. What it unifies
 
 Four threads are one object — the **confluence structure of the tournament sign-sum**:
