@@ -1,0 +1,35 @@
+
+====================================================================
+(1) PELL SUPERSYMMETRY for GMC(2): E[sym^2] - E[alt^2] = E[(ZW)^n] = n!
+====================================================================
+ n   E[sym^2]   E[alt^2]     diff       n! = E[(ZW)^n]?
+ 1        1/2       -1/2        1        1         True
+ 2          1         -1        2        2         True
+ 3          3         -3        6        6         True
+ 4         12        -12       24       24         True
+ 5         60        -60      120      120         True
+ 6        360       -360      720      720         True
+ 7       2520      -2520     5040     5040         True
+
+====================================================================
+(1b) GENERAL: E[sym(P)^2 - alt(P)^2] = E[P * conj(P)] for random-ish P
+====================================================================
+  P={(2, 0): Fraction(1, 1), (0, 1): Fraction(3, 1), (1, 1): Fraction(-2, 1)}
+     E[sym^2-alt^2]=19   E[P*conj(P)]=19   equal? True
+  P={(3, 0): Fraction(1, 1), (1, 2): Fraction(1, 1), (0, 0): Fraction(5, 1)}
+     E[sym^2-alt^2]=37   E[P*conj(P)]=37   equal? True
+  P={(2, 1): Fraction(1, 1), (0, 3): Fraction(-1, 1)}
+     E[sym^2-alt^2]=12   E[P*conj(P)]=12   equal? True
+  => the Pell/Chebyshev E_n^2-O_n^2=(x^2-1)^n is the polynomial lift of the
+     GMC identity E[sym^2-alt^2]=E[P*Ptilde]; on P=Z^n it localizes on (ZW)^n=n!.
+
+====================================================================
+(2) RECURSION MODES as signed subtournament decks (++- / +++--- / ++-+--+)
+====================================================================
+  n=3: signed deck-sum (pattern [1, 1, -1]) matches whole-or-vanishes: c3 8/8, R 5/8
+  n=6: signed deck-sum (pattern [1, 1, 1, -1, -1, -1]) matches whole-or-vanishes: c3 1280/32768, R 128/32768
+  n=7: skipped (2^21 tournaments); pattern ++-+--+ noted
+  READING: exploratory -- tests whether the given sign patterns, applied to the
+  (sorted) vertex-deleted subtournament invariants, reproduce the whole tournament's
+  invariant or vanish. mac-mini THM-1936: R is JOIN-multiplicative (build-up), the
+  cleaner 'smaller classes -> larger class' law; deletion signed-sums are the dual.

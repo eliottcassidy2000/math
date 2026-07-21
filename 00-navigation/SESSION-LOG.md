@@ -1,3 +1,12 @@
+## death-star-2026-07-21-S81 -- CHASED THE PREDICTIONS: Pell supersymmetry is a real GMC(2) moment identity (E[sym²]−E[alt²]=E[(ZW)^n]=n!); α(E_n)=2^{n−4} confirmed to n=7 (α(E_7)=8); recursion modes resolve to the order-join. HYP-8696.
+
+**Owner directive:** chase the predictions; think the A+B+C−D−E−F=G / A+B−C recursion modes as literally subtournaments — which iso classes come from smaller subtournament classes.
+
+- **PELL SUPERSYMMETRY — CONFIRMED (the S80 prediction).** The a/b Pell identity E_n²−O_n²=(x²−1)^n (kps THM-1880) is the polynomial lift of an exact GMC(2) MOMENT identity: with sym_n=(Z^n+W^n)/2 (bosonic), alt_n=(Z^n−W^n)/2 (fermionic), exact Wick gives **E[sym_n²]−E[alt_n²] = E[(ZW)^n] = n!** (n=1..7), and generally E[sym(P)²−alt(P)²]=E[P·P̃] (charge-conjugate norm). Bosonic²−fermionic²=radial-norm, localizing on n! for P=Z^n — a positivity-flavored (radial mass n!>0), provable toral/parity companion to GMC(2)'s open radial gap (not the gap itself).
+- **α(E_n)=2^{n−4} — CONFIRMED to n=7.** Built E_7 (V=54=A002854 exact, hash-canonical), α(E_7)=8=2³. So α(E_n)=1,2,4,8 at n=4..7; predicts α(E_8)=16. The G_n-dual α(G_n)=2,5,18 has no closed form — a metagraph/even-dual asymmetry.
+- **RECURSION MODES — resolved to the order-join.** Signed-additive deck reading (±patterns on vertex-deleted subtournament invariants) is INCONCLUSIVE (recorded dead end). The clean "smaller classes → larger class" mechanism is the MULTIPLICATIVE order-join (condensation into strong atoms): H,|R| multiply (mac-mini THM-1936), disc super-multiplies (klein THM-1950 SL2 velocity-addition s(C1⇒C2)=(s1+s2)/(1+s1s2)); reducible classes are built from strong atoms; the ± are the R=Σsgn(π) permutation signs. So "which iso classes come from smaller subtournament classes" = the REDUCIBLE ones; strong tournaments are the atoms.
+- **FLEET (credited):** klein THM-1950 reduced my HYP-8636 (H≥disc) to the strong base via this exact composition algebra — one strong-base inequality from proof. mac-mini THM-1936 (signed R multiplicative), kps THM-1885/1880 (a/b=BS(1,2)), boxeph THM-1926 (zeta). reflection chasing-the-predictions-...-S81; script pell_supersymmetry_and_deck_recursions_S81 (+out). GMC(2)/LRC(14) open; no LRC re-audit.
+
 ## opus-2026-07-20-S443 - Concrete next steps: var(lambda^2) is a 4-subtournament-census invariant (THM-1940) -- resolves THM-1930, pins the quaternion-wall mechanism
 
 Owner: work concrete next steps (the tr(S^4) law / 32-step index + the octonion wall, from S442).
