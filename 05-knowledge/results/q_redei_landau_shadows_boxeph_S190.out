@@ -1,0 +1,40 @@
+==============================================================================
+(A) q-REDEI CENSUS (back-arc statistic)
+==============================================================================
+n=3 (2 classes): back-arc parity RIGID in 2/2 classes
+   |h_q(-1)| == h for all classes: True ; palindromic: 1/2 ; unimodal(coeff): 2/2
+   classes with h_q(i) == 0: 0
+n=4 (4 classes): back-arc parity RIGID in 3/4 classes
+   parity-broken example bits=4: h_q = [0, 1, 3, 1]
+   |h_q(-1)| == h for all classes: False ; palindromic: 1/4 ; unimodal(coeff): 4/4
+   classes with h_q(i) == 0: 0
+n=5 (12 classes): back-arc parity RIGID in 5/12 classes
+   |h_q(-1)| == h for all classes: False ; palindromic: 1/12 ; unimodal(coeff): 8/12
+   classes with h_q(i) == 0: 0
+n=6 (56 classes): back-arc parity RIGID in 8/56 classes
+   |h_q(-1)| == h for all classes: False ; palindromic: 1/56 ; unimodal(coeff): 27/56
+
+   {7,21} q-shadow at n=5,6: h_q data for h in {5,9} (the hole's flanks):
+   n=5 h=5: h_q = [0, 1, 3, 1] ; h_q(2) = 22 ; degspread = 3
+   n=5 h=9: h_q = [0, 1, 0, 4, 2, 2] ; h_q(2) = 130 ; degspread = 5
+   n=5 h=5: h_q = [0, 1, 3, 1] ; h_q(2) = 22 ; degspread = 3
+   n=5 h=9: h_q = [0, 0, 5, 1, 2, 0, 1] ; h_q(2) = 124 ; degspread = 6
+
+==============================================================================
+(B) LANDAU = MOMENT-MAP LATTICE SURJECTIVITY (verify n <= 7)
+==============================================================================
+n=3: attained sorted score multisets = 2 ; Landau/moment-polytope lattice points = 2 ; EQUAL: True
+n=4: attained sorted score multisets = 4 ; Landau/moment-polytope lattice points = 4 ; EQUAL: True
+n=5: attained sorted score multisets = 9 ; Landau/moment-polytope lattice points = 9 ; EQUAL: True
+n=6: attained sorted score multisets = 22 ; Landau/moment-polytope lattice points = 22 ; EQUAL: True
+n=7: Landau/moment-polytope lattice points = 59 (A000571 check)
+
+==============================================================================
+(C) terminal stacked-death multiplicity at delta* for v = (1..n)
+==============================================================================
+v=(1..3): components just below delta*=1/4: 2 ; just above: 0 -> terminal stacked multiplicity = 2
+v=(1..4): components just below delta*=1/5: 4 ; just above: 0 -> terminal stacked multiplicity = 4
+v=(1..5): components just below delta*=1/6: 2 ; just above: 0 -> terminal stacked multiplicity = 2
+v=(1..6): components just below delta*=1/7: 6 ; just above: 0 -> terminal stacked multiplicity = 6
+
+DONE.

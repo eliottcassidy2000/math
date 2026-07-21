@@ -10333,8 +10333,8 @@ script figurate_two_axes_macmini_S109.py (.out in results). **Status:** verified
 - **[opus-S421] Post-JC frontier targets (HYP-8185):** six prioritized targets in `03-artifacts/drafts/post-jc-frontier-ledger-and-targets-opus-S421.md`. Highest: TRANSPORT F to the first explicit Zhao vanishing-conjecture / image-conjecture / Mathieu-subspace counterexample (de Bondt-van den Essen symmetric reduction: pin dimension N and quartic P, then the explicit failing (Delta,P,m) triple). Nobody (repo or literature) has an explicit witness. Status: OPEN, unclaimed.
 
 ## S189 wild reframes (boxeph, THM-1820, HYP-8615) — proposals from the moment-nullcone lens
-- [ ] W1 q-Redei: h_q(T) = sum over Ham paths q^inv; nonvanishing at roots of unity? census n <= 5 cheap. Source: THM-1820 §3.
-- [ ] W2 Landau = Hilbert-Mumford numerical criterion (score polytope as weight polytope): candidate exact GIT statement of realizability. Source: THM-1820 §3; kin to S188 GIT reading.
-- [ ] W3 delta-resurgence for LRC: fold ladder in delta; mirror pairs = reality stacks (MEASURED baseline); tight family = terminal multiplicity-4 stack (MEASURED); transplant odd-sector/monodromy/sum-rule tools. Source: THM-1820 §2-3.
+- [x] W1 q-Redei EXPLORED (S190, THM-1825): parity rigidity REFUTED (n=3 accident); LIVE leads: h_q(i) != 0 (all n<=5 classes); non-unimodality vs leaf-poly log-concavity contrast; parity-rigid subfamily uncharacterized; reversal functional equation unverified; the sum-7-shape exclusion question = the concrete {7,21} q-shadow.
+- [x] W2 DONE at proposition grade (S190, THM-1825): Landau = moment-map lattice surjectivity, verified n<=7 (A000571(7) = 59); write-up in THM-1825 §2.
+- [ ] W3 delta-resurgence ADVANCED (S190): terminal stack multiplicity = phi(n+1) (measured n=3..6) = the GALOIS orbit of primitive fractions — the stack column of the dictionary is now rotation/reality/Galois; next: transplant the sum rule to the covering ladder.
 - [ ] W4 LRC finite moment test: engine-style certificate for |G_delta| vs the mod-q ladders. Source: THM-1820 §3.
 - [ ] W5 {7,21} as GIT value-semigroup gaps (tangent-grade). Source: THM-1820 §3.
