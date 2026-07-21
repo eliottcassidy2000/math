@@ -1,3 +1,43 @@
+## kind-pasteur-2026-07-21-S128c140 - Generators & monoids: the 1/2-&-+1 monoid IS BS(1,2); the repo is monoids-on-sets; amenability predicts hardness (THM-1885)
+
+Owner: see more mathematical problems in terms of generators and monoids; get as fundamental a view
+of as many topics as possible. Continuing the a/b thread (THM-1880/1875) one level more abstract.
+
+**THM-1885 (PROVED, the fundamental identification).** a(x)=x+1, b(x)=x/2 satisfy **ab=ba^2** (and
+a^k b = b a^{2k}, verified all k) -- the DEFINING relation of the **Baumslag-Solitar group
+BS(1,2)=<a,b|ab=ba^2>**. The dyadic-affine action x->x/2^p+q (q in Z[1/2]) is faithful, so
+<x+1, x/2> = BS(1,2)^+ (presentation match + faithful representation = proof). b.a=(x+1)/2 is the
+half-dictionary (THM-1555), inverse 2x-1. BS(1,2) is the dyadic-solenoid monodromy, so **every repo
+2-adic thread is the SAME generator b**: switching classes 2^{C(n-1,2)}, arc-flip hypercube
+(Z/2)^{C(n,2)}, fiber fraction (1/2)_{n-2}/(n-2)!, blue count 2^{e-1}, Cayley-Dickson doubling.
+
+**THE FUNDAMENTAL VIEW (catalog in THM-1885).** Nearly every topic = **(object, monoid, action)**,
+invariants = orbit functions, nullcone = the degenerate orbit. Recurring monoids, short list: Z/2
+(complement), (Z/2)^{C(n,2)} (arc-flips = cut+cycle), S_n (relabel), BS(1,2) (1/2 & +1),
+PSL(2,Z)=Z/2*Z/3 (Farey/LRC), SL_2 (char_A binary form), Z (GMC charge). The complexity ladder
+(THM-1775) is these monoids at increasing depth.
+
+**THE PREDICTION (reflection: the-presentation-first-method).** The acting monoid's amenability
+tracks the repo's easy/hard split: finite/abelian/solvable (Z/2, S_n, (Z/2)^k, BS(1,2)) govern the
+EASY/TRACTABLE topics (spectra, censuses, TNC/GMC recurrences -- BS(1,2) solvable = why the
+recurrence closes); non-amenable PSL(2,Z) governs LRC (HARD, open); **no** acting monoid at all =>
+H, the #P permanent that leaves the ladder at n=6 (THM-1780). *An invariant is as hard as the
+smallest monoid whose orbit function it is; if it is nobody's, it is #P.* Method: presentation
+first (write generators+relations+set), computation second -- a non-equivariant pattern was never
+going to be n-stable (explains the recurring "breaks at n=6/7" mistakes).
+
+**Concurrent integration.** opus-S440's THM-1920 (spectral insertion-response) + THM-1900
+(insertion-response calculus) realise my ALGEBRAIC a=x+1 as COMBINATORIAL vertex-insertion (opus's
+own "one functor" note); my THM-1885 is the abstract (monoid, action) frame that houses opus's
+insertion calculus (the S_n / insertion side) + the amenability=hardness heuristic. Cited both ways.
+No THM collision (1885 uniquely mine; opus at 1900/1920). This is a REFRAMING (organises the corpus
+around its acting monoids), not a new open-problem advance -- every equation verified/classical.
+
+**Files:** THM-1885; reflection the-presentation-first-method-generators-monoids-and-hardness-kps-
+S128c140; HYP-8685. Cites THM-1880/1875/1555/1810/1775/826, opus THM-1900/1920.
+
+---
+
 ## opus-2026-07-20-S440 - The a/b functional frame: the SPECTRAL insertion-response (THM-1920), concurrent with kps THM-1875/1880
 
 Owner: keep contributing to the shared zoo concurrently; think trigonometric functions + triangular
