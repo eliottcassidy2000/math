@@ -1,78 +1,114 @@
-# Repository Instructions for Codex
+# Agent Operating Contract
 
-This repository is a persistent research workspace. Do not end a session from
-this checkout with local work stranded on the machine.
+This is a persistent, concurrent mathematical research workspace. `AGENTS.md`
+is the small universal policy; current mathematics lives in the documents it
+routes to. Never use a chronological log as the current truth source.
 
-## Concurrent Mainline Operating Mode
+## Bounded startup
 
-Treat `origin/main` as the shared live research surface. Long investigations
-should push small coherent commits repeatedly, not only at final close-out. Push
-after claiming scarce IDs or filenames, after meaningful computations, after
-confirming/refuting a hypothesis, and before risky rebases. Prefer:
+1. Start from a clean, current worktree. Prefer an isolated worktree made by
+   `bash agents/new_session_worktree.sh <tag>`. If a shared checkout is dirty,
+   identify and preserve every unrelated change before syncing.
+2. Run `python3 agents/start_session.py --topic "<your topic>"`. Then read:
+   - `00-navigation/START-HERE.md`;
+   - the relevant section of `00-navigation/CURRENT-FRONTIER.md`;
+   - `01-canon/ACTIVE-GUARDRAILS.md`; and
+   - the topic routes printed by the startup packet.
+3. Read `00-navigation/RESEARCH-PROTOCOL.md` before a mathematical session and
+   `05-knowledge/reference/CORE-PAPERS.md` before making literature claims.
+4. Check targeted agent/human messages. Do not scan the full session log,
+   mistakes ledger, backlog, or hypothesis index unless the task requires it.
+
+The intended startup is minutes and hundreds of lines, not a corpus reread.
+
+## Truth and status discipline
+
+Use this precedence order:
+
+1. explicit correction/retraction and its repaired theorem;
+2. current proved canon;
+3. reproducible exact computation;
+4. named hypothesis;
+5. current navigation synthesis;
+6. historical session log, reflection, message, or draft.
+
+Reflections and logs preserve idea provenance, not truth. Before using a claim,
+search its exact statement, constants, quantifiers, synonyms, theorem ID, and
+recent `MISTAKE-*` entries. Cite theorem ID **plus slug/file path**: legacy ID
+collisions exist. Mark scope as `PROVED`, `CITED`, `FINITE-EXACT`, `VERIFIED`,
+`CONDITIONAL`, `OPEN`, `REFUTED`, or `SUPERSEDED`; never blend them.
+
+Repair demonstrated errors promptly, preserve the correction lineage, and log
+the mechanism in `01-canon/MISTAKES.md`. Use court cases for genuine unresolved
+disputes, not as a reason to leave a known false statement live.
+
+## Mathematical-session directive
+
+The main near-term prize is **LRC(14)**, which is open. It is an anchor, not a
+tunnel. Every self-directed session keeps an **Anchor / Niche / Wildcard**
+portfolio: the assigned or highest-value target, an orthogonal underexplored
+thread, and a curiosity lane. A niche or wildcard may overtake the anchor when
+it yields a precise object, obstruction, experiment, or theorem.
+
+Always:
+
+- recover and connect prior work before deriving anew;
+- prefer underexplored operations, duals, scales, boundary cases, and discarded
+  objects over another pass through a saturated route;
+- determine **why** a claim is true or false, not merely whether it survives;
+- keep a board of 3–7 live concepts and compare every new idea with each one;
+- generate views from `objects x representations x invariants x operations x
+  symmetries/quotients x scales`;
+- specify a claimed connection's source, target, map, preserved predicate,
+  destroyed information, needed sidecar, and cheapest decisive test;
+- give every small mathematical compulsion a cheap hostile probe, then pursue a
+  positive signal until it produces structure or a recorded stopping reason;
+- promote successful research moves to `00-navigation/META-PATTERNS.md` only
+  with triggers, counterindications, and evidence from distinct threads.
+
+For a true result, record the mechanism, quantifiers, equality/failure boundary,
+dependencies, and possible generalization. For a false result, record the
+minimal witness, first failed implication, strongest survivor, repaired form,
+missing coordinate, and new question.
+
+## Validity gate
+
+Before canonizing work, audit types; necessary/sufficient/iff directions;
+symmetries and orbit representatives; quotient losses; canonical adversarial
+examples; and the actual consequence rather than an intermediate statistic.
+Computations need an explicit universe, inherited filters, positive and hostile
+controls, a reproduction command, and preferably an independent path. Lean
+claims need a build, axiom audit, satisfiable hypotheses, and root-import reach.
+
+Tournament Analysis is encouraged only when an intrinsic binary relation exists.
+Declare vertices, pairwise observable, orientation gauge, ties, preserved target,
+lost data, and sidecar. Challenge runner/arc vertices: gaps, sections, boundaries,
+events, residues, Fourier modes, circuits, and proof obligations may be better.
+Never force ties into a cosmetic tournament or treat a sufficient tournament
+certificate as an equivalence.
+
+## Concurrent Git protocol
+
+Treat `origin/main` as the live shared surface. Pull/rebase only from a clean
+tree. Read incoming commits as mathematical signal and integrate real
+connections. Reserve scarce IDs and filenames with honest stubs only after
+checking filename, YAML ID, indexes, and remote history.
+
+Push small coherent checkpoints after reservations, meaningful computations,
+proof/refutation milestones, and before risky rebases. In an isolated worktree:
 
 ```bash
-python3 agents/checkpoint_session.py \
-  --message "[instance-id]: checkpoint - [brief state]"
+python3 agents/checkpoint_session.py --message "[instance-id]: checkpoint - [state]"
 ```
 
-Claim hypothesis numbers, theorem numbers, tangent IDs, result filenames, and
-session-log territory early with honest stubs when a session will need them.
-Make the stub explicit about what is known, what is still missing, and why the
-namespace is being reserved.
+In a shared dirty checkout, stage only your explicit paths; never sweep another
+session's work with `git add -A`. See `00-navigation/CONCURRENT-SESSIONS.md` and
+`agents/README.md`.
 
-When `git fetch`, `git pull`, or `git rebase` reveals new work from another
-agent, treat that work as signal. Before continuing, check whether it connects
-to the current invariant, proof route, script, runner family, or application
-thread. If it does, integrate the connection in the relevant hypothesis,
-backlog, reflection, or session log. If it does not, leave it intact and
-continue.
+## Mandatory close-out
 
-Read `00-navigation/CONCURRENT-SESSIONS.md` for the full playbook.
-
-## Research Default: Tournament Analysis
-
-When adding or updating computational research scripts, aim to include
-Tournament Analysis whenever it is meaningfully available. Declare the pairwise
-observable, the switch/gauge that turns pair data into a binary relation, and
-the tie Hamiltonian path. Report tournament fingerprints such as score
-histograms, directed cycles, SCCs, edge flips, and Hamiltonian-path counts when
-feasible. If a script cannot use Tournament Analysis cleanly, state why in its
-methodology or notes.
-
-## Assumption-Challenge Default
-
-For LRC or Tournament Analysis sessions, do not assume tournament vertices must
-be runners or arcs. Before settling on a mapping, explicitly consider alternate
-vertex sets such as runners, gaps, fixed circle sections, section boundaries,
-wall-crossing events, residues, cover arcs, Fourier modes, matroid circuits,
-and proof obligations. Record which LRC predicate the quotient preserves, what
-information it destroys, and at least one challenged assumption in the relevant
-reflection, hypothesis, script note, or session log when the session is
-exploratory.
-
-## Mandatory GitHub Close-Out
-
-Before the final response in every future Codex session from this repository:
-
-1. Run `git status --short --branch`.
-2. Stage all intentional repo changes with `git add -A`.
-3. Commit if there is anything to commit.
-4. Push the current branch to its upstream with `git push`. If no upstream is
-   set, use `git push -u origin $(git branch --show-current)`.
-5. Verify the branch is no longer ahead of its upstream.
-
-If the push fails, do not treat the session as complete. Report the exact
-blocker and leave the work committed locally so the next session can push or
-repair it.
-
-For Claude-style sessions, prefer the repo closer:
-
-```bash
-python3 agents/finish_session.py \
-  --to all \
-  --subject "[instance-id]: [one-line summary]" \
-  --body "Detailed findings and handoff." \
-  --commit-msg "[instance-id]: [one-line git summary]"
-```
-
-That script sends the session letter, commits, and pushes the current branch.
+Before the final response: inspect `git status --short --branch`; stage only
+intentional changes; commit; push to the upstream (or `origin/main` for a
+session worktree); fetch; and verify `HEAD` is not ahead of its push target.
+Use `agents/finish_session.py` only in an isolated worktree. If push fails, the
+session is not complete: leave a local commit and report the exact blocker.
