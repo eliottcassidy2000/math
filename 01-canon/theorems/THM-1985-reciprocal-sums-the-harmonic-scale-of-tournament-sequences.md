@@ -14,7 +14,7 @@ cite_by_filename: true
 > **CORRECTION (MISTAKE-209; THM-2000).**  The exact figurate identities in
 > Section 1 survive.  Sections 2--3 originally counted repeated sequence terms
 > despite saying “subset,” called unnamed numerical constants transcendental
-> without proof, and treated THM-1370's conjectural global H-spectrum
+> without proof, and treated `THM-1370-h-spectrum-omits-7-21-all-n.md`'s conjectural global H-spectrum
 > completeness as proved.  Support masses remove repetitions; arithmetic type
 > is open unless proved; and H-spectrum reciprocal divergence is conditional.
 > Gauss's triangular-number identity also gives an exact product/theta form for
@@ -70,7 +70,7 @@ The **Cayley–Dickson levels** `n=2^k+1` give `Σ_{k≥1} 1/(2^k+1) = 0.7645` (
 
 ## 3. The H-value spectrum → conditional divergence target
 
-THM-1370 proves that `7,21` never occur and that every other odd value through
+`THM-1370-h-spectrum-omits-7-21-all-n.md` proves that `7,21` never occur and that every other odd value through
 `609` occurs; it states global completeness as a **conjecture**.  Therefore
 linear density and divergence of `Σ1/(H-value)` remain open.  Conditional on
 positive lower density, the intended harmonic-edge conclusion follows.  The

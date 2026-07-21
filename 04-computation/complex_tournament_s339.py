@@ -3,6 +3,13 @@
 complex_tournament_s339.py — Tournament Theory in the Complex Plane
 opus-2026-03-25-S339
 
+RETRACTION (MISTAKE-210; THM-2000, 2026-07-21): the raw tournament
+Dirichlet series below diverges for every fixed s, and the labeled-tournament
+EGF has radius zero.  Every numeric value printed by this historical script is
+only a finite truncation.  Its claims of convergence, holomorphy, poles, or a
+functional equation must not be cited.  Reciprocalization gives the valid
+objects sum A000568(n)^(-s) and sum z^n/A000568(n).
+
 THE VISION: Every tournament invariant is a function of n ∈ N.
 Extend n to C. The resulting complex-analytic structure reveals:
 
@@ -40,6 +47,7 @@ A000568 = {1:1, 2:1, 3:2, 4:4, 5:12, 6:56, 7:456, 8:6880, 9:191536, 10:9733056}
 print("=" * 72)
 print("  TOURNAMENT THEORY IN THE COMPLEX PLANE")
 print("  opus-2026-03-25-S339")
+print("  RETRACTED ANALYTIC PREMISE: finite truncations only; see MISTAKE-210 / THM-2000")
 print("=" * 72)
 
 print(f"\n  1. THE TOURNAMENT DIRICHLET SERIES")

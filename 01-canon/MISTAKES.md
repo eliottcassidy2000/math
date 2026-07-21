@@ -210,7 +210,8 @@ Format per entry:
   Hamiltonian-path spectrum must be labeled conditional.  The exact simplex
   telescoping theorem in THM-1985/1990 is unaffected.
 
-- **Two further audit corrections:** THM-1370 proves that `7,21` are omitted
+- **Two further audit corrections:** the later, explicitly named file
+  `THM-1370-h-spectrum-omits-7-21-all-n.md` proves that `7,21` are omitted
   for all `n` and that every other odd value through `609` occurs by `n=8`; it
   explicitly labels global completeness of `odds minus {7,21}` a conjecture.
   Thus THM-1985/1990's claimed positive-density H-spectrum and reciprocal
@@ -227,6 +228,10 @@ Format per entry:
   tail.  The old `H=1+2^(n-2)` neighbor sum also began at the unrealizable
   value `H=2`; its realized support begins at `n=3`, with mass
   `0.764499...`, not `1.264499...`.
+- **Namespace warning:** that H-spectrum file and
+  `THM-1370-elliptic-jacobian-conjecture-all-dimensions.md` both declare the
+  identifier `THM-1370`.  Bare references are therefore ambiguous; use the
+  full filename until the duplicate theorem namespace is repaired.
 
 ---
 
@@ -251,6 +256,36 @@ Format per entry:
   index-Dirichlet series (`tournament_dirichlet_s291b.py`).  THM-2000 records
   the proof; the old scripts remain historical negative evidence and must not
   be cited for analytic continuation.
+
+---
+
+## MISTAKE-211 (2026-07-21, codex reciprocal-atlas audit) -- finite prefixes, offsets, and proxy supports were promoted to sequence constants or all-n laws
+
+- **What was done:**
+  `04-computation/reciprocal_sums_of_repo_sequences_opus_S447.py` labels short
+  prefix sums “tail-converged,” contains the wrong entry
+  `A000568(13)=29305744576145` (the correct value is `48542114686912`), and
+  computes the odd numbers minus `7,21` as though that were the proved global
+  H-spectrum.  `04-computation/reciprocal_sums_of_our_sequences_kps_S128c144.py`
+  mixes offsets and term multiplicities; its frozen output itself reports
+  `match=False` for finite simplex approximations at `k=2,3`.  Separate
+  sequence syntheses also propagated `2 selfK(n)=SC(n)` as all-`n` after the
+  coincidence at `n=5,6,7`.
+- **Why it is wrong:** a finite prefix supplies neither a tail bound nor an
+  arithmetic type.  Offset changes can add duplicate `1`s, so they change the
+  term-multiset mass while leaving the support mass fixed.  The H-spectrum file
+  proves only two omissions plus finite coverage.  Finally THM-849 computes at
+  `n=8` that `2 selfK(8)=404`, whereas `SC(8)=176`; the all-size self-line law
+  is false, not a blue-line counting artifact.
+- **Correct framing:** every reported number must carry (i) its exact index
+  range, (ii) support versus multiplicity semantics, and (iii) either a proved
+  tail estimate or the label “finite prefix.”  Use
+  `THM-1370-h-spectrum-omits-7-21-all-n.md` by filename and keep global
+  H-spectrum divergence open.  Use A002785 for self-converse tournament
+  classes and A051337 for strongly connected tournament classes.  THM-2000's
+  optimization-safe referee replaces the two reciprocal scripts as the
+  canonical analytic certificate; THM-849 remains the decisive self-line
+  counterexample.
 
 ---
 

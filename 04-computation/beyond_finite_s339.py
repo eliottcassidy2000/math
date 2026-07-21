@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
 """
+RETRACTION (MISTAKE-210; THM-2000, 2026-07-21): this historical exploration
+mistakes finite truncations for convergent analytic series.  Both the raw
+A000568 EGF/Dirichlet constructions and the labeled-tournament EGF used below
+diverge away from the origin in their stated senses.  Do not cite their
+convergence or continuation claims; the reciprocal series are the valid
+replacement.
+
 beyond_finite_s339.py — Tournament theory beyond the natural numbers
 opus-2026-03-25-S339
 

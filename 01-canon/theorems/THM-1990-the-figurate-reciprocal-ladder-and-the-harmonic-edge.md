@@ -24,7 +24,8 @@ corrected_referees: [04-computation/support_harmonic_abel_dini_figurate_surface_
 > **CORRECTION (MISTAKE-209; THM-2000).**  The simplex telescoping theorem in
 > this file is correct.  The broader atlas originally conflated a termwise
 > **multiset** sum with the user's literal subset of harmonic numbers, asserted
-> a false linear-growth iff, promoted the conjectural all-odd H-spectrum to a
+> a false linear-growth iff, promoted the conjectural all-odd H-spectrum in
+> `THM-1370-h-spectrum-omits-7-21-all-n.md` to a
 > theorem, and missed Gauss's product for the triangular partial theta.  Under
 > support semantics, repetitions are removed: labeled-tournament and switching
 > values have the same support and the same mass; factorial, Fibonacci, and
