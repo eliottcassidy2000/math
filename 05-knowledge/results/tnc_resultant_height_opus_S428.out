@@ -1,0 +1,14 @@
+ANGULAR UNIFORM (HYP-8535): does the largest bad prime of Res(CT(m0),CT(2m0)) stay
+BOUNDED as the SPAN grows (fixed charge-count 3)?  If yes -> a uniform good prime.
+The tunable pattern {-N, 1, M} at growing M (N=2, middle charge 1):
+
+   pattern (N=2)     m0   |Res|-largest-prime   smallest good prime
+   d=4 (charges -2,1,2): m0=3 CT(m0) monomial (unique-min) -> TNC, no Res needed
+   d=6 (charges -2,1,4): m0=3  max bad prime=5  good p=7
+   d=8 (charges -2,1,6): m0=3 CT(m0) monomial (unique-min) -> TNC, no Res needed
+   d=10 (charges -2,1,8): m0=3 CT(m0) monomial (unique-min) -> TNC, no Res needed
+   d=12 (charges -2,1,10): m0=3 CT(m0) monomial (unique-min) -> TNC, no Res needed
+   d=14 (charges -2,1,12): m0=3 CT(m0) monomial (unique-min) -> TNC, no Res needed
+
+If the largest bad prime GROWS with span, no single uniform prime -- but a good prime
+<= (next prime after max multinomial) always exists by Kummer height. Check growth rate.

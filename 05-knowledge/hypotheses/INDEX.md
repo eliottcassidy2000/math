@@ -17082,6 +17082,33 @@ checking whether the two share a lemma.
 **Related:** THM-1685, THM-1680, THM-1655, THM-1635, THM-415 (vanishing sums), THM-1535
 (GMC cascade), HYP-8450 (JC monodromy vanishing sums), HYP-8495 (trinomial uniform).
 
+### HYP-8545 - Closed-form tunability: {charges} tunable iff a primitive charge-relation of bounded height h(k)
+**Status:** OPEN, characterisation supported by data (opus-2026-07-20-S428). See THM-1755.
+
+THM-1755's angular-uniform dichotomy: for fixed charge-count, GENERIC patterns are
+unique-minimal (CT(m0) a positive monomial => TNC by THM-1655 positivity, uniform, no
+computation); TUNABLE patterns (non-unique minimal rep of 0) are a THIN, resonance-thin
+subset. To make the angular uniform COMPLETE, prove:
+
+    a k-nomial charge set is TUNABLE  <=>  it contains a primitive integer relation
+    alpha_1 c_1 + ... + alpha_k c_k = 0 of HEIGHT sum|alpha_i| <= h(k),
+
+with an explicit h(k). Data: h(3) <= 6 (all 7 tunable triples for N<=5,M<=7 have a relation of
+height <= 6; the c=1 family is exactly {-N,1,N+2}, the c=-1 reflection {-N,-1,N-2}, plus c=+-2
+analogues). This would collapse the infinitely many charge patterns to (generic: one
+positivity argument) + (tunable: a finite union of arithmetic progressions in the exponents,
+each closed by THM-1735 finite-place with a good prime bounded by the resonance).
+
+**Why a bounded height:** a second minimal representation of 0 differs from the first by a
+kernel vector; minimality bounds its support, hence its height. A Siegel/Gordan-type bound on
+the smallest kernel vector of the charge lattice should give h(k) = O(k) or similar.
+
+**Radial companion:** the cross-shell resultant tower (HYP-8540 (2), klein) is the remaining
+radial-uniform piece; angular (this) + radial = unbounded GMC(2) via THM-1740.
+
+**Related:** THM-1755, THM-1735 (finite place), THM-1655 (positivity), THM-1740 (bounded
+Groebner), HYP-8540 (the factorisation), klein cross-shell.
+
 ### HYP-8540 - Uniform stratum bound: collapse bounded GMC(2) to a single finite Groebner test
 **Status:** OPEN; per-stratum decidability PROVED (opus-2026-07-20-S427). See THM-1740.
 

@@ -1,3 +1,42 @@
+## opus-2026-07-20-S428 - The angular uniform piece: the tunable/unique-minimal dichotomy (THM-1755)
+
+Worked the angular half of HYP-8540's unbounded-GMC(2) factorisation. Real progress via a
+dichotomy that collapses the infinitely many charge patterns.
+
+**THE DICHOTOMY.** For a k-nomial pattern, CT(Lambda^m) has POSITIVE multinomial coefficients
+in the gauge params (THM-1715). At the minimal level m0:
+ - UNIQUE minimal rep of 0 => CT(m0) is a single POSITIVE MONOMIAL => only zero is a=0 (lower
+   k-nomial) => TNC by THM-1655 positivity, NO resultant, NO Groebner, UNIFORM in the span.
+ - NON-UNIQUE (TUNABLE) => CT(m0) has >=2 terms, can vanish at tuned complex a => THM-1735
+   finite-place.
+GENERIC patterns are unique-minimal: of {-2,1,M}, only M=4 is tunable; M=6,8,10,12 are all
+unique-minimal (closed with no computation).
+
+**TUNABLE = RESONANCE-THIN, verified.** A charge-triple {-N,c,M} is tunable iff 0 has two
+minimal reps, forcing a SMALL-COEFFICIENT CHARGE RESONANCE. All 7 tunable triples (N<=5,M<=7)
+have a primitive relation of height <= 6. The c=1 tunable triples are EXACTLY {-N,1,N+2}
+(N=2..5 -> M=4,5,6,7); c=-1 gives {-N,-1,N-2}; c=+-2 analogues. So the tunable locus is a
+finite union of arithmetic progressions in (N,M) -- thin and explicit.
+
+**ANGULAR UNIFORM STATEMENT.** For any charge-count, TNC holds on all but a thin
+resonance-characterised family by THM-1655 positivity (uniform, span-independent, no compute);
+on the thin tunable family, THM-1735 finite-place closes each with a good prime bounded by the
+resonance. The remaining angular step (HYP-8545): a closed-form 'tunable iff a primitive
+charge-relation of height <= h(k)', with h(3) <= 6 from the data -- a Siegel/Gordan bound on
+the smallest kernel vector of the charge lattice should give it.
+
+**RADIAL half, framed for klein.** Cross-shell descent = a RESULTANT TOWER Res_1,Res_2,...
+coupling shell s to s+1 (klein's functional L); bottom-up emptiness propagates if each Res_s
+!= 0 -- the finite-Groebner analogue of klein's convergence lemma. Angular (this) supplies
+per-shell emptiness; radial termination is klein's to close. Shared object: branch monodromy
+(roots of unity) indexing both angular reps and radial shells.
+
+**NET.** angular uniform = generic positivity (THM-1655) + thin tunable finite-place (THM-1735),
+reducing the angular side to a characterised thin family (HYP-8545 the closed form). Radial =
+klein's resultant-tower termination. Together = unbounded GMC(2) via THM-1740.
+
+**Artifacts:** THM-1755; HYP-8545; 2 scripts + 2 outputs.
+
 ## klein-2026-07-20-S379 -- THM-1750: the per-root ARBORESCENCE VECTOR is a poly-time tournament RANKING (= the dominance-walk stationary distribution, MCTT) that SPLITS THM-1580's unbreakable 2-group residue -- but is COMPLEMENTARY to H, not dominant; a new 4-pair residue survives (spec A, Sum a, {a_r}, H) at n=7.
 
 **Owner directive:** work another cutting-edge math session, think arborescences.

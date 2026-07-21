@@ -1,0 +1,24 @@
+ANGULAR UNIFORM: CHARACTERISE the TUNABLE charge-triples {-N, c, M} (non-unique minimal
+rep of 0). Unique-minimal => THM-1655 (positivity, no resultant). Tunable => the thin
+subset needing the finite-place certificate. Find the arithmetic law.
+
+   N   c   M   min-m  #reps  tunable?   condition guess
+    2   1  4      3     2    YES       reps=[(-2, -2, 4), (-2, 1, 1)]
+    3   1  5      4     2    YES       reps=[(-3, -3, 1, 5), (-3, 1, 1, 1)]
+    3   2  7      5     2    YES       reps=[(-3, -3, -3, 2, 7), (-3, -3, 2, 2, 2)]
+    4  -1  2      3     2    YES       reps=[(-4, 2, 2), (-1, -1, 2)]
+    4   1  6      5     3    YES       reps=[(-4, -4, -4, 6, 6), (-4, -4, 1, 1, 6), (-4, 1, 1, 1, 1)]
+    5  -1  3      4     2    YES       reps=[(-5, -1, 3, 3), (-1, -1, -1, 3)]
+    5   1  7      6     3    YES       reps=[(-5, -5, -5, 1, 7, 7), (-5, -5, 1, 1, 1, 7), (-5, 1, 1, 1, 1, 1)]
+
+tunable triples found (N<=5, M<=7): 7
+
+LOOK FOR THE LAW: in each tunable triple, is there a linear relation among -N,c,M
+(a 'sub-resonance') that creates the second rep?
+   {-2,1,4}: primitive relation -4*(-2)+0*(1)+-2*4=0
+   {-3,1,5}: primitive relation -3*(-3)+1*(1)+-2*5=0
+   {-3,2,7}: primitive relation -3*(-3)+-1*(2)+-1*7=0
+   {-4,-1,2}: primitive relation -2*(-4)+0*(-1)+-4*2=0
+   {-4,1,6}: primitive relation -3*(-4)+0*(1)+-2*6=0
+   {-5,-1,3}: primitive relation -2*(-5)+1*(-1)+-3*3=0
+   {-5,1,7}: primitive relation -3*(-5)+-1*(1)+-2*7=0
