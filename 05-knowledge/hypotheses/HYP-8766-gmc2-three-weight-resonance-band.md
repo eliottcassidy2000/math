@@ -19,12 +19,18 @@ g=gcd(p,q), p0=p/g, q0=q/g, r=p0+q0,
 h=s^(pq/g) a^q0 c^p0, d=deg b, e=deg h, lambda=e-rd.
 ```
 
-THM-2017 proves the target whenever `|lambda|>=r+1`. Therefore the entire
-unresolved degree geometry consists of only
+THM-2017 proves the target whenever `|lambda|>=r+1`, and at
+`|lambda|=r` unless one explicit hyper-Bessel value vanishes. Therefore the
+entire unresolved degree geometry consists of
 
 ```text
-lambda in {-r,-r+1,...,r-1,r}.                                      (1)
+lambda in {-r,-r+1,...,r-1,r},                                     (1)
 ```
+
+with the two endpoints already reduced to discrete exceptional
+leading-coefficient loci. THM-2017 removes even those exceptions when
+`p0=q0=1` and `b,h` are monomials: the universal `1/m` correction is a
+nonzero Bessel derivative at every zero of the leading term.
 
 ## Conjecture
 
@@ -51,9 +57,10 @@ Phi_(p0,q0)(xi)=sum_{k>=0} xi^k/((q0k)!(p0k)!),
 xi=alpha/(beta^r d^r).                                                (3)
 ```
 
-Thus even boundary nonvanishing is not literal endpoint dominance: the
-endpoint is resummed into a hyper-Bessel function, which can have complex
-zeros. At `e-rd=r`, on `m=rn`, removal of `j` primitive returns analogously
+THM-2017 proves (3), not merely formally. Thus boundary nonvanishing is not
+literal endpoint dominance: the endpoint is resummed into a hyper-Bessel
+function, which can have complex zeros. At `e-rd=r`, on `m=rn`, removal of
+`j` primitive returns analogously and rigorously
 produces
 
 ```text
@@ -73,11 +80,12 @@ multinomial gain `m^r`, while a degree deficit `Delta` supplies only
 
 ## Proposed closure program
 
-1. **Boundary offsets `lambda=+-r`.** Prove (3)-(4) with a full `1/m`
-   expansion. If the leading hyper-Bessel value is zero, show the next
+1. **Boundary offsets `lambda=+-r`.** Extend the proved limits (3)-(4) to a
+   full `1/m` expansion. If the leading hyper-Bessel value is zero, show the next
    coefficients form differential operators in `theta=xi d/dxi` with no
-   common nonzero zero. THM-2014's linear exact EGF is the `(p0,q0)=(1,1)`
-   model of this principle.
+   common nonzero zero. THM-2017 carries this out for monomial `b,h` when
+   `(p0,q0)=(1,1)`; THM-2014's linear exact EGF is the nonmonomial resonant
+   model of the same principle.
 2. **Intermediate offsets.** Apply saddle analysis to the hyper-Bessel
    boundary layer. Separate the finitely many exponential phases by a
    subsequence in `m`; all-moment vanishing would require every saddle

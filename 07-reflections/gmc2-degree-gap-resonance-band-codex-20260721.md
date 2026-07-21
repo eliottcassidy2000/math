@@ -1,7 +1,7 @@
 # GMC(2): degree slopes beat atom separation, and the residue is a resonance band
 
-**Session:** codex-2026-07-21-gmc2-degree-gap  
-**Theorem:** THM-2017  
+**Session:** codex-2026-07-21-gmc2-degree-gap
+**Theorem:** THM-2017
 **Hypothesis:** HYP-8766
 
 ## Outcome first
@@ -22,7 +22,12 @@ h=s^(pq/g)a^(q/g)c^(p/g),       r=(p+q)/g.
 ```
 
 The open part of this entire three-weight family is compressed to the finite
-band `-r<=deg h-r deg b<=r`.
+band `-r<=deg h-r deg b<=r`. At both endpoints THM-2017 goes further: the
+whole boundary layer converges to an explicit generalized hyper-Bessel
+function, so only a discrete exceptional leading-coefficient locus remains.
+For symmetric primitive charges and monomial `b,h`, even those exceptional
+zeros are closed: the first `1/m` correction is a Bessel derivative, and ODE
+uniqueness prevents the value and derivative from vanishing together.
 
 ## Why the first attractive proof was wrong
 

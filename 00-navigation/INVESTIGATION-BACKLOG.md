@@ -10406,7 +10406,7 @@ Surfaced by the citation-graph tool (corpus_archaeology_kps_S128c136.py); see
 - **[RESCUE] under-titled orphans** (homology/binary-form/eigenvalue/GIT): index existing work.
 ## GMC(2) three-weight resonance-band closure (THM-2017 / HYP-8766, 2026-07-21)
 
-- [ ] Derive the first two uniform `1/m` coefficients at the boundary offsets `deg h-r deg b=+-r` as differential operators on the generalized hyper-Bessel endpoint functions; compute their common-zero resultants for primitive charge pairs `p0+q0<=6`.
+- [ ] THM-2017 now proves the leading hyper-Bessel limits at `deg h-r deg b=+-r`. Derive the first two uniform `1/m` corrections as differential operators on those functions; compute their common-zero resultants for primitive charge pairs `p0+q0<=6`.
 - [ ] For `0<|deg h-r deg b|<r`, prove the active-channel scale `m^((r-|lambda|)/r)` and separate the finitely many saddle phases on an arithmetic subsequence.
 - [ ] At exact slope resonance `deg h=r deg b`, derive the proportional-channel entropy functional and test whether coefficient scaling can always expose a unique maximal-real-part saddle.
 - [ ] Feed the resulting coefficient-descent tower into HYP-8765's localized radial-channel determinant program. Do not reuse atomwise first-return separation (MISTAKE-211).

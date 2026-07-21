@@ -127,6 +127,38 @@ def ratio_text(value: int, reference: int) -> str:
     return f"{float(ratio):.12g}  (num_bits={abs(ratio.numerator).bit_length()}, den_bits={ratio.denominator.bit_length()})"
 
 
+def hyper_bessel_boundary(x: float, left_step: int, right_step: int) -> float:
+    """Evaluate sum x^k/((left_step*k)!(right_step*k)!)."""
+
+    total = 0.0
+    term = 1.0
+    k = 0
+    while True:
+        total += term
+        k += 1
+        denominator = 1
+        for value in range(left_step * (k - 1) + 1, left_step * k + 1):
+            denominator *= value
+        for value in range(right_step * (k - 1) + 1, right_step * k + 1):
+            denominator *= value
+        term *= x / denominator
+        if abs(term) < 1e-16:
+            return total
+
+
+def sparse_exponential_boundary(x: float, step: int) -> float:
+    """Evaluate sum x^k/(step*k)!."""
+
+    total = 0.0
+    k = 0
+    while True:
+        term = x**k / factorial(step * k)
+        total += term
+        if abs(term) < 1e-16:
+            return total
+        k += 1
+
+
 def tournament_fingerprint(m: int, r: int, d: int, e: int) -> dict[str, object]:
     """Tournament on return channels k, oriented by radial degree.
 
@@ -184,7 +216,14 @@ def check_example(example: dict[str, object]) -> None:
 
     print(f"\n[{name}]")
     print(f"charges=(+{p},-{q}), primitive_counts=(q/g={q0},p/g={p0}), r={r}")
-    print(f"deg(b)={d}, deg(h)={e}, e-r*d={gap}, theorem_gate={abs(gap) >= r + 1}")
+    regime = (
+        "strict_gap"
+        if abs(gap) >= r + 1
+        else "sharp_boundary"
+        if abs(gap) == r
+        else "inner_resonance"
+    )
+    print(f"deg(b)={d}, deg(h)={e}, e-r*d={gap}, regime={regime}")
 
     for m in range(1, 9):
         via_channels = three_weight_moment(p, q, a, b, c, m)
@@ -192,13 +231,18 @@ def check_example(example: dict[str, object]) -> None:
         assert via_channels == via_wick, (name, m, via_channels, via_wick)
     print("direct_Wick_vs_channel_formula: PASS (m=1..8)")
 
-    if gap <= -(r + 1):
+    if gap <= -r:
         for m in example["sample_m"]:
             assert isinstance(m, int)
             value = three_weight_moment(p, q, a, b, c, m)
             reference = laplace_factorial(power(b, m))
             print(f"m={m:3d}  M_m/L(b^m)={ratio_text(value, reference)}")
-    elif gap >= r + 1:
+        if gap == -r:
+            alpha, beta = trim(h)[-1], trim(b)[-1]
+            xi = alpha / (beta**r * d**r)
+            predicted = hyper_bessel_boundary(xi, q0, p0)
+            print(f"predicted_Phi={predicted:.12g}  xi={xi:.12g}")
+    elif gap >= r:
         for n in example["sample_n"]:
             assert isinstance(n, int)
             m = r * n
@@ -209,6 +253,11 @@ def check_example(example: dict[str, object]) -> None:
                 * laplace_factorial(power(h, n))
             )
             print(f"n={n:3d}  M_(r*n)/(C_n L(h^n))={ratio_text(value, reference)}")
+        if gap == r:
+            alpha, beta = trim(h)[-1], trim(b)[-1]
+            eta = (q0**q0 * p0**p0 / e**r) * (beta**r / alpha)
+            predicted = sparse_exponential_boundary(eta, r)
+            print(f"predicted_Psi={predicted:.12g}  eta={eta:.12g}")
     else:
         print("resonance_band_control: theorem deliberately makes no asymptotic-ratio claim")
 
@@ -244,6 +293,24 @@ def main() -> None:
             "p": 1,
             "q": 1,
             "a": (1, 1, 0, 0, 1),
+            "b": (1, 1),
+            "c": (1,),
+            "sample_n": (5, 10, 20, 40),
+        },
+        {
+            "name": "sharp_b_boundary_p1q1",
+            "p": 1,
+            "q": 1,
+            "a": (1, 1),
+            "b": (1, 1, 1),
+            "c": (1,),
+            "sample_m": (10, 20, 40, 80),
+        },
+        {
+            "name": "sharp_h_boundary_p1q1",
+            "p": 1,
+            "q": 1,
+            "a": (1, 1, 0, 1),
             "b": (1, 1),
             "c": (1,),
             "sample_n": (5, 10, 20, 40),

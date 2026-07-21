@@ -1,13 +1,14 @@
 ---
 id: THM-2017
-title: "GMC(2) THREE-WEIGHT DEGREE-GAP THEOREM: for P=Z^p a(s)+b(s)+Zbar^q c(s), s=Z Zbar, put g=gcd(p,q), r=(p+q)/g and h=s^(pq/g)a^(q/g)c^(p/g). The exact radial-channel formula is E[P^m]=sum_k m!/((q/g k)!(p/g k)!(m-rk)!) L(h^k b^(m-rk)). If d=deg b and e=deg h satisfy |e-rd|>=r+1, one endpoint channel dominates UNIFORMLY over every k: E[P^m]/L(b^m)->1 when rd-e>=r+1, while on m=rn the all-return channel gives ratio ->1 when e-rd>=r+1. Hence NC2 (and GMC(2)) holds on this infinite-dimensional slice outside the finite resonance band -r<=e-rd<=r. The proof controls k proportional to m and does not separate first-return atoms, which can cancel."
+title: "GMC(2) THREE-WEIGHT DEGREE-GAP + BOUNDARY THEOREM: for P=Z^p a(s)+b(s)+Zbar^q c(s), the exact primitive-return channels have affine factorial degree D(k)=dm+(e-rd)k. If |e-rd|>=r+1, one endpoint dominates uniformly over all channels. At the sharp boundary |e-rd|=r, the complete boundary layer instead converges to an explicit generalized hyper-Bessel function; NC2 holds whenever that value is nonzero, hence generically on the boundary. The proof controls channels proportional to m and permits first-return cancellation."
 status: >
   PROVED. The charge-balance identity is exact. The asymptotic proof uses a uniform
   mixed-factorial lemma plus a small-channel/linear-channel split; it does not infer
-  scalar vanishing term by term. Direct Wick expansion and the channel formula agree
-  for m=1..8 in four controls. Boundary cases |e-rd|=r+1 show the asserted ratios
-  numerically. This proves a genuine NC2 stratum, not full NC2; the resonance band
-  remains open except for previously closed subfamilies such as THM-2014.
+  scalar vanishing term by term. Dominated convergence at |e-rd|=r gives the stated
+  hyper-Bessel limits. Direct Wick expansion and the channel formula agree for m=1..8
+  in six controls; strict and sharp boundary limits are sampled. This proves a genuine
+  NC2 stratum, not full NC2. The inner resonance band and the discrete zero loci of the
+  two boundary functions remain open except for subfamilies such as THM-2014.
 source: codex-2026-07-21-gmc2-degree-gap
 depends_on:
   - THM-1510  # one-variable factorial asymptotic / two-weight NC2
@@ -155,15 +156,39 @@ Equations (6)-(7) prove the uniform, all-channel limit
 E[P^m] / L(b^m) -> 1.                                                    (8)
 ```
 
-The gap `r+1` is the exact threshold for this ratio argument: the first
+The gap `r+1` is the exact threshold for a ratio-to-one argument: the first
 charged channel has multinomial gain `m^r` and factorial loss `m^Delta`.
+
+### The sharp boundary `Delta=r`
+
+The same proof gives a nontrivial limit at equality. Let `alpha,beta` be the
+leading coefficients of `h,b` and define
+
+```text
+Phi_(p0,q0)(x) = sum_{k>=0} x^k/((q0 k)!(p0 k)!),
+xi = alpha/(beta^r d^r).
+```
+
+For each fixed `k`, the `k`-channel divided by `L(b^m)` tends to
+`xi^k/((q0k)!(p0k)!)`: the multinomial gain `m^(rk)` exactly cancels the
+factorial loss `(dm)^(-rk)`. Estimate (6), now without its factor `m^-k`, is
+a summable majorant independent of `m`; (7) still removes linear channels.
+Dominated convergence therefore proves
+
+```text
+E[P^m]/L(b^m) -> Phi_(p0,q0)(xi)             when rd-e=r.              (9)
+```
+
+The entire function `Phi` has value one at zero, so it is not identically
+zero and its zeros are discrete. Thus the boundary is NC2-clear whenever
+`Phi_(p0,q0)(xi)!=0`, in particular for generic leading coefficients.
 
 ## 4. The all-return-dominant half
 
 Assume instead
 
 ```text
-Gamma := e-rd >= r+1.                                                    (9)
+Gamma := e-rd >= r+1.                                                   (10)
 ```
 
 Restrict to `m=rn` and put `j=n-k`, the number of primitive returns removed
@@ -176,11 +201,11 @@ N_j = en-Gamma j.
 The `j=0` term is
 
 ```text
-A_n = (rn)! / ((q0 n)!(p0 n)!) * L(h^n),                               (10)
+A_n = (rn)! / ((q0 n)!(p0 n)!) * L(h^n),                               (11)
 ```
 
 and is nonzero for large `n` by (2). For `j<=epsilon n`, the multinomial
-ratio to (10) satisfies
+ratio to (11) satisfies
 
 ```text
 (q0 n)_(q0 j) (p0 n)_(p0 j) / (rj)! <= A^j n^(rj)/(rj)!.
@@ -190,19 +215,92 @@ Combining this with the factorial-degree loss and (3) gives
 
 ```text
 |T_(n-j)/A_n| <= C [A n^(r-Gamma)]^j/(rj)!
-                <= C [A/n]^j/(rj)!.                                    (11)
+                <= C [A/n]^j/(rj)!.                                   (12)
 ```
 
 The positive-`j` sum is `O(1/n)`. As before, `j>epsilon n` loses a linear
 fraction of `en` and contributes `exp(-c n log n)`. Hence
 
 ```text
-E[P^(rn)] / A_n -> 1.                                                    (12)
+E[P^(rn)] / A_n -> 1.                                                   (13)
 ```
+
+### The sharp boundary `Gamma=r`
+
+At equality, define
+
+```text
+Psi_r(y) = sum_{j>=0} y^j/(rj)!,
+eta = (q0^q0 p0^p0/e^r) * (beta^r/alpha).
+```
+
+For fixed `j`, the falling-factorial multinomial ratio contributes
+`q0^(q0j)p0^(p0j)n^(rj)/(rj)!`, the factorial degree contributes
+`(en)^(-rj)`, and the leading coefficients contribute
+`beta^(rj)/alpha^j`. The bound (12) at equality is again summable in `j`,
+and linear `j` remain superfactorially small. Hence
+
+```text
+E[P^(rn)]/A_n -> Psi_r(eta)                  when e-rd=r.              (14)
+```
+
+Again `Psi_r(0)=1`, so its zero set is discrete and the boundary is
+NC2-clear whenever `Psi_r(eta)!=0`. Equivalently,
+`Psi_r(y)=r^-1 sum_(omega^r=1) exp(omega y^(1/r))`; the displayed power
+series makes this identity branch-independent.
+
+### The exceptional boundary zeros do not survive in the symmetric monomial model
+
+There is one useful case where the discrete exception can be removed entirely.
+Assume `p0=q0=1` (so `r=2`) and both `b=beta s^d` and `h=alpha s^e`
+are monomials.
+
+On the neutral boundary `e=2d-2`, the exact normalized `k`-term is
+
+```text
+xi^k/(k!)^2 * [1-(1-1/d)(2k)(2k-1)/(2m)+O_k(m^-2)],
+xi=alpha/(beta^2 d^2).
+```
+
+The factorial majorant above permits termwise summation of this expansion.
+With `theta=xi d/dxi` and `Phi(xi)=sum xi^k/(k!)^2`,
+
+```text
+E[P^m]/L(b^m)
+ = Phi(xi) -(1-1/d)(4 theta^2-2 theta)Phi(xi)/(2m)+O(m^-2).           (15)
+```
+
+The Bessel equation is `theta^2 Phi=xi Phi`. If `Phi(xi)=0`, then
+`xi!=0` and (15) reduces to
+
+```text
+E[P^m]/L(b^m) = ((d-1)/d) theta Phi(xi)/m+O(m^-2).
+```
+
+Here `d>=2` (because `h` is a nonzero polynomial on this boundary), and
+`theta Phi(xi)!=0`: otherwise the second-order ODE with zero value and
+derivative at the ordinary point `xi` would force `Phi` to be identically
+zero. Thus the supposedly exceptional leading zero is detected one order
+later.
+
+On the all-return boundary `e=2d+2`, write
+`eta=beta^2/(alpha e^2)` and `Psi(eta)=sum eta^j/(2j)!=cosh(sqrt(eta))`.
+The exact normalized removed-return term gives
+
+```text
+E[P^(2n)]/A_n
+ = Psi(eta) + [(-1+2/e)theta^2+(1-1/e)theta]Psi(eta)/n+O(n^-2).       (16)
+```
+
+Now `theta^2 Psi=(theta Psi)/2+(eta Psi)/4`. At a zero of `Psi`, the
+`1/n` coefficient in (16) is exactly `(theta Psi)/2`, which is nonzero by
+the same ODE-uniqueness argument. Consequently **both sharp boundaries are
+fully NC2-clear for symmetric primitive charges with monomial `b,h`**, even
+when the leading hyper-Bessel limit vanishes.
 
 ## 5. NC2 on the degree-gap stratum
 
-If `a,b,c` are all nonzero and `|e-rd|>=r+1`, (8) or (12) supplies infinitely
+If `a,b,c` are all nonzero and `|e-rd|>=r+1`, (8) or (13) supplies infinitely
 many nonzero moments. The degenerate cases are already exact:
 
 - if `a=0` or `c=0` while `b!=0`, charge balance leaves `L(b^m)`, eventually
@@ -213,13 +311,19 @@ many nonzero moments. The degenerate cases are already exact:
   strict charge; these, together with `P=0`, are precisely the one-sided NC2
   members.
 
-Thus NC2, and therefore GMC(2), holds throughout this degree-gap slice.
+Thus NC2, and therefore GMC(2), holds throughout the strict degree-gap slice.
+Equations (9) and (14) also prove it generically on both sharp boundaries;
+(15)-(16) close both boundaries completely in the symmetric monomial model.
 
 The unresolved degrees form the finite band
 
 ```text
--r <= e-rd <= r.                                                        (13)
+-r <= e-rd <= r.                                                       (17)
 ```
+
+The endpoints in (17) are now reduced further to the discrete exceptional
+sets `Phi(xi)=0` and `Psi(eta)=0`; only the inner `2r-1` offsets require a
+new saddle regime for every leading coefficient.
 
 THM-2014 is the important constant-endpoint model inside and across this
 picture: for `p=q=1` and constant `a,c`, it proves the full slice for arbitrary
