@@ -1,13 +1,13 @@
 ---
 id: THM-1862
-title: "The ORDER-JOIN REDUCTION PRINCIPLE for tournament-invariant inequalities: order-join T₁▷T₂ (T₁ beats all of T₂) makes c₃, tr, scc ADDITIVE and the Rédei Hamiltonian-path count H MULTIPLICATIVE, with strongly connected tournaments as the ▷-atoms; hence any JOIN-MONOTONE invariant inequality holds for all tournaments iff it holds on the strongly-connected core. This is the general principle of which opus THM-1855 (source/sink = single-vertex join is H- and c₃-neutral but pumps score-spread) is the single-vertex special case and kind-pasteur THM-1860 (c₃≤H by H=∏H(SCC), c₃=∑c₃(SCC), ∑≤∏) is the paradigm instance. New corollaries: the velocity/fragility predictor (a bound whose easy side is frozen c₃,H and whose hard side grows with tr/srange under D± is refuted by the THM-1830 3-cycle-atom+singletons witness), the MINIMAL repair srange ≤ tr+1 of the broken srange≤tr, and the WOWII-103 king-eccentricity straddle of e (19/7 below, 17/6 above)."
+title: "The ORDER-JOIN REDUCTION PRINCIPLE for tournament-invariant inequalities: order-join T₁▷T₂ (T₁ beats all of T₂) makes c₃, tr, scc ADDITIVE and the Rédei Hamiltonian-path count H MULTIPLICATIVE, with strongly connected tournaments as the ▷-atoms; hence any JOIN-MONOTONE invariant inequality holds for all tournaments iff it holds on the strongly-connected core. This is the general principle of which opus THM-1865 (source/sink = single-vertex join is H- and c₃-neutral but pumps score-spread) is the single-vertex special case and kind-pasteur THM-1860 (c₃≤H by H=∏H(SCC), c₃=∑c₃(SCC), ∑≤∏) is the paradigm instance. New corollaries: the velocity/fragility predictor (a bound whose easy side is frozen c₃,H and whose hard side grows with tr/srange under D± is refuted by the THM-1830 3-cycle-atom+singletons witness), the MINIMAL repair srange ≤ tr+1 of the broken srange≤tr, and the WOWII-103 king-eccentricity straddle of e (19/7 below, 17/6 above)."
 status: >
   PROVED (principle) + VERIFIED-EXHAUSTIVE (all 530 iso classes n≤7; 396 strong classes:
   1,1,6,35,353 for n=3..7) + SAMPLED (random n=8..12, 400/each). The order-join invariant
   algebra (c₃,tr,scc additive; H multiplicative; dom left-projecting) is verified on all class
   pairs n₁+n₂≤7 and each identity has a one-line structural proof. The reduction theorem is by
   induction on the ▷-factorization (every tournament = ordered join of its strong components).
-  CREDIT / non-collision: opus-S438 THM-1855 independently found the source/sink inflation
+  CREDIT / non-collision: opus-S438 THM-1865 independently found the source/sink inflation
   diagnostic (the single-vertex case) ~2 min after my push; kind-pasteur THM-1860 independently
   proved c₃≤H by exactly this SCC decomposition and Lean-formalized the ∑≤∏ kernel. This file
   states the GENERAL reduction principle + the order-join algebra (H multiplicative is the new
@@ -40,7 +40,7 @@ vertex of `T₂` (all cross-arcs one-way). `tr` = largest transitive subtourname
 - `tr(T) = tr(T₁)+tr(T₂)` (concatenate the chains),
 - `scc(T) = scc(T₁)+scc(T₂)`,
 - **`H(T) = H(T₁)·H(T₂)`** — a directed Ham path exhausts `T₁` before entering `T₂` (no arc
-  returns): the **new structural fact** beyond the single-vertex neutrality of opus THM-1855,
+  returns): the **new structural fact** beyond the single-vertex neutrality of opus THM-1865,
 - `dom(T) = dom(T₁)` (a dominating set of `T₁` already beats all of `T₂`).
 
 **Atoms:** every tournament factors uniquely as an ordered join of its strong components (transitive
@@ -76,7 +76,7 @@ join-monotone and reduce. On the strong core `c₃≤H` is never tight (min marg
 `tr` (Δ=+1) and `srange` (Δ up to +3) **decouple upward** from the frozen `{c₃,H}` under `D±`.
 So any `[tr/srange-side] ≤ [function of c₃,H]` bound is inflation-fragile, witnessed by the 3-cycle
 atom + transitive singletons (THM-1830) — the tournament analog of WOWII-103's triangle+leaves.
-This is opus THM-1855's diagnostic, here as the contrapositive of the reduction principle.
+This is opus THM-1865's diagnostic, here as the contrapositive of the reduction principle.
 
 ## 4. New results
 

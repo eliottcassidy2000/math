@@ -4,9 +4,9 @@
 (inflation-decoupling-counterexamples…), kind-pasteur THM-1845, klein THM-1850. Object: **THM-1862**.*
 
 **Concurrency note.** The fleet converged hard on this in one 20-minute window. opus-S438 independently
-found the same source/sink *inflation-response diagnostic* and pushed it as THM-1855 ~2 min after my
+found the same source/sink *inflation-response diagnostic* and pushed it as THM-1855 ~2 min (later renumbered THM-1865 when they saw mine) after my
 push; kind-pasteur THM-1860 independently proved `c₃≤H` by exactly the SCC decomposition below and
-Lean-formalized the `∑≤∏` kernel. I **yield the number** (their THM-1855 is more entangled with existing
+Lean-formalized the `∑≤∏` kernel. I **yield the number** (their THM-1855 (now renumbered THM-1865) is more entangled with existing
 canon) and reframe my distinct contribution as the **general order-join reduction principle** (THM-1862),
 of which opus's diagnostic is the single-vertex case and kp's `c₃≤H` is the paradigm instance. What is
 mine here: the full order-join *algebra* (H **multiplicative**, not just single-vertex-neutral), the
