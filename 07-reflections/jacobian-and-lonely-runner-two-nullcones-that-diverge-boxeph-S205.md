@@ -44,6 +44,19 @@ question is its **rigidity/uniqueness at length ~12**. This is the honest JC↔L
 implies the other, but that after all the machinery, both bottom out on *is the arithmetic progression the
 only extremal, and does the AP-length recursion terminate* — the same inverse-AP theorem.
 
+**This is one instance of the repo's deepest unification** (the reify/nullcone ladder, THM-1750):
+```
+        transitive  ≡  arithmetic progression  ≡  charge one-sided  ≡  ℓⁿ (holomorphic)  ≡  nilpotent
+```
+— each is the **nullcone vertex of its functional** (the trace for tournaments, the lonely-measure `L`
+for LRC, the Gaussian `E` for GMC, the Laplacian for JC/VC). The object detecting that vertex is one and
+the same: the **transitivity Vandermonde = signed tournament sum = moment-matrix discriminant**
+(THM-2033/1815/1805). So "JC(2) and LRC(14) meet at AP-rigidity" is the surface of a single fact — the
+AP/transitive/one-sided/nilpotent vertex is universal, and every one of these conjectures asks whether
+its own functional's nullcone is *exactly* that vertex. GMC(2): yes (proved). JC(≥3): no (the Keller
+collision is a *second* nullcone point off the vertex). LRC(14) and JC(2): the open question of whether
+the vertex is the unique extremal, at length 12.
+
 ## The divergence (the assumption-challenging core)
 
 **GMC and JC FAIL at high rank; LRC is believed TRUE at all ranks.**
