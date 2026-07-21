@@ -1,0 +1,18 @@
+Global tr(S^4) fit, features {n^2, n, sum s_i^2, SC4, 1}, pooled n=3..6:
+   coeffs [n^2,n,sum_s2,SC4,1] = [np.float64(-196.331), np.float64(1123.311), np.float64(46.658), np.float64(62.549), np.float64(-1853.377)]  exact=False
+   fit {n(n-1), sum_s2, SC4}: [np.float64(-95.874), np.float64(44.498), np.float64(59.798), np.float64(807.84)]  exact=False
+
+SC4 decoupling threshold (the mechanism behind var's n=5 wall):
+   n=4: SC4 determined by (score,c3)? yes
+   n=5: SC4 determined by (score,c3)? NO (SPLIT)
+   n=6: SC4 determined by (score,c3)? NO (SPLIT)
+
+var(=tr4) determined by (score, SC4) alone?
+   n=3: yes
+   n=4: yes
+   n=5: yes
+   n=6: yes
+
+ => var(lambda^2) is a 4-SUBTOURNAMENT-CENSUS invariant (score + SC4); it decouples from
+    (score,c3) exactly when SC4 does = n=5. The 'quaternion wall' = the degree-4 invariant
+    first escaping the degree-<=2 data.

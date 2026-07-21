@@ -1,0 +1,19 @@
+(1) tr(S^4) EXACT FORMULA fit against {n(n-1), sum C(s_i,2), SC4}
+======================================================================
+ n=3: tr(S^4) = 2.9189*n(n-1) + 0.0*SumC(s_i,2) + 0.0*SC4 + 0.4865   exact=True
+ n=4: tr(S^4) = -4.9655*n(n-1) + 32.0*SumC(s_i,2) + 64.0*SC4 + -0.4138   exact=True
+ n=5: tr(S^4) = -22.9426*n(n-1) + 64.0*SumC(s_i,2) + 64.0*SC4 + -1.1471   exact=True
+ n=6: tr(S^4) = -50.9434*n(n-1) + 96.0*SumC(s_i,2) + 64.0*SC4 + -1.6981   exact=True
+
+ GLOBAL fit (all n=3..6 pooled):
+   tr(S^4) = -73.625*n(n-1) + 88.995*SumC(s_i,2) + 59.798*SC4 + 807.84
+   exact over ALL tournaments n=3..6: False
+
+======================================================================
+(2) DECOUPLING THRESHOLD with coarser Y (does degree-2 push the wall past 5?)
+  var(=tr4) | score           : ['det', 'det', 'SPLIT', 'SPLIT']   threshold=5
+  var(=tr4) | (score,c3)      : ['det', 'det', 'SPLIT', 'SPLIT']   threshold=5
+  var(=tr4) | (score,c3,SC4)  : ['det', 'det', 'det', 'det']   threshold=>6
+
+ READING: if tr(S^4)=affine in SC4, then var is a 4-vertex invariant; it decouples from Y
+ exactly when SC4 does. The threshold under (score,c3) vs (score,c3,SC4) locates the wall.

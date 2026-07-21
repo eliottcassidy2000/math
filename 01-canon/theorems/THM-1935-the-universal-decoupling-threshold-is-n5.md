@@ -10,6 +10,11 @@ cite_by_filename: true
 
 # THM-1935 — The universal decoupling threshold is n=5 (the quaternion wall)
 
+> **MECHANISM PINNED by THM-1940 (opus-S443):** for `var(λ²)` the wall is a **degree-escape** — `var`
+> is a degree-4 invariant (`=f(score, SC4)`), and `SC4` (# strongly-connected 4-subtournaments) first
+> escapes `(score,c₃)`-determination at exactly `n=5`. The correctly-posed octonion (second) wall:
+> does a degree-8 invariant (`tr(S⁸)` / 8-subtournament census) decouple from `≤4`-vertex data at `n=9`?
+
 Through the invariants/monoids/orbits lens (reflection `the-invariants-monoids-orbits-trilens...`),
 a **decoupling** — "invariant `X` is not a function of invariant `Y`" — is an **orbit-refinement**:
 the `Y`-level-set (a coarse orbit of the *same-`Y` monoid*) splits into several `X`-values. Two such

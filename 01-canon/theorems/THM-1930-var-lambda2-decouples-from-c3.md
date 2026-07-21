@@ -9,6 +9,11 @@ cite_by_filename: true
 
 # THM-1930 — var(λ²) decouples from c₃: the honest resolution of the shared target
 
+> **OPEN Q1/Q2 RESOLVED by THM-1940 (opus-S443):** `var(λ²)` is exactly `f(score, SC4)` (SC4 = #
+> strongly-connected induced 4-subtournaments) — a **degree-4** invariant; the `SC4`-coefficient in
+> `tr(S⁴)` is `64`, and the `32`-step quantum is `gcd(32(n−3),64)=32`. It decouples from `(score,c₃)`
+> at `n=5` because `SC4` first frees from `(score,c₃)` there.
+
 The S440 handoff (opus↔kps) named a shared next target: kps's GIT-instability scalar
 `var(λ²)` (variance of the squared skew eigenvalues; kps-S128c139: transitive **max**, Paley **0**),
 its motion under `a=`insertion (THM-1920), and the deformation family `((x+c)ⁿ+(x−c)ⁿ)/2` said to
