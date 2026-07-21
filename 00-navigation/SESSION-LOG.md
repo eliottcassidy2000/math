@@ -1,3 +1,55 @@
+## opus-2026-07-20-S439 - THE ZOO: repo-wide archaeology (6 agents) + the LRC-extremal Lean unlock + the insertion-response calculus (THM-1880)
+
+Owner: work the remaining unlock; build a living catalog of every idea/thread/method; recover the
+forgotten ones; procedurally generate new frames/angles/computations; map the gaps. The repo is
+huge (1346 THM, 2555 reflections, 7650 HYP, 10249 results) -- ran SIX parallel Explore agents
+(navigation/backlog, hypothesis graveyard, reflections, engineering/paper, method inventory,
+object-grid+Lean-state).
+
+**UNLOCK (a) DELIVERED (machine-checked):** 04-computation/lean/LrcExtremalCert.lean -- standalone
+Mathlib-FREE, N-only native_decide cert proving M({1..13})=M({1..11,13,24})=1/14 as a finite beat-grid
+check (upper: 14*md(D,a)<=D over the grid; lower: md(14,1)=1). Builds clean (axiom base = ofReduceBool).
+Reference: lrc_extremal_certificate_reference_opus_S439.py (grid 351/715; argmax=(Z/14)* per THM-1380).
+HONEST: the fleet ALREADY has this stronger -- LRCAPTight.mreach_AP_eq (Dirichlet, real sup) +
+LRCGridValue native_decide grid @ n=12; mine is standalone + newly covers the WOWII leaf-inflation
+family {1..11,13,24} their flagships don't. Noted in the cert header.
+
+**NEW RESULT THM-1880 (insertion-response calculus)** [renumbered from THM-1875, ceded to kps-S128c137
+first-push]: the generative-engine seed. Add a vertex u beating exactly subset P. (A) Delta c3(T,P)=
+e(P->V\P) (forward cut), exact + proved. (B) H-neutral iff P is a condensation down-set; #H-neutral=
+#SCC(T)+1 (verified n<=5: the 2-neutral counts 2,24,544 = A051337 strongly-connected tournaments).
+Unifies THM-1865 (source/sink) + boxeph THM-1855 (order-join) + kps THM-1860 (H=prod H(SCC)), explains
+forgotten HYP-260.
+
+**THE-ZOO.md (00-navigation)** -- living master index: bestiary/toolbox/frames/forgotten/gaps/
+generative-engine. CONVERGENT with klein-S399 TOURNAMENT-INVARIANT-ZOO-ATLAS + death-star-S79
+procedural-generation-grammar + mac-mini atlas-of-atlases (same session, same directive) -- cross-
+referenced them as siblings (frame 17), positioned THE-ZOO's distinctive part = the broader repo-wide
+six-agent forgotten-lead recovery + the two-empty-column gap.
+
+**KEY GAPS FOUND:** the two nearly-empty invariant columns across ALL objects = min-FEEDBACK-ARC-SET
+and CHROMATIC/dichromatic number; +18 empty object×invariant cells (top: LRC-speed-set×{H,c3,spectrum,
+homology} -- bridge THM-381 untraversed; even graphs E_n row; Pfaffian off tournaments; Cayley-Dickson
+per-level invariants).
+
+**TOP FORGOTTEN THREADS (now indexed in THE-ZOO §4 + backlog pointer):** metagraph transport
+183=|PG(2,13)| (the one place tournament<->LRC met), T-S84-A (Redei parity as LRC obstruction),
+vertex-deletion-as-LND (Redei<->JC), near-misses HYP-6720/3805/6445/5207 (corrected forms open),
+un-run computations HYP-7940 (k=13 sieve)/2371 (R(31))/3122 (quartic cumulant)/7540 (S4 moment LP),
+the runner braid, the dormant March-2026 applied continent (codes/amplituhedron/protein/crypto/ML).
+
+**ENGINEERING:** most deliverables BUILT (mod_rank, circulant_homology, tournament_toolkit, formalrank,
+boost_ranker...); gaps = PyPI packaging, T19 deg-6 Omega, cycle_deletion_winner, Paper 2 assembly,
+GPU kernel, LLM head-level detector.
+
+**NAMESPACE:** kps first-pushed THM-1875 -> mine renumbered THM-1880; HYP-8655 (clean); mac-mini owns
+HYP-8640 (last session). Files: THE-ZOO.md; THM-1880; HYP-8655; Lean cert; 3 scripts + outputs; backlog
+pointer.
+
+**NEXT (cheapest zoo §6 wins):** run R(31) (HYP-2371); add S4 to the moment LP (HYP-7540); test
+min-FAS insertion-response (predicted neutral under +source -> joins H,c3 as rigid-extremal); fill an
+empty column (chi or min-FAS on the metagraph / LRC danger graph).
+
 ## klein-2026-07-21-S399 -- the TOURNAMENT-INVARIANT ZOO ATLAS: five-pass repo synthesis + gap map + 7 procedural generators + 2 gap-fills. Atlas doc; HYP-8646/8647.
 
 **Owner directive:** "keep adding to the zoo, go back through past work thoroughly, make sure no ideas/threads are lost, procedurally generate new frames/methods/angles/computations, find the things we've forgotten we've studied — all of them — and find the gaps between and around them."
