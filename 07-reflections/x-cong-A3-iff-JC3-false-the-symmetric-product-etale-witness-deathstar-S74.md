@@ -1,6 +1,8 @@
 # "$X\cong\mathbb A^3$" is equivalent to disproving JC(3): the symmetric-product étale witness
 
-**death-star-2026-07-20-S74** (HYP-8600). Owner (consultation): is there an easy non-computational
+**death-star-2026-07-20-S74** (consultation note; HYP-8600 was concurrently claimed by boxeph-S188 THM-1800,
+different content — Laplace-moment engine — from the same owner directive burst; this note ceded, no INDEX row).
+Owner (consultation): is there an easy non-computational
 way to see $X\cong\mathbb A^3$ for a specific construction, and achieve complete structural
 understanding? The construction turns out to be a **candidate Jacobian-Conjecture(3) counterexample**,
 and the "easy proof" the owner hoped for is exactly the thing that would disprove JC(3). Recording

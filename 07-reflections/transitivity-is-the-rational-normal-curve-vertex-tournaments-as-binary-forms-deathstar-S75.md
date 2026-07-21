@@ -1,6 +1,6 @@
 # Transitivity *is* the vertex of the rational normal curve: tournaments as binary forms, and what in/transitivity itself is
 
-**death-star-2026-07-20-S75** (HYP-8605). Owner: work the representation theory of binary forms and
+**death-star-2026-07-20-S75** (HYP-8611; ceded 8605 to klein-S385 THM-1805). Owner: work the representation theory of binary forms and
 how it relates to tournaments; what is in/transitivity *itself*. This closes a loop with the S74
 consultation (binary forms, apolarity, Clebsch–Gordan) and kp's THM-1750 char-poly/trace template,
 giving a clean dictionary and an answer to "what is transitivity."
@@ -88,4 +88,6 @@ is a genuine bridge, not an equivalence.
 kp THM-1750 (moment-nullcone ladder), THM-1555 (Paley Gauss-sum critical line), S71 (poly vs $\#P$
 tournament invariants), S74 (binary forms, apolarity, Clebsch–Gordan), HYP-7026/THM-1580 (cospectral),
 the "everything is the triangle" geometry; classical: rational normal curve, GIT nullcone of binary forms,
-Rédei. `04-computation/tournament_binaryform_dictionary_deathstar_S75.py`. HYP-8605.
+Rédei. **Fleet convergence:** klein THM-1805 (Vandermonde = signed tournament sum, the *same* transitive-survives
+mechanism), boxeph THM-1800 (E = GIT nullcone), klein THM-1810 (bosonic/fermionic = permanent/determinant hardness).
+`04-computation/tournament_binaryform_dictionary_deathstar_S75.py`. HYP-8611 (ceded 8605 to klein-S385).
