@@ -497,6 +497,41 @@ def triangular_balance_tower_audit() -> tuple[mp.mpf, str]:
     return closed, "6-8log(2)"
 
 
+def maximum_cyclic_triangle_audit() -> tuple[mp.mpf, mp.mpf, mp.mpf]:
+    values = []
+    for n in range(3, 1001):
+        if n % 2:
+            maximum = n * (n * n - 1) // 24
+        else:
+            maximum = n * (n * n - 4) // 24
+        values.append(maximum)
+        if n > 3:
+            k = (n - 1) // 2
+            require(values[-1] - values[-2] == k * (k + 1) // 2,
+                    "maximum cyclic-triangle increments repeat triangular numbers")
+
+    for k in range(1, 500):
+        odd_n = 2 * k + 1
+        odd_maximum = odd_n * (odd_n * odd_n - 1) // 24
+        require(odd_maximum == power_sum(k, 2),
+                "odd-order maximum cyclic triangles are square-pyramidal")
+        even_n = 2 * k + 2
+        even_maximum = even_n * (even_n * even_n - 4) // 24
+        require(even_maximum - odd_maximum == k * (k + 1) // 2,
+                "odd-to-even maximum cyclic increment")
+
+    odd_mass = 18 - 24 * mp.log(2)
+    even_mass = mp.mpf(3) / 4
+    all_mass = odd_mass + even_mass
+    direct_odd = mp.nsum(lambda k: 6 / (k * (k + 1) * (2 * k + 1)), [1, mp.inf])
+    direct_even = mp.nsum(lambda k: 3 / (k * (k * k - 1)), [2, mp.inf])
+    require(abs(direct_odd - odd_mass) < mp.mpf("1e-45"),
+            "odd maximum-cyclic reciprocal mass")
+    require(abs(direct_even - even_mass) < mp.mpf("1e-45"),
+            "even maximum-cyclic reciprocal mass")
+    return odd_mass, even_mass, all_mass
+
+
 def g_diagonal(n: int) -> int:
     value = (
         F(n**4, 96) - F(n**3, 16) + F(n * n, 3) + F(n, 32) + F(53, 64)
@@ -680,6 +715,7 @@ def main() -> None:
     closed_surface_rows, closed_surface_examples = full_surface_closed_form_audit()
     power_rows = powersum_axis_audit()
     balance_mass, balance_closed = triangular_balance_tower_audit()
+    max_c3_odd, max_c3_even, max_c3_all = maximum_cyclic_triangle_audit()
     atlas_rows = repo_sequence_atlas()
     run_row_mass, run_diagonal_mass = run_support_filtration_audit()
     theta_sum, theta_product, theta_form = gauss_triangular_theta_audit()
@@ -722,6 +758,10 @@ def main() -> None:
         print(f"power_p={p};partial40000={mp.nstr(value, 25)};closed={note}")
     print(f"triangular_balance_common_side_mass={mp.nstr(balance_mass, 30)};closed={balance_closed}")
     print("balance_semantics=support_counts_the_equal_left_right_value_once;two_labeled_sides_would_double")
+    print(f"max_cyclic_triangles_odd_mass={mp.nstr(max_c3_odd, 30)};closed=18-24log(2)")
+    print(f"max_cyclic_triangles_even_mass={mp.nstr(max_c3_even, 30)};closed=3/4")
+    print(f"max_cyclic_triangles_all_mass={mp.nstr(max_c3_all, 30)};closed=75/4-24log(2)")
+    print("max_cyclic_structure=odd_orders_are_square_pyramidal;successive_increments_repeat_triangular_numbers")
 
     print("REPO_SUPPORT_MASS_ATLAS")
     for name, value, note in atlas_rows:
