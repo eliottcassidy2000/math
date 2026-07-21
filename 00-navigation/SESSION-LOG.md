@@ -19,6 +19,46 @@ Prompt (owner): if we assume the two dimensional nullcone statement conjectured 
 FILES: THM-1830, HYP-8620. -> all (HONEST CONDITIONAL MAP for the owner's question. NC2 => GMC(2) is PROVED (THM-1510) -- assuming the 2-D nullcone conjecture gives GMC(2) for free. But GMC(2) => LRC(14) DOES NOT EXIST: they are analogous moment-nullcone problems (my THM-1820) with the toral moment-count = the LRC coprime-pair return-time (mac-mini THM-1745), but that is STRUCTURAL, not logical, and LRC is bounded-alphabet (B5 per instance) while GMC is unbounded -- neither specializes to the other. So the owner's chain breaks at the second arrow. THE PATH THAT WORKS: NC2 => GMC(2) => (Fock bridge, conjectural) => DC_1 => JC(2) -- assuming the nullcone conjecture gives a real program toward the 2-dim JACOBIAN conjecture, which IS downstream of GMC(2). THE LRC CREATIVE REFRAME: don't route LRC through GMC(2); route BOTH LRC and the moment-nullcone uniform bound through their COMMON PARENT, mac-mini's coprime-pair return-time exactness (THM-1745) -- they are siblings, not parent-child. mac-mini: your THM-1745 is the actual bridge, and it makes LRC and the TNC/GMC uniform bound one return-time theorem; that is the load-bearing unification, not the nullcone conjecture. NB: GMC(2) is still OPEN -- the 'GMC(2) PROVED' claim rests on the refuted Gamma-bridge domination (MISTAKE-202, THM-1770), so 'assume NC2' is a genuine hypothesis.)
 
 ---
+## opus-2026-07-20-S436 - What DvdEZ implies: DvdEZ => GMC(2) SOLID, GMC(2) => LRC(14) FALSE, but siblings via one method (THM-1830)
+
+Owner: assuming the DvdEZ 2D nullcone conjecture, what can we prove -- can we chain
+DvdEZ => GMC(2) => LRC(14)? Answered rigorously. The first arrow holds, the second does NOT,
+but a sibling structure and a transferable proof survive. Honest map:
+
+**(A) DvdEZ => GMC(2) -- SOLID (proven implication).** DvdEZ says N_2 = charge-definite; the
+charge lemma (THM-1535 s1) says charge-definite elements never refute GMC; the sign-coherent
+case is proved over C (THM-1540). So DvdEZ empties the both-signs residual => GMC(2) in full.
+Already in canon.
+
+**(B) GMC(2) => LRC(14) -- FALSE (proven non-implication).** The moment functionals are
+DIFFERENT lattices. GMC's charge is PER-VARIABLE (kernel of r independent characters,
+Z^{n/2}-graded, rank 0 charge-0 for {1..13}); LRC's resonance lattice {sum k_i v_i = 0} is the
+kernel of a SINGLE weighted character (Z-graded, rank 12 for {1..13}). Genuinely different
+objects -> no functorial reduction -> the chain BREAKS at the second arrow. I am NOT asserting
+the false chain.
+
+**(C) THE SIBLING STRUCTURE that survives.** Both are moment nullcones for a functional killing
+nonzero values of a LATTICE CHARACTER. The abstract theorem 'charges in an open halfspace =>
+nullcone-trivial => the conjecture' (THM-1535 s1 / HYP-8370, proved every dimension) covers the
+easy (definite) part of BOTH. Neither GMC(2)'s hard case nor LRC(14) is halfspace-separable
+(both both-signs: GMC +-1, LRC hhat=sin alternates). Shared hard core: 'a both-signs
+moment-nullcone sum cannot vanish identically unless the generator is a single character.'
+DvdEZ = the Gaussian instance; LRC(14) = the resonance instance. SIBLINGS, not a chain.
+
+**(D) THE TRANSFER -- method, not theorem.** DvdEZ's STATEMENT is Gaussian-specific, but its
+PROOF (amoeba/finite-place/apolarity, THM-1685/1735/1710) is FUNCTIONAL-AGNOSTIC: it uses only
+charge combinatorics + coefficient non-vanishing, both present for the LRC resonance functional
+(hhat coefficients). So the DvdEZ-METHOD proves BOTH GMC(2) and LRC(14); proving DvdEZ by the
+amoeba/finite-place route yields the template that, applied to Lambda(v) with hhat, gives the
+LRC-resonance nullcone (HYP-8620) hence LRC(14).
+
+**WHAT WE CAN PROVE TODAY ASSUMING DvdEZ:** GMC(2) in full (+ the NC2/Structure-Theorem/Zhao/
+Mathieu stack via klein's Gamma bridge); the charge-definite/sign-coherent part of LRC (already
+unconditional, so DvdEZ adds nothing there); NOT LRC(14) (needs the resonance-instance of the
+same method, HYP-8620). Creative high-dim encoding of LRC as GMC-nullcone recovers obstruction
+(B) (needs the single-character functional, not standard GMC) -- recorded dead end.
+
+**Artifacts:** THM-1830 (the conditional map); 1 script + output.
 
 ## boxeph-2026-07-20-S190 -- THM-1825: q-Redei census (parity rigidity REFUTED — n=3 accident; h_q(i) != 0 lead; h_q NOT unimodal vs leaf-polys log-concave), Landau = moment-map lattice surjectivity (verified n<=7, A000571), and the GALOIS TERMINAL STACK: tight-family terminal multiplicity = phi(n+1) (HYP-8620)\n\n**Owner:** explore the proposals + more {7,21} shadow hunting.\n\n- W1: back-arc h_q census n<=6: rigidity refuted honestly (2/2,3/4,5/12,8/56); leads: h_q(i) nonvanishing; non-unimodality contrast; parity-rigid subfamily; {7,21} q-shadow = the sum-7-shape exclusion question (h=5 flanks share q(1+3q+q^2), shifted-palindromic).\n- W2 DONE (proposition): Landau == every lattice point of the score moment polytope attained (AGS-type surjectivity); verified 2,4,9,22,59.\n- W3: terminal stack = 2,4,2,6 = phi(n+1) = the Galois orbit of primitive (n+1)-fractions: stack dictionary complete (rotation/reality/Galois).\n- Backlog W1-W3 updated in place.\n\n## mac-mini-2026-07-20-S156 -- LRC AND MOMENT NULLCONE: the relation lattice is PAIR-GENERATED = the moment pair-reduction (THM-1780), tying boxeph's 'tightness = relation richness' to my discriminant closure. Reflection + support for boxeph THM-1820.
 ## boxeph-2026-07-20-S191 -- THM-1830: the DvdEZ-conditional edifice (what NC2 buys, arrows graded) + THE TORAL RE-ROUTE: LRC is CT-side (realization lemma proved), its partner is the PROVED TNC not GMC(2); TTNC named (base camp proved); tight 14-runner instances = Ramanujan sums with c_15(m) != 0 for ALL m (15 squarefree — nicer than the toy) (HYP-8625)\n\n**Owner:** assume DvdEZ-NC2: what follows? chain to LRC(14)? get creative.\n\n- Edifice: NC2 => GMC(2), ladder conclusion, Kempf-Ness theorem, engine classification, Fock-chain arrow one (JC2 program), dimension audit (NC2 2D untouched by ¬JC).\n- Re-route: CT-realization (proved, 0.073093=0.073093): LRC pairing = constant-term functional => TORAL side => TNC (proved) is the partner. TTNC family proposed (Theta=1 = TNC); TTNC(14) => LRC(14) reduction shape; n=3 non-vacuous.\n- Cyclotomic: threshold tight measures -> Ramanujan c_q; c_15 nonvanishing for ALL m (exact); LRCMod rungs = the finite tests. Next: one mod-15 rung's TTNC instance.\n\n## boxeph-2026-07-20-S190 -- THM-1825: q-Redei census (parity rigidity REFUTED — n=3 accident; h_q(i) != 0 lead; h_q NOT unimodal vs leaf-polys log-concave), Landau = moment-map lattice surjectivity (verified n<=7, A000571), and the GALOIS TERMINAL STACK: tight-family terminal multiplicity = phi(n+1) (HYP-8620)\n\n**Owner:** explore the proposals + more {7,21} shadow hunting.\n\n- W1: back-arc h_q census n<=6: rigidity refuted honestly (2/2,3/4,5/12,8/56); leads: h_q(i) nonvanishing; non-unimodality contrast; parity-rigid subfamily; {7,21} q-shadow = the sum-7-shape exclusion question (h=5 flanks share q(1+3q+q^2), shifted-palindromic).\n- W2 DONE (proposition): Landau == every lattice point of the score moment polytope attained (AGS-type surjectivity); verified 2,4,9,22,59.\n- W3: terminal stack = 2,4,2,6 = phi(n+1) = the Galois orbit of primitive (n+1)-fractions: stack dictionary complete (rotation/reality/Galois).\n- Backlog W1-W3 updated in place.\n\n## mac-mini-2026-07-20-S156 -- LRC AND MOMENT NULLCONE: the relation lattice is PAIR-GENERATED = the moment pair-reduction (THM-1780), tying boxeph's 'tightness = relation richness' to my discriminant closure. Reflection + support for boxeph THM-1820.

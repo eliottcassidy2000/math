@@ -1,0 +1,34 @@
+THE IMPLICATION ARROWS -- what actually follows from DvdEZ 2D nullcone?
+========================================================================
+(A) DvdEZ 2D nullcone => GMC(2). PROVEN implication (THM-1535 s4 + THM-1540):
+    DvdEZ says N_2 = charge-definite (no both-signs nullcone element at n=2).
+    Charge lemma (THM-1535 s1): charge-definite nullcone elements never refute GMC.
+    Sign-coherent case PROVED over C (THM-1540). So DvdEZ empties the both-signs
+    residual => GMC(2) in FULL. This arrow is SOLID.
+
+(B) Does GMC(2) => LRC(14)?  Check the MOMENT FUNCTIONALS -- are they the same?
+    GMC:  E_Gauss[z^a zbar^b] = a! delta_ab per variable. CHARGE = (a_i - b_i) in Z^{n/2}
+          -- a PER-VARIABLE charge (target Z^{n/2}, rank n/2).
+    LRC:  E_circle[e^{2 pi i k t}] = delta_{k,0}. The relevant grading is the SINGLE
+          WEIGHTED character (k_1..k_r) -> sum k_i v_i in Z (target Z, rank 1).
+    So the resonance lattice {sum k_i v_i = 0} is the kernel of a SINGLE character,
+    while GMC's charge-0 is the kernel of r INDEPENDENT characters. DIFFERENT lattices.
+
+    For {1..13} (r=13): resonance lattice = ker(Z^13 -> Z, k -> sum k_i*i) has RANK 12=12.
+    GMC per-variable charge-0 for 13 complex Gaussians = ker(Z^13 -> Z^13) has RANK 0.
+    => the functionals are genuinely different; GMC(2) does NOT logically imply LRC(14).
+    The naive chain DvdEZ => GMC(2) => LRC(14) BREAKS at the second arrow. (Honest.)
+
+(C) THE CORRECT PARALLEL. Both are moment nullcones for a functional killing nonzero
+    values of a LATTICE CHARACTER. The ABSTRACT theorem I proved (THM-1535 s1 / HYP-8370):
+      'charges in an OPEN HALFSPACE => nullcone-trivial => the conjecture holds' -- in
+    ANY dimension, for ANY such functional. It covers the EASY (charge/sign-definite) part
+    of BOTH GMC and LRC. Neither GMC(2)'s hard case NOR LRC(14) is halfspace-separable
+    (both are BOTH-SIGNS: GMC charges +-1, LRC hhat=sin alternates). So the SHARED hard
+    core is 'both-signs moment nullcone non-vanishing', and DvdEZ is its Gaussian instance.
+
+(D) THE TRANSFER. DvdEZ's STATEMENT is Gaussian-specific, but its PROOF (the amoeba /
+    finite-place / apolarity structure, THM-1685/1735/1710) is functional-agnostic: it
+    only uses the charge combinatorics + coefficient non-vanishing. So proving DvdEZ by
+    that method yields the TEMPLATE for the LRC-resonance nullcone (HYP-8620), which =>
+    LRC(14). The right claim: DvdEZ-METHOD => both GMC(2) AND LRC(14), as siblings.
