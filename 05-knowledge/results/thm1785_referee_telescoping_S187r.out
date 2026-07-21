@@ -1,0 +1,140 @@
+==============================================================================
+T1: exactN vs direct numerical quadrature of the defining integral
+==============================================================================
+  (m,j,k)=(5, 0,1): exactN = -8.1473456790e+03  quad = -8.1473456790e+03  rel = 1.8e-15
+  (m,j,k)=(6, 1,2): exactN = -2.7301111111e+05  quad = -2.7301111111e+05  rel = 2.1e-16
+  (m,j,k)=(7,-2,3): exactN = -1.4204330000e+07  quad = -1.4204330000e+07  rel = 2.2e-15
+  (m,j,k)=(8, 3,0): exactN = -2.1256828704e+06  quad = -2.1256828704e+06  rel = 1.1e-15
+
+==============================================================================
+T2: E/U/W wider lattice; k=0 W-row (claimed in text, unused by code)
+==============================================================================
+  triple (3/2,-2/3,5/4): mismatches = 0
+  triple (1/2,2,-1/3): mismatches = 0
+  triple (-1,3,7/5): mismatches = 0
+  wider-lattice E/U/W total mismatches: 0
+  k=0 W-row (m>=1) mismatches: 0  (TRUE as claimed; the builder
+   omits it via its k>=1 guard — statement/code mismatch, benign:
+   using FEWER proved rows cannot create false relations)
+
+==============================================================================
+T3: md closed-form recurrence for (3/2,-2/3,5/4), exact m=3..120
+==============================================================================
+  failures in m = 3..120: NONE
+  (file verified only 4..56; range extended and m=3 included here)
+
+==============================================================================
+T7: md displayed recurrence on triple 2's moments (should FAIL)
+==============================================================================
+  m=5: residual = 1614632/9  (nonzero, as expected)
+  m=8: residual = 306355431620/81  (nonzero, as expected)
+  => the md never states WHICH (a,b,c) its displayed recurrence is
+     for (it is (3/2,-2/3,5/4), read off the frozen .out).
+  [part A done, t=1s]
+
+DONE (A). total 1s
+
+==============================================================================
+T4: second triple (1/2,2,-1/3) — full windows m0=10..17 + verify
+==============================================================================
+  m0=10: raw top = 1 ; normalized ['-96', '1302', '-76', '1']  [t=3s]
+  m0=11: raw top = 1 ; normalized ['-120', '4820/3', '-84', '1']  [t=6s]
+  m0=12: raw top = 1 ; normalized ['-440/3', '5830/3', '-92', '1']  [t=8s]
+  m0=13: raw top = 1 ; normalized ['-176', '2312', '-100', '1']  [t=11s]
+  m0=14: raw top = 1 ; normalized ['-208', '8138/3', '-108', '1']  [t=14s]
+  m0=15: raw top = 1 ; normalized ['-728/3', '9436/3', '-116', '1']  [t=17s]
+  m0=16: raw top = 1 ; normalized ['-280', '3610', '-124', '1']  [t=20s]
+  m0=17: raw top = 1 ; normalized ['-320', '12320/3', '-132', '1']  [t=23s]
+  normalized coeffs consistent with degree<=6 polynomials in m: True
+  interpolated triple-2 recurrence verified m=4..120: ALL HOLD
+  triple-2 recurrence at m=3: HOLDS
+
+==============================================================================
+T5: adversarial triples at m0=12 — existence + raw top coefficient
+==============================================================================
+  (a,b,c)=(1,1,1): raw cS = ['440', '440', '-46', '1'] ; top zero? False  [t=26s]
+  (a,b,c)=(1,0,1): raw cS = ['-40', '0', '1', '0'] ; top zero? True  [t=27s]
+  (a,b,c)=(1,1,0): raw cS = ['-200', '10', '0', '0'] ; top zero? True  [t=29s]
+  (a,b,c)=(0,1,1): raw cS = ['200', '-10', '0', '0'] ; top zero? True  [t=30s]
+  (a,b,c)=(1,-1,1): raw cS = ['-440', '440', '46', '1'] ; top zero? False  [t=33s]
+  [part B done, t=33s]
+
+DONE (B). total 33s
+
+==============================================================================
+T6: all-m0 certificate attempt for triple 1 (y(m0) polynomial in m0?)
+==============================================================================
+  m0=10: rows=186, free col=149, raw cS[-1]=1  [t=3s]
+  m0=11: rows=186, free col=149, raw cS[-1]=1  [t=6s]
+  m0=12: rows=186, free col=149, raw cS[-1]=1  [t=9s]
+  m0=13: rows=186, free col=149, raw cS[-1]=1  [t=12s]
+  m0=14: rows=186, free col=149, raw cS[-1]=1  [t=14s]
+  m0=15: rows=186, free col=149, raw cS[-1]=1  [t=17s]
+  m0=16: rows=186, free col=149, raw cS[-1]=1  [t=20s]
+  m0=17: rows=186, free col=149, raw cS[-1]=1  [t=23s]
+  m0=18: rows=186, free col=149, raw cS[-1]=1  [t=26s]
+  m0=19: rows=186, free col=149, raw cS[-1]=1  [t=29s]
+  m0=20: rows=186, free col=149, raw cS[-1]=1  [t=32s]
+  m0=21: rows=186, free col=149, raw cS[-1]=1  [t=35s]
+  m0=22: rows=186, free col=149, raw cS[-1]=1  [t=38s]
+  y-components polynomial (deg<=11) predicting m0=22: True (0/186 mismatch)
+  => y(m0) is a polynomial vector on 13 windows; every entry of
+     y(m0)^T A(m0) is a polynomial of degree <= 12 in m0 that
+     vanishes at 13 points on all non-mu columns, hence
+     IDENTICALLY: the certificate holds for ALL m0 (window valid
+     m0 >= 4). The all-m gap is REPAIRABLE by this finite check.
+  [part C done, t=38s]
+
+DONE (C). total 38s
+
+==============================================================================
+T6b: airtight all-m certificate, BOTH executed triples
+     (explicit kernel verification at 13 windows + polynomial y +
+      degree-count => identity in m0; no RREF trust)
+==============================================================================
+  [triple1 (3/2,-2/3,5/4)] m0=10: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple1 (3/2,-2/3,5/4)] m0=11: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple1 (3/2,-2/3,5/4)] m0=12: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple1 (3/2,-2/3,5/4)] m0=13: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple1 (3/2,-2/3,5/4)] m0=14: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple1 (3/2,-2/3,5/4)] m0=15: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple1 (3/2,-2/3,5/4)] m0=16: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple1 (3/2,-2/3,5/4)] m0=17: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple1 (3/2,-2/3,5/4)] m0=18: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple1 (3/2,-2/3,5/4)] m0=19: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple1 (3/2,-2/3,5/4)] m0=20: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple1 (3/2,-2/3,5/4)] m0=21: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple1 (3/2,-2/3,5/4)] m0=22: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple1 (3/2,-2/3,5/4)] y polynomial (deg<=11) across 13 windows: True (0 bad)
+  [triple1 (3/2,-2/3,5/4)] => y^T A(m0) entries are deg<=12 polynomials in m0,
+       zero at 13 points on non-mu columns and EQUAL to the
+       target coefficient polynomials on mu columns at 13
+       points: both hold IDENTICALLY in m0. Combined with the
+       row identities (valid all m0 >= 3): the recurrence is
+       PROVED FOR ALL m >= 3 at this triple.
+  [triple2 (1/2,2,-1/3)] m0=10: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple2 (1/2,2,-1/3)] m0=11: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple2 (1/2,2,-1/3)] m0=12: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple2 (1/2,2,-1/3)] m0=13: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple2 (1/2,2,-1/3)] m0=14: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple2 (1/2,2,-1/3)] m0=15: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple2 (1/2,2,-1/3)] m0=16: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple2 (1/2,2,-1/3)] m0=17: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple2 (1/2,2,-1/3)] m0=18: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple2 (1/2,2,-1/3)] m0=19: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple2 (1/2,2,-1/3)] m0=20: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple2 (1/2,2,-1/3)] m0=21: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple2 (1/2,2,-1/3)] m0=22: nonzero non-mu cols = 0 ; cS == target form: True
+  [triple2 (1/2,2,-1/3)] y polynomial (deg<=11) across 13 windows: True (0 bad)
+  [triple2 (1/2,2,-1/3)] => y^T A(m0) entries are deg<=12 polynomials in m0,
+       zero at 13 points on non-mu columns and EQUAL to the
+       target coefficient polynomials on mu columns at 13
+       points: both hold IDENTICALLY in m0. Combined with the
+       row identities (valid all m0 >= 3): the recurrence is
+       PROVED FOR ALL m >= 3 at this triple.
+
+  T5 follow-up at (a,b,c)=(1,0,1): mu_9 = 0, mu_11 = 0 (b=0 =>
+  odd moments vanish; the returned relation -40*mu_9 + mu_11 = 0 is
+  TRUE but VACUOUS, and cS[-1] = 0 breaks the constant-leading form.
+
+DONE (D). total 98s

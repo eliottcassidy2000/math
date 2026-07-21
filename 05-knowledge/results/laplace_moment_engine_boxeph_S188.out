@@ -1,0 +1,60 @@
+==============================================================================
+THE LAPLACE MOMENT ENGINE — general executed telescoping
+==============================================================================
+
+--- H1: aZ + b + cW ---
+  [3.2s]
+  recurrence order 3; coefficients (level offsets [-3, -2, -1, 0]):
+    q[-3](m) = (15)m^0 + (-15/2)m^1
+    q[-2](m) = (2/3)m^0
+    q[-1](m) = (1)m^0
+    q[+0](m) = 0
+  verified against exact moments: True
+  leading coefficient CONSTANT -> finite moment test M = 3 (all coefficients)
+  first moments mu_1..mu_3 = ['-2/3', '143/18', '-413/27']
+
+--- H2: aZ + bW^2 + c ---
+  [19.8s]
+  recurrence order 3; coefficients (level offsets [-3, -2, -1, 0]):
+    q[-3](m) = (36)m^0 + (-54)m^1 + (18)m^2
+    q[-2](m) = 0
+    q[-1](m) = (-5/4)m^0
+    q[+0](m) = (1)m^0
+  verified against exact moments: True
+  leading coefficient CONSTANT -> finite moment test M = 3 (all coefficients)
+  first moments mu_1..mu_3 = ['5/4', '25/16', '-2179/64']
+
+--- H4: aZ + bZW + cW ---
+  [9.7s]
+  recurrence order 3; coefficients (level offsets [-3, -2, -1, 0]):
+    q[-3](m) = (-10)m^0 + (15)m^1 + (-5)m^2
+    q[-2](m) = (167/18)m^0 + (-199/18)m^1 + (16/9)m^2
+    q[-1](m) = (-4/3)m^0 + (8/3)m^1
+    q[+0](m) = (1)m^0
+  verified against exact moments: True
+  leading coefficient CONSTANT -> finite moment test M = 3 (all coefficients)
+  first moments mu_1..mu_3 = ['-4/3', '199/18', '-668/9']
+
+--- NEW: aZ^2 + bZW + cW (span 2,0,-1) ---
+  [25.4s]
+  engine: no relation found in default window (raise limits)
+
+--- NEW: aZ + bW^3 ---
+  [20.1s]
+  engine: no relation found in default window (raise limits)
+
+--- hijack-flavor: ZW + Z^4W^2 + W ---
+  [264.2s]
+  engine: no relation found in default window (raise limits)
+
+--- PARAMETRIC DEMO on aZ + b + cW: engine at 6 triples, fit q's in (a,b,c) ---
+  (a,b,c)=(1,1,1): order 2, ok=True, q[-1](m)=(-1)m^0, q[-2](m)=(4)m^0 + (-4)m^1
+  (a,b,c)=(2,1,3): order 2, ok=True, q[-1](m)=(-1)m^0, q[-2](m)=(24)m^0 + (-24)m^1
+  (a,b,c)=(1/2,-1,1): order 2, ok=True, q[-1](m)=(1)m^0, q[-2](m)=(2)m^0 + (-2)m^1
+  (a,b,c)=(3,2,-1): order 2, ok=True, q[-1](m)=(-2)m^0, q[-2](m)=(-12)m^0 + (12)m^1
+  (a,b,c)=(-1,1/3,2): order 2, ok=True, q[-1](m)=(-1/3)m^0, q[-2](m)=(-8)m^0 + (8)m^1
+  (a,b,c)=(1,-2,5/2): order 2, ok=True, q[-1](m)=(2)m^0, q[-2](m)=(10)m^0 + (-10)m^1
+  prediction (S186 H1 exact law): mu_m = b mu_{m-1} + 4ac(m-1) mu_{m-2}
+  engine q[-1] should equal -b, q[-2] should equal -4ac(m-1): check per triple above.
+
+DONE.

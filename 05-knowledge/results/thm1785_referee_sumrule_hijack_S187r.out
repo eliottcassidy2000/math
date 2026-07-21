@@ -1,0 +1,76 @@
+==============================================================================
+R1: PS-residue lemma at a NONZERO fold (three independent computations)
+==============================================================================
+fold uc = 0.655639-0.168491j, v = 5.160572+0.252195j
+(a) PS formula                    = 0.304528266+0.003728347j
+(b) contour residue (r=0.9738)     = 0.304528266+0.003728347j
+(b) contour residue (r=0.4869)     = 0.304528266+0.003728347j
+(c) pair-sum  real eps eps=1e-03  = 0.304619122+0.003724389j
+(c) pair-sum  real eps eps=1e-05  = 0.304529175+0.003728307j
+(c) pair-sum  real eps eps=1e-07  = 0.304529034+0.003728993j
+(c) pair-sum  imag eps eps=1e-03  = 0.304532193+0.003819174j
+(c) pair-sum  imag eps eps=1e-05  = 0.304528306+0.003729255j
+(c) pair-sum  imag eps eps=1e-07  = 0.304528491+0.003727930j
+
+==============================================================================
+R2: level-set sum rule — orientation, multi-fold, K-=0, cusp
+==============================================================================
+(a) Res at simple u*: contour = -0.304528266-0.003728347j ; -v/(u*L') = -0.304528266-0.003728347j
+    => residue theorem gives Sum PS_folds = + Sum v/(u* L'(u*)) (equality,
+       matching THM-1785; the .py caption 'PS + spectator = 0' is wrong).
+(b) all 3 folds of the cubic model:
+    fold 0: PS = 0.30452827+0.00372835j  RHS = 0.30452827+0.00372835j  |PS-RHS| = 3.21e-16
+    fold 1: PS = 0.41773826-0.05305392j  RHS = 0.41773826-0.05305392j  |PS-RHS| = 2.73e-16
+    fold 2: PS = 0.42532450+0.05195755j  RHS = 0.42532450+0.05195755j  |PS-RHS| = 6.21e-17
+(c) 2 folds (+-uc) sharing v + 2 spectators (+-u*):
+    PS(+uc)+PS(-uc) = 0.30228650-0.04170665j ; Sum v/(u*L') = 0.30228650-0.04170665j ; diff 2.48e-16
+(d) annulus total (big R=30 minus small r=0.01 circle) = 1.20e-19 (should be ~0)
+(e) K-=0 model: PS = -0.644177-0.597100j ; RHS-as-stated = 0.180410+0.007080j
+    rule-as-stated violation |PS - RHS| = 1.022e+00
+    u=0 residue v/(v-L(0)) = 0.824587+0.604180j ; |PS - (RHS - res0)| = 3.511e-16
+    => 'mixed' (K-,K+ >= 1) is LOAD-BEARING; failure = exactly the u=0 residue
+(f) cusp model: uc = i/sqrt2, L'(uc) = 4.44e-16, v = 0.800000+5.856854j
+    simple-side sum v/(u*L') = 0.12941942-0.01767767j (rule-as-stated LHS = 0: VIOLATED)
+    cusp contour residue = 0.12941942-0.01767767j ; |Res_cusp - v/(u*L')| = 9.96e-16
+    => sum rule needs the hypothesis: level set = simple folds + simple
+       points ONLY (cusp levels need the cusp residue term).
+
+==============================================================================
+R3: mu_g rigidity — scoped confirmation + CROSS-EDGE sharing witness
+==============================================================================
+(a) edge (4,-2), g=gcd(4,2)=2: critical orbit values (should pair by u->-u):
+    sharing pairs (i,j, ratio==-1?): [(0, 3, True), (1, 4, True), (2, 5, True)]
+    all sharers same modulus (rotation): True
+(b) CROSS-EDGE witness: Lambda = q0 + w^2 u^2 + w u + w/u + w^2/u^2
+    w=0.40: u+ = -0.625000 (edge {1,2} fold), u- = -0.625000 (edge {-1,-2} fold)
+           u+ * u- = 1.000000000000 ; |L(u+)-L(u-)| = 5.55e-17 ; |u+|/|u-| = 1.000
+    w=0.15: u+ = -3.000000 (edge {1,2} fold), u- = -0.333333 (edge {-1,-2} fold)
+           u+ * u- = 1.000000000000 ; |L(u+)-L(u-)| = 1.67e-16 ; |u+|/|u-| = 9.000
+    w=0.05: u+ = -9.898979 (edge {1,2} fold), u- = -0.101021 (edge {-1,-2} fold)
+           u+ * u- = 1.000000000000 ; |L(u+)-L(u-)| = 0.00e+00 ; |u+|/|u-| = 97.990
+    => EXACT value sharing between folds on DIFFERENT edges, related by
+       INVERSION u -> 1/u (moduli differ: NOT a mu_g rotation).
+       'Deleted hijacked stacks are symmetry stacks (mu_g)' is proved ONLY
+       for events on ONE two-term edge; cross-edge sharing is real.
+
+==============================================================================
+R4: L1 tube on P4 — delta-sweep at fixed s0 (the file fixed delta=3e-3)
+==============================================================================
+  s0 = 0.100  (v0 = 2.151191e-01, arc point |t| = 4.6486e+00)
+    delta=3e-03  peak|Ghat|=3.6188e+01  I_win=0.5042  I_tail=0.0244 I_low=0.0382  I_tot=0.5669  |A_win|=0.4573  hops=16
+    delta=1e-03  peak|Ghat|=6.1359e+01  I_win=0.5106  I_tail=0.0244 I_low=0.0382  I_tot=0.5733  |A_win|=0.4571  hops=16
+    delta=3e-04  peak|Ghat|=1.1059e+02  I_win=0.5150  I_tail=0.0244 I_low=0.0382  I_tot=0.5777  |A_win|=0.4570  hops=16
+    delta=1e-04  peak|Ghat|=1.9029e+02  I_win=0.5174  I_tail=0.0244 I_low=0.0382  I_tot=0.5801  |A_win|=0.4570  hops=16
+    delta=3e-05  peak|Ghat|=3.4593e+02  I_win=0.5190  I_tail=0.0244 I_low=0.0382  I_tot=0.5816  |A_win|=0.4570  hops=16
+  s0 = 0.030  (v0 = 6.040821e-02, arc point |t| = 1.6554e+01)
+    delta=3e-03  peak|Ghat|=1.3217e+02  I_win=0.2629  I_tail=0.0255 I_low=0.0118  I_tot=0.3001  |A_win|=0.2497  hops=16
+    delta=1e-03  peak|Ghat|=2.1139e+02  I_win=0.2654  I_tail=0.0255 I_low=0.0118  I_tot=0.3027  |A_win|=0.2496  hops=16
+    delta=3e-04  peak|Ghat|=3.6938e+02  I_win=0.2690  I_tail=0.0255 I_low=0.0118  I_tot=0.3063  |A_win|=0.2496  hops=16
+    delta=1e-04  peak|Ghat|=6.2610e+02  I_win=0.2714  I_tail=0.0255 I_low=0.0118  I_tot=0.3086  |A_win|=0.2496  hops=16
+    delta=3e-05  peak|Ghat|=1.1280e+03  I_win=0.2730  I_tail=0.0255 I_low=0.0118  I_tot=0.3102  |A_win|=0.2496  hops=16
+
+  interpretation aid: if I_win(delta) ~ a + b*log(1/delta) the tube is NOT
+  L1-uniform as delta->0; if I_win converges (sqrt-type fold) it is.
+  peak scaling: pole => peak ~ 1/delta; sqrt-branch => peak ~ 1/sqrt(delta).
+
+DONE.

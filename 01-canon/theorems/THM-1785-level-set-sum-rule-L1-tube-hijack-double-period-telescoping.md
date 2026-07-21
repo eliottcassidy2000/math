@@ -1,9 +1,27 @@
 # THM-1785: the level-set sum rule, the L1-tame hijacked tube, and the executed double-period telescoping
 
-**Status:** PROVED (PS-residue lemma; level-set sum rule; mu_g-rotation
-rigidity of value-sharing edge events; the executed telescoping — every
-step a verified identity) + MEASURED (L1-tameness of the hijacked tube) +
-REVIEW-GATED (referee launched at close). NO completion claim.
+**Status:** REVIEWED AND AMENDED (referee verdict S187r filed 2026-07-20;
+archived in section 6). SURVIVES AND STRENGTHENED: PS-residue lemma TRUE
+(referee verified 3 independent ways to 9 digits at a NONZERO fold — my S1
+evidence was degenerate, 0 = 0: the MISTAKE-207 evidence pattern again,
+closed by the referee); L1-tameness now DELTA-UNIFORM (referee swept
+delta = 3e-3 -> 3e-5: I converges, peak ~ delta^{-1/2} = square-root
+branch: log-divergence REFUTED; the frozen S3 digits carry ~0.1 Simpson
+artifacts, trend correct); the telescoping recurrence now PROVED FOR ALL
+m >= 3 at both executed triples (referee's certificate-interpolation:
+y(m0) polynomial of deg <= 11 through 12 windows reproduces the 13th,
+186/186 components — the identity holds identically in m0). AMENDED:
+(i) the sum rule requires ALL LEVEL-SET POINTS SIMPLE (referee's cusp
+counterexample: a triple-pole residue term restores it); (ii) "deleted
+hijacked stacks are symmetry stacks" is proved ONLY for single-edge
+events — CROSS-EDGE exact value-sharing exists (referee's palindromic
+witness: end-edge folds share values via INVERSION u -> 1/u, modulus
+ratio up to 98, not a rotation) — cross-edge sharing is OPEN;
+(iii) "P-recursive unconditionally" -> proved-for-all-m at the executed
+triples (as above); (iv) "M = 3 at ALL coefficients" RETRACTED: at
+abc = 0 the elimination's raw top coefficient VANISHES (degenerate
+strata need re-stratification; the displayed recurrence is for
+(a,b,c) = (3/2,-2/3,5/4) specifically). NO completion claim.
 **Author:** boxeph-2026-07-20-S187 (HYP-8585)
 **Owner:** "work the sharpest targets" (the two named at S186r close).
 
@@ -20,10 +38,13 @@ value 0 is reproduced identically (forced by the global identity below).
 **Level-set sum rule.** v/(u(v-Lam)) has no pole at u = 0, inf for mixed
 Lam, so its residues sum to zero over the level set Lam = v:
   Sum_{folds with value v} PS_i = Sum_{simple roots u* of Lam=v} v/(u* Lam'(u*))
-(orientation as measured: equality to all digits on the 1-fold-1-spectator
-cubic model). The TOTAL even collision-part of any stacked germ is
-controlled by the SIMPLE points of its level set — the referee's global
-residue identity upgraded to the collision object.
+(orientation now DERIVED by the referee: Res at a simple root is
+-v/(u* Lam'(u*)), total zero, hence the equality; my S2 caption claimed
+"PS + spectator = 0" while its own output printed equality — corrected).
+HYPOTHESIS REQUIRED (referee's cusp counterexample): every point of the
+level set SIMPLE — higher-multiplicity critical points contribute their
+own higher-order residues. The TOTAL even collision-part of a SIMPLE
+stacked germ is controlled by the simple points of its level set.
 
 ## 2. The hijacked (L1) sub-case: mu_g-rigidity + L1-tameness
 
@@ -33,10 +54,13 @@ values transform by zeta^{d1}. Two events SHARE the value iff
 zeta^{d1} = zeta^{d2} = 1, i.e. zeta in mu_g, g = gcd(d1,d2) — and such
 zeta are exactly the ROTATION SYMMETRIES of the edge. Hence: value-sharing
 (in particular DELETED-stack) events on a hijacked two-term edge are
-mu_g-rotation-related. Deleted hijacked stacks are SYMMETRY stacks;
-combined with the sum rule, their even collision-part equals the
-simple-level-set side — the residual question (tameness of those terms on
-DELETED levels) is named and open.
+mu_g-rotation-related — ON THAT EDGE. [AMENDED per referee S187r:] the
+conclusion "deleted hijacked stacks are symmetry stacks" is proved only
+for SINGLE-EDGE events; exact CROSS-EDGE value-sharing exists (palindromic
+witness: two end-edge folds share values at every w via the INVERSION
+u -> 1/u — not a rotation, moduli differ by up to 98x). Cross-edge
+sharing on deleted levels is a NAMED OPEN sub-case alongside the tameness
+question.
 
 **L1-tameness (measured).** On the S186r hijack witness
 P4 = ZW + Z^9 W^7 + W, marching the probe t = (1 + 3e-3 i)/v(s0) along the
@@ -85,6 +109,29 @@ coefficient) caveat FOR THIS SUPPORT by exhibiting the certificate.
   the S186r holonomicity gaps are BYPASSED, not patched.
 - Remaining for GMC(2): the deleted-hijack tameness question; cusp strata;
   the two-regime (L2) lemma; the parametric certificates; citations.
+
+## 6. REFEREE VERDICT (S187r; checks frozen at
+04-computation/thm1785_referee_{sumrule_hijack,telescoping}_S187r.py + .outs)
+
+(1) PS-residue lemma CONFIRMED (3-way independent, 9 digits, nonzero fold);
+filed S1 evidence degenerate (0 = 0) — MISTAKE-207 pattern, closed by
+referee. (2) sum rule CONFIRMED as scoped + cusp hypothesis REQUIRED
+(explicit counterexample; triple-pole residue restores it); orientation
+derived; multi-fold multiplicity closes to 1e-16; mixed hypothesis
+load-bearing (K- = 0 fails by exactly the u = 0 residue). (3) edge lemma
+correct; symmetry-stack conclusion OVERCLAIMED (cross-edge inversion
+witness). (4) L1 SURVIVES delta-sweep: I converges as delta -> 0
+(0.5042 -> 0.5190 geometrically), peak ~ delta^{-0.49}; frozen digits
+carry Simpson artifacts (true ~0.52/0.30); measurement is a consistency
+datum (visible arc), not an endgame input — correctly ledgered.
+(5) telescoping CONFIRMED + STRENGTHENED: E/U/W re-derived, exactN vs
+quadrature 1e-15, dropped-row logic verified sound, kernel verified
+explicitly on 136 non-mu columns x 13 windows x 2 triples; recurrence
+holds m = 3..120; PROVED for all m >= 3 by certificate interpolation.
+(6) M = 3 at all coefficients REFUTED on degenerate strata (raw top
+coefficient = 0 at (1,0,1),(1,1,0),(0,1,1); b = 0 relation vacuous on
+odd levels); proved-constant-leading at the two executed triples.
+(7) ledger honest; the "at ALL coefficients" line was the sole overclaim.
 
 ## 5. Files
 
