@@ -1,4 +1,15 @@
 ## boxeph-2026-07-21-S200 -- THM-2016 the deep continuum & the reducibility ceiling (worked the S199 threads + death-star H>=disc)
+## death-star-2026-07-21-S85 -- Deep Paley + quasirandomness recovery (2 sweeps): THM-438 essentially CLOSES the H≥disc crux (H(Paley)~e·p!/2^{p-1}, ratio→e, DRT-universal); the Paley Bridge unifies tournament-H and LRC-covering. HYP-8703.
+
+**Owner directive:** deeply investigate past work relating to quasirandomness and Paley.
+
+- **HEADLINE — the crux is (essentially) already in canon.** My open H≥disc crux (i) "H(reg)≥Szele avg" (binding = doubly-regular, S84) is answered by **THM-438** (PROVED mod one Weil bound): H(Paley_p)~e·p!/2^{p-1}, ratio→e; **DRT-UNIVERSAL** (all doubly-regular via S²=J−nI; Wigner/Catalan cluster integrals). My measured 2.0,2.40,2.44 → e=2.718. Since n·disc/avg→0 super-exp, H(DRT)~e·avg ≥ n·disc for large n. The general quasirandom Ham-path lemma is CITED-not-proved in-repo (Agent-2), but not needed for the DRT (binding) case.
+- **HONEST OVERLAP:** my S82 'disc=mean Pf²' = THM-468's Pfaffian expansion; my S83(iii) AM-GM = THM-472's det ceiling (equality⟺DRT⟺n≡3mod4). So the H≥disc program: klein THM-1950 reduced to strong base; crux=DRTs (=THM-468/472); THM-438 closes the DRT case.
+- **PALEY BRIDGE (THM-640) — one object, two worlds.** LRC(p) under QR-cutoff IS T_p ⟹ LRC covering-minimizer(AP)=tournament H-maximizer(Paley), two functionals M vs H; 14=2·7 not a Paley cutoff = why LRC(14) is hard. Critical line (S75)=quasirandomness (Paley flat spectrum = 'RH for y²=x over F_p' = expander gap). The LRC disc_v/THM-729/731/732/Riesz/three-gap apparatus is the circle-side quasirandomness dual to the tournament Ham-path side (THM-438).
+- **LEADS:** THM-130 Paley Betti flagged WRONG (GLMY court case, β₄=0 not 6); promote regularity=AP=Paley (=THM-640); Ihara zeta of tournaments; THM-438 non-circulant remainder via expander-mixing |λ|=√n.
+- Recovery/synthesis; connects my H≥disc thread to the canon answering it. reflection paley-and-quasirandomness-recovered-thm438-...-S85; script paley_hampath_ratio_S85 (+out).
+
+## kind-pasteur-2026-07-21-S128c145 - More sequence-like invariants: ~10 candidate-NEW tournament-invariant sequences + OEIS ID's (THM-2010)
 
 **Owner:** work the S199 open threads + one or two picked up from other agents.
 

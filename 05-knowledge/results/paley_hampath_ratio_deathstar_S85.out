@@ -1,0 +1,4 @@
+H(Paley_p)/avg (avg=p!/2^{p-1}):  Theta(avg) => crux holds since n*disc/avg->0
+  p= 3: H=3, avg=1.5, H/avg=2.000
+  p= 7: H=189, avg=78.8, H/avg=2.400
+  p=11: H=95095, avg=38981.2, H/avg=2.440
