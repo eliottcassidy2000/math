@@ -1,0 +1,147 @@
+#!/usr/bin/env python3
+"""continuum_threads_boxeph_S200.py -- boxeph-2026-07-21-S200
+
+Working the S199 open threads + agent pickups.
+
+THREAD A (L3 coordinate): what separates the deep-continuum tournaments that share
+   (score, char_A, |R|)?  Test LOCAL SUBTOURNAMENT DENSITIES (the k-profile = induced-subtournament
+   census), i.e. the flag/limit-theory coordinates. Find the minimal k that completes resolution.
+THREAD B (reducibility ceiling): max c3 over REDUCIBLE (non-strong) tournaments = c3_max(n-1)
+   [cyclic content lives in strong components, biggest has <= n-1 vertices]. => condensation
+   temperature tau_c = c3_max(n-1)/c3_max(n).
+THREAD C (H vs temperature): mean/max/spread of H per iso-cyclic shell -- locate the H structure on
+   the temperature axis (death-star-S84 H>=disc binding case = quasirandom = tau=1).
+"""
+import numpy as np
+from itertools import permutations, combinations
+from fractions import Fraction as Fr
+from collections import defaultdict, Counter
+from math import comb
+
+def canon(A,n,perms):
+    best=None
+    for p in perms:
+        c=tuple(A[p[i]][p[j]] for i in range(n) for j in range(n) if i!=j)
+        if best is None or c<best: best=c
+    return best
+PERMS={k:list(permutations(range(k))) for k in range(1,8)}
+def iso_reps(nmax):
+    reps={1:[[[0]]]}
+    for n in range(2,nmax+1):
+        seen=set(); out=[]
+        for B in reps[n-1]:
+            for pat in range(1<<(n-1)):
+                A=[row[:]+[0] for row in B]+[[0]*n]
+                for k in range(n-1):
+                    if pat>>k&1: A[n-1][k]=1
+                    else: A[k][n-1]=1
+                c=canon(A,n,PERMS[n])
+                if c not in seen:
+                    seen.add(c); M=[[0]*n for _ in range(n)]; idx=0
+                    for i in range(n):
+                        for j in range(n):
+                            if i!=j: M[i][j]=c[idx]; idx+=1
+                    out.append(M)
+        reps[n]=out
+    return reps
+def scoreseq(A,n): return tuple(sorted(sum(A[i]) for i in range(n)))
+def c3v(A,n):
+    sc=[sum(A[i]) for i in range(n)]; return comb(n,3)-sum(comb(s,2) for s in sc)
+def strong(A,n):
+    R=[[1 if(i==j or A[i][j])else 0 for j in range(n)]for i in range(n)]
+    for k in range(n):
+        for i in range(n):
+            if R[i][k]:
+                for j in range(n):
+                    if R[k][j]: R[i][j]=1
+    return all(R[i][j] and R[j][i] for i in range(n) for j in range(n))
+def charpoly_int(A):
+    n=len(A); A=[[int(A[i][j])for j in range(n)]for i in range(n)]
+    M=[[1 if i==j else 0 for j in range(n)]for i in range(n)]; c=[1]
+    for k in range(1,n+1):
+        AM=[[sum(A[i][t]*M[t][j]for t in range(n))for j in range(n)]for i in range(n)]
+        tr=sum(AM[i][i]for i in range(n)); ck=-tr//k; c.append(ck)
+        M=[[AM[i][j]+(ck if i==j else 0)for j in range(n)]for i in range(n)]
+    return tuple(c)
+def signed_redei(A,n):
+    adj=A; R=0; path=[]
+    def dfs(v,used):
+        nonlocal R
+        path.append(v)
+        if len(path)==n:
+            inv=sum(1 for a in range(n) for b in range(a+1,n) if path[a]>path[b])
+            R+= 1 if inv%2==0 else -1
+        else:
+            for w in range(n):
+                if not(used>>w&1) and adj[v][w]: dfs(w,used|(1<<w))
+        path.pop()
+    for v in range(n): dfs(v,1<<v)
+    return R
+def profile_k(A,n,k):
+    cnt=Counter()
+    for S in combinations(range(n),k):
+        sub=[[A[i][j] for j in S] for i in S]
+        cnt[canon(sub,k,PERMS[k])]+=1
+    return tuple(sorted(cnt.items()))
+
+reps=iso_reps(7)
+print("iso classes:", {n:len(reps[n]) for n in range(3,8)})
+
+# ---------------- THREAD A ----------------
+print("\n"+"="*92); print("THREAD A  L3 coordinate: does the local k-subtournament census separate (char_A,|R|)-twins?")
+print("="*92)
+n=7
+# the hot shell tau=6/7 (c3=12) had 47 classes, 36 resolved by (char_A,|R|)
+for cc in (12,11,13):
+    shell=[A for A in reps[n] if c3v(A,n)==cc]
+    key2=defaultdict(list)
+    for A in shell: key2[(charpoly_int(A),signed_redei(A,n))].append(A)
+    twins=[grp for grp in key2.values() if len(grp)>1]
+    ntwin=sum(len(g) for g in twins)
+    # try adding profile_4, then profile_5
+    def resolves(extra):
+        seen=set()
+        for A in shell:
+            k=(charpoly_int(A),signed_redei(A,n))+extra(A)
+            seen.add(k)
+        return len(seen)
+    r_base=resolves(lambda A:())
+    r_p4=resolves(lambda A:(profile_4:=profile_k(A,n,4),))
+    r_p5=resolves(lambda A:(profile_k(A,n,4),profile_k(A,n,5)))
+    print("  c3=%d shell: %d classes; (char_A,|R|) resolves %d; +4-profile %d; +4&5-profile %d  [%d in twin-groups]"
+          %(cc,len(shell),r_base,r_p4,r_p5,ntwin))
+print("  => the L3 coordinate = LOCAL subtournament densities (flag/limit coordinates).")
+
+# ---------------- THREAD B ----------------
+print("\n"+"="*92); print("THREAD B  reducibility ceiling: max c3 over REDUCIBLE tournaments vs c3_max(n-1)")
+print("="*92)
+c3max={n:max(c3v(A,n) for A in reps[n]) for n in range(3,8)}
+print("  c3_max(n) n=3..7:", [c3max[n] for n in range(3,8)])
+for n in range(4,8):
+    red=[A for A in reps[n] if not strong(A,n)]
+    maxred=max(c3v(A,n) for A in red)
+    print("  n=%d: max reducible c3 = %d ; c3_max(n-1) = %d ; equal? %s ; tau_c=c3_max(n-1)/c3_max(n)=%s"
+          %(n, maxred, c3max[n-1], maxred==c3max[n-1], Fr(c3max[n-1],c3max[n])))
+print("  => PROVED shape: c3(T)=sum c3(SCC) <= c3_max(largest SCC) <= c3_max(n-1); above it every class is strong.")
+
+# ---------------- THREAD C ----------------
+print("\n"+"="*92); print("THREAD C  H vs cyclic temperature: H structure per iso-cyclic shell (locate death-star's binding)")
+print("="*92)
+def ham_paths(A,n):
+    full=(1<<n)-1; dp=[[0]*n for _ in range(1<<n)]
+    for v in range(n): dp[1<<v][v]=1
+    for mask in range(1<<n):
+        for last in range(n):
+            c=dp[mask][last]
+            if c:
+                for w in range(n):
+                    if not(mask>>w&1) and A[last][w]: dp[mask|(1<<w)][w]+=c
+    return sum(dp[full][last] for last in range(n))
+n=7
+shells=defaultdict(list)
+for A in reps[n]: shells[c3v(A,n)].append(A)
+print("  n=7:  tau     c3   #cls   H:min  mean   max   (H grows with temperature; spread widens hot)")
+for cc in sorted(shells,reverse=True):
+    Hs=[ham_paths(A,n) for A in shells[cc]]
+    print("       %-6s  %3d  %4d   %5d %6.1f %5d" %
+          (str(Fr(cc,c3max[7])), cc, len(Hs), min(Hs), sum(Hs)/len(Hs), max(Hs)))
