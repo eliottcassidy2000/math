@@ -1,0 +1,22 @@
+==============================================================================
+candidate inequalities at large n on high-H structured tournaments
+==============================================================================
+  family                 n   c3         H              2^{n-2}c3+1    C1     C2    
+  Paley-7                7   14         189            449            True   True  
+  Paley-11               11  55         95095          28161          True   False 
+  Paley-19               19  285        1172695746915  37355521       True   False 
+  Paley-23               23  506        15760206976379349 1061158913     True   False 
+  rotational-9           9   30         3267           3841           True   True  
+  rotational-13          13  91         3711175        186369         True   False 
+  rotational-15          15  140        198464295      1146881        True   False 
+  near-regular-8         8   14         305            897            True   True  
+  near-regular-10        10  32         8767           8193           True   False 
+  near-regular-12        12  48         138611         49153          True   False 
+  near-regular-14        14  106        19431499       434177         True   False 
+
+  C1 (c3 <= H)          first violation: NONE (holds)
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\wowii_candidates_largen_kps_S128c135.py", line 101, in <module>
+    print("  C2 (H <= 2^{n-2}c3+1) first violation: %s" % (first_fail_C2 or "NONE (holds)"))
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: not all arguments converted during string formatting

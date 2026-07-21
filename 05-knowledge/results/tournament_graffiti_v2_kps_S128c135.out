@@ -1,0 +1,32 @@
+gathering n=3..6 exhaustive + n=7 sample ...
+  n<=6: 33864 ; n=7 sample: 4000
+
+========================================================================================
+ROBUST pair inequalities  target <= a*source + b  (hold on n<=6 AND n=7 sample)
+========================================================================================
+  beta   <= smax   + 1     [eq on 14552]
+  diam   <= c3     + 1     [eq on 6672]
+  srange <= smax           [eq on 6502]
+  srange <= 2*beta   - 4     [eq on 2144]
+  diam   <= srange + 2     [eq on 1850]
+  smin   <= c3             [eq on 1160]
+  kings  <= 2*c3     + 1     [eq on 1160]
+  kings  <= H              [eq on 1160]
+  scc    <= srange + 1     [eq on 896]
+  smin   <= 2*H      - 2     [eq on 870]
+  scc    <= smax   + 1     [eq on 870]
+  scc    <= beta           [eq on 870]
+  diam   <= 2*H      - 1     [eq on 870]
+  c3     <= 2*H      - 2     [eq on 870]
+  diam   <= smax   + 1     [eq on 866]
+  diam   <= beta   + 1     [eq on 720]
+  smin   <= beta   - 1     [eq on 266]
+  kings  <= 2*beta           [eq on 240]
+  smin   <= 2*kings          [eq on 144]
+  smin   <= smax           [eq on 26]
+  kings  <= 2*smax   + 1     [eq on 26]
+  smax   <= 1/2*srange + 4     [eq on 0]
+  beta   <= 1/2*srange + 4     [eq on 0]
+
+  Every line above passed the n=7 cross-validation, so none is a c134-style small-n
+  artifact (srange <= beta, which held n<=6, is correctly ABSENT -- it fails at n=7).

@@ -17792,3 +17792,19 @@ n=7: c3<=H, H<=2^{n-2}c3+1. WOWII-style auto-refutation: srange<=beta holds n<=6
 loop: generate -> tight survivors are candidate theorems -> failures come with a 3-cycle-atom
 witness. Named-next: prove c3<=H (injection 3-cycles->Ham paths?); run full WOWII list on G_n/E_n
 + tournaments n=7,8; formalize the sandwich in Lean (native_decide).
+
+## HYP-8640 — full WOWII loop round: c3<=H reduced + formalized; C2 refuted; robust candidate list
+
+**Status: loop closed on the c3/H pair; robust candidates surfaced.** kind-pasteur-2026-07-21-S128c135. THM-1860.
+
+Ran the full WOWII loop for a long session (generate -> filter -> push past filter -> prove/refute
+-> formalize). (a) c3 <= H (3-cycles <= Ham paths): survives to n=23; PROVED-modulo-base via SCC
+decomposition (H=prod H(SCC), c3=sum c3(SCC), sum<=prod for >=2), residual = strongly-connected
+base (verified n<=7, n<=23 structured, 0 violations). THM-1860. (b) H <= 2^{n-2}c3+1: REFUTED at
+n=10 (near-regular-10 H=8767>8193; Paley-11 95095>28161) -- WOWII off-by-scale. (c) FORMALIZED the
+arithmetic kernel (sum<=prod for naturals>=2) in Lean SumLeProd.lean, sorry-free, wired to root --
+the WOWII 'formalize' step the fleet's directed-WOWII (klein-S397) hadn't done. (d) EXPANDED
+generator with n=7 CROSS-VALIDATION (so no small-n artifacts; srange<=beta correctly excluded):
+robust survivors incl PROVABLE scc<=beta (condensation transitive => representatives give a
+size-scc transitive subtournament) and candidate diam<=c3+1, kings<=H. Named-next: prove the
+strongly-connected c3<=H base; diam<=c3+1; feed refuted C2 back as a lower-bound search.

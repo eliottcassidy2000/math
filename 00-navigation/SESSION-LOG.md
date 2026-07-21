@@ -13,6 +13,35 @@
 
 **Next:** chase Redei-parity-as-involution (turn the lens into a new proof of the odd-Hamiltonian-path theorem). Artifacts: 07-reflections/the-sign-reversing-tournament-involution-as-a-repo-wide-engine-macmini-S159.md, 04-computation/signed_tournament_involution_redeployments_macmini_S159.py (+.out).
 
+## kind-pasteur-2026-07-21-S128c135
+
+**Ran the full WOWII loop for a long session (generate -> filter -> push -> prove/refute ->
+formalize), pulling between rounds. Headline: THM-1860 c3<=H reduced + formalized.**
+
+- **REFUTE:** the generator's sibling candidate H <= 2^{n-2}c3+1 (tight at transitive) is REFUTED
+  at n=10 -- near-regular-10 has H=8767 > 8193, Paley-11 95095 > 28161. A WOWII off-by-scale bound:
+  true small n, false once H~n!/2^n outruns 2^n c3. Found by pushing past the n<=7 filter.
+- **PROVE-REDUCE (THM-1860): c3 <= H** (3-cycles <= Hamiltonian paths, survives to n=23) is proved
+  MODULO the strongly-connected base via the SCC decomposition: H(T)=prod H(SCC), c3(T)=sum c3(SCC)
+  (Ham path = concatenation of per-SCC paths; 3-cycles intra-component), so with the base c3<=H per
+  SCC and H(SCC)>=2, sum c3 <= sum H <= prod H. Residual = strongly-connected base, verified n<=7
+  exhaustive/sample + n<=23 structured (0 violations); min H(SC)=3,5,9,15,25.
+- **FORMALIZE:** the arithmetic kernel 'sum <= product for a list of naturals >= 2' proved
+  sorry-free in Lean 4/Mathlib (SumLeProd.lean, sum_le_prod), wired into the root module. This is
+  the WOWII 'formalize' step none of the fleet's tournament-graffiti work (klein-S397 directed-WOWII,
+  death-star prototype) had done.
+- **MASS-GENERATE with n=7 CROSS-VALIDATION** (tournament_graffiti_v2): expanded invariants
+  (+diam), every survivor must hold on n<=6 exhaustive AND a n=7 sample -- so no c134-style small-n
+  artifacts (srange<=beta correctly EXCLUDED, it fails n=7). Robust survivors include PROVABLE
+  scc<=beta (condensation is transitive, one rep per SCC = size-scc transitive subtournament) and
+  candidates diam<=c3+1, kings<=H, c3<=2H-2.
+- The repo now has the loop running end-to-end on self-proposed pairs, with a formalized kernel.
+
+**Handoff.** (1) the strongly-connected c3<=H base (injection 3-cycles->Ham paths via median order,
+or Moon pancyclicity count). (2) prove diam<=c3+1, scc<=beta (latter is one line). (3) feed the
+refuted C2 back as a LOWER-bound search for the true H-vs-c3 envelope. (4) run the full ~150 WOWII
+list on G_n/E_n (klein-S395 started).
+
 ## klein-2026-07-21-S397 -- THM-1850: DIRECTED WOWII. A PROVED domination-transitivity inequality gamma(T) + tr(T) <= n+1 (elementary source-domination), corollary gamma <= fas+1, plus THREE refuted directed-inequality conjectures with explicit witnesses -- the directed-WOWII pipeline producing content, exhaustive n<=7.
 
 **Owner directive:** work on the directed analogies of the WOWII inequalities.
