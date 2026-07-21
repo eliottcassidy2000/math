@@ -1,0 +1,123 @@
+==============================================================================
+DEFINITIVE INVARIANT LATTICE — exhaustive iso census n=3..6
+==============================================================================
+n=3: iso classes = 2   |score|=2  |specA|=2  |specS|=1  |cyc|=2  |H|=2  |R|=2  |disc|=1  |arb|=2  |aut|=2
+n=4: iso classes = 4   |score|=4  |specA|=3  |specS|=2  |cyc|=3  |H|=3  |R|=2  |disc|=2  |arb|=3  |aut|=2
+n=5: iso classes = 12   |score|=9  |specA|=9  |specS|=2  |cyc|=9  |H|=7  |R|=6  |disc|=2  |arb|=7  |aut|=3
+n=6: iso classes = 56   |score|=22  |specA|=28  |specS|=6  |cyc|=32  |H|=19  |R|=8  |disc|=5  |arb|=32  |aut|=4
+
+==============================================================================
+(Q1) REFINEMENT MATRIX at n=6  (row f REFINES col g?  '<' = yes)
+==============================================================================
+         score specA specS   cyc     H     R  disc   arb   aut
+  score      .     -     -     -     -     -     -     -     -
+  specA      -     .     <     -     -     -     <     -     <
+  specS      -     -     .     -     -     -     <     -     -
+    cyc      -     <     <     .     <     <     <     -     <
+      H      -     -     -     -     .     -     -     -     -
+      R      -     -     -     -     -     .     -     -     -
+   disc      -     -     -     -     -     -     .     -     -
+    arb      -     -     -     -     -     -     -     .     -
+    aut      -     -     -     -     -     -     -     -     .
+
+==============================================================================
+(Q1b) FIRST-SEPARATION n for selected pairs (smallest n where f does NOT refine g)
+==============================================================================
+   score refines specA ? first FAILS at n=5
+   specA refines score ? first FAILS at n=4
+   score refines cyc   ? first FAILS at n=5
+     cyc refines score ? first FAILS at n=4
+   specA refines H     ? first FAILS at n=6
+       H refines specA ? first FAILS at n=5
+   score refines H     ? first FAILS at n=5
+       H refines score ? first FAILS at n=4
+   specA refines specS ? first FAILS at refines through n=6
+   specS refines specA ? first FAILS at n=3
+       H refines R     ? first FAILS at n=5
+       R refines H     ? first FAILS at n=4
+    disc refines H     ? first FAILS at n=3
+       H refines disc  ? first FAILS at n=5
+    disc refines specS ? first FAILS at n=6
+   specS refines disc  ? first FAILS at refines through n=6
+     arb refines specA ? first FAILS at n=4
+   specA refines arb   ? first FAILS at n=4
+       R refines specA ? first FAILS at n=4
+   specA refines R     ? first FAILS at n=6
+     cyc refines H     ? first FAILS at refines through n=6
+       H refines cyc   ? first FAILS at n=5
+   specA refines aut   ? first FAILS at refines through n=6
+     cyc refines specS ? first FAILS at refines through n=6
+   specS refines cyc   ? first FAILS at n=3
+
+==============================================================================
+(Q2) DOES A SET OF INVARIANTS JOINTLY DETERMINE THE ISO CLASS?  (meet = iso?)
+==============================================================================
+ n=4:
+    {score} -> DETERMINES iso
+    {specA} -> MISSES (1 collisions)
+    {cyc} -> MISSES (1 collisions)
+    {H} -> MISSES (1 collisions)
+    {score, specA} -> DETERMINES iso
+    {score, cyc} -> DETERMINES iso
+    {specA, specS} -> MISSES (1 collisions)
+    {score, specA, cyc} -> DETERMINES iso
+    {score, specA, specS, cyc} -> DETERMINES iso
+    {score, specA, specS, cyc, H, R, disc, arb, aut} -> DETERMINES iso
+ n=5:
+    {score} -> MISSES (3 collisions)
+    {specA} -> MISSES (3 collisions)
+    {cyc} -> MISSES (3 collisions)
+    {H} -> MISSES (5 collisions)
+    {score, specA} -> DETERMINES iso
+    {score, cyc} -> DETERMINES iso
+    {specA, specS} -> MISSES (3 collisions)
+    {score, specA, cyc} -> DETERMINES iso
+    {score, specA, specS, cyc} -> DETERMINES iso
+    {score, specA, specS, cyc, H, R, disc, arb, aut} -> DETERMINES iso
+ n=6:
+    {score} -> MISSES (34 collisions)
+    {specA} -> MISSES (28 collisions)
+    {cyc} -> MISSES (24 collisions)
+    {H} -> MISSES (37 collisions)
+    {score, specA} -> MISSES (10 collisions)
+    {score, cyc} -> MISSES (6 collisions)
+    {specA, specS} -> MISSES (28 collisions)
+    {score, specA, cyc} -> MISSES (6 collisions)
+    {score, specA, specS, cyc} -> MISSES (6 collisions)
+    {score, specA, specS, cyc, H, R, disc, arb, aut} -> DETERMINES iso
+
+==============================================================================
+(Q3) mac-mini's open Q: does R distinguish COSPECTRAL / SAME-H tournaments?
+==============================================================================
+ n=4: R distinguishes some cospectral pair? False   R distinguishes some same-H pair? False
+        H distinguishes some same-R pair? True   specA distinguishes some same-R pair? True  (=> R and H/specA are INCOMPARABLE)
+ n=5: R distinguishes some cospectral pair? False   R distinguishes some same-H pair? True
+        H distinguishes some same-R pair? True   specA distinguishes some same-R pair? True  (=> R and H/specA are INCOMPARABLE)
+ n=6: R distinguishes some cospectral pair? True   R distinguishes some same-H pair? True
+        H distinguishes some same-R pair? True   specA distinguishes some same-R pair? True  (=> R and H/specA are INCOMPARABLE)
+
+==============================================================================
+(Q4) poly-time (disc, arb, specA) vs #P (H, R): does any poly invariant determine H?
+==============================================================================
+ n=4:   disc refines H (determines Redei count)? False   | H refines disc? True
+ n=4:    arb refines H (determines Redei count)? False   | H refines arb? False
+ n=4:  specA refines H (determines Redei count)? True   | H refines specA? True
+ n=4:  specS refines H (determines Redei count)? False   | H refines specS? True
+ n=4:  score refines H (determines Redei count)? True   | H refines score? False
+ n=4:    cyc refines H (determines Redei count)? True   | H refines cyc? True
+
+ n=5:   disc refines H (determines Redei count)? False   | H refines disc? False
+ n=5:    arb refines H (determines Redei count)? False   | H refines arb? False
+ n=5:  specA refines H (determines Redei count)? True   | H refines specA? False
+ n=5:  specS refines H (determines Redei count)? False   | H refines specS? False
+ n=5:  score refines H (determines Redei count)? False   | H refines score? False
+ n=5:    cyc refines H (determines Redei count)? True   | H refines cyc? False
+
+ n=6:   disc refines H (determines Redei count)? False   | H refines disc? False
+ n=6:    arb refines H (determines Redei count)? False   | H refines arb? False
+ n=6:  specA refines H (determines Redei count)? False   | H refines specA? False
+ n=6:  specS refines H (determines Redei count)? False   | H refines specS? False
+ n=6:  score refines H (determines Redei count)? False   | H refines score? False
+ n=6:    cyc refines H (determines Redei count)? True   | H refines cyc? False
+
+DONE.

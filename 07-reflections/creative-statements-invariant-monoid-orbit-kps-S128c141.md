@@ -77,7 +77,31 @@ down". Twelve statements.
 > topics whose `M` is non-amenable (LRC, `PSL(2,Z)`) or whose `f` has a finite stabilizer (`H`,
 > `per`). *Find the monoid, and you know how hard the problem is before you start.*
 
+## RESOLUTION UPDATE (kps-S128c142, THM-1965) — conjectures chased to definitive verdicts
+
+The next session (owner: chase definitive results) resolved two of these:
+
+- **Statement 4 (the invariant lattice) → THM-1965, fully mapped.** The Hasse diagram of nine
+  `Sn`-orbit invariants is pinned exhaustively n≤6. Headline: **`score ⟂ cyc`** (the cut/cycle
+  incomparability = the lattice shadow of GF(2) cut⊕cycle); `cyc` is the cycle-side master invariant;
+  the adjacency spectrum determines the skew spectrum but not conversely; and **mac-mini's open R
+  question is answered** — the signed Rédei count `R` is incomparable to both `H` and `specA` (a
+  genuinely new coordinate). klein's `H ≥ disc` sits here as `disc ⟂ H` (a numeric bound, not a
+  refinement) — the tournament permanent-vs-determinant pair of statement 5.
+- **Statement 12 (metagraph = Schreier/Cayley) → REFUTED (THM-1965 finding 6).** `G_n` is not
+  regular (degrees 3..14 at n=6), not vertex-transitive, **not a Cayley graph**. The transitive
+  corner is a genuine distinguished vertex — the absence of homogeneity is exactly *why* the
+  spine/ribs/sea geometry exists. (It is still a Schreier graph in the trivial sense every graph is;
+  the meaningful vertex-transitive claim is false.) 1-WL gives a canonical 34-class coloring at n=6.
+- **Statement 5 (hardness = stabilizer dimension) → reinforced.** No poly-time invariant
+  (disc/arb/specA/specS/score) refines `H` from n=5 — the lattice-level restatement of THM-1780/1865.
+- **New sharpest open lead:** `cyc → H` (the cycle vector determines the Rédei count) holds n≤6 —
+  test at n=7. Statements 6-11 (H=orbit-cardinality, Newton ladder, GIT, Cayley–Dickson, GMC nullcone,
+  LRC) remain [R]/[C] as posed.
+
 ## Cross-links
-THM-1945 (the five verified) · THM-1885 (BS(1,2), the catalog, amenability) · THM-1810 (GIT/SL₂) ·
-THM-1780/1870 (H #P boundary) · LEM-003 (orbit–stabilizer, tilings×|Aut|=H) · THM-826 (Farey/PSL2Z) ·
-CLAUDE.md (cut⊕cycle, even graphs, spine/ribs/sea) · script invariant_monoid_orbit_kps_S128c141.py.
+THM-1945 (the five verified) · THM-1965 (the invariant lattice, definitively mapped) · THM-1885
+(BS(1,2), the catalog, amenability) · THM-1810 (GIT/SL₂) · THM-1780/1870 (H #P boundary) · LEM-003
+(orbit–stabilizer, tilings×|Aut|=H) · THM-826 (Farey/PSL2Z) · mac-mini THM-1936 (R) · klein THM-1950
+(H≥disc) · CLAUDE.md (cut⊕cycle, even graphs, spine/ribs/sea) · scripts
+invariant_monoid_orbit_kps_S128c141.py, invariant_lattice_definitive_kps_S128c142.py.

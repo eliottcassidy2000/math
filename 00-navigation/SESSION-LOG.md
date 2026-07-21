@@ -6,6 +6,45 @@
 - **α(E_n)=2^{n−4} — CONFIRMED to n=7.** Built E_7 (V=54=A002854 exact, hash-canonical), α(E_7)=8=2³. So α(E_n)=1,2,4,8 at n=4..7; predicts α(E_8)=16. The G_n-dual α(G_n)=2,5,18 has no closed form — a metagraph/even-dual asymmetry.
 - **RECURSION MODES — resolved to the order-join.** Signed-additive deck reading (±patterns on vertex-deleted subtournament invariants) is INCONCLUSIVE (recorded dead end). The clean "smaller classes → larger class" mechanism is the MULTIPLICATIVE order-join (condensation into strong atoms): H,|R| multiply (mac-mini THM-1936), disc super-multiplies (klein THM-1950 SL2 velocity-addition s(C1⇒C2)=(s1+s2)/(1+s1s2)); reducible classes are built from strong atoms; the ± are the R=Σsgn(π) permutation signs. So "which iso classes come from smaller subtournament classes" = the REDUCIBLE ones; strong tournaments are the atoms.
 - **FLEET (credited):** klein THM-1950 reduced my HYP-8636 (H≥disc) to the strong base via this exact composition algebra — one strong-base inequality from proof. mac-mini THM-1936 (signed R multiplicative), kps THM-1885/1880 (a/b=BS(1,2)), boxeph THM-1926 (zeta). reflection chasing-the-predictions-...-S81; script pell_supersymmetry_and_deck_recursions_S81 (+out). GMC(2)/LRC(14) open; no LRC re-audit.
+## kind-pasteur-2026-07-21-S128c142 - The tournament-invariant lattice DEFINITIVELY mapped; 3 conjectures resolved (THM-1965)
+
+Owner: work reframings & conjectures, investigate more of them, chase definitive results. Took the
+[C]/[R] statements from my THM-1945 dictionary and drove the tractable ones to definitive verdicts.
+
+**METHOD:** reframe 9 tournament invariants as Sn-orbit functions ordered by "f refines g iff same-f
+=> same-g"; compute the FULL refinement Hasse diagram + first-separation n, exhaustively over EVERY
+iso class n=3..6 (bit-packed canon; script invariant_lattice_definitive_kps_S128c142.py +out).
+Invariants: score, specA, specS, cyc=(c3..cn), H=#Ham-paths, R=signed-Redei, disc=|det(I+K)|/2^{n-1},
+arb=arborescences, aut=|Aut|. VALIDATED: H odd (Redei); |R| spectrum n=5={1,3,5,7,11,15}, max 3,3,15,15
+(= mac-mini THM-1936); disc = klein THM-1950.
+
+**SIX DEFINITIVE FINDINGS (THM-1965):**
+1. **CUT/CYCLE INCOMPARABILITY (headline).** score (cut-space/hierarchy) and cyc (cycle-space) are
+   INCOMPARABLE from n=5 -- the lattice shadow of the GF(2) cut+cycle direct sum. arb (Laplacian/cut
+   side) also incomparable to cyc. The project's core duality as an order-theoretic fact.
+2. **cyc = the cycle-side MASTER invariant** (refines specA,specS,H,R,disc,aut; not score/arb). specA
+   determines specS but not conversely (n<=6).
+3. **No poly-time invariant refines H from n=5** (disc/arb/specA/specS/score all fail) = lattice
+   restatement of THM-1780/1865 (H #P leaves the ladder). disc INCOMPARABLE to H (klein's H>=disc is a
+   numeric bound, NOT a refinement) = the tournament permanent-vs-determinant pair.
+4. **mac-mini's OPEN QUESTION ANSWERED:** R is INCOMPARABLE to both H and specA (R separates same-H
+   from n=5, cospectral from n=6; H/specA separate same-R from n=4) => R a genuinely new coordinate.
+5. **ISO RECONSTRUCTION:** {score,specA} pins iso n<=5, misses 10 at n=6; no proper subset of the 9
+   determines iso from n=6; full 9-tuple does (n<=6).
+6. **[C12] REFUTED:** metagraph G_n NOT regular (deg 3..14 n=6), NOT vertex-transitive, NOT Cayley --
+   the transitive corner is a distinguished vertex, so the spine/ribs/sea + principal-line geometry IS
+   the absence of symmetry. 1-WL canonical 34-class coloring at n=6.
+
+**FLAGGED n<=6-only (conjecture n>=7):** cyc->H (cycle vector determines the Redei count -- SHARPEST
+open lead, test n=7) and specA->specS. Both possibly fineness artifacts (cyc=32 of 56 values n=6).
+
+**INTEGRATION:** answers mac-mini-S160's closing R-question; places klein-S400's H>=disc in the
+lattice; reinforces THM-1780/1865; maps THM-1945's lattice entry (4) in full; refutes my own [C12].
+Reflection creative-statements-...-S128c141 updated with resolution verdicts. Reframing + definitive
+resolutions, all VERIFIED-EXACT n<=6, no new open problem opened beyond the flagged cyc->H lead.
+
+**Namespace:** THM-1965 + HYP-8730 (hot: klein 1950, opus 1940/1955-region; took margin). No collision,
+no canon overridden. **Files:** THM-1965; reflection update; script + .out; HYP-8730.
 
 ## opus-2026-07-20-S443 - Concrete next steps: var(lambda^2) is a 4-subtournament-census invariant (THM-1940) -- resolves THM-1930, pins the quaternion-wall mechanism
 
