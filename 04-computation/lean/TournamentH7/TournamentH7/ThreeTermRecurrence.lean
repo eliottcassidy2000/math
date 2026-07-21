@@ -1,4 +1,7 @@
-import Mathlib
+import Mathlib.Algebra.Polynomial.Eval.Defs
+import Mathlib.Data.Real.Basic
+import Mathlib.Tactic.LinearCombination
+import Mathlib.Tactic.Positivity
 
 /-!
 # No common root for monic three-term recurrences
@@ -75,5 +78,43 @@ noncomputable def hermiteReal : ThreeTerm ℝ where
   a := fun _ => 0
   b := fun n => (n : ℝ) + 1
   hb := fun n => by positivity
+
+
+/-! ### Polynomial form
+
+The same recurrence as actual polynomials `p : ℕ → R[X]`; `polyEval` bridges it to the
+evaluation `ThreeTerm.p`, giving the no-common-root statement in `Polynomial.IsRoot` form. -/
+
+open Polynomial in
+/-- The monic polynomial sequence attached to a three-term recurrence, as `Polynomial R`. -/
+noncomputable def ThreeTerm.poly (T : ThreeTerm R) : ℕ → R[X]
+  | 0       => 1
+  | 1       => X - C (T.a 0)
+  | (n + 2) => (X - C (T.a (n + 1))) * T.poly (n + 1) - C (T.b (n + 1)) * T.poly n
+
+open Polynomial in
+theorem ThreeTerm.poly_succ_succ (T : ThreeTerm R) (n : ℕ) :
+    T.poly (n + 2) = (X - C (T.a (n + 1))) * T.poly (n + 1) - C (T.b (n + 1)) * T.poly n := rfl
+
+open Polynomial in
+/-- The polynomial sequence evaluated at `x` is the function sequence `ThreeTerm.p`. -/
+theorem ThreeTerm.eval_poly (T : ThreeTerm R) (n : ℕ) (x : R) :
+    (T.poly n).eval x = T.p n x := by
+  induction n using Nat.strong_induction_on with
+  | _ n ih =>
+    match n with
+    | 0 => simp [ThreeTerm.poly, ThreeTerm.p]
+    | 1 => simp [ThreeTerm.poly, ThreeTerm.p]
+    | (k + 2) =>
+      rw [ThreeTerm.poly_succ_succ, ThreeTerm.p_succ_succ]
+      simp only [eval_sub, eval_mul, eval_X, eval_C, ih (k + 1) (by omega), ih k (by omega)]
+
+open Polynomial in
+/-- **No two consecutive members of the polynomial three-term family share a root**
+(over an integral domain). -/
+theorem ThreeTerm.no_common_root_poly [IsDomain R] (T : ThreeTerm R) (n : ℕ) (x : R)
+    (h1 : (T.poly n).IsRoot x) (h2 : (T.poly (n + 1)).IsRoot x) : False := by
+  rw [Polynomial.IsRoot, ThreeTerm.eval_poly] at h1 h2
+  exact T.no_common_root n x h1 h2
 
 end ThreeTermRecurrence
