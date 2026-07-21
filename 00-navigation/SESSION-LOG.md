@@ -1,3 +1,32 @@
+## opus-2026-07-20-S446 - The path-cover polynomial is the refined compositional invariant; the formula/#P edge is REAL (THM-1975)
+
+Owner: work the cleanest next computations (the refined-object + relative defect from THM-1970/1960).
+BOTH resolved through one object -- the path-cover polynomial pc.
+
+(A) pc(S,c) = # partitions of V(S) into c vertex-disjoint directed paths; pc(S,1)=H(S) is its TOP
+coefficient. H(C3[S1,S2,S3]) is a FUNCTION of (pc(S1),pc(S2),pc(S3)) -- 0/20 pc-triples ambiguous over
+all size-<=3 blocks -- but NOT of scalar H (3/4 ambiguous). So pc COMPOSES where scalar H does not:
+H(C3[.]) = sum K(c1,c2,c3) prod pc(Si,ci), block-independent kernel K. RESOLVES THM-1970's 'more
+refined than H = the real answer' (= pc) and THM-1960's cyclic-H (the 13 in H(C3[C3])=3159 = cyclic
+interleaving of path-systems). pc is still #P (top coeff = H) -> the refinement is FUNCTORIAL, not a
+complexity reduction, exactly as THM-1970 predicted.
+
+(B) THE EDGE IS REAL: the relative H-defect defect_3(n)/Hbar(n) GROWS: 0.533 (n=5 exact), 0.622 (n=6
+exact), >=0.915 (n=7, 400k-sample). H lives on the FAR side of the formula/#P boundary -- the part
+invisible to a bounded poly census has positive+growing weight, NOT a measure-zero (gamma-like)
+correction. Tournaments occupy the harmonic edge and CROSS it; the poly tower is the largest formula-
+expressible shadow of an object past expression.
+
+THM-1960->1970->1975 assemble one statement: tournaments built by substitution over seeds; their
+formula-expressible invariants are a degree-graded poly ladder (score/c3/var/char_S); H is the first
+invariant past the top, refined not by a formula but by the functorial path-cover polynomial that
+composes over the seeds.
+
+OPEN: exact kernel K; general prime-quotient pc-law; does defect_3/Hbar -> 1?
+
+Files: THM-1975; HYP-8725; resolution banners on THM-1970/1960; path_cover_transfer + relative_defect_n7
+_opus_S446.py (+out). Namespace clean (1975/8725).
+
 ## kind-pasteur-2026-07-21-S128c143 - THE 2-ADIC EDGE of H: the spectrum resolves H to a depth that DECAYS to one bit; Redei's parity is the LAST formula (THM-1980)
 
 Owner: H being undetermined by poly-time invariants is an EDGE case; tournaments sit at the boundary

@@ -1,0 +1,8 @@
+relative H-defect (defect within same-c3 class)/mean-H, k=3 (degree-3 census)
+====================================================================
+  n=5 (exact): max defect=4, mean H=7.50, RELATIVE=0.533
+  n=6 (exact): max defect=14, mean H=22.50, RELATIVE=0.622
+  n=7 (sampled 400000): max defect>=72, mean H=78.71, RELATIVE>=0.915
+
+ READING: if the relative defect does NOT shrink (0.53, 0.62, ...), H lives on the far side
+ of the formula/#P edge -- the missing part has positive weight, not a measure-zero correction.

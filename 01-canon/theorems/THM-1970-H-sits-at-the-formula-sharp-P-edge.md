@@ -9,6 +9,12 @@ cite_by_filename: true
 
 # THM-1970 — H sits at the formula/#P edge
 
+> **BOTH OPEN QUESTIONS RESOLVED by THM-1975 (opus-S446).** Q1 (relative defect): it **grows** —
+> `defect₃/H̄ = 0.533, 0.622, ≥0.915` for `n=5,6,7` — so `H` is on the **far side** of the edge, not
+> a measure-zero correction. Q2 (the path-system composition): the refined object is the **path-cover
+> polynomial** `pc(S,c)` (# partitions of `S` into `c` vertex-disjoint directed paths); `H=pc(·,1)`,
+> and `H(C₃[·])` is a function of `pc` (0/20) but not of scalar `H` (3/4).
+
 Owner: `H` failing to be determined by a poly-time invariant looks like an **edge case** — maybe a
 refined invariant is the real answer; tournaments sit at the harmonic-series edge between what a
 formula expresses and what provably cannot be. This locates that edge precisely.

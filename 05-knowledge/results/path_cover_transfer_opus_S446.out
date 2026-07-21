@@ -1,0 +1,47 @@
+Sample path-cover polynomials pc(S,c) [c=1..m]:
+  m=1: pc=(1,)  (H=pc[1]=1)
+  m=2: pc=(1, 1)  (H=pc[1]=1)
+  m=2: pc=(1, 1)  (H=pc[1]=1)
+  m=3: pc=(1, 3, 1)  (H=pc[1]=1)
+  m=3: pc=(1, 3, 1)  (H=pc[1]=1)
+  m=3: pc=(3, 3, 1)  (H=pc[1]=3)
+  m=3: pc=(1, 3, 1)  (H=pc[1]=1)
+  m=3: pc=(1, 3, 1)  (H=pc[1]=1)
+
+TEST: H(C3[S1,S2,S3]) determined by path-cover polys? by scalar H?
+  by path-cover-poly triple: 0/20 ambiguous  (0 => pc DETERMINES composite)
+  by scalar-H triple:        3/4 ambiguous  (>0 => scalar H does NOT)
+
+EXTRACT transfer kernel K: H(C3[S^3-ordered]) = sum K(c1,c2,c3) pc1[c1]pc2[c2]pc3[c3]
+  size-3 fit exact=True (rank 8/27); nonzero K:
+    K(1, 1, 1) = 3.0
+    K(1, 1, 2) = 1.8
+    K(1, 1, 3) = 0.6
+    K(1, 2, 1) = 1.8
+    K(1, 2, 2) = 3.24
+    K(1, 2, 3) = 1.08
+    K(1, 3, 1) = 0.6
+    K(1, 3, 2) = 1.08
+    K(1, 3, 3) = 0.36
+    K(2, 1, 1) = 1.8
+    K(2, 1, 2) = 3.24
+    K(2, 1, 3) = 1.08
+    K(2, 2, 1) = 3.24
+    K(2, 2, 2) = 69.984
+    K(2, 2, 3) = 23.328
+    K(2, 3, 1) = 1.08
+    K(2, 3, 2) = 23.328
+    K(2, 3, 3) = 7.776
+    K(3, 1, 1) = 0.6
+    K(3, 1, 2) = 1.08
+    K(3, 1, 3) = 0.36
+    K(3, 2, 1) = 1.08
+    K(3, 2, 2) = 23.328
+    K(3, 2, 3) = 7.776
+    K(3, 3, 1) = 0.36
+    K(3, 3, 2) = 7.776
+    K(3, 3, 3) = 2.592
+
+ READING: pc (path-cover polynomial) is the refined COMPOSITIONAL invariant -- it determines
+ H(C3[.]) where scalar H does not; H = pc(.,1) is just its top coefficient. Resolves THM-1970's
+ 'more refined than H' + THM-1960's cyclic-H via the kernel K.

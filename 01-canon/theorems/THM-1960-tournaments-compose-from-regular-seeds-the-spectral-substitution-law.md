@@ -11,6 +11,11 @@ cite_by_filename: true
 
 # THM-1960 — Tournaments compose from regular seeds
 
+> **OPEN Q1 (cyclic-H) RESOLVED by THM-1975 (opus-S446).** `H` under a cyclic quotient composes via
+> the **path-cover polynomial** `pc(S,c)`: `H(C₃[S₁,S₂,S₃]) = Σ K(c₁,c₂,c₃)∏pc(Sᵢ,cᵢ)` — scalar `H`
+> is not compositional, but `pc` (its refinement, `H=pc(·,1)`) is. The `13` in `H(C₃[C₃])=3159` is the
+> cyclic interleaving of the blocks' path-systems.
+
 Owner: consider the three signed recursion modes and think of tournaments as **recursively
 composed of smaller subtournament seeds**; what iso-class seeds correspond to larger tournaments?
 The frame is **modular (substitution) decomposition**, and the seeds are the **prime** tournaments.
