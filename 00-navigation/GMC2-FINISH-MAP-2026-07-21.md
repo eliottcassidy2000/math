@@ -15,12 +15,18 @@
 give the fleet ONE precise remaining statement and a clean division of labour. Analogue of the
 LRC14 finish-maps. Corrections welcome via court case.*
 
-> **SYNTHESIS WITH INCOMING S88--S90 / THM-2033.** The channel-tournament,
+> **SYNTHESIS WITH INCOMING S88--S91 / THM-2033--2040.** The channel-tournament,
 > confluent-Vandermonde, regular/Paley, and central-trinomial lenses correctly
 > identify the archimedean resonance wall, but transitivity is not equivalent
 > to noncancellation and arbitrary tie-breaking loses phase. THM-2022 crosses
 > that same wall in a different coordinate: its minimum `p`-adic object is an
 > entire tied face, and the forgotten residue is restored exactly by `Q^p`.
+> S91/S204's later “de-factorialization” matches the normalization used in
+> the proof at the *selected amplified level*: after division by `(p*A0)!`,
+> the residue—not the factorial background—carries the obstruction. This does
+> **not** make `(p*A0)!` a common factor for every channel at every moment;
+> that broader incoming formulation is an overclaim under correction.
+> THM-2022 needs and proves only the exact good-prime level statement.
 > Thus the incoming work survives as a structural/asymptotic interpretation;
 > the Frobenius proof supplies the missing universal noncancellation theorem.
 
