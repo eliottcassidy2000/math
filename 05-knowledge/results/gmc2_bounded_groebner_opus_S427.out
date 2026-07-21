@@ -1,0 +1,28 @@
+==============================================================================
+SPAN-3 BOUNDED STRATUM: P = c_{-1} zbar + c_0 (a + b|z|^2) + c_{+1} z, charges {-1,0,1}
+(the minimal genuinely-3-charge, both-signs family -- the GMC(4) witness lives one
+ dimension up; here at n=2 we test that NO such P is a nullcone element).
+==============================================================================
+  P = c0*(a + b*z*zb) + cm*zb + cp*z
+  nullcone conditions E[P^m]=0, m=1..6: 6 nontrivial
+    m=1: E[P^m] = c0*(a + b)
+    m=2: E[P^m] = a**2*c0**2 + 2*a*b*c0**2 + 2*b**2*c0**2 + 2*cm*cp
+    m=3: E[P^m] = c0*(a**3*c0**2 + 3*a**2*b*c0**2 + 6*a*b**2*c0**2 + 6*a*cm*cp + 6*b**3*c0**2 + 12*b*cm*cp)
+    m=4: E[P^m] = a**4*c0**4 + 4*a**3*b*c0**4 + 12*a**2*b**2*c0**4 + 12*a**2*c0**2*cm*cp + 24*a*b**3*c0**4 + 48*a*b*c0**2*cm*cp + 24*b**4*c0**4 + 72*b**2*c0**2*cm*cp + 12*cm**2*cp**2
+
+  ANGULAR NULLSTELLENSATZ TEST: does V(conds) cap {c0 != 0 or (cm,cp both !=0)} exist?
+  A genuine nullcone element needs the charge-0 part nonzero AND both charges +-1.
+  V(nullcone) cap (cm,cp != 0) empty (1 in saturated ideal): True
+  => no span-3 both-signs nullcone element at n=2: GMC(2) holds on this stratum,
+     by a FINITE Groebner test.  (Matches THM-1535: n=2 charge lattice rank 1.)
+
+==============================================================================
+THE UNIFIED STATEMENT (assembling THM-1535 + 1685 + 1540):
+==============================================================================
+  For P with |charges| <= K and degree <= d, GMC(2) is decidable by ONE finite
+  Groebner computation: ANGULAR (charge-0 reps = Nullstellensatz emptiness, THM-1685)
+  x RADIAL (s=|z|^2 Laplace/Gamma, finitely many powers, THM-1540). BOTH finite when
+  (K,d) bounded => UNCONDITIONAL GMC(2) on every bounded stratum.
+  CROSS-SHELL DESCENT = the bottom-up sequence of these finite tests, one per shell:
+  klein's functional L mixing shells is a finite polynomial coupling at each bound,
+  so the descent is finite Groebner all the way down -- the SAME framing.

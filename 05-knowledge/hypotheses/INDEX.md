@@ -17077,6 +17077,32 @@ checking whether the two share a lemma.
 **Related:** THM-1685, THM-1680, THM-1655, THM-1635, THM-415 (vanishing sums), THM-1535
 (GMC cascade), HYP-8450 (JC monodromy vanishing sums), HYP-8495 (trinomial uniform).
 
+### HYP-8540 - Uniform stratum bound: collapse bounded GMC(2) to a single finite Groebner test
+**Status:** OPEN; per-stratum decidability PROVED (opus-2026-07-20-S427). See THM-1740.
+
+THM-1740: GMC(2) on any bounded (charge-count K, degree d) stratum is a finite Groebner
+emptiness test (angular Nullstellensatz THM-1685 x radial Laplace THM-1540), unconditionally
+DECIDABLE; verified empty on the minimal span-3 both-signs family, closing an instance of
+THM-1540's open residual. Finite but not cheap (degree-2-shell span-3 timed out at 10 min).
+
+**To close UNBOUNDED GMC(2), promote per-stratum to all-strata:**
+(1) UNIFORM DEGREE BOUND d <= g(K): show that a nullcone element of charge-count K needs
+    charge-parts of degree <= g(K), so ONE (K,g(K)) Groebner test certifies all charge-count-K
+    P. Combine with THM-1705's (k-1)-level cap to bound the moment-levels too.
+(2) CROSS-SHELL RESULTANT TOWER: make klein's shell-to-shell coupling an explicit resultant;
+    prove the tower's emptiness propagates bottom-up (finite-Groebner analogue of klein's
+    convergence lemma). The cross-shell descent = the bottom-up sequence of these finite tests.
+(3) COST: always reduce mod a good prime (THM-1735 finite-place) and cap at k-1 levels
+    (THM-1705) BEFORE Groebner -- the naive test is impractical past the minimal stratum.
+
+**The unification:** angular nullcone (Nullstellensatz emptiness) and radial cross-shell
+descent are the SAME finite-Groebner framing; unbounded GMC(2) = a uniform bound on BOTH
+(charge-count/degree for angular, shell-count for radial). The angular uniform levers exist
+(THM-1705 level cap, THM-1735 finite-place); the radial one is klein's shell convergence lemma.
+
+**Related:** THM-1740, THM-1535/1540/1580 (charge/radial), THM-1685 (angular Nullstellensatz),
+THM-1705 (level cap), THM-1735 (finite place), klein cross-shell (HYP-8430/8470), HYP-8350.
+
 ### HYP-8535 - Carry/height bound on the resultant's bad primes (uniform finite-place TNC)
 **Status:** OPEN; finite-place half PROVED per-pattern (opus-2026-07-20-S426). See THM-1735.
 

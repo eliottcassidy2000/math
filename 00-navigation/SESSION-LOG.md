@@ -1,3 +1,46 @@
+## opus-2026-07-20-S427 - Bounded GMC(2) is a finite Groebner test; closes the minimal span-3 both-signs residual (THM-1740)
+
+Owner's synthesis: unconditional GMC(2) on bounded charge-count+degree is a finite Groebner
+test, the angular nullcone is a Nullstellensatz emptiness test, and the same framing should
+close cross-shell descent. Assembled it and closed a bounded instance of the open residual.
+
+**THE TWO FINITE LAYERS.** At n=2 (one complex Gaussian), P = sum_q z^{q+} zbar^{q-} P_q(s),
+s=|z|^2. E kills nonzero total charge, so E[P^m] = E of the charge-0 part of P^m -- a sum over
+charge-representations of 0 (ANGULAR, THM-1685) whose s-dependence is E[s^k]=k! (RADIAL,
+THM-1540). Bounded (charge-count K, degree d) => finitely many representation levels and
+s-powers => {E[P^m]=0} is a FINITE polynomial ideal in the coefficients.
+
+**THEOREM (proved, decidability).** GMC(2) on the (K,d) stratum <=> V(nullcone ideal) has no
+point with both-signs charge-parts nonzero <=> 1 in the Rabinowitsch-saturated ideal -- a
+SINGLE finite Groebner computation. So GMC(2) is UNCONDITIONALLY DECIDABLE on every bounded
+stratum.
+
+**VERIFIED, and it closes an open instance.** Minimal span-3 both-signs family
+P = c_{-1} zbar + c_0(a+b|z|^2) + c_{+1} z, charges {-1,0,1}: V(nullcone) cap (c_{-1}c_{+1} !=
+0) has 1 in the saturated ideal -- EMPTY. No span-3 both-signs nullcone element at n=2, so
+GMC(2) holds there. This closes an instance of THM-1540's OPEN both-signs residual (the last
+gap in GMC(2) sign-coherent proof), constructively on a 3-charge family with nontrivial
+charge-0 part. Consistent with THM-1535 (n=2 charge lattice rank 1).
+
+**HONEST CAVEAT.** Finite is not cheap: a degree-2-shell span-3 stratum (7 unknowns) did NOT
+finish a Groebner elimination in 10 min. Decidability, not efficiency. THM-1705's (k-1)-level
+cap and THM-1735's finite-place mod-p reduction are the levers to keep the cost down.
+
+**CROSS-SHELL, SAME FRAMING.** klein's cross-shell descent runs bottom-up through the radial
+shells (Hermite/Laguerre, THM-1660). At each shell klein's mixing functional L is a finite
+polynomial system = a bounded (K,d) instance. So cross-shell descent = the bottom-up sequence
+of finite Groebner emptiness tests, the shell coupling being a resultant tower -- the SAME
+Nullstellensatz-emptiness framing as the angular nullcone. The owner's proposed unification,
+now explicit.
+
+**WHAT REMAINS (HYP-8540).** Per-stratum decidability does NOT close unbounded GMC(2); need a
+UNIFORM bound: (1) degree d <= g(K) so one (K,g(K)) test certifies all charge-count-K P; (2) a
+cross-shell resultant tower whose emptiness propagates bottom-up (= klein's convergence
+lemma). The angular uniform levers exist (THM-1705, THM-1735); the radial one is klein's shell
+lemma.
+
+**Artifacts:** THM-1740; HYP-8540; 1 script + output.
+
 ## death-star-2026-07-20-S71 -- The {7,21} rule does NOT transfer to arborescences; exact contrast (HYP-8545)
 
 **Owner:** how is the Ham-path {7,21} forbiddenness reflected for arborescences (A=Σ_r a_r, Matrix-Tree)?
