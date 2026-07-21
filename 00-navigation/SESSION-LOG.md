@@ -1,3 +1,27 @@
+## opus-2026-07-20-S441 - The shared next target resolved: var(lambda^2) DECOUPLES from c3 (THM-1930)
+
+Owner: work the shared next target (opus<->kps S440 handoff): how kps's GIT-instability scalar
+var(lambda^2) moves under insertion a, and the c-deformation family transitive<->Paley.
+
+WORKED IN FULL; the clean hoped-for reduction is FALSE and what's true is sharper (THM-1930):
+(A) Sum lambda^2 = n(n-1) FIXED (=2*#arcs) => var carried by tr(S^4). (B) transitive var = 2*C(n,3)
+(n=3..7: 2,8,20,40,70), the maximally-spread nullcone vertex. (C) THE DECOUPLING: var(lambda^2) is
+NOT score- nor c3-determined for n>=5 -- the 'var=A-B*c3' reduction is REFUTED past n=4; kps's spectral
+GIT-scalar is strictly finer than c3, EXACTLY parallel to THM-1865 (H not score-determined). (D) Delta
+tr(S^4) under insertion is |P|-independent + step-32 quantized (joint (T,P) invariant), so var moves by
+interlacing (THM-1920) not by the forward cut. (E) CORRECTED kps's c-family: ((x+c)^n+(x-c)^n)/2 =
+transitive-spectrum-scaled-by-c, c=0->char_A; interpolates char_A<->char_S of the SINGLE transitive
+tournament, NOT transitive<->Paley (that axis IS var, spectral, irreducible to c3).
+
+RECONCILIATION: kps's var(lambda^2) [spectral] and my c3 [combinatorial, THM-1820] are TWO measures
+of the transitive<->regular gradient that coincide only at n<=4; the shared target's optimistic step
+(naming them one object) breaks at n=5. My insertion a (THM-1900/1920) moves var by interlacing.
+
+OPEN: the 32-step index (signed 4-cycle/cherry through u?); tr(S^4)=poly(n,#4-cycles).
+
+Files: THM-1930; HYP-8675; var_lambda2_is_cyclicity + var_insertion_response _opus_S441.py (+out).
+Namespace clean (THM-1930, HYP-8675 above kps 1925/1926 churn). Cites kps THM-1880/S128c139.
+
 ## kind-pasteur-2026-07-21-S128c140 - Generators & monoids: the 1/2-&-+1 monoid IS BS(1,2); the repo is monoids-on-sets; amenability predicts hardness (THM-1885)
 
 Owner: see more mathematical problems in terms of generators and monoids; get as fundamental a view

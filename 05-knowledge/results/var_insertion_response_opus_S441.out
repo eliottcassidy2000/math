@@ -1,0 +1,32 @@
+Delta tr(S^4) and Delta var(lambda^2) under a=insertion of u beating P
+======================================================================
+ n=3: Delta tr(S^4) determined by new vertex out-degree |P| alone? False
+     |P|=0: Delta tr(S^4) in [np.float64(18.0), np.float64(50.0)]
+     |P|=1: Delta tr(S^4) in [np.float64(18.0), np.float64(50.0)]
+     |P|=2: Delta tr(S^4) in [np.float64(18.0), np.float64(50.0)]
+     |P|=3: Delta tr(S^4) in [np.float64(18.0), np.float64(50.0)]
+ n=4: Delta tr(S^4) determined by new vertex out-degree |P| alone? False
+     |P|=0: Delta tr(S^4) in [np.float64(48.0), np.float64(80.0), np.float64(112.0)]
+     |P|=1: Delta tr(S^4) in [np.float64(48.0), np.float64(80.0), np.float64(112.0)]
+     |P|=2: Delta tr(S^4) in [np.float64(48.0), np.float64(80.0), np.float64(112.0)]
+     |P|=3: Delta tr(S^4) in [np.float64(48.0), np.float64(80.0), np.float64(112.0)]
+     |P|=4: Delta tr(S^4) in [np.float64(48.0), np.float64(80.0), np.float64(112.0)]
+ n=5: Delta tr(S^4) determined by new vertex out-degree |P| alone? False
+     |P|=0: Delta tr(S^4) in [np.float64(50.0), np.float64(82.0), np.float64(114.0), np.float64(146.0), np.float64(178.0)]...
+     |P|=1: Delta tr(S^4) in [np.float64(50.0), np.float64(82.0), np.float64(114.0), np.float64(146.0), np.float64(178.0)]...
+     |P|=2: Delta tr(S^4) in [np.float64(50.0), np.float64(82.0), np.float64(114.0), np.float64(146.0), np.float64(178.0)]...
+     |P|=3: Delta tr(S^4) in [np.float64(50.0), np.float64(82.0), np.float64(114.0), np.float64(146.0), np.float64(178.0)]...
+     |P|=4: Delta tr(S^4) in [np.float64(50.0), np.float64(82.0), np.float64(114.0), np.float64(146.0), np.float64(178.0)]...
+     |P|=5: Delta tr(S^4) in [np.float64(50.0), np.float64(82.0), np.float64(114.0), np.float64(146.0), np.float64(178.0)]...
+
+======================================================================
+  n=3: transitive var(l^2) = 2.0000   2*C(n,3) = 2   match=True
+  n=4: transitive var(l^2) = 8.0000   2*C(n,3) = 8   match=True
+  n=5: transitive var(l^2) = 20.0000   2*C(n,3) = 20   match=True
+  n=6: transitive var(l^2) = 40.0000   2*C(n,3) = 40   match=True
+  n=7: transitive var(l^2) = 70.0000   2*C(n,3) = 70   match=True
+
+ READING: Delta tr(S^4) under insertion is NOT a function of the new vertex's degree alone
+ for larger n (var(l^2) is genuinely spectral, finer than any local count) -- the honest
+ answer to 'how does var move under a': by interlacing, not by a combinatorial forward-cut law.
+ CONFIRMED: transitive var(l^2) = 2*C(n,3) (the maximally-spread GIT nullcone vertex).

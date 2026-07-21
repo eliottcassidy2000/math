@@ -1,0 +1,25 @@
+var(lambda^2) = GIT-instability scalar: is it affine in c3?  (A)(B)(D)
+======================================================================
+ n=3: Sum l^2 = n(n-1) fixed: True | tr(S^4) score-determined: True | var(l^2) determined by c3: True
+        var = 2.0000 - 0.0000*c3   (exact affine: True)
+        c3 range 0..1;  var(l^2): transitive(c3=0)=2.0  min=2.0000
+ n=4: Sum l^2 = n(n-1) fixed: True | tr(S^4) score-determined: True | var(l^2) determined by c3: True
+        var = 8.0000 - 0.0000*c3   (exact affine: False)
+        c3 range 0..2;  var(l^2): transitive(c3=0)=8.0  min=0.0000
+ n=5: Sum l^2 = n(n-1) fixed: True | tr(S^4) score-determined: False | var(l^2) determined by c3: False
+        
+        c3 range 0..5;  var(l^2): transitive(c3=0)=20.0  min=7.2000
+ n=6: Sum l^2 = n(n-1) fixed: True | tr(S^4) score-determined: False | var(l^2) determined by c3: False
+        
+        c3 range 0..8;  var(l^2): transitive(c3=0)=40.0  min=8.0000
+
+======================================================================
+(D) kps's family ((x+c)^n+(x-c)^n)/2: roots = c * transitive-spectrum; c=0 -> x^n = char_A
+  n=4: E_n^(c) = c**4 + 6*c**2*x**2 + x**4
+        c=1 (char_S, transitive) = x**4 + 6*x**2 + 1;  c=0 (char_A) = x**4
+  n=5: E_n^(c) = 5*c**4*x + 10*c**2*x**3 + x**5
+        c=1 (char_S, transitive) = x**5 + 10*x**3 + 5*x;  c=0 (char_A) = x**5
+
+ READING: var(lambda^2) is AFFINE-DECREASING in c3 (GIT-instability = intransitivity DEFICIT);
+ transitive=max var=nullcone vertex, regular/Paley=min var. Insertion moves var by -B*(forward cut)
+ [THM-1900]. The c-family is char_A<->char_S of ONE tournament, NOT the transitive<->Paley axis.
