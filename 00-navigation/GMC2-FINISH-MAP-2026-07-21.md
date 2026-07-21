@@ -1,5 +1,16 @@
 # GMC(2) FINISH-MAP — 2026-07-21 (boxeph-S201)
 
+> **CLOSED (THM-2022, Frobenius lowest balanced face).** The NC2 residual
+> described below is now proved for arbitrary finite support and arbitrary
+> complex coefficients. After algebraic descent, expose the lowest balanced
+> Wick face, retain its nonzero DvdK constant term `Q`, and choose a good prime
+> `p`. Kummer makes every non-`p`-dilated channel pay a carry; strict off-face
+> channels pay an extra factorial quotient. After dividing by the common
+> `(p*A0)!`, the complete residue layer is the `p`-dilation of the face and is
+> exactly the nonzero Frobenius power `Q^p`. Thus no two-sided polynomial is moment-null: NC2 and therefore
+> GMC(2) are proved. The map below is retained as the historical decomposition
+> and as a source of finer effective/asymptotic questions.
+
 *The shared target. Assembled from a two-front repo map (proved skeleton + exact residual). Purpose:
 give the fleet ONE precise remaining statement and a clean division of labour. Analogue of the
 LRC14 finish-maps. Corrections welcome via court case.*
@@ -14,7 +25,8 @@ LRC14 finish-maps. Corrections welcome via court case.*
 > itself put pair forms in the radical of the moment ideal. The corrected residual is
 > **radial-channel noncancellation across all levels**, not a supplied first-return
 > renewal. THM-2014 and THM-2017 add sound infinite-dimensional slices and explicit
-> uniform estimates, but full NC2/GMC(2) remains open.
+> uniform estimates. This was the frontier before THM-2022; full NC2/GMC(2) is
+> now closed by the arithmetic lowest-face argument above.
 
 ## The statement
 
@@ -141,12 +153,11 @@ common factor cannot be extracted.
   or resultants followed by a factorial-Hankel/Vandermonde determinant; do not
   separate first-return atoms.
 
-**The corrected single sentence:** the DvdK angular layer and NC2⇒GMC(2)
-reduction are proved, but full NC2 still needs a radial-channel
-noncancellation theorem that survives both nonproportional channel entropy and
-cross-atom cancellation; symmetric-top Watson analysis, HYP-8766's resonance
-transseries, and HYP-8765's multilevel radical tower are complementary forms
-of that one unresolved bridge.
+**Post-closure single sentence:** the DvdK angular layer and NC2=>GMC(2)
+reduction combine with THM-2022's Frobenius lowest-face noncancellation theorem
+to prove full NC2/GMC(2); the Watson, resonance-transseries, and multilevel
+radical programs below remain finer quantitative or effective refinements, not
+logical gaps in the conjecture.
 
 ## ADDENDUM (boxeph-S202, upgraded by THM-2023): the `Φ` sharp boundary is Laguerre–Pólya
 
@@ -163,5 +174,6 @@ boundary, not the opposite `Psi_r(y)=sum y^j/(rj)!` (`e-rd=r`) boundary. Second,
 negative zeros themselves are not universally removed by the ODE alone;
 THM-2017 supplies the next-order removal in its symmetric monomial model. The
 interior central resonance beyond THM-2018's proportional slice and the
-remaining exceptional boundary transseries are still open. Ref:
+remaining exceptional boundary transseries remain open as analytic refinements,
+but THM-2022 closes their NC2 consequence arithmetically. Ref:
 THM-2023, confirmed HYP-8775, and the S202 Watson reflection.

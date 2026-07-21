@@ -79,6 +79,16 @@
 
 **Owner directive:** finish NC2 and mine seemingly unrelated repo work for ideas.
 
+- **FULL CLOSURE INCOMING / INDEPENDENT HOSTILE AUDIT: PASS.** THM-2022 proves
+  arbitrary-support NC2 by algebraic descent plus Frobenius amplification of
+  the lowest balanced Wick face. I checked the exact-support localization,
+  rational LP dual, no-projection-collision lemma, DvdK input, good-prime
+  selection, common-factorial normalization, Kummer no-carry iff componentwise
+  `p`-dilation, strict off-face quotient gap, multinomial Lucas congruence, residue-field
+  Frobenius, neutral case, and NC2=>GMC(2) finish. No load-bearing gap found.
+  Crucially the proof retains the whole minimum face as `Q^p`; it does not
+  repeat MISTAKE-211's atomwise separation.
+
 > **Post-incoming correction.** The completed THM-2018 proves the full
 > all-charge proportional hypersurface unconditionally. Its root-of-unity EGF
 > argument only needs toral nonzeros arbitrarily far out, which must intersect
@@ -89,4 +99,4 @@
 - **THM-2021 (proved self-contained part, corrected by MISTAKE-213).** For `P=Z^p a(s)+b(s)+Zbar^q c(s)`, if `h=s^(pq/g)a^(q/g)c^(p/g)=kappa*b^r`, then `E[P^m]=A_m^(p0,q0)(kappa)L(b^m)` exactly. At `p0=q0=1`, `A_m` is a Legendre transform, every zero parameter is negative real, and its three-term recurrence forbids consecutive zero levels. That already closes the full symmetric proportional slice: EMP makes the radial factor nonzero eventually, while the toral factor is nonzero arbitrarily far out. THM-2018 supplies the all-charge version.
 - **Announced external refinement, honestly labeled.** A February 2026 IAS announcement for Mangoubi--Kadets--Weller Weiser states that a fixed nonzero point is a zero of only finitely many Legendre polynomials. No public proof/preprint was located. This sharpens the symmetric zero profile but is not required for NC2 after THM-2018.
 - **HYP-8771.** The higher-charge finite-zero-recurrence statement is now a stronger toral-sequence target, not the proportional-slice NC2 gate. Exact gcd scans found zero shared-root events across 1,379 level pairs for `(1,1),(1,2),(1,3),(2,3)`. Tournament vertices are moment levels; gcd-degree flips the chronological edge. All four tournaments are transitive (zero flips/cycles, singleton SCCs, one Hamiltonian path). This is evidence, not proof.
-- **Artifacts.** THM-2021, HYP-8771, reflection `nc2-central-resonance-is-legendre-finite-zero-recurrence-...`, exact script/output `gmc2_proportional_legendre_finite_recurrence_thm2021.py/.out`; HYP-8766 and the finish map updated. Full NC2 remains open outside these slices.
+- **Artifacts.** THM-2021, HYP-8771, reflection `nc2-central-resonance-is-legendre-finite-zero-recurrence-...`, exact script/output `gmc2_proportional_legendre_finite_recurrence_thm2021.py/.out`; HYP-8766 and the finish map updated. THM-2022 now closes full NC2 beyond these slices.

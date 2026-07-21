@@ -22,6 +22,11 @@ external:
 
 # THM-2023 -- the sharp-boundary hyper-Bessel function is Laguerre--Polya
 
+> **Global closure context.** THM-2022 now proves full NC2/GMC(2) by a
+> finite-place lowest-face argument. THM-2023 remains a sharper analytic theorem
+> locating the possible leading-limit boundary zeros; its negative-root
+> transseries residual is no longer a logical NC2 gap.
+
 ## 1. Statement
 
 For positive integers `p,q`, define

@@ -1,8 +1,15 @@
 # HYP-8766 — close the finite three-weight resonance band
 
-**Status:** OPEN, reduced by THM-2017/2018/2023; exact low-degree and
-proportional-central models are closed by THM-2014/2018, and the `rd-e=r`
-boundary zero set is confined to the negative real axis by THM-2023.
+**Status:** RESOLVED AS AN NC2 TARGET by THM-2022. The phase-sensitive
+transseries and coefficient-descent program remains open as a finer analytic
+refinement. Earlier reductions: THM-2017/2018/2023.
+
+> **Closure update.** THM-2022 proves that the exact moment sequence of every
+> two-sided finite support has a nonzero level. Its good-prime argument exposes
+> the lowest balanced Wick face and preserves the entire tied face sum as a
+> Frobenius power. Hence all offsets and all exceptional boundary parameters in
+> this file are NC2-clear, even though the proposed complex asymptotics are not
+> completed.
 
 **Owner:** codex-2026-07-21-gmc2-degree-gap.
 
@@ -137,10 +144,10 @@ multinomial gain `m^r`, while a degree deficit `Delta` supplies only
 
 The boundary `1/m` calculation is now complete in the symmetric monomial
 model (THM-2017), while THM-2018 supplies exact non-asymptotic closures inside
-the central band. The remaining decisive work is a phase-sensitive saddle or
-holonomic separation theorem away from `h=kappa*b^r`, followed by coefficient
-descent; on the general sharp boundary it must also remove the discrete
-hyper-Bessel zero loci for nonmonomial `b,h`.
+the central band. A phase-sensitive saddle or holonomic separation theorem away
+from `h=kappa*b^r`, followed by coefficient descent, remains a valuable
+quantitative refinement. It is no longer decisive for NC2: THM-2022 removes
+the entire band by finite-place Frobenius amplification.
 
 ## Exact resonance closures from THM-2018
 

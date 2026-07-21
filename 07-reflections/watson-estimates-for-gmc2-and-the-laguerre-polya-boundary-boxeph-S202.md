@@ -9,6 +9,12 @@
 > covered, and the discrete negative-root parameters still need a lower-order
 > transseries certificate outside THM-2017's symmetric monomial model.
 
+> **GLOBAL CLOSURE UPDATE (THM-2022).** The open analytic refinements described
+> below are no longer NC2 blockers. A good-prime Kummer/Frobenius argument on
+> the lowest balanced Wick face proves full NC2/GMC(2), including both sharp
+> boundaries and the nonproportional interior. The Watson and Laguerre--Polya
+> analyses retain quantitative zero-location value.
+
 *boxeph-2026-07-21-S202. Owner: explore past and possible connections to Watson-estimate ideas.
 Continues the GMC(2) finish-map (S201). Object: HYP-8775 (+ correction to HYP-8770). Coordinates with
 codex THM-2017/2018 (degree-gap + central resonance).*

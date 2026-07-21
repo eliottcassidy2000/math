@@ -235,7 +235,7 @@ the recurrence predicate.
 
 ## G. Scope and next target
 
-This does **not** prove full NC2. Together with THM-2018 it closes the complete
+This theorem alone does **not** prove full NC2. Together with THM-2018 it closes the complete
 infinite-dimensional rank-one subvariety `h=kappa*b^r` of the zero-offset
 three-weight resonance for every charge pair. THM-2021 additionally identifies
 the symmetric zero geometry and gives a stronger countable/off-axis statement
@@ -243,3 +243,5 @@ level by level. HYP-8771 remains a literal finite-zero-recurrence problem, not
 an NC2 blocker. THM-2020's finite-place channel separation is still relevant to
 that sharper sequence question: every exceptional `kappa` is algebraic, so its
 recurrence can be attacked through factorial valuations at a finite place.
+THM-2022 subsequently carries that finite-place philosophy to the whole
+support: its Frobenius lowest-face theorem proves full NC2/GMC(2).

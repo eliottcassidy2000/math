@@ -5,7 +5,12 @@ and mine seemingly unrelated work for ideas. THM-2021 independently derived the
 all-charge factorization and its Legendre refinement. Incoming THM-2018 then
 supplied the stronger root-of-unity EGF argument, closing the *entire*
 proportional central slice for every charge pair without finite zero recurrence.
-The nonproportional resonance band, hence full NC2, remains open.
+THM-2022 subsequently closes the nonproportional resonance band and full NC2 by
+Frobenius amplification of the lowest balanced face.
+
+> **Final incoming closure.** THM-2022's lowest-face theorem proves full NC2 and
+> GMC(2). The Legendre work below remains a finer exact slice and helped expose
+> the support-direction error MISTAKE-213.
 
 > **Correction after synthesis.** The title records the stronger sequence
 > question discovered en route, not a remaining NC2 dependency. For NC2 it is
@@ -121,8 +126,9 @@ than a proof of HYP-8771.
   toral zero parameter lies on the negative real axis.
 - **Announced externally:** the sharper assertion that a fixed nonzero
   Legendre point recurs only finitely often.
-- **Open:** higher-charge finite zero recurrence (HYP-8771) as a sequence
-  question, and the nonproportional finite resonance band/general NC2.
+- **Open only as refinements:** higher-charge finite zero recurrence (HYP-8771)
+  as a sequence question and explicit nonproportional resonance transseries.
+  Their NC2/GMC(2) consequence is closed by THM-2022.
 
 Artifacts: THM-2021, HYP-8771,
 `gmc2_proportional_legendre_finite_recurrence_thm2021.py/.out`. Cross-links:
