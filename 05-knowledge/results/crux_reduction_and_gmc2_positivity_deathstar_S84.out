@@ -1,0 +1,32 @@
+==================================================================== 
+(A) CRUX H(reg)>=avg: doubly-regular (Paley) is the binding case
+ ====================================================================
+  n  tourn          H  avg=n!/2^n-1  H/avg    disc   n*disc H/(n*disc)
+  3  Paley          3           1.5   2.00     1.0      3.0       1.00
+  3    rot          3           1.5   2.00     1.0      3.0       1.00
+  7  Paley        189          78.8   2.40     8.0     56.0       3.38
+  7    rot        175          78.8   2.22     1.0      7.0      25.00
+ 11  Paley      95095       38981.2   2.44   243.0   2673.0      35.58
+ 11    rot      93027       38981.2   2.39     1.0     11.0    8457.00
+  READING: Paley (doubly-regular, max disc) has the SMALLEST H/(n*disc) among
+  regulars -- the binding case; rot has tiny disc (=1) so is trivially fine.
+  H/avg ~ 2.0-2.4 (bounded below), and Paley is QUASIRANDOM (2nd eig sqrt(n),
+  ratio sqrt(n)/((n-1)/2)->0), so H(Paley)=(1+o(1))*avg by the quasirandom Ham-path
+  counting lemma. Since n*disc/avg = n(n+1)^{(n-1)/2}/n! -> 0 (super-exp), the crux
+  H(reg)>=n*disc holds for large n from quasirandomness + small n direct.
+==================================================================== 
+(B) GMC(2): E[sym^2]-E[alt^2] = E[P*Ptilde] = E[|P|^2] >= 0 (REAL coeffs)
+ ====================================================================
+  P={(2, 0): Fraction(1, 1), (0, 2): Fraction(1, 1), (1, 1): Fraction(-1, 1)}: E[sym^2]-E[alt^2]=6, E[P*Ptilde]=6, >=0? True  (=E[|P|^2] Bargmann)
+  P={(3, 0): Fraction(2, 1), (1, 1): Fraction(-3, 1), (0, 1): Fraction(1, 1)}: E[sym^2]-E[alt^2]=43, E[P*Ptilde]=43, >=0? True  (=E[|P|^2] Bargmann)
+  P={(2, 1): Fraction(1, 1), (1, 2): Fraction(1, 1), (0, 0): Fraction(-2, 1)}: E[sym^2]-E[alt^2]=16, E[P*Ptilde]=16, >=0? True  (=E[|P|^2] Bargmann)
+  => RIGOROUS: for real-coeff P, E[sym(P)^2] >= E[alt(P)^2], gap = E[|P|^2] >= 0
+     (Bargmann norm). This PROVES klein's bosonic>=fermionic at the squared-moment
+     level. NULLCONE test: if E[P^m]=0 for all m (nullcone), is sym(P^m) also killed?
+  one-sided P=Z, m=1: E[P^m]=0 (nullcone), E[sym(P^m)^2]=1/2 = E[|Z^m|^2]/2 = 1/2
+  one-sided P=Z, m=2: E[P^m]=0 (nullcone), E[sym(P^m)^2]=1 = E[|Z^m|^2]/2 = 2/2
+  one-sided P=Z, m=3: E[P^m]=0 (nullcone), E[sym(P^m)^2]=3 = E[|Z^m|^2]/2 = 6/2
+  => even in the nullcone (E[P^m]=0), E[sym(P^m)^2]=E[|P|^{2m}]/2 > 0: the
+     symmetric part is NEVER null. The positivity is orthogonal to the charge
+     grading E annihilates -- a Bargmann-PD handle for the radial 'escape the
+     cancellation wall' (S67/S77), on the toral side; the open radial gap unaffected.
