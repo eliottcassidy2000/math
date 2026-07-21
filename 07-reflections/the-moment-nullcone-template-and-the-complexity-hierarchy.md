@@ -123,6 +123,33 @@ machinery is the general form of the tool it already trusted for tournaments.
    THM-1740 — into `ofMonicRec`; `H` is correctly *excluded* (no governing recurrence). The
    template is now one reusable engine in the kernel.
 
+## The whole ladder is binary forms (S128c131)
+
+There is a language in which every rung is one object: **the binary form and its `SL₂` GIT
+nullcone** (THM-1805).
+
+- A tournament's `char_A` is a degree-`n` binary form; `tr(Aᵏ)` are its coefficients
+  (`SL₂`-invariants); **transitive `= xⁿ =` the maximally unstable form `=` the GIT nullcone**,
+  and the *entire* unstable locus is exactly the `n!` transitive tournaments (verified `n ≤ 6`).
+- The TNC/GMC kernel `R(u)` is a degree-`D` binary form; its nullcone is one-sidedness, and its
+  monodromy exponents (THM-1725) are the ramification (`SL₂`-covariant) data.
+
+So "moment nullcone" `=` "the coefficient sequence of a binary form is that of the extreme
+unstable point." The detection depth is the number of coefficients. The two poles of the
+template are the two poles of GIT: the **nullcone** (unstable, `xⁿ`, transitive/one-sided) and
+the **polystable** locus (distinct roots, regular/Paley — whose spectra are Gauss sums, *roots
+of unity*). The odd/even axis the owner keeps naming is the `SL₂` **Weyl involution** `x ↦ −x`:
+the skew form `char_S` is even (negation-symmetric), and — the sharp point — **the nullcone
+cannot live on the even/skew side**, because `tr(S²) = −n(n−1) ≠ 0` keeps `S` off the nilpotent
+cone. Transitivity degenerates to a point only in the affine `{0,½,1}` world, not the sign
+`{−1,0,1}` world. That is the half-dictionary (THM-1555), now read as: *the `½` is the shift
+that moves the tournament off the Weyl-symmetric axis so its characteristic form can fall into
+the nullcone.*
+
+And `H` is what the form forgets: `T ↦ char_A` has co-spectral fibers, and `H` splits inside one
+at `n = 6` (THM-1780). Binary-form invariant theory sees everything on the ladder **except** the
+permanent — which is precisely the `#P` rung above it.
+
 ## Cross-links
 
 THM-1775 (the template, tournament instance proved) · THM-895 (`λ=0 ⟺ transitive`) ·

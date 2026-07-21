@@ -1,0 +1,35 @@
+====================================================================================
+GIT STABILITY of char_A over tournaments (transitivity = nullcone x^n)
+====================================================================================
+  n=3 : transitive char_A = x**3   (= x^3 ? True)
+        GIT strata: {'unstable': 6, 'stable': 2}
+        max-root-multiplicity distribution: {1: 2, 3: 6}
+        NON-transitive unstable forms: NONE -> transitive is the unique nullcone
+  n=4 : transitive char_A = x**4   (= x^4 ? True)
+        GIT strata: {'unstable': 24, 'stable': 40}
+        max-root-multiplicity distribution: {1: 40, 4: 24}
+        NON-transitive unstable forms: NONE -> transitive is the unique nullcone
+  n=5 : transitive char_A = x**5   (= x^5 ? True)
+        GIT strata: {'unstable': 120, 'stable': 904}
+        max-root-multiplicity distribution: {1: 784, 2: 120, 5: 120}
+        NON-transitive unstable forms: NONE -> transitive is the unique nullcone
+  n=6 : transitive char_A = x**6   (= x^6 ? True)
+        GIT strata: {'unstable': 720, 'stable': 32048}
+        max-root-multiplicity distribution: {1: 28608, 2: 2480, 3: 960, 6: 720}
+        NON-transitive unstable forms: NONE -> transitive is the unique nullcone
+
+====================================================================================
+THE HALF-DICTIONARY BRIDGE  char_A <-> char_S  via  x -> 2x+1
+====================================================================================
+  S = 2A - J + I, so on regular tournaments char_S(x) = 2^n char_A((x-1)/2) up to the
+  all-ones direction; the skew form char_S is EVEN (spectrum +-i*lambda, symmetric),
+  the nullcone x^n of char_A maps to (x+1)^n-flavored under the shift. Illustrate n=5:
+  bits=0    : char_A = x**5
+            char_S = x*(x**4 + 10*x**2 + 5)  (even in x: True)
+  bits=1023 : char_A = x**5
+            char_S = x*(x**4 + 10*x**2 + 5)  (even in x: True)
+
+  READING: T -> char_A is a map to degree-n binary forms; transitivity = GIT nullcone
+  x^n; trace moments = SL_2 invariants; the fibers are co-spectral classes, which is
+  exactly where H (the #P datum) can split (THM-1780, n=6). The characteristic form
+  sees the spectral/invariant-theoretic tournament and forgets the permanent.

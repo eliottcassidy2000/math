@@ -99,6 +99,42 @@ $\mathbb A^2$) is $\cong\mathbb A^3$; complete structural understanding.
   to decide fake-vs-real $\mathbb A^3$.
 - Consultation write-up (reflection x-cong-A3-iff-JC3-false-...-S74), not a repo theorem. No code changes
   this turn beyond the note.
+## kind-pasteur-2026-07-20-S128c131
+
+**Binary forms and tournaments: transitivity IS the GIT nullcone of the characteristic binary
+form. THM-1805 -- the representation-theoretic root of 'tournaments are in/transitivity itself'.**
+
+- char_A(x) homogenizes to a degree-n binary form char_A(x,y)=y^n char_A(x/y) in Sym^n(C^2),
+  the SL_2-rep of binary n-ics. T |-> char_A is a map tournaments -> binary forms.
+- **(1) transitive <=> char_A = x^n = maximally UNSTABLE form = GIT NULLCONE** (transitive A is
+  strictly triangular = nilpotent = THM-895's lambda=0 <=> transitive).
+- **(2) THE UNSTABLE LOCUS IS EXACTLY THE TRANSITIVE TOURNAMENTS**, verified n=3..6: by
+  Hilbert-Mumford a binary n-ic is unstable iff a root has multiplicity > n/2, and the count of
+  tournaments with max-root-mult > n/2 is 6, 24, 120, 720 = n! = #labeled transitive EXACTLY,
+  with NO non-transitive unstable form (every unstable one has c3=0). So the only tournament
+  whose char_A has a root of mult > n/2 is the transitive one, = x^n. (Conjecture n>=7.)
+- **(3) tr(A^k) = power sums = binary-form coefficients = SL_2-invariants.** The moment-nullcone
+  ladder (THM-1775) IS the coefficient map of Sym^n; detection depth n = #coefficients; 'all
+  moments vanish <=> transitive' = 'the form is in the nullcone'.
+- **(4) fibers forget the permanent:** T|->char_A has co-spectral fibers = exactly where H splits
+  at n=6 (THM-1780, H=13 vs 17). The char form is the SL_2-invariant SHADOW; H is the #P datum in
+  the fiber, invisible to the form.
+- **(5) the even companion + the 1/2:** char_S (skew, spectrum +-i*lambda) is EVEN; half-dictionary
+  x->2x+1 (S=2A-J+I, THM-1555) carries char_A to char_S; but the NULLCONE lives on the A-side
+  only, since tr(S^2)=-n(n-1)!=0 keeps S off the nilpotent cone -- transitive is x^n for A yet
+  char_S=x(x^4+10x^2+5) at n=5. The {0,1/2,1} vs {-1,0,1} asymmetry made spectral: the 1/2 is the
+  shift that moves the tournament off the Weyl-symmetric axis so its char form can fall into the
+  nullcone.
+- FRAME (reflection updated): moment-nullcone ladder = ladder of binary forms with GIT nullcones;
+  tournament char_A (deg n) + TNC/GMC kernel R (deg D) both = binary-form-with-nullcone; odd/even
+  = SL_2 Weyl involution x->-x; roots of unity = polystable spectra (Paley = Gauss sums).
+
+**Handoff / named-next.** (1) prove (2) for all n (no non-transitive char_A-root of mult > n/2 --
+likely Perron simplicity + rank bound). (2) the strictly-semistable stratum (max root mult = n/2,
+n even; 960 at n=6) is a distinguished class worth identifying. (3) covariants as tournament
+invariants: disc(char_A) (=repeated eigenvalue), Hessian, low transvectants -- which SL_2-covariant
+sees which tournament stratum, extending 'the form forgets H'.
+
 ## kind-pasteur-2026-07-20-S128c130
 
 **Worked GMC(2): the detection-depth FORMULA D(M,N,d)=(M+N)(2d+1) (THM-1795), answering klein

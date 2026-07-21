@@ -17598,3 +17598,21 @@ Hamiltonian paths) as a discriminant-character statement.
 
 **Related:** THM-1800, THM-1450 (odd=skew), THM-1375 (Redei=discriminant char), THM-1770 (Sym^3),
 THM-1200 (Paley/two sevens), THM-1075 (H).
+## HYP-8600 — transitivity is the GIT nullcone of the characteristic binary form
+
+**Status: CONFIRMED (unstable = transitive, n<=6) + unifying frame.** kind-pasteur-2026-07-20-S128c131. THM-1805.
+
+char_A(x) homogenized = degree-n binary form in Sym^n(C^2), SL_2 acts. (1) transitive <=>
+char_A=x^n = maximally unstable = GIT nullcone (nilpotent, THM-895). (2) VERIFIED n=3..6: the
+UNSTABLE locus (max root mult > n/2, Hilbert-Mumford) = EXACTLY the n! transitive tournaments
+(counts 6,24,120,720), NO non-transitive unstable (all acyclic). So the only tournament with a
+char_A-root of mult > n/2 is transitive (conj n>=7). (3) tr(A^k) = power sums = binary-form
+coefficients = SL_2-invariants; moment ladder = coefficient map of Sym^n; detection depth n =
+#coefficients. (4) fibers = co-spectral classes = where H splits (THM-1780, n=6): the char form
+is the SL_2-invariant shadow, H is the #P datum in the fiber. (5) char_S even (skew, +-i*lambda);
+half-dictionary x->2x+1 (THM-1555); nullcone lives on A-side only since tr(S^2)=-n(n-1)!=0 (S
+never nilpotent) -- the {0,1/2,1} vs {-1,0,1} asymmetry made spectral. Frame: moment-nullcone
+ladder = ladder of binary forms with GIT nullcones; odd/even = SL_2 Weyl involution x->-x; roots
+of unity = polystable (Paley = Gauss sums). Named-next: prove (2) all n; strictly-semistable
+stratum (mult=n/2, n even: 960 at n=6); covariants (disc, Hessian, transvectants) as tournament
+invariants.
