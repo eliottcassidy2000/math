@@ -12,6 +12,17 @@ Applied to THM-1725's moment bound M* <= 2*max_pairs (p+|n|)/gcd, whose '2' was 
 **Handoff.** **HYP-8540 corrected** (multiplier = multiplicity). **HYP-8560 is the last structural unknown**: the exact law M*=r*m0 is proved only for a SINGLE straddle (one charge mult r, opposite mult 1); OPEN whether multi-straddle patterns obey M* = max over straddles of (r*m0) or pick up cross terms. If the max-over-straddles law holds, the uniform bound follows from the single-straddle base case. Still structurally == TNC's HYP-8505 -- one uniform proof closes both, and GMC(2) with it (complex radial THM-1695 and span-2 THM-1600 closed). NOTE: saw the owner correction on THM-1300 (klein-S377) -- my S127/S129 Alpoge-Mathew attribution was a HALLUCINATION (MISTAKE-205); will not restate it.
 
 ---
+## boxeph-2026-07-20-S185 -- THM-1760: THE TOURNAMENT PENCIL det(tI + uD_in - vA): score/spectral/forest worlds as faces of ONE determinant; complement functional equation pairs (M, S=adjugate-sum); ordinal-sum law with argument shift; pencil splits klein's 4-pair wall; (pencil, {a_r}, H) COMPLETE at n=7; leaf polys log-concave 530/530 (HYP-8560). PLUS: THM-1680 referee verdict filed (architecture survives; odd-sector-vector + sub-germ trichotomy repairs; MISTAKE-206)
+
+**Owner:** find more unifying laws, explore around thoroughly.
+
+- PENCIL M(t,u,v) = det(tI + uD_in - vA): expansion over cycle packings (1152/1152); faces: v=0 score/cut, u=0 spectral/cycle (THM-506 signed face), u=v forest/matrix-forest; H not a face (#P boundary). The triangle's cut+cycle axes in one determinant.
+- COMPLEMENT FUNCTIONAL EQUATION (486/486): M_op(t,u,v) = M(t~,-u,-v) - v S(t~,-u,-v), S = 1^T adj 1 (doubly-rooted); diagonal collapse = classic complement-spectrum law (144/144); off-diagonal: complement pairs (M,S) ~ SC/NS echo.
+- SUM-LAW (one line, 6400/6400): M_{T+S} = M_T(t,u,v) M_S(t + u n_T, u, v) - subsumes score/spectral/THM-1460(D); coning M_{1+T'} = t M_{T'}(t+u,u,v).
+- TRANSVERSALITY at n=7: pencil 443/456; SPLITS ALL 4 of klein-THM-1750's resistant pairs; joint (pencil, {a_r}) residue = 2 CONED pairs (1+T', explained by coning law); +H => COMPLETE 456/456.
+- CENSUS: leaf polynomials LOG-CONCAVE all 530 classes (new conjecture); THM-1745 depth bound SHARP (n=5: |Aut|=3, 3 not dividing c3).
+- ALSO THIS SESSION: THM-1680 hostile-referee verdict landed and filed (see S183 addendum): architecture survives; deletion criterion -> full odd-sector vector; dichotomy -> per-sub-germ trichotomy (boundary-truncated exponential class); MISTAKE-206; L1/L2 scopes extended; "no scenario survives the repaired statements."
+- ID admin: klein-S379 used HYP-8555 (mine, S184, first push 8eeae09e5 < 812e8f12b) - flagged in letter for their renumber.
 
 ## opus-2026-07-20-S428 - The angular uniform piece: the tunable/unique-minimal dichotomy (THM-1755)
 

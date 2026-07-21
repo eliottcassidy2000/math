@@ -1,0 +1,34 @@
+==============================================================================
+PENCIL x VECTOR TRANSVERSALITY, n = 7 (456 classes)
+==============================================================================
+
+pencil-only unresolved groups: 11  [2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3]
+vector({a_r})-only unresolved groups: 13  [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 5]
+JOINT (pencil, vector) unresolved: 2  [2, 2]
+JOINT + H unresolved: 0  []
+
+(1) pencil's groups split by the vector?
+   group [280, 284]: 1 distinct vectors -> NOT split
+   group [368, 761]: 2 distinct vectors -> SPLIT
+   group [537, 538]: 1 distinct vectors -> NOT split
+   group [624, 636]: 2 distinct vectors -> SPLIT
+   group [626, 634]: 2 distinct vectors -> SPLIT
+   group [681, 1193]: 2 distinct vectors -> SPLIT
+   group [1139, 1142]: 2 distinct vectors -> SPLIT
+   group [1328, 1721]: 2 distinct vectors -> SPLIT
+   group [1396, 1460]: 2 distinct vectors -> SPLIT
+   group [9320, 9392, 9593]: 3 distinct vectors -> SPLIT
+   group [9400, 9520, 9585]: 3 distinct vectors -> SPLIT
+
+(2) klein's 4 resistant pairs: same (specA, sum a, {a_r}, H) —
+    locate as vector+H collisions and test the pencil on them:
+   (sum a=1088, H=29) group size 3: pencil -> 3 distinct  SPLIT
+   (sum a=1080, H=23) group size 2: pencil -> 2 distinct  SPLIT
+   (sum a=1092, H=31) group size 2: pencil -> 2 distinct  SPLIT
+   (sum a=1224, H=43) group size 2: pencil -> 2 distinct  SPLIT
+
+(3) the JOINT residue in detail (the new deepest poly-time wall):
+   classes [280, 284]: sum a = 1136, {a_r} = (0, 0, 0, 0, 0, 0, 1136), H = [37, 33]
+   classes [537, 538]: sum a = 1168, {a_r} = (0, 0, 0, 0, 0, 0, 1168), H = [37, 33]
+
+DONE.

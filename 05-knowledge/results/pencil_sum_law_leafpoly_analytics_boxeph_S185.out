@@ -1,0 +1,13 @@
+==============================================================================
+(Q1) pencil ordinal-sum law  M_{T+S}(t,u,v) = M_T(t,u,v) M_S(t+u n_T,u,v):
+     6400 evaluations, 0 mismatches
+
+(Q2) leaf polynomials: unimodality + log-concavity over all classes:
+     530 classes: unimodality violations 0 ; log-concavity violations 0
+
+(Q3) depth tightness: classes with 3 | |Aut| and 3 not dividing c_3:
+     WITNESS n=5 bits=2 |Aut|=3 c=[3, 12, 10, 1] (c3=10, 3∤c3)
+     WITNESS n=5 bits=40 |Aut|=3 c=[15, 27, 7, 0] (c3=7, 3∤c3)
+     tightness witnesses found: 2 (the l < p bound is SHARP)
+
+DONE.

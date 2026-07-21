@@ -1,0 +1,44 @@
+==============================================================================
+THE TOURNAMENT PENCIL  M_T(t,u,v) = det(tI + u D_in - v A)
+==============================================================================
+
+(P1) expansion over linear subdigraphs — exact, all classes n=3..5,
+     grid (t,u,v) in {0..3}^3:
+     1152 evaluations, 0 mismatches
+
+(P2) faces (n=3..5, all classes):
+     classes checked: 18 | score-face ok 18 | spectral-face ok 18 | forest-face ok 18 | det(L)=0 ok 16
+
+(P3) complement functional equation, exact, all classes n=3..5,
+     grid (t,u,v) in {1..3}^3 (and the diagonal collapse):
+     general: 486 evaluations, 0 mismatches | diagonal law: 144 evals, 0 mismatches
+
+(P4) fingerprint strength at n=7 (grid {0..7}^3 = full coefficient info):
+     456 classes -> 443 distinct pencil polynomials; unresolved groups: 11
+     unresolved: [[280, 284], [368, 761], [537, 538], [624, 636], [626, 634], [681, 1193], [1139, 1142], [1328, 1721], [1396, 1460], [9320, 9392, 9593], [9400, 9520, 9585]]
+       bits=280 charpolyA=(1, 0, 0, -7, -9, -7, -2, 0)
+       bits=284 charpolyA=(1, 0, 0, -7, -9, -7, -2, 0)
+       bits=368 charpolyA=(1, 0, 0, -9, -16, -18, -10, -2)
+       bits=761 charpolyA=(1, 0, 0, -9, -16, -18, -10, -2)
+       bits=537 charpolyA=(1, 0, 0, -7, -9, -7, -2, 0)
+       bits=538 charpolyA=(1, 0, 0, -7, -9, -7, -2, 0)
+       bits=624 charpolyA=(1, 0, 0, -9, -15, -16, -9, -2)
+       bits=636 charpolyA=(1, 0, 0, -9, -15, -16, -9, -2)
+       bits=626 charpolyA=(1, 0, 0, -7, -9, -7, -2, 0)
+       bits=634 charpolyA=(1, 0, 0, -7, -9, -7, -2, 0)
+       bits=681 charpolyA=(1, 0, 0, -10, -15, -20, -12, -4)
+       bits=1193 charpolyA=(1, 0, 0, -10, -15, -20, -12, -4)
+       bits=1139 charpolyA=(1, 0, 0, -7, -9, -7, -2, 0)
+       bits=1142 charpolyA=(1, 0, 0, -7, -9, -7, -2, 0)
+       bits=1328 charpolyA=(1, 0, 0, -12, -21, -27, -17, -4)
+       bits=1721 charpolyA=(1, 0, 0, -12, -21, -27, -17, -4)
+       bits=1396 charpolyA=(1, 0, 0, -10, -15, -20, -12, -4)
+       bits=1460 charpolyA=(1, 0, 0, -10, -15, -20, -12, -4)
+       bits=9320 charpolyA=(1, 0, 0, -12, -19, -28, -18, -4)
+       bits=9392 charpolyA=(1, 0, 0, -12, -19, -28, -18, -4)
+       bits=9593 charpolyA=(1, 0, 0, -12, -19, -28, -18, -4)
+       bits=9400 charpolyA=(1, 0, 0, -13, -21, -33, -22, -8)
+       bits=9520 charpolyA=(1, 0, 0, -13, -21, -33, -22, -8)
+       bits=9585 charpolyA=(1, 0, 0, -13, -21, -33, -22, -8)
+
+DONE.
