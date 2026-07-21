@@ -1,0 +1,53 @@
+==============================================================================
+PART A -- first-return isolation: E[P^{m*}] sees ONLY atoms of the minimal size m*
+==============================================================================
+  aZ^2 + bW + cW^3
+     charges [2, -1, -3];  atoms(size): [((-1, -1, 2), 3), ((-3, -1, 2, 2), 4), ((-3, -3, 2, 2, 2), 5)]
+     m* = 3;  E[P^3] = 6*c0*c1**2
+     lower moments E[P^m], m<3: [0, 0] (all zero => first return at m*)
+
+  aZ^2 + bZ^3 + cW  (two pos)
+     charges [2, 3, -1];  atoms(size): [((-1, -1, 2), 3), ((-1, -1, -1, 3), 4)]
+     m* = 3;  E[P^3] = 6*c0*c2**2
+     lower moments E[P^m], m<3: [0, 0] (all zero => first return at m*)
+
+  aZ^2 + bZ^3 + cW^5 (3-charge atom +2+3-5)
+     charges [2, 3, -5];  atoms(size): [((-5, 2, 3), 3), ((-5, -5, 2, 2, 2, 2, 2), 7), ((-5, -5, -5, 3, 3, 3, 3, 3), 8)]
+     m* = 3;  E[P^3] = 720*c0*c1*c2
+     lower moments E[P^m], m<3: [0, 0] (all zero => first return at m*)
+
+  aZ + bW + cW^2 (charges +1,-1,-2)
+     charges [1, -1, -2];  atoms(size): [((-1, 1), 2), ((-2, 1, 1), 3)]
+     m* = 2;  E[P^2] = 2*c0*c1
+     lower moments E[P^m], m<2: [0] (all zero => first return at m*)
+
+==============================================================================
+PART B -- the renewal firing order is BOTTOM-UP (verify on the two-straddle witness)
+==============================================================================
+  aZ^2 + bW + cW^3:  straddle (2,1) atom size 3, straddle (2,3) atom size 5
+     E[P^3] = 6*a*b**2
+     E[P^4] = 288*a**2*b*c
+     E[P^5] = 7200*a**3*c**2
+     E[P^6] = 360*a**2*b**4
+  => level 3 fires the (2,1) atom (forces a b^2 = 0), level 5 fires the (2,3) atom
+     (forces a^3 c^2 = 0). With a != 0: b=0 at level 3, then c=0 at level 5. Bottom-up,
+     each atom isolated at its own first-return level -- the renewal induction.
+
+==============================================================================
+PART C -- atoms are MINIMAL VANISHING SUMS, not just pos-neg pairs (THM-1685/THM-415)
+==============================================================================
+  aZ^2 + bZ^3 + cW^5:  charges [2, 3, -5]
+     atoms: [((-5, 2, 3), 3)]  <-- (+2,+3,-5) is a 3-CHARGE atom, size 3
+     E[P^3] = 720*a*b*c  <-- the atom coeff product a*b*c
+  => the first-return event is a 3-charge minimal vanishing sum; its coeff MONOMIAL
+     (a b c) is distinct from any other atom's, so it cannot cancel -- this is exactly
+     opus THM-1685's vanishing-sums bridge and THM-415's prime/no-collision structure.
+
+SUMMARY -- the localisation lemma, in first-return form
+  PROVED (minimality): at the minimal atom size m*, E[P^{m*}] = sum over size-m* atoms
+  of their coeff forms, with NO composite contributions -- the first return is primitive.
+  This is the covering backbone of HYP-8590: process levels bottom-up (renewal), each
+  atom isolated at its first-return level; distinct atoms have distinct coeff monomials
+  (THM-1685/THM-415), so they cannot cancel.  The residual is the MULTIPLICITY case --
+  when one charge carries r terms, the size-m* forms are r-dim (Vandermonde), needing
+  the r levels m*, 2m*, ..., r m* to kill them (THM-1740's r*m0, the single-straddle law).

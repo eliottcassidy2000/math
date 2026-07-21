@@ -19,6 +19,21 @@ $\mathbb A^2$) is $\cong\mathbb A^3$; complete structural understanding.
   to decide fake-vs-real $\mathbb A^3$.
 - Consultation write-up (reflection x-cong-A3-iff-JC3-false-...-S74), not a repo theorem. No code changes
   this turn beyond the note.
+## mac-mini-2026-07-20-S153 -- THE LOCALISATION LEMMA IS A FIRST-RETURN / RENEWAL STRUCTURE: isolation step PROVED, pair-only case CLOSED, reducing full GMC(2) to ONE atom-covering statement (= opus THM-1685's core, now in first-return order). THM-1770.
+
+**Owner directive:** take the localisation lemma (HYP-8590) in the first-return / covering argument direction.
+
+An ATOM = a minimal balanced charge-multiset (minimal vanishing sum over the charge lattice, opus THM-1685 / THM-415); its size = its first-return level. The LRC/covering reading (THM-1745): M* is governed by the last atom to return.
+
+- **(A) FIRST-RETURN ISOLATION, PROVED.** At m* = min atom size, EVERY balanced tuple of size m* is a single atom -- a composite splits into >= 2 balanced pieces each of size >= m*, total >= 2m* > m*. So **E[P^{m*}] = sum over size-m* atoms of their coeff forms, NO composite terms** -- the first return is primitive. Verified: aZ^2+bW+cW^3 -> E[P^3]=6ab^2; the 3-charge atom (+2,+3,-5) -> E[P^3]=720abc (a minimal vanishing sum, NOT a pair).
+- **(B) DISTINCT ATOMS DON'T CANCEL, PROVED.** Distinct atoms = distinct charge multisets = disjoint coeff-monomial supports, so each atom's form vanishes SEPARATELY in the nullcone. Exactly THM-415's prime/no-collision.
+- **(C) RENEWAL INDUCTION.** Bottom-up (THM-1700 is this order); each atom isolated at its first-return level; within an atom, a charge of multiplicity r gives an r-dim Vandermonde form killed by the tower m*,2m*,...,r*m* (THM-1740, THM-1760's radial reduction).
+- **(D) PAIR-ONLY CLOSURE, PROVED.** If every atom is a pos-neg PAIR (one side carries a single distinct charge = the STAR patterns, single straddle a sub-case), the atom-form ideal is <c_p c_n : p>0>n>, variety EXACTLY {all pos=0} U {all neg=0} = one-sided. **GMC(2) holds for all star patterns, in every degree, closed form** -- multiplicity absorbed by THM-1740.
+- **RESIDUAL, now ONE statement:** V(all atom forms, all levels) = the one-sided locus. For multi-charge atoms this is opus THM-1685's Nullstellensatz core, now in first-return order. The first-return structure supplies the ORDER (bottom-up), the ISOLATION (each atom alone at its level), and the NON-CANCELLATION (distinct monomials); the open part is that hitting every atom form forces one-sidedness when multi-charge atoms are present.
+
+**Handoff.** HYP-8590 is now down to ONE clean statement: V(all atom forms) = one-sided. PROVED for pair-only/star patterns (D) and single straddle (THM-1760). The general multi-charge-atom case is opus THM-1685's TNC Nullstellensatz on the SAME vanishing-sum lattice -- transport it to the moment functional, or prove star + one-multi-charge-atom and peel by the renewal. Note the subtlety (charges {+2,+3,-5}): a size-3 atom abc AND a size-8 atom b^5 c^3, so the renewal reaches ALL levels; killing abc alone leaves {+3,-5} two-sided, whose size-8 atom then fires -- the covering completeness (union of atom-hits = one-sided) is the hard core. The first-return structure makes the induction well-founded (finitely many new atoms per level); only completeness is open. GMC(2) status: span-2 (THM-1600), complex radial (THM-1695), single-straddle (THM-1760), star/pair-only (THM-1770 D) all CLOSED; the general covering is the sole remaining gap.
+
+---
 
 ## klein-2026-07-20-S383 -- THM-1790: THE EMP FLOOR. The GMC(2) detection depth is >= d+1 for every radial degree d (PROVEN, growing without limit) -- upgrading THM-1770's single witness to a law, and pinning the load-bearing constraint on any GMC(2) proof: it must be uniform in m, not a finite moment cutoff.
 

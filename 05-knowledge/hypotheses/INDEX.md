@@ -17534,3 +17534,24 @@ straddle's charges give the isolated L(Q_dom^j) term, and every mixed tuple eith
 total return level or contributes to an already-killed lower straddle. The LRC resonance
 (THM-1745) suggests a first-return/covering argument: the dominant straddle is the last to
 return, so at its level it is alone.
+
+
+### HYP-8590 — RESTRUCTURED as first-return renewal; pair-only CLOSED (mac-mini-S153, THM-1770)
+The localisation lemma now has a proved first-return backbone: (A) at the minimal atom size m*,
+E[P^{m*}] = sum over size-m* atoms of their coeff forms, NO composites (minimality: a split
+gives two balanced pieces each >= m*, total >= 2m* > m*); (B) distinct atoms have disjoint
+coeff-monomial supports so each vanishes separately (THM-415); (C) renewal induction bottom-up
+(THM-1700), within-atom multiplicity killed by THM-1740's tower; (D) PAIR-ONLY CLOSED -- if
+every atom is a pos-neg pair (one side has a single distinct charge = star patterns), the ideal
+<c_p c_n> has variety exactly {all pos=0} U {all neg=0} = one-sided, so GMC(2) holds for all
+star patterns in every degree.
+**RESIDUAL, now ONE statement:** V(all atom forms, all levels) = the one-sided locus. For
+multi-charge atoms (minimal vanishing sums like (+2,+3,-5)) this is opus THM-1685's Nullstellensatz
+core, now in first-return order. The gap: hitting every atom form forces one-sidedness when
+multi-charge atoms are present -- e.g. charges {+2,+3,-5} has size-3 atom abc AND size-8 atom
+b^5 c^3, so the renewal must reach ALL levels; killing abc alone leaves {+3,-5} two-sided, but
+its size-8 atom then fires. The full covering (that the union of all atom-hitting = one-sided) is
+the hard combinatorial core. **Attack:** prove it for the star + single multi-charge case, then
+by the renewal peel; or transport opus THM-1685's TNC Nullstellensatz proof (same vanishing-sum
+lattice) to the moment functional. The first-return structure means each level adds finitely many
+new atom forms, so the induction is well-founded -- only the covering completeness is open.
