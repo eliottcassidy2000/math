@@ -36,6 +36,40 @@ Format per entry:
   numerical unless an arithmetic proof is supplied.  THM-2000 is the repair
   packet.  The exact simplex telescoping theorem in THM-1985/1990 is unaffected.
 
+- **Two further audit corrections:** THM-1370 proves that `7,21` are omitted
+  for all `n` and that every other odd value through `609` occurs by `n=8`; it
+  explicitly labels global completeness of `odds minus {7,21}` a conjecture.
+  Thus THM-1985/1990's claimed positive-density H-spectrum and reciprocal
+  divergence are open, not corollaries of THM-1370.  Conversely the tournament
+  triangular-number series was undersold: Gauss's identity gives
+  `sum_(r>=0)q^(r(r+1)/2)=(q^2;q^2)_infty^2/(q;q)_infty`, equivalently a
+  `theta_2` value.  At `q=1/2` this is the exact form of `1.641632560655...`;
+  identifying it is not an open problem.
+
+---
+
+## MISTAKE-210 (2026-07-21, codex sequence-corpus audit) -- tournament counting growth was reversed, making two everywhere-divergent series look entire
+
+- **What was claimed:** `03-artifacts/drafts/tournament-theory-comprehensive.tex`,
+  `04-computation/complex_tournament_s339.py`, and
+  `04-computation/beyond_finite_s339.py` state that
+  `sum A000568(n)/n^s` converges (even entirely), and that the labeled EGF
+  `sum 2^C(n,2) z^n/n!` is entire or has positive convergence radius.
+- **Why it is wrong:** the orbit count satisfies
+  `A000568(n)>=2^C(n,2)/n!`; this grows faster than every fixed power of `n`,
+  so `A000568(n)/n^s` does not even tend to zero for any fixed complex `s`.
+  For the labeled EGF, consecutive absolute terms have ratio
+  `2^n|z|/(n+1)`, which tends to infinity for every `z!=0`; its radius is
+  exactly zero.  The old comments reversed the comparison: `n!` beats a
+  fixed exponential, not the quadratic-exponent growth `2^(n^2/2)`.
+- **Correct framing:** reciprocalization creates the legitimate analytic
+  objects.  `Z_V(s)=sum A000568(n)^(-s)` converges exactly for `Re(s)>0`
+  (abscissa zero), and `sum z^n/A000568(n)` is entire.  The normalized Burnside
+  correction `A000568(n)n!/2^C(n,2)-1` also decays and has a legitimate
+  index-Dirichlet series (`tournament_dirichlet_s291b.py`).  THM-2000 records
+  the proof; the old scripts remain historical negative evidence and must not
+  be cited for analytic continuation.
+
 ---
 
 ## MISTAKE-194 (2026-07-19, klein-S322, against my own THM-1290 runs AND flagging mac-mini-S54's census template) — THE UNGUARDED PAIR-COUNT MASK PRUNE IS UNSOUND: "missing unit-pairs > slots ⟹ prune" ignores that ONE future element that is a MULTIPLE of q satisfies pinning at q outright; the prune is valid only when maxnext < q (no future multiple possible)

@@ -1,14 +1,24 @@
 ---
 id: THM-1985
-title: "RECIPROCAL SUMS ARE THE HARMONIC-SCALE FACE OF THE POLY/#P TOWER. Every integer sequence a_n the repo studies has a reciprocal sum sum 1/a_n that is a SUB-SERIES of the harmonic series, and its convergence value/rate places the sequence on the harmonic scale -- recovering the formula/#P tower (THM-1970/1975). THREE STRATA. (1) FIGURATE invariant-SIZES = the char_S coefficients (THM-1920): the degree-k coefficient of char_S is C(n,k)-shaped, and sum_{n>=k} 1/C(n,k) = k/(k-1) exactly (telescoping/hockey-stick). So the tournament's OWN sizes give RATIONAL reciprocal sums: arc count = C(n,2) = triangular T_(n-1) => sum 1/arc = 2 (this IS the Downey-Ong-Sellers triangular identity, realized on the tournament -- the char_S subleading coefficient series sums to exactly 2, while the harmonic partial sum already exceeds 2 by n=5); # tiles = C(n-1,2) => 2; c3-max = C(n,3) = tetrahedral => 3/2; var-max = 2*C(n,3) (transitive, THM-1930) => 3/4. The poly-tower invariant of vertex-support degree k has reciprocal-sum k/(k-1) -- deep in convergence, the cleanest possible (rational). (2) COUNTING sequences (super-exponential): sum 1/A000568(#tournaments)=2.8535, sum 1/A038375(maxH)=2.6293, sum 1/A051337(strong)=2.198, sum 1/A002854(even graphs)=1.062 -- fast-converging transcendentals with no closed form; the Cayley-Dickson levels n=2^k+1 give sum 1/(2^k+1)=0.7645 (Erdos-Borwein cousin), and the H=1+2^(n-2) SC-neighbor gives 1.2645. (3) The H-VALUE SPECTRUM (achievable H = odds minus {7,21}, THM-1370): ~linear growth => sum 1/H-value DIVERGES (harmonic-slow) -- H's VALUE SET sits at the convergence/divergence boundary, the reciprocal-sum face of THM-1970's formula/#P edge. ABEL-DINI closes it: for a divergent sum a_n, sum a_n/S_n diverges but sum a_n/S_n^(1+eps) converges for every eps>0 -- there is NO series at the exact boundary, the exact analogue of kps THM-1980's 'Redei parity is the LAST formula' (no poly invariant beats the last bit). BERTRAND scale: the divergence boundary is sum 1/(n ln n)"
-status: VERIFIED (exact figurate rationals sum 1/C(n,k)=k/(k-1) k=2..6; the tournament identities arc->2, c3->3/2, var->3/4 are exact by telescoping; counting-sequence sums are numeric to 8 digits over the repo's stated first terms; H-value-spectrum divergence follows from positive-density achievability (THM-1370); Abel-Dini/Bertrand are classical). The three-strata = the reciprocal-sum face of the THM-1970/1975 harmonic edge.
+title: "RECIPROCAL SUMS AS A HARMONIC-SCALE FACE OF THE POLY/#P TOWER (CORRECTED SUPPORT SEMANTICS)"
+status: "PARTIALLY RETRACTED by MISTAKE-209 and repaired by THM-2000. The exact simplex/figurate telescoping identities remain PROVED. Census rows are finite numerical term-multiset prefixes, not proved transcendental constants; global H-spectrum divergence is OPEN; support masses require collision-tax correction."
 author: opus-2026-07-20-S447
-depends_on: [THM-1920 (char_S subleading coeff = C(n,2) = triangular; the coefficient degrees), THM-1930 (var-max=2C(n,3)), THM-1970/1975 (H at the formula/#P harmonic edge), THM-1370 (H-spectrum = odds minus {7,21}), kps THM-1980 (2-adic edge: Redei parity is the last formula), THM-805 (LRC deep-well measure = H_k/C(k+2,2) = harmonic/triangular; resistance=harmonic number), THM-1926 (tournament zeta = Euler product over cycles)]
+depends_on: [THM-1920, THM-1930, THM-1970, THM-1975, THM-1980, THM-805, THM-1926]
+related: [THM-2000, MISTAKE-209, THM-1370-h-spectrum-omits-7-21-all-n.md]
 external: "Downey-Ong-Sellers (CMJ), sums of reciprocals of figurate numbers (triangular=2); Abel-Dini theorem; Bertrand series; Erdos-Borwein constant."
 cite_by_filename: true
 ---
 
 # THM-1985 — Reciprocal sums: the harmonic-scale face of the poly/#P tower
+
+> **CORRECTION (MISTAKE-209; THM-2000).**  The exact figurate identities in
+> Section 1 survive.  Sections 2--3 originally counted repeated sequence terms
+> despite saying “subset,” called unnamed numerical constants transcendental
+> without proof, and treated THM-1370's conjectural global H-spectrum
+> completeness as proved.  Support masses remove repetitions; arithmetic type
+> is open unless proved; and H-spectrum reciprocal divergence is conditional.
+> Gauss's triangular-number identity also gives an exact product/theta form for
+> the labeled-tournament support mass.
 
 Owner: the reciprocal of an integer sequence is a **sub-series of the harmonic series**; study
 `Σ 1/a_n` for the repo's sequences (figurate reciprocals, Abel–Dini, Bertrand). This gives the
@@ -36,21 +46,24 @@ the `char_S` subleading-coefficient series sums to exactly `2`, while the plain 
 already passes `2` by `n=5` (the owner's contrast). A poly-tower invariant of vertex-support degree
 `k` has reciprocal sum `k/(k−1)` — deepest in convergence, the cleanest possible value (rational).
 
-## 2. Counting sequences → fast-converging transcendentals
+## 2. Counting sequences → fast-converging numerical constants
 
-Super-exponential growth ⇒ the reciprocal sum converges fast to a transcendental with no closed
-form (over the repo's stated first terms):
+Super-exponential growth makes the reciprocal sum converge fast; it does **not**
+by itself imply irrationality or transcendence.  The following are termwise
+prefix values from the original computation, not proved closed forms:
 
 `Σ1/A000568 (#tournaments) = 2.8535`, `Σ1/A038375 (max H) = 2.6293`,
 `Σ1/A051337 (strong) = 2.198`, `Σ1/A002854 (even graphs) = 1.062`, `Σ1/A000255 (W) = 2.447`.
 The **Cayley–Dickson levels** `n=2^k+1` give `Σ_{k≥1} 1/(2^k+1) = 0.7645` (Erdős–Borwein cousin of
 `Σ1/(2^k−1)=1.6067`); the `H=1+2^{n−2}` SC-neighbour series sums to `1.2645`.
 
-## 3. The H-value spectrum → divergence (the edge)
+## 3. The H-value spectrum → conditional divergence target
 
-The **achievable `H`-values** are the odd numbers minus `{7,21}` (THM-1370) — linear-density growth,
-so **`Σ 1/(H-value)` DIVERGES** (harmonic-slow). `H`'s *value set* sits at the convergence/divergence
-boundary — the **reciprocal-sum face of THM-1970's formula/`#P` edge**. And **Abel–Dini** closes it:
+THM-1370 proves that `7,21` never occur and that every other odd value through
+`609` occurs; it states global completeness as a **conjecture**.  Therefore
+linear density and divergence of `Σ1/(H-value)` remain open.  Conditional on
+positive lower density, the intended harmonic-edge conclusion follows.  The
+independent classical Abel--Dini statement remains valid:
 for a divergent `Σa_n` with partial sums `S_n`, `Σ a_n/S_n` diverges but `Σ a_n/S_n^{1+ε}` converges
 for every `ε>0` — **there is no series at the exact boundary**, the precise analogue of **kps
 THM-1980** ("Rédei parity is the last formula"; no poly invariant beats the last bit). The
@@ -62,8 +75,8 @@ THM-1980** ("Rédei parity is the last formula"; no poly invariant beats the las
   reciprocal sum                sequence                     tower position
   ────────────────────────────────────────────────────────────────────────
   rational k/(k-1)     figurate invariant-SIZES (char_S)    poly, degree k   (deep convergence)
-  transcendental       COUNTING seqs (A000568/38375/…)      the object census
-  DIVERGES             the H-VALUE spectrum (odds∖{7,21})   #P / the edge    (divergence boundary)
+  numerical constant   COUNTING seqs (A000568/38375/…)      the object census
+  OPEN                  the global H-VALUE support           conjectural edge
 ```
 
 **A sequence's reciprocal sum measures its position on the harmonic scale, and this recovers the
