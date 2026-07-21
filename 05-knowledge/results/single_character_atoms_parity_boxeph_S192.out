@@ -1,0 +1,43 @@
+==============================================================================
+(P1) I0-reduction: L(P^m) = sum_i m!/(i!i!(m-2i)!) (ac)^i L((XY)^i b^{m-2i})
+  E-side (Z,W factorial weights): identity exact m=0..15: True
+  CT-side (toral flat weights, XY = 1): identity exact m=0..15: True
+  => ONE reduction, TWO functionals; the abstract theorem rides the
+     central EMP axiom (E-side: THM-1510/1615 proved; CT-side: TNC
+     THM-1605 proved). Both-signs => ac != 0 => the (ac)-family is a
+     nontrivial exponential deformation of the central data.
+
+==============================================================================
+(P2/P3) atom stratification + the correction to kp THM-1830
+==============================================================================
+  n=9 witness (5 singletons + strong-4 atom): char coeffs [1, 0, 0, -2, -1, 0, 0, 0, 0, 0]
+  0-multiplicity = 5 > n/2 = 4.5: UNSTABLE (kp criterion), NON-transitive,
+  and NOT of the one-3-cycle form => kp THM-1830's 'only form for 7<=n<=12'
+  fails at n = 9 (court case filed this session).
+  strong 5-tournaments (labeled): 544 ; with eigenvalue 0: 0
+  strong 6-tournaments (labeled): 22320 ; with eigenvalue 0: 720
+  (k=7 by classes: using S152 reps)
+  strong 7-classes: 353 ; with eigenvalue 0: 14
+
+  STRATUM TIMELINE (unstable-via-0 <=> sum|atoms| < n/2, atoms >= 3):
+   n= 7: atom multisets: [(3,)]
+   n= 8: atom multisets: [(3,)]
+   n= 9: atom multisets: [(3,), (4,)]
+   n=10: atom multisets: [(3,), (4,)]
+   n=11: atom multisets: [(3,), (4,), (5,)]
+   n=12: atom multisets: [(3,), (4,), (5,)]
+   n=13: atom multisets: [(3,), (3, 3), (4,), (5,), (6,)]
+   n=14: atom multisets: [(3,), (3, 3), (4,), (5,), (6,)]
+   n=15: atom multisets: [(3,), (3, 3), (3, 4), (4,), (5,), (6,), (7,)]
+
+==============================================================================
+(P4) complement-reversal parity: two-C3 stratum at n = 13
+==============================================================================
+  n=13: slots N = 9: classes C(9,2) = 36 ; predicted blue = floor(N/2) = 4
+  slots {3,7} (symmetric: 7 = 9+1-3): reversed = [3, 7]: self-complementary class: True
+  slots {1,2} (asymmetric): reversed = [8, 9]: self-complementary class: False
+  (SCC decomposition is unique and complement reverses it; C3 is a
+   self-complementary class: so class-SC <=> slot-set reversal-symmetric.)
+  one-atom stratum: N = n-2 slots: middle exists iff n odd: blue = 1/0 (kp's law)
+
+DONE.
