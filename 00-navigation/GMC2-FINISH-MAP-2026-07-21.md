@@ -117,7 +117,10 @@ Thus the genuinely new analytic work lies in the finite resonance band
   Lean target).
 - **Three-weight resonance asymptotics** → THM-2017/HYP-8766: boundary
   hyper-Bessel derivative tower, sublinear inner boundary layers, and the
-  proportional-channel entropy saddle.
+  proportional-channel entropy saddle. HYP-8769 identifies the same target
+  algebraically as a Sheffer no-common-zero problem and shows that only
+  mixed-sign/complex-phase coefficients can carry the remaining cancellation;
+  raw Bargmann-norm positivity alone is not the needed certificate.
 - **Multilevel cancellation / pair radicals** → HYP-8765: localized cumulants
   or resultants followed by a factorial-Hankel/Vandermonde determinant; do not
   separate first-return atoms.

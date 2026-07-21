@@ -124,6 +124,26 @@ The next decisive calculation is the explicit first two `1/m` coefficients
 at `lambda=+-r`, expressed as differential operators on (3)-(4), followed by
 a common-zero resultant for small `(p0,q0)`.
 
+## Incoming Sheffer/positivity connection: HYP-8769
+
+HYP-8769 identifies the `p=q=1`, constant-negative-endpoint specialization
+of (2) with the earlier S64 Sheffer channel sequence. Under that dictionary,
+the differential/transseries tower proposed above is the Sheffer analogue of
+the S62 Hermite no-common-root mechanism. This is a genuine unification of
+the algebraic and asymptotic attacks, but not yet a proof: the required
+no-common-nonzero-zero statement is precisely what remains open beyond the
+base Hermite case.
+
+It also isolates the phase obstruction cleanly. If every coefficient is real
+and nonnegative, each Wick/channel contribution is nonnegative and at least
+one is positive, so moment nullity is impossible. Any counterexample in the
+resonance band must therefore exploit mixed signs or genuinely complex phase.
+A successful Hankel/SOS/Bargmann reformulation would have to encode those
+signed channel sums themselves; positivity of the raw norm `E[|P|^2]` is
+orthogonal to nullity and cannot close the band by itself. This makes
+phase-sensitive Sheffer resultants, rather than another top-term comparison,
+the concrete algebraic companion to the saddle program.
+
 ## Relation to HYP-8770
 
 HYP-8770's symmetric-top Watson problem is the many-shell analogue of the
