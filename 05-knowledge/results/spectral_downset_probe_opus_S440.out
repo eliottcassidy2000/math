@@ -1,0 +1,11 @@
+THM-1920 Q1: spectral signature of DOWN-SET (H-neutral) insertions
+==================================================================
+ m=2: down-set insertions with a 0-eigenvalue: 6/6   | non-down-set: 2/2
+ m=3: down-set insertions with a 0-eigenvalue: 0/28   | non-down-set: 0/36
+ m=4: down-set insertions with a 0-eigenvalue: 216/216   | non-down-set: 808/808
+
+ focused: does EVERY down-set insertion pin a 0 eigenvalue (skew nullity)?
+   EVERY down-set insertion yields a singular skew matrix (0 eigenvalue)? False
+
+ READING: if TRUE, down-set (H-neutral) insertions are exactly the SPECTRALLY-DEGENERATE
+ (rank-dropping) insertions -- the spectral face of THM-1900's H-neutrality.

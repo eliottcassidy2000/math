@@ -1,3 +1,45 @@
+## opus-2026-07-20-S440 - The a/b functional frame: the SPECTRAL insertion-response (THM-1920), concurrent with kps THM-1875/1880
+
+Owner: keep contributing to the shared zoo concurrently; think trigonometric functions + triangular
+numbers + tournaments as a(x)=x+1, b(x)=x/2 composed recursively; think functionally. kps got the
+same directive and first-pushed THM-1875 (transitive skew char = ((x+1)^n+(x-1)^n)/2, cot spectrum,
+A000182 tangent revival), THM-1880 (a/b Chebyshev-Pell frame E_n=b(a^n+a_bar^n), Pell E^2-O^2=(x^2-1)^n,
+b*a=half-dictionary), and S128c139 (spread duality var(lambda^2): transitive MAX, Paley 0). All on the
+TRANSITIVE tournament + the polynomial level.
+
+**MY COMPLEMENTARY CONTRIBUTION -- THM-1920 (the spectral insertion-response):** the a/b frame at the
+OBJECT level, on ALL tournaments, bridging kps's algebraic a(x)=x+1 to my combinatorial a (THM-1900
+vertex-insertion). char_S(T+u_P)(x) = x*char_S(T) + B_P, B_P = s_P^T adj(xI-S) s_P (exact, ALL T,P n<=4).
+(1) B_P = char_S'(x) + signed-off-diagonal(P): the diagonal cofactor sum IS char_S' (Jacobi/vertex-
+deletion), so the DERIVATIVE is the pattern-independent core of every insertion; P enters only via the
+off-diagonal quadratic form. (2) source=sink => complement b=T^op is char_S-INVARIANT => the b-quotient
+merged metagraph G_n/Z2 is the natural SPECTRAL object. (3) new spectrum INTERLACES old (Cauchy on iS,
+2000 random n=5). Transitive tower (a^n all-source) recovers kps E_n exactly -- so kps's algebraic a =
+my combinatorial a restricted to the transitive tower (one functor). Triangular universal: x^{n-2} coeff
+of char_S = C(n,2)=T_{n-1}=#arcs for EVERY tournament (extends kps THM-1880(5) beyond transitive).
+
+**DICTIONARY:** a=insertion (object; spectrum interlaces) <-> multiply eigenpoly by x+1 (kps). b=complement
+(object; char_S-invariant involution, the merged quotient) <-> the 1/2 symmetriser/half-dictionary (kps).
+
+**OPEN (next cells):** (Q1) characterize B_P for P a down-set (spectral analogue of THM-1900 H-neutrality).
+(Q2) the regular/Paley pole's frame -- kps S128c139 gives var(lambda^2)=0 at Paley (max at transitive)
++ the deformation b((x+c)^n+(x-c)^n) interpolating the poles; how does var(lambda^2) move under insertion a?
+
+**Concurrent trig-thread sweep** (1 agent, completed): mapped the Chebyshev/Pell/tangent/cotangent/
+half-dictionary spine. Integrated citations into THM-1920: THM-1440 (Cauchy interlacing under DELETION
+-- my insertion-interlacing is its dual), THM-1560 (priority owner of b=halving x->(1+x)/2), THM-012b
+(era-0 insertion-decomposition parent), THM-1830 (char_S MULTIPLICATIVE under order-join = the down-set
+B_P case). Q1 PARTIALLY RESOLVED: down-set insertion = order-join => char_S factorises (THM-1830), NOT a
+zero-eigenvalue signature -- the naive "down-set pins 0-eigenvalue" is REFUTED (0-eigenvalue is just odd-n
+skew parity: 0/28 at n=4, 216/216 & 808/808 at n=5; spectral_downset_probe_opus_S440.py). CITATION HAZARD
+flagged: THM numbers 1875/1810/1830/1440 are DUPLICATED across files -- cite by filename. FORGOTTEN trig
+threads to revive (THE-ZOO §4): W's tangent identity Sigma(-1)^k A(n,k)=+-T (which a/b-composite gives tan
+is OPEN), secant/Euler A000364 on the even side, the sqrt2 object x^4+14x^2+17, era-2 master polynomial P
+with i*cot/i*tan evals; naming gap: pseudo-doubling 2-1/(n-2) has no file.
+
+**Files:** THM-1920; HYP-8665; spectral_insertion_response_opus_S440.py (+out). Cites kps THM-1875/1880/
+S128c139, extends my THM-1900/1865. Namespace clean (THM-1920, HYP-8665 above kps's 1875-1880 churn).
+
 ## opus-2026-07-20-S439 - THE ZOO: repo-wide archaeology (6 agents) + the LRC-extremal Lean unlock + the insertion-response calculus (THM-1900)
 
 Owner: work the remaining unlock; build a living catalog of every idea/thread/method; recover the

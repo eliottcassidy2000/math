@@ -5,7 +5,8 @@ status: PROVED (bordered recursion exact by Schur complement, verified all (T,P)
 author: opus-2026-07-20-S440
 extends: THM-1900 (insertion-response calculus: H,c3 under insertion -> now char_S/the spectrum)
 recovers: THM-1880 (kps: transitive a/b Chebyshev-Pell, = the source-insertion special case)
-depends_on: [THM-1900 (combinatorial a = vertex-insertion), THM-1880 (kps a/b frame), THM-1875 (kps transitive skew char = ((x+1)^n+(x-1)^n)/2), THM-1810 (transitive = GIT nullcone), THM-474 (skew d(T)=det(I+S)/2^{n-1})]
+depends_on: [THM-1900 (combinatorial a = vertex-insertion), THM-1880 (kps a/b frame), THM-1875-transitive-skew-char (kps: ((x+1)^n+(x-1)^n)/2), THM-1810 (transitive = GIT nullcone), THM-474 (skew d(T)=det(I+S)/2^{n-1}), THM-012b-insertion-decomposition (era-0 H(T)-H(T-v) parent), THM-1440-seidel-spectra-are-sine (Cauchy interlacing under DELETION -- this is the insertion dual), THM-1560-the-halving-dictionary (priority owner of b: x->(1+x)/2=(J-I+S)/2), THM-1830-unstable-non-transitive (char_S MULTIPLICATIVE under order-join = the down-set B_P case)]
+cite_by_filename: true  # duplicate THM numbers exist (1875, 1810, 1830, 1440, ...); cite files not numbers
 ---
 
 # THM-1920 — The spectral insertion-response
@@ -45,7 +46,8 @@ natural *spectral* object (S211+ threads), and why `b(x)=x/2` = `(A000568+SC)/2`
 the imaginary axis (Cauchy interlacing applied to the Hermitian `iS`) — one new imaginary
 eigenvalue threads between each consecutive old pair. Verified on 2000 random `n=5` insertions.
 This is the spectral face of the insertion-response: `a` cannot move an eigenvalue past its
-neighbours.
+neighbours. It is the **insertion dual** of `THM-1440-seidel-spectra-are-sine` (which proves Cauchy
+interlacing under vertex **deletion**) — `a` and `a⁻¹` interlace in opposite directions.
 
 ## The transitive tower = kps THM-1880
 
@@ -74,13 +76,24 @@ combinatorial shadow of `char_S ↦ x·char_S + B`.
 
 ## Open
 
-1. **The off-diagonal quadratic form.** Characterise `Σ_{i≠j} s_i s_j \operatorname{adj}(xI−S)_{ij}`
-   as a function of `P` — for `P` a **down-set** (THM-1900 H-neutral), does it take a special form
-   (the spectral analogue of H-neutrality)? First cell of the "spectral insertion-response matrix."
+1. **The off-diagonal quadratic form (Q1 — partially resolved).** For `P` a **down-set** (THM-1900
+   H-neutral), the insertion is an **order-join at an SCC boundary**, so `char_S` becomes
+   **multiplicative** — `char_S(T+u_P) = char_S` of the two order-join factors (this is
+   `THM-1830-unstable-non-transitive`, the `B_P`-structured case). So the down-set signature is
+   *char_S-factorisation*, not H-neutrality's combinatorial form. The tempting guess "down-set
+   insertion pins a zero eigenvalue" is **REFUTED** (`spectral_downset_probe_opus_S440.py`): a
+   `0` eigenvalue appears iff `n` is **odd** (skew-parity), for down-sets and non-down-sets alike
+   (`0/28` at `n=4`, `216/216` and `808/808` at `n=5`) — it is nothing to do with `P`. The general
+   off-diagonal form (non-down-set `P`) remains the open cell.
 2. **The regular pole.** The transitive (nullcone) tournament is the Chebyshev-Pell object; its dual,
    the **regular/Paley** tournament, has skew spectrum `±i√p` (THM-1810) — a *single* repeated
    eigenvalue, **not** cotangent. So the a/b Chebyshev frame is special to the nullcone vertex; what
-   is the regular pole's functional frame?
+   is the regular pole's functional frame? **(Partially answered concurrently by kps-S128c139:** the
+   scalar `var(λ²)` of the squared skew spectrum is a one-number GIT-instability measure — **maximal
+   at the transitive vertex, exactly `0` at Paley** (all `λ²=p`) — and the deformation family
+   `b((x+c)^n+(x−c)^n)` interpolates transitive `↔` Paley. So the two poles are the `var(λ²)`-extreme
+   and `var(λ²)=0` ends; under insertion `a`, how does `var(λ²)` move? — the natural next cell of the
+   spectral insertion-response matrix.)**
 
 ## Verification
 
