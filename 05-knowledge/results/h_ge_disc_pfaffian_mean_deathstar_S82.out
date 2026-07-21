@@ -1,0 +1,29 @@
+
+==================================================================
+(1) disc = MEAN over even subsets of Pf(K[S])^2  (verify det == sum-of-squares)
+==================================================================
+  n=3: disc_det == disc_Pfmean for ALL tournaments? True
+  n=4: disc_det == disc_Pfmean for ALL tournaments? True
+  n=5: disc_det == disc_Pfmean for ALL tournaments? True
+  => disc(T) = (1/2^{n-1}) sum_{S even} Pf(K[S])^2 : a manifest nonneg sum-of-squares.
+     Empty term (S=empty) = 1, so det(I+K) = 1 + sum_{|S|>=2 even} Pf^2 >= 1.
+
+==================================================================
+(2) strong base H(C) >= max(1,s)*disc: min ratio + tightest strong tournaments
+==================================================================
+  n=3: 2 strong; min H/(max(1,s)disc) = 1.0000 at (H,s,disc)=(3, 3.0, 1.0)
+  n=4: 24 strong; min H/(max(1,s)disc) = 1.6667 at (H,s,disc)=(5, 3.0, 1.0)
+  n=5: 544 strong; min H/(max(1,s)disc) = 1.8750 at (H,s,disc)=(15, 4.0, 2.0)
+  n=6: 22320 strong; min H/(max(1,s)disc) = 3.7500 at (H,s,disc)=(15, 2.0, 2.0)
+  n=7: 2381 strong sampled; min ratio 3.3750 at (189, 7.0, 8.0)
+
+==================================================================
+(3) is H>=disc a literal per(I+K) >= |det(I+K)|? (check the per<->bosonic idea)
+==================================================================
+  C3: per(I+K)=-2, |det(I+K)|=4, H=3, disc=1
+  => |per(I+K)| < |det(I+K)| at C3, so H>=disc is NOT per(I+K)>=|det(I+K)|.
+     The bosonic>=fermionic (per>=det) is at the GAUSSIAN-MOMENT level (THM-1810),
+     not the matrix I+K -- H is the permanent of the covariance, disc the determinant.
+
+CONTRIBUTION: disc = mean of Pfaffian-squares (new positivity form) toward klein's
+strong base; the per>=det frame located at the moment (not matrix) level.

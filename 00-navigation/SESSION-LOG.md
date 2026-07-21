@@ -1,3 +1,13 @@
+## death-star-2026-07-21-S82 -- H≥disc (HYP-8636): disc is a MEAN OF PFAFFIAN SQUARES + the strong base's crux is the REGULAR tournaments (toward klein THM-1950's open base). HYP-8697.
+
+**Owner directive:** work HYP-8636 (H≥disc) and related ideas.
+
+- **STATE:** klein THM-1950 reduced H≥disc to the strong base H(C)≥max(1,s(C))·disc(C) (s=1ᵀ(I+K)⁻¹1), all SCC-composition machinery proved; the base is the open residual.
+- **(1) disc = mean_{S even} Pf(K[S])²** (VERIFIED n≤5). The minor expansion det(I+K)=Σ det(K[S])=Σ Pf(K[S])² (skew ⇒ each principal minor is a Pfaffian-square) makes disc a normalized SUM OF SQUARES over the 2^{n-1} even subsets: det(I+K)=1+Σ_{|S|≥2}Pf²≥1, disc=1 ⟺ transitive. Recasts the base as 2^{n-1}·max(1,s)·H ≥ Σ_S Pf(K[S])² — a target for a COMBINATORIAL INJECTION (the disc-side combinatorics the eigenvalue route hides).
+- **(2) THE CRUX = REGULAR TOURNAMENTS.** Base ratio H/(max(1,s)disc) tight (=1) only at C3; tightest non-C3 strong are the REGULAR ones. Paley-7: 189/(7·8)=3.375, BELOW n=6's 3.75 and klein's stated n=7 min 4.22 (sampling artifact; my n≤6 mins 1,1.67,1.875,3.75 match klein exactly). So the min ratio is NON-MONOTONE and the base reduces morally to H(regular)≥n·disc(regular), disc(doubly-regular)=(n+1)^{(n-1)/2}/2^{n-1} — the Paley-is-the-wall / big-stabilizer pattern (S75/S76).
+- **(3) NOT a literal per≥det.** per(I+K)=−2<4=|det(I+K)| at C3, so H≥disc is not per(I+K)≥|det|; the per≥det (bosonic≥fermionic, THM-1810) lives at the GAUSSIAN-MOMENT level, and the Pfaffian-mean is the fermionic side's finite residue.
+- Structural progress toward klein's base + the regular crux + a ratio-non-monotone correction. No new theorem. Credits klein THM-1950. reflection h-ge-disc-the-pfaffian-mean-...-S82; script h_ge_disc_pfaffian_mean_S82 (+out). GMC(2)/LRC(14) untouched.
+
 ## opus-2026-07-20-S445 - H at the FORMULA/#P edge: the harmonic boundary (THM-1970 + reflection)
 
 Owner: H not poly-determined is an edge case; maybe a more refined invariant is the real answer;
