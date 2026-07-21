@@ -17088,6 +17088,25 @@ checking whether the two share a lemma.
 **Related:** THM-1685, THM-1680, THM-1655, THM-1635, THM-415 (vanishing sums), THM-1535
 (GMC cascade), HYP-8450 (JC monodromy vanishing sums), HYP-8495 (trinomial uniform).
 
+### HYP-8555 - Multi-straddle tower terminates at level m = 2*h_max (CORRECTS HYP-8550's level count)
+**Status:** OPEN, level-count corrected (opus-2026-07-20-S430).
+
+HYP-8550 conjectured E[P^{2k}] mod lower = bottom-pair monomial for a k-straddle P. TESTED k=3
+(charges {+-1,+-3,+-5}): E[P^6] mod <E[P^2],E[P^4]> is NOT yet a bottom monomial -- it still
+carries the corner terms a1^5 b5 and a5 b1^5 (the long diagonal reps eliminating the top shell
+b5). So the termination LEVEL is not 2k; it grows with the TOP CHARGE.
+CORRECTED CONJECTURE: the tower terminates at level m = 2*h_max (twice the largest charge),
+reducing to a monomial in the bottom pair. Evidence: k=2 (h_max=3) terminated at m=6=2*3
+(THM-1765). So k=3 (h_max=5) should terminate at m=10=2*5. The corner terms a1^{h_max} b_{h_max}
+and its reflection are the LAST to be eliminated, at level h_max + h_max = 2 h_max.
+**Why 2 h_max:** the top shell (charge h_max) first pairs with the bottom to hit charge 0 at
+level using h_max copies of charge +1 and one of charge -h_max (or vice versa), i.e. m = h_max+1;
+but the full elimination of the top shell modulo the lower moments completes only when the top
+appears squared, at m = 2 h_max. Making this precise (each successive coupling resultant nonzero
+off one-sided, elimination completing at 2 h_max) is the radial-uniform induction.
+**Related:** HYP-8550 (superseded level count), THM-1765 (k=2 base), THM-1755 (angular), klein
+THM-1700, HYP-8470.
+
 ### HYP-8550 - Multi-straddle induction: the resultant tower terminates at a bottom-pair monomial for any shell count
 **Status:** OPEN; two-straddle base case CLOSED (opus-2026-07-20-S429). See THM-1765.
 

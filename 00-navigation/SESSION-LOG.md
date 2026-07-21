@@ -19,6 +19,43 @@ Prompt (owner): now work to prove the GMC(2).
 FILES: THM-1770, HYP-8560, 1 script + out. -> all (WORKING TO PROVE GMC(2), I KILLED A LEAD. HYP-8540's hope that bounded GMC(2) collapses to a SINGLE finite test with a SPAN-ONLY bound is FALSE. The detection depth GROWS with radial degree: on span {-1,0,1}, depth = 2 at d=0 (= span, THM-1710) but > 2 at d=1 -- the explicit two-sided P = Z + (-i sqrt2 + i sqrt2 |Z|^2) + Zb has E[P^1]=E[P^2]=0 and E[P^3] = 2 sqrt2 i != 0. The reason is structural and general: E[P^m] = Laplace-in-s of the toral diagonal, and eliminating s (creative telescoping) raises the holonomic order above the toral span. opus/kp: THM-1740 stands per stratum, but it CANNOT be made degree-uniform -- please stop trying to prove HYP-8540 as a span-only bound; it's false. The load-bearing consequence for everyone: degree-uniform GMC(2) genuinely needs the analytic bridge (the CASE-gamma-bridge-domination-step gap), because the algebra provably runs out at each fixed degree. The proof of GMC(2) must come from the radial/analytic layer, not from more elimination. That refocuses the endgame. GMC(2) REMAINS OPEN.)
 
 ---
+## opus-2026-07-20-S430 - The Sym^3 counterexample: X = A^3 for free (Serre vanishing) = JC non-properness (THM-1770); k=3 straddle corrects the tower level (HYP-8555)
+
+Owner gave a rational-geometry counterexample (pi: P^1 x Sym^2 P^1 -> Sym^3 P^1) and asked for a
+NON-COMPUTATIONAL reason X = A^3. There is a one-liner, and pi|X turns out to be the clean
+geometric model of the repo's JC non-properness.
+
+**X = A^3, no computation.** X is a Zariski-locally-trivial A^1-bundle over A^2. Its structure
+group is Aff_1 = G_m x| G_a; the G_m (linear) part is a line bundle in Pic(A^2) = 0 (A^2 a UFD),
+and the residual G_a-torsor is in H^1(A^2, O) = 0 (Serre: coherent cohomology of an affine
+scheme vanishes in positive degree). BOTH obstruction groups vanish => the bundle is trivial =>
+X = A^2 x A^1 = A^3. One line: 'A^2 has no Pic and no H^1(O) to twist by, so a bundle with
+contractible fibre over it is a product' -- the algebraic mirror of 'contractible fibre over
+contractible base = trivial', with affineness+Serre playing the role of contractibility. (The
+only non-free content is that X -> A^2 is a locally trivial BUNDLE, not a mere A^1-fibration --
+exactly the distinction separating A^3 from the Danielewski threefolds.)
+
+**pi|X = JC NON-PROPERNESS.** Under X = A^3 = Y, pi|X: A^3 -> A^3 is a polynomial map, etale (R
+removed) of degree 3. Since O(A^3)* = C*, its Jacobian is a nonzero constant => KELLER; degree 3
+=> NON-INJECTIVE; and it does NOT contradict pi_1(A^3)=1 because it is NON-FINITE -- the removed
+R u pi^{-1}(H) is where sheets escape = non-properness. This is EXACTLY the repo's dim-3 JC
+counterexample mechanism (THM-1300) and the 'proper Keller => automorphism; non-properness is a
+three-line covering argument' bottom rung (THM-1330/1605), now a clean rational-geometry model on
+Sym^3(P^1)=P^3 with the small diagonal = twisted cubic and H tangent-not-osculating to it.
+
+**Tangential (free discretion):** (1) H tangent to the twisted cubic = the geometric shadow of
+THM-1300's triple-collision fibre; 'tangent not osculating' = double contact = THM-1350's 1+2
+odd-fibre split (osculating would force the triple/sigma-fixed sheet). (2) Sym^3 = binary cubic
+forms; elementary-symmetric coords = multiplicative shadow, power sums = additive -- the THM-1580
+h=sAC / B duality, and pi|X is Vieta with one root free.
+
+**ALSO, the induction (HYP-8550 correction).** Tested k=3 straddle (charges {+-1,+-3,+-5}):
+E[P^6] mod <E[P^2],E[P^4]> is NOT yet a bottom monomial -- still carries a1^5 b5, a5 b1^5. So the
+termination level is NOT 2k; it is m = 2*h_max (twice the top charge): k=2 (h_max=3) terminated
+at m=6=2*3, so k=3 (h_max=5) needs m=10=2*5. HYP-8555 records the corrected level; the corner
+terms a1^{h_max} b_{h_max} are the last eliminated, at m=2 h_max.
+
+**Artifacts:** THM-1770 (the geometry); HYP-8555 (corrected induction level); 1 script (k=3) + output.
 
 ## opus-2026-07-20-S429 - The concrete cross-shell handoff: two-straddle CLOSES via an explicit resultant tower (THM-1765)
 
