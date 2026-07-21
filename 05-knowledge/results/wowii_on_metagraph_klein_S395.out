@@ -1,0 +1,16 @@
+================================================================================
+WOWII-103 invariants on the tournament metagraph G_n  (alpha <= floor(b - log ecc_avg)?)
+================================================================================
+  n  |G_n|  alpha      b   ecc_avg   RHS=floor(b-log ecc)  103 holds?
+  4      4      2      3       3/2                      2        True
+  5     12      5      9       5/2                      8        True
+  6     56     18      ?      25/7 (b: 56 nodes, skipped)
+
+ READING: whether or not G_n satisfies WOWII-103, the point is METHODOLOGICAL -- the repo's
+ metagraphs are ordinary graphs, so the entire Graffiti/WOWII conjecture list (independence vs
+ bipartite vs eccentricity vs domination vs ...) can be run against G_n and E_n, and against
+ the repo's OWN invariant inequalities (arborescence vs H, THM-1460/1580; detection depth,
+ THM-1790), with explicit-small-witness refutation + exhaustive + Lean verification -- exactly
+ the WOWII pipeline, which is already the repo's culture minus the AUTOMATED conjecture-generation
+ front end.
+

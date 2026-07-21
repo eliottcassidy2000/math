@@ -1,5 +1,13 @@
 # Investigation Backlog
 
+### Run the WOWII/Graffiti conjecture zoo against the repo's invariant zoo (klein-2026-07-21-S395)
+- **Source:** google-deepmind/formal-conjectures PR #4482 (disproof of Written-on-the-Wall-II Conj 103, DeLaViña); reflection `07-reflections/the-wowii-103-refutation-and-what-it-lends-the-repo-klein-S395.md`.
+- **The idea:** WOWII-103 was `alpha(G) <= floor(b(G) - log ecc_avg(G))`, disproved by an explicit 11-vertex triangle+leaves graph (9 <= 8), verified exhaustively + in Lean. Shape = 'easy structural invariant bounds hard extremal invariant, refuted by a tuned small witness' -- the SAME shape as the repo's THM-1460/1580 (H vs arborescence Sum a).
+- **Status:** OPEN, idea-generation. Demonstrated: WOWII-103 invariants computed on the metagraph G_n (alpha = 2,5,18 for n=4,5,6; G_n SATISFIES 103, not a counterexample). The machinery ports.
+- **Concrete next steps:** (a) OFF-BY-ONE FRAGILITY -- is THM-1790's detection depth exactly d+1 or does the upper bound miss by one (WOWII fails by one at a floor)? Is H <= Sum a (THM-1460) ever tight, where loosest? (b) TOURNAMENT COUNTEREXAMPLE TEMPLATE -- '3-cycle core + dominated amplifiers' (the 3-cycle = the WOWII triangle = intransitivity atom THM-1805/1840) to break tight tournament-invariant bounds (H, OCF, arborescence ranking THM-1750, Pfaffian THM-1475). (c) AUTOMATED CONJECTURE GENERATION -- the repo has search+exhaustive+Lean but no Graffiti-style inequality generator over its invariant zoo; that front end is the upgrade. (d) H-SPECTRUM as a WOWII achievability conjecture (odd\{7,21}, HYP-8540) -- needs a construction, a generation problem. (e) DIRECTED analogs of the ~150 WOWII inequalities as a new problem family.
+- **Why it matters:** the repo's flagship arborescence-vs-H result IS WOWII-shaped; adopting WOWII's automated-generate + explicit-refute + Lean-verify pipeline systematizes what the repo does by hand and raises the verification standard.
+
+
 ### Import the Sym^3(P^1) moduli-origin lens for the JC counterexample (klein-2026-07-20-S377)
 - **Source:** owner-supplied geometric description (Twitter reply, 2026-07-20), checked against the repo's JC threads.
 - **Status:** OPEN — a complementary lens the repo does NOT currently have. A grep across THM-1300/1305/1310/1315/1330/1340/1345/1365/1370/1375 finds NO mention of Sym^3(P^1), the twisted cubic / small diagonal, or the tangent-not-osculating hyperplane construction.
