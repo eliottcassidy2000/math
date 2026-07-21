@@ -5698,3 +5698,25 @@ otherwise uncertain**. Do NOT write "Alpoge-Mathew" (or "Alpoge") as the discove
 or write-up. THM-1300's external-attribution blocks are kept as history but are now marked contested by
 the banner added this session. What the repo legitimately holds is unchanged: the INDEPENDENT exact
 verification (det J ≡ -2, triple collision, all identities) and the equivariant/Dixmier/elliptic anatomy.
+
+---
+
+## MISTAKE-208 — a "poly-time invariant" that is not isomorphism-invariant (arborescences rooted at a fixed vertex)
+
+**kind-pasteur-2026-07-21-S128c143.** In the invariant-lattice work I used `arb(T)` = number of
+spanning arborescences **rooted at vertex 0** (one reduced-Laplacian minor). This is NOT an
+isomorphism invariant: the root "vertex 0" depends on the labeling, so relabeling changes it. On the
+exhaustive census it *looked* fine because I computed it on ONE canonical representative per class
+(deterministic, but an artifact of the canonicalization). The bug surfaced when a random-labeling
+SAMPLER reported spurious "same-invariant, different-H" collisions at n=6 that the exact exhaustive
+census (poly-tuple determines iso at n=6) said were impossible.
+
+**Why it's instructive:** (1) a per-root / per-vertex quantity is only an invariant after
+symmetrization (sum over roots, or the *sorted tuple* of per-root values). The fix is
+`arb_inv = tuple(sorted(arb_root(T,r) for all r))`. (2) Two code paths (canonical-rep vs
+random-label) disagreeing is a RELIABLE detector of a non-invariant — always cross-check an
+"invariant" on random relabelings. (3) The scare (a suspected floating-point artifact) was itself a
+false lead — the numbers matched numpy exactly; the real bug was mathematical (root-dependence), not
+numerical. Corrected: `|arb_inv|=55` at n=6 (vs 32 rooted-at-0); `arb_inv` refines score. Headline
+findings (score ⟂ cyc, the 2-adic edge THM-1980) use only genuine invariants and are unaffected.
+Banner added to THM-1965.

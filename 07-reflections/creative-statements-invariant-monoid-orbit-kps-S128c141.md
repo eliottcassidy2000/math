@@ -99,6 +99,21 @@ The next session (owner: chase definitive results) resolved two of these:
   test at n=7. Statements 6-11 (H=orbit-cardinality, Newton ladder, GIT, Cayley–Dickson, GMC nullcone,
   LRC) remain [R]/[C] as posed.
 
+## THE EDGE (kps-S128c143, THM-1980) — the owner's "H is at the formula/no-formula boundary"
+
+Chased the owner's observation that H's `#P`-ness is an *edge* case (like the harmonic series at
+`p=1`) to a definitive 2-adic statement. Define `d(n)` = largest `k` with `H mod 2^k` constant on
+every cospectral class (spectral). **Proven:** `d(4)=d(5)=∞` (spectrum determines H), `d(6)=2`
+(spectrum pins `H mod 4`, the mod-8 bit turns `#P` at THM-1780's `{13,17}` class), **`d(7)=1`** (26
+cospectral 7-buckets split `H mod 4`). The depth decays `∞,∞,2,1` and hits the Rédei floor: **the
+spectrum asymptotically pins exactly one bit of H — its parity — and Rédei's theorem is the *last*
+formula.** Two orthogonal edges meet at the Hamiltonian object: the *length* edge (THM-1870:
+`c_k` poly for `k≤n−1`, `#P` at `k=n`) and this *2-adic* edge (H's bits poly up to parity, `#P`
+above). Mechanism: `per ≡ det mod 2` is exactly one bit deep. **The owner's own next question** —
+does *any* poly-time invariant beat the parity bit asymptotically? — is the sharp open problem; a NO
+would prove Rédei's bit is H's entire formula content. [statement 5 upgraded from qualitative to
+2-adically quantitative.]
+
 ## Cross-links
 THM-1945 (the five verified) · THM-1965 (the invariant lattice, definitively mapped) · THM-1885
 (BS(1,2), the catalog, amenability) · THM-1810 (GIT/SL₂) · THM-1780/1870 (H #P boundary) · LEM-003

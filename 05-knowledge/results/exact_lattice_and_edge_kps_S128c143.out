@@ -1,0 +1,42 @@
+============================================================================
+EXACT-ARITHMETIC recompute (fixes numpy disc/arb float artifact)
+============================================================================
+n=3: iso=2  |score|=2  |specA|=2  |specS|=1  |cyc|=2  |H|=2  |R|=2  |disc|=1  |arb|=2  |aut|=2
+n=4: iso=4  |score|=4  |specA|=3  |specS|=2  |cyc|=3  |H|=3  |R|=2  |disc|=2  |arb|=3  |aut|=2
+      exact |disc|=2  (matches numpy)
+      exact |arb|=3  (matches numpy)
+n=5: iso=12  |score|=9  |specA|=9  |specS|=2  |cyc|=9  |H|=7  |R|=6  |disc|=2  |arb|=7  |aut|=3
+      exact |disc|=2  (matches numpy)
+      exact |arb|=7  (matches numpy)
+n=6: iso=56  |score|=22  |specA|=28  |specS|=6  |cyc|=32  |H|=19  |R|=8  |disc|=5  |arb|=32  |aut|=4
+      exact |disc|=5  (matches numpy)
+      exact |arb|=32  (matches numpy)
+
+============================================================================
+(A) EXACT refinement relations for disc/arb (correcting THM-1965)
+============================================================================
+    disc refines H     ? FAILS at n=3
+       H refines disc  ? FAILS at n=5
+    disc refines specS ? FAILS at n=6
+   specS refines disc  ? through n=6 (YES)
+     arb refines specA ? FAILS at n=4
+   specA refines arb   ? FAILS at n=4
+     arb refines cyc   ? FAILS at n=4
+     cyc refines arb   ? FAILS at n=4
+     arb refines H     ? FAILS at n=4
+       H refines arb   ? FAILS at n=4
+    disc refines specA ? FAILS at n=3
+   specA refines disc  ? through n=6 (YES)
+    disc refines arb   ? FAILS at n=3
+     arb refines disc  ? FAILS at n=4
+
+============================================================================
+(C) THE EXACT 2-ADIC EDGE  (poly-tuple P=(score,specA,specS,disc,arb))
+============================================================================
+ n=4: iso=4  EXACT poly-cells=4  H-split cells=0
+        poly-tuple DETERMINES H (and iso) exactly at n=4
+ n=5: iso=12  EXACT poly-cells=12  H-split cells=0
+        poly-tuple DETERMINES H (and iso) exactly at n=5
+ n=6: iso=56  EXACT poly-cells=56  H-split cells=0
+        poly-tuple DETERMINES H (and iso) exactly at n=6
+DONE.

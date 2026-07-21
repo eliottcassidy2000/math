@@ -1,3 +1,45 @@
+## kind-pasteur-2026-07-21-S128c143 - THE 2-ADIC EDGE of H: the spectrum resolves H to a depth that DECAYS to one bit; Redei's parity is the LAST formula (THM-1980)
+
+Owner: H being undetermined by poly-time invariants is an EDGE case; tournaments sit at the boundary
+between formula-expressible and provably-not, like the harmonic series at p=1; maybe a more refined
+invariant is the real answer. CHASED to a definitive 2-adic statement.
+
+**THE INSIGHT MADE PRECISE.** Define d(n) = largest k with "H mod 2^k" constant on every cospectral
+class (= a function of char_A; the spectrum is the poly-time ladder THM-1775/1780). Redei (H odd)
+=> d(n) >= 1. **THM-1980, DEFINITIVE (exact integer arithmetic, no floats):**
+- d(4)=d(5)= infinity  (the spectrum DETERMINES H completely at n<=5)
+- d(6)=2  (spectrum pins H mod 4 but NOT H mod 8; the mod-8 bit turns #P at EXACTLY the cospectral
+  class {13,17} where H leaves the ladder, THM-1780 -- both ==1 mod 4, differ by 4)
+- d(7)=1  (26 sampled cospectral 7-buckets carry BOTH residues of H mod 4 => even the mod-4 bit is
+  #P; d(7)=1 is DEFINITIVE by witness existence, immune to sampling incompleteness)
+=> depth = inf, inf, 2, 1 for n=4..7, hitting the Redei floor at n=7: **ASYMPTOTICALLY THE SPECTRUM
+PINS EXACTLY ONE BIT OF H (its parity); every higher bit is #P. Redei's theorem is the LAST formula.**
+
+**H mod 4 is a real but FLEETING spectral invariant:** both residues occur ~equally (n=6: 32:24),
+constant on cospectral classes for n<=6, NOT score/c3-determined from n=5 ((H-1)/2==c3 mod2 only at
+n=4), then STOPS being spectral at n=7.
+
+**TWO ORTHOGONAL EDGES MEET AT THE HAMILTONIAN OBJECT:** the LENGTH edge (THM-1870: cycle counts c_k
+poly for k<=n-1, #P at the Hamiltonian length k=n) + this 2-ADIC edge (H's bits poly up to parity,
+#P above). H is one length past the spectral cycle counts and one bit past a spectral formula -- the
+marginal object on both axes (the harmonic-series-at-p=1 analogue). Mechanism: per=det mod 2 is
+exactly one bit deep.
+
+**OPEN (the owner's own next question):** does ANY poly-time invariant (not just the spectrum) beat
+the parity bit asymptotically? The full poly-tuple (score,specA,specS,disc,arb_inv) determines H for
+n<=6; its n>=7 depth is untested. A NO would PROVE Redei's bit is H's entire formula-expressible
+content -- the exact statement of "tournaments at the edge."
+
+**CORRECTION (MISTAKE-208):** the `arb` in the S128c142 lattice was arborescences ROOTED AT VERTEX 0
+-- NOT iso-invariant (root depends on labeling; a random-label sampler exposed it via spurious
+collisions). Proper arb_inv = sorted per-root tuple: |arb_inv|=55 at n=6 (nearly complete), refines
+score, incomparable to specA/cyc/H -- STRENGTHENS THM-1965's cut/cycle story. Headline (score ⟂ cyc,
+THM-1980) uses only exact invariants, unaffected. Banner added to THM-1965.
+
+**Files:** THM-1980; MISTAKE-208; reflection update; HYP-8740; scripts H_two_adic_edge_v2 /
+H_mod4_formula_and_n7 / exact_lattice_and_edge _kps_S128c143 (+outs). Cites THM-1780/1870/1965/1945/1775.
+Namespace: THM-1980, HYP-8740 (hot: death-star 8697, THM-1970-region; took margin).
+
 ## death-star-2026-07-21-S82 -- H≥disc (HYP-8636): disc is a MEAN OF PFAFFIAN SQUARES + the strong base's crux is the REGULAR tournaments (toward klein THM-1950's open base). HYP-8697.
 
 **Owner directive:** work HYP-8636 (H≥disc) and related ideas.

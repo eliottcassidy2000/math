@@ -32,6 +32,13 @@ Reframe every tournament invariant as an `Sn`-orbit function (constant on iso cl
 This is a partial order; the full Hasse diagram and first-separation `n` are computed exhaustively over
 **every** isomorphism class for `n = 3..6`. Nine invariants:
 
+> **CORRECTION (kps-S128c143, THM-1980):** the `arb` invariant used below was *arborescences rooted
+> at vertex 0*, which is **not** iso-invariant (root depends on labeling). The proper invariant is
+> `arb_inv` = sorted tuple of per-root counts: exactly, `|arb_inv|=55` at n=6 (nearly complete),
+> `arb_inv` **refines score** and is incomparable to `specA/cyc/H` — which *strengthens* the
+> cut/cycle story (arb is firmly cut-side). The headline `score ⟂ cyc` and every non-`arb` finding
+> are **unaffected** (they use exact invariants). Read `arb` below as `arb_inv`.
+
 `score` (out-degrees), `specA` (adjacency char poly), `specS` (skew char poly), `cyc` (`c3..cn` simple
 directed cycle counts), `H` (#Ham paths, Rédei/#P), `R` (signed Ham-path count, THM-1936),
 `disc = |det(I+K)|/2^{n-1}` (skew-determinant, THM-1950), `arb` (arborescences, Matrix-Tree), `aut`

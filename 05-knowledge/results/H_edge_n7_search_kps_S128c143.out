@@ -1,0 +1,27 @@
+============================================================================
+EDGE SEARCH — where do poly invariants first fail to determine H?
+============================================================================
+n=6: samples=40000  distinct P-buckets=246  H-SPLIT buckets (edge witnesses)=2
+   M = gcd(H-differences) = 4   v2(M) = 2   odd-part=1
+   => at the edge, H mod 4 is poly-time (FORMULA); H mod 8 is NOT poly-determined
+     witness bucket: H-values [25, 29]   (all odd? True)
+     witness bucket: H-values [25, 33]   (all odd? True)
+n=7: samples=300000  distinct P-buckets=2648  H-SPLIT buckets (edge witnesses)=42
+   M = gcd(H-differences) = 2   v2(M) = 1   odd-part=1
+   => at the edge, H mod 2 is poly-time (FORMULA); H mod 4 is NOT poly-determined
+     witness bucket: H-values [25, 29, 33]   (all odd? True)
+     witness bucket: H-values [25, 29, 33]   (all odd? True)
+     witness bucket: H-values [81, 83, 109]   (all odd? True)
+n=7: samples=300000  distinct P-buckets=2648  H-SPLIT buckets (edge witnesses)=42
+   M = gcd(H-differences) = 2   v2(M) = 1   odd-part=1
+   => at the edge, H mod 2 is poly-time (FORMULA); H mod 4 is NOT poly-determined
+     witness bucket: H-values [25, 29, 33]   (all odd? True)
+     witness bucket: H-values [25, 29, 33]   (all odd? True)
+     witness bucket: H-values [81, 83, 109]   (all odd? True)
+n=8: samples=120000  distinct P-buckets=44641  H-SPLIT buckets (edge witnesses)=547
+   M = gcd(H-differences) = 2   v2(M) = 1   odd-part=1
+   => at the edge, H mod 2 is poly-time (FORMULA); H mod 4 is NOT poly-determined
+     witness bucket: H-values [89, 91, 95, 109, 115]   (all odd? True)
+     witness bucket: H-values [89, 91, 95, 109, 115]   (all odd? True)
+     witness bucket: H-values [89, 91, 95, 109, 115]   (all odd? True)
+DONE.

@@ -1,0 +1,18 @@
+==============================================================================
+THE 2-ADIC EDGE OF H — how many low bits does a poly-time invariant pin?  (exact)
+==============================================================================
+  n=4 [spectrum]: 3 cells, H-split=0  => this invariant DETERMINES H
+  n=4 [spectrum+score]: 4 cells, H-split=0  => this invariant DETERMINES H
+  n=4 [full poly-tuple]: 4 cells, H-split=0  => this invariant DETERMINES H
+
+  n=5 [spectrum]: 9 cells, H-split=0  => this invariant DETERMINES H
+  n=5 [spectrum+score]: 12 cells, H-split=0  => this invariant DETERMINES H
+  n=5 [full poly-tuple]: 12 cells, H-split=0  => this invariant DETERMINES H
+
+  n=6 [spectrum]: cells=28 H-split=3  M=gcd(H-diffs)=4 v2=2  => spectrum pins H mod 4; H mod 8 FREE (#P). witnesses=[[13, 17], [25, 29, 33], [33, 37]]
+  n=6 [spectrum+score]: cells=46 H-split=3  M=gcd(H-diffs)=4 v2=2  => spectrum pins H mod 4; H mod 8 FREE (#P). witnesses=[[25, 29, 33], [33, 37], [33, 37]]
+  n=6 [full poly-tuple]: 56 cells, H-split=0  => this invariant DETERMINES H
+
+Redei = 'H mod 2 = 1', the parity bit, is the ONE universally-formula bit.
+The edge question: does the poly-determined depth v2 -> 1 (only parity) as n grows?
+DONE.
