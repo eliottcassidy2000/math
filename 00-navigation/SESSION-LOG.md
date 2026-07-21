@@ -1,3 +1,46 @@
+## kind-pasteur-2026-07-21-S128c144 - The figurate reciprocal ladder and the harmonic edge: our sequences as sub-series of the harmonic series (THM-1990)
+
+Owner: reciprocal of an integer sequence = a subset of the harmonic numbers; 1+1/2+..+1/5 > 2 while
+sum 1/T_n = 2; study our sequences' reciprocal sums extensively and extend. Looked back at every
+integer sequence in the corpus through the reciprocal-sum lens.
+
+**PROVEN CORE (THM-1990) -- the figurate ladder.** Telescoping (exact rational, verified):
+sum_{n=k}^N 1/C(n,k) = k/(k-1)*(1 - 1/C(N,k-1)) => sum_{n>=k} 1/C(n,k) = k/(k-1) for k>=2, from
+1/C(n,k) = k/(k-1)[1/C(n-1,k-1) - 1/C(n,k-1)]. THE LADDER by dimension:
+  k=1 vertices n = HARMONIC = DIVERGES (the edge); k=2 arcs/triangular = 2 (the owner's value);
+  k=3 tetrahedral = 3/2; k=4 = 4/3; ... -> 1.
+Arc count of K_n = C(n,2), so the corpus' central staircase sequence has reciprocal signature EXACTLY
+2, and its telescoping 1/C(n,2)=2(1/(n-1)-1/n) IS the arc->vertex (dim2->dim1) reduction.
+
+**THE HARMONIC EDGE = p=1 = dimension 1, UNIFYING THREE LENSES.** The ladder diverges only at k=1
+(the ground set). This is the SAME p=1 boundary as THM-1980 (H's formula content collapses to one
+bit = 'H at p=1') and THM-1870 (cycle counts turn #P at the Hamiltonian length). Three independent
+lenses -- reciprocal convergence, 2-adic depth, cycle length -- place the marginal case at the same
+p=1 corner. The project's dimensional ladder n->C(n,2)->C(n,3) IS the figurate reciprocal ladder
+crossing that edge.
+
+**RECIPROCAL SIGNATURE table (VERIFIED to named constants):** arcs 2, tetrahedral 3/2,
+var(lambda^2)=2C(n,3) -> 3/4, squares pi^2/6, factorial e, central binomial 4/3+2pi sqrt3/27 (EXACT
+18 digits), Catalan 2+4pi sqrt3/27, Fibonacci=reciprocal-Fibonacci const, Mersenne 2^n-1=Erdos-Borwein,
+2^n=1. 2-ADIC/THETA: labeled tournaments sum 1/2^{C(n,2)}=1.6416325607... (partial theta q=1/2);
+switching classes 2^{C(n-1,2)} = 1 + that (the +1 = extra n=1 term, PROVEN exact); SIGNED pentagonal
+= Euler prod(1-2^-n)=(1/2;1/2)_inf (pentagonal number thm, THM-488 hub). Census fingerprints:
+A000568=3.8535, A002854=3.0618, score=3.9325, tangent=1.5663, secant=2.2171.
+
+**CONVERGENCE DICHOTOMY:** sum 1/a diverges iff a grows at most linearly; EVERY combinatorial repo
+sequence (degree>=2) converges, only the linear ground-set ones (vertices, odds, H-spectrum) sit on
+the harmonic edge -- a clean 'ground set vs structure' separation.
+
+**EXTEND:** sigma(a)=sum 1/a_n as a sequence fingerprint invariant; telescoping = the a-monoid
+(THM-1885, a:n->n+1) Mode-A action on figurate dimensions; a transcendence gradient (poly->rational,
+exp->irrational analytic, lacunary->theta). NEXT: identify the theta constant 1.6416...; signed
+reciprocal sums Sum(-1)^n/a_n for tournaments/even-graphs; Sum 1/H(T) as bridge to THM-1980.
+
+Reframing + a proven ladder + a verified signature table; classical constants (figurate, Basel,
+Erdos-Borwein, pentagonal thm) unified as one harmonic-subset classification of the corpus.
+**Files:** THM-1990; reflection the-harmonic-boundary-p-equals-1-recurs-kps-S128c144; HYP-8750;
+script reciprocal_sums_of_our_sequences_kps_S128c144 (+out). Namespace: THM-1990/HYP-8750 (clean).
+
 ## opus-2026-07-20-S446 - The path-cover polynomial is the refined compositional invariant; the formula/#P edge is REAL (THM-1975)
 
 Owner: work the cleanest next computations (the refined-object + relative defect from THM-1970/1960).
