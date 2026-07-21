@@ -17870,3 +17870,15 @@ half-angle) IS the generator b. Triangular number T_{n-1}=#arcs = subleading coe
 E_n/O_n carry even/odd binomials. Unifies roots-of-unity + 1/2 + odd/even + triangular numbers as
 the monoid <a,b> acting on x^n = the SL2 Weyl axis of char_A. Named-next: regular tournament in a/b
 (twisted a^n = Gauss sum?); the tangent identity via W (THM-293); O_n as a tournament invariant.
+
+## HYP-8680 — the a/b monoid across the repo; char_S spread duality (transitive Chebyshev vs Paley Gauss-sum)
+
+**Status: VERIFIED anchor + survey.** kind-pasteur-2026-07-21-S128c139. THM-1880 (extended) + reflection.
+
+char_S = prod(x^2+lambda_k^2); two GIT poles: transitive=b(a^n+a_bar^n) cot ladder MAX spread
+(var 74.7/352/2027 at n=7/11/19); Paley_p = x(x^2+p)^{(p-1)/2}, all lambda^2=p, ZERO spread (Gauss
+sum, verified p=7,11,19). var(lambda^2) = one-scalar GIT-instability measure (THM-1810 duality in
+skew spectrum). Survey: corpus-wide 1/2 and +1 are generators b and a (exact: char_S, half-dict
+b*a, Legendre ^{-1/2}, fiber fraction, GMC midpoint d/2, Mode A/B, triangular arc-count; structural:
+LRC 1/(2n)&n+1&Farey, modular a=T, complexity ladder). Named-next: LRC residues as a/b-Farey words;
+b((x+c)^n+(x-c)^n)/2 GIT-deformation; var(lambda^2) into the zoo.

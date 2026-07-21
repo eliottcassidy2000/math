@@ -74,11 +74,33 @@ companion; `b∘a` is the half-dictionary; the tangent numbers `A000182` sit on 
 succession GF `W` (THM-293/1875 named-next). Everything the owner has pulled — roots of unity, the
 `½`, odd/even, triangular numbers — is this monoid acting on `xⁿ`.
 
+## The two poles: spread vs concentrated (S128c139)
+
+`char_S` is always the even form `∏ₖ (x² + λₖ²)` (skew spectrum `±iλₖ`). The `a/b` frame gives one
+pole; the Gauss sum gives the other, and they are the two ends of GIT stability (THM-1810):
+
+- **Transitive (GIT-unstable vertex).** `E_n = b(aⁿ+āⁿ)`, `λₖ = cot((2k−1)π/2n)` — the cotangent
+  ladder, **maximally spread**: `var(λₖ²) = 74.7, 352, 2027` at `n = 7,11,19`.
+- **Paley/regular (GIT-polystable).** `char_S(Paley_p) = x·(x²+p)^{(p−1)/2}` — **every** `λₖ² = p`
+  (the imaginary Gauss sum `±i√p`, `|g(χ)|² = p`), so `var(λₖ²) = 0`. Verified `p = 7,11,19`
+  (`x(x²+7)³, x(x²+11)⁵, x(x²+19)⁹`).
+
+So the **spectral spread `var(λₖ²)` is a one-scalar GIT-instability measure**: transitive maximises
+it (var `74.7` at `n=7`), Paley zeroes it (`0`), random tournaments sit between (`21–43`). The `a/b`
+Chebyshev structure is the *spread* extreme; the concentrated extreme is not `b` of `aⁿ` but `b` of
+a **constant** shift — `(x²+p)^m` — the Gauss-sum degeneration where the cotangent ladder collapses
+to a single value. The `SL₂` Weyl axis (odd/even) carries GIT stability along it, from the monoid
+`⟨a,b⟩` (spread, unstable) to the character sum (concentrated, stable).
+
 ## Named next
 
-- **The regular tournament in the a/b frame.** Transitive gives `E_n = b(aⁿ+āⁿ)`; the Paley/regular
-  `char_S` is the Gauss-sum object (opus THM-1810 §Q2). Is it `b` of a *twisted* `aⁿ` (a character
-  sum), i.e. `a` and `b` with a quadratic-residue weight?
+- **The tangent identity via `W` (THM-293).** `Σ O_n(0) t^n/n! = sinh t`, not `tan t`; the tangent
+  numbers `A000182` come from the succession GF `W`, a *different* `a/b`-composite — recover it.
+- **`O_n` as a tournament invariant.** `E_n = char_S`; does `O_n` (roots `i·cot(kπ/n)`) count a
+  Pfaffian minor or a Seidel object?
+- **The spread scalar across the census.** Is `var(λₖ²)` monotone with the `c₃`/intransitivity
+  order, or does it separate a distinct stratum? (It is `0` exactly on the doubly-regular /
+  Gauss-sum tournaments.)
 - **The EGF / tangent identity.** `Σ O_n(0) t^n/n! = sinh t`, not `tan t`; the tangent numbers come
   from `W` (THM-293), a *different* a/b-composite — recover it and see which composite gives `tan`.
 - **`O_n` as a tournament invariant.** `E_n = char_S`; does `O_n` (roots `i·cot(kπ/n)`) count a

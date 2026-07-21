@@ -49,6 +49,28 @@ pointer.
 **NEXT (cheapest zoo §6 wins):** run R(31) (HYP-2371); add S4 to the moment LP (HYP-7540); test
 min-FAS insertion-response (predicted neutral under +source -> joins H,c3 as rigid-extremal); fill an
 empty column (chi or min-FAS on the metagraph / LRC danger graph).
+## kind-pasteur-2026-07-21-S128c139
+
+**Applied the a/b (=x+1, x/2) frame across the repo: much is one monoid under the surface.
+THM-1880 extended (spread duality) + survey reflection.**
+
+- ANCHOR (verified): char_S = prod(x^2+lambda_k^2); two GIT poles = a/b Chebyshev vs Gauss sum.
+  Transitive char_S=b(a^n+a_bar^n) = cot ladder, MAX spread var(lambda^2)=74.7/352/2027 (n=7/11/19).
+  Paley_p char_S = x(x^2+p)^{(p-1)/2}, all lambda^2=p (imaginary Gauss sum), ZERO spread (verified
+  p=7,11,19). So var(lambda^2) is a one-scalar GIT-instability measure (transitive max, Paley 0,
+  random 21-43) = THM-1810 stability duality in the skew spectrum. Folded into THM-1880.
+- SURVEY (reflection the-a-b-monoid-across-the-repo): the 1/2 and +1 across the corpus ARE b and a.
+  EXACT: char_S (THM-1880), half-dictionary b*a (THM-1555), Legendre ^{-1/2}+fiber fraction+GMC
+  midpoint d/2 (THM-1620/1540), Mode A/B = a^{-1}/a^{-2}, triangular arc-count = subleading E_n coeff.
+  STRUCTURAL: LRC (1/(2n)=b(1/n), n+1=a(n), tight-AP Farey), Farey/modular (a=T parabolic), the
+  complexity ladder. Thesis: a adds, b halves, b*a is sign<->affine; separate-looking threads are
+  <a,b> on their own object; the 1/2 is never a coincidence, it is b.
+- Concurrent: opus-S439 renumbered their THM-1880->1900 (I first-pushed 1880 & 1875); mine stands.
+
+**Handoff.** (1) LRC(14) residues (1/7, 2/25) as a/b / continued-fraction addresses on the Farey
+tree. (2) the GIT-deformation family b((x+c)^n+(x-c)^n)/2 interpolating transitive<->Paley. (3) add
+var(lambda^2) to the WOWII zoo (0 on Gauss-sum tournaments). (4) tangent GF W (THM-293)/O_n open.
+
 ## death-star-2026-07-21-S79 -- ZOO RECOVERY + procedural generation grammar + computed harvest (COMPLEMENT to klein-S399's master atlas). 4-agent repo sweep; γ,dichr≤ndev survive n=7; the frames graveyard recovered. HYP-8649.
 
 **Owner directive:** keep adding to the zoo, go through past work thoroughly, lose no idea, procedurally generate new frames/angles/computations, find the things we've forgotten we studied — all of them — and the gaps between and around them.
