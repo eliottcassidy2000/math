@@ -56,6 +56,7 @@ Polar bridge (THM-1645, verified exact): `E[P^m] = L( CT_u[Λ_s(u)^m] )`, `Λ_s(
 | `{−1,0,1}`, arbitrary radial coeffs | THM-1515 | **OPEN in general; published domination mechanism withdrawn (MISTAKE-202)** |
 | `aZ+b(ZW)+cW`, constant charged endpoints, arbitrary radial middle | THM-2014 | PROVED |
 | `Z^p a(s)+b(s)+Zbar^q c(s)`, strict radial degree gap | THM-2017 | PROVED; sharp boundary generically closed by hyper-Bessel limit |
+| affine `(charge,total-degree)` support, with arbitrary common radial multiplier | THM-2019 | PROVED by exact `DvdK factor x EMP factor`; arbitrary coefficients and many circuits |
 | single-straddle | THM-1760 | PROVED |
 | single-character both-signs (pair base case) | THM-1840 | PROVED functional-agnostically |
 | atom-covering ⟶ reduced to PAIRS | THM-1780 + MISTAKE-211 | set-theoretic zero-locus reduction only; pair radical inclusions OPEN |
@@ -105,6 +106,14 @@ generalized hyper-Bessel function; in the symmetric monomial model, its
 exceptional zeros are killed by the first `1/m` Bessel-derivative correction.
 Thus the genuinely new analytic work lies in the finite resonance band
 `-r<=deg h-r deg b<=r` (HYP-8766), not in the already separated degree region.
+
+THM-2019 separately closes every affine-height-rank-one support and every
+stack obtained from it by one common nonzero radial multiplier `B(ZW)`.  At
+levels `m=ell*n` its moments split exactly into `CT((A^ell)^n)` and the EMP
+sequence `L((s^D B^ell)^n)`.  Thus arbitrarily many primitive returns cause no
+problem when they share one radial address.  The multilevel residual begins
+only when different charge sectors have incompatible radial factors, so this
+common factor cannot be extracted.
 
 ## Division of labour (proposed)
 

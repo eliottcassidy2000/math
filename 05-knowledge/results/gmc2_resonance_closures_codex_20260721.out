@@ -1,0 +1,30 @@
+THM-2018 GMC(2) EXACT RESONANCE CLOSURES
+moment convention: E[Z^A W^B]=A!*1[A=B], L(s^N)=N!
+
+PART A: AFFINE b, QUADRATIC h=s*a*c
+Catalan identity [x^j] C(x)^n/sqrt(1-4x): PASS (91 exact coefficients)
+  params=('1', '2', '3', '4'): Wick=channels=closed_EGF m=0..10; M0..M4=[Fraction(1, 1), Fraction(3, 1), Fraction(35, 1), Fraction(505, 1), Fraction(10953, 1)]
+  params=('-2', '1', '5', '-3'): Wick=channels=closed_EGF m=0..10; M0..M4=[Fraction(1, 1), Fraction(-1, 1), Fraction(0, 1), Fraction(-38, 1), Fraction(356, 1)]
+  params=('0', '-1', '2', '0'): Wick=channels=closed_EGF m=0..10; M0..M4=[Fraction(1, 1), Fraction(-1, 1), Fraction(6, 1), Fraction(-30, 1), Fraction(216, 1)]
+  params=('3', '0', '-2', '7'): Wick=channels=closed_EGF m=0..10; M0..M4=[Fraction(1, 1), Fraction(3, 1), Fraction(33, 1), Fraction(243, 1), Fraction(7473, 1)]
+  params=('0', '0', '1', '1'): Wick=channels=closed_EGF m=0..10; M0..M4=[Fraction(1, 1), Fraction(0, 1), Fraction(6, 1), Fraction(0, 1), Fraction(228, 1)]
+  params=('1/2', '-3/2', '2/3', '-5/4'): Wick=channels=closed_EGF m=0..10; M0..M4=[Fraction(1, 1), Fraction(-1, 1), Fraction(-5, 12), Fraction(71, 2), Fraction(-16277, 48)]
+
+PART B: ARBITRARY-CHARGE CENTRAL SHADOW h=kappa*b^r
+  (p0,q0,r)=(1,1,2), kappa=-1/2: channel=H_m*L(b^m) m=0..14; first H_m!=0 at [0, 1, 3, 4, 5, 6, 7, 8]
+  (p0,q0,r)=(2,3,5), kappa=3/2: channel=H_m*L(b^m) m=0..14; first H_m!=0 at [0, 1, 2, 3, 4, 5, 6, 7]
+  (p0,q0,r)=(1,4,5), kappa=0: channel=H_m*L(b^m) m=0..14; first H_m!=0 at [0, 1, 2, 3, 4, 5, 6, 7]
+  (p0,q0,r)=(3,2,5), kappa=1: channel=H_m*L(b^m) m=0..14; first H_m!=0 at [0, 1, 2, 3, 4, 5, 6, 7]
+  actual charges (+1,-1): direct Wick=channels=shadow factor m=1..8
+  actual charges (+2,-3): direct Wick=channels=shadow factor m=1..6
+  tied channel tournament r=2, m=24: {'vertices': 13, 'observable': '(r*k+m-r*k)-(r*l+m-r*l)=0', 'score_histogram': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1}, 'directed_3_cycles': 0, 'scc_sizes': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_path': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 'hamiltonian_path_count': 1}
+  tied channel tournament r=5, m=24: {'vertices': 5, 'observable': '(r*k+m-r*k)-(r*l+m-r*l)=0', 'score_histogram': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1}, 'directed_3_cycles': 0, 'scc_sizes': [1, 1, 1, 1, 1], 'hamiltonian_path': [0, 1, 2, 3, 4], 'hamiltonian_path_count': 1}
+
+ASSUMPTION CHALLENGE / TOURNAMENT METHOD
+candidate vertices: monomials, charges, Catalan pairs (n,j), return channels k, proof obligations
+chosen Part-B vertices: return channels k; all radial-shadow observables tie on h=kappa*b^r
+tie gauge/path: increasing k; fingerprints are transitive with zero directed cycles
+preserved: the complete common radial factor b^m
+destroyed: scalar phase cancellation inside H_m; restored by its root-of-unity EGF
+challenged assumption: scalar return channels are not independent equations
+status: exact verification passed; full NC2 remains open outside the two theorem strata

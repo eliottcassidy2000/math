@@ -1,6 +1,7 @@
 # HYP-8766 — close the finite three-weight resonance band
 
-**Status:** OPEN, reduced by THM-2017; one boundary model closed by THM-2014.
+**Status:** OPEN, reduced by THM-2017 and THM-2018; exact low-degree and
+proportional-central models are closed by THM-2014/2018.
 
 **Owner:** codex-2026-07-21-gmc2-degree-gap.
 
@@ -94,7 +95,10 @@ multinomial gain `m^r`, while a degree deficit `Delta` supplies only
    functional, not a top-degree order. Prove that some arithmetic subsequence
    has a unique maximal real part after a harmless rotation/scaling of `P`,
    or convert equality of saddles into an exact holonomic identity and rule
-   that identity out from its first coefficients.
+   that identity out from its first coefficients. THM-2018 carries out the
+   second option on the arbitrary-charge hypersurface `h=kappa*b^r`: the
+   channel sum factors as `H_m(kappa)L(b^m)`, and root-of-unity symmetry proves
+   that the hyper-Bessel coefficient sequence `H_m` is not eventually zero.
 4. **Coefficient descent.** Once leading coefficients are eliminated, repeat
    on the next Newton layer. This is the analytic analogue of HYP-8765's
    radial-channel resultant tower.
@@ -117,12 +121,43 @@ multinomial gain `m^r`, while a degree deficit `Delta` supplies only
   the resonant degrees zero and one by exact EGFs.
 - THM-2017 closes every offset outside (1) and verifies (2) independently
   against direct Wick expansion.
+- THM-2018 closes the complete arbitrary-complex slice `p=q=1`,
+  `deg b<=1`, `deg(a*c)<=1`. Its exact Catalan resummation is
+  `F(t)=exp(A(t))/sqrt((1-b1*t)^2-4*alpha*t^2)` with `A` algebraic; nullity
+  would make the exponential of a nonconstant algebraic germ algebraic. It
+  also closes `h=kappa*b^r` for arbitrary charges and arbitrary radial degree.
 - HYP-8765 supplies exact finite-support evidence for a multilevel
   radial-channel tower and two counterexamples to naive low cutoffs.
 
-The next decisive calculation is the explicit first two `1/m` coefficients
-at `lambda=+-r`, expressed as differential operators on (3)-(4), followed by
-a common-zero resultant for small `(p0,q0)`.
+The boundary `1/m` calculation is now complete in the symmetric monomial
+model (THM-2017), while THM-2018 supplies exact non-asymptotic closures inside
+the central band. The remaining decisive work is a phase-sensitive saddle or
+holonomic separation theorem away from `h=kappa*b^r`, followed by coefficient
+descent; on the general sharp boundary it must also remove the discrete
+hyper-Bessel zero loci for nonmonomial `b,h`.
+
+## Exact resonance closures from THM-2018
+
+THM-2018 turns two of the proposed mechanisms into theorems.
+
+1. For `p=q=1`, `b=b0+b1*s`, and `a*c=delta+alpha*s`, it evaluates the
+   ordinary moment EGF exactly. The Catalan identity
+   `[x^j]C(x)^n/sqrt(1-4x)=binom(n+2j,j)` resums every return channel into an
+   algebraic-exponential germ. If the EGF were one, an algebraic germ and its
+   exponential would both be algebraic, which is impossible unless the germ
+   is constant. This forces `b=0` and `a*c=0` with no sign or reality
+   hypothesis.
+2. For all `p,q`, if `h=kappa*b^r`, every return channel has the identical
+   radial shadow `b^m`. The remaining scalar sequence has EGF
+   `exp(t)Phi_(p0,q0)(kappa*t^r)`. If it were eventually zero, this EGF would
+   be a polynomial, but its transformation under a nontrivial `r`-th root of
+   unity would make a nonconstant exponential rational. EMP then supplies a
+   large index at which both factors are nonzero.
+
+The second argument is the exact central-band observability principle that
+the proposed entropy program was seeking: root-of-unity symmetry restores the
+phase coordinate destroyed by the tied radial-channel quotient. What remains
+is to deform this separation away from exact proportionality.
 
 ## Incoming Sheffer/positivity connection: HYP-8769
 

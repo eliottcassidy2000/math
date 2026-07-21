@@ -1,0 +1,28 @@
+THM-2019 AFFINE HEIGHT SUPPORTS - EXACT GATES
+gate weighted-degree-6 common radial factor: PASS
+  3 coefficient rows x moments 1..8 = 24 exact direct-Wick identities
+  Q exponents=(6,0),(4,1),(2,2),(0,3); h=q/3+4
+  B(s)=1-2s+3s^2; factor L(s^(2m) B(s)^m)
+  sample row=1, m=3: CT=-211, radial=10991000880
+  sample row=1, m=6: CT=73165, radial=383577845234650173978393600
+  sample row=1, m=8: CT=-6457517, radial=1463362009387826190202171852960591872000
+gate rational intercept / arithmetic subsequence: PASS
+  Q exponents=(8,0),(6,1),(4,2),(2,3),(0,4)
+  h=q/3+16/3; balance forces 3|m; ell=3 and D=8
+  B(s)=1+s; checked direct Wick through m=6
+  m=1: CT=0, radial=0
+  m=2: CT=0, radial=0
+  m=3: CT=162, radial=51932160
+  m=4: CT=0, radial=0
+  m=5: CT=0, radial=0
+  m=6: CT=44316, radial=1469571003591634944000
+gate ordinary-homogeneity strictness: PASS
+  both supports have varying total degrees, so neither is ordinary homogeneous
+ALL EXACT GATES PASS
+Tournament Analysis (proof carriers, diagnostic only):
+  vertices=5, score_histogram={0:1,1:1,2:1,3:1,4:1}
+  directed_3cycles=0, SCC_sizes=[1,1,1,1,1], Hamiltonian_paths=1
+  Hamiltonian path: exact affine-height factorization > DvdK+EMP subsequence > direct Wick audit > asymptotic face heuristic > charge-only shadow
+  tie path: exactness > assumptions removed > finite verifiability
+  assumption challenge: monomial/charge vertices lose radial ownership;
+    affine intercept plus common-factor address preserves the factorization predicate.

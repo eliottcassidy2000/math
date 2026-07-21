@@ -170,6 +170,39 @@ real entropy-versus-factorial theorem and identifies the general boundary:
 channels within two degree units of the exposed face require resummation rather
 than termwise dominance.
 
+## Exact affine-height closure: THM-2019
+
+THM-2019 closes a genuinely many-circuit region without dominance.  If the
+support obeys one affine address law
+
+\[
+h_i=\lambda q_i+\delta,
+\]
+
+then every balanced word of length (m) has the same Wick degree
+(delta m/2).  More strongly, for (P=B(ZW)Q) with one arbitrary common
+nonzero radial multiplier and (A(u)=\sum c_i u^{q_i}), an integral
+subsequence (m=\ell n) factors exactly as
+
+\[
+\mathbb E[P^{\ell n}]
+=\operatorname{CT}((A^\ell)^n)\,
+ L\!\left((s^{\ell\delta/2}B(s)^\ell)^n\right).
+\]
+
+DvdK makes the first factor nonzero infinitely often for a two-sided (A),
+and EMP makes the second nonzero eventually.  Therefore every opposite-charge
+pair product lies in the radical of the full moment ideal on this stratum,
+with arbitrary coefficients and arbitrarily many primitive circuits.
+
+This introduces a more faithful complexity measure than raw monomial count:
+after a shear (\lambda), count the distinct intercepts
+(\Delta_i=h_i-\lambda q_i), while quotienting stacks produced by a common
+radial factor.  **Affine-height rank one is now closed.**  The determinant
+tower is needed only when different charge sectors carry incompatible radial
+factors, so the common (B(s)^m) cannot be extracted.  THM-2019 does not give
+the conjectural ((k-1)R) effective cutoff.
+
 ## Incoming analytic exterior: THM-2017
 
 THM-2017 proves the corresponding endpoint separation for arbitrary charges
