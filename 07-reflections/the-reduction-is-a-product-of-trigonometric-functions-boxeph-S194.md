@@ -79,6 +79,37 @@ core; the LRC factorization has **oscillating sinc characters** → the product 
 and you are left with the trigonometric zero problem. The presence or absence of a **real character**
 (sign) is exactly what decides whether the reduction closes. Trigonometry is where they diverge.
 
-Links: THM-1925, THM-1862, THM-1830, [[the-covering-min-is-a-chebyshev-equioscillation-and-why-greedy-has-no-shortcut]],
+## Deepening (S195): the zeta, the periodic-orbit lens, and the char_S companion
+
+The cleanest realization of "reduction = character decomposition" is a **zeta function**. A tournament
+is a subshift of finite type (arc dynamics); its Bowen–Lanford/Ruelle zeta is
+`ζ_T(u) = 1/det(I − uA) = ∏_{primitive cycles p} (1 − u^{ℓ(p)})^{−1}` (THM-1926). Three things make it
+the sharpest form of the harmonic lens:
+
+- **It is trivial on the wandering set.** `ζ_T ≡ 1` for acyclic (transitive) tournaments (`A`
+  nilpotent). The zeta's *support is exactly the strong core* — the reduction is not a statement about
+  where content "lives", it is that the generating function literally vanishes-to-1 off the
+  non-wandering set. Every reduction principle I've found (order-join THM-1862, char_A THM-1925) is
+  this concentration seen through a different window.
+- **The primes start at the 3-cycle.** `N₁ = N₂ = 0` (no loops, no digons) for *every* tournament, so
+  `ζ = exp(c₃ u³ + …)`. The intransitivity atom (THM-1830) is the fundamental prime, and `c₃` is its
+  first count (`N₃ = 3c₃`). The whole apparatus — reducibility, cycle counts (THM-1870), c₃ — is the
+  low-order data of one zeta.
+- **The explicit formula is trigonometric.** `N_k = Σ_j λ_j^k` (periodic orbits ↔ spectrum) with the
+  atom eigenvalues `λ_j` the Gauss/Chebyshev character sums of legs (a)/(c). The poles `1/λ` are
+  reciprocal trigonometric numbers.
+
+**Integrating kps's a/b monoid (THM-1875/1880/S139).** kps reads the *skew* matrix `S = A − Aᵀ`: the
+transitive tournament has `char_S = ((x+1)ⁿ+(x−1)ⁿ)/2` with a **cotangent ladder** spectrum
+`cot((2k−1)π/2n)` (max spread), and Paley has `char_S = x(x²+p)^{(p−1)/2}` with **every `λ² = p`** (the
+Gauss sum, zero spread). This is the *same two trigonometric poles* as my adjacency picture, on the
+imaginary axis: the acyclic atom is the cotangent/Chebyshev ladder (where my *adjacency* zeta is
+trivial, `ζ=1` — the transitive tournament is invisible to `ζ_A` but maximally spread in `char_S`), and
+the Paley atom is the Gauss sum in both. So `char_A`/`ζ_A` (closed-orbit side) and `char_S` (skew side)
+are the two faces of one harmonic object, and `var(λ_S²)` (kps's GIT-instability scalar, 0 on Gauss-sum
+tournaments) is the skew-side shadow of "how far from a single Gauss-sum atom." The `a = x+1`, `b = x/2`
+monoid is the affine/character coordinate; the zeta is its multiplicative (Euler) avatar.
+
+Links: THM-1926, THM-1925, THM-1862, THM-1830, THM-1875, THM-1880, [[the-covering-min-is-a-chebyshev-equioscillation-and-why-greedy-has-no-shortcut]],
 [[the-cyclotomic-magic-function-is-the-fejer-kernel-kps]],
 [[the-sign-reversing-tournament-involution-as-a-repo-wide-engine-macmini-S159]].
