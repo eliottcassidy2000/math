@@ -1,0 +1,81 @@
+THM-2000 SUPPORT-HARMONIC ABEL-DINI FIGURATE-SURFACE REFEREE
+optimization_sensitive_assert_nodes=0
+SUPPORT_VERSUS_MULTIPLICITY
+factorial_0_through_12:support=164611949/95800320;multiple=260412269/95800320;collision_tax=1
+fibonacci_30_terms:support=526661984886193524806167931836688435192869844940840322831/223172853844097511918512046217733124549634336653538298400;multiple=749834838730291036724679978054421559742504181594378621231/223172853844097511918512046217733124549634336653538298400;collision_tax=1
+catalan_30_terms:support=58442906887548075157/32358029693663874200;multiple=90800936581211949357/32358029693663874200;collision_tax=1
+labeled_tournament_values:support=496152997224023582576641/302231454903657293676544;multiple=496152997224023582576641/302231454903657293676544;collision_tax=0
+switching_values:support=496152997224023582576641/302231454903657293676544;multiple=798384452127680876253185/302231454903657293676544;collision_tax=1
+A000568_available_prefix:support=6175474623031919/3331729650486720;multiple=9507204273518639/3331729650486720;collision_tax=1
+A002854_available_prefix:support=57180527/27733104;multiple=84913631/27733104;collision_tax=1
+A000571_available_prefix:support=1846436089/955938060;multiple=3758312209/955938060;collision_tax=2
+support_law=sigma_multi=sigma_set+sum_m(max(multiplicity(m)-1,0)/m)
+labeled_tournament_support=switching_support;old_plus_one_is_duplicate_one_tax
+ABEL_STIELTJES_EXACT_ROWS=35233
+abel_law=sum_(m<=x,m_in_A)1/m=A(x)/x+integral_1^x A(t)/t^2 dt
+block_law=for_Nk=#(A intersect [2^k,2^(k+1))), Nk/2^(k+1)<=block_mass<=Nk/2^k
+block_family=naturals;blocks=19;finite_occupancy_sum=4718593/262144
+block_family=odds;blocks=18;finite_occupancy_sum=19/2
+block_family=primes;blocks=18;finite_occupancy_sum=500239/131072
+block_family=triangular;blocks=18;finite_occupancy_sum=20243/8192
+block_family=fibonacci_support;blocks=18;finite_occupancy_sum=349481/131072
+block_family=ceil_n_log_n;blocks=19;finite_occupancy_sum=153521/32768
+block_family=ceil_n_log2_n;blocks=22;finite_occupancy_sum=684497/262144
+bertrand_repair=n_log_n_is_superlinear_but_reciprocal_diverges;n_log2_n_converges
+MASTER_FIGURATE_EXACT_ROWS=4424
+N(s,d,m)=(s-2)C(m+d-2,d)+C(m+d-2,d-1)
+mass_surface=d(d-1) double_integral (1-t)^(d-2)u^(d-1)/(1-tu^(s-2)) dtdu
+simplex_axis=M(3,d)=d/(d-1);polygonal_axis=digamma_formula;both_axes_strictly_descend_to_1
+polygonal_s=3;mass=2.0
+polygonal_s=4;mass=1.64493406684822643647241516665
+polygonal_s=5;mass=1.48203750177011122359165745313
+polygonal_s=6;mass=1.38629436111989061883446424292
+polygonal_s=7;mass=1.32277925312238885674944226131
+polygonal_s=8;mass=1.2774090575596367311949534921
+polygonal_s=9;mass=1.24332092615371298920660773963
+polygonal_s=10;mass=1.216745956158244182494339352
+master_surface_s=4,d=2;partial20000=1.6448840680982056031
+master_surface_s=4,d=3;partial20000=1.364467662811687547
+master_surface_s=4,d=4;partial20000=1.2607911978207828748
+master_surface_s=4,d=5;partial20000=1.204731852788332582
+master_surface_s=4,d=6;partial20000=1.1690660163403792825
+POWER_SUM_FAULHABER_AXIS
+power_p=1;partial40000=1.99995000124996875078123;closed=2
+power_p=2;partial40000=1.36446766562385944730191;closed=18-24log(2)
+power_p=3;partial40000=1.159472534785790660008412;closed=4pi^2/3-12
+power_p=4;partial40000=1.073831213339227761701526;closed=numeric_partial
+power_p=5;partial40000=1.035074293699145238407698;closed=numeric_partial
+power_p=6;partial40000=1.016922024133735084667163;closed=numeric_partial
+REPO_SUPPORT_MASS_ATLAS
+Moser_A000127:support_mass=2.017482249139530915705427;note=degree_4;partial_30000
+polygonal_diagonal_G:support_mass=2.382716275404195090581329;note=degree_4_quasipolynomial;partial_30000
+Fibonacci_support:support_mass=2.35988566624317752677917;note=duplicate_1_removed
+Farey_endpoint_total:support_mass=1.898694713654250339220643;note=2sum_phi-1;partial_200000
+A000568_support_prefix:support_mass=1.853534028434456534515152;note=available_prefix;duplicate_1_removed
+self_line_orbits_prefix:support_mass=0.8900417250661234188779872;note=THM853_n5_to_n10_prefix
+GAUSS_TRIANGULAR_THETA
+sum_q_triangular=1.64163256065515386629384277023
+q_product_form=1.64163256065515386629384277023;theta2_form=1.64163256065515386629384277023
+labeled_and_switching_support_mass_at_q_half_are_equal_to_this_exact_Gauss_product
+RATIO_SUM_PRODUCT_TRIAD
+odd_ratio_support_partial200000=7.084788835770069422182375;status=diverges
+oblong_k2_minus1_support_mass=3/4
+odd_double_factorial_k_ge2_mass=0.410686134642447997690824711419
+TOURNAMENT_ANALYTIC_REVERSAL_ROWS=79
+index_Dirichlet=sum V_n/n^s diverges_for_every_fixed_s
+labeled_EGF=sum 2^C(n,2)z^n/n! has_radius_zero
+reciprocal_value_Dirichlet=sum V_n^(-s) has_abscissa_zero
+reciprocal_OGF=sum z^n/V_n is_entire
+H_spectrum_divergence=OPEN;THM1370_proves_only_omissions_7_21_and_finite_coverage
+THM1127_affine_phase_law=N(K+194040)=N(K)+121304 => support_contains_AP => reciprocal_diverges
+TOURNAMENT_AND_CARRIER_AUDIT
+faithful_vertices=occupied_integer_values_or_logarithmic_blocks;not_sequence_indices
+predicate_preserved=support_membership,reciprocal_mass,block_occupancy,convergence
+multiplicity_sidecar=collision_tax;index_shift_and_repetition_are_quotiented_out
+candidate_vertices=indices,values,blocks,figurate_axes,Dirichlet_exponents,proof_obligations
+pair_observable=finite_support_mass_difference;gauge=exact_rational_then_family_name
+induced_tournament=transitive;cycles=0;scc_sizes=all_1;hamiltonian_paths=1
+why_unfaithful=finite_mass_order_does_not_determine_tail_convergence_or_closed_form
+tie_path=mass_sorted_family_list;useful_as_atlas_only_not_as_proof_quotient
+SCOPE=no_irrationality_or_transcendence_claim_for_unnamed_numeric_constants
+RESULT=PASS

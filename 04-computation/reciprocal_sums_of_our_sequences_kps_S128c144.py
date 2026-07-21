@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 """
-RECIPROCAL SUMS of the project's integer sequences — each sum(1/a_n) is a SUB-SERIES of the
-harmonic series. kind-pasteur-2026-07-21-S128c144.  Owner: reciprocal of an integer sequence = a
-subset of the harmonic numbers; 1+1/2+1/3+1/4+1/5 > 2 already, while sum 1/T_n = 2 exactly; study
-our sequences' reciprocal sums extensively and extend.
+SUPERSEDED AS A THEOREM SOURCE by MISTAKE-209 and THM-2000/2005.
+This file is retained as a historical exploratory prefix calculator.  Its
+indexed sums are not support-normalized, its census tails are uncertified,
+and its linear-growth iff and scalar-fingerprint interpretations are false.
+
+RECIPROCAL SUMS of the project's integer sequences.  The printed table is
+mostly indexed/multiplicity-weighted; a literal harmonic subset must first
+deduplicate values. kind-pasteur-2026-07-21-S128c144.
 
 Core provable result: the FIGURATE LADDER.  For k>=2,  sum_{n>=k} 1/C(n,k) = k/(k-1)
   (telescoping 1/C(n,k) = k/(k-1)[1/C(n-1,k-1) - 1/C(n,k-1)]).
@@ -38,7 +42,7 @@ SEQS["2^C(n-1,2) (switch cls)"]= ([2**binom(n-1,2) for n in range(1,40)], "n>=1"
 SEQS["2^n (Cayley-Dickson)"]   = ([2**n for n in range(1,80)], "n>=1", "geometric")
 SEQS["2^n-1 (Mersenne)"]       = ([2**n-1 for n in range(1,80)], "n>=1", "geometric")
 # census / combinatorial (super-exponential)
-SEQS["A000568 tournaments"]    = ([1,1,1,2,4,12,56,456,6880,191536,9733056,903753248], "n>=1", "super-exp")
+SEQS["A000568 tournaments"]    = ([1,1,1,2,4,12,56,456,6880,191536,9733056,903753248], "n=0..11 indexed", "super-exp")
 SEQS["A002854 even graphs V(E)"]=([1,1,2,3,7,16,54,243,2038,33120,1182004], "n>=1", "super-exp")
 SEQS["A000571 score seqs"]     = ([1,1,1,2,4,9,22,59,167,490,1486,4639,14805,48107], "n>=1", "exp~4^n")
 SEQS["A000182 tangent"]        = ([1,2,16,272,7936,353792,22368256,1903757312], "n>=1", "super-exp")
@@ -47,7 +51,7 @@ SEQS["factorial n!"]           = ([1,1,2,6,24,120,720,5040,40320,362880,3628800,
 SEQS["Fibonacci"]              = ([1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,1597,2584,4181,6765], "n>=1","exp-phi")
 # arithmetic / "edge" sequences from the H-work
 SEQS["odd numbers (H parity)"] = ([2*n-1 for n in range(1,4000)], "n>=1", "linear")
-SEQS["H-spectrum odds\\{7,21}"] = ([x for x in (2*n-1 for n in range(1,4000)) if x not in (7,21)], "n>=1", "linear")
+SEQS["conditional odds\\{7,21} model"] = ([x for x in (2*n-1 for n in range(1,4000)) if x not in (7,21)], "model", "linear")
 SEQS["pentagonal n(3n-1)/2"]   = ([n*(3*n-1)//2 for n in range(1,3000)], "n>=1", "poly-2")
 
 def rec_sum(vals):
@@ -56,8 +60,9 @@ def rec_sum(vals):
         if a>0: s += mp.mpf(1)/mp.mpf(a)
     return s
 
+print("SUPERSEDED HISTORICAL PREFIX CALCULATOR -- USE THM-2000/2005")
 print("="*84)
-print("RECIPROCAL SUMS  sum(1/a_n)  — each is a sub-series of the harmonic series")
+print("INDEXED RECIPROCAL PREFIXES sum(1/a_n); deduplicate for harmonic supports")
 print("="*84)
 print(f"{'sequence':30s} {'index':7s} {'growth':11s} {'sum 1/a_n':>22s}  note")
 print("-"*84)
@@ -72,7 +77,7 @@ KNOWN = {
  "2^n (Cayley-Dickson)": ("= 1 (n>=1)"),
  "vertices n (dim1)": ("DIVERGES (harmonic) — the edge"),
  "odd numbers (H parity)": ("DIVERGES (~ (1/2)ln)"),
- "H-spectrum odds\\{7,21}": ("DIVERGES (removing 2 terms keeps divergence)"),
+ "conditional odds\\{7,21} model": ("DIVERGES; global H-spectrum identification is OPEN"),
 }
 for name,(vals,idx,growth) in SEQS.items():
     if growth=="linear":
@@ -83,7 +88,7 @@ for name,(vals,idx,growth) in SEQS.items():
     else:
         s = rec_sum(vals)
         note = KNOWN.get(name,"")
-        print(f"{name:30s} {idx:7s} {growth:11s} {mp.nstr(s,18):>22s}  {note}")
+        print(f"{name:30s} {idx:7s} {growth:11s} {mp.nstr(s,18):>22s}  {note}".rstrip())
 
 print()
 print("="*84)
@@ -92,7 +97,9 @@ print("="*84)
 for k in range(2,9):
     s = rec_sum([binom(n,k) for n in range(k, 4000)])
     exact = Fraction(k,k-1)
-    print(f"  k={k}: sum 1/C(n,k) = {mp.nstr(s,15)}   vs  k/(k-1) = {exact} = {float(exact):.10f}  match={abs(float(s)-float(exact))<1e-9}")
+    exact_partial = exact * (1 - Fraction(1, binom(3999, k - 1)))
+    exact_partial_mp = mp.mpf(exact_partial.numerator) / exact_partial.denominator
+    print(f"  k={k}: partial through n=3999 = {mp.nstr(s,15)}   exact finite remainder = {exact_partial}  match={abs(s-exact_partial_mp)<mp.mpf('1e-35')}")
 print("  telescoping: 1/C(n,k) = k/(k-1) [1/C(n-1,k-1) - 1/C(n,k-1)]  (identity, proven in THM)")
 print("  k=1 (harmonic, vertices): k/(k-1) -> infinity  = the DIVERGENT origin of the ladder.")
 print("  k->inf: k/(k-1) -> 1.  Ladder of sums: inf, 2, 3/2, 4/3, 5/4, ... -> 1.")
@@ -115,7 +122,7 @@ print(f"  Euler prod_(n>=1)(1-2^-n) = {mp.nstr(prodE,25)}  (= signed pentagonal 
 
 print()
 print("="*84)
-print("(3) NAMED CONSTANTS the sums hit (fingerprints)")
+print("(3) HISTORICAL INDEXED VALUES (not support fingerprints)")
 print("="*84)
 checks = [
  ("Fibonacci", "reciprocal Fibonacci const psi ~ 3.359885666"),

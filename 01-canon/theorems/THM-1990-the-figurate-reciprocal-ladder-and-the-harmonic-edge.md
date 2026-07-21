@@ -2,7 +2,7 @@
 id: THM-1990
 title: "THE FIGURATE RECIPROCAL LADDER AND HARMONIC EDGE (CORRECTED SUPPORT SEMANTICS)"
 status: >
-  PARTIALLY RETRACTED by MISTAKE-209 and repaired by THM-2000.  The exact
+  PARTIALLY RETRACTED by MISTAKE-209 and repaired by THM-2000/2005.  The exact
   simplex telescoping ladder remains PROVED.  The old linear-growth iff,
   switching-support +1, unnamed arithmetic-type claims, and global H-spectrum
   divergence are retracted.  Support semantics require deduplication and the
@@ -11,11 +11,12 @@ source: kind-pasteur-2026-07-21-S128c144 (owner: reciprocal of a sequence = a su
 depends_on:
   - THM-1980    # the 2-adic edge of H (the p=1 / harmonic boundary this unifies with)
   - THM-1870    # the cycle-length edge (Hamiltonian length = the other p=1 boundary)
-related: [THM-1885, THM-1880, THM-488, THM-2000, MISTAKE-209, THM-1370-h-spectrum-omits-7-21-all-n.md]
+related: [THM-1885, THM-1880, THM-488, THM-2000, THM-2005, MISTAKE-209, THM-1370-h-spectrum-omits-7-21-all-n.md]
 external:
   - "Figurate reciprocal sums sum 1/C(n,k)=k/(k-1); Basel pi^2/6; Erdos-Borwein constant (sum 1/(2^n-1)); reciprocal-Fibonacci constant (Andre-Jeannin, irrational); central-binomial/Catalan sums (4/3+2pi sqrt3/27, 2+4pi sqrt3/27); Euler pentagonal number theorem / q-Pochhammer (1/2;1/2)_inf; Jacobi partial theta."
   - "OEIS: A000217 (triangular), A000292 (tetrahedral), A000568, A002854, A000571, A000182, A000364, A000108, A000045, A000225."
-script: 04-computation/reciprocal_sums_of_our_sequences_kps_S128c144.py (+ .out)
+script: 04-computation/reciprocal_sums_of_our_sequences_kps_S128c144.py (+ .out; HISTORICAL/SUPERSEDED)
+corrected_referees: [04-computation/support_harmonic_abel_dini_figurate_surface_thm2000.py, 04-computation/support_dirichlet_automatic_tournament_atlas_thm2005.py]
 ---
 
 # THM-1990 — the figurate reciprocal ladder and the harmonic edge
@@ -29,11 +30,14 @@ script: 04-computation/reciprocal_sums_of_our_sequences_kps_S128c144.py (+ .out)
 > values have the same support and the same mass; factorial, Fibonacci, and
 > Catalan each lose one duplicated `1`.  Near-linear convergence is governed by
 > Bertrand's iterated-log boundary, and H-spectrum divergence remains open.
-> THM-2000 supplies the corrected support/Abel--Dini framework.
+> THM-2000/2005 supply the corrected support/Abel--Dini framework and the
+> certified A000568 support interval.
 
-**The owner's frame.** A sequence `a_n ⊆ ℕ` turns its reciprocals `Σ 1/a_n` into a *sub-series of the
-harmonic series* `Σ 1/m`. The full harmonic series diverges; a sub-series may converge, and its sum
-is a fingerprint. The anchor: `1 + 1/2 + 1/3 + 1/4 + 1/5 > 2` already, yet `Σ 1/T_n = 2` *exactly*.
+**The owner's frame.**  For an indexed integer sequence `a=(a_n)`, let
+`A=support(a) subset N`.  The literal harmonic subset is
+`sum_(m in A)1/m`, not the multiplicity-weighted sum over indices.  It is a
+lossy coordinate.  The anchor is unchanged: `1+1/2+1/3+1/4+1/5>2`, yet
+`sum_(n>=1)1/T_n=2` exactly.
 
 ## The figurate ladder (proven)
 
@@ -58,18 +62,16 @@ reduction **is** the telescoping, and it lands on `2 = 2·(1/1)`.
 
 ## The harmonic edge = p = 1 = dimension 1 (unifies with THM-1980)
 
-The ladder **diverges only at `k = 1`** — the ground set (vertices) itself. Every object the project
-builds *on top of* the vertices (arcs, tournaments, cycles, even graphs) has a **convergent**
-reciprocal sum. So:
+The simplex ladder **diverges only at `k = 1`** — the ground set (vertices)
+itself.  This statement does not extend automatically to every derived
+sequence in the project.  As a heuristic comparison:
 
-> **The dimension-1 ground set is exactly the harmonic boundary `p = 1`** — and it is *the same*
-> boundary as THM-1980, where H's formula-expressible content collapses to a single bit ("H at
-> `p=1`"), and as THM-1870, where cycle counts turn `#P` at the Hamiltonian length. Three independent
-> lenses — reciprocal convergence, 2-adic depth, cycle length — all place the marginal case at the
-> same `p=1` corner. The project's dimensional ladder `n → C(n,2) → C(n,3) → …` is the figurate
-> reciprocal ladder *crossing* that edge, from divergence (2, the harmonic origin) into convergence.
+> Within the simplex ladder, `k=1` is the harmonic divergence and `k=2` is
+> the first convergent row.  THM-1980's 2-adic depth and THM-1870's
+> Hamiltonian-length threshold offer suggestive analogies, but they have no
+> shared parameter with Dirichlet convergence and imply nothing about it.
 
-## The term-multiset signature table (verified numerically; support correction above)
+## Historical indexed/prefix table (support corrections shown explicitly)
 
 | sequence | `Σ 1/a_n` | closed form |
 |---|---|---|
@@ -85,11 +87,11 @@ reciprocal sum. So:
 | powers of 2 `2ⁿ` (Cayley–Dickson) | 1 | geometric |
 | **labeled tournaments `2^{C(n,2)}`** | **1.6416325607…** | partial theta at `q=½` |
 | **switching classes `2^{C(n−1,2)}`** | **2.6416325607… termwise** | support equals labeled-tournament support; `+1` is collision tax |
-| A000568 tournaments (unlabeled) | 3.8535… | super-exp fingerprint |
-| A002854 even graphs `V(Eₙ)` | 3.0618… | super-exp fingerprint |
-| A000571 score sequences | 3.9325… | fingerprint |
-| A000182 tangent | 1.5663… | fingerprint |
-| A000364 secant/Euler | 2.2171… | fingerprint |
+| A000568 tournaments (unlabeled) | 3.8535… | legacy indexed prefix |
+| A002854 even graphs `V(Eₙ)` | 3.0618… | legacy indexed prefix |
+| A000571 score sequences | 3.9325… | legacy indexed prefix |
+| A000182 tangent | 1.5663… | legacy indexed prefix |
+| A000364 secant/Euler | 2.2171… | legacy indexed prefix |
 | **vertices / odds** | **∞** | harmonic edge |
 | **global H-spectrum** | **OPEN** | THM-1370 proves only two all-`n` omissions plus finite coverage |
 
@@ -112,24 +114,31 @@ Two exact structural facts:
 
 ## Extensions (the "extend" ask)
 
-1. **The reciprocal signature `σ(a) = Σ 1/a_n` as a sequence invariant.** It fingerprints each corpus
-   sequence by a single real number; the figurate ones give the rational ladder `k/(k-1)`, the
-   analytic ones give `π`/`e`/golden constants, the 2-adic ones give theta values.
+1. **The reciprocal mass `D_A(1)` as one sequence coordinate.** It is a
+   valuation, not a fingerprint: THM-2005 gives continuum many distinct
+   supports with the same mass and dimension.  The full Dirichlet/counting
+   profile is the faithful replacement.
 2. **Telescoping = the `a`-monoid action (THM-1885).** `1/C(n,k)` unfolds into dimension-`(k−1)`
    reciprocal differences; the generator `a: n ↦ n+1` shifts the ladder, and the reduction
    Mode-A (`n → n−1`) is one telescoping step. Reciprocal sums are a representation of the `a/b`
    monoid on figurate dimensions.
-3. **The convergence boundary (corrected).** `a_n=O(n)` forces divergence and
-   `a_n>>n^(1+epsilon)` forces convergence, but neither is an iff.  For example
-   `a_n~n log n` is superlinear and still divergent.  THM-2000 gives the exact
-   counting-function criterion and the Bertrand iterated-log scale.
+3. **The convergence boundary (corrected).** If `q_n` is the strictly
+   increasing enumeration of a support, then `q_n=O(n)` forces divergence and
+   `q_n>=c n^(1+epsilon)` for fixed positive `c,epsilon` forces convergence,
+   but neither condition is an iff.  For example
+   `q_n~n log n` is superlinear and still divergent.  THM-2000/2005 give the
+   exact counting-function criterion and the Bertrand iterated-log scale.
 
 ## Named next
 
 - The theta constant `1.6416325607…` is now identified by Gauss's product above.
   The arithmetic nature of the census support masses remains open; no
   transcendence claim is justified by fast convergence alone.
-- **The signed reciprocal sums** `Σ (−1)^n /a_n` for the corpus sequences — do the tournament / even-
-  graph alternating sums hit partition/modular constants (as the pentagonal one does)?
-- **`Σ 1/H(T)` over all tournaments** — the Rédei-count reciprocal sum, a bridge from this lens to
-  THM-1980's `#P` object.
+- **Signed reciprocal sums** require a carrier choice: signs by the original
+  sequence index are not the same as signs by rank in the increasing support.
+  Either convention may be studied, but it must be stated before comparing
+  tournament/even-graph rows with partition identities.
+- For Rédei counts, separately study the achieved-value support
+  `Σ_(h achieved)1/h`, the isomorphism-class-weighted sum, and the labeled
+  tournament sum.  Conflating these multiplicities would repeat the original
+  support error.

@@ -4,12 +4,17 @@ title: SUPPORT-HARMONIC ABEL--DINI LAW AND THE TWO-AXIS FIGURATE MASS SURFACE
 status: PROVED analytic/exact.  A sequence interpreted literally as a subset of the harmonic numbers is governed by its value support, not its indexing multiplicity.  The support/multiset collision tax, Abel--Stieltjes identity, multiplicative-block Dini criterion, full Bertrand near-linear boundary, master-figurate beta-integral surface, simplex/power equal-mass ladder, polygonal digamma axis, three Faulhaber values, Gauss triangular-theta product, ladder ratio/sum/product trichotomy, and reciprocal tournament-series reversal are proved.  Exact and high-precision referees are optimization-safe.  Numerical atlas values carry no unproved irrationality or transcendence claim; global H-spectrum divergence remains open
 source: codex-2026-07-21 reciprocal-sequence continuation and audit of concurrent THM-1985/1990
 depends_on: [THM-1127, THM-1360, THM-1990]
-related: [THM-841, THM-853, THM-874, THM-1370, THM-1985, MISTAKE-209, MISTAKE-210]
-external: "Applegate--Pol--Sloane, The Toothpick Sequence and Other Sequences from Cellular Automata, arXiv:1004.3036 (dyadic formula for A139250)"
+related: [THM-841, THM-853, THM-874, THM-1370, THM-1985, THM-2005, MISTAKE-209, MISTAKE-210]
+external:
+  - "Lawrence Downey, Boon W. Ong, and James A. Sellers, Beyond the Basel Problem: Sums of Reciprocals of Figurate Numbers, College Mathematics Journal 39 (2008), 391--394, JSTOR stable 27646686, https://www.jstor.org/stable/27646686"
+  - "Archived preprint: https://web.archive.org/web/20130529032918/http://www.math.psu.edu/sellersj/downey_ong_sellers_cmj_preprint.pdf"
+  - "Applegate--Pol--Sloane, The Toothpick Sequence and Other Sequences from Cellular Automata, arXiv:1004.3036 (dyadic formula for A139250)"
 script: 04-computation/support_harmonic_abel_dini_figurate_surface_thm2000.py
 output: 05-knowledge/results/support_harmonic_abel_dini_figurate_surface_thm2000.out
-script_sha256: PENDING
-output_sha256: PENDING
+formalization: 04-computation/lean/TournamentH7/TournamentH7/SupportHarmonicFigurate.lean
+script_sha256: 27f7fe4ff60a3d78efac586eb11b138dda5dd5262a5177046829e06c032b6502
+output_sha256: fbc4930f5861be1f276ea7c1e45944583f2217d2375f7c068ce3c3e53fabcdc2
+formalization_sha256: 801a41c4d9bdb9b418427007a69b7b1a75a90ba39ff8f772b4388fe3c25c279f
 ---
 
 # THM-2000 -- support-harmonic Abel--Dini law and the figurate mass surface
@@ -556,7 +561,8 @@ They immediately correct several historical analytic-series claims.
    For every `z!=0` this tends to infinity.  The series has radius zero,
    not positive radius or an entire continuation.
 
-The user's reciprocal transform produces the correct analytic objects.  Put
+The user's reciprocal transform produces the correct analytic objects.  First
+retain the indexing and put
 
 ```text
 Z_V(s)=sum_n V_n^(-s).                                                 (52)
@@ -569,7 +575,8 @@ If `sigma=Re(s)>0`, (49) gives
 ```
 
 whose ratio tends to zero.  At `sigma=0` the absolute terms are one; for
-`sigma<0` they grow.  Hence `Z_V` has exact abscissa of absolute convergence
+`sigma<0` they grow.  Hence this indexed `Z_V` has exact abscissa of absolute
+convergence
 
 ```text
 Re(s)=0.                                                              (54)
@@ -581,10 +588,13 @@ Similarly,
 sum_n z^n/V_n                                                         (55)
 ```
 
-is entire, because `V_n^(1/n)` tends to infinity.  Support-deduplication only
-changes the finitely repeated initial values and does not affect (54)--(55).
-The normalized Burnside correction is another legitimate decaying sequence;
-the old growing-coefficient series is not.
+is entire, because `V_n^(1/n)` tends to infinity.  For the support profile,
+`V_n -> infinity` makes the deduplicated support infinite, while it is a
+subseries of the indexed profile for `sigma>0`.  Its absolute terms are again
+one at `sigma=0`; hence its abscissa is also exactly zero.  This argument does
+not assume that all collisions are confined to the initial values.  The
+normalized Burnside correction is another legitimate decaying sequence; the
+old growing-coefficient series is not.
 
 ## 10. Carrier and Tournament Analysis audit
 
@@ -604,11 +614,19 @@ occupancies.
 
 ## 11. Scope and reproducibility
 
-The analytic identities above are proofs, not fits.  The script independently
-checks the finite rational identities, collision taxes, Abel formula, block
-sandwich, master-array recurrences and monotonicities, polygonal special
-values, Faulhaber decompositions, Gauss product, and ladder triad.  Numerical
-atlas rows are labelled as partial values where appropriate.
+The analytic identities above are proofs, not fits.  The stored output was
+reproduced byte-for-byte under ordinary and optimized Python.  The script
+independently checks the finite rational identities, collision taxes, Abel
+formula, block sandwich, master-array recurrences and monotonicities,
+polygonal special values, Faulhaber decompositions, Gauss product, and ladder
+triad.  Numerical atlas rows are labelled as partial values where appropriate.
+
+The sorry-free Lean module
+`TournamentH7/SupportHarmonicFigurate.lean` certifies the finite algebraic
+kernel: master and ordinary-polygonal factorizations, reciprocal
+decompositions, the maximum-`c_3` denominator algebra, and finite block
+sandwiches.  Infinite summation, beta-integral interchange, and special-value
+evaluation remain paper proofs rather than postulated axioms.
 
 No unnamed reciprocal constant is asserted irrational or transcendental.
 No finite sequence prefix is extrapolated to an all-`n` law.  In particular,

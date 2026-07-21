@@ -1,18 +1,22 @@
-THM-2000 SUPPORT-HARMONIC / ABEL-DINI / FIGURATE EXACT AUDIT
+THM-2005 SUPPORT-DIRICHLET / AUTOMATIC / TOURNAMENT EXACT AUDIT
 Python assert nodes = 0
 support/collision rows = 8: (('factorial_0_to_10', Fraction(1, 1)), ('fibonacci_1_to_18', Fraction(1, 1)), ('catalan_0_to_10', Fraction(1, 1)), ('legacy_A000568_prefix', Fraction(2, 1)), ('legacy_A002854_prefix', Fraction(1, 1)), ('legacy_A000571_prefix', Fraction(2, 1)))
 finite Abel rows / dyadic block rows = 6/45
 Dirichlet valuation rows = 24
 polygonal split/count rows = 5920/4484
 polygonal closed rows = ('S_3=2.0', 'S_4=1.64493406684822643647242', 'S_5=1.48203750177011122359166', 'S_6=1.38629436111989061883446', 'S_8=1.27740905755963673119495', 'S_10=1.21674595615824418249434', 'S_14=1.15098236809467638636369')
+centered-polygonal rows = 2828: ('C_8=1.23370055013616982735431', 'C_9=1.20919957615614523372939')
 master beta rows / simplex-tail rows = 7000/70
 integer Abel-Dini lift rows = 240
 Abel-Dini block summaries = ('p=1:lift_mass_120=2.529904732713;block_energy=2.269897461,3.633055095,5.013509155', 'p=2:lift_mass_120=1.626224482936;block_energy=0.446014404,0.491092410,0.502697345')
 automatic language rows / block rows = 262144/35
 automatic exact tail summaries = ('fibbinary_K=8:tail_between=89/256..89/128', 'fibbinary_K=12:tail_between=305/2048..305/1024', 'fibbinary_K=18:tail_between=5473/131072..5473/65536', 'moser_R=8:tail_between=3/512..1/128', 'moser_R=12:tail_between=3/8192..1/2048', 'moser_R=16:tail_between=3/131072..1/32768')
-Egyptian refinement rows = 755
+Egyptian refinement rows = 754
+Egyptian Dirichlet-profile rows = 1992
 Sylvester terms = (2, 3, 7, 43, 1807, 3263443)
 Sylvester checked partial/remainder = 3263441/3263442/1/3263442
+primitive / Forcade / tournament-tail rows = 316/83/101
+number-theory profile summaries = ('Forcade_arc_mass=1.213390304830583527566603', 'Forcade_profile=2^s*sum_(r>=0)(s)_r/[r!*(2^(2s+r)-1)]', 'primitive_profile=sum_(d|q)mu(d)d^-s H_(q/d-1)^(s)', 'A000568_0_to_20=[1, 1, 1, 2, 4, 12, 56, 456, 6880, 191536, 9733056, 903753248, 154108311168, 48542114686912, 28401423719122304, 31021002160355166848, 63530415842308265100288, 244912778438520759443245824, 1783398846284777975419600287232, 24605641171260376770598003978281472, 645022068557873570931850526424042500096]', 'A000568_support_prefix=21099328871173442978479709817904691186237927028914957892229218402318110941302184270517423289978542744036679862436756474093271800482440798353111262783654453239105958659179983400460013348652791077311743013830527/11383296645907658352445029044902856765681508434252564284448144572805470654577744374492610675249889401912534749131567170501822811250421465546423774298097496376055720127690081166416741747792702633421074615848960', 'A000568_tail_bound=5568470782875/179343882456254548076397338228109815750132052193353662464', 'A000568_support_mass_interval=(1.85353413229011631733371526582380005497181657702917604351921,1.85353413229011631733371526582380005497181660807830192732658)')
 tournament exact rows = ('max_c3_odd=1.364467666561312573986429', 'max_c3_all=2.114467666561312573986429', 'tournament_theta=1.641632560655153866293843')
 support_profile=D_A(s)=sum_(m in A)m^(-s); mass=D_A(1)
 Abel=sum_(m<=X,m in A)1/m=A(X)/X+integral_1^X A(t)/t^2 dt
@@ -22,4 +26,4 @@ master_axes=s=3 gives simplices; d=2 gives polygons
 automatic_dimensions=fibbinary log_2(phi); Moser-de-Bruijn 1/2
 scalar_guardrail=triangular_support and {1,2,3,6} both have mass 2
 STATUS=PASS
-source_sha256=d81cb5c5de2c7696517f2c5922530a2ef84023a63f68ec93e52fe3ac820d8177
+source_sha256=1bdcae81ab757289b1b5b449ba0cc8c00315239aeb308f7b7f51ccaed5571648

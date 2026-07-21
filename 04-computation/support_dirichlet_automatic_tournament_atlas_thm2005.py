@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact/numerically certified referee for THM-2000.
+"""Exact/numerically certified referee for THM-2005, companion to THM-2000.
 
 Paper topology and classical convergence theorems stay in the theorem text.
 This program freezes the finite Abel identities, support/multiplicity collision
@@ -14,7 +14,7 @@ import ast
 import hashlib
 from fractions import Fraction
 from itertools import combinations
-from math import ceil, comb, factorial, floor, isqrt
+from math import ceil, comb, factorial, floor, gcd, isqrt
 from pathlib import Path
 
 import mpmath as mp
@@ -277,6 +277,77 @@ def polygonal_arithmetic_audit() -> tuple[int, int, tuple[str, ...]]:
     return partial_fraction_rows, count_rows, tuple(summaries)
 
 
+def centered_polygonal(side_count: int, index: int) -> int:
+    return 1 + side_count * index * (index - 1) // 2
+
+
+def centered_polygonal_audit() -> tuple[int, tuple[str, ...]]:
+    """Check the second polygonal digamma family and its k=8 confluence."""
+
+    rows = 0
+    summaries: list[str] = []
+
+    def closed_mass(side_count: int) -> mp.mpf | mp.mpc:
+        if side_count == 8:
+            return mp.pi**2 / 8
+        delta = mp.sqrt(1 - mp.mpf(8) / side_count)
+        root_minus = (1 - delta) / 2
+        root_plus = (1 + delta) / 2
+        return (
+            mp.mpf(2)
+            / (side_count * delta)
+            * (mp.digamma(1 - root_minus) - mp.digamma(1 - root_plus))
+        )
+
+    previous = mp.inf
+    for side_count in range(3, 31):
+        delta = mp.sqrt(1 - mp.mpf(8) / side_count)
+        root_minus = (1 - delta) / 2
+        root_plus = (1 + delta) / 2
+        for index in range(1, 101):
+            direct = mp.mpf(1) / centered_polygonal(side_count, index)
+            if side_count == 8:
+                require(
+                    centered_polygonal(side_count, index) == (2 * index - 1) ** 2,
+                    "centered octagonal square confluence failed",
+                )
+            else:
+                split = (
+                    mp.mpf(2)
+                    / (side_count * delta)
+                    * (
+                        1 / (index - root_plus)
+                        - 1 / (index - root_minus)
+                    )
+                )
+                require(
+                    abs(direct - split) < mp.mpf("1e-54"),
+                    "centered polygonal root split failed",
+                )
+            rows += 1
+
+        mass = closed_mass(side_count)
+        direct_mass = mp.nsum(
+            lambda index: 1 / (1 + side_count * index * (index - 1) / 2),
+            [1, mp.inf],
+        )
+        require(abs(mass - direct_mass) < mp.mpf("1e-48"), "centered digamma mass failed")
+        require(abs(mp.im(mass)) < mp.mpf("1e-52"), "centered mass lost reality")
+        real_mass = mp.re(mass)
+        require(real_mass < previous, "centered polygonal masses are not decreasing")
+        previous = real_mass
+        rows += 1
+
+    require(abs(closed_mass(8) - mp.pi**2 / 8) < mp.mpf("1e-52"), "k=8 value failed")
+    require(
+        abs(closed_mass(9) - 2 * mp.pi / (3 * mp.sqrt(3))) < mp.mpf("1e-52"),
+        "k=9 value failed",
+    )
+    summaries.append(f"C_8={mp.nstr(closed_mass(8), 24)}")
+    summaries.append(f"C_9={mp.nstr(closed_mass(9), 24)}")
+    return rows, tuple(summaries)
+
+
 def master_figurate(side_count: int, dimension: int, index: int) -> int:
     return (side_count - 2) * comb(index + dimension - 2, dimension) + comb(
         index + dimension - 2, dimension - 1
@@ -467,15 +538,34 @@ def automatic_support_audit() -> tuple[int, int, tuple[str, ...]]:
     return word_cutoff, block_rows, tuple(tail_summaries)
 
 
-def egyptian_and_sylvester_audit() -> tuple[int, tuple[int, ...], F]:
+def egyptian_and_sylvester_audit() -> tuple[int, int, tuple[int, ...], F]:
     refinement_rows = 0
-    for denominator in range(1, 500):
+    profile_rows = 0
+    for denominator in range(2, 500):
         require(
             F(1, denominator)
             == F(1, denominator + 1) + F(1, denominator * (denominator + 1)),
             "Egyptian refinement failed",
         )
         refinement_rows += 1
+        for exponent in (1, 2, 3):
+            change = (
+                F(1, (denominator + 1) ** exponent)
+                + F(1, (denominator * (denominator + 1)) ** exponent)
+                - F(1, denominator**exponent)
+            )
+            if exponent == 1:
+                require(change == 0, "Egyptian profile did not conserve s=1")
+            else:
+                require(change < 0, "Egyptian profile did not decrease above s=1")
+            profile_rows += 1
+        x = mp.mpf(denominator) / (denominator + 1)
+        y = mp.mpf(1) / (denominator + 1)
+        require(
+            mp.sqrt(x) + mp.sqrt(y) > 1,
+            "Egyptian profile did not increase below s=1",
+        )
+        profile_rows += 1
 
     base = {1} | {2**index for index in range(1, 10)}
     for mask in range(1 << 8):
@@ -505,7 +595,208 @@ def egyptian_and_sylvester_audit() -> tuple[int, tuple[int, ...], F]:
             1 - partial == F(1, terms[index + 1] - 1),
             "Sylvester exact remainder failed",
         )
-    return refinement_rows + (1 << 8), tuple(terms), partial
+    return refinement_rows + (1 << 8), profile_rows, tuple(terms), partial
+
+
+def mobius(number: int) -> int:
+    remaining = number
+    sign = 1
+    prime = 2
+    while prime * prime <= remaining:
+        if remaining % prime == 0:
+            remaining //= prime
+            sign = -sign
+            if remaining % prime == 0:
+                return 0
+            while remaining % prime == 0:
+                remaining //= prime
+        prime += 1
+    if remaining > 1:
+        sign = -sign
+    return sign
+
+
+def divisors(number: int) -> list[int]:
+    return [candidate for candidate in range(1, number + 1) if number % candidate == 0]
+
+
+def odd_partitions(total: int, minimum: int = 1) -> list[tuple[int, ...]]:
+    """Return the nondecreasing odd partitions of ``total``."""
+
+    if total == 0:
+        return [()]
+    rows: list[tuple[int, ...]] = []
+    for part in range(minimum if minimum % 2 else minimum + 1, total + 1, 2):
+        for rest in odd_partitions(total - part, part):
+            rows.append((part, *rest))
+    return rows
+
+
+def unlabeled_tournament_count(order: int) -> int:
+    """Burnside count over the all-odd cycle types of ``S_order``."""
+
+    total = F(0)
+    for parts in odd_partitions(order):
+        multiplicities = {part: parts.count(part) for part in set(parts)}
+        centralizer = 1
+        for part, multiplicity in multiplicities.items():
+            centralizer *= part**multiplicity * factorial(multiplicity)
+
+        pair_orbits = sum((part - 1) // 2 for part in parts)
+        pair_orbits += sum(
+            gcd(parts[left], parts[right])
+            for left in range(len(parts))
+            for right in range(left + 1, len(parts))
+        )
+        total += F(2**pair_orbits, centralizer)
+
+    require(total.denominator == 1, "Burnside tournament count is not integral")
+    return total.numerator
+
+
+def primitive_forcade_census_audit() -> tuple[int, int, int, tuple[str, ...]]:
+    primitive_rows = 0
+    for modulus in range(2, 81):
+        for exponent in range(1, 5):
+            direct = sum(
+                (
+                    F(1, residue**exponent)
+                    for residue in range(1, modulus)
+                    if gcd(residue, modulus) == 1
+                ),
+                F(0),
+            )
+            inversion = sum(
+                (
+                    F(mobius(divisor), divisor**exponent)
+                    * sum(
+                        (
+                            F(1, index**exponent)
+                            for index in range(1, modulus // divisor)
+                        ),
+                        F(0),
+                    )
+                    for divisor in divisors(modulus)
+                ),
+                F(0),
+            )
+            require(direct == inversion, "primitive-residue Möbius profile failed")
+            primitive_rows += 1
+
+    forcade_rows = 0
+    mersenne_partial = F(0)
+    arc_partial = F(0)
+    geometric_partial = F(0)
+    for exponent in range(1, 81):
+        mersenne_partial += F(1, 2**exponent - 1)
+        arc_partial += F(1, comb(2**exponent, 2))
+        geometric_partial += F(1, 2**exponent)
+        require(
+            arc_partial == 2 * mersenne_partial - 2 * geometric_partial,
+            "Forcade/Mersenne finite mass identity failed",
+        )
+        forcade_rows += 1
+
+    for profile_exponent in (1, 2, 3):
+        direct_profile = mp.nsum(
+            lambda exponent: mp.power(
+                mp.power(2, exponent - 1) * (mp.power(2, exponent) - 1),
+                -profile_exponent,
+            ),
+            [1, mp.inf],
+        )
+        lambert_profile = mp.power(2, profile_exponent) * mp.nsum(
+            lambda rank: mp.rf(profile_exponent, rank)
+            / (
+                mp.factorial(rank)
+                * (mp.power(2, 2 * profile_exponent + rank) - 1)
+            ),
+            [0, mp.inf],
+        )
+        require(
+            abs(direct_profile - lambert_profile) < mp.mpf("1e-52"),
+            "Forcade full-profile Lambert expansion failed",
+        )
+        forcade_rows += 1
+
+    census_rows = 0
+    previous_ratio: F | None = None
+    for order in range(3, 81):
+        ratio = F(order + 1, 2**order)
+        term = F(factorial(order), 2 ** comb(order, 2))
+        next_term = F(factorial(order + 1), 2 ** comb(order + 1, 2))
+        require(next_term / term == ratio, "tournament orbit tail ratio identity failed")
+        require(ratio <= F(1, 2), "tournament orbit tail ratio exceeded one half")
+        if previous_ratio is not None:
+            require(ratio < previous_ratio, "tournament orbit tail ratio increased")
+        previous_ratio = ratio
+        census_rows += 1
+
+    canonical_census = [
+        1,
+        1,
+        1,
+        2,
+        4,
+        12,
+        56,
+        456,
+        6880,
+        191536,
+        9733056,
+        903753248,
+        154108311168,
+        48542114686912,
+        28401423719122304,
+        31021002160355166848,
+        63530415842308265100288,
+        244912778438520759443245824,
+        1783398846284777975419600287232,
+        24605641171260376770598003978281472,
+        645022068557873570931850526424042500096,
+    ]
+    computed_census = [
+        unlabeled_tournament_count(order) for order in range(len(canonical_census))
+    ]
+    require(computed_census == canonical_census, "A000568 prefix changed")
+    census_rows += len(computed_census)
+
+    support_prefix = sum(
+        (F(1, count) for count in sorted(set(canonical_census))), F(0)
+    )
+    expected_prefix = F(
+        21099328871173442978479709817904691186237927028914957892229218402318110941302184270517423289978542744036679862436756474093271800482440798353111262783654453239105958659179983400460013348652791077311743013830527,
+        11383296645907658352445029044902856765681508434252564284448144572805470654577744374492610675249889401912534749131567170501822811250421465546423774298097496376055720127690081166416741747792702633421074615848960,
+    )
+    require(support_prefix == expected_prefix, "A000568 support prefix changed")
+    cutoff = len(canonical_census) - 1
+    first_majorant = F(factorial(cutoff + 1), 2 ** comb(cutoff + 1, 2))
+    tail_majorant = first_majorant / (
+        1 - F(cutoff + 2, 2 ** (cutoff + 1))
+    )
+    require(
+        tail_majorant
+        == F(5568470782875, 179343882456254548076397338228109815750132052193353662464),
+        "A000568 geometric tail certificate changed",
+    )
+    census_rows += 2
+
+    erdos_borwein = mp.nsum(lambda exponent: 1 / (2**exponent - 1), [1, mp.inf])
+    forcade_mass = 2 * erdos_borwein - 2
+    lower_decimal = mp.mpf(support_prefix.numerator) / support_prefix.denominator
+    upper = support_prefix + tail_majorant
+    upper_decimal = mp.mpf(upper.numerator) / upper.denominator
+    summaries = (
+        f"Forcade_arc_mass={mp.nstr(forcade_mass, 25)}",
+        "Forcade_profile=2^s*sum_(r>=0)(s)_r/[r!*(2^(2s+r)-1)]",
+        "primitive_profile=sum_(d|q)mu(d)d^-s H_(q/d-1)^(s)",
+        f"A000568_0_to_20={canonical_census}",
+        f"A000568_support_prefix={support_prefix}",
+        f"A000568_tail_bound={tail_majorant}",
+        "A000568_support_mass_interval="
+        f"({mp.nstr(lower_decimal, 60)},{mp.nstr(upper_decimal, 60)})",
+    )
+    return primitive_rows, forcade_rows, census_rows, summaries
 
 
 def tournament_sequence_audit() -> tuple[str, str, str]:
@@ -549,27 +840,40 @@ def main() -> None:
     abel_rows, block_rows = abel_and_block_audit()
     valuation_rows = dirichlet_valuation_audit()
     polygon_rows, polygon_count_rows, polygon_summary = polygonal_arithmetic_audit()
+    centered_rows, centered_summary = centered_polygonal_audit()
     master_rows, simplex_rows = master_figurate_audit()
     dini_rows, dini_summary = abel_dini_integer_lift_audit()
     automatic_rows, automatic_block_rows, automatic_summary = automatic_support_audit()
-    egyptian_rows, sylvester_terms, sylvester_partial = egyptian_and_sylvester_audit()
+    egyptian_rows, egyptian_profile_rows, sylvester_terms, sylvester_partial = (
+        egyptian_and_sylvester_audit()
+    )
+    primitive_rows, forcade_rows, census_rows, number_theory_summary = (
+        primitive_forcade_census_audit()
+    )
     tournament_summary = tournament_sequence_audit()
 
-    print("THM-2000 SUPPORT-HARMONIC / ABEL-DINI / FIGURATE EXACT AUDIT")
+    print("THM-2005 SUPPORT-DIRICHLET / AUTOMATIC / TOURNAMENT EXACT AUDIT")
     print(f"Python assert nodes = {no_asserts}")
     print(f"support/collision rows = {collision_rows}: {collision_summary}")
     print(f"finite Abel rows / dyadic block rows = {abel_rows}/{block_rows}")
     print(f"Dirichlet valuation rows = {valuation_rows}")
     print(f"polygonal split/count rows = {polygon_rows}/{polygon_count_rows}")
     print(f"polygonal closed rows = {polygon_summary}")
+    print(f"centered-polygonal rows = {centered_rows}: {centered_summary}")
     print(f"master beta rows / simplex-tail rows = {master_rows}/{simplex_rows}")
     print(f"integer Abel-Dini lift rows = {dini_rows}")
     print(f"Abel-Dini block summaries = {dini_summary}")
     print(f"automatic language rows / block rows = {automatic_rows}/{automatic_block_rows}")
     print(f"automatic exact tail summaries = {automatic_summary}")
     print(f"Egyptian refinement rows = {egyptian_rows}")
+    print(f"Egyptian Dirichlet-profile rows = {egyptian_profile_rows}")
     print(f"Sylvester terms = {sylvester_terms}")
     print(f"Sylvester checked partial/remainder = {sylvester_partial}/{1-sylvester_partial}")
+    print(
+        "primitive / Forcade / tournament-tail rows = "
+        f"{primitive_rows}/{forcade_rows}/{census_rows}"
+    )
+    print(f"number-theory profile summaries = {number_theory_summary}")
     print(f"tournament exact rows = {tournament_summary}")
     print("support_profile=D_A(s)=sum_(m in A)m^(-s); mass=D_A(1)")
     print("Abel=sum_(m<=X,m in A)1/m=A(X)/X+integral_1^X A(t)/t^2 dt")

@@ -1,20 +1,25 @@
 /-
   TournamentH7.SupportHarmonicFigurate — elementary algebraic kernel for
-  THM-2000 (support-harmonic Abel--Dini law and the figurate mass surface).
+  THM-2000 (support-harmonic Abel--Dini law and the figurate mass surface)
+  and THM-2005 (support-Dirichlet automatic/tournament atlas).
 
   This module deliberately formalizes only the finite, algebraic claims used
   by the analytic proof.  It introduces no axioms and contains no placeholders.
   In particular it certifies:
 
     * the master-figurate binomial factorization and reciprocal factorization;
+    * the concrete ordinary-polygonal factorization and reciprocal split;
     * triangular and triangular-square reciprocal decompositions;
     * the cross-multiplied square-pyramidal numerator cancellation;
+    * the odd/even maximum-cyclic-triple denominator algebra and reciprocal
+      decompositions (but not the tournament extremality theorem itself);
     * the `k^2 - 1` ladder decomposition; and
     * the finite multiplicative-block reciprocal sandwich, including its
       dyadic specialization.
 
-  Infinite sums, beta-integral interchange, and Abel--Stieltjes integration
-  remain in the paper proof; none is postulated here.
+  Infinite sums, beta-integral interchange, Abel--Stieltjes integration, and
+  the score-theoretic proof of the maximum-cyclic-triple formulas remain in
+  the paper proof; none is postulated here.
 -/
 
 import Mathlib
@@ -51,6 +56,31 @@ theorem master_reciprocal_factor {a d m top side : ℚ}
   field_simp [hside, hlinear, hmaster]
   linarith
 
+/-! ## Ordinary polygonal denominators -/
+
+/-- Polynomial continuation of the ordinary `h`-gonal denominator
+`P_h(n) = ((h-2)n^2-(h-4)n)/2`. -/
+def ordinaryPolygonalDenom (h n : ℚ) : ℚ :=
+  ((h - 2) * n ^ 2 - (h - 4) * n) / 2
+
+/-- Concrete linear factorization of the ordinary polygonal denominator. -/
+theorem ordinary_polygonal_denom_factor (h n : ℚ) :
+    ordinaryPolygonalDenom h n = n * ((h - 2) * (n - 1) + 2) / 2 := by
+  unfold ordinaryPolygonalDenom
+  ring
+
+/-- The finite rational identity underlying THM-2005, equation (13).  The
+hypotheses guarantee that every denominator in the displayed identity is
+nonzero. -/
+theorem ordinary_polygonal_reciprocal_split {h n : ℚ}
+    (hh2 : h - 2 ≠ 0) (hh4 : h - 4 ≠ 0) (hn : n ≠ 0)
+    (hlinear : (h - 2) * (n - 1) + 2 ≠ 0) :
+    1 / ordinaryPolygonalDenom h n =
+      2 / (h - 4) * (1 / (n - 1 + 2 / (h - 2)) - 1 / n) := by
+  rw [ordinary_polygonal_denom_factor]
+  field_simp [hh2, hh4, hn, hlinear]
+  ring
+
 /-! ## Faulhaber term identities -/
 
 /-- Triangular reciprocal telescoping, the termwise core of mass `2`. -/
@@ -66,6 +96,55 @@ this is precisely the finite algebraic content of that rational identity. -/
 theorem square_pyramidal_numerator_cancel (n : ℚ) :
     6 * (n + 1) * (2 * n + 1) + 6 * n * (2 * n + 1) -
       24 * n * (n + 1) = 6 := by
+  ring
+
+/-! ## Maximum cyclic-triple denominator algebra -/
+
+/-- The rational odd-order branch obtained by substituting `2m+1` into
+`n(n^2-1)/24`.  This definition records the extremal formula algebraically;
+it does not assert the tournament extremality theorem. -/
+def oddMaxC3Denom (m : ℚ) : ℚ :=
+  (2 * m + 1) * ((2 * m + 1) ^ 2 - 1) / 24
+
+/-- The rational even-order branch obtained by substituting `2m` into
+`n(n^2-4)/24`. -/
+def evenMaxC3Denom (m : ℚ) : ℚ :=
+  (2 * m) * ((2 * m) ^ 2 - 4) / 24
+
+/-- The odd maximum-`c3` denominator is the square-pyramidal/Faulhaber
+denominator `m(m+1)(2m+1)/6`. -/
+theorem odd_max_c3_denom_factor (m : ℚ) :
+    oddMaxC3Denom m = m * (m + 1) * (2 * m + 1) / 6 := by
+  unfold oddMaxC3Denom
+  ring
+
+/-- The even maximum-`c3` denominator factors as `m(m-1)(m+1)/3`. -/
+theorem even_max_c3_denom_factor (m : ℚ) :
+    evenMaxC3Denom m = m * (m - 1) * (m + 1) / 3 := by
+  unfold evenMaxC3Denom
+  ring
+
+/-- Odd-branch partial fractions.  Finite summation of this identity is the
+algebraic input for the odd parity mass in THM-2005. -/
+theorem odd_max_c3_reciprocal_split {m : ℚ}
+    (hm : m ≠ 0) (hmp1 : m + 1 ≠ 0) (h2mp1 : 2 * m + 1 ≠ 0) :
+    1 / oddMaxC3Denom m =
+      6 / m + 6 / (m + 1) - 24 / (2 * m + 1) := by
+  rw [odd_max_c3_denom_factor]
+  have hcomm : 2 * m + 1 = 1 + m * 2 := by ring
+  rw [hcomm] at h2mp1 ⊢
+  field_simp [hm, hmp1, h2mp1]
+  ring
+
+/-- Even-branch second-difference decomposition.  Its finite partial sums
+telescope to boundary terms, giving the algebraic input for the even parity
+mass in THM-2005. -/
+theorem even_max_c3_reciprocal_split {m : ℚ}
+    (hmm1 : m - 1 ≠ 0) (hm : m ≠ 0) (hmp1 : m + 1 ≠ 0) :
+    1 / evenMaxC3Denom m =
+      (3 / 2) * (1 / (m - 1) - 2 / m + 1 / (m + 1)) := by
+  rw [even_max_c3_denom_factor]
+  field_simp [hmm1, hm, hmp1]
   ring
 
 /-- Polynomial continuation of the square of the `n`-th triangular number. -/
@@ -139,8 +218,14 @@ theorem dyadic_reciprocal_block_bounds {ι : Type*} (S : Finset ι)
 
 #print axioms master_denom_factor
 #print axioms master_reciprocal_factor
+#print axioms ordinary_polygonal_denom_factor
+#print axioms ordinary_polygonal_reciprocal_split
 #print axioms triangular_reciprocal_split
 #print axioms square_pyramidal_numerator_cancel
+#print axioms odd_max_c3_denom_factor
+#print axioms even_max_c3_denom_factor
+#print axioms odd_max_c3_reciprocal_split
+#print axioms even_max_c3_reciprocal_split
 #print axioms triangular_square_reciprocal_split
 #print axioms ladder_sum_reciprocal_split
 #print axioms reciprocal_block_bounds

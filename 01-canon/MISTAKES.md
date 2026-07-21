@@ -82,6 +82,14 @@ Format per entry:
   `theta_2` value.  At `q=1/2` this is the exact form of `1.641632560655...`;
   identifying it is not an open problem.
 
+- **Legacy data corrections:** the old S447 A000568 list ended with
+  `29305744576145`, which is not A000568(13); the correct value is
+  `48542114686912`.  THM-2005 now reconstructs A000568(0)--A000568(20) by
+  Burnside's all-odd-cycle formula and certifies the deduplicated reciprocal
+  tail.  The old `H=1+2^(n-2)` neighbor sum also began at the unrealizable
+  value `H=2`; its realized support begins at `n=3`, with mass
+  `0.764499...`, not `1.264499...`.
+
 ---
 
 ## MISTAKE-210 (2026-07-21, codex sequence-corpus audit) -- tournament counting growth was reversed, making two everywhere-divergent series look entire
