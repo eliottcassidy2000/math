@@ -78,6 +78,58 @@ lemma le_charge_of_mem_support_pow {P : MvPolynomial (Fin 2) ℂ}
     push_cast
     linarith
 
+/-- The negative-charge mirror of `le_charge_of_mem_support_pow`: if every monomial of
+`P` has charge at most `-1`, every monomial of `P^m` has charge at most `-m`. -/
+lemma charge_le_neg_of_mem_support_pow {P : MvPolynomial (Fin 2) ℂ}
+    (hP : ∀ s ∈ P.support, charge s ≤ (-1 : ℤ)) :
+    ∀ (m : ℕ), ∀ s ∈ (P ^ m).support, charge s ≤ -(m : ℤ) := by
+  intro m
+  induction m with
+  | zero =>
+    intro s hs
+    simp only [pow_zero] at hs
+    have : s = 0 := by
+      have := MvPolynomial.support_one (R := ℂ) (σ := Fin 2)
+      rw [this] at hs
+      exact Finset.mem_singleton.mp hs
+    simp [this, charge]
+  | succ n ih =>
+    intro s hs
+    rw [pow_succ] at hs
+    have hmem := MvPolynomial.support_mul _ _ hs
+    rw [Finset.mem_add] at hmem
+    obtain ⟨a, ha, b, hb, rfl⟩ := hmem
+    rw [charge_add]
+    have h1 := ih a ha
+    have h2 := hP b hb
+    push_cast
+    linarith
+
+/-- Strictly positive charge support is in the moment nullcone: every positive power has
+zero Gaussian expectation. -/
+theorem moments_zero_of_charge_pos (P : MvPolynomial (Fin 2) ℂ)
+    (hP : ∀ s ∈ P.support, (1 : ℤ) ≤ charge s) :
+    ∀ m : ℕ, 1 ≤ m → E (P ^ m) = 0 := by
+  intro m hm
+  apply E_eq_zero_of_charges_ne
+  intro s hs hzero
+  have hcharge := le_charge_of_mem_support_pow hP m s hs
+  rw [hzero] at hcharge
+  exact (not_le_of_gt (by exact_mod_cast hm)) hcharge
+
+/-- Strictly negative charge support is in the moment nullcone: every positive power has
+zero Gaussian expectation. -/
+theorem moments_zero_of_charge_neg (P : MvPolynomial (Fin 2) ℂ)
+    (hP : ∀ s ∈ P.support, charge s ≤ (-1 : ℤ)) :
+    ∀ m : ℕ, 1 ≤ m → E (P ^ m) = 0 := by
+  intro m hm
+  apply E_eq_zero_of_charges_ne
+  intro s hs hzero
+  have hcharge := charge_le_neg_of_mem_support_pow hP m s hs
+  rw [hzero] at hcharge
+  have hmz : (0 : ℤ) < (m : ℤ) := by exact_mod_cast hm
+  linarith
+
 /-- **The reduction NC2 ⇒ GMC(2).** If every monomial of `P` has charge `≥ 1` (the one-sided
 conclusion of the 2-D nullcone conjecture), then `ker E` is Mathieu–Zhao at `P`: for every `Q`
 there is a threshold `N` beyond which `E (Q * P^m) = 0`.  Explicit threshold: `N = deg_W Q + 1`. -/
@@ -103,7 +155,60 @@ theorem mathieuZhao_of_charge_pos (P Q : MvPolynomial (Fin 2) ℂ)
   have : (1 : ℤ) ≤ charge c + charge b := by linarith
   linarith
 
+/-- Negative-charge branch of the NC2-to-GMC(2) reduction. The explicit threshold is one
+more than the largest `Z` exponent in `Q`. -/
+theorem mathieuZhao_of_charge_neg (P Q : MvPolynomial (Fin 2) ℂ)
+    (hP : ∀ s ∈ P.support, charge s ≤ (-1 : ℤ)) :
+    ∃ N : ℕ, ∀ m ≥ N, E (Q * P ^ m) = 0 := by
+  refine ⟨(Q.support.sup fun s => s 0) + 1, fun m hm => ?_⟩
+  apply E_eq_zero_of_charges_ne
+  intro s hs
+  have hmem := MvPolynomial.support_mul _ _ hs
+  rw [Finset.mem_add] at hmem
+  obtain ⟨c, hc, b, hb, rfl⟩ := hmem
+  have hb2 := charge_le_neg_of_mem_support_pow hP m b hb
+  have hc0 : (c 0 : ℤ) ≤ ((Q.support.sup fun s => s 0 : ℕ) : ℤ) := by
+    exact_mod_cast Finset.le_sup (f := fun s => s 0) hc
+  have hcc : charge c ≤ (c 0 : ℤ) := by
+    have : (0 : ℤ) ≤ (c 1 : ℤ) := by positivity
+    simp only [charge]
+    linarith
+  have hmN : ((Q.support.sup fun s => s 0 : ℕ) : ℤ) + 1 ≤ (m : ℤ) := by
+    exact_mod_cast hm
+  rw [charge_add]
+  have : charge c + charge b ≤ (-1 : ℤ) := by linarith
+  linarith
+
+/-- The charge-one-sided conclusion of NC2, with both orientations retained explicitly. -/
+def ChargeOneSided (P : MvPolynomial (Fin 2) ℂ) : Prop :=
+  (∀ s ∈ P.support, (1 : ℤ) ≤ charge s) ∨
+  (∀ s ∈ P.support, charge s ≤ (-1 : ℤ))
+
+/-- A pointwise formulation of the two-dimensional nullcone statement for one polynomial. -/
+def NC2At (P : MvPolynomial (Fin 2) ℂ) : Prop :=
+  (∀ m : ℕ, 1 ≤ m → E (P ^ m) = 0) → ChargeOneSided P
+
+/-- Both strict one-sided loci are moment-null. This is the easy converse in NC2. -/
+theorem moments_zero_of_charge_oneSided (P : MvPolynomial (Fin 2) ℂ)
+    (hP : ChargeOneSided P) : ∀ m : ℕ, 1 ≤ m → E (P ^ m) = 0 := by
+  rcases hP with hpos | hneg
+  · exact moments_zero_of_charge_pos P hpos
+  · exact moments_zero_of_charge_neg P hneg
+
+/-- **NC2 implies GMC(2), formal interface.** Once null moments classify `P` as strictly
+charge-one-sided, the elementary charge bounds prove eventual vanishing of `E (Q * P^m)`
+for every multiplier `Q`. No tournament ordering, tie-breaker, or Paley identification enters. -/
+theorem mathieuZhao_of_nc2At (P Q : MvPolynomial (Fin 2) ℂ)
+    (hNC2 : NC2At P) (hnull : ∀ m : ℕ, 1 ≤ m → E (P ^ m) = 0) :
+    ∃ N : ℕ, ∀ m ≥ N, E (Q * P ^ m) = 0 := by
+  rcases hNC2 hnull with hpos | hneg
+  · exact mathieuZhao_of_charge_pos P Q hpos
+  · exact mathieuZhao_of_charge_neg P Q hneg
+
 end GMC2
 
 -- Axiom audit: should be only propext / Classical.choice / Quot.sound (Mathlib standard).
 #print axioms GMC2.mathieuZhao_of_charge_pos
+#print axioms GMC2.mathieuZhao_of_charge_neg
+#print axioms GMC2.moments_zero_of_charge_oneSided
+#print axioms GMC2.mathieuZhao_of_nc2At
