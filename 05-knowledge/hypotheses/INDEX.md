@@ -17702,3 +17702,19 @@ EXPLAINED, redirecting the attack to the pointwise/finite-place certificate.
 **Related:** THM-1825, THM-1185 (measure blind), THM-1075 (resonance lattice = charge lattice),
 THM-1200 (hhat annihilation), THM-1535 (charge lattice), THM-1685/1735 (Nullstellensatz/finite
 place), THM-1401 (pinch modulus 2n-1).
+
+
+### HYP-8625 — the NC2 => GMC(2) => LRC(14) chain: arrow 1 REAL, arrow 2 OBSTRUCTED (mac-mini-S157)
+Owner asked whether assuming the DEZ 2-D nullcone (NC2) proves LRC(14) via GMC(2). **ANSWER:
+arrow 1 (NC2 => GMC(2)) is PROVED (klein THM-1510); arrow 2 (GMC(2) => LRC(14)) is NOT, a
+genuine obstruction not missing work.** The two share the relation lattice {k:k.v=0} but:
+(1) MEASURE -- GMC = Gaussian/FACTORIAL weights (monotone, never cancel, clean nullcone); LRC =
+Lebesgue/SINC weights (oscillate, change sign, CAN vanish = the covering). Verified: factorial
+tower monotone, sinc tower sign-changing. (2) POWERS (E[P^m]) vs PRODUCTS (int prod f_j). (3)
+OPPOSITE classification (GMC nullcone nonempty=one-sided; LRC covering-nullcone empty). (4)
+LRC(14) is number-theoretic (density floor THM-663 + finite glue + Lean), not Gaussian.
+**What NC2 buys: GMC(2) ONLY** -- a leaf, not a hub: JC cascade is DEAD (GMC(n>=3) false THM-1500,
+JC(3) false THM-1300), TNC already proved (=DvdK THM-1630). The genuine value is TECHNIQUE
+TRANSFER (pair-reduction, transitivity discriminant THM-1815, first-return THM-1770), not logic.
+Even a weight-agnostic unified conjecture stops at the measure barrier (LRC is a positivity, not
+a nullcone). LRC(14) does NOT need NC2. See reflection can-nc2-prove-lrc14-...-macmini-S157.

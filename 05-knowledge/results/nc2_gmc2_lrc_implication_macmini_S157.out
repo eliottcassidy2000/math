@@ -1,0 +1,39 @@
+THE IMPLICATION QUESTION: NC2 => GMC(2) => LRC(14)?  Testing the obstruction.
+============================================================================
+ARROW 1 (PROVED, klein THM-1510): NC2 => GMC(2), 3 lines by weight counting.
+  NC2 = the 2-Gaussian moment nullcone is exactly holomorphic U antiholomorphic
+      = my atom-covering V(all atom forms)=one-sided (THM-1780).
+
+ARROW 2 (the question): GMC(2) => LRC(14)?
+  Both live on the SAME relation lattice {k : k.v=0} (boxeph THM-1820, my S156).
+  BUT the functionals differ. Test whether the SAME lattice with GMC weights vs LRC
+  weights gives the SAME or DIFFERENT vanishing -- if different, NO implication.
+
+  For a single atom (pair straddle p vs n, coprime, so atom size m0=p+n), the
+  balanced tuples are the multiples j*m0. Compare the two weight systems:
+  j  GMC weight (factorial-type)   LRC weight (sinc-type)
+  1                          120             4.962925e-03
+  2                      3628800             1.458567e-03
+  3                1307674368000            -8.922423e-04
+  4          2432902008176640000            -9.546445e-04
+
+  => GMC weights (factorials) are MONOTONE, so the moment tower never accidentally
+     vanishes -- the nullcone is CLEAN (one-sided only). LRC weights (sincs) OSCILLATE
+     and CHANGE SIGN, so the good-set sum CAN vanish (a covering) at special delta --
+     that is the whole difficulty of LRC. SAME lattice, OPPOSITE analytic behaviour.
+
+THE OBSTRUCTION, precisely:
+  (1) MEASURE: GMC(2) = Gaussian on C (factorial/Laplace weights); LRC = Lebesgue on
+      the torus (sinc weights). A nullcone theorem for one weight system says NOTHING
+      about the other -- factorials never cancel, sincs do.
+  (2) POWERS vs PRODUCTS: GMC constrains E[P^m] (one poly, m copies); LRC constrains
+      int prod_j f_j (n DIFFERENT functions, one copy each). prod f_j is ONE multinomial
+      term of (sum f_j)^n; GMC/NC2 constrains the SUM of all terms, not that one.
+  (3) CLASSIFICATION: GMC nullcone is NONEMPTY (one-sided exists); LRC asserts the
+      covering nullcone below 1/(n+1) is EMPTY. Opposite answers (boxeph THM-1820).
+  (4) LRC(14) is NUMBER-THEORETIC (specific integer speeds); the repo program
+      (density floor THM-663 closed, finite Vmax glue + Lean) does not route through
+      Gaussian analysis.
+
+VERDICT: NC2 => GMC(2) is real; GMC(2) => LRC(14) is NOT -- genuine obstruction, not
+missing work. The link is a shared relation lattice (TECHNIQUE transfer), not logic.
