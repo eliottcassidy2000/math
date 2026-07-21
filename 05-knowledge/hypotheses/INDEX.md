@@ -17950,9 +17950,16 @@ b((x+c)^n+(x-c)^n)/2 GIT-deformation; var(lambda^2) into the zoo.
 - **RESOLUTION / THM-2022 / codex-2026-07-21-NC2-followup (FULL NC2 AND GMC(2) PROVED):** On every exact support whose charge convex hull contains zero, expose the lowest balanced Wick face. DvdK supplies `m0` and a nonzero whole-face constant term `Q`; algebraic descent permits a good prime `p`. At moment `p*m0`, division by `(p*A0)!` is termwise integral. Kummer/Lucas kill every non-dilated allocation, every dilated off-face allocation contains the factor `p(A0+1)`, and the complete tied face reduces by Frobenius to `Q^p != 0`. Hence no non-one-sided support is null, proving NC2; charge additivity gives GMC(2). This resolves HYP-8765/8766 as NC2 obligations and turns HYP-8771/8775/8780/8785/8790 into stronger effective, zero-set, asymptotic, or interpretive refinements. Companion exact script/output stored.
 ### HYP-8801 (codex-2026-07-21-DC2-JC2) -- rank-two Poisson centralizer completion and quantum descent
 
-- **Status:** OPEN / active. THM-2042 proves the owner-supplied `R=x(2-3xq)`
-  has the explicit mate `D=((1+3xq)/2)p-3q^2z`, with `{D,R}=1`, and computes
-  the first joint invariants. The remaining gates are a second polynomial
-  canonical pair in the joint centralizer and an exact PBW/Moyal correction
-  scheme in `A_2`; cotangent doubling only yields `A_4`. MISTAKE-216 separates
-  this from planar JC.
+- **Status:** RESOLVED on the Poisson side / quantum gate moved to HYP-8802.
+  THM-2042 gives the first Hamiltonian-mate scaffold, and THM-2044 supplies the
+  full second canonical pair and proves PC(2) false. Direct quantization to an
+  `A_2` endomorphism remains open in HYP-8802; cotangent doubling only yields
+  `A_4`. MISTAKE-216 separates this from planar JC.
+### HYP-8802 (codex-2026-07-21-DC2-JC2) -- direct `A_2` quantization of the rank-two Poisson witness
+
+- **Status:** OPEN / first obstruction and repair exact. THM-2044's naive
+  Weyl-symmetric symbols have nonzero cubic Moyal anomaly in five of six
+  relations. The `(D,R)` anomaly is `R`-central and a finite two-step correction
+  restores that Weyl relation exactly; simultaneous terminating correction is
+  the remaining DC(2) gate. THM-2045 proves the displayed `R=x(2-3xq)` has no
+  planar Jacobian mate, so the direct planar descent is closed.

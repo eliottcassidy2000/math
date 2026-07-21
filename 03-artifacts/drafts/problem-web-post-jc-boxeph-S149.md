@@ -23,7 +23,8 @@ assumption-challenging progress on these; expand the list from repo mining.
 ```
 
 Survivors (OPEN, now the frontier): **JC₂**, **DC₁, DC₂** (¬JC₄ gives nothing:
-the transfer runs JC₂ₙ ⟹ DCₙ), **PC on C²/C⁴**, the PROVED Mathieu cases
+the transfer runs JC₂ₙ ⟹ DCₙ), **PC on C² only** (THM-2044 now disproves
+PC on C⁴), the PROVED Mathieu cases
 (Duistermaat–van der Kallen), and the effective/classification questions.
 
 ## 1. Dixmier conjecture — EXPLICIT falsification + what remains
@@ -61,7 +62,7 @@ the transfer runs JC₂ₙ ⟹ DCₙ), **PC on C²/C⁴**, the PROVED Mathieu ca
   **the same adjugate matrix drives the quantum (S141 Weyl) and classical
   (S149 Poisson) counterexamples** — a matched quantum–classical pair with
   φ's 9 commutator identities degenerating to Φ's bracket identities at ħ→0.
-- **Open, on-list:** PC on C² and C⁴.
+- **Open, on-list:** PC on C². (PC on C⁴ is now false by THM-2044.)
 
 ## 3. Zhao's vanishing conjecture (and generalized differential-operator VC)
 

@@ -19,11 +19,11 @@ the NAMED NEXT MOVE.
    correction). NEXT: DC₁ via the tournament two-lens (ds-S59r: A₁ weight-triple = oriented
    3-cycle; Rédei parity × leading forms).
 
-2. **Poisson conjecture / stable Poisson (symplectic endomorphisms).** FALSE with the
-   EXPLICIT witness Ψ(q,p) = (F(q), (JFᵀ)⁻¹p) — canonical bracket relations verified
-   directly (S140 frozen out), non-invertibility by the p=0 section. This is the ℏ→0
-   shadow of THM-1300; the repo now holds all three explicit witnesses of the
-   JC–DC–PC triangle. NEXT: the stable equivalences' effective content (which dimensions).
+2. **Poisson conjecture / stable Poisson (symplectic endomorphisms).** FALSE already
+   for TWO canonical pairs: THM-2044 gives explicit `R,T,D,S` in four generators,
+   verifies all six brackets, and transports an exactly-three fibre from THM-1300.
+   The older cotangent lift used three pairs. HYP-8802 is the direct-`A_2`
+   quantization gate; THM-2045 proves this `R` cannot descend to planar JC.
 
 3. **Classifying Jacobian counterexamples exactly.** The repo's exact-picture package:
    THM-1330 (Keller monoid; units = deg 1 = Keller 1939; ideal = {deg ≥ 3}, deg 2

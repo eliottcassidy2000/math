@@ -2,18 +2,21 @@
 id: THM-2042
 title: "The smooth non-coordinate R=x(2-3xq) has an explicit rank-two Hamiltonian mate"
 status: >
-  PROVED CORE / completion open. In the canonical rank-two Poisson algebra
+  PROVED SCAFFOLD / completion superseded by THM-2044. In the canonical rank-two Poisson algebra
   C[x,q,p,z] with {p,x}={z,q}=1, the displayed polynomials R and D below
   satisfy {D,R}=1. The plane polynomial R has no critical point but is not a
   coordinate. An explicit tangent momentum L and two joint invariants I,J are
   computed exactly; their nonconstant bracket identifies why the naive
-  symplectic completion fails. The existence and quantization of a second
-  canonical pair remain HYP-8801.
+  symplectic completion fails. THM-2044 completes the second canonical pair
+  after changing the centralizer coordinate and correcting D. Only direct
+  Weyl quantization remains open in HYP-8802.
 source: codex-2026-07-21-DC2-JC2
 related:
   - THM-1300
+  - THM-2044
   - THM-1345
   - HYP-8801
+  - HYP-8802
 ---
 
 # THM-2042 -- the first rank-two canonical-pair scaffold
@@ -86,8 +89,10 @@ Equations (5)-(7) are the exact first centralizer scaffold. They show that the
 obstruction is not internal cancellation in (2): it is the nonconstant
 symplectic density left on the joint centralizer. A successful rank-two
 Poisson counterexample must replace or correct `(I,J)` so that this density is
-one while retaining polynomiality and non-surjectivity.
+one while retaining polynomiality and non-surjectivity. THM-2044 does so by
+replacing `L` with a shifted tangent coordinate `ell`, importing the THM-1300
+Keller triple, and applying a polynomial connection correction to `D`.
 
-This theorem does not assert that the full four-polynomial construction in the
-owner-supplied abstract has been reconstructed; only the displayed `R`-slice
-and its forced elementary consequences are used.
+This theorem is the preliminary `R`-slice scaffold. The full four-polynomial
+construction and its exact three-point fibre are proved separately in
+THM-2044.

@@ -63,15 +63,18 @@ as results land; date-stamp edits.
 - **PRIORITY: HIGH** (DC₁ is the bottom-of-the-tower crown).
 
 ## C. Stable Poisson conjecture
-- **STATUS:** stably false via the JC ⟺ DC ⟺ PC stable equivalences (BKK);
-  per-n arrows need literature verification before claiming ¬PC_n per-n —
-  flagged, do not assert until sourced.
-- **NOVEL:** det JF = {P, Q} Poisson/Hamiltonian reframing (death-star-S59q);
+- **STATUS:** FALSE already at rank two. THM-2044 gives an explicit
+  nonautomorphic endomorphism of `C[x,q,p,z]` preserving the standard Poisson
+  bracket, with an exact three-point fibre. Hence PC(n) is false for every
+  `n>=2` by identity padding; PC(1) is the surviving Poisson floor.
+- **NOVEL:** THM-2044 reconstructs the rank-two witness as a polynomial
+  symplectic suspension of THM-1300; det JF = {P, Q} Poisson/Hamiltonian reframing (death-star-S59q);
   UNDER-RADAR PRIOR WORK REDISCOVERED THIS SESSION: the anti-Poisson coimage
   atlas + coimage-Yoneda 2n−1 resonance (reflections s604/s605, old era) —
   unintegrated with the new JC corpus.
-- **NEXT:** one session: pin the per-n arrow structure (PC_n vs DC_n vs JC_2n,
-  with sources); attempt the explicit Poisson non-auto endomorphism from F;
+- **NEXT:** HYP-8802 direct `A_2` quantization: five cubic Moyal anomalies are
+  nonzero, while the `(D,R)` relation has a finite exact repair. Solve all six
+  relations simultaneously or prove the correction tower cannot terminate;
   integrate s604/605.
 - **PRIORITY: MEDIUM-HIGH.**
 

@@ -1,0 +1,35 @@
+COMMAND: python -u 04-computation/poisson_rank2_symplectic_suspension_codex_20260721.py --poisson
+
+THM-2044 RANK-TWO POISSON SUSPENSION AUDIT
+expanded term counts (R,T,D,S): (2, 35, 246, 78)
+sheared three-dimensional determinant: 1 PASS
+{D,R} = 1 PASS
+{S,T} = 1 PASS
+{R,T} = 0 PASS
+{R,S} = 0 PASS
+{D,T} = 0 PASS
+{D,S} = 0 PASS
+lifted fibre points:
+  (0, 0, 1/24, -1/8)
+  (1, 2/3, 224839/90720, -173417/60480)
+  (-1, -2/3, 224839/90720, -173417/60480)
+common image: (0, 0, 0, -1/8) PASS
+exact fibre cardinality: 3 (transported through polynomial source/target automorphisms from THM-1300)
+THM-2045 PLANAR DE-STABILIZATION AUDIT
+constant-producing Laurent sector equation: ((aa-bb*ss)*f(ss))' = 1
+polynomial solution forces f=-1/bb, which is not divisible by ss: NO planar mate
+TOURNAMENT ANALYSIS: not imposed; orienting the six tensor identities would discard the symplectic equation.
+POISSON PASS
+
+COMMAND: python -u 04-computation/poisson_rank2_symplectic_suspension_codex_20260721.py --quantum
+
+HYP-8802 WEYL-SYMMETRIC QUANTIZATION AUDIT
+  {D,R} P^3 terms: 42
+  {S,T} P^3 terms: 42
+  {R,T} P^3 terms: 0
+  {R,S} P^3 terms: 3
+  {D,T} P^3 terms: 165
+  {D,S} P^3 terms: 273
+two-step corrected Moyal relation M(Dq,R)=1 PASS
+corrected Dq term count: 332
+QUANTUM PARTIAL PASS: simultaneous six-relation correction remains open

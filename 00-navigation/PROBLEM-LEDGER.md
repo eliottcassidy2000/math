@@ -39,18 +39,21 @@ in-repo verifications). JC_n false ∀n≥3 by stabilization. JC_2 survives (A9)
 - **DC_1** — REFRAMED (S59r, HYP-8160): A₁'s weight triple (N,q,p) IS the oriented
   3-cycle (observer=ℏ=the conserved +1); two-lens strategy (Rédei parity × 2D
   leading-form bound). OPEN (JC_2 ⟹ DC_1 via BKK); the surviving floor of the tower.
-- **DC_2** — OPEN, genuinely empty (no A₂ construction); decoupled from dead JC_4.
+- **DC_2** — OPEN, but no longer computationally empty. HYP-8802 proves that
+  naive Weyl ordering of the THM-2044 Poisson witness fails in five of six
+  relations and gives a finite exact correction of `{D,R}`. No simultaneous
+  `A_2` endomorphism is yet constructed; the termination gate remains.
 
-### A3. Stable Poisson / "Poisson" Conjecture — witness PROVED; named disproof STATED-not-written.
-The symplectic ℂ⁶ cotangent lift Φ(x,ξ)=(F, J⁻ᵀξ) has det≡1, Φ*ω=ω exactly, 3-to-1
-(klein-S323, VERIFIED) — an explicit symplectic Keller counterexample sitting on the
-BKK/Kontsevich circle. THM-1345: det JF={P,Q} (the Poisson reframing). klein-S332 +
-mac-mini-S140 CLAIM this disproves the "Poisson conjecture (Poisson endos are autos)"
-at n=3 with witness Ψ(q,p)=(F(q),B(q)p) — but **no THM file is written and the
-named-conjecture identification is unverified**. Honest grade: **PARTIAL** (witness
-proved; the disproof-of-the-named-conjecture is an unwritten claim). ★ Next: write
-the one-page Φ*-bracket THM; verify the object IS the literature's stable Poisson
-conjecture; mark the End-vs-Aut boundary (Aut conjectures survive).
+### A3. Poisson Conjecture — FALSE already for two canonical pairs (PROVED).
+**THM-2044** gives explicit `R,T,D,S in Q[x,q,p,z]` with two canonical bracket
+pairs, every cross-bracket zero, and an exact three-point fibre. It is a
+polynomial symplectic suspension of THM-1300, so PC(2) is false and padding gives
+PC(n) false for every `n>=2`. This improves the older six-dimensional cotangent
+lift (PC(3)) and is written as a canonical theorem with an exact verifier.
+**Scope:** HYP-8802 finds nonzero Weyl-ordering anomalies, so PC(2) false does not
+yet give an explicit `A_2` endomorphism; the safe Hamiltonian-dual construction
+lands in `A_4`. THM-2045 proves the displayed first coordinate has no planar
+Jacobian mate.
 
 ### A4. Shao's Vanishing Conjecture — **UNTOUCHED (target).** Not named anywhere (the
 only "Shao" is a different tournament author). No content, no witness.
