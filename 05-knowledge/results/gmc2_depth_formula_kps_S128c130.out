@@ -1,0 +1,12 @@
+====================================================================================
+GMC(2) detection depth: test D(M,N,d) = (M+N)(2d+1)
+====================================================================================
+  (M,N)      d    pred   test (pred ok / pred-1 no)     verdict
+  (1,1)      0    2      hi=True lo=False               CONFIRMED
+  (1,2)      0    3      hi=True lo=False               CONFIRMED
+  (2,2)      0    4      hi=False lo=False              pred high (order>pred)
+  (1,1)      1    6      hi=True lo=False               CONFIRMED
+  (1,3)      0    4      hi=True lo=False               CONFIRMED
+  (1,2)      1    9      hi=False lo=False              pred high (order>pred)
+  (1,1)      2    10     hi=False lo=False              pred high (order>pred)
+  (2,2)      1    12     hi=False lo=False              pred high (order>pred)

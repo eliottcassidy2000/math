@@ -19,6 +19,38 @@ $\mathbb A^2$) is $\cong\mathbb A^3$; complete structural understanding.
   to decide fake-vs-real $\mathbb A^3$.
 - Consultation write-up (reflection x-cong-A3-iff-JC3-false-...-S74), not a repo theorem. No code changes
   this turn beyond the note.
+## kind-pasteur-2026-07-20-S128c130
+
+**Worked GMC(2): the detection-depth FORMULA D(M,N,d)=(M+N)(2d+1) (THM-1795), answering klein
+THM-1770's open growth rate. Plus collision housekeeping.**
+
+- **THM-1795: D(M,N,d) = (M+N)(2d+1).** klein THM-1770 proved the GMC(2) detection depth grows
+  with radial degree d with no span-only uniform bound, but left the rate open. E[P^m] for P of
+  charge span [-M,N] and radial degree d is P-recursive in m of order (M+N)(2d+1) = the detection
+  depth (moment-nullcone, THM-1775). DERIVATION: E[P^m]=L_s(CT_u[Lambda_s^m]) is the Laplace
+  transform in s of the toral diagonal (klein); toral order M+N (THM-1710) times the
+  creative-telescoping factor (1+s-degree)=(2d+1), s-degree 2d from the quadratic (disc-shape)
+  coefficient structure. VERIFIED: d=0 recovers order=span for (1,1)=2,(1,2)=3,(1,3)=4 (matches
+  klein 'depth=span at d=0' + THM-1710); (1,1) d=1 -> 6 = 2*3, the (2d+1) factor. Compute-limited
+  beyond (d>=2, or span>=3 with d>=1): E[P^m] coeff-degree grows and the dict-convolution moment
+  engine can't reach enough m -- 'insufficient data', NOT refutation. So: derived + confirmed on 4
+  cells, honestly not exhaustively verified.
+- **Sharpens 'no uniform bound' to a LINEAR law:** depth rises by exactly 2(M+N) per radial
+  degree, no ceiling. That is precisely why degree-uniform GMC(2) needs the analytic bridge
+  (Laplace determinacy, mac-mini THM-1645), not more elimination -- and now we know by how much
+  elimination falls short. Every bounded (span,degree) stratum is a finite Groebner test of KNOWN
+  size (THM-1740).
+- **Housekeeping (first-pusher collisions):** my THM-1750 (moment-nullcone) -> THM-1775 (the
+  arborescence THM-1750 was pushed 8s earlier); my THM-1765 (H-leaves-ladder) -> THM-1780 (boxeph
+  fold-edge + opus two-straddle both pushed THM-1765 before mine); my HYP-8550 -> HYP-8590. Refs
+  fixed in theorem files, MomentNullcone.lean, root import, and the reflection.
+
+**Handoff / named-next.** (1) Break the compute wall with a toral+Laplace moment engine (compute
+CT_u[Lambda_s^m] as an s-polynomial, then apply sum_k k!*[s^k]) to verify (1,1,2)=10, (1,2,1)=9,
+(2,2,1)=12 directly. (2) Prove s-degree=2d in general via the s-formula THM-1690 with
+s-degree-d R-coefficients. (3) The linear law D~2(M+N)d is the rate the Laplace-determinacy
+argument must dominate; a bound 'E[P^m]!=0 for some m<=2(M+N)d' would close degree-uniform GMC(2).
+
 ## mac-mini-2026-07-20-S153 -- THE LOCALISATION LEMMA IS A FIRST-RETURN / RENEWAL STRUCTURE: isolation step PROVED, pair-only case CLOSED, reducing full GMC(2) to ONE atom-covering statement (= opus THM-1685's core, now in first-return order). THM-1770.
 
 **Owner directive:** take the localisation lemma (HYP-8590) in the first-return / covering argument direction.

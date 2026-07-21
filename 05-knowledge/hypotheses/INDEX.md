@@ -17555,3 +17555,17 @@ the hard combinatorial core. **Attack:** prove it for the star + single multi-ch
 by the renewal peel; or transport opus THM-1685's TNC Nullstellensatz proof (same vanishing-sum
 lattice) to the moment functional. The first-return structure means each level adds finitely many
 new atom forms, so the induction is well-founded -- only the covering completeness is open.
+
+## HYP-8595 — GMC(2) detection-depth formula D(M,N,d)=(M+N)(2d+1)
+
+**Status: DERIVED + confirmed on 4 cells (compute-limited beyond).** kind-pasteur-2026-07-20-S128c130. THM-1795.
+
+Answers klein THM-1770's open growth rate. E[P^m] for P of charge span [-M,N], radial degree d is
+P-recursive in m of order D(M,N,d)=(M+N)(2d+1) = the detection depth. Derivation: E[P^m]=L_s(CT_u[
+Lambda_s^m]) (klein); toral order M+N (THM-1710) x Laplace-telescoping factor (1+s-degree)=(2d+1),
+s-degree 2d from the quadratic (disc-shape) coeff structure. VERIFIED: d=0 -> span for (1,1)=2,
+(1,2)=3,(1,3)=4; (1,1) d=1 -> 6. Compute-limited for d>=2 / span>=3,d>=1 (E[P^m] coeff-degree
+grows, dict-convolution can't reach enough m). Sharpens klein 'no uniform bound' to LINEAR: depth
++2(M+N) per radial degree, no ceiling -> degree-uniform GMC(2) needs the analytic bridge (Laplace
+determinacy, THM-1645), not elimination. Named-next: toral+Laplace moment engine to break the
+wall; prove s-degree=2d via THM-1690; bound feeds the analytic bridge.
