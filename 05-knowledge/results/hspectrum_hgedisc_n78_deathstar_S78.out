@@ -1,0 +1,15 @@
+
+n=7 (400000 random samples):
+  #distinct H seen = 77; min=1, max=189
+  small odd values present? {7: False, 21: False, 35: True, 39: True, 49: True, 63: False}
+  H >= disc violations: 0   equality cases: 925 (of which NON-transitive: 0)
+  odd values in [1,45] still MISSING at n=7: [7, 21]
+
+n=8 (120000 random samples):
+  #distinct H seen = 320; min=1, max=661
+  small odd values present? {7: False, 21: False, 35: True, 39: True, 49: True, 63: True}
+  H >= disc violations: 0   equality cases: 15 (of which NON-transitive: 0)
+  odd values in [1,45] still MISSING at n=8: [7, 21]
+
+(S70 claim: H-spectrum = odds minus {7,21}. If 35,39 appear here, consistent;
+ if they persist as missing, S70's forbidden set is larger than {7,21}.)
