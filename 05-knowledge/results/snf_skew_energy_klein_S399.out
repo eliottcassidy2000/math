@@ -1,0 +1,14 @@
+SNF elementary divisors + skew-energy of S=A-A^T over iso classes
+========================================================================
+ n=3: 2 iso classes | distinct SNF 1 | distinct (SNF,energy) 1 | biggest merged cell 2
+     SNF (1, 1): 2 classes
+ n=4: 4 iso classes | distinct SNF 2 | distinct (SNF,energy) 2 | biggest merged cell 2
+     SNF (1, 1, 1, 1): 2 classes
+     SNF (1, 1, 3, 3): 2 classes
+ n=5: 12 iso classes | distinct SNF 1 | distinct (SNF,energy) 2 | biggest merged cell 8
+     SNF (1, 1, 1, 1): 12 classes
+ n=6: 56 iso classes | distinct SNF 5 | distinct (SNF,energy) 6 | biggest merged cell 16
+ n=7: 456 iso classes | distinct SNF 3 | distinct (SNF,energy) 11 | biggest merged cell 128
+
+ READING: SNF elementary divisors of the skew matrix are a cheap INTEGER invariant.
+ Compare 'distinct SNF' to iso-class count to see resolving power (1 = useless, =ncls = perfect).

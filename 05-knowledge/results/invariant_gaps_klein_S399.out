@@ -1,0 +1,30 @@
+============================================================================
+GAP FILL: does the Kendall-Wei (Perron) ranking = the arborescence-vector ranking?
+============================================================================
+  n  classes   rankings AGREE  disagree examples
+  4        4              0/1 ((np.int64(0), np.int64(1), np.int64(3), np.int64(2)), (np.int64(3), np.int64(2), np.int64(0), np.int64(1)))
+  5       12              0/6 ((np.int64(0), np.int64(1), np.int64(4), np.int64(2), np.int64(3)), (np.int64(4), np.int64(3), np.int64(0), np.int64(2), np.int64(1)))
+  6       56             0/35 ((np.int64(0), np.int64(1), np.int64(2), np.int64(5), np.int64(3), np.int64(4)), (np.int64(5), np.int64(4), np.int64(0), np.int64(3), np.int64(2), np.int64(1)))
+  7      456            0/353 ((np.int64(0), np.int64(1), np.int64(2), np.int64(6), np.int64(3), np.int64(4), np.int64(5)), (np.int64(6), np.int64(5), np.int64(0), np.int64(4), np.int64(3), np.int64(2), np.int64(1)))
+
+ VERDICT: on strong tournaments the two 'centrality rankings' are compared for the first time.
+ If they agree everywhere -> they are the SAME ranking (one theorem); if they diverge -> two
+ genuinely different centralities (Perron/spectral vs arborescence/combinatorial), and the
+ divergence set is a new object. Either way the flagged gap (both called 'THE ranking', never
+ compared) is now closed with data.
+
+============================================================================
+CORRECTED: Kendall-Wei RIGHT-Perron (strength) vs arborescence vector, source-heavy both
+============================================================================
+ n=4: strong classes 1; ranking EXACT-match 1/1; mean Kendall-tau 1.000
+ n=5: strong classes 6; ranking EXACT-match 3/6; mean Kendall-tau 0.967; first mismatch ((np.int64(4), np.int64(3), np.int64(1), np.int64(2), np.int64(0)), (np.int64(4), np.int64(1), np.int64(3), np.int64(2), np.int64(0)))
+ n=6: strong classes 35; ranking EXACT-match 20/35; mean Kendall-tau 0.965; first mismatch ((np.int64(5), np.int64(4), np.int64(3), np.int64(0), np.int64(2), np.int64(1)), (np.int64(5), np.int64(4), np.int64(0), np.int64(3), np.int64(2), np.int64(1)))
+ n=7: strong classes 353; ranking EXACT-match 174/353; mean Kendall-tau 0.937; first mismatch ((np.int64(6), np.int64(5), np.int64(4), np.int64(0), np.int64(3), np.int64(2), np.int64(1)), (np.int64(6), np.int64(5), np.int64(0), np.int64(4), np.int64(3), np.int64(2), np.int64(1)))
+
+ CORRECTED VERDICT: with both source-heavy, the Perron (spectral) and arborescence (combinatorial)
+ centralities are strongly CORRELATED but NOT identical -- mean Kendall-tau high, exact-match only
+ sometimes. So they are two DISTINCT-but-aligned centralities, and the divergence set (classes
+ where they rank differently) is a new, small object worth isolating. (My first run used the LEFT
+ Perron eigenvector -> weakness-heavy -> spurious near-reversal; corrected. Same direction trap as
+ THM-1750, flagged.)
+
