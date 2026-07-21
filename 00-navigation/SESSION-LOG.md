@@ -34,6 +34,14 @@ The joint angular x radial uniform = unbounded GMC(2). The remaining gap is the 
 induction.
 
 **Artifacts:** THM-1765; HYP-8550; 2 scripts + 2 outputs. Credits klein THM-1700.
+## boxeph-2026-07-20-S186 -- THM-1765: the FOLD-EDGE IDENTITY (Lambda'' u_c^2 = -d1 d2 v) closes (L1)'s named threat with a universal constant; (L2) ray-decay at working grade; E[P^m] HOLONOMIC/P-recursive (exact recurrences to m=71, finite moment tests, ladder = Birkhoff-Trjitzinsky) (HYP-8580)
+
+**Owner:** now work to close GMC(2) with this and other new perspectives.
+
+- FOLD-EDGE IDENTITY (3 lines): two-term Newton edge (d1,d2) => Lambda''(u_c)u_c^2 = -d1 d2 v (1+o(1)): far-end pair-sum*(1/t) -> -2/(d1 d2): O(1) universally. The S183r threat rate and the 1/t=v weight are the SAME algebraic quantity. Verified: (1,-1)->1.000; (2,-1)->2.000 exact; 3-term edge -> rescaled constant; interior collisions integrable.
+- (L2): O(t^{-1/2}) on arc-avoiding rays; two integrable singularity laws measured (1/sqrt(s); |s-s*|^{-1/2}).
+- HOLONOMIC MOMENTS: Ghat algebraic => A holonomic => P-recursive: 4 supports exact (m<=71); constant leading coeffs => finite test M=3; linear-span nullcone closed in 2 moments by recurrence alone; ladder = BT asymptotics; complements opus THM-1740 Groebner (coefficient-side vs m-side).
+- LEDGER: (L1) residual = cusp strata + assembly; (L2) residual = assembly; THM-1630 far-end flag NARROWED (localization constant only). THM-1680 sec-4 pointer updated. NO completion claim. Referee launched on 7 surfaces (edge scope, tube 2D bounds, cusp genericity, s->inf third mechanism, holonomicity boundary/object-identity, parametric uniformity, BT log-rungs); verdict files as addendum.
 
 ## mac-mini-2026-07-20-S150 -- THE MOMENT-COUNT MULTIPLIER IS THE RADIAL MULTIPLICITY, NOT THE PRIME 2: the owner's prime-family lens CORRECTS my own THM-1725 (factor 2 was the r=2 slice; M* = r*m0, verified r=1,2,3; refuted at k>=4). THM-1740.
 

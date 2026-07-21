@@ -1,0 +1,25 @@
+==============================================================================
+HOLONOMIC MOMENTS: P-recursive E[P^m] + the finite moment test
+==============================================================================
+
+(H1) P = aZ + b + cW: predicted mu_m = b mu_{m-1} + 4ac(m-1) mu_{m-2}:
+     verified m=2..60: True
+     FINITE TEST: mu_1 = b, mu_2 = b^2 + 4ac: nullcone <=> b=0 & ac=0
+     <=> one-sided. Order-2, leading coeff 1: 2 moments suffice. QED-toy.
+
+(H2) P = aZ + bW^2 + c: predicted mu_m = c mu_{m-1} + 12a^2 b (m-1)(m-2) mu_{m-3}:
+     verified m=3..60: True
+     FINITE TEST: 3 moments suffice: c = 0 & a^2 b = 0 <=> one-sided.
+
+(H3) P = aZ^2 + b + cW^2: FIT search order<=4, degree<=4:
+     recurrence: order 3, coeff degree 2; verified m<=71
+     leading q_3(m) = (1) m^0
+     integer zeros of leading coeff in [0,200): [] -> finite test M = 3
+
+(H4) P = aZ + b ZW + cW: FIT order <=3, degree <=3 from m<=28:
+     recurrence found: order 3, coeff degree 2; verified m<=71
+     leading q_3(m) = 1 m^0
+     integer zeros of leading coeff in [0,200): []
+     => finite moment test bound M = order + max(zeros, -1) + 1 = 3
+
+DONE.
