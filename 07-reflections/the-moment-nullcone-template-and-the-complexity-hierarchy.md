@@ -126,12 +126,12 @@ machinery is the general form of the tool it already trusted for tournaments.
 ## The whole ladder is binary forms (S128c131)
 
 There is a language in which every rung is one object: **the binary form and its `SL₂` GIT
-nullcone** (THM-1810).
+nullcone** (THM-1825).
 
 - A tournament's `char_A` is a degree-`n` binary form; `tr(Aᵏ)` are its coefficients
   (`SL₂`-invariants); **transitive `= xⁿ =` the maximally unstable form `=` the GIT nullcone**,
   and the entire unstable locus is exactly the `n!` transitive tournaments **for `n ≤ 6`** — but this
-  breaks at `n = 7` (THM-1810): a reducible non-transitive tournament with `char_A = x⁴(x−1)(x²+x+1)`
+  breaks at `n = 7` (THM-1825): a reducible non-transitive tournament with `char_A = x⁴(x−1)(x²+x+1)`
   is unstable via a size-4 nilpotent Jordan block. Transitive is the **deepest** nullcone point (`xⁿ`),
   not the whole unstable cone.
 - The TNC/GMC kernel `R(u)` is a degree-`D` binary form; its nullcone is one-sidedness, and its

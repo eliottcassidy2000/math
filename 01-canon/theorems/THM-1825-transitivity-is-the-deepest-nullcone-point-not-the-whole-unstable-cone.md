@@ -1,8 +1,8 @@
 ---
-id: THM-1810
+id: THM-1825
 title: "TRANSITIVITY IS THE DEEPEST NULLCONE POINT OF THE CHARACTERISTIC BINARY FORM — but NOT the whole GIT-unstable cone, which leaks at n = 7 (an honest correction of my own S128c131 conjecture). char_A(x) homogenizes to a degree-n binary form in Sym^n(ℂ²); SL₂ acts. (0) ALWAYS: transitive ⟺ char_A = xⁿ = the DEEPEST point of the GIT nullcone (a single root of multiplicity n = the rational-normal-curve vertex; transitive A is strictly triangular = nilpotent, THM-895) — this direction is unconditional and matches death-star-S75, klein-S385, mac-mini-S154, boxeph-S188. (1) FOR n ≤ 6, the UNSTABLE locus (root multiplicity > n/2, Hilbert–Mumford) is EXACTLY the n! transitive tournaments (exhaustive: 6,24,120,720, no non-transitive unstable). (2) REFUTED AT n = 7: the reducible non-transitive tournament with score sequence [0,2,2,2,4,5,6] (one 3-cycle, c₃ = 1) has char_A = x⁴(x−1)(x²+x+1), so root 0 has multiplicity 4 > n/2 = 3.5 — GIT-UNSTABLE but NOT transitive. Its transitive backbone is a single nilpotent Jordan block of size 4 (geometric mult of 0 is 1, algebraic 4). So 'unstable = transitive' is a small-n coincidence that BREAKS at n = 7, another n ≥ 7 phase transition. (3) TWO LEMMAS, PROVED, that characterise the leak: LEMMA A — a root of multiplicity μ > n/2 is an INTEGER eigenvalue (its minimal polynomial f satisfies fᵘ | char_A so deg f · μ ≤ n, forcing deg f = 1, and a rational eigenvalue of an integer matrix is an integer); the counterexample's is 0. LEMMA B — since (A−λI)+(A−λI)ᵀ = J−(1+2λ)I, and rank M ≥ ½ rank(M+Mᵀ), the geometric multiplicity g(λ) = n − rank(A−λI) ≤ ⌊n/2⌋ for every λ ∉ {(n−1)/2, −½} (in particular rank A ≥ ⌈n/2⌉); so the excess multiplicity of an unstable eigenvalue is ALWAYS Jordan structure, never a big eigenspace. The counterexample confirms: geometric mult 1, algebraic 4, one Jordan block. (4) UNCHANGED: tr(Aᵏ) = power sums = SL₂-invariants (the moment ladder is the Sym^n coefficient map); the fibers of T ↦ char_A are co-spectral classes, where H splits (THM-1780); char_S is the even companion, nullcone on the A-side only (tr S² = −n(n−1); the half-dictionary ½ moves off the Weyl axis). The Vandermonde SURVIVORS (klein-S385) = transitive is a DIFFERENT, exact-for-all-n statement about the √-discriminant covariant — not the stability cone, which is why it does not leak"
 status: >
-  RENUMBERED from THM-1805 (klein-S385's Vandermonde THM-1805 first-pushed 20:32:03, mine
+  RENUMBERED THM-1805 -> THM-1810 -> THM-1825 (TWO first-pusher bumps: klein-S385 Vandermonde took 1805; opus-S434 subquestions took 1810). Originally from THM-1805 (klein-S385's Vandermonde THM-1805 first-pushed 20:32:03, mine
   20:32:22 — 19 s later).
   (0) PROVED (transitive ⟺ nilpotent ⟺ char_A = xⁿ, classical + THM-895).
   (1) VERIFIED exhaustively n = 3..6 (unstable count = n!, all acyclic).
@@ -28,7 +28,7 @@ related: [THM-1805, THM-1725]   # THM-1805 = klein's Vandermonde (the covariant 
 script: 04-computation/tournament_binary_form_git_kps_S128c131.py, unstable_is_transitive_proof_kps_S128c132.py (+ .out)
 ---
 
-# THM-1810 — transitivity is the deepest nullcone point, not the whole unstable cone
+# THM-1825 — transitivity is the deepest nullcone point, not the whole unstable cone
 
 The clean next step from the binary-form frame was to prove "the GIT-unstable tournaments are
 exactly the transitive ones" for all `n`. **It is false — it breaks at `n = 7`** — and finding

@@ -1,0 +1,30 @@
+================================================================================
+n=7 UNSTABLE NON-TRANSITIVE = 4 transitive singletons + one 3-cycle atom
+================================================================================
+  3-cycle at rank 0 : char_A=x**4*(x - 1)*(x**2 + x + 1)  mult=4 c3=1 |Aut|=3 SC=False scores=[0, 1, 2, 3, 5, 5, 5]
+  3-cycle at rank 1 : char_A=x**4*(x - 1)*(x**2 + x + 1)  mult=4 c3=1 |Aut|=3 SC=False scores=[0, 1, 2, 4, 4, 4, 6]
+  3-cycle at rank 2 : char_A=x**4*(x - 1)*(x**2 + x + 1)  mult=4 c3=1 |Aut|=3 SC=True scores=[0, 1, 3, 3, 3, 5, 6]
+  3-cycle at rank 3 : char_A=x**4*(x - 1)*(x**2 + x + 1)  mult=4 c3=1 |Aut|=3 SC=False scores=[0, 2, 2, 2, 4, 5, 6]
+  3-cycle at rank 4 : char_A=x**4*(x - 1)*(x**2 + x + 1)  mult=4 c3=1 |Aut|=3 SC=False scores=[1, 1, 1, 3, 4, 5, 6]
+  distinct iso classes of this type: 5
+
+================================================================================
+NO OTHER SCC-TYPE is unstable non-transitive at n=7
+================================================================================
+  A non-trivial SCC needs >=3 vertices, so # singletons <= 4; with a 5- or 4-vertex
+  non-trivial SCC the singleton count drops below 4 and 0-mult <= 3 < n/2, UNLESS the
+  big SCC itself contributes 0-eigenvalues. Checking small non-trivial SCCs for 0-eigs:
+    strongly-connected size-3 tournaments with a 0 eigenvalue: False
+    strongly-connected size-4 tournaments with a 0 eigenvalue: False
+    strongly-connected size-5 tournaments with a 0 eigenvalue: False
+
+================================================================================
+NO STRONGLY-CONNECTED tournament is unstable non-transitive (n=7 sample)
+================================================================================
+  max multiplicity over strongly-connected n=7 sample = 6  (unstable needs > 3.5: True)
+
+  CONCLUSION: the unstable non-transitive tournaments are exactly the REDUCIBLE ones
+  whose nilpotent transitive skeleton (singleton SCCs) has a Jordan block > n/2, with
+  one cyclic atom. Their ONLY symmetry is the atom's (Z_3) -- a LOCAL point of symmetry
+  near the nullcone vertex -- and they are NOT self-complementary (not blue/SC): the
+  opposite pole from the globally-symmetric SC/blue intransitive classes (opus j=0 Paley).

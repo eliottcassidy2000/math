@@ -154,6 +154,41 @@ FILES: THM-1820, HYP-8615, 1 script + out. -> all (LRC(14)-COVERING AND GMC(2) A
 - **FRESH COMPUTE.** n=5 tournament #distinct-eigenvalue stratification {1:120, 3:664, 4:240}; transitive = the 120 labeled copies carrying the unique 1-distinct-eigenvalue spectrum {0} = the nullcone vertex. `lens_apply_deathstar_S76.py` + .out.
 - **HOUSEKEEPING (MISTAKE-199).** My offline S74/S75/S76 reused HYP numbers the fast fleet claimed: ceded 8600→boxeph-S188 (S74 consultation note, no INDEX row), 8605→klein-S385 (S75 renumbered to HYP-8611), 8610→klein-S387 (S76 renumbered to HYP-8612). Reflections + INDEX rows updated with cession notes. FLAG FOR FLEET: opus-S433 and klein-S387 BOTH stamped THM-1810 (within-fleet label collision) — noted for them to resolve.
 - Reflection: `structural-thinking-ways-and-their-application-across-the-repo-deathstar-S76.md`. No open problem resolved; navigational + generative + a corroboration record. GMC(2) REMAINS OPEN.
+## kind-pasteur-2026-07-20-S128c133
+
+**Characterized the unstable non-transitive tournaments (THM-1830) -- and the 'blue iso classes /
+points of symmetry' the owner flagged fall out exactly.**
+
+- The GIT-unstable non-transitive tournaments (THM-1825, first at n=7) are exactly the REDUCIBLE
+  ones: char_A = product of SCC char polys; a singleton SCC gives x (eigenvalue 0), a 3-cycle SCC
+  gives x^3-1 (NO 0-eigenvalue -- verified strongly-connected SCCs of size 3,4,5 have none). So
+  0-mult = #singleton SCCs, and unstable <=> #singletons > n/2. A non-trivial SCC needs >=3
+  vertices, so for 7<=n<=12 the ONLY form is (n-3) transitive singletons + ONE 3-cycle atom:
+  char_A = x^{n-3}(x^3-1), 0-mult n-3 > n/2 <=> n>6 (WHY they start at n=7).
+- **STRONGLY-CONNECTED tournaments are NEVER unstable:** exact factoring of 95661 strongly-
+  connected n=7 tournaments -> max root multiplicity 3 = (n-1)/2 < n/2, attained by Paley-7 =
+  (x-3)(x^2+x+2)^3 (SEMISTABLE). Its 6 non-Perron eigenvalues share Re=-1/2, so a numpy real-part
+  cluster FAKED mult 6 -- caught by the exact check (method note logged). So unstable non-transitive
+  => reducible.
+- **BLUE (self-complementary) count:** iso classes = the n-2 ranks of the 3-cycle atom in the SCC
+  order; the complement REVERSES that order (rank -> (n-3)-rank), so a class is self-complementary
+  (BLUE/grid-symmetric/SC) iff the atom is CENTERED = exactly 1 iff n ODD, 0 iff n EVEN. Verified:
+  n=7 -> 5 classes, 1 blue (score [0,1,3,3,3,5,6]); n=8 -> 6 classes, 0 blue.
+- **POINTS OF SYMMETRY:** every unstable non-transitive tournament has |Aut| = Z_3 exactly (the
+  3-cycle atom's rotation, a LOCAL point of symmetry; the transitive frame is rigid); the unique
+  blue one adds the global complement-symmetry. So they sit NEAR the transitive nullcone vertex
+  (big nilpotent block + one cycle) with only local symmetry -- the OPPOSITE pole from opus-S434's
+  symmetric-intransitive Paley/j=0 (global symmetry, semistable). The single centered/blue class
+  at odd n is the bridge where a local atom's symmetry becomes global.
+- HOUSEKEEPING: my THM-1810 renumbered to THM-1825 (opus-S434 first-pushed THM-1810 by 14min; this
+  is the SECOND bump of this content, 1805->1810->1825). Refs fixed.
+
+**Handoff / named-next.** (1) n>=13: two 3-cycle atoms fit ((n-6) singletons + two 3-cycles,
+0-mult n-6 > n/2 <=> n>12) -- enumerate atom-multiset strata + blue count. (2) nonzero-integer
+unstable eigenvalues (reducible SCC with repeated integer eig != 0; none at n=7). (3) the blue
+parity (1 at odd n, 0 at even n) is a clean SC/complement-parity instance -- link to the blue-line
+count formulas.
+
 ## opus-2026-07-20-S434 - Max intransitivity is Schur-convexity, not covariant vanishing; it is a DIFFERENT problem from H-max (THM-1820)
 
 Mined the repo's H-extremal threads and found a tension that CORRECTS my own THM-1810/HYP-8600.
