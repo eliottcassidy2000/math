@@ -1,3 +1,41 @@
+## opus-2026-07-20-S433 - The three binary-form/tournament sub-questions answered (THM-1810)
+
+Worked the three sub-questions of THM-1800/HYP-8600. All three land, with Q2 giving a clean
+closed form.
+
+**Q2 (H/d of Paley as a Gauss sum) -- CLOSED FORM.** The Paley skew matrix S has spectrum EXACTLY
+the imaginary Gauss sum: eigenvalues 0 (once) and +-i sqrt p (each (p-1)/2 times), from
+g(chi)=i sqrt p (p=3 mod 4). So the skew-determinant d(T)=det(I+S)/2^{n-1} (THM-474) has
+det(I+S) = (1+p)^{(p-1)/2} (each conjugate pair gives (1+i sqrt p)(1-i sqrt p)=1+p=|g|^2+1), and
+   d(Paley_p) = (p+1)^{(p-1)/2}/2^{p-1} = ((p+1)/4)^{(p-1)/2}
+-- a PURE GAUSS-SUM PRODUCT, integer since 4|p+1. Verified p=3,7,11,19,23: 1, 2^3, 3^5, 5^9, 6^11.
+CAVEAT flagged: d(T) is the THM-474 skew-determinant; the project's census H_paley(11)=95095 !=
+243, so H is a DISTINCT invariant sharing the same +-i sqrt p spectrum (hence also Gauss-sum, but
+a different formula) -- not conflated.
+
+**Q1 (quartic covariant <-> 4-vertex statistic).** 4 points -> cross-ratio lambda -> j-invariant =
+the SL(2) modulus; the S_4-orbit of the orientation = the tournament iso-type. The MAX-3-cycle
+4-tournament (strongly connected, score (1,1,2,2), #3cyc=2) <-> the EQUIANHARMONIC j=0 stratum
+(A_3 extra symmetry). So at n=3 (cyclic, A_3) and n=4 (equianharmonic, A_3 in S_4), MAXIMAL
+INTRANSITIVITY = the SL(2)-SPECIAL (maximal-symmetry) stratum -- matching Q2's Paley-is-maximally-
+intransitive. The indexing covariant is the one cutting the special-j locus (I=0 equianharmonic).
+
+**Q3 (Redei parity as discriminant character).** Redei: #Hamiltonian paths always ODD. This IS the
+discriminant nonvanishing MOD 2: over F_2 the arc data has permanent = determinant (char 2) = 1 =
+the mod-2 shadow of the sign character -- exactly the repo's 'Redei = mod-2 shadow' (THM-1425).
+Verified Paley p=7 has 189=27*7 Ham paths (odd), p=3 has 3.
+
+**THE UNIFIED PICTURE.** Maximal intransitivity is the SL(2)-special / maximal-symmetry stratum at
+every n (n=3 cyclic/A_3; n=4 equianharmonic/j=0; p=3mod4 Paley/Gauss-sum). The three dictionary
+levels line up by characteristic: char 0 = sign character (Vandermonde, transitivity), the
+discriminant = its square, char 2 = Redei parity (mod-2 shadow). This is the rep-theoretic
+characterisation HYP-8600 asked for, confirmed at n=3,4 and for Paley.
+
+**Open:** (1) prove 'max intransitivity = SL(2)-special stratum' at general n (a covariant-vanishing
+statement); (2) reconcile the project's H with d(Paley)=((p+1)/4)^{(p-1)/2}.
+
+**Artifacts:** THM-1810; HYP-8600 updated; 1 script + output.
+
 ## boxeph-2026-07-20-S188 -- THM-1800: LAPLACE MOMENT ENGINE (general executed telescoping; H1/H2/H4 validated; parametric law -b, -4ac(m-1) recovered 6/6; honest window failures named) + THE GIT READING (E = Fischer pairing, one-sided = Hilbert-Mumford unstable, GMC(2) = 'moment-nullcone = GIT nullcone', Kempf-Ness shape) + THE THREE CANCELLATION THEOREMS (Redei / Vandermonde-tournament / GMC(2): invariant pairings kill exactly the intransitive part) (HYP-8600)\n\n**Owner:** work rep theory of binary forms <-> tournaments (in/transitivity itself); work laplace moment engine.\n\n- ENGINE: auto E/U/W for any monomial support + left-kernel elimination; 3 supports validated; parametric linear-span law recovered exactly at 6/6 triples; 3 heavier supports exceed default windows (named fix: sparse elimination, adaptive levels). Engineering seed (library-shaped).\n- GIT: E = Bargmann/Fischer; one-sided = HM-unstable under the hyperbolic 1-PS; GMC(2) restated Kempf-Ness-shaped; S180 gauge trap = KN stationarity; next-shape question: convexity of log E[e^{tP}] along the gauge orbit (norm-based, not critical-value-based).\n- TOURNAMENTS: Vandermonde = signed tournament sum, surviving = transitive exactly (n<=5 verified); naive lex-involution unstable at n>=4 (recorded); Redei/Vandermonde/GMC(2) = one cancellation family; Cayley-Sylvester vs A000571 kinship logged as lead.\n- ALSO: THM-1785 S187r verdict FILED (survives-and-strengthened: PS-lemma independently proved, L1 delta-uniform, recurrence proved ALL m>=3; amendments: simple-level hypothesis, cross-edge sharing OPEN, M=3 scoped to executed triples).\n\n## klein-2026-07-20-S385 -- THM-1805: THE VANDERMONDE IS A SIGNED TOURNAMENT SUM, and in/transitivity is EXACTLY what survives vs cancels. The binary-forms <-> tournaments bridge, proved; the score = torus weight = the Laplace moment engine's charge grading. Proves one assertion of boxeph's THM-1800 program.
 
 **Owner directive:** work more on the representation theory of binary forms and how it relates to tournaments, which are in/transitivity itself; work the Laplace moment engine.

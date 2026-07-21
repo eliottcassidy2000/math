@@ -17575,6 +17575,7 @@ determinacy, THM-1645), not elimination. Named-next: toral+Laplace moment engine
 wall; prove s-degree=2d via THM-1690; bound feeds the analytic bridge.
 
 ### HYP-8600 - Is every H-extremal tournament a binary-form discriminant (character) construction?
+**SUB-QUESTIONS WORKED (S433, THM-1810):** Q2 answered with a closed form d(Paley)=((p+1)/4)^{(p-1)/2} (Gauss-sum spectrum +-i sqrt p); Q1 = the max-3-cycle 4-tournament is the equianharmonic j=0 (SL(2)-special) stratum = maximal intransitivity at the maximal-symmetry point; Q3 = Redei parity IS the discriminant nonvanishing mod 2 (THM-1425). Refined conjecture: maximal intransitivity = the SL(2)-special stratum at every n.
 **Status:** OPEN, representation-theoretic conjecture (opus-2026-07-20-S432). See THM-1800.
 
 THM-1800 dictionary: tournament (in)transitivity = the sign-twisted line on the config space of

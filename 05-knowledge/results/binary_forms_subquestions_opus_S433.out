@@ -1,0 +1,39 @@
+==========================================================================
+SUB-Q2: Paley SPECTRUM = imaginary Gauss sum +-i*sqrt(p); H = det(I+S)/2^{n-1}
+==========================================================================
+  p= 3: nonzero eigenvalues ~ +-i*1.732 (= +-i*sqrt(p)); det(I+S)=4 = (1+p)^{(p-1)/2}=4? True;  H=1 = {}
+  p= 7: nonzero eigenvalues ~ +-i*2.646 (= +-i*sqrt(p)); det(I+S)=512 = (1+p)^{(p-1)/2}=512? True;  H=8 = {2: 3}
+  p=11: nonzero eigenvalues ~ +-i*3.317 (= +-i*sqrt(p)); det(I+S)=248832 = (1+p)^{(p-1)/2}=248832? True;  H=243 = {3: 5}
+  p=19: nonzero eigenvalues ~ +-i*4.359 (= +-i*sqrt(p)); det(I+S)=512000000000 = (1+p)^{(p-1)/2}=512000000000? True;  H=1953125 = {5: 9}
+  p=23: nonzero eigenvalues ~ +-i*4.796 (= +-i*sqrt(p)); det(I+S)=1521681143169024 = (1+p)^{(p-1)/2}=1521681143169024? True;  H=362797056 = {2: 11, 3: 11}
+  => det(I+S) = (p+1)^{(p-1)/2} (product of (1+i sqrt p)(1-i sqrt p)=1+p over (p-1)/2 pairs)
+     so H_Paley(p) = (p+1)^{(p-1)/2} / 2^{p-1} = ((p+1)/4)^{... } -- a pure GAUSS-SUM
+     spectral product |g(chi)|^2 = p per conjugate pair. Sub-Q2 answered: H is spectral,
+     spectrum is the Gauss sum, H = (p+1)^{(p-1)/2}/2^{p-1}.
+
+==========================================================================
+SUB-Q1: 4 points -> cross-ratio / j-invariant (SL(2) modulus) vs 4-vertex tournament
+==========================================================================
+  Binary quartic invariants: I (deg 2), J (deg 3), j = I^3/(I^3-27J^2/...) the modulus.
+  The tournament on 4 labelled vertices from 4 real points x1<x2<x3<x4 on the line is
+  TRANSITIVE (the order). To get intransitivity you need a non-real / cyclic config.
+  Score sequences of 4-tournaments: (0,1,2,3) transitive; (1,1,1,3),(0,2,2,2);
+  (1,1,2,2) the strongly-connected 'quasi-random'. #3-cycles: 0,1,1,2 respectively.
+  The SL(2) match: the CROSS-RATIO lambda of 4 points, under S_4 permutation, takes the
+  6 values {lambda, 1-lambda, 1/lambda, ...}; the ANHARMONIC (S_3-symmetric) j-invariant
+  is the S_4-invariant. The 4-vertex tournament's iso-type is the S_4-orbit of the
+  orientation = the j-invariant STRATUM (generic j <-> quasi-random (1,1,2,2); special
+  j=0 (equianharmonic, A_3 symmetry) <-> the doubly-regular / max-3-cycle type).
+  VERIFY: the 4-vertex tournament with MAX 3-cycles (=2) is the strongly connected
+  (1,1,2,2); it is the near-regular = the equianharmonic/j=0 stratum analog (max symmetry).
+
+==========================================================================
+SUB-Q3: Redei parity (#Ham paths ODD) as a determinant/character statement
+==========================================================================
+  Paley p=3: #Hamiltonian paths = 3, parity = 1 (Redei: always ODD)
+  Paley p=7: #Hamiltonian paths = 189, parity = 1 (Redei: always ODD)
+  Redei's theorem: #Ham paths is odd. As a character statement: mod 2, the tournament
+  arc matrix A satisfies A + A^T = J - I, and the Ham-path count mod 2 = per(A restricted)
+  mod 2 = det mod 2 (char 2: per=det), and over F_2 the Vandermonde/discriminant structure
+  gives det = 1 -> odd. The 'discriminant character' is the F_2 shadow (THM-1425 Redei =
+  mod-2 shadow): Redei parity IS the discriminant nonvanishing mod 2.
