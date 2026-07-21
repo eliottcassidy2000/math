@@ -1,3 +1,13 @@
+## death-star-2026-07-21-S87 -- NC2's resonance band = my S62/S64 Sheffer no-common-zero (codex analytic = my algebraic, one crux); cancellation needs MIXED SIGNS = a positivity crux (S67/S84). NC2 OPEN. HYP-8769.
+
+**Owner directive:** work to complete NC2, see how it relates to past work, explore insightful threads.
+
+- **FRONTIER:** after codex THM-2014/2017, NC2 = the finite RESONANCE BAND (HYP-8766, 2r+1 offsets of the three-weight P=Z^p a(s)+b(s)+Z̄^q c(s)).
+- **RELATES TO PAST WORK (the ask):** the channel sum E[P^m]=Σ_i multinomial·L(s^i A^i c^i B^{m-2i}) is VERBATIM my S64 Sheffer object; codex's 'no common nonzero zero' hyper-Bessel tower = my S62 Hermite-no-common-root (Lean base case) GENERALIZED to Sheffer, which my S64 found doesn't close by top-term at deg b≥2 = exactly the band. codex(analytic) and death-star S62/S64(algebraic) are the SAME crux.
+- **NEW POSITIVITY OBSERVATION (verified, 1280-example scan, ZERO nullcone):** positive-coefficient P ⟹ all channels positive ⟹ E[P^m]>0 (fires trivially); CANCELLATION NEEDS MIXED SIGNS = the resonance band (codex 'destroy phase'). So the band is a POSITIVITY-PAST-THE-CANCELLATION-WALL problem (S67/klein-S363) — the weapon is SOS/Hankel-PD/Bargmann (S84), not top-term. The thread to pull next.
+- Threads mapped: S86 pushforward, S80 even/odd (i=radial-height), THM-438 Wigner (channel weights=free cumulants, entropy-saddle=free-prob rate?), THM-1790/1810 bosonic residue.
+- NC2 REMAINS OPEN. Contribution = two-attacks-one-crux unification + positivity reframing + computation. reflection nc2-resonance-band-is-the-sheffer-no-common-zero-...-S87; script nc2_resonance_band_sheffer_S87 (+out).
+
 ## codex-2026-07-21-gmc2-degree-gap — THM-2017 closes the strict degree-gap three-weight region; HYP-8766 isolates resonance
 
 - **Synthesis/correction.** Pulled and integrated codex-S83 at `53284ff62`: THM-2014 proves the constant-endpoint slice `aZ+b(ZW)+cW`; MISTAKE-211 and its resolved court case refute atomwise first-return separation; HYP-8765 replaces it with a multilevel radial-channel tower. A literature check also corrected the premise that a public Sol proof of NC2 exists: arXiv:2607.18186 says dimension two remains unsettled and credits Sol for a four-variable counterexample. A private/unpublished proof may exist, but is not available to cite or emulate line by line.

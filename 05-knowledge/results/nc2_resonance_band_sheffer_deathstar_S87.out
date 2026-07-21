@@ -1,0 +1,25 @@
+Central-offset resonance band: P=Z*(a0+a1 s)+(b0+b1 s)+W*c0, charges {+1,0,-1},
+deg h=deg(s*A*c0)=2 = r*deg B=2*1 (central). Scan small integer coeffs for a
+NULLCONE element (E[P^m]=0 for all m<=12) among TWO-SIDED P:
+
+  two-sided NULLCONE elements found (E[P^m]=0 all m<=12): 0
+  first-fire depth histogram: {1: 1024, 2: 252, 3: 4}
+  total scanned: 1280
+
+Channel structure for P=Z*(1+s)+(1+s)+W*1 (a0=a1=b0=b1=c0=1):
+  m=1: E[P^m]=2  channels(i=0..0)=['2']
+  m=2: E[P^m]=21  channels(i=0..1)=['5', '16']
+  m=3: E[P^m]=244  channels(i=0..1)=['16', '228']
+  m=4: E[P^m]=8513  channels(i=0..2)=['65', '2544', '5904']
+  m=5: E[P^m]=255246  channels(i=0..2)=['326', '27400', '227520']
+  m=6: E[P^m]=16176277  channels(i=0..3)=['1957', '303360', '5877360', '9993600']
+  m=7: E[P^m]=882352976  channels(i=0..3)=['13700', '3534636', '130767840', '748036800']
+  m=8: E[P^m]=83905418529  channels(i=0..4)=['109601', '43730848', '2739754080', '34786483200', '46335340800']
+
+READING: ZERO two-sided nullcone elements at the central offset (NC2 holds on the
+scan). The channel sum E[P^m]=sum_i (Sheffer channels) is the S64 object; each channel
+is a factorial-weighted L-moment. codex's 'no common nonzero zero' of the hyper-Bessel
+tower = the S62 Hermite-no-common-root generalized to this Sheffer/Legendre hierarchy
+(my S64: it does NOT close by top-term alone at deg b>=2 -- exactly codex's resonance
+band). NC2 REMAINS OPEN there; the algebraic (Sheffer) and analytic (Bessel) attacks
+are the SAME 'no common zero' crux.
