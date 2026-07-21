@@ -7,8 +7,8 @@ THREAD A (L3 coordinate): what separates the deep-continuum tournaments that sha
    (score, char_A, |R|)?  Test LOCAL SUBTOURNAMENT DENSITIES (the k-profile = induced-subtournament
    census), i.e. the flag/limit-theory coordinates. Find the minimal k that completes resolution.
 THREAD B (reducibility ceiling): max c3 over REDUCIBLE (non-strong) tournaments = c3_max(n-1)
-   [cyclic content lives in strong components, biggest has <= n-1 vertices]. => condensation
-   temperature tau_c = c3_max(n-1)/c3_max(n).
+   [cyclic content is SCC-additive and discrete convexity concentrates the SCC-size partition at
+   (n-1)+1]. => condensation temperature tau_c = c3_max(n-1)/c3_max(n).
 THREAD C (H vs temperature): mean/max/spread of H per iso-cyclic shell -- locate the H structure on
    the temperature axis (death-star-S84 H>=disc binding case = quasirandom = tau=1).
 """
@@ -122,7 +122,7 @@ for n in range(4,8):
     maxred=max(c3v(A,n) for A in red)
     print("  n=%d: max reducible c3 = %d ; c3_max(n-1) = %d ; equal? %s ; tau_c=c3_max(n-1)/c3_max(n)=%s"
           %(n, maxred, c3max[n-1], maxred==c3max[n-1], Fr(c3max[n-1],c3max[n])))
-print("  => PROVED shape: c3(T)=sum c3(SCC) <= c3_max(largest SCC) <= c3_max(n-1); above it every class is strong.")
+print("  => PROVED shape: c3(T)=sum c3(SCC); discrete convexity concentrates every nontrivial SCC-size partition at (n-1)+1; above the resulting ceiling every class is strong.")
 
 # ---------------- THREAD C ----------------
 print("\n"+"="*92); print("THREAD C  H vs cyclic temperature: H structure per iso-cyclic shell (locate death-star's binding)")

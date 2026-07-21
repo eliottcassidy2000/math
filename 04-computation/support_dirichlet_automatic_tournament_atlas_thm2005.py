@@ -5,7 +5,8 @@ Paper topology and classical convergence theorems stay in the theorem text.
 This program freezes the finite Abel identities, support/multiplicity collision
 ledger, dyadic block bounds, polygonal and master-figurate algebra, exact
 simplex tails, Abel--Dini integer lifts, Egyptian refinements, Sylvester
-remainders, and the tournament maximum-cyclic-triangle reciprocal constant.
+remainders, and the tournament maximum-cyclic-triangle reciprocal constant,
+condensation hazard profile, and parity-shuffle tax.
 """
 
 from __future__ import annotations
@@ -799,7 +800,7 @@ def primitive_forcade_census_audit() -> tuple[int, int, int, tuple[str, ...]]:
     return primitive_rows, forcade_rows, census_rows, summaries
 
 
-def tournament_sequence_audit() -> tuple[str, str, str]:
+def tournament_sequence_audit() -> tuple[str, ...]:
     odd_partial = mp.nsum(
         lambda index: mp.mpf(6) / (index * (index + 1) * (2 * index + 1)),
         [1, mp.inf],
@@ -813,6 +814,140 @@ def tournament_sequence_audit() -> tuple[str, str, str]:
     require(abs(odd_partial - odd_closed) < mp.mpf("1e-52"), "odd max-c3 mass failed")
     require(abs(even_partial - even_closed) < mp.mpf("1e-52"), "even max-c3 mass failed")
 
+    def maximum_c3(order: int) -> int:
+        if order % 2:
+            return order * (order * order - 1) // 24
+        return order * (order * order - 4) // 24
+
+    differences = [
+        maximum_c3(order) - maximum_c3(order - 1) for order in range(1, 161)
+    ]
+    require(
+        all(left <= right for left, right in zip(differences, differences[1:])),
+        "maximum-c3 discrete convexity failed",
+    )
+    convexity_rows = len(differences) - 1
+    for total in range(2, 81):
+        for left in range(total + 1):
+            right = total - left
+            require(
+                maximum_c3(left) + maximum_c3(right) <= maximum_c3(total),
+                "maximum-c3 superadditivity failed",
+            )
+            convexity_rows += 1
+        if total >= 4:
+            for left in range(1, total):
+                right = total - left
+                require(
+                    maximum_c3(left) + maximum_c3(right)
+                    <= maximum_c3(total - 1),
+                    "reducibility two-part ceiling failed",
+                )
+                convexity_rows += 1
+
+    condensation_product = F(1)
+    for order in range(4, 81):
+        condensation_product *= F(maximum_c3(order - 1), maximum_c3(order))
+        require(
+            condensation_product == F(1, maximum_c3(order)),
+            "THM-2016 condensation product failed",
+        )
+    ceiling_mass = sum((F(1, maximum_c3(order - 1)) for order in range(4, 81)), F(0))
+    maximum_mass = sum((F(1, maximum_c3(order)) for order in range(3, 80)), F(0))
+    require(ceiling_mass == maximum_mass, "reducibility-ceiling shift failed")
+
+    hazard_denominators: list[int] = []
+    normalized_defect_sum = F(0)
+    tournament_prefix = F(1)
+    tournament_partition = F(1)
+    for order in range(4, 82):
+        tau = F(maximum_c3(order - 1), maximum_c3(order))
+        expected_tau = (
+            F(order - 1, order + 2) if order % 2 == 0 else F(order - 3, order)
+        )
+        require(tau == expected_tau, "condensation parity formula failed")
+        hazard_denominator = F(3) / (1 - tau)
+        require(hazard_denominator.denominator == 1, "hazard denominator not integral")
+        hazard_denominators.append(hazard_denominator.numerator)
+
+        normalized_defect_sum += (1 - tau) / 3
+        expected_defect_sum = (
+            harmonic(order + 1) - harmonic(4)
+            if order % 2
+            else harmonic(order) - harmonic(4) + F(1, order + 2)
+        )
+        require(
+            normalized_defect_sum == expected_defect_sum,
+            "harmonic hazard partial sum failed",
+        )
+
+        tournament_prefix *= tau
+        require(
+            tournament_prefix == F(1, maximum_c3(order)),
+            "harmonic hazard prefix product failed",
+        )
+        tournament_partition += tournament_prefix
+
+    require(
+        sorted(hazard_denominators) == list(range(5, 83)),
+        "harmonic hazard support is not the cofinite interval",
+    )
+    for exponent in range(1, 5):
+        hazard_profile = sum(
+            (F(1, denominator**exponent) for denominator in hazard_denominators),
+            F(0),
+        )
+        cofinite_profile = sum(
+            (F(1, denominator**exponent) for denominator in range(5, 83)),
+            F(0),
+        )
+        require(hazard_profile == cofinite_profile, "finite hazard profile failed")
+
+    sorted_prefix = F(1)
+    sorted_partition = F(1)
+    for denominator in range(5, 83):
+        sorted_prefix *= F(denominator - 3, denominator)
+        require(
+            sorted_prefix
+            == F(24, (denominator - 2) * (denominator - 1) * denominator),
+            "sorted hazard prefix failed",
+        )
+        sorted_partition += sorted_prefix
+    finite_shuffle_tax = sum(
+        (
+            F(
+                72,
+                (2 * index - 2)
+                * (2 * index - 1)
+                * (2 * index)
+                * (2 * index + 1)
+                * (2 * index + 2),
+            )
+            for index in range(2, 41)
+        ),
+        F(0),
+    )
+    require(
+        tournament_partition - sorted_partition == finite_shuffle_tax,
+        "finite parity-shuffle tax failed",
+    )
+    shuffle_tax = mp.nsum(
+        lambda index: mp.mpf(72)
+        / (
+            (2 * index - 2)
+            * (2 * index - 1)
+            * (2 * index)
+            * (2 * index + 1)
+            * (2 * index + 2)
+        ),
+        [2, mp.inf],
+    )
+    shuffle_closed = mp.mpf(67) / 4 - 24 * mp.log(2)
+    require(
+        abs(shuffle_tax - shuffle_closed) < mp.mpf("1e-52"),
+        "infinite parity-shuffle tax failed",
+    )
+
     q = mp.mpf(1) / 2
     theta_sum = mp.nsum(lambda index: q ** (index * (index + 1) / 2), [0, mp.inf])
     theta_product = mp.nprod(
@@ -823,6 +958,12 @@ def tournament_sequence_audit() -> tuple[str, str, str]:
     return (
         f"max_c3_odd={mp.nstr(odd_closed, 25)}",
         f"max_c3_all={mp.nstr(odd_closed + even_closed, 25)}",
+        f"reducibility_convexity_rows={convexity_rows}",
+        "condensation_product_N80="
+        f"{condensation_product}=1/M3(80)",
+        f"harmonic_hazard_q4_to_q11={tuple(hazard_denominators[:8])}",
+        "harmonic_hazard_profile=zeta(s)-H4^(s);abscissa=1",
+        f"parity_shuffle_tax={mp.nstr(shuffle_closed, 25)}",
         f"tournament_theta={mp.nstr(theta_sum, 25)}",
     )
 

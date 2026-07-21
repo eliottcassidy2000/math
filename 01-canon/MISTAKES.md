@@ -35,6 +35,30 @@ Format per entry:
 
 ---
 
+## MISTAKE-213 (2026-07-21, codex audit of THM-2016) -- SCC additivity was incorrectly bounded by the largest component alone
+
+- **What was claimed:** the original proof of THM-2016's correct reducibility
+  ceiling used
+  `sum_S c3(S) <= M_3(max_S |S|)`, where the sum runs over strong
+  components.  It then bounded the largest component order by `n-1`.
+- **Why it is wrong:** distinct SCCs can each contain cyclic triples.  The
+  ordered join of two directed triangles has two SCCs and `c3=2`, whereas
+  `M_3(3)=1`; SCC additivity does not allow all but the largest summand to be
+  discarded.  The exhaustive values through order seven verified the theorem
+  statement but did not prove this inequality.
+- **Correct framing:** extend `M_3(0)=M_3(1)=M_3(2)=0`.  Its successive
+  differences are
+  `Delta M_3(2m)=m(m-1)/2` and
+  `Delta M_3(2m+1)=m(m+1)/2`, hence are nondecreasing.  Therefore `M_3` is
+  superadditive, and the convex function
+  `M_3(s)+M_3(n-s)` is largest at `s=1` or `n-1`.  Combining an arbitrary
+  nontrivial SCC-size partition down to two parts now proves
+  `sum_S M_3(|S|)<=M_3(n-1)`.  Joining an extremal `(n-1)`-tournament to a
+  singleton gives equality.  THM-2016 now contains this repaired proof; its
+  ceiling and the THM-2005 condensation identities are unchanged.
+
+---
+
 ## MISTAKE-211 (2026-07-21, codex GMC(2) audit) -- distinct return atoms were treated as separate equations inside one scalar Gaussian moment
 
 - **What was claimed:** THM-1770(B) said that because distinct minimal balanced

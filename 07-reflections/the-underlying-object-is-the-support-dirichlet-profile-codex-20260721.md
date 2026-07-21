@@ -86,6 +86,8 @@ integer supports.
 | centered polygonal `1+kn(n-1)/2` | digamma difference; `k=8` is `pi^2/8` | proved |
 | master figurate `(s,d)` | beta double integral, mass in `(1,d/(d-1)]` | proved |
 | max tournament `c3` | `75/4-24 log 2` | proved |
+| reducibility ceilings `M_3(n-1)` | same mass; cumulative product of THM-2016 condensation ratios | proved |
+| condensation defects `3/(1-tau_c(n))` | word `6,5,8,7,...`; support `{5,6,...}` and profile `zeta(s)-H_4^(s)` | proved |
 | Forcade-order tournament arcs | `2E-2`, `E` Erdős--Borwein | proved |
 | labeled tournament denominators | Ramanujan `psi_R(1/2)` product | proved |
 | switching denominators | same support; indexed row has one collision | proved |
@@ -111,6 +113,15 @@ So the reciprocal shadow of a Vandermonde tail is itself a positive weighted
 tail, not merely a changed decimal.  This is the clean bridge back to the
 repo's truncation and tail machinery.
 
+The condensation word supplies the sharpest guardrail on the support thesis.
+The defect denominators `6,5,8,7,...` and their sorted version `5,6,7,8,...`
+have exactly the same support Dirichlet profile.  But applying the ordered
+prefix-product transform gives partition sums `75/4-24 log 2` and `2`, whose
+difference is the positive parity-shuffle tax `67/4-24 log 2`.  Thus the
+support profile is the complete additive reciprocal object, not a universal
+sufficient statistic for order-sensitive transforms.  The missing coordinate
+there is the hazard word (equivalently, its prefix-survival path).
+
 ## Tournament viewpoint and challenged vertices
 
 On a finite family of distinct supports, order first by scalar mass and break
@@ -122,12 +133,14 @@ sequence values should be vertices is as lossy as assuming runners must be
 vertices in LRC work.
 
 We compared terms, distinct values, multiplicity collisions, dyadic blocks,
-counting events, residue-class clocks, automaton states, Egyptian moves, and
-proof obligations.  Bounded-ratio occupancy blocks are a faithful vertex
-choice that preserves the convergence predicate.  The Dirichlet profile is their
-sidecar; chronological block scale is the tie Hamiltonian path.  Projecting
-to `D_A(1)` destroys exactly the information needed to distinguish Bertrand
-tails, automatic dimensions, and Egyptian-equivalent supports.
+counting events, residue-class clocks, automaton states, Egyptian moves,
+condensation hazards, and proof obligations.  Bounded-ratio occupancy blocks
+are a faithful vertex choice that preserves the convergence predicate.  The
+Dirichlet profile is their sidecar; chronological block scale is the tie
+Hamiltonian path.  Projecting to `D_A(1)` destroys exactly the information
+needed to distinguish Bertrand tails, automatic dimensions, and
+Egyptian-equivalent supports; forgetting the hazard order additionally
+destroys prefix-product partition functions.
 
 ## What remains worth computing
 

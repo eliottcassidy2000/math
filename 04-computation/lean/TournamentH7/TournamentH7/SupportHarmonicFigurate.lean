@@ -12,7 +12,8 @@
     * triangular and triangular-square reciprocal decompositions;
     * the cross-multiplied square-pyramidal numerator cancellation;
     * the odd/even maximum-cyclic-triple denominator algebra and reciprocal
-      decompositions (but not the tournament extremality theorem itself);
+      decompositions, including the two condensation-ratio defects (but not
+      the tournament extremality theorem itself);
     * the `k^2 - 1` ladder decomposition; and
     * the finite multiplicative-block reciprocal sandwich, including its
       dyadic specialization.
@@ -147,6 +148,45 @@ theorem even_max_c3_reciprocal_split {m : ℚ}
   field_simp [hmm1, hm, hmp1]
   ring
 
+/-- At even tournament order `2m`, the ratio of consecutive algebraic
+maximum-`c3` denominators is `(2m-1)/(2m+2)`.  THM-2016 supplies the separate
+tournament statement that this ratio is the reducibility temperature. -/
+theorem even_condensation_ratio {m : ℚ}
+    (hmm1 : m - 1 ≠ 0) (hm : m ≠ 0) (hmp1 : m + 1 ≠ 0) :
+    oddMaxC3Denom (m - 1) / evenMaxC3Denom m =
+      (2 * m - 1) / (2 * m + 2) := by
+  rw [odd_max_c3_denom_factor, even_max_c3_denom_factor]
+  field_simp [hmm1, hm, hmp1]
+  ring
+
+/-- At odd tournament order `2m+1`, the consecutive denominator ratio is
+`(2m-2)/(2m+1)`. -/
+theorem odd_condensation_ratio {m : ℚ}
+    (hm : m ≠ 0) (hmp1 : m + 1 ≠ 0) :
+    evenMaxC3Denom m / oddMaxC3Denom m =
+      (2 * m - 2) / (2 * m + 1) := by
+  rw [even_max_c3_denom_factor, odd_max_c3_denom_factor]
+  field_simp [hm, hmp1]
+  ring
+
+/-- The even condensation defect is the harmonic term `3/(2m+2)`. -/
+theorem even_condensation_defect {m : ℚ}
+    (hmm1 : m - 1 ≠ 0) (hm : m ≠ 0) (hmp1 : m + 1 ≠ 0) :
+    1 - oddMaxC3Denom (m - 1) / evenMaxC3Denom m =
+      3 / (2 * m + 2) := by
+  rw [even_condensation_ratio hmm1 hm hmp1]
+  field_simp [hmp1]
+  ring
+
+/-- The odd condensation defect is the harmonic term `3/(2m+1)`. -/
+theorem odd_condensation_defect {m : ℚ}
+    (hm : m ≠ 0) (hmp1 : m + 1 ≠ 0) (h2mp1 : 2 * m + 1 ≠ 0) :
+    1 - evenMaxC3Denom m / oddMaxC3Denom m =
+      3 / (2 * m + 1) := by
+  rw [odd_condensation_ratio hm hmp1]
+  field_simp [h2mp1]
+  ring
+
 /-- Polynomial continuation of the square of the `n`-th triangular number. -/
 def triangularSquare (n : ℚ) : ℚ := (n * (n + 1) / 2) ^ 2
 
@@ -226,6 +266,10 @@ theorem dyadic_reciprocal_block_bounds {ι : Type*} (S : Finset ι)
 #print axioms even_max_c3_denom_factor
 #print axioms odd_max_c3_reciprocal_split
 #print axioms even_max_c3_reciprocal_split
+#print axioms even_condensation_ratio
+#print axioms odd_condensation_ratio
+#print axioms even_condensation_defect
+#print axioms odd_condensation_defect
 #print axioms triangular_square_reciprocal_split
 #print axioms ladder_sum_reciprocal_split
 #print axioms reciprocal_block_bounds

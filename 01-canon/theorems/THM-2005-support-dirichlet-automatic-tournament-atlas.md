@@ -1,19 +1,19 @@
 ---
 id: THM-2005
 title: SUPPORT-DIRICHLET PROFILE EXTENSIONS AND THE AUTOMATIC/TOURNAMENT RECIPROCAL ATLAS
-status: PROVED.  The full support Dirichlet profile and its abscissa, integer Abel--Dini lift, Egyptian conservation hyperplane, ordinary and centered polygonal digamma clocks, maximum-cyclic-triangle and Forcade reciprocal masses, certified tournament-census tail, fibbinary/Moser Mahler block laws, primitive-residue profile, and Sylvester remainder are proved.  The single-file referee passes normally and under Python optimization.  Numerical comparisons use mpmath; unnamed constants receive no unproved arithmetic classification
+status: PROVED.  The full support Dirichlet profile and its abscissa, integer Abel--Dini lift, Egyptian conservation hyperplane, ordinary and centered polygonal digamma clocks, maximum-cyclic-triangle mass and condensation-hazard profile, Forcade reciprocal mass, certified tournament-census tail, fibbinary/Moser Mahler block laws, primitive-residue profile, and Sylvester remainder are proved.  The single-file referee passes normally and under Python optimization.  Numerical comparisons use mpmath; unnamed constants receive no unproved arithmetic classification
 source: codex-2026-07-21 reciprocal-sequence continuation and union audit
-depends_on: [THM-2000, THM-785, THM-819, THM-1360, HYP-3724, HYP-3008, HYP-3063]
-related: [THM-488, THM-555, THM-874, THM-900, THM-1127, THM-1985, THM-1990, MISTAKE-209, MISTAKE-210]
+depends_on: [THM-2000, THM-785, THM-819, THM-1360, THM-2016, HYP-3724, HYP-3008, HYP-3063]
+related: [THM-488, THM-555, THM-874, THM-900, THM-1127, THM-1985, THM-1990, THM-2016, MISTAKE-209, MISTAKE-210, MISTAKE-213]
 external:
   - "Lawrence Downey, Boon W. Ong, and James A. Sellers, Beyond the Basel Problem: Sums of Reciprocals of Figurate Numbers, College Mathematics Journal 39 (2008), 391--394, JSTOR stable 27646686, https://www.jstor.org/stable/27646686"
   - "Archived preprint: https://web.archive.org/web/20130529032918/http://www.math.psu.edu/sellersj/downey_ong_sellers_cmj_preprint.pdf"
 script: 04-computation/support_dirichlet_automatic_tournament_atlas_thm2005.py
 output: 05-knowledge/results/support_dirichlet_automatic_tournament_atlas_thm2005.out
 formalization: 04-computation/lean/TournamentH7/TournamentH7/SupportHarmonicFigurate.lean
-script_sha256: 1bdcae81ab757289b1b5b449ba0cc8c00315239aeb308f7b7f51ccaed5571648
-output_sha256: 07d5bc99b436b6553e01e0f3a2487425d969d9b69d841a79b3b6bde7d2441642
-formalization_sha256: 801a41c4d9bdb9b418427007a69b7b1a75a90ba39ff8f772b4388fe3c25c279f
+script_sha256: 9fa4f4d63e5b31c403cbf6cf9d3576d9b86d42a4468cd7a07966a42dcac80dee
+output_sha256: ff95605d3ee48c8fdbc6a8948a033b6cb334c35a60a6db5422b8c494936e2472
+formalization_sha256: 7a2d36331e924465887f5a19bebb2561fb3d5cb9d7b6d3bc69eb68166950b416
 ---
 
 # THM-2005 -- support-Dirichlet profile extensions and exact sequence atlas
@@ -54,7 +54,8 @@ D_A(z)=1/Gamma(z) integral_0^infinity
 D_A(1)=integral_0^1 G_A(w)/w dw.                     (3)
 ```
 
-The coefficients of either transform recover the support.  Boolean support
+The coefficients of either transform recover the support.  Coefficientwise
+(and hence on every common absolute-convergence domain), Boolean support
 operations obey the exact valuation
 
 ```text
@@ -83,7 +84,8 @@ n/q_n^z <=sum_(j<=n)q_j^(-z)=O(1),
 
 so `delta<=z`.  Hence `D_A(z)` diverges for `z<delta`; either behavior can
 occur on the boundary.  In particular `delta=1` is a region, not a verdict:
-`ceil(n log n)` diverges at one, while `ceil(n(log n)^2)` converges.
+for `n>=2`, the support `ceil(n log n)` diverges at one, while
+`ceil(n(log n)^2)` converges (finite initial repair is immaterial).
 
 ## 2. Abel--Dini is a recursive integer-support operation
 
@@ -295,6 +297,79 @@ sum_(n>=3)1/M_3(n)=75/4-24 log 2
 The odd denominator is `sum_(j<=m)j^2`, so (25) is also the second
 Faulhaber reciprocal mass in THM-2000.
 
+The concurrent reducibility ceiling of THM-2016 turns the same row into a
+temperature product.  With
+
+```text
+R_n=max{c_3(T):T reducible on n vertices}=M_3(n-1),
+tau_c(n)=R_n/M_3(n),                                  n>=4,
+```
+
+one has the exact telescoping identities
+
+```text
+product_(j=4)^N tau_c(j)=1/M_3(N),
+sum_(N>=3) product_(j=4)^N tau_c(j)
+ =sum_(n>=4)1/R_n
+ =75/4-24 log 2.                                    (26a)
+```
+
+The `N=3` product is empty.  The ratio itself exposes a second, exactly
+harmonic support.  Formula (24) simplifies it to
+
+```text
+tau_c(n)=(n-1)/(n+2),     n even,
+tau_c(n)=(n-3)/n,         n odd,
+
+q_n:=3/(1-tau_c(n))
+   =n+2,                  n even,
+   =n,                    n odd.                    (26b)
+```
+
+Thus `(q_n)_(n>=4)=(6,5,8,7,10,9,...)`, the adjacent-pair reversal of the
+cofinite harmonic support `{5,6,7,...}`.  If
+`H_4^(z):=sum_(m=1)^4 m^(-z)`, then for `Re z>1`,
+
+```text
+sum_(n>=4)((1-tau_c(n))/3)^z
+ =sum_(m>=5)m^(-z)=zeta(z)-H_4^(z).                 (26c)
+```
+
+This profile has abscissa exactly one.  Its boundary divergence is also
+termwise explicit:
+
+```text
+(1/3)sum_(n=4)^N(1-tau_c(n))
+ =H_(N+1)-H_4,                         N odd,
+ =H_N-H_4+1/(N+2),                     N even,
+
+(1/3)sum_(n=4)^N(1-tau_c(n))-log N -> gamma-H_4.    (26d)
+```
+
+There is an order-sensitive refinement.  Put `a_m=1-3/m`.  Sorting the same
+hazard support gives
+
+```text
+S_4=1,
+S_M=product_(m=5)^M a_m=24/[(M-2)(M-1)M],
+sum_(M>=4)S_M=2.
+```
+
+The tournament order instead has prefix products
+`P_3=1`, `P_N=product_(n=4)^N a_(q_n)=1/M_3(N)`.  Swapping every adjacent
+pair changes only the intermediate prefix, so
+
+```text
+sum_(N>=3)P_N-sum_(M>=4)S_M
+ =67/4-24 log 2
+ =sum_(k>=2)72/[(2k-2)(2k-1)(2k)(2k+1)(2k+2)]>0.   (26e)
+```
+
+Thus the reciprocal maximum-`c3` mass is also the partition sum of cumulative
+condensation ratios and the reciprocal mass of the reducibility ceilings.
+The additive hazard profile depends only on its denominator support, while
+the prefix-product partition function remembers the parity-shuffled word.
+
 ### 5.2 Forcade orders and the Mersenne clock
 
 Let `E=sum_(p>=1)1/(2^p-1)` be the Erdos--Borwein constant.  The arc count at
@@ -463,8 +538,12 @@ Writing `F_+=F\{0}`, `M_+=M\{0}`, their full profiles also obey
 (1-4^(-z))D_(M_+)(z)=sum_(m in M)(4m+1)^(-z).       (35)
 ```
 
-These analytic equations are the faithful shadows of the Fibonacci-cube and
-even-coordinate Boolean-cube carriers in HYP-3008/HYP-3063.
+The first analytic identity is asserted for `Re z>log_2(phi)` and the second
+for `Re z>1/2`; coefficientwise they are formal identities, and on the
+positive real axis below those thresholds both sides are understood only in
+the extended nonnegative sense.  These equations are the faithful shadows of
+the Fibonacci-cube and even-coordinate Boolean-cube carriers in
+HYP-3008/HYP-3063.
 
 ## 7. Primitive residues and the Sylvester exact tower
 
@@ -531,14 +610,17 @@ Abel and valuation laws, ordinary and centered polygonal splits, master
 figurate factorizations, integer Abel--Dini lifts, automatic-language
 recurrences and block counts, Egyptian profile orientation, Sylvester
 remainders, primitive-residue Möbius profiles, Forcade identities,
-tournament-tail ratios, the Gauss product, and both maximum-`c_3` parity
-sums.
+tournament-tail ratios, the finite discrete-convexity/superadditivity core of
+the repaired THM-2016 ceiling, its condensation product, harmonic-hazard
+permutation and finite profiles, parity-shuffle tax, the Gauss product, and
+both maximum-`c_3` parity sums.
 
 The sorry-free Lean module `TournamentH7/SupportHarmonicFigurate.lean`
 formalizes the master and ordinary-polygonal factorizations, their finite
 reciprocal decompositions, the odd/even maximum-`c3` denominator and partial
-fraction algebra, and the block sandwich.  Its isolated build passes, and the
-printed axiom audits contain no `sorryAx`.  Infinite Abel/Mellin integrals,
+fraction algebra, both condensation ratios and harmonic defects, and the
+block sandwich.  Its isolated build passes, and the printed axiom audits
+contain no `sorryAx`.  Infinite Abel/Mellin integrals,
 digamma evaluation, automatic-language enumeration, the score-theoretic
 maximum-`c3` argument, and the infinite parity sums remain paper proofs plus
 independent exact referees; none is postulated as a Lean axiom.

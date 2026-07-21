@@ -1,0 +1,39 @@
+iso classes: {3: 2, 4: 4, 5: 12, 6: 56, 7: 456}
+
+============================================================================================
+THREAD A  L3 coordinate: does the local k-subtournament census separate (char_A,|R|)-twins?
+============================================================================================
+  c3=12 shell: 47 classes; (char_A,|R|) resolves 36; +4-profile 36; +4&5-profile 44  [22 in twin-groups]
+  c3=11 shell: 52 classes; (char_A,|R|) resolves 41; +4-profile 50; +4&5-profile 50  [22 in twin-groups]
+  c3=13 shell: 15 classes; (char_A,|R|) resolves 15; +4-profile 15; +4&5-profile 15  [0 in twin-groups]
+  => the L3 coordinate = LOCAL subtournament densities (flag/limit coordinates).
+
+============================================================================================
+THREAD B  reducibility ceiling: max c3 over REDUCIBLE tournaments vs c3_max(n-1)
+============================================================================================
+  c3_max(n) n=3..7: [1, 2, 5, 8, 14]
+  n=4: max reducible c3 = 1 ; c3_max(n-1) = 1 ; equal? True ; tau_c=c3_max(n-1)/c3_max(n)=1/2
+  n=5: max reducible c3 = 2 ; c3_max(n-1) = 2 ; equal? True ; tau_c=c3_max(n-1)/c3_max(n)=2/5
+  n=6: max reducible c3 = 5 ; c3_max(n-1) = 5 ; equal? True ; tau_c=c3_max(n-1)/c3_max(n)=5/8
+  n=7: max reducible c3 = 8 ; c3_max(n-1) = 8 ; equal? True ; tau_c=c3_max(n-1)/c3_max(n)=4/7
+  => PROVED shape: c3(T)=sum c3(SCC); discrete convexity concentrates every nontrivial SCC-size partition at (n-1)+1; above the resulting ceiling every class is strong.
+
+============================================================================================
+THREAD C  H vs cyclic temperature: H structure per iso-cyclic shell (locate death-star's binding)
+============================================================================================
+  n=7:  tau     c3   #cls   H:min  mean   max   (H grows with temperature; spread widens hot)
+       1        14     3     171  178.3   189
+       13/14    13    15     147  153.9   159
+       6/7      12    47     121  134.7   145
+       11/14    11    52      99  114.5   135
+       5/7      10    79      69   96.0   135
+       9/14      9    61      51   79.7   123
+       4/7       8    59      41   60.9    93
+       1/2       7    40      33   44.0    69
+       3/7       6    39      23   33.4    51
+       5/14      5    23      15   23.9    33
+       2/7       4    17      11   14.4    17
+       3/14      3     8       9   10.5    15
+       1/7       2     7       5    6.7     9
+       1/14      1     5       3    3.0     3
+       0         0     1       1    1.0     1
