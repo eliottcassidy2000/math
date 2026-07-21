@@ -3,12 +3,13 @@
 
 Working the S199 open threads + agent pickups.
 
-THREAD A (L3 coordinate): what separates the deep-continuum tournaments that share
-   (score, char_A, |R|)?  Test LOCAL SUBTOURNAMENT DENSITIES (the k-profile = induced-subtournament
-   census), i.e. the flag/limit-theory coordinates. Find the minimal k that completes resolution.
+THREAD A (L3 probe): audit what separates deep-continuum tournaments after
+   (char_A, |R|), then after score. Test LOCAL SUBTOURNAMENT DENSITIES (the k-profile =
+   induced-subtournament census), i.e. flag/limit-theory coordinates, without crediting
+   a profile for resolution already supplied by score.
 THREAD B (reducibility ceiling): max c3 over REDUCIBLE (non-strong) tournaments = c3_max(n-1)
-   [cyclic content is SCC-additive and discrete convexity concentrates the SCC-size partition at
-   (n-1)+1]. => condensation temperature tau_c = c3_max(n-1)/c3_max(n).
+   [cyclic content sums over strong components; discrete convexity concentrates their size
+   partition at (n-1,1)]. => reducible ceiling tau_red = c3_max(n-1)/c3_max(n).
 THREAD C (H vs temperature): mean/max/spread of H per iso-cyclic shell -- locate the H structure on
    the temperature axis (death-star-S84 H>=disc binding case = quasirandom = tau=1).
 """
@@ -88,29 +89,32 @@ reps=iso_reps(7)
 print("iso classes:", {n:len(reps[n]) for n in range(3,8)})
 
 # ---------------- THREAD A ----------------
-print("\n"+"="*92); print("THREAD A  L3 coordinate: does the local k-subtournament census separate (char_A,|R|)-twins?")
+print("\n"+"="*92); print("THREAD A  L3 probe: score versus local k-subtournament profiles inside (char_A,|R|)-twins")
 print("="*92)
 n=7
-# the hot shell tau=6/7 (c3=12) had 47 classes, 36 resolved by (char_A,|R|)
+# The hot shell tau=6/7 (c3=12) has 47 classes; absolute |R| resolves 28 keys.
 for cc in (12,11,13):
     shell=[A for A in reps[n] if c3v(A,n)==cc]
-    key2=defaultdict(list)
-    for A in shell: key2[(charpoly_int(A),signed_redei(A,n))].append(A)
-    twins=[grp for grp in key2.values() if len(grp)>1]
-    ntwin=sum(len(g) for g in twins)
-    # try adding profile_4, then profile_5
-    def resolves(extra):
-        seen=set()
-        for A in shell:
-            k=(charpoly_int(A),signed_redei(A,n))+extra(A)
-            seen.add(k)
-        return len(seen)
-    r_base=resolves(lambda A:())
-    r_p4=resolves(lambda A:(profile_4:=profile_k(A,n,4),))
-    r_p5=resolves(lambda A:(profile_k(A,n,4),profile_k(A,n,5)))
-    print("  c3=%d shell: %d classes; (char_A,|R|) resolves %d; +4-profile %d; +4&5-profile %d  [%d in twin-groups]"
-          %(cc,len(shell),r_base,r_p4,r_p5,ntwin))
-print("  => the L3 coordinate = LOCAL subtournament densities (flag/limit coordinates).")
+    records=[]
+    for A in shell:
+        records.append((
+            charpoly_int(A), abs(signed_redei(A,n)), scoreseq(A,n),
+            profile_k(A,n,4), profile_k(A,n,5),
+        ))
+
+    def resolution(extra):
+        groups=Counter((record[0],record[1])+extra(record) for record in records)
+        unresolved=sorted((size for size in groups.values() if size>1), reverse=True)
+        return len(groups), unresolved
+
+    r_base, base_groups=resolution(lambda record:())
+    r_score, _=resolution(lambda record:(record[2],))
+    r_p4, _=resolution(lambda record:(record[3],))
+    r_p45, _=resolution(lambda record:(record[3],record[4]))
+    r_score_p45, final_groups=resolution(lambda record:(record[2],record[3],record[4]))
+    print("  c3=%d shell: %d classes; base(char_A,|R|)=%d; +score=%d; +4-profile=%d; +4&5-profile=%d; +score+4&5=%d; base_unresolved=%s; final_unresolved=%s"
+          %(cc,len(shell),r_base,r_score,r_p4,r_p45,r_score_p45,base_groups,final_groups))
+print("  => absolute-|R| audit: local profiles add beyond score in all three tested hot shells; score also adds at c3=11.")
 
 # ---------------- THREAD B ----------------
 print("\n"+"="*92); print("THREAD B  reducibility ceiling: max c3 over REDUCIBLE tournaments vs c3_max(n-1)")
@@ -120,9 +124,10 @@ print("  c3_max(n) n=3..7:", [c3max[n] for n in range(3,8)])
 for n in range(4,8):
     red=[A for A in reps[n] if not strong(A,n)]
     maxred=max(c3v(A,n) for A in red)
-    print("  n=%d: max reducible c3 = %d ; c3_max(n-1) = %d ; equal? %s ; tau_c=c3_max(n-1)/c3_max(n)=%s"
+    print("  n=%d: max reducible c3 = %d ; c3_max(n-1) = %d ; equal? %s ; tau_red=c3_max(n-1)/c3_max(n)=%s"
           %(n, maxred, c3max[n-1], maxred==c3max[n-1], Fr(c3max[n-1],c3max[n])))
-print("  => PROVED shape: c3(T)=sum c3(SCC); discrete convexity concentrates every nontrivial SCC-size partition at (n-1)+1; above the resulting ceiling every class is strong.")
+print("  => PROVED shape: c3(T)=sum c3(SCC); discrete convexity of c3_max concentrates the SCC-size partition at (n-1,1).")
+print("     THM-462 no-holes realizes the next level, so the first all-strong shell is (c3_max(n-1)+1)/c3_max(n).")
 
 # ---------------- THREAD C ----------------
 print("\n"+"="*92); print("THREAD C  H vs cyclic temperature: H structure per iso-cyclic shell (locate death-star's binding)")

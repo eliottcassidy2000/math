@@ -1,0 +1,66 @@
+iso classes: {3: 2, 4: 4, 5: 12, 6: 56, 7: 456}
+
+==========================================================================================
+(1) FROZEN vs FREE cycle moments: which N_k vary WITHIN a fixed score sequence?
+==========================================================================================
+  n=4: N_3 varies within score-seq? False ; N_4? False ; N_5? None ; N_6? None
+  n=5: N_3 varies within score-seq? False ; N_4? True ; N_5? True ; N_6? None
+  n=6: N_3 varies within score-seq? False ; N_4? True ; N_5? True ; N_6? True
+  n=7: N_3 varies within score-seq? False ; N_4? True ; N_5? True ; N_6? True
+  => N_1=N_2=0, N_3=3c3 FROZEN by the score sequence; the FIRST FREE structural coordinate is N_4.
+
+==========================================================================================
+(2) CYCLIC TEMPERATURE tau=c3/c3_max ; ISO-CYCLIC SHELL entropy = log2(fiber)
+==========================================================================================
+  n=5  c3_max=5 (regular)
+    tau      c3   #classes  entropy(log2)  strong-frac
+    1          5       1       0.00         1.00
+    4/5        4       3       1.58         1.00
+    3/5        3       2       1.00         1.00
+    2/5        2       2       1.00         0.00
+    1/5        1       3       1.58         0.00
+    0          0       1       0.00         0.00
+  n=6  c3_max=8 (regular)
+    tau      c3   #classes  entropy(log2)  strong-frac
+    1          8       5       2.32         1.00
+    7/8        7       8       3.00         1.00
+    3/4        6      12       3.58         1.00
+    5/8        5       8       3.00         0.75
+    1/2        4      10       3.32         0.40
+    3/8        3       4       2.00         0.00
+    1/4        2       4       2.00         0.00
+    1/8        1       4       2.00         0.00
+    0          0       1       0.00         0.00
+  n=7  c3_max=14 (regular)
+    tau      c3   #classes  entropy(log2)  strong-frac
+    1         14       3       1.58         1.00
+    13/14     13      15       3.91         1.00
+    6/7       12      47       5.55         1.00
+    11/14     11      52       5.70         1.00
+    5/7       10      79       6.30         1.00
+    9/14       9      61       5.93         1.00
+    4/7        8      59       5.88         0.83
+    1/2        7      40       5.32         0.60
+    3/7        6      39       5.29         0.38
+    5/14       5      23       4.52         0.35
+    2/7        4      17       4.09         0.00
+    3/14       3       8       3.00         0.00
+    1/7        2       7       2.81         0.00
+    1/14       1       5       2.32         0.00
+    0          0       1       0.00         0.00
+
+==========================================================================================
+(3) COORDINATE BUDGET: within the hottest shells, resolution by cycle-spectrum then +|R|
+==========================================================================================
+  Lens layers: L0 = tau (1 real) ; L1 = cycle spectrum (N_4..N_n) = char_A ; L2 = +|R| (beyond-spectral).
+    n=5 tau=1     shell=  1 classes: cycle-spectrum resolves 1/1 ; +|R| resolves 1/1
+    n=5 tau=4/5   shell=  3 classes: cycle-spectrum resolves 3/3 ; +|R| resolves 3/3
+    n=5 tau=3/5   shell=  2 classes: cycle-spectrum resolves 2/2 ; +|R| resolves 2/2
+    n=6 tau=1     shell=  5 classes: cycle-spectrum resolves 4/5 ; +|R| resolves 4/5
+    n=6 tau=7/8   shell=  8 classes: cycle-spectrum resolves 3/8 ; +|R| resolves 4/8
+    n=6 tau=3/4   shell= 12 classes: cycle-spectrum resolves 6/12 ; +|R| resolves 7/12
+    n=7 tau=1     shell=  3 classes: cycle-spectrum resolves 3/3 ; +|R| resolves 3/3
+    n=7 tau=13/14 shell= 15 classes: cycle-spectrum resolves 11/15 ; +|R| resolves 13/15
+    n=7 tau=6/7   shell= 47 classes: cycle-spectrum resolves 21/47 ; +|R| resolves 28/47
+  => tau + a short cycle spectrum gives a layered address; |R| refines it from n=6;
+     the address is informative but incomplete; this exact audit still uses enumeration.

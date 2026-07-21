@@ -142,6 +142,56 @@ Format per entry:
   `sum_S M_3(|S|)<=M_3(n-1)`.  Joining an extremal `(n-1)`-tournament to a
   singleton gives equality.  THM-2016 now contains this repaired proof; its
   ceiling and the THM-2005 condensation identities are unchanged.
+## MISTAKE-215 (2026-07-21, codex audit of THM-1979/2013) -- score variance was promoted from a cyclicity coordinate to the whole structural axis
+
+- **What was claimed:** THM-1979 put `σ²=Var(scores)` in
+  `[0,(n²−1)/12]` for every `n`, called zero the regular center, and said
+  fiber size, strong fraction, and modular-prime fraction vary monotonically
+  opposite to `σ²`. THM-2013 consequently wrote
+  `c₃/c₃,max=1−σ²/σ²_max` uniformly in `n`. The limit discussion
+  identified tournamenton space with its degree functions.
+- **Why it is wrong:** for even `n`, integral scores with half-integral mean
+  force minimum variance `1/4`, not zero, and the maximum cyclic count is
+  `n(n²−4)/24`. More fundamentally, the frozen S198 census refutes the
+  monotonic structural claim: at `n=6`, variance `5/4` supports both size-3
+  all-strong score fibers and size-1 reducible fibers; at `n=7`, maximum fiber
+  size 47 occurs at both variances `4/7` and `10/7`, while the zero-variance
+  fiber has size 3. A tournamenton is not determined by its degree function;
+  many structured regular tournamentons share `d_W=1/2` with the quasirandom
+  tournamenton.
+- **Correct framing:** set `ε_n=0` for odd `n` and `1/4` for even `n`, and
+  `σ²_tr=(n²−1)/12`. Then
+  `c₃=n(n²−1)/24−(n/2)σ²` and
+  `τ=c₃/c₃,max=(σ²_tr−σ²)/(σ²_tr−ε_n)`.
+  The variance determines the cyclic shell exactly but forgets score shape and
+  within-fiber structure. The finite score map and limiting degree map are
+  projections with rich fibers, not complete parameterizations. THM-1979,
+  THM-2013, their scripts/results/reflections, the hypothesis index, and the
+  session log are corrected.
+
+---
+
+## MISTAKE-214 (2026-07-21, codex audit of THM-2013/2016) -- signed Redei data was labeled as the invariant magnitude `|R|`
+
+- **What was done:** the continuum-coordinate scripts grouped tournament
+  classes by `signed_redei(A,n)` while their output and THM-2013/2016 called
+  the coordinate `|R|`.  THM-2016 then attributed signed-key resolution counts
+  `36→44` and `41→50` to the absolute invariant.
+- **Why it is wrong:** the sign changes under the parity gauge of a relabeling;
+  the isomorphism invariant in THM-1966 is its magnitude.  Signs are mixed in
+  every audited hot shell, so taking the absolute value materially changes the
+  fibers.  It is not a notation-only error.  Also, “44 of 47 resolved” was
+  paraphrased as “3/47 classes survive,” although its unresolved groups were
+  twin pairs rather than three classes.
+- **Correct framing:** group by `abs(signed_redei(A,n))`.  At `n=7`, the exact
+  rows `(base; +score; +4-profile; +4&5; +score+4&5)` are
+  `c3=12: (28,28,28,41,41)`, `c3=11: (30,46,46,50,50)`, and
+  `c3=13: (13,13,13,14,14)`.  The final unresolved fibers are respectively
+  six, two, and one twin pairs.  THM-2013/2016, both scripts/results, the
+  hypothesis index, reflection, and session log are corrected.
+
+---
+
 ## MISTAKE-212 (2026-07-21, codex audit of THM-2016) -- an SCC sum was bounded by its largest summand
 
 - **What was claimed:** the proof of the reducibility ceiling used

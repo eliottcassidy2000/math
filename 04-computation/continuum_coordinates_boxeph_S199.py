@@ -140,10 +140,10 @@ for n in range(5,8):
     for cc in hot:
         cls=shells[cc]; tau=Fr(cc,c3max)
         specs=set(tuple(Nk(A,n,n)) for A in cls)          # cycle spectrum (N_1..N_n) = char_A
-        withR=set((tuple(Nk(A,n,n)), signed_redei(A,n)) for A in cls) if len(cls)<=200 else None
+        withR=set((tuple(Nk(A,n,n)), abs(signed_redei(A,n))) for A in cls) if len(cls)<=200 else None
         line="    n=%d tau=%-5s shell=%3d classes: cycle-spectrum resolves %d/%d" % (n,str(tau),len(cls),len(specs),len(cls))
         if withR is not None:
             line+= " ; +|R| resolves %d/%d" % (len(withR),len(cls))
         print(line)
-print("  => a near-regular tournament is pinned by tau + a short cycle spectrum (+|R| from n=7);")
-print("     the continuum is LOW-DIMENSIONAL in these coordinates -- no enumeration needed.")
+print("  => tau + a short cycle spectrum gives a layered address; |R| refines it from n=6;")
+print("     the address is informative but incomplete; this exact audit still uses enumeration.")

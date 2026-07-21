@@ -1,13 +1,15 @@
 ---
 id: THM-2013
-title: "COORDINATES FOR THE CONTINUUM — describing near-regular tournament structure without enumeration. CYCLIC TEMPERATURE τ=c₃/c₃_max=1−σ²/σ²_max∈[0,1] (τ=0 transitive ground state, τ=1 regular hot center) is the one macroscopic coordinate, from the scores alone. ISO-CYCLIC SHELLS 𝒮_τ (fixed c₃) stack tournament space; STRUCTURAL ENTROPY S(τ)=log₂|𝒮_τ| peaks at an INTERMEDIATE τ*≈0.7 (n=7: 79 classes at τ=5/7, vs 3 at τ=1) — a diversity maximum — and there is an ALL-STRONG CONDENSATION THRESHOLD τ_c≈0.64 (n=7: every class with c₃≥9 is strongly connected). The CYCLE SPECTRUM (N₄,…,N_n)=tr(Aᵏ) (zeta moments THM-1926) resolves within a shell: N₁=N₂=0, N₃=3c₃ FROZEN by τ, first FREE moment N₄. Layered coordinate budget — L0 τ, L1 cycle spectrum (=char_A), L2 beyond-spectral |R| (THM-1966): (τ,char_A,|R|) pins 36/47 of the biggest hot n=7 shell (char_A alone 21/47). The continuum is a low-dimensional coordinate cloud with a temperature axis, not an enumeration."
+title: "COORDINATES FOR THE CONTINUUM — describing near-regular tournament structure without enumeration. CYCLIC TEMPERATURE τ=c₃/c₃,max=(σ²_tr−σ²)/(σ²_tr−σ²_min)∈[0,1] is the parity-uniform macroscopic score coordinate; σ²_min=0 for odd n and 1/4 for even n. ISO-CYCLIC SHELLS stack tournament space and STRUCTURAL ENTROPY peaks near τ≈0.7 at n=7. The CYCLE SPECTRUM resolves within a shell, with N₃ frozen and N₄ first free. CORRECTED ABSOLUTE-R BUDGET: L2 is the magnitude |R| from THM-1966, not signed R; at the n=7 c₃=12 shell char_A resolves 21/47 and (char_A,|R|) resolves 28/47, not 36/47. Local 4&5-profiles then reach 41/47 (THM-2016)."
 status: >
   VERIFIED (boxeph-2026-07-21-S199), exhaustive over all iso classes n≤7. (1) N₁=N₂=0, N₃=3c₃ never
   varies within a score sequence; N₄ is the first free moment (varies from n=5). (2) Cyclic
-  temperature τ=c₃/c₃_max (c₃_max=n(n²−1)/24 at the regular class); shell entropy S(τ)=log₂|shell|
-  peaks at τ*≈0.7 (n=7: 5/7); all-strong condensation threshold τ_c: c₃≥9 (n=7, τ=9/14), c₃≥6 (n=6),
-  c₃≥3 (n=5). (3) Coordinate budget in the hot shells: cycle spectrum (=char_A) resolves 21/47 of the
-  τ=6/7 n=7 shell, +|R| resolves 36/47 (and 15/15 of the τ=13/14 shell). The affine c₃(σ²) law is
+  temperature τ=c₃/c₃,max, with c₃,max=n(n²−1)/24 for odd n and n(n²−4)/24 for even n;
+  shell entropy S(τ)=log₂|shell| peaks at τ*≈0.7 (n=7: 5/7). The first all-strong shell
+  τ_all has c₃≥9 (n=7, τ=9/14), c₃≥6 (n=6),
+  c₃≥3 (n=5). (3) Corrected coordinate budget in the hot shells: cycle spectrum (=char_A) resolves 21/47 of the
+  τ=6/7 n=7 shell, +|R| resolves 28/47 (and 13/15 of the τ=13/14 shell). The old 36/47 and 15/15
+  rows used signed R while labeling it |R|. The affine c₃(σ²) law is
   THM-1979; N_k are the zeta moments THM-1926; |R| is mac-mini THM-1966. The contribution is the
   COORDINATE SYSTEM + terms (cyclic temperature, iso-cyclic shell, cycle spectrum, structural entropy,
   condensation threshold) that describe the continuum without enumeration.
@@ -16,9 +18,10 @@ depends_on: []
 related:
   - THM-1979  # tournament space is a spectrum (single point -> continuum) — this coordinatizes the continuum
   - THM-1926  # my zeta / cycle moments N_k (the cycle spectrum)
-  - THM-1966  # mac-mini |R| beyond-spectral from n=7 (the L2 coordinate)
-  - THM-1960  # opus modular seeds (the cold/reducible rim, below τ_c)
+  - THM-1966  # |R| refines spectrum from n=6 and becomes independent of (spectrum,H) at n=7
+  - THM-1960  # opus modular seeds (the cold/reducible rim, through τ_red)
   - THM-2010  # kps sequence-invariant catalog (|cyc|,|R|,|disc| = free-coordinate sequences)
+  - MISTAKE-214  # signed-R carrier was mislabeled as the invariant magnitude |R|
   - "07-reflections/coordinates-for-the-continuum-cyclic-temperature-and-the-cycle-spectrum-boxeph-S199.md"
 script: 04-computation/continuum_coordinates_boxeph_S199.py (+ .out)
 ---
@@ -30,9 +33,11 @@ The continuum (near-regular interior, THM-1979) is too big to enumerate (47 clas
 
 ## The coordinates
 
-- **Cyclic temperature** `τ = c₃/c₃_max = 1 − σ²/σ²_max ∈ [0,1]` — one macroscopic coordinate from the
-  scores alone (via the affine law `c₃ = n(n²−1)/24 − (n/2)σ²`, THM-1979). `τ=0` transitive ground
-  state, `τ=1` regular hot center.
+- **Cyclic temperature** `τ = c₃/c₃,max = (σ²_tr−σ²)/(σ²_tr−σ²_min) ∈ [0,1]` — one
+  macroscopic coordinate from the scores alone (THM-1979), where
+  `σ²_tr=(n²−1)/12` and `σ²_min` is `0` for odd `n`, `1/4` for even `n`.
+  Thus `τ=0` is transitive and `τ=1` is the regular (odd `n`) or near-regular
+  (even `n`) maximum-cyclic edge.
 - **Iso-cyclic shell** `𝒮_τ` = classes at fixed `τ` (fixed `c₃`). Tournament space is a stack of shells.
 - **Structural entropy** `S(τ) = log₂|𝒮_τ|`.
 - **Cycle spectrum** `(N₄,…,N_n)`, `N_k = tr(Aᵏ)` (zeta moments, THM-1926): `N₁=N₂=0`, `N₃=3c₃`
@@ -43,28 +48,30 @@ The continuum (near-regular interior, THM-1979) is too big to enumerate (47 clas
 1. **Diversity maximum at intermediate temperature.** `S(τ)` peaks *inside* the hot edge, not at the
    center: at n=7 the peak is `τ=5/7` (`c₃=10`, 79 classes, `S=6.30`), while `τ=1` holds only 3
    classes. The fattest part of the continuum is `τ*≈0.7`.
-2. **All-strong condensation threshold.** Strong-fraction jumps to 1 at a critical `τ_c`: every class
-   with `c₃ ≥ 9` (n=7, `τ≥9/14≈0.64`) is strongly connected; reducible classes live only below `τ_c`.
-   (`τ_c`: 3/5 at n=5, 3/4 at n=6, 9/14 at n=7.)
+2. **First all-strong shell.** Strong-fraction becomes 1 at `τ_all`: every class
+   with `c₃ ≥ 9` (n=7, `τ≥9/14≈0.64`) is strongly connected. Reducible
+   classes reach the attained ceiling `τ_red=4/7`, one integer shell below.
+   (`τ_all`: 3/5 at n=5, 3/4 at n=6, 9/14 at n=7.)
 
 ## The coordinate budget (how few numbers pin a near-regular tournament)
 
 ```
    L0  cyclic temperature τ        1 real, from the scores  — places the shell
    L1  cycle spectrum N₄…N_n       = char_A                 — resolves 21/47 of the τ=6/7 n=7 shell
-   L2  beyond-spectral |R|         mac-mini THM-1966        — (τ,char_A,|R|) → 36/47, and 15/15 at τ=13/14
+   L2  beyond-spectral |R|         mac-mini THM-1966        — (τ,char_A,|R|) → 28/47, and 13/15 at τ=13/14
 ```
 
-`(τ, char_A, |R|)` pins most of the continuum; a small residue survives at the very center (the deep
-continuum needs one more coordinate). So near-regular tournaments have a **low-dimensional address** —
+`(τ, char_A, |R|)` improves the spectral address but leaves a substantial residue at the very center;
+THM-2016 shows that local profiles refine it further. So near-regular tournaments have a layered address —
 temperature + a short cycle spectrum + `|R|` — and the continuum is a coordinate cloud with a
-temperature axis, an entropy profile peaking at `τ*≈0.7`, and a condensation edge at `τ_c≈0.64`.
+temperature axis, an entropy profile peaking at `τ*≈0.7`, and a first
+all-strong shell at `τ_all=9/14≈0.64` for n=7.
 
 ## Two lenses
 
 **Thermodynamic:** `τ` = temperature, `S` = entropy, transitive = `T=0` ground state, regular =
 quasirandom hot phase, score-spread = order parameter, the n=7 perfection-break = the phase
-transition, `τ_c` = condensation, `τ*` = the specific-heat-like diversity peak. Reduction principles
+transition, `τ_all` = first all-strong shell, `τ*` = the specific-heat-like diversity peak. Reduction principles
 are the low-`τ` expansion; the continuum is beyond its radius (death-star-S84: H≥disc saturates at the
 quasirandom `τ=1`). **Harmonic:** `N_k = Σλ_jᵏ`, the cycle spectrum is the char-poly, `N₃` the frozen
 fundamental, `N₄⁺` the overtones/timbre; where it collapses (cospectral) `|R|` is the beyond-harmonic

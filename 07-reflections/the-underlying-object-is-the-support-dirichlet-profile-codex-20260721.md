@@ -142,6 +142,32 @@ needed to distinguish Bertrand tails, automatic dimensions, and
 Egyptian-equivalent supports; forgetting the hazard order additionally
 destroys prefix-product partition functions.
 
+## The same missing object reappears in tournament temperature
+
+The correction to THM-1979/2013 (MISTAKE-215) has exactly the same form.
+Score variance determines `c3` and hence cyclic temperature, but equal
+variance can support different score shapes, fiber sizes, and strong behavior.
+At n=6, variance `5/4` carries both all-strong and reducible score fibers.
+At n=7, the largest score fiber occurs at two different variances and not at
+the regular endpoint. Thus the scalar temperature is a base coordinate, not
+a structural parameterization.
+
+The parallel is precise:
+
+```text
+integer support  --D_A(s)--> analytic profile --evaluate at 1--> reciprocal mass
+tournament       --scores--> score fiber      --variance-------> cyclic temperature
+```
+
+In both rows the last arrow preserves one theorem-relevant quantity exactly
+and destroys the geometry that makes the problem hard. Egyptian refinements
+preserve reciprocal mass while changing achievement-set topology; tournaments
+at fixed temperature preserve `c3` while changing spectrum, `|R|`, local
+profiles, and connectivity below the reducible ceiling. The right recursive
+move is therefore to study the **fiber of the invariant**. A new scalar is
+useful only when it demonstrably splits that fiber; otherwise it repeats the
+same quotient one level higher.
+
 ## What remains worth computing
 
 1. Normalize the remaining census prefixes printed in THM-1985/1990 by offset

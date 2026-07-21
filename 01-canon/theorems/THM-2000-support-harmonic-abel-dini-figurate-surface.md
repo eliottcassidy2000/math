@@ -1,7 +1,7 @@
 ---
 id: THM-2000
 title: SUPPORT-HARMONIC ABEL--DINI LAW AND THE TWO-AXIS FIGURATE MASS SURFACE
-status: PROVED analytic/exact.  A sequence interpreted literally as a subset of the harmonic numbers is governed by its value support, not its indexing multiplicity.  The support/multiset collision tax, Abel--Stieltjes identity, multiplicative-block and partial-sum Dini laws, full Bertrand near-linear boundary and regular-variation tail, Kakeya achievement-set classification (including the exact simplex interval decomposition), master-figurate beta-integral and finite digamma surface, divisibility-resonance pi-squared ridge, simplex/power equal-mass ladder, polygonal digamma axis, five Faulhaber values, Gauss triangular-theta product, ladder ratio/sum/product trichotomy, and reciprocal tournament-series reversal are proved.  Exact and high-precision referees are optimization-safe.  Numerical atlas values carry no unproved irrationality or transcendence claim; global H-spectrum divergence remains open
+status: PROVED analytic/exact.  A sequence interpreted literally as a subset of the harmonic numbers is governed by its value support, not its indexing multiplicity.  The support/multiset collision tax, Abel--Stieltjes identity, multiplicative-block and partial-sum Dini laws, full Bertrand near-linear boundary and regular-variation tail, Kakeya eventual-overlap/all-strict criteria (including the exact simplex interval decomposition), master-figurate beta-integral and finite digamma surface, divisibility-resonance pi-squared ridge, simplex/power equal-mass ladder, polygonal digamma axis, five Faulhaber values, Gauss triangular-theta product, ladder ratio/sum/product trichotomy, and reciprocal tournament-series reversal are proved.  Exact and high-precision referees are optimization-safe.  Numerical atlas values carry no unproved irrationality or transcendence claim; global H-spectrum divergence remains open
 source: codex-2026-07-21 reciprocal-sequence continuation and audit of concurrent THM-1985/1990
 depends_on: [THM-462, THM-1127, THM-1360, THM-1990]
 related: [THM-841, THM-853, THM-854-noholes-completeness-and-rank2-polygonal-law.md, THM-874, THM-1370-h-spectrum-omits-7-21-all-n.md, THM-1985, THM-2005, THM-2010, THM-2016, MISTAKE-209, MISTAKE-210, MISTAKE-212, MISTAKE-213]
@@ -9,8 +9,8 @@ external: "S. Kakeya, On the partial sums of an infinite series, Tohoku Sci. Rep
 script: 04-computation/support_harmonic_abel_dini_figurate_surface_thm2000.py
 output: 05-knowledge/results/support_harmonic_abel_dini_figurate_surface_thm2000.out
 lean: 04-computation/lean/TournamentH7/TournamentH7/SupportHarmonicFigurate.lean
-script_sha256: 976a46c9f7295ab64ffd1c1dfb1e67274ce2bf37c6c309ba495957a25069f44c
-output_sha256: df71dce8b1e39ae2494b13c54cf04b9ea9569bfd0ad5aaae57c62d8b9ac9c32f
+script_sha256: 71ea088a8efcb64503d2f223b17fa19cc34216c5e767043efde0348bfb696403
+output_sha256: 56717ff8713ea18cf2c9201caca2300810b558af02413204bf5a6fea4e8c9a5a
 lean_sha256: c9550106a5c5aa8d8ae18b173b1aa5bf26c552cfa11d615d03f987cb04a1170e
 ---
 

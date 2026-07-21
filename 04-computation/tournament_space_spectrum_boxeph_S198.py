@@ -4,13 +4,15 @@
 Tournament space on n vertices as a SPECTRUM from a single point to a continuum.
 
 Tournament space FIBERS over the score sequence (Landau's polytope of valid score sequences).
-The spectral coordinate is the score SPREAD sigma^2 = Var(scores), ranging from
-  sigma^2 = (n^2-1)/12   (the TRANSITIVE vertex, scores 0..n-1)   -- the single point
-  sigma^2 = 0            (the REGULAR center, all scores (n-1)/2)  -- the continuum.
-The FIBER (# iso classes with a given score sequence) is a SINGLETON at the transitive vertex and
-swells to its maximum at the regular center, where the strongly-connected / modular-prime /
-structurally-diverse tournaments live. This computes the fibration and shows structure runs
-OPPOSITE to score spread.
+The score SPREAD sigma^2 = Var(scores) ranges from the transitive maximum
+(n^2-1)/12 down to epsilon_n=0 for odd n and 1/4 for even n.  It determines
+c3 exactly, but it does NOT determine the score fiber's size or structure.
+This audit reports the parity seam and same-variance structural collisions.
+
+Tournament Analysis is deliberately not forced here: taking score fibers as
+vertices and variance difference as the pairwise observable gives only a
+transitive preorder (with genuine ties), while an arbitrary tie gauge would
+destroy precisely the within-level information under audit.
 """
 from itertools import permutations, combinations
 from fractions import Fraction as Fr
@@ -78,20 +80,37 @@ for n in range(3,8):
         c3s=[num_c3(A,n) for A in cls]
         rows.append((v, len(cls), st, mp, sq, min(c3s), max(c3s)))
     rows.sort(key=lambda r: float(r[0]))
+    eps=Fr(0) if n%2 else Fr(1,4)
     vmax=Fr(n*n-1,12)
+    c3max=n*(n*n-(1 if n%2 else 4))//24
+    assert min(r[0] for r in rows)==eps
+    assert max(r[6] for r in rows)==c3max
+    assert all(lo==hi for _,_,_,_,_,lo,hi in rows)
     print("\n"+"="*92)
-    print("n=%d : %d score sequences (Landau); %d iso classes; sigma^2 in [0, (n^2-1)/12=%s]" %
-          (n, len(fibers), len(reps[n]), vmax))
+    print("n=%d : %d score sequences (Landau); %d iso classes; sigma^2 in [%s, (n^2-1)/12=%s]" %
+          (n, len(fibers), len(reps[n]), eps, vmax))
     print("="*92)
     print("  sigma^2   fiber  strong  modprime  c3-range   score sequence")
     for v,sz,st,mp,sq,c3lo,c3hi in rows:
         tag=""
         if v==vmax: tag=" <- TRANSITIVE vertex (single point)"
-        if v==0:    tag=" <- REGULAR center (continuum)"
+        if v==eps:  tag=" <- BALANCED edge (%s)" % ("regular" if n%2 else "near-regular")
         print("  %-7s  %4d   %4d    %5d     [%d..%d]   %s%s" %
               (str(v), sz, st, mp, c3lo, c3hi, sq, tag))
-    # spectrum summary: correlation of fiber size with spread
+    # Exact summary: the scalar coordinate has nontrivial structural fibers.
     maxf=max(r[1] for r in rows); trans=[r for r in rows if r[0]==vmax][0]
-    reg=[r for r in rows if r[0]==0]
-    print("  --> max fiber = %d (near regular); transitive fiber = %d; %s" %
-          (maxf, trans[1], ("regular fiber = %d (all strong=%d, all modprime=%d)"%(reg[0][1],reg[0][2],reg[0][3])) if reg else "no exactly-regular seq (n even)"))
+    balanced=[r for r in rows if r[0]==eps]
+    maxlocs=sorted(set(r[0] for r in rows if r[1]==maxf))
+    byvar=defaultdict(list)
+    for row in rows: byvar[row[0]].append(row)
+    varying=[]
+    for v,group in sorted(byvar.items(), key=lambda item: float(item[0])):
+        sigs=sorted(set((r[1],r[2],r[3]) for r in group))
+        if len(sigs)>1: varying.append((v,sigs))
+    print("  --> max fiber = %d at sigma^2=%s; transitive fiber = %d; balanced fiber = %d (strong=%d, modprime=%d)" %
+          (maxf, ",".join(map(str,maxlocs)), trans[1], balanced[0][1], balanced[0][2], balanced[0][3]))
+    print("  --> same-variance levels with differing (fiber,strong,modprime): %d%s" %
+          (len(varying), ("; first=%s -> %s"%(varying[0][0],varying[0][1])) if varying else ""))
+
+print("\nTOURNAMENT-ANALYSIS NOTE: variance comparison gives a transitive preorder with ties;")
+print("forcing a tie gauge would erase the score-fiber information being measured, so no tournament fingerprint is reported.")

@@ -1,22 +1,23 @@
 iso classes: {3: 2, 4: 4, 5: 12, 6: 56, 7: 456}
 
 ============================================================================================
-THREAD A  L3 coordinate: does the local k-subtournament census separate (char_A,|R|)-twins?
+THREAD A  L3 probe: score versus local k-subtournament profiles inside (char_A,|R|)-twins
 ============================================================================================
-  c3=12 shell: 47 classes; (char_A,|R|) resolves 36; +4-profile 36; +4&5-profile 44  [22 in twin-groups]
-  c3=11 shell: 52 classes; (char_A,|R|) resolves 41; +4-profile 50; +4&5-profile 50  [22 in twin-groups]
-  c3=13 shell: 15 classes; (char_A,|R|) resolves 15; +4-profile 15; +4&5-profile 15  [0 in twin-groups]
-  => the L3 coordinate = LOCAL subtournament densities (flag/limit coordinates).
+  c3=12 shell: 47 classes; base(char_A,|R|)=28; +score=28; +4-profile=28; +4&5-profile=41; +score+4&5=41; base_unresolved=[4, 4, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2]; final_unresolved=[2, 2, 2, 2, 2, 2]
+  c3=11 shell: 52 classes; base(char_A,|R|)=30; +score=46; +4-profile=46; +4&5-profile=50; +score+4&5=50; base_unresolved=[4, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]; final_unresolved=[2, 2]
+  c3=13 shell: 15 classes; base(char_A,|R|)=13; +score=13; +4-profile=13; +4&5-profile=14; +score+4&5=14; base_unresolved=[2, 2]; final_unresolved=[2]
+  => absolute-|R| audit: local profiles add beyond score in all three tested hot shells; score also adds at c3=11.
 
 ============================================================================================
 THREAD B  reducibility ceiling: max c3 over REDUCIBLE tournaments vs c3_max(n-1)
 ============================================================================================
   c3_max(n) n=3..7: [1, 2, 5, 8, 14]
-  n=4: max reducible c3 = 1 ; c3_max(n-1) = 1 ; equal? True ; tau_c=c3_max(n-1)/c3_max(n)=1/2
-  n=5: max reducible c3 = 2 ; c3_max(n-1) = 2 ; equal? True ; tau_c=c3_max(n-1)/c3_max(n)=2/5
-  n=6: max reducible c3 = 5 ; c3_max(n-1) = 5 ; equal? True ; tau_c=c3_max(n-1)/c3_max(n)=5/8
-  n=7: max reducible c3 = 8 ; c3_max(n-1) = 8 ; equal? True ; tau_c=c3_max(n-1)/c3_max(n)=4/7
-  => PROVED shape: c3(T)=sum c3(SCC); discrete convexity concentrates every nontrivial SCC-size partition at (n-1)+1; above the resulting ceiling every class is strong.
+  n=4: max reducible c3 = 1 ; c3_max(n-1) = 1 ; equal? True ; tau_red=c3_max(n-1)/c3_max(n)=1/2
+  n=5: max reducible c3 = 2 ; c3_max(n-1) = 2 ; equal? True ; tau_red=c3_max(n-1)/c3_max(n)=2/5
+  n=6: max reducible c3 = 5 ; c3_max(n-1) = 5 ; equal? True ; tau_red=c3_max(n-1)/c3_max(n)=5/8
+  n=7: max reducible c3 = 8 ; c3_max(n-1) = 8 ; equal? True ; tau_red=c3_max(n-1)/c3_max(n)=4/7
+  => PROVED shape: c3(T)=sum c3(SCC); discrete convexity of c3_max concentrates the SCC-size partition at (n-1,1).
+     THM-462 no-holes realizes the next level, so the first all-strong shell is (c3_max(n-1)+1)/c3_max(n).
 
 ============================================================================================
 THREAD C  H vs cyclic temperature: H structure per iso-cyclic shell (locate death-star's binding)

@@ -15,17 +15,21 @@ are the coordinates, and the two lenses (thermodynamic and harmonic) they come w
 
 ## The coordinates (new terms)
 
-**Cyclic temperature** `τ = c₃/c₃_max = 1 − σ²/σ²_max ∈ [0,1]`. The one macroscopic coordinate,
-score-spread rescaled: `τ=0` at the transitive **ground state** (frozen, ordered), `τ=1` at the
-regular **hot** center. The continuum is the high-`τ` region. (Because `c₃ = n(n²−1)/24 − (n/2)σ²`
-exactly, THM-1979, temperature is literally cyclicity — it needs *no enumeration*, just the scores.)
+**Cyclic temperature**
+`τ = c₃/c₃,max = (σ²_tr−σ²)/(σ²_tr−σ²_min) ∈ [0,1]`, where
+`σ²_min=0` for odd `n` and `1/4` for even `n`. The one macroscopic
+coordinate is score-spread rescaled: `τ=0` at the transitive **ground state**
+and `τ=1` at the regular (odd) or near-regular (even) maximum-cyclic edge.
 
 **Iso-cyclic shell** `𝒮_τ` = the set of classes at fixed `τ` (fixed `c₃`, fixed score-spread).
-Tournament space is a stack of shells: the transitive is the `τ=0` **singleton** shell; the shells
-**swell** toward `τ=1`. The shell is the right unit — not the individual tournament.
+Tournament space is a stack of shells: the transitive is the `τ=0`
+**singleton** shell. Shell sizes are not monotone in `τ`; the shell is the
+right coarse unit, not the individual tournament.
 
-**Structural entropy** `S(τ) = log₂ |𝒮_τ|`. Zero at the ground state, maximal at the hot center. This
-is the continuum's "size" as a function of temperature — a smooth macroscopic curve, not a list.
+**Structural entropy** `S(τ) = log₂ |𝒮_τ|`. It is zero at the ground
+state and, already at n=7, peaks at an intermediate temperature rather than
+the hot edge. This records the shell-size profile instead of pretending it is
+monotone.
 
 **Cycle spectrum** (a.k.a. **cyclic harmonics**) `(N₄, N₅, …, N_n)`, `N_k = tr(Aᵏ)` = #closed
 k-walks (the zeta moments, THM-1926). Structure: `N₁=N₂=0` (no loops/digons), `N₃=3c₃` is the
@@ -40,8 +44,8 @@ they place the tournament in the shell. Describe the continuum by the **free** c
 
 Read `τ` as temperature and `S` as entropy. Then:
 - the **transitive tournament is the T=0 ground state** (unique, zero entropy, char_A=xⁿ, ζ=1);
-- the **regular/quasirandom tournament is the T=1 hot phase** (maximal entropy, all strong, the
-  positive-entropy continuum of tournamentons `W≈½`);
+- the **regular/near-regular edge is the T=1 hot phase** (maximum cyclicity and
+  all strong, but not necessarily maximum finite shell entropy or quasirandom);
 - **score spread is the order parameter** (magnetization); cyclicity is the disorder; the n=7
   perfection-breaking (odd holes, spectral collapse) is a **phase transition** — the temperature at
   which the ordered description (reduction principles) stops covering the phase.
@@ -57,16 +61,18 @@ Read the tournament as a signal on the cycle basis. `N_k = Σ_j λ_jᵏ` (eigenv
 cycle spectrum IS the char-poly, and the **overtones resolve structure**: the fundamental `N₃` sets
 the temperature, and `N₄, N₅, …` are the timbre that distinguishes near-regular tournaments sharing a
 temperature. Where the harmonic lens runs out — cospectral tournaments (spectral collapse, 89% ties at
-n=7) — the **beyond-harmonic** coordinate `|R|` (mac-mini THM-1966, first independent at n=7) takes
-over. So the coordinate budget of the continuum is layered:
+n=7) — the **beyond-harmonic** coordinate `|R|` refines the spectrum from n=6
+and becomes independent even of `(spectrum,H)` at n=7 (THM-1966). So the
+coordinate budget is layered:
 ```
    L0  cyclic temperature τ           (1 real; from the scores, no enumeration)
    L1  cycle spectrum N₄…N_n          (= char_A; resolves shells to cospectral classes)
-   L2  beyond-spectral |R|            (separates the cospectral twins, from n=7)
+   L2  beyond-spectral |R|            (refines cospectral fibers from n=6)
 ```
-A near-regular tournament is pinned by **`τ` + a short cycle spectrum + `|R|`** — a low-dimensional
-address. The continuum is not `10⁶` objects; it is a low-dimensional coordinate cloud with a
-temperature axis and an entropy profile.
+A near-regular tournament is partially localized by **`τ` + a short cycle
+spectrum + `|R|`**. The unresolved fibers are part of the object, not noise:
+the continuum is a layered coordinate cloud with a temperature axis and an
+entropy profile, rather than a complete low-dimensional parameterization.
 
 ## The payoff (how to stop enumerating)
 
@@ -85,39 +91,39 @@ quasirandom horizon are the two boundary conditions; everything between is the t
 edge — the diversity peak THM-1979 glimpsed, now located: `τ*≈0.7`. (Thermodynamically this is a
 specific-heat-like peak between the ordered and quasirandom phases.)
 
-**An all-strong condensation threshold.** The strong-fraction of a shell jumps sharply to 1 at a
-critical temperature: every class with `τ ≥ 9/14 ≈ 0.64` is strongly connected at n=7 (`τ≥3/4` at n=6,
-`τ≥3/5` at n=5), and reducible classes appear only below it. There is a genuine **condensation
-temperature** `τ_c` above which the whole shell is irreducible.
+**A reducible ceiling and first all-strong shell.** At n=7, reducible classes
+attain `τ_red=4/7`; the next shell, `τ_all=9/14`, and every shell above it
+are all strong. The corresponding first all-strong values are `3/4` at n=6
+and `3/5` at n=5. The one-integer-shell gap matters when naming the threshold.
 
 ## Verified anchors (n≤7)
 
 - `N₁=N₂=0`, `N₃=3c₃` frozen by the score sequence; the **first free moment is `N₄`** (varies within
   a score sequence from n=5).
-- Shell entropy peaks at `τ*≈0.7`; all-strong condensation threshold `τ_c≈0.64` (n=7).
+- Shell entropy peaks at `τ*≈0.7`; `τ_red=4/7` and `τ_all=9/14` at n=7.
 - Coordinate budget in the hot n=7 shells: cycle spectrum alone resolves `21/47` of the biggest shell
-  (cospectral collapse), **`+|R|` resolves `36/47`** — and `15/15` of the `τ=13/14` shell. So
-  `(τ, char_A, |R|)` pins most near-regular tournaments; a small irreducible residue survives at the
-  very center (the deep continuum needs one more coordinate).
+  (cospectral collapse), **`+|R|` resolves `28/47`** — and `13/15` of the `τ=13/14` shell.  The old
+  36/47 and 15/15 rows accidentally used signed `R` while labeling it `|R|`.
+  Thus `(τ, char_A, |R|)` improves the address but leaves substantial fibers;
+  after local profiles, six twin pairs still survive in this shell.
 
 ## Threads worked (S200 → THM-2016)
 
 - **Local subtournament density is an L3 probe, with score kept as a sidecar:**
-  at the `c3=12` shell, 4&5-profiles genuinely improve
-  `(char_A,|R|,score)` resolution `36→44` of 47.  At `c3=11`, the apparent
-  `41→50` 4-profile gain is already supplied by score, so it is not independent
-  local evidence.  **3/47 still survive
-  (score, char_A, |R|, 4-profile, 5-profile)**. The deep center is
-  *invariant-resistant* even after global, score, and local sidecars.
+  under the corrected absolute `|R|` carrier, 4&5-profiles improve the final
+  address `28→41` of 47 at `c3=12`, `46→50` of 52 after score at `c3=11`, and
+  `13→14` of 15 at `c3=13`.  Six, two, and one twin pairs remain respectively.
+  The deep center is *invariant-resistant* even after global, score, and local
+  sidecars.
 - **Reducibility ceiling (proved, proof corrected by THM-2000):**
   `max c₃ over reducible = c₃_max(n−1)`.  Cycles live inside SCCs, but their
   counts must be **summed**, not bounded by the largest summand.  The
   nondecreasing increments
   `c₃_max(n+1)-c₃_max(n)=T_floor(n/2)` let us concentrate every SCC-size
   partition at `(n−1,1)`.  Thus
-  `τ_c=c₃_max(n−1)/c₃_max(n)` is the attained reducible ceiling
+  `τ_red=c₃_max(n−1)/c₃_max(n)` is the attained reducible ceiling
   (1/2, 2/5, 5/8, 4/7 for n=4..7), while the first all-strong discrete shell is
-  `(c₃_max(n−1)+1)/c₃_max(n)` (1, 3/5, 3/4, 9/14).
+  `τ_all=(c₃_max(n−1)+1)/c₃_max(n)` (1, 3/5, 3/4, 9/14).
 - **H is a thermometer:** mean H rises monotonically with `τ` (1 → 178 at n=7), the spread carried by
   the free coordinates — locating death-star-S84's `H≥disc` binding case at the hot center `τ=1`.
 

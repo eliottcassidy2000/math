@@ -1,112 +1,162 @@
 ---
 id: THM-2016
-title: "THE DEEP CONTINUUM AND THE REDUCIBILITY CEILING — three worked threads on the continuum coordinates (THM-2013). (A) The L3 coordinate is LOCAL SUBTOURNAMENT DENSITY (the k-profile / flag-limit coordinate): global traces (cycle spectrum=char_A) and the global signed |R| collapse in the hot center, and the k=4,5 induced-subtournament census resolves most of the residue — BUT the deepest hot-shell residue (3/47 at the n=7 τ=6/7 shell) survives even (score, char_A, |R|, 4-profile, 5-profile): the continuum's center is invariant-resistant. (B) REDUCIBILITY CEILING (PROVED + verified): max c₃ over reducible tournaments = c₃_max(n−1), because c₃ is additive over SCCs and the discrete convexity of c₃_max concentrates the SCC-size partition at (n−1)+1; hence the condensation temperature τ_c = c₃_max(n−1)/c₃_max(n) (= 1/2,2/5,5/8,4/7 for n=4..7) above which every class is strong. (C) H IS A THERMOMETER: mean/min/max H increase monotonically with cyclic temperature (mean 1→178 as τ:0→1 at n=7), fine spread carried by the free coordinates — locating death-star's H≥disc binding case at the hot center τ=1."
+title: "THE DEEP CONTINUUM AND THE REDUCIBILITY CEILING — three worked threads on the continuum coordinates (THM-2013). (A) ABSOLUTE-|R| AND LOCAL-PROFILE AUDIT: in the n=7 c3=12 shell, (char_A,|R|,score) resolves 28/47 and 4&5-profiles raise this to 41/47, leaving six twin pairs; at c3=11 score raises 30→46 and profiles raise 46→50, leaving two pairs; at c3=13 profiles raise 13→14, leaving one pair. (B) REDUCIBILITY CEILING (PROVED + verified): max c₃ over reducible tournaments = c₃_max(n−1), by discrete convexity of c₃_max rather than the false bound of an SCC sum by its largest summand. (C) H IS A THERMOMETER: mean/min/max H increase monotonically with cyclic temperature, locating the H≥disc binding case at τ=1."
 status: >
-  VERIFIED (boxeph-2026-07-21-S200), exhaustive n≤7, with stored byte-identical normal/optimized output. (A) In the n=7 hot shells: (char_A,|R|) resolves
-  36/47 (τ=6/7), 41/52 (τ=11/14); adding the 4-profile → 36/47, 50/52; adding the 5-profile → 44/47,
-  50/52. So local density is the L3 coordinate, but 3/47 remain unresolved by all of
-  (score,char_A,|R|,4-profile,5-profile) — invariant-twins in the deep center. (B) max-reducible-c₃
+  VERIFIED (boxeph-2026-07-21-S200), exhaustive n≤7. (A) With the advertised absolute |R|, the n=7
+  hot-shell resolution rows (base; +score; +4-profile; +4&5; +score+4&5) are
+  c₃=12: (28,28,28,41,41), c₃=11: (30,46,46,50,50), and c₃=13: (13,13,13,14,14).
+  Final unresolved groups are respectively six, two, and one twin pairs.  Thus local density adds
+  beyond score in all three shells, while score also contributes at c₃=11. (B) max-reducible-c₃
   = c₃_max(n−1) exactly for n=4..7 (1,2,5,8 = c₃_max(3..6)); c₃_max(n)=1,2,5,8,14 (n=3..7,
-  = n(n²−1)/24 odd, n(n²−4)/24 even); τ_c=c₃_max(n−1)/c₃_max(n)→1. Proof: c₃(T)=Σ_SCC c₃(SCC),
-  while the nondecreasing first differences of c₃_max make it discretely convex and concentrate every
-  nontrivial SCC-size partition at (n−1)+1. (C) H strictly increases in mean with τ across all 15 shells at
+  = n(n²−1)/24 odd, n(n²−4)/24 even); τ_red=c₃_max(n−1)/c₃_max(n)→1. Corrected proof: the increments
+  c₃_max(n+1)−c₃_max(n)=T_floor(n/2) are nondecreasing, so concentrating an SCC-size partition can
+  only increase its sum; hence Σ_SCC c₃_max(|SCC|)≤c₃_max(n−1). (C) H strictly increases in mean with τ across all 15 shells at
   n=7 (1,3,6.7,10.5,14.4,23.9,33.4,44,60.9,79.7,96,114.5,134.7,153.9,178.3); the spread widens toward
   mid-hot. Uses THM-2013 (temperature), THM-1926 (cycle spectrum), THM-1966 (|R|), THM-1862 (c₃ over
   SCCs), death-star-S84 (H≥disc quasirandom).
-source: "boxeph-2026-07-21-S200 (owner: work the S199 open threads + one or two picked up from other agents)"
-depends_on: []
+source: boxeph-2026-07-21-S200 (owner: work the S199 open threads + one or two picked up from other agents)
+depends_on: [THM-462, THM-1862, THM-2000, THM-2005]
 related:
   - THM-2013  # continuum coordinates (this resolves its L3 residue + condensation threshold)
   - THM-1979  # the spectrum (single point -> continuum)
   - THM-1966  # mac-mini |R| (the L2 coordinate that collapses in the deep continuum)
   - THM-1926  # my zeta / cycle spectrum (=char_A, the L1 coordinate)
-  - THM-1862  # order-join: c₃ = Σ over strong components (the reducibility ceiling)
-  - MISTAKE-217  # repairs the original largest-SCC proof shortcut
+  - THM-1862  # order-join: c₃ = Σ over strong components
+  - THM-2000  # discrete-convex increment law for c₃_max; repairs the ceiling proof
+  - THM-2005  # condensation product, harmonic-hazard word, and parity-shuffle tax
+  - MISTAKE-216  # records the dropped-SCC-summands error and its repair
+  - MISTAKE-217  # corrects signed-R computations that were labeled |R|
   - "07-reflections/coordinates-for-the-continuum-cyclic-temperature-and-the-cycle-spectrum-boxeph-S199.md"
-script: 04-computation/continuum_threads_boxeph_S200.py
-output: 05-knowledge/results/continuum_threads_boxeph_S200.out
-script_sha256: 8f7b3fe4ed9fadf1abb2e8d07b5a5fd2501fec0aa0a7706e5595efbb189d8ef8
-output_sha256: cb8788b75f559f3b108d4b42d4608a6841c822e65f1afb6b5130d04d563105e9
+script: 04-computation/continuum_threads_boxeph_S200.py (+ .out)
 ---
 
 # THM-2016 — the deep continuum and the reducibility ceiling
 
-## Thread A — the L3 coordinate is local subtournament density (and the center resists even that)
+## Thread A — local density is an L3 probe, after auditing the score sidecar
 
 Extending the coordinate budget of THM-2013 (`L0` temperature, `L1` cycle spectrum = char_A, `L2`
-`|R|`), the natural `L3` is **local structure** — the `k`-profile (census of induced `k`-vertex
-subtournaments), the flag/tournament-limit coordinate. In the n=7 hot shells:
+`|R|`), we tested both the score sequence and **local structure** — the `k`-profile (census of induced
+`k`-vertex subtournaments).  They must be compared explicitly: a profile cannot be credited for a
+split already made by score.  In the n=7 hot shells:
 
-| shell | (char_A,\|R\|) | +4-profile | +4&5-profile |
-|---|---|---|---|
-| τ=6/7 (c₃=12, 47 cls) | 36 | 36 | **44** |
-| τ=11/14 (c₃=11, 52) | 41 | **50** | 50 |
-| τ=13/14 (c₃=13, 15) | 15 | 15 | 15 |
+| shell | (char_A,\|R\|) | +score | +4-profile | +4&5-profile | +score+4&5 |
+|---|---:|---:|---:|---:|---:|
+| τ=6/7 (c₃=12, 47 cls) | 28 | 28 | 28 | **41** | **41** |
+| τ=11/14 (c₃=11, 52) | 30 | **46** | **46** | **50** | **50** |
+| τ=13/14 (c₃=13, 15) | 13 | 13 | 13 | **14** | **14** |
 
-Local density genuinely resolves — the 4-profile cracks the τ=11/14 shell, the 5-profile the τ=6/7
-shell. **But 3/47 survive even (score, char_A, |R|, 4-profile, 5-profile):** the center of the
-continuum holds *invariant-twins* — non-isomorphic tournaments agreeing on temperature, the full cycle
-spectrum, the signed Rédei count, and all 4- and 5-vertex densities. The deep continuum is
-**invariant-resistant**: no cheap global (spectral/signed) or local (flag) coordinate separates it; it
+Local density genuinely resolves beyond score in every tested shell: `28→41`
+at `c₃=12`, `46→50` after score at `c₃=11`, and `13→14` at `c₃=13`.
+The final keys leave six, two, and one **twin pairs**, respectively—not “3/47
+classes.”  These are non-isomorphic tournaments agreeing on temperature, the
+full cycle spectrum, the absolute Rédei magnitude, score, and all 4- and
+5-vertex densities. The deep continuum is
+**invariant-resistant**: no cheap global (spectral/Rédei-magnitude) or local (flag) coordinate separates it; it
 needs essentially the whole object. This is the sharp form of "enumeration is forced at the hot core."
 
 ## Thread B — the reducibility ceiling (proved)
 
-> **Reducibility ceiling.** The maximum `c₃` over **reducible** (non-strongly-connected) tournaments
-> on n vertices is `c₃_max(n−1)`.
+> **Reducibility ceiling.** For `n>=2`, the maximum `c₃` over **reducible**
+> (non-strongly-connected) tournaments on `n` vertices is `c₃_max(n−1)`.
 
-*Proof.* Put `M(n)=c₃_max(n)`, with `M(0)=M(1)=M(2)=0`.  The parity formulas
-below give
-
-```text
-Delta M(2m)=m(m-1)/2,       Delta M(2m+1)=m(m+1)/2.
-```
-
-Thus the first differences are nondecreasing.  In particular `M` is
-superadditive: for `a,b>=0`,
+*Proof.* Put `f(m)=c₃_max(m)`, with `f(1)=f(2)=0`.  A 3-cycle lies inside one
+strong component, so for SCC sizes `n₁,...,n_r`, where `r≥2`,
 
 ```text
-M(a+b)-M(a)=sum_(j=1)^b Delta M(a+j)
-            >=sum_(j=1)^b Delta M(j)=M(b).
+c₃(T)=Σ_i c₃(S_i) ≤ Σ_i f(n_i).
 ```
 
-If the SCC sizes of a reducible tournament are `s_1,...,s_r`, with `r>=2`,
-then THM-1862 gives
+THM-2000 proves the all-`m` increment law
+`f(m+1)-f(m)=T_floor(m/2)`.  These increments are nondecreasing.  If
+`a≥b≥2`, transferring one vertex from the smaller part to the larger therefore
+does not decrease `f(a)+f(b)`.  Iterating over the SCC-size partition
+concentrates it at `(n-r+1,1,...,1)` and gives
 
 ```text
-c₃(T)<=sum_i M(s_i).
+Σ_i f(n_i) ≤ f(n-r+1) ≤ f(n-1).
 ```
 
-Combine all but one part using superadditivity.  The right side is at most
-`M(n-s)+M(s)` for some `1<=s<=n-1`.  Since the first differences of `M` are
-nondecreasing, this symmetric function decreases up to `n/2` and then
-increases; its maximum is therefore the endpoint value
-`M(n-1)+M(1)=M(n-1)`.  Equality is attained by joining an
-`M(n-1)`-extremizer to one vertex. ∎
+Equality is attained by a max-cyclic `(n-1)`-tournament joined in order to a
+singleton. ∎
 
-Verified exactly: max-reducible-c₃ = `c₃_max(n−1)` = 1,2,5,8 for n=4..7. So the **condensation
-temperature**
+Verified exactly: max-reducible-c₃ = `c₃_max(n−1)` = 1,2,5,8 for n=4..7. The attained
+**reducible ceiling** (for `n>=3`, when `c₃_max(n)>0`)
 ```
-        τ_c = c₃_max(n−1)/c₃_max(n)   (= 1/2, 2/5, 5/8, 4/7 for n=4..7)
+        τ_red = c₃_max(n−1)/c₃_max(n)   (= 1/2, 2/5, 5/8, 4/7 for n=4..7)
 ```
-is exact — for τ > τ_c every class is strongly connected. Since `c₃_max(n) = n(n²−1)/24` (odd),
-`n(n²−4)/24` (even), `τ_c → 1`: reducible tournaments persist to nearly the hot edge (as a vanishing
-fraction, THM-1978), and only the sliver `(τ_c, 1]` is purely strong.
-
-The parity formulas sharpen this limiting statement to an exact harmonic
-hazard:
+is exact and is attained by reducible classes; for `τ > τ_red` every class is
+strongly connected.  THM-462's all-`n` no-holes theorem realizes every integer
+`c₃`-level from zero through `c₃_max(n)`.  Therefore the first all-strong shell
+is
 
 ```text
-tau_c(n)=(n-1)/(n+2)  (n even),     tau_c(n)=(n-3)/n  (n odd),
-3/(1-tau_c(n))=6,5,8,7,10,9,... .
+        τ_all=(c₃_max(n−1)+1)/c₃_max(n)   (= 1, 3/5, 3/4, 9/14 for n=4..7).
 ```
 
-The last word is an adjacent-pair reversal of `{5,6,7,...}`.  Consequently
-its normalized defect profile is exactly
-`sum_(n>=4)((1-tau_c(n))/3)^z=zeta(z)-H_4^(z)` for `Re z>1`.
-THM-2005 develops the corresponding Abel--Dini boundary and shows that the
-parity shuffle changes the prefix-product partition sum by the positive exact
-tax `67/4-24 log 2`.
+Since `c₃_max(n) = n(n²−1)/24` (odd),
+`n(n²−4)/24` (even), `τ_red → 1`: reducible tournaments persist to nearly the hot edge (as a vanishing
+fraction, THM-1978), and only the sliver `(τ_red, 1]` is purely strong.
+
+### The ceiling ratios form a parity-shuffled harmonic word
+
+The same ceiling has an exact reciprocal-sequence interpretation. Put
+`τ_red(n)=c₃_max(n−1)/c₃_max(n)` for `n>=4`. Then
+
+```text
+τ_red(n)=(n−1)/(n+2)  (n even),       τ_red(n)=(n−3)/n  (n odd),
+3/(1−τ_red(n))=6,5,8,7,10,9,... .
+```
+
+The last sequence is the adjacent-pair reversal of `{5,6,7,...}`. Hence,
+for `Re z>1`,
+
+```text
+sum_(n>=4)((1−τ_red(n))/3)^z = zeta(z)−sum_(m=1)^4 m^(−z).
+```
+
+The ratios also telescope:
+
+```text
+product_(j=4)^N τ_red(j)=1/c₃_max(N),
+sum_(N>=3) product_(j=4)^N τ_red(j)=75/4−24log2.
+```
+
+Thus the maximum-`c₃` reciprocal mass is the partition sum of cumulative
+reducibility hazards. Sorting the same hazard support gives partition sum `2`;
+THM-2005 proves that the order-sensitive parity-shuffle tax is
+`67/4−24log2>0`.
+
+### The ceiling is a reindexing; the first strong shell is an analytic shift
+
+Put `f(m)=c₃_max(m)`, `m>=3`.  The reducibility-ceiling denominator sequence
+`c₃_max(n-1)`, `n>=4`, has exactly the same support and full Dirichlet profile
+as `f`; THM-2000/2005 give its abscissa `1/3` and mass
+`75/4-24log2`.  It is not a new harmonic support.
+
+The first all-strong numerator sequence is genuinely new:
+
+```text
+g(m)=f(m)+1,                    m>=3.
+```
+
+It still has abscissa `1/3`, because `f(m)~m^3/24`.  More precisely,
+
+```text
+D_g(s)-D_f(s)=sum_(m>=3)[(f(m)+1)^(-s)-f(m)^(-s)]                  (RC)
+```
+
+extends holomorphically to `Re(s)>-2/3`, far across the common convergence
+line.  Indeed, on compact subsets of that half-plane,
+
+```text
+|(a+1)^(-s)-a^(-s)|
+ =|s integral_a^(a+1)x^(-s-1)dx| <= C a^(-Re(s)-1),
+```
+
+and `a=f(m)` is cubic.  Thus crossing the reducibility ceiling by one integer
+shell changes the finite reciprocal mass but not the critical Dirichlet
+singularity.  This is the analytic form of “one discrete level above the same
+hot edge.”
 
 ## Thread C — H is a thermometer (locating the H≥disc binding case)
 

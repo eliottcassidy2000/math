@@ -569,7 +569,7 @@ def kakeya_achievement_audit() -> tuple[list[tuple[int, int, F]], list[tuple[int
         remainder = F(1, (base - 1) * base**7)
         require(atom / remainder == base - 1,
                 "geometric achievement atom-to-tail ratio")
-        topology = "interval_[0,2]" if base == 2 else "Cantor_dimension_log_base(2)"
+        topology = "interval_[0,2]" if base == 2 else f"Cantor_dimension=log_{base}(2)"
         geometric_rows.append((base, topology))
     return simplex_rows, geometric_rows
 
