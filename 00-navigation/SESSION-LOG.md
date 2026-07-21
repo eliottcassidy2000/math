@@ -54,7 +54,7 @@ existing canon (LEM-004 circulant census, THM-128 a(13), THM-212 Paley global ma
 parts A/D VALIDATE, not extend. THM-1820 open Q1 ("what maximises H?") is thereby answered by
 existing canon (Paley n=7,11; rotation n>=13).
 
-**TWO GENUINELY NEW RESULTS (THM-1855, HYP-8640):**
+**TWO GENUINELY NEW RESULTS (THM-1855, HYP-8645):**
 (B, CORRECTION to THM-1820) H is NOT a function of the score sequence: n=6 score (1,2,2,3,3,4)
 carries SIX H values {23,25,29,31,33,37}. So THM-1820's "H Schur-concave IN THE SCORES" is
 ill-posed (c_3 IS a score function, genuinely Schur-convex; H is not one at all). Its "Paley
@@ -74,8 +74,17 @@ tested exhaustively n<=7 (incl. H<=2^{n-tr} REFUTED). THM-1855 cites it as compl
 tests, the diagnostic predicts which tests a construction can settle. HYP-8630 (klein's WOWII
 generator) noted.
 
-**NAMESPACE:** HYP-8625/8630/8635 are multiply-collided (boxeph/mac-mini/klein/me) -- used a clean
-HYP-8640. THM-1855 free (only THM-1850 klein in range).
+**MORE CONCURRENT WOWII WORK (pulled in during close-out, all complementary to THM-1855):**
+kind-pasteur THM-1860 (c3<=H, reduced to strongly-connected via SCC: H=prod H(SCC), c3=sum c3(SCC);
+arithmetic kernel Lean-formalized sorry-free, SumLeProd; H<=2^{n-2}c3+1 REFUTED n=10) --
+c3<=H is consistent with the diagnostic (both c3,H inflation-neutral; a source is a singleton SCC
+with H=1, c3=0). death-star THM-1858 (spectral forbidden ndev!=2). The fleet is swarming the
+WOWII/tournament-invariant theme; THM-1855's angle (inflation-response mechanism + H-not-score-
+determined) is distinct from all of them.
+
+**NAMESPACE:** HYP-8625/8630/8635/8640 all multiply-collided (boxeph/mac-mini/klein/death-star/me);
+mac-mini-S159 first-pushed HYP-8640, so mine renumbered to HYP-8645. THM-1855 free (THM-1850 klein,
+1858 death-star, 1860 kind-pasteur in range).
 
 **STILL OPEN (HYP-8625 item a):** the native_decide Lean certificate for the LRC extremals --
 toolchain confirmed live (lake/lean on PATH, TournamentH7 with mathlib built). Deferred to its own
