@@ -49,6 +49,16 @@ pointer.
 **NEXT (cheapest zoo §6 wins):** run R(31) (HYP-2371); add S4 to the moment LP (HYP-7540); test
 min-FAS insertion-response (predicted neutral under +source -> joins H,c3 as rigid-extremal); fill an
 empty column (chi or min-FAS on the metagraph / LRC danger graph).
+## death-star-2026-07-21-S79 -- ZOO RECOVERY + procedural generation grammar + computed harvest (COMPLEMENT to klein-S399's master atlas). 4-agent repo sweep; γ,dichr≤ndev survive n=7; the frames graveyard recovered. HYP-8649.
+
+**Owner directive:** keep adding to the zoo, go through past work thoroughly, lose no idea, procedurally generate new frames/angles/computations, find the things we've forgotten we studied — all of them — and the gaps between and around them.
+
+- **CONVERGENCE:** klein-S399 built THE master `TOURNAMENT-INVARIANT-ZOO-ATLAS` + gap-map + 7 generators in parallel from the same prompt. I credit it as the map and contribute the COMPLEMENT: the computed harvest, the procedural GRAMMAR, and the forgotten-FRAMES recovery klein's invariant-centered atlas under-weighted.
+- **4-AGENT SWEEP:** parallel Explore of invariant census / computation archaeology / frames-graveyard / navigation-gaps. Consolidated into two reflections + a big backlog entry so NONE are lost.
+- **COMPUTED HARVEST (full-zoo battery ~20 invariants, saved dataset, n=7-vetted):** SURVIVE n≤7 — γ≤ndev, dichr≤ndev (domination & dichromatic bounded by #distinct eigenvalues, Hoffman-flavored), H≤Σa_r (paths ⊂ source-rooted arborescences), disc≤H (HYP-8636), fas≤c3. BROKE at n=7 (discipline worked) — fas≤ndev (ndev=3,fas=7). Forbidden-value rhyme reconfirmed n=7: ndev & kings both skip {2} (THM-1858 + classical).
+- **PROCEDURAL GRAMMAR** (`the-procedural-generation-grammar-...-S79`): research surface = objects × lenses × invariants × operations; the META-GAP is that the OPERATION columns are nearly empty (only H has a ⊕-law, only M(t,u,v) a complement functional-eq, only G_n a run zoo) — filling them fills whole rows at once.
+- **RECOVERY LEDGER** (`the-recovery-ledger-...-S79`): forgotten FRAMES to revive — ★"everything is sl(n)" (dual to "everything is the triangle", dormant since March), ★index-theorem LRC frame (topological, orthogonal to moment-nullcone), two-hop/A², DRT-engine S²=J−nI, lever-zoo→THM-1775, PROMOTE regularity=AP=Paley. REFUTED-BUT-CLOSE (cheapest theorems): HYP-3798, HYP-260, HYP-3805 (break=Paley heptagon=LRC extremal), HYP-2912, HYP-463. GAPS: E_n dual sweep (biggest), Ihara zeta, beta2_rank_identity n=5 anomaly, 11 dangling variable files, greenfield fronts (Seymour/Sumner/Caccetta-Häggkvist/cap-set), radius-7 sweep (787 prefixes, never run).
+- **Namespace:** HYP-8649 (mine); THM-1858/HYP-8636 from S78. All backlog-filed. GMC(2)/LRC(14) untouched; no LRC(≤13) re-audit.
 
 ## klein-2026-07-21-S399 -- the TOURNAMENT-INVARIANT ZOO ATLAS: five-pass repo synthesis + gap map + 7 procedural generators + 2 gap-fills. Atlas doc; HYP-8646/8647.
 

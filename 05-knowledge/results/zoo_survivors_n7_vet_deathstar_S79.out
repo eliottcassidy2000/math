@@ -1,0 +1,11 @@
+n=7 survivor vetting (12000 random samples):
+  HOLDS  gamma <= ndev
+  BREAKS fas <= ndev   counterexample {'ndev': 3, 'disc': 8, 'c3': 14, 'H': 189, 'gamma': 3, 'dichr': 3, 'fas': 7, 'arb': 2744}
+  HOLDS  dichr <= ndev
+  HOLDS  H <= arb
+  HOLDS  disc <= H
+  HOLDS  fas <= c3
+
+  forbidden-value check n=7: ndev values [1, 3, 4, 5, 6, 7] (2 absent? True)
+                            kings values [1, 3, 4, 5, 6, 7] (2 absent? True)
+                            fas values [0, 1, 2, 3, 4, 5, 6, 7]
