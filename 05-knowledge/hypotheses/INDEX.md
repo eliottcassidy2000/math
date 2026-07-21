@@ -17085,6 +17085,29 @@ checking whether the two share a lemma.
 **Related:** THM-1685, THM-1680, THM-1655, THM-1635, THM-415 (vanishing sums), THM-1535
 (GMC cascade), HYP-8450 (JC monodromy vanishing sums), HYP-8495 (trinomial uniform).
 
+### HYP-8550 - Multi-straddle induction: the resultant tower terminates at a bottom-pair monomial for any shell count
+**Status:** OPEN; two-straddle base case CLOSED (opus-2026-07-20-S429). See THM-1765.
+
+THM-1765 closed klein's first open multi-straddle case: P = al Z^3 + ga Z + be Zb + de Zb^3
+(charges {-3,-1,+1,+3}, two straddling pairs). Both pairs appear at m=2 (E[P^2]=12al de+2be ga),
+so they CAN cancel, but the bottom-up resultant tower terminates: E[P^6] mod <E[P^2],E[P^4]> =
+-2160 be^3 ga^3 (a pure monomial), forcing the one-sided locus. Coupling resultant
+Res_ga(E[P^2],E[P^4]) = 192 al(216 al^2 de^4 - 54 al be^3 de^2 - be^6), nonzero off {al=de=0}.
+
+**THE INDUCTION (radial uniform, HYP-8470 general).** For a k-straddle P (charge pairs at
+|h|=h_1<...<h_k), show E[P^{2j}] mod <E[P^2],...,E[P^{2j-2}]> is, at the top j=k, a NONZERO
+MONOMIAL in the bottom-shell pair -- generalising -2160 be^3 ga^3. Then the tower reaches the
+unit ideal off the one-sided locus in k steps, closing the general multi-straddle case and the
+radial uniform. The base case (k=1 klein THM-1700, k=2 THM-1765) gives the template; the step
+is: eliminating shells h_1..h_{j-1} via successive resultants leaves the top shell forced, the
+successive Res being nonzero off one-sided (verified k=2: Res_ga != 0 off {al=de=0}).
+
+**Merge:** THM-1755 (angular dichotomy, thin tunable) x this (radial tower induction) =
+unbounded GMC(2) via THM-1740's bounded-stratum = finite-Groebner framing.
+
+**Related:** THM-1765, THM-1755, THM-1740, THM-1700 (klein bottom-up), HYP-8470 (klein general
+cross-shell), HYP-8540 (the angular+radial factorisation).
+
 ### HYP-8545 - Closed-form tunability: {charges} tunable iff a primitive charge-relation of bounded height h(k)
 **Status:** OPEN, characterisation supported by data (opus-2026-07-20-S428). See THM-1755.
 

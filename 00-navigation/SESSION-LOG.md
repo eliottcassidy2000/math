@@ -1,3 +1,40 @@
+## opus-2026-07-20-S429 - The concrete cross-shell handoff: two-straddle CLOSES via an explicit resultant tower (THM-1765)
+
+Worked the concrete handoff from THM-1755/HYP-8540: make klein's cross-shell coupling an
+explicit resultant and prove bottom-up propagation. DELIVERED on klein's first open case.
+
+**THE TWO-STRADDLE WITNESS.** klein's THM-1700 closed the SINGLE-straddle P = al Z^3 + be Zb +
+ga Z (only |h|=1 straddles); the open residual (HYP-8470) was MULTIPLE straddling shells.
+Minimal genuine instance: P = al Z^3 + ga Z + be Zb + de Zb^3 (charges {-3,-1,+1,+3}, TWO
+straddling pairs (be,ga) at |h|=1 and (al,de) at |h|=3). At m=2 BOTH straddles appear:
+E[P^2] = 12 al de + 2 be ga -- so they CAN cancel (6 al de = -be ga), exactly the 'cancellation
+among bottom-shell pairs' klein flagged.
+
+**IT CLOSES.** Saturating the moment ideal (m<=8) by every cross-sign product (be ga, al de,
+ga de, al be) gives 1 in the ideal -> V cap two-sided EMPTY -> NO two-sided nullcone member.
+The m=2 cancellation does not sustain. GMC(2) holds on the two-straddle stratum.
+
+**THE EXPLICIT BOTTOM-UP RESULTANT TOWER:**
+   bottom: E[P^2] = 12 al de + 2 be ga = 0
+   step 1: E[P^4] mod <E[P^2]> = 12(2 al be^3 + 3 be^2 ga^2 + 2 de ga^3)
+   step 2: E[P^6] mod <E[P^2],E[P^4]> = -2160 be^3 ga^3   <- PURE MONOMIAL, forces be=0 or ga=0
+The chain strictly ascends off one-sided and reaches the unit ideal in THREE steps. The
+shell-coupling resultant is explicit: Res_ga(E[P^2],E[P^4]) = 192 al(216 al^2 de^4 -
+54 al be^3 de^2 - be^6), nonzero off {al=de=0} -- it forces the top straddle once the bottom
+is eliminated. THIS IS THE RESULTANT TOWER klein's descent needs, delivered.
+
+**REMAINS (HYP-8550).** The general multi-straddle induction: for a k-straddle P, show
+E[P^{2k}] mod the lower moments is a nonzero monomial in the bottom-shell pair (generalising
+-2160 be^3 ga^3), so the tower terminates in k steps off one-sided. Base cases k=1 (klein),
+k=2 (this) give the template; the induction closes the radial uniform.
+
+**STATUS.** angular uniform = THM-1755 (thin tunable family); radial single/two-straddle =
+THM-1700/1765; radial general = HYP-8550 (the tower induction); bounded stratum = THM-1740.
+The joint angular x radial uniform = unbounded GMC(2). The remaining gap is the shell-count
+induction.
+
+**Artifacts:** THM-1765; HYP-8550; 2 scripts + 2 outputs. Credits klein THM-1700.
+
 ## mac-mini-2026-07-20-S150 -- THE MOMENT-COUNT MULTIPLIER IS THE RADIAL MULTIPLICITY, NOT THE PRIME 2: the owner's prime-family lens CORRECTS my own THM-1725 (factor 2 was the r=2 slice; M* = r*m0, verified r=1,2,3; refuted at k>=4). THM-1740.
 
 **Owner directive:** look back through coprime concepts in the repo and use the prime-family lens to challenge assumptions -- a constant like 2 is the x-th member of a family; read the equation at every member; there are no coincidences.

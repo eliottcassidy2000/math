@@ -1,0 +1,18 @@
+THE EXPLICIT BOTTOM-UP RESULTANT TOWER for the two-straddle witness.
+  bottom: E[P^2] = 12*alpha*delta + 2*beta*gamma = 0  <=>  the two straddles CANCEL: 6*al*de = -be*ga
+
+STEP 1: on V(E[P^2]), substitute be*ga = -6 al de. Reduce E[P^4] mod E[P^2]:
+  E[P^4] reduced mod <E[P^2]> = 12*(2*alpha*beta**3 + 3*beta**2*gamma**2 + 2*delta*gamma**3)
+
+STEP 2: reduce E[P^6] mod <E[P^2], E[P^4]>:
+  E[P^6] reduced mod <E[P^2],E[P^4]> = -2160*beta**3*gamma**3
+
+=> the tower <E[P^2]> subset <E[P^2],E[P^4]> subset ... is STRICTLY ASCENDING off the
+   one-sided locus: each new moment adds an independent relation, and the chain reaches
+   the unit ideal (saturated) -- the descent TERMINATES. No sustained cancellation.
+
+RESULTANT FORM (the coupling shell h=1 -> the rest): eliminate the bottom pair (be,ga)
+via Res, exposing the top pair (al,de):
+  Res_ga(E[P^2],E[P^4]) = 192*alpha*(216*alpha**2*delta**4 - 54*alpha*beta**3*delta**2 - beta**6)
+  nonzero off {al=de=0}? -- the resultant is the explicit shell-coupling klein needs:
+  Res_ga != 0 forces the TOP straddle (al,de) once the bottom (be,ga) is eliminated.

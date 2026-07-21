@@ -1,0 +1,21 @@
+TWO-STRADDLE witness (the HYP-8470 residual klein left open): charges {-3,-1,+1,+3}
+P = alpha Z^3 + gamma Z + beta Zb + delta Zb^3   (h=1 pair (be,ga), h=3 pair (al,de))
+Both charge-0 pairings be*ga (=-1+1) and al*de (=+3-3) present -> can they cancel?
+
+nonzero moments E[P^m]:
+   m=2: 2*(6*alpha*delta + beta*gamma)
+   m=4: 12*(360*alpha**2*delta**2 + 2*alpha*beta**3 + 48*alpha*beta*delta*gamma + beta**2*gamma**2 + 2*delta*gamma**3)
+   m=6: 120*(60480*alpha**3*delta**3 + 360*alpha**2*beta**3*delta + 7560*alpha**2*beta*delta**2*gamma + 6*alpha*beta**4*gamma + 180*alpha*beta**2*delta*gamma**2 + 360*alpha*delta**2*gamma**3 + beta**3*gamma**3 + 6*beta*delta*gamma**4)
+   m=8: 1680*(19958400*alpha**4*delta**4 + 120960*alpha**3*beta**3*delta**2 + 2419200*alpha**3*beta*delta**3*gamma + 12*alpha**2*beta**6 + 2520*alpha**2*beta**4*delta*gamma + 60480*alpha**2*beta**2*delta**2*gamma**2 + 120960*alpha**2*delta**3*gamma**3 + 12*alpha*beta**5*gamma**2 + 480*alpha*beta**3*delta*gamma**3 + 2520*alpha*beta*delta**2*gamma**4 + beta**4*gamma**4 + 12*beta**2*delta*gamma**5 + 12*delta**2*gamma**6)
+
+BOTTOM-UP RESULTANT TOWER: the low moment fires the bottom shell first.
+   E[P^2] = 2(be*ga + ...)?  Check which pairs appear at m=2:
+   E[P^2] = 12*alpha*delta + 2*beta*gamma   (the h=1 AND h=3 straddles both at m=2!)
+
+ONE-SIDED locus (to exclude): P single-signed <=> {be=de=0} (all charges>0) or
+{al=ga=0} (all <0). One-sided ideal J = <(be or de)*(al or ga)> ~ products across signs.
+TEST: is V(moment ideal) cap (two-sided) EMPTY?  Saturate by (ga*be), (ga*de), (al*be), (al*de):
+   saturate by ga*be: V empty (1 in ideal)? True
+   saturate by al*de: V empty (1 in ideal)? True
+   saturate by ga*de: V empty (1 in ideal)? True
+   saturate by al*be: V empty (1 in ideal)? True
