@@ -130,6 +130,14 @@ common factor cannot be extracted.
   algebraically as a Sheffer no-common-zero problem and shows that only
   mixed-sign/complex-phase coefficients can carry the remaining cancellation;
   raw Bargmann-norm positivity alone is not the needed certificate.
+- **Central proportional resonance** → THM-2018/2021 + HYP-8771: on
+  `h=kappa*b^r` the signed channel profile factors exactly into a toral return
+  polynomial and `L(b^m)`. This closes NC2 off a countable exceptional set for
+  every primitive charge pair and off the negative real `kappa` axis in the
+  symmetric case. Full symmetric closure follows from the finite Legendre-zero
+  recurrence theorem announced in 2026 (public proof not yet located); higher
+  charges reduce to HYP-8771, with THM-2020 finite-place separation as the next
+  route. No-consecutive-zero alone is insufficient for EMP.
 - **Multilevel cancellation / pair radicals** → HYP-8765: localized cumulants
   or resultants followed by a factorial-Hankel/Vandermonde determinant; do not
   separate first-return atoms.

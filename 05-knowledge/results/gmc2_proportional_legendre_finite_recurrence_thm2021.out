@@ -1,0 +1,14 @@
+THM-2021 / HYP-8771 EXACT AUDIT
+PASS p=q=1 realizable polynomial slice: direct=channel=factored for m=1..7
+PASS charges (+1,-2) realizable slice: direct=channel=factored for m=1..7
+PASS Legendre recurrence and OGF verified exactly through m=30 / t^20
+PASS all 225 computed roots of S_m(kappa), m=2..30, are negative real (Legendre localization used in proof)
+TOURNAMENT (+1,-1) levels=2..36: pairs=595, edge_flips=0, score_hist=0..34(each once), directed_3cycles=0, SCC_sizes=1^35, tie_path=chronological(valid), Hamiltonian_paths=1
+TOURNAMENT (+1,-2) levels=3..30: pairs=378, edge_flips=0, score_hist=0..27(each once), directed_3cycles=0, SCC_sizes=1^28, tie_path=chronological(valid), Hamiltonian_paths=1
+TOURNAMENT (+1,-3) levels=4..26: pairs=253, edge_flips=0, score_hist=0..22(each once), directed_3cycles=0, SCC_sizes=1^23, tie_path=chronological(valid), Hamiltonian_paths=1
+TOURNAMENT (+2,-3) levels=5..22: pairs=153, edge_flips=0, score_hist=0..17(each once), directed_3cycles=0, SCC_sizes=1^18, tie_path=chronological(valid), Hamiltonian_paths=1
+ALTERNATE VERTICES considered: return channels, individual roots, moment levels, proof obligations
+CHOSEN quotient: moment levels; observable=degree gcd(A_m,A_n); chronological gauge flips on shared roots
+PRESERVES: exact pairwise root recurrence; DESTROYS: root identity, multiplicity, and analytic location
+CHALLENGED ASSUMPTION: no-consecutive-zero is not eventual nonvanishing and cannot by itself invoke EMP
+NOTE external 2026 Legendre finiteness is not proved by this computation

@@ -179,6 +179,21 @@ orthogonal to nullity and cannot close the band by itself. This makes
 phase-sensitive Sheffer resultants, rather than another top-term comparison,
 the concrete algebraic companion to the saddle program.
 
+## Exact central proportional slice: THM-2021 / HYP-8771
+
+THM-2021 closes a new arbitrary-degree part of the central offset `lambda=0`.
+On `h=kappa*b^r`, the whole channel sum factors exactly as
+`A_m^(p0,q0)(kappa)L(b^m)`. NC2 follows whenever the fixed toral factor is
+eventually nonzero, hence unconditionally off a countable exceptional set. For
+`p0=q0=1` the factor is a Legendre transform, all exceptional parameters are
+negative real, and the full slice follows from the finite-recurrence theorem
+announced in 2026 by Mangoubi--Kadets--Weller Weiser. Because no public proof of
+that new input was located, the full symmetric closure is recorded as
+conditional on the announcement. HYP-8771 asks for the higher-charge
+finite-recurrence theorem; THM-2020's finite-place separation is the proposed
+route. This replaces the too-weak idea that no consecutive zeros alone can feed
+EMP.
+
 ## Relation to HYP-8770
 
 HYP-8770's symmetric-top Watson problem is the many-shell analogue of the

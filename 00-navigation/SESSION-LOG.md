@@ -54,10 +54,12 @@
 
 **Next:** prove the symmetric-top Watson dominance for two shells (extend THM-1565), then general; the coefficient-dominant case is already clean. Artifacts: GMC2-FINISH-MAP-2026-07-21.md, HYP-8770, gmc2_symmetric_top_dominance_boxeph_S201.py (+.out).
 
-## codex-2026-07-21-gmc2-proportional-central-resonance -- THM-2021 / HYP-8771 reserved
+## codex-2026-07-21-gmc2-proportional-central-resonance -- THM-2021 / HYP-8771
 
 **Owner directive:** finish NC2 and mine seemingly unrelated repo work for ideas.
 
-- Concurrent THM-2018 owns the exact central-resonance collapse `h=kappa*b^2`. Reserved THM-2021 for the missing finite-zero repair: no-consecutive-zero is insufficient for EMP, whereas eventual nonvanishing of the Legendre factor is sufficient.
-- Reserved HYP-8771 for finite zero recurrence of the higher-charge toral factor. The symmetric factor is a Legendre transform; an announced 2026 finite-recurrence theorem is exactly the external input needed to turn eventual radial vanishing into EMP.
-- This is an active reservation checkpoint; proof, computation, Tournament Analysis, and scope are not yet final.
+- **Incoming synthesis/correction.** Concurrent THM-2018 independently reserved the symmetric proportional identity `h=kappa*b^2`; THM-2021 extends the factorization to every primitive charge pair and repairs its proposed closure. No-consecutive-zero is insufficient for EMP: the needed toral factor must be eventually nonzero. Concurrent THM-2019 (affine-height supports) is transverse, while THM-2020's finite-place channel separation supplies the next route for the algebraic exceptional parameters.
+- **THM-2021 (proved self-contained part).** For `P=Z^p a(s)+b(s)+Zbar^q c(s)`, if `h=s^(pq/g)a^(q/g)c^(p/g)=kappa*b^r`, then `E[P^m]=A_m^(p0,q0)(kappa)L(b^m)` exactly. NC2 holds whenever `A_m(kappa)` is eventually nonzero, hence outside an explicit countable exceptional set for every primitive charge pair. At `p0=q0=1`, `A_m` is a Legendre transform and every possible exceptional `kappa` is negative real; all genuinely complex phases close.
+- **Announced external completion, honestly labeled.** A February 2026 IAS announcement for Mangoubi--Kadets--Weller Weiser states that a fixed nonzero point is a zero of only finitely many Legendre polynomials. This would close the entire symmetric proportional hypersurface by eventual EMP. No public proof/preprint was located, so the full corollary is conditional on the announced input, not counted as a self-contained canon proof.
+- **HYP-8771.** The higher-charge target is finite zero recurrence for the toral trinomials `A_m`. Exact gcd scans found zero shared-root events across 1,379 level pairs for `(1,1),(1,2),(1,3),(2,3)`. Tournament vertices are moment levels; gcd-degree flips the chronological edge. All four tournaments are transitive (zero flips/cycles, singleton SCCs, one Hamiltonian path). This is evidence, not proof.
+- **Artifacts.** THM-2021, HYP-8771, reflection `nc2-central-resonance-is-legendre-finite-zero-recurrence-...`, exact script/output `gmc2_proportional_legendre_finite_recurrence_thm2021.py/.out`; HYP-8766 and the finish map updated. Full NC2 remains open outside these slices.
