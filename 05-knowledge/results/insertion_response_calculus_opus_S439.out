@@ -1,0 +1,28 @@
+INSERTION-RESPONSE CALCULUS  (add u beating subset P; response over all T, all P)
+========================================================================
+
+ n=3: 8 tournaments
+   (c3)  Delta c3 == e(P->V\P) for ALL (T,P)?  True
+   (c3)  every c3-neutral P is a CLOSED set (fwd-cut 0)?  True
+   (H)   #H-neutral patterns per T (histogram count:#T): {4: 6, 2: 2}
+   (H)   H-neutral patterns that are NEITHER source nor sink: 12
+          examples (n,Tindex,P): [(3, 0, (0,)), (3, 0, (0, 1)), (3, 1, (1,)), (3, 1, (0, 1)), (3, 3, (1,)), (3, 3, (1, 2))]
+
+ n=4: 64 tournaments
+   (c3)  Delta c3 == e(P->V\P) for ALL (T,P)?  True
+   (c3)  every c3-neutral P is a CLOSED set (fwd-cut 0)?  True
+   (H)   #H-neutral patterns per T (histogram count:#T): {5: 24, 3: 16, 2: 24}
+   (H)   H-neutral patterns that are NEITHER source nor sink: 88
+          examples (n,Tindex,P): [(4, 0, (0,)), (4, 0, (0, 1)), (4, 0, (0, 1, 2)), (4, 1, (1,)), (4, 1, (0, 1)), (4, 1, (0, 1, 2))]
+
+ n=5: 1024 tournaments
+   (c3)  Delta c3 == e(P->V\P) for ALL (T,P)?  True
+   (c3)  every c3-neutral P is a CLOSED set (fwd-cut 0)?  True
+   (H)   #H-neutral patterns per T (histogram count:#T): {6: 120, 4: 120, 3: 240, 2: 544}
+   (H)   H-neutral patterns that are NEITHER source nor sink: 960
+          examples (n,Tindex,P): [(5, 0, (0,)), (5, 0, (0, 1)), (5, 0, (0, 1, 2)), (5, 0, (0, 1, 2, 3)), (5, 1, (1,)), (5, 1, (0, 1))]
+
+========================================================================
+READING: c3-velocity is the forward cut e(P->V\P) (clean, exact).
+H-neutral patterns beyond source/sink appear EXACTLY when T splits (dominant set) --
+the split points are extra neutral insertions. Strongly-connected T => only source/sink.

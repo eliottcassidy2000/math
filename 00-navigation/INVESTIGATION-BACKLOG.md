@@ -85,6 +85,9 @@
 - **Secondary open (pure parameter extension):** four-comb span c>30 OUTSIDE the THM-1128 cone k1 >= 26(c+1) — named open in THM-1133 §5; base script parameterized.
 - STATUS: blueprint filed, not run. Next session: execute pilot.
 
+## THE-ZOO (opus-S439) — master index of forgotten leads, gaps, and generated questions
+See [THE-ZOO.md](THE-ZOO.md): §4 recovers dormant threads (metagraph 183=|PG(2,13)|, T-S84-A Redei-parity-as-LRC-obstruction, vertex-deletion-as-LND, near-misses HYP-6720/3805/6445/5207, un-run HYP-7940/2371/3122/7540, the runner braid, the dormant applied continent); §5 maps the gaps (empty columns: min-feedback-arc-set, chromatic number; +18 object×invariant cells); §6 is the generative engine (fill-a-gap / transport-a-method / apply-a-frame / operation×invariant response-matrix) with THM-1875 as the worked seed. Revive from there; move revived leads to canon and leave a pointer.
+
 ## Lead kind-pasteur-2026-07-20-S128c101: after THM-1345 (HYP-8150)
 - **(i) Prove the trace module:** conjecture = trace-polynomial monomials are exactly those outside the pure-x cone; suspected proof from z-affinity (z enters fibers linearly), depression (no x^2 term), and the master identity (x^3 reduces with 1/L). Would upgrade THM-1335(4)/1345(3) from computed to explained and settle all towers F^m at once (module closed under Tr => induction).
 - **(ii) The Abel-Ruffini rung:** formalize 'radical-invertible' as a realization-program invariant; the A_5 hunt (2-jet architecture, backlog c99(a)) now carries a second flag: the first non-radical Keller map = the polynomial Abel-Ruffini theorem.

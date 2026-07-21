@@ -1,0 +1,3 @@
+"LRC extremal certificate OK: M({1..13}) = M({1..11,13,24}) = 1/14 (native_decide, ℕ-only)"
+'lrc13_upper' depends on axioms: [lrc13_upper._native.native_decide.ax_1_1]
+'lrc24_upper' depends on axioms: [lrc24_upper._native.native_decide.ax_1_1]
