@@ -121,7 +121,7 @@ Format per entry:
 
 ---
 
-## MISTAKE-213 (2026-07-21, codex audit of THM-2016) -- SCC additivity was incorrectly bounded by the largest component alone
+## MISTAKE-217 (2026-07-21, codex audit of THM-2016) -- SCC additivity was incorrectly bounded by the largest component alone
 
 - **What was claimed:** the original proof of THM-2016's correct reducibility
   ceiling used

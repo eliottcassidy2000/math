@@ -21,7 +21,7 @@ related:
   - THM-1966  # mac-mini |R| (the L2 coordinate that collapses in the deep continuum)
   - THM-1926  # my zeta / cycle spectrum (=char_A, the L1 coordinate)
   - THM-1862  # order-join: c₃ = Σ over strong components (the reducibility ceiling)
-  - MISTAKE-213  # repairs the original largest-SCC proof shortcut
+  - MISTAKE-217  # repairs the original largest-SCC proof shortcut
   - "07-reflections/coordinates-for-the-continuum-cyclic-temperature-and-the-cycle-spectrum-boxeph-S199.md"
 script: 04-computation/continuum_threads_boxeph_S200.py
 output: 05-knowledge/results/continuum_threads_boxeph_S200.out
