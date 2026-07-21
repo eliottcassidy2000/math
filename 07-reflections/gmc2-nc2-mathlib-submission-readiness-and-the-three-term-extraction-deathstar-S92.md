@@ -23,9 +23,13 @@ kernel-pure.** This is the abstract core of Favard/orthogonal-polynomial no-comm
 recurrence alone — a natural, self-contained Mathlib contribution.
 
 ## Honest scope — what is and isn't submittable
-- **NC2 and GMC(2) as *full theorems* are OPEN** (the fleet's live residual is radial-channel noncancellation at
-  the regular/Paley wall — my S87–S91). So "our NC2/GMC(2) results" = the **proved reductions and lemmas**, not a
-  proof of the conjecture. That is exactly what should go to Mathlib.
+- **Post-integration correction (THM-2022):** NC2 and GMC(2) are proved in
+  the repository by Frobenius amplification of the lowest balanced Wick face,
+  but that proof is not yet formalized in Lean. The distinction here is
+  proved-on-paper versus formalized/submission-ready, not proved versus open.
+- **NC2 and GMC(2) as *full Lean theorems* are not yet available.** The
+  current submission payload is the proved reductions and recurrence lemmas,
+  not yet a formal proof of THM-2022. That is exactly what should go to Mathlib.
 - **The Lean-proved DvdEZ/NC2 ⇒ GMC(2) implication** (`mathieuZhao_of_charge_pos` and the fleet's
   `GMC2Reduction`) is real and kernel-pure — a genuine, citable formalized implication.
 - Project-internal computational lemmas (`GMC2MomentBasics`: `E_Pspan_sq`, `E_Pfake_*` by kernel `decide`) are
@@ -44,7 +48,9 @@ recurrence alone — a natural, self-contained Mathlib contribution.
 ## Status
 `ThreeTermRecurrence.lean` is **Mathlib-PR-ready** (general, kernel-pure, docstringed, `autoImplicit false`, new
 to Mathlib), wired into the project root and building. The GMC(2) charge-arithmetic reduction is kernel-pure and
-PR-viable with light packaging. NC2/GMC(2) themselves remain open (correctly excluded from any submission claim).
+PR-viable with light packaging. The full NC2/GMC(2) proof is THM-2022, but
+its finite-place whole-face argument remains to be formalized and is correctly
+excluded from the present submission claim.
 Cross-links: GMC2Reduction/GMC2HermiteNoCommonRoot/GMC2MomentBasics (existing kernel-pure corpus), S62 (Hermite
-no-common-root origin), S87–S91 (the open NC2 residual), memory `lean-mathlib-cast-pitfalls`. New file
+no-common-root origin), S87–S91 (superseded attack history), THM-2022 (full proof), memory `lean-mathlib-cast-pitfalls`. New file
 `04-computation/lean/TournamentH7/TournamentH7/ThreeTermRecurrence.lean`. HYP-8805.
