@@ -1,3 +1,43 @@
+## opus-2026-07-20-S432 - Binary forms <-> tournaments: (in)transitivity IS representation theory (THM-1800)
+
+Owner: work the rep theory of binary forms and how it relates to tournaments = in/transitivity
+itself. Built the dictionary, verified a concrete invariant, tied to the repo's Paley/Sym^3/
+Redei threads.
+
+**THE DICTIONARY.** n players = n roots of a degree-n binary form on P^1; a tournament = an
+orientation of every edge. TRANSITIVITY (linear order) = the SIGN character of S_n = the
+Vandermonde prod(x_i-x_j) (the odd/skew part, THM-1450); the DISCRIMINANT prod(x_i-x_j)^2 is the
+even/S_n-invariant part, orientation-blind. INTRANSITIVITY (3-cycles) = the first SL(2)-covariant
+BEYOND the sign (the cubic covariant/Hessian); its vanishing = coincident roots = the ramification
+R of THM-1770.
+
+**THE CHARACTER TOURNAMENT = DISCRIMINANT CONSTRUCTION, MAXIMALLY INTRANSITIVE.** On F_p
+(p = 3 mod 4), i->j iff chi(j-i)=+1, chi = quadratic (Legendre) character = the discriminant
+character of the binary quadratic x^2-a. This is the Paley tournament, and it is DOUBLY-REGULAR =
+3-cycle-MAXIMAL: #3-cycles = (p+1)p(p-1)/24 (verified p=3,7,11,19,23: 1,14,55,285,506), a
+Jacobi-sum invariant, exceeding the random count p(p-1)(p-2)/24 by (p+1)/(p-2). So intransitivity
+is what the quadratic character MAXIMISES -- Paley's recurring extremality is explained
+invariant-theoretically.
+
+**THE Sym^3 END.** cubic disc = ((a-b)(b-c)(c-a))^2; its sqrt = the S_3-sign = the cyclic
+orientation a->b->c->a. disc SQUARE <=> A_3 <=> cyclic 3-tournament (intransitive); non-square
+<=> S_3 <=> transitive. The S_3 resolvent of a binary cubic IS the triangle's transitive/
+intransitive dichotomy -- the repo's 'Redei sign = discriminant character', 'generic fibre =
+cyclic 3-tournament' (THM-1375 IV, THM-1770).
+
+**SL(2) reading.** V_n = Sym^n(C^2) is the binary-form irrep; the tournament orientation is a
+sign-twisted section whose square is the discriminant; intransitivity is the cubic covariant/
+Hessian; ramification = coincident roots. (In)transitivity IS the representation theory of the
+sign-twisted line on the config space of n points.
+
+**CONJECTURE (HYP-8600):** every H-extremal tournament is a binary-form discriminant/character
+construction -- a rep-theoretic characterisation of the H-extremiser. Evidence: Paley (the
+quadratic-char discriminant orientation) is H-maximal among circulants at several p, and
+doubly-regular = 3-cycle-maximal = the character construction. Sub-questions: higher covariants
+(quartic I,J) <-> higher cycle statistics; H_Paley(p) as a Gauss/Jacobi-sum product.
+
+**Artifacts:** THM-1800; HYP-8600; 1 script + output.
+
 ## death-star-2026-07-20-S74 -- Consultation: "$X\cong\mathbb A^3$" ⟺ disproving JC(3), the symmetric-product étale witness (HYP-8600)
 
 **Owner (consultation):** easy/non-computational reason a certain $X$ (an $\mathbb A^1$-bundle over

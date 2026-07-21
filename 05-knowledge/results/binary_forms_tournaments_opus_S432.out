@@ -1,0 +1,37 @@
+==========================================================================
+(1) INTRANSITIVITY of the character (Paley) tournament -- cyclic triples
+==========================================================================
+  Jacobi-sum prediction: doubly-regular Paley has #3-cycles = (p^3 - p)/24 ... check:
+  p= 3: #3-cycles=    1  total triples=    1  frac=1.0000  (p+1)p(p-1)/24 = 1  match: True
+  p= 7: #3-cycles=   14  total triples=   35  frac=0.4000  (p+1)p(p-1)/24 = 14  match: True
+  p=11: #3-cycles=   55  total triples=  165  frac=0.3333  (p+1)p(p-1)/24 = 55  match: True
+  p=19: #3-cycles=  285  total triples=  969  frac=0.2941  (p+1)p(p-1)/24 = 285  match: True
+  p=23: #3-cycles=  506  total triples= 1771  frac=0.2857  (p+1)p(p-1)/24 = 506  match: True
+  => intransitivity fraction -> 1/4 (every triple is cyclic with prob 1/4 for large p);
+     the EXACT count (p+1)p(p-1)/24 is a cubic character sum = a Jacobi-sum invariant.
+
+==========================================================================
+(2) TRANSITIVE = SIGN CHARACTER = VANDERMONDE; the even/odd (skew/symmetric) split
+==========================================================================
+  For n points x_1<...<x_n on the line, the TRANSITIVE tournament is the linear order,
+  and its orientation-parity is sign(sigma) = sign of prod(x_i-x_j) (Vandermonde).
+  Under a transposition (adjacent swap) the Vandermonde flips sign = one edge reverses.
+  So: TRANSITIVE tournaments <-> the SIGN rep of S_n (odd/skew part, THM-1450);
+      the DISCRIMINANT prod(x_i-x_j)^2 <-> the trivial/even part (orientation-blind).
+  n=4 Vandermonde V has degree 6; V^2 = discriminant is
+  S_4-INVARIANT (even): V(swap x0,x1)+V = 0 (V is odd)
+
+==========================================================================
+(3) Sym^3: cyclic-3 tournament <-> discriminant SQUARE <-> A_3 Galois
+==========================================================================
+  cubic disc = ((a-b)(b-c)(c-a))^2; its sqrt (a-b)(b-c)(c-a) is the S_3-sign =
+  the CYCLIC ORIENTATION a->b->c->a. disc SQUARE (sqrt rational) <=> A_3 <=> the
+  3-cycle is 'coherent' (a genuine cyclic tournament); non-square <=> S_3 <=> transitive.
+  This is the repo's 'Redei sign = discriminant character' and 'generic fibre = cyclic
+  3-tournament' (THM-1375 IV / THM-1770): the Sym^3 resolvent IS the triangle's
+  transitive/intransitive dichotomy.
+
+  SL(2) reading: V_n = Sym^n(C^2) is the binary-form irrep; the tournament sign lives
+  in the sign-twisted part, and intransitivity (3-cycles) is the first SL(2)-invariant
+  BEYOND the sign -- the cubic covariant / Hessian, whose vanishing = coincident roots =
+  the tournament's ramification (THM-1770's R).

@@ -17569,3 +17569,28 @@ grows, dict-convolution can't reach enough m). Sharpens klein 'no uniform bound'
 +2(M+N) per radial degree, no ceiling -> degree-uniform GMC(2) needs the analytic bridge (Laplace
 determinacy, THM-1645), not elimination. Named-next: toral+Laplace moment engine to break the
 wall; prove s-degree=2d via THM-1690; bound feeds the analytic bridge.
+
+### HYP-8600 - Is every H-extremal tournament a binary-form discriminant (character) construction?
+**Status:** OPEN, representation-theoretic conjecture (opus-2026-07-20-S432). See THM-1800.
+
+THM-1800 dictionary: tournament (in)transitivity = the sign-twisted line on the config space of
+n points/roots of a binary form; transitive = Vandermonde/sign, intransitive (3-cycles) = the
+cubic covariant/Hessian; discriminant = the even part; ramification = coincident roots. The
+CHARACTER (Paley) tournament (i->j iff chi(j-i)=+1, chi = quadratic char = discriminant char of
+x^2-a) is MAXIMALLY INTRANSITIVE: doubly-regular, #3-cycles = (p+1)p(p-1)/24 (Jacobi-sum
+invariant), verified p=3,7,11,19,23.
+
+**CONJECTURE.** Every H-extremal (or 3-cycle-maximal) tournament is a discriminant/character
+construction from a binary form -- i.e. the H-extremiser has a representation-theoretic
+characterisation as a binary-form invariant orientation. Evidence: Paley (= the quadratic-char
+discriminant orientation) maximises H among circulants at several p (census), and doubly-regular
+= 3-cycle-maximal = the character construction.
+
+**Sub-questions:** (1) higher intransitivity invariants -- for n>=4, which SL(2)-covariant of a
+binary quartic (I, J, the sextic covariant) indexes which cycle statistic (4-cycles, score
+symmetric functions)? (2) express H_Paley(p) as an explicit product of Gauss/Jacobi sums, tying
+the project's central invariant H to binary-form invariant theory. (3) the Redei parity (odd #
+Hamiltonian paths) as a discriminant-character statement.
+
+**Related:** THM-1800, THM-1450 (odd=skew), THM-1375 (Redei=discriminant char), THM-1770 (Sym^3),
+THM-1200 (Paley/two sevens), THM-1075 (H).
