@@ -1,15 +1,19 @@
 ---
-id: THM-1287
+id: HYP-8751
 title: SELECTED-PREFIX TERMINAL-WORD COMPACTIFICATION
-status: RESERVED / PROOF IN PROGRESS (the selected-prefix component argument and endpoint-alternation caps have been independently derived; exact referee, paper proof, and Lean arithmetic consumer are still being assembled).  This namespace is claimed before the concurrent proof packet is completed
+status: DERIVED / COMPUTER-EXACT / FORMALIZATION-PENDING (the selected-prefix component argument and endpoint-alternation caps have been independently derived, and the exact recurrence referee passes normally and under Python optimization; a full paper proof and Lean arithmetic consumer remain to be assembled)
 source: codex-2026-07-19-S82 endpoint-word continuation
 depends_on: [THM-1233, THM-1253, THM-1275, THM-1283]
 related: [THM-1274, THM-1277]
+script: 04-computation/lrc14_selected_prefix_terminal_word_compactification_hyp8751.py
+output: 05-knowledge/results/lrc14_selected_prefix_terminal_word_compactification_hyp8751.out
+script_sha256: 756946cb036761f53cb43d90e7d2c24e46aadc8076e55cf2f48e19fcfda7b387
+output_sha256: 0ba1fcf3f060dcbda6b96a44df8ffae2fc0da9da60a5e249922ca043e49b9c83
 ---
 
-# THM-1287 -- selected-prefix terminal-word compactification
+# HYP-8751 -- selected-prefix terminal-word compactification
 
-Reserved for the following derived statement.  If a globally
+The following statement is derived.  If a globally
 single-occurrence terminal endpoint owner is `d_r`, rerun THM-1233's
 prefix-survivor/component-span proof after deleting only the **selected**
 prefix teeth.  The same survivor mass remains, while the component count is
@@ -29,8 +33,8 @@ r     selected caps (n_1,...,n_5,K)   word cap   d_6/c cap
 6     (2,7,7,7,7,1)                       31          7
 ```
 
-The table and every strict/weak endpoint convention remain to be frozen by
-the exact referee and formal arithmetic consumer.  This theorem will bound
+The exact referee freezes the table and all strict/weak arithmetic ceilings;
+the formal arithmetic consumer is still pending.  The result bounds
 the selected **word**, not the carrier, the normalized speed packet, or the
 phase/address stalk; it is not yet a finite enumeration and does not prove
 LRC(14).

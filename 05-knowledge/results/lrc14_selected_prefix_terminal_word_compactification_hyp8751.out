@@ -1,0 +1,17 @@
+HYP-8751 SELECTED-PREFIX TERMINAL-WORD EXACT AUDIT
+Python assert nodes = 0
+rank/caps/rawK/word/prefixH/finalH = 2/(2, 1, 15, 54, 165, 237)/1429/474/1666/1659
+rank/caps/rawK/word/prefixH/finalH = 3/(2, 7, 1, 31, 95, 136)/823/272/959/952
+rank/caps/rawK/word/prefixH/finalH = 4/(2, 7, 7, 1, 41, 58)/355/116/413/406
+rank/caps/rawK/word/prefixH/finalH = 5/(2, 7, 7, 7, 1, 24)/151/48/175/168
+rank/caps/rawK/word/prefixH/finalH = 6/(2, 7, 7, 7, 7, 1)/1/31/7/7
+endpoint-alternation rows/one-side/equality = (13526, 6763, 16)
+private-count boundary rows = 1750
+tail nested-ceiling rows/positive-worst = (499410, 385020)
+selected_prefix=survivor_mass_preserved; components<=1+sum(selected_n_i)
+endpoint_injection=K<=L; word=K+L<=2L
+private_count=ceil(h/(7c))<=K
+tail_count=X+T>=ceil(K/(e+1))-1>=ceil(h/(42c))-1
+finite=selected_owner_word_only; carrier_and_phase_stalk_unbounded
+STATUS=PASS
+source_sha256=756946cb036761f53cb43d90e7d2c24e46aadc8076e55cf2f48e19fcfda7b387

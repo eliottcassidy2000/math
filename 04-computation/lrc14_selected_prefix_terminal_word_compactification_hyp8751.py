@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact arithmetic referee for THM-1287.
+"""Exact arithmetic referee for HYP-8751.
 
 The paper provides the selected-prefix survivor/component argument and the
 endpoint placement of the globally unique terminal owner.  This referee
@@ -231,7 +231,7 @@ def main() -> None:
     private_rows = private_count_conversion_audit()
     tail_rows = tail_exception_count_audit()
 
-    print("THM-1287 SELECTED-PREFIX TERMINAL-WORD EXACT AUDIT")
+    print("HYP-8751 SELECTED-PREFIX TERMINAL-WORD EXACT AUDIT")
     print(f"Python assert nodes = {no_asserts}")
     for row in cap_rows:
         print(

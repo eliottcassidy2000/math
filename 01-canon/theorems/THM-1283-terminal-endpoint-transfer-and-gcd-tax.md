@@ -8,9 +8,9 @@ related: [THM-1199, THM-1252, THM-1266, THM-1273, THM-1277]
 script: 04-computation/lrc14_terminal_endpoint_transfer_gcd_tax_thm1283.py
 output: 05-knowledge/results/lrc14_terminal_endpoint_transfer_gcd_tax_thm1283.out
 formalization: 04-computation/lean/TournamentH7/TournamentH7/LRCTerminalEndpointTransferGcdTax.lean
-script_sha256: 357585477891fe1ed1e1fcaf970f7d73d94d860962e3c7961029d0f65e979f61
-output_sha256: bfbc2c02aabefca2103acec72ea7bf134f26df63f1112249686c04c56fdeee57
-formalization_sha256: 97adf0b28be6ef6abce4066ee47c7f048db851ce4ae93885e58e39b1b880de43
+script_sha256: b3f47c51fcfbc67c1a20c5aef2bc8c72f231e06f24dfae8c50f2d8201c8236ba
+output_sha256: a0ec3c38b00f6f8d45f07b54a5272bfc5b3843f27bb92fa10c426b75b28f182a
+formalization_sha256: 45a90df271245aaecfd5c4da4b1faaff58f406f610c27f0c0cc96acf2274e014
 ---
 
 # THM-1283 — terminal endpoint transfer and gcd tax
@@ -642,31 +642,34 @@ The dependency-free exact referee enumerates both orientations of every
 strict endpoint incidence in its finite bank.  It checks the signed residual,
 the exact outward length, both congruences, the gcd/lcm quantum, proper
 carrier-owner crossing, normalized tax identity, the endpoint quantile,
-the integer cut, the private-count alternative, and the mirrored sharp
-packet (27).  It contains no Python `assert` nodes; ordinary and optimized
-outputs are byte-identical.
+the integer cut, the private-count alternative, the mirrored sharp packet
+(27), 4,964 exact endpoint/flood partitions, all three Hunter-star inverse
+branches, and the nested multi-owner multiplicity truth table.  It contains
+no Python `assert` nodes; ordinary and optimized outputs are byte-identical.
 
 The sorry-free Lean module proves the endpoint-residual positivity and upper
 bound, the outward-width comparisons, the endpoint-suffix quantile, the exact
-normalization identity, the rational tax consumer, its gcd weakening, and
-the integer strict-to-closed cut.  Selection of an endpoint owner from the
-strict cover, identification of the adjacent teeth, containment of `U` in the
-outer suffix, and extraction of the terminal word remain the named paper
-topology providers.  There are no proof placeholders or `native_decide`
-calls.
+normalization identity, the rational tax consumer, its gcd weakening, the
+integer strict-to-closed cut, both exact `Q`-cancellation identities, their
+two-budget consumers, and the small-density multi-owner inverse.  Selection
+of an endpoint owner from the strict cover, identification of the adjacent
+teeth, containment of `U` in the outer suffix, and extraction of the terminal
+word remain the named paper topology providers.  There are no proof
+placeholders or `native_decide` calls.
 
 Frozen artifact hashes are
 
 ```text
-source         357585477891fe1ed1e1fcaf970f7d73d94d860962e3c7961029d0f65e979f61
-output         bfbc2c02aabefca2103acec72ea7bf134f26df63f1112249686c04c56fdeee57
-formalization  97adf0b28be6ef6abce4066ee47c7f048db851ce4ae93885e58e39b1b880de43
+source         b3f47c51fcfbc67c1a20c5aef2bc8c72f231e06f24dfae8c50f2d8201c8236ba
+output         a0ec3c38b00f6f8d45f07b54a5272bfc5b3843f27bb92fa10c426b75b28f182a
+formalization  45a90df271245aaecfd5c4da4b1faaff58f406f610c27f0c0cc96acf2274e014
 ```
 
 THM-1283 supplies the phase-located endpoint tax and the first literal
-neighboring-carrier seam requested after THM-1274.  It does not yet prove
-that this child seam returns to a lower-rank centered spoke, nor does it add
-the survivor mass and seam length as two copies of coverage excess.  The next
-operation is to follow the `x`-safe side of `w_sigma` with the mixed owner set
-while retaining `(sigma,Q_sigma)` and the disjoint internal seam invoice.
-Global LRC(14) remains open.  ∎
+neighboring-carrier seam requested after THM-1274.  It now combines the
+internal and exterior budgets without pretending that the exterior seam is a
+second copy of coverage excess: `Q_h` cancels because the two intervals are
+the complementary pieces of one endpoint tooth.  What remains is to make the
+resulting full-tooth quantum exceed the global slack, or to follow the
+`x`-safe side of `w_sigma` with its mixed owner set.  Global LRC(14) remains
+open.  ∎
