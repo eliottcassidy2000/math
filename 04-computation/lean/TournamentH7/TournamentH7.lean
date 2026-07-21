@@ -728,3 +728,5 @@ import TournamentH7.MomentNullcone  -- kind-pasteur-S128c129 / THM-1775: the mom
 
 import TournamentH7.SumLeProd  -- kind-pasteur-S128c135 / THM-1860: sum <= prod for naturals >= 2, the arithmetic kernel of the c3 <= H SCC reduction (WOWII loop). No sorry
 import TournamentH7.HgeDiscKernel  -- klein-S400 / THM-1950: kernel_ineq max(1,x)max(1,y) >= max(1+xy,x+y)/2 + peel_step, the algebraic kernel of the H >= disc SCC reduction (disc SCC-composition + s velocity-addition). No sorry/native_decide
+
+import TournamentH7.ThreeTermRecurrence  -- death-star-S92: Mathlib-PR-ready general three-term-recurrence no-common-root (generalized from GMC2Hermite to any integral domain; kernel-pure)

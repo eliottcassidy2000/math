@@ -1,3 +1,12 @@
+## death-star-2026-07-21-S92 -- GMC(2)/NC2 formalization → Mathlib-submission readiness: verified kernel-pure + extracted the GENERAL three-term no-common-root (new to Mathlib, PR-ready). HYP-8805.
+
+**Owner directive:** get NC2/GMC(2) results formalized to Mathlib-submission quality; pull/push often like while waiting for builds.
+
+- **VERIFIED KERNEL-PURE** (`#print axioms` = [propext, Classical.choice, Quot.sound] only, NO sorryAx/native_decide): GMC2.mathieuZhao_of_charge_pos (the NC2⇒GMC(2) charge-arithmetic step), GMC2Hermite.no_common_root, ThreeTerm.exists_nonvanishing. They clear Mathlib's hardest gate.
+- **NEW: extracted + GENERALIZED the flagship** `ThreeTerm.no_common_root` (monic three-term recurrence, b_n≠0 ⟹ no two consecutive members share a root) from ℝ to ANY integral domain (linarith→linear_combination hrec; [Zero R] on the structure; mul_eq_zero for the domain step); autoImplicit false, docstrings, ℝ-Hermite instance → `TournamentH7/ThreeTermRecurrence.lean`, builds clean (40s), kernel-pure. Mathlib HAS Polynomial.hermite but NOT the general three-term no-common-root ⟹ genuinely PR-READY (the abstract Favard/orthogonal-poly no-common-roots core).
+- **HONEST:** NC2/GMC(2) as FULL theorems remain OPEN (the radial-channel wall, S87-S91). 'Our results' for Mathlib = the PROVED reductions/lemmas. mathieuZhao_of_charge_pos is kernel-pure + PR-viable with light packaging. GMC2MomentBasics decide-instances are correct/kernel-pure but specific (stay in-repo).
+- Remaining PR work (scoped, non-blocking): Polynomial-R recast + connect hermiteReal to Mathlib.Polynomial.hermite; minimal-import trim; placement decision. reflection gmc2-nc2-mathlib-submission-readiness-...-S92; new ThreeTermRecurrence.lean wired to root.
+
 ## death-star-2026-07-21-S91 -- Dividing by the common factorial (pA₀)! turns NC2 into ONE tournament-discriminant condition: NC2 ⟺ the (confluent) Vandermonde of channel radial degrees ≠ 0. NC2 wall OPEN. HYP-8795.
 
 **Owner directive:** think about dividing E[P^m] by the full common factorial (pA₀)!.
