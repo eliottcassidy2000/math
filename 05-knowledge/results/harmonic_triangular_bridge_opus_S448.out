@@ -1,0 +1,6 @@
+  m({1..10}; 1/12) = H_10/C(12,2) = 671/15120 = 0.044378307   [C(12,2)=66]
+  m({1..12}; 1/14) = H_12/C(14,2) = 6617/194040 = 0.034101216   [C(14,2)=91]
+  deep-well k=12 target 6617/194040 = 0.034101216  match=True
+  sum 1/(k(k-1)) [staircase 3-cycles] partial = 0.99974994  -> 1 (telescopes)
+  LRC floor sum_n M(n)=sum 1/n = HARMONIC SERIES (diverges); the loneliness floor spectrum is the harmonic series itself
+  sum 1/Phi6(n)=1/(n^2-n+1) = 1.798137 (converges; deep-well M=n/Phi6(n))

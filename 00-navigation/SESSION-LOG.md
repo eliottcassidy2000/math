@@ -5,6 +5,28 @@
 - **PART 1 — CRUX further reduced (S83's (i) H(reg)≥Szele avg → quasirandomness).** Binding case = DOUBLY-REGULAR (Paley, max disc): smallest H/(n·disc) among regulars (Paley-7: 3.38 vs rot 25; Paley-11: 35.6 vs 8457). Paley is QUASIRANDOM (K-spectrum ±i√n, ratio →0) ⟹ H=(1+o(1))·avg (quasirandom Ham-path counting lemma); measured H/avg≈2.0-2.4 (bounded). n·disc/avg=n(n+1)^{(n-1)/2}/n!→0 super-exp (0.71 at n=7, 0.069 at n=11), so large n is loose (needs only a tiny fraction of avg); small n direct. Min-strong (Busch) route EXCLUDED — doubly-regular disc ~(√n/2)^n is too big — so the crux genuinely needs regular=quasirandom=near-average. The crux is now standard pseudorandomness, not an eigenvalue-product mystery.
 - **PART 2 — GMC(2) positivity.** The S81 Pell identity sharpens: for REAL-coeff P, E[sym(P)²]−E[alt(P)²]=E[P·P̃]=E[|P|²]≥0 (Bargmann norm) ⟹ E[sym²]≥E[alt²] — a RIGOROUS proof of klein THM-1810's bosonic≥fermionic at the squared-moment level. HONEST: orthogonal to the nullcone (one-sided P=Z has E[sym(P^m)²]=m!/2>0 despite E[P^m]=0); a Bargmann-PD handle on the TORAL side (S67/S77 toolkit), the open RADIAL gap unaffected — does NOT close GMC(2).
 - No open problem closed; a genuine crux reduction + a small rigorous positivity. Credits klein THM-1950/1810. reflection crux-reduced-to-quasirandomness-...-S84; script crux_reduction_and_gmc2_positivity_S84 (+out). LRC(≤13) not re-audited.
+## opus-2026-07-20-S448 - Folded the sequence-sweep findings into THM-1985: the LRC deep-well = harmonic/triangular (THM-805 bridge)
+
+Folded the S447 background sequence-sweep (28-sequence master table + the repo's existing harmonic/
+gamma/zeta appearances) into THM-1985 s4. THE KEY SYNTHESIS (verified exact):
+- THM-805: the LRC deep-well base measure = a HARMONIC number over a TRIANGULAR number:
+  m({1..k}; 1/(k+2)) = H_k / C(k+2,2). At k=12: H_12/C(14,2) = 6617/194040 (exact, = mac-mini
+  THM-736's |G'({1..12})|). So the divergent-edge object (harmonic H_k) and the convergent figurate
+  size (triangular C(k+2,2), sum 1/·=2 of THM-1985 s1) combine into the single most important LRC
+  extremal measure -- the reciprocal-sum program meets the LRC flagship exactly.
+- The LONELINESS FLOOR spectrum IS the harmonic series: M_floor(n)=1/n => sum = sum 1/n (diverges).
+- THM-1926 tournament zeta = 1/det(I-uA) = Euler product over primitive cycles (cycles = primes).
+- Staircase 3-cycles k(k-1) telescope to 1. Deep-well denominators Phi_6(n)=n^2-n+1 (cyclotomic),
+  sum 1/Phi6=1.798 converges.
+- REFINEMENT (agent): only pure binomials C(n,k) give rational k/(k-1); the 1+2^d / 2^{n-2}+1 /
+  Cayley-Dickson 2^k+1 families converge to IRRATIONAL Erdos-Borwein-type constants. A002088, A001764
+  absent from repo.
+
+THE LOOP CLOSES: the figurate 2 (triangular=tournament size), the harmonic H_k (resistance/divergent
+edge), and the zeta_T Euler product are three faces of one structure; the LRC deep-well = H_k/(triangular).
+
+Files: THM-1985 s4 + depends_on (added THM-805/1926); harmonic_triangular_bridge_opus_S448.py(out).
+Cites THM-805/1926/1370/1920/1930/1970/1975, kps THM-1980.
 
 ## opus-2026-07-20-S447 - Reciprocal sums = the harmonic-scale face of the poly/#P tower (THM-1985)
 
