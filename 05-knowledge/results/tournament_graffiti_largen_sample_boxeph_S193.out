@@ -1,0 +1,41 @@
+random-sample validation, 400 trials per n
+
+ n=8:
+   OK   srange <= tr + 1     (no counterexample in 400 samples)
+   OK   srange <= tr         (no counterexample in 400 samples)
+   OK   c3 <= H              (no counterexample in 400 samples)
+   OK   srange <= 2*(tr-1)   (no counterexample in 400 samples)
+   OK   tr <= smax + 1       (no counterexample in 400 samples)
+   OK   kings <= 2*c3 + 1    (no counterexample in 400 samples)
+
+ n=9:
+   OK   srange <= tr + 1     (no counterexample in 400 samples)
+   OK   srange <= tr         (no counterexample in 400 samples)
+   OK   c3 <= H              (no counterexample in 400 samples)
+   OK   srange <= 2*(tr-1)   (no counterexample in 400 samples)
+   OK   tr <= smax + 1       (no counterexample in 400 samples)
+   OK   kings <= 2*c3 + 1    (no counterexample in 400 samples)
+
+ n=10:
+   OK   srange <= tr + 1     (no counterexample in 400 samples)
+   OK   srange <= tr         (no counterexample in 400 samples)
+   OK   c3 <= H              (no counterexample in 400 samples)
+   OK   srange <= 2*(tr-1)   (no counterexample in 400 samples)
+   OK   tr <= smax + 1       (no counterexample in 400 samples)
+   OK   kings <= 2*c3 + 1    (no counterexample in 400 samples)
+
+ n=11:
+   OK   srange <= tr + 1     (no counterexample in 400 samples)
+   OK   srange <= tr         (no counterexample in 400 samples)
+   OK   c3 <= H              (no counterexample in 400 samples)
+   OK   srange <= 2*(tr-1)   (no counterexample in 400 samples)
+   OK   tr <= smax + 1       (no counterexample in 400 samples)
+   OK   kings <= 2*c3 + 1    (no counterexample in 400 samples)
+
+ n=12:
+   OK   srange <= tr + 1     (no counterexample in 400 samples)
+   OK   srange <= tr         (no counterexample in 400 samples)
+   OK   c3 <= H              (no counterexample in 400 samples)
+   OK   srange <= 2*(tr-1)   (no counterexample in 400 samples)
+   OK   tr <= smax + 1       (no counterexample in 400 samples)
+   OK   kings <= 2*c3 + 1    (no counterexample in 400 samples)

@@ -44,24 +44,26 @@ characteristic binary form + GIT nullcone (dual of THM-1810). (5) the true H(c3,
 (THM-208 germ -> THM-1860 -> refuted 2^{n-2} bound).
 
 ## mac-mini-2026-07-21-S159 -- the sign-reversing TOURNAMENT INVOLUTION as a repo-wide engine (owner: apply the signed-sum-over-tournaments idea across the repo). Reflection + HYP-8640.
+## boxeph-2026-07-21-S193 -- THM-1862 the ORDER-JOIN REDUCTION PRINCIPLE (WOWII proof/refute engine); resolved a 2-way THM-1855 collision with opus-S438
 
-**Context:** owner shared the nasqret/Alpoge JC-counterexample write-ups (github.com/nasqret/jacobian-counterexample). I INDEPENDENTLY VERIFIED the core (det JF == -2 constant, non-injective: 3 distinct points (2,-1/2,1),(-1+-i,1,1-+3i) all map to (0,1,2), hand-checked) -- it IS the repo's THM-1300 map, a genuine classical-JC counterexample. Their literature audit is thorough on classical JC (Keller, Bass-Connell-Wright, Druzkowski, de Bondt-van den Essen, Miyanishi pseudo-coverings) but cites NOTHING from Zhao/GMC/Mathieu-Zhao. Advised owner: the highest-value thing to tell them is the Gaussian-Moments/Mathieu-Zhao TWIN (Zhao GMC(n)=>JC(n); their map forces the explicit GMC(3) witness P=(1+Z)(W-(2+Z)U),Q=Z; refs DvdEZ Israel J Math 2019 arXiv:1506.05192, Zihan Zhang's "Direct Consequences of the 3D counterexample"), plus the moment-side n=2 obstruction (2/d in Z stops the family before the plane) mirroring their descent obstruction, and the resultant/discriminant = binary-forms/SL2/tournament framing.
+**Owner:** work on tournament-graffiti + WOWII-103 analogues, long creative session, pulling in fleet ideas often.
 
-**This session's work (the follow-up directive):** take that tournament-discriminant idea and creatively redeploy it.
-- **ENGINE (verified n=3,4,5):** V = prod(x_j-x_i) = sum_T (-1)^{back-arcs} x^{score}; reverse-a-3-cycle is a sign-reversing, score-preserving involution; intransitive cancel, transitive (n! of them) survive. Explicit lex-min-3-cycle reversal pairs all 40 intransitive n=4 tournaments.
-- **R2 verified (n=4,5,6):** BURNSIDE A000568 even-cycle vanishing IS the same involution on sigma-edge-orbits -- Fix(sigma)=0 iff sigma has an even cycle, else 2^{#orbits}.
-- **Four specializations of one engine:** discriminant->transitive (THM-1815); Burnside->all-odd sigma; blue parity->self-complementary (THM-1840-C = Z/2 cyclotomic char); single-character->lone atom (THM-1840-A, clean base case).
-- **Creative payoff (a reframing):** the involution needs clean +/-1 signs. GMC/discriminant have them => collapse to transitive => closed form; LRC covering sum sum_{k.v=0} prod sinc has transcendental weights, NO signs => NO involution => stays open. = the S157/THM-1840 barrier restated combinatorially. Criterion: a repo problem collapses to a transitive core IFF a sign-reversing tournament involution is available.
-- **Resonances (unproved):** Redei odd-Ham-path (transitive survivors = unique-Ham-path tournaments; a 5th specialization = a NEW proof of the founding theorem -- flagged as next target); even-graph odd-n-only bijections.
+**Context:** five agents converged on WOWII-103 in a 20-min window (klein-S395 reflection+metagraph, kind-pasteur-S128c134 generator+THM-1845, klein-S397 directed-WOWII THM-1850, opus-S437/S438 decoupling motif+THM-1855, death-star-S77 TournamentGraffiti). I found the MECHANISM under it all and made it a proof engine.
 
-**Honest scope:** engine + Burnside redeployment VERIFIED; they connect existing results (THM-1805/1815, A000568, THM-1840-C/1440) under one mechanism (unifying lens). Criterion = reframing of proved barriers. Redei/even-graph = conjectural resonances.
+**Delivered (THM-1862, verified n<=7 on all 530 iso classes; 396 strong; sampled n<=12):**
+- **Order-join algebra:** T1|>T2 makes c3, tr, scc ADDITIVE and Redei H **MULTIPLICATIVE** (the new structural fact); strong tournaments are the |>-atoms.
+- **Reduction principle:** a JOIN-MONOTONE invariant inequality holds for all tournaments iff on the strongly-connected core. Proof engine. Instances: kp THM-1860 (c3<=H, the paradigm), THM-1845 sandwich, klein THM-1850 (dom+tr<=n+1) all reduce.
+- **Velocity/fragility predictor:** under D+/D- (source/sink), c3,H FROZEN but tr,scc +1 -> tr,srange decouple upward from {c3,H} -> any [tr/srange]<=f(c3,H) bound is refuted by the THM-1830 3-cycle-atom+singletons witness. (= opus THM-1855's diagnostic as the contrapositive.)
+- **Minimal WOWII-repair:** kp's broken srange<=tr (fails n=7, off by 1) is repaired minimally by **srange<=tr+1** (n=7 witness is an equality case). Verified n<=7, join-monotone.
+- **c3<=H strong-core margin:** never tight (min H-c3=2, max c3/H=2/5 at n=4) -- complements kp THM-1860.
+- **WOWII-103 proper (king-eccentricity):** achievable avg king-eccentricity STRADDLES e at 19/7=2.7143 (below, n=7) and 17/6=2.8333 (above, n=6) -- exact analog of WOWII-103's 30/11>e.
+- **Methodological caveat (verified):** inflation-fragility is LOW-ENTROPY -- the broken srange<=tr survives 400 random samples at every n=8..12. Random sweeps miss the fragile (near-transitive) corner; need the targeted inflation witness or exhaustive small-n.
 
-**Next:** chase Redei-parity-as-involution (turn the lens into a new proof of the odd-Hamiltonian-path theorem). Artifacts: 07-reflections/the-sign-reversing-tournament-involution-as-a-repo-wide-engine-macmini-S159.md, 04-computation/signed_tournament_involution_redeployments_macmini_S159.py (+.out).
+**COLLISIONS RESOLVED:** (1) opus-S438 independently pushed the same source/sink diagnostic as THM-1855 ~2 min after my push -- I YIELDED the number (theirs is more entangled with the THM-1820 correction banner + HYP cascade), renumbered mine to THM-1862 and reframed as the general principle citing opus THM-1855 (single-vertex case) + kp THM-1860 (c3<=H instance). (2) my c3<=H reduction = kp THM-1860 exactly (same SCC/sum<=prod, they Lean-formalized) -- dropped my claim, credited them. (3) HYP-8640 collided with mac-mini-S159 -> renumbered mine to HYP-8646/8647/8648.
 
-## kind-pasteur-2026-07-21-S128c135
+**Honest scope:** the reduction principle + order-join algebra are PROVED + exhaustive n<=7. srange<=tr+1 is a candidate (n<=7 + join-mono, not proved all-n). The strong-core c3<=H base and a tight king-ecc-103 are open (backlog).
 
-**Ran the full WOWII loop for a long session (generate -> filter -> push -> prove/refute ->
-formalize), pulling between rounds. Headline: THM-1860 c3<=H reduced + formalized.**
+**Next:** (a) prove srange<=tr+1 for all n; (b) finish strong-core c3<=H (Moon/Busch); (c) tight king-ecc directed-103 (HYP-8647); (d) coupling analysis on the metagraph invariants. Artifacts: THM-1862, HYP-8646/8647/8648, reflection inflation-velocity-and-the-coupling-law-boxeph-S193.md, 3 scripts+outputs.
 
 - **REFUTE:** the generator's sibling candidate H <= 2^{n-2}c3+1 (tight at transitive) is REFUTED
   at n=10 -- near-regular-10 has H=8767 > 8193, Paley-11 95095 > 28161. A WOWII off-by-scale bound:

@@ -1,0 +1,57 @@
+strong iso classes: n=3:1, n=4:1, n=5:6, n=6:35, n=7:353   total strong=396, total all=530
+
+============================================================================================
+NEW TIGHT PAIR INEQUALITIES on the STRONG core:  target <= a*src + b   (tight on >= 12 strong classes)
+============================================================================================
+  scc    <= 1/2*dom            tight/396 strong=395  STRONG-only(fails on some reducible!)
+  n      <= scc    + 6     tight/396 strong=353  ALL-n [join-monotone: lifts to all tournaments]
+  n      <= 1/2*dom    + 6     tight/396 strong=352  STRONG-only(fails on some reducible!)
+  dom    <= smin   + 1     tight/396 strong=236  STRONG-only(fails on some reducible!)
+  scc    <= smin           tight/396 strong=236  STRONG-only(fails on some reducible!)
+  smax   <= n      - 2     tight/396 strong=236  STRONG-only(fails on some reducible!)
+  srange <= smax   - 1     tight/396 strong=236  STRONG-only(fails on some reducible!)
+  smax   <= 1/2*dom    + 4     tight/396 strong=203  STRONG-only(fails on some reducible!)
+  smax   <= scc    + 4     tight/396 strong=203  ALL-n [join-monotone: lifts to all tournaments]
+  n      <= smin   + 6     tight/396 strong=203  STRONG-only(fails on some reducible!)
+  srange <= n      - 3     tight/396 strong=169  STRONG-only(fails on some reducible!)
+  smax   <= smin   + 4     tight/396 strong=140  STRONG-only(fails on some reducible!)
+  srange <= 1/2*dom    + 3     tight/396 strong=140  STRONG-only(fails on some reducible!)
+  srange <= scc    + 3     tight/396 strong=140  ALL-n [join-monotone: lifts to all tournaments]
+  srange <= smin   + 3     tight/396 strong=140  STRONG-only(fails on some reducible!)
+  tr     <= smax   + 1     tight/396 strong=104  ALL-n [join-monotone: lifts to all tournaments]
+  dom    <= kings  - 1     tight/396 strong=85  STRONG-only(fails on some reducible!)
+  scc    <= kings  - 2     tight/396 strong=85  STRONG-only(fails on some reducible!)
+  n      <= kings  + 4     tight/396 strong=67  STRONG-only(fails on some reducible!)
+  smax   <= kings  + 2     tight/396 strong=64  STRONG-only(fails on some reducible!)
+  srange <= kings  + 1     tight/396 strong=56  STRONG-only(fails on some reducible!)
+  tr     <= 1/2*srange + 4     tight/396 strong=41  ALL-n [join-monotone: lifts to all tournaments]
+  smax   <= 2*tr     - 3     tight/396 strong=40  STRONG-only(fails on some reducible!)
+  kings  <= n              tight/396 strong=34  ALL-n [join-monotone: lifts to all tournaments]
+  kings  <= scc    + 6     tight/396 strong=28  ALL-n [join-monotone: lifts to all tournaments]
+  tr     <= n      - 1     tight/396 strong=27  STRONG-only(fails on some reducible!)
+  kings  <= 1/2*dom    + 6     tight/396 strong=27  ALL-n [join-monotone: lifts to all tournaments]
+  srange <= 2*tr     - 4     tight/396 strong=17  ALL-n [join-monotone: lifts to all tournaments]
+  smax   <= c3             tight/396 strong=16  STRONG-only(fails on some reducible!)
+  srange <= c3     - 1     tight/396 strong=16  STRONG-only(fails on some reducible!)
+  n      <= c3     + 2     tight/396 strong=16  STRONG-only(fails on some reducible!)
+  tr     <= 1/2*dom    + 5     tight/396 strong=15  STRONG-only(fails on some reducible!)
+  tr     <= kings  + 3     tight/396 strong=15  STRONG-only(fails on some reducible!)
+  tr     <= scc    + 5     tight/396 strong=15  ALL-n [join-monotone: lifts to all tournaments]
+  tr     <= smin   + 5     tight/396 strong=15  STRONG-only(fails on some reducible!)
+
+============================================================================================
+c3 <= H on the STRONG core (kind-pasteur's open candidate, reduced to strong by THM-1855)
+============================================================================================
+  holds on all 396 strong classes: True   min margin (H - c3) = 2 at n=3 (c3=1, H=3)
+  tight (H==c3) strong classes: 0
+  largest c3/H ratios (closest to the bound): n=4 c3/H=2/5=0.400, n=5 c3/H=4/11=0.364, n=5 c3/H=5/15=0.333, n=5 c3/H=3/9=0.333, n=5 c3/H=3/9=0.333
+
+============================================================================================
+Tighter srange repair search:  srange <= a*tr + b*c3 + c  minimal, tight on strong+reducible
+============================================================================================
+  srange <= 1*tr + 0*c3 + 1   HOLDS all n<=7, join-mono=True, tight on 3 classes
+  srange <= 1*tr + 1*c3 + -1   HOLDS all n<=7, join-mono=True, tight on 11 classes
+  srange <= 1*tr + 2*c3 + -1   HOLDS all n<=7, join-mono=True, tight on 5 classes
+  srange <= 2*tr + 0*c3 + -4   HOLDS all n<=7, join-mono=True, tight on 30 classes
+  srange <= 2*tr + 1*c3 + -4   HOLDS all n<=7, join-mono=True, tight on 1 classes
+  srange <= 2*tr + 2*c3 + -4   HOLDS all n<=7, join-mono=True, tight on 1 classes
