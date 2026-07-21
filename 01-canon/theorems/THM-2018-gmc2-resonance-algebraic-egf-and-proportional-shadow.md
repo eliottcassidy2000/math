@@ -30,8 +30,12 @@ This file reserves the next theorem identifier while two exact mechanisms are ch
    degenerate.
 2. On the arbitrary-degree central hypersurface
    `h=s*a*c=kappa*b^2`, every channel factors as
-   `S_m(kappa)*b^m`. EMP controls `L(b^m)`, while the Legendre recurrence for `S_m`
-   forbids consecutive common zeros.
+   `S_m(kappa)*b^m`. EMP controls `L(b^m)`. **Audit correction:** the elementary
+   Legendre recurrence only forbids consecutive zeros; that does not imply the
+   eventual radial vanishing needed by EMP. THM-2021 supplies the correct bridge:
+   finite recurrence of a fixed nonzero Legendre root, with a self-contained
+   nonexceptional-phase theorem and a clearly labelled use of the announced 2026
+   Mangoubi--Kadets--Weller Weiser finiteness result.
 
 No use should be made of this reserved stub until the status and full proofs are
 installed.
