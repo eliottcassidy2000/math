@@ -1,6 +1,6 @@
 # The moment–nullcone template, and the complexity hierarchy it lives in
 
-**kind-pasteur-2026-07-20-S128c128.** Companion to THM-1750. The owner asked for creative
+**kind-pasteur-2026-07-20-S128c128.** Companion to THM-1775. The owner asked for creative
 unifying frames — to think abstractly and let past concepts connect. This is the frame that
 kept surfacing once I looked for it: **the last several sessions of GMC/TNC "detection depth"
 work are not a detour from the tournament project; they are the tournament project's own
@@ -91,7 +91,7 @@ projections' shadows.
 The template is a lens, not a theorem factory. It does not prove TNC or GMC (those are THM-1710
 / THM-1740, and GMC in full is still open at its holonomic-limit/Laplace-determinacy boundary,
 THM-1690). It does not yet place `H` itself or LRC on the ladder — those are the honest
-next questions (THM-1750 names them). What it does is make the recent work *cohere with the
+next questions (THM-1775 names them). What it does is make the recent work *cohere with the
 core*: the project has been studying moment nullcones all along, and the detection-depth
 machinery is the general form of the tool it already trusted for tournaments.
 
@@ -100,7 +100,7 @@ machinery is the general form of the tool it already trusted for tournaments.
 1. **`H` on the ladder — answered: it leaves at `n = 6`.** Grouping all tournaments by their
    moment vector `(tr A¹,…,tr Aⁿ)`, `H` is constant on every co-spectral class for `n ≤ 5` but
    **splits at `n = 6`** — the class `(0,0,12,12,10,48)` carries both `H = 13` and `H = 17`
-   (THM-1765). So `H` is not a moment; it is the tournament's `#P`-hard permanent, one rung
+   (THM-1780). So `H` is not a moment; it is the tournament's `#P`-hard permanent, one rung
    **above** the holonomic ceiling. The ladder is `rational ⊂ algebraic ⊂ holonomic ⊂ #P`, and
    the tournament spans it end to end — spectrum at the bottom, `H` at the top. THM-133's
    spectral `H = (462 − tr A⁴)/2` is a `Z₇`-circulant symmetry collapse, not the general law.
@@ -125,7 +125,7 @@ machinery is the general form of the tool it already trusted for tournaments.
 
 ## Cross-links
 
-THM-1750 (the template, tournament instance proved) · THM-895 (`λ=0 ⟺ transitive`) ·
+THM-1775 (the template, tournament instance proved) · THM-895 (`λ=0 ⟺ transitive`) ·
 THM-1710 (TNC depth `D`) · THM-1740 (GMC finite Gröbner) · THM-1555 (half-dictionary, spectrum
 on `Re=−½`) · THM-1720/1725 (roots-of-unity singular indices) · THM-133 (spectral-OCF chain) ·
 THM-894 (Kendall–Wei on LRC speeds) · `everything-is-the-triangle.md` · Burnside

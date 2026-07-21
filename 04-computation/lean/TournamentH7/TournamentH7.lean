@@ -723,4 +723,4 @@ import TournamentH7.GMC2MomentBasics
 
 import TournamentH7.TNCDetectionDepth  -- kind-pasteur-S128c124 / THM-1710: TNC detection depth = D. zeros_propagate: D consecutive zeros of a D-th order recurrence (nonvanishing leading coeff) propagate to all later terms, so the toral nullcone is cut out by the first D moments. Caps opus THM-1685 level count. No sorry/native_decide
 
-import TournamentH7.MomentNullcone  -- kind-pasteur-S128c129 / THM-1750: the moment-nullcone interface. Data structure + detect (= zeros_propagate) + ofMonicRec; the shared detection engine for tournament (Cayley-Hamilton), TNC (THM-1670), GMC (THM-1740). H excluded (not a moment: splits co-spectrally at n=6, THM-1765). No sorry
+import TournamentH7.MomentNullcone  -- kind-pasteur-S128c129 / THM-1775: the moment-nullcone interface. Data structure + detect (= zeros_propagate) + ofMonicRec; the shared detection engine for tournament (Cayley-Hamilton), TNC (THM-1670), GMC (THM-1740). H excluded (not a moment: splits co-spectrally at n=6, THM-1780). No sorry

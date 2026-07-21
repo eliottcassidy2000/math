@@ -1,9 +1,9 @@
 import TournamentH7.TNCDetectionDepth
 
 /-
-# The moment-nullcone interface (THM-1750)
+# The moment-nullcone interface (THM-1775)
 
-A single abstract structure for the template that THM-1750 shows tournament transitivity, TNC,
+A single abstract structure for the template that THM-1775 shows tournament transitivity, TNC,
 and GMC(2) all instantiate: a moment sequence `phi : ℕ → α` whose "all moments vanish" nullcone
 is detected at a finite depth = the order of its governing recurrence.  The detection engine is
 `TNCDepth.zeros_propagate`, already proved sorry-free; this file packages it and gives the
@@ -65,7 +65,7 @@ def MomentNullcone.ofMonicRec {α : Type*} [Zero α]
 * **Tournament (rational floor).** `phi m = tr(A^m)`; Cayley–Hamilton gives
   `tr(A^{m}) = −∑_{i=1}^{n} c_i · tr(A^{m−i})` (monic, `c_i` = char-poly coefficients), so
   `order = n` and the nullcone `{tr(A^m)=0 ∀m}` = nilpotent = transitive is detected at depth
-  `n`.  (THM-1750, THM-895.)
+  `n`.  (THM-1775, THM-895.)
 * **TNC (algebraic).** `phi m = CT(Λ^m)`; the toral recurrence (THM-1670) is order `D = M+N`,
   and THM-1720/1725 show its leading coefficient never vanishes at `m ≥ 1`, so `ofMonicRec`
   applies; nullcone = one-sided, depth `D` (THM-1710).
@@ -73,6 +73,6 @@ def MomentNullcone.ofMonicRec {α : Type*} [Zero α]
   `K ~ charge span`; nullcone = charge-one-sided, depth `K`.
 
 `H` (Hamiltonian-path count) does NOT instantiate this: it is not a moment sequence at all —
-it splits within a co-spectral class at `n = 6` (THM-1765), so it has no governing recurrence
+it splits within a co-spectral class at `n = 6` (THM-1780), so it has no governing recurrence
 in the trace moments.  The interface correctly excludes it.
 -/

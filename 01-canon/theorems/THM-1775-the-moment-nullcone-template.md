@@ -1,5 +1,5 @@
 ---
-id: THM-1750
+id: THM-1775
 title: "THE MOMENT-NULLCONE TEMPLATE — three pillars of this project (tournament transitivity, TNC, GMC(2)) are ONE structure at three levels of a rational ⊂ algebraic ⊂ holonomic complexity hierarchy, and the tournament case is Cayley–Hamilton. The shared template: an invariant φ(Xᵐ) is the projection of the m-th power onto the trivial component of a symmetry (a 'moment'); its generating function F(t) = Σₘ φ(Xᵐ)tᵐ obeys a finite-order linear recurrence; the NULLCONE {φ(Xᵐ)=0 ∀m} is detected at finite DEPTH = recurrence order, and equals the locus where F collapses to its trivial value. INSTANCES, each verified: (T) TOURNAMENT — φ = trace, X = adjacency A, F(t) = Σ tr(Aᵐ)tᵐ = −t·d/dt·log det(I−tA) is RATIONAL (poles 1/λᵢ), nullcone = {tr(Aᵐ)=0 ∀m} = nilpotent = TRANSITIVE, detection depth = n, recurrence = CAYLEY–HAMILTON; verified transitive ⟺ tr(Aᵏ)=0 for k≤n over all tournaments n=3..7, and the char-poly recurrence tr_k = −Σcᵢtr_{k−i} for all n. (Λ) TNC — φ = constant term, X = Laurent Λ, F ALGEBRAIC of degree D, nullcone = one-sided (F≡1), depth D (THM-1710). (G) GMC(2) — φ = Gaussian E, X = P(Z,Z̄), F HOLONOMIC (polar/Laplace bridge THM-1645), nullcone = charge-one-sided, depth K (THM-1740). THE UNIFICATION IS EXACT, not analogical: Cayley–Hamilton is precisely the RATIONAL (finite-matrix) case of the holonomic recurrence, so the tournament trace-nullcone and the GMC moment-nullcone are the SAME theorem at the two ends of the {rational, algebraic, holonomic} spectrum; the detection depth is the arithmetic complexity of F. And the nullcone is always the MOST DEGENERATE object — transitive tournament, one-sided support, charge-one-sided P — the collapse of F to its trivial value"
 status: >
   TEMPLATE: a structural unification.  Its content is the single fact that all three
@@ -13,6 +13,7 @@ status: >
   What is NOT claimed: a new proof of TNC or GMC.  This is a frame that makes precise WHY the
   detection-depth machinery of the last several sessions is not three coincidences but one
   phenomenon, and it lands the recent GMC/TNC work back onto the project's tournament core.
+renumbered: "claimed THM-1750; renumbered to THM-1775 by first-pusher rule — the arborescence-ranking THM-1750 was pushed 8s earlier (18:06:24 vs 18:06:32)."
 source: kind-pasteur-2026-07-20-S128c128 (owner: look for more creative unifying frames; think abstract; explore past concepts for connections)
 depends_on:
   - THM-1710    # TNC detection depth D (the algebraic level)
@@ -22,7 +23,7 @@ reflection: 07-reflections/the-moment-nullcone-template-and-the-complexity-hiera
 script: 04-computation/moment_nullcone_template_kps_S128c128.py (+ .out)
 ---
 
-# THM-1750 — the moment-nullcone template
+# THM-1775 — the moment-nullcone template
 
 Three things this project keeps proving separately are one thing.
 

@@ -17445,9 +17445,9 @@ raise it? This is the last structural unknown in the moment-count bound. Test mu
 patterns with independent multiplicities and coprime sums; if the max-over-straddles law holds,
 the uniform bound HYP-8540 follows from the single-straddle base case.
 
-## HYP-8550 — H leaves the spectral ladder at n=6; LRC is extremal-dual not nullcone; Lean interface built
+## HYP-8590 — H leaves the spectral ladder at n=6; LRC is extremal-dual not nullcone; Lean interface built
 
-**Status: (1) CONFIRMED, (2) HONEST LIMIT, (3) DONE.** kind-pasteur-2026-07-20-S128c129. THM-1765, THM-1750.
+**Status: (1) CONFIRMED, (2) HONEST LIMIT, (3) DONE.** kind-pasteur-2026-07-20-S128c129. THM-1780, THM-1775. (Renumbered from HYP-8550, which death-star-S66 first-pushed.)
 
 Worked THM-1750's three named-next.
 (1) H ON THE LADDER: grouping tournaments by moment vector (tr A^1..tr A^n) = char poly, H is
