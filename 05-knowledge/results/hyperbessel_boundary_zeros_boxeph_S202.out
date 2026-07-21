@@ -1,0 +1,29 @@
+======================================================================================
+SYMMETRIC boundary Phi_(1,1)(x) = I_0(2 sqrt(x)): zeros should be REAL NEGATIVE = -(j0k/2)^2
+======================================================================================
+  K=40 smallest-|.| real zeros: ['-1.4458', '-7.6178', '-18.7218', '-34.7601', '-55.7331']
+  K=60 smallest-|.| real zeros: ['-1.4458', '-7.6178', '-18.7218', '-34.7601', '-55.7331']
+  K=80 smallest-|.| real zeros: ['-1.4458', '-7.6178', '-18.7218', '-34.7601', '-55.7331']
+  predicted -(j0k/2)^2: ['-1.4458', '-7.6178', '-18.7218', '-34.7601', '-55.7331']
+  => I_0 boundary zeros are real-negative (J_0), explicit; positive/complex-off-neg-axis xi => Phi!=0.
+
+======================================================================================
+GENERAL Phi_(p0,q0): reality of zeros (Laguerre-Polya?) + Turan/log-concavity of coeffs
+======================================================================================
+  (p0,q0)=(1,1): Turan-logconcave=True  ; smallest zeros ['-1.45+0.00i', '-7.62+0.00i', '-18.72+0.00i', '-34.76+0.00i'] ; all-real=True all-neg=True
+  (p0,q0)=(1,2): Turan-logconcave=True  ; smallest zeros ['-2.20+0.00i', '-32.97+0.00i', '-134.47+0.00i', '-349.13+0.00i'] ; all-real=True all-neg=True
+  (p0,q0)=(1,3): Turan-logconcave=True  ; smallest zeros ['-6.16+0.00i', '-286.31+0.00i', '-1951.17+0.00i', '-7096.45+0.00i'] ; all-real=True all-neg=True
+  (p0,q0)=(2,3): Turan-logconcave=True  ; smallest zeros ['-12.10+0.00i', '-1593.50+0.00i', '-17963.93+0.00i', '-91288.21+0.00i'] ; all-real=True all-neg=True
+  (p0,q0)=(2,2): Turan-logconcave=True  ; smallest zeros ['-4.12+0.00i', '-171.61+0.00i', '-1160.79+0.00i', '-4213.53+0.00i'] ; all-real=True all-neg=True
+  (p0,q0)=(1,4): Turan-logconcave=True  ; smallest zeros ['-24.17+0.00i', '-3717.97+0.00i', '-42353.61+0.00i', '-215811.73+0.00i'] ; all-real=True all-neg=True
+  (p0,q0)=(3,4): Turan-logconcave=True  ; smallest zeros ['-144.10+0.00i', '-208709.68+0.00i', '-6526134.21+0.00i', '-64983105.22+0.00i'] ; all-real=True all-neg=True
+  (p0,q0)=(3,5): Turan-logconcave=True  ; smallest zeros ['-720.14+0.00i', '-3703499.89+0.00i', '-193249321.37+0.00i', '-2694259435.97+0.00i'] ; all-real=True all-neg=True
+  => reality/negativity of Phi_(p0,q0) zeros classifies the boundary exceptional locus;
+     complex zeros (if any) are the 'inner resonance band' (codex THM-2017 open piece).
+
+======================================================================================
+CONNECTION: xi = alpha/(beta^r d^r). For REAL positive-definite leading data xi>0 => Phi(xi)>0
+(all coeffs positive) => boundary NC2-clear unconditionally (matches THM-1535/1660 real case).
+The only boundary danger is xi landing on a (negative-real or complex) Phi-zero -- a codim>=1
+coefficient locus, removed one order down by the hyper-Bessel ODE theta^2 Phi = xi Phi (codex).
+======================================================================================

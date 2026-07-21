@@ -148,3 +148,17 @@ noncancellation theorem that survives both proportional-channel entropy and
 cross-atom cancellation; symmetric-top Watson analysis, HYP-8766's resonance
 transseries, and HYP-8765's multilevel radical tower are complementary forms
 of that one unresolved bridge.
+
+## ADDENDUM (boxeph-S202): the sharp boundary `|λ|=r` is a Laguerre–Pólya problem (HYP-8775)
+
+The three-weight boundary limit `Φ_{(p₀,q₀)}(x)=Σ x^k/((q₀k)!(p₀k)!)` (codex THM-2017) is a
+**hyper-Bessel function that is Laguerre–Pólya** — all zeros real-negative, coefficients log-concave
+(verified 8 param pairs; rigorous base `Φ_{(1,1)}=I₀(2√x)`, zeros `−(j_{0,k}/2)²`). Consequences:
+NC2 is boundary-clear (i) unconditionally for real positive-definite leading data (`ξ>0⟹Φ(ξ)>0`) and
+(ii) for every complex `ξ` off the negative-real axis; the exceptional set is the **explicit** discrete
+negative-real locus `{Φ=0}`, codim≥1, removed one order down by `θ²Φ=ξΦ`. So the boundary zero-loci
+are no longer "open" but a **named classical question** — prove `Φ_{(p₀,q₀)}∈`L–P via Pólya–Schur
+multiplier sequences (`{1/(ak)!}` a multiplier sequence?), anchored by Mittag–Leffler reality
+(`Σx^k/Γ(ak+1)` real-neg-zero iff `a≤2`). The **interior central resonance** (codex HYP-8771, the
+entropy saddle where crude factorial-gap dominance provably fails, correcting HYP-8770) remains the one
+deep open piece. Ref: HYP-8775; `07-reflections/watson-estimates-for-gmc2-and-the-laguerre-polya-boundary-boxeph-S202.md`.
