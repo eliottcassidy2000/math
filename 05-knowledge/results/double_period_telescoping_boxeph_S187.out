@@ -1,0 +1,27 @@
+==============================================================================
+EXECUTED DOUBLE-PERIOD TELESCOPING for P = aZ + bZW + cW
+==============================================================================
+
+relation families E/U/W verified exactly on sample lattice: mismatches = 0
+
+deriving the mu-recurrence by left-kernel elimination at fixed m0:
+  m0=10: mu-relation coeffs (levels m0-3..m0): ['-360', '153/2', '76/3', '1']
+  m0=11: mu-relation coeffs (levels m0-3..m0): ['-450', '925/9', '28', '1']
+  m0=12: mu-relation coeffs (levels m0-3..m0): ['-550', '2387/18', '92/3', '1']
+  m0=13: mu-relation coeffs (levels m0-3..m0): ['-660', '166', '100/3', '1']
+  m0=14: mu-relation coeffs (levels m0-3..m0): ['-780', '3653/18', '36', '1']
+  m0=15: mu-relation coeffs (levels m0-3..m0): ['-910', '2191/9', '116/3', '1']
+  m0=16: mu-relation coeffs (levels m0-3..m0): ['-1050', '575/2', '124/3', '1']
+  m0=17: mu-relation coeffs (levels m0-3..m0): ['-1200', '3016/9', '44', '1']
+
+interpolating each coefficient as polynomial in m (Lagrange, deg<=7):
+  coeff[level offset -3](m) = (-10) m^0 + (15) m^1 + (-5) m^2
+  coeff[level offset -2](m) = (167/18) m^0 + (-199/18) m^1 + (16/9) m^2
+  coeff[level offset -1](m) = (-4/3) m^0 + (8/3) m^1
+  coeff[level offset 0](m) = (1) m^0
+  polynomial recurrence verified on exact moments m0=4..56: True
+
+  second triple (1/2, 2, -1/3), m0=12: coeffs ['-440/3', '5830/3', '-92', '1']
+  (structure matches; full parametric certificate = same elimination over Q(a,b,c)[m])
+
+DONE.

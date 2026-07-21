@@ -1,0 +1,19 @@
+==============================================================================
+(S1) PS-residue lemma at a simple fold (pair model + cubic model):
+  eps=1e-03  pair-residue-sum = -0.000000-0.000000j   Res-formula = -0.000000+0.000000j
+  eps=1e-05  pair-residue-sum = -0.000000-0.000000j   Res-formula = -0.000000+0.000000j
+  eps=1e-07  pair-residue-sum = -0.000000-0.000000j   Res-formula = -0.000000+0.000000j
+
+(S2) level-set sum rule on a 2-fold model (cubic charged part):
+  fold u_c = 0.6556-0.1685j ; simple level-set root u* = -3.1513+0.6570j
+  PS(fold) = 0.304528+0.003728j ;  v/(u* Lam'(u*)) = 0.304528+0.003728j ;  SUM = 6.09e-01
+  (sum rule: PS + spectator term = 0 for this 1-fold-1-spectator level)
+
+(S3) L1 tube measurement on P4 = ZW + Z^9W^7 + W  (hijacked arc):
+     Lambda = 2s + w^16 u^2 + w/u ; arc t(s) = 1/v(s), v ~ 2s + edge
+  s0=0.300  |t|=9.919e-01  peak|Ghat|=1.464e+01  I_window=0.6184  I_tail=0.0064  I_tot=0.6249
+  s0=0.100  |t|=4.649e+00  peak|Ghat|=3.617e+01  I_window=0.5974  I_tail=0.0242  I_tot=0.6217
+  s0=0.030  |t|=1.655e+01  peak|Ghat|=1.316e+02  I_window=0.3752  I_tail=0.0260  I_tot=0.4012
+  s0=0.010  |t|=4.996e+01  peak|Ghat|=3.221e+02  I_window=0.2602  I_tail=0.0247  I_tot=0.2849
+
+DONE.
