@@ -17656,3 +17656,18 @@ resultant non-vanishing for ALL patterns = opus THM-1710's multinomial-ratio ste
 TNC (prove once, close both); (ii) the cross-atom isolation (a pair's tower isolated at its
 return level once lower atoms killed) = the renewal induction THM-1770 A. The multiplicity
 aspect is now discriminant-closed; these two are the residual.
+
+
+### HYP-8620 — LRC relation lattice is PAIR-GENERATED = the moment pair-reduction (mac-mini-S156)
+Supporting boxeph THM-1820 (LRC = moment nullcone). Independently re-verified the bridge identity
+int prod f_j(v_j t) dt = sum_{k.v=0} prod fhat_j(k_j) and the tight-set boundary |G_{1/(n+1)}|=0
+(exact for {1,2,3} at delta=1/4). NEW structural fact: for INTEGER speeds every MINIMAL relation
+is a PAIR relation (any v_i,v_j have v_j v_i - v_i v_j = 0, so no support->=3 relation is minimal;
+the triple 1+2-3=0 for {1,2,3} is NOT minimal). So the LRC relation lattice is PAIR-GENERATED --
+exactly the moment nullcone's PAIR-REDUCTION (THM-1780). boxeph's 'tightness = relation richness'
+is PAIR-relation richness, and its non-vanishing is the transitivity Vandermonde/discriminant
+(THM-1815/1805): LRC tightness and moment transitivity are two faces of the same relation-lattice
+extremum through the same discriminant. **This is SUPPORT/analogy, not an LRC advance** -- the
+pair-generation is elementary; the content is the identification with the moment machinery.
+NOTE: THM-1820 COLLISION -- two files (boxeph 'lrc-is-a-moment-nullcone' + 'intransitivity-is-
+schur-convexity'); flagged for the fleet.
