@@ -1,3 +1,25 @@
+## death-star-2026-07-20-S74 -- Consultation: "$X\cong\mathbb A^3$" ⟺ disproving JC(3), the symmetric-product étale witness (HYP-8600)
+
+**Owner (consultation):** easy/non-computational reason a certain $X$ (an $\mathbb A^1$-bundle over
+$\mathbb A^2$) is $\cong\mathbb A^3$; complete structural understanding.
+
+- The construction: $\pi:\mathbb P^1\times\mathrm{Sym}^2\mathbb P^1\to\mathrm{Sym}^3\mathbb P^1$ (binary-form
+  mult, deg 3), delete ramification $R$ and $\pi^{-1}(H)$ for $H$ tangent-not-osculating to the twisted
+  cubic; $Y=\mathrm{Sym}^3\setminus H\cong\mathbb A^3$, $X\to Y$ étale deg 3.
+- **Key finding:** $\pi|_X$ is étale, non-injective (3:1), non-surjective (misses $C\cap Y\cong\mathbb G_m$,
+  codim 2). So **$X\cong\mathbb A^3\Rightarrow$ a unit-Jacobian non-automorphism of $\mathbb A^3$ = a
+  JC(3) counterexample.** Hence the "easy Serre proof" (needs the fibration to be a TORSOR) can't be
+  JC-innocent; JC ⟹ the $\mathbb A^1$-fibration is non-trivial ⟹ $X$ is almost surely an EXOTIC $\mathbb A^3$
+  (Koras–Russell/cancellation), not $\mathbb A^3$. Model: $\mathbb A^2\setminus0\hookrightarrow\mathbb A^2$.
+- **Structural scaffolding (rep theory):** $\pi$ = Segre projected from the Clebsch–Gordan kernel line;
+  hyperplanes = apolar binary cubics $h$, contact order with $C$ = root multiplicity of $h$, so
+  tangent-not-osculating ⟺ $h$ type $(2,1)$ (⟹ residual $\mathbb G_m$ symmetry); $X$ = universal simple
+  root; the 2nd polar controls the Goldilocks tuning.
+- Ties to GMC⇒JC (codimension breaks affine-space rigidity, same shape). Next: ML invariant / $H^*(X)$
+  to decide fake-vs-real $\mathbb A^3$.
+- Consultation write-up (reflection x-cong-A3-iff-JC3-false-...-S74), not a repo theorem. No code changes
+  this turn beyond the note.
+
 ## klein-2026-07-20-S383 -- THM-1790: THE EMP FLOOR. The GMC(2) detection depth is >= d+1 for every radial degree d (PROVEN, growing without limit) -- upgrading THM-1770's single witness to a law, and pinning the load-bearing constraint on any GMC(2) proof: it must be uniform in m, not a finite moment cutoff.
 
 **Owner directive:** look for more load bearing results.
