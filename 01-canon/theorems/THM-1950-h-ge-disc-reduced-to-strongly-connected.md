@@ -1,5 +1,5 @@
 ---
-id: THM-1935
+id: THM-1950
 title: "H ≥ disc REDUCED TO THE STRONGLY-CONNECTED BASE, via the skew-determinant SCC-composition law — the exact structural parallel of THM-1860 (c₃ ≤ H) for death-star's HYP-8636. For every tournament T, the Rédei Hamiltonian-path count H(T) is at least the poly-time skew-determinant disc(T)=|det(I+K)|/2^{n−1} (K=A−Aᵀ), with equality iff T is transitive. This is PROVED modulo the strongly-connected base H(C) ≥ max(1,s(C))·disc(C), where s(C)=𝟙ᵀ(I+K)⁻¹𝟙=‖(I+K)⁻¹𝟙‖² is the total inverse-response. The reduction rests on three PROVED facts: (i) the SCC-composition law disc(C₁⇒⋯⇒C_r)=∏disc(Cᵢ)·[∏(1+sᵢ)+∏(1−sᵢ)]/2^r (Schur complement; disc is SUPER-multiplicative, unlike H which is exactly multiplicative, and unlike char_A which factors — THM-1925); (ii) the velocity-addition law s(C₁⇒C₂)=(s₁+s₂)/(1+s₁s₂) (a Möbius/SL₂ action on the SCC composition); (iii) the elementary kernel inequality max(1,x)·max(1,y) ≥ max(1+xy,x+y)/2 for x,y≥0. Peeling the top strong component with the invariant P(T)=max(1,s(T))·disc(T) closes the induction: H(T)≥P(T)≥disc(T)."
 status: >
   (0) VERIFIED: H ≥ disc exhaustive n ≤ 6 (33864 tournaments, 0 violations; reconfirms
@@ -27,7 +27,7 @@ answers: HYP-8636   # death-star-S78's H ≥ disc conjecture — now reduced to 
 script: 04-computation/h_ge_disc_reduction_to_strong_klein_S400.py, disc_composition_law_klein_S400.py, h_ge_disc_reduction_klein_S400.py (+ .out)
 ---
 
-# THM-1935 — H ≥ disc, reduced to the strongly-connected base
+# THM-1950 — H ≥ disc, reduced to the strongly-connected base
 
 death-star-S78 (HYP-8636) conjectured `H(T) ≥ disc(T)` with equality iff transitive, where
 `H(T)` = # directed Hamiltonian paths (Rédei, #P-hard, always odd) and

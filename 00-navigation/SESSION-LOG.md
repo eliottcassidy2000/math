@@ -1,3 +1,40 @@
+## klein-2026-07-21-S400 -- THM-1950: H >= disc REDUCED TO THE STRONGLY-CONNECTED BASE (advances death-star HYP-8636), via the skew-determinant SCC-composition law + the s velocity-addition (SL2) law + a kernel inequality. HYP-8710.
+
+Owner: synthesise repo progress; work high-leverage open math to the most fundamental level; small improvements toward proofs; pull often.
+
+SYNTHESIS: the repo (2 weeks / ~250 sessions past my LRC S153 work) has unified LRC(14)/GMC(2)/TNC/JC as one moment-nullcone problem, built the WOWII inequality engine over tournament invariants, and the a/b=BS(1,2)/SL2 monoid frame (THM-1885/1875/1920). Read my S399 zoo atlas + death-star-S79/S80. Picked the cleanest FUNDAMENTAL open target: death-star-S78 HYP-8636, H(T) >= disc(T) (Redei #P count >= poly-time skew-determinant, equality iff transitive).
+
+RESULT (THM-1950, all machine-verified) -- the exact structural twin of THM-1860 (c3<=H):
+ - total inverse-response s(T)=1^T(I+K)^{-1}1 = ||(I+K)^{-1}1||^2 (K skew => = x^T(I+K)x = ||x||^2), in [0,n].
+ - SCC-COMPOSITION LAW (Schur complement, verified 1.8e-15 over all 10976 reducible T n<=6):
+     disc(C1=>...=>Cr) = prod disc(Ci) * [prod(1+si)+prod(1-si)]/2^r.  disc is SUPER-multiplicative
+     (contrast: H exactly-multiplicative THM-1860; char_A factors THM-1925; disc does NOT).
+ - VELOCITY-ADDITION LAW: s(C1=>C2)=(s1+s2)/(1+s1s2) = relativistic/Mobius/SL2 (s=tanh(rapidity),
+     rapidities ADD over =>). The disc/s pair is the K-side SL2 twin of THM-1925's A-side (a/b frame).
+ - kernel inequality max(1,x)max(1,y) >= max(1+xy,x+y)/2 (x,y>=0, proved 3 cases).
+ - invariant P(T)=max(1,s(T))disc(T); peel top strong comp => H(T)=H(C1)H(T') >= P(C1)P(T') >= P(T)
+     >= disc(T). Verified H>=P(T) exhaustive ALL 2^{C(n,2)} tournaments n<=6.
+ => H>=disc for ALL T, given the STRONG BASE H(C) >= max(1,s(C))disc(C). Base verified n<=6 exhaustive
+    (2/2,24/24,544/544,22320/22320 strong) + strong sample n=7 (6387/6387); tight only at C3; ratio
+    grows 1,1.67,1.875,3.75,4.22. RESIDUAL BASE is the open content (twin of c3<=H's strong base).
+
+CORRECTION LOGGED: s>=1 for strong holds n<=6 (min s=3,3,2,1) but FAILS n>=7 (min s=0.667,0.556) -- so
+the kernel MUST be two-sided max(1,.), not the naive prod si; the n=6 min-s=1 was a marginal-threshold
+artifact (twin of the H-spectrum {7,21,35,39}->{7,21}). My first attempt used the naive bound; repaired.
+
+NAMESPACE: yielded THM-1935 to opus-S442 (universal-decoupling-threshold-n5, first-push) + HYP-8690;
+renumbered mine THM-1950 / HYP-8710. mac-mini-S160 THM-1936 (signed Redei R join-multiplicative, |R|
+factors over strong comps) is a CONVERGENT SCC-composition result -- cross-link (R multiplicative, disc
+super-multiplicative: the two determinant-like invariants compose oppositely over strong components).
+
+NEXT: the strong base H>=max(1,s)disc (Ham-path injection dominating s*disc, or eigenvalue-product on
+the strong spectrum w/ fixed energy sum mu^2=C(n,2)); the additive rapidity artanh(s) as a new
+invariant; disc/s as an explicit SL2 rep of the condensation monoid.
+
+FILES: THM-1950; reflection the-skew-determinant-composes-by-velocity-addition-klein-S400; HYP-8710;
+scripts h_ge_disc_reduction / disc_composition_law / h_ge_disc_reduction_to_strong _klein_S400 (+outs);
+atlas disc row. No canon overridden; no files deleted.
+
 ## mac-mini-2026-07-21-S160 -- THM-1936: the signed Redei count R(T)=sum sgn(pi) is JOIN-MULTIPLICATIVE (signed refinement of THM-1862); |R| factors over strong components -> ANSWERS S159's |R|-gap question (9,13 absent at n=5 because 9=3*3 needs 6 vertices, 13 prime first at strong n=6). No det/Pfaffian collapse; max not double-factorial.
 
 Owner: synthesize repo progress; work high-leverage fundamental open math; little proof improvements; pull often.

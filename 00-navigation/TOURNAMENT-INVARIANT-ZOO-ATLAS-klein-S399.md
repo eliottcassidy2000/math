@@ -35,6 +35,7 @@ Five habitats. Each invariant: **name — what it measures — status — canoni
 | **αₖ vector** | k-cycle / score data | registry `alpha-k.md` **DANGLING** |
 | **tₖ (cycle counts)** | # directed k-cycles; #C₃ the atom | THM-1805 (3-cycle = intransitivity atom) |
 | **d(T) = det(A)** | determinant of adjacency | THM-1810 (=Gauss sum for Paley) |
+| **disc(T) = \|det(I+K)\|/2^{n−1}** | skew-determinant = ∏(1+μ_j²)/2^{n−1} | THM-474; **H≥disc reduced to strong (THM-1950); SCC-composes by velocity-addition, super-mult** |
 | **Pf(S)** | Pfaffian of skew A−Aᵀ; odd=(n−1)!!; switching-invariant | THM-1475; n=8 gaps {29,37–47}, max 49 |
 | **Σa + {aᵣ} (arborescences)** | spanning-tree count + the **arborescence ranking** | THM-1750/1580/1460 |
 | **Kendall–Wei / Perron λ** | dominant-eigenvector centrality | **NEW §V: ≠ arborescence ranking** |
