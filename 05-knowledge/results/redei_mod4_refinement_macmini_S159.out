@@ -1,0 +1,23 @@
+========================================================================================
+HYP:  h(T) == 1 + 2*c3(T)  (mod 4)   [c3 = # of 3-cycles]
+========================================================================================
+  n=3: h == 1+2*c3 (mod 4) holds for 8/8 tournaments   <-- ALL
+  n=4: h == 1+2*c3 (mod 4) holds for 64/64 tournaments   <-- ALL
+  n=5: h == 1+2*c3 (mod 4) holds for 624/1024 tournaments   <-- FAILS
+  n=6: h == 1+2*c3 (mod 4) holds for 17408/32768 tournaments   <-- FAILS
+
+========================================================================================
+mod-8 probe: is h(T) determined mod 8 by (c3, strongly-connected-4-subsets)?
+========================================================================================
+  n=4: h mod 8 a FUNCTION of (c3, c4strong)? True  (#distinct (c3,c4) classes = 3)
+  n=5: h mod 8 a FUNCTION of (c3, c4strong)? False  (#distinct (c3,c4) classes = 8)
+        multivalued classes (sample): {(4, 3): [5, 7]}
+  n=6: h mod 8 a FUNCTION of (c3, c4strong)? False  (#distinct (c3,c4) classes = 19)
+        multivalued classes (sample): {(4, 4): [3, 7], (4, 3): [1, 5, 7], (7, 9): [1, 5], (6, 7): [1, 5], (6, 6): [5, 7]}
+
+========================================================================================
+Refined guess: h(T) = 1 + 2*c3 + 4*(higher cyclic)? test h - (1+2*c3) divisible by 4 and
+whether (h-1-2*c3)/4 mod 2 tracks c4strong
+========================================================================================
+  n=5: ((h-1)/2) mod 2 == c3 mod 2 for 624/1024
+  n=6: ((h-1)/2) mod 2 == c3 mod 2 for 17408/32768

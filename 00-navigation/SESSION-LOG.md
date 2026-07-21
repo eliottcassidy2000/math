@@ -9,6 +9,18 @@
 - **GAP-FILL 2 (HYP-8647, REFUTED=subsumed):** skew-adjacency Smith normal form adds nothing beyond the Pfaffian — degenerate at odd n (all-(1,1,1,1) at n=5), = Pf² factorization at even n. Closes "SNF for tournaments" as a negative. One of the 6 missing analogs resolved.
 - **BACKLOG:** filed the atlas + all top revival picks (Z_n, bicycle space, Ihara zeta, E_n sweep, G4 correlation matrix, 11 dangling files) as one entry. **Handoffs:** compute Z_n and the bicycle space (both cheap, both named-never-computed); run G4 (full pairwise Kendall-τ matrix); build the Ihara-zeta / non-backtracking analog; run any G_n computation on E_n (opus mandate).
 - **Namespace:** no THM claimed (synthesis + 2 refuted-hypothesis gap-fills). Files: atlas doc; `04-computation/invariant_gaps_klein_S399.py`, `04-computation/snf_skew_energy_klein_S399.py` (+outs in results/).
+## mac-mini-2026-07-21-S159 (cont.) -- FRESH PROOF of the founding theorem (Redei) through the sign-reversing engine: the descent it DOES give, the determinant collapse it does NOT, and new/refuted hypotheses.
+
+**Owner:** do a fresh proof of Redei (# Ham paths ODD) with the S159 involution engine; see how the idea creates new proofs and hypotheses.
+
+**Delivered (appended to HYP-8640; two reflections + two scripts):**
+- **Engine DOES give Redei by DESCENT:** h(T) = h(T-v) mod 2 (verified all T, all v, n=4,5). The engine's slogan on ONE tournament = a parity descent: deleting v and splicing gives a Ham path of T-v UNLESS v sat in a 3-cycle a->v->b->a (the lone intransitive config, one defect); cyclic insertions cancel in pairs, transitive skeleton descends to h=1 = odd. (Classical induction re-read through the engine + exhaustively verified.)
+- **Engine does NOT give Redei by COLLAPSE (the real finding):** no simple det mod 2 is universally odd -- det(A), det(A+I), det(A-A^T), det(A+A^T+I) all fail (verified n=3,4,5). The near-miss det(A-A^T) mod 2 = (n-1) mod 2 = [n even] is TOURNAMENT-INDEPENDENT = THM-1440 forced-zero = the blue parity, so it CANNOT be h(T). CONCLUSION: Redei's parity is genuinely PERMANENTAL; the S159 engine reaches it only by descent, never by a determinant collapse. Precise boundary of the technique: collapse for signed-sums-over-all-structures (Vandermonde/Burnside/GMC-discriminant); descent for permanental-count-over-one (Redei); no help for non-sign weights (LRC sinc = S157 barrier).
+- **New hypotheses spun off:** (NEW, open) signed Ham-path count R(T)=sum sgn(pi) is always ODD (signed Redei), symmetric GAPPED distribution (n=5: |R| in {1,3,5,7,11,15}, 9&13 absent) -- characterize the gaps. (REFUTED) h(T) = 1 + 2*c3 mod 4 holds n<=4, FAILS n=5 (624/1024); no odd-strongly-connected-subset count mod 2 rescues it (best c3+c5 = 880/1024 n=5) => the mod-4 Redei digit is higher-order, not a small-cycle count. Logged as dead-end.
+
+**Collision handled:** HYP-8640 is triple-claimed (mine S159 involution engine [opus acknowledged my first-push, ceded 8645], boxeph S193 inflation-velocity, an old WOWII loop). I did NOT mint a new number; appended the Redei follow-up to my own HYP-8640 (it's the exact 5th-specialization resonance that entry flagged as next).
+
+**Next:** the signed-count R(T) gap structure (why 9,13 absent at n=5?); whether the descent involution has an explicit local form. Artifacts: 07-reflections/redei-through-the-sign-reversing-engine-...-macmini-S159.md; 04-computation/redei_signed_involution_freshproof_macmini_S159.py, redei_mod4_refinement_macmini_S159.py (+outs).
 
 ## death-star-2026-07-21-S78 -- SPECTRAL TournamentGraffiti: THM-1858 PROVED (no tournament has exactly 2 distinct eigenvalues) + H≥disc conjecture + the forbidden-value FAMILY (H:{7,21}, ndev:{2}, kings:{2}). THM-1858, HYP-8636.
 
