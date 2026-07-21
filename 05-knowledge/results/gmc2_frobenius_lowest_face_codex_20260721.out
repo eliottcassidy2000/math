@@ -1,0 +1,69 @@
+THM-2022 EXACT FROBENIUS LOWEST-FACE VERIFIER
+arithmetic: Python integers + fractions only
+
+CASE four-vertex collinear face with a cancelled earlier layer
+  terms: f-2:(q=-2,a=1,b=3,c=1), f-1:(q=-1,a=2,b=3,c=1), f+1:(q=1,a=4,b=3,c=-1), f+2:(q=2,a=5,b=3,c=1), off0:(q=0,a=4,b=4,c=2)
+  supporting line: a - (1)q >= 3; face=(0, 1, 2, 3)
+  CT(face^2)=0; CT(face^3)=Q=6
+  m0=3, A0=9, p=5, M=p*m0=15
+  balanced channels=150; off-face channels=126
+  minimum valuation=10; minimum layer size=2; layer=(0,10,0,5,0), (5,0,10,0,0)
+  least off-face valuation=11
+  Kummer zero-carry iff r=p*s checked on all 150 channels; Lucas checked on 2 minimum channels
+  division by (p*A0)! integral termwise on all 150 channels; every non-face quotient vanishes mod p
+  canonical congruence: M_M/(p*A0)! mod p=1; Q^p mod p=1
+  valuation audit: v_p((p*A0)!)=10; unit part=4; p^(-v)M_M mod p=4
+  Wilson shortcut not invoked (A0>=p); full-factorial theorem still passes
+  full moment: nonzero, v_p=10, decimal digits=87
+  PASS
+
+CASE rational-intercept two-vertex face
+  terms: f-1:(q=-1,a=1,b=2,c=2), f+2:(q=2,a=3,b=1,c=3), off0:(q=0,a=2,b=2,c=5)
+  supporting line: a - (2/3)q >= 5/3; face=(0, 1)
+  CT(face^3)=Q=36
+  m0=3, A0=5, p=7, M=p*m0=21
+  balanced channels=8; off-face channels=7
+  minimum valuation=5; minimum layer size=1; layer=(14,7,0)
+  least off-face valuation=6
+  Kummer zero-carry iff r=p*s checked on all 8 channels; Lucas checked on 1 minimum channels
+  division by (p*A0)! integral termwise on all 8 channels; every non-face quotient vanishes mod p
+  canonical congruence: M_M/(p*A0)! mod p=1; Q^p mod p=1
+  valuation audit: v_p((p*A0)!)=5; unit part=6; p^(-v)M_M mod p=6
+  Wilson shortcut applicable: unit=(-1)^A0*A0!=6 mod p
+  full moment: nonzero, v_p=5, decimal digits=67
+  PASS
+
+CASE neutral endpoint with A0=0 and cancelled first moment
+  terms: constant:(q=0,a=0,b=0,c=6), radial:(q=0,a=2,b=2,c=-3), positive:(q=1,a=2,b=1,c=2)
+  supporting line: a - (0)q >= 0; face=(0,)
+  CT(face^1)=Q=6
+  exact earlier Gaussian moment M_1=0
+  m0=1, A0=0, p=7, M=p*m0=7
+  balanced channels=8; off-face channels=7
+  minimum valuation=0; minimum layer size=1; layer=(7,0,0)
+  least off-face valuation=1
+  Kummer zero-carry iff r=p*s checked on all 8 channels; Lucas checked on 1 minimum channels
+  division by (p*A0)! integral termwise on all 8 channels; every non-face quotient vanishes mod p
+  canonical congruence: M_M/(p*A0)! mod p=6; Q^p mod p=6
+  valuation audit: v_p((p*A0)!)=0; unit part=1; p^(-v)M_M mod p=6
+  Wilson shortcut applicable: unit=(-1)^A0*A0!=1 mod p
+  full moment: nonzero, v_p=0, decimal digits=15
+  PASS
+
+TOURNAMENT ANALYSIS (multi-channel collinear case)
+  vertices: all balanced channels at M=p*m0
+  pairwise observable: p-adic valuation of binom(M;r)*A(r)!
+  switch/gauge: lower valuation wins; valuation ties use lexicographic r
+  tie Hamiltonian path: increasing (valuation,r)
+  vertices=150; valuation-layer histogram={10:2, 11:32, 12:52, 13:21, 14:43}
+  score histogram: each score 0..149 occurs once
+  directed 3-cycles=0; SCC sizes=all 1; Hamiltonian paths=1
+  edge flips under reverse-lex tie gauge=2936
+  minimum tied layer path=(0,10,0,5,0), (5,0,10,0,0)
+  preserved: minimum valuation layer and carry/noncarry separation
+  destroyed: the residue sum within a tied layer
+  repair sidecar: CT(face^m0)=Q, retained as Q^p by Frobenius
+  challenged vertex assumptions: monomials, charges, primitive circuits, radial heights, channels, digit/carry states, prime ideals, proof obligations
+  selected vertices: balanced channels; proof-bearing sidecar: face residue Q
+
+GLOBAL VERDICT: all exact valuation, Lucas, and Frobenius checks passed
