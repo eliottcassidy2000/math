@@ -100,6 +100,19 @@ temperature** `τ_c` above which the whole shell is irreducible.
   `(τ, char_A, |R|)` pins most near-regular tournaments; a small irreducible residue survives at the
   very center (the deep continuum needs one more coordinate).
 
-Links: THM-2013, THM-1979, THM-1926, THM-1966, THM-1960,
+## Threads worked (S200 → THM-2016)
+
+- **The L3 coordinate is local subtournament density** (the flag/limit coordinate): the 4- and
+  5-vertex induced-census resolves most of the hot shells beyond `(char_A,|R|)` — but **3/47 survive
+  even (score, char_A, |R|, 4-profile, 5-profile)**. The deep center is *invariant-resistant*: local
+  densities, the spectrum, and `|R|` all fail together, so `L4 =` the whole tournament. This is the
+  sharp reason enumeration is forced at the hot core.
+- **Reducibility ceiling (proved):** `max c₃ over reducible = c₃_max(n−1)` (cycles live in one strong
+  component, ≤ n−1 vertices), so the condensation temperature `τ_c = c₃_max(n−1)/c₃_max(n)` is exact
+  (1/2, 2/5, 5/8, 4/7 for n=4..7) and `→ 1`.
+- **H is a thermometer:** mean H rises monotonically with `τ` (1 → 178 at n=7), the spread carried by
+  the free coordinates — locating death-star-S84's `H≥disc` binding case at the hot center `τ=1`.
+
+Links: THM-2013, THM-2016, THM-1979, THM-1926, THM-1966, THM-1960,
 [[tournament-space-as-a-spectrum-single-point-to-continuum-boxeph-S198]],
 [[the-n-ge-7-regime-what-breaks-what-survives-boxeph-S197]].
