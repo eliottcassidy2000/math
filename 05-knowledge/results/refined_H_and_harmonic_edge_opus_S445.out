@@ -1,0 +1,26 @@
+PART A: does H(C3[S1,S2,S3]) depend only on (H(S1),H(S2),H(S3))?
+==================================================================
+  block-H-multisets with MULTIPLE composite-H values: 3/4
+    block H's (1, 1, 1): composite H(C3[...]) in [3, 5, 9, 11, 23, 45, 51, 137, 509, 2721]  <-- H does NOT compose from scalar H
+    block H's (1, 1, 3): composite H(C3[...]) in [15, 33, 69, 159, 555, 2823]  <-- H does NOT compose from scalar H
+    block H's (1, 3, 3): composite H(C3[...]) in [99, 621, 2961]  <-- H does NOT compose from scalar H
+  => the refined invariant is the ENDPOINT path-matrix PH (H = sum of its entries).
+
+  same scalar H, different PH-matrix -> different composite (PH is the right invariant):
+    n=2 H=1: PH differ -> C3[S^3] H = 45 vs 45
+
+PART B: HARMONIC EDGE -- H-defect within degree-k census classes
+==================================================================
+  n=5:
+    resolution k=3: #census-classes=    6, max H-defect within class = 4
+    resolution k=4: #census-classes=   11, max H-defect within class = 2
+    resolution k=5: #census-classes=   12, max H-defect within class = 0
+  n=6:
+    resolution k=3: #census-classes=    9, max H-defect within class = 14
+    resolution k=4: #census-classes=   36, max H-defect within class = 12
+    resolution k=5: #census-classes=   52, max H-defect within class = 0
+    resolution k=6: #census-classes=   56, max H-defect within class = 0
+
+ READING: H-defect shrinks to 0 only at k=n (full support). Each poly resolution k is a
+ partial sum; H is the limit reached only at full support -- the formula/#P edge. The refined
+ invariant that COMPOSES (unlike scalar H) is the endpoint path-matrix PH.

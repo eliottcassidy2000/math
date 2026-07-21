@@ -1,3 +1,33 @@
+## opus-2026-07-20-S445 - H at the FORMULA/#P edge: the harmonic boundary (THM-1970 + reflection)
+
+Owner: H not poly-determined is an edge case; maybe a more refined invariant is the real answer;
+tournaments sit at the edge between what a formula expresses and what provably cannot (harmonic series).
+
+WORKED IT (THM-1970 + reflection H-at-the-formula-sharp-P-edge). Tournament invariants = a DEGREE-
+GRADED poly tower (score deg1 -> c3 deg3 -> var=SC4 deg4 -> tr(S^{2j}) deg2j -> char_S all-moments),
+each a poly degree-k census. H is captured by NONE: H|char_S splits at n=3 (THM-1935, full spectrum
+misses H); the H-defect within a degree-k census GROWS with n at fixed k (k3: 4->14, k4: 2->12 for
+n=5,6), vanishing only at the deck k=n-1 (reconstruction). So H needs FULL-SUPPORT = the PERMANENT
+(#P) to char_S's DETERMINANT (poly); the gap = the permanent/determinant boundary. Complete-signed-
+relation => spectrum poly, path-count #P -- WHY tournaments sit on the edge.
+
+REFINED OBJECT: scalar H is not even COMPOSITIONAL (H(C3[S1,S2,S3]) != f(H(Si)); block-H (1,1,1) ->
+composites {3,...,2721}); the compositional refinement = the path-SYSTEM (linear-forest) polynomial
+(categorifies H), functorial NOT a poly formula (none exists unless P=#P). The 'more refined answer'
+buys composition, not complexity.
+
+HARMONIC ANALOGY made exact: moment tower = partial sums; char_S = zeta(s>1) (formula); H = the pole
+at s=1 (the edge); the char_S->H defect = the tournament gamma (the anomaly after all poly data),
+physically = THM-805 resistance=harmonic-number, CLAUDE.md's gamma. OPEN: relative defect (small-n
+0.53->0.62 => edge is REAL not measure-zero); the path-system transfer (resolves THM-1960 cyclic-H).
+
+Honest correction mid-session: size-controlled test (n=5 blocks, same H, diff PH) gave EQUAL symmetric
+composites, so the PH-non-composition is subtler than first claimed; the robust results are the
+harmonic-edge defect table + H|char_S + H(C3[.]) not scalar-H-determined across sizes.
+
+Files: THM-1970; HYP-8715; reflection; refined_H_and_harmonic_edge + PH_composes _opus_S445.py (+out).
+Namespace clean (1970/8715). Builds on THM-1935/1940/1945/1960/1930, THM-805.
+
 ## opus-2026-07-20-S444 - Tournaments compose from REGULAR SEEDS: the spectral substitution law + octonion object C3[C3] (THM-1960)
 
 Owner: consider the three recursion modes (A+B+C-D-E-F+G / A+B-C+D-E-F+G / A+B-C) + tournaments as

@@ -1,0 +1,18 @@
+n=5 blocks: for each scalar H, how many distinct PH-start-signatures?
+  H=1: 1 distinct PH-signatures
+  H=3: 2 distinct PH-signatures
+  H=5: 2 distinct PH-signatures
+  H=9: 2 distinct PH-signatures
+  H=11: 1 distinct PH-signatures
+  H=13: 1 distinct PH-signatures
+  H=15: 1 distinct PH-signatures
+
+ same scalar H=3, DIFFERENT PH-signature:
+   S1 PH-start=(0, 0, 0, 0, 3) -> H(C3[S1^3]) = 141807267
+   S2 PH-start=(0, 0, 1, 1, 1) -> H(C3[S2^3]) = 141807267
+   composite H differs: False  => scalar H does NOT compose; PH is the refined invariant.
+
+ two DISTINCT iso classes with SAME (H,PH-sig): composite H = 141807267 vs 141807267  (PH-sig fixes it: True)
+
+ READING: H = row-sum-collapse of PH; PH (endpoint-resolved) is the FUNCTORIAL invariant that
+ composes under substitution, where scalar H does not. It is the refined 'real answer'.
