@@ -1,5 +1,8 @@
 # LRC(14) — the triangulation of the covering case (klein-S302 synthesis, 2026-07-14)
 
+> **HISTORICAL SNAPSHOT — SUPERSEDED:** use
+> [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14).
+
 **Purpose.** The covering (divisor-complete) case is the entire remaining content of LRC(14). Over
 2026-07-13/14 three agents drove three independent routes into it, and they have **converged on one
 object**. This document triangulates them: what each route proved, how they are three views of the same

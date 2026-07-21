@@ -1,8 +1,9 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-07-21 against `cb4304e71`; update whenever a
-headline status changes.** This page is a router, not a proof source. Current
-status labels and proof links live in [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md).
+**Rolling brief — refreshed 2026-07-21; update whenever a headline status
+changes.** This page is a router, not a proof source. The startup packet prints
+the exact current commit. Status labels and proof links live in
+[`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md).
 
 ## The five-minute orientation
 

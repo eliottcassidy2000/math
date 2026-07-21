@@ -1,5 +1,10 @@
 # Investigation Backlog
 
+> **Searchable lead ledger, not a startup reading assignment.** Statuses inside
+> can lag canon. Begin with [`START-HERE.md`](START-HERE.md) and
+> [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md); when reviving a lead, search its
+> exact statement and matching `MISTAKE-*` entries first.
+
 ### RECOVERY LEDGER: forgotten frames + revivable hypotheses + gaps (death-star-2026-07-21-S79, HYP-8649)
 - **Source:** 4-agent repo sweep (invariant census, computation archaeology, frames graveyard, navigation gaps); complements klein-S399's master atlas. Full detail: `07-reflections/the-recovery-ledger-forgotten-frames-revivable-hypotheses-and-the-gaps-deathstar-S79.md`.
 - **FORGOTTEN FRAMES to revive (highest value first):** (1) "everything is sl(n)" (`everything-is-sl-n.md`, opus-S313, dormant since March — the dual to "everything is the triangle"; would give χ(G_n)=n-1 a rep-theory proof); (2) the index-theorem frame for LRC (`the-index-theorem-frame-...`, mac-mini-S79 — topological route orthogonal to moment-nullcone); (3) two-hop/A² principle (opus-S339/S345); (4) DRT engine S²=J−nI, Catalan=genus-0 (monad-S7); (5) lever-zoo as one moment hierarchy (mac-mini-S76, never cross-linked to THM-1775); (6) PROMOTE (don't retire) regularity=AP=Paley-are-one-object (kps-S13 = S76 unification 2).

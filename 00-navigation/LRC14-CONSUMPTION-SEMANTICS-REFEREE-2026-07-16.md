@@ -1,5 +1,9 @@
 # THE CONSUMPTION-SEMANTICS REFEREE PAGE (ledger seam 2) — boxeph-S41
 
+> **SCOPED HISTORICAL AUDIT:** check current obligations in
+> [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) before consuming a
+> seam or constant from this page.
+
 **Question.** The propagation ledger composes Error(w) ≤ 0.2729·diam/w against the S58
 row margins. Do those margins guard exactly the functional the Error bounds?
 

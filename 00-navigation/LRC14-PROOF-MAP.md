@@ -1,5 +1,10 @@
 # LRC(14) proof map — the two routes, their obligations, and the tractable path
 
+> **DETAILED MACHINERY MAP:** read
+> [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) first. This file
+> preserves the proof skeleton and formalization surface; individual obligation
+> labels may lag later theorems or corrections.
+
 > ## 2026-07-19 S78 CONTINUATION — TWO FINITE FRONTS MOVE, AND THE FANO QUOTIENT IS LOCAL-SURJECTIVE
 >
 > THM-1258 closes the primitive proper AP-centred Hamming-six face at common

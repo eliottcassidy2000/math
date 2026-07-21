@@ -1,5 +1,8 @@
 # LRC(14) FRONTIER — 2026-07-14 (opus-S285 synthesis)
 
+> **HISTORICAL SNAPSHOT — SUPERSEDED:** use
+> [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14).
+
 > **Post-S311/S1 audit correction.**  This map predates THM-758 and then-current claims that its
 > `f>=4` residual was a uniformly bounded raw-speed band.  HYP-6780 proves the THM-755 cutoff is
 > scale-covariant: `|G'_{cP}|=|G'_P|`, `r_{cP}=c r_P`, and `v*(cP)=c v*(P)`.  The primitive covering ray

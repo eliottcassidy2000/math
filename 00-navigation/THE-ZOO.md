@@ -1,5 +1,10 @@
 # THE ZOO — a living catalog of the repo's objects, methods, frames, forgotten threads, gaps, and a generator for new ones
 
+> **Inventory, not truth authority.** Some “open” and bridge labels predate
+> THM-2022 and MISTAKE-211–220. Check [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md)
+> and [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md)
+> before using a zoo entry as mathematics.
+
 *Seeded opus-2026-07-20-S439 from a six-agent repo-wide sweep (1346 THM/LEM, 2555 reflections,
 7650 HYP entries, 10249 result files). Owner directive: "keep adding to the zoo… find the things
 we've forgotten we've studied. all of them. and find the gaps between and around them."*

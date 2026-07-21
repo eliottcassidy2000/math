@@ -1,142 +1,129 @@
 # Concurrent Session Playbook
 
-This repository is a shared research instrument, not a queue. Multiple agents
-may be working from `main` at the same time, and the correct response is to
-publish small, coherent states often enough that everyone can see the living
-frontier.
+**Current process — refreshed 2026-07-21.** `origin/main` is the shared live
+research surface. Publish small coherent states often, but never absorb another
+session's uncommitted files merely to checkpoint yours.
 
-## Operating Principle
+## Default: one worktree per session
 
-Push to `origin/main` whenever a useful unit of state exists. A useful unit can
-be a proof attempt, a refutation, a hypothesis-number reservation, a result
-file, a script checkpoint, a newly found connection, or a session-log update.
-Do not wait for a perfect ending if the work has become informative.
+From a clean main checkout:
 
-Frequent pushes do three jobs:
+```bash
+cd "$(bash agents/new_session_worktree.sh short-topic)"
+git status --short --branch
+python3 agents/start_session.py --topic "<target statement or object>"
+```
 
-1. They reserve scarce names such as `HYP-*`, `THM-*`, `T*`, result filenames,
-   and session IDs before another agent independently uses them.
-2. They turn long investigations into visible increments, reducing painful
-   late-session rebases.
-3. They let concurrent discoveries cross-pollinate while the ideas are still
-   live.
+The helper fetches `origin/main`, creates a unique `codex/session-*` branch, and
+sets `origin/main` as its upstream. The private working directory prevents one
+session's stage/commit from sweeping another session's files. Platforms that
+already supply an isolated clone/worktree need not create another.
 
-## Checkpoint Rhythm
+If you must use a shared checkout, inspect every changed path before staging.
+Use explicit `git add <paths>`; `git add -A` is allowed only after verifying
+that every change belongs to the same session.
 
-Make an early checkpoint after startup if you reserve any IDs or create any
-stub files. During long sessions, checkpoint every 30-60 minutes, before a long
-computation, after a meaningful computational result, after confirming or
-refuting a hypothesis, and before any risky rebase or large edit.
+## Startup and sync
 
-Preferred command:
+Sync only from a clean tree:
+
+```bash
+git fetch origin
+git rebase origin/main
+```
+
+Then read the bounded startup packet and the exact canon it routes to. Do not
+resolve a rebase by discarding unknown changes. If the tree is dirty, determine
+ownership first; use a separate worktree rather than stashing another agent's
+state.
+
+When a fetch/rebase lands new work, ask:
+
+- Does it change this statement, invariant, runner family, scope, or namespace?
+- Does it correct, subsume, independently verify, or refute the current route?
+- Does it supply a new object, operation, sidecar, extremal, or decisive test?
+- Should the connection enter the concept board, theorem, hypothesis, result,
+  guardrail, frontier, or reflection?
+
+This is the point of live mainline research: incoming work is potential
+mathematics, not just Git noise.
+
+## Claim scarce names honestly
+
+Before reserving `THM-*`, `HYP-*`, `MISTAKE-*`, tangent IDs, script/output
+names, or session territory:
+
+1. search the filename namespace;
+2. search frontmatter IDs and all indexes;
+3. fetch and inspect current `origin/main`; and
+4. cite an existing item by ID **plus slug/path** because legacy collisions
+   remain.
+
+An honest stub states what is reserved, what is known, what is missing, and
+why the namespace is needed. Speculation belongs in hypotheses/tangents, not a
+theorem stub.
+
+## Checkpoint rhythm
+
+Checkpoint after a reservation, a meaningful computation, a proof/refutation,
+a corrected hypothesis, a reusable connection, and before a risky integration.
+During long computations, checkpoint the harness/input specification first;
+fetch and inspect new work at natural yields without changing the inputs of an
+already-running reproducibility job.
+
+In an isolated session worktree:
 
 ```bash
 python3 agents/checkpoint_session.py \
-  --message "[instance-id]: checkpoint - [brief state]"
+  --message "[instance-id]: checkpoint - [brief mathematical state]"
 ```
 
-The checkpoint helper stages intentional repo changes, commits if needed,
-pushes the current branch, and verifies the branch is not ahead of upstream.
-Use a direct `git add -A && git commit && git push` sequence if the helper is
-not available.
+A coherent checkpoint may be negative: a counterexample, failed implication,
+smallest witness, repaired statement, or stopping certificate is useful state.
 
-## Claiming Numbers and Names
+## Append-heavy files
 
-When you know a session will need a scarce namespace, claim it early with a
-small commit. Examples:
+`.gitattributes` uses the union merge driver for several logs and indexes. It
+preserves both concurrent hunks but does not adjudicate truth, order entries,
+or remove duplicate lines. After any automatic union merge:
 
-- Add a one-paragraph placeholder hypothesis detail file plus an index row.
-- Add a result filename to `05-knowledge/results/INDEX.md` before launching a
-  long run.
-- Add a theorem stub only when the certainty threshold is already met; otherwise
-  use a hypothesis, tangent, or backlog lead.
-- Add a session-log stub if a long investigation is underway and other agents
-  need to know what territory is occupied.
+- check that no heading or ID was duplicated;
+- ensure correction/retraction order is intelligible;
+- do not delete another agent's content merely for cosmetic uniformity; and
+- repair current truth in the rolling frontier/guardrails rather than rewriting
+  historical provenance.
 
-The placeholder must state what is claimed, why, and what evidence is still
-missing. Do not use a placeholder to smuggle speculation into canon.
+The recent high-number MISTAKE namespace collision is the canonical warning: a
+clean rebase can still create a semantically colliding ledger. Current repairs
+use MISTAKE-217 for signed Rédei data and MISTAKE-220 for SCC additivity, while
+the older MISTAKE-216 keeps its Poisson-rank meaning.
 
-## Rebase Noise Is Signal
+## Computation and formalization
 
-When a rebase or fetch brings in new work, treat it as possible evidence, not
-mere conflict noise.
+Reserve script and output names before long runs. Store the exact universe,
+filters, positive/hostile controls, command, source/output pair, and hashes for
+load-bearing results. A later pull may inspire a new run, but never silently
+changes the interpretation of a frozen run.
 
-Before continuing, quickly ask:
+For Lean, checkpoint both the module and the root-import wiring. A green
+standalone file is not yet a project-level formalization claim.
 
-- Does the new work touch the same invariant, runner family, namespace, theorem,
-  script, or proof route?
-- Does it refute, rename, sharpen, or duplicate my current hypothesis?
-- Does it create a new pairwise observable, gauge, tie path, result file, or
-  application bridge that my session should compare against?
-- Is there a tangent or backlog lead that should be updated because the two
-  threads unexpectedly meet?
+## Close-out
 
-If the answer is yes, integrate the connection explicitly in the notes, script
-output, hypothesis file, reflection, or session log. If the answer is no, keep
-the new work intact and continue. Never delete another agent's fresh work just
-to make your rebase feel cleaner.
-
-## Mathematical Standard
-
-Novelty pressure does not lower the burden of proof. Keep the certainty scale
-intact:
-
-- Canon only gets proved or proof-sketch-level results.
-- Hypotheses record both positive and negative evidence.
-- Computations save scripts and outputs together.
-- Tournament Analysis remains the default computational lens when it fits:
-  pairwise observable, switch/gauge, tie Hamiltonian path, and fingerprints.
-
-The project wants large-scale connection search and rigorous mathematics at the
-same time. A good session should leave behind either a stronger theorem, a
-clearer failed route, a useful computational artifact, or a newly connected
-piece of the map.
-
-## Close-Out
-
-End-of-session close-out is still mandatory. A session can checkpoint many
-times and must still finish with the normal letter, commit, push, and
-verification that the branch is no longer ahead of upstream.
-
-## Infrastructure: working-tree isolation + conflict-free logs (added 2026-06-01)
-
-Two mechanisms now absorb most concurrency pain so close-out no longer stalls on
-manual conflicts:
-
-### 1. Union-merge on shared logs (automatic — nothing to do)
-
-`.gitattributes` marks the append-heavy coordination files (`SESSION-LOG.md`, the
-`INDEX.md` files, `MISTAKES.md`, `TANGENTS.md`, `INVESTIGATION-BACKLOG.md`,
-`OPEN-QUESTIONS.md`, this file) with the built-in `merge=union` driver. When two
-sessions both append, a rebase keeps **both** sides' lines automatically — no
-conflict markers, no manual fixup. `finish_session.py` now loops the
-fetch/rebase/push retry and, on any conflict the union driver cannot resolve,
-**aborts the rebase to leave a clean tree** (your commit stays intact) instead of
-stranding the repo mid-rebase. You normally never see a conflict again.
-
-Caveat: union merge keeps both hunks but not a guaranteed order, and can leave a
-duplicate line if two sessions add the *same* line. Glance at the top of
-`SESSION-LOG.md` after close-out; cosmetic dedupe is fine, never delete another
-agent's entry.
-
-### 2. Per-session worktrees (opt-in — recommended for remote-control sessions)
-
-Nomad-launched sessions already isolate (they clone into `/tmp`). Remote-control
-sessions share the one `~/math` checkout, so one session's `git add -A` can sweep
-another's **uncommitted** files. To get the same isolation, start your session in
-its own git worktree:
+In an isolated worktree, Claude-style sessions may use:
 
 ```bash
-cd "$(bash agents/new_session_worktree.sh)"     # isolated checkout of origin/main in /tmp
-# ... do all your work + run agents/finish_session.py here ...
+python3 agents/finish_session.py \
+  --to all \
+  --subject "[instance-id]: [one-line result]" \
+  --body "Status, mechanism, evidence, corrections, and exact next obligations." \
+  --commit-msg "[instance-id]: [one-line git summary]"
 ```
 
-A worktree shares the one `.git` (so pushes/pulls work normally) but has a private
-working directory, so concurrent sessions can never clobber your uncommitted
-files. Reclaim space later (clean worktrees only) with:
+Otherwise: inspect status, stage explicit paths, commit, rebase/fetch, push the
+intended target, and verify `HEAD` is not ahead of it. If a push fails, keep the
+local commit and report the exact blocker. Never use a destructive reset to
+make a concurrent session look clean.
 
-```bash
-bash agents/cleanup_session_worktrees.sh
-```
-
-Suggested cron on the box: `*/30 * * * * cd ~/math && bash agents/cleanup_session_worktrees.sh`.
+See [`../agents/README.md`](../agents/README.md) for tool details and failure
+recovery. There is deliberately no global stateful Stop hook.

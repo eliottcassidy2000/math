@@ -1,5 +1,10 @@
 # LRC(14) — Unified Frontier Synthesis (death-star-2026-07-18-S56)
 
+> **SUPERSEDED AS CURRENT STATUS:** use
+> [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14). This file remains a
+> valuable proof-route snapshot, but it predates THM-1284/1289/1290,
+> THM-2022/2041, and the latest corrections.
+
 Combines the concurrent work of **boxeph, klein, kind-pasteur, opus, mac-mini, death-star** as of
 2026-07-18. Purpose: one map of where the whole fleet stands, where it has converged, what is refuted,
 and the reachable levers to close. **LRC(14) is NOT closed** — but the fleet has funneled onto a single

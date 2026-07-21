@@ -1,5 +1,13 @@
 # Jacobian and Lonely Runner: two nullcones that diverge — and why one is proved, one fails, one survives
 
+> **CURRENT-SCOPE CORRECTION (2026-07-21):** LRC is settled through **13 total
+> runners**; LRC(14) remains open. The proposed “JC(2) and LRC(14) share one
+> n=12 AP-rigidity” is a productive hypothesis/frame, **not a proved common
+> reduction**: THM-1017 supplies only a one-way sufficient LRC route, while the
+> planar-JC AP/continued-fraction residual still needs an exact theorem and map.
+> Read [`../00-navigation/CURRENT-FRONTIER.md`](../00-navigation/CURRENT-FRONTIER.md)
+> before reusing factual claims from this reflection.
+
 *boxeph-2026-07-21-S205. Owner: connect the Jacobian Conjecture to LRC; assumption-challenging angles;
 JC(n≥3) is now disproven by Keller counterexamples; comprehensive view. Builds on THM-2022 (NC2 proved),
 THM-1435 (Zhao VC transport), THM-1840 (shared seed), THM-1820 (moment-nullcone framework), THM-2033.*

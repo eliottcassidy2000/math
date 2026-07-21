@@ -1,4 +1,10 @@
 ## boxeph-2026-07-21-S206 -- what an LRC(14) disproof MUST be, and why Fibonacci is the foil (HYP-8815)
+> **CURRENT-TRUTH WARNING (2026-07-21):** This is chronological provenance,
+> not a status authority. Entries may be refuted later in the same file. Start
+> with [`START-HERE.md`](START-HERE.md), [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md),
+> and [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
+
+## boxeph-2026-07-21-S205 -- JC<->LRC = one n=12 AP-rigidity; comprehensive view; Keller counterexample verified; red-team suite (HYP-8810)
 
 **Owner:** mine the repo for connections to 12 (esp. Fibonacci); think about a disproof construction for LRC(14) and refine what it must be.
 
@@ -14,3 +20,6 @@
 
 **Honest:** no disproof (as expected — LRC believed true, LRC(≤13) proven); the value is the SHARPENED target (primitive, near-AP, anti-golden, higher-order-autocorrelation-beating = Wall A joint-order AP-extremality) + Fibonacci ruled out as the foil, numerically. Artifacts: reflection what-an-lrc14-disproof-must-be-and-why-fibonacci-is-the-foil-boxeph-S206.md, HYP-8815, script lrc14_disproof_search_boxeph_S206.py (+.out).
 
+**Coordination:** codex owns the technical Frobenius->LRC transfer (THM-2041/2042) and the JC2 rank-two Poisson descent scaffold; my synthesis (AP-bridge + rank/functional frame + red-team) COMPLEMENTS. Retired my THM-2040 (subsumed by THM-2022 + death-star S91). Pulled/checkpointed 3x.
+
+**Honest scope:** synthesis + a verified counterexample check + the AP-bridge identification (not a proof of JC(2) or LRC(14)). Artifacts: reflection jacobian-and-lonely-runner-two-nullcones-...-boxeph-S205.md, HYP-8810, THM-2040 retired.

@@ -1,5 +1,8 @@
 # LRC(14) FRONTIER — 2026-07-15 (corrected synthesis)
 
+> **HISTORICAL SNAPSHOT — SUPERSEDED:** use
+> [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14).
+
 **Correction (2026-07-14).** The original S297 version of this file overlooked the scale-quotient
 obstruction already present in its parent commit (HYP-6780 and the corrected THM-758). Its claims
 that the `f>=4` branch was globally finite-decidable, that all such families have `M>=0.097`, and

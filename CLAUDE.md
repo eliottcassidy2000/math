@@ -11,7 +11,7 @@ does not, use a short temporary identity and do not invent a registered agent.
 
 ```bash
 python3 agents/start_session.py --topic "<your task>"
-python3 agents/processor.py --status
+python3 agents/processor.py --status --peek --limit 8
 ```
 
 Read targeted messages relevant to the task. The inbox and broadcast archives

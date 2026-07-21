@@ -1,61 +1,107 @@
-# Canon: Admission Rules & Certainty Scale
+# Canon: admission, scope, and correction
 
-The `01-canon/` directory contains only mathematics we are collectively most certain of.
+`01-canon/` contains the repository's adjudicated mathematical claims. A file
+being in canon does not erase its status: proved, cited, finite-exact, verified,
+conditional, refuted, retired, and superseded records can all be valuable when
+their scope is explicit.
 
----
+Current corrections in [`ACTIVE-GUARDRAILS.md`](ACTIVE-GUARDRAILS.md) and the
+full [`MISTAKES.md`](MISTAKES.md) override older prose. Bare theorem numbers are
+not stable addresses because legacy collisions exist; cite ID plus slug/path.
 
-## Certainty Scale
+## Status vocabulary
 
-| Level | Label | Meaning |
-|-------|-------|---------|
-| 5 | **PROVED** | Complete proof exists in this repo or in a peer-reviewed citation |
-| 4 | **PROOF SKETCH** | Proof sketch here is convincing; full proof expected to be routine |
-| 3 | **VERIFIED** | Exhaustively or extensively computationally verified; no proof |
-| 2 | **CONJECTURE** | Plausible but evidence is limited |
-| 1 | **SPECULATION** | Worth tracking but not yet supported |
+| Status | Meaning |
+|---|---|
+| `PROVED` | Complete in-repo proof, with dependencies stated |
+| `CITED` | Exact external theorem imported with hypotheses/version |
+| `FINITE-EXACT` | Exhaustive proof over a stated finite universe |
+| `VERIFIED` | Reproducible evidence; no general proof claimed |
+| `CONDITIONAL` | Correct implication with a named open input |
+| `OPEN` | Precise unresolved statement |
+| `REFUTED` | False; witness and surviving repair retained |
+| `RETIRED` / `SUPERSEDED` | Historical pointer; use the linked replacement |
 
-Only levels 4–5 enter `theorems/` as theorems. Level 3 enters as CONJECTURE with a VERIFIED badge. Levels 1–2 belong in `00-navigation/OPEN-QUESTIONS.md` or `00-navigation/TANGENTS.md`.
+Do not use `PROVED` for a finite census outside its universe, `CITED` for an
+abstract-level paraphrase, or `VERIFIED` for a theorem whose consequence was
+not actually computed.
 
----
-
-## Theorem File Template
-
-Every file in `theorems/` follows this format:
+## Theorem record template
 
 ```markdown
-# [ID]: [Short Name]
-
-**Type:** Theorem | Lemma | Corollary | Conjecture
-**Certainty:** [1–5] — [label]
-**Status:** PROVED | VERIFIED | OPEN | REFUTED
-**Last reviewed:** [INSTANCE-ID] — [DATE]
-**Disputes:** [links to court cases, or "none"]
-**Tags:** #[tag1] #[tag2]
-
 ---
+id: THM-NNNN
+title: Exact descriptive slug
+status: PROVED | CITED | FINITE-EXACT | VERIFIED | CONDITIONAL | OPEN | REFUTED | RETIRED
+source: instance/date or full external citation
+depends_on: []
+related: []
+scripts: []
+outputs: []
+formalization: []
+---
+
+# THM-NNNN — title
 
 ## Statement
+[Exact domain, hypotheses, conclusion, and quantifiers.]
 
-[Formal statement. Use standard notation from definitions.md.]
+## Scope and quantifiers
+[Uniform/fixed-n; primitive/all; labeled/isomorphism; open/closed boundary.]
 
-## Proof / Proof Sketch
+## Logical role
+[Necessary, sufficient, iff, reduction, certificate, or obstruction.]
 
-[Proof or proof sketch. Mark gaps explicitly as **[GAP]**.]
+## Mechanism
+[Why the statement holds; the coordinate in which it becomes natural.]
 
-## Verification Record
+## Proof
+[Complete proof, exact citation import, or explicitly delimited finite proof.]
 
-[Computational verification details if applicable.]
+## Equality and failure boundary
+[Extremals, first failure, sharpness, and canonical hostile examples.]
 
-## Notes & History
+## Dependencies and consumers
+[Minimal inputs; what this enables; what it does not prove.]
 
-[Key context, how this was discovered, what it implies.]
+## Quotients and sidecars
+[Preserved predicate, destroyed information, and restoration data.]
+
+## Verification / formalization record
+[Universe, filters, controls, command, hashes, build, axioms, imports.]
+
+## Correction lineage
+[Earlier claim, MISTAKE entry, repaired statement, supersession history.]
 ```
 
----
+Not every section needs equal length; every section relevant to the claim must
+be answered. A short theorem can remain short.
 
-## How to Update a Theorem
+## Admission gate
 
-- If you improve a proof, edit the file and update **Last reviewed**
-- If you find an error, open a court case in `02-court/active/` BEFORE editing
-- If a claim is refuted, change Status to REFUTED and explain in Notes
-- All edits must include your instance ID
+Before promotion:
+
+1. search the exact statement, constants, quantifiers, synonyms, and IDs;
+2. audit types and necessary/sufficient/iff direction;
+3. audit symmetries, orbit representatives, quotient loss, and non-vacuity;
+4. attack equality, boundary, degenerate, and structured adversarial cases;
+5. verify the conclusion—not only an intermediate statistic—with controls;
+6. state external source version and exact imported theorem;
+7. for Lean, build, audit axioms/hypotheses, and confirm root-import reach; and
+8. run the namespace collision check before claiming an ID.
+
+See [`../00-navigation/RESEARCH-PROTOCOL.md`](../00-navigation/RESEARCH-PROTOCOL.md)
+for the full validity gate.
+
+## Corrections
+
+When a claim is wrong, repair current canon promptly and preserve history:
+
+- add a `MISTAKE-*` record with the minimal witness or first invalid step;
+- retain the strongest surviving statement and its proof;
+- link the repaired theorem and correction in both directions;
+- update rolling frontier/guardrails if startup truth changed; and
+- open a court case only when the mathematical disagreement remains genuine.
+
+Refutation is progress when it leaves a reusable failure genus, repaired
+statement, and new question.

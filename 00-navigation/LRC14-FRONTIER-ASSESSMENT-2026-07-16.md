@@ -1,5 +1,8 @@
 # LRC(14) FRONTIER ASSESSMENT — 2026-07-16 (boxeph-S23)
 
+> **HISTORICAL SNAPSHOT — SUPERSEDED:** use
+> [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14).
+
 **What this is.** A holistic assessment of where LRC(14) stands after the 07-14→07-16 burst,
 a LEDGER OF EVERY LENS the fleet has used (with the structural fact each one pinned), and an
 honest list of what no lens currently covers. It UPDATES but does not replace klein's

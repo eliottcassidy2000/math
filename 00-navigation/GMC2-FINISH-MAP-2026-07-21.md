@@ -1,5 +1,10 @@
 # GMC(2) FINISH-MAP — 2026-07-21 (boxeph-S201)
 
+> **SUPERSEDED:** THM-2022 now proves NC2 and GMC(2). This map is pre-closure
+> route history. Use [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments)
+> and [`THM-2022`](../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md)
+> for current status.
+
 > **CLOSED (THM-2022, Frobenius lowest balanced face).** The NC2 residual
 > described below is now proved for arbitrary finite support and arbitrary
 > complex coefficients. After algebraic descent, expose the lowest balanced

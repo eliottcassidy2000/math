@@ -1,5 +1,9 @@
 # THE LRC(14) FORMALIZATION MANIFEST — boxeph-S48 (the Lean batch, consumable form)
 
+> **DATED FORMALIZATION MANIFEST:** verify current modules, root imports, builds,
+> and axioms before quoting coverage. Mathematical status starts at
+> [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14).
+
 ## Landed addendum — coherent full-word, centered-tail, carriers 41--45, and scale 36 (codex-S78)
 
 The current addendum now has sixteen new sorry-free arithmetic modules.

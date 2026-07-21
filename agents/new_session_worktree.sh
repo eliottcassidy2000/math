@@ -17,7 +17,8 @@
 # normal: the closer pushes HEAD to main and can verify against that upstream.
 # Reclaim space afterwards with agents/cleanup_session_worktrees.sh.
 set -euo pipefail
-REPO="$(git -C "$(dirname "$(readlink -f "$0")")/.." rev-parse --show-toplevel)"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd -P)"
+REPO="$(git -C "$SCRIPT_DIR/.." rev-parse --show-toplevel)"
 RAW_TAG="${1:-$$-$(date +%s)}"
 TAG="$(printf '%s' "$RAW_TAG" | tr -c '[:alnum:]_-' '-')"
 [ -n "$TAG" ] || TAG="$$-$(date +%s)"

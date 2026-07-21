@@ -1,4 +1,7 @@
 # THE PROBLEM LEDGER — what we have actually proven, and where assumption-challenging progress is next
+
+> **SUPERSEDED DRAFT:** the rolling ledger is [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md),
+> with current headline status in [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md).
 (klein-2026-07-20-S332; owner directive: catalog novel non-obvious results per problem,
 expand the list from under-the-radar repo threads, and set priorities for future sessions.)
 

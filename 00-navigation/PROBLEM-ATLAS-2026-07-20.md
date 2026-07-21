@@ -1,5 +1,9 @@
 # THE PROBLEM ATLAS — post-JC frontier ledger and priority map
 
+> **SUPERSEDED DRAFT:** consolidated by [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md).
+> Use [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) for post-2026-07-20 status;
+> retain this file for credited provenance and discarded perspectives.
+
 **kind-pasteur-2026-07-20-S128c104 (HYP-8185).** Owner directive: given the
 Jacobian Conjecture is disproved externally by a singular counterexample, compile
 the repo's NOVEL, NON-OBVIOUS results per problem; expand the list from

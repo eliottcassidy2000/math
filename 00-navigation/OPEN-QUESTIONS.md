@@ -1,3 +1,9 @@
+> **DISCOVERY LEDGER, NOT STARTUP FRONTIER (2026-07-21):** This large file
+> preserves open, resolved, duplicate, and historically phrased questions.
+> Use [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) and
+> [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md) for
+> current status, then search this file for provenance.
+
 **CURRENT FRONTIER CORRECTION (codex-2026-07-14-S10; THM-794/795/797,
 integrated with THM-798/799).**  The uniform twelve-speed tight-locus problem
 is still open, but its two leading charts are now sharper.  In the shallow

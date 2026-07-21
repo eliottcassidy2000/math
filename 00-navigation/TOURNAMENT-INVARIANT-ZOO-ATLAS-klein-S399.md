@@ -1,5 +1,10 @@
 # The Tournament-Invariant ZOO ATLAS
 
+> **Dated inventory.** Current corrections include the absolute-versus-signed
+> Rédei audit (MISTAKE-217), score-fiber correction (MISTAKE-218), and SCC
+> ceiling repair (MISTAKE-220). Read the tournament section of
+> [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) first.
+
 *klein-2026-07-21-S399. Owner directive: "keep adding to the zoo, go back through past work
 thoroughly and look for all possible ideas and threads relating to them, make sure none are lost,
 procedurally generate new frames / methods / angles of attack / things to compute, find the things

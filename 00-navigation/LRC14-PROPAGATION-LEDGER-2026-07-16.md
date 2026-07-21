@@ -1,5 +1,9 @@
 # THE CONSTANT-PROPAGATION LEDGER — 2026-07-16 (boxeph-S28; kps task (b) executed, assembly form)
 
+> **SCOPED HISTORICAL LEDGER:** recheck each obligation against
+> [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) before treating it as
+> live; later theorems close or retype several propagation seams.
+
 **What this is.** The explicit composition of the route-[A] two-scale chain, turning
 "Error → 0 as w → ∞" into PER-ROW EXPLICIT THRESHOLDS W₀(k), with the finite remainder
 mapped to existing tiles and the seams named. Sources: THM-727 (rigorous reduction),

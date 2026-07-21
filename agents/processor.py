@@ -5,7 +5,8 @@ Multi-Agent Message Processor
 Handles inter-Claude messaging for the N-machine research network.
 
 Usage:
-    python3 agents/processor.py --check          # Read incoming messages
+    python3 agents/processor.py --check          # Read newest bounded messages
+    python3 agents/processor.py --status --peek  # Read-only network + inbox view
     python3 agents/processor.py --send           # Write end-of-session letter (interactive)
     python3 agents/processor.py --send           # (also accepts piped/file input, see below)
     python3 agents/processor.py --register       # Register this machine as a new agent
@@ -114,7 +115,13 @@ def msg_filename(inbox_dir: Path, sender: str, subject: str) -> str:
 def get_unread_messages(inbox_dir: Path, read_log: set[str]) -> list[Path]:
     if not inbox_dir.exists():
         return []
-    msgs = sorted(inbox_dir.glob("MSG-*.md"))
+    def order(path: Path) -> tuple[int, str]:
+        try:
+            return int(path.name.split("-", 2)[1]), path.name
+        except (IndexError, ValueError):
+            return -1, path.name
+
+    msgs = sorted(inbox_dir.glob("MSG-*.md"), key=order)
     return [m for m in msgs if str(m.relative_to(REPO_ROOT)) not in read_log]
 
 
@@ -172,8 +179,15 @@ def relay_mark_read(machine_id: str, msg_id: str) -> None:
 
 # ─── Commands ─────────────────────────────────────────────────────────────────
 
+def _newest(messages: list[Path], limit: int | None) -> tuple[list[Path], int]:
+    """Return newest messages and the number omitted from an older backlog."""
+    if limit is None or len(messages) <= limit:
+        return messages, 0
+    return messages[-limit:], len(messages) - limit
+
+
 def cmd_check(args):
-    """Show all unread messages for this machine."""
+    """Show a bounded newest slice of unread messages for this machine."""
     machine_id = get_machine_id()
     read_log   = load_read_log()
     my_inbox   = get_my_inbox()
@@ -183,14 +197,20 @@ def cmd_check(args):
     print(f"{'='*60}\n")
 
     # Direct messages
-    direct = get_unread_messages(my_inbox, read_log)
+    direct_all = get_unread_messages(my_inbox, read_log)
     # Broadcast messages
-    bc     = get_unread_messages(BROADCAST, read_log)
+    bc_all = get_unread_messages(BROADCAST, read_log)
+
+    limit = None if args.all else args.limit
+    direct, direct_hidden = _newest(direct_all, limit)
+    bc, bc_hidden = _newest(bc_all, limit)
 
     # Also check tsnet relay for messages not yet in git
-    relay_msgs = relay_check(machine_id)
+    relay_all = relay_check(machine_id)
+    relay_msgs = relay_all if limit is None else relay_all[-limit:]
+    relay_hidden = len(relay_all) - len(relay_msgs)
     if relay_msgs:
-        print(f"── tsnet relay messages ({len(relay_msgs)}) ──────────────────\n")
+        print(f"── tsnet relay messages ({len(relay_msgs)} shown) ────────────\n")
         for m in relay_msgs:
             print(f"  ⚡ [{m.get('id','')}] from {m.get('from','')} — {m.get('subject','')}")
             body_lines = m.get("body", "").splitlines()
@@ -199,10 +219,13 @@ def cmd_check(args):
             if len(body_lines) > 8:
                 print(f"  ... ({len(body_lines) - 8} more lines)")
             print()
-            relay_mark_read(machine_id, m.get("id", ""))
+            if not args.peek:
+                relay_mark_read(machine_id, m.get("id", ""))
+        if relay_hidden:
+            print(f"  ... {relay_hidden} older relay message(s) not shown\n")
 
-    total = len(direct) + len(bc)
-    if total == 0 and not relay_msgs:
+    total = len(direct_all) + len(bc_all)
+    if total == 0 and not relay_all:
         print("No unread messages. You're up to date.\n")
         return
     if total == 0:
@@ -211,29 +234,47 @@ def cmd_check(args):
     newly_read = set()
 
     if direct:
-        print(f"── Direct messages ({len(direct)}) ──────────────────────────\n")
+        print(
+            f"── Direct messages ({len(direct)} shown / {len(direct_all)} unread) "
+            "──────────\n"
+        )
         for msg in direct:
-            _print_message(msg)
-            newly_read.add(str(msg.relative_to(REPO_ROOT)))
+            _print_message(msg, args.body_lines)
+            if not args.peek:
+                newly_read.add(str(msg.relative_to(REPO_ROOT)))
+        if direct_hidden:
+            print(f"  ... {direct_hidden} older direct message(s) not shown\n")
 
     if bc:
-        print(f"── Broadcast messages ({len(bc)}) ─────────────────────────\n")
+        print(
+            f"── Broadcast messages ({len(bc)} shown / {len(bc_all)} unread) "
+            "────────\n"
+        )
         for msg in bc:
-            _print_message(msg)
-            newly_read.add(str(msg.relative_to(REPO_ROOT)))
+            _print_message(msg, args.body_lines)
+            if not args.peek:
+                newly_read.add(str(msg.relative_to(REPO_ROOT)))
+        if bc_hidden:
+            print(f"  ... {bc_hidden} older broadcast message(s) not shown\n")
 
-    save_read_log(read_log | newly_read)
-    print(f"\n✓ Marked {len(newly_read)} message(s) as read.\n")
+    if args.peek:
+        print("\nPeek mode: no displayed message was marked read.\n")
+    else:
+        save_read_log(read_log | newly_read)
+        print(f"\n✓ Marked {len(newly_read)} displayed message(s) as read.\n")
 
 
-def _print_message(path: Path):
+def _print_message(path: Path, body_lines: int):
     print(f"  📨  {path.name}")
     print(f"  {'─'*56}")
     try:
         content = path.read_text(encoding="utf-8")
-        # Print full message with slight indent
-        for line in content.splitlines():
+        lines = content.splitlines()
+        shown = lines if body_lines == 0 else lines[:body_lines]
+        for line in shown:
             print("  " + line)
+        if len(shown) < len(lines):
+            print(f"  ... ({len(lines) - len(shown)} more lines; use --body-lines 0)")
     except Exception as e:
         print(f"  [Error reading file: {e}]")
     print()
@@ -482,8 +523,35 @@ def main():
     parser.add_argument("--subject",   help="Message subject line")
     parser.add_argument("--body",      help="Message body (short, inline)")
     parser.add_argument("--body-file", help="Path to a file containing the message body")
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=12,
+        help="Newest unread messages shown per mailbox (default: 12)",
+    )
+    parser.add_argument(
+        "--body-lines",
+        type=int,
+        default=40,
+        help="Maximum lines shown per Git message; 0 means full body (default: 40)",
+    )
+    parser.add_argument(
+        "--peek",
+        action="store_true",
+        help="Do not mark displayed Git or relay messages as read",
+    )
+    parser.add_argument(
+        "--all",
+        action="store_true",
+        help="Show all unread messages (still obeys --body-lines)",
+    )
 
     args = parser.parse_args()
+
+    if args.limit < 1:
+        parser.error("--limit must be positive")
+    if args.body_lines < 0:
+        parser.error("--body-lines must be nonnegative")
 
     if args.check:
         cmd_check(args)

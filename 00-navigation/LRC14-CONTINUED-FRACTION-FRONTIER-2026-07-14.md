@@ -1,5 +1,8 @@
 # LRC(14) continued-fraction frontier — what the old threads actually preserve
 
+> **SCOPED SNAPSHOT:** THM-1291 and later corrections now govern the active-leg
+> law. Read [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) first.
+
 This is a historical and forward-looking map after THM-778.  Continued
 fractions have repeatedly found real structure in the LRC workspace, but the
 phrase “use continued fractions” has referred to several mathematically

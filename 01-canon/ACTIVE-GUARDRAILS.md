@@ -55,9 +55,9 @@ mistake.
 15. **Vandermonde nodes are not tournament scores.** MISTAKE-214. Repeated node
     values do not imply regular or Paley score structure, so “NC2 wall = Paley
     wall = LRC wall” is not a literal identity.
-16. **No global de-factorialization.** MISTAKE-215 and THM-2040. Only the exact
-    symmetric monomial wall has a common factorial; the general THM-2022
-    mechanism is prime-local initial-form normalization.
+16. **No global de-factorialization.** MISTAKE-215; THM-2040 is now a retired
+    pointer. Only the exact symmetric monomial wall has a common factorial; the
+    general THM-2022 mechanism is prime-local initial-form normalization.
 17. **THM-2033 is special-matrix scope.** Its determinant/Vandermonde identity
     does not replace the general scalar Wick moment.
 18. **NC2/GMC(2) is proved, not fully formalized.** Do not relabel it open; do
@@ -65,29 +65,35 @@ mistake.
 
 ## Tournaments
 
-19. **SCC additivity is a sum, not a largest-component bound.** MISTAKE-217
+19. **SCC additivity is a sum, not a largest-component bound.** MISTAKE-220
     repairs the earlier claim: local SCC contributions can accumulate.
-20. **The invariant lattice is exact only through `n <= 6`.** THM-1966 gives an
+20. **Signed Rédei data is not its absolute invariant magnitude.** MISTAKE-217
+    repairs hot-shell computations whose labels silently dropped the sign
+    gauge. State whether the coordinate is signed, absolute, or label-dependent.
+21. **The invariant lattice is exact only through `n <= 6`.** THM-1966 gives an
     independent signed Rédei coordinate at `n=7`; finite exactness is not a
     universal completeness theorem.
-21. **`H >= disc` remains open globally.** THM-1950 reduces to strongly
+22. **`H >= disc` remains open globally.** THM-1950 reduces to strongly
     connected tournaments and verifies finite cases only.
-22. **Do not manufacture tournaments from ties.** State the intrinsic binary
+23. **Do not manufacture tournaments from ties.** State the intrinsic binary
     relation, gauge, tie semantics, preserved target, and loss. If these do not
     exist, use a preorder, signed graph, hypergraph, packet, or another object.
-23. **Paley scope is prime and quadratic-residue specific.** THM-640 does not
+24. **Paley scope is prime and quadratic-residue specific.** THM-640 does not
     turn composite modulus 14 into a literal Paley tournament.
 
 ## Integer sequences and provenance
 
-24. **Support is not an indexed multiset.** MISTAKE-209 and THM-2000/2005.
+25. **Support is not an indexed multiset.** MISTAKE-209 and THM-2000/2005.
     Repetitions contribute a collision tax; never compare reciprocal constants
     without saying which profile is used.
-25. **Density zero does not imply reciprocal convergence.** The actual boundary
+26. **Density zero does not imply reciprocal convergence.** The actual boundary
     is Abel–Dini/Bertrand and continues through iterated logarithms.
-26. **No OEIS match is not novelty.** THM-2010 has only short initial data and a
+27. **Finite prefixes and proxy supports are not all-`n` laws.** MISTAKE-219
+    repairs offsets, truncated constants, and support substitutions in the
+    reciprocal atlas. Freeze the actual support and quantify the tail.
+28. **No OEIS match is not novelty.** THM-2010 has only short initial data and a
     search result; do not promote it to a proof that a sequence is new.
-27. **Separate verification from provenance.** MISTAKE-205 withdraws the old
+29. **Separate verification from provenance.** MISTAKE-205 withdraws the old
     Alpöge–Mathew attribution for THM-1300. State the exactly verified map and
     collision independently of uncertain discovery/publication history.
 

@@ -1,32 +1,75 @@
-# 05-knowledge: Persistent Knowledge Web
+# Persistent knowledge and reproducible evidence
 
-This directory preserves ALL computational results, tested hypotheses, and variable relationships permanently. Nothing discovered should ever be lost.
+`05-knowledge/` stores the research graph below canon: hypotheses, raw results,
+variable dictionaries, and external reference maps. The goal is cumulative
+understanding, not indiscriminate accumulation.
 
 ## Structure
 
-### `variables/`
-Variable registry. Each file documents one mathematical quantity:
-- What equations it appears in
-- Values at each n (with source script)
-- Known relationships to other variables
-- Cross-links to hypotheses and theorems
+- `hypotheses/` — every precise tested claim, positive or negative. Use
+  `hypotheses/INDEX.md` for search; a detail file should contain the current
+  statement, evidence, status, and repair lineage.
+- `results/` — frozen outputs paired with their generating scripts. The index
+  records which conclusion each output supports.
+- `variables/` — definitions, domains, equations, known values, transformations,
+  and cross-links for recurring quantities.
+- `reference/` — exact literature imports. Start with
+  [`reference/CORE-PAPERS.md`](reference/CORE-PAPERS.md).
 
-**Index:** `variables/INDEX.md` — alphabetical lookup with one-line descriptions.
+The indexes are discovery surfaces, not automatically current truth. Resolve a
+claim through current canon and corrections before relying on it.
 
-### `hypotheses/`
-Every hypothesis ever tested, whether confirmed, refuted, or open.
-Each file includes: statement, test method, outcome, and crucially WHY it succeeded/failed.
+## Hypothesis record
 
-**Index:** `hypotheses/INDEX.md` — searchable by topic, status, and related variables.
+A hypothesis should state:
 
-### `results/`
-Raw computational outputs from scripts. Every script in `04-computation/` should have a corresponding results file here with the actual output.
+```text
+claim and exact quantifiers
+status and last test
+why it was plausible
+universe / assumptions / inherited filters
+positive and hostile controls
+result and reproduction command
+if true: mechanism, boundary, dependencies, generalization
+if false: minimal witness, first failed implication, surviving core,
+          repaired statement, failure genus, new next question
+consumers and related concepts
+```
 
-**Index:** `results/INDEX.md` — maps script names to result files.
+“No examples found” is evidence only over the named universe. “No OEIS match”
+is a search result, not a novelty theorem.
 
-## Conventions
+## Computational result header
 
-1. **Never discard a result.** Even negative results ("X is NOT true") are valuable.
-2. **Always link.** Every entry should cross-reference related variables, hypotheses, theorems, and scripts.
-3. **Record the HOW.** When a hypothesis fails, document what specific pattern breaks it and at what n.
-4. **Use tags.** Every entry has searchable tags for grep-based discovery.
+Every load-bearing output/index entry should make these fields recoverable:
+
+```text
+claim tested
+exact universe and representation
+filters and why each is sound
+positive controls / rediscovery gates
+adversarial controls
+consequence printed
+source script and matching output
+reproduction command and environment
+source/output hashes
+independent path or optimized/unoptimized replay
+```
+
+An input model must not print its own assumption and call it validation. A
+negative result inherits every filter. If pruning is used, include a future-
+witness/multiple audit and a less-pruned cross-check for the load-bearing path.
+
+## Preserve distinctions
+
+Do not collapse:
+
+- indexed sequences into support sets without a collision tax;
+- scalar equations into coefficientwise identities;
+- labeled outputs into isomorphism invariants;
+- signed coordinates into absolute magnitudes;
+- samples into exhaustive universes; or
+- a standalone Lean build into root-imported formal coverage.
+
+Results are never discarded, but stale or unsound results receive a prominent
+correction pointer so future searches cannot mistake them for live evidence.

@@ -1,5 +1,9 @@
 # LRC(14) Frontier and Research-Avenue Atlas — 2026-07-14
 
+> **HISTORICAL SNAPSHOT — SUPERSEDED:** use
+> [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14). Retain this file for
+> avenue provenance, not present status.
+
 **Status:** current frontier audit, historical synthesis, and pull-card backlog.
 **Owner:** codex-2026-07-14-S2.
 **New mathematics in the original session:** THM-760 and HYP-6785.

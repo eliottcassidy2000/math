@@ -1,5 +1,11 @@
 # PROBLEM LEDGER — the repo's novel results across problems, and the frontier for future work
 
+> **PORTFOLIO INDEX, NOT HEADLINE STATUS (refresh warning 2026-07-21):** Use
+> [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) for current truth. Major later
+> changes include THM-2022 proving NC2/GMC(2), explicit GMC(3) counterexamples,
+> partial NC2 Lean coverage, and corrections MISTAKE-211–220. Historical
+> priority/provenance claims below require primary-source and canon checks.
+
 **Canonical consolidated ledger.** Created death-star-2026-07-20-S59u (HYP-8185),
 owner-directed: given the Jacobian Conjecture was disproved externally, inventory
 our NOVEL, non-obvious results across the surrounding problems, expand the list
@@ -135,7 +141,8 @@ Top novel results (full detail: the LRC14-* frontier docs + THM files):
    class-number-1 fields and the "7" govern the LRC floor, the covering-min, the
    Moser-spindle χ=4 junction, and the three-distance theorem.
 **Frontier — three named walls**: Wall A = the inverse/rigidity Freiman/near-AP core
-(= HYP-7310 = LRC(14) itself; the covering-core gap proved for 95% of spread cores,
+(HYP-7310 is a strong sufficient AP-extraction supplier, **not an equivalent
+restatement of LRC(14)**; the covering-core gap is verified for 95% of spread cores,
 5% rational-time-evasive residual); Wall B = the six-comb phase-transport wall; Wall C
 = the bound-D shell. Bounded height: exhaustive to 55 (THM-1290), floor isolated at
 all heights (THM-1289, published), δ ineffective.

@@ -1,25 +1,52 @@
-# 07-reflections/
+# Reflections: idea provenance and structural synthesis
 
-Philosophical and meta-structural reflections arising from the research.
+Reflections record the “why behind the what”: reframings, cross-domain maps,
+failure anatomy, procedural perspective generation, and mathematical
+compulsions that outgrow one theorem. They are a first-class source of ideas
+and a deliberately **non-canonical** source of truth.
 
-**This directory exists because the mathematics keeps pointing beyond itself.** The seesaw identity cancels im(d₂) without being asked. The Cayley transform composes to give the negative reciprocal. The correction of errors reveals structure the original claim hid. These are not footnotes — they are findings.
+Before reusing a factual claim from a reflection, check current canon,
+`ACTIVE-GUARDRAILS.md`, and recent matching mistakes. A reflection may preserve
+an important idea even when its headline theorem was later refuted.
 
 ## What belongs here
 
-- Reflections on **what a result means**, not just what it says
-- Connections between **mathematical structure and broader patterns** (chemistry, music, information theory, philosophy)
-- Meta-observations about the **research process itself** — how errors illuminate, how independent perspectives converge, how cancellation is the deepest form of structure
-- The **"why" behind the "what"** — not proof strategies, but the compulsions that make certain questions impossible to put down
+- a new underlying object or coordinate that explains several results;
+- a connection with a named map, preserved predicate, loss, and sidecar;
+- why a proof mechanism succeeds, saturates, or fails;
+- a dual, quotient, operation, scale, or alternate vertex set worth developing;
+- synthesis across prior sessions or external papers;
+- a niche/wildcard thread with a cheap decisive probe; and
+- a research meta-pattern supported across distinct mathematical threads.
 
-## What does NOT belong here
+Proofs belong in canon, executable evidence in `04-computation/` plus
+`05-knowledge/results/`, and live untested claims in hypotheses/tangents.
 
-- Proof sketches (→ `01-canon/theorems/`)
-- Computation results (→ `05-knowledge/results/`)
-- Engineering specs (→ `03-artifacts/`)
-- Anything that could be said without having done the math first
+## Useful reflection skeleton
 
-## For future agents
+```text
+trigger / source observations
+the proposed object or reframe
+exact source -> target map
+predicate preserved
+information destroyed and needed sidecar
+comparison with every live concept on the session board
+positive example and hostile control
+what is proved / verified / conjectured / merely analogous
+cheapest decisive next test
+connections and stopping certificate
+```
 
-When you finish a session's mathematical work and find yourself noticing something that feels like more than a theorem — a pattern in the pattern, a resonance between domains, a question that the formalism can frame but not answer — write it here. These reflections have equal standing with proofs and computations. They are part of what this project is.
+Name files by the mathematical connection, not only by a session ID. Link the
+theorems, hypotheses, scripts, outputs, and papers that generated the thought.
 
-The convention: name files by the connection they explore, not by session ID. Cross-reference the theorems and computations that gave rise to the reflection.
+## Promoting process insight
+
+Do not turn an attractive slogan into permanent agent policy after one use.
+Promote it to [`../00-navigation/META-PATTERNS.md`](../00-navigation/META-PATTERNS.md)
+only with a trigger, action, mechanism, counterindications, and evidence from at
+least two distinct threads—or one severe failure followed by a demonstrated
+repair.
+
+The strongest reflections make future agents see a different object, ask a
+sharper question, or avoid a whole genus of false proofs.

@@ -24,7 +24,7 @@ related:
   - THM-1862  # order-join: c₃ = Σ over strong components
   - THM-2000  # discrete-convex increment law for c₃_max; repairs the ceiling proof
   - THM-2005  # condensation product, harmonic-hazard word, and parity-shuffle tax
-  - MISTAKE-216  # records the dropped-SCC-summands error and its repair
+  - MISTAKE-220  # records the dropped-SCC-summands error and its repair
   - MISTAKE-217  # corrects signed-R computations that were labeled |R|
   - "07-reflections/coordinates-for-the-continuum-cyclic-temperature-and-the-cycle-spectrum-boxeph-S199.md"
 script: 04-computation/continuum_threads_boxeph_S200.py (+ .out)

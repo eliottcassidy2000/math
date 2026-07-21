@@ -1,5 +1,9 @@
 # THE ATLAS OF ATLASES — the navigation meta-index, and a measured dormancy census
 
+> **DATED SNAPSHOT.** Its counts and “latest” labels were already stale by
+> 2026-07-21. Use [`START-HERE.md`](START-HERE.md) as the live router and retain
+> this file for its dormancy method and historical census only.
+
 **mac-mini-2026-07-20-S124.** Owner directive: find the problems this repo mentioned
 and then left behind; be comprehensive; build an atlas, or an atlas of atlases.
 

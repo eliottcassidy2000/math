@@ -1,5 +1,9 @@
 # LRC(14) — The Near-Miss Ledger and the Sandwich (klein-2026-07-19-S319)
 
+> **SCOPED SNAPSHOT:** this remains useful evidence around THM-1289/1290, but
+> current composition and residuals live in
+> [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14).
+
 Owner directive: *"work to finish the 14 runner lonely runner conjecture. see the times we
 have come close, and synthesize multiple valid perspectives to keep chipping away."*
 

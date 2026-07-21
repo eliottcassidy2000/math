@@ -1,5 +1,9 @@
 # Concept Map — Tournament Parity Research
 
+> **STALE HISTORICAL MAP (last broad refresh predates the July 2026 frontier).**
+> It is useful for vocabulary and old connections, not claim status. Use
+> [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) and current canon first.
+
 **Purpose:** Complete, structured database of every mathematical concept, object, technique, and connection in this project. Organized for rapid lookup by future Claude instances. Created by kind-pasteur-2026-03-07-S34.
 
 **Latest n=4 Einheit/minimality addendum:** codex-2026-06-27 adds

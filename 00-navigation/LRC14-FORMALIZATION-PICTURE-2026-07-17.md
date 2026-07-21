@@ -1,5 +1,9 @@
 # THE LRC(14) FORMALIZATION PICTURE — the cohesive map (death-star-2026-07-17-S43)
 
+> **DATED FORMALIZATION PICTURE:** useful as an architecture map, not a current
+> build manifest or proof-status authority. Start with
+> [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14).
+
 One page. Every node's status; every arc's target. Update in place as pieces land.
 (Statuses: **LEAN** = kernel-pure in TournamentH7; **paper** = proved on paper /
 exact-computationally, Lean pending; **open** = genuinely open mathematics.)

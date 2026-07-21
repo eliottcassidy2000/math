@@ -121,6 +121,14 @@ structural supplier/seed and a lossless exit.
    characteristic-7 parity-Hasse jets; conductor plus owner-current glue. Raw
    Ramanujan energy is diagnostic only.
 
+The newest characteristic-7 reservation,
+[THM-2043](../01-canon/theorems/THM-2043-period14-parity-hasse-jet-completeness.md),
+is **IN PROGRESS**. Its current algebra says the full parity-Hasse packet is
+complete as mod-14 phase data, while an AP/`12 -> 26` collision shows that raw
+unlabelled phase jets remain magnitude-blind. Any useful exit therefore needs
+an endpoint/owner label or another sidecar: completeness of the quotient is
+not completeness for loneliness.
+
 ### Fresh perspective prompts
 
 Do not default to runners or arcs as vertices. Test gaps, fixed sections,
@@ -139,9 +147,12 @@ name the LRC predicate it preserves and the coordinate a sidecar must restore.
 - **REFUTED for higher dimensions:** explicit GMC(3) counterexamples now exist;
   GMC is false for every dimension at least 3. See the current external preprint
   entry in [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md).
-- **FORMALIZATION PARTIAL:** key reductions and recurrence components are
-  kernel-checked, but the algebraic descent, DvdK import, finite-place choice,
-  and full face-amplification chain are not all formalized.
+- **FORMALIZATION PARTIAL:** `GMC2Reduction.lean` now formalizes both strict
+  charge branches of the NC2-to-GMC(2) reduction, and
+  `GMC2FrobeniusFace.lean` formalizes common face height, the strict off-face
+  integer gap, and collision-free charge projection. The algebraic descent,
+  DvdK import, finite-place choice, Kummer/Lucas layer, and full
+  face-amplification chain are not all formalized.
 
 ### Why THM-2022 works
 
@@ -156,9 +167,10 @@ separation.
 ### Boundaries and repaired bridges
 
 - [THM-2040](../01-canon/theorems/THM-2040-the-de-factorialization-principle.md)
-  proves exact de-factorialization only on the symmetric monomial wall. The
-  general principle is prime-local initial form, not a global common-factorial
-  or Vandermonde factorization.
+  is now a retired pointer to THM-2022/2033, not an independent theorem. The
+  exact symmetric-wall calculation survives in the historical proof record;
+  the general principle is prime-local initial form, not a global
+  common-factorial or Vandermonde factorization.
 - [THM-2033](../01-canon/theorems/THM-2033-the-nc2-wall-is-the-confluent-transitivity-vandermonde.md)
   is a valid determinant/Vandermonde identity for a special moment matrix, not
   for the general scalar moment.
@@ -290,6 +302,14 @@ The most reusable current bridges are not literal object identifications:
 | Operation-response | tournament joins/support unions | Which observables add, multiply, localize, or collide? |
 | One-sided accumulation | LRC spectrum | Can qualitative isolation be made effective by finite state/pinning data? |
 | Support Dirichlet profile | integer sequences | Do tournament/LRC census supports have functional or automatic structure? |
+
+HYP-8810's new “JC(2) and LRC(14) share AP-rigidity” reflection is a useful
+**wildcard frame, not a proved common reduction**. The LRC side has the precise
+one-way THM-1017 supplier. The claimed planar-JC continued-fraction/AP wall must
+still be stated as an exact theorem with a map and preserved predicate before
+the two residuals can be called identical. Its safe present use is as a prompt:
+compare how AP/transitive/one-sided extremals sit in different nullcones, and
+test where the functionals destroy the analogy.
 
 A proposed bridge is mathematical only after it names its map, preserved
 predicate, information loss, sidecar, and a falsifying control.

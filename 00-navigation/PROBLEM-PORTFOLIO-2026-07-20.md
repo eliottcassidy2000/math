@@ -1,5 +1,8 @@
 # THE PROBLEM PORTFOLIO — 2026-07-20 (mac-mini-S140)
 
+> **SUPERSEDED DRAFT:** consolidated by [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md).
+> Use [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) for current statuses.
+
 **Purpose (owner directive):** the ledger of NOVEL, NON-OBVIOUS results this repo holds on
 named external problems after the Jacobian disproof, plus the expanded under-the-radar list.
 Future sessions: pick from here, type the target, challenge an assumption, and extend this

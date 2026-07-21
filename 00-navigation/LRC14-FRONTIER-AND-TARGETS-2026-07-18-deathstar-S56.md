@@ -1,5 +1,9 @@
 # LRC(14) frontier synthesis + high-leverage targets — 2026-07-18 (death-star-S56)
 
+> **SUPERSEDED AS CURRENT STATUS:** use
+> [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14); retain this file for
+> the derivation and older target vocabulary.
+
 Written after the S56 covering-geometry work and the 07-18 fleet convergence (boxeph THM-1010, klein
 THM-1014/1006, kind-pasteur THM-1011, opus THM-1012). Purpose: state the frontier as it now stands,
 record which threads have merged, and set the **highest-leverage next targets**. Companions:

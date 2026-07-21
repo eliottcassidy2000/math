@@ -1,5 +1,9 @@
 # LRC(14) finite-check feasibility ledger — the Rosenfeld/S–T route priced for n=14
 
+> **SCOPED COST SNAPSHOT:** retain its estimates and architecture, but take
+> mathematical status from [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14)
+> and literature scope from [`../05-knowledge/reference/CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md).
+
 **kind-pasteur-2026-07-19-S128c87** (HYP-7921; executes the S128c86 backlog lead (i)).
 Primary sources fetched and extracted this session: Rosenfeld arXiv:2509.14111 (n=8);
 Sungkawichai–Trakulthongchai arXiv:2604.23906 (n=11,12,13); MSS bound as used by both.

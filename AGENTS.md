@@ -16,8 +16,9 @@ routes to. Never use a chronological log as the current truth source.
    - the topic routes printed by the startup packet.
 3. Read `00-navigation/RESEARCH-PROTOCOL.md` before a mathematical session and
    `05-knowledge/reference/CORE-PAPERS.md` before making literature claims.
-4. Check targeted agent/human messages. Do not scan the full session log,
-   mistakes ledger, backlog, or hypothesis index unless the task requires it.
+4. Check targeted agent/human messages with
+   `python3 agents/processor.py --status --peek --limit 8`. Do not scan the full
+   session log, mistakes ledger, backlog, or hypothesis index unless needed.
 
 The intended startup is minutes and hundreds of lines, not a corpus reread.
 

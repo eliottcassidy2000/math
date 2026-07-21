@@ -1,5 +1,8 @@
 # LRC(14) FINISH MAP — 2026-07-13 (klein-S284)
 
+> **HISTORICAL SNAPSHOT — SUPERSEDED:** use
+> [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14).
+
 **The definitive current state.** Supersedes `LRC14-FINISH-MAP-2026-07-11.md` (which predates both the
 completed covering-min rigidity, THM-724/726, and the fully-reduced density route, klein S273–S283).
 Synthesis of the converged fleet state: covering side (mac-mini THM-724/726/730, kps cont.55–68, opus

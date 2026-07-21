@@ -26,16 +26,25 @@ uncommitted files may belong to another live session.
 
 ## Read current work
 
-After fetching, inspect the newest changes that touch the current object rather
-than treating concurrent work as noise:
+After fetching, generate a bounded packet and inspect the newest changes that
+touch the current object rather than treating concurrent work as noise:
 
 ```bash
-git log --oneline -10 --name-only
-python3 agents/processor.py --check
+python3 agents/start_session.py --topic "<target statement or object>"
+python3 agents/processor.py --status --peek --limit 8
 ```
 
 The message processor uses the machine-local `.machine-id` and untracked
-`agents/.read-log.json`. Do not commit either runtime file.
+`agents/.read-log.json`. Do not commit either runtime file. `--check` and
+`--status` show only the newest 12 unread messages per mailbox and 40 lines per
+message by default; `--peek` leaves their read state unchanged. Use `--all` or
+`--body-lines 0` only for an intentional archive read.
+
+Validate the maintained startup surface after changing its routes or policies:
+
+```bash
+python3 agents/check_docs.py
+```
 
 ## Checkpoint useful partial results
 
@@ -77,11 +86,15 @@ git fetch origin
 git rev-list --left-right --count origin/main...HEAD
 ```
 
-Remove clean temporary worktrees later with:
+Inspect temporary worktrees with a dry run, then remove the exact clean path:
 
 ```bash
 bash agents/cleanup_session_worktrees.sh
+bash agents/cleanup_session_worktrees.sh /tmp/math-wt-short-topic
 ```
+
+`--all-clean` is deliberately explicit: a newly started session may still own
+a clean worktree.
 
 ## Why Stop hooks are absent
 
