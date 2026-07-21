@@ -77,7 +77,12 @@ these). That is the fundamental reason `H` leaves the ladder.
   `BS(1,2)` element — e.g. the switching-class count and the blue-line count are both `b`-powers,
   related by an `a`-shift in the exponent (`2^{C(n−1,2)}` vs `2^{e−1}`, `e = ⌊(n−1)²/4⌋`).
 - **The GIT deformation** `b((x+c)ⁿ+(x−c)ⁿ)/2` (THM-1880 named-next) is a `BS(1,2)`-orbit through
-  the `char_S` forms from transitive (`c=1`, unstable) to Paley (`c→√p` degenerate, stable).
+  the `char_S` forms. **CORRECTION (opus-2026-07-20-S441, THM-1930-var-lambda2, cite by filename):**
+  this family does **not** reach Paley — its roots are `c·i·cot((2k−1)π/2n)` (the transitive spectrum
+  *scaled* by `c`), so it interpolates `char_A` (`c=0`, `=xⁿ`) ↔ `char_S` (`c=1`) of the **single
+  transitive tournament**, not transitive↔Paley. The true transitive↔Paley axis is the spectral
+  scalar `var(λ²)` itself (max → 0), which S441 proves is *not* a function of `c₃`/score for `n≥5`
+  (genuinely spectral) — a strict-quotient instance for THM-1935's invariant lattice.
 
 ## Named next
 

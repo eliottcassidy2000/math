@@ -1,0 +1,36 @@
+========================================================================
+(A) switching classes = cut-space orbits = 2^{C(n-1,2)}  vs  A002854 = V(E_n)
+========================================================================
+n=3: 2^C(n,2)=       8 / 2^(n-1) = cut-orbits       2 = 2^C(n-1,2)       2  match=True   unlabeled two-graphs (A002854=V(E_n)) = 2
+n=4: 2^C(n,2)=      64 / 2^(n-1) = cut-orbits       8 = 2^C(n-1,2)       8  match=True   unlabeled two-graphs (A002854=V(E_n)) = 3
+n=5: 2^C(n,2)=    1024 / 2^(n-1) = cut-orbits      64 = 2^C(n-1,2)      64  match=True   unlabeled two-graphs (A002854=V(E_n)) = 7
+n=6: 2^C(n,2)=   32768 / 2^(n-1) = cut-orbits    1024 = 2^C(n-1,2)    1024  match=True   unlabeled two-graphs (A002854=V(E_n)) = 16
+n=7: 2^C(n,2)= 2097152 / 2^(n-1) = cut-orbits   32768 = 2^C(n-1,2)   32768  match=True   unlabeled two-graphs (A002854=V(E_n)) = 54
+n=8: 2^C(n,2)=268435456 / 2^(n-1) = cut-orbits 2097152 = 2^C(n-1,2) 2097152  match=True   unlabeled two-graphs (A002854=V(E_n)) = 243
+
+========================================================================
+(B)-(D) exhaustive census (bit-packed iso-canon)
+========================================================================
+n=3: iso(S_n-orbits)=2(A000568=2 ok)  score-classes=2  spectral-classes=2  cospectral-non-iso-pairs=0
+      spectrum refines score? True   score refines spectrum? True
+n=4: iso(S_n-orbits)=4(A000568=4 ok)  score-classes=4  spectral-classes=3  cospectral-non-iso-pairs=1
+      spectrum refines score? False   score refines spectrum? True
+n=5: iso(S_n-orbits)=12(A000568=12 ok)  score-classes=9  spectral-classes=9  cospectral-non-iso-pairs=3
+      spectrum refines score? False   score refines spectrum? False
+n=6: iso(S_n-orbits)=56(A000568=56 ok)  score-classes=22  spectral-classes=28  cospectral-non-iso-pairs=28
+      spectrum refines score? False   score refines spectrum? False
+  => first n with COspectral non-isomorphic tournaments: n = 4 (spectral map = STRICT quotient of the iso-class quotient)
+
+========================================================================
+(C) Ryser: directed-3-cycle-reversal orbits == out-degree-VECTOR classes
+========================================================================
+n=4: #T=64  #reversal-orbits=38  #score-vector-classes=38  orbits==score-classes? True
+n=5: #T=1024  #reversal-orbits=291  #score-vector-classes=291  orbits==score-classes? True
+
+========================================================================
+(E) permanent vs determinant — symmetry-group hardness split
+========================================================================
+per(A)=60  per(PAQ)=60  equal=True  (per stabilizer S_n x S_n, FINITE)
+det(A)=-4.000  det(gAg^-1)=-4.000  equal=True  (det stabilizer contains GL-conjugation, POSITIVE-DIMENSIONAL)
+=> tractability tracks stabilizer DIMENSION: continuous (det/trace, P) vs finite (per/H, #P);
+   Mulmuley-Sohoni GCT split; THM-1780 'H leaves the ladder at n=6' is its tournament instance.

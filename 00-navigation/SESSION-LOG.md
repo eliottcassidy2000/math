@@ -37,6 +37,47 @@ wall at n=9.
 
 Files: THM-1935; HYP-8690; reflection; decoupling_threshold_matrix_opus_S442.py (+out). Namespace clean
 (1935/8690 above kps churn). Builds on my THM-1865/1900/1920/1930, kps THM-1880.
+## kind-pasteur-2026-07-21-S128c141 - The invariant/monoid/orbit dictionary: five theorems are one sentence; hardness = stabilizer dimension (THM-1935)
+
+Owner: think of everything as invariants, monoids, orbits; make creative statements. Continuing the
+generators/monoids thread (THM-1885) into its natural payoff. **Frame:** every topic = (set X,
+monoid M acting, invariant f = constant on orbits); theorem = "f is M-equivariant", census = "count
+M-orbits" (Burnside), hardness = "size of f's stabilizer", nullcone = "degenerate orbit".
+
+**THM-1935 -- FIVE VERIFIED dictionary entries** (script invariant_monoid_orbit_kps_S128c141.py +out,
+bit-packed exhaustive n<=6):
+1. **RYSER = ORBITS.** Score = complete invariant of the directed-3-cycle-reversal monoid; reversal
+   orbits = out-degree-VECTOR classes EXACTLY (n=4: 38=38, n=5: 291=291). Ryser's theorem recast.
+2. **SWITCHING = CUT-SPACE ORBITS.** Two-graph = complete cut-space (Z/2)^{n-1} invariant;
+   #orbits = 2^{C(n,2)}/2^{n-1} = 2^{C(n-1,2)} (exact all n); UNLABELLED = A002854 = V(E_n) = classical
+   Seidel two-graphs. IDENTIFIES the repo's even-graph metagraph E_n WITH two-graphs/switching classes.
+3. **ISO = S_n-ORBITS.** A000568 = Burnside (2,4,12,56 verified); odd-cycle parity = the "odd" of OCC.
+4. **THE INVARIANT LATTICE.** labeled > {score, two-graph, spectrum} > iso > merged, by refinement;
+   score and spectrum INCOMPARABLE from n=5, first cospectral-non-iso at n=4 (spectral = STRICT quotient).
+5. **HARDNESS = STABILIZER DIMENSION** (sharpens THM-1885's amenability heuristic). Invariant is P iff
+   its stabilizer is positive-dimensional: tr(A^k)/det = GL-conjugation (continuous) => P; per/H =
+   finite S_n x S_n => #P. This is Mulmuley-Sohoni GCT; THM-1780 ("H leaves the ladder at n=6") is its
+   tournament instance. per(PAQ)=per(A), det(gAg^-1)=det(A) verified.
+
+**+7 creative-overflow statements** (reflection creative-statements-invariant-monoid-orbit): H=orbit
+cardinality => #P (LEM-003); spectral ladder = Newton symmetric-function ring (n rungs); GIT stability
+= closed orbit (transitive=nullcone); Cayley-Dickson = free x2 monoid, lost axioms = descending
+filtration; [C] GMC nullcone = torus fixed cone; [C] LRC(n) = every PSL(2,Z)-orbit meets {gap>=1/2n};
+[C] metagraph = Schreier graph of S_n. META: every counterexample-at-n0 = a pair in one M-orbit with
+different f; MISTAKES.md = the list of functions mistaken for invariants.
+
+**NUMBER COLLISION (resolved).** opus-S441 first-pushed THM-1930 (var-lambda2-decouples-from-c3); I
+renumbered my dictionary 1930 -> **1935** (first-pusher rule), fixed all refs. Their result is
+directly complementary: var(lambda^2) NOT score/c3-determined for n>=5 = a THIRD strict-quotient
+instance for my lattice(4), and it CORRECTS my THM-1885 c-family named-next (the family
+((x+c)^n+(x-c)^n)/2 interpolates char_A<->char_S of the SINGLE transitive tournament, NOT
+transitive<->Paley) -- correction posted to THM-1885. Cited both ways.
+
+Reframing (organises the corpus + a quantitative hardness law), all equations verified or classical,
+no new open problem closed. **Files:** THM-1935; reflection creative-statements-invariant-monoid-orbit-
+kps-S128c141; script + .out; HYP-8690. Cites THM-1885/1810/1780/1870/1775/826, LEM-003, opus THM-1930-var.
+
+---
 
 ## opus-2026-07-20-S441 - The shared next target resolved: var(lambda^2) DECOUPLES from c3 (THM-1930)
 
