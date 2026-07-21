@@ -17669,6 +17669,33 @@ return level once lower atoms killed) = the renewal induction THM-1770 A. The mu
 aspect is now discriminant-closed; these two are the residual.
 
 
+### HYP-8625 - Lean-certify the LRC(14) extremals by native_decide (the WOWII-103 template)
+**Status:** OPEN, concrete + cheap (opus-2026-07-20-S437). See reflection inflation-decoupling-counterexamples-the-wowii-motif.
+
+WOWII-103 (formal-conjectures PR #4482) disproved an auto-generated graph inequality with an
+11-vertex leaf-inflation graph, Lean-certifying alpha=9, b=10, ecc=30/11 by decide+native. The
+repo's LRC extremals are the SAME motif (leaf-inflation: {1..11,13,24} = {1..13} with 12->24=2*12,
+same M=1/14 at t*=1/14; verified). PROPOSAL: encode {1..13} and {1..11,13,24} as finite speed sets
+in TournamentH7 (the repo's Lean project) and native_decide that M=1/14 at t*=1/14 -- a finite
+rational check over pair-sum denominators (THM-401 modulus 2n-1=27, so all critical t are p/q with
+q<=27). This gives a MACHINE-CHECKED anchor for LRC(14), matching the ≤13-runner citation standard
+with an in-house certificate.
+
+TWO MORE INFLATION/DECOUPLING TARGETS the WOWII motif unlocks:
+(1) H-extremiser (open since THM-1820): H Schur-concave, maximiser off Paley for large n. Pendant-
+inflate a concentrated-spectrum core + exhaustive small-n search (2^{C(n,2)} feasible to n<=6;
+switching-class reduction THM-474 cuts n=7 by 64x). Find the H-max structure.
+(2) Decoupling audit: every conjectured inequality between two tournament/LRC invariants (H vs c3,
+score-spread vs diameter, D vs s) is a WOWII-103 candidate -- attempt to DECOUPLE via inflation
+BEFORE proving. THM-1820 shows this catches real errors (caught HYP-8600).
+
+**Method note (MISTAKES-ledger reflex):** attempt an inflation/decoupling counterexample first,
+exhaustively and (finite) in Lean, before investing in a proof. Refuted repo conjectures that
+would have been caught: HYP-8230, HYP-8450, HYP-8600, MISTAKE-156.
+
+**Related:** the reflection; THM-1820 (decoupling), THM-1230/1235 (LRC leaf-inflation extremals),
+THM-401 (pinch modulus), THM-474 (switching reduction), TournamentH7 (Lean).
+
 ### HYP-8620 — LRC relation lattice is PAIR-GENERATED = the moment pair-reduction (mac-mini-S156)
 Supporting boxeph THM-1820 (LRC = moment nullcone). Independently re-verified the bridge identity
 int prod f_j(v_j t) dt = sum_{k.v=0} prod fhat_j(k_j) and the tight-set boundary |G_{1/(n+1)}|=0

@@ -17,6 +17,42 @@ Prompt (owner): consider the below counterexample to the written on the wall 103
 FILES: reflection the-wowii-103-refutation-and-what-it-lends-the-repo-klein-S395.md, 1 script + out, backlog item. -> all (WOWII-103 disproof (formal-conjectures PR #4482): alpha(G) <= floor(b(G) - log ecc_avg) refuted by a triangle+leaves graph, 9 <= 8, Lean-verified. THE LEVERAGE: this is the SAME shape as our THM-1460/1580 (H #P-hard vs poly arborescence Sum a) -- an easy invariant bounding a hard one, refuted/loosened by an explicit small witness. The 3-cycle triangle = our intransitivity atom (THM-1805/1840). Our metagraphs G_n, E_n are ordinary graphs, so the whole ~150-conjecture WOWII zoo runs on them (demonstrated: alpha(G_n)=2,5,18, G_n satisfies 103). THE UPGRADE: we already do search+exhaustive+Lean; the missing front end is Graffiti-style AUTOMATED conjecture generation over our invariant zoo. CONCRETE TARGETS: off-by-one fragility of our tight bounds (is detection depth exactly d+1? is H<=Sum a ever tight?); a '3-cycle-core + amplifiers' tournament counterexample template; directed analogs of the WOWII list. Backlog item filed.)
 
 ---
+## opus-2026-07-20-S437 - The inflation/decoupling counterexample motif (WOWII-103 lesson) -- the repo already runs it (reflection)
+
+Owner shared google-deepmind/formal-conjectures PR #4482 (disproof of Written-on-the-Wall II
+Conjecture 103) and asked how similar ideas leverage repo problems.
+
+**THE WOWII-103 MOTIF.** An auto-generated graph inequality coupling independence number alpha to
+avg eccentricity + largest-induced-bipartite b was killed by an 11-vertex graph (triangle with 4
+leaves on each of two vertices): alpha=9, b=10, ecc=30/11, so the bound = 8 and the inequality reads
+9 <= 8. Two techniques: (i) INFLATION via pendants -- leaves pump alpha (independent) while ecc
+stays fixed (leaves near core), DECOUPLING the two invariants the conjecture assumed moved together;
+(ii) exhaustive 2^11 subset search + Lean certification (decide+native). LESSON: a conjectured
+inequality between two invariants dies to a construction that DECOUPLES them.
+
+**THE REPO ALREADY RUNS THIS MOTIF, three times (verified):**
+(1) The LRC extremal {1..11,13,24} IS a leaf-inflation of {1..13}: swap core speed 12 for the
+sacrificial leaf 24=2*12; both M=1/14 at t*=1/14 because 24*(1/14)=12/7 reproduces the danger comb.
+The (1/14,3/41) gap witness {1..11,13,36} is another leaf. So the LRC extremal-family archaeology
+(THM-1230/1235) is inflation-hunting under another name.
+(2) THM-1820 is the repo's OWN decoupling disproof: HYP-8600 conjectured H-extremal = 3-cycle-
+extremal; refuted by showing H (Schur-concave) and c3 (Schur-convex) maximise at OPPOSITE strata.
+(3) GMC(4) and Sym^3 (THM-1770) are small-explicit disproofs -- same genre, algebraic not enumerated.
+
+**TRANSFERABLE + NEW TARGETS (HYP-8625):** (a) LEAN-CERTIFY the LRC extremals via native_decide in
+TournamentH7 -- the WOWII PR is a direct template (finite rational check, THM-401 modulus 27); gives
+a machine-checked LRC(14) anchor. (b) inflation-hunt the H-extremiser (open since THM-1820) via
+pendant-inflation + exhaustive small-n (switching reduction THM-474 cuts n=7 by 64x). (c) DECOUPLING
+AUDIT: attempt an inflation/decoupling counterexample FIRST on every conjectured invariant-inequality
+before proving -- THM-1820 shows it catches real errors (caught my HYP-8600).
+
+**META-POINT.** This repo machine-generates its own conjectures (HYP index) at scale, and several
+were refuted the same way (HYP-8230, HYP-8450, HYP-8600, MISTAKE-156). The healthy reflex the
+MISTAKES ledger keeps re-teaching: stress a proposed coupling against a decoupling construction,
+exhaustively and (finite) in Lean, before believing it. WOWII-103 is an external Lean-certified
+instance of exactly that discipline.
+
+**Artifacts:** reflection inflation-decoupling-counterexamples-the-wowii-motif.md; HYP-8625; 1 script + output.
 
 ## klein-2026-07-20-S393 -- THM-1840: THE FUNCTIONAL-AGNOSTIC BOTH-SIGNS SINGLE-CHARACTER NULLCONE NON-VANISHING, PROVED -- the rigorous common parent of THM-1830, cyclotomic, closing the two-charge nullcone for TNC/GMC/LRC simultaneously; the residual (many-charge cancellation) is exactly the THM-1770 witness.
 
