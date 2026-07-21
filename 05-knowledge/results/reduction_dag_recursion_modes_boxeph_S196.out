@@ -1,0 +1,37 @@
+==========================================================================================
+PART A  the three sign-modes are circulant character sums  Σ_k ε_k ω^{jk} = 2λ_j+1
+==========================================================================================
+  mode1 int C=[1, 2, 3]  eps(k=1..6)=[+,+,+,-,-,-]  Σε_kω^{jk}=2λ_j+1 (j≠0)? True
+             Re(λ_j)=-1/2 (universal); 2λ_j+1 (j≠0) pure imaginary, |·|=[0.482, 1.254, 4.381]  => SPREAD (Dirichlet, var>0)
+  mode2 QR  C=[1, 2, 4]  eps(k=1..6)=[+,+,-,+,-,-]  Σε_kω^{jk}=2λ_j+1 (j≠0)? True
+             Re(λ_j)=-1/2 (universal); 2λ_j+1 (j≠0) pure imaginary, |·|=[2.646]  => FLAT (all |·|=√7 = Gauss sum)
+  mode3 C3  C=[1]        eps(k=1..2)=[+,-]  Σε_kω^{jk}=2λ_j+1 (j≠0)? True
+             Re(λ_j)=-1/2 (universal); 2λ_j+1 (j≠0) pure imaginary, |·|=[1.732]  => FLAT (all |·|=√3 = Gauss sum)
+  => EVERY ℤ/7 circulant sits on Re=-1/2; mode2 (Paley/Legendre) is FLAT |2λ+1|=√7 (Gauss sum),
+     mode1 (interval) is SPREAD (Dirichlet). The modes differ in the IMAGINARY (sine) part = Σε_k sin.
+
+==========================================================================================
+PART B  reduction DAG: which iso classes come from smaller subtournaments
+==========================================================================================
+  n : total  reducible(from smaller via join)  strong-prime  of-which-circulant
+  3 :     2       1                            1             1
+  4 :     4       3                            1             0
+  5 :    12       6                            6             1
+  6 :    56      21                           35             0
+  7 :   456     103                          353             2
+  => REDUCIBLE classes' char_A/H/R/ζ are products over strong components (THM-1926/1936); they
+     'come from' strictly-smaller strong classes. CIRCULANT strong classes are ℤ/n-character-
+     generated (the modes). The remaining strong-noncirculant classes are the prime atoms.
+
+==========================================================================================
+PART C  the deck recursion: char_A'(x) = Σ_i char_{T−v_i}(x) (T−v_i are the subtournaments)
+==========================================================================================
+  char_A'(x) = Σ_i char_{T−v_i}(x) over all classes n≤6:            True
+  Σ_i c3(T−v_i) = (n−3)·c3(T)  over all classes n≤6:                 True
+  => the deck (the n vertex-deleted subtournaments A,B,…,G) determines T's char_A via the
+     UNSIGNED sum (=derivative); the owner's SIGNED weights ε_i pick out subclasses (below).
+
+  mode-signed deck sum on a vertex-transitive (circulant) tournament: all T−v_i are one class D,
+  so Σ_i ε_i char_D = (Σ_i ε_i)·char_D  — vanishes iff the mode is sign-balanced (Σε=0).
+    interval  n=7: 6-shift signs Σε=0 (interval balanced? Paley?) -- vertex-transitive ⇒ deck degenerate
+    Paley     n=7: 6-shift signs Σε=0 (interval balanced? Paley?) -- vertex-transitive ⇒ deck degenerate

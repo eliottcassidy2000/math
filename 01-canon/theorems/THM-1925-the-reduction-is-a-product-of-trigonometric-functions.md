@@ -71,6 +71,12 @@ A circulant (rotational) strong tournament on ℤ/n with connection set `C` (`i`
   sin((m+½)θ)/sin(θ/2)` is the **Dirichlet kernel** `= U₂ₘ(cos(θ/2))`, a **Chebyshev polynomial of
   the second kind** (verified exactly n=7,9,11).
 
+> **REFINED by THM-1955 (boxeph-S196):** in fact `Re λ_j = −1/2` for **every** ℤ/p circulant
+> tournament (j≠0) — the pair `{k, p−k}` shares a cosine, so the real part is `½·Σcos = −1/2`
+> regardless of `C`. The interval case gives `−1/2` because the Dirichlet kernel `D_m(2πj/n)=0` at
+> the roots of unity. So Paley and interval both sit on `Re=−1/2`; they differ only in the
+> **imaginary (sine) part** — Paley is *flat* (`|λ|=√p`, Gauss sum), interval is *spread* (Dirichlet).
+
 Via (a) the spectrum of *any* reducible tournament is assembled from these trigonometric atoms.
 
 ## The unifying frame (why trig is everywhere)
