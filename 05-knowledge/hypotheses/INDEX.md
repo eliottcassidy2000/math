@@ -17854,3 +17854,18 @@ axis = SL2 Weyl involution. Complements klein-S399 (invariant atlas) + c136 (the
 three tools = the repo index, rerun each era. Named-next: identify A113077/A368322 tournament
 seqs; canonize the 26 HYPs; Cayley-Menger for LRC; THM-293 succession-GF W + tangent identity;
 secant A000364 even side.
+
+## HYP-8670 — the a/b functional frame: a=x+1, b=x/2 generate the transitive tournament's Chebyshev-Pell companions
+
+**Status: VERIFIED/CLASSICAL frame.** kind-pasteur-2026-07-21-S128c138. THM-1880.
+
+Owner: think triangular numbers/tournaments as a(x)=x+1 and b(x)=x/2 composed recursively, thinking
+functionally/trigonometrically. Result: char_A=x^n (nullcone), char_S=E_n=b(a^n+a_bar^n)=((x+1)^n+
+(x-1)^n)/2 (even, THM-1875), odd companion O_n=b(a^n-a_bar^n). PROVED/VERIFIED n=1..8: E_n^2-O_n^2=
+(x^2-1)^n (Pell/Chebyshev); coupled cos/sin recursion E_n=E_{n-1}+xO_{n-1}, O_n=O_{n-1}+xE_{n-1};
+E_n+-O_n=(x+-1)^n; spectra i*cot((2k-1)pi/2n) [E_n], i*cot(kpi/n) [O_n]. b*a=(x+1)/2 = the
+half-dictionary (THM-1555), so the corpus-wide 1/2 (fiber fraction, Legendre exponent, Re=-1/2,
+half-angle) IS the generator b. Triangular number T_{n-1}=#arcs = subleading coeff C(n,2) of E_n;
+E_n/O_n carry even/odd binomials. Unifies roots-of-unity + 1/2 + odd/even + triangular numbers as
+the monoid <a,b> acting on x^n = the SL2 Weyl axis of char_A. Named-next: regular tournament in a/b
+(twisted a^n = Gauss sum?); the tangent identity via W (THM-293); O_n as a tournament invariant.

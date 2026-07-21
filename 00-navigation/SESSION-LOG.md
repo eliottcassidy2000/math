@@ -9,6 +9,35 @@
 - **GAP-FILL 2 (HYP-8647, REFUTED=subsumed):** skew-adjacency Smith normal form adds nothing beyond the Pfaffian — degenerate at odd n (all-(1,1,1,1) at n=5), = Pf² factorization at even n. Closes "SNF for tournaments" as a negative. One of the 6 missing analogs resolved.
 - **BACKLOG:** filed the atlas + all top revival picks (Z_n, bicycle space, Ihara zeta, E_n sweep, G4 correlation matrix, 11 dangling files) as one entry. **Handoffs:** compute Z_n and the bicycle space (both cheap, both named-never-computed); run G4 (full pairwise Kendall-τ matrix); build the Ihara-zeta / non-backtracking analog; run any G_n computation on E_n (opus mandate).
 - **Namespace:** no THM claimed (synthesis + 2 refuted-hypothesis gap-fills). Files: atlas doc; `04-computation/invariant_gaps_klein_S399.py`, `04-computation/snf_skew_energy_klein_S399.py` (+outs in results/).
+## kind-pasteur-2026-07-21-S128c138
+
+**The a/b functional frame: a(x)=x+1 and b(x)=x/2 generate the transitive tournament's
+Chebyshev-Pell companion polynomials, and b*a IS the half-dictionary. THM-1880. Concurrent:
+death-star running full-zoo battery, klein-S399 atlas -- this adds the FUNCTIONAL-monoid layer.**
+
+- Owner's frame: build triangular-numbers/tournaments from a(x)=x+1 and b(x)=x/2 composed
+  recursively; think functionally/trigonometrically. Exact structure:
+- The transitive tournament's THREE polynomials are all a/b-composites: char_A=x^n (GIT nullcone
+  monomial, THM-1810); char_S=E_n=b(a^n+a_bar^n)=((x+1)^n+(x-1)^n)/2 (even, THM-1875); odd companion
+  O_n=b(a^n-a_bar^n) (a_bar=x-1).
+- PELL/CHEBYSHEV (verified n=1..8): E_n^2-O_n^2=(x^2-1)^n; coupled cos/sin recursion E_n=E_{n-1}+
+  xO_{n-1}, O_n=O_{n-1}+xE_{n-1}; E_n+-O_n=(x+-1)^n. So (E_n,O_n)=(cosh,sinh) of metric x^2-1 =
+  Chebyshev of cotangent argument. Spectra: E_n at i*cot((2k-1)pi/2n), O_n at i*cot(kpi/n).
+- b*a=(x+1)/2 IS THE HALF-DICTIONARY (THM-1555). The corpus-wide 1/2 -- tiling fiber fraction
+  (1/2)_{n-2}/(n-2)!, Legendre exponent ^{-1/2}, regular Re=-1/2 line, cotangent half-angle -- is
+  ONE object: the generator b. a shifts, b halves, b*a is the sign<->affine coordinate change.
+- TRIANGULAR NUMBERS = COEFFICIENTS: E_n=Sum C(n,2j)x^{n-2j}; subleading coeff = C(n,2)=T_{n-1}=
+  #arcs = e_2 of the skew spectrum. E_n/O_n carry even/odd binomials. So 'triangular numbers/
+  tournaments composed of a,b recursively' is literal.
+- UNIFICATION: the odd/even (sin/cos/tan) axis = SL2 Weyl involution x->-x of char_A is, at the
+  transitive vertex, the two-generator monoid <a,b> acting on x^n. roots-of-unity + 1/2 + odd/even
+  + triangular numbers are all this monoid.
+
+**Handoff.** (1) regular/Paley tournament in the a/b frame (is char_S = b of a TWISTED a^n = a
+quadratic-residue Gauss sum?). (2) the tangent-number identity (A000182) via the succession GF W
+(THM-293), a different a/b-composite -- Sum O_n(0)t^n/n! = sinh t not tan, so W is the tan one. (3)
+O_n as a tournament invariant (roots i*cot(kpi/n) -- a Pfaffian/Seidel object?).
+
 ## kind-pasteur-2026-07-21-S128c137
 
 **Deep archaeology (below the theorem layer) + a concrete niche REVIVAL. THM-1875. Collaborative:
