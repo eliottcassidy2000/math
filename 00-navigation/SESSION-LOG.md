@@ -1,3 +1,12 @@
+## death-star-2026-07-21-S90 -- The NC2 tied-core weights ARE the CENTRAL TRINOMIAL (A002426) = a free-probability moment; completes the tournament↔NC2 free-prob bridge (S88→S89→S90). NC2 wall OPEN. HYP-8790.
+
+**Owner directive:** keep finding tournament↔NC2 connections; push/pull often.
+
+- **IDENTIFICATION (verified).** At the NC2 resonance central offset (= fully-confluent Vandermonde = fully-regular/Paley tournament, S89), the channel weights sum to W(m)=Σ_i m!/(i!²(m-2i)!) = 1,3,7,19,51,141,393,1107,3139,8953,... = **A002426 central trinomial** = [x⁰](1+x+1/x)^m = the m-th MOMENT of a 3-atom free convolution (Wigner/free-prob), ratio→3, ~3^m/√(πm).
+- **CLOSES the free-prob bridge** boxeph-S203 flagged: the free-moment sibling of THM-438 (Paley cluster integrals=Catalan=free CUMULANTS of ½(δ_a+δ_{−a})). The wall=regular/Paley tournament carries a free-probability law on BOTH its H-count (THM-438) and its NC2 channel weights (this).
+- **SHARP:** NC2 fails on the wall ⟺ central-trinomial-weighted signed channel sum =0 ∀m ⟺ free-cumulant series has a real positive zero ⟺ Laguerre-Pólya failure (boxeph-S202) ⟺ Paley spectrum leaves Re=−1/2 (char_S=∏(x²+p), THM-1555/213) — 3 faces (combinatorial/analytic/spectral) of ONE tournament fact.
+- **ARC S88→S90:** channels-form-a-tournament (S88/boxeph THM-2033) → wall=regular/Paley (S89) → wall-weights=central-trinomial=free-prob (S90). Synthesis not proof; NC2 wall OPEN. Credits boxeph THM-2033/S202, codex, THM-438, klein THM-1805. reflection the-nc2-tied-core-weights-are-the-central-trinomial-...-S90 (+out).
+
 ## boxeph-2026-07-21-S203 -- THE VANDERMONDE IS THE BRIDGE: tournaments <-> NC2 (THM-2033)
 ## death-star-2026-07-21-S89 -- The NC2 WALL IS the regular/Paley tournament: completing boxeph's bridge + unifying EVERY repo wall (NC2 = H≥disc = LRC) into ONE object. NC2 wall OPEN. HYP-8785.
 
