@@ -10350,3 +10350,23 @@ script figurate_two_axes_macmini_S109.py (.out in results). **Status:** verified
 - [ ] W3 delta-resurgence ADVANCED (S190): terminal stack multiplicity = phi(n+1) (measured n=3..6) = the GALOIS orbit of primitive fractions — the stack column of the dictionary is now rotation/reality/Galois; next: transplant the sum rule to the covering ladder.
 - [ ] W4 LRC finite moment test: engine-style certificate for |G_delta| vs the mod-q ladders. Source: THM-1820 §3.
 - [ ] W5 {7,21} as GIT value-semigroup gaps (tangent-grade). Source: THM-1820 §3.
+
+## Corpus-archaeology leads (kps-S128c136, THM-1870 + atlas reflection)
+
+Surfaced by the citation-graph tool (corpus_archaeology_kps_S128c136.py); see
+07-reflections/the-corpus-atlas-forgotten-threads-the-zoo-and-the-gaps-kps-S128c136.md.
+
+- **[NEW] c_k-from-traces closed form.** c_k (k-cycle count) is spectral for k<=n-1 (THM-1870);
+  write the explicit Newton-style polynomial c_k(tr A^1..A^k). THM-172 did c5. Status: OPEN.
+- **[NEW] cycle-boundary at n=7,8.** Confirm c_{n-1} spectral, c_n splits (needs trace sieve for
+  the O(n!) enumeration). Status: OPEN.
+- **[NEW] spectral WOWII quadrant.** Add {c4,c5,c6,#Ham-cycles,rho,#real-eigenvalues} to the WOWII
+  zoo (THM-1845) and regenerate -- spectral-vs-combinatorial inequalities untested. Status: OPEN.
+- **[NEW] E_n / G_n characteristic binary form + GIT nullcone** (dual of THM-1810). Status: OPEN.
+- **[NEW] half-dictionary on the toral kernel R** (R is a binary form; does its skew companion
+  mean anything for TNC? THM-1555). Status: OPEN.
+- **[NEW] H(c3,n) envelope.** THM-208 (H=1+2t3, n<=4) is the germ; THM-1860 (c3<=H); the refuted
+  H<=2^{n-2}c3+1 (breaks n=10). Find the true envelope. Status: OPEN.
+- **[RESCUE] era-0 block-counting leaves** (THM-006/010/011/012/026/054): add 'subsumed-by'
+  pointers so early scaffolding links forward. Status: housekeeping.
+- **[RESCUE] under-titled orphans** (homology/binary-form/eigenvalue/GIT): index existing work.

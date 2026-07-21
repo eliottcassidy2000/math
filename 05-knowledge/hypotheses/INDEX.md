@@ -17813,3 +17813,19 @@ generator with n=7 CROSS-VALIDATION (so no small-n artifacts; srange<=beta corre
 robust survivors incl PROVABLE scc<=beta (condensation transitive => representatives give a
 size-scc transitive subtournament) and candidate diam<=c3+1, kings<=H. Named-next: prove the
 strongly-connected c3<=H base; diam<=c3+1; feed refuted C2 back as a lower-bound search.
+
+## HYP-8650 — corpus archaeology: forgotten moment/cycle-spectral threads reconnected; cycle-count boundary = Hamiltonian length
+
+**Status: TOOL BUILT + THM-1870 + atlas.** kind-pasteur-2026-07-21-S128c136.
+
+Built a citation-graph archaeology tool over the 1392-theorem corpus: 60 FORGOTTEN theorems (cited
+<=1 externally), topic zoo (LRC 119, moment 39, ..., orphans homology/binary-form/eigenvalue/GIT),
+era density. Key rescue: the forgotten moment/cycle-spectral cluster (THM-056/057/157/158/171/172/
+173/225, era-2 2026-03) = the ancestors of the current moment-nullcone/binary-form ladder (THM-1775/
+1810). RECONNECTED via THM-1870: the simple k-cycle count c_k is SPECTRAL (function of the trace
+moments) for k<=n-1, and c_n (Hamiltonian) SPLITS at n=6 -- at the SAME co-spectral class
+(0,0,12,12,10,48) where H splits (THM-1780). So the cycle-count spectral boundary is exactly the
+Hamiltonian length; c3..c_{n-1} are SL2-invariants of char_A, c_n and H live in the fiber the form
+forgets. Verified n<=6 (c3,c4,c5 spectral; c6 splits). Atlas reflection catalogs forgotten threads +
+gaps (procedurally: object x functional x method empty cells) + a standing new-angles queue.
+Named-next: c_k-from-traces closed form; n=7,8 boundary; spectral WOWII quadrant; E_n/G_n GIT form.

@@ -9,6 +9,40 @@
 - **S70 reconfirmed:** the n≤6 missing-odds {7,21,35,39} drops to exactly {7,21} at n=7 (35,39 appear) — the n≤6 gap was a small-n artifact; odds∖{7,21} robust.
 - **Namespace:** ceded THM-1855→boxeph-S193; renumbered mine to THM-1858. Handoffs: prove H≥disc; run WOWII zoo on the dual even-graph metagraph E_n (klein did G_n); formal-conjectures bridge. Reflection spectral-tournamentgraffiti-...-S78; 4 scripts+outs (S77 graffiti_leverage + S78 spectral_graffiti/hspectrum_hgedisc/automine).
 
+## kind-pasteur-2026-07-21-S128c136
+
+**Corpus archaeology: built a tool to find forgotten threads across the 1392-theorem / 2554-
+reflection corpus, and reconnected the biggest forgotten cluster to the live frontier. THM-1870 +
+atlas reflection.**
+
+- **THE TOOL** (corpus_archaeology_kps_S128c136.py): citation-graph scan of the whole corpus.
+  Found 60 FORGOTTEN theorems (cited <=1 externally, THM#<1700); topic zoo (LRC 119, moment 39,
+  Paley 31, GMC 31, ..., ORPHANS: homology 1, binary-form 2, eigenvalue 3, GIT 3); era density.
+- **THE BIG RESCUE:** the forgotten moment/cycle-spectral cluster (THM-056/057/157/158/171/172/173/
+  225, era-2 March 2026) is the ANCESTOR of the current moment-nullcone/binary-form ladder
+  (THM-1775/1810). The project studied 'cycle counts are functions of the spectrum' + 'moment
+  hierarchies', forgot it, and rediscovered it in July as 'tr(A^k)=SL2-invariants of char_A'.
+- **RECONNECTED (THM-1870): the cycle-count spectral boundary is the Hamiltonian length.** The
+  simple directed k-cycle count c_k is SPECTRAL (constant on co-spectral classes = a function of
+  the trace moments) for k<=n-1, and c_n SPLITS at n=6 -- at the SAME class (0,0,12,12,10,48) where
+  H splits (THM-1780). At n=6 a 6-cycle IS Hamiltonian, so c6=#Ham-cycles leaves the floor exactly
+  where the Hamiltonian statistics turn #P. So c3..c_{n-1} are SL2-invariants of char_A; c_n and H
+  live in the fiber the form forgets. Extends+completes forgotten THM-172 (c5 lambda-determined).
+  Verified exhaustively n<=6.
+- **THE ATLAS** (reflection): records the 60 forgotten threads by cluster (so none are lost), the
+  topic zoo + orphans (under-TITLED not unstudied -- the fix is indexing), and the GAPS via a
+  procedural cross-product (object x functional x method empty cells): metagraph moments, E_n GIT
+  form, c_k-from-traces, half-dictionary on R, spectral WOWII quadrant, LRC's nullcone dual. Plus a
+  standing new-angles queue. Backlog updated with 8 new leads.
+- Meta-point: the repo forgets because it is large/fast/multi-agent; the countermeasure is a
+  citation-graph + topic-index + gap-cross-product run as a TOOL each era, not heroic re-reading.
+
+**Handoff / standing queue.** (1) c_k-from-traces closed form (Newton on cycle counts; THM-172 did
+c5). (2) confirm the boundary at n=7,8 (trace sieve for the O(n!) enumeration). (3) add spectral
+invariants {c4,c5,c6,#Ham-cycles,rho,#real-eig} to the WOWII zoo and regenerate. (4) E_n/G_n
+characteristic binary form + GIT nullcone (dual of THM-1810). (5) the true H(c3,n) envelope
+(THM-208 germ -> THM-1860 -> refuted 2^{n-2} bound).
+
 ## mac-mini-2026-07-21-S159 -- the sign-reversing TOURNAMENT INVOLUTION as a repo-wide engine (owner: apply the signed-sum-over-tournaments idea across the repo). Reflection + HYP-8640.
 
 **Context:** owner shared the nasqret/Alpoge JC-counterexample write-ups (github.com/nasqret/jacobian-counterexample). I INDEPENDENTLY VERIFIED the core (det JF == -2 constant, non-injective: 3 distinct points (2,-1/2,1),(-1+-i,1,1-+3i) all map to (0,1,2), hand-checked) -- it IS the repo's THM-1300 map, a genuine classical-JC counterexample. Their literature audit is thorough on classical JC (Keller, Bass-Connell-Wright, Druzkowski, de Bondt-van den Essen, Miyanishi pseudo-coverings) but cites NOTHING from Zhao/GMC/Mathieu-Zhao. Advised owner: the highest-value thing to tell them is the Gaussian-Moments/Mathieu-Zhao TWIN (Zhao GMC(n)=>JC(n); their map forces the explicit GMC(3) witness P=(1+Z)(W-(2+Z)U),Q=Z; refs DvdEZ Israel J Math 2019 arXiv:1506.05192, Zihan Zhang's "Direct Consequences of the 3D counterexample"), plus the moment-side n=2 obstruction (2/d in Z stops the family before the plane) mirroring their descent obstruction, and the resultant/discriminant = binary-forms/SL2/tournament framing.

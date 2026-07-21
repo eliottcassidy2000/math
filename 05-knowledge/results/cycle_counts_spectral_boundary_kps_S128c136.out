@@ -1,0 +1,13 @@
+====================================================================================
+Is c_k (simple directed k-cycle count) SPECTRAL? split within co-spectral classes?
+====================================================================================
+  n=4 : c3:spectral  c4:spectral
+  n=5 : c3:spectral  c4:spectral  c5:spectral
+  n=6 : c3:spectral  c4:spectral  c5:spectral  c6:SPLIT
+       c6 first splits at moment-vector (0, 0, 12, 12, 10, 48)
+
+  READING vs the ladder:
+  c3 = tr(A^3)/3 is always spectral (a trace moment).  THM-172: c5 spectral.  H (the
+  n-cycle/path level) splits at n=6 (THM-1780).  Any c_k that SPLITS above is the first
+  cycle statistic to leave the rational/spectral floor -- the boundary between the
+  forgotten cycle-count thread (THM-171/172/173) and the #P permanent (H).

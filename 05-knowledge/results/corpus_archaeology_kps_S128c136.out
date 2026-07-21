@@ -1,0 +1,99 @@
+scanned 3987 files for THM references
+
+============================================================================================
+FORGOTTEN THEOREMS (cited by <=1 external file, THM# < 1700) -- proved then abandoned
+============================================================================================
+  total flagged: 60
+  [0 refs] THM-6     THM-006-f3-min-typeii.md
+  [0 refs] THM-26    THM-026-deletion-ratio-formula.md
+  [0 refs] THM-49    THM-049-m-swap-r-parity.md
+  [0 refs] THM-57    THM-057-general-n-moments.md
+  [0 refs] THM-112   THM-112-key-identity-even-r.md
+  [0 refs] THM-157   THM-157-alpha1-linear-identity.md
+  [0 refs] THM-158   THM-158-alpha-j-moment-linearity.md
+  [0 refs] THM-207   THM-207-permutohedron-transitive.md
+  [0 refs] THM-208   THM-208-H-equals-1-plus-2t3.md
+  [0 refs] THM-293   THM-293-W-equals-succession-GF.md
+  [0 refs] THM-1279  COMPLEMENTARY NEAR-TOP CLUSTER CLOSURE
+  [1 refs] THM-10    THM-010-n4-block-counting.md
+  [1 refs] THM-11    THM-011-block-counting-formula.md
+  [1 refs] THM-12    THM-012-mu-partial-invariance.md
+  [1 refs] THM-12    THM-012b-insertion-decomposition.md
+  [1 refs] THM-54    THM-054-universal-coefficients.md
+  [1 refs] THM-56    THM-056-moment-hierarchy.md
+  [1 refs] THM-63    THM-063-fourier-free-position-correspondence.md
+  [1 refs] THM-72    THM-072-off-diagonal-pcd.md
+  [1 refs] THM-73    THM-073-gs-typed-independence.md
+  [1 refs] THM-74    THM-074-P-master-decomposition.md
+  [1 refs] THM-111   THM-111-odd-even-relative-dichotomy.md
+  [1 refs] THM-113   THM-113-circulant-scalar-M.md
+  [1 refs] THM-116   THM-116-arc-flip-contraction-reduction.md
+  [1 refs] THM-124   THM-124-top-vanishing-injectivity.md
+  [1 refs] THM-140   Additive energy - Hamiltonian path correlation sign reversal
+  [1 refs] THM-150   THM-150-product-identity.md
+  [1 refs] THM-152   THM-152-simplicial-identity.md
+  [1 refs] THM-153   THM-153-paley-omega-growth.md
+  [1 refs] THM-160   THM-160-overlap-weight-complement-formula.md
+  [1 refs] THM-161   THM-161-effective-marginal-H-coefficients.md
+  [1 refs] THM-171   THM-171-c3-disjointness-from-lambda.md
+  [1 refs] THM-172   THM-172-c5-lambda-determined.md
+  [1 refs] THM-173   THM-173-c5-per-vertex-set-formula.md
+  [1 refs] THM-204   THM-204-fourier-level-formula.md
+  [1 refs] THM-210   THM-210-sum-H-identity.md
+  [1 refs] THM-215   THM-215-compatible-pairs-a000255.md
+  [1 refs] THM-225   THM-225-universal-top-eigenvalue.md
+  [1 refs] THM-254   THM-254-instant-mcmc.md
+  [1 refs] THM-257   THM-257-bibd-uniformity-n7.md
+
+============================================================================================
+TOPIC ZOO (title-keyword frequency) -- big = mainline, small = orphan/underexplored
+============================================================================================
+  LRC              119  ########################################
+  moment            39  #######################################
+  Paley             31  ###############################
+  GMC               31  ###############################
+  tiling            24  ########################
+  nullcone          21  #####################
+  TNC               19  ###################
+  OCF               17  #################
+  staircase         15  ###############
+  king              14  ##############
+  Hamiltonian       13  #############
+  spectral          11  ###########
+  Farey             10  ##########
+  metagraph          9  #########
+  blue               8  ########
+  circulant          8  ########
+  score              8  ########
+  Betti              7  #######
+  Kakeya             7  #######
+  Jacobian           7  #######
+  Pfaffian           6  ######
+  arborescence       6  ######
+  3-cycle            6  ######
+  Redei              5  #####
+  domination         5  #####
+  Ramanujan          5  #####
+  permanent          4  ####
+  switching          4  ####
+  wiggly             3  ###
+  eigenvalue         3  ###
+  GIT                3  ###
+  BIBD               2  ##
+  Vandermonde        2  ##
+  binary form        2  ##
+  zeta               2  ##
+  Smith              2  ##
+  modular            2  ##
+  homology           1  #
+  waggly             1  #
+  Fibonacci          1  #
+  Seidel             1  #
+  Cayley             1  #
+  Catalan            1  #
+  Hermite            1  #
+  Lyapunov           1  #
+  Tutte              1  #
+  sedenion           1  #
+
+  ORPHAN/near-orphan topics (<=2 theorems): homology, Tutte, even graph, Seidel, Dixmier, binary form, Gauss sum, quadratic residue, BIBD,
