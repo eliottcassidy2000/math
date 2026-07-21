@@ -1,0 +1,26 @@
+THM-2020 FINITE-PLACE CHANNEL SEPARATION - EXACT GATES
+gate Wick moment formula (1): PASS
+  direct polynomial expansion vs balanced channels: 20 identities
+gate Legendre digit/carry formulas (4)-(5): PASS
+  exact channel-prime identities: 308
+gate star occupation and wide-gap certificates: PASS
+  (x,y,z)=(n+2z,3n-3z,z), A=6n+12z
+  p=29: n=4, m=16, channels=5, v_p=(0, 1, 1, 2, 2)
+  p=31: n=5, m=20, channels=6, v_p=(0, 1, 1, 2, 2, 2)
+  p=43: n=7, m=28, channels=8, v_p=(0, 1, 1, 1, 2, 2, 2, 2)
+  p=61: n=10, m=40, channels=11, v_p=(0, 1, ..., 2, 2)
+  p=73: n=12, m=48, channels=13, v_p=(0, 1, ..., 2, 2)
+  p=97: n=16, m=64, channels=17, v_p=(0, 1, ..., 2, 2)
+  p=127: n=21, m=84, channels=22, v_p=(0, 1, ..., 2, 2)
+gate cancellable M4 and separated M8: PASS
+  M4 normalized channels=(2880,-2880), sum=0
+  M8 normalized channels=(13412044800, -19536878592000, 131727403906560000)
+  v_3=(5, 4, 5), sum=131707880440012800, v_3(sum)=4
+gate Lee-Yang upper-half-plane counterexample: PASS
+  a=(Fraction(1, 1), Fraction(1, 1)), b=(Fraction(-1, 1), Fraction(1, 1)), c=(Fraction(1, 2), Fraction(1, 2)), b^2+2ac=(Fraction(0, 1), Fraction(0, 1))
+ALL EXACT GATES PASS
+Tournament Analysis (balanced M8 channels at p=3):
+  valuations=(5, 4, 5), path=middle -> low -> high
+  score_histogram={0:1,1:1,2:1}, directed_3cycles=0, SCC_sizes=[1,1,1], Hamiltonian_paths=1
+  tie gauge=lexicographic channel label; observable=lower p-adic valuation
+  assumption challenge: charge-only vertices rejected; retain channel+prime+carry state
