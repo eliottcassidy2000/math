@@ -1,3 +1,23 @@
+## klein-2026-07-21-S397 -- THM-1850: DIRECTED WOWII. A PROVED domination-transitivity inequality gamma(T) + tr(T) <= n+1 (elementary source-domination), corollary gamma <= fas+1, plus THREE refuted directed-inequality conjectures with explicit witnesses -- the directed-WOWII pipeline producing content, exhaustive n<=7.
+
+**Owner directive:** work on the directed analogies of the WOWII inequalities.
+
+Following my S395 reflection (directed analogs of the ~150 WOWII inequalities as a new problem family). I built the directed invariant zoo -- tr(T) = largest TRANSITIVE subtournament (the independence/alpha analog), dichromatic (chi), gamma (domination), fas (feedback arc set), #C3, H (Redei), diam -- computed all of them EXACTLY on every iso class n=4..7 (528 classes), and tested ten candidate directed WOWII inequalities.
+
+MAIN RESULT, PROVED: gamma(T) + tr(T) <= n+1, equivalently gamma(T) <= n - tr(T) + 1. The proof is two lines: let A be a maximum transitive subtournament (|A|=tr) with source a1 (beats every other vertex of A by transitivity); then S = {a1} u (V\A) dominates T -- the V\A vertices are in S and every other A vertex is beaten by a1 -- so gamma <= |S| = 1 + (n-tr) = n-tr+1. Verified: the witness set is dominating and of size n-tr+1 for ALL 528 classes; tight (gamma = n-tr+1) in 50, all at the near-transitive end, and tight at the transitive tournament itself (gamma=1, tr=n). COROLLARY, with the standard tr >= n-fas (kind-pasteur THM-1390): gamma <= n-tr+1 <= fas+1, tight on the 3-cycle -- the clean chain n-fas <= tr <= n-gamma+1.
+
+THREE REFUTED, with smallest explicit counterexamples (the WOWII discipline: state the inequality, find the smallest witness): (C) dichr <= ceil(n/tr) FAILS at n=7 (tr=4, dichr=3, ceil(7/4)=2 -- a tournament with a transitive quarter still needs 3 acyclic colours); (G) the naive directed analog of WOWII-103, tr <= floor(n - log diam), FAILS at n=4 (tr=3, diam=3, floor(4-log3)=2) -- the alpha->tr, ecc->diam port dies immediately; (J) H <= 2^{n-tr} FAILS at n=4 (tr=3, H=3, 2^1=2) -- the Redei path count is NOT capped by the transitivity defect exponentially.
+
+Confirmed classics used only as anchors (not claimed): Erdos-Moser tr >= floor(log2 n)+1, domination gamma <= floor(log2 n)+1, tr >= n-fas. The main inequality is elementary and may be folklore; I present it with the directed-WOWII framing and an in-repo proof.
+
+This demonstrates the directed-WOWII pipeline PRODUCES CONTENT: one proved inequality + one corollary + three refutations, all exhaustive n<=7. Next pass: widen the invariant set (out-domination, kings, the arborescence ranking THM-1750), and push the confirmed holds toward n=8,9 before conjecturing, per the repo's own small-case discipline.
+
+Prompt (owner): work on the directed analogies of the WOWII inequalities.
+
+FILES: THM-1850, HYP-8630, 1 script + out. -> all (DIRECTED WOWII produced a PROVED inequality: gamma(T) + tr(T) <= n+1 (domination + largest transitive subtournament <= n+1), proof = source of a max transitive subtournament + its complement dominates, size n-tr+1; tight at the transitive tournament; corollary gamma <= fas+1 via tr >= n-fas (kind-pasteur THM-1390). AND three refutations with explicit witnesses: dichr <= ceil(n/tr) fails at n=7 (tr=4,dichr=3); the naive directed-103 tr <= floor(n-log diam) fails at n=4; H <= 2^{n-tr} fails at n=4. All exhaustive over 528 iso classes n<=7. The directed-WOWII pipeline works -- the invariant zoo (tr, gamma, fas, dichr, #C3, H, diam) computed on all classes is reusable; next is out-domination/kings/arborescence-ranking and pushing to n=8,9. Anyone with a tournament-invariant conjecture: this harness tests it exhaustively n<=7 in one run.)
+
+---
+
 ## klein-2026-07-21-S395 -- WOWII-103 REFUTATION IDEA TRANSFER: the disproof of Written-on-the-Wall-II Conjecture 103 (an 'easy invariant bounds hard invariant, refuted by a tuned small witness' shape) is exactly the repo's arborescence-vs-H shape (THM-1460/1580); the metagraphs are ordinary graphs so the whole WOWII zoo ports; concrete off-by-one and 3-cycle-core targets filed. Reflection + backlog + demonstration, no new theorem.
 
 **Owner directive:** consider the counterexample to the WOWII-103 conjecture (google-deepmind/formal-conjectures PR #4482) and how similar ideas can be leveraged for repo problems or new ones.

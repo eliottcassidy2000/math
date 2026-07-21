@@ -1,0 +1,33 @@
+n=4: 4 iso classes; tr range 3..4, gamma range 1..2, dichr max 2
+n=5: 12 iso classes; tr range 3..5, gamma range 1..2, dichr max 2
+n=6: 56 iso classes; tr range 3..6, gamma range 1..2, dichr max 2
+n=7: 456 iso classes; tr range 3..7, gamma range 1..3, dichr max 3
+
+====================================================================================
+DIRECTED WOWII INEQUALITIES -- exhaustive over all iso classes n=4..7
+====================================================================================
+  HOLDS  A: tr >= n - fas (reverse min-FAS -> transitive)
+  HOLDS  B: tr * dichr >= n (transitive colour classes)
+  FAILS  C: dichr <= ceil(n/tr)
+         smallest counterexample n=7: tr=4 gamma=2 fas=5 dichr=3 c3=11 H=99 diam=2
+  HOLDS  D: gamma <= floor(log2 n)+1 (domination bound)
+  HOLDS  E: tr >= floor(log2 n)+1 (Erdos-Moser)
+  HOLDS  F: tr + gamma <= n+1
+  FAILS  G: DIRECTED-103  tr <= floor(n - log(diam)) [strong]
+         smallest counterexample n=4: tr=3 gamma=2 fas=1 dichr=2 c3=2 H=5 diam=3
+  HOLDS  H: c3 <= comb(n,3) - comb(tr,3)
+  HOLDS  I: gamma <= n - tr + 1
+  FAILS  J: H <= 2^{n - tr} (transitivity caps path count)
+         smallest counterexample n=4: tr=3 gamma=1 fas=1 dichr=2 c3=1 H=3 diam=None
+
+================================================================================
+PROOF CHECK: gamma(T) <= n - tr(T) + 1 via source-of-A + (V\A) domination
+================================================================================
+  witness set is dominating & has size n-tr+1 for ALL 528 classes n<=7: True
+  gamma = n-tr+1 exactly (tight) for 50/528 classes (the near-transitive end)
+  => gamma(T) + tr(T) <= n+1 PROVED (elementary), tight when T is transitive (gamma=1, tr=n).
+
+  THE PROOF: let A be a maximum transitive subtournament (|A|=tr), with source a1 (beats all of A).
+  S = {a1} u (V\A) dominates T: vertices in V\A are in S; every other vertex of A is beaten by a1.
+  |S| = 1 + (n - tr) = n - tr + 1.  QED.
+
