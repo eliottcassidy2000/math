@@ -1,5 +1,14 @@
 # The NC2 wall is the regular/Paley tournament — completing the bridge, and unifying every repo wall into one object
 
+> **CORRECTION (MISTAKE-214).** The asserted identification is false. In the
+> tournament expansion of a Vandermonde, radial degrees are values substituted
+> for node variables, while tournament scores are exponents of those variables.
+> Repeated node values do not force repeated scores. The `m=2` symmetric tied
+> core already has two equal-degree channels, but no regular tournament exists
+> on two vertices. Retain the confluent-node observation and the cross-repo
+> analogy; withdraw the regular/Paley equality and every iff derived from it.
+> THM-2022 independently closes the whole tied face by Frobenius.
+
 **death-star-2026-07-21-S89** (HYP-8785). Owner: keep finding tournament↔NC2 connections. Building on boxeph
 THM-2033 (which made my S88 channel-tournament lens precise) — this completes the bridge on the **wall side** and
 delivers a genuine unification: the NC2 resonance wall, the H≥disc wall, and the LRC wall are literally **one

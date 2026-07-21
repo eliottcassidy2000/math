@@ -14,6 +14,8 @@ status: >
 source: boxeph-2026-07-21-S203 (owner: find connections between tournaments and NC2, long session, push/pull often)
 depends_on: []
 related:
+  - THM-2022  # full NC2 closure via Frobenius of the tied face
+  - MISTAKE-214  # repeated nodes are not repeated score exponents
   - THM-1815  # NC2 pair-in-radical = transitivity Vandermonde = moment-matrix det (mac-mini)
   - THM-1805  # Vandermonde = signed tournament sum, transitive survive (klein)
   - THM-1925  # my signed partition = ∏(x_j-x_i) = product of sines (the same Vandermonde)
@@ -25,6 +27,12 @@ script: 04-computation/confluent_transitivity_vandermonde_boxeph_S203.py (+ .out
 ---
 
 # THM-2033 — the NC2 wall is the confluent transitivity Vandermonde
+
+> **Postscript (MISTAKE-214 / THM-2022).** The determinant and confluent-node
+> identities below remain valid. Do not identify repeated node values with
+> repeated tournament-score exponents: the later HYP-8785 regular/Paley step
+> made that type error. Full NC2 is now proved independently by THM-2022, whose
+> tied-face invariant is the Frobenius residue `Q^p`.
 
 ## The bridge in one diagram
 

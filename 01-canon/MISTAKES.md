@@ -7,6 +7,37 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-214 (2026-07-21, codex audit of HYP-8785/8790) -- repeated Vandermonde nodes were identified with repeated tournament scores and hence with a regular/Paley tournament
+
+- **What was claimed:** HYP-8785 asserted that equal radial channel degrees on
+  the NC2 central wall are equal scores in the tournament expansion of the
+  Vandermonde, hence a regular, doubly regular, or Paley tournament. HYP-8790
+  then promoted the true central-trinomial channel-weight identity to claimed
+  equivalences among NC2 noncancellation, Laguerre--Polya zero geometry, and the
+  Paley critical-line spectrum.
+- **Why it is wrong:** in
+  `V(x)=sum_T sgn(T)*x^score(T)`, the `x_i` are Vandermonde **node variables**
+  and `score_i(T)` are their **exponents**. Setting two node values equal does
+  not set two score exponents equal; it causes cancellation among the evaluated
+  monomials. The type mismatch already fails at the smallest tied core: for
+  symmetric `m=2` there are two equal-degree channels, while no regular
+  tournament exists on two vertices (the scores are `0,1`). More generally
+  tied channel counts have arbitrary parity, whereas regular tournaments need
+  odd order, doubly regular tournaments require order `3 mod 4`, and Paley
+  tournaments exist only at special prime-power orders. The identity
+  `sum_i m!/(i!^2(m-2i)!)=[x^0](1+x+x^-1)^m` is valid, but it does not imply the
+  stated Paley/free-probability/zero-set equivalences.
+- **Correct framing:** retain THM-2033's determinant/Vandermonde identity and
+  HYP-8790's central-trinomial coefficient identity. Confluence means repeated
+  **nodes** and calls for divided differences or derivative rows; regularity is
+  a property of a tournament's **score vector** and is not forced. Paley and
+  free-probability parallels may be used as analogies, not iff reductions or an
+  identification of the NC2 wall. THM-2022 supplies the actual tied-face
+  certificate: after common-factorial normalization the whole face survives as
+  `Q^p`, with no tournament-score interpretation required.
+
+---
+
 ## MISTAKE-213 (2026-07-21, codex proportional-NC2 audit) -- finite toral-zero recurrence was treated as necessary to combine an exact factorization with EMP
 
 - **What was claimed:** the first THM-2021/HYP-8771 write-up said that

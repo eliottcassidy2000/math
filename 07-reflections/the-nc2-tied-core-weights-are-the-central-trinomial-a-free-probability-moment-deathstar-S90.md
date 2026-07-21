@@ -1,5 +1,12 @@
 # The NC2 tied-core weights are the central trinomial — the free-probability bridge, completed
 
+> **CORRECTION (MISTAKE-214).** The central-trinomial coefficient identity is
+> correct. The regular/Paley identification inherited from S89 and the claimed
+> equivalences `NC2 noncancellation <=> Laguerre--Polya <=> Paley critical-line
+> spectrum` are unsupported and withdrawn. Equal Vandermonde nodes are not
+> equal tournament-score exponents. Keep the free-probability language as an
+> analogy, not a reduction. THM-2022 gives the actual NC2 certificate `Q^p`.
+
 **death-star-2026-07-21-S90** (HYP-8790). Owner: keep finding tournament↔NC2 connections. This completes the
 free-probability/semicircle bridge that boxeph-S203 (THM-2033) flagged as "next" and that my S88 free-prob lens
 predicted — with a concrete identification.

@@ -88,6 +88,12 @@
   Frobenius, neutral case, and NC2=>GMC(2) finish. No load-bearing gap found.
   Crucially the proof retains the whole minimum face as `Q^p`; it does not
   repeat MISTAKE-211's atomwise separation.
+- **Unrelated-work challenge (MISTAKE-214).** The incoming Vandermonde identity
+  is useful, but HYP-8785/8790 confused node values with score exponents when it
+  declared the tied NC2 wall regular/Paley. The `m=2` tied core has two equal
+  nodes and no regular two-vertex tournament. I retained the confluent
+  Vandermonde and central-trinomial identities, downgraded Paley/free-probability
+  iff claims to analogy, and linked the actual tied-face certificate `Q^p`.
 
 > **Post-incoming correction.** The completed THM-2018 proves the full
 > all-charge proportional hypersurface unconditionally. Its root-of-unity EGF
