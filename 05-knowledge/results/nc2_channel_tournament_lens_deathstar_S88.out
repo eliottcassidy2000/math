@@ -1,0 +1,25 @@
+LENS: the NC2 radial-channel tournament (i->j iff channel_i dominates)
+==================================================================
+
+[A] DEGREE-GAP: P=Z*(s^2)+ (1) + W*(s^2)  (deg h large, deg B=0): STRICT domination
+  m=6: dominant channel i=3 (|val| ratio to others >> 1: ['9580032000', '13305600', '2640']) -> clear source = TRANSITIVE
+  m=8: dominant channel i=4 (|val| ratio to others >> 1: ['1464595292160000', '1089728640000', '86486400', '5460']) -> clear source = TRANSITIVE
+  m=10: dominant channel i=5 (|val| ratio to others >> 1: ['613091306060513280000', '283838567620608000', '12067966310400', '304746624', '9302']) -> clear source = TRANSITIVE
+
+[B] RESONANCE (central offset): P=Z*(1+s)+(1+s)+W*1: channels COMPARABLE
+  m=6: top/second ratio = 1.70 (near 1 => TIED/regular channels)
+  m=8: top/second ratio = 1.33 (near 1 => TIED/regular channels)
+  m=10: top/second ratio = 1.09 (near 1 => TIED/regular channels)
+
+UNIFYING READING:
+ * DEGREE-GAP  => channel tournament is TRANSITIVE (one dominant channel = source).
+   A transitive tournament is the S75 nullcone VERTEX; the dominant channel's sign
+   survives, so E[P^m] != 0: NONCANCELLATION. This is codex THM-2017 ('one endpoint
+   ratio one') seen as tournament transitivity.
+ * RESONANCE  => channels TIE (comparable) = a REGULAR/balanced sub-tournament =
+   THE WALL (S84 'regular/Paley is the tightest case', S75 Paley pole). Cancellation
+   is only possible here, and only if the tied channels' SIGNS+phases conspire.
+ * SO NC2's residual = 'the channel tournament, even in its regular (tied) core,
+   does not produce exact cancellation' -- the SAME transitive(easy)-vs-regular(hard)
+   dichotomy as H>=disc and LRC. The moment-nullcone IS a tournament-nullcone on
+   its channels; the open case is always the regular-channel wall.

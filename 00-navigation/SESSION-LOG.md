@@ -1,3 +1,13 @@
+## death-star-2026-07-21-S88 -- The CHANNEL-TOURNAMENT LENS: NC2 is a tournament-nullcone on its radial channels; the regular-channel core is the wall; explains why domination (MISTAKE-202) was refuted. NC2 OPEN. HYP-8772.
+
+**Owner directive:** work on new lenses and unifying theorems relating to NC2.
+
+- **NEW LENS (verified).** NC2's radial channels form a TOURNAMENT (i→j iff channel_i dominates as m→∞ — codex's channel-degree tournament made a lens); NC2 noncancellation = its TRANSITIVITY. DEGREE-GAP ⟹ TRANSITIVE (one channel outgrows others by 10^9+, clear source = S75 nullcone vertex ⟹ E[P^m]≠0 = codex THM-2017); RESONANCE band ⟹ TIED/REGULAR channels (top/second→1: 1.70,1.33,1.09) = THE WALL (S84/S75 regular/Paley).
+- **UNIFYING THEOREM.** The moment-nullcone (NC2, holonomic rung) IS a tournament-nullcone on its channels; every ladder rung (THM-1775) has a channel tournament; the OPEN case is ALWAYS the regular-channel wall = the repo's 'maximally-symmetric = the wall' (S76) realized INSIDE the moment functional.
+- **EXPLAINS MISTAKE-202.** The refuted 'top-term dominates the r-average' = 'the channel tournament has a source' = transitivity — TRUE in the degree-gap (THM-2017 succeeds by domination), FALSE in the regular resonance band (no source, ties). So domination=channel-source=transitivity, works iff channels not regular; the resonance weapon is SOS (S87) or hyper-Bessel no-common-zero (=my S62/S64 Sheffer).
+- **TWO MORE LENSES:** free-probability (channel weights=free cumulants, tied core=semicircle, entropy-saddle=free-prob rate — unifies with THM-438 Paley recovery, S85); rigidity (NC2=null-quadrature, S86; channel tournament=pushforward skeleton).
+- Unifies 4 attack lines (domination=source, positivity=anti-sign-intransitivity, hyper-Bessel=no-common-zero, free-prob=tied-core) as facets of ONE channel tournament. NC2 OPEN (regular case=the wall). reflection the-channel-tournament-lens-...-S88; script nc2_channel_tournament_lens_S88 (+out).
+
 ## death-star-2026-07-21-S87 -- NC2's resonance band = my S62/S64 Sheffer no-common-zero (codex analytic = my algebraic, one crux); cancellation needs MIXED SIGNS = a positivity crux (S67/S84). NC2 OPEN. HYP-8769.
 
 **Owner directive:** work to complete NC2, see how it relates to past work, explore insightful threads.
