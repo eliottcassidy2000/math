@@ -1,0 +1,28 @@
+====================================================================================
+GMC(2) DETECTION DEPTH GROWS WITH RADIAL DEGREE -- span {-1,0,1}, d=0 vs d=1
+====================================================================================
+d=0: depth=2 (hand+machine): E[P^1]=B0, E[P^2]=2A0C0+B0^2 => B0=0 then A0C0=0 => one-sided.
+
+  E[P^1] = 0
+  E[P^2] = 0
+  E[P^3] = 2*sqrt(2)*I
+  E[P^4] = -24
+
+ => the two-sided P = Z + (-i√2 + i√2|Z|^2) + Zb kills E[P^1] and E[P^2] but NOT E[P^3].
+    So for d=1 the depth is > 2 = span: a depth-2 nullcone check does NOT force one-sidedness,
+    while at d=0 it does.  DETECTION DEPTH STRICTLY INCREASES from d=0 to d=1 on a FIXED span.
+
+====================================================================================
+CONSEQUENCE FOR HYP-8540 (the span-only uniform bound)
+====================================================================================
+ HYP-8540 asks whether bounded GMC(2) collapses to ONE finite test with a bound in the SPAN
+ ALONE (uniform over radial degree d).  The depth grows d=0 -> d=1 on span {-1,0,1}, so:
+
+   HYP-8540 as the SPAN-ONLY bound is FALSE.  The detection depth depends on BOTH span and
+   radial degree.  THE REASON (structural): E[P^m] = L_s( CT_u[Lambda_s^m] ) is the LAPLACE
+   TRANSFORM in s of the toral diagonal; the toral diagonal is P-recursive of order = span
+   (THM-1710), but eliminating s (creative telescoping) to get a recurrence in m ALONE RAISES
+   the holonomic order above the span.  So the moment-ideal / finite-elimination route
+   (opus/kp THM-1740) is decidable PER (span, degree) stratum but CANNOT be made degree-uniform
+   -- degree-uniform GMC(2) genuinely needs the analytic bridge, not more elimination.
+

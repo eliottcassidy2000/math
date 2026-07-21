@@ -1,0 +1,23 @@
+============================================================================================
+HOLONOMIC ORDER of E[P^m] vs (charge span, radial degree d) -- for random locked two-sided P
+============================================================================================
+           charges  span   d    M   holonomic order (2 random P)
+        [-1, 0, 1]     2   0   40                         [2, 2]
+        [-1, 0, 1]     2   1   40                   [None, None]
+        [-1, 0, 1]     2   2   40                   [None, None]
+        [-1, 0, 1]     2   3   40                   [None, None]
+           [-1, 1]     2   0   40                         [2, 2]
+           [-1, 1]     2   1   40                   [None, None]
+           [-1, 1]     2   2   40                   [None, None]
+    [-2, -1, 1, 2]     4   0   40                         [5, 5]
+    [-2, -1, 1, 2]     4   1   40                   [None, None]
+ [-2, -1, 0, 1, 2]     4   0   40                         [5, 5]
+ [-2, -1, 0, 1, 2]     4   1   40                   [None, None]
+        [-2, 0, 2]     4   0   40                         [3, 3]
+    [-3, -1, 1, 3]     6   0   40                         [2, 2]
+
+ READING: THM-1710 gives toral (d=0) order = span.  If the order stays = span as d grows
+ (constant down each fixed-charges block), the HOLONOMIC ORDER IS SPAN-UNIFORM -> HYP-8540 holds
+ -> GMC(2) for ALL bounded-span P at every radial degree.  If it grows with d, the radial layer
+ needs strictly more than the toral depth and HYP-8540 (span-only bound) is FALSE.
+
