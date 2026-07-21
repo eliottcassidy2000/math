@@ -25,8 +25,11 @@ LRC14 finish-maps. Corrections welcome via court case.*
 > the proof at the *selected amplified level*: after division by `(p*A0)!`,
 > the residue—not the factorial background—carries the obstruction. This does
 > **not** make `(p*A0)!` a common factor for every channel at every moment;
-> that broader incoming formulation is an overclaim under correction.
-> THM-2022 needs and proves only the exact good-prime level statement.
+> that broader incoming formulation is withdrawn in MISTAKE-215. THM-2041 and
+> HYP-8800 now test the honest transfer: Frobenius may preserve a complete
+> exact-period layer, but another problem must separately supply its nonzero
+> base certificate. THM-2022 needs and proves exactly that pair of facts for
+> the Gaussian lowest face.
 > Thus the incoming work survives as a structural/asymptotic interpretation;
 > the Frobenius proof supplies the missing universal noncancellation theorem.
 

@@ -24,6 +24,8 @@ related:
   - THM-2020
   - THM-2033
   - THM-2040
+  - THM-2041
+  - HYP-8800
   - HYP-8765
 script: 04-computation/gmc2_frobenius_lowest_face_codex_20260721.py
 output: 05-knowledge/results/gmc2_frobenius_lowest_face_codex_20260721.out
