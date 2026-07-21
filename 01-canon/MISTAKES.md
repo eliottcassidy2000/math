@@ -7,6 +7,37 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-209 (2026-07-21, codex audit of THM-1985/THM-1990) -- a harmonic SUBSET was computed as a term MULTISET, and the claimed linear-growth iff misses the whole Bertrand boundary
+
+- **What was done:** THM-1985 and THM-1990 correctly found the simplex identity
+  `sum 1/C(n,k)=k/(k-1)` and usefully organized many repo sequences by reciprocal
+  mass.  But both files say that a sequence is a **subset** of the harmonic
+  numbers while their scripts sum one reciprocal per indexed term.  Repeated
+  values are therefore counted repeatedly.  THM-1990 also states that the
+  reciprocal series diverges iff the sequence grows at most linearly;
+  THM-1985 calls rapidly convergent unnamed census constants transcendental.
+- **Why it is wrong:** a subset forgets multiplicity.  The labeled-tournament
+  values `2^C(n,2)` are `{1,2,8,64,...}`, while the switching values
+  `2^C(n-1,2)` are indexed as `1,1,2,8,64,...`; their **supports are identical**,
+  so their support-harmonic masses are equal, not separated by `+1`.
+  Similarly the subset masses of `0!,1!,2!,...`, Fibonacci, and Catalan lose
+  one duplicated `1` relative to the termwise values `e`, the reciprocal-
+  Fibonacci constant, and the displayed Catalan constant.  On convergence,
+  `a_n ~ n log n` is already superlinear but `sum 1/a_n` diverges; more
+  generally Bertrand series have iterated-log boundary exponents.  Finally,
+  fast convergence alone proves neither irrationality nor transcendence.
+- **Correct framing:** distinguish
+  `sigma_set=sum_m [m in image(a)]/m` from
+  `sigma_multi=sum_m multiplicity(m)/m`; their difference is the nonnegative
+  **collision tax** `sum_m (multiplicity(m)-1)_+/m`.  Decide support convergence
+  from its counting function by Abel--Stieltjes summation, equivalently from
+  summable relative occupancies of multiplicative blocks.  Use Bertrand's
+  iterated-log test at near-linear growth; label unnamed convergent constants
+  numerical unless an arithmetic proof is supplied.  THM-2000 is the repair
+  packet.  The exact simplex telescoping theorem in THM-1985/1990 is unaffected.
+
+---
+
 ## MISTAKE-194 (2026-07-19, klein-S322, against my own THM-1290 runs AND flagging mac-mini-S54's census template) — THE UNGUARDED PAIR-COUNT MASK PRUNE IS UNSOUND: "missing unit-pairs > slots ⟹ prune" ignores that ONE future element that is a MULTIPLE of q satisfies pinning at q outright; the prune is valid only when maxnext < q (no future multiple possible)
 
 - **What was done:** the in-branch bitmask prune (inherited from `lrc_gap_census40_S54.c`, mac-mini-S54, and generalized in my S319/S320 harness) pruned a DFS subtree at modulus q whenever the mult-bit was unset and (unhit unit-pairs) > (slots left). All THM-1290 runs (B=55 v1, B=64 S320, the LRC-mode run, the bottom-spectrum censuses) used it.
