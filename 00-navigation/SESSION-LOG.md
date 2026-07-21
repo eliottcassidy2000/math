@@ -1,3 +1,35 @@
+## opus-2026-07-20-S447 - Reciprocal sums = the harmonic-scale face of the poly/#P tower (THM-1985)
+
+Owner: the reciprocal of an integer sequence is a subset of the harmonic numbers; study sum 1/a_n
+for as many repo sequences as possible; figurate reciprocals (triangular=2), Abel-Dini, Bertrand;
+1+1/2+..+1/5 > 2 already while sum 1/triangular = 2.
+
+THM-1985: a sequence's GROWTH (its poly-tower position) = its reciprocal sum's CONVERGENCE. THREE
+STRATA. (1) FIGURATE invariant-SIZES = char_S coefficients (THM-1920): sum_{n>=k} 1/C(n,k)=k/(k-1)
+(exact k=2..6). Tournament sizes -> RATIONALS: arc=C(n,2)=triangular => sum 1/arc = 2 (the Downey-
+Ong-Sellers triangular identity realized on the tournament -- the char_S subleading series sums to
+exactly 2); c3max=C(n,3)->3/2; var-max=2C(n,3)->3/4. Degree-k invariant -> reciprocal-sum k/(k-1).
+(2) COUNTING seqs (super-exp) -> fast transcendentals: sum1/A000568=2.8535, sum1/A038375=2.6293,
+sum1/A051337=2.198, sum1/A002854=1.062; Cayley-Dickson sum1/(2^k+1)=0.7645 (Erdos-Borwein cousin),
+H=1+2^(n-2) SC-neighbor -> 1.2645. (3) H-VALUE spectrum (odds minus {7,21}, THM-1370) ~linear =>
+sum 1/H-value DIVERGES (harmonic-slow) = H's VALUE SET sits at the convergence/divergence boundary =
+the reciprocal-sum face of THM-1970's formula/#P edge. ABEL-DINI: no series at the exact boundary =
+kps THM-1980's 'Redei parity is the last formula'. BERTRAND boundary = sum 1/(n ln n).
+
+THE PICTURE: rational k/(k-1) [figurate invariant sizes, poly, deep convergence] | transcendental
+[counting sequences, the census] | DIVERGES [H-value spectrum, #P, the edge]. The reciprocal sum is
+the harmonic-scale coordinate that recovers the poly/#P tower.
+
+Concurrent: a background agent is sweeping the full repo sequence list (30+ OEIS A-numbers, growth
+rates, existing harmonic/gamma appearances like THM-805 resistance=harmonic-number) -- findings fold
+into THM-1985 next session.
+
+OPEN: identify the counting constants (2.85, 2.63 -- e/pi/new?); the H-value density c in c*ln x;
+Bertrand-scale repo sequences.
+
+Files: THM-1985; HYP-8745; reciprocal_sums_of_repo_sequences_opus_S447.py (+out). Namespace clean
+(1985/8745). Cites THM-1920/1930/1970/1975/1370, kps THM-1980, Downey-Ong-Sellers.
+
 ## kind-pasteur-2026-07-21-S128c144 - The figurate reciprocal ladder and the harmonic edge: our sequences as sub-series of the harmonic series (THM-1990)
 
 Owner: reciprocal of an integer sequence = a subset of the harmonic numbers; 1+1/2+..+1/5 > 2 while
