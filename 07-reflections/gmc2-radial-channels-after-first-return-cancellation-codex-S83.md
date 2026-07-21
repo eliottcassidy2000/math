@@ -120,6 +120,34 @@ resummation boundary.
 
 ## The corrected endgame
 
+An incoming proof after the first checkpoint closes the analytic exterior of
+the three-weight problem. THM-2017 treats
+
+\[
+P=Z^pa(U)+b(U)+W^qc(U)
+\]
+
+with primitive return length \(r=(p+q)/\gcd(p,q)\) and primitive-return
+polynomial \(h\). Its exact channel formula shows that one return block gains
+\(r\) multinomial powers. A factorial-face deficit therefore separates all
+channels uniformly once
+
+\[
+|\deg h-r\deg b|\ge r+1.
+\]
+
+At the sharp equality, the whole boundary layer converges to an explicit
+hyper-Bessel function, so generic leading coefficients are also closed. In the
+symmetric monomial model, a universal \(1/m\) Bessel-derivative correction is
+nonzero at every zero of the leading limit and closes the exceptional set too.
+
+The unresolved single-pair geometry is the finite resonance band
+\(|\deg h-r\deg b|\le r\), where endpoints resum to hyper-Bessel functions or
+an interior entropy saddle. THM-2014 supplies extra closure inside that band for
+the constant-endpoint \(p=q=1\) model. This incoming theorem validates the
+entropy-corrected degree-gap principle and sharply separates it from the
+many-circuit radical problem below.
+
 Exact computation now falsifies a universal (2R) cutoff but suggests the
 rank-sensitive replacement
 

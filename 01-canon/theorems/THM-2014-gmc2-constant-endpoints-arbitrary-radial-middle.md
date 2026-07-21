@@ -10,6 +10,8 @@ related:
   - THM-1515  # broader {-1,0,1} claim; its published dominance proof is not used here
   - THM-1835  # Bessel/I0 identity; its abstract A2 does not supply this asymptotic
   - HYP-8765 # radial-channel return tower
+  - THM-2017 # subsequent arbitrary-charge/arbitrary-endpoint strict degree-gap theorem
+  - HYP-8766 # finite resonance band left by THM-2017
 ---
 
 # THM-2014 — constant charged endpoints and an arbitrary radial middle
@@ -210,6 +212,24 @@ radial-polynomial charged coefficients (A(U)W+C(U)Z). For that generalization th
 endpoint term is (H(U)=UA(U)C(U)), and the entropy boundary occurs when
 (\deg H\) lies within two of (2\deg b). That boundary, and collisions among several
 charge circuits, are the remaining radial-channel problem recorded in HYP-8765.
+
+THM-2017 subsequently generalizes the uniform part of this proof to
+\(P=Z^pa(U)+b(U)+W^qc(U)\). With primitive return length
+\(r=(p+q)/\gcd(p,q)\) and
+\(h=U^{pq/g}a^{q/g}c^{p/g}\), it closes every strict degree-gap case
+
+\[
+|\deg h-r\deg b|\ge r+1.
+\]
+
+At the sharp equality \(|\deg h-r\deg b|=r\), THM-2017 resums the full
+boundary layer to explicit hyper-Bessel limits, proving NC2 away from their
+discrete zero sets; for symmetric primitive charges with monomial \(b,h\), its
+first \(1/m\) correction also removes those exceptional zeros.
+
+Thus THM-2014 is both the \(p=q=1\), constant-endpoint model of that theorem
+for \(\deg b\ge2\) and an extra closure of its resonant degrees zero and one.
+HYP-8766 records the remaining finite-width resonance band.
 
 The proof deliberately does **not** use the invalid rule “the unique highest factorial
 term cannot cancel.” What matters is the quantitative gap after multinomial entropy is

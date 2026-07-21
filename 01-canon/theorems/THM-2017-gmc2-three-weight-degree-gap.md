@@ -176,7 +176,10 @@ xi = alpha/(beta^r d^r).
 
 For each fixed `k`, the `k`-channel divided by `L(b^m)` tends to
 `xi^k/((q0k)!(p0k)!)`: the multinomial gain `m^(rk)` exactly cancels the
-factorial loss `(dm)^(-rk)`. Estimate (6), now without its factor `m^-k`, is
+factorial loss `(dm)^(-rk)`. The EMP exponential constants also cancel:
+the next-coefficient/degree ratio for `h^k b^(m-rk)` and for `b^m` both tend
+to `b_(d-1)/(d beta)`, while the fixed `h^k` contribution is `O(k/m)`.
+Estimate (6), now without its factor `m^-k`, is
 a summable majorant independent of `m`; (7) still removes linear channels.
 Dominated convergence therefore proves
 
@@ -246,7 +249,10 @@ eta = (q0^q0 p0^p0/e^r) * (beta^r/alpha).
 For fixed `j`, the falling-factorial multinomial ratio contributes
 `q0^(q0j)p0^(p0j)n^(rj)/(rj)!`, the factorial degree contributes
 `(en)^(-rj)`, and the leading coefficients contribute
-`beta^(rj)/alpha^j`. The bound (12) at equality is again summable in `j`,
+`beta^(rj)/alpha^j`. The EMP exponential constants for
+`h^(n-j)b^(rj)` and `h^n` have the same limit
+`h_(e-1)/(e alpha)`; fixed `j` changes that ratio only by `O(j/n)`.
+The bound (12) at equality is again summable in `j`,
 and linear `j` remain superfactorially small. Hence
 
 ```text
@@ -271,7 +277,22 @@ xi^k/(k!)^2 * [1-(1-1/d)(2k)(2k-1)/(2m)+O_k(m^-2)],
 xi=alpha/(beta^2 d^2).
 ```
 
-The factorial majorant above permits termwise summation of this expansion.
+The summation needs a quantitative remainder, not dominated convergence alone.
+Put `K=m^(1/4)`. For `k<=K`, take logarithms of the exact product ratio
+
+```text
+(m)_(2k)/m^(2k) divided by (dm)_(2k)/(dm)^(2k).
+```
+
+Taylor's formula for `log(1-x)` gives the displayed first-order term with
+remainder bounded by `C(1+k)^4/m^2`, uniformly on this range. Multiplication
+by the factorial majorant `A^k/(k!)^2` and summation leaves `O(m^-2)`, because
+all polynomial moments of that majorant are finite. For
+`K<k<=epsilon m`, the same factorial majorant has tail
+`o(m^-N)` for every fixed `N`; the linear-channel tail is already
+`exp(-c m log m)`. Thus the termwise expansion really does sum with a global
+`O(m^-2)` remainder. Equivalently, the omitted tail of the finite partial sum
+defining `Phi` is factorially negligible.
 With `theta=xi d/dxi` and `Phi(xi)=sum xi^k/(k!)^2`,
 
 ```text
@@ -286,7 +307,8 @@ The Bessel equation is `theta^2 Phi=xi Phi`. If `Phi(xi)=0`, then
 E[P^m]/L(b^m) = ((d-1)/d) theta Phi(xi)/m+O(m^-2).
 ```
 
-Here `d>=2` (because `h` is a nonzero polynomial on this boundary), and
+Here `d>=2`: the definition of `h` contains the forced factor
+`s^(pq/g)`, so `e>=1`, and `e=2d-2` on this boundary. Also,
 `theta Phi(xi)!=0`: otherwise the second-order ODE with zero value and
 derivative at the ordinary point `xi` would force `Phi` to be identically
 zero. Thus the supposedly exceptional leading zero is detected one order
@@ -294,12 +316,21 @@ later.
 
 On the all-return boundary `e=2d+2`, write
 `eta=beta^2/(alpha e^2)` and `Psi(eta)=sum eta^j/(2j)!=cosh(sqrt(eta))`.
+For this paragraph redefine `theta=eta d/deta`.
 The exact normalized removed-return term gives
 
 ```text
 E[P^(2n)]/A_n
  = Psi(eta) + [(-1+2/e)theta^2+(1-1/e)theta]Psi(eta)/n+O(n^-2).       (16)
 ```
+
+Here the same cutoff with `J=n^(1/4)` applies. Taylor expansion of the two
+falling-factorial product ratios has remainder
+`C(1+j)^4/n^2` for `j<=J`; summing against `A^j/(2j)!` gives `O(n^-2)`,
+while the factorial-majorant tail beyond `J` is superpolynomially small.
+The omitted tail of the finite partial sum defining `Psi` is therefore
+factorially negligible. Together with (12) and its linear-channel estimate,
+this supplies the uniform remainder asserted in (16).
 
 Now `theta^2 Psi=(theta Psi)/2+(eta Psi)/4`. At a zero of `Psi`, the
 `1/n` coefficient in (16) is exactly `(theta Psi)/2`, which is nonzero by

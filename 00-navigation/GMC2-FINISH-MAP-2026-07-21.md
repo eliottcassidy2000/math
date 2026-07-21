@@ -26,8 +26,9 @@ LRC14 finish-maps. Corrections welcome via court case.*
 
 **NC2 / DvdEZ ⟹ GMC(2)**: if the nullcone `N₂={P:E[P^m]=0∀m}` is exactly the **charge-one-sided**
 polynomials (all charges ≥1, or all ≤−1, no charge-0-straddle), then GMC(2) holds by charge
-additivity (THM-1510 §C, THM-1535, THM-1830; Lean `mathieuZhao_of_charge_pos`, no `sorry`). So the
-entire problem is:
+additivity (THM-1510 §C, THM-1535, THM-1830; Lean `mathieuZhao_of_charge_pos`, no `sorry`).
+NC2 is a **stronger sufficient target**, not a proved reformulation equivalent to literal GMC(2).
+The repository's chosen NC2 route is therefore:
 
 > **PROVE: no two-sided `P` lies in the nullcone `N₂`.**  ("Two-sided" = has a positive-charge and a
 > negative-charge monomial.)
@@ -61,9 +62,9 @@ Polar bridge (THM-1645, verified exact): `E[P^m] = L( CT_u[Λ_s(u)^m] )`, `Λ_s(
 | bounded span ≤4 / bounded degree | THM-1725/1740/1660 | finite Gröbner, unconditional |
 | span-6 `{±1,±3}` constant | deathstar-S73 + codex | `E[P⁶]=466560(ad)³`, closed |
 
-## THE ONE RESIDUAL — the cross-shell descent
+## THE ONE RESIDUAL FOR THE NC2 ROUTE — the cross-shell descent
 
-After the above, the nullcone question is: **a two-sided `P` with ≥3 charges (≥2 colliding
+For this stronger NC2 target, the nullcone question is: **a two-sided `P` with ≥3 charges (≥2 colliding
 "atoms"/shells)**. Two equivalent forms:
 - **Combinatorial (THM-1780, corrected by MISTAKE-211):** if every
   **pair-straddle atom form** `c_p^{|n|/g}c_n^{p/g}` (`g=gcd(p,|n|)`) lies in

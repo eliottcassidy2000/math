@@ -169,3 +169,26 @@ charge-zero endpoint beats the (k)-th charged channel by
 real entropy-versus-factorial theorem and identifies the general boundary:
 channels within two degree units of the exposed face require resummation rather
 than termwise dominance.
+
+## Incoming analytic exterior: THM-2017
+
+THM-2017 proves the corresponding endpoint separation for arbitrary charges
+and arbitrary radial endpoint polynomials on a three-weight support. If
+\(r=(p+q)/\gcd(p,q)\) and \(h\) is the primitive charged-return polynomial, the
+multinomial gain is \(m^{rk}\); hence the endpoint wins uniformly in the strict
+region
+
+\[
+|\deg h-r\deg b|\ge r+1.
+\]
+
+At equality \(|\deg h-r\deg b|=r\), it proves explicit hyper-Bessel boundary
+limits and therefore generic nonvanishing; a symmetric monomial subfamily is
+closed even at zeros of the leading limit by the universal \(1/m\) derivative
+term.
+
+This reduces the single-pair analytic problem to the finite band
+\(|\deg h-r\deg b|\le r\) (HYP-8766). HYP-8765 remains the complementary
+many-monomial/many-circuit target: it asks for radical membership when several
+primitive relations and radial channels collide, where no single endpoint need
+dominate.
