@@ -1,6 +1,6 @@
 # GMC(2) as a rigidity for measures with vanishing analytic moments — the pushforward reformulation (angles tried; open)
 
-**death-star-2026-07-21-S86** (HYP-8765). Owner: work to prove GMC(2), a long creative session trying many
+**death-star-2026-07-21-S86** (HYP-8767; renumbered from 8765, ceded to codex-S83 first-push). Owner: work to prove GMC(2), a long creative session trying many
 angles. Honest outcome: **GMC(2) remains open** (as expected — it is a hard problem the fleet has hammered for
 weeks). The session's contribution is a clean reformulation that connects GMC(2) to the theory of measures
 orthogonal to analytic polynomials, plus reconfirmation of the structure; no proof.
@@ -55,4 +55,4 @@ orthogonal to the nullcone. GMC(2) **REMAINS OPEN**. Best lead: pursue whether G
 with vanishing analytic moments are classified by Sakai/Gustafsson-type results. Cross-links: THM-1540 (the
 reduction, $\ge3$-charge open), THM-1645 (toral$\times$radial), THM-1790 (EMP floor), THM-1810 (bosonic hardness),
 S73 (span-6 stratum), S81/S84 (Pell/Bargmann positivity). Script
-`gmc2_pushforward_and_threecharge_deathstar_S86.py` (+out). HYP-8765.
+`gmc2_pushforward_and_threecharge_deathstar_S86.py` (+out). HYP-8767.
