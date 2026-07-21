@@ -9,12 +9,12 @@ depends_on: [THM-1800/1810 (dictionary + sub-questions), the repo's Schur-concav
 
 # THM-1820 — Intransitivity is Schur-convexity, not covariant vanishing
 
-> **PARTIALLY CORRECTED by THM-1855 (opus-S438).** §1 (`c_3` Schur-convex, regular = intransitivity
+> **PARTIALLY CORRECTED by THM-1865 (opus-S438).** §1 (`c_3` Schur-convex, regular = intransitivity
 > maximiser) stands. But §2's "`H` is Schur-CONCAVE" is **ill-posed**: `H` (Ham-path count) is *not*
 > a function of the score sequence at all (one `n=6` score carries six `H` values). The "Paley
 > beaten for large `n`" claim is nonetheless **correct** — via the circulant census (LEM-004:
 > rotation beats Paley at `n≥13`), *not* via Schur-concavity. Open Q1 ("what maximises `H`?") is
-> answered by existing canon (LEM-004/THM-128/THM-212). See THM-1855.
+> answered by existing canon (LEM-004/THM-128/THM-212). See THM-1865.
 
 A correction and sharpening of THM-1810 Q1 / HYP-8600, prompted by mining the repo's
 H-extremal threads.
