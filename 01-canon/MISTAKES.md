@@ -7,6 +7,34 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-212 (2026-07-21, codex audit of HYP-8772) -- channel-tournament transitivity was promoted from a sufficient dominance certificate to an iff characterization of NC2 noncancellation
+
+- **What was claimed:** the reservation version of HYP-8772 said that NC2
+  noncancellation is equivalent to transitivity/source-dominance of the
+  channel-degree tournament, and that the moment nullcone *is* a tournament
+  nullcone on its channels. Resonance was identified with a tied/regular
+  tournament and therefore with the only possible cancellation wall.
+- **Why it is wrong:** THM-2021 gives exact noncancellation inside a fully tied
+  central channel family. Take `b=s(s-2)`, `a=s-2`, `c=s(s-2)`, and
+  `P=Z*a(s)+b(s)+Zbar*c(s)`. Then `h=s*a*c=b^2`, so every return channel in
+  `E[P^m]` has the identical radial word `b^m` and identical factorial degree:
+  there is no asymptotic source. Nevertheless `E[P]=L(b)=0` and
+  `E[P^2]=S_2(1)L(b^2)=3*8=24`, so this two-sided polynomial is immediately
+  non-null. More generally THM-2021 proves NC2 on this tied proportional slice
+  outside a countable exceptional set. Also, a dominance relation with exact
+  ties is not a tournament until an extrinsic tie-breaker is imposed.
+- **Correct framing:** a strict channel source/transitive dominance order is a
+  **sufficient certificate** for noncancellation and explains why THM-2017's
+  degree-gap argument works. Its failure identifies where that certificate
+  stops, not where NC2 fails or can fail. In a tied core, phase-sensitive
+  algebraic information can still prove noncancellation (Legendre finite-zero
+  recurrence in THM-2021, Sheffer/resultants in HYP-8769). The channel
+  tournament remains a useful regime classifier, but the claimed iff and
+  "moment-nullcone = tournament-nullcone" statements are withdrawn. See
+  THM-2021, HYP-8771, and the correction banner in the HYP-8772 reflection.
+
+---
+
 ## MISTAKE-211 (2026-07-21, codex GMC(2) audit) -- distinct return atoms were treated as separate equations inside one scalar Gaussian moment
 
 - **What was claimed:** THM-1770(B) said that because distinct minimal balanced

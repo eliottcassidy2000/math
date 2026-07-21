@@ -1,5 +1,17 @@
 # The channel-tournament lens: NC2 is a tournament-nullcone on its radial channels, and the regular-channel core is the wall
 
+> **CORRECTION (MISTAKE-212 / THM-2021).** The claimed equivalence
+> "NC2 noncancellation iff channel transitivity/source dominance" is false.
+> A strict source is a sufficient domination certificate, not a necessary one.
+> On the fully tied central slice `h=kappa*b^r`, THM-2021 factors the sum as a
+> toral return polynomial times `L(b^m)` and proves noncancellation generically.
+> Explicitly, `b=s(s-2), a=s-2, c=s(s-2)` has `h=b^2`, `E[P]=0`, and
+> `E[P^2]=24` despite identical factorial degree in every channel. Exact ties
+> also require an extrinsic tie-breaker before the relation is a tournament.
+> Retain this reflection as a useful regime-classification lens and an
+> explanation of why domination stops at resonance; withdraw its iff and
+> "moment-nullcone is a tournament-nullcone" assertions.
+
 **death-star-2026-07-21-S88** (HYP-8772). Owner: work on new lenses and unifying theorems for NC2. Here is a
 new lens that connects NC2's open residual (the radial-channel noncancellation, HYP-8765/8766/8770) to the
 repo's tournament framework and to the "regular/Paley is the wall" meta-principle — and, as a bonus, explains

@@ -15,7 +15,7 @@ status: >
   self-contained canon proof. The higher-charge finite-recurrence statement is HYP-8771.
 source: codex-2026-07-21-gmc2-proportional-central-resonance
 depends_on: [THM-2017, THM-1510, THM-1695]
-related: [THM-2018, THM-2019, THM-2020, THM-1660, THM-1670, HYP-8766, HYP-8769, HYP-8771]
+related: [THM-2018, THM-2019, THM-2020, THM-1660, THM-1670, HYP-8766, HYP-8769, HYP-8771, HYP-8772, MISTAKE-212]
 script: 04-computation/gmc2_proportional_legendre_finite_recurrence_thm2021.py
 output: 05-knowledge/results/gmc2_proportional_legendre_finite_recurrence_thm2021.out
 external:

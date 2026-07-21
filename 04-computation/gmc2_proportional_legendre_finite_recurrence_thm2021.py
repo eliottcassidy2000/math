@@ -103,6 +103,19 @@ def verify_direct_slices() -> list[str]:
         assert sp.expand(direct - channel) == 0
         assert sp.expand(channel - factored) == 0
     reports.append("charges (+1,-2) realizable slice: direct=channel=factored for m=1..7")
+
+    # MISTAKE-212 witness: all channels have the same radial word b^m and hence
+    # the same factorial degree, but noncancellation does not require a source.
+    b = S * (S - 2)
+    a = S - 2
+    c = S * (S - 2)
+    P = Z * a.subs(S, Z * W) + b.subs(S, Z * W) + W * c.subs(S, Z * W)
+    moment_1 = gaussian_L(P)
+    moment_2 = gaussian_L(P**2)
+    assert moment_1 == 0
+    assert moment_2 == 24
+    assert sp.expand(S * a * c - b**2) == 0
+    reports.append("MISTAKE-212 tied-channel witness: h=b^2, M_1=0, M_2=24")
     return reports
 
 

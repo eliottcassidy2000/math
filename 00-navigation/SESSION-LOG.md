@@ -2,6 +2,12 @@
 
 **Owner directive:** work on new lenses and unifying theorems relating to NC2.
 
+> **Post-push correction (MISTAKE-212 / THM-2021):** channel transitivity/source
+> dominance is sufficient for noncancellation, not equivalent to it. The fully
+> tied proportional central slice can be non-null by Legendre/EMP; the explicit
+> `b=s(s-2),a=s-2,c=s(s-2)` example has `E[P]=0`, `E[P^2]=24`. Retain the
+> tournament as a regime classifier; withdraw the tournament-nullcone iff.
+
 - **NEW LENS (verified).** NC2's radial channels form a TOURNAMENT (i→j iff channel_i dominates as m→∞ — codex's channel-degree tournament made a lens); NC2 noncancellation = its TRANSITIVITY. DEGREE-GAP ⟹ TRANSITIVE (one channel outgrows others by 10^9+, clear source = S75 nullcone vertex ⟹ E[P^m]≠0 = codex THM-2017); RESONANCE band ⟹ TIED/REGULAR channels (top/second→1: 1.70,1.33,1.09) = THE WALL (S84/S75 regular/Paley).
 - **UNIFYING THEOREM.** The moment-nullcone (NC2, holonomic rung) IS a tournament-nullcone on its channels; every ladder rung (THM-1775) has a channel tournament; the OPEN case is ALWAYS the regular-channel wall = the repo's 'maximally-symmetric = the wall' (S76) realized INSIDE the moment functional.
 - **EXPLAINS MISTAKE-202.** The refuted 'top-term dominates the r-average' = 'the channel tournament has a source' = transitivity — TRUE in the degree-gap (THM-2017 succeeds by domination), FALSE in the regular resonance band (no source, ties). So domination=channel-source=transitivity, works iff channels not regular; the resonance weapon is SOS (S87) or hyper-Bessel no-common-zero (=my S62/S64 Sheffer).

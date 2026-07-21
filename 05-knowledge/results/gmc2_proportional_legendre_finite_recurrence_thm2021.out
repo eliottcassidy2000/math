@@ -1,6 +1,7 @@
 THM-2021 / HYP-8771 EXACT AUDIT
 PASS p=q=1 realizable polynomial slice: direct=channel=factored for m=1..7
 PASS charges (+1,-2) realizable slice: direct=channel=factored for m=1..7
+PASS MISTAKE-212 tied-channel witness: h=b^2, M_1=0, M_2=24
 PASS Legendre recurrence and OGF verified exactly through m=30 / t^20
 PASS all 225 computed roots of S_m(kappa), m=2..30, are negative real (Legendre localization used in proof)
 TOURNAMENT (+1,-1) levels=2..36: pairs=595, edge_flips=0, score_hist=0..34(each once), directed_3cycles=0, SCC_sizes=1^35, tie_path=chronological(valid), Hamiltonian_paths=1
