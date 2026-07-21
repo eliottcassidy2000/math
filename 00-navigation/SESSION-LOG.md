@@ -60,6 +60,35 @@ lemma). The angular uniform levers exist (THM-1705, THM-1735); the radial one is
 lemma.
 
 **Artifacts:** THM-1740; HYP-8540; 1 script + output.
+## kind-pasteur-2026-07-20-S128c128
+
+**A creative unifying frame: the MOMENT-NULLCONE TEMPLATE. Three project pillars are one
+structure on a rational<algebraic<holonomic ladder. THM-1750 + reflection.**
+
+- THE FRAME: an invariant phi(X^m) = projection of the m-th power onto the trivial component
+  of a symmetry G (a MOMENT); F(t)=sum phi(X^m)t^m is recurrence-governed; the NULLCONE
+  {phi(X^m)=0 for all m} is detected at finite DEPTH = recurrence order = where F collapses to
+  its trivial value.
+- THREE INSTANCES, one ladder: (T) TOURNAMENT phi=trace, F=-t(log det(I-tA))' RATIONAL,
+  nullcone=TRANSITIVE(nilpotent), depth n, recurrence=CAYLEY-HAMILTON -- VERIFIED transitive
+  <=> tr(A^k)=0 for k<=n over ALL tournaments n=3..7, char-poly recurrence n=5,6,7.
+  (Lambda) TNC phi=CT, F ALGEBRAIC, one-sided, depth D (THM-1710). (G) GMC(2) phi=E, F
+  HOLONOMIC (polar bridge THM-1645), charge-one-sided, depth K (THM-1740).
+- EXACT NOT ANALOGICAL: Cayley-Hamilton IS the rational case of the holonomic recurrence, so
+  THM-895 (lambda=0<=>transitive) and THM-1740 (GMC moment-nullcone) are the SAME theorem at
+  two ends of {rational,algebraic,holonomic}; detection depth = arithmetic complexity of F.
+  The recent GMC/TNC machinery is the project's own tournament tool (Newton+Cayley-Hamilton)
+  off the rational floor.
+- Nullcone = most degenerate object (transitive/one-sided/charge-one-sided = F->constant).
+  Roots-of-unity = ONE thread (regular-tournament Gauss-sum spectra on Re=-1/2 THM-1555; TNC
+  roots-of-unity singular indices THM-1720/1725; GMC = U(1) average). Burnside A000568 =
+  second tournament projection.
+- A LENS, not a new proof of TNC/GMC. Lands recent work back onto the tournament CORE.
+
+Handoff/named-next: (1) place H itself (OCF=I(Omega,2)) on the ladder -- THM-133 lead; (2) LRC
+rung -- is the tight-AP locus a nullcone in a moment functional from THM-894's resonance
+matrix? (3) a Lean MomentNullcone interface with zeros_propagate as the shared engine.
+
 ## death-star-2026-07-20-S72 -- The composition-mode ladder on the triangle: +,×,!,^ unify figurate numbers with the tournament spectra (HYP-8555)
 
 **Owner:** relate recent Ham/arb spectra to the triangular-number extension frames; invent more; procedurally analyze.

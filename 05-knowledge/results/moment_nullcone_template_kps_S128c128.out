@@ -1,0 +1,31 @@
+========================================================================================
+(1) TOURNAMENT INSTANCE: transitive <=> tr(A^m)=0 for m=1..n  (detection depth n)
+========================================================================================
+  phi = trace; nullcone = {A : tr(A^m)=0 for all m} = nilpotent = TRANSITIVE.
+  Cayley-Hamilton caps the depth at n: the char poly gives tr(A^m) for m>n from m<=n.
+
+  n=3 (8 tournaments): [tr_k=0 for k<=n] => [tr_k=0 all k] : True ; transitive<=>nullcone : True
+  n=4 (64 tournaments): [tr_k=0 for k<=n] => [tr_k=0 all k] : True ; transitive<=>nullcone : True
+  n=5 (1024 tournaments): [tr_k=0 for k<=n] => [tr_k=0 all k] : True ; transitive<=>nullcone : True
+  n=6 (4000 tournaments): [tr_k=0 for k<=n] => [tr_k=0 all k] : True ; transitive<=>nullcone : True
+  n=7 (4000 tournaments): [tr_k=0 for k<=n] => [tr_k=0 all k] : True ; transitive<=>nullcone : True
+
+========================================================================================
+(2) THE GENERATING FUNCTION IS RATIONAL, and its recurrence IS Cayley-Hamilton
+========================================================================================
+  F(t)=sum_m tr(A^m) t^m obeys the char-poly recurrence; poles at 1/lambda_i.
+  n=5 : Cayley-Hamilton recurrence tr_k = -sum c_i tr_{k-i} for k>n holds : True
+  n=6 : Cayley-Hamilton recurrence tr_k = -sum c_i tr_{k-i} for k>n holds : True
+  n=7 : Cayley-Hamilton recurrence tr_k = -sum c_i tr_{k-i} for k>n holds : True
+  So the tournament moment sequence sits at the RATIONAL floor of the hierarchy,
+  detection depth = n = matrix size.  TNC (THM-1710) is one level up (ALGEBRAIC,
+  depth D = charge span); GMC(2) (THM-1740) one more (HOLONOMIC, depth K ~ span).
+
+========================================================================================
+(3) THE NULLCONE = GENERATING-FUNCTION DEGENERATION, in all three
+========================================================================================
+  tournament: transitive <=> det(I - tA) = 1 <=> F(t) = 0     (all lambda_i = 0)
+  TNC       : one-sided  <=> F(t) = 1 (constant)              (the small-branch sum trivial)
+  GMC(2)    : charge one-sided <=> E-series trivial past m=0   (charge threshold)
+  One template: the nullcone is where the moment generating function collapses to its
+  trivial value, detected at the finite depth set by the GF's arithmetic class.
