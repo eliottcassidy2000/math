@@ -26,6 +26,12 @@ Format per entry:
   `a_n ~ n log n` is already superlinear but `sum 1/a_n` diverges; more
   generally Bertrand series have iterated-log boundary exponents.  Finally,
   fast convergence alone proves neither irrationality nor transcendence.
+  THM-1985 has two further independent errors: the repo contains conflicting
+  duplicate `THM-1370` IDs, and the tournament file proves the omissions
+  `7,21` plus finite coverage, while completeness of the Hamiltonian-path
+  value spectrum (all other odds) remains conjectural; and
+  `C(n,3)` counts all triple slots, not the maximum cyclic triples.  The latter
+  is `n(n^2-1)/24` for odd `n` and `n(n^2-4)/24` for even `n`.
 - **Correct framing:** distinguish
   `sigma_set=sum_m [m in image(a)]/m` from
   `sigma_multi=sum_m multiplicity(m)/m`; their difference is the nonnegative
@@ -34,7 +40,10 @@ Format per entry:
   summable relative occupancies of multiplicative blocks.  Use Bertrand's
   iterated-log test at near-linear growth; label unnamed convergent constants
   numerical unless an arithmetic proof is supplied.  THM-2000 is the repair
-  packet.  The exact simplex telescoping theorem in THM-1985/1990 is unaffected.
+  packet.  Its exact tournament replacement is
+  `sum_(n>=3)1/M_3(n)=75/4-24 log 2`.  Any use of the proposed complete
+  Hamiltonian-path spectrum must be labeled conditional.  The exact simplex
+  telescoping theorem in THM-1985/1990 is unaffected.
 
 - **Two further audit corrections:** THM-1370 proves that `7,21` are omitted
   for all `n` and that every other odd value through `609` occurs by `n=8`; it
