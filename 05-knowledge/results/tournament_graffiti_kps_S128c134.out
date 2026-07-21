@@ -1,0 +1,42 @@
+computing tournament invariants over n=3..6 ...
+  tournaments: 33864
+
+========================================================================================
+SURVIVING PAIR INEQUALITIES  target <= a*source + b  (a in {1/2,1,2,3}, tight)
+========================================================================================
+  dom    <= 3*scc    - 1     [equality on 22890 tournaments]
+  n      <= 3*scc    + 3     [equality on 22320 tournaments]
+  srange <= scc    + 2     [equality on 21840 tournaments]
+  smax   <= scc    + 3     [equality on 20544 tournaments]
+  beta   <= smax   + 1     [equality on 14552 tournaments]
+  srange <= smax           [equality on 6502 tournaments]
+  smax   <= n      - 1     [equality on 6502 tournaments]
+  dom    <= 3*kings  - 2     [equality on 6502 tournaments]
+  smax   <= 3*kings  + 2     [equality on 6144 tournaments]
+  smax   <= 3*dom    + 2     [equality on 6144 tournaments]
+  n      <= 3*smin   + 6     [equality on 6144 tournaments]
+  n      <= 3*kings  + 3     [equality on 6144 tournaments]
+  n      <= 3*dom    + 3     [equality on 6144 tournaments]
+  n      <= 3*arb0   + 6     [equality on 6064 tournaments]
+  smax   <= srange + 2     [equality on 5208 tournaments]
+  n      <= smax   + 3     [equality on 5208 tournaments]
+  smax   <= 3*arb0   + 5     [equality on 5120 tournaments]
+  smin   <= 3*scc    - 1     [equality on 5064 tournaments]
+  c3     <= smin   + 6     [equality on 5040 tournaments]
+  beta   <= 3*scc    + 2     [equality on 5040 tournaments]
+  dom    <= 3*smin   + 2     [equality on 4392 tournaments]
+  srange <= beta           [equality on 3160 tournaments]
+
+========================================================================================
+REFUTED 'obvious' bounds, with the tournament WITNESS (WOWII-style)
+========================================================================================
+  FAILS: H <= arb0                first witness n=3 c3=0 H=1 beta=3 arb0=0 scc=3
+  FAILS: H >= arb0                first witness n=3 c3=0 H=1 beta=3 arb0=2 scc=3
+  HOLDS on all n<=6 : c3 <= H   (candidate theorem)
+  HOLDS on all n<=6 : beta >= n - c3   (candidate theorem)
+  FAILS: kings >= scc             first witness n=3 c3=0 H=1 beta=3 arb0=0 scc=3
+  HOLDS on all n<=6 : H <= 2^(n-2)*c3 + 1   (candidate theorem)
+
+  The 3-cycle-atom family (THM-1830: transitive skeleton + one 3-cycle) is the
+  tournament analog of WOWII-103's triangle+leaves witness -- a tunable non-transitive
+  obstruction for breaking tight tournament-invariant bounds.

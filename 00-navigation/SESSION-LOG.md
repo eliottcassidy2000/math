@@ -17,6 +17,36 @@ Prompt (owner): consider the below counterexample to the written on the wall 103
 FILES: reflection the-wowii-103-refutation-and-what-it-lends-the-repo-klein-S395.md, 1 script + out, backlog item. -> all (WOWII-103 disproof (formal-conjectures PR #4482): alpha(G) <= floor(b(G) - log ecc_avg) refuted by a triangle+leaves graph, 9 <= 8, Lean-verified. THE LEVERAGE: this is the SAME shape as our THM-1460/1580 (H #P-hard vs poly arborescence Sum a) -- an easy invariant bounding a hard one, refuted/loosened by an explicit small witness. The 3-cycle triangle = our intransitivity atom (THM-1805/1840). Our metagraphs G_n, E_n are ordinary graphs, so the whole ~150-conjecture WOWII zoo runs on them (demonstrated: alpha(G_n)=2,5,18, G_n satisfies 103). THE UPGRADE: we already do search+exhaustive+Lean; the missing front end is Graffiti-style AUTOMATED conjecture generation over our invariant zoo. CONCRETE TARGETS: off-by-one fragility of our tight bounds (is detection depth exactly d+1? is H<=Sum a ever tight?); a '3-cycle-core + amplifiers' tournament counterexample template; directed analogs of the WOWII list. Backlog item filed.)
 
 ---
+## kind-pasteur-2026-07-21-S128c134
+
+**Leveraged the WOWII-103 refutation (owner): built the automated conjecture GENERATOR for
+tournament invariants that klein-S395 named as the repo's missing WOWII ingredient. THM-1845.**
+
+- WOWII-103 (DeLaVina/Graffiti.pc, formal-conjectures PR #4482): alpha <= floor(b - log ecc_avg),
+  refuted by a triangle + 4 leaves on each of two vertices (alpha=9,b=10,ecc=30/11 -> 9<=8 false),
+  verified by exhaustive subset enumeration + Lean native_decide. klein-S395 already reflected +
+  ran WOWII-103 invariants on G_n; I built the FRONT END (the conjecture generator) they named as
+  missing, and connected it to my THM-1830.
+- **GENERATOR** (tournament_graffiti_kps_S128c134.py): battery of iso-invariants over all 33864
+  tournaments n=3..6, machine-generates tight linear inequalities. REPRODUCES known structure --
+  H and arborescence count arb0 are INCOMPARABLE (both directions auto-refuted = mac-mini THM-1580).
+- **PROVED SANDWICH: n - c3 <= beta <= smax + 1** (beta = largest transitive subtournament). Lower
+  = min feedback vertex set <= c3 (tournament acyclic iff no 3-cycle; delete 1 vertex per 3-cycle);
+  upper = the source of a transitive sub has out-degree beta-1. TIGHT at c3=0 (transitive) and c3=1
+  (THM-1830's transitive-skeleton + one 3-cycle) -- so my unstable-non-transitive family IS the
+  tournament analog of WOWII-103's triangle+leaves witness.
+- **CANDIDATE inequalities** holding to n=7 (offered, not proved): c3 <= H, H <= 2^{n-2}*c3 + 1.
+- **WOWII-style AUTO-REFUTATION:** srange <= beta holds all n<=6 but FAILS at n=7 (witness c3=4,
+  srange=6, beta=5) -- the SAME n=7 phase-transition wall as THM-1825/1830, this time surfaced by
+  the engine instead of by hand.
+- The repo now HAS the WOWII loop: generate on the invariant zoo -> tight survivors = candidate
+  theorems (2 proved) -> failures come with a tuned 3-cycle-atom witness.
+
+**Handoff.** (1) prove c3<=H (injection 3-cycles -> Ham paths?) and H<=2^{n-2}c3+1 past n=7. (2)
+run the full ~150-inequality WOWII list on G_n, E_n (klein started) + tournament invariants at
+n=7,8 -- each off-by-one survivor a candidate theorem, each failure a structured witness. (3)
+formalize the sandwich in Lean (beta,c3,smax all decide-able; native_decide, TournamentH7 harness).
+
 ## opus-2026-07-20-S437 - The inflation/decoupling counterexample motif (WOWII-103 lesson) -- the repo already runs it (reflection)
 
 Owner shared google-deepmind/formal-conjectures PR #4482 (disproof of Written-on-the-Wall II

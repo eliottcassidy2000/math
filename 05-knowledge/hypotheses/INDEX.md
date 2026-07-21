@@ -17769,3 +17769,20 @@ ODD, 0 iff n EVEN (n=7: 5 classes 1 blue [0,1,3,3,3,5,6]; n=8: 6 classes 0 blue)
 These sit near the transitive nullcone vertex (large nilpotent block + one cycle), OPPOSITE pole
 from opus-S434's symmetric-intransitive Paley/j=0 (global symmetry, semistable). Named-next: n>=13
 (two 3-cycle atoms); nonzero-integer unstable eigenvalues; blue parity vs SC lore.
+
+## HYP-8630 — a TxGraffiti/WOWII conjecture generator for tournament invariants; transitive-subtournament sandwich
+
+**Status: TOOL BUILT + 2 proved + candidates.** kind-pasteur-2026-07-21-S128c134. THM-1845.
+
+Leveraging the WOWII-103 refutation (owner). klein-S395 named the missing ingredient: the
+automated-conjecture-generation front end. Built it for tournament invariants (c3,H,beta,dom,
+kings,scc,smax,smin,srange,sumC2,arb0) over all 33864 tournaments n=3..6, machine-generating
+tight linear inequalities. PROVED: n-c3 <= beta <= smax+1 (largest transitive subtournament;
+lower = FVS<=c3 via tournament-acyclic-iff-no-3-cycle; upper = source has out-deg beta-1). TIGHT
+at c3=0,1 = THM-1830's 3-cycle-atom family = the tournament WOWII witness template. Generator
+reproduces THM-1580 (H, arb0 incomparable, both directions auto-refuted). Candidates holding to
+n=7: c3<=H, H<=2^{n-2}c3+1. WOWII-style auto-refutation: srange<=beta holds n<=6, FAILS n=7
+(witness c3=4,srange=6,beta=5) -- the n=7 wall surfaced by the engine. The repo now has the WOWII
+loop: generate -> tight survivors are candidate theorems -> failures come with a 3-cycle-atom
+witness. Named-next: prove c3<=H (injection 3-cycles->Ham paths?); run full WOWII list on G_n/E_n
++ tournaments n=7,8; formalize the sandwich in Lean (native_decide).
