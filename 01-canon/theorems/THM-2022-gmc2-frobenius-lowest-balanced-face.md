@@ -27,8 +27,12 @@ related:
   - THM-2041
   - HYP-8800
   - HYP-8765
-script: 04-computation/gmc2_frobenius_lowest_face_codex_20260721.py
-output: 05-knowledge/results/gmc2_frobenius_lowest_face_codex_20260721.out
+scripts:
+  - 04-computation/gmc2_frobenius_lowest_face_codex_20260721.py
+  - 04-computation/gamma_radial_frobenius_face_codex_20260721.py
+outputs:
+  - 05-knowledge/results/gmc2_frobenius_lowest_face_codex_20260721.out
+  - 05-knowledge/results/gamma_radial_frobenius_face_codex_20260721.out
 ---
 
 # THM-2022 -- Frobenius amplification of the lowest balanced Wick face
@@ -306,6 +310,91 @@ The former THM-2022 candidate required an exposed two-vertex face with
 factorial gap greater than one. That archimedean estimate is unnecessary:
 the lowest balanced face always exists, and the carry/Frobenius argument
 handles a many-vertex face with no metric gap beyond strict face separation.
+
+## 8. Exact extension to rational Gamma radial laws
+
+The proof uses a prime-block property of the scalar radial weight, not the
+identity `A!=Gamma(A+1)` itself. This gives a genuine new family.
+
+Let `alpha=h/k>0` be rational in lowest terms. Let `T` have the Gamma law of
+shape `alpha` and unit scale, let `U` be uniform on the unit circle and
+independent of `T`, and put `Z=sqrt(T)U`, `W=Zbar`. Then
+
+```text
+E_alpha[Z^A W^B] = 0                 if A!=B,
+E_alpha[Z^A W^A] = (alpha)_A         if A=B,             (16)
+```
+
+where `(alpha)_A=alpha(alpha+1)...(alpha+A-1)`.
+
+> **Gamma-radial corollary.** For every positive rational `alpha`, the
+> moment nullcone of `E_alpha` on `C[Z,W]` is exactly the union of the two
+> strict one-sided charge loci. Consequently its polynomial Mathieu
+> implication holds: if `E_alpha[P^m]=0` for every positive `m`, then
+> `E_alpha[Q_0P^m]=0` for every fixed `Q_0` and all sufficiently large `m`.
+
+The algebraic descent and DvdK face seed in Sections 2--3 are unchanged,
+because all moment polynomials have rational coefficients. For the finite
+place, choose `p>m0` with `p` not dividing `k` and outside the same finite bad
+set. Normalize the moment of order `pm0` by `(alpha)_(pA0)`. If `n>=pA0`,
+
+```text
+(alpha)_n/(alpha)_(pA0)
+ = product_(j=pA0)^(n-1) (h+kj)/k                         (17)
+```
+
+is `p`-integral. More importantly, for every integer `A'>A0`, the interval
+`pA0 <= j < pA'` consists of `A'-A0` complete blocks of length `p`. Since
+`k` is a unit modulo `p`, each block contains exactly one solution of
+`h+kj=0 mod p`. Hence
+
+```text
+(alpha)_(pA')/(alpha)_(pA0) = 0 mod p.                   (18)
+```
+
+Kummer kills the non-`p`-divisible channels, (18) kills the dilated off-face
+channels, and face channels have quotient one. Lucas and Frobenius therefore
+give the same residue `Q^p` as (15). This proves the corollary.
+
+More generally, the same proof works for a scalar weight `w(A)` valued in a
+fixed number field (or a fixed rational model), provided the moment
+polynomials admit the same algebraic descent and face seed, `w(pA0)` is
+nonzero, and infinitely many finite places are simultaneously good for the
+coefficients, seed, and ratios. At each such place require
+`w(n)/w(pA0)` to be integral on the chosen side of the face and
+`w(pA')/w(pA0)` to be divisible by the residue characteristic at every strict
+dilated off-face grade. An upper-face version reverses the inequalities.
+
+## 9. Sharp multi-factor warning
+
+One scalar exposed face does not control a product of independent factorial
+coordinates. The obstruction is not merely a missing proof. Consider two
+neutral channel atoms with Wick vectors
+
+```text
+v1=(1,1,1),        v2=(0,0,3),                            (19)
+```
+
+which have the same total scalar grade `3`. At moment order `p`, the pure
+`v1^p` channel has factorial valuation `3`, while the channel using `p-1`
+copies of `v1` and one copy of `v2` has vector
+
+```text
+(p-1,p-1,p+2)
+```
+
+and total `p`-valuation
+
+```text
+v_p(binomial(p,1)) + v_p((p-1)!^2 (p+2)!) = 1+1=2.       (20)
+```
+
+Thus it undercuts the proposed scalar-face Frobenius channel for every large
+`p`. With two factorial coordinates the analogous vectors `(1,1)` and
+`(0,2)` already tie. This scalar-face method would therefore need additional
+structure in higher dimension, for example a coordinatewise/orthant-exposed
+vector face or a rank-one lock forcing all factorial coordinates to be
+functions of one grade. A scalar Newton face alone is not sufficient.
 
 The constant-term input is J.J. Duistermaat and W. van der Kallen,
 "Constant terms in powers of a Laurent polynomial," *Indagationes

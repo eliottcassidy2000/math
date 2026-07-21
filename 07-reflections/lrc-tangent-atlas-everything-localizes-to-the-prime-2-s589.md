@@ -1,6 +1,6 @@
 ---
 source: opus-2026-06-03-S589 (remote-control)
-status: CREATIVE TANGENT ATLAS — five out-of-box frames (adelic, height/covering-radius, RG, fractional-hyperoperation, quasicrystal), each with a USE; the meta-discovery: every frame localizes the n=14 obstruction to the PRIME 2
+status: HISTORICAL CREATIVE TANGENT ATLAS — five out-of-box frames, with the former field-ramification and prime-2-only claims corrected; the rigorous residue is a nonunit/non-etale doubling obstruction, not a reduction of all LRC14 to prime 2
 tags: [LRC, adelic, local-global, renormalization, hyperoperation, quasicrystal, mahler, covering-radius, prime-2, n14, tangents]
 ---
 
@@ -9,10 +9,17 @@ tags: [LRC, adelic, local-global, renormalization, hyperoperation, quasicrystal,
 **Prompt (user):** keep thinking like this, even more out of the box; explore tangents
 abstractly and creatively; think about what you can use them for.
 
-Five wild frames, each with a concrete use. The pattern that fell out: **every
-out-of-box frame puts the entire `n=14=2·7` obstruction on the single prime `2`** — the
-even prime, the ramified place, the RG-relevant direction. That convergence is itself
-the most useful thing.
+Five wild frames, each with a concrete use. Historically they were read as
+putting the entire `n=14=2·7` obstruction at prime `2`. The corrected lesson is
+narrower: several frames detect the same **doubling/nonunit face**, but they do
+not prove that this face is the only LRC14 obstruction.
+
+**2026-07-21 correction.** "Ramified place" is not literal here: `2` is
+unramified in `Q(zeta_14)=Q(zeta_7)`. The rigorous prime-2 content is that
+`2` is a nonunit modulo `14` and the characteristic-2 order-14 group algebra
+is nonreduced. Read every later "ramification" phrase in this reflection as
+that nonunit/non-etale obstruction; none of those phrases proves that the rest
+of LRC14 is solved. THM-404/2041 record the exact correction.
 
 ## Tangent 1 — ADELIC / local–global (developed, grounded)
 
@@ -27,15 +34,12 @@ For `n=14` the clock `j=1..13` stratifies by `gcd(j,14)` (the **divisors of `n`*
 | `gcd=7` (apex `2q`) | `{7}` | not lonely |
 
 - **`ℚ(ζ_14) = ℚ(ζ_7)`** (since `ζ_2=-1` is rational): the *field* is the **prime-7** case.
-- **Frobenius-at-2** (`x↦2x mod 14`) sends every witness *off* the witness set
-  (`1→2, 3→6, …`): `2` **ramifies / drains** — the dynamical fragmentation (S585) is
-  exactly *no good Frobenius at the place 2*.
-> **USE — a Hasse/local–global proof:** loneliness is *local at every place* — the
-> archimedean place supplies the cyclotomic witnesses, the odd primes act by clean
-> Frobenius. The conjecture's residual is the failure to **glue across the bad place
-> `p=2`**; for `n=14` that bad place is the *only* obstruction (the field is `ℚ(ζ_7)`,
-> solved). This is C′ (multiple-of-`n`) in adelic dress: the multiple of `2q` is the
-> `2`-adic defect.
+- **Multiplication by 2** (`x↦2x mod 14`) sends every witness *off* the witness
+  set (`1→2, 3→6, …`) because `2` is a nonunit modulo `14`. This is not the
+  arithmetic Frobenius at an unramified prime of `Q(zeta_14)`.
+> **USE — a non-etale sidecar:** retain the characteristic-2 nilpotent filtration
+> or move to a good unit prime such as `3`. This addresses the doubling face only;
+> a safe/dual seed and a pointwise LRC exit remain separate global obligations.
 
 ## Tangent 2 — HEIGHT / covering-radius (a useful *negative*)
 
@@ -84,33 +88,31 @@ aperiodic** (high complexity). The cut-and-project / Meyer-set picture.
 > functional with the AP as its minimizer would bound the worry-set from the
 > order-theoretic side (complement to the measure side).
 
-## The meta-discovery: everything is the prime 2
+## Corrected meta-reading: several frames detect the prime-2 doubling face
 
 | frame | the n=14 obstruction is… |
 |---|---|
-| adelic | the bad place `p=2` (ramification of 2 in `ℚ(ζ_14)=ℚ(ζ_7)`) |
+| group-algebraic | the nonunit/non-etale characteristic-2 order-14 model |
 | RG | the relevant `2`-eigenvalue of the doubling flow |
 | hyperoperation | the additive (rung-1) AP at `2q` |
 | rigidity (S585) | the `⟨×2⟩` fragmentation of the witness orbit |
 | parity (S587) | the even-prime, odd/even sector seam |
 | triangular (S586) | the `2³` in `8·C(n,2)+1=(2n-1)²` |
 
-> **Five independent out-of-box frames, one conclusion: the `n=14=2·7` obstruction is
-> the prime `2`** — the even prime, viewed as a ramified adelic place / a relevant RG
-> direction / the additive rung / the doubling fragmentation / the parity seam. **USE:**
-> this is a *robust target*. Attack the place `2` specifically — e.g. prove the `2`-adic
-> defect is benign (the multiple-of-2q is dodgeable, the Frobenius-at-2 ramification is
-> tame), and the odd/prime structure (`ℚ(ζ_7)`, solved) carries the rest. The five frames
-> give five independent certificates to combine.
+> **Five frames, one narrower conclusion:** prime `2` is a robust target for the
+> doubling/nonunit face. It is not the only known obstruction, and the odd part
+> does not by itself supply the missing safe seed or pointwise exit. The frames
+> are candidate sidecars to combine with those obligations.
 
 ## Honest status
 
-- **Grounded:** the adelic stratification of the n=14 clock by `gcd(j,14)`; `ℚ(ζ_14)=
-  ℚ(ζ_7)`; Frobenius-at-2 drains the witnesses; `M` is a covering-radius not a Mahler
-  product.
+- **Grounded:** the stratification of the n=14 clock by `gcd(j,14)`;
+  `Q(zeta_14)=Q(zeta_7)`; nonunit multiplication by `2` drains the witnesses;
+  `M` is a covering radius, not a Mahler product.
 - **Creative seeds (uses stated, untested):** the Hasse/local–global proof; the RG-flow
   rigidity proof; the additive-only certification; the complexity/entropy bound.
-- **Meta-claim (robust, structural):** every frame localizes `n=14` to the prime `2`.
+- **Corrected meta-claim:** several frames localize the doubling face to prime
+  `2`; no prime-2-only reduction of LRC14 is claimed.
 
 **Artifacts:** `04-computation/lrc_adelic_tangent_s589.py` (+`.out`). Builds on S588
 (exp/cyclotomic), S585 (doubling rigidity), S586 (triangular), S587 (parity), THM-398

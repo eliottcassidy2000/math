@@ -1,0 +1,11 @@
+THM-2022 GAMMA-RADIAL TRANSFER AUDIT
+pochhammer_block_tests=4176
+full_face_congruence_tests=12
+multifactor_undercut_tests=6
+verdict=PASS
+TOURNAMENT ANALYSIS
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1}
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1]
+hamiltonian_path_count=1
+tie_hamiltonian_path=rational_gamma_pochhammer > gaussian_factorial > abstract_positive_block_weight > beta_ratio_weight > multifactor_scalar_face

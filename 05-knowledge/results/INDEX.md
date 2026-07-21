@@ -1682,3 +1682,17 @@ Exact verification companion to THM-2041: 71,484 Ramanujan dilation identities,
 1,740 cyclic twisted-moment Frobenius identities, a non-invariant-twist negative
 control, and the complete primitive-phase permutations at period 14. Preservation
 only; it does not assert a base LRC nonvanishing certificate.
+
+### frobenius_exact_period_projectors_codex_20260721.out
+Independent finite-abelian/cyclic audit for THM-2041: 1,479 good
+period/order/prime triples and 4,437 tests each of projector commutation,
+nonzero-layer preservation, and Ramanujan-energy invariance, together with five
+explicit bad-prime nilpotent witnesses. The proof-carrier Tournament Analysis
+has transitive score histogram `{0:1,...,5:1}` and one Hamiltonian path.
+
+### gamma_radial_frobenius_face_codex_20260721.out
+Exact companion to THM-2022 Sections 8--9: 4,176 rational-Pochhammer
+prime-block tests, 12 complete three-atom face congruences, and six
+multi-factor valuation undercuts. It verifies the rational Gamma-radial
+extension and the sharp warning that one scalar face need not control several
+independent Wick-factor coordinates.

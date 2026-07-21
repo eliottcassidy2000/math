@@ -48,7 +48,7 @@ The polynomial / sieve method propagates loneliness along the doubling `t ↦ 2t
 > **Even `n`:** `W` fragments (`2·W ∩ W = ∅`); the doubling propagation **stalls** — the
 > dynamical face of the even-`n` residual (C′ / the `2q` apex). For `n=14`,
 > `W = {1,3,5,9,11,13}/14` and `2·W = {2,6,10,18≡4,22≡8,26≡12}/14`, all non-units —
-> total fragmentation, the prime-2 (Frobenius-at-2 ramification) obstruction.
+> total fragmentation, the prime-2 nonunit obstruction.
 
 So the two rigidities of the same orbit (THM-403 static, THM-404 dynamical) **diverge
 exactly at the even-`n` frontier**: static (cyclotomic, `(ℤ/n)^*`) holds for all `n`;
@@ -62,3 +62,41 @@ dynamical (`⟨×2⟩`-connectivity) holds iff `n` is odd.
 
 **Artifacts:** see S585 (`lrc_doubling_rigidity_dichotomy_s585.out`). Builds on THM-403,
 THM-398. (Formalises HYP-2126.)
+
+## 2026-07-21 correction and unit-dilation addendum
+
+The phrase "Frobenius-at-2 ramification" in the original LRC corollary was
+field-theoretically inaccurate. In fact
+
+```text
+Q(zeta_14)=Q(zeta_7),
+```
+
+whose conductor is `7`, so the rational prime `2` is unramified. What fails
+is the exact-order-14 group scheme/group algebra in characteristic `2`:
+`mu_2` is non-etale, `-1=1`, primitive order-14 points collapse to order `7`,
+and `F_2[C_14]` is nonreduced. THM-2041 gives the precise boundary: the
+semisimple projector theorem works exactly when the characteristic is
+coprime to the period.
+
+The doubling failure is also specific to the multiplier `2`, not to every
+Frobenius prime. For any integer `a`,
+
+```text
+aW=W  iff  gcd(a,n)=1,
+```
+
+and for a unit `a` its orbits are the cosets of `<a>` in `(Z/nZ)^*`. At
+`n=14`, multiplication by `3` is one six-cycle:
+
+```text
+1 -> 3 -> 9 -> 13 -> 11 -> 5 -> 1.                       (1)
+```
+
+Thus characteristic `3` is good for the period-14 exact-period projector,
+and THM-2041 preserves its whole primitive layer under cubing. This does not
+yet repair the polynomial/sieve proof: no current theorem says its blocker or
+strict-safe inequality is covariant under the cubing step. The precise new
+target is a ternary propagation lemma carrying an endpoint-labelled safe or
+dual certificate around cycle (1). If proved, it would remove the witness-
+orbit fragmentation that is fatal to the doubling version.

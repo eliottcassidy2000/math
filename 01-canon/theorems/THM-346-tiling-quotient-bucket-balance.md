@@ -167,3 +167,60 @@ half-line balance. This is useful for:
 - INV-194: merged tiling bucket constraints.
 - INV-236: projection-defect profiles across tournament and even-graph quotients.
 - `07-reflections/merged-tiling-bucket-constraints.md`.
+
+## 2026-07-21 Frobenius walk-congruence addendum
+
+The whole-layer mechanism of THM-2041 gives an additional exact transport law
+which does **not** require the quotient to be equitable. Let the Boolean tiling
+cube be the additive group `G=F_2^m`, let `T_u` denote translation by a mask
+`u`, and for any mask set `M` put
+
+```text
+A_M = sum_(u in M) T_u.
+```
+
+The translations commute. Therefore Freshman's dream gives, over `F_p`,
+
+```text
+A_M^p = sum_(u in M) T_u^p.
+```
+
+For every odd prime `p`, `T_u^p=T_(pu)=T_u` in the exponent-two group, while
+in characteristic `2`, `T_u^2=I`. Hence
+
+```text
+A_M^p = A_M          in characteristic p, p odd,          (F1)
+A_M^2 = |M| I        in characteristic 2.                 (F2)
+```
+
+The `(x,y)` entry of `A_M^r` counts ordered `r`-step mask walks from `x` to
+`y`. Thus for odd `p`,
+
+```text
+# ordered p-step M-walks x->y = 1_M(x xor y) mod p.        (F3)
+```
+
+Define the oriented one-step bucket transport by
+
+```text
+W_M(b,c)=sum_(x in B_b, y in B_c) 1_M(x xor y).
+```
+
+Summing (F3) over `x` and `y` in arbitrary quotient buckets `B_b,B_c` shows
+that the aggregate oriented `p`-step bucket transport is congruent modulo `p`
+to `W_M(b,c)`. On a diagonal bucket this convention counts both orientations,
+so it is twice an unoriented internal-edge count. The congruence remains true
+for every quotient in this theorem even when individual vertices in one
+bucket have different neighbor profiles. It is therefore a genuine
+congruence beyond the parity row checksum, and it respects rather than evades
+the non-equitability warning.
+
+For Tournament Analysis, take mask-walk lengths as vertices and orient an edge
+toward the length whose transport matrix retains more exact residue data. The
+pairwise observable is equality of all bucket-to-bucket entries modulo `p`.
+All lengths `1,p,p^2,...` are congruent and hence tied; the gauge reduces them
+to the one-step matrix and the declared tie path is `1 -> p -> p^2 -> ...`.
+Equations (F1)--(F3) therefore make the tie-oriented tournament transitive.
+This quotient preserves aggregate transport and destroys within-bucket local
+degrees; the challenged assumption is that quotient regularity is needed for
+prime-step congruences.

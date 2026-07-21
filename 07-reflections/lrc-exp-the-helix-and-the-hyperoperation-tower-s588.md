@@ -87,14 +87,19 @@ evaporates.
 
 ## 6. Creative hypothesis
 
-> **H (cyclotomic worry-set).** The worry-set is `μ_n^×` (primitive `n`-th roots); its
-> arithmetic is the cyclotomic field `ℚ(ζ_n)` and its Galois group `(ℤ/n)^*`. Conjecture:
-> LRC for the AP reduces to a statement about `Φ_n` / the cyclotomic units, and the
-> `n=2q` obstruction is the ramification at `2` (the even prime — where `exp`'s helix
-> "halves", `ζ_{2q} = -ζ_q^{(q+1)/2}`-style). The `×2`-fragmentation (S585) is the
-> *Frobenius at 2* failing to act on `μ_n^×` when `2 | n`. *Test:* compute the Frobenius
-> orbits of `μ_n^×` (the doubling orbits, S585) and confirm the `n=14` residual is the
-> `2`-ramified part of `ℚ(ζ_{14})`.
+> **Historical H (corrected below).** The worry-set is `μ_n^×` (primitive
+> `n`-th roots), with cyclotomic symmetry `(Z/nZ)^*`. The original conjecture
+> incorrectly identified nonunit multiplication by `2` modulo even `n` with
+> arithmetic Frobenius and inferred field ramification at `2`.
+
+**2026-07-21 correction.** This field-ramification wording is false:
+`Q(zeta_14)=Q(zeta_7)` has conductor `7`, so `2` is unramified. The exact
+replacement is group-algebraic: `2` is a nonunit modulo `14`, and in
+characteristic `2` the exact-order-14 group scheme is non-etale and its group
+algebra is nonreduced. THM-404/2041 give the corrected boundary and the good
+characteristic-3 unit-cycle alternative. Arithmetic Frobenius at `2` in
+`Q(zeta_14)=Q(zeta_7)` is represented on primitive 14th roots by the unit lift
+`9 mod 14` of `2 mod 7`, not by the nonunit map `x -> 2x mod 14`.
 
 ## 7. Honest status
 
@@ -104,9 +109,10 @@ evaporates.
 - **Rigorous links:** `exp` is the `(+)→(×)` homomorphism (the helix); the worry-set is
   cyclotomic `μ_n^×`; this is HYP-2124 in `exp`-language, and the `+`/`×` sides are all
   the recent sessions (THM-400, S585, S586, S587).
-- **Hypothesis H (cyclotomic/Frobenius):** conceptual, partly-grounded (the doubling
-  orbits = Frobenius-at-2 orbits, S585), the field-theoretic reduction untested — the
-  creative seed.
+- **Historical Hypothesis H:** its field-ramification premise is refuted. The
+  surviving creative seed is a group-algebraic comparison between good-unit
+  Frobenius packets and bad-prime nilpotent jets; it does not reduce LRC14 to
+  either one without a safe/dual seed and pointwise exit.
 
 **Artifacts:** `04-computation/lrc_hyperoperation_helix_s588.py` (+`.out`). Builds on
 HYP-2124 (cyclotomic clock), S585 (doubling/Frobenius), S586 (triangular/2n-1), S587

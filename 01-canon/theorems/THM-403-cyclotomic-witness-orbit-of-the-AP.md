@@ -52,7 +52,10 @@ This is the bedrock of the cyclotomic/rigidity/exp arc:
 - **exp / helix** (HYP-2130): the witnesses are literally the *primitive roots of unity*,
   so the AP's loneliness is a cyclotomic statement (`Φ_n`, Galois group `(ℤ/n)^*`).
 - **The break** is at non-units `gcd(j,n)>1` (a runner `n/gcd` lands on the observer) —
-  the composite/2-adic seam (THM-398 C′; the `2q` apex; `n=14` ramifies at `2`).
+  the composite/2-adic seam (THM-398 C′; the `2q` apex). The older phrase
+  "`n=14` ramifies at `2`" is corrected by THM-404's 2026-07-21 addendum:
+  `2` is unramified in `Q(zeta_14)=Q(zeta_7)`; the actual failure is
+  non-etaleness/nonreducedness of the order-14 group object in characteristic `2`.
 
 ## Verification
 

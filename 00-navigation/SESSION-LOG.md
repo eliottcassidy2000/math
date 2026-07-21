@@ -165,6 +165,21 @@
 - **COMPUTATION:** 71,484 Ramanujan dilation identities and 1,740 cyclic
   twisted-moment identities passed, with a failing non-invariant-twist control;
   the corrected de-factorialization audit passed 72 exact monomial-wall cases.
+- **INDEPENDENT PACKET AUDIT:** the merged finite-abelian formulation passed
+  1,479 period/order/prime triples and 4,437 tests each of exact-period
+  projector commutation, nonzero-layer preservation, and Ramanujan-energy
+  dilation. Five bad-prime examples verify the sharp nilpotent boundary.
+- **SURPRISING EXACT TRANSFERS:** THM-2022 now covers every positive rational
+  Gamma radial shape by the same lowest-face argument, while THM-346 gains the
+  congruence `A_M^p=A_M mod p` for odd-prime cube-walk transport between
+  arbitrary buckets. A three-factor Wick example shows why a scalar face does
+  not automatically extend the proof to higher Gaussian dimension.
+- **LRC TARGETS AND REPAIR:** the strongest next seed routes are THM-671's
+  resolved-modulus `B5` supply and a familywise Fejer/Toeplitz theorem. Two
+  deeper sidecars are now explicit: cubing is a single six-cycle on `U_14`,
+  and characteristic 7 retains parity times Hasse-jet depth. Older claims that
+  2 ramifies in `Q(zeta_14)` were corrected; the actual obstruction is
+  nonunit/non-etale group-algebra behavior.
 - **EXTERNAL CHECK:** current primary-source frontier was cross-checked against
   Sungkawichai--Trakulthongchai (LRC through 13 runners),
   Malikiosis--Santos--Schymura (finite checking), Giri--Kravitz and
