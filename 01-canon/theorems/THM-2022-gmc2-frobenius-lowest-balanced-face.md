@@ -9,7 +9,7 @@ status: >
   p, divide the moment of order p*m0 by the common factorial (p*A0)!.
   Kummer and Lucas identify the surviving residue layer with the p-fold
   dilation of the face channels, and Frobenius makes its residue exactly
-  Q^p. Thus no support meeting charge zero can be null;
+  Q^p. Thus no support whose charge convex hull contains zero can be null;
   the nullcone consists exactly of the two strict one-sided charge loci.
   The earlier exposed-two-vertex gap>1 candidate reserved under this ID is
   subsumed and no longer needed.
@@ -51,7 +51,8 @@ The theorem proves the two-dimensional nullcone conjecture NC2:
 > positive moments vanish. Consequently GMC(2) holds.
 
 The proof does not isolate first-return circuits. It preserves the whole
-lowest balanced face, including every collision on that face, and amplifies
+lowest balanced face, including every balanced-channel collision on that
+face, and amplifies
 its nonzero constant term by Frobenius.
 
 ## 1. Exact Wick channels
@@ -217,31 +218,31 @@ cases modulo `pfrak`.
 Therefore the complete residue layer of `M_M/(p*A0)!` is precisely
 
 ```text
-{p*s : |s|=m0, q dot s=0, supp(s) subset F}.                (15)
+{p*s : |s|=m0, q dot s=0, supp(s) subset F}.                (13)
 ```
 
 It may contain many channels. No unique-channel assertion is used.
 
 ## 5. Lucas and Frobenius prevent cancellation inside the layer
 
-For a channel `p*s` in (15), the multinomial Lucas congruence gives
+For a channel `p*s` in (13), the multinomial Lucas congruence gives
 
 ```text
-binom(p*m0;p*s_1,...,p*s_k)=binom(m0;s_1,...,s_k) mod p.     (16)
+binom(p*m0;p*s_1,...,p*s_k)=binom(m0;s_1,...,s_k) mod p.     (14)
 ```
 
 Writing bars for residues in the characteristic-`p` residue field, (7),
-(15), and (16) yield the exact normalized identity
+(13), and (14) yield the exact normalized identity
 
 ```text
 M_(p*m0)(c)/(p*A0)!
  = sum_s binom(m0;s) c^(p*s)                    mod pfrak
  = (sum_s binom(m0;s) c^s)^p                    mod pfrak
- = Qbar^p                                       mod pfrak. (17)
+ = Qbar^p                                       mod pfrak. (15)
 ```
 
 The middle equality is Frobenius: coefficients from `F_p` are fixed by the
-`p`-th power map. By the choice of `p`, `Qbar` is nonzero. Thus (17) is
+`p`-th power map. By the choice of `p`, `Qbar` is nonzero. Thus (15) is
 nonzero, and so
 
 ```text
@@ -249,7 +250,8 @@ M_(p*m0)(c) != 0,
 ```
 
 contradicting the assumed algebraic torus null point. Section 2 then excludes
-every complex torus null point on every support meeting charge zero.
+every complex torus null point on every support whose charge convex hull
+contains zero.
 
 It follows that a null polynomial has all charges strictly positive or all
 strictly negative. Conversely, charges add under multiplication, so a strict
@@ -282,8 +284,8 @@ where the above minimum-layer argument stops.
 For Tournament Analysis, take balanced channels as vertices and compare
 their divisibility after the normalization `(p*A0)!`, with lexicographic
 order only as a tie
-path. The selected quotient preserves the minimum valuation layer but
-forgets its residue sum. Formula (17), not transitivity or arbitrary
+path. The selected quotient preserves the minimum residue layer but
+forgets its residue sum. Formula (15), not transitivity or arbitrary
 tie-breaking, restores that missing coordinate. The challenged assumption
 is therefore explicit: noncancellation does not require a dominant channel;
 an entire tied face can survive as one Frobenius power.
