@@ -10,7 +10,7 @@ CASE four-vertex collinear face with a cancelled earlier layer
   minimum valuation=10; minimum layer size=2; layer=(0,10,0,5,0), (5,0,10,0,0)
   least off-face valuation=11
   Kummer zero-carry iff r=p*s checked on all 150 channels; Lucas checked on 2 minimum channels
-  division by (p*A0)! integral termwise on all 150 channels; every non-face quotient vanishes mod p
+  division by (p*A0)! integral termwise on all 150 channels; every quotient outside the p-scaled face layer vanishes mod p
   canonical congruence: M_M/(p*A0)! mod p=1; Q^p mod p=1
   valuation audit: v_p((p*A0)!)=10; unit part=4; p^(-v)M_M mod p=4
   Wilson shortcut not invoked (A0>=p); full-factorial theorem still passes
@@ -26,7 +26,7 @@ CASE rational-intercept two-vertex face
   minimum valuation=5; minimum layer size=1; layer=(14,7,0)
   least off-face valuation=6
   Kummer zero-carry iff r=p*s checked on all 8 channels; Lucas checked on 1 minimum channels
-  division by (p*A0)! integral termwise on all 8 channels; every non-face quotient vanishes mod p
+  division by (p*A0)! integral termwise on all 8 channels; every quotient outside the p-scaled face layer vanishes mod p
   canonical congruence: M_M/(p*A0)! mod p=1; Q^p mod p=1
   valuation audit: v_p((p*A0)!)=5; unit part=6; p^(-v)M_M mod p=6
   Wilson shortcut applicable: unit=(-1)^A0*A0!=6 mod p
@@ -43,7 +43,7 @@ CASE neutral endpoint with A0=0 and cancelled first moment
   minimum valuation=0; minimum layer size=1; layer=(7,0,0)
   least off-face valuation=1
   Kummer zero-carry iff r=p*s checked on all 8 channels; Lucas checked on 1 minimum channels
-  division by (p*A0)! integral termwise on all 8 channels; every non-face quotient vanishes mod p
+  division by (p*A0)! integral termwise on all 8 channels; every quotient outside the p-scaled face layer vanishes mod p
   canonical congruence: M_M/(p*A0)! mod p=6; Q^p mod p=6
   valuation audit: v_p((p*A0)!)=0; unit part=1; p^(-v)M_M mod p=6
   Wilson shortcut applicable: unit=(-1)^A0*A0!=1 mod p

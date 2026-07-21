@@ -322,7 +322,7 @@ def print_case(case: Case, result: dict[str, object]) -> None:
     )
     print(
         f"  division by (p*A0)! integral termwise on all {result['channels']} channels; "
-        "every non-face quotient vanishes mod p"
+        "every quotient outside the p-scaled face layer vanishes mod p"
     )
     print(
         f"  canonical congruence: M_M/(p*A0)! mod p="
