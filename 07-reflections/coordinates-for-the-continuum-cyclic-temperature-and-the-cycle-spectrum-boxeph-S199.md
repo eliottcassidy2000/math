@@ -77,11 +77,28 @@ is the diversity peak (THM-1979 saw it slightly off-center)? what is `S(τ)` asy
 answerable per-shell, per-coordinate, without listing tournaments. The transitive point and the
 quasirandom horizon are the two boundary conditions; everything between is the temperature flow.
 
+## Two features the coordinates reveal (verified, n≤7)
+
+**The diversity maximum is at intermediate temperature.** Structural entropy `S(τ)=log₂|𝒮_τ|` does
+*not* peak at the hot center: at n=7 it peaks at `τ=5/7` (`c₃=10`, 79 classes, `S=6.30`), while the
+`τ=1` regular shell holds only 3 classes (`S=1.58`). The continuum is fattest *just inside* the hot
+edge — the diversity peak THM-1979 glimpsed, now located: `τ*≈0.7`. (Thermodynamically this is a
+specific-heat-like peak between the ordered and quasirandom phases.)
+
+**An all-strong condensation threshold.** The strong-fraction of a shell jumps sharply to 1 at a
+critical temperature: every class with `τ ≥ 9/14 ≈ 0.64` is strongly connected at n=7 (`τ≥3/4` at n=6,
+`τ≥3/5` at n=5), and reducible classes appear only below it. There is a genuine **condensation
+temperature** `τ_c` above which the whole shell is irreducible.
+
 ## Verified anchors (n≤7)
 
-- `N₁=N₂=0`, `N₃=3c₃` frozen by the score sequence; the first *free* moment is `N₄` (`<FREE>`).
-- Shell entropy `S(τ)` and the swelling toward `τ=1`: `<ENTROPY>`.
-- Coordinate budget in the hot shells: cycle spectrum resolves `<L1>`, `+|R|` resolves `<L2>`.
+- `N₁=N₂=0`, `N₃=3c₃` frozen by the score sequence; the **first free moment is `N₄`** (varies within
+  a score sequence from n=5).
+- Shell entropy peaks at `τ*≈0.7`; all-strong condensation threshold `τ_c≈0.64` (n=7).
+- Coordinate budget in the hot n=7 shells: cycle spectrum alone resolves `21/47` of the biggest shell
+  (cospectral collapse), **`+|R|` resolves `36/47`** — and `15/15` of the `τ=13/14` shell. So
+  `(τ, char_A, |R|)` pins most near-regular tournaments; a small irreducible residue survives at the
+  very center (the deep continuum needs one more coordinate).
 
 Links: THM-2013, THM-1979, THM-1926, THM-1966, THM-1960,
 [[tournament-space-as-a-spectrum-single-point-to-continuum-boxeph-S198]],
