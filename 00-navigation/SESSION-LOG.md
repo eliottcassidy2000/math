@@ -51,6 +51,23 @@ reducing the angular side to a characterised thin family (HYP-8545 the closed fo
 klein's resultant-tower termination. Together = unbounded GMC(2) via THM-1740.
 
 **Artifacts:** THM-1755; HYP-8545; 2 scripts + 2 outputs.
+## death-star-2026-07-20-S73 -- GMC(2): the span-6 {±1,±3} stratum closes UNCONDITIONALLY by hand (the second-rung method) (HYP-8580)
+
+**Owner:** work to prove GMC(2). (Away ~10 sessions; frontier: bounded-span unconditional (mac-mini/opus/kp
+finite Gröbner), ≤5 charges conditional on bridge (klein), unbounded OPEN = HYP-8540.)
+
+- **NEW unconditional stratum, span 6** (fleet had ≤4): {+3,+1,−1,−3}, gcd 1, genuine interior.
+  P=aZ³+bZ+cZ̄+dZ̄³. E[P²]=2bc+12ad=0 ⟹ bc=−6ad (primitive relation). Case a=0 & case d=0 close by hand
+  via E[P⁴]. Case all≠0: x=ac³,y=b³d,z=a²d², bc=−6ad⟹xy=−216z², E[P⁴]=0⟹x+y=−54z⟹x/z=−27±3√105 (second
+  rung); homogeneity (every E[P⁶] term t-weight 2i+j−l=3) ⟹ E[P⁶]=C·t³, C≠0 ⟹ no two-sided nullcone.
+  ONE-SIDED, detection depth 6 = 2×(primitive order). No Gröbner/bridge/DvdK.
+- **Matters:** rigorous instance of opus/S67 "primitive→second rung" mechanism; M*=2×(primitive order) is
+  evidence toward HYP-8540 uniform bound and the SHAPE a proof should take (primitive→resultant→homogeneity,
+  depth independent of charge count). Honest: not full GMC(2).
+- Files: gmc2_span6_{moments,proof}_deathstar_S73 (+out); reflection gmc2-span6-stratum-closed-unconditionally-by-hand-S73.
+- HYP housekeeping (MISTAKE-199, away-from-fleet collisions): my S70 Ham-path 8540→8560, S72 ladder 8555→8575,
+  ceding 8540 (mac-mini GMC bound) / 8555 (klein THM-1750). NB boxeph-S184 answered my S71 arborescence
+  {7,21} question (leaf-graded filtration, THM-1745) — nice build-on.
 
 ## klein-2026-07-20-S379 -- THM-1750: the per-root ARBORESCENCE VECTOR is a poly-time tournament RANKING (= the dominance-walk stationary distribution, MCTT) that SPLITS THM-1580's unbreakable 2-group residue -- but is COMPLEMENTARY to H, not dominant; a new 4-pair residue survives (spec A, Sum a, {a_r}, H) at n=7.
 
@@ -143,7 +160,7 @@ Handoff/named-next: (1) place H itself (OCF=I(Omega,2)) on the ladder -- THM-133
 rung -- is the tight-AP locus a nullcone in a moment functional from THM-894's resonance
 matrix? (3) a Lean MomentNullcone interface with zeros_propagate as the shared engine.
 
-## death-star-2026-07-20-S72 -- The composition-mode ladder on the triangle: +,×,!,^ unify figurate numbers with the tournament spectra (HYP-8555)
+## death-star-2026-07-20-S72 -- The composition-mode ladder on the triangle: +,×,!,^ unify figurate numbers with the tournament spectra (HYP-8570)
 
 **Owner:** relate recent Ham/arb spectra to the triangular-number extension frames; invent more; procedurally analyze.
 
@@ -159,7 +176,7 @@ matrix? (3) a Lean MomentNullcone interface with zeros_propagate as the shared e
   doubly-triangular T_{T_n} (1,6,21..), Gauss Σ₃-triangular (verified n≤40), Pollock, tournament-scores =
   partitions of T_{n-1} (a 5th 'partition' mode). Flagged coincidence: 21=T_6, 7=centered-hexagonal.
 - Files: triangle_frames_{procedural,density}_deathstar_S72 (+out); reflection the-composition-mode-ladder-on-the-triangle-S72.
-## boxeph-2026-07-20-S184 -- THM-1745: the leaf-graded arborescence filtration answers the owner's {7,21}-in-arborescences question: the hole lives ONLY in the l=1 stratum (unique n-stable + multiplicative one), its MECHANISM transfers one stratum up (|Aut| | c2, NEW, proved via free-action depth), 21 evaporates at the first grading step while 7 never gets a window (HYP-8555)
+## boxeph-2026-07-20-S184 -- THM-1745: the leaf-graded arborescence filtration answers the owner's {7,21}-in-arborescences question: the hole lives ONLY in the l=1 stratum (unique n-stable + multiplicative one), its MECHANISM transfers one stratum up (|Aut| | c2, NEW, proved via free-action depth), 21 evaporates at the first grading step while 7 never gets a window (HYP-8570)
 
 **Owner:** see how 7,21 forbiddenness shows up in arborescences instead of hamiltonian paths; there should be some subtle effect on an aspect of its structure.
 
@@ -216,7 +233,7 @@ FILES: MISTAKE-205, THM-1300 banner, INVESTIGATION-BACKLOG.md item. -> all (TWO 
 
 ---
 
-## death-star-2026-07-20-S70 -- Challenged {7,21}: the #Ham-path spectrum is exactly odds \ {7,21}, a multiplicative monoid, 7 the unique forbidden prime (HYP-8540)
+## death-star-2026-07-20-S70 -- Challenged {7,21}: the #Ham-path spectrum is exactly odds \ {7,21}, a multiplicative monoid, 7 the unique forbidden prime (HYP-8560)
 
 **Owner:** keep challenging assumptions / explore underexplored threads.
 

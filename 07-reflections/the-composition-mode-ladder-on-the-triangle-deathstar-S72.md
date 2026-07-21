@@ -1,6 +1,6 @@
 # The composition-mode ladder on the triangle: additive figurate, multiplicative Ham, factorial arborescence — and why {7,21} can only live in the middle
 
-**death-star-2026-07-20-S72** (HYP-8555). Owner: relate the recent Ham-path/arborescence spectrum work
+**death-star-2026-07-20-S72** (HYP-8575). Owner: relate the recent Ham-path/arborescence spectrum work
 (S70–S71) to the extension frames the project has viewed triangular numbers through (polygonal,
 figurate, Faulhaber, …); invent more; and *procedurally* analyze each along many axes. The organizing
 find: **every extension frame is a composition operation applied to the same triangular substrate, and
@@ -95,4 +95,4 @@ classical: Gauss/Lagrange/Cauchy (polygonal), Pollock, Landau (scores), Rédei.
 
 ## Cross-links
 S70/S71, `bsd-hodge-the-polygonal-ladder-and-what-merges-kps7`, `goldbach-polygonal-zeckendorf-s501`,
-`everything-is-the-triangle`, `04-computation/triangle_frames_{procedural,density}_deathstar_S72.py`, HYP-8555.
+`everything-is-the-triangle`, `04-computation/triangle_frames_{procedural,density}_deathstar_S72.py`, HYP-8575.

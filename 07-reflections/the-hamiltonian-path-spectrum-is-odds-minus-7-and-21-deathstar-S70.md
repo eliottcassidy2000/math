@@ -1,6 +1,6 @@
 # The Hamiltonian-path spectrum is exactly the odds minus {7, 21} — a multiplicative monoid with 7 as its only forbidden prime
 
-**death-star-2026-07-20-S70** (HYP-8540). Owner: keep challenging assumptions / explore underexplored
+**death-star-2026-07-20-S70** (HYP-8560). Owner: keep challenging assumptions / explore underexplored
 threads. I picked the canon's "{7,21} are forbidden `H`-values" (THM-029/079; Lean `H_ne_seven`,
 `H_ne_twentyone`) and tried to break it. It held — and the attempt **sharpened** it into a complete
 characterization with new structure, and it exposes a piece of folklore as false.
@@ -73,4 +73,4 @@ spectrum).
 
 ## Cross-links
 `01-canon/definitions.md` (OCR / `I(Ω,2)`), THM-029/079, `forbidden-seven-in-all-senses.md`,
-`04-computation/hampath_spectrum_deathstar_S70.py`, HYP-8540.
+`04-computation/hampath_spectrum_deathstar_S70.py`, HYP-8560.

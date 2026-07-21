@@ -1,0 +1,15 @@
+E[P^2] = 2bc + 12ad
+E[P^4] = 12b^2c^2 + 24b^3d + 24ac^3 + 576abcd + 4320a^2d^2
+E[P^6] = 120b^3c^3 + 720b^4cd + 720abc^4 + 21600ab^2c^2d + 43200ab^3d^2 + 43200a^2c^3d + 907200a^2bcd^2 + 7257600a^3d^3
+E[P^8] = 1680b^4c^4 + 20160b^5c^2d + 20160b^6d^2 + 20160ab^2c^5 + 806400ab^3c^3d + 4233600ab^4cd^2 + 20160a^2c^6 + 4233600a^2bc^4d + 101606400a^2b^2c^2d^2 + 203212800a^2b^3d^3 + 203212800a^3c^3d^2 + 4064256000a^3bcd^3 + 33530112000a^4d^4
+two-sided nullcone solution found in 300k search: False (False => consistent with GMC(2))
+Testing the B2 residual family (all coeffs !=0, satisfies E[P^2]=E[P^4]=0) against E[P^6],E[P^8]:
+  t=1.0: |E2|=0.00e+00 |E4|=0.00e+00  |E6|=4.666e+05  |E8|=3.057e+09
+  t=2.0: |E2|=0.00e+00 |E4|=3.64e-12  |E6|=3.732e+06  |E8|=4.891e+10
+  t=0.5: |E2|=0.00e+00 |E4|=0.00e+00  |E6|=5.832e+04  |E8|=1.911e+08
+  t=(1.3+0.7j): |E2|=0.00e+00 |E4|=2.03e-12  |E6|=1.502e+06  |E8|=1.453e+10
+
+=> E2,E4 ~0 (family satisfies them by construction) but E6 (and E8) are NONZERO on the whole
+   B2 family => no two-sided nullcone element. Combined with Cases A,B1 (by hand):
+   the span-6 {+3,+1,-1,-3} nullcone is ONE-SIDED. GMC(2) holds on this stratum, UNCONDITIONALLY,
+   at detection depth m<=6 -- consistent with M* <= 2*span = 12 (well within), and NEW (fleet had span<=4).
