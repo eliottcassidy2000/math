@@ -40,6 +40,22 @@ lemma). The angular uniform levers exist (THM-1705, THM-1735); the radial one is
 lemma.
 
 **Artifacts:** THM-1740; HYP-8540; 1 script + output.
+## death-star-2026-07-20-S72 -- The composition-mode ladder on the triangle: +,×,!,^ unify figurate numbers with the tournament spectra (HYP-8555)
+
+**Owner:** relate recent Ham/arb spectra to the triangular-number extension frames; invent more; procedurally analyze.
+
+- **Organizing find:** every extension frame = a composition op on the triangular substrate T_{n-2}=C(n-1,2)
+  tiles. FOUR MODES: **+** additive (k-gonal/Fermat, Faulhaber Σk^p deg p+1, simplicial C(n+d-1,d) deg d =
+  the figurate degree ladder), **×** multiplicative (Ham monoid, odds\{7,21}, S70), **!** factorial
+  (arborescence (n-1)!-bands, S71), **^** exponential (tilings 2^{T_{n-2}}).
+- **Three new connections:** (1) {7,21} = the MULTIPLICATIVE analog of Fermat polygonal representability.
+  (2) DENSITY NECESSITY — triangular density √X→0, Ham→½, arb→0(bands); a finite structural forbidden set
+  needs co-finiteness in an allowed class, which ONLY the × frame has (co-finite in odds). So {7,21} can
+  exist ONLY in the multiplicative frame. (3) NESTED: +→^→{×,!}.
+- **More frames generated** (procedural analyzer, reusable): centered-triangular, q-triangular (1,7,35..),
+  doubly-triangular T_{T_n} (1,6,21..), Gauss Σ₃-triangular (verified n≤40), Pollock, tournament-scores =
+  partitions of T_{n-1} (a 5th 'partition' mode). Flagged coincidence: 21=T_6, 7=centered-hexagonal.
+- Files: triangle_frames_{procedural,density}_deathstar_S72 (+out); reflection the-composition-mode-ladder-on-the-triangle-S72.
 
 ## death-star-2026-07-20-S71 -- The {7,21} rule does NOT transfer to arborescences; exact contrast (HYP-8545)
 

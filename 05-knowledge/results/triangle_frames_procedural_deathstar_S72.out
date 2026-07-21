@@ -1,0 +1,40 @@
+FRAME                                          first terms                      growth                         parity
+----------------------------------------------------------------------------------------------------------------------------------
+T triangular (T_n=C(n+1,2))                    [1, 3, 6, 10, 15, 21]            polynomial deg 2               mixed [1, 1, 0, 0, 1, 1, 0, 0]
+ADD polygonal s=4 (squares)                    [1, 4, 9, 16, 25, 36]            polynomial deg 2               mixed [1, 0, 1, 0, 1, 0, 1, 0]
+ADD polygonal s=5 (pentagonal)                 [1, 5, 12, 22, 35, 51]           polynomial deg 2               mixed [1, 1, 0, 0, 1, 1, 0, 0]
+ADD Faulhaber p=2 (sq pyramidal Sum k^2)       [1, 5, 14, 30, 55, 91]           polynomial deg 3               mixed [1, 1, 0, 0, 1, 1, 0, 0]
+ADD Faulhaber p=3 (Sum k^3 = T_n^2)            [1, 9, 36, 100, 225, 441]        polynomial deg 4               mixed [1, 1, 0, 0, 1, 1, 0, 0]
+DIM simplicial d=3 (tetrahedral C(n+2,3))      [1, 4, 10, 20, 35, 56]           polynomial deg 3               mixed [1, 0, 0, 0, 1, 0, 0, 0]
+DIM simplicial d=4 (C(n+3,4))                  [1, 5, 15, 35, 70, 126]          polynomial deg 4               mixed [1, 1, 1, 1, 0, 0, 0, 0]
+MUL factorial (Prod k = n!)                    [1, 2, 6, 24, 120, 720]          factorial/super-exponential (ratio ->inf) mixed [1, 0, 0, 0, 0, 0, 0, 0]
+MUL Ham-path monoid (spectrum odds\{7,21})     [1, 3, 5, 9, 11, 13]             exponential ratio~1.13         all odd
+FAC arborescence min ((n-1)!)                  [1, 1, 2, 6, 24, 120]            factorial/super-exponential (ratio ->inf) mixed [1, 1, 0, 0, 0, 0, 0, 0]
+EXP tilings (2^C(n-1,2))                       [1, 1, 2, 8, 64, 1024]           factorial/super-exponential (ratio ->inf) mixed [1, 1, 0, 0, 0, 0, 0, 0]
+CAT triangulations (Catalan C_{n-1})           [1, 1, 2, 5, 14, 42]             exponential ratio~3.25         mixed [1, 1, 0, 1, 0, 0, 0, 1]
+
+--- composition-mode ladder (how each BUILDS from the triangle substrate) ---
+ ADD (+): sum of k terms  -> Fermat/Cauchy: every n = sum of <=s s-gonal (representability theorem)
+ MUL (x): product of terms -> Ham monoid: spectrum = odds\{7,21}, closed under x (the MULT analog of Fermat)
+ FAC (!): branching        -> arborescence (n-1)!-bands; simplicial C(n+d-1,d) binomial branching
+ EXP (^): 2^substrate      -> 2^{T_{n-2}} tilings (the hypercube the tournament invariants live on)
+Gauss Eureka (every n = sum of 3 triangulars), n<=40: True
+triangular numbers <= 1000: 44 of 1000  (density 0.044 -> 0, ~sqrt)
+Ham-path spectrum <= 1000: all odds except {7,21} => 499 of 1000 (density 0.499 -> 1/2)
+
+FRAME                                   MODE        representability/image                    growth/order
+centered triangular 1+3T_{n-1}          ADD         [1, 4, 10, 19, 31, 46, 64]                polynomial deg2
+q-triangular [n+1,2]_q at q=2           q-ADD       [1, 7, 35, 155, 651, 2667]                exp (q-def)
+doubly-triangular T_{T_n}               ADD^2       [1, 6, 21, 55, 120, 231]                  polynomial deg4
+Gauss: n = sum of 3 triangulars         ADD-basis   every n>=0 (Gauss 1796)                   basis order 3
+Pollock: n = sum of <=5 tetrahedral     DIM-basis   conjectured (Pollock 1850)                basis order ~5
+tournament scores sum to T_{n-1}        PARTITION   Landau: s_1<=..<=s_n, sum prefix >= C(k,2)constrained partitions of T_{n-1}
+Ham spectrum = odds\{7,21}              MUL         monoid, 2 forbidden                       density 1/2
+arborescence Sum a_r                    FAC         (n-1)!-bands, forbidden {4,5,8,11..}      density->0
+
+DENSITY LADDER of the image/spectrum (how many integers <=X the frame realizes):
+  additive figurate (triangular, k-gonal): ~sqrt(X)  (density -> 0)
+  multiplicative Ham monoid: X/2 - 2       (density -> 1/2)   <-- DENSEST, and the {7,21} live here
+  factorial arborescence: ~log X bands     (density -> 0)
+  => the MULTIPLICATIVE frame is where a *finite* forbidden set ({7,21}) can even exist;
+     additive & factorial frames are too sparse for a finite forbidden set to be meaningful.
