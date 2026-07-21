@@ -1,0 +1,28 @@
+================================================================== 
+ANGLE A: one-sided => vanishing analytic moments (nullcone); the
+pushforward mu has vanishing analytic moments but is NOT rot-invariant
+ ==================================================================
+  P=Z+Z^3 (charges [1, 3], one-sided=True):
+    E[P^1] (analytic moment int z^m dmu) = 0
+    E[P^2] (analytic moment int z^m dmu) = 0
+    E[P^3] (analytic moment int z^m dmu) = 0
+    E[P^4] (analytic moment int z^m dmu) = 0
+    full moment int z^2 zbar^1 dmu = E[P^2 Pbar^1] = 0 (=0, rot-inv would need)
+    full moment int z^3 zbar^1 dmu = E[P^3 Pbar^1] = 6 (=0, rot-inv would need)
+    full moment int z^1 zbar^0 dmu = E[P^1 Pbar^0] = 0 (=0, rot-inv would need)
+  => analytic moments all 0 (nullcone) yet some int z^a zbar^b !=0 (a!=b): mu is
+     NOT rotationally invariant. So 'nullcone' is WEAKER than rot-inv; GMC(2) claims
+     that for polynomial pushforwards it still forces one-sidedness. (the obstruction named)
+================================================================== 
+ANGLE B: three-charge two-sided scan -- NO nullcone element; detection
+depth & the 'second rung' (S73 primitive-relation mechanism)
+ ==================================================================
+  {+2,0,-1}: aZ^2+b ZW+c W: two-sided nullcone elements found = 0; first-fire depth histogram = {1: 64}
+  {+1,0,-2}: aZ + b ZW + c W^2: two-sided nullcone elements found = 0; first-fire depth histogram = {1: 64}
+  {+3,+1,-1,-3}(S73 span6): two-sided nullcone elements found = 0; first-fire depth histogram = {2: 256}
+  => ZERO two-sided nullcone elements in every scanned stratum (GMC(2) holds here).
+  The first-fire depth histogram shows detection depth 2,3,... (the moment where a
+  two-sided P is caught) -- consistent with EMP: depth grows with charge span/degree.
+  MECHANISM (S73): E[P^2]=0 is the 'primitive relation' among coeffs; on its variety
+  E[P^4] (or E[P^6]) is a nonzero homogeneous form => no two-sided nullcone. GMC(2)
+  REMAINS OPEN in general (unbounded degree/charge); these are bounded strata.
