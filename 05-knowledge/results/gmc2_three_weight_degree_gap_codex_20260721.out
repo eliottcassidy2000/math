@@ -1,0 +1,47 @@
+GMC(2) THREE-WEIGHT DEGREE-GAP EXACT SCOUT
+moment convention: E[Z^A W^B]=A!*1[A=B]
+channel identity: k copies of the primitive (+p,-q) return plus m-rk zero weights
+
+[boundary_b_dominant_p1q1]
+charges=(+1,-1), primitive_counts=(q/g=1,p/g=1), r=2
+deg(b)=2, deg(h)=1, e-r*d=-3, theorem_gate=True
+direct_Wick_vs_channel_formula: PASS (m=1..8)
+m= 10  M_m/L(b^m)=1.0128418053  (num_bits=62, den_bits=62)
+m= 20  M_m/L(b^m)=1.00633710142  (num_bits=160, den_bits=160)
+m= 40  M_m/L(b^m)=1.00314689473  (num_bits=396, den_bits=396)
+m= 80  M_m/L(b^m)=1.00156798457  (num_bits=947, den_bits=947)
+tournament: {'vertices': 13, 'observable': 'D(k)-D(l), D(k)=d*m+(e-r*d)k', 'score_histogram': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1}, 'directed_3_cycles': 0, 'scc_sizes': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_path': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 'hamiltonian_path_count': 1, 'edge_flips_vs_k_ascending': 0}
+
+[boundary_b_dominant_p2q3]
+charges=(+2,-3), primitive_counts=(q/g=3,p/g=2), r=5
+deg(b)=3, deg(h)=9, e-r*d=-6, theorem_gate=True
+direct_Wick_vs_channel_formula: PASS (m=1..8)
+m= 10  M_m/L(b^m)=1.00000664829  (num_bits=108, den_bits=108)
+m= 20  M_m/L(b^m)=1.00000454287  (num_bits=269, den_bits=269)
+m= 40  M_m/L(b^m)=1.00000256817  (num_bits=661, den_bits=661)
+tournament: {'vertices': 5, 'observable': 'D(k)-D(l), D(k)=d*m+(e-r*d)k', 'score_histogram': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1}, 'directed_3_cycles': 0, 'scc_sizes': [1, 1, 1, 1, 1], 'hamiltonian_path': [0, 1, 2, 3, 4], 'hamiltonian_path_count': 1, 'edge_flips_vs_k_ascending': 0}
+
+[boundary_h_dominant_p1q1]
+charges=(+1,-1), primitive_counts=(q/g=1,p/g=1), r=2
+deg(b)=1, deg(h)=5, e-r*d=3, theorem_gate=True
+direct_Wick_vs_channel_formula: PASS (m=1..8)
+n=  5  M_(r*n)/(C_n L(h^n))=1.00099034605  (num_bits=92, den_bits=92)
+n= 10  M_(r*n)/(C_n L(h^n))=1.00044349491  (num_bits=232, den_bits=232)
+n= 20  M_(r*n)/(C_n L(h^n))=1.00021042307  (num_bits=562, den_bits=562)
+n= 40  M_(r*n)/(C_n L(h^n))=1.00010255271  (num_bits=1317, den_bits=1317)
+tournament: {'vertices': 13, 'observable': 'D(k)-D(l), D(k)=d*m+(e-r*d)k', 'score_histogram': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1}, 'directed_3_cycles': 0, 'scc_sizes': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_path': [12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0], 'hamiltonian_path_count': 1, 'edge_flips_vs_k_ascending': 78}
+
+[resonance_band_control]
+charges=(+1,-1), primitive_counts=(q/g=1,p/g=1), r=2
+deg(b)=1, deg(h)=2, e-r*d=0, theorem_gate=False
+direct_Wick_vs_channel_formula: PASS (m=1..8)
+resonance_band_control: theorem deliberately makes no asymptotic-ratio claim
+tournament: {'vertices': 13, 'observable': 'D(k)-D(l), D(k)=d*m+(e-r*d)k', 'score_histogram': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1}, 'directed_3_cycles': 0, 'scc_sizes': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_path': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 'hamiltonian_path_count': 1, 'edge_flips_vs_k_ascending': 0}
+
+TOURNAMENT METHODOLOGY
+vertices considered: monomials; charges; primitive atoms; radial-deficit channels k; proof obligations
+chosen vertices: radial-deficit channels k (they preserve the factorial slope used by the proof)
+destroyed information: coefficient phase and cancellations inside one fixed channel
+challenged assumption: first-return atoms do NOT vanish separately inside a scalar moment
+tie Hamiltonian path: increasing k when D(k)=D(l); every sampled tournament is transitive
+status: exact identity checks + asymptotic diagnostics; proof is external to this script
