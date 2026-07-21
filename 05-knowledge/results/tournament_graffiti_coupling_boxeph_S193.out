@@ -1,0 +1,98 @@
+orderly augmentation: enumerating iso classes up to n=7 ...
+  n=1 : 1 iso classes
+  n=2 : 1 iso classes
+  n=3 : 2 iso classes
+  n=4 : 4 iso classes
+  n=5 : 12 iso classes
+  n=6 : 56 iso classes
+  n=7 : 456 iso classes
+  total classes n=3..7 : 530
+
+==========================================================================================
+INFLATION-VELOCITY TABLE  (Delta I = I(op(T)) - I(T)); '=k' means constant k over all classes
+==========================================================================================
+
+-- operation Dplus --
+   c3      Delta = +0   (CONSTANT: c3 and this op are frozen)
+   H       Delta = +0   (CONSTANT: H and this op are frozen)
+   tr      Delta = +1   (CONSTANT: tr and this op are coupled(+))
+   dom     Delta in [-1,+0]  (VARIABLE)
+   kings   Delta in [-5,+0]  (VARIABLE)
+   scc     Delta = +1   (CONSTANT: scc and this op are coupled(+))
+   smax    Delta in [+1,+3]  (VARIABLE)
+   smin    Delta = +0   (CONSTANT: smin and this op are frozen)
+   srange  Delta in [+1,+3]  (VARIABLE)
+
+-- operation Dminus --
+   c3      Delta = +0   (CONSTANT: c3 and this op are frozen)
+   H       Delta = +0   (CONSTANT: H and this op are frozen)
+   tr      Delta = +1   (CONSTANT: tr and this op are coupled(+))
+   dom     Delta = +0   (CONSTANT: dom and this op are frozen)
+   kings   Delta = +0   (CONSTANT: kings and this op are frozen)
+   scc     Delta = +1   (CONSTANT: scc and this op are coupled(+))
+   smax    Delta = +1   (CONSTANT: smax and this op are coupled(+))
+   smin    Delta in [-2,+0]  (VARIABLE)
+   srange  Delta in [+1,+3]  (VARIABLE)
+
+-- operation comp (complement) --
+   c3      INVARIANT under complement
+   H       INVARIANT under complement
+   tr      INVARIANT under complement
+   dom     changes under complement
+   kings   changes under complement
+   scc     INVARIANT under complement
+   smax    changes under complement
+   smin    changes under complement
+   srange  INVARIANT under complement
+
+==========================================================================================
+INVARIANT ALGEBRA under order-join T1|>T2  (verified on all class pairs, n1+n2<=7)
+==========================================================================================
+  c3(T1|>T2) = c3(T1)+c3(T2)   : True
+  tr(T1|>T2) = tr(T1)+tr(T2)   : True
+  scc(T1|>T2)= scc(T1)+scc(T2) : True
+  H(T1|>T2)  = H(T1)*H(T2)     : True   (Redei-path count is join-MULTIPLICATIVE)
+
+  strongly-connected iso classes (the join-atoms): n=3:1, n=4:1, n=5:6, n=6:35, n=7:353
+
+==========================================================================================
+COUPLING-LAW BATTERY  (predict via velocity/join, CONFIRM exhaustively over all 530 classes)
+==========================================================================================
+  srange <= tr             FAILS n=7    join-mono=False | inflation-FRAGILE via D- at n=6 (predicted by decoupling)
+        witness: n=7 c3=4 H=15 tr=5 srange=6 smax=6 kings=1 dom=1
+  c3 <= H                  HOLDS n<=7   join-mono=True  | join-monotone => REDUCES TO STRONG CORE (verified on cores)
+  n - c3 <= tr             HOLDS n<=7   join-mono=True  | join-monotone => REDUCES TO STRONG CORE (verified on cores)
+  tr <= smax + 1           HOLDS n<=7   join-mono=True  | join-monotone => REDUCES TO STRONG CORE (verified on cores)
+  dom + tr <= n + 1        HOLDS n<=7   join-mono=True  | join-monotone => REDUCES TO STRONG CORE (verified on cores)
+  H <= 2^(n-tr)            FAILS n=3    join-mono=True 
+        witness: n=3 c3=1 H=3 tr=2 srange=0 smax=1 kings=3 dom=2
+  H <= 2^(n-2)*c3 + 1      HOLDS n<=7   join-mono=True  | join-monotone => REDUCES TO STRONG CORE (verified on cores)
+  kings <= 2*c3 + 1        HOLDS n<=7   join-mono=True  | join-monotone => REDUCES TO STRONG CORE (verified on cores)
+  srange <= tr + c3        HOLDS n<=7   join-mono=True  | join-monotone => REDUCES TO STRONG CORE (verified on cores)
+  srange <= 2*(tr-1)       HOLDS n<=7   join-mono=True  | join-monotone => REDUCES TO STRONG CORE (verified on cores)
+
+==========================================================================================
+WOWII-103 PROPER port over STRONG tournaments: tr <= floor(b_dir - log(ecc_avg))?
+  b_dir := n-1 (largest 'acyclic-after-one-deletion' analog upper proxy); ecc_avg = avg king-eccentricity
+==========================================================================================
+  BREAKS found (tr > floor((n-1) - ln ecc_avg)):
+    n=4 tr=3 ecc_avg=2.2500 (ln=0.8109) rhs=2   -> 3 <= 2 is FALSE
+    n=5 tr=4 ecc_avg=2.4000 (ln=0.8755) rhs=3   -> 4 <= 3 is FALSE
+    n=5 tr=4 ecc_avg=2.4000 (ln=0.8755) rhs=3   -> 4 <= 3 is FALSE
+    n=5 tr=4 ecc_avg=2.6000 (ln=0.9555) rhs=3   -> 4 <= 3 is FALSE
+    n=6 tr=4 ecc_avg=3.0000 (ln=1.0986) rhs=3   -> 4 <= 3 is FALSE
+    n=6 tr=5 ecc_avg=2.5000 (ln=0.9163) rhs=4   -> 5 <= 4 is FALSE
+    n=6 tr=5 ecc_avg=2.5000 (ln=0.9163) rhs=4   -> 5 <= 4 is FALSE
+    n=6 tr=5 ecc_avg=2.5000 (ln=0.9163) rhs=4   -> 5 <= 4 is FALSE
+
+  achievable avg king-eccentricity STRADDLING e=2.718282 (tournament analog of WOWII-103's 30/11):
+    closest BELOW e: 19/7 = 2.714286  (strong tournament at n=7)
+    closest ABOVE e: 17/6 = 2.833333  (strong tournament at n=6)
+    => a WOWII-103-shaped bound with a -ln(ecc_avg) correction tips between these two exactly at e.
+
+==========================================================================================
+TIGHTNESS of WOWII-repair survivors on the strong core (equality = extremal witnesses)
+==========================================================================================
+  srange <= tr + c3     tight on 0 strong classes; e.g. none
+  srange <= 2*(tr-1)    tight on 0 strong classes; e.g. none
+  kings <= 2*c3 + 1     tight on 1 strong classes; e.g. n=3 c3=1 tr=2 srange=0 kings=3
