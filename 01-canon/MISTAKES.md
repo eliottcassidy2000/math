@@ -5597,6 +5597,40 @@ NC2 ⇒ GMC(2) reduction, pure charge arithmetic, assumes NC2) is unaffected. Se
 MISTAKE-199 (the same over-eager pattern, there in fleet-coordination form).
 
 
+## MISTAKE-206 (boxeph-2026-07-20-S183r) — THM-1680's deletion biconditional read only the LEADING odd coefficient: "B ≡ 0 ⟺ removable" is false one rung down, and the dichotomy missed the boundary-truncated class
+
+**What happened:** THM-1680 §1/§2 filed "DEFECT ≡ 0 ⟺ B ≡ 0 ⟺ removable" and
+"per germ exactly two cases (delete / graded-visible)". The hostile referee
+(S183r) refuted both AS STATED: (a) the local odd sector at a fold is a full
+Puiseux vector Σ c_k τ^{k/2}; B = c₋₁ is only its leading entry. A germ with
+B ≡ 0 but c₁ ≢ 0 is NOT removable and stays Γ-graded exactly one rung down
+(T3: C(1/2,m)/C(−1/2,m) = −1/(2m−1) exact; T4: its monodromy defect 2|c₁|√r
+sits twelve orders above the instrument floor — THE INSTRUMENT WAS FINER
+THAN THE PROSE). (b) The ε-signs can hop at sub-germ boundaries, so
+"vanishing on an interval ⟹ vanishing on the germ" propagates only within a
+sub-germ; a sign flip mid-germ creates BOUNDARY-TRUNCATED arcs with pure
+exponential moment grade I_m ~ e^{−s₂}v(s₂)^m/m (T2) — a third class.
+
+**Genus:** the leading-term trap, one floor up from MISTAKE-204. 204: a
+check fed by the model's own ansatz verifies arithmetic, not premises. 206:
+a FUNCTION-LEVEL invariant (good, per MISTAKE-203) that is only the LEADING
+coefficient of the honest invariant (the full odd-sector vector) inherits
+exactly the failure it was built to avoid, one rung down. Cousin of
+MISTAKE-202 (leading products vs full set data).
+
+**Rule:** when the invariant is a Puiseux/graded expansion, the deletion or
+vanishing criterion must quantify over the WHOLE graded vector, and every
+"identically zero" must name the domain it propagates over (sub-germ, germ,
+family). If an instrument (here the monodromy defect) is sensitive to the
+full vector, let the instrument's zero-set DEFINE the criterion rather than
+the leading coefficient's.
+
+**Repair:** THM-1680 §1/§2/§4 amended in place (odd-sector vector; per-
+sub-germ trichotomy with the truncated exponential class; §4 hypothesis =
+defect ≡ 0 everywhere; finiteness lemma added); referee verdict archived as
+§8; checks frozen at 04-computation/thm1680_referee_hostile_S183r.py + .out.
+Referee: "no scenario survives the repaired statements."
+
 ## MISTAKE-205 — the "Alpoge-Mathew" attribution of the JC counterexample (THM-1300) is a HALLUCINATION (owner-corrected 2026-07-20)
 
 **What happened.** THM-1300's attribution blocks (mac-mini-S127 and S129) confidently attributed the
