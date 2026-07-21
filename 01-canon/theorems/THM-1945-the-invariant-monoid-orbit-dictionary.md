@@ -1,5 +1,5 @@
 ---
-id: THM-1935
+id: THM-1945
 title: "THE INVARIANT–MONOID–ORBIT DICTIONARY: five theorems of this project are secretly one sentence — 'an invariant f is constant on the orbits of a monoid M acting on a set X, and how far f separates orbits measures M.' PROVED/VERIFIED instances: (1) RYSER IS AN ORBIT THEOREM — the score sequence is the COMPLETE invariant of the directed-3-cycle-reversal monoid; its orbits are EXACTLY the out-degree-vector classes (verified n=4: 38=38, n=5: 291=291 orbits=score-classes). (2) SWITCHING CLASSES ARE CUT-SPACE ORBITS — the two-graph (odd-triangle set) is the complete invariant of the cut-space (Z/2)^{n−1} ⊂ (Z/2)^{C(n,2)} acting on signings; #orbits = 2^{C(n,2)}/2^{n−1} = 2^{C(n−1,2)} (exact all n), and UNLABELLED = A002854 = V(E_n) = the repo's even-graph metagraph = classical Seidel two-graphs (2,3,7,16,54 for n=3..7). (3) ISO CLASSES ARE S_n-ORBITS — census A000568 = Burnside(1/n!)Σ|Fix σ| (2,4,12,56 verified). (4) THE INVARIANT LATTICE — labeled ⊐ {score, spectrum, two-graph} ⊐ iso ⊐ merged is a lattice of monoid-quotients ordered by refinement; score and spectrum are INCOMPARABLE from n=5 (neither refines the other; verified), and cospectral non-isomorphic tournaments first appear at n=4 (spectrum = a STRICT quotient of iso). (5) THE HARDNESS = STABILIZER-DIMENSION LAW (sharpens THM-1885's amenability heuristic) — an invariant is polynomial-time iff its stabilizer is positive-dimensional: tr(A^k)/det have GL-conjugation stabilizers (continuous) ⇒ P; the permanent / H have only the FINITE S_n×S_n stabilizer ⇒ #P. This is the Mulmuley–Sohoni GCT symmetry split, and THM-1780 ('H leaves the spectral ladder at n=6') is its tournament instance. THE ONE-SENTENCE PROJECT: every theorem asserts a function is M-equivariant; every counterexample-at-n0 is a pair in one M-orbit with different f (f was never M-invariant); MISTAKES.md is the list of functions mistaken for invariants."
 status: >
   (1) VERIFIED-EXACT n=4,5 (reversal orbits = score-vector classes, 38=38 and 291=291); the
@@ -25,13 +25,14 @@ depends_on:
 related: [THM-1810, THM-1870, THM-1775]
 concurrent:
   - "opus-2026-07-20-S441 THM-1930 (var-lambda2-decouples-from-c3, cite by filename): proves the GIT scalar var(lambda^2) is NOT a function of score or c3 for n>=5 (genuinely spectral, strictly finer) -- a THIRD strict-quotient instance for my lattice entry (4), parallel to cospectral-non-iso and to THM-1865 (H not score-determined). It also CORRECTS my THM-1885 named-next: the family ((x+c)^n+(x-c)^n)/2 interpolates char_A<->char_S of the SINGLE transitive tournament (c:0->1), NOT transitive<->Paley."
+  - "opus-2026-07-20-S442 THM-1935 (the-universal-decoupling-threshold-is-n5, cite by filename): SAME owner prompt (invariants/monoids/orbits, creative statements), CONVERGENT frame. Their centerpiece is the QUANTITATIVE refinement of my lattice entry (4): a decoupling (invariant X not a function of Y) = an orbit-refinement, and H|score, H|c3, var|c3, var|score, char_S|score ALL first split at EXACTLY n=5 (the Cayley-Dickson quaternion wall, n=2^k+1). My dictionary is the qualitative (X,M,f) template; their threshold matrix is the n=5 wall where the finer invariants peel off the score data. Complementary, not duplicate. (They first-pushed THM-1935 + HYP-8690; I renumbered to THM-1945 + HYP-8700.)"
 external:
   - "Ryser 1964 (3-cycle reversals connect equal-score tournaments); Seidel two-graphs / switching classes; Davis 1954 (tournament census = Burnside); Mulmuley–Sohoni Geometric Complexity Theory (per vs det = symmetry groups)."
   - "OEIS A000568 (tournaments), A002854 (two-graphs / even graphs), A000571 (score sequences)."
 script: 04-computation/invariant_monoid_orbit_kps_S128c141.py (+ .out)
 ---
 
-# THM-1935 — the invariant / monoid / orbit dictionary
+# THM-1945 — the invariant / monoid / orbit dictionary
 
 **One sentence.** *An invariant `f` is a function constant on the orbits of a monoid `M` acting on a
 set `X`; a theorem says `f` is `M`-equivariant; a census counts `M`-orbits (Burnside); how far `f`

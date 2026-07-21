@@ -37,14 +37,14 @@ wall at n=9.
 
 Files: THM-1935; HYP-8690; reflection; decoupling_threshold_matrix_opus_S442.py (+out). Namespace clean
 (1935/8690 above kps churn). Builds on my THM-1865/1900/1920/1930, kps THM-1880.
-## kind-pasteur-2026-07-21-S128c141 - The invariant/monoid/orbit dictionary: five theorems are one sentence; hardness = stabilizer dimension (THM-1935)
+## kind-pasteur-2026-07-21-S128c141 - The invariant/monoid/orbit dictionary: five theorems are one sentence; hardness = stabilizer dimension (THM-1945)
 
 Owner: think of everything as invariants, monoids, orbits; make creative statements. Continuing the
 generators/monoids thread (THM-1885) into its natural payoff. **Frame:** every topic = (set X,
 monoid M acting, invariant f = constant on orbits); theorem = "f is M-equivariant", census = "count
 M-orbits" (Burnside), hardness = "size of f's stabilizer", nullcone = "degenerate orbit".
 
-**THM-1935 -- FIVE VERIFIED dictionary entries** (script invariant_monoid_orbit_kps_S128c141.py +out,
+**THM-1945 -- FIVE VERIFIED dictionary entries** (script invariant_monoid_orbit_kps_S128c141.py +out,
 bit-packed exhaustive n<=6):
 1. **RYSER = ORBITS.** Score = complete invariant of the directed-3-cycle-reversal monoid; reversal
    orbits = out-degree-VECTOR classes EXACTLY (n=4: 38=38, n=5: 291=291). Ryser's theorem recast.
@@ -66,16 +66,22 @@ filtration; [C] GMC nullcone = torus fixed cone; [C] LRC(n) = every PSL(2,Z)-orb
 [C] metagraph = Schreier graph of S_n. META: every counterexample-at-n0 = a pair in one M-orbit with
 different f; MISTAKES.md = the list of functions mistaken for invariants.
 
-**NUMBER COLLISION (resolved).** opus-S441 first-pushed THM-1930 (var-lambda2-decouples-from-c3); I
-renumbered my dictionary 1930 -> **1935** (first-pusher rule), fixed all refs. Their result is
-directly complementary: var(lambda^2) NOT score/c3-determined for n>=5 = a THIRD strict-quotient
-instance for my lattice(4), and it CORRECTS my THM-1885 c-family named-next (the family
-((x+c)^n+(x-c)^n)/2 interpolates char_A<->char_S of the SINGLE transitive tournament, NOT
-transitive<->Paley) -- correction posted to THM-1885. Cited both ways.
+**DOUBLE NUMBER COLLISION (resolved; namespace very hot).** Under the SAME owner prompt, opus-S441
+first-pushed THM-1930 (var-lambda2) AND opus-S442 first-pushed THM-1935 (universal-decoupling-
+threshold-n5) + HYP-8690. First-pusher rule: I ended at **THM-1945 + HYP-8700** (renumbered 1930->1935
+->1945 as each collision surfaced; all refs fixed). Both opus results are CONVERGENT/complementary,
+not duplicate: (a) opus-S441 var(lambda^2)-decouples-from-c3 = a THIRD strict-quotient example for my
+lattice entry (4); (b) opus-S442 decoupling-threshold=n5 (H|score, var|c3 all first split at the
+Cayley-Dickson quaternion wall n=5) is the QUANTITATIVE refinement of my qualitative lattice(4) --
+my dictionary is the (X,M,f) template, their matrix is the n=5 wall where finer invariants peel off
+score data. opus-S441 also CORRECTS my THM-1885 c-family named-next (the family ((x+c)^n+(x-c)^n)/2
+interpolates char_A<->char_S of the SINGLE transitive tournament, NOT transitive<->Paley) --
+correction posted to THM-1885. Cited all ways.
 
 Reframing (organises the corpus + a quantitative hardness law), all equations verified or classical,
-no new open problem closed. **Files:** THM-1935; reflection creative-statements-invariant-monoid-orbit-
-kps-S128c141; script + .out; HYP-8690. Cites THM-1885/1810/1780/1870/1775/826, LEM-003, opus THM-1930-var.
+no new open problem closed. **Files:** THM-1945; reflection creative-statements-invariant-monoid-orbit-
+kps-S128c141; script + .out; HYP-8700. Cites THM-1885/1810/1780/1870/1775/826, LEM-003, opus
+THM-1930-var + opus THM-1935-decoupling-threshold.
 
 ---
 

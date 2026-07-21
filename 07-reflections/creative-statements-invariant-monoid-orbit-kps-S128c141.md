@@ -1,9 +1,9 @@
 # Creative statements in the invariant / monoid / orbit frame
 
 *kind-pasteur-2026-07-21-S128c141. Owner: think of everything as invariants, monoids, orbits; make
-creative statements. Companion to THM-1935 (the five VERIFIED dictionary entries) and THM-1885 (the
+creative statements. Companion to THM-1945 (the five VERIFIED dictionary entries) and THM-1885 (the
 `(object, monoid, action)` catalog). This note is the generative overflow — statements ranked by how
-sure I am, tagged [V]erified / [C]onjecture / [R]eframing. The five [V] ones are in THM-1935; the
+sure I am, tagged [V]erified / [C]onjecture / [R]eframing. The five [V] ones are in THM-1945; the
 rest are new creative claims worth their own sessions.*
 
 The grammar: pick a set `X`, a monoid `M ⟳ X`, an invariant `f` (constant on orbits). Then —
@@ -11,7 +11,7 @@ The grammar: pick a set `X`, a monoid `M ⟳ X`, an invariant `f` (constant on o
 `f`'s stabilizer", **nullcone** = "the degenerate orbit", **reduction** = "a generator steps `X`
 down". Twelve statements.
 
-### The verified five (THM-1935), one line each
+### The verified five (THM-1945), one line each
 1. **[V] Ryser = orbits.** Score = complete invariant of the 3-cycle-reversal monoid; orbits = score classes (38=38 n=4, 291=291 n=5).
 2. **[V] Switching = cut-space orbits.** Two-graph = complete cut-space invariant; count `2^{C(n−1,2)}` = A002854 = `V(E_n)` = Seidel two-graphs.
 3. **[V] Iso = `S_n`-orbits.** Census A000568 = Burnside; odd-cycle parity = the "odd" of OCC.
@@ -58,7 +58,7 @@ down". Twelve statements.
     vector). **LRC(n) ⇔ every orbit meets `{gap ≥ 1/2n}`**, and tightness at `(Z/n)*` = the orbit's
     stabilizer being the full unit group. **Creative form:** *the runners are lonely iff no
     `PSL(2,Z)`-orbit of speed sets is trapped below the wall; LRC's hardness is the non-amenability of
-    `PSL(2,Z)` (THM-1885/1935 hardness law).* (The wall-quintic and `2/25` gap should have a
+    `PSL(2,Z)` (THM-1885/1945 hardness law).* (The wall-quintic and `2/25` gap should have a
     continued-fraction = `S,T`-word address.)
 
 12. **[C] The metagraph is a Schreier graph.** `X` = iso classes `Q_m/S_n`; generators = the wiggly
@@ -78,6 +78,6 @@ down". Twelve statements.
 > `per`). *Find the monoid, and you know how hard the problem is before you start.*
 
 ## Cross-links
-THM-1935 (the five verified) · THM-1885 (BS(1,2), the catalog, amenability) · THM-1810 (GIT/SL₂) ·
+THM-1945 (the five verified) · THM-1885 (BS(1,2), the catalog, amenability) · THM-1810 (GIT/SL₂) ·
 THM-1780/1870 (H #P boundary) · LEM-003 (orbit–stabilizer, tilings×|Aut|=H) · THM-826 (Farey/PSL2Z) ·
 CLAUDE.md (cut⊕cycle, even graphs, spine/ribs/sea) · script invariant_monoid_orbit_kps_S128c141.py.
