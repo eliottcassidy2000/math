@@ -314,10 +314,25 @@ support via an arithmetic progression.  Corrected THM-1985/1990, the raw
 tournament Dirichlet/EGF reversal, finite-prefix/offset errors, the open global
 H-spectrum, and the false all-n self-line extrapolation.  Referee normal/`-O`
 outputs are byte-identical and `RESULT=PASS`; a new sorry-free Lean module
-certifies the algebraic core.  Files: THM-2000, MISTAKE-209/210/211,
+certifies the algebraic core.  Files: THM-2000, MISTAKE-209/210/213,
 `support_harmonic_abel_dini_figurate_surface_thm2000.py/.out`,
 `SupportHarmonicFigurate.lean`, and reflection
 `the-sequence-is-its-logarithmic-occupancy-not-its-index-codex-20260721.md`.
+
+Continuation: promoted THM-2005's full support-Dirichlet profile, integer
+Abel--Dini representatives, fibbinary/Moser automatic dimensions and tail
+bounds, collision-safe Egyptian continuum, Sylvester remainder, primitive
+residue fibers, and Forcade divisor profiles.  The exact new tournament
+criterion is
+`sigma_-1(Div(C(2^p,2)))>=2`, with equality exactly for a Mersenne prime.
+Kakeya achievement sets expose topology hidden by equal mass: `k`-simplex
+reciprocals form exactly `2^(k-2)` interval components, while powers of `k`
+give a Cantor set for `k>=3`; both triangular and binary atoms fill `[0,2]`.
+Corrected max-`c3` to its parity splice and mass `75/4-24log2`, then used its
+discrete convex increments to repair THM-2016's invalid dropped-SCC-summands
+proof (MISTAKE-212).  A score-sidecar audit also narrowed the local-profile
+claim: profiles add beyond score at `c3=12`, whereas score already explains
+the old `c3=11` gain.
 
 ## boxeph-2026-07-21-S198 -- THM-1979 TOURNAMENT SPACE IS A SPECTRUM (single point -> continuum)
 

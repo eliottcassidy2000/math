@@ -102,14 +102,22 @@ temperature** `τ_c` above which the whole shell is irreducible.
 
 ## Threads worked (S200 → THM-2016)
 
-- **The L3 coordinate is local subtournament density** (the flag/limit coordinate): the 4- and
-  5-vertex induced-census resolves most of the hot shells beyond `(char_A,|R|)` — but **3/47 survive
-  even (score, char_A, |R|, 4-profile, 5-profile)**. The deep center is *invariant-resistant*: local
-  densities, the spectrum, and `|R|` all fail together, so `L4 =` the whole tournament. This is the
-  sharp reason enumeration is forced at the hot core.
-- **Reducibility ceiling (proved):** `max c₃ over reducible = c₃_max(n−1)` (cycles live in one strong
-  component, ≤ n−1 vertices), so the condensation temperature `τ_c = c₃_max(n−1)/c₃_max(n)` is exact
-  (1/2, 2/5, 5/8, 4/7 for n=4..7) and `→ 1`.
+- **Local subtournament density is an L3 probe, with score kept as a sidecar:**
+  at the `c3=12` shell, 4&5-profiles genuinely improve
+  `(char_A,|R|,score)` resolution `36→44` of 47.  At `c3=11`, the apparent
+  `41→50` 4-profile gain is already supplied by score, so it is not independent
+  local evidence.  **3/47 still survive
+  (score, char_A, |R|, 4-profile, 5-profile)**. The deep center is
+  *invariant-resistant* even after global, score, and local sidecars.
+- **Reducibility ceiling (proved, proof corrected by THM-2000):**
+  `max c₃ over reducible = c₃_max(n−1)`.  Cycles live inside SCCs, but their
+  counts must be **summed**, not bounded by the largest summand.  The
+  nondecreasing increments
+  `c₃_max(n+1)-c₃_max(n)=T_floor(n/2)` let us concentrate every SCC-size
+  partition at `(n−1,1)`.  Thus
+  `τ_c=c₃_max(n−1)/c₃_max(n)` is the attained reducible ceiling
+  (1/2, 2/5, 5/8, 4/7 for n=4..7), while the first all-strong discrete shell is
+  `(c₃_max(n−1)+1)/c₃_max(n)` (1, 3/5, 3/4, 9/14).
 - **H is a thermometer:** mean H rises monotonically with `τ` (1 → 178 at n=7), the spread carried by
   the free coordinates — locating death-star-S84's `H≥disc` binding case at the hot center `τ=1`.
 

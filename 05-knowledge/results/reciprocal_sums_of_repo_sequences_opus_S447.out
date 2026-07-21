@@ -1,5 +1,4 @@
-SUPERSEDED HISTORICAL PREFIX CALCULATOR -- USE THM-2000/2005
-All census rows below are indexed finite prefixes unless stated otherwise.
+CORRECTION=MISTAKE-209/213;historical_finite-prefix_demo;canonical_referee=THM-2000/2005
 ========================================================================
 PART 1 -- FIGURATE / BINOMIAL invariant-SIZE sequences: EXACT rational sums
   general law:  sum_{n>=k} 1/C(n,k) = k/(k-1)  (telescoping / hockey-stick)
@@ -13,12 +12,13 @@ PART 1 -- FIGURATE / BINOMIAL invariant-SIZE sequences: EXACT rational sums
   TOURNAMENT identities (char_S coefficients / object sizes, THM-1920):
     arc count = C(n,2) = triangular T_(n-1)        -> sum 1/arc  = 2          (Downey-Ong-Sellers triangular)
     # tiles   = C(n-1,2) = triangular              -> sum 1/tiles= 2
-    triple slots C(n,3) = tetrahedral               -> sum 1/slots= 3/2
+    triple slots = C(n,3) = tetrahedral            -> sum 1/slots= 3/2
+    true c3-max parity splice                       -> sum 1/c3max=75/4-24log(2)=2.1144676666
     var-max   = 2*C(n,3) (transitive, THM-1930)    -> sum 1/varmax= 3/4
-    realizable H=1+2^(n-2) neighbor support (n>=3): sum = 0.76449978
+    H=1+2^(n-2) SC-neighbor: sum_{n>=2} 1/(1+2^(n-2)) = 1.26449978
 
 ========================================================================
-PART 2 -- COUNTING sequences: indexed finite prefixes (not constants)
+PART 2 -- COUNTING sequences: finite term-multiset prefixes (not constants)
 ========================================================================
   A000568 #tournaments (n>=1)       : sum(1/a) over 13 terms = 2.85353413
   A038375 max Ham paths (n>=1)      : sum(1/a) over 9 terms = 2.62932397
@@ -29,7 +29,7 @@ PART 2 -- COUNTING sequences: indexed finite prefixes (not constants)
   A000571 score seqs (n>=3)         : sum(1/a) over 7 terms = 0.93154365
   A002620 quarter-square (n>=2)     : sum(1/a) over 13 terms = 2.36893991
 
-  exploratory continued fractions of uncertified indexed prefixes:
+  continued fractions of finite prefixes (diagnostic only; no inverse-symbolic inference):
     A000568 #tournaments (n>=1)       : 2.853534132  CF=[2, 1, 5, 1, 4, 1, 3, 1]   (e-1=1.718282, e=2.718282, 3/2=1.5)
     A038375 max Ham paths (n>=1)      : 2.629323972  CF=[2, 1, 1, 1, 2, 3, 4, 5]   (e-1=1.718282, e=2.718282, 3/2=1.5)
     A002854 even graphs E_n (n>=3)    : 1.061814898  CF=[1, 16, 5, 1, 1, 1, 3, 2]   (e-1=1.718282, e=2.718282, 3/2=1.5)
@@ -40,10 +40,10 @@ PART 3 -- CAYLEY-DICKSON levels n=2^k+1 (n=3,5,9,17,33,...): sum 1/(2^k+1)
   sum_{k>=1} 1/(2^k+1) = 0.7644997803   (cf. Erdos-Borwein sum 1/(2^k-1) = 1.6066951524)
 
 ========================================================================
-PART 4 -- ABEL-DINI: exponent one is the divergent critical member
+PART 4 -- ABEL-DINI: the exact exponent-one boundary diverges
   divergent S=sum a_n: sum a_n/S_n DIVERGES but sum a_n/S_n^(1+eps) CONVERGES (any eps>0)
 ========================================================================
-  CONDITIONAL all-odd model (not the proved H-spectrum); partial(2e5)=7.0848
+  odd-number MODEL sum 1/odd (DIVERGES, harmonic-slow); partial(2e5)=7.0848
     Abel-Dini boundary sum t/S     (diverges) partial = 2.8999
     Abel-Dini sum t/S^1.05         (converges) partial = 2.8051
 
@@ -55,7 +55,8 @@ PART 5 -- BERTRAND scale: where sequences sit (sum 1/(n (ln n)^a): div a<=1, con
   sum 1/(n (ln n)^1.5) partial(1e5) = 2.3482  (converges)
   sum 1/(n (ln n)^2.0) partial(1e5) = 2.0229  (converges)
 
- READING: pure binomial rows have the proved rational ladder k/(k-1).
- Census decimals above are indexed prefixes; growth proves convergence only with a tail bound,
- and it does not prove an arithmetic type.  Global H-value support divergence remains OPEN.
- Use THM-2000/2005 for support semantics, Abel-Dini, and certified rows.
+ READING: the FIGURATE invariant-sizes (char_S coefficients) have RATIONAL reciprocal sums
+ k/(k-1) (arc->2, triple-slots->3/2, var->3/4); COUNTING rows above are finite prefixes;
+ global H-VALUE support divergence is OPEN -- odds are only the conditional comparison model
+ under the positive-density conjecture H's value-set would sit at divergence; this is not proved.
+ Abel-Dini says exponent one still diverges, while every exponent 1+epsilon converges.

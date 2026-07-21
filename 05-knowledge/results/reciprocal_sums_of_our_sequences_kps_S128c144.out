@@ -1,6 +1,7 @@
-SUPERSEDED HISTORICAL PREFIX CALCULATOR -- USE THM-2000/2005
+CORRECTION=MISTAKE-209/213;historical_term-multiset_prefixes;canonical_referee=THM-2000/2005
+H_SPECTRUM_ROW=CONDITIONAL_ODDS_MINUS_7_21_MODEL;GLOBAL_DIVERGENCE=OPEN
 ====================================================================================
-INDEXED RECIPROCAL PREFIXES sum(1/a_n); deduplicate for harmonic supports
+RECIPROCAL SUMS  sum(1/a_n)  — indexed term-multiset prefixes
 ====================================================================================
 sequence                       index   growth                   sum 1/a_n  note
 ------------------------------------------------------------------------------------
@@ -11,33 +12,33 @@ C(n,4) (dim4)                  n>=4    poly-4         1.33333332868047494  = 4/3
 C(n,5) (dim5)                  n>=5    poly-5         1.24999999996969804  = 5/4 exactly (figurate k=5)
 squares n^2                    n>=1    poly-2         1.64468403559562227  = pi^2/6 (Basel)
 var(lam^2)=2C(n,3)             n>=3    poly-3        0.749999331997922959  = 3/4 (= (1/2)*3/2)
-central binom C(2n,n)          n>=0    exp-4^n        1.73639985871871508
-Catalan                        n>=0    exp            2.80613305077076349
-2^C(n,2) (lab.tourn)           n>=1    lacunary       1.64163256065515387
-2^C(n-1,2) (switch cls)        n>=1    lacunary       2.64163256065515387
+central binom C(2n,n)          n>=0    exp-4^n        1.73639985871871508  
+Catalan                        n>=0    exp            2.80613305077076349  
+2^C(n,2) (lab.tourn)           n>=1    lacunary       1.64163256065515387  
+2^C(n-1,2) (switch cls)        n>=1    lacunary       2.64163256065515387  
 2^n (Cayley-Dickson)           n>=1    geometric                      1.0  = 1 (n>=1)
-2^n-1 (Mersenne)               n>=1    geometric      1.60669515241529176
-A000568 tournaments            n=0..11 indexed super-exp      3.85353413228360674
-A002854 even graphs V(E)       n>=1    super-exp      3.06184593743842943
-A000571 score seqs             n>=1    exp~4^n        3.93252049233987449
-A000182 tangent                n>=1    super-exp       1.5663053504037776
-A000364 secant/Euler           n>=0    super-exp      2.21713563304023304
+2^n-1 (Mersenne)               n>=1    geometric      1.60669515241529176  
+A000568 tournaments            n>=1    super-exp      3.85353413228360674  
+A002854 even graphs V(E)       n>=1    super-exp      3.06184593743842943  
+A000571 score seqs             n>=1    exp~4^n        3.93252049233987449  
+A000182 tangent                n>=1    super-exp       1.5663053504037776  
+A000364 secant/Euler           n>=0    super-exp      2.21713563304023304  
 factorial n!                   n>=0    super-exp      2.71828182619849287  = e (n>=0)
-Fibonacci                      n>=1    exp-phi        3.35964648901023679
+Fibonacci                      n>=1    exp-phi        3.35964648901023679  
 odd numbers (H parity)         n>=1    linear                 5.128654819  DIVERGES (~ (1/2)ln) (partial, N=3999)
-conditional odds\{7,21} model  model   linear                 4.938178628  DIVERGES; global H-spectrum identification is OPEN (partial, N=3997)
-pentagonal n(3n-1)/2           n>=1    poly-2         1.48181523015602679
+conditional odds\{7,21} model  n>=1    linear                 4.938178628  DIVERGES as a model; actual H-support status OPEN (partial, N=3997)
+pentagonal n(3n-1)/2           n>=1    poly-2         1.48181523015602679  
 
 ====================================================================================
 (1) THE FIGURATE LADDER  sum_{n>=k} 1/C(n,k) = k/(k-1)  — VERIFIED + telescoping proof
 ====================================================================================
-  k=2: partial through n=3999 = 1.99949987496874   exact finite remainder = 7996/3999  match=True
-  k=3: partial through n=3999 = 1.49999981235929   exact finite remainder = 3997000/2664667  match=True
-  k=4: partial through n=3999 = 1.33333333320815   exact finite remainder = 14200898664/10650673999  match=True
-  k=5: partial through n=3999 = 1.24999999999988   exact finite remainder = 13300029156250/10640023325001  match=True
-  k=6: partial through n=3999 = 1.2   exact finite remainder = 17002757273351596/14168964394459665  match=True
-  k=7: partial through n=3999 = 1.16666666666667   exact finite remainder = 2829542189573595100/2425321876777367229  match=True
-  k=8: partial through n=3999 = 1.14285714285714   exact finite remainder = 25824827343925406254384/22596723925934730472593  match=True
+  k=2: sum 1/C(n,k) = 1.99949987496874   vs  k/(k-1) = 2 = 2.0000000000  match=False
+  k=3: sum 1/C(n,k) = 1.49999981235929   vs  k/(k-1) = 3/2 = 1.5000000000  match=False
+  k=4: sum 1/C(n,k) = 1.33333333320815   vs  k/(k-1) = 4/3 = 1.3333333333  match=True
+  k=5: sum 1/C(n,k) = 1.24999999999988   vs  k/(k-1) = 5/4 = 1.2500000000  match=True
+  k=6: sum 1/C(n,k) = 1.2   vs  k/(k-1) = 6/5 = 1.2000000000  match=True
+  k=7: sum 1/C(n,k) = 1.16666666666667   vs  k/(k-1) = 7/6 = 1.1666666667  match=True
+  k=8: sum 1/C(n,k) = 1.14285714285714   vs  k/(k-1) = 8/7 = 1.1428571429  match=True
   telescoping: 1/C(n,k) = k/(k-1) [1/C(n-1,k-1) - 1/C(n,k-1)]  (identity, proven in THM)
   k=1 (harmonic, vertices): k/(k-1) -> infinity  = the DIVERGENT origin of the ladder.
   k->inf: k/(k-1) -> 1.  Ladder of sums: inf, 2, 3/2, 4/3, 5/4, ... -> 1.
@@ -51,7 +52,7 @@ pentagonal n(3n-1)/2           n>=1    poly-2         1.48181523015602679
   Euler prod_(n>=1)(1-2^-n) = 0.2887880950866024212788997  (= signed pentagonal theta, pentagonal-number thm)
 
 ====================================================================================
-(3) HISTORICAL INDEXED VALUES (not support fingerprints)
+(3) NAMED CONSTANTS the sums hit (fingerprints)
 ====================================================================================
   Fibonacci                  = 3.35964648901023679   reciprocal Fibonacci const psi ~ 3.359885666
   Catalan                    = 2.80613305077076349   sum 1/Catalan = 2 + 4pi/(9 sqrt3)?

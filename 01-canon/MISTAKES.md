@@ -142,6 +142,24 @@ Format per entry:
   `sum_S M_3(|S|)<=M_3(n-1)`.  Joining an extremal `(n-1)`-tournament to a
   singleton gives equality.  THM-2016 now contains this repaired proof; its
   ceiling and the THM-2005 condensation identities are unchanged.
+## MISTAKE-212 (2026-07-21, codex audit of THM-2016) -- an SCC sum was bounded by its largest summand
+
+- **What was claimed:** the proof of the reducibility ceiling used
+  `c₃(T)=Σ_SCC c₃(S)≤c₃_max(largest SCC)`.  It then correctly stated that the
+  largest possible `c₃` of a reducible `n`-tournament is `c₃_max(n−1)`.
+- **Why it is wrong:** the displayed inequality drops every SCC except the
+  largest.  The order-join of two directed 3-cycles is a six-vertex
+  counterexample: its two SCCs contribute `1+1=2`, while
+  `c₃_max(3)=1`.  The claimed ceiling survives, but not that inference.
+- **Correct framing:** write `f(n)=c₃_max(n)`.  THM-2000 gives
+  `f(n+1)-f(n)=T_floor(n/2)`, so the increments of `f` are nondecreasing.
+  Transferring a vertex from a smaller SCC-size part to a larger one cannot
+  decrease the sum of `f` over the partition.  Concentrating any partition
+  with at least two parts at `(n-r+1,1,...,1)` proves
+  `Σ_i f(n_i)≤f(n-r+1)≤f(n-1)`, with equality at `(n-1,1)`.  Also distinguish
+  the attained reducible temperature `f(n-1)/f(n)` from the first all-strong
+  discrete shell `(f(n-1)+1)/f(n)`.  THM-2016 and its script/reflection are
+  corrected.
 
 ---
 
@@ -188,7 +206,8 @@ Format per entry:
   Similarly the subset masses of `0!,1!,2!,...`, Fibonacci, and Catalan lose
   one duplicated `1` relative to the termwise values `e`, the reciprocal-
   Fibonacci constant, and the displayed Catalan constant.  On convergence,
-  `a_n ~ n log n` is already superlinear but `sum 1/a_n` diverges; more
+  for the strictly increasing support enumeration, `b_n ~ n log n` is already
+  superlinear but `sum 1/b_n` diverges; more
   generally Bertrand series have iterated-log boundary exponents.  Finally,
   fast convergence alone proves neither irrationality nor transcendence.
   THM-1985 has two further independent errors: the repo contains conflicting
@@ -259,7 +278,7 @@ Format per entry:
 
 ---
 
-## MISTAKE-211 (2026-07-21, codex reciprocal-atlas audit) -- finite prefixes, offsets, and proxy supports were promoted to sequence constants or all-n laws
+## MISTAKE-213 (2026-07-21, codex reciprocal-atlas audit) -- finite prefixes, offsets, and proxy supports were promoted to sequence constants or all-n laws
 
 - **What was done:**
   `04-computation/reciprocal_sums_of_repo_sequences_opus_S447.py` labels short
@@ -270,13 +289,18 @@ Format per entry:
   mixes offsets and term multiplicities; its frozen output itself reports
   `match=False` for finite simplex approximations at `k=2,3`.  Separate
   sequence syntheses also propagated `2 selfK(n)=SC(n)` as all-`n` after the
-  coincidence at `n=5,6,7`.
+  coincidence at `n=5,6,7`.  THM-1985 similarly promoted the prime-core
+  identity `m({1,...,k})=H_k/C(k+2,2)` from the flagship `k=12` case to all
+  `k`.
 - **Why it is wrong:** a finite prefix supplies neither a tail bound nor an
   arithmetic type.  Offset changes can add duplicate `1`s, so they change the
   term-multiset mass while leaving the support mass fixed.  The H-spectrum file
   proves only two omissions plus finite coverage.  Finally THM-849 computes at
   `n=8` that `2 selfK(8)=404`, whereas `SC(8)=176`; the all-size self-line law
-  is false, not a blue-line counting artifact.
+  is false, not a blue-line counting artifact.  For the deep-well measure,
+  THM-819 gives the primitive sum
+  `2/[(k+1)(k+2)] sum_(u<=k,(u,k+1)=1)1/u`; it reduces to
+  `H_k/C(k+2,2)` when `k+1` is prime, including `k=12`, but not uniformly.
 - **Correct framing:** every reported number must carry (i) its exact index
   range, (ii) support versus multiplicity semantics, and (iii) either a proved
   tail estimate or the label “finite prefix.”  Use
@@ -285,7 +309,8 @@ Format per entry:
   classes and A051337 for strongly connected tournament classes.  THM-2000's
   optimization-safe referee replaces the two reciprocal scripts as the
   canonical analytic certificate; THM-849 remains the decisive self-line
-  counterexample.
+  counterexample.  THM-819, not the prime-special display in THM-805, is the
+  uniform deep-well law.
 
 ---
 

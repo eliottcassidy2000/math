@@ -26,6 +26,18 @@ log-block profiles.  Equal mass is not equal geometry.  A faithful sequence
 fingerprint should therefore retain at least the block-occupancy vector (or
 heat trace), not only its integral.
 
+There is an unexpectedly literal second Kakeya bridge.  After turning an
+integer sequence into reciprocal atoms, take all subseries of those atoms.
+The resulting achievement set is controlled by whether each atom exceeds the
+remaining tail.  The simplex and power supports have the same mass
+`k/(k-1)`, yet for `k>=3` the simplex achievement set is exactly `2^(k-2)`
+closed intervals while powers of `k` give a Cantor set of dimension
+`log_k(2)`.  At `k=2` both exceptional geometries fill `[0,2]`: every real
+width between zero and two is a subseries of triangular reciprocals, and also
+of binary reciprocals.  Thus the total mass can forget even connectedness.
+Kakeya's partial-sum problem and the Kakeya needle-width analogy are not the
+same theorem, but this support measure puts them on adjacent faces.
+
 The master figurate array sharpens this from a slogan into an arithmetic
 surface.  Every point has a finite rational-argument digamma form.  Exactly on
 the divisibility rays `s-2 | d`, the extra shape pole collides with a rising-

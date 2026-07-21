@@ -1,20 +1,17 @@
 ---
 id: THM-2000
 title: SUPPORT-HARMONIC ABEL--DINI LAW AND THE TWO-AXIS FIGURATE MASS SURFACE
-status: PROVED analytic/exact.  A sequence interpreted literally as a subset of the harmonic numbers is governed by its value support, not its indexing multiplicity.  The support/multiset collision tax, Abel--Stieltjes identity, multiplicative-block Dini criterion, full Bertrand near-linear boundary, master-figurate beta-integral surface, simplex/power equal-mass ladder, polygonal digamma axis, three Faulhaber values, Gauss triangular-theta product, ladder ratio/sum/product trichotomy, and reciprocal tournament-series reversal are proved.  Exact and high-precision referees are optimization-safe.  Numerical atlas values carry no unproved irrationality or transcendence claim; global H-spectrum divergence remains open
+status: PROVED analytic/exact.  A sequence interpreted literally as a subset of the harmonic numbers is governed by its value support, not its indexing multiplicity.  The support/multiset collision tax, Abel--Stieltjes identity, multiplicative-block and partial-sum Dini laws, full Bertrand near-linear boundary and regular-variation tail, Kakeya achievement-set classification (including the exact simplex interval decomposition), master-figurate beta-integral and finite digamma surface, divisibility-resonance pi-squared ridge, simplex/power equal-mass ladder, polygonal digamma axis, five Faulhaber values, Gauss triangular-theta product, ladder ratio/sum/product trichotomy, and reciprocal tournament-series reversal are proved.  Exact and high-precision referees are optimization-safe.  Numerical atlas values carry no unproved irrationality or transcendence claim; global H-spectrum divergence remains open
 source: codex-2026-07-21 reciprocal-sequence continuation and audit of concurrent THM-1985/1990
-depends_on: [THM-1127, THM-1360, THM-1990]
-related: [THM-841, THM-853, THM-874, THM-1370, THM-1985, THM-2005, MISTAKE-209, MISTAKE-210]
-external:
-  - "Lawrence Downey, Boon W. Ong, and James A. Sellers, Beyond the Basel Problem: Sums of Reciprocals of Figurate Numbers, College Mathematics Journal 39 (2008), 391--394, JSTOR stable 27646686, https://www.jstor.org/stable/27646686"
-  - "Archived preprint: https://web.archive.org/web/20130529032918/http://www.math.psu.edu/sellersj/downey_ong_sellers_cmj_preprint.pdf"
-  - "Applegate--Pol--Sloane, The Toothpick Sequence and Other Sequences from Cellular Automata, arXiv:1004.3036 (dyadic formula for A139250)"
+depends_on: [THM-462, THM-1127, THM-1360, THM-1990]
+related: [THM-841, THM-853, THM-854-noholes-completeness-and-rank2-polygonal-law.md, THM-874, THM-1370-h-spectrum-omits-7-21-all-n.md, THM-1985, THM-2005, THM-2010, THM-2016, MISTAKE-209, MISTAKE-210, MISTAKE-212, MISTAKE-213]
+external: "S. Kakeya, On the partial sums of an infinite series, Tohoku Sci. Rep. 3 (1914), 159--164 (achievement-set tail criterion); Applegate--Pol--Sloane, The Toothpick Sequence and Other Sequences from Cellular Automata, arXiv:1004.3036 (dyadic formula for A139250)"
 script: 04-computation/support_harmonic_abel_dini_figurate_surface_thm2000.py
 output: 05-knowledge/results/support_harmonic_abel_dini_figurate_surface_thm2000.out
-formalization: 04-computation/lean/TournamentH7/TournamentH7/SupportHarmonicFigurate.lean
-script_sha256: 27f7fe4ff60a3d78efac586eb11b138dda5dd5262a5177046829e06c032b6502
-output_sha256: fbc4930f5861be1f276ea7c1e45944583f2217d2375f7c068ce3c3e53fabcdc2
-formalization_sha256: 801a41c4d9bdb9b418427007a69b7b1a75a90ba39ff8f772b4388fe3c25c279f
+lean: 04-computation/lean/TournamentH7/TournamentH7/SupportHarmonicFigurate.lean
+script_sha256: 976a46c9f7295ab64ffd1c1dfb1e67274ce2bf37c6c309ba495957a25069f44c
+output_sha256: df71dce8b1e39ae2494b13c54cf04b9ea9569bfd0ad5aaae57c62d8b9ac9c32f
+lean_sha256: c9550106a5c5aa8d8ae18b173b1aa5bf26c552cfa11d615d03f987cb04a1170e
 ---
 
 # THM-2000 -- support-harmonic Abel--Dini law and the figurate mass surface
@@ -131,6 +128,58 @@ Natural density zero is nowhere near sufficient: the primes occupy only about
 divergent harmonic sum.  Triangular numbers occupy exponentially less of each
 successive block and converge.
 
+### 2.1 Generating, heat, and Dirichlet transforms of one support measure
+
+Put one unit atom at every occupied integer.  Its ordinary support generator
+and heat trace are
+
+```text
+G_A(x)=sum_(a in A)x^(a-1),
+Theta_A(t)=sum_(a in A)e^(-at).
+```
+
+Tonelli gives the exact transform dictionary
+
+```text
+sigma(A)=integral_0^1 G_A(x)dx
+        =integral_0^infinity Theta_A(t)dt,                            (HT1)
+D_A(s)=sum_(a in A)a^(-s)
+      =1/Gamma(s) integral_0^infinity t^(s-1)Theta_A(t)dt.           (HT2)
+```
+
+Here (HT2) is an identity in the extended nonnegative reals for real `s>0`;
+for complex `s` it holds in every common half-plane of absolute convergence.
+
+Thus Abel counting, the support Dirichlet series, and theta/heat identities are
+Stieltjes, Mellin, and Laplace views of the same counting measure.  In
+particular the full profile is a lattice valuation:
+
+```text
+D_(A union B)(s)+D_(A intersect B)(s)=D_A(s)+D_B(s).                 (VAL)
+```
+
+For real `s>=0`, (VAL) is understood in `[0,infinity]`; for complex `s`, use
+a common half-plane of absolute convergence.
+
+This is the pointwise indicator identity integrated against `m^(-s)`.  It also
+shows why one scalar cannot be a complete fingerprint: mass-preserving
+Egyptian refinements can move through many different supports on the same
+valuation level set (the automatic/Egyptian companion atlas is THM-2005).
+
+If `A(x)~C x^alpha`, Karamata's theorem gives
+
+```text
+Theta_A(t)~C Gamma(alpha+1)t^(-alpha),             t downarrow 0.
+```
+
+For a pure power law, reciprocal convergence is exactly local integrability of
+this heat singularity (`alpha<1`).  The quarter-square trace splits into square
+and oblong lattice traces; the lifted `G_1` trace splits into shifted square and
+oblong Green functions, explaining the `coth/tanh` constants below.  Gauss's
+triangular-number theta product, applied in Section 8 to tournament supports,
+is another exact heat-trace evaluation, not an unrelated special-function
+coincidence.
+
 ## 3. The actual boundary is Bertrand, not “linear versus superlinear”
 
 Let `b_1<b_2<...` be the strictly increasing enumeration of the support.  Then
@@ -145,20 +194,20 @@ Bertrand boundary.
 For example,
 
 ```text
-a_n asymptotic n(log n)^alpha
+b_n asymptotic n(log n)^alpha
 ```
 
 gives
 
 ```text
-sum_n1/a_n converges  iff alpha>1.                                    (11)
+sum_n1/b_n converges  iff alpha>1.                                    (11)
 ```
 
 In particular `n log n` is superlinear and still divergent.  More generally,
 with `log_r` the `r`-fold iterated logarithm,
 
 ```text
-a_n asymptotic
+b_n asymptotic
  n log n log_2 n ... log_(r-1)n (log_r n)^alpha                       (12)
 ```
 
@@ -182,14 +231,15 @@ sum_n x_n/S_n=infinity,
 sum_n x_n/S_n^(1+epsilon)<infinity            for every epsilon>0.   (D)
 ```
 
-For convergence, monotonicity of `t^(-1-epsilon)` gives
+For convergence, start at `n=2` (so `S_(n-1)>0`).  Monotonicity of
+`t^(-1-epsilon)` gives
 
 ```text
 x_n/S_n^(1+epsilon)
  <=integral_(S_(n-1))^(S_n)t^(-1-epsilon)dt,
 ```
 
-and the integrals telescope.  For divergence put `y_n=x_n/S_(n-1)` and
+and the integrals telescope from `S_1`; the omitted first term is finite.  For divergence put `y_n=x_n/S_(n-1)` and
 ignore the first term.  If `y_n>=1` infinitely often, then
 `x_n/S_n=y_n/(1+y_n)>=1/2` infinitely often.  Otherwise `y_n<1` eventually,
 and
@@ -201,6 +251,140 @@ log(1+y_n)<=y_n<=2y_n/(1+y_n)=2x_n/S_n.
 But `sum log(1+y_n)=log(S_n/S_N) -> infinity`.  This proves both halves,
 including the exact exponent-one boundary, without importing an asymptotic
 growth class.
+
+### 3.2 Regular variation gives the tail constant
+
+The Abel viewpoint also quantifies convergence.  If the increasing support
+enumeration satisfies
+
+```text
+b_n asymptotic c n^p,                    c>0, p>1,
+```
+
+then asymptotic inversion and the `p`-series tail give
+
+```text
+A(x) asymptotic c^(-1/p)x^(1/p),
+sum_(b_n>x)1/b_n asymptotic
+  c^(-1/p)/(p-1) x^(1/p-1),
+sum_(n>N)1/b_n asymptotic
+  1/[c(p-1)] N^(1-p).                                         (RV)
+```
+
+This attaches a geometric meaning to several constants in the atlas:
+
+```text
+triangular numbers:         value-tail ~sqrt(2/x),
+quarter-squares:            value-tail ~2/sqrt(x),
+Farey endpoint totals:      value-tail ~(pi/sqrt6)/sqrt(x),
+first balance side S_1:     value-tail ~1/(2x^(2/3)),
+d-simplex numbers:          value-tail
+  ~(d!)^(1/d)/(d-1) x^(1/d-1).
+```
+
+At degree two, the coefficient of `x^(-1/2)` in the reciprocal tail is the
+same coefficient that appears in `A(x)~C sqrt(x)`.  This Abel self-duality
+explains why quarter-square and Farey supports have parallel tails despite
+very different arithmetic definitions.
+
+### 3.3 The mass is a needle-width budget
+
+Fix `0<c<=1` and attach to each `a in A` an arc of length `c/a` on the unit
+circle.  For arbitrary deterministic placements, the first Borel--Cantelli
+lemma on the circle gives
+
+```text
+sigma(A)<infinity  =>  almost every point lies in only finitely many arcs.
+```
+
+If instead the arc rotations are independent and uniform, then for each fixed
+point the hit events are independent with probabilities `c/a`.  The second
+Borel--Cantelli lemma and Fubini give
+
+```text
+sigma(A)=infinity  =>  almost every point is hit infinitely often,
+                       for almost every random placement.            (BC)
+```
+
+This is a precise Kakeya-needle analogy, not a deterministic Kakeya theorem.
+It says that Abel--Bertrand mass is exactly the random repeated-cover threshold;
+arithmetic correlations and direction constraints are the extra difficulty in
+LRC-style deterministic covering.  Triangular, quarter-square, and Farey
+supports have finite total width, while primes sit on the divergent Bertrand
+edge.
+
+### 3.4 Kakeya meets Kakeya: the achievement set of reciprocal sub-supports
+
+There is a second natural object after choosing a convergent support
+`A={b_1<b_2<...}`: choose **another subset** of its reciprocal atoms and retain
+every possible mass,
+
+```text
+E(A)={sum_n epsilon_n/b_n : epsilon_n in {0,1}}.                    (K1)
+```
+
+Put `x_n=1/b_n` and `R_n=sum_(j>n)x_j`.  Kakeya's achievement-set criterion
+says that `x_n<=R_n` eventually makes `E(A)` a finite union of closed
+intervals; if `x_n>R_n` for every `n`, it is a Cantor set.  The first statement
+has a direct greedy proof.  On an all-overlap tail, start with any residual
+`0<=y_n<=x_n+R_n`; choose `epsilon_n=1` when `y_n>=x_n` and zero otherwise.
+In the first case `0<=y_n-x_n<=R_n`; in the second,
+`0<=y_n<x_n<=R_n`.  The residual therefore stays inside the next tail and
+tends to zero.  Prefixing the finitely many earlier atoms gives a finite union
+of intervals.  In the all-strict case, the two cylinders at every level are
+separated; the binary coding map is continuous and injective, hence its image
+is a Cantor set.
+
+Consequently every regularly varying support `b_n~c n^p`, `p>1`, lies on the
+interval side, because (RV) gives
+
+```text
+x_n/R_n~(p-1)/n -> 0.                                               (K2)
+```
+
+The simplex ladder is completely explicit.  For an integer `k>=2` and
+`x_n=1/C(n,k)`, `n>=k`, its exact remainder is
+
+```text
+R_n=k/[(k-1)C(n,k-1)],
+x_n/R_n=(k-1)/(n-k+1).                                              (K3)
+```
+
+Thus precisely the first `k-2` atoms, `n=k,...,2k-3`, dominate their
+remainders, while every later atom overlaps its tail.  Hence
+
+```text
+E_k = union_(epsilon in {0,1}^{k-2})
+ [ sum_(n=k)^(2k-3) epsilon_n/C(n,k),
+   sum_(n=k)^(2k-3) epsilon_n/C(n,k)+L_k ],                         (K4)
+
+L_k=k/[(k-1)C(2k-3,k-1)].                                         (K5)
+```
+
+The `2^(k-2)` intervals in (K4) are pairwise disjoint.  In particular
+
+```text
+E_2=[0,2],
+E_3=[0,1/2] union [1,3/2],
+E_4=[0,2/15] union [1/5,1/3]
+    union [1,17/15] union [6/5,4/3].                               (K6)
+```
+
+Now compare the equal-mass power support `{k^j:j>=0}`.  Its atom/tail ratio is
+constant:
+
+```text
+k^(-j) / sum_(r>j)k^(-r)=k-1.                                     (K7)
+```
+
+For `k=2`, its achievement set is again `[0,2]`.  For every `k>=3`, it is the
+base-`k` digit set with digits `{0,1}`, a self-similar Cantor set of Hausdorff
+dimension `log_k 2`.  Therefore simplex numbers and powers of `k` share the
+same scalar mass `k/(k-1)` but, for `k>=3`, have opposite achievement-set
+type: the simplex set has finitely many interval components and nonempty
+interior, whereas the power set is perfect, nowhere dense, and totally
+disconnected.  The scalar quotient forgets even the presence of intervals;
+the Dirichlet/block profile remembers why.
 
 ## 4. The master figurate array has a reciprocal mass surface
 
@@ -348,7 +532,95 @@ Termwise shape growth proves that these masses strictly decrease to one.
 Thus the rational simplex ladder and analytic polygonal ladder are the two
 boundary axes of one positive beta-integral surface.
 
-## 5. The Faulhaber axis: three exact reciprocal masses
+### 4.3 Every interior point has a finite digamma form
+
+The surface is more rigid than its two boundary axes suggest.  Put
+
+```text
+a=s-2,                 beta=d/a-1,
+H_j=sum_(k=1)^j1/k,    H_j^(2)=sum_(k=1)^j1/k^2.
+```
+
+The factorization above says
+
+```text
+1/N(s,d,m)=d!/[a (product_(j=0)^(d-2)(m+j)) (m+beta)].               (PF1)
+```
+
+Suppose first that `beta` is not one of `0,1,...,d-2`.  Define
+
+```text
+C_beta=d!/[a product_(j=0)^(d-2)(j-beta)],
+C_j=(-1)^j d!/[a(beta-j)j!(d-2-j)!].                                (PF2)
+```
+
+Residues at the simple poles give
+
+```text
+1/N=C_beta/(m+beta)+sum_(j=0)^(d-2)C_j/(m+j),
+C_beta+sum_j C_j=0.                                                  (PF3)
+```
+
+The cancellation makes the harmonic divergences disappear, yielding the
+finite exact form
+
+```text
+M(s,d)=-C_beta[psi(d/a)+gamma]-sum_j C_j H_j.                        (PF4)
+```
+
+Since `d/a` is positive rational, recurrence followed by Gauss's digamma
+formula reduces (PF4) algorithmically to a finite real cyclotomic expression:
+a rational, an algebraic multiple of `pi`, and an algebraic-linear combination
+of logarithms of positive algebraic sine values.  This is an exact description,
+not a blanket irrationality or transcendence claim; cancellations can occur.
+
+There is a sharper **divisibility resonance**.  A pole collision occurs exactly
+when
+
+```text
+a>=2 and a divides d,              r=d/a-1 in {0,...,d-2}.           (PF5)
+```
+
+Writing
+
+```text
+B=(-1)^r d!/[a r!(d-2-r)!],
+A_r=B(H_r-H_(d-2-r)),
+A_j=(-1)^j d!/[a(r-j)j!(d-2-j)!]       (j!=r),                       (PF6)
+```
+
+the two simple poles merge into
+
+```text
+1/N=B/(m+r)^2+sum_j A_j/(m+j),       sum_j A_j=0,
+M(s,d)=B[pi^2/6-H_r^(2)]-sum_j A_jH_j.                              (PF7)
+```
+
+Thus every resonant point is a rational plus the nonzero rational
+`B*pi^2/6`, and is therefore transcendental.  The first exact rows expose the
+ridge:
+
+```text
+M(4,2)=pi^2/6,
+M(4,3)=18-24log2,
+M(4,4)=21-2pi^2,
+M(4,6)=15pi^2-1175/8,
+M(5,3)=pi^2/3-2,
+M(5,6)=1205/18-(20/3)pi^2.                                         (PF8)
+```
+
+The extra shape pole is linear, so it can collide with at most one of the
+consecutive rising-factor poles; no triple or higher resonance is possible.
+The square-pyramidal identity `F_2=M(4,3)=18-24log2` lies immediately off the
+even-`d` resonance ray of `s=4`, explaining why it carries `log2` while its
+neighbors `M(4,2),M(4,4),M(4,6),...` carry `pi^2`.
+
+The simplex axis `a=1` is deliberately just outside the collision set:
+`beta=d-1`, and its digamma expression cancels all the way down to the rational
+`d/(d-1)`.  In this sense the surface has a rational boundary and a family of
+transcendental `pi^2` ridges indexed by the divisor relation `s-2 | d`.
+
+## 5. The Faulhaber axis: five exact reciprocal masses
 
 For the Rosetta/power-sum triangle let
 
@@ -358,12 +630,17 @@ F_p(n)=sum_(k=1)^n k^p.                                                (31)
 
 `F_0(n)=n` is the harmonic divergence.  For every `p>=1`, Faulhaber's leading
 term makes `F_p(n)` of order `n^(p+1)`, so the support mass converges.  The first
-three convergent values are exact:
+five convergent values have exact forms:
 
 ```text
 sum_n1/F_1(n)=2,                                                       (32)
 sum_n1/F_2(n)=18-24 log 2,                                            (33)
 sum_n1/F_3(n)=4pi^2/3-12.                                             (34)
+sum_n1/F_4(n)=(-270+480log2)/7
+ -(90/7)[D(1-r_4)+D(2+r_4)],
+   r_4=(sqrt21-3)/6,             D(x)=psi(x)+gamma,                  (F4)
+sum_n1/F_5(n)=60-4pi^2
+ -8sqrt3 pi cot(pi(sqrt3-1)/2).                                     (F5)
 ```
 
 Equation (32) is triangular telescoping.  For (33), use
@@ -380,12 +657,99 @@ and take the cancelling harmonic limit.  For (34), Faulhaber gives
 1/[n^2(n+1)^2]=1/n^2+1/(n+1)^2-2/[n(n+1)].                           (36)
 ```
 
-The resulting sum is `4(2zeta(2)-3)`.  Notice that `F_2(n)=N(4,3,n)`:
+The resulting sum is `4(2zeta(2)-3)`.  For `p=4`, the fully rational first
+split is
+
+```text
+1/F_4(n)=270(2n+1)/[7(3n^2+3n-1)]
+         +480/[7(2n+1)]-30/n-30/(n+1).
+```
+
+Factoring the remaining quadratic with `3r_4(r_4+1)=1` gives the digamma pair
+in (F4).  For `p=5`,
+
+```text
+F_5(n)=n^2(n+1)^2(2n^2+2n-1)/12,
+1/F_5(n)=48/(2n^2+2n-1)-12/n^2-12/(n+1)^2.
+```
+
+Putting `r=(sqrt3-1)/2`, so `r(r+1)=1/2`, splits the quadratic term into
+`8sqrt3[1/(n-r)-1/(n+1+r)]`.  Digamma reflection and recurrence then give
+(F5).  The `p=4` residues add rather than subtract across its quadratic roots,
+so an algebraic-argument digamma pair remains; this is still an exact form,
+not a finite-prefix label.
+
+Notice that `F_2(n)=N(4,3,n)`:
 the square-pyramidal Faulhaber column meets the master figurate surface at
 `(s,d)=(4,3)`, and the numerical rows agree.
 
-The referee records high-precision values for `p=4,5,6` but makes no closed-
-form or arithmetic-type claim for them.
+The referee records a high-precision value for `p=6` but makes no closed-form
+or arithmetic-type claim for it.  Equations (F4)--(F5) likewise assert exact
+forms only; no blanket arithmetic classification is inferred from them.
+
+The first triangular balance tower supplies a second semantic test.  At row
+`n>=1`, center `C=n(n+1)` makes the two interval sides
+
+```text
+{C-n,...,C}            and            {C+1,...,C+n}
+```
+
+have the same value
+
+```text
+S_1(n)=n(n+1)(2n+1)/2=3F_2(n)=3,15,42,90,... .                     (BAL1)
+```
+
+Since `S_1(n+1)-S_1(n)=3(n+1)^2`, these common values are distinct.  Partial
+fractions give
+
+```text
+1/S_1(n)=2/n+2/(n+1)-8/(2n+1),
+sum_(n>=1)1/S_1(n)=6-8log2.                                         (BAL2)
+```
+
+This is exactly one third of the square-pyramidal mass (33).  Under support
+semantics the equal left/right value is counted once.  Counting the two labeled
+sides would double (BAL2), while taking the reciprocal of the whole balanced
+row `2S_1(n)` would halve it.  The carrier choice is part of the theorem, not a
+cosmetic indexing convention.
+
+### 5.1 The true tournament `c_3` maximum is a parity-spliced Faulhaber column
+
+The earlier reciprocal atlases called `C(n,3)` the maximum number of cyclic
+triples.  It is only the number of triple slots.  The true maximum is
+
+```text
+M_3(n)=n(n^2-1)/24,                    n odd,
+M_3(n)=n(n^2-4)/24,                    n even.                       (C3-1)
+```
+
+At odd order `n=2k+1`, this is exactly the square-pyramidal number
+
+```text
+M_3(2k+1)=k(k+1)(2k+1)/6=F_2(k).
+```
+
+At even order `n=2k`, it is `k(k^2-1)/3`.  Moreover the full interlaced
+sequence is strictly increasing and its increments repeat triangular numbers:
+
+```text
+M_3(n+1)-M_3(n)=T_floor(n/2),                  n>=1,                 (C3-2)
+```
+
+where `M_3(1)=M_3(2)=0`; the two low-order cases are direct.
+
+Thus support and indexed semantics coincide here.  The odd and even parts give
+
+```text
+sum_(k>=1)1/M_3(2k+1)=18-24log2,
+sum_(k>=2)1/M_3(2k)=3/4,
+sum_(n>=3)1/M_3(n)=75/4-24log2.                                (C3-3)
+```
+
+The odd-order identity is literally the `p=2` Faulhaber mass; the even part
+telescopes from `3/[k(k^2-1)]`.  This replaces the false `3/2` tournament claim
+while preserving `3/2` as the correct reciprocal mass of all triple slots.
 
 ## 6. Ratios, partial sums, and partial products occupy three regimes
 
@@ -442,12 +806,129 @@ spurious closed forms.
 |---|---|---|
 | Moser `A000127` rows | quartic | convergent; numeric support mass `2.0174822491...` |
 | polygonal diagonal `G` | quartic quasi-polynomial | convergent; support mass `2.3827162754...` |
+| quarter-squares `A002620` | union of squares and oblongs | exact support mass `zeta(2)+1` |
 | Fibonacci | exponential, one repeated `1` | standard reciprocal-Fibonacci constant minus `1` = `2.3598856662...` |
 | Farey endpoint total `2 sum_(d<=n)phi(d)-1` | asymptotic `(6/pi^2)n^2` | convergent; no toothpick recurrence required |
 | toothpick `A139250` | dyadic quadratic lower bound | convergent |
 | unlabeled tournament census `A000568` | quadratic-exponential | convergent; arithmetic nature unnamed |
 | self-line/orbit sequences | only finite prefixes known in the cited atlas | numeric prefixes only; no all-`n` inference |
 | primes | `p_n asymptotic n log n` | divergent Bertrand boundary |
+
+The newly pulled THM-2010 invariant sequences are, at present, exact **finite
+prefixes** for `n=3,...,6`, not asymptotic sequences with established
+reciprocal constants.  Their collision taxes already matter: the prefixes
+`|R|=(2,2,6,8)` and `|disc|=(1,2,2,5)` each have tax `1/2`, while
+`max|R|=(3,3,15,15)` has tax `1/3+1/15=2/5`.  The prefixes for `|specA|`,
+`|H|`, cycle-vector count, arborescence-invariant count, maximum total
+arborescences, metagraph edges, and WL colors have no collisions in that
+range.  The referee records every exact prefix mass, but no four-term trend is
+promoted to convergence, density, or arithmetic type.
+
+The quarter-square row is a useful warning against reading only the leading
+term.  Its positive support splits disjointly as
+
+```text
+{floor(n^2/4):n>=2}={k^2:k>=1} disjoint_union {k(k+1):k>=1}.
+```
+
+No positive square equals an oblong number, because `k(k+1)` lies strictly
+between the consecutive squares `k^2` and `(k+1)^2`.  Therefore
+
+```text
+sum_(m in support(A002620))1/m
+ =sum_(k>=1)1/k^2+sum_(k>=1)1/[k(k+1)]
+ =zeta(2)+1.                                                         (QS)
+```
+
+For the Farey endpoint totals, the classical estimate
+`sum_(d<=n)phi(d)=3n^2/pi^2+O(n log n)` sharpens mere convergence to
+
+```text
+sum_(k>N)1/[2sum_(d<=k)phi(d)-1]
+ =pi^2/(6N)+O(log N/N^2).                                           (F)
+```
+
+So their reciprocal constant is approached at a controlled `1/N` rate; a
+finite prefix should never be presented as the constant itself.
+
+### 7.1 Polynomial and quasipolynomial sequences have finite polygamma forms
+
+There is a general exact closure principle behind the numerical Moser and `G`
+rows.  Let `P in Q[x]` have degree at least two and no zero on `n>=n_0`.
+Over its algebraic roots, write
+
+```text
+1/P(z)=sum_rho sum_(k=1)^(m_rho)c_(rho,k)/(z-rho)^k.                 (POLY1)
+```
+
+The simple-pole residues sum to zero because `1/P(z)=O(z^-2)`.  Therefore
+
+```text
+sum_(n>=n_0)1/P(n)
+ =-sum_rho c_(rho,1)psi(n_0-rho)
+  +sum_rho sum_(k>=2)c_(rho,k)(-1)^k
+     psi^(k-1)(n_0-rho)/(k-1)!.                                    (POLY2)
+```
+
+This follows by cancelling the simple harmonic divergences and using the
+Hurwitz-zeta/polygamma identity for repeated poles.  Splitting into residue
+classes proves the analogous statement for every rational quasipolynomial.
+For support rather than term-multiset mass, one must still remove collisions;
+an eventually injective sequence requires only its finite collision tax.
+
+Consequently `A000127` has a finite quartic-root digamma form.  The parity
+quasipolynomial `G` has two such quartic forms, with its repeated initial `1`
+removed.  Calling their displayed decimals “numeric support masses” describes
+the convenient evaluation, not the exact analytic class; no arithmetic type is
+being claimed.
+
+### 7.2 Run support becomes a monotone reciprocal-mass filtration
+
+The S109 at-most-`j`-runs filtration supplies a more structural comparison.
+Its row sums are
+
+```text
+R_j(r)=sum_(i=0)^j C(r+1,2i),                    r>=0,               (RUN1)
+```
+
+and increase pointwise to `2^r`.  The first row has the exact hyperbolic mass
+
+```text
+R_1(r)=1+C(r+1,2),
+sum_(r>=0)1/R_1(r)=2pi/sqrt7 tanh(pi sqrt7/2).                       (RUN2)
+```
+
+`R_2(r)=A000127(r+1)`.  Since `R_j>=R_1` for `j>=1`, dominated convergence
+turns the combinatorial inclusion of run modes into the mass chain
+
+```text
+2pi/sqrt7 tanh(pi sqrt7/2)
+ > sigma(A000127)=2.0174822491... > ... downarrow 2
+ =sum_(r>=0)1/2^r.                                                   (RUN3)
+```
+
+The diagonal sums `G_j(n)` count tilings with at most `j` domino runs.  Here
+
+```text
+G_1(n)=1+floor(n^2/4),
+support(G_1)={1} union {k^2+1:k>=1} union {k(k+1)+1:k>=1},
+sigma(G_1)=pi/2 coth(pi)+pi/sqrt3 tanh(pi sqrt3/2)-1/2
+          =2.8748213280... .                                        (RUN4)
+```
+
+The initial duplicate `1` is collapsed.  The branches are disjoint because
+the underlying quarter-square sequence is strictly increasing from `n=2`.
+Again `G_j>=G_1`, and appending a square gives strict increase after the shared
+initial collision, so dominated convergence yields
+
+```text
+sigma(G_1)>sigma(G_2=G)=2.3827162754...>...
+ downarrow sigma(Fibonacci support)=2.3598856662... .                 (RUN5)
+```
+
+Thus filling missing Vandermonde/run modes makes the counts larger and their
+reciprocal masses smaller.  Brown completeness, support semantics, and Abel
+occupancy all see the same filtration.
 
 There is a particularly useful opposite LRC example.  THM-1127 proves for its
 literal toothpick count `N(K)` that
@@ -480,7 +961,8 @@ and monotonicity imply, whenever `2^j<=n<2^(j+1)`, that
 `T(n)>=T(2^j)>n^2/6`.  Hence `sum_n1/T(n)` is bounded by a constant multiple
 of `sum_n1/n^2`.
 
-The Hamiltonian-value spectrum requires the same honesty.  THM-1370 proves
+The Hamiltonian-value spectrum requires the same honesty.  The later file
+`THM-1370-h-spectrum-omits-7-21-all-n.md` proves
 that `7,21` never occur and that every other odd value through `609` does occur.
 It labels
 
@@ -561,8 +1043,7 @@ They immediately correct several historical analytic-series claims.
    For every `z!=0` this tends to infinity.  The series has radius zero,
    not positive radius or an entire continuation.
 
-The user's reciprocal transform produces the correct analytic objects.  First
-retain the indexing and put
+The user's reciprocal transform produces the correct analytic objects.  Put
 
 ```text
 Z_V(s)=sum_n V_n^(-s).                                                 (52)
@@ -575,8 +1056,7 @@ If `sigma=Re(s)>0`, (49) gives
 ```
 
 whose ratio tends to zero.  At `sigma=0` the absolute terms are one; for
-`sigma<0` they grow.  Hence this indexed `Z_V` has exact abscissa of absolute
-convergence
+`sigma<0` they grow.  Hence `Z_V` has exact abscissa of absolute convergence
 
 ```text
 Re(s)=0.                                                              (54)
@@ -588,13 +1068,10 @@ Similarly,
 sum_n z^n/V_n                                                         (55)
 ```
 
-is entire, because `V_n^(1/n)` tends to infinity.  For the support profile,
-`V_n -> infinity` makes the deduplicated support infinite, while it is a
-subseries of the indexed profile for `sigma>0`.  Its absolute terms are again
-one at `sigma=0`; hence its abscissa is also exactly zero.  This argument does
-not assume that all collisions are confined to the initial values.  The
-normalized Burnside correction is another legitimate decaying sequence; the
-old growing-coefficient series is not.
+is entire, because `V_n^(1/n)` tends to infinity.  Support-deduplication only
+changes the finitely repeated initial values and does not affect (54)--(55).
+The normalized Burnside correction is another legitimate decaying sequence;
+the old growing-coefficient series is not.
 
 ## 10. Carrier and Tournament Analysis audit
 
@@ -614,19 +1091,11 @@ occupancies.
 
 ## 11. Scope and reproducibility
 
-The analytic identities above are proofs, not fits.  The stored output was
-reproduced byte-for-byte under ordinary and optimized Python.  The script
-independently checks the finite rational identities, collision taxes, Abel
-formula, block sandwich, master-array recurrences and monotonicities,
-polygonal special values, Faulhaber decompositions, Gauss product, and ladder
-triad.  Numerical atlas rows are labelled as partial values where appropriate.
-
-The sorry-free Lean module
-`TournamentH7/SupportHarmonicFigurate.lean` certifies the finite algebraic
-kernel: master and ordinary-polygonal factorizations, reciprocal
-decompositions, the maximum-`c_3` denominator algebra, and finite block
-sandwiches.  Infinite summation, beta-integral interchange, and special-value
-evaluation remain paper proofs rather than postulated axioms.
+The analytic identities above are proofs, not fits.  The script independently
+checks the finite rational identities, collision taxes, Abel formula, block
+sandwich, master-array recurrences and monotonicities, polygonal special
+values, Faulhaber decompositions, Gauss product, and ladder triad.  Numerical
+atlas rows are labelled as partial values where appropriate.
 
 No unnamed reciprocal constant is asserted irrational or transcendental.
 No finite sequence prefix is extrapolated to an all-`n` law.  In particular,

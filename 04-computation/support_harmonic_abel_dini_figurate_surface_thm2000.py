@@ -532,6 +532,48 @@ def maximum_cyclic_triangle_audit() -> tuple[mp.mpf, mp.mpf, mp.mpf]:
     return odd_mass, even_mass, all_mass
 
 
+def kakeya_achievement_audit() -> tuple[list[tuple[int, int, F]], list[tuple[int, str]]]:
+    """Exact tail-domination audit for simplex and geometric reciprocal atoms."""
+    simplex_rows = []
+    for k in range(2, 10):
+        total = F(k, k - 1)
+        first_overlap = 2 * k - 2
+        early = [F(1, comb(n, k)) for n in range(k, first_overlap)]
+        interval_length = F(k, (k - 1) * comb(2 * k - 3, k - 1))
+
+        for n in range(k, first_overlap + 30):
+            atom = F(1, comb(n, k))
+            remainder = F(k, (k - 1) * comb(n, k - 1))
+            require(atom / remainder == F(k - 1, n - k + 1),
+                    "simplex exact atom-to-tail ratio")
+            require((atom > remainder) == (n < first_overlap),
+                    "simplex Kakeya gap/overlap threshold")
+
+        starts = [
+            sum((early[j] for j in range(len(early)) if mask >> j & 1), F(0))
+            for mask in range(1 << len(early))
+        ]
+        intervals = sorted((start, start + interval_length) for start in starts)
+        require(len(intervals) == 2 ** (k - 2),
+                "simplex achievement interval count")
+        require(all(intervals[j][1] < intervals[j + 1][0]
+                    for j in range(len(intervals) - 1)),
+                "simplex achievement intervals are pairwise disjoint")
+        require(intervals[0][0] == 0 and intervals[-1][1] == total,
+                "simplex achievement-set endpoints")
+        simplex_rows.append((k, len(intervals), interval_length))
+
+    geometric_rows = []
+    for base in range(2, 10):
+        atom = F(1, base**7)
+        remainder = F(1, (base - 1) * base**7)
+        require(atom / remainder == base - 1,
+                "geometric achievement atom-to-tail ratio")
+        topology = "interval_[0,2]" if base == 2 else "Cantor_dimension_log_base(2)"
+        geometric_rows.append((base, topology))
+    return simplex_rows, geometric_rows
+
+
 def g_diagonal(n: int) -> int:
     value = (
         F(n**4, 96) - F(n**3, 16) + F(n * n, 3) + F(n, 32) + F(53, 64)
@@ -716,6 +758,7 @@ def main() -> None:
     power_rows = powersum_axis_audit()
     balance_mass, balance_closed = triangular_balance_tower_audit()
     max_c3_odd, max_c3_even, max_c3_all = maximum_cyclic_triangle_audit()
+    simplex_achievement_rows, geometric_achievement_rows = kakeya_achievement_audit()
     atlas_rows = repo_sequence_atlas()
     run_row_mass, run_diagonal_mass = run_support_filtration_audit()
     theta_sum, theta_product, theta_form = gauss_triangular_theta_audit()
@@ -736,6 +779,13 @@ def main() -> None:
     for name, count, occupancy in block_rows:
         print(f"block_family={name};blocks={count};finite_occupancy_sum={occupancy}")
     print("bertrand_repair=n_log_n_is_superlinear_but_reciprocal_diverges;n_log2_n_converges")
+
+    print("KAKEYA_ACHIEVEMENT_SETS")
+    for k, components, length in simplex_achievement_rows:
+        print(f"simplex_k={k};components={components};common_interval_length={length};total_mass={F(k,k-1)}")
+    for base, topology in geometric_achievement_rows:
+        print(f"powers_base={base};atom_tail_ratio={base-1};topology={topology}")
+    print("equal_mass_topology=simplex_k_has_2^(k-2)_intervals;powers_k_is_Cantor_for_k>=3;both_k2_fill_[0,2]")
 
     print(f"MASTER_FIGURATE_EXACT_ROWS={surface_rows}")
     print("N(s,d,m)=(s-2)C(m+d-2,d)+C(m+d-2,d-1)")
