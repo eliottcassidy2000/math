@@ -1,0 +1,46 @@
+==================================================================================
+(1) THE COMPLEX GAUSSIAN MOMENT IS THE PERMANENT (bosonic Wick)
+==================================================================================
+ E[|Z|^{2a}] = a! = per(J_a) (all-ones a x a permanent = #matchings of a Z's to a Zb's):
+   a=1: E[|Z|^2] = 1   per(J_1) = 1   equal: True
+   a=2: E[|Z|^4] = 2   per(J_2) = 2   equal: True
+   a=3: E[|Z|^6] = 6   per(J_3) = 6   equal: True
+   a=4: E[|Z|^8] = 24   per(J_4) = 24   equal: True
+   a=5: E[|Z|^10] = 120   per(J_5) = 120   equal: True
+   a=6: E[|Z|^12] = 720   per(J_6) = 720   equal: True
+   (contrast det(J_a)=0 for a>=2: the FERMIONIC moment vanishes -- Pauli exclusion.)
+   det(J_2)=0, det(J_3)=0
+
+==================================================================================
+(2) det vs per OF THE VANDERMONDE MATRIX = signed vs unsigned tournament sum
+==================================================================================
+ V_ij = x_i^{j} (0-indexed powers).  det V = Vandermonde = sum_T sgn(T) x^score (transitivity);
+ per V = sum_T x^score (ALL tournaments, unsigned).  Verify the tournament readings:
+ n=3: det side -- nonzero-coeff scores (transitive survivors) = 6 = n! = 6: True
+        per side -- sum of all unsigned coeffs = 8 = #tournaments = 8: True
+        per V(1,1,..,1) = 6  (=n! only because all x_i equal; the GRADED per is the score enumerator)
+ n=4: det side -- nonzero-coeff scores (transitive survivors) = 24 = n! = 24: True
+        per side -- sum of all unsigned coeffs = 64 = #tournaments = 64: True
+        per V(1,1,..,1) = 24  (=n! only because all x_i equal; the GRADED per is the score enumerator)
+
+==================================================================================
+(3) THE LOAD-BEARING DICHOTOMY
+==================================================================================
+
+  FERMIONIC (det / Pfaffian / Vandermonde / discriminant):  a SIGN twists the sum, and the
+  3-cycle-reversing involution CANCELS all intransitivity in ONE step -> only the n! transitive
+  tournaments survive (THM-1805).  Transitivity is therefore a clean, finite, classical fact.
+
+  BOSONIC (permanent / hafnian / the GAUSSIAN moment E[Z^a Zb^b]=delta a!):  NO sign.  Nothing
+  cancels; every tournament / every Wick matching contributes with +.  The moment engine
+  E[P^m]=L_s(CT_u[Lambda_s^m]) is this permanent/hafnian functional.  With no alternating
+  collapse available, detecting its nullcone cannot be done in one step or at a finite moment
+  cutoff -- which is EXACTLY the EMP floor: detection depth >= d+1, growing with radial degree
+  (THM-1790).  The permanent has no cheap vanishing (it is #P-hard; the determinant is easy).
+
+  SO: GMC(2) is hard for the SAME structural reason the permanent is hard and the determinant is
+  easy.  boxeph's transitivity/discriminant results live on the tractable FERMIONIC side; GMC(2)
+  lives on the intractable BOSONIC side.  The bridge that couples them (angular DvdK = fermionic
+  GIT nullcone; radial EMP = bosonic Laplace) must cross the det/per divide -- which is why it
+  cannot be finite-degree-uniform (THM-1770/1790).
+
