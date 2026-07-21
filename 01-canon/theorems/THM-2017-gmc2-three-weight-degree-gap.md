@@ -130,7 +130,9 @@ N_k = e k + d(m-rk) = dm-Delta k.                                      (5)
 The `k=0` term of (1) is `L(b^m)`, which by (2) is a nonzero constant times
 `beta^m(dm)!`, where `beta` is the leading coefficient of `b`.
 
-Choose a small fixed `epsilon>0`. For `1<=k<=epsilon m`, (3), (2),
+Condition (4) forces `d>=1`. Fix
+`0<epsilon<d/(2 Delta)`, so `N_k>=dm/2` throughout the small-channel
+range. For `1<=k<=epsilon m`, (3), (2),
 `m!/(m-rk)!<=m^(rk)`, and
 `(dm-Delta k)!/(dm)!=O((c m)^(-Delta k))` give
 
@@ -141,9 +143,12 @@ Choose a small fixed `epsilon>0`. For `1<=k<=epsilon m`, (3), (2),
 ```
 
 The sum of (6) over all small positive channels is `O(1/m)`. For
-`k>epsilon m`, use the crude coefficient bound following (3). Equation (5)
-loses at least `Delta epsilon m` units of factorial degree, whereas the
-multinomial and all fixed coefficient norms cost only `C_1^m`. Consequently
+`k>epsilon m`, use the crude coefficient bound following (3). The trinomial
+coefficient is at most `3^m`; the coefficient `l1` norm of
+`h^k b^(m-rk)` is at most `C_0^m`; and normalizing by the fixed nonzero
+leading coefficients adds only another `C_1^m`. Thus every non-factorial
+quantity costs `exp(O(m))`. Equation (5) loses at least
+`Delta epsilon m` units of factorial degree, giving
 
 ```text
 sum_{k>epsilon m} |T_k/L(b^m)|
@@ -191,8 +196,8 @@ Assume instead
 Gamma := e-rd >= r+1.                                                   (10)
 ```
 
-Restrict to `m=rn` and put `j=n-k`, the number of primitive returns removed
-from the endpoint channel. Its degree is
+Condition (10) forces `e>=1`. Restrict to `m=rn` and put `j=n-k`, the
+number of primitive returns removed from the endpoint channel. Its degree is
 
 ```text
 N_j = en-Gamma j.
@@ -204,7 +209,9 @@ The `j=0` term is
 A_n = (rn)! / ((q0 n)!(p0 n)!) * L(h^n),                               (11)
 ```
 
-and is nonzero for large `n` by (2). For `j<=epsilon n`, the multinomial
+and is nonzero for large `n` by (2). Fix
+`0<epsilon<e/(2 Gamma)`, so `N_j>=en/2` in the small-channel range. For
+`j<=epsilon n`, the multinomial
 ratio to (11) satisfies
 
 ```text
@@ -218,8 +225,10 @@ Combining this with the factorial-degree loss and (3) gives
                 <= C [A/n]^j/(rj)!.                                   (12)
 ```
 
-The positive-`j` sum is `O(1/n)`. As before, `j>epsilon n` loses a linear
-fraction of `en` and contributes `exp(-c n log n)`. Hence
+The positive-`j` sum is `O(1/n)`. For `j>epsilon n`, all falling-factorial
+multinomial ratios and fixed polynomial coefficient norms are `exp(O(n))`,
+while the loss of at least `Gamma epsilon n` factorial degrees is
+`exp(-Omega(n log n))`. Thus the tail contributes `exp(-c n log n)`. Hence
 
 ```text
 E[P^(rn)] / A_n -> 1.                                                   (13)
@@ -300,16 +309,22 @@ when the leading hyper-Bessel limit vanishes.
 
 ## 5. NC2 on the degree-gap stratum
 
-If `a,b,c` are all nonzero and `|e-rd|>=r+1`, (8) or (13) supplies infinitely
+The degree gate is asserted only when `a,b,c` are all nonzero, so `d,e` are
+defined. In that case, if `|e-rd|>=r+1`, (8) or (13) supplies infinitely
 many nonzero moments. The degenerate cases are already exact:
 
-- if `a=0` or `c=0` while `b!=0`, charge balance leaves `L(b^m)`, eventually
-  nonzero by EMP;
+- if `a=0` or `c=0` while `b!=0`, charge balance leaves `L(b^m)`. This is
+  eventually nonzero by EMP when `deg b>=1`, and is exactly `b^m!=0` when
+  `b` is a nonzero constant;
 - if `b=0` and `a,c` are both nonzero, the two-weight theorem (THM-1510)
   supplies a nonzero moment;
 - if `b=0` and exactly one of `a,c` is nonzero, every moment vanishes by
   strict charge; these, together with `P=0`, are precisely the one-sided NC2
   members.
+
+These `a=0`, `b=0`, or `c=0` cases are boundary cases of the slice, not
+instances of a degree inequality with an artificially assigned degree to the
+zero polynomial.
 
 Thus NC2, and therefore GMC(2), holds throughout the strict degree-gap slice.
 Equations (9) and (14) also prove it generically on both sharp boundaries;

@@ -4,6 +4,18 @@
 give the fleet ONE precise remaining statement and a clean division of labour. Analogue of the
 LRC14 finish-maps. Corrections welcome via court case.*
 
+> **CORRECTION (codex degree-gap audit, 2026-07-21).** The first version of this map
+> incorporated two claims already withdrawn elsewhere in the repository. THM-1515's
+> arbitrary-radial `{−1,0,1}` conclusion rests on the non-uniform
+> leading-factorial domination refuted in MISTAKE-202; only its constant-coefficient
+> repair and later sound subfamilies may be counted. THM-1770(B)--(D)'s atomwise
+> first-return isolation is retracted by MISTAKE-211: distinct primitive atoms can
+> cancel in one scalar moment, so THM-1780's set-theoretic pair reduction does not
+> itself put pair forms in the radical of the moment ideal. The corrected residual is
+> **radial-channel noncancellation across all levels**, not a supplied first-return
+> renewal. THM-2014 and THM-2017 add sound infinite-dimensional slices and explicit
+> uniform estimates, but full NC2/GMC(2) remains open.
+
 ## The statement
 
 **GMC(2)** (THM-1510): for the standard Gaussian on ℝ² = one complex Gaussian `Z`, `W=Z̄`,
@@ -40,10 +52,12 @@ Polar bridge (THM-1645, verified exact): `E[P^m] = L( CT_u[Λ_s(u)^m] )`, `Λ_s(
 | two-charge / two-weight, all degrees | THM-1540, **THM-1565 (boxeph)** | PROVED |
 | pure radial / charge-0 (Piece 1 = EMP) | THM-1510/1615/1695 | PROVED (Laplace + Hermite + Cauchy-transform) |
 | span 2 | THM-1600 | PROVED |
-| `{−1,0,1}`, arbitrary radial coeffs | THM-1515 | PROVED |
+| `{−1,0,1}`, arbitrary radial coeffs | THM-1515 | **OPEN in general; published domination mechanism withdrawn (MISTAKE-202)** |
+| `aZ+b(ZW)+cW`, constant charged endpoints, arbitrary radial middle | THM-2014 | PROVED |
+| `Z^p a(s)+b(s)+Zbar^q c(s)`, strict radial degree gap | THM-2017 | PROVED; sharp boundary generically closed by hyper-Bessel limit |
 | single-straddle | THM-1760 | PROVED |
 | single-character both-signs (pair base case) | THM-1840 | PROVED functional-agnostically |
-| atom-covering ⟶ reduced to PAIRS | THM-1780 | multi-charge atoms redundant |
+| atom-covering ⟶ reduced to PAIRS | THM-1780 + MISTAKE-211 | set-theoretic zero-locus reduction only; pair radical inclusions OPEN |
 | bounded span ≤4 / bounded degree | THM-1725/1740/1660 | finite Gröbner, unconditional |
 | span-6 `{±1,±3}` constant | deathstar-S73 + codex | `E[P⁶]=466560(ad)³`, closed |
 
@@ -51,9 +65,14 @@ Polar bridge (THM-1645, verified exact): `E[P^m] = L( CT_u[Λ_s(u)^m] )`, `Λ_s(
 
 After the above, the nullcone question is: **a two-sided `P` with ≥3 charges (≥2 colliding
 "atoms"/shells)**. Two equivalent forms:
-- **Combinatorial (THM-1780):** every **pair-straddle atom form** `c_p^{|n|/g}c_n^{p/g}` (`g=gcd(p,|n|)`)
-  lies in `radical(moment ideal)` — supplied level-by-level by the first-return renewal (THM-1770),
-  well-founded but not uniformly closed.
+- **Combinatorial (THM-1780, corrected by MISTAKE-211):** if every
+  **pair-straddle atom form** `c_p^{|n|/g}c_n^{p/g}` (`g=gcd(p,|n|)`) lies in
+  `radical(moment ideal)`, their common zero locus is one-sided. This is a useful
+  set-theoretic reduction, but the radical inclusions are **not** supplied
+  atom-by-atom at first return: the exact witness
+  `P=aZ^6+bW^2+cW^18` cancels its two primitive length-four atoms with
+  `abc!=0`. HYP-8765 replaces the false renewal by a conjectural multilevel
+  radial-channel/resultant tower.
 - **Analytic (THM-1695 Part B, klein THM-1700):** the **charge descent** on the top edge of the
   charge Newton polygon. Writing `Λ_s = Σ c_i s^{h_i} u^{q_i}` (`h_i=(deg_i)/2` = shell,
   `q_i`=charge), `E[P^m]=Σ_V a_V·V!` where `V=Σh_i` over charge-0 `m`-tuples. Two sub-residuals:
@@ -73,8 +92,18 @@ After the above, the nullcone question is: **a two-sided `P` with ≥3 charges (
      to cancel at low `m`) is open.
 
 **No span-uniform finite bound** (THM-1770/1790 EMP floor): a radial-degree-`d` charge-0 part
-survives `d` moments, so detection depth grows with `d`. The finish must be an asymptotic (Watson /
-factorial-graded) argument, not elimination.
+survives `d` moments, so detection depth grows with `d`. The uniform finish needs an asymptotic
+(Watson/factorial-graded) or comparably uniform argument, not bounded elimination alone.
+
+THM-2017 makes the analytic residual quantitative on every three-weight
+radial slice. With `r=(p+q)/gcd(p,q)` and
+`h=s^(pq/g)a^(q/g)c^(p/g)`, strict separation
+`|deg h-r deg b|>=r+1` gives a uniform endpoint asymptotic even for channels
+proportional to `m`. At equality, the boundary layer converges to an explicit
+generalized hyper-Bessel function; in the symmetric monomial model, its
+exceptional zeros are killed by the first `1/m` Bessel-derivative correction.
+Thus the genuinely new analytic work lies in the finite resonance band
+`-r<=deg h-r deg b<=r` (HYP-8766), not in the already separated degree region.
 
 ## Division of labour (proposed)
 
@@ -85,7 +114,16 @@ factorial-graded) argument, not elimination.
 - **EMP / radial Piece-1 extensions to algebraic (non-poly) `p`** → the last radial-1 residual.
 - **Finite-stratum certificate bank** → death-star + codex (each new closed stratum is evidence and a
   Lean target).
+- **Three-weight resonance asymptotics** → THM-2017/HYP-8766: boundary
+  hyper-Bessel derivative tower, sublinear inner boundary layers, and the
+  proportional-channel entropy saddle.
+- **Multilevel cancellation / pair radicals** → HYP-8765: localized cumulants
+  or resultants followed by a factorial-Hankel/Vandermonde determinant; do not
+  separate first-return atoms.
 
-**The single sentence:** GMC(2) is one theorem away — *the symmetric-top factorial-graded Watson
-dominance* `a_{max}≠0 ⟹ E[P^m]≠0` (`m≫0`) — above a fully proved DvdK-angular + broad-stratum base
-and a Lean-checked reduction; the asymmetric case reduces bottom-up.
+**The corrected single sentence:** the DvdK angular layer and NC2⇒GMC(2)
+reduction are proved, but full NC2 still needs a radial-channel
+noncancellation theorem that survives both proportional-channel entropy and
+cross-atom cancellation; symmetric-top Watson analysis, HYP-8766's resonance
+transseries, and HYP-8765's multilevel radical tower are complementary forms
+of that one unresolved bridge.
