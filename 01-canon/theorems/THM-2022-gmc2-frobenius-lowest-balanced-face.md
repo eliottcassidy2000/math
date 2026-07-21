@@ -6,10 +6,10 @@ status: >
   the Gaussian moment nullcone descends to an algebraic torus point. The
   lowest balanced face supplies a nonzero Laurent constant term Q by the
   one-variable Duistermaat--van der Kallen theorem. At a suitable good prime
-  p, the moment of order p*m0 has a complete minimum-valuation layer, not
-  necessarily a unique channel. Kummer and Lucas identify that layer with
-  the p-fold dilation of the face channels, and its normalized residue is a
-  nonzero unit times Q^p. Thus no support meeting charge zero can be null;
+  p, divide the moment of order p*m0 by the common factorial (p*A0)!.
+  Kummer and Lucas identify the surviving residue layer with the p-fold
+  dilation of the face channels, and Frobenius makes its residue exactly
+  Q^p. Thus no support meeting charge zero can be null;
   the nullcone consists exactly of the two strict one-sided charge loci.
   The earlier exposed-two-vertex gap>1 candidate reserved under this ID is
   subsumed and no longer needed.
@@ -142,7 +142,8 @@ the same charge, (4) at equality would give the same `a`; then
 `b=a-q` would also agree, contradicting distinctness of the exact monomial
 support.
 
-By (5) and the one-variable Duistermaat--van der Kallen theorem (THM-1630),
+By (5) and the one-variable Duistermaat--van der Kallen theorem
+(`THM-1630-tnc-is-duistermaat-van-der-kallen-theorem-2.md`),
 the constant terms of all positive powers of `f_F` cannot vanish. Choose
 `m0>=1` such that
 
@@ -166,7 +167,7 @@ constant term (and one may take `m0=1`).
 Choose a rational prime `p` satisfying
 
 ```text
-p>max(m0,A0),                                               (9)
+p>m0,                                                       (9)
 ```
 
 outside the finite set of primes that ramify in `K` or at which one of the
@@ -188,7 +189,7 @@ with equality exactly when `r` is supported on `F`.
 Kummer's carry formula for a multinomial coefficient says
 
 ```text
-v_p(binom(M;r)) = number of base-p carries in sum_i r_i=M.  (11)
+v_p(binom(M;r)) = total base-p carry count (with multiplicity). (11)
 ```
 
 Because `p>m0`, the base-`p` digits of `M` are `(0,m0)`. Thus
@@ -201,30 +202,19 @@ r=p*s,       |s|=m0.                                       (12)
 
 Balance of `r` is equivalent to balance of `s`.
 
-Now compare the valuations of the channel coefficients in (1):
+By (10), every channel factorial in (1) is divisible by `(p*A0)!`.
+After dividing the entire moment by that integer, there are exactly three
+cases modulo `pfrak`.
 
-```text
-v_p(binom(M;r) A(r)!)
- =v_p(binom(M;r))+v_p(A(r)!).                              (13)
-```
-
-Since `p>A0`, Legendre's formula gives
-
-```text
-v_p((p*A0)!)=A0.                                           (14)
-```
-
-There are exactly three cases.
-
-1. If `r` is not divisible componentwise by `p`, (11) contributes at least
-   one, while (10) and monotonicity give `v_p(A(r)!)>=A0`.
+1. If `r` is not divisible componentwise by `p`, (11) makes the multinomial
+   coefficient divisible by `p`, so the normalized term vanishes.
 2. If `r=p*s` but `s` is not supported on `F`, then `A(s)>A0`.
-   Both are integers, so `A(s)>=A0+1`, and hence
-   `v_p((p*A(s))!)>=A0+1`.
+   Both are integers, so `A(s)>=A0+1`; the factorial quotient
+   `(p*A(s))!/(p*A0)!` contains the factor `p*(A0+1)` and vanishes.
 3. If `r=p*s` and `s` is a balanced face channel, then
-   `A(r)=p*A0`, the multinomial is a `p`-unit, and (13) equals `A0`.
+   `A(r)=p*A0`, so the factorial quotient is exactly one.
 
-Therefore the complete minimum-valuation layer of `M_M` is precisely
+Therefore the complete residue layer of `M_M/(p*A0)!` is precisely
 
 ```text
 {p*s : |s|=m0, q dot s=0, supp(s) subset F}.                (15)
@@ -234,39 +224,25 @@ It may contain many channels. No unique-channel assertion is used.
 
 ## 5. Lucas and Frobenius prevent cancellation inside the layer
 
-Set
-
-```text
-U=(p*A0)!/p^A0.
-```
-
-This is a `p`-adic unit; in fact Wilson's theorem block by block gives
-
-```text
-U = (-1)^A0 A0! mod p,                                     (16)
-```
-
-which is nonzero because `A0<p`. Divide (1) at level `M=p*m0` by
-`p^A0` and reduce modulo `pfrak`. Every channel outside (15) disappears.
 For a channel `p*s` in (15), the multinomial Lucas congruence gives
 
 ```text
-binom(p*m0;p*s_1,...,p*s_k)=binom(m0;s_1,...,s_k) mod p.     (17)
+binom(p*m0;p*s_1,...,p*s_k)=binom(m0;s_1,...,s_k) mod p.     (16)
 ```
 
 Writing bars for residues in the characteristic-`p` residue field, (7),
-(15), and (17) yield the exact initial-form identity
+(15), and (16) yield the exact normalized identity
 
 ```text
-p^(-A0) M_(p*m0)(c)
- = U * sum_s binom(m0;s) c^(p*s)                 mod pfrak
- = Ubar * (sum_s binom(m0;s) c^s)^p             mod pfrak
- = Ubar * Qbar^p                                mod pfrak. (18)
+M_(p*m0)(c)/(p*A0)!
+ = sum_s binom(m0;s) c^(p*s)                    mod pfrak
+ = (sum_s binom(m0;s) c^s)^p                    mod pfrak
+ = Qbar^p                                       mod pfrak. (17)
 ```
 
 The middle equality is Frobenius: coefficients from `F_p` are fixed by the
-`p`-th power map. By the choice of `p`, both `Ubar` and `Qbar` are nonzero.
-Thus (18) is nonzero, and so
+`p`-th power map. By the choice of `p`, `Qbar` is nonzero. Thus (17) is
+nonzero, and so
 
 ```text
 M_(p*m0)(c) != 0,
@@ -280,7 +256,9 @@ strictly negative. Conversely, charges add under multiplication, so a strict
 one-sided polynomial has no charge-zero monomial in any positive power and
 all its moments vanish. This proves NC2.
 
-THM-1540 shows that NC2 implies GMC(2): if, say, every charge of `P` is at
+The implication recorded in
+`THM-1540-the-two-dimensional-nullcone-conjecture.md` now gives GMC(2): if,
+say, every charge of `P` is at
 least one, then for a fixed polynomial `Q_0`, every charge of `Q_0 P^m` is
 nonzero once `m` exceeds the finite negative-charge range of `Q_0`; hence
 `E[Q_0P^m]=0` eventually. The negative-charge case is identical.
@@ -302,9 +280,10 @@ functional need not increase every coordinate valuation. That is precisely
 where the above minimum-layer argument stops.
 
 For Tournament Analysis, take balanced channels as vertices and compare
-their `p`-adic valuations in (13), with lexicographic order only as a tie
+their divisibility after the normalization `(p*A0)!`, with lexicographic
+order only as a tie
 path. The selected quotient preserves the minimum valuation layer but
-forgets its residue sum. Formula (18), not transitivity or arbitrary
+forgets its residue sum. Formula (17), not transitivity or arbitrary
 tie-breaking, restores that missing coordinate. The challenged assumption
 is therefore explicit: noncancellation does not require a dominant channel;
 an entire tied face can survive as one Frobenius power.
@@ -322,3 +301,7 @@ The former THM-2022 candidate required an exposed two-vertex face with
 factorial gap greater than one. That archimedean estimate is unnecessary:
 the lowest balanced face always exists, and the carry/Frobenius argument
 handles a many-vertex face with no metric gap beyond strict face separation.
+
+The constant-term input is J.J. Duistermaat and W. van der Kallen,
+"Constant terms in powers of a Laurent polynomial," *Indagationes
+Mathematicae* (N.S.) 9(2) (1998), 221--231, Theorem 2 and Remark 3.
