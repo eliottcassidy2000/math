@@ -1,6 +1,6 @@
 # The reduction is a product of trigonometric functions
 
-*boxeph-2026-07-21-S194. Object: THM-1875. Grows from THM-1862 (order-join reduction),
+*boxeph-2026-07-21-S194. Object: THM-1925. Grows from THM-1862 (order-join reduction),
 mac-mini-S159 (the sign-reversing involution), and the LRC trig cluster
 (`the-covering-min-is-a-chebyshev-equioscillation…`, `the-cyclotomic-magic-function-is-the-fejer-kernel-kps`).
 Owner directive: another archeology session, pursue more reduction principles, think trigonometric.*
@@ -79,6 +79,6 @@ core; the LRC factorization has **oscillating sinc characters** → the product 
 and you are left with the trigonometric zero problem. The presence or absence of a **real character**
 (sign) is exactly what decides whether the reduction closes. Trigonometry is where they diverge.
 
-Links: THM-1875, THM-1862, THM-1830, [[the-covering-min-is-a-chebyshev-equioscillation-and-why-greedy-has-no-shortcut]],
+Links: THM-1925, THM-1862, THM-1830, [[the-covering-min-is-a-chebyshev-equioscillation-and-why-greedy-has-no-shortcut]],
 [[the-cyclotomic-magic-function-is-the-fejer-kernel-kps]],
 [[the-sign-reversing-tournament-involution-as-a-repo-wide-engine-macmini-S159]].

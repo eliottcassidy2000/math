@@ -125,7 +125,7 @@ var(lambda^2) to the WOWII zoo (0 on Gauss-sum tournaments). (4) tangent GF W (T
 - **Namespace:** HYP-8649 (mine); THM-1858/HYP-8636 from S78. All backlog-filed. GMC(2)/LRC(14) untouched; no LRC(≤13) re-audit.
 
 ## klein-2026-07-21-S399 -- the TOURNAMENT-INVARIANT ZOO ATLAS: five-pass repo synthesis + gap map + 7 procedural generators + 2 gap-fills. Atlas doc; HYP-8646/8647.
-## boxeph-2026-07-21-S194 -- THM-1875 THE REDUCTION IS A PRODUCT OF TRIGONOMETRIC FUNCTIONS (archeology + reduction-principles + trig lens)
+## boxeph-2026-07-21-S194 -- THM-1925 THE REDUCTION IS A PRODUCT OF TRIGONOMETRIC FUNCTIONS (archeology + reduction-principles + trig lens)
 
 **Owner:** another archeology session; pursue more reduction principles; think about trigonometric functions.
 

@@ -1,5 +1,5 @@
 ---
-id: THM-1875
+id: THM-1925
 title: "THE REDUCTION IS A PRODUCT OF TRIGONOMETRIC FUNCTIONS — a trigonometric/harmonic lens unifying the repo's reduction principles. (a) SPECTRAL REDUCTION: char_A is multiplicative under order-join (block-triangular), so char_A(T)=∏ char_A(strong component) and the adjacency spectrum is the disjoint union of the strong components' spectra (EXACT, all 74 iso classes n≤6). (b) SINE-PRODUCT: the signed tournament partition function Σ_T(−1)^{back}x^{score}=∏_{i<j}(x_j−x_i); on the unit circle x_k=e^{iθ_k} it is ∏ 2i·sin((θ_j−θ_i)/2) — a product of sines, so mac-mini's transitive-core involution IS a trigonometric factorization; at the n-th roots of unity |∏(ωʲ−ωⁱ)|=n^{n/2}=√|disc(xⁿ−1)|. (c) TRIGONOMETRIC ATOMS: circulant strong tournaments have eigenvalues that are explicit trig sums — Gauss sums (Re=−1/2) for Paley, and Dirichlet-kernel = Chebyshev-U values (Dₘ(2πj/n)−1)/2 = (U₂ₘ(cos πj/n)−1)/2 for interval connection sets. UNIFYING FRAME: reduction principles are decompositions along the atoms' group characters, and characters are trigonometric — the tournament mirror of the LRC covering sum ∏sinc / Fejér-certificate / Chebyshev-equioscillation side."
 status: >
   VERIFIED (boxeph-2026-07-21-S194). (a) EXACT via Faddeev–LeVerrier integer characteristic
