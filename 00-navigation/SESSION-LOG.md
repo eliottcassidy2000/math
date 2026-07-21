@@ -1,3 +1,18 @@
+## mac-mini-2026-07-21-S159 -- the sign-reversing TOURNAMENT INVOLUTION as a repo-wide engine (owner: apply the signed-sum-over-tournaments idea across the repo). Reflection + HYP-8640.
+
+**Context:** owner shared the nasqret/Alpoge JC-counterexample write-ups (github.com/nasqret/jacobian-counterexample). I INDEPENDENTLY VERIFIED the core (det JF == -2 constant, non-injective: 3 distinct points (2,-1/2,1),(-1+-i,1,1-+3i) all map to (0,1,2), hand-checked) -- it IS the repo's THM-1300 map, a genuine classical-JC counterexample. Their literature audit is thorough on classical JC (Keller, Bass-Connell-Wright, Druzkowski, de Bondt-van den Essen, Miyanishi pseudo-coverings) but cites NOTHING from Zhao/GMC/Mathieu-Zhao. Advised owner: the highest-value thing to tell them is the Gaussian-Moments/Mathieu-Zhao TWIN (Zhao GMC(n)=>JC(n); their map forces the explicit GMC(3) witness P=(1+Z)(W-(2+Z)U),Q=Z; refs DvdEZ Israel J Math 2019 arXiv:1506.05192, Zihan Zhang's "Direct Consequences of the 3D counterexample"), plus the moment-side n=2 obstruction (2/d in Z stops the family before the plane) mirroring their descent obstruction, and the resultant/discriminant = binary-forms/SL2/tournament framing.
+
+**This session's work (the follow-up directive):** take that tournament-discriminant idea and creatively redeploy it.
+- **ENGINE (verified n=3,4,5):** V = prod(x_j-x_i) = sum_T (-1)^{back-arcs} x^{score}; reverse-a-3-cycle is a sign-reversing, score-preserving involution; intransitive cancel, transitive (n! of them) survive. Explicit lex-min-3-cycle reversal pairs all 40 intransitive n=4 tournaments.
+- **R2 verified (n=4,5,6):** BURNSIDE A000568 even-cycle vanishing IS the same involution on sigma-edge-orbits -- Fix(sigma)=0 iff sigma has an even cycle, else 2^{#orbits}.
+- **Four specializations of one engine:** discriminant->transitive (THM-1815); Burnside->all-odd sigma; blue parity->self-complementary (THM-1840-C = Z/2 cyclotomic char); single-character->lone atom (THM-1840-A, clean base case).
+- **Creative payoff (a reframing):** the involution needs clean +/-1 signs. GMC/discriminant have them => collapse to transitive => closed form; LRC covering sum sum_{k.v=0} prod sinc has transcendental weights, NO signs => NO involution => stays open. = the S157/THM-1840 barrier restated combinatorially. Criterion: a repo problem collapses to a transitive core IFF a sign-reversing tournament involution is available.
+- **Resonances (unproved):** Redei odd-Ham-path (transitive survivors = unique-Ham-path tournaments; a 5th specialization = a NEW proof of the founding theorem -- flagged as next target); even-graph odd-n-only bijections.
+
+**Honest scope:** engine + Burnside redeployment VERIFIED; they connect existing results (THM-1805/1815, A000568, THM-1840-C/1440) under one mechanism (unifying lens). Criterion = reframing of proved barriers. Redei/even-graph = conjectural resonances.
+
+**Next:** chase Redei-parity-as-involution (turn the lens into a new proof of the odd-Hamiltonian-path theorem). Artifacts: 07-reflections/the-sign-reversing-tournament-involution-as-a-repo-wide-engine-macmini-S159.md, 04-computation/signed_tournament_involution_redeployments_macmini_S159.py (+.out).
+
 ## klein-2026-07-21-S397 -- THM-1850: DIRECTED WOWII. A PROVED domination-transitivity inequality gamma(T) + tr(T) <= n+1 (elementary source-domination), corollary gamma <= fas+1, plus THREE refuted directed-inequality conjectures with explicit witnesses -- the directed-WOWII pipeline producing content, exhaustive n<=7.
 
 **Owner directive:** work on the directed analogies of the WOWII inequalities.
