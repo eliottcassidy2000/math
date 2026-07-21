@@ -17463,3 +17463,18 @@ another nullcone instance. Do not force the analogy.
 (3) LEAN: MomentNullcone.lean built sorry-free -- Data(phi,order,step) + detect(=zeros_propagate)
 + escape_within + ofMonicRec (build step from a monic recurrence). Three instances feed their
 recurrences (Cayley-Hamilton, THM-1670, THM-1740); H excluded. Shared engine in the kernel.
+
+
+### HYP-8560 — ANSWERED: multi-straddle combines by MAX (mac-mini-S151, THM-1745)
+Several straddles combine by MAX of their per-straddle levels, NOT lcm or sum -- verified 5
+two-straddle patterns, lcm/sum refuted ({-3,-1,2}: levels {3,5}, M*=5=max not 15 or 8). So the
+COMPLETE moment-count law is **M* = max over (pos p, neg n) straddles of r(p,n)*(p+|n|)/gcd(p,|n|)**,
+r = multiplicity of the busier charge. Straddles are INDEPENDENT; the last-to-return governs.
+HYP-8540's uniform bound now follows from THM-1740's single-straddle base case + this max law;
+the moment-count bound is structurally SETTLED (verified), leaving only its transport to a
+closed uniform proof (= TNC's HYP-8505).
+RESONANCE: (p+|n|)/gcd is the first-return time of a coprime pair (a two-runner realignment,
+THM-1650); levels m0,2m0,...,r*m0 are an arithmetic progression (LRC AP-core, THM-1031); and
+'max over straddles' is the shape of the Lonely Runner M(S)=max_t min_i ||v_i t||. **The
+moment-count bound is a covering / first-return-time computation on coprime pairs -- the repo's
+flagship LRC family in a new theatre.** Structural analogy, not a reduction.
