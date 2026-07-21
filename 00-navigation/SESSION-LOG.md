@@ -1,3 +1,20 @@
+## mac-mini-2026-07-20-S152 -- SINGLE-STRADDLE GMC(2) PROVED IN CLOSED FORM by reduction to the already-closed radial Laplace layer; the moment-count bound is SUBSUMED, not separately bounded; the sole residual for full GMC(2) is the LOCALISATION LEMMA. THM-1760.
+
+**Owner directive:** work the closed-form uniform proof.
+
+I found a genuine reduction, not more verification.
+
+- **THE TOWER IDENTITY (proved, all j).** A single straddle is P = alpha Z^p + W q(V), V = ZW = |Z|^2, q(V) = sum_i beta_i V^{a_i} (charge +p on one term, charge -1 on r terms). Balance forces j copies of alpha Z^p and jp copies of W q(V), so moments live only at multiples of m0 = p+1, and the balanced part of P^{j m0} is the single multinomial term C(j m0, j)(alpha Z^p)^j (W q)^{jp}. Since Z^{jp}W^{jp} = V^{jp} and E[V^k]=k!=L(V^k):
+      **E[P^{j m0}] = C(j m0, j) * alpha^j * L(Q(V)^j),   Q(V) := V^p q(V)^p.**
+Verified exactly j=1..3 for p=1,2, r=1,2,3; the derivation is general.
+- **THE REDUCTION -- A PROOF.** On the nullcone with alpha != 0, C(j m0,j) alpha^j != 0, so L(Q^j) = 0 for ALL j >= 1. By THM-1675/1695 (the radial Laplace nullcone, CLOSED for complex Q via the Cauchy transform), Q == 0; since Q = V^p q^p and V^p != 0, q == 0, so every beta_i = 0. **SINGLE-STRADDLE GMC(2) IS PROVED IN CLOSED FORM** -- no Groebner, no per-pattern bound, the whole moment tower factors through one radial polynomial and the closed radial layer finishes it.
+- **THE MOMENT-COUNT BOUND IS SUBSUMED.** THM-1740's per-straddle level r*m0 is not a separate thing to bound: E[P^{j m0}] IS L(Q^j) up to a nonzero scalar, so the levels needed = the radial certifying level for Q (degree p(1+max a_i)), supplied by THM-1675/1695. HYP-8540's bound for a single straddle is a CONSEQUENCE of the closed radial layer, not an independent conjecture. The 2,3,7-flavoured moment counts were the radial layer's certifying levels all along.
+- **MULTI-STRADDLE LOCALISES.** Witness aZ^2+bW+cW^3 (straddles m0=3,5): E[P^3]=6ab^2, E[P^4]=288a^2bc, E[P^5]=7200a^3c^2, E[P^6]=360a^2b^4. With a != 0: E[P^3]=0 => b=0, then E[P^5]=0 => c=0 -- bottom-up (THM-1700), straddles firing at their own levels without interfering, exactly as THM-1745's max law predicts.
+
+**Handoff.** GMC(2) is now down to ONE gap: **HYP-8590, the LOCALISATION LEMMA** -- at the dominant straddle's return level, its radial factor L(Q_dom^j) is ISOLATED (no other straddle reaches that level, by THM-1745's max law), so L(Q_dom^j)=0 for all j and THM-1760's single-straddle reduction applies; then peel the dominant straddle and induct downward (a straddle descent). Given span-2 (THM-1600), complex radial (THM-1695), and single-straddle (THM-1760) are closed, this lemma is the SOLE residual for full GMC(2). The LRC resonance (THM-1745) suggests the tool: the dominant straddle is the LAST to return, so at its level it is alone -- a first-return/covering argument. SCOPE: single-straddle is PROVED (tower identity general, reduction rigorous, radial layer proved); multi-straddle is verified on one witness, localisation lemma stated not proved.
+
+---
+
 ## mac-mini-2026-07-20-S151 -- MULTI-STRADDLE MOMENT COUNTS COMBINE BY MAX (HYP-8560 answered), completing the moment-count law, and revealing it as a coprime-pair RETURN-TIME computation -- the LRC family in a new theatre. THM-1745.
 
 **Owner directive:** work the multi-straddle patterns; see if they remind you ever so vaguely of anything else in the repo.

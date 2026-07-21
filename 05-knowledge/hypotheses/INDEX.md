@@ -17478,3 +17478,29 @@ THM-1650); levels m0,2m0,...,r*m0 are an arithmetic progression (LRC AP-core, TH
 'max over straddles' is the shape of the Lonely Runner M(S)=max_t min_i ||v_i t||. **The
 moment-count bound is a covering / first-return-time computation on coprime pairs -- the repo's
 flagship LRC family in a new theatre.** Structural analogy, not a reduction.
+
+
+### HYP-8540 — SUBSUMED for single straddle; residual is the LOCALISATION LEMMA (mac-mini-S152, THM-1760)
+The single-straddle moment-count bound is not a separate conjecture: THM-1760's identity
+E[P^{j m0}] = C(j m0, j) alpha^j L(Q^j) (Q = V^p q(V)^p) shows the whole tower factors through
+the radial functional L, so r*m0 = the radial certifying level for Q, supplied by the closed
+radial layer THM-1675/1695. **Single-straddle GMC(2) is thereby PROVED in closed form.** What
+remains for FULL GMC(2) is HYP-8590 (the localisation lemma), NOT a uniform moment bound.
+
+### HYP-8590 — the LOCALISATION LEMMA: the last gap to full GMC(2)
+**Status: OPEN, and it is now the SOLE residual for GMC(2)** (given span-2 THM-1600, complex
+radial THM-1695, single-straddle THM-1760 all closed). For general two-sided
+P = r_0(V) + sum_{k>0} Z^k p_k(V) + sum_{k>0} W^k q_k(V), each straddle contributes a
+coefficient-product generator at its own return level m0(straddle), and THM-1745's MAX law says
+the dominant straddle (max r*m0) returns at a level no other straddle reaches. **LEMMA TO PROVE:
+at the dominant straddle's return level, its radial factor L(Q_dom^j) is ISOLATED** -- the
+moment E[P^{j*m0_dom}] equals (nonzero scalar) * L(Q_dom^j) + (terms from strictly lower
+straddles that vanish independently), so L(Q_dom^j)=0 for all j, reducing to THM-1760's
+single-straddle reduction. Then peel the dominant straddle (its coefficients forced to 0) and
+induct downward -- a straddle descent. **Verified on the two-straddle witness** aZ^2+bW+cW^3:
+E[P^3]=6ab^2 (bottom straddle), E[P^5]=7200a^3c^2 (top straddle), forcing b then c bottom-up.
+**Attack:** show the balanced tuples reaching level j*m0_dom that involve ONLY the dominant
+straddle's charges give the isolated L(Q_dom^j) term, and every mixed tuple either has lower
+total return level or contributes to an already-killed lower straddle. The LRC resonance
+(THM-1745) suggests a first-return/covering argument: the dominant straddle is the last to
+return, so at its level it is alone.
