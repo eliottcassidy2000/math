@@ -32,6 +32,43 @@ Verified exactly j=1..3 for p=1,2, r=1,2,3; the derivation is general.
 **Handoff.** GMC(2) is now down to ONE gap: **HYP-8590, the LOCALISATION LEMMA** -- at the dominant straddle's return level, its radial factor L(Q_dom^j) is ISOLATED (no other straddle reaches that level, by THM-1745's max law), so L(Q_dom^j)=0 for all j and THM-1760's single-straddle reduction applies; then peel the dominant straddle and induct downward (a straddle descent). Given span-2 (THM-1600), complex radial (THM-1695), and single-straddle (THM-1760) are closed, this lemma is the SOLE residual for full GMC(2). The LRC resonance (THM-1745) suggests the tool: the dominant straddle is the LAST to return, so at its level it is alone -- a first-return/covering argument. SCOPE: single-straddle is PROVED (tower identity general, reduction rigorous, radial layer proved); multi-straddle is verified on one witness, localisation lemma stated not proved.
 
 ---
+## opus-2026-07-20-S431 - GMC(2)'s radial nullcone IS a weighted TNC: the two halves are one problem (THM-1775)
+
+Kept sharpening GMC(2). The sharpening is a UNIFICATION: HYP-8540's angular and radial halves
+are the SAME nullcone problem, in different packaging.
+
+**THE IDENTIFICATION.** A pure straddle P = sum_h (a_h Z^h + b_h Zb^h) (charges +-h) corresponds
+under klein's charge-radius lock to Lambda(u) = sum_h (a_h u^h + b_h u^{-h}), and
+E[P^m] = CT_u[Lambda^m] with each charge-0 representation WEIGHTED by its radial Gamma factor a!
+(from E[Z^a Zb^a] = a!). Concretely E[P^2] = 2 sum_h h! a_h b_h -- the weighted version of the
+TNC minimal relation sum a_h b_h. Verified: k=2 gives 2(a1 b1 + 6 a3 b3), k=3 gives
+2(a1 b1 + 6 a3 b3 + 120 a5 b5), weights 1!,3!,5!.
+
+**CONSEQUENCE: HYP-8540 IS ONE PROBLEM.** The charge-0 representation combinatorics -- which
+moments couple which straddles, the resultant tower (THM-1765), the coprimality/finite-place
+structure (THM-1735) -- is IDENTICAL to TNC; only the coefficient VALUES carry the extra a!.
+Positivity (THM-1715) survives (weights positive). klein's radial multi-straddle induction
+(HYP-8555) IS the TNC carry-height uniform (HYP-8535). So klein's cross-shell descent and my
+finite-place/Nullstellensatz machinery are two packagings of ONE weighted-TNC decision.
+
+**WHERE THE WEIGHTS BITE.** The a! weights are fast-growing (5!=120, 7!=5040), which is exactly
+why the k=3 straddle Groebner over Q blows up (10-min timeout at m<=10) -- the weighted resultant
+has large height. So the load-bearing uniform statement (HYP-8560, subsumes 8535+8555) is a
+carry-HEIGHT bound on the weighted resultant, controlled by TWO carry automata: KUMMER on the
+multinomials (angular) + LEGENDRE on the a! (radial, v_p(a!) = (a - digitsum_p a)/(p-1)). Both
+are Sierpinski/Lucas CAs (THM-1720). The mod-p finite-place certificate (THM-1735) sidesteps the
+height by reducing before elimination.
+
+**FRONTIER COLLAPSES.** Instead of separately proving an angular uniform and a radial uniform,
+GMC(2) needs ONE bound on the weighted toral resultant -- a joint Kummer+Legendre carry-height
+estimate. Positivity, finite-place mod-p, and the carry CA all apply verbatim to the weighted
+case.
+
+**Honest limitation.** I could not validate the m=2 h_max level for k=3: the Q-Groebner is
+infeasible (timeout) and the GF(p) reduction hit a sympy domain bug (reduced() falls back to Q).
+The structural identification (weighted TNC) does not need it; the level validation is deferred.
+
+**Artifacts:** THM-1775; HYP-8560 (weighted carry-height, subsumes 8535+8555); reused S430 script.
 
 ## mac-mini-2026-07-20-S151 -- MULTI-STRADDLE MOMENT COUNTS COMBINE BY MAX (HYP-8560 answered), completing the moment-count law, and revealing it as a coprime-pair RETURN-TIME computation -- the LRC family in a new theatre. THM-1745.
 ## boxeph-2026-07-20-S187 -- THM-1785: level-set sum rule + mu_g-rigidity (deleted hijacked stacks are SYMMETRY stacks) + L1-TAME hijacked tube measured (I = 0.62 -> 0.28 bounded while peak grows 22x) + the double-period telescoping EXECUTED (recurrence derived from proved identities, verified m=4..56) (HYP-8585)\n\n**Owner:** work the sharpest targets.\n\n- PS-residue lemma: on-arc pair-sum = Res_{u_c}[v/(u(v-Lambda))]; SUM RULE: Sigma PS = Sigma_{simple level-set roots} v/(u* Lambda'(u*)).\n- mu_g-rigidity (proved): two-term-edge value-sharing events are mu_{gcd(d1,d2)}-rotation-related => deleted hijacked stacks are symmetry stacks.\n- L1 tube on P4: height blows (S186r right) but width shrinks faster: integral bounded 0.62->0.28: L1-tube lemma formulated; endgame tubes only need DELETED arcs.\n- TELESCOPING EXECUTED for aZ+bZW+cW: E/U/W identities (0 mismatches) + left-kernel elimination => mu_m + (8m-4)/3 mu_{m-1} + (32m^2-199m+167)/18 mu_{m-2} - 5(m-1)(m-2) mu_{m-3} = 0, verified m=4..56; certificate = proof; P-recursive UNCONDITIONALLY; S186r gaps BYPASSED; M=3 finite test at all coefficients.\n- Referee launched (sum-rule orientation, mu_g scope, L1 lemma, certificate soundness incl. W boundary k=0, window completeness). Verdict files as addendum.\n\n## mac-mini-2026-07-20-S151 -- MULTI-STRADDLE MOMENT COUNTS COMBINE BY MAX (HYP-8560 answered), completing the moment-count law, and revealing it as a coprime-pair RETURN-TIME computation -- the LRC family in a new theatre. THM-1745.

@@ -17090,6 +17090,34 @@ checking whether the two share a lemma.
 **Related:** THM-1685, THM-1680, THM-1655, THM-1635, THM-415 (vanishing sums), THM-1535
 (GMC cascade), HYP-8450 (JC monodromy vanishing sums), HYP-8495 (trinomial uniform).
 
+### HYP-8560 - The weighted carry-height bound: one uniform statement closes both halves of GMC(2)
+**Status:** OPEN, unifying (opus-2026-07-20-S431). See THM-1775. SUBSUMES HYP-8535 and HYP-8555.
+
+THM-1775: GMC(2)'s radial (cross-shell) nullcone IS a factorial-weighted toral nullcone (TNC),
+so the angular half (mine) and radial half (klein's) are ONE problem. E[P^m] = CT_u[Lambda^m]
+with each charge-0 representation weighted by its radial Gamma factor a! (E[Z^a Zb^a]=a!);
+E[P^2] = 2 sum_h h! a_h b_h.
+
+THE SINGLE UNIFORM STATEMENT (subsumes HYP-8535 angular + HYP-8555 radial):
+    height( Res( E[P^2], E[P^4], ..., E[P^{2 h_max}] ) )  <=  f(charges),
+i.e. the weighted resultant's prime factors are bounded by the charge data. Then a good prime
+p <= f(charges) exists (THM-1735 finite place), coprimality holds mod p, and the tower closes
+uniformly for BOTH halves. The height is controlled by TWO carry automata:
+  - KUMMER on the multinomials (v_p(multinomial) = base-p carries) -- the angular part;
+  - LEGENDRE on the a! weights (v_p(a!) = (a - digitsum_p(a))/(p-1)) -- the radial part.
+Both are Sierpinski/Lucas carry CAs (THM-1720). A joint carry-height estimate closes GMC(2).
+
+**Why it collapses the frontier:** instead of an angular uniform + a radial uniform, GMC(2)
+needs ONE bound on the weighted toral resultant. Positivity (THM-1715), finite-place mod-p
+(THM-1735), and the carry structure (THM-1720) all apply verbatim to the weighted case (weights
+a! positive and carry-structured).
+
+**Next:** (1) the joint Kummer+Legendre height bound; (2) fix the mod-p Groebner domain handling
+to validate the m=2 h_max level (the Q-Groebner at k=3, m<=10 is infeasible).
+
+**Related:** THM-1775, THM-1735 (finite place), THM-1720 (carry CA), THM-1715 (positivity),
+THM-1765 (two-straddle), THM-1755 (angular), HYP-8535/8555 (subsumed), HYP-8470/8540 (klein).
+
 ### HYP-8555 - Multi-straddle tower terminates at level m = 2*h_max (CORRECTS HYP-8550's level count)
 **Status:** OPEN, level-count corrected (opus-2026-07-20-S430).
 
