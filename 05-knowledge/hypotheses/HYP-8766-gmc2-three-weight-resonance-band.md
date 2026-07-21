@@ -123,3 +123,14 @@ multinomial gain `m^r`, while a degree deficit `Delta` supplies only
 The next decisive calculation is the explicit first two `1/m` coefficients
 at `lambda=+-r`, expressed as differential operators on (3)-(4), followed by
 a common-zero resultant for small `(p0,q0)`.
+
+## Relation to HYP-8770
+
+HYP-8770's symmetric-top Watson problem is the many-shell analogue of the
+same entropy-versus-factorial obstruction. THM-2017 settles the separated
+three-channel slopes and HYP-8766 isolates their exact resonance band;
+HYP-8770 asks for uniform noncancellation when many near-top shell levels
+populate the Watson boundary layer. Neither target subsumes the other:
+HYP-8766 supplies explicit hyper-Bessel/transseries models for a controlled
+slice, while HYP-8770 supplies the global cross-shell geometry that a full
+NC2 proof must eventually absorb.
