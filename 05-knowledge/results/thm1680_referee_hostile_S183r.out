@@ -1,0 +1,48 @@
+==============================================================================
+THM-1680 HOSTILE REFEREE CHECKS (S183r)
+==============================================================================
+
+(T1) reality identity, w = sqrt(2s), a=0.7 b=0.25 real, s > a^2/(4b)=0.49:
+  s=   0.6 |u1|^2-b=5.6e-17  |h(u1)|=1.1e-16  Re(u1 h')=1.1e-16  |Re rho|/|rho|=1.9e-16
+  s=   1.0 |u1|^2-b=0.0e+00  |h(u1)|=1.2e-16  Re(u1 h')=0.0e+00  |Re rho|/|rho|=6.4e-17
+  s=   4.0 |u1|^2-b=0.0e+00  |h(u1)|=2.3e-16  Re(u1 h')=1.1e-16  |Re rho|/|rho|=0.0e+00
+  s=  25.0 |u1|^2-b=0.0e+00  |h(u1)|=4.5e-16  Re(u1 h')=0.0e+00  |Re rho|/|rho|=2.2e-17
+  s= 100.0 |u1|^2-b=0.0e+00  |h(u1)|=1.8e-15  Re(u1 h')=2.2e-16  |Re rho|/|rho|=5.6e-18
+  => |u1|^2 = b and rho purely imaginary hold IDENTICALLY (algebra confirmed;
+     note the identity needs b > 0 — for b < 0 the pair is real, not conjugate).
+
+(T2) sub-germ truncated B: I_m = int_0^{s2} e^-s v^{m-1} v' ds, v=2sqrt(2s), s2=4:
+    log v(s2) = 1.7329  (pure exponential class if truncated)
+      m    (1/m)log I_trunc   (1/m)log I_full    I_trunc*m/(e^-s2 v(s2)^m)
+      10        1.1891            1.2882            2.3748
+      20        1.4046            1.6452            1.5366
+      40        1.5459            2.0059            1.2323
+      60        1.6003            2.2158            1.1474
+    => truncated germ: (1/m)log I -> log v(s2) = 1.7329 (EXPONENTIAL grade,
+       endpoint law I ~ e^-s2 v(s2)^m/m confirmed); full germ: (1/m)log I
+       diverges (Gamma-scale). The section-2 dichotomy has NO class for this.
+
+(T3) odd-sector moment visibility, v = sqrt(s):
+     A_k(t) = int e^-s (1 - t sqrt(s))^{k/2} ds; exact a_m = C(k/2,m)(-1)^m Gamma(m/2+1)
+      m    rung(-1/2 term)   rung(+1/2 term)   |C(1/2,m)/C(-1/2,m)|*(2m-1)
+       8       --         --               1.000000000000
+      16    -0.4887    -1.5360             1.000000000000
+      32    -0.4944    -1.5174             1.000000000000
+      64    -0.4972    -1.5086             1.000000000000
+     128    -0.4986    -1.5043             1.000000000000
+     256    -0.4993    -1.5021             1.000000000000
+     512    -0.4996    -1.5011             1.000000000000
+    => both terms are Gamma(m/2+1)-scale; prefactor slopes -> -1/2 (B-term)
+       and -3/2 (subleading d-term): a B==0, d!=0 germ enters the moment
+       conditions ONE RUNG DOWN — 'contributes nothing' is FALSE for it,
+       and its arc is NOT removable (branch cut of order (1-tv)^{1/2}).
+
+(T4) defect of a PURE-SUBLEADING cut  d*(1 - t/t_b)^{1/2}, d = 0.3:
+     r=1e-02   |defect| = 6.000e-02   (B-type defect at same r ~ 2.1e+01; floor 1e-13)
+     r=1e-03   |defect| = 1.897e-02   (B-type defect at same r ~ 6.5e+01; floor 1e-13)
+     r=1e-04   |defect| = 6.000e-03   (B-type defect at same r ~ 2.1e+02; floor 1e-13)
+    => defect != 0 although B = 0: the monodromy INSTRUMENT (defect == 0)
+       is strictly finer than the canon TEXT's criterion (B == 0). The
+       biconditional 'B == 0 <=> single-valued <=> removable' fails =>.
+
+DONE.
