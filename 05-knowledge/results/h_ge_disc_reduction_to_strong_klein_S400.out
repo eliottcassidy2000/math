@@ -1,0 +1,21 @@
+==========================================================================
+(A) r-block disc = (prod disc_i)[prod(1+s_i)+prod(1-s_i)]/2^r   (reducible T)
+==========================================================================
+  10976 reducible tournaments n<=6; max |formula - disc| = 1.78e-15  => VERIFIED
+
+==========================================================================
+(C) s>=1 for strong  &  (BASE)  H(C) >= s(C) disc(C) for strong C
+==========================================================================
+  n=3: 1 strong classes; min s=3.0000 (>=1:True); H>=s*disc ALL: True; min H/(s*disc)=1.0000; #tight(equality)=1
+  n=4: 1 strong classes; min s=3.0000 (>=1:True); H>=s*disc ALL: True; min H/(s*disc)=1.6667; #tight(equality)=0
+  n=5: 6 strong classes; min s=2.0000 (>=1:True); H>=s*disc ALL: True; min H/(s*disc)=1.8750; #tight(equality)=0
+  n=6: 35 strong classes; min s=1.0000 (>=1:True); H>=s*disc ALL: True; min H/(s*disc)=3.7500; #tight(equality)=0
+  n=7 strong sample (H>=s*disc):
+    strong samples=3186; H>=s*disc: 3186/3186; min H/(s*disc)=4.2188
+
+==========================================================================
+FINAL reconfirm H>=disc (should follow from base+lemma)
+==========================================================================
+  n<=6 all labelled: 33864 tournaments, H<disc violations = 0
+
+DONE.

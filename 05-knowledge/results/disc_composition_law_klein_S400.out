@@ -1,0 +1,23 @@
+============================================================================
+(1) COMPOSITION LAW  disc(T1=>T2) = disc(T1)disc(T2)(1+s1 s2)/2
+============================================================================
+  checked 121 ordered sums (n<=6); max |lhs-rhs| = 1.78e-15  => FORMULA VERIFIED
+
+============================================================================
+(2) s = 1^T(I+K)^{-1}1 over STRONG tournaments (and singleton=1)
+============================================================================
+  singleton s = 1.0000
+  n=3: 1 strong classes; s in [3.0000, 3.0000], mean 3.0000; #with s>=1: 1/1
+  n=4: 1 strong classes; s in [3.0000, 3.0000], mean 3.0000; #with s>=1: 1/1
+  n=5: 6 strong classes; s in [2.0000, 5.0000], mean 3.3333; #with s>=1: 6/6
+  n=6: 35 strong classes; s in [1.0000, 5.0000], mean 2.8781; #with s>=1: 35/35
+
+============================================================================
+(3) disc(T) vs prod disc(SCC_i): sub-multiplicative (<=) => reduction to strong holds
+============================================================================
+  n=3: reducible; disc(T)/prod disc(SCC) in [1.0000, 1.0000]  (SUB-mult (<=1))
+  n=4: reducible; disc(T)/prod disc(SCC) in [1.0000, 2.0000]  (can EXCEED 1 => SUPER-mult, reduction FAILS)
+  n=5: reducible; disc(T)/prod disc(SCC) in [1.0000, 2.0000]  (can EXCEED 1 => SUPER-mult, reduction FAILS)
+  n=6: reducible; disc(T)/prod disc(SCC) in [1.0000, 5.0000]  (can EXCEED 1 => SUPER-mult, reduction FAILS)
+
+DONE.

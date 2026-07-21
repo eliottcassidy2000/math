@@ -1,0 +1,23 @@
+==============================================================================
+STEP 1: is disc MULTIPLICATIVE over strong components?  (H is)
+==============================================================================
+  n=3: tested 6 reducible labelled tournaments so far; disc-mult violations=0, H-mult violations=0
+  n=4: tested 46 reducible labelled tournaments so far; disc-mult violations=16, H-mult violations=0
+  n=5: tested 526 reducible labelled tournaments so far; disc-mult violations=376, H-mult violations=0
+  n=6: tested 10974 reducible labelled tournaments so far; disc-mult violations=10104, H-mult violations=0
+RESULT: disc multiplicative over SCC? NO (10104 viol); H multiplicative? YES
+  => if YES, H>=disc REDUCES TO STRONGLY CONNECTED tournaments.
+
+==============================================================================
+STEP 2: H vs disc on STRONGLY CONNECTED tournaments (the reduced problem)
+==============================================================================
+  n=3: 1 strong iso classes. min H/disc = 3.0000 (H=3, disc=1.0000); max disc among strong = 1.0000, max H = 3
+        H>=disc all strong: True; STRICT (H>disc) all strong: True
+  n=4: 1 strong iso classes. min H/disc = 5.0000 (H=5, disc=1.0000); max disc among strong = 1.0000, max H = 5
+        H>=disc all strong: True; STRICT (H>disc) all strong: True
+  n=5: 6 strong iso classes. min H/disc = 4.5000 (H=9, disc=2.0000); max disc among strong = 2.0000, max H = 15
+        H>=disc all strong: True; STRICT (H>disc) all strong: True
+  n=6: 35 strong iso classes. min H/disc = 4.2500 (H=17, disc=4.0000); max disc among strong = 5.0000, max H = 45
+        H>=disc all strong: True; STRICT (H>disc) all strong: True
+
+DONE.
