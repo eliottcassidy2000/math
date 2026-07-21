@@ -1,0 +1,30 @@
+==============================================================================
+(B1) bridge identity: int prod f(v_j t) dt = sum_{k.v=0} prod fhat(k_j)
+  v=(1, 2, 3) delta=0.11: LHS (exact intervals) = 0.073333 ; RHS (lattice sum, K=40) = 0.073346
+  Q-independent analog: only k=0 term = (2 delta)^n = 0.010648 (the 'one-sided' free case)
+
+==============================================================================
+(B2) delta* vs relation-lattice richness (n = 3, 4 batteries)
+  n=3 (threshold 1/4 = 0.25):
+    v=(1, 2, 3)    delta* = 0.2500  N_R = 8
+    v=(2, 4, 6)    delta* = 0.2500  N_R = 8
+    v=(3, 6, 9)    delta* = 0.2500  N_R = 8
+    v=(1, 2, 6)    delta* = 0.2857  N_R = 3
+    v=(1, 5, 6)    delta* = 0.2857  N_R = 4
+    v=(2, 3, 5)    delta* = 0.2857  N_R = 5
+    ... (loosest:)
+    v=(3, 5, 9)    delta* = 0.5000  N_R = 3
+    v=(3, 7, 9)    delta* = 0.5000  N_R = 3
+    v=(1, 3, 5)    delta* = 0.5000  N_R = 4
+    mean N_R: tight(delta*<0.26) = 8.00 (3 sets) vs loose(>0.30) = 2.81 (73 sets)
+
+==============================================================================
+(B3) delta-ladder: component-death events (folds), tight vs generic
+  v=(1, 2, 3, 4): delta* = 0.2000 ; death events: 2 ; multi-deaths (STACKED, >=2 at once): 2 ['2@0.144', '4@0.200']
+  v=(1, 2, 5, 7): delta* = 0.3333 ; death events: 6 ; multi-deaths (STACKED, >=2 at once): 6 ['2@0.084', '2@0.111', '2@0.125', '2@0.168', '2@0.250']
+  v=(2, 3, 7, 11): delta* = 0.3571 ; death events: 10 ; multi-deaths (STACKED, >=2 at once): 10 ['2@0.056', '2@0.072', '2@0.077', '2@0.100', '2@0.111']
+
+  (prediction: the tight consecutive family stacks its deaths — symmetry;
+   generic speeds die one at a time — the LRC face of S183's stacked germs)
+
+DONE.

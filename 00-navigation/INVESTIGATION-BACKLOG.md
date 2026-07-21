@@ -10331,3 +10331,10 @@ script figurate_two_axes_macmini_S109.py (.out in results). **Status:** verified
 - **Status:** OPEN; (ii) is the mathematically richest; (iii) is on-mandate and finite.
 
 - **[opus-S421] Post-JC frontier targets (HYP-8185):** six prioritized targets in `03-artifacts/drafts/post-jc-frontier-ledger-and-targets-opus-S421.md`. Highest: TRANSPORT F to the first explicit Zhao vanishing-conjecture / image-conjecture / Mathieu-subspace counterexample (de Bondt-van den Essen symmetric reduction: pin dimension N and quartic P, then the explicit failing (Delta,P,m) triple). Nobody (repo or literature) has an explicit witness. Status: OPEN, unclaimed.
+
+## S189 wild reframes (boxeph, THM-1820, HYP-8615) — proposals from the moment-nullcone lens
+- [ ] W1 q-Redei: h_q(T) = sum over Ham paths q^inv; nonvanishing at roots of unity? census n <= 5 cheap. Source: THM-1820 §3.
+- [ ] W2 Landau = Hilbert-Mumford numerical criterion (score polytope as weight polytope): candidate exact GIT statement of realizability. Source: THM-1820 §3; kin to S188 GIT reading.
+- [ ] W3 delta-resurgence for LRC: fold ladder in delta; mirror pairs = reality stacks (MEASURED baseline); tight family = terminal multiplicity-4 stack (MEASURED); transplant odd-sector/monodromy/sum-rule tools. Source: THM-1820 §2-3.
+- [ ] W4 LRC finite moment test: engine-style certificate for |G_delta| vs the mod-q ladders. Source: THM-1820 §3.
+- [ ] W5 {7,21} as GIT value-semigroup gaps (tangent-grade). Source: THM-1820 §3.
