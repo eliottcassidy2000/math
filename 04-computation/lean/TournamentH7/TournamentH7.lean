@@ -175,6 +175,7 @@ import TournamentH7.ScoreSequence
 import TournamentH7.Paley3
 import TournamentH7.TransitiveH
 import TournamentH7.ProductSum
+import TournamentH7.SupportHarmonicFigurate
 import TournamentH7.OpSymmetry
 import TournamentH7.LonelyRunner
 import TournamentH7.LonelyRunnerMathlib
