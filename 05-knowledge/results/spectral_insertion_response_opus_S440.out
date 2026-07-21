@@ -1,0 +1,28 @@
+SPECTRAL INSERTION-RESPONSE: char_S(T+u_P) = x*char_S(T) + s^T adj(xI-S) s
+==========================================================================
+  m=2: 2 tournaments checked
+  m=3: 8 tournaments checked
+  m=4: 64 tournaments checked
+
+ bordered recursion char_S(T+u_P)=x*char_S+s^T adj s holds for ALL (T,P): True
+ source-insertion char_S == sink-insertion char_S (=> complement b preserves char_S): True
+ diagonal cofactor sum == char_S'(x) (so B_P = char_S' + signed off-diagonal): 74/74
+   e.g. m=3 T#0: char_S=x*(x**2 + 3),  source correction B=3*x**2 + 1
+   e.g. m=3 T#6: char_S=x*(x**2 + 3),  source correction B=3*x**2 + 1
+
+==========================================================================
+TRANSITIVE TOWER (kps THM-1880 recovered as the source-insertion special case)
+  n=1: E_n=x  = ((x+1)^n+(x-1)^n)/2  OK
+  n=2: E_n=x**2 + 1  = ((x+1)^n+(x-1)^n)/2  OK  x*E_{n-1}+B = E_n OK
+  n=3: E_n=x**3 + 3*x  = ((x+1)^n+(x-1)^n)/2  OK  x*E_{n-1}+B = E_n OK
+  n=4: E_n=x**4 + 6*x**2 + 1  = ((x+1)^n+(x-1)^n)/2  OK  x*E_{n-1}+B = E_n OK
+  n=5: E_n=x**5 + 10*x**3 + 5*x  = ((x+1)^n+(x-1)^n)/2  OK  x*E_{n-1}+B = E_n OK
+  n=6: E_n=x**6 + 15*x**4 + 15*x**2 + 1  = ((x+1)^n+(x-1)^n)/2  OK  x*E_{n-1}+B = E_n OK
+
+==========================================================================
+INTERLACING: eigenvalues of S' interlace those of S (Cauchy on iS) -- numeric check
+  eigenvalues of T+u_P interlace those of T on the imaginary axis (2000 random n=5): True
+
+ READING: a = vertex-insertion acts on char_S by x*(.)+B_P; B_P=char_S'+signed-offdiag;
+ source=sink => complement b is char_S-invariant; the new spectrum INTERLACES the old.
+ Transitive tower recovers kps THM-1880. This is the a-operation on ALL tournaments' spectra.
