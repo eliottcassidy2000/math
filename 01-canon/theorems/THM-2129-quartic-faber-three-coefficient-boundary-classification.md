@@ -19,6 +19,9 @@ related:
   - THM-2084
   - THM-2118
   - THM-2127
+  - HYP-3132
+  - HYP-3138
+  - HYP-3161
 script: 04-computation/jc2_quartic_faber_three_coefficient_boundary_codex_20260722.py
 output: 05-knowledge/results/jc2_quartic_faber_three_coefficient_boundary_codex_20260722.out
 script_sha256: 6204284fc5e6e32dbf395b03a897b907ca524d66c1c186f41ce5ad190bf21cbb
@@ -266,6 +269,19 @@ requires THM-2127's hypotheses or a new argument.
 The claim is scoped to a positive-weight face containing `z^4`; a coefficient-
 only face omitting `z^4` is not classified here.
 
+An unrelated LRC reflection-fold packet suggested the correct carrier.
+HYP-3132 isolates an even biquadratic resolvent, while HYP-3138/3161 warn that
+the discarded odd coordinate must be resurrected. Under the typed map
+
+```text
+even fold -> H_0^2,             odd leakage -> qz,
+remaining even offset -> delta,                                  (28)
+```
+
+the preserved lesson is exactly the need for the ordered `(q,delta)` sidecar.
+No LRC inequality or tournament invariant is transferred to the Jacobian
+problem; only the loss ledger survives.
+
 ## 8. Frontier and exact referee
 
 The theorem eliminates every odd balanced quartic centering collision and
@@ -278,7 +294,7 @@ For a nonmonic quartic `A(x)y^4+...` with reduced mate leading coefficient
 `q_n(x)`, the top Keller equation is
 
 ```text
-n A' q_n-4A q_n'=0,             hence q_n^4=cA^n.      (28)
+n A' q_n-4A q_n'=0,             hence q_n^4=cA^n.      (29)
 ```
 
 If `n` is odd, UFD valuations make `A` a fourth power. If `n` is twice odd,

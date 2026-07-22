@@ -23,6 +23,10 @@ related:
   - THM-2104
   - THM-2119
   - THM-2124
+  - THM-2128
+  - THM-2131
+  - HYP-2430
+  - HYP-2448
 external: Settled Lonely Runner Conjecture for at most twelve integer speeds (through thirteen total runners).
 ---
 
@@ -173,6 +177,12 @@ Hence `r>=5`, and the complete count list is
 
 No count in (14) is asserted empty.
 
+Under THM-2131's inherited rank-two LRC specialization hypotheses, subsequent
+THM-2128/2131 empty the separate `13|cont(g)` branch when no terminal is itself
+a `13`-blocker. They do not alter the general non-guard-blocker counts (14) or
+the two-prime determinant invoice below; simultaneous blockers and the
+fivefold guard-pencil branch remain outside those closures.
+
 ## 7. The prime-eleven split
 
 For rank eight, THM-2114 likewise supplies a terminal `11`-blocker whenever
@@ -241,6 +251,14 @@ a compatibility witness for the necessary filters, not a torus cover.
 The challenged assumption was that the forced primes should be used one at a
 time. Their lawful intersection is label-level determinant divisibility.
 Scalar counts alone would lose which terminal pays both primes.
+
+This also explains which earlier incidence ideas transfer. HYP-2448's
+characteristic-zero barycentric/Galois packet does not: over `F_p` all root-
+fiber points are already rational and derivative truncation has characteristic-
+`p` hazards. The valid carrier is full labelled finite-field incidence.
+HYP-2430's enormous design-incidence nullity supplies the hostile warning that
+low marginals can admit signed trades; it is why (17) intersects actual label
+sets rather than only their cardinalities.
 
 Candidate tournament vertices were terminals, prime labels, root columns,
 root points, and capacity obligations. No orientation preserves both stages of
