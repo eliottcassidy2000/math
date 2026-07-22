@@ -81,7 +81,37 @@ theorem phi_X : phi (PowerSeries.X : PowerSeries (PowerSeries F))
     = PowerSeries.C (PowerSeries.X : PowerSeries F) from tau_X, PowerSeries.map_C,
     HahnSeries.ofPowerSeries_X]
 
+/-- `τ(C t) = t` (the inner-`t` constant becomes the outer `t`). -/
+theorem tau_C_X : tau (PowerSeries.C (PowerSeries.X : PowerSeries F))
+    = (PowerSeries.X : PowerSeries (PowerSeries F)) := by
+  refine PowerSeries.ext fun a => PowerSeries.ext fun b => ?_
+  rw [coeff_coeff_tau]
+  by_cases ha : a = 1 <;> by_cases hb : b = 0 <;>
+    simp [PowerSeries.coeff_C, PowerSeries.coeff_X, PowerSeries.coeff_one, ha, hb]
+
+/-- `φ(C t) = t` (the frame's `t`). -/
+theorem phi_C_X : phi (PowerSeries.C (PowerSeries.X : PowerSeries F))
+    = (PowerSeries.X : PowerSeries (LaurentSeries F)) := by
+  rw [phi, RingHom.comp_apply, show tauHom (PowerSeries.C (PowerSeries.X : PowerSeries F))
+    = PowerSeries.X from tau_C_X, PowerSeries.map_X]
+
+/-- `φ(C(C a)) = C(HahnSeries.C a)` (double constant ↦ frame constant). -/
+theorem phi_C_C (a : F) :
+    phi (PowerSeries.C (PowerSeries.C a : PowerSeries F))
+      = PowerSeries.C (HahnSeries.C a : LaurentSeries F) := by
+  have htau : tau (PowerSeries.C (PowerSeries.C a : PowerSeries F))
+      = PowerSeries.C (PowerSeries.C a) := by
+    refine PowerSeries.ext fun k => PowerSeries.ext fun n => ?_
+    rw [coeff_coeff_tau]
+    by_cases hk : k = 0 <;> by_cases hn : n = 0 <;>
+      simp [PowerSeries.coeff_C, PowerSeries.coeff_zero_eq_constantCoeff, hk, hn]
+  rw [phi, RingHom.comp_apply, show tauHom (PowerSeries.C (PowerSeries.C a : PowerSeries F))
+    = PowerSeries.C (PowerSeries.C a) from htau, PowerSeries.map_C]
+  exact congrArg PowerSeries.C (HahnSeries.ofPowerSeries_C a)
+
 end GMC2DvdKTranspose
 
 #print axioms GMC2DvdKTranspose.phi
 #print axioms GMC2DvdKTranspose.phi_X
+#print axioms GMC2DvdKTranspose.phi_C_X
+#print axioms GMC2DvdKTranspose.phi_C_C
