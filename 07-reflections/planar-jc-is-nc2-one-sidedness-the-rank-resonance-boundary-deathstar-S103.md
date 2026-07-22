@@ -1,6 +1,6 @@
 # The binary symmetric-Hessian subcase is one-sided; the rank/resonance comparison is heuristic
 
-**death-star-2026-07-21-S103** (HYP-8905). Owner: work to prove the planar Jacobian Conjecture, pulling in past
+**death-star-2026-07-21-S103** (HYP-8910). Owner: work to prove the planar Jacobian Conjecture, pulling in past
 threads creatively. Target is genuinely **JC(2)** — THM-1300 supplies the
 verified dimension-three counterexample. The proved result here is narrower:
 the binary homogeneous symmetric-Hessian stratum is one-sided and tame. The
@@ -69,4 +69,4 @@ Cross-links: THM-1830 (NC2/GMC2 conditional map, not a JC implication), THM-1435
 one-fiber-linear planar Keller — = my one-sided maps), THM-1300 (Alpöge counterexample, dim 3), S101/HYP-8878
 (unique vs coincident cycle), S102/HYP-8879 (LRC=GMC2 resonance), S217/218 (arithmetic entropy), memory
 `gmc2-domination-dead-fact-is-algebraic`, `nc2-gmc2-lean-formalization-state`. Script
-`04-computation/planar_jc_is_nc2_one_sidedness_deathstar_S103.py` (+ `.out`). HYP-8905.
+`04-computation/planar_jc_is_nc2_one_sidedness_deathstar_S103.py` (+ `.out`). HYP-8910.

@@ -11,7 +11,7 @@ rank/cycle comparison is heuristic, not a classification of collisions.
 ## boxeph-2026-07-21-S225 -- working JC(2): the obstruction is a descent termination; coprime intervals are its tool (HYP-8905)
 
 **Owner:** long session working to prove the planar Jacobian Conjecture; pull past threads creatively.
-## death-star-2026-07-21-S103 -- Planar JC IS NC2 one-sidedness: 2D nilpotent Hessian => one-sided; the JC-true/false boundary = the GMC2 unique-vs-coincident-cycle threshold. HYP-8905.
+## death-star-2026-07-21-S103 -- Planar JC IS NC2 one-sidedness: 2D nilpotent Hessian => one-sided; the JC-true/false boundary = the GMC2 unique-vs-coincident-cycle threshold. HYP-8910.
 
 **Owner directive:** work to prove the planar Jacobian conjecture, pull in past threads creatively.
 
@@ -19,7 +19,7 @@ rank/cycle comparison is heuristic, not a classification of collisions.
 - **PROVED/VERIFIED (planar_jc_..._S103.py):** 2D symmetric Hess P nilpotent <=> harmonic (trace 0) AND det 0; for harmonic P=A z^d+B zbar^d, det(Hess)=-4 d^2(d-1)^2 A B |z|^{2(d-2)} => det=0 <=> A B=0 => P ONE-SIDED (= verbatim NC2 conclusion). One-sided P is harmonic (Zhao VC trivial) + ONE-FIBER-LINEAR (F2-iF1=-iz => codex THM-2063 tame). So the SYMMETRIC planar JC / 2D Zhao-VC case IS NC2 one-sidedness, PROVED.
 - **THE BOUNDARY (the unification):** 2x2 nilpotent has RANK<=1 = ONE isotropic direction (one-sided); dim>=3 reaches rank>=2 = MULTIPLE isotropic dirs = RESONANCE = Alpoge counterexample (JC false). rank<=1 => parallel gradients => functional dependence => one-fiber pencil (codex). SAME threshold as GMC2 S101 (unique vs coincident cycle) + boxeph S217 entropy (rigid=zero-entropy=one-sided). Planar = the last one-direction dimension.
 - **HONEST:** proves the symmetric case (=NC2 one-sided); NOT full JC(2) (non-symmetric rank-1 parallel-gradient = codex THM-2063 open crux). A unification placing planar JC in my GMC2/NC2/resonance framework + a bridge to codex's pencil.
-- **ADOPTED codex MISTAKE-227:** my S102 strict measure detects M(S)>1/14 only (vanishes on the tight AP = measure-zero boundary packet, not a counterexample); the integer-kernel=GMC2 unification SURVIVES as a strict-BULK observable, boundary handled by THM-2058 exact packets. reflection planar-jc-is-nc2-one-sidedness-...-S103. HYP-8905.
+- **ADOPTED codex MISTAKE-227:** my S102 strict measure detects M(S)>1/14 only (vanishes on the tight AP = measure-zero boundary packet, not a counterexample); the integer-kernel=GMC2 unification SURVIVES as a strict-BULK observable, boundary handled by THM-2058 exact packets. reflection planar-jc-is-nc2-one-sidedness-...-S103. HYP-8910.
 
 ## codex-2026-07-21 -- HYP-8879 strict-measure boundary correction
 
