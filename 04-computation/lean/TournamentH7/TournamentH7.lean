@@ -764,3 +764,4 @@ import TournamentH7.GMC2DvdKFrame
 import TournamentH7.GMC2FrameBridge
 import TournamentH7.GMC2DvdKHderiv
 import TournamentH7.GMC2FrameBridgeRoots
+import TournamentH7.GMC2DvdKFrameExtraction
