@@ -1,6 +1,8 @@
 import Mathlib
 import TournamentH7.GMC2DvdKHderiv
 import TournamentH7.GMC2DvdKTranspose
+import TournamentH7.GMC2DvdKConnector
+import TournamentH7.GMC2DvdKWeierstrass
 import TournamentH7.GMC2DvdKFrameHSide
 import TournamentH7.GMC2DvdKFrameExtraction
 
@@ -71,7 +73,20 @@ theorem hderiv_of_transpose_glue (Rl : LaurentSeries F) (M : ℕ)
   rw [← hbridge]
   exact hderiv_via_transpose Rl M Wu hWu Pfr hfact hPu hc hg hvanish
 
+/-- **`hfact` for the concrete Weierstrass objects** — discharged by composing death-star's connector
+`phi_Phi` (`phi(Φ)=PhiFrame`) with the Weierstrass factorization `Φ = ↑smallRootFactor · h`.  Supplies the
+unit `Wu` and the factorization `PhiFrame = phi(↑smallRootFactor) · phi Wu` that `hderiv_via_transpose`
+consumes, so `hfact` is no longer a free hypothesis for the concrete run. -/
+theorem phiFrame_eq_phi_smallRootFactor_mul (R : Polynomial F) (M : ℕ) :
+    ∃ Wu : PowerSeries (PowerSeries F), IsUnit Wu ∧
+      GMC2DvdKFrame.PhiFrame (Polynomial.aeval (HahnSeries.single (1 : ℤ) (1 : F)) R) M
+        = GMC2DvdKTranspose.phi ((GMC2DvdKWeierstrass.smallRootFactor R M : (PowerSeries F)⟦X⟧))
+          * GMC2DvdKTranspose.phi Wu := by
+  obtain ⟨h, hu, hfeq⟩ := GMC2DvdKWeierstrass.phi_eq_smallRootFactor_mul R M
+  exact ⟨h, hu, by rw [← GMC2DvdKConnector.phi_Phi, hfeq, map_mul]⟩
+
 end GMC2DvdKHderivAssembly
 
 #print axioms GMC2DvdKHderivAssembly.hderiv_via_transpose
 #print axioms GMC2DvdKHderivAssembly.hderiv_of_transpose_glue
+#print axioms GMC2DvdKHderivAssembly.phiFrame_eq_phi_smallRootFactor_mul
