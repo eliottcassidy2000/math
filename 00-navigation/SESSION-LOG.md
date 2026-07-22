@@ -18,35 +18,20 @@
   of `E_h^c`; this is the live scalar boundary, not a small-ratio gate.
 
 ## boxeph-2026-07-22-S229 -- kernel-pure Lean: the unique-channel DvdK-free criterion (any support) + the cancellation/inclusion-exclusion dictionary (HYP-8930)
+## boxeph-2026-07-22-S230 -- bypassing the GMC2 DvdK dependency for the unique-channel class (kernel-pure Lean, HYP-8931)
 
-**Owner:** work the next Lean DvdK target; mine past results on cancellation and inclusion-exclusion.
+**Owner:** creatively bypass the GMC2 dependency on DvdK, or find an easier formalization.
 
-**FORMALIZED (GMC2DvdKUniqueChannel.lean, kernel-pure [propext,Classical.choice,Quot.sound], 5 thms):**
-- ct_ne_zero_of_unique_balanced: a UNIQUE balanced composition of size m => CT(f^m) = one multinomial term => != 0 for EVERY complex c (any support, any #charges). = death-star-S101/HYP-8878 unique-primitive-cycle criterion, mechanized, coefficient-independent (the DvdK-free 84%).
-- two_balanced_of_ct_zero: contrapositive dichotomy -- CT=0 + one channel => a SECOND channel; cancellation needs >=2 coincident cycles.
-- ct_ne_zero_of_card_eq_one + two_le_card_balanced_of_ct_zero: cardinality form -- |balancedSet q m|=1 => CT!=0 (84%), CT=0 => card>=2 (hard 16%). Coincident-cycle count = a Lean Finset.card.
-- two_charge_via_unique: S226 pair theorem = the Fin 2 instance (subsumed).
-DvdK-free zone in Lean now = every support with a unique minimal channel; residual card>=2 = codex THM-2067 Galois.
+**THE LOCALIZATION:** codex's spine consumes DvdK1 in exactly ONE place -- GMC2FaceSeed.exists_nonzero_lowest_face_seed, only to produce "∃m>=1, CT(lowest_face^m)!=0". Everything around it (slope lambda, level delta, exact face F, straddling, charge-injectivity, coeff-nonzero) is DvdK-free Newton-polygon geometry (GMC2.exists_rational_lowest_face_finset). So the whole GMC2 DvdK dependency is ONE seed implication.
 
-**MINE -- cancellation and inclusion-exclusion are ONE object:** THM-1820 (bridge: same moment-nullcone, discriminant=|alphabet|; LRC bounded {0..13} => Bonferroni IE terminates at k=13 => finite B5 cert; GMC unbounded => depth>=d+1). THM-406 M1b (loneliness p0=Sum_j(-1)^j S_j = IE alternating overlap-volume sum) + M2 ({p0=0} all-orders, Bonferroni one-sided = Vitali wall). THM-515 (theta/sinc lattice sum alternates, THM-504 cross-level). THM-1810 (bosonic/fermionic permanent/determinant = the shared sign-involution; THM-2070 dihedral witness). THM-671 (B5=2052/7^5~+0.1221 first positive Bonferroni truncation).
+**THE BYPASS (kernel-pure, [propext,Classical.choice,Quot.sound]):**
+- dvdk1_of_uniqueChannel (GMC2DvdKUniqueChannel.lean): the exact DvdK1 conclusion (∃m>=1, CT(f^m)!=0), NO premise, whenever some size has a unique balanced composition. Discharges the interface input for the unique-channel class.
+- exists_nonzero_lowest_face_seed_of_uniqueChannel (new file GMC2DvdKUniqueChannelBypass.lean): a DROP-IN replacement for codex's exists_nonzero_lowest_face_seed -- identical conclusion, DvdK1 premise replaced by LowestFaceUniqueChannel P; reuses codex's geometry lemma verbatim, swaps only the final DvdK call for S229 ct_ne_zero_of_unique_balanced.
+NET: every P whose lowest face has a unique channel needs NO DvdK axiom for NC2, only HeightWitnessSupplier. Covers death-star-S101/HYP-8878's 84%.
 
-**HONEST SELF-CORRECTION of S228:** LRC covering is NOT "all-cancellation, no positive regime". There IS a positive regime -- odd-Bonferroni B5 (THM-671) + codex guard-capacity (THM-2076 union bound + THM-2080 overlap floor mu(D_q cap E_h)>=1/42) -- handling low-resonance cores (the 84% analogue), which provably cannot reach the all-orders floor on resonant/AP cores (THM-406 M2; S_5 explodes 156-172x iid, THM-686), EXACTLY as positive-coeff/unique-channel DvdK cannot reach the general complex case (THM-2067). Same positive-vs-cancellation split; only the alphabet (finite vs unbounded) differs -- why LRC cancellation terminates and GMC's does not.
-### Rank-seven continuation
+**HONEST BOUND:** residual = coincident-channel stratum (card>=2, symmetric/resonant 16%). The involution u->-1/u (f(-1/u)=-f(u), THM-2070) pairs compositions => even multiplicity at every mass => never unique (e.g. {-2,-1,1,2}); irreducible DvdK = codex THM-2067 (Galois orbit-product). BLOCKED all elementary erasure routes: face-simplification (THM-2070 any Laurent poly is a GMC lowest face), saddle (S222 retracted), char-p (harder: multinomials vanish mod p, Frobenius gives CT=0), genericity (feasibility!=cancellation).
 
-- THM-2081 restricts the seven danger combs to the guard complement and runs
-  Hunter on that relative event graph. If `I_q=measure(D_q intersect E_h)`
-  and `tau_h` is the maximum restricted spanning-tree weight, containment
-  forces `tau_h<=2/7-sum I_q`; a strict reverse inequality gives actual safe
-  mass outside the guard.
-- Exact rational atomization checks all `131` hereditary divisor-complete
-  rank-seven cores through height `24` and `4,120` allowed odd guards. The
-  mixed-overlap scalar leaves `1,322`; the relative tree leaves zero. Its
-  worst positive margin is `561797/8288280` at
-  `Q=(1,9,10,11,13,14,24), h=23`.
-- The all-height inequality is open. The new carrier is projective and
-  scalable--three-frequency outside-guard atoms plus a weighted graphic
-  matroid--but the common-gcd/endpoint phase classification has not yet been
-  proved.
+**Next step (proposed to codex):** parameterize the descent by the seed lemma (take exists_nonzero_lowest_face_seed's conclusion as input) so both DvdK1 and my unique-channel seed drive it => DvdK-axiom-free NC2 for the 84%.
 
 ## death-star-2026-07-22-S105 -- GMC2 formalization CAPSTONE CLOSED: the whnf wall is SOLVED; HeightWitnessSupplier discharged kernel-pure; clean DvdK1 -> NC2 and DvdK1 -> GMC(2) now compile.
 
@@ -61,4 +46,5 @@ DvdK-free zone in Lean now = every support with a unique minimal channel; residu
 **Owner:** aim earnestly at formalizing DvdK; make it simpler / circumvent it; spill over to LRC.
 
 **Honest:** the DvdK-free (unique-channel) side is now kernel-pure in Lean for arbitrary support, subsuming S226 and complementing S228; the coincident-cycle (card>=2) stratum remains the THM-2067 Galois frontier. The synthesis is a reading of proved theorems (THM-1820/1810/406/515/671), not a new theorem. Artifacts: reflection the-unique-channel-dvdk-in-lean-...-boxeph-S229.md, HYP-8930, Lean GMC2DvdKUniqueChannel.lean (5 theorems).
+**Honest scope:** the DvdK dependency is localized to one seed implication and discharged kernel-pure for the unique-channel 84%; NOT a full bypass (coincident-channel 16% = THM-2067). NC2-level wiring is a one-line codex-owned change. Artifacts: reflection bypassing-the-gmc2-dvdk-dependency-...-boxeph-S230.md, HYP-8931, Lean GMC2DvdKUniqueChannelBypass.lean + dvdk1_of_uniqueChannel.
 

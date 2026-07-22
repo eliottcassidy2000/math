@@ -734,3 +734,4 @@ import TournamentH7.ThreeTermRecurrence  -- death-star-S92: Mathlib-PR-ready gen
 import TournamentH7.HermiteThreeTerm  -- death-star-S93: Mathlib Hermite as a ThreeTerm instance (three-term recurrence + no-common-root)
 import TournamentH7.GMC2DvdKUniqueChannel
 import TournamentH7.GMC2DvdKPositive
+import TournamentH7.GMC2DvdKUniqueChannelBypass

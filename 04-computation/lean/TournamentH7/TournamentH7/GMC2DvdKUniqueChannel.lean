@@ -111,6 +111,24 @@ theorem two_le_card_balanced_of_ct_zero {ι : Type*} [Fintype ι] [DecidableEq �
   have hrmem : r ∈ balancedSet q m := Finset.mem_filter.mpr ⟨hrpi, hrbal⟩
   exact Finset.one_lt_card.mpr ⟨r, hrmem, r0, hr0mem, hrne⟩
 
+/-- **DvdK1 is a *theorem* on unique-channel supports** — no DvdK premise.  If some size `m0 ≥ 1`
+carries a unique balanced composition, the exact DvdK1 existential conclusion
+(`∃ m ≥ 1, CT(f^m) ≠ 0`) holds outright.  This is the shape consumed by the GMC(2) spine
+(`GMC2DvdKInterface.DvdK1` / `exists_nonzero_face_seed`), so it discharges that input for the whole
+unique-channel class (death-star-S101's 84% of supports) without any external analytic axiom. -/
+theorem dvdk1_of_uniqueChannel {ι : Type*} [Fintype ι] [DecidableEq ι]
+    (q : ι → ℤ) (c : ι → ℂ) (hc : ∀ i, c i ≠ 0)
+    (hUC : ∃ m0 : ℕ, 1 ≤ m0 ∧ ∃ r0 : ι → ℕ,
+      r0 ∈ Finset.piAntidiag (Finset.univ : Finset ι) m0 ∧
+      GMC2ConstantTermRelations.totalCharge q r0 = 0 ∧
+      ∀ r ∈ Finset.piAntidiag (Finset.univ : Finset ι) m0,
+        GMC2ConstantTermRelations.totalCharge q r = 0 → r = r0) :
+    ∃ m : ℕ, 1 ≤ m ∧
+      MvPolynomial.aeval c
+        (GMC2ConstantTermRelations.constantTermRelation q m) ≠ 0 := by
+  obtain ⟨m0, hm0, r0, hr0mem, hr0bal, huniq⟩ := hUC
+  exact ⟨m0, hm0, ct_ne_zero_of_unique_balanced q c hc m0 r0 hr0mem hr0bal huniq⟩
+
 /-- The two-charge theorem of `GMC2DvdKTwoCharge` is the `Fin 2` instance of the general
 unique-channel lemma: `balanced_unique` supplies the uniqueness hypothesis. -/
 theorem two_charge_via_unique (p n : ℕ) (hp : 0 < p) (hn : 0 < n)
@@ -129,4 +147,5 @@ end GMC2DvdKUniqueChannel
 #print axioms GMC2DvdKUniqueChannel.two_balanced_of_ct_zero
 #print axioms GMC2DvdKUniqueChannel.ct_ne_zero_of_card_eq_one
 #print axioms GMC2DvdKUniqueChannel.two_le_card_balanced_of_ct_zero
+#print axioms GMC2DvdKUniqueChannel.dvdk1_of_uniqueChannel
 #print axioms GMC2DvdKUniqueChannel.two_charge_via_unique
