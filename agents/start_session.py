@@ -10,34 +10,18 @@ an agent can decide what to read without scanning the entire corpus.
 from __future__ import annotations
 
 import argparse
+import heapq
 import re
 import subprocess
 import sys
 from pathlib import Path
 
+from doc_surface import CANONICAL_ROUTES, TOPIC_SEARCH_ROUTES, TOPIC_SEARCH_TREES
+
 
 REPO = Path(__file__).resolve().parent.parent
-
-ROUTES = (
-    "00-navigation/START-HERE.md",
-    "00-navigation/CURRENT-FRONTIER.md",
-    "01-canon/ACTIVE-GUARDRAILS.md",
-    "00-navigation/RESEARCH-PROTOCOL.md",
-    "00-navigation/META-PATTERNS.md",
-    "05-knowledge/reference/CORE-PAPERS.md",
-    "00-navigation/PROBLEM-LEDGER.md",
-)
-
-SEARCH_ROOTS = (
-    "00-navigation/CURRENT-FRONTIER.md",
-    "01-canon/ACTIVE-GUARDRAILS.md",
-    "05-knowledge/reference/CORE-PAPERS.md",
-    "00-navigation/PROBLEM-LEDGER.md",
-    "00-navigation/LRC14-PROOF-MAP.md",
-    "01-canon/theorems",
-    "05-knowledge/hypotheses",
-    "07-reflections",
-)
+MAX_TOPIC_BYTES = 500
+MAX_TOPIC_TERMS = 12
 
 
 def run(*args: str) -> subprocess.CompletedProcess[str]:
@@ -63,21 +47,23 @@ def section(title: str) -> None:
     print(f"\n== {title} ==")
 
 
-def git_state(recent: int) -> None:
+def git_state(recent: int) -> bool:
     section("Git state")
     branch = one_line("git", "branch", "--show-current") or "DETACHED"
     head = one_line("git", "rev-parse", "--short=12", "HEAD") or "unknown"
     upstream = one_line(
         "git", "rev-parse", "--abbrev-ref", "--symbolic-full-name", "@{u}"
     )
-    target = upstream or (
+    live_main = (
         "origin/main"
         if succeeds("git", "show-ref", "--verify", "refs/remotes/origin/main")
         else ""
     )
+    target = upstream or live_main
     print(f"branch: {branch}")
     print(f"HEAD:   {head}")
-    print(f"target: {target or 'none configured'}")
+    print(f"target (cached refs): {target or 'none configured'}")
+    healthy = bool(target)
 
     if target:
         counts = one_line(
@@ -88,6 +74,18 @@ def git_state(recent: int) -> None:
             print(f"relative to target: behind {behind}, ahead {ahead}")
             if behind != "0":
                 print("ACTION: sync from a clean tree before relying on frontier state.")
+                healthy = False
+
+    if live_main and target != live_main:
+        counts = one_line(
+            "git", "rev-list", "--left-right", "--count", f"{live_main}...HEAD"
+        ).split()
+        if len(counts) == 2:
+            behind, ahead = counts
+            print(f"relative to live origin/main: behind {behind}, ahead {ahead}")
+            if behind != "0":
+                print("ACTION: incorporate the live shared surface before research.")
+                healthy = False
 
     status = one_line("git", "status", "--short")
     if status:
@@ -98,6 +96,7 @@ def git_state(recent: int) -> None:
         if len(rows) > 12:
             print(f"  ... {len(rows) - 12} more")
         print("ACTION: identify ownership; do not sweep unrelated files into a commit.")
+        healthy = False
     else:
         print("working tree: clean")
 
@@ -106,14 +105,19 @@ def git_state(recent: int) -> None:
         "git", "log", f"-{recent}", "--oneline", "--decorate", "--no-merges"
     )
     print(log or "(no Git history available)")
+    print("Freshness is cached-only: run `git fetch origin` before strict reliance.")
+    return healthy
 
 
-def route_packet() -> None:
+def route_packet() -> bool:
     section("Canonical startup route")
-    for path in ROUTES:
+    healthy = True
+    for path in CANONICAL_ROUTES:
         marker = "OK" if (REPO / path).exists() else "MISSING"
         print(f"[{marker}] {path}")
+        healthy = healthy and marker == "OK"
     print("Historical logs/reflections are searched for provenance, not read as truth.")
+    return healthy
 
 
 STOPWORDS = {
@@ -126,6 +130,10 @@ STOPWORDS = {
 
 def topic_terms(topic: str) -> list[tuple[str, int]]:
     """Return specificity-weighted literal terms, with identifiers first."""
+    if not topic.strip():
+        raise ValueError("topic must contain a specific mathematical object or statement")
+    if len(topic.encode("utf-8")) > MAX_TOPIC_BYTES:
+        raise ValueError(f"topic exceeds the {MAX_TOPIC_BYTES}-byte safety limit")
     identifiers = [
         f"{match.group(1).upper()}-{match.group(2)}"
         for match in re.finditer(
@@ -157,7 +165,9 @@ def topic_terms(topic: str) -> list[tuple[str, int]]:
         if key and key not in seen:
             seen.add(key)
             deduplicated.append((term, weight))
-    return deduplicated or [(topic.strip(), 1)]
+    if not deduplicated:
+        raise ValueError("topic contains only generic/stop words; add an object, constant, or ID")
+    return deduplicated[:MAX_TOPIC_TERMS]
 
 
 def match_score(text: str, terms: list[tuple[str, int]]) -> tuple[int, int]:
@@ -166,15 +176,17 @@ def match_score(text: str, terms: list[tuple[str, int]]) -> tuple[int, int]:
     return sum(weight for _, weight in matches), len(matches)
 
 
-def topic_hits(topic: str, max_matches: int) -> None:
+def topic_hits(
+    topic: str, max_matches: int, terms: list[tuple[str, int]]
+) -> None:
     section(f"Topic packet: {topic}")
-    terms = topic_terms(topic)
     has_identifier = any(weight >= 100 for _, weight in terms)
     required_matches = 1 if has_identifier or len(terms) == 1 else 2
     print("rank terms: " + ", ".join(term for term, _ in terms[:8]))
 
-    current_rows: list[tuple[int, int, str]] = []
-    for route_rank, relative in enumerate(SEARCH_ROOTS[:5]):
+    current_heap: list[tuple[int, int, str]] = []
+    current_count = 0
+    for route_rank, relative in enumerate(TOPIC_SEARCH_ROUTES):
         path = REPO / relative
         if not path.is_file():
             continue
@@ -187,15 +199,22 @@ def topic_hits(topic: str, max_matches: int) -> None:
                 for term, weight in terms
             )
             if count >= required_matches and (not has_identifier or identifier_hit):
-                current_rows.append((score, route_rank, f"{relative}:{line_number}:{line}"))
+                current_count += 1
+                row = f"{relative}:{line_number}:{line}"
+                item = (score, -route_rank, row)
+                if len(current_heap) < max_matches:
+                    heapq.heappush(current_heap, item)
+                elif item > current_heap[0]:
+                    heapq.heapreplace(current_heap, item)
+    current_rows = [(score, -neg_rank, row) for score, neg_rank, row in current_heap]
     current_rows.sort(key=lambda row: (-row[0], row[1], row[2]))
 
     print("Current-route matches (ranked):")
     if current_rows:
         for _, _, row in current_rows[:max_matches]:
             print(f"  {row}")
-        if len(current_rows) > max_matches:
-            print(f"  ... {len(current_rows) - max_matches} more qualifying route matches")
+        if current_count > len(current_rows):
+            print(f"  ... {current_count - len(current_rows)} more qualifying route matches")
     else:
         print("  (none; try exact constants, theorem IDs, quantifiers, or synonyms)")
 
@@ -204,7 +223,7 @@ def topic_hits(topic: str, max_matches: int) -> None:
     for term, weight in terms:
         files = run(
             "rg", "--files-with-matches", "--fixed-strings", "--ignore-case",
-            "--", term, *SEARCH_ROOTS[5:]
+            "--", term, *TOPIC_SEARCH_TREES
         )
         if files.returncode not in (0, 1):
             continue
@@ -246,11 +265,12 @@ def recent_guardrails(limit: int) -> None:
         print("(missing mistakes ledger)")
         return
     headings: list[str] = []
-    for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
-        if line.startswith("## MISTAKE-"):
-            headings.append(line[3:])
-            if len(headings) == limit:
-                break
+    with path.open(encoding="utf-8", errors="replace") as handle:
+        for line in handle:
+            if line.startswith("## MISTAKE-"):
+                headings.append(line[3:].rstrip())
+                if len(headings) == limit:
+                    break
     for heading in headings:
         print(f"- {heading}")
     print("Read ACTIVE-GUARDRAILS first; open the full entry only when relevant.")
@@ -275,16 +295,28 @@ def main() -> int:
     parser.add_argument(
         "--max-matches", type=int, default=12, help="Maximum rows/files per topic group (1-30)"
     )
+    parser.add_argument(
+        "--strict", action="store_true",
+        help="Exit nonzero when cached Git state is dirty/behind or a canonical route is missing",
+    )
     args = parser.parse_args()
     if not 1 <= args.recent <= 20 or not 1 <= args.max_matches <= 30:
         parser.error("--recent must be 1..20 and --max-matches must be 1..30")
 
+    try:
+        terms = topic_terms(args.topic)
+    except ValueError as exc:
+        parser.error(str(exc))
+
     print("MATH RESEARCH STARTUP PACKET (read-only, bounded)")
-    git_state(args.recent)
-    route_packet()
+    git_ok = git_state(args.recent)
+    routes_ok = route_packet()
     recent_guardrails(8)
-    topic_hits(args.topic, args.max_matches)
+    topic_hits(args.topic, args.max_matches, terms)
     identity_note()
+    if args.strict and not (git_ok and routes_ok):
+        print("\nSTRICT CHECK FAILED: resolve the actions above and rerun.")
+        return 2
     return 0
 
 

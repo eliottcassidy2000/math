@@ -3,10 +3,10 @@
 **Rolling state — refreshed 2026-07-21.** This file supersedes dated frontier
 snapshots as a statement of present status. A linked theorem is the proof
 source; this document records how the pieces compose and what remains.
-Status vocabulary: **PROVED** means an in-repo proof or exact reduction;
-**CITED** imports an external theorem; **FINITE-EXACT** is exhaustive only on
-its stated finite universe; **VERIFIED** is reproducible evidence;
-**CONDITIONAL**, **OPEN**, **REFUTED**, and **SUPERSEDED** have literal scope.
+Status vocabulary: **PROVED** means an in-repo proof; **CITED** a scoped external
+import; **FINITE-EXACT** an exhaustive stated finite universe; **VERIFIED**
+reproducible evidence rather than a general proof; **CONDITIONAL**, **OPEN**,
+**REFUTED**, and **SUPERSEDED** have their literal meanings.
 
 ## LRC(14)
 
@@ -227,7 +227,7 @@ supplier/seed and a lossless exit.
    exact pair covariances.
    [THM-2052](../01-canon/theorems/THM-2052-finite-height-forces-high-rank-bounded-relation-code.md)
    goes much further: every hypothetical counterexample already has eleven
-   independent bounded three-support relations. It either reaches the
+   independent bounded support-at-most-three relations. It either reaches the
    rank-twelve finite box or belongs to a finite two-anchor,
    one-projective-parameter star atlas. The exact HYP-8841 bank also shows why
    incidence is load-bearing: all eight controls, tight and strict alike,
@@ -256,44 +256,25 @@ supplier/seed and a lossless exit.
    phase or owner-labelled Euler endpoint while transporting back to the
    target, or emit a twelfth independent relation.
 
-The characteristic-7 result
-[THM-2043](../01-canon/theorems/THM-2043-period14-parity-hasse-jet-completeness.md),
-is **PROVED, but is a carrier no-go rather than LRC(14)**. It identifies
-`F_7[C_14]` with the two length-seven local rings at `+1` and `-1`. THM-2058's
-GW-based family keeps that packet, blockedness through `q=13`, threshold `14`,
-any prescribed finite lift depth, and the same one-tail hull-owner sector, yet
-has the uniform strict phase `47/113` with integer slack `13`. Thus raw jets,
-threshold, fan owner, and fixed height precision are jointly insufficient.
-Exact labelled phase packets or an adaptive resolved certificate are the
-honest positive carrier. The scales `{14,27,41}` are mandatory stress tests,
-not a proved sufficient or minimal atlas.
-[THM-2047](../01-canon/theorems/THM-2047-phase-height-toric-arrangement-for-lrc.md)
-proves the corresponding labelled phase-height carrier, its top-vertex and
-pair-sum mechanism, and exact paired deletion; deletion/localization forcing
-an AP core toward Wall A is still open.
+### Carrier boundaries and wildcards
 
-[THM-2050](../01-canon/theorems/THM-2050-period14-top-germs-do-not-determine-global-loneliness.md)
-strengthens the no-go: `AP13` and the lift replacing `12` by `26` have identical
-complete piecewise-linear germs near all six unit phases `a/14`, but maxima
-`1/14` and `1/12`. Any period-14-local proof needs a global first-exit,
-magnitude, or off-layer gluing sidecar. HYP-8841's termination tuple is only an
-open scaffold, not that theorem.
-
-Corrected HYP-8830 supplies a constructive exploratory lens for that target.
-On the periodized `(t,delta)` two-torus, opposite-sign characters in
-`X_S={(v,+1),(v,-1)}` have determinant `v+w`; the top-slope proof, not the raw
-number of strip intersections, selects the pair-sum ruler.
-But `G_delta` is a selected inequality slice, not an ordinary toric complement;
-owner, sign, selected side, height, and paired deletion are essential. No
-Orlik--Solomon, Mobius, or deletion theorem currently forces the AP core.
-
-Corrected HYP-8840 gives a different CT wildcard. Diagonal energy
-`CT[P^m Pbar^m]` sees only augmentation-zero affine relations and is not
-LRC-faithful. The mixed table `CT[P^r Pbar^s]`, or equivalently adjoining the
-observer speed zero, restores augmentation `r-s` and sees the full relation
-lattice. THM-730 is the off-diagonal `(r,s)=(2,1)` sector. Whether this sidecar
-helps the THM-2051 branch is open; GMC positivity does not transfer by merely
-swapping its Bessel-type weights for LRC sinc weights (MISTAKE-226).
+- [THM-2043](../01-canon/theorems/THM-2043-period14-parity-hasse-jet-completeness.md)
+  proves parity-Hasse completeness modulo 14. THM-2058's GW family then keeps
+  that packet, blockedness through `q=13`, threshold `14`, every prescribed
+  finite lift depth, and the same one-tail owner sector, yet has a uniform
+  strict phase `47/113` with integer slack `13`. Raw jets, threshold, owner,
+  and fixed height precision are jointly insufficient. Scales `{14,27,41}`
+  are mandatory controls, not a sufficient atlas.
+- [THM-2047](../01-canon/theorems/THM-2047-phase-height-toric-arrangement-for-lrc.md)
+  proves the corresponding labelled phase-height carrier, pair-sum top law,
+  Euler detector, and paired deletion. The selected inequality slice retains
+  owner, sign, side, and height; it is not an ordinary toric complement.
+- [THM-2050](../01-canon/theorems/THM-2050-period14-top-germs-do-not-determine-global-loneliness.md)
+  gives identical complete unit-phase germs with maxima `1/14` and `1/12`, so
+  a global first-exit, magnitude, or gluing sidecar is mandatory.
+- Corrected HYP-8840 retains mixed moments `CT[P^r Pbar^s]` because diagonal
+  energy sees only augmentation zero. This may help organize the rank code,
+  but a Bessel-to-sinc weight swap gives no GMC-to-LRC implication.
 
 ### Fresh perspective prompts
 
@@ -469,19 +450,14 @@ into tournament operation laws and LRC residue packets.
 
 - **Jacobian/Dixmier:**
   [THM-1300](../01-canon/theorems/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md)
-  exactly verifies an owner-supplied three-dimensional Keller map and its triple
-  collision; [THM-1315](../01-canon/theorems/THM-1315-keller-counterexample-surjective-etale-3to1-caustic.md)
-  analyzes its geometry. Public provenance remains unsettled in canon;
-  MISTAKE-205 forbids the old Alpöge–Mathew attribution. Keep exact verification,
-  public announcement, and discovery credit separate. The linked external
-  certificate independently replays the resulting `A_3` cotangent pullback; it
-  does not decide `DC(2)`.
+  verifies the three-dimensional Keller map and collision; THM-1315 analyzes
+  its geometry. Public provenance remains unsettled (MISTAKE-205), and the
+  exact `A_3` cotangent certificate does not decide `DC(2)`.
 - **Rank-two Poisson / planar and Weyl boundary:**
   [THM-2044](../01-canon/theorems/THM-2044-explicit-rank-two-poisson-counterexample-by-symplectic-suspension.md)
-  disproves the two-pair Poisson conjecture via a four-variable symplectic
-  suspension with an exact three-point fibre.
+  disproves the two-pair Poisson conjecture by symplectic suspension.
   [THM-2045](../01-canon/theorems/THM-2045-the-smooth-factorized-R-family-has-no-planar-jacobian-mate.md)
-  proves `R=x(a-b*x^r*q^s)` has no planar polynomial Jacobian mate, while
+  blocks planar mates for `R=x(a-b*x^r*q^s)`, while
   [THM-2046](../01-canon/theorems/THM-2046-first-order-cotangent-pullbacks-cannot-cross-the-DC2-wall.md)
   proves that this witness cannot descend through multiplication positions and
   first-order dual momenta. [HYP-8803](../05-knowledge/hypotheses/HYP-8803-A3-pullback-versus-A2-quantum-descent.md)

@@ -58,8 +58,10 @@ mistake.
     THM-2048 adds a quantized fiber-occupancy tax and the necessary integer
     inequality `6(vmu)^2+theta(1-theta)/7<=r_v^2/3`; it is a pruning
     certificate, not yet a universal proof.
-    THM-2051 proves every counterexample has a support-`2..5`, height-`2^20`
-    relation; it closes the dissociated branch, not the structured branch.
+    THM-2051's pair-exact form proves every counterexample has a genuine
+    support-`3..5`, height-`2^21` relation. THM-2052 strengthens this to eleven
+    independent bounded support-at-most-three relations and a finite atlas of rational planes. Neither
+    result classifies those planes or supplies pointed Euler transport.
 14. **Complete local phase coordinates need not be global LRC carriers.**
     THM-2043 proves parity-Hasse completeness modulo 14, then gives infinitely
     many rows sharing the AP's full packet and every fixed finite 7-adic height
@@ -141,19 +143,26 @@ mistake.
     exist, use a preorder, signed graph, hypergraph, packet, or another object.
 26. **Paley scope is prime and quadratic-residue specific.** THM-640 does not
     turn composite modulus 14 into a literal Paley tournament.
-## Integer sequences and provenance
+27. **Higher GLMY path-homology degrees are disputed.** The active
+    [convention court case](../02-court/active/CASE-path-homology-regularity-convention.md)
+    records incompatible
+    conventions/calculations in degree at least three, including `beta_4(T_7)`.
+    Treat only the convention-safe `beta_1/beta_2` results as canon until the
+    court case is resolved.
 
-27. **Support is not an indexed multiset.** MISTAKE-209 and THM-2000/2005.
+## Integer sequences, provenance, and cross-domain transfers
+
+28. **Support is not an indexed multiset.** MISTAKE-209 and THM-2000/2005.
     Repetitions contribute a collision tax; never compare reciprocal constants
     without saying which profile is used.
-28. **Density zero does not imply reciprocal convergence.** The actual boundary
+29. **Density zero does not imply reciprocal convergence.** The actual boundary
     is Abel–Dini/Bertrand and continues through iterated logarithms.
-29. **Finite prefixes and proxy supports are not all-`n` laws.** MISTAKE-219
+30. **Finite prefixes and proxy supports are not all-`n` laws.** MISTAKE-219
     repairs offsets, truncated constants, and support substitutions in the
     reciprocal atlas. Freeze the actual support and quantify the tail.
-30. **No OEIS match is not novelty.** THM-2010 has only short initial data and a
+31. **No OEIS match is not novelty.** THM-2010 has only short initial data and a
     search result; do not promote it to a proof that a sequence is new.
-31. **Separate verification from provenance.** MISTAKE-205 withdraws the old
+32. **Separate verification from provenance.** MISTAKE-205 withdraws the old
     Alpöge–Mathew attribution for THM-1300. State the exactly verified map and
     collision independently of uncertain discovery/publication history.
 31. **A shared Pascal array is not a geometric bridge.** MISTAKE-222. Exact
@@ -174,5 +183,4 @@ mistake.
     classifies Jelonek curves, bounds generic cover degree, or proves JC(2).
 
 ## Promotion checklist
-
 Before promotion audit types, quantifiers, boundaries, symmetries, quotient loss, and hostile controls. Corrections retain the witness, surviving core, repaired statement, lineage, and next question.

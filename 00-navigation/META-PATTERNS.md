@@ -63,7 +63,8 @@ is feasible and which top cell realizes an extremum.
 **Counterindication:** ordinary arrangement invariants are sufficient when the
 target predicate is actually invariant under all forgotten labels and sides.
 **Evidence:** MISTAKE-224's repair of the Fourier-lattice/toric-complement
-conflation and the exact phase-height recovery of THM-1002's pair-sum ruler.
+conflation and the exact phase-height recovery of
+[THM-1002's pair-sum ruler](../01-canon/theorems/THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case.md).
 
 ## Find the hidden second coordinate in a nearly true theorem
 

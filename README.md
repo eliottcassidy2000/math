@@ -45,19 +45,24 @@ As of 2026-07-21:
 - **LRC(14) is OPEN.** The conjecture is known through 13 total runners; the
   repo's remaining work is structural, not the once-claimed uniform `q <= 25`
   shortcut, which is false. THM-2051 now closes the relation-dissociated
-  branch: every hypothetical counterexample has a 2--5-term integer relation
-  of coefficient height at most `2^20`; classifying that structured branch is
-  the live prize.
+  branch after paying pairs exactly: every hypothetical counterexample has a
+  genuine 3--5-term relation of height at most `2^21`. THM-2052 already forces
+  eleven independent bounded support-at-most-three relations and a rational
+  plane; pointed
+  rank-or-Euler transport is the live prize.
 - **NC2 and GMC(2) are PROVED in repo canon** by THM-2022's lowest-balanced-face
   Frobenius argument. The Lean work is partial and sorry-free at its completed
-  kernel nodes, but algebraic descent, DvdK/Kummer layer assembly, root wiring,
-  and the final `nc2 : NC2` theorem remain.
+  kernel nodes—including complete face-sum Frobenius/noncancellation—but
+  algebraic descent, DvdK/Kummer survival and layer assembly, root wiring, and
+  the final `nc2 : NC2` theorem remain.
 - **GMC is false from dimension 3 onward.** Dimension two is the sharp surviving
   case handled by THM-2022; dimensions one and two must not be conflated with
   the higher-dimensional counterexamples.
 - **The two-pair Poisson conjecture is false, while DC(2) and planar JC remain
   open.** THM-2044 is an explicit symplectic suspension; THM-2045 obstructs
   only its factorized first-coordinate family from de-stabilizing to the plane.
+  THM-2049 makes the local correction complex acyclic, leaving polynomial
+  termination and the coupled `D` column rather than a grade-six obstruction.
 - **Tournament work has moved from isolated invariants to operations and
   decomposition:** order-join, strong cores, signed Rédei data, local
   subtournament censuses, and invariant-independence witnesses.

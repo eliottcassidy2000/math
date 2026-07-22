@@ -27,10 +27,13 @@ uncommitted files may belong to another live session.
 ## Read current work
 
 After fetching, generate a bounded packet and inspect the newest changes that
-touch the current object rather than treating concurrent work as noise:
+touch the current object rather than treating concurrent work as noise. Use
+`--strict` when beginning from a supposedly clean/current worktree; it fails on
+cached behindness, dirt, or a missing canonical route:
 
 ```bash
-python3 agents/start_session.py --topic "<target statement or object>"
+git fetch origin
+python3 agents/start_session.py --strict --topic "<target statement or object>"
 python3 agents/processor.py --status --peek --limit 8
 ```
 

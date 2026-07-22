@@ -108,8 +108,10 @@ session's work with `git add -A`. See `00-navigation/CONCURRENT-SESSIONS.md` and
 
 ## Mandatory close-out
 
-Before the final response: inspect `git status --short --branch`; stage only
-intentional changes; commit; push to the upstream (or `origin/main` for a
-session worktree); fetch; and verify `HEAD` is not ahead of its push target.
-Use `agents/finish_session.py` only in an isolated worktree. If push fails, the
-session is not complete: leave a local commit and report the exact blocker.
+Before the final response, inspect `git status --short --branch`. If the session
+made intentional changes, stage only those paths, commit, and push to the
+upstream (or `origin/main` for a session worktree). In every session, fetch and
+verify `HEAD` is not ahead of its push target; a no-change session needs no
+empty commit. Use `agents/finish_session.py` only in an isolated worktree. If a
+required push fails, the session is not complete: leave a local commit and
+report the exact blocker.

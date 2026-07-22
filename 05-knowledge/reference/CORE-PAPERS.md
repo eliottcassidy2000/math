@@ -409,8 +409,8 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
   [THM-2010 sequence atlas](../../01-canon/theorems/THM-2010-new-tournament-invariant-sequences.md).
 - **Does not prove:** the repo's `E det(I+S)=involutions` interpretation,
   adjacency-spectrum counts, or novelty of any four-term candidate sequence.
-  **Attribution correction:** THM-2010's “Breen--Stover--Yates” label for
-  arXiv:2406.09697 is stale; these five authors are the primary-record authors.
+  THM-2010 now uses these five primary-record authors; older historical logs
+  may retain the superseded attribution.
 
 ## Arrangements and tournament games
 
@@ -437,8 +437,9 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
   deletion--restriction and positivity, and obtains characteristic and
   Poincare polynomials of a toric arrangement as specializations.
 - **Repo consumer:** corrected HYP-8830 and MISTAKE-224.
-- **Does not prove:** that the cutoff statistic `N_R`, THM-1820's
-  sinc-weighted Fourier series, or an LRCMod count is an arithmetic Tutte or
+- **Does not prove:** that the cutoff statistic `N_R`,
+  [THM-1820's sinc-weighted Fourier series](../../01-canon/theorems/THM-1820-lrc-is-a-moment-nullcone-problem-relation-lattice-pairing.md),
+  or an LRCMod count is an arithmetic Tutte or
   Mobius specialization. A finite character list and its actual layers must be
   stated first.
 

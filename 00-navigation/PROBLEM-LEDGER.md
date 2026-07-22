@@ -14,10 +14,10 @@ the obstruction that still matters; the long inventory below is provenance.
 
 | Area | Current truth | Highest-value next move |
 |---|---|---|
-| LRC(14) | Open. `q<=25` is false; exact search is safe through height 55; THM-2051 forces every counterexample into a bounded support-`2..5` relation branch. | Classify that small-relation branch using the AP supplier, labelled wall word, or quantized peel tax; also pursue six-comb transport/effective spectrum. |
+| LRC(14) | Open. `q<=25` is false; exact search is safe through height 55; THM-2051 forces a genuine bounded higher relation, and THM-2052 forces eleven independent bounded support-at-most-three relations and a rational plane. | Prove owner-labelled Euler survival or an active twelfth relation, with pointed transport back to the target row; also pursue six-comb transport/effective spectrum. |
 | NC2 / GMC | NC2 and unrestricted GMC(2) are proved by THM-2022. Several Lean nodes are kernel-pure, but `nc2 : NC2` and the descent/DvdK/Kummer assembly are absent. GMC is false in every dimension at least three. | Root-wire the nodes and formalize the missing descent, seed interface, and residue-layer wrapper; mine the failed higher-dimensional analogue. |
-| Jacobian / Dixmier / Poisson | The two-pair Poisson conjecture is false. DC(2) and planar JC remain open; filtered first-order descent is obstructed. | Prove the six-weight correction cascade cannot terminate, or escape it using higher tangent order/nonfiltered descent. |
-| Tournaments | Join laws and strong-core localization are proved; the invariant lattice is exact only through `n<=6`. Positive game equilibria need both skew symmetry and mod-2 support parity. | Attack `H>=disc`, classify operation laws, and track positive-kernel support rather than conflating games, flows, and topology. |
+| Jacobian / Dixmier / Poisson | The two-pair Poisson conjecture is false. DC(2) and planar JC remain open; filtered first-order descent is obstructed, while THM-2049 proves the associated-graded correction complex acyclic. | Decide finite polynomial termination and the coupled `D` relations, or prove boundary poles prevent a polynomial lift. |
+| Tournaments | Join laws and strong-core localization are proved; the invariant lattice is exact only through `n<=6`. Positive game equilibria need skew symmetry plus mod-2 support parity. GLMY path homology in degree at least three is under an active convention dispute. | Attack `H>=disc`, classify operation laws, resolve the path-homology convention case, and track positive-kernel support rather than conflating games, flows, and topology. |
 | Reciprocal sequences | Support and indexed-multiplicity Dirichlet profiles are separated by a collision tax; Abel--Stieltjes/Dini/Bertrand boundary tests are available. | Build an operation calculus for support unions/products and connect collision structure to LRC denominator spectra. |
 | Arrangement carrier | THM-2047 proves the labelled phase-height carrier, top wedge, Euler detector, Fejer formula, and paired deletion; THM-2050 proves period-14 local germs are globally blind. | Find a deletion/localization invariant preserving owner, side, height, and global termination that can force the AP-core branch. |
 | Cross-domain wildcard | Many analogies survive only after naming the lost coordinate. MISTAKE-226 repairs diagonal energy by retaining mixed-moment augmentation or observer zero. | Generate alternate objects/quotients, then demand a two-way dictionary, hostile control, and an explicit sidecar before promoting a bridge. |
@@ -208,16 +208,19 @@ all heights (THM-1289, published), δ ineffective.
 - **{7,21} forbidden H-spectrum** [DEEP, repo-signature] — the only unachievable OCF
   values; H=7 (THM-029) + H=21 (THM-079) proved; parallels the open LRC {12,24};
   E8/Golay/octonion home. (OPEN-Q-028.)
-- **GLMY path homology of tournaments** [DEEP] — β₂=0 all tournaments (THM-108/109/285);
-  β₁∈{0,1} by transitive-triple rank; β₄=6 for Paley T₇; the seesaw refuted at n=8.
-  (OPEN-Q-024.)
+- **GLMY path homology of tournaments** [DEEP / HIGHER DEGREES DISPUTED] —
+  `β₁∈{0,1}` and `β₂=0` are the convention-safe core. Claims in degree at
+  least three, including `β₄(T₇)=6` and the n=8 seesaw, are not current canon;
+  see the [active convention case](../02-court/active/CASE-path-homology-regularity-convention.md).
 - **Tournament reconstruction conjecture** [MODERATE→DEEP] — the (OCF, det) key; first
   OCF-cospectral twin at n=6; degeneracy metrics. Ranked #2 in the repo self-audit.
-- **Hadwiger's conjecture on the metagraph** [MODERATE] — G_7/Z_2 (272 vtx) has
-  ω=4<χ=6; does it have a K_6 minor? A clean checkable question on the key object.
+- **Hadwiger's conjecture on the metagraph** [RESOLVED at n=7] — `G_7/Z_2`
+  has a certified `K_6` minor and Hadwiger number at least `12`; the live
+  question is growth of `h(G_n/Z_2)`, with the n=8 lower bound already `22`.
 - **Caccetta–Häggkvist** [MODERATE] — the return-residue reframe.
-- **Real-rootedness of independence polynomials (Chudnovsky–Seymour)** [MODERATE] —
-  exhaustive n=3..6 (all 56 classes), product formula.
+- **Real-rootedness of tournament independence polynomials** [CLASSIFIED AT
+  THE FIRST FAILURE] — proved for `n<=8`, refuted from `n=9` by THM-025; the
+  open problem is characterization of the real-rooted subclass.
 - **Erdős–Selfridge / odd covering systems** [MODERATE] — covering-systems ↔ danger-arc
   correspondence (macmini-S97).
 - **Bernoulli 1806 fixed point / von Staudt–Clausen** [MODERATE] — 6→42→1806→1806.

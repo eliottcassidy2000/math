@@ -10,7 +10,11 @@ status: >
   to a pointwise lonely time. The characteristic-3 period-14 propagation lemma
   remains open. THM-2043 now settles the raw characteristic-7 question:
   parity-Hasse jets are complete local coordinates, but even the full packet
-  plus q-threshold is globally magnitude-blind.
+  plus q-threshold is globally magnitude-blind. THM-2051 has since proved the
+  Fejer--BV dissociated exit, and THM-2052 reduces every hypothetical
+  counterexample to a rank-eleven bounded relation code in a rational plane.
+  The live transfer target is owner-labelled rank-or-Euler termination, not a
+  second familywise dissociation theorem.
 source: codex-2026-07-21-NC2-transfer
 related:
   - THM-2022
@@ -19,11 +23,13 @@ related:
   - THM-2000
   - THM-1605
   - THM-2033
-  - THM-1820
+  - THM-1820-lrc-is-a-moment-nullcone-problem-relation-lattice-pairing
   - THM-1830
   - THM-2042
   - THM-404
   - THM-671
+  - THM-2051
+  - THM-2052
   - THM-873
   - THM-884
   - THM-346
@@ -37,6 +43,8 @@ related:
   - HYP-3036
   - HYP-3402
   - HYP-8801
+  - HYP-8841
+  - HYP-8846
   - OPEN-Q-108
 artifacts:
   - 04-computation/lrc_frobenius_exact_period_projector_codex_20260721.py
@@ -398,28 +406,28 @@ nonunit/non-etale group-algebra behavior, not field ramification.
 The leverage order after this audit is:
 
 ```text
-1. THM-671 resolved-modulus/B5 supply              (already has the exit)
-2. familywise Fejer/Toeplitz packet theorem         (computationally universal)
-3. characteristic-3 endpoint-labelled propagation  (repairs the orbit)
-4. adaptive {14,27,41,...} resolved-phase sheaf     (THM-2043 gives q=41 exit)
-5. LEM-033 conductor-grade + owner-current glue     (exact selector, seed open)
-6. characteristic-7 Hasse local coordinates         (complete locally only)
-7. raw Ramanujan energy                              (diagnostic only).      (13)
+1. active-owner Euler survival or rank-12 gain       (THM-2052/HYP-8841)
+2. pointed transport on each rational plane          (HYP-8846)
+3. THM-671 resolved-modulus/B5 supply                 (already has the exit)
+4. characteristic-3 endpoint-labelled propagation    (repairs the orbit)
+5. adaptive {14,27,41,...} resolved-phase sheaf       (global sidecar)
+6. LEM-033 conductor-grade + owner-current glue       (selector, seed open)
+7. raw Ramanujan energy / characteristic-7 jets       (diagnostic/local). (13)
 ```
 
-The first two remain the shortest logical routes to LRC(14). Characteristic
-three remains a propagation target. Characteristic seven now supplies a
-proved local chart and a proved no-go; the live content is the adaptive
-cross-denominator gluing in item 4, not additional raw jet depth.
+THM-2051 has closed the former familywise Fejer/Toeplitz dissociation item:
+absence of a genuine bounded higher relation already gives a strict interval.
+THM-2052 starts the surviving relation code at rank eleven; the shortest gap
+is now one active independent row or an owner-labelled Euler endpoint. An
+unpointed safe direction in the resulting plane has the wrong quantifier.
+Characteristic three remains a propagation target; characteristic seven is a
+proved local chart and no-go, not a reason to add more raw jet depth.
 
-The incoming HYP-8815 higher-order-autocorrelation search belongs under item
-2 only as a possible *supplier* of a phase. MISTAKE-221 corrects its bounded
-scan to `L_Q(S)<=M(S)`, proves the pair-sum exact engine, and withdraws the
-claimed iff/necessity language. The corrected finite bank has fifteen exact
-safe values but no global consequence; THM-731's discrepancy direction also
-opposes the original heuristic slogan. THM-2043 further requires any supplied
-phase to leave the scalar correlation layer as an owner-labelled resolved
-slack.
+HYP-8815 remains diagnostic only. MISTAKE-221 corrects its bounded scan to
+`L_Q(S)<=M(S)`, proves the pair-sum exact engine, and withdraws its iff claims.
+Any useful correlation row must now be independent of the existing relation
+code and incident to the active peel/endpoint owners; a scalar score or another
+copy of `1+2=3` gives no descent.
 
 ## 9. Tournament Analysis and assumption challenge
 

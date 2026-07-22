@@ -385,20 +385,25 @@ Older session prose remains discoverable in git history, reflections,
 hypothesis files, and frozen outputs. Entries here record only the reusable
 survivor, correction, and next question.
 
-## codex-2026-07-21 -- structured LRC branch and startup consolidation
+## codex-2026-07-21 -- rank-or-Euler LRC frontier and startup consolidation
 
-- THM-2051 is promoted to PROVED: Fejer--BV approximation and an exact centered
-  BONF5 budget show every hypothetical LRC(14) counterexample has a relation
-  of support `2..5` and coefficient height at most `2^20`.
-- THM-2047 now consolidates the exact phase-height carrier, local top wedge,
-  Euler detector, Fejer relation formula, embedded-lattice reconstruction, and
-  paired deletion. THM-2048 adds the quantized peel tax; THM-2050 proves full
-  period-14 local germs can be globally blind.
-- The bounded startup docs, active guardrails, literature map, portfolio table,
-  current hypothesis digest, and validation script were rebuilt so historical
-  logs/reflections route ideas without overriding canon.
-- Live LRC target: classify the new bounded small-relation branch using owner-
-  labelled walls, fiber occupancy, AP extraction, or global termination.
+- THM-2051's pair-exact Fejer--BV theorem forces a genuine support-`3..5`
+  relation of height at most `2^21` on every hard row. THM-2052 then forces
+  eleven independent bounded support-at-most-three relations, placing every hypothetical counterexample
+  in a finite atlas of rational planes. Rank twelve is a finite maximal-minor
+  terminal; classification and pointed transport remain open.
+- THM-2047 supplies the phase-height/Euler/deletion carrier, THM-2048 the
+  quantized peel tax, THM-2050 the global-blindness control, and HYP-8845 the
+  free mirror involution on covering rows. The live theorem is owner-labelled
+  Euler survival or an active twelfth relation; HYP-8846 records why an
+  unpointed safe direction in the plane has the wrong quantifier.
+- Concurrent S95 Lean work added the complete face-sum Frobenius identity and
+  noncancellation corollary; DvdK/descent/Kummer assembly and `nc2 : NC2`
+  remain. S213 unified tournament chirality, toothpick parity, and LRC mirror
+  parity at the level of the general involution-count law only.
+- The bounded startup docs, guardrails, literature map, proof map, technique
+  overlay, current digest, and validators were rebuilt so historical material
+  remains searchable without overriding current canon.
 
 ## boxeph-2026-07-21-S211 -- CT bridge, scope-repaired
 

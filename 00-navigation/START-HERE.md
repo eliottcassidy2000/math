@@ -14,8 +14,9 @@ the exact current commit. Status labels and proof links live in
 3. **Major new closure:** NC2, hence unrestricted GMC(2), is **PROVED in repo
    canon** by THM-2022. Its Lean formalization is partial: sorry-free,
    kernel-pure nodes cover Wick expansion, face arithmetic, multinomial Lucas,
-   Frobenius collapse, and conditional `NC2=>GMC(2)`; algebraic descent, DvdK,
-   Kummer/layer assembly, and `nc2 : NC2` remain.
+   complete face-sum Frobenius/noncancellation, and conditional
+   `NC2=>GMC(2)`; algebraic descent, DvdK, Kummer survival/layer assembly, and
+   `nc2 : NC2` remain.
 4. **Truth discipline:** correction/repaired canon outranks canon, which
    outranks exact computation, hypothesis, synthesis, and historical prose.
 5. **Research posture:** use an Anchor / Niche / Wildcard portfolio. Recover
@@ -83,10 +84,13 @@ are searchable history—not mandatory warm-up.
 13. **The peel obstruction is quantized.** THM-2048 decomposes discrepancy into
     the old `6mu^2` floor plus an exact integer fiber-occupancy variance tax. It
     strictly improves the uniform tail test but is not a universal proof.
-14. **Every counterexample is small-relation structured.** THM-2051 proves
-    that a hypothetical LRC(14) counterexample has an exact relation of support
-    `2..5` with all nonzero coefficients at most `2^20`. The dissociated branch
-    is closed; classification of this structured branch is now a priority.
+14. **Every counterexample lies on a bounded rational plane.** THM-2051 pays
+    pairs exactly and forces a genuine support-`3..5` relation of height at
+    most `2^21`. THM-2052 then forces eleven independent bounded
+    support-at-most-three relations, so
+    every counterexample lies in a finite atlas of rational subspaces of
+    dimension at most two. The remaining jump is pointed Euler survival or a
+    twelfth independent relation, not mere circuit detection.
 
 ## Where to go by topic
 

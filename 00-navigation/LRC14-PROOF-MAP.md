@@ -17,41 +17,42 @@ dated two-route dichotomy below; begin with the proved structured kernel.
 
 ```text
 hypothetical LRC(14) counterexample
-  |-- primitive Cover14 kernel with M<1/14
-  |-- non-AP maximum-deletion core and every-peel obstructions
-  `-- exact relation sum k_i v_i=0
-        support 2..5, 0<|k_i|<=2^20                 [THM-2051]
-          |
-          |-- classify/extend an AP-like deletion core
-          |     `-- far-element exit                         [THM-1017]
-          |-- couple circuit to labelled wall/deletion data [THM-2047]
-          |     `-- force chi(G_1/14)>0 or a global exit
-          |-- combine circuit with the quantized peel tax    [THM-2048]
-          |     `-- eliminate coefficient/support strata
-          `-- retain augmentation in the mixed CT table      [HYP-8840]
-                `-- discover a faithful structured invariant
+  |-- primitive positive Cover14 kernel with M<1/14
+  |-- non-AP maximum-deletion core; every peel passes THM-2048
+  |-- genuine support-3..5 relation, height <=2^21          [THM-2051]
+  `-- rank-11 bounded support-at-most-3 code W; rational plane atlas [THM-2052]
+        |
+        |-- owner-labelled endpoint survives: P_w>=0
+        |     `-- weak Euler point or strict interval        [HYP-8841]
+        |-- active bounded relation lies outside W
+        |     `-- rank 12 -> finite maximal-minor box        [THM-2052]
+        `-- transport a certificate from another plane direction
+              `-- preserve target phase/owner labels        [HYP-8846, OPEN]
 ```
 
-The first three lines are proved necessary conditions in their cited scopes;
-the arrows below the bounded relation are research programs, not implications
-already in canon. A small relation is not by itself an AP, a safe phase, or a
-finite practical classification.
+The four input lines are proved necessary conditions in their cited scopes.
+The three terminal arrows are the exact research target, not a theorem already
+in canon. A bounded relation is not by itself an AP, an independent rank gain,
+a safe phase, or a practical finite classification.
 
 ### Live interfaces
 
 | Interface | Exact input already available | Missing theorem |
 |---|---|---|
+| Rank code | THM-2052 supplies eleven independent bounded support-at-most-three relations and a two-dimensional rational atlas | Produce one active relation outside the existing code; rank twelve gives a finite box. |
+| Euler endpoint | THM-2047 retains owner, sign, side, height, and paired deletion; HYP-2108 gives the exact `P_w` functional | Prove `P_w>=0` on the structured residual, yielding a weak endpoint or strict interval. |
+| Pointed plane | THM-2052 supplies the plane; HYP-4346 gives an unpointed escape in a related rank-two setting | Transport a certificate to the specified row without losing phase or owner labels. |
 | AP-core supplier | THM-1017 proves `AP core -> far element -> LRC(14)` | Extract the required core from every compact structured residual. |
-| Circuit / wall word | THM-2051 supplies a bounded circuit; THM-2047 retains owner, sign, side, height, and paired deletion | Turn circuit overlap or deletion--restriction into positive Euler characteristic or a strict exit. |
-| Circuit / peel tax | THM-2048 gives an integer fiber-variance obstruction for every peel | Show each non-AP circuit type violates some peel or descends to a classified core. |
 | Global phase transport | THM-2050 proves all period-14 local germs can be identical while maxima differ | Supply first-exit magnitude, off-layer gluing, or another genuinely global termination coordinate. |
-| Finite shell | THM-763 gives finite height; THM-1290 is exhaustive through maximum speed 55 | Make the isolation gap effective or use the circuit to obtain a feasible bound. |
+| Finite shell | THM-763 bounds a primitive counterexample by `sum v_i<=91^12`; THM-1290 is exhaustive through maximum speed 55 | Turn the rational-plane atlas into a feasible pointed decision. |
 | Six-comb branch | Local return and tooth-word machinery is sharply saturated | Complete endpoint/child transport or find a phase-located turn tax. |
 
 ### How to represent the new structured branch
 
-Treat a primitive relation `(A,k)` as a labelled arithmetic circuit, not just
-as one scalar equation. Keep:
+Treat a primitive relation row `(A,k)` as a height-filtered signed hyperedge,
+not just one scalar equation. It is not an ordinary linear-matroid circuit:
+thirteen scalar speeds have rational rank one, so ordinary circuits are pairs.
+Keep:
 
 ```text
 support and coefficient signs
@@ -59,14 +60,21 @@ primitive coefficient vector and height
 augmentation sum_i k_i
 owners and phases of the corresponding walls
 behavior under each speed deletion
-overlap data between simultaneous minimal circuits
-which peel inequality or exit obligation the circuit activates.
+overlap data between simultaneous minimal relation rows
+rank and row space of the harvested relation code W
+whether the row lies outside W
+which peel inequality or exit obligation the row activates.
 ```
 
-The augmentation is essential: diagonal energies
+First freeze the standard positive-speed gauge. For signed relative speeds set
+`a_i=|v_i|` and transform coefficients by
+`ell_i=sgn(v_i)k_i`; support and height are preserved. If two absolute speeds
+coincide, the runner count drops and a height-one pair relation is already
+present. Independent sign flips change augmentation, so do not change gauge
+later. In that fixed gauge, augmentation is essential: diagonal energies
 `CT[P^m Pbar^m]` see only augmentation zero. The mixed table
 `CT[P^r Pbar^s]` restores the missing grade, but no GMC-to-LRC implication is
-known. For Tournament Analysis, first try circuits, deletion obligations,
+known. For Tournament Analysis, first try relation rows, deletion obligations,
 wall-crossing events, or safe components as vertices. Use a directed relation
 only when a real implication, first-exit order, or owner-transfer order exists;
 retain ties and hyperedges otherwise.
@@ -84,18 +92,19 @@ retain ties and hyperedges otherwise.
 
 ### First experiments worth running
 
-1. Normalize primitive support-`2..5` relations by sign, support order,
-   observer-preserving dilation, and deletion behavior; do not quotient by
-   translating all speeds unless observer zero is carried.
-2. Cross-tab circuit types against THM-2048 peel violations and THM-1002
-   pair-sum maximizing rulers on exact hostile families.
-3. Build a circuit-overlap hypergraph with owner/sign/augmentation sidecars;
-   test whether minimal counterexample assumptions force a leaf, a short
-   directed implication cycle, or a deletion-stable core.
-4. Search for a familywise Fejer/Toeplitz certificate only after the circuit
-   family has been frozen; the whole-product proof supplies a selector, not
-   the missing pointwise exit.
-5. Revisit niche operations—observer adjunction, deletion, dual circuits,
+1. Put the eleven-dimensional relation code in exact row-echelon form and
+   record, for every peel/endpoint-owner set, which bounded rows meet it and
+   whether any such row lies outside the current code.
+2. Compute the exact endpoint functional
+   `P_w=max_i(||w m_i||+w l_i/2-1/14)` together with THM-2048 taxes and
+   THM-1002 pair-sum margins on every hostile family.
+3. Build an owner-labelled relation-overlap hypergraph. Test directed edges
+   only when deletion, first exit, or owner transfer gives a real implication;
+   otherwise retain the signed hypergraph and its linear rank.
+4. Parameterize each THM-2052 rational plane and test whether a certificate is
+   locally constant between wall crossings; the proof obligation is pointed
+   transport to the original row, not existence somewhere in the plane.
+5. Revisit niche operations—observer adjunction, deletion, dual relations,
    residue reduction, and endpoint localization—and record why each preserves
    or destroys LRC.
 
