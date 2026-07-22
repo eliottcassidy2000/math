@@ -188,6 +188,7 @@ with deck capacity retained.
 ## 3. Specialization to the live odd guard
 
 Equation (2) and oddness make `d` odd. Equation (3) gives `7 not|d`.
+It also gives `7 not|s`.
 Therefore (16) sharpens to
 
 ```text
@@ -201,6 +202,30 @@ Since `r,s<=57`, the marked commensurate pair is absolutely bounded:
 h<=57D_*=14396844825,
 q_*<=57D_*=14396844825.                                (18)
 ```
+
+The surviving marked-pair ledger is already small enough to name exactly.
+The number `D_*` has
+
+```text
+tau(D_*)=(4+1)(2+1)2^4=240
+```
+
+positive divisors. There are exactly `1165` coprime pairs
+
+```text
+1<=r,s<=57,       s odd,       7 not|s,
+(r,s)!=(1,1).                                           (18a)
+```
+
+Thus only
+
+```text
+240*1165=279600                                         (18b)
+```
+
+triples `(r,s,d)` survive before the other terminal labels are attached.
+This count keeps whether `7|r`, hence whether the marked speed `q_*` belongs
+to THM-2094's remaining one-to-three seven-carrier packet.
 
 THM-2094 independently reduces the live terminal residue profile to one,
 two, or three speeds divisible by seven. The p-adic proof above needs only
@@ -242,7 +267,7 @@ scale. There are only finitely many triples
 
 ```text
 (r,s,d),      r,s<=57, gcd(r,s)=1, s,d odd,
-d|D_*,        (r,s)!=(1,1).                            (22)
+7 not|s,      d|D_*,        (r,s)!=(1,1).              (22)
 ```
 
 The remaining six terminal speeds can still be unbounded. A pair relation

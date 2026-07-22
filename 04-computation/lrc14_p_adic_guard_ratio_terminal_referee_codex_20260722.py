@@ -5,7 +5,7 @@ from __future__ import annotations
 
 from fractions import Fraction as F
 from itertools import combinations_with_replacement
-from math import prod
+from math import gcd, prod
 
 
 def require(condition: bool, message: str) -> None:
@@ -104,6 +104,18 @@ def main() -> None:
     require(live_scale == 252576225, "live scale")
     require(live_pair_bound == 14396844825, "live pair bound")
 
+    divisor_count = (4 + 1) * (2 + 1) * 2**4
+    ratio_pairs = [
+        (r, s)
+        for s in range(1, 58, 2)
+        if s % 7 != 0
+        for r in range(1, 58)
+        if gcd(r, s) == 1 and (r, s) != (1, 1)
+    ]
+    require(divisor_count == 240, "live divisor count")
+    require(len(ratio_pairs) == 1165, "live ratio count")
+    require(divisor_count * len(ratio_pairs) == 279600, "marked pair ledger")
+
     diagonal_sum = F(1, 7) + 4 * F(1, 35) + F(1, 42) + F(2, 77)
     diagonal_margin = diagonal_sum - F(2, 7)
     require(diagonal_sum == F(709, 2310), "diagonal overlap sum")
@@ -117,6 +129,9 @@ def main() -> None:
     print(f"general_scale={general_scale}")
     print(f"live_scale={live_scale}")
     print(f"live_pair_bound={live_pair_bound}")
+    print(f"live_scale_divisors={divisor_count}")
+    print(f"live_ratio_pairs={len(ratio_pairs)}")
+    print(f"marked_pair_ledger={divisor_count * len(ratio_pairs)}")
     print(f"diagonal_margin={diagonal_margin}")
     print("PASS")
 
