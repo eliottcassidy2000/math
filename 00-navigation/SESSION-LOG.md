@@ -1,3 +1,36 @@
+## kind-pasteur-2026-07-21-S128c146 -- GMC(2) orthogonality CORE extracted as a standalone Mathlib-PR-ready lemma (ThreeTermRecCoprime.lean)
+
+**Owner directive:** get the GMC(2) formalization complete + Mathlib-PR-ready; be creative bypassing
+hard pieces; poke for ideas.
+
+- **STATE (honest):** the full GMC2NC2Capstone is sorry-free but CONDITIONAL on two premises --
+  `DvdK1` (external DvdK analytic input) + `HeightWitnessSupplier`. `DvdK1` is being actively
+  completed by death-star/boxeph/codex via THM-2067/THM-1550/Henselian (two routes, no sorries in
+  the spine). That whole artifact is NOT a Mathlib PR: research-grade, repo-specific, gated on
+  unformalized analysis. So I did not fight the analytic endpoint (well-covered).
+- **CREATIVE BYPASS -- extract the piece that IS Mathlib-worthy.** New file `ThreeTermRecCoprime.lean`
+  (builds green, 8475 jobs; axioms `[propext, Classical.choice, Quot.sound]`): for a monic three-term
+  recurrence `p(n+2)=(X-C a_{n+1})·p(n+1)-C b_{n+1}·p n` over ANY `CommRing`, if every `b_{n+1}` is a
+  UNIT then **`IsCoprime (p n) (p (n+1))`** (`isCoprime_succ`). This is the estimate-free "consecutive
+  orthogonal polynomials are coprime" (Favard; Hermite/Legendre/Laguerre/Chebyshev uniform) -- the
+  replacement for the REFUTED domination step (THM-1585 -> THM-1660). Plus field version, `noCommonRoot`
+  `[Nontrivial R]`, `monic` + `natDegree = n`, probabilists' Hermite instance.
+- **STRENGTHENS prior art:** the repo's `GMC2HermiteNoCommonRoot.lean` (functions `ℝ→ℝ`) and
+  `ThreeTermRecurrence.lean` (`no_common_root_poly [IsDomain R]`) only give NO-COMMON-ROOT; this gives
+  `IsCoprime` (algebra-level, stronger) over general `CommRing` (drops `IsDomain`) + monic/degree.
+  Mathlib GAP confirmed: has `Polynomial.hermite`/`Chebyshev` but NO general three-term-recurrence
+  coprimality. Proof = one Bézout update closed by `linear_combination` (no analysis).
+- **IDEAS worth reusing (reflection):** `IsCoprime` beats "no common root" for Mathlib-readiness;
+  bypass the coprime-API scavenger hunt with an EXPLICIT Bézout witness; `Ring.inverse` +
+  `Ring.inverse_mul_cancel` give the unit inverse over a general ring; two bugs -- `noCommonRoot`
+  needs `[Nontrivial R]`, and the recurrence consumes `b(n+1)` so Hermite is `b k = k` (giving
+  `He₂=X²-1`), not `b k=k+1`.
+- **Deliverable:** `ThreeTermRecCoprime.lean` + `ThreeTermRecCoprime-MATHLIB-PR-NOTES.md` (statement,
+  gap justification, provenance, pre-submission checklist: narrow imports via `shake`, optional
+  Legendre/Chebyshev instances). Full GMC(2) is one analytic theorem (`DvdK1`) from unconditional --
+  correctly owned by the others, not blocked by anything here. Reflection
+  gmc2-orthogonality-core-is-mathlib-pr-ready-kps-S128c146. HYP-8970. Complementary to HYP-8965/8951/8960.
+
 ## death-star-2026-07-22-S112 -- GMC2 formalization: the Vieta valuation-0 coeff-ratio input for the THM-2067 wrapper (kernel-pure) + critical-path coordination
 
 **Owner directive:** keep improving the GMC2 formalization, working substantial pieces.
