@@ -24,6 +24,9 @@ the small-root product equals `c·t`, Galois-fixed.  That is the sole remaining 
 -/
 
 open scoped BigOperators
+open Polynomial
+
+set_option maxHeartbeats 1000000
 
 namespace GMC2Thm2067Reduced
 
@@ -46,11 +49,11 @@ theorem thm2067_reduced_to_thm1550
       σ • (∏ β ∈ S, (β : (Phi R M).SplittingField)) = ∏ β ∈ S, (β : (Phi R M).SplittingField))
     (hS : (∏ β ∈ S, (β : (Phi R M).SplittingField))
         = algebraMap (RatFunc F) (Phi R M).SplittingField (RatFunc.C c * RatFunc.X)) :
-    False :=
-  GMC2Thm2067Concrete.thm2067_contradiction_concrete (Phi R M)
+    False := by
+  refine GMC2Thm2067Concrete.thm2067_contradiction_concrete (Phi R M)
     (GMC2DvdKAssembly.irreducible_Phi R M hM hR0)
-    S x0 c ((-1) ^ R.natDegree * (R.coeff 0 / R.leadingCoeff)) hc hfix hS
-    (GMC2PhiVieta.prod_rootSet_Phi R M hM hMd hsep)
+    S x0 c ((-1) ^ R.natDegree * (R.coeff 0 / R.leadingCoeff)) hc hfix hS ?_
+  exact GMC2PhiVieta.prod_rootSet_Phi R M hM hMd hsep
 
 end GMC2Thm2067Reduced
 
