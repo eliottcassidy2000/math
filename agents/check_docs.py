@@ -146,7 +146,7 @@ require(
 require(
     "05-knowledge/hypotheses/INDEX.md",
     "THM-2091", "CLAIMED STUB", "THM-2092", "HYP-8931", "HYP-8932",
-    "HYP-8935", "MISTAKE-240", "MISTAKE-241", "DvdK1", "sole premise",
+    "HYP-8935", "MISTAKE-240", "MISTAKE-241", "DvdK1", "sole endpoint premise",
 )
 require(
     "01-canon/MISTAKES.md",
@@ -175,7 +175,7 @@ forbid(
 expected_recent = {
     2084: "PROVED", 2085: "PROVED", 2086: "PROVED", 2087: "PROVED",
     2088: "PROVED", 2089: "PROVED", 2090: "PROVED", 2091: "CLAIMED",
-    2092: "PROVED",
+    2092: "PROVED", 2093: "PROVED",
 }
 for number, expected in expected_recent.items():
     relative = theorem_path(number)
