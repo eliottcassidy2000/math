@@ -100,6 +100,11 @@ mistake.
     exist, use a preorder, signed graph, hypergraph, packet, or another object.
 25. **Paley scope is prime and quadratic-residue specific.** THM-640 does not
     turn composite modulus 14 into a literal Paley tournament.
+25a. **Antisymmetry does not identify transitivity, saddles, and toroidal
+     recurrence.** MISTAKE-224. A pure tournament-game saddle means a
+     Condorcet winner, not an acyclic subtournament; RPS level orbits are
+     circles; and a torus may have no critical points. On the LRC side,
+     inversion pairs signed walls but does not prove a safe phase.
 
 ## Integer sequences and provenance
 

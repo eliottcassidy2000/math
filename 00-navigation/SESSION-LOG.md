@@ -1,8 +1,19 @@
-## boxeph-2026-07-21-S210 -- antisymmetry is the hinge: tori, odd functions, saddles, tournaments (HYP-8835)
 > **CURRENT-TRUTH WARNING (2026-07-21):** This is chronological provenance,
 > not a status authority. Entries may be corrected after filing. Start with
 > [`START-HERE.md`](START-HERE.md), [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md),
 > and [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
+
+## boxeph-2026-07-21-S210 -- corrected antisymmetry atlas (HYP-8835 / MISTAKE-224)
+
+> **Post-session audit:** the even-rank skew-matrix fact, the standard
+> three-cycle first integral, the torus Poincare polynomial, the inversion
+> fixed points, the odd Bernoulli sawtooth, and Vandermonde sign character are
+> valid. They do not form the claimed equivalence. A Condorcet winner can sit
+> above a cyclic subtournament; a torus has nowhere-zero fields with no
+> saddles; an RPS level orbit is a circle, not a torus; and general
+> antisymmetry does not make all column sums zero. The LRC survivor is only the
+> involution `t->-t`, which exchanges signed phase-height walls and pairs
+> nonfixed witness components. It supplies symmetry reduction, not positivity.
 
 ## codex-2026-07-21-LRC-arrangement-audit -- THM-2047 phase-height carrier and S209 correction
 
@@ -37,7 +48,6 @@
 
 ## codex-2026-07-21-LRC-S206-audit -- bounded-witness repair and honest Wall-A reuse
 
-**Owner:** see how tori relate to odd-valued functions, saddle points, and tournaments.
 - **INCOMING WORK AUDITED:** boxeph-S206 mined the deep well, Fibonacci/anti-golden
   continued fractions, THM-730 triple extremality, and THM-731/732
   autocorrelation as possible guides to an LRC(14) disproof search.
@@ -98,21 +108,6 @@
   residual is anti-invariant (`2theta-1`), so the fixed Weyl order kills it;
   grade six is the first invariant sector. The next correction complex should
   be split by this parity before any coefficient search.
-
-## death-star-2026-07-21-S93 -- Mathlib-PR packaging of the three-term no-common-root: Polynomial-R recast + minimal imports + the Mathlib-MISSING three-term Hermite recurrence proved, with "consecutive Hermite share no root" as the flagship application. All kernel-pure. HYP-8805.
-
-**THE HINGE:** a tournament's payoff M=A−Aᵀ is ANTISYMMETRIC (odd). All four links follow (verified, tori_odd_saddles_tournaments_boxeph_S210.py):
-
-1. ODD => EVEN RANK => ODD SUPPORT. rank(A−Aᵀ) even for ALL tournaments n≤5; the tournament GAME (symmetric zero-sum, value 0) has optimal strategies on ODD support (Fisher–Ryan; census: sizes 1,3,5). Pure game SADDLE POINT <=> transitive (Condorcet winner support 1); 3-cycle = rock-paper-scissors support 3; regular odd-n uniform support n.
-2. TORUS χ=0 NEEDS SADDLES. Poincaré(Tⁿ)=(1+t)ⁿ, Betti=C(n,k), χ=0; standing bagel T² = 1 max/2 saddle/1 min, the 2 saddles = b₁ = handle = the S207 deficit-1 (reduced Euler / bagel−cake=T_n−1).
-3. TRANSITIVE=GRADIENT vs CYCLIC=TORUS. Replicator ẋᵢ=xᵢ(Mx)ᵢ: transitive flows to Condorcet sink (gradient, no torus); 3-cycle conserves H=x₀x₁x₂ EXACTLY (dH/dt=0 since M col sums=0; RK4 drift 1e-16, orbit closes) => invariant TORUS (recurrent center at (⅓,⅓,⅓)). Intransitivity IS the toroidal recurrent set (Conley reading; 3-cycle atom THM-1830 = minimal recurrent block).
-4. ODD FUNCTIONS on the torus. Involution θ↦−θ has 2ⁿ fixed points (2-torsion); odd f vanishes there. LRC far-set weight/measure EVEN (sinc=odd/odd) => |G| t↦−t invariant; ODD sector = signed-discrepancy sawtooth B₁ (c_k=1/(2πik), odd in k) and the transitivity Vandermonde = SIGN character (odd under Sₙ, verified V=540↦−540).
-
-**SYNTHESIS:** tori (χ=0 needs saddles), odd functions (θ↦−θ, sawtooth, sign character), saddle points (game equilibria: pure⟺transitive), and tournaments (antisymmetric beats-relation) are four faces of ONE antisymmetry. Transitive/cyclic = gradient/recurrent = saddle-present/absent = even/odd.
-
-**LEVERAGE:** 3-cycle atom = elementary invariant torus (Conley/Morse decomposition of tournament space available); odd support = even-rank/Pfaffian (ties THM-473 skew=Hermite ±iλ toroidal spectrum); θ↦−θ governs both LRC reality-symmetry (THM-1820 mirror pairs) and tournament antisymmetry.
-
-**Honest:** all pillars verified identities/census/dynamics; a correction en route (the sinc far-set weight is EVEN not odd; the odd object is the sawtooth B₁). Synthesis, not a new theorem. Artifacts: reflection antisymmetry-is-the-hinge-...-boxeph-S210.md, HYP-8835, script (+.out).
 
 ## codex-2026-07-21-LRC-Hasse -- THM-2043 local completeness, global no-go, and resolved q=41 exit
 

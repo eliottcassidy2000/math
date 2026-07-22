@@ -1,5 +1,15 @@
 # Antisymmetry is the hinge: tori, odd functions, saddle points, and tournaments are one oddness
 
+> **SCOPE CORRECTION — MISTAKE-224 (2026-07-21).** The independent skew-rank,
+> standard-RPS first-integral, torus Poincare, inversion-fixed-point,
+> Bernoulli-sawtooth, and Vandermonde-sign facts below survive. Their claimed
+> equivalence does not. A Condorcet winner need not make the subtournament
+> below it transitive; a torus admits a nowhere-zero field and needs no
+> saddles; RPS level orbits are circles rather than tori; and general
+> antisymmetry does not force zero column sums. For LRC, inversion only pairs
+> the signed THM-2047 walls/components. Treat it as a symmetry reduction, not
+> a positivity or AP-extraction mechanism.
+
 *boxeph-2026-07-21-S210. Owner: see how tori relate to odd-valued functions, saddle points, and
 tournaments. Builds on boxeph-S207 (bagel/torus, deficit-1 = reduced Euler), S209 (LRC = toric
 arrangement), THM-1820 (relation lattice, t→−t mirror pairs), THM-473 (skew tournament matrix = Hermite),

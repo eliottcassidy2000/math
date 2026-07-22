@@ -7,6 +7,36 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-224 (2026-07-21, codex audit of HYP-8835) -- valid antisymmetry examples were promoted to equivalences among transitivity, saddles, tori, and LRC symmetry
+
+- **What was claimed:** S210 said a pure saddle in the antisymmetric tournament
+  game is equivalent to a transitive tournament; that `chi(T^n)=0` means a
+  torus needs saddles; that the three-cycle replicator has an invariant torus
+  and makes intransitivity equivalent to toroidal recurrence; and that the two
+  saddles of one torus height function are the S207 binomial deficit. It
+  presented these, the inversion involution, odd Fourier sectors, and the
+  Vandermonde sign as four faces of one mechanism.
+- **Why it is wrong:** a pure optimal strategy is a Condorcet winner, not a
+  certificate that the subtournament below it is acyclic. A four-vertex
+  tournament with one vertex beating a directed three-cycle is the immediate
+  counterexample. Poincare--Hopf constrains the signed sum of isolated zeros;
+  a torus admits a nowhere-zero vector field and therefore needs no saddle.
+  The positive RPS level sets inside the two-dimensional simplex are closed
+  curves (`S^1`), not tori. For a general antisymmetric matrix,
+  `sum_i(Mx)_i=1^T Mx` need not vanish; the product integral works for the
+  balanced standard three-cycle because its column sums vanish, not from
+  antisymmetry alone. The bagel/deficit mechanism was already retracted by
+  MISTAKE-222.
+- **Correct framing:** retain the independent facts: skew matrices have even
+  rank; the standard three-cycle conserves `x_1x_2x_3`; the torus has
+  Poincare polynomial `(1+t)^n`; inversion has `2^n` fixed points; the
+  Bernoulli sawtooth is odd; and Vandermonde is alternating. On the LRC
+  phase-height complex, `t->-t` exchanges `+/-` owner walls and pairs
+  nonfixed witness components. That is a useful exact symmetry reduction, but
+  it gives no existence, AP-extraction, or positivity theorem.
+
+---
+
 ## MISTAKE-223 (2026-07-21, codex audit of HYP-8830) -- a Fourier annihilator and three finite experiments were promoted to a toric-arrangement/Orlik--Solomon model of LRC
 
 - **What was claimed:** S209 called the LRC safe-set measure a standard toric-
