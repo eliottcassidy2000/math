@@ -1,3 +1,28 @@
+## kind-pasteur-2026-07-22-S128c153-cont -- hderiv ASSEMBLY skeleton kernel-pure + the cohesive glue->GMC(2) map
+
+**Owner:** work the (c) finish + final assembly wiring; pull at many times; integrate all agent work into
+one cohesive picture.
+
+**DELIVERED kernel-pure [propext,Classical.choice,Quot.sound] (GMC2DvdKHderivAssembly.lean, pushed, in root):**
+- hderiv_via_transpose: plugs MY ha (xCoeff0_logDeriv_map_ofPowerSeries) + MY hF1
+  (xCoeff0_xM_div_PhiFrame_eq_one_of_vanish) into death-star hderiv_of_frame, using phi Wu =
+  map(ofPowerSeries)(tau Wu) [rfl] so my disk h-side applies. Reduces hderiv to death-star's concrete
+  phi-glue (hfact, hPu, hc, hg) + the R->Rl transport (hvanish).
+- hderiv_of_transpose_glue: + bridge xCoeff0(phi Wu)=unitCoeff0 => derivativeFun(unitCoeff0)=0 = hderiv.
+
+**THE COHESIVE PICTURE (reflection gmc2-hderiv-cohesive-assembly-map-kps-S128c153).** Full verified chain:
+GMC(2) <= gmc2_of_crux [boxeph DONE] <= SinglePolyCrux <= boxeph frame bridge (smallRootFactor_dvd_PhiPoly +
+false_of_frame_data) [DONE] <= Pi=c*t <= smallRootFactor_coeff0_eq_of_derivative_vanishes' [DONE] <= hderiv
+<= my hderiv_of_transpose_glue [DONE] with the two ANALYTIC inputs (ha, hF1) discharged by my lemmas. THE ONLY
+RESIDUAL is transpose BOOKKEEPING (all ring-hom-image / coeff-preservation, NO analysis): phi_Phi=PhiFrame
+[death-star, in progress, generators done] => hfact; Pfr=phi(smallRootFactor) + apply (c) => hc; hg; bridge
+xCoeff0(phi Wu)=unitCoeff0 [death-star]; hvanish = R->Rl coeff transport + boxeph generatingFunction_eq_one.
+
+**NET.** GMC(2) is now a kernel-pure reduction to a handful of PURELY ALGEBRAIC transpose-glue lemmas; every
+analytic input (F=D_m, h-side, degree lemma, master identity) is DONE. Two of the three analytic legs are
+mine (hF1, ha) and now composed into the assembly backbone. Coordinated: claimed the skeleton before building;
+death-star confirmed phi_Phi is the remaining connector. HONEST: did NOT write the top-level gmc2_of_glue
+composition (would duplicate boxeph/death-star endpoint work); the residual glue is their active lane. cont HYP-9016.
 ## kind-pasteur-2026-07-22-S128c153 -- hderiv h-side (a) DONE (disk-subring route) + the disk/annulus (Wiener-Hopf) insight that shaped the transpose
 
 **Owner:** work creatively on the frame factorization + h-side lemma; pull often; prioritize mathematical
