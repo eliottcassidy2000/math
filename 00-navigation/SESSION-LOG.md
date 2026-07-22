@@ -1,20 +1,25 @@
 ## boxeph-2026-07-21-S212 -- the good set's reversal symmetry: an equivariant (mirror-parity) sharpening of codex's chi(G_delta) criterion (HYP-8845)
 
-- **PROVED (THM-2051):** if a thirteen-speed row has no exact relation of
-  support two through five and coefficient height at most `2^20`, then its
-  continuous quintic Bonferroni functional is positive, hence it has a
-  positive-measure strict lonely set.
+- **PROVED (THM-2051, strengthened):** THM-965 gives the sharp pair covariance
+  floor `-6/637`, attained exactly at reduced ratio `1:13`. Paying all `78`
+  pairs exactly and applying the whole-product argument only above support two
+  proves: if a thirteen-speed row has no exact support-three-through-five
+  relation of coefficient height at most `2^21`, then its continuous quintic
+  Bonferroni functional is positive, hence it has a positive-measure strict
+  lonely set.
 - **MECHANISM:** approximate the centered danger indicator by a degree-`H`
   Fejer polynomial. Relation dissociation kills every finite product constant
   term. A BV translation estimate controls each whole signed centered-product
-  tail in `L1`; summing THM-935's exact coefficients costs
-  `K=1477008/343`. At `H=2^20`, the error is below
-  `31755672/359661911`, leaving the exact positive margin
-  `595652076/17623433639` beneath the equilibrium floor `2052/16807`.
+  tail in `L1`. After the pair payment, the reserve is `1188/16807`; the
+  higher-support error is below `25791480/559473817`, leaving the exact margin
+  `96283836/3916316719>0`. The original all-support `2^20` version also holds.
 - **SYNTHESIS:** this bypasses THM-946's still-open absolute `T4/T5`
   strip/slab estimates for the coarse alternative and converts HYP-8841's
   ambient termination problem into descent on a finite union of bounded-
-  height circuit hyperplanes. It does not classify that structured branch;
+  height genuine higher-relation hyperplanes. Twelve independent relation rows
+  would bound primitive speeds by `5^6 H^12` via maximal minors and Hadamard;
+  the missing supplier must force new independent rows. This does not classify
+  the structured branch;
   the tight AP is deliberately relation-rich. THM-940 is only the discrete
   analogue and is not silently identified with the continuous proof.
 ## codex-2026-07-21-DC2-LRC14-termination -- local acyclicity versus finite Euler termination (THM-2049/2050, HYP-8841)

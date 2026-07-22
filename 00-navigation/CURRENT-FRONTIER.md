@@ -116,14 +116,15 @@ structural supplier/seed and a lossless exit.
   `chi(G_delta)=#components`, so it sees isolated tight witnesses that volume
   misses.
 - **PROVED finite-circuit alternative:** THM-2051 closes the coarse analytic
-  “middle” sought by THM-935/946. If a thirteen-speed row has no exact
-  support-two-through-five relation with all coefficient magnitudes at most
-  `2^20`, whole-product Fejer--BV approximation gives continuous `BONF5>0`
-  and therefore a positive-measure strict lonely set. The proof avoids the
-  unresolved termwise `T4/T5` strip/slab bounds. The LRC residual is now
-  localized to finitely many bounded-height circuit templates, but descent or
-  classification within those hyperplanes—including the relation-rich AP
-  boundary—remains open.
+  “middle” sought by THM-935/946. THM-965 gives the sharp universal pair-
+  covariance floor `delta_(a,b)>=-6/637`, so pairs can be paid exactly. If a
+  thirteen-speed row has no exact support-three-through-five relation with all
+  coefficient magnitudes at most `2^21`, whole-product Fejer--BV approximation
+  gives continuous `BONF5>0` and therefore a positive-measure strict lonely
+  set. The proof avoids the unresolved termwise `T4/T5` strip/slab bounds. The
+  LRC residual is now localized to finitely many genuine higher-relation
+  templates, but descent or classification within those hyperplanes—including
+  the relation-rich AP boundary—remains open.
 - **Scope separation:**
   [THM-1149](../01-canon/theorems/THM-1149-compact-essential-crown-and-farey-blocker.md)
   proves that tight deletion and an all-loose essential crown are different

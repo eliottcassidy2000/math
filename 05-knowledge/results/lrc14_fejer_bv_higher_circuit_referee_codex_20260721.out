@@ -1,0 +1,10 @@
+THM-2051 FEJER--BV HIGHER-CIRCUIT REFEREE
+centered coefficients={2: Fraction(24, 343), 3: Fraction(-24, 49), 4: Fraction(-2, 7), 5: Fraction(-1, 1)}
+equilibrium B5=2052/16807
+pair finite core size=36 grouped minima=[(1, 13, Fraction(-6, 637)), (2, 11, Fraction(-4, 539)), (3, 8, Fraction(-1, 392)), (4, 5, Fraction(2, 245))]
+pair floor=-6/637 equality reduced ratio=1:13
+all-support K=1477008/343 error<31755672/359661911 margin>595652076/17623433639
+pair contribution floor=-864/16807 remaining base=1188/16807
+higher-support K=10316592/2401 error<25791480/559473817 margin>96283836/3916316719
+TOURNAMENT ANALYSIS=not applicable: signed coefficient hyperedges are indispensable
+RESULT=PASS

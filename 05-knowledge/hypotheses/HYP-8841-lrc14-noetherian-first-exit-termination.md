@@ -6,8 +6,8 @@ status: >
   proves that complete period-14 top germs are globally blind. THM-2043 proves
   every audited one-lift alias has a labelled strict exit by q<=42, including
   an infinite Hasse-indistinguishable family. THM-2051 adds a universal finite-
-  circuit gate: either there is a positive-measure strict exit or a support-at-
-  most-five relation of coefficient height at most 2^20. The target is a
+  height higher-relation gate: either there is a positive-measure strict exit or a
+  support-three-through-five relation of coefficient height at most 2^21. The target is a
   height-decreasing termination theorem inside that structured branch, ending
   either at a signed Euler boundary certificate or at a strict rational lonely
   phase.
@@ -20,6 +20,7 @@ related:
   - THM-2049
   - THM-2050
   - THM-2051
+  - THM-2052
 script: 04-computation/lrc14_termination_sidecar_codex_20260721.py
 output: 05-knowledge/results/lrc14_termination_sidecar_codex_20260721.out
 ---
@@ -71,12 +72,27 @@ obeys one of the finitely many templates
 
 ```text
 sum_(i in A) k_i v_i=0,
-2<=|A|<=5,      0<|k_i|<=2^20.                       (2b)
+3<=|A|<=5,      0<|k_i|<=2^21.                       (2b)
 ```
 
 Thus a valid height descent may be localized to a finite union of rational
 circuit hyperplanes. Each hyperplane still contains infinitely many speed
 rows, and THM-2051 does not orient a decreasing move inside it.
+
+There is nevertheless an exact rank cap. If the same primitive row acquires
+twelve independent templates of height at most `H`, maximal minors and
+Hadamard give `max v_i<=5^6 H^12`. At that point the problem is a finite exact
+enumeration. The honest missing supplier is therefore “new independent
+relation or exit,” not merely repeated detection of one relation.
+
+THM-2052 proves that the rank is already high before any new descent is found.
+THM-763 bounds a primitive counterexample by `sum v_i<=91^12`; a
+pigeonhole/coding argument then supplies at least nine independent support-at-
+most-five relations of height `2^20`, and at least eleven independent support-
+at-most-three relations of height `91^6`. Thus every counterexample lies in a
+finite atlas of rational subspaces of dimension at most two. The unresolved
+rank jump is from at least eleven to twelve, where the maximal-minor bound
+becomes finite.
 
 The proposed LRC14 termination theorem is:
 
@@ -192,12 +208,12 @@ Euler points.
 
 THM-2051 is complementary rather than a replacement. Its proved
 Fejer--BV/Bonferroni alternative shows that absence of a bounded
-support-`2..5` integer relation yields positive safe volume. Every hard row
+support-`3..5` integer relation yields positive safe volume. Every hard row
 must therefore satisfy all three filters:
 
 ```text
 all peel taxes pass,
-a bounded small-support relation exists,
+a bounded genuine higher-support relation exists,
 no positive pair-sum margin exists.                            (6)
 ```
 

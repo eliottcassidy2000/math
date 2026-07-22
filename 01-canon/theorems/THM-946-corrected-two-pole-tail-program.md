@@ -1,7 +1,7 @@
 ---
 id: THM-946
 title: THE CORRECTED TWO-POLE TAIL PROGRAM — a rigorous discrete-convolution bound, the refuted logarithm-free claim, and the still-conditional B5 exhaustion route
-status: PARTIAL / TARGET BYPASSED BY THM-2051. The corrected two-pole convolution lemma below is proved with an explicit constant 64. The former C0=8 bound is refuted exactly. T3 still needs a punctured near-pole congruence estimate; T4 and T5 still need affine resonance-strip and resonance-slab estimates as absolute relation-mass bounds. However, THM-2051 now proves the coarse alternative “support-at-most-five relation of height at most 2^20 OR continuous B5 > 0” by whole-product Fejer--BV approximation, without these estimates. The small-relation branch remains unclassified.
+status: PARTIAL / TARGET BYPASSED BY THM-2051. The corrected two-pole convolution lemma below is proved with an explicit constant 64. The former C0=8 bound is refuted exactly. T3 still needs a punctured near-pole congruence estimate; T4 and T5 still need affine resonance-strip and resonance-slab estimates as absolute relation-mass bounds. However, THM-2051 now combines THM-965's exact pair floor with whole-product Fejer--BV approximation to prove the coarse alternative “support-three-through-five relation of height at most 2^21 OR continuous B5 > 0,” without these estimates. The higher-relation branch remains unclassified.
 source: kind-pasteur-2026-07-17-S128 cont.38, corrected by codex-S48 audit
 depends_on:
   - THM-935 (relation-mass identity and the proved support-2 tail)
