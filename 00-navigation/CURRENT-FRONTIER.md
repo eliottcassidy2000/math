@@ -145,12 +145,17 @@ structural supplier/seed and a lossless exit.
   `640690` primitive determinant failures, its arithmetic carrier has three
   leaves. THM-2059 makes arbitrary-`N` core/tail composition an exact CRT
   histogram dot product; its zero-mode split isolates disjoint-support zeros.
-  THM-2060 gives every tail bin the sharp floor `q-ceil(q/7)` unless `a|w`.
-  THM-2064 generalizes the sheet count to any finite tail set: a safe core
-  clock lifts whenever `sum_w ceil(t_w/7)/t_w<1`, and the only primitive
-  imprimitive-core two-tail capacity tie is `2C union {x,y}` with `x,y` odd.
+  THM-2060 gives every tail bin the sharp floor `q-ceil(q/7)` unless `a|w`
+  and proves the multi-tail capacity law. THM-2064 independently repackages
+  that law on one common finite fiber: a safe core clock lifts whenever
+  `sum_w ceil(t_w/7)/t_w<1`. Both isolate the sole primitive
+  imprimitive-core two-tail capacity tie `2C union {x,y}`, with `x,y` odd.
   THM-2061 folds that exact seam, pins its core through `2..14`, bounds its
-  tails, and closes `max(C)<=19`. THM-2062 puts an exact hereditary CRT wheel
+  tails, and closes `max(C)<=19`. THM-2066 attaches the exact binary
+  owner word to every safe clock: a counterexample needs complementary tail
+  words. The clock bank `15..34` empties that complement graph for all `59,880`
+  primitive divisor-complete quotient cores in `{1,...,24}`, extending the
+  finite closure to `max(C)<=24`. THM-2062 puts an exact hereditary CRT wheel
   on THM-2058's coprime intervals.
 - **PROVED relative whole-product decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says bounded scalar relations must lift to vector-character relations. Two

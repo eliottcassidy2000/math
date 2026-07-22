@@ -22,6 +22,7 @@ related:
   - THM-2060
   - THM-2061
   - THM-2062
+  - THM-2066
   - HYP-2108
   - HYP-2647
   - HYP-2896
@@ -69,6 +70,13 @@ affine `+-1` terminal with a one-dimensional coprime wheel. This is an exact
 interval split event, not a phase certificate. THM-2061 separately resolves
 the only primitive imprimitive-eleven-core lane down to a dyadic folded seam,
 then closes every normalized quotient core in `{1,...,19}`.
+
+THM-2066 makes the dyadic arithmetic sidecar lossless. On each safe quotient
+clock, every odd tail has a binary word saying which lift it kills; a
+counterexample needs two complementary words. These word constraints compose
+by CRT. The bank `15..34` closes every primitive divisor-complete quotient
+core in `{1,...,24}`. Any later seam atlas should carry the word and its
+residue class modulo `2N`, not merely tail eligibility or packet cardinality.
 
 THM-2059 also gives a bulk filter before exact support comparison. Its positive
 zero Fourier mode wins whenever the product of total packet masses exceeds

@@ -2,16 +2,21 @@
 id: THM-2064
 title: "Multi-tail sheet capacity and the primitive dyadic seam"
 status: >
-  PROVED. On one safe scaled-core clock,
+  PROVED INDEPENDENT REFORMULATION / COROLLARY OF THE CONCURRENT THM-2060.
+  On one safe scaled-core clock,
   a tail of relative sheet order t can endanger at most ceil(t/7)/t of the
   longitudinal fiber. A strict union-capacity inequality therefore supplies
   a common LRC(14) phase. For two tails the only numerical obstruction with
   both sheet orders at least two is (2,2); primitivity then forces the exact
   seam 2C union {x,y} with x,y odd. This proves the reduction reserved in
-  THM-2061; it does not prove that the remaining seam is empty.
+  THM-2061; it does not prove that the remaining seam is empty. THM-2060
+  concurrently proves the same multi-tail capacity with the sharper
+  clock-independent identity t=a/gcd(a,w), so this file should be cited for
+  its common-fiber set-cover packaging, not as an additional reduction.
 source: codex-2026-07-21-LRC-multitail-capacity
 depends_on:
   - THM-2059
+  - THM-2060
 related:
   - THM-2057
   - THM-2058
@@ -26,6 +31,13 @@ hash_basis: normalized repository blobs (LF)
 
 # THM-2064 -- multi-tail sheet capacity and the primitive dyadic seam
 
+> **Concurrent-work synthesis.** THM-2060 Part D proves the same capacity
+> theorem and dyadic reduction, and Part C proves
+> `t_w=a/gcd(a,w)` independently of the chosen clock. The proof below was
+> obtained independently and packages all tails on the single common fiber
+> (4). It is a useful cross-check and set-cover formulation, not a claim of
+> priority or a theorem stronger than THM-2060.
+
 Let `C` be a finite set of positive core speeds, let `a>=1`, and let `W` be a
 finite set of tail speeds. Fix a denominator `N` and a core-safe residue
 
@@ -39,7 +51,7 @@ where `|.|_m` is least absolute residue. Put
 Q=Na,
 g_w=gcd(w,Q),             h_w=Q/g_w,
 u_w=w/g_w,                d_w=gcd(N,h_w),
-t_w=h_w/d_w.                                            (2)
+t_w=h_w/d_w=a/gcd(a,w).                                 (2)
 ```
 
 Thus `u_w` is a unit modulo `h_w`, and `t_w` is the number of distinct tail
@@ -176,7 +188,7 @@ dyadic seam
 S=2C union {x,y},       x,y odd.                        (15)
 ```
 
-This proves the sharp sheet-capacity reduction reserved in THM-2061. The
+This reproves the sharp sheet-capacity reduction reserved in THM-2061. The
 remaining problem is signed: over each core residue there are two lifts, and
 each odd tail can endanger at most one. Failure requires the two tails to own
 opposite lifts on every core-safe residue. Capacity alone cannot rule that out.

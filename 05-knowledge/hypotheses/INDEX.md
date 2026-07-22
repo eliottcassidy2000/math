@@ -1,3 +1,15 @@
+- **THM-2066 / codex-2026-07-21 (PROVED dyadic-seam owner-word CRT atlas):**
+  For a safe quotient-core clock `N`, every odd tail defines a binary word on
+  the safe residue packet recording which dyadic lift it kills. Two tails kill
+  both lifts everywhere exactly when both are eligible and their words are
+  bitwise complementary. This gives an exact residue-pair obstruction modulo
+  `2N`, composes over clock banks by generalized CRT, and is monotone under
+  divisor transport. Exact bitset census: among `2,496,144` eleven-subsets of
+  `{1,...,24}`, the `59,880` primitive divisor-complete quotient cores are all
+  killed by one clock in `15..34`; ordinary and optimized referees pass. This
+  extends THM-2061's normalized `max(C)<=19` closure to `max(C)<=24`; LRC(14)
+  remains open outside this seam slice.
+
 - **MISTAKE-229 correction to HYP-8905/S225/S103:** The binary homogeneous
   symmetric-Hessian computation is valid and THM-2063 tames its one-sided
   outcome, but the general symmetric reduction from JC(2) lands in four

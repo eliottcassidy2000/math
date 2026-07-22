@@ -1,3 +1,22 @@
+## codex-2026-07-21 -- THM-2063/2064/2066, planar atlas audit, and dyadic owner words
+
+- **Planar JC(2):** THM-2063 completely classifies Keller pairs having any
+  output-pencil member affine along any linear source fiber. Coefficient
+  descent gives two explicit triangular normal forms and inverses. Thus every
+  hypothetical counterexample has fiber degree at least two in every source
+  and target-pencil direction. MISTAKE-228 corrects THM-1330 from “exact
+  classification” to a necessary-structure atlas. MISTAKE-229 preserves the
+  binary symmetric-Hessian subcase but removes the unproved NC2/GMC-to-JC and
+  “three equivalent descents” claims. JC(2) remains open.
+- **LRC(14):** THM-2064 independently rederives the concurrent THM-2060
+  multi-tail sheet-capacity law and the dyadic seam; it is now explicitly
+  labelled a reformulation. Pulling the proved THM-2061 seam geometry led to
+  THM-2066: odd tails carry binary lift-owner words, and a counterexample
+  requires complementary words on every safe clock. Exact clock-bank census
+  closes all `59,880` primitive divisor-complete quotient cores through
+  `max(C)=24`, extending the prior exact bound `19`. Scripts pass normally and
+  under `python -O` with frozen outputs.
+
 ## codex-2026-07-21 -- HYP-8905 bridge audit and MISTAKE-229
 
 The exact binary homogeneous Hessian calculation from S103 survives and lands
