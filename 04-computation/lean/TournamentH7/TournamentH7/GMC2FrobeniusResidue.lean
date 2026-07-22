@@ -122,6 +122,69 @@ theorem multinomial_dilate_modEq
     Nat.multinomial S (fun i => p * r i) ≡ Nat.multinomial S r [MOD p] :=
   GMC2FrobeniusResidue.multinomial_dilate_modEq p S r
 
+/-- Elementary absorption lemma used by the concurrent no-carry proof. -/
+theorem dvd_choose_of_dvd {p : ℕ} (hp : p.Prime) {n k : ℕ}
+    (hn : p ∣ n) (hk : ¬ p ∣ k) (hkn : k ≤ n) : p ∣ n.choose k := by
+  have hk1 : 1 ≤ k := Nat.one_le_iff_ne_zero.mpr
+    (fun h => hk (h ▸ dvd_zero p))
+  have hn1 : 1 ≤ n := le_trans hk1 hkn
+  have habs : n * (n - 1).choose (k - 1) = n.choose k * k := by
+    have h := Nat.succ_mul_choose_eq (n - 1) (k - 1)
+    simp only [Nat.succ_eq_add_one, Nat.sub_add_cancel hn1,
+      Nat.sub_add_cancel hk1] at h
+    linarith
+  have hdvd : p ∣ n.choose k * k := habs ▸ dvd_mul_of_dvd_left hn _
+  exact (hp.dvd_mul.mp hdvd).resolve_right hk
+
+/-- If the total mass is divisible by `p` but one part is not, the
+multinomial coefficient is divisible by `p`. -/
+theorem multinomial_dvd_of_exists_not_dvd
+    {α : Type*} [DecidableEq α] {p : ℕ} (hp : p.Prime)
+    (S : Finset α) (r : α → ℕ) (hsum : p ∣ ∑ i ∈ S, r i)
+    (hex : ∃ i ∈ S, ¬ p ∣ r i) : p ∣ Nat.multinomial S r := by
+  classical
+  revert hsum hex
+  induction S using Finset.induction_on with
+  | empty =>
+      intro hsum hex
+      obtain ⟨i, hi, hpi⟩ := hex
+      exact absurd hi (Finset.notMem_empty i)
+  | @insert a S ha ih =>
+      intro hsum hex
+      rw [Nat.multinomial_insert ha]
+      rw [Finset.sum_insert ha] at hsum
+      by_cases hra : p ∣ r a
+      · have hsumS : p ∣ ∑ i ∈ S, r i := (Nat.dvd_add_right hra).mp hsum
+        have hexS : ∃ i ∈ S, ¬ p ∣ r i := by
+          obtain ⟨i, hi, hpi⟩ := hex
+          rcases Finset.mem_insert.mp hi with rfl | hiS
+          · exact absurd hra hpi
+          · exact ⟨i, hiS, hpi⟩
+        exact dvd_mul_of_dvd_right (ih hsumS hexS) _
+      · exact dvd_mul_of_dvd_left
+          (dvd_choose_of_dvd hp hsum hra (Nat.le_add_right _ _)) _
+
+/-- Strict base-height growth makes the dilated factorial ratio contain a
+factor `p`; compatibility form of the original arithmetic-engine lemma. -/
+theorem factorial_dilate_dvd {p : ℕ} (hp : 1 ≤ p) {A0 A : ℕ}
+    (h : A0 < A) :
+    p * (p * A0).factorial ∣ (p * A).factorial := by
+  have h1 : p * (A0 + 1) ≤ p * A := mul_le_mul_left' (by omega) p
+  have hdvd1 : (p * (A0 + 1)).factorial ∣ (p * A).factorial :=
+    Nat.factorial_dvd_factorial h1
+  have heq : p * (A0 + 1) = p * A0 + p := by ring
+  rw [heq] at hdvd1
+  have hpdvd : p ∣ (p * A0 + 1).ascFactorial p :=
+    dvd_trans (Nat.dvd_factorial hp le_rfl)
+      (Nat.factorial_dvd_ascFactorial _ _)
+  calc
+    p * (p * A0).factorial ∣
+        (p * A0).factorial * (p * A0 + 1).ascFactorial p := by
+      rw [mul_comm p]
+      exact mul_dvd_mul_left _ hpdvd
+    _ = (p * A0 + p).factorial := Nat.factorial_mul_ascFactorial _ _
+    _ ∣ (p * A).factorial := hdvd1
+
 /-- Compatibility form of THM-2022 (15): the complete dilated face sum is
 the `p`-th power of its undilated constant-term sum. -/
 theorem face_sum_frobenius
@@ -156,5 +219,8 @@ end GMC2
 #print axioms GMC2FrobeniusResidue.weighted_sum_pow_char
 #print axioms GMC2FrobeniusResidue.prime_dvd_normalized_factorial_of_gap
 #print axioms GMC2.multinomial_dilate_modEq
+#print axioms GMC2.dvd_choose_of_dvd
+#print axioms GMC2.multinomial_dvd_of_exists_not_dvd
+#print axioms GMC2.factorial_dilate_dvd
 #print axioms GMC2.face_sum_frobenius
 #print axioms GMC2.face_sum_ne_zero

@@ -79,7 +79,22 @@ theorem not_chargeOneSided_iff_straddlesZero
   · intro h hn
     exact hn h
 
+/-- Compatibility form of the THM-2022 contrapositive: failure of strict
+one-sidedness is equivalent to witnesses on both weak sides of zero. -/
+theorem not_chargeOneSided_iff (P : MvPolynomial (Fin 2) ℂ) :
+    ¬ChargeOneSided P ↔
+      (∃ s ∈ P.support, charge s ≤ 0) ∧
+        ∃ t ∈ P.support, 0 ≤ charge t := by
+  unfold ChargeOneSided
+  push Not
+  constructor
+  · rintro ⟨⟨s, hs, hs1⟩, ⟨t, ht, ht1⟩⟩
+    exact ⟨⟨s, hs, by omega⟩, ⟨t, ht, by omega⟩⟩
+  · rintro ⟨⟨s, hs, hs0⟩, ⟨t, ht, ht0⟩⟩
+    exact ⟨⟨s, hs, by omega⟩, ⟨t, ht, by omega⟩⟩
+
 end GMC2
 
 #print axioms GMC2.chargeOneSided_iff_not_straddlesZero
 #print axioms GMC2.not_chargeOneSided_iff_straddlesZero
+#print axioms GMC2.not_chargeOneSided_iff

@@ -179,6 +179,20 @@ theorem charge_radial {α : Type*} (S : Finset α) (r : α → ℕ)
       push_cast
       ring
 
+/-- Exact Wick expansion restricted to the balanced-channel filter. -/
+theorem wick_expansion_balanced (P : MvPolynomial (Fin 2) ℂ) (m : ℕ) :
+    E (P ^ m) = ∑ r ∈ (P.support.piAntidiag m).filter
+        (fun r => charge (∑ s ∈ P.support, r s • s) = 0),
+      (Nat.multinomial P.support r : ℂ) *
+        (∏ s ∈ P.support, P.coeff s ^ r s) *
+          wt (∑ s ∈ P.support, r s • s) := by
+  classical
+  rw [wick_expansion]
+  apply (Finset.sum_subset (Finset.filter_subset _ _) ?_).symm
+  intro r hr hnot
+  rw [Finset.mem_filter, not_and] at hnot
+  rw [wt_of_charge_ne (hnot hr), mul_zero]
+
 end GMC2
 
 #print axioms GMC2.E_pow_eq_channel_sum
@@ -186,3 +200,4 @@ end GMC2
 #print axioms GMC2.E_pow_eq_balanced_channel_sum
 #print axioms GMC2.wick_channel_zero_of_charge_ne
 #print axioms GMC2.charge_radial
+#print axioms GMC2.wick_expansion_balanced
