@@ -1,12 +1,12 @@
 ---
 id: THM-2045
-title: "The smooth factorized family R=x(a-bxq) has no planar Jacobian mate"
+title: "The smooth factorized family R=x(a-b x^r q^s) has no planar Jacobian mate"
 status: >
-  PROVED. For nonzero a,b, no polynomial Q in C[x,q] has Jacobian bracket
-  {Q,R}=1 with R=x(a-bxq). In particular the first coordinate of THM-2044
-  cannot be de-stabilized to a planar Keller pair. The proof separates Laurent
-  diagonal sectors and reduces the only possible constant-producing sector to
-  a one-line differential equation.
+  PROVED. For nonzero a,b and positive integers r,s, no polynomial Q in C[x,q]
+  has Jacobian bracket {Q,R}=1 with R=x(a-b x^r q^s). In particular the first
+  coordinate of THM-2044 cannot be de-stabilized to a planar Keller pair. The
+  proof separates weighted Laurent sectors and shows the leading coefficient
+  in the only constant-producing sector cannot vanish.
 source: codex-2026-07-21-DC2-JC2
 related:
   - THM-1345
@@ -17,52 +17,71 @@ related:
 
 # THM-2045 -- no planar mate for the suspension coordinate
 
-Let `a,b` be nonzero complex numbers and
+Let `a,b` be nonzero complex numbers, let `r,s` be positive integers, and put
 
 ```text
-R=x(a-bxq).
+R=x(a-b x^r q^s).                                  (1)
 ```
 
 There is no `Q in C[x,q]` satisfying
 
 ```text
-R_x Q_q-R_q Q_x=1.                                  (1)
+R_x Q_q-R_q Q_x=1.                                  (2)
 ```
 
-To prove this, localize at `x` and write `s=xq`. The Hamiltonian derivation in
-(1) becomes
+Write `g=gcd(r,s)`, `r=g r0`, `s=g s0`, and
 
 ```text
-W=R_x partial_q-R_q partial_x
- =x[b x partial_x+(a-bs)partial_s].                  (2)
+v=x^r0 q^s0,                 x^r q^s=v^g.           (3)
 ```
 
-Every monomial `x^i q^j` is `x^(i-j)s^j`. Thus the Laurent `x`-exponent
-`k=i-j` grades `C[x,q]`, and (2) sends the `k`-sector to the `(k+1)`-sector.
-Only the `k=-1` sector can contribute the constant on the right side of (1).
-Its polynomial members have the form
+Grade a monomial `x^i q^j` by
 
 ```text
-x^(-1)f(s),             with f(s) divisible by s.   (3)
+kappa=s i-r j.                                        (4)
 ```
 
-Equation (1) on that sector is
+Every term of the Hamiltonian derivation
 
 ```text
-(a-bs)f'(s)-bf(s)=1,
+W=R_x partial_q-R_q partial_x                       (5)
 ```
 
-or equivalently
+raises `kappa` by exactly `r`. Consequently only the `kappa=-r` sector of `Q`
+can contribute the constant in (2). The nonnegative integer solutions of
+`s i-r j=-r` are
 
 ```text
-((a-bs)f(s))'=1.                                    (4)
+(i,j)=(r0 t,1+s0 t),            t>=0,
 ```
 
-Hence `(a-bs)f=s+C`. Polynomiality forces `C=-a/b` and `f=-1/b`, contradicting
-the divisibility by `s` required in (3). No other sector can affect the
-constant term, proving the theorem.
+so this sector has the form
 
-For `(a,b)=(2,3)`, this applies to the `R` in THM-2044. The rank-two Poisson
-counterexample therefore uses genuine symplectic stabilization: deleting the
-extra canonical pair cannot leave a planar Jacobian counterexample with this
-first coordinate.
+```text
+q f(v),                       f in C[v].             (6)
+```
+
+Direct differentiation gives
+
+```text
+W(v)=s0 (v/q)(a-bv^g),
+
+W(q f(v))=[a-b(r+1)v^g]f(v)
+           +s0 v(a-bv^g)f'(v).                     (7)
+```
+
+If `f` has degree `N` and leading coefficient `c_N!=0`, the coefficient of
+`v^(N+g)` in (7) is
+
+```text
+-b (r+1+s0 N)c_N,                                  (8)
+```
+
+which is nonzero. Thus (7) cannot equal the constant one. No other weighted
+sector can affect the constant term, proving the theorem.
+
+For `(a,b,r,s)=(2,3,1,1)`, this applies to the `R` in THM-2044. The rank-two
+Poisson counterexample therefore uses genuine symplectic stabilization:
+deleting the extra canonical pair cannot leave a planar Jacobian counterexample
+with this first coordinate. The wider family also supplies a two-parameter
+Newton-edge exclusion stratum for planar JC.

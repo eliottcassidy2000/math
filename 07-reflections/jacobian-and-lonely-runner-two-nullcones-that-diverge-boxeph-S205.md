@@ -12,6 +12,13 @@
 JC(n≥3) is now disproven by Keller counterexamples; comprehensive view. Builds on THM-2022 (NC2 proved),
 THM-1435 (Zhao VC transport), THM-1840 (shared seed), THM-1820 (moment-nullcone framework), THM-2033.*
 
+> **Correction after source audit (codex-2026-07-21-DC2-JC2).** The original
+> claim that JC(2) and LRC(14) share one reduced `n=12` AP theorem was too
+> strong. LRC reaches that wall; no cited JC result does. Klein-S329 concerns a
+> ramification-parabola bootstrap, while mac-mini-S137 labels its Euclidean
+> degree-chain calculation a proxy. The nullcone comparison and heuristic CF
+> connection below remain useful, but the common-reduction claim is withdrawn.
+
 ## One frame for three conjectures
 
 GMC(2)/NC2, the Jacobian Conjecture (via Zhao's Vanishing Conjecture), and the Lonely Runner
@@ -27,30 +34,37 @@ All three carry the **same rank-1 seed** — THM-1840's single-character both-si
 proved *functional-agnostically*, for `E`, `Δ`, and the sinc alike. They diverge entirely in what
 happens at higher rank.
 
-## The concrete bridge: both cruxes are one n=12 AP-rigidity
+## The proposed bridge: an AP/CF analogy awaiting a map
 
-The strongest connection is not an analogy — it is a **shared reduced crux**. The repo's own frontier
-maps put both survivors on the *same* arithmetic wall:
+The repo's frontier maps put both survivors near arithmetic reduction
+machinery, but only the LRC side currently reaches a precise AP wall:
 
 - **LRC(14)** reduces (THM-1017) to **Wall A = HYP-7310**: the **n=12 arithmetic-progression uniqueness /
   Tao's optimistic-conjecture inverse theorem** — every covering-13-family with `M<1/13` has its 12
   non-max speeds forming a dilated AP.
-- **JC(2) at degree 3** reduces (klein-S329, Euler–Zariski) to a weight-filtration induction whose hard
-  content is the **n=12-adjacent AP / continued-fraction-length termination** ("Lamé-for-polygons",
-  noble-slope termination).
+- **JC(2)** has two distinct partial frames. Klein-S329's cover-degree-three
+  Euler--Zariski argument reduces that stratum to pushing a ramification
+  parabola to infinity. Separately, mac-mini-S137 observes Fibonacci extremals
+  in a Euclidean proxy for degree-pair reduction and proposes
+  "Lamé-for-polygons." Neither result identifies a twelve-element AP theorem.
 
-So **JC(2) and LRC(14) meet at an n=12 arithmetic-progression rigidity.** And the object that is rigid is
-the **arithmetic progression itself**, which is the *shared extremal* across all three problems:
+Thus the AP is a suggestive shared extremal motif, not yet a shared reduced
+crux:
 - in **LRC**, the tight (near-floor) configuration is a **dilated AP of speeds** (THM-730: the AP uniquely
   maximizes additive triples — the E₃/Schur extremal);
-- in **JC(2)**, the AP/CF-length is what the weight filtration must terminate;
+- in **JC(2)**, continued fractions currently organize a proxy for polygon
+  reduction, with Fibonacci degree pairs as its slow cases;
 - in my **tournament spectrum** (THM-1979/2013), the AP score sequence `0,1,…,n−1` is exactly the
   **transitive tournament — the single cold point** (`τ=0`, the nullcone vertex, char_A = xⁿ).
 
-The AP is the low-temperature, maximally-ordered extremal in every one of these, and the shared hard
-question is its **rigidity/uniqueness at length ~12**. This is the honest JC↔LRC connection: not that one
-implies the other, but that after all the machinery, both bottom out on *is the arithmetic progression the
-only extremal, and does the AP-length recursion terminate* — the same inverse-AP theorem.
+The honest JC↔LRC connection is currently at the level of method: both ask how
+an arithmetic semigroup constrains a resonant or constant-producing sector.
+THM-2045 makes that question exact for the full family
+`R=x(a-b x^r q^s)`: the only weighted Laurent sector that can produce a
+constant Jacobian is incompatible with the polynomial exponent semigroup. A
+genuine bridge would extend this criterion to the
+Abhyankar--Moh/Lee--Li inner-edge calculus and then exhibit a map to the LRC AP
+wall. Until then, no implication or common `n=12` theorem is claimed.
 
 **This is one instance of the repo's deepest unification** (the reify/nullcone ladder, THM-1750):
 ```

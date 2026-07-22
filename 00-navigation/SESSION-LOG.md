@@ -391,16 +391,21 @@ the old `c3=11` gain.
   one-variable symplectic suspension of THM-1300 after the shear `q=y+xz/3`.
   All six bracket identities pass exactly; expanded term counts are
   `(2,35,246,78)`; three explicit rational points form one exact fibre.
-- **THM-2045 / PLANAR POSITIVE RESULT:** for every `ab!=0`,
-  `R=x(a-bxq)` has no polynomial planar Jacobian mate. Laurent `x`-sectors
-  isolate the only constant-producing coefficient, and its ODE forces a
-  constant not divisible by the required `s=xq` factor. The suspension cannot
-  be de-stabilized to a planar counterexample through its first coordinate.
+- **THM-2045 / PLANAR POSITIVE RESULT:** for every `ab!=0` and positive integers
+  `r,s`, `R=x(a-b x^r q^s)` has no polynomial planar Jacobian mate. The weighted
+  grading `kappa=s*i-r*j` isolates the only constant-producing sector; its top
+  coefficient is `-b(r+1+s0*N)c_N!=0`. The suspension cannot be de-stabilized
+  to a planar counterexample through its first coordinate.
 - **HYP-8802 / DC(2) GATE:** naive Weyl-symmetric quantization has a nonzero
   cubic Moyal anomaly in five of six relations, with term counts
-  `42,42,0,3,165,273`. The `(D,R)` anomaly is central over `R`; a finite two-step
-  correction gives an exact 332-term symbol with `M(Dq,R)=1`. Simultaneous
-  terminating correction is open and is the precise direct-`A_2` target.
+  `42,42,0,3,165,273`. Finite corrections give the exact entire `R`-column:
+  a 332-term `Dq` has `M(Dq,R)=1`, the original `T` has `M(T,R)=0`, and an
+  85-term `Sq` has `M(Sq,R)=0`. The remaining `M(Sq,T)-1` residual has 59 terms
+  and momentum degree two. Two further star-central corrections kill tangent
+  degrees two and one, but leave an explicit constant. Homogeneous repairs
+  propagate weights `6->{6,12}`, `12->{12,18}`, `18->{18,24}` without closure.
+  Proving this cascade is infinite, or escaping it by moving `T`, is the
+  direct-`A_2` target.
 - **CORRECTION:** rank-two Poisson means four commutative generators; it does
   not automatically mean a Weyl `A_2` endomorphism or a planar Keller map.
   Cotangent/Hamiltonian-dual quantization safely lands in conventional `A_4`.

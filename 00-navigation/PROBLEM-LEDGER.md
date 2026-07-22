@@ -41,8 +41,9 @@ in-repo verifications). JC_n false ∀n≥3 by stabilization. JC_2 survives (A9)
   leading-form bound). OPEN (JC_2 ⟹ DC_1 via BKK); the surviving floor of the tower.
 - **DC_2** — OPEN, but no longer computationally empty. HYP-8802 proves that
   naive Weyl ordering of the THM-2044 Poisson witness fails in five of six
-  relations and gives a finite exact correction of `{D,R}`. No simultaneous
-  `A_2` endomorphism is yet constructed; the termination gate remains.
+  relations and gives finite exact corrections of the entire `R`-column:
+  `M(Dq,R)=1`, `M(T,R)=M(Sq,R)=0`. No simultaneous `A_2` endomorphism is yet
+  constructed; the coupled `T`-column/flatness termination gate remains.
 
 ### A3. Poisson Conjecture — FALSE already for two canonical pairs (PROVED).
 **THM-2044** gives explicit `R,T,D,S in Q[x,q,p,z]` with two canonical bracket

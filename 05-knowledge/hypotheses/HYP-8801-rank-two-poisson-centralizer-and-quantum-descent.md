@@ -26,7 +26,8 @@ the final connection; importing the sheared THM-1300 coordinates and solving
 one cubic coefficient identity produces the required `(T,S,D)`.
 
 The second gate remains open and is now HYP-8802. The computation there proves
-that naive Weyl ordering fails and repairs the single `(D,R)` relation exactly.
+that naive Weyl ordering fails but repairs the entire `R`-column exactly. The
+coupled `T`-column and flatness relation remain.
 
 The owner-supplied abstract announced a polynomial completion `(R,T,D,S)` of
 the THM-2042 pair satisfying two canonical bracket relations and all cross

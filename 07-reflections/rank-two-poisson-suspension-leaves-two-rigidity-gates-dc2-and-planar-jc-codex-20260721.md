@@ -33,19 +33,15 @@ counterexample drops from three canonical pairs to two.
 - `DC(2)` remains open. The four commutative symbols do not automatically obey
   the Weyl relations after ordering.
 - Planar `JC(2)` remains open. THM-2045 proves something stronger about this
-  particular route: no member `R=x(a-bxq)`, `ab!=0`, has a polynomial planar
-  Jacobian mate.
+  route: no member `R=x(a-b x^r q^s)`, `ab!=0`, `r,s>=1`, has a polynomial
+  planar Jacobian mate.
 
-The last statement is a clean de-stabilization obstruction. In `s=xq`
-coordinates, the planar Hamiltonian derivation raises the Laurent `x`-sector by
-one. Only sector `-1` can create a constant. Its coefficient must solve
-
-```text
-((a-bs)f(s))'=1,
-```
-
-forcing a constant `f`, while polynomiality of the original `x,q` expression
-requires `s|f`. The two requirements are incompatible.
+The last statement is a clean de-stabilization obstruction. Grade `x^i q^j`
+by `s*i-r*j`; the planar Hamiltonian derivation raises this grade by `r`.
+Only one sector can create a constant, and it consists of
+`q f(x^(r/g)q^(s/g))`. Its top coefficient after applying the derivation is
+`-b(r+1+(s/g)deg(f))lc(f)`, which cannot vanish. This covers a full
+two-exponent Newton-edge family, not only the supplied coordinate.
 
 ## 3. The direct DC(2) experiment
 
@@ -61,11 +57,25 @@ fingerprint is
 So the naive quantization fails decisively. It does not follow that every
 ordering fails. For `(D,R)`, the anomaly lies in the `R`-centralizer. Multiplying
 it by the elementary mate `D0` and iterating once gives a 332-term corrected
-symbol satisfying the exact normalized Moyal relation `M(Dq,R)=1`. This is the
-first constructive foothold toward an `A_2` endomorphism.
+symbol satisfying `M(Dq,R)=1`. The `(S,R)` anomaly is lower order and dies after
+one analogous correction, giving an 85-term `Sq` with `M(Sq,R)=0`; meanwhile
+`M(T,R)=0` already. Thus the entire `R`-column is exact. The next residual
+`M(Sq,T)-1` has only 59 terms and momentum degree two, but its correction must
+preserve all three repaired relations.
 
-The hard gate is simultaneous correction. Altering `D` disturbs its relations
-with `T,S`; correcting those can create higher odd Moyal orders. Formal
+The adapted-centralizer calculation pushes further. A correction `f star ell`
+with explicit `f=x^6F(xq)` kills the tangent-degree-two layer, and two solvable
+weight ODEs kill tangent degree one. The surviving constant occupies weights
+six and twelve. The homogeneous mode at weight `m` then creates weights `m`
+and `m+6`; exact rungs `6,12,18` produce `{6,12}`, `{12,18}`, `{18,24}` and no
+linear combination closes the original constant. This is the first concrete
+sign that the formal quantization may be forced into an infinite tower. It is
+not a no-quantization theorem: simultaneously moving `T` or allowing higher
+tangent order could escape the fixed-`T`, tangent-linear ansatz.
+
+The hard gate is simultaneous correction of the coupled `T`-column and
+`M(Dq,Sq)=0`. Altering one dual coordinate disturbs the others and can create
+higher odd Moyal orders. Formal
 deformation theory predicts order-by-order corrections on affine symplectic
 space, but DC(2) needs a terminating polynomial operator at `hbar=1`, not an
 infinite formal series.
@@ -75,10 +85,13 @@ Two attacks now look concrete:
 1. Use a PBW ordering adapted to `(R,D0,L)` rather than symmetric ordering. The
    suspension is triangular in those source coordinates, so the apparent
    infinite Moyal tower may be an artifact of the wrong polarization.
-2. Solve the simultaneous `hbar^2` cochain equation exactly and measure whether
-   its support stays in a finite weight cone. A strict descending weight would
-   prove termination; an expanding ray would be evidence against this direct
-   lift.
+2. Prove or refute the observed six-weight propagation for all homogeneous
+   modes. A nonzero `m+6` coefficient at every rung would rigorously exclude a
+   finite fixed-`T`, tangent-linear repair; a cancellation identifies the first
+   escape rung.
+3. Solve the simultaneous `hbar^2` cochain equation with `T` allowed to move.
+   The current expanding ray may be a gauge artifact of freezing the quantum
+   position pair rather than a true obstruction to `A_2` quantization.
 
 ## 4. The planar positive program
 

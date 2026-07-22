@@ -16,8 +16,8 @@ lifted fibre points:
 common image: (0, 0, 0, -1/8) PASS
 exact fibre cardinality: 3 (transported through polynomial source/target automorphisms from THM-1300)
 THM-2045 PLANAR DE-STABILIZATION AUDIT
-constant-producing Laurent sector equation: ((aa-bb*ss)*f(ss))' = 1
-polynomial solution forces f=-1/bb, which is not divisible by ss: NO planar mate
+weighted-sector monomial identities: 64 PASS
+top coefficient -bb*(r+1+s0*N)*c_N is nonzero: NO planar mate
 TOURNAMENT ANALYSIS: not imposed; orienting the six tensor identities would discard the symplectic equation.
 POISSON PASS
 
@@ -32,4 +32,23 @@ HYP-8802 WEYL-SYMMETRIC QUANTIZATION AUDIT
   {D,S} P^3 terms: 273
 two-step corrected Moyal relation M(Dq,R)=1 PASS
 corrected Dq term count: 332
-QUANTUM PARTIAL PASS: simultaneous six-relation correction remains open
+one-step corrected Moyal relation M(Sq,R)=0 PASS
+corrected Sq term count: 85
+EXACT R-COLUMN: M(Dq,R)=1, M(T,R)=M(Sq,R)=0
+QUANTUM R-COLUMN PASS: run --quantum-t for the coupled T-column audit
+
+COMMAND: python -u 04-computation/poisson_rank2_symplectic_suspension_codex_20260721.py --quantum-t
+
+HYP-8802 T-COLUMN CENTRALIZER REPAIR AUDIT
+initial Weyl-symbol residual terms / momentum degree: 59 / 2
+initial residual star-commutes with R: PASS
+adapted residual terms / ell-degree: 31 / 2
+ell^2 residual coefficient: -3*x**10*(3*q*x - 2)*(18*q**3*x**3 - 39*q*x + 19)/2
+first star-central correction kills ell^2: PASS
+second central correction kills ell: PASS
+constant residual: -3*x**6*(26163*q**2*x**8 - 31455*q*x**7 + 330*q*x + 9402*x**6 - 188)/16
+  homogeneous mode 6 constant weight profile: [6, 12]
+  homogeneous mode 12 constant weight profile: [12, 18]
+  homogeneous mode 18 constant weight profile: [18, 24]
+weight-6/12/18 homogeneous freedom closes constant residual: False
+T-COLUMN AUDIT COMPLETE

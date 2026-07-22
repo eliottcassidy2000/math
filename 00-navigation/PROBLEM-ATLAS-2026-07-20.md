@@ -73,8 +73,9 @@ as results land; date-stamp edits.
   atlas + coimage-Yoneda 2n−1 resonance (reflections s604/s605, old era) —
   unintegrated with the new JC corpus.
 - **NEXT:** HYP-8802 direct `A_2` quantization: five cubic Moyal anomalies are
-  nonzero, while the `(D,R)` relation has a finite exact repair. Solve all six
-  relations simultaneously or prove the correction tower cannot terminate;
+  nonzero, while finite corrections repair the entire `R`-column exactly.
+  Solve the coupled `T`-column and flatness relations simultaneously or prove
+  the correction tower cannot terminate;
   integrate s604/605.
 - **PRIORITY: MEDIUM-HIGH.**
 
