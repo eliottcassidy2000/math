@@ -745,3 +745,4 @@ import TournamentH7.GMC2Henselian
 import TournamentH7.GMC2ReciprocalSmallRoots
 import TournamentH7.GMC2Thm2067Wrapper
 import TournamentH7.GMC2GalRootAction
+import TournamentH7.GMC2Thm2067Concrete
