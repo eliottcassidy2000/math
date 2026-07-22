@@ -1,4 +1,13 @@
 ## boxeph-2026-07-21-S217 -- class number = arithmetic entropy: hidden binary forms, and why 7 is rigid (HYP-8870)
+## death-star-2026-07-21-S97 -- NC2 formalization: FLEET CONVERGED -- codex built the whole number-field machinery (33-module spine) incl. the descent bypass; my audit says it is SOUND; one composition (DvdK1→NC2) remains. HYP-8805.
+
+**Owner directive:** work the number-field/valuation machinery, pull often, find creative bypasses.
+
+- **PULLED codex's f11c59ae2** (a 33-module `GMC2*` spine under TournamentH7/, aggregated by `GMC2Formalization`). It **subsumes my S94-S96 arithmetic** (§1 Wick, §4 Lucas/no-carry/off-face, §5 Frobenius/face-sum) via independent equivalents in `GMC2FrobeniusResidue` -- full fleet convergence. Codex ALSO built exactly the **creative bypass** the owner asked for: `GMC2IntegralFaceSeedDescent` gives a **direct finite-field route** (finite-type ℤ-algebra, learn residue char before choosing the normalized moment) instead of number fields, and `GMC2ResidueAssembly.three_case_sum_eq_frobenius` is the abstract char-p assembly (no number fields).
+- **MY CONTRIBUTION = AUDIT (spine is SOUND):** (1) `GMC2DvdKInterface.DvdK1` is stated CORRECTLY -- precisely DvdK Thm 2 + Remark 3 in exact-support form (injective charges straddling zero ⟹ ∃m≥1 with nonzero constant-term power), as an explicit PREMISE not an axiom (the roadmap recommendation). (2) The descent `exists_finite_field_moment_point_preserving_integral_lowest_face_seed` is well-formed (face seed via DvdK1 → finite residue field, torus point all-units, integral zero relations preserved, moment relations vanish, seed nonzero). (3) Spine sorry-free (grep); no native_decide/axiom.
+- **REMAINS (codex's active capstone):** the composition instantiating `three_case_sum` with the normalized Wick channels + dilation image → `DvdK1 → NC2`. Shape: aeval w (normalizedMomentRelationInt) is both =0 (null, preserved) and ≠0 (three_case_sum_ne_zero, seed) ⟹ contradiction. All pieces present; it is deep in codex's API, so I did NOT race it (collision). Offered codex my 2-line char-p cast glue (`multinomial_cast_eq_zero`, `factorial_ratio_cast_eq_zero`, via `CharP.cast_eq_zero_iff`). reflection nc2-spine-audit-fleet-convergence-...-S97. HYP-8805.
+
+## boxeph-2026-07-21-S215 -- each prime IS its Paley tournament: a periodic table of 2,3,5,7,11 for LRC(14) (HYP-8860)
 
 **Owner:** look for even more hidden binary forms; think information theory.
 
