@@ -1,0 +1,19 @@
+========================================================================
+JC(2) as an operator condition:  f is a Keller component  <=>  1 in im(D_f),  D_f={f,.}
+  and (the conjecture)  mate exists  =>  f is a coordinate  <=>  generic fiber = C.
+  f                       mate?  weight-obstruction (S107 valuation) 
+  x [coord, fiber C]      True    w=None           -- (dodges every weight)
+  x^2 [fiber 2 lines]     False   w=(0.12, 0.06)   NO mate (valuation)
+  x^2+y [coord]           True    w=None           -- (dodges every weight)
+  xy [fiber C*]           False   w=None           -- (dodges every weight)
+  x^2+y^3 [genus>0]       False   w=(0.18, 0.12)   NO mate (valuation)
+  x+x^2y [fiber C*]       False   w=None           -- (dodges every weight)
+  x^3 [3 lines]           False   w=(0.06, 0.06)   NO mate (valuation)
+  x^2+xy+y^2 [homog2]     False   w=None           -- (dodges every weight)
+
+READING:
+ * weight obstruction v_w(f)>w1+w2 (S107 manufactured valuation) catches x^2, x^2+y^3, x^3.
+ * xy, homog2 sit ON a resonant w-face: there 1 in im(D_f) is a w-quasi-homogeneous
+   CONSTANT-TERM condition (1-variable Laurent) = exactly the DvdK/S106 object.
+ * x+x^2y has fiber C* (no mate) yet DODGES every weight => the true obstruction is the
+   GLOBAL fiber topology (coker D_f = fiber cohomology), not one valuation = the JC(2) core.
