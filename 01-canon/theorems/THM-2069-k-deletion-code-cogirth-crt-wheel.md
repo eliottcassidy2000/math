@@ -1,5 +1,5 @@
 ---
-id: THM-2067
+id: THM-2069
 title: "The k-deletion CRT wheel is the low-weight evaluation code and matroid cogirth"
 status: >
   RESERVED WITH A COMPLETE PROOF UNDER AUDIT. For integer rows spanning Z^r,
@@ -22,7 +22,7 @@ related:
   - HYP-2764
 ---
 
-# THM-2067 -- The deletion wheel is a low-weight code
+# THM-2069 -- The deletion wheel is a low-weight code
 
 This ID reserves the exact higher-deletion generalization of THM-2062. The
 proof is under audit. No existence claim for an extremal `[72,36,16]` code is
