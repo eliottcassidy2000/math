@@ -1,0 +1,30 @@
+P1  TOURNAMENT COSPECTRALITY: spectrum=Eisenstein(local); the cospectral fiber = the reconstruction CUSP
+========================================================================
+  n=4: #iso classes=4; #distinct char_A spectra=3; COSPECTRAL cusp dim = 1 (cospectral families of sizes [2])
+  n=5: #iso classes=12; #distinct char_A spectra=9; COSPECTRAL cusp dim = 3 (cospectral families of sizes [2, 3])
+  n=6: #iso classes=56; #distinct char_A spectra=28; COSPECTRAL cusp dim = 28 (cospectral families of sizes [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 4, 4, 5])
+  => most tournaments are spectrally DETERMINED (Eisenstein/rigid, esp. the transitive char x^n); the
+     COSPECTRAL classes are the reconstruction CUSP -- the hidden fiber where local (spectral) data fails.
+     The cusp dim first turns POSITIVE at a specific n = the 'first hard case' of tournament reconstruction.
+
+========================================================================
+P2  INTRANSITIVITY c3 = the tournament's CUSP FORM: transitive 0 (Eisenstein) vs regular max
+========================================================================
+  n=5: transitive c3=0 (Eisenstein floor: NO cusp = pure gradient) ; regular c3=5 (max = the intransitive CUSP) ; C(n,3)=10
+  n=7: transitive c3=0 (Eisenstein floor: NO cusp = pure gradient) ; regular c3=14 (max = the intransitive CUSP) ; C(n,3)=35
+  n=9: transitive c3=0 (Eisenstein floor: NO cusp = pure gradient) ; regular c3=30 (max = the intransitive CUSP) ; C(n,3)=84
+  => c3 (the 3-cycle count) IS the tournament's cusp form: it vanishes on the transitive/AP Eisenstein
+     vertex and peaks on the regular/Paley pole. Intransitivity = the cuspidal obstruction (THM-1830 atom).
+
+========================================================================
+P3  GMC(2): angular = EISENSTEIN (DvdK-closed floor) ; radial = CUSP (Laplace determinacy, ker L != 0)
+========================================================================
+  L(t - 1) = 0   <- in ker L (a radial CUSP element: integrated-zero but nonzero)
+  L(t^2 - 3t + 1) = 0   <- in ker L (a radial CUSP element: integrated-zero but nonzero)
+  L(t^2 - 2t) = 0   <- in ker L (a radial CUSP element: integrated-zero but nonzero)
+  E = L o CT (THM-1645): the ANGULAR CT (DvdK) is CLOSED = the EISENSTEIN floor (the easy, proved half);
+  the RADIAL L has a nonzero KERNEL = the CUSP obstruction (Laplace determinacy). GMC(n>=3) FALSE = the
+  cusp grows (extra obstructions); GMC(2) rigid = the radial cusp is defeated by Frobenius (THM-2022).
+
+========================================================================
+P4  FIGURATE: cake/bagel = EISENSTEIN (polynomial main term) (+) CUSP (Fibonacci/oscillating deviation)
