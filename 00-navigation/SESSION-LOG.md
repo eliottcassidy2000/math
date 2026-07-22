@@ -1,3 +1,15 @@
+## boxeph-2026-07-22-S242 -- GMC(2) reduced to ONE lemma: the top-level univariate-reduction capstone (kernel-pure) + frame bridge claimed
+
+**Owner:** work on finishing up all remaining GMC2 formalization, pull often and integrate ideas.
+
+- **STATE INTEGRATED (pulled often):** mac-mini-S165 (`coeff_zero_smallRootFactor_mul_unit`: `P.coeff0·h(0)=-t·r0` ⟹ crux = `h(0,t)=1`), kind-pasteur-S128c151 (char-0 back half, `smallRootFactor_coeff0_eq_of_derivative_vanishes`), death-star-S115 (`hconst` = `h(0,0)=1` discharged). So the multiplicative route was down to `hderiv`+`hconst`, then `hderiv` alone. I flagged `hconst` before building it (death-star had it) — no collision.
+- **DELIVERED kernel-pure [propext,Classical.choice,Quot.sound], 2 files pushed:**
+  - **`GMC2Thm2067HSonly.thm2067_reduced_to_hS`** — the concrete THM-2067 orbit-product contradiction from `hS` **alone**. Discharged the two auxiliary hyps of `thm2067_reduced_to_thm1550`: `hsep` (via `CharZero (RatFunc F)`→`PerfectField`→separable→`.map`) and `hfix` (Galois-fixedness of the packet product is a *consequence* of `hS`, since `C c·X` is a base-field element; `AlgHomClass.commutes`, derived-`MulSemiringAction` smul defeq to application).
+  - **`GMC2DvdKUnivariateReduction`** — the TOP-level integration: `coeff_shiftedPolynomial_achiever` + Check A build `R,M` from any both-signs support (`M=-min q`; unique min/max charges ⟹ `R.coeff 0≠0`, `M<deg R`); `dvdK1_bothSigns_of_crux : SinglePolyCrux → DvdK1BothSigns`; composed with `dvdK1_of_bothSigns` + `gmc2_of_dvdK1` into **`gmc2_of_crux : SinglePolyCrux → (∀ P Q, E(Pᵐ)=0 ⟹ eventually E(Q·Pᵐ)=0)`**.
+- **NET:** GMC(2) is now a **kernel-pure, machine-checked reduction to exactly ONE lemma** (`SinglePolyCrux` = splitting-field `hS`), with the entire top-level assembly complete (`SinglePolyCrux → DvdK1BothSigns → DvdK1 → NC2 → GMC(2)`).
+- **FRAME BRIDGE CLAIMED:** per kind-pasteur's frame analysis, `hderiv` closes the Weierstrass route to `Π=c·t` in the **power-series** frame, while my `hS` is in the **splitting field** — they need a bridge `∏_{β∈S} β = (-1)ᴹ (smallRootFactor R M).coeff 0`. I claimed it (my frame; kps/death-star stay off). Once done: GMC(2) ⟸ `hderiv` alone.
+- **HONEST:** did NOT close `hderiv` (mac-mini's deep lane) or the frame bridge (mine, deep, multi-session — needs `RatFunc F↪F((t))` + val-positive root selection). Contributed the top-level assembly reducing GMC(2) to a single lemma. HYP-9012.
+
 ## death-star-2026-07-22-S115 -- hconst DISCHARGED kernel-pure (h(0,0)=1): multiplicative THM-1550 crux reduced to hderiv ALONE
 
 **Owner:** finish up all remaining GMC2 formalization; pull often; integrate ideas. (Also handed a Poisson/Dixmier-Conjecture "counterexample" abstract -- flagged as an extraordinary JC(4)/DC(4)-disproof claim, unverifiable as written since T,D,S not given; NOT integrated; separate from the GMC2 task.)
