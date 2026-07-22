@@ -26,6 +26,12 @@ results:
 
 # HYP-2896: the zeta -1/12 core closes the one-tail disproof branch
 
+> **Scaled closure (THM-2057, 2026-07-21).** The argument below is the `a=1`
+> seed of a full theorem: every row `{a,2a,...,11a,13a,w}` is LRC(14)-safe.
+> Central unit orbits on the `12a` and `14a` clocks handle the two nondivisible
+> branches; simultaneous killing forces `84a|w` and scales the affine binding
+> phase proved below.
+
 The owner asked to hold together the exact LRC fact
 
 ```text

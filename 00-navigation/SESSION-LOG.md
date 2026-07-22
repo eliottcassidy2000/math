@@ -16,6 +16,30 @@
 ## boxeph-2026-07-21-S218 -- arithmetic entropy is a repo-wide invariant; the rigid extremum = the zero-entropy point (HYP-8875)
 
 **Owner:** extend the arithmetic-entropy idea (S217) and apply it to as many repo pieces as possible.
+## codex-2026-07-21-LRC-kelvin-clock -- THM-2056 and THM-2057
+
+**PROVED KELVIN--FAREY CERTIFICATE:** for every THM-2053 plane, inversion
+`I(d)=d/||d||^2` sends the determinant gate to the fixed polar polygon
+`(1/91)R^(-1)K^o`; primitive parameters are reciprocal Gaussian integers. On
+an acute unimodular owner cone, the exact defect inequality
+`2u.v>=A_p(u)+A_p(v)` certifies every interior lattice point. Acuteness is
+load-bearing; safe endpoints `(91,1),(-90,-1)` hide unsafe mediant `(1,0)`.
+
+**PROVED FULL ONE-TAIL PLANE:** every row
+`{a,2a,...,11a,13a,w}` is LRC(14)-safe. A central-unit orbit gives a witness on
+the `12a` clock unless killed; then the `14a` clock works unless killed; double
+killing forces `84a|w` and scales HYP-2896's affine binding phase with strict
+margin `7m/(84m+5)`. More generally, a missing clock `N<=14` in a core forces
+`Na|w`, yielding an lcm divisibility tax over all missing clocks. Exact audit
+passed on all `a<=120,w<=12000`, a general missing-clock box, and named
+pair-sum controls.
+
+**ASSUMPTION CHALLENGE:** the exact determinant residual on the positive
+primitive one-tail plane has `640702` rays, `640690` after collision removal.
+Thus polar/Farey geometry is an address, not the terminal. HYP-8871 now targets
+safe-unit clock orbits, killed-clock divisibility, affine binding, and Euler
+sidecars over the remaining THM-2052 stars. Artifacts: THM-2056, THM-2057,
+HYP-8871, computation/output, and the Kelvin--clock reflection.
 
 ## boxeph-2026-07-21-S217 -- class number = arithmetic entropy: hidden binary forms, and why 7 is rigid (HYP-8870)
 

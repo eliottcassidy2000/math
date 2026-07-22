@@ -1,13 +1,19 @@
 ---
 id: THM-2057
-title: "Every scaled zeta-core one-tail row satisfies LRC(14)"
+title: "The scaled missing-clock sieve and zeta-core one-tail closure"
 status: >
-  CLAIMED / namespace reserved. The proof reduces the row
-  {a,2a,...,11a,13a,w} by exact modular orbits on the 12a- and 14a-clocks;
-  the sole double-kill case 84a|w scales to HYP-2896's explicit affine
-  binding witness. The modular-orbit lemma and boundary cases are being
-  written and audited. This closes one rank-two plane, not LRC(14).
+  PROVED. General sieve: if a core C contains no multiple of N, 2<=N<=14,
+  then a scaled one-tail counterexample aC union {w} must have Na|w. Hence it
+  pays the lcm of all missing clocks. For C={1,...,11,13}, the missing clocks
+  are exactly 12 and 14. Their lcm forces 84a|w, where HYP-2896's scaled
+  affine binding witness is strict. Thus every row
+  {a,2a,...,11a,13a,w} satisfies LRC(14). This closes one rank-two plane, not
+  LRC(14).
 source: codex-2026-07-21-LRC-scaled-zeta-core
+script: 04-computation/lrc_kelvin_farey_scaled_core_codex_20260721.py
+result: 05-knowledge/results/lrc_kelvin_farey_scaled_core_codex_20260721.out
+script_sha256: 1710a895413e551def7ec6b0a3cd13df8e29dbaa4faab29080ea277e8d34fdc1
+result_sha256: 9127ea9db3d697f6d4ca91b329e2ddcbbdace9e1790f5d74700c8e89e4e99c16
 depends_on:
   - THM-2047
   - HYP-2896
@@ -18,6 +24,194 @@ related:
   - HYP-8846
 ---
 
-# THM-2057 -- scaled zeta-core one-tail closure
+# THM-2057 -- scaled missing-clock sieve and zeta-core closure
 
-Namespace reserved honestly. Full statement and proof follow in this session.
+Let
+
+```text
+C={1,2,...,11,13},
+S(a,w)=a C union {w},          a,w in Z_(>0).              (1)
+```
+
+Repeated speeds, if any, impose no extra constraint, so the statement covers
+both sets and labelled rows.
+
+**Theorem.** For every positive integers `a,w`,
+
+```text
+M(S(a,w))>=1/14.                                         (2)
+```
+
+Equivalently, the whole integral rank-two plane
+
+```text
+a(1,2,...,13)+b e_12,       a>0, 12a+b=w>0,              (3)
+```
+
+satisfies LRC(14).
+
+## 1. A modular unit-orbit lemma
+
+We use the following elementary lemma.
+
+**Lemma.** Let `2<=N<=14`, let `a,w` be positive integers, and put `q=Na`.
+If `q` does not divide `w`, there is an integer `k` such that
+
+```text
+gcd(k,N)=1,                 ||k w/q||>=1/14.              (4)
+```
+
+*Proof.* Put
+
+```text
+g=gcd(w,q),       h=q/g>=2,       c=w/g,
+```
+
+so `gcd(c,h)=1`. Choose a unit `r mod h` away from the two ends of the residue
+interval as follows:
+
+```text
+h<=14:             r=1;
+h>14 odd:          r=(h-1)/2;
+h>14, h=0 mod 4:  r=h/2-1;
+h>14, h=2 mod 4:  r=h/2-2.                                (5)
+```
+
+In every case `gcd(r,h)=1` and
+
+```text
+min(r,h-r)>=h/14.                                        (6)
+```
+
+Choose `k_0 mod h` with `c k_0=r mod h`. It is a unit modulo `h`. We may
+replace `k_0` by `k_0+h t` so that it is also coprime to `N`: if a prime
+`p|N` divides `h`, every representative is already nonzero modulo `p`; if
+`p` does not divide `h`, exactly one class of `t mod p` is forbidden. Choose
+the allowed classes simultaneously for the primes dividing `N`.
+
+For the resulting `k`,
+
+```text
+||k w/q||=||k c/h||=min(r,h-r)/h>=1/14,
+```
+
+which proves the lemma. QED.
+
+The point of using a *unit* `r` is that no Jacobsthal, class-group, or
+equidistribution input is hidden here. Formula (5) is an explicit central
+unit for every modulus.
+
+**Missing-clock corollary.** Let `C_0` be any finite set of positive integers
+with no element divisible by `N`, where `2<=N<=14`. Then
+
+```text
+Na does not divide w  implies  M(a C_0 union {w})>=1/14.  (7)
+```
+
+Indeed, use the lemma's `t=k/(Na)`. Every core phase is
+`||c k/N||>=1/N>=1/14`, because `k` is a unit modulo `N` and `c` is nonzero
+modulo `N`; the tail satisfies (4).
+
+Consequently, if
+
+```text
+Q(C_0)=lcm{N:2<=N<=14 and C_0 contains no multiple of N}, (8)
+```
+
+then any counterexample of the form `a C_0 union {w}` must pay the exact
+divisibility tax
+
+```text
+a Q(C_0) divides w.                                      (9)
+```
+
+This is the transferable statement. It converts several surviving safe
+clocks into one high-codimension divisibility ray before any geometry or
+Euler argument is used.
+
+## 2. The `12a` clock
+
+Suppose first that `12a` does not divide `w`. Apply the lemma with `N=12` and
+write `t=k/(12a)`. For every `i in C`,
+
+```text
+||a i t||=||i k/12||>=1/12,                              (10)
+```
+
+because `k` is a unit modulo `12` and none of the residues
+`1,2,...,11,13=1 mod 12` is zero. The tail has distance at least `1/14` by
+(4). Thus `t` proves (2).
+
+This strictly extends HYP-2896's first branch. The old `a=1` proof only had
+to observe `12 does not divide w`; the unit-orbit lemma supplies the missing
+numerator when the core has arbitrary scale `a`.
+
+## 3. The `14a` clock
+
+Now suppose `12a|w` but `14a` does not divide `w`. Apply the lemma with
+`N=14` and put `t=k/(14a)`. Since `k` is a unit modulo `14` and no element of
+`C` is zero modulo `14`,
+
+```text
+||a i t||=||i k/14||>=1/14       for every i in C,        (11)
+```
+
+while the tail again satisfies (4). Hence (2) follows.
+
+Notice that the route decision is divisibility by the *scaled* clocks
+`12a,14a`, not by `12,14`. Projectivizing the parameter plane too early would
+erase exactly this datum.
+
+## 4. The double-kill binding family
+
+It remains that both `12a` and `14a` divide `w`. Their least common multiple
+is `84a`, so
+
+```text
+w=84a m,             m>=1.                               (12)
+```
+
+HYP-2896 proves for the unscaled row `C union {84m}` that
+
+```text
+t_m=(35m+2)/(84m+5),
+min_(v in C union {84m}) ||v t_m||=7m/(84m+5)>1/14.      (13)
+```
+
+For `S(a,w)`, use `t=t_m/a`. Then every phase is identical to its phase in
+(13): `ai t=i t_m` and `w t=84m t_m`. Therefore the last branch is not merely
+safe but strict. This completes the proof of (2). QED.
+
+## 5. Exact route certificate
+
+The proof is algorithmic and has only three leaves:
+
+```text
+12a does not divide w  -> central unit on the 12a clock;
+12a divides w, 14a does not -> central unit on the 14a clock;
+84a divides w          -> scaled affine binding phase (13).               (14)
+```
+
+No finite-height search is involved. The route also explains why the very
+large THM-2053 determinant residual on this plane is misleading: the phase
+certificate is controlled by two scaled clock orbits and one divisibility
+ray, not by Euclidean parameter size.
+
+## 6. Assumption challenge and transfer target
+
+The useful vertices here are neither runners nor normal-fan sectors. They are
+
+```text
+safe numerator orbits,
+killed clocks,
+divisibility sublattices,
+binding rays.
+```
+
+This quotient preserves the actual LRC witness margin and the route modulus;
+it forgets endpoint-owner topology away from the one-tail core. The transfer
+target for a general THM-2052 star is therefore: find a lower-rank core whose
+safe residues contain a complete unit orbit on one or two clocks, then prove
+that simultaneous clock killing forces a finite collection of affine binding
+families. HYP-8871 records that sidecar program alongside the Kelvin/Farey
+address from THM-2056.

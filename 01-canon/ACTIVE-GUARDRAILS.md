@@ -78,7 +78,10 @@ mistake.
      of `conv{+-c_i}`; the Euclidean right side has discriminant `-4`, not
      `-7`. Gate failure means uncertified, not isotropic/rank or
      anisotropic/Euler. Use THM-2055's signed hull normal fan and tangent
-     sectors; restore pair-sum and endpoint-owner data before concluding LRC.
+     sectors or THM-2056's Kelvin-polar/Farey certificate; restore a genuine
+     phase sidecar before concluding LRC. THM-2057 is the control: its whole
+     one-tail plane is closed by scaled clock orbits and affine binding even
+     though the determinant residual contains `640690` distinct-speed rays.
 
 ## NC2 / GMC
 

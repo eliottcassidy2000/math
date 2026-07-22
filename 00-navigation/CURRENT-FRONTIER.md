@@ -141,7 +141,17 @@ structural supplier/seed and a lossless exit.
   form a divisibility down-set with a rational conductor (AP cutoff `156`).
   THM-2055 independently restricts determinant failure to hull-owner tangent
   sectors; non-hull representatives remain load-bearing in the deck sidecar.
-  HYP-8871 targets exact Farey/Klein-sail discharge of this finite intersection.
+  THM-2056 Kelvin-inverts those sectors to the fixed polar polygon
+  `(1/91)R^{-1}K^o` and proves the Farey defect rule
+  `2u.v>=A_p(u)+A_p(v)` for whole acute unimodular cones. THM-2057 closes the
+  entire one-tail plane `{a,2a,...,11a,13a,w}` by a `12a` clock / `14a` clock /
+  `84a` affine-binding certificate. More generally, a missing clock `N<=14`
+  forces `Na|w` in any one-tail counterexample over `aC`. Although that plane
+  has `640690` distinct-speed primitive determinant failures, the arithmetic
+  carrier has only three leaves. HYP-8871 targets exact deck/Farey discharge
+  with clock/binding/Euler sidecars over the remaining finite intersection;
+  THM-2058 supplies the primitive phase-packet and coprime longitudinal-
+  interval terminal inside each fixed bad deck.
 - **PROVED relative whole-product decorrelation:**
   [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says every scalar relation through height `H` on the line must lift to the

@@ -20,6 +20,9 @@ related:
   - THM-2053
   - THM-2054
   - THM-2055
+  - THM-2056
+  - THM-2057
+  - THM-2058
   - HYP-2108
   - HYP-1842
   - HYP-1977
@@ -169,14 +172,15 @@ matrices, and bound a reduced-basis `L` directly from the sparse triple code.
   exact transverse `N`-grid on the specified row.
 - HYP-4346 supplied the rank-two algebra but also exposed the wrong-quantifier
   trap. It is now optional acceleration, not the bridge.
-- HYP-2896 is the exact one-tail model of the finite-cell fan. On
-  `span((1,...,13),e_12)`, target rows split by the resonance walls `12|w` and
-  `14|w`; the cells carry `q=12`, `q=14`, or the affine binding phase
-  `(35m+2)/(84m+5)`. In the basis `u=(1,...,13),z=e_12`, writing `w=12+b`,
-  THM-2053's determinant is exactly `13|b|` for `b!=0`, so it certifies every
-  integer `|b|>=1183`. The HYP-2896 fan discharges the finite residue
-  symbolically. That geometry-then-arithmetic split is the desired output
-  format for a general plane.
+- HYP-2896 is the scale-one model of the finite-disk fan. THM-2057 now closes
+  the entire integral plane `span((1,...,13),e_12)`: the scaled walls are
+  `12a|w` and `14a|w`; their cells carry a central-unit witness on the `12a`
+  or `14a` clock, while simultaneous killing forces `84a|w` and the scaled
+  affine binding phase `(35m+2)/(a(84m+5))`. In the basis
+  `u=(1,...,13),z=e_12`, writing `w=12a+b`, THM-2053's determinant is
+  `max(13|b|,|a-12b|)`, and THM-2056 Kelvin-inverts its gate to a rational
+  polar parallelogram. The clock theorem, not the determinant gate, certifies
+  every residual direction.
 - HYP-2986 supplies the faithful three-state terminal: open tope, boundary
   cocircuit, or forbidden wall packet.
 - HYP-2647 supplies the addressed wall-transport matrix for moving between
@@ -190,19 +194,25 @@ matrices, and bound a reduced-basis `L` directly from the sparse triple code.
 - HYP-8845/HYP-8850 parity duplicates a first survivor into its mirror. It
   cannot create that first survivor and therefore belongs after the pointed
   gate.
-- THM-2054 is the incoming analytic complement: relative Fejer decorrelation
-  along a character line could certify whole off-resonance cells before exact
-  lattice-point enumeration. It is currently claimed/in progress and is not
-  used in THM-2053.
+- THM-2054 is the proved analytic complement: bounded scalar resonances that
+  all lift to vector-character relations give a whole-product Fejer
+  decorrelation estimate without summing the relation lattice. Its
+  model-specific full-torus identification debt remains explicit.
 - HYP-8860's Paley-prime table usefully assigns roles to moduli `3,7,11`
   (resonance atom, period-14 apex, rank scale). It is a modulus-selection lens,
   not a carrier: Paley orientation discards the signed coefficients and
   endpoint owners needed to decide a tangent-disk point.
 - THM-2055 replaces the raw tangent-disk union by the signed column polygon's
   normal fan. Only hull vertices own the determinant maximum; each owner cone
-  has one disk and an owner-local radius. HYP-8871 proposes ordinary
-  Stern--Brocot/Klein-sail traversal of those rational sectors. MISTAKE-225
-  records why Heegner form classes cannot replace this polygonal carrier.
+  has one disk and an owner-local radius. THM-2056 Kelvin-inverts those disks
+  to one polar polygon and proves an acute-unimodular defect certificate for
+  whole Farey cones. HYP-8871 now couples this exact address to scaled safe
+  clocks, killed-clock divisibility, affine binding, and Euler sidecars.
+  MISTAKE-225 records why Heegner form classes cannot replace the carrier.
+- THM-2058 adds the exact phase-order packet and longitudinal-interval carrier
+  inside each bad transverse deck. This is complementary to THM-2057: the
+  former decomposes a fixed bad denominator, while the latter removes whole
+  one-tail families by missing-clock divisibility before interval enumeration.
 
 ## Tournament analysis
 
