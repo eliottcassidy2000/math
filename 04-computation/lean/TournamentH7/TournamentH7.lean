@@ -757,3 +757,4 @@ import TournamentH7.GMC2TopLagrange
 import TournamentH7.GMC2DvdKWeierstrass
 import TournamentH7.GMC2DvdKCharZeroClosing
 import TournamentH7.GMC2DvdKMultiplicativeClosing
+import TournamentH7.GMC2DvdKUnitOrigin
