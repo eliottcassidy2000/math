@@ -146,6 +146,33 @@ def main() -> None:
         row_vector = tuple(least_abs(ell * 2 * a, 27) for a in ap12)
         require(template_vector == row_vector, f"label transport x={x}")
 
+    units_27 = tuple(x for x in range(27) if gcd(x, 27) == 1)
+    packet_27 = frozenset(primitive_packet(ap12, 27))
+    stabilizer_27 = tuple(
+        unit
+        for unit in units_27
+        if frozenset((unit * x) % 27 for x in packet_27) == packet_27
+    )
+    orbit_27 = {
+        frozenset((pow(unit, -1, 27) * x) % 27 for x in packet_27)
+        for unit in units_27
+    }
+    incidence_27 = {
+        x: sum(x in packet for packet in orbit_27)
+        for x in units_27
+    }
+    require(stabilizer_27 == (1, 26), "N=27 packet stabilizer")
+    require(len(orbit_27) == 9, "N=27 packet orbit size")
+    require(set(incidence_27.values()) == {1}, "N=27 orbit norm incidence")
+
+    s24 = (*range(1, 12), 13, 24)
+    require(safe_packet(s24, 14) == (1, 3, 5, 9, 11, 13), "S24 singleton packet")
+    for n in range(1, 15):
+        require(
+            len(safe_packet(s24, n + 14)) == len(safe_packet(s24, n)),
+            f"S24 singleton period N={n}",
+        )
+
     crt_template = (1, -1, 2, 4, 7)
     require(
         tuple(map(len, (primitive_packet(crt_template, 3),
@@ -219,6 +246,8 @@ def main() -> None:
     print(f"beatty_Q={beatty_q} beatty_shift={beatty_shift}")
     print("AP12_primitive_packets=p13:12,p27:2,p351:0")
     print("unit_transport_N27=M1:{2,25},M2:{1,26}")
+    print("orbit_norm_N27=stabilizer:2,packets:9,incidence:1")
+    print("singleton_period_S24=Q14,packet:{1,3,5,9,11,13}")
     print("CRT_no_go=p3:2,p5:4,p15:0")
     print("one_tail_deck_numerators=" + ",".join(f"{k}:{v}" for k, v in one_tail_values.items()))
     print("fan_interval_fingerprints=" + ",".join(interval_fingerprints))

@@ -80,6 +80,14 @@
   `S_38` unresolved (`D_51=1/17`), while non-hull `r=10` recovers its exact
   `1/12` exit (`D_48=1/12`). Primitive packets are phase-order, not THM-2041
   frequency projectors, and they are not CRT-multiplicative.
+- **Orbit-product transfer:** the TNC monodromy norm becomes an exact
+  unit-stabilizer identity for primitive packets. At `N=27` the stabilizer is
+  `{1,-1}`, giving nine packet images with incidence one; the same calculation
+  proves that an unlabelled packet loses signed orientation and creates no seed.
+- **Referee repair:** the theorem now scopes transverse coefficients to nonzero
+  integers, cites the arity-free THM-2047 pair-sum theorem and the exact
+  `THM-1065-doubling-family-mod-six-characterization.md` source for the
+  Goddyn--Wong boundary, and tests the zero-measure `S_24` period-14 packet.
 - **Open residual:** the fixed-star enumeration is exact and one-dimensional;
   uniform THM-2052 atlas compression and pair-sum/Euler/relative-Fejer
   discharge of surviving rows remain open.
@@ -87,6 +95,9 @@
 ## death-star-2026-07-21-S98 -- NC2 capstone: skeleton of `DvdK1 → NC2` typechecks (architecture validated); full completion plan worked out + reference-channel friction resolved. HYP-8805.
 
 **REDUCTION:** DvdK -> standard analytic combinatorics (dominant-saddle nonvanishing) + THM-1840 periodicity + S208 confluent cusp -- all effective, none DvdK's machinery. Makes GMC(2)'s angular/Eisenstein floor (S221) DvdK-free + effective (yields the open effective-DvdK bound m0).
+## boxeph-2026-07-21-S221 -- the cusp frame is a repo-wide difficulty-LOCATOR (HYP-8885)
+
+**THE FRAME as a diagnostic:** object = EISENSTEIN (computable floor/main term/local) + CUSP (hidden obstruction = genus = deep arithmetic entropy S218). Difficulty is always the CUSP; the frame localizes it + predicts the first-hard-case = first positive cusp dim.
 
 **Honest:** a bypass ROUTE verified in parts, not a complete replacement theorem; full write-up needs steepest-descent through the general (complex/off-axis) dominant saddle + the aperiodicity=>unique-dominant-saddle lemma (both standard Hayman/Pemantle-Wilson, neither needing DvdK). Creative core: DvdK's angular non-vanishing IS a Watson/Laplace saddle count, whose only hard residue is the confluent cusp the repo already resolved. Artifacts: reflection bypassing-dvdk-the-saddle-point-watson-route-...-boxeph-S222.md, HYP-8890, script (+.out).
 **SWEEPS (verified, the_cusp_frame_as_a_diagnostic_across_the_repo_boxeph_S221.py):**

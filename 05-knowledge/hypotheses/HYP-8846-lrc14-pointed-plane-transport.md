@@ -39,6 +39,8 @@ related:
   - HYP-8850
   - HYP-8860
   - HYP-8871
+  - HYP-8877
+  - HYP-8885
 ---
 
 # HYP-8846 -- pointed transport, not an unpointed plane escape
@@ -191,6 +193,14 @@ fiber representatives. A sign-only matroid is insufficient.
 - THM-2058 imports HYP-3456's Beatty clock at count level and THM-685's grid
   discrepancy at primitive-order level. Its Mobius packets are phase strata,
   not THM-2041 Fourier projectors; unit Frobenius creates no safe seed.
+- The orbit-product argument from
+  `THM-1605-tnc-proved-monodromy-transitivity.md` does transfer exactly to a
+  primitive packet. If `H` is its unit stabilizer, there are
+  `phi(N)/|H|` longitudinal packet images, each primitive phase has uniform
+  incidence `|A|/|H|`, and their commutative product is a full-unit norm.
+  Unlike TNC, there is no nonconstant `ct` factor to contradict that norm.
+  Since `-1 in H`, the quotient also proves that signed orientation is a
+  necessary sidecar rather than optional bookkeeping.
 - HYP-4346 supplied the rank-two algebra but also exposed the wrong-quantifier
   trap. It is now optional acceleration, not the bridge.
 - HYP-2896 is the scale-one model of the finite-disk fan. THM-2057 now closes
@@ -235,11 +245,21 @@ fiber representatives. A sign-only matroid is insufficient.
   whole Farey cones. HYP-8871 now couples this exact address to scaled safe
   clocks, killed-clock divisibility, affine binding, and Euler sidecars.
   MISTAKE-225 records why Heegner form classes cannot replace the carrier.
-- THM-2058 claims the phase-order packet and longitudinal-interval carrier
-  inside each bad transverse deck, but its checked theorem file is still a
-  reserved stub. THM-2059 proves the missing composition: safe core and tail
-  packets meet by an exact CRT reduction-histogram dot product for arbitrary
-  `N`. THM-2057 is its rigid `N<=14` nonemptiness specialization.
+- THM-2058 adds the exact phase-order packet and longitudinal-interval carrier
+  inside each bad transverse deck. This is complementary to THM-2057: the
+  former decomposes a fixed bad denominator, while the latter removes whole
+  one-tail families by missing-clock divisibility before interval enumeration.
+- THM-2059 proves the missing core/tail composition: their safe packets meet
+  by an exact CRT reduction-histogram dot product for arbitrary `N`, with a
+  zero-mode/finite-Fourier fluctuation split. THM-2057 is its rigid `N<=14`
+  nonemptiness specialization; THM-2058 supplies primitive-order and owner-
+  interval structure inside the resulting packet.
+- HYP-8877's GMC confinement and HYP-8885's cusp frame are useful schedulers,
+  not proof transfers. They suggest prioritizing nonresonant/single-owner
+  cells before tied multi-packet cells and naming the genus-one remainder, but
+  neither gives an LRC safe seed, an interval exit, or a lawful loss of signed
+  owner data. THM-2058's CRT, spanning-tree, mask-walk, and fixed-jet controls
+  are the falsifying checks against treating either analogy as a certificate.
 
 ## Tournament analysis
 

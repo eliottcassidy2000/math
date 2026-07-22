@@ -2,7 +2,8 @@
 id: THM-2058
 title: "Primitive phase packets and one-dimensional deck/fan intervals"
 status: >
-  PROVED, elementary. A transverse denominator-N safe packet is the disjoint
+  PROVED from THM-2053 and settled lower-dimensional LRC; all new arguments
+  are elementary. A transverse denominator-N safe packet is the disjoint
   union of its reduced phase-order packets. Counts obey divisor summation,
   Mobius inversion, an exact rational Ehrhart/Beatty shift law, and a primitive-
   phase discrepancy bound. Across a longitudinal fiber the entire labelled
@@ -15,8 +16,11 @@ source: codex-2026-07-21-LRC-primitive-packets
 depends_on:
   - THM-2053
   - THM-2055
-  - THM-1002
+  - THM-2047
+  - THM-1065-doubling-family-mod-six-characterization
 related:
+  - THM-1002
+  - THM-1605-tnc-proved-monodromy-transitivity
   - THM-685
   - THM-2041
   - HYP-3036
@@ -25,15 +29,15 @@ related:
   - HYP-8871
 script: 04-computation/lrc14_primitive_phase_packet_referee_codex_20260721.py
 output: 05-knowledge/results/lrc14_primitive_phase_packet_referee_codex_20260721.out
-script_sha256: c58405b46db1b528c03e3fb6bdb8473591869201949eb1bbfb0a01a6e84893df
-output_sha256: 0b7beb626e6a3db6103ef6eb8f04d3e8fd3b0cce36a6b0af83a0339f3b2733a9
+script_sha256: ad40c2702303288a6315d96dcf783a22fcbb202f1308d4cf4f84e86126f459c3
+output_sha256: abacef8c372ad141806d9ce7f70b416b1fe3f5ee062f876dcb6dda648efbf813
 ---
 
 # THM-2058 -- primitive phase packets and deck/fan intervals
 
 ## 1. Exact reduced-phase decomposition
 
-Fix a finite integer template
+Fix a finite nonempty template of nonzero integers
 
 ```text
 m=(m_1,...,m_s)
@@ -131,6 +135,45 @@ The analogy stops there. The packets in (2) are exact **phase-order** strata,
 as in HYP-3036, not THM-2041's exact-frequency character projectors. Unit
 Frobenius merely permutes a `0/1` safe indicator and supplies no safe seed.
 
+### Stabilizer and orbit norm
+
+The whole-packet rule has a second exact consequence imported from the
+orbit-product mechanism in `THM-1605-tnc-proved-monodromy-transitivity.md`.
+Put
+
+```text
+G=U_N,       A=S_N^prim(m),       H={u in G:uA=A},
+B_M=M^(-1)A  (M in G).                                  (10a)
+```
+
+Then
+
+```text
+B_M=B_(M') iff M'H=MH,       #{B_M:M in G}=phi(N)/|H|.  (10b)
+```
+
+Moreover every primitive phase belongs to exactly `|A|/|H|` distinct packet
+images. Consequently, for commuting indeterminates `(z_x)_(x in G)`,
+
+```text
+product_(B in G.A) product_(x in B) z_x
+  = (product_(x in G) z_x)^(|A|/|H|).                  (10c)
+```
+
+Indeed (10b) is orbit--stabilizer. The unit action on primitive phases is
+transitive, so double-counting packet--phase incidences makes their number
+constant and gives the exponent in (10c). This is a useful exact norm identity,
+but unlike the Gaussian/TNC application it has no nonconstant `ct` term to
+oppose a constant Vieta product; it creates no safe seed.
+
+There is also an unavoidable quotient loss. Since `A=-A`, one has `-1 in H`
+for `N>2`, so the unlabelled packet forgets at least the orientation
+`M <-> -M`. At `N=27` above, `H={1,26}`: the two orientations have identical
+safe phase locations, while their signed residue vectors at a fixed phase are
+negatives. Signed endpoint or owner arguments must therefore retain an
+orientation/residue sidecar. The same orbit norm applies separately on every
+divisor packet in (3).
+
 ## 3. Exact Ehrhart/Beatty law and primitive discrepancy
 
 Let
@@ -139,7 +182,7 @@ Let
 G(m)={theta in R/Z:min_k ||m_k theta||>=1/14}.         (11)
 ```
 
-Its boundary lies on the rational walls
+Because every `m_k` is nonzero, its boundary lies on the rational walls
 
 ```text
 theta=(14r+1)/(14|m_k|) or (14r-1)/(14|m_k|).         (12)
@@ -195,8 +238,8 @@ packet itself is required.
 
 Suppose the distinct absolute values among the `m_k` number at most twelve and
 put `R=max_k|m_k|`. Settled lower-dimensional LRC supplies a phase of height at
-least `1/13`. The exact pair-sum maximizer theorem THM-1002 then supplies a
-reduced maximizer `a/q` with
+least `1/13`. The arity-free pair-sum maximizer theorem THM-2047, Section 2,
+then supplies a reduced maximizer `a/q` with
 
 ```text
 q<=2R,       q divides x+y for two absolute template speeds x,y.
@@ -236,7 +279,8 @@ v_k=a_kN+m_kM,
 gcd(N,M)=1.                                           (18)
 ```
 
-Fix a signed hull owner `p` from THM-2055 and let `w_p` be its quarter-turned
+Now fix `N>0`, a signed hull owner `p` from THM-2055, and let `w_p` be its
+quarter-turned
 linear functional, so the determinant norm in the owner cone is `d dot w_p`.
 After substitution, failure of the exact THM-2053 gate is
 
@@ -255,8 +299,8 @@ a_kN+m_kM>0                                           (20)
 ```
 
 are linear half-lines in `M`. With a fixed half-open convention on owner ties,
-their intersection is therefore one explicit possibly empty or half-open
-interval `I_(N,p)`.
+their intersection is therefore one explicit interval `I_(N,p)`, possibly
+empty, open, closed, or half-open.
 
 The remaining primitive candidates before speed collisions are exactly
 
@@ -356,10 +400,11 @@ At `ell=4`, this is the actual phase `1/12`, and the core
 M(S_38)=1/12.
 ```
 
-For the Goddyn--Wong boundary row `S_24`, the same hull choice gives
-`D_37=2/37` and `r=10` gives `D_34=2/34`; both remain below `1/14`, consistent
-with its exact height `1/14`. These values give a concrete, exact failure of a
-hull-only deck quotient.
+For the Goddyn--Wong boundary row `S_24`, whose exact height `1/14` is the
+`n=13` case of `THM-1065-doubling-family-mod-six-characterization.md`, the
+same hull choice gives `D_37=2/37` and `r=10`
+gives `D_34=2/34`; both remain below `1/14`. These values give a concrete,
+exact failure of a hull-only deck quotient.
 
 More positively, every reduced safe phase `a/q` with `q<=12` on this plane is
 captured by choosing
@@ -384,8 +429,9 @@ The archive analogies become useful only after stating what they preserve.
    the integer threshold `ceil(15/14)=2`.
 2. **Positive spanning-tree faces do not create a seed.** For
    `m=(1,-1,2,...,12)` at `N=15`, THM-2053 gives `D_15=1/15<1/14`, while all
-   danger sets contain phase `0`. Every raw pair-overlap edge and hence every
-   positive spanning-tree monomial is nonzero although the safe deck is empty.
+   danger sets contain phase `0`. Thus every pair has nonempty full-deck
+   danger-set overlap; every resulting raw overlap edge, and hence every
+   positive spanning-tree monomial, is nonzero although the safe deck is empty.
 3. **Tiling-cube mask walks do not preserve the orbit image.** The map from a
    cyclic phase to its runner-danger mask is not translation by a fixed cube
    mask, and its image can omit the empty mask. THM-346's congruence mechanism
@@ -415,9 +461,11 @@ discharge the surviving rows. QED.
 ## 8. Exact referee
 
 The stored referee checks 720 set-level packet decompositions and 720 Mobius
-inversions, the exact Beatty shift law, unit transport with labelled residue
-vectors, the CRT and spanning-tree no-gos, all six one-tail deck values, six
-deck/fan interval counts, and six depths of the same-sector Hasse family. It
+inversions, the exact Beatty shift law including the zero-measure `S_24`
+singleton regression, unit transport with labelled residue vectors, the
+primitive orbit--stabilizer norm, the CRT and spanning-tree no-gos, all six
+one-tail deck values, six deck/fan interval counts, and six depths of the
+same-sector Hasse family. It
 passes both
 
 ```text

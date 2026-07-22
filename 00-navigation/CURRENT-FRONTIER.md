@@ -449,7 +449,7 @@ The most reusable current bridges are not literal object identifications:
 
 | Mechanism | Proven source | Legitimate transfer question |
 |---|---|---|
-| Whole-layer Frobenius | NC2 balanced face | Exact finite-abelian packets and tiling mask-walk congruences transfer; can LRC also acquire a seed and exit? |
+| Whole-layer Frobenius / orbit norm | NC2 balanced face and TNC monodromy orbit | Exact finite-abelian packet preservation and uniform-incidence norms transfer; LRC still lacks the seed and exit, and `-1` in the packet stabilizer forces a signed orientation sidecar. |
 | Quotient + sidecar | spectrum/SCC/support quotients | Which lost coordinate restores the target predicate? |
 | Maximum vs average | LRC good periods | Is a mean statistic masking a resonant extremal elsewhere? |
 | Operation-response | tournament joins/support unions | Which observables add, multiply, localize, or collide? |
