@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Lightweight exact referee for THM-2093.
+"""Lightweight exact referee for THM-2095.
 
 Reproduction:
     python3 04-computation/tnc_compound_root_effective_bound_codex_20260722.py
@@ -161,7 +161,7 @@ def exhaustive_integer_check(m: int, n: int) -> tuple[int, int, dict[int, int]]:
 
 
 def main() -> None:
-    print("THM-2093 compound-root effective-bound exact referee")
+    print("THM-2095 compound-root effective-bound exact referee")
     print("symbolic compound checks")
     for d, a in ((2, 1), (3, 1), (4, 2), (5, 2)):
         size, k, theorem_bound, powers, line_degree = symbolic_compound_check(d, a)

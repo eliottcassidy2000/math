@@ -5,7 +5,7 @@ status: >
   PROVED. For every finite exact support in C[Z,W], a complex torus point of
   the Gaussian moment nullcone descends to an algebraic torus point. The
   lowest balanced face supplies a nonzero Laurent constant term Q by the
-  project-internal effective compound-root theorem THM-2093, whose proof is
+  project-internal effective compound-root theorem THM-2095, whose proof is
   Galois-free beyond the small-root logarithmic identity. At a suitable good
   prime p, divide the moment of order p*m0 by the common factorial (p*A0)!.
   Kummer and Lucas identify the surviving residue layer with the p-fold
@@ -17,7 +17,7 @@ status: >
 source: codex-2026-07-21-NC2-followup
 supersedes_reservation: "exposed two-vertex factorial face with gap greater than one"
 depends_on:
-  - THM-2093-effective-compound-root-bound-for-one-variable-constant-terms
+  - THM-2095-effective-compound-root-bound-for-one-variable-constant-terms
   - THM-1540-gmc2-reduced-to-the-nullcone-structure-theorem
 related:
   - THM-2067-galois-orbit-product-closes-one-variable-dvdk
@@ -61,7 +61,7 @@ formalization_status: >
   finite-field zero/nonzero contradiction are kernel-checked. GMC2NC2 derives
   NC2 and GMC(2) from DvdK1. GMC2HeightWitness proves and root-imports
   `heightWitnessSupplier_holds`, removing that former interface. The Lean
-  proposition `DvdK1` is now the sole explicit premise; THM-2093 proves its
+  proposition `DvdK1` is now the sole explicit premise; THM-2095 proves its
   mathematical content internally and effectively (THM-2067 is an alternate
   historical route), but the
   small-root/compound proof has not been formalized.
@@ -222,7 +222,7 @@ the same charge, (4) at equality would give the same `a`; then
 support.
 
 By (5) and the effective compound-root theorem
-(`THM-2093-effective-compound-root-bound-for-one-variable-constant-terms.md`),
+(`THM-2095-effective-compound-root-bound-for-one-variable-constant-terms.md`),
 the constant terms of all positive powers of `f_F` cannot vanish. Choose
 `m0>=1` such that
 
@@ -240,7 +240,7 @@ a=min(M,N).                                                (7a)
 
 This bound is generally non-sharp and does not make the later good-prime
 choice coefficient-uniform.  Beyond its small-root logarithmic identity,
-THM-2093 is Galois-free.  For bare existence one may instead cite THM-2067's
+THM-2095 is Galois-free.  For bare existence one may instead cite THM-2067's
 Galois orbit-product proof or the stronger published DvdK theorem, THM-1630;
 neither is needed in this effective route.
 
@@ -485,7 +485,7 @@ structure in higher dimension, for example a coordinatewise/orthant-exposed
 vector face or a rank-one lock forcing all factorial coordinates to be
 functions of one grade. A scalar Newton face alone is not sufficient.
 
-THM-2093 supplies a project-internal effective proof of the constant-term
+THM-2095 supplies a project-internal effective proof of the constant-term
 input: the logarithmic small-root identity converts initial moment vanishing
 to contact with `ct`, while complementary-subset duality produces a nonzero
 degree-`C` compound polynomial that bounds that contact.  Beyond the small-root
@@ -514,7 +514,7 @@ The kernel-checked development is gathered by
    the strict integer off-face gap.
 4. `GMC2DvdKInterface` states the one-variable input as an explicit
    proposition. Its mathematical content is now proved internally by
-   THM-2093 (with THM-2067 as an alternate route), while the Lean proof remains
+   THM-2095 (with THM-2067 as an alternate route), while the Lean proof remains
    to be implemented. `GMC2FaceSeed`,
    `GMC2FaceSeedChannel`, and the reference-channel bridge turn it into a
    nonzero exact face seed and an actual balanced multiplicity vector; no
@@ -556,7 +556,7 @@ elaborator's earlier `whnf` explosion without new axioms or a heartbeat
 increase.
 
 Formalizing the stronger published DvdK theorem is unnecessary for this
-paper proof: THM-2093 gives the required existence statement effectively and
+paper proof: THM-2095 gives the required existence statement effectively and
 without a Galois endgame. Formalizing its small-root identity plus compound
 coefficient argument is still a separate project, so `DvdK1` remains visible
 as a Lean theorem hypothesis rather than being hidden behind `axiom`, `sorry`,

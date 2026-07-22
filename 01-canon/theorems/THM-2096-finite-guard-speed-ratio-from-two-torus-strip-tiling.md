@@ -1,5 +1,5 @@
 ---
-id: THM-2094
+id: THM-2096
 title: "Effective guard/speed ratios and all-height finiteness at rank seven"
 status: >
   PROVED by a connected two-torus strip-tiling obstruction, made effective
@@ -38,7 +38,7 @@ related:
   - THM-2092
 ---
 
-# THM-2094 -- an effective guard/speed-ratio alternative
+# THM-2096 -- an effective guard/speed-ratio alternative
 
 Put
 
@@ -485,7 +485,7 @@ must vanish on `(0,r)`. Its speed coefficient times `r_i` is then zero; since
 `r_i!=0`, the speed coefficient is zero, and vanishing on the positive packet
 then kills the guard coefficient as well.
 
-THM-2094 supplies some label `i` and a nonzero pair row `ell` of height at
+THM-2096 supplies some label `i` and a nonzero pair row `ell` of height at
 most `R_7` that annihilates the actual packet. There are only finitely many
 choices of `(i,ell)`. The preceding paragraph makes `ell` independent of the
 row space of `M`, so

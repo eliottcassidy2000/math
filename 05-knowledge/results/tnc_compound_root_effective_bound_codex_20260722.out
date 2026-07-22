@@ -1,4 +1,4 @@
-THM-2093 compound-root effective-bound exact referee
+THM-2095 compound-root effective-bound exact referee
 symbolic compound checks
   (a,b)=(1,1) C=2 eta=1 bound=2 deg Q=2 actual e_b powers by coefficient=[0, 1, 0]; direct line polynomial and simple-pole divided difference: PASS
   (a,b)=(1,2) C=3 eta=1 bound=3 deg Q=3 actual e_b powers by coefficient=[0, 0, 1, 0]; direct line polynomial and simple-pole divided difference: PASS

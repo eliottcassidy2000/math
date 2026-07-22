@@ -1,5 +1,5 @@
 ---
-id: THM-2095
+id: THM-2097
 title: "Cubic-fiber degree-thirteen Faber-tail gate"
 status: >
   PROVED. For every n prime to three, the two adjacent omitted coefficients
@@ -21,12 +21,12 @@ related:
   - MISTAKE-229
 script: 04-computation/jc2_cubic_fiber_degree13_tail_gate_codex_20260722.py
 output: 05-knowledge/results/jc2_cubic_fiber_degree13_tail_gate_codex_20260722.out
-script_sha256: 0a7dea5b5e9b654299f73780b00e666ae175dab68228df89cdbad26690172e43
+script_sha256: d1221581ec75cab4ad18e8606bff8a1c8da785d2ed8b6ab1b5ad5bed81293c45
 output_sha256: aafc72942a01526bedabbe68c9aed886dc9bc8bb54693e31db8527c7d90188b1
 hash_basis: repository blobs with LF line endings
 ---
 
-# THM-2095 -- cubic-fiber degree-thirteen Faber-tail gate
+# THM-2097 -- cubic-fiber degree-thirteen Faber-tail gate
 
 ## 1. Statement
 

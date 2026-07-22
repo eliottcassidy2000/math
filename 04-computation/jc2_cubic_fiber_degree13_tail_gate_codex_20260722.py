@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact referee for THM-2095 (cubic source-fiber degree 13 gate).
+"""Exact referee for THM-2097 (cubic source-fiber degree 13 gate).
 
 Universe: exact rational polynomial arithmetic in Q[p,q,z,a,Y].  The script
 checks the degree-thirteen Faber identity, the finite centering-pole resultant,
