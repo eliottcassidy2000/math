@@ -9,9 +9,40 @@ depends_on:
 related:
   - HYP-8815
   - THM-2047
+  - THM-2000
 ---
 
 # THM-2048 -- fiber quantization inside the peel discrepancy
+
+## 0. Abstract finite-orbit lemma
+
+The mechanism is not specific to the number fourteen. Let a probability space
+carry a measure-preserving cyclic action `T` of order `v`. Let `D` be an
+invariant measurable set of measure `rho`, let `E` be contained in `D` modulo
+null sets, put `a=|E|`, and define the orbit projection
+
+```text
+P f = (1/v) sum_{j=0}^{v-1} f composed with T^j,  f=1_E.
+```
+
+Then, with `theta=fractional_part(va/rho)`,
+
+```text
+||P f-a||_2^2
+ = ((1-rho)/rho)a^2 + ||P f-(a/rho)1_D||_2^2
+ >= ((1-rho)/rho)a^2 + (rho/v^2)theta(1-theta).             (A)
+```
+
+Indeed `P f` is supported on `D`, has mean `a`, and is orthogonal there to the
+constant `(a/rho)1_D`; this gives the equality. Under normalized measure on
+`D`, the integer-valued random variable `vP f` has mean `va/rho`, so the
+two-neighbor integer variance bound gives the inequality. Equality in the
+first bound requires uniform integral orbit occupancy.
+
+This abstract form is available in any support, tiling, coding, or cyclic
+packet problem only after an invariant carrier `D` and a genuine containment
+`E subset D` have been proved. It is a reusable projection lemma, not a claim
+that those other problems automatically have the LRC containment.
 
 Fix the threshold `1/14`, a finite speed set, and a peeled speed `v`. Let
 
@@ -127,3 +158,62 @@ fiber occupancy and otherwise charges the distance to the nearest such
 occupancy. It turns the qualitative discrepancy direction corrected in
 MISTAKE-221 into a quantized obstruction without asserting that the obstruction
 alone closes Wall A.
+
+## 4. An exact strict-gain Cover14 certificate
+
+The tax can decide a row on which the old uniform `r^2/(3v^2)` tail bound is
+inconclusive. Take
+
+```text
+S = {1,8,11,12,14,17,22,26,35,40,54,90,93},   v=93,
+B = S\{93}.
+```
+
+This row is primitive, and every modulus `q=2,...,14` divides at least one
+member of `S`, so it lies in the genuine Cover14 residual rather than the easy
+missed-modulus branch. Exact interval arithmetic on the good set of `B` gives
+
+```text
+mu = 35517/280280,       r_v = 50,
+theta_v = {7*93*mu} = 19801/40040.
+```
+
+The old necessary tail inequality is still allowed, with positive slack
+
+```text
+r_v^2/3 - 6(93mu)^2 = 3001166951/117835317600 > 0.
+```
+
+But the new integer-fiber tax is
+
+```text
+theta_v(1-theta_v)/7 = 400752439/11222411200,
+```
+
+and it exceeds that slack by
+
+```text
+2413467317/235670635200 > 0.
+```
+
+Thus (5) fails, so the full good set of `S` cannot have measure zero. This is a
+strict gain over the *uniform tail corollary* of THM-732: it proves a lonely
+interval using only `(mu,r_v,v)` and the integrality of orbit occupancy, without
+evaluating the Bernoulli edge-pair sum.
+
+For an independent audit, the full exact interval computation gives measure
+
+```text
+|G'| = 589595/5213208 > 0,
+```
+
+while the exact Bernoulli computation gives
+
+```text
+disc_93 = 2220515193157/2038315323844800,
+6mu^2-disc_93 = 27737954067563/291187903406400 > 0.
+```
+
+So the stronger per-row THM-731/732 certificate also closes this example. The
+new content is the cheaper quantized-tail decision, not a family inaccessible
+to exact Bernoulli arithmetic and not a proof of the general Cover14 case.

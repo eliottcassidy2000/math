@@ -96,7 +96,12 @@ structural supplier/seed and a lossless exit.
   is a safety signal. THM-2048 sharpens this by a discrete fiber tax: with
   `mu=|G'_{~v}|`, `theta={7vmu}`, and `r_v` interval components, every
   zero-measure packet must satisfy
-  `6(vmu)^2+theta(1-theta)/7<=r_v^2/3` for every peel. “Near-AP,”
+  `6(vmu)^2+theta(1-theta)/7<=r_v^2/3` for every peel.
+  This is a strict improvement over the old uniform tail test: for the
+  primitive Cover14 row `{1,8,11,12,14,17,22,26,35,40,54,90,93}` at `v=93`,
+  the old inequality is inconclusive while the integer tax violates the new
+  necessary inequality and forces a positive-measure lonely interval.
+  “Near-AP,”
   “anti-golden,” Fibonacci-foil, CF-blocker, and
   full-autocorrelation iff claims remain heuristic. THM-1002 proves every
   maximizer lies on a pair-sum ruler `t=p/(v_i+v_j)`. Enumerating all such
