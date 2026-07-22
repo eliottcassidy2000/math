@@ -1,3 +1,39 @@
+## kind-pasteur-2026-07-22-S128c151 -- char-0 back half: THM-1550 closed exp/log-free, modulo exactly the derivative identity d_t(h(0,t))=0; also fixed the fleet-wide broken root
+
+**Owner:** keep working collaboratively to finish up the one analytic lemma.
+
+**What I did:** broadcast a claim on the ONE non-colliding sub-piece -- the char-0 back half of
+death-star's exp/log-free route -- then formalized it kernel-pure and composed it onto mac-mini-S165.
+mac-mini had reduced BOTH routes to the scalar identity h(0,t)=1 (coeff_zero_smallRootFactor_mul_unit:
+P.coeff0*h(0)=-t*r0). death-star had the exp/log-FREE insight (differentiate, dont integrate) but was
+holding off Lean pending a split. I took the char-0 closing they both left open.
+
+**DELIVERED (both kernel-pure [propext,Classical.choice,Quot.sound], built green, wired into root):**
+(1) GMC2DvdKCharZeroClosing.lean (self-contained, imports only Mathlib) -- coeff_eq_zero_of_derivativeFun_eq_zero,
+eq_C_of_derivativeFun_eq_zero (the char-0 CONVERSE of Mathlib derivativeFun_C: derivativeFun f=0 =>
+f=C(constantCoeff f); NOT in Mathlib, reusable), eq_one_of_derivativeFun_eq_zero, factorCoeff0_eq_of_unit_eq_one.
+(2) GMC2DvdKMultiplicativeClosing.lean -- smallRootFactor_coeff0_eq_of_derivative_vanishes: composing
+my char-0 closing with mac-mini coeff_zero_smallRootFactor_mul_unit gives (smallRootFactor R M).coeff 0
+= -t*r0 from JUST h(0,0)=1 + d_t(h(0,t))=0, hence Pi=(-1)^M P.coeff0=c*t.
+
+**THE POINT:** death-star's exp/log-free insight is now FORMALIZED. The sole survivor h(0,t)=1 (mac-mini
+S165) reduces to the STRICTLY SIMPLER derivative-form d_t(h(0,t))=0 (the log-derivative identity under
+D_m=0) via 'zero formal derivative => constant in char 0'. NO exp/log/Puiseux/Fredholm-det needed to
+finish. The remaining crux is now a derivative-VANISHING statement, not a transcendental series identity.
+
+**ALSO FIXED (fleet-wide):** root TournamentH7.lean carried unresolved git-conflict markers
+(<<<<<<< / ======= / >>>>>>>) on origin/main from death-star-S114's push, so `lake build TournamentH7`
+(full library) was un-parseable for everyone. Resolved (kept BOTH valid imports GMC2Thm2067Reduced +
+GMC2FullRootPhi) and wired in my 3 DvdK-closing modules.
+
+**HONEST:** factorCoeff0_eq_of_unit_eq_one (abstract) OVERLAPS mac-mini's concrete
+coeff_zero_smallRootFactor_mul_unit (theirs is load-bearing); my net-new is the char-0 converse (a
+genuine Mathlib gap) + the explicit exp/log-free composition. REMAINING: (1) d_t(h(0,t))=0 under D_m=0
+= the [x^0]-Laurent log-derivative identity in derivative form (mac-mini/death-star frame lane);
+(2) h(0,0)=1 from distinguished P=X^M mod t. Both are hypotheses of the composition theorem; discharging
+(1) closes the multiplicative route (and via Abel duality feeds the additive b=1 wrapper). HYP-9006.
+Reflection gmc2-dvdk-charzero-backhalf-closes-thm1550-modulo-derivative-identity-kps-S128c151.
+
 ## death-star-2026-07-22-S114 -- DvdK valuation crux: dihedral/tournament mining + the uncontested TOP Lagrange companion (kernel-pure); stayed OFF the crowded [x^0] crux
 
 **Owner:** attack the shared valuation/Newton-polygon core + explore dihedral-group/tournament past work; pull often; ensure not superseded.

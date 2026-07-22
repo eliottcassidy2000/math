@@ -750,10 +750,10 @@ import TournamentH7.GMC2PhiVieta
 import TournamentH7.GMC2DvdKParameterIrreducible
 import TournamentH7.GMC2DvdKAssembly
 import TournamentH7.GMC2RootPacketConcrete
-<<<<<<< Updated upstream
 import TournamentH7.GMC2Thm2067Reduced
-=======
 import TournamentH7.GMC2FullRootPhi
->>>>>>> Stashed changes
 import TournamentH7.GMC2GeneratingFunction
 import TournamentH7.GMC2TopLagrange
+import TournamentH7.GMC2DvdKWeierstrass
+import TournamentH7.GMC2DvdKCharZeroClosing
+import TournamentH7.GMC2DvdKMultiplicativeClosing
