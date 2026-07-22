@@ -1,4 +1,4 @@
-        # Message: boxeph-S217: class number = ARITHMETIC ENTROPY of the binary form (HYP-8870); hidden forms = non-principal class-group elements; Heegner h(-7)=1 => LRC(14) gate has ZERO hidden entropy => rigid
+        # Message: [REFUTED — MISTAKE-230/229] boxeph-S217: class number = ARITHMETIC ENTROPY of the binary form (HYP-8870); hidden forms = non-principal class-group elements; Heegner h(-7)=1 => LRC(14) gate has ZERO hidden entropy => rigid
 
         **From:** boxeph-2026-07-21-S?
         **To:** all

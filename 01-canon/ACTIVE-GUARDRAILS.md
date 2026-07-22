@@ -28,33 +28,22 @@ mistake.
 7. **Uniform twelve-speed sporadic emptiness is OPEN.** Finite height
    (THM-763), AP rigidity (THM-1171), single-far classification (THM-1284), and
    bounded censuses do not classify all non-AP/deep multi-defect tight sets.
-8. **Tight deletion is not an all-loose crown.** THM-1149 separates these
-   branches. Do not invoke an equality classification before extracting the
-   tight deletion it assumes.
-9. **Giri–Kravitz gives qualitative one-sided isolation, not effective
+8. **Giri–Kravitz gives qualitative one-sided isolation, not effective
    whole-window finiteness.** THM-1289's `delta` is ineffective; their
    Conjecture 1.5 or a new argument is needed for the larger window.
-10. **Enumeration filters need future-multiple audits.** MISTAKE-194 found an
-    unsound pair-count mask prune. A missing residue can be supplied by one
-    later multiple; prune only after proving that possibility is excluded.
-11. **Continued-fraction activity has a scope hypothesis.** THM-1291 proves the
-    first beating integer is a convergent denominator; equating it to an active
-    speed needs hypothesis H.
-12. **Local six-comb returns are near their ceiling.** A charge without a
+9. **Enumeration filters need future-multiple audits.** MISTAKE-194 found an
+    unsound pair-count mask prune; prove that no later multiple can supply a
+    missing residue before pruning it.
+10. **Local six-comb returns are near their ceiling.** A charge without a
     phase/location or endpoint/child sidecar repeats sharp counterexamples from
     THM-1252–1274.
-13. **HYP-8815 is a heuristic, not a disproof characterization.** MISTAKE-221.
+11. **HYP-8815 is a heuristic, not a disproof characterization.** MISTAKE-221.
     Primitive Cover14, `M<1/14`, and non-AP deletion are necessary; the
     near-AP/anti-golden/CF/autocorrelation claims are not. A finite scan is only
     a lower bound unless it enumerates all [THM-1002 pair-sum rulers](theorems/THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case.md)
     or reaches `Q>=2 max(S)`; do not gcd-filter numerators without divisor
-    rulers. THM-731 and THM-2048 give necessary peel discrepancy/fiber-tax
-    tests, not classifiers. THM-2051 forces a height-`2^20` support-`3..5`
-    relation; THM-2052 gives an eleven-dimensional sparse code and finite
-    two-anchor atlas; THM-2053 certifies parameters outside 26 tangent disks.
-    Disk membership is “undecided,” not unsafe; atlas compression and exact
-    discharge remain open, and rank twelve is only a shortcut.
-14. **Complete local phase coordinates need not be global LRC carriers.**
+    rulers. THM-731/2048 are necessary pruning tests, not classifiers.
+12. **Complete local phase coordinates need not be global LRC carriers.**
     THM-2043 gives AP aliases with every fixed 7-adic prefix and a strict
     `17/41` exit; THM-2050 gives identical complete unit-phase germs with
     maxima `1/14` and `1/12`. Retain owner height and a global
@@ -104,10 +93,10 @@ mistake.
 15. **Tournament dominance is sufficient, not iff.** MISTAKE-212. A source or
     transitive channel tournament can certify noncancellation but cannot
     characterize every nonzero scalar moment.
-17. **Vandermonde nodes are not tournament scores.** MISTAKE-214. Repeated node
+19. **Vandermonde nodes are not tournament scores.** MISTAKE-214. Repeated node
     values do not imply regular or Paley score structure, so “NC2 wall = Paley
     wall = LRC wall” is not a literal identity.
-18. **No global de-factorialization.** MISTAKE-215; THM-2040 is now a retired
+20. **No global de-factorialization.** MISTAKE-215; THM-2040 is now a retired
     pointer. Only the exact symmetric monomial wall has a common factorial; the
     general THM-2022 mechanism is prime-local initial-form normalization.
 19. **THM-2033 is special-matrix scope.** Its determinant/Vandermonde identity
@@ -117,53 +106,49 @@ mistake.
 
 ## Tournaments
 
-21. **SCC additivity is a sum, not a largest-component bound.** MISTAKE-220
+22. **SCC additivity is a sum, not a largest-component bound.** MISTAKE-220
     repairs the earlier claim: local SCC contributions can accumulate.
-22. **Signed Rédei data is not its absolute invariant magnitude.** MISTAKE-217
+23. **Signed Rédei data is not its absolute invariant magnitude.** MISTAKE-217
     repairs hot-shell computations whose labels silently dropped the sign
     gauge. State whether the coordinate is signed, absolute, or label-dependent.
-23. **The invariant lattice is exact only through `n <= 6`.** THM-1966 gives an
+24. **The invariant lattice is exact only through `n <= 6`.** THM-1966 gives an
     independent signed Rédei coordinate at `n=7`; finite exactness is not a
     universal completeness theorem.
-24. **`H >= disc` remains open globally.** THM-1950 reduces to strongly
+25. **`H >= disc` remains open globally.** THM-1950 reduces to strongly
     connected tournaments and verifies finite cases only.
-25. **Do not manufacture tournaments from ties.** State the intrinsic binary
+26. **Do not manufacture tournaments from ties.** State the intrinsic binary
     relation, gauge, tie semantics, preserved target, and loss. If these do not
     exist, use a preorder, signed graph, hypergraph, packet, or another object.
-26. **Paley scope is prime and quadratic-residue specific.** THM-640 does not
+27. **Paley scope is prime and quadratic-residue specific.** THM-640 does not
     turn composite modulus 14 into a literal Paley tournament.
-27. **Higher GLMY path-homology degrees are disputed.** The active
+28. **Higher GLMY path-homology degrees are disputed.** The active
     [convention court case](../02-court/active/CASE-path-homology-regularity-convention.md)
-    records incompatible
-    conventions/calculations in degree at least three, including `beta_4(T_7)`.
-    Treat only the convention-safe `beta_1/beta_2` results as canon until the
-    court case is resolved.
-28. **Equal ranks do not identify lattices or tournaments.** MISTAKE-227. The
+    records incompatible calculations from degree three onward. Treat only the
+    convention-safe `beta_1/beta_2` results as canon until resolution.
+29. **Equal ranks do not identify lattices or tournaments.** MISTAKE-227. The
     adjacent AP chain rows span an index-`11!` sublattice of
     `ker_Z(1,...,12)`, not a saturated basis; their tridiagonal Gram belongs to
     that path frame only. THM-2052's private two-anchor code lives in a
     different 13-coordinate signed space. Before promoting a rank match,
     exhibit the map and compute its saturation index and discriminant.
-29. **Paley spectra do not assign LRC roles to small primes.** MISTAKE-228.
+30. **Paley spectra do not assign LRC roles to small primes.** MISTAKE-228.
     The safe theorem is the odd-prime Paley graph/tournament dichotomy. Its
     nonprincipal adjacency roots are shifted half-scaled Gauss sums; `p=2` is
     outside the statement. Fibonacci/foil, apex, rank, and tight/slack labels
     are heuristics until an LRC-preserving map is proved.
-30. **THM-2053 has no Heegner discriminant `-7`.** MISTAKE-229. Its parameter
+31. **THM-2053 has no Heegner discriminant `-7`.** MISTAKE-229. Its parameter
     norm is `a^2+b^2` (discriminant `-4` up to unimodular basis change), and
-    gate failure is a union of 26 tangent disks, not the representation set of
-    one binary quadratic form. `14=2*7`, a Paley factor of discriminant `-7`,
-    or class number one does not classify an arbitrary relation plane, force a
+    gate failure is an indexed union of 26 open tangent disks, not one binary
+    quadratic form's representation set. A Paley factor of discriminant `-7` or class number one does not classify a relation plane or force a
     rank jump, or produce an Euler survivor.
 
-## Integer sequences, provenance, and cross-domain transfers
+## Sequences, entropy, modular forms, and other transfers
 
-31. **Support is not an indexed multiset.** MISTAKE-209 and THM-2000/2005.
+32. **Support is not an indexed multiset.** MISTAKE-209 and THM-2000/2005.
     Repetitions contribute a collision tax; never compare reciprocal constants
     without saying which profile is used.
-32. **Density zero does not imply reciprocal convergence.** The actual boundary
-    is Abel–Dini/Bertrand and continues through iterated logarithms.
-33. **Finite prefixes and proxy supports are not all-`n` laws.** MISTAKE-219
+33. **Density zero does not imply reciprocal convergence.** Use the Abel–Dini/Bertrand boundary through iterated logarithms.
+34. **Finite prefixes and proxy supports are not all-`n` laws.** MISTAKE-219
     repairs offsets, truncated constants, and support substitutions in the
     reciprocal atlas. Freeze the actual support and quantify the tail.
 34. **No OEIS match is not novelty.** THM-2010 has only short initial data and a

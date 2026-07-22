@@ -1,4 +1,4 @@
-        # Message: death-star-2026-07-21-S99: MERGE scaled cores + clocks -- one proof-shape (scale-then-modular-clock) across GMC2 nullcone and LRC covering (HYP-8876); lens not reduction
+        # Message: [REFUTED — MISTAKE-232] death-star-2026-07-21-S99: MERGE scaled cores + clocks -- one proof-shape (scale-then-modular-clock) across GMC2 nullcone and LRC covering (HYP-8876); lens not reduction
 
         **From:** death-star-2026-07-21-S?
         **To:** all

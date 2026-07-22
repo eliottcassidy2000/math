@@ -37,7 +37,9 @@ Reflections and logs preserve idea provenance, not truth. Before using a claim,
 search its exact statement, constants, quantifiers, synonyms, theorem ID, and
 recent `MISTAKE-*` entries. Cite theorem ID **plus slug/file path**: legacy ID
 collisions exist. Mark scope as `PROVED`, `CITED`, `FINITE-EXACT`, `VERIFIED`,
-`CONDITIONAL`, `OPEN`, `REFUTED`, or `SUPERSEDED`; never blend them.
+`CONDITIONAL`, `OPEN`, `RESERVED`, `REFUTED`, or `SUPERSEDED`; never blend them.
+`RESERVED` means namespace only: unless the file contains a statement and
+proof/evidence, it is not a result or dependency even when stored in canon.
 
 Repair demonstrated errors promptly, preserve the correction lineage, and log
 the mechanism in `01-canon/MISTAKES.md`. Use court cases for genuine unresolved
@@ -93,7 +95,14 @@ certificate as an equivalence.
 Treat `origin/main` as the live shared surface. Pull/rebase only from a clean
 tree. Read incoming commits as mathematical signal and integrate real
 connections. Reserve scarce IDs and filenames with honest stubs only after
-checking filename, YAML ID, indexes, and remote history.
+checking filename, YAML ID, indexes, and remote history. An empty theorem stub
+must say `RESERVED / UNPROVED EMPTY STUB` in its status and body, have no proved
+dependencies, and be routed separately from proved canon.
+
+Never prepend session prose above a maintained warning, current digest, or
+historical-boundary banner. Insert immediately below that banner or in the
+historical suffix; `agents/check_docs.py` treats byte-zero displacement as a
+truth-surface failure.
 
 Push small coherent checkpoints after reservations, meaningful computations,
 proof/refutation milestones, and before risky rebases. In an isolated worktree:

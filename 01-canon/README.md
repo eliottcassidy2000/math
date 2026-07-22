@@ -19,6 +19,7 @@ not stable addresses because legacy collisions exist; cite ID plus slug/path.
 | `VERIFIED` | Reproducible evidence; no general proof claimed |
 | `CONDITIONAL` | Correct implication with a named open input |
 | `OPEN` | Precise unresolved statement |
+| `RESERVED` | Namespace-only empty stub; no usable statement or dependency |
 | `REFUTED` | False; witness and surviving repair retained |
 | `RETIRED` / `SUPERSEDED` | Historical pointer; use the linked replacement |
 
@@ -32,7 +33,7 @@ not actually computed.
 ---
 id: THM-NNNN
 title: Exact descriptive slug
-status: PROVED | CITED | FINITE-EXACT | VERIFIED | CONDITIONAL | OPEN | REFUTED | RETIRED
+status: PROVED | CITED | FINITE-EXACT | VERIFIED | CONDITIONAL | OPEN | RESERVED | REFUTED | RETIRED
 source: instance/date or full external citation
 depends_on: []
 related: []
@@ -76,6 +77,10 @@ formalization: []
 
 Not every section needs equal length; every section relevant to the claim must
 be answered. A short theorem can remain short.
+
+A namespace reservation is not a theorem record. Label it
+`RESERVED / UNPROVED EMPTY STUB`, leave `depends_on: []`, and do not list it as
+a consumer input until a statement and proof/evidence are actually present.
 
 ## Admission gate
 

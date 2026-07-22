@@ -309,10 +309,16 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
 - **Repo consumers:**
   [THM-1630, exact citation identification](../../01-canon/theorems/THM-1630-tnc-is-duistermaat-van-der-kallen-theorem-2.md),
   [THM-1645, angular/radial split](../../01-canon/theorems/THM-1645-gmc2-angular-layer-is-dvdk-the-gap-is-purely-radial.md),
-  [THM-2022](../../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md).
+  [THM-2022](../../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md),
+  [HYP-8878, the unique-minimum-channel citation-free stratum](../../07-reflections/the-sharp-dvdk-free-criterion-unique-primitive-cycle-deathstar-S101.md),
+  [HYP-8890, the open saddle/Watson replacement route](../../07-reflections/bypassing-dvdk-the-saddle-point-watson-route-to-the-gmc2-angular-floor-boxeph-S222.md),
+  and [HYP-8895, the corrected support-return semigroup](../../07-reflections/one-dimensional-coprime-intervals-complete-the-dvdk-bypass-boxeph-S223.md).
 - **Does not prove:** the Gaussian radial/factorial step, Frobenius survival of
   a complete Wick face, or an effective bound on the first nonzero constant
-  term.  Characteristic-zero hypotheses are essential.
+  term.  Characteristic-zero hypotheses are essential. HYP-8878 bypasses the
+  citation only when the minimum balanced channel is unique; HYP-8890 has not
+  proved the general complex dominant-saddle/noncancellation step. MISTAKE-234
+  shows that HYP-8895's conductor cannot control mixed-sign cancellations.
 
 ### Erman--Smith--Várilly-Alvarado — *Laurent polynomials and Eulerian numbers*
 

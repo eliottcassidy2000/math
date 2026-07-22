@@ -20,36 +20,43 @@ hypothetical LRC(14) counterexample
   |-- primitive positive Cover14 kernel with M<1/14
   |-- non-AP maximum-deletion core; every peel passes THM-2048
   |-- genuine support-3..5 relation, height <=2^20          [THM-2051]
-  `-- rank-11 bounded support-at-most-3 code W               [THM-2052]
-        `-- finite two-anchor star atlas; one projective parameter
-        |
-        |-- determinant gate passes
-        |     `-- safe target row                            [THM-2053]
-        `-- primitive parameter lies in 26 tangent disks
-              |-- resonance fan / pair-sum / Euler discharge [OPEN]
-              |-- active relation outside W
-              |     `-- rank 12 -> finite maximal-minor box [THM-2052]
-              `-- owner-labelled endpoint survives: P_w>=0
-                    `-- weak Euler point or strict interval [HYP-8841]
+  `-- bounded support-at-most-3 code of rank >=11            [THM-2052]
+        |-- rank 12 -> finite maximal-minor box
+        `-- rank 11 -> finite two-anchor star atlas; one projective parameter
+              |
+              |-- transverse deck D_N(m)>=1/14 -> safe primitive N-fiber [THM-2053]
+              |-- determinant gate passes -> safe target row              [THM-2053]
+              `-- bad deck meets the indexed open 26-disk failure union
+                    |-- owner fan + finite Farey address; listed rays unresolved [THM-2055/2056]
+                    |-- scaled AP one-tail clock/binding leaves     [THM-2057]
+                    |-- arbitrary-clock one-tail CRT packet join    [THM-2059]
+                    |-- general clock / pair-sum / Fejer / Euler    [OPEN]
+                    |-- active relation outside W
+                    |     `-- rank 12 -> finite maximal-minor box [THM-2052]
+                    `-- owner-labelled endpoint survives: P_w>=0
+                          `-- weak Euler point or strict interval [HYP-8841]
 ```
 
 The four input lines are proved necessary conditions in their cited scopes.
-THM-2053 is a proved sufficient gate, not a necessity: membership in a disk
-means only “not certified here.” The remaining finite-discharge arrows are the
-research target. A bounded relation is not by itself an AP, an independent
-rank gain, a safe phase, or a practical finite classification.
+Every displayed gate is sufficient, not necessary: a bad deck, disk, or Farey
+ray means only “not certified here.” THM-2058 is an empty reservation and must
+not be inserted as an arrow. The research target is the general labelled
+deck/fan discharge, not a twelfth relation alone.
 
 ### Live interfaces
 
 | Interface | Exact input already available | Missing theorem |
 |---|---|---|
-| Tangent-disk terminal | THM-2053 proves `max_i|a z_i-b u_i|<=(a^2+b^2)/91` is safe and identifies gate failure with 26 open tangent disks | Compress saturated bases and the two-anchor atlas; enumerate only primitive positive points inside the disks. |
-| Resonance fan | HYP-2896 completely discharges the calibrated one-tail plane; pair-sum maximizers are exact | Prove a finite fan with explicit phases, or another exact certificate, on every reduced disk. |
+| Transverse deck | THM-2053 gives `D_N(m)`, divisor down-sets, rational conductors, and `N|(v_i+v_j)` | Classify bad decks with labelled integral columns; do not erase longitudinal clocks or non-hull runners. |
+| Determinant/Farey fan | THM-2053 leaves an indexed union of 26 open tangent disks; THM-2055 gives the signed-hull normal fan; THM-2056 Kelvin-inverts it and certifies cones satisfying its defect inequality | Attach a genuine LRC phase to each listed bad ray. Gate failure is not danger. |
+| Clock/binding sidecar | THM-2057 closes `{a,2a,...,11a,13a,w}` via `12a`/`14a` clocks and the `84a|w` binding branch, and `{a,2a,...,12a,w}` via `13a`/`14a` clocks and the `182a|w` deep-well branch | Find missing-clock cores and finite affine binding families for general stars. |
+| CRT packet join | THM-2059 exactly counts compatible core/tail safe residues on every one-tail clock by a reduction-histogram dot product | Select clocks uniformly; zero overlap rejects only that clock grid. |
+| Relative Fejer | After zero-character factors are removed, THM-2054 gives an explicit lifted-character average error for nonzero line frequencies when bounded resonances lift | Prove the model-specific plateau and route every bounded scalar resonance. |
 | Rank code | THM-2052 supplies eleven independent bounded support-at-most-three rows | Produce an active row outside the code when available; rank twelve gives a finite box but is not required for finiteness. |
 | Euler endpoint | THM-2047 retains owner, sign, side, height, and paired deletion; HYP-2108 gives `P_w` | Prove `P_w>=0` on any disk points not discharged arithmetically. |
 | AP-core supplier | THM-1017 proves `AP core -> far element -> LRC(14)` | Extract the required core from every compact structured residual. |
 | Global phase transport | THM-2050 proves all period-14 local germs can be identical while maxima differ | Supply first-exit magnitude, off-layer gluing, or another genuinely global termination coordinate. |
-| Finite shell | THM-763 bounds a primitive counterexample by `sum v_i<=91^12`; THM-1290 is exhaustive through maximum speed 55 | Turn THM-2053's structural finiteness into a feasible exact decision. |
+| Finite shell | THM-763 bounds a primitive counterexample by `sum v_i<=91^12`; THM-1290 is exhaustive through maximum speed 55 | Turn THM-2052--2056 structural finiteness into a feasible exact decision. |
 | Six-comb branch | Local return and tooth-word machinery is sharply saturated | Complete endpoint/child transport or find a phase-located turn tax. |
 
 ### How to represent the new structured branch
@@ -68,6 +75,10 @@ behavior under each speed deletion
 overlap data between simultaneous minimal relation rows
 rank and row space of the harvested relation code W
 whether the row lies outside W
+the saturated plane basis and all labelled integral columns
+transverse deck D_N(m), conductor, longitudinal clock, and CRT histograms
+signed-hull owner cone, tie-ray co-owners, and non-hull sidecar
+pair-sum ruler, phase interval, endpoint owner, and exit margin
 which peel inequality or exit obligation the row activates.
 ```
 
@@ -94,28 +105,35 @@ retain ties and hyperedges otherwise.
   coexist with different LRC maxima; augmentation cannot be dropped.
 - ordinary toric complements, Shi counts, and short-relation counts: none
   retains the selected side, owner, height, and global LRC predicate by itself.
+- the two AP one-tail planes: they contain many determinant-gate failures but
+  THM-2057 closes every row by clocks and binding phases; “uncertified” is not
+  “unsafe.”
+- Paley, Heegner, entropy, and modular-curve labels: none currently preserves
+  the loneliness predicate. MISTAKE-228--234 are mandatory before reuse.
 
 ### First experiments worth running
 
-1. Put each two-anchor star in a reduced saturated kernel basis; intersect its
-   positivity cone with the 26 tangent disks before enumerating primitive
-   parameters. Record basis-change covariance and do not replace the disk
-   union by a fictitious single quadratic form.
-2. Partition every surviving disk by exact pair-sum/resonance walls, following
-   HYP-2896; seek one symbolic phase certificate per cell before pointwise
-   enumeration.
-3. Put the eleven-dimensional relation code in exact row-echelon form and
+1. Canonicalize each star by its labelled integral columns, determinant
+   magnitudes, transverse deck, and signed-hull fan—not oriented-matroid signs
+   alone. Record basis covariance explicitly.
+2. Kelvin-invert each owner sector, build the finite acute unimodular fan from
+   THM-2056, and attach `D_N`, pair sums, and clock-kill data to every bad ray.
+3. Search each core for missing clocks `N<=14`, then use THM-2059's exact CRT
+   histograms on larger clocks; solve remaining affine binding families with
+   THM-2057 as the positive control.
+4. Put the eleven-dimensional relation code in exact row-echelon form and
    record, for every peel/endpoint-owner set, whether an active bounded row
    lies outside the current code.
-4. Compute the exact endpoint functional
+5. Compute the exact endpoint functional
    `P_w=max_i(||w m_i||+w l_i/2-1/14)` together with THM-2048 taxes and
    THM-1002 pair-sum margins on every hostile family.
-5. Build an owner-labelled relation-overlap hypergraph. Test directed edges
+6. Build an owner-labelled relation-overlap hypergraph. Test directed edges
    only when deletion, first exit, or owner transfer gives a real implication;
    otherwise retain the signed hypergraph and its linear rank.
-6. Revisit niche operations—observer adjunction, deletion, dual relations,
-   residue reduction, and endpoint localization—and record why each preserves
-   or destroys LRC.
+7. Partition resonance-lift/nonaliasing cells only after proving the
+   model-specific lifted plateau missing from THM-2054's application; keep its
+   numerical budget separate from the model identification and route
+   nonlifting resonances separately.
 
 > ## 2026-07-19 S78 CONTINUATION — TWO FINITE FRONTS MOVE, AND THE FANO QUOTIENT IS LOCAL-SURJECTIVE
 >

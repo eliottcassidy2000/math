@@ -287,6 +287,39 @@ an explicit reduction connects them.
 **Evidence:** MISTAKE-199 and the rebase-as-signal protocol in
 [`CONCURRENT-SESSIONS.md`](CONCURRENT-SESSIONS.md).
 
+## Turn certificate failure into an address, then change sidecars
+
+**Trigger:** a sufficient gate leaves a finite or structured bad set that is
+still too large, or a control family fails the gate while the theorem remains
+true.
+**Action:** preserve the failed gate as an address (deck, owner cone, ray, or
+cell), then attach an orthogonal consequence-bearing sidecar such as a clock
+orbit, divisibility tax, phase interval, endpoint owner, or rank increment.
+**Mechanism:** failure of a sufficient certificate localizes uncertainty but
+does not describe danger. THM-2057 closes two one-tail planes containing many
+THM-2053 determinant failures because scaled clocks and binding rays see the
+missing phase coordinate.
+**Counterindication:** do not multiply sidecars indiscriminately; each must
+preserve the target predicate and eliminate a named failure family or state.
+**Evidence:** the THM-2053 transverse deck, THM-2055/2056 normal-fan and
+Kelvin/Farey address, THM-2057 missing-clock closure, and MISTAKE-224's repair
+of the side-blind toric-complement quotient.
+
+## Join compatibility fibers before comparing marginal sizes
+
+**Trigger:** two nonempty packets, fibers, or local certificate sets must meet,
+but their separate cardinalities do not decide whether a common witness exists.
+**Action:** identify the common quotient, retain histograms over its fibers, and
+compute the compatibility pairing before collapsing either side to one scalar.
+**Mechanism:** generalized CRT turns a core packet and tail packet into the
+exact dot product of their reduction histograms; disjoint supports explain a
+failed join even when both marginals are large.
+**Counterindication:** use a simpler scalar only after proving uniform fibers,
+independence, or another theorem making the pairing a function of the totals.
+**Evidence:** THM-2059's CRT packet theorem repairs the marginal-size loss; the
+same error genus is exposed by MISTAKE-231's observable-relative fiber counts
+and by observer/cut-payload quotients in the tournament atlas.
+
 ## “One item left” requires a typed residual
 
 **Trigger:** a synthesis declares a problem one lemma, one inequality, or one

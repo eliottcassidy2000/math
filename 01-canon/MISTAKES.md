@@ -195,6 +195,111 @@ Format per entry:
 ---
 
 ## MISTAKE-224 (2026-07-21, codex audit of HYP-8835) -- valid antisymmetry examples were promoted to equivalences among transitivity, saddles, tori, and LRC symmetry
+## MISTAKE-234 (2026-07-21, audit of S223 / HYP-8895) -- support reachability was promoted to mixed-sign constant-term noncancellation
+
+- **What was claimed:** S223 correctly encoded the return lengths
+  `R={m:0 in mS}` of a two-sided Laurent support as an additive semigroup, then
+  claimed that for mixed/complex coefficients only finitely many reachable
+  lengths can cancel. It therefore called the Frobenius conductor an effective
+  DvdK bound and announced a complete elementary replacement for the imported
+  one-variable constant-term theorem.
+- **Why it is wrong:** a support semigroup records which coefficient monomials
+  exist, not whether their signed sum vanishes. The aperiodic support
+  `S={-2,-1,1,2}` already has return lengths `2` and `3`, hence every
+  `m>=2`. But for
+
+  ```text
+  f(z)=z-z^(-1)+z^2-z^(-2)
+  ```
+
+  one has `f(z^(-1))=-f(z)`. Constant-term invariance under inversion gives
+  `CT(f^m)=(-1)^m CT(f^m)`, so every odd power vanishes. Thus cancellations
+  persist infinitely far beyond the support conductor even though the support
+  gaps have gcd one. S222/HYP-8890 explicitly leaves the general complex
+  dominant-saddle/noncancellation step open, so citing it cannot close this
+  gap.
+- **Correct framing:** the return semigroup, pair-period law, and conductor are
+  exact **reachability** data. For positive coefficients,
+  `CT(f^m)!=0 iff m in R`; for signed or complex coefficients, retain channel
+  phases and use a separate noncancellation theorem. HYP-8878's unique-minimum
+  channel is one valid elementary sufficient case. HYP-8895 is therefore a
+  useful support-sidecar construction, not a DvdK replacement or an effective
+  coefficient-uniform bound.
+
+## MISTAKE-233 (2026-07-21, audit of S219/S220 / HYP-8880) -- classical theta and modular-curve facts were promoted to an LRC cusp-form obstruction without a map
+
+- **What was claimed:** S219 called THM-515's sinc-weighted relation-lattice
+  sum a modular theta series and transferred the binary-form decomposition
+  `theta=Eisenstein+cusp` to LRC. S220 retracted that particular attachment but
+  replaced it with the stronger claim that LRC scaling is `Gamma_0` level,
+  clock divisors are modular cusps, a covering-min second moment is a form on
+  `X_0(14)`, and the level-14 newform `f_14=14a` is the LRC(14) obstruction.
+  It further identified genus with S218's hidden entropy and asserted that the
+  period field of `f_14` is `Q(sqrt(-7))`.
+- **Why it is wrong:** neither session constructs a map from an LRC row,
+  good-set functional, or floor moment to a modular form, proves a modular
+  transformation law, or shows that the LRC predicate is preserved. A cusp
+  of `X_0(N)` is a `Gamma_0(N)`-orbit in `P^1(Q)`, not a subgroup of the
+  additive clock `Z/NZ`; equality of two divisor counts is not an
+  identification of objects. Dilation gives the exact LRC symmetry
+  `M(cS)=M(S)`, but it cannot by itself be level structure: scaling the
+  `12`-clock to `24` leaves `M` unchanged while `X_0(12)` has genus zero and
+  `X_0(24)` has genus one. The proposed modular invariant therefore changes
+  under an operation that preserves the alleged source object.
+
+  The discriminant bridge is also false. The normalized level-14 elliptic
+  newform has coefficient field `Q`; its elliptic-curve isogeny class `14a`
+  is non-CM. In particular the standard curve `14a1` has
+  `j=9938375/21952`, not an algebraic-integer CM `j`, so it has no CM period
+  field `Q(sqrt(-7))`. Its coefficients `a_2=-1` and `a_7=1` are Fourier
+  coefficients at bad primes, not labels for two cusps. `X_0(14)` is only the
+  first positive-genus curve in the selected subfamily `X_0(2p)` with
+  `p=3,5,7,...`; `X_0(11)` already has genus one. Finally, genus is a vector-
+  space dimension, not the observable-fiber quantity refuted in MISTAKE-231,
+  and class number greater than one does not alone force a cuspidal theta
+  component: genus characters can account for the class variation.
+- **Correct framing:** the finite identities in S219 survive as independent
+  classical examples: for `x^2+xy+2y^2`,
+  `r(n)=2 sum_(d|n)(d/7)`; for discriminant `-23`, the stated class average is
+  Eisenstein and the principal-minus-nonprincipal theta series is a nonzero
+  weight-one CM cusp form. The cusp-count formula, genera of `X_0(12)` and
+  `X_0(14)`, the displayed coefficients and Atkin--Lehner signs of `f_14`,
+  and the standard Rankin--Selberg factorization are likewise classical facts.
+  They have no demonstrated LRC consequence. HYP-8880 and the LRC portions of
+  S219/S220 are **REFUTED**; retain the artifacts only as historical records
+  and do not route agents to them as an LRC strategy without a typed,
+  predicate-preserving construction.
+
+## MISTAKE-232 (2026-07-21, audit of S99 / HYP-8876) -- a scale-and-clock word analogy was called an exact proof-shape bridge, and a composite modulus was assigned a Paley spectrum
+
+- **What was claimed:** S99 identified GMC(2) dilation/Frobenius with
+  THM-2057's scaled clock witnesses, wrote
+  `Z/pZ <-> Z/12aZ,Z/14aZ` and `Frobenius <-> modular-orbit periodicity`, and
+  said that each of the clock moduli `{7,13,14}` carries a Paley
+  `sqrt(p)` spectrum. Its LRC row also used `84a=12a*7a` and invoked the
+  transitive-core/Paley/class-number entropy syntheses as explanation.
+- **Why it is wrong:** the script constructs Paley objects only at the prime
+  moduli `7` and `13`; `14` is not a prime power, has no finite field
+  `F_14`, and no Paley graph or tournament was constructed. Printing
+  `14=2*7` is not a spectral calculation. The displayed divisibility identity
+  already fails at `a=2`: `84a=168`, while `(12a)(7a)=336`. The exact
+  statement is `lcm(12a,14a)=84a`. More fundamentally, Frobenius is a ring
+  endomorphism in characteristic `p`, whereas the composite LRC clocks supply
+  only additive residue orbits. For example on `Z/12Z`, the proposed
+  seventh-power analogue is not additive:
+  `(1+1)^7=8 (mod 12)` but `1^7+1^7=2 (mod 12)`. No source-to-target map,
+  preserved predicate, or sidecar turns the shared words “scale” and “clock”
+  into a proof transfer. MISTAKES-227, -228, -230, and -231 independently
+  block the transitive-core, Paley-LRC, and zero-entropy explanations.
+- **Correct framing:** two exact, independent spectral facts survive. For the
+  Paley tournament at `7`, its skew matrix satisfies
+  `S^2=J-7I`, hence has spectrum `0,(+i sqrt(7))^3,(-i sqrt(7))^3`. For the
+  Paley graph at `13`, `A^2+A=3I+3J`, hence the spectrum is
+  `6,((-1+sqrt(13))/2)^6,((-1-sqrt(13))/2)^6`. THM-2057's scaled missing-
+  clock proof also survives independently. “Scale, then close on a clock” may
+  be kept only as a heuristic phrase; HYP-8876 is not verified and yields no
+  theorem or transfer.
+
 ## MISTAKE-231 (2026-07-21, audit of HYP-8875 / S218) -- four unrelated fiber sizes were called one repo-wide entropy invariant
 
 - **What was claimed:** S218 defined

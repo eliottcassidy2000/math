@@ -49,6 +49,12 @@ Validate the maintained startup surface after changing its routes or policies:
 python3 agents/check_docs.py
 ```
 
+Do not prepend generated session rows above `CURRENT DIGEST` or
+`CURRENT-TRUTH WARNING` banners. Those byte-zero sentinels protect current truth
+from chronological insertion. Put new rows below the maintained digest or in
+the explicitly historical suffix. The startup router lists `RESERVED` empty
+stubs separately; never treat their location under `01-canon/` as proof.
+
 ## Checkpoint useful partial results
 
 Checkpoint after reserving scarce identifiers, completing a meaningful

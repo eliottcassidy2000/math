@@ -1,15 +1,15 @@
 # The LRC(14) obstruction is the first cusp form — scaled cores, and clocks are cusps
 
-> **SCOPE CORRECTION 2026-07-21 (codex MISTAKE-226).** The classical modular
-> facts about `X_0(12)`, `X_0(14)`, and the newform `14.2.a.a` survive, but the
-> LRC attachment does not: a common divisor label is not a map from finite
-> phase clocks to modular cusps, dilation invariance is not a change of
-> `Gamma_0` level, and no coefficient/period/`L`-value has been proved to carry
-> the signed phase-height predicate. `X_0(12)` has six cusps (it is genus zero,
-> not cuspless); `a_2,a_7` are Hecke coefficients rather than cusp labels; and
-> the level-14 newform has coefficient field `Q` and is non-CM, with no
-> established period field `Q(sqrt(-7))`. Treat the proposed modular
-> obstruction as an analogy and a sidecar-search prompt, not an LRC theorem.
+> **REFUTED / HISTORICAL (MISTAKE-233; covers S219 and S220).** No map in
+> either session sends an LRC row or floor moment to a modular form while
+> preserving the lonely-runner predicate. Modular cusps are not additive
+> clock subgroups, dilation is not thereby `Gamma_0` level, and genus is not
+> S218 entropy. The level-14 elliptic newform has coefficient field `Q` and is
+> non-CM, so the repeated claim that its period field is `Q(sqrt(-7))` is
+> false. The body below is retained to expose the failed bridge. Only the
+> explicitly separated binary-theta identities, cusp counts/genera, newform
+> coefficients, and Rankin--Selberg identity survive as independent classical
+> facts; none is currently an LRC obstruction.
 
 *boxeph-2026-07-21-S220. Owner: tie previous modular-form work to cutting-edge LRC; then merge in scaled
 cores and clocks. Builds on THM-515 (singular series = theta), HYP-3587 (Eisenstein bulk + genus cusp),

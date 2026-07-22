@@ -25,10 +25,12 @@ The live structured kernel is:
 ```text
 counterexample -> primitive Cover14/non-AP peel kernel
                -> support-3..5 relation of height <=2^20  [THM-2051]
-               -> eleven-dimensional bounded support-at-most-three code [THM-2052]
-               -> finite two-anchor star atlas
-               -> 26 tangent disks per saturated plane [THM-2053]
-               -> exact resonance-fan / Euler discharge.
+               -> bounded sparse code of rank at least eleven [THM-2052]
+               -> rank 11 star atlas / rank 12 finite box
+               -> transverse deck + indexed 26 open disks [THM-2053]
+               -> signed-hull fan + Kelvin/Farey certificate [THM-2055/2056]
+               -> clock binding [THM-2057] + exact CRT packet join [THM-2059]
+               -> pair-sum / Fejer / Euler / rank discharge.
 ```
 
 Prioritize techniques that consume that relation without erasing phase or
@@ -36,13 +38,17 @@ observer data:
 
 | Technique | Faithful carrier | Current use | Hard stop |
 |---|---|---|---|
-| Tangent-disk geometry | saturated basis, 13 column vectors, positivity cone, primitive parameter lattice, 26 disks | Remove the uniform projective tail and expose a finite anisotropic residual | Gate failure is “uncertified,” not unsafe; there is no automatic Heegner discriminant. |
+| Transverse deck | exposed pair, `N`, labelled integral template `m`, longitudinal unit, `D_N(m)` | Remove whole fibers and exploit the bad-modulus down-set/conductor | Oriented-matroid signs and hull vertices alone lose determinant magnitudes and non-hull deck entries. |
+| Determinant/Kelvin fan | saturated basis, signed column hull, owner/tie labels, primitive ray, 26 disks, polar polygon | THM-2055/2056 finitely certify every nonlisted ray | Gate failure is “uncertified,” not unsafe; the fan is basis-dependent and not a Heegner form. |
+| Missing-clock binding | core residues, unit numerator orbit, killed clocks, divisibility lattice, affine binding phase | Generalize THM-2057's `12a`/`14a`/`84a` and `13a`/`14a`/`182a` closures | The theorem closes two scaled AP one-tail planes, not every star. |
+| CRT packet join | core/tail safe residues and their reduction histograms modulo the CRT gcd | THM-2059 exactly counts every compatible one-tail clock phase | A zero dot product rejects one grid only; marginal packet sizes lose compatibility. |
 | Resonance fan | exact wall equations, pair-sum phases, cell labels, owner margins | Discharge whole disk cells symbolically as in HYP-2896 | A fan without a phase-height certificate is only a partition. |
-| Bounded relation code | exact row space, rank, support/height/sign/augmentation, and deletion incidence | Compress the star atlas or find an active row outside rank eleven | Repeated/dependent relations give no descent; rank twelve is optional. |
+| Relative Fejer | bounded scalar/vector relation packets and a proved lifted plateau | Certify resonance-lift/nonaliasing cells using THM-2054's explicit budget | Numerical cutoff compatibility does not identify the model torus. |
+| Bounded relation code | exact row space, rank, support/height/sign/augmentation, and deletion incidence | Compress rank eleven stars or decide the separate rank twelve box | Repeated/dependent relations give no descent; rank twelve is finite, not yet decided. |
 | Phase-height cells | owner/sign/selected side/height with paired deletion | Couple relation rows to endpoint survival and Euler components | Ordinary arrangement or complement invariants forget feasibility. |
 | Quantized peel discrepancy | component counts, fiber occupancy, peel owner | Eliminate structured families or force positive measure | It is a necessary obstruction, not a universal classifier. |
 | Mixed CT grading | `M_(r,s)=CT[P^r Pbar^s]`, grade `r-s` | Retain affine augmentation and compare relation profiles | Diagonal energy is translation blind; no GMC transfer is known. |
-| Finite wall transport | target disk point, adjacent cell, phase/owner label | Reuse certificates inside the finite residual | Existence elsewhere in a plane still has the wrong quantifier. |
+| Typed state graph | deck/Farey state plus clocks, endpoint owner, phase and exit label | Compose certified transitions without forcing a tournament | A ranking or cosmetic tie-break has no LRC content. |
 | Global endpoint transport | located tooth instances, owners, phase word | Finish the saturated six-comb branch | Another unlocated local-return charge cannot close it. |
 
 For tournament experiments, prefer bounded relation rows, deletion obligations,
@@ -75,11 +81,10 @@ Destroyed information: the relation-code quotient alone forgets phase location,
 wall magnitude, safe-set components, pair-sum maximizing rulers, and the
 global maximum.
 
-Best use: encode THM-2052's two-anchor stars, reduce their saturated kernel
-bases, and then search for an active owner-labelled relation outside `W` on
-the THM-2053 tangent-disk residual. Such a row raises rank to twelve and invokes
-the maximal-minor shortcut; otherwise couple the disk point to a resonance fan
-or HYP-2108's endpoint functional.
+Best use: encode THM-2052's two-anchor stars, reduce their saturated bases, and
+attach `D_N`, the THM-2055 owner fan, the THM-2056 Farey ray, missing-clock
+taxes, THM-2059 CRT histograms, pair sums, and endpoint data. Search for an active relation outside `W`;
+otherwise seek a clock/binding, relative-Fejer, or Euler certificate.
 
 Failure mode: treating a short relation as AP rigidity; counting a dependent
 row as rank gain; dropping coefficient height or augmentation; changing the
@@ -87,8 +92,8 @@ positive-speed gauge; calling disk membership unsafe; inventing a quadratic-
 form discriminant from `14`; accepting an unpointed safe direction; or
 orienting overlap ties arbitrarily.
 
-Anchors: THM-2051, THM-2052, THM-2053, THM-2047, THM-2048, HYP-8841,
-HYP-8846, HYP-2896, HYP-8840, MISTAKE-226, MISTAKE-229.
+Anchors: THM-2051--2057, THM-2059, THM-2047, THM-2048, HYP-8871, HYP-8841,
+HYP-8846, HYP-2896, MISTAKE-226--234. THM-2058 is a reservation, not an input.
 
 Next agent hook: compute saturated reduced bases and tangent-disk intersections
 for the mandatory AP, lifted-AP, K33, delayed-period, and Cover14 controls;

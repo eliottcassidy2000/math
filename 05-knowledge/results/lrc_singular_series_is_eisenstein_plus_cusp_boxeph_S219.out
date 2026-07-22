@@ -1,13 +1,15 @@
+STATUS: HISTORICAL / LRC INHERITANCE REFUTED (MISTAKE-233).
+SURVIVES: finite binary-theta identities in A-B; C-D/SUMMARY have no proved LRC map.
 
 ========================================================================
-A  disc -7 (h=1, Paley-7, LRC(14)): theta = PURE EISENSTEIN  r_Q(n)=2*sum_{d|n}(d/7). Zero cusp.
+A  disc -7 binary theta: PURE EISENSTEIN  r_Q(n)=2*sum_{d|n}(d/7)
 ========================================================================
   r_Q(n) == 2*sum_{d|n}(d/7) for n=1..40 (pure weight-1 EISENSTEIN, NO cusp)? True
   sample r_Q(n): [2, 4, 0, 6, 0, 0, 2, 8, 2, 0, 4, 0, 0, 4, 0]
-  => class number 1 => theta is Eisenstein-only => ZERO deep entropy => RIGID (the S217/S218 rigid pole).
+  => This binary theta is Eisenstein-only. No LRC or entropy consequence follows.
 
 ========================================================================
-B  disc -23 (h=3): theta = EISENSTEIN (genus, from Legendre) + CUSP (deep class-group fluctuation)
+B  disc -23: class average is EISENSTEIN; class difference is a nonzero CUSP form
 ========================================================================
    n :  r_prin  r_non  | (r_prin+2 r_non)/2  vs  sum_{d|n}(d/23)  |  cusp = r_prin - r_non
    1 :     2      0  |      1            1          |   +2
@@ -29,10 +31,10 @@ B  disc -23 (h=3): theta = EISENSTEIN (genus, from Legendre) + CUSP (deep class-
   23 :     2      0  |      1            1          |   +2
   24 :     4      6  |      8            8          |   -2
   EISENSTEIN identity (r_prin+2 r_non)/2 == sum_{d|n}(d/23) for all n? True  (= the genus/ideal count/main term)
-  CUSP part r_prin - r_non is NONZERO (13 of 30 n): the DEEP class-group fluctuation = hidden entropy.
+  CUSP difference r_prin - r_non is NONZERO (13 of 30 n).
 
 ========================================================================
-C  the DICTIONARY: Eisenstein = floor/local/genus (0 deep entropy) ; cusp = deep/hidden entropy
+C  HISTORICAL / REFUTED DICTIONARY (retained to show MISTAKE-233)
 ========================================================================
   theta of a disc-D binary form  =  EISENSTEIN  (+)  CUSP :
     EISENSTEIN coeff = sum_{d|n} chi_D(d)  = the GENUS ideal count = the singular-series MAIN TERM = the FLOOR.
@@ -43,7 +45,7 @@ C  the DICTIONARY: Eisenstein = floor/local/genus (0 deep entropy) ; cusp = deep
   h>1 (-23,-47): cusp forms present => the deep fluctuation = where hidden information lives.
 
 ========================================================================
-D  the LRC inheritance (THM-515): singular series = theta => Eisenstein FLOOR + cusp FLUCTUATION
+D  REFUTED LRC inheritance: THM-515 supplies no modular transformation law
 ========================================================================
   THM-515: L(S) = sum_{relation lattice} prod h  = a positive-definite lattice THETA (a modular form).
   By the same Eisenstein (+) cusp split:
@@ -57,7 +59,7 @@ D  the LRC inheritance (THM-515): singular series = theta => Eisenstein FLOOR + 
   is the floor' and my S216/S217 (corrected): the RIGIDITY of 7 = no cusp forms at the apex = Eisenstein-only.
 
 ========================================================================
-SUMMARY
+HISTORICAL SUMMARY -- NOT A VALID LRC CONCLUSION
 ========================================================================
   Previous modular-form work ties to cutting-edge LRC through ONE split: theta = EISENSTEIN (+) CUSP.
    * VERIFIED: disc -7 (Paley-7, LRC(14)) theta = pure Eisenstein (r_Q=2 sum(d/7), no cusp) = h=1 rigid;

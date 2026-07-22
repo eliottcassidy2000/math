@@ -217,25 +217,41 @@ def maintained_route_lines(relative: str) -> list[str]:
 
 
 STATUS_WORDS = (
-    "REFUTED", "SUPERSEDED", "PROVED", "FINITE-EXACT", "CITED",
-    "CONDITIONAL", "VERIFIED", "PARTIAL", "CLAIMED", "OPEN", "MIXED",
+    "FINITE-EXACT", "SUPERSEDED", "CONDITIONAL", "RESERVED", "REFUTED",
+    "VERIFIED", "PARTIAL", "CLAIMED", "PROVED", "CITED", "OPEN", "MIXED",
 )
 
 
 def file_status(relative: str) -> str:
     if relative.startswith("07-reflections/"):
         return "HISTORY"
+    if relative.endswith("/INDEX.md"):
+        return "LEDGER"
     path = REPO / relative
     try:
         prefix = path.read_text(encoding="utf-8", errors="replace")[:5000]
     except OSError:
         return "UNKNOWN"
-    match = re.search(r"^status:\s*(?:>\s*)?(.*)$", prefix, flags=re.MULTILINE)
+    match = re.search(r"^status:\s*(?:[>|]\s*)?(.*)$", prefix, flags=re.MULTILINE)
     probe = match.group(1) if match else prefix[:400]
-    if match and not probe.strip():
-        probe = prefix[match.end():match.end() + 400]
+    if match:
+        # A folded YAML status often mentions proved dependencies after declaring
+        # the file OPEN. Read only its indented block, then honor the first
+        # declared status token instead of a global priority list.
+        continuation: list[str] = []
+        for line in prefix[match.end():].splitlines():
+            if line.startswith((" ", "\t")):
+                continuation.append(line.strip())
+                continue
+            break
+        probe = " ".join((probe, *continuation))
     upper = probe.upper()
-    return next((word for word in STATUS_WORDS if word in upper), "UNLABELLED")
+    matches = []
+    for order, word in enumerate(STATUS_WORDS):
+        token = re.search(rf"(?<![A-Z]){re.escape(word)}(?![A-Z])", upper)
+        if token:
+            matches.append((token.start(), order, word))
+    return min(matches)[2] if matches else "UNLABELLED"
 
 
 def scored_files(
@@ -306,15 +322,23 @@ def topic_hits(
         if count >= required_matches and (not has_identifier or path in identifier_paths)
     ]
     groups = (
-        ("Canon", "01-canon/theorems/"),
-        ("Hypotheses", "05-knowledge/hypotheses/"),
-        ("Historical reflections", "07-reflections/"),
+        ("Canon", "01-canon/theorems/", False),
+        ("Reservations (not results)", "01-canon/theorems/", True),
+        ("Hypotheses", "05-knowledge/hypotheses/", None),
+        ("Historical reflections", "07-reflections/", None),
     )
     per_group = max(1, max_matches // len(groups))
     print("Detailed files (truth precedence first; specificity within group):")
-    for label, prefix in groups:
+    for label, prefix, reservation_only in groups:
         rows = sorted(
-            (row for row in file_rows if row[1].startswith(prefix)),
+            (
+                row for row in file_rows
+                if row[1].startswith(prefix)
+                and (
+                    reservation_only is None
+                    or (file_status(row[1]) == "RESERVED") == reservation_only
+                )
+            ),
             key=lambda row: (row[1].endswith("/INDEX.md"), -row[0], row[1]),
         )
         print(f"  {label}:")
@@ -382,6 +406,7 @@ def session_posture(topic: str) -> None:
     print("Keep a 3–7 concept board; compare each new result against every item.")
     print("Explain the mechanism or failure anatomy, not only the verdict.")
     print("Type connections as map / preserved predicate / loss / sidecar / test.")
+    print("Treat RESERVED stubs as namespace only, never as results or dependencies.")
 
 
 def identity_note() -> None:

@@ -172,96 +172,99 @@
 > one current row per recent ID; preserve retracted originals only below the
 > `# Hypothesis Log — Index` boundary or in their reflections.
 
-- **HYP-8865 / S216 (MIXED; LRC transfer REFUTED by MISTAKE-229):** The wedge
-  identity `a z_i-b u_i=det((a,b),(u_i,z_i))` and the classical class-number
-  table are exact. THM-2053's actual failure carrier is a union of 26 tangent
-  disks against the chosen-basis Euclidean norm, not one form of discriminant
-  `-7`. Heegner class number one does not compress the atlas, an isotropic
-  parameter is not a new relation, and anisotropy does not imply loneliness.
-
-- **HYP-8860 / S215 (MIXED; LRC periodic table REFUTED by MISTAKE-228):** The
-  odd-prime Paley graph/tournament dichotomy is classical. Nonprincipal
-  adjacency roots are shifted half-scaled Gauss sums, and `p=2` is outside the
-  theorem. The foil/apex/rank/tight-slack roles prove no LRC statement.
-
-- **HYP-8855 / S214 (MIXED; lattice identification REFUTED by MISTAKE-227):**
-  The adjacent AP rows form a useful path/Jacobi frame, but only an index-`11!`
-  sublattice of `ker_Z(1,...,12)`. They are not THM-2052's 13-coordinate
-  private star rows. AP order, pair sums, and Schur triples remain diagnostic;
-  no AP/tournament nullcone or unique rank-or-Euler terminal follows.
-
-- **HYP-8850 / S213 (VERIFIED LEFSCHETZ-PARITY UNIFICATION; no cross-domain implication):** Counts under an involution satisfy `count == fixed_count (mod 2)`. Tournament converse gives `A000568=SC+2(chiral pairs)`; the toothpick construction has one odd axis seed plus mirror pairs; HYP-8845 gives the analogous LRC mirror pairing. The dictionary explains parity and suggests equivariant carriers, but does not identify the objects or prove LRC.
-
-- **HYP-8846 / FINITE TANGENT-DISK COMPLETION (OPEN):** THM-2053 repairs the
-  old large-direction quantifier uniformly. After THM-2052's finite star atlas,
-  only primitive positive parameters in 26 explicit tangent disks remain
-  uncertified. Compress saturated bases/atlas types and discharge the disks by
-  exact resonance fans, pair-sum phases, or Euler endpoints. Wall transport and
-  rank twelve are accelerators inside this finite program.
-
-- **HYP-8845 / EQUIVARIANT EULER SHARPENING (VERIFIED reduction; LRC still open):** On a covering row, `t->1-t` acts freely on `G_delta`, so `chi(G_delta)` is even. Hence LRC at `delta=1/14` is equivalent to `chi>=2`, and one survivor on `[0,1/2]` supplies its mirror. Forcing the first survivor remains Wall A.
-
-- **HYP-8841 / FINITE-ATLAS TERMINATION (OPEN, exact hostile bank):** THM-2050
-  makes local-germ blindness exact; THM-2051/2052 force the sparse relation code
-  and two-anchor atlas; THM-2053 removes every projective tail outside 26
-  tangent disks. The target is now exact finite disk discharge. `P_w>=0`, a
-  relation outside the rank-eleven code, and wall transport remain useful
-  routes, not the only terminal. Raw circuit existence is insufficient.
-
-- **HYP-8840 / S211 (CORRECTED AUGMENTATION-GRADED CT WILDCARD; MISTAKE-226):** The diagonal energy `CT[P^m Pbar^m]` sees only relations with augmentation zero and is affine-invariant, so it is not the full LRC relation lattice and THM-730 is not its `m=2` case. Retain the mixed table `M_(r,s)=CT[P^r Pbar^s]`, whose grading `r-s` restores augmentation; equivalently adjoin observer speed zero. THM-730 is `M_(2,1)`. Exact survivors are the CT identity, two-charge seed, scoped no-carry tensorization, cyclotomic AP factorization, and the strict-volume/tight-Euler boundary. Bessel-to-sinc weight replacement gives no GMC-to-LRC implication. Live test: combine the mixed grading with THM-2051's small-relation branch.
-
-- **THM-2052 / HIGH-RANK BOUNDED RELATION CODE (PROVED finite-star reduction):**
-  THM-763 gives `sum v_i<=91^12`; pigeonhole coding forces eleven independent
-  support-at-most-three relations of height `91^6`. Rank eleven is a finite
-  list of two-anchor stars `a_i v_p+b_i v_q+c_i v_i=0`, `c_i!=0`, with one
-  projective parameter after dilation. Rank twelve gives a maximal-minor box.
-
-- **THM-2053 / RANK-TWO GEODESIC TERMINAL (PROVED + CITED; not LRC14):** For
-  saturated `u,z`, `M_T-max_i|a z_i-b u_i|/(2(a^2+b^2)) <= M(au+bz) <= M_T`.
-  Ungar plus settled lower-dimensional LRC gives `M_T>=1/13`, so
-  `max_i|a z_i-b u_i|<=(a^2+b^2)/91` is safe. Gate failure is exactly 26 open
-  tangent disks. Membership is undecided, not unsafe.
-
-- **THM-2051 / FEJER--BV HIGHER-RELATION ALTERNATIVE (PROVED; LRC14 open):**
-  Triangle-packing the exact THM-965 pair covariances strengthens the earlier
-  checkpoint: absence of support-`3..5` relations of height at most `2^20`
-  forces continuous `BONF5>0`. The exact triangle/global floors are
-  `-1297/70070` and `-1297/2695`, with final margin
-  `43815012/138469835735>0`. The relation-rich branch remains open.
-
-- **THM-2049 / DC2 ASSOCIATED-GRADED ACYCLICITY (PROVED local/formal result; DC(2) open):** The simultaneous `(S,T)` correction map is surjective in every relevant beta grade and a formal beta-adic lift exists. The grade-six anomaly is not a cohomology obstruction. Finite polynomial termination, extension across `x=0`, and coupling to `D` are the honest remaining gates.
-
-- **THM-2048 / FIBER-QUANTIZATION TAX (PROVED pruning gain):** Under a zero-measure peel, `disc_v=6mu^2+||P_v1_E-7mu1_D||_2^2` and integer orbit occupancy adds `{7vmu}(1-{7vmu})/(7v^2)`. Combined with the component tail bound this strictly closes a primitive Cover14 row where the old uniform tail test is inconclusive. It is a necessary obstruction/equality classifier, not LRC14.
-
-- **THM-2050 / PERIOD-14 GERM BLINDNESS (PROVED no-go):** `AP13` and `{1,...,11,13,26}` agree as piecewise-linear functions on explicit `1/728` neighborhoods of every unit phase `a/14`, but have maxima `1/14` and `1/12`. Local jets, slopes, or complete germs need a global magnitude/first-exit/gluing sidecar.
-
-- **HYP-8835 / S210 (CORRECTED ANTISYMMETRY ATLAS; central synthesis refuted by MISTAKE-225):** Exact independent facts survive: real skew matrices have even rank; a tournament game has a unique odd-cardinality optimal support, with the oddness using the tournament block's mod-2 form as well as skew singularity; `P(T^n)=(1+t)^n`; a positive kernel vector `Mp=0` gives the replicator integral `product x_i^(p_i)`; torus inversion fixes `2^n` points; LRC far-set Fourier weights are even; and Vandermonde is alternating. Pure optimum means Condorcet winner, not transitivity: a source above a directed 3-cycle is the minimal counterexample. RPS levels in `Delta^2` are circles `S^1`, not `T^2`. The cutting bagel is a solid torus, not its boundary; no reduced-Euler bridge is known. Matrix complement, torus inversion, and permutation parity remain three actions without an equivariant map. See the corrected reflection/script and MISTAKE-225.
-
-- **HYP-8830 / S209 (CORRECTED PHASE-HEIGHT ARRANGEMENT WILDCARD; MISTAKE-224):** Classical braid Poincare/Stirling and Shi formulas survive, as does THM-2047's Fejer-regularized Fourier identity. The annihilator is not a finite toric layer poset and `G_delta` is not an ordinary complement. THM-2047 proves the labelled selected-cell carrier: the full-torus opposite-sign determinant exposes `v+w`, while the top-slope proof selects the actual ruler; deletion removes an owner's wall pair. Side, height, owner, sign, endpoint word, and global termination are load-bearing. The `B=2` count is finite-exact in 72 triples only, not Betti mass or Wall A.
-
-- **HYP-8825 / S208 (CORRECTED ARRANGEMENT SHADOW; MISTAKE-223):** The Vandermonde is the braid defining polynomial; its real chambers are labelled total orders/transitive tournaments; coordinate coalescence has the explicit leading within-block/transverse product; and a companion matrix gives `det(I-xM_g)=1-x-x^(g+1)`. These facts do not turn general NC2 into an arrangement-complement theorem, factor hyper-Bessel functions by localization, or identify bagel/shadow Euler defects. THM-2023 already proves the relevant `Phi_(p,q)` Laguerre--Polya theorem independently.
-
-- **HYP-8820 / S207 (EXACT BINOMIAL ATLAS; mechanism bridges open, MISTAKE-222):** Caterer and cake are Pascal prefixes; for `n>=1`, Moser is `C(n,0)+C(n,2)+C(n,4)=sum_(k=0)^4 C(n-1,k)` and bagel is `C(n,3)+2C(n,2)+2C(n,1)=cake(n+1)-2`, hence `bagel(n)-cake(n)=T_n-1`. Fibonacci is `sum_k C(n-k,k)`; full-rank gap sequences satisfy `a_g(d)=sum_k C(d-gk,k)` with kernel `1/(1-x-x^(g+1))`. A common array or matching minus one supplies no geometric, JC, or LRC map.
-
-- **HYP-8815 / S206 (CORRECTED EXACT FINITE LRC AUDIT; MISTAKE-221):** After gcd normalization, a counterexample is primitive Cover14 with `M<1/14`, a non-AP maximum-deletion core, every-peel discrepancy/fiber-tax obstruction (THM-731/2048), a genuine support-`3..5`, height-`2^20` relation (THM-2051), and the rank-eleven triple code/tangent-disk residual of THM-2052/2053. Near-AP, Fibonacci, and autocorrelation iff claims remain heuristics. The exact [pair-sum theorem](../../01-canon/theorems/THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case.md) makes the repaired fifteen-row audit finite-exact; all rows are safe and the bank is not a global minimizer theorem.
-
-- **HYP-8810 / S205 (CORRECTED WILDCARD FRAME, not a common reduction):** AP/transitive/one-sided configurations are useful cold extremals to compare, but only the LRC side has the one-way supplier `AP extraction -> far element -> LRC(14)` via THM-1017. No exact theorem reduces planar JC to the same twelve-term AP problem. THM-2045 contributes a genuine JC-side weighted-sector obstruction, not an AP reduction; MISTAKE-216 separates Poisson, Dixmier, and Jacobian ranks.
-
-- **HYP-8805 / THM-2022 FORMALIZATION (PARTIAL, root-imported):** The modular
-  `TournamentH7.GMC2Formalization` spine checks Wick/normalized relations,
-  one-sided branches, lowest faces, `DvdK1` interfaces, number/finite-field
-  descent, height/gap, dilation, Lucas, and whole-face Frobenius plus abstract
-  three-case assembly. Remaining: concrete normalized-channel instantiation,
-  final conditional `DvdK1 -> NC2`, and formalization of the cited DvdK input.
-
-- **HYP-8803 / DC2 boundary (EXACT ORE REDUCTION; OPEN CLOSURE):** THM-2046 blocks filtered cotangent descent. THM-2049 proves the simultaneous associated-graded correction complex is acyclic and gives a formal beta-adic lift, so the gate is finite polynomial termination, boundary regularity at `x=0`, and the coupled `D` column. Phase-height/localization and parity comparisons are operation-level prompts only.
-
-- **HYP-8800 / THM-2041--2043 (PROVED PRESERVER + LRC WILDCARD):**
-  Good-characteristic Frobenius preserves exact-order/parity/conductor packets,
-  but LRC still needs a seed and pointwise exit. THM-2051--2053 localize the
-  target to finite tangent-disk residuals; any Frobenius route must certify
-  whole resonance-fan cells there. THM-2043 aliases require owner height or an
-  adaptive certificate; THM-2047 is faithful but supplies no positivity.
+- **HYP-8900 / S224 (VERIFIED per-row evaluator; Wall A still open):**
+  THM-2047's pair-sum vertices plus reflection reduce the exact maximum of a
+  **fixed** row to finitely many rational phases in `(0,1/2]`. The deep-well
+  row has exact value `14/183`. This does not make the unbounded family of
+  primitive covering rows finite or prove AP-core rigidity; the displayed
+  “Wall A” condition is the LRC predicate rewritten at its exact vertices.
+- **THM-2059 / CRT PHASE-PACKET CARRIER (PROVED; not LRC(14)):** For a scaled
+  core with one tail and any clock `N`, core-safe and tail-safe residue packets
+  join by generalized CRT. Their reduction-histogram dot product exactly
+  counts compatible packet types and has a zero-mode/fluctuation split. This
+  is a lossless bipartite compatibility carrier, not a tournament, modular
+  cusp, or proof that every histogram pair overlaps.
+- **HYP-8895 / S223 (PARTIAL support semigroup; MISTAKE-234):** The return
+  lengths `R={m:0 in mS}` form an exact reachability semigroup, and positive
+  coefficients satisfy `CT(f^m)!=0 iff m in R`. Mixed/complex cancellation is
+  not cofinite in general: for
+  `f=z-z^(-1)+z^2-z^(-2)`, inversion forces every odd constant term to vanish
+  although the aperiodic support has every return length `m>=2`. Keep the
+  conductor as a support sidecar, not an effective DvdK replacement.
+- **HYP-8890 / S222 (OPEN DvdK-bypass route):** A positive-coefficient
+  Laurent polynomial has the expected real saddle/Laplace asymptotic, and
+  periodic two-charge cases are elementary. The general complex-coefficient
+  claim still needs dominant-saddle existence, uniqueness modulo period, and
+  noncancellation, including degenerate saddles. This is not yet a replacement
+  proof of Duistermaat--van der Kallen and supplies no formalized dependency.
+- **HYP-8885 / S221 (RETYPED analogy; MISTAKE-231/233):** The exact tournament
+  cospectral-fiber counts, cycle counts, and Laplace-kernel examples survive.
+  Calling every residual a “cusp,” its size a “genus/entropy,” or its first
+  appearance the universal hard case is metaphor, not a common mathematical
+  object. In particular `f14` is not an LRC obstruction. Use the frame only
+  after filling the connection contract separately for each pair of objects.
+- **HYP-8880 / S219--S220 (REFUTED LRC modular bridge; MISTAKE-233):** Classical
+  cusp-count, genus, and level-14 newform facts survive. No map identifies
+  scaling with a `Gamma_0` level, clock states with modular cusps, or `f14` with
+  an LRC obstruction. The level-14 newform is non-CM with coefficient field
+  `Q`; the asserted period field `Q(sqrt(-7))` is false.
+- **HYP-8876 / S99 (REFUTED transfer; MISTAKE-232):** THM-2057's scaled clocks
+  and THM-2022's Frobenius share a proof-shape analogy only. `14` has no Paley
+  object, `lcm(12a,14a)=84a`, and no LRC predicate-preserving Frobenius map was
+  supplied.
+- **HYP-8878 / S101 (PROVED elementary criterion; finite prevalence only):**
+  If the lowest balanced Laurent support has a unique channel of minimum mass,
+  its first constant term is one nonzero multinomial monomial, so that support
+  needs no DvdK seed. The `98/116` (`84%`) figure is only the exhaustive scan
+  of size-3/4 straddling supports in `[-4,4]`; coincident minimum channels are
+  the remaining cancellation locus. HYP-8877 is the coarser edge/positivity
+  precursor. This narrows citation/formalization work; NC2 was already proved.
+- **HYP-8875 / S218 (REFUTED universal invariant; MISTAKE-231):** `log2|fiber|`
+  is observable-relative Hartley ambiguity, not repo-wide Shannon entropy.
+  Tournament, continued-fraction, moment, and genus claims have explicit
+  counterexamples; retain only separately typed information-loss examples.
+- **HYP-8871 / DECK--FAREY--CLOCK STATE GRAPH (OPEN):** Compose THM-2053's bad
+  decks, THM-2055/2056 owner/Farey states, THM-2057 clock/binding sidecars,
+  pair-sum phases, THM-2054 off-resonance cells, and Euler endpoints. The finite
+  front-end is proved; event completeness and uniform discharge are not.
+- **HYP-8870 / S217 (REFUTED universal class entropy; MISTAKE-230):** Rational
+  prime representation sees inversion orbits, not oriented form classes, and
+  no probability model makes `log h` an entropy. Typed class/genus examples
+  survive without any LRC transfer.
+- **HYP-8865 / S216 (MIXED; MISTAKE-229):** The wedge identity is exact, but
+  THM-2053's carrier is a basis-dependent union of 26 disks, not a discriminant
+  `-7` form. Heegner theory supplies no rank or Euler terminal.
+- **HYP-8860 / S215 (MIXED; MISTAKE-228):** The odd-prime Paley graph/tournament
+  dichotomy survives. Prime “roles” and composite modulus 14 prove no LRC fact.
+- **HYP-8855 / S214 (MIXED; MISTAKE-227):** The adjacent AP path frame has index
+  `11!` in the saturated lattice and is not THM-2052's code. AP order and pair
+  sums remain diagnostics, not a bridge.
+- **HYP-8850 / S213 (VERIFIED PARITY LENS):** Involution counts split into fixed
+  points plus free pairs. Tournament converse, toothpick symmetry, and LRC
+  mirror pairing instantiate this separately; no object identification follows.
+- **HYP-8846 / FINITE LABELLED-ATLAS COMPLETION (OPEN):** THM-2053--2057 now
+  provide deck, disk, normal-fan, Kelvin/Farey, and two AP one-tail terminals.
+  The remaining task is a uniform lossless discharge of general star states.
+- **HYP-8845 / EQUIVARIANT EULER SHARPENING (VERIFIED reduction):** On a
+  covering row, `t->1-t` acts freely on `G_delta`; LRC at `1/14` is equivalent
+  to `chi>=2`. Producing the first survivor remains open.
+- **HYP-8841 / FINITE-ATLAS TERMINATION (OPEN):** Local-germ blindness is exact;
+  use clocks, pair sums, `P_w>=0`, off-resonance Fejer, rank gain, or Euler
+  survival on the finite labelled residual. Raw circuit existence is not enough.
+- **HYP-8840 / S211 (CORRECTED CT WILDCARD; MISTAKE-226):** Mixed moments
+  `CT[P^r Pbar^s]` restore augmentation lost by diagonal energy. This preserves
+  relation support but gives no GMC-to-LRC implication.
+- **THM-2051--2057 / CURRENT LRC TERMINALS:** 2051 forces a height-`2^20`
+  support-`3..5` relation; 2052 gives the rank-eleven star atlas; 2053 the
+  transverse deck and sufficient disk gate; 2054 relative Fejer; 2055 the
+  signed-hull fan; 2056 Kelvin/Farey certification; 2057 two scaled AP
+  one-tail closures. Each is proved in its stated scope; none proves LRC(14).
+- **THM-2058 / RESERVED:** **UNPROVED EMPTY STUB.** No statement, proof, script,
+  result, or usable dependency exists.
+- **HYP-8805 / THM-2022 FORMALIZATION (PARTIAL):** Root-imported
+  `GMC2Formalization` is sorry-free at proved nodes. Separate, non-imported
+  `GMC2NC2Capstone` typechecks the conditional assembly with one `sorry`.
+  Concrete normalized-channel wiring and formal DvdK remain.
 
 # Hypothesis Log — Index
 - **HYP-8490 / boxeph-2026-07-20-S182 (THM-1635: tie systems closed — Wiener-Parseval + the Puiseux ladder; one edge referred to review — owner S182):** DELIVERED, REVIEW-GATED. (1) DISTINCT-ARGUMENT TIES: the localized condition S_m = sum beta_j e^{-im theta_j} -> 0 (exponentially; the exact-zero full condition minus subdominant arcs) dies by Bohr/Wiener-Parseval: Cesaro mean |S_m|^2 -> sum |beta_j|^2 (cross terms average out for distinct theta mod 2pi, rational or irrational; corrections O(1/m) contribute o(1); only the first correction order is used — no divergent-tail control needed): all beta_j = 0 contradicts simple folds. Machine check: mean 1.83002 vs 1.83000. (2) IDENTICAL-C TIES: merged leading terms may cancel; the 1/m ladder (Vandermonde in subleading Puiseux data) forces successive conditions; TERMINATION: full coincidence of all orders => identical Puiseux germs => the arcs coincide as curves — contradiction with distinctness. Machine check: tied sum = (c1 - c2)/m exact. (3) THE HONEST EDGE, REFERRED TO THE RUNNING REFEREE: stacked jumps — two distinct fold events tracing the SAME t-curve, where only the TOTAL jump enters the reconstruction; if stacked simple folds can have vanishing total, the contradiction needs to fire elsewhere. (4) CONDITIONAL LEDGER (no completion claim): if the referee passes the edge, NC2/Structure Theorem/GMC(2) stand complete modulo the THM-1630 far-end convergence lemma + the standard citation stack. Referee verdict to be filed on landing. [VERDICT LANDED, see HYP-8505: Stage A holds (rate now load-bearing), Stage B FALSE AS FILED (scale premise wrong — MISTAKE-204), the stacked-jump edge REAL and infecting THM-1630 §4. Ties NOT closed; THM-1635 §6 + THM-1630 §6 amended in place.]

@@ -5,10 +5,10 @@ status: >
   PROVED. General sieve: if a core C contains no multiple of N, 2<=N<=14,
   then a scaled one-tail counterexample aC union {w} must have Na|w. Hence it
   pays the lcm of all missing clocks. For C={1,...,11,13}, the missing clocks
-  are exactly 12 and 14. Their lcm forces 84a|w, where HYP-2896's scaled
-  affine binding witness is strict. Thus every row
+  are exactly 12 and 14. Their lcm forces 84a|w, where the explicit scaled
+  affine binding witness below is strict. Thus every row
   {a,2a,...,11a,13a,w} satisfies LRC(14). For C={1,...,12}, the missing
-  clocks 13 and 14 force 182a|w; the explicit deep-well phase then closes
+  clocks 13 and 14 force 182a|w; the explicit deep-well phase below closes
   every row {a,2a,...,12a,w}. This closes two rank-two planes, not LRC(14).
 source: codex-2026-07-21-LRC-scaled-zeta-core
 script: 04-computation/lrc_kelvin_farey_scaled_core_codex_20260721.py
@@ -18,13 +18,14 @@ result_sha256: 35c25efa343bf489f79c9593379378699483c254915f9d9c50a080d119c9b520
 hash_basis: normalized repository blobs (LF)
 depends_on:
   - THM-2047
-  - HYP-2896
 related:
   - THM-724
   - THM-1014
   - THM-2053
   - THM-2055
   - THM-2056
+  - THM-2059
+  - HYP-2896
   - HYP-8846
 ---
 
@@ -175,12 +176,30 @@ is `84a`, so
 w=84a m,             m>=1.                               (12)
 ```
 
-HYP-2896 proves for the unscaled row `C union {84m}` that
+For the unscaled row `C union {84m}`, put
 
 ```text
 t_m=(35m+2)/(84m+5),
-min_(v in C union {84m}) ||v t_m||=7m/(84m+5)>1/14.      (13)
+D=84m+5.
 ```
+
+The phase computation needed here is self-contained. In the order
+`1,2,...,11,13,84m`, the numerator distances `D||v t_m||` are
+
+```text
+35m+2, 14m+1, 21m+1, 28m+2, 7m, 42m+2,
+7m+1, 28m+1, 21m+2, 14m, 35m+3, 35m+1, 7m.
+```
+
+Every entry is at least `7m`, with equality at speeds `5` and `84m`.
+Consequently the exact margin of this witness is
+
+```text
+min_(v in C union {84m}) ||v t_m||=7m/(84m+5)>1/14,      (13)
+```
+
+where the strict inequality is `14m>5`. This is a lower-bound certificate
+for `M`, not a claim that the witness is globally maximizing.
 
 For `S(a,w)`, use `t=t_m/a`. Then every phase is identical to its phase in
 (13): `ai t=i t_m` and `w t=84m t_m`. Therefore the last branch is not merely

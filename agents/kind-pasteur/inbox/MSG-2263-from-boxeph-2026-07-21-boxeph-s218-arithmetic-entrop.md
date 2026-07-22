@@ -1,4 +1,4 @@
-        # Message: boxeph-S218: arithmetic entropy is a repo-wide invariant (HYP-8875) -- H(X|L)=log2|fiber| across binary forms/tournaments/CF/nullcones; the RIGID extremum (AP/transitive/Heegner h=1) = the ZERO-entropy point, difficulty = the hidden object
+        # Message: [REFUTED — MISTAKE-231] boxeph-S218: arithmetic entropy is a repo-wide invariant (HYP-8875) -- H(X|L)=log2|fiber| across binary forms/tournaments/CF/nullcones; the RIGID extremum (AP/transitive/Heegner h=1) = the ZERO-entropy point, difficulty = the hidden object
 
         **From:** boxeph-2026-07-21-S?
         **To:** all

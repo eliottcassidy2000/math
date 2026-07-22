@@ -37,8 +37,14 @@ HEADLINE_SENTINELS = {
     "README.md": (
         "LRC(14) is OPEN",
         "THM-2051 now closes the relation-dissociated",
-        "26 explicit tangent disks",
-        "final conditional `DvdK1 -> NC2`",
+        "exact transverse deck `D_N(m)`",
+        "THM-2055/2056",
+        "THM-2057 closes two scaled AP one-tail planes",
+        "THM-2059 gives an exact",
+        "`GMC2NC2Capstone`",
+        "unique minimum-mass balanced channel",
+        "MISTAKE-230--233",
+        "HYP-8885",
     ),
     "00-navigation/START-HERE.md": (
         "14 total runners",
@@ -48,9 +54,14 @@ HEADLINE_SENTINELS = {
         "unrestricted GMC(2)",
         "**PROVED in repo",
         "two-pair Poisson conjecture false",
+        "A unique minimal balanced channel needs no DvdK seed",
         "THM-2047](../01-canon/theorems/THM-2047-phase-height-toric-arrangement-for-lrc.md)",
-        "Every counterexample lies in a finite tangent-disk atlas",
-        "26 open tangent disks",
+        "Every counterexample is in a finite labelled code/deck/fan atlas",
+        "THM-2057 closes two scaled AP one-tail families",
+        "THM-2059 exactly joins arbitrary-clock",
+        "THM-2058 is an unproved empty stub",
+        "MISTAKE-230--233",
+        "HYP-8885",
     ),
     "00-navigation/CURRENT-FRONTIER.md": (
         "## LRC(14)",
@@ -63,9 +74,15 @@ HEADLINE_SENTINELS = {
         "proves the corresponding labelled phase-height carrier",
         "PROVED finite-circuit alternative",
         "THM-2052",
-        "26 tangent disks",
+        "transverse deck D_N(m)",
+        "Kelvin-Farey certificate",
+        "THM-2057",
+        "THM-2059",
+        "RESERVED / UNPROVED EMPTY STUB",
         "TournamentH7.GMC2Formalization",
-        "DvdK1 -> NC2",
+        "TournamentH7.GMC2NC2Capstone",
+        "unique minimal balanced channel",
+        "HYP-8890",
     ),
     "01-canon/ACTIVE-GUARDRAILS.md": (
         "No uniform `q <= 25` good-period theorem",
@@ -78,21 +95,32 @@ HEADLINE_SENTINELS = {
         "Antisymmetry is not the whole tournament-game or torus theorem",
         "Diagonal additive energy is not the LRC relation lattice",
         "NC2/GMC(2) is proved, not fully formalized",
+        "HYP-8878 removes that citation only",
+        "THM-2059 only joins packets",
         "Equal ranks do not identify lattices or tournaments",
         "Paley spectra do not assign LRC roles to small primes",
         "THM-2053 has no Heegner discriminant `-7`",
+        "THM-2058 is a RESERVED / UNPROVED EMPTY STUB",
+        "Fiber cardinality is observable-relative Hartley ambiguity",
+        "Scaled clocks are not automatically modular cusps or Frobenius",
+        "`f14`, genus, and discriminant `-7` are not the LRC obstruction",
+        "HYP-8885 may use “cusp” only as a",
     ),
     "00-navigation/LRC14-PROOF-MAP.md": (
         "## 2026-07-21 current control panel",
-        "rank-11 bounded support-at-most-3 code W",
-        "26 tangent disks",
+        "bounded support-at-most-3 code of rank >=11",
+        "transverse deck D_N(m)>=1/14",
+        "finite Farey address; listed rays unresolved",
+        "scaled AP one-tail clock/binding leaves",
         "### Mandatory hostile controls",
     ),
     "00-navigation/LRC-TECHNIQUE-INDEX.md": (
         "SEARCHABLE ATLAS, NOT STARTUP TRUTH",
         "## 2026-07-21 current-use overlay",
         "## LTI-532 - Rank-eleven relation-code dispatcher",
-        "Tangent-disk geometry",
+        "Transverse deck",
+        "Missing-clock binding",
+        "CRT packet join",
     ),
 }
 
@@ -104,6 +132,8 @@ POLICY_SENTINELS = {
         "source, target, map, preserved predicate",
         "give every small mathematical compulsion a cheap hostile probe",
         "00-navigation/META-PATTERNS.md",
+        "RESERVED / UNPROVED EMPTY STUB",
+        "Never prepend session prose above a maintained warning",
     ),
     "00-navigation/RESEARCH-PROTOCOL.md": (
         "The session portfolio: Anchor / Niche / Wildcard",
@@ -135,9 +165,11 @@ FORBIDDEN_STARTUP_TEXT = {
         "but are not root-imported",
         "6. **Pointed plane transport.**",
         "The incoming THM-2054 relative-Fejer program",
+        "THM-2058 supplies the primitive phase-packet",
     ),
     "01-canon/ACTIVE-GUARDRAILS.md": (
         "height-`2^21` relation",
+        "MISTAKE-225 corrects HYP-8865",
     ),
     "00-navigation/LRC14-PROOF-MAP.md": (
         "height <=2^21",
@@ -311,8 +343,9 @@ def main() -> int:
 
     for relative, forbidden in FORBIDDEN_STARTUP_TEXT.items():
         text = maintained_text(relative, errors)
+        normalized = " ".join(text.split())
         for phrase in forbidden:
-            if phrase in text:
+            if phrase in text or " ".join(phrase.split()) in normalized:
                 errors.append(f"{relative}: retired startup claim has returned: {phrase!r}")
 
     for relative, sentinels in POLICY_SENTINELS.items():
@@ -418,6 +451,35 @@ def main() -> int:
         if count > 1:
             errors.append(f"MISTAKES.md: current-range MISTAKE-{value} occurs {count} times")
 
+    for value in (230, 231, 232, 233, 234):
+        if f"## MISTAKE-{value}" not in mistakes:
+            errors.append(f"MISTAKES.md: current correction MISTAKE-{value} is missing")
+
+    reserved = read_required(
+        "01-canon/theorems/THM-2058-primitive-phase-packets-and-deck-fan-intervals.md",
+        errors,
+    )
+    for sentinel in (
+        "RESERVED / UNPROVED EMPTY STUB",
+        "No theorem statement, proof, script, or result is present",
+        "depends_on: []",
+    ):
+        if sentinel not in reserved:
+            errors.append(f"THM-2058 reservation lacks {sentinel!r}")
+    if re.search(r"^status:\s*>?\s*PROVED\b", reserved, re.MULTILINE):
+        errors.append("THM-2058 reservation is mislabeled PROVED")
+
+    crt_packet = read_required(
+        "01-canon/theorems/THM-2059-crt-fiber-product-phase-packet.md", errors
+    )
+    for sentinel in (
+        "status: >\n  PROVED.",
+        "P_N(C;a,w)=sum_(j mod d) alpha_j beta_j",
+        "zero overlap rejects only that clock grid",
+    ):
+        if sentinel not in crt_packet:
+            errors.append(f"THM-2059 carrier lacks {sentinel!r}")
+
     hypotheses = read_required("05-knowledge/hypotheses/INDEX.md", errors)
     digest_marker = "# Hypothesis Log — Index"
     if not hypotheses.startswith("> **CURRENT DIGEST"):
@@ -437,6 +499,13 @@ def main() -> int:
             errors.append(
                 f"hypotheses/INDEX.md: current-range HYP-{value} occurs {count} times"
             )
+    for value in (8878, 8885, 8890, 8895, 8900):
+        if f"HYP-{value}" not in current_digest:
+            errors.append(
+                f"hypotheses/INDEX.md: current digest lacks incoming HYP-{value} routing"
+            )
+    if "THM-2059 / CRT PHASE-PACKET CARRIER" not in current_digest:
+        errors.append("hypotheses/INDEX.md: current digest lacks THM-2059 routing")
 
     session_log = read_required("00-navigation/SESSION-LOG.md", errors)
     if not session_log.startswith("> **CURRENT-TRUTH WARNING"):
@@ -536,6 +605,79 @@ def main() -> int:
     )
     if "MISTAKE-229" not in correction_smoke.stdout:
         errors.append("start_session.py: topic-matched MISTAKE-229 was not surfaced")
+
+    entropy_smoke = subprocess.run(
+        (
+            sys.executable, str(REPO / "agents/start_session.py"),
+            "--topic", "arithmetic entropy tournament score fiber",
+            "--recent", "1", "--max-matches", "6",
+        ),
+        cwd=REPO, text=True, capture_output=True, check=False,
+    )
+    if "MISTAKE-231" not in entropy_smoke.stdout:
+        errors.append("start_session.py: entropy topic did not surface MISTAKE-231")
+
+    modular_smoke = subprocess.run(
+        (
+            sys.executable, str(REPO / "agents/start_session.py"),
+            "--topic", "f14 modular cusp LRC obstruction",
+            "--recent", "1", "--max-matches", "6",
+        ),
+        cwd=REPO, text=True, capture_output=True, check=False,
+    )
+    if "MISTAKE-233" not in modular_smoke.stdout:
+        errors.append("start_session.py: modular-cusp topic did not surface MISTAKE-233")
+
+    semigroup_smoke = subprocess.run(
+        (
+            sys.executable, str(REPO / "agents/start_session.py"),
+            "--topic", "coprime interval return semigroup DvdK",
+            "--recent", "1", "--max-matches", "6",
+        ),
+        cwd=REPO, text=True, capture_output=True, check=False,
+    )
+    if "MISTAKE-234" not in semigroup_smoke.stdout:
+        errors.append("start_session.py: return-semigroup topic did not surface MISTAKE-234")
+
+    reservation_smoke = subprocess.run(
+        (
+            sys.executable, str(REPO / "agents/start_session.py"),
+            "--topic", "THM-2058 primitive phase packets",
+            "--recent", "1", "--max-matches", "12",
+        ),
+        cwd=REPO, text=True, capture_output=True, check=False,
+    )
+    reservation_packet = reservation_smoke.stdout
+    if "Reservations (not results):" not in reservation_packet or "[RESERVED]" not in reservation_packet:
+        errors.append("start_session.py: THM-2058 is not routed as a reservation")
+    canon_block = reservation_packet.partition("  Canon:")[2].partition(
+        "  Reservations (not results):"
+    )[0]
+    if "THM-2058" in canon_block:
+        errors.append("start_session.py: THM-2058 leaked into the proved canon group")
+    for sentinel in (
+        "[OPEN] 05-knowledge/hypotheses/HYP-8846-lrc14-pointed-plane-transport.md",
+        "[OPEN] 05-knowledge/hypotheses/HYP-8871-lrc14-owner-sector-klein-sail-automaton.md",
+        "[LEDGER] 05-knowledge/hypotheses/INDEX.md",
+    ):
+        if sentinel not in reservation_packet:
+            errors.append(
+                "start_session.py: folded-status routing lacks " + repr(sentinel)
+            )
+
+    crt_smoke = subprocess.run(
+        (
+            sys.executable, str(REPO / "agents/start_session.py"),
+            "--topic", "THM-2059 CRT phase packet",
+            "--recent", "1", "--max-matches", "8",
+        ),
+        cwd=REPO, text=True, capture_output=True, check=False,
+    )
+    if (
+        "[PROVED] 01-canon/theorems/THM-2059-crt-fiber-product-phase-packet.md"
+        not in crt_smoke.stdout
+    ):
+        errors.append("start_session.py: THM-2059 is not routed as proved canon")
 
     if errors:
         print("Agent-facing documentation check FAILED:")

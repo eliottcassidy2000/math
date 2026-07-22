@@ -13,21 +13,11 @@ more structure than they consumed.
 
 ## Start here
 
-- [`00-navigation/START-HERE.md`](00-navigation/START-HERE.md) — the short
-  startup brief and topic router.
-- [`00-navigation/CURRENT-FRONTIER.md`](00-navigation/CURRENT-FRONTIER.md) —
-  rolling mathematical status and exact live residuals.
-- [`01-canon/ACTIVE-GUARDRAILS.md`](01-canon/ACTIVE-GUARDRAILS.md) — current
-  corrections agents must know before reusing attractive claims.
-- [`00-navigation/RESEARCH-PROTOCOL.md`](00-navigation/RESEARCH-PROTOCOL.md) —
-  how exploratory sessions recover history, generate perspectives, test
-  connections, and explain success or failure.
-- [`00-navigation/META-PATTERNS.md`](00-navigation/META-PATTERNS.md) — reusable
-  research moves with triggers and counterindications.
-- [`05-knowledge/reference/CORE-PAPERS.md`](05-knowledge/reference/CORE-PAPERS.md)
-  — exact external imports and what each paper does *not* prove.
-- [`00-navigation/PROBLEM-LEDGER.md`](00-navigation/PROBLEM-LEDGER.md) — the
-  broader problem portfolio.
+- [`START-HERE.md`](00-navigation/START-HERE.md) — startup brief and topic router.
+- [`CURRENT-FRONTIER.md`](00-navigation/CURRENT-FRONTIER.md) — current status and live residuals.
+- [`ACTIVE-GUARDRAILS.md`](01-canon/ACTIVE-GUARDRAILS.md) — corrections required before reuse.
+- [`RESEARCH-PROTOCOL.md`](00-navigation/RESEARCH-PROTOCOL.md) and [`META-PATTERNS.md`](00-navigation/META-PATTERNS.md) — exploratory process and reusable moves.
+- [`CORE-PAPERS.md`](05-knowledge/reference/CORE-PAPERS.md) and [`PROBLEM-LEDGER.md`](00-navigation/PROBLEM-LEDGER.md) — scoped external imports and the broader portfolio.
 
 Agents should run:
 
@@ -46,20 +36,33 @@ As of 2026-07-21:
   repo's remaining work is structural, not the once-claimed uniform `q <= 25`
   shortcut, which is false. THM-2051 now closes the relation-dissociated
   branch after paying pairs exactly: every hypothetical counterexample has a
-  genuine 3--5-term relation of height at most `2^20`. THM-2052 forces eleven
-  independent bounded support-at-most-three relations and reduces rank eleven
-  to finitely many two-anchor, one-projective-parameter stars. THM-2053 then
-  certifies every parameter outside 26 explicit tangent disks. The live prize
-  is atlas/basis compression and exact resonance-fan or Euler discharge of the
-  primitive lattice points inside those disks; rank twelve is a shortcut, not
-  the only terminal.
+  genuine 3--5-term relation of height at most `2^20`. THM-2052 forces relation
+  rank at least eleven: rank twelve is a finite maximal-minor box, while rank
+  eleven reduces to finitely many two-anchor, one-projective-parameter stars.
+  THM-2053 adds the exact transverse deck `D_N(m)` and a sufficient determinant
+  gate whose strict failure carrier is an indexed union of 26 open tangent
+  disks; THM-2055/2056 compress that fixed-basis
+  determinant side into a signed-hull normal fan and a rational Kelvin/Farey
+  certificate. THM-2057 closes two scaled AP one-tail planes: the omitted-12
+  core by `12a`/`14a` clocks and an `84a|w` binding phase, and the full
+  `{1,...,12}` core by `13a`/`14a` clocks and a `182a|w` deep-well phase. The
+  live prize is a lossless deck/clock/Farey/endpoint discharge for every
+  remaining rank-eleven star cell; rank twelve is confined to a separate
+  finite box that still needs exact decision. THM-2059 gives an exact
+  arbitrary-clock CRT histogram join on one-tail cells; it does not force
+  packet overlap.
+  A failed gate means uncertified, not unsafe; THM-2058 is an empty reservation.
 - **NC2 and GMC(2) are PROVED in repo canon** by THM-2022's lowest-balanced-face
   Frobenius argument. Its modular Lean spine is root-imported and sorry-free at
   the checked nodes, including descent, face construction, DvdK seed/reference
-  interfaces, height/gap, Lucas, and whole-face Frobenius/noncancellation. The
-  remaining formalization is the concrete normalized-Wick-channel assembly,
-  the final conditional `DvdK1 -> NC2`, and a formal proof of the cited DvdK
-  input itself.
+  interfaces, height/gap, Lucas, and whole-face Frobenius/noncancellation. A
+  separate `GMC2NC2Capstone` module typechecks the conditional assembly skeleton
+  with one `sorry` and is deliberately not root-imported. The remaining work is
+  its concrete normalized-Wick-channel wiring and a formal proof of the cited
+  DvdK input itself. HYP-8878 removes that citation on any lowest face with a
+  unique minimum-mass balanced channel; its `98/116` prevalence is only one
+  finite small-support census. MISTAKE-234 shows that support-return
+  reachability does not control mixed-sign cancellation.
 - **GMC is false from dimension 3 onward.** Dimension two is the sharp surviving
   case handled by THM-2022; dimensions one and two must not be conflated with
   the higher-dimensional counterexamples.
@@ -73,6 +76,12 @@ As of 2026-07-21:
   subtournament censuses, and invariant-independence witnesses. Rank matches
   are not bridges without an explicit map, saturation index, and discriminant;
   small-prime Paley spectra are background, not an LRC periodic table.
+- **Entropy and modular-form language is observable-relative, not a universal
+  invariant.** MISTAKE-230--233 quarantine S217--S220, including the composite-
+  `14` Paley/Frobenius analogy and the `f14`/modular-cusp bridge. No genus,
+  period field, or Paley spectrum is presently an LRC obstruction without an
+  explicit map preserving the loneliness predicate. HYP-8885's “cusp” frame is
+  therefore a typed heuristic, not a universal difficulty theorem.
 - **For reciprocal integer sequences, the underlying object is the support
   Dirichlet profile**, not one scalar reciprocal sum; repeated values require an
   explicit collision tax.

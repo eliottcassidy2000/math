@@ -378,157 +378,136 @@ Verified: deep well {1..12,182} chi=24 (12 pairs); tight (1,2,3)@1/4={1/4,3/4} c
 > source. Later audits can correct an earlier session on the same page. Start
 > with `START-HERE.md`, `CURRENT-FRONTIER.md`, `ACTIVE-GUARDRAILS.md`, and the
 > linked theorem or mistake entry.
+> **CURRENT-TRUTH WARNING (2026-07-21):** This file is a concise provenance ledger, not a proof authority. Read `CURRENT-FRONTIER.md`, `01-canon/ACTIVE-GUARDRAILS.md`, and the cited theorem or mistake file before reusing a claim. Historical session narratives live in git and may contain claims later corrected below.
 
 # Recent research sessions
 
-Older session prose remains discoverable in git history, reflections,
-hypothesis files, and frozen outputs. Entries here record only the reusable
-survivor, correction, and next question.
+This ledger records only changes that affect how a new mathematical session should
+start. It deliberately omits chronological play-by-play. The proof files are the
+authority; this file says why the current routing looks the way it does.
 
-## codex-2026-07-21 -- finite tangent-disk LRC frontier and startup consolidation
+## 2026-07-21 — audited LRC(14) terminal stack
 
-- THM-2051's pair-exact Fejer--BV theorem forces a genuine support-`3..5`
-  relation of height at most `2^20`. THM-2052 forces eleven bounded sparse
-  relations and a finite two-anchor star atlas. THM-2053 repairs the pointed
-  large-direction gap: all still-uncertified primitive parameters lie in 26
-  explicit tangent disks. The live task is saturated-basis/atlas compression
-  and HYP-2896-style resonance-fan, pair-sum, or Euler discharge inside them;
-  rank twelve is an accelerator, not the sole terminal.
-- MISTAKE-227--229 repair three concurrent tournament syntheses: the AP chain
-  frame has saturation index `11!`; Paley adjacency roots are shifted
-  half-scaled Gauss sums and give no LRC prime roles; the tangent-disk union has
-  no discriminant `-7` or Heegner classification. The exact surviving scripts
-  and corrected reflections retain the useful frames without the transfers.
-- THM-2022's partial Lean spine is modular and root-imported, including descent,
-  face construction, DvdK interfaces, height/gap, Lucas, and whole-face
-  Frobenius. Concrete normalized-channel assembly, conditional `DvdK1 -> NC2`,
-  and formal proof of the cited DvdK input remain.
-- The bounded startup docs, guardrails, literature map, proof map, technique
-  overlay, current digest, and validators were rebuilt so historical material
-  remains searchable without overriding current canon.
+The live theorem chain was reread from its proofs and computations rather than
+copied from earlier summaries.
 
-## boxeph-2026-07-21-S211 -- CT bridge, scope-repaired
+- `THM-2051` gives a finite-geometry reduction: a counterexample has a genuine
+  support-3, -4, or -5 integer relation of height at most `2^20`.
+- `THM-2052` turns rank 11 into finitely many two-anchor stars and rank 12 into a
+  finite box. These are reductions, not a completed enumeration.
+- `THM-2053` constructs the exact transverse residue deck. Adjacent normalized
+  columns are independent of Ungar; an exposed pair with sum divisible by `N`
+  gives `M(v) >= 1/13 - R/(2N)`. Its determinant gate and 26 tangent disks are
+  sufficient certificates. Gate failure means “uncertified,” not “bad.”
+- `THM-2054` proves an abstract relative Fejer inequality. Its `H=2^19`
+  calculation is numerically compatible with the desired scale, but the
+  LRC-specific plateau and routing hypotheses remain open.
+- `THM-2055` supplies the precise normal-fan reduction, including basis, deletion,
+  tie, non-hull, and radial-sector scope.
+- `THM-2056` identifies the determinant defect after Kelvin inversion with an
+  exact Farey-neighbor defect and supplies an existential finite acute unimodular
+  fan. It is a certificate geometry theorem, not an LRC closure and not a
+  Heegner phenomenon.
+- `THM-2057` proves a general missing-clock tax and closes two full families:
+  `{a,2a,...,11a,13a,w}` through the `12a`/`14a`/`84a` leaves, and
+  `{a,2a,...,12a,w}` through the `13a`/`14a`/`182a` leaves. These are two
+  structured planes, not the general 14-runner case.
+- `THM-2059` gives the exact generalized-CRT join of core-safe and tail-safe
+  packets for any one-tail clock. Its histogram dot product counts safe grid
+  phases; zero overlap rejects only that clock grid.
+- `THM-2058` is an empty reservation. It contains no theorem, proof, script, or
+  result and must never be cited as progress.
 
-> **Audit:** MISTAKE-226 retracts the GMC-to-LRC and diagonal-energy claims.
+Therefore **LRC(14) remains open**. The most compressed current obligation is to
+route every residual two-anchor star either to the transverse-deck determinant
+certificate, to the relative-Fejer hypotheses, or to a genuinely new certificate.
+`HYP-8871` records one open typed deck/Farey/clock state graph for doing so.
+`HYP-8900` adds an exact per-row pair-sum evaluator, but does not make the
+unbounded covering family finite or prove its restated Wall-A condition.
 
-- Exact survivors: `CT[P^m Pbar^m]` is additive energy; the two-charge seed is
-  a CT statement; no-carry energy tensorization and AP cyclotomic factorization
-  hold in their stated scopes; volume detects strict exits but not tight fibers.
-- Missing coordinate: diagonal energy sees augmentation zero only. The mixed
-  table `CT[P^r Pbar^s]`, or observer speed zero, restores augmentation and the
-  full relation support; THM-730 is the off-diagonal `(2,1)` sector.
-- Hostile control: affine APs have identical diagonal energies at every order
-  but LRC maxima `1/6,1/4,1/2`. The corrected mixed-moment thread is open.
+## 2026-07-21 — corrections to sessions S214–S223
 
-## boxeph-2026-07-21-S210 -- antisymmetry atlas, scope-repaired
+The recent sequence, entropy, and modular explorations produced useful objects,
+but several interpretations outran their evidence. The correction ledger now
+routes them as follows.
 
-> **Audit:** MISTAKE-225 retracts the advertised one-hinge synthesis.
+- `MISTAKE-227`: the arithmetic-progression computation used index `11!`, not the
+  intended quantity. Do not reuse its numerical conclusion.
+- `MISTAKE-228`: Paley tournaments do not assign LRC runner roles by themselves.
+- `MISTAKE-229`: the observed determinant/Farey geometry does not justify a
+  `-7`, Heegner, or complex-multiplication interpretation.
+- `MISTAKE-230`: inverse classes are inversion orbits; rational primes do not
+  support the claimed universal “arithmetic entropy.”
+- `MISTAKE-231`: entropy is observable-relative. The surviving exact data include
+  distinct fibers and characteristic polynomials, not a universal scalar law.
+- `MISTAKE-232`: there is no Paley tournament at composite order 14;
+  `lcm(12a,14a)=84a`; and the proposed Frobenius language was inapplicable. The
+  exact `S_7`/`A_13` matrix facts remain separate facts.
+- `MISTAKE-233`: scaling an LRC speed set does not create a `Gamma_0` level;
+  modular cusps are not missing clocks; the weight-two level-14 newform has
+  rational coefficient field, not a forced `Q(sqrt(-7))` period field; and
+  `X_0(11)` already has genus one. No modular bridge to LRC(14) was proved.
+- `MISTAKE-234`: a return semigroup records support reachability, not
+  mixed-sign noncancellation. The aperiodic polynomial
+  `z-z^(-1)+z^2-z^(-2)` has every return length from two onward but zero
+  constant term at every odd power.
 
-- Exact survivors: even rank of real skew matrices; Fisher--Ryan odd support
-  for tournament games, with the missing tournament mod-2 mechanism restored;
-  torus Betti data; positive-kernel replicator invariants; torus-inversion
-  fixed points; even LRC far-set weights; alternating Vandermonde.
-- Minimal refutation: a Condorcet winner above a directed 3-cycle is
-  intransitive but has pure optimum and attracts every interior replicator
-  orbit. Pure optimum means Condorcet winner, not transitivity.
-- Type repair: RPS regular levels are circles in `Delta^2`; the cutting bagel
-  is a solid torus, not boundary `T^2`; game/Morse/dynamical saddles and three
-  different `Z/2` actions remain separate.
-- Live thread: classify tournament support faces with positive kernel vectors
-  and operation-compatible monomial first integrals.
-- Artifacts: corrected HYP-8835, reflection, script/output, MISTAKE-225.
+The S99, S217–S220 scripts, outputs, and reflections are retained as quarantined
+historical experiments. Their corrected exact computations may seed new work,
+but their refuted interpretations may not be promoted without a new bridge.
 
-## boxeph-2026-07-21-S209 -- phase-height arrangement repair
+## 2026-07-21 — NC2 formalization boundary
 
-> **Audit:** MISTAKE-224 retracts the toric-complement/Mobius interpretation.
+The imported module `TournamentH7.GMC2Formalization` is sorry-free at the proved
+nodes and formalizes the root-imported part of the GMC2/NC2 argument. The separate
+`TournamentH7.GMC2NC2Capstone` module is a typechecking capstone skeleton with one
+remaining `sorry` and is not imported by the proved root. The cited external
+theorem has not thereby been formalized. Startup text must preserve all three
+distinctions.
 
-- Exact survivors: standard braid Poincare/Stirling and Shi finite-field
-  formulas; THM-1820's character-orthogonality identity on the orbit subtorus;
-  a finite `B=2` relation-count scout over 72 triples.
-- Minimal refutation: for `S={1}`, `|G_delta|=1-2delta`, while the ordinary
-  character-kernel complement has Haar measure one. A Fourier annihilator is
-  not a finite toric layer poset.
-- Constructive repair: on `(t,delta)`, the signed character list
-  `X_S={(v,+1),(v,-1)}` gives exact walls `vt+/-delta in Z`. Opposite-sign
-  determinants are `v+w`, recovering the pair-sum ruler. The selected side,
-  height, owner, sign, and paired deletion are essential sidecars. THM-2047
-  proves this carrier, its top/pair-sum mechanism, and exact paired deletion.
-- Live thread: prove or refute a localization theorem that makes this exact
-  deletion force the AP maximum-deletion core.
-- Artifacts: corrected HYP-8830, reflection, script/output, MISTAKE-224.
+### Citation-minimization routes landed later that day
 
-## codex-2026-07-21 -- period-14 carrier audit and exact S206 repair
+- `HYP-8878` isolates an elementary DvdK-free case: a unique minimum-mass
+  balanced channel makes the first relevant constant term one nonzero monomial.
+  The mechanism is proved; `98/116` (`84%`) is only its finite size-3/4 support
+  census in `[-4,4]`, not an asymptotic density.
+- `HYP-8877` is the coarser edge/positive-coefficient precursor. Both results
+  can shrink the cited branch in a future formalization but do not eliminate
+  the coincident-minimum-channel cancellation locus.
+- `HYP-8890` proposes a saddle/Watson replacement for DvdK. The positive-real
+  saddle case and periodic examples are useful controls; the general complex
+  dominant-saddle and noncancellation theorem is still missing.
+- `HYP-8895` exactly packages support return lengths as a semigroup. By
+  MISTAKE-234 it is citation-free only for positive coefficients or after a
+  separate noncancellation certificate such as HYP-8878.
+- `HYP-8885` reuses “Eisenstein/cusp” as a difficulty-locator. Its exact
+  tournament and kernel computations survive, but MISTAKE-231/233 forbid
+  treating cusp, genus, or entropy as a common object or `f14` as LRC data.
 
-- THM-2043 is sound and sharply scoped: parity-Hasse coordinates completely
-  recover a reduced period-14 function, but an infinite AP-alias family shares
-  every fixed finite local-height prefix and has a strict `(41,17,1)` exit.
-  This is a carrier no-go, not LRC(14).
-- The S206 fifteen-row audit is now finite-exact: the corrected script
-  enumerates every numerator on every exact THM-1002 pair-sum ruler. All rows
-  are safe; `{1,...,12,5460}` exposes the old cutoff by
-  `92/1197 < 420/5461`.
-- General warning retained: an arbitrary bounded denominator scan is only a
-  lower bound unless all pair-sum rulers are exhausted or
-  `Q>=2 max(S)`. Do not discard non-coprime numerators without divisor rulers.
-- Live LRC target remains the structural AP-core supplier / uniform sporadic
-  classification, with exact owner height or adaptive resolved-phase data.
+## Durable adjacent results worth connecting
 
-## codex-2026-07-21-DC2-filtered-pullback-wall -- exact Ore boundary
+- `THM-2047` and `THM-2050` delimit what the current carrier/no-go machinery can
+  and cannot certify. A failed carrier is information about the missing invariant.
+- `THM-2044`, `THM-2045`, and `THM-2049` provide useful tournament and sequence
+  structure only within their stated scopes; none is an automatic LRC bridge.
+- Sequence profiles should be treated as families of observables—fibers, moments,
+  recurrences, Dirichlet series, transforms, and singularity data—not as one
+  privileged entropy number.
+- Tournament analysis is most useful when the vertex set, pairwise observable,
+  switch/gauge, preserved predicate, lost information, and tie Hamiltonian path
+  are all declared. Runners are only one possible vertex set.
 
-- THM-2046 proves that multiplication positions plus first-order momenta force
-  a planar Keller map. Thus THM-2044's four-variable Poisson witness cannot
-  descend through that filtered `A_2` class.
-- In the exact Ore chart, localization at `x` gives `[ell,t]=1`; extension
-  across `x=0` is the remaining obstruction. Weyl ordering kills the whole
-  anti-invariant boundary grade three but leaves a uniform grade-six residual.
-- HYP-8803 is an exact reduction with open closure. Arrangement localization
-  and sign parity are operation-level prompts only, not object identities.
-- Artifacts: THM-2046, HYP-8803, exact script/output and boundary reflection.
+## Process change made durable
 
-## death-star-2026-07-21-S93/S94 -- NC2 formalization packaging
+Every exploratory mathematical session now carries three simultaneous lanes:
 
-- `ThreeTermRecurrence.lean` is recast over `Polynomial R` with minimal imports
-  and the needed nonzero-`b` hypotheses only. `HermiteThreeTerm.lean` proves
-  the Hermite recurrence and consecutive-root exclusion.
-- S94 adds kernel-pure Wick expansion, both one-sided branches, conditional
-  `GMC2<=NC2`, multinomial Lucas, abstract Frobenius collapse, and standalone
-  face-height/gap/injectivity lemmas. The files are sorry-free but not
-  root-imported.
-- Scope: THM-2022 proves NC2/GMC(2) on paper. Algebraic/good-prime descent,
-  face construction, DvdK, Kummer/layer assembly, and `nc2 : NC2` remain Lean
-  obligations.
+1. an **Anchor** tied to the main live obstruction;
+2. a **Niche** thread selected because it is underexplored or structurally odd;
+3. a **Wildcard** prompted by a genuine mathematical compulsion.
 
-## boxeph-2026-07-21-S208 -- braid shadows, transfers retracted
-
-> **Audit:** MISTAKE-223 retracts the general NC2 iff, hyper-Bessel block
-> factorization, and common bagel/shadow Euler characteristic.
-
-- Exact survivor: Vandermonde is the braid defining polynomial; its real
-  chambers are total orders; coordinate coalescence has an explicit leading
-  product; the gap recurrence has a companion determinant.
-- Vanishing order is not flat codimension. THM-2033 is special-matrix scope,
-  and THM-2023 independently proves the `Phi_(p,q)` zero theorem.
-- Live test: exhibit an actual shared cell valuation or a decisive no-go.
-
-## boxeph-2026-07-21-S207 -- exact binomial readings
-
-> **Audit:** MISTAKE-222 retracts the claimed common geometric mechanism.
-
-- Exact survivor: caterer/cake prefixes, Moser and bagel row functionals,
-  Fibonacci diagonals, the full-rank gap formula, and
-  `bagel(n)-cake(n)=T_n-1` for `n>=1`.
-- Exact operation laws include `Delta Moser(n)=cake(n-1)` and
-  `Delta bagel(n)=caterer(n+1)` with the stated indexing.
-- A common Pascal array or matching minus one supplies no torus, JC, or LRC
-  map. Search for a genuine boundary-cell valuation, not another prefix match.
-
-## boxeph-2026-07-21-S205 -- JC/LRC wildcard, not common reduction
-
-- The owner-supplied three-dimensional Keller map and collision are exactly
-  verified; provenance is a separate question.
-- THM-2044 disproves the two-pair Poisson conjecture; THM-2045 excludes planar
-  mates only for one factorized `R` family; THM-2046 blocks one filtered
-  quantization class. DC(2) and planar JC remain open.
-- AP/transitive/one-sided extremals remain a worthwhile comparison portfolio,
-  but no theorem identifies the planar-JC residual with LRC(14)'s twelve-term
-  AP-core supplier.
+For each new object, ask what it preserves, what it forgets, why the observed
+claim is true or false, and which other active object it can compose with. Record
+mechanisms and failed bridges, not just outcomes. Turn certificate failure into
+an address with sidecar data; promote successful meta-patterns into
+`META-PATTERNS.md`; and keep current-truth summaries short enough that future
+agents read the proof rather than inherit folklore.

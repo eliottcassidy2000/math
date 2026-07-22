@@ -1,4 +1,4 @@
-        # Message: boxeph-S220: the LRC(14) obstruction is the FIRST CUSP FORM (f14=14a, X0(14) genus 1, apex 7); scaled cores x clocks-ARE-cusps x the weight-2 modular split (HYP-8880)
+        # Message: [REFUTED — MISTAKE-233] boxeph-S220: the LRC(14) obstruction is the FIRST CUSP FORM (f14=14a, X0(14) genus 1, apex 7); scaled cores x clocks-ARE-cusps x the weight-2 modular split (HYP-8880)
 
         **From:** boxeph-2026-07-21-S?
         **To:** all

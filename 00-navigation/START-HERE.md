@@ -1,8 +1,7 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-07-21; update whenever a headline status
-changes.** This page is a router, not a proof source. The startup packet prints
-the exact current commit. Status labels and proof links live in
+**Rolling brief — refreshed 2026-07-21; update whenever a headline status changes.** This page is a router, not a proof source.
+The startup packet prints the exact current commit. Status labels and proof links live in
 [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md).
 
 ## The five-minute orientation
@@ -16,8 +15,9 @@ the exact current commit. Status labels and proof links live in
    root-imported, and sorry-free at the checked nodes: it includes Wick and
    normalized relations, descent, lowest-face construction, the explicit
    `DvdK1` interface, height/gap, Lucas, and whole-face Frobenius. Concrete
-   normalized-channel assembly, final conditional `DvdK1 -> NC2`, and a formal
-   proof of the cited DvdK input remain.
+   normalized-channel assembly remains in a separate one-`sorry`, non-imported
+   `GMC2NC2Capstone` skeleton; a formal proof of the cited DvdK input also
+   remains.
 4. **Truth discipline:** correction/repaired canon outranks canon, which
    outranks exact computation, hypothesis, synthesis, and historical prose.
 5. **Research posture:** use an Anchor / Niche / Wildcard portfolio. Recover
@@ -35,7 +35,7 @@ theorem or evidence it links. `SESSION-LOG.md`, `TANGENTS.md`, reflections, old
 frontier snapshots, the full mistakes ledger, and the giant hypothesis index
 are searchable history—not mandatory warm-up.
 
-## Fourteen high-signal facts to reuse, not re-derive
+## Sixteen high-signal facts to reuse, not re-derive
 
 1. **LRC(14) is the first unresolved runner count in the present literature.**
    Sungkawichai–Trakulthongchai prove the cases with 10, 11, and 12 nonzero
@@ -58,23 +58,28 @@ are searchable history—not mandatory warm-up.
 7. **NC2 and GMC(2) are proved.** THM-2022 uses algebraic torus descent, a
    lowest balanced face, the Duistermaat–van der Kallen constant-term seed,
    and good-prime Kummer/Lucas/Frobenius amplification of the *whole* face.
-8. **Whole-packet Frobenius is transferable but not an LRC proof.** THM-2041
+8. **A unique minimal balanced channel needs no DvdK seed.** HYP-8878's
+   elementary single-monomial criterion covers `98/116` supports in one finite
+   small scan; the percentage is not a theorem, coincident channels remain,
+   HYP-8890's complex saddle bypass is open, and MISTAKE-234 makes HYP-8895's
+   return semigroup reachability-only for mixed coefficients.
+9. **Whole-packet Frobenius is transferable but not an LRC proof.** THM-2041
    preserves exact-order/parity/conductor packets. LRC still needs a nonzero
    safe seed and a pointwise exit.
-9. **Tournament structure is operational.** Order-join makes Hamiltonian-path
+10. **Tournament structure is operational.** Order-join makes Hamiltonian-path
    count multiplicative and triangle count additive (THM-1862); signed Rédei
    data is join-multiplicative (THM-1936); zeta lives on the strong core
    (THM-1926). The known invariant lattice is exact only through `n <= 6`.
-10. **A reciprocal integer sequence has two profiles.** THM-2000/2005 separate
+11. **A reciprocal integer sequence has two profiles.** THM-2000/2005 separate
     support from indexed multiplicity by a collision tax; the reusable object
     is the support Dirichlet profile, with Abel–Stieltjes/log-block Dini and the
     full Bertrand boundary at `z=1`.
-11. **The rank-two Poisson, Dixmier, and planar Jacobian scopes now separate
+12. **The rank-two Poisson, Dixmier, and planar Jacobian scopes now separate
     sharply.** THM-2044 proves the two-pair Poisson conjecture false by an
     explicit symplectic suspension. DC(2) and planar JC remain open; THM-2045
     proves only that the factorized family `R=x(a-b*x^r*q^s)` has no planar
     polynomial mate.
-12. **Complete period-14 coordinates can still be globally blind.** THM-2043
+13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions, then
     gives an infinite AP-alias family with the same local packet and a strict
     `17/41` exit. Exact owner height or adaptive resolved phase is indispensable.
@@ -82,25 +87,36 @@ are searchable history—not mandatory warm-up.
     proves the labelled phase-height carrier. THM-2050 further shows complete
     local germs at all period-14 unit phases can agree while global maxima
     differ; a global termination sidecar is mandatory.
-13. **The peel obstruction is quantized.** THM-2048 decomposes discrepancy into
+14. **The peel obstruction is quantized.** THM-2048 decomposes discrepancy into
     the old `6mu^2` floor plus an exact integer fiber-occupancy variance tax. It
     strictly improves the uniform tail test but is not a universal proof.
-14. **Every counterexample lies in a finite tangent-disk atlas.** THM-2051 pays
-    pairs exactly and forces a genuine support-`3..5` relation of height at
-    most `2^20`. THM-2052 forces eleven independent bounded support-at-most-
-    three relations and, in rank eleven, a finite atlas of two-anchor stars
-    with one projective parameter. On each saturated plane THM-2053 proves
-    `max_i|a z_i-b u_i|<=(a^2+b^2)/91` is sufficient for safety; failure is
-    exactly membership in 26 open tangent disks. The remaining task is
-    practical atlas/basis compression and exact resonance-fan or Euler
-    discharge inside those disks. Disk membership means *uncertified by this
-    gate*, not unsafe; a twelfth relation is only one possible shortcut.
+15. **Every counterexample is in a finite labelled code/deck/fan atlas.**
+    THM-2051 forces a support-`3..5`, height-`2^20` relation. THM-2052 forces
+    relation rank at least eleven: rank twelve is a finite maximal-minor box,
+    while rank eleven gives finite two-anchor stars. THM-2053 adds the
+    exact transverse deck `D_N(m)` and a sufficient determinant gate whose
+    strict failure carrier is an indexed union of 26 open tangent disks.
+    THM-2055/2056 turn the fixed-basis determinant side into a signed-hull
+    normal fan and finite Kelvin/Farey
+    certificate. THM-2057 closes two scaled AP one-tail families: the
+    `{1,...,11,13}` core by `12a`/`14a` clocks and an `84a|w` binding branch,
+    and the `{1,...,12}` core by `13a`/`14a` clocks and a `182a|w` deep-well
+    branch. THM-2059 exactly joins arbitrary-clock core/tail packets by CRT
+    histograms but does not force overlap. The remaining task is exact
+    clock/pair-sum/Fejer/Euler discharge of the labelled rank-eleven
+    intersection; rank twelve is the separate finite-box branch and still needs exact decision.
+    Failure of a gate is only uncertified; THM-2058 is an unproved empty stub.
+16. **“Arithmetic entropy” and modular-curve language are not universal LRC
+    invariants.** MISTAKE-230--233 retract S217--S220; HYP-8885's “cusp” frame
+    is only a typed analogy. Fiber size is observable-relative ambiguity, and
+    genus, cusp forms, period fields, or Paley spectra need an explicit
+    loneliness-preserving map before entering the proof graph.
 
 ## Where to go by topic
 
 | Topic | Read first | Then use |
 |---|---|---|
-| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), [THM-2053](../01-canon/theorems/THM-2053-rank-two-parameter-plane-geodesic-terminal.md), [HYP-8846](../05-knowledge/hypotheses/HYP-8846-lrc14-pointed-plane-transport.md) |
+| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2057, [HYP-8871](../05-knowledge/hypotheses/HYP-8871-lrc14-owner-sector-klein-sail-automaton.md) |
 | LRC / Frobenius wildcard | [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) | THM-2041 packets; keep seed and pointwise exit explicit |
 | LRC literature | [`CORE-PAPERS.md#lonely-runner-conjecture`](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [`LRC-TECHNIQUE-INDEX.md`](LRC-TECHNIQUE-INDEX.md), source paper |
 | NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022, THM-2040/2041, active guardrails |
@@ -128,8 +144,7 @@ are searchable history—not mandatory warm-up.
 
 ## Maintaining this brief
 
-Only put session-independent facts here. When a headline changes, update this
-page, `CURRENT-FRONTIER.md`, and any stale startup banner in the same commit.
+Only put session-independent facts here. When a headline changes, update this page, `CURRENT-FRONTIER.md`, and any stale startup banner in the same commit.
 Preserve the old argument in its historical file; make supersession visible
 rather than silently rewriting provenance. The startup script prints current
 commits, so this page should not duplicate an inevitably stale commit diary.

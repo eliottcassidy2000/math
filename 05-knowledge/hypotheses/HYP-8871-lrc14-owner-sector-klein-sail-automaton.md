@@ -32,28 +32,38 @@ related:
   - HYP-8841
   - HYP-8846
   - MISTAKE-225
-  - MISTAKE-226
+  - MISTAKE-229
+  - MISTAKE-233
 ---
 
 # HYP-8871 -- Kelvin-Farey addresses with clock/binding sidecars
 
-THM-2055/2056 change the finite object. For each THM-2052 two-anchor star:
+THM-2055/2056 change the finite object. For each fixed THM-2052 two-anchor
+star and each explicitly chosen ordered saturated basis, the proved geometric
+front end is:
 
 1. compute the saturated column configuration and the signed hull `K_U`;
-2. delete nonvertex columns from the determinant sidecar only;
+2. omit nonvertex geometric points from the determinant maximum only, while
+   retaining every runner label in all LRC, deck, collision, and endpoint data;
 3. Kelvin-invert the gate to the rational polar polygon
    `(1/91)R^(-1)K_U^o`;
 4. split parameter space by the rational normal fan of `K_U` and regularize
-   each owner sector into acute unimodular cones;
+   each owner sector into acute unimodular cones, recording owner-tie rays
+   rather than pretending that a half-open convention makes ownership unique;
 5. apply THM-2056's defect inequality
    `2u dot v>=A_p(u)+A_p(v)` to certify every interior slope at once;
-6. on each unresolved boundary ray, search for a scaled core clock whose safe
+6. retain THM-2053's exact transverse residue deck on every unresolved ray or
+   fiber; the finite Farey certificate concerns only the determinant gate;
+7. search for a labelled lower-rank core and a scaled clock whose safe
    numerators contain a complete unit orbit;
-7. if a clock is killed, descend to its divisibility sublattice; if two clocks
-   are killed, seek an affine binding family as in THM-2057;
-8. retain exact pair-sum margin, relative-Fejer resonance packet, and HYP-2986
-   open-tope/boundary-cocircuit state until a strict phase or owner-labelled
-   Euler endpoint accepts the state.
+8. if a clock is killed, descend to its divisibility sublattice; if enough
+   clocks are killed, seek a separately proved affine binding family as in
+   THM-2057;
+9. on a one-tail state, use THM-2059's exact CRT reduction histograms to join
+   the core-safe and tail-safe packets; a zero dot product is a failed clock,
+   not a failed row;
+10. in parallel, retain exact pair-sum margins and test whether THM-2054's
+   resonance-lift hypotheses or a proved owner-labelled Euler rule apply.
 
 THM-2058 proves a refinement of step 8 inside a fixed bad transverse deck:
 split the safe count by primitive phase order and reduce each hull-owner
@@ -86,10 +96,15 @@ projective parameter. Circuit-free templates therefore reduce to finitely
 many rows after the CRT wheel; the persistent height-`2^20` marked-circuit
 templates are the only relation-rich plane branch requiring bulk discharge.
 
+Only the cited steps are available uniformly. Step 10 names possible
+sidecars, not automatic consequences of the geometric state; HYP-2986,
+HYP-2108, and other hypotheses remain conjectural until proved in the exact
+model at hand.
+
 THM-2059 also gives a bulk filter before exact support comparison. Its positive
 zero Fourier mode wins whenever the product of total packet masses exceeds
-the product of their centered `L^2` discrepancies. Only the remaining
-high-fluctuation histograms need signed Euler or endpoint-owner treatment.
+the product of their centered `L^2` discrepancies. Only high-fluctuation
+histograms then need exact modes, signed Euler, or endpoint-owner treatment.
 
 The key hoped-for compression is **interval acceptance**: adjacent Farey nodes
 with the same active hull owner and the same signed phase-height wall word
@@ -100,18 +115,21 @@ interval must split at an explicit event:
 hull-owner tie,
 positivity or collision wall,
 pair-sum ruler change,
-relative-Fejer resonance,
+relative-Fejer resonance-lift boundary,
 endpoint-owner exchange.
 ```
 
-All geometric event equations are rational linear or quadratic in the two
-parameters. Clock killing and THM-2062 add exact periodic states; THM-2065
-removes every circuit-free interval except finitely many rays. The missing
-uniform theorem is to discharge persistent marked-circuit templates by a safe
-unit orbit, THM-2061 seam exit, or bounded killed-clock/binding/Euler chain.
+Hull-owner, positivity, collision, and determinant boundaries are rational
+linear or quadratic equations in fixed coordinates; clock killing adds exact
+divisibility states, while THM-2058/2062 give exact periodic interval states
+once the plane, clock, owner, and event list are fixed. What is **not** proved
+is that the displayed event list is complete for phase-height, pair-sum,
+Fejer, or endpoint behavior, that its cells propagate across the bounded star
+atlas, or that every surviving interval has a safe-unit, THM-2061 folded-seam,
+bounded clock/binding, or Euler exit. Those are the automaton obligations.
 
 The modular-form proposal HYP-8880 currently ranks below these carriers.
-MISTAKE-226 shows that divisor labels alone do not map a finite phase clock to
+MISTAKE-233 shows that divisor labels alone do not map a finite phase clock to
 a cusp of `X_0(N)`, and no coefficient of the rational level-14 eta product is
 known to preserve phase height. A modular sidecar becomes admissible here only
 after it is pulled back to a signed owner-channel sum with a proved safe-phase
@@ -119,29 +137,26 @@ implication.
 
 ## Proved model and the new conjectural rule
 
-THM-2057 proves the rule on the whole plane
+THM-2057 proves the rule on two whole planes
 
 ```text
 {a,2a,...,11a,13a,w}:
   12a clock survives -> unit-orbit witness;
   12a killed, 14a survives -> unit-orbit witness;
   both killed -> 84a|w -> explicit affine binding witness.
-```
 
-It also closes the adjacent AP-tail plane
-
-```text
 {a,2a,...,12a,w}:
   13a clock survives -> unit-orbit witness;
   13a killed, 14a survives -> unit-orbit witness;
   both killed -> 182a|w -> explicit deep-well witness.
 ```
 
-The determinant gate leaves `640690` distinct-speed primitive directions on
-this positive one-tail plane, while the clock/binding sidecar has three
-symbolic leaves. Thus enumerating the polar residual is the wrong terminal;
-the polar/Farey carrier is only an address at which arithmetic sidecars must
-act in bulk.
+The determinant gate can leave a very large finite primitive residual on
+these positive AP one-tail planes, while each clock/binding sidecar has three
+symbolic leaves. Thus enumerating the polar residual is not the conceptual terminal;
+the polar/Farey carrier is an address at which arithmetic sidecars should act
+in bulk. Any quoted residual count still needs its exact universe and
+reproduction artifact.
 
 More generally, THM-2057 proves the **missing-clock lcm tax**. If a labelled
 core `C` contains no multiple of `N<=14`, a counterexample tail over `aC` must
@@ -150,11 +165,11 @@ satisfy `Na|w`. Intersecting all such taxes forces
 the missing-clock lcm of every candidate lower-rank core before opening any
 Farey residual.
 
-THM-2059 extends that leaf beyond `N<=14`. For each candidate clock it records
-the whole reduction histogram of safe core residues and the corresponding tail
-histogram. A positive dot product is an exact safe phase; a zero dot product
-exports the two disjoint residue supports as the next wall label. This is the
-first exact interface between the primitive-packet proposal and the clock tax.
+For an arbitrary one-tail core, THM-2059 refines “try a clock” into a lossless
+finite object: the pair of core/tail residue histograms modulo their CRT gcd.
+Their dot product exactly counts compatible safe phases. This is the proved
+join operation the state graph should carry; it does not yet select a clock or
+prove every histogram pair overlaps.
 
 ## Assumption challenge
 
@@ -166,36 +181,20 @@ address but destroys non-hull runner constraints. The second preserves an
 actual phase witness but depends on a labelled lower-rank core. Neither can
 replace the other.
 
-## Tournament analysis
+## Typed state graph, not a tournament
 
-Proof-carrier vertices:
+No tournament is declared. The carriers above do not come with an intrinsic
+binary relation on pairs: “use clock first” or “use Farey first” is a strategy
+choice depending on retained data and cost, ties are genuine, and some
+carriers are incomparable. Forcing these choices into oriented edges would
+add no theorem and would erase why a transition is legal.
 
-```text
-owner_sector_sail
-scaled_clock_binding
-exact_pair_sum_fan
-relative_Fejer_cell
-endpoint_owner_cocircuit
-kelvin_polar_polygon
-raw_tangent_disk_scan
-Heegner_form_class
-raw_relation_matrix
-```
-
-Pairwise observable: `(gate exactness, LRC-predicate retention, symbolic cell
-coverage, sidecar debt, cost)`. The switch prefers a carrier only if it keeps
-the specified primitive slope and either certifies a whole cell or emits an
-exact split event. The tie path now starts
-
-```text
-scaled_clock_binding
-> exact_pair_sum_fan
-> relative_Fejer_cell
-> endpoint_owner_cocircuit
-> kelvin_polar_polygon
-> owner_sector_sail
-> raw_tangent_disk_scan.
-```
-
-`Heegner_form_class` and `raw_relation_matrix` rank last because neither
-preserves the determinant owner or the weak phase-height predicate.
+The appropriate object is a typed state graph. A state records at least the
+fixed basis/plane, primitive parameter or Farey cone, tied hull-owner set,
+non-hull label sidecar, transverse deck, surviving/killed clocks, divisibility
+sublattice, and current proof obligation. An edge must name the map, the
+predicate it preserves, the information it discards, and the side condition
+that licenses it. Accepting states contain an actual weak `1/14` witness or a
+proved implication to one; “determinant gate failed” is only an unresolved
+state. The open theorem is finiteness and completeness of this graph uniformly
+over the THM-2052 atlas, not a preferred ranking of proof techniques.

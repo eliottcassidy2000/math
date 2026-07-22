@@ -4,7 +4,7 @@
 > [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) for current truth. Major later
 > changes include THM-2022 proving NC2/GMC(2), explicit GMC(3) counterexamples,
 > THM-2044/2045 separating rank-two Poisson from DC(2)/planar JC, partial NC2
-> Lean coverage, and corrections MISTAKE-211–229. Historical priority/provenance
+> Lean coverage, and corrections MISTAKE-211–234. Historical priority/provenance
 > claims below require primary-source and canon checks.
 
 ## Current portfolio at a glance
@@ -14,13 +14,13 @@ the obstruction that still matters; the long inventory below is provenance.
 
 | Area | Current truth | Highest-value next move |
 |---|---|---|
-| LRC(14) | Open. `q<=25` is false; exact search is safe through height 55. THM-2051 forces a height-`2^20` support-3..5 relation; THM-2052 gives a finite two-anchor star atlas; THM-2053 confines every uncertified plane parameter to 26 tangent disks. | Compress saturated bases/atlas types and give exact resonance-fan or Euler certificates for primitive positive points in the disks. Treat rank twelve as an accelerator; also pursue six-comb transport/effective spectrum. |
-| NC2 / GMC | NC2/GMC(2) are proved by THM-2022. The root-imported Lean spine covers descent, faces, DvdK interfaces, height/gap, Lucas, and whole-face Frobenius, but not concrete normalized-channel assembly or `DvdK1 -> NC2`; DvdK remains cited. GMC is false from dimension three. | Formalize concrete three-case normalized-residue assembly and the final conditional theorem; keep DvdK explicit or formalize it separately. |
+| LRC(14) | Open. THM-2051/2052 force a height-`2^20` relation and finite two-anchor atlas. THM-2053 supplies `D_N(m)` plus a 26-disk sufficient gate; THM-2055/2056 give its normal fan and Kelvin/Farey certificate. THM-2057 closes two scaled AP one-tail planes; THM-2059 exactly joins one-tail clock packets by CRT. | Discharge each remaining labelled bad deck/Farey ray by clocks, pair sums, relative Fejer, Euler endpoints, or rank gain. THM-2058 is an empty reservation. |
+| NC2 / GMC | NC2/GMC(2) are proved by THM-2022. The root-imported Lean spine is sorry-free at proved nodes; separate `GMC2NC2Capstone` typechecks the conditional skeleton with one `sorry`. GMC is false from dimension three. | Use HYP-8878's unique-minimum-channel lemma where applicable; wire the concrete capstone and formalize or explicitly cite DvdK on the residual. |
 | Jacobian / Dixmier / Poisson | The two-pair Poisson conjecture is false. DC(2) and planar JC remain open; filtered first-order descent is obstructed, while THM-2049 proves the associated-graded correction complex acyclic. | Decide finite polynomial termination and the coupled `D` relations, or prove boundary poles prevent a polynomial lift. |
 | Tournaments | Join laws and strong-core localization are proved; the invariant lattice is exact only through `n<=6`. Positive game equilibria need skew symmetry plus mod-2 support parity. GLMY path homology in degree at least three is under an active convention dispute. | Attack `H>=disc`, classify operation laws, resolve the path-homology convention case, and track positive-kernel support rather than conflating games, flows, and topology. |
 | Reciprocal sequences | Support and indexed-multiplicity Dirichlet profiles are separated by a collision tax; Abel--Stieltjes/Dini/Bertrand boundary tests are available. | Build an operation calculus for support unions/products and connect collision structure to LRC denominator spectra. |
 | Arrangement carrier | THM-2047 proves the labelled phase-height carrier, top wedge, Euler detector, Fejer formula, and paired deletion; THM-2050 proves period-14 local germs are globally blind. | Find a deletion/localization invariant preserving owner, side, height, and global termination that can force the AP-core branch. |
-| Cross-domain wildcard | Many analogies survive only after naming the lost coordinate. MISTAKE-226 repairs diagonal energy by retaining mixed-moment augmentation or observer zero. | Generate alternate objects/quotients, then demand a two-way dictionary, hostile control, and an explicit sidecar before promoting a bridge. |
+| Cross-domain wildcard | Many analogies survive only after naming the lost coordinate. MISTAKE-226 repairs diagonal energy; MISTAKE-230--234 quarantine universal entropy, composite-Paley clocks, modular-cusp LRC claims, and support-semigroup noncancellation. | Generate alternate objects/quotients, then demand a map, preserved predicate, hostile control, and explicit sidecar before promotion. |
 
 ## Legacy portfolio snapshot
 
@@ -163,9 +163,11 @@ Top novel results (full detail: the LRC14-* frontier docs + THM files):
 6. **The sharp measure-horn 1/(7L)** [PROVED local; CONJECTURED uniform] — THM-1132/1123.
 7. **Rung theory + the θ-flow + the observer principle** [REFRAMED] — opus-S409/S410;
    Rédei = LRC + 1 (opus-2026-06-30); the OCF vacuum digit = the +1 = ℏ.
-8. **The Heegner/Eisenstein arithmetic bridge** [PROVED, cross-problem] — the same
-   class-number-1 fields and the "7" govern the LRC floor, the covering-min, the
-   Moser-spindle χ=4 junction, and the three-distance theorem.
+8. **Historical Heegner/Eisenstein analogy** [NOT AN LRC BRIDGE; MISTAKE-229/230/233]
+   — the separate class-number-one, Eisenstein-norm, Moser-spindle, and
+   three-distance facts survive, but no map shows that a Heegner `-7` field or
+   class-number rigidity governs the LRC floor. Do not use this analogy as a
+   proof route without an explicit loneliness-preserving construction.
 **Frontier — three named walls**: Wall A = the inverse/rigidity Freiman/near-AP core
 (HYP-7310 is a strong sufficient AP-extraction supplier, **not an equivalent
 restatement of LRC(14)**; the covering-core gap is verified for 95% of spread cores,

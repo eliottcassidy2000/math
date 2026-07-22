@@ -17,87 +17,33 @@ speeds, corresponding to 14 total runners. External work settles at most 13
 total runners. The residual is not a missing routine finite run and not a
 uniform small-period lemma.
 
-Two working decompositions are
-`global -> finite-height/pinning shell -> compact structural shell ->
-tight or AP-like core -> far-element exit` and
-`safe certificate = seed + selector + preserver + pointwise exit`.
-Selectors and preservers are strong; the missing objects are the structural
-supplier/seed and a lossless exit.
+The current proof graph is:
 
-### What is closed
+```text
+counterexample
+  -> genuine support-3..5 relation, height <= 2^20       [THM-2051]
+  -> bounded sparse relation code of rank >= 11          [THM-2052]
+       |-- rank 12 -> finite maximal-minor box
+       `-- rank 11 -> finite two-anchor star atlas
+            -> deck + sufficient gate / indexed open 26-disk failure carrier [THM-2053]
+            -> signed-hull owner fan / Kelvin-Farey certificate [THM-2055/2056]
+            -> clock, pair-sum, Fejer, Euler, or rank discharge [OPEN]
+```
+
+The rank-eleven residual is therefore a finite but enormous labelled
+intersection, not merely a plane or a quadratic form; rank twelve is the
+separate finite-box branch and still needs exact decision. The rank-eleven
+object's indispensable coordinates are the primitive parameter, integral column data, transverse
+deck and bad modulus, signed-hull owner cone, pair-sum clock, and
+phase/endpoint sidecar. Failure of any sufficient gate means **uncertified**,
+not unsafe. The reusable certificate architecture is
+`seed + selector + preserver + pointwise exit`.
+
+### Proved reductions and terminals
 
 - **CITED:** LRC through 13 total runners. The newest step is
   [Sungkawichai–Trakulthongchai](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture),
   a computer-assisted proof for 10–12 nonzero speeds.
-- **PROVED:** [THM-763](../01-canon/theorems/THM-763-strict-finite-height-for-tight-lrc-instances.md)
-  gives every primitive tight 12-speed tuple the finite bound
-  `sum(a_i) <= 78^11`, conditional only on the settled lower-dimensional LRC
-  citation used in its descent.
-- **PROVED in its locus:**
-  [THM-1171](../01-canon/theorems/THM-1171-twelve-term-ap-tight-rigidity.md)
-  handles twelve-term AP tightness. It is not a classification of arbitrary
-  twelve-speed tight tuples.
-- **PROVED / FINITE-EXACT in stated strata:**
-  [THM-1284](../01-canon/theorems/THM-1284-crossN-firstgap-band-and-singlefar-classification.md)
-  closes the first-gap, single-far `N=12` stratum; the AP-centered common-scale
-  H6 program is closed through `c=36`, with `c=37` prime-excluded and `c=38`
-  next.
-- **PROVED-BY-EXHAUSTION:**
-  [THM-1290](../01-canon/theorems/THM-1290-subgap-exhaustive-census-bounded-height.md),
-  after the full MISTAKE-194 rerun, proves LRC(14) for maximum speed at most 55
-  and emptiness of `(1/14,3/41)` through maximum speed 64.
-- **CITED + proved translation:**
-  [THM-1289](../01-canon/theorems/THM-1289-floor-isolated-from-above-by-GK.md)
-  imports the Giri–Kravitz one-sided accumulation theorem: the floor `1/14` is
-  isolated from above by some ineffective `delta>0`. Whole-window finiteness is
-  not a consequence of the published theorem; it needs their Conjecture 1.5 or
-  another input.
-- **PROVED with scope:**
-  [THM-1291](../01-canon/theorems/THM-1291-cf-active-leg-law-proved.md)
-  makes the first beating integer a continued-fraction convergent denominator.
-  Identifying it with an active speed needs its additional hypothesis H.
-- **REFUTED:**
-  [THM-1288](../01-canon/theorems/THM-1288-c71-refuted-divisor-aligned-clusters.md)
-  refutes Sungkawichai–Trakulthongchai Conjecture 7.1 literally.
-- **PROVED:** [THM-819](../01-canon/theorems/THM-819-primitive-harmonic-law-for-interval-cores.md)
-  gives the primitive harmonic good-measure law.
-
-### What is false or exhausted
-
-- **REFUTED:** uniform `q <= 25`. [THM-762](../01-canon/theorems/THM-762-small-denominator-signed-pair-deck.md)
-  and [THM-764](../01-canon/theorems/THM-764-covering-small-period-signed-pair-deck-and-q25-refutation.md)
-  give `26*{1,...,12} union {339}` with first good period `q=27`.
-- **REFUTED method:** averaging a good-period count. MISTAKE-127/129/130 show
-  that existence is governed by the maximum over periods; the resonant tight AP
-  is the mandatory hostile control.
-- **CORRECTED search frame:** HYP-8815/MISTAKE-221 gives a proved necessary
-  kernel: after gcd normalization, a counterexample is primitive Cover14 with
-  `M<1/14`, and its maximum-deletion core is non-AP, hence has Schur-triple
-  count at most `65` by THM-1017/730. Since its lonely-time measure is zero,
-  THM-731 also forces `disc_v>=6|G'_{~v}|^2` for every peel; small discrepancy
-  is a safety signal. THM-2048 sharpens this by a discrete fiber tax: with
-  `mu=|G'_{~v}|`, `theta={7vmu}`, and `r_v` interval components, every
-  zero-measure packet must satisfy
-  `6(vmu)^2+theta(1-theta)/7<=r_v^2/3` for every peel.
-  This is a strict improvement over the old uniform tail test: for the
-  primitive Cover14 row `{1,8,11,12,14,17,22,26,35,40,54,90,93}` at `v=93`,
-  the old inequality is inconclusive while the integer tax violates the new
-  necessary inequality and forces a positive-measure lonely interval.
-  “Near-AP,” “anti-golden,” Fibonacci-foil, CF-blocker, and
-  full-autocorrelation iff claims remain heuristic. The exact
-  [THM-1002 pair-sum theorem](../01-canon/theorems/THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case.md)
-  proves every maximizer lies on a ruler `t=p/(v_i+v_j)`. Enumerating all such
-  rulers makes the corrected S206 replay exact: all fifteen displayed rows are
-  safe, while `{1,...,12,5460}` proves the old `q<=1200` cutoff was incomplete
-  (`92/1197 < 420/5461`). This finite bank does not identify the global
-  covering minimum.
-- **REFUTED arrangement shortcut / exact replacement:** MISTAKE-224 separates
-  the [THM-1820 relation-lattice Fourier annihilator](../01-canon/theorems/THM-1820-lrc-is-a-moment-nullcone-problem-relation-lattice-pairing.md)
-  from a standard toric-complement/OS layer formula. Shi counts and bounded
-  short-relation counts do not preserve LRC.
-  THM-2047's signed phase-height complex is lossless; for `delta>0`,
-  `chi(G_delta)=#components`, so it sees isolated tight witnesses that volume
-  misses.
 - **PROVED finite-circuit alternative:**
   [THM-2051](../01-canon/theorems/THM-2051-fejer-bv-small-relation-alternative-for-lrc14.md)
   closes the coarse analytic
@@ -181,109 +127,86 @@ supplier/seed and a lossless exit.
 - **Local-comb ceiling:** THM-1252--1274 leave global endpoint/child transport
   or a phase-located turn tax, not another unlocated local-return charge.
 
-### Exact live residuals
+### Exact live obligation
 
-1. **AP-core / tight-deletion supplier (highest leverage).**
+Rank-twelve cells already lie in finite maximal-minor boxes but still need
+exact finite decision. For each reduced rank-eleven two-anchor star, intersect:
+
+```text
+bad transverse deck D_N(m)<1/14
+  x primitive positive parameter in the strict open-disk failure union
+  x signed-hull owner/Farey ray
+  x pair-sum clock and endpoint-owner word.
+```
+
+Discharge every resulting labelled cell by at least one of:
+
+1. an exact `D_N`/clock/binding phase, generalizing THM-2057;
+2. a THM-2059 CRT packet overlap or a pair-sum/HYP-2108 endpoint certificate;
+3. THM-2054 on a resonance-lift/nonaliasing cell, with the missing
+   model-specific plateau proved;
+4. an active relation outside the rank-eleven code; or
+5. owner-labelled Euler survival in THM-2047's phase-height complex.
+
+[HYP-8871](../05-knowledge/hypotheses/HYP-8871-lrc14-owner-sector-klein-sail-automaton.md)
+is the open finite-state/Farey program for this obligation.
+[THM-2058](../01-canon/theorems/THM-2058-primitive-phase-packets-and-deck-fan-intervals.md)
+is the proved carrier that reduces each fixed bad-denominator/owner fiber to
+labelled primitive packets and one coprime interval. It makes the terminal
+exact and finite; it does not prove that every surviving interval is empty.
+
+### Independent routes that remain live
+
+- **AP-core / tight-deletion supplier.**
    [THM-1017](../01-canon/theorems/THM-1017-ap-core-bridge-reduction.md) proves
    `AP core -> far element -> LRC(14)`. The extraction of that AP core from the
    compact Cover14 residual is open (the current
-   [HYP-6820 audit](../05-knowledge/hypotheses/HYP-6820-q25-and-n12-uniformity-audit.md)). Non-AP and
-   deeper multi-defect twelve-speed branches are precisely what uniform
-   “sporadic emptiness” has not removed.
-2. **Six-comb global transport.** Complete endpoint/child transport, or prove a
-   phase-aware turn tax. A local return lemma without a global location sidecar
-   repeats an exhausted pattern.
-3. **Effective height/spectrum bridge.** Extend exact pinning beyond the current
-   maximum-height shell or make the Giri–Kravitz isolated gap effective. A raw
-   larger census is valuable only if its new survivors/filters expose structure.
-4. **Frobenius-safe certificate.**
-   [THM-2041](../01-canon/theorems/THM-2041-frobenius-stability-of-exact-period-projectors.md)
-   supplies whole-packet preservation. The ranked
-   [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md)
-   routes are: THM-671 `B5` supply; structured bounded-relation classification
-   after THM-2051's now-proved dissociated exit; characteristic-3 endpoint-
-   labelled period-14 propagation; an adaptive resolved-phase sheaf; and
-   conductor plus owner-current glue. Raw Ramanujan energy is diagnostic only.
-5. **Signed wall-word / Euler deletion route.**
-   [THM-2047](../01-canon/theorems/THM-2047-phase-height-toric-arrangement-for-lrc.md)
-   consolidates the earlier threshold tope/Cech interfaces into a
-   general-height carrier. Opposite signs recover pair-sum rulers; deletion is
-   exact; and the top-vertex boundary-layer coefficient depends only on the
-   extreme active slopes. The live target is a deletion--restriction or nerve
-   argument forcing `chi(G_{1/14})>0`; arrangement cohomology by itself does
-   not provide that positivity. [THM-2050](../01-canon/theorems/THM-2050-period14-top-germs-do-not-determine-global-loneliness.md)
-   sharpens the no-go: AP13 and `12->26` have identical complete local germs at
-   all six unit points but maxima `1/14` and `1/12`. The exact
-   [HYP-8841](../05-knowledge/hypotheses/HYP-8841-lrc14-noetherian-first-exit-termination.md)
-   audit shows THM-2048's peel tax fires on deep `12->96` and covering
-   `12->84`, and independently reproduces the genuine Cover14 gain at peel
-   `93`, but misses `12->26`, `12->36`, and P10+K33. It is a pruning rule, not
-   the termination height. Once `M>1/14`, THM-2047 bounds a first strict
-   exit by `q<=2 max(S)`; the sole Wall-A branch is owner-labelled Euler-point
-   survival when no positive pair-sum margin occurs.
-   [THM-2051](../01-canon/theorems/THM-2051-fejer-bv-small-relation-alternative-for-lrc14.md)
-   now proves that every remaining hard row has a genuine support-`3..5`
-   relation of coefficient height at most `2^20` after triangle-packing the
-   exact pair covariances.
-   [THM-2052](../01-canon/theorems/THM-2052-finite-height-forces-high-rank-bounded-relation-code.md)
-   goes much further: every hypothetical counterexample already has eleven
-   independent bounded support-at-most-three relations. It either reaches the
-   rank-twelve finite box or belongs to a finite two-anchor,
-   one-projective-parameter star atlas. The exact HYP-8841 bank also shows why
-   incidence is load-bearing: all eight controls, tight and strict alike,
-   already have a height-one three-term circuit (the first seven share
-   `1+2=3`).
-   [THM-2053](../01-canon/theorems/THM-2053-rank-two-parameter-plane-geodesic-terminal.md)
-   supplies two complementary filters before rank twelve: its exact deck
-   discards whole fibers, while THM-2055 prunes determinant failure to hull-
-   owner sectors. THM-2058 then enumerates their intersection as labelled
-   primitive packets and coprime intervals. HYP-2108 supplies the
-   endpoint gate inside those cells: for core-safe
-   components with midpoint `m_i` and length `l_i`, prove for some peel `w`
-   that `P_w=max_i(||w m_i||+(w/2)l_i-1/14)>=0`. Equality already preserves a
-   weak endpoint; strict positivity opens an interval. HYP-2896 is the exact
-   one-parameter model, and THM-2054 is the analytic complement on vector-
-   character cells whose bounded scalar resonances all lift. The sharpened
-   target is **Euler survival, rank gain, off-resonance decorrelation, or exact
-   deck/fan discharge**.
-   HYP-8845 halves the covering branch by mirror symmetry: one survivor on
-   `[0,1/2]` automatically supplies its partner and `chi>=2`.
-6. **Pointed plane transport.** THM-2052 places every counterexample in one of
-   finitely many rational planes and leaves only the rank-`11` to rank-`12`
-   jump. [HYP-8846](../05-knowledge/hypotheses/HYP-8846-lrc14-pointed-plane-transport.md)
-   isolates the quantifier gap: a safe direction somewhere in the plane does
-   not certify the specified row. The missing result must preserve a strict
-   phase or owner-labelled Euler endpoint while transporting back to the
-   target, or emit a twelfth independent relation.
+   [HYP-6820 audit](../05-knowledge/hypotheses/HYP-6820-q25-and-n12-uniformity-audit.md)).
+   Uniform emptiness of non-AP/deep multi-defect twelve-speed branches remains
+   open.
+- **Euler/global phase route.** THM-2047 proves the corresponding labelled phase-height carrier:
+  it retains sign, owner, side, height, and exact deletion;
+  `chi(G_delta)` detects isolated tight points. THM-2050 shows complete local
+  period-14 germs can agree while
+  global maxima differ, so first-exit magnitude or gluing is mandatory.
+- **Peel and comb routes.** Every zero-measure covering packet obeys THM-731's
+  necessary peel inequality `disc_v>=6|G'_{~v}|^2`; THM-2048's integer fiber tax
+  strictly sharpens it but is still a pruning gain, not a classifier. Local
+  six-comb return machinery is saturated; pursue endpoint/child transport or a
+  phase-located turn tax.
+- **Effective spectrum.** THM-1289 imports an ineffective one-sided isolated
+  gap. THM-1290 is exact through maximum speed 55 (and empties
+  `(1/14,3/41)` through 64). Extend computation only with a structural filter
+  or make the gap effective.
+- **Exact per-row pair-sum evaluator.** THM-1002/2047 reduce a fixed row's
+  maximum to rational pair-sum vertices; reflection halves the phase interval.
+  HYP-8900 replays several rows exactly, including value `14/183` for the deep
+  well. This is not a uniform finite family or a proof of its Wall-A restatement.
+- **Frobenius wildcard.** THM-2041 preserves exact packets, but LRC still needs
+  a nonzero safe seed and pointwise exit. Corrected HYP-8840's mixed moments
+  preserve augmentation; neither supplies an LRC implication by itself.
 
-### Carrier boundaries and wildcards
+### Mandatory controls and perspective prompts
 
-- [THM-2043](../01-canon/theorems/THM-2043-period14-parity-hasse-jet-completeness.md)
-  proves parity-Hasse completeness modulo 14. THM-2058's GW family then keeps
-  that packet, blockedness through `q=13`, threshold `14`, every prescribed
-  finite lift depth, and the same one-tail owner sector, yet has a uniform
-  strict phase `47/113` with integer slack `13`. Raw jets, threshold, owner,
-  and fixed height precision are jointly insufficient. Scales `{14,27,41}`
-  are mandatory controls, not a sufficient atlas.
-- [THM-2047](../01-canon/theorems/THM-2047-phase-height-toric-arrangement-for-lrc.md)
-  proves the corresponding labelled phase-height carrier, pair-sum top law,
-  Euler detector, and paired deletion. The selected inequality slice retains
-  owner, sign, side, and height; it is not an ordinary toric complement.
-- [THM-2050](../01-canon/theorems/THM-2050-period14-top-germs-do-not-determine-global-loneliness.md)
-  gives identical complete unit-phase germs with maxima `1/14` and `1/12`, so
-  a global first-exit, magnitude, or gluing sidecar is mandatory.
-- Corrected HYP-8840 retains mixed moments `CT[P^r Pbar^s]` because diagonal
-  energy sees only augmentation zero. This may help organize the rank code,
-  but a Bessel-to-sinc weight swap gives no GMC-to-LRC implication.
-
-### Fresh perspective prompts
-
-Do not default to runners or arcs as vertices. Test gaps, fixed sections,
-section boundaries, wall-crossing events, residues, cover arcs, Fourier
-packets, matroid circuits, proof obligations, and survivor states. Ask whether
-the hard object is a set of speeds, a deletion/core extension, a phase-current
-process, a spectrum stratum, or a finite-state certificate. Every quotient must
-name the LRC predicate it preserves and the coordinate a sidecar must restore.
+- `26*{1,...,12} union {339}` has first good period `q=27`: uniform `q<=25` is
+  false. `{1,...,12,5460}` defeats the old `q<=1200` scan.
+- THM-2043 proves parity-Hasse completeness modulo 14, but THM-2058's GW
+  family preserves that packet, blockedness through `q=13`, threshold `14`,
+  every prescribed finite lift depth, and one-tail owner sector while exiting
+  strictly at `47/113`. Raw jets and any fixed lift depth are not certificates.
+- AP13 and the `12->26` lift have identical complete local unit-phase germs but
+  maxima `1/14` and `1/12`.
+- A disk/Farey bad ray is only uncertified. THM-2057's AP one-tail planes
+  contain many such rays yet are wholly safe by clocks and binding phases.
+- The determinant polygon is basis-dependent Euclidean data, not a Heegner
+  discriminant. Paley, modular-curve, entropy, and cusp-form coincidences are
+  inspiration until an explicit LRC-predicate-preserving map is proved.
+- THM-2047's selected inequality slice retains sign, owner, side, height, and
+  exact paired deletion; it is not an ordinary toric complement. HYP-8840's
+  mixed moments retain augmentation, but no Bessel-to-sinc swap proves LRC.
+- Do not default to runners as vertices. Compare columns, gaps, clock orbits,
+  Farey cones, residues, wall events, endpoints, circuits, and proof
+  obligations; record what each quotient forgets and which sidecar repairs it.
 
 ## NC2 and Gaussian moments
 
@@ -330,11 +253,17 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 
 ### Live work
 
-Package THM-2022 for publication. In Lean, instantiate the abstract three-case
-residue assembly with the concrete normalized Wick channels and prove the final
-conditional `DvdK1 -> NC2`; keep the cited DvdK theorem explicit until it is
-formalized. Continue to transfer the `seed/selector/preserver/exit` design
-without pretending a preserver supplies the seed.
+Package THM-2022 for publication. In Lean, replace the capstone's one `sorry`
+with concrete normalized Wick-channel wiring; keep the cited DvdK theorem
+explicit until formalized. HYP-8878 supplies an elementary citation-free seed
+when the lowest Laurent face has a **unique minimal balanced channel**: the
+first constant term is then one nonzero monomial. Its `98/116` figure is a
+finite small-support census, not a general density, and coincident minimum
+channels remain. HYP-8890's saddle/Watson approach is open, and MISTAKE-234
+shows HYP-8895's support semigroup does not prevent infinitely many mixed-sign
+cancellations. Continue to
+transfer the `seed/selector/preserver/exit` design without pretending a
+preserver supplies the seed.
 
 ## Tournaments
 

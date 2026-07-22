@@ -79,11 +79,15 @@ LRC14.  More precisely, exactly one of the following holds:
   the q=14 witness survives, so M(C union {w}) >= 1/14.
 
 84 divides w:
-  write w=84m.  Then the covering row has the exact witness
+  write w=84m.  Then the covering row has the explicit witness
     t_m = (35m+2)/(84m+5)
-  and the exact value
-    M(C union {84m}) = 7m/(84m+5) > 1/14.
+  whose exact phase margin gives the lower bound
+    M(C union {84m}) >= 7m/(84m+5) > 1/14.
 ```
+
+The displayed phase calculation proves the lower bound needed for the
+one-tail closure. It does **not** prove the formerly asserted global equality
+`M(C union {84m})=7m/(84m+5)`, which would require a separate upper bound.
 
 The covering branch is the useful new fragment.  At `D=84m+5`, the numerator
 distances at `t_m` are
@@ -111,7 +115,7 @@ so every distance is at least `7m/D`, equality occurs at the binding pair
 7m/(84m+5) > 1/14  iff  14m > 5.
 ```
 
-This is the exact finite version of the zeta hint.  The formal negative
+This explicit finite certificate is the rigorous part of the zeta hint.  The formal negative
 constant `-1/12` is a Bernoulli boundary term in
 
 ```text
