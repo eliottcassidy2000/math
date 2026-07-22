@@ -1,45 +1,18 @@
-> **CURRENT-TRUTH WARNING (2026-07-21):** This is chronological provenance,
-> not a status authority. Entries may be corrected after filing. Start with
-> [`START-HERE.md`](START-HERE.md), [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md),
-> and [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
+## boxeph-2026-07-22-S232 -- THM-2067 orbit-product core in Lean; GMC(2) now hinges solely on DvdK1 (kernel-pure, HYP-8941)
 
-## death-star-2026-07-22-S107 -- JC(2): the resonance dictionary + a manufactured-valuation orbit-product route (exploration, NOT a proof)
+**Owner:** long session to fully formalize GMC(2); push/pull often.
 
-**Owner directive:** work the 2D Jacobian Conjecture; try creative new routes; explore unrelated threads for ideas.
+**STATE UPDATE (crucial):** death-star-S105 discharged HeightWitnessSupplier kernel-pure => clean endpoints GMC2NC2.nc2_of_dvdK1 : DvdK1 -> NC2 and gmc2_of_dvdK1, NO height hypothesis. **GMC(2) <= NC2 <= DvdK1 ALONE.** Uniform DvdK1 = codex THM-2067 (Galois orbit-product); death-star-S106 map = 4 Mathlib-ready pieces + 1 valued-field gap (THM-1550 = unramified Hensel).
 
-- **VERIFIED ANCHORS** (exact bivariate poly arithmetic, jc2_resonance_dictionary_leadingform_deathstar_S107.py): det(D(I+H))=1+div(H)+jac(H1,H2); **homogeneous 2D Keller maps are EXACTLY shears** H=c(bx-ay)^d(a,b) (=> homogeneous 2D JC trivial; all difficulty is non-homogeneous, why BCW cubic reduction must raise dimension); leading forms of a Jacobian pair are **powers of a common binary form h**; the **descent reduces unless neither degree divides the other** (Abhyankar-Moh stuck stratum = boxeph S225 coprime/Lame); **places at infinity = distinct roots of h**, so single-root h=l^k => 1 place => Abhyankar-Moh => TAME, and a **JC(2) counterexample requires multi-root h (>=2 places)**.
-- **THE RESONANCE DICTIONARY** (cross-thread synthesis): the tame-vs-hard split of THREE repo problems is ONE single-root/multi-root phenomenon -- DvdK unique vs coincident cycle (S101/S106); Hessian rank-1 one-sided (x+iy)^d vs rank>=2 (THM-1300 dim-3 ctrex, S103); JC(2) single-root h (tame) vs multi-root (open). Not a formal chain (MISTAKE-229; GMC=/>JC, S205) -- a structural claim that the same TOOL should hit all three resonant residuals.
-- **NEW ROUTE (sketch, crux open):** transfer S106's manufactured-valuation Galois orbit-product (THM-2067) to JC(2)'s places at infinity. (a) Lefschetz reduces a counterexample to Q-bar coefficients [valid]; (b) roots of h lie in a number field so Gal permutes the places at infinity in orbits [valid -- the arithmetic supplies the orbit THM-2067 needs, which S205's LRC packet lacked]; (c) OPEN CRUX: exhibit a product of local invariants over a Galois orbit of places, rational yet with a valuation incompatible with jac=1 (the analogue of Pi(t)=ct vs the Vieta norm). Framing: boxeph S146 Euler ledger = topological reciprocity; this route = its arithmetic (valuation/norm, Weil-reciprocity-flavored) refinement; it sharpens boxeph S225's descent-FEASIBILITY engine to a CANCELLATION/valuation one.
-- **Parallel tool (boxeph S231, same day):** F invertible <=> a coordinate certificate x=P(f,g) exists (Nullstellensatz), the EFFECTIVE face; boxeph's DvdK monomial certificate is the same coin. Dictionary gains a unified "certificate exists <=> tame; effective degree bound = open part" column.
-- **HONEST:** anchors classical (Abhyankar-Moh / van der Kulk), verified in-repo + assembled; the dictionary is a synthesis not an implication; the route's crux is open. JC(2) remains open. HYP-8940.
-## boxeph-2026-07-22-S231 -- eliminate DvdK for the residual 12% of straddling supports via a monomial certificate (kernel-pure Lean, HYP-8932)
+**FORMALIZED (GMC2OrbitProduct.lean, kernel-pure [propext,Classical.choice,Quot.sound], = S106 §5 target 1, gap-INDEPENDENT abstract core, 4 thms):**
+- prod_smul_eq_prod_pow_card_stabilizer: transitive action => prod_g f(g.x) = (prod_a f a)^|Stab x| (Fintype.prod_fiberwise + fiber<->stabilizer bijection).
+- card_stabilizer_eq_card_stabilizer: stabilizer order constant on transitive action (conjugation bijection).
+- prod_pow_card_group_eq: the ORBIT-PRODUCT EQUATION -- equivariant f + G-fixed subset product p => p^|G| = (prod_Omega f)^(|S|*|Stab|).
+- valuation_zero_of_prod_fixed: the CONTRADICTION ENGINE -- v(prod_Omega f)=0 => v(p)=0 (THM-2067 gets contradiction from v(p)=v(ct)=1).
 
-**Owner:** get rid of DvdK for the remaining ~12% of straddling supports.
-## codex-2026-07-22 -- the missing relative-Hunter channel and two all-height branches
+**Gap-independence verified:** Mathlib has Polynomial.Gal.galAction_isPretransitive + MulDistribMulAction p.Gal SplittingField (transitivity/action free), but instantiation needs a VALUATION ON THE SPLITTING FIELD of C(t) = the ramified extension = exactly the S106 gap (-> unramified Hensel via X=sZ, t=s^M). So the abstract core is the clean gap-independent boundary.
 
-- THM-2086 gives the exact Fourier split
-  `w_pq=(5/7)rho_pq-(epsilon_p+epsilon_q)/7+R_h(p,q)`. The genuine term is an
-  absolutely convergent sum over nonzero relations `ap+bq+ch=0`; the other
-  channels are the global pair bulk and the two mixed-fold axes. Summed over a
-  tree this is an identity, not an asymptotic.
-- On THM-2081's sharp packet, the three contributions are
-  `100421/1177176`, `-16117/4512508`, and `-2833331/203062860`, summing to the
-  independently atomized positive margin `561797/8288280`.
-- When `7|h`, every cross edge between a 7-nonmultiple and a 7-multiple has
-  `epsilon_p=0`, `rho_pq=1/49`, and `R_h(p,q)=0`. Divisor completeness and
-  hereditary primitivity force a spanning `K_(L,H)` tree; its margin is at
-  least `5/294`. The whole apex-divisible guard branch is closed at all heights.
-- When `7 not|h` and five speeds are divisible by seven, the high-high genuine
-  channel vanishes. THM-1234 plus uniform `K_5` tree averaging gives restricted
-  weight `88/1911`; paying the two low mixed folds leaves `23/1911`. Thus the
-  live modular profiles have only one through four 7-divisible speeds.
-- The unrelated high-frequency/BV route gives a second all-height result:
-  `|w(B,q;h)-(1/7)mu(D_q cap C_h)|<=(q+h)/(3B)`. The exact overlap spectrum
-  then closes `sum_(q!=B)q+6h<(17/1078)B`.
-- The rank-seven residual is now simultaneously `7 not|h`, nonlacunary, and,
-  by THM-2083, supported on a bounded guard/two-speed relation template. This
-  restores exactly the incidence erased by THM-2082's scalar code wheel and
-  mirrors GMC's support-versus-genuine-channel split without solving DvdK1.
+**Remaining to full GMC(2)** (coordinating with death-star): Galois wrapper (instantiate via galAction_isPretransitive), Check A (CT(Lambda^m)=[u^Mm]R^m), irreducibility of X^M-tR/C(t), Vieta, THM-1550/Hensel (the gap).
 
 ## codex-2026-07-22 -- rank-one wheel boundary and residue-incidence transfer
 
@@ -219,4 +192,5 @@ NET: every P whose lowest face has a unique channel needs NO DvdK axiom for NC2,
 **Honest:** the DvdK-free (unique-channel) side is now kernel-pure in Lean for arbitrary support, subsuming S226 and complementing S228; the coincident-cycle (card>=2) stratum remains the THM-2067 Galois frontier. The synthesis is a reading of proved theorems (THM-1820/1810/406/515/671), not a new theorem. Artifacts: reflection the-unique-channel-dvdk-in-lean-...-boxeph-S229.md, HYP-8930, Lean GMC2DvdKUniqueChannel.lean (5 theorems).
 **Honest scope:** the DvdK dependency is localized to one seed implication and discharged kernel-pure for the unique-channel 84%; NOT a full bypass (coincident-channel 16% = THM-2067). NC2-level wiring is a one-line codex-owned change. Artifacts: reflection bypassing-the-gmc2-dvdk-dependency-...-boxeph-S230.md, HYP-8931, Lean GMC2DvdKUniqueChannelBypass.lean + dvdk1_of_uniqueChannel.
 **Honest:** general engine + 1 concrete instance in Lean; other 13 certificates script-verified (same decide+linear_combination recipe, mechanical). NOT a uniform degree bound (= effective DvdK, Sturmfels/ESV open) -- but any explicit support is a finite, Galois-free certificate computation. Artifacts: reflection eliminating-dvdk-for-the-residual-12-percent-...-boxeph-S231.md, HYP-8932, dvdk_monomial_certificate_residual_boxeph_S231.py, GMC2DvdKMonomialCertificate.lean, GMC2DvdKResidualExample.lean.
+**Honest:** NOT full GMC(2); the kernel-pure abstract orbit-product core of THM-2067 (the sole remaining GMC(2) input) + contradiction engine, + a verified map of the remaining instantiation to the one S106 gap. 2 mid-session checkpoints pushed. Artifacts: reflection the-thm2067-orbit-product-core-...-boxeph-S232.md, HYP-8941, Lean GMC2OrbitProduct.lean.
 
