@@ -762,4 +762,8 @@ import TournamentH7.GMC2Thm2067HSonly
 import TournamentH7.GMC2DvdKUnivariateReduction
 import TournamentH7.GMC2DvdKFrame
 import TournamentH7.GMC2FrameBridge
+<<<<<<< HEAD
 import TournamentH7.GMC2DvdKHderiv
+=======
+import TournamentH7.GMC2FrameBridgeRoots
+>>>>>>> 7aff70aa8d3042046ef1553b20dbc6276f5b9e65
