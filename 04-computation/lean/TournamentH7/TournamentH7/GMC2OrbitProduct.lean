@@ -106,8 +106,37 @@ theorem prod_pow_card_group_eq [IsPretransitive G Ω] [CommMonoid A] [MulDistrib
     _ = (∏ α : Ω, f α) ^ (S.card * Fintype.card (stabilizer G x)) := by
           rw [Finset.prod_const, ← pow_mul, Nat.mul_comm]
 
+/-- **The valuation contradiction engine of THM-2067.**  For any additive valuation `v` (a map
+turning products into sums), the orbit-product equation forces the `G`-fixed subset product `p` to
+have the *same-signed* valuation as the full product `C`: if `v(C) = 0` then `v(p) = 0`.  THM-2067
+applies this with `C = ∏ Ω = (−1)^d r_0/r_d` (valuation `0` at `t = 0`) and `p = c·t` (valuation `1`),
+so the hypothesis `v(p) = 1 ≠ 0` contradicts the conclusion `v(p) = 0`, proving some `CT(Λ^m) ≠ 0`. -/
+theorem valuation_zero_of_prod_fixed [IsPretransitive G Ω] [CommMonoid A] [MulDistribMulAction G A]
+    (f : Ω → A) (S : Finset Ω) (x : Ω)
+    (hf : ∀ (g : G) (β : Ω), f (g • β) = g • f β)
+    (hfix : ∀ g : G, g • (∏ β ∈ S, f β) = ∏ β ∈ S, f β)
+    (v : A → ℤ) (hv : ∀ a b : A, v (a * b) = v a + v b)
+    (hC : v (∏ α : Ω, f α) = 0)
+    (hG : 0 < Fintype.card G) :
+    v (∏ β ∈ S, f β) = 0 := by
+  have h1 : v (1 : A) = 0 := by have := hv 1 1; simp only [mul_one] at this; omega
+  have hpow : ∀ (a : A) (n : ℕ), v (a ^ n) = (n : ℤ) * v a := by
+    intro a n
+    induction n with
+    | zero => simpa using h1
+    | succ k ih => rw [pow_succ, hv, ih]; push_cast; ring
+  have heq := prod_pow_card_group_eq f S x hf hfix
+  have hval := congrArg v heq
+  rw [hpow, hpow, hC, mul_zero] at hval
+  -- hval : (card G) * v p = 0
+  have hGpos : (0 : ℤ) < Fintype.card G := by exact_mod_cast hG
+  rcases mul_eq_zero.mp hval with h | h
+  · exact absurd h (ne_of_gt hGpos)
+  · exact h
+
 end GMC2OrbitProduct
 
 #print axioms GMC2OrbitProduct.prod_smul_eq_prod_pow_card_stabilizer
 #print axioms GMC2OrbitProduct.card_stabilizer_eq_card_stabilizer
 #print axioms GMC2OrbitProduct.prod_pow_card_group_eq
+#print axioms GMC2OrbitProduct.valuation_zero_of_prod_fixed
