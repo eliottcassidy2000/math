@@ -184,6 +184,20 @@ def ChargeOneSided (P : MvPolynomial (Fin 2) ℂ) : Prop :=
   (∀ s ∈ P.support, (1 : ℤ) ≤ charge s) ∨
   (∀ s ∈ P.support, charge s ≤ (-1 : ℤ))
 
+/-- **Entry point of the THM-2022 contrapositive.** `P` is *not* charge-one-sided exactly when its
+support carries a monomial of charge `≤ 0` and one of charge `≥ 0` — i.e. `0 ∈ conv(charges)`, the
+hypothesis from which the lowest balanced face is built. -/
+lemma not_chargeOneSided_iff (P : MvPolynomial (Fin 2) ℂ) :
+    ¬ ChargeOneSided P ↔
+      (∃ s ∈ P.support, charge s ≤ 0) ∧ (∃ t ∈ P.support, 0 ≤ charge t) := by
+  unfold ChargeOneSided
+  push_neg
+  constructor
+  · rintro ⟨⟨s, hs, hs1⟩, ⟨t, ht, ht1⟩⟩
+    exact ⟨⟨s, hs, by omega⟩, ⟨t, ht, by omega⟩⟩
+  · rintro ⟨⟨s, hs, hs0⟩, ⟨t, ht, ht0⟩⟩
+    exact ⟨⟨s, hs, by omega⟩, ⟨t, ht, by omega⟩⟩
+
 /-- A pointwise formulation of the two-dimensional nullcone statement for one polynomial. -/
 def NC2At (P : MvPolynomial (Fin 2) ℂ) : Prop :=
   (∀ m : ℕ, 1 ≤ m → E (P ^ m) = 0) → ChargeOneSided P
@@ -433,6 +447,21 @@ lemma charge_radial {ι : Type*} (S : Finset ι) (k : ι → ℕ) (v : ι → (F
       simp only [charge, Finsupp.add_apply, Finsupp.smul_apply, smul_eq_mul]
       push_cast; ring
 
+/-- **The moment is the balanced-channel sum `M_m`.** Only *balanced* channels — those whose radial
+exponent `∑ v, k v • v` has charge `0` (the set `R_m` of THM-2022) — contribute to `E (P^m)`, since
+the Wick weight `wt` vanishes off the charge-0 diagonal.  This is `wick_expansion` restricted to
+`R_m`. -/
+theorem wick_expansion_balanced (P : MvPolynomial (Fin 2) ℂ) (m : ℕ) :
+    E (P ^ m) = ∑ k ∈ (P.support.piAntidiag m).filter
+        (fun k => charge (∑ v ∈ P.support, k v • v) = 0),
+      (Nat.multinomial P.support k : ℂ) * (∏ v ∈ P.support, P.coeff v ^ (k v))
+        * wt (∑ v ∈ P.support, k v • v) := by
+  classical
+  rw [wick_expansion]
+  refine (Finset.sum_subset (Finset.filter_subset _ _) (fun k hkw hkf => ?_)).symm
+  rw [Finset.mem_filter, not_and] at hkf
+  rw [wt_of_charge_ne (hkf hkw), mul_zero]
+
 end GMC2
 
 -- Axiom audit: should be only propext / Classical.choice / Quot.sound (Mathlib standard).
@@ -440,6 +469,7 @@ end GMC2
 #print axioms GMC2.mathieuZhao_of_charge_neg
 #print axioms GMC2.moments_zero_of_charge_oneSided
 #print axioms GMC2.mathieuZhao_of_nc2At
+#print axioms GMC2.not_chargeOneSided_iff
 #print axioms GMC2.gmc2_of_nc2
 #print axioms GMC2.multinomial_dilate_modEq
 #print axioms GMC2.dvd_choose_of_dvd
@@ -450,3 +480,4 @@ end GMC2
 #print axioms GMC2.face_sum_ne_zero
 #print axioms GMC2.wick_expansion
 #print axioms GMC2.charge_radial
+#print axioms GMC2.wick_expansion_balanced
