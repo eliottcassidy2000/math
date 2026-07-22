@@ -81,6 +81,15 @@ THM-2057 proves the rule on the whole plane
   both killed -> 84a|w -> explicit affine binding witness.
 ```
 
+It also closes the adjacent AP-tail plane
+
+```text
+{a,2a,...,12a,w}:
+  13a clock survives -> unit-orbit witness;
+  13a killed, 14a survives -> unit-orbit witness;
+  both killed -> 182a|w -> explicit deep-well witness.
+```
+
 The determinant gate leaves `640690` distinct-speed primitive directions on
 this positive one-tail plane, while the clock/binding sidecar has three
 symbolic leaves. Thus enumerating the polar residual is the wrong terminal;

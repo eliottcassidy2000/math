@@ -181,6 +181,11 @@ matrices, and bound a reduced-basis `L` directly from the sparse triple code.
   `max(13|b|,|a-12b|)`, and THM-2056 Kelvin-inverts its gate to a rational
   polar parallelogram. The clock theorem, not the determinant gate, certifies
   every residual direction.
+- The same THM-2057 sieve closes `span((1,...,13),e_13)`, equivalently every
+  row `{a,2a,...,12a,w}`. Its missing clocks are `13,14`; simultaneous killing
+  forces `182a|w`, and the explicit deep-well phase
+  `14m/[a(182m+1)]` is strict. Thus both AP one-tail coordinate planes now
+  have symbolic clock/binding closures.
 - HYP-2986 supplies the faithful three-state terminal: open tope, boundary
   cocircuit, or forbidden wall packet.
 - HYP-2647 supplies the addressed wall-transport matrix for moving between

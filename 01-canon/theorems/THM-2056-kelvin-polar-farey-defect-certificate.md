@@ -11,8 +11,8 @@ status: >
 source: codex-2026-07-21-LRC-kelvin-farey
 script: 04-computation/lrc_kelvin_farey_scaled_core_codex_20260721.py
 result: 05-knowledge/results/lrc_kelvin_farey_scaled_core_codex_20260721.out
-script_sha256: 1710a895413e551def7ec6b0a3cd13df8e29dbaa4faab29080ea277e8d34fdc1
-result_sha256: 9127ea9db3d697f6d4ca91b329e2ddcbbdace9e1790f5d74700c8e89e4e99c16
+script_sha256: 69e13542281bdc5cbf1e340b377b7e0a91ea115d7df24ea547fabcd7aab43277
+result_sha256: 3a8edb54302d0e05de303aa2240d42a16d649f9fd13c8e666d1fdd5b0502bed2
 depends_on:
   - THM-2053
   - THM-2055

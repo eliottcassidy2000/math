@@ -1,30 +1,33 @@
 ---
 id: THM-2057
-title: "The scaled missing-clock sieve and zeta-core one-tail closure"
+title: "The scaled missing-clock sieve closes two AP one-tail planes"
 status: >
   PROVED. General sieve: if a core C contains no multiple of N, 2<=N<=14,
   then a scaled one-tail counterexample aC union {w} must have Na|w. Hence it
   pays the lcm of all missing clocks. For C={1,...,11,13}, the missing clocks
   are exactly 12 and 14. Their lcm forces 84a|w, where HYP-2896's scaled
   affine binding witness is strict. Thus every row
-  {a,2a,...,11a,13a,w} satisfies LRC(14). This closes one rank-two plane, not
-  LRC(14).
+  {a,2a,...,11a,13a,w} satisfies LRC(14). For C={1,...,12}, the missing
+  clocks 13 and 14 force 182a|w; the explicit deep-well phase then closes
+  every row {a,2a,...,12a,w}. This closes two rank-two planes, not LRC(14).
 source: codex-2026-07-21-LRC-scaled-zeta-core
 script: 04-computation/lrc_kelvin_farey_scaled_core_codex_20260721.py
 result: 05-knowledge/results/lrc_kelvin_farey_scaled_core_codex_20260721.out
-script_sha256: 1710a895413e551def7ec6b0a3cd13df8e29dbaa4faab29080ea277e8d34fdc1
-result_sha256: 9127ea9db3d697f6d4ca91b329e2ddcbbdace9e1790f5d74700c8e89e4e99c16
+script_sha256: 69e13542281bdc5cbf1e340b377b7e0a91ea115d7df24ea547fabcd7aab43277
+result_sha256: 3a8edb54302d0e05de303aa2240d42a16d649f9fd13c8e666d1fdd5b0502bed2
 depends_on:
   - THM-2047
   - HYP-2896
 related:
+  - THM-724
+  - THM-1014
   - THM-2053
   - THM-2055
   - THM-2056
   - HYP-8846
 ---
 
-# THM-2057 -- scaled missing-clock sieve and zeta-core closure
+# THM-2057 -- scaled missing-clock sieve and two one-tail closures
 
 Let
 
@@ -182,14 +185,65 @@ For `S(a,w)`, use `t=t_m/a`. Then every phase is identical to its phase in
 (13): `ai t=i t_m` and `w t=84m t_m`. Therefore the last branch is not merely
 safe but strict. This completes the proof of (2). QED.
 
-## 5. Exact route certificate
+## 5. The adjacent AP-tail plane
+
+The same sieve closes a second full rank-two plane. Put
+
+```text
+C'={1,2,...,12},
+S'(a,w)=a C' union {w}.                                  (14)
+```
+
+The missing clocks of `C'` in `{2,...,14}` are exactly `13` and `14`. Thus
+the missing-clock corollary proves `M(S'(a,w))>=1/14` unless both `13a` and
+`14a` divide `w`. In the remaining branch,
+
+```text
+w=182a m,                 m>=1.                           (15)
+```
+
+Use the explicit phase
+
+```text
+t=14m/[a(182m+1)].                                      (16)
+```
+
+Write `Q=182m+1=13(14m)+1`. For `1<=j<=6`, the least residue of
+`j(14m)` modulo `Q` is at least `14m`. For `7<=j<=12`, its complementary
+residue is
+
+```text
+Q-j(14m)=(13-j)14m+1>=14m+1.                            (17)
+```
+
+Hence every core speed `aj` has distance at least `14m/Q`. Since
+`182m=-1 mod Q`, the tail has distance exactly `14m/Q`. Finally,
+
+```text
+14m/(182m+1)>1/14  iff  14m>1.                           (18)
+```
+
+Therefore every row `S'(a,w)` satisfies LRC(14), with a strict witness on the
+double-kill ray. This recovers the deep-well family identified in THM-724 and
+THM-1014, but the displayed argument needs only the explicit phase and proves
+the threshold statement for every scale and every tail. QED.
+
+## 6. Exact route certificates
 
 The proof is algorithmic and has only three leaves:
 
 ```text
 12a does not divide w  -> central unit on the 12a clock;
 12a divides w, 14a does not -> central unit on the 14a clock;
-84a divides w          -> scaled affine binding phase (13).               (14)
+84a divides w          -> scaled affine binding phase (13).               (19)
+```
+
+The adjacent AP-tail plane has the parallel certificate
+
+```text
+13a does not divide w  -> central unit on the 13a clock;
+13a divides w, 14a does not -> central unit on the 14a clock;
+182a divides w         -> deep-well phase (16).                           (20)
 ```
 
 No finite-height search is involved. The route also explains why the very
@@ -197,7 +251,7 @@ large THM-2053 determinant residual on this plane is misleading: the phase
 certificate is controlled by two scaled clock orbits and one divisibility
 ray, not by Euclidean parameter size.
 
-## 6. Assumption challenge and transfer target
+## 7. Assumption challenge and transfer target
 
 The useful vertices here are neither runners nor normal-fan sectors. They are
 

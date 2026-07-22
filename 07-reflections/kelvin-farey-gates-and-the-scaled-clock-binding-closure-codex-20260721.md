@@ -131,6 +131,19 @@ a*lcm{N<=14:C contains no multiple of N}.
 For the zeta core the missing clocks are exactly `12` and `14`, producing the
 `84a` ray. This lcm tax is the portable lemma for other star cores.
 
+The first transfer already works. For the adjacent core `{1,...,12}`, the
+missing clocks are `13` and `14`, so only `182a|w` survives. Writing
+`w=182am`, the phase
+
+```text
+t=14m/[a(182m+1)]
+```
+
+has exact minimum `14m/(182m+1)>1/14`: the tail is `-14m` modulo
+`182m+1`, and the twelve AP residues are all at least `14m` from an endpoint.
+Thus THM-2057 closes a second complete AP one-tail plane rather than merely
+suggesting a transfer.
+
 ## 5. Transfer pattern for the remaining atlas
 
 The promising general pattern is now:

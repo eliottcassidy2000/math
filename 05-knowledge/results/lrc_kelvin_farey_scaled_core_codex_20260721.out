@@ -7,12 +7,20 @@ scaled-core box: a<=120, w<=12000
 route counts: {'clock12': 1434687, 'clock14': 4608, 'binding84': 705}
 minimum certificate margin: 1/14
 general missing-clock certificates checked: 632970
+scaled AP-core box: a<=80, w<=10000
+AP route counts: {'clock13': 796221, 'clock14': 3552, 'binding182': 227}
+AP minimum certificate margin: 1/14
 exact pair-sum controls:
   a= 1 w=  12 route=clock14   cert=1/14 exact_M=1/14
   a= 1 w=  24 route=clock14   cert=1/14 exact_M=1/14
   a= 2 w=  25 route=clock12   cert=1/12 exact_M=1/12
   a= 2 w= 168 route=binding84 cert=7/89 exact_M=7/89
   a= 7 w=1000 route=clock12   cert=1/12 exact_M=1/12
+exact AP-tail pair-sum controls:
+  a= 1 w=  13 route=clock14    cert=1/14 exact_M=1/14
+  a= 1 w= 182 route=binding182 cert=14/183 exact_M=14/183
+  a= 2 w= 364 route=binding182 cert=14/183 exact_M=14/183
+  a= 2 w=  27 route=clock13    cert=1/13 exact_M=1/13
 complete positive primitive one-tail determinant residual: 640702
 distinct-speed residual: 640690
 collision directions removed: [(1, -11), (1, -10), (1, -9), (1, -8), (1, -7), (1, -6), (1, -5), (1, -4), (1, -3), (1, -2), (1, -1), (1, 1)]

@@ -143,9 +143,10 @@ structural supplier/seed and a lossless exit.
   sectors; non-hull representatives remain load-bearing in the deck sidecar.
   THM-2056 Kelvin-inverts those sectors to the fixed polar polygon
   `(1/91)R^{-1}K^o` and proves the Farey defect rule
-  `2u.v>=A_p(u)+A_p(v)` for whole acute unimodular cones. THM-2057 closes the
-  entire one-tail plane `{a,2a,...,11a,13a,w}` by a `12a` clock / `14a` clock /
-  `84a` affine-binding certificate. More generally, a missing clock `N<=14`
+  `2u.v>=A_p(u)+A_p(v)` for whole acute unimodular cones. THM-2057 closes two
+  entire one-tail planes: `{a,2a,...,11a,13a,w}` by a `12a` / `14a` / `84a`
+  certificate, and `{a,2a,...,12a,w}` by a `13a` / `14a` / `182a` certificate.
+  More generally, a missing clock `N<=14`
   forces `Na|w` in any one-tail counterexample over `aC`. Although that plane
   has `640690` distinct-speed primitive determinant failures, the arithmetic
   carrier has only three leaves. HYP-8871 targets exact deck/Farey discharge

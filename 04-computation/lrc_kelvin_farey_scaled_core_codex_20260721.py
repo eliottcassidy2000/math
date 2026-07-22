@@ -69,6 +69,21 @@ def row_margin(a: int, w: int, t: Fraction) -> Fraction:
     return min(circle_distance(v * t) for v in speeds)
 
 
+def ap_route_certificate(a: int, w: int):
+    if w % (13 * a):
+        return "clock13", Fraction(clock_numerator(13, a, w), 13 * a)
+    if w % (14 * a):
+        return "clock14", Fraction(clock_numerator(14, a, w), 14 * a)
+    assert w % (182 * a) == 0
+    m = w // (182 * a)
+    return "binding182", Fraction(14 * m, a * (182 * m + 1))
+
+
+def ap_row_margin(a: int, w: int, t: Fraction) -> Fraction:
+    speeds = tuple(a * i for i in range(1, 13)) + (w,)
+    return min(circle_distance(v * t) for v in speeds)
+
+
 def exact_M(speeds):
     best = Fraction(0)
     for x, y in combinations_with_replacement(speeds, 2):
@@ -198,6 +213,19 @@ def audit_missing_clock_sieve(A=25, W=2000):
     return checked
 
 
+def audit_scaled_ap_core(A=80, W=10000):
+    routes = {"clock13": 0, "clock14": 0, "binding182": 0}
+    minimum = Fraction(1, 2)
+    for a in range(1, A + 1):
+        for w in range(1, W + 1):
+            route, t = ap_route_certificate(a, w)
+            margin = ap_row_margin(a, w, t)
+            assert margin >= Fraction(1, 14)
+            routes[route] += 1
+            minimum = min(minimum, margin)
+    return routes, minimum
+
+
 def one_tail_residual_count():
     # THM-2055 gives ||d||<91*13, so |a|,|b|<=1182 contains every failure.
     bad = 0
@@ -231,6 +259,10 @@ def main():
     print("route counts:", routes)
     print("minimum certificate margin:", minimum)
     print("general missing-clock certificates checked:", audit_missing_clock_sieve())
+    ap_routes, ap_minimum = audit_scaled_ap_core()
+    print("scaled AP-core box: a<=80, w<=10000")
+    print("AP route counts:", ap_routes)
+    print("AP minimum certificate margin:", ap_minimum)
 
     controls = ((1, 12), (1, 24), (2, 25), (2, 168), (7, 1000))
     print("exact pair-sum controls:")
@@ -239,6 +271,15 @@ def main():
         margin = row_margin(a, w, t)
         M = exact_M(tuple(a * i for i in CORE) + (w,))
         print(f"  a={a:2d} w={w:4d} route={route:9s} cert={margin} exact_M={M}")
+
+    ap_controls = ((1, 13), (1, 182), (2, 364), (2, 27))
+    print("exact AP-tail pair-sum controls:")
+    for a, w in ap_controls:
+        route, t = ap_route_certificate(a, w)
+        margin = ap_row_margin(a, w, t)
+        speeds = tuple(a * i for i in range(1, 13)) + (w,)
+        M = exact_M(speeds)
+        print(f"  a={a:2d} w={w:4d} route={route:10s} cert={margin} exact_M={M}")
 
     bad, distinct_bad, collisions = one_tail_residual_count()
     print("complete positive primitive one-tail determinant residual:", bad)
