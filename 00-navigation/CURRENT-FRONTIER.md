@@ -420,8 +420,8 @@ into tournament operation laws and LRC residue packets.
 - **Planar source fibers:** THM-2063 and THM-2071 close affine and quadratic
   pencil members. THM-2084/2110 raise the cubic non-tame reduced degree to
   `14`; the all-degree finite-pole and upper-Newton gates remain distinct.
-  THM-2113 proves every positive-weight quasi-homogeneous Keller component is
-  a weighted-linear triangular coordinate; lower-face descent is open.
+  THM-2102/2113 make every power-free positive-weight leading face triangular;
+  the proper-power first defect is rigid, but all-order resonant descent is open.
 - MISTAKE-228/229 block the old atlas and NC2/GMC chain. `JC(2)` and `DC(2)`
   remain open; these are source-fiber gates, not generic cover-degree results.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer

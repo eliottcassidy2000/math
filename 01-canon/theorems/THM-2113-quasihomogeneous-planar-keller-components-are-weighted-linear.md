@@ -10,10 +10,12 @@ status: >
   conjecture holds for a component supported on a single positive-weight
   face. The proof is a direct weighted-degree argument; it does not assume
   that a mate makes the generic fiber C, does not use flow completeness, and
-  does not prove the nonhomogeneous one-principal-face descent.
+  supplies the terminal step in THM-2102's nonhomogeneous power-free face
+  descent. The all-proper-power descent remains open.
 source: codex-2026-07-22-JC2-quasihomogeneous-repair
 depends_on: []
 related:
+  - THM-2102
   - THM-2045
   - THM-2063
   - THM-2071
@@ -135,10 +137,9 @@ f=Phi_w + lower w-degree terms,
 ```
 
 equation (3) couples different pieces of `f` and no longer isolates the
-principal face by itself. Showing that a nonlinear principal face cannot be
-cancelled by lower faces, or that a weighted-linear principal face can always
-be removed by a terminating triangular descent, is the remaining
-single-principal-face problem. That is a genuine planar-Jacobian obstruction;
-THM-2113 does not supply the missing properness or descent theorem.
+principal face by itself. THM-2102 subsequently proves that lower faces cannot
+rescue a power-free principal face: repeated mate shears terminate at this
+theorem. Its proper-power first-defect branch remains a genuine planar-
+Jacobian obstruction; THM-2113 alone does not supply all-order termination.
 
 QED.

@@ -92,10 +92,10 @@ Older chronology is in
 ## Other active inspiration
 
 - THM-2110 closes the cubic Faber degree-`13` cell, raising the non-tame floor
-  in that source-fiber stratum to `14`. THM-2113 proves by a direct weighted-
-  bracket argument that every quasi-homogeneous planar Keller component is a
-  weighted-linear triangular coordinate. The nonhomogeneous one-principal-
-  face descent, planar JC(2), and DC(2) remain open.
+  in that source-fiber stratum to `14`. THM-2102/2113 now prove every power-free
+  positive-weight leading face is triangular, including arbitrary lower faces,
+  and give the exact first-defect law for a common proper-power root. Resonant
+  all-order termination, planar JC(2), and DC(2) remain open.
 - HYP-8950 grounds the JC resonance/valuation analogy in the Hamiltonian
   cokernel and generic-fiber obstruction, but its local-to-global step is open.
 - HYP-8945 places asymptotic unit distances on the cancellation side through

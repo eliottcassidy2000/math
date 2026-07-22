@@ -49,9 +49,9 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
 - **THM-2112 (PROVED):** the same rank-seven lane has an explicit whole-row
   box via `R_7=5*28^8*(7*57^42)^17` and a BV/Fourier ratio recursion. The box
   is not enumerated or proved empty.
-- **THM-2110/THM-2113 (PROVED, planar-JC strata):** cubic source-fiber reduced
-  degree `13` is impossible, and every positive-weight quasi-homogeneous
-  Keller component is a weighted-linear coordinate. Neither is full JC(2).
+- **THM-2102/2110/2113 (PROVED, planar-JC strata):** cubic reduced degree `13`
+  is impossible; every power-free positive-weight leading face is triangular.
+  Proper-power resonant descent and full JC(2) remain open.
 - **THM-2095 (PROVED):** the live guard-ratio common scale divides `252576225`
   and its marked pair is bounded; its `240*1165=279600` ledger does not bound
   the other six speeds.
@@ -97,10 +97,10 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
 
 - **HYP-8950 (OPEN JC SYNTHESIS):** Hamiltonian cokernel/fiber cohomology
   realizes weight and face obstructions; local-to-global termination remains.
-- **HYP-8955 (CORRECTED BY THM-2113):** its quasi-homogeneous base conclusion
-  is true, but the original “linear face polynomial / one place” proof was not:
-  `x^2+y^3` is the hostile control. THM-2113 supplies the direct weighted-
-  bracket proof. Lower-face cancellation and descent termination remain open.
+- **HYP-8955 (CORRECTED BY THM-2102/2113):** weighted brackets, not a one-place
+  claim, prove the quasi-homogeneous base and all power-free lower-face descent.
+  `x^2+y^3` plus arbitrary lower weighted faces has no mate; repeated proper-
+  power faces and all-order resonant termination remain open.
 - **HYP-8945 (OPEN UNIT-DISTANCE ROUTE):** smooth radii and the sign-changing
   Bessel kernel identify a cancellation regime, not a new asymptotic bound.
 - **Cubic JC:** extend THM-2084's Faber boundary system from reduced degree 13.
