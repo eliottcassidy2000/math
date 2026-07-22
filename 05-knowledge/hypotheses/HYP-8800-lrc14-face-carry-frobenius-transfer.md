@@ -412,6 +412,15 @@ three remains a propagation target. Characteristic seven now supplies a
 proved local chart and a proved no-go; the live content is the adaptive
 cross-denominator gluing in item 4, not additional raw jet depth.
 
+The incoming HYP-8815 higher-order-autocorrelation search belongs under item
+2 only as a possible *supplier* of a phase. MISTAKE-221 corrects its bounded
+scan to `L_Q(S)<=M(S)`, proves the pair-sum exact engine, and withdraws the
+claimed iff/necessity language. The corrected finite bank has fifteen exact
+safe values but no global consequence; THM-731's discrepancy direction also
+opposes the original heuristic slogan. THM-2043 further requires any supplied
+phase to leave the scalar correlation layer as an owner-labelled resolved
+slack.
+
 ## 9. Tournament Analysis and assumption challenge
 
 The exact companion script uses proof carriers as vertices. Its observable is

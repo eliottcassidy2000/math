@@ -1,6 +1,11 @@
 # THM-999 — The bounded-denominator lemma; the residual R is proven for the tight locus (death-star-2026-07-17-S56)
 
 **Status:**
+- **2026-07-21 linkage:** the general finite-set version is already proved in
+  `THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case.md` §1: every
+  global maximizer lies on a pair-sum ruler. The corrected
+  HYP-8815/S206 script now uses that theorem exactly; MISTAKE-220 records the
+  bounded-scan failure it repairs.
 - **Lemma A (PROVED, general):** every loneliness time of a tight family has denominator `≤ 2·Vmax`;
   in fact its reduced denominator divides `v₊ + v₋` for two active runners on opposite sides.
 - **Corollary (PROVED):** the residual R ("no loneliness of denominator `> n`") is a FINITE, decidable

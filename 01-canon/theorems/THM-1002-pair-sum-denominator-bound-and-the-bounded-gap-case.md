@@ -38,14 +38,34 @@ Then `q | (v_i + v_j)` for some `i ≤ j`, and consequently **`q ≤ 2·max(A)`*
 `M(A) = val/q` where `val = min_v |va|_q` (`|x|_q := min(x mod q, q − x mod q)`).
 
 *Proof.* `f(t) = min_v ‖vt‖` is piecewise linear; each `‖vt‖` rises with slope `v` until `vt ≡ 1/2`,
-then falls with slope `−v`. At a local maximum of the minimum, an active rising branch meets an
-active falling branch (a single branch's own peak cannot be the min, since there `‖vt‖ = 1/2` is
-maximal and 11 other speeds are smaller). Equating them, `v_i t − k = k' − v_j t`, so
-`(v_i + v_j)t = k + k'` and `t = (k+k')/(v_i+v_j)`. In lowest terms `t = a/q` with `q | (v_i+v_j)`,
-hence `q ≤ v_i + v_j ≤ 2·max(A)`. ∎
+then falls with slope `−v`. The lower envelope cannot be constant on an interval: on the common
+linear refinement, after deleting finitely many branch crossings, one nonconstant affine branch
+realizes the minimum on a subinterval. Thus a global maximum is a strict vertex. If an active
+runner is at its own cusp, then `2v_i t ∈ Z`, which is the self-pair case `i=j`. Otherwise strict
+maximality requires an active rising branch and an active falling branch. Equating them,
+`v_i t − k = k' − v_j t`, so `(v_i + v_j)t = k + k'` and
+`t = (k+k')/(v_i+v_j)`. In lowest terms `t = a/q` with `q | (v_i+v_j)`, hence
+`q ≤ v_i + v_j ≤ 2·max(A)`. ∎
 
 *(Consistency: AP `{1..12}` → `q = 13 = 1+12`, `val = 1`, `M = 1/13`. `{1..11,24}` → `q = 25 = 1+24`,
 `val = 2`, `M = 2/25`. Both verified by the exact pair-sum evaluator.)*
+
+**2026-07-21 S206 audit application.** Exact evaluation must enumerate every
+numerator on every pair-sum ruler; filtering to coprime numerators is unsound
+unless divisor rulers are separately included. The corrected HYP-8815 script
+gives the strict regression
+
+```text
+L_1200({1,...,12,5460}) = 92/1197
+  < M({1,...,12,5460}) = 420/5461,
+```
+
+with the exact maximum at `t=420/5461`. An adversarial version shows that the
+error can be total: for `Q>=14`, let `d=lcm(2,...,Q)` and dilate the deep well
+by `d`. Every sampled `a/q`, `q<=Q`, has value zero, while dilation invariance
+leaves the true maximum `14/183`. Therefore `Q>=2 max(A)` is a sufficient
+complete cutoff, but without it a bounded scan is only a lower bound. See
+MISTAKE-221 and `lrc14_disproof_search_boxeph_S206.py`.
 
 ## 2. The gap admits no small numerator
 

@@ -7,10 +7,10 @@
 > stronger “near-AP, anti-golden, higher-order-autocorrelation” description is a
 > search heuristic, not a characterization. THM-731's `disc_v` is peel-specific
 > and **smaller** discrepancy strengthens its sufficient safety certificate.
-> The script's `q<=Qmax` scan returns a lower bound for `M`, not an exact maximum
-> without a separate breakpoint-completeness proof. Its values above `1/14`
-> safely exclude the displayed examples; they do not rank all Fibonacci or
-> covering families. Read
+> The corrected script uses the exact THM-1002 pair-sum engine on every row,
+> after displaying a strict failure of the old `q<=Qmax` scan. All fifteen
+> listed rows are exact and safe, but a finite bank gives no global ranking.
+> Read
 > [`CURRENT-FRONTIER.md`](../00-navigation/CURRENT-FRONTIER.md) first.
 
 *boxeph-2026-07-21-S206. Owner: mine the repo for connections to 12 (esp. Fibonacci); think about a
@@ -82,38 +82,75 @@ autocorrelation discrepancy. No theorem currently resums one into the other.
 - **Alternate modulus ownership.** Do not assume the maximum speed alone covers
   `13` and `14`; multi-owner and multi-defect packets remain live.
 
-## Finite candidate scan (denominator-truncated lower bounds)
+## Corrected finite audit
 
-A rational-time scan over the AP, near-AP perturbations, generalized/dilated
-APs, and a few Fibonacci/Zeckendorf-structured covering sets finds for each
-displayed family a witness above `1/14`. Except where canon separately proves
-the exact value, the table entries are sampled lower bounds, not exact maxima:
+The companion script first preserves the one-sided bounded-scan logic, then
+uses THM-1002-pair-sum-denominator-bound §1 to compute every row exactly by
+enumerating every numerator on every pair-sum ruler `q=v_i+v_j`. It normalizes
+gcds and explicitly validates that each input contains thirteen distinct
+positive speeds. Non-coprime numerators are retained;
+dropping them would miss maxima whose reduced denominator merely divides a
+pair sum.
 
-| set | sampled lower bound | note |
-|---|---|---|
-| deep well `{1..12,182}` | `14/183 ≈ 0.07650` | exact AP-deletion benchmark, at `t*=14/183` |
-| `2·AP = {2,4..24,182}` | `7/92 ≈ 0.07609` | **below `14/183` but > `1/14`** — see below |
-| `AP12 + far=364/5460` | `≈ 0.0767` | sampled witness ≥ deep well |
-| Fibonacci-12 `+` blocker | `5/29 ≈ 0.172` | displayed foil is loose |
-| Fib-ish covering | `2/23 ≈ 0.087` | displayed packet is loose |
-| random covering (×6) | `0.13 – 0.24` | finite sampled controls |
+The row `{1,...,12,5460}` is a concrete regression test for the old bug:
 
-Two things sharpen the experiment. **(a)** The displayed Fibonacci-flavored
-sets have large safety witnesses, supporting their use as hostile controls but
-not a universal ranking. **(b)** Normalize primitively. The one sampled set
-below `14/183` — the dilation
-`2·AP = {2,…,24,182}` with lower bound `7/92` — is **non-primitive** (`gcd=2`); since covering-min is
-dilation-invariant, `M(2·S)=M(S')` with `S'={1,…,12,91}` a set that omits a multiple of 14 and is
-therefore lonely at `t=1/14`. It stays **above** `1/14`. This example explains
-why covering is not dilation-invariant even though `M` is, and why normalization
-must precede the Cover14 test.
+`L_1200=92/1197 < M=420/5461`.
 
-So the search excludes its finite candidate list and motivates an anti-golden
-comparison experiment. It does **not** prove that every counterexample is
-near-AP or anti-golden, that Fibonacci families are uniformly loose, or that
-Wall A is equivalent to joint-order autocorrelation extremality. Those are
-questions exposed by the experiment.
+More generally, if `Q>=14`, `d=lcm(2,...,Q)`, and the deep well is dilated by
+`d`, then every old sampled phase has value zero while dilation invariance gives
+the true value `14/183`. Completeness and gcd normalization are separate issues.
 
-Links: HYP-8815, HYP-7310 (Wall A), THM-730, THM-731/732, THM-1017, THM-724/726,
+Selected rows from the frozen output are:
+
+| normalized family or control | result | logical status |
+|---|---:|---|
+| `{1,...,12,182}` | `14/183` | exact and safe |
+| `{1,...,12,364}` | `28/365` | exact and safe |
+| normalized `2*AP` row | `7/92` | exact and safe; misses Cover14 after normalization |
+| `{1,...,12,5460}` | `420/5461` | exact and safe; old cutoff was strictly smaller |
+| Fibonacci-12 plus `720720` | `5/29` | exact and safe; `720720=lcm(1,...,16)` |
+| six original valid random completions | exact values `>=4/31` | all safe |
+
+All fifteen valid tested rows have exact `M>=1/14`; no row is a disproof. This
+is a rigorous finite safety result, not a global extremal theorem. The earlier
+random generator lacked a distinctness assertion, although its six displayed
+seed-2026 rows happen to be valid; the corrected generator preserves those
+rows and validates the condition explicitly. In particular, its old fourth
+row improves from the truncated `69/467` witness to the exact `56/379`.
+
+## Connection to the parity–Hasse audit
+
+THM-2043 supplies a sharper warning about coarse search statistics. The AP and
+the infinite family
+
+`{1,...,11,13,96+3444n}`
+
+have identical owner-residue, raw phase, complete characteristic-seven Hasse,
+`q<=13` blockedness, and threshold packets at period 14, yet the latter has the
+strict resolved witness `(q,a,integer slack)=(41,17,1)`. Even adjoining any
+fixed finite number of 7-adic lift-height digits does not separate them.
+
+That makes the exact resolved-phase certificate
+
+`C_{q,a}(S)=min_v(14 dist(av,q)-q)`
+
+a more theorem-facing search coordinate than an unlabelled autocorrelation
+scalar. Higher-order autocorrelation may still help *supply* a phase, but the
+carrier must retain owner and height information through the exit.
+
+## Honest verdict
+
+No LRC(14) disproof was found. HYP-8815 is retained as a corrected heuristic
+program: search primitive representatives of valid thirteen-speed sets using
+AP distance, continued-fraction structure, autocorrelation profiles, and
+resolved phase slack. Its rigorous contribution is an exact application of the
+prior THM-1002 pair-sum lemma, giving fifteen finite safety certificates,
+joined to the necessary THM-731 discrepancy obstruction above. LRC(14), AP
+extraction, and the claimed joint-order autocorrelation extremality remain
+open.
+
+Links: HYP-8815, HYP-7310, THM-730, THM-731/732,
+THM-1002-pair-sum-denominator-bound, THM-1017, THM-2043,
+MISTAKE-221,
 [[fibonacci-is-the-covering-mins-foil-not-its-lever-the-anti-golden-eisenstein-sibling-klein-S124]],
 [[cf-descent-explains-the-far-element-lcm-13-14-and-stops-three-elementary-tools-converge-the-AP-core-is-open-boxeph-S103]].

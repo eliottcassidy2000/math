@@ -40,33 +40,44 @@ Format per entry:
 
 - **What was claimed:** HYP-8815 called a scan over rationals `a/q` with
   `q<=Qmax` an exact covering-min search, inferred that every hypothetical
-  LRC(14) counterexample must be near-AP and anti-golden with a CF-blocking far
-  element, and stated an iff with beating the AP at higher-order
-  autocorrelation by making THM-731's `disc_v` smaller.
-- **Why it is wrong:** the finite scan returns a rigorous **lower bound** on
-  `M(S)` unless a separate breakpoint-completeness bound covers all possible
-  maximizers. A lower bound above `1/14` safely excludes an explicit packet, but
-  cannot give its exact `M`, rank all families, or detect a counterexample when
-  it falls below threshold. The script's own `AP12+5460` scan reports
-  `92/1197`, strictly below THM-724's proved lower bound `420/5461`, a concrete
-  certificate that the scan did not find the maximum. THM-730 proves only the AP's unique
-  Schur-triple maximum; it explicitly leaves the resummation to loneliness
-  open. THM-731's `disc_v` is peel-dependent and enters
-  `L_cert=(6/7)|G'|-sqrt((6/49)disc_v)`, so **smaller** discrepancy makes the
-  sufficient safety bound larger, the opposite of the claimed direction.
-  A few loose Fibonacci-flavored packets do not prove a uniform golden
-  exclusion, near-AP necessity, large continued-fraction quotients, or ownership
-  of all covering moduli by the maximum speed.
-- **Correct framing:** a counterexample may be divided by its gcd and therefore
-  taken primitive; it must be Cover14 with `M<1/14`; and THM-1017 excludes an AP
-  maximum-deletion core, so THM-730 gives that core a strict additive-triple
-  deficit (`T<=65`). Also, `L=0` and THM-731 force
-  `disc_v>=6|G'_{~v}|^2` for every peel. These are the rigorous necessary
-  conditions. Anti-golden, near-AP,
-  Fibonacci-foil, and joint-order-autocorrelation language remains a useful
-  search hypothesis with hostile controls, not a characterization. The repaired
-  script labels every denominator-truncated value as a sampled lower bound.
+  LRC(14) counterexample must be primitive, near-AP, anti-golden, and organized
+  around one CF-blocking far element, called Fibonacci a minimum-energy safe
+  pole, and stated an iff with beating the AP at higher-order autocorrelation by
+  making THM-731's `disc_v` smaller.
+- **Why it is wrong:** the finite scan returns only
+  `L_Q(S)<=M(S)` unless a breakpoint-completeness theorem covers the cutoff.
+  THM-1002-pair-sum-denominator-bound proves every maximizer lies on a ruler
+  `t=p/(v_i+v_j)`; hence `Q>=2 max(S)` is sufficient, or one may enumerate all
+  numerators on all pair-sum rulers. The old row `{1,...,12,5460}` is a strict
+  witness to the bug:
 
+  `L_1200=92/1197 < M=420/5461` at `t=420/5461`.
+
+  More starkly, for `Q>=14`, dilate the deep well by `lcm(2,...,Q)`. Every old
+  sampled phase then has value zero while dilation invariance leaves
+  `M=14/183`. A bounded lower bound above `1/14` does safely exclude one row,
+  but a finite candidate list cannot prove a global minimizer or ranking.
+
+  Primitivity is a WLOG normalization, not a literal condition on every
+  counterexample. The old random generator did not validate cardinality and
+  distinctness, although its six displayed seed-2026 rows happen to be valid.
+  THM-730 counts Schur triples, not four-term additive energy; Fibonacci is not
+  minimal for either statistic. THM-731 is peel-dependent and gives
+  `L_cert=(6/7)|G'|-sqrt((6/49)disc_v)`, so **smaller** discrepancy strengthens
+  safety—the claimed direction was backwards. Cover14 distributes divisibility
+  among all runners, not necessarily a twelve-runner core plus one far blocker;
+  THM-1017 excludes only a maximum-deletion core `d{1,...,12}` in the relevant
+  normalized regime.
+- **Correct framing:** exact `M` computation uses every numerator, including
+  non-coprime ones, on the THM-1002 pair-sum rulers. The corrected script
+  validates its inputs and computes all fifteen rows exactly; every one is safe,
+  and none is a disproof. The rigorous necessary kernel is: after gcd
+  normalization a counterexample is primitive Cover14 with `M<1/14`; its
+  maximum-deletion core is not `d{1,...,12}`, so THM-730 gives Schur count
+  `T<=65`; and `L=0` with THM-731 forces
+  `disc_v>=6|G'_{~v}|^2` for every peel. Anti-golden, near-AP, Fibonacci-foil,
+  one-far-blocker, and joint-order-autocorrelation language remains a useful
+  hostile-control program, not a characterization.
 ---
 
 ## MISTAKE-215 (2026-07-21, codex audit of HYP-8795 / THM-2040) -- a prime-local minimum-face normalization was promoted to a global common-factorial/Vandermonde factorization

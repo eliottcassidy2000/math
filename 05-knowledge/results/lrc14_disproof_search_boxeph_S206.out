@@ -1,23 +1,36 @@
-deep well {1..12,182}: covering=True  scan-LB=14/183 (~0.07650) at t=(14, 183) ; recovers canonical 14/183? True ; >1/14? True
-  margin 14/183 - 1/14 = 13/2562 (~0.00507) -- a disproof must dip below 1/14 by more than this
+EXACT CONTROL (Q >= 2 max(S) contains every lower-envelope breakpoint):
+  deep well {1..12,182}: covering=True  M=14/183 (~0.07650) at t*=(14, 183)  cutoff_complete=True
+  M-1/14 = 13/2562 (~0.00507), hence this row is certified safe.
 
-CANDIDATE SAFETY SCAN (LB > 1/14 certifies safe; LB < 1/14 proves nothing):
-  AP12 + far=182                         LB(q<=1200)=14/183     (~0.07650)  SAFE WITNESS
-  AP12 + far=364                         LB(q<=1200)=28/365     (~0.07671)  SAFE WITNESS
-  AP12 + far=5460                        LB(q<=1200)=92/1197    (~0.07686)  SAFE WITNESS
-  skip12: {1..11,13,182}                 NOT COVERING (skip)
-  skip7:  {1..6,8..13,182}               LB(q<=1200)=13/95      (~0.13684)  SAFE WITNESS
-  2*AP: {2,4..24,182}                    LB(q<=1200)=7/92       (~0.07609)  SAFE WITNESS
-  Fibonacci12 + 720720                   LB(q<=1200)=5/29       (~0.17241)  SAFE WITNESS
-  Fib-ish covering {1,2,3,4,5,8,9,10,11,12,13,7,182} LB(q<=1200)=2/23       (~0.08696)  SAFE WITNESS
-  random#1 [7, 8, 15, 21, '..', 3]       LB(q<=1200)=3/19       (~0.15789)  SAFE WITNESS
-  random#2 [1, 16, 29, 32, '..', 1716]   LB(q<=1200)=18/103     (~0.17476)  SAFE WITNESS
-  random#3 [1, 7, 8, 14, '..', 360]      LB(q<=1200)=24/127     (~0.18898)  SAFE WITNESS
-  random#4 [5, 6, 17, 22, '..', 1890]    LB(q<=1200)=69/467     (~0.14775)  SAFE WITNESS
-  random#5 [2, 10, 19, 20, '..', 1584]   LB(q<=1200)=198/815    (~0.24294)  SAFE WITNESS
-  random#6 [6, 8, 24, 26, '..', 2]       LB(q<=1200)=4/31       (~0.12903)  SAFE WITNESS
+STRICT LOWER-BOUND CONTROL (pair-sum theorem):
+  AP12 + far=5460: L_1200=92/1197 at (92, 1197) < M=420/5461 at (420, 5461)  cutoff_complete=False
 
-  smallest sampled lower bounds: [(0.07609, '2*AP: {2,4..24,182}'), (0.0765, 'AP12 + far=182'), (0.07671, 'AP12 + far=364'), (0.07686, 'AP12 + far=5460')]
-  => every displayed candidate has an explicit sampled witness above 1/14.
-     This finite family is excluded; no global ranking or anti-golden necessity follows.
-     THM-730 proves only that a non-AP 12-core loses additive triples.
+FINITE CANDIDATE AUDIT (exact pair-sum replay for every row):
+  AP12 + far=182                             M=14/183     (~0.07650) CERTIFIED SAFE witness=(14, 183)    [covering]
+  AP12 + far=364                             M=28/365     (~0.07671) CERTIFIED SAFE witness=(28, 365)    [covering]
+  AP12 + far=5040                            M=1/13       (~0.07692) CERTIFIED SAFE witness=(1, 13)      [misses q=13]
+  AP12 + far=5460                            M=420/5461   (~0.07691) CERTIFIED SAFE witness=(420, 5461)  [covering]
+  skip12: {1..11,13,182}                     M=1/12       (~0.08333) CERTIFIED SAFE witness=(1, 12)      [misses q=12]
+  skip7: {1..6,8..13,182}                    M=13/95      (~0.13684) CERTIFIED SAFE witness=(27, 190)    [covering]
+  2*AP: {2,4..24,182}                        M=7/92       (~0.07609) CERTIFIED SAFE witness=(7, 92)      [misses q=14 normalized/gcd=2]
+  Fibonacci12 + 720720                       M=5/29       (~0.17241) CERTIFIED SAFE witness=(8, 29)      [covering]
+  Fib-ish covering                           M=2/23       (~0.08696) CERTIFIED SAFE witness=(4, 23)      [covering]
+  random#1 [3, 7, 8, 15, '..', 57]           M=3/19       (~0.15789) CERTIFIED SAFE witness=(13, 76)     [covering]
+  random#2 [1, 16, 29, 32, '..', 1716]       M=18/103     (~0.17476) CERTIFIED SAFE witness=(34, 103)    [covering]
+  random#3 [1, 7, 8, 14, '..', 360]          M=24/127     (~0.18898) CERTIFIED SAFE witness=(76, 381)    [covering]
+  random#4 [5, 6, 17, 22, '..', 1890]        M=56/379     (~0.14776) CERTIFIED SAFE witness=(702, 1895)  [covering]
+  random#5 [2, 10, 19, 20, '..', 1584]       M=198/815    (~0.24294) CERTIFIED SAFE witness=(102, 815)   [covering]
+  random#6 [2, 6, 8, 24, '..', 57]           M=4/31       (~0.12903) CERTIFIED SAFE witness=(7, 31)      [covering]
+
+  smallest exact minima in the finite bank:
+    2*AP: {2,4..24,182}                        M=7/92       witness=(7, 92)
+    AP12 + far=182                             M=14/183     witness=(14, 183)
+    AP12 + far=364                             M=28/365     witness=(28, 365)
+    AP12 + far=5460                            M=420/5461   witness=(420, 5461)
+    AP12 + far=5040                            M=1/13       witness=(1, 13)
+
+  RESULT: all 15 tested valid rows were computed exactly and are safe; disproofs=0.
+  The finite audit does NOT prove that the deep well is the global covering minimizer.
+  Primitivity is used only as a WLOG normalization (M(d*S)=M(S)).
+  Anti-golden, far-blocker, and higher-order-autocorrelation conditions remain search heuristics.
+  ASSUMPTION CHALLENGE: a tournament quotient was rejected because it forgets resolved phase height.

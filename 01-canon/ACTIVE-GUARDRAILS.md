@@ -46,7 +46,10 @@ mistake.
 13. **HYP-8815 is a heuristic, not a disproof characterization.** MISTAKE-221.
     After gcd normalization, primitive + Cover14 + `M<1/14` + non-AP deletion
     are necessary; near-AP, anti-golden, CF-blocker, and full-autocorrelation
-    claims are not. A bounded denominator scan is only a lower bound for `M`.
+    claims are not. A bounded denominator scan is only a lower bound for `M`;
+    exactness follows by enumerating every numerator on the THM-1002 pair-sum
+    rulers (or from the sufficient cutoff `Q>=2 max(S)`). Do not gcd-filter
+    numerators unless divisor rulers are separately included.
     Smaller THM-731 discrepancy strengthens the safety certificate; a
     counterexample would require `disc_v>=6|G'_{~v}|^2` for every peel.
 

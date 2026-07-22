@@ -158,6 +158,30 @@ functional transfer from Jacobian or Gaussian nullcones to LRC. The
 oscillating inequality and integer height data are exactly what those
 algebraic nullcones forget.
 
+## The incoming S206 disproof search, corrected and reused
+
+S206 contributes a useful Wall-A search coordinate: THM-730 makes the AP the
+additive-triple extremizer, so a higher-order good-set autocorrelation profile
+is a plausible place to look for either AP rigidity or a competing shape. It
+does not follow that every hypothetical counterexample must win through that
+mechanism, and AP extraction is a sufficient route rather than an iff
+reformulation of LRC(14).
+
+MISTAKE-221 also corrects the finite search instrument. A bounded rational
+scan gives `L_Q(S)<=M(S)`; it is exact under the simple complete-breakpoint
+condition `Q>=2 max(S)`, because every maximizer lies on a pair-sum ruler
+`t=p/(v_i+v_j)` by THM-1002-pair-sum-denominator-bound §1. Exact pair-sum replay shows the old large-blocker value was
+strictly low:
+`L_1200({1,...,12,5460})=92/1197 < M=420/5461`. The corrected program now
+computes all fifteen rows exactly and finds them safe. This finite bank still
+cannot establish a global minimizer.
+
+THM-2043 makes the carrier choice concrete: the full raw `q=14` quotient does
+not distinguish the AP from the strict `q=41` family, so an unlabelled
+autocorrelation summary cannot be assumed faithful either. The resolved slack
+`C_(q,a)` is the theorem-facing output; autocorrelation is potentially a
+supplier of such a phase, not a substitute for the exit certificate.
+
 ## Ranked next experiments
 
 1. Rewrite the HYP-3036 scheduler in terms of exact slacks `C_(q,a)`, not only

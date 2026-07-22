@@ -94,9 +94,12 @@ structural supplier/seed and a lossless exit.
   count at most `65` by THM-1017/730. Since its lonely-time measure is zero,
   THM-731 also forces `disc_v>=6|G'_{~v}|^2` for every peel; small discrepancy
   is a safety signal. “Near-AP,” “anti-golden,” Fibonacci-foil, CF-blocker, and
-  full-autocorrelation iff claims remain heuristic. The finite rational-time
-  scan supplies lower-bound safety witnesses for listed packets, not exact
-  global maxima.
+  full-autocorrelation iff claims remain heuristic. THM-1002 proves every
+  maximizer lies on a pair-sum ruler `t=p/(v_i+v_j)`. Enumerating all such
+  rulers makes the corrected S206 replay exact: all fifteen displayed rows are
+  safe, while `{1,...,12,5460}` proves the old `q<=1200` cutoff was incomplete
+  (`92/1197 < 420/5461`). This finite bank does not identify the global
+  covering minimum.
 - **Scope separation:**
   [THM-1149](../01-canon/theorems/THM-1149-compact-essential-crown-and-farey-blocker.md)
   proves that tight deletion and an all-loose essential crown are different
@@ -126,17 +129,23 @@ structural supplier/seed and a lossless exit.
    supplies whole-packet preservation. The ranked
    [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md)
    routes are: THM-671 `B5` supply; familywise Fejer/Toeplitz rigidity;
-   characteristic-3 endpoint-labelled period-14 propagation;
-   characteristic-7 parity-Hasse jets; conductor plus owner-current glue. Raw
-   Ramanujan energy is diagnostic only.
+   characteristic-3 endpoint-labelled period-14 propagation; an adaptive
+   resolved-phase sheaf; and conductor plus owner-current glue. Raw Ramanujan
+   energy is diagnostic only.
 
-The newest characteristic-7 reservation,
+The characteristic-7 result
 [THM-2043](../01-canon/theorems/THM-2043-period14-parity-hasse-jet-completeness.md),
-is **IN PROGRESS**. Its current algebra says the full parity-Hasse packet is
-complete as mod-14 phase data, while an AP/`12 -> 26` collision shows that raw
-unlabelled phase jets remain magnitude-blind. Any useful exit therefore needs
-an endpoint/owner label or another sidecar: completeness of the quotient is
-not completeness for loneliness.
+is **PROVED, but is a carrier no-go rather than LRC(14)**. It identifies
+`F_7[C_14]` with the two length-seven local rings at `+1` and `-1`, so fourteen
+parity-Hasse coordinates are complete mod-14 data. Yet the infinite family
+`{1,...,11,13,96+3444n}` matches the tight AP in that entire packet, in every
+test through `q=13`, and in `q_threshold=14`, while `(q,a,margin)=(41,17,1)`
+is a uniform strict exit. For every fixed `k`, a CRT family also matches the
+AP's lift height modulo `7^k`. Thus raw jets, threshold, and any fixed finite
+height precision are globally insufficient. Exact owner height or an adaptive
+resolved `(q,a,margin)` certificate is the honest positive carrier; the
+smallest useful atlas now visibly includes the incompatible scales
+`{14,27,41}`.
 
 ### Fresh perspective prompts
 
