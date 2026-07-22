@@ -20,6 +20,7 @@ related:
   - THM-2086
   - THM-2089
   - THM-2090
+  - THM-2092
 ---
 
 # THM-2088 -- the cut matrix is finite or persistent
@@ -186,6 +187,10 @@ THM-2090 splices this terminal block to THM-2052's global relation code. The
 result is a finite full row, a full thirteen-speed star anchored at the last
 guard and a terminal speed, or a literally frozen terminal block with only a
 five-coordinate outer affine line left.
+
+THM-2092 lifts every bounded or frozen terminal through THM-2077's depth-four
+needle. In particular this theorem's rank-seven cut branch gives the explicit
+full original-row bound `3900651012632789`.
 
 ## 5. Assumption challenge and Tournament Analysis
 

@@ -155,8 +155,13 @@ supplier/seed and a lossless exit.
   global rank-eleven code: the full row is finite, all thirteen speeds form a
   height-`91^6` last-guard/terminal-anchor star, or `(h,Q)` is literally frozen
   and only the three earlier guards plus two original tails move on one affine
-  lattice line. The six cut rows already give persistent height-114 circuits,
-  so THM-2065 alone is vacuous here; location and phase sidecars are essential.
+  lattice line. THM-2092 closes that apparent unbounded branch: the depth-four
+  needle gives `max(S)<=128 max(Q)/3`, so every frozen block has only finitely
+  many full rows. It also lifts THM-2088's bounded-terminal branch to
+  `max(S)<=3900651012632789`. The sole potentially unbounded no-pair branch is
+  therefore the global last-guard/terminal-anchor star. The six cut rows
+  already give persistent height-114 circuits, so THM-2065 alone is vacuous
+  here; location and phase sidecars are essential.
 - **PROVED relative decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   lifts bounded scalar relations; `H=2^19` clears recorded margins.
   MISTAKE-080/082 still require shape-specific torus models.

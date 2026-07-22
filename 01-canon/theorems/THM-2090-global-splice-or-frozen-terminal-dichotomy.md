@@ -10,7 +10,8 @@ status: >
   terminal restriction has rank one. In the last branch terminal primitivity
   makes the normalized last-guard/seven-core block literally constant, and
   the only remaining motion is an affine lattice line in the five outer
-  coordinates. This is a localization, not LRC(14).
+  coordinates. THM-2092 subsequently bounds that line by the terminal needle,
+  making the frozen branch finite. This is a localization, not LRC(14).
 source: codex-2026-07-22-LRC14-global-terminal-splice
 depends_on:
   - THM-2052
@@ -23,6 +24,7 @@ related:
   - THM-2079
   - THM-2082
   - THM-2086
+  - THM-2092
 ---
 
 # THM-2090 -- global splice or frozen terminal
@@ -199,7 +201,8 @@ distinctness, owner addresses, and hereditary primitivity cut (17) further.
 Because the coefficient-row universe in (6) is finite, only finitely many
 rank-one terminal restriction lines occur. Their primitive normalized
 generators form a finite bank of frozen terminal blocks, even though each may
-carry an unbounded outer line (17).
+initially appear to carry an unbounded outer line (17). THM-2092 proves that
+THM-2077's needle bounds that line absolutely once the block is fixed.
 
 ## 4. Exact full-row trichotomy
 
@@ -219,6 +222,12 @@ speed relation code. Branch II is ready for the determinant/CRT machinery of
 THM-2062 once the coefficient rows are saturated. Branch III is ready for a
 one-dimensional outer-line CRT/owner analysis, with terminal containment
 precomputed once per frozen block.
+
+THM-2092 subsequently applies the depth-four height transfer
+`max(S)<=128 max(Q)/3`. It makes Branch III finite and lifts THM-2088's
+bounded-terminal branch to the explicit original-row bound
+`3900651012632789`. Consequently Branch II is the sole potentially unbounded
+no-pair branch of this pipeline.
 
 Every branch also inherits THM-2086's all-height filters. Writing
 `B=max(Q)`, every live terminal satisfies

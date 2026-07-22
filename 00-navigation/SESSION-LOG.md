@@ -189,6 +189,21 @@ NET: every P whose lowest face has a unique channel needs NO DvdK axiom for NC2,
   provably vacuous; the finish must use circuit multiplicity/location, owner
   addresses, translated-grid incidence, or exact relative-Hunter phase data.
 
+### Frozen terminal lines are finite
+
+- THM-2092 reuses THM-2077's all-depth needle invoice at `r=4`:
+  `max(S)<=32B*max(1,8/6)=128B/3`, where `B=max(Q)`.
+- THM-2090's restriction-rank-one branch literally fixes `(h,Q)`, hence fixes
+  `B`; its five-coordinate affine outer line therefore meets a finite absolute
+  box. Across the finite relation-template bank this whole branch is finite.
+- THM-2088's uniform terminal bound `B<=91421508108581` now lifts to the
+  explicit original-row bound `max(S)<=3900651012632789`. These rows remain
+  unenumerated; “finite” is a reduction, not a safety verdict.
+- The only potentially unbounded no-pair branch left by this pipeline is
+  THM-2090's rank-eleven, restriction-rank-two star anchored at the last guard
+  and one terminal speed. It retains the six height-114 cut circuits,
+  THM-2086's modular/nonlacunary filters, and the dyadic owner address.
+
 ## death-star-2026-07-22-S105 -- GMC2 formalization CAPSTONE CLOSED: the whnf wall is SOLVED; HeightWitnessSupplier discharged kernel-pure; clean DvdK1 -> NC2 and DvdK1 -> GMC(2) now compile.
 
 **Owner directive:** work creatively at whnf-tuning, or how it can be bypassed.
