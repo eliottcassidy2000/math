@@ -735,3 +735,5 @@ import TournamentH7.HermiteThreeTerm  -- death-star-S93: Mathlib Hermite as a Th
 import TournamentH7.GMC2DvdKUniqueChannel
 import TournamentH7.GMC2DvdKPositive
 import TournamentH7.GMC2DvdKUniqueChannelBypass
+import TournamentH7.GMC2DvdKMonomialCertificate
+import TournamentH7.GMC2DvdKResidualExample

@@ -1,38 +1,14 @@
-> **CURRENT-TRUTH WARNING (2026-07-21):** This is chronological provenance,
-> not a status authority. Entries may be corrected after filing. Start with
-> [`START-HERE.md`](START-HERE.md), [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md),
-> and [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
+## boxeph-2026-07-22-S231 -- eliminate DvdK for the residual 12% of straddling supports via a monomial certificate (kernel-pure Lean, HYP-8932)
 
-## death-star-2026-07-22-S106 -- DvdK residual = one unramified-Hensel small-root product: a formalization map for THM-2067 (remaining reasoning, not Lean builds)
+**Owner:** get rid of DvdK for the remaining ~12% of straddling supports.
 
-**Owner directive:** finish GMC2 formalization by working the remaining REASONING (not Lean builds); bypass DvdK or replace it with something easy to formalize; mine past threads.
+**THE 12%:** unique-channel bypass at ANY mass (S230) reclassifies 4 supports free -> 87.9% (102/116); residual = exactly 14/116 = 12.1%, the coincident-channel/symmetric supports (involution u->-1/u, f(-1/u)=-f(u), THM-2070, pairs compositions => card>=2 at every mass, no single-power certificate).
 
-- **FRAMING.** The GMC2 DvdK residual (mixed-sign coincident-channel cancellation -- boxeph S230's irreducible 16%) is ALREADY closed on paper by codex THM-2067 (Galois orbit-product). The open problem is FORMALIZATION (S95 roadmap put Puiseux/Monsky at ~4-9 person-months). So I worked the reasoning that maps + shrinks that formalization.
-- **THE MAP.** Shift face to Λ(u)=u^{-M}R(u) (R ordinary poly, deg d=M+N, r_0 r_d!=0); CT(Λ^m)=[u^{Mm}]R^m=:D_m; Φ(X)=X^M-tR(X). THM-2067 decomposes into: (i) THM-1550 [D_m=0 forall m <=> Π(t)=prod(small roots)=ct]; (ii) irreducibility of Φ/C(t) [Gauss + gcd(X^M,R)=1]; (iii) Vieta [prod all roots=(-1)^d r_0/r_d in C*]; (iv) orbit-product lemma [transitive Galois => Π^r=C_Φ^η => t-adic valuation 0=r>0, contra]. **4 of 5 pieces are Mathlib-ready** (finite Galois via IsGalois, Gauss, Vieta, C(t) valuation). The ONLY gap is THM-1550.
-- **CONTRIBUTION A -- elementary THM-1550.** Re-derived it with NO residues/monodromy: from the Wiener-Hopf factorization 1-tΛ = const(t)*prod(1-u_i/u)*prod(1-u/a_j), a formal CT_u of log kills both root products, leaving -Σ D_m t^m/m = log const(t), const=(-t r_d)(-1)^N prod(large roots). Hence D_m=0 forall m <=> Π(t)=ct. Corollary: Π=ct*exp(Σ D_m t^m/m) in t*C[[t]], so Π is UNRAMIFIED despite the small roots having t-valuation 1/M.
-- **CONTRIBUTION B -- the gap simplified to UNRAMIFIED HENSEL (the 'easy to formalize' win).** Substitute X=sZ, t=s^M: Φ=s^M(Z^M-R(sZ)), and mod s, Z^M-R(sZ) ≡ Z^M-r_0 is SEPARABLE. So ordinary Hensel over the complete local ring C[[s]] (which Mathlib HAS) yields the M small roots u_i=s*Z_i and Π(t)=t*(-1)^M A(0). This REPLACES the ramified Puiseux / 'extend the valuation to AlgebraicClosure C((t))' item (the ~months step) with standard Hensel + one explicit degree-M base change. Residual valued-field work = the local-global bridge (match the M C((s))-Hensel roots to a proper M-subset of the C(t)-splitting field with rational product ct) -- now unramified-Hensel-shaped, not open-ended.
-- **VERIFIED numerically** (dvdk_residual_formalization_map_deathstar_S106.py, 4 faces): CT(f^m)=D_m + cancellation patterns (S100 hard {-2,-1,1,2}: 0,-4,0,36,...; THM-2070 dihedral: first nonzero m=4); log const = -Σ D_m t^m/m (Check B); Π via unramified Hensel == Π via direct roots (Check C); Vieta + Π unramified (Check D).
-- **HONEST:** NOT a Lean proof of DvdK1 and NOT a full bypass -- the residual is genuine (THM-2067, taken as given). This is a dependency map + an elementary proof of THM-1550 + a Puiseux->Hensel reduction of the one hard object. Dovetails with boxeph S230 (formalized the 84% unique-channel bypass; localized the dependency to one seed lemma; proposed parameterizing the descent by the seed lemma). Next Lean targets: orbit-product lemma (self-contained finite Galois) + irreducibility + the unramified Hensel factor. HYP-8935.
-## codex-2026-07-22 -- rank-one wheel boundary and residue-incidence transfer
+**THE TOOL -- MONOMIAL CERTIFICATE:** CT(f^m)=constantTermRelation(q,m) homogeneous deg m in coeffs. Support DvdK-free elementarily IFF ideal <CT(f^m)> contains a monomial mu=prod x^e (unit on the coeff torus): mu=sum g_m CT(f^m) => some CT(f^m)!=0 on torus, same finite mass set for all torus points. = V(I) cap torus empty = DvdK1 (true, THM-2067) but as an explicit finite certificate, replacing Galois by exact Q-linear-algebra (graded per degree, no numpy/sympy). RESULT: ALL 14 residual supports certified at degree<=6 => every straddling support size 3-4 in +-4 is DvdK-free with NO Galois (88% unique-channel + 12% monomial-cert). Paradigm {-2,-1,1,2}: 12 b^2c^2 = (3ad+9bc)CT(f^2) - CT(f^4), two-mass {2,4}.
 
-- THM-2082 specializes THM-2069 exactly: a scalar row has code enumerator
-  `1+(p-1)z^w_p`, and hereditary primitivity is `w_p>=2` for every prime.
-  Thus the one-deletion wheel collapses to modulus one and cannot manufacture
-  a terminal height variable.
-- A translated-prime-grid lemma is the positive replacement: carrier ratios
-  are uniformly safe, each noncarrier consumes at most `ceil(p/7)` residues,
-  and the guard consumes at most `ceil(2p/7)`. A strict leftover is an actual
-  point of `G_Q minus E_h`; failure is an explicit carrier-ratio branch.
-- The unbounded rows `{1,...,s-1,360360*32^j}`, `s=7,...,10`, freeze their full
-  prime code profiles while passing hereditary/divisor, quarter, relative
-  height, and scalar-fold filters. Every row nevertheless escapes at `3/31`.
-  Hence those scalar sidecars alone cannot prove a height cutoff.
-- Two divisor-complete hereditary rows have the same full-support `p=17` code
-  `1+16z^8` but zero versus twelve safe grid residues. This is the exact
-  support-incidence loss familiar from tournament score fibers, the
-  `[72,36,16]` cocircuit-design gate, and GMC's multiple-channel cancellation:
-  the live LRC carrier is labelled projective residue incidence, concretely
-  THM-2081's guard-restricted event graph.
+**FORMALIZED (kernel-pure [propext,Classical.choice,Quot.sound]):**
+- GMC2DvdKMonomialCertificate.dvdk1_of_monomialCertificate: the ENGINE -- identity prod X^e = sum_{m in M} g_m constantTermRelation(q,m) + c_i!=0 => exists m>=1, CT(f^m)!=0 (any field Q-algebra). No positivity/uniqueness/Galois. Unique-channel = the M={m0} special case; this generalizes to the coincident-channel stratum.
+- GMC2DvdKResidualExample.dvdk1_neg2_neg1_1_2: DvdK1 fully discharged for the symmetric paradigm {-2,-1,1,2}. CT(f^2), CT(f^4) evaluated by decide-on-piAntidiag-filter; certificate via linear_combination; two-mass disjunction.
 
 ## codex-2026-07-22 -- live-pull correction and the true depth-five exit
 
@@ -132,4 +108,5 @@ NET: every P whose lowest face has a unique channel needs NO DvdK axiom for NC2,
 
 **Honest:** the DvdK-free (unique-channel) side is now kernel-pure in Lean for arbitrary support, subsuming S226 and complementing S228; the coincident-cycle (card>=2) stratum remains the THM-2067 Galois frontier. The synthesis is a reading of proved theorems (THM-1820/1810/406/515/671), not a new theorem. Artifacts: reflection the-unique-channel-dvdk-in-lean-...-boxeph-S229.md, HYP-8930, Lean GMC2DvdKUniqueChannel.lean (5 theorems).
 **Honest scope:** the DvdK dependency is localized to one seed implication and discharged kernel-pure for the unique-channel 84%; NOT a full bypass (coincident-channel 16% = THM-2067). NC2-level wiring is a one-line codex-owned change. Artifacts: reflection bypassing-the-gmc2-dvdk-dependency-...-boxeph-S230.md, HYP-8931, Lean GMC2DvdKUniqueChannelBypass.lean + dvdk1_of_uniqueChannel.
+**Honest:** general engine + 1 concrete instance in Lean; other 13 certificates script-verified (same decide+linear_combination recipe, mechanical). NOT a uniform degree bound (= effective DvdK, Sturmfels/ESV open) -- but any explicit support is a finite, Galois-free certificate computation. Artifacts: reflection eliminating-dvdk-for-the-residual-12-percent-...-boxeph-S231.md, HYP-8932, dvdk_monomial_certificate_residual_boxeph_S231.py, GMC2DvdKMonomialCertificate.lean, GMC2DvdKResidualExample.lean.
 
