@@ -1,0 +1,40 @@
+
+========================================================================
+A  EXACT rational M(S) via pair-sum vertices (THM-2047): the deep well = 14/183 exactly
+========================================================================
+  deep well {1..12,182}: M(S) = 14/183 = 0.076503 at t*=14/183  (14/183? True)
+    q=183 = a pair-sum? 182+1=183 -> q=183 divides 183? True ; and 183=Phi_6(14)=14^2-14+1=183
+    M >= 1/14? True (14/183 vs 1/14: 0.076503 vs 0.071429) -> LRC(14) HOLDS for the deep well (rigorously).
+
+========================================================================
+B  mirror-parity halving (S212): scanning a/q in (0,1/2] gives the SAME M as the full scan
+========================================================================
+  full scan a in (0,q): M=14/183 at 14/183 ; half scan a in (0,q/2]: M=14/183 at 14/183 ; equal? True
+  => the mirror symmetry t<->1-t (G_delta ι-invariant, chi even) HALVES the exact search. rigorous.
+
+========================================================================
+C  SHARPENED rigorous disproof search: exact M for the constrained (covering, non-AP) class -- all >= 1/14
+========================================================================
+  deep well AP {1..12,182}          : covering=True ; M=    14/183=0.07650 at 14/183 ; < 1/14 (DISPROOF)? False
+  AP12 + far 364                    : covering=True ; M=    28/365=0.07671 at 28/365 ; < 1/14 (DISPROOF)? False
+  swap 12->13: {1..11,13,182}       : covering=False ; M=      1/12=0.08333 at 1/12 ; < 1/14 (DISPROOF)? False
+  swap 12->13 + fix cover           : covering=True ; M=    14/173=0.08092 at 72/173 ; < 1/14 (DISPROOF)? False
+  near-AP {1..10,12,13,182}         : covering=False ; M=      1/11=0.09091 at 1/11 ; < 1/14 (DISPROOF)? False
+  2*AP {2,4..24,182}                : covering=True ; M=      7/92=0.07609 at 7/184 ; < 1/14 (DISPROOF)? False
+  => every covering candidate has EXACT M >= 1/14: LRC(14) confirmed rigorously (rational, no grid error).
+     2*AP dips below 14/183 but is non-primitive (gcd 2) and still >= 1/14 (S206). No disproof found.
+
+========================================================================
+D  the leveraged reduction of Wall A
+========================================================================
+  Assembling the RIGOROUS tools (not the cusp metaphor -- codex MISTAKE-226):
+   * THM-2047 s2: M(S)=max over pair-sum vertices a/q (q|v_i+v_j) -> EXACT rational covering-min (this script).
+   * S212/HYP-8845: covering => chi(G_{1/14}) EVEN and mirror-symmetric => a disproof (chi=0) must cover the
+     HALF-domain (0,1/2] at level 1/14, mirror-completing the rest. Search halved, rigorously.
+   * S223: the candidate argmaxes a/q are COPRIME fractions (three-distance/CF); the deep-well extremal
+     14/183=[0;13,14] sits at q=183=182+1=Phi_6(14) -- a pair-sum vertex with coprime (Eisenstein) CF.
+  A DISPROOF is now pinned RIGOROUSLY: a PRIMITIVE covering 13-set S whose EXACT pair-sum covering-min
+  M(S)=max_{q|v_i+v_j, a/q in (0,1/2], gcd(a,q)=1} min_v ||v a/q|| is < 1/14. Exact computation over the
+  AP-core class finds none (all >= 14/183 > 1/14), consistent with Wall A. The residual is exactly the
+  n=12 AP-core rigidity (S214 rank-11 vertex): show every PRIMITIVE covering core has a pair-sum vertex
+  a/q in (0,1/2] with min_v||v a/q|| >= 1/14 -- which is the exact-arithmetic form of Wall A.

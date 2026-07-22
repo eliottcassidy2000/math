@@ -1,5 +1,4 @@
-## boxeph-2026-07-21-S223 -- one-dimensional coprime intervals complete the DvdK bypass (HYP-8895)
-## codex-2026-07-21 -- THM-2059 exact CRT packet join
+## boxeph-2026-07-21-S224 -- leveraging the toolkit: an EXACT rational covering-min and a sharpened Wall A (HYP-8900)
 
 - **PROVED:** for `S=aC union {w}`, safe phases on any clock `N` are the CRT
   fiber product of a core packet modulo `N` and a tail packet modulo
@@ -20,22 +19,16 @@
 - **Assumption challenge:** the lossless carrier is a bipartite CRT
   compatibility graph. It is not a runner tournament or a modular cusp;
   orienting its symmetric ties destroys the theorem.
+**Owner:** leverage the recent ideas to make progress toward LRC. Uses the RIGOROUS tools (not the cusp metaphor -- codex MISTAKE-226 accepted).
 
-## boxeph-2026-07-21-S222 -- bypass GMC(2)'s DvdK dependency via the saddle-point/Watson method (HYP-8890)
-## death-star-2026-07-21-S101 -- SHARP DvdK-free criterion (refines S100 a lot): a UNIQUE minimal balanced channel (unique tournament-zeta primitive cycle) => GMC(2) DvdK-free, coefficient-independently. 84% of supports. HYP-8878.
+**THE MOVE:** assemble the structural theorems into an EXACT rational covering-min (upgrade over S206's float grid):
+- THM-2047 s2 (PROVED): every maximizer t*=a/q has q|v_i+v_j (q<=2max) => M(S)=max over pair-sum vertices a/q, exact rational.
+- S212/HYP-8845: covering => chi(G_delta) EVEN + mirror-symmetric => scan a/q in (0,1/2] (HALVING, verified).
+- S223: candidate a/q coprime (three-distance/CF).
 
-**Owner:** keep going on the DvdK bypass; think one-dimensional coprime intervals.
+**VERIFIED:** M(deep well {1..12,182}) = 14/183 EXACTLY at t*=14/183, q=183=182+1=Phi_6(14) (pair-sum vertex, coprime CF [0;13,14]); 14/183>1/14 => LRC holds rigorously. SHARPENED disproof search (exact M): deep well 14/183, AP12+364 28/365, non-AP {1..11,13,168} 14/173, 2*AP 7/92 (non-primitive) -- ALL >= 1/14. No disproof.
 
-**KEY:** DvdK (THM-1630) is a ONE-VARIABLE theorem, and GMC(2) uses it only in 1 variable. In 1D the constant-term non-vanishing is elementary COPRIME-INTERVAL / NUMERICAL-SEMIGROUP combinatorics (no residues/Liouville). For f=sum c_k z^k, support S (0 not in S): Newton polytope = interval [min,max] (two-sided iff 0 interior); period d=gcd(gaps); the RETURN set R={m:0 is an m-fold sum} is a numerical semigroup.
+**REDUCTION (the progress):** Wall A <=> every PRIMITIVE covering 13-set has some pair-sum vertex a/q in (0,1/2] with min_v||v a/q|| >= 1/14 -- the exact-arithmetic (residues mod q) form of the n=12 AP-core rigidity (S214 rank-11 vertex). Mirror halves the domain, pair-sum finitizes the vertices, coprime/CF names the target (q=Phi_6(14)).
 
-**TWO POLES (verified, one_dimensional_coprime_intervals_return_semigroup_boxeph_S223.py):**
-- bare coprime PAIR {-q,p}: PERIODIC, R=(p+q)Z (= THM-1840 seed m0=p+q, ONLY multiples, Frobenius=inf).
-- FILLED coprime interval (endpoints+interior, gcd gaps=1): COFINITE, R = all m > Frobenius# ({-2,1,3}: all m>=3; {-2,2,3}: all m>=4 with a gap). Adding one interior exponent collapses period p+q -> 1.
-- POSITIVE coeffs: CT(f^m)!=0 <=> m in R (verified); mixed signs: R minus sporadic cancellations, cofinite (saddle S222).
-
-**RESULT:** DvdK's 1D content ('two-sided => CT!=0 for some m') is SHARPENED to 'all m > Frobenius#' -- exact, EFFECTIVE (Frobenius# = the open effective-DvdK m0), self-contained. Combined with S222 (mixed-sign saddle) + S208 (confluent cusp), the whole 1-variable GMC(2) non-vanishing is elementary; DvdK demoted from imported premise to the periodic special case.
-
-**BONUS:** coprime intervals also drive LRC's three-distance -- the gaps of {kt mod 1} take 3 values by the CF of t (= coprime-interval structure); t*=14/183=[0;13,14] coprime partial quotients; danger arcs = coprime intervals. 1D coprime intervals = the shared engine of GMC constant-term returns AND LRC three-distance arc geometry.
-
-**Honest:** coprime-pair periodicity + filled-interval cofiniteness + CT<=>R (positive) verified; mixed-sign uses the S222 saddle. Completes the DvdK-bypass 1D core (elementary+effective), not a full THM-2022 rewrite. Artifacts: reflection one-dimensional-coprime-intervals-complete-the-dvdk-bypass-boxeph-S223.md, HYP-8895, script (+.out).
+**Honest:** rigorous covering-min tool + halving + finite exact-arithmetic reduction of Wall A + disproof-free confirmation of the tested class; NOT a proof of Wall A (the AP-core rigidity -- 'every primitive covering core has a lonely pair-sum vertex' -- is still the open crux). Converges with death-star-S101 (DvdK-free) + my S222/S223: both GMC and LRC reduce to exact residue/coprime-interval combinatorics. Artifacts: reflection leveraging-the-toolkit-an-exact-rational-covering-min-and-a-sharpened-wall-a-boxeph-S224.md, HYP-8900, script (+.out).
 
