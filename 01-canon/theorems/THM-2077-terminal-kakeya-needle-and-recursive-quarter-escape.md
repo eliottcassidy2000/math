@@ -443,17 +443,27 @@ Consequently `sigma_*` lies in this interval.  The upper bound for `rho` in
 (1/7,1/6+1/L).
 ```
 
-On this interval the all-ones guard recursion has safe-bit word
+On this interval the all-ones complement-bit prescription in (6a) has word
 
 ```text
 (epsilon_0,epsilon_1,epsilon_2,epsilon_3,epsilon_4)
    =(1,0,1,0,1),       a=16+4+1=21.                  (20d)
 ```
 
-Indeed, starting from `sigma_5=sigma`, the five successive lifted points
-lie respectively in the nearest-integer cells of `0,1,0,1,0`; formula
-(6a) complements those parities.  Thus this is an actual local address,
-not an independently assigned scalar.
+Indeed, starting from `sigma_5=sigma`, the five successive inputs lie in the
+nearest-integer cells of `0,1,0,1,0`; formula (6a) complements those
+parities and gives
+
+```text
+sigma_4=(sigma+1)/2,   sigma_3=(sigma+1)/4,
+sigma_2=(sigma+5)/8,   sigma_1=(sigma+5)/16,
+sigma_0=(sigma+21)/32.
+```
+
+Each displayed child is strictly `1/14`-safe for its newly inserted unit
+guard, so these are actual legal interval lifts `I_i subset G_(Q_i)`, not
+an independently assigned address scalar.  The first lift is not unique;
+that is exactly the global containment failure isolated below.
 
 All five choices `h_i=1` satisfy the strict bounds (7).  Take the small odd
 tails
