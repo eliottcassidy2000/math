@@ -145,7 +145,10 @@ supplier/seed and a lossless exit.
   terminal height `24`; proving the same strict inequality at all heights is
   the live depth-four target. At rank seven its scalar deficit is exactly the
   negative signed-fold sum divided by `196`, hence equals outside-cover
-  multiplicity under containment.
+  multiplicity under containment. THM-2083 removes the generic all-height
+  lane: every rank-seven containment has a uniformly bounded nonzero relation
+  `a h+bq_i+cq_j=0` on some guard/two-speed triple. The remaining depth-four
+  problem is a finite list of relation templates, still with unbounded scale.
   THM-2062 adds the hereditary wheel; THM-2065 makes circuit-free residuals finite.
 - **PROVED relative whole-product decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says bounded scalar relations must lift to vector-character relations. Two

@@ -18,6 +18,7 @@ related:
   - THM-1166
   - THM-1221
   - THM-2078
+  - THM-2083
 script: 04-computation/lrc14_relative_hunter_rank7_referee_codex_20260722.py
 output: 05-knowledge/results/lrc14_relative_hunter_rank7_referee_codex_20260722.out
 ---
@@ -196,6 +197,11 @@ for every unbounded hereditary divisor-complete rank-seven terminal. The
 finite replay suggests (19) has substantial room, but a height cutoff cannot
 be inferred from it. A scale-free proof must classify or bound the projective
 three-frequency edges (12), including their common-gcd and endpoint phases.
+
+THM-2083 subsequently closes the relation-free part of this target:
+relative-tree failure forces a uniformly bounded integer relation on some
+triple `(h,q_i,q_j)`. Thus only finitely many relation templates, rather than
+the whole projective three-frequency space, remain.
 
 The useful next split is exact:
 

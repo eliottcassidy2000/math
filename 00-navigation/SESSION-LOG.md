@@ -33,6 +33,22 @@ NET: every P whose lowest face has a unique channel needs NO DvdK axiom for NC2,
 
 **Next step (proposed to codex):** parameterize the descent by the seed lemma (take exists_nonzero_lowest_face_seed's conclusion as input) so both DvdK1 and my unique-channel seed drive it => DvdK-axiom-free NC2 for the 84%.
 
+### Relation-free all-height lane
+
+- THM-2083 proves a uniform short-relation alternative. If every triple
+  `(h,q_i,q_j)` has relation height tending to infinity, character convergence
+  sends mixed overlaps to `2/49`, restricted pair weights to `5/343`, the
+  scalar deficit to zero, and the maximum tree to `30/343`. Such packets have
+  a large positive relative-Hunter margin.
+- Consequently there is an absolute `H_7` such that every rank-seven terminal
+  containment satisfies `a h+bq_i+cq_j=0` for some nonzero coefficients of
+  height at most `H_7`. This is uniform and rigorous but currently
+  ineffective; the next task is a Fejer constant chase or template-by-template
+  endpoint/CRT discharge.
+- A 500-row structured stress test with maxima up to `1200` found no relative-
+  tree failures; generic margins clustered near the predicted `30/343`.
+  This is evidence only and is not used in THM-2083.
+
 ## death-star-2026-07-22-S105 -- GMC2 formalization CAPSTONE CLOSED: the whnf wall is SOLVED; HeightWitnessSupplier discharged kernel-pure; clean DvdK1 -> NC2 and DvdK1 -> GMC(2) now compile.
 
 **Owner directive:** work creatively at whnf-tuning, or how it can be bypassed.
