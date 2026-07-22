@@ -8,7 +8,9 @@ status: >
   packets empty and every owner constraint vacuous. Independently, if the
   closed weak-safe core contains a phase together with its half-translate,
   then no odd tail is dangerous everywhere, so the strict dyadic two-tail
-  seam is impossible. This is a certificate-strategy theorem, not LRC(14).
+  seam is impossible. A quarter-anchor perturbation proves this certificate
+  whenever the core has one controlled multiple-of-four tooth. This is a
+  certificate-strategy theorem, not LRC(14).
 source: codex-2026-07-21-LRC-fixed-bank-audit
 depends_on:
   - THM-2061
@@ -176,6 +178,44 @@ Condition (6) has the exact one-phase band form
 Indeed a half-shift fixes every even phase, whereas for odd `c` it replaces
 the distance `d` by `1/2-d`. Thus (9) is an adaptive continuous certificate
 whose feasibility can be attacked without choosing tails or owner words.
+
+### Quarter-anchor one-tooth corollary
+
+Suppose `C` has exactly one member divisible by `4`; call it `c_0`. Assume
+
+```text
+c<=5c_0/2 for every odd c in C,
+c<=6c_0   for every c in C with c=2 mod 4.               (10)
+```
+
+Then `C` has an antipodal safe pair and hence no strict dyadic two-tail seam
+counterexample. In particular, (10) holds whenever `c_0=max(C)`.
+
+To prove this, take
+
+```text
+theta=1/4+1/(14c_0).                                    (11)
+```
+
+Because `4|c_0`, its distance is exactly `1/14`. If `c` is odd, its phase at
+`1/4` is a quarter or three-quarters, and the perturbation has size
+
+```text
+c/(14c_0)<=5/28.
+```
+
+It therefore leaves `||c theta||` in the closed band `[1/14,3/7]`, with
+equality allowed at either end. If `c=2 mod 4`, its unperturbed phase is
+`1/2` and
+
+```text
+||c theta||=1/2-c/(14c_0)>=1/14
+```
+
+by the second inequality in (10). There are no further multiples of `4`, so
+all conditions in (9) hold. This is the first exact tooth of the dyadic
+self-similarity: the quarter anchor makes the odd and `2 mod 4` layers safe,
+leaving only the rescaled `4`-divisible layer to repair. QED.
 
 ## 3. What survives and what must change
 
