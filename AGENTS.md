@@ -38,8 +38,9 @@ search its exact statement, constants, quantifiers, synonyms, theorem ID, and
 recent `MISTAKE-*` entries. Cite theorem ID **plus slug/file path**: legacy ID
 collisions exist. Mark scope as `PROVED`, `CITED`, `FINITE-EXACT`, `VERIFIED`,
 `CONDITIONAL`, `OPEN`, `RESERVED`, `REFUTED`, or `SUPERSEDED`; never blend them.
-`RESERVED` means namespace only: unless the file contains a statement and
-proof/evidence, it is not a result or dependency even when stored in canon.
+`RESERVED` is never a proved result or proved dependency. A reserved file may
+be an empty namespace stub or an explicitly provisional proof candidate under
+audit; only an audited status promotion moves it into the proof graph.
 
 Repair demonstrated errors promptly, preserve the correction lineage, and log
 the mechanism in `01-canon/MISTAKES.md`. Use court cases for genuine unresolved
@@ -55,6 +56,8 @@ it yields a precise object, obstruction, experiment, or theorem.
 
 Always:
 
+- begin with an inheritance pass: name the closest proved mechanism, canonical
+  hostile example, corrected near miss, and least-used relevant sidecar;
 - recover and connect prior work before deriving anew;
 - prefer underexplored operations, duals, scales, boundary cases, and discarded
   objects over another pass through a saturated route;
@@ -66,6 +69,8 @@ Always:
   destroyed information, needed sidecar, and cheapest decisive test;
 - give every small mathematical compulsion a cheap hostile probe, then pursue a
   positive signal until it produces structure or a recorded stopping reason;
+- revisit the concept board after every meaningful pull or computation and ask
+  how each new object changes every other live lane;
 - promote successful research moves to `00-navigation/META-PATTERNS.md` only
   with triggers, counterindications, and evidence from distinct threads.
 

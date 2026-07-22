@@ -34,6 +34,8 @@ Use this precedence order:
 are idea provenance, not truth authorities. Before inheriting a target, search
 canon for its **statement, constants, quantifiers, theorem identifiers, and
 synonyms**. Searching only for the proposed method is insufficient.
+Frontmatter status controls even inside canon: a `RESERVED` proof candidate
+stays outside the proof graph until adversarial audit and explicit promotion.
 
 ## 2. The session portfolio: Anchor / Niche / Wildcard
 

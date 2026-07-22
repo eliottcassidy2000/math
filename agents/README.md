@@ -52,8 +52,9 @@ python3 agents/check_docs.py
 Do not prepend generated session rows above `CURRENT DIGEST` or
 `CURRENT-TRUTH WARNING` banners. Those byte-zero sentinels protect current truth
 from chronological insertion. Put new rows below the maintained digest or in
-the explicitly historical suffix. The startup router lists `RESERVED` empty
-stubs separately; never treat their location under `01-canon/` as proof.
+the explicitly historical suffix. The startup router lists every `RESERVED`
+file separately, whether empty or carrying a provisional candidate; content
+and canon location do not upgrade its status.
 
 ## Checkpoint useful partial results
 

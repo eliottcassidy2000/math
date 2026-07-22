@@ -8,8 +8,9 @@ status: >
   Mobius inversion, an exact rational Ehrhart/Beatty shift law, and a primitive-
   phase discrepancy bound, yielding an exact bulk/boundary/null trichotomy.
   Unit stabilizers give a uniform-incidence orbit norm. Across a longitudinal
-  fiber the entire labelled packet transports by M. After fixing a bad N and a THM-2055 hull
-  owner, positivity, owner, and determinant constraints cut M to one explicit
+  fiber the entire labelled packet transports by M^{-1}. After fixing a
+  THM-2052 plane, exposed pair, saturated basis, bad N, and THM-2055 hull owner,
+  positivity, owner, and determinant constraints cut M to one explicit
   interval of coprime integers, minus finitely many collision points. Non-hull
   adjacent-pair representatives remain essential deck sidecars. This is an
   exact finite carrier theorem, not LRC(14).
@@ -19,6 +20,8 @@ depends_on:
   - THM-2055
   - THM-2047
   - THM-1065-doubling-family-mod-six-characterization
+  - LRCUpTo13
+  - "T. Sungkawichai and T. Trakulthongchai, Eleven, twelve, and thirteen lonely runners, arXiv:2604.23906v1 (preprint)"
 related:
   - THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case
   - THM-1605-tnc-proved-monodromy-transitivity
@@ -295,7 +298,7 @@ numerator is an integer `r` and `r/q=1/14`, proving `14|q`; THM-2047's
 opposite-slope top-vertex theorem gives `q|(x+y)`. The null case is immediate.
 
 This is the lawful LRC version of a bulk/boundary/null split. It uses exact
-phase height, not a modular-form cusp: MISTAKE-226 records that no proved map
+phase height, not a modular-form cusp: MISTAKE-233 records that no proved map
 pulls the level-14 newform back to this signed pointwise predicate.
 
 ## 4. A bounded primitive packet seed
@@ -321,8 +324,9 @@ claim that primitive safe support is multiplicative.
 
 ## 5. The deck/fan intersection is one-dimensional
 
-Fix one adjacent exposed pair from THM-2053. In a saturated coefficient-lattice
-basis write
+Specialize to the thirteen-coordinate THM-2052 star setting. Fix one such
+plane, an adjacent exposed pair from THM-2053, and a saturated coefficient-
+lattice basis. Write
 
 ```text
 B=[w_0 eta] in GL_2(Z),
@@ -535,7 +539,8 @@ discharge the surviving rows. QED.
 The stored referee checks 720 set-level packet decompositions and 720 Mobius
 inversions, the exact Beatty shift law including the zero-measure `S_24`
 singleton regression, unit transport with labelled residue vectors, the
-primitive orbit--stabilizer norm, the bulk/boundary/null trichotomy, the CRT,
+primitive orbit--stabilizer norm, representative controls from each branch of
+the proved bulk/boundary/null trichotomy, the CRT,
 spanning-tree, and unique-maximizer no-gos, all six one-tail deck values, six
 deck/fan interval counts, and six depths of the same-sector Hasse family. It
 passes both

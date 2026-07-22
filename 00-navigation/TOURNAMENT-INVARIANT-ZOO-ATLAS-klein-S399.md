@@ -2,7 +2,8 @@
 
 > **Dated inventory.** Current corrections include the absolute-versus-signed
 > Rédei audit (MISTAKE-217), score-fiber correction (MISTAKE-218), and SCC
-> ceiling repair (MISTAKE-220). Read the tournament section of
+> ceiling repair (MISTAKE-220). MISTAKE-235 also retracts every automatic
+> charge-lattice/GMC/LRC functional swap below. Read the tournament section of
 > [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) first.
 
 *klein-2026-07-21-S399. Owner directive: "keep adding to the zoo, go back through past work
@@ -218,10 +219,11 @@ version (§II.c), port it to the skew/adjacency/Seidel matrix and test resolving
 **Demonstrated §V** (SNF → subsumed by Pf; energy → weak). **Ihara zeta, Lovász θ, sign rank, Tutte
 remain.**
 
-**G6 — the functional-swap generator.** THM-1840's lesson: a nullcone fact lives on the *charge
-lattice*, and any charge-graded functional F reads it off. Recipe: pick a new F (heat-kernel
-weight, q-deformed weight, p-adic valuation), get a new nullcone reading of the SAME two-charge
-base case — TNC/GMC/LRC simultaneously. Generates new "detection" theorems for free.
+**G6 — the typed weighted-fiber generator.** A relation or charge lattice is
+only the indexing fiber. Before changing the functional `F`, record its monoid,
+grading, weights, regularization, coefficient ring, and target predicate.
+Heat-kernel, q-deformed, p-adic, GMC, and LRC weights may suggest comparisons;
+none transfers a nullcone or loneliness theorem for free (MISTAKE-235).
 
 **G7 — the two-atom threshold generator.** One 3-cycle atom = single-character straddle (closed,
 THM-1840). TWO independent atoms = where cancellation begins. Recipe: build k-atom configurations
@@ -301,7 +303,8 @@ Full catalog in `PROBLEM-LEDGER.md` and the S399 cross-domain pass. Ledger of ex
 - **Jacobian/Dixmier/Mathieu-Zhao:** JC false ∀n≥3 (THM-1300, in-repo verified); elliptic/graded JC
   true all dims (THM-1370); GMC(n)⟹JC(n) (Lens 5); Fock bridge GMC(2)→DC₁→JC(2) (conjectural).
 - **LRC(14):** deep well 14/183=n/Φ₆(n) Eisenstein (THM-724); B5 covering certificate (THM-671);
-  GMC↔LRC one moment-nullcone (THM-1820); common return-time parent (THM-1745).
+  GMC and LRC have differently typed weighted fibers (HYP-8879/MISTAKE-235);
+  common return-time language is a prompt, not a predicate-preserving bridge.
 - **Sphere packing:** E₈ = 8-tournament score-deviation slice (THM-868); D_n⁺ branch, Leech at 24
   (THM-869); η²⁴=Δ (THM-489); Golay/Gleason = Paley gauges (THM-484).
 - **Cayley–Dickson:** rungs 2,3,5,9,17 = tournament orders; Fermat-prime rigidity (THM-871).

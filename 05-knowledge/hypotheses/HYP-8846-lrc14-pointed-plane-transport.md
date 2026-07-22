@@ -234,7 +234,7 @@ sidecar), the transverse deck labels, and the non-hull runners.
   grid has a primitive safe phase. At equality, primitive support is finite
   and lies on explicit denominators `q` with `14|q` and `q|(x+y)<=2R`. Below
   threshold all packets vanish. This bulk/boundary/null trichotomy retains the
-  signed pointwise predicate that MISTAKE-226 shows the level-14 newform lacks.
+  signed pointwise predicate that MISTAKE-233 shows the level-14 newform lacks.
 - The orbit-product argument from
   `THM-1605-tnc-proved-monodromy-transitivity.md` does transfer exactly to a
   primitive packet. If `H` is its unit stabilizer, there are

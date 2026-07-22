@@ -27,6 +27,8 @@ counterexample
        `-- rank 11 -> finite two-anchor star atlas
             -> deck + sufficient gate / indexed open 26-disk failure carrier [THM-2053]
             -> signed-hull owner fan / Kelvin-Farey certificate [THM-2055/2056]
+            -> primitive packets + one coprime owner interval [THM-2058]
+            -> exact core/tail CRT compatibility on each clock [THM-2059]
             -> clock, pair-sum, Fejer, Euler, or rank discharge [OPEN]
 ```
 
@@ -182,8 +184,9 @@ not unsafe. The reusable certificate architecture is
   [THM-2058](../01-canon/theorems/THM-2058-primitive-phase-packets-and-deck-fan-intervals.md)
   decomposes each safe packet by exact reduced phase order, with divisor
   summation, Mobius inversion, labelled longitudinal transport, primitive
-  discrepancy, and a bulk/boundary/null trichotomy. For fixed bad `N` and hull
-  owner, the surviving longitudinal coordinates form one explicit coprime
+  discrepancy, and a bulk/boundary/null trichotomy. For a fixed plane,
+  exposed pair, saturated basis, bad `N`, and hull owner, the surviving
+  longitudinal coordinates form one explicit coprime
   interval minus collision points. This is a finite carrier theorem, not a
   discharge of every interval and not LRC(14).
 - **PROVED relative whole-product decorrelation:**
@@ -193,6 +196,18 @@ not unsafe. The reusable certificate architecture is
   `H` lifts. After factoring out the pinned zero character, the seven-sector
   `H=2^19` budget is compatible with recorded cap margins; applying it still
   requires a model-specific lifted plateau and resonance routing.
+
+### Reserved proof candidates—not theorem inputs
+
+- [THM-2060](../01-canon/theorems/THM-2060-crt-tail-coset-saturation.md)
+  proposes that two tail lifts over the common CRT modulus saturate every
+  reduction class, which would force a zero one-tail packet onto `a|w`.
+- [THM-2061](../01-canon/theorems/THM-2061-lrc14-dyadic-two-tail-folded-seam.md)
+  proposes a parity-folded description of `2C union {x,y}` and a metric box.
+  Its candidate reduction belongs to THM-761's two-exception capacity route.
+
+Both are **RESERVED / UNDER AUDIT**. Neither is a proved dependency, an empty-
+seam theorem, or an LRC(14) closure.
 
 ### Exact live obligation
 

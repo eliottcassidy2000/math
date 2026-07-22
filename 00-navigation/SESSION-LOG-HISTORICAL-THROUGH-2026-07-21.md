@@ -1,93 +1,38 @@
-## death-star-2026-07-22-S109 -- JC(2) PROGRESS: the Hamiltonian cokernel realizes S107's manufactured-valuation + S106's DvdK-face, and grounds them in fiber theory (NOT a proof)
+> **HISTORICAL-TRUTH WARNING (archived 2026-07-21):** This is chronological provenance,
+> not a status authority. Entries may be corrected after filing. Start with
+> [`START-HERE.md`](START-HERE.md), [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md),
+> and [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
 
-**Owner directive:** work the S107/S108 ideas into progress toward a planar Jacobian-conjecture proof.
+## Current session-changing results
 
-- **OPERATOR REFORMULATION (known, VERIFIED in-repo, mate_exists by exact linear algebra):** f is a Keller component <=> {f,g}=1 solvable <=> **1 in im(D_f)**, D_f={f,.} the Hamiltonian derivation; coker(D_f) = Brieskorn/de-Rham module, generic rank = dim H^1(generic fiber). So **JC(2) <=> every Keller component is a coordinate <=> [ f has a mate => generic fiber ~= C ]** (Kaliman 2002 / Abhyankar-Moh-Suzuki). Verified: coordinates x, x^2+y, y+x^2 have mates; x^2 (2 lines), xy & x+x^2y (fiber C*), x^2+y^3 (genus>0), x^3, homog-deg2 have NONE -- exactly matching 'fiber ~= C'.
-- **(1) S107 manufactured-valuation REALIZED + VERIFIED = the WEIGHT OBSTRUCTION:** each positive weight w=(w1,w2) is a valuation at infinity; {f,g}=1 forces v_w(f)<=w1+w2, so v_w(f)>w1+w2 for some w => NO mate. Catches x^2 (w~(2,1)), x^2+y^3 (w~(3,2)), x^3; finds none for coordinates. = the JC analogue of S106/THM-2067's v(Pi)=1!=0; generalizes codex THM-2045's grading obstruction to every weight.
-- **(2) S106 DvdK object REALIZED = the resonant faces:** xy/homog dodge (1), sitting ON a resonant w-face (v_w=w1+w2); there '1 in im(D_face)' for the w-quasi-homogeneous face collapses (C*-weight action) to a 1-VARIABLE CONSTANT-TERM condition = the DvdK/S101/S106 object; the sweep over weighted faces = boxeph S225 descent-termination; S106 orbit-product / boxeph-S231 monomial-certificate apply per face.
-- **(3) RESIDUAL PINNED:** x+x^2y (fiber C*, no mate) DODGES every weight and is no single face => the obstruction is the GLOBAL coker(D_f)=H^1(fiber), not any one valuation = the JC(2) core; the weight/face obstructions are LOCAL shadows of the global fiber~=C.
-- **PAYOFF (honest):** the S106/S107 route and the classical fiber-~=C route are the SAME obstruction coker(D_f) -- this DE-SPECULATES S107 by grounding it in established theory, and pinpoints where valuations bite (high/resonant strata) vs the C*-fiber residual (global, needs descent to terminate). NEXT tool-matched sub-target: prove local=>global for Keller components with a SINGLE resonant face, combining the (2) DvdK-face nonvanishing (S106/S231) with a (S225) coprime-interval Frobenius descent bound.
-- **HONEST:** mostly a synthesis of known objects (Hamiltonian reformulation, Brieskorn module, Kaliman fiber theorem, THM-2045 grading); value = realizing S106/S107 as VERIFIED obstructions + unifying with fiber theory + locating the residual. JC(2) remains open. HYP-8950.
-## death-star-2026-07-22-S108 -- asymptotic unit-distance problem: a positive count with a cancelling spectral kernel (exploration, NOT a new bound)
-## boxeph-2026-07-22-S233 -- THM-2067 abstract contradiction assembled + t-adic closing over C(t); gap refined to THM-1550 alone (kernel-pure, HYP-8942)
+- **MISTAKE-235:** S102's Fejer-regularized sinc sum is a strict-bulk LRC
+  observable, not a fixed GMC moment or an AP-core reduction. A zero value also
+  includes valid tight weak witnesses; equality needs packet/owner/Euler data.
+- **THM-2058 PROVED:** exact reduced-order packets, labelled `M^{-1}` transport,
+  bulk/boundary/null support, and one coprime interval per fixed
+  plane/pair/basis/bad-denominator/owner cell. This is a carrier, not LRC(14).
+- **THM-2059 PROVED:** the histogram dot product counts compatible CRT classes;
+  its `Na/lcm` lift counts safe grid indices. Zero rejects one grid only.
+- **THM-2060/2061 RESERVED:** tail-coset saturation and the dyadic two-tail
+  seam are independent proof candidates under audit, not theorem inputs.
 
-**Owner:** long session, keep going until GMC(2) formalization complete; pull from agents.
+## Historical chronological stream
 
-**NEW kernel-pure ([propext,Classical.choice,Quot.sound]):**
-- GMC2OrbitProduct.orbit_product_contradiction: transitive G-action + equivariant f + G-fixed subset product p + valuation v, v(prod_Omega f)=0 but v(p)!=0 => False. The full abstract THM-2067 contradiction (packages prod_pow_card_group_eq + valuation_zero_of_prod_fixed).
-- GMC2RatFuncClosing.monomial_pow_ne_const: a*t^N != const in F(t) for a!=0, N>=1 (pullback F[t]<->F(t) injective + natDegree). The concrete t-adic closing.
+> Entries below preserve what sessions claimed when filed. Later theorem and
+> mistake records above override them.
 
-**REFINEMENT of S232:** valuation is t-adic on C(t), NOT the splitting field -- both Pi=c*t and C_Phi=(-1)^d r0/rd are in C(t), so the closing is an elementary degree argument inside C(t). Gap shrinks to exactly THM-1550. Confirmed Mathlib wrapper hooks exist: Polynomial.Gal.galAction_isPretransitive, Gal.smul_def, MulDistribMulAction Phi.Gal SplittingField, Fintype instances -- so my abstract core DOES plug into Mathlib's Galois machinery.
+## boxeph-2026-07-21-S224 -- leveraging the toolkit: an EXACT rational covering-min and a sharpened Wall A (HYP-8900)
+## death-star-2026-07-21-S102 -- [REFUTED BY MISTAKE-235] claimed LRC/GMC identity and AP-core reduction (HYP-8879)
 
-**REMAINING INTERFACE:** (A) irreducibility of X^M-tR over C(t) [death-star; Gauss], (B) THM-1550 Pi=c*t [death-star's unramified-Hensel = THE gap; gives hfix + v(Pi)=1], (C) Vieta v(C_Phi)=0, (D) equivariance/wrapper, (E) Check A CT(Lambda^m)=[u^Mm]R^m. (A)+(B) hard/gap (death-star owns); (C)-(E) mine gap-free. Messaged death-star.
+**Owner directive:** leverage the GMC2/DvdK/scale-clock/zeta ideas toward LRC.
 
-**Honest:** NOT complete -- completion gated on THM-1550 (death-star's Hensel piece). This session assembled the abstract contradiction + proved the C(t) closing kernel-pure, refined the gap, and specified the interface. 3 pushes. Artifacts: reflection thm2067-abstract-contradiction-...-boxeph-S233.md, HYP-8942, GMC2OrbitProduct.lean (+orbit_product_contradiction), GMC2RatFuncClosing.lean.
+- **SOUND UNIFICATION (verified):** the L∞ lonely measure mu = int prod g(v_i t) dt = Σ_{k: Σ k_i v_i=0} prod hat_g_{k_i} -- a sum over the INTEGER KERNEL (resonances) of the speed map, weighted by Fourier products = STRUCTURALLY the GMC2 moment E[P^m]=Σ_{balanced channels} multinomial·A(r)!·c^r (charge kernel). Covering (mu=0) = cancellation = GMC2's E=0. Same non-cancellation problem.
+- **CLOCK-FLOOR DECOMPOSITION:** mu = MAIN (1-2delta)^n + resonance corrections. MAIN = clock/Eisenstein FLOOR = (6/7)^13 for LRC14 (1-2/14=6/7 = THM-878 floor = boxeph S221 Eisenstein floor). Covering REQUIRES resonances to cancel (6/7)^13.
+- **QUANTITATIVE REDUCTION (verified):** |corrections|/MAIN = 0.03-0.10 for Sidon cores (mu~=MAIN>0 => robustly LONELY, never covering) vs 0.89-0.96 for APs (AP {1..5} at 1/6 covers). So LRC(14) reduces to the maximal-resonance (AP) cores = S101 GMC2 coincident-cycle hard stratum = degenerate tournament zeta (S99) = codex relation-rich / boxeph tight-AP (S214). S101 unique-cycle transferred: few resonances => floor survives => lonely.
+- **HONEST:** not a proof (Fourier gap-decomposition is standard); contribution = the unification + MAIN=clock-floor + the Sidon-vs-AP reduction + naming the residual (zeta coincident-cycle degeneracy). Engine to finish: rigorous |corrections|<MAIN for all non-AP 13-cores. reflection lrc-and-gmc2-are-one-integer-kernel-...-S102. HYP-8879.
+## boxeph-2026-07-21-S222 -- bypass GMC(2)'s DvdK dependency via the saddle-point/Watson method (HYP-8890)
+## death-star-2026-07-21-S101 -- SHARP DvdK-free criterion (refines S100 a lot): a UNIQUE minimal balanced channel (unique tournament-zeta primitive cycle) => GMC(2) DvdK-free, coefficient-independently. 84% of supports. HYP-8878.
 
-**Honest after correction:** the proposed LRC reduction is withdrawn; the
-completed kernel-pure single-character DvdK1 leaf survives. Artifacts:
-reflection doubling-homeomorphism-plus-mirror-parity-...-boxeph-S227.md,
-HYP-8920, script (+.out), Lean GMC2DvdKTwoCharge.lean.
-## codex-2026-07-21 -- HYP-8905 bridge audit and MISTAKE-229
-
-The exact binary homogeneous Hessian calculation from S103 survives and lands
-inside THM-2063. The claimed `NC2 -> GMC(2) -> JC(2)` chain does not: the
-general symmetric reduction from JC(2) lands in four variables, and no
-Gaussian-to-Laplacian predicate map was supplied. S225's VC(4), planar
-leading-form/Jelonek, and Lame-for-polygons programs remain separate routes
-sharing a descent heuristic, not equivalent formulations. The dimension-three
-rank/cycle comparison is heuristic, not a classification of collisions.
-
-## boxeph-2026-07-21-S225 -- working JC(2): the obstruction is a descent termination; coprime intervals are its tool (HYP-8905)
-
-**Owner:** long session working to prove the planar Jacobian Conjecture; pull past threads creatively.
-## death-star-2026-07-21-S103 -- Planar JC IS NC2 one-sidedness: 2D nilpotent Hessian => one-sided; the JC-true/false boundary = the GMC2 unique-vs-coincident-cycle threshold. HYP-8910.
-
-**Owner directive:** work to prove the planar Jacobian conjecture, pull in past threads creatively.
-
-- **CONTEXT:** target = JC(2) (Alpoge THM-1300 killed JC dim>=3); THM-1830 puts my NC2/GMC2 upstream (NC2=>GMC2=>...=>JC(2)); Zhao VC (Hess P nilpotent <=> Delta^m(P^m)=0) = the SAME moment-vanishing as GMC2's E[P^m]=0.
-- **PROVED/VERIFIED (planar_jc_..._S103.py):** 2D symmetric Hess P nilpotent <=> harmonic (trace 0) AND det 0; for harmonic P=A z^d+B zbar^d, det(Hess)=-4 d^2(d-1)^2 A B |z|^{2(d-2)} => det=0 <=> A B=0 => P ONE-SIDED (= verbatim NC2 conclusion). One-sided P is harmonic (Zhao VC trivial) + ONE-FIBER-LINEAR (F2-iF1=-iz => codex THM-2063 tame). So the SYMMETRIC planar JC / 2D Zhao-VC case IS NC2 one-sidedness, PROVED.
-- **THE BOUNDARY (the unification):** 2x2 nilpotent has RANK<=1 = ONE isotropic direction (one-sided); dim>=3 reaches rank>=2 = MULTIPLE isotropic dirs = RESONANCE = Alpoge counterexample (JC false). rank<=1 => parallel gradients => functional dependence => one-fiber pencil (codex). SAME threshold as GMC2 S101 (unique vs coincident cycle) + boxeph S217 entropy (rigid=zero-entropy=one-sided). Planar = the last one-direction dimension.
-- **HONEST:** proves the symmetric case (=NC2 one-sided); NOT full JC(2) (non-symmetric rank-1 parallel-gradient = codex THM-2063 open crux). A unification placing planar JC in my GMC2/NC2/resonance framework + a bridge to codex's pencil.
-- **ADOPTED codex MISTAKE-227:** my S102 strict measure detects M(S)>1/14 only (vanishes on the tight AP = measure-zero boundary packet, not a counterexample); the integer-kernel=GMC2 unification SURVIVES as a strict-BULK observable, boundary handled by THM-2058 exact packets. reflection planar-jc-is-nc2-one-sidedness-...-S103. HYP-8910.
-
-## codex-2026-07-21 -- HYP-8879 strict-measure boundary correction
-
-**HONEST:** JC(2) OPEN (JC(n>=3) FALSE, Keller THM-1300). Worked it via 3 reduction PROGRAMS (none complete): (A) de Bondt+Zhao => VC(4) (JC(2)<=>a dim-4 Laplacian moment nullcone, doubling n->2n); (B) klein-S329 Euler-Zariski cover-degree-3 bootstrap (cuspidal Jelonek curve, ramification-parabola escape, NO CF); (C) mac-mini-S137 golden-corner/Lame (subtractive Euclid on Newton slopes).
-- **MISTAKE-227:** S102's integral with `g=1[||x||>1/14]` detects only
-  `M(S)>1/14`. It vanishes on the tight AP `{1,...,13}`, whose weak safe set is
-  the six-point packet `U_14/14`, so zero measure is not an LRC counterexample.
-- **Surviving bridge:** after Fejer convergence control, the integer-kernel
-  expansion is a strict-bulk observable. THM-2058's exact denominator packets
-  handle equality; finite Sidon/AP ratios prove no AP-core reduction.
-- **THM-2060 proved with prior-art boundary:** the clock-independent order is
-  `q=a/gcd(a,w)`, and every tail histogram bin has the sharp floor
-  `q-ceil(q/7)`. The qualitative one-tail dodge was already THM-760/761/765;
-  the new gain is exact CRT support, multiplicity, and clock composition.
-- **THM-2061 proved reduction:** the only primitive imprimitive-eleven-core
-  residue is the dyadic two-odd-tail seam. Strict failure is an open folded-
-  diamond cover of the closed core-safe set; it forces divisor completeness
-  through `14`, tails below `12 max(C)`, measure at most `4/63`, and has no
-  survivor for normalized cores in `{1,...,19}`.
-- **THM-2062 proved atlas sieve:** deletion determinantal indices turn
-  hereditary primitivity on every saturated two-anchor interval into an exact
-  squarefree CRT wheel with at most two bad projective directions per prime;
-  rank-one deletions become affine `+-1` terminals plus a 1D coprime wheel.
-- **THM-2064 incoming synthesis:** the independent common-clock capacity
-  theorem proves the full multi-tail union bound and the same unique dyadic
-  two-tail seam; THM-2060 is now explicitly its sharp histogram specialization.
-- **THM-2065 proved circuit-ray collapse:** THM-2051's bounded support-three-
-  to-five relation pulls back to either a persistent coefficient-row circuit
-  or one primitive projective parameter. Thus every circuit-free two-anchor
-  template has only finitely many strict-null rows, filtered exactly by the
-  THM-2062 wheel. Persistent height-`2^20` marked circuits are the residual.
-
-**VERIFIED (jc2_via_vanishing_conjecture_and_the_cf_termination_boxeph_S225.py):** 2D symmetric case EASY -- nilpotent Hessian <=> P prop (x+iy)^d (harmonic), Delta^m(P^m)=0, invertible. Lame worst-case = Fibonacci (longest Euclid chain <200 = (144,89)). [Restricted JC(2) proved elsewhere: THM-1345 equivariant, THM-1370 elliptic, THM-1365 poly-Galois, geom-degree<=2, THM-2063.]
-
-**CREATIVE UNIFICATION:** the JC(2) obstruction has THREE equivalent forms -- (A) VC(4) both-signs radial nonvanishing; (B) leading-form descent {P_A,Q_B}=0 propagating to a coordinate (THM-1345 s5); (C) Lame-for-polygons CF bound -- and ALL THREE are DESCENT/RETURN-TERMINATION problems = exactly what my coprime-interval/numerical-semigroup/Frobenius engine (S223 DvdK, S224 Wall A) handles; Lame-Fibonacci = the effective bound. codex THM-2045 (smooth factorized R has NO planar Jacobian mate, an exponent-semigroup/Newton-edge obstruction) already uses this engine.
-
-**BOUNDED:** VC(4) GMC-like (E=L o CT) but GMC(2)NOT=>JC(2) (doubling to rank>=2, S205); JC<->LRC 'shared n=12' WITHDRAWN (S137's 12 = Fibonacci proxy). POSITIVE PRIOR: Keller collision min = dim 3, so n=2 is BELOW threshold -> expect JC(2) TRUE + provable by low-rank/coprime-interval means.
-
-**Corrections adopted (mining):** CF thread = mac-mini-S137 (not klein-S329); reify-ladder = deathstar-S75 (not defunct THM-1750); apolarity/Fischer != THM-1685/1710/1735 (those are TNC). NOT a proof of JC(2) -- an assembled route map + verified pieces + the unified descent-termination obstruction. Artifacts: reflection working-jc2-the-obstruction-is-a-descent-termination-...-boxeph-S225.md, HYP-8905, script (+.out).
 - **PROVED:** for `S=aC union {w}`, safe phases on any clock `N` are the CRT
   fiber product of a core packet modulo `N` and a tail packet modulo
   `Na/gcd(w,Na)`. Reducing both to their common gcd turns existence into an
@@ -107,43 +52,8 @@ rank/cycle comparison is heuristic, not a classification of collisions.
 - **Assumption challenge:** the lossless carrier is a bipartite CRT
   compatibility graph. It is not a runner tournament or a modular cusp;
   orienting its symmetric ties destroys the theorem.
-**Owner:** leverage the recent ideas to make progress toward LRC. Uses the RIGOROUS tools (not the cusp metaphor -- codex MISTAKE-226 accepted).
+**Owner:** leverage the recent ideas to make progress toward LRC. Uses the RIGOROUS tools (not the cusp metaphor -- codex MISTAKE-233 accepted).
 
-## codex-2026-07-21 -- concrete GMC(2) residue and conditional NC2 capstone checked
-
-- `GMC2NormalizedResidue` now proves the complete normalized three-case
-  calculation: non-dilated channels vanish by their multinomial, dilated
-  off-face channels vanish by the factorial gap, and face channels reindex to
-  the exact Frobenius power of the undilated face constant term.
-- `GMC2SupportFaceBridge` proves exact geometric-face/support-face reindexing,
-  identifies the specialized lifted seed with that constant term, and derives
-  the global scaled floor, exact face height, and strict off-face gap from a
-  concrete reference channel.
-- `GMC2NC2` checks the whole post-specialization contradiction and exports
-  `nc2_of_dvdK1_of_heightWitnessSupplier` plus the GMC(2) endpoint. The old
-  one-`sorry` `GMC2NC2Capstone` WIP is replaced by a sorry-free compatibility
-  surface. All audited declarations use only Lean's standard axiom trio.
-- Direct checks of the concrete residue, support bridge, conditional capstone,
-  and compatibility surface pass at the default heartbeat. The aggregator
-  check stopped before elaboration at its pre-existing missing
-  `GMC2GoodReduction.olean`; that dependency chain was not built under the
-  no-big-build constraint.
-- **Exact remaining boundary:** the reference-channel extractor and height
-  theorem are separately green, but their direct existential wrapper into
-  `HeightWitnessSupplier` deterministically exhausts elaboration (also at
-  800k heartbeats) without a type or mathematical error. DvdK remains a
-  separate published external premise. A final default-budget redesign
-  compressed the reference to mass and balance: the compact extractor, base
-  obligations, and base-contradiction adapter all elaborated, but the final
-  `nc2_of_dvdK1` compositor still timed out at `whnf`; the experiment was
-  reverted. No repository-wide build was run.
-- **Live-main connection audited:** S223/HYP-8895 recasts the positive-
-  coefficient one-variable DvdK return set as a numerical semigroup. That is
-  a useful future formalization route, but it does not replace `DvdK1` here:
-  the mixed-sign cancellation case still rests on S222's unfinished saddle
-  argument. S103/HYP-8910 independently finds the same one-sided charge shape
-  in a symmetric planar-Jacobian subcase, but explicitly supplies no transfer
-  theorem to Gaussian moments and therefore does not change this Lean spine.
 **THE MOVE:** assemble the structural theorems into an EXACT rational covering-min (upgrade over S206's float grid):
 - THM-2047 s2 (PROVED): every maximizer t*=a/q has q|v_i+v_j (q<=2max) => M(S)=max over pair-sum vertices a/q, exact rational.
 - S212/HYP-8845: covering => chi(G_delta) EVEN + mirror-symmetric => scan a/q in (0,1/2] (HALVING, verified).
@@ -161,7 +71,7 @@ rank/cycle comparison is heuristic, not a classification of collisions.
 **BYPASS (verified, bypass_dvdk_via_saddle_point_watson_boxeph_S222.py):** the needed direction 'f two-sided => CT(f^m)!=0 for some/all large m' is a SADDLE-POINT/WATSON (Laplace) integral. CT(f^m)=[z^0]f^m = (1/2pi) int f(r* e^{i th})^m d th on the saddle circle |z|=r* (r* = mean-exponent-zero radius, exists IFF 0 in int Newton polytope = two-sided). Dominant-saddle asymptotic CT(f^m) ~ rho^m c/sqrt(m), rho=dominant modulus>0 => NONZERO for large m, EFFECTIVE, no residues/Liouville/DvdK.
 ## codex-2026-07-21 -- modular-form bridge audited; second scaled AP-tail plane closed
 
-- **MISTAKE-226:** HYP-8880/S220 conflated divisor-indexed LRC clocks with
+- **MISTAKE-233:** HYP-8880/S220 conflated divisor-indexed LRC clocks with
   modular cusps, dilation with `Gamma_0` level, and Hecke coefficients with
   cusp values. The level-14 weight-two newform is a rational non-CM eta
   product, but no transform connects it or its symmetric square to the signed
@@ -202,7 +112,7 @@ rank/cycle comparison is heuristic, not a classification of collisions.
   trichotomy. Strict templates occur primitively on all sufficiently large
   prime grids; tight templates have finite support on level-14 pair-sum clocks;
   subthreshold templates have no packets. This is the lawful pointwise carrier,
-  unlike the retracted modular-form attachment in MISTAKE-226.
+  unlike the retracted modular-form attachment in MISTAKE-233.
 - **Unique-channel no-go:** at `N=29`, the template
   `(1,2,3,4,5,6,8,9,10,11,12,13,14)` has unique antipodal maximizers `+/-4`
   but height only `2/29`. HYP-8878's uniqueness principle therefore schedules
@@ -414,10 +324,11 @@ copied from earlier summaries.
   structured planes, not the general 14-runner case.
 - `THM-2059` gives the exact generalized-CRT join of core-safe and tail-safe
   packets for any one-tail clock. Its histogram dot product counts compatible
-  classes; the `Na/lcm` lift counts safe grid phases. Zero overlap rejects only
+  classes; the `Na/lcm` lift counts safe grid indices. Zero overlap rejects only
   that clock grid.
-- `THM-2058` is an empty reservation. It contains no theorem, proof, script, or
-  result and must never be cited as progress.
+- `THM-2058` is proved: it gives exact primitive packets, labelled transport,
+  and one coprime owner interval per fixed plane/pair/basis/deck cell. It is a
+  carrier theorem, not a discharge or LRC(14).
 
 Therefore **LRC(14) remains open**. The most compressed current obligation is to
 route every residual two-anchor star either to the transverse-deck determinant
@@ -516,91 +427,3 @@ mechanisms and failed bridges, not just outcomes. Turn certificate failure into
 an address with sidecar data; promote successful meta-patterns into
 `META-PATTERNS.md`; and keep current-truth summaries short enough that future
 agents read the proof rather than inherit folklore.
-> **CURRENT-TRUTH WARNING (2026-07-21):** This is a concise handoff ledger,
-> not a proof authority. Start with [`START-HERE.md`](START-HERE.md),
-> [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md), and
-> [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
-
-# Session Log — Current Research Handoffs
-
-The former chronological stream is preserved in
-[`SESSION-LOG-HISTORICAL-THROUGH-2026-07-21.md`](SESSION-LOG-HISTORICAL-THROUGH-2026-07-21.md).
-This file records only changes that should alter how the next session starts.
-
-## LRC(14): present terminal stack
-
-- **Status remains OPEN.** The old uniform `q<=25` claim is false, uniform
-  twelve-speed sporadic emptiness is not proved, and a failed certificate gate
-  means uncertified—not unsafe.
-- **THM-2051/2052:** every hypothetical counterexample has a genuine
-  support-`3..5`, height-`2^20` relation and an eleven-dimensional bounded
-  sparse code. Rank twelve is a finite maximal-minor box; rank eleven is a
-  finite two-anchor, one-projective-parameter atlas.
-- **THM-2053/2055/2056:** the rank-eleven state has an exact transverse deck,
-  an indexed open 26-disk sufficient-gate failure carrier, a signed-hull owner
-  fan, and a finite Kelvin/Farey certificate. Non-hull deck entries, tie owners,
-  determinant magnitudes, and basis data remain load-bearing.
-- **THM-2057:** two scaled AP one-tail planes are closed by missing clocks and
-  separate affine binding phases. This is a model mechanism, not a general-star
-  theorem.
-- **THM-2058 PROVED:** packets split by reduced phase order with divisor/Mobius
-  laws, labelled `M^{-1}` transport, primitive discrepancy, and exact
-  bulk/boundary/null support. For each fixed plane, exposed pair, saturated
-  basis, bad denominator, and hull owner, the longitudinal survivors form one
-  coprime interval minus collisions. This is a carrier, not a discharge.
-- **THM-2059 PROVED:** core and tail packets join by generalized CRT. The
-  histogram dot product counts compatible classes; multiplying by `Na/lcm`
-  counts safe grid indices. Zero overlap rejects that grid only.
-- **THM-2060/2061 RESERVED:** tail-coset saturation and the dyadic two-tail
-  folded seam are independent proof candidates under audit. Neither is a
-  theorem input or an empty-seam result.
-- **Live obligation:** enumerate/compress the rank-eleven atlas, then discharge
-  every labelled coprime interval by clocks/CRT, pair sums, relative Fejer,
-  Euler endpoints, or rank gain. Decide the rank-twelve box separately.
-
-## Corrections that changed active routes
-
-- **MISTAKE-235 / HYP-8879:** LRC and GMC are differently typed weighted
-  fibers. LRC uses an infinite Fejer-regularized sinc lattice; a fixed GMC
-  moment uses a finite mass-constrained channel slice. S102's `K=9` examples
-  prove no AP-core reduction, and strict measure loses the tight boundary.
-- **MISTAKE-234 / HYP-8895:** a return semigroup records support reachability.
-  Mixed or complex coefficients can cancel on infinitely many reachable
-  masses, so the conductor is not a coefficient-uniform DvdK bound.
-- **MISTAKE-230--233:** observable-fiber size is not universal entropy;
-  composite modulus 14 is not Paley/Frobenius; modular cusps and `f14` do not
-  preserve the loneliness predicate. These remain typed analogies only.
-- **MISTAKE-226/227/229:** diagonal constant terms lose augmentation; the AP
-  chain is an index-`11!` frame rather than a saturated code; the tangent-disk
-  gate has no intrinsic Heegner discriminant `-7`.
-
-## Other current portfolio handoffs
-
-- **NC2/GMC(2) is proved** by THM-2022's lowest-balanced-face Frobenius
-  mechanism. Root-imported formalization nodes are sorry-free; the separate
-  capstone has one `sorry`, and formal DvdK remains. GMC is false from
-  dimension three onward.
-- **Tournaments:** order-join/strong-core laws and signed Rédei data are the
-  reliable operation layer. The invariant lattice is exact only through
-  `n<=6`; `H>=disc` is open; higher GLMY path homology remains convention-
-  disputed. A tournament quotient must name its vertices, gauge, ties, target,
-  and loss.
-- **Reciprocal sequences:** use support Dirichlet profiles plus collision tax,
-  Abel--Stieltjes/log-block Dini, and the Bertrand boundary. Support and indexed
-  multiplicity are different objects.
-- **Poisson/Jacobian/Dixmier:** the two-pair Poisson conjecture is false, while
-  DC(2) and planar JC remain open. Do not infer a fixed-dimension transfer from
-  stable equivalence.
-
-## Process changes made durable
-
-- Startup is bounded: `AGENTS.md`, `START-HERE`, the relevant frontier section,
-  active guardrails, then exact routed files. Giant chronology is never truth.
-- Every mathematical session carries Anchor / Niche / Wildcard lanes, performs
-  an inheritance pass, keeps a 3–7 concept board, and revisits every connection
-  after pulls and computations.
-- A connection must name source, target, map, preserved predicate, loss,
-  sidecar, and decisive test. False claims leave a witness, first failed step,
-  surviving mechanism, repaired statement, and new question.
-- The giant hypothesis and session ledgers are now separate historical files;
-  their bounded current routers remain at byte zero and are checker-protected.

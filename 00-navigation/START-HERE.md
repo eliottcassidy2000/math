@@ -80,9 +80,9 @@ are searchable history—not mandatory warm-up.
     proves only that the factorized family `R=x(a-b*x^r*q^s)` has no planar
     polynomial mate.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
-    proves parity-Hasse completeness for reduced period-14 functions, then
-    gives an infinite AP-alias family with the same local packet and a strict
-    `17/41` exit. Exact owner height or adaptive resolved phase is indispensable.
+    proves parity-Hasse completeness for reduced period-14 functions. The
+    audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed
+    lift depth, threshold, and owner sector but exits strictly at `47/113`.
     [THM-2047](../01-canon/theorems/THM-2047-phase-height-toric-arrangement-for-lrc.md)
     proves the labelled phase-height carrier. THM-2050 further shows complete
     local germs at all period-14 unit phases can agree while global maxima
@@ -96,16 +96,16 @@ are searchable history—not mandatory warm-up.
     while rank eleven gives finite two-anchor stars. THM-2053 adds the
     exact transverse deck `D_N(m)` and a sufficient determinant gate whose
     strict failure carrier is an indexed union of 26 open tangent disks.
-    THM-2055/2056 turn the fixed-basis determinant side into a signed-hull
-    normal fan and finite Kelvin/Farey
-    certificate. THM-2057 closes two scaled AP one-tail families: the
+    THM-2055/2056 turn the determinant side into a signed-hull normal fan and
+    finite Kelvin/Farey certificate. THM-2057 closes two AP one-tail families:
     `{1,...,11,13}` core by `12a`/`14a` clocks and an `84a|w` binding branch,
     and the `{1,...,12}` core by `13a`/`14a` clocks and a `182a|w` deep-well
-    branch. THM-2059 exactly joins arbitrary-clock core/tail packets by CRT
-    histograms but does not force overlap. The remaining task is exact
-    clock/pair-sum/Fejer/Euler discharge of the labelled rank-eleven
-    intersection; rank twelve is the separate finite-box branch and still needs exact decision.
-    Failure of a gate is only uncertified; THM-2058 is an unproved empty stub.
+    branch. THM-2058 splits reduced-order packets and leaves one coprime
+    longitudinal interval per fixed bad denominator/owner; THM-2059 joins
+    arbitrary-clock core/tail packets by CRT but does not force overlap. The
+    remaining task is clock/pair-sum/Fejer/Euler discharge of the labelled
+    rank-eleven intersection; rank twelve still needs exact finite decision.
+    THM-2060/2061 are reserved proof candidates under audit, not closed branches.
 16. **Shared syntax is not a bridge.** MISTAKE-230--233/HYP-8885 retract the
     universal entropy/modular frame; MISTAKE-235 leaves S102's LRC/GMC sums as
     analogy, not AP-core reduction. Fiber size is observable-relative, and
@@ -116,7 +116,7 @@ are searchable history—not mandatory warm-up.
 
 | Topic | Read first | Then use |
 |---|---|---|
-| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2057/2059, [HYP-8871](../05-knowledge/hypotheses/HYP-8871-lrc14-owner-sector-klein-sail-automaton.md) |
+| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2059; audit reserved THM-2060/2061 separately |
 | LRC / Frobenius wildcard | [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) | THM-2041 packets; keep seed and pointwise exit explicit |
 | LRC literature | [`CORE-PAPERS.md#lonely-runner-conjecture`](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [`LRC-TECHNIQUE-INDEX.md`](LRC-TECHNIQUE-INDEX.md), source paper |
 | NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022, THM-2040/2041, active guardrails |

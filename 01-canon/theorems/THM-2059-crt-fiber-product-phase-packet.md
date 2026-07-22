@@ -116,9 +116,9 @@ plane closures additionally require their separate affine binding phases.
 The gain is that (5) remains exact for `N>14`, when neither all nonzero
 residues nor all units are automatically safe. Instead of discarding those
 clocks, one computes the actual core packet and asks whether its reduction
-histogram overlaps the tail packet. This is the natural join with the
-primitive phase-order counts proposed in the RESERVED / UNPROVED THM-2058
-stub; no such counts are supplied there.
+histogram overlaps the tail packet. This is the natural join with THM-2058's
+proved primitive phase-order packets and labelled owner intervals; THM-2059
+adds compatibility, while neither theorem forces every overlap to be positive.
 
 A zero overlap rejects only that clock grid, not the row.
 

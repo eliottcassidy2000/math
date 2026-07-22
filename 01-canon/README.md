@@ -19,7 +19,7 @@ not stable addresses because legacy collisions exist; cite ID plus slug/path.
 | `VERIFIED` | Reproducible evidence; no general proof claimed |
 | `CONDITIONAL` | Correct implication with a named open input |
 | `OPEN` | Precise unresolved statement |
-| `RESERVED` | Namespace-only empty stub; no usable statement or dependency |
+| `RESERVED` | Unproved namespace or provisional candidate under audit; never a result/dependency |
 | `REFUTED` | False; witness and surviving repair retained |
 | `RETIRED` / `SUPERSEDED` | Historical pointer; use the linked replacement |
 
@@ -78,9 +78,10 @@ formalization: []
 Not every section needs equal length; every section relevant to the claim must
 be answered. A short theorem can remain short.
 
-A namespace reservation is not a theorem record. Label it
-`RESERVED / UNPROVED EMPTY STUB`, leave `depends_on: []`, and do not list it as
-a consumer input until a statement and proof/evidence are actually present.
+A pure namespace reservation must say `RESERVED / UNPROVED EMPTY STUB`, leave
+`depends_on: []`, and contain no claim. A reserved proof candidate must name
+its missing audit/proof obligations and candidate prerequisites explicitly;
+it still cannot be cited as a result or as a dependency of proved canon.
 
 ## Admission gate
 

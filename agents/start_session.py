@@ -320,6 +320,7 @@ def topic_hits(
         (score, path)
         for path, (score, count) in file_scores.items()
         if count >= required_matches and (not has_identifier or path in identifier_paths)
+        and "/INDEX-HISTORICAL-" not in path
     ]
     groups = (
         ("Canon", "01-canon/theorems/", False),
@@ -406,7 +407,7 @@ def session_posture(topic: str) -> None:
     print("Keep a 3–7 concept board; compare each new result against every item.")
     print("Explain the mechanism or failure anatomy, not only the verdict.")
     print("Type connections as map / preserved predicate / loss / sidecar / test.")
-    print("Treat RESERVED stubs as namespace only, never as results or dependencies.")
+    print("Treat every RESERVED file as unproved, including candidates under audit; never use it as a proved result or dependency.")
 
 
 def identity_note() -> None:

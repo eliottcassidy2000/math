@@ -37,11 +37,12 @@ is exact and potentially scalable.
 
 ## How this changes the finish target
 
-THM-2058 currently reserves a primitive phase-order and longitudinal-interval
-carrier but remains an empty unproved stub in the checked tree. If those packet
-counts are eventually proved, they should feed into THM-2059's `alpha` histogram. The tail
-interval supplies `beta`; the CRT dot product becomes the exact acceptance
-test. This suggests the following finite pipeline inside every THM-2053 deck:
+THM-2058 now proves the primitive phase-order packets, labelled transport, and
+one longitudinal owner interval for each fixed plane/pair/basis/deck cell.
+Those full labelled packets feed THM-2059's histograms; marginal counts alone
+do not. The tail interval supplies the other histogram, and the CRT dot product
+is the exact grid-acceptance test—but it need not be positive. This gives the
+following finite pipeline inside every THM-2053 deck:
 
 ```text
 transverse template

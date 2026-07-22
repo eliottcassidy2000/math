@@ -29,6 +29,7 @@ counterexample -> primitive Cover14/non-AP peel kernel
                -> rank 11 star atlas / rank 12 finite box
                -> transverse deck + indexed 26 open disks [THM-2053]
                -> signed-hull fan + Kelvin/Farey certificate [THM-2055/2056]
+               -> primitive owner intervals [THM-2058]
                -> clock binding [THM-2057] + exact CRT packet join [THM-2059]
                -> pair-sum / Fejer / Euler / rank discharge.
 ```
@@ -41,6 +42,7 @@ observer data:
 | Transverse deck | exposed pair, `N`, labelled integral template `m`, longitudinal unit, `D_N(m)` | Remove whole fibers and exploit the bad-modulus down-set/conductor | Oriented-matroid signs and hull vertices alone lose determinant magnitudes and non-hull deck entries. |
 | Determinant/Kelvin fan | saturated basis, signed column hull, owner/tie labels, primitive ray, 26 disks, polar polygon | THM-2055/2056 finitely certify every nonlisted ray | Gate failure is “uncertified,” not unsafe; the fan is basis-dependent and not a Heegner form. |
 | Missing-clock binding | core residues, unit numerator orbit, killed clocks, divisibility lattice, affine binding phase | Generalize THM-2057's `12a`/`14a`/`84a` and `13a`/`14a`/`182a` closures | The theorem closes two scaled AP one-tail planes, not every star. |
+| Primitive packet/owner interval | reduced phase order, full labels, bad `N`, hull owner, coprime longitudinal coordinate | THM-2058 gives divisor/Mobius packets, bulk/boundary/null support, and one interval minus collisions | Counts alone erase phase and owner; a surviving interval is not discharged. |
 | CRT packet join | core/tail safe residues and their reduction histograms modulo the CRT gcd | THM-2059 counts compatible classes by the dot product and grid phases after the `Na/lcm` lift | A zero dot product rejects one grid only; marginal packet sizes lose compatibility. |
 | Resonance fan | exact wall equations, pair-sum phases, cell labels, owner margins | Discharge whole disk cells symbolically as in HYP-2896 | A fan without a phase-height certificate is only a partition. |
 | Relative Fejer | bounded scalar/vector relation packets and a proved lifted plateau | Certify resonance-lift/nonaliasing cells using THM-2054's explicit budget | Numerical cutoff compatibility does not identify the model torus. |
@@ -92,8 +94,9 @@ positive-speed gauge; calling disk membership unsafe; inventing a quadratic-
 form discriminant from `14`; accepting an unpointed safe direction; or
 orienting overlap ties arbitrarily.
 
-Anchors: THM-2051--2057, THM-2059, THM-2047, THM-2048, HYP-8871, HYP-8841,
-HYP-8846, HYP-2896, MISTAKE-226--234. THM-2058 is a reservation, not an input.
+Anchors: THM-2051--2059, THM-2047, THM-2048, HYP-8871, HYP-8841,
+HYP-8846, HYP-2896, MISTAKE-226--235. THM-2060/2061 are reserved audit
+targets, not proof inputs.
 
 Next agent hook: compute saturated reduced bases and tangent-disk intersections
 for the mandatory AP, lifted-AP, K33, delayed-period, and Cover14 controls;

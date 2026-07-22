@@ -6,9 +6,9 @@ understanding, not indiscriminate accumulation.
 
 ## Structure
 
-- `hypotheses/` — every precise tested claim, positive or negative. Use
-  `hypotheses/INDEX.md` for search; a detail file should contain the current
-  statement, evidence, status, and repair lineage.
+- `hypotheses/` — every precise tested claim, positive or negative. The bounded
+  `hypotheses/INDEX.md` is current routing; its linked historical ledger is
+  provenance. A detail file carries statement, evidence, status, and repair.
 - `results/` — frozen outputs paired with their generating scripts. The index
   records which conclusion each output supports.
 - `variables/` — definitions, domains, equations, known values, transformations,

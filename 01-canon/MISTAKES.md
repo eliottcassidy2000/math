@@ -159,6 +159,11 @@ Format per entry:
 ## MISTAKE-226 (2026-07-21, codex audit of HYP-8880/S220 and its HYP-8885/S221 reuse) -- shared divisor labels were promoted to an identification of LRC clocks with modular cusps and of the level-14 newform with the LRC obstruction
 ## MISTAKE-235 (2026-07-21, audit of S102 / HYP-8879) -- a shared kernel-sum syntax and four truncated examples were promoted to an LRC-to-GMC equivalence and an AP-core reduction
 
+This correction subsumes the narrower strict-measure repair that initially
+landed under a colliding `MISTAKE-227` in commit `c270f8aaa`. Canonical
+`MISTAKE-227` remains the AP-chain saturation error below; the modular-cusp
+bridge is `MISTAKE-233`, and additive-energy/augmentation is `MISTAKE-226`.
+
 - **What was claimed:** S102 wrote the Fourier expansion of the LRC lonely-set
   measure as a sum over the integer relation lattice, compared it with a
   balanced-channel expansion of a Gaussian moment, and called them the same

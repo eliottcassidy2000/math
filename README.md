@@ -48,10 +48,10 @@ As of 2026-07-21:
   `{1,...,12}` core by `13a`/`14a` clocks and a `182a|w` deep-well phase. The
   live prize is a lossless deck/clock/Farey/endpoint discharge for every
   remaining rank-eleven star cell; rank twelve is confined to a separate
-  finite box that still needs exact decision. THM-2059 gives an exact
-  arbitrary-clock CRT histogram join on one-tail cells; it does not force
-  packet overlap.
-  A failed gate means uncertified, not unsafe; THM-2058 is an empty reservation.
+  finite box that still needs exact decision. THM-2058 proves the primitive
+  packet/deck-fan carrier and THM-2059 the arbitrary-clock CRT join; neither
+  empties every interval or forces overlap. THM-2060/2061 are reserved proof
+  candidates under audit. A failed gate means uncertified, not unsafe.
 - **NC2 and GMC(2) are PROVED in repo canon** by THM-2022's lowest-balanced-face
   Frobenius argument. Its modular Lean spine is root-imported and sorry-free at
   the checked nodes, including descent, face construction, DvdK seed/reference

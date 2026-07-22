@@ -59,9 +59,11 @@ names, or session territory:
 4. cite an existing item by ID **plus slug/path** because legacy collisions
    remain.
 
-An honest stub states what is reserved, what is known, what is missing, and
-why the namespace is needed. Speculation belongs in hypotheses/tangents, not a
-theorem stub.
+An empty stub states what is reserved and why, has no dependencies, and says
+`RESERVED / UNPROVED EMPTY STUB`. A provisional proof candidate may reserve a
+theorem slug only when its status, missing audit, and candidate prerequisites
+are explicit; it remains outside the proof graph. Broader speculation belongs
+in hypotheses/tangents.
 
 ## Checkpoint rhythm
 
@@ -93,10 +95,10 @@ or remove duplicate lines. After any automatic union merge:
 - repair current truth in the rolling frontier/guardrails rather than rewriting
   historical provenance.
 
-The recent high-number MISTAKE namespace collision is the canonical warning: a
-clean rebase can still create a semantically colliding ledger. Current repairs
-use MISTAKE-217 for signed Rédei data and MISTAKE-220 for SCC additivity, while
-the older MISTAKE-216 keeps its Poisson-rank meaning.
+The recent MISTAKE-226/227 collisions are the canonical warning: a clean rebase
+can still create a semantically colliding ledger. Canonical 226 is the
+augmentation/energy error, 227 the AP-chain saturation error, 233 the modular-
+cusp bridge, and 235 the S102 weighted-fiber/AP-reduction correction.
 
 ## Computation and formalization
 

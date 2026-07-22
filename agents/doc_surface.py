@@ -72,6 +72,8 @@ LINE_BUDGETS = {
     "01-canon/ACTIVE-GUARDRAILS.md": 180,
     "00-navigation/RESEARCH-PROTOCOL.md": 300,
     "00-navigation/META-PATTERNS.md": 400,
+    "00-navigation/SESSION-LOG.md": 120,
+    "05-knowledge/hypotheses/INDEX.md": 120,
     "05-knowledge/reference/CORE-PAPERS.md": 600,
     "00-navigation/CONCURRENT-SESSIONS.md": 160,
     "01-canon/README.md": 140,
