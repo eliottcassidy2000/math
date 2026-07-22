@@ -271,10 +271,11 @@ fiber representatives. A sign-only matroid is insufficient.
   all lift to vector-character relations give a whole-product Fejer
   decorrelation estimate without summing the relation lattice. Its
   model-specific full-torus identification debt remains explicit.
-- HYP-8860's Paley-prime table usefully assigns roles to moduli `3,7,11`
-  (resonance atom, period-14 apex, rank scale). It is a modulus-selection lens,
-  not a carrier: Paley orientation discards the signed coefficients and
-  endpoint owners needed to decide a tangent-disk point.
+- HYP-8860's odd-prime Paley formulas survive only as tournament background.
+  MISTAKE-228 retracts the LRC periodic table: it supplies no modulus-selection
+  theorem and discards the signed coefficients and endpoint owners needed to
+  decide a tangent-disk point. MISTAKE-229 likewise blocks assigning the disk
+  union a Heegner discriminant from `14=2*7`.
 - THM-2055 replaces the raw tangent-disk union by the signed column polygon's
   normal fan. Only hull vertices own the determinant maximum; each owner cone
   has one disk and an owner-local radius. THM-2056 Kelvin-inverts those disks

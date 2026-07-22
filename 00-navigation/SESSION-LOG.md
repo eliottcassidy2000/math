@@ -385,22 +385,24 @@ Older session prose remains discoverable in git history, reflections,
 hypothesis files, and frozen outputs. Entries here record only the reusable
 survivor, correction, and next question.
 
-## codex-2026-07-21 -- rank-or-Euler LRC frontier and startup consolidation
+## codex-2026-07-21 -- finite tangent-disk LRC frontier and startup consolidation
 
 - THM-2051's pair-exact Fejer--BV theorem forces a genuine support-`3..5`
-  relation of height at most `2^21` on every hard row. THM-2052 then forces
-  eleven independent bounded support-at-most-three relations, placing every hypothetical counterexample
-  in a finite atlas of rational planes. Rank twelve is a finite maximal-minor
-  terminal; classification and pointed transport remain open.
-- THM-2047 supplies the phase-height/Euler/deletion carrier, THM-2048 the
-  quantized peel tax, THM-2050 the global-blindness control, and HYP-8845 the
-  free mirror involution on covering rows. The live theorem is owner-labelled
-  Euler survival or an active twelfth relation; HYP-8846 records why an
-  unpointed safe direction in the plane has the wrong quantifier.
-- Concurrent S95 Lean work added the complete face-sum Frobenius identity and
-  noncancellation corollary; DvdK/descent/Kummer assembly and `nc2 : NC2`
-  remain. S213 unified tournament chirality, toothpick parity, and LRC mirror
-  parity at the level of the general involution-count law only.
+  relation of height at most `2^20`. THM-2052 forces eleven bounded sparse
+  relations and a finite two-anchor star atlas. THM-2053 repairs the pointed
+  large-direction gap: all still-uncertified primitive parameters lie in 26
+  explicit tangent disks. The live task is saturated-basis/atlas compression
+  and HYP-2896-style resonance-fan, pair-sum, or Euler discharge inside them;
+  rank twelve is an accelerator, not the sole terminal.
+- MISTAKE-227--229 repair three concurrent tournament syntheses: the AP chain
+  frame has saturation index `11!`; Paley adjacency roots are shifted
+  half-scaled Gauss sums and give no LRC prime roles; the tangent-disk union has
+  no discriminant `-7` or Heegner classification. The exact surviving scripts
+  and corrected reflections retain the useful frames without the transfers.
+- THM-2022's partial Lean spine is modular and root-imported, including descent,
+  face construction, DvdK interfaces, height/gap, Lucas, and whole-face
+  Frobenius. Concrete normalized-channel assembly, conditional `DvdK1 -> NC2`,
+  and formal proof of the cited DvdK input remain.
 - The bounded startup docs, guardrails, literature map, proof map, technique
   overlay, current digest, and validators were rebuilt so historical material
   remains searchable without overriding current canon.

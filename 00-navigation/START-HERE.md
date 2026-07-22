@@ -12,11 +12,12 @@ the exact current commit. Status labels and proof links live in
 2. **Do not chase the old shortcuts:** uniform good period `q <= 25` is false,
    and uniform emptiness of the twelve-speed sporadic tight branch remains open.
 3. **Major new closure:** NC2, hence unrestricted GMC(2), is **PROVED in repo
-   canon** by THM-2022. Its Lean formalization is partial: sorry-free,
-   kernel-pure nodes cover Wick expansion, face arithmetic, multinomial Lucas,
-   complete face-sum Frobenius/noncancellation, and conditional
-   `NC2=>GMC(2)`; algebraic descent, DvdK, Kummer survival/layer assembly, and
-   `nc2 : NC2` remain.
+   canon** by THM-2022. Its partial Lean formalization is now modular,
+   root-imported, and sorry-free at the checked nodes: it includes Wick and
+   normalized relations, descent, lowest-face construction, the explicit
+   `DvdK1` interface, height/gap, Lucas, and whole-face Frobenius. Concrete
+   normalized-channel assembly, final conditional `DvdK1 -> NC2`, and a formal
+   proof of the cited DvdK input remain.
 4. **Truth discipline:** correction/repaired canon outranks canon, which
    outranks exact computation, hypothesis, synthesis, and historical prose.
 5. **Research posture:** use an Anchor / Niche / Wildcard portfolio. Recover
@@ -84,19 +85,23 @@ are searchable history—not mandatory warm-up.
 13. **The peel obstruction is quantized.** THM-2048 decomposes discrepancy into
     the old `6mu^2` floor plus an exact integer fiber-occupancy variance tax. It
     strictly improves the uniform tail test but is not a universal proof.
-14. **Every counterexample lies on a bounded rational plane.** THM-2051 pays
+14. **Every counterexample lies in a finite tangent-disk atlas.** THM-2051 pays
     pairs exactly and forces a genuine support-`3..5` relation of height at
-    most `2^21`. THM-2052 then forces eleven independent bounded
-    support-at-most-three relations, so
-    every counterexample lies in a finite atlas of rational subspaces of
-    dimension at most two. The remaining jump is pointed Euler survival or a
-    twelfth independent relation, not mere circuit detection.
+    most `2^20`. THM-2052 forces eleven independent bounded support-at-most-
+    three relations and, in rank eleven, a finite atlas of two-anchor stars
+    with one projective parameter. On each saturated plane THM-2053 proves
+    `max_i|a z_i-b u_i|<=(a^2+b^2)/91` is sufficient for safety; failure is
+    exactly membership in 26 open tangent disks. The remaining task is
+    practical atlas/basis compression and exact resonance-fan or Euler
+    discharge inside those disks. Disk membership means *uncertified by this
+    gate*, not unsafe; a twelfth relation is only one possible shortcut.
 
 ## Where to go by topic
 
 | Topic | Read first | Then use |
 |---|---|---|
-| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), [`HYP-8800`](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) |
+| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), [THM-2053](../01-canon/theorems/THM-2053-rank-two-parameter-plane-geodesic-terminal.md), [HYP-8846](../05-knowledge/hypotheses/HYP-8846-lrc14-pointed-plane-transport.md) |
+| LRC / Frobenius wildcard | [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) | THM-2041 packets; keep seed and pointwise exit explicit |
 | LRC literature | [`CORE-PAPERS.md#lonely-runner-conjecture`](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [`LRC-TECHNIQUE-INDEX.md`](LRC-TECHNIQUE-INDEX.md), source paper |
 | NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022, THM-2040/2041, active guardrails |
 | Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-2044/2045 |

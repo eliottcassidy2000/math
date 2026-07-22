@@ -46,15 +46,20 @@ As of 2026-07-21:
   repo's remaining work is structural, not the once-claimed uniform `q <= 25`
   shortcut, which is false. THM-2051 now closes the relation-dissociated
   branch after paying pairs exactly: every hypothetical counterexample has a
-  genuine 3--5-term relation of height at most `2^21`. THM-2052 already forces
-  eleven independent bounded support-at-most-three relations and a rational
-  plane; pointed
-  rank-or-Euler transport is the live prize.
+  genuine 3--5-term relation of height at most `2^20`. THM-2052 forces eleven
+  independent bounded support-at-most-three relations and reduces rank eleven
+  to finitely many two-anchor, one-projective-parameter stars. THM-2053 then
+  certifies every parameter outside 26 explicit tangent disks. The live prize
+  is atlas/basis compression and exact resonance-fan or Euler discharge of the
+  primitive lattice points inside those disks; rank twelve is a shortcut, not
+  the only terminal.
 - **NC2 and GMC(2) are PROVED in repo canon** by THM-2022's lowest-balanced-face
-  Frobenius argument. The Lean work is partial and sorry-free at its completed
-  kernel nodes—including complete face-sum Frobenius/noncancellation—but
-  algebraic descent, DvdK/Kummer survival and layer assembly, root wiring, and
-  the final `nc2 : NC2` theorem remain.
+  Frobenius argument. Its modular Lean spine is root-imported and sorry-free at
+  the checked nodes, including descent, face construction, DvdK seed/reference
+  interfaces, height/gap, Lucas, and whole-face Frobenius/noncancellation. The
+  remaining formalization is the concrete normalized-Wick-channel assembly,
+  the final conditional `DvdK1 -> NC2`, and a formal proof of the cited DvdK
+  input itself.
 - **GMC is false from dimension 3 onward.** Dimension two is the sharp surviving
   case handled by THM-2022; dimensions one and two must not be conflated with
   the higher-dimensional counterexamples.
@@ -65,7 +70,9 @@ As of 2026-07-21:
   termination and the coupled `D` column rather than a grade-six obstruction.
 - **Tournament work has moved from isolated invariants to operations and
   decomposition:** order-join, strong cores, signed Rédei data, local
-  subtournament censuses, and invariant-independence witnesses.
+  subtournament censuses, and invariant-independence witnesses. Rank matches
+  are not bridges without an explicit map, saturation index, and discriminant;
+  small-prime Paley spectra are background, not an LRC periodic table.
 - **For reciprocal integer sequences, the underlying object is the support
   Dirichlet profile**, not one scalar reciprocal sum; repeated values require an
   explicit collision tax.

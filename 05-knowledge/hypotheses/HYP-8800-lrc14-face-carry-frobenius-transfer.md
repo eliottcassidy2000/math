@@ -12,9 +12,11 @@ status: >
   parity-Hasse jets are complete local coordinates, but even the full packet
   plus q-threshold is globally magnitude-blind. THM-2051 has since proved the
   Fejer--BV dissociated exit, and THM-2052 reduces every hypothetical
-  counterexample to a rank-eleven bounded relation code in a rational plane.
-  The live transfer target is owner-labelled rank-or-Euler termination, not a
-  second familywise dissociation theorem.
+  counterexample to a finite two-anchor star atlas. THM-2053 certifies every
+  parameter outside 26 tangent disks in each saturated plane. The live
+  transfer target is now a seed-and-exit certificate that discharges whole
+  resonance-fan cells inside those finite disks, not a second familywise
+  dissociation theorem or an infinitary pointed-transport claim.
 source: codex-2026-07-21-NC2-transfer
 related:
   - THM-2022
@@ -30,6 +32,7 @@ related:
   - THM-671
   - THM-2051
   - THM-2052
+  - THM-2053
   - THM-873
   - THM-884
   - THM-346
@@ -406,20 +409,22 @@ nonunit/non-etale group-algebra behavior, not field ramification.
 The leverage order after this audit is:
 
 ```text
-1. active-owner Euler survival or rank-12 gain       (THM-2052/HYP-8841)
-2. pointed transport on each rational plane          (HYP-8846)
-3. THM-671 resolved-modulus/B5 supply                 (already has the exit)
-4. characteristic-3 endpoint-labelled propagation    (repairs the orbit)
-5. adaptive {14,27,41,...} resolved-phase sheaf       (global sidecar)
-6. LEM-033 conductor-grade + owner-current glue       (selector, seed open)
-7. raw Ramanujan energy / characteristic-7 jets       (diagnostic/local). (13)
+1. compress saturated star bases and tangent disks    (THM-2052/2053)
+2. exact resonance-fan / Euler discharge in the disks (HYP-2896/8841/8846)
+3. active relation outside W as a rank-12 shortcut    (THM-2052)
+4. THM-671 resolved-modulus/B5 supply                 (already has the exit)
+5. characteristic-3 endpoint-labelled propagation    (repairs the orbit)
+6. adaptive {14,27,41,...} resolved-phase sheaf       (global sidecar)
+7. conductor/owner glue; raw energy only diagnostic.  (13)
 ```
 
 THM-2051 has closed the former familywise Fejer/Toeplitz dissociation item:
 absence of a genuine bounded higher relation already gives a strict interval.
-THM-2052 starts the surviving relation code at rank eleven; the shortest gap
-is now one active independent row or an owner-labelled Euler endpoint. An
-unpointed safe direction in the resulting plane has the wrong quantifier.
+THM-2052 starts the surviving relation code at rank eleven and supplies the
+two-anchor atlas. THM-2053 repairs the large-direction quantifier uniformly;
+the shortest gap is now feasible atlas compression followed by exact discharge
+inside the tangent disks. An active independent row or owner-labelled Euler
+endpoint remains useful there but is not the only finite terminal.
 Characteristic three remains a propagation target; characteristic seven is a
 proved local chart and no-go, not a reason to add more raw jet depth.
 

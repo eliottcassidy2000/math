@@ -195,6 +195,83 @@ Format per entry:
 ---
 
 ## MISTAKE-224 (2026-07-21, codex audit of HYP-8835) -- valid antisymmetry examples were promoted to equivalences among transitivity, saddles, tori, and LRC symmetry
+## MISTAKE-229 (2026-07-21, audit of HYP-8865 / S216) -- the tangent-disk gate was assigned a nonexistent Heegner discriminant
+
+- **What was claimed:** S216 called THM-2053's residual the short vectors of
+  one binary quadratic form, inferred discriminant `-7` from `LRC(14)=2*7`,
+  used `h(-7)=1` to declare every residual plane a single rigid class, and
+  identified rank-versus-Euler with isotropic-versus-anisotropic directions.
+- **Why it is wrong:** THM-2053 compares thirteen linear determinant forms
+  `a z_i-b u_i` with the chosen-coordinate Euclidean norm `a^2+b^2`. The
+  failure locus is a **union of 26 tangent disks**, not a representation set
+  for one quadratic form. The Euclidean form has discriminant `-4` and changes
+  covariantly with the chosen saturated basis; neither the number `14` nor a
+  Paley spectral factor supplies a plane discriminant `-7`. At the prime `p`,
+  the discriminant `-p` has Legendre symbol zero, so the script's computation
+  of `(-1/p)` did not test its stated local criterion. An extra bounded
+  relation is a linear annihilator condition on all columns, not an isotropic
+  parameter direction, and failure of the sufficient gate does not imply
+  either unsafety or Euler survival.
+- **Correct framing:** retain the exact wedge identity and the classical
+  class-number table as separate facts. The useful LRC geometry is the
+  intersection of a primitive lattice and positivity cone with 26 explicit
+  tangent disks, considered up to saturated `GL_2(Z)` basis changes. Any
+  arithmetic-form compression must first construct an actual invariant form
+  from the full column configuration and prove that it preserves the gate;
+  Heegner or Paley language alone supplies no such map.
+
+---
+## MISTAKE-228 (2026-07-21, audit of HYP-8860 / S215) -- the odd-prime Paley dichotomy was promoted to an LRC periodic table
+
+- **What was claimed:** S215 assigned primes `2,3,5,7,11` intrinsic LRC roles
+  from Paley spectra, identified adjacency eigenvalues with Gauss sums, and
+  treated `p mod 4` as a tight/slack law. It called `2` part of the same Paley
+  theorem, merged the `Phi_3` and `Phi_6` factors, and linked the Paley-7 field
+  directly to the real cubic cap field.
+- **Why it is wrong:** the verified classical statement is for odd primes.
+  For `p=3 mod 4` the nonprincipal Paley-tournament eigenvalues are
+  `(-1+-i sqrt(p))/2`, while the Gauss sum is `i sqrt(p)`; for `p=1 mod 4`
+  the Paley graph also has principal eigenvalue `(p-1)/2`. The script does not
+  test `p=2`. `Phi_3=x^2+x+1` and `Phi_6=x^2-x+1` need a sign twist, and
+  `Q(sqrt(-7))` is not the real cubic field of discriminant `49`. The roles
+  “5 = Fibonacci foil” and “11 = rank” supply no map, and multiples of `11`
+  are not a forced speed coordinate.
+- **Correct framing:** retain the quadratic-residue Cayley relation and the
+  odd-prime Paley graph/tournament spectral formulas as tournament background.
+  Treat the small-prime table as a modulus-selection mnemonic only. It proves
+  no LRC tightness, slackness, rank, or transport statement.
+
+---
+## MISTAKE-227 (2026-07-21, audit of HYP-8855 / S214 and HYP-4552 / S25) -- a finite-index AP chain frame was called a saturated relation-lattice basis
+
+- **What was claimed:** the rows
+  `d_k=(k+1)e_k-k e_(k+1)` were called a `Z`-basis of
+  `L(AP)=ker_Z(1,2,...,12)`, their tridiagonal Gram matrix was assigned to the
+  whole lattice, and they were identified with THM-2052's eleven private
+  anchor-star relations. The resulting rank coincidence was promoted to a
+  common AP/tournament nullcone and to the claim that the rank and Euler
+  branches meet at the AP. The 60 minimal vectors were also called additive
+  energy.
+- **Why it is wrong:** the `d_k` span only a sublattice `D` of index
+  `11!=39,916,800`. Exactly,
+  `det Gram(D)=1,035,678,099,456,000,000`, while
+  `disc L(AP)=650`; their square-root ratio is `11!`. The saturation contains
+  the norm-three Schur rows. THM-2052 instead concerns a bounded signed code
+  on thirteen coordinates and its private rows depend on two chosen anchors;
+  no map to this twelve-coordinate lattice was given. The kernel rank is
+  `|S|-1=11`, not `|S|-2`. The 60 vectors are the signed off-diagonal Schur
+  triples, not four-term additive energy. Tournament scores `0,...,11` are a
+  translation of speeds, and LRC is not translation invariant. Reversal of
+  phase is universal, not an AP-fixed configuration theorem. THM-2053 also
+  shows rank twelve is not the only finite terminal.
+- **Correct framing:** `D` is a useful finite-index path/Jacobi frame and
+  `L(AP)=sat(D)` has discriminant `650`; saturation is exactly what restores
+  the short Schur relations that the path frame misses. The AP, transitive
+  order, palindromic pair sums, and Schur census remain diagnostic views, not
+  one object or an LRC descent. Before promoting a rank match, compute the
+  ambient type, explicit map, saturation index, and discriminant.
+
+---
 ## MISTAKE-226 (2026-07-21, codex audit of HYP-8840) -- unanchored additive energy, LRC Fourier volume, and GMC radial moments were promoted to one constant-term bridge
 
 - **What was claimed:** S211 promoted nine finite AP energy maxima to an

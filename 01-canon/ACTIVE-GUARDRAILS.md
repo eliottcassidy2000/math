@@ -44,32 +44,21 @@ mistake.
     phase/location or endpoint/child sidecar repeats sharp counterexamples from
     THM-1252–1274.
 13. **HYP-8815 is a heuristic, not a disproof characterization.** MISTAKE-221.
-    After gcd normalization, primitive + Cover14 + `M<1/14` + non-AP deletion
-    are necessary; near-AP, anti-golden, CF-blocker, and full-autocorrelation
-    claims are not. A bounded-denominator scan is only a lower bound for `M`;
-    exactness follows by enumerating all
-    [THM-1002 pair-sum rulers](theorems/THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case.md)
-    (or from the
-    sufficient cutoff `Q>=2 max(S)`). Do not gcd-filter numerators unless
-    divisor rulers are separately included. The repaired S206 script is exact
-    on its fifteen rows, but finite exactness is not a global minimizer theorem.
-    Smaller THM-731 discrepancy strengthens the safety certificate; a
-    counterexample would require `disc_v>=6|G'_{~v}|^2` for every peel.
-    THM-2048 adds a quantized fiber-occupancy tax and the necessary integer
-    inequality `6(vmu)^2+theta(1-theta)/7<=r_v^2/3`; it is a pruning
-    certificate, not yet a universal proof.
-    THM-2051's pair-exact form proves every counterexample has a genuine
-    support-`3..5`, height-`2^21` relation. THM-2052 strengthens this to eleven
-    independent bounded support-at-most-three relations and a finite atlas of rational planes. Neither
-    result classifies those planes or supplies pointed Euler transport.
+    Primitive Cover14, `M<1/14`, and non-AP deletion are necessary; the
+    near-AP/anti-golden/CF/autocorrelation claims are not. A finite scan is only
+    a lower bound unless it enumerates all [THM-1002 pair-sum rulers](theorems/THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case.md)
+    or reaches `Q>=2 max(S)`; do not gcd-filter numerators without divisor
+    rulers. THM-731 and THM-2048 give necessary peel discrepancy/fiber-tax
+    tests, not classifiers. THM-2051 forces a height-`2^20` support-`3..5`
+    relation; THM-2052 gives an eleven-dimensional sparse code and finite
+    two-anchor atlas; THM-2053 certifies parameters outside 26 tangent disks.
+    Disk membership is “undecided,” not unsafe; atlas compression and exact
+    discharge remain open, and rank twelve is only a shortcut.
 14. **Complete local phase coordinates need not be global LRC carriers.**
-    THM-2043 proves parity-Hasse completeness modulo 14, then gives infinitely
-    many rows sharing the AP's full packet and every fixed finite 7-adic height
-    prefix while admitting a strict `17/41` exit. Retain exact owner height or
-    adaptive `(q,a,slack)` data.
-    THM-2050 goes further: complete piecewise-linear germs near every unit
-    phase `a/14` agree for two rows with maxima `1/14` and `1/12`. A local germ
-    needs a global first-exit/magnitude/gluing sidecar.
+    THM-2043 gives AP aliases with every fixed 7-adic prefix and a strict
+    `17/41` exit; THM-2050 gives identical complete unit-phase germs with
+    maxima `1/14` and `1/12`. Retain owner height and a global
+    first-exit/magnitude/gluing sidecar.
 
 13b. **The coarse BONF5 middle is now closed, but the higher-relation branch is
      not.** THM-2051 combines whole-product Fejer--BV approximation with
@@ -149,20 +138,37 @@ mistake.
     conventions/calculations in degree at least three, including `beta_4(T_7)`.
     Treat only the convention-safe `beta_1/beta_2` results as canon until the
     court case is resolved.
+28. **Equal ranks do not identify lattices or tournaments.** MISTAKE-227. The
+    adjacent AP chain rows span an index-`11!` sublattice of
+    `ker_Z(1,...,12)`, not a saturated basis; their tridiagonal Gram belongs to
+    that path frame only. THM-2052's private two-anchor code lives in a
+    different 13-coordinate signed space. Before promoting a rank match,
+    exhibit the map and compute its saturation index and discriminant.
+29. **Paley spectra do not assign LRC roles to small primes.** MISTAKE-228.
+    The safe theorem is the odd-prime Paley graph/tournament dichotomy. Its
+    nonprincipal adjacency roots are shifted half-scaled Gauss sums; `p=2` is
+    outside the statement. Fibonacci/foil, apex, rank, and tight/slack labels
+    are heuristics until an LRC-preserving map is proved.
+30. **THM-2053 has no Heegner discriminant `-7`.** MISTAKE-229. Its parameter
+    norm is `a^2+b^2` (discriminant `-4` up to unimodular basis change), and
+    gate failure is a union of 26 tangent disks, not the representation set of
+    one binary quadratic form. `14=2*7`, a Paley factor of discriminant `-7`,
+    or class number one does not classify an arbitrary relation plane, force a
+    rank jump, or produce an Euler survivor.
 
 ## Integer sequences, provenance, and cross-domain transfers
 
-28. **Support is not an indexed multiset.** MISTAKE-209 and THM-2000/2005.
+31. **Support is not an indexed multiset.** MISTAKE-209 and THM-2000/2005.
     Repetitions contribute a collision tax; never compare reciprocal constants
     without saying which profile is used.
-29. **Density zero does not imply reciprocal convergence.** The actual boundary
+32. **Density zero does not imply reciprocal convergence.** The actual boundary
     is Abel–Dini/Bertrand and continues through iterated logarithms.
-30. **Finite prefixes and proxy supports are not all-`n` laws.** MISTAKE-219
+33. **Finite prefixes and proxy supports are not all-`n` laws.** MISTAKE-219
     repairs offsets, truncated constants, and support substitutions in the
     reciprocal atlas. Freeze the actual support and quantify the tail.
-31. **No OEIS match is not novelty.** THM-2010 has only short initial data and a
+34. **No OEIS match is not novelty.** THM-2010 has only short initial data and a
     search result; do not promote it to a proof that a sequence is new.
-32. **Separate verification from provenance.** MISTAKE-205 withdraws the old
+35. **Separate verification from provenance.** MISTAKE-205 withdraws the old
     Alpöge–Mathew attribution for THM-1300. State the exactly verified map and
     collision independently of uncertain discovery/publication history.
 31. **A shared Pascal array is not a geometric bridge.** MISTAKE-222. Exact

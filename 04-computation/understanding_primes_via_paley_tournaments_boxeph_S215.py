@@ -1,22 +1,20 @@
 #!/usr/bin/env python3
-"""understanding_primes_via_paley_tournaments_boxeph_S215.py -- boxeph-2026-07-21-S215
+"""Exact Paley checks plus an explicitly heuristic LRC(14) comparison (S215).
 
-Understand primes 5,7,11 as well as 2,3 -- through the standing lens 'a set of pairwise relations is a
-tournament'. EACH PRIME IS ITS PALEY OBJECT (i -> j iff j-i is a quadratic residue mod p):
+The executable theorem is only the classical ODD-PRIME Paley law for the
+relation ``i -> j iff j-i is a nonzero quadratic residue mod p``:
 
-  p = 3 mod 4  (3, 7, 11)  -> Paley TOURNAMENT : antisymmetric, self-converse, vertex-transitive,
-     doubly-regular; eigenvalues (p-1)/2 and (-1 +- i sqrt p)/2 = the QUADRATIC GAUSS SUM i sqrt p.
-     This is the 'symmetric-intransitive' HOT pole, opposite the transitive AP nullcone vertex.
-  p = 1 mod 4  (5, 13)     -> Paley GRAPH : symmetric, self-COMPLEMENTARY; eigenvalues (-1 +- sqrt p)/2
-     = the REAL Gauss sum sqrt p. For p=5, Q(sqrt5) = the GOLDEN field = Fibonacci = the LRC FOIL (S206).
-  p = 2                    -> the INVOLUTION itself (Phi_2 = x+1, the antipode / reversal / chirality)
-     that acts on all the above (S210-S213).
+* p == 3 (mod 4): a Paley tournament, with principal adjacency eigenvalue
+  (p-1)/2 and nonprincipal eigenvalues (-1 +- i*sqrt(p))/2;
+* p == 1 (mod 4): a Paley graph, with principal eigenvalue (p-1)/2 and
+  nonprincipal eigenvalues (-1 +- sqrt(p))/2.
 
-LRC(14) = 2*7 : its arithmetic is 7 (Paley-7, i sqrt 7, Phi_7 apex), its chirality is 2, its argmax is
-3 (Eisenstein Phi_6, t*=14/183), its foil is 5 (golden sqrt5 = Fibonacci), its rank is 11 (S214).
+Thus the nonprincipal spectrum is a SHIFTED, HALF-SCALED Gauss sum, not the
+Gauss sum itself.  The prime 2 lies outside this odd-prime construction.  The
+small-prime/LRC labels below are retained as prompts only: they prove no LRC
+implication, and coincidences of ranks or fields require an explicit map.
 """
 from cmath import exp, pi
-from fractions import Fraction as F
 
 def sep(t): print("\n"+"="*72+"\n"+t+"\n"+"="*72)
 def legendre(a,p):
@@ -37,7 +35,7 @@ def charpoly_int(A):  # Faddeev-LeVerrier: exact integer char poly, returns coef
     return c  # det(xI - A) = sum c[k] x^{n-k}
 
 # ==========================================================================
-sep("A  each prime IS its Paley object: tournament (p=3 mod4) vs self-complementary graph (p=1 mod4)")
+sep("A  exact odd-prime Paley law: tournament (p=3 mod4) vs graph (p=1 mod4)")
 for p in (3,5,7,11,13):
     A=paley_adj(p)
     antisym=all(A[i][j]+A[j][i]==1 for i in range(p) for j in range(p) if i!=j)   # tournament
@@ -46,10 +44,11 @@ for p in (3,5,7,11,13):
     scores=[sum(A[i]) for i in range(p)]
     reg = len(set(scores))==1
     print(f"  p={p:2d} ({p%4} mod4): {kind}; regular (all out-degree {(p-1)//2})? {reg and scores[0]==(p-1)//2}")
-print("  => 3,7,11 (=3 mod4) are TOURNAMENTS; 5,13 (=1 mod4) are self-complementary GRAPHS. 2 is the involution.")
+print("  => 3,7,11 (=3 mod4) are TOURNAMENTS; 5,13 (=1 mod4) are self-complementary GRAPHS.")
+print("     p=2 is outside this odd-prime Paley law; no 'i*sqrt(2)' claim is made.")
 
 # ==========================================================================
-sep("B  the spectrum IS the Gauss sum: Paley char_A = (x-(p-1)/2)(x^2+x+(p+1)/4)^((p-1)/2), roots (-1+-isqrt p)/2")
+sep("B  tournament spectrum: a shifted half-scale of the Gauss sum, plus the principal eigenvalue")
 for p in (3,7,11):
     A=paley_adj(p); c=charpoly_int(A)  # det(xI-A)
     # expected quadratic factor x^2 + x + (p+1)/4
@@ -67,8 +66,8 @@ for p in (3,7,11):
     match = c==expected
     disc = 1-4*q  # discriminant of x^2+x+q  = 1-(p+1) = -p
     print(f"  p={p:2d}: char_A = (x-{(p-1)//2})(x^2+x+{q})^{(p-1)//2} ? {match}; quad disc = {disc} = -p ; roots (-1+-i*sqrt{p})/2")
-print("  Paley-3: x^2+x+1 = Eisenstein (roots = primitive cube roots, i*sqrt3); Paley-7: (-1+-i*sqrt7)/2 (THM-1830);")
-print("  Paley-11: (-1+-i*sqrt11)/2. The imaginary part sqrt(p)/2 IS the quadratic Gauss sum magnitude.")
+print("  Paley-3: x^2+x+1 = Phi_3 (primitive cube roots); Paley-7: (-1+-i*sqrt7)/2 (THM-1830);")
+print("  Paley-11: (-1+-i*sqrt11)/2. Nonprincipal eigenvalues are (-1 +- g_p)/2, not g_p itself.")
 
 # ==========================================================================
 sep("C  the quadratic GAUSS SUM g_p = sum legendre(a,p) zeta_p^a : |g_p|^2=p ; i*sqrt p (3mod4) vs sqrt p (1mod4)")
@@ -77,10 +76,11 @@ for p in (3,5,7,11,13):
     realish = abs(g.imag)<1e-9
     print(f"  p={p:2d}: g_p = {g.real:+.4f}{g.imag:+.4f}i ; |g_p|^2 = {abs(g)**2:.4f} = p? {abs(abs(g)**2-p)<1e-6} ; "
           + ("REAL sqrt p (=1 mod4)" if realish else "IMAG i*sqrt p (=3 mod4)"))
-print("  => 3,7,11 -> i*sqrt p (the Paley-tournament eigenvalue); 5,13 -> sqrt p (real). p=5: sqrt5 = GOLDEN field.")
+print("  => 3,7,11 have g_p=i*sqrt(p); 5,13 have g_p=sqrt(p). Adjacency eigenvalues are shifted half-scales.")
+print("     For Paley graphs the separate principal adjacency eigenvalue is (p-1)/2.")
 
 # ==========================================================================
-sep("D  the LRC(14)=2*7 roles: 7 apex, 2 chirality, 3 argmax (Eisenstein), 5 golden foil, 11 rank")
+sep("D  heuristic small-prime comparisons for LRC(14): arithmetic checks, no implication")
 # 7: x^14 - 1 = Phi_1 Phi_2 Phi_7 Phi_14 ; mod 7 Frobenius collapse (x^14-1 == (x-1)^7 (x+1)^7 mod 7)
 def poly_mod(coeffs,m): return [c%m for c in coeffs]
 # (x-1)^7 (x+1)^7 mod 7 vs x^14 - 1
@@ -101,27 +101,20 @@ print("  7 (apex, 14=2*7): x^14-1 == (x-1)^7 (x+1)^7 (mod 7)?", poly_mod(prod,7)
 import cmath
 c7=2*cmath.cos(2*pi/7).real
 val=c7**3+c7**2-2*c7-1
-print(f"  7 cap field Q(cos 2pi/7): 2cos(2pi/7)={c7:.5f} root of x^3+x^2-2x-1? {abs(val)<1e-9} (disc 49=7^2, cubic, h=1)")
+print(f"  7 cap field Q(cos 2pi/7): 2cos(2pi/7)={c7:.5f} root of x^3+x^2-2x-1? {abs(val)<1e-9} (disc 49=7^2, cubic)")
 # 3: argmax t* = 14/Phi_6(14), Phi_6(x)=x^2-x+1
 phi6_14=14**2-14+1
-print(f"  3 (argmax, Eisenstein): Phi_6(14)=14^2-14+1={phi6_14} => t*=14/{phi6_14} (Paley-3 = the 3-cycle atom)")
+print(f"  3 comparison: Phi_6(14)=14^2-14+1={phi6_14} => t*=14/{phi6_14}; Paley-3 has Phi_3, with Phi_6(x)=Phi_3(-x)")
 # 5: golden field Q(sqrt5), Fibonacci = the LRC foil
 phi=(1+5**0.5)/2
-print(f"  5 (foil, golden): Q(sqrt5), phi={phi:.5f}, x^2-x-1=0 -> Fibonacci = the LRC FOIL (S206, loosest)")
-# 11: rank 11 (S214), and 11 is SCARCE (only multiple <=14 is 11 itself)
+print(f"  5 comparison: Q(sqrt5), phi={phi:.5f}, x^2-x-1=0 -> Fibonacci/golden-field analogy (S206)")
+# 11: a numerical rank/scarcity comparison only; no Paley-to-LRC map is supplied.
 mult11=[m for m in range(1,15) if m%11==0]
-print(f"  11 (rank): rank-11 AP-core (S214); multiples of 11 in [1,14] = {mult11} (SCARCE => forces the speed 11)")
+print(f"  11 comparison: rank ker_Z(1,...,12)=11; multiples of 11 in [1,14] = {mult11}; neither fact forces an LRC speed")
 
-sep("SUMMARY -- the periodic table of the small primes for LRC(14)/tournaments")
-print("""  2  = the INVOLUTION (Phi_2=x+1, the antipode/reversal/chirality) acting on everything (S210-S213).
-  3  = the ATOM: Paley-3 = the 3-CYCLE, char x^2+x+1 = Eisenstein (i*sqrt3); the argmax Phi_6 (t*=14/183).
-  5  = the GOLDEN/FOIL prime (=1 mod4): Paley GRAPH (self-complementary), Gauss sum REAL sqrt5 = Q(sqrt5)
-       = Fibonacci = the LRC foil (loosest, safest -- S206). Also the Bonferroni certificate depth.
-  7  = the APEX of LRC(14)=2*7: Paley-7 TOURNAMENT, eigenvalues (-1+-i*sqrt7)/2 = Gauss sum i*sqrt7 (my
-       S212 Euler-branch index); Phi_7/Phi_14 carry the hardness; F_7[C_14]=F_7[X]/(X+-1)^7 (THM-2043);
-       cap field Q(cos 2pi/7) cubic disc 49.
-  11 = the RANK prime (=3 mod4): Paley-11 TOURNAMENT (i*sqrt11); the rank-11 AP-core / relation code (S214);
-       SCARCE (only multiple <=14 is 11) => a forced, rigid speed.
-  UNIFYING LAW: prime p IS its Paley object -- a TOURNAMENT (self-converse, i*sqrt p) if p=3 mod4 (3,7,11),
-  a self-COMPLEMENTARY GRAPH (real sqrt p) if p=1 mod4 (5,13); 2 is the reversal that pairs them. The
-  Gauss sum sqrt p / i*sqrt p is literally the Paley spectrum, and it fixes each prime's LRC(14) role.""")
+sep("SUMMARY -- exact Paley kernel and limits of the LRC analogy")
+print("""  EXACT: for odd prime p, the quadratic-residue relation is a tournament for p=3 mod4 and a graph
+  for p=1 mod4. Its nonprincipal adjacency spectrum is (-1 +- g_p)/2, while (p-1)/2 is principal.
+  OUTSIDE SCOPE: p=2 is not covered. Phi_3 (Paley-3) and Phi_6 (the cited LRC parameter) differ by x -> -x.
+  HEURISTIC ONLY: the labels 2/chirality, 3/argmax, 5/foil, 7/apex, and 11/rank are comparison prompts.
+  No Paley object, field match, scarcity observation, or equal rank by itself implies an LRC(14) fact.""")

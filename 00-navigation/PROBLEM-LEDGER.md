@@ -4,7 +4,7 @@
 > [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) for current truth. Major later
 > changes include THM-2022 proving NC2/GMC(2), explicit GMC(3) counterexamples,
 > THM-2044/2045 separating rank-two Poisson from DC(2)/planar JC, partial NC2
-> Lean coverage, and corrections MISTAKE-211–226. Historical priority/provenance
+> Lean coverage, and corrections MISTAKE-211–229. Historical priority/provenance
 > claims below require primary-source and canon checks.
 
 ## Current portfolio at a glance
@@ -14,8 +14,8 @@ the obstruction that still matters; the long inventory below is provenance.
 
 | Area | Current truth | Highest-value next move |
 |---|---|---|
-| LRC(14) | Open. `q<=25` is false; exact search is safe through height 55; THM-2051 forces a genuine bounded higher relation, and THM-2052 forces eleven independent bounded support-at-most-three relations and a rational plane. | Prove owner-labelled Euler survival or an active twelfth relation, with pointed transport back to the target row; also pursue six-comb transport/effective spectrum. |
-| NC2 / GMC | NC2 and unrestricted GMC(2) are proved by THM-2022. Several Lean nodes are kernel-pure, but `nc2 : NC2` and the descent/DvdK/Kummer assembly are absent. GMC is false in every dimension at least three. | Root-wire the nodes and formalize the missing descent, seed interface, and residue-layer wrapper; mine the failed higher-dimensional analogue. |
+| LRC(14) | Open. `q<=25` is false; exact search is safe through height 55. THM-2051 forces a height-`2^20` support-3..5 relation; THM-2052 gives a finite two-anchor star atlas; THM-2053 confines every uncertified plane parameter to 26 tangent disks. | Compress saturated bases/atlas types and give exact resonance-fan or Euler certificates for primitive positive points in the disks. Treat rank twelve as an accelerator; also pursue six-comb transport/effective spectrum. |
+| NC2 / GMC | NC2/GMC(2) are proved by THM-2022. The root-imported Lean spine covers descent, faces, DvdK interfaces, height/gap, Lucas, and whole-face Frobenius, but not concrete normalized-channel assembly or `DvdK1 -> NC2`; DvdK remains cited. GMC is false from dimension three. | Formalize concrete three-case normalized-residue assembly and the final conditional theorem; keep DvdK explicit or formalize it separately. |
 | Jacobian / Dixmier / Poisson | The two-pair Poisson conjecture is false. DC(2) and planar JC remain open; filtered first-order descent is obstructed, while THM-2049 proves the associated-graded correction complex acyclic. | Decide finite polynomial termination and the coupled `D` relations, or prove boundary poles prevent a polynomial lift. |
 | Tournaments | Join laws and strong-core localization are proved; the invariant lattice is exact only through `n<=6`. Positive game equilibria need skew symmetry plus mod-2 support parity. GLMY path homology in degree at least three is under an active convention dispute. | Attack `H>=disc`, classify operation laws, resolve the path-homology convention case, and track positive-kernel support rather than conflating games, flows, and topology. |
 | Reciprocal sequences | Support and indexed-multiplicity Dirichlet profiles are separated by a collision tax; Abel--Stieltjes/Dini/Bertrand boundary tests are available. | Build an operation calculus for support unions/products and connect collision structure to LRC denominator spectra. |

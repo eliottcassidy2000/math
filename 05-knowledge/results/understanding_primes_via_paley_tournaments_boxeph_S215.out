@@ -1,22 +1,23 @@
 
 ========================================================================
-A  each prime IS its Paley object: tournament (p=3 mod4) vs self-complementary graph (p=1 mod4)
+A  exact odd-prime Paley law: tournament (p=3 mod4) vs graph (p=1 mod4)
 ========================================================================
   p= 3 (3 mod4): TOURNAMENT (p=3 mod4); regular (all out-degree 1)? True
   p= 5 (1 mod4): GRAPH sym (p=1 mod4); regular (all out-degree 2)? True
   p= 7 (3 mod4): TOURNAMENT (p=3 mod4); regular (all out-degree 3)? True
   p=11 (3 mod4): TOURNAMENT (p=3 mod4); regular (all out-degree 5)? True
   p=13 (1 mod4): GRAPH sym (p=1 mod4); regular (all out-degree 6)? True
-  => 3,7,11 (=3 mod4) are TOURNAMENTS; 5,13 (=1 mod4) are self-complementary GRAPHS. 2 is the involution.
+  => 3,7,11 (=3 mod4) are TOURNAMENTS; 5,13 (=1 mod4) are self-complementary GRAPHS.
+     p=2 is outside this odd-prime Paley law; no 'i*sqrt(2)' claim is made.
 
 ========================================================================
-B  the spectrum IS the Gauss sum: Paley char_A = (x-(p-1)/2)(x^2+x+(p+1)/4)^((p-1)/2), roots (-1+-isqrt p)/2
+B  tournament spectrum: a shifted half-scale of the Gauss sum, plus the principal eigenvalue
 ========================================================================
   p= 3: char_A = (x-1)(x^2+x+1)^1 ? True; quad disc = -3 = -p ; roots (-1+-i*sqrt3)/2
   p= 7: char_A = (x-3)(x^2+x+2)^3 ? True; quad disc = -7 = -p ; roots (-1+-i*sqrt7)/2
   p=11: char_A = (x-5)(x^2+x+3)^5 ? True; quad disc = -11 = -p ; roots (-1+-i*sqrt11)/2
-  Paley-3: x^2+x+1 = Eisenstein (roots = primitive cube roots, i*sqrt3); Paley-7: (-1+-i*sqrt7)/2 (THM-1830);
-  Paley-11: (-1+-i*sqrt11)/2. The imaginary part sqrt(p)/2 IS the quadratic Gauss sum magnitude.
+  Paley-3: x^2+x+1 = Phi_3 (primitive cube roots); Paley-7: (-1+-i*sqrt7)/2 (THM-1830);
+  Paley-11: (-1+-i*sqrt11)/2. Nonprincipal eigenvalues are (-1 +- g_p)/2, not g_p itself.
 
 ========================================================================
 C  the quadratic GAUSS SUM g_p = sum legendre(a,p) zeta_p^a : |g_p|^2=p ; i*sqrt p (3mod4) vs sqrt p (1mod4)
@@ -26,29 +27,23 @@ C  the quadratic GAUSS SUM g_p = sum legendre(a,p) zeta_p^a : |g_p|^2=p ; i*sqrt
   p= 7: g_p = +0.0000+2.6458i ; |g_p|^2 = 7.0000 = p? True ; IMAG i*sqrt p (=3 mod4)
   p=11: g_p = +0.0000+3.3166i ; |g_p|^2 = 11.0000 = p? True ; IMAG i*sqrt p (=3 mod4)
   p=13: g_p = +3.6056+0.0000i ; |g_p|^2 = 13.0000 = p? True ; REAL sqrt p (=1 mod4)
-  => 3,7,11 -> i*sqrt p (the Paley-tournament eigenvalue); 5,13 -> sqrt p (real). p=5: sqrt5 = GOLDEN field.
+  => 3,7,11 have g_p=i*sqrt(p); 5,13 have g_p=sqrt(p). Adjacency eigenvalues are shifted half-scales.
+     For Paley graphs the separate principal adjacency eigenvalue is (p-1)/2.
 
 ========================================================================
-D  the LRC(14)=2*7 roles: 7 apex, 2 chirality, 3 argmax (Eisenstein), 5 golden foil, 11 rank
+D  heuristic small-prime comparisons for LRC(14): arithmetic checks, no implication
 ========================================================================
   7 (apex, 14=2*7): x^14-1 == (x-1)^7 (x+1)^7 (mod 7)? True  [THM-2043 F_7[C_14]=F_7[X]/(X-1)^7 x F_7[X]/(X+1)^7]
-  7 cap field Q(cos 2pi/7): 2cos(2pi/7)=1.24698 root of x^3+x^2-2x-1? True (disc 49=7^2, cubic, h=1)
-  3 (argmax, Eisenstein): Phi_6(14)=14^2-14+1=183 => t*=14/183 (Paley-3 = the 3-cycle atom)
-  5 (foil, golden): Q(sqrt5), phi=1.61803, x^2-x-1=0 -> Fibonacci = the LRC FOIL (S206, loosest)
-  11 (rank): rank-11 AP-core (S214); multiples of 11 in [1,14] = [11] (SCARCE => forces the speed 11)
+  7 cap field Q(cos 2pi/7): 2cos(2pi/7)=1.24698 root of x^3+x^2-2x-1? True (disc 49=7^2, cubic)
+  3 comparison: Phi_6(14)=14^2-14+1=183 => t*=14/183; Paley-3 has Phi_3, with Phi_6(x)=Phi_3(-x)
+  5 comparison: Q(sqrt5), phi=1.61803, x^2-x-1=0 -> Fibonacci/golden-field analogy (S206)
+  11 comparison: rank ker_Z(1,...,12)=11; multiples of 11 in [1,14] = [11]; neither fact forces an LRC speed
 
 ========================================================================
-SUMMARY -- the periodic table of the small primes for LRC(14)/tournaments
+SUMMARY -- exact Paley kernel and limits of the LRC analogy
 ========================================================================
-  2  = the INVOLUTION (Phi_2=x+1, the antipode/reversal/chirality) acting on everything (S210-S213).
-  3  = the ATOM: Paley-3 = the 3-CYCLE, char x^2+x+1 = Eisenstein (i*sqrt3); the argmax Phi_6 (t*=14/183).
-  5  = the GOLDEN/FOIL prime (=1 mod4): Paley GRAPH (self-complementary), Gauss sum REAL sqrt5 = Q(sqrt5)
-       = Fibonacci = the LRC foil (loosest, safest -- S206). Also the Bonferroni certificate depth.
-  7  = the APEX of LRC(14)=2*7: Paley-7 TOURNAMENT, eigenvalues (-1+-i*sqrt7)/2 = Gauss sum i*sqrt7 (my
-       S212 Euler-branch index); Phi_7/Phi_14 carry the hardness; F_7[C_14]=F_7[X]/(X+-1)^7 (THM-2043);
-       cap field Q(cos 2pi/7) cubic disc 49.
-  11 = the RANK prime (=3 mod4): Paley-11 TOURNAMENT (i*sqrt11); the rank-11 AP-core / relation code (S214);
-       SCARCE (only multiple <=14 is 11) => a forced, rigid speed.
-  UNIFYING LAW: prime p IS its Paley object -- a TOURNAMENT (self-converse, i*sqrt p) if p=3 mod4 (3,7,11),
-  a self-COMPLEMENTARY GRAPH (real sqrt p) if p=1 mod4 (5,13); 2 is the reversal that pairs them. The
-  Gauss sum sqrt p / i*sqrt p is literally the Paley spectrum, and it fixes each prime's LRC(14) role.
+  EXACT: for odd prime p, the quadratic-residue relation is a tournament for p=3 mod4 and a graph
+  for p=1 mod4. Its nonprincipal adjacency spectrum is (-1 +- g_p)/2, while (p-1)/2 is principal.
+  OUTSIDE SCOPE: p=2 is not covered. Phi_3 (Paley-3) and Phi_6 (the cited LRC parameter) differ by x -> -x.
+  HEURISTIC ONLY: the labels 2/chirality, 3/argmax, 5/foil, 7/apex, and 11/rank are comparison prompts.
+  No Paley object, field match, scarcity observation, or equal rank by itself implies an LRC(14) fact.

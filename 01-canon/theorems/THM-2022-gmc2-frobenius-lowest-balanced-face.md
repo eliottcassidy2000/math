@@ -53,6 +53,7 @@ formalization:
   - 04-computation/lean/TournamentH7/TournamentH7/GMC2NC2.lean
   - 04-computation/lean/TournamentH7/TournamentH7/GMC2NC2Capstone.lean
   - 04-computation/lean/TournamentH7/TournamentH7/GMC2Formalization.lean
+formalization_root_imported: true
 formalization_status: >
   PARTIAL at one explicit internal composition interface. The concrete
   normalized three-case residue, exact support-face seed transport, and the

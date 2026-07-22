@@ -3,8 +3,10 @@
 mac-mini-2026-07-06-S25 (HYP-4552) -- the RELATION LATTICE L(AP) and its KISSING NUMBER.
 
 L(AP) = {a in Z^12 : sum_{i=1}^{12} i*a_i = 0} = ker of the moment map phi(a)=<c,a>,
-c=(1..12).  disc(L(AP)) = |c|^2 = sum i^2 = 650.  Gram (basis d_k=(k+1)e_k - k e_{k+1})
-is tridiagonal: diag k^2+(k+1)^2, offdiag -k(k+2).
+c=(1..12).  disc(L(AP)) = |c|^2 = sum i^2 = 650.  CORRECTION
+(MISTAKE-227): the rows d_k=(k+1)e_k-k e_{k+1} span an index-11!
+sublattice, not a Z-basis of L(AP). Their Gram—not the saturated lattice's
+Gram—is tridiagonal.
 
 FINDING: the MINIMAL vectors of L(AP) have norm 3 and are the ADDITIVE TRIPLES
 (1,1,-1) at (i,j,i+j): v_i+v_j=v_{i+j}.  30 triples => kissing number 60 = 2*(#additive
@@ -37,7 +39,10 @@ if __name__=="__main__":
     B=np.zeros((11,12),dtype=int)
     for k in range(1,12): B[k-1,k-1]=k+1; B[k-1,k]=-k
     G=B@B.T
-    print("Gram tridiagonal: diag", [int(G[k,k]) for k in range(11)], "offdiag", [int(G[k,k+1]) for k in range(10)])
+    index=1
+    for k in range(1,12): index*=k
+    print("chain-sublattice Gram tridiagonal: diag", [int(G[k,k]) for k in range(11)], "offdiag", [int(G[k,k+1]) for k in range(10)])
+    print(f"chain saturation index = {index}=11!; det Gram = {650*index*index}")
     rels=relations()
     nrm=lambda a: sum(x*x for x in a)
     mn=min(nrm(a) for a in rels)

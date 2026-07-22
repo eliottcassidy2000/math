@@ -19,8 +19,13 @@ from pathlib import Path
 from urllib.parse import unquote
 
 from doc_surface import (
+    CANONICAL_ROUTES,
+    FRONTIER_EPOCH,
     LINE_BUDGETS,
+    MAX_STARTUP_PACKET_BYTES,
     MAX_STARTUP_LINE_BYTES,
+    PREFIX_LINE_BUDGETS,
+    SEARCHABLE_PREFIX_END,
     STARTUP_BYTE_BUDGET,
     STARTUP_DOCS,
 )
@@ -32,7 +37,8 @@ HEADLINE_SENTINELS = {
     "README.md": (
         "LRC(14) is OPEN",
         "THM-2051 now closes the relation-dissociated",
-        "the final `nc2 : NC2` theorem remain",
+        "26 explicit tangent disks",
+        "final conditional `DvdK1 -> NC2`",
     ),
     "00-navigation/START-HERE.md": (
         "14 total runners",
@@ -43,7 +49,8 @@ HEADLINE_SENTINELS = {
         "**PROVED in repo",
         "two-pair Poisson conjecture false",
         "THM-2047](../01-canon/theorems/THM-2047-phase-height-toric-arrangement-for-lrc.md)",
-        "Every counterexample lies on a bounded rational plane",
+        "Every counterexample lies in a finite tangent-disk atlas",
+        "26 open tangent disks",
     ),
     "00-navigation/CURRENT-FRONTIER.md": (
         "## LRC(14)",
@@ -56,7 +63,9 @@ HEADLINE_SENTINELS = {
         "proves the corresponding labelled phase-height carrier",
         "PROVED finite-circuit alternative",
         "THM-2052",
-        "gmc2_of_nc2` is conditional",
+        "26 tangent disks",
+        "TournamentH7.GMC2Formalization",
+        "DvdK1 -> NC2",
     ),
     "01-canon/ACTIVE-GUARDRAILS.md": (
         "No uniform `q <= 25` good-period theorem",
@@ -69,16 +78,40 @@ HEADLINE_SENTINELS = {
         "Antisymmetry is not the whole tournament-game or torus theorem",
         "Diagonal additive energy is not the LRC relation lattice",
         "NC2/GMC(2) is proved, not fully formalized",
+        "Equal ranks do not identify lattices or tournaments",
+        "Paley spectra do not assign LRC roles to small primes",
+        "THM-2053 has no Heegner discriminant `-7`",
     ),
     "00-navigation/LRC14-PROOF-MAP.md": (
         "## 2026-07-21 current control panel",
         "rank-11 bounded support-at-most-3 code W",
+        "26 tangent disks",
         "### Mandatory hostile controls",
     ),
     "00-navigation/LRC-TECHNIQUE-INDEX.md": (
         "SEARCHABLE ATLAS, NOT STARTUP TRUTH",
         "## 2026-07-21 current-use overlay",
         "## LTI-532 - Rank-eleven relation-code dispatcher",
+        "Tangent-disk geometry",
+    ),
+}
+
+POLICY_SENTINELS = {
+    "AGENTS.md": (
+        "Anchor / Niche / Wildcard",
+        "determine **why** a claim is true or false",
+        "keep a board of 3–7 live concepts",
+        "source, target, map, preserved predicate",
+        "give every small mathematical compulsion a cheap hostile probe",
+        "00-navigation/META-PATTERNS.md",
+    ),
+    "00-navigation/RESEARCH-PROTOCOL.md": (
+        "The session portfolio: Anchor / Niche / Wildcard",
+        "Keep an active concept board",
+        "Generate perspectives procedurally",
+        "The connection contract",
+        "Explain why, not only whether",
+        "Make the process cumulative",
     ),
 }
 
@@ -88,9 +121,26 @@ HEADLINE_SENTINELS = {
 FORBIDDEN_STARTUP_TEXT = {
     "README.md": (
         "Every counterexample is small-relation structured",
+        "height at most `2^21`",
+        "pointed rank-or-Euler transport is the live prize",
+        "root wiring, and the final `nc2 : NC2` theorem remain",
     ),
     "00-navigation/START-HERE.md": (
         "every counterexample has a 2--5-term integer relation of height at most `2^20`",
+        "height at most `2^21`",
+        "The remaining jump is pointed Euler survival",
+        "They are not root-imported",
+    ),
+    "00-navigation/CURRENT-FRONTIER.md": (
+        "but are not root-imported",
+        "6. **Pointed plane transport.**",
+        "The incoming THM-2054 relative-Fejer program",
+    ),
+    "01-canon/ACTIVE-GUARDRAILS.md": (
+        "height-`2^21` relation",
+    ),
+    "00-navigation/LRC14-PROOF-MAP.md": (
+        "height <=2^21",
     ),
     "01-canon/theorems/THM-2010-new-tournament-invariant-sequences.md": (
         "Breen--Stover--Yates",
@@ -165,6 +215,64 @@ def read_required(relative: str, errors: list[str]) -> str:
         return ""
 
 
+def maintained_text(relative: str, errors: list[str]) -> str:
+    text = read_required(relative, errors)
+    marker = SEARCHABLE_PREFIX_END.get(relative)
+    if not marker:
+        return text
+    if marker not in text:
+        errors.append(f"{relative}: maintained-prefix boundary {marker!r} is missing")
+        return text
+    return text.split(marker, 1)[0]
+
+
+def validate_surface(
+    relative: str,
+    text: str,
+    errors: list[str],
+    *,
+    line_budget: int | None,
+) -> None:
+    path = REPO / relative
+    lines = text.splitlines()
+    if line_budget is not None and len(lines) > line_budget:
+        errors.append(
+            f"{relative}: {len(lines)} maintained lines exceeds budget {line_budget}"
+        )
+    byte_count = len(text.encode("utf-8"))
+    if byte_count > STARTUP_BYTE_BUDGET:
+        errors.append(
+            f"{relative}: {byte_count} maintained bytes exceeds budget "
+            f"{STARTUP_BYTE_BUDGET}"
+        )
+    longest_line = max((len(line.encode("utf-8")) for line in lines), default=0)
+    if longest_line > MAX_STARTUP_LINE_BYTES:
+        errors.append(
+            f"{relative}: longest maintained line is {longest_line} bytes; maximum "
+            f"is {MAX_STARTUP_LINE_BYTES}"
+        )
+
+    for raw in LINK_RE.findall(text):
+        parts = local_link_parts(raw)
+        if parts is None:
+            continue
+        target, fragment = parts
+        resolved = path if not target else (
+            Path(target) if Path(target).is_absolute() else path.parent / target
+        )
+        if not resolved.exists():
+            errors.append(f"{relative}: broken local link {raw!r}")
+            continue
+        if (
+            fragment
+            and resolved.is_file()
+            and resolved.suffix.casefold() == ".md"
+            and not re.fullmatch(r"L\d+", fragment, flags=re.IGNORECASE)
+            and fragment.casefold() not in markdown_anchors(resolved)
+        ):
+            errors.append(f"{relative}: broken Markdown fragment {raw!r}")
+
+
 def main() -> int:
     errors: list[str] = []
 
@@ -174,58 +282,86 @@ def main() -> int:
             errors.append(f"missing maintained startup document: {relative}")
             continue
         text = path.read_text(encoding="utf-8", errors="replace")
-        lines = text.splitlines()
-        budget = LINE_BUDGETS.get(relative)
-        if budget is not None and len(lines) > budget:
-            errors.append(f"{relative}: {len(lines)} lines exceeds startup budget {budget}")
-        byte_count = len(text.encode("utf-8"))
-        if byte_count > STARTUP_BYTE_BUDGET:
-            errors.append(
-                f"{relative}: {byte_count} bytes exceeds startup budget "
-                f"{STARTUP_BYTE_BUDGET}"
-            )
-        longest_line = max((len(line.encode("utf-8")) for line in lines), default=0)
-        if longest_line > MAX_STARTUP_LINE_BYTES:
-            errors.append(
-                f"{relative}: longest line is {longest_line} bytes; startup maximum "
-                f"is {MAX_STARTUP_LINE_BYTES}"
-            )
+        validate_surface(
+            relative, text, errors, line_budget=LINE_BUDGETS.get(relative)
+        )
 
-        for raw in LINK_RE.findall(text):
-            parts = local_link_parts(raw)
-            if parts is None:
-                continue
-            target, fragment = parts
-            resolved = path if not target else (
-                Path(target) if Path(target).is_absolute() else path.parent / target
-            )
-            if not resolved.exists():
-                errors.append(f"{relative}: broken local link {raw!r}")
-                continue
-            if (
-                fragment
-                and resolved.is_file()
-                and resolved.suffix.casefold() == ".md"
-                and not re.fullmatch(r"L\d+", fragment, flags=re.IGNORECASE)
-                and fragment.casefold() not in markdown_anchors(resolved)
-            ):
-                errors.append(f"{relative}: broken Markdown fragment {raw!r}")
+    for relative in dict.fromkeys((*CANONICAL_ROUTES, *SEARCHABLE_PREFIX_END)):
+        if relative in STARTUP_DOCS:
+            continue
+        if not (REPO / relative).is_file():
+            errors.append(f"missing maintained route: {relative}")
+            continue
+        validate_surface(
+            relative,
+            maintained_text(relative, errors),
+            errors,
+            line_budget=PREFIX_LINE_BUDGETS.get(relative),
+        )
 
     for relative, sentinels in HEADLINE_SENTINELS.items():
         path = REPO / relative
         if not path.is_file():
             errors.append(f"{relative}: headline truth source is missing")
             continue
-        text = path.read_text(encoding="utf-8", errors="replace")
+        text = maintained_text(relative, errors)
         for sentinel in sentinels:
             if sentinel not in text:
                 errors.append(f"{relative}: missing headline truth sentinel {sentinel!r}")
 
     for relative, forbidden in FORBIDDEN_STARTUP_TEXT.items():
-        text = read_required(relative, errors)
+        text = maintained_text(relative, errors)
         for phrase in forbidden:
             if phrase in text:
                 errors.append(f"{relative}: retired startup claim has returned: {phrase!r}")
+
+    for relative, sentinels in POLICY_SENTINELS.items():
+        text = read_required(relative, errors)
+        for sentinel in sentinels:
+            if sentinel not in text:
+                errors.append(f"{relative}: missing research-policy sentinel {sentinel!r}")
+
+    for relative in (
+        "README.md",
+        "00-navigation/START-HERE.md",
+        "00-navigation/CURRENT-FRONTIER.md",
+        "01-canon/ACTIVE-GUARDRAILS.md",
+    ):
+        if FRONTIER_EPOCH not in read_required(relative, errors):
+            errors.append(f"{relative}: frontier epoch is not {FRONTIER_EPOCH}")
+
+    meta = read_required("00-navigation/META-PATTERNS.md", errors)
+    meta_cards = list(
+        re.finditer(r"^## ([^\n]+)\n(.*?)(?=^## |\Z)", meta, flags=re.M | re.S)
+    )
+    required_card_fields = (
+        "**Trigger:**", "**Action:**", "**Mechanism:**",
+        "**Counterindication:**", "**Evidence:**",
+    )
+    for card in meta_cards:
+        missing = [field for field in required_card_fields if field not in card.group(2)]
+        if missing:
+            errors.append(
+                f"META-PATTERNS.md: card {card.group(1)!r} lacks {', '.join(missing)}"
+            )
+
+    papers = read_required("05-knowledge/reference/CORE-PAPERS.md", errors)
+    paper_cards = list(
+        re.finditer(r"^### ([^\n]+)\n(.*?)(?=^### |^## |\Z)", papers, flags=re.M | re.S)
+    )
+    for card in paper_cards:
+        body = card.group(2)
+        if "**Primary / freshness:**" not in body:
+            continue
+        required = (
+            "**Imported role:**",
+            "**Does not prove:**",
+        )
+        for field in required:
+            if field not in body:
+                errors.append(f"CORE-PAPERS.md: card {card.group(1)!r} lacks {field}")
+        if not re.search(r"\*\*Repo (?:consumer|consumers|landing point|landing points):\*\*", body):
+            errors.append(f"CORE-PAPERS.md: card {card.group(1)!r} lacks a repo consumer")
 
     start = read_required("00-navigation/START-HERE.md", errors)
     if re.search(r"refreshed[^\n]*against\s+`[0-9a-f]{7,40}`", start, re.I):
@@ -329,6 +465,77 @@ def main() -> int:
     )
     if generic_topic.returncode == 0:
         errors.append("start_session.py: an all-generic topic must be rejected")
+
+    control_topic = subprocess.run(
+        (
+            sys.executable,
+            str(REPO / "agents/start_session.py"),
+            "--topic",
+            "LRC14\nforged-heading",
+        ),
+        cwd=REPO,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if control_topic.returncode == 0:
+        errors.append("start_session.py: a topic with control characters must be rejected")
+
+    routing_smoke = subprocess.run(
+        (
+            sys.executable,
+            str(REPO / "agents/start_session.py"),
+            "--topic",
+            "Jacobian conjecture dimension three",
+            "--recent",
+            "1",
+            "--max-matches",
+            "8",
+        ),
+        cwd=REPO,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if routing_smoke.returncode != 0:
+        errors.append("start_session.py: bounded routing smoke test failed")
+    packet = routing_smoke.stdout
+    if len(packet.encode("utf-8")) > MAX_STARTUP_PACKET_BYTES:
+        errors.append(
+            f"start_session.py: packet exceeds {MAX_STARTUP_PACKET_BYTES} bytes"
+        )
+    longest_packet_line = max(
+        (len(line.encode("utf-8")) for line in packet.splitlines()), default=0
+    )
+    if longest_packet_line > MAX_STARTUP_LINE_BYTES:
+        errors.append(
+            f"start_session.py: emitted line is {longest_packet_line} bytes; maximum "
+            f"is {MAX_STARTUP_LINE_BYTES}"
+        )
+    if "JC_n) — DISPROVED" in packet or "PROBLEM-LEDGER.md:51:" in packet:
+        errors.append("start_session.py: legacy problem-ledger suffix leaked as current")
+    for sentinel in ("== Session posture ==", "truth precedence first"):
+        if sentinel not in packet:
+            errors.append(f"start_session.py: routing smoke lacks {sentinel!r}")
+
+    correction_smoke = subprocess.run(
+        (
+            sys.executable,
+            str(REPO / "agents/start_session.py"),
+            "--topic",
+            "Heegner determinant gate",
+            "--recent",
+            "1",
+            "--max-matches",
+            "4",
+        ),
+        cwd=REPO,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if "MISTAKE-229" not in correction_smoke.stdout:
+        errors.append("start_session.py: topic-matched MISTAKE-229 was not surfaced")
 
     if errors:
         print("Agent-facing documentation check FAILED:")

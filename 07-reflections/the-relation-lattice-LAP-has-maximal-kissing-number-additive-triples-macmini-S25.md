@@ -1,5 +1,12 @@
 # The relation lattice L(AP) has maximal kissing number — its minimal vectors are the additive triples, and the floor is that extremality
 
+> **CORRECTED BY MISTAKE-227.** The displayed `d_k` are not a basis of
+> `L(AP)`; they span an index-`11!` sublattice. The norm-three/60-vector census
+> survives for the saturated lattice, but it is a signed distinct-index Schur
+> count, not four-term additive energy. “Maximal kissing,” uniqueness, and the
+> claimed Cohn–Elkies/LRC stability consequence were not proved by the script.
+> The historical program below is retained as provenance, not current truth.
+
 *mac-mini-2026-07-06-S25 (HYP-4552). Owner: work the S24 next step — compute the
 relation lattice L(AP) and probe the Cohn–Elkies structure. The computation gives a
 clean geometric invariant: L(AP)'s minimal vectors are the **additive triples**
@@ -13,8 +20,9 @@ that routes the floor through a *clean* invariant, not the all-orders theta. Ver
 
 `L(AP) = {a ∈ ℤ¹² : Σ_{i=1}^{12} i·aᵢ = 0}` is the kernel of the **moment map**
 `φ(a)=Σ i·aᵢ = ⟨c,a⟩`, `c=(1,…,12)` — a rank-11 primitive lattice. Its
-discriminant is `|c|² = Σ i² = 650`. In the basis `dₖ=(k+1)eₖ − k e_{k+1}` the Gram
-matrix is **tridiagonal**: diagonal `k²+(k+1)²`, off-diagonal `−k(k+2)`.
+discriminant is `|c|² = Σ i² = 650`. The rows
+`dₖ=(k+1)eₖ − k e_{k+1}` span an index-`11!` sublattice whose Gram matrix is
+**tridiagonal**: diagonal `k²+(k+1)²`, off-diagonal `−k(k+2)`.
 
 ## The minimal vectors are the additive triples
 

@@ -330,13 +330,11 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 
 ### Live work
 
-Package THM-2022 for publication. In Lean, root-wire and jointly type the two
-standalone kernels, then formalize Kummer survival/residue-layer assembly,
-algebraic descent and good-prime specialization, and a DvdK hypothesis
-interface culminating in `nc2 : NC2`. Also identify where vector-valued Wick
-grades need a different exposed face, and transfer the four-gate
-`seed/selector/preserver/exit` design without pretending a preserver supplies
-the seed.
+Package THM-2022 for publication. In Lean, instantiate the abstract three-case
+residue assembly with the concrete normalized Wick channels and prove the final
+conditional `DvdK1 -> NC2`; keep the cited DvdK theorem explicit until it is
+formalized. Continue to transfer the `seed/selector/preserver/exit` design
+without pretending a preserver supplies the seed.
 
 ## Tournaments
 
@@ -378,6 +376,9 @@ the seed.
   minimal independent coordinates at `n>=7`.
 - A literal Paley bridge exists only in THM-640's prime quadratic-residue scope.
   Composite modulus 14 and repeated score/node heuristics do not inherit it.
+- MISTAKE-227–229 correct the newest false syntheses: the AP chain frame is
+  index `11!`, Paley adjacency roots are shifted half-scaled Gauss sums, and
+  THM-2053's disk union has no discriminant `-7` or Heegner classification.
 - For applications outside tournament theory, first prove that the pairwise
   relation is intrinsic and target-preserving. A forced total orientation can
   destroy exactly the ties or magnitudes the original problem needs.

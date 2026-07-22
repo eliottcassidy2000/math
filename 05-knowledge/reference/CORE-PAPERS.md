@@ -50,6 +50,26 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
   do not use it as an inverse theorem.  The prime shortcut also does not cross
   the composite `k+1=14` lift wall.
 
+### Ungar — *2N noncollinear points determine at least 2N directions*
+
+- **Primary / freshness:** Peter Ungar, *Journal of Combinatorial Theory,
+  Series A* **33** (1982), 343–347,
+  [DOI 10.1016/0097-3165(82)90045-0](https://doi.org/10.1016/0097-3165(82)90045-0).
+  **PUBLISHED / stable; bibliographic record checked 2026-07-21.**
+- **Imported role:** the even-cardinality direction bound is applied to the
+  symmetric signed-column configuration of a saturated LRC parameter plane.
+  It supplies a nonradial secant direction; perpendicular projection then has
+  a repeated absolute speed. Combined with the settled lower-dimensional LRC
+  input, this is the external step giving the two-torus margin `M_T>=1/13` in
+  THM-2053.
+- **Repo consumers:**
+  [THM-2053, rank-two geodesic terminal](../../01-canon/theorems/THM-2053-rank-two-parameter-plane-geodesic-terminal.md),
+  [HYP-8846, finite tangent-disk completion](../hypotheses/HYP-8846-lrc14-pointed-plane-transport.md).
+- **Does not prove:** LRC(14), the determinant gate, necessity of that gate,
+  or emptiness of any tangent disk. The anisotropic estimate and disk identity
+  are separate in-repo arguments; disk membership remains only an uncertified
+  case.
+
 ### Malikiosis--Santos--Schymura — *Linearly-exponential checking is enough...*
 
 - **Primary / freshness:** [arXiv:2411.06903v2](https://arxiv.org/abs/2411.06903),
@@ -332,7 +352,7 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
   Weller Weiser.
 - **Repo consumer:**
   [THM-2021, Legendre refinement](../../01-canon/theorems/THM-2021-gmc2-legendre-finite-recurrence-closure.md).
-- **Does not prove for repo purposes:** a citable published finite-recurrence
+- **Does not prove:** a citable published finite-recurrence
   theorem until a paper/proof is public.  It is no longer a dependency of
   NC2: [THM-2018's recurrence mechanism](../../01-canon/theorems/THM-2018-gmc2-resonance-algebraic-egf-and-proportional-shadow.md)
   and [THM-2022's full proof](../../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md)
@@ -347,7 +367,7 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
   Gaussian variables with `E(P^m)=0` and `E(QP^m)=m!` for every `m>=1`; `P`
   has five terms and degree four.  A six-term cubic example in four variables
   is also supplied.  Hence GMC is false in every dimension at least three.
-- **Repo consumers / correction point:** pair it with
+- **Repo consumers:** pair it with
   [THM-2022](../../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md)
   for the exact dimensional boundary, and with
   [THM-1490](../../01-canon/theorems/THM-1490-the-gaussian-moment-counterexample-verified-proved-shortened-and-obstructed.md),
@@ -451,6 +471,8 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
   real chambers, and the Shi formulas
   `chi(q)=q(q-n)^(n-1)` and `r=(n+1)^(n-1)`. These are the exact classical
   controls replayed in the corrected S209 computation.
+- **Repo consumer:** corrected HYP-8830, MISTAKE-224, and the
+  [S209 arrangement reflection](../../07-reflections/orlik-solomon-is-a-repo-wide-pattern-toric-arrangements-are-the-lrc-lens-boxeph-S209.md).
 - **Does not prove:** that Shi walls are LRC safety walls, that braid
   cohomology is a per-tournament invariant, or that finite-field arrangement
   counts solve the LRC(14) AP-core extraction problem.

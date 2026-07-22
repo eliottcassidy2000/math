@@ -1,64 +1,61 @@
 
 ========================================================================
-A  codex THM-2053 gate: D_i=a z_i - b u_i is a 2x2 DET; large directions are LRC14-safe
+A  THM-2053: a determinant certificate in chosen Euclidean coordinates
 ========================================================================
-  plane with 12 columns, Lipschitz L(U)=5.831; codex: |a z_i - b u_i| <= (a^2+b^2)/91 => safe
-  the DET grows LINEARLY in |d|, the norm QUADRATICALLY -> large directions satisfy the gate (safe):
-  d=(30,1): max 2x2-DET |a z_i - b u_i|=   119, (a^2+b^2)/91=      9.9; codex-safe (DET<=norm/91)? False
-  d=(200,3): max 2x2-DET |a z_i - b u_i|=   797, (a^2+b^2)/91=    439.7; codex-safe (DET<=norm/91)? False
-  d=(700,700): max 2x2-DET |a z_i - b u_i|=  2100, (a^2+b^2)/91=  10769.2; codex-safe (DET<=norm/91)? True
-  d=(2000,1): max 2x2-DET |a z_i - b u_i|=  7999, (a^2+b^2)/91=  43956.1; codex-safe (DET<=norm/91)? True
-  => residual = primitive directions FAILING the gate (short norm-form vectors): 3920 within |d|<=~56
-     the anisotropic norm form a^2+b^2 makes the residual FINITE; its structure = the plane's binary form.
+  n=13; det(c_1,c_2)=1, so the displayed basis is saturated; u+z has positive support.
+  certificate: 91*max_i|a*z_i-b*u_i| <= a^2+b^2  ==>  M(a*u+b*z) >= 1/14
+  a^2+b^2 is the chosen-coordinate Euclidean form [1,0,1], discriminant -4.
+  It is not a plane-intrinsic form of discriminant -7 and changes under a GL(2,Z) basis change.
+  d=(  30,   1): max|det|=  148; norm/91=      9.9; certified=False
+  d=( 200,   3): max|det|=  994; norm/91=    439.7; certified=False
+  d=( 700, 700): max|det|= 2100; norm/91=  10769.2; certified=True
+  d=(2000,   1): max|det|= 9998; norm/91=  43956.1; certified=True
 
 ========================================================================
-B  the Paley spectral factor x^2+x+(p+1)/4 is the anisotropic principal form of DISCRIMINANT -p
+B  Exact failure carrier: a union of 26 open tangent disks
 ========================================================================
-  p= 3: Paley factor (1,1,1) disc=-3=-p ; anisotropic (D<0, definite)=True ; class number h(-3)=1
-  p= 7: Paley factor (1,1,2) disc=-7=-p ; anisotropic (D<0, definite)=True ; class number h(-7)=1
-  p=11: Paley factor (1,1,3) disc=-11=-p ; anisotropic (D<0, definite)=True ; class number h(-11)=1
-  => the Paley tournament's spectral factor IS the principal anisotropic binary form of disc -p.
+  columns=13 give 2n=26 disks; every disk has the origin on its boundary.
+  exact round envelope: a^2+b^2 < 91^2*34 = 281554.
+  checked all 537776 primitive nonzero lattice points in that envelope.
+  uncertified points=348600, or 174300 directions modulo d~-d; disk/gate tests agree exactly.
+  'Uncertified' is not 'unsafe': THM-2053 gives a sufficient certificate, not an equivalence.
 
 ========================================================================
-C  HEEGNER class-number-1 makes the residual RIGID: h(-3)=h(-4)=h(-7)=h(-8)=h(-11)=1
+C  Independent classical check: selected imaginary-quadratic class numbers
 ========================================================================
-  disc   -3: class number h=1 <- HEEGNER h=1 (RIGID: unique anisotropic form)
-  disc   -4: class number h=1 <- HEEGNER h=1 (RIGID: unique anisotropic form)
-  disc   -7: class number h=1 <- HEEGNER h=1 (RIGID: unique anisotropic form)
-  disc   -8: class number h=1 <- HEEGNER h=1 (RIGID: unique anisotropic form)
-  disc  -11: class number h=1 <- HEEGNER h=1 (RIGID: unique anisotropic form)
-  disc  -15: class number h=2
-  disc  -19: class number h=1 <- HEEGNER h=1 (RIGID: unique anisotropic form)
-  disc  -20: class number h=2
-  disc  -23: class number h=3
-  disc  -24: class number h=2
-  disc  -31: class number h=3
-  => 3,7,11 (and 2's -4,-8) are class-number-1 (Heegner/idoneal): the anisotropic form is UNIQUE,
-     so codex's residual short-vector family is RIGID. LRC(14)=2*7 -> disc -7, h=1 -> single class.
+  discriminant   -3: class number 1
+  discriminant   -4: class number 1
+  discriminant   -7: class number 1
+  discriminant   -8: class number 1
+  discriminant  -11: class number 1
+  discriminant  -15: class number 2
+  discriminant  -19: class number 1
+  discriminant  -20: class number 2
+  discriminant  -23: class number 3
+  discriminant  -43: class number 1
+  discriminant  -67: class number 1
+  discriminant -163: class number 1
+  In particular h(-7)=1.  This classifies forms of discriminant -7 only.
+  The THM-2053 coordinate norm above has discriminant -4, and its 26 translated disks are not
+  ideal classes or equivalence classes of binary quadratic forms.  No atlas compression follows.
 
 ========================================================================
-D  the mod-p anisotropy = Legendre (disc/p) (S215): p=3mod4 anisotropic HARD vs p=1mod4 isotropic EASY
+D  Legendre-symbol audit: (-p/p)=0, while (-1/p) is a different symbol
 ========================================================================
-  p= 3: (-1/p)=-1 (=+1 iff p=1mod4); disc -p definite anisotropic/R; 3mod4: free Z2, Borsuk-Ulam, ANISOTROPIC/HARD (Paley tournament)
-  p= 5: (-1/p)=+1 (=+1 iff p=1mod4); disc -p definite anisotropic/R; 1mod4: automorphism, Brouwer fixed pt, isotropic/EASY (Paley graph)
-  p= 7: (-1/p)=-1 (=+1 iff p=1mod4); disc -p definite anisotropic/R; 3mod4: free Z2, Borsuk-Ulam, ANISOTROPIC/HARD (Paley tournament)
-  p=11: (-1/p)=-1 (=+1 iff p=1mod4); disc -p definite anisotropic/R; 3mod4: free Z2, Borsuk-Ulam, ANISOTROPIC/HARD (Paley tournament)
-  p=13: (-1/p)=+1 (=+1 iff p=1mod4); disc -p definite anisotropic/R; 1mod4: automorphism, Brouwer fixed pt, isotropic/EASY (Paley graph)
-  => the p mod 4 axis (kps-S17) = the anisotropy of the disc -p form (S215): 3,7,11 anisotropic (hard,
-     Euler/Borsuk-Ulam branch), 5,13 isotropic (easy, Brouwer/automorphism). The GATE is (disc/p).
+  p= 3: (-p/p)=+0; (-1/p)=-1
+  p= 5: (-p/p)=+0; (-1/p)=+1
+  p= 7: (-p/p)=+0; (-1/p)=-1
+  p=11: (-p/p)=+0; (-1/p)=-1
+  p=13: (-p/p)=+0; (-1/p)=+1
+  Because p divides the discriminant -p, (disc/p)=0, not +/-1.
+  The separate identity (-1/p)=(-1)^((p-1)/2) records p mod 4; it is not (disc/p).
 
 ========================================================================
-SUMMARY -- the anisotropic determinant gate and its rank-or-Euler reading
+E  Scope of the surviving observation
 ========================================================================
-  codex THM-2053's ANISOTROPIC terminal |a z_i - b u_i| <= (a^2+b^2)/91 is a 2x2 DETERMINANT gate on the
-  THM-2052 rank-two residual plane: large directions safe, residual = SHORT vectors of the anisotropic norm
-  form. That residual is governed by the DISCRIMINANT of the plane's binary quadratic form:
-   * class number 1 (Heegner: -3,-7,-11 = Paley primes 3,7,11; also -4,-8 for 2) => UNIQUE anisotropic form
-     => a RIGID, single-class residual. LRC(14)=2*7 -> disc -7, h=1.
-   * the mod-p anisotropy = Legendre (disc/p) (S215): p=3mod4 (3,7,11) anisotropic = the HARD, free-Z2,
-     Borsuk-Ulam / Euler-survivor branch; p=1mod4 (5,13) isotropic = the EASY, automorphism/Brouwer branch.
-  RANK-OR-EULER as ISOTROPIC-vs-ANISOTROPIC: an isotropic residual direction = a resonance/extra relation
-  (codex rank 11->12 branch); an anisotropic residual = no resonance = lonely = chi-survivor (my S212/HYP-8845
-  Euler branch). The determinant gate's discriminant, and its Heegner/Legendre character, decides the branch.
-  So the LRC(14) leverage: the -7 Heegner anisotropy makes the residual plane's gate RIGID and single-class --
-  a finite, uniquely-structured target -- exactly why 7 (=apex) is the first hard but tractable case.
+  SURVIVES: determinant identity; quadratic-vs-linear safe tail; exact 26-disk failure carrier;
+            finite primitive residual for each chosen basis; classical class-number table.
+  DOES NOT FOLLOW: an LRC14 discriminant -7; a Paley-to-plane identification; rank= isotropic;
+                   Euler=anisotropic; anisotropic=>lonely; or class-number-one atlas compression.
+  Remaining LRC14 work is still to construct/compress the actual plane atlas and discharge each
+  plane's exact tangent-disk lattice points by a valid loneliness argument.

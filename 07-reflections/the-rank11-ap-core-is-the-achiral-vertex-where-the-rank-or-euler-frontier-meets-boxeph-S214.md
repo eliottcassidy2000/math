@@ -1,5 +1,13 @@
 # The rank-11 AP-core is the achiral vertex where codex's rank-or-Euler frontier meets
 
+> **CORRECTED BY MISTAKE-227.** The adjacent rows `d_k` span an index-`11!`
+> path/Jacobi sublattice, not a basis of `L(AP)`. THM-2052's private anchor
+> rows are a different thirteen-coordinate bounded code; no map makes the two
+> objects equal. The 60 minimal vectors are signed off-diagonal Schur triples,
+> not four-term additive energy. Rank/Euler convergence at the AP and the claim
+> that rank twelve is the sole terminal are withdrawn; THM-2053 supplies a
+> rank-eleven tangent-disk terminal. Read the remainder as idea provenance.
+
 *boxeph-2026-07-21-S214. Owner: work incoming LRC progress (pull often); explore rank-11 / "11 private-
 coordinate relations", through the lens "relations between a set of things is a tournament." Builds on
 incoming codex THM-2052 (relation-rank descent, PROVED) + HYP-8841 (rank-or-Euler frontier, OPEN); mac-mini
@@ -31,7 +39,7 @@ The number `11` names three different things; the whole program is the gap betwe
 |---|---|---|---|
 | **A** | harvested **bounded-relation code** `W_{Q,3}(v)` (THM-2052) | `n−s+1 = 11` (→12 terminal) | PROVED |
 | **B** | ambient **resonance lattice** `{k∈ℤ¹³:k·v=0}` (single character) | `n−1 = 12` | structural |
-| **C** | **balanced AP-core lattice** `L(AP)={a∈ℤ¹²:Σi·aᵢ=0}` (mac-mini S25) | `\|S\|−2 = 11` | computational |
+| **C** | **AP resonance lattice** `L(AP)={a∈ℤ¹²:Σi·aᵢ=0}` (mac-mini S25) | `\|S\|−1 = 11` | exact lattice; later synthesis corrected |
 
 The AP-core `C` is what the extremal `{1,…,12}` *is*; the descent lives in `A` inside `B`. My contribution
 below is a structural reading of `C` — the target vertex — not of the descent carrier `A`.
@@ -41,11 +49,11 @@ below is a structural reading of `C` — the target vertex — not of the descen
 Through "relations = tournament" glasses the 12 AP speeds `{1,…,12}` are the **transitive tournament
 `T₁₂`**, and its rank-11 relation lattice `L(AP)` records that structure exactly:
 
-- **The "11 private-coordinate relations" = the transitive spine.** In the basis
-  `d_k=(k+1)eₖ−k e_{k+1}` (`k=1..11`), each `d_k` is a relation on the **adjacent pair `(k,k+1)` only**, and
-  the Gram matrix is **tridiagonal** (diagonal `k²+(k+1)²`, off-diagonal `−k(k+2)`) — a weighted **path /
-  Jacobi matrix**, i.e. a three-term-recurrence backbone. The 11 adjacent-pair relations are the **11
-  covering edges of the linear order `1<2<…<12`** — the transitive tournament's Hasse spine (verified).
+- **Finite-index chain frame.** The rows
+  `d_k=(k+1)eₖ−k e_{k+1}` (`k=1..11`) have adjacent support and a
+  tridiagonal Gram matrix, but span a sublattice of index `11!`. Saturation is
+  load-bearing and restores relations absent from the path frame. They are not
+  THM-2052's private-coordinate anchor rows.
 - **The long-range relations = additive energy.** The **minimal** vectors of `L(AP)` (norm 3, kissing
   number **60**) are exactly the `±`(additive triples) `vᵢ+vⱼ=v_{i+j}` (30 of them); kissing `= 2·(#triples)
   = additive energy` (mac-mini S25; my S211 CT-moment), which the AP uniquely maximizes.

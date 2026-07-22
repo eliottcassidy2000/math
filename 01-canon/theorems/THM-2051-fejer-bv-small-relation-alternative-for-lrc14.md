@@ -8,10 +8,10 @@ depends_on:
   - THM-699
   - THM-935
   - THM-1092
+  - THM-965
 related:
   - THM-940
   - THM-946
-  - THM-965
   - THM-1645
   - THM-2050
   - HYP-8841

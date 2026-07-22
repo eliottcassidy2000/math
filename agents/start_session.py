@@ -16,7 +16,16 @@ import subprocess
 import sys
 from pathlib import Path
 
-from doc_surface import CANONICAL_ROUTES, TOPIC_SEARCH_ROUTES, TOPIC_SEARCH_TREES
+from doc_surface import (
+    ALWAYS_READ_ROUTES,
+    MAX_EMITTED_MATCH_BYTES,
+    ON_DEMAND_ROUTES,
+    SEARCHABLE_PREFIX_END,
+    TOPIC_ARTIFACT_TREES,
+    TOPIC_SEARCH_ROUTES,
+    TOPIC_SEARCH_TREES,
+    WORKFLOW_ROUTES,
+)
 
 
 REPO = Path(__file__).resolve().parent.parent
@@ -112,10 +121,17 @@ def git_state(recent: int) -> bool:
 def route_packet() -> bool:
     section("Canonical startup route")
     healthy = True
-    for path in CANONICAL_ROUTES:
-        marker = "OK" if (REPO / path).exists() else "MISSING"
-        print(f"[{marker}] {path}")
-        healthy = healthy and marker == "OK"
+    tiers = (
+        ("always read", ALWAYS_READ_ROUTES),
+        ("mathematical workflow", WORKFLOW_ROUTES),
+        ("on demand", ON_DEMAND_ROUTES),
+    )
+    for label, routes in tiers:
+        print(f"{label}:")
+        for path in routes:
+            marker = "OK" if (REPO / path).exists() else "MISSING"
+            print(f"  [{marker}] {path}")
+            healthy = healthy and marker == "OK"
     print("Historical logs/reflections are searched for provenance, not read as truth.")
     return healthy
 
@@ -132,6 +148,8 @@ def topic_terms(topic: str) -> list[tuple[str, int]]:
     """Return specificity-weighted literal terms, with identifiers first."""
     if not topic.strip():
         raise ValueError("topic must contain a specific mathematical object or statement")
+    if any(ord(character) < 32 or ord(character) == 127 for character in topic):
+        raise ValueError("topic must not contain control characters")
     if len(topic.encode("utf-8")) > MAX_TOPIC_BYTES:
         raise ValueError(f"topic exceeds the {MAX_TOPIC_BYTES}-byte safety limit")
     identifiers = [
@@ -176,6 +194,71 @@ def match_score(text: str, terms: list[tuple[str, int]]) -> tuple[int, int]:
     return sum(weight for _, weight in matches), len(matches)
 
 
+def truncate_utf8(value: str, limit: int = MAX_EMITTED_MATCH_BYTES) -> str:
+    """Collapse whitespace and truncate without splitting a UTF-8 codepoint."""
+    compact = " ".join(value.split())
+    encoded = compact.encode("utf-8")
+    if len(encoded) <= limit:
+        return compact
+    clipped = encoded[: max(0, limit - 3)]
+    while True:
+        try:
+            return clipped.decode("utf-8") + "..."
+        except UnicodeDecodeError:
+            clipped = clipped[:-1]
+
+
+def maintained_route_lines(relative: str) -> list[str]:
+    text = (REPO / relative).read_text(encoding="utf-8", errors="replace")
+    marker = SEARCHABLE_PREFIX_END.get(relative)
+    if marker and marker in text:
+        text = text.split(marker, 1)[0]
+    return text.splitlines()
+
+
+STATUS_WORDS = (
+    "REFUTED", "SUPERSEDED", "PROVED", "FINITE-EXACT", "CITED",
+    "CONDITIONAL", "VERIFIED", "PARTIAL", "CLAIMED", "OPEN", "MIXED",
+)
+
+
+def file_status(relative: str) -> str:
+    if relative.startswith("07-reflections/"):
+        return "HISTORY"
+    path = REPO / relative
+    try:
+        prefix = path.read_text(encoding="utf-8", errors="replace")[:5000]
+    except OSError:
+        return "UNKNOWN"
+    match = re.search(r"^status:\s*(?:>\s*)?(.*)$", prefix, flags=re.MULTILINE)
+    probe = match.group(1) if match else prefix[:400]
+    if match and not probe.strip():
+        probe = prefix[match.end():match.end() + 400]
+    upper = probe.upper()
+    return next((word for word in STATUS_WORDS if word in upper), "UNLABELLED")
+
+
+def scored_files(
+    terms: list[tuple[str, int]], trees: tuple[str, ...]
+) -> tuple[dict[str, tuple[int, int]], set[str]]:
+    scores: dict[str, tuple[int, int]] = {}
+    identifier_paths: set[str] = set()
+    for term, weight in terms:
+        files = run(
+            "rg", "--files-with-matches", "--fixed-strings", "--ignore-case",
+            "--", term, *trees
+        )
+        if files.returncode not in (0, 1):
+            continue
+        for relative in files.stdout.splitlines():
+            score, count = scores.get(relative, (0, 0))
+            filename_bonus = weight if term.casefold() in Path(relative).name.casefold() else 0
+            scores[relative] = (score + weight + filename_bonus, count + 1)
+            if weight >= 100:
+                identifier_paths.add(relative)
+    return scores, identifier_paths
+
+
 def topic_hits(
     topic: str, max_matches: int, terms: list[tuple[str, int]]
 ) -> None:
@@ -190,9 +273,7 @@ def topic_hits(
         path = REPO / relative
         if not path.is_file():
             continue
-        for line_number, line in enumerate(
-            path.read_text(encoding="utf-8", errors="replace").splitlines(), 1
-        ):
+        for line_number, line in enumerate(maintained_route_lines(relative), 1):
             score, count = match_score(line, terms)
             identifier_hit = any(
                 weight >= 100 and term.casefold() in line.casefold()
@@ -200,7 +281,7 @@ def topic_hits(
             )
             if count >= required_matches and (not has_identifier or identifier_hit):
                 current_count += 1
-                row = f"{relative}:{line_number}:{line}"
+                row = truncate_utf8(f"{relative}:{line_number}: {line}")
                 item = (score, -route_rank, row)
                 if len(current_heap) < max_matches:
                     heapq.heappush(current_heap, item)
@@ -218,62 +299,89 @@ def topic_hits(
     else:
         print("  (none; try exact constants, theorem IDs, quantifiers, or synonyms)")
 
-    file_scores: dict[str, tuple[int, int]] = {}
-    identifier_paths: set[str] = set()
-    for term, weight in terms:
-        files = run(
-            "rg", "--files-with-matches", "--fixed-strings", "--ignore-case",
-            "--", term, *TOPIC_SEARCH_TREES
-        )
-        if files.returncode not in (0, 1):
-            continue
-        for path in files.stdout.splitlines():
-            score, count = file_scores.get(path, (0, 0))
-            filename_bonus = weight if term.casefold() in Path(path).name.casefold() else 0
-            file_scores[path] = (score + weight + filename_bonus, count + 1)
-            if weight >= 100:
-                identifier_paths.add(path)
-
-    priorities = {"01-canon/theorems": 0, "05-knowledge/hypotheses": 1, "07-reflections": 2}
+    file_scores, identifier_paths = scored_files(terms, TOPIC_SEARCH_TREES)
     file_rows = [
         (score, path)
         for path, (score, count) in file_scores.items()
         if count >= required_matches and (not has_identifier or path in identifier_paths)
     ]
-    file_rows.sort(
-        key=lambda row: (
-            row[1].endswith("/INDEX.md"),
-            -row[0],
-            next((v for k, v in priorities.items() if row[1].startswith(k)), 9),
-            row[1],
-        )
+    groups = (
+        ("Canon", "01-canon/theorems/"),
+        ("Hypotheses", "05-knowledge/hypotheses/"),
+        ("Historical reflections", "07-reflections/"),
     )
-    print("Detailed files (ranked by specificity; canon wins ties):")
-    if file_rows:
-        for _, path in file_rows[:max_matches]:
-            print(f"  {path}")
-        if len(file_rows) > max_matches:
-            print(f"  ... {len(file_rows) - max_matches} more qualifying files; refine the query")
+    per_group = max(1, max_matches // len(groups))
+    print("Detailed files (truth precedence first; specificity within group):")
+    for label, prefix in groups:
+        rows = sorted(
+            (row for row in file_rows if row[1].startswith(prefix)),
+            key=lambda row: (row[1].endswith("/INDEX.md"), -row[0], row[1]),
+        )
+        print(f"  {label}:")
+        if not rows:
+            print("    (none)")
+            continue
+        for _, relative in rows[:per_group]:
+            print(f"    [{file_status(relative)}] {relative}")
+        if len(rows) > per_group:
+            print(f"    ... {len(rows) - per_group} more; refine the query")
+
+    artifact_scores, artifact_ids = scored_files(terms, TOPIC_ARTIFACT_TREES)
+    artifact_rows = [
+        (score, relative)
+        for relative, (score, count) in artifact_scores.items()
+        if count >= required_matches and (not has_identifier or relative in artifact_ids)
+    ]
+    artifact_rows.sort(key=lambda row: (-row[0], row[1]))
+    artifact_limit = max(2, min(6, max_matches // 2))
+    print("Niche/artifact hits (evidence or inspiration; not truth authority):")
+    if artifact_rows:
+        for _, relative in artifact_rows[:artifact_limit]:
+            print(f"  {relative}")
+        if len(artifact_rows) > artifact_limit:
+            print(f"  ... {len(artifact_rows) - artifact_limit} more; refine the query")
     else:
         print("  (none)")
 
 
-def recent_guardrails(limit: int) -> None:
+def recent_guardrails(limit: int, terms: list[tuple[str, int]]) -> None:
     section("Front-of-ledger correction headings")
     path = REPO / "01-canon/MISTAKES.md"
     if not path.exists():
         print("(missing mistakes ledger)")
         return
-    headings: list[str] = []
-    with path.open(encoding="utf-8", errors="replace") as handle:
-        for line in handle:
-            if line.startswith("## MISTAKE-"):
-                headings.append(line[3:].rstrip())
-                if len(headings) == limit:
-                    break
+    text = path.read_text(encoding="utf-8", errors="replace")
+    entries = list(
+        re.finditer(r"^## (MISTAKE-\d+[^\n]*)\n(.*?)(?=^## MISTAKE-|\Z)", text, re.M | re.S)
+    )
+    headings = [match.group(1) for match in entries[:limit]]
     for heading in headings:
         print(f"- {heading}")
+    matched: list[tuple[int, str]] = []
+    required_matches = 1 if any(weight >= 100 for _, weight in terms) or len(terms) == 1 else 2
+    for match in entries:
+        score, count = match_score(match.group(0), terms)
+        if count >= required_matches:
+            matched.append((score, match.group(1)))
+    matched.sort(key=lambda row: (-row[0], row[1]))
+    newest = set(headings)
+    relevant = [heading for _, heading in matched if heading not in newest][:4]
+    print("Topic-matched older corrections:")
+    if relevant:
+        for heading in relevant:
+            print(f"- {heading}")
+    else:
+        print("- (none beyond the recent headings)")
     print("Read ACTIVE-GUARDRAILS first; open the full entry only when relevant.")
+
+
+def session_posture(topic: str) -> None:
+    section("Session posture")
+    print(f"Anchor: {truncate_utf8(topic, 220)}")
+    print("Choose one underexplored Niche and one freely generated Wildcard.")
+    print("Keep a 3–7 concept board; compare each new result against every item.")
+    print("Explain the mechanism or failure anatomy, not only the verdict.")
+    print("Type connections as map / preserved predicate / loss / sidecar / test.")
 
 
 def identity_note() -> None:
@@ -311,7 +419,8 @@ def main() -> int:
     print("MATH RESEARCH STARTUP PACKET (read-only, bounded)")
     git_ok = git_state(args.recent)
     routes_ok = route_packet()
-    recent_guardrails(8)
+    session_posture(args.topic)
+    recent_guardrails(8, terms)
     topic_hits(args.topic, args.max_matches, terms)
     identity_note()
     if args.strict and not (git_ok and routes_ok):

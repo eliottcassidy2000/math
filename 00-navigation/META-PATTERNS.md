@@ -42,14 +42,35 @@ and the support-profile correction in MISTAKE-209.
 scalar equation is read coefficientwise.
 **Action:** write a type ledger and implication ledger before transporting the
 claim. Distinguish nodes/exponents, supports/multiplicities, labels/classes,
-scalar/polynomial identities, and different notions of dimension or rank.
+scalar/polynomial identities, graph/tournament spectra, and different notions
+of dimension or rank. A rank coincidence needs ambient modules and an explicit
+map; a spectral formula needs its normalization and exceptional-prime scope.
 **Mechanism:** many compelling false bridges are type errors hidden by shared
 notation.
 **Counterindication:** analogies remain productive as conjecture generators if
 their missing map is stated openly.
-**Evidence:** MISTAKE-209, MISTAKE-211, MISTAKE-212, MISTAKE-214,
-MISTAKE-215, MISTAKE-216, and MISTAKE-222–225 in
+**Evidence:** MISTAKE-209, MISTAKE-211, MISTAKE-212, MISTAKE-214–216,
+MISTAKE-222–225, and MISTAKE-227–229 in
 [`MISTAKES.md`](../01-canon/MISTAKES.md).
+
+## Audit saturation and basis covariance before naming a lattice bridge
+
+**Trigger:** two objects have the same rank, a convenient generator Gram looks
+canonical, or a coordinate inequality is assigned a discriminant/class group.
+**Action:** name both ambient modules and construct the map. Compute kernel,
+cokernel or saturation index, discriminant, and minimal vectors. For a
+coordinate quadratic claim, prove its `GL_n(Z)` covariance and construct the
+actual invariant form from the full configuration before invoking arithmetic
+equivalence classes.
+**Mechanism:** a full-rank generating frame can have enormous finite index, and
+a max of several linear forms against a chosen-coordinate norm need not be one
+quadratic-form representation problem. Equal rank hides precisely the torsion
+and basis dependence that control short vectors.
+**Counterindication:** rank and Gram comparisons are useful diagnostics once
+explicitly labeled as frames; class-group tools become legitimate after a
+basis-invariant form and target-preserving correspondence are proved.
+**Evidence:** MISTAKE-227's index-`11!` AP chain frame and MISTAKE-229's repair
+of the nonexistent Heegner discriminant on THM-2053's tangent-disk union.
 
 ## Preserve the selected side, not only the walls
 
