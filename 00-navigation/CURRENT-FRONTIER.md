@@ -268,12 +268,17 @@ name the LRC predicate it preserves and the coordinate a sidecar must restore.
 - **REFUTED for higher dimensions:** explicit GMC(3) counterexamples now exist;
   GMC is false for every dimension at least 3. See the current external preprint
   entry in [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md).
-- **FORMALIZATION PARTIAL:** the former descent and face-construction gaps are
-  closed, alongside the Wick, normalized-moment, dilation, Kummer/Lucas,
-  Frobenius, and abstract three-case residue layers. DvdK remains an explicit
-  cited premise. The remaining internal step is the concrete normalized-channel
-  instantiation of the residue assembly and the final conditional theorem
-  `DvdK1 -> NC2`; the aggregator does not yet assert end-to-end `NC2`.
+- **FORMALIZATION PARTIAL, AT ONE EXPLICIT COMPOSITION INTERFACE:** the checked
+  spine now includes the concrete normalized three-case residue, exact
+  support-face seed transport, and the full finite-field contradiction. In
+  particular, `GMC2NC2` proves both `NC2` and the GMC(2) endpoint from
+  `DvdK1` plus a compact `HeightWitnessSupplier`; all post-supplier mathematics
+  is kernel-checked. The reference-channel extractor and the theorem producing
+  its three height obligations are separately checked, but their tiny direct
+  existential wrapper currently exhausts Lean's default elaboration budget
+  (and still did so at 800k heartbeats), without a type or mathematical error.
+  That wrapper is the sole internal Lean boundary. The published one-variable
+  DvdK theorem remains a second, deliberately visible external premise.
 
 ### Why THM-2022 works
 
