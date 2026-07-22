@@ -1,58 +1,54 @@
 
 ========================================================================
-P1  BRAID OS Poincare = prod_{k=1}^{n-1}(1+kt) = Stirling-1st -> tournament cohomology
+P1  Classical braid-arrangement control
 ========================================================================
-  n=2: Poincare [1, 1]  == Stirling-1st [c(n,n-i)] [1, 1]? True  (top Betti=1=(n-1)!=1)
-  n=3: Poincare [1, 3, 2]  == Stirling-1st [c(n,n-i)] [1, 3, 2]? True  (top Betti=2=(n-1)!=2)
-  n=4: Poincare [1, 6, 11, 6]  == Stirling-1st [c(n,n-i)] [1, 6, 11, 6]? True  (top Betti=6=(n-1)!=6)
-  n=5: Poincare [1, 10, 35, 50, 24]  == Stirling-1st [c(n,n-i)] [1, 10, 35, 50, 24]? True  (top Betti=24=(n-1)!=24)
-  n=6: Poincare [1, 15, 85, 225, 274, 120]  == Stirling-1st [c(n,n-i)] [1, 15, 85, 225, 274, 120]? True  (top Betti=120=(n-1)!=120)
-  n=7: Poincare [1, 21, 175, 735, 1624, 1764, 720]  == Stirling-1st [c(n,n-i)] [1, 21, 175, 735, 1624, 1764, 720]? True  (top Betti=720=(n-1)!=720)
-  => tournament/ordering space has cohomology pi(t)=prod(1+kt); Betti = Stirling 1st kind.
-     A NEW graded lens on the tournament continuum, finer than char_A.
+n=2: Poincare=[1, 1]; top=1=1
+n=3: Poincare=[1, 3, 2]; top=2=2
+n=4: Poincare=[1, 6, 11, 6]; top=6=6
+n=5: Poincare=[1, 10, 35, 50, 24]; top=24=24
+n=6: Poincare=[1, 15, 85, 225, 274, 120]; top=120=120
+n=7: Poincare=[1, 21, 175, 735, 1624, 1764, 720]; top=720=720
+Scope: this is cohomology of one braid complement, not an invariant of each tournament.
 
 ========================================================================
-P2  finite-field characteristic polynomial: braid (falling fact) & SHI (deformed braid)
+P2  Classical finite-field braid and Shi controls
 ========================================================================
-  n=3,q=11: braid #off-all=990==q(q-1)..=990?True | shi #off-all=704==q(q-n)^(n-1)=704?True
-  n=3,q=13: braid #off-all=1716==q(q-1)..=1716?True | shi #off-all=1300==q(q-n)^(n-1)=1300?True
-  n=4,q=11: braid #off-all=7920==q(q-1)..=7920?True | shi #off-all=3773==q(q-n)^(n-1)=3773?True
-  n=4,q=13: braid #off-all=17160==q(q-1)..=17160?True | shi #off-all=9477==q(q-n)^(n-1)=9477?True
-  braid regions=n! ; shi regions=(n+1)^(n-1): n=3 -> 6, 16=16 (parking fns).
-  => LRC resonances x_i - x_j = integer ARE a deformed braid arrangement; the finite-field
-     point-count (Diophantine!) is the native tool -- matching LRC's number-theoretic flavor.
+n=3, q=11: braid=990; Shi=704
+n=3, q=13: braid=1716; Shi=1300
+n=4, q=11: braid=7920; Shi=3773
+n=4, q=13: braid=17160; Shi=9477
+Scope: these textbook point counts do not identify Shi walls with LRC safety walls.
 
 ========================================================================
-P3  LRC = TORIC arrangement: |G_delta| = complement volume = arithmetic-Mobius (relation lattice)
+P3  Minimal witness: a thickened safe set is not a standard toric complement
 ========================================================================
-  v=(1, 2, 3) delta=0.2: |G| direct=0.13333  relation-lattice sum=0.13418  match? True
-  v=(1, 2, 3) delta=0.15: |G| direct=0.35000  relation-lattice sum=0.35001  match? True
-  v=(1, 3, 5) delta=0.15: |G| direct=0.28667  relation-lattice sum=0.28642  match? True
-  => good-set measure = toric-complement volume = arithmetic-Mobius sum over layers {k.v=0}.
-     The repo's LRCMod-mod-q ladders (THM-1820) ARE the finite-field method on the torus.
+S={1}, delta=1/5: |G_delta|=3/5
+ordinary complement of ker(z -> z) in the circle: Haar measure=1
+Therefore |G_delta| is not ordinary toric-complement volume.
 
 ========================================================================
-P4  TIGHT = RELATION-RICHEST = max arrangement Mobius/Betti richness: AP (1,2,3) wins
+P4  Exact signed phase-height wall arithmetic
 ========================================================================
-  relation richness N_R (small relations |k|<=2) over primitive n=3 triples, top 6:
-     (1, 2, 3): N_R=4   <- the AP / tight extremal
-     (2, 3, 4): N_R=3
-     (1, 3, 4): N_R=3
-     (1, 2, 4): N_R=3
-     (4, 5, 9): N_R=2
-     (3, 5, 8): N_R=2
-  (1,2,3) N_R=4; is it the max? True  (tight = relation-richest = max Betti/Mobius mass)
+self pair v=1: |det((v,+1),(v,-1))|=2
+self pair v=2: |det((v,+1),(v,-1))|=4
+self pair v=3: |det((v,+1),(v,-1))|=6
+v=1, w=2: same-sign=1=|v-w|; opposite-sign=3=v+w
+v=1, w=3: same-sign=2=|v-w|; opposite-sign=4=v+w
+v=2, w=3: same-sign=1=|v-w|; opposite-sign=5=v+w
+Full-torus determinants expose pair-sum arithmetic; the top-slope proof selects the ruler.
+
+========================================================================
+P5  Finite B=2 scout and a hostile standard-toric control
+========================================================================
+hard-coded universe: 72 primitive triples; unique B=2 leader=(4, (1, 2, 3))
+natural circle hypertori union: (1,2,3) has 4 points; (2,3,4) has 6
+Thus the B=2 relation count is not Betti/Mobius mass and is cutoff-dependent.
 
 ========================================================================
 SUMMARY
 ========================================================================
-  ONE structure -- an arrangement with a Mobius lattice of flats/layers -- recurs across the repo:
-   BRAID  (tournaments/NC2, S208): OS cohomology pi=prod(1+kt), Stirling Betti = graded lens.
-   SHI/deformed braid (LRC resonance x_i-x_j=integer): finite-field char polynomial (Diophantine).
-   TORIC / De Concini-Procesi (LRC relation lattice {k.v=0}, THM-1820): good-set = complement volume
-     = arithmetic-Mobius sum = LRCMod mod-q = finite-field method on the torus. Layer-localization is
-     the toric analog of the S208 flat-factorization -> a candidate Wall-A tool.
-   TIGHT = RELATION-RICHEST: the AP maximizes toric-arrangement Betti/Mobius mass (THM-1820 B2).
-  LEVERAGE: (a) tournament cohomology beyond char_A; (b) the finite-field/arithmetic-Mobius method as
-  the native engine for LRC characteristic quasi-polynomials; (c) toric layer-localization factoring
-  |G_delta| near a resonance, mirroring the braid flat-factorization that gave HYP-8775.
+Classical braid/Shi formulas survive.  THM-1820's Fourier annihilator identity survives.
+The live LRC arrangement is the labelled, oriented phase-height cell complex for
+X_S={(v,+1),(v,-1)} with its selected inequality side and height functional.
+Ordinary complement cohomology is not known to recover the selected state;
+abstract relation lattices and bounded B=2 relation data are provably lossy.

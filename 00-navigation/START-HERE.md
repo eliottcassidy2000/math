@@ -73,6 +73,9 @@ are searchable history—not mandatory warm-up.
     proves parity-Hasse completeness for reduced period-14 functions, then
     gives an infinite AP-alias family with the same local packet and a strict
     `17/41` exit. Exact owner height or adaptive resolved phase is indispensable.
+    [THM-2047](../01-canon/theorems/THM-2047-phase-height-toric-arrangement-for-lrc.md)
+    now proves the labelled phase-height carrier and pair-sum recovery;
+    deletion/localization forcing the AP core remains open.
 
 ## Where to go by topic
 

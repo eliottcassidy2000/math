@@ -48,8 +48,37 @@ notation.
 **Counterindication:** analogies remain productive as conjecture generators if
 their missing map is stated openly.
 **Evidence:** MISTAKE-209, MISTAKE-211, MISTAKE-212, MISTAKE-214,
-MISTAKE-215, MISTAKE-216, MISTAKE-222, and MISTAKE-223 in
+MISTAKE-215, MISTAKE-216, and MISTAKE-222–225 in
 [`MISTAKES.md`](../01-canon/MISTAKES.md).
+
+## Preserve the selected side, not only the walls
+
+**Trigger:** a problem is recast as avoiding hyperplanes, hypertori, resonance
+walls, or forbidden bands.
+**Action:** distinguish the bare arrangement, its ordinary complement, a
+thickened complement, and a selected inequality-cell complex. Record wall
+owner, orientation/sign, selected side, height functional, and deletion unit.
+**Mechanism:** intersection posets and complement cohomology forget which side
+is feasible and which top cell realizes an extremum.
+**Counterindication:** ordinary arrangement invariants are sufficient when the
+target predicate is actually invariant under all forgotten labels and sides.
+**Evidence:** MISTAKE-224's repair of the Fourier-lattice/toric-complement
+conflation and the exact phase-height recovery of THM-1002's pair-sum ruler.
+
+## Find the hidden second coordinate in a nearly true theorem
+
+**Trigger:** one elegant property appears to explain a theorem, but a minimal
+counterexample preserves that property.
+**Action:** compare the proof with the witness and identify the extra
+coordinate actually excluding it—parity form, selected side, height, owner,
+support, or positivity. Restate the theorem as a conjunction.
+**Mechanism:** many structural theorems are two-key locks; naming only the
+visually dominant key creates false universal transfers.
+**Counterindication:** do not add decorative hypotheses; each coordinate must
+perform an explicit proof step or eliminate a concrete witness.
+**Evidence:** MISTAKE-225 (skew symmetry plus the tournament block modulo two
+for odd support) and MISTAKE-224 (walls plus selected-side/height labels for
+the LRC phase-height object).
 
 ## A local factorization transfers only through a stated functor
 

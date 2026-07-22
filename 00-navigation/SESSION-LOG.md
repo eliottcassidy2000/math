@@ -348,98 +348,149 @@ modulus lens; it does not preserve signed star coefficients or endpoint owners.
 **SYNTHESIS:** p mod 4 decides tournament(i sqrt p)-vs-graph(sqrt p), tight(Eisenstein 2/3/7)-vs-slack(golden 5); the Gauss sum IS the Paley spectrum, fixing each prime's role. Ties S206(foil)+S212(i sqrt7)+S213(chirality)+S214(rank-11)+opus-S434(Paley symmetric-intransitive pole, opposite the transitive AP nullcone vertex).
 
 **Honest:** all rows are verified/classical facts; the contribution is the SYNTHESIS -- one Paley construction giving each small prime a tournament personality via p mod 4, mapped onto LRC(14)'s tight/slack/apex/rank structure. Artifacts: reflection each-prime-is-its-paley-tournament-...-boxeph-S215.md, HYP-8860, script (+.out).
+**Honest:** THM-587, the toothpick OEIS/oddness/Jacobsthal facts, and S212 are each proved/verified; the contribution is the UNIFICATION (one reversal, one Lefschetz parity count==#fixed) + the explicit toothpick<->chirality dictionary. Artifacts: reflection chirality-toothpicks-and-why-tournament-counts-are-even-one-lefschetz-parity-boxeph-S213.md, HYP-8850, script (+.out).
+**Owner:** push the DC(2)/planar-JC thread to its next decisive target and transfer the proved/disproved mechanisms toward LRC(14), while repeatedly integrating incoming work.
 
-**Exact progress.** `ThreeTermRecurrence.lean` was recast over `Polynomial R`,
-its imports were reduced, and its nonzero-`b` assumption was weakened to the
-indices actually used. New `HermiteThreeTerm.lean` proves the derivative and
-three-term Hermite recurrences missing from Mathlib and then proves that
-consecutive Hermite polynomials have no common root. The results are
-kernel-pure and the files are PR-ready components.
+**DC(2) result (THM-2049, PROVED local/formal statement; not DC(2)):** in the exact Ore algebra `Q[x,q][ell;delta]`, `beta(sum a_k ell^k)=min_k(v_x(a_k)-2k)` is multiplicative and commutators raise beta by two. The associated bracket is `{ell,q}_0=2`. For the Weyl boundary symbols, the simultaneous grade-`g` correction map is `(A,B)->(8/3)(u-2)A+(2u^2-10u+9)B/9`; it is surjective because the two `u` polynomials are coprime. Thus the grade-six residual is exact. An exact ladder advances grades `6,...,13` to `14`; a formal beta-adic `[S,T]=1` lift exists. The open gates are polynomial termination and the coupled `D` relations. This corrects HYP-8802/8803's earlier suggestion that the first invariant grade might carry the obstruction.
 
-**Scope.** THM-2022 already proves NC2/GMC(2) on paper. These Lean files do not
-formalize its lowest-face finite-place argument or the DvdK input.
+**LRC no-go (THM-2050, PROVED):** AP13 and `AP13` with `12->26` have identical full local phase-height function germs on `|h|<1/728` at every unit point `a/14`, yet `M=1/14` and `M=1/12`. Local top data, even as a full germ, cannot determine global loneliness.
 
-## boxeph-2026-07-21-S208 -- braid-arrangement shadows, with transfers retracted (HYP-8825)
+**Incoming synthesis:** THM-2047 supplies the lossless signed phase-height/Euler carrier; THM-2048 supplies the fiber-quantization pruning tax; HYP-8840 identifies GMC's constant-term/volume leverage and its zero-volume ceiling. Later pulls supplied THM-2048's genuine Cover14 gain and strengthened THM-2051: after paying pair covariance exactly, the no-support-`3..5`-relation branch at height `2^21` has positive safe volume. THM-2052 then proves every hypothetical counterexample already has eleven independent bounded three-support relations and lies in a finite two-dimensional rational atlas. The exact transfer is `volume/tax -> strict branch`, `Euler signed wall word -> tight branch`, and a labelled Noetherian rank-or-Euler rule inside the relation branch as the missing glue. No literal algebra map between GMC/DC and LRC is asserted.
 
-> **Post-session audit:** MISTAKE-223 retracts the claimed general NC2 iff,
-> hyper-Bessel block factorization, and shared bagel/shadow Euler
-> characteristic. THM-2023 also supersedes the “general L-P open” status.
+**Exact termination-sidecar audit (HYP-8841):** pair-sum maxima, threshold interval/point topology, complete first exits, and every peel tax were computed on AP/GW, `12->26`, `12->36`, `12->96`, `12->84`, P10+K33, and the incoming Cover14 tax-gain row. It exactly reproduces the latter's peel-`93` excess `2413467317/235670635200`. The tax fires on deep/covering controls but misses the smallest hostile/K33 controls and is not a scalar termination height. THM-2047 proves the strict search is complete by `q<=2 max(S)`. With THM-2051 now proved, the remainder lies in the bounded small-relation branch, but every control already has a height-one support-three circuit (the first seven share `1+2=3`). Raw circuit existence ranks last in the enlarged carrier tournament. The next decisive Wall-A clause is therefore an active-owner circuit/Euler endpoint-survival lemma when neither a tax violation nor a positive pair-sum margin occurs.
 
-**Exact survivor.** The Vandermonde is the braid-arrangement defining
-polynomial; its real complement has `n!` chambers corresponding to labelled
-total orders/transitive tournaments. Near a coincidence partition it has the
-explicit leading within-block/cross-block product. The exponent is vanishing
-order `sum C(|B_i|,2)`, not flat codimension. An explicit companion matrix for
-the full gap-`g` recurrence has `det(I-xM)=1-x-x^(g+1)`.
+**Past-work pull into the decisive clause:** HYP-2108 already gives the exact endpoint-cover functional. If a core-safe component has midpoint `m_i` and length `l_i`, it is swallowed by the open danger arcs of peel `w` iff `||wm_i||+(w/2)l_i<1/14`. Hence the active-owner target is precisely `P_w(C)=max_i(||wm_i||+(w/2)l_i-1/14)>=0`. With THM-2052, the next theorem becomes a rank-or-Euler alternative: some peel has `P_w>=0`, or active owner data supplies a twelfth independent bounded relation and reaches the finite maximal-minor terminal. HYP-3117/HYP-3120 identify endpoint incidence as the missing proof-circuit input; HYP-8845 halves the covering case because a survivor has a mirror partner and `chi>=2`.
 
-**Open bridge test.** Construct actual cell complexes and one named valuation
-for the solid-torus cutting correction and the finite-shadow first deficit,
-then give the map and loss ledger—or prove that their operations are
-incompatible. Matching `-1` values and determinant syntax are not enough.
+**Artifacts:** THM-2049, THM-2050, HYP-8841, the updated exact Ore script/output, `lrc14_termination_sidecar_codex_20260721.py/.out`, and reflection `from-Ore-boundary-acyclicity-to-LRC14-Euler-termination-codex-20260721.md`.
+**Owner:** look for other topological advances the repo has made; come up with creative LRC arguments combining and extending them.
 
-**Artifacts:** corrected HYP-8825; MISTAKE-223; repaired reflection; scoped
-`04-computation/arrangement_topology_leverage_boxeph_S208.py` and output.
+**PULL (repo topological toolkit, credited):** THM-2047 (codex) chi(G_delta)=#components, LRC(14)<=>chi(G_{1/14})>0 [PROVED]; HYP-3015 (codex-S179) {G_delta}=superlevel filtration of f_S, M(S)=top death, persistence barcode; opus lonely-set Euler-char certificate + kps cohomological_three_distance Alexander duality (b0(lonely)=b0(cover), arcs alternate); HYP-3025 arc-Cech nerve + Betti-defect sidecar, HYP-3101 normal-fan Cech barcode component bound (open); kps-S19 LRC Lefschetz = free iota:t->1-t + Gauss sum i*sqrt(7) (ordinary Lefschetz blind); THM-587 metagraph reversal Lefschetz (tournament side, PROVED). P1-P5 re-verify these.
 
-## boxeph-2026-07-21-S207 -- exact binomial readings and an open valuation test (HYP-8820)
+**NEW (P6, verified):** f_S(1-t)=f_S(t) => G_delta is iota-INVARIANT (iota = my S210 involution). iota's fixed points {0,1/2}: f_S(0)=0 always, f_S(1/2)=0 iff some speed EVEN. Every COVERING set has an even speed => both fixed points dangerous => iota acts FREELY on G_delta => chi(G_delta) EVEN. So codex's chi>0 sharpens to:
+  LRC(14) for covering S  <=>  chi(G_{1/14})>=2  <=>  a MIRROR PAIR {t*,1-t*} of lonely windows survives.
+Verified: deep well {1..12,182} chi=24 (12 pairs); tight (1,2,3)@1/4={1/4,3/4} chi=2; all-odd (1,3,5,7) = iota-FIXED exception (1/2 lonely, chi=1 ODD = Borsuk-Ulam fixed point, the classical all-odd-lonely case).
 
-> **Post-session audit:** MISTAKE-222 retracts the claimed common mechanism.
-> A shared Pascal array or matching `-1` offset does not identify geometries.
+**LEVERAGE:** (1) equivariant HALVING of Wall A -- find one lonely window in [0,1/2], mirror automatic; (2) parity obstruction -- chi even => never 1; a disproof needs chi=0 = every mirror pair killed simultaneously (iota-symmetric covering); (3) kps-S19's Lambda(iota)=0 blind BECAUSE free; the odd-equivariant index = Gauss sum i*sqrt(7) is the Borsuk-Ulam obstruction on G_delta/iota. The equivariant chi (even) + odd index (i*sqrt7) are the two halves of the Z/2-equivariant Euler class of the good set. Topological form of THM-1820 mirror pairs (B3) + S210.
 
-**Exact survivor.** Caterer and cake are Pascal prefixes. For `n>=1`, Moser is
-`1+C(n,2)+C(n,4)=sum_(k=0)^4 C(n-1,k)`, and bagel is
-`C(n,3)+2C(n,2)+2C(n,1)=cake(n+1)-2`, hence
-`bagel(n)-cake(n)=T_n-1`. Fibonacci is `sum_k C(n-k,k)`. The full-rank gap
-formula is `a_g(d)=sum_k C(d-gk,k)` with kernel
-`1/(1-x-x^(g+1))`; finite-rank shadows depart at their first deficit.
+**Honest:** P1-P5 re-verify existing fleet toolkit (credited, not claimed); the equivariant even-chi mirror-parity sharpening (P6) is new and verified. Forcing chi>=2 for every 13-speed covering core = LRC itself, OPEN; reduces Wall A to 'G_{1/14}(C)/iota on [0,1/2] nonempty'. Artifacts: reflection the-good-sets-reversal-symmetry-...-boxeph-S212.md, HYP-8845, script (+.out).
+**Honest:** a verified DECOMPOSITION of the remaining work + a proven ceiling on the GMC/volume half, NOT a proof or new implication. Corrects+adopts codex THM-2047; retracts the S209 toric-complement and S210 'torus needs saddles' overclaims. Artifacts: reflection where-gmc2-reaches-lrc14-...-boxeph-S211.md, HYP-8840, script (+.out).
+> **CURRENT-TRUTH WARNING:** this is a concise provenance log, not a truth
+> source. Later audits can correct an earlier session on the same page. Start
+> with `START-HERE.md`, `CURRENT-FRONTIER.md`, `ACTIVE-GUARDRAILS.md`, and the
+> linked theorem or mistake entry.
 
-**Operation laws.** `Delta Moser(n)=cake(n-1)` and
-`Delta bagel(n)=caterer(n+1)` with the indexing stated in HYP-8820. Geometric
-bijections or valuations realizing these exact operations remain worthwhile.
+# Recent research sessions
 
-**Artifacts:** HYP-8820; MISTAKE-222; corrected reflection;
-`04-computation/cake_bagel_figurate_fibonacci_boxeph_S207.py` and output.
+Older session prose remains discoverable in git history, reflections,
+hypothesis files, and frozen outputs. Entries here record only the reusable
+survivor, correction, and next question.
 
-## boxeph-2026-07-21-S206 -- necessary structure for an LRC(14) disproof (HYP-8815)
+## boxeph-2026-07-21-S210 -- antisymmetry atlas, scope-repaired
 
-> **Post-session audit:** MISTAKE-221 retracts the advertised near-AP,
-> anti-golden, and full-autocorrelation characterization. The original
-> denominator scan was incomplete; the current script uses the exact THM-1002
-> pair-sum engine on every listed row.
+> **Audit:** MISTAKE-225 retracts the advertised one-hinge synthesis.
 
-**Rigorous survivor.** After gcd normalization, a counterexample is primitive
-Cover14 with `M<1/14` and cannot have a dilated-AP maximum-deletion core by
-THM-1017. THM-730 gives that core Schur count `T<=65`. With `L=0`, THM-731
-forces `disc_v>=6|G'_{~v}|^2` for every peel. Resumming these necessary
-deficits into loneliness remains open.
+- Exact survivors: even rank of real skew matrices; Fisher--Ryan odd support
+  for tournament games, with the missing tournament mod-2 mechanism restored;
+  torus Betti data; positive-kernel replicator invariants; torus-inversion
+  fixed points; even LRC far-set weights; alternating Vandermonde.
+- Minimal refutation: a Condorcet winner above a directed 3-cycle is
+  intransitive but has pure optimum and attracts every interior replicator
+  orbit. Pure optimum means Condorcet winner, not transitivity.
+- Type repair: RPS regular levels are circles in `Delta^2`; the cutting bagel
+  is a solid torus, not boundary `T^2`; game/Morse/dynamical saddles and three
+  different `Z/2` actions remain separate.
+- Live thread: classify tournament support faces with positive kernel vectors
+  and operation-compatible monomial first integrals.
+- Artifacts: corrected HYP-8835, reflection, script/output, MISTAKE-225.
 
-**Exploratory frame.** The deep well `{1,...,12,182}` has
-`183=Phi_6(14)` and maximizing time `14/183=[0;13,14]`; Fibonacci/golden
-continued fractions were tested as an opposite control. This motivates, but
-does not prove, an anti-golden hostile-control program.
+## boxeph-2026-07-21-S209 -- phase-height arrangement repair
 
-**Exact finite audit.** Every maximizer lies on a pair-sum ruler. Enumerating
-every numerator on every ruler computes all fifteen displayed rows exactly;
-all are safe. In particular `{1,...,12,5460}` has `M=420/5461`, exposing the
-old cutoff's strict miss. The bank is not a global minimizer theorem.
+> **Audit:** MISTAKE-224 retracts the toric-complement/Mobius interpretation.
 
-**Artifacts:** HYP-8815; MISTAKE-221; corrected reflection;
-`04-computation/lrc14_disproof_search_boxeph_S206.py` and output.
+- Exact survivors: standard braid Poincare/Stirling and Shi finite-field
+  formulas; THM-1820's character-orthogonality identity on the orbit subtorus;
+  a finite `B=2` relation-count scout over 72 triples.
+- Minimal refutation: for `S={1}`, `|G_delta|=1-2delta`, while the ordinary
+  character-kernel complement has Haar measure one. A Fourier annihilator is
+  not a finite toric layer poset.
+- Constructive repair: on `(t,delta)`, the signed character list
+  `X_S={(v,+1),(v,-1)}` gives exact walls `vt+/-delta in Z`. Opposite-sign
+  determinants are `v+w`, recovering the pair-sum ruler. The selected side,
+  height, owner, sign, and paired deletion are essential sidecars. THM-2047
+  proves this carrier, its top/pair-sum mechanism, and exact paired deletion.
+- Live thread: prove or refute a localization theorem that makes this exact
+  deletion force the AP maximum-deletion core.
+- Artifacts: corrected HYP-8830, reflection, script/output, MISTAKE-224.
 
-## boxeph-2026-07-21-S205 -- JC/LRC AP analogy and counterexample audit (HYP-8810)
+## codex-2026-07-21 -- period-14 carrier audit and exact S206 repair
 
-> **Post-session scope:** HYP-8810 is a wildcard analogy, not a common
-> reduction. THM-1017 is one-way on the LRC side; MISTAKE-216 separates
-> Poisson rank, DC rank, and planar JC.
+- THM-2043 is sound and sharply scoped: parity-Hasse coordinates completely
+  recover a reduced period-14 function, but an infinite AP-alias family shares
+  every fixed finite local-height prefix and has a strict `(41,17,1)` exit.
+  This is a carrier no-go, not LRC(14).
+- The S206 fifteen-row audit is now finite-exact: the corrected script
+  enumerates every numerator on every exact THM-1002 pair-sum ruler. All rows
+  are safe; `{1,...,12,5460}` exposes the old cutoff by
+  `92/1197 < 420/5461`.
+- General warning retained: an arbitrary bounded denominator scan is only a
+  lower bound unless all pair-sum rulers are exhausted or
+  `Q>=2 max(S)`. Do not discard non-coprime numerators without divisor rulers.
+- Live LRC target remains the structural AP-core supplier / uniform sporadic
+  classification, with exact owner height or adaptive resolved-phase data.
 
-**Exact verification.** The owner-supplied three-dimensional Keller map has
-constant Jacobian determinant `-2` and an exact collision (THM-1300/1315).
-Discovery/publication provenance remains separate from that calculation.
+## codex-2026-07-21-DC2-filtered-pullback-wall -- exact Ore boundary
 
-**Connection proposed.** AP/transitive/one-sided extremals are useful cold
-objects to compare. THM-2045 now adds an exact JC-side weighted-sector /
-exponent-semigroup obstruction for `R=x(a-b*x^r*q^s)`. No map identifies it
-with the LRC(14) AP-extraction supplier; a preserved predicate and loss ledger
-are still required.
+- THM-2046 proves that multiplication positions plus first-order momenta force
+  a planar Keller map. Thus THM-2044's four-variable Poisson witness cannot
+  descend through that filtered `A_2` class.
+- In the exact Ore chart, localization at `x` gives `[ell,t]=1`; extension
+  across `x=0` is the remaining obstruction. Weyl ordering kills the whole
+  anti-invariant boundary grade three but leaves a uniform grade-six residual.
+- HYP-8803 is an exact reduction with open closure. Arrangement localization
+  and sign parity are operation-level prompts only, not object identities.
+- Artifacts: THM-2046, HYP-8803, exact script/output and boundary reflection.
 
-**Artifacts:** consolidated HYP-8810 and corrected
-`07-reflections/jacobian-and-lonely-runner-two-nullcones-that-diverge-boxeph-S205.md`.
+## death-star-2026-07-21-S93/S94 -- NC2 formalization packaging
+
+- `ThreeTermRecurrence.lean` is recast over `Polynomial R` with minimal imports
+  and the needed nonzero-`b` hypotheses only. `HermiteThreeTerm.lean` proves
+  the Hermite recurrence and consecutive-root exclusion.
+- S94 adds a clean kernel-pure `GMC2 <= NC2` architecture and repairs the
+  formal lowest-face skeleton.
+- Scope: THM-2022 proves NC2/GMC(2) on paper. The good-prime lowest-face
+  amplification is not yet fully formalized in Lean.
+
+## boxeph-2026-07-21-S208 -- braid shadows, transfers retracted
+
+> **Audit:** MISTAKE-223 retracts the general NC2 iff, hyper-Bessel block
+> factorization, and common bagel/shadow Euler characteristic.
+
+- Exact survivor: Vandermonde is the braid defining polynomial; its real
+  chambers are total orders; coordinate coalescence has an explicit leading
+  product; the gap recurrence has a companion determinant.
+- Vanishing order is not flat codimension. THM-2033 is special-matrix scope,
+  and THM-2023 independently proves the `Phi_(p,q)` zero theorem.
+- Live test: exhibit an actual shared cell valuation or a decisive no-go.
+
+## boxeph-2026-07-21-S207 -- exact binomial readings
+
+> **Audit:** MISTAKE-222 retracts the claimed common geometric mechanism.
+
+- Exact survivor: caterer/cake prefixes, Moser and bagel row functionals,
+  Fibonacci diagonals, the full-rank gap formula, and
+  `bagel(n)-cake(n)=T_n-1` for `n>=1`.
+- Exact operation laws include `Delta Moser(n)=cake(n-1)` and
+  `Delta bagel(n)=caterer(n+1)` with the stated indexing.
+- A common Pascal array or matching minus one supplies no torus, JC, or LRC
+  map. Search for a genuine boundary-cell valuation, not another prefix match.
+
+## boxeph-2026-07-21-S205 -- JC/LRC wildcard, not common reduction
+
+- The owner-supplied three-dimensional Keller map and collision are exactly
+  verified; provenance is a separate question.
+- THM-2044 disproves the two-pair Poisson conjecture; THM-2045 excludes planar
+  mates only for one factorized `R` family; THM-2046 blocks one filtered
+  quantization class. DC(2) and planar JC remain open.
+- AP/transitive/one-sided extremals remain a worthwhile comparison portfolio,
+  but no theorem identifies the planar-JC residual with LRC(14)'s twelve-term
+  AP-core supplier.

@@ -57,6 +57,7 @@ HEADLINE_SENTINELS = {
         "unrestricted GMC(2)",
         "**PROVED in repo",
         "two-pair Poisson conjecture false",
+        "THM-2047](../01-canon/theorems/THM-2047-phase-height-toric-arrangement-for-lrc.md)",
     ),
     "00-navigation/CURRENT-FRONTIER.md": (
         "## LRC(14)",
@@ -66,6 +67,7 @@ HEADLINE_SENTINELS = {
         "proves NC2 and hence unrestricted GMC(2)",
         "GMC is false for every dimension at least 3",
         "THM-2044",
+        "proves the corresponding labelled phase-height carrier",
     ),
     "01-canon/ACTIVE-GUARDRAILS.md": (
         "No uniform `q <= 25` good-period theorem",
@@ -74,6 +76,8 @@ HEADLINE_SENTINELS = {
         "A shared Pascal array is not a geometric bridge",
         "Braid localization does not factor every wall object",
         "Poisson rank two is not DC(2) or planar JC",
+        "A thickened safe set is not an ordinary toric complement",
+        "Antisymmetry is not the whole tournament-game or torus theorem",
         "NC2/GMC(2) is proved, not fully formalized",
     ),
 }

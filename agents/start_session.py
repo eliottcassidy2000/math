@@ -223,6 +223,7 @@ def topic_hits(topic: str, max_matches: int) -> None:
     ]
     file_rows.sort(
         key=lambda row: (
+            row[1].endswith("/INDEX.md"),
             -row[0],
             next((v for k, v in priorities.items() if row[1].startswith(k)), 9),
             row[1],

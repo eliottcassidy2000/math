@@ -1,113 +1,148 @@
-# Orlik–Solomon is a repo-wide pattern — and toric arrangements are the native LRC lens
+# The LRC arrangement lens is phase-height, labelled, and oriented
 
-> **SCOPE CORRECTION — MISTAKE-223 / THM-2047 (2026-07-21).** The braid and
-> Shi point-count identities printed here are classical and the THM-1820
-> Fourier relation-lattice formula is valid after Fejer regularization. Their
-> advertised LRC identifications are not. `G_delta` is a thickened coordinate-
-> slab complement pulled back to a one-parameter orbit, not a standard toric-
-> arrangement complement; the Fourier kernel sum is not an arithmetic-Mobius
-> layer sum; Shi walls do not encode the safe inequality; and the finite
-> `N_R` triple census is not a Betti/Mobius invariant or a twelve-speed AP
-> theorem. The exact arrangement carrier is the signed phase-height complex
-> `v t +/- delta in Z`. Its horizontal slice preserves the pointwise predicate,
-> and `chi(G_delta)>0` detects even isolated tight witnesses that volume misses.
-> Read THM-2047 before using the exploratory text below.
+*Scope-repaired audit of boxeph-2026-07-21-S209 / HYP-8830.*
 
-*boxeph-2026-07-21-S209. Owner: explore creatively other areas where Orlik–Solomon could be leveraged;
-think abstractly, look for similar structural patterns. Builds on boxeph-S208 (braid arrangement = NC2
-Vandermonde; flat-localization → HYP-8775), THM-1820 (LRC relation-lattice pairing), THM-805 (staircase
-Tutte / acyclic orientations), the LRC-permutohedron thread (s521/s525/s526). Four anchors verified in
-`04-computation/orlik_solomon_across_the_repo_boxeph_S209.py`.*
+> **Correction:** MISTAKE-224 retracts the identification of the Fourier
+> relation lattice with a toric layer poset, of `G_delta` with an ordinary
+> toric complement, and of its Fourier series with an arithmetic-Mobius sum.
+> The braid and Shi controls survive. The useful repair is a different finite
+> toric arrangement in `(time,height)`.
 
-## The abstract signature (what to look for)
+## Four objects that must stay distinct
 
-Orlik–Solomon theory applies wherever you find this structure, independent of the objects' names:
+For a primitive speed vector `v=(v_1,...,v_n)`, define
 
-1. a family of **conditions** (hyperplanes / equalities / resonances) with
-2. an **intersection poset of flats** (or *layers*) that is a geometric (or arithmetic) lattice with a
-   **Möbius function** `μ`, giving
-3. a **count/invariant by inclusion–exclusion** over the poset — the **characteristic polynomial**
-   `χ(t)=Σ_X μ(X) t^{dim X}` — computable by the **finite-field method** (`χ(q)=` #points off all
-   conditions, `q≫0`), and
-4. a **complement** whose topology is the **OS algebra** (`Poincaré = (−t)ⁿχ(−1/t)`, NBC basis), and
-5. a **localization-at-a-flat** product factorization of everything near a degenerate flat.
+```text
+phi_v : T -> T^n,       t |-> (v_1 t,...,v_n t),
+H_v   = image(phi_v),
+L_v   = {k in Z^n : k.v=0},
+F_delta = {x in T : ||x|| >= delta}.
+```
 
-Whenever a repo object is really "count / measure the configurations avoiding a lattice of coincidences,"
-this machinery is available. It recurs in at least **four** guises — all verified.
+Then `L_v` is the character annihilator of the orbit subtorus `H_v`, and
 
-## The repo map (four arrangement types)
+```text
+G_delta(v) = phi_v^{-1}(F_delta^n).
+```
 
-| arrangement | repo object | what OS gives (verified) |
-|---|---|---|
-| **braid** `A_{n−1}` `{xᵢ=xⱼ}` | tournaments / NC2 Vandermonde (S208) | `χ=` falling factorial; regions `=n!=` transitive tournaments; **OS Poincaré `∏(1+kt)`**, Betti = Stirling-1st |
-| **Shi / deformed braid** `{xᵢ−xⱼ∈{0,1}}` | LRC resonances `vt≈` integer | `χ=q(q−n)^{n−1}`; regions `=(n+1)^{n−1}` (parking functions), by **finite-field count** |
-| **toric** (De Concini–Procesi) | LRC **relation lattice** `{k·v=0}` (THM-1820) | `\|G_δ\|=` complement volume `=` **arithmetic-Möbius sum over layers** `=` LRCMod mod-`q` |
-| **generic** | figurate cutting (cake/bagel, S207) | regions `=ΣC(n,k)` (generic `χ`), deficit `=μ` of degenerate flats |
+Character orthogonality on `H_v` gives THM-1820's exact Fourier identity
 
-The point that unlocks the LRC side: **THM-1820's relation lattice `{k∈ℤⁿ:k·v=0}` is the poset of layers
-of a *toric* arrangement** on the character torus, and De Concini–Procesi theory is the *toric analog of
-Orlik–Solomon*. The repo already computes with it without the name — "LRCMod ladders = the relation lattice
-tested mod `q`" (THM-1820) **is exactly the finite-field method on the torus**.
+```text
+|G_delta(v)| = sum_{k in L_v} product_j ghat_delta(k_j).
+```
 
-## Anchor 1 — tournament cohomology (a graded lens beyond char_A)
+This is an infinite, sinc-weighted, `delta`-dependent series. Its summation
+index is not the layer poset of a finite toric arrangement. A toric layer is a
+connected component of an intersection of finitely many character hypertori.
 
-The complement of the braid arrangement (ordered configuration space) has OS Poincaré polynomial
-`π(t)=∏_{k=1}^{n−1}(1+kt)`; its Betti numbers are the **unsigned Stirling numbers of the first kind**
-`b_i=c(n,n−i)` (permutations with `n−i` cycles), top Betti `(n−1)!` (verified `n≤7`:
-`n=4→[1,6,11,6]`, etc.). This is a **graded** invariant of ordering/tournament space, strictly finer than
-the single datum char_A. Per-*tournament* refinement is available too: a tournament's comparability data
-picks out a **graphic sub-arrangement** `A_G` with `χ_{A_G}=` chromatic polynomial and regions `=` acyclic
-orientations — the deletion–restriction (Tutte) world THM-805 already lives in. So the tournament continuum
-carries a cohomology, and char_A / the cycle spectrum are shadows of it.
+The distinction is not cosmetic. For `S={1}`, `|G_delta|=1-2delta`, whereas
+the ordinary complement of the character kernel `{1}` in the circle has Haar
+measure `1`. Thus thickening a resonance point changes the measured object.
 
-## Anchor 2 — the finite-field method is the native LRC engine
+The **full embedded** lattice `L_v subset Z^n` is also stronger than S209 said:
+its rational orthogonal complement recovers the line spanned by `v`, hence the
+primitive vector up to scale and coordinate relabelling. What loses the LRC
+predicate is an abstract lattice isomorphism type, a coefficient truncation,
+a small-relation count, or a Betti/Mobius summary—not necessarily `L_v`
+itself.
 
-Because LRC resonances are `{xᵢ−xⱼ = integer}` (a deformed braid arrangement) and the relation lattice is a
-toric arrangement, the **characteristic (quasi-)polynomial is a Diophantine point-count** — precisely LRC's
-number-theoretic flavor. Verified: braid `χ(q)=q(q−1)⋯(q−n+1)` and Shi `χ(q)=q(q−n)^{n−1}` reproduced by
-raw `F_q` point-counts; Shi regions `(n+1)^{n−1}` are parking functions. This says the mod-`q` LRCMod
-ladders are not an ad-hoc trick — they are computing an arrangement's characteristic quasi-polynomial, and
-**Athanasiadis's finite-field method / Ehrhart quasi-polynomial theory is the systematic engine** for them.
+## The exact constructive replacement
 
-## Anchor 3 — |G_δ| is a toric-complement volume (arithmetic Möbius)
+Put coordinates `(t,delta)` on the cylinder `T x [0,1/2]` and use the finite
+character list
 
-Verified (matching THM-1820's bridge to `<3×10⁻³`): the good-set measure
-`\|G_δ\| = ∫₀¹∏_j 1[‖v_jt‖≥δ]dt = Σ_{k·v=0} ∏_j ĝ(k_j)` — the left side is the **volume of the toric
-arrangement's complement** (the loneliness set), the right side is the **arithmetic-Möbius sum over the
-layers** `{k·v=0}`. Loneliness = the complement is nonempty = a chamber survives; covering = the complement
-has measure/volume below threshold. This is the LRC restated as toric-arrangement region theory.
+```text
+X_S = {(v,+1),(v,-1) : v in S} subset Z^2.
+```
 
-## Anchor 4 — tight = relation-richest = maximal Betti/Möbius mass
+Its walls are
 
-Verified: over primitive `n=3` speed triples, the **AP `(1,2,3)` uniquely maximizes relation richness**
-`N_R` (matching THM-1820 B2 up to the ±sign convention — `N_R=4` counting `±k` once, `=8` with signs). In
-arrangement language, `N_R` is the number of small **layers** — the toric arrangement's **Betti/Möbius mass**
-— so *the LRC tight extremal is the configuration whose toric arrangement is richest in low-height layers*.
-This is the same phenomenon as the braid side: the deepest, most-degenerate flat (all coordinates equal =
-the AP/transitive vertex, the reify-ladder cold point) is where the Möbius mass concentrates.
+```text
+v t + sigma delta in Z,   sigma in {+1,-1}.
+```
 
-## The leverage (what this buys, and what is still open)
+The exact LRC feasible region is the closure of the selected inequality cells
 
-- **(a) Tournament cohomology.** Use `π(t)=∏(1+kt)` and graphic-sub-arrangement deletion–restriction as a
-  graded invariant of the continuum, finer than char_A; the cycle spectrum should be readable off the OS
-  algebra.
-- **(b) LRC characteristic quasi-polynomials.** Adopt the finite-field / Ehrhart engine explicitly for the
-  LRCMod ladders — the toric arrangement's `χ(q)` *is* what those ladders compute; Wall A (AP-rigidity)
-  becomes "the AP is the unique residue pattern maximizing the layer count," a point-count statement.
-- **(c) The transferable trick — layer-localization.** The S208 win was that braid **flat-localization**
-  factors the confluent Vandermonde into single-block L-P pieces (⇒ HYP-8775). The toric analog is
-  **layer-localization** of the De Concini–Procesi arrangement: near a resonance layer, `\|G_δ\|` should
-  factor into a lower-rank toric complement × a transverse braid factor. **This is proposed, not yet
-  verified** — I confirmed the `\|G_δ\|=`complement-volume`=`arithmetic-Möbius identity, not the
-  near-resonance factorization. If it holds, it is a concrete Wall-A tool: reduce the AP-extremality to a
-  product of smaller resonance-block problems, exactly as the braid side reduced real-rootedness.
+```text
+E_S = {(t,delta) : 0 <= delta <= 1/2 and delta <= ||v t|| for every v in S}.
+```
 
-Honest scope: anchors 1–4 are verified identities/point-counts; the toric layer-localization (the actual
-new lever for LRC) is a well-motivated conjecture by analogy with S208, and the general De Concini–Procesi
-machinery over these specific lattices needs the arithmetic-Möbius computation carried out. The value here
-is the **unification** — braid, Shi, toric, and generic arrangements are one OS pattern the repo keeps
-re-encountering — and the identification of **toric arrangements (DCP) as the correct, under-named home for
-the LRC relation lattice**, with the finite-field method as its engine.
+It is **not** the complement of all the walls. The height functional is part
+of the object: `M(S)=max{delta:(t,delta) in E_S}`. Each constraint wall also
+carries its runner owner, sign, and the cellwise selected side in the strip.
+The bottom `delta=0` is ambient boundary, and a periodized torus wall has no
+global left/right side.
 
-Links: HYP-8830, HYP-8825, HYP-8775, THM-1820, THM-805,
-[[the-missing-region-law-is-a-braid-arrangement-and-the-vandermonde-is-its-defining-polynomial-boxeph-S208]].
+After periodizing the height coordinate, two independent full-torus
+characters `(v,sigma)` and `(w,tau)` have intersection index
+
+```text
+|det((v,sigma),(w,tau))| = |v tau-w sigma|.
+```
+
+Consequently:
+
+- same-sign walls contribute `|v-w|`;
+- opposite-sign walls contribute `v+w`;
+- the two walls of one runner contribute `2v`.
+
+This full-torus index is arithmetic, not the number of intersections retained
+by `0<=delta<=1/2`; dependent characters have a non-proper intersection.
+
+At a strict top of the lower envelope, an increasing and a decreasing active
+branch meet, or one runner is at its cusp. These are precisely the opposite-
+slope cases, so the denominators divide `v+w`, with the cusp as `v=v`. This is
+the geometric content of the proved pair-sum denominator lemma in
+[THM-1002](../01-canon/theorems/THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case.md).
+The arrangement lens therefore explains an existing exact theorem without
+replacing it by topology.
+
+Deleting a speed removes its **pair** of signed walls. That makes paired
+deletion/restriction a natural experiment for the AP-core supplier. But a
+faithful state must retain:
+
+```text
+wall owner + sign + selected side + attained height + deletion identity.
+```
+
+Ordinary Orlik--Solomon cohomology or an arithmetic Tutte polynomial is not
+currently known to recover that selected state. THM-2047 now proves this
+phase-height dictionary, the top/pair-sum mechanism, and exact paired
+deletion; its localization route toward an AP core is open, not a proved LRC
+step.
+
+## What survives from the original computation
+
+Two classical control families remain exact and useful:
+
+- the braid complement has Poincare polynomial
+  `product_(k=1)^(n-1)(1+k t)`, with unsigned Stirling Betti numbers; its real
+  chambers are the `n!` total orders;
+- the Shi arrangement has characteristic polynomial
+  `q(q-n)^(n-1)` and `(n+1)^(n-1)` real regions.
+
+Neither statement supplies an LRC map. In particular, braid cohomology belongs
+to one configuration space, not to each tournament, and the Shi walls
+`x_i-x_j in {0,1}` are not the signed safety walls `v t +/- delta in Z`.
+
+The script also exactly finds that `(1,2,3)` uniquely maximizes a `B=2`
+relation count among 72 hard-coded primitive triples. That is a finite scout,
+not a theorem about Betti or Mobius mass. The natural one-circle hypertorus
+control goes the other way: the union for `(1,2,3)` has four points, while
+`(2,3,4)` has six.
+
+## Live question
+
+Can paired deletion/restriction in the labelled phase-height complex, with a
+chamber-height sidecar, force the AP maximum-deletion core required by
+THM-1017? A successful argument must show how the top cell and its owner data
+survive localization. A failure should identify the first pair of speed sets
+with the same proposed quotient but different top-cell feasibility.
+
+Primary background: [De Concini--Procesi on finite toric arrangements](https://arxiv.org/abs/math/0505351),
+[Moci on the multiplicity Tutte polynomial](https://arxiv.org/abs/0911.4823),
+and [Stanley's arrangement survey](https://math.mit.edu/~rstan/papers/nas.pdf).
+
+Artifacts: corrected HYP-8830; MISTAKE-224;
+`04-computation/orlik_solomon_across_the_repo_boxeph_S209.py` and its frozen
+output.

@@ -125,6 +125,11 @@ one concrete transfer, prediction, or falsification test
 Shared vocabulary, a matching decimal, or a familiar shape is an analogy, not
 a bridge. Keep analogies as tangents until the contract is filled.
 
+For wall/arrangement models, the contract must also say whether the target is
+the bare wall set, ordinary complement, thickened complement, or selected
+inequality cells, and whether orientation, owner, height, or deletion labels
+are part of the state.
+
 ## 6. Explain why, not only whether
 
 For a **true** statement, record:

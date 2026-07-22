@@ -190,13 +190,16 @@ relevant grade.  The grade-six class is therefore exact, not obstructed.
 The exact recursion advances grades `6,7,...,13` in its first eight steps
 without terminating, moving the gate from local cohomology to finite support.
 
-## 5. Incoming arrangement-localization connection
+## 5. Corrected localization and parity prompts
 
-The incoming S209/HYP-8830 and THM-2047 work makes a useful operation-level
-connection.  Its reusable move is to localize at an arrangement layer, where
-the complement factors or simplifies, while retaining the transverse layer
-label needed to extend back.  Equation (7) is the quantum analog of that move:
-localizing away from the divisor `x=0` exposes a standard Weyl chart.
+Corrected HYP-8830 retracts the claim that the LRC safe set is an ordinary
+toric complement with a proved layer-localization theorem. Its exact surviving
+prompt is more modest: localize a **labelled selected-cell problem**, then keep
+the transverse side/height data required to extend back. Equation (7) has the
+same operation shape: localizing away from `x=0` exposes a standard Weyl chart,
+while the boundary valuation must be retained. THM-2047 now proves the LRC
+carrier and exact paired-deletion operation, but supplies no Wall-A
+localization theorem or quantum consequence here.
 
 The objects and predicates are different, so no LRC/Jacobian identification is
 being made.  The exact transfer ledger is:
@@ -222,8 +225,10 @@ operator analysis along this divisor).  Plain complement topology or an
 Orlik--Solomon count cannot decide polynomial extension; the valuation sidecar
 is load-bearing.
 
-The next incoming item, S210/HYP-8835, also has a precise operation-level use.
-Order reversal sends the scalar PBW parameter
+Corrected HYP-8835 likewise retracts the claim that tournament complement,
+torus inversion, and permutation parity are one involution. Independently of
+that synthesis, this Ore computation has its own exact order-reversal action:
+it sends the scalar PBW parameter
 
 ```text
 theta -> 1-theta.

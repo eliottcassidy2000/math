@@ -1,12 +1,12 @@
 ---
 id: THM-2047
-title: The phase-height toric arrangement is an exact carrier for the lonely-runner max-min
-status: PROVED (carrier, vertex law, deletion identity, Euler-characteristic detector, and Fejer-regularized relation-lattice formula). The proposed Wall-A localization theorem remains open.
+title: The labelled phase-height cell complex is an exact carrier for the lonely-runner max-min
+status: PROVED (carrier, top-vertex and boundary-layer laws, paired deletion, Euler detector, Fejer relation formula, and full-lattice reconstruction). Wall-A localization remains OPEN.
 source: codex-2026-07-21-LRC-arrangement-audit
 depends_on:
-  - THM-1002
-  - THM-1142
+  - THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case
   - THM-1017
+  - THM-1142
   - THM-2043
 related:
   - HYP-8830
@@ -17,265 +17,294 @@ related:
   - THM-668-pair-sum-ruler-witness-structure
 ---
 
-# THM-2047 -- the phase-height toric arrangement
+# THM-2047 -- the labelled phase-height carrier
 
-> **Prior-art boundary.** HYP-2986 already constructs the threshold-`1/14`
-> signed endpoint topes and boundary cocircuits. HYP-3025 already keeps the
-> individual-arc Cech nerve and proves why the runner quotient needs a Betti
-> defect sidecar. THM-1142 gives the exact essential deletion/replacement
-> containment, THM-752 supplies the one-danger-tooth interval exit, and the
-> pair-sum THM-668 plus its medial-axis reflection already identify the
-> winding-circle contact geometry. This
-> theorem does not rename those results as new. Its added content is their
-> general-`delta` phase-height synthesis, the local top-vertex normal form and
-> boundary-layer coefficient, and the exact distinction between the
-> Fejer-regularized Fourier annihilator and an Orlik--Solomon layer formula.
+> **Prior-art boundary.** HYP-2986 constructs the threshold-`1/14` signed
+> endpoint topes and boundary cocircuits. HYP-3025 retains the individual-arc
+> Cech nerve and explains why a runner quotient needs a Betti-defect sidecar.
+> THM-1142 gives the essential deletion/replacement containment, THM-752 the
+> one-danger-tooth interval exit, and THM-668/1002 the pair-sum contact law.
+> The new content here is the general-height synthesis, local top normal form,
+> exact Euler/Fourier readings, and the sharp distinction between the full
+> embedded relation lattice and lossy arrangement summaries.
 
 Let `T=R/Z`, write `||x||` for distance to the nearest integer, and let `S` be
 a nonempty finite set of positive integral speeds. Define
 
 ```text
 f_S(t) = min_{v in S} ||v t||,
-M(S)   = max_{t in T} f_S(t),
-G_delta(S) = {t in T : f_S(t) >= delta},
-E_S = {(t,delta) in T x [0,1/2] : delta <= f_S(t)}.
+M(S) = max_{t in T} f_S(t),
+G_delta(S) = {t in T : f_S(t)>=delta},
+E_S = {(t,delta) in T x [0,1/2] : delta<=f_S(t)}.
 ```
 
-The cylinder `T x [0,1/2]` is cut by the `2|S|` signed character walls
+The owner-constraint walls in the height half-cylinder are
 
 ```text
-H_v^+ : v t - delta in Z,
-H_v^- : v t + delta in Z.                         (1)
+H_v^+ : v t-delta in Z,
+H_v^- : v t+delta in Z.                              (1)
 ```
 
-They are ordinary toric walls with character vectors `(v,-1)` and `(v,+1)`
-after the height coordinate is viewed modulo one, restricted back to the
-height half-cylinder. The important object is not the complement of these
-walls: it is the **oriented cell subcomplex** `E_S`, including its boundary.
+After periodizing `delta` modulo one, these are character hypertori with
+vectors `(v,-1)` and `(v,+1)` in the full two-torus. Restricted back to the
+strip, each connected wall segment retains its owner, sign, height, and which
+adjacent cells satisfy the inequality. There is no globally ordered side of a
+torus hypertorus. The literal boundary of `E_S` also contains the ambient
+bottom `delta=0`. The carrier is this labelled, cellwise selected subcomplex,
+not the ordinary complement of the wall set.
 
-## 1. Exact carrier theorem
+## 1. Exact carrier
 
-**Theorem.** For every `0<=delta<=1/2`,
+For every `0<=delta<=1/2`,
 
 ```text
-E_S intersect (T x {delta}) = G_delta(S) x {delta}.       (2)
+E_S intersect (T x {delta}) = G_delta(S) x {delta}.        (2)
 ```
 
 Consequently
 
 ```text
-M(S) = max{delta : E_S has a point of height delta},       (3)
+M(S)=max{delta:E_S has a point of height delta}.           (3)
 ```
 
-and, for thirteen relative speeds,
+For thirteen relative speeds,
 
 ```text
 LRC(14) for S
-  iff E_S intersects the horizontal slice delta=1/14.      (4)
+  iff E_S intersects the horizontal slice delta=1/14.     (4)
 ```
 
-*Proof.* Equations (2) and (3) are the definitions, and the maximum exists
-because `E_S` is compact. Equation (4) is the weak lonely-runner inequality
-`M(S)>=1/14`. The use of a closed oriented subcomplex is essential: a tight
-witness can be an isolated boundary point. ∎
+**Proof.** Equation (2) is the definition. The continuous function `f_S`
+attains its maximum on the compact circle, and `E_S` is its subgraph, proving
+(3). Equation (4) is exactly the weak lonely-runner inequality
+`M(S)>=1/14`. The closed selected complex matters: at equality the safe fiber
+may consist only of isolated boundary points. ∎
 
-Thus `(owner,sign,t,delta)` is a lossless local address. Projecting away
-`delta`, the integral lift of `t`, or the owner/sign labels is not justified
-without a separate theorem. THM-2043 supplies an infinite exact warning: full
-period-14 parity--Hasse data, all tests through `q=13`, `q_threshold`, and any
-fixed finite 7-adic height truncation can agree while a resolved
-`(q,a,margin)=(41,17,1)` exit differs.
+Thus `(owner,sign,t,delta,selected-cell)` is a lossless local address.
+Projecting away height, owner/sign, or the resolved phase is legal only after
+a separate preservation theorem. THM-2043 gives the hostile control: complete
+period-14 parity--Hasse data and every fixed finite 7-adic height prefix can
+agree while a resolved off-period strict exit differs.
 
-## 2. Top vertices and the pair-sum law
+## 2. Top vertices and pair-sum rulers
 
-**Theorem.** Every maximizer `t_*` is supported either
-
-1. by two active walls of opposite sign, `H_{v_i}^+` and `H_{v_j}^-`, or
-2. by the two sides of one cusp, the self-pair `v_i=v_j`.
-
-In either case, if `t_*=a/q` in lowest terms, then
+Every maximizer `t_*` is supported either by active walls of opposite slope or
+by the two sides of one active half-integer cusp. If `t_*=a/q` is reduced, then
 
 ```text
-q divides v_i+v_j <= 2 max(S).                             (5)
+q divides v_i+v_j <= 2 max(S)                              (5)
 ```
 
-Moreover `M(S)=r/q`, where `r=min_v |a v|_q` is integral. Hence enumerating
-every numerator on every pair-sum ruler computes `M(S)` exactly.
-
-*Proof.* The function `f_S` is a continuous piecewise-linear lower envelope.
-It is positive somewhere, so a maximizer is not a zero cusp. Away from the
-cusps of the individual triangular waves, every active branch has nonzero
-slope `+v` or `-v`. At a local maximum the active slopes cannot all have the
-same sign: moving a sufficiently small distance in the improving direction
-would increase every active branch, while the inactive branches remain slack.
-Thus an active rising branch and an active falling branch meet. Write them as
+for active owners `v_i,v_j`, allowing `i=j`. Moreover
 
 ```text
-delta = v_i t - m,
-delta = n - v_j t.
+M(S)=r/q,       r=min_{v in S}|a v|_q in Z.
 ```
 
-Adding gives `(v_i+v_j)t=m+n`. If the maximum occurs at a cusp of one active
-wave, its two sides give `2v_i t in Z`, which is the same calculation with
-`i=j`. Reduction of the resulting rational proves (5). At `t=a/q`, every
-distance is `|av|_q/q`, proving the last assertion. ∎
+Hence enumerating every numerator on every pair-sum ruler computes `M(S)`
+exactly.
 
-This is the geometric form of THM-1002. It also explains why the correct
-arrangement must include height: pair **sums** arise from intersecting a `+`
-owner wall with a `-` owner wall.
+**Proof.** First, `M(S)>0`: choose a phase outside the finite union of the
+zero sets of the waves. Refine the circle at all cusps and all crossings of
+the finitely many affine branches of `||v t||`. On each open refined cell the
+active branches have nonzero slopes `+v` or `-v`. Their lower envelope cannot
+be constant on an interval, since one of finitely many affine branches would
+then be constant on a subinterval.
+
+At a local maximum the active smooth slopes cannot all have the same sign;
+moving a sufficiently small distance in the common improving direction would
+increase every active branch while inactive branches remained slack. Thus a
+rising branch of owner `v_i` and a falling branch of owner `v_j` meet. For
+integers `m,n`,
+
+```text
+v_i t_*-m = n-v_j t_*,
+```
+
+so `(v_i+v_j)t_*=m+n`. If an active branch is at a cusp, positivity excludes
+the zero cusp; the half-integer cusp gives `2v_i t_* in Z`, the self-pair
+case. Reduction proves (5). At `a/q`, each distance is `|av|_q/q`, proving the
+last assertion. ∎
 
 ### Local wedge and boundary-layer coefficient
 
-At a top vertex `t_*`, let `A(t_*)` be the slopes of all active local affine
-branches, including both slopes at an active self-cusp, and put
+At a maximizer let `A(t_*)` be the slopes of all active affine branches,
+including both slopes of an active self-cusp, and put
 
 ```text
-s_-(t_*) = min A(t_*) < 0 < max A(t_*) = s_+(t_*).
+s_-(t_*)=min A(t_*)<0<max A(t_*)=s_+(t_*).
 ```
 
-For all sufficiently small `u`, the local normal form is
+For all sufficiently small `u`,
 
 ```text
-f_S(t_*+u) = M(S) + min_{s in A(t_*)} s u
-           = M(S) + s_- u,   u>0,
-             M(S) + s_+ u,   u<0.                            (6)
+f_S(t_*+u)=M(S)+s_-u,   u>0,
+f_S(t_*+u)=M(S)+s_+u,   u<0.                              (6)
 ```
 
-Consequently, for all sufficiently small `epsilon>0`, normalized Haar length
-satisfies the exact boundary-layer law
+Therefore, for every sufficiently small `epsilon>0`, normalized Haar length
+satisfies
 
 ```text
 |G_{M-epsilon}(S)|
  = epsilon sum_{t_*:f_S(t_*)=M}
-     (1/s_+(t_*) + 1/(-s_-(t_*))).                           (7)
+     (1/s_+(t_*)+1/(-s_-(t_*))).                          (7)
 ```
 
-*Proof.* Inactive branches have positive slack at `t_*`, so on a small common
-linear refinement only the active affine branches can realize the minimum.
-For positive `u` the smallest slope wins; for negative `u` the largest slope
-wins. The strict sign inequality is the local-maximality condition. The
-piecewise-linear function has no constant interval, hence finitely many
-isolated maximizers. Choose disjoint neighborhoods of them and use the compact
-gap below `M` on their complement. In each neighborhood the superlevel set is
-the interval `[-epsilon/s_+, epsilon/(-s_-)]`; summing its lengths gives (7).
-∎
+**Proof.** Inactive branches have positive slack, so on a common small linear
+neighborhood only active branches can realize the minimum. For positive `u`
+the smallest slope wins and for negative `u` the largest wins, proving (6).
+The lower envelope has no constant interval, hence only finitely many isolated
+maximizers. Choose disjoint neighborhoods and use the compact gap below `M`
+on their complement. Each superlevel interval has the two displayed lengths;
+summing gives (7). ∎
 
-Only the extreme rising and falling owners enter (7); intermediate coincident
-blocks are locally redundant. All constraints share one transverse variable.
-Thus the proposed S209 Cartesian product of lower-rank layer complements has
-the wrong local dimension and multiplicative order after restriction to the
-LRC orbit. Formula (7), not a block product, is the exact first-order object.
+Only the extreme rising and falling owners enter the boundary coefficient;
+intermediate coincident blocks are locally redundant. This additive
+one-dimensional wedge, not a Cartesian product of layer complements, is the
+correct first-order object on the LRC orbit.
 
-## 3. Exact deletion/restriction identity
+### What the full-torus determinant does and does not count
 
-For one speed `w`, put
+For two linearly independent periodized characters `(v,sigma)` and
+`(w,tau)`, their full-two-torus intersection index is
 
 ```text
-B_w = {(t,delta): delta<=||w t||},
-D_delta(w) = {t: ||w t||<delta}.
+|det((v,sigma),(w,tau))|=|v tau-w sigma|.                 (8)
 ```
 
-Then, exactly,
+Same signs expose `|v-w|`, opposite signs expose `v+w`, and the self-opposite
+pair exposes `2v`. If the determinant vanishes, the intersection is
+non-proper, not an intersection of multiplicity zero. The index also need not
+equal the number of representatives retained in `0<=delta<=1/2`: the
+opposite-sign characters `(1,+1)` and `(2,-1)` have full-torus index three but
+only two points in the closed strip. Thus the determinant displays pair-sum
+arithmetic; the top-slope proof, not a raw intersection count, selects the
+actual LRC ruler.
+
+## 3. Exact paired deletion
+
+For a speed `w`, set
 
 ```text
-E_{S union {w}} = E_S intersect B_w,                        (8)
-G_delta(S union {w}) = G_delta(S) \ D_delta(w).             (9)
+B_w={(t,delta):delta<=||w t||},
+D_delta(w)={t:||w t||<delta}.
 ```
 
-In particular, if a thirteen-speed set is written `C union {w}`, it fails the
-weak `1/14` conclusion precisely when
+Then exactly
 
 ```text
-G_{1/14}(C) is contained in D_{1/14}(w).                    (10)
+E_{S union {w}}=E_S intersect B_w,                        (9)
+G_delta(S union {w})=G_delta(S)\D_delta(w).              (10)
 ```
 
-The left side is a closed finite union of arcs whose endpoints lie on the
-signed walls of the twelve-speed core; the right side is a union of `w` open
-danger arcs. This is a lossless deletion formulation, including isolated
-boundary witnesses. THM-1017 solves (8) when `C=d{1,...,12}`. Proving that the
-remaining compact-covering residual forces that core, or finding a cell-word
-invariant that does, is still Wall A rather than a consequence of arrangement
-topology alone.
-
-## 4. Euler characteristic detects the boundary that volume misses
-
-**Theorem.** If `0<delta<=1/2`, then `G_delta(S)` is a proper compact finite
-union of closed arcs and points in `T`. Consequently
+Equivalently, deleting `w` removes its pair of signed walls and its single
+inequality. For a thirteen-speed set `C union {w}`, failure of the weak
+`1/14` conclusion is precisely
 
 ```text
-chi(G_delta(S)) = number of connected components of G_delta(S),             (11)
-G_delta(S) is nonempty iff chi(G_delta(S))>0.                               (12)
+G_{1/14}(C) subset D_{1/14}(w).                           (11)
+```
+
+The left side is a closed finite union of arcs and points; the right side is a
+union of open danger arcs. This retains isolated witnesses. THM-1017 solves
+the extension when `C=d{1,...,12}`. Nothing in (9)--(11) forces an arbitrary
+maximum-deletion core to be an AP.
+
+## 4. Euler characteristic detects what volume misses
+
+If `0<delta<=1/2`, then `G_delta(S)` is a proper compact finite union of closed
+arcs and isolated points in `T`. Hence
+
+```text
+chi(G_delta(S))=# connected components of G_delta(S),     (12)
+G_delta(S) is nonempty iff chi(G_delta(S))>0.              (13)
 ```
 
 In particular, LRC(14) for `S` is equivalent to
 `chi(G_{1/14}(S))>0`.
 
-*Proof.* Each single-runner danger set `{t:||vt||<delta}` is a finite union of
-open arcs with signed-wall endpoints. Its finite union over `v in S` has a
-finite endpoint set, so the closed complement `G_delta(S)` is a finite union
-of closed arcs and isolated points. It is proper because `t=0` is dangerous
-when `delta>0`. Every component is therefore contractible and contributes one
-to Euler characteristic. ∎
+**Proof.** Each danger set `{t:||vt||<delta}` is a finite union of open arcs
+with endpoints on the signed walls. Their finite union has finitely many
+endpoints, so its closed complement is a finite union of arcs and points. It
+is proper because `t=0` is dangerous. Every component of a proper subset of
+the circle of this form is contractible and contributes one to Euler
+characteristic. ∎
 
-This is the rigorous topology transfer. Unlike Haar volume, Euler
-characteristic sees an isolated tight phase. The signed cyclic endpoint word
-computes it exactly and retains owner data, making it a plausible target for
-deletion--restriction or a nerve calculation. No current argument forces its
-positivity for every thirteen-speed set.
+The owner-labelled cyclic endpoint word computes this Euler characteristic
+and sees an isolated tight phase, unlike Haar volume. No current argument
+forces its positivity for every thirteen-speed set.
 
-## 5. What the relation-lattice formula really says
+## 5. Fejer relation formula and the full embedded lattice
 
 Let `g_delta(x)=1[||x||>=delta]`. Its Fourier coefficients are
 
 ```text
 g_hat(0)=1-2delta,
-g_hat(k)=-sin(2 pi k delta)/(pi k),  k!=0.                  (13)
+g_hat(k)=-sin(2 pi k delta)/(pi k),   k!=0.                (14)
 ```
 
-If `sigma_R g_delta` is the `R`-th Fejer mean, termwise integration gives
+If `sigma_R g_delta` is the `R`-th Fejer mean, finite expansion and termwise
+integration give
 
 ```text
 integral_T product_j sigma_R g_delta(v_j t) dt
  = sum_{k dot v=0} product_j
-     (1-|k_j|/(R+1))_+ g_hat(k_j).                         (14)
+     (1-|k_j|/(R+1))_+ g_hat(k_j).                        (15)
 ```
 
-Fejer means lie in `[0,1]` and converge to `g_delta` away from finitely many
-boundary phases on the orbit. Dominated convergence therefore yields the
-exact regularized identity
+The Fejer means lie in `[0,1]` and converge to `g_delta` away from the finitely
+many boundary phases on the orbit. Dominated convergence yields the exact
+regularized identity
 
 ```text
-|G_delta(S)| = lim_{R->infinity} (right side of (14)).      (15)
+|G_delta(S)|=lim_{R->infinity}(right side of (15)).       (16)
 ```
 
-This is the useful THM-1820 relation-lattice pairing. The lattice
-`{k:k dot v=0}` is the annihilator of the one-parameter subtorus
-`t -> (v_1t,...,v_nt)` under the dual character map. Equation (15) is a
-Fourier/Poisson selection law with sinc weights; it is not, merely by being a
-lattice sum, an arithmetic-Mobius sum over a De Concini--Procesi layer poset.
+This is a Fourier/Poisson annihilator sum, not an arithmetic-Mobius sum over a
+De Concini--Procesi layer poset. Positive measure is exactly a strict-exit
+certificate: if `M(S)=delta`, the finite maximizer set can be nonempty with
+measure zero; if `M(S)>delta`, continuity supplies a positive interval.
 
-Nor does safe measure decide the weak conjecture: when `M(S)=delta`, the fiber
-`G_delta(S)` may be nonempty but finite and hence have measure zero. The tight
-AP at the lonely-runner threshold is the mandatory control. Positive measure
-is a strict-exit certificate, not an iff criterion for weak loneliness.
+After ordering `S` as `mathbf v=(v_1,...,v_n)`, its full embedded annihilator
 
-## 6. Scope correction to the S209 arrangement proposal
+```text
+L_mathbf_v={k in Z^n:k dot mathbf v=0}
+```
 
-Three distinctions are forced by the theorem.
+is lossless up to common scale:
 
-1. A standard toric-arrangement complement removes codimension-one hypertori,
-   normally a zero-measure set. `G_delta(S)` instead removes positive-width
-   coordinate slabs and pulls the result back to one one-dimensional subtorus.
-2. On a torus the affine offsets `0` and `1` in a Shi wall coincide. More
-   importantly, LRC safety is bounded by the coordinate walls (1), not by the
-   pair-collision walls `x_i-x_j in {0,1}`. The verified Shi point counts and
-   parking-function region counts therefore do not count LRC safe phases.
-3. The S209 statistic `N_R` is a bounded-box count of short vectors in one
-   relation lattice, checked only for primitive triples in a small finite
-   speed box. It is not an Orlik--Solomon Betti number or arithmetic-Mobius
-   mass, and it proves no AP extremality for twelve-speed cores.
+```text
+(L_mathbf_v tensor Q)^perp=Q mathbf v.                    (17)
+```
 
-The surviving inspiration is precise: use the **signed phase-height toric
-cell complex** and its deletion identity, not an unlabelled complement
-cohomology. It retains exactly the resolved height and ownership that the
-local Hasse and scalar-energy quotients lose.
+Thus the embedded labelled lattice determines the primitive positive speed
+vector. Coordinate relabelling becomes an ambiguity only after coordinate
+labels are forgotten. If `S=dS_0`, surjectivity of `t->dt` on `T` gives
+`M(S)=M(S_0)`, so the omitted scale does not affect the maximum.
+
+Compressed relation data can be genuinely lossy. The lattices for `(1,2)` and
+`(1,3)` are abstractly both `Z`, while their maxima are `1/3` and `1/2`.
+Given any coefficient cutoff `B`, choose even `N>B`. The vectors `(1,N)` and
+`(1,N+1)` both have no nonzero annihilating relation of sup-norm at most `B`,
+yet `M(1,N)<1/2` while `M(1,N+1)=1/2` at `t=1/2`. THM-2043 likewise shows
+that a fixed residue/height packet need not determine a global strict exit.
+
+## 6. Scope correction and open application
+
+Three distinctions are now exact.
+
+1. A standard toric complement deletes codimension-one hypertori. LRC safety
+   deletes positive-width coordinate slabs and pulls them back along one
+   one-dimensional orbit; its selected phase-height cells are extra state.
+2. On a torus the Shi offsets `0` and `1` coincide, and Shi pair-collision
+   walls are not the owner constraint walls (1). Braid/Shi region formulas do
+   not count LRC safe phases.
+3. A bounded-box count of short vectors in one relation lattice is neither an
+   Orlik--Solomon Betti number nor an arithmetic-Mobius mass, and a finite
+   triple census proves no AP extremality for twelve-speed cores.
+
+The live Wall-A question is therefore precise: can paired deletion or a nerve
+calculation that retains owner, sign, selected cell, height, and endpoint word
+force the AP maximum-deletion core required by THM-1017? No ordinary
+complement invariant is currently known to preserve that top-cell predicate.

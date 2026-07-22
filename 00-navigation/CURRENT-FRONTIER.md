@@ -83,15 +83,14 @@ supplier/seed and a lossless exit.
   primitive Cover14 row `{1,8,11,12,14,17,22,26,35,40,54,90,93}` at `v=93`,
   the old inequality is inconclusive while the integer tax violates the new
   necessary inequality and forces a positive-measure lonely interval.
-  “Near-AP,”
-  “anti-golden,” Fibonacci-foil, CF-blocker, and
+  “Near-AP,” “anti-golden,” Fibonacci-foil, CF-blocker, and
   full-autocorrelation iff claims remain heuristic. THM-1002 proves every
   maximizer lies on a pair-sum ruler `t=p/(v_i+v_j)`. Enumerating all such
   rulers makes the corrected S206 replay exact: all fifteen displayed rows are
   safe, while `{1,...,12,5460}` proves the old `q<=1200` cutoff was incomplete
   (`92/1197 < 420/5461`). This finite bank does not identify the global
   covering minimum.
-- **REFUTED arrangement shortcut / exact replacement:** MISTAKE-223 separates
+- **REFUTED arrangement shortcut / exact replacement:** MISTAKE-224 separates
   the THM-1820 Fourier annihilator from a standard toric-complement/OS layer
   formula. Shi counts and bounded short-relation counts do not preserve LRC.
   THM-2047's signed phase-height complex is lossless; for `delta>0`,
@@ -254,9 +253,19 @@ any prescribed finite lift depth, and the same one-tail hull-owner sector, yet
 has the uniform strict phase `47/113` with integer slack `13`. Thus raw jets,
 threshold, fan owner, and fixed height precision are jointly insufficient.
 Exact labelled phase packets or an adaptive resolved certificate are the
-honest positive carrier; the
-smallest useful atlas now visibly includes the incompatible scales
-`{14,27,41}`.
+honest positive carrier. The scales `{14,27,41}` are mandatory stress tests,
+not a proved sufficient or minimal atlas.
+[THM-2047](../01-canon/theorems/THM-2047-phase-height-toric-arrangement-for-lrc.md)
+proves the corresponding labelled phase-height carrier, its top-vertex and
+pair-sum mechanism, and exact paired deletion; deletion/localization forcing
+an AP core toward Wall A is still open.
+
+Corrected HYP-8830 supplies a constructive exploratory lens for that target.
+On `(t,delta)`, the finite wall list `X_S={(v,+1),(v,-1)}` has opposite-sign
+intersection determinant `v+w`, recovering the pair-sum rulers geometrically.
+But `G_delta` is a selected inequality slice, not an ordinary toric complement;
+owner, sign, selected side, height, and paired deletion are essential. No
+Orlik--Solomon, Mobius, or deletion theorem currently forces the AP core.
 
 ### Fresh perspective prompts
 
@@ -361,6 +370,12 @@ pretending the preserver supplies the seed.
 - For applications outside tournament theory, first prove that the pairwise
   relation is intrinsic and target-preserving. A forced total orientation can
   destroy exactly the ties or magnitudes the original problem needs.
+- Corrected HYP-8835 isolates a useful game/dynamics coordinate without
+  overclaiming: tournament optimal support is uniquely odd (skew singularity
+  plus the tournament block modulo two), while a positive kernel vector `Mp=0`
+  yields the replicator integral `product x_i^(p_i)`. Pure optimum means
+  Condorcet winner, not transitivity; an intransitive source-over-3-cycle is the
+  minimal hostile control. RPS levels are circles in a simplex, not `T^2`.
 
 ## Integer sequences
 

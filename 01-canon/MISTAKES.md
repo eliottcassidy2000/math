@@ -1,6 +1,8 @@
 # Mistakes Log
 
-**Purpose:** Every error that has been made and corrected — with enough context that no Claude instance ever repeats it. Read this before doing any computational or proof work.
+**Purpose:** preserve failed implications, minimal witnesses, and repaired
+statements so future agents do not repeat them. Search this ledger before using
+a historical synthesis or promoting computational evidence.
 
 Format per entry:
 - What was assumed / done
@@ -264,6 +266,66 @@ Format per entry:
   Fourier selector, and toric/OS ideas may organize its circuits, but no
   layer-localization factorization or Wall-A theorem follows yet. The session
   log must retain the overwritten concurrent entries.
+## MISTAKE-225 (2026-07-21, codex audit of HYP-8835) -- skew parity, tournament games, torus topology, and three sign actions were promoted to one antisymmetry theorem
+
+- **What was claimed:** S210 asserted that antisymmetry alone forces odd
+  tournament-game support; that a pure optimal strategy exists iff the
+  tournament is transitive; that intransitivity is precisely toroidal
+  recurrence; that the solid-bagel cutting deficit is a reduced Euler term of
+  `T^2`; and that matrix complement, torus inversion, and Vandermonde parity
+  are one involution.
+- **Why it is wrong:** odd optimal support also uses the tournament block's
+  mod-2 form `I+J`, which is nonsingular in even order. A four-vertex
+  tournament with vertex `0` beating all and `1->2->3->1` is intransitive but
+  has pure optimum `e_0`; replicator dynamics even satisfies
+  `x_0'=x_0(1-x_0)`. Antisymmetry does not force zero column sums. The regular
+  three-cycle's conserved product comes from a positive kernel vector, and its
+  positive levels in `Delta^2` are circles `S^1`, not a surface `T^2`. The
+  cutting bagel is `D^2 x S^1`, while the `1,2,1` Morse count belongs to its
+  boundary. MISTAKE-222 already blocks the sequence/Euler jump. Finally the
+  three `Z/2` actions have no supplied equivariant map. The RK4 check was
+  nonsymplectic and rounded a nonzero return distance to `0.0000`.
+- **Correct framing:** Fisher--Ryan's tournament-game support is unique and
+  odd; the parity proof needs both skew singularity and the tournament mod-2
+  block. Pure optimum is equivalent to a Condorcet winner. If `Mp=0`, then
+  `d/dt sum p_i log x_i=0`, so a positive equilibrium vector yields the
+  monomial invariant `product x_i^(p_i)`. Keep game, Morse, and dynamical
+  saddles distinct; keep solid and boundary tori distinct; and require an
+  equivariant map before transferring any sign representation.
+
+---
+
+## MISTAKE-224 (2026-07-21, codex audit of HYP-8830) -- a Fourier relation lattice was identified with a toric layer poset, and a thickened safe set with an arrangement complement
+
+- **What was claimed:** S209 called `{k in Z^n:k.v=0}` the layers of a finite
+  toric arrangement, identified `|G_delta|` with ordinary toric-complement
+  volume and its Fourier series with an arithmetic-Mobius sum, and promoted a
+  `B=2` relation count to Betti/Mobius mass. It also called LRCMod a finite-
+  field characteristic-polynomial engine and braid cohomology a per-tournament
+  invariant.
+- **Why it is wrong:** the lattice indexes Fourier characters surviving
+  integration over the orbit subtorus; toric layers are connected components
+  of intersections of a **finite** character list. THM-1820's series is
+  infinite, sinc-weighted, and `delta`-dependent. For `S={1}`,
+  `|G_delta|=1-2delta`, whereas the ordinary circle complement of the
+  character kernel has Haar measure `1`. The script computed no layer poset,
+  Mobius function, arithmetic Tutte polynomial, or LRCMod equivalence. Its AP
+  count is cutoff-dependent over exactly 72 triples; the natural circle-
+  hypertorus union has four points for `(1,2,3)` but six for `(2,3,4)`.
+- **Correct framing:** `L_v={k:k.v=0}` is the annihilator of
+  `H_v=image(t |-> (v_jt))`, and `G_delta=phi_v^(-1)(F_delta^n)`. The full
+  embedded `L_v` determines primitive `v` up to scale/relabeling; only an
+  abstract, truncated, or summarized lattice is automatically lossy. The
+  useful finite toric object has characters
+  `X_S={(v,+1),(v,-1)}` on `(t,delta)`, with walls
+  `vt +/- delta in Z`. Its selected inequality side, height, owner, sign, and
+  paired deletion are essential. Opposite-sign wall determinants are `v+w`,
+  recovering the pair-sum ruler. THM-2047 now proves this exact carrier and
+  paired-deletion operation; localization forcing an AP core remains open and
+  is not a proved Wall-A consequence.
+
+---
+
 ## MISTAKE-223 (2026-07-21, codex audit of HYP-8825) -- a braid-flat factorization and common determinant syntax were promoted to hyper-Bessel and Euler-characteristic factorizations
 
 - **What was claimed:** S208 called cake, bagel, full g-bonacci, and transitive-
@@ -331,46 +393,37 @@ Format per entry:
 ## MISTAKE-221 (2026-07-21, codex audit of HYP-8815) -- a finite LRC witness scan and an AP/Fibonacci contrast were promoted to a necessary autocorrelation characterization
 
 - **What was claimed:** HYP-8815 called a scan over rationals `a/q` with
-  `q<=Qmax` an exact covering-min search, inferred that every hypothetical
-  LRC(14) counterexample must be primitive, near-AP, anti-golden, and organized
-  around one CF-blocking far element, called Fibonacci a minimum-energy safe
-  pole, and stated an iff with beating the AP at higher-order autocorrelation by
-  making THM-731's `disc_v` smaller.
-- **Why it is wrong:** the finite scan returns only
-  `L_Q(S)<=M(S)` unless a breakpoint-completeness theorem covers the cutoff.
-  THM-1002-pair-sum-denominator-bound proves every maximizer lies on a ruler
-  `t=p/(v_i+v_j)`; hence `Q>=2 max(S)` is sufficient, or one may enumerate all
-  numerators on all pair-sum rulers. The old row `{1,...,12,5460}` is a strict
-  witness to the bug:
-  LRC(14) counterexample must be near-AP and anti-golden with a CF-blocking far
-  element, and stated an iff with beating the AP at higher-order
-  autocorrelation by making THM-731's `disc_v` smaller.
-- **Why it is wrong:** the finite scan returns a rigorous **lower bound** on
-  `M(S)` unless a separate breakpoint-completeness bound covers all possible
-  maximizers. A lower bound above `1/14` safely excludes an explicit packet, but
-  cannot give its exact `M`, rank all families, or detect a counterexample when
-  it falls below threshold. The script's own `AP12+5460` scan reports
-  `92/1197`, strictly below THM-724's proved lower bound `420/5461`, a concrete
-  certificate that the scan did not find the maximum. THM-730 proves only the AP's unique
-  Schur-triple maximum; it explicitly leaves the resummation to loneliness
-  open. THM-731's `disc_v` is peel-dependent and enters
-  `L_cert=(6/7)|G'|-sqrt((6/49)disc_v)`, so **smaller** discrepancy makes the
-  sufficient safety bound larger, the opposite of the claimed direction.
-  A few loose Fibonacci-flavored packets do not prove a uniform golden
-  exclusion, near-AP necessity, large continued-fraction quotients, or ownership
-  of all covering moduli by the maximum speed.
-- **Correct framing:** a counterexample may be divided by its gcd and therefore
-  taken primitive; it must be Cover14 with `M<1/14`; and THM-1017 excludes an AP
-  maximum-deletion core, so THM-730 gives that core a strict additive-triple
-  deficit (`T<=65`). Also, `L=0` and THM-731 force
-  `disc_v>=6|G'_{~v}|^2` for every peel. These are the rigorous necessary
-  conditions. Anti-golden, near-AP,
-  Fibonacci-foil, and joint-order-autocorrelation language remains a useful
-  search hypothesis with hostile controls, not a characterization. The first
-  repair correctly relabelled the denominator-truncated values as lower bounds;
-  the later repair now uses THM-1002 to enumerate every numerator on every
-  pair-sum ruler and therefore computes all fifteen displayed rows exactly.
-  Exactness of that finite bank does not establish a global minimizer.
+  `q<=Qmax` an exact computation of `M`; inferred that every hypothetical
+  LRC(14) counterexample must be near-AP, anti-golden, organized around one
+  CF-blocking far element, and beat the AP by a higher-order autocorrelation
+  mechanism; and used smaller THM-731 discrepancy in the wrong direction.
+- **Why it is wrong:** a denominator-truncated scan computes only
+  `L_Q(S)<=M(S)` unless a completeness theorem covers every maximizer.
+  The exact strict witness is
+  `L_1200({1,...,12,5460})=92/1197 < M=420/5461`.
+  THM-730 proves only the AP's unique Schur-triple maximum. THM-731 is
+  peel-dependent and gives
+  `L_cert=(6/7)|G'|-sqrt((6/49)disc_v)`, so **smaller** discrepancy
+  strengthens safety. A few loose Fibonacci packets prove no uniform
+  exclusion, near-AP necessity, continued-fraction condition, or ownership of
+  every covering modulus by one far speed.
+- **Exact computational repair:** the pair-sum theorem
+  [THM-1002](theorems/THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case.md)
+  puts every maximizer at `t=p/(v_i+v_j)`, including the self-pair case.
+  Enumerating every numerator on every pair-sum ruler computes `M` exactly;
+  alternatively `Q>=2 max(S)` is a sufficient complete denominator cutoff.
+  Do not filter to coprime numerators unless all divisor rulers are also
+  present: `S={1,4,5}` attains its maximum at `2/6=1/3`, while `3` is not
+  a pair sum. The repaired script validates inputs and computes all fifteen
+  displayed rows exactly; all are safe. This finite bank is not a global
+  minimizer theorem.
+- **Correct structural framing:** after gcd normalization, a counterexample is
+  primitive Cover14 with `M<1/14`. THM-1017 excludes a maximum-deletion core
+  `d{1,...,12}`, so THM-730 gives that core Schur count `T<=65`. Since a
+  counterexample has lonely-time measure zero, THM-731 forces
+  `disc_v>=6|G'_{~v}|^2` for every peel. Anti-golden, near-AP,
+  Fibonacci-foil, one-far-blocker, and joint-order autocorrelation language is
+  a hostile-control program, not a characterization.
 
   `L_1200=92/1197 < M=420/5461` at `t=420/5461`.
 
@@ -403,7 +456,6 @@ Format per entry:
   one-far-blocker, and joint-order-autocorrelation language remains a useful
   hostile-control program, not a characterization.
 ---
-
 ## MISTAKE-215 (2026-07-21, codex audit of HYP-8795 / THM-2040) -- a prime-local minimum-face normalization was promoted to a global common-factorial/Vandermonde factorization
 
 - **What was claimed:** dividing every NC2 moment by a purported common

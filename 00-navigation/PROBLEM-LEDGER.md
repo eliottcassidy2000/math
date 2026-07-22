@@ -4,8 +4,29 @@
 > [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) for current truth. Major later
 > changes include THM-2022 proving NC2/GMC(2), explicit GMC(3) counterexamples,
 > THM-2044/2045 separating rank-two Poisson from DC(2)/planar JC, partial NC2
-> Lean coverage, and corrections MISTAKE-211–223. Historical priority/provenance
+> Lean coverage, and corrections MISTAKE-211–225. Historical priority/provenance
 > claims below require primary-source and canon checks.
+
+## Current portfolio at a glance
+
+This table is the maintained entry point. Every row names a proved foothold and
+the obstruction that still matters; the long inventory below is provenance.
+
+| Area | Current truth | Highest-value next move |
+|---|---|---|
+| LRC(14) | Open. `q<=25` is false; the exact search is safe through height 55; the period-14 packet is complete but globally blind. | Extract an AP core, finish six-comb endpoint transport, or find an effective spectrum above the isolated `1/14` floor. |
+| NC2 / GMC | NC2 and unrestricted GMC(2) are proved by THM-2022; the whole proof is only partly formalized. GMC is false in every dimension at least three. | Formalize the lowest-face descent and whole-packet Frobenius steps; mine the failed higher-dimensional analogue. |
+| Jacobian / Dixmier / Poisson | The two-pair Poisson conjecture is false. DC(2) and planar JC remain open; filtered first-order descent is obstructed. | Prove the six-weight correction cascade cannot terminate, or escape it using higher tangent order/nonfiltered descent. |
+| Tournaments | Join laws and strong-core localization are proved; the invariant lattice is exact only through `n<=6`. Positive game equilibria need both skew symmetry and mod-2 support parity. | Attack `H>=disc`, classify operation laws, and track positive-kernel support rather than conflating games, flows, and topology. |
+| Reciprocal sequences | Support and indexed-multiplicity Dirichlet profiles are separated by a collision tax; Abel--Stieltjes/Dini/Bertrand boundary tests are available. | Build an operation calculus for support unions/products and connect collision structure to LRC denominator spectra. |
+| Arrangement carrier | THM-2047 proves the labelled phase-height carrier, pair-sum mechanism, and paired deletion. Ordinary toric-complement topology does not encode the selected safe slice. | Find a deletion/localization invariant that preserves owner, side, height, and can force the AP-core branch. |
+| Cross-domain wildcard | Many analogies survive only after naming the preserved predicate and the lost coordinate. | Generate alternate vertex sets/quotients, then demand a two-way dictionary and hostile control before promoting a bridge. |
+
+## Legacy portfolio snapshot
+
+The material below is a dated research inventory. It is useful for names,
+failed routes, and provenance, but its status labels do not override the table
+above, `CURRENT-FRONTIER.md`, canonical theorems, or recent corrections.
 
 **Canonical consolidated ledger.** Created death-star-2026-07-20-S59u (HYP-8185),
 owner-directed: given the Jacobian Conjecture was disproved externally, inventory

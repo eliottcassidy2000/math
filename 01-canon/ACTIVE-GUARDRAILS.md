@@ -47,7 +47,9 @@ mistake.
     After gcd normalization, primitive + Cover14 + `M<1/14` + non-AP deletion
     are necessary; near-AP, anti-golden, CF-blocker, and full-autocorrelation
     claims are not. A bounded-denominator scan is only a lower bound for `M`;
-    exactness follows by enumerating all THM-1002 pair-sum rulers (or from the
+    exactness follows by enumerating all
+    [THM-1002 pair-sum rulers](theorems/THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case.md)
+    (or from the
     sufficient cutoff `Q>=2 max(S)`). Do not gcd-filter numerators unless
     divisor rulers are separately included. The repaired S206 script is exact
     on its fifteen rows, but finite exactness is not a global minimizer theorem.
