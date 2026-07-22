@@ -16,6 +16,8 @@ depends_on:
   - THM-2076
 related:
   - THM-2061
+  - THM-2076
+  - THM-2078
   - THM-841
   - THM-848
   - THM-1196

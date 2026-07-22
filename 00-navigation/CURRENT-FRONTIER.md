@@ -157,7 +157,9 @@ structural supplier/seed and a lossless exit.
   THM-2075 shows that doubling homeomorphically
   conjugates every safe-set level to that terminal core: component/Euler data
   are invariant, lengths halve, addresses are constant per component, and
-  every endpoint retains a terminal-core owner.
+  every endpoint retains a terminal-core owner. THM-2078 then closes every
+  nontrivial tower with terminal maximum at most `24`, even when the original
+  seam core is unbounded.
   THM-2062 adds the hereditary wheel; THM-2065 makes circuit-free residuals finite.
 - **PROVED relative whole-product decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says bounded scalar relations must lift to vector-character relations. Two

@@ -1,0 +1,11 @@
+LRC14 TERMINAL GUARD-CONTAINMENT SEARCH -- sampled prefilter + exact atoms
+size 6 through 24: 134596 total, 6 hereditary divisor-complete, 0 prefilter, 0 exact
+size 7 through 24: 346104 total, 131 hereditary divisor-complete, 0 prefilter, 0 exact
+size 8 through 24: 735471 total, 1198 hereditary divisor-complete, 0 prefilter, 0 exact
+size 9 through 24: 1307504 total, 6375 hereditary divisor-complete, 0 prefilter, 0 exact
+size 10 through 24: 1961256 total, 22884 hereditary divisor-complete, 0 prefilter, 0 exact
+odd guards through 175: 88
+sampled prefilter survivors: 0
+exact containment pairs: 0
+first exact pair: None
+PASS
