@@ -238,6 +238,81 @@ theorem sum_natCast_mul_pow_char {R : Type*} [CommRing R] (p : ℕ) [ExpChar R p
   refine Finset.sum_congr rfl (fun s _ => ?_)
   rw [mul_pow, ← frobenius_def, map_natCast]
 
+/-! ### THM-2022 §1 — the exact Wick channel expansion of the Gaussian moment
+
+`E` is a linear functional with `E (monomial v c) = c * wt v`.  Expanding `P^m` by the
+multinomial theorem and evaluating term by term gives the moment as a sum over multiplicity
+vectors (channels): the Wick factorial `wt (radial)` vanishes off the charge-0 diagonal, so only
+balanced channels survive.  This is THM-2022 (1), the bridge from the abstract expectation to the
+channel arithmetic on which the face geometry and the Frobenius layer act. -/
+
+/-- `E P` may be summed over any finite superset of `P.support` (extra coefficients are `0`). -/
+lemma E_eq_sum_of_subset {P : MvPolynomial (Fin 2) ℂ} {D : Finset (Fin 2 →₀ ℕ)}
+    (h : P.support ⊆ D) : E P = ∑ s ∈ D, P.coeff s * wt s :=
+  Finset.sum_subset h (fun s _ hs => by rw [MvPolynomial.notMem_support_iff.mp hs, zero_mul])
+
+/-- The Gaussian expectation is additive. -/
+lemma E_add (P Q : MvPolynomial (Fin 2) ℂ) : E (P + Q) = E P + E Q := by
+  rw [E_eq_sum_of_subset (P := P) (D := P.support ∪ Q.support) Finset.subset_union_left,
+      E_eq_sum_of_subset (P := Q) (D := P.support ∪ Q.support) Finset.subset_union_right,
+      E_eq_sum_of_subset (P := P + Q) (D := P.support ∪ Q.support) MvPolynomial.support_add,
+      ← Finset.sum_add_distrib]
+  exact Finset.sum_congr rfl (fun s _ => by rw [MvPolynomial.coeff_add]; ring)
+
+/-- `E` on a single monomial is its coefficient times the Wick weight. -/
+lemma E_monomial (v : Fin 2 →₀ ℕ) (c : ℂ) : E (monomial v c) = c * wt v := by
+  rw [E_eq_sum_of_subset (P := monomial v c) (D := {v}) MvPolynomial.support_monomial_subset,
+      Finset.sum_singleton]
+  simp [MvPolynomial.coeff_monomial]
+
+/-- `E` commutes with finite sums. -/
+lemma E_sum {ι : Type*} (s : Finset ι) (f : ι → MvPolynomial (Fin 2) ℂ) :
+    E (∑ i ∈ s, f i) = ∑ i ∈ s, E (f i) := by
+  classical
+  induction s using Finset.induction with
+  | empty => simp [show E 0 = 0 by simp [E]]
+  | insert a s ha ih => rw [Finset.sum_insert ha, E_add, ih, Finset.sum_insert ha]
+
+/-- A finite product of monomials is the monomial of the summed exponents and multiplied
+coefficients. -/
+lemma prod_monomial {ι : Type*} (s : Finset ι) (e : ι → (Fin 2 →₀ ℕ)) (c : ι → ℂ) :
+    ∏ i ∈ s, monomial (e i) (c i) = monomial (∑ i ∈ s, e i) (∏ i ∈ s, c i) := by
+  classical
+  induction s using Finset.induction with
+  | empty => simp
+  | insert a s ha ih =>
+      rw [Finset.prod_insert ha, ih, monomial_mul, Finset.sum_insert ha, Finset.prod_insert ha]
+
+/-- **THM-2022 (1): the exact Wick channel expansion of the Gaussian moment.** The `m`-th moment
+`E (P^m)` equals the sum, over multiplicity vectors `k` of mass `m` supported on `P.support`, of
+the multinomial coefficient `multinomial P.support k` times the coefficient monomial
+`∏ v, (P.coeff v)^{k v}` times the Wick factorial `wt` of the radial exponent `∑ v, k v • v`.
+Since `wt` is `(radial₀)!` on charge-0 (balanced) channels and `0` off them, this is exactly the
+balanced-channel sum `M_m(c)` of THM-2022. -/
+theorem wick_expansion (P : MvPolynomial (Fin 2) ℂ) (m : ℕ) :
+    E (P ^ m) = ∑ k ∈ P.support.piAntidiag m,
+      (Nat.multinomial P.support k : ℂ) * (∏ v ∈ P.support, P.coeff v ^ (k v))
+        * wt (∑ v ∈ P.support, k v • v) := by
+  have key : P ^ m = ∑ k ∈ P.support.piAntidiag m,
+      (Nat.multinomial P.support k : MvPolynomial (Fin 2) ℂ)
+        * ∏ v ∈ P.support, (monomial v (P.coeff v)) ^ (k v) := by
+    nth_rewrite 1 [MvPolynomial.as_sum P]
+    exact Finset.sum_pow_eq_sum_piAntidiag _ _ _
+  have key2 : P ^ m = ∑ k ∈ P.support.piAntidiag m,
+      monomial (∑ v ∈ P.support, k v • v)
+        ((Nat.multinomial P.support k : ℂ) * ∏ v ∈ P.support, P.coeff v ^ (k v)) := by
+    rw [key]
+    refine Finset.sum_congr rfl (fun k _ => ?_)
+    have hp : (∏ v ∈ P.support, (monomial v (P.coeff v)) ^ (k v))
+        = monomial (∑ v ∈ P.support, k v • v) (∏ v ∈ P.support, P.coeff v ^ (k v)) := by
+      simp_rw [MvPolynomial.monomial_pow]
+      exact prod_monomial _ _ _
+    rw [hp, show (↑(Nat.multinomial P.support k) : MvPolynomial (Fin 2) ℂ)
+          = C ((Nat.multinomial P.support k : ℂ)) from (map_natCast C _).symm,
+        MvPolynomial.C_mul_monomial]
+  rw [key2, E_sum]
+  exact Finset.sum_congr rfl (fun k _ => by rw [E_monomial])
+
 end GMC2
 
 -- Axiom audit: should be only propext / Classical.choice / Quot.sound (Mathlib standard).
@@ -247,3 +322,4 @@ end GMC2
 #print axioms GMC2.mathieuZhao_of_nc2At
 #print axioms GMC2.gmc2_of_nc2
 #print axioms GMC2.sum_natCast_mul_pow_char
+#print axioms GMC2.wick_expansion
