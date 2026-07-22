@@ -40,9 +40,9 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
   `11`-content blocker through rank `10`, excluding all-primitive covers.
 - **THM-2115 (PROVED):** the half-fiber signed divisor sequence is Toeplitz-PSD;
   frequency `84` closes a row passing all small clocks and its Hunter tree.
-- **THM-2116/2120/2122/2123 (PROVED):** every transverse terminal-`13` branch
-  is empty. A rank-eight cover needs a guard `13`-blocker or a nonblocker
-  terminal projectively parallel to the guard modulo thirteen.
+- **THM-2116/2120/2122/2123/2125 (PROVED):** a rank-eight cover needs a guard
+  `13`-blocker or at least five nonblocker terminals projectively parallel to
+  the guard modulo thirteen. THM-2124 is auditing the guard-blocker branch.
 - **THM-2117/2121 (PROVED):** clocks, the maximum Hunter tree, and all scalar
   minors can pass despite an open safe cell; every such cell is detected by
   Fejer order `<=14nV^2+1`. Retain joint Toeplitz phase, not scalar packets.

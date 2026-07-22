@@ -201,9 +201,9 @@ This strictly sharpens the content invoice: after paying a terminal
 different terminal. The two labels cannot be conflated because the aligned
 terminal is required to be nonzero modulo thirteen.
 
-The surviving rank-eight branches are now precisely a guard 13-blocker or a
-nonblocker terminal on the guard's projective mod-13 line. Ranks nine through
-twelve have different orbit capacities and are not closed here.
+THM-2125 later strengthens the second branch to at least five nonblocker
+terminals on the guard's projective mod-13 line. The other branch is a guard
+13-blocker. Ranks nine through twelve are not closed here.
 
 ## 5. Assumption challenge and Tournament Analysis
 
