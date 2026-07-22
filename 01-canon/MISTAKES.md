@@ -7,6 +7,30 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-228 (2026-07-21, codex audit of THM-1330) -- necessary Keller-monoid anatomy was titled and described as a classification of all Jacobian counterexamples
+
+- **What was claimed:** THM-1330 was titled "the exact picture of the set of
+  all counterexamples" and called the Jelonek hypersurface, complement cover,
+  monodromy, and degeneration package a "covering-triple classification."
+- **Why it is wrong:** the same theorem's honest ledger says that the inverse
+  Jelonek realization problem, realizable generic degrees, irreducible seeds,
+  unique factorization, and `JC(2)` are open. A package recorded by every map
+  is a necessary invariant, not a classification, unless one proves both
+  realization and completeness up to the stated equivalence. The phrase
+  "subject to polynomial-with-constant-Jacobian gluing" simply puts the hard
+  problem back into the definition. Monoid ideality and degree factorization
+  likewise organize unknown seeds without enumerating them.
+- **Correct framing:** THM-1330 is a necessary-structure atlas: Keller
+  nonunits have function-field degree at least three, form a two-sided ideal,
+  factor finitely under composition, are etale and nonproper, and impose
+  covering/monodromy restrictions on the Jelonek set. The verified explicit
+  families occupy cells of this atlas. A complete classification would still
+  have to solve realization and equivalence for the covering data and classify
+  irreducible seeds. THM-2063 legitimately classifies one empty planar stratum;
+  it does not turn the atlas into a global classification.
+
+---
+
 ## MISTAKE-227 (2026-07-21, codex audit of HYP-8879/S102) -- a positive-measure strict-loneliness integral was identified with the weak LRC predicate, and finite resonance examples were promoted to an AP reduction
 
 - **What was claimed:** S102 put `g(x)=1[||x||>1/14]`, expanded

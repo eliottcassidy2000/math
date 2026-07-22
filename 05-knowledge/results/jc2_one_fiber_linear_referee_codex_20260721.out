@@ -1,0 +1,7 @@
+JC2 ONE-FIBER-LINEAR AUDIT -- exact coefficient descent
+leading-coefficient identities: 6 PASS
+nonzero-A normal-form determinants: 24 PASS
+nonzero-A two-sided inverses: 8 PASS
+zero-A normal forms and inverses: 16 PASS
+hostile nonconstant-A top-layer trap: PASS
+PASS
