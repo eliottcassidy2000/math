@@ -3,6 +3,31 @@
 > [`START-HERE.md`](START-HERE.md), [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md),
 > and [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
 
+## codex-2026-07-22 -- mixed guard fold and deepest-terminal resonance gate
+
+**Owner directive:** continue the long LRC(14) session, mine forgotten ideas,
+and seek a scale-free closure of the dyadic terminal lane.
+
+- THM-2080 proves an exact mixed-radius analogue of THM-965:
+  `measure(D_q(1/14) intersect E_h(1/7))` is the independence baseline `2/49`
+  plus two explicit folds at `b+2a` and `b-2a` modulo `14`, where `q/h=a/b`
+  is reduced.
+- A rank-six terminal guard cover must pay correlation at least `2/49`.
+  The fold bound forces `sum gcd(q,h)^2/(qh)>=8/49`, hence one reduced ratio
+  has product `ab<=36`. This removes every projectively generic depth-five
+  terminal and leaves a finite list of resonance directions with unbounded
+  common scale and endpoint phase.
+- The exact referee checks 800 mixed overlaps by common-boundary atom counts.
+  On the THM-2078 rank-six box it finds six arithmetic cores, 144 allowed
+  guards, 28 first-order overlap survivors, and zero violations of the new
+  reduced-product gate. The full THM-2078 simultaneous test still removes all
+  28; the scalar fold is a conductor, not a replacement for endpoint transport.
+- Assumption challenge: the unbounded coordinate is not initially the guard
+  height but the common scale after quotienting by a small reduced ratio.
+  Tournament ordering of pair overlaps loses the union-cover predicate; the
+  retained carrier is the signed fold invoice plus guard-tooth and endpoint
+  addresses.
+
 ## death-star-2026-07-22-S104 -- GMC2 formalization: pinpointed + wrote the last capstone discharge (HeightWitnessSupplier); structurally correct + statements axiom-checked, but the proof hits a pathological whnf wall (>6.4M heartbeats). One perf-fix from clean DvdK1 -> NC2.
 
 **Owner directive:** finish the GMC2 formalization.

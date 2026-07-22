@@ -150,7 +150,12 @@ structural supplier/seed and a lossless exit.
   out a fixed uniform bank; THM-2073/2076 give a depth-at-most-five safe-child
   tower. THM-2075 preserves nonempty-core component/Euler/owner data; THM-2078
   closes terminal maximum `<=24`. MISTAKE-230 forbids descending the empty full
-  row across zero-child tails; THM-2079 pairs addresses `a,2^r-1-a` and flips owner bits.
+  row across zero-child tails; THM-2079 pairs addresses `a,2^r-1-a` and flips
+  owner bits. THM-2080 gives the exact mixed `1/14`--`1/7` overlap fold and a
+  scale-free gate on the deepest residual: at terminal rank six, some reduced
+  guard ratio `q/h=a/b` must satisfy `ab<=36`. Thus depth five has only finitely
+  many projective resonance directions, though their common scale and
+  simultaneous endpoint word remain unbounded.
   THM-2062 adds the hereditary wheel; THM-2065 makes circuit-free residuals finite.
 - **PROVED relative whole-product decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says bounded scalar relations must lift to vector-character relations. Two
