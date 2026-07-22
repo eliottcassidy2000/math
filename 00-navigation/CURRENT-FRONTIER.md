@@ -135,8 +135,14 @@ not unsafe. The reusable certificate architecture is
   THM-2104 closes every constant quotient-valuation layer at each of
   `2,3,5`, while THM-2105 forces exact affine clock covers through denominator
   fourteen plus opposite-parity carrier pairs at `3,5,7`, all in the all-
-  transverse model. The six persistent height-114 cut rows make THM-2065
-  alone vacuous; location, phase, and clock sidecars are essential.
+  transverse model. THM-2114 then adds the general replacement carrier:
+  strict tree surplus, connectivity in every maximum graphic-matroid basis
+  at equality, and finite-ring Kakeya needles. Its
+  prime-row needle forces a `13`-content blocker through terminal rank `12`
+  and an `11`-content blocker through rank `10`; in particular an all-primitive
+  rank-two cover in these ranges is impossible. The six persistent height-114
+  cut rows make THM-2065 alone vacuous; location, content, phase, and torsion
+  sidecars are essential.
 - **PROVED relative decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   lifts bounded scalar relations; `H=2^19` clears recorded margins.
   MISTAKE-080/082 still require shape-specific torus models.

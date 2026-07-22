@@ -71,7 +71,7 @@ F_(b,c)(s)=1/(8bc) [
  -(s+b-c)_+^2+(s-b-c)_+^2].                           (3)
 ```
 
-For `0<=k<A`, define the disjoint periodic guard intervals
+For `0<=k<A`, define the separate fiber-indexed periodic guard intervals
 
 ```text
 I_(A,k)=union_(m in Z)

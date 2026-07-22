@@ -32,6 +32,10 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
   congruence covers modulo `2m` for every `2<=m<=7`; at each odd prime
   `ell=3,5,7`, either a universal `2ell`-carrier occurs or opposite-parity
   odd `ell`-carriers cover the two clock halves.
+- **THM-2114 (PROVED):** route the residual further by strict tree surplus,
+  all-maximum-
+  tree equality, and finite-ring needles. Every rank-`<=12` torus cover needs
+  a `13`-content blocker; rank `<=10` also needs an `11`-content blocker.
 - **THM-2112 (PROVED):** the same rank-seven lane has an explicit whole-row
   box via `R_7=5*28^8*(7*57^42)^17` and a BV/Fourier ratio recursion. The box
   is not enumerated or proved empty.

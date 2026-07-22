@@ -49,7 +49,13 @@ Older chronology is in
   through `R_7=5*28^8*(7*57^42)^17` and the recursive bounds `L_1,...,L_7`.
 - THM-2098 splits terminal ranks `8..11` into a transverse branch with exact
   collision/tree budget `5(n-7)/49` and a branch with at least seven
-  guard-proportional bands. THM-2099 is only a reserved positive-edge probe.
+  guard-proportional bands. THM-2099 computes the exact positive-edge spectrum
+  and shows that pair-tree data alone cannot close rank eight. THM-2114
+  refutes the proposed tree-or-signed-pencil inverse statement by an exact
+  cap row with zero affine sign gauges, then excludes that row by a mod-5
+  needle and all-maximum-tree equality rigidity. Its general finite-row lemma
+  forces a `13`-content blocker through rank `12` and an `11`-content blocker
+  through rank `10`; all-primitive rank-two covers in those ranges are empty.
 - **Remaining:** exact discharge of the rank-seven finite bank and both
   higher-rank branches; the depth-zero/rank-eleven and rank-twelve atlas lanes
   also remain. LRC(14) is not closed.

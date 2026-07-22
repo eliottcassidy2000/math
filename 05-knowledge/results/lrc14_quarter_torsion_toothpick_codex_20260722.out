@@ -1,0 +1,13 @@
+THM-2114 QUARTER-TORSION / TOOTHPICK REFEREE
+moving-root law: 21086 exact samples; m=1..100: PASS
+hostile guard pencil K=(0, 7, 14, 15, 16, 17, 24, 31)
+  normalized layers=5/7:6, 22/31:1, 17/24:2, 12/17:3, 7/10:2, 11/16:2, 2/3:5, 5/8:2, 1/2:2, 0:3
+  normalized tau=8579/1736; actual tau=8579/85064
+  cap deficit=101/85064; direction speeds=(2,9,16,17,18,19,26,33)
+quarter-torsion odd-parity checks: 20992: PASS
+THM-2103 refuter: normalized weights=5/7:22, 2347/3288:1, 655/918:1, 52/73:1, 42/59:1, 61/86:1, 1/2:1
+  tau=5/49 exactly; signed affine-rank-one gauges=0/128
+  mod-5 Kakeya needle X=(1,-1)/5: strict mixed escape
+diagnostic primitive toothpick window: vertices=953, max-degree=4, max-codegree=1
+proof carrier: threshold/max-basis matroid + finite-ring kernels; tournament is scheduler only
+PASS -- exact finite checks agree with THM-2114
