@@ -1,0 +1,64 @@
+
+========================================================================
+A  codex THM-2053 gate: D_i=a z_i - b u_i is a 2x2 DET; large directions are LRC14-safe
+========================================================================
+  plane with 12 columns, Lipschitz L(U)=5.831; codex: |a z_i - b u_i| <= (a^2+b^2)/91 => safe
+  the DET grows LINEARLY in |d|, the norm QUADRATICALLY -> large directions satisfy the gate (safe):
+  d=(30,1): max 2x2-DET |a z_i - b u_i|=   119, (a^2+b^2)/91=      9.9; codex-safe (DET<=norm/91)? False
+  d=(200,3): max 2x2-DET |a z_i - b u_i|=   797, (a^2+b^2)/91=    439.7; codex-safe (DET<=norm/91)? False
+  d=(700,700): max 2x2-DET |a z_i - b u_i|=  2100, (a^2+b^2)/91=  10769.2; codex-safe (DET<=norm/91)? True
+  d=(2000,1): max 2x2-DET |a z_i - b u_i|=  7999, (a^2+b^2)/91=  43956.1; codex-safe (DET<=norm/91)? True
+  => residual = primitive directions FAILING the gate (short norm-form vectors): 3920 within |d|<=~56
+     the anisotropic norm form a^2+b^2 makes the residual FINITE; its structure = the plane's binary form.
+
+========================================================================
+B  the Paley spectral factor x^2+x+(p+1)/4 is the anisotropic principal form of DISCRIMINANT -p
+========================================================================
+  p= 3: Paley factor (1,1,1) disc=-3=-p ; anisotropic (D<0, definite)=True ; class number h(-3)=1
+  p= 7: Paley factor (1,1,2) disc=-7=-p ; anisotropic (D<0, definite)=True ; class number h(-7)=1
+  p=11: Paley factor (1,1,3) disc=-11=-p ; anisotropic (D<0, definite)=True ; class number h(-11)=1
+  => the Paley tournament's spectral factor IS the principal anisotropic binary form of disc -p.
+
+========================================================================
+C  HEEGNER class-number-1 makes the residual RIGID: h(-3)=h(-4)=h(-7)=h(-8)=h(-11)=1
+========================================================================
+  disc   -3: class number h=1 <- HEEGNER h=1 (RIGID: unique anisotropic form)
+  disc   -4: class number h=1 <- HEEGNER h=1 (RIGID: unique anisotropic form)
+  disc   -7: class number h=1 <- HEEGNER h=1 (RIGID: unique anisotropic form)
+  disc   -8: class number h=1 <- HEEGNER h=1 (RIGID: unique anisotropic form)
+  disc  -11: class number h=1 <- HEEGNER h=1 (RIGID: unique anisotropic form)
+  disc  -15: class number h=2
+  disc  -19: class number h=1 <- HEEGNER h=1 (RIGID: unique anisotropic form)
+  disc  -20: class number h=2
+  disc  -23: class number h=3
+  disc  -24: class number h=2
+  disc  -31: class number h=3
+  => 3,7,11 (and 2's -4,-8) are class-number-1 (Heegner/idoneal): the anisotropic form is UNIQUE,
+     so codex's residual short-vector family is RIGID. LRC(14)=2*7 -> disc -7, h=1 -> single class.
+
+========================================================================
+D  the mod-p anisotropy = Legendre (disc/p) (S215): p=3mod4 anisotropic HARD vs p=1mod4 isotropic EASY
+========================================================================
+  p= 3: (-1/p)=-1 (=+1 iff p=1mod4); disc -p definite anisotropic/R; 3mod4: free Z2, Borsuk-Ulam, ANISOTROPIC/HARD (Paley tournament)
+  p= 5: (-1/p)=+1 (=+1 iff p=1mod4); disc -p definite anisotropic/R; 1mod4: automorphism, Brouwer fixed pt, isotropic/EASY (Paley graph)
+  p= 7: (-1/p)=-1 (=+1 iff p=1mod4); disc -p definite anisotropic/R; 3mod4: free Z2, Borsuk-Ulam, ANISOTROPIC/HARD (Paley tournament)
+  p=11: (-1/p)=-1 (=+1 iff p=1mod4); disc -p definite anisotropic/R; 3mod4: free Z2, Borsuk-Ulam, ANISOTROPIC/HARD (Paley tournament)
+  p=13: (-1/p)=+1 (=+1 iff p=1mod4); disc -p definite anisotropic/R; 1mod4: automorphism, Brouwer fixed pt, isotropic/EASY (Paley graph)
+  => the p mod 4 axis (kps-S17) = the anisotropy of the disc -p form (S215): 3,7,11 anisotropic (hard,
+     Euler/Borsuk-Ulam branch), 5,13 isotropic (easy, Brouwer/automorphism). The GATE is (disc/p).
+
+========================================================================
+SUMMARY -- the anisotropic determinant gate and its rank-or-Euler reading
+========================================================================
+  codex THM-2053's ANISOTROPIC terminal |a z_i - b u_i| <= (a^2+b^2)/91 is a 2x2 DETERMINANT gate on the
+  THM-2052 rank-two residual plane: large directions safe, residual = SHORT vectors of the anisotropic norm
+  form. That residual is governed by the DISCRIMINANT of the plane's binary quadratic form:
+   * class number 1 (Heegner: -3,-7,-11 = Paley primes 3,7,11; also -4,-8 for 2) => UNIQUE anisotropic form
+     => a RIGID, single-class residual. LRC(14)=2*7 -> disc -7, h=1.
+   * the mod-p anisotropy = Legendre (disc/p) (S215): p=3mod4 (3,7,11) anisotropic = the HARD, free-Z2,
+     Borsuk-Ulam / Euler-survivor branch; p=1mod4 (5,13) isotropic = the EASY, automorphism/Brouwer branch.
+  RANK-OR-EULER as ISOTROPIC-vs-ANISOTROPIC: an isotropic residual direction = a resonance/extra relation
+  (codex rank 11->12 branch); an anisotropic residual = no resonance = lonely = chi-survivor (my S212/HYP-8845
+  Euler branch). The determinant gate's discriminant, and its Heegner/Legendre character, decides the branch.
+  So the LRC(14) leverage: the -7 Heegner anisotropy makes the residual plane's gate RIGID and single-class --
+  a finite, uniquely-structured target -- exactly why 7 (=apex) is the first hard but tractable case.
