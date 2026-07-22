@@ -85,6 +85,16 @@ theorem phiFrame_eq_phi_smallRootFactor_mul (R : Polynomial F) (M : ℕ) :
   obtain ⟨h, hu, hfeq⟩ := GMC2DvdKWeierstrass.phi_eq_smallRootFactor_mul R M
   exact ⟨h, hu, by rw [← GMC2DvdKConnector.phi_Phi, hfeq, map_mul]⟩
 
+/-! ## Remaining connector: the R→Rl moment transport (specified, for death-star's HahnSeries frame)
+
+`phi_Phi` fixes the frame `Rl = aeval (single 1 1) R`.  The one remaining hypothesis of
+`hderiv_via_transpose` not yet discharged is `hvanish`.  It reduces to the coefficient-preservation fact
+`(aeval (single 1 1) P).coeff (k : ℤ) = P.coeff k` (the `aeval (single 1 1)` embedding
+`Polynomial F → F⸨x⸩` preserves coefficients at natural indices), giving
+`((aeval (single 1 1) R)^m).coeff(M·m) = (R^m).coeff(M·m) = D_m`; then boxeph's `generatingFunction_eq_one`
+supplies the polynomial vanishing `D_m = 0`.  This is a pure HahnSeries-single computation (no analysis),
+left to the transpose owner to match the frame's exact coercion conventions. -/
+
 end GMC2DvdKHderivAssembly
 
 #print axioms GMC2DvdKHderivAssembly.hderiv_via_transpose
