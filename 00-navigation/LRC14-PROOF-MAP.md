@@ -47,7 +47,7 @@ THM-2085--2097/2112 make rank-seven rows finite, not discharged.
 At guarded sizes `8..10`, THM-2098 has pure, low-mixed, and high-vertical lanes;
 only the pure lane inherits its collision budget, and depth-zero eleven is separate.
 THM-2114/2116/2120--2125 force content and modular pencils; THM-2117/2119/2121 add full-Toeplitz and three-sparsity gates.
-THM-2130 intersects `11/13` labels into a sparse exception or `143` determinant; THM-2128/2131 exclude both no-terminal-blocker pencils. THM-2133 reduces simultaneous blockers to scalar `6+1`/`5+2` tails; THM-2135 forces the former to depth five and excludes depths `(1,1),(1,2)` of the latter. MISTAKE-238/239/242 block invalid transfers; higher scalar depths, the fivefold guard pencil, and higher ranks remain open.
+THM-2130 intersects `11/13` labels into a sparse exception or `143` determinant; THM-2128/2131 exclude both no-terminal-blocker pencils. THM-2133 reduces simultaneous blockers to scalar `6+1`/`5+2` tails; THM-2135 forces their first deep profiles, and THM-2138's all-depth unit-annulus and nonunit-fibre laws empty both scalar tails. MISTAKE-238/239/242 block invalid transfers; the fivefold guard pencil and higher ranks remain open.
 
 ### Live interfaces
 

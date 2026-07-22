@@ -11,8 +11,10 @@ status: >
   gcd cover. Goodman counting forces at least two monochromatic divisibility triangles. A root-needle
   multiplicity reformulation moreover forces a depth-at-least-six flood on
   measure at least 19/546 inside the two deep combs. Finite exact capacity
-  arguments close deep valuation pairs (1,1) and (1,2). Higher deep valuations
-  remain open, so this does not prove LRC(14).
+  arguments close deep valuation pairs (1,1) and (1,2). This theorem originally
+  left higher deep valuations open; THM-2138 now closes both scalar tails at
+  every depth. The fivefold guard pencil and higher ranks remain, so LRC(14)
+  is still open.
 source: codex-2026-07-22-LRC-scalar-flood-root-profile
 depends_on:
   - THM-2080
@@ -20,6 +22,7 @@ depends_on:
   - THM-2133
 related:
   - THM-2128
+  - THM-2138
 script:
   - 04-computation/lrc14_scalar_flood_mod169_codex_20260722.py
   - 04-computation/lrc14_five_plus_two_unit_annulus_depth2_codex_20260722.py
@@ -481,9 +484,9 @@ exact maxima. Normal and optimized runs agree byte for byte.
 
 ## 6. Scope and Tournament Analysis
 
-For the divided scalar coefficients, the theorem forces the `6+1` profile to
-depth at least five and closes `5+2` profiles `(0^5,1,1)` and `(0^5,1,2)`.
-The remaining valuation profiles are
+For the divided scalar coefficients, this theorem forces the `6+1` profile
+to depth at least five and closes `5+2` profiles `(0^5,1,1)` and
+`(0^5,1,2)`. At this stage the remaining valuation profiles were
 
 ```text
 (0^6,a),       a>=5,
@@ -491,9 +494,11 @@ The remaining valuation profiles are
 (0^5,a,b),     2<=a<=b.                              (49)
 ```
 
-They remain subject to the triple contraction, two Ramsey triangle invoices,
-and root-flood constraint (30). These are the exact higher-depth targets; no
-claim of LRC(14) closure is made.
+THM-2138 subsequently proves the all-depth unit-annulus extremal law, bounds
+every positive-valuation mask by the unit maximum with the needed even-depth
+gap, and eliminates every profile in (49). The triple contraction, two Ramsey
+triangle invoices, and root-flood constraint (30) remain valid structural
+information, but (49) is no longer an open branch.
 
 For case (I), `U_N` and `S_a` live in the multiplicative unit group
 `(Z/13^m Z)^*`, and `S_a=a^(-1)S_1`. Equivalently, a mask count is the number
@@ -505,8 +510,8 @@ L_a={(x,y):y=a x mod 13^m}                           (50)
 
 inside the rectangle with radii `N/7` and `N/14`. At depths `m=3,4,5`, the
 observed extremizers are the short lattice directions `(1,6)` and `(12,-1)`,
-namely `a=6` and `12a=-1`; the unique runner-up obeys `11a=1`. Proving this
-extremal law at every depth would close the entire `6+1` tail.
+namely `a=6` and `12a=-1`; the unique runner-up obeys `11a=1`. THM-2138 proves
+this extremal law at every depth and uses it to close the entire `6+1` tail.
 
 Candidate vertices were the seven scalar teeth, the six labels
 `{H,q_1,...,q_5}`, the 78 residue masks, the 110 torsion points, and the

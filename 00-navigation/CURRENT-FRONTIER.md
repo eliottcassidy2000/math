@@ -147,8 +147,8 @@ not unsafe. The reusable certificate architecture is
   digit section lifts `(8)` to rank collapse. THM-2130 extends root capacity
   through ranks `9..12` and forces guard content, a sparse mod-11 triple, or a
   terminal determinant divisible by `143`. THM-2133 reduces simultaneous blockers
-  to scalar `6+1`/`5+2` tails; THM-2135 forces `13^4|v` in `6+1` and excludes
-  `5+2` depths `(1,1),(1,2)`. The fivefold guard pencil remains.
+  to scalar `6+1`/`5+2` tails; after THM-2135's first deep profiles, THM-2138's
+  all-depth lattice/fibre laws empty both tails. The fivefold guard pencil remains.
   THM-2121 makes the joint gate finite at order `14nV^2+1`; retain the
   Toeplitz/Fejer certificate, not scalar packets. The height-114 cut rows
   make THM-2065 alone vacuous; location, content, phase, and torsion remain.
