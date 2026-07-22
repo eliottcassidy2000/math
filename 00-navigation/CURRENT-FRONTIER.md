@@ -115,6 +115,15 @@ structural supplier/seed and a lossless exit.
   THM-2047's signed phase-height complex is lossless; for `delta>0`,
   `chi(G_delta)=#components`, so it sees isolated tight witnesses that volume
   misses.
+- **PROVED finite-circuit alternative:** THM-2051 closes the coarse analytic
+  “middle” sought by THM-935/946. If a thirteen-speed row has no exact
+  support-two-through-five relation with all coefficient magnitudes at most
+  `2^20`, whole-product Fejer--BV approximation gives continuous `BONF5>0`
+  and therefore a positive-measure strict lonely set. The proof avoids the
+  unresolved termwise `T4/T5` strip/slab bounds. The LRC residual is now
+  localized to finitely many bounded-height circuit templates, but descent or
+  classification within those hyperplanes—including the relation-rich AP
+  boundary—remains open.
 - **Scope separation:**
   [THM-1149](../01-canon/theorems/THM-1149-compact-essential-crown-and-farey-blocker.md)
   proves that tight deletion and an all-loose essential crown are different

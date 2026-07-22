@@ -1,7 +1,7 @@
 ---
 id: THM-946
 title: THE CORRECTED TWO-POLE TAIL PROGRAM — a rigorous discrete-convolution bound, the refuted logarithm-free claim, and the still-conditional B5 exhaustion route
-status: PARTIAL. The corrected two-pole convolution lemma below is proved with an explicit constant 64. The former C0=8 bound is refuted exactly. T3 still needs a punctured near-pole congruence estimate; T4 and T5 still need affine resonance-strip and resonance-slab estimates. The resulting alternative “small support relation OR B5 > 0” is conditional on those missing tail bounds, and the small-relation branch is not classified.
+status: PARTIAL / TARGET BYPASSED BY THM-2051. The corrected two-pole convolution lemma below is proved with an explicit constant 64. The former C0=8 bound is refuted exactly. T3 still needs a punctured near-pole congruence estimate; T4 and T5 still need affine resonance-strip and resonance-slab estimates as absolute relation-mass bounds. However, THM-2051 now proves the coarse alternative “support-at-most-five relation of height at most 2^20 OR continuous B5 > 0” by whole-product Fejer--BV approximation, without these estimates. The small-relation branch remains unclassified.
 source: kind-pasteur-2026-07-17-S128 cont.38, corrected by codex-S48 audit
 depends_on:
   - THM-935 (relation-mass identity and the proved support-2 tail)
@@ -10,9 +10,17 @@ related:
   - THM-944 (the first-pushed B5 race scoreboard; this page was renumbered after collision)
   - THM-945/947 (moment wall and arc wire)
   - HYP-7189 (audit-corrected tail program)
+  - THM-2051 (whole-product bypass for the coarse universal alternative)
 ---
 
 # THM-946 — corrected two-pole tail program
+
+> **2026-07-21 update (THM-2051).** The estimates on this page remain valid
+> targets if one wants termwise absolute control or a much smaller relation
+> horizon. They are no longer a prerequisite for the coarse universal
+> small-relation-or-BONF5 alternative: THM-2051 keeps each signed centered
+> product intact, kills its bounded Fejer part by character orthogonality, and
+> absorbs every higher relation collectively in one `L1` error.
 
 This page supersedes the collided page formerly named
 `THM-944-ts-tail-lemma-universal-exhaustion.md`.  The old page made two distinct

@@ -64,6 +64,15 @@ mistake.
      owner-labelled cyclic word are lossless, and Euler characteristic—not
      volume—still sees isolated tight phases.
 
+13b. **The coarse BONF5 middle is now closed, but the circuit branch is not.**
+     THM-2051 proves that absence of every exact support-two-through-five
+     relation with coefficient height at most `2^20` forces continuous
+     `BONF5>0`, hence a positive-measure strict lonely set. This bypasses the
+     open THM-946 termwise `T4/T5` strip/slab estimates by retaining the whole
+     signed centered product. It does not classify the bounded-height relation
+     hyperplanes; the AP boundary is relation-rich and remains outside this
+     strict-exit argument.
+
 ## NC2 / GMC
 
 14. **Scalar moments do not separate return atoms.** MISTAKE-211. Cancellation

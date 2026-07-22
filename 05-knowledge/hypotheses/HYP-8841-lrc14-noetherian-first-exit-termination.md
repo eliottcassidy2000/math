@@ -5,9 +5,11 @@ status: >
   OPEN / exact local no-go and bounded one-lift base cases available. THM-2050
   proves that complete period-14 top germs are globally blind. THM-2043 proves
   every audited one-lift alias has a labelled strict exit by q<=42, including
-  an infinite Hasse-indistinguishable family. The target is a height-decreasing
-  termination theorem for arbitrary multi-lift/covering rows, ending either at
-  an AP/GW boundary atom or at a strict rational lonely phase.
+  an infinite Hasse-indistinguishable family. THM-2051 adds a universal finite-
+  circuit gate: either there is a positive-measure strict exit or a support-at-
+  most-five relation of coefficient height at most 2^20. The target is a
+  height-decreasing termination theorem inside that structured branch, ending
+  either at an AP/GW boundary atom or at a strict rational lonely phase.
 source: codex-2026-07-21-DC2-LRC14-termination
 related:
   - THM-523
@@ -16,6 +18,7 @@ related:
   - THM-2047
   - THM-2049
   - THM-2050
+  - THM-2051
 ---
 
 # HYP-8841 -- termination, not another local invariant
@@ -29,7 +32,7 @@ q_exit(S)=min{q>=2: exists a, gcd(a,q)=1,
 
 with value infinity if the set is empty.
 
-THM-2049 shows why this sidecar is necessary: `AP13` and `12->26` have the
+THM-2050 shows why this sidecar is necessary: `AP13` and `12->26` have the
 same complete local germs at every unit point `a/14`, but
 
 ```text
@@ -40,6 +43,19 @@ THM-2043 supplies a stronger finite base case: all 156 one-lift aliases in its
 scope either are the AP/Goddyn--Wong boundary rows or have an exact labelled
 exit by denominator `42`; its infinite `12->96+3444n` family retains the same
 exit `(q,a)=(41,17)` at every Hasse depth.
+
+THM-2051 supplies the first universal terminal gate away from structured
+circuits. Every row either already has a positive-measure strict lonely set or
+obeys one of the finitely many templates
+
+```text
+sum_(i in A) k_i v_i=0,
+2<=|A|<=5,      0<|k_i|<=2^20.                       (2a)
+```
+
+Thus a valid height descent may be localized to a finite union of rational
+circuit hyperplanes. Each hyperplane still contains infinitely many speed
+rows, and THM-2051 does not orient a decreasing move inside it.
 
 The proposed LRC14 termination theorem is:
 
@@ -68,8 +84,8 @@ strict height descent       prevents an infinite repair series
 terminal atom               AP/GW boundary or explicit lonely phase
 ```
 
-THM-2048 proves that local associated-graded solvability does not imply finite
-polynomial closure.  For LRC14, THM-597 and THM-2049 give the corresponding
+THM-2049 proves that local associated-graded solvability does not imply finite
+polynomial closure.  For LRC14, THM-597 and THM-2050 give the corresponding
 warning: local safe-component opening and complete top germs do not imply a
 global lonely phase.  The missing theorem in both cases is termination.
 
@@ -77,4 +93,4 @@ The first concrete experiment is to compute the deletion/restriction height
 tuple on the AP/GW, `12->26`, `12->36`, `12->96`, covering-min, and K33 banks,
 then require every move to preserve endpoint owners and the exact LRC
 predicate.  A scalar residue, collapse coefficient, or unlabelled toric layer
-is an invalid vertex because it merges THM-2049's hostile pair.
+is an invalid vertex because it merges THM-2050's hostile pair.

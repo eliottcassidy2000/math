@@ -99,5 +99,5 @@ Therefore any LRC14 route based only on localization at the denominator-14
 top layer is incomplete.  It must retain at least one global termination
 sidecar: magnitude, first strict-exit denominator, q-witness failure, or an
 equivalent off-layer gluing certificate.  This is the exact LRC analog of
-THM-2048: local correction data can be acyclic while finite/global termination
+THM-2049: local correction data can be acyclic while finite/global termination
 still carries the theorem.

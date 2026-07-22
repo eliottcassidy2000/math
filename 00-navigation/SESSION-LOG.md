@@ -1,3 +1,23 @@
+## codex-2026-07-21-LRC-Fejer-BV -- THM-2051 closes the coarse BONF5 middle
+
+- **PROVED (THM-2051):** if a thirteen-speed row has no exact relation of
+  support two through five and coefficient height at most `2^20`, then its
+  continuous quintic Bonferroni functional is positive, hence it has a
+  positive-measure strict lonely set.
+- **MECHANISM:** approximate the centered danger indicator by a degree-`H`
+  Fejer polynomial. Relation dissociation kills every finite product constant
+  term. A BV translation estimate controls each whole signed centered-product
+  tail in `L1`; summing THM-935's exact coefficients costs
+  `K=1477008/343`. At `H=2^20`, the error is below
+  `31755672/359661911`, leaving the exact positive margin
+  `595652076/17623433639` beneath the equilibrium floor `2052/16807`.
+- **SYNTHESIS:** this bypasses THM-946's still-open absolute `T4/T5`
+  strip/slab estimates for the coarse alternative and converts HYP-8841's
+  ambient termination problem into descent on a finite union of bounded-
+  height circuit hyperplanes. It does not classify that structured branch;
+  the tight AP is deliberately relation-rich. THM-940 is only the discrete
+  analogue and is not silently identified with the continuous proof.
+
 ## boxeph-2026-07-21-S211 -- where GMC(2) reaches LRC(14) (the CT-functional) and where it stops (the volume ceiling) (HYP-8840)
 
 **Owner:** ponder creatively, multiple pulls into past/incoming threads, how the GMC(2) proof can be leveraged in combination toward an LRC(14) proof.
