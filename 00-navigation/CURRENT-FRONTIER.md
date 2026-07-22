@@ -147,15 +147,15 @@ structural supplier/seed and a lossless exit.
   histogram dot product; its zero-mode split isolates disjoint-support zeros.
   THM-2060/2064 isolate the odd dyadic seam; THM-2061 folds it; THM-2066 closes
   `59,880` cores through `24`; THM-2068 proves the minimum bank; THM-2072 rules
-  out a fixed uniform bank; THM-2073/2076 give a depth-at-most-five safe-child
+  out a fixed uniform bank; THM-2073/2076 give a safe-child
   tower. THM-2075 preserves nonempty-core component/Euler/owner data; THM-2078
   closes terminal maximum `<=24`. MISTAKE-230 forbids descending the empty full
   row across zero-child tails; THM-2079 pairs addresses `a,2^r-1-a` and flips
-  owner bits. THM-2080 gives the exact mixed `1/14`--`1/7` overlap fold and a
-  scale-free gate on the deepest residual: at terminal rank six, some reduced
-  guard ratio `q/h=a/b` must satisfy `ab<=36`. Thus depth five has only finitely
-  many projective resonance directions, though their common scale and
-  simultaneous endpoint word remain unbounded.
+  owner bits. THM-2080 gives the exact mixed `1/14`--`1/7` overlap fold. For an
+  odd guard every danger comb spends at least `1/42` of its mass inside the
+  guard, with equality only at speed `6h`; six distinct combs therefore cannot
+  cover the `5/7` guard complement. This eliminates terminal rank six at every
+  height and sharpens the tower to depth at most four.
   THM-2062 adds the hereditary wheel; THM-2065 makes circuit-free residuals finite.
 - **PROVED relative whole-product decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says bounded scalar relations must lift to vector-character relations. Two

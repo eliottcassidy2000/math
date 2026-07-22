@@ -17,6 +17,7 @@ related:
   - THM-2072
   - THM-775
   - THM-2061
+  - THM-2080
 ---
 
 # THM-2076 -- guard-capacity terminal rank floor
@@ -151,6 +152,10 @@ only possible nontrivial terminal sizes and depths are
 terminal size: 10,9,8,7,6,
 tower depth :  1,2,3,4,5.                               (15)
 ```
+
+THM-2080 subsequently resolves the equality-pressure rank-six lane by an
+exact unequal-comb overlap floor. It improves (12) to `|Q_r|>=7`, hence
+`r<=4`. The present Haar lemma remains the general first capacity gate.
 
 Combining (7)--(8) with THM-2075's exact measure scaling gives the additional
 top-level tax

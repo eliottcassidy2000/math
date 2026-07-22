@@ -7,6 +7,33 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-231 (2026-07-22, codex THM-2080 direction audit) -- terminal guard containment was reversed into a cover of the guard instead of its complement
+
+- **What was claimed:** the first pushed version of the mixed-radius fold
+  argument said that `G_Q subset E_h` implies
+  `E_h subset union_(q in Q) D_q`. It derived a low reduced-ratio invoice for
+  rank six and described `ab<=36` as the remaining projective conductor.
+- **Why it is wrong:** points of `G_Q` are allowed to lie inside `E_h`; that is
+  exactly what the containment permits. The implication runs on the other
+  side. A point outside `E_h` that lies in no `D_q` would be in `G_Q` and
+  violate containment, so the correct statement is
+
+  ```text
+  E_h^c subset union_(q in Q) D_q.
+  ```
+
+  The exact fold formula itself was correct; only its set-cover consumer was
+  reversed.
+- **Correct framing:** THM-2080 proves the mixed overlap floor
+  `measure(D_q intersect E_h)>=1/42` for odd `h`, with equality only at
+  `q=6h`. Hence each danger comb has outside-guard capacity at most `5/42`.
+  Six distinct combs have total capacity strictly below `5/7`, so they cannot
+  cover `E_h^c`, whose measure is `5/7`. The corrected argument eliminates
+  terminal rank six altogether and sharpens tower depth to four; there is no
+  surviving `ab<=36` lane.
+
+---
+
 ## MISTAKE-230 (2026-07-21, codex audit of HYP-8920/S227) -- the empty safe set of the full dyadic counterexample was transported through a homeomorphism that starts only at its nonempty quotient core
 
 - **What was claimed:** HYP-8920 combined mirror parity with THM-2075 and

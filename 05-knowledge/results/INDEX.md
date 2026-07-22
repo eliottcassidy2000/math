@@ -1722,11 +1722,4 @@ nine small universes verify the formula directly. It checks 1,376 small
 hyperplanes, the ordered/increasing quotient, 414 exact prime-power zero sets,
 and the first guaranteed levels on the `2,3,5,7` towers. Runtime checks survive
 optimization and the frozen output ends in `PASS`.
-### lrc14_mixed_guard_fold_referee_codex_20260722.out
-Exact THM-2080 referee: 800 mixed `1/14`--`1/7` comb overlaps are independently
-computed by exact common-boundary atom counts and by the two-fold formula. The
-rank-six THM-2078 replay has six hereditary divisor-complete cores, 144 allowed
-odd guards, 28 first-order overlap survivors, and zero survivors violating the
-scale-free reduced-product gate `ab<=36`. This is a necessary projective
-conductor, not simultaneous-cover closure.
 | `poisson_rank2_symplectic_suspension_codex_20260721.py` | [STORED; THM-2044/2045, HYP-8802] | Independently reconstructs the owner-supplied rank-two Poisson counterexample from `R=x(2-3xq)` as a symplectic suspension of THM-1300. Exact checks: all six canonical brackets; expanded term counts `(2,35,246,78)`; three rational source points with common image and exact fibre size transported from THM-1300. Proves every `x(a-b x^r q^s)`, `ab!=0`, `r,s>=1`, has no planar Jacobian mate by a weighted-sector leading-coefficient obstruction; 64 monomial identities are audited. Quantum modes repair the entire `R`-column exactly, then reduce `M(Sq,T)-1` from tangent degree two to an explicit constant. Homogeneous repairs propagate weights `6->{6,12}`, `12->{12,18}`, `18->{18,24}` without closing, exposing the DC(2) termination cascade. | `poisson_rank2_symplectic_suspension_codex_20260721.out` |

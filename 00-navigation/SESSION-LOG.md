@@ -1,29 +1,25 @@
 ## boxeph-2026-07-21-S228 -- kernel-pure Lean: the positive-coefficient DvdK1 (any support); cancellation is the sole crux (HYP-8925)
 
-## codex-2026-07-22 -- mixed guard fold and deepest-terminal resonance gate
+## codex-2026-07-22 -- mixed guard fold removes the depth-five terminal
 
 **Owner directive:** continue the long LRC(14) session, mine forgotten ideas,
 and seek a scale-free closure of the dyadic terminal lane.
 
-- THM-2080 proves an exact mixed-radius analogue of THM-965:
-  `measure(D_q(1/14) intersect E_h(1/7))` is the independence baseline `2/49`
-  plus two explicit folds at `b+2a` and `b-2a` modulo `14`, where `q/h=a/b`
-  is reduced.
-- A rank-six terminal guard cover must pay correlation at least `2/49`.
-  The fold bound forces `sum gcd(q,h)^2/(qh)>=8/49`, hence one reduced ratio
-  has product `ab<=36`. This removes every projectively generic depth-five
-  terminal and leaves a finite list of resonance directions with unbounded
-  common scale and endpoint phase.
-- The exact referee checks 800 mixed overlaps by common-boundary atom counts.
-  On the THM-2078 rank-six box it finds six arithmetic cores, 144 allowed
-  guards, 28 first-order overlap survivors, and zero violations of the new
-  reduced-product gate. The full THM-2078 simultaneous test still removes all
-  28; the scalar fold is a conductor, not a replacement for endpoint transport.
-- Assumption challenge: the unbounded coordinate is not initially the guard
-  height but the common scale after quotienting by a small reduced ratio.
-  Tournament ordering of pair overlaps loses the union-cover predicate; the
-  retained carrier is the signed fold invoice plus guard-tooth and endpoint
-  addresses.
+- THM-2080 proves the exact mixed-radius overlap law by one-sided interval
+  atoms (equivalently, a two-fold Bernoulli law).
+- The direction audit is load-bearing: `G_Q subset E_h` makes the guard
+  complement, not the guard, a subset of the union of danger combs. MISTAKE-231
+  retracts the first reversed-cover consumer while retaining the fold formula.
+- For an odd guard, every mixed overlap is at least `1/42`, with equality only
+  at `q=6h`. Hence each danger comb covers at most `5/42` outside the guard.
+  Six distinct combs cover strictly less than `5/7`, so terminal rank six is
+  impossible and the dyadic tower has depth at most four.
+- The authoritative exact referee checks `4,032` pair/formula cases, the whole
+  small-product equality ledger, and `11,088` hostile direct containments; its
+  smallest hostile complement remains positive.
+- Assumption challenge: the target carrier is the guard complement. A star
+  tournament picture is harmless but unnecessary; equality of the six leaf
+  capacities would force all six distinct speeds to equal `6h`.
 
 ## death-star-2026-07-22-S104 -- GMC2 formalization: pinpointed + wrote the last capstone discharge (HeightWitnessSupplier); structurally correct + statements axiom-checked, but the proof hits a pathological whnf wall (>6.4M heartbeats). One perf-fix from clean DvdK1 -> NC2.
 **Owner:** aim earnestly at formalizing DvdK; make it simpler / circumvent it; spill over to LRC.

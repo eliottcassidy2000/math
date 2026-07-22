@@ -3,8 +3,9 @@ id: THM-2078
 title: "Bounded terminal guard-containment closure through height 24"
 status: >
   PROVED by exact integer-bitset census. No nontrivial THM-2073 dyadic tower
-  can have terminal maximum at most 24. THM-2076 restricts terminal size to
-  6 through 10; the terminal maximizer interval bounds the preceding odd
+  can have terminal maximum at most 24. THM-2076 originally restricts
+  terminal size to 6 through 10 and THM-2080 subsequently removes rank 6;
+  the terminal maximizer interval bounds the preceding odd
   guard by (13-s)h<2(s+1)max(Q). Among all 4,484,931 cores in those ranks,
   exactly 30,594 are hereditarily primitive and divisor-complete through 14.
   Every allowed core/guard pair already fails containment at a rational phase
@@ -56,7 +57,8 @@ Let
 s=|Q_r|,    B=max(Q_r),    h=h_(r-1).                   (4)
 ```
 
-THM-2076 gives `6<=s<=10`. Let `mu=M(Q_r)` and
+THM-2076 gives `6<=s<=10`; THM-2080 subsequently removes `s=6`, so the live
+range is `7<=s<=10`. Let `mu=M(Q_r)` and
 `rho=(mu-delta)/B`. Settled LRC for the `s` terminal speeds gives
 
 ```text
@@ -85,7 +87,8 @@ The largest possible guard occurs at `s=10,B=24` and is at most `175`.
 
 ## 2. Exact census
 
-The total core counts and the arithmetic survivors are
+The original exhaustive run used the larger pre-THM-2080 range, so its total
+core counts and arithmetic survivors are
 
 | `s` | total `C(24,s)` | hereditary divisor-complete |
 |---:|---:|---:|
@@ -146,7 +149,7 @@ known. THM-2072 rules out a fixed clock bank uniform in the core. A scalable
 completion should instead prove an adaptive terminal conductor:
 
 ```text
-for every hereditary divisor-complete Q of size 6,...,10,
+for every hereditary divisor-complete Q of size 7,...,10,
 and every odd h satisfying (6), find a rational t with (9).               (11)
 ```
 

@@ -41,8 +41,11 @@ The tower has `|Q_i|=11-i`.  THM-2073 gives `r<=8`, and the guard-capacity
 rank floor of THM-2076 sharpens this to
 
 ```text
-0<=r<=5.                                                (1a)
+0<=r<=4.                                                (1a)
 ```
+
+Here THM-2076 first gives `r<=5`, and THM-2080 removes terminal rank six and
+sharpens the displayed live range to `r<=4`.
 
 Write
 
@@ -259,9 +262,10 @@ smaller length than that tooth, which is exactly why (7), (9), and (14) are
 strict.  Replacing either side silently by a measure statement would lose
 this endpoint gain.
 
-### Deepest-lane pair-capacity saturation
+### Former depth-five pair-capacity ledger (now superseded)
 
-If `r=5`, then `Q_5` has six speeds.  The sharp five-comb pair floor in
+Before THM-2080, the remaining case `r=5` gave a six-speed `Q_5`. The sharp
+five-comb pair floor in
 THM-1234 gives its six-danger-comb union bound
 
 ```text
@@ -303,11 +307,12 @@ THM-2075 transports (14a) to the original core as
 measure(G_C)>=61/(273*2^5)=61/8736.                    (14e)
 ```
 
-This is the precise surviving contribution of the global five-comb/Fano
+This was the precise surviving contribution of the global five-comb/Fano
 pair functional to the tower.  It supplies a high-occupancy guard tooth, not
 a single long component, a located four-prefix survivor, or a `j=4` flood
-chronology.  Turning (14d) into one of those objects requires an endpoint or
-component-count sidecar.
+chronology. THM-2080 now proves that `r=5` cannot occur, using the sharper
+mixed guard/danger overlap and its equality classification. Thus (14a)--(14e)
+remain correct conditional inequalities but no longer describe a live lane.
 
 ## 3. Every quotient level has a quarter-anchor escape
 
@@ -385,8 +390,9 @@ the terminal maximum B.                               (20)
 
 This converts the non-hereditarily-primitive lane into a terminal-core
 problem with two finite sidecars: the component address word from THM-2075
-and the relative-height box above.  THM-2076 has already removed depths six
-through eight, so (17) and (19) need be iterated at most five times.  This
+and the relative-height box above. THM-2076 removes depths six through eight
+and THM-2080 removes depth five, so (17) and (19) need be iterated at most
+four times. This
 does not upper-bound `B`, classify the hereditarily primitive terminal core,
 or prove LRC(14).  THM-2078 separately uses the present height box to exclude
 the whole finite slice `B<=24`; the remaining nontrivial terminal lane has

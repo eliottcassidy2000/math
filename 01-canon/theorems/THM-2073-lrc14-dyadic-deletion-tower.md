@@ -380,8 +380,9 @@ distinctness. Hence
 ```
 
 THM-2076 subsequently sharpens (32) to `r<=5` by the strict Haar-capacity
-tax of the terminal guard. The present theorem retains (32) as the elementary
-cardinality bound proved internally here.
+tax of the terminal guard, and THM-2080's sharp unequal-comb overlap removes
+terminal rank six and improves this further to `r<=4`. The present theorem
+retains (32) as the elementary cardinality bound proved internally here.
 
 ## 5. Frontier effect and guardrails
 
