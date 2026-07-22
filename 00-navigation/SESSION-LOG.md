@@ -49,7 +49,13 @@
   `T` or a no-finite-extension theorem.
 - Artifacts: THM-2046, HYP-8803,
   `dc2_ore_descent_codex_20260721.py/.out`; output byte-matches; SHA-256
-  `4e757c6a...7f40` / `67204732...f4fd`.
+  `42b6faf4...a05a` / `e3ac4781...5785`.
+- **Incoming synthesis after pull:** S209/HYP-8830 and THM-2047 independently
+  promote localization-at-a-layer as the useful operation. Here localization
+  at `x!=0` preserves exact commutators but destroys polynomial regularity at
+  `x=0`; the paying sidecar is the x-adic valuation/pole profile. Since
+  `delta(x)=3x^2`, the boundary problem is a Rees/V-filtration-style
+  differential-operator calculation, not an Orlik--Solomon object identity.
 
 ## death-star-2026-07-21-S93 -- Mathlib-PR packaging of the three-term no-common-root: Polynomial-R recast + minimal imports + the Mathlib-MISSING three-term Hermite recurrence proved, with "consecutive Hermite share no root" as the flagship application. All kernel-pure. HYP-8805.
 

@@ -158,7 +158,64 @@ This independently explains why HYP-8802's Weyl/Moyal calculation was the
 right starting gauge, while proving that ordering choice alone cannot close
 the relation.
 
-## 5. Falsifiable next steps
+The boundary filtration makes the number six exact.  For an `ell^k`
+coefficient `a_k(x,q)`, record
+
+```text
+beta(a_k ell^k)=v_x(a_k)-2k.
+```
+
+The coefficient-left residual has profile
+
+```text
+(k,v_x,beta)=(3,9,3),(2,7,3),(1,5,3),(0,3,3),
+```
+
+whereas the Weyl residual has
+
+```text
+(k,v_x,beta)=(2,10,6),(1,8,6),(0,6,6).             (13a)
+```
+
+Thus Weyl ordering kills the complete boundary-grade-three anomaly and exposes
+a uniform grade-six anomaly.  This is an exact structural source for the
+number `6` seen in HYP-8802's weight propagation.  It does not yet prove that
+every subsequent correction advances by six; that is the associated-graded
+statement the next no-finite-extension calculation must establish.
+
+## 5. Incoming arrangement-localization connection
+
+The incoming S209/HYP-8830 and THM-2047 work makes a useful operation-level
+connection.  Its reusable move is to localize at an arrangement layer, where
+the complement factors or simplifies, while retaining the transverse layer
+label needed to extend back.  Equation (7) is the quantum analog of that move:
+localizing away from the divisor `x=0` exposes a standard Weyl chart.
+
+The objects and predicates are different, so no LRC/Jacobian identification is
+being made.  The exact transfer ledger is:
+
+```text
+operation:          localize away from a singular layer/divisor
+preserved here:     [ell,R]=0 and [ell,t]=1
+destroyed here:     polynomial regularity at x=0
+required sidecar:   x-adic valuation / pole order of every correction
+falsifying control: a localized solution whose pole cannot be removed
+```
+
+There is extra structure at the boundary:
+
+```text
+delta(x)=3x^2.                                         (14)
+```
+
+Thus the derivation is tangent to `x=0` and actually vanishes there to order
+two.  The next calculation should use the Rees or `x`-adic associated-graded
+correction complex (equivalently, a logarithmic/irregular differential-
+operator analysis along this divisor).  Plain complement topology or an
+Orlik--Solomon count cannot decide polynomial extension; the valuation sidecar
+is load-bearing.
+
+## 6. Falsifiable next steps
 
 The original alternatives can now be made more precise.
 

@@ -165,6 +165,26 @@ assert max(weyl_residual) == 2
 for degree in sorted(weyl_residual, reverse=True):
     print("  ell^%d:" % degree, sp.factor(weyl_residual[degree]))
 
+
+def x_valuation(f):
+    return min(monomial[0] for monomial, _ in sp.Poly(sp.expand(f), x, q).terms())
+
+
+normal_boundary_profile = [
+    (degree, x_valuation(residual[degree]), x_valuation(residual[degree]) - 2 * degree)
+    for degree in sorted(residual, reverse=True)
+]
+weyl_boundary_profile = [
+    (degree, x_valuation(weyl_residual[degree]), x_valuation(weyl_residual[degree]) - 2 * degree)
+    for degree in sorted(weyl_residual, reverse=True)
+]
+assert normal_boundary_profile == [(3, 9, 3), (2, 7, 3), (1, 5, 3), (0, 3, 3)]
+assert weyl_boundary_profile == [(2, 10, 6), (1, 8, 6), (0, 6, 6)]
+print("boundary profiles (ell_degree, v_x(coeff), v_x-2*ell_degree):")
+print("  normal:", normal_boundary_profile)
+print("  Weyl:  ", weyl_boundary_profile)
+print("Weyl order kills boundary grade 3 and exposes uniform grade 6: PASS")
+
 tt = -sp.Rational(1, 3) / x
 assert sp.factor(delta(tt) - 1) == 0
 print("localized slice t=-1/(3*x), delta(t)=1: PASS")
