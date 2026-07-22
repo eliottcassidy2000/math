@@ -157,12 +157,10 @@ mistake.
 30. **Separate verification from provenance.** MISTAKE-205 withdraws the old
     Alpöge–Mathew attribution for THM-1300. State the exactly verified map and
     collision independently of uncertain discovery/publication history.
-31. **A shared Pascal array is not a geometric bridge.** MISTAKE-222. HYP-8820's
-    binomial identities and `bagel-cake=T_n-1` are exact, but a common array or
-    matching `-1` does not identify torus regions with a shadow-lattice boundary,
-    much less transfer an LRC or Jacobian predicate. Test the possible
-    connection by deriving both defects from one explicit valuation or
-    boundary-cell operation; reject it if the source objects or losses differ.
+31. **A shared Pascal array is not a geometric bridge.** MISTAKE-222. Exact
+    binomial identities and matching `-1` defects do not identify torus and
+    shadow-lattice boundaries or transfer predicates. Require one explicit
+    valuation/boundary operation with matching source objects and losses.
 
 32. **Count canonical pairs, not displayed variables.** An `A_3 -> A_3`
     certificate with four phase variables is not an `A_2` Weyl pullback;
@@ -172,15 +170,10 @@ mistake.
     four-variable VC route has no proved NC2/GMC chain or descent equivalence.
 
 34. **Source-fiber degree is not generic cover degree.** THM-2071 closes a
-    quadratic output-pencil member, and THM-2084 proves that a non-tame pair
-    with a cubic member has reduced complementary fiber degree at least `13`.
-    The latter reduction is modulo target shears by `C[P]`. Neither theorem
-    classifies Jelonek curves, proves a cover-degree bound, or proves JC(2).
+    quadratic pencil member; THM-2084 gives reduced complementary degree at
+    least `13` for a non-tame cubic member modulo `C[P]` shears. Neither
+    classifies Jelonek curves, bounds generic cover degree, or proves JC(2).
 
 ## Promotion checklist
 
-Before adding or upgrading a theorem: perform a type and quantifier ledger;
-attack canonical boundary cases; audit symmetries and quotient loss; reproduce
-the claimed consequence with positive and hostile controls; and add a
-correction lineage if the result repairs prior work. False claims should retain
-their minimal witness, surviving core, repaired statement, and next question.
+Before promotion audit types, quantifiers, boundaries, symmetries, quotient loss, and hostile controls. Corrections retain the witness, surviving core, repaired statement, lineage, and next question.
