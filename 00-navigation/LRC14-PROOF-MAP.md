@@ -47,7 +47,7 @@ THM-2085--2097/2112 make rank-seven rows finite, not discharged.
 At guarded sizes `8..10`, THM-2098 has pure, low-mixed, and high-vertical lanes;
 only the pure lane inherits its collision budget, and depth-zero eleven is separate.
 THM-2114/2116/2120--2125 force content and modular pencils; THM-2117/2119/2121 add full-Toeplitz and three-sparsity gates.
-THM-2130 intersects `11/13` labels into a sparse exception or `143` determinant. MISTAKE-238/239/242 still block invalid transfers; finite and higher-rank lanes remain open.
+THM-2130 intersects `11/13` labels into a sparse exception or `143` determinant; THM-2128/2131 exclude both guard-blocker pencils when no terminal is a blocker. MISTAKE-238/239/242 block invalid transfers; simultaneous blockers, the fivefold guard pencil, and higher ranks remain open.
 
 ### Live interfaces
 

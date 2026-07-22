@@ -85,7 +85,7 @@
     discharge:** THM-2100 and THM-2112 bound rank-seven rows by different routes; neither enumerates or empties them.
 27c. **No scalar-filtered uniform pair margin.** THM-2126 has `tau-5/49 -> 0`;
     THM-2130 gives guard-content/sparse-mod-11 alternatives before a `143`
-    determinant. None is closure. Retain root-fiber labels, finite-ring
+    determinant. THM-2131 empties only the guard-blocker/no-terminal-blocker pencil lane. None closes LRC(14). Retain root-fiber labels, finite-ring
     needles, all maximum bases, and higher active intersections.
 
 ## NC2 / GMC

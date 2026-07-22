@@ -44,9 +44,8 @@ Older chronology is in
   signed-pencil data alone miss exact dyadic rows. THM-2104/2105 add small-prime
   valuation walls and affine carrier clocks through denominator fourteen.
   THM-2114 adds an exact cap row with zero affine sign gauges, then excludes
-  that row by a mod-5 needle and all-maximum-tree equality rigidity. Its
-  general finite-row lemma
-  forces a `13`-content blocker through rank `12` and an `11`-content blocker
+  that row by a mod-5 needle and all-maximum-tree equality rigidity. Its general
+  finite-row lemma forces a `13`-content blocker through rank `12` and an `11`-content blocker
   through rank `10`; all-primitive rank-two covers in those ranges are empty,
   and the specialized LRC list must contain `13`- and (through rank ten)
   `11`-divisible guard/terminal entries.
@@ -81,8 +80,7 @@ Older chronology is in
   specialization where a contour sum contradicts Galois incidence. Its
   irreducibility and orbit/Lagrange core are kernel-checked; analytic wrappers
   remain. General complex `DvdK1` is the sole formal endpoint premise, not a
-  paper gap. THM-2111 separately gives the
-  effective compound-root bound `binom(M+N,min(M,N))`.
+  paper gap. THM-2111 gives the bound `binom(M+N,min(M,N))`.
 - HYP-8925/8930 give positive-coefficient and fixed-support unique-channel
   leaves. HYP-8932 adds a monomial-certificate engine and one kernel-checked
   `{-2,-1,1,2}` instance. `102/116` is a mass-40 bounded census; thirteen

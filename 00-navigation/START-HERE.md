@@ -106,10 +106,11 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     pair spectrum: the universal strict tree-margin target is false, and scalar
     divisor-complete one-deletion-primitive rows have no uniform positive
     margin. Those families fail newer clock/content gates; the actual finite
-    rows and cover-equality branch remain undischarged. THM-2114--2125 route
-    the live rank-eight residue through finite-ring needles and a 13-content
-    split: five guard-parallel nonblockers, or a guard-blocker pencil of type
-    `(8)` or `(7,1)`. Affine-offset drift is live; ranks nine--twelve remain open.
+    rows and cover-equality branch remain undischarged. THM-2114--2131 route
+    the live rank-eight residue through finite-ring needles and content. In the
+    guard-blocker/no-terminal-blocker lane, THM-2124/2128/2131 exclude both
+    pencil types `(7,1)` and `(8)`. THM-2130 adds a two-prime `143` invoice;
+    simultaneous blockers, the fivefold guard pencil, and ranks `9..12` remain.
 16. **Shared syntax is not a bridge.** MISTAKE-230--233/HYP-8885 retract the
     universal entropy/modular frame; MISTAKE-235 leaves S102's LRC/GMC sums as
     analogy, not AP-core reduction. Fiber size is observable-relative, and
