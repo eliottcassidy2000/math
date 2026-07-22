@@ -102,7 +102,45 @@ theorem prod_roots_Phi (R : F[X]) (M : ℕ) (hM : 1 ≤ M) (hMd : M < R.natDegre
   rw [mul_comm]; congr 1
   rw [← inv_pow, inv_neg_one]
 
+/-- **Vieta, rootSet form (the `hΩ` input of `GMC2Thm2067Concrete.thm2067_contradiction_concrete`).**
+Over the splitting field of `Φ = Xᴹ − t·R`, the product of the *distinct* roots (the `rootSet`) is the
+image of the single constant `d = (−1)^{deg R}·(r₀/lc R) ∈ F`.  Separability turns the product over the
+`rootSet` subtype into the multiset root product, to which `prod_roots_Phi` applies; the sign and the
+nested `algebraMap`/`RatFunc.C` then fold into `RatFunc.C d` (`t`-adic valuation `0`).
+
+This is exactly the shape boxeph's concrete THM-2067 wrapper takes as `hΩ` (with
+`d := (−1)^{R.natDegree}·(R.coeff 0 / R.leadingCoeff)`), so together with `irreducible_Phi` (`hΦ`) it
+reduces the concrete THM-2067 contradiction to the single deep analytic input `hS` (THM-1550). -/
+theorem prod_rootSet_Phi (R : F[X]) (M : ℕ) (hM : 1 ≤ M) (hMd : M < R.natDegree)
+    (hsep : Separable ((Phi R M).map (algebraMap (RatFunc F) (Phi R M).SplittingField))) :
+    (∏ α : (Phi R M).rootSet (Phi R M).SplittingField, (α : (Phi R M).SplittingField))
+      = algebraMap (RatFunc F) (Phi R M).SplittingField
+          (RatFunc.C ((-1) ^ R.natDegree * (R.coeff 0 / R.leadingCoeff))) := by
+  classical
+  set SF := (Phi R M).SplittingField with hSFdef
+  have hsplit : Splits ((Phi R M).map (algebraMap (RatFunc F) SF)) :=
+    Polynomial.IsSplittingField.splits SF (Phi R M)
+  have hnd : (((Phi R M).map (algebraMap (RatFunc F) SF)).roots).Nodup := nodup_roots hsep
+  -- the product over the `rootSet` subtype is the multiset root product (separable ⇒ nodup)
+  have hbridge :
+      (∏ α : (Phi R M).rootSet SF, (α : SF))
+        = ((Phi R M).map (algebraMap (RatFunc F) SF)).roots.prod := by
+    have h1 : (∏ α : (Phi R M).rootSet SF, (α : SF))
+        = ∏ x ∈ ((Phi R M).aroots SF).toFinset, x := by
+      first
+      | exact Finset.prod_attach _ id
+      | exact Finset.prod_attach _ _
+    rw [h1, Polynomial.aroots, Finset.prod_eq_multiset_prod, Multiset.map_id',
+      Multiset.toFinset_val, hnd.dedup]
+  rw [hbridge, prod_roots_Phi R M hM hMd hsplit]
+  -- fold the `(−1)^d` sign and the nested `algebraMap`/`RatFunc.C` into `RatFunc.C d`
+  simp only [map_mul, map_pow, map_neg, map_one]
+  first
+  | rfl
+  | rw [RatFunc.algebraMap_eq_C]
+
 end GMC2PhiVieta
 
 #print axioms GMC2PhiVieta.coeff_ratio_Phi_eq_const
 #print axioms GMC2PhiVieta.prod_roots_Phi
+#print axioms GMC2PhiVieta.prod_rootSet_Phi
