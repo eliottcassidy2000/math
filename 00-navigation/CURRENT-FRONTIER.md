@@ -150,8 +150,10 @@ supplier/seed and a lossless exit.
   THM-2088 makes cut rank seven finite
   (`max(h,max Q)<=91421508108581`); rank six is persistent, with THM-2089 flat
   form `q_i=u_i(z+v_i h)`. THM-2082 retains residue incidence; THM-2086 closes
-  `7|h`, five `7|q`, and the lacunary cone, leaving `7 not|h`, one to four
-  `7|q`, nonlacunary templates. THM-2090 splices the persistent cut to the
+  `7|h`, five `7|q`, and the lacunary cone, while THM-2094's conditional
+  fourfold-moment certificate removes four `7|q`. The live modular profile is
+  `7 not|h`, one to three `7|q`, in nonlacunary templates. THM-2090 splices
+  the persistent cut to the
   global rank-eleven code: the full row is finite, all thirteen speeds form a
   height-`91^6` last-guard/terminal-anchor star, or `(h,Q)` is literally frozen
   and only the three earlier guards plus two original tails move on one affine
@@ -164,11 +166,15 @@ supplier/seed and a lossless exit.
   `16,16,8,4,2`; the six cut rows bound the common guard/anchor gcd by
   `lcm(1,...,57)^6`; and a denominator-cleared THM-2053 gate gives
   `max(S)<2912*lcm(1,...,57)^6*(91^6)^13`. Thus every no-pair rank-seven
-  branch is now finite. The unbounded structural residual is the separate
-  bounded guard-ratio branch `q/h=r/s`, `r,s<=57`; all finite boxes still need
-  discharge. The six cut rows already give persistent height-114 circuits, so
-  THM-2065 alone remains vacuous here; location and phase sidecars are
-  essential.
+  branch is now finite. THM-2095 attacks the separate bounded guard-ratio
+  branch `h=sd,q=rd`, `r,s<=57`: an exact p-power deck wheel forces
+  `d|3^4*5^2*11*17*23*29=252576225`, hence the marked pair satisfies
+  `h,q<=14396844825`, and the diagonal ratio `q=h` is impossible. The other
+  six terminal speeds can still be unbounded because the pair relation can
+  contaminate every incident triple without involving its private speed. All
+  finite boxes still need discharge. The six cut rows already give persistent
+  height-114 circuits, so THM-2065 alone remains vacuous here; location and
+  phase sidecars are essential.
 - **PROVED relative decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   lifts bounded scalar relations; `H=2^19` clears recorded margins.
   MISTAKE-080/082 still require shape-specific torus models.

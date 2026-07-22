@@ -20,6 +20,7 @@ related:
   - THM-2082
   - THM-2086
   - THM-2088
+  - THM-2095
 ---
 
 # THM-2087 -- short-relation cut and guard star
@@ -131,7 +132,16 @@ h=s d,                  q=r d.                         (11)
 
 If the dyadic-tower guard `h` is odd, then both `s` and `d` are odd. Hence
 this branch is a finite ledger of bounded rational guard ratios, with an odd
-denominator in the terminal application.
+denominator in the terminal application. THM-2095 subsequently proves that
+the common scale is finite as well:
+
+```text
+d|3^4*5^2*11*17*23*29=252576225
+```
+
+on the live terminal branch, and `q=h` is impossible. The other six terminal
+speeds remain a separate residual because the two-term relation can be reused
+in an incident triple without involving its third coordinate.
 
 ### Branch II: no two-term guard relation
 

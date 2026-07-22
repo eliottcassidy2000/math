@@ -1,0 +1,16 @@
+THM-2095 P-ADIC GUARD-RATIO REFEREE
+prime_cutoff=42
+first_layer_primes=2,3,5,7,11,17,23,29
+p=2 max_e=8 counts=5,13,25,36,36,29,13,2,0 witness=0,0,1,2,2,5
+p=3 max_e=4 counts=4,8,7,2,0 witness=0,0,0,1,2,2
+p=5 max_e=2 counts=2,1,0 witness=0,0,0,0,0,1
+p=7 max_e=2 counts=3,2,0 witness=0,0,0,0,0,1
+p=11 max_e=1 counts=1,0 witness=0,0,0,0,0,0
+p=17 max_e=1 counts=1,0 witness=0,0,0,0,0,0
+p=23 max_e=1 counts=1,0 witness=0,0,0,0,0,0
+p=29 max_e=1 counts=1,0 witness=0,0,0,0,0,0
+general_scale=3168316166400
+live_scale=252576225
+live_pair_bound=14396844825
+diagonal_margin=7/330
+PASS
