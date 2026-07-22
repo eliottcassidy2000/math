@@ -1,0 +1,6 @@
+LRC14 MULTI-TAIL SHEET-CAPACITY AUDIT -- exact integer fibers
+open-arc cosets through period 180: 26820 PASS
+multi-tail fibers: 12000 checked, 6878 capacity-certified PASS
+two-tail sheet-order pairs through 240: 57121 PASS
+dyadic antecedents: 73080; primitive antecedents: 46656 PASS
+PASS
