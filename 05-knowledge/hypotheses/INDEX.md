@@ -24,6 +24,8 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
 - **THM-2098/2099/2103 (PROVED):** rank eight has collision budget `5/49`, but
   dyadic rows refute pair-tree and pair-tree-plus-affine-rank closure; retain
   threshold-labelled clock residues.
+- **THM-2104 (PROVED):** every constant `3`-adic quotient-valuation layer has
+  one universal sixth-clock escape, with terminal distances `1/6` or `1/3`.
 - **THM-2084 (PROVED, cubic source-fiber scope):** a non-tame cubic stratum
   begins, if at all, at unresolved reduced degree `13`; this is not JC(2).
 - **THM-2095 (PROVED):** the live guard-ratio common scale divides `252576225`
