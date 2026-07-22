@@ -1,0 +1,53 @@
+======================================================================
+[1] 2D nilpotent Hessian <=> P one-sided (det(Hess) ~ A*B*|z|^{2(d-2)})
+======================================================================
+  d=3 A=1 B=0 [holomorphic (one-sided) ]: trace=9.70e-11 det=7.34e-11 -> nilpotent=True
+  d=3 A=0 B=1 [antiholo (one-sided)    ]: trace=1.19e-08 det=1.87e-08 -> nilpotent=True
+  d=3 A=1 B=1 [TWO-sided               ]: trace=2.27e-08 det=1.56e+01 -> nilpotent=False
+  d=4 A=1 B=0 [holomorphic (one-sided) ]: trace=4.00e-08 det=8.62e-12 -> nilpotent=True
+  d=4 A=0 B=1 [antiholo (one-sided)    ]: trace=4.10e-08 det=5.71e-08 -> nilpotent=True
+  d=4 A=1 B=1 [TWO-sided               ]: trace=7.58e-08 det=6.74e+00 -> nilpotent=False
+  d=5 A=1 B=0 [holomorphic (one-sided) ]: trace=3.23e-08 det=4.58e-13 -> nilpotent=True
+  d=5 A=0 B=1 [antiholo (one-sided)    ]: trace=1.32e-07 det=5.04e-08 -> nilpotent=True
+  d=5 A=1 B=1 [TWO-sided               ]: trace=1.55e-07 det=2.02e+00 -> nilpotent=False
+  => nilpotent (trace=det=0) EXACTLY for one-sided (A*B=0). Two-sided has det!=0. [NC2 conclusion]
+
+======================================================================
+[2] one-sided map F=(x,y)+grad P is ONE-FIBER-LINEAR (F2 - i F1 = -i z), hence TAME/invertible
+======================================================================
+  point z=-0.100+0.100j: F2 - i F1 = 0.1000+0.1000j  vs  -i z = 0.1000+0.1000j  (match => linear pencil member)
+  point z=0.500+0.000j: F2 - i F1 = 0.0000-0.5000j  vs  -i z = 0.0000-0.5000j  (match => linear pencil member)
+
+======================================================================
+[3] Zhao VC / moment: one-sided P is HARMONIC (holomorphic), Delta=0, so Delta^m(P^m)=0 trivially
+======================================================================
+  Delta((x+iy)^3) = 9.70e-11  (=0: holomorphic is harmonic => Delta^m(P^m)=0, Zhao VC trivial one-sided)
+  Delta((x+iy)^4) = 4.00e-08  (=0: holomorphic is harmonic => Delta^m(P^m)=0, Zhao VC trivial one-sided)
+
+  KEY: 2D nilpotent-Hessian <=> one-sided <=> harmonic <=> the map is one-fiber-linear tame.
+  This is the NC2 one-sided dichotomy realized inside the SYMMETRIC planar Jacobian problem.
+========================================================================
+The rank threshold: dim-2 nilpotent Jacobian has RANK <=1 (ONE direction); dim>=3 allows RANK>=2
+========================================================================
+  dim 2: max rank of a nilpotent 2x2 (trace=det=0) = 1 (forced) -> ONE isotropic direction
+  dim 2: nilpotent can reach rank 1  (sample rank 1) -> ONE dir (one-sided)
+  dim 3: nilpotent can reach rank 2  (sample rank 1) -> 2 isotropic dirs = RESONANCE
+  dim 4: nilpotent can reach rank 3  (sample rank 1) -> 3 isotropic dirs = RESONANCE
+
+========================================================================
+rank<=1 Jacobian J=grad H => rows (grad H_1, grad H_2) are PARALLEL => H_1,H_2 functionally
+dependent => one-fiber pencil (codex THM-2063). The single-direction = the NC2 one-sided analogue.
+========================================================================
+  symmetric (v=(1,i) isotropic)   : rank=1 nilpotent=True rows-parallel=True
+  non-symmetric (v=(0,1))         : rank=1 nilpotent=True rows-parallel=True
+
+========================================================================
+THE UNIFICATION (JC <-> GMC2, via my thread):
+========================================================================
+ dim-2 JC: nilpotent Jacobian forced RANK<=1 = ONE isotropic direction = ONE-SIDED (NC2)
+           => parallel gradients => one-fiber-linear tame => JC(2) plausibly TRUE.
+ dim>=3 :  RANK>=2 = MULTIPLE isotropic directions = coincident cycles = RESONANCE
+           => Alpoge's Keller counterexample (THM-1300) lives here => JC FALSE.
+ SAME threshold as GMC2 (S101): unique primitive cycle (one-sided, nonvanishing, easy) vs
+   coincident cycles (resonance, hard/counterexample). Planar = the last one-direction dimension.
+ Zhao VC (Delta^m P^m=0 <=> Hess nilpotent) = GMC2 (E[P^m]=0 <=> one-sided): SAME moment-vanishing.
