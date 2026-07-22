@@ -1,0 +1,35 @@
+THM-2091 CENTERED TRIPLE ENERGY EXACT REFEREE
+Cayley labelled K7 trees: 16807
+occurrences of each edge: 4802; probability 2/7
+odd-a reduced pairs with ab<=29: 57
+negative-charge rows: 24
+top seven negative charges:
+  (a,b)=(1,6) -> 5/294
+  (a,b)=(11,1) -> 8/539
+  (a,b)=(1,5) -> 3/245
+  (a,b)=(3,5) -> 3/245
+  (a,b)=(9,1) -> 4/441
+  (a,b)=(9,2) -> 4/441
+  (a,b)=(11,2) -> 9/1078
+top-seven charge sum: 41/495
+universal average-margin base: 2059/315315
+necessary containment energy: D >= 2059/90090
+7-divisible-speed thresholds k=0..4:
+  2059/90090, 396587/8828820, 608227/8828820, 273289/2942940, 368527/2942940
+pointwise multiplicity-moment checks: 8
+hereditary divisor-complete cores through 24: 131
+allowed odd terminal core/guard pairs: 4120
+negative-deficit scalar closures: 2798
+scalar survivors sent to centered energy: 1322
+positive average-tree closures: 1322
+universal-threshold-only closures: 29
+centered edge identity checks: 27762
+atomized multiplicity-moment checks: 1322
+7-divisible zero-charge checks: 3913
+modular charge-floor packet checks: 3481
+exact atom caches (mixed/global/triple): 769/185/2994
+minimum terminal average margin: 99413/2461368 at Q=(1, 9, 10, 11, 13, 14, 24), h=23
+minimum-row (D,R,sum e): 5448845/40612572, 25327/63063, -49781/11603592
+average-vs-max hostile control: h=1, Q=(4, 5, 6, 7, 11, 13, 27)
+hostile (D,Delta,average margin,maximum margin): 29135/147147, 181007/3783780, -2467/26486460, 86717/1891890
+PASS

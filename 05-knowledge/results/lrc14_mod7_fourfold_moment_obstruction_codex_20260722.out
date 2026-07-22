@@ -1,0 +1,34 @@
+MOD-7 FOURFOLD MOMENT OBSTRUCTION EXACT REFEREE
+seven-shift open-cell orbit checks: 42
+arbitrary-phi basis coefficient checks: 1050
+null-boundary controls: 42
+7-divisible period increment checks: 196
+excluded 7|h control: orbit guard count 7 (not 2)
+allowed reduced pairs with ab<=20: 33
+negative head rows: 16
+top three negative charges:
+  (a,b)=(1,6) -> 5/294
+  (a,b)=(11,1) -> 8/539
+  (a,b)=(1,5) -> 3/245
+top-three charge sum C3: 713/16170
+mixed first-moment floor E[H V]: 181/2310
+3-divisible+2-nondivisible five-subsets: 12
+Boolean subset-average identity checks: 128
+admissible pointwise-majorant states: 39
+scaled slack table (-420 L), H=0:
+  u0 [X,0,770,1400]
+  u1 [0,700,1260,1680]
+  u2 [364,854,1204,1414]
+  u3 [434,714,854,854]
+  u4 [210,280,210,0]
+scaled slack table (-420 L), H=1:
+  u0 [0,350,560,630]
+  u1 [0,140,140,0]
+  u2 [630,560,350,0]
+  u3 [1260,980,560,0]
+  u4 [1890,1400,770,0]
+forbidden uncovered state (H,u,v)=(0,0,0): scaled slack -910
+THM-1234 lower bound E[P]: 44/273
+integrated-majorant upper bound E[P]: 3901/24255
+strict contradiction gap: 107/315315
+PASS
