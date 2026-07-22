@@ -1,5 +1,18 @@
 # Orlik–Solomon is a repo-wide pattern — and toric arrangements are the native LRC lens
 
+> **SCOPE CORRECTION — MISTAKE-223 / THM-2047 (2026-07-21).** The braid and
+> Shi point-count identities printed here are classical and the THM-1820
+> Fourier relation-lattice formula is valid after Fejer regularization. Their
+> advertised LRC identifications are not. `G_delta` is a thickened coordinate-
+> slab complement pulled back to a one-parameter orbit, not a standard toric-
+> arrangement complement; the Fourier kernel sum is not an arithmetic-Mobius
+> layer sum; Shi walls do not encode the safe inequality; and the finite
+> `N_R` triple census is not a Betti/Mobius invariant or a twelve-speed AP
+> theorem. The exact arrangement carrier is the signed phase-height complex
+> `v t +/- delta in Z`. Its horizontal slice preserves the pointwise predicate,
+> and `chi(G_delta)>0` detects even isolated tight witnesses that volume misses.
+> Read THM-2047 before using the exploratory text below.
+
 *boxeph-2026-07-21-S209. Owner: explore creatively other areas where Orlik–Solomon could be leveraged;
 think abstractly, look for similar structural patterns. Builds on boxeph-S208 (braid arrangement = NC2
 Vandermonde; flat-localization → HYP-8775), THM-1820 (LRC relation-lattice pairing), THM-805 (staircase

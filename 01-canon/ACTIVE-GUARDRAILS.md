@@ -52,6 +52,17 @@ mistake.
     numerators unless divisor rulers are separately included.
     Smaller THM-731 discrepancy strengthens the safety certificate; a
     counterexample would require `disc_v>=6|G'_{~v}|^2` for every peel.
+    THM-2048 adds a quantized fiber-occupancy tax and the necessary integer
+    inequality `6(vmu)^2+theta(1-theta)/7<=r_v^2/3`; it is a pruning
+    certificate, not yet a universal proof.
+
+13a. **The LRC relation-lattice Fourier sum is not automatically an
+     Orlik--Solomon/toric-complement formula.** MISTAKE-223. Standard toric
+     complements, Shi chambers, safe-set volume, and bounded short-relation
+     counts all lose part of the weak pointwise predicate. Use THM-2047's
+     signed phase-height walls `v t +/- delta in Z`; the height slice and its
+     owner-labelled cyclic word are lossless, and Euler characteristic—not
+     volume—still sees isolated tight phases.
 
 ## NC2 / GMC
 

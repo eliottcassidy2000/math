@@ -7,6 +7,51 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-223 (2026-07-21, codex audit of HYP-8830) -- a Fourier annihilator and three finite experiments were promoted to a toric-arrangement/Orlik--Solomon model of LRC
+
+- **What was claimed:** S209 called the LRC safe-set measure a standard toric-
+  arrangement complement volume and its Fourier relation-lattice expansion an
+  arithmetic-Mobius sum over De Concini--Procesi layers. It identified LRC
+  resonance with the Shi arrangement, said LRCMod ladders were its finite-field
+  method, and promoted a bounded short-relation count for small speed triples
+  to toric Betti/Mobius mass and general “tight = relation-richest” AP
+  extremality. Its commit also replaced the live session-log head and deleted
+  concurrent S93/S207/S208 provenance instead of prepending its entry.
+- **Why it is wrong:** a standard toric complement deletes codimension-one
+  hypertori; the LRC safe set deletes positive-width coordinate slabs and then
+  pulls back along the one-parameter orbit `t -> (v_1t,...,v_nt)`. The exact
+  formula `|G_delta|=sum_{k dot v=0} product g_hat(k_j)` is a
+  Fejer-regularized Fourier/Poisson annihilator sum, not a Mobius-poset formula.
+  Its three decimal comparisons were evidence for that already-known identity,
+  not a verification of the new terminology. Safe volume also misses the weak
+  boundary: a tight safe fiber can be finite, nonempty, and measure zero. On a
+  torus the Shi offsets `0` and `1` coincide, while the actual LRC boundary
+  walls are `v_i t +/- delta in Z`, not pair-collision walls. Finally S209's
+  `N_R` is merely a `|k_i|<=2` count checked for primitive triples in a small
+  finite box; it is not an OS Betti number and says nothing about arbitrary
+  twelve-speed cores. Braid chambers encode total orders/transitive
+  tournaments, not all tournaments via a canonical per-tournament graphic
+  subarrangement.
+- **Concrete hostile controls:** Shi data depends only on the number of
+  coordinates, but `M({1,2,3})=1/4` whereas `M({1,3,5})=1/2`. At the AP13
+  threshold, the six unit phases `a/14` are safe, so `chi(G_{1/14})=6` while
+  Haar measure is zero. S209's short-relation statistic already loses its
+  advertised uniqueness when its arbitrary cutoff changes: at `B=1`,
+  `(1,2,3)`, `(1,3,4)`, and `(2,5,7)` all have `N_R=1`, although only the AP
+  is tight. At `t=1/14`, the AP phase coordinates `j/14` are distinct, so this
+  witness is not the braid arrangement's all-equal deepest flat.
+- **Correct framing:** THM-2047 uses the signed phase-height arrangement on
+  `(R/Z)x[0,1/2]`. Its oriented subcomplex
+  `E_S={(t,delta):delta<=min_v||vt||}` is lossless; opposite-sign wall
+  intersections give the pair-sum ruler theorem, deletion gives the exact core
+  cover identity, and `chi(G_delta)` detects nonempty isolated tight fibers
+  that volume loses. The relation-lattice formula remains a useful exact
+  Fourier selector, and toric/OS ideas may organize its circuits, but no
+  layer-localization factorization or Wall-A theorem follows yet. The session
+  log must retain the overwritten concurrent entries.
+
+---
+
 ## MISTAKE-222 (2026-07-21, codex audit of HYP-8820) -- a shared binomial ambient array and a matching minus-one offset were promoted to a geometric and cross-problem mechanism
 
 - **What was claimed:** cake, bagel, Moser, and Fibonacci were described as
@@ -75,7 +120,10 @@ Format per entry:
   normalization a counterexample is primitive Cover14 with `M<1/14`; its
   maximum-deletion core is not `d{1,...,12}`, so THM-730 gives Schur count
   `T<=65`; and `L=0` with THM-731 forces
-  `disc_v>=6|G'_{~v}|^2` for every peel. Anti-golden, near-AP, Fibonacci-foil,
+  `disc_v>=6|G'_{~v}|^2` for every peel. THM-2048 now refines the latter by
+  the exact fiber-occupancy tax
+  `{7vmu}(1-{7vmu})/(7v^2)` and its THM-732 integer obstruction. Anti-golden,
+  near-AP, Fibonacci-foil,
   one-far-blocker, and joint-order-autocorrelation language remains a useful
   hostile-control program, not a characterization.
 ---

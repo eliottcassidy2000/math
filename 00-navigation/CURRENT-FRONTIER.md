@@ -93,13 +93,23 @@ structural supplier/seed and a lossless exit.
   `M<1/14`, and its maximum-deletion core is non-AP, hence has Schur-triple
   count at most `65` by THM-1017/730. Since its lonely-time measure is zero,
   THM-731 also forces `disc_v>=6|G'_{~v}|^2` for every peel; small discrepancy
-  is a safety signal. “Near-AP,” “anti-golden,” Fibonacci-foil, CF-blocker, and
+  is a safety signal. THM-2048 sharpens this by a discrete fiber tax: with
+  `mu=|G'_{~v}|`, `theta={7vmu}`, and `r_v` interval components, every
+  zero-measure packet must satisfy
+  `6(vmu)^2+theta(1-theta)/7<=r_v^2/3` for every peel. “Near-AP,”
+  “anti-golden,” Fibonacci-foil, CF-blocker, and
   full-autocorrelation iff claims remain heuristic. THM-1002 proves every
   maximizer lies on a pair-sum ruler `t=p/(v_i+v_j)`. Enumerating all such
   rulers makes the corrected S206 replay exact: all fifteen displayed rows are
   safe, while `{1,...,12,5460}` proves the old `q<=1200` cutoff was incomplete
   (`92/1197 < 420/5461`). This finite bank does not identify the global
   covering minimum.
+- **REFUTED arrangement shortcut / exact replacement:** MISTAKE-223 separates
+  the THM-1820 Fourier annihilator from a standard toric-complement/OS layer
+  formula. Shi counts and bounded short-relation counts do not preserve LRC.
+  THM-2047's signed phase-height complex is lossless; for `delta>0`,
+  `chi(G_delta)=#components`, so it sees isolated tight witnesses that volume
+  misses.
 - **Scope separation:**
   [THM-1149](../01-canon/theorems/THM-1149-compact-essential-crown-and-farey-blocker.md)
   proves that tight deletion and an all-loose essential crown are different
@@ -132,6 +142,14 @@ structural supplier/seed and a lossless exit.
    characteristic-3 endpoint-labelled period-14 propagation; an adaptive
    resolved-phase sheaf; and conductor plus owner-current glue. Raw Ramanujan
    energy is diagnostic only.
+5. **Signed wall-word / Euler deletion route.**
+   [THM-2047](../01-canon/theorems/THM-2047-phase-height-toric-arrangement-for-lrc.md)
+   consolidates the earlier threshold tope/Cech interfaces into a
+   general-height carrier. Opposite signs recover pair-sum rulers; deletion is
+   exact; and the top-vertex boundary-layer coefficient depends only on the
+   extreme active slopes. The live target is a deletion--restriction or nerve
+   argument forcing `chi(G_{1/14})>0`; arrangement cohomology by itself does
+   not provide that positivity.
 
 The characteristic-7 result
 [THM-2043](../01-canon/theorems/THM-2043-period14-parity-hasse-jet-completeness.md),
