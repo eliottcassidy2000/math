@@ -19,6 +19,7 @@ depends_on:
   - THM-2123
 related:
   - THM-2124
+  - THM-2130
 external: Settled Lonely Runner Conjecture for at most eight integer speeds (LRC(9) in the total-runner convention).
 ---
 
@@ -171,9 +172,10 @@ Since a true terminal blocker is also present, at most two terminal labels
 remain outside this guard pencil. This is a located multiplicity statement,
 not merely the determinant existence of THM-2123.
 
-THM-2124, once promoted from its current reserved status, is designed for the
-complementary branch where the **guard** is the 13-blocker. No part of its
-finite-plane polynomial proof is used here.
+THM-2124 treats the complementary branch where the **guard** is the
+13-blocker. THM-2130 extends the two-coordinate capacity count to prime eleven
+and to the applicable higher-rank residual counts. Neither extension is used
+in the proof above.
 
 ## 7. Assumption challenge and Tournament Analysis
 

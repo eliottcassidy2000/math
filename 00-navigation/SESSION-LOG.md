@@ -60,6 +60,10 @@ Older chronology is in
   partition `(k)` or `(k-1,1)`. A guard `13`-blocker with eight nonblocker
   terminals therefore forces a sevenfold pencil; the `(7,1)` case descends to
   a rank-one/high-vertical handoff, while the all-aligned `(8)` case remains.
+- THM-2130 replays two-coordinate capacity at `11` and `13`, extends applicable
+  residual counts through rank twelve, and forces rank-eight guard content, one
+  of three sparse mod-11 triples, or `143|det(g,c_i)` for some terminal. This is
+  a labelled two-prime invoice, not a closure.
 - In pure-transverse rank eight, THM-2119 makes every complete signed affine
   line escape; direction and quotient fibers are at most three, and THM-2104
   still forces valuation diversity at `2,3,5`. Its near-pencil bounds retain
@@ -90,6 +94,9 @@ Older chronology is in
   finite centering/depressed-coefficient pole, and invokes THM-2102's power-free
   face theorem to close the cubic source-fiber stratum. The next source-fiber
   degree is four; general proper-power resonance, JC(2), and DC(2) remain open.
+- THM-2127 closes two proper-power subclasses. THM-2129 classifies the balanced
+  quartic boundary triple: odd degrees have no collision and twice-odd degrees
+  leave exactly `(z^2-1)^2`; global square-face descent remains open.
 - THM-2117/2121 show scalar clocks/minors can miss safe cells, while every strict
   safe cell has a finite full Toeplitz/Fejer certificate; boundary-only points
   remain outside that certificate's scope.

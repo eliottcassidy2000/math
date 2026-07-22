@@ -43,8 +43,8 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
   blockers; a joint Toeplitz certificate closes a row missed by scalar clocks.
 - **THM-2116/2120/2122/2123/2124/2125 (PROVED):** a rank-eight cover needs a guard
   `13`-blocker or at least five nonblocker terminals projectively parallel to
-  the guard modulo thirteen. In the no-terminal-blocker guard lane, THM-2124
-  forces direction partition `(8)` or `(7,1)`; moving offsets remain live.
+  the guard modulo thirteen. THM-2124 proves the complementary finite-plane
+  seven-pencil theorem; its all-eight pencil and moving offsets remain open.
 - **THM-2117/2121 (PROVED):** clocks, the maximum Hunter tree, and all scalar
   minors can miss an open safe cell; every strict safe cell has a full
   Toeplitz/Fejer certificate of order at most `14nV^2+1`. Boundary-only points
@@ -52,16 +52,16 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
 - **THM-2126 (PROVED):** scalar pair filters have a neutral wall and no uniform
   positive margin. Relation labels, common fibers, and higher multiplicity are
   essential sidecars; its examples are excluded by other gates.
+- **THM-2130 (PROVED):** root capacity at `11/13` extends selected higher ranks
+  and forces a rank-eight sparse mod-11 alternative or `143|det(g,c_i)`.
 - **THM-2095 (PROVED):** the live guard-ratio scale divides `252576225`; the
   `240*1165=279600` marked-pair ledger does not bound the other six speeds.
 - **THM-2101/2111 (PROVED PAPER):** additive DvdK avoids root products; the
   effective first return is a compound-determinant order at most
   `binom(M+N,min(M,N))`. Sharpening and Lean assembly are separate.
-- **THM-2102/2110/2113/2118/2127 (PROVED planar-JC strata):** degree `13` is
-  impossible, power-free positive-weight faces are triangular, and the
-  all-degree Faber law closes every cubic source fiber. Exact coprime two-face
-  and affine-root proper-power families also close. Quartic and the general
-  proper-power case remain; none proves JC(2).
+- **THM-2102/2110/2113/2118/2127/2129 (PROVED planar-JC strata):** cubic source
+  fibers, exact coprime two-face trains, and affine-root families close. The
+  balanced quartic triple is empty in odd degree and has one twice-odd square.
 
 ## LRC(14) — OPEN
 

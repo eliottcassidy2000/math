@@ -62,10 +62,10 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     full Bertrand boundary at `z=1`.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300
     is the exact new counterexample. THM-2063/2071 close linear/quadratic source
-    fibers; THM-2084 supplies the cubic Faber gate, and THM-2118's all-degree law
-    with THM-2102 close every cubic source fiber. THM-2127 closes exact coprime
-    two-face and affine-root proper-power families. Quartic fibers and general
-    proper-power descent remain; none is a generic-cover or full planar result.
+    fibers; THM-2084 supplies the cubic Faber gate, and THM-2118/2102 close every
+    cubic source fiber. THM-2127 closes two proper-power subclasses; THM-2129
+    leaves one balanced quartic square. General square-face descent remains;
+    none is a generic-cover, Jelonek, VC(4), or full planar classification.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed

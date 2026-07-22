@@ -143,8 +143,10 @@ not unsafe. The reusable certificate architecture is
   `84` a row invisible to every THM-2105 clock and its saturated pair tree.
   THM-2116/2120/2122/2123/2125 force a prime split: rank eight needs a guard
   `13`-blocker or five guard-parallel nonblockers. THM-2124 sharpens the first
-  no-terminal-blocker lane to `(8)` or `(7,1)`; the latter has seven rational
-  guard-proportionals plus one transverse. THM-2117's exact test row passes
+  no-terminal-blocker lane to `(8)` or `(7,1)`. THM-2130 extends root capacity
+  across applicable ranks `9..12` and forces, at rank eight, guard content, one
+  of three sparse mod-11 triples, or a terminal determinant divisible by `143`.
+  These are invoices, not closure. THM-2117's exact test row passes
   clocks, its Hunter tree, and scalar minors but still escapes.
   THM-2121 makes the joint gate finite at order `14nV^2+1`; retain the
   Toeplitz/Fejer certificate, not scalar packets. The height-114 cut rows
@@ -415,9 +417,10 @@ into tournament operation laws and LRC residue packets.
 - **Planar source fibers:** THM-2063 and THM-2071 close affine and quadratic
   pencil members. THM-2084/2110 raise the cubic non-tame reduced degree to
   `14`; THM-2118 proves the all-degree boundary-flux law and, with THM-2102,
-  closes the entire cubic source-fiber stratum. THM-2127 also closes exact
-  coprime two-face trains and affine-root proper-power families. The next
-  source-fiber degree is four; general proper-power descent remains open.
+  closes the entire cubic source-fiber stratum. THM-2127 closes exact coprime
+  two-face and affine-root proper-power subclasses. THM-2129 classifies the
+  balanced quartic boundary triple: odd degrees are empty and twice-odd degrees
+  leave only `(z^2-1)^2`. General quartic square-face descent remains open.
 - MISTAKE-228/229 block the old atlas and NC2/GMC chain. `JC(2)` and `DC(2)`
   remain open; these are source-fiber gates, not generic cover-degree results.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer

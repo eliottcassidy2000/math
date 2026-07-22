@@ -186,6 +186,8 @@ expected_recent = {
     2092: "PROVED", 2093: "PROVED", 2094: "PROVED", 2095: "PROVED",
     2096: "PROVED", 2097: "PROVED",
     2118: "PROVED", 2119: "PROVED", 2120: "PROVED", 2121: "PROVED",
+    2122: "PROVED", 2123: "PROVED", 2124: "PROVED", 2125: "PROVED",
+    2126: "PROVED", 2127: "PROVED", 2129: "PROVED", 2130: "PROVED",
 }
 for number, expected in expected_recent.items():
     relative = theorem_path(number)

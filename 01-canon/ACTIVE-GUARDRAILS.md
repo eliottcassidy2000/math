@@ -83,10 +83,10 @@
     proved only in stated lanes; THM-2099 is proved but not a closure.
     Files marked CLAIMED or RESERVED remain unproved. **A finite box is not a
     discharge:** THM-2100 and THM-2112 bound rank-seven rows by different routes; neither enumerates or empties them.
-27c. **No scalar-filtered uniform pair margin.** THM-2126 has
-    `tau-5/49 -> 0` on scalar divisor-complete one-deletion-primitive rows,
-    but those rows fail newer clock/content gates. Retain relation labels,
-    finite-ring needles, all maximum bases, and higher active intersections.
+27c. **No scalar-filtered uniform pair margin.** THM-2126 has `tau-5/49 -> 0`;
+    THM-2130 gives guard-content/sparse-mod-11 alternatives before a `143`
+    determinant. None is closure. Retain root-fiber labels, finite-ring
+    needles, all maximum bases, and higher active intersections.
 
 ## NC2 / GMC
 
