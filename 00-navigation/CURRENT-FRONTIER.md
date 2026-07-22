@@ -96,7 +96,7 @@ not unsafe. The reusable certificate architecture is
   terminal height `24`; proving the same strict inequality at all heights is
   the live depth-four target. At rank seven its scalar deficit is exactly the
   negative signed-fold sum divided by `196`, hence equals outside-cover
-  multiplicity under containment. THM-2085/2087 force a height-57 complete
+  multiplicity under containment. THM-2083 and THM-2085/2087 force a height-57 complete
   relation cut: either `q/h=r/s`, `r,s<=57`, or a height-6498 guard star.
   THM-2088 makes cut rank seven finite
   (`max(h,max Q)<=91421508108581`); rank six is persistent, with THM-2089 flat
@@ -320,31 +320,17 @@ design without pretending a preserver supplies the seed.
 
 ### Reliable structural toolkit
 
-- [THM-1805](../01-canon/theorems/THM-1805-the-vandermonde-is-a-signed-tournament-sum-intransitivity-cancels.md):
-  Vandermonde is a signed tournament sum; transitive score permutations survive
-  and directed 3-cycles are the fundamental cancellation atom.
-- [THM-1862](../01-canon/theorems/THM-1862-order-join-reduction-principle.md):
-  under order-join, Hamiltonian-path count `H` is multiplicative and directed
-  triangle count `c3` is additive.
-- [THM-1936](../01-canon/theorems/THM-1936-signed-redei-join-multiplicative.md):
-  signed Rédei data is join-multiplicative.
-- [THM-1880](../01-canon/theorems/THM-1880-the-a-b-functional-frame-chebyshev-pell-companions.md)
-  and [THM-1885](../01-canon/theorems/THM-1885-the-half-and-plus-one-monoid-is-baumslag-solitar.md):
-  the transitive skew-characteristic recurrence is Chebyshev–Pell-like under
-  `x -> x+1` and `x -> x/2`, producing `BS(1,2)^+`.
-- [THM-1926](../01-canon/theorems/THM-1926-tournament-zeta-euler-product-over-strong-core.md):
-  the Bowen–Lanford zeta factors over the strong core.
-- [THM-1940](../01-canon/theorems/THM-1940-var-lambda2-is-a-4-subtournament-census-invariant.md):
-  `var(lambda^2)` is a census of four-vertex subtournaments.
-- [THM-1965](../01-canon/theorems/THM-1965-the-tournament-invariant-lattice-mapped.md):
-  the mapped invariant lattice is exact through `n <= 6` only.
-- [THM-1966](../01-canon/theorems/THM-1966-signed-redei-count-independent-invariant-n7.md):
-  at `n=7`, signed Rédei magnitude is independent from spectrum plus `H`.
-- [THM-2013](../01-canon/theorems/THM-2013-coordinates-for-the-continuum-cyclic-temperature.md)
-  and [THM-2016](../01-canon/theorems/THM-2016-the-deep-continuum-and-the-reducibility-ceiling.md):
-  cyclic temperature, the reducibility ceiling, and the invariant-resistant hot
-  center are the best current decomposition. `H` is an empirical thermometer,
-  not a proved coordinate of every shell.
+- THM-1805 makes directed triangles the basic Vandermonde-cancellation atom.
+  THM-1862/1936 make `H` and signed Rédei data multiplicative under order-join,
+  while `c3` is additive.
+- THM-1880/1885 identify the transitive skew recurrence with a Chebyshev--Pell
+  frame carrying the `BS(1,2)^+` action.
+- THM-1926 factors tournament zeta over the strong core; THM-1940 expresses
+  `var(lambda^2)` through the four-vertex census.
+- THM-1965 is complete only through `n<=6`; THM-1966 proves a new independent
+  signed-Rédei coordinate at `n=7`.
+- THM-2013/2016 give cyclic temperature and the reducibility ceiling. `H`
+  remains an empirical thermometer, not a coordinate of every shell.
 
 ### Live work and limits
 
@@ -429,48 +415,23 @@ into tournament operation laws and LRC residue packets.
 
 ## Other active portfolio
 
-- **Jacobian/Dixmier:**
-  [THM-1300](../01-canon/theorems/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md)
-  verifies the three-dimensional Keller map and collision; THM-1315 analyzes
-  its geometry. Public provenance remains unsettled (MISTAKE-205), and the
-  exact `A_3` cotangent certificate does not decide `DC(2)`.
-- **Rank-two Poisson / planar and Weyl boundary:**
-  [THM-2044](../01-canon/theorems/THM-2044-explicit-rank-two-poisson-counterexample-by-symplectic-suspension.md)
-  disproves the two-pair Poisson conjecture by symplectic suspension.
-  [THM-2045](../01-canon/theorems/THM-2045-the-smooth-factorized-R-family-has-no-planar-jacobian-mate.md)
-  blocks planar mates for `R=x(a-b*x^r*q^s)`, while
-  [THM-2046](../01-canon/theorems/THM-2046-first-order-cotangent-pullbacks-cannot-cross-the-DC2-wall.md)
-  proves that this witness cannot descend through multiplication positions and
-  first-order dual momenta. [HYP-8803](../05-knowledge/hypotheses/HYP-8803-A3-pullback-versus-A2-quantum-descent.md)
-  localizes the remaining nonfiltered gate at extension across `x=0` in an
-  exact Ore-Weyl chart. [THM-2049](../01-canon/theorems/THM-2049-the-DC2-Ore-boundary-correction-complex-is-acyclic.md)
-  proves its simultaneous `(S,T)` associated-graded correction map is onto in
-  every relevant beta grade, kills the grade-six obstruction guess, and gives
-  a formal beta-adic lift. Finite polynomial termination and coupling to `D`
-  are now decisive. THM-2063 tames maps with a pencil member affine on a source
-  fiber. [THM-2071](../01-canon/theorems/THM-2071-quadratic-fiber-square-parity-gate.md)
-  closes every quadratic member in every output-pencil/source-foliation
-  direction. [THM-2084](../01-canon/theorems/THM-2084-cubic-fiber-low-complement-gauss-manin-gate.md)
-  identifies the cubic coefficient ladder with the polynomial parts of
-  `(z^3+pz+q)^(n/3)` and closes reduced complementary degrees through `11`:
-  [THM-2110](../01-canon/theorems/THM-2110-cubic-fiber-degree-thirteen-faber-tail-gate.md)
-  excludes degree `13`, so a non-tame pair with a cubic pencil member has
-  reduced complement degree at least `14`. Its adjacent-tail recurrence works
-  for every `3 not|n`; the remaining cubic problem starts beyond this finite
-  gate. [THM-2113](../01-canon/theorems/THM-2113-quasihomogeneous-planar-keller-components-are-weighted-linear.md)
-  proves directly that every positive-weight quasi-homogeneous Keller
-  component is a weighted-linear triangular coordinate. This is the zero-step
-  single-face case; cancellation by lower faces and termination of the
-  one-principal-face descent remain open.
-  These are source-fiber degree gates, not generic cover-degree or Jelonek
-  classifications.
-  MISTAKE-228/229 block the old atlas and NC2/GMC chain; DC(2)/JC(2) remain open.
-- **Gaussian higher dimensions:** THM-1490 is one verified higher-dimensional
-  construction; newer three-real-Gaussian examples supersede any claim that
-  dimension four is sharp.
-- **Full portfolio:** use [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md). Every session
-  should keep at least one niche or wildcard item outside its anchor, especially
-  when an operation, obstruction, or sidecar transfers across domains.
+- **Jacobian/Dixmier:** THM-1300/1315 verify and analyze the three-dimensional
+  Keller collision, but provenance is unsettled (MISTAKE-205) and it does not
+  decide `DC(2)`. THM-2044--2046 separate the rank-two Poisson suspension from
+  planar mates and first-order cotangent descent.
+- **Weyl boundary:** THM-2049 makes the graded Ore correction map onto and gives
+  a formal beta-adic lift. Finite polynomial termination and the unused affine
+  syzygy gauge remain decisive for `DC(2)`.
+- **Planar source fibers:** THM-2063 and THM-2071 close affine and quadratic
+  pencil members. THM-2084/2110 raise the cubic non-tame reduced degree to
+  `14`; the all-degree finite-pole and upper-Newton gates remain distinct.
+  THM-2113 proves every positive-weight quasi-homogeneous Keller component is
+  a weighted-linear triangular coordinate; lower-face descent is open.
+- MISTAKE-228/229 block the old atlas and NC2/GMC chain. `JC(2)` and `DC(2)`
+  remain open; these are source-fiber gates, not generic cover-degree results.
+- THM-1490 is one verified higher-dimensional Gaussian construction; newer
+  three-real-Gaussian examples supersede “dimension four is sharp.” Use
+  [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md) for the full portfolio.
 
 ## Cross-domain connection discipline
 

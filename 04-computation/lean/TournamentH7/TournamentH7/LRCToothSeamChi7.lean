@@ -103,7 +103,7 @@ theorem strict_penetration_floor_quantum (M s q z r : ℤ) (hM : 0 < M)
   have hzint : M * z ≤ s - 1 := by omega
   have hzlt : M * z < M * (q + 1) := hzint.trans_lt hqup
   have hzq : z ≤ q := by
-    have : z < q + 1 := (mul_lt_mul_left hM).mp hzlt
+    have : z < q + 1 := (Int.mul_lt_mul_left hM).mp hzlt
     omega
   have hmul : M * z ≤ M * q := mul_le_mul_of_nonneg_left hzq hM.le
   rw [hr]
@@ -226,7 +226,11 @@ theorem primitive_chi7_bipartition {A B : ℕ} (hcop : Nat.Coprime A B)
     simp [Int.add_emod, Int.mul_emod]
   calc
     chi7 (B : ℤ) = chi7 (-(A : ℤ)) := by
-      rw [chi7, chi7, legendreSym.mod, legendreSym.mod, hmod]
+      rw [chi7, chi7]
+      calc
+        legendreSym 7 (B : ℤ) = legendreSym 7 ((B : ℤ) % 7) := legendreSym.mod 7 _
+        _ = legendreSym 7 ((-(A : ℤ)) % 7) := by rw [hmod]
+        _ = legendreSym 7 (-(A : ℤ)) := (legendreSym.mod 7 _).symm
     _ = -chi7 (A : ℤ) := chi7_neg (A : ℤ)
 
 /-- Membership in one selected open tooth. -/

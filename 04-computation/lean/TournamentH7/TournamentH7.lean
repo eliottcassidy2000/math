@@ -740,3 +740,4 @@ import TournamentH7.GMC2DvdKResidualExample
 import TournamentH7.GMC2OrbitProduct
 import TournamentH7.GMC2RatFuncClosing
 import TournamentH7.GMC2PhiIrreducible
+import TournamentH7.GMC2LaurentShiftCheckA

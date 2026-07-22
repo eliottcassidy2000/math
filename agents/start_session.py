@@ -33,6 +33,14 @@ MAX_TOPIC_BYTES = 500
 MAX_TOPIC_TERMS = 12
 
 
+def configure_utf8_output() -> None:
+    """Keep bounded packets printable on Windows consoles and captured pipes."""
+    for stream in (sys.stdout, sys.stderr):
+        reconfigure = getattr(stream, "reconfigure", None)
+        if reconfigure is not None:
+            reconfigure(encoding="utf-8", errors="replace")
+
+
 def run(*args: str) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
         args,
@@ -316,7 +324,9 @@ def scored_files(
                 "--", variant, *trees
             )
             if files.returncode in (0, 1):
-                matched_paths.update(files.stdout.splitlines())
+                matched_paths.update(
+                    relative.replace("\\", "/") for relative in files.stdout.splitlines()
+                )
         for relative in matched_paths:
             score, count = scores.get(relative, (0, 0))
             filename = Path(relative).name.casefold()
@@ -482,6 +492,7 @@ def identity_note() -> None:
 
 
 def main() -> int:
+    configure_utf8_output()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--topic", required=True, help="Target statement, object, or theorem ID")
     parser.add_argument("--recent", type=int, default=8, help="Recent commits to print (1-20)")

@@ -26,8 +26,10 @@ variable {A : Type*} [CommSemiring A]
 /-- Multiplying a Laurent polynomial by `T^s` translates its coefficient at
 `k` to the old coefficient at `k-s`. -/
 theorem coeff_mul_T (f : LaurentPolynomial A) (s k : ℤ) :
-    (f * T s) k = f (k - s) := by
-  simp [T, sub_eq_add_neg]
+    (f * (T s : LaurentPolynomial A)) k = f (k - s) := by
+  change (f * AddMonoidAlgebra.single s (1 : A)) k = f (k - s)
+  rw [AddMonoidAlgebra.mul_single_apply]
+  simp [sub_eq_add_neg]
 
 /-- **Check A.**  For `Λ = R(T) T^{-M}`, `CT(Λ^m) = [X^{Mm}]R^m`.
 
@@ -36,23 +38,32 @@ implemented as a finitely supported function `ℤ → A`; the right side is the
 ordinary polynomial coefficient API consumed by the THM-2067 generating
 polynomial `Φ(X) = X^M - t R(X)`. -/
 theorem constantCoeff_shifted_pow_eq_coeff_pow (R : A[X]) (M m : ℕ) :
-    ((Polynomial.toLaurent R * T (-(M : ℤ))) ^ m) 0 =
+  ((Polynomial.toLaurent R * (T (-(M : ℤ)) : LaurentPolynomial A)) ^ m) 0 =
       (R ^ m).coeff (M * m) := by
-  rw [mul_pow, map_pow, T_pow, coeff_mul_T]
-  simp [Polynomial.toLaurent_apply, Nat.mul_comm]
+  rw [mul_pow, ← map_pow, T_pow, coeff_mul_T]
+  have hindex : (0 - (m : ℤ) * -(M : ℤ)) = ((M * m : ℕ) : ℤ) := by
+    push_cast
+    ring
+  rw [hindex, Polynomial.toLaurent_apply]
+  change (Finsupp.mapDomain ((↑) : ℕ → ℤ) (R ^ m).toFinsupp) ((M * m : ℕ) : ℤ) =
+    (R ^ m).coeff (M * m)
+  have hinj : Function.Injective ((↑) : ℕ → ℤ) := Int.ofNat_injective
+  rw [Finsupp.mapDomain_apply hinj,
+    Polynomial.toFinsupp_apply]
 
 /-- A product of Laurent monomials retains exactly two coordinates: the
 product of coefficients and the sum of exponents. -/
 theorem prod_monomial_eq (s : Finset ι) (q : ι → ℤ) (c : ι → A) (r : ι → ℕ) :
-    ∏ i ∈ s, (C (c i) * T (q i)) ^ r i =
-      C (∏ i ∈ s, c i ^ r i) * T (∑ i ∈ s, (r i : ℤ) * q i) := by
+    ∏ i ∈ s, (LaurentPolynomial.C (c i) * T (q i)) ^ r i =
+      LaurentPolynomial.C (∏ i ∈ s, c i ^ r i) * T (∑ i ∈ s, (r i : ℤ) * q i) := by
   classical
   induction s using Finset.induction_on with
   | empty => simp
   | @insert a s ha ih =>
-      simp only [Finset.prod_insert ha, Finset.sum_insert ha, ih, mul_pow, map_pow, T_pow,
-        map_mul]
-      rw [← T_add]
+      simp only [Finset.prod_insert ha, Finset.sum_insert ha]
+      rw [ih]
+      simp only [mul_pow, map_pow, T_pow, map_mul]
+      rw [T_add]
       ring
 
 /-- The universal relation in `GMC2ConstantTermRelations` really is the
@@ -62,19 +73,57 @@ This is the semantic half of Check A and fixes the exact interface to
 theorem constantCoeff_pow_eq_aeval_constantTermRelation
     {ι : Type*} [Fintype ι] [DecidableEq ι] [Algebra ℚ A]
     (q : ι → ℤ) (c : ι → A) (m : ℕ) :
-    ((∑ i : ι, C (c i) * T (q i)) ^ m) 0 =
+    (((∑ i : ι, LaurentPolynomial.C (c i) * T (q i)) ^ m :
+        LaurentPolynomial A)) 0 =
       MvPolynomial.aeval c
         (GMC2ConstantTermRelations.constantTermRelation q m) := by
   classical
+  have haeval :
+      MvPolynomial.aeval c
+          (GMC2ConstantTermRelations.constantTermRelation q m) =
+        ∑ r ∈ Finset.piAntidiag (Finset.univ : Finset ι) m,
+          if GMC2ConstantTermRelations.totalCharge q r = 0 then
+            (Nat.multinomial Finset.univ r : A) * ∏ i, c i ^ r i
+          else 0 := by
+    simp only [GMC2ConstantTermRelations.constantTermRelation, map_sum,
+      MvPolynomial.aeval_def]
+    apply Finset.sum_congr rfl
+    intro r hr
+    split_ifs with hbalanced
+    · simp only [MvPolynomial.eval₂_monomial, map_natCast]
+      rw [Finsupp.prod_fintype]
+      · simp only [Finsupp.coe_equivFunOnFinite_symm]
+      · intro i
+        simp
+    · simp
   rw [Finset.sum_pow_eq_sum_piAntidiag]
-  rw [GMC2ConstantTermRelations.aeval_constantTermRelation]
-  simp only [Finsupp.sum_apply]
+  rw [haeval]
+  change (AddMonoidAlgebra.coeff
+      (∑ k ∈ Finset.piAntidiag (Finset.univ : Finset ι) m,
+        (Nat.multinomial Finset.univ k : LaurentPolynomial A) *
+          ∏ i, (LaurentPolynomial.C (c i) * T (q i)) ^ k i)) 0 = _
+  rw [AddMonoidAlgebra.coeff_sum, Finsupp.finsetSum_apply]
   apply Finset.sum_congr rfl
   intro r hr
   rw [prod_monomial_eq]
+  change (((Nat.multinomial Finset.univ r : LaurentPolynomial A) *
+      (LaurentPolynomial.C (∏ i, c i ^ r i) *
+        T (∑ i, (r i : ℤ) * q i)) : LaurentPolynomial A)) 0 = _
+  rw [← mul_assoc, coeff_mul_T]
+  have hconst :
+      (Nat.multinomial Finset.univ r : LaurentPolynomial A) *
+          LaurentPolynomial.C (∏ i, c i ^ r i) =
+        LaurentPolynomial.C
+          ((Nat.multinomial Finset.univ r : A) * ∏ i, c i ^ r i) := by
+    simp only [map_mul, map_natCast]
+  rw [hconst]
   by_cases hq : GMC2ConstantTermRelations.totalCharge q r = 0
-  · simp [GMC2ConstantTermRelations.totalCharge, hq]
-  · simp [GMC2ConstantTermRelations.totalCharge, hq]
+  · have hsum : ∑ i, (r i : ℤ) * q i = 0 := by
+      simpa only [GMC2ConstantTermRelations.totalCharge] using hq
+    simp only [LaurentPolynomial.C_apply, hsum, zero_sub, neg_zero, hq, if_pos]
+  · have hsum : ¬(∑ i, (r i : ℤ) * q i) = 0 := by
+      simpa only [GMC2ConstantTermRelations.totalCharge] using hq
+    simp only [LaurentPolynomial.C_apply, zero_sub, neg_eq_zero, hsum, hq, if_false]
 
 /-- Shift every Laurent exponent upward by `M` and regard the result as an
 ordinary polynomial.  A lower-bound hypothesis below guarantees that
@@ -90,13 +139,14 @@ theorem toLaurent_shiftedPolynomial_mul_T
     (q : ι → ℤ) (c : ι → A) (M : ℕ)
     (hM : ∀ i, -(M : ℤ) ≤ q i) :
     Polynomial.toLaurent (shiftedPolynomial q c M) * T (-(M : ℤ)) =
-      ∑ i : ι, C (c i) * T (q i) := by
+      ∑ i : ι, LaurentPolynomial.C (c i) * T (q i) := by
   classical
   simp only [shiftedPolynomial, map_sum, Finset.sum_mul]
   apply Finset.sum_congr rfl
   intro i hi
-  rw [Polynomial.toLaurent_C_mul_T, ← mul_assoc, ← T_add]
+  rw [Polynomial.toLaurent_C_mul_T, mul_assoc, ← T_add]
   congr 2
+  have hiM := hM i
   have hnonneg : 0 ≤ q i + (M : ℤ) := by omega
   rw [Int.toNat_of_nonneg hnonneg]
   omega
@@ -170,7 +220,9 @@ theorem card_nsmul_translateSum_eq [IsPretransitive G Ω] [AddCommMonoid B]
       rw [sum_smul_eq_card_stabilizer_nsmul f β,
         GMC2OrbitProduct.card_stabilizer_eq_card_stabilizer β x]
     _ = (S.card * Fintype.card (stabilizer G x)) • ∑ α : Ω, f α := by
-      simp [mul_nsmul]
+      rw [Finset.sum_const]
+      exact (mul_nsmul' (∑ α : Ω, f α) S.card
+        (Fintype.card (stabilizer G x))).symm
 
 /-- **Additive orbit contradiction.**  Over a characteristic-zero field, no
 subset can have every translate of its weighted sum equal to `1` while the
@@ -221,11 +273,19 @@ theorem sum_pow_div_derivative_nodal_eq_zero
     intro heq
     omega
   rw [hcoeff] at hlag
-  rw [← hlag]
-  apply Finset.sum_congr rfl
-  intro α hα
-  rw [Lagrange.eval_nodal_derivative_eval_node_eq hα, Lagrange.eval_nodal]
-  simp
+  calc
+    ∑ α ∈ s, α ^ k /
+        (Polynomial.derivative (Lagrange.nodal s id)).eval α =
+        ∑ α ∈ s, ((Polynomial.X : K[X]) ^ k).eval α /
+          ∏ β ∈ s.erase α, (α - β) := by
+      apply Finset.sum_congr rfl
+      intro α hα
+      have hderiv := Lagrange.eval_nodal_derivative_eval_node_eq
+        (s := s) (v := id) hα
+      simp only [id_eq] at hderiv
+      rw [hderiv, Lagrange.eval_nodal]
+      simp
+    _ = 0 := hlag.symm
 
 /-- The exact exponent used by THM-2067: if `0 < M < |s|`, then the full
 root sum of `α^(M-1)/Φ'(α)` vanishes for the monic nodal polynomial `Φ`.

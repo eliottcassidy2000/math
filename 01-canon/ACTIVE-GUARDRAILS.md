@@ -84,9 +84,12 @@ records current prohibitions, not the whole history.
     plus exact packets/owners/Euler data; no LRC/GMC identity or AP reduction.
 27. **Clocks are not modular cusps.** MISTAKE-233: divisor labels, `f14`, genus,
     and Hecke coefficients preserve no loneliness predicate by themselves.
-27a. **The new gates are reductions, not closures.** THM-2084--2097 are proved
+27a. **The new gates are reductions, not closures.** THM-2084--2098 are proved
     in their stated scopes; THM-2095 bounds only a commensurate pair's scale.
-    Finite banks do not prove LRC(14). Files marked CLAIMED remain unproved.
+    THM-2098's collision budget is pure-transverse only; low mixed rows do not
+    inherit it, and the depth-zero size-eleven core has no guard (MISTAKE-242).
+    Finite banks do not prove LRC(14). THM-2099 and all files marked CLAIMED or
+    RESERVED remain unproved.
 
 ## NC2 / GMC
 
@@ -114,6 +117,8 @@ records current prohibitions, not the whole history.
 36. **Charge-diagonal is not charge-projecting.** THM-1840's functional
      corollary requires `F(u^k)=0` for every nonzero charge, not merely a
      functional described informally as depending on charge.
+36a. **Require dependency-aware builds.** THM-2101's first module had `sorryAx`;
+     its repaired core builds, but the analytic-subset bridge remains (MISTAKE-243).
 
 ## Tournaments
 

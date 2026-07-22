@@ -9,6 +9,47 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-243 (2026-07-22, codex dependency-aware Lean audit of THM-2101) -- an unbuilt additive-residue source was called kernel-checked
+
+- **What was claimed:** the additive DvdK checkpoint described Check A, the
+  additive orbit contradiction, and the full-root Lagrange identity as
+  kernel-checked and printed only the standard Mathlib axioms.
+- **Why it is wrong:** `lake build TournamentH7.GMC2LaurentShiftCheckA`
+  reaches the source only after building its missing dependencies, then fails
+  on Laurent coefficient application and ambiguous `C`, an unsolved `nsmul`
+  commutation goal, and a failed Lagrange rewrite. The subsequent `#print
+  axioms` lines include `sorryAx`; a direct `lake env lean` had stopped earlier
+  at a missing dependency `.olean` and therefore certified nothing.
+- **Correct framing:** THM-2101 remains RESERVED. Repair and dependency-build
+  the formal core with no `sorryAx`, then separately prove the missing
+  analytic-germ-to-splitting-field subset bridge before claiming an additive
+  DvdK bypass. The formal core was subsequently repaired and root-imported;
+  it now builds with only the standard Mathlib axioms, but it does not supply
+  the missing analytic bridge or prove THM-2101.
+
+---
+
+## MISTAKE-242 (2026-07-22, codex referee of THM-2098) -- a pure-transverse collision budget was transported to mixed lanes and an unguarded depth-zero core
+
+- **What was claimed:** the first pushed THM-2098 consumer said every live
+  rank-eight-through-eleven coefficient-plane cover fell into either seven
+  transverse bands governed by the exact budget `5(n-7)/49`, or seven
+  guard-proportional bands. It treated the high vertical cover pointwise.
+- **Why it is wrong:** the budget uses both that every band has mass `5/49`
+  and that the transverse family itself covers the guard complement. Neither
+  holds in a low mixed row such as `(n,r,t)=(8,1,7)`. Live nontrivial towers
+  have guarded terminal sizes only `7..10`; the depth-zero size-eleven core
+  has no preceding guard. Finally, containment gives an almost-everywhere
+  two-torus cover, so a single uncovered boundary fiber proves nothing.
+- **Correct framing:** for a rank-two character image, `r=0` has the exact
+  collision/tree budget; `1<=r<=n-7` is only count-isolated; and `r>=7`
+  forces the vertical bands to cover the one-dimensional guard complement
+  almost everywhere, by a positive-measure leftover plus Fubini argument.
+  This applies to live guarded sizes `8,9,10`; rank-one images keep their
+  freeze route and the depth-zero size-eleven core remains outside the split.
+
+---
+
 ## MISTAKE-241 (2026-07-22, codex semantic audit of HYP-8935/S106) -- floating root asymptotics were promoted to a formal-series/Hensel reduction
 
 - **What was claimed:** HYP-8935 described THM-2067 as four

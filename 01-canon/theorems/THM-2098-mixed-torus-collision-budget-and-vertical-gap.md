@@ -3,7 +3,8 @@ id: THM-2098
 title: "The mixed-torus arity wall is an exact collision budget with a vertical gap"
 status: >
   PROVED from THM-2097's pair-rigidity lemma and Hunter's forest inequality.
-  For n transverse terminal characters covering the radius-1/7 guard
+  For a rank-two guard/terminal character restriction with n transverse
+  terminals covering the radius-1/7 guard
   complement by radius-1/14 bands, the zero-intersection graph has maximum
   degree two, its positive complement is connected, total pair-collision mass
   is at least 5(n-7)/49, and every maximum spanning tree has weight at most
@@ -11,8 +12,10 @@ status: >
   mixed-torus escape; n=8 is the first honest positive-collision wall, with
   exact budget 5/49. With vertical characters present, a cover cannot have
   between one and six vertical and simultaneously between one and six
-  transverse bands. This isolates the rank-8--11 coefficient-plane residual
-  but does not discharge it or prove LRC(14).
+  transverse bands. This isolates the live rank-8--10 guarded coefficient-
+  plane residual (and gives the same abstract ledger at n=11), but does not
+  discharge it or prove LRC(14). The collision budget applies only to the
+  pure-transverse lane; no such budget is claimed for the low mixed lanes.
 source: codex-2026-07-22-LRC-mixed-torus-arity-wall
 depends_on:
   - THM-2080
@@ -26,6 +29,7 @@ related:
   - THM-2114
   - THM-2116
   - MISTAKE-239
+  - MISTAKE-242
 ---
 
 # THM-2098 -- the mixed-torus collision budget
@@ -36,8 +40,9 @@ Let
 c_0,c_1,...,c_n in Z^2,             n>=7,              (1)
 ```
 
-and suppose some parameter direction `d` gives an odd positive guard
-`c_0.d` and pairwise distinct positive terminal speeds `c_i.d`. Write
+assume the characters `c_0,...,c_n` span `Q^2`, and suppose some parameter
+direction `d in Z^2` gives an odd positive guard `c_0.d` and pairwise distinct
+positive terminal speeds `c_i.d`. Write
 
 ```text
 C={X in T^2:||c_0.X||>1/7},
@@ -118,7 +123,7 @@ Suppose the terminal bands cover the guard complement:
 C subset union_(i=1)^n B_i                             (10)
 ```
 
-up to a null set. Put
+up to a null set.
 
 The direction in (10) is load-bearing.  Here `C=E_(c_0)^c`, so (10) is
 exactly the corrected implication in MISTAKE-239: containment of the joint
@@ -127,6 +132,8 @@ the guard.  Nothing here asserts that the danger bands cover the guard
 itself.  If the strict mixed safe cell is empty, equality boundaries form a
 finite null union, which is why (10) holds almost everywhere with the strict
 bands in (2).
+
+Define
 
 ```text
 N(X)=sum_i 1_(B_i)(X).
@@ -220,9 +227,8 @@ sets has `x`-measure exactly `1/7`, so their union does not cover the
 `x`-circle. The resulting `(x,y)` is safe for the guard and every terminal
 character. Hence (16) is incompatible with a mixed-threshold cover.
 
-For terminal ranks eight through eleven, any rank-two coefficient-plane
-cover must therefore have vertical count in the following exact outer
-ledger:
+For `n=8,9,10,11`, any rank-two mixed-threshold cover must therefore have
+vertical count in the following exact outer ledger:
 
 ```text
 n=8:       r in {0,1,7},
@@ -231,28 +237,45 @@ n=10:      r in {0,1,2,3,7,8,9},
 n=11:      r in {0,1,2,3,4,7,8,9,10}.                 (19)
 ```
 
-The value `r=n` is omitted because it would make the terminal restriction
-rank one. The low side of (19) has at least seven transverse bands and is
-governed by the collision budget (14). The high side has at least seven
-guard-proportional bands and is a one-dimensional commensurability cover.
-The forbidden middle is completely removed.
+The value `r=n` is omitted because it violates the rank-two character-span
+assumption. In coefficient-plane applications, a rank-one character image is
+routed separately through the existing freeze bounds. The pure-transverse
+case `r=0` is governed by (14). A low mixed row
+`1<=r<=n-7` has at least seven transverse bands, but (14) does **not** follow:
+the transverse subfamily need not cover `C`, and the vertical events do not
+have mass `5/49`. These rows are count-isolated only.
+
+On the high side `r>=7`, one has `t<=n-7<=4` in (19). In fact the vertical
+subfamily must cover the one-dimensional guard complement `C_b` up to a null
+set. Otherwise its leftover `y`-set has positive measure. For every such `y`,
+the remaining `t<=6` transverse bands occupy at most `t/7<1` of the
+`x`-circle, so Fubini gives a positive-measure mixed safe set, contradicting
+the almost-everywhere cover. Thus the high side is a genuine one-dimensional
+commensurability cover modulo endpoints. The forbidden middle is completely
+removed.
+
+In the live dyadic tower, THM-2078/2080 leave guarded terminal sizes
+`7,8,9,10`; thus the new LRC lanes are the `n=8,9,10` rows. The `n=11` row is
+a valid abstract extension, not a guarded depth-zero LRC residual.
 
 ## 4. Frontier effect
 
 THM-2097 makes every rank-seven depth-four coefficient template finite. The
-next terminal ranks are not an amorphous failure of its proof. They split
-exactly into
+next guarded terminal ranks eight through ten are not an amorphous failure of
+its proof. They split into the following lawful lanes:
 
 ```text
-at least seven transverse bands with collision/tree budget E_n,
-or at least seven vertical bands in one guard-commensurability fiber.       (20)
+pure transverse: collision/tree budget E_n=5(n-7)/49;
+low mixed:       at least seven transverse bands, but no inherited E_n budget;
+high vertical:   at least seven vertical bands covering C_b almost everywhere. (20)
 ```
 
 THM-2091/2096's multiplicity and tree moments are tailored to the first
-branch. THM-2095's prime-power deck is tailored to the second, although its
+branch. THM-2095's prime-power deck is tailored to the third, although its
 current six-comb capacity must be strengthened before it handles seven or
-more vertical terminals. This theorem supplies the lawful handoff; it does
-not claim either higher-rank branch is empty.
+more vertical terminals. A conditional-on-vertical-safe-set moment is still
+needed for the low mixed rows. This theorem supplies the lawful handoff; it
+does not claim any higher-rank lane is empty.
 
 ## 5. Assumption challenge and Tournament Analysis
 
