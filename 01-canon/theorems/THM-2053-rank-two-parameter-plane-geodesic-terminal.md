@@ -266,6 +266,28 @@ compress the finite atlas, choose controlled saturated bases, and discharge
 the tangent-disk residual (13). This theorem does not claim those lattice
 points have been enumerated and does not prove LRC(14).
 
+### Calibration on the exact one-tail plane
+
+Take `u=(1,2,...,13)` and `z=e_12`, so `v(1,b)` replaces speed `12` by
+`w=12+b`. For `b!=0`,
+
+```text
+max_i |z_i-bu_i|=13|b|.
+```
+
+Consequently (11) becomes
+
+```text
+b^2-1183|b|+1>=0,
+```
+
+which holds for every integer `|b|>=1183`. The gate therefore reduces this
+infinite line to a finite interval. HYP-2896 then does much better on that
+interval and beyond: its divisibility walls `12|w` and `14|w` give `q=12`,
+`q=14`, or an explicit affine binding phase. This is the intended division of
+labor: geodesic geometry removes the projective tail, while a resonance fan
+discharges the finite arithmetic core.
+
 ## 6. Quantifier repair and assumption challenge
 
 HYP-4346 says that if infinitely many independent directions share finitely

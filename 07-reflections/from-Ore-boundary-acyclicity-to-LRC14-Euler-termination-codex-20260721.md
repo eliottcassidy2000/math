@@ -165,6 +165,13 @@ therefore a primitive lattice point in a tangent disk intersected with the
 star's positivity cone, not a raw relation matrix or even the whole round
 parameter ball.
 
+The one-tail plane calibrates the scale exactly. With
+`u=(1,...,13)`, `z=e_12`, and replacement `w=12+b`, the determinant maximum is
+`13|b|` for `b!=0`; the gate is `b^2-1183|b|+1>=0`, hence every integer
+`|b|>=1183` is certified. HYP-2896's divisibility fan then discharges the
+bounded core (and in fact the whole family) by exact `q=12`, `q=14`, or affine
+binding phases. This validates the proposed geometry/arithmetic handoff.
+
 The enlarged audit immediately challenges an overoptimistic reading of that
 reduction. Every control already has a height-one support-three circuit; AP and
 the six AP-derived strict controls all share `1+2=3`. The genuine Cover14 tax

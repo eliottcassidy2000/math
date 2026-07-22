@@ -127,7 +127,11 @@ matrices, and bound a reduced-basis `L` directly from the sparse triple code.
 - HYP-2896 is the exact one-tail model of the finite-disk fan. On
   `span((1,...,13),e_12)`, target rows split by the resonance walls `12|w` and
   `14|w`; the cells carry `q=12`, `q=14`, or the affine binding phase
-  `(35m+2)/(84m+5)`. That is the desired output format for a general plane.
+  `(35m+2)/(84m+5)`. In the basis `u=(1,...,13),z=e_12`, writing `w=12+b`,
+  THM-2053's determinant is exactly `13|b|` for `b!=0`, so it certifies every
+  integer `|b|>=1183`. The HYP-2896 fan discharges the finite residue
+  symbolically. That geometry-then-arithmetic split is the desired output
+  format for a general plane.
 - HYP-2986 supplies the faithful three-state terminal: open tope, boundary
   cocircuit, or forbidden wall packet.
 - HYP-2647 supplies the addressed wall-transport matrix for moving between

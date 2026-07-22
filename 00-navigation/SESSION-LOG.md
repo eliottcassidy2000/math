@@ -23,6 +23,12 @@ integer quadruples. THM-763 already made the global problem finite below
 `91^12`; the new content is the plane-intrinsic safe tail and compressed
 residual, not first decidability.
 
+**WORKED CALIBRATION:** on `span((1,...,13),e_12)`, write the replacement as
+`w=12+b`. The determinant gate is exactly `13|b|<=(1+b^2)/91` for `b!=0`, so
+all integer `|b|>=1183` are safe. HYP-2896's exact divisibility fan handles the
+finite residue via `q=12`, `q=14`, or its affine binding phase. This is the
+prototype for tangent-disk pruning followed by resonance-fan discharge.
+
 **INCOMING SYNTHESIS:** THM-2052's new two-anchor refinement says the
 rank-eleven branch is a finite list of one-projective-parameter stars. THM-2053
 now cuts every star to the explicit finite primitive disk `||d||<91L`.
