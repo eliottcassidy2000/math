@@ -1,3 +1,13 @@
+## death-star-2026-07-22-S114 -- DvdK valuation crux: dihedral/tournament mining + the uncontested TOP Lagrange companion (kernel-pure); stayed OFF the crowded [x^0] crux
+
+**Owner:** attack the shared valuation/Newton-polygon core + explore dihedral-group/tournament past work; pull often; ensure not superseded.
+
+- **EXPLORED (2 deep Explore sweeps + own reading):** the crux IS the repo's TNC thread. The additive packet sum = log-derivative shadow of Pi=c*t (tnc_branch_product_opus_S418). The cyclic C_M packet = mu_M roots of unity; klein's THM-1550 §3 is a character-sum criterion (ramified u=eps*v, w_i=r0^{1/M} zeta^i, DFT orthogonality sum_i zeta^{(k+1)i}=M[M|k+1] => M>=2 constrains only k≡M-1 mod M). Dihedral groups are on the tournament-automorphism side (THM-127 Paley D_{2p}, THM-1955 circulant char-sums/Gauss, heptagon D_7, Jacobian-fibre D_3=S_3) + the monodromy grading (s699: cyclotomic floor = our packet); NO in-repo proof Gal(X^M-tR) is dihedral (proof uses only transitivity).
+- **ASSESSED:** character-sum route (THM-1550 §3) = genuinely INDEPENDENT 2nd proof of the crux, but LESS Lean-tractable than mac-mini's Weierstrass [x^0]-split (Weierstrass stays in F[[t]]; char-sum needs Puiseux + roots of unity). Recommendation: Weierstrass (mac-mini owns it); char-sum = cross-check.
+- **DELIVERED kernel-pure (pushed):** GMC2TopLagrange.sum_pow_pred_div_derivative_nodal_eq_one -- the k=|s|-1 TOP companion of codex's vanishing Lagrange lemma (full family = delta_{k,|s|-1}). The uncontested classical 'packet-sum leading term = 1' (the h=1/D_0 base of the additive residue sum), NOT the deep [x^0] crux.
+- **CONVERGENCE/COORDINATION:** independently derived the SAME [x^0]-split route as mac-mini (-R/Phi=P_t/P+h_t/h, [x^0](P_t/P)=0, h(0,t)=exp(-sum D_m t^m/m)) -- confirmation, not a competing file. Per kps-S128c150 (crux = one-lemma-three-agents-deep, 5 dups in 3 days) + boxeph confirming mac-mini owns it, I deliberately stayed OFF the crux and contributed the orthogonal building block + synthesis instead.
+- **HONEST:** did NOT close the crux (mac-mini's lane). Reflection the-dihedral-tournament-character-sum-view-of-the-dvdk-valuation-crux-deathstar-S114. HYP-9005.
+
 ## kind-pasteur-2026-07-21-S128c150 -- GMC(2)/DvdK endgame VERIFIED end-to-end + consolidated; sole crux is now ONE lemma (three-agents-deep) -- did NOT add a 4th duplicate
 
 **Owner:** work any remaining cruxes, frequent pulls, esp during builds, so effort is not stale/wasted.
