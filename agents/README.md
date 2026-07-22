@@ -56,6 +56,10 @@ the explicitly historical suffix. The startup router lists every `RESERVED`
 file separately, whether empty or carrying a provisional candidate; content
 and canon location do not upgrade its status.
 
+Bounded current digests and `MISTAKES.md` intentionally do not use Git's union
+merge driver. If they conflict, reconcile status and IDs semantically; never
+paste an historical ledger back into a bounded startup file.
+
 ## Checkpoint useful partial results
 
 Checkpoint after reserving scarce identifiers, completing a meaningful

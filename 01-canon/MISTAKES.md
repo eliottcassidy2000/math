@@ -9,7 +9,11 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
-## MISTAKE-231 (2026-07-22, codex THM-2080 direction audit) -- terminal guard containment was reversed into a cover of the guard instead of its complement
+## MISTAKE-239 (2026-07-22, codex THM-2080 direction audit) -- terminal guard containment was reversed into a cover of the guard instead of its complement
+
+This correction initially landed under the already-used `MISTAKE-231`; 239 is
+the canonical ID. MISTAKE-231 remains the observable-relative entropy
+correction.
 
 - **What was claimed:** the first pushed version of the mixed-radius fold
   argument said that `G_Q subset E_h` implies
@@ -36,7 +40,11 @@ Format per entry:
 
 ---
 
-## MISTAKE-230 (2026-07-21, codex audit of HYP-8920/S227) -- the empty safe set of the full dyadic counterexample was transported through a homeomorphism that starts only at its nonempty quotient core
+## MISTAKE-238 (2026-07-21, codex audit of HYP-8920/S227) -- the empty safe set of the full dyadic counterexample was transported through a homeomorphism that starts only at its nonempty quotient core
+
+This correction initially landed under the already-used `MISTAKE-230`; 238 is
+the canonical ID. MISTAKE-230 remains the inverse-form-class outcome-counting
+correction.
 
 - **What was claimed:** HYP-8920 combined mirror parity with THM-2075 and
   asserted that a strict dyadic-seam counterexample `S=2C union {x,y}` has
@@ -75,7 +83,6 @@ Format per entry:
 
 ---
 
-## MISTAKE-229 (2026-07-21, codex audit of HYP-8905/S225/S103) -- a valid binary symmetric-Hessian subcase and three analogous descent programs were promoted to an NC2-to-JC bridge and equivalent formulations of JC(2)
 ## MISTAKE-237 (2026-07-21, codex audit of HYP-8905/S225/S103) -- a valid binary symmetric-Hessian subcase and three analogous descent programs were promoted to an NC2-to-JC bridge and equivalent formulations of JC(2)
 
 This correction initially landed under the already-used `MISTAKE-229`; 237 is

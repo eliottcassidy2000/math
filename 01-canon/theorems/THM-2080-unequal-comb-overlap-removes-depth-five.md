@@ -18,6 +18,7 @@ related:
   - THM-2076
   - THM-2077
   - THM-2078
+  - MISTAKE-239
 script: 04-computation/lrc14_unequal_comb_overlap_referee_codex_20260722.py
 output: 05-knowledge/results/lrc14_unequal_comb_overlap_referee_codex_20260722.out
 script_sha256: 0ae2220c80f1eba0cf93819d4b442d88dc6ceeee06ae851a24eeb1f3ebd12696
@@ -251,6 +252,13 @@ rigid equality ratio. The useful graph is Hunter's undirected star, whose
 edges carry exact intersection masses. Orienting those edges would add no
 predicate and would discard the equality ledger; Tournament Analysis is
 therefore not naturally available here.
+
+## Correction lineage
+
+The first pushed consumer reversed the containment implication and retained a
+spurious `ab<=36` rank-six lane. MISTAKE-239 records the failure. From
+`G_Q subset E_h`, it is `E_h^c` that must be covered by danger combs; the
+overlap floor then rules out rank six completely, as Section 3 proves.
 
 ## Exact referee
 

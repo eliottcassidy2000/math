@@ -213,7 +213,7 @@ On a two-anchor plane, THM-2065 pulls each nonpersistent relation hyperplane
 back to one projective ray; only persistent marked coefficient-row circuits
 remain. THM-2069 then filters their deletion primitivity by a code/cogirth
 wheel. On the dyadic lane, THM-2073--2079 retain safe-child addresses and odd
-tail owners. MISTAKE-230 is decisive: an empty full-row safe set does not
+tail owners. MISTAKE-238 is decisive: an empty full-row safe set does not
 descend after those tails are deleted, so the terminal core alone is not the
 missing universal theorem.
 

@@ -123,7 +123,8 @@ The same argument is an explicit terminating descent, not just a minimality
 argument: whenever the current complementary degree is even, (5) identifies
 the unique top target shear `dP^k`; subtract it and continue. The descent
 cannot stop at degree zero, so it stops at an odd degree. This is one rigorous
-quadratic-face instance of the leading-form propagation sought in THM-1345;
+quadratic-face instance of the leading-form propagation sought in
+`THM-1345-jc2-equivariant-category-poisson-reframing-dc1-shadow`;
 it says nothing about arbitrary Newton faces.
 
 ## 3. Reduced degree one: exact tame normal form

@@ -37,30 +37,15 @@ REPO = Path(__file__).resolve().parent.parent
 HEADLINE_SENTINELS = {
     "README.md": (
         "LRC(14) is OPEN",
-        "THM-2051 now closes the relation-dissociated",
-        "exact transverse deck `D_N(m)`",
-        "THM-2055/2056",
-        "THM-2057 closes two scaled AP one-tail planes",
-        "THM-2058/2059 give phase packets and",
-        "THM-2060/2064 isolate a dyadic seam",
-        "THM-2065 makes circuit-free templates finite",
-        "THM-2066",
-        "THM-2068 compresses that bounded",
-        "THM-2069",
-        "THM-2072",
-        "THM-2073/2076",
-        "depth-at-most-five",
-        "THM-2075",
+        "THM-2051/2052",
+        "THM-2074",
         "THM-2078",
-        "THM-2079",
-        "hereditarily primitive terminal",
-        "`GMC2NC2Capstone`",
-        "THM-2067 supplies its bare one-variable constant-term",
+        "THM-2080",
         "`DvdK1` and `HeightWitnessSupplier` remain explicit interfaces",
-        "THM-2070 explains why a cofinite",
         "JC is false from dimension three; JC(2) and DC(2) remain open",
         "THM-2071 closes every quadratic-fiber",
-        "MISTAKE-230--233",
+        "Dirichlet profile",
+        "Anchor / Niche / Wildcard",
         "HYP-8885",
     ),
     "00-navigation/START-HERE.md": (
@@ -68,129 +53,82 @@ HEADLINE_SENTINELS = {
         "is **OPEN**",
         "uniform good period `q <= 25` is false",
         "uniform emptiness of the twelve-speed sporadic tight branch remains open",
-        "unrestricted GMC(2)",
-        "**PROVED in repo",
+        "NC2, hence unrestricted GMC(2), is **PROVED in repo",
         "THM-2067",
-        "`DvdK1` and `HeightWitnessSupplier` remain explicit",
+        "`DvdK1` and `HeightWitnessSupplier` remain",
         "Support return is not coefficient noncancellation",
         "JC is false from dimension three; JC(2) and DC(2) remain open",
         "THM-2071 closes every quadratic-fiber",
-        "two-pair Poisson conjecture false",
-        "A unique minimal balanced channel needs no DvdK seed",
         "THM-2047](../01-canon/theorems/THM-2047-phase-height-toric-arrangement-for-lrc.md)",
         "Every counterexample is in a finite labelled code/deck/fan atlas",
-        "THM-2057 closes two AP one-tail families",
-        "THM-2065 makes circuit-free templates finite",
-        "THM-2066 closes divisor-complete cores through `24`",
-        "seven-clock minimum only inside `15..34`",
-        "THM-2073/2076",
-        "depth-at-most-five safe-child tower",
-        "THM-2075",
-        "THM-2078",
-        "THM-2079",
-        "unbounded hereditarily primitive terminal remains open",
-        "THM-2069 proves the code/cogirth wheel",
-        "keep THM-2074 reserved",
-        "MISTAKE-230--233",
+        "THM-2069",
+        "THM-2074 proves density-one strict LRC(14)",
+        "THM-2078/2080 force size `7..10`, maximum `>=25`, and depth `<=4`",
+        "MISTAKE-238/239",
         "HYP-8885",
         "MISTAKE-235",
     ),
     "00-navigation/CURRENT-FRONTIER.md": (
         "## LRC(14)",
         "**OPEN.**",
-        "first good period `q=27`",
-        "disc_v>=6|G'_{~v}|^2",
-        "proves NC2 and hence unrestricted GMC(2)",
-        "GMC is false for every dimension at least 3",
-        "THM-2044",
-        "proves the corresponding labelled phase-height carrier",
-        "PROVED finite-circuit alternative",
+        "THM-2051",
         "THM-2052",
-        "transverse deck D_N(m)",
-        "Kelvin-Farey certificate",
-        "THM-2057",
-        "THM-2058's coprime intervals",
-        "THM-2059",
-        "THM-2060",
-        "THM-2061",
-        "THM-2062",
-        "THM-2064",
-        "THM-2065",
-        "THM-2066's complementary owner-word bank",
-        "THM-2068 proves that `{25,26,27,28,32,33,34}` is a minimum sub-bank inside",
-        "THM-2072 proves",
-        "THM-2073/2076 give a depth-at-most-five safe-child",
-        "THM-2075 preserves nonempty-core component/Euler/owner data",
+        "THM-2062/2069",
+        "THM-2074",
         "THM-2078",
-        "THM-2079 pairs addresses",
-        "hereditarily primitive quotient core",
-        "THM-2069 proves the code/cogirth wheel",
-        "THM-2074 (density one) remains reserved",
-        "TournamentH7.GMC2Formalization",
-        "TournamentH7.GMC2NC2Capstone",
-        "`DvdK1` plus `HeightWitnessSupplier`",
-        "formalize THM-2067 to discharge `DvdK1`",
+        "THM-2080",
+        "MISTAKE-238",
+        "MISTAKE-239",
+        "## NC2 and Gaussian moments",
+        "GMC is false for every dimension at least 3",
+        "`DvdK1` and `HeightWitnessSupplier`",
+        "times out at `whnf`",
         "THM-2070",
         "THM-2071",
-        "no hypothetical JC(2) counterexample has a quadratic member",
         "HYP-8890",
     ),
     "01-canon/ACTIVE-GUARDRAILS.md": (
         "No uniform `q<=25` theorem",
         "Uniform twelve-speed sporadic emptiness is OPEN",
         "HYP-8815 is not a disproof characterization",
-        "A shared Pascal array is not a geometric bridge",
-        "Braid localization does not factor every wall object",
-        "Poisson rank two is not DC(2) or JC(2)",
-        "A thickened safe set is not an ordinary toric complement",
-        "Antisymmetry is not a whole game/torus theorem",
-        "Shared kernels are not bridges",
-        "MISTAKE-226/235",
-        "NC2/GMC(2) is proved, not fully formalized",
+        "Chronology is not truth",
+        "A quotient owes a loss ledger",
         "THM-2057 closes two planes; THM-2059 joins packets",
-        "Equal ranks do not identify lattices",
-        "Small-prime Paley spectra assign no LRC roles",
         "THM-2058 is a carrier, not LRC(14)",
         "THM-2060/2064 give capacity, not signed ownership",
-        "THM-2061 is a proved reduction, not an empty-seam theorem",
         "THM-2062 filters heredity, not phase height",
         "THM-2065 is PROVED only as a reduction",
         "THM-2066 is a bounded closure",
         "THM-2068 is menu-relative",
         "No fixed finite bank is uniform",
-        "THM-2073 ends at a terminal, not at LRC(14)",
-        "depth at most five",
-        "Safe-child homeomorphisms transport core safe sets",
-        "Do not infer terminal `chi=0`",
-        "THM-2069 is a code/cogirth theorem, not code existence or LRC(14)",
-        "THM-2074 is RESERVED",
+        "The dyadic tower is lossless but still open",
+        "THM-2078/2080",
+        "THM-2069/2074 are PROVED but sharply scoped",
+        "MISTAKE-238",
+        "MISTAKE-239",
         "Paper proof is not full Lean proof",
-        "still assumes `DvdK1` and `HeightWitnessSupplier`",
+        "`DvdK1` and `HeightWitnessSupplier`",
         "THM-2067 is bare existence, not effective DvdK",
         "Support feasibility is not weighted noncancellation",
-        "Fiber size is observable-relative Hartley ambiguity",
         "Clocks are not modular cusps",
         "The binary symmetric Hessian is not full JC(2)",
         "THM-1330 is a necessary atlas, not a classification",
-        "THM-2071 is a pencil gate, not a cover theorem",
     ),
     "00-navigation/LRC14-PROOF-MAP.md": (
-        "## 2026-07-21 current control panel",
+        "## 2026-07-22 current control panel",
+        "**Status: OPEN.**",
         "bounded support-at-most-3 code of rank >=11",
         "transverse deck D_N(m)>=1/14",
         "finite Farey address; listed rays unresolved",
         "scaled AP one-tail clock/binding leaves",
         "tail-sheet capacity -> dyadic seam",
-        "hereditary-primitivity CRT wheel",
-        "circuit-free relation rays become finite",
+        "deletion wheel / finite circuit-free rays",
         "owner words close divisor-complete max<=24",
-        "fixed-bank no-go -> adaptive safe children",
-        "hereditarily primitive terminal",
-        "depth at most five",
-        "terminal maximum `<=24`",
-        "mirror-complement",
-        "THM-2069 proves the code/cogirth wheel",
-        "THM-2074 remains reserved",
+        "size 7..10, max>=25, depth<=4",
+        "THM-2069 filters deletions",
+        "THM-2074",
+        "THM-2078/2080",
+        "MISTAKE-238/239",
         "### Mandatory hostile controls",
     ),
     "00-navigation/LRC-TECHNIQUE-INDEX.md": (
@@ -200,15 +138,12 @@ HEADLINE_SENTINELS = {
         "Transverse deck",
         "Missing-clock binding",
         "CRT packet join",
-        "circuit rays + hereditary wheel",
-        "owner words / safe-child tower",
-        "THM-2068 is menu-relative",
-        "THM-2072 proves no fixed finite bank is uniform",
-        "THM-2069 proves the code/cogirth wheel",
-        "THM-2074 remains reserved",
-        "depth at most five",
-        "terminal maximum `<=24`",
-        "mirror-complement",
+        "circuit rays + deletion-code wheel",
+        "owner words / safe-child terminal",
+        "size 7..10, max>=25, depth<=4",
+        "THM-2069",
+        "THM-2074",
+        "THM-2078/2080",
     ),
 }
 
@@ -251,12 +186,13 @@ FORBIDDEN_STARTUP_TEXT = {
         "THM-2071 forces a square leading coefficient",
         "first quadratic-fiber survivor",
         "THM-2069 and THM-2074 are RESERVED",
+        "THM-2074 is RESERVED",
+        "depth-at-most-five safe-child tower",
     ),
     "00-navigation/START-HERE.md": (
         "every counterexample has a 2--5-term integer relation of height at most `2^20`",
         "height at most `2^21`",
         "The remaining jump is pointed Euler survival",
-        "They are not root-imported",
         "THM-2058 is an unproved empty stub",
         "THM-2060/2061 are reserved proof",
         "THM-2065 is an unproved",
@@ -265,9 +201,10 @@ FORBIDDEN_STARTUP_TEXT = {
         "depth-at-most-eight",
         "first quadratic-fiber survivor",
         "keep THM-2069/2074 reserved",
+        "keep THM-2074 reserved",
+        "depth-at-most-five safe-child tower",
     ),
     "00-navigation/CURRENT-FRONTIER.md": (
-        "but are not root-imported",
         "6. **Pointed plane transport.**",
         "The incoming THM-2054 relative-Fejer program",
         "THM-2058 supplies the primitive phase-packet",
@@ -279,6 +216,8 @@ FORBIDDEN_STARTUP_TEXT = {
         "THM-2071 adds the next pencil gate",
         "after at most eight levels, ending",
         "THM-2069 (code/cogirth) and THM-2074 (density one) remain reserved",
+        "THM-2074 (density one) remains reserved",
+        "depth-at-most-five safe-child",
     ),
     "01-canon/ACTIVE-GUARDRAILS.md": (
         "height-`2^21` relation",
@@ -287,10 +226,13 @@ FORBIDDEN_STARTUP_TEXT = {
         "THM-2065 is RESERVED",
         "The formalization has one sorry",
         "THM-2069 and THM-2074 are RESERVED",
+        "THM-2074 is RESERVED",
+        "depth at most five",
     ),
     "00-navigation/LRC14-PROOF-MAP.md": (
         "height <=2^21",
         "THM-2069/2074 remain reserved",
+        "THM-2074 remains reserved",
     ),
     "01-canon/theorems/THM-2010-new-tournament-invariant-sequences.md": (
         "Breen--Stover--Yates",
@@ -374,6 +316,18 @@ def maintained_text(relative: str, errors: list[str]) -> str:
         errors.append(f"{relative}: maintained-prefix boundary {marker!r} is missing")
         return text
     return text.split(marker, 1)[0]
+
+
+def require_pattern(
+    relative: str,
+    text: str,
+    label: str,
+    pattern: str,
+    errors: list[str],
+) -> None:
+    """Require a semantic truth marker without freezing one prose rendering."""
+    if not re.search(pattern, text, flags=re.IGNORECASE | re.DOTALL):
+        errors.append(f"{relative}: missing semantic truth marker {label!r}")
 
 
 def validate_surface(
@@ -472,6 +426,85 @@ def main() -> int:
         for sentinel in sentinels:
             if sentinel not in text:
                 errors.append(f"{relative}: missing headline truth sentinel {sentinel!r}")
+
+    # These are semantic rather than editorial constraints.  In particular,
+    # do not freeze a slash range or one agent's preferred punctuation: future
+    # rewrites may compress the surface, but they must retain the live endpoint.
+    lrc_frontier_docs = (
+        "README.md",
+        "00-navigation/START-HERE.md",
+        "00-navigation/CURRENT-FRONTIER.md",
+        "01-canon/ACTIVE-GUARDRAILS.md",
+        "00-navigation/LRC14-PROOF-MAP.md",
+        "00-navigation/LRC-TECHNIQUE-INDEX.md",
+    )
+    for relative in lrc_frontier_docs:
+        text = maintained_text(relative, errors)
+        require_pattern(
+            relative,
+            text,
+            "THM-2074 is a proved density-one/almost-everywhere theorem",
+            r"(?:(?:THM-2074|THM-2069/2074).{0,180}"
+            r"(?:density[ -]?one|almost[ -]?everywhere)|"
+            r"(?:density[ -]?one|almost[ -]?everywhere).{0,180}"
+            r"(?:THM-2074|THM-2069/2074))",
+            errors,
+        )
+        require_pattern(
+            relative,
+            text,
+            "THM-2080 leaves live tower depth at most four",
+            r"(?:depth.{0,30}(?:at[ -]most\s*four|`?<=\s*4`?)|"
+            r"depth.{0,24}r\s*<=\s*`?4`?|"
+            r"r\s*<=\s*`?4`?)",
+            errors,
+        )
+        require_pattern(
+            relative,
+            text,
+            "live nontrivial terminal sizes are 7 through 10",
+            r"(?:(?:terminal(?: core)? )?sizes?|\|Q_?r\|)[^.\n]{0,100}(?:"
+            r"`?7\s*(?:through|to|--|–|\.\.)\s*10`?|"
+            r"`?10\s*\.\.\s*7`?|"
+            r"`?7`?\s*,\s*`?8`?\s*,\s*`?9`?\s*,?\s*(?:and\s*)?`?10`?)",
+            errors,
+        )
+        require_pattern(
+            relative,
+            text,
+            "every live terminal has maximum at least 25",
+            r"(?:terminal(?: core)? maximum|maximum|max(?:\s*\(\s*Q_?r\s*\))?)"
+            r"[^.\n]{0,80}(?:`?>=\s*25`?|at least\s*`?25`?|"
+            r"`?>\s*24`?|exceeds?\s*`?24`?)",
+            errors,
+        )
+
+    for relative in (
+        "00-navigation/CURRENT-FRONTIER.md",
+        "01-canon/ACTIVE-GUARDRAILS.md",
+    ):
+        text = maintained_text(relative, errors)
+        require_pattern(
+            relative,
+            text,
+            "THM-2074 does not prove universal LRC(14)",
+            r"(?:(?:THM-2074|THM-2069/2074).{0,300}(?:proves only|"
+            r"only the density|neither proves universal|not universal|"
+            r"not (?:all of )?LRC\(14\)|does not (?:prove|close).{0,40}LRC\(14\))|"
+            r"(?:not universal|does not (?:prove|close).{0,40}LRC\(14\))"
+            r".{0,260}(?:THM-2074|THM-2069/2074))",
+            errors,
+        )
+        require_pattern(
+            relative,
+            text,
+            "THM-2071 forces survivor fiber degree at least three in every direction",
+            r"(?:every|all).{0,140}(?:direction|pencil).{0,140}"
+            r"(?:degree\s*(?:>=|at least)\s*`?3`?|degree[ -]three)|"
+            r"(?:degree\s*(?:>=|at least)\s*`?3`?|degree[ -]three)"
+            r".{0,140}(?:every|all).{0,80}(?:direction|pencil)",
+            errors,
+        )
 
     for relative, forbidden in FORBIDDEN_STARTUP_TEXT.items():
         text = maintained_text(relative, errors)
@@ -583,9 +616,68 @@ def main() -> int:
         if count > 1:
             errors.append(f"MISTAKES.md: current-range MISTAKE-{value} occurs {count} times")
 
-    for value in (230, 231, 232, 233, 234, 235, 236, 237):
+    for value in (230, 231, 232, 233, 234, 235, 236, 237, 238, 239):
         if f"## MISTAKE-{value}" not in mistakes:
             errors.append(f"MISTAKES.md: current correction MISTAKE-{value} is missing")
+
+    mistake_sections: dict[int, str] = {}
+    for match in re.finditer(
+        r"^## MISTAKE-(\d+)\b(.*?)(?=^## MISTAKE-|\Z)",
+        mistakes,
+        flags=re.MULTILINE | re.DOTALL,
+    ):
+        mistake_sections[int(match.group(1))] = match.group(0)
+    for value, label, pattern in (
+        (
+            230,
+            "inverse-form classes are not distinguishable rational-prime outcomes",
+            r"inverse form classes.*distinguishable rational-prime outcomes",
+        ),
+        (
+            231,
+            "observable-relative fiber sizes are not one entropy invariant",
+            r"(?:unrelated|observable-relative) fiber sizes.*entropy invariant",
+        ),
+        (
+            238,
+            "empty full-row safe set cannot traverse the nonempty-core homeomorphism",
+            r"empty safe set.*full dyadic counterexample.*homeomorphism.*nonempty quotient core",
+        ),
+        (
+            239,
+            "guard containment was reversed and the complement is covered",
+            r"guard containment.*reversed.*E_h\^c subset union_\(q in Q\) D_q",
+        ),
+    ):
+        require_pattern(
+            "01-canon/MISTAKES.md",
+            mistake_sections.get(value, ""),
+            f"MISTAKE-{value}: {label}",
+            pattern,
+            errors,
+        )
+
+    s227_artifacts = [
+        "04-computation/doubling_homeomorphism_meets_mirror_parity_boxeph_S227.py",
+        "05-knowledge/results/doubling_homeomorphism_meets_mirror_parity_boxeph_S227.out",
+        "07-reflections/doubling-homeomorphism-plus-mirror-parity-and-the-full-two-charge-dvdk-in-lean-boxeph-S227.md",
+    ]
+    s227_artifacts.extend(
+        str(path.relative_to(REPO))
+        for path in sorted(
+            REPO.glob("agents/**/MSG-*-s227-lrc-doubling-home.md")
+        )
+    )
+    if len(s227_artifacts) < 4:
+        errors.append("S227 correction audit found no message replicas")
+    for relative in s227_artifacts:
+        head = read_required(relative, errors)[:1200]
+        if "MISTAKE-238" not in head or not re.search(
+            r"(?:CORRECTION|CORRECTED|RETRACTED|WARNING)", head, re.IGNORECASE
+        ):
+            errors.append(
+                f"{relative}: S227 raw claim lacks an early MISTAKE-238 correction banner"
+            )
 
     phase_packets = read_required(
         "01-canon/theorems/THM-2058-primitive-phase-packets-and-deck-fan-intervals.md",
@@ -633,7 +725,8 @@ def main() -> int:
             "output_sha256: b164d0266bf3ec84fa897c08947a0c3463b20e7a3f2006531a199ac7ba5ac46b",
         ),
         "THM-2064-multitail-sheet-capacity-and-dyadic-seam.md": (
-            "PROVED. On one safe scaled-core clock",
+            "PROVED INDEPENDENT REFORMULATION / COROLLARY OF THE CONCURRENT THM-2060",
+            "On one safe scaled-core clock",
             "sum_(w in W) ceil(t_w/7)/t_w < 1",
             "- LRCUpTo13",
             "exact gcd of an imprimitive eleven-speed core",
@@ -721,6 +814,8 @@ def main() -> int:
             "centered parity decomposition and a noncancellation law",
             "no hypothetical JC(2)",
             "counterexample has a quadratic member",
+            "next unresolved source-fiber degree for a hypothetical counterexample is",
+            "degree at least three in the chosen direction",
             "This is a pencil-direction theorem, not a statement about generic",
             "script_sha256: 3d5ce81db8601a3035db28ae63bf3d003d4f72372d304c3250098a64a8efb267",
             "output_sha256: 2b692ddf3606a0226bb22b88b0a2060a5ecff951b41ba02a8dee3af111821030",
@@ -729,8 +824,9 @@ def main() -> int:
             "PROVED. No finite THM-2066 owner-word clock bank fixed independently",
             "all sampled safe",
             "packets empty and every owner constraint vacuous",
-            "if the closed weak-safe core contains a phase together with its half-translate",
-            "certificate-strategy theorem, not LRC(14)",
+            "closed weak-safe core contains a phase together with its half-translate",
+            "certificate-strategy theorem",
+            "not LRC(14)",
         ),
         "THM-2073-lrc14-dyadic-deletion-tower.md": (
             "PROVED REDUCTION; NOT LRC(14)",
@@ -740,6 +836,16 @@ def main() -> int:
             "This does **not** prove LRC(14)",
             "script_sha256: a65a72a538897d3d9b2f6a25ce8c9099e88679fe8292b2e7213d7816e5b095e4",
             "output_sha256: c99d6dcfb2d0aae805492e2a8349ef6a1793eda4494cf54fb440aedac4d79e24",
+        ),
+        "THM-2074-lrc14-density-one-relation-hyperplane-sieve.md": (
+            "PROVED. THM-2051 confines every thirteen-speed row",
+            "25173854387233097811887443361297472",
+            "R B^12",
+            "B^13/(13! zeta(13))",
+            "Strict LRC(14) therefore has density one",
+            "almost-everywhere theorem, not universal LRC(14)",
+            "script_sha256: 71e01a8f2e3e6c36148e247a9afb81cc8624af0acedfb1cff12b45a91070c388",
+            "result_sha256: 14369f4098b384bfe31b63a424a52767eeecdcfe1c3ea4f8b9fe003a18402fdb",
         ),
         "THM-2075-safe-child-homeomorphism-and-wall-word-conjugacy.md": (
             "PROVED from THM-2073's unique safe-child law",
@@ -753,7 +859,7 @@ def main() -> int:
         "THM-2076-guard-capacity-terminal-rank-floor.md": (
             "PROVED by Haar measure and compact/open separation",
             "forces s>=6",
-            "depth at most five",
+            "THM-2080",
             "measure strictly below",
             "2^(1-r)/7",
             "This is a structural reduction, not LRC(14)",
@@ -763,6 +869,8 @@ def main() -> int:
             "uniform relative-height bounds",
             "folded",
             "owner-determinant sidecar",
+            "0<=r<=4",
+            "THM-2080 removes terminal rank six",
             "every quotient level must fail",
             "ratio escape at every depth",
             "This is a structural reduction, not LRC(14)",
@@ -787,6 +895,17 @@ def main() -> int:
             "covering condition is equivariant, not contradicted by mirror",
             "LRC(14) is not proved",
         ),
+        "THM-2080-unequal-comb-overlap-removes-depth-five.md": (
+            "PROVED. If h is odd",
+            "overlap in measure at least 1/42",
+            "equality holds exactly",
+            "q=6h",
+            "terminal has at least seven",
+            "depth at most four",
+            "sizes 7 through 10",
+            "script_sha256: 0ae2220c80f1eba0cf93819d4b442d88dc6ceeee06ae851a24eeb1f3ebd12696",
+            "output_sha256: 3cccf25892254dcc129448e0ab53060c26f7e10b04158b366de3b3b3095955d5",
+        ),
     }.items():
         theorem_text = read_required(f"01-canon/theorems/{theorem}", errors)
         for sentinel in sentinels:
@@ -794,21 +913,6 @@ def main() -> int:
                 errors.append(f"{theorem}: current scoped result lacks {sentinel!r}")
         if "status: >\n  RESERVED" in theorem_text:
             errors.append(f"{theorem}: proved result regressed to RESERVED")
-
-    for theorem, sentinels in {
-        "THM-2074-lrc14-density-one-relation-hyperplane-sieve.md": (
-            "RESERVED WITH COMPLETE PROOF UNDER AUDIT",
-            "This is an almost-everywhere theorem, not LRC(14)",
-            "This ID reserves the counting and finite-field consequences",
-            "will replace this stub after audit",
-        ),
-    }.items():
-        theorem_text = read_required(f"01-canon/theorems/{theorem}", errors)
-        for sentinel in sentinels:
-            if sentinel not in theorem_text:
-                errors.append(f"{theorem}: reservation lacks {sentinel!r}")
-        if not re.search(r"^status:\s*>\n\s+RESERVED\b", theorem_text, re.MULTILINE):
-            errors.append(f"{theorem}: reservation was promoted without a truth-surface update")
 
     gmc2_paper = read_required(
         "01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md",
@@ -821,7 +925,7 @@ def main() -> int:
         "zero and nonzero, then derives `NC2` and GMC(2) from `DvdK1` and the compact",
         "`HeightWitnessSupplier`",
         "THM-2067 gives exactly the bare existence statement needed",
-        "one proved-but-unformalized proposition and one named composition interface",
+        "proved-but-unformalized `DvdK1` proposition",
     ):
         if sentinel not in gmc2_paper:
             errors.append(f"THM-2022 formalization ledger lacks {sentinel!r}")
@@ -859,6 +963,15 @@ def main() -> int:
             "theorem exists_nonzero_ct_pair'",
             "#print axioms GMC2DvdKTwoCharge.dvdk1_pair",
         ),
+        "04-computation/lean/TournamentH7/TournamentH7/GMC2DvdKPositive.lean": (
+            "Positive-coefficient DvdK: no cancellation, any support",
+            "theorem ct_pos_of_balanced",
+            "theorem ct_ne_zero_of_balanced",
+            "theorem exists_balanced_of_twosided",
+            "theorem dvdk1_positive",
+            "No cancellation, DvdK-premise-free",
+            "#print axioms GMC2DvdKPositive.dvdk1_positive",
+        ),
         "04-computation/lean/TournamentH7/TournamentH7/GMC2Formalization.lean": (
             "import TournamentH7.GMC2NC2",
             "derives both `NC2` and GMC(2) from `DvdK1`",
@@ -873,6 +986,29 @@ def main() -> int:
                 errors.append(f"{relative}: formal boundary lacks {sentinel!r}")
         if re.search(r"^\s*(?:by\s+)?sorry\b", lean_text, re.MULTILINE):
             errors.append(f"{relative}: executable sorry returned to the checked capstone")
+
+    lean_root = read_required(
+        "04-computation/lean/TournamentH7/TournamentH7.lean", errors
+    )
+    for module in ("GMC2DvdKTwoCharge", "GMC2DvdKPositive"):
+        if re.search(rf"^import\s+TournamentH7\.{module}\s*$", lean_root, re.MULTILINE):
+            errors.append(
+                f"TournamentH7.lean: standalone {module} unexpectedly became root-imported"
+            )
+
+    for relative in (
+        "00-navigation/START-HERE.md",
+        "00-navigation/CURRENT-FRONTIER.md",
+        "01-canon/ACTIVE-GUARDRAILS.md",
+    ):
+        formal_summary = maintained_text(relative, errors)
+        require_pattern(
+            relative,
+            formal_summary,
+            "two-charge and positive DvdK leaves are standalone/not root-imported",
+            r"(?:standalone|not root[ -]imported)",
+            errors,
+        )
 
     for relative in (
         "README.md",
@@ -894,6 +1030,22 @@ def main() -> int:
         ):
             if retired.casefold() in formal_summary.casefold():
                 errors.append(f"{relative}: obsolete one-sorry summary returned: {retired!r}")
+
+    height_boundary_summary = "\n".join(
+        maintained_text(relative, errors)
+        for relative in (
+            "00-navigation/CURRENT-FRONTIER.md",
+            "01-canon/ACTIVE-GUARDRAILS.md",
+            "00-navigation/SESSION-LOG.md",
+        )
+    )
+    require_pattern(
+        "current Lean summaries",
+        height_boundary_summary,
+        "HeightWitnessSupplier remains explicit after the WHNF/heartbeat timeout",
+        r"HeightWitnessSupplier.{0,320}(?:whnf|heartbeats?|timed?[ -]out|timeout)",
+        errors,
+    )
 
     corrected_jc = read_required(
         "05-knowledge/hypotheses/"
@@ -960,38 +1112,66 @@ def main() -> int:
             errors.append(
                 f"hypotheses/INDEX.md: current-range HYP-{value} occurs {count} times"
             )
-    for value in (8878, 8879, 8885, 8890, 8895, 8900, 8905):
+    for value in (
+        8841, 8846, 8871, 8879, 8885, 8890, 8900, 8905, 8915, 8920, 8925,
+    ):
         if f"HYP-{value}" not in current_digest:
             errors.append(
                 f"hypotheses/INDEX.md: current digest lacks incoming HYP-{value} routing"
             )
-    if "CRT PACKET JOIN (PROVED; not LRC(14))" not in current_digest:
-        errors.append("hypotheses/INDEX.md: current digest lacks THM-2059 routing")
     for sentinel in (
-        "PRIMITIVE PACKET AND OWNER INTERVAL (PROVED; not LRC(14))",
-        "SHARP TAIL COSETS (PROVED; not LRC(14))",
-        "COMMON-FIBER CAPACITY (PROVED; not LRC(14))",
-        "DYADIC SEAM (PROVED REDUCTION; not LRC(14))",
-        "HEREDITARY CRT WHEEL (PROVED; not LRC(14))",
-        "CIRCUIT-RAY COLLAPSE (PROVED REDUCTION; not LRC(14))",
-        "OWNER-WORD ATLAS (PROVED / FINITE-EXACT)",
-        "BOUNDED-MENU MINIMUM (PROVED / FINITE-EXACT)",
-        "FIXED-BANK NO-GO (PROVED)",
-        "DYADIC DELETION TOWER (PROVED REDUCTION; not LRC(14))",
-        "CODE-COGIRTH WHEEL (PROVED; not LRC(14))",
-        "DENSITY-ONE SIEVE (RESERVED)",
-        "ONE-FIBER-LINEAR KELLER PAIRS (PROVED; JC(2) OPEN)",
-        "QUADRATIC-FIBER GATE (PROVED; JC(2) OPEN)",
-        "ONE-VARIABLE CT EXISTENCE (PROVED)",
-        "SEMIGROUP BYPASS CORRECTION (PROVED)",
-        "unbounded hereditarily primitive terminal, which remains open",
-        "`DvdK1` and `HeightWitnessSupplier` interfaces remain",
-        "HYP-8879-lrc-gmc-weighted-fiber-analogy-corrected.md",
-        "HYP-8895-return-semigroup-reachability-not-noncancellation.md",
+        "THM-2058-primitive-phase-packets-and-deck-fan-intervals.md",
+        "THM-2059-crt-fiber-product-phase-packet.md",
+        "THM-2065-two-anchor-fejer-circuit-ray-collapse.md",
+        "THM-2069-k-deletion-code-cogirth-crt-wheel.md",
+        "THM-2074-lrc14-density-one-relation-hyperplane-sieve.md",
+        "THM-2075-safe-child-homeomorphism-and-wall-word-conjugacy.md",
+        "THM-2077-terminal-kakeya-needle-and-recursive-quarter-escape.md",
+        "THM-2078-bounded-terminal-guard-containment-closure.md",
+        "THM-2079-mirror-complement-safe-child-addresses.md",
+        "THM-2080-unequal-comb-overlap-removes-depth-five.md",
         "HYP-8905-binary-symmetric-jc2-subcase-and-separate-descent-programs.md",
+        "GMC2DvdKTwoCharge.lean",
+        "GMC2DvdKPositive.lean",
+        "MISTAKE-238/239",
+        "HeightWitnessSupplier",
     ):
         if sentinel not in current_digest:
             errors.append(f"hypotheses/INDEX.md: current digest lacks {sentinel!r}")
+    for label, pattern in (
+        (
+            "LRC(14) remains open",
+            r"LRC\(14\).{0,80}(?:remains )?OPEN",
+        ),
+        (
+            "THM-2074 density-one sieve is proved but not universal LRC(14)",
+            r"THM-2074.{0,220}DENSITY[ -]ONE.{0,180}PROVED.{0,180}not universal LRC\(14\)",
+        ),
+        (
+            "THM-2080 leaves terminal sizes 7 through 10 at depth at most four",
+            r"THM-2080.{0,240}depth.{0,30}`?(?:<=|at most)\s*`?4`?"
+            r".{0,520}(?:7\s*(?:through|to|--|–|\.\.)\s*10|10\.\.7)",
+        ),
+        (
+            "HYP-8915/HYP-8925 Lean leaves are standalone",
+            r"HYP-8915.{0,180}STANDALONE.{0,260}HYP-8925.{0,180}STANDALONE",
+        ),
+        (
+            "HeightWitnessSupplier remains explicit after timeout",
+            r"HeightWitnessSupplier.{0,180}(?:remain explicit|timed out|whnf)",
+        ),
+        (
+            "THM-2071 closes quadratic fibers only through degree two",
+            r"THM-2071.{0,220}(?:fiber )?degree\s*`?>=\s*3`?.{0,80}every direction",
+        ),
+    ):
+        require_pattern(
+            "05-knowledge/hypotheses/INDEX.md",
+            current_digest,
+            label,
+            pattern,
+            errors,
+        )
 
     session_log = read_required("00-navigation/SESSION-LOG.md", errors)
     if not session_log.startswith("> **CURRENT-TRUTH WARNING"):
@@ -999,23 +1179,46 @@ def main() -> int:
     if "SESSION-LOG-HISTORICAL-THROUGH-2026-07-21.md" not in session_log:
         errors.append("SESSION-LOG.md: split historical ledger is not routed")
     for sentinel in (
-        "THM-2065 PROVED REDUCTION",
-        "THM-2066 PROVED / FINITE-EXACT",
-        "THM-2068 PROVED / FINITE-EXACT",
-        "THM-2072 PROVED",
-        "THM-2073 PROVED REDUCTION",
-        "THM-2069 PROVED",
-        "THM-2074 is RESERVED",
+        "Status remains OPEN",
+        "THM-2051/2052",
+        "THM-2062/2069",
+        "THM-2074",
+        "THM-2073/2075/2077",
+        "THM-2078 is",
+        "THM-2079",
+        "THM-2080",
+        "MISTAKE-238",
+        "MISTAKE-239",
         "THM-2022 proves NC2 and GMC(2) on paper",
-        "`DvdK1` plus",
+        "GMC2DvdKTwoCharge.lean",
+        "GMC2DvdKPositive.lean",
+        "general `DvdK1`",
         "`HeightWitnessSupplier`",
-        "Do not summarize the",
-        "current state as “one sorry” or as a complete formal proof",
-        "THM-2070 PROVED CORRECTION",
-        "THM-2071 PROVED",
+        "S104 did not discharge the supplier",
+        "THM-2070 correction",
+        "THM-2063/2071",
+        "Anchor / Niche / Wildcard",
     ):
         if sentinel not in session_log:
             errors.append(f"SESSION-LOG.md: current digest lacks {sentinel!r}")
+    for label, pattern in (
+        (
+            "terminal maximum at least 25, sizes 7 through 10, depth at most four",
+            r"THM-2080.{0,180}depth is at most four.{0,100}terminal size is `?7\.\.10`?"
+            r".{0,260}max\(Q_r\)>=25",
+        ),
+        (
+            "HeightWitnessSupplier timed out rather than being discharged",
+            r"S104 did not discharge.{0,220}(?:whnf|heartbeats|timed out)",
+        ),
+        (
+            "quadratic-fiber survivors start in degree three",
+            r"THM-2063/2071.{0,220}fiber degree at least three",
+        ),
+    ):
+        require_pattern(
+            "00-navigation/SESSION-LOG.md", session_log, label, pattern, errors
+        )
 
     empty_topic = subprocess.run(
         (sys.executable, str(REPO / "agents/start_session.py"), "--topic", ""),
@@ -1174,6 +1377,28 @@ def main() -> int:
     if "MISTAKE-234" not in semigroup_smoke.stdout:
         errors.append("start_session.py: return-semigroup topic did not surface MISTAKE-234")
 
+    s227_correction_smoke = subprocess.run(
+        (
+            sys.executable, str(REPO / "agents/start_session.py"),
+            "--topic", "HYP-8920 empty safe set quotient core homeomorphism",
+            "--recent", "1", "--max-matches", "10",
+        ),
+        cwd=REPO, text=True, capture_output=True, check=False,
+    )
+    if "MISTAKE-238" not in s227_correction_smoke.stdout:
+        errors.append("start_session.py: HYP-8920 topic did not surface MISTAKE-238")
+
+    guard_direction_smoke = subprocess.run(
+        (
+            sys.executable, str(REPO / "agents/start_session.py"),
+            "--topic", "terminal guard containment complement unequal comb",
+            "--recent", "1", "--max-matches", "10",
+        ),
+        cwd=REPO, text=True, capture_output=True, check=False,
+    )
+    if "MISTAKE-239" not in guard_direction_smoke.stdout:
+        errors.append("start_session.py: guard-containment topic did not surface MISTAKE-239")
+
     jc_bridge_smoke = subprocess.run(
         (
             sys.executable, str(REPO / "agents/start_session.py"),
@@ -1226,11 +1451,13 @@ def main() -> int:
         ("THM-2071-quadratic-fiber-square-parity-gate.md", "THM-2071 quadratic fiber parity gate"),
         ("THM-2072-fixed-owner-clock-bank-no-go-and-half-shift-certificate.md", "THM-2072 fixed owner clock no go"),
         ("THM-2073-lrc14-dyadic-deletion-tower.md", "THM-2073 dyadic deletion tower"),
+        ("THM-2074-lrc14-density-one-relation-hyperplane-sieve.md", "THM-2074 density one hyperplane sieve"),
         ("THM-2075-safe-child-homeomorphism-and-wall-word-conjugacy.md", "THM-2075 safe child homeomorphism"),
         ("THM-2076-guard-capacity-terminal-rank-floor.md", "THM-2076 guard capacity terminal rank"),
         ("THM-2077-terminal-kakeya-needle-and-recursive-quarter-escape.md", "THM-2077 terminal needle quarter escape"),
         ("THM-2078-bounded-terminal-guard-containment-closure.md", "THM-2078 bounded terminal guard closure"),
         ("THM-2079-mirror-complement-safe-child-addresses.md", "THM-2079 mirror complement addresses"),
+        ("THM-2080-unequal-comb-overlap-removes-depth-five.md", "THM-2080 unequal comb overlap depth four"),
     ):
         smoke = subprocess.run(
             (
@@ -1240,7 +1467,8 @@ def main() -> int:
             cwd=REPO, text=True, capture_output=True, check=False,
         )
         proposal_packet = smoke.stdout
-        expected = f"[PROVED] 01-canon/theorems/{theorem}"
+        route_status = "FINITE-EXACT" if theorem.startswith("THM-2078-") else "PROVED"
+        expected = f"[{route_status}] 01-canon/theorems/{theorem}"
         if expected not in proposal_packet:
             errors.append(f"start_session.py: {theorem} is not routed as proved")
         canon_block = proposal_packet.partition("  Canon:")[2].partition(
@@ -1248,28 +1476,6 @@ def main() -> int:
         )[0]
         if theorem not in canon_block:
             errors.append(f"start_session.py: {theorem} is missing from proved canon")
-
-    for theorem, topic in (
-        (
-            "THM-2074-lrc14-density-one-relation-hyperplane-sieve.md",
-            "THM-2074 density one hyperplane sieve",
-        ),
-    ):
-        reserved_smoke = subprocess.run(
-            (
-                sys.executable, str(REPO / "agents/start_session.py"),
-                "--topic", topic, "--recent", "1", "--max-matches", "16",
-            ),
-            cwd=REPO, text=True, capture_output=True, check=False,
-        )
-        expected = f"[RESERVED] 01-canon/theorems/{theorem}"
-        if expected not in reserved_smoke.stdout:
-            errors.append(f"start_session.py: {theorem} is not routed as reserved")
-        reserved_canon = reserved_smoke.stdout.partition("  Canon:")[2].partition(
-            "  Reservations (not results):"
-        )[0]
-        if theorem in reserved_canon:
-            errors.append(f"start_session.py: {theorem} leaked into proved canon")
 
     hypothesis_smoke = subprocess.run(
         (

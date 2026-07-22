@@ -1,6 +1,6 @@
 # Current Mathematical Frontier
 
-**Rolling state — refreshed 2026-07-21.** This file supersedes dated frontier
+**Rolling state — refreshed 2026-07-22.** This file supersedes dated frontier
 snapshots as a statement of present status. A linked theorem is the proof
 source; this document records how the pieces compose and what remains.
 Status vocabulary: **PROVED** means an in-repo proof; **CITED** a scoped external
@@ -159,6 +159,12 @@ is the proved carrier that reduces each fixed bad-denominator/owner fiber to
 labelled primitive packets and one coprime interval. It makes the terminal
 exact and finite; it does not prove that every surviving interval is empty.
 
+On the dyadic branch the live nontrivial terminal is now exact in shape:
+`r=1..4`, `|Q_r|=10..7`, and `max(Q_r)>=25`; `r=0` is the hereditary
+eleven-core. Any completion must retain `G_(Q_r) subset E_h`, component
+addresses, endpoint owners, and both original odd-tail owner constraints.
+Mirror reversal pairs addresses but supplies no contradiction.
+
 ### Independent routes that remain live
 
 - **AP-core / tight-deletion supplier.**
@@ -222,8 +228,9 @@ exact and finite; it does not prove that every surviving interval is empty.
   GMC is false for every dimension at least 3. See the current external preprint
   entry in [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md).
 - **FORMALIZATION PARTIAL:** normalized residue, face transport, and finite-field
-  contradiction are checked. `GMC2NC2` uses the still-unformalized `DvdK1` and
-  `HeightWitnessSupplier`; the extractor needs a budget-safe wrapper. On paper,
+  contradiction are checked. Standalone sorry-free modules prove `DvdK1` for
+  two charges and for positive real coefficients, but are not root-imported.
+  `GMC2NC2` still uses general `DvdK1` and `HeightWitnessSupplier`; on paper,
   [THM-2067](../01-canon/theorems/THM-2067-galois-orbit-product-closes-one-variable-dvdk.md) proves the required one-variable statement internally.
 
 ### Why THM-2022 works
@@ -257,9 +264,11 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 
 ### Live work
 
-Package THM-2022 for publication. In Lean, compose the checked extractor and
-height theorem into `HeightWitnessSupplier` without exhausting elaboration,
-and formalize THM-2067 to discharge `DvdK1`. HYP-8878 supplies an elementary seed
+Package THM-2022 for publication. In Lean, redesign the checked extractor/height
+composition into `HeightWitnessSupplier`: the S104 scratch construction was
+structurally written but times out at `whnf` even above 6.4M heartbeats and
+committed no theorem. Formalize THM-2067 to discharge general complex `DvdK1`.
+HYP-8878 supplies an elementary seed
 when the lowest Laurent face has a **unique minimal balanced channel**: the
 first constant term is then one nonzero monomial. Its `98/116` figure is a
 finite small-support census, not a general density, and coincident minimum

@@ -1,3 +1,8 @@
+> **RETRACTED LRC CONCLUSION — SEE MISTAKE-238.** The claimed chi-zero
+> terminal descent is false: the tower transports nonempty core safe sets,
+> not the empty full seam safe set. The independent two-charge Lean result
+> and the separate doubling/mirror computations survive.
+
         # Message: boxeph-S227: LRC doubling-homeomorphism + mirror-parity => disproof descends to a chi=0 terminal core (THM-2075+THM-2073+S212); GMC(2) Lean -- FULL two-charge DvdK both orientations kernel-pure (HYP-8920)
 
         **From:** boxeph-2026-07-21-S?

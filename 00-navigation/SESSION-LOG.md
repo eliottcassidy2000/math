@@ -517,6 +517,7 @@ an address with sidecar data; promote successful meta-patterns into
 `META-PATTERNS.md`; and keep current-truth summaries short enough that future
 agents read the proof rather than inherit folklore.
 > **CURRENT-TRUTH WARNING (2026-07-21):** This is a concise handoff ledger,
+> **CURRENT-TRUTH WARNING (2026-07-22):** This is a concise handoff ledger,
 > not a proof authority. Start with [`START-HERE.md`](START-HERE.md),
 > [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md), and
 > [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
@@ -528,97 +529,95 @@ Older chronology is preserved in
 It intentionally contains claims corrected later. This file records only
 changes that should alter how the next session starts.
 
-## LRC(14): present terminal stack
+## LRC(14): exact present frontier
 
 - **Status remains OPEN.** Uniform `q<=25` is false, uniform twelve-speed
-  sporadic emptiness is not proved, and a failed sufficient gate means
+  sporadic emptiness is not proved, and failure of a sufficient gate means
   uncertified—not unsafe.
-- **THM-2051/2052:** every hypothetical counterexample has a genuine
-  support-`3..5`, height-`2^20` relation and an eleven-dimensional bounded
-  sparse code. Rank twelve is a finite maximal-minor box; rank eleven is a
-  finite two-anchor, one-projective-parameter atlas.
-- **THM-2053/2055/2056:** the rank-eleven state has an exact transverse deck,
-  a sufficient disk-gate failure carrier, a signed-hull owner fan, and a
-  finite Kelvin/Farey certificate. Basis, labels, ties, phase, and endpoint
-  sidecars remain load-bearing.
-- **THM-2057:** two scaled AP one-tail planes are closed by clocks and affine
-  binding phases. This is a model mechanism, not a general-star theorem.
-- **THM-2058/2059 PROVED:** reduced-order phase packets and one labelled
-  coprime interval per fixed cell compose with arbitrary-clock core/tail
-  packets by an exact CRT histogram dot product. They carry intervals; they do
-  not uniformly discharge them.
-- **THM-2060/2064 PROVED:** the sheet order is `a/gcd(a,w)`, every tail-safe
-  bin has sharp floor `q-ceil(q/7)`, and the strict common-fiber union bound
-  leaves the unique two-tail capacity tie `(2,2)`.
-- **THM-2061 PROVED REDUCTION:** that tie is the signed seam
-  `2C union {x,y}`, `x,y` odd. Divisor/metric/measure constraints close
-  normalized `max(C)<=19`, not the full seam.
-- **THM-2062 PROVED:** deletion indices give an exact hereditary-primitivity
-  CRT wheel. It filters intervals but supplies no phase-height witness.
-- **THM-2065 PROVED REDUCTION:** without a persistent height-`2^20` marked
-  circuit, strict-null points lie on finitely many projective rays and then
-  pass through the THM-2062 wheel. Persistent circuits remain open.
-- **THM-2066 PROVED / FINITE-EXACT:** complementary binary owner words close
-  every primitive divisor-complete eleven-core `C subset {1,...,24}` uniformly
-  over odd tails.
-- **THM-2068 PROVED / FINITE-EXACT:** seven clocks suffice and are necessary
-  only inside the menu `15..34`; `{25,26,27,28,32,33,34}` is one minimum bank.
-- **THM-2072 PROVED:** no fixed core-independent finite clock bank works
-  uniformly. Antipodal pairs and the bounded quarter-anchor fan nevertheless
-  give exact continuous certificates for their subclasses.
-- **THM-2073 PROVED REDUCTION:** a non-hereditarily-primitive eleven-core
-  descends through at most eight labelled binary safe-child steps to an
-  unbounded hereditarily primitive terminal. The terminal is not discharged.
-- **THM-2069 and THM-2074 are RESERVED.** Code/cogirth and density-one proof
-  candidates remain outside the proof graph until audit and promotion.
-- **Live obligations:** discharge the hereditarily primitive terminal with its
-  inherited owner labels; classify persistent marked circuits; complete all
-  other rank-eleven cells; and decide the rank-twelve box.
+- **Structured exceptional set:** THM-2051/2052 force every hypothetical
+  counterexample into a bounded support-`3..5` relation arrangement and then a
+  rank-twelve finite box or rank-eleven two-anchor atlas. THM-2074 proves that
+  this exceptional arrangement has only `O(B^12)` primitive rows in a
+  `B^13` universe, so strict LRC(14) holds on a density-one set.
+- **Lossless labelled atlas:** THM-2053/2055/2056 give the transverse deck,
+  indexed disk carrier, signed-hull owner fan, and Kelvin/Farey certificate;
+  THM-2058/2059 give primitive owner intervals and exact CRT packet joins.
+  Basis, labels, ties, phase, clocks, endpoints, and non-hull data remain live.
+- **Dyadic seam:** THM-2060/2064 isolate the unique two-tail capacity tie;
+  THM-2061 folds it; THM-2066 closes `59,880` divisor-complete eleven-cores
+  through maximum `24`; THM-2068 gives a seven-clock minimum only in `15..34`;
+  and THM-2072 proves no fixed core-independent finite clock bank is uniform.
+- **Terminal carrier:** THM-2073/2075/2077 preserve a safe-child tower,
+  nonempty safe components, Euler count, binary address, endpoint inheritance,
+  guard geometry, H-drift, and both outer-tail owner obligations. THM-2078 is
+  FINITE-EXACT and excludes every nontrivial terminal of maximum at most `24`.
+  THM-2080 proves the unequal-comb overlap floor and eliminates rank six, so
+  nontrivial depth is at most four and terminal size is `7..10`.
+- **Exact live terminal:** `r=0` is a hereditary eleven-core; for `r=1..4`,
+  `|Q_r|=11-r`, `max(Q_r)>=25`, and `G_(Q_r) subset E_h` must coexist with its
+  component addresses, endpoint owners, and original odd-tail owner word.
+  THM-2079 pairs addresses `a <-> 2^r-1-a` and flips tail-owner bits; it halves
+  search but gives no contradiction.
+- **Two corrections that must travel with the tower:** MISTAKE-238 forbids
+  transporting empty `G_S` through a homeomorphism beginning at nonempty
+  `G_C`; MISTAKE-239 records that guard containment makes the guard complement,
+  not the guard, covered by danger combs.
+- **Deletion/code route:** THM-2062/2069 identify `k`-deletion failure with a
+  low-weight evaluation codeword/cogirth and give exact CRT density products.
+  This is a hereditary-primitivity filter, not code existence or an LRC phase
+  witness. THM-2065 leaves persistent height-`2^20` marked circuits.
+- **Live obligations:** discharge the unbounded terminal with all sidecars;
+  classify persistent circuits; finish other labelled rank-eleven cells; and
+  decide the rank-twelve maximal-minor box.
 
 ## NC2 / GMC and formalization
 
-- **THM-2022 proves NC2 and GMC(2) on paper.** THM-2067 now supplies the exact
-  one-variable constant-term existence statement internally by a Galois-orbit
+- **THM-2022 proves NC2 and GMC(2) on paper.** THM-2067 supplies the exact
+  one-variable constant-term existence seed internally by a Galois-orbit
   product. It gives no effective first-return bound and is weaker than full
   Duistermaat–van der Kallen.
-- **Lean is PARTIAL at two explicit interfaces.** Normalized residue,
-  support-face transport, finite-field contradiction, and the extractor/height
-  ingredients are checked. `GMC2NC2` derives the result from `DvdK1` plus
-  `HeightWitnessSupplier`; the existential height wrapper exceeds elaboration
-  budget, and THM-2067's Galois proof is not formalized. Do not summarize the
-  current state as “one sorry” or as a complete formal proof.
-- **THM-2070 PROVED CORRECTION:** the horizontal Wick embedding is exact, and
-  `u^2+u+u^-1-u^-2` has cofinite support returns but infinitely many zero odd
-  constant terms. HYP-8890/8895 do not bypass DvdK for mixed coefficients;
-  positive coefficients and the two-charge formula survive.
+- **Lean remains partial at two explicit interfaces.** Normalized residue,
+  support-face transport, finite-field contradiction, extractor, and height
+  ingredients are checked. `GMC2NC2` still consumes general `DvdK1` and
+  `HeightWitnessSupplier`; THM-2067's proof is not formalized.
+- **Special Lean leaves are real but standalone:** `GMC2DvdKTwoCharge.lean`
+  handles both two-charge orientations, and `GMC2DvdKPositive.lean` handles
+  arbitrary finite two-sided support with positive real coefficients. Both are
+  sorry-free with the standard axiom trio, but neither is root-imported or
+  resolves complex cancellation.
+- **S104 did not discharge the supplier.** A structurally written scratch
+  composition timed out during `whnf` beyond 6.4M heartbeats and committed no
+  theorem. Treat it as a redesign/performance lead, not “one final fix.”
+- **THM-2070 correction:** cofinite support return can coexist with infinitely
+  many zero constant terms. Positive, two-charge, and unique-channel cases
+  survive; the general saddle/semigroup bypass does not.
 
 ## Jacobian / Dixmier / Poisson
 
-- **THM-1300 exactly refutes JC(n) for `n>=3`; JC(2) remains open.** The
-  determinant and triple collision are independently checkable; separate
-  publication/provenance claims should stay qualified.
-- **THM-2063 PROVED:** any planar Keller map with one output-pencil member
-  affine on one linear source fiber is tame. Every JC(2) survivor has fiber
-  degree at least two in every source/output-pencil direction.
-- **THM-2071 PROVED:** for a quadratic fiber member, the leading coefficient
-  is a square; constant leading coefficient is tame. The first live reduced
-  cell has a nonconstant square and odd complementary fiber degree at least
-  three. This is a pencil gate, not a cover-degree classification.
-- **MISTAKE-236/237 and HYP-8905:** THM-1330 is a necessary atlas, not a
-  classification. The binary homogeneous symmetric-Hessian calculation lands
-  in THM-2063, but no NC2/GMC-to-JC chain or equivalence among VC(4), Jelonek,
-  and Newton/Lamé programs exists. Raw `HYP-8910` prose is historical only.
-- The two-pair Poisson conjecture is false; DC(2) and JC(2) remain open.
+- **THM-1300 refutes JC(n) for `n>=3`; JC(2) remains open.** Publication and
+  priority are separate freshness questions. DC(2) also remains open.
+- **THM-2063/2071 now close fiber degrees one and two.** For every choice of
+  output-pencil member and linear source foliation, a hypothetical JC(2)
+  survivor has fiber degree at least three. THM-2071's mechanism is centered
+  parity plus central-binomial pole noncancellation, forcing the quadratic
+  leading square factor constant and the complement fiber-linear/tame.
+- This is not a generic cover-degree, Jelonek, VC(4), or NC2/GMC theorem.
+  MISTAKE-236/237 and HYP-8905 keep those programs separate.
+- The two-pair Poisson conjecture is false; its commutative witness does not
+  automatically quantize to DC(2).
 
 ## Other durable handoffs
 
 - **Tournaments:** use order-join, strong-core laws, and signed Rédei data.
   Exact invariant-lattice completeness stops at `n<=6`; `H>=disc` is open;
-  higher GLMY path homology remains convention-disputed.
+  higher GLMY path homology remains convention-disputed. For LRC, try relation
+  rows, gaps, wall events, residues, safe components, or proof obligations as
+  vertices before runners.
 - **Reciprocal sequences:** use support Dirichlet profiles plus collision tax,
-  Abel–Stieltjes/log-block Dini, and the full Bertrand boundary. Support and
-  indexed multiplicity are different objects.
+  Abel–Stieltjes/log-block Dini, and the full Bertrand boundary. A reciprocal
+  integer sequence is a subset of harmonic terms only after multiplicity is
+  separated explicitly.
 - **Process:** every session carries Anchor / Niche / Wildcard lanes, performs
-  an inheritance pass, keeps a 3–7-node concept board, and revisits every
-  connection after pulls and computations. A connection records its map,
-  preserved predicate, loss, sidecar, and decisive test.
+  an inheritance pass, keeps a 3–7-node concept board, and revisits connections
+  after pulls and computations. Record map, preserved predicate, loss, sidecar,
+  decisive test, and why a result succeeds or fails.

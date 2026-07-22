@@ -4,7 +4,7 @@
 > first. The control panel is current; dated sections preserve searchable proof
 > history and may contain obligation labels superseded by later corrections.
 
-## 2026-07-21 current control panel
+## 2026-07-22 current control panel
 
 **Status: OPEN.** LRC(14) means thirteen distinct nonzero relative speeds. The
 old uniform `q<=25` shortcut is false; uniform twelve-speed sporadic emptiness
@@ -30,11 +30,11 @@ hypothetical LRC(14) counterexample
                     |-- arbitrary-clock one-tail CRT packet join    [THM-2059]
                     |-- tail-sheet capacity -> dyadic seam          [THM-2060/2064]
                     |-- folded seam pins/metric/finite low-core box [THM-2061]
-                    |-- hereditary-primitivity CRT wheel            [THM-2062]
-                    |-- circuit-free relation rays become finite    [THM-2065]
-                    |-- owner words close divisor-complete max<=24  [THM-2066]
-                    |-- fixed-bank no-go -> adaptive safe children  [THM-2072/2073]
-                    |     `-- hereditarily primitive terminal       [OPEN]
+                    |-- deletion wheel / finite circuit-free rays    [THM-2062/2065/2069]
+                    |-- owner words close divisor-complete max<=24   [THM-2066]
+                    |-- adaptive safe-child/address/owner terminal   [THM-2072/2073/2075/2077]
+                    |     `-- size 7..10, max>=25, depth<=4          [THM-2078/2080]
+                    |          `-- guard + outer-tail discharge      [OPEN]
                     |-- general clock / pair-sum / Fejer / Euler    [OPEN]
                     |-- active relation outside W
                     |     `-- rank 12 -> finite maximal-minor box [THM-2052]
@@ -42,12 +42,12 @@ hypothetical LRC(14) counterexample
                           `-- weak Euler point or strict interval [HYP-8841]
 ```
 
-The four inputs are proved necessary in their cited scopes; every gate is only
-sufficient, so a bad deck, disk, or Farey ray means “uncertified.” THM-2058
-provides an exact carrier, not its discharge. THM-2065 leaves marked circuits;
-THM-2066/2068 close only the bounded `max(C)<=24` census; THM-2072 forbids a
-universal bank; THM-2073 ends at an open hereditary terminal. THM-2069/2074
-remain reserved.
+The inputs are proved in their cited scopes; every sufficient gate can leave
+an “uncertified” row. THM-2069 filters deletions but forgets phase and owners;
+THM-2074 proves density one while all counterexamples remain in its exceptional
+hyperplanes. THM-2075/2077 preserve the dyadic carrier, THM-2078/2080 bound it,
+and MISTAKE-238/239 forbid empty-row transport and the reversed guard cover.
+The unbounded hereditary terminal, marked circuits, and other cells stay open.
 
 ### Live interfaces
 
@@ -59,10 +59,10 @@ remain reserved.
 | Primitive deck/owner fiber | For a fixed plane/pair/basis, THM-2058 gives exact reduced-order packets, labelled unit transport, bulk/boundary/null support, and one coprime longitudinal interval minus collision points | Empty or discharge every surviving interval; do not replace packet labels by counts. |
 | CRT packet join | THM-2059's reduction-histogram dot product counts compatible classes; the `Na/lcm` lift counts safe grid phases | Select clocks uniformly; zero overlap rejects only that clock grid. |
 | Tail sheets / dyadic seam | THM-2060/2064 give sharp capacity; THM-2061 gives the exact folded obstruction, divisor pins, metric box, and `max(C)<=19` census | Empty the remaining signed seam uniformly, or route each survivor back to the labelled atlas. |
-| Hereditary primitivity | THM-2062 gives a prime-labelled CRT wheel with at most two bad projective directions per prime | Compose the wheel with phase-height exits; positive direction density alone cannot prove safety. |
+| Hereditary primitivity | THM-2062/2069 identify deletion failure with low-weight evaluation codewords/cogirth and give exact CRT wheels | Compose with phase-height and owner exits; code density/existence alone cannot prove safety. |
 | Circuit rays | THM-2065 sends every circuit-free strict-null template to finitely many projective rays before the CRT wheel | Classify/discharge persistent height-`2^20` marked circuits; a relation is not evidence of failure. |
 | Dyadic owner words | THM-2066 closes divisor-complete eleven-cores through `24`; THM-2068 gives a seven-clock minimum within `15..34` | Do not extrapolate the bounded bank: THM-2072 proves every fixed core-independent finite bank blind somewhere. |
-| Safe-child tower | THM-2073 gives a labelled depth-`<=8` descent for nonhereditary eleven-cores | Discharge the unbounded hereditarily primitive terminal with inherited owner labels. |
+| Safe-child tower | THM-2073/2075/2077 preserve the terminal carrier; THM-2078/2080 force size `7..10`, maximum `>=25`, depth `<=4` | Discharge guard containment and both outer-tail owner constraints; mirror-complement addresses only halve search. |
 | Relative Fejer | After zero-character factors are removed, THM-2054 gives an explicit lifted-character average error for nonzero line frequencies when bounded resonances lift | Prove the model-specific plateau and route every bounded scalar resonance. |
 | Rank code | THM-2052 supplies eleven independent bounded support-at-most-three rows | Produce an active row outside the code when available; rank twelve gives a finite box but is not required for finiteness. |
 | Euler endpoint | THM-2047 retains owner, sign, side, height, and paired deletion; HYP-2108 gives `P_w` | Prove `P_w>=0` on any disk points not discharged arithmetically. |
@@ -133,8 +133,8 @@ retain ties and hyperedges otherwise.
 2. Kelvin-invert each owner sector, build the finite acute unimodular fan from
    THM-2056, and attach `D_N`, pair sums, and clock-kill data to every bad ray.
 3. Split each deck by THM-2058 primitive order and owner interval. Compose
-   THM-2059 histograms with THM-2066 owner words; use THM-2073 safe children
-   after THM-2072 rules out a fixed bank. Preserve the terminal owner labels.
+   THM-2059/2069 wheels with THM-2066 words and THM-2073/2075 safe children.
+   Search size-`7..10`, max-`>=25` terminals with guard/tail owners intact.
 4. Put the eleven-dimensional relation code in exact row-echelon form and
    record, for every peel/endpoint-owner set, whether an active bounded row
    lies outside the current code.

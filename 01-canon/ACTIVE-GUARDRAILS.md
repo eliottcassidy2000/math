@@ -1,6 +1,6 @@
 # Active Guardrails
 
-**Short hazard sheet — refreshed 2026-07-21.** Read this at startup; search
+**Short hazard sheet — refreshed 2026-07-22.** Read this at startup; search
 [`MISTAKES.md`](MISTAKES.md) for witnesses, repairs, and lineage. This sheet
 records current prohibitions, not the whole history.
 
@@ -64,11 +64,18 @@ records current prohibitions, not the whole history.
 23. **No fixed finite bank is uniform.** THM-2072's common-multiple core proves
     sensor blindness, not mathematical hardness. Its antipodal/quarter-fan
     certificates close only their stated subclasses.
-24. **THM-2073 ends at a terminal, not at LRC(14).** The depth-at-most-eight
-    safe-child tower reaches an unbounded hereditarily primitive quotient core;
-    inherited owner labels and terminal discharge remain open.
-25. **THM-2069 and THM-2074 are RESERVED.** Code/cogirth and density-one proof
-    candidates stay outside the proof graph until explicit promotion.
+24. **The dyadic tower is lossless but still open.** THM-2073's internal
+    depth-eight bound is superseded: THM-2075/2077 retain terminal components,
+    addresses, endpoint owners, and outer tails; THM-2078 forces maximum
+    `>=25`; THM-2080 forces nontrivial depth `<=4` and terminal size `7..10`.
+    The homeomorphism starts at the nonempty core, not the empty full row
+    (MISTAKE-238), and guard containment covers the guard complement, not the
+    guard (MISTAKE-239). Mirror-complement addresses halve search, not prove a
+    contradiction.
+25. **THM-2069/2074 are PROVED but sharply scoped.** The deletion-code/cogirth
+    wheel filters hereditary primitivity and forgets phase/owners; density-one
+    strict LRC leaves every hypothetical counterexample inside the structured
+    zero-density relation hyperplanes. Neither proves universal LRC(14).
 26. **Strict measure misses the tight boundary.** MISTAKE-235: use Fejer bulk
     plus exact packets/owners/Euler data; no LRC/GMC identity or AP reduction.
 27. **Clocks are not modular cusps.** MISTAKE-233: divisor labels, `f14`, genus,
@@ -85,9 +92,11 @@ records current prohibitions, not the whole history.
     THM-2022 mechanism is prime-local initial-form normalization.
 32. **THM-2033 is special-matrix scope.** Its determinant identity does not
     replace the general scalar Wick moment.
-33. **Paper proof is not full Lean proof.** THM-2022 is proved, while Lean
-    still assumes `DvdK1` and `HeightWitnessSupplier`; checked ingredients do
-    not make their final composition automatic.
+33. **Paper proof is not full Lean proof.** THM-2022 is proved. Standalone
+    sorry-free modules handle two charges and positive real coefficients, but
+    are not root-imported; general complex `DvdK1` and `HeightWitnessSupplier`
+    remain interfaces. A scratch supplier composition times out at `whnf`, so
+    it is a performance lead, not a discharged theorem.
 34. **THM-2067 is bare existence, not effective DvdK.** It proves some
     nonzero Laurent constant term by Galois orbit products; it supplies no
     first-return bound or stronger critical-value theorem.
@@ -150,9 +159,11 @@ records current prohibitions, not the whole history.
     has four variables and no NC2/GMC-to-JC chain.
 59. **THM-1330 is a necessary atlas, not a classification.** MISTAKE-236;
     inverse realization and irreducible Keller seeds remain open.
-60. **THM-2071 is a pencil gate, not a cover theorem.** Its square leading
-    coefficient and odd reduced fiber degree do not classify generic cover
-    degree, Jelonek geometry, VC(4), or full JC(2).
+60. **THM-2071 closes the quadratic-fiber locus, not JC(2).** Centered parity
+    and pole noncancellation force the square factor constant and the reduced
+    complement fiber-linear, hence tame. Survivors have fiber degree at least
+    three in every direction; this does not classify generic cover degree,
+    Jelonek geometry, VC(4), or full JC(2).
 
 34. **Source-fiber degree is not generic cover degree.** THM-2071 closes a
     quadratic pencil member; THM-2084 gives reduced complementary degree at

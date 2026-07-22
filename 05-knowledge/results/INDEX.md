@@ -1745,4 +1745,21 @@ Exact THM-2089 signed-cycle audit. It checks 1,500 rational clearing
 identities, all 10 squares of a flat `K_(2,5)` gauge, all 18 squares of a flat
 `K_(3,4)` gauge, and detects six nonflat squares after one offset perturbation.
 The universal simple-cycle relation-height invoice is `205778683494`.
+### lrc14_dyadic_deletion_tower_referee_codex_20260721.out
+Exact THM-2073 referee. It checks the capacity equality cases, the `1/7` and
+`2/7` unit shells, all `23,487` guard and `46,163` singleton-eligible four-lift
+formulas, and `1,004,950` antipodal odd-tail exclusions. It verifies the local
+safe-child algebra; THM-2075/2077 carry the later topological sidecars.
+
+### lrc14_terminal_guard_containment_referee_codex_20260721.out
+FINITE-EXACT THM-2078 census. It considers `4,484,931` cores of sizes `6..10`
+through maximum `24`, retains all `30,594` hereditary divisor-complete cores,
+and finds no guard pair surviving even the necessary exact rational prefilter.
+The larger rank-six universe is preserved although THM-2080 later removes it.
+
+### lrc14_unequal_comb_overlap_referee_codex_20260722.out
+Exact THM-2080 referee. It checks `4,032` pair/formula rows, the full coprime
+small-product table, equality exactly at `q=6h` for odd `h`, Hunter-star
+arithmetic, and `11,088` hostile containment rows. Normal and optimized runs
+byte-match and end in `PASS`; MISTAKE-239 records the repaired set direction.
 | `poisson_rank2_symplectic_suspension_codex_20260721.py` | [STORED; THM-2044/2045, HYP-8802] | Independently reconstructs the owner-supplied rank-two Poisson counterexample from `R=x(2-3xq)` as a symplectic suspension of THM-1300. Exact checks: all six canonical brackets; expanded term counts `(2,35,246,78)`; three rational source points with common image and exact fibre size transported from THM-1300. Proves every `x(a-b x^r q^s)`, `ab!=0`, `r,s>=1`, has no planar Jacobian mate by a weighted-sector leading-coefficient obstruction; 64 monomial identities are audited. Quantum modes repair the entire `R`-column exactly, then reduce `M(Sq,T)-1` from tangent degree two to an explicit constant. Homogeneous repairs propagate weights `6->{6,12}`, `12->{12,18}`, `18->{18,24}` without closing, exposing the DC(2) termination cascade. | `poisson_rank2_symplectic_suspension_codex_20260721.out` |

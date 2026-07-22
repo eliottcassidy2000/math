@@ -1,3 +1,7 @@
+RETRACTED LRC CONCLUSION — SEE MISTAKE-238.
+The chi-zero terminal-descent claim below is false: THM-2075 transports
+nonempty core safe sets, not the empty safe set of the full seam candidate.
+The doubling identity, per-sheet homeomorphism, and numerical chi values survive.
 
 ========================================================================
 P1  the DOUBLING IDENTITY  phi_{2C}(t) = phi_C(2t)  (the tower engine)

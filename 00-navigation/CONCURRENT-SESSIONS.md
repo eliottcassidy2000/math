@@ -1,6 +1,6 @@
 # Concurrent Session Playbook
 
-**Current process — refreshed 2026-07-21.** `origin/main` is the shared live
+**Current process — refreshed 2026-07-22.** `origin/main` is the shared live
 research surface. Publish small coherent states often, but never absorb another
 session's uncommitted files merely to checkpoint yours.
 
@@ -85,9 +85,10 @@ smallest witness, repaired statement, or stopping certificate is useful state.
 
 ## Append-heavy files
 
-`.gitattributes` uses the union merge driver for several logs and indexes. It
-preserves both concurrent hunks but does not adjudicate truth, order entries,
-or remove duplicate lines. After any automatic union merge:
+`.gitattributes` uses the union merge driver only for genuinely append-only
+archives. It is deliberately disabled for bounded `SESSION-LOG.md`, the current
+hypothesis digest, and `MISTAKES.md`: those truth surfaces require semantic
+reconciliation. After any automatic union merge elsewhere:
 
 - check that no heading or ID was duplicated;
 - ensure correction/retraction order is intelligible;
@@ -96,10 +97,10 @@ or remove duplicate lines. After any automatic union merge:
   historical provenance.
 
 Recent correction-ID collisions are the canonical warning: a clean rebase can
-still create a semantically colliding ledger. Canonical 226 is augmentation/
-energy, 227 AP-chain saturation, 233 the modular-cusp bridge, 235 the S102
-weighted-fiber correction, 236 the THM-1330 scope correction, and 237 the
-HYP-8905 JC-bridge correction.
+still create a semantically colliding ledger. Canonical 230/231 are the inverse-
+class and observable-entropy corrections; 237 is the HYP-8905 JC bridge; 238
+is the empty-full-row dyadic transport error; and 239 is reversed guard
+containment. Always fetch and search filename, heading, and remote history.
 
 ## Computation and formalization
 

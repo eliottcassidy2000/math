@@ -32,9 +32,10 @@ counterexample -> primitive Cover14/non-AP peel kernel
                -> primitive owner intervals [THM-2058]
                -> clock binding [THM-2057] + exact CRT packet join [THM-2059]
                -> tail capacity/folded seam [THM-2060/2061/2064]
-               -> circuit rays + hereditary wheel [THM-2065/2062]
-               -> owner words / safe-child tower [THM-2066/2072/2073]
-               -> pair-sum / Fejer / Euler / rank discharge.
+               -> circuit rays + deletion-code wheel [THM-2065/2062/2069]
+               -> owner words / safe-child terminal [THM-2066/2072/2073/2075]
+               -> size 7..10, max>=25, depth<=4 [THM-2078/2080]
+               -> guard/address/tail-owner or global atlas discharge.
 ```
 
 Prioritize techniques that consume that relation without erasing phase or
@@ -47,7 +48,7 @@ observer data:
 | Missing-clock binding | core residues, unit numerator orbit, killed clocks, divisibility lattice, affine binding phase | Generalize THM-2057's `12a`/`14a`/`84a` and `13a`/`14a`/`182a` closures | The theorem closes two scaled AP one-tail planes, not every star. |
 | Primitive packet/owner interval | reduced phase order, full labels, bad `N`, hull owner, coprime longitudinal coordinate | THM-2058 gives divisor/Mobius packets, bulk/boundary/null support, and one interval minus collisions | Counts alone erase phase and owner; a surviving interval is not discharged. |
 | CRT packet join | core/tail safe residues and their reduction histograms modulo the CRT gcd | THM-2059 counts compatible classes by the dot product and grid phases after the `Na/lcm` lift | A zero dot product rejects one grid only; marginal packet sizes lose compatibility. |
-| Owner-word / safe-child descent | binary killed-lift word, safe clock, inherited owner, quotient core | THM-2066 closes bounded divisor-complete cores; THM-2073 adaptively descends nonhereditary ones | THM-2068 is menu-relative; THM-2072 proves no fixed finite bank is uniform; the hereditary terminal is open. |
+| Owner-word / safe-child descent | binary killed-lift word, safe clock, component address, inherited endpoint/tail owners, quotient core | THM-2066 closes bounded cores; THM-2073/2075/2077 retain the terminal carrier; THM-2078/2080 force max `>=25`, size `7..10`, depth `<=4` | THM-2072 forbids a uniform fixed bank; mirror symmetry only halves addresses; the unbounded hereditary terminal is open. |
 | Resonance fan | exact wall equations, pair-sum phases, cell labels, owner margins | Discharge whole disk cells symbolically as in HYP-2896 | A fan without a phase-height certificate is only a partition. |
 | Relative Fejer | bounded scalar/vector relation packets and a proved lifted plateau | Certify resonance-lift/nonaliasing cells using THM-2054's explicit budget | Numerical cutoff compatibility does not identify the model torus. |
 | Bounded relation code | exact row space, rank, support/height/sign/augmentation, and deletion incidence | Compress rank eleven stars or decide the separate rank twelve box | Repeated/dependent relations give no descent; rank twelve is finite, not yet decided. |
@@ -98,10 +99,10 @@ positive-speed gauge; calling disk membership unsafe; inventing a quadratic-
 form discriminant from `14`; accepting an unpointed safe direction; or
 orienting overlap ties arbitrarily.
 
-Anchors: THM-2051--2073 (with THM-2069/2074 RESERVED), THM-2047, THM-2048,
-HYP-8871, HYP-8841, HYP-8846, HYP-2896, and MISTAKE-226--237. In particular,
-THM-2060/2064 reduce tail capacity, THM-2065 makes circuit-free templates
-finite, and THM-2073 reaches but does not discharge a hereditary terminal.
+Anchors: THM-2051--2080, THM-2047, THM-2048, HYP-8871, HYP-8841,
+HYP-8846, HYP-2896, and MISTAKE-226--239. THM-2069 is a lossless deletion-code
+filter and THM-2074 is density-one only; THM-2073/2075/2077 reach but do not
+discharge the size-`7..10`, maximum-`>=25` hereditary terminal.
 
 Next agent hook: compute saturated reduced bases and tangent-disk intersections
 for the mandatory AP, lifted-AP, K33, delayed-period, and Cover14 controls;

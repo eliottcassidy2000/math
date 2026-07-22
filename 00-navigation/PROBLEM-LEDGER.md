@@ -4,7 +4,7 @@
 > [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) for current truth. Major later
 > changes include THM-2022 proving NC2/GMC(2), explicit GMC(3) counterexamples,
 > THM-2044/2045 separating rank-two Poisson from DC(2)/planar JC, partial NC2
-> Lean coverage, and corrections MISTAKE-211–237. Historical priority/provenance
+> Lean coverage, and corrections MISTAKE-211–239. Historical priority/provenance
 > claims below require primary-source and canon checks.
 
 ## Current portfolio at a glance
@@ -14,13 +14,13 @@ the obstruction that still matters; the long inventory below is provenance.
 
 | Area | Current truth | Highest-value next move |
 |---|---|---|
-| LRC(14) | Open. THM-2051--2065 give the bounded atlas, packets, capacity seam, hereditary wheel, and finite circuit-free ray branch. THM-2066 closes divisor-complete cores through `24`; THM-2068 is bounded-menu compression; THM-2072 forbids a universal fixed bank; THM-2073 descends to an open hereditarily primitive terminal. | Discharge hereditary terminals and persistent circuits, finish other labelled rank-eleven cells, and decide the rank-twelve box. Keep THM-2069/2074 reserved. |
-| NC2 / GMC | NC2/GMC(2) are paper-proved by THM-2022 using internal seed THM-2067; GMC is false from dimension three. Lean still has explicit `DvdK1` and `HeightWitnessSupplier` interfaces. THM-2070 refutes the general semigroup/saddle bypass. | Compose the checked height wrapper, formalize THM-2067, and exploit the surviving unique-channel/positive/two-charge strata. |
-| Jacobian / Dixmier / Poisson | THM-1300 refutes JC from dimension three; JC(2) and DC(2) remain open. THM-2063 closes the one-fiber-linear stratum and THM-2071 gives a quadratic-fiber square/parity gate. | Attack the nonconstant-square, odd reduced-degree `>=3` pencil cell; decide Weyl termination/coupled `D`; keep VC(4), Jelonek, and Newton descent separate. |
+| LRC(14) | Open. THM-2051--2069 give the atlas, packets, seam, deletion wheel, and finite circuit-free branch; THM-2074 proves density-one strict LRC. On the dyadic seam THM-2073/2075/2077 preserve the terminal carrier, THM-2078 forces maximum `>=25`, and THM-2080 forces depth `<=4` and size `7..10`. | Discharge unbounded hereditary terminals with guard/address/outer-tail owners intact; classify persistent circuits and other rank-eleven cells; decide the rank-twelve box. |
+| NC2 / GMC | NC2/GMC(2) are paper-proved by THM-2022 using internal seed THM-2067; GMC is false from dimension three. Standalone Lean closes the two-charge and positive-coefficient leaves, but general `DvdK1` and `HeightWitnessSupplier` remain explicit interfaces. | Redesign the timed-out height composition, formalize THM-2067, root-audit the special leaves, and isolate complex cancellation. |
+| Jacobian / Dixmier / Poisson | THM-1300 refutes JC from dimension three; JC(2) and DC(2) remain open. THM-2063 closes one-fiber-linear maps and THM-2071 closes all quadratic-fiber pencil cells. | Attack fiber degree `>=3` in every source/output-pencil direction; decide Weyl termination/coupled `D`; keep VC(4), Jelonek, and Newton descent separate. |
 | Tournaments | Join laws and strong-core localization are proved; the invariant lattice is exact only through `n<=6`. Positive game equilibria need skew symmetry plus mod-2 support parity. GLMY path homology in degree at least three is under an active convention dispute. | Attack `H>=disc`, classify operation laws, resolve the path-homology convention case, and track positive-kernel support rather than conflating games, flows, and topology. |
 | Reciprocal sequences | Support and indexed-multiplicity Dirichlet profiles are separated by a collision tax; Abel--Stieltjes/Dini/Bertrand boundary tests are available. | Build an operation calculus for support unions/products and connect collision structure to LRC denominator spectra. |
 | Arrangement carrier | THM-2047 proves the labelled phase-height carrier, top wedge, Euler detector, Fejer formula, and paired deletion; THM-2050 proves period-14 local germs are globally blind. | Find a deletion/localization invariant preserving owner, side, height, and global termination that can force the AP-core branch. |
-| Cross-domain wildcard | Many analogies survive only after naming the lost coordinate. MISTAKE-226 repairs diagonal energy; MISTAKE-230--234 quarantine universal entropy, composite-Paley clocks, modular-cusp LRC claims, and support-semigroup noncancellation. | Generate alternate objects/quotients, then demand a map, preserved predicate, hostile control, and explicit sidecar before promotion. |
+| Cross-domain wildcard | Many analogies survive only after naming the lost coordinate. MISTAKE-226/230--235 quarantine diagonal-energy, entropy, composite-Paley, modular-cusp, and support-semigroup overclaims; MISTAKE-238/239 repair two dyadic guard transfers. | Generate alternate objects/quotients, then demand a map, preserved predicate, hostile control, and explicit sidecar before promotion. |
 
 ## Legacy portfolio snapshot
 

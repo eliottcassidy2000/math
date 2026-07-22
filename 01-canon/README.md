@@ -27,11 +27,11 @@ Do not use `PROVED` for a finite census outside its universe, `CITED` for an
 abstract-level paraphrase, or `VERIFIED` for a theorem whose consequence was
 not actually computed.
 
-Current high-signal status: THM-2058--2068 and THM-2070--2073 are proved in
-their stated scopes; THM-2061/2065/2073 are reductions, not LRC(14), and
-THM-2069/2074 remain reserved. MISTAKE-235 repairs the LRC/GMC weighted-fiber
-claim, MISTAKE-236 narrows THM-1330 to a necessary atlas, and MISTAKE-237
-separates the binary symmetric JC subcase from the four-variable/planar routes.
+Current high-signal status: THM-2058--2080 are proved in their stated scopes;
+THM-2061/2065/2073 are reductions, THM-2069 is a deletion-code filter,
+THM-2074 is density-one only, and none proves LRC(14). MISTAKE-235 repairs the
+LRC/GMC weighted-fiber claim, MISTAKE-236/237 narrow the Jacobian claims, and
+MISTAKE-238/239 repair the dyadic outer-row and guard-direction transfers.
 
 ## Theorem record template
 

@@ -67,7 +67,13 @@ polynomials (all charges ≥1, or all ≤−1, no charge-0-straddle), then GMC(2
 additivity (THM-1510 §C and
 `THM-1540-gmc2-reduced-to-the-nullcone-structure-theorem`; Lean
 `mathieuZhao_of_charge_pos`, no `sorry`). The full Lean endpoint still takes
-`DvdK1` and `HeightWitnessSupplier` as explicit interfaces.
+`DvdK1` and `HeightWitnessSupplier` as explicit interfaces. Two standalone,
+sorry-free leaves are checked: `GMC2DvdKTwoCharge.lean` proves both two-charge
+orientations and `GMC2DvdKPositive.lean` proves the positive-real-coefficient
+case for arbitrary finite two-sided support. Neither is root-imported or
+handles general complex cancellation. A scratch supplier compositor was
+structurally written but timed out at `whnf` beyond 6.4M heartbeats; no theorem
+was committed.
 NC2 is a **stronger sufficient target**, not a proved reformulation equivalent to literal GMC(2).
 The repository's chosen NC2 route is therefore:
 

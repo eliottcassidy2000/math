@@ -1,3 +1,6 @@
+# RETRACTED LRC CONCLUSION — SEE MISTAKE-238.
+# The script's chi-zero terminal-descent claim is false: THM-2075 transports
+# nonempty core safe sets, not the empty safe set of the full seam candidate.
 #!/usr/bin/env python3
 """doubling_homeomorphism_meets_mirror_parity_boxeph_S227.py -- boxeph-2026-07-21-S227
 
@@ -20,6 +23,8 @@ Pillars:
 """
 from fractions import Fraction as F
 from math import gcd
+
+print("RETRACTION (MISTAKE-238): the chi-zero terminal-descent conclusion is false; surviving identities and computations follow.")
 
 def sep(t): print("\n"+"="*72+"\n"+t+"\n"+"="*72)
 def frac_norm(x): x%=1.0; return min(x,1-x)

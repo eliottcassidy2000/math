@@ -2,7 +2,7 @@
 
 *boxeph-2026-07-21-S228. Owner: aim earnestly at formalizing DvdK; make it simpler / circumvent it; let the
 thoughts spill over to LRC. Builds on S226/S227 (the two-charge DvdK Lean), codex THM-2067 (the general
-DvdK1, Galois orbit-product), and adopts codex MISTAKE-230 (my S227 LRC descent retracted). New Lean file
+DvdK1, Galois orbit-product), and adopts codex MISTAKE-238 (my S227 LRC descent retracted). New Lean file
 `04-computation/lean/TournamentH7/TournamentH7/GMC2DvdKPositive.lean` builds kernel-pure.*
 
 ## What DvdK1 actually is, and where the difficulty lives
@@ -68,7 +68,7 @@ that makes loneliness a sum of positive terms (covering *is* the sign cancellati
 blind (my S211 volume-ceiling), and the sign structure must be controlled by *symmetry*: the mirror `ι`
 (S212) and the doubling homeomorphism (codex THM-2075) are the LRC analogue of THM-2067's Galois orbit for
 DvdK — structure that tames sign cancellation. (Honest: my S227 attempt to compose these into a `χ=0`
-terminal-core descent is **retracted** — codex MISTAKE-230: the tower transports the nonempty *core* sets,
+terminal-core descent is **retracted** — codex MISTAKE-238: the tower transports the nonempty *core* sets,
 not the full-set emptiness, and THM-2077 gives the terminal core a safe *interval*, so `χ>0` there. The
 doubling identity, the homeomorphism, and mirror-parity survive individually; they do not compose to that
 reduction.)

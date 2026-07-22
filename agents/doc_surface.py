@@ -1,6 +1,6 @@
 """Single source of truth for bounded agent-facing documentation and routing."""
 
-FRONTIER_EPOCH = "2026-07-21"
+FRONTIER_EPOCH = "2026-07-22"
 
 ALWAYS_READ_ROUTES = (
     "00-navigation/START-HERE.md",

@@ -2,7 +2,7 @@
 id: THM-2078
 title: "Bounded terminal guard-containment closure through height 24"
 status: >
-  PROVED by exact integer-bitset census. No nontrivial THM-2073 dyadic tower
+  FINITE-EXACT / PROVED by exact integer-bitset census. No nontrivial THM-2073 dyadic tower
   can have terminal maximum at most 24. THM-2076 originally restricts
   terminal size to 6 through 10 and THM-2080 subsequently removes rank 6;
   the terminal maximizer interval bounds the preceding odd

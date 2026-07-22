@@ -1,8 +1,6 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-07-21; update whenever a headline status changes.** This page is a router, not a proof source.
-The startup packet prints the exact current commit. Status labels and proof links live in
-[`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md).
+**Rolling brief — refreshed 2026-07-22; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
 
 ## The five-minute orientation
 
@@ -13,8 +11,9 @@ The startup packet prints the exact current commit. Status labels and proof link
 3. **Major new closure:** NC2, hence unrestricted GMC(2), is **PROVED in repo
    canon** by THM-2022, with the one-variable seed now proved internally by
    THM-2067. Lean checks the residue, support-face, contradiction, extractor,
-   and height ingredients; `DvdK1` and `HeightWitnessSupplier` remain explicit
-   interfaces, so the paper proof is not yet a complete formal proof.
+   and height ingredients; standalone Lean modules prove the two-charge and
+   positive-coefficient leaves, but `DvdK1` and `HeightWitnessSupplier` remain
+   explicit interfaces, so the paper proof is not yet fully formalized.
 4. **Truth discipline:** correction/repaired canon outranks canon, which
    outranks exact computation, hypothesis, synthesis, and historical prose.
 5. **Research posture:** use an Anchor / Niche / Wildcard portfolio. Recover
@@ -72,10 +71,10 @@ are searchable history—not mandatory warm-up.
     is the support Dirichlet profile, with Abel–Stieltjes/log-block Dini and the
     full Bertrand boundary at `z=1`.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300
-    is the exact new counterexample. THM-2063 closes every one-fiber-linear
-    planar pair; THM-2071 makes the first quadratic-fiber survivor have a
-    nonconstant-square leading coefficient and odd reduced degree at least
-    three. These are pencil gates, not a global cover/Jelonek classification.
+    is the exact new counterexample. THM-2063 closes one-fiber-linear pairs;
+    THM-2071 closes every quadratic-fiber pencil cell: any survivor has fiber
+    degree at least three in every direction. This is not a generic-cover,
+    Jelonek, VC(4), or full planar classification.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed
@@ -102,10 +101,11 @@ are searchable history—not mandatory warm-up.
     arbitrary-clock core/tail packets by CRT but does not force overlap.
     THM-2060/2064 reduce capacity to a dyadic seam; THM-2061/2062 fold it and
     add a hereditary wheel; THM-2065 makes circuit-free templates finite;
-    THM-2066 closes divisor-complete cores through `24`; THM-2068 finds a
-    seven-clock minimum only inside `15..34`; and THM-2072/2073 prove fixed
-    banks cannot be universal and replace them by a depth-at-most-eight
-    safe-child tower. Its hereditarily primitive terminal remains open.
+    THM-2066 closes divisor-complete cores through `24`; THM-2069 proves the
+    deletion-code/cogirth wheel; THM-2074 proves density-one strict LRC(14).
+    THM-2072/2073/2075/2077 retain the dyadic terminal and owner addresses;
+    THM-2078/2080 force size `7..10`, maximum `>=25`, and depth `<=4`.
+    MISTAKE-238/239 block two tempting but invalid guard transfers.
 16. **Shared syntax is not a bridge.** MISTAKE-230--233/HYP-8885 retract the
     universal entropy/modular frame; MISTAKE-235 leaves S102's LRC/GMC sums as
     analogy, not AP-core reduction. Fiber size is observable-relative, and
@@ -116,7 +116,7 @@ are searchable history—not mandatory warm-up.
 
 | Topic | Read first | Then use |
 |---|---|---|
-| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2073; keep THM-2069/2074 reserved |
+| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2080; preserve terminal address/owner/guard sidecars |
 | LRC / Frobenius wildcard | [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) | THM-2041 packets; keep seed and pointwise exit explicit |
 | LRC literature | [`CORE-PAPERS.md#lonely-runner-conjecture`](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [`LRC-TECHNIQUE-INDEX.md`](LRC-TECHNIQUE-INDEX.md), source paper |
 | NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2067/2070, formal interfaces, guardrails |

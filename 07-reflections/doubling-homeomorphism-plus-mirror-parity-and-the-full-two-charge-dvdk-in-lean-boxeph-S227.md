@@ -1,6 +1,6 @@
 # Doubling homeomorphism + mirror-parity; and the full two-charge DvdK in Lean
 
-> **LRC CORRECTION (MISTAKE-230):** the claimed `chi(G_S)=0` descent is
+> **LRC CORRECTION (MISTAKE-238):** the claimed `chi(G_S)=0` descent is
 > retracted. A seam counterexample makes the full safe set
 > `G_(2C union {x,y})` empty, whereas THM-2075 transports the different,
 > nonempty core sets `G_C ~= G_(Q_r)`. Deleting the two odd tails loses the

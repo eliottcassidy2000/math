@@ -30,44 +30,38 @@ needed, not read wholesale at every startup.
 
 ## Current orientation
 
-As of 2026-07-21:
+As of 2026-07-22:
 
 - **LRC(14) is OPEN.** The conjecture is known through 13 total runners; the
-  repo's remaining work is structural, not the once-claimed uniform `q <= 25`
-  shortcut, which is false. THM-2051 now closes the relation-dissociated
-  branch after paying pairs exactly: every hypothetical counterexample has a
-  genuine 3--5-term relation of height at most `2^20`. THM-2052 forces relation
-  rank at least eleven: rank twelve is a finite maximal-minor box, while rank
-  eleven reduces to finitely many two-anchor, one-projective-parameter stars.
-  THM-2053 adds the exact transverse deck `D_N(m)` and a sufficient determinant
-  gate whose strict failure carrier is an indexed union of 26 open tangent
-  disks; THM-2055/2056 compress that fixed-basis
-  determinant side into a signed-hull normal fan and a rational Kelvin/Farey
-  certificate. THM-2057 closes two scaled AP one-tail planes: the omitted-12
-  core by `12a`/`14a` clocks and an `84a|w` binding phase, and the full
-  `{1,...,12}` core by `13a`/`14a` clocks and a `182a|w` deep-well phase. The
-  later chain makes the residual sharper: THM-2058/2059 give phase packets and
-  CRT joins; THM-2060/2064 isolate a dyadic seam; THM-2061/2062 fold it and add
-  a hereditary wheel; THM-2065 makes circuit-free templates finite; THM-2066
-  closes divisor-complete cores through `24`; THM-2068 compresses that bounded
-  census; and THM-2072/2073 replace the impossible universal fixed bank by an
-  adaptive depth-at-most-eight safe-child tower. LRC(14) remains open at its
-  hereditarily primitive terminal, persistent circuits, and other atlas cells.
+  repo's remaining work is structural, not the false uniform `q <= 25`
+  shortcut. THM-2051/2052 force a bounded sparse relation code of rank at least
+  eleven and a finite rank-twelve box or two-anchor atlas; THM-2053--2069 add
+  exact decks, owner fans, packets, clocks, deletion wheels, and finite
+  circuit-free rays. THM-2074 proves strict loneliness for density-one rows.
+  On the remaining dyadic seam, THM-2073/2075/2077 retain a lossless terminal
+  core/address/owner carrier, THM-2078 excludes terminal maximum at most `24`,
+  and THM-2080 forces nontrivial depth at most four. The live terminal has size
+  `7..10`, maximum at least `25`, and global odd-guard plus outer-tail owner
+  constraints. Hereditary terminals, persistent circuits, other atlas cells,
+  and the rank-twelve box remain open.
 - **NC2 and GMC(2) are PROVED in repo canon** by THM-2022's lowest-balanced-face
   Frobenius argument. THM-2067 supplies its bare one-variable constant-term
   seed internally; full DvdK is only a stronger alternate. Lean checks the
   residue, face transport, contradiction, extractor, and height ingredients,
   while `DvdK1` and `HeightWitnessSupplier` remain explicit interfaces—the
-  paper theorem is not yet fully formalized. THM-2070 explains why a cofinite
-  support-return semigroup cannot replace coefficient noncancellation.
+  paper theorem is not yet fully formalized. Standalone, sorry-free modules
+  handle two charges and arbitrary positive real coefficients; neither is
+  root-imported or resolves complex cancellation. THM-2070 explains why a
+  cofinite support-return semigroup cannot replace noncancellation.
 - **GMC is false from dimension 3 onward.** Dimension two is the sharp surviving
   case handled by THM-2022; dimensions one and two must not be conflated with
   the higher-dimensional counterexamples.
 - **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300
   gives the exact three-variable certificate. THM-2063 tames one-fiber-linear
-  planar pairs, and THM-2071 forces a square leading coefficient with odd
-  reduced degree at least three in the first quadratic-fiber survivor. Neither
-  is a cover-degree classification or an NC2/GMC bridge (MISTAKE-236/237).
+  planar pairs, and THM-2071 closes every quadratic-fiber pencil cell. Any
+  survivor has fiber degree at least three in every source/output-pencil
+  direction. This is not a cover-degree theorem or NC2/GMC bridge
+  (MISTAKE-236/237).
 - **Tournament work has moved from isolated invariants to operations and
   decomposition:** order-join, strong cores, signed Rédei data, local
   subtournament censuses, and invariant-independence witnesses. Rank matches

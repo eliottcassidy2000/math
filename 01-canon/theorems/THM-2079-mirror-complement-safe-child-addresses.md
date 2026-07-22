@@ -16,7 +16,7 @@ depends_on:
   - THM-2075
 related:
   - THM-2078
-  - MISTAKE-230
+  - MISTAKE-238
   - HYP-8845
 ---
 
@@ -78,7 +78,7 @@ and
 ```
 
 Positivity follows independently from settled lower-dimensional LRC. This is
-the valid mirror-parity conclusion retained after MISTAKE-230.
+the valid mirror-parity conclusion retained after MISTAKE-238.
 
 ## 2. Every safe-child section is equivariant
 
