@@ -202,9 +202,10 @@ reduction is nonzero, it is projectively parallel to the guard.  Equivalently,
 13^2 divides det(g,c_*).                              (20)
 ```
 
-This is the promised toothpick self-similarity: after one division step, `u`
-is either a new blocker (`u=0 mod 13`) or an aligned nonblocker.  In both
-cases the surviving branch recreates a deeper guard/blocker pencil.
+This is one additional thirteen-adic alignment digit.  After one division
+step, `u` is either a new blocker (`u=0 mod 13`) or an aligned nonblocker.
+The theorem does not by itself supply a fresh divided cover or license
+iteration of the same fibre argument.
 
 ## 4. Scope and Tournament Analysis
 
