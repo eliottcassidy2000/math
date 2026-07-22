@@ -48,27 +48,26 @@ mistake.
     `17/41` exit; THM-2050 gives identical complete unit-phase germs with
     maxima `1/14` and `1/12`. Retain owner height and a global
     first-exit/magnitude/gluing sidecar.
+13. **The coarse BONF5 middle is closed; the relation branch is not.** THM-2051
+    forces a support-`3..5` relation of height at most `2^20`. It does not
+    classify its relation hyperplanes or the relation-rich AP boundary.
+14. **A deck/disk/Farey failure is uncertified, not unsafe.** THM-2053 supplies
+    `D_N(m)` and an indexed union of 26 open tangent disks; THM-2055/2056 give
+    the signed-hull fan and an existential finite Kelvin/Farey certificate. The
+    determinant polygon is basis-dependent and not a Heegner form (MISTAKE-229);
+    hull deletion applies only to its maximum. Keep non-hull runners and tie owners in the
+    deck, clock, pair-sum, and endpoint sidecars.
+15. **THM-2057 closes two planes; THM-2059 only joins packets.** The former
+    closes `{a,2a,...,11a,13a,w}` through `12a`/`14a` clocks and an `84a|w`
+    binding branch, and `{a,2a,...,12a,w}` through `13a`/`14a` clocks and a
+    `182a|w` deep-well branch. THM-2059 exactly counts arbitrary-clock CRT
+    overlaps on one-tail cells; zero overlap rejects that grid, not the row.
+16. **THM-2058 is a carrier theorem, not LRC(14).** It proves exact primitive-
+    order packets, longitudinal label transport, the bulk/boundary/null
+    trichotomy, and one coprime interval per fixed bad denominator and hull
+    owner. It does not prove every surviving interval empty or safe.
 
-13b. **The coarse BONF5 middle is now closed, but the higher-relation branch is
-     not.** THM-2051 combines whole-product Fejer--BV approximation with
-     THM-965's sharp pair-covariance floor. Absence of every exact support-
-     three-through-five relation with coefficient height at most `2^20`
-     forces continuous `BONF5>0`, hence a positive-measure strict lonely set.
-     This bypasses the open THM-946 termwise `T4/T5` strip/slab estimates. It
-     THM-2065 turns a nonpersistent relation into one two-anchor ray, but a
-     persistent marked circuit leaves the whole plane and is the exact residual.
-
-13c. **The THM-2053 determinant gate is polygonal, not a Heegner form.**
-     MISTAKE-225 corrects HYP-8865. `max_i|a z_i-b u_i|` is the support norm
-     of `conv{+-c_i}`; the Euclidean right side has discriminant `-4`, not
-     `-7`. Gate failure means uncertified, not isotropic/rank or
-     anisotropic/Euler. Use THM-2055's signed hull normal fan and tangent
-     sectors or THM-2056's Kelvin-polar/Farey certificate; restore a genuine
-     phase sidecar before concluding LRC. THM-2057 is the control: its whole
-     one-tail plane is closed by scaled clock orbits and affine binding even
-     though the determinant residual contains `640690` distinct-speed rays.
-
-13d. **LRC clocks are not modular cusps without a carrier map.** MISTAKE-226
+13d. **LRC clocks are not modular cusps without a carrier map.** MISTAKE-233
      corrects HYP-8880/S220. Divisors label both useful clock subgroups and
      representatives in the modular-cusp count, but this shared index does not
      preserve the LRC phase-height predicate. `X_0(12)` has six cusps; genus
@@ -81,10 +80,9 @@ mistake.
      packets form a CRT fiber product, and their reduction-histogram dot
      product counts the actual safe grid phases for every modulus.
 
-13e. **Keep strict/boundary and clock completeness visible.** MISTAKE-227: the
+13e. **Keep strict/boundary and clock completeness visible.** MISTAKE-235: the
      strict integral misses tight weak phases; use Fejer bulk and THM-2058 packets. In
      THM-2060 `a|w` does not mean packet zero, finite clocks are not a bulk iff; THM-2061/2064 require a closed weak core inside strictly open tail teeth; THM-2062 can kill a fixed `N` fiber at `p=2` but has positive global direction density.
-
 13f. **Safe-child homeomorphisms transport nonempty core safe sets, not deleted-tail covers.** MISTAKE-230: never infer terminal `chi=0` from empty `G_(2C union {x,y})`; retain the odd tails' eligibility/owner sidecar via THM-2077 addresses and H-drift.
 
 ## NC2 / GMC
@@ -151,19 +149,46 @@ mistake.
 34. **Finite prefixes and proxy supports are not all-`n` laws.** MISTAKE-219
     repairs offsets, truncated constants, and support substitutions in the
     reciprocal atlas. Freeze the actual support and quantify the tail.
-34. **No OEIS match is not novelty.** THM-2010 has only short initial data and a
-    search result; do not promote it to a proof that a sequence is new.
-35. **Separate verification from provenance.** MISTAKE-205 withdraws the old
-    Alpöge–Mathew attribution for THM-1300. State the exactly verified map and
-    collision independently of uncertain discovery/publication history.
-31. **A shared Pascal array is not a geometric bridge.** MISTAKE-222. Exact
-    binomial identities and matching `-1` defects do not identify torus and
-    shadow-lattice boundaries or transfer predicates. Require one explicit
-    valuation/boundary operation with matching source objects and losses.
-
-32. **Count canonical pairs, not displayed variables.** An `A_3 -> A_3`
-    certificate with four phase variables is not an `A_2` Weyl pullback;
-    THM-2046 forces a Keller map, so DC(2) descent must be nonfiltered.
+35. **No OEIS match is not novelty.** THM-2010's short data and search result do not prove that a sequence is new.
+36. **A shared Pascal array is not a geometric bridge.** MISTAKE-222. HYP-8820's
+    exact binomial identities and `bagel-cake=T_n-1` do not identify torus and
+    shadow boundaries or transfer LRC/JC. Demand one explicit common valuation
+    or boundary-cell operation and a loss ledger.
+37. **Braid localization does not factor every wall object.** MISTAKE-223.
+    Its exact source facts survive, but THM-2033 is special-matrix scope and no
+    hyper-Bessel or bagel/shadow Euler transfer follows without a map.
+38. **Poisson rank two is not DC(2) or planar JC.** THM-2044 disproves the
+    two-pair Poisson conjecture in four commutative variables. It does not
+    automatically quantize to `A_2`. THM-2045 excludes planar mates only for
+    `R=x(a-b*x^r*q^s)`; DC(2) and planar JC remain open.
+39. **A thickened safe set is not an ordinary toric complement.** MISTAKE-224.
+    Fourier annihilators do not give the selected-side layer poset. THM-2047's
+    live carrier keeps side, height, owner, sign, and paired deletion; it does
+    not prove Wall-A localization.
+40. **Antisymmetry is not the whole tournament-game or torus theorem.**
+    MISTAKE-225. Odd optimal support also uses the tournament block modulo two;
+    pure optimum means Condorcet winner, not transitivity. RPS levels are
+    circles in a simplex, the cutting bagel is a solid torus, and game/Morse/
+    dynamical saddles plus the three sign actions remain distinct without maps.
+41. **Diagonal additive energy is not the LRC relation lattice; shared kernels are not bridges.** MISTAKE-226/235.
+    `CT[P^m Pbar^m]` sees only augmentation zero; LRC sinc sums and GMC moments
+    have different weights and index constraints. Retain mixed grading or an
+    observer, give the map and its loss ledger, and control the full tail.
+    No-carry tensorization, finite examples, or Bessel/sinc syntax supplies a
+    GMC-to-LRC implication or an AP-core reduction.
+42. **Fiber cardinality is observable-relative Hartley ambiguity, not a
+    repo-wide entropy law.** MISTAKE-230/231 retract S217/S218. Regular
+    five-tournaments do not maximize score fibers; finite CF prefixes have
+    continuum many extensions; five moments do not determine the atom at zero;
+    and genus/class data require an explicit quotient and probability model.
+43. **Scaled clocks are not automatically modular cusps or Frobenius.**
+    MISTAKE-232 retracts HYP-8876's composite-14 Paley and proof-shape transfer.
+    The valid THM-2057 clock proof is elementary unit-orbit arithmetic.
+44. **`f14`, genus, and discriminant `-7` are not the LRC obstruction.**
+    MISTAKE-233 retracts S219/S220/HYP-8880; HYP-8885 may use “cusp” only as a
+    typed metaphor. Scaling is not a proved Gamma-zero level, cusps are not
+    clocks, and the non-CM level-14 newform has rational coefficient field—not
+    period field `Q(sqrt(-7))`. No loneliness-preserving map was supplied.
 
 33. **A binary symmetric Hessian is not full symmetric JC(2).** MISTAKE-229. The
     four-variable VC route has no proved NC2/GMC chain or descent equivalence.

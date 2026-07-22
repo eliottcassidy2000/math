@@ -381,3 +381,16 @@ and can turn node equality, scalar order, or proof regimes into a contentless
 is part of the theorem.
 **Evidence:** MISTAKE-212, MISTAKE-214, and the tournament audit in
 [`the-underlying-object-is-the-support-dirichlet-profile-codex-20260721.md`](../07-reflections/the-underlying-object-is-the-support-dirichlet-profile-codex-20260721.md).
+
+## Type a shared sum as a weighted fiber before transferring it
+
+**Trigger:** two problems are both written as “a sum over a kernel.”
+**Action:** record `Z(M,A,b,w)=sum_{x in M, Ax=b} w(x)`, including the monoid,
+grading/fiber, regularization, weight ring, and target predicate on each side.
+**Mechanism:** LRC uses an infinite Fejer-regularized fiber in `Z^n` with sinc
+weights; a fixed GMC moment uses a finite fiber in `N^s` of `(1,q)` with
+multinomial, factorial, radial, and coefficient weights. The schema is shared,
+but the typed objects and quantifiers are not.
+**Counterindication:** transfer only after a map intertwines the fibers and
+weights and preserves the desired nonvanishing or witness predicate.
+**Evidence:** MISTAKE-226/234/235 and THM-2059's successful typed CRT fiber product.

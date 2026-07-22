@@ -62,6 +62,7 @@ HEADLINE_SENTINELS = {
         "THM-2058 is an unproved empty stub",
         "MISTAKE-230--233",
         "HYP-8885",
+        "MISTAKE-235",
     ),
     "00-navigation/CURRENT-FRONTIER.md": (
         "## LRC(14)",
@@ -94,6 +95,7 @@ HEADLINE_SENTINELS = {
         "A thickened safe set is not an ordinary toric complement",
         "Antisymmetry is not the whole tournament-game or torus theorem",
         "Diagonal additive energy is not the LRC relation lattice",
+        "MISTAKE-226/235",
         "NC2/GMC(2) is proved, not fully formalized",
         "HYP-8878 removes that citation only",
         "THM-2059 only joins packets",
@@ -451,7 +453,7 @@ def main() -> int:
         if count > 1:
             errors.append(f"MISTAKES.md: current-range MISTAKE-{value} occurs {count} times")
 
-    for value in (230, 231, 232, 233, 234):
+    for value in (230, 231, 232, 233, 234, 235):
         if f"## MISTAKE-{value}" not in mistakes:
             errors.append(f"MISTAKES.md: current correction MISTAKE-{value} is missing")
 
@@ -499,7 +501,7 @@ def main() -> int:
             errors.append(
                 f"hypotheses/INDEX.md: current-range HYP-{value} occurs {count} times"
             )
-    for value in (8878, 8885, 8890, 8895, 8900):
+    for value in (8878, 8879, 8885, 8890, 8895, 8900):
         if f"HYP-{value}" not in current_digest:
             errors.append(
                 f"hypotheses/INDEX.md: current digest lacks incoming HYP-{value} routing"

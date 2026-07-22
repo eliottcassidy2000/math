@@ -1,13 +1,12 @@
-mu(lonely) = MAIN ((1-2d)^n = clock/Eisenstein floor = THM-878 6/7 for LRC14) + resonance corrections.
-core                        main |corr|/main  mu(res) mu(direct)            verdict
-Sidon {1,2,5,11}          0.1296       0.030   0.1335     0.1382    robustly LONELY
-AP {1,2,3,4}              0.1296       0.888   0.0145     0.0000 tight (AP, can cancel)
-Sidon {1,2,5,11,22}       0.1317       0.099   0.1447     0.1363    robustly LONELY
-AP {1,2,3,4,5}            0.1317       0.964   0.0047     0.0000 tight (AP, can cancel)
+CORRECTED BY MISTAKE-235: K=9 samples illustrate an LRC kernel expansion; they do not identify GMC or reduce LRC(14) to AP cores.
+FINITE K=9 BOX SUM versus a midpoint-grid estimate; no Fourier-tail bound is asserted.
+core                        main  |box|/main main+box  grid est.              scope
+Sidon {1,2,5,11}          0.1296       0.030   0.1335     0.1382 finite sample only
+AP {1,2,3,4}              0.1296       0.888   0.0145     0.0000 finite sample only
+Sidon {1,2,5,11,22}       0.1317       0.099   0.1447     0.1363 finite sample only
+AP {1,2,3,4,5}            0.1317       0.964   0.0047     0.0000 finite sample only
 
-REDUCTION: low-resonance (Sidon) cores have |corr|/main<<1 => mu>0 => NOT covering (lonely).
-Only maximal-resonance (AP) cores approach cancellation of the floor. LRC(14) reduces to the
-AP-neighborhood = GMC2 coincident-cycle hard stratum (S101) = degenerate tournament zeta (S99).
-UNIFICATION: mu(lonely)=sum over {k: sum k_i v_i=0} prod hat_g_{k_i}  is the SAME integer-kernel
-resonance sum as the GMC2 moment E[P^m]=sum over balanced channels; non-cancellation is the shared
-hard problem, extremal at the AP (relation-rich = many coincident minimal cycles).
+NO REDUCTION: four n=4/5 rows and a K=9 box do not control the full Fourier tail or any LRC(14) row.
+SURVIVOR: the LRC measure has a Fejer-regularized weighted relation-lattice expansion.
+TYPE WARNING: a fixed GMC moment is a different finite mass-graded fiber with different weights;
+no map to GMC or tournament zeta and no AP-neighborhood theorem is supplied. See MISTAKE-235.

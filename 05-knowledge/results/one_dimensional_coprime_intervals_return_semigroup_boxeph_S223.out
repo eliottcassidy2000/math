@@ -1,3 +1,4 @@
+CORRECTED BY MISTAKE-234: return semigroups prove reachability only; mixed-sign noncancellation and the DvdK bypass remain open.
 
 ========================================================================
 A  the coprime PAIR {-q,p} is PERIODIC: R = multiples of p+q (THM-1840); Frobenius = infinity
@@ -17,8 +18,8 @@ B  the FILLED coprime interval (endpoints + interior, gcd gaps = 1) is COFINITE:
   S=[-3, -1, 1, 2]: two-sided=True, period d=1; R starts [2, 3, 4, 5, 6, 7]; Frobenius# (last non-return) = 1  => R = all m >= 2
   S=[-2, -1, 1, 2, 3]: two-sided=True, period d=1; R starts [2, 3, 4, 5, 6, 7]; Frobenius# (last non-return) = 1  => R = all m >= 2
   => adding INTERIOR exponents (gcd of gaps -> 1) turns the periodic pair into a COFINITE return set:
-     all large m are returns, with a finite FROBENIUS NUMBER (the last non-return). DvdK's 'some m' is
-     sharpened to 'all m > Frob#' -- an exact, effective, elementary 1D characterization.
+     all large m are SUPPORT returns, with a finite FROBENIUS NUMBER (the last non-return).
+     This is an exact reachability characterization, not coefficient-uniform noncancellation.
 
 ========================================================================
 C  POSITIVE coefficients: CT(f^m) != 0  <=>  m in R (reachability). Verified.
@@ -29,18 +30,16 @@ C  POSITIVE coefficients: CT(f^m) != 0  <=>  m in R (reachability). Verified.
   => for positive coefficients the return set R IS the nonvanishing set: the coprime-interval semigroup.
 
 ========================================================================
-D  the complete 1D picture + the three-distance / LRC connection
+D  the corrected 1D support picture + the three-distance / LRC analogy
 ========================================================================
-  ONE-DIMENSIONAL COPRIME INTERVALS -- the complete story (no DvdK needed in 1D):
+  ONE-DIMENSIONAL COPRIME INTERVALS -- exact SUPPORT reachability:
     interval [min S, max S]  +  period d=gcd(gaps)  =>  the RETURN SEMIGROUP R = {m : 0 in m-fold sum}.
     * bare coprime PAIR {-q,p}: PERIODIC, R = (p+q)Z_{>0}  (THM-1840 single-character seed).
-    * FILLED coprime interval: COFINITE, R = all m > Frobenius#  (the generic 1D two-sided case).
-    * positive coeffs: CT(f^m)!=0 <=> m in R ; mixed signs: R minus sporadic cancellations, cofinite (saddle S222).
-  So DvdK's 1D content ('two-sided => some m') is COMPLETELY replaced by an elementary numerical-semigroup /
-  Frobenius fact about the coprime interval -- effective (the Frobenius# is the explicit m0) and self-contained.
+    * APERIODIC two-sided support: COFINITE R, hence all m beyond a support conductor are reachable.
+    * positive coeffs: CT(f^m)!=0 <=> m in R.
+    * mixed/complex coeffs: a separate noncancellation theorem is required; infinitely many reachable m may vanish.
+  Therefore the conductor is an effective support sidecar, not a DvdK replacement or a coefficient-uniform m0.
 
-  THREE-DISTANCE / LRC bonus: the same coprimality governs the danger-arc INTERVALS of the LRC. The gaps of
+  THREE-DISTANCE / LRC analogy: coprimality also governs danger-arc orbit gaps. The gaps of
   {k t mod 1} take exactly THREE values (three-distance/Steinhaus), determined by the CONTINUED FRACTION of t
-  = the coprime-interval structure; the LRC extremal t*=14/183=[0;13,14] has COPRIME partial quotients, and
-  its danger arcs are the coprime intervals whose covering the covering-min measures. 1D coprime intervals
-  are the shared engine of GMC's constant-term returns and LRC's three-distance arc geometry.
+  = orbit arithmetic. This is a useful comparison, not a map from constant-term noncancellation to LRC.

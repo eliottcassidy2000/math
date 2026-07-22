@@ -38,8 +38,8 @@ is exact and potentially scalable.
 ## How this changes the finish target
 
 THM-2058 currently reserves a primitive phase-order and longitudinal-interval
-carrier but remains a claimed stub in the checked tree. Its eventual packet
-counts should feed directly into THM-2059's `alpha` histogram. The tail
+carrier but remains an empty unproved stub in the checked tree. If those packet
+counts are eventually proved, they should feed into THM-2059's `alpha` histogram. The tail
 interval supplies `beta`; the CRT dot product becomes the exact acceptance
 test. This suggests the following finite pipeline inside every THM-2053 deck:
 

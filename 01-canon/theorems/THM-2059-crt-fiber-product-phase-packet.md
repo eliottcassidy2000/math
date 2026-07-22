@@ -3,33 +3,36 @@ id: THM-2059
 title: "CRT fiber-product formula for one-tail safe-phase packets"
 status: >
   PROVED. For every scaled core aC with one tail w and every clock N, the
-  safe phases t=k/(Na) are exactly a CRT fiber product of a core packet modulo
-  N and a tail packet modulo Na/gcd(w,Na). Their number is an explicit dot
-  product of residue-class histograms. The dot product has an exact zero-mode
-  plus finite-Fourier-fluctuation split and a Cauchy certificate. This extends
-  the phase-packet carrier to arbitrary moduli and recovers THM-2057 as a
-  special nonemptiness lemma; it is a certificate generator, not LRC(14).
+  safe conditions at t=k/(Na) form a CRT fiber product of a core packet modulo
+  N and a tail packet modulo Na/gcd(w,Na). A residue-histogram dot product
+  counts compatible classes modulo their lcm; multiplying by the lift factor
+  Na/lcm counts safe grid indices. The dot product has an exact zero-mode plus
+  finite-Fourier-fluctuation split and a Cauchy certificate. This gives
+  an exact phase-packet carrier at arbitrary moduli and packages the
+  missing-clock step used in THM-2057; it is a certificate generator, not
+  LRC(14).
 source: codex-2026-07-21-LRC-CRT-packet
 script: 04-computation/lrc_crt_phase_packet_codex_20260721.py
 result: 05-knowledge/results/lrc_crt_phase_packet_codex_20260721.out
 script_sha256: dd42a0c3369bfede13ddda1871ab6e1db3280a879f2e735093e4713c0010ae7c
 result_sha256: 922a12e188a35b607d8e760fd03b001e0054159a26b6e7cb2c20a52252b2c26e
 hash_basis: normalized repository blobs (LF)
-depends_on:
+depends_on: []
+related:
   - THM-1002
   - THM-2047
   - THM-2057
-related:
   - THM-2053
   - THM-2058
   - HYP-8846
   - HYP-8871
-  - MISTAKE-226
+  - MISTAKE-233
 ---
 
 # THM-2059 -- CRT fiber products are the exact one-tail clock carrier
 
-Let `C` be a finite set of positive integers and let
+Let `C` be a finite set of positive integers, let `a,w,N` be positive
+integers, and let
 
 ```text
 S=aC union {w},        Q=Na,
@@ -69,8 +72,8 @@ The number of safe grid indices `k mod Q` at phases `t=k/Q` is exactly
 (Q/lcm(N,h)) P_N(C;a,w).                                  (6)
 ```
 
-In particular, a positive dot product in (5) is an exact LRC(14)
-certificate for the row `S`.
+In particular, a positive dot product in (5) proves `M(S)>=1/14`. It is an
+LRC(14) instance certificate when `S` is a thirteen-speed relative row.
 
 ## Proof
 
@@ -100,19 +103,24 @@ phase, proving the certificate claim. QED.
 
 ## Relation to the missing-clock sieve
 
-THM-2057 is the especially rigid small-clock case. If `2<=N<=14` and no
+The missing-clock step inside THM-2057 is the especially rigid small-clock
+case. If `2<=N<=14` and no
 member of `C` is divisible by `N`, then every unit `r mod N` lies in
 `A_N(C)`: each `cr` is a nonzero residue and hence has centered distance at
 least `1`, while `1/N>=1/14`. THM-2057's central-unit lift proves that the
-histograms in (4) overlap whenever `Na` does not divide `w`. Its conclusion
-`Na|w` for a hypothetical counterexample is therefore a nonemptiness theorem
-for the exact dot product (5).
+histograms in (4) overlap whenever `Na` does not divide `w`. Thus the
+missing-clock conclusion `Na|w` for a hypothetical counterexample is a
+nonemptiness application of the exact dot product (5). THM-2057's two full
+plane closures additionally require their separate affine binding phases.
 
 The gain is that (5) remains exact for `N>14`, when neither all nonzero
 residues nor all units are automatically safe. Instead of discarding those
 clocks, one computes the actual core packet and asks whether its reduction
 histogram overlaps the tail packet. This is the natural join with the
-primitive phase-order counts claimed in THM-2058.
+primitive phase-order counts proposed in the RESERVED / UNPROVED THM-2058
+stub; no such counts are supplied there.
+
+A zero overlap rejects only that clock grid, not the row.
 
 ## Exact bulk/fluctuation split
 
@@ -149,8 +157,9 @@ P_N=(1/d) sum_(r mod d) alpha_hat(r) conjugate(beta_hat(r)),
 ||alpha^0||_2^2=(1/d) sum_(r!=0)|alpha_hat(r)|^2,         (11)
 ```
 
-and similarly for `beta`. Hence (8) is a literal positive zero mode plus a
-signed/complex nontrivial-mode sum. This is the rigorous remnant of the
+and similarly for `beta`. Hence (8) has a nonnegative zero mode, positive when
+both packets are nonempty, plus a signed/complex nontrivial-mode sum. This is
+the rigorous remnant of the
 incoming “bulk plus cusp” intuition: it is finite Fourier analysis on the
 actual CRT carrier, not a modular-form identification. If `P_N=0` with
 `A,B>0`, the two nonnegative histograms have disjoint support, and the

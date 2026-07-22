@@ -413,8 +413,9 @@ copied from earlier summaries.
   `{a,2a,...,12a,w}` through the `13a`/`14a`/`182a` leaves. These are two
   structured planes, not the general 14-runner case.
 - `THM-2059` gives the exact generalized-CRT join of core-safe and tail-safe
-  packets for any one-tail clock. Its histogram dot product counts safe grid
-  phases; zero overlap rejects only that clock grid.
+  packets for any one-tail clock. Its histogram dot product counts compatible
+  classes; the `Na/lcm` lift counts safe grid phases. Zero overlap rejects only
+  that clock grid.
 - `THM-2058` is an empty reservation. It contains no theorem, proof, script, or
   result and must never be cited as progress.
 
@@ -425,7 +426,7 @@ certificate, to the relative-Fejer hypotheses, or to a genuinely new certificate
 `HYP-8900` adds an exact per-row pair-sum evaluator, but does not make the
 unbounded covering family finite or prove its restated Wall-A condition.
 
-## 2026-07-21 — corrections to sessions S214–S223
+## 2026-07-21 — corrections to recent synthesis sessions
 
 The recent sequence, entropy, and modular explorations produced useful objects,
 but several interpretations outran their evidence. The correction ledger now
@@ -451,10 +452,14 @@ routes them as follows.
   mixed-sign noncancellation. The aperiodic polynomial
   `z-z^(-1)+z^2-z^(-2)` has every return length from two onward but zero
   constant term at every odd power.
+- `MISTAKE-235`: LRC and GMC have differently weighted kernel-indexed sums,
+  not one noncancellation object. S102's four truncated low-dimensional rows
+  prove no Fourier-tail bound or AP-core reduction; the tight non-AP row
+  `{1,...,11,13,24}` already defeats the proposed premise.
 
-The S99, S217–S220 scripts, outputs, and reflections are retained as quarantined
-historical experiments. Their corrected exact computations may seed new work,
-but their refuted interpretations may not be promoted without a new bridge.
+The S99, S102, and S217–S223 artifacts are retained as quarantined historical
+experiments. Their corrected exact computations may seed new work, but their
+refuted interpretations may not be promoted without a new bridge.
 
 ## 2026-07-21 — NC2 formalization boundary
 

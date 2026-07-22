@@ -157,44 +157,47 @@ Format per entry:
 ---
 
 ## MISTAKE-226 (2026-07-21, codex audit of HYP-8880/S220 and its HYP-8885/S221 reuse) -- shared divisor labels were promoted to an identification of LRC clocks with modular cusps and of the level-14 newform with the LRC obstruction
+## MISTAKE-235 (2026-07-21, audit of S102 / HYP-8879) -- a shared kernel-sum syntax and four truncated examples were promoted to an LRC-to-GMC equivalence and an AP-core reduction
 
-- **What was claimed:** S220 identified the modular orbits used by THM-2057
-  with the cusps of `X_0(N)`, called dilation invariance a `Gamma_0` level
-  structure, and declared the unique weight-two level-14 newform to be the
-  obstruction to LRC(14). It read `a_2=-1` and `a_7=1` as values at a
-  `2`-cusp and `7`-cusp, called `X_0(12)` cuspless, and assigned the newform
-  the period field `Q(sqrt(-7))`.
-- **Why it is wrong:** a common divisor index is not a predicate-preserving
-  map. Cusps of `X_0(N)` are represented by rational boundary points and have
-  multiplicities counted by
-  `sum_(d|N) phi(gcd(d,N/d))`; the THM-2057 clocks are finite phase orbits in
-  `Z/(Na)`. No map between those objects, their operations, or their LRC
-  witness predicate was supplied. Dilation `S -> aS` leaves the same LRC
-  phase-height value after reparametrizing time; it does not change one
-  modular object to level `Na`. Moreover `X_0(12)` has six cusps, so genus
-  zero means `S_2(Gamma_0(12))=0`, not "cuspless." The numbers `a_2,a_7` are
-  Hecke coefficients at primes, not labels of modular cusps. [LMFDB's exact
-  orbit `14.2.a.a`](https://www.lmfdb.org/ModularForm/GL2/Q/holomorphic/14/2/a/a/)
-  has coefficient field `Q`, CM `no`, and
-  `f=eta(z)eta(2z)eta(7z)eta(14z)`; no cited result gives it an algebraic
-  period field `Q(sqrt(-7))`. Finally, neither `f` nor `sym^2 f` was shown to
-  compute or bound the signed phase-height certificate `max_t min_v ||vt||`.
-- **Correct framing:** retain the classical facts that `X_0(14)` has genus
-  one, its weight-two newspace is one-dimensional, and its normalized newform
-  is the displayed non-CM eta product; also retain the clock/cusp comparison
-  as a source of candidate signed sidecars. It becomes an LRC mechanism only
-  after defining an explicit transform from phase-owner data to a modular
-  coefficient, period, or `L`-value and proving that its sign or nonvanishing
-  supplies a safe phase. Until then the proved LRC content is THM-2057's
-  finite-clock orbit sieve and affine binding phases, independent of modular
-  forms. The same restriction applies to HYP-8885: “cusp” is only a generic
-  difficulty metaphor for its tournament fibers, radial kernels, and figurate
-  deviations unless a genuine modular or cohomological decomposition is
-  supplied.
+- **What was claimed:** S102 wrote the Fourier expansion of the LRC lonely-set
+  measure as a sum over the integer relation lattice, compared it with a
+  balanced-channel expansion of a Gaussian moment, and called them the same
+  noncancellation problem. It identified the zero-frequency term `(6/7)^13`
+  with THM-878's clock floor, then used four supports of sizes four and five
+  and a frequency cutoff `|k_i|<=9` to announce that LRC(14) reduces to
+  maximal-resonance or AP-neighborhood cores.
+- **Why it is wrong:** “sum over an integer kernel” is a schema, not an
+  equality of typed objects. The LRC sum ranges over all vectors in
+  `ker_Z(v)` with sinc weights from discontinuous interval indicators; a fixed
+  GMC moment ranges over mass-constrained balanced channels with multinomial,
+  factorial, radial, and coefficient weights. No map preserves either
+  nonvanishing predicate. THM-878's `6/7` is the minimum of a pair-overlap
+  functional averaged over primitive residue classes, not the coefficient
+  `hat g(0)=6/7`; a repeated number does not identify the functionals. The
+  script computes only the box `[-9,9]^n`, supplies no Fourier-tail bound, and
+  its own output does **not** reproduce the direct integral (`0.0145` versus
+  `0.0000` on `{1,2,3,4}`). Four low-dimensional examples cannot imply a
+  uniform thirteen-speed theorem. More strongly, the known tight non-AP
+  Goddyn--Wong row `{1,...,11,13,24}` has strict lonely measure zero, so its
+  full nonzero-frequency sum cancels the main term. Thus the zero-measure locus
+  is already non-AP; “AP-neighborhood” was never given a metric, radius, or
+  theorem. Even a unique primitive relation does not save the transfer:
+  `S={1,2}` at threshold `1/3` has kernel generated up to sign by `(-2,1)`,
+  yet all harmonic multiples cancel the `1/9` main term and the strict lonely
+  measure is zero. Sparse shortest relations do not control the signed sum of
+  all higher relations. Moreover measure zero conflates a valid tight weak
+  witness `M(S)=delta` with failure `M(S)<delta`; LRC needs the boundary data.
+- **Correct framing:** the exact LRC relation-lattice expansion and zero mode
+  are valid through THM-2047's Fejer-regularized limit (with earlier forms in
+  THM-501/503/515/1061). They suggest diagnostics—relation height, support,
+  Fourier decay, and initial channels—but transfer to GMC or tournament zeta
+  requires an explicit weight-preserving map or a separately proved tail
+  inequality; isolated weak witnesses additionally require phase-height/Euler
+  boundary data. The S102 computation is a finite illustration only. It proves
+  neither an AP-neighborhood reduction nor a new LRC theorem. THM-2051 is the
+  proved sparse-relation localization; its residual contains every genuine
+  support-`3..5` relation plane, not just AP cores.
 
----
-
-## MISTAKE-224 (2026-07-21, codex audit of HYP-8835) -- valid antisymmetry examples were promoted to equivalences among transitivity, saddles, tori, and LRC symmetry
 ## MISTAKE-234 (2026-07-21, audit of S223 / HYP-8895) -- support reachability was promoted to mixed-sign constant-term noncancellation
 
 - **What was claimed:** S223 correctly encoded the return lengths

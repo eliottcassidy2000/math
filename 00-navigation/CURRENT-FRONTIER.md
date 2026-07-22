@@ -122,10 +122,77 @@ not unsafe. The reusable certificate architecture is
   lifts bounded scalar relations; `H=2^19` clears recorded margins.
   MISTAKE-080/082 still require shape-specific torus models.
 - **Scope separation:** [THM-1149](../01-canon/theorems/THM-1149-compact-essential-crown-and-farey-blocker.md)
-  separates tight deletion from an all-loose crown. Equality classification
-  applies only after extracting the tight deletion.
-- **Local-comb ceiling:** THM-1252--1274 leave global endpoint/child transport
-  or a phase-located turn tax, not another unlocated local-return charge.
+  proves that tight deletion and an all-loose essential crown are different
+  branches. Equality classification after a tight deletion cannot be applied
+  before extracting that deletion.
+- **Local-comb ceiling:** THM-1252 through THM-1274 close or sharply saturate
+  most purely local six-comb return arguments. The live residue is global
+  endpoint/child transport or a phase-located turn tax, not another unlocated
+  local-return charge.
+  pays pair covariance exactly. Absence of a support-`3..5` relation of height
+  at most `2^20` forces continuous `BONF5>0`, hence a positive-measure strict
+  lonely set. It bypasses the unresolved termwise `T4/T5` strip/slab route.
+- **PROVED rank descent:**
+  [THM-2052](../01-canon/theorems/THM-2052-finite-height-forces-high-rank-bounded-relation-code.md)
+  combines THM-763's finite height with a code argument. Every hypothetical
+  counterexample has eleven independent support-at-most-three relations of
+  height `91^6`, and is either rank twelve (a finite maximal-minor box) or in a
+  finite list of two-anchor stars with one projective parameter.
+- **PROVED transverse deck and sufficient gate:**
+  [THM-2053](../01-canon/theorems/THM-2053-rank-two-parameter-plane-geodesic-terminal.md)
+  constructs the repeated absolute projection without the historical Ungar
+  route. It proves
+  `M(v)>=1/13-R/(2N)` with `N|(v_i+v_j)` and defines the exact deck `D_N(m)`,
+  independent of longitudinal coordinates. `D_N(m)>=1/14` certifies a whole
+  primitive `N`-fiber; bad moduli form a divisibility down-set with a rational
+  conductor. For `m=(1,-1,2,...,12)`, the exact cutoff is `156`. The
+  determinant gate
+  `max_i|a z_i-b u_i|<=(a^2+b^2)/91` is also sufficient; its failure carrier is
+  an indexed union of 26 open tangent disks, which need not be geometrically
+  distinct.
+- **PROVED fan and Kelvin/Farey compression:**
+  [THM-2055](../01-canon/theorems/THM-2055-determinant-gate-normal-fan-and-tangent-sector-reduction.md)
+  identifies `D(d)=h_K(Rd)` for the basis-dependent signed column polygon.
+  Hull vertices suffice for the determinant maximum, but non-hull columns and
+  tie-ray co-owners remain in deck/LRC sidecars.
+  [THM-2056](../01-canon/theorems/THM-2056-kelvin-polar-farey-defect-certificate.md)
+  sends the gate by `d/||d||^2` to one rational polar polygon and proves the
+  sufficient acute-unimodular defect criterion
+  `2u·v>=A_p(u)+A_p(v)`. It gives a finite certificate for all nonlisted rays;
+  it does not declare listed bad rays unsafe.
+- **PROVED two AP one-tail closures:**
+  [THM-2057](../01-canon/theorems/THM-2057-scaled-zeta-core-one-tail-closure.md)
+  proves every `{a,2a,...,11a,13a,w}` safe by a `12a` unit clock, a `14a`
+  unit clock, or the `84a|w` affine binding phase. It also proves every
+  `{a,2a,...,12a,w}` safe by a `13a` unit clock, a `14a` unit clock, or the
+  `182a|w` deep-well phase. More generally, a core missing a clock
+  `2<=N<=14` forces `Na|w` in any one-tail counterexample. These two planes
+  model sidecar compression; they are not a general-star theorem.
+- **PROVED exact CRT packet join:**
+  [THM-2059](../01-canon/theorems/THM-2059-crt-fiber-product-phase-packet.md)
+  handles any one-tail core and any clock `N`. Core-safe residues modulo `N`
+  and tail-safe residues modulo `Na/gcd(w,Na)` meet exactly when their
+  reduction-histogram dot product is positive. The dot product counts
+  compatible classes modulo the CRT lcm; multiplying by `Na/lcm` counts safe
+  `k/(Na)` grid phases. Zero rejects that clock grid only, not the row. The
+  carrier is bipartite CRT compatibility, not a tournament or modular cusp.
+  Its zero-mode/Cauchy--Parseval inequality is a sufficient bulk filter; exact
+  modes or another sidecar remain necessary when that inequality does not win.
+- **PROVED primitive packet and deck/fan carrier:**
+  [THM-2058](../01-canon/theorems/THM-2058-primitive-phase-packets-and-deck-fan-intervals.md)
+  decomposes each safe packet by exact reduced phase order, with divisor
+  summation, Mobius inversion, labelled longitudinal transport, primitive
+  discrepancy, and a bulk/boundary/null trichotomy. For fixed bad `N` and hull
+  owner, the surviving longitudinal coordinates form one explicit coprime
+  interval minus collision points. This is a finite carrier theorem, not a
+  discharge of every interval and not LRC(14).
+- **PROVED relative whole-product decorrelation:**
+  [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
+  compares a line average with a lifted-character torus average when every
+  retained line frequency is nonzero and every scalar resonance through height
+  `H` lifts. After factoring out the pinned zero character, the seven-sector
+  `H=2^19` budget is compatible with recorded cap margins; applying it still
+  requires a model-specific lifted plateau and resonance routing.
 
 ### Exact live obligation
 

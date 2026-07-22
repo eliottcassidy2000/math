@@ -289,14 +289,16 @@ sidecar), the transverse deck labels, and the non-hull runners.
   to one polar polygon and proves an acute-unimodular defect certificate for
   whole Farey cones. HYP-8871 now couples this exact address to scaled safe
   clocks, killed-clock divisibility, affine binding, and Euler sidecars.
-  MISTAKE-225 records why Heegner form classes cannot replace the carrier.
+  MISTAKE-229 records why Heegner form classes cannot replace the carrier.
 - THM-2058 adds the exact phase-order packet and longitudinal-interval carrier
   inside each bad transverse deck. This is complementary to THM-2057: the
   former decomposes a fixed bad denominator, while the latter removes whole
   one-tail families by missing-clock divisibility before interval enumeration.
 - THM-2059 proves the missing core/tail composition: their safe packets meet
   by an exact CRT reduction-histogram dot product for arbitrary `N`, with a
-  zero-mode/finite-Fourier fluctuation split. THM-2057 is its rigid `N<=14`
+  zero-mode/finite-Fourier fluctuation split. The dot product counts compatible
+  residue classes and its `Na/lcm` lift counts safe grid indices. A zero result
+  rejects that clock grid only, not the row. THM-2057 is its rigid `N<=14`
   nonemptiness specialization; THM-2058 supplies primitive-order and owner-
   interval structure inside the resulting packet.
 - THM-2060 identifies the clock-independent ratio
@@ -336,11 +338,10 @@ sidecar), the transverse deck labels, and the non-hull runners.
   sidecar. The tight AP row `{1,...,13}` has six ordinary two-wall transverse
   maxima, not a higher-multiplicity Jacobian-style cusp. Here “boundary” means
   zero phase measure plus exact denominator data, not singularity multiplicity.
-- MISTAKE-227 gives the matching Fourier control: HYP-8879's integer-kernel
-  integral is a legitimate strict-bulk observable after convergence control,
-  but it vanishes on both unsafe rows and the tight AP boundary. Its finite
-  Sidon/AP ratios neither reduce LRC to AP cores nor replace THM-2058's exact
-  denominator/height packet.
+- MISTAKE-235 gives the matching Fourier control: HYP-8879's sinc-weighted
+  lattice expansion is a legitimate strict-bulk observable only after
+  convergence control; it is not a fixed GMC moment, vanishes on the tight AP
+  boundary, and its finite Sidon/AP ratios prove no AP-core reduction.
 
 ## Tournament analysis
 

@@ -1,20 +1,23 @@
 #!/usr/bin/env python3
 """one_dimensional_coprime_intervals_return_semigroup_boxeph_S223.py -- boxeph-2026-07-21-S223
 
-Continue the DvdK bypass (S222): in ONE DIMENSION the constant-term non-vanishing is COMPLETELY solved by
-the COPRIME-INTERVAL / return-semigroup structure -- DvdK is unnecessary in 1D.
+CORRECTED BY MISTAKE-234: this script verifies support reachability and the
+positive-coefficient case only. It does not prove mixed-sign noncancellation
+or replace DvdK.
 
 For f = sum_{k in S} c_k z^k (support S, 0 not in S = pure two-sided / charge != 0):
   * Newton polytope = the INTERVAL [min S, max S]; two-sided <=> 0 in its interior.
   * period d = gcd of the support gaps; coprime = aperiodic (d after reduction = 1).
   * the RETURN set R = {m : 0 is an m-fold sum of S} is a NUMERICAL SEMIGROUP (closed under +).
-  * for POSITIVE coefficients CT(f^m) != 0  <=>  m in R.  For mixed signs, R minus sporadic cancellations,
-    but cofinite (the saddle, S222).
+  * for POSITIVE coefficients CT(f^m) != 0  <=>  m in R. For mixed signs,
+    reachability alone says nothing about cancellation (MISTAKE-234).
   Two poles: the bare coprime PAIR {-q,p} is PERIODIC (R = multiples of p+q = THM-1840, Frobenius = inf);
   the FILLED coprime interval (endpoints + interior, gcd gaps = 1) is COFINITE (R = all m >= Frobenius#).
 """
 from math import gcd
 from functools import reduce
+
+print("CORRECTED BY MISTAKE-234: return semigroups prove reachability only; mixed-sign noncancellation and the DvdK bypass remain open.")
 
 def sep(t): print("\n"+"="*72+"\n"+t+"\n"+"="*72)
 def period(S):
@@ -56,8 +59,8 @@ for S in tests:
     print(f"  S={S}: two-sided={two_sided(S)}, period d={d}; R starts {smallR}; Frobenius# (last non-return) = {F}"
           f"  => R = all m >= {F+1 if isinstance(F,int) and F>=0 else '?'}")
 print("  => adding INTERIOR exponents (gcd of gaps -> 1) turns the periodic pair into a COFINITE return set:")
-print("     all large m are returns, with a finite FROBENIUS NUMBER (the last non-return). DvdK's 'some m' is")
-print("     sharpened to 'all m > Frob#' -- an exact, effective, elementary 1D characterization.")
+print("     all large m are SUPPORT returns, with a finite FROBENIUS NUMBER (the last non-return).")
+print("     This is an exact reachability characterization, not coefficient-uniform noncancellation.")
 
 # ==========================================================================
 sep("C  POSITIVE coefficients: CT(f^m) != 0  <=>  m in R (reachability). Verified.")
@@ -79,18 +82,16 @@ for S in [[-2,3],[-1,1,2],[-2,3,1]]:
 print("  => for positive coefficients the return set R IS the nonvanishing set: the coprime-interval semigroup.")
 
 # ==========================================================================
-sep("D  the complete 1D picture + the three-distance / LRC connection")
-print("""  ONE-DIMENSIONAL COPRIME INTERVALS -- the complete story (no DvdK needed in 1D):
+sep("D  the corrected 1D support picture + the three-distance / LRC analogy")
+print("""  ONE-DIMENSIONAL COPRIME INTERVALS -- exact SUPPORT reachability:
     interval [min S, max S]  +  period d=gcd(gaps)  =>  the RETURN SEMIGROUP R = {m : 0 in m-fold sum}.
     * bare coprime PAIR {-q,p}: PERIODIC, R = (p+q)Z_{>0}  (THM-1840 single-character seed).
-    * FILLED coprime interval: COFINITE, R = all m > Frobenius#  (the generic 1D two-sided case).
-    * positive coeffs: CT(f^m)!=0 <=> m in R ; mixed signs: R minus sporadic cancellations, cofinite (saddle S222).
-  So DvdK's 1D content ('two-sided => some m') is COMPLETELY replaced by an elementary numerical-semigroup /
-  Frobenius fact about the coprime interval -- effective (the Frobenius# is the explicit m0) and self-contained.
+    * APERIODIC two-sided support: COFINITE R, hence all m beyond a support conductor are reachable.
+    * positive coeffs: CT(f^m)!=0 <=> m in R.
+    * mixed/complex coeffs: a separate noncancellation theorem is required; infinitely many reachable m may vanish.
+  Therefore the conductor is an effective support sidecar, not a DvdK replacement or a coefficient-uniform m0.
 
-  THREE-DISTANCE / LRC bonus: the same coprimality governs the danger-arc INTERVALS of the LRC. The gaps of
+  THREE-DISTANCE / LRC analogy: coprimality also governs danger-arc orbit gaps. The gaps of
   {k t mod 1} take exactly THREE values (three-distance/Steinhaus), determined by the CONTINUED FRACTION of t
-  = the coprime-interval structure; the LRC extremal t*=14/183=[0;13,14] has COPRIME partial quotients, and
-  its danger arcs are the coprime intervals whose covering the covering-min measures. 1D coprime intervals
-  are the shared engine of GMC's constant-term returns and LRC's three-distance arc geometry.""")
+  = orbit arithmetic. This is a useful comparison, not a map from constant-term noncancellation to LRC.""")
 def CT(a): return a.get(0,0)

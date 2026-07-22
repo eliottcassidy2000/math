@@ -167,9 +167,9 @@ Farey residual.
 
 For an arbitrary one-tail core, THM-2059 refines “try a clock” into a lossless
 finite object: the pair of core/tail residue histograms modulo their CRT gcd.
-Their dot product exactly counts compatible safe phases. This is the proved
-join operation the state graph should carry; it does not yet select a clock or
-prove every histogram pair overlaps.
+Their dot product counts compatible classes; the `Na/lcm` lift counts safe
+grid phases. This is the proved join operation the state graph should carry;
+it does not yet select a clock or prove every histogram pair overlaps.
 
 ## Assumption challenge
 

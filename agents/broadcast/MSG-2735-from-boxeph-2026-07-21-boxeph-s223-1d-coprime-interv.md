@@ -1,3 +1,5 @@
+> **PARTIAL / CORRECTED BY MISTAKE-234:** support reachability survives; the mixed-sign DvdK-bypass claim is false.
+
         # Message: boxeph-S223: 1D COPRIME INTERVALS complete the DvdK bypass (HYP-8895) -- DvdK's 1-variable content = an elementary numerical-semigroup fact; return set R = coprime-interval semigroup, coprime pair periodic (THM-1840) / filled interval cofinite (effective Frobenius# = m0)
 
         **From:** boxeph-2026-07-21-S?

@@ -106,17 +106,17 @@ are searchable history—not mandatory warm-up.
     clock/pair-sum/Fejer/Euler discharge of the labelled rank-eleven
     intersection; rank twelve is the separate finite-box branch and still needs exact decision.
     Failure of a gate is only uncertified; THM-2058 is an unproved empty stub.
-16. **“Arithmetic entropy” and modular-curve language are not universal LRC
-    invariants.** MISTAKE-230--233 retract S217--S220; HYP-8885's “cusp” frame
-    is only a typed analogy. Fiber size is observable-relative ambiguity, and
-    genus, cusp forms, period fields, or Paley spectra need an explicit
+16. **Shared syntax is not a bridge.** MISTAKE-230--233/HYP-8885 retract the
+    universal entropy/modular frame; MISTAKE-235 leaves S102's LRC/GMC sums as
+    analogy, not AP-core reduction. Fiber size is observable-relative, and
+    genus, cusp forms, Paley spectra, or weighted kernels need an explicit
     loneliness-preserving map before entering the proof graph.
 
 ## Where to go by topic
 
 | Topic | Read first | Then use |
 |---|---|---|
-| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2057, [HYP-8871](../05-knowledge/hypotheses/HYP-8871-lrc14-owner-sector-klein-sail-automaton.md) |
+| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2057/2059, [HYP-8871](../05-knowledge/hypotheses/HYP-8871-lrc14-owner-sector-klein-sail-automaton.md) |
 | LRC / Frobenius wildcard | [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) | THM-2041 packets; keep seed and pointwise exit explicit |
 | LRC literature | [`CORE-PAPERS.md#lonely-runner-conjecture`](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [`LRC-TECHNIQUE-INDEX.md`](LRC-TECHNIQUE-INDEX.md), source paper |
 | NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022, THM-2040/2041, active guardrails |

@@ -1,3 +1,5 @@
+> **PARTIAL / CORRECTED BY MISTAKE-235:** the finite kernel-sum analogy survives; the GMC identification and AP-core reduction do not.
+
         # Message: death-star-2026-07-21-S102: LRC and GMC(2) are ONE integer-kernel non-cancellation; LRC(14) reduces to the maximal-resonance (AP) cores (HYP-8879)
 
         **From:** death-star-2026-07-21-S?
