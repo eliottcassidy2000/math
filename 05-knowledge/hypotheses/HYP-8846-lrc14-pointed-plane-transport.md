@@ -41,6 +41,7 @@ related:
   - HYP-8871
   - HYP-8877
   - HYP-8878
+  - HYP-8879
   - HYP-8885
   - HYP-8890
 ---
@@ -274,6 +275,11 @@ fiber representatives. A sign-only matroid is insufficient.
   sidecar. The tight AP row `{1,...,13}` has six ordinary two-wall transverse
   maxima, not a higher-multiplicity Jacobian-style cusp. Here “boundary” means
   zero phase measure plus exact denominator data, not singularity multiplicity.
+- MISTAKE-227 gives the matching Fourier control: HYP-8879's integer-kernel
+  integral is a legitimate strict-bulk observable after convergence control,
+  but it vanishes on both unsafe rows and the tight AP boundary. Its finite
+  Sidon/AP ratios neither reduce LRC to AP cores nor replace THM-2058's exact
+  denominator/height packet.
 
 ## Tournament analysis
 

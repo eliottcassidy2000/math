@@ -96,6 +96,10 @@ mistake.
      packets form a CRT fiber product, and their reduction-histogram dot
      product counts the actual safe grid phases for every modulus.
 
+13e. **Safe-set measure detects strict exits, not the tight boundary.** MISTAKE-227:
+     the strict-indicator integral is positive iff `M(v)>1/14`; the tight AP has six weak phases but zero measure. Use Fejer sums for bulk and THM-2058
+     packets at equality; finite Sidon/AP ratios prove no non-AP reduction.
+
 ## NC2 / GMC
 
 14. **Scalar moments do not separate return atoms.** MISTAKE-211. Cancellation

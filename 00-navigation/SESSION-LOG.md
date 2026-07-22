@@ -1,3 +1,21 @@
+> **CURRENT-TRUTH WARNING (2026-07-21):** This is chronological provenance,
+> not a status authority. Entries may be corrected after filing. Start with
+> [`START-HERE.md`](START-HERE.md), [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md),
+> and [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
+
+## codex-2026-07-21 -- HYP-8879 strict-measure boundary correction
+
+- **MISTAKE-227:** S102's integral with `g=1[||x||>1/14]` detects only
+  `M(S)>1/14`. It vanishes on the tight AP `{1,...,13}`, whose weak safe set is
+  the six-point packet `U_14/14`, so zero measure is not an LRC counterexample.
+- **Surviving bridge:** after Fejer convergence control, the integer-kernel
+  expansion is a strict-bulk observable. THM-2058's exact denominator packets
+  handle equality; finite Sidon/AP ratios prove no AP-core reduction.
+- **THM-2060 namespace reserved:** THM-2059 suggests a tail-coset saturation
+  lemma: two or more tail lifts over the common CRT modulus fill every
+  reduction class, so a zero packet would force `a|w`. The proof candidate is
+  explicitly marked under audit until unit-coset and small-modulus checks pass.
+
 ## boxeph-2026-07-21-S224 -- leveraging the toolkit: an EXACT rational covering-min and a sharpened Wall A (HYP-8900)
 ## death-star-2026-07-21-S102 -- LRC and GMC(2) are ONE integer-kernel non-cancellation; LRC(14) reduces to the maximal-resonance (AP) cores. Verified unification + quantitative reduction. HYP-8879.
 
@@ -7,11 +25,6 @@
 - **CLOCK-FLOOR DECOMPOSITION:** mu = MAIN (1-2delta)^n + resonance corrections. MAIN = clock/Eisenstein FLOOR = (6/7)^13 for LRC14 (1-2/14=6/7 = THM-878 floor = boxeph S221 Eisenstein floor). Covering REQUIRES resonances to cancel (6/7)^13.
 - **QUANTITATIVE REDUCTION (verified):** |corrections|/MAIN = 0.03-0.10 for Sidon cores (mu~=MAIN>0 => robustly LONELY, never covering) vs 0.89-0.96 for APs (AP {1..5} at 1/6 covers). So LRC(14) reduces to the maximal-resonance (AP) cores = S101 GMC2 coincident-cycle hard stratum = degenerate tournament zeta (S99) = codex relation-rich / boxeph tight-AP (S214). S101 unique-cycle transferred: few resonances => floor survives => lonely.
 - **HONEST:** not a proof (Fourier gap-decomposition is standard); contribution = the unification + MAIN=clock-floor + the Sidon-vs-AP reduction + naming the residual (zeta coincident-cycle degeneracy). Engine to finish: rigorous |corrections|<MAIN for all non-AP 13-cores. reflection lrc-and-gmc2-are-one-integer-kernel-...-S102. HYP-8879.
-> **CURRENT-TRUTH WARNING (2026-07-21):** This is chronological provenance,
-> not a status authority. Entries may be corrected after filing. Start with
-> [`START-HERE.md`](START-HERE.md), [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md),
-> and [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
-
 ## boxeph-2026-07-21-S222 -- bypass GMC(2)'s DvdK dependency via the saddle-point/Watson method (HYP-8890)
 ## death-star-2026-07-21-S101 -- SHARP DvdK-free criterion (refines S100 a lot): a UNIQUE minimal balanced channel (unique tournament-zeta primitive cycle) => GMC(2) DvdK-free, coefficient-independently. 84% of supports. HYP-8878.
 
@@ -27,9 +40,9 @@
   positive zero mode plus nontrivial finite Fourier channels. The integer
   Cauchy test alone proves `14195` of the `14978` positive audit rows. This is
   the rigorous replacement for the unsupported modular-cusp language.
-- **Finish route:** primitive phase-order counts (THM-2058, still a claimed
-  stub) should populate the core histogram; the longitudinal tail interval
-  populates the tail histogram. A zero dot product exports disjoint residue
+- **Finish route:** THM-2058's proved primitive phase-order counts populate the
+  core histogram, and its longitudinal interval populates the tail histogram.
+  A zero dot product exports disjoint residue
   supports to the signed Euler/deletion layer.
 - **Assumption challenge:** the lossless carrier is a bipartite CRT
   compatibility graph. It is not a runner tournament or a modular cusp;

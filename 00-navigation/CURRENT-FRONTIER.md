@@ -145,18 +145,15 @@ structural supplier/seed and a lossless exit.
   `640690` primitive determinant failures, its arithmetic carrier has three
   leaves. THM-2059 removes the small-clock restriction: arbitrary-`N` core and
   tail packets meet by an exact CRT histogram dot product. Its zero-mode
-  Cauchy--Parseval bound certifies `14195/14978` positive packet rows; `783`
-  require exact modes, while zeros are explicit disjoint-support obstructions.
-  THM-2058 supplies primitive-order and coprime owner intervals inside each bad
-  deck. HYP-8871 now targets using the CRT obstruction as a signed Euler/
-  deletion sidecar over the remaining finite atlas.
-- **PROVED relative whole-product decorrelation:**
-  [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
+  Cauchy--Parseval certifies `14195/14978` positive rows; `783` require exact
+  modes, while zeros are explicit disjoint-support obstructions. THM-2058 gives
+  primitive-order/coprime-owner intervals; HYP-8871 targets the CRT obstruction
+  as a signed Euler/deletion sidecar over the remaining atlas.
+- **PROVED relative whole-product decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says bounded scalar relations must lift to vector-character relations. Two
   telescopes bound the whole product; rowwise `H=2^19` clears every recorded
   pinned-base margin. MISTAKE-080/082 still require shape-specific torus models.
-- **Scope separation:**
-  [THM-1149](../01-canon/theorems/THM-1149-compact-essential-crown-and-farey-blocker.md)
+- **Scope separation:** [THM-1149](../01-canon/theorems/THM-1149-compact-essential-crown-and-farey-blocker.md)
   proves that tight deletion and an all-loose essential crown are different
   branches. Equality classification after a tight deletion cannot be applied
   before extracting that deletion.

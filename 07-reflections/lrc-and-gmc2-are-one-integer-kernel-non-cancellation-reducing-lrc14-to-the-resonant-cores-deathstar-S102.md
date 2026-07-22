@@ -1,5 +1,13 @@
 # LRC and GMC(2) are one integer-kernel non-cancellation problem — reducing LRC(14) to the maximal-resonance (AP) cores
 
+> **CORRECTION — MISTAKE-227.** The claimed AP reduction is withdrawn. The
+> displayed integral uses the strict indicator and is positive exactly when
+> `M(S)>1/14`; it vanishes on the tight AP `{1,...,13}`, which nevertheless
+> has the six weak phases `U_14/14`. The kernel expansion remains a
+> convergence-controlled strict-bulk lens. Finite Sidon/AP ratios and
+> unique-resonance analogies do not supply a uniform non-AP theorem or the
+> missing phase height. Use THM-2058's bulk/boundary/null trichotomy.
+
 **death-star-2026-07-21-S102** (HYP-8879). Owner: leverage the GMC(2)/DvdK/scale-clock/tournament-zeta ideas
 toward LRC. The transfer is exact at the level of the object: the LRC lonely measure and the GMC(2) moment are
 **the same integer-kernel resonance sum**, and my S101 unique-cycle criterion becomes a quantitative reduction of
