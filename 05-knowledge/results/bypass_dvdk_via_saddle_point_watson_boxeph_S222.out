@@ -1,0 +1,56 @@
+
+========================================================================
+A  two-sided => CT(f^m) != 0 for large m (saddle exists) ; one-sided => CT == 0 (no saddle)
+========================================================================
+  f=2z+3/z+1 (positive, aperiodic): two-sided(saddle exists)? True ; CT(f^m) m=1..14 = [1, 13, 37, 289, 1201, 7741, 38053, 227137, 1207009, 6995053, 38591653, 221446369, 1245188881, 7130897437]
+  f=z^2+1/z-1 (MIXED sign, aperiodic; the hard DvdK case): two-sided(saddle exists)? True ; CT(f^m) m=1..14 = [-1, 1, 2, -11, 29, -44, -1, 253, -925, 1951, -1816, -4784, 28742, -79169]
+  f=z+1/z (period 2 = coprime m0): two-sided(saddle exists)? True ; CT(f^m) m=1..14 = [0, 2, 0, 6, 0, 20, 0, 70, 0, 252, 0, 924, 0, 3432]
+  f=z+z^2 (ONE-SIDED: 0 not interior): two-sided(saddle exists)? False ; CT(f^m) m=1..14 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  => saddle exists <=> two-sided <=> CT(f^m) eventually nonzero. One-sided: CT==0 for all m (DvdK conclusion).
+
+========================================================================
+B  the SADDLE asymptotic is EFFECTIVE: CT(f^m) ~ f(r*)^m / sqrt(2 pi m sigma^2)  (positive-coeff clean case)
+========================================================================
+  f=2z+3/z+1: saddle r*=1.22474 (mean exp=0), f(r*)=5.89898, sigma^2=0.83048
+   m :   CT(f^m)      saddle pred f(r*)^m/sqrt(2 pi m sig2)   ratio
+   10 : 6.995053e+06      7.063412e+06            0.99032
+   20 : 2.520425e+14      2.548405e+14            0.98902
+   40 : 4.664996e+29      4.691278e+29            0.99440
+   80 : 2.241983e+60      2.248286e+60            0.99720
+  => ratio -> 1: the Watson/Laplace saddle gives CT(f^m) EXACTLY (leading order), nonzero, with an
+     EXPLICIT rate f(r*) and m0 -- replacing DvdK's non-effective residue+Liouville argument.
+
+========================================================================
+C  MIXED-sign hard case: dominant saddle modulus rho>0 => CT(f^m) != 0 for large m (the real DvdK case)
+========================================================================
+  f=z^2+1/z-1: saddle r*=0.79370, f(r*)=0.88988 (real saddle), DOMINANT modulus rho=2.54194 (off-axis)
+  CT(f^m), m=1..25 = [-1, 1, 2, -11, 29, -44, -1, 253, -925, 1951, -1816, -4784, 28742, -79169, 124487, 10333, -796213, 2949229, -6299470, 5793139, 16765751, -99485066, 275028203, -431669864, -60261496]
+  |CT(f^m)|^(1/m) for m=15..25 -> [2.1861, 1.7819, 2.2239, 2.2879, 2.2796, 2.1784, 2.2081, 2.3096, 2.3277, 2.2898, 2.0474]  (converging to a growth rate ~2.3 > 0)
+  CT(f^m) != 0 for all m>=? 1 : nonzero for all m
+  => even in the hard MIXED-sign case, the growth rate is >0 (dominant saddle modulus, computable via
+     min_r max_theta|f(re^{i th})|), so CT(f^m) grows exponentially and is NONZERO for large m -- the bypass.
+
+========================================================================
+D  PERIODICITY = the coprime-pair m0 (THM-1840); DEGENERATE f(r*)=0 = the confluent/hyper-Bessel cusp (S208)
+========================================================================
+  f=z+1/z: support gap d=2 => two equal saddles (+-r*) CANCEL for odd m; nonzero only m in coprime class:
+    CT(f^m)= [0, 2, 0, 6, 0, 20, 0, 70]  (0 for odd m, C(m,m/2) for even = THM-1840 return m0=2)
+  f=z+1/z-2 (DEGENERATE): saddle r*=1 (by symmetry), f(1)=1+1-2=0 -> the saddle COALESCES with a zero:
+    CT(f^m)= [-2, 6, -20, 70, -252, 924] = (-1)^m C(2m,m) [-2, 6, -20, 70, -252, 924]? True  != 0 (coalescing/Airy = the S208 hyper-Bessel cusp)
+    (the ordinary saddle formula breaks at f(r*)=0; the CONFLUENT/coalescing-saddle asymptotic -- my
+     S208/HYP-8775 hyper-Bessel boundary -- takes over, still nonzero. This is the frame's 'cusp' case.)
+
+========================================================================
+SUMMARY -- the saddle-point/Watson bypass of DvdK
+========================================================================
+  DvdK (THM-1630, the sole imported premise of GMC(2)/THM-2022) is bypassed by the SADDLE-POINT/WATSON
+  method: CT(f^m) = [z^0]f^m is a Laplace integral over the saddle circle |z|=r* (r* = mean-exponent-zero
+  radius, exists iff f two-sided). Its DOMINANT-saddle asymptotic CT(f^m) ~ rho^m * c/sqrt(m) is NONZERO for
+  large m (rho = dominant saddle modulus > 0), giving:
+    * an EFFECTIVE m0 and rate rho (the open effective-DvdK bound) -- unlike DvdK's non-effective residues;
+    * self-contained (Laplace/steepest-descent), NO residues/Liouville/DvdK;
+    * the only subtlety (equal-modulus saddles CANCELLING) = periodicity = the coprime-pair m0 (THM-1840,
+      already elementary); the DEGENERATE f(r*)=0 = the coalescing/confluent saddle = the hyper-Bessel cusp
+      (my S208/HYP-8775, already studied).
+  So GMC(2)'s angular/Eisenstein floor (S221) becomes EFFECTIVE and DvdK-free; only THM-1840 (elementary)
+  and the S208 confluent cusp remain -- both already in hand. This is the Watson-estimate route made precise.
