@@ -1,0 +1,60 @@
+========================================================================
+ANCHOR 1: det(DF) identity and homogeneous 2D Keller = shear
+ det(DF) == 1+div(H)+jac(H1,H2): False
+ => for homog deg d>=2: div(H)[deg d-1] and jac(H1,H2)[deg 2d-2] different degrees
+    so Keller <=> div(H)=0 AND jac(H1,H2)=0  (each homogeneous piece vanishes)
+
+ LEMMA: same-degree homog forms, jac=0 <=> proportional
+  proportional pair: jac=0 ? True
+  random independent pair: jac=0 ? False
+
+ SHEAR: H = c*(b x - a y)^d *(a,b)
+  det(DF)=1 ? False
+  (b x - a y) invariant: b*H1-a*H2 =0 ? True
+  F∘(I-H) = id ? True
+
+========================================================================
+ANCHOR 1 (fixed): det(DF)=jac(F1,F2) directly
+ identity det(DF)==1+div(H)+jac(H1,H2): True
+ shear det(DF)=1 ? True
+
+========================================================================
+ANCHOR 2: leading-form power structure + the descent dichotomy
+ Claim: jac(f_n,g_m)=0  <=>  f_n=α h^p, g_m=β h^q  (common form h);
+        equivalently f_n^(m/g) = const * g_m^(n/g),  g=gcd(n,m).
+  single-root h=l^k      n=4,m=6,gcd=2: jac(f_n,g_m)=0? True  f_n^(m/g)=const*g_m^(n/g)? False
+  multi-root h           n=4,m=6,gcd=2: jac(f_n,g_m)=0? True  f_n^(m/g)=const*g_m^(n/g)? True
+  coprime deg, h linear  n=3,m=5,gcd=1: jac(f_n,g_m)=0? True  f_n^(m/g)=const*g_m^(n/g)? True
+
+ DESCENT MOVES (reduce degree by killing the common leading form):
+  * n=m  => f_n,g_m proportional => g' = g - (β/α) f  drops deg g. ALWAYS reduces.
+  * n!=m, q|p (i.e. m|n)  => f' = f - (α/β^(p/q)) g^(p/q) drops deg f. Reduces.
+  * n!<m and m!|n  (neither divides) => leading form cannot be killed by a power.
+    THIS is the stuck stratum (Abhyankar-Moh). Verify a reduce vs a stuck case:
+    m|n reduce: deg f=4 -> deg(f - g^2)=3 (dropped: True)
+
+========================================================================
+ANCHOR 3: places at infinity = DISTINCT roots of the leading form h
+  Keller pair f_n=a h^p, g_m=b h^q share the SAME places (roots of h).
+  single-root h=(x-cy)^3 : distinct roots = 1  repeated?  True  => 1 place at infinity
+  multi-root (3 distinct): distinct roots = 3  repeated?  False  => 3 places at infinity
+
+  CLASSICAL CONSEQUENCE (Abhyankar-Moh): ONE place at infinity => the affine
+  curve embeds as a coordinate line => the pencil is tame. So:
+    single-root leading form h  =>  1 place at infinity  =>  TAME (no counterexample)
+    JC(2) counterexamples REQUIRE a multi-root (>=2 distinct roots) leading form h.
+========================================================================
+THE RESONANCE DICTIONARY (verified anchors + cross-thread):
+
+  TAME pole            | RESONANT / hard pole
+  ---------------------+----------------------------------------
+  DvdK: unique cycle   | DvdK: >=2 coincident cycles (S101/S106)
+  single-term CT != 0  | cancellation possible; needs THM-2067
+  ---------------------+----------------------------------------
+  Hessian: rank-1 nilp | Hessian: rank>=2 nilpotent (S103)
+  P one-sided (x+iy)^d | dim>=3 counterexample (THM-1300)
+  ---------------------+----------------------------------------
+  JC(2): single-root h | JC(2): multi-root h (>=2 roots)
+  1 place at infinity  | >=2 places; Abhyankar-Moh fails
+  (tame, AbhyankarMoh) | the open residual
+
