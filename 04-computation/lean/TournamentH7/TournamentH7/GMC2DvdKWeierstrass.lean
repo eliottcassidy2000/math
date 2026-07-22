@@ -51,18 +51,47 @@ theorem map_residue_Phi (R : Polynomial F) (M : ℕ) :
   rw [Phi, map_sub, map_pow, PowerSeries.map_X, map_mul, PowerSeries.map_C, hX, map_zero,
     zero_mul, sub_zero]
 
+/-- The residue image of `Φ` is nonzero (`= x^M`), the hypothesis for Weierstrass preparation. -/
+theorem phi_residue_ne_zero (R : Polynomial F) (M : ℕ) :
+    PowerSeries.map (IsLocalRing.residue (PowerSeries F)) (Phi R M) ≠ 0 := by
+  rw [map_residue_Phi]; exact pow_ne_zero M PowerSeries.X_ne_zero
+
 /-- **Obstacle (ii), kernel-pure.**  `Φ = x^M − t·R(x)` admits a Weierstrass factorization:
 `Φ = P · h` where `P` is a distinguished polynomial (monic, `≡ x^M mod t`) and `h` is a unit
 power series.  `P` is the small-root factor; `Π = (−1)^M · P.coeff 0` is the small-root product.
 Obtained directly from Mathlib's Weierstrass preparation theorem. -/
 theorem phi_weierstrass (R : Polynomial F) (M : ℕ) :
-    ∃ f h, (Phi R M).IsWeierstrassFactorization f h := by
-  apply PowerSeries.exists_isWeierstrassFactorization
-  rw [map_residue_Phi]
-  exact pow_ne_zero M PowerSeries.X_ne_zero
+    ∃ f h, (Phi R M).IsWeierstrassFactorization f h :=
+  PowerSeries.exists_isWeierstrassFactorization (phi_residue_ne_zero R M)
+
+/-- The **small-root factor** `P` of `Φ`: the distinguished polynomial in its Weierstrass
+factorization.  Monic, `P ≡ x^M mod t`, and `Φ = P · (unit)`. -/
+def smallRootFactor (R : Polynomial F) (M : ℕ) : Polynomial (PowerSeries F) :=
+  PowerSeries.weierstrassDistinguished (Phi R M) (phi_residue_ne_zero R M)
+
+/-- `P` has degree **exactly `M`** — there are exactly `M` small roots, so
+`Π = (−1)^M · P.coeff 0` has `t`-valuation `1`. -/
+theorem smallRootFactor_natDegree (R : Polynomial F) (M : ℕ) :
+    (smallRootFactor R M).natDegree = M := by
+  have H := PowerSeries.isWeierstrassFactorization_weierstrassDistinguished_weierstrassUnit
+    (phi_residue_ne_zero R M)
+  rw [smallRootFactor, H.natDegree_eq_toNat_order_map, map_residue_Phi, PowerSeries.order_X_pow,
+    ENat.toNat_coe]
+
+/-- `P` is monic. -/
+theorem smallRootFactor_monic (R : Polynomial F) (M : ℕ) : (smallRootFactor R M).Monic :=
+  (PowerSeries.isDistinguishedAt_weierstrassDistinguished (phi_residue_ne_zero R M)).monic
+
+/-- `Φ = P · h` with `h` a unit: the small-root factor divides `Φ`. -/
+theorem phi_eq_smallRootFactor_mul (R : Polynomial F) (M : ℕ) :
+    ∃ h, IsUnit h ∧ Phi R M = (smallRootFactor R M : (PowerSeries F)⟦X⟧) * h := by
+  have H := PowerSeries.isWeierstrassFactorization_weierstrassDistinguished_weierstrassUnit
+    (phi_residue_ne_zero R M)
+  exact ⟨_, H.isUnit, H.eq_mul⟩
 
 end
 
 #print axioms phi_weierstrass
+#print axioms smallRootFactor_natDegree
 
 end GMC2DvdKWeierstrass
