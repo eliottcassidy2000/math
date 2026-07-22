@@ -11,8 +11,9 @@ status: >
   orbit of that M-subset gives (ct)^r=C^eta, while Vieta makes C the nonzero
   constant (-1)^d r_0/r_d. The t-adic valuations disagree. This is a
   project-internal proof of exactly the bare existence input used by THM-2022;
-  it does not prove DvdK's stronger critical-value/limsup theorem and gives no
-  effective first-return bound.
+  it does not prove DvdK's stronger critical-value/limsup theorem. THM-2087
+  later refines the same root object to an unconditional effective, generally
+  non-sharp first-return bound.
 source: codex-2026-07-21-dvdk-galois-orbit
 depends_on:
   - THM-1550-an-exact-criterion-for-the-toral-nullcone
@@ -21,6 +22,7 @@ related:
   - THM-1630-tnc-is-duistermaat-van-der-kallen-theorem-2
   - THM-2022-gmc2-frobenius-lowest-balanced-face
   - THM-2058-primitive-phase-packets-and-deck-fan-intervals
+  - THM-2087-effective-compound-root-bound-for-one-variable-constant-terms
 ---
 
 # THM-2067 -- Galois orbit-products close the one-variable input
@@ -215,8 +217,17 @@ critical value and
 limsup |CT(f^m)|^(1/m).
 ```
 
-It also gives no bound on the first nonzero `m`; the Sturmfels/ESV effective
-problem remains open. In particular, S222's general mixed-complex saddle
+By itself this orbit contradiction gives no bound on the first nonzero `m`.
+THM-2087 later adds the compound polynomial of every same-size root-subset
+product and obtains the explicit bound
+
+```text
+m <= binom(M+N,a)+binom(M+N-1,a-1)-1,
+a=min(M,N).
+```
+
+That estimate is generally non-sharp; the sharp Sturmfels/ESV target
+`m<=M+N` remains open when `a>=2`. In particular, S222's general mixed-complex saddle
 asymptotic and S223's assertion that mixed-sign cancellations are merely
 finite are not needed here and remain unproved. The numerical-semigroup
 return set controls which balanced words exist, but arbitrary complex

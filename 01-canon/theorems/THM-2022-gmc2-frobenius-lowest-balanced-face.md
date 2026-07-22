@@ -28,6 +28,7 @@ related:
   - THM-2033-the-nc2-wall-is-the-confluent-transitivity-vandermonde
   - THM-2040-the-de-factorialization-principle
   - THM-2041-frobenius-stability-of-exact-period-projectors
+  - THM-2087-effective-compound-root-bound-for-one-variable-constant-terms
   - HYP-8800-lrc14-face-carry-frobenius-transfer
   - HYP-8765-gmc2-radial-channel-return-tower
 scripts:
@@ -228,6 +229,18 @@ the stronger published DvdK theorem, THM-1630. Choose `m0>=1` such that
 ```text
 Q:=CT_u(f_F^m0) != 0.                                      (7)
 ```
+
+The existence of `m0` is all that the proof needs.  THM-2087 strengthens it
+effectively: if the exact negative and positive charge widths of `f_F` are
+`M,N`, one may choose
+
+```text
+m0 <= binom(M+N,a)+binom(M+N-1,a-1)-1,
+a=min(M,N).                                                (7a)
+```
+
+This bound is generally non-sharp and does not make the later good-prime
+choice coefficient-uniform.
 
 Every multiplicity vector contributing to (7) is balanced, has length
 `m0`, and is supported on `F`. For all of them, (4) gives the same integer
