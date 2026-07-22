@@ -1,0 +1,26 @@
+======================================================================
+CONFINING THE GMC2 DvdK DEPENDENCY -- two independent elementary reductions
+======================================================================
+
+[1] EDGE FACE (2 straddling monomials): CT is an elementary binomial.
+   charges (-1,1): first nonzero CT at m0=2, k=1, C(m0,k)=2 != 0  (elementary)
+   charges (-1,2): first nonzero CT at m0=3, k=2, C(m0,k)=3 != 0  (elementary)
+   charges (-2,3): first nonzero CT at m0=5, k=3, C(m0,k)=10 != 0  (elementary)
+   charges (-3,5): first nonzero CT at m0=8, k=5, C(m0,k)=56 != 0  (elementary)
+   charges (-2,7): first nonzero CT at m0=9, k=7, C(m0,k)=36 != 0  (elementary)
+   charges (-5,4): first nonzero CT at m0=9, k=4, C(m0,k)=126 != 0  (elementary)
+
+[2] POSITIVE coefficients: CT(f^m) > 0 (a nonneg walk-return), NO cancellation.
+   resonant face charges (-1,0,1), coeffs (1,1,1): CT(f^m) = [1, 3, 7, 19, 51, 141, 393] (central trinomial A002426, all >0)
+   coeffs (2,1,3) (>0): CT(f^m) = [1, 13, 37, 289, 1201, 7741] (all >0)
+
+[3] THE HARD CORNER = resonant (>=3 charges) AND signed coeffs: low CT can vanish.
+   charges (-2,-1,1,2) coeffs [1, -1, -1, 1]: CT(f^1..8)=[0.0, 4.0, 6.0, 36.0, 100.0, 430.0, 1470.0, 5796.0]  first nonzero at m=2
+   charges (-2,-1,1,2) coeffs [1, 1, -1, -1]: CT(f^1..8)=[0.0, -4.0, 0.0, 36.0, 0.0, -370.0, 0.0, 4004.0]  first nonzero at m=2
+   charges (-2,-1,1,2) coeffs [1, -2, 2, -1]: CT(f^1..8)=[0.0, -10.0, 0.0, 198.0, 0.0, -4420.0, 0.0, 104006.0]  first nonzero at m=2
+   -> DvdK guarantees the search terminates; here it does (ESV: by index sum|q|). 
+
+[4] GENERICITY: the LP for the lowest balanced face has 2 equality constraints
+    (mass=1, charge=0) => basic optimum supported on <=2 monomials = an EDGE.
+    A >=3-monomial face requires >=3 tilted heights a_i - lambda*q_i concurrent at the
+    straddling lambda* -- a codimension->=1 condition on the Newton support (a RESONANCE).
