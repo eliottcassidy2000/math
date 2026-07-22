@@ -147,7 +147,9 @@ structural supplier/seed and a lossless exit.
   histogram dot product; its zero-mode split isolates disjoint-support zeros.
   THM-2060/2064 prove sharp common-clock tail capacity and isolate the odd
   dyadic seam. THM-2061 folds it; THM-2066's complementary owner-word bank
-  `15..34` closes all `59,880` divisor-complete quotient cores through `24`.
+  closes all `59,880` divisor-complete quotient cores through `24`, and
+  THM-2068 proves that `{25,26,27,28,32,33,34}` is a minimum sub-bank inside
+  the original `15..34` clock window.
   THM-2062 adds the hereditary wheel; THM-2065 makes circuit-free residuals finite.
 - **PROVED relative whole-product decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says bounded scalar relations must lift to vector-character relations. Two

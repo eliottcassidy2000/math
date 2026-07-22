@@ -1,4 +1,4 @@
-- **THM-2068 / codex-2026-07-21 (RESERVED MINIMUM DYADIC OWNER-WORD CLOCK BANK):** An exact set-cover audit is computing the smallest subset of clocks `15,...,34` whose THM-2066 complement-word obstructions close all `59,880` primitive divisor-complete eleven-cores in `{1,...,24}`. The minimum is not yet known; no LRC(14) claim is made.
+- **THM-2068 / codex-2026-07-21 (PROVED MINIMUM THM-2066 OWNER-WORD SUB-BANK):** Inside the original clock window `{15,...,34}`, the minimum bank covering all `59,880` primitive divisor-complete eleven-cores in `{1,...,24}` has size seven; one minimum is `{25,26,27,28,32,33,34}`. Five clocks are dominated, all banks of at most six undominated clocks were exhausted exactly, and every displayed clock has a private core witness. Minimality is only within the stated twenty-clock menu; this is atlas compression, not LRC(14).
 - **THM-2066 / codex-2026-07-21 (PROVED dyadic-seam owner-word CRT atlas):**
   For a safe quotient-core clock `N`, every odd tail defines a binary word on
   the safe residue packet recording which dyadic lift it kills. Two tails kill
