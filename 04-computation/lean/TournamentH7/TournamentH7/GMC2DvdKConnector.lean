@@ -44,6 +44,24 @@ theorem phi_Phi (R : Polynomial F) (M : ℕ) :
   rw [GMC2DvdKWeierstrass.Phi, PhiFrame, map_sub, map_pow, phi_X, map_mul, phi_C_X, phi_R_map,
     ← map_pow, HahnSeries.single_pow, one_pow]
 
+/-- **Rl-canonicalization.**  The two frame representations of `R` coincide: mapping the polynomial `R`
+into `LaurentSeries F` through `F⟦t⟧` (`ofPowerSeries ∘ coe`, mac-mini's `Rl R`) equals evaluating at the
+Laurent variable `single 1 1` (`aeval`, this connector's form).  Both are `∑ Rₙ · (single 1 1)ⁿ`.  So the
+two `phi_Phi` proofs (`GMC2DvdKConnector.phi_Phi`, `GMC2DvdKTransposeAssembly.phi_Phi`) are one statement. -/
+theorem ofPowerSeries_coe_eq_aeval (R : Polynomial F) :
+    HahnSeries.ofPowerSeries ℤ F (R : PowerSeries F)
+      = Polynomial.aeval (HahnSeries.single (1 : ℤ) (1 : F)) R := by
+  have hext : (HahnSeries.ofPowerSeries ℤ F).comp Polynomial.coeToPowerSeries.ringHom
+      = ((Polynomial.aeval (HahnSeries.single (1 : ℤ) (1 : F)) :
+          Polynomial F →ₐ[F] LaurentSeries F)).toRingHom := by
+    apply Polynomial.ringHom_ext
+    · intro a
+      simp [Polynomial.coeToPowerSeries.ringHom, HahnSeries.ofPowerSeries_C,
+        ← HahnSeries.C_eq_algebraMap, LaurentSeries.algebraMap_apply]
+    · simp [Polynomial.coeToPowerSeries.ringHom, HahnSeries.ofPowerSeries_X]
+  simpa [Polynomial.coeToPowerSeries.ringHom] using RingHom.congr_fun hext R
+
 end GMC2DvdKConnector
 
 #print axioms GMC2DvdKConnector.phi_Phi
+#print axioms GMC2DvdKConnector.ofPowerSeries_coe_eq_aeval
