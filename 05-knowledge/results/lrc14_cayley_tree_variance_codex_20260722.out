@@ -1,0 +1,24 @@
+CAYLEY-TREE VARIANCE EXACT REFEREE
+labelled K7 trees: 16807
+single-edge occurrences: 4802 = probability 2/7
+two-edge occurrences: adjacent 1029 = 3/49; disjoint 1372 = 4/49
+variance formula: (12 sum_e w_e^2 - sum_i s_i^2)/49
+second-moment tree bound: tau >= mu + Var/mu
+refined universal energy obstruction: D >= 2059/90090 + (7/2) Var/mu
+hereditary divisor-complete cores through 24: 131
+allowed odd terminal core/guard pairs: 4120
+negative-deficit scalar closures: 2798
+scalar survivors: 1322
+positive average-tree closures: 1322
+positive variance-tree closures: 1322
+strictly positive tree variances: 1322
+universal energy-threshold closures: 29
+variance-refined universal-threshold closures: 69
+minimum average margin: 99413/2461368 at Q=(1, 9, 10, 11, 13, 14, 24), h=23
+minimum variance margin: 22391180465191/526381866410400 at Q=(1, 9, 10, 11, 13, 14, 24), h=23
+minimum (maximum tree - second ratio): 3701706622037/313124176749384 at Q=(9, 10, 11, 13, 14, 17, 24), h=49
+exact atom caches (mixed/global/outside): 769/185/2994
+hostile row: h=1, Q=(4, 5, 6, 7, 11, 13, 27)
+hostile (mu, Delta, Var): 57481/1203930, 181007/3783780, 919435861/5314640631300
+hostile (average margin, variance margin, maximum margin): -2467/26486460, 488619049/138406200660, 86717/1891890
+PASS

@@ -15,9 +15,9 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
 - **THM-2088--2090 and THM-2092/2093 (PROVED):** persistence is flat affine
   holonomy; the global splice, height transfer, and dyadic cocircuit flag make
   every no-pair cut branch finite. The banks are not enumerated.
-- **THM-2091/THM-2094 (PROVED):** centered triple energy is necessary, and exact
-  guard/multiplicity moments exclude the four-`7|q` terminal branch. The live
-  modular counts are `1,2,3`; neither theorem is LRC(14).
+- **THM-2091/2094/2096 (PROVED):** centered energy is necessary, the four-`7|q`
+  branch is empty, and Cayley-tree variance strengthens the bounded-bank
+  threshold from 29 to 69. Complete maximum-tree information can be stronger.
 - **THM-2084 (PROVED, cubic source-fiber scope):** a non-tame cubic stratum
   begins, if at all, at unresolved reduced degree `13`; this is not JC(2).
 - **THM-2095 (CLAIMED STUB / UNPROVED):** the p-adic guard-ratio scale terminal
@@ -33,8 +33,8 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
   [HYP-8841](HYP-8841-lrc14-noetherian-first-exit-termination.md) (OPEN):**
   retain deck, owner, phase, endpoints, clocks, and tails while turning the
   carrier and peel tax into a finite discharge/termination.
-- **Live rank-seven residue:** `1..3` seven-divisible terminal speeds, bounded
-  guard-ratio families, and finite unenumerated banks. Global-star lines are finite.
+- **Live rank-seven residue:** `1..3` seven-divisible speeds, bounded guard-ratio
+  families, and finite unenumerated banks. Global-star lines are finite.
 - **Other lanes:** shallower terminal sizes, remaining rank-eleven atlas cells,
   marked circuits, and the rank-twelve box.
 
