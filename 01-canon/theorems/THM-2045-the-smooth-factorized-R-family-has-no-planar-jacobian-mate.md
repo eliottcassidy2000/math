@@ -12,7 +12,9 @@ related:
   - THM-1345
   - THM-2042
   - THM-2044
+  - THM-2046
   - HYP-8802
+  - HYP-8803
 ---
 
 # THM-2045 -- no planar mate for the suspension coordinate
@@ -85,3 +87,8 @@ Poisson counterexample therefore uses genuine symplectic stabilization:
 deleting the extra canonical pair cannot leave a planar Jacobian counterexample
 with this first coordinate. The wider family also supplies a two-parameter
 Newton-edge exclusion stratum for planar JC.
+
+THM-2046 upgrades this de-stabilization obstruction on the quantum side: the
+same family cannot be the first multiplication-position image of any `A_2`
+endomorphism whose second position is also a multiplication polynomial and
+whose dual generators have differential order at most one.

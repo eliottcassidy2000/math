@@ -112,6 +112,13 @@ mistake.
     connection by deriving both defects from one explicit valuation or
     boundary-cell operation; reject it if the source objects or losses differ.
 
+32. **Count canonical pairs, not displayed polynomial variables.** The linked
+    exact Dixmier certificate is `A_3 -> A_3`; the rank-two Poisson witness has
+    four commutative phase-space variables but is not therefore the same
+    filtered object as an `A_2` Weyl pullback. THM-2046 proves the obstruction:
+    multiplication positions plus first-order momenta force a planar Keller
+    map. Any DC(2) descent of THM-2044 must be genuinely nonfiltered.
+
 ## Promotion checklist
 
 Before adding or upgrading a theorem: perform a type and quantifier ledger;

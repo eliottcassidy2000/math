@@ -310,6 +310,15 @@ into tournament operation laws and LRC residue packets.
   analyzes its geometry. Public provenance remains unsettled in canon;
   MISTAKE-205 forbids the old Alpöge–Mathew attribution. Keep exact verification,
   public announcement, and discovery credit separate.
+  The linked external certificate independently replays the resulting `A_3`
+  cotangent pullback; it does not decide `DC(2)`.
+  [THM-2044](../01-canon/theorems/THM-2044-explicit-rank-two-poisson-counterexample-by-symplectic-suspension.md)
+  disproves the two-pair Poisson conjecture, while
+  [THM-2046](../01-canon/theorems/THM-2046-first-order-cotangent-pullbacks-cannot-cross-the-DC2-wall.md)
+  proves that this witness cannot descend through multiplication positions and
+  first-order dual momenta. [HYP-8803](../05-knowledge/hypotheses/HYP-8803-A3-pullback-versus-A2-quantum-descent.md)
+  localizes the remaining nonfiltered gate at extension across `x=0` in an
+  exact Ore-Weyl chart; `DC(2)` and planar `JC(2)` remain open.
 - **Gaussian higher dimensions:** THM-1490 is one verified higher-dimensional
   construction; newer three-real-Gaussian examples supersede any claim that
   dimension four is sharp.

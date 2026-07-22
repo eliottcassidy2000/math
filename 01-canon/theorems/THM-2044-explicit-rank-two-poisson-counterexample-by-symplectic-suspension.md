@@ -14,7 +14,9 @@ related:
   - THM-1300
   - THM-2042
   - THM-2045
+  - THM-2046
   - HYP-8802
+  - HYP-8803
 script: 04-computation/poisson_rank2_symplectic_suspension_codex_20260721.py
 output: 05-knowledge/results/poisson_rank2_symplectic_suspension_codex_20260721.out
 ---
@@ -167,3 +169,10 @@ four commutative generators. Direct replacement of brackets by Weyl
 commutators is invalid; HYP-8802 records the nonzero ordering anomaly. The safe
 Hamiltonian-dual/cotangent construction doubles to four Weyl pairs and lands in
 conventional `A_4`, not `A_2`.
+
+THM-2046 now also excludes the lower-dimensional first-order cotangent
+pullback shortcut: with `R` as a multiplication position, a second
+multiplication position and first-order dual momenta would force a planar
+Keller mate, contradicting THM-2045. HYP-8803 identifies the surviving
+nonfiltered problem as polynomial extension across the `x=0` divisor of an
+exact localized Ore-Weyl chart.

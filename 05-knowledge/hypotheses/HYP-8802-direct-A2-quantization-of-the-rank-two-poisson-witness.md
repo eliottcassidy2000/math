@@ -12,7 +12,9 @@ source: codex-2026-07-21-DC2-JC2
 related:
   - THM-2044
   - THM-2045
+  - THM-2046
   - THM-1345
+  - HYP-8803
 script: 04-computation/poisson_rank2_symplectic_suspension_codex_20260721.py
 output: 05-knowledge/results/poisson_rank2_symplectic_suspension_codex_20260721.out
 ---
@@ -135,3 +137,14 @@ positive program is to turn its Laurent-sector obstruction into a criterion on
 the inner-polynomial/Newton-polygon candidates of Lee--Li: stabilization can
 repair a unimodular gradient row, but the planar mate requires the unique
 constant-producing diagonal sector to satisfy an integrability condition.
+
+## Ore localization update
+
+HYP-8803 proves that the `x,q,ell` part of this calculation is the exact Ore
+extension `Q[x,q][ell;delta]`, with `R` central, and that after inverting `x`
+the slice `t=-1/(3x)` satisfies `[ell,t]=1`. It also proves that Weyl ordering
+is the unique scalar PBW ordering that lowers the raw `[S,T]-1` residual from
+`ell`-degree three to degree two. Thus the cascade above should be attacked as
+an `x`-adic boundary-integrality problem while allowing simultaneous movement
+of `T`, rather than by searching for another scalar ordering or another local
+Darboux coordinate.
