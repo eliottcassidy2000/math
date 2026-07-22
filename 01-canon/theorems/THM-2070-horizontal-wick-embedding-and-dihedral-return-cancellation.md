@@ -1,5 +1,5 @@
 ---
-id: THM-2069
+id: THM-2070
 title: "Horizontal Wick embedding and dihedral return cancellation"
 status: >
   RESERVED FOR ACTIVE PROOF AUDIT. The exact horizontal-support embedding
@@ -18,7 +18,7 @@ related:
   - THM-2067
 ---
 
-# THM-2069 -- horizontal Wick embedding and dihedral return cancellation
+# THM-2070 -- horizontal Wick embedding and dihedral return cancellation
 
 Namespace reserved.  The proof, exact witness, and correction scope are under
 active audit; no closure claim is made by this stub.
