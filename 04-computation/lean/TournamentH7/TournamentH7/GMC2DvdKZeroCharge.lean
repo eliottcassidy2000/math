@@ -99,7 +99,25 @@ theorem dvdK1_of_bothSigns (h : DvdK1BothSigns) : GMC2DvdKInterface.DvdK1 := by
     have hjp : (0 : ℚ) < ((q j : ℤ) : ℚ) := hj
     exact h ι q c hq hc ⟨i, by exact_mod_cast hin⟩ ⟨j, by exact_mod_cast hjp⟩
 
+/-- **Rescaling invariance.**  The constant-term relation depends on the charges only through which
+compositions are balanced, so it is unchanged when all charges are rescaled by a nonzero common
+factor `g` (`q₁ = g·q₂`).  Hence `DvdK1` for `q₁` and for `q₂` coincide — the hard case may assume the
+charges have gcd `1`. -/
+theorem constantTermRelation_scale {ι : Type*} [Fintype ι] [DecidableEq ι]
+    (q1 q2 : ι → ℤ) (g : ℤ) (hg : g ≠ 0) (hscale : ∀ i, q1 i = g * q2 i) (m : ℕ) :
+    constantTermRelation q1 m = constantTermRelation q2 m := by
+  unfold constantTermRelation
+  refine Finset.sum_congr rfl (fun r _ => ?_)
+  have hchg : totalCharge q1 r = g * totalCharge q2 r := by
+    unfold totalCharge
+    rw [Finset.mul_sum]
+    exact Finset.sum_congr rfl (fun i _ => by rw [hscale i]; push_cast; ring)
+  by_cases hbal : totalCharge q2 r = 0
+  · rw [if_pos hbal, if_pos (by rw [hchg, hbal, mul_zero])]
+  · rw [if_neg hbal, if_neg (by rw [hchg]; exact mul_ne_zero hg hbal)]
+
 end GMC2DvdKZeroCharge
 
 #print axioms GMC2DvdKZeroCharge.dvdK1_of_zero_mem
 #print axioms GMC2DvdKZeroCharge.dvdK1_of_bothSigns
+#print axioms GMC2DvdKZeroCharge.constantTermRelation_scale
