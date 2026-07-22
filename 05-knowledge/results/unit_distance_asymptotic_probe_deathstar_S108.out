@@ -1,0 +1,23 @@
+======================================================================
+ANCHOR 1: r2 maximizer over k<=N  =  product of primes = 1 (mod 4)
+  N=    50: argmax_k r2 =     25 = {5: 2}  r2= 12  primes mod4={5: 1}
+  N=   200: argmax_k r2 =     65 = {5: 1, 13: 1}  r2= 16  primes mod4={5: 1, 13: 1}
+  N=  1000: argmax_k r2 =    325 = {5: 2, 13: 1}  r2= 24  primes mod4={5: 1, 13: 1}
+  N=  5000: argmax_k r2 =   4225 = {5: 2, 13: 2}  r2= 36  primes mod4={5: 1, 13: 1}
+  N= 20000: argmax_k r2 =   5525 = {5: 2, 13: 1, 17: 1}  r2= 48  primes mod4={5: 1, 13: 1, 17: 1}
+
+======================================================================
+ANCHOR 2: grid lower bound  u(m x m grid) / n  grows (n^{c/loglog n})
+  best squared-distance k*, unit-distance count U, U/n, and k* factorization
+  m=  5 n=   25: k*=    5={5: 1}  U=     48  U/n=  1.92  r2(k*)=8
+  m= 10 n=  100: k*=    5={5: 1}  U=    288  U/n=  2.88  r2(k*)=8
+  m= 20 n=  400: k*=   65={5: 1, 13: 1}  U=   1744  U/n=  4.36  r2(k*)=16
+  m= 40 n= 1600: k*=   65={5: 1, 13: 1}  U=   9744  U/n=  6.09  r2(k*)=16
+  m= 70 n= 4900: k*=  325={5: 2, 13: 1}  U=  41120  U/n=  8.39  r2(k*)=24
+  m=100 n=10000: k*= 1105={5: 1, 13: 1, 17: 1}  U=  98176  U/n=  9.82  r2(k*)=32
+
+======================================================================
+ANCHOR 3: incidence structure -- unit-distance bipartite graph is K_{2,3}-free
+  (two points share <=2 common unit-neighbors: two unit circles meet in <=2 pts)
+  grid 15x15, dist=sqrt5: max common unit-neighbors over all pairs = 2  (<=2 confirms K_2,3-free)
+  => Kovari-Sos-Turan gives O(n^3/2); Szemeredi-Trotter refines to O(n^4/3).
