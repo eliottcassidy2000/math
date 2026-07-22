@@ -38,13 +38,11 @@ Older chronology is in
   `1165` ratios, and `279600` marked triples; the other six terminal speeds
   remain. THM-2112 independently gives an explicit whole-row rank-seven box
   through `R_7=5*28^8*(7*57^42)^17` and the recursive bounds `L_1,...,L_7`.
-- THM-2098 splits terminal ranks `8..11` into a transverse branch with exact
-  collision/tree budget `5(n-7)/49` and a branch with at least seven
-  guard-proportional bands. THM-2099 computes the exact positive-edge spectrum
-  and shows that pair-tree data alone cannot close rank eight. THM-2103
-  refutes the tree-or-signed-pencil inverse statement on exact dyadic rows;
-  THM-2104 closes constant small-prime valuation layers, and THM-2105 forces
-  affine carrier covers on every clock through denominator fourteen.
+- At guarded sizes `8..10`, THM-2098 has three lanes: pure transverse with
+  budget `5(n-7)/49`, low mixed with no inherited budget, and high vertical
+  cover; depth-zero size eleven is separate. THM-2099/2103 show pair-tree and
+  signed-pencil data alone miss exact dyadic rows. THM-2104/2105 add small-prime
+  valuation walls and affine carrier clocks through denominator fourteen.
   THM-2114 adds an exact cap row with zero affine sign gauges, then excludes
   that row by a mod-5 needle and all-maximum-tree equality rigidity. Its
   general finite-row lemma
@@ -52,52 +50,57 @@ Older chronology is in
   through rank `10`; all-primitive rank-two covers in those ranges are empty,
   and the specialized LRC list must contain `13`- and (through rank ten)
   `11`-divisible guard/terminal entries.
-- THM-2116 gives the exact order-thirteen singleton/toothpick ledger for one
-  terminal `13`-blocker. THM-2120's phase-rigidity argument empties its
-  independent branch; THM-2123 empties the dependent branch, and THM-2122
-  empties multiple blockers when all residual terminals are guard-transverse.
-  Thus a rank-eight cover needs a guard `13`-blocker or a nonblocker terminal
-  projectively parallel to the guard modulo thirteen.
-- THM-2124 proves a finite-plane Kakeya rigidity theorem: for every odd prime
-  power `q>=7`, `(q+3)/2` doubled strips covering `F_q^2` have direction
-  partition `(k)` or `(k-1,1)`. Hence a guard `13`-blocker with all terminals
-  nonzero modulo thirteen forces seven of the eight terminal residues into one
-  projective pencil. In the `(7,1)` case THM-2097 makes the seven aligned
-  terminals rationally guard-proportional, leaving one transverse terminal.
-  The all-aligned `(8)` and this one-dimensional vertical handoff remain open.
+- THM-2117/2121 show clocks, the maximum Hunter tree, and all scalar minors can
+  miss an open safe cell, while a full Toeplitz/Fejer certificate detects every
+  strict safe cell by order `14nV^2+1`; boundary-only points remain outside scope.
+- THM-2116/2120/2122/2123 empty the unique terminal-`13`-blocker branch and
+  the stated dependent/multiple-blocker transverse branches. Thus a rank-eight
+  cover needs a guard `13`-blocker or projective guard alignment mod thirteen.
+- THM-2124 proves that `(q+3)/2` double strips covering `F_q^2` have direction
+  partition `(k)` or `(k-1,1)`. A guard `13`-blocker with eight nonblocker
+  terminals therefore forces a sevenfold pencil; the `(7,1)` case descends to
+  a rank-one/high-vertical handoff, while the all-aligned `(8)` case remains.
+- In pure-transverse rank eight, THM-2119 makes every complete signed affine
+  line escape; direction and quotient fibers are at most three, and THM-2104
+  still forces valuation diversity at `2,3,5`. Its near-pencil bounds retain
+  their stated outlier-transversality condition.
 - **Remaining:** exact discharge of the rank-seven finite bank and both
   higher-rank branches; the depth-zero/rank-eleven and rank-twelve atlas lanes
   also remain. LRC(14) is not closed.
 
 ## NC2 / GMC formalization
 
-- THM-2022 proves NC2/GMC(2) on paper. THM-2101 now supplies a direct additive
-  monodromy seed with no small-root product; THM-2111 bounds the first return
-  by `binom(M+N,min(M,N))` and identifies its exact compound-determinant order. Lean
-  root-imports `HeightWitnessSupplier`, the abstract transitive orbit-product,
-  fixed-product valuation lemma, contradiction capstone, and rational-function
-  t-adic closing. General complex `DvdK1` remains the sole formal endpoint
-  premise. The additive incidence and full-root sum are formal, but the
-  analytic monodromy bridge and final wrapper remain.
+- THM-2022 proves NC2/GMC(2). THM-2101 gives two independent product-free paper
+  proofs of strict two-sided DvdK: additive monodromy, and one transcendental
+  specialization where a contour sum contradicts Galois incidence. Its
+  irreducibility and orbit/Lagrange core are kernel-checked; analytic wrappers
+  remain. General complex `DvdK1` is the sole formal endpoint premise, not a
+  paper gap. THM-2111 separately gives the
+  effective compound-root bound `binom(M+N,min(M,N))`.
 - HYP-8925/8930 give positive-coefficient and fixed-support unique-channel
   leaves. HYP-8932 adds a monomial-certificate engine and one kernel-checked
   `{-2,-1,1,2}` instance. `102/116` is a mass-40 bounded census; thirteen
   residual certificates remain script-only.
-- HYP-8931 is vacuous (MISTAKE-240). HYP-8935 is an open roadmap
-  (MISTAKE-241): floating asymptotics do not prove formal-log/Hensel descent or
+- HYP-8931 is vacuous (MISTAKE-240). HYP-8935 is an open roadmap (MISTAKE-241): floating asymptotics do not prove formal-log/Hensel descent or
   the local/global small-root bridge. Its abstract orbit-product core survives.
 
 ## Other active inspiration
 
-- THM-2110 closes the cubic Faber degree-`13` cell, raising the non-tame floor
-  in that source-fiber stratum to `14`. THM-2102/2113 now prove every power-free
-  positive-weight leading face is triangular, including arbitrary lower faces,
-  and give the exact first-defect law for a common proper-power root. Resonant
-  all-order termination, planar JC(2), and DC(2) remain open.
+- THM-2118 proves all-degree cubic Faber boundary/flux coprimality, removes every
+  finite centering/depressed-coefficient pole, and invokes THM-2102's power-free
+  face theorem to close the cubic source-fiber stratum. The next source-fiber
+  degree is four; general proper-power resonance, JC(2), and DC(2) remain open.
+- THM-2117/2121 show scalar clocks/minors can miss safe cells, while every strict
+  safe cell has a finite full Toeplitz/Fejer certificate; boundary-only points
+  remain outside that certificate's scope.
 - HYP-8950 grounds the JC resonance/valuation analogy in the Hamiltonian
   cokernel and generic-fiber obstruction, but its local-to-global step is open.
 - HYP-8945 places asymptotic unit distances on the cancellation side through
   the sign-changing Bessel kernel; it is a route map, not a new bound.
+- GMC barycentric packets repair HYP-2448 factor recombination. THM-2049's
+  syzygy and integration gauges reopen its chosen DC(2) correction section.
+  HYP-2430 gives an order-five-invariant signed design trade, so even frozen
+  fixed blocks and all five-marginals do not identify formal code supports.
 
 ## Durable method handoff
 

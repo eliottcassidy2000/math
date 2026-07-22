@@ -1,18 +1,18 @@
 ---
 id: THM-2101
-title: "An additive orbit-residue proof bypasses the small-root product in one-variable DvdK"
+title: "Two additive orbit-residue proofs of one-variable DvdK"
 status: >
-  PROVED on paper. For a genuinely two-sided one-variable Laurent polynomial,
-  total constant-term vanishing makes the sum of the barycentric residue
-  weights on the small-root cluster equal to one. Analytic continuation sends
-  this identity to every monodromy translate of that cluster. The rational map
-  X^M/R(X) has transitive degree-(M+N) monodromy, while the sum of the weights
-  over every root is zero by the residue at infinity. Uniform orbit incidence
-  then says a positive group order is zero, a contradiction. This proves the
-  bare one-variable DvdK seed without the small-root product, THM-1550,
-  Hensel, logarithms, or Wiener--Hopf. The repaired algebraic incidence core is
-  kernel-checked; the analytic monodromy bridge and final DvdK1 wrapper are not
-  yet formalized in Lean.
+  PROVED ON PAPER; FORMALIZATION PARTIAL. For a genuinely two-sided complex
+  Laurent polynomial, all positive-power constant terms cannot vanish. Two
+  independent additive proofs use the same barycentric residue observable.
+  One analytically continues the small-root identity through transitive
+  monodromy; the other specializes once at a small parameter transcendental
+  over the coefficient field and applies a Galois root-packet lemma. Both
+  contradict the zero full-root Lagrange sum and bypass the small-root product,
+  Hensel factorization, logarithms, and Wiener--Hopf. Check A, irreducibility,
+  additive incidence, and the full-root identity are kernel-checked. The
+  analytic monodromy route, the transcendental contour/lift wrapper, and the
+  final DvdK1 interface are not yet formalized.
 source: codex-2026-07-22-GMC2-additive-orbit-residue
 related:
   - THM-1550
@@ -20,8 +20,10 @@ related:
   - THM-2022
   - THM-2067
   - HYP-8946
+  - HYP-8960
   - MISTAKE-243
 formalization:
+  - 04-computation/lean/TournamentH7/TournamentH7/GMC2PhiIrreducible.lean
   - 04-computation/lean/TournamentH7/TournamentH7/GMC2LaurentShiftCheckA.lean
 script: 04-computation/dvdk_additive_orbit_residue_codex_20260722.py
 output: 05-knowledge/results/dvdk_additive_orbit_residue_codex_20260722.out
@@ -30,7 +32,7 @@ output_sha256: d2f4ebf4607ceeec3936c5ff124be0326b916e6adae6069ed31dbe99e6e2ce30
 hash_basis: repository blobs with LF line endings
 ---
 
-# THM-2101 -- the additive orbit-residue bypass
+# THM-2101 -- two additive orbit-residue proofs of the strict DvdK theorem
 
 ## 1. Statement
 
@@ -239,3 +241,178 @@ The carrier
 preserves the constant-term predicate through (7)--(11). It forgets which
 roots were locally small; the seed subset and analytic-continuation sidecar
 restore exactly that information and no product data.
+
+## 8. Independent transcendental-specialization proof
+
+For a second proof write `Lambda=f` and again assume total vanishing. Equation
+labels restart inside this proof.
+
+```text
+CT(Lambda^m)=0 for every m>=1                           (2)
+```
+
+is impossible. Equivalently, some positive power has nonzero constant term.
+This is the strict two-sided one-variable DvdK statement needed after the
+lowest-face reduction in THM-2022.
+
+The proof has two independent parts: an algebraic root-packet lemma and one
+fixed complex contour computation. No analytic continuation of a root subset
+in the parameter is used.
+
+### 8.1. Algebraic barycentric root-packet lemma
+
+Let `F` be a characteristic-zero field, let `p in F[X]` be irreducible of
+degree `d`, and let `L/F` be a splitting field. For `0<=k<=d-2` and a subset
+`S` of the roots of `p` in `L`, put
+
+```text
+b_k(S)=sum_(alpha in S) alpha^k/p'(alpha).              (3)
+```
+
+> **Root-packet lemma.** If `b_k(S)` belongs to `F`, then `b_k(S)=0`.
+
+Indeed, characteristic zero makes `p` separable and its Galois group `G`
+acts transitively on the roots. The derivative weight is equivariant:
+
+```text
+sigma(alpha^k/p'(alpha))
+  =(sigma alpha)^k/p'(sigma alpha).                    (4)
+```
+
+If (3) is in `F`, every translate `sigma S` has the same sum `b_k(S)`. Sum
+over `sigma in G`. Transitivity makes the incidence multiplicity of each root
+independent of that root, whereas Lagrange interpolation gives
+
+```text
+sum_(p(alpha)=0) alpha^k/p'(alpha)=0,     0<=k<=d-2.   (5)
+```
+
+Thus `|G| b_k(S)=0`, and characteristic zero proves the lemma. Formula (5)
+does not require `p` to be monic: writing `p=a n` with `n` the monic nodal
+polynomial merely multiplies every derivative denominator by `a`.
+
+The same proof works after embedding an abstract splitting field into any
+algebraically closed extension: pull the concrete subset back along the root
+equivalence first. One must not pretend that an analytically selected subset
+is itself Galois-stable.
+
+### 8.2. One small transcendental specialization
+
+Shift (1) exactly by its least exponent:
+
+```text
+R(z)=z^M Lambda(z) in C[z],
+d=deg R=M+N>M,
+Phi_t(z)=z^M-tR(z).                                    (6)
+```
+
+Let `k` be the subfield of `C` generated over `Q` by the finitely many
+coefficients of `R`. It is countable. Put
+
+```text
+B=sum_(j=0)^d |r_j|>0.                                 (7)
+```
+
+The elements algebraic over `k` form a countable subset of `C`, so every
+punctured disk contains a number transcendental over `k`. Choose `tau` with
+
+```text
+0<|tau|<1/B,             tau transcendental over k.    (8)
+```
+
+Evaluation `t -> tau` is injective on `K=k(t)`. By the irreducibility theorem
+kernel-checked in `GMC2PhiIrreducible`, `Phi_t` is irreducible over `K` because
+`M>=1` and `R(0)!=0`. Let `L/K` be a splitting field. Since `C` is
+algebraically closed, the injective evaluation of `K` extends to an embedding
+
+```text
+iota:L -> C.                                           (9)
+```
+
+It identifies the abstract roots with the roots of
+
+```text
+Phi_tau(z)=z^M-tau R(z).                               (10)
+```
+
+No specialized collision occurs: irreducibility in characteristic zero makes
+`Phi_t` separable, and injectivity of evaluation preserves its nonzero
+discriminant. Thus all derivative weights below are defined.
+
+### 8.3. The inside-root sum is one
+
+On the unit circle, (7)--(8) give
+
+```text
+|tau Lambda(z)|=|tau z^(-M)R(z)|<=|tau|B<1.           (11)
+```
+
+Hence (10) has no root on the circle. Let `S_tau` be the finite subset of its
+roots inside the unit disk. The rational function
+
+```text
+z^(M-1)/Phi_tau(z)=1/[z(1-tau Lambda(z))]              (12)
+```
+
+is regular at zero because `Phi_tau(0)=-tau R(0)!=0`. Partial fractions, or
+equivalently the simple-pole contour formula, give
+
+```text
+sum_(alpha in S_tau) alpha^(M-1)/Phi_tau'(alpha)
+ = (2*pi*i)^(-1) integral_(|z|=1) dz/[z(1-tau Lambda(z))]. (13)
+```
+
+The strict bound (11) makes the geometric series uniformly convergent on the
+circle, so termwise integration is legitimate:
+
+```text
+right side of (13)
+ =sum_(m>=0) tau^m CT(Lambda^m)=1.                     (14)
+```
+
+The last equality uses (2), with the `m=0` term equal to one. Rouché would
+also show `|S_tau|=M`, but neither the proof nor its formalization needs that
+cardinality.
+
+Pull `S_tau` back through (9) to a subset `S` of the roots in `L`. Derivatives
+commute with the embedding, so injectivity of (9) turns (14) into
+
+```text
+sum_(alpha in S) alpha^(M-1)/Phi_t'(alpha)=1 in K.     (15)
+```
+
+But `M-1<=d-2`, since `N>=1`. Applying the root-packet lemma to (15) says its
+left side must be zero. This contradiction proves the theorem. QED.
+
+### 8.4. Exact scope and hostile controls
+
+- A neutral charge is dispatched first: if the constant coefficient of
+  `Lambda` is nonzero, (2) already fails at `m=1`.
+- The exact shift `M=-min(support)` is load-bearing. A larger shift inserts a
+  zero root and destroys the irreducible/simple-derivative setup.
+- Both endpoint coefficients must be nonzero and `N>=1`. For the one-sided
+  hostile example `Lambda=z^(-1)`, all positive constant terms vanish, but
+  the only root-subset sum and the full-root sum both equal one; here
+  `deg Phi=M`, so (5) is inapplicable at exponent `M-1`.
+- The proof handles arbitrary complex coefficients. Transcendence is required
+  only of the chosen parameter `tau` over their finitely generated coefficient
+  field; it imposes no arithmetic restriction on those coefficients.
+
+### 8.5. Formalization boundary
+
+The repaired `GMC2LaurentShiftCheckA` kernel-checks the exact Laurent shift,
+constant-term coefficient identity, additive incidence contradiction, and
+full-root Lagrange sum without `sorryAx`. `GMC2PhiIrreducible` kernel-checks
+the full variable-swap/Gauss irreducibility over `F(t)`. Both are root-imported.
+
+What remains for a Lean theorem is assembly, not a missing mathematical
+bridge: construct the countable coefficient field and transcendental
+specialization; lift the splitting field; prove the partial-fraction contour
+identity and uniform geometric-series interchange; normalize the nonmonic
+derivative; and connect the exact-shift theorem to `GMC2DvdKInterface.DvdK1`.
+Mathlib already supplies the relevant Lagrange interpolation, circle-integral,
+dominated-convergence, `RatFunc.liftAlgHom`, and splitting-field lift pieces.
+
+THM-1550/HYP-8960's Henselian small-root-product route remains independently
+interesting, and its power-series local-ring instance is now kernel-checked,
+but it is not a dependency of this additive proof.

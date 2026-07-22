@@ -12,9 +12,10 @@ status: >
   pencils c_0=(1,0), c_k=(a,2^k), the sign of tau-5/49 obeys an exact
   seven-residue law: it is negative for a=1,3 mod 7 and zero for a=0 mod 7.
   At a=1, tau=70541889/691400192=5/49-9151/691400192. None is a mixed cover:
-  every nondegenerate common affine pencil has a one-dimensional safe slice. Thus pair
-  weights alone cannot close rank eight; relation/pencil or
-  higher-intersection data is indispensable. This is not LRC(14).
+  every signed affine-line family has a safe slice, including guard-parallel
+  and through-origin lines. Thus the proposed universal maximum-tree gate
+  cannot close rank eight; a successful inverse needs additional labelled
+  relation, clock, or higher-intersection data. This is not LRC(14).
 source: codex-2026-07-22-LRC-mixed-torus-positive-spectrum
 depends_on:
   - THM-1166
@@ -25,6 +26,7 @@ related:
   - THM-2096
   - THM-2103
   - THM-2126
+  - THM-2119
 script: 04-computation/lrc14_mixed_torus_edge_spectrum_scout_codex_20260722.py
 output: 05-knowledge/results/lrc14_mixed_torus_edge_spectrum_scout_codex_20260722.out
 script_sha256: cba376cfd8ef7297aa9dba2bd8f65bf8fdc5908687f0736a2fc1227871377ce2
@@ -267,40 +269,49 @@ exactly saturates on multiples of seven. The order-three doubling orbit
 modulo seven is visible in the edge spectrum, but it does not imply a mixed
 cover.
 
-## 4. The signed affine-pencil escape
+## 4. Every signed affine line escapes
 
-The last observation has a more general structural form. Suppose there are
-signs `sigma_i in {+1,-1}` and characters `p,q` such that `p` is independent
-of both `g` and `q`, and
+Suppose there are signs `sigma_i in {+1,-1}` and characters `p,q` with
 
 ```text
 sigma_i c_i-q in Q p                     for every i. (19)
 ```
 
-After replacing `p` by the primitive generator of the rank-one lattice in
-(19), restrict to the circle `K={X:p.X=0}`. The restrictions of `g` and `q`
-are two nonzero integer characters on `K`. On that circle the guard danger
-has measure `2/7` and the common terminal danger has measure `1/7`; their
-union has measure at most `3/7`. Choose `X in K` outside both. Then
+Take `p` primitive, so the differences in (19) are integral multiples of
+`p`. There are three cases.
+
+1. If `p,q` and `p,g` are independent, restrict to the connected circle
+   `K={X:p.X=0}`. The **closed** guard-bad and common-terminal-bad sets have
+   measures `2/7` and `1/7`; their union has measure at most `3/7<1`.
+   Choosing outside it gives
+
+   ```text
+   ||g.X||>1/7,             ||c_i.X||=||q.X||>1/14.   (20)
+   ```
+
+   Using closed bad arcs explicitly removes the finite threshold-boundary set
+   and makes the inequalities strict.
+2. If `p,q` are independent and `g=m p`, then the odd specialized guard
+   `g.d` forces `m` odd. Surjectivity of `(p,q)` realizes
+   `(p.X,q.X)=(1/2,1/4)`. The guard distance is `1/2`, and every terminal
+   distance is `||1/4+k_i/2||=1/4`.
+3. If `q in Qp`, all terminals are distinct positive integral multiples of
+   `p` after orienting `p`; transversality makes `p,g` independent. Pad the
+   eight multipliers to twelve and use settled LRC for twelve nonzero speeds
+   to obtain terminal distance at least `1/13>1/14`. On the independent guard
+   coordinate prescribe distance `1/2`.
+
+Thus (19) always supplies a strict mixed-threshold escape. Every family (15)
+has `p=(0,1)`, `q=(a,0)`, so the complete negative/equality residue law (18)
+lies in this safe class. Any rank-eight mixed cover must unconditionally obey
 
 ```text
-||g.X||>1/7,             ||c_i.X||=||q.X||>1/14.       (20)
+rank_Q{sigma_i c_i-sigma_1 c_1:2<=i<=8}=2
+                 for every sign vector sigma.          (21)
 ```
 
-Thus (19) always supplies a strict mixed-threshold escape. Every family
-(15) has `p=(0,1)`, `q=(a,0)`, and all signs positive, so the complete
-negative/equality residue law (18) lies in this geometrically safe class.
-
-Hence any rank-eight mixed cover must satisfy the new sidecar condition
-
-```text
-rank_Q{sigma_i c_i-sigma_j c_j:1<=i,j<=8}=2
-                 for every sign vector sigma,          (21)
-```
-
-unless the common difference line is guard-proportional or the common
-quotient character vanishes on its rank-one kernel. This signed affine-pencil
-rank is invisible to the edge-weight multiset and to the maximum tree value.
+THM-2119 strengthens this complete-line statement to exact affine-defect and
+three-sparsity bounds.
 
 ## 5. Assumption challenge and Tournament Analysis
 
@@ -315,9 +326,9 @@ The pairwise observable is (1). Thresholds `0`, `1/392`, `1/98`, and
 sidecar. Orienting by weight, then breaking ties by label, gives a tournament
 search scheduler. In the dyadic row it has many ties (gaps three and six
 already coincide), and its score histogram, cycles, SCCs, edge flips, and
-Hamiltonian paths depend on the tie rule. None detects (19). The faithful
-carrier is the weighted graphic matroid together with the primitive relation
-labels and signed-pencil rank. QED.
+Hamiltonian paths depend on the tie rule. The maximum-tree value alone does
+not encode (19). A faithful carrier retains the weighted graphic matroid,
+primitive relation labels, and signed-pencil rank. QED.
 
 ## 6. Exact referee and scope
 
@@ -328,7 +339,7 @@ sum (14). It also reports structured triadic,
 consecutive, Fibonacci, and alternating controls and a seeded random scout;
 those bounded scans are diagnostics, not proof of a tail statement.
 
-The theorem removes a universal pair-tree route and adds the lawful rank
-sidecar (21). It does not decide whether any signed-pencil-free rank-eight
-plane covers, does not discharge THM-2098's vertical branch, and does not
-prove LRC(14).
+The theorem disproves the proposed universal maximum-tree gate and adds the
+lawful rank sidecar (21). It does not rule out another functional of the full
+labelled pair-weight array, decide signed-pencil-free rank-eight planes,
+discharge THM-2098's vertical branch, or prove LRC(14).

@@ -39,12 +39,12 @@ Format per entry:
   commutation goal, and a failed Lagrange rewrite. The subsequent `#print
   axioms` lines include `sorryAx`; a direct `lake env lean` had stopped earlier
   at a missing dependency `.olean` and therefore certified nothing.
-- **Correct framing:** THM-2101 remains RESERVED. Repair and dependency-build
-  the formal core with no `sorryAx`, then separately prove the missing
-  analytic-germ-to-splitting-field subset bridge before claiming an additive
-  DvdK bypass. The formal core was subsequently repaired and root-imported;
-  it now builds with only the standard Mathlib axioms, but it does not supply
-  the missing analytic bridge or prove THM-2101.
+- **Correct framing:** the original formal claim required a dependency-aware
+  rebuild and a genuine analytic bridge. The core was subsequently repaired
+  and root-imported. THM-2101 is proved on paper by two product-free routes,
+  additive monodromy and one transcendental specialization, while their
+  analytic contour/monodromy, splitting-lift, and final `DvdK1` wrappers remain
+  unformalized in Lean.
 
 ---
 
@@ -84,9 +84,11 @@ Format per entry:
   subset product. HYP-8931's consumer is independently void by MISTAKE-240.
 - **Correct framing:** HYP-8935 is an open dependency map. The later
   `GMC2OrbitProduct.lean` kernel-checks the abstract transitive orbit-product
-  identity and fixed-product valuation-zero lemma. Irreducibility, small-root
-  factor selection, Hensel/descent, and the local/global bridge still separate
-  that core from general complex `DvdK1` and NC2.
+  identity and fixed-product valuation-zero lemma, and
+  `GMC2PhiIrreducible.lean` now checks irreducibility. Small-root selection,
+  Hensel/descent, and the local/global bridge remain open for that route.
+  THM-2101 bypasses them on paper by monodromy and by one transcendental
+  specialization; the analytic and final `DvdK1` wrappers remain Lean work.
 
 ---
 

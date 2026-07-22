@@ -79,10 +79,10 @@
     in their stated scopes; THM-2095 bounds only a commensurate pair's scale.
     THM-2098's collision budget is pure-transverse only; low mixed rows do not
     inherit it, and the depth-zero size-eleven core has no guard (MISTAKE-242).
-    Finite banks do not prove LRC(14). THM-2099--2105 and THM-2112/2114--2116
-    are proved only in their stated lanes; CLAIMED/RESERVED files remain open.
-27b. **A finite box is not a discharge.** THM-2100 and THM-2112 bound rank-
-    seven rows by very different routes; neither enumerates or empties them.
+    Finite banks do not prove LRC(14). THM-2099--2105 and THM-2112/2114--2116 are
+    proved only in stated lanes; THM-2099 is proved but not a closure.
+    Files marked CLAIMED or RESERVED remain unproved. **A finite box is not a
+    discharge:** THM-2100 and THM-2112 bound rank-seven rows by different routes; neither enumerates or empties them.
 27c. **No scalar-filtered uniform pair margin.** THM-2126 has
     `tau-5/49 -> 0` on scalar divisor-complete one-deletion-primitive rows,
     but those rows fail newer clock/content gates. Retain relation labels,
@@ -115,7 +115,7 @@
      corollary requires `F(u^k)=0` for every nonzero charge, not merely a
      functional described informally as depending on charge.
 36a. **Require dependency-aware builds.** THM-2101's first module had `sorryAx`;
-     its repaired core builds, but the analytic-subset bridge remains (MISTAKE-243).
+     its repaired core builds, but both paper routes still need Lean wrappers (MISTAKE-243).
 36b. **A Newton-face Wronskian is not DvdK.** MISTAKE-244/THM-2102: retain the
      proper-power first-defect quotient; a collapsed linear edge polynomial is
      not automatically a weighted-linear coordinate or a terminating descent.

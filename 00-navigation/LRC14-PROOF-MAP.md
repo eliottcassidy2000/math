@@ -42,12 +42,12 @@ hypothetical LRC(14) counterexample
                           `-- weak Euler point or strict interval [HYP-8841]
 ```
 
-The inputs are proved in their cited scopes; every sufficient gate can leave
-an “uncertified” row. THM-2069 filters deletions but forgets phase and owners;
-THM-2074 leaves all counterexamples in its exceptional hyperplanes. THM-2081/2083 reduce rank seven to bounded relations supported on
-guard/two-speed triples; the guard coefficient may vanish and scale remains
-unbounded. THM-2082 proves scalar wheels lose projective residue incidence;
-MISTAKE-238/239 forbid invalid transfers. THM-2084, THM-2085, and THM-2086 are RESERVED / UNPROVED.
+The cited inputs are proved in scope; sufficient-gate failure means uncertified.
+THM-2085--2097/2112 make rank-seven rows finite, not discharged.
+At guarded sizes `8..10`, THM-2098 has pure, low-mixed, and high-vertical lanes;
+only the pure lane inherits its collision budget, and depth-zero eleven is separate.
+THM-2114/2116/2120 close one `13`-blocker lane; THM-2117/2119/2121 add full-Toeplitz and three-sparsity gates.
+MISTAKE-238/239/242 block invalid transfers; the remaining finite and higher-rank lanes are open.
 
 ### Live interfaces
 

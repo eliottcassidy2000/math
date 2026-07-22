@@ -23,6 +23,7 @@ related:
   - THM-1345
   - THM-1330
   - THM-2110
+  - THM-2118
   - MISTAKE-229
 script: 04-computation/jc2_cubic_fiber_gauss_manin_gate_codex_20260722.py
 output: 05-knowledge/results/jc2_cubic_fiber_gauss_manin_gate_codex_20260722.out
@@ -477,27 +478,30 @@ At degree one, THM-2063 gives a tame inverse.  At degree two, apply THM-2071
 to the Keller pair `(Q,-P)` and then restore the target shear.  This proves the
 statement in Section 1.
 
-The proof does **not** close the cubic-fiber stratum.  Its exact next object is
-the all-degree Faber ladder (11)--(14), and the first surviving reduced degree
-is thirteen.  For example,
+This proof alone did **not** close the cubic-fiber stratum. Its exact next
+object was the all-degree Faber ladder (11)--(14), whose first surviving
+reduced degree was thirteen. For example,
 
 ```text
 Phi_13=(65/6561)p(p^6-63p^3q^2+189q^4),
 R_13=(91/6561)q(5p^6-60p^3q^2+27q^4).                 (33)
 ```
 
-An all-degree closure would follow from two precise noncollision laws:
+The reduction exposed two precise noncollision laws:
 
-1. at every finite centering pole, the boundary polynomial
-   `E_n(1;a,-1-a)` and the flux polynomial `Phi_n(a,-1-a)` have no common
-   root;
+1. **PROVED by THM-2118:** in the balanced finite-pole normalization (21),
+   the boundary polynomial `E_n(1;a,-1-a)` and flux polynomial
+   `Phi_n(a,-1-a)` have no common root in every admissible degree;
 2. on every upper Newton branch of a constant linear combination of the
    `Phi_m`, the matching linear combination of the `R_m` cannot be affine.
 
-These are now the irreducible cubic questions.  The quotient to `Phi` alone
-forgets the primitive `R`; the pair `(Phi,R)` is the necessary sidecar.  No
-generic cover-degree, Jelonek-curve, VC(4), or full JC(2) equivalence is being
-claimed.
+THM-2118 subsequently supplies the unbalanced and lower-representative
+valuation arguments, removes the remaining depressed-coefficient poles, and
+uses THM-2102's power-free-face theorem to close the entire cubic source-fiber
+stratum. The second law remains a valid standalone question about arbitrary
+Faber combinations, but is no longer needed for that closure. The next
+source-fiber degree is four. No generic cover-degree, Jelonek-curve, VC(4), or
+full JC(2) equivalence is claimed.
 
 ## 8. Exact referee
 

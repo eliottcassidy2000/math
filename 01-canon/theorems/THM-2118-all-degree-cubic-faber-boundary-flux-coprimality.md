@@ -21,14 +21,213 @@ related:
   - THM-2113
 script: 04-computation/jc2_cubic_faber_boundary_flux_coprimality_codex_20260722.py
 output: 05-knowledge/results/jc2_cubic_faber_boundary_flux_coprimality_codex_20260722.out
-script_sha256: TO_BE_FILLED
-output_sha256: TO_BE_FILLED
+script_sha256: a4b4ae5243c8c693c4264929b0b6e77be91ac80a5660bf99ed61a12260c71e85
+output_sha256: 0018a5b61aa5ab99ccd8cada63b46bcccf76303f39b2127516795fa7072598a2
 hash_basis: repository blobs with LF line endings
 ---
 
 # THM-2118 -- all-degree cubic boundary-flux coprimality and closure
 
-## 1. Statement and Faber notation
+## 1. The two centered polynomials
+
+Retain THM-2084's depressed cubic
+
+```text
+P_a(z)=z^3+a z-(a+1),                                  (1)
+```
+
+so `P_a(1)=0`. For `n>=1`, `3 not|n`, let
+
+```text
+E_n(z;a)=Pol_z P_a(z)^(n/3),
+e_n(a)=E_n(1;a),
+phi_n(a)=3 [z^(-1)] P_a(z)^(n/3).                     (2)
+```
+
+These are exactly the boundary and flux polynomials in THM-2084. The theorem
+is
+
+```text
+gcd_(C[a])(e_n,phi_n)=1              for every 3 not|n. (3)
+```
+
+Put
+
+```text
+s=a+3,                   Q_s(x)=1+3x+s x^2.           (4)
+```
+
+The translation from `a` to `s` preserves polynomial gcds.
+
+## 2. Lagrange inversion exposes adjacent coefficients
+
+Let `f(w)=w+O(w^(-1))` be the formal inverse at infinity defined by
+
+```text
+P_a(f(w))=w^3.                                          (5)
+```
+
+The standard Faber generating identity is
+
+```text
+f'(w)/(f(w)-z)=sum_(m>=0) E_m(z;a) w^(-m-1).           (6)
+```
+
+Integrating in `w` and taking `z=1`, `t=w^(-1)`, gives
+
+```text
+-log(t(f(1/t)-1))=sum_(m>=1) e_m(a)t^m/m.              (7)
+```
+
+Let `r_1,r_2` be the other roots of `P_a`. The numbers
+
+```text
+A=1-r_1,             B=1-r_2
+```
+
+satisfy `A+B=3`, `AB=s`. If
+
+```text
+g=t(f(1/t)-1),                  u=t/g,                  (8)
+```
+
+then the factored cubic equation becomes
+
+```text
+g(g+At)(g+Bt)=1,
+g=Q_s(u)^(-1/3),                u=t Q_s(u)^(1/3).       (9)
+```
+
+Lagrange inversion applied to (7)--(9) yields the exact finite coefficient
+formula
+
+```text
+e_n(s)=[x^n] Q_s(x)^(n/3).                             (10)
+```
+
+The flux is the adjacent coefficient:
+
+```text
+phi_n(s)=3[x^(n+1)] Q_s(x)^(n/3).                      (11)
+```
+
+One quick normalization check for (11) is to differentiate the polynomial
+part directly:
+
+```text
+d/da P_a(z)^(m/3)=(m/3)(z-1)P_a(z)^((m-3)/3).
+```
+
+Evaluating its polynomial part at `z=1` leaves precisely the first omitted
+coefficient, so
+
+```text
+e_m'(a)=(m/9)phi_(m-3)(a),              m>=4.          (12)
+```
+
+Apply (12) to `m=n+3` and differentiate (10) to obtain (11), including its
+factor three.
+
+## 3. The boundary-flux identity
+
+Put `F=Q_s^(n/3)`. The coefficient recurrence obtained from
+`Q_s F_x=(n/3)(3+2sx)F` and differentiation in `s` gives
+
+```text
+(n+1)phi_n
+ =s(9-4s)e_n'+2n(s-3)e_n.                             (13)
+```
+
+Equivalently, the coefficient of `x^n` in
+
+```text
+s(9-4s)F_s+2n(s-3)F-3F_x
+```
+
+is zero. This is a formal coefficient identity, not an asymptotic relation.
+
+Consequently, if `e_n(s_0)=phi_n(s_0)=0` and
+`s_0(9-4s_0)!=0`, then
+
+```text
+e_n'(s_0)=0.                                           (14)
+```
+
+Thus every common zero away from `0,9/4` would be a double zero of `e_n`.
+
+## 4. The hypergeometric ODE
+
+Expanding (10) gives
+
+```text
+e_n(s)=d_0 * 2F1(-n/2,(1-n)/2;1-2n/3;4s/9),           (15)
+d_0=3^n binom(n/3,n)!=0.
+```
+
+The hypergeometric series terminates at degree `floor(n/2)`. Gauss's equation
+becomes
+
+```text
+s(9-4s)e_n''
+ +[9-6n+(4n-6)s]e_n'
+ -n(n-1)e_n=0.                                        (16)
+```
+
+At every ordinary point `s notin {0,9/4}`, a solution of (16) is determined
+by its value and first derivative. Equations (14) and (16) would therefore
+force the nonzero polynomial `e_n` to vanish identically, a contradiction.
+
+It remains to exclude the two singular points. Formula (10) gives
+
+```text
+e_n(0)=3^n binom(n/3,n),
+e_n(9/4)=(3/2)^n binom(2n/3,n).                        (17)
+```
+
+For an integer `n>=1`, `binom(x,n)` vanishes exactly when
+`x in {0,1,...,n-1}`. Since `3 not|n`, both `n/3` and `2n/3` are nonintegers.
+Hence both values in (17) are nonzero. There is no common zero anywhere in
+`C`, proving (3). QED.
+
+## 5. Frontier effect
+
+THM-2084 isolated two all-degree laws behind the finite calculations:
+
+1. the balanced centered-pole noncollision `gcd(e_n,phi_n)=1`;
+2. the upper-Newton primitive noncollision for the pair `(Phi_n,R_n)` at
+   polynomial infinity.
+
+The coprimality argument in Sections 1--4 closes the first law for every
+admissible degree. By itself it does not show that every finite pole is
+balanced, control the depressed-coefficient poles, or separate lower Faber
+representatives. Sections 8--10 supply those additional valuation arguments
+and then invoke THM-2102, closing the cubic source-fiber stratum without the
+upper-Newton law. That law remains an independent question about arbitrary
+Faber combinations. General proper-power descent and planar JC(2) remain open.
+
+## 6. Exact referee and assumption challenge
+
+The companion performs two independent exact checks.
+
+- A SymPy/Rational path reconstructs `E_n` and `phi_n` from the original
+  THM-2084 finite binomial sums, independently reconstructs (10)--(11), and
+  checks (13), (16), (17), and the gcd through `n=80`.
+- A standard-library `Fraction` path generates the two adjacent coefficient
+  polynomials independently and runs rational Euclidean gcds through `n=200`.
+
+The challenged assumption was that THM-2084's low-degree resultants were
+inherently finite. The correct object is instead the adjacent-coefficient
+pair of one quadratic fractional power; the ODE supplies the all-degree
+rigidity. Tournament Analysis is not natural for this referee: there is no
+intrinsic pairwise binary relation or tie Hamiltonian path, and forcing one
+would erase the derivative and singular-point data used by the proof.
+
+## 7. Independent translated-coefficient proof and cubic closure
+
+The first proof establishes the all-degree coprimality theorem. The following
+independent coefficient derivation then supplies the uniform valuation and
+power-free-face steps needed for cubic source-fiber closure. Equation labels
+restart within this proof.
 
 For an integer `m>=1` not divisible by three, retain THM-2084's cubic
 Faber polynomials
@@ -64,7 +263,7 @@ The second assertion is a source-fiber theorem, not a bound on generic cover
 degree. It closes the cubic stratum left open by THM-2084 and THM-2110, but it
 does not prove the planar Jacobian conjecture.
 
-## 2. Translation gives one quadratic coefficient sequence
+### 7.1. Translation gives one quadratic coefficient sequence
 
 Fix `n` and write
 
@@ -115,7 +314,7 @@ One upper parameter is a nonpositive integer, and the lower parameter is
 never an integer when `3` does not divide `n`, so (9) is an ordinary
 polynomial identity with no analytic continuation issue.
 
-## 3. The boundary-flux identity and hypergeometric ODE
+### 7.2. The boundary-flux identity and hypergeometric ODE
 
 Let `C_j` denote the coefficient of `b^j` in (7), extended by zero outside
 its displayed range, and let `D_j` be the coefficient of `b^j` in
@@ -149,7 +348,7 @@ The Gauss equation for (9), after the affine change
 
 Both equations are polynomial identities over `Q[a]`.
 
-## 4. Coprimality, including both singular points
+### 7.3. Coprimality, including both singular points
 
 Suppose `e_n(a_0)=phi_n(a_0)=0`, and set
 
@@ -184,7 +383,7 @@ The excluded degrees are a necessary boundary control. If `3|n`, then
 `P_0^(n/3)` is already a polynomial, so both `e_n` and `phi_n` vanish
 identically on `P_0(1)=0`.
 
-## 5. Uniform removal of the centering poles
+## 8. Uniform removal of the centering poles
 
 We now apply (3) to THM-2084's all-degree cubic normal form. After a linear
 target change, write the cubic pencil member and a reduced mate as
@@ -226,7 +425,7 @@ D=h^3+ph+q                                             (20)
 
 is polynomial, put `rho=-v(p)` and split into three exhaustive regimes.
 
-### 5.1. The regime `rho>2H`
+### 8.1. The regime `rho>2H`
 
 Here `q~-ph`, so a monomial `p^i q^j` in `Phi_m`, where
 `2i+3j=m+1`, has pole order
@@ -247,7 +446,7 @@ is nonzero because `m/3` is not an integer. Its order is
 At `m=n` this strictly exceeds every lower Faber order. Hence `Phi` has a
 pole, contradicting its constancy in (19).
 
-### 5.2. The regime `rho<2H`
+### 8.2. The regime `rho<2H`
 
 Now `q~-h^3`. Every term of `E_m(h;p,q)` has pole order at most `mH`, and
 the coefficient at that order is
@@ -262,7 +461,7 @@ The top summand `c_n E_n(h)` therefore has the unique pole order `nH` in
 `Q(x,0)`; all lower representatives have order below `nH`. This contradicts
 the polynomiality of the original reduced mate at `y=0`.
 
-### 5.3. The balanced regime `rho=2H`
+### 8.3. The balanced regime `rho=2H`
 
 For suitable nonzero leading coefficients,
 
@@ -283,7 +482,7 @@ This contradicts (3). All three regimes are empty, so
 h in C[x].                                               (26)
 ```
 
-## 6. Uniform removal of the remaining depressed-coefficient poles
+## 9. Uniform removal of the remaining depressed-coefficient poles
 
 Equation (17) and polynomiality of the original coefficients now give
 
@@ -325,7 +524,7 @@ U in C*,                                                (31)
 
 and `(x,y)->(x,z=Uy+h)` is an honest triangular polynomial coordinate.
 
-## 7. The power-free face closes the cubic stratum
+## 10. The power-free face closes the cubic stratum
 
 It remains only to use the new connection to THM-2102. In polynomial
 coordinates we have
@@ -373,25 +572,18 @@ close the cubic Keller stratum: the polynomial depressed cubic exposes a
 power-free positive-weight face first. The next unresolved source-fiber
 degree is four. `JC(2)` and `DC(2)` remain open. QED.
 
-## 8. Exact referee and validity boundary
+## 11. Exact referee and validity boundary
 
-The companion script works over exact rational polynomial rings. For every
-`1<=n<=80` prime to three it independently checks:
-
-- the translated coefficient formulas (6)--(7) against the original Faber
-  sums;
-- the first-order identity (11) and ODE (12);
-- constant gcd of `e_n` and `phi_n`;
-- the nonzero coefficients used in both unbalanced valuation regimes and in
-  the odd/even depressed-pole split.
-
-It also checks the degree-thirteen boundary resultant from THM-2110, the
-necessary common-zero control at degrees divisible by three, and representative
-power-free depressed-cubic faces. Checks use explicit exceptions rather than
-Python `assert`, so normal and optimized runs execute the same referee. The
-proof above, not the finite sweep, supplies every all-degree quantifier.
+The companion is exactly the referee described in Section 6: over rational
+polynomial rings it checks the translated formulas, differential identities,
+singular values, and gcd through `n=80`, with an independent `Fraction` gcd
+census through `n=200`. It does **not** computationally certify the valuation
+splits or the power-free-face application in Sections 8--10; those are
+all-degree paper arguments. Its validations use Python `assert`, so only the
+ordinary run is evidentiary; an optimized transcript is not an independent
+check.
 
 There is no intrinsic binary relation in this argument: the faithful carrier
 is the ordered coefficient/valuation filtration `(n;H;rho;e_n;phi_n;R_n)`.
 Forcing a tournament would discard the parity and pole-order sidecars that
-make Sections 5--7 work.
+make Sections 8--10 work.

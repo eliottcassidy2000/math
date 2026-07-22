@@ -1,6 +1,8 @@
 # HYP-2448 - Irreducible-prime certificate-state tournament
 
-**Status:** OPEN synthesis; finite atlas confirms the carrier shape.
+**Status:** OPEN synthesis; the full barycentric root-packet recombination
+lemma is proved, while the prime-production and cross-domain programs remain
+open.
 **Source:** codex-2026-06-12.
 **External sources:** Jitender Singh, arXiv:2411.18366,
 https://arxiv.org/abs/2411.18366; Shahriar Iravanian, arXiv:2410.15880,
@@ -161,6 +163,65 @@ Bunyakovsky becomes the assertion that admissible irreducible vertices keep
 receiving forward prime-hit witnesses infinitely often.  Singh/Cohn/Iravanian
 give reverse and algorithmic edges in the same infinite tournament.
 
+## Proved root-packet recombination gate
+
+The GMC additive-orbit argument supplies the missing exact replacement for
+first-trace recombination.  Let `f in K[x]` be separable of degree `d` over a
+characteristic-zero field, let `L` be its splitting field, and for a subset
+`S` of its roots put
+
+```text
+b_k(S)=sum_(alpha in S) alpha^k/f'(alpha),   0<=k<d.       (1)
+```
+
+Then the packet map
+
+```text
+S |-> (b_0(S),...,b_(d-1)(S))                              (2)
+```
+
+is injective.  Indeed, after ordering the roots, (2) is the Vandermonde
+matrix times the nonzero diagonal matrix with entries `1/f'(alpha)` applied
+to the indicator vector of `S`.
+
+The construction is Galois-equivariant.  Therefore the packet lies in `K^d`
+if and only if `S` is Galois-stable: one implication is immediate, and for
+the other, a `K`-rational packet is fixed by every Galois element, so
+injectivity forces every translate of `S` to equal `S`.  If `f` is
+irreducible, transitivity leaves only the empty and full subsets.  Thus an
+irreducible polynomial has no proper nonempty root subset with a `K`-rational
+full packet.
+
+For that last irreducibility conclusion, the truncated packet
+`(b_0,...,b_(d-2))` already suffices.  Its weighted Vandermonde matrix has
+one-dimensional kernel spanned by the all-ones indicator, by the full-root
+Lagrange identities.  A Galois translate of `S` has the same cardinality as
+`S`, so their indicator difference cannot be a nonzero constant vector.
+Hence a base-rational truncated packet still forces every translate to equal
+`S`.  Only the empty and full packets collide under this truncation.
+
+Characteristic zero is load-bearing only for that truncation.  Over `F_2`,
+`f=x^2+x+1` and a singleton root set have base-valued `b_0=1` although the
+set is not Galois-stable; conjugation swaps it with its complement.  The full
+`d`-coordinate packet remains injective in arbitrary characteristic whenever
+`f` is separable.
+
+This strictly repairs the first-trace scout.  For the hostile control
+
+```text
+f=x^4-10x^2+1,   r=sqrt(3)+sqrt(2),   S={r,-r},             (3)
+```
+
+the ordinary trace is zero, but
+
+```text
+b_1(S)=1/(4 sqrt(6)) notin Q.                              (4)
+```
+
+The preserved predicate is literal factor recombination: a factor over `K`
+has a Galois-stable root set.  What the packet does not provide is a practical
+uniform prefix shorter than the proved `d-1` coordinates.
+
 ## Assumption Challenge
 
 Alternate vertex sets considered: polynomials, integer values, primes,
@@ -185,8 +246,8 @@ the certificate channel.
 
 ## Next Moves
 
-1. Replace the floating recombination scout by exact algebraic trace lattices
-   and count all false trace survivors for standard hard irreducible families.
+1. Implement the exact packet (1), determine the least prefix that separates
+   standard hard families, and compare it with exact algebraic trace lattices.
 2. Build `C(f;X)` for a larger polynomial family and measure edge flips as
    `X` grows; look for stable SCCs that correspond to known irreducibility
    criteria.

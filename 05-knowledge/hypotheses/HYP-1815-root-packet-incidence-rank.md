@@ -1,9 +1,10 @@
 # HYP-1815: Root-Packet Incidence Rank Controls Transfer
 
-**Status:** EXPLORATORY proof-technology hypothesis.  
+**Status:** PARTLY CONFIRMED proof technology; two exact cross-domain controls
+now realize opposite incidence-rank extremes.
 **Source:** codex-2026-05-30-S6.  
-**Related:** HYP-1796, HYP-1806, endpoint transfer, path homology,
-`TournamentH7.RootPackets`.
+**Related:** HYP-1796, HYP-1806, HYP-2430, HYP-2448, endpoint transfer, path
+homology, `TournamentH7.RootPackets`.
 
 ## Statement
 
@@ -48,6 +49,32 @@ root packets or problem-specific analogues.
    nontrivial incidence-rank obstruction or quotient torsion profile.
 5. Active ranking acquisition should be improved by expected packet-incidence
    rank collapse, not only expected `H` drop.
+
+## 2026-07-22 exact realization
+
+The GMC factor-recombination transfer and the `[72,36,16]` design gate now
+realize the slogan with opposite exact matrices.
+
+For separable `f` of degree `d`, HYP-2448's root-subset packet
+
+```text
+S |-> (sum_(alpha in S) alpha^k/f'(alpha))_(0<=k<d)
+```
+
+is a Vandermonde matrix times an invertible diagonal matrix, hence injective.
+In characteristic zero its first `d-1` rows have only the full-root indicator
+as kernel, so they still detect every proper Galois-stable factor packet.
+
+By contrast, HYP-2430's five-incidence map from formal `16`-blocks on `72`
+points to `5`-subsets has enormous kernel. Even after imposing the order-five
+action of HYP-2441 and freezing every fixed block, its moving invariant kernel
+has dimension at least `823261001634556`.
+
+Thus support agreement transfers factor recombination because the weighted
+root incidence has full rank, while the same style of marginal data cannot
+transfer code-support realizability because its incidence map is massively
+noninjective. The missing code sidecar is binary linear/matroid realization,
+not another scalar or low-marginal identity.
 
 ## Next Tests
 

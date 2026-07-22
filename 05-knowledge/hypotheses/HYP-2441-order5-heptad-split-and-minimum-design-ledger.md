@@ -35,6 +35,14 @@ blocks through a fixed coordinate: 55522 - 7 = 55515 = 5 * 11103 moving blocks,
 blocks through the pair {f0,f1}: 11730 - 0 = 11730 = 5 * 2346 moving blocks.
 ```
 
+HYP-2430 gives an exact negative control on this ledger.  Even after all
+fourteen fixed minimum blocks are frozen, the order-five-invariant incidence
+map from moving `16`-subset orbits to `5`-subset orbits has kernel dimension at
+least `823261001634556`.  Thus the displayed counts and every five-incidence
+marginal remain radically non-identifying at the level of formal signed block
+systems.  Binary linearity, self-orthogonality, and the `F_16` glue are
+load-bearing; the trade does not itself construct a second simple design.
+
 ## Next Gate
 
 Build the nonfixed-eigenspace completion problem over the primitive factor

@@ -1,0 +1,12 @@
+THM-2118 exact cubic Faber boundary-flux referee
+sympy=1.14.0
+symbolic_original-vs-quadratic_and_ODE: n<= 80: PASS
+independent_Fraction_gcd_census: n<= 200: PASS
+tournament_analysis=not_applicable_no_intrinsic_binary_pair_relation
+sample n=1: deg(e)=0 deg(phi)=1
+sample n=2: deg(e)=1 deg(phi)=1
+sample n=4: deg(e)=2 deg(phi)=2
+sample n=13: deg(e)=6 deg(phi)=7
+sample n=40: deg(e)=20 deg(phi)=20
+sample n=80: deg(e)=40 deg(phi)=40
+VERDICT: PASS

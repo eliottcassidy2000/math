@@ -8,8 +8,8 @@ status: >
   simultaneous (S,T) correction map is surjective in every relevant grade.
   Hence the grade-six anomaly is not a cohomology obstruction. An exact
   recursive lift exists in the beta-completion; polynomial termination remains
-  open, and the first eight corrections advance grades 6 through 13 without
-  terminating.
+  open, and the currently chosen first eight corrections advance grades 6
+  through 13 without terminating.
 source: codex-2026-07-21-DC2-LRC14-termination
 related:
   - THM-2044
@@ -138,25 +138,63 @@ The numerator in (15) vanishes at `u=2`, so `A` is polynomial.  Since
 `partial_q:Q[q,u]->Q[q,u]` is surjective in characteristic zero, polynomial
 antiderivatives `Atilde,Btilde` exist.  Therefore every `d_g` is surjective.
 
-## 4. Consequences
+## 4. The affine syzygy gauge
+
+The solution chosen in (15) is one section of a larger affine family.  Put
+
+```text
+D(u)=2u^2-10u+9.                                      (16)
+```
+
+If `(A_0,B_0)` is any solution of the grade equation
+
+```text
+(8/3)(u-2)A+D(u)B/9=H,                                (17)
+```
+
+then every solution, and no others, is
+
+```text
+A=A_0+D(u)C,
+B=B_0-24(u-2)C,             C in Q[q,u].              (18)
+```
+
+The displayed change is in the kernel by direct substitution.  Conversely,
+after multiplying the homogeneous equation by nine, coprimality of `D(u)`
+and `u-2` forces `D(u)` to divide `A-A_0`, giving (18).  Thus the exact
+descent script's nonzero grade-fourteen residual after correcting grades six
+through thirteen concerns only its chosen section; it is not invariant under
+the syzygy gauge `C`.
+Moreover, after integrating `A=partial_q Atilde` and
+`B=partial_q Btilde`, the two independent additions
+
+```text
+Atilde |-> Atilde+a(u),       Btilde |-> Btilde+b(u)          (19)
+```
+
+do not change the current linearized grade but can change later exact grades.
+A termination search should retain `C_g`, `a_g`, and `b_g` at every grade and
+optimize support or future residual size.
+
+## 5. Consequences
 
 HYP-8803's Weyl residual begins in grade six with
 
 ```text
-2x^6(u-1)(u-2).                                    (16)
+2x^6(u-1)(u-2).                                    (20)
 ```
 
 Equation (13) kills it with the particularly simple fixed-`T` correction
 
 ```text
-C_S=-(3/4)q x^5(u-1).                              (17)
+C_S=-(3/4)q x^5(u-1).                              (21)
 ```
 
 The exact residual then begins in grade seven.  Iterating (15), while now
 allowing both `S` and `T` to move, advances the exact residual through
 
 ```text
-6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12 -> 13 -> 14.    (18)
+6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12 -> 13 -> 14.    (22)
 ```
 
 The script verifies every cancellation symbolically.  In the beta-completion,

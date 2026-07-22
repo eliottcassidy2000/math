@@ -4,11 +4,11 @@
 
 ## The five-minute orientation
 
-1. **Main prize:** the Lonely Runner Conjecture for 14 total runners (13 nonzero relative speeds) is **OPEN**. LRC is known through 13 total runners.
-2. **Do not chase the old shortcuts:** uniform good period `q <= 25` is false, and uniform emptiness of the twelve-speed sporadic tight branch remains open.
-3. **Major new closure:** NC2 and unrestricted GMC(2) are **PROVED in canon** (THM-2022; effective one-variable seed THM-2111). Lean kernel-checks the residue, face, contradiction, extractor, and abstract `HeightWitnessSupplier`; the root endpoint remains `DvdK1 -> NC2 -> GMC(2)`, with general `DvdK1` the sole formal leaf. THM-2101 is a reserved additive residue bypass: its Check A/orbit/Lagrange core and irreducibility are checked, but the analytic small-root subset bridge is not.
-4. **Truth discipline:** correction/repaired canon outranks canon, which outranks exact computation, hypothesis, synthesis, and historical prose.
-5. **Research posture:** use an Anchor / Niche / Wildcard portfolio. Recover prior work, explain mechanisms and failures, generate alternate objects and quotients, and test connections rather than collecting slogans.
+1. **Main prize:** LRC(14), with 13 nonzero relative speeds, is **OPEN**; LRC is known through 13 total runners.
+2. **Do not chase old shortcuts:** uniform good period `q <= 25` is false; uniform emptiness of the twelve-speed sporadic branch remains open.
+3. **Major closure:** THM-2022 proves NC2 and GMC(2); THM-2111 is effective and THM-2101 gives two product-free additive proofs. Lean checks the algebraic core and abstract `HeightWitnessSupplier`; `DvdK1 -> NC2 -> GMC(2)` retains general `DvdK1` as its sole formal leaf.
+4. **Truth discipline:** corrected canon outranks canon, exact computation, hypothesis, synthesis, and historical prose.
+5. **Research posture:** use Anchor / Niche / Wildcard; demand mechanisms, hostile controls, and preserved/lost coordinates.
 
 Run the bounded packet before reading large files:
 
@@ -39,12 +39,12 @@ Then read the relevant frontier section, the active guardrails, and the exact th
    Giri–Kravitz one-sided accumulation theorem. Its gap is ineffective; it does
    not make the whole first window finite without an additional conjecture.
 7. **NC2 and GMC(2) are proved.** THM-2022 uses algebraic torus descent, a
-   lowest balanced face, THM-2067's Galois-orbit constant-term seed, and
+   lowest balanced face, THM-2111's effective constant-term seed, and
    good-prime Kummer/Lucas/Frobenius amplification of the *whole* face. DvdK
-   is a stronger alternate, not the current paper dependency. THM-2101 records
-   a plausible additive orbit-residue bypass, but remains RESERVED until its
-   analytic small-root subset is transported into the splitting field. Lean
-   checks only the algebraic incidence/Lagrange/irreducibility core.
+   is a stronger alternate, not the current THM-2022 dependency. THM-2101 proves
+   it on paper by independent monodromy and transcendental-specialization routes;
+   Lean checks their algebraic incidence/Lagrange/irreducibility core, while the
+   analytic wrappers remain.
 8. **Support return is not coefficient noncancellation.** THM-2070 gives a
    cofinite aperiodic return set with infinitely many zero odd constant terms.
    HYP-8930's fixed-support unique-channel lemma survives. HYP-8931 is vacuous:
@@ -61,14 +61,12 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     is the support Dirichlet profile, with Abel–Stieltjes/log-block Dini and the
     full Bertrand boundary at `z=1`.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300
-    is the exact new counterexample. THM-2063 closes one-fiber-linear pairs;
-    THM-2071 closes quadratic fibers, and THM-2084's cubic Faber gate makes
-    reduced degree `13` the first unresolved cubic cell. These are source-fiber
-   statements, not generic-cover, Jelonek, VC(4), or full planar classification.
-   THM-2102 proves that any Keller component with one power-free positive-weight
-   top face is triangular. Every hard component therefore has proper-power top
-   faces; its first lower layer is governed by an exact approximate-root
-   divisibility quotient or resonant shear class, not a DvdK face condition.
+    is the exact new counterexample. THM-2063/2071 close linear/quadratic source
+    fibers; THM-2084 supplies the cubic Faber gate, and THM-2118's all-degree law
+    with THM-2102's power-free-face theorem
+    close every cubic source fiber. Quartic fibers and general proper-power
+    resonant descent remain; none of these is a generic-cover, Jelonek, VC(4),
+    or full planar classification.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed
@@ -126,7 +124,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 | LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2105; preserve terminal address/owner/guard/mod-seven-fiber sidecars |
 | LRC / Frobenius wildcard | [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) | THM-2041 packets; keep seed and pointwise exit explicit |
 | LRC literature | [`CORE-PAPERS.md#lonely-runner-conjecture`](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [`LRC-TECHNIQUE-INDEX.md`](LRC-TECHNIQUE-INDEX.md), source paper |
-| NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2111, reserved THM-2101, formal interfaces, guardrails |
+| NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2101/2111, formal interfaces, guardrails |
 | Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102, HYP-8905 |
 | Tournaments | [`CURRENT-FRONTIER.md#tournaments`](CURRENT-FRONTIER.md#tournaments) | [`TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md`](TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md), [`THE-ZOO.md`](THE-ZOO.md) with its freshness banner |
 | Integer sequences | [`CURRENT-FRONTIER.md#integer-sequences`](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005 and their frozen outputs |

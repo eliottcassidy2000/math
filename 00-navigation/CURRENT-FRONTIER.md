@@ -125,11 +125,14 @@ not unsafe. The reusable certificate architecture is
   the common scale has `240` choices, the reduced ratio has `1165`, and only
   `279600` triples `(r,s,d)` survive before the other labels. THM-2112 gives
   the explicit finite box `R_7=5*28^8*(7*57^42)^17` and
-  `max(S)<=floor((128/3)L_7^8)`; it is not an executed empty audit. THM-2098
-  splits ranks 8--11 between at least seven transverse and seven
-  guard-proportional bands, with collision/tree budget `5(n-7)/49`.
-  THM-2099/2103 prove pair-tree data plus signed affine rank miss exact dyadic
-  rows. THM-2104 closes constant quotient valuations at `2,3,5`; THM-2105
+  `max(S)<=floor((128/3)L_7^8)`; it is not an executed empty audit. At guarded
+  sizes `8..10`, THM-2098 has three lanes: pure transverse with budget
+  `5(n-7)/49`, low mixed with no inherited budget, and high vertical cover;
+  depth-zero size eleven is separate. THM-2099/2103 prove pair-tree data plus
+  signed affine rank miss exact dyadic rows. In pure-transverse rank eight,
+  THM-2119 eliminates complete signed lines and stated transverse near-pencils,
+  while projective directions and absolute quotient fibers are three-sparse. THM-2104
+  closes constant quotient valuations at `2,3,5`; THM-2105
   forces affine clocks through denominator fourteen and opposite-parity
   carriers at `3,5,7` in the all-transverse model. THM-2114 adds strict tree
   surplus, all-maximum-basis connectivity, and finite-ring Kakeya needles. Its
@@ -227,25 +230,16 @@ addresses, endpoint owners, and both original odd-tail owner words.
 
 ### Mandatory controls and perspective prompts
 
-- `26*{1,...,12} union {339}` has first good period `q=27`: uniform `q<=25` is
-  false. `{1,...,12,5460}` defeats the old `q<=1200` scan.
-- THM-2043 proves parity-Hasse completeness modulo 14, but THM-2058's GW
-  family preserves that packet, blockedness through `q=13`, threshold `14`,
-  every prescribed finite lift depth, and one-tail owner sector while exiting
-  strictly at `47/113`. Raw jets and any fixed lift depth are not certificates.
-- AP13 and the `12->26` lift have identical complete local unit-phase germs but
-  maxima `1/14` and `1/12`.
-- A disk/Farey bad ray is only uncertified. THM-2057's AP one-tail planes
-  contain many such rays yet are wholly safe by clocks and binding phases.
-- The determinant polygon is basis-dependent Euclidean data, not a Heegner
-  discriminant. Paley, modular-curve, entropy, and cusp-form coincidences are
-  inspiration until an explicit LRC-predicate-preserving map is proved.
-- THM-2047's selected inequality slice retains sign, owner, side, height, and
-  exact paired deletion; it is not an ordinary toric complement. HYP-8840's
-  mixed moments retain augmentation, but no Bessel-to-sinc swap proves LRC.
-- Do not default to runners as vertices. Compare columns, gaps, clock orbits,
-  Farey cones, residues, wall events, endpoints, circuits, and proof
-  obligations; record what each quotient forgets and which sidecar repairs it.
+- The rows `26*{1,...,12} union {339}` and `{1,...,12,5460}` refute uniform
+  `q<=25` and the old `q<=1200` scan. AP13 and its `12->26` lift also share
+  complete local germs but have maxima `1/14` and `1/12`.
+- THM-2058 preserves every prescribed finite lift depth while escaping at
+  `47/113`; raw jets, bad Farey rays, and fixed lift depth are not certificates.
+- Determinant polygons are basis-dependent, not Heegner discriminants.
+  THM-2047's slice is not an ordinary toric complement, and no Bessel-to-sinc
+  analogy proves LRC.
+- Test columns, gaps, clocks, residues, wall events, endpoints, circuits, and
+  proof obligations as vertices; record each quotient's lost sidecar.
 
 ## NC2 and Gaussian moments
 
@@ -257,12 +251,13 @@ addresses, endpoint owners, and both original odd-tail owner words.
   GMC is false for every dimension at least 3. See the current external preprint
   entry in [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md).
 - **FORMALIZATION PARTIAL:** normalized residue, face transport, finite-field
-  contradiction, and `GMC2NC2.heightWitnessSupplier_holds` are kernel-checked
-  and root-imported. The clean endpoints `nc2_of_dvdK1` and `gmc2_of_dvdK1`
-  retain general complex `DvdK1` as their sole formal premise. On paper,
-  THM-2101 proves the seed by additive monodromy without a root product, and
-  [THM-2111](../01-canon/theorems/THM-2111-effective-compound-root-bound-for-one-variable-constant-terms.md)
-  makes it effective; THM-2067 is only a historical product route.
+  contradiction, irreducibility, and the additive orbit/Lagrange core are
+  kernel-checked and root-imported. The endpoints `nc2_of_dvdK1` and
+  `gmc2_of_dvdK1` retain general complex `DvdK1` as their sole formal premise.
+  THM-2101 proves strict two-sided DvdK on paper by two independent product-free
+  additive routes: monodromy and one small transcendental specialization. Its
+  analytic contour/monodromy/lift wrappers remain Lean assembly. THM-2111 gives
+  the effective seed; THM-2067 is only the historical small-root-product route.
 
 ### Why THM-2022 works
 
@@ -419,9 +414,10 @@ into tournament operation laws and LRC residue packets.
   syzygy gauge remain decisive for `DC(2)`.
 - **Planar source fibers:** THM-2063 and THM-2071 close affine and quadratic
   pencil members. THM-2084/2110 raise the cubic non-tame reduced degree to
-  `14`; the all-degree finite-pole and upper-Newton gates remain distinct.
-  THM-2102/2113 make every power-free positive-weight leading face triangular;
-  the proper-power first defect is rigid, but all-order resonant descent is open.
+  `14`; THM-2118 proves the all-degree boundary-flux law and, with THM-2102,
+  closes the entire cubic source-fiber stratum. Every power-free positive-weight
+  leading face is triangular. The next source-fiber degree is four; general
+  proper-power resonant descent remains open.
 - MISTAKE-228/229 block the old atlas and NC2/GMC chain. `JC(2)` and `DC(2)`
   remain open; these are source-fiber gates, not generic cover-degree results.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
