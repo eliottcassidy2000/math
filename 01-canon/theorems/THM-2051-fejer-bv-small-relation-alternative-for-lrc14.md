@@ -1,5 +1,5 @@
 ---
-id: THM-2049
+id: THM-2051
 title: Fejer--BV whole-product approximation gives a small-relation-or-positive-BONF5 alternative for LRC(14)
 status: RESERVED / UNDER HOSTILE AUDIT. The finite Fourier annihilation, BV rate, and numerical budget have been derived; the exact BONF5 centered-expansion normalization and all relation quantifiers are being independently checked before this is marked proved. This does not classify the small-relation branch or prove LRC(14).
 source: codex-2026-07-21-LRC-unrelated-transfer
@@ -13,7 +13,7 @@ related:
   - THM-946
 ---
 
-# THM-2049 -- Fejer--BV small-relation alternative
+# THM-2051 -- Fejer--BV small-relation alternative
 
 Reserved for the following candidate theorem. Let
 
