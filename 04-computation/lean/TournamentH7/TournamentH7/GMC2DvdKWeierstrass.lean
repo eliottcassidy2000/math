@@ -89,9 +89,40 @@ theorem phi_eq_smallRootFactor_mul (R : Polynomial F) (M : ℕ) :
     (phi_residue_ne_zero R M)
   exact ⟨_, H.isUnit, H.eq_mul⟩
 
+/-- The `x`-constant term of `Φ` is `−t·r₀` (`r₀ = R.coeff 0`, the lowest coefficient). -/
+theorem constantCoeff_Phi (R : Polynomial F) (M : ℕ) (hM : 1 ≤ M) :
+    PowerSeries.constantCoeff (R := PowerSeries F) (Phi R M)
+      = - PowerSeries.X * (algebraMap F (PowerSeries F)) (R.coeff 0) := by
+  have hcR : PowerSeries.constantCoeff (R := PowerSeries F)
+      ((R.map (algebraMap F (PowerSeries F))) : (PowerSeries F)⟦X⟧)
+      = (algebraMap F (PowerSeries F)) (R.coeff 0) := by
+    rw [← PowerSeries.coeff_zero_eq_constantCoeff, Polynomial.coeff_coe, Polynomial.coeff_map]
+  rw [Phi, map_sub, map_pow, map_mul, PowerSeries.constantCoeff_X,
+    zero_pow (by omega : M ≠ 0), PowerSeries.constantCoeff_C, hcR]
+  ring
+
+/-- **The multiplicative THM-1550 crux reduces to a single scalar identity.**
+From `Φ = P·h` (Weierstrass), taking the `x`-constant term gives
+`P.coeff 0 · h(0) = −t·r₀`, where `h(0) := constantCoeff h` is a unit of `F[[t]]` (`= 1 mod t`).
+Hence the small-root product `Π = (−1)^M·P.coeff 0` satisfies `Π · h(0) = c·t` with
+`c = (−1)^{M+1} r₀`, so **`Π = c·t ⟺ h(0,t) = 1`**.  This isolates the sole remaining analytic
+input as exactly `h(0,t) = 1` under `D_m = 0` (equivalently `h(0,t) = exp(−∑ D_m tᵐ/m)`). -/
+theorem coeff_zero_smallRootFactor_mul_unit (R : Polynomial F) (M : ℕ) (hM : 1 ≤ M) :
+    (smallRootFactor R M).coeff 0
+      * PowerSeries.constantCoeff (R := PowerSeries F)
+          (PowerSeries.weierstrassUnit (Phi R M) (phi_residue_ne_zero R M))
+      = - PowerSeries.X * (algebraMap F (PowerSeries F)) (R.coeff 0) := by
+  have H := PowerSeries.isWeierstrassFactorization_weierstrassDistinguished_weierstrassUnit
+    (phi_residue_ne_zero R M)
+  have key := congrArg (PowerSeries.constantCoeff (R := PowerSeries F)) H.eq_mul
+  rw [map_mul, ← PowerSeries.coeff_zero_eq_constantCoeff, Polynomial.coeff_coe,
+    PowerSeries.coeff_zero_eq_constantCoeff, constantCoeff_Phi R M hM] at key
+  exact key.symm
+
 end
 
 #print axioms phi_weierstrass
 #print axioms smallRootFactor_natDegree
+#print axioms coeff_zero_smallRootFactor_mul_unit
 
 end GMC2DvdKWeierstrass
