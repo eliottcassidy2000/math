@@ -134,9 +134,25 @@ theorem valuation_zero_of_prod_fixed [IsPretransitive G Ω] [CommMonoid A] [MulD
   · exact absurd h (ne_of_gt hGpos)
   · exact h
 
+/-- **THM-2067 abstract contradiction capstone.**  Packaging `valuation_zero_of_prod_fixed` with the
+hypothesis that the fixed subset product has *nonzero* valuation: the two are contradictory.  In the
+DvdK instantiation `v(∏_Ω f) = v(C_Φ) = 0` (Vieta, a constant) while `v(∏_S f) = v(c·t) = 1 ≠ 0`
+(THM-1550), so the assumption "all `CT(Λ^m) = 0`" (which produces the fixed small-root product) is
+refuted — some `CT(Λ^m) ≠ 0`. -/
+theorem orbit_product_contradiction [IsPretransitive G Ω] [CommMonoid A] [MulDistribMulAction G A]
+    (f : Ω → A) (S : Finset Ω) (x : Ω)
+    (hf : ∀ (g : G) (β : Ω), f (g • β) = g • f β)
+    (hfix : ∀ g : G, g • (∏ β ∈ S, f β) = ∏ β ∈ S, f β)
+    (v : A → ℤ) (hv : ∀ a b : A, v (a * b) = v a + v b)
+    (hC : v (∏ α : Ω, f α) = 0)
+    (hp : v (∏ β ∈ S, f β) ≠ 0)
+    (hG : 0 < Fintype.card G) : False :=
+  hp (valuation_zero_of_prod_fixed f S x hf hfix v hv hC hG)
+
 end GMC2OrbitProduct
 
 #print axioms GMC2OrbitProduct.prod_smul_eq_prod_pow_card_stabilizer
 #print axioms GMC2OrbitProduct.card_stabilizer_eq_card_stabilizer
 #print axioms GMC2OrbitProduct.prod_pow_card_group_eq
 #print axioms GMC2OrbitProduct.valuation_zero_of_prod_fixed
+#print axioms GMC2OrbitProduct.orbit_product_contradiction
