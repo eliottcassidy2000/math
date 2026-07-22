@@ -277,8 +277,8 @@ normal and `python -O` executions are byte-identical and end in `PASS`.
 ```text
 04-computation/lrc14_signed_toeplitz_scalar_separation_codex_20260721.py
 05-knowledge/results/lrc14_signed_toeplitz_scalar_separation_codex_20260721.out
-source SHA-256 c903ed319c3be19f783cfe44b96c24715f254e83621d9b37e5c12691933b0423
-output SHA-256 0dc82d0b93871f536d6cf46e417aa0e7b357fe758731fe2b72714e0a5929ccb8
+source SHA-256 ade4e9f14f37714adcdb88a6137b272a7de9f4ad75dc55f604592266ff439110
+output SHA-256 9516fd53a1b50d8bc17b56f9f51d0712e28dc21cd03f04a85174edbcd60737f3
 ```
 
 The hash basis is the working-tree files with LF line endings. QED.
