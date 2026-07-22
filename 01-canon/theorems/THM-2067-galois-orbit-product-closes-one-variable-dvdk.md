@@ -11,7 +11,7 @@ status: >
   orbit of that M-subset gives (ct)^r=C^eta, while Vieta makes C the nonzero
   constant (-1)^d r_0/r_d. The t-adic valuations disagree. This is a
   project-internal proof of exactly the bare existence input used by THM-2022;
-  it does not prove DvdK's stronger critical-value/limsup theorem. THM-2089
+  it does not prove DvdK's stronger critical-value/limsup theorem. THM-2093
   later refines the same root object to an unconditional effective, generally
   non-sharp first-return bound.
 source: codex-2026-07-21-dvdk-galois-orbit
@@ -22,7 +22,7 @@ related:
   - THM-1630-tnc-is-duistermaat-van-der-kallen-theorem-2
   - THM-2022-gmc2-frobenius-lowest-balanced-face
   - THM-2058-primitive-phase-packets-and-deck-fan-intervals
-  - THM-2089-effective-compound-root-bound-for-one-variable-constant-terms
+  - THM-2093-effective-compound-root-bound-for-one-variable-constant-terms
 ---
 
 # THM-2067 -- Galois orbit-products close the one-variable input
@@ -218,7 +218,7 @@ limsup |CT(f^m)|^(1/m).
 ```
 
 By itself this orbit contradiction gives no bound on the first nonzero `m`.
-THM-2089 later adds the compound polynomial of every same-size root-subset
+THM-2093 later adds the compound polynomial of every same-size root-subset
 product and obtains the explicit bound
 
 ```text

@@ -1,5 +1,5 @@
 ---
-id: THM-2089
+id: THM-2093
 title: "An effective compound-root bound for one-variable constant terms"
 status: >
   PROVED. Let f be a complex Laurent polynomial with exact extreme exponents
@@ -25,12 +25,12 @@ related:
   - THM-2070-horizontal-wick-embedding-and-dihedral-return-cancellation
 script: 04-computation/tnc_compound_root_effective_bound_codex_20260722.py
 output: 05-knowledge/results/tnc_compound_root_effective_bound_codex_20260722.out
-script_sha256: ebe325ad0dcf4f2ee07eca54d75465981667b719b228d4ce1d98a54892db2fac
-output_sha256: 0c8e882e86de48e9302ec0dd25b44331433537f0e227e894d22b738cc347cb3a
+script_sha256: 2134ad1e96b33334ba6459f76570a2b5d43c834ac850b4454745eace25b6ddc4
+output_sha256: 9bae425890714b6d731d8fdd9815b3c37b1d303de7636b90382db08d75c5da7f
 hash_basis: repository blobs with LF line endings
 ---
 
-# THM-2089 -- an effective compound-root constant-term bound
+# THM-2093 -- an effective compound-root constant-term bound
 
 THM-2067 proves the bare one-variable seed needed by NC2/GMC(2): a Laurent
 polynomial with exponents of both signs has a nonzero constant term in some
