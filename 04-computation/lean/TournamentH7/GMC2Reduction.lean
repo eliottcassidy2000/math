@@ -278,6 +278,18 @@ theorem face_sum_frobenius {F : Type*} [CommRing F] (p : ℕ) [Fact p.Prime] [Ch
   congr 1
   exact (CharP.cast_eq_iff_mod_eq F p).mpr (multinomial_dilate_modEq p S (s t))
 
+/-- **Non-cancellation of the balanced face.** Over a *field* of characteristic `p`, a nonzero
+face constant term `Q̄` forces the dilated balanced-face channel sum to be nonzero — the exact
+statement THM-2022 needs at the good prime: a whole tied face survives as `Q̄^p ≠ 0` and cannot
+cancel.  (`Q̄^p ≠ 0` is `pow_ne_zero` in a field/domain.) -/
+theorem face_sum_ne_zero {F : Type*} [Field F] (p : ℕ) [Fact p.Prime] [CharP F p]
+    {α : Type*} [DecidableEq α] (S : Finset α) {ι : Type*} (T : Finset ι)
+    (s : ι → α → ℕ) (h : ι → F)
+    (hQ : (∑ t ∈ T, (Nat.multinomial S (s t) : F) * h t) ≠ 0) :
+    ∑ t ∈ T, (Nat.multinomial S (fun i => p * s t i) : F) * (h t) ^ p ≠ 0 := by
+  rw [face_sum_frobenius]
+  exact pow_ne_zero p hQ
+
 /-! ### THM-2022 §1 — the exact Wick channel expansion of the Gaussian moment
 
 `E` is a linear functional with `E (monomial v c) = c * wt v`.  Expanding `P^m` by the
@@ -364,4 +376,5 @@ end GMC2
 #print axioms GMC2.multinomial_dilate_modEq
 #print axioms GMC2.sum_natCast_mul_pow_char
 #print axioms GMC2.face_sum_frobenius
+#print axioms GMC2.face_sum_ne_zero
 #print axioms GMC2.wick_expansion
