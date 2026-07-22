@@ -25,6 +25,7 @@ related:
   - THM-2082
   - THM-2086
   - THM-2092
+  - THM-2093
 ---
 
 # THM-2090 -- global splice or frozen terminal
@@ -227,7 +228,9 @@ THM-2092 subsequently applies the depth-four height transfer
 `max(S)<=128 max(Q)/3`. It makes Branch III finite and lifts THM-2088's
 bounded-terminal branch to the explicit original-row bound
 `3900651012632789`. Consequently Branch II is the sole potentially unbounded
-no-pair branch of this pipeline.
+no-pair branch at this stage of the pipeline. THM-2093 subsequently clears
+its star denominators, bounds its dyadic anchor gcd from the six cut rows, and
+places the full branch in a uniform finite box.
 
 Every branch also inherits THM-2086's all-height filters. Writing
 `B=max(Q)`, every live terminal satisfies

@@ -24,6 +24,8 @@ related:
   - THM-2062
   - THM-2079
   - THM-2092
+script: 04-computation/lrc14_dyadic_global_star_finite_box_referee_codex_20260722.py
+output: 05-knowledge/results/lrc14_dyadic_global_star_finite_box_referee_codex_20260722.out
 ---
 
 # THM-2093 -- the dyadic global star is finite
@@ -319,3 +321,13 @@ one Hamiltonian path. That fingerprint records depth but destroys the
 private-coefficient orders, root-path valuation costs, and owner addresses.
 Tournament Analysis is therefore a scheduling sidecar here; the valued
 arithmetic matroid is the proof carrier. QED.
+
+## 7. Exact referee
+
+The companion uses integer arithmetic and explicit runtime checks. It tests
+`1,000` random exact valuation flags, `253,680` exhaustive small
+private-relation instances, the sharp six-edge valuation construction at all
+`16` primes through `57`, and `500` primitive denominator-clearing stars. It
+also freezes `Lambda_57`, `Q_0`, the 296-digit bound, and all presentation
+identities. Normal and `python -O` runs byte-match the stored output and end
+in `PASS`.

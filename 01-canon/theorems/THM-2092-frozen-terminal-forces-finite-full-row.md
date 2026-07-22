@@ -5,11 +5,11 @@ status: >
   PROVED REDUCTION. THM-2077 gives max(S)<=128 max(Q)/3 at depth four.
   Therefore THM-2090's literally frozen terminal branch is finite, and
   THM-2088's rank-seven cut branch gives the explicit original-row bound
-  max(S)<=3900651012632789. Consequently the only potentially unbounded
+  max(S)<=3900651012632789. At this stage the only potentially unbounded
   no-pair branch left by THM-2087--2090 is the rank-eleven global template in
-  which the last guard and one terminal speed anchor all thirteen speeds.
-  The resulting finite banks have not been exhaustively decided, so this is
-  not LRC(14).
+  which the last guard and one terminal speed anchor all thirteen speeds;
+  THM-2093 subsequently makes that branch finite too. The resulting finite
+  banks have not been exhaustively decided, so this is not LRC(14).
 source: codex-2026-07-22-LRC14-frozen-terminal-finite
 depends_on:
   - THM-2077
@@ -18,6 +18,7 @@ depends_on:
 related:
   - THM-2078
   - THM-2086
+  - THM-2093
 ---
 
 # THM-2092 -- bounded terminal means bounded full row
@@ -123,10 +124,12 @@ max(|A_k|,|B_k|,|C_k|)<=91^6                          (10)
 for every original speed coordinate `S_k` outside the two anchors.
 
 Therefore (10) is the sole potentially unbounded **no-pair** family produced
-by the cut/holonomy/global-relation pipeline. It still carries six persistent
-height-114 cut rows, THM-2086's modular/nonlacunary filters, THM-2079's owner
-address, and THM-2077's relative height box. Classifying (10), plus the
-separate bounded guard-ratio families, is the next decisive target.
+at this stage of the cut/holonomy/global-relation pipeline. It still carries
+six persistent height-114 cut rows, THM-2086's modular/nonlacunary filters,
+THM-2079's owner address, and THM-2077's relative height box. THM-2093
+subsequently combines those cut rows with the dyadic private-coefficient
+staircase and THM-2053 to place (10) in a uniform finite box. The separate
+bounded guard-ratio families and finite discharge remain.
 
 Finite means mathematically reducible to exact computation, not already
 computed. Neither (6) nor (8) proves those rows safe.

@@ -186,6 +186,33 @@ NET: every P whose lowest face has a unique channel needs NO DvdK axiom for NC2,
   and one terminal speed. It retains the six height-114 cut circuits,
   THM-2086's modular/nonlacunary filters, and the dyadic owner address.
 
+### Dyadic global-star finite terminal
+
+- THM-2093 identifies the original depth-four speed valuations as an exact
+  nested evaluation-word support flag of weights `2,3,4,5,6` modulo
+  `2,4,8,16,32`. At the binary level this is THM-2069's weight-two deletion
+  codeword; the higher ring layers retain the guard staircase that the binary
+  matroid forgets.
+- If an outer coordinate is `2^t u`, `0<=t<=3`, its primitive star relation
+  has private coefficient divisible by
+  `2^(4-t) gcd(h,q)/gcd(gcd(h,q),u)`. In particular the two tails and three
+  earlier guards force private factors `16,16,8,4,2`, with normalized relation
+  `A h+2B q+c u=0` and `A==c mod 2`.
+- Rooting the six persistent terminal cut rows at the chosen terminal anchor
+  gives a prime-by-prime path invoice. Terminal primitivity forces
+  `v_p(gcd(h,q))<=6 floor(log_p 57)`, hence
+  `gcd(h,q)|lcm(1,...,57)^6`; no prime greater than `57` can be shared.
+- Clearing the eleven private star denominators gives an integral two-
+  coordinate presentation with coefficient radius at most
+  `sqrt(2)*(91^6)^12`. THM-2053 then bounds its primitive anchor direction,
+  and the whole original row satisfies
+  `max(S)<2912*lcm(1,...,57)^6*(91^6)^13`.
+- This removes the last potentially unbounded no-pair branch. The separate
+  THM-2087 bounded guard-ratio branch and all finite-box discharge remain.
+  The exact referee checks 1,000 valuation flags, 253,680 small staircase
+  relations, sharp path budgets at all 16 primes through 57, and 500
+  denominator-clearing stars under normal and optimized Python.
+
 ## death-star-2026-07-22-S105 -- GMC2 formalization CAPSTONE CLOSED: the whnf wall is SOLVED; HeightWitnessSupplier discharged kernel-pure; clean DvdK1 -> NC2 and DvdK1 -> GMC(2) now compile.
 
 **Owner directive:** work creatively at whnf-tuning, or how it can be bypassed.
