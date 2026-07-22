@@ -31,6 +31,7 @@ import TournamentH7.GMC2ResidueAssembly
 import TournamentH7.GMC2NormalizedResidue
 import TournamentH7.GMC2SupportFaceBridge
 import TournamentH7.GMC2NC2
+import TournamentH7.GMC2HeightWitness
 
 /-!
 # Formalization spine for NC2 and GMC(2)
@@ -75,10 +76,16 @@ The present spine has eight layers.
 
 The reference-channel extractor and the height-obligation theorem are each
 kernel-checked. Their direct existential wrapper into `HeightWitnessSupplier`
-currently exceeds Lean's elaboration budget, even though no type or
-mathematical error remains; this interface therefore stays explicit rather
-than being hidden behind an axiom or `sorry`. Formalizing DvdK itself is a
-separate published-theorem project and likewise remains visible in hypotheses.
+originally exceeded Lean's elaboration budget through a pathological `whnf`
+explosion (the elaborator repeatedly reducing the `Finsupp` coefficient
+`P.coeff` while unifying the seed hypothesis).  `GMC2HeightWitness` removes
+that explosion by sealing the coefficient behind an opaque local definition,
+so `GMC2NC2.heightWitnessSupplier_holds : HeightWitnessSupplier` now compiles
+kernel-purely inside the default heartbeat budget.  It derives the clean
+endpoints `GMC2NC2.nc2_of_dvdK1 : DvdK1 -> NC2` and `GMC2NC2.gmc2_of_dvdK1`,
+which depend on no `HeightWitnessSupplier` hypothesis.  Formalizing DvdK
+itself is a separate published-theorem project and remains visible in
+hypotheses.
 
 Tournament-assumption audit: orienting channels pairwise preserves the
 lower-face/off-face comparison but loses coefficient magnitudes and tied-face
