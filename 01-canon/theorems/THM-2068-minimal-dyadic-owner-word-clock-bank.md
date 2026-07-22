@@ -1,5 +1,5 @@
 ---
-id: THM-2067
+id: THM-2068
 title: "Minimal dyadic owner-word clock bank through quotient-core maximum 24"
 status: >
   RESERVED / EXACT CENSUS RUNNING. This file will determine a minimum subset
@@ -17,7 +17,7 @@ related:
   - HYP-2230
 ---
 
-# THM-2067 -- minimal dyadic owner-word clock bank
+# THM-2068 -- minimal dyadic owner-word clock bank
 
 This ID reserves the exact set-cover audit described in the status field.
 The proof statement, minimum bank, irredundancy witnesses, and computation
