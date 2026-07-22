@@ -152,8 +152,9 @@ structural supplier/seed and a lossless exit.
   the original `15..34` clock window. THM-2072 proves that no fixed finite
   bank extends uniformly to unbounded cores. THM-2073 supplies the structural
   replacement on the non-hereditarily-primitive lane: a divisor-complete
-  binary safe-child tower of depth at most eight, ending at a hereditarily
-  primitive quotient core. THM-2075 shows that doubling homeomorphically
+  binary safe-child tower ending at a hereditarily primitive quotient core;
+  THM-2076's strict guard-capacity tax sharpens its depth from eight to five.
+  THM-2075 shows that doubling homeomorphically
   conjugates every safe-set level to that terminal core: component/Euler data
   are invariant, lengths halve, addresses are constant per component, and
   every endpoint retains a terminal-core owner.

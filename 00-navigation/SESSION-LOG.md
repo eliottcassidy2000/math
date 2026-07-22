@@ -13,7 +13,8 @@
   `1/14` seam. Every imprimitive deletion has gcd two, the first four lifts
   are partitioned `2+1+1`, and descent iterates through divisor-complete
   quotient cores (including the new denominator-`26` shell) to a hereditary
-  terminal after at most eight levels. Exact referees pass normally and under
+  terminal. THM-2076's Haar-capacity lemma forces terminal size at least six,
+  sharpening depth to at most five. Exact referees pass normally and under
   `python -O`. THM-2075 then proves that doubling is a homeomorphism along the
   tower: component/Euler counts persist, lengths and measure halve exactly,
   each component carries one constant binary address, and every endpoint has

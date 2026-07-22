@@ -22,6 +22,7 @@ related:
   - THM-2066
   - THM-2068
   - THM-2072
+  - THM-2076
 script: 04-computation/lrc14_dyadic_deletion_tower_referee_codex_20260721.py
 output: 05-knowledge/results/lrc14_dyadic_deletion_tower_referee_codex_20260721.out
 script_sha256: a65a72a538897d3d9b2f6a25ce8c9099e88679fe8292b2e7213d7816e5b095e4
@@ -377,6 +378,10 @@ distinctness. Hence
 ```text
 0<=r<=8.                                                (32)
 ```
+
+THM-2076 subsequently sharpens (32) to `r<=5` by the strict Haar-capacity
+tax of the terminal guard. The present theorem retains (32) as the elementary
+cardinality bound proved internally here.
 
 ## 5. Frontier effect and guardrails
 
