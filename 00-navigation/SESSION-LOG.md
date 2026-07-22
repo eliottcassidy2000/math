@@ -56,6 +56,11 @@
   `x=0`; the paying sidecar is the x-adic valuation/pole profile. Since
   `delta(x)=3x^2`, the boundary problem is a Rees/V-filtration-style
   differential-operator calculation, not an Orlik--Solomon object identity.
+- **Second incoming synthesis:** S210/HYP-8835's antisymmetry operation appears
+  exactly as PBW order reversal `theta->1-theta`. The boundary-grade-three
+  residual is anti-invariant (`2theta-1`), so the fixed Weyl order kills it;
+  grade six is the first invariant sector. The next correction complex should
+  be split by this parity before any coefficient search.
 
 ## death-star-2026-07-21-S93 -- Mathlib-PR packaging of the three-term no-common-root: Polynomial-R recast + minimal imports + the Mathlib-MISSING three-term Hermite recurrence proved, with "consecutive Hermite share no root" as the flagship application. All kernel-pure. HYP-8805.
 

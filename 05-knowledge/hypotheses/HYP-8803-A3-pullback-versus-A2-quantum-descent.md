@@ -215,6 +215,22 @@ operator analysis along this divisor).  Plain complement topology or an
 Orlik--Solomon count cannot decide polynomial extension; the valuation sidecar
 is load-bearing.
 
+The next incoming item, S210/HYP-8835, also has a precise operation-level use.
+Order reversal sends the scalar PBW parameter
+
+```text
+theta -> 1-theta.
+```
+
+The grade-three coefficient (12) is anti-invariant under this involution
+because it is proportional to `2theta-1`.  Weyl order is its fixed point and
+therefore kills the whole anti-invariant boundary grade.  The surviving
+uniform grade six is the first invariant sector.  This suggests splitting the
+Rees correction complex by order-reversal parity: Weyl symmetry disposes of
+the odd/anti-invariant part automatically, while the even/invariant grade-six
+part carries the actual DC(2) obstruction.  This is a commutator-ordering
+consequence of antisymmetry, not an identification with tournament dynamics.
+
 ## 6. Falsifiable next steps
 
 The original alternatives can now be made more precise.
