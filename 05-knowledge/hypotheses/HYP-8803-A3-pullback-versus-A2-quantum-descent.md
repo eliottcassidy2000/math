@@ -2,19 +2,23 @@
 id: HYP-8803
 title: "A3 cotangent pullback versus A2 nonfiltered quantum descent"
 status: >
-  OPEN / exact Ore reduction and ordering comparison completed. The linked
+  OPEN / exact Ore reduction and boundary correction complex completed. The linked
   certificate is an exact A3, not A2, endomorphism. After the THM-2044
   substitution, x,q,ell generate an Ore extension in which R is exactly
   central and localization at x has the slice t=-1/(3x), [ell,t]=1. Ordinary
   normal ordering leaves an ell^3 residual in [S,T]-1; among the scalar
-  theta-PBW orderings, Weyl ordering is uniquely degree-optimal and lowers it
-  to ell^2 but does not kill it. The remaining issue is polynomial extension
-  across x=0, matching the HYP-8802 weight cascade.
+  theta-PBW orderings, Weyl ordering is uniquely degree-optimal. THM-2049
+  proves that the simultaneous associated-graded (S,T) correction map is
+  surjective in every relevant grade, so the grade-six residual is not a
+  cohomology obstruction and a formal beta-adic lift exists. The remaining
+  issues are finite polynomial termination, the D-column, and extension
+  across x=0.
 source: codex-2026-07-21-DC2-filtered-pullback-wall
 related:
   - THM-1300
   - THM-2044
   - THM-2046
+  - THM-2049
   - HYP-8802
 script: 04-computation/dc2_ore_descent_codex_20260721.py
 output: 05-knowledge/results/dc2_ore_descent_codex_20260721.out
@@ -179,9 +183,12 @@ whereas the Weyl residual has
 
 Thus Weyl ordering kills the complete boundary-grade-three anomaly and exposes
 a uniform grade-six anomaly.  This is an exact structural source for the
-number `6` seen in HYP-8802's weight propagation.  It does not yet prove that
-every subsequent correction advances by six; that is the associated-graded
-statement the next no-finite-extension calculation must establish.
+number `6` seen in HYP-8802's weight propagation.  THM-2049 now proves the
+opposite of the first obstruction guess: once `T` and `S` are allowed to move
+simultaneously, the associated-graded correction map is surjective in every
+relevant grade.  The grade-six class is therefore exact, not obstructed.
+The exact recursion advances grades `6,7,...,13` in its first eight steps
+without terminating, moving the gate from local cohomology to finite support.
 
 ## 5. Incoming arrangement-localization connection
 
@@ -225,30 +232,35 @@ theta -> 1-theta.
 The grade-three coefficient (12) is anti-invariant under this involution
 because it is proportional to `2theta-1`.  Weyl order is its fixed point and
 therefore kills the whole anti-invariant boundary grade.  The surviving
-uniform grade six is the first invariant sector.  This suggests splitting the
-Rees correction complex by order-reversal parity: Weyl symmetry disposes of
-the odd/anti-invariant part automatically, while the even/invariant grade-six
-part carries the actual DC(2) obstruction.  This is a commutator-ordering
-consequence of antisymmetry, not an identification with tournament dynamics.
+uniform grade six is the first invariant sector, but THM-2049 proves that it
+does not carry associated-graded cohomology.  Order-reversal parity remains a
+useful gauge reduction; the actual DC(2) gate must occur in termination,
+coupling to `D`, or polynomial regularity rather than in this first invariant
+sector.  This is a commutator-ordering consequence of antisymmetry, not an
+identification with tournament dynamics.
 
 ## 6. Falsifiable next steps
 
 The original alternatives can now be made more precise.
 
-1. **Boundary-resummation route.**  Rewrite the HYP-8802 corrections in the
-   localized coordinates `(R,t,ell)`.  Test whether the `+6` weight transfer is
-   a finite regular-singular connection after allowing `T` to move.  A
-   polynomial answer must have no pole when translated back across `x=0`.
-2. **No-finite-extension route.**  Put the correction complex in the
-   `x`-adic filtration.  Prove that killing the top `ell` layer forces a pole,
-   or forces a nonzero class six weights higher, for every simultaneous
-   correction of `T,D,S`.  This would upgrade HYP-8802's observed cascade to a
-   theorem for the present witness.
+1. **Boundary-resummation route.**  Rewrite the THM-2049 beta-adic recursion in
+   localized coordinates `(R,t,ell)`.  Decide whether its infinite-looking
+   ladder is the expansion of a polynomial/rational closed form.  A polynomial
+   answer must have no pole when translated back across `x=0`.
+2. **Termination route.**  Compute a recurrence or generating function for
+   the highest `q,u=x^2ell` support of the simultaneous corrections.  Prove
+   either eventual zero (a finite `[S,T]=1` lift) or an unavoidable nonzero
+   leading monomial at every grade.  Associated-graded non-surjectivity is no
+   longer available as an obstruction.
 3. **Quantum-reduction route.**  Start with the exact A3 endomorphism (1),
    partially Fourier-transform the third Weyl pair, and compute the commutant
    or Hamiltonian reduction of the `(R,D_R)` pair.  A valid descent must
    identify that reduced algebra with the standard `A_2`; merely finding an
    `A_2` subalgebra inside `A_3` is insufficient.
+
+4. **Coupled-column route.**  If the single `[S,T]` relation terminates, impose
+   the exact `D`-column during the same recursion; a formal solution of one
+   relation alone is not an `A_2` endomorphism.
 
 The live positive target remains a simultaneous polynomial quadruple in
 `A_2`.  The exact negative result currently proved is THM-2046: no witness in

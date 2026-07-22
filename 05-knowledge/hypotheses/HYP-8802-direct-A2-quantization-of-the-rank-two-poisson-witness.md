@@ -2,17 +2,19 @@
 id: HYP-8802
 title: "Direct A2 quantization of the rank-two Poisson witness"
 status: >
-  OPEN / first obstruction and exact R-column repair computed. Weyl-symmetric
+  OPEN / exact R-column repair and formal S,T boundary lift computed. Weyl-symmetric
   quantization of THM-2044 has a nonzero cubic Moyal anomaly in five of the six
   canonical relations. Finite polynomial corrections restore the entire
-  R-column: M(Dq,R)=1 and M(T,R)=M(Sq,R)=0. The coupled T-column and flatness
-  relation remain. Simultaneous correction of all six relations, with
-  termination rather than an infinite formal hbar series, is the DC(2) gate.
+  R-column: M(Dq,R)=1 and M(T,R)=M(Sq,R)=0. THM-2049 proves that the Ore
+  boundary complex for the S,T relation is associated-graded acyclic and gives
+  a formal beta-adic lift. Polynomial termination and coupling to D remain.
+  Simultaneous finite correction of all six relations is the DC(2) gate.
 source: codex-2026-07-21-DC2-JC2
 related:
   - THM-2044
   - THM-2045
   - THM-2046
+  - THM-2049
   - THM-1345
   - HYP-8803
 script: 04-computation/poisson_rank2_symplectic_suspension_codex_20260721.py
@@ -125,12 +127,13 @@ The homogeneous freedom in (8) is `f_m=xR^(m-1)`. After normalizing its
 m=6:  {6,12},       m=12: {12,18},       m=18: {18,24}. (11)
 ```
 
-The modes `6,12,18` do not solve (10) simultaneously. This is not yet a proof
-that every finite correction fails, but it exposes the termination question in
-its sharpest current form: prove that every nonzero mode has an unavoidable
-`m+6` top component (which would rule out this fixed-`T`, tangent-linear
-repair), or escape the cascade by correcting `T` simultaneously or using a
-higher tangent order.
+The modes `6,12,18` do not solve (10) simultaneously. This rules out only that
+fixed-`T`, tangent-linear repair. THM-2049 supplies the required hostile
+control: after `T` is allowed to move, the simultaneous associated-graded map
+is surjective in every grade. Hence the `m -> m+6` cascade is a gauge artifact
+of the fixed-`T` slice, not a general obstruction. The live question is
+whether the resulting exact correction ladder terminates as a polynomial and
+can be coupled to the `D` relations.
 
 For planar JC, THM-2045 closes the most direct de-stabilization route. A useful
 positive program is to turn its Laurent-sector obstruction into a criterion on
@@ -144,7 +147,9 @@ HYP-8803 proves that the `x,q,ell` part of this calculation is the exact Ore
 extension `Q[x,q][ell;delta]`, with `R` central, and that after inverting `x`
 the slice `t=-1/(3x)` satisfies `[ell,t]=1`. It also proves that Weyl ordering
 is the unique scalar PBW ordering that lowers the raw `[S,T]-1` residual from
-`ell`-degree three to degree two. Thus the cascade above should be attacked as
-an `x`-adic boundary-integrality problem while allowing simultaneous movement
-of `T`, rather than by searching for another scalar ordering or another local
-Darboux coordinate.
+`ell`-degree three to degree two. THM-2049 then proves the associated-graded
+simultaneous correction complex is acyclic and explicitly advances the exact
+residual from beta grades 6 through 14. Thus the cascade above should be
+attacked as a finite-termination and `x`-adic boundary-integrality problem,
+rather than by searching for another scalar ordering, local Darboux
+coordinate, or first cohomology obstruction.

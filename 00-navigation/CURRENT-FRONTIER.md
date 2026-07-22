@@ -163,7 +163,20 @@ structural supplier/seed and a lossless exit.
    exact; and the top-vertex boundary-layer coefficient depends only on the
    extreme active slopes. The live target is a deletion--restriction or nerve
    argument forcing `chi(G_{1/14})>0`; arrangement cohomology by itself does
-   not provide that positivity.
+   not provide that positivity. [THM-2050](../01-canon/theorems/THM-2050-period14-top-germs-do-not-determine-global-loneliness.md)
+   sharpens the no-go: AP13 and `12->26` have identical complete local germs at
+   all six unit points but maxima `1/14` and `1/12`. The exact
+   [HYP-8841](../05-knowledge/hypotheses/HYP-8841-lrc14-noetherian-first-exit-termination.md)
+   audit shows THM-2048's peel tax fires on deep `12->96` and covering
+   `12->84`, and independently reproduces the genuine Cover14 gain at peel
+   `93`, but misses `12->26`, `12->36`, and P10+K33. It is a pruning rule, not
+   the termination height. Once `M>1/14`, THM-2047 bounds a first strict
+   exit by `q<=2 max(S)`; the sole Wall-A branch is owner-labelled Euler-point
+   survival when no positive pair-sum margin occurs.
+   [THM-2051](../01-canon/theorems/THM-2051-fejer-bv-small-relation-alternative-for-lrc14.md)
+   now proves that every remaining hard row has a support-`2..5` relation of
+   coefficient height at most `2^20`. The open deletion/Euler argument is
+   therefore localized to that finite union of circuit templates.
 
 The characteristic-7 result
 [THM-2043](../01-canon/theorems/THM-2043-period14-parity-hasse-jet-completeness.md),
@@ -350,7 +363,11 @@ into tournament operation laws and LRC residue packets.
   proves that this witness cannot descend through multiplication positions and
   first-order dual momenta. [HYP-8803](../05-knowledge/hypotheses/HYP-8803-A3-pullback-versus-A2-quantum-descent.md)
   localizes the remaining nonfiltered gate at extension across `x=0` in an
-  exact Ore-Weyl chart; `DC(2)` and planar `JC(2)` remain open.
+  exact Ore-Weyl chart. [THM-2049](../01-canon/theorems/THM-2049-the-DC2-Ore-boundary-correction-complex-is-acyclic.md)
+  proves its simultaneous `(S,T)` associated-graded correction map is onto in
+  every relevant beta grade, kills the grade-six obstruction guess, and gives
+  a formal beta-adic lift. Finite polynomial termination and coupling to `D`
+  are now the decisive gates; `DC(2)` and planar `JC(2)` remain open.
 - **Gaussian higher dimensions:** THM-1490 is one verified higher-dimensional
   construction; newer three-real-Gaussian examples supersede any claim that
   dimension four is sharp.

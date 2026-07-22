@@ -17,6 +17,19 @@
   height circuit hyperplanes. It does not classify that structured branch;
   the tight AP is deliberately relation-rich. THM-940 is only the discrete
   analogue and is not silently identified with the continuous proof.
+## codex-2026-07-21-DC2-LRC14-termination -- local acyclicity versus finite Euler termination (THM-2049/2050, HYP-8841)
+
+**Owner:** push the DC(2)/planar-JC thread to its next decisive target and transfer the proved/disproved mechanisms toward LRC(14), while repeatedly integrating incoming work.
+
+**DC(2) result (THM-2049, PROVED local/formal statement; not DC(2)):** in the exact Ore algebra `Q[x,q][ell;delta]`, `beta(sum a_k ell^k)=min_k(v_x(a_k)-2k)` is multiplicative and commutators raise beta by two. The associated bracket is `{ell,q}_0=2`. For the Weyl boundary symbols, the simultaneous grade-`g` correction map is `(A,B)->(8/3)(u-2)A+(2u^2-10u+9)B/9`; it is surjective because the two `u` polynomials are coprime. Thus the grade-six residual is exact. An exact ladder advances grades `6,...,13` to `14`; a formal beta-adic `[S,T]=1` lift exists. The open gates are polynomial termination and the coupled `D` relations. This corrects HYP-8802/8803's earlier suggestion that the first invariant grade might carry the obstruction.
+
+**LRC no-go (THM-2050, PROVED):** AP13 and `AP13` with `12->26` have identical full local phase-height function germs on `|h|<1/728` at every unit point `a/14`, yet `M=1/14` and `M=1/12`. Local top data, even as a full germ, cannot determine global loneliness.
+
+**Incoming synthesis:** THM-2047 supplies the lossless signed phase-height/Euler carrier; THM-2048 supplies the fiber-quantization pruning tax; HYP-8840 identifies GMC's constant-term/volume leverage and its zero-volume ceiling. Later pulls supplied THM-2048's genuine Cover14 gain and promoted THM-2051: the no-small-relation branch has positive safe volume, so every hard row lies on a support-`2..5`, coefficient-height-`<=2^20` circuit hyperplane. The exact transfer is `volume/tax -> strict branch`, `Euler signed wall word -> tight branch`, and a labelled Noetherian deletion rule inside the circuit branch as the missing glue. No literal algebra map between GMC/DC and LRC is asserted.
+
+**Exact termination-sidecar audit (HYP-8841):** pair-sum maxima, threshold interval/point topology, complete first exits, and every peel tax were computed on AP/GW, `12->26`, `12->36`, `12->96`, `12->84`, P10+K33, and the incoming Cover14 tax-gain row. It exactly reproduces the latter's peel-`93` excess `2413467317/235670635200`. The tax fires on deep/covering controls but misses the smallest hostile/K33 controls and is not a scalar termination height. THM-2047 proves the strict search is complete by `q<=2 max(S)`. With THM-2051 now proved, the next decisive Wall-A clause is owner-labelled endpoint survival inside the bounded small-relation branch when neither a volume-tax violation nor a positive pair-sum margin occurs. The proof-carrier tournament is transitive; signed threshold topology wins and raw unit germs lose.
+
+**Artifacts:** THM-2049, THM-2050, HYP-8841, the updated exact Ore script/output, `lrc14_termination_sidecar_codex_20260721.py/.out`, and reflection `from-Ore-boundary-acyclicity-to-LRC14-Euler-termination-codex-20260721.md`.
 
 ## boxeph-2026-07-21-S211 -- where GMC(2) reaches LRC(14) (the CT-functional) and where it stops (the volume ceiling) (HYP-8840)
 
