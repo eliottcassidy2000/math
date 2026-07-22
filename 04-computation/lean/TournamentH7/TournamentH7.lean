@@ -760,3 +760,4 @@ import TournamentH7.GMC2DvdKMultiplicativeClosing
 import TournamentH7.GMC2DvdKUnitOrigin
 import TournamentH7.GMC2Thm2067HSonly
 import TournamentH7.GMC2DvdKUnivariateReduction
+import TournamentH7.GMC2DvdKFrame
