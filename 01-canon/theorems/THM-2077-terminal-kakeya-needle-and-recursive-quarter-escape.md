@@ -10,6 +10,7 @@ status: >
   ratio escape at every depth. This is a structural reduction, not LRC(14).
 source: codex-2026-07-21-LRC-tangent-referee
 depends_on:
+  - THM-1234
   - THM-2072
   - THM-2073
   - THM-2075
@@ -258,6 +259,56 @@ dangerous** on them.  A compact interval inside one open tooth has strictly
 smaller length than that tooth, which is exactly why (7), (9), and (14) are
 strict.  Replacing either side silently by a measure statement would lose
 this endpoint gain.
+
+### Deepest-lane pair-capacity saturation
+
+If `r=5`, then `Q_5` has six speeds.  The sharp five-comb pair floor in
+THM-1234 gives its six-danger-comb union bound
+
+```text
+measure(union_(q in Q_5){||q sigma||<1/14})<=212/273.
+```
+
+Consequently
+
+```text
+measure(G_(Q_5))>=61/273.                              (14a)
+```
+
+The final guard law puts this closed safe set inside
+
+```text
+E_(h_4)={sigma:||h_4 sigma||<1/7},
+measure(E_(h_4))=2/7=78/273.                           (14b)
+```
+
+Compact/open separation and (14a)--(14b) therefore give the exact
+near-saturation ledger
+
+```text
+61/273<=measure(G_(Q_5))<78/273,
+0<measure(E_(h_4) minus G_(Q_5))<=17/273.              (14c)
+```
+
+Equivalently, the terminal safe set occupies at least `61/78` of the final
+guard's entire eligibility region.  Since that region consists of `h_4`
+equal teeth, at least one guard tooth contains terminal safe measure
+
+```text
+at least 61/(273h_4).                                  (14d)
+```
+
+THM-2075 transports (14a) to the original core as
+
+```text
+measure(G_C)>=61/(273*2^5)=61/8736.                    (14e)
+```
+
+This is the precise surviving contribution of the global five-comb/Fano
+pair functional to the tower.  It supplies a high-occupancy guard tooth, not
+a single long component, a located four-prefix survivor, or a `j=4` flood
+chronology.  Turning (14d) into one of those objects requires an endpoint or
+component-count sidecar.
 
 ## 3. Every quotient level has a quarter-anchor escape
 
