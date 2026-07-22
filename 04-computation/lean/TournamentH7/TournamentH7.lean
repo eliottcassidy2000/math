@@ -737,3 +737,4 @@ import TournamentH7.GMC2DvdKPositive
 import TournamentH7.GMC2DvdKUniqueChannelBypass
 import TournamentH7.GMC2DvdKMonomialCertificate
 import TournamentH7.GMC2DvdKResidualExample
+import TournamentH7.GMC2OrbitProduct
