@@ -259,17 +259,17 @@ addresses, endpoint owners, and both original odd-tail owner words.
 - **FORMALIZATION PARTIAL:** normalized residue, face transport, finite-field
   contradiction, and `GMC2NC2.heightWitnessSupplier_holds` are kernel-checked
   and root-imported. The clean endpoints `nc2_of_dvdK1` and `gmc2_of_dvdK1`
-  have general complex `DvdK1` as their sole explicit premise. On paper,
+  retain general complex `DvdK1` as their sole formal premise. On paper,
+  THM-2101 proves the seed by additive monodromy without a root product, and
   [THM-2111](../01-canon/theorems/THM-2111-effective-compound-root-bound-for-one-variable-constant-terms.md)
-  proves the required one-variable statement internally and effectively;
-  THM-2067 is an alternate historical Galois route.
+  makes it effective; THM-2067 is only a historical product route.
 
 ### Why THM-2022 works
 
-For fixed support, torus descent reduces a complex null point to a number
-field. THM-2111 makes the lowest balanced Wick face nonzero by exponent
-`binom(M+N,min(M,N))`, without a Galois endgame beyond the small-root
-logarithmic identity. At a good prime,
+THM-2101 makes the lowest balanced Wick face nonzero by an additive small-root
+residue sum and transitive monodromy. THM-2111 bounds its first return by
+`binom(M+N,min(M,N))` and identifies it with an exact compound-determinant
+order. After specialization at a good prime,
 Kummer kills non-dilated channels, strict height kills dilated off-face terms,
 and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 

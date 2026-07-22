@@ -73,14 +73,14 @@ Older chronology is in
 
 ## NC2 / GMC formalization
 
-- THM-2022 proves NC2/GMC(2) on paper; THM-2111 supplies an effective,
-  Galois-free-after-the-small-root-identity seed by
-  `m<=binom(M+N,min(M,N))`. THM-2067 is an alternate historical route. Lean
+- THM-2022 proves NC2/GMC(2) on paper. THM-2101 now supplies a direct additive
+  monodromy seed with no small-root product; THM-2111 bounds the first return
+  by `binom(M+N,min(M,N))` and identifies its exact compound-determinant order. Lean
   root-imports `HeightWitnessSupplier`, the abstract transitive orbit-product,
   fixed-product valuation lemma, contradiction capstone, and rational-function
   t-adic closing. General complex `DvdK1` remains the sole formal endpoint
-  premise. The pulled `GMC2PhiIrreducible` now removes the irreducibility item
-  from HYP-8942's route; THM-1550, Vieta, and wrappers remain.
+  premise. The additive incidence and full-root sum are formal, but the
+  analytic monodromy bridge and final wrapper remain.
 - HYP-8925/8930 give positive-coefficient and fixed-support unique-channel
   leaves. HYP-8932 adds a monomial-certificate engine and one kernel-checked
   `{-2,-1,1,2}` instance. `102/116` is a mass-40 bounded census; thirteen

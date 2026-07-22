@@ -55,9 +55,9 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
 - **THM-2095 (PROVED):** the live guard-ratio common scale divides `252576225`
   and its marked pair is bounded; its `240*1165=279600` ledger does not bound
   the other six speeds.
-- **THM-2111 (PROVED):** one-variable constant-term nonvanishing is effective
-  by `m<=binom(M+N,min(M,N))`; this removes the external DvdK dependency from
-  the THM-2022 paper proof, but not the Lean endpoint or the sharp `M+N` problem.
+- **THM-2101/2111 (PROVED PAPER):** additive monodromy proves the bare seed
+  without a root product; the first return is the exact order of a compound
+  determinant and is at most `binom(M+N,min(M,N))`. Lean and sharp `M+N` remain.
 
 ## LRC(14) — OPEN
 
@@ -78,12 +78,12 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
 
 ## NC2 / GMC and Lean
 
-- **Paper:** THM-2022 proves NC2/GMC(2); THM-2111 supplies its internal
-  effective seed, with THM-2067 as an alternate historical Galois route.
+- **Paper:** THM-2022 proves NC2/GMC(2); THM-2101 supplies a product-free
+  additive seed and THM-2111 its effective compound-determinant refinement.
 - **Formal / HYP-8942:** `HeightWitnessSupplier`, abstract orbit-product,
   valuation contradiction, and rational t-adic closing are root-imported.
-  General complex `DvdK1` remains the sole endpoint premise; irreducibility,
-  THM-1550, Vieta, and the Galois wrapper remain.
+  General complex `DvdK1` remains the sole endpoint premise; the paper's
+  analytic monodromy bridge and final wrapper are not yet formalized.
 - **HYP-8925 / HYP-8930 (SUBSTANTIVE LEAVES):** positive coefficients and a
   fixed-support unique channel prevent cancellation; neither is general DvdK1.
 - **HYP-8932 (ENGINE + ONE FORMAL INSTANCE):** monomial ideal membership gives

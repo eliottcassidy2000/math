@@ -12,13 +12,16 @@ status: >
   Y^(C-j) coefficient by complementary-subset duality. Consequently its
   evaluation at c*t is already a nonzero polynomial of exact degree C;
   subtracting the chosen small-root product loses at most one order because
-  the divided difference has at worst a simple t-pole. Beyond the small-root
+  the divided difference has an exact simple t-pole. In fact, if m_* is the
+  first nonzero return, then ord_0 Q=m_* and its leading coefficient is an
+  explicit nonzero multiple of CT(f^m_*). Beyond the small-root
   logarithmic identity the proof is Galois-free. For a=1 the bound is the
   sharp d=M+N. This supplies an unconditional effective seed bound for
   THM-2022, but it does not prove the open sharp d bound for general a,b.
 source: codex-2026-07-22-gmc-paper-audit
 depends_on: []
 related:
+  - THM-2101-additive-orbit-residue-dvdk-bypass
   - THM-1550-an-exact-criterion-for-the-toral-nullcone
   - THM-1630-tnc-is-duistermaat-van-der-kallen-theorem-2
   - THM-1650-newton-polygon-of-the-effective-dvdk-bound
@@ -317,7 +320,87 @@ On the other hand, the nonzero polynomial `Q` has degree `C` by
 `ord_0 Q>=C+1`, a contradiction.  Consequently one of the first `C` powers
 has nonzero constant term.  This proves the theorem.
 
-## 6. Boundaries, use, and what remains open
+## 6. The compound determinant records the exact first return
+
+The simple pole in (27) is always exact. This gives a stronger interpretation
+of the same polynomial `Q`.
+
+Let
+
+```text
+m_*=min{m>=1:CT(f^m)!=0}.                               (29)
+```
+
+Existence follows from the theorem just proved. Give the algebraic closure of
+`C((t))` its additive valuation `v(t)=1`. The Newton polygon of (5) has
+vertices
+
+```text
+(0,1), (a,0), (a+b,1),                                 (30)
+```
+
+so the `a` small roots have valuation `1/a` and the `b` large roots have
+valuation `-1/b`. If an `a`-subset `S` contains `ell<=a-1` small roots, then
+
+```text
+v(p_S)=ell/a-(a-ell)/b
+      =1-(a-ell)(1/a+1/b)<1.                           (31)
+```
+
+Thus `v(c*t-p_S)=v(p_S)` for every `S!=S_0`. Every root belongs to `eta` of
+the `a`-subsets, so with
+
+```text
+E=e_d^eta=product_(|S|=a) p_S in C*,                   (32)
+```
+
+the sum of all subset-product valuations is zero. Since `v(Pi)=1`, equations
+(25)--(26) give the exact factorization
+
+```text
+A(t)=product_(S!=S_0) (c*t-p_S),                        (32a)
+```
+
+and therefore
+
+```text
+v(A)=-1.                                                (33)
+```
+
+More precisely, each `ct/p_S` tends to zero for `S!=S_0`, and `Pi/(ct)` tends
+to one. Therefore
+
+```text
+lim_(t->0) tA(t)=(-1)^(C-1) E/c.                       (34)
+```
+
+The logarithmic identity (10) now gives
+
+```text
+ct-Pi(t)=-c*CT(f^m_*)/m_* * t^(m_*+1)
+          +O(t^(m_*+2)).                               (35)
+```
+
+Multiplying (34)--(35) in (25) proves the exact formulas
+
+```text
+ord_(t=0) Q=m_*,
+[t^m_*]Q=(-1)^C E*CT(f^m_*)/m_*.                       (36)
+```
+
+Hence the first constant-term return is the `t`-adic order of the finite
+coefficient polynomial `Q`, not merely bounded by its degree. If `T(t)` is a
+companion matrix for the monic normalization of `Phi`, then
+
+```text
+H(Y,t)=det(Y I - exterior_power^a T(t)),                (37)
+```
+
+so (36) is also a compound-determinant certificate. It exposes a sharp no-go:
+the pole in the divided-difference argument is structural, not a loose bound;
+trying to prove `A=O(1)` cannot improve `C` to `a+b`.
+
+## 7. Boundaries, use, and what remains open
 
 1. **All complex coefficients are allowed.**  The proof works in the exact
    support after zero coefficients are deleted.  Dihedral cancellation such
@@ -348,7 +431,7 @@ The surviving sharp problem is now concrete: replace the full compound-family
 degree `C` by enough structure to force contact degree at most `d`.  The
 theorem above proves a finite bound without claiming that open sharpening.
 
-## 7. Paper-proof dependency audit
+## 8. Paper-proof dependency audit
 
 This argument was found while auditing whether THM-2022 still imports the
 Duistermaat--van der Kallen theorem under another name.  It does not.  The
