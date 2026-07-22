@@ -1,72 +1,10 @@
-> **CURRENT-TRUTH WARNING (2026-07-22):** This bounded handoff is not proof
-> authority. Start with [START-HERE.md](START-HERE.md),
-> [CURRENT-FRONTIER.md](CURRENT-FRONTIER.md), and
-> [ACTIVE-GUARDRAILS.md](../01-canon/ACTIVE-GUARDRAILS.md).
+## boxeph-2026-07-22-S234 -- (A) COMPLETE: X^M-tR irreducible over F(t) kernel-pure; (B) unramified Hensel scoped (HYP-8946)
 
-# Session Log — Current Research Handoffs
+**Owner:** work the hard bivariate/RatFunc Gauss (A) and unramified Hensel lift (B); complete them.
 
-Older chronology is in
-[SESSION-LOG-HISTORICAL-THROUGH-2026-07-21.md](SESSION-LOG-HISTORICAL-THROUGH-2026-07-21.md).
+**(A) DONE kernel-pure** (GMC2PhiIrreducible.phi_irreducible_ratfunc): Phi=X^M-t*R(X) irreducible over F(t) for R(0)!=0, M>=1. Route: (1) phi_t_irreducible -- linear-in-t coprimality (X^M,-R coprime from X not dvd R) => irreducible in F[X][t] via irreducible_of_degree_eq_one_of_isRelPrime_coeff; (2) Polynomial.Bivariate.swap transport (MulEquiv.irreducible_iff); (3) primitivity of swap Phi over F[t] (coeff_M=1-C(r_M)t, coeff_0=-C(r_0)t coprime: r_0 unit + Bezout); (4) Gauss (IsPrimitive.irreducible_iff_irreducible_map_fraction_map). = transitivity input to galAction_isPretransitive => orbit-product core.
 
-## LRC(14): exact present frontier
+**(B) unramified Hensel (THM-1550) SCOPED, not complete.** Route (S106): X=sZ,t=s^M => Phi(sZ)=s^M psi, psi=Z^M-R(sZ), psi mod s = Z^M-r_0 separable (separable_X_pow_sub_C); Hensel lifts small factor A (monic deg M); Pi=t*(-1)^M A(0) => Pi=c*t iff all D_m=0. Mathlib blocks exist (HenselianLocalRing, IsAdicComplete.henselianRing, hensels_lemma, PowerSeries.exists_isWeierstrassFactorization) BUT 3 obstacles => multi-session: (i) HenselianLocalRing (PowerSeries F) NOT free, (ii) degree-dropping Hensel factorization (Weierstrass-type), (iii) Wiener-Hopf D_m=0<=>Pi=ct bridge. death-star owns THM-1550; coordinate.
 
-- **OPEN.** Uniform `q<=25` is false and the twelve-speed sporadic tight branch
-  is not uniformly empty. A failed sufficient certificate means uncertified.
-- THM-2051/2052 put every hypothetical counterexample in a rank-twelve finite
-  box or rank-eleven two-anchor atlas; THM-2074 is density-one, not universal.
-  Preserve deck, owner, phase, clocks, endpoints, labels, ties, outer tails,
-  and non-hull data through every quotient.
-- THM-2078/2080 give depth `<=4`, terminal size `7..10`, and terminal maximum
-  `>=25`. THM-2081's exact referee closes `4,120` rank-seven pairs through 24.
-- THM-2083/2085 force a nonzero relation on some `(h,q_i,q_j)` of height
-  `<=57`; its `h` coefficient may vanish. THM-2086 closes the `7|h`,
-  five-`7|q`, and stated lacunary branches.
-- THM-2087 forces a bounded guard ratio or complete cut. THM-2088 gives a
-  finite selected-cut-rank-seven branch or persistent rank six; THM-2089
-  identifies persistence with flat affine holonomy. THM-2090 globally splices
-  it, and THM-2092 makes the frozen/bounded-terminal lanes finite.
-- **Newest closure:** THM-2093's dyadic cocircuit flag makes the formerly
-  unbounded global last-guard/terminal-anchor star finite, with an explicit
-  enormous full-row bound. It does not enumerate any bank.
-- THM-2091's centered-energy inequality and THM-2094's exact conditional
-  moment certificate exclude the four-`7|q` terminal branch; THM-2096 adds an
-  exact Cayley-tree variance gain and raises finite-bank threshold closures.
-- THM-2097's mixed two-torus escape makes every depth-four rank-seven template,
-  including the bounded guard-ratio branch, finite template-by-template.
-- THM-2095 proves the guard-ratio common scale divides `252576225` on the live
-  branch and bounds its marked pair; the other six terminal speeds remain.
-- **Remaining:** exact discharge of finite banks and shallower/other atlas
-  lanes. LRC(14) is not closed.
+**Honest:** (A) complete (the harder-than-expected transitivity input, kernel-pure); (B) scoped with exact Mathlib entry points + obstacles named. After (A), full GMC(2) needs the Galois wrapper (Vieta, equivariance, Check A -- mine, tractable) + (B). 2 checkpoints + close-out pushed. Artifacts: reflection irreducibility-of-XM-minus-tR-...-boxeph-S234.md, HYP-8946, GMC2PhiIrreducible.lean (4 kernel-pure thms).
 
-## NC2 / GMC formalization
-
-- THM-2022 proves NC2/GMC(2) on paper; THM-2067 supplies the seed. Lean
-  root-imports `HeightWitnessSupplier`, the abstract transitive orbit-product,
-  fixed-product valuation lemma, contradiction capstone, and rational-function
-  t-adic closing. General complex `DvdK1` remains the sole formal endpoint
-  premise; HYP-8942 still leaves irreducibility, THM-1550, Vieta, and wrappers.
-- HYP-8925/8930 give positive-coefficient and fixed-support unique-channel
-  leaves. HYP-8932 adds a monomial-certificate engine and one kernel-checked
-  `{-2,-1,1,2}` instance. `102/116` is a mass-40 bounded census; thirteen
-  residual certificates remain script-only.
-- HYP-8931 is vacuous (MISTAKE-240). HYP-8935 is an open roadmap
-  (MISTAKE-241): floating asymptotics do not prove formal-log/Hensel descent or
-  the local/global small-root bridge. Its abstract orbit-product core survives.
-
-## Other active inspiration
-
-- THM-2084's cubic Faber gate leaves reduced degree `13` as the first possible
-  non-tame cubic cell; planar JC(2) and DC(2) remain open.
-- HYP-8950 grounds the JC resonance/valuation analogy in the Hamiltonian
-  cokernel and generic-fiber obstruction, but its local-to-global step is open.
-- HYP-8945 places asymptotic unit distances on the cancellation side through
-  the sign-changing Bessel kernel; it is a route map, not a new bound.
-
-## Durable method handoff
-
-- Keep Anchor / Niche / Wildcard lanes, perform the inheritance pass, and keep
-  a 3--7-node concept board. Recompare every pair after pulls or computations.
-- A connection needs source, target, map, preserved predicate, loss, sidecar,
-  and cheapest hostile test. Record why it succeeds or fails.
-- Promote repeated successful moves and failure detectors to
-  `META-PATTERNS.md`; keep chronology out of startup truth surfaces.
