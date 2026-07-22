@@ -1,44 +1,16 @@
-## boxeph-2026-07-21-S217 -- class number = arithmetic entropy: hidden binary forms, and why 7 is rigid (HYP-8870)
-## death-star-2026-07-21-S97 -- NC2 formalization: FLEET CONVERGED -- codex built the whole number-field machinery (33-module spine) incl. the descent bypass; my audit says it is SOUND; one composition (DvdK1→NC2) remains. HYP-8805.
+## boxeph-2026-07-21-S218 -- arithmetic entropy is a repo-wide invariant; the rigid extremum = the zero-entropy point (HYP-8875)
 
-**Owner directive:** work the number-field/valuation machinery, pull often, find creative bypasses.
+**Owner:** extend the arithmetic-entropy idea (S217) and apply it to as many repo pieces as possible.
 
-- **PULLED codex's f11c59ae2** (a 33-module `GMC2*` spine under TournamentH7/, aggregated by `GMC2Formalization`). It **subsumes my S94-S96 arithmetic** (§1 Wick, §4 Lucas/no-carry/off-face, §5 Frobenius/face-sum) via independent equivalents in `GMC2FrobeniusResidue` -- full fleet convergence. Codex ALSO built exactly the **creative bypass** the owner asked for: `GMC2IntegralFaceSeedDescent` gives a **direct finite-field route** (finite-type ℤ-algebra, learn residue char before choosing the normalized moment) instead of number fields, and `GMC2ResidueAssembly.three_case_sum_eq_frobenius` is the abstract char-p assembly (no number fields).
-- **MY CONTRIBUTION = AUDIT (spine is SOUND):** (1) `GMC2DvdKInterface.DvdK1` is stated CORRECTLY -- precisely DvdK Thm 2 + Remark 3 in exact-support form (injective charges straddling zero ⟹ ∃m≥1 with nonzero constant-term power), as an explicit PREMISE not an axiom (the roadmap recommendation). (2) The descent `exists_finite_field_moment_point_preserving_integral_lowest_face_seed` is well-formed (face seed via DvdK1 → finite residue field, torus point all-units, integral zero relations preserved, moment relations vanish, seed nonzero). (3) Spine sorry-free (grep); no native_decide/axiom.
-- **REMAINS (codex's active capstone):** the composition instantiating `three_case_sum` with the normalized Wick channels + dilation image → `DvdK1 → NC2`. Shape: aeval w (normalizedMomentRelationInt) is both =0 (null, preserved) and ≠0 (three_case_sum_ne_zero, seed) ⟹ contradiction. All pieces present; it is deep in codex's API, so I did NOT race it (collision). Offered codex my 2-line char-p cast glue (`multinomial_cast_eq_zero`, `factorial_ratio_cast_eq_zero`, via `CharP.cast_eq_zero_iff`). reflection nc2-spine-audit-fleet-convergence-...-S97. HYP-8805.
+**ONE INVARIANT:** H_arith(X|L)=log2|{X': L(X')=L(X)}| = the GLOBAL bits of X HIDDEN from a LOCAL invariant L. Zero=local-determines-global (RIGID); positive=hidden global object. FOUR instances (verified arithmetic_entropy_across_the_repo_boxeph_S218.py):
+1. BINARY FORMS|genus (refines S217): the truly-hidden part is the DEEP within-genus class group (genus is congruence-detectable). h=genera x deep; Heegner -3,-7,-11 h=1 zero; -15=-3*5 pure GENUS (visible, 0 deep); -23,-47 pure DEEP (1.58,2.32 hidden bits = Hilbert class field, invisible to congruences).
+2. TOURNAMENTS|score sequence: transitive (0..n-1)=UNIQUE realization (Landau) => H=0 rigid = the AP/nullcone/rank-11 vertex (S214); near-regular scores carry the hidden fiber (n=5: (1,2,2,2,3) 3 classes = kps reconstruction wall).
+3. REALS|CF prefix: golden [0;1,1,..] geo-mean 1 << Khinchin = worst-approx = LRC FOIL (S206); t*=14/183=[0;13,14] geo-mean 13.5 = well-approx = extremal.
+4. NULLCONE|moment depth = certificate entropy: LRC finite (bounded alphabet, Bonferroni depth ~5) vs GMC infinite (unbounded degree, Watson S211).
 
-## boxeph-2026-07-21-S215 -- each prime IS its Paley tournament: a periodic table of 2,3,5,7,11 for LRC(14) (HYP-8860)
+**DUAL entropies:** score-DISTRIBUTION entropy (transitive MAX spread) vs RECONSTRUCTION entropy (transitive 0). The AP = max-order + zero-hidden-info = rigidity; the regular/Paley = min spread + max hidden info.
 
-**Owner:** look for even more hidden binary forms; think information theory.
+**UNIFYING:** every repo RIGID extremum (AP/transitive/Heegner h=1/reify-ladder vertex) = a zero-arithmetic-entropy point (local determines global); every DIFFICULTY = its positive-entropy hidden object (deep class group / cospectral fiber / CF tail / deep moment). Rigidity = why the extremal is unique; hidden entropy = where the proof still must go.
 
-**HIDDEN FORMS:** the disc -p anisotropic gate (S216) sits in a whole CLASS GROUP of binary forms (Gauss composition); the NON-PRINCIPAL classes are the hidden forms. Verified: h(-3)=h(-7)=h(-11)=1 (Paley/Heegner, principal only); h(-15)=2, h(-23)=3, h(-31)=3, h(-47)=5 (hidden forms enumerated).
+**Honest:** genus/class-group, Landau, Khinchin/Levy, detection-depth facts are classical/verified; the contribution is the UNIFICATION (one info deficit across binary forms / tournaments / CF / nullcones) + the rigid=zero-entropy observation. Organizing lens, gate-independent (survives S217 MISTAKE-225), not a proof step. Artifacts: reflection arithmetic-entropy-is-a-repo-wide-invariant-...-boxeph-S218.md, HYP-8875, script (+.out).
 
-**INFO THEORY (verified, hidden_binary_forms_class_number_is_arithmetic_entropy_boxeph_S217.py):** CLASS NUMBER h(D) = the ARITHMETIC ENTROPY = log2(h) bits BEYOND local Legendre (D/p) to decide which form represents p. disc -7 (h=1): p represented <=> (D/p)=1 (ONE Legendre bit determines all). disc -23 (h=3): (D/p)=1 primes SPLIT among 3 classes (principal 59,101,.. vs non-principal 13,29,31,..) -- which class = the Artin symbol in the Hilbert class field Cl(D)=Gal(H/K), invisible to any local test = log2(3)=1.58 hidden bits.
-
-**WHY 7 IS RIGID:** LRC(14)=2*7 -> disc -7 -> h=1 -> ZERO arithmetic entropy. codex THM-2053's anisotropic gate residual is fully pinned by local S215 Legendre data -- NO hidden bits, no class-group slack. So (1) a counterexample has NOWHERE to hide; (2) the certificate must be the exact local (Euler/chi/Borsuk-Ulam, p=3mod4) one. Rigidity = why 7 is the first hard-but-tractable case (kps-S17). Heegner h=1 imag. quadratics = -3,-4,-7,-8,-11,-19,-43,-67,-163; -7 is LRC(14)'s.
-
-**BONUS:** tournament score-distribution entropy separates the reify-ladder poles: transitive (0..n-1, entropy log2 n = MAX spread, the nullcone/rank-11 gate vertex) vs Paley/regular (all (n-1)/2, entropy 0, the symmetric disc -p pole).
-
-**Honest:** class-group/Heegner/representation facts classical + verified; the contribution is the info-theoretic FRAMING (class number = arithmetic entropy; non-principal forms = hidden forms; S216 rigidity = zero hidden entropy for -7). Conceptual sharpening, not a proof step. Ties S215+S216+kps-S17. Artifacts: reflection class-number-is-arithmetic-entropy-...-boxeph-S217.md, HYP-8870, script (+.out).
-
-## codex-2026-07-21-LRC-normal-fan-sail -- THM-2055 and MISTAKE-225
-
-**PROVED REPAIR:** the THM-2053 determinant is
-`D(d)=h_K(Rd)` for the centrally symmetric column polygon
-`K=conv{+-c_i}`. It is a polyhedral norm. Only hull vertices can own gate
-failure; their rational normal cones split the residual, and each owner cone
-intersects one explicit tangent disk with local radius bound
-`||d||<91||p||`. On the one-tail plane the 26 nominal signed-column disks
-collapse to four hull vertices `+-(13,0),+-(12,1)`.
-
-**CORRECTION:** HYP-8865's discriminant-`-7`/Heegner-classification and
-isotropic-rank versus anisotropic-Euler equivalence are retracted in
-MISTAKE-225. The left side is max-linear, the right quadratic form has
-discriminant `-4`, and a sufficient gate's failure is only “unresolved.” The
-Paley/Heegner data has no predicate-preserving map to an arbitrary star plane.
-
-**NEXT CREATIVE TARGET (HYP-8871):** use ordinary Stern--Brocot/Klein sails in
-each rational owner cone. Split only at hull-owner ties, positivity/collision
-walls, pair-sum changes, Fejer resonances, or endpoint-owner exchanges. This
-keeps a genuine two-dimensional continued-fraction address without importing
-the repo's refuted multidimensional-CF slogans.

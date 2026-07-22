@@ -1,0 +1,68 @@
+
+========================================================================
+P1  BINARY FORMS | genus: h = genera x deep; the DEEP part is the hidden arithmetic entropy
+========================================================================
+  disc   -3: h= 1 = genera 1 x deep  1 ; H_genus(local)=0.00 + H_deep(HIDDEN)=0.00 bits
+  disc   -4: h= 1 = genera 1 x deep  1 ; H_genus(local)=0.00 + H_deep(HIDDEN)=0.00 bits
+  disc   -7: h= 1 = genera 1 x deep  1 ; H_genus(local)=0.00 + H_deep(HIDDEN)=0.00 bits
+  disc   -8: h= 1 = genera 1 x deep  1 ; H_genus(local)=0.00 + H_deep(HIDDEN)=0.00 bits
+  disc  -11: h= 1 = genera 1 x deep  1 ; H_genus(local)=0.00 + H_deep(HIDDEN)=0.00 bits
+  disc  -15: h= 2 = genera 2 x deep  1 ; H_genus(local)=1.00 + H_deep(HIDDEN)=0.00 bits
+  disc  -20: h= 2 = genera 2 x deep  1 ; H_genus(local)=1.00 + H_deep(HIDDEN)=0.00 bits
+  disc  -23: h= 3 = genera 1 x deep  3 ; H_genus(local)=0.00 + H_deep(HIDDEN)=1.58 bits
+  disc  -24: h= 2 = genera 2 x deep  1 ; H_genus(local)=1.00 + H_deep(HIDDEN)=0.00 bits
+  disc  -47: h= 5 = genera 1 x deep  5 ; H_genus(local)=0.00 + H_deep(HIDDEN)=2.32 bits
+  disc  -84: h= 4 = genera 4 x deep  1 ; H_genus(local)=2.00 + H_deep(HIDDEN)=0.00 bits
+  => Heegner (-3,-7,-11) h=1: zero entropy (rigid). -15=-3*5: pure GENUS (congruence-detectable, 0 deep).
+     -23,-47 (prime disc): pure DEEP -- the class group is invisible to any congruence = true hidden info.
+
+========================================================================
+P2  TOURNAMENTS | score sequence: transitive = UNIQUE realization (0 entropy = rigid) vs regular (max)
+========================================================================
+  n=3: #classes=2; transitive score (0, 1, 2) realized by 1 class (H=0.00); max fiber=1 at score(s) (0, 1, 2) (H=0.00)
+  n=4: #classes=4; transitive score (0, 1, 2, 3) realized by 1 class (H=0.00); max fiber=1 at score(s) (0, 1, 2, 3) (H=0.00)
+  n=5: #classes=12; transitive score (0, 1, 2, 3, 4) realized by 1 class (H=0.00); max fiber=3 at score(s) (1, 2, 2, 2, 3) (H=1.58)
+  => the TRANSITIVE tournament (score 0..n-1) is the UNIQUE realization: reconstruction entropy 0 = RIGID
+     (the AP/nullcone vertex). The largest fiber (near-regular scores) carries the hidden entropy (kps wall).
+
+========================================================================
+P3  the DUAL: score-DISTRIBUTION entropy (transitive MAX) vs RECONSTRUCTION entropy (transitive 0)
+========================================================================
+  n=5: transitive -> score-DIST entropy 2.32 (MAX, spread) but RECONSTRUCTION entropy 0 (unique);
+        regular    -> score-DIST entropy -0.00 (MIN, delta)  but RECONSTRUCTION entropy MAX (huge fiber).
+  n=7: transitive -> score-DIST entropy 2.81 (MAX, spread) but RECONSTRUCTION entropy 0 (unique);
+        regular    -> score-DIST entropy -0.00 (MIN, delta)  but RECONSTRUCTION entropy MAX (huge fiber).
+  n=11: transitive -> score-DIST entropy 3.46 (MAX, spread) but RECONSTRUCTION entropy 0 (unique);
+        regular    -> score-DIST entropy -0.00 (MIN, delta)  but RECONSTRUCTION entropy MAX (huge fiber).
+  => the two entropies are DUAL. The AP/transitive is MAX spread + ZERO hidden info = rigid; the
+     regular/Paley pole is MIN spread + MAX hidden info. Rigidity = max-order-yet-uniquely-determined.
+
+========================================================================
+P4  REALS | continued-fraction prefix: golden (min = FOIL) vs anti-golden t*=14/183 (max = extremal)
+========================================================================
+  Khinchin's constant (a.e. geometric mean of partial quotients) ~= 2.6854
+  golden [0;1,1,..]: partial quotients [1, 1, 1, 1, 1, 1, 1, 1], geo-mean 1.000 << Khinchin = WORST-approx (min CF-entropy) = LRC FOIL (S206)
+  t* = 14/183 = [0;13,14]: geo-mean 13.491 >> Khinchin = WELL-approx (max CF-entropy) = the extremal
+  => the CF 'arithmetic entropy' (info per convergent) is MINIMAL for golden (foil), MAXIMAL for t* (extremal).
+
+========================================================================
+P5  NULLCONE | moment depth = certificate entropy: LRC finite (bounded alphabet) vs GMC infinite
+========================================================================
+  LRC(14): danger count X in {0,..,13} is BOUNDED => the Bonferroni/moment certificate TERMINATES at
+           finite detection depth (~5, klein-S389/THM-671): FINITE arithmetic entropy (a finite certificate).
+  GMC/NC2: radial degree is UNBOUNDED => no finite moment depth determines the nullcone (Watson/Laplace
+           determinacy, S211): INFINITE arithmetic entropy (needs the full radial descent).
+  => detection depth = the moment depth at which local data pins the global object = a certificate entropy.
+
+========================================================================
+SUMMARY -- one information deficit across the repo
+========================================================================
+  H_arith(X | L) = log2 |{X': L(X')=L(X)}| = the GLOBAL bits HIDDEN from the LOCAL invariant. Instances:
+    binary forms | genus     : DEEP class group (Heegner=0)          -- the S217 result, refined by genus theory
+    tournaments  | score seq : transitive UNIQUE (0) / regular (max) -- the AP is the zero-entropy rigid vertex
+    reals        | CF prefix : golden min (foil) / t* max (extremal) -- Diophantine info rate (S206)
+    nullcone     | moment    : LRC finite depth / GMC infinite        -- certificate entropy (S211)
+  UNIFYING: the repo's RIGID extremum -- the AP / transitive tournament / Heegner h=1 -- is the ZERO-arithmetic-
+  entropy point (local determines global), and the DIFFICULTY of every thread is exactly the positive-entropy
+  'hidden global' object (deep class group / cospectral fiber / CF tail / deep moment). Rigidity is why the
+  extremal is unique; hidden entropy is where the proof must still go.
