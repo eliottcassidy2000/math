@@ -8,9 +8,10 @@ status: >
   packets empty and every owner constraint vacuous. Independently, if the
   closed weak-safe core contains a phase together with its half-translate,
   then no odd tail is dangerous everywhere, so the strict dyadic two-tail
-  seam is impossible. A quarter-anchor perturbation proves this certificate
-  whenever the core has a controlled multiple-of-four fan. This is a
-  certificate-strategy theorem, not LRC(14).
+  seam is impossible. An exact quarter-anchor recursion lifts a safe phase
+  of the rescaled multiple-of-four layer, and proves the certificate whenever
+  that layer forms a controlled fan. This is a certificate-strategy theorem,
+  not LRC(14).
 source: codex-2026-07-21-LRC-fixed-bank-audit
 depends_on:
   - THM-2061
@@ -179,6 +180,52 @@ Indeed a half-shift fixes every even phase, whereas for odd `c` it replaces
 the distance `d` by `1/2-d`. Thus (9) is an adaptive continuous certificate
 whose feasibility can be attacked without choosing tails or owner words.
 
+### Exact quarter-anchor toothpick recursion
+
+Assume `C` has at least one member divisible by `4`, and form its rescaled
+four-layer
+
+```text
+D={c/4:c in C and 4|c}.
+```
+
+Let `t in [0,1]` be a chosen real representative satisfying
+
+```text
+t in G_D,
+ct<=5/7   for every odd c in C,
+ct<=12/7  for every c in C with c=2 mod 4.               (10)
+```
+
+Then
+
+```text
+theta=1/4+t/4                                           (11)
+```
+
+satisfies (9), so `{theta,theta+1/2}` is an antipodal safe pair and the
+strict dyadic seam over `C` is impossible.
+
+Indeed, if `c=4d`, then
+
+```text
+||c theta||=||d+dt||=||dt||>=1/14
+```
+
+by `t in G_D`. If `c` is odd, its phase at `1/4` is a quarter or
+three-quarters. Its nonnegative displacement `ct/4` is at most `5/28`, so
+the resulting distance lies in the closed band `[1/14,3/7]`. If
+`c=2 mod 4`, its phase starts at one-half and its displacement is at most
+`3/7`; hence its distance is `1/2-ct/4>=1/14`. These residue cases exhaust
+`C`, proving (9). All equalities are allowed, so the closed-core endpoint
+convention is preserved. QED.
+
+This is a literal recursive toothpick: the `4`-divisible layer is replaced
+by the smaller speed set `D`, while the other two residue layers become
+linear drift budgets on the selected phase `t`. The recursion retains the
+actual representative and the products `ct`; reducing `t` modulo a coarse
+clock would lose the bounds in (10).
+
 ### Quarter-anchor bounded-fan corollary
 
 Let `c_0` be the smallest member of `C` divisible by `4`, and assume
@@ -186,45 +233,26 @@ Let `c_0` be the smallest member of `C` divisible by `4`, and assume
 ```text
 c_0<=c<=7c_0 for every c in C divisible by 4,
 c<=5c_0/2 for every odd c in C,
-c<=6c_0   for every c in C with c=2 mod 4.               (10)
+c<=6c_0   for every c in C with c=2 mod 4.               (12)
 ```
 
-Then `C` has an antipodal safe pair and hence no strict dyadic two-tail seam
-counterexample. In particular, (10) holds whenever `c_0` is the unique
-multiple of `4` and `c_0=max(C)`.
-
-To prove this, take
+Then the recursion applies with
 
 ```text
-theta=1/4+1/(14c_0).                                    (11)
+t=2/(7c_0),       theta=1/4+1/(14c_0).                  (13)
 ```
 
-If `4|c`, its phase at `1/4` is integral, and (10) gives
+For `c=4d`, condition (12) gives
 
 ```text
-1/14<=c/(14c_0)<=1/2.
+1/14<=dt=c/(14c_0)<=1/2,
 ```
 
-Hence its distance at (11) is in the safe band. If `c` is odd, its phase at
-`1/4` is a quarter or three-quarters, and the perturbation has size
-
-```text
-c/(14c_0)<=5/28.
-```
-
-It therefore leaves `||c theta||` in the closed band `[1/14,3/7]`, with
-equality allowed at either end. If `c=2 mod 4`, its unperturbed phase is
-`1/2` and
-
-```text
-||c theta||=1/2-c/(14c_0)>=1/14
-```
-
-by the last inequality in (10). These three residue cases exhaust `C`, so
-all conditions in (9) hold. This is an exact finite fan of the dyadic
-self-similarity: the quarter anchor places the odd and `2 mod 4` layers in
-wide bands, while the perturbation spreads the `4`-divisible teeth across
-the interval `[1/14,1/2]`. QED.
+so `t in G_D`. The last two inequalities in (12) are exactly the two drift
+budgets in (10). This proves the corollary. In particular, (12) holds when
+`c_0` is the unique multiple of `4` and `c_0=max(C)`. The bounded fan spreads
+the `4`-divisible teeth across `[1/14,1/2]`, while the quarter anchor leaves
+wide safe bands for both remaining residue layers. QED.
 
 ## 3. What survives and what must change
 
