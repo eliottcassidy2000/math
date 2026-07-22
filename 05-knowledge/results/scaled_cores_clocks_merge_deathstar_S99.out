@@ -1,0 +1,12 @@
+=== Paley spectrum at the clock moduli (honest) ===
+7 (≡3 mod4, Paley TOURNAMENT): skew Jacobsthal |eigenvalue|=[2.646]  vs √7=2.646  -> Gauss sum ±i√7 in the SKEW spectrum; tournament-matrix atoms (-1±i√7)/2, |λ|=√(8)/2=1.414
+13 (≡1 mod4, Paley GRAPH): eigenvalues=[-2.303, 1.303, 6.0]  -> (-1±√13)/2 = 1.303, -2.303  (√13=3.606 in the REAL spectrum)
+14 = 2·7 (runner count; the LRC(14) modulus itself)
+
+HONEST MERGE (structural, verified as a proof-SHAPE not a pole identity):
+  Both the GMC2 nullcone proof and the LRC covering proof are 'SCALE the core, then CLOSE on a modular CLOCK':
+   GMC2:  scale = dilate ×p   | clock = residue field Z/p (Frobenius x↦x^p) | Kummer/Lucas = clock arithmetic | survival Q̄^p = p-periodicity
+   LRC :  scale = ×a          | clock = Z/12a & Z/14a (modular orbits, THM-2057) | orbit closure = clock periodicity
+  The clock moduli {7,13,14} (THM-878) each carry a Paley √p spectrum: 7=tournament skew ±i√7, 13=graph (−1±√13)/2, 14=2·7.
+  The tournament zeta (THM-1926) is the dynamical lens: periodic-orbit↔spectrum; on the ACYCLIC core ζ=1 (transitive T_12, S214).
+  NOT claimed: a numeric zeta-pole = clock-modulus identity (13 is a graph; tournament atom is √(1+p)/2). This is an ANALOGY of proof shape.

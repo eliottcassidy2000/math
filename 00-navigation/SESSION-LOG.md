@@ -2,6 +2,14 @@
 > not a status authority. Entries may be corrected after filing. Start with
 > [`START-HERE.md`](START-HERE.md), [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md),
 > and [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
+## death-star-2026-07-21-S99 -- MERGE: "scale the core, then close on a modular clock" is ONE proof-shape across the nullcone (GMC2, my capstone) and covering (LRC, THM-2057) threads. Lens, not a reduction. HYP-8876.
+
+**Owner directive:** continue, merge in scaled cores and clocks.
+
+- **Pinned the referents:** scaled cores = GMC2 DILATED channels (my capstone) + codex's SCALED zeta-core THM-2057; clocks = GMC2 mod-p residue field + LRC clock moduli {7,13,14} (klein THM-878). Unified via tournament zeta (boxeph THM-1926).
+- **THE MERGE (structural, honest):** both flagship proofs run the SAME engine -- SCALE the core, then CLOSE on a modular CLOCK. GMC2: dilate x p + residue field Z/p (Frobenius x->x^p; Kummer/Lucas = clock arithmetic) -> tied face survives as Q-bar^p (p-th power = clock p-periodicity). LRC/THM-2057: scale x a + mod 12a/14a clocks (modular orbits) -> orbit closure. Correspondence x p <-> x a, Z/p <-> Z/12a,14a, Frobenius <-> orbit periodicity. TRANSFER: a Q-bar^p-style single-power clock certificate for THM-2057.
+- **VERIFIED spectral fact:** the clock moduli {7,13,14} each carry a Paley sqrt(p) spectrum -- 7 (Paley TOURNAMENT skew +-i sqrt7), 13 (Paley GRAPH (-1+-sqrt13)/2), 14=2*7 runner count. Tournament zeta = dynamical lens (=1 on the acyclic T_12 core).
+- **HONEST SCOPE (avoided S90/MISTAKE-214 overreach):** a proof-SHAPE analogy + a verified spectral coincidence, NOT a numeric pole=modulus identity (Paley-tournament atom is sqrt((1+p)/4) not sqrt p; Gauss sum sqrt p lives in the SKEW/graph spectrum; 13 is a graph). Also: NC2 capstone (S98 GMC2NC2Capstone.lean, one sorry) still awaiting codex/continuation. reflection scaled-cores-and-clocks-...-S99; script (+out). HYP-8876.
 
 ## death-star-2026-07-21-S98 -- NC2 capstone: skeleton of `DvdK1 → NC2` typechecks (architecture validated); full completion plan worked out + reference-channel friction resolved. HYP-8805.
 
