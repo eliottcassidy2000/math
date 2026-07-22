@@ -100,18 +100,11 @@ mistake.
      strict integral misses tight weak phases; use Fejer bulk and THM-2058 packets. In
      THM-2060 `a|w` does not mean packet zero, finite clocks are not a bulk iff; THM-2061/2064 require a closed weak core inside strictly open tail teeth; THM-2062 can kill a fixed `N` fiber at `p=2` but has positive global direction density.
 
-13f. **Safe-child homeomorphisms transport core safe sets, not a deleted-tail
-     cover predicate.** MISTAKE-230 corrects HYP-8920/S227. A strict seam
-     counterexample has empty `G_(2C union {x,y})`, but THM-2075 transports
-     the nonempty sets `G_C ~= G_(Q_r)`. Do not infer terminal `chi=0` after
-     forgetting the two odd tails. Retain their eligibility/owner data as a
-     sidecar; THM-2077 does exactly this through addresses and H-drift.
+13f. **Safe-child homeomorphisms transport nonempty core safe sets, not deleted-tail covers.** MISTAKE-230: never infer terminal `chi=0` from empty `G_(2C union {x,y})`; retain the odd tails' eligibility/owner sidecar via THM-2077 addresses and H-drift.
 
 ## NC2 / GMC
 
-14. **Scalar moments do not separate return atoms.** MISTAKE-211. Cancellation
-    inside one scalar equation is real; use a whole-face theorem or add genuinely
-    independent data.
+14. **Scalar moments do not separate return atoms.** MISTAKE-211. Cancellation inside one scalar equation is real; use a whole face or genuinely independent data.
 15. **Tournament dominance is sufficient, not iff.** MISTAKE-212. A source or
     transitive channel tournament can certify noncancellation but cannot
     characterize every nonzero scalar moment.
