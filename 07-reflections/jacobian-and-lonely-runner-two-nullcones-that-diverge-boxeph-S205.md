@@ -83,29 +83,32 @@ the vertex is the unique extremal, at length 12.
 
 **GMC and JC FAIL at high rank; LRC is believed TRUE at all ranks.**
 
-- **GMC:** proved at rank 1 (two real variables — codex THM-2022, Frobenius); *false* at higher rank
-  (the GMC(4) counterexample, THM-1480).
+- **GMC:** proved at rank 1 (two real variables — codex THM-2022, Frobenius);
+  false from three real variables onward (Long's explicit three-variable
+  counterexample; the older THM-1480/1490 construction reached four).
 - **JC/VC:** true at dim ≤ 2 (planar open, believed true); **false at dim ≥ 3** — the explicit Keller
   counterexample `F` (det `J_F ≡ −2`, non-injective: `F(0,0,−¼)=F(1,−3/2,13/2)`, verified to 38 points;
   THM-1300) disproves JC(3), and `THM-1430` gives a `ℂ⁶` symmetric one. Via de Bondt/Zhao this is a VC
   failure.
-- **LRC:** true for every `n` proved so far (`≤14`), and the rank of the resonance lattice *grows* with
-  `n` (`~n−2`, so ~12 at `n=14`). LRC is true at rank 12 where GMC/JC are long dead.
+- **LRC:** proved through 13 total runners; the 14-total-runner case is open.
+  The rank of the resonance lattice grows with `n` (`~n-2`, so about 12 at
+  LRC(14)), which is part of why the remaining arithmetic problem is hard.
 
 **Why the split — the functional's sign structure.** The Gaussian/Laplacian functionals have
 **monotone, sign-definite weights** (factorials, `L(s^k)=k!`). At rank 1 there is no room for a
 multi-directional collision, so the nullcone is one-sided (Frobenius amplifies the single seed `Q` to
 `Q^p`, THM-2022). At higher rank the several coordinate factorials give **room for a genuine algebraic
-collision** — the Keller/GMC(4) counterexamples are exactly such collisions (the Keller map's whole
+collision** — the Keller and higher-dimensional GMC counterexamples exhibit such collisions (the Keller map's whole
 content is `F(P)=F(Q)`, a *collision*, THM-1435's "a collision, not a vanishing pattern"). These are
 **generic-algebraic** failures: once the dimension is large enough to embed a non-injective étale map,
 the conjecture dies.
 
 LRC's functional is **oscillating** (sincs, sign-changing) and its variables are **integers**. Its
 truth is *arithmetic*, not generic-algebraic: the loneliness is enforced by the integer/cyclotomic
-structure (the extremal at `14/183 = n/Φ₆(n)`), and the sinc oscillation, far from permitting a
-collision, is exactly what the covering must fight against. So LRC survives at high rank precisely
-*because* it is not a generic nullcone — it is a Diophantine one.
+structure (the exact deep-well value `14/183`), and the sinc oscillation is
+what a covering must control. This suggests why LRC may survive at high rank:
+it is not a generic nullcone but a Diophantine one. It is a mechanism
+hypothesis, not a proof of LRC(14) or of all-rank survival.
 
 ## Consequence 1 — the Frobenius method is inherently low-rank (why it won't finish LRC(14))
 
@@ -168,10 +171,10 @@ audit:
 The repo built a nullcone/relation-lattice framework (THM-1820) that unifies GMC, JC/VC, and LRC on one
 shared seed (THM-1840). The framework's own verdict is now visible: **monotone functionals (GMC, JC)
 give generic-algebraic nullcones that collapse once the rank is high enough to hold a collision — and
-they do (GMC(4), Keller(3)); the oscillating/arithmetic functional (LRC) gives a Diophantine nullcone
-that survives at all ranks.** GMC(2) is proved because it is rank-1; JC(≥3) fails because it is
-high-rank *and* algebraic; JC(2) survives because dim 2 is below the collision threshold; LRC(14) is
-hard-but-true because it is high-rank *and* arithmetic. The methods sort the same way: Frobenius for the
+they do (GMC from three variables, Keller(3)); the oscillating/arithmetic
+functional (LRC) gives a different, Diophantine nullcone conjectured to remain
+rigid.** GMC(2) is proved in the rank-one setting; JC(≥3) fails in repo canon;
+JC(2) and LRC(14) remain open. The methods sort the same way: Frobenius for the
 low-rank algebraic case (done), a direct low-dimensional argument for planar JC, and genuine Diophantine
 harmonic analysis for LRC(14).
 

@@ -264,6 +264,38 @@ Format per entry:
   Fourier selector, and toric/OS ideas may organize its circuits, but no
   layer-localization factorization or Wall-A theorem follows yet. The session
   log must retain the overwritten concurrent entries.
+## MISTAKE-223 (2026-07-21, codex audit of HYP-8825) -- a braid-flat factorization and common determinant syntax were promoted to hyper-Bessel and Euler-characteristic factorizations
+
+- **What was claimed:** S208 called cake, bagel, full g-bonacci, and transitive-
+  tournament counts one Zaslavsky/Mobius inversion; identified
+  `bagel(n)-cake(n)=T_n-1` and a finite-shadow first deficit as the same reduced
+  Euler characteristic; called the Vandermonde's within-block vanishing order
+  a flat codimension; and asserted that braid-arrangement localization factors
+  the NC2 hyper-Bessel boundary into block factors. It also called general
+  `Phi_(p,q)` Laguerre--Polya open and described a duplicate recurrence
+  comparison as a companion-determinant/topology verification.
+- **Why it is wrong:** the `n!` chambers are components of the **real** braid
+  complement; the complex complement used in the note is connected. For a
+  `3+2` coincidence partition, the ordinary Vandermonde vanishes to order
+  `C(3,2)+C(2,2)=4`, while the flat codimension is `(3-1)+(2-1)=3`.
+  Localization gives within-block braid factors and a nonzero cross-block unit;
+  no map from that polynomial expansion to THM-2017's univariate channel limit
+  `Phi_(p,q)` was stated. THM-2023 had already proved every positive-integer
+  `Phi_(p,q)` is type-I Laguerre--Polya by Gauss multiplication and the
+  Baricz--Singh theorem. A bagel is a solid torus, not `T^3`; no common complex,
+  Mobius function, or valuation was supplied for its regions and the shadow
+  lattice. The script compared two implementations of the same recurrence and
+  computed neither a companion determinant nor an Euler characteristic.
+- **Correct framing:** retain four separate exact shadows: the Vandermonde is
+  the braid defining polynomial; its **real** chambers are labelled total
+  orders/transitive tournaments; near a coincidence flat it has a leading
+  within-block/transverse product with exponent equal to vanishing order; and
+  an explicit companion matrix satisfies
+  `det(I-x*M_g)=1-x-x^(g+1)`. THM-2033 applies to its special moment matrix, not
+  every NC2 moment. The cake--bagel identity has the more direct decomposition
+  `bagel(n)=cake(n+1)-2`, so
+  `bagel(n)-cake(n)=(T_n+1)-2`. The possible topology bridge remains an open
+  source-to-target valuation test under MISTAKE-222, not a theorem.
 
 ---
 
@@ -287,7 +319,7 @@ Format per entry:
 - **Correct framing:** the four binomial formulas, Fibonacci diagonal identity,
   full-rank gap-diagonal g-bonacci identity in klein-S313's explicit indexing,
   and
-  `bagel(n)=cake(n+1)-2` and
+  for `n>=1`, `bagel(n)=cake(n+1)-2` and
   `bagel(n)-cake(n)=C(n,2)+C(n,1)-1=T_n-1` are exact. Treat them as a binomial-
   reading atlas. Finite-rank shadows depart at their first deficit. The
   shadow-lattice/torus link remains a useful test only if both defects are
@@ -310,6 +342,35 @@ Format per entry:
   `t=p/(v_i+v_j)`; hence `Q>=2 max(S)` is sufficient, or one may enumerate all
   numerators on all pair-sum rulers. The old row `{1,...,12,5460}` is a strict
   witness to the bug:
+  LRC(14) counterexample must be near-AP and anti-golden with a CF-blocking far
+  element, and stated an iff with beating the AP at higher-order
+  autocorrelation by making THM-731's `disc_v` smaller.
+- **Why it is wrong:** the finite scan returns a rigorous **lower bound** on
+  `M(S)` unless a separate breakpoint-completeness bound covers all possible
+  maximizers. A lower bound above `1/14` safely excludes an explicit packet, but
+  cannot give its exact `M`, rank all families, or detect a counterexample when
+  it falls below threshold. The script's own `AP12+5460` scan reports
+  `92/1197`, strictly below THM-724's proved lower bound `420/5461`, a concrete
+  certificate that the scan did not find the maximum. THM-730 proves only the AP's unique
+  Schur-triple maximum; it explicitly leaves the resummation to loneliness
+  open. THM-731's `disc_v` is peel-dependent and enters
+  `L_cert=(6/7)|G'|-sqrt((6/49)disc_v)`, so **smaller** discrepancy makes the
+  sufficient safety bound larger, the opposite of the claimed direction.
+  A few loose Fibonacci-flavored packets do not prove a uniform golden
+  exclusion, near-AP necessity, large continued-fraction quotients, or ownership
+  of all covering moduli by the maximum speed.
+- **Correct framing:** a counterexample may be divided by its gcd and therefore
+  taken primitive; it must be Cover14 with `M<1/14`; and THM-1017 excludes an AP
+  maximum-deletion core, so THM-730 gives that core a strict additive-triple
+  deficit (`T<=65`). Also, `L=0` and THM-731 force
+  `disc_v>=6|G'_{~v}|^2` for every peel. These are the rigorous necessary
+  conditions. Anti-golden, near-AP,
+  Fibonacci-foil, and joint-order-autocorrelation language remains a useful
+  search hypothesis with hostile controls, not a characterization. The first
+  repair correctly relabelled the denominator-truncated values as lower bounds;
+  the later repair now uses THM-1002 to enumerate every numerator on every
+  pair-sum ruler and therefore computes all fifteen displayed rows exactly.
+  Exactness of that finite bank does not establish a global minimizer.
 
   `L_1200=92/1197 < M=420/5461` at `t=420/5461`.
 

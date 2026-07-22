@@ -11,13 +11,16 @@ subjects are all valid session outcomes.
 
 ## 1. Truth and freshness
 
-Pull before relying on the frontier and again before filing a result. Treat
-incoming work as mathematical signal: ask whether it changes the current
-object, invariant, proof route, computation, or vocabulary.
+Fetch before relying on the frontier and again before filing a result. If the
+tree is clean, rebase/pull before building on incoming work. If it is dirty,
+inspect `HEAD..origin/main` without rebasing, checkpoint coherent owned work,
+then synchronize; never hide or sweep another session's changes. Treat incoming
+work as mathematical signal: ask whether it changes the current object,
+invariant, proof route, computation, or vocabulary.
 
-During long computations, pull and reassess at natural checkpoints. Compare
-new work before choosing the next batch; do not silently change the inputs of
-an already running reproducibility job.
+During long computations, fetch and reassess at natural checkpoints; rebase
+only from a clean tree. Compare new work before choosing the next batch; do not
+silently change the inputs of an already running reproducibility job.
 
 Use this precedence order:
 

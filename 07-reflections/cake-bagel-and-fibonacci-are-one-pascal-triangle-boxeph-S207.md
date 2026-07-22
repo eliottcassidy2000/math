@@ -44,7 +44,7 @@ bagel(n)-cake(n)
   = T_n-1.
 ```
 
-This is an all-`n` identity, not merely a prefix match. It is the most useful
+This is an all-positive-`n` identity, not merely a prefix match. It is the most useful
 new relation in the session: it says exactly how the torus cutting count differs
 from the ball cutting count. Equivalently, `bagel(n)=cake(n+1)-2`, which is the
 strongest simple operation law exposed by the comparison.
@@ -72,12 +72,31 @@ gap-diagonal readings. Its finite-rank shadows agree with the full kernel only
 until their first deficit; the session script computes the full-kernel
 recurrences, not the finite-rank shadows.
 
+Equivalently, the full-rank coefficients have the direct Pascal reading
+
+```text
+a_g(d) = sum_(0<=k<=d/(g+1)) C(d-gk,k).
+```
+
+## Exact operation laws
+
+Pascal's recurrence gives, for `n>=1`,
+
+```text
+Moser(n+1)-Moser(n) = cake(n-1),
+bagel(n)             = cake(n+1)-2,
+bagel(n+1)-bagel(n)  = caterer(n+1).
+```
+
+These specify actual shift/difference operators. The next question is
+geometric—construct region-level bijections or valuations realizing the laws—
+rather than whether the numerical operations exist.
+
 ## What the shared array does and does not transfer
 
 The binomial atlas is useful because row, weighted-row, and diagonal operations
 can be compared in one coordinate system. It suggests concrete questions:
 
-- Which finite-difference operators take cake to bagel or Moser?
 - Does the `T_n-1` difference have a region-by-region bijective proof?
 - Which boundary-cell or valuation operation explains the finite-rank first
   deficit, and can the bagel's two-region shift be realized by the same
@@ -96,9 +115,9 @@ Run:
 python3 04-computation/cake_bagel_figurate_fibonacci_boxeph_S207.py
 ```
 
-The script checks the displayed finite prefixes and recurrence outputs. The
-all-`n` cake–bagel identity is the algebra above; the computation is a referee,
-not its proof.
+The script checks the displayed finite prefixes, operation laws, direct
+gap-diagonal formula, and recurrence outputs. The all-positive-`n` cake–bagel
+identity is the algebra above; the computation is a referee, not its proof.
 
 Related: HYP-8820, MISTAKE-222,
 `the-vandermonde-truncation-law-polygonal-vs-polyhedral-opus-S317`, and

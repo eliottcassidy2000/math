@@ -1,101 +1,149 @@
-# The missing-region law is Euler characteristic on an arrangement — and the NC2 Vandermonde IS the braid arrangement
+# Braid-arrangement shadows of the missing-region program
 
-*boxeph-2026-07-21-S208. Owner: see the geometry/topology under the shadow-lattice missing-region law
-(klein-S313) and related concepts, and leverage that physical understanding for algebraic tricks. Builds
-on boxeph-S207 (cake/bagel/Fibonacci = one Pascal triangle), THM-2033 (transitivity Vandermonde = NC2
-bridge), THM-805 (staircase Tutte → acyclic orientations), the LRC-permutohedron thread (s521/s525/s526),
-codex's hyper-Bessel wall boundary, HYP-8775 (Laguerre-Pólya boundary). All four pillars verified in
-`04-computation/arrangement_topology_leverage_boxeph_S208.py`.*
+> **SCOPE CORRECTION — MISTAKE-223 (2026-07-21).** S208 found exact
+> arrangement and determinant shadows, but promoted them to transfers that do
+> not follow. Braid localization does not factor the NC2 hyper-Bessel boundary;
+> the cake--bagel and finite-shadow deficits have not been realized by one Euler
+> valuation; and THM-2023 had already proved the general `Phi_(p,q)`
+> Laguerre--Polya statement. Read the separated facts below, not the original
+> “four pillars verified” claim.
 
-## The physical picture: everything is region-counting on a stratified space
+*boxeph-2026-07-21-S208. Original aim: look for geometry beneath the
+finite-rank missing-region law and test whether it supplies algebraic leverage.*
 
-The repo's "missing-region law" (klein-S313's `(r,g)` shadow lattice, the `deficit-1`) and its cousins —
-cake/bagel cutting, transitive-tournament counting, g-bonacci — are all **one topological operation**:
+## 1. Exact braid-arrangement fact
 
-> **Möbius / Euler-characteristic inversion over an intersection lattice** (Zaslavsky's theorem).
+The polynomial
 
-A hyperplane arrangement `A` cuts space into regions; the count is
-`r(A) = (−1)^{rank} χ_A(−1)`, where `χ_A(t) = Σ_{X∈L(A)} μ(X) t^{dim X}` sums the Möbius function over the
-**intersection lattice** `L(A)` of flats. The "missing regions" when the arrangement degenerates are
-exactly the flats where `μ` departs from its generic value; the `±1` boundary terms are **reduced vs.
-unreduced Euler characteristic** (the empty flat / the whole space that inclusion–exclusion adds back).
-Four instances, all verified:
-
-| object | arrangement / complex | count | the `−1`/deficit |
-|---|---|---|---|
-| cake (ball, `n` planes) | generic arrangement in `ℝ³` | `ΣC(n,k)` (Zaslavsky, generic `χ`) | none (generic) |
-| bagel (torus, `n` planes) | generic arrangement on `T³` | `C(n,3)+n(n+1)` | `bagel−cake = Tₙ−1` = the handle `H₁=ℤ` term minus the reduced base |
-| g-bonacci | 1D transfer complex | `1/(1−x−x^{g+1})` | `deficit-1` = reduced Euler char (path vs. cycle, open vs. periodic BC) |
-| transitive tournaments | **braid arrangement** `A_{n−1}` | `n! = \|χ(−1)\|` = falling factorial | no bounded region (`χ(1)=0`, non-essential) |
-
-So the `deficit-1` klein-S313 tracks and the bagel's topological hole are the **same** object: a
-reduced-Euler-characteristic boundary term of a cutting complex. The g-bonacci kernel `1/(1−x−x^{g+1})` is
-literally a **Bowen–Lanford zeta** `1/det(I−xM)` of a companion transfer matrix — *the same* `ζ=1/det(I−uA)`
-the repo uses for tournaments. The cutting geometry and the Fibonacci-kernel side are one zeta/Euler story.
-
-## The lever: the transitivity Vandermonde IS the braid arrangement's defining polynomial
-
-Here is where the physics buys algebra. My NC2 bridge (THM-2033) says noncancellation is governed by the
-**transitivity Vandermonde** `V(a) = ∏_{i<j}(a_j − a_i)`. But that polynomial is *exactly* the defining
-polynomial `Q(A)` of the **braid arrangement** `A_{n−1}` (hyperplanes `H_{ij}: a_i = a_j`). This is not an
-analogy — it is an identity, and it re-reads every NC2 fact geometrically (all verified):
-
-- **NC2 noncancellation** (distinct radial degrees ⟹ `V≠0`) `=` the point `a` lies in the **complement**
-  `M(A) = ℂⁿ∖⋃H_{ij}` `=` `a` has distinct coordinates. The complement's chambers are the `n!` linear
-  orders `=` the **transitive tournaments** (`n! = |χ_braid(−1)|`, the falling factorial — Zaslavsky). The
-  reify ladder's cold vertex (transitive ≡ AP ≡ nullcone) is the braid arrangement's chamber set.
-- **The NC2 wall** (repeated degrees = confluent Vandermonde) `=` `a` lies on a **flat** `X` of the
-  arrangement `=` a set partition of the coordinates into coincidence blocks.
-
-## The algebraic trick: localization at a flat factors the confluent Vandermonde (⇒ the hyper-Bessel boundary is Laguerre–Pólya)
-
-Near a flat `X` (blocks `B₁,…,B_k`, coordinates `a = c_i + εδ` inside block `B_i`), the braid arrangement
-**localizes as a product** (Orlik–Solomon): `A_{n−1}|_X ≅ ∏_i A_{|B_i|−1} × (transverse)`. Algebraically
-this is a clean **factorization of the Vandermonde** (verified, ratio→1 as `ε→0`):
-
-```
-V(a)  =  ε^{Σ C(|B_i|,2)} · [∏_i V(δ|_{B_i})] · [∏_{i<j}(c_j−c_i)^{|B_i||B_j|}]  +  O(higher)
-        └ codim = rank of A_X ┘  └ within-block braids ┘  └ transverse block-rep Vandermonde ┘
+```text
+V(a_1,...,a_n) = product_(i<j) (a_j-a_i)
 ```
 
-Now the payoff. Codex's NC2 **wall boundary function** is a hyper-Bessel
-`Φ_{(p₀,q₀)}(x) = Σ_k x^k/((q₀k)!(p₀k)!)`, and the moment determinant at the wall is
-`det[(a_i+k)!] = ∏a_i! · V(a)` (THM-2033). By the factorization above, **at a wall the boundary function
-factors into a product of single-block hyper-Bessels** — one per coincidence block. And:
+is the defining polynomial of the braid arrangement `a_i=a_j`. Its real
+complement has `n!` chambers, one for each total order of the coordinates and
+hence one for each labelled transitive tournament. Flats correspond to set
+partitions recording which coordinates coincide. The complex complement is
+connected, so the `n!` chamber statement must not be attached to it.
 
-1. **Each single-block piece is Laguerre–Pólya.** The base case `Φ_{(1,1)}(x)=Σx^k/(k!)² = I₀(2√x)` has
-   zeros exactly `x = −(j_{0,m}/2)²` — **all real and negative** (verified: `Φ_{11}` vanishes at the
-   predicted Bessel points to `10⁻¹⁰`), so it is rigorously L-P. For the others the **Laguerre inequality**
-   `f'² − f f'' ≥ 0` holds across the reals (verified for `(1,2),(2,2),(2,3),(3,3)`) — the necessary L-P
-   condition passes. *(Caveat, honestly reported: partial-sum root-reality is the WRONG test — the Szegő
-   phenomenon makes truncations of L-P functions grow spurious complex roots. Only the full-function
-   criteria count; a full proof for general `(p₀,q₀)` needs the Fox–Wright/Hankel real-zeros theory.)*
-2. **L-P is closed under products** (Schur/Pólya–Schur). So the factorization (a *geometric* fact — the
-   arrangement is a product at a flat) forces the whole wall boundary to be L-P — **HYP-8775** — by
-   product closure. **Geometry (localize as product) ⟹ algebra (real-rootedness of the boundary).**
+THM-2033 identifies a Vandermonde in one special factorial moment matrix. In
+that scope, distinct nodes put the determinant off the arrangement. It does
+not follow that an arbitrary scalar NC2 moment is nonzero exactly on the braid
+complement; ACTIVE-GUARDRAILS item 18 and MISTAKE-215 forbid that upgrade.
 
-This is the concrete leverage: the boundary's real-rootedness need not be attacked head-on; the braid
-arrangement's product structure at the confluence flat reduces it to single-block Bessel pieces plus
-Schur closure. It also explains *why* the wall is where the analysis simplifies — a flat is where the
-arrangement decomposes.
+## 2. Exact coalescence formula, with the right exponent
 
-## One more transfer: the deficit as a zeta boundary term
+Let coincidence blocks be `B_1,...,B_m`, and write the coordinates in block
+`B_i` as `c_i+epsilon*delta_j`, with distinct block centres. Put
 
-Because the g-bonacci kernel is a Bowen–Lanford zeta, the `deficit-1` is a **zeta/Euler boundary term**,
-and the same reduced-vs-unreduced correction governs the tournament `ζ=1/det(I−uA)` at its "empty word."
-The prediction this hands the LRC/figurate side: correction terms in a cutting sequence should be readable
-as `μ` of the degenerate flats of its arrangement — a way to *derive* the `Tₙ−1` handle term (and its
-analogues) from topology rather than fit it.
+```text
+N_X = sum_i C(|B_i|,2).
+```
 
-## Takeaway
+Then, up to the sign determined by coordinate ordering,
 
-The missing-region law is Euler characteristic / Möbius inversion on an intersection lattice; the `deficit-1`
-is a reduced-Euler boundary term shared by the bagel's hole and the g-bonacci (Bowen–Lanford zeta) kernel.
-The lever is that the repo's own **transitivity Vandermonde is the braid arrangement's defining polynomial**,
-so NC2 noncancellation = arrangement complement, the wall = a flat, and **localization-at-a-flat factors the
-confluent Vandermonde / hyper-Bessel boundary into single-block Laguerre–Pólya pieces** — giving HYP-8775 by
-Schur product closure. Geometry became an algebraic factorization trick.
+```text
+V(c+epsilon*delta)
+ = epsilon^N_X
+   * product_i V(delta restricted to B_i)
+   * product_(i<j) (c_j-c_i)^(|B_i||B_j|)
+   + O(epsilon^(N_X+1)).
+```
 
-Links: HYP-8825, HYP-8775, THM-2033, THM-805,
-[[cake-bagel-and-fibonacci-are-one-pascal-triangle-boxeph-S207]],
-[[jacobian-and-lonely-runner-two-nullcones-that-diverge-boxeph-S205]].
+This is an exact leading expansion. `N_X` is the Vandermonde's vanishing order,
+not the flat codimension: for block sizes `3+2`, they are `4` and `3`,
+respectively. In arrangement localization the within-block braid arrangements
+are the local factors; the cross-block product is a nonzero unit near a generic
+point of the flat.
+
+This formula is valuable wherever an actual determinant has already been
+reduced to `V`. It does not produce a factorization of a different analytic
+object merely because that object occurs near a “wall.”
+
+## 3. Why the hyper-Bessel transfer failed
+
+THM-2017's
+
+```text
+Phi_(p,q)(x) = sum_(k>=0) x^k / ((pk)! (qk)!)
+```
+
+arises as a univariate channel limit. S208 supplied no map from braid blocks or
+the preceding polynomial asymptotic to this series, so the claimed product of
+“one hyper-Bessel per block” was a type jump. Sampling the necessary Laguerre
+inequality also cannot prove Laguerre--Polya membership.
+
+The desired conclusion is nevertheless known for an independent reason:
+THM-2023 uses Gauss multiplication to express `Phi_(p,q)` as a positive-
+parameter generalized hypergeometric function, and the Baricz--Singh theorem
+puts all its zeros on the negative real axis. Arrangement product closure is
+neither needed nor established.
+
+## 4. Exact companion determinant, without a topology claim
+
+For the recurrence
+
+```text
+a_d = a_(d-1) + a_(d-g-1),     a_0=1,
+```
+
+take the `(g+1)`-state companion matrix whose first row is `(1,0,...,0,1)`
+and whose subdiagonal entries are one. Its characteristic polynomial is
+`lambda^(g+1)-lambda^g-1`, hence
+
+```text
+det(I-x*M_g) = 1-x-x^(g+1).
+```
+
+Thus the full-rank gap sequence has generating function
+`1/det(I-x*M_g)`, a legitimate Bowen--Lanford-style determinant/zeta syntax.
+The companion digraph has a loop and is not a tournament; common syntax does
+not identify the underlying objects.
+
+The finite-rank shadow's first deficit and the bagel identity remain separate.
+For positive `n`, the stronger direct relation is
+
+```text
+bagel(n) = cake(n+1)-2,
+bagel(n)-cake(n) = (T_n+1)-2 = T_n-1.
+```
+
+[OEIS A003600](https://oeis.org/A003600) describes the solid-torus correction
+as an extra cake slit that leaves two pieces unseparated. A solid torus is
+`S^1 x D^2`, not `T^3`. No chain complex, intersection poset, Mobius function,
+or valuation has been supplied that sends this two-piece correction and the
+shadow's first missing cell to the same class.
+
+## 5. The repaired research target
+
+The topology idea remains testable, but the missing data are now explicit:
+
+1. Construct a cell or arrangement model for the bagel cut count and derive
+   `cake(n+1)-2` by a named valuation.
+2. Construct the finite-shadow cell complex and derive its first deficit by
+   the same kind of valuation.
+3. Give a source-to-target map, show what cells and incidence data it preserves,
+   and account for every lost boundary term.
+4. If no such map exists, isolate the first incompatible operation; that
+   obstruction is more informative than another matching scalar.
+
+Potential tournament vertices were chambers, flats, coincidence blocks,
+companion states, and proof obligations. Only real braid chambers carry the
+canonical total-order tournament. Orienting the other objects would discard
+the incidence or analytic data at issue, so no new tournament quotient is
+asserted.
+
+## Reproduction scope
+
+Run:
+
+```bash
+python3 04-computation/arrangement_topology_leverage_boxeph_S208.py
+```
+
+The repaired script checks the braid count, one exact coalescence family, the
+explicit companion determinant, and small recurrence coefficients. It prints
+the failed transfers as non-results. It computes no Euler characteristic of a
+bagel-cut complex and proves no hyper-Bessel factorization.
+
+Related: HYP-8825, MISTAKE-222, MISTAKE-223, THM-2023, THM-2033, and the
+corrected S207 binomial-atlas reflection.

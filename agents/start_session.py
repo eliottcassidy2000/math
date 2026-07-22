@@ -116,61 +116,124 @@ def route_packet() -> None:
     print("Historical logs/reflections are searched for provenance, not read as truth.")
 
 
-def topic_pattern(topic: str) -> str:
-    tokens = re.findall(r"[A-Za-z0-9_.()+/-]+", topic)
-    useful = [token for token in tokens if len(token) >= 3]
-    terms = [topic.strip(), *useful]
+STOPWORDS = {
+    "agent", "agents", "audit", "current", "documentation", "exact",
+    "explore", "make", "math", "mathematical", "problem", "proof",
+    "repo", "repository", "research", "result", "results", "session",
+    "theorem", "update", "work", "working",
+}
+
+
+def topic_terms(topic: str) -> list[tuple[str, int]]:
+    """Return specificity-weighted literal terms, with identifiers first."""
+    identifiers = [
+        f"{match.group(1).upper()}-{match.group(2)}"
+        for match in re.finditer(
+            r"\b(THM|HYP|MISTAKE|LEM|OPEN-Q)-?(\d+)\b",
+            topic,
+            flags=re.IGNORECASE,
+        )
+    ]
+    tokens = re.findall(r"[A-Za-z0-9][A-Za-z0-9_.()+/-]*", topic)
+    useful = [
+        token
+        for token in tokens
+        if len(token) >= 3 and token.casefold() not in STOPWORDS
+    ]
+
+    weighted: list[tuple[str, int]] = []
+    if len(useful) >= 2:
+        weighted.append((" ".join(useful), 30))
+    for identifier in identifiers:
+        weighted.append((identifier, 100))
+    for token in useful:
+        structured = bool(re.search(r"[A-Za-z].*\d|\d.*[A-Za-z]", token))
+        weighted.append((token, 50 if structured else min(14, len(token))))
+
     seen: set[str] = set()
-    escaped: list[str] = []
-    for term in terms:
+    deduplicated: list[tuple[str, int]] = []
+    for term, weight in weighted:
         key = term.casefold()
-        if term and key not in seen:
+        if key and key not in seen:
             seen.add(key)
-            escaped.append(re.escape(term))
-    return "|".join(escaped) or re.escape(topic)
+            deduplicated.append((term, weight))
+    return deduplicated or [(topic.strip(), 1)]
+
+
+def match_score(text: str, terms: list[tuple[str, int]]) -> tuple[int, int]:
+    folded = text.casefold()
+    matches = [(term, weight) for term, weight in terms if term.casefold() in folded]
+    return sum(weight for _, weight in matches), len(matches)
 
 
 def topic_hits(topic: str, max_matches: int) -> None:
     section(f"Topic packet: {topic}")
-    pattern = topic_pattern(topic)
+    terms = topic_terms(topic)
+    has_identifier = any(weight >= 100 for _, weight in terms)
+    required_matches = 1 if has_identifier or len(terms) == 1 else 2
+    print("rank terms: " + ", ".join(term for term, _ in terms[:8]))
 
-    current = run(
-        "rg",
-        "--line-number",
-        "--ignore-case",
-        "--max-count",
-        "3",
-        "--",
-        pattern,
-        *SEARCH_ROOTS[:5],
-    )
-    current_rows = current.stdout.splitlines() if current.returncode in (0, 1) else []
-    print("Current-route matches:")
+    current_rows: list[tuple[int, int, str]] = []
+    for route_rank, relative in enumerate(SEARCH_ROOTS[:5]):
+        path = REPO / relative
+        if not path.is_file():
+            continue
+        for line_number, line in enumerate(
+            path.read_text(encoding="utf-8", errors="replace").splitlines(), 1
+        ):
+            score, count = match_score(line, terms)
+            identifier_hit = any(
+                weight >= 100 and term.casefold() in line.casefold()
+                for term, weight in terms
+            )
+            if count >= required_matches and (not has_identifier or identifier_hit):
+                current_rows.append((score, route_rank, f"{relative}:{line_number}:{line}"))
+    current_rows.sort(key=lambda row: (-row[0], row[1], row[2]))
+
+    print("Current-route matches (ranked):")
     if current_rows:
-        for row in current_rows[:max_matches]:
+        for _, _, row in current_rows[:max_matches]:
             print(f"  {row}")
         if len(current_rows) > max_matches:
-            print(f"  ... {len(current_rows) - max_matches} more route matches")
+            print(f"  ... {len(current_rows) - max_matches} more qualifying route matches")
     else:
         print("  (none; try exact constants, theorem IDs, quantifiers, or synonyms)")
 
-    files = run(
-        "rg",
-        "--files-with-matches",
-        "--ignore-case",
-        "--",
-        pattern,
-        *SEARCH_ROOTS[5:],
-    )
-    file_rows = files.stdout.splitlines() if files.returncode in (0, 1) else []
+    file_scores: dict[str, tuple[int, int]] = {}
+    identifier_paths: set[str] = set()
+    for term, weight in terms:
+        files = run(
+            "rg", "--files-with-matches", "--fixed-strings", "--ignore-case",
+            "--", term, *SEARCH_ROOTS[5:]
+        )
+        if files.returncode not in (0, 1):
+            continue
+        for path in files.stdout.splitlines():
+            score, count = file_scores.get(path, (0, 0))
+            filename_bonus = weight if term.casefold() in Path(path).name.casefold() else 0
+            file_scores[path] = (score + weight + filename_bonus, count + 1)
+            if weight >= 100:
+                identifier_paths.add(path)
+
     priorities = {"01-canon/theorems": 0, "05-knowledge/hypotheses": 1, "07-reflections": 2}
-    file_rows.sort(key=lambda p: (next((v for k, v in priorities.items() if p.startswith(k)), 9), p))
-    print("Detailed files (canon before hypotheses before reflections):")
+    file_rows = [
+        (score, path)
+        for path, (score, count) in file_scores.items()
+        if count >= required_matches and (not has_identifier or path in identifier_paths)
+    ]
+    file_rows.sort(
+        key=lambda row: (
+            -row[0],
+            next((v for k, v in priorities.items() if row[1].startswith(k)), 9),
+            row[1],
+        )
+    )
+    print("Detailed files (ranked by specificity; canon wins ties):")
     if file_rows:
-        for path in file_rows[:max_matches]:
+        for _, path in file_rows[:max_matches]:
             print(f"  {path}")
         if len(file_rows) > max_matches:
-            print(f"  ... {len(file_rows) - max_matches} more; refine the query")
+            print(f"  ... {len(file_rows) - max_matches} more qualifying files; refine the query")
     else:
         print("  (none)")
 

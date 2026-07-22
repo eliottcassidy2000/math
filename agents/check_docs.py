@@ -56,6 +56,7 @@ HEADLINE_SENTINELS = {
         "uniform emptiness of the twelve-speed sporadic tight branch remains open",
         "unrestricted GMC(2)",
         "**PROVED in repo",
+        "two-pair Poisson conjecture false",
     ),
     "00-navigation/CURRENT-FRONTIER.md": (
         "## LRC(14)",
@@ -64,12 +65,15 @@ HEADLINE_SENTINELS = {
         "disc_v>=6|G'_{~v}|^2",
         "proves NC2 and hence unrestricted GMC(2)",
         "GMC is false for every dimension at least 3",
+        "THM-2044",
     ),
     "01-canon/ACTIVE-GUARDRAILS.md": (
         "No uniform `q <= 25` good-period theorem",
         "Uniform twelve-speed sporadic emptiness is OPEN",
         "HYP-8815 is a heuristic, not a disproof characterization",
         "A shared Pascal array is not a geometric bridge",
+        "Braid localization does not factor every wall object",
+        "Poisson rank two is not DC(2) or planar JC",
         "NC2/GMC(2) is proved, not fully formalized",
     ),
 }
@@ -83,16 +87,35 @@ def git(*args: str) -> subprocess.CompletedProcess[str]:
     )
 
 
-def local_link_target(raw: str) -> str | None:
+def local_link_parts(raw: str) -> tuple[str, str] | None:
     target = raw.strip()
     if target.startswith("<") and target.endswith(">"):
         target = target[1:-1]
-    if target.startswith(("http://", "https://", "mailto:", "#")):
+    if target.startswith(("http://", "https://", "mailto:")):
         return None
     # Markdown titles are not used on the maintained surface. Flag rather than
     # guessing if one ever appears and breaks this simple parser.
-    target = unquote(target.split("#", 1)[0])
-    return target or None
+    path, separator, fragment = target.partition("#")
+    return unquote(path), unquote(fragment) if separator else ""
+
+
+def markdown_anchors(path: Path) -> set[str]:
+    anchors: set[str] = set()
+    counts: Counter[str] = Counter()
+    text = path.read_text(encoding="utf-8", errors="replace")
+    for match in re.finditer(r"^#{1,6}\s+(.+?)\s*#*\s*$", text, re.MULTILINE):
+        heading = match.group(1)
+        heading = re.sub(r"\[([^]]+)\]\([^)]+\)", r"\1", heading)
+        heading = re.sub(r"<[^>]+>", "", heading)
+        heading = heading.replace("`", "").replace("*", "").replace("_", "_")
+        slug = re.sub(r"[^\w\- ]", "", heading.casefold())
+        slug = re.sub(r"\s", "-", slug).strip("-")
+        if not slug:
+            continue
+        suffix = counts[slug]
+        counts[slug] += 1
+        anchors.add(slug if suffix == 0 else f"{slug}-{suffix}")
+    return anchors
 
 
 def main() -> int:
@@ -110,12 +133,24 @@ def main() -> int:
             errors.append(f"{relative}: {len(lines)} lines exceeds startup budget {budget}")
 
         for raw in LINK_RE.findall(text):
-            target = local_link_target(raw)
-            if target is None:
+            parts = local_link_parts(raw)
+            if parts is None:
                 continue
-            resolved = Path(target) if Path(target).is_absolute() else path.parent / target
+            target, fragment = parts
+            resolved = path if not target else (
+                Path(target) if Path(target).is_absolute() else path.parent / target
+            )
             if not resolved.exists():
                 errors.append(f"{relative}: broken local link {raw!r}")
+                continue
+            if (
+                fragment
+                and resolved.is_file()
+                and resolved.suffix.casefold() == ".md"
+                and not re.fullmatch(r"L\d+", fragment, flags=re.IGNORECASE)
+                and fragment.casefold() not in markdown_anchors(resolved)
+            ):
+                errors.append(f"{relative}: broken Markdown fragment {raw!r}")
 
     for relative, sentinels in HEADLINE_SENTINELS.items():
         path = REPO / relative

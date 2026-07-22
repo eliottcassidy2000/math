@@ -80,7 +80,7 @@ deformation theory predicts order-by-order corrections on affine symplectic
 space, but DC(2) needs a terminating polynomial operator at `hbar=1`, not an
 infinite formal series.
 
-Two attacks now look concrete:
+Three attacks now look concrete:
 
 1. Use a PBW ordering adapted to `(R,D0,L)` rather than symmetric ordering. The
    suspension is triangular in those source coordinates, so the apparent

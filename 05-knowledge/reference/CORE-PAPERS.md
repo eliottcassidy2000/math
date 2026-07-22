@@ -25,6 +25,9 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
 - **Reciprocal sequences:** keep the support set separate from its indexed
   multiplicities.  The external figurate papers supply examples and formulas;
   the repo's Abel--Dini and support-Dirichlet theory is a later extension.
+- **Jacobian/Dixmier/Poisson:** THM-2044 proves the two-pair Poisson conjecture
+  false in repo canon.  Stable equivalence theorems do not turn this object into
+  a direct `A_2` Dixmier or planar Jacobian counterexample; both remain open.
 
 ## Lonely Runner Conjecture
 
@@ -196,6 +199,64 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
   importing any mechanism.
 - **Does not prove:** anything about the standard constant-velocity LRC(14),
   its `1/14` threshold, integer spectra, or finite checking.
+
+## Jacobian, Dixmier, and Poisson
+
+### Belov--Kanel--Kontsevich — *The Jacobian Conjecture is stably equivalent to the Dixmier Conjecture*
+
+- **Primary / freshness:** [arXiv:math/0512171](https://arxiv.org/abs/math/0512171),
+  submitted 2005-12-08.
+- **Imported role:** proves the finite-direction implication `JC(2n) -> DC(n)`
+  in characteristic zero and, with the known implication in the other stable
+  direction, identifies the stable Jacobian and Dixmier conjectures. Reduction
+  to finite characteristic is the central mechanism.
+- **Repo consumers:**
+  [THM-2044 rank-two Poisson suspension](../../01-canon/theorems/THM-2044-explicit-rank-two-poisson-counterexample-by-symplectic-suspension.md),
+  [DC2/JC2 boundary reflection](../../07-reflections/rank-two-poisson-suspension-leaves-two-rigidity-gates-dc2-and-planar-jc-codex-20260721.md).
+- **Does not prove:** `PC(2) -> DC(2)`, a direct quantization of a given
+  symplectic polynomial map, or a fixed-dimension equivalence that turns
+  THM-2044 into a planar Jacobian or `A_2` Dixmier counterexample.
+
+### Adjamagbo--van den Essen — *On the equivalence of the Jacobian, Dixmier and Poisson Conjectures in any characteristic*
+
+- **Primary / freshness:** [arXiv:math/0608009](https://arxiv.org/abs/math/0608009),
+  submitted 2006-08-01.
+- **Imported role:** supplies the characteristic-sensitive stable equivalence
+  framework among canonical polynomial, Weyl, and Poisson endomorphism
+  conjectures, using Azumaya and reduction techniques. It is the correct
+  background for interpreting a Poisson counterexample's stable consequences.
+- **Repo consumers:** THM-2044 and the
+  [rank/scope separation reflection](../../07-reflections/rank-two-poisson-suspension-leaves-two-rigidity-gates-dc2-and-planar-jc-codex-20260721.md).
+- **Does not prove:** that replacing classical brackets by Weyl commutators in
+  the same displayed formulas preserves the relations, that stable transport
+  preserves the same rank, or that THM-2044 settles DC(2) or JC(2).
+
+### Lee--Li — *On the two-dimensional Jacobian conjecture: Magnus' formula revisited, IV*
+
+- **Primary / freshness:** [arXiv:2408.01279v1](https://arxiv.org/abs/2408.01279),
+  submitted 2024-08-02. **PREPRINT.**
+- **Imported role:** develops inner polynomials for a planar Jacobian pair and
+  constrains the northeastern Newton-polygon vertex. The repo uses this as the
+  current positive framework in which to test THM-2045's weighted-sector /
+  exponent-semigroup obstruction on exposed inner edges.
+- **Repo consumers:**
+  [THM-2045](../../01-canon/theorems/THM-2045-the-smooth-factorized-R-family-has-no-planar-jacobian-mate.md),
+  [corrected JC/LRC reflection](../../07-reflections/jacobian-and-lonely-runner-two-nullcones-that-diverge-boxeph-S205.md).
+- **Does not prove:** planar JC, an arithmetic-progression reduction, or that
+  every inner edge has THM-2045's unique constant-producing sector.
+
+### Han--Pan--Chen — *Normal forms of elements in the Weyl algebra and Dixmier Conjecture*
+
+- **Primary / freshness:** [arXiv:2407.11291v1](https://arxiv.org/abs/2407.11291),
+  submitted 2024-07-16. **PREPRINT.**
+- **Imported role:** organizes nilpotent or semisimple `A_1` elements by Joseph
+  normal-form pairs `(k,n)`, reformulates the remaining Dixmier obstruction in
+  those coordinates, and proves the needed nonexistence when `gcd(k,n)=1` or
+  one entry is prime; it records analogous planar-Poisson results.
+- **Repo consumer:** the `DC(1)` control discussion in the
+  [rank-two boundary reflection](../../07-reflections/rank-two-poisson-suspension-leaves-two-rigidity-gates-dc2-and-planar-jc-codex-20260721.md).
+- **Does not prove:** DC(1), DC(2), planar JC, or termination of THM-2044's
+  observed six-weight quantization cascade.
 
 ## Gaussian Moments Conjecture / NC2
 

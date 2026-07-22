@@ -48,7 +48,26 @@ notation.
 **Counterindication:** analogies remain productive as conjecture generators if
 their missing map is stated openly.
 **Evidence:** MISTAKE-209, MISTAKE-211, MISTAKE-212, MISTAKE-214,
-MISTAKE-215, and MISTAKE-216 in [`MISTAKES.md`](../01-canon/MISTAKES.md).
+MISTAKE-215, MISTAKE-216, MISTAKE-222, and MISTAKE-223 in
+[`MISTAKES.md`](../01-canon/MISTAKES.md).
+
+## A local factorization transfers only through a stated functor
+
+**Trigger:** a source polynomial, determinant, arrangement, or generating
+function factors, and a downstream wall/limit/topological object is then said
+to factor “the same way.”
+**Action:** draw the source-to-target construction and prove it respects the
+product or localization. Separate vanishing order, codimension, nonzero local
+units, analytic limits, and derived valuations. If the arrow is missing, keep
+the factorization as a source-side theorem and test the proposed transfer.
+**Mechanism:** products are not preserved automatically by scalar summation,
+confluence, asymptotic limits, constant-term functionals, or passage to a
+different cell complex.
+**Counterindication:** use product closure immediately when an exact theorem
+shows that the target construction is multiplicative.
+**Evidence:** MISTAKE-215 (special determinant versus general moment) and
+MISTAKE-223 (braid localization versus hyper-Bessel/Euler claims), with the
+surviving special-matrix scope in THM-2033.
 
 ## Controlled forgetting requires a sidecar
 

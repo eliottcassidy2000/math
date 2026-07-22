@@ -27,7 +27,7 @@ supplier/seed and a lossless exit.
 ### What is closed
 
 - **CITED:** LRC through 13 total runners. The newest step is
-  [Sungkawichai–Trakulthongchai](../05-knowledge/reference/CORE-PAPERS.md#eleven-twelve-and-thirteen-lonely-runners),
+  [Sungkawichai–Trakulthongchai](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture),
   a computer-assisted proof for 10–12 nonzero speeds.
 - **PROVED:** [THM-763](../01-canon/theorems/THM-763-strict-finite-height-for-tight-lrc-instances.md)
   gives every primitive tight 12-speed tuple the finite bound
@@ -397,12 +397,21 @@ conserves mass exactly at `z=1`.
 - **EXACT identities / heuristic bridge:** corrected HYP-8820 places caterer
   and cake as Pascal-prefix sums, Moser and bagel as fixed binomial row
   functionals, and Fibonacci as a shallow diagonal. Algebraically,
-  `bagel(n)=cake(n+1)-2`, hence `bagel(n)-cake(n)=T_n-1`. Klein-S313's
+  for `n>=1`, `bagel(n)=cake(n+1)-2`, hence
+  `bagel(n)-cake(n)=T_n-1`. Klein-S313's
   full-rank gap diagonals exactly realize the g-bonacci kernels; finite-rank
   shadows eventually differ. MISTAKE-222 blocks the stronger claim that a
   shared array or matching `-1` identifies the torus and shadow boundaries or
   transfers an LRC/JC predicate. The live bridge test is an explicit common
   boundary-cell/Euler-characteristic valuation, not another prefix match.
+- **EXACT arrangement shadow / blocked topology transfer:** corrected HYP-8825
+  identifies the Vandermonde as the braid-arrangement defining polynomial,
+  its real chambers with labelled transitive tournaments, its leading
+  coalescence product, and the gap recurrence with a companion determinant.
+  MISTAKE-223 blocks the jumps from these facts to general NC2
+  noncancellation, hyper-Bessel factorization, or one bagel/shadow Euler
+  characteristic. THM-2023 already proves the `Phi_(p,q)` zero theorem by a
+  different route.
 
 ### Live work
 
@@ -419,11 +428,15 @@ into tournament operation laws and LRC residue packets.
   collision; [THM-1315](../01-canon/theorems/THM-1315-keller-counterexample-surjective-etale-3to1-caustic.md)
   analyzes its geometry. Public provenance remains unsettled in canon;
   MISTAKE-205 forbids the old Alpöge–Mathew attribution. Keep exact verification,
-  public announcement, and discovery credit separate.
-  The linked external certificate independently replays the resulting `A_3`
-  cotangent pullback; it does not decide `DC(2)`.
+  public announcement, and discovery credit separate. The linked external
+  certificate independently replays the resulting `A_3` cotangent pullback; it
+  does not decide `DC(2)`.
+- **Rank-two Poisson / planar and Weyl boundary:**
   [THM-2044](../01-canon/theorems/THM-2044-explicit-rank-two-poisson-counterexample-by-symplectic-suspension.md)
-  disproves the two-pair Poisson conjecture, while
+  disproves the two-pair Poisson conjecture via a four-variable symplectic
+  suspension with an exact three-point fibre.
+  [THM-2045](../01-canon/theorems/THM-2045-the-smooth-factorized-R-family-has-no-planar-jacobian-mate.md)
+  proves `R=x(a-b*x^r*q^s)` has no planar polynomial Jacobian mate, while
   [THM-2046](../01-canon/theorems/THM-2046-first-order-cotangent-pullbacks-cannot-cross-the-DC2-wall.md)
   proves that this witness cannot descend through multiplication positions and
   first-order dual momenta. [HYP-8803](../05-knowledge/hypotheses/HYP-8803-A3-pullback-versus-A2-quantum-descent.md)
@@ -463,10 +476,11 @@ The most reusable current bridges are not literal object identifications:
 | Operation-response | tournament joins/support unions | Which observables add, multiply, localize, or collide? |
 | One-sided accumulation | LRC spectrum | Can qualitative isolation be made effective by finite state/pinning data? |
 | Support Dirichlet profile | integer sequences | Do tournament/LRC census supports have functional or automatic structure? |
+| Weighted-sector obstruction | THM-2045 factorized `R` family | Does the unique constant-producing sector fail on a broader Lee–Li inner edge? |
 
 HYP-8810's “JC(2) and LRC(14) share AP-rigidity” is a **wildcard frame, not a
 proved reduction**. LRC has the one-way THM-1017 supplier; the planar-JC wall
-still needs an exact map and preserved predicate. Safely compare how AP,
-transitive, and one-sided extremals sit in different nullcones.
+still needs an exact map and preserved predicate. THM-2045 supplies one exact
+JC-side sector obstruction to compare, not an AP reduction.
 
 A bridge must name its map, preserved predicate, loss, sidecar, and hostile control.

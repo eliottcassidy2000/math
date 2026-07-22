@@ -50,6 +50,9 @@ As of 2026-07-21:
 - **GMC is false from dimension 3 onward.** Dimension two is the sharp surviving
   case handled by THM-2022; dimensions one and two must not be conflated with
   the higher-dimensional counterexamples.
+- **The two-pair Poisson conjecture is false, while DC(2) and planar JC remain
+  open.** THM-2044 is an explicit symplectic suspension; THM-2045 obstructs
+  only its factorized first-coordinate family from de-stabilizing to the plane.
 - **Tournament work has moved from isolated invariants to operations and
   decomposition:** order-join, strong cores, signed Rédei data, local
   subtournament censuses, and invariant-independence witnesses.

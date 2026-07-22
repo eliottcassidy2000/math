@@ -30,7 +30,7 @@ theorem or evidence it links. `SESSION-LOG.md`, `TANGENTS.md`, reflections, old
 frontier snapshots, the full mistakes ledger, and the giant hypothesis index
 are searchable history—not mandatory warm-up.
 
-## Ten high-signal facts to reuse, not re-derive
+## Twelve high-signal facts to reuse, not re-derive
 
 1. **LRC(14) is the first unresolved runner count in the present literature.**
    Sungkawichai–Trakulthongchai prove the cases with 10, 11, and 12 nonzero
@@ -64,14 +64,24 @@ are searchable history—not mandatory warm-up.
     support from indexed multiplicity by a collision tax; the reusable object
     is the support Dirichlet profile, with Abel–Stieltjes/log-block Dini and the
     full Bertrand boundary at `z=1`.
+11. **The rank-two Poisson, Dixmier, and planar Jacobian scopes now separate
+    sharply.** THM-2044 proves the two-pair Poisson conjecture false by an
+    explicit symplectic suspension. DC(2) and planar JC remain open; THM-2045
+    proves only that the factorized family `R=x(a-b*x^r*q^s)` has no planar
+    polynomial mate.
+12. **Complete period-14 coordinates can still be globally blind.** THM-2043
+    proves parity-Hasse completeness for reduced period-14 functions, then
+    gives an infinite AP-alias family with the same local packet and a strict
+    `17/41` exit. Exact owner height or adaptive resolved phase is indispensable.
 
 ## Where to go by topic
 
 | Topic | Read first | Then use |
 |---|---|---|
 | LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), [`HYP-8800`](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) |
-| LRC literature | [`CORE-PAPERS.md#lonely-runner`](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner) | [`LRC-TECHNIQUE-INDEX.md`](LRC-TECHNIQUE-INDEX.md), source paper |
+| LRC literature | [`CORE-PAPERS.md#lonely-runner-conjecture`](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [`LRC-TECHNIQUE-INDEX.md`](LRC-TECHNIQUE-INDEX.md), source paper |
 | NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022, THM-2040/2041, active guardrails |
+| Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-2044/2045 |
 | Tournaments | [`CURRENT-FRONTIER.md#tournaments`](CURRENT-FRONTIER.md#tournaments) | [`TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md`](TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md), [`THE-ZOO.md`](THE-ZOO.md) with its freshness banner |
 | Integer sequences | [`CURRENT-FRONTIER.md#integer-sequences`](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005 and their frozen outputs |
 | Broad portfolio | [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md) | [`PROBLEM-ATLAS-2026-07-20.md`](PROBLEM-ATLAS-2026-07-20.md) only as historical provenance |

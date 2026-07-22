@@ -1,63 +1,40 @@
 
 ========================================================================
-PILLAR 1  V(a)=prod(a_j-a_i) IS the braid arrangement; #transitive = n! = |chi(-1)|
+CHECK 1  braid defining polynomial and REAL chamber count
 ========================================================================
-  n=2: chi(t)=fall.fact (t-1)..(t-1);  regions=|chi(-1)|=2=2!=2? True;  bounded=|chi(1)|=0 (no bounded region, non-essential) 
-  n=3: chi(t)=fall.fact (t-1)..(t-2);  regions=|chi(-1)|=6=3!=6? True;  bounded=|chi(1)|=0 (no bounded region, non-essential) 
-  n=4: chi(t)=fall.fact (t-1)..(t-3);  regions=|chi(-1)|=24=4!=24? True;  bounded=|chi(1)|=0 (no bounded region, non-essential) 
-  n=5: chi(t)=fall.fact (t-1)..(t-4);  regions=|chi(-1)|=120=5!=120? True;  bounded=|chi(1)|=0 (no bounded region, non-essential) 
-  n=6: chi(t)=fall.fact (t-1)..(t-5);  regions=|chi(-1)|=720=6!=720? True;  bounded=|chi(1)|=0 (no bounded region, non-essential) 
-  n=7: chi(t)=fall.fact (t-1)..(t-6);  regions=|chi(-1)|=5040=7!=5040? True;  bounded=|chi(1)|=0 (no bounded region, non-essential) 
-  => transitive tournaments = braid chambers = n! ; the Vandermonde V(a) is Q(A_braid).
-     V distinct-coords != 0  <=>  point in COMPLEMENT M(A)  <=>  NC2 noncancel (THM-2033).
+  n=2: (-1)^(n-1)*chi(-1)=2; n!=2; equal? True
+  n=3: (-1)^(n-1)*chi(-1)=6; n!=6; equal? True
+  n=4: (-1)^(n-1)*chi(-1)=24; n!=24; equal? True
+  n=5: (-1)^(n-1)*chi(-1)=120; n!=120; equal? True
+  n=6: (-1)^(n-1)*chi(-1)=720; n!=720; equal? True
+  n=7: (-1)^(n-1)*chi(-1)=5040; n!=5040; equal? True
+  V(a)=prod_(i<j)(a_j-a_i) vanishes exactly on braid hyperplanes.
+  Scope: n! counts chambers of the REAL complement; the complex complement is connected.
 
 ========================================================================
-PILLAR 2  CONFLUENCE WALL = a FLAT; the confluent Vandermonde FACTORIZES (localization)
+CHECK 2  leading coalescence; vanishing order is NOT codimension
 ========================================================================
-  blocks=[[0, 1, 2], [3, 4]] c=[0, 10]: codim(eps power)=4; V/pred_leading -> 0.979408 (eps=0.1)
-  blocks=[[0, 1, 2], [3, 4]] c=[0, 10]: codim(eps power)=4; V/pred_leading -> 0.997994 (eps=0.01)
-  blocks=[[0, 1, 2], [3, 4]] c=[0, 10]: codim(eps power)=4; V/pred_leading -> 0.999800 (eps=0.001)
-  ratio -> 1 as eps->0  ==>  V factors as eps^codim * (within-block Vandermondes) * (block-rep V^mult).
-  This IS Orlik-Solomon localization A_braid|_X = prod(within-block braids) x transverse.
-  ALGEBRAIC TRICK: at an NC2 wall the moment det[(a_i+k)!]=prod a_i! * V(a) factors the SAME way
-  into per-block confluent hyper-Bessels -> product form.
+  epsilon=0.1: V/leading=0.979408049
+  epsilon=0.01: V/leading=0.997994008
+  epsilon=0.001: V/leading=0.999799940
+  block sizes 3+2: vanishing order=4, codimension=3
+  The cross-block factor is a nonzero unit near this generic flat.
 
 ========================================================================
-PILLAR 3  Single-block hyper-Bessel is LAGUERRE-POLYA (real zeros) -> product closure (HYP-8775)
+CHECK 3  explicit companion determinant and full-rank gap diagonal
 ========================================================================
-  (a) Phi_{1,1}=I_0(2 sqrt x): check f(x)~0 at x=-(j_{0,m}/2)^2 (rigorous L-P base case):
-      x=-((2.4048)/2)^2=  -1.4458:  Phi_11(x)=-1.579e-10  (~0 => genuine real negative zero)
-      x=-((5.5201)/2)^2=  -7.6178:  Phi_11(x)=-9.739e-11  (~0 => genuine real negative zero)
-      x=-((8.6537)/2)^2= -18.7218:  Phi_11(x)=-2.364e-11  (~0 => genuine real negative zero)
-  (b) Laguerre inequality f'^2 - f f'' >= 0 on x in [-60,10] step 0.3 (necessary for L-P):
-      Phi_(p=1,q=1): min over grid of (f'^2 - f f'') =  7.0465e-04  >=0 (consistent with L-P)
-      Phi_(p=1,q=2): min over grid of (f'^2 - f f'') =  5.0669e-02  >=0 (consistent with L-P)
-      Phi_(p=2,q=2): min over grid of (f'^2 - f f'') =  2.6722e-02  >=0 (consistent with L-P)
-      Phi_(p=2,q=3): min over grid of (f'^2 - f f'') =  6.2755e-03  >=0 (consistent with L-P)
-      Phi_(p=3,q=3): min over grid of (f'^2 - f f'') =  7.6135e-04  >=0 (consistent with L-P)
-  => base case (1,1) rigorously L-P (Bessel); Laguerre inequality passes for all tested (p,q).
-     (Truncation root-reality FAILS by Szego -- correctly NOT used.) Full-function L-P is the
-     needed input; product closure then gives the whole wall-boundary L-P (HYP-8775).
-     L-P is closed under products (Schur). Wall factorization (Pillar 2) => whole boundary is L-P.
+  g=1: det coeffs=[1, -1, -1]; expected=[1, -1, -1]; det PASS? True; diagonal PASS? True
+  g=2: det coeffs=[1, -1, 0, -1]; expected=[1, -1, 0, -1]; det PASS? True; diagonal PASS? True
+  g=3: det coeffs=[1, -1, 0, 0, -1]; expected=[1, -1, 0, 0, -1]; det PASS? True; diagonal PASS? True
+  g=4: det coeffs=[1, -1, 0, 0, 0, -1]; expected=[1, -1, 0, 0, 0, -1]; det PASS? True; diagonal PASS? True
+  g=5: det coeffs=[1, -1, 0, 0, 0, 0, -1]; expected=[1, -1, 0, 0, 0, 0, -1]; det PASS? True; diagonal PASS? True
+  The companion digraph has a loop; it is not a tournament adjacency matrix.
 
 ========================================================================
-PILLAR 4  g-bonacci kernel = BOWEN-LANFORD zeta 1/det(I - x M_g); deficit-1 = reduced Euler char
+NON-RESULTS MADE EXPLICIT
 ========================================================================
-  g=1: recurrence [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]  == kernel 1/(1-x-x^{2}) [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]? True  (g=1 Fibonacci)
-  g=2: recurrence [1, 1, 1, 2, 3, 4, 6, 9, 13, 19, 28]  == kernel 1/(1-x-x^{3}) [1, 1, 1, 2, 3, 4, 6, 9, 13, 19, 28]? True  (g=1 Fibonacci)
-  g=3: recurrence [1, 1, 1, 1, 2, 3, 4, 5, 7, 10, 14]  == kernel 1/(1-x-x^{4}) [1, 1, 1, 1, 2, 3, 4, 5, 7, 10, 14]? True  (g=1 Fibonacci)
-  => g-bonacci = Bowen-Lanford zeta of a companion transfer matrix = tournament zeta 1/det(I-uA).
-     bagel-cake = T_n-1 : the +1's are the reduced-Euler (empty flat) terms of the cutting
-     arrangement on the torus; the handle H_1=Z contributes the T_n, the -1 is the reduced base.
-
-========================================================================
-SUMMARY
-========================================================================
-  ONE topology: Mobius/Euler-characteristic inversion over an INTERSECTION LATTICE (Zaslavsky).
-  - cutting sequences  = generic hyperplane arrangements (regions = sum C(n,k) = cake).
-  - g-bonacci          = Bowen-Lanford zeta of a 1D transfer matrix; deficit-1 = reduced Euler char.
-  - transitive count   = braid chambers = n! = |chi_braid(-1)| = falling factorial (Zaslavsky).
-  - NC2 Vandermonde    = braid arrangement Q(A); noncancel = complement; WALL = flat.
-  ALGEBRAIC LEVERAGE: arrangement product-localization at a flat FACTORS the confluent Vandermonde /
-  moment det / hyper-Bessel boundary into single-block L-P pieces -> whole boundary Laguerre-Polya
-  by Schur product closure. Geometry (localize as product) => Algebra (HYP-8775 real-rootedness).
+  - No general NC2 iff follows from the special THM-2033 Vandermonde matrix.
+  - No hyper-Bessel block product follows from the coalescence formula.
+  - THM-2023 proves Phi_(p,q) Laguerre--Polya independently.
+  - No bagel-cut Euler complex or bagel/shadow valuation is computed here.
+  - bagel(n)=cake(n+1)-2 remains the strongest direct cutting identity.
