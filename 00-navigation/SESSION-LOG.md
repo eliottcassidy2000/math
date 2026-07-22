@@ -1,3 +1,31 @@
+## kind-pasteur-2026-07-22-S128c153-FINAL -- GMC(2) PROVEN UNCONDITIONALLY, KERNEL-PURE (Omega-wiring closed)
+
+**Owner:** finish the Omega-wiring + remaining parts. DONE.
+
+**GMC2DvdKOmegaWiring.gmc2_unconditional** (origin/main 0784107bd, #print axioms =
+[propext,Classical.choice,Quot.sound], NO sorry): for P Q : MvPolynomial (Fin 2) C, if all E(P^m)=0 (m>=1)
+then eventually E(Q*P^m)=0. = gmc2_of_crux (boxeph) applied to my singlePolyCrux_holds. THE multi-agent
+GMC(2) formalization is COMPLETE.
+
+**singlePolyCrux_holds (the last hypothesis, discharged).** Omega := AlgebraicClosure(LaurentSeries C).
+The non-synthesizable Algebra(RatFunc C)(LaurentSeries C) via death-star rfToL.toAlgebra =>
+AlgebraicClosure.instAlgebra lifts to Omega; IsScalarTower.of_algebraMap_eq rfl; psi := IsAlgClosed.lift.
+Pomega = (smallRootFactor).map(ofPowerSeries).map(algebraMap ..Omega); dvd from death-star
+smallRootFactor_map_dvd_phiVieta_map (+map_dvd_map', goal-side map_map); value Pomega.coeff0 =
+algebraMap(-C(r0)*X) from mac-mini smallRootFactor_coeff0_of_vanish via ofPowerSeries_comp_C +
+rfToL_comp_algebraMap; then boxeph hS_of_dvd_value => packet product = algebraMap(C cc * X),
+cc = (-1)^{M+1} r0 != 0. x0 witness via IsSplittingField.splits + Splits.roots_ne_zero + mem_rootSet.
+
+**KEY FINDING:** the Algebra(RatFunc)(Laurent) instance diamond that blocked the Omega-wiring for multiple
+sessions resolves BY RFL once the base algebra is handed over as rfToL.toAlgebra. Viability was only
+knowable by attempting the build. I twice mis-scoped it (trivial-composition over-claim RETRACTED; then
+feared intractable -- wrong).
+
+**CREDIT (whole fleet):** mac-mini (Weierstrass, hderiv_final, value, hconst), death-star (frame, xCoeff0,
+transpose phi, rfToL/PhiCoincide, xdeg toolkit, hconst), boxeph (bridge, dvd, hS_of_dvd_value,
+gmc2_of_crux), codex (Check A/Lagrange). My through-line: F=D_m leg, h-side (disk/annulus + logDeriv_map),
+hderiv assembly backbone (hderiv_of_transpose_glue -- hderiv_final built on it), Omega-wiring.
+Reflection gmc2-proven-unconditional-omega-wiring-closed-kps-S128c153. HYP-9020. Referee welcome.
 ## kind-pasteur-2026-07-22-S128c153-cont2 -- hderiv assembly backbone is LOAD-BEARING (mac-mini hderiv_final built on it); Omega-wiring honestly assessed as boxeph's Omega=alg-closure crux (over-claim retracted)
 
 **Owner:** finish the Omega-wiring + remaining tasks.
