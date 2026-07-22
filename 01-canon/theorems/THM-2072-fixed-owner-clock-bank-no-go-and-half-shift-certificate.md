@@ -96,6 +96,34 @@ THM-2068, whose cores satisfy `max(C)<=24`. Formula (4) has
 `max(C)>=360360`. It rules out only an extension by one bank fixed once and
 for all; clocks chosen adaptively from the actual core remain available.
 
+Moreover, the blind core (4) is not geometrically hard: it already has an
+explicit antipodal safe pair. Namely, because `56|B`, put
+
+```text
+theta_B=15/56+1/(14B).                                  (4a)
+```
+
+At `15/56`, the distances for speeds `1,...,10`, in units of `1/56`, are
+
+```text
+15,26,11,4,19,22,7,8,23,18.                            (4b)
+```
+
+The perturbation in (4a) changes each of these distances by at most
+`10/(14B)<1/56`. The sole lower-bound equality in (4b), at speed `4`, moves
+in the safe direction. Every other distance stays above `4/56=1/14`, and
+the odd-speed distances stay below `24/56=3/7` (the closest upper case is
+speed `9`, at `23/56`). Finally
+
+```text
+||B theta_B||=1/14.
+```
+
+Thus the band criterion (9) below holds for `C_F`, so Section 2 closes this
+core continuously. The example therefore separates **sensor blindness**
+from mathematical hardness: the fixed rational packets vanish even though
+a two-point certificate is explicit.
+
 ## 2. An antipodal safe pair closes the seam
 
 Suppose
