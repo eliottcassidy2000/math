@@ -773,3 +773,4 @@ import TournamentH7.GMC2DvdKXDeg
 import TournamentH7.GMC2DvdKTranspose
 import TournamentH7.GMC2FrameBridgeDvd
 import TournamentH7.GMC2DvdKConnector
+import TournamentH7.GMC2DvdKConnectorPfr
