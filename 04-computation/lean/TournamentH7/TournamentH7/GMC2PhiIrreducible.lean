@@ -51,6 +51,62 @@ theorem phi_t_irreducible (R : F[X]) (M : ℕ) (hR0 : R.coeff 0 ≠ 0) :
     rw [hc0, hc1]
     exact (isRelPrime_X_pow_R R M hR0).neg_right
 
+/-- The swapped polynomial `swap Φ = map C (Xᴹ) − map C R · C X` in `F[X][Y]`, now with the outer
+variable `Y` playing the role of the DvdK variable and the inner `F[X]` playing `F[t]` (`t = X`). -/
+theorem swap_phi_eq (R : F[X]) (M : ℕ) :
+    Polynomial.Bivariate.swap
+        (Polynomial.C ((X : F[X]) ^ M) - Polynomial.C R * X : Polynomial (Polynomial F))
+      = Polynomial.map Polynomial.C ((X : F[X]) ^ M)
+        - Polynomial.map Polynomial.C R * Polynomial.C X := by
+  rw [map_sub, map_mul, Polynomial.Bivariate.swap_C, Polynomial.Bivariate.swap_C,
+    Polynomial.Bivariate.swap_Y]
+
+/-- **`Φ = X^M − t·R(X)` is irreducible over `F(t)`.**  Gauss: `swap Φ` is primitive over `F[t]` (its
+`Yᴹ`-coefficient `1 − C(r_M)·t` and `Y⁰`-coefficient `−C(r₀)·t` are coprime, since `r₀ ≠ 0` and `t`
+is coprime to `1 − C(r_M)·t`), and irreducible (transported from `phi_t_irreducible`); so its image
+over `F(t)` is irreducible.  This is the transitivity input to `Polynomial.Gal.galAction_isPretransitive`. -/
+theorem phi_irreducible_ratfunc (R : F[X]) (M : ℕ) (hM : 1 ≤ M) (hR0 : R.coeff 0 ≠ 0) :
+    Irreducible (Polynomial.map (algebraMap (Polynomial F) (RatFunc F))
+      (Polynomial.Bivariate.swap
+        (Polynomial.C ((X : F[X]) ^ M) - Polynomial.C R * X : Polynomial (Polynomial F)))) := by
+  have hirr_swap : Irreducible (Polynomial.Bivariate.swap
+      (Polynomial.C ((X : F[X]) ^ M) - Polynomial.C R * X : Polynomial (Polynomial F))) :=
+    (MulEquiv.irreducible_iff
+        (Polynomial.Bivariate.swap (R := F)).toRingEquiv.toMulEquiv).mpr
+      (phi_t_irreducible R M hR0)
+  -- coefficients of `swap Φ` (in `F[X]`, the base ring of Gauss)
+  have cM : (Polynomial.Bivariate.swap
+      (Polynomial.C ((X : F[X]) ^ M) - Polynomial.C R * X : Polynomial (Polynomial F))).coeff M
+      = 1 - Polynomial.C (R.coeff M) * X := by
+    rw [swap_phi_eq, Polynomial.coeff_sub, Polynomial.coeff_mul_C, Polynomial.coeff_map,
+      Polynomial.coeff_map, Polynomial.coeff_X_pow, if_pos rfl, map_one]
+  have c0 : (Polynomial.Bivariate.swap
+      (Polynomial.C ((X : F[X]) ^ M) - Polynomial.C R * X : Polynomial (Polynomial F))).coeff 0
+      = - (Polynomial.C (R.coeff 0) * X) := by
+    rw [swap_phi_eq, Polynomial.coeff_sub, Polynomial.coeff_mul_C, Polynomial.coeff_map,
+      Polynomial.coeff_map, Polynomial.coeff_X_pow, if_neg (by omega : ¬ ((0 : ℕ) = M)), map_zero,
+      zero_sub]
+  -- primitivity
+  have hprim : (Polynomial.Bivariate.swap
+      (Polynomial.C ((X : F[X]) ^ M) - Polynomial.C R * X : Polynomial (Polynomial F))).IsPrimitive := by
+    intro r hr
+    rw [Polynomial.C_dvd_iff_dvd_coeff] at hr
+    have hrM : r ∣ (1 - Polynomial.C (R.coeff M) * X) := cM ▸ hr M
+    have hr0 : r ∣ (Polynomial.C (R.coeff 0) * X) := by
+      have := hr 0; rw [c0] at this; exact (dvd_neg).mp this
+    -- r₀ is a unit, so r ∣ X
+    have hunit : IsUnit (Polynomial.C (R.coeff 0)) :=
+      Polynomial.isUnit_C.mpr (isUnit_iff_ne_zero.mpr hR0)
+    have hrX : r ∣ (X : F[X]) := (hunit.dvd_mul_left).mp hr0
+    -- r ∣ X and r ∣ (1 - C r_M X) ⟹ r ∣ 1
+    have hr1 : r ∣ (1 : F[X]) := by
+      have hb : r ∣ Polynomial.C (R.coeff M) * X := hrX.mul_left _
+      have := dvd_add hrM hb
+      simpa using this
+    exact isUnit_of_dvd_one hr1
+  exact (hprim.irreducible_iff_irreducible_map_fraction_map).mp hirr_swap
+
 end GMC2PhiIrreducible
 
 #print axioms GMC2PhiIrreducible.phi_t_irreducible
+#print axioms GMC2PhiIrreducible.phi_irreducible_ratfunc
