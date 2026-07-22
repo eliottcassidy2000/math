@@ -71,3 +71,38 @@ rank/cycle comparison is heuristic, not a classification of collisions.
 
 **Corrections adopted (mining):** CF thread = mac-mini-S137 (not klein-S329); reify-ladder = deathstar-S75 (not defunct THM-1750); apolarity/Fischer != THM-1685/1710/1735 (those are TNC). NOT a proof of JC(2) -- an assembled route map + verified pieces + the unified descent-termination obstruction. Artifacts: reflection working-jc2-the-obstruction-is-a-descent-termination-...-boxeph-S225.md, HYP-8905, script (+.out).
 
+## codex-2026-07-21 -- concrete GMC(2) residue and conditional NC2 capstone checked
+
+- `GMC2NormalizedResidue` now proves the complete normalized three-case
+  calculation: non-dilated channels vanish by their multinomial, dilated
+  off-face channels vanish by the factorial gap, and face channels reindex to
+  the exact Frobenius power of the undilated face constant term.
+- `GMC2SupportFaceBridge` proves exact geometric-face/support-face reindexing,
+  identifies the specialized lifted seed with that constant term, and derives
+  the global scaled floor, exact face height, and strict off-face gap from a
+  concrete reference channel.
+- `GMC2NC2` checks the whole post-specialization contradiction and exports
+  `nc2_of_dvdK1_of_heightWitnessSupplier` plus the GMC(2) endpoint. The old
+  one-`sorry` `GMC2NC2Capstone` WIP is replaced by a sorry-free compatibility
+  surface. All audited declarations use only Lean's standard axiom trio.
+- Direct checks of the concrete residue, support bridge, conditional capstone,
+  and compatibility surface pass at the default heartbeat. The aggregator
+  check stopped before elaboration at its pre-existing missing
+  `GMC2GoodReduction.olean`; that dependency chain was not built under the
+  no-big-build constraint.
+- **Exact remaining boundary:** the reference-channel extractor and height
+  theorem are separately green, but their direct existential wrapper into
+  `HeightWitnessSupplier` deterministically exhausts elaboration (also at
+  800k heartbeats) without a type or mathematical error. DvdK remains a
+  separate published external premise. A final default-budget redesign
+  compressed the reference to mass and balance: the compact extractor, base
+  obligations, and base-contradiction adapter all elaborated, but the final
+  `nc2_of_dvdK1` compositor still timed out at `whnf`; the experiment was
+  reverted. No repository-wide build was run.
+- **Live-main connection audited:** S223/HYP-8895 recasts the positive-
+  coefficient one-variable DvdK return set as a numerical semigroup. That is
+  a useful future formalization route, but it does not replace `DvdK1` here:
+  the mixed-sign cancellation case still rests on S222's unfinished saddle
+  argument. S103/HYP-8910 independently finds the same one-sided charge shape
+  in a symmetric planar-Jacobian subcase, but explicitly supplies no transfer
+  theorem to Gaussian moments and therefore does not change this Lean spine.

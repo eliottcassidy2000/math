@@ -45,16 +45,19 @@ formalization:
   - 04-computation/lean/TournamentH7/TournamentH7/GMC2ChannelDilation.lean
   - 04-computation/lean/TournamentH7/TournamentH7/GMC2FrobeniusResidue.lean
   - 04-computation/lean/TournamentH7/TournamentH7/GMC2ResidueAssembly.lean
+  - 04-computation/lean/TournamentH7/TournamentH7/GMC2NormalizedResidue.lean
+  - 04-computation/lean/TournamentH7/TournamentH7/GMC2SupportFaceBridge.lean
+  - 04-computation/lean/TournamentH7/TournamentH7/GMC2NC2.lean
+  - 04-computation/lean/TournamentH7/TournamentH7/GMC2NC2Capstone.lean
   - 04-computation/lean/TournamentH7/TournamentH7/GMC2Formalization.lean
 formalization_status: >
-  PARTIAL, with the former descent and face-construction gaps closed. Exact
-  Wick and integral normalized relations, rational lowest-face existence,
-  height floors/gaps, explicit DvdK seed extraction, seed-preserving
-  number-field and direct finite-field specialization, channel dilation,
-  multinomial isolation/Lucas, whole-face Frobenius, and abstract three-case
-  residue assembly are kernel-checked. DvdK remains an explicit cited premise.
-  The remaining Lean composition is the concrete normalized-channel
-  instantiation of the three residue cases and the final theorem DvdK1 -> NC2
+  PARTIAL at one explicit internal composition interface. The concrete
+  normalized three-case residue, exact support-face seed transport, and the
+  finite-field zero/nonzero contradiction are kernel-checked. GMC2NC2 derives
+  NC2 and GMC(2) from DvdK1 plus HeightWitnessSupplier. The reference-channel
+  extractor and the theorem producing its three height obligations are also
+  checked separately, but their direct existential wrapper currently exhausts
+  Lean's elaboration budget. DvdK remains a second explicit cited premise.
 ---
 
 # THM-2022 -- Frobenius amplification of the lowest balanced Wick face
@@ -468,8 +471,8 @@ Mathematicae* (N.S.) 9(2) (1998), 221--231, Theorem 2 and Remark 3.
 ## 10. Lean formalization ledger
 
 The kernel-checked development is gathered by
-`TournamentH7.GMC2Formalization`. The aggregator is an import surface, not yet
-an end-to-end `NC2` theorem.
+`TournamentH7.GMC2Formalization`. The aggregator now includes a conditional
+`NC2`/GMC(2) endpoint with its exact remaining internal interface visible.
 
 1. `GMC2Reduction` and `GMC2ChargeGeometry` prove both strict charge branches,
    identify failure of one-sidedness with charge straddling, define full
@@ -500,22 +503,32 @@ an end-to-end `NC2` theorem.
 7. `GMC2FrobeniusResidue` proves non-`p`-dilated multinomial isolation,
    multinomial Lucas, the whole-face identity `Qbar^p`, non-cancellation, and
    strict normalized-factorial divisibility. `GMC2ResidueAssembly` proves the
-   abstract three-case sum theorem. `GMC2GoodReduction` certifies the longer
-   number-field prime-reduction route independently.
+   abstract three-case sum theorem, while `GMC2NormalizedResidue` instantiates
+   all three cases for the normalized Wick relation. `GMC2GoodReduction`
+   certifies the longer number-field prime-reduction route independently.
+8. `GMC2SupportFaceBridge` proves exact seed reindexing into support
+   coordinates and packages the global floor, exact face height, and strict
+   off-face gap. `GMC2NC2` proves the specialized normalized relation is both
+   zero and nonzero, then derives `NC2` and GMC(2) from `DvdK1` and the compact
+   `HeightWitnessSupplier`. `GMC2NC2Capstone` is a sorry-free compatibility
+   surface replacing the earlier WIP skeleton.
 
 The first residue lemma uses multivariate exponent expansion in
 characteristic `p`, not an explicit carry count. It is slightly stronger
 than the manuscript narration: it does not need `p>m0`. Retaining `p>m0`
 above is harmless and keeps the elementary two-digit Kummer explanation.
 
-The remaining internal composition is narrow but nontrivial: instantiate the
-abstract three-case residue theorem with the normalized Wick term and the
-exact dilation image, then transport its nonzero value through the direct
-finite-field seed package to contradict moment nullity. That will yield the
-conditional theorem `DvdK1 -> NC2`; `gmc2_of_nc2` then closes GMC(2).
+The sole internal Lean boundary is now the uniform construction of
+`HeightWitnessSupplier`. Its two ingredients are already checked:
+`exists_reference_channel_of_nonzero_face_seed` extracts a concrete balanced
+face channel, and `normalized_height_obligations_of_face_reference` constructs
+the required global floor/equality/gap package from such a channel. Their
+direct existential composition has no known mathematical or typing gap, but
+reliably exhausts elaboration even at 800k heartbeats, so the checked capstone
+keeps that small wrapper explicit.
 
 Formalizing the published DvdK theorem itself is a separate substantial
 project. It remains visible as a theorem hypothesis, not hidden behind
 `axiom`, `sorry`, or `native_decide`. Thus the paper theorem is proved, while
-the Lean theorem remains honestly partial at one cited input and one named
-cross-layer assembly.
+the Lean theorem remains honestly conditional on one cited external theorem
+and one named internal composition interface.

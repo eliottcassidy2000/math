@@ -28,15 +28,19 @@ import TournamentH7.GMC2ChannelDilation
 import TournamentH7.GMC2GoodReduction
 import TournamentH7.GMC2FrobeniusResidue
 import TournamentH7.GMC2ResidueAssembly
+import TournamentH7.GMC2NormalizedResidue
+import TournamentH7.GMC2SupportFaceBridge
+import TournamentH7.GMC2NC2
 
 /-!
 # Formalization spine for NC2 and GMC(2)
 
 This aggregation module exposes the checked components of `THM-2022` through
-one stable import.  It deliberately does **not** assert an end-to-end `NC2`
-theorem until the last concrete channel assembly has been proved.
+one stable import.  It includes the full post-specialization contradiction and
+an `NC2`/GMC(2) endpoint conditional on the exact remaining internal interface,
+`GMC2NC2.HeightWitnessSupplier`.
 
-The present spine has seven layers.
+The present spine has eight layers.
 
 1. `GMC2Reduction` and `GMC2ChargeGeometry` define `NC2`, prove both strict
    charge branches, and prove `NC2 -> GMC(2)`.
@@ -60,15 +64,21 @@ The present spine has seven layers.
    in `piAntidiag`, and finite-sum reindexing.
 7. The Frobenius modules prove non-dilated multinomial isolation, multinomial
    Lucas, whole-face `Q^p`, the strict factorial-gap divisibility, and an
-   abstract three-case finite-sum assembly.  `GMC2GoodReduction` retains the
+   abstract three-case finite-sum assembly. `GMC2NormalizedResidue` gives the
+   concrete normalized-channel instantiation. `GMC2GoodReduction` retains the
    independent number-field reduction route, although it is no longer on the
    shortest critical path.
+8. `GMC2SupportFaceBridge` transports the exact face seed and its height
+   obligations into support-indexed channels. `GMC2NC2` proves the finite-field
+   zero/nonzero contradiction and derives both `NC2` and GMC(2) from `DvdK1`
+   plus a compact `HeightWitnessSupplier`.
 
-The remaining composition task is to instantiate the abstract three-case
-assembly with the normalized Wick channels and the exact dilation image, then
-feed its contradiction through `GMC2IntegralFaceSeedDescent` to obtain the
-conditional theorem `DvdK1 -> NC2`.  Formalizing DvdK itself is a separate
-published-theorem project; here it remains visible in theorem hypotheses.
+The reference-channel extractor and the height-obligation theorem are each
+kernel-checked. Their direct existential wrapper into `HeightWitnessSupplier`
+currently exceeds Lean's elaboration budget, even though no type or
+mathematical error remains; this interface therefore stays explicit rather
+than being hidden behind an axiom or `sorry`. Formalizing DvdK itself is a
+separate published-theorem project and likewise remains visible in hypotheses.
 
 Tournament-assumption audit: orienting channels pairwise preserves the
 lower-face/off-face comparison but loses coefficient magnitudes and tied-face

@@ -1,40 +1,41 @@
-import TournamentH7.GMC2Formalization
+import TournamentH7.GMC2NC2
 
 /-!
-# WIP: the `DvdK1 → NC2` capstone composition (death-star)
+# Compatibility surface for the NC2/GMC(2) capstone
 
-Assembles codex's spine into the conditional NC2 theorem: under the one-variable DvdK premise,
-a moment-null polynomial is charge-one-sided.  Structure: the descent gives a finite-field torus
-point `w` where every integral zero relation is preserved and the lowest-face seed is nonzero;
-the normalized moment relation is `0` at `w` (null, preserved) yet `≠ 0` at `w`
-(`three_case_sum_ne_zero`, nonzero seed) — contradiction.
+The former work-in-progress theorem in this module contained one `sorry` and
+overstated the current formal boundary as `DvdK1 -> NC2`.  The checked
+capstone lives in `GMC2NC2`: after a compact normalized-height witness is
+supplied, the direct finite-field specialization is simultaneously zero by
+moment nullity and nonzero by the Frobenius face residue.
 
-Remaining `sorry`s mark the transport obligations still being discharged.
+This module retains the historical name as a small, sorry-free compatibility
+surface.  It deliberately exposes both remaining inputs in its theorem names.
 -/
-
-open GMC2 GMC2NormalizedMoment GMC2ResidueAssembly Finset
 
 namespace GMC2NC2Capstone
 
-/-- **Conditional NC2 under one-variable DvdK.** WIP skeleton. -/
-theorem nc2_of_dvdk1 (hDvdK : GMC2DvdKInterface.DvdK1) :
-    ∀ P : MvPolynomial (Fin 2) ℂ, GMC2.NC2At P := by
-  intro P hnull
-  by_contra hnotone
-  obtain ⟨lambda, delta, F, m0, hsubset, hm0, hlower, hFdef,
-      A, D, w, hpprime, hchar, hfin, hfield, hunit, hwnz,
-      hpreserve, hmomzero, hseednz⟩ :=
-    GMC2IntegralFaceSeedDescent.exists_finite_field_moment_point_preserving_integral_lowest_face_seed
-      hDvdK P hnull hnotone
-  -- The residue field, its char-p field structure:
-  letI : Field D.ResidueField := D.fieldStructure
-  -- exponent = the support inclusion:
-  set exponent : ↥P.support → Fin 2 →₀ ℕ := fun s => (s : Fin 2 →₀ ℕ) with hexp
-  -- A reference channel + face height A0 (from the nonzero seed) — TODO extract.
-  -- The min height floor `p*A0` at mass `p*m0` — TODO from balanced_natural_height_floor_of_reference.
-  -- Then `aeval w (normalizedMomentRelationInt exponent (p*m0) (p*A0))` is:
-  --   (a) = 0   (null ⟹ integral zero relation, preserved by hpreserve)
-  --   (b) ≠ 0   (three_case_sum_ne_zero: non-dilated→0, off-face→0, face=w^p sum = seed ≠ 0)
-  sorry
+/-- The exact remaining internal composition interface. -/
+abbrev HeightWitnessSupplier := GMC2NC2.HeightWitnessSupplier
+
+/-- Checked NC2 endpoint from the published DvdK input and the explicit
+height-witness supplier. -/
+theorem nc2_of_dvdk1_of_heightWitnessSupplier
+    (hDvdK : GMC2DvdKInterface.DvdK1)
+    (hHeight : HeightWitnessSupplier) : GMC2.NC2 :=
+  GMC2NC2.nc2_of_dvdK1_of_heightWitnessSupplier hDvdK hHeight
+
+/-- Checked GMC(2) endpoint through the same two visible inputs. -/
+theorem gmc2_of_dvdk1_of_heightWitnessSupplier
+    (hDvdK : GMC2DvdKInterface.DvdK1)
+    (hHeight : HeightWitnessSupplier)
+    (P Q : MvPolynomial (Fin 2) ℂ)
+    (hnull : ∀ m : ℕ, 1 ≤ m → GMC2.E (P ^ m) = 0) :
+    ∃ N : ℕ, ∀ m ≥ N, GMC2.E (Q * P ^ m) = 0 :=
+  GMC2NC2.gmc2_of_dvdK1_of_heightWitnessSupplier
+    hDvdK hHeight P Q hnull
 
 end GMC2NC2Capstone
+
+#print axioms GMC2NC2Capstone.nc2_of_dvdk1_of_heightWitnessSupplier
+#print axioms GMC2NC2Capstone.gmc2_of_dvdk1_of_heightWitnessSupplier
