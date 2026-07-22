@@ -1,5 +1,5 @@
 ---
-id: THM-2076
+id: THM-2077
 title: "Terminal Kakeya needle, all-depth relative height, and recursive quarter escape"
 status: >
   PROVED. THM-2075 lifts a terminal maximizer interval through the exact
@@ -20,7 +20,7 @@ related:
   - THM-1260
 ---
 
-# THM-2076 -- terminal needle and recursive quarter escape
+# THM-2077 -- terminal needle and recursive quarter escape
 
 Put `delta=1/14`.  Retain a hypothetical strict dyadic seam and its tower
 from THM-2073:
