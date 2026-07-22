@@ -61,6 +61,13 @@ Older chronology is in
   through rank `10`; all-primitive rank-two covers in those ranges are empty,
   and the specialized LRC list must contain `13`- and (through rank ten)
   `11`-divisible guard/terminal entries.
+- THM-2116 converts the generic first rank-eight terminal `13`-blocker into an
+  exact order-thirteen orbit ledger. After freezing the guard and blocker on
+  a guard-kernel needle, each of the seven residual dangers is a singleton or
+  a colored two-point toothpick. Almost every covered needle is therefore
+  either a disjoint six-toothpick-plus-singleton partition or a seven-
+  toothpick cover with one doubled point. A positive-measure two-singleton
+  phase set would close this branch; the two extremal colored patterns remain.
 - **Remaining:** exact discharge of the rank-seven finite bank and both
   higher-rank branches; the depth-zero/rank-eleven and rank-twelve atlas lanes
   also remain. LRC(14) is not closed.

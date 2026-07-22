@@ -141,7 +141,14 @@ not unsafe. The reusable certificate architecture is
   `13`-content blocker through terminal rank `12`
   and an `11`-content blocker through rank `10`; in particular an all-primitive
   rank-two cover in these ranges is impossible. After specialization this
-  forces `13|h*product(Q)` and, through rank `10`, `11|h*product(Q)`. THM-2115 adds the signed Fourier-Toeplitz gate on the guard half-fiber: frequency `84` closes a row invisible to every THM-2105 clock and its saturated half-fiber pair tree. The six persistent height-114
+  forces `13|h*product(Q)` and, through rank `10`, `11|h*product(Q)`. THM-2115
+  adds the signed Fourier-Toeplitz gate on the guard half-fiber: frequency `84`
+  closes a row invisible to every THM-2105 clock and its saturated half-fiber
+  pair tree. THM-2116 consumes the generic first `13`-terminal blocker: almost
+  every safe guard-kernel orbit is an exact six-toothpick-plus-singleton
+  partition or a seven-toothpick cover with one doubled point. A positive-
+  measure set of two-singleton phases escapes the almost-everywhere cover. The
+  six persistent height-114
   cut rows make THM-2065 alone vacuous; location, content, phase, and torsion
   sidecars are essential.
 - **PROVED relative decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
