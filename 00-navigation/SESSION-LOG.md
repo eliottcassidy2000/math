@@ -39,6 +39,12 @@ Euler certificates throughout the disks. LRC(14) remains open.
 
 **ARTIFACTS:** THM-2053, HYP-8846, updated HYP-8841/frontier/reflection.
 
+**LATE PULL:** THM-2054 reserves relative Fejer decorrelation along a character
+line. It is the right analytic partner for the tangent disks: discharge whole
+off-resonance cells, then spend exact pair-sum/Euler work only on resonant
+lattice points. HYP-8860 organizes the useful primes but remains a diagnostic
+modulus lens; it does not preserve signed star coefficients or endpoint owners.
+
 ## boxeph-2026-07-21-S214 -- the rank-11 AP-core is the achiral vertex where codex's rank-or-Euler frontier meets (HYP-8855)
 
 **Owner:** understand primes 7,5,11 as well as 2,3, through 'a set of pairwise relations is a tournament'.

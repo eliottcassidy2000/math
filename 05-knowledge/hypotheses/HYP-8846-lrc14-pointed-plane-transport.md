@@ -14,6 +14,7 @@ related:
   - THM-2050
   - THM-2052
   - THM-2053
+  - THM-2054
   - HYP-2108
   - HYP-1842
   - HYP-1977
@@ -26,6 +27,7 @@ related:
   - HYP-8841
   - HYP-8845
   - HYP-8850
+  - HYP-8860
 ---
 
 # HYP-8846 -- pointed transport, not an unpointed plane escape
@@ -139,6 +141,14 @@ matrices, and bound a reduced-basis `L` directly from the sparse triple code.
 - HYP-8845/HYP-8850 parity duplicates a first survivor into its mirror. It
   cannot create that first survivor and therefore belongs after the pointed
   gate.
+- THM-2054 is the incoming analytic complement: relative Fejer decorrelation
+  along a character line could certify whole off-resonance cells before exact
+  lattice-point enumeration. It is currently claimed/in progress and is not
+  used in THM-2053.
+- HYP-8860's Paley-prime table usefully assigns roles to moduli `3,7,11`
+  (resonance atom, period-14 apex, rank scale). It is a modulus-selection lens,
+  not a carrier: Paley orientation discards the signed coefficients and
+  endpoint owners needed to decide a tangent-disk point.
 
 ## Tournament analysis
 

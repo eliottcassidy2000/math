@@ -217,7 +217,9 @@ structural supplier/seed and a lossless exit.
    and one affine binding-phase cell. The sharpened target is to prove an
    analogous finite fan on each reduced two-anchor disk; a twelfth relation is
    still a useful maximal-minor shortcut, but no longer the only finiteness
-   mechanism.
+   mechanism. The incoming THM-2054 relative-Fejer program is the analytic
+   complement: prove whole off-resonance character cells safe, reserving exact
+   tangent-disk lattice enumeration for the resonant cells.
    HYP-8845 halves the covering branch by mirror symmetry: one survivor on
    `[0,1/2]` automatically supplies its partner and `chi>=2`.
 

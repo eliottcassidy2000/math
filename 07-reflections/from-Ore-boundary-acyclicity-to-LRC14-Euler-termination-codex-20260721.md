@@ -189,6 +189,15 @@ that finds *some* safe direction in a plane says nothing about the specified
 counterexample direction. The uniform geodesic estimate has the right
 quantifier: it handles every specified direction outside the finite disk.
 
+A final incoming pull supplies the natural analytic partner, THM-2054
+(currently claimed/in progress): relative Fejer whole-product decorrelation
+along a character line. If completed with explicit constants, it should erase
+whole off-resonance cells of the tangent-disk atlas, leaving exact pair-sum and
+Euler work only on resonance fans. HYP-8860's Paley-prime table can choose the
+useful modulus (`7` for the period apex, `3` for the smallest resonance atom,
+`11` for the rank scale), but its tournament orientation is only a lens and
+cannot replace signed coefficient heights or endpoint owners.
+
 ## Tournament methodology
 
 The audit deliberately uses proof carriers as vertices. Pairwise comparison
