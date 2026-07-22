@@ -28,6 +28,7 @@ related:
   - THM-769
   - THM-775
   - THM-2057
+  - THM-2064
   - HYP-8846
 ---
 

@@ -12,10 +12,10 @@ status: >
   independently of longitudinal coefficients; THM-2055 then cuts the bad
   fibers into hull-owner tangent sectors. THM-2058 reduces each such
   intersection to one exact coprime interval in the longitudinal coordinate.
-  THM-2062 now equips that interval with an exact hereditary-primitivity CRT
-  wheel having at most two bad projective directions per prime. The missing
-  work is uniform template compression and phase-height discharge of the
-  surviving residue classes, not an infinitary pointed transport theorem.
+  THM-2062 equips that interval with an exact hereditary-primitivity CRT wheel.
+  THM-2065 then collapses every template without a persistent height-2^20
+  marked circuit to finitely many projective rows. The missing work is the
+  persistent-circuit branch and phase-height discharge, not infinitary transport.
 source: codex-2026-07-21-DC2-LRC14-termination
 related:
   - THM-2050
@@ -30,6 +30,8 @@ related:
   - THM-2060
   - THM-2061
   - THM-2062
+  - THM-2064
+  - THM-2065
   - HYP-2108
   - HYP-1842
   - HYP-1977
@@ -150,6 +152,13 @@ fiber. A rational-rank-one deletion instead forces one primitive linear form
 to equal `+-1` and leaves a one-dimensional coprime wheel. Thus hereditary
 primitivity is no longer an a-posteriori row test inside the interval.
 
+THM-2065 inserts the strict-measure alternative next. Every bounded
+support-three-to-five scalar relation supplied by THM-2051 pulls back either
+to a persistent identity of the coefficient rows or to one primitive
+projective parameter. If no persistent height-`2^20` circuit exists, the
+entire strict-null plane is therefore an explicit finite ray packet, and on a
+fixed `N` interval each nonpersistent circuit selects at most one integer `M`.
+
 ## The revised terminal
 
 The rank-eleven program now has two finite terminals rather than one:
@@ -186,9 +195,11 @@ For each rank-eleven bounded triple code from THM-2052:
    interval, then delete the explicit nonpositive and collision walls;
 6. apply THM-2062's deletion-index CRT wheel (or rank-one affine terminal) and
    discard every hereditary-imprimitive residue class;
-7. run the exact pair-sum phase-height test, beginning with the exposed ruler
+7. compute THM-2065's pulled bounded-circuit packet; if there is no persistent
+   circuit, replace the surviving interval by its finite exceptional `M` set;
+8. run the exact pair-sum phase-height test, beginning with the exposed ruler
    `N|(v_i+v_j)` and its template residues;
-8. retain `P_w`, endpoint-owner, peel-tax, and relation-rank labels for any
+9. retain `P_w`, endpoint-owner, peel-tax, and relation-rank labels for any
    survivors, then quotient only by transformations preserving those fields.
 
 Each tangent-disk boundary contains the origin, but the actual carrier is the
@@ -284,8 +295,9 @@ fiber representatives. A sign-only matroid is insufficient.
   `h/gcd(N,h)=a/gcd(a,w)` and gives the sharp per-bin lower bound
   `beta_j>=q-ceil(q/7)`. Its one-tail existence consequence was already the
   sheet theorem THM-760/761/765; the useful new object is a full-support CRT
-  histogram and a finite exceptional-residue atlas. Multi-tail capacity leaves
-  only the primitive seam `2C union {x,y}` with two odd tails.
+  histogram and a finite exceptional-residue atlas. THM-2064 proves the full
+  common-clock multi-tail capacity theorem and leaves only the primitive seam
+  `2C union {x,y}` with two odd tails.
 - THM-2061 folds that seam exactly: strict failure requires the closed weak-
   safe set of the eleven-core to lie in the open diamond
   `||((x+y)/2)t||+||((x-y)/2)t||>6/7`. It forces a core multiple of every
@@ -299,6 +311,11 @@ fiber representatives. A sign-only matroid is insufficient.
   first direct template-only compression of the coprime owner intervals; its
   positive global density also proves that it cannot replace phase-height
   discharge on an entire rank-two cone.
+- THM-2065 composes THM-2051 with that plane: every nonpersistent bounded
+  relation selects one primitive ray, so a template without a persistent
+  height-`2^20` marked circuit has a finite strict-null packet. The hard branch
+  is now persistent marked circuits with owner/deck sidecars, not raw relation
+  count; existing Freiman and scalar-energy results do not discharge it.
 - HYP-8877/8878's GMC confinement, HYP-8885's cusp frame, and HYP-8890's
   saddle route are schedulers, not proof transfers. A unique antipodal
   maximizer can still have height `2/29<1/14`, and exact Beatty counting already
@@ -359,6 +376,7 @@ counterexamples. The next decisive target is:
 > Bound and classify reduced saturated bases and transverse templates of
 > THM-2052's bounded support-three rank-eleven codes strongly enough that every
 > THM-2058 coprime interval inside an exact bad deck and THM-2055 tangent owner
-> sector, after THM-2062's at-most-two-direction CRT wheel, is either empty,
-> covered by THM-2061's dyadic finite window, or splits into finitely many
-> HYP-2896-style resonance fans with explicit phase-height certificates.
+> sector, after THM-2062's CRT wheel and THM-2065's circuit-ray split, is either
+> empty, covered by THM-2061's dyadic finite window, a finite nonpersistent-ray
+> check, or a persistent height-bounded marked circuit with an explicit
+> phase-height, pair-sum, Fejer, or Euler certificate.

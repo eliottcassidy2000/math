@@ -67,11 +67,11 @@ mistake.
 13b. **The coarse BONF5 middle is now closed, but the higher-relation branch is
      not.** THM-2051 combines whole-product Fejer--BV approximation with
      THM-965's sharp pair-covariance floor. Absence of every exact support-
-     three-through-five relation with coefficient height at most `2^21`
+     three-through-five relation with coefficient height at most `2^20`
      forces continuous `BONF5>0`, hence a positive-measure strict lonely set.
      This bypasses the open THM-946 termwise `T4/T5` strip/slab estimates. It
-     does not classify the bounded-height relation hyperplanes; the AP boundary
-     is relation-rich and remains outside this strict-exit argument.
+     THM-2065 turns a nonpersistent relation into one two-anchor ray, but a
+     persistent marked circuit leaves the whole plane and is the exact residual.
 
 13c. **The THM-2053 determinant gate is polygonal, not a Heegner form.**
      MISTAKE-225 corrects HYP-8865. `max_i|a z_i-b u_i|` is the support norm
@@ -98,7 +98,7 @@ mistake.
 
 13e. **Keep strict/boundary and clock completeness visible.** MISTAKE-227: the
      strict integral misses tight weak phases; use Fejer bulk and THM-2058 packets. In
-     THM-2060 `a|w` does not mean packet zero, finite clocks are not a bulk iff; THM-2061 requires a closed weak core inside strictly open tail teeth; THM-2062 can kill a fixed `N` fiber at `p=2` but has positive global direction density.
+     THM-2060 `a|w` does not mean packet zero, finite clocks are not a bulk iff; THM-2061/2064 require a closed weak core inside strictly open tail teeth; THM-2062 can kill a fixed `N` fiber at `p=2` but has positive global direction density.
 
 ## NC2 / GMC
 
@@ -159,26 +159,17 @@ mistake.
     collision independently of uncertain discovery/publication history.
 31. **A shared Pascal array is not a geometric bridge.** MISTAKE-222. HYP-8820's
     binomial identities and `bagel-cake=T_n-1` are exact, but a common array or
-    matching `-1` does not identify torus regions with a shadow-lattice
-    boundary, much less transfer an LRC or Jacobian predicate. Test the possible
+    matching `-1` does not identify torus regions with a shadow-lattice boundary,
+    much less transfer an LRC or Jacobian predicate. Test the possible
     connection by deriving both defects from one explicit valuation or
     boundary-cell operation; reject it if the source objects or losses differ.
 
-32. **Count canonical pairs, not displayed polynomial variables.** The linked
-    exact Dixmier certificate is `A_3 -> A_3`; the rank-two Poisson witness has
-    four commutative phase-space variables but is not therefore the same
-    filtered object as an `A_2` Weyl pullback. THM-2046 proves the obstruction:
-    multiplication positions plus first-order momenta force a planar Keller
-    map. Any DC(2) descent of THM-2044 must be genuinely nonfiltered.
+32. **Count canonical pairs, not displayed variables.** An `A_3 -> A_3`
+    certificate with four phase variables is not an `A_2` Weyl pullback;
+    THM-2046 forces a Keller map, so DC(2) descent must be nonfiltered.
 
-33. **The binary symmetric Hessian is not the symmetric reduction of full
-    JC(2).** MISTAKE-229. The exact `A z^d+B zbar^d` determinant calculation
-    closes a two-variable symmetric homogeneous stratum and THM-2063 tames
-    its one-sided output. The general symmetric/VC route from JC(2) lands in
-    four variables. There is no proved `NC2 -> GMC(2) -> JC(2)` chain, and
-    VC(4), leading-form descent, inverse-Jelonek data, and Lame-for-polygons
-    are not proved equivalent. Record the dimension and predicate-preserving
-    map before transferring a nullcone or termination result.
+33. **A binary symmetric Hessian is not full symmetric JC(2).** MISTAKE-229. The
+    four-variable VC route has no proved NC2/GMC chain or descent equivalence.
 
 ## Promotion checklist
 

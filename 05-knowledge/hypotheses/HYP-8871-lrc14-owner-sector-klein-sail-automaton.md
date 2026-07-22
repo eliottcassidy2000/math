@@ -6,9 +6,9 @@ status: >
   closed by THM-2057. Kelvin inversion replaces tangent disks by a fixed polar
   polygon, and the Farey defect inequality certifies whole unimodular cones.
   THM-2058/2059 provide exact phase packets and CRT joins; THM-2062 adds a
-  deletion-index hereditary CRT wheel to every longitudinal interval. Residual
-  rays still need scaled clocks, affine binding phases, or owner-labelled Euler
-  certificates. Uniform discharge over the full THM-2052 atlas is not proved.
+  hereditary CRT wheel, and THM-2065 makes every circuit-free strict residual
+  a finite ray packet. Persistent bounded marked circuits still need clocks,
+  binding phases, or Euler certificates. Uniform atlas discharge is not proved.
 source: codex-2026-07-21-LRC-normal-fan-sail
 related:
   - THM-2052
@@ -22,6 +22,8 @@ related:
   - THM-2060
   - THM-2061
   - THM-2062
+  - THM-2064
+  - THM-2065
   - THM-2066
   - HYP-2108
   - HYP-2647
@@ -78,6 +80,12 @@ by CRT. The bank `15..34` closes every primitive divisor-complete quotient
 core in `{1,...,24}`. Any later seam atlas should carry the word and its
 residue class modulo `2N`, not merely tail eligibility or packet cardinality.
 
+THM-2065 supplies the next exact split. A THM-2051 bounded higher relation is
+either persistent in the coefficient template or selects one primitive
+projective parameter. Circuit-free templates therefore reduce to finitely
+many rows after the CRT wheel; the persistent height-`2^20` marked-circuit
+templates are the only relation-rich plane branch requiring bulk discharge.
+
 THM-2059 also gives a bulk filter before exact support comparison. Its positive
 zero Fourier mode wins whenever the product of total packet masses exceeds
 the product of their centered `L^2` discrepancies. Only the remaining
@@ -97,11 +105,10 @@ endpoint-owner exchange.
 ```
 
 All geometric event equations are rational linear or quadratic in the two
-parameters. Clock killing and THM-2062 add exact periodic states. Hence every
-fixed star has a finite exact cell structure. The missing uniform theorem is
-to show that every CRT-surviving interval has either a complete safe-unit orbit,
-a THM-2061 folded-seam exit, or a bounded-depth killed-clock chain ending in an
-affine binding/Euler family.
+parameters. Clock killing and THM-2062 add exact periodic states; THM-2065
+removes every circuit-free interval except finitely many rays. The missing
+uniform theorem is to discharge persistent marked-circuit templates by a safe
+unit orbit, THM-2061 seam exit, or bounded killed-clock/binding/Euler chain.
 
 The modular-form proposal HYP-8880 currently ranks below these carriers.
 MISTAKE-226 shows that divisor labels alone do not map a finite phase clock to

@@ -1,3 +1,8 @@
+> **CURRENT-TRUTH WARNING (2026-07-21):** This is chronological provenance,
+> not a status authority. Entries may be corrected after filing. Start with
+> [`START-HERE.md`](START-HERE.md), [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md),
+> and [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
+
 ## codex-2026-07-21 -- THM-2063/2064/2066, planar atlas audit, and dyadic owner words
 
 - **Planar JC(2):** THM-2063 completely classifies Keller pairs having any
@@ -62,6 +67,14 @@ rank/cycle comparison is heuristic, not a classification of collisions.
   hereditary primitivity on every saturated two-anchor interval into an exact
   squarefree CRT wheel with at most two bad projective directions per prime;
   rank-one deletions become affine `+-1` terminals plus a 1D coprime wheel.
+- **THM-2064 incoming synthesis:** the independent common-clock capacity
+  theorem proves the full multi-tail union bound and the same unique dyadic
+  two-tail seam; THM-2060 is now explicitly its sharp histogram specialization.
+- **THM-2065 proved circuit-ray collapse:** THM-2051's bounded support-three-
+  to-five relation pulls back to either a persistent coefficient-row circuit
+  or one primitive projective parameter. Thus every circuit-free two-anchor
+  template has only finitely many strict-null rows, filtered exactly by the
+  THM-2062 wheel. Persistent height-`2^20` marked circuits are the residual.
 
 **VERIFIED (jc2_via_vanishing_conjecture_and_the_cf_termination_boxeph_S225.py):** 2D symmetric case EASY -- nilpotent Hessian <=> P prop (x+iy)^d (harmonic), Delta^m(P^m)=0, invertible. Lame worst-case = Fibonacci (longest Euclid chain <200 = (144,89)). [Restricted JC(2) proved elsewhere: THM-1345 equivariant, THM-1370 elliptic, THM-1365 poly-Galois, geom-degree<=2, THM-2063.]
 

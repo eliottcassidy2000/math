@@ -145,18 +145,10 @@ structural supplier/seed and a lossless exit.
   `640690` primitive determinant failures, its arithmetic carrier has three
   leaves. THM-2059 makes arbitrary-`N` core/tail composition an exact CRT
   histogram dot product; its zero-mode split isolates disjoint-support zeros.
-  THM-2060 gives every tail bin the sharp floor `q-ceil(q/7)` unless `a|w`
-  and proves the multi-tail capacity law. THM-2064 independently repackages
-  that law on one common finite fiber: a safe core clock lifts whenever
-  `sum_w ceil(t_w/7)/t_w<1`. Both isolate the sole primitive
-  imprimitive-core two-tail capacity tie `2C union {x,y}`, with `x,y` odd.
-  THM-2061 folds that exact seam, pins its core through `2..14`, bounds its
-  tails, and closes `max(C)<=19`. THM-2066 attaches the exact binary
-  owner word to every safe clock: a counterexample needs complementary tail
-  words. The clock bank `15..34` empties that complement graph for all `59,880`
-  primitive divisor-complete quotient cores in `{1,...,24}`, extending the
-  finite closure to `max(C)<=24`. THM-2062 puts an exact hereditary CRT wheel
-  on THM-2058's coprime intervals.
+  THM-2060/2064 prove sharp common-clock tail capacity and isolate the odd
+  dyadic seam. THM-2061 folds it; THM-2066's complementary owner-word bank
+  `15..34` closes all `59,880` divisor-complete quotient cores through `24`.
+  THM-2062 adds the hereditary wheel; THM-2065 makes circuit-free residuals finite.
 - **PROVED relative whole-product decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says bounded scalar relations must lift to vector-character relations. Two
   telescopes bound the whole product; rowwise `H=2^19` clears every recorded
@@ -268,17 +260,10 @@ name the LRC predicate it preserves and the coordinate a sidecar must restore.
 - **REFUTED for higher dimensions:** explicit GMC(3) counterexamples now exist;
   GMC is false for every dimension at least 3. See the current external preprint
   entry in [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md).
-- **FORMALIZATION PARTIAL, AT ONE EXPLICIT COMPOSITION INTERFACE:** the checked
-  spine now includes the concrete normalized three-case residue, exact
-  support-face seed transport, and the full finite-field contradiction. In
-  particular, `GMC2NC2` proves both `NC2` and the GMC(2) endpoint from
-  `DvdK1` plus a compact `HeightWitnessSupplier`; all post-supplier mathematics
-  is kernel-checked. The reference-channel extractor and the theorem producing
-  its three height obligations are separately checked, but their tiny direct
-  existential wrapper currently exhausts Lean's default elaboration budget
-  (and still did so at 800k heartbeats), without a type or mathematical error.
-  That wrapper is the sole internal Lean boundary. The published one-variable
-  DvdK theorem remains a second, deliberately visible external premise.
+- **FORMALIZATION PARTIAL:** normalized residue, support-face transport, and
+  finite-field contradiction are checked. `GMC2NC2` derives NC2/GMC(2) from
+  `DvdK1` plus `HeightWitnessSupplier`; the checked extractor/height theorem
+  need a budget-safe wrapper, and one-variable DvdK remains external.
 
 ### Why THM-2022 works
 
@@ -430,15 +415,9 @@ into tournament operation laws and LRC residue packets.
   proves its simultaneous `(S,T)` associated-graded correction map is onto in
   every relevant beta grade, kills the grade-six obstruction guess, and gives
   a formal beta-adic lift. Finite polynomial termination and coupling to `D`
-  are now the decisive gates. THM-2063 proves a complete planar normal form:
-  if any nonzero output-pencil member is affine along any linear source fiber,
-  the Keller map is tame with an explicit inverse. Thus a hypothetical JC(2)
-  counterexample has fiber degree at least two for every source direction and
-  every output-pencil direction. MISTAKE-228 relabels THM-1330 correctly as a
-  necessary-structure atlas, not a classification. MISTAKE-229 keeps the valid
-  binary symmetric-Hessian subcase but blocks the unproved NC2/GMC-to-JC chain
-  and the claim that VC(4), leading-form/Jelonek descent, and
-  Lame-for-polygons are equivalent. `DC(2)` and planar `JC(2)` remain open.
+  are now decisive. THM-2063 tames maps with a pencil member affine on a source
+  fiber, so a JC(2) counterexample has fiber degree at least two there.
+  MISTAKE-228/229 block the old atlas and NC2/GMC chain; DC(2)/JC(2) remain open.
 - **Gaussian higher dimensions:** THM-1490 is one verified higher-dimensional
   construction; newer three-real-Gaussian examples supersede any claim that
   dimension four is sharp.

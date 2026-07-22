@@ -1,0 +1,13 @@
+THM-2065 exact two-anchor circuit-ray referee
+THM-2051 height: 1048576
+crude 13-row relation-pattern bound: 52206936149913413947000523914739712
+canonical projective-ray bound: 26103468074956706973500261957369856
+projective kernel checks: 430080
+fixed-N uniqueness checks: 4992
+height-two five-row patterns: 1376
+five-row templates: 1 internal, 49 circuit-free
+finite packet/parameter checks: 12800
+hereditary-wheel intersections: 400
+internal-circuit guardrail points: 256
+signed-minor circuit checks: 10000
+PASS

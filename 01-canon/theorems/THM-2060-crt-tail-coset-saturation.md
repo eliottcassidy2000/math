@@ -27,6 +27,7 @@ related:
   - THM-775
   - THM-2057
   - THM-2058
+  - THM-2064
   - HYP-8846
 ---
 
@@ -182,6 +183,10 @@ full-support statement follows from (4); its `q=1` converse is the displayed
 zero-bin observation. QED.
 
 ## D. Several tails and the primitive two-tail seam
+
+THM-2064 gives the full common-clock multi-tail theorem. The following is its
+clock-independent specialization in the sheet orders `q_i=a/gcd(a,w_i)` and
+is retained here to connect the sharp one-tail histogram count to the seam.
 
 For `S=aC union {w_1,...,w_r}`, put
 
