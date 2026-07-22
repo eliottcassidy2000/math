@@ -68,10 +68,10 @@ Older chronology is in
   line escape; direction and quotient fibers are at most three, and THM-2104
   still forces valuation diversity at `2,3,5`. Its near-pencil bounds retain
   their stated outlier-transversality condition.
-- **Remaining:** exact discharge of the rank-seven finite bank and both
-  simultaneous-blocker/fivefold-guard-pencil rank-eight branches; the
-  depth-zero/rank-eleven and rank-twelve atlas lanes also remain. LRC(14) is
-  not closed.
+- THM-2133 empties simultaneous blocker counts `1..6` and reduces seven blockers
+  to scalar `6+1`/`5+2` flood tails with necessary gcd ledgers. **Remaining:** those
+  tails, the rank-seven finite bank, fivefold guard pencil, and rank `9..12`
+  atlas lanes. LRC(14) is not closed.
 
 ## NC2 / GMC formalization
 

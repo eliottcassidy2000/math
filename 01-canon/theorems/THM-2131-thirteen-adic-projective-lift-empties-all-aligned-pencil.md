@@ -25,6 +25,7 @@ related:
   - THM-2123
   - THM-2125
   - THM-2130
+  - THM-2133
 ---
 
 # THM-2131 -- thirteen-adic projective lift
@@ -356,8 +357,9 @@ theorem. QED.
 
 The proof closes only THM-2124's `(8)` direction pattern with a guard
 `13`-blocker and eight terminal nonblockers. THM-2128 already closes `(7,1)`.
-This theorem does not by itself exclude simultaneous guard and terminal
-blockers, the complementary nonblocker-guard prime invoice, ranks nine
+THM-2133 subsequently excludes one through six simultaneous terminal blockers
+and reduces seven blockers to two scalar flood tails. This theorem does not by
+itself exclude those tails, the complementary nonblocker-guard prime invoice, ranks nine
 through twelve, the remaining finite rank-seven boxes, or LRC(14).
 
 The challenged assumption was that a next-digit Kakeya needle had to be a

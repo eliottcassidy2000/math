@@ -109,8 +109,9 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     rows and cover-equality branch remain undischarged. THM-2114--2131 route
     the live rank-eight residue through finite-ring needles and content. In the
     guard-blocker/no-terminal-blocker lane, THM-2124/2128/2131 exclude both
-    pencil types `(7,1)` and `(8)`. THM-2130 adds a two-prime `143` invoice;
-    simultaneous blockers, the fivefold guard pencil, and ranks `9..12` remain.
+    pencil types `(7,1)` and `(8)`. THM-2133 empties one through six simultaneous
+    blockers and leaves only scalar `6+1`/`5+2` tails; the fivefold guard pencil
+    and ranks `9..12` remain. THM-2130 supplies the complementary `143` invoice.
 16. **Shared syntax is not a bridge.** MISTAKE-230--233/HYP-8885 retract the
     universal entropy/modular frame; MISTAKE-235 leaves S102's LRC/GMC sums as
     analogy, not AP-core reduction. Fiber size is observable-relative, and

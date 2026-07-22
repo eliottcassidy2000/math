@@ -146,8 +146,9 @@ not unsafe. The reusable certificate architecture is
   guard-blocker/no-terminal-blocker lane: a mod-`169` comb kills `(7,1)`, and a
   digit section lifts `(8)` to rank collapse. THM-2130 extends root capacity
   through ranks `9..12` and forces guard content, a sparse mod-11 triple, or a
-  terminal determinant divisible by `143`. Simultaneous blockers and the
-  fivefold guard pencil remain. THM-2117's exact scalar test row still escapes.
+  terminal determinant divisible by `143`. THM-2133 eliminates one through six
+  simultaneous terminal blockers and reduces seven to two scalar flood tails;
+  the fivefold guard pencil remains. THM-2117's exact scalar test row still escapes.
   THM-2121 makes the joint gate finite at order `14nV^2+1`; retain the
   Toeplitz/Fejer certificate, not scalar packets. The height-114 cut rows
   make THM-2065 alone vacuous; location, content, phase, and torsion remain.
