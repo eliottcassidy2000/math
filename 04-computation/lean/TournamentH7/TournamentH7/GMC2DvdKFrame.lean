@@ -95,8 +95,23 @@ theorem logDeriv_mul_self {φ : R⟦X⟧} (hφ : IsUnit φ) :
 
 end LogDeriv
 
+/-- **The `hderiv` identity assembles for free in the frame.**  For `Φ = φ·ψ` with `φ, ψ` units in
+`(LaurentSeries F)⟦t⟧`, the `[x⁰]` of the log-derivative splits additively:
+`[x⁰](logDeriv Φ) = [x⁰](logDeriv φ) + [x⁰](logDeriv ψ)` — immediate from `logDeriv_mul` (Stage 2) plus
+additivity of `xCoeff0` (Stage 1).  Instantiated at the Weierstrass `Φ = P·h`, the left side is
+`[x⁰](−R/Φ) = −∑_{m≥1} D_m t^{m-1}` (the generating function) and the right side is
+`[x⁰](P_t/P) + [x⁰](h_t/h) = 0 + d_t(h(0,t))/h(0,t)` — so under `D_m = 0`, `d_t(h(0,t)) = 0 = hderiv`.
+The three remaining inputs are all frame-local: `[x⁰](logDeriv P) = 0` (P monic of x-degree M),
+`[x⁰](−R/Φ) = −∑ D_m t^{m-1}` (geometric series), and the transpose embedding
+`F⟦t⟧⟦x⟧ ↪ (F⸨x⸩)⟦t⟧` carrying the Weierstrass `P, h`. -/
+theorem xCoeff0_logDeriv_mul {φ ψ : PowerSeries (LaurentSeries F)}
+    (hφ : IsUnit φ) (hψ : IsUnit ψ) :
+    xCoeff0 (logDeriv (φ * ψ)) = xCoeff0 (logDeriv φ) + xCoeff0 (logDeriv ψ) := by
+  rw [logDeriv_mul hφ hψ, map_add]
+
 end GMC2DvdKFrame
 
 #print axioms GMC2DvdKFrame.isUnit_PhiFrame
 #print axioms GMC2DvdKFrame.xCoeff0
 #print axioms GMC2DvdKFrame.logDeriv_mul
+#print axioms GMC2DvdKFrame.xCoeff0_logDeriv_mul
