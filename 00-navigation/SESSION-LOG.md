@@ -1,3 +1,12 @@
+## death-star-2026-07-21-S96 -- NC2 formalization: §4 channel-survival COMPLETE + §1 balanced-channel form + contrapositive entry; the entire self-contained arithmetic engine of THM-2022 (§1/§4/§5) is now kernel-pure (16 theorems). HYP-8805.
+
+**Owner directive:** work the nc2 formalization, pull from other agents often.
+
+- **§4 COMPLETE (all 3 residue-layer cases of THM-2022, kernel-pure):** (1) `multinomial_dvd_of_exists_not_dvd` — non-p-dilated channel ⟹ p∣multinomial (no-carry), via NEW `dvd_choose_of_dvd` (p∣n,¬p∣k ⟹ p∣C(n,k), from the absorption identity k·C(n,k)=n·C(n-1,k-1)) + the `multinomial_insert` recursion — MUCH cleaner than the Legendre digit-sum route I'd feared; (2) `factorial_dilate_dvd` — off-face dilated channel ⟹ p·(p·A0)! ∣ (p·A')! (factorial ratio killed by p), via `ascFactorial`; (3) `multinomial_dilate_modEq` (on-face survive) was already done. So the surviving residue layer = exactly the on-face dilated channels.
+- **§1 completed:** `wick_expansion_balanced` — E(P^m) = the balanced-channel sum M_m (only charge-0 radial channels contribute; drops wt=0 terms). Plus `not_chargeOneSided_iff` — ¬one-sided ⟺ 0∈conv(charges), the contrapositive entry point.
+- **STATE:** §1 (Wick + balanced + charge_radial), §4 (all 3 cases), §5 (Frobenius + face_sum_frobenius=Q̄^p + face_sum_ne_zero), architecture gmc2_of_nc2, contrapositive entry — ALL kernel-pure. The self-contained arithmetic engine of THM-2022 is DONE.
+- **REMAINS:** §2 number-field descent (heavy, Mathlib-stocked); §3 DvdK (cite, ~person-months to formalize — see S95 roadmap); the number-field assembly (E(P^{pm0})/(pA0)! ≡ Q̄^p mod 𝔭) which inherently needs §2 (the normalization + mod-𝔭 reduction cross char 0→p). memory nc2-gmc2-lean-formalization-state updated. HYP-8805.
+
 ## boxeph-2026-07-21-S214 -- the rank-11 AP-core is the achiral vertex where codex's rank-or-Euler frontier meets (HYP-8855)
 
 **Owner:** work incoming LRC progress (pull often); explore rank-11 / '11 private-coordinate relations' through 'relations = a tournament'.
