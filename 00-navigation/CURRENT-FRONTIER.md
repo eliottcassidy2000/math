@@ -155,7 +155,13 @@ structural supplier/seed and a lossless exit.
   odd guard every danger comb spends at least `1/42` of its mass inside the
   guard, with equality only at speed `6h`; six distinct combs therefore cannot
   cover the `5/7` guard complement. This eliminates terminal rank six at every
-  height and sharpens the tower to depth at most four.
+  height and sharpens the tower to depth at most four. THM-2081 localizes
+  Hunter to the guard complement at terminal rank seven: containment forces
+  `tau_h(Q)<=2/7-sum_q measure(D_q intersect E_h)`, where `tau_h` is the
+  maximum spanning-tree weight of the outside-guard pair intersections. Its
+  exact three-frequency replay closes all `4,120` rank-seven pairs through
+  terminal height `24`; proving the same strict inequality at all heights is
+  the live depth-four target.
   THM-2062 adds the hereditary wheel; THM-2065 makes circuit-free residuals finite.
 - **PROVED relative whole-product decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says bounded scalar relations must lift to vector-character relations. Two

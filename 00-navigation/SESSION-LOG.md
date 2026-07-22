@@ -12,6 +12,25 @@ DvdK-free zone in Lean now = every support with a unique minimal channel; residu
 **MINE -- cancellation and inclusion-exclusion are ONE object:** THM-1820 (bridge: same moment-nullcone, discriminant=|alphabet|; LRC bounded {0..13} => Bonferroni IE terminates at k=13 => finite B5 cert; GMC unbounded => depth>=d+1). THM-406 M1b (loneliness p0=Sum_j(-1)^j S_j = IE alternating overlap-volume sum) + M2 ({p0=0} all-orders, Bonferroni one-sided = Vitali wall). THM-515 (theta/sinc lattice sum alternates, THM-504 cross-level). THM-1810 (bosonic/fermionic permanent/determinant = the shared sign-involution; THM-2070 dihedral witness). THM-671 (B5=2052/7^5~+0.1221 first positive Bonferroni truncation).
 
 **HONEST SELF-CORRECTION of S228:** LRC covering is NOT "all-cancellation, no positive regime". There IS a positive regime -- odd-Bonferroni B5 (THM-671) + codex guard-capacity (THM-2076 union bound + THM-2080 overlap floor mu(D_q cap E_h)>=1/42) -- handling low-resonance cores (the 84% analogue), which provably cannot reach the all-orders floor on resonant/AP cores (THM-406 M2; S_5 explodes 156-172x iid, THM-686), EXACTLY as positive-coeff/unique-channel DvdK cannot reach the general complex case (THM-2067). Same positive-vs-cancellation split; only the alphabet (finite vs unbounded) differs -- why LRC cancellation terminates and GMC's does not.
+### Rank-seven continuation
+
+- THM-2081 restricts the seven danger combs to the guard complement and runs
+  Hunter on that relative event graph. If `I_q=measure(D_q intersect E_h)`
+  and `tau_h` is the maximum restricted spanning-tree weight, containment
+  forces `tau_h<=2/7-sum I_q`; a strict reverse inequality gives actual safe
+  mass outside the guard.
+- Exact rational atomization checks all `131` hereditary divisor-complete
+  rank-seven cores through height `24` and `4,120` allowed odd guards. The
+  mixed-overlap scalar leaves `1,322`; the relative tree leaves zero. Its
+  worst positive margin is `561797/8288280` at
+  `Q=(1,9,10,11,13,14,24), h=23`.
+- The all-height inequality is open. The new carrier is projective and
+  scalable--three-frequency outside-guard atoms plus a weighted graphic
+  matroid--but the common-gcd/endpoint phase classification has not yet been
+  proved.
+
+## death-star-2026-07-22-S104 -- GMC2 formalization: pinpointed + wrote the last capstone discharge (HeightWitnessSupplier); structurally correct + statements axiom-checked, but the proof hits a pathological whnf wall (>6.4M heartbeats). One perf-fix from clean DvdK1 -> NC2.
+**Owner:** aim earnestly at formalizing DvdK; make it simpler / circumvent it; spill over to LRC.
 
 **Honest:** the DvdK-free (unique-channel) side is now kernel-pure in Lean for arbitrary support, subsuming S226 and complementing S228; the coincident-cycle (card>=2) stratum remains the THM-2067 Galois frontier. The synthesis is a reading of proved theorems (THM-1820/1810/406/515/671), not a new theorem. Artifacts: reflection the-unique-channel-dvdk-in-lean-...-boxeph-S229.md, HYP-8930, Lean GMC2DvdKUniqueChannel.lean (5 theorems).
 

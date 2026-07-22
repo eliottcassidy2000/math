@@ -1,0 +1,13 @@
+THM-2081 RELATIVE HUNTER RANK-SEVEN REFEREE
+hereditary divisor-complete cores through 24: 131
+allowed odd core/guard pairs: 4120
+mixed-star scalar survivors: 1322
+relative-tree survivors: 0
+three-frequency weights cached: 2982
+minimum relative-tree margin: 561797/8288280
+hostile core/guard: (1, 9, 10, 11, 13, 14, 24), 23
+hostile mixed sum: 3265531/11603592
+hostile deficit: 49781/11603592
+hostile tree weight: 348457/4834830
+hostile tree edges: ((Fraction(1, 98), 0, 5), (Fraction(16, 1127), 5, 6), (Fraction(11, 840), 6, 2), (Fraction(1, 84), 6, 1), (Fraction(1, 88), 6, 3), (Fraction(71, 6279), 6, 4))
+PASS

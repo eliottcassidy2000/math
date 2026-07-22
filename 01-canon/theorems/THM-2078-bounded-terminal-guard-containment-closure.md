@@ -20,6 +20,8 @@ related:
   - THM-2066
   - THM-2068
   - THM-2072
+  - THM-2080
+  - THM-2081
 script: 04-computation/lrc14_terminal_guard_containment_referee_codex_20260721.py
 output: 05-knowledge/results/lrc14_terminal_guard_containment_referee_codex_20260721.out
 script_sha256: 4e0d36e38aa2fabf74bf7ba012f24c764e95cc79dd44e4a538d12814b318de53
@@ -141,6 +143,11 @@ closes a low-terminal/unbounded-top rectangle in the THM-2073 atlas.
 THM-2077's terminal interval is the lawful reason the guard search is finite.
 Searching an arbitrary cutoff such as `h<=175` without (6) would be evidence
 only; equations (5)--(7) make the audit exhaustive.
+
+THM-2081 subsequently gives an independent and cheaper certificate for the
+rank-seven portion: relative Hunter on the guard complement closes all 4,120
+rank-seven pairs using exact three-frequency edge weights. The present whole-
+set bitset remains the certificate for ranks eight through ten.
 
 ## 4. Scope and next target
 

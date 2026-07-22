@@ -1715,6 +1715,14 @@ It also reconstructs the two Paley Fano planes, seven near-classes, all 189
 Hamiltonian paths, the `e8` wheel `(15,15,15,15,1,1,1,1,0)`, and the exact
 `[72,36,16]` first-shell arithmetic. Normal and optimized runs end in `PASS`.
 
+### lrc14_relative_hunter_rank7_referee_codex_20260722.out
+Exact THM-2081 rank-seven referee. Among 131 hereditary divisor-complete cores
+through height 24 and 4,120 allowed odd guards, the mixed-overlap scalar leaves
+1,322 pairs while the guard-complement maximum spanning tree leaves zero. It
+computes 2,982 exact three-frequency weights; the minimum strict margin is
+`561797/8288280` at `Q=(1,9,10,11,13,14,24), h=23`. This proves the bounded
+shell and audits the scalable relative-Hunter gate, not its all-height form.
+
 ### lrc14_density_one_relation_hyperplanes_codex_20260721.out
 Exact THM-2074 referee. A Mobius sieve computes the three primitive coefficient
 counts and the exact `R=25173854387233097811887443361297472` relation ledger;
