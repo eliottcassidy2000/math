@@ -392,6 +392,125 @@ or prove LRC(14).  THM-2078 separately uses the present height box to exclude
 the whole finite slice `B<=24`; the remaining nontrivial terminal lane has
 `B>=25`.
 
+### Scalar nonclosure witness at depth five
+
+The height, quarter-escape, determinant, and mirror-address conclusions do
+not by themselves rule out `r=5`.  Here is an exact compatible packet that
+isolates the missing implication.  Put
+
+```text
+L=lcm(2,3,...,14)=360360,
+Q_5={1,2,3,4,5,L},
+h_0=h_1=h_2=h_3=h_4=1,                                (20a)
+```
+
+and define the valuation packet recursively by
+`Q_i=2Q_(i+1) union {h_i}`.  The terminal core is hereditarily primitive:
+deleting any speed other than `1` leaves `1`, while deleting `1` leaves the
+coprime pair `2,3`.  It is divisor-complete because of `L`, and the same is
+true at every lifted level.  Every level satisfies the first quarter-escape
+alternative in (17): its smallest multiple of four is `4`, while it contains
+a scaled copy of `L` larger than `28`.
+
+Put
+
+```text
+alpha=L/[6(L+1)].
+```
+
+Since `6|L`, one has `||L alpha||=alpha`.  The five elementary distances
+`||q alpha||`, `1<=q<=5`, are also at least `alpha`.  Thus, for
+`mu=M(Q_5)`, this explicit probe, settled LRC, and the subset
+`{1,2,3,4,5}` give
+
+```text
+1/7<alpha<=mu<=1/6,
+1/(14L)<=rho=(mu-1/14)/L<=2/(21L).                    (20b)
+```
+
+Choose a maximizer `sigma_*` in `[0,1/2]`.  Intersecting the five elementary
+tooth complements gives the exact high-level set
+
+```text
+{sigma in [0,1/2]:min_(1<=q<=5)||q sigma||>=alpha}
+   =[alpha,(1-alpha)/5].                              (20c)
+```
+
+Consequently `sigma_*` lies in this interval.  The upper bound for `rho` in
+(20b) shows that the whole needle `I_5` lies in
+
+```text
+(1/7,1/6+1/L).
+```
+
+On this interval the all-ones guard recursion has safe-bit word
+
+```text
+(epsilon_0,epsilon_1,epsilon_2,epsilon_3,epsilon_4)
+   =(1,0,1,0,1),       a=16+4+1=21.                  (20d)
+```
+
+Indeed, starting from `sigma_5=sigma`, the five successive lifted points
+lie respectively in the nearest-integer cells of `0,1,0,1,0`; formula
+(6a) complements those parities.  Thus this is an actual local address,
+not an independently assigned scalar.
+
+All five choices `h_i=1` satisfy the strict bounds (7).  Take the small odd
+tails
+
+```text
+x=3, y=41,       N_x=2, N_y=27,
+K_x=2^5 N_x-xa=1,
+K_y=2^5 N_y-ya=3.                                     (20e)
+```
+
+Their address determinant is
+
+```text
+K_x y-K_y x=32,                                       (20f)
+```
+
+so it has exactly the required dyadic valuation and opposite owner parity.
+The two terminal tail tubes from (6d) are now
+
+```text
+|3sigma-1|<32/7    iff  -25/21<sigma<13/7,
+|41sigma-3|<32/7   iff  -11/287<sigma<53/287.         (20g)
+```
+
+The localization above puts the whole needle strictly in their intersection;
+it also verifies that `N_x,N_y` are the actual constant nearest integers on
+the lifted top component.  Both tail-height bounds (9) are immediate from
+(20b).  Equivalently, (14) holds with `D=1`, since
+
+```text
+1/123+rho/16 < 1/21+1/287,
+```
+
+the fixed margin without `rho` being `37/861`.  The mirror component has
+
+```text
+a'=31-a=10,
+N'_x=x-N_x=1,       N'_y=y-N_y=14,
+K'_x=2,             K'_y=38,
+K'_x y-K'_y x=-32,                                   (20h)
+```
+
+so THM-2079's complementary-address and parity law is also realized exactly.
+
+This packet is deliberately **not** a safe-child tower.  Its last proposed
+guard is `h_4=1`, whereas (20b)--(20c) give `sigma_*>1/7`.  Hence
+
+```text
+G_(Q_5) is not contained in {sigma:||h_4 sigma||<1/7}. (20i)
+```
+
+The example proves a precise no-go: no combination of the scalar inequalities
+(7)--(14), recursive quarter escapes (17), or mirror-complement addresses can
+close depth five without using the **global terminal guard-containment
+predicate**.  THM-2078 tests exactly that missing predicate in its bounded
+slice.
+
 The old viewpoints now have precise scopes.
 
 * **Toothpick/ladder.** THM-841 refutes homogeneous self-similarity of the
