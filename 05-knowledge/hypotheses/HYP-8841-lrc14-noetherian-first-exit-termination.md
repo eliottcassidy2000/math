@@ -94,9 +94,22 @@ THM-763 bounds a primitive counterexample by `sum v_i<=91^12`; a
 pigeonhole/coding argument then supplies at least nine independent support-at-
 most-five relations of height `2^20`, and at least eleven independent support-
 at-most-three relations of height `91^6`. Thus every counterexample lies in a
-finite atlas of rational subspaces of dimension at most two. The unresolved
-rank jump is from at least eleven to twelve, where the maximal-minor bound
-becomes finite.
+finite atlas of rational subspaces of dimension at most two. More explicitly,
+either the triple-relation rank is twelve and maximal minors give a finite
+speed box, or two anchor coordinates `p,q` can be chosen so that each other
+speed satisfies
+
+```text
+a_i v_p+b_i v_q+c_i v_i=0,      c_i!=0,
+|a_i|,|b_i|,|c_i|<=91^6.                              (2c)
+```
+
+The eleven private-coordinate rows are independent. After common dilation is
+removed, the entire residual is therefore a finite union of one-projective-
+parameter two-anchor star families. Equivalently, bounded pair relations lock
+coordinates into scale clusters and genuine cross-cluster triples leave at
+most two cluster scales. The unresolved rank jump is from eleven to twelve,
+or a direct Euler/strict-exit proof on those one-parameter stars.
 
 The companion audit supplies the essential hostile control for that statement:
 every one of its eight rows already has a coefficient-height-one circuit of
@@ -104,7 +117,7 @@ support three. The first seven, including AP, GW, `12->26`, `12->36`,
 `12->96`, `12->84`, and P10+K33, all share the irrelevant relation
 
 ```text
-1+2-3=0.                                                   (2c)
+1+2-3=0.                                                   (2d)
 ```
 
 The genuine Cover14 tax-gain row similarly has `1+11-12=0`. Raw circuit
@@ -244,10 +257,14 @@ no positive pair-sum margin exists.                            (6)
 ```
 
 The Euler endpoint-survival lemma only needs to be proved on this structured
-intersection. This is now a proved narrowing of the LRC reduction, but it does
-not orient a Noetherian move inside any circuit hyperplane. The first necessary
-refinement is an **active-owner circuit lemma**: either a bounded circuit meets
-the peeled/endpoint-owner set, or a different peel/strict exit is available.
+intersection. THM-2052 further reduces it to a finite list of two-anchor star
+templates with one projective parameter, unless rank twelve already gives a
+finite box. This is a proved narrowing of the LRC reduction, but it does not
+classify the one-parameter stars or orient a Noetherian move inside them. The
+first necessary refinement is an **active-owner circuit lemma**: either a
+bounded circuit meets the peeled/endpoint-owner set and lies outside the
+already harvested rank-eleven code, or a different peel/strict exit is
+available.
 
 ## Prior-art interface and exact inequality to prove
 

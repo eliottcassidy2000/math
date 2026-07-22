@@ -125,6 +125,15 @@ structural supplier/seed and a lossless exit.
   LRC residual is now localized to finitely many genuine higher-relation
   templates, but descent or classification within those hyperplanes—including
   the relation-rich AP boundary—remains open.
+- **PROVED rank descent and explicit residual atlas:** THM-2052 combines
+  THM-763's finite primitive-height bound with a pigeonhole/code argument.
+  Every hypothetical counterexample has at least eleven independent
+  support-at-most-three relations of height `91^6`. It is therefore either a
+  rank-twelve finite-box case, or belongs to one of finitely many two-anchor
+  star templates `a_i v_p+b_i v_q+c_i v_i=0` with `c_i!=0`. Modulo common
+  dilation each template has only one projective parameter. Pair-relation
+  clusters plus genuine cross-cluster triples give the same structural split.
+  The live problem is now classification/exit on these one-parameter stars.
 - **Scope separation:**
   [THM-1149](../01-canon/theorems/THM-1149-compact-essential-crown-and-farey-blocker.md)
   proves that tight deletion and an all-loose essential crown are different
@@ -176,18 +185,19 @@ structural supplier/seed and a lossless exit.
    survival when no positive pair-sum margin occurs.
    [THM-2051](../01-canon/theorems/THM-2051-fejer-bv-small-relation-alternative-for-lrc14.md)
    now proves that every remaining hard row has a genuine support-`3..5`
-   relation of coefficient height at most `2^21` after paying pairs exactly.
+   relation of coefficient height at most `2^21`.
    [THM-2052](../01-canon/theorems/THM-2052-finite-height-forces-high-rank-bounded-relation-code.md)
    goes much further: every hypothetical counterexample already has eleven
-   independent bounded three-support relations and lies in a finite atlas of
-   rational subspaces of dimension at most two. The exact
-   HYP-8841 bank also shows why incidence is load-bearing: all eight controls,
-   tight and strict alike, already have a height-one three-term circuit (the
-   first seven share `1+2=3`). The next target is an **active-owner circuit**
-   lemma tying a bounded relation to the peeled speed or a surviving Euler
-   endpoint, not mere circuit existence. HYP-2108 supplies the exact gate: for
-   core-safe components with midpoint `m_i` and length `l_i`, prove for some
-   peel `w` that
+   independent bounded three-support relations. It either reaches the
+   rank-twelve finite box or belongs to a finite two-anchor,
+   one-projective-parameter star atlas. The exact HYP-8841 bank also shows why
+   incidence is load-bearing: all eight controls, tight and strict alike,
+   already have a height-one three-term circuit (the first seven share
+   `1+2=3`). The next target is an **active-owner circuit** lemma on those star
+   families, tying a bounded relation to the peeled speed or a surviving Euler
+   endpoint rather than merely detecting a circuit. HYP-2108 supplies the
+   exact gate: for core-safe components with midpoint `m_i` and length `l_i`,
+   prove for some peel `w` that
    `P_w=max_i(||w m_i||+(w/2)l_i-1/14)>=0`. Equality already preserves a weak
    endpoint; strict positivity opens an interval. The sharpened target is
    **Euler survival or rank gain**: prove `P_w>=0`, or manufacture a twelfth

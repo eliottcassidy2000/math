@@ -1,4 +1,28 @@
 ## boxeph-2026-07-21-S213 -- chirality + toothpick A139250 + tournament evenness = one Lefschetz parity (HYP-8850)
+> **CURRENT-TRUTH WARNING (2026-07-21):** This is chronological provenance,
+> not a status authority. Entries may be corrected after filing. Start with
+> [`START-HERE.md`](START-HERE.md), [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md),
+> and [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
+
+## codex-2026-07-21-LRC-two-anchor -- THM-2052 explicit star-atlas refinement
+
+- **PROVED refinement:** the rank-eleven bounded triple-relation code is not
+  merely an unspecified rational plane. Either its rank is twelve and
+  Hadamard gives a finite primitive speed box, or two anchors `p,q` support
+  eleven independent private-coordinate relations
+  `a_i v_p+b_i v_q+c_i v_i=0`, with `c_i!=0` and coefficient height at most
+  `91^6`. Modulo dilation this is a finite list of one-projective-parameter
+  star families.
+- **CLUSTER BRIDGE:** height-bounded pair relations first lock coordinates
+  into scale components. Genuine bounded triples among distinct components
+  then have quotient rank at least `c-2`, leaving at most two cluster scales.
+  This connects THM-2051's higher-circuit branch to the cross-scale
+  decorrelation program without discarding signed coefficients.
+- **OPEN RESIDUAL:** classify the one-parameter star families by a positive
+  pair-sum margin or an owner-labelled Euler boundary point; LRC(14) remains
+  open.
+
+## death-star-2026-07-21-S95 -- THM-2022 non-cancellation identity assembled (face survives as Q̄^p) + DvdK Lean-formalization ROADMAP (Monsky-algebraic ~4-9 person-months; analytic ~years; symbolic-coeff caveat kills the concrete shortcut). HYP-8805.
 
 **Owner:** connect previous chirality work + toothpick A139250; tournament values that are EVEN (iso classes) and what toothpick diagrams correspond to their structure.
 
