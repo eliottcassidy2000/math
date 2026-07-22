@@ -1,0 +1,74 @@
+
+========================================================================
+P1  exact chi(G_delta) = #closed components (arcs + ISOLATED points); LRC <=> chi>0
+========================================================================
+  S=[1, 2, 3] delta=0.2 [strict]: chi(G)=4  LRC-holds(chi>0)? True
+  S=[1, 2, 3] delta=0.25 [TIGHT (M=1/4)]: chi(G)=2  LRC-holds(chi>0)? True
+  S=[1, 2, 3] delta=0.3 [covering]: chi(G)=0  LRC-holds(chi>0)? False
+  S=[1, 2, 3, 4, 5, 6, 7] delta=0.1 [strict]: chi(G)=10  LRC-holds(chi>0)? True
+  => at delta=1/4 the (1,2,3) good set is TWO isolated points {1/4,3/4}: chi=2>0 (weak loneliness),
+     which the measure/volume misses. chi counts them; this is codex THM-2047's iff criterion.
+
+========================================================================
+P2  NERVE UPGRADE: chi(U)=nerve I-E sum(-1)^{|I|+1}[cap A_i!=0]  vs  measure I-E |U| (THM-1820 sinc)
+========================================================================
+  3 arcs at 0,1/3,2/3 halfwidth 0.1 [gaps (non-cover)]: nerve chi(U)=3 ; measure |U|=0.6000 ; cover(chi=0)? False
+  3 arcs at 0,1/3,2/3 halfwidth 0.2 [overlap COVER]: nerve chi(U)=0 ; measure |U|=1.0000 ; cover(chi=0)? True
+  (cover: chi(U)=3-3+0=0=chi(S^1); non-cover: chi(U)=3 gaps.) The nerve I-E computes covering EXACTLY.
+  Contrast at the (1,2,3) tight threshold: MEASURE says covered, TOPOLOGY (chi) says lonely:
+     delta=0.24: measure |U|=0.97333  chi(G)=2
+     delta=0.25: measure |U|=1.00000  chi(G)=2
+  => nerve/chi I-E (overlap indicators) upgrades THM-1820's measure I-E (lengths->sinc): the
+     measure-zero tight witness that volume misses (S211) is exactly a nonzero nerve/chi term.
+
+========================================================================
+P3  MORSE/PERSISTENCE: {G_delta}=superlevel filtration of f_S; M(S)=top H_0 bar on a pair-sum wall
+========================================================================
+  S=[1, 2, 3]: M(S)~=0.25000 at t*=1/4 (q=4); q|pair-sum [2, 3, 4, 5, 6]? True; chi(G) vs delta {0.05: 4, 0.1: 4, 0.15: 4, 0.2: 4, 0.25: 2}
+  S=[1, 2, 3, 4]: M(S)~=0.20000 at t*=1/5 (q=5); q|pair-sum [2, 3, 4, 5, 6, 7, 8]? True; chi(G) vs delta {0.05: 6, 0.1: 6, 0.15: 4, 0.2: 4}
+  S=[1, 2, 3, 4, 5]: M(S)~=0.16667 at t*=1/6 (q=6); q|pair-sum [2, 3, 4, 5, 6, 7, 8, 9, 10]? True; chi(G) vs delta {0.05: 10, 0.1: 10, 0.15: 2, 0.2: 0, 0.167: 2}
+  => M(S)=top persistence bar, born on a pair-sum wall; chi(G_delta)=#bars alive at delta.
+     The persistence BARCODE of f_S (all peaks+depths) is a strictly finer LRC invariant than chi.
+
+========================================================================
+P4  GEODESIC-MEETS-CENTRAL-BOX: LRC(14) <=> closed orbit meets [delta,1-delta]^n (CLOSED box)
+========================================================================
+  S=[1, 2, 3] delta=0.24: orbit meets closed box [0.24,0.76]^3? True  chi(G)>0? True  agree? True
+  S=[1, 2, 3] delta=0.25: orbit meets closed box [0.25,0.75]^3? True  chi(G)>0? True  agree? True
+  S=[1, 2, 3] delta=0.26: orbit meets closed box [0.26,0.74]^3? False  chi(G)>0? False  agree? True
+  => loneliness = the integer-speed CLOSED GEODESIC (a (v_1,..,v_n) torus knot) enters the central
+     contractible cube; degree/linking of knot-vs-box is a clean topological form of LRC.
+
+========================================================================
+P5  WALL A as persistence-optimization: the AP-core maximizes M(S) (the deepest well / top bar)
+========================================================================
+  primitive 4-speed sets in [1,8]: max M(S)=0.5; maximizers=[(1, 3, 5, 7)]; all APs? True
+  => Wall A restated topologically: the AP-core maximizes the TOP H_0 persistence bar (deepest well).
+
+========================================================================
+SUMMARY / creative topological LRC arguments (on codex THM-2047)
+========================================================================
+  * NERVE UPGRADE (P1-P2): chi(G_delta)=nerve I-E sum(-1)^{|I|+1}[cap A_i!=0], the topological analog of
+    THM-1820's measure I-E (sinc); it repairs the S211 volume-blindness -- the measure-zero tight witness
+    is a nonzero nerve/chi term. LRC(14) <=> the danger-arc nerve has chi != 0.
+  * MORSE/PERSISTENCE (P3): {G_delta}=superlevel filtration of f_S; M(S)=top H_0 bar on a pair-sum wall;
+    chi(G_delta)=#bars alive. The barcode of f_S is a finer LRC invariant than chi (all lonely windows).
+  * GEODESIC-MEETS-BOX (P4): LRC(14) <=> the closed (v_1,..,v_n) torus-knot geodesic enters the central
+    cube [1/14,13/14]^13 -- a knot/box linking-degree problem.
+  * WALL A = persistence-optimization (P5): the AP-core maximizes the top bar (deepest well).
+  Extension target: prove chi(G_{1/14}(S))>0 for every 13-speed covering core by a NERVE/MORSE argument --
+  the danger-arc nerve must retain a 0-cell, forced by the pair-sum wall combinatorics (THM-2047 s2).
+
+========================================================================
+P6  NEW equivariant sharpening: covering => iota:t->1-t FREE on G => chi EVEN => LRC <=> chi>=2 (mirror pair)
+========================================================================
+  S=[1, 2, 3] d=0.25 [tight, has even]: has_even=True, f_S(1/2)=0.000 (1/2 in G? False); chi(G)=2 [EVEN]
+  S=[1, 2, 3] d=0.2 [strict, has even]: has_even=True, f_S(1/2)=0.000 (1/2 in G? False); chi(G)=4 [EVEN]
+  S=[1, 3, 5, 7] d=0.3 [ALL ODD]: has_even=False, f_S(1/2)=0.500 (1/2 in G? True); chi(G)=1 [ODD]
+  S={1..12,182} d=0.07143 [deep well (13-speed)]: has_even=True, f_S(1/2)=0.000 (1/2 in G? False); chi(G)=24 [EVEN]
+  check mirror-pairing of components on the (1,2,3) tight case (should be {1/4,3/4}=iota pair):
+     components at t ~ [0.25, 0.75]; closed under t->1-t (mirror pairs)? True
+  => COVERING sets (which contain an even speed) have chi(G_delta) EVEN, so codex's chi>0 sharpens to
+     chi>=2: LRC(14) <=> at least ONE mirror pair {t*,1-t*} of lonely windows survives. By iota-symmetry
+     it suffices to find ONE lonely window in [0,1/2] -- an equivariant HALVING of Wall A. The kps-S19
+     free-iota Gauss sum i*sqrt(7) is the ODD-equivariant obstruction living on this same involution.
