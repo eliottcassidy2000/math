@@ -195,6 +195,71 @@ Format per entry:
 ---
 
 ## MISTAKE-224 (2026-07-21, codex audit of HYP-8835) -- valid antisymmetry examples were promoted to equivalences among transitivity, saddles, tori, and LRC symmetry
+## MISTAKE-231 (2026-07-21, audit of HYP-8875 / S218) -- four unrelated fiber sizes were called one repo-wide entropy invariant
+
+- **What was claimed:** S218 defined
+  `H_arith(X|L)=log2|{X':L(X')=L(X)}|` and identified it with class-group
+  depth, tournament reconstruction, continued-fraction partial-quotient size,
+  and LRC/GMC moment depth. It then asserted that every rigid extremum has zero
+  arithmetic entropy and every hard object has positive entropy.
+- **Why it is wrong:** the displayed quantity is at most a finite-fiber
+  Hartley information after fixing an ambient universe, equivalence relation,
+  and observable. It is not Shannon entropy without a probability law, and
+  changing `L` can force any chosen object to have fiber size one or the whole
+  universe. The four examples do not use one map or even one type of fiber.
+  In particular:
+  - the script verifies tournament score fibers only through `n=5`; it does
+    not prove that regular scores maximize them in general, and MISTAKE-227
+    blocks identifying a translated transitive score vector with the LRC AP
+    relation carrier;
+  - a finite continued-fraction partial-quotient geometric mean is not an
+    entropy and has no maximum (`[0;N]` makes it arbitrarily large), so
+    `14/183=[0;13,14]` is not a maximal information point;
+  - bounded LRC danger count gives exact inclusion--exclusion by depth `13`,
+    while `B5>0` is only a sufficient certificate, not a uniform depth-five
+    classifier; THM-1790 gives an unbounded-in-degree GMC moment-depth floor,
+    not an infinite entropy; and
+  - the genus routine labels its formula a heuristic and silently falls back
+    when divisibility fails. It is a finite table, not a proof of genus theory
+    or of invisibility to every congruence test.
+- **Correct framing:** for a fixed finite universe and quotient, define the
+  explicit Hartley fiber size `H_0=log2|L^{-1}(L(X))|`; add a probability law
+  before using Shannon language. The exact survivors are the `n<=5`
+  tournament fiber census, transitive-score uniqueness, elementary
+  score-distribution entropy, the displayed reduced-form tables, and the
+  qualitative contrast between finite LRC inclusion--exclusion and no
+  degree-uniform GMC cutoff. These are separate examples of information loss,
+  not one invariant and not an LRC theorem. HYP-8875 is retracted as a unified
+  mathematical claim.
+
+## MISTAKE-230 (2026-07-21, audit of HYP-8870 / S217) -- inverse form classes were counted as distinguishable rational-prime outcomes
+
+- **What was claimed:** S217 treated the `h(D)` proper classes of positive
+  binary quadratic forms as `log2 h(D)` hidden bits beyond the Legendre symbol.
+  For `D=-23` its script assigned split rational primes among the three forms
+  with counts `[2,9,0]`, then transferred class-number-one rigidity to the
+  THM-2053 LRC gate.
+- **Why it is wrong:** proper inverse classes `(a,b,c)` and `(a,-b,c)` represent
+  exactly the same rational integers by `y -> -y`. The two nonprincipal
+  `D=-23` forms therefore represent the same displayed primes; choosing
+  `reps[0]` manufactures the asymmetric `[2,9,0]` count. A rational split
+  prime determines an inversion orbit of ideal classes, not an oriented class.
+  Moreover `log2 h` is not an entropy until a random variable and distribution
+  are specified. For oriented prime ideals one can formulate an Artin-class
+  distribution and invoke Chebotarev; for rational primes the inversion
+  quotient is different. “Invisible to any local test” also overstates
+  “not determined by the quadratic Legendre symbol”: Frobenius in the Hilbert
+  class field is itself local prime data. The finite search bound is evidence,
+  not a proof of the global representation criterion. Finally, MISTAKE-229
+  already shows that THM-2053 has no discriminant `-7` form to which any of
+  this could transfer.
+- **Correct framing:** the reduced-form and class-number tables are useful
+  classical checks. With a precisely oriented prime-ideal sample, class-group
+  size can support a Hartley/Shannon analogy. It has no demonstrated LRC
+  consequence. The S217 use of `HYP-8870` also collided with the normal-fan
+  program now correctly numbered HYP-8871; the S217 claim has no canonical
+  hypothesis ID and is retracted.
+
 ## MISTAKE-229 (2026-07-21, audit of HYP-8865 / S216) -- the tangent-disk gate was assigned a nonexistent Heegner discriminant
 
 - **What was claimed:** S216 called THM-2053's residual the short vectors of
@@ -215,10 +280,15 @@ Format per entry:
 - **Correct framing:** retain the exact wedge identity and the classical
   class-number table as separate facts. The useful LRC geometry is the
   intersection of a primitive lattice and positivity cone with 26 explicit
-  tangent disks, considered up to saturated `GL_2(Z)` basis changes. Any
+  tangent disks, considered up to saturated `GL_2(Z)` basis changes. THM-2055
+  compresses the determinant sidecar exactly to the signed column polygon's
+  normal fan: hull vertices suffice for the maximum, and each owner cone meets
+  one tangent disk. Non-hull runner data, pair sums, and endpoint ownership
+  remain necessary sidecars. Any
   arithmetic-form compression must first construct an actual invariant form
   from the full column configuration and prove that it preserves the gate;
-  Heegner or Paley language alone supplies no such map.
+  Heegner or Paley language alone supplies no such map. See MISTAKE-230 for the
+  independent inverse-class error in S217's entropy continuation.
 
 ---
 ## MISTAKE-228 (2026-07-21, audit of HYP-8860 / S215) -- the odd-prime Paley dichotomy was promoted to an LRC periodic table
@@ -6564,60 +6634,3 @@ pairs and therefore lands in conventional `A_4`. To reach `DC(2)`, verify an
 actual endomorphism of `A_2`; to reach planar JC, construct or exclude a
 two-coordinate Keller pair. Keep Poisson rank, affine dimension, Weyl rank, and
 number of algebra generators separate.
-## MISTAKE-225 (2026-07-21, codex audit of HYP-8865 and HYP-8870/S217) -- the polygonal determinant gate was promoted to a discriminant-minus-seven Heegner form and to an isotropic/rank versus anisotropic/Euler equivalence
-
-**What happened.** HYP-8865 correctly noticed that THM-2053 uses determinants
-`a z_i-b u_i`, but then called the residual a single binary quadratic form of
-discriminant `-7`, invoked class number one, and identified “isotropic” with a
-new rank relation and “anisotropic” with an Euler survivor.
-
-**Type failure.** The gate is
-
-```text
-max_i |a z_i-b u_i| <= (a^2+b^2)/91.
-```
-
-Its left side is the maximum of thirteen linear forms, hence a polyhedral
-support norm. Its right side is the Euclidean quadratic form of discriminant
-`-4`; the scalar `91=7*13` does not change that rational square class to `-7`.
-The arbitrary column polygon is not the Paley form `x^2+x+2`. Class number one
-therefore classifies no THM-2053 residual without a new, absent identification.
-
-There is a second local error: for the claimed discriminant `-p`, the Legendre
-symbol `(disc/p)` is `0`, because `p` divides the discriminant. Replacing it by
-`(-1/p)` changes the statement rather than proving it.
-
-**Quantifier failure.** Failing THM-2053's gate means only “not certified by
-this sufficient estimate.” It is not a resonance, a counterexample, or an
-Euler survivor. On the exact one-tail plane, `d=(1,0)` fails the gate but is
-the tight AP with `M=1/14`, while `d=(1,2)` also fails and has exact `M=1/12`.
-The gate alone does not distinguish tight from strict-safe rows. Likewise, an
-extra bounded relation outside the harvested rank-eleven code is additional
-signed-coding data, not isotropy of `a^2+b^2` (which has no nonzero real null
-direction).
-
-**Surviving core and repair.** The determinant and finite-short-vector
-language survives. THM-2055 gives the correct structure:
-
-```text
-K=conv{+-c_i},
-D(d)=h_K(Rd),
-residual = primitive lattice points in normal-owner cones intersected with
-           owner tangent disks.
-```
-
-Only signed hull vertices matter to the determinant gate. The lawful niche
-machinery is convex polarity, rational normal fans, and ordinary
-Farey/Klein-sail enumeration, with pair-sum and endpoint-owner sidecars. The
-Paley/Heegner observations remain analogies unless an explicit predicate-
-preserving map to this polygonal norm is proved. HYP-8870/S217's classical
-class-group examples and entropy metaphor are valid for an independently
-specified binary quadratic form, but its conclusion that the THM-2053
-residual is pinned by discriminant `-7` inherits the same absent
-identification. HYP-8871 is the separately numbered polygonal completion
-program.
-
-**Rule.** Before importing class groups or local anisotropy, identify one
-actual quadratic form in the target theorem and compute its discriminant.
-Never turn failure of a sufficient certificate into a structural branch
-equivalence.
