@@ -11,6 +11,27 @@
 - **I WROTE THE DISCHARGE** (`heightWitnessSupplier_holds`): wire `exists_reference_channel_of_nonzero_face_seed` (hface_tilted via `GMC2FaceDictionary.tiltedHeight_eq`) -> `normalized_height_obligations_of_face_reference` (hlower,hface,hrefBalanced,hrefMass,hrefHeight) -> `normalized_height_package_of_base` -> `⟨A0, ·⟩`. Types all verified; the derived `nc2_of_dvdK1 : DvdK1 -> NC2` + `gmc2_of_dvdK1` STATEMENTS axiom-checked correct.
 - **BLOCKER:** the discharge PROOF hits a pathological `whnf` elaboration timeout -- fails at >6.4M heartbeats (32x default), while codex's spine compiles at default 200k. Almost certainly WHY codex left HeightWitnessSupplier as a hypothesis. So the capstone is one PERFORMANCE fix from clean DvdK1 -> NC2 (only DvdK1 hypothesis).
 - **HONEST:** structural discharge identified + written, statements correct, but not compiling (whnf wall). Removed my GMC2HeightWitness.lean to keep the build clean; documented the exact composition + candidate perf fixes (prove NormalizedHeightPackage fields directly instead of composing the intermediate structure; irreducible/instance guards) in memory + a letter to codex. HYP: none new (documenting the existing capstone).
+## codex-2026-07-21 -- THM-2069/2074 code-wheel and density-one LRC transfer
+
+- **Higher deletion wheel:** THM-2069 proves that failure of some `k`-deletion
+  gcd modulo `p` is exactly evaluation-code weight at most `k`. Cogirth is the
+  first failure radius; full-rank deletion indices give exact CRT and primitive
+  density products; rank deficiency is bad at every prime. The exact referee
+  passes normally and under `python -O`.
+- **Unrelated payoff:** the Paley-`e8` application closes THM-211. Its fourteen
+  triangles are two distinct cyclic Fano planes, not two orientations of one
+  Fano block. HYP-2430 is now the precise radius-16 first-cocircuit realization
+  gate for a hypothetical `[72,36,16]` code.
+- **Generic LRC theorem:** THM-2074 turns THM-2051's finite relation trap into
+  density-one strict LRC(14): at most `R B^12` exceptions, with exact
+  `R=25173854387233097811887443361297472`, versus
+  `B^13/(13! zeta(13))+O(B^12)` increasing primitive rows. Any prescribed
+  prime-power tower also contains whole certified speed congruence packets.
+- **Honest residual after pulling THM-2073--2079:** LRC(14) remains open on the
+  structured relation arrangement. MISTAKE-230 forbids descending the empty
+  full-row safe set after deleting the two odd tails; terminal arguments must
+  retain THM-2077/2079 owner/address sidecars. Hyperplane density and code-wheel
+  primitivity do not supply phase height or those owners.
 
 ## boxeph-2026-07-21-S227 -- doubling homeomorphism + mirror-parity (LRC reduction); full two-charge DvdK in Lean (HYP-8920)
 

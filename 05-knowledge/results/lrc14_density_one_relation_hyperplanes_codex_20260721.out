@@ -1,0 +1,17 @@
+THM-2074 DENSITY-ONE LRC RELATION-HYPERPLANE AUDIT
+small primitive-normal formula checks: 9
+small box normals / union points / max one plane: 1376 7776 876
+small primitive distinct / increasing rows: 720 6
+small packet normals / exact zero-set checks / moduli: 46 414 9
+small prime-power packets (q, good, union lower bound): [(2, 0, -176), (4, 0, -672), (8, 0, -2432), (16, 288, -7680), (3, 0, -387), (9, 72, -2997), (27, 2880, -13851), (5, 0, -1025), (25, 1320, -13125)]
+P_3(2^20), P_4(2^20), P_5(2^20): (959124025074311215, 1116973047989955380768527, 1222506215916189106034284205191)
+exact relation hyperplanes R: 25173854387233097811887443361297472
+diagonal / total hyperplanes: 78 25173854387233097811887443361297550
+crude signed-normal bound: 52206936149913413947000523914739712
+first q=ell^k>R+78 (ell: (k,q)): {2: (115, 41538374868278621028243970633760768), 3: (73, 67585198634817523235520443624317923), 5: (50, 88817841970012523233890533447265625), 7: (41, 44567640326363195900190045974568007)}
+box theorem: exceptional ordered rows <= R*B^12
+density theorem: increasing primitive rows ~ B^13/(13!*zeta(13))
+fixed-prime theorem: every positive lift of a good ell^k residue is certified
+tournament analysis: no intrinsic orientation; hyperplane intersection is symmetric
+faithful vertices: relation normals and equality obligations, not runners
+PASS

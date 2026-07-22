@@ -120,9 +120,9 @@ structural supplier/seed and a lossless exit.
   covariance floor `delta_(a,b)>=-6/637`, so pairs can be paid exactly. If a
   thirteen-speed row has no exact support-three-through-five relation with all
   coefficient magnitudes at most `2^20`, whole-product Fejer--BV approximation
-  gives continuous `BONF5>0` and therefore a positive-measure strict lonely
-  set. The proof avoids the unresolved termwise `T4/T5` strip/slab bounds. The
-  LRC residual is now localized to finitely many genuine higher-relation
+  gives a positive-measure strict lonely set. THM-2074 counts the exact finite
+  hyperplane ledger, proves only `O(B^12)` exceptions (hence density one), and
+  gives certified packets on every fixed prime-power tower. The residual is
   templates, but descent or classification within those hyperplanes—including
   the relation-rich AP boundary—remains open.
 - **PROVED rank descent and explicit residual atlas:** THM-2052 combines
