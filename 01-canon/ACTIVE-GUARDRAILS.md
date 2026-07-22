@@ -118,6 +118,14 @@ mistake.
     does not replace the general scalar Wick moment.
 19. **NC2/GMC(2) is proved, not fully formalized.** Do not relabel it open; do
     not relabel the paper proof as a completed Lean proof either.
+19a. **A cofinite support-return semigroup is not eventual noncancellation.**
+    THM-2070 gives the aperiodic control
+    `f=u^2+u+u^-1-u^-2`: every length `m>=2` is support-feasible, but all odd
+    constant terms vanish. Thus S222/HYP-8890 and S223/HYP-8895 do not bypass
+    DvdK by saddle uniqueness or Frobenius-number combinatorics. Positive
+    coefficients and the two-charge formula survive. For the bare
+    complex-coefficient existence statement used by THM-2022, use THM-2067's
+    Galois-orbit product proof.
 
 ## Tournaments
 

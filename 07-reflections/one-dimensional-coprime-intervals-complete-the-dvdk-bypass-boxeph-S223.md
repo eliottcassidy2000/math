@@ -1,16 +1,29 @@
 # One-dimensional coprime intervals complete the DvdK bypass
 
+> **CORRECTION (2026-07-21; THM-2067 and THM-2070).** Numerical-semigroup
+> data determine when a zero-sum support word exists, not whether its weighted
+> coefficient sum cancels. The mixed-sign completion claimed below is false:
+> `f=u^2+u+u^-1-u^-2` has return set `{m:m>=2}`, yet
+> `CT(f^m)=0` for every odd `m`, as well as for `m=2`. Hence cancellations
+> need not be sporadic or finite even when the support-return semigroup is
+> cofinite and aperiodic. The positive-coefficient equivalence between
+> nonzero constant term and support return survives, as do the elementary
+> two-charge formulas; they do not prove the general complex-coefficient
+> theorem. THM-2067 now proves the required bare existence statement by a
+> Galois-orbit product argument. The text below is retained as a historical
+> attempted route and must be read through this correction.
+
 *boxeph-2026-07-21-S223. Owner: keep going on the DvdK bypass; think one-dimensional coprime intervals.
 Builds on S222 (the saddle-point/Watson bypass), THM-1840 (single-character/coprime seed), THM-1630 (DvdK,
 a one-variable theorem), S218 (arithmetic entropy), and the repo's heavy three-distance/coprime threads.
 Verified in `04-computation/one_dimensional_coprime_intervals_return_semigroup_boxeph_S223.py`.*
 
-## DvdK is a one-variable theorem — and in one variable it is elementary
+## The proposed elementary one-variable reduction
 
-The key realization sharpening S222: **DvdK (THM-1630) is a *one-variable* statement**, and GMC(2) only ever
+The motivating observation was that **DvdK (THM-1630) is a *one-variable* statement**, and GMC(2) only ever
 uses it in one variable (the polar bridge collapses the face to a single-variable Laurent polynomial `Λ_s`).
-In one variable the whole content is elementary **coprime-interval / numerical-semigroup combinatorics** — no
-residues, no Liouville, no Watson estimate even. The return set is *completely and effectively* determined.
+The support-feasibility part is elementary **coprime-interval / numerical-semigroup combinatorics**. It
+does not determine cancellation for arbitrary complex coefficients.
 
 For `f = Σ_{k∈S} c_k z^k` with support `S` (take `0∉S`, the pure two-sided / nonzero-charge case):
 - the **Newton polytope is the interval `[min S, max S]`**; `f` two-sided ⟺ `0` interior;

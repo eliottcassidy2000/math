@@ -1,5 +1,20 @@
 # Bypassing DvdK: the saddle-point / Watson route to the GMC(2) angular floor
 
+> **CORRECTION (2026-07-21; THM-2067 and THM-2070).** The general
+> mixed-coefficient conclusion proposed below is false. For
+> `f=u^2+u+u^-1-u^-2`, the support-return set is every `m>=2` and has period
+> one, but the involution `u -> -u^-1` gives `CT(f^m)=0` for every odd `m`
+> (also `CT(f^2)=0`, whereas `CT(f^4)=-12`). Thus aperiodicity does not make
+> the dominant contribution unique, support cofiniteness does not imply
+> weighted noncancellation, and the unproved saddle reduction was not a DvdK
+> bypass. Even existence of the asserted positive-real saddle fails for
+> arbitrary complex coefficients, for example `f=u+i u^-1`. The
+> positive-coefficient Watson calculation remains valid in its stated
+> restricted setting. The bare existence theorem actually needed by
+> THM-2022 is now proved internally by the Galois-orbit product argument of
+> THM-2067. The text below is retained as a record of the attempted route,
+> not as current mathematical truth.
+
 *boxeph-2026-07-21-S222. Owner: think of creative ways to bypass the GMC(2) dependency on DvdK. Builds on
 THM-2022 (DvdK is its sole imported premise), THM-1630 (DvdK/TNC), THM-1840 (single-character/coprime seed),
 S208/HYP-8775 (confluent Vandermonde / hyper-Bessel), S221 (angular = the Eisenstein floor), and the repo's
@@ -7,21 +22,24 @@ Watson-estimate thread. Verified in `04-computation/bypass_dvdk_via_saddle_point
 
 ## What DvdK does, and why bypass it
 
-The GMC(2)/NC2 proof (codex THM-2022) is self-contained **except for one imported premise**: the
+At the time of this note, the GMC(2)/NC2 proof (codex THM-2022) was self-contained **except for one imported premise**: the
 one-variable **Duistermaat–van der Kallen theorem** (THM-1630) — *if `CT(fᵐ)=0` for all `m` then `f` is
 one-sided*. THM-2022 uses its contrapositive to extract a nonzero face constant term `Q`. DvdK's proof is
 residues + Liouville, and it is **non-effective** (no bound on the first nonzero `m`; the effective version
 is open). So a bypass that is (a) self-contained and (b) effective would strengthen the GMC(2) proof and
 its S221 "Eisenstein floor" reading.
 
-## The bypass: `CT(fᵐ)` is a saddle-point (Watson/Laplace) integral
+## The proposed bypass: `CT(fᵐ)` as a saddle-point (Watson/Laplace) integral
 
-The needed direction is: **`f` two-sided ⟹ `CT(fᵐ) ≠ 0` for some (in fact all large) `m`.** Write
+The needed direction is only **`f` two-sided ⟹ `CT(fᵐ) ≠ 0` for some `m`**. The stronger
+parenthetical claim "in fact all large `m`" is false by the correction above. Formally one may write
 
 > `CT(fᵐ) = [z⁰]f(z)ᵐ = (1/2π)∫ f(r*e^{iθ})ᵐ dθ`,
 
 integrating on the **saddle circle** `|z|=r*`, where `r*` is the radius at which the **mean exponent
-vanishes** (`Σ k cₖ r*ᵏ = 0`). That `r*>0` exists **iff `0 ∈ int(Newton polytope)`, i.e. iff `f` is
+vanishes** (`Σ k cₖ r*ᵏ = 0`). For positive real coefficients such a radius has the advertised
+convex meaning. For arbitrary complex coefficients the claimed equivalence is false. The original text
+asserted that `r*>0` exists **iff `0 ∈ int(Newton polytope)`, i.e. iff `f` is
 two-sided** (verified: two-sided ⇔ saddle exists ⇔ `CT(fᵐ)` eventually nonzero; one-sided ⟹ `CT≡0`
 trivially — the DvdK conclusion). Then the angular integral is a **Watson/Laplace integral**, dominated by
 the saddle(s) of maximal modulus, giving

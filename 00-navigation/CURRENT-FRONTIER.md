@@ -265,14 +265,17 @@ name the LRC predicate it preserves and the coordinate a sidecar must restore.
 - **FORMALIZATION PARTIAL:** normalized residue, support-face transport, and
   finite-field contradiction are checked. `GMC2NC2` derives NC2/GMC(2) from
   `DvdK1` plus `HeightWitnessSupplier`; the checked extractor/height theorem
-  need a budget-safe wrapper, and one-variable DvdK remains external.
+  needs a budget-safe wrapper. The Lean proposition `DvdK1` remains an
+  explicit unformalized interface, but the paper proof no longer depends on
+  the external DvdK theorem: [THM-2067](../01-canon/theorems/THM-2067-galois-orbit-product-closes-one-variable-dvdk.md)
+  proves exactly the required one-variable existence statement internally.
 
 ### Why THM-2022 works
 
 For a fixed exact support, algebraic torus descent reduces a hypothetical
 complex null point to a number field. The lowest balanced Wick face has a
-nonzero complete constant term by the one-variable Duistermaat–van der Kallen
-theorem. At a good prime, Kummer kills non-dilated channels, strict face height
+nonzero complete constant term by THM-2067's Galois-orbit product theorem. At
+a good prime, Kummer kills non-dilated channels, strict face height
 kills dilated off-face channels, and Lucas plus Frobenius leaves the full face
 residue `Q^p`. The success is **whole-layer preservation**, not atomwise
 separation.
@@ -294,6 +297,11 @@ separation.
   separate atoms; a tournament source is sufficient, not iff; Vandermonde node
   repetition is not tournament score repetition; and no global
   de-factorialization exists.
+- [THM-2070](../01-canon/theorems/THM-2070-horizontal-wick-embedding-and-dihedral-return-cancellation.md)
+  shows that every one-variable Laurent polynomial already occurs as one
+  horizontal Wick face. Its aperiodic dihedral control has a cofinite support
+  return set but infinitely many zero constant terms, refuting the S222/S223
+  saddle-uniqueness and numerical-semigroup cancellation shortcuts.
 
 ### Live work
 
