@@ -365,6 +365,19 @@ theorem wick_expansion (P : MvPolynomial (Fin 2) ℂ) (m : ℕ) :
   rw [key2, E_sum]
   exact Finset.sum_congr rfl (fun k _ => by rw [E_monomial])
 
+/-- The charge of a channel's radial exponent `∑ᵢ kᵢ • vᵢ` is `∑ᵢ kᵢ · charge vᵢ`.  A channel is
+**balanced** (`R_m` in THM-2022) exactly when this vanishes; `wt` is nonzero only there, so
+`wick_expansion` is effectively the balanced-channel sum `M_m`. -/
+lemma charge_radial {ι : Type*} (S : Finset ι) (k : ι → ℕ) (v : ι → (Fin 2 →₀ ℕ)) :
+    charge (∑ i ∈ S, k i • v i) = ∑ i ∈ S, (k i : ℤ) * charge (v i) := by
+  classical
+  induction S using Finset.induction with
+  | empty => simp [charge]
+  | insert a s ha ih =>
+      rw [Finset.sum_insert ha, Finset.sum_insert ha, ← ih]
+      simp only [charge, Finsupp.add_apply, Finsupp.smul_apply, smul_eq_mul]
+      push_cast; ring
+
 end GMC2
 
 -- Axiom audit: should be only propext / Classical.choice / Quot.sound (Mathlib standard).
@@ -378,3 +391,4 @@ end GMC2
 #print axioms GMC2.face_sum_frobenius
 #print axioms GMC2.face_sum_ne_zero
 #print axioms GMC2.wick_expansion
+#print axioms GMC2.charge_radial
