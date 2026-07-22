@@ -1,6 +1,17 @@
 ## boxeph-2026-07-21-S211 -- where GMC(2) reaches LRC(14) (the CT-functional) and where it stops (the volume ceiling) (HYP-8840)
 
 **Owner:** ponder creatively, multiple pulls into past/incoming threads, how the GMC(2) proof can be leveraged in combination toward an LRC(14) proof.
+## death-star-2026-07-21-S94 -- Formalizing THM-2022 (NC2/GMC2): the arithmetic ENGINE is kernel-pure (§1 Wick expansion + §4 multinomial-Lucas + §5 Frobenius + architecture GMC2<=NC2); §2 descent + §3 DvdK remain. HYP-8805.
+
+**Owner directive:** formalize THM-2022, aiming for NC2 and GMC(2) COMPLETELY formalized; pull often for concurrent work.
+
+- **HONEST FRAME:** GMC2Reduction.lean already had the easy direction + `NC2At`/`ChargeOneSided`; the whole remaining problem is `nc2 : ∀P, NC2At P` (= THM-2022). Full sorry-free completion is BLOCKED on §2 (number-field descent, HEAVY) + §3 (Duistermaat-van der Kallen THM-1630, NOT in Mathlib = a citation) -- genuinely multi-session, NOT done this session. What I did: formalize the self-contained arithmetic engine kernel-pure.
+- **FORMALIZED kernel-pure** ([propext, Classical.choice, Quot.sound], no sorry/native_decide): (1) **architecture `gmc2_of_nc2`** -- GMC(2) ⟸ NC2, sorry-free (the whole problem rests on the single theorem NC2); (2) **§1 `wick_expansion`** -- E(P^m) = Σ multinomial·∏coeff^k·wt(radial), the exact channel sum M_m, via Mathlib `Finset.sum_pow_eq_sum_piAntidiag` + E-linearity (E_add/E_monomial/E_sum) + prod_monomial; (3) **§5 `sum_natCast_mul_pow_char`** -- (Σ w_s g_s)^p = Σ w_s g_s^p in char p (Frobenius fixes natCast weights ⟹ face survives as Q̄^p); (4) **§4 `multinomial_dilate_modEq`** -- multinomial Lucas (Mathlib had only binomial), assembled via multinomial_insert + Choose.choose_mul_mul_modEq_choose_nat.
+- **FIXED codex's `GMC2FrobeniusFace.lean`** (§3-4 face geometry) -- it FAILED to build (linarith nonlinear gap: lambda·charge i vs lambda·charge j; substitute the charge equality first). File not in aggregate build, so break was invisible to `lake build`.
+- **Mathlib API survey (verified, recorded in reflection):** Lucas/Kummer/Frobenius/multinomial-theorem/Zariski all located; multinomial-Lucas + DvdK were the only NOT-IN-MATHLIB gaps (multinomial-Lucas now assembled; DvdK stays a citation).
+- **REMAINS for complete nc2:** §2 descent (Zariski `finite_of_finite_type_of_isJacobsonRing` + number-field residue Frobenius, HEAVY but Mathlib-stocked); §3 DvdK (cite); §4 no-carry channel-survival wrapper (MODERATE); final contrapositive assembly. reflection formalizing-thm-2022-...-S94. HYP-8805.
+
+## boxeph-2026-07-21-S210 -- corrected antisymmetry atlas (HYP-8835 / MISTAKE-224)
 
 **PULLS:** deep-mined the GMC-LRC bridge (THM-1645 polar bridge, THM-2022 proof chain, THM-1840 seed, THM-730, THM-1017/Wall A, S157 obstruction, cyclotomic Phi_6/Phi_7, THM-1820 dictionary); pulled INCOMING codex THM-2047 (phase-height carrier) + MISTAKE-223 (corrects my S209) + MISTAKE-224 (corrects my S210). Adopted both corrections.
 

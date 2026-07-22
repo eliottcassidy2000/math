@@ -219,6 +219,29 @@ theorem gmc2_of_nc2 (hNC2 : NC2) (P Q : MvPolynomial (Fin 2) ℂ)
     ∃ N : ℕ, ∀ m ≥ N, E (Q * P ^ m) = 0 :=
   mathieuZhao_of_nc2At P Q (hNC2 P) hnull
 
+/-! ### THM-2022 §4 — Kummer/Lucas isolation of the dilated face layer
+
+At a good prime `p > m0`, dividing the moment of order `p·m0` by `(p·A0)!` and reducing mod `p`
+kills every channel that is not `p`-dilated (Kummer's carries) and, on the surviving `p·s`
+channels, replaces the multinomial coefficient by its undilated value (Lucas).  The multinomial
+Lucas below is the exact form needed; Mathlib had the binomial case but not this. -/
+
+/-- **Multinomial Lucas.** Dilating every part of a multiplicity vector by a prime `p` fixes the
+multinomial coefficient modulo `p`: `multinomial S (p • k) ≡ multinomial S k [MOD p]`.  Assembled
+from the binomial Lucas `Choose.choose_mul_mul_modEq_choose_nat` along the `multinomial_insert`
+recursion (THM-2022 (14)). -/
+theorem multinomial_dilate_modEq {α : Type*} [DecidableEq α] (p : ℕ) [Fact p.Prime]
+    (S : Finset α) (f : α → ℕ) :
+    Nat.multinomial S (fun i => p * f i) ≡ Nat.multinomial S f [MOD p] := by
+  classical
+  induction S using Finset.induction with
+  | empty => rw [Nat.multinomial_empty, Nat.multinomial_empty]
+  | insert a s ha ih =>
+      rw [Nat.multinomial_insert ha (fun i => p * f i), Nat.multinomial_insert ha f]
+      have hsum : ∑ i ∈ s, p * f i = p * ∑ i ∈ s, f i := by rw [Finset.mul_sum]
+      simp only [hsum, ← Nat.mul_add]
+      exact Nat.ModEq.mul Choose.choose_mul_mul_modEq_choose_nat ih
+
 /-! ### THM-2022 §5 — Frobenius non-cancellation of the lowest balanced face
 
 In the residue field at a good prime `p`, the natural-number Wick/multinomial weights are
@@ -321,5 +344,6 @@ end GMC2
 #print axioms GMC2.moments_zero_of_charge_oneSided
 #print axioms GMC2.mathieuZhao_of_nc2At
 #print axioms GMC2.gmc2_of_nc2
+#print axioms GMC2.multinomial_dilate_modEq
 #print axioms GMC2.sum_natCast_mul_pow_char
 #print axioms GMC2.wick_expansion
