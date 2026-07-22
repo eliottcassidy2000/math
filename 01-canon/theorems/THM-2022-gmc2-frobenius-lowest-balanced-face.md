@@ -5,8 +5,10 @@ status: >
   PROVED. For every finite exact support in C[Z,W], a complex torus point of
   the Gaussian moment nullcone descends to an algebraic torus point. The
   lowest balanced face supplies a nonzero Laurent constant term Q by the
-  one-variable Duistermaat--van der Kallen theorem. At a suitable good prime
-  p, divide the moment of order p*m0 by the common factorial (p*A0)!.
+  project-internal Galois orbit-product theorem THM-2067 (alternatively by
+  the stronger one-variable Duistermaat--van der Kallen theorem). At a
+  suitable good prime p, divide the moment of order p*m0 by the common
+  factorial (p*A0)!.
   Kummer and Lucas identify the surviving residue layer with the p-fold
   dilation of the face channels, and Frobenius makes its residue exactly
   Q^p. Thus no support whose charge convex hull contains zero can be null;
@@ -16,9 +18,10 @@ status: >
 source: codex-2026-07-21-NC2-followup
 supersedes_reservation: "exposed two-vertex factorial face with gap greater than one"
 depends_on:
-  - THM-1630  # one-variable Duistermaat--van der Kallen constant-term theorem
+  - THM-2067  # project-internal one-variable constant-term nonvanishing
   - THM-1540  # NC2 implies GMC(2)
 related:
+  - THM-1630  # stronger published DvdK theorem; now an alternate source
   - THM-1645
   - THM-2019
   - THM-2020
@@ -57,7 +60,9 @@ formalization_status: >
   NC2 and GMC(2) from DvdK1 plus HeightWitnessSupplier. The reference-channel
   extractor and the theorem producing its three height obligations are also
   checked separately, but their direct existential wrapper currently exhausts
-  Lean's elaboration budget. DvdK remains a second explicit cited premise.
+  Lean's elaboration budget. The Lean proposition `DvdK1` remains a second
+  explicit interface; THM-2067 now proves its mathematical content internally,
+  but its root-factorization/Galois proof has not been formalized.
 ---
 
 # THM-2022 -- Frobenius amplification of the lowest balanced Wick face
@@ -214,10 +219,10 @@ the same charge, (4) at equality would give the same `a`; then
 `b=a-q` would also agree, contradicting distinctness of the exact monomial
 support.
 
-By (5) and the one-variable Duistermaat--van der Kallen theorem
-(`THM-1630-tnc-is-duistermaat-van-der-kallen-theorem-2.md`),
-the constant terms of all positive powers of `f_F` cannot vanish. Choose
-`m0>=1` such that
+By (5) and the Galois orbit-product nonvanishing theorem
+(`THM-2067-galois-orbit-product-closes-one-variable-dvdk.md`), the constant
+terms of all positive powers of `f_F` cannot vanish. Equivalently one may cite
+the stronger published DvdK theorem, THM-1630. Choose `m0>=1` such that
 
 ```text
 Q:=CT_u(f_F^m0) != 0.                                      (7)
@@ -401,7 +406,7 @@ where `(alpha)_A=alpha(alpha+1)...(alpha+A-1)`.
 > implication holds: if `E_alpha[P^m]=0` for every positive `m`, then
 > `E_alpha[Q_0P^m]=0` for every fixed `Q_0` and all sufficiently large `m`.
 
-The algebraic descent and DvdK face seed in Sections 2--3 are unchanged,
+The algebraic descent and constant-term face seed in Sections 2--3 are unchanged,
 because all moment polynomials have rational coefficients. For the finite
 place, choose `p>m0` with `p` not dividing `k` and outside the same finite bad
 set. Normalize the moment of order `pm0` by `(alpha)_(pA0)`. If `n>=pA0`,
@@ -464,9 +469,13 @@ structure in higher dimension, for example a coordinatewise/orthant-exposed
 vector face or a rank-one lock forcing all factorial coordinates to be
 functions of one grade. A scalar Newton face alone is not sufficient.
 
-The constant-term input is J.J. Duistermaat and W. van der Kallen,
-"Constant terms in powers of a Laurent polynomial," *Indagationes
-Mathematicae* (N.S.) 9(2) (1998), 221--231, Theorem 2 and Remark 3.
+THM-2067 supplies a project-internal algebraic proof of the constant-term
+input from THM-1550: transitivity of the Galois action on the roots of
+`X^M-tR(X)` and Vieta's constant total root product forbid the small-root
+identity `Pi(t)=ct`. A stronger alternate source remains J.J. Duistermaat and
+W. van der Kallen, "Constant terms in powers of a Laurent polynomial,"
+*Indagationes Mathematicae* (N.S.) 9(2) (1998), 221--231, Theorem 2 and
+Remark 3.
 
 ## 10. Lean formalization ledger
 
@@ -485,10 +494,12 @@ The kernel-checked development is gathered by
    dictionary, and `GMC2FaceHeightFloor` prove rational exposing data, the
    balanced height floor, equality on the face, scaling to mass `p*m0`, and
    the strict integer off-face gap.
-4. `GMC2DvdKInterface` states the published one-variable input as an explicit
-   proposition. `GMC2FaceSeed`, `GMC2FaceSeedChannel`, and the reference-channel
-   bridge turn it into a nonzero exact face seed and an actual balanced
-   multiplicity vector; no custom Lean axiom is declared.
+4. `GMC2DvdKInterface` states the one-variable input as an explicit
+   proposition. Its mathematical content is now proved internally by
+   THM-2067, while the Lean proof remains to be implemented. `GMC2FaceSeed`,
+   `GMC2FaceSeedChannel`, and the reference-channel bridge turn it into a
+   nonzero exact face seed and an actual balanced multiplicity vector; no
+   custom Lean axiom is declared.
 5. The former descent gap is closed twice. `GMC2TorusDescent` and
    `GMC2FaceSeedDescent` preserve all moment relations and the nonzero seed in
    a number field. `GMC2IntegralSpecialization`,
@@ -527,8 +538,10 @@ direct existential composition has no known mathematical or typing gap, but
 reliably exhausts elaboration even at 800k heartbeats, so the checked capstone
 keeps that small wrapper explicit.
 
-Formalizing the published DvdK theorem itself is a separate substantial
-project. It remains visible as a theorem hypothesis, not hidden behind
-`axiom`, `sorry`, or `native_decide`. Thus the paper theorem is proved, while
-the Lean theorem remains honestly conditional on one cited external theorem
-and one named internal composition interface.
+Formalizing the stronger published DvdK theorem is unnecessary for this
+paper proof: THM-2067 gives exactly the bare existence statement needed.
+Formalizing THM-1550 plus its Galois orbit-product endgame is still a separate
+project, so `DvdK1` remains visible as a Lean theorem hypothesis rather than
+being hidden behind `axiom`, `sorry`, or `native_decide`. Thus the paper proof
+is now internally closed, while the Lean theorem remains honestly conditional
+on one proved-but-unformalized proposition and one named composition interface.
