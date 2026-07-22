@@ -5,14 +5,15 @@ status: >
   PROVED. For every scaled core aC with one tail w and every clock N, the
   safe phases t=k/(Na) are exactly a CRT fiber product of a core packet modulo
   N and a tail packet modulo Na/gcd(w,Na). Their number is an explicit dot
-  product of residue-class histograms. This extends the phase-packet carrier
-  to arbitrary moduli and recovers THM-2057 as a special nonemptiness lemma;
-  it is a certificate generator, not LRC(14).
+  product of residue-class histograms. The dot product has an exact zero-mode
+  plus finite-Fourier-fluctuation split and a Cauchy certificate. This extends
+  the phase-packet carrier to arbitrary moduli and recovers THM-2057 as a
+  special nonemptiness lemma; it is a certificate generator, not LRC(14).
 source: codex-2026-07-21-LRC-CRT-packet
 script: 04-computation/lrc_crt_phase_packet_codex_20260721.py
 result: 05-knowledge/results/lrc_crt_phase_packet_codex_20260721.out
-script_sha256: 814deeb54a10e8632871015f6b4b84a7a982356c2525a66f8973e90fb0f53af0
-result_sha256: f0d5303e07ea3c38cbe5e019821bc8d96dabc650f8e335fa3a72683e42aca822
+script_sha256: dd42a0c3369bfede13ddda1871ab6e1db3280a879f2e735093e4713c0010ae7c
+result_sha256: 922a12e188a35b607d8e760fd03b001e0054159a26b6e7cb2c20a52252b2c26e
 hash_basis: normalized repository blobs (LF)
 depends_on:
   - THM-1002
@@ -113,6 +114,48 @@ clocks, one computes the actual core packet and asks whether its reduction
 histogram overlaps the tail packet. This is the natural join with the
 primitive phase-order counts claimed in THM-2058.
 
+## Exact bulk/fluctuation split
+
+Write `A=sum_j alpha_j`, `B=sum_j beta_j` and
+
+```text
+alpha^0=alpha-(A/d)1,       beta^0=beta-(B/d)1.
+```
+
+Then (5) has the exact orthogonal decomposition
+
+```text
+P_N=AB/d + <alpha^0,beta^0>.                             (8)
+```
+
+Consequently
+
+```text
+P_N >= AB/d-||alpha^0||_2 ||beta^0||_2.                 (9)
+```
+
+Thus the clock is certified whenever the right side is positive. The test is
+integer-exact after squaring:
+
+```text
+(AB)^2 > (d sum alpha_j^2-A^2)(d sum beta_j^2-B^2).      (10)
+```
+
+With the Fourier convention
+`alpha_hat(r)=sum_j alpha_j exp(-2 pi i rj/d)`, Parseval gives
+
+```text
+P_N=(1/d) sum_(r mod d) alpha_hat(r) conjugate(beta_hat(r)),
+||alpha^0||_2^2=(1/d) sum_(r!=0)|alpha_hat(r)|^2,         (11)
+```
+
+and similarly for `beta`. Hence (8) is a literal positive zero mode plus a
+signed/complex nontrivial-mode sum. This is the rigorous remnant of the
+incoming “bulk plus cusp” intuition: it is finite Fourier analysis on the
+actual CRT carrier, not a modular-form identification. If `P_N=0` with
+`A,B>0`, the two nonnegative histograms have disjoint support, and the
+nontrivial modes cancel the entire zero mode exactly.
+
 ## Assumption challenge and tournament analysis
 
 The vertices are not runners, modular cusps, or primes. They are residues in
@@ -139,5 +182,5 @@ its histogram dot product.
 
 The companion uses integer arithmetic only. It compares (6) with direct grid
 enumeration on `53760` rows from four unrelated core families, checks the
-small missing-clock specialization, and exhibits strict `N>14` packet
-certificates. The frozen output ends in `PASS`.
+small missing-clock specialization, audits (10), and exhibits strict `N>14`
+packet certificates. The frozen output ends in `PASS`.

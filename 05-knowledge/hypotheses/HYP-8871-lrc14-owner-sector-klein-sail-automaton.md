@@ -56,6 +56,11 @@ the core packet and tail packet modulo their common gcd and take the histogram
 dot product. This CRT carrier should be joined to the missing-clock lcm tax
 before any raw parameter enumeration.
 
+THM-2059 also gives a bulk filter before exact support comparison. Its positive
+zero Fourier mode wins whenever the product of total packet masses exceeds
+the product of their centered `L^2` discrepancies. Only the remaining
+high-fluctuation histograms need signed Euler or endpoint-owner treatment.
+
 The key hoped-for compression is **interval acceptance**: adjacent Farey nodes
 with the same active hull owner and the same signed phase-height wall word
 should admit one symbolic certificate for the whole mediant interval. A failed

@@ -2,6 +2,7 @@ THM-2059 CRT PHASE-PACKET AUDIT
 direct identity rows checked: 53760
 direct grid indices checked: 2903040
 positive/zero packet rows: 14978 38782
+zero-mode/Cauchy certificates: 14195
 missing-clock specialization rows checked: 44761
 larger-clock certificates found: 34854
 first larger-clock examples (N,a,w,P,alpha,beta):

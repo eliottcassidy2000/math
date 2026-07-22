@@ -25,6 +25,16 @@ histograms, or equivalently the bipartite compatibility graph. This also
 explains why forcing a tournament here would be destructive: compatibility is
 symmetric and bipartite, and the ties are the theorem.
 
+There is, however, an exact way to recover the useful “bulk plus obstruction”
+intuition. Center both reduction histograms around their means. Their dot
+product is the positive zero-mode term `|A||B|/d` plus the inner product of
+the centered fluctuations. Cauchy--Schwarz certifies positivity whenever the
+zero mode exceeds the two fluctuation norms; Parseval identifies the remainder
+with the nontrivial finite Fourier modes. This is a signed/complex channel sum
+on the actual phase carrier. Calling it a modular cusp would add nothing and
+would lose the type information, but the zero/nonzero frequency split itself
+is exact and potentially scalable.
+
 ## How this changes the finish target
 
 THM-2058 currently reserves a primitive phase-order and longitudinal-interval

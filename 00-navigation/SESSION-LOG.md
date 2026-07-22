@@ -9,6 +9,10 @@
   works for `N>14`. The exact replay checked `53760` direct identities,
   `2903040` grid indices, `44761` small missing-clock specializations, and
   found `34854` larger-clock certificates.
+- **Typed bulk/obstruction split:** the histogram dot product is exactly its
+  positive zero mode plus nontrivial finite Fourier channels. The integer
+  Cauchy test alone proves `14195` of the `14978` positive audit rows. This is
+  the rigorous replacement for the unsupported modular-cusp language.
 - **Finish route:** primitive phase-order counts (THM-2058, still a claimed
   stub) should populate the core histogram; the longitudinal tail interval
   populates the tail histogram. A zero dot product exports disjoint residue

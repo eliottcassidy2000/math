@@ -150,7 +150,12 @@ structural supplier/seed and a lossless exit.
   forces `Na|w` in any one-tail counterexample over `aC`. THM-2059 removes the
   small-modulus restriction from the carrier: for every `N`, safe core and
   tail residue packets meet by an exact CRT fiber-product formula, whose
-  reduction-histogram dot product counts the safe `k/(Na)` grid phases.
+  reduction-histogram dot product counts the safe `k/(Na)` grid phases. Its
+  exact zero-mode/fluctuation split gives a Cauchy--Parseval certificate; the
+  audit certifies `14195` of `14978` positive packet rows from the zero mode
+  alone. The other `783` positive rows need exact modes, while zero-packet
+  rows remain explicit disjoint-support obstructions rather than being
+  silently discarded.
   Although that plane
   has `640690` distinct-speed primitive determinant failures, the arithmetic
   carrier has only three leaves. HYP-8871 targets exact deck/Farey discharge

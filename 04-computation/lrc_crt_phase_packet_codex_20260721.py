@@ -46,6 +46,16 @@ def direct_grid_count(core, a, w, clock):
     return count
 
 
+def zero_mode_cauchy_certified(alpha, beta):
+    """Integer form of AB/d > ||alpha^0||_2 ||beta^0||_2."""
+    d = len(alpha)
+    total_a = sum(alpha)
+    total_b = sum(beta)
+    centered_energy_a = d * sum(x * x for x in alpha) - total_a * total_a
+    centered_energy_b = d * sum(x * x for x in beta) - total_b * total_b
+    return (total_a * total_b) ** 2 > centered_energy_a * centered_energy_b
+
+
 def main():
     cores = (
         tuple(range(1, 14)),
@@ -57,11 +67,12 @@ def main():
     grid_indices = 0
     positive = 0
     zero = 0
+    zero_mode_certified = 0
     for clock in range(2, 26):
         for a in range(1, 8):
             for w in range(1, 81):
                 for core in cores:
-                    predicted, packet_types, _, _ = packets(core, a, w, clock)
+                    predicted, packet_types, alpha, beta = packets(core, a, w, clock)
                     direct = direct_grid_count(core, a, w, clock)
                     assert predicted == direct
                     rows += 1
@@ -70,6 +81,9 @@ def main():
                         positive += 1
                     else:
                         zero += 1
+                    if zero_mode_cauchy_certified(alpha, beta):
+                        assert packet_types > 0
+                        zero_mode_certified += 1
 
     missing_clock_rows = 0
     for clock in range(2, 15):
@@ -102,6 +116,7 @@ def main():
     print("direct identity rows checked:", rows)
     print("direct grid indices checked:", grid_indices)
     print("positive/zero packet rows:", positive, zero)
+    print("zero-mode/Cauchy certificates:", zero_mode_certified)
     print("missing-clock specialization rows checked:", missing_clock_rows)
     print("larger-clock certificates found:", larger_clock_rows)
     print("first larger-clock examples (N,a,w,P,alpha,beta):")
