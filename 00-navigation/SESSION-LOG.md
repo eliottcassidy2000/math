@@ -94,6 +94,21 @@ NET: every P whose lowest face has a unique channel needs NO DvdK axiom for NC2,
   need to be reconstructed in the same two parameters before the thirteen-row
   circuit-ray theorem can be applied.
 
+### Cut-matrix rank terminal
+
+- THM-2088 treats the complete short-relation cut as a coefficient-row
+  matroid. Because both speed coefficients on every cross edge are nonzero,
+  leaf elimination proves every cut forest is independent. A spanning tree
+  supplies rank six; the positive terminal tuple caps rank at seven.
+- At rank seven, seven original height-57 support-three rows recover the
+  primitive `(h,Q)` by maximal minors. Hadamard gives the explicit finite
+  bound `floor(sqrt(3^7*57^14))=91421508108581` on every coordinate.
+- At rank six, the six tree rows define a two-parameter template and every
+  chord is persistent on it. The cut types `1+6`, `2+5`, `3+4` have
+  respectively `0`, `4`, `6` chord tests. Thus the all-height rank-seven
+  residual is now: bounded guard ratio, finite rank-seven terminal, or
+  persistent rank-six cut template.
+
 ## death-star-2026-07-22-S105 -- GMC2 formalization CAPSTONE CLOSED: the whnf wall is SOLVED; HeightWitnessSupplier discharged kernel-pure; clean DvdK1 -> NC2 and DvdK1 -> GMC(2) now compile.
 
 **Owner directive:** work creatively at whnf-tuning, or how it can be bypassed.

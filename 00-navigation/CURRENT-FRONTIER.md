@@ -160,6 +160,11 @@ supplier/seed and a lossless exit.
   disconnected, so at least six height-57 triple relations cross one spanning
   cut. Either one speed has a bounded rational guard ratio, or all seven speeds
   lie in a guard-anchored two-anchor star of coefficient height at most `6498`.
+  THM-2088 exposes the star's exact rank split. A rank-seven cut matrix makes
+  the primitive terminal tuple finite with
+  `max(h,max Q)<=91421508108581`; rank six is precisely the persistent
+  two-parameter cut-template branch. Only that persistent branch can remain
+  unbounded without a two-term guard ratio.
 - **PROVED relative whole-product decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says bounded scalar relations must lift to vector-character relations. Two
   telescopes bound the whole product; rowwise `H=2^19` clears every recorded

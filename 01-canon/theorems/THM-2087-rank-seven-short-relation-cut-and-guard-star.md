@@ -19,6 +19,7 @@ related:
   - THM-2065
   - THM-2082
   - THM-2086
+  - THM-2088
 ---
 
 # THM-2087 -- short-relation cut and guard star
@@ -213,6 +214,10 @@ or spliced to their existing relation rows. Only after that reconstruction
 and saturation can THM-2065 collapse circuit-free rays. Persistent marked
 circuits and exact safe-phase sidecars would still remain. Thus (19) is a
 strict structural reduction, not LRC(14).
+
+THM-2088 classifies the cut coefficient matrix itself. Its rank is six or
+seven: rank seven gives the finite terminal bound `91421508108581`, while
+rank six is exactly a persistent two-parameter cut template.
 
 The next finite computation should enumerate primitive cut templates up to
 simultaneous sign and component swap, then attach:
