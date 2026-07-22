@@ -145,43 +145,14 @@ supplier/seed and a lossless exit.
   terminal height `24`; proving the same strict inequality at all heights is
   the live depth-four target. At rank seven its scalar deficit is exactly the
   negative signed-fold sum divided by `196`, hence equals outside-cover
-  multiplicity under containment. THM-2083 removes the generic all-height
-  lane, and THM-2085 makes the bound explicit: every rank-seven containment
-  has a nonzero relation `a h+bq_i+cq_j=0` on some guard/two-speed triple with
-  `max(|a|,|b|,|c|)<=57`. The degree-57 signed Selberg box certificate has
-  exact relative-Hunter margin `6435/8365427`; degree 56 does not close that
-  certificate. The remaining depth-four problem is a finite coefficient-
-  template ledger, still with unbounded scale. THM-2062/2069 give its wheel;
-  THM-2065 makes circuit-free residuals finite. THM-2082 proves the rank-one
-  wheel sees only prime support: an unbounded terminal family freezes it and
-  every scalar filter. Its translated grid gives a safe phase or carrier-ratio
-  branch, so projective residue incidence remains live. THM-2087 upgrades the
-  one-relation ledger to a complete-cut theorem: the relation-free graph is
-  disconnected, so at least six height-57 triple relations cross one spanning
-  cut. Either one speed has a bounded rational guard ratio, or all seven speeds
-  lie in a guard-anchored two-anchor star of coefficient height at most `6498`.
-  THM-2088 exposes the star's exact rank split. A rank-seven cut matrix makes
-  the primitive terminal tuple finite with
-  `max(h,max Q)<=91421508108581`; rank six is precisely the persistent
-  two-parameter cut-template branch. Only that persistent branch can remain
-  unbounded without a two-term guard ratio. THM-2089 gives it a flat affine-
-  holonomy normal form `q_i=u_i(z+v_i h)`: every fundamental cycle has both
-  product-one multiplicative holonomy and zero signed offset. The gauge has
-  height at most `6*57^6`, its integer parameters form a congruence lattice of
-  index at most `57^36`, and its real projective locus is one rational interval
-  minus collision walls. Earlier guards and original tails are not yet spliced.
-- **PROVED relative whole-product decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
-  says bounded scalar relations must lift to vector-character relations. Two
-  telescopes bound the whole product; rowwise `H=2^19` clears every recorded
-  pinned-base margin. MISTAKE-080/082 still require shape-specific torus models.
-- **Scope separation:** [THM-1149](../01-canon/theorems/THM-1149-compact-essential-crown-and-farey-blocker.md)
-  proves that tight deletion and an all-loose essential crown are different
-  branches. Equality classification after a tight deletion cannot be applied
-  before extracting that deletion.
-- **Local-comb ceiling:** THM-1252 through THM-1274 close or sharply saturate
-  most purely local six-comb return arguments. The live residue is global
-  endpoint/child transport or a phase-located turn tax, not another unlocated
-  local-return charge.
+  multiplicity under containment. THM-2085/2087 force a height-57 relation cut: either `q/h=r/s`, `r,s<=57`, or a height-6498 guard-star.
+  THM-2088 makes rank seven finite (`max(h,max Q)<=91421508108581`); rank six is persistent, with THM-2089 flat form `q_i=u_i(z+v_i h)`.
+  THM-2082 retains residue incidence; THM-2086 closes `7|h`, five `7|q`, and the lacunary cone, leaving `7 not|h`, one to four `7|q`, nonlacunary templates.
+- **PROVED relative decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md) lifts bounded scalar relations; `H=2^19` clears recorded margins.
+  MISTAKE-080/082 still require shape-specific torus models.
+- **Scope separation:** [THM-1149](../01-canon/theorems/THM-1149-compact-essential-crown-and-farey-blocker.md) separates tight deletion from an all-loose crown.
+  Equality classification applies only after extracting the tight deletion.
+- **Local-comb ceiling:** THM-1252--1274 leave global endpoint/child transport or a phase-located turn tax, not another unlocated local-return charge.
 
 ### Exact live residuals
 

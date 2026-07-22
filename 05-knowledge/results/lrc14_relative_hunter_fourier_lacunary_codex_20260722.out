@@ -1,0 +1,36 @@
+THM-2086 RELATIVE HUNTER FOURIER/LACUNARY REFEREE
+bounded allowed core/guard pairs: 4120
+bounded scalar survivors: 1322
+bounded distinct triple edges: 2982
+minimum bounded margin: 561797/8288280
+hostile core/guard: (1, 9, 10, 11, 13, 14, 24), 23
+hostile bulk term: 100421/1177176
+hostile degree-epsilon term: -16117/4512508
+hostile genuine rank-two term: -2833331/203062860
+hostile degree word: (1, 1, 1, 1, 1, 2, 5)
+hostile edge/channel word:
+  (1, 14, Fraction(1, 98), Fraction(-11, 2254))
+  (14, 24, Fraction(16, 1127), Fraction(-11, 27048))
+  (24, 10, Fraction(11, 840), Fraction(-71, 118335))
+  (24, 9, Fraction(1, 84), Fraction(-281, 284004))
+  (24, 11, Fraction(1, 88), Fraction(-7663, 2082696))
+  (24, 13, Fraction(71, 6279), Fraction(-4181, 1230684))
+cutoff-640 maximum Fourier error: 3.422803e-07
+odd-a coprime ab<=20 checks: 37
+odd-a rows at or below 1/35: ((1, 5, Fraction(1, 35)), (1, 6, Fraction(1, 42)), (3, 5, Fraction(1, 35)), (11, 1, Fraction(2, 77)))
+exact BV mixing checks: 2880
+largest normalized BV error: 90/343 at h=1, q=13, B=13
+7|h broad exact cross-edge checks: 1240
+7|h bounded terminal pairs: 639
+7|h bounded scalar survivors: 238
+7|h minimum bounded bipartite margin: 34/441 at Q=(7, 9, 10, 11, 13, 14, 24), h=63
+7|h symbolic margins m=1..5: (Fraction(25, 294), Fraction(10, 147), Fraction(5, 98), Fraction(5, 147), Fraction(5, 294))
+7|h worst symbolic margin: 5/294
+7nmid h five-high exact edge checks: 270
+7nmid h five-high five-set checks: 252
+7nmid h bounded five-high terminal pairs: 0
+7nmid h five-high minimum sampled restricted tree: 1609/24696 at (7, 35, 49, 56, 63)
+7nmid h five-high constants (global tree, restricted tree, deficit, margin): (Fraction(88, 1365), Fraction(88, 1911), Fraction(5, 147), Fraction(23, 1911))
+lacunary weighted floor: 17/3234
+lacunary side-mass threshold: 17/1078
+PASS

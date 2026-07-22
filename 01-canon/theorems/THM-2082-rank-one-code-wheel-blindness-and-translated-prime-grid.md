@@ -22,6 +22,7 @@ depends_on:
 related:
   - THM-765
   - THM-2073
+  - THM-2086
 script: 04-computation/lrc14_rank_one_code_wheel_blindness_codex_20260722.py
 output: 05-knowledge/results/lrc14_rank_one_code_wheel_blindness_codex_20260722.out
 script_sha256: 7aab4e6ee7c3d43fad2bace64a2318b88be1b37fbffa95ee4628aec55e1abbd0
@@ -307,7 +308,8 @@ constant or uniformly admissible while `B_j` tends to infinity.
 
 This does **not** refute THM-2081. Its relative Hunter edges retain the
 three-frequency residue placement that the scalar and code filters discard,
-and may detect this family immediately.
+and THM-2086 now detects the rank-seven member of this family uniformly by
+its lacunary relative-Hunter cone.
 
 ## 4. Identical Hamming data, opposite rational-grid behaviour
 

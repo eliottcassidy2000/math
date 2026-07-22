@@ -10,6 +10,33 @@
 ## boxeph-2026-07-22-S231 -- eliminate DvdK for the residual 12% of straddling supports via a monomial certificate (kernel-pure Lean, HYP-8932)
 
 **Owner:** get rid of DvdK for the remaining ~12% of straddling supports.
+## codex-2026-07-22 -- the missing relative-Hunter channel and two all-height branches
+
+- THM-2086 gives the exact Fourier split
+  `w_pq=(5/7)rho_pq-(epsilon_p+epsilon_q)/7+R_h(p,q)`. The genuine term is an
+  absolutely convergent sum over nonzero relations `ap+bq+ch=0`; the other
+  channels are the global pair bulk and the two mixed-fold axes. Summed over a
+  tree this is an identity, not an asymptotic.
+- On THM-2081's sharp packet, the three contributions are
+  `100421/1177176`, `-16117/4512508`, and `-2833331/203062860`, summing to the
+  independently atomized positive margin `561797/8288280`.
+- When `7|h`, every cross edge between a 7-nonmultiple and a 7-multiple has
+  `epsilon_p=0`, `rho_pq=1/49`, and `R_h(p,q)=0`. Divisor completeness and
+  hereditary primitivity force a spanning `K_(L,H)` tree; its margin is at
+  least `5/294`. The whole apex-divisible guard branch is closed at all heights.
+- When `7 not|h` and five speeds are divisible by seven, the high-high genuine
+  channel vanishes. THM-1234 plus uniform `K_5` tree averaging gives restricted
+  weight `88/1911`; paying the two low mixed folds leaves `23/1911`. Thus the
+  live modular profiles have only one through four 7-divisible speeds.
+- The unrelated high-frequency/BV route gives a second all-height result:
+  `|w(B,q;h)-(1/7)mu(D_q cap C_h)|<=(q+h)/(3B)`. The exact overlap spectrum
+  then closes `sum_(q!=B)q+6h<(17/1078)B`.
+- The rank-seven residual is now simultaneously `7 not|h`, nonlacunary, and,
+  by THM-2083, supported on a bounded guard/two-speed relation template. This
+  restores exactly the incidence erased by THM-2082's scalar code wheel and
+  mirrors GMC's support-versus-genuine-channel split without solving DvdK1.
+
+## codex-2026-07-22 -- rank-one wheel boundary and residue-incidence transfer
 
 **THE 12%:** unique-channel bypass at ANY mass (S230) reclassifies 4 supports free -> 87.9% (102/116); residual = exactly 14/116 = 12.1%, the coincident-channel/symmetric supports (involution u->-1/u, f(-1/u)=-f(u), THM-2070, pairs compositions => card>=2 at every mass, no single-power certificate).
 
