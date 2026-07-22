@@ -149,7 +149,9 @@ supplier/seed and a lossless exit.
   lane: every rank-seven containment has a uniformly bounded nonzero relation
   `a h+bq_i+cq_j=0` on some guard/two-speed triple. The remaining depth-four
   problem is a finite list of relation templates, still with unbounded scale.
-  THM-2062 adds the hereditary wheel; THM-2065 makes circuit-free residuals finite.
+  THM-2062/2069 give its wheel; THM-2065 makes circuit-free residuals finite.
+  THM-2082 shows that wheel only sees prime support: unbounded terminals freeze it and every scalar filter.
+  Its translated grid gives a safe phase or carrier-ratio branch; projective residue incidence remains live.
 - **PROVED relative whole-product decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says bounded scalar relations must lift to vector-character relations. Two
   telescopes bound the whole product; rowwise `H=2^19` clears every recorded

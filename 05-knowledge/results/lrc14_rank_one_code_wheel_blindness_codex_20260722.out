@@ -1,0 +1,14 @@
+THM-2082 RANK-ONE CODE WHEEL / TRANSLATED PRIME GRID REFEREE
+ARITHMETIC=exact rational/integer; ASSERTIONS=explicit runtime checks
+FAMILY s=7: fold=-103/65 min_cogirth=3 rows=5 fixed_escape=3/31
+FAMILY s=8: fold=-103/65 min_cogirth=4 rows=5 fixed_escape=3/31
+FAMILY s=9: fold=-231/130 min_cogirth=4 rows=5 fixed_escape=3/31
+FAMILY s=10: fold=-733/390 min_cogirth=5 rows=5 fixed_escape=3/31
+FROZEN_FAMILY rows=20 profile_checks=3360 phase_checks=190 height=UNBOUNDED
+TRANSLATED_GRID rows=40 min_safe=8/13 branches=ordinary/carrier-guard
+P17_CODE both=1+16*z^8 cogirth=8
+P17_INCIDENCE safe_counts=0/12 gap_safe=(2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15)
+TOURNAMENT vertices=residues ordered_by=clearance fingerprint=transitive
+TOURNAMENT directed_cycles=0 SCCs=singletons Hamiltonian_paths=1 carrier=INSUFFICIENT
+ASSUMPTION_CHALLENGE support preserves divisibility; destroys projective residue incidence
+RESULT=PASS

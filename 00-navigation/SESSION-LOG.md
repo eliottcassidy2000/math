@@ -3,6 +3,27 @@
 > [`START-HERE.md`](START-HERE.md), [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md),
 > and [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
 
+## codex-2026-07-22 -- rank-one wheel boundary and residue-incidence transfer
+
+- THM-2082 specializes THM-2069 exactly: a scalar row has code enumerator
+  `1+(p-1)z^w_p`, and hereditary primitivity is `w_p>=2` for every prime.
+  Thus the one-deletion wheel collapses to modulus one and cannot manufacture
+  a terminal height variable.
+- A translated-prime-grid lemma is the positive replacement: carrier ratios
+  are uniformly safe, each noncarrier consumes at most `ceil(p/7)` residues,
+  and the guard consumes at most `ceil(2p/7)`. A strict leftover is an actual
+  point of `G_Q minus E_h`; failure is an explicit carrier-ratio branch.
+- The unbounded rows `{1,...,s-1,360360*32^j}`, `s=7,...,10`, freeze their full
+  prime code profiles while passing hereditary/divisor, quarter, relative
+  height, and scalar-fold filters. Every row nevertheless escapes at `3/31`.
+  Hence those scalar sidecars alone cannot prove a height cutoff.
+- Two divisor-complete hereditary rows have the same full-support `p=17` code
+  `1+16z^8` but zero versus twelve safe grid residues. This is the exact
+  support-incidence loss familiar from tournament score fibers, the
+  `[72,36,16]` cocircuit-design gate, and GMC's multiple-channel cancellation:
+  the live LRC carrier is labelled projective residue incidence, concretely
+  THM-2081's guard-restricted event graph.
+
 ## codex-2026-07-22 -- live-pull correction and the true depth-five exit
 
 - MISTAKE-231 retracts the first, colliding THM-2080 terminal-resonance gate:
