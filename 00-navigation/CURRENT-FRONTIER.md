@@ -137,10 +137,11 @@ not unsafe. The reusable certificate architecture is
   fourteen plus opposite-parity carrier pairs at `3,5,7`, all in the all-
   transverse model. THM-2114 then adds the general replacement carrier:
   strict tree surplus, connectivity in every maximum graphic-matroid basis
-  at equality, and finite-ring Kakeya needles. Its
-  prime-row needle forces a `13`-content blocker through terminal rank `12`
+  at equality, and finite-ring Kakeya needles. Its prime-row needle forces a
+  `13`-content blocker through terminal rank `12`
   and an `11`-content blocker through rank `10`; in particular an all-primitive
-  rank-two cover in these ranges is impossible. The six persistent height-114
+  rank-two cover in these ranges is impossible. After specialization this
+  forces `13|h*product(Q)` and, through rank `10`, `11|h*product(Q)`. The six persistent height-114
   cut rows make THM-2065 alone vacuous; location, content, phase, and torsion
   sidecars are essential.
 - **PROVED relative decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)

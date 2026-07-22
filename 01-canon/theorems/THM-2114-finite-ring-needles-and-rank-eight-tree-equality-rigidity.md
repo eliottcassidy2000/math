@@ -10,10 +10,10 @@ status: >
   missing common-nonzero vector modulo N=2,...,6 is an immediate finite-ring
   Kakeya escape; N=7 also escapes after a one-sided guard drift. Prime rows
   force a guard-or-terminal 13-content blocker through terminal rank 12 and
-  an 11-content blocker through rank 10. The odd quotient-height branch has the uniform
-  quarter-torsion witness. An exact
-  eight-character row has tau=5/49 but no signed affine-pencil gauge, refuting
-  reserved THM-2103 as stated. It is nevertheless excluded twice: by a mod-5
+  an 11-content blocker through rank 10. The odd quotient-height branch has a
+  uniform quarter-torsion witness. An exact eight-character row has tau=5/49
+  but no signed affine-pencil gauge, independently strengthening THM-2103's
+  no-go classification. It is nevertheless excluded twice: by a mod-5
   needle and by equality rigidity across all maximum graphic-matroid bases.
   These results replace the false tree-or-pencil binary target by a strict-
   tree / maximum-basis-equality / finite-torsion routing. They do not exclude
@@ -28,6 +28,8 @@ related:
   - THM-1221
   - THM-2096
   - THM-2103
+  - THM-2104
+  - THM-2105
 script: 04-computation/lrc14_quarter_torsion_toothpick_codex_20260722.py
 output: 05-knowledge/results/lrc14_quarter_torsion_toothpick_codex_20260722.out
 script_sha256: 2293c15edee4a81a5f0178857903c613fc932b30536cfce3fb6013a2d73da182
@@ -319,6 +321,20 @@ and terminal characters primitive.  This applies to the transverse and
 guard-proportional branches alike and is a new arithmetic filter on all of
 THM-2098's ranks `8..11`, not only on the example below.
 
+If an integer direction `d` specializes the characters to the guard `h=g.d`
+and terminal speeds `q_i=c_i.d`, divisibility of content implies divisibility
+of the specialization.  Thus (19e) has the directly usable scalar shadow
+
+```text
+13 divides h product_i q_i       for terminal rank n<=12,
+11 divides h product_i q_i       for terminal rank n<=10.          (19f)
+```
+
+The converse need not hold, so (19e) remains the stronger invariant.  But in
+the depth-four LRC terminal sizes `7..10`, every surviving rank-two cover must
+display both an `11`-divisible and a `13`-divisible guard/terminal entry.  This
+is an exact two-prime invoice before any tree computation.
+
 The same missing-kernel implication holds at `N=7` after a one-sided drift.
 At `X_0=z/7`, every terminal has distance at least `1/7>1/14`.  If the guard
 has distance at least `2/7`, it is already safe.  If its distance is exactly
@@ -409,9 +425,10 @@ so all LRC positivity/distinctness conditions survive.  Nevertheless (20)
 applies with every quotient height equal to one; `(1/2,1/4)` is explicitly
 safe.  Thus a tree deficit can encode a torsion hole rather than a near-cover.
 
-## 5. THM-2103 is false, and maximum-tree equality has its own rigidity
+## 5. A cap-equality refuter and maximum-tree equality rigidity
 
-The false binary target in THM-2103 is refuted even at the exact covering cap.
+The binary target already refuted by THM-2103 also fails at the exact covering
+cap.
 Let `g=(1,0)` and, in label order, put
 
 ```text
@@ -449,8 +466,8 @@ exact referee checks the rank-one criterion
 det(sigma_i V_i-V_0, sigma_j V_j-V_0)=0 for all i,j.    (34)
 ```
 
-The number of passing gauges is zero.  Equations (33)--(34) disprove
-THM-2103's proposed `tau>5/49` or signed-affine-pencil dichotomy.
+The number of passing gauges is zero.  Equations (33)--(34) give an independent
+refuter of the proposed `tau>5/49` or signed-affine-pencil dichotomy.
 
 This is not a cover.  Modulo five, the vector `z=(1,-1)` pairs nontrivially
 with `g,V_0,...,V_7`; the residues are
@@ -529,7 +546,7 @@ tau<5/49:   search finite-ring needles and then higher intersections.       (39)
 
 Signed affine rank and quotient parity are useful sidecars, but neither can
 replace the explicit torsion search.  Equation (39), not the binary conjecture
-in THM-2103, is the lawful next target.
+falsified in THM-2103, is the lawful next target.
 
 ### Assumption challenge and Tournament Analysis
 

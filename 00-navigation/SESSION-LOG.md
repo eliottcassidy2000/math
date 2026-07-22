@@ -50,12 +50,17 @@ Older chronology is in
 - THM-2098 splits terminal ranks `8..11` into a transverse branch with exact
   collision/tree budget `5(n-7)/49` and a branch with at least seven
   guard-proportional bands. THM-2099 computes the exact positive-edge spectrum
-  and shows that pair-tree data alone cannot close rank eight. THM-2114
-  refutes the proposed tree-or-signed-pencil inverse statement by an exact
-  cap row with zero affine sign gauges, then excludes that row by a mod-5
-  needle and all-maximum-tree equality rigidity. Its general finite-row lemma
+  and shows that pair-tree data alone cannot close rank eight. THM-2103
+  refutes the tree-or-signed-pencil inverse statement on exact dyadic rows;
+  THM-2104 closes constant small-prime valuation layers, and THM-2105 forces
+  affine carrier covers on every clock through denominator fourteen.
+  THM-2114 adds an exact cap row with zero affine sign gauges, then excludes
+  that row by a mod-5 needle and all-maximum-tree equality rigidity. Its
+  general finite-row lemma
   forces a `13`-content blocker through rank `12` and an `11`-content blocker
-  through rank `10`; all-primitive rank-two covers in those ranges are empty.
+  through rank `10`; all-primitive rank-two covers in those ranges are empty,
+  and the specialized LRC list must contain `13`- and (through rank ten)
+  `11`-divisible guard/terminal entries.
 - **Remaining:** exact discharge of the rank-seven finite bank and both
   higher-rank branches; the depth-zero/rank-eleven and rank-twelve atlas lanes
   also remain. LRC(14) is not closed.
