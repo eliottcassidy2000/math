@@ -750,4 +750,8 @@ import TournamentH7.GMC2PhiVieta
 import TournamentH7.GMC2DvdKParameterIrreducible
 import TournamentH7.GMC2DvdKAssembly
 import TournamentH7.GMC2RootPacketConcrete
+<<<<<<< Updated upstream
 import TournamentH7.GMC2Thm2067Reduced
+=======
+import TournamentH7.GMC2FullRootPhi
+>>>>>>> Stashed changes
