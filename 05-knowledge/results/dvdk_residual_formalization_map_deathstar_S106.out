@@ -1,0 +1,75 @@
+======================================================================
+CHECK A: CT(f^m) == D_m=[u^{Mm}]R^m, and the cancellation pattern
+
+S100 hard {-2,-1,1,2} c=(1,1,-1,-1)
+  M=2 d=4  CT(f^1..8)=[   0.   -4.    0.   36.    0. -370.    0. 4004.]
+  D_m match=True   first nonzero CT at m=2
+
+THM2070 dihedral u^2+u+u^-1-u^-2
+  M=2 d=4  CT(f^1..8)=[  0.   0.   0. -12.   0.  30.   0. 196.]
+  D_m match=True   first nonzero CT at m=4
+
+unique-cycle {-1,1,2} (DvdK-free)
+  M=1 d=3  CT(f^1..8)=[   0.       1.82   -10.647    4.969  -64.592  204.002 -308.587 1973.587]
+  D_m match=True   first nonzero CT at m=2
+
+generic complex {-2,-1,1,3}
+  M=2 d=5  CT(f^1..8)=[    0.       -1.24     10.176    10.812  -175.24     89.999  2695.757
+ -9405.23 ]
+  D_m match=True   first nonzero CT at m=2
+
+======================================================================
+CHECK B: elementary THM-1550 re-derivation
+  claim: log[ (-t r_d)(-1)^N * prod(large roots) ] = -sum_{m>=1} D_m t^m/m
+  and    prod(small roots) Pi(t) = (-1)^(N+d+1) r_0 t  <=>  all D_m vanish
+
+S100 hard {-2,-1,1,2} c=(1,1,-1,-1)
+  log(const)=0.000002+0.000000j   -sum D_m t^m/m=0.000002-0.000000j   match=True
+  Pi(t)=-9.999980e-04+0.000000e+00j   c*t=-1.000000e-03+0.000000e+00j   Pi==ct? True  (false unless all D_m vanish)
+
+THM2070 dihedral u^2+u+u^-1-u^-2
+  log(const)=0.000000+0.000000j   -sum D_m t^m/m=0.000000-0.000000j   match=True
+  Pi(t)=1.000000e-03+1.355253e-19j   c*t=1.000000e-03+0.000000e+00j   Pi==ct? True  (false unless all D_m vanish)
+
+unique-cycle {-1,1,2} (DvdK-free)
+  log(const)=-0.000001+0.000000j   -sum D_m t^m/m=-0.000001-0.000000j   match=True
+  Pi(t)=1.300001e-03+0.000000e+00j   c*t=1.300000e-03+0.000000e+00j   Pi==ct? True  (false unless all D_m vanish)
+
+generic complex {-2,-1,1,3}
+  log(const)=0.000001-0.000001j   -sum D_m t^m/m=0.000001-0.000001j   match=True
+  Pi(t)=-3.999991e-04-8.999998e-04j   c*t=-4.000000e-04-9.000000e-04j   Pi==ct? True  (false unless all D_m vanish)
+
+======================================================================
+CHECK C: small-root product via UNRAMIFIED Hensel  Z^M = R(sZ),  t=s^M
+  the M unit-roots Z_i(s) in C[[s]] (lift of Z^M=r0); Pi(t)=s^M*prod Z_i = t*prod Z_i
+
+S100 hard {-2,-1,1,2} c=(1,1,-1,-1)
+  Pi_direct=-9.999980e-04+0.000000e+00j   Pi_hensel=-9.999980e-04+0.000000e+00j   match=True
+
+THM2070 dihedral u^2+u+u^-1-u^-2
+  Pi_direct=1.000000e-03+1.355253e-19j   Pi_hensel=1.000000e-03-3.816392e-20j   match=True
+
+unique-cycle {-1,1,2} (DvdK-free)
+  Pi_direct=1.300001e-03+0.000000e+00j   Pi_hensel=1.300001e-03+0.000000e+00j   match=True
+
+generic complex {-2,-1,1,3}
+  Pi_direct=-3.999991e-04-8.999998e-04j   Pi_hensel=-3.999991e-04-8.999998e-04j   match=True
+
+======================================================================
+CHECK D: Vieta C_Phi=prod(all roots)=(-1)^d r0/rd (val_t=0);  Pi(t) unramified (int powers)
+
+S100 hard {-2,-1,1,2} c=(1,1,-1,-1)
+  C_Phi=-1.00000-0.00000j  (-1)^d r0/rd=-1.00000-0.00000j  Vieta match=True
+  Pi/(ct) at t=1e-4:1.00000-0.00000j  t=2e-4:1.00000-0.00000j  ->1 as t->0 (unramified power series in t): True
+
+THM2070 dihedral u^2+u+u^-1-u^-2
+  C_Phi=-1.00000-0.00000j  (-1)^d r0/rd=-1.00000+0.00000j  Vieta match=True
+  Pi/(ct) at t=1e-4:1.00000-0.00000j  t=2e-4:1.00000+0.00000j  ->1 as t->0 (unramified power series in t): True
+
+unique-cycle {-1,1,2} (DvdK-free)
+  C_Phi=0.61905+0.00000j  (-1)^d r0/rd=0.61905-0.00000j  Vieta match=True
+  Pi/(ct) at t=1e-4:1.00000+0.00000j  t=2e-4:1.00000+0.00000j  ->1 as t->0 (unramified power series in t): True
+
+generic complex {-2,-1,1,3}
+  C_Phi=-0.22195-0.43890j  (-1)^d r0/rd=-0.22195-0.43890j  Vieta match=True
+  Pi/(ct) at t=1e-4:1.00000+0.00000j  t=2e-4:1.00000+0.00000j  ->1 as t->0 (unramified power series in t): True
