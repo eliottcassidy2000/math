@@ -162,7 +162,10 @@ structural supplier/seed and a lossless exit.
   seam core is unbounded. MISTAKE-230 blocks a false shortcut: the empty
   full-row safe set does not homeomorphically descend, because the two
   original tails form a zero-safe-child outer step; only the nonempty core
-  safe sets are conjugate down the tower.
+  safe sets are conjugate down the tower. THM-2079 gives the correct symmetry:
+  terminal components pair under reversal, their depth-`r` addresses are
+  `a` and `2^r-1-a`, and each odd tail flips its owner bit, so the outer cover
+  is equivariant rather than obstructed.
   THM-2062 adds the hereditary wheel; THM-2065 makes circuit-free residuals finite.
 - **PROVED relative whole-product decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says bounded scalar relations must lift to vector-character relations. Two

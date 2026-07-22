@@ -30,6 +30,11 @@
   the empty `G_S`; the original tails kill both outer children. Mirror
   evenness of the nonempty terminal survives, but it does not discharge tail
   coverage. The S227 two-charge DvdK Lean work is independent and unaffected.
+- **Correct mirror repair:** THM-2079 proves the safe-child section is
+  reversal-equivariant. Mirror terminal components have bitwise-complementary
+  addresses `a` and `2^r-1-a`; inherited endpoint owners match, while each
+  original odd tail flips its owner parity. This halves the address search
+  but explains why mirror parity alone cannot contradict the outer cover.
 
 **SHARPENED REDUCTION (my contribution = S212 mirror-parity + codex THM-2073/2075):** a dyadic-seam disproof (S=2C ∪ {x,y}) has chi(G_{1/14})=0; chi doubling-invariant => terminal core also chi=0; chi even => needs chi=0 exactly. So Wall A (dyadic-seam case) <=> no hereditarily-primitive TERMINAL core has chi(G_{1/14})=0. Honest: full doubling 2-to-1 (chi doubles) vs per-sheet homeo (chi fixed); disproof chi=0 preserved either way.
 
