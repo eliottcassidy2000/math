@@ -44,6 +44,8 @@ Format per entry:
 - **Unaffected work:** the two-charge DvdK Lean theorems in the same S227
   session are independent of this LRC level mismatch and remain valid.
 
+---
+
 ## MISTAKE-229 (2026-07-21, codex audit of HYP-8905/S225/S103) -- a valid binary symmetric-Hessian subcase and three analogous descent programs were promoted to an NC2-to-JC bridge and equivalent formulations of JC(2)
 
 - **What was claimed:** S103 wrote `NC2 => GMC2 => ... => JC(2)`, identified
