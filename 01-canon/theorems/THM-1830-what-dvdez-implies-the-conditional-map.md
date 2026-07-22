@@ -1,12 +1,25 @@
 ---
 id: THM-1830
-title: "WHAT THE DvdEZ 2D NULLCONE CONJECTURE IMPLIES -- the honest conditional map, and why the naive DvdEZ => GMC(2) => LRC(14) chain BREAKS but a sibling structure survives. (A) DvdEZ 2D nullcone => GMC(2) is a SOLID PROVEN implication (THM-1535 s4 + THM-1540): DvdEZ says N_2 = charge-definite, the charge lemma says charge-definite elements never refute GMC, the sign-coherent case is proved over C, so DvdEZ empties the both-signs residual and GMC(2) holds in full. (B) BUT GMC(2) does NOT imply LRC(14): the moment functionals are DIFFERENT. GMC's charge is PER-VARIABLE (kernel of r independent characters, Z^{n/2}-graded); LRC's resonance lattice {sum k_i v_i = 0} is the kernel of a SINGLE weighted character (Z-graded). For {1..13} the resonance lattice has rank 12 while the GMC per-variable charge-0 lattice has rank 0 -- genuinely different objects, so the chain BREAKS at the second arrow. (C) THE SIBLING STRUCTURE that survives: both LRC and GMC are moment nullcones for a functional killing nonzero values of a LATTICE CHARACTER; the ABSTRACT theorem 'charges in an open halfspace => nullcone-trivial => the conjecture' (THM-1535 s1 / HYP-8370, proved in every dimension) covers the easy (definite) part of BOTH, and neither GMC(2)'s hard case nor LRC(14) is halfspace-separable (both are both-signs) -- so the shared hard core is 'both-signs moment-nullcone non-vanishing', of which DvdEZ is the Gaussian instance and LRC(14) the resonance instance. (D) THE TRANSFER: DvdEZ's STATEMENT is Gaussian-specific but its PROOF (amoeba / finite-place / apolarity, THM-1685/1735/1710) is FUNCTIONAL-AGNOSTIC, using only charge combinatorics + coefficient non-vanishing; so the DvdEZ-METHOD, not the DvdEZ-theorem, is what yields BOTH GMC(2) and LRC(14), as siblings"
-status: PROVED conditional map. (A) is a solid implication (established in THM-1535/1540). (B) is a proven NON-implication (lattice-rank distinction, verified). (C),(D) are the correct sibling framing + transfer route.
+title: "Historical DvdEZ implication map: lattice distinction survives; claimed LRC transfer does not"
+status: >
+  SUPERSEDED / PARTLY REFUTED. The conditional NC2->GMC(2) charge argument
+  and the distinction between Gaussian charge and LRC resonance lattices
+  survive. THM-2022 now proves NC2/GMC(2) independently. The claim that an
+  amoeba/finite-place DvdEZ method is functional-agnostic and therefore proves
+  LRC(14) was never established: no predicate-preserving transfer or LRC
+  noncancellation theorem is supplied. Sections C--F are historical proposals,
+  not proved consequences.
 author: opus-2026-07-20-S436
 depends_on: [THM-1535 (charge lemma + DvdEZ conjecture + halfspace criterion), THM-1540 (sign-coherent over C), THM-1825 (LRC = moment nullcone), THM-1685/1735/1710 (the functional-agnostic proof method), HYP-8365 (DvdEZ), HYP-8620 (LRC resonance nullcone)]
 ---
 
 # THM-1830 — What DvdEZ implies: the honest conditional map
+
+> **CURRENT CORRECTION.** Keep only the elementary conditional charge
+> implication and the lattice-rank obstruction below. The claimed
+> “functional-agnostic” transfer to LRC is conjectural and does not prove
+> LRC(14). NC2/GMC(2) are now closed by THM-2022; LRC(14) and JC(2) remain
+> separate. This file is provenance, not current canon.
 
 Owner asked: assuming the Derksen–van den Essen–Zhao 2D nullcone conjecture, what can we
 prove — can we chain `DvdEZ ⟹ GMC(2) ⟹ LRC(14)`? **The first arrow holds; the second does
@@ -64,14 +77,14 @@ DvdEZ's *statement* is Gaussian-specific. But the **proof method** I have been b
 and (ii) non-vanishing of the coefficient products. Both are present for the LRC resonance
 functional (with `\hat h(k)` as coefficients).
 
-> **So the honest, creative claim is: the DvdEZ-METHOD (not the DvdEZ-theorem) is what proves
-> BOTH GMC(2) and LRC(14).** Proving DvdEZ *by the amoeba/finite-place route* produces the
-> template that, applied to the resonance lattice `Λ(v)` with coefficients `\hat h`, gives the
-> LRC-resonance nullcone (HYP-8620) and hence LRC(14).
+> **Historical proposal, not proved:** an amoeba/finite-place proof of DvdEZ
+> might suggest tests for the resonance lattice. No map preserving the LRC
+> covering predicate or coefficient-weighted noncancellation was constructed,
+> so it cannot be transferred as a theorem and does not imply LRC(14).
 
 ## E. The three routes, ranked
 
-1. **Sibling-method (recommended).** Prove the abstract "both-signs single-character nullcone
+1. **Sibling-method (historical proposal).** Prove the abstract "both-signs single-character nullcone
    non-vanishing" theorem by the amoeba/finite-place method. Its Gaussian instance is GMC(2)
    (via DvdEZ), its resonance instance is LRC(14). One method, two theorems.
 2. **Assume-DvdEZ-for-GMC(2)-only.** `DvdEZ ⟹ GMC(2)` is free (§A). This settles the Gaussian
@@ -82,10 +95,10 @@ functional (with `\hat h(k)` as coefficients).
    *single-character* (diagonal) restriction, not standard GMC — so this recovers §B's
    obstruction, not a new reduction. Recorded as a dead end so it is not re-attempted.
 
-## F. What we can prove *today* assuming DvdEZ
+## F. What the conditional map recorded historically
 
-- **GMC(2)** in full (§A) — and with it the repo's NC2 / Structure-Theorem / Zhao-VC /
-  Mathieu-subspace corollaries via klein's Γ-bridge.
+- **GMC(2)** follows logically from the stated NC2 classification (§A), but
+  its current unconditional proof is THM-2022, not the refuted Gamma bridge.
 - The **charge-definite / sign-coherent part of LRC** (the abstract halfspace theorem, §C) —
   which is *already* unconditional (THM-1535 §1), so DvdEZ adds nothing there.
 - **Not LRC(14)** — that needs the resonance-instance of the same method (HYP-8620), which

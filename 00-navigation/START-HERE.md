@@ -11,13 +11,10 @@ The startup packet prints the exact current commit. Status labels and proof link
 2. **Do not chase the old shortcuts:** uniform good period `q <= 25` is false,
    and uniform emptiness of the twelve-speed sporadic tight branch remains open.
 3. **Major new closure:** NC2, hence unrestricted GMC(2), is **PROVED in repo
-   canon** by THM-2022. Its partial Lean formalization is now modular,
-   root-imported, and sorry-free at the checked nodes: it includes Wick and
-   normalized relations, descent, lowest-face construction, the explicit
-   `DvdK1` interface, height/gap, Lucas, and whole-face Frobenius. Concrete
-   normalized-channel assembly remains in a separate one-`sorry`, non-imported
-   `GMC2NC2Capstone` skeleton; a formal proof of the cited DvdK input also
-   remains.
+   canon** by THM-2022, with the one-variable seed now proved internally by
+   THM-2067. Lean checks the residue, support-face, contradiction, extractor,
+   and height ingredients; `DvdK1` and `HeightWitnessSupplier` remain explicit
+   interfaces, so the paper proof is not yet a complete formal proof.
 4. **Truth discipline:** correction/repaired canon outranks canon, which
    outranks exact computation, hypothesis, synthesis, and historical prose.
 5. **Research posture:** use an Anchor / Niche / Wildcard portfolio. Recover
@@ -56,13 +53,13 @@ are searchable history—not mandatory warm-up.
    Giri–Kravitz one-sided accumulation theorem. Its gap is ineffective; it does
    not make the whole first window finite without an additional conjecture.
 7. **NC2 and GMC(2) are proved.** THM-2022 uses algebraic torus descent, a
-   lowest balanced face, the Duistermaat–van der Kallen constant-term seed,
-   and good-prime Kummer/Lucas/Frobenius amplification of the *whole* face.
-8. **A unique minimal balanced channel needs no DvdK seed.** HYP-8878's
-   elementary single-monomial criterion covers `98/116` supports in one finite
-   small scan; the percentage is not a theorem, coincident channels remain,
-   HYP-8890's complex saddle bypass is open, and MISTAKE-234 makes HYP-8895's
-   return semigroup reachability-only for mixed coefficients.
+   lowest balanced face, THM-2067's Galois-orbit constant-term seed, and
+   good-prime Kummer/Lucas/Frobenius amplification of the *whole* face. DvdK
+   is a stronger alternate, not the current paper dependency.
+8. **Support return is not coefficient noncancellation.** THM-2070 gives a
+   cofinite aperiodic return set with infinitely many zero odd constant terms.
+   HYP-8890/8895 are refuted in general; positive coefficients, two charges,
+   and HYP-8878's unique-minimum monomial criterion survive.
 9. **Whole-packet Frobenius is transferable but not an LRC proof.** THM-2041
    preserves exact-order/parity/conductor packets. LRC still needs a nonzero
    safe seed and a pointwise exit.
@@ -74,11 +71,11 @@ are searchable history—not mandatory warm-up.
     support from indexed multiplicity by a collision tax; the reusable object
     is the support Dirichlet profile, with Abel–Stieltjes/log-block Dini and the
     full Bertrand boundary at `z=1`.
-12. **Poisson, Dixmier, and planar Jacobian scopes separate sharply.** THM-2044
-    makes the two-pair Poisson conjecture false; DC(2) and JC(2) remain open.
-    THM-2045 excludes mates only for its factorized family, while THM-2063
-    tames every one-fiber-linear planar pair. HYP-8905's binary symmetric
-    subcase lands there; MISTAKE-237 blocks the proposed global bridge.
+12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300
+    is the exact new counterexample. THM-2063 closes every one-fiber-linear
+    planar pair; THM-2071 makes the first quadratic-fiber survivor have a
+    nonconstant-square leading coefficient and odd reduced degree at least
+    three. These are pencil gates, not a global cover/Jelonek classification.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed
@@ -103,9 +100,12 @@ are searchable history—not mandatory warm-up.
     branch. THM-2058 splits reduced-order packets and leaves one coprime
     longitudinal interval per fixed bad denominator/owner; THM-2059 joins
     arbitrary-clock core/tail packets by CRT but does not force overlap.
-    THM-2060/2064 reduce imprimitive two-tail capacity to a dyadic seam;
-    THM-2061 constrains but does not empty it, and THM-2062 adds the hereditary
-    CRT wheel. Uniform rank-eleven discharge and the rank-twelve box remain.
+    THM-2060/2064 reduce capacity to a dyadic seam; THM-2061/2062 fold it and
+    add a hereditary wheel; THM-2065 makes circuit-free templates finite;
+    THM-2066 closes divisor-complete cores through `24`; THM-2068 finds a
+    seven-clock minimum only inside `15..34`; and THM-2072/2073 prove fixed
+    banks cannot be universal and replace them by a depth-at-most-eight
+    safe-child tower. Its hereditarily primitive terminal remains open.
 16. **Shared syntax is not a bridge.** MISTAKE-230--233/HYP-8885 retract the
     universal entropy/modular frame; MISTAKE-235 leaves S102's LRC/GMC sums as
     analogy, not AP-core reduction. Fiber size is observable-relative, and
@@ -116,11 +116,11 @@ are searchable history—not mandatory warm-up.
 
 | Topic | Read first | Then use |
 |---|---|---|
-| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2064; keep THM-2065 reserved |
+| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2073; keep THM-2069/2074 reserved |
 | LRC / Frobenius wildcard | [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) | THM-2041 packets; keep seed and pointwise exit explicit |
 | LRC literature | [`CORE-PAPERS.md#lonely-runner-conjecture`](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [`LRC-TECHNIQUE-INDEX.md`](LRC-TECHNIQUE-INDEX.md), source paper |
-| NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022, THM-2040/2041, active guardrails |
-| Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-2044/2045/2063, HYP-8905 |
+| NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2067/2070, formal interfaces, guardrails |
+| Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071, HYP-8905 |
 | Tournaments | [`CURRENT-FRONTIER.md#tournaments`](CURRENT-FRONTIER.md#tournaments) | [`TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md`](TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md), [`THE-ZOO.md`](THE-ZOO.md) with its freshness banner |
 | Integer sequences | [`CURRENT-FRONTIER.md#integer-sequences`](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005 and their frozen outputs |
 | Broad portfolio | [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md) | [`PROBLEM-ATLAS-2026-07-20.md`](PROBLEM-ATLAS-2026-07-20.md) only as historical provenance |

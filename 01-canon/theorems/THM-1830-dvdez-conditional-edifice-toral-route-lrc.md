@@ -16,40 +16,36 @@ what can we prove? can we chain NC2 => GMC(2) => LRC(14)? get creative."
 > lemma and Ramanujan calculations survive; TTNC and the Fock/LRC arrows remain
 > conjectural programs. Read this file as provenance for those objects only.
 
-## 1. The edifice: what NC2 (assumed) makes unconditional
+## 1. Historical conditional edifice — not a proof graph
 
-- GMC(2): via the repo's charge/polar reduction (klein THM-1645 + DvdK
-  angular closure): NC2's algebraic classification is exactly the missing
-  classification input — GMC(2) becomes a THEOREM. All span/degree
-  partial results become instances.
-- The S183-S187 analytic ladder: its CONCLUSION (no two-sided moment-
-  nullcone member) holds outright; the remaining obligations (deleted-
-  level tameness, cusp strata, (L2), far-end) become independent-interest
-  analysis of the integral representation, no longer load-bearing.
-- The Kempf-Ness form (S188/THM-1800): "analytic moment-nullcone = GIT
-  nullcone of the hyperbolic torus w.r.t. the Fischer pairing" — becomes
-  a theorem; DvdEZ = Kempf-Ness for the Bargmann pairing (quotable form).
-- The moment engine (THM-1800): finite tests upgrade from decidability to
-  syntactic CLASSIFICATION (nullcone membership <=> visible one-sidedness).
-- The Fock chain toward JC2 (S166/HYP-8350, arrows still conjectural
-  beyond the first): NC2 supplies arrow one of
-  NC2 => GMC(2) => A_1-vacuum rigidity => {P_top,Q_top} obstruction =>
-  DC_1 => JC2 — the only JC-adjacent chain that stays in N = 2 (the
-  standard de Bondt-van den Essen route inflates dimension into the FALSE
-  GMC(N>=3) zone). DIMENSION AUDIT: with ¬JC external, Mathieu(n_cx)
-  fails at the counterexample's dimension and VC/IC fail with it; NC2 is
-  2D-specific and UNTOUCHED — assuming it is consistent with everything
-  known, and the Fock chain is where its truth would bite hardest.
+The original session proposed the following objects while treating NC2 as a
+hypothesis. They are retained as research provenance, with their current
+status made explicit:
+
+- **GMC(2): proved elsewhere.** THM-2022 proves NC2 and GMC(2) together by a
+  lowest-face/Frobenius argument. The charge-additivity reduction from a
+  strict one-sided nullcone classification is sound, but the older
+  `TNC -> NC2` or generic polar-averaging bridge is not.
+- **S183--S187 analytic ladder: refinement only.** Its desired no-two-sided
+  conclusion follows from THM-2022, while deleted-level tameness, cusp strata,
+  `(L2)`, and far-end estimates remain separate quantitative questions.
+- **Kempf--Ness and finite moment-engine formulations: proposed, not promoted
+  here.** This file does not prove equality of the analytic moment nullcone
+  with a GIT nullcone, nor a finite syntactic classification theorem.
+- **Fock/JC2 chain: conjectural.** No arrow from NC2 or GMC(2) to JC(2) is
+  proved here. THM-2071 separately excludes every quadratic member in an
+  output-pencil/source-foliation direction and gives a tame normal form; that
+  quadratic-pencil theorem is not a completion of this chain or of JC(2).
 
 ## 2. The toral route to LRC(14) — the creative path
 
 **CT-REALIZATION LEMMA (proved; verified 0.073093 = 0.073093):** with
 u = e^{2 pi i t}, the LRC pairing is a CONSTANT-TERM functional:
   int_0^1 prod_j f_j(v_j t) dt = CT_u[ prod_j F_j(u^{v_j}) ].
-So LRC lives on the TORAL side — its natural nullcone partner is the
-PROVED TNC (THM-1605: CT(Lam^m) = 0 for all m <=> the small-root product
-is ct), NOT GMC(2). The owner's chain re-routes: not NC2 => GMC(2) =>
-LRC, but TNC-family => LRC, with NC2's role indirect (the edifice above).
+So LRC lives on the TORAL side — its natural nullcone analogue is the
+PROVED TNC (THM-1550 gives the small-root criterion; THM-1605/2067 rule out
+the both-signs case), not GMC(2). This is an analogy and a proposed twisted
+extension, not a proved `TNC-family => LRC` implication.
 
 **TTNC (new, proposed):** the TWISTED TORAL NULLCONE family: for a
 nonnegative trig polynomial Theta and Laurent Lam,
@@ -94,7 +90,8 @@ rungs are this program's finite tests).
 > count, not merely a Ramanujan statistic.
 
 No completed conditional proof of LRC(14) is claimed. What stands: the
-edifice map (section 1, each arrow graded PROVED/CITED/CONJECTURAL); the
+historical object map in section 1, with all arrows now treated as proposed
+unless independently cited; the
 CT-realization lemma (proved); TTNC named with its proved base camp and
 non-vacuous instances; the tight-instance arithmetic (c_15 != 0, exact);
 and the identification of the repo's mod-q rungs as the program's finite

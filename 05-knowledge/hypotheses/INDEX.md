@@ -57,73 +57,75 @@
 > linked canon and [`MISTAKES.md`](../../01-canon/MISTAKES.md).
 
 - **LRC(14) / CURRENT THEOREM CHAIN (OPEN):** THM-2051 forces a genuine
-  support-`3..5`, height-`2^20` relation; THM-2052 gives rank-twelve finite
-  boxes or a finite rank-eleven two-anchor atlas; THM-2053 gives the transverse
-  deck and disk gate; THM-2055/2056 the owner fan and Kelvin/Farey certificate;
-  THM-2057 closes two AP one-tail planes. None proves LRC(14).
+  support-`3..5`, height-`2^20` relation; THM-2052 gives a rank-twelve finite
+  box or rank-eleven two-anchor atlas; THM-2053/2055/2056 give the deck,
+  owner fan, and Kelvin/Farey gate; THM-2057 closes two AP one-tail planes.
 - **[THM-2058](../../01-canon/theorems/THM-2058-primitive-phase-packets-and-deck-fan-intervals.md)
   / PRIMITIVE PACKET AND OWNER INTERVAL (PROVED; not LRC(14)):** exact
-  reduced-order packets, divisor/Mobius laws, labelled `M^{-1}` transport,
-  primitive discrepancy, and bulk/boundary/null support. A fixed
-  plane/pair/basis/bad-denominator/owner cell leaves one coprime interval minus
-  collision points; the theorem does not discharge it.
+  reduced-order packets and one labelled coprime interval per fixed cell.
 - **[THM-2059](../../01-canon/theorems/THM-2059-crt-fiber-product-phase-packet.md)
-  / CRT PACKET JOIN (PROVED; not LRC(14)):** generalized CRT joins core and
-  tail packets. The histogram dot product counts compatible classes; its
-  `Na/lcm` lift counts grid indices. Zero rejects one clock grid, not the row.
+  / CRT PACKET JOIN (PROVED; not LRC(14)):** exact arbitrary-clock core/tail
+  CRT histogram product. Zero overlap rejects one grid, not the row.
 - **[THM-2060](../../01-canon/theorems/THM-2060-crt-tail-coset-saturation.md)
-  / SHARP TAIL COSETS (PROVED; not LRC(14)):** the clock-independent sheet
-  order is `q=a/gcd(a,w)` and each tail-safe histogram bin has the sharp floor
-  `q-ceil(q/7)`. The one-tail existence consequence was already implicit in
-  THM-760/761/765; the exact histogram and multi-tail capacity are the gain.
+  / SHARP TAIL COSETS (PROVED; not LRC(14)):** sheet order
+  `a/gcd(a,w)`, sharp bin floor `q-ceil(q/7)`, and multi-tail capacity.
 - **[THM-2064](../../01-canon/theorems/THM-2064-multitail-sheet-capacity-and-dyadic-seam.md)
-  / COMMON-FIBER CAPACITY (PROVED; not LRC(14)):** independently repackages
-  THM-2060's capacity layer on one common period. If
-  `sum ceil(t_w/7)/t_w<1`, a safe sheet survives; for two tails the sole
-  capacity tie is `(2,2)`, which reduces a primitive imprimitive-core branch to
-  `2C union {x,y}`, `x,y` odd. Equality is only a residual, not failure.
+  / COMMON-FIBER CAPACITY (PROVED; not LRC(14)):** independent set-cover
+  packaging of THM-2060; the sole two-tail capacity tie is `(2,2)`.
 - **[THM-2061](../../01-canon/theorems/THM-2061-lrc14-dyadic-two-tail-folded-seam.md)
-  / DYADIC SEAM (PROVED REDUCTION; not LRC(14)):** failure is exactly a closed
-  core-safe set inside a strict folded diamond. It forces divisor completeness
-  through 14, `x,y<12 max(C)`, a determinant constraint, and measure at most
-  `4/63`; exact enumeration closes normalized cores with `max(C)<=19`. The
-  remaining signed seam is open.
+  / DYADIC SEAM (PROVED REDUCTION; not LRC(14)):** folds
+  `2C union {x,y}`, closes normalized `max(C)<=19`, and leaves the signed seam.
 - **[THM-2062](../../01-canon/theorems/THM-2062-two-anchor-hereditary-primitivity-crt-wheel.md)
-  / HEREDITARY CRT WHEEL (PROVED; not LRC(14)):** deletion indices exclude at
-  most two projective directions per prime and give an exact fixed-`N` wheel;
-  rank-one deletions give affine `+-1` terminals plus a 1D wheel. This filters
-  templates but supplies no phase-height witness.
+  / HEREDITARY CRT WHEEL (PROVED; not LRC(14)):** exact deletion wheel; no
+  phase-height witness.
 - **[THM-2065](../../01-canon/theorems/THM-2065-two-anchor-fejer-circuit-ray-collapse.md)
-  / CIRCUIT-RAY COLLAPSE (RESERVED; PROOF UNDER AUDIT):** proposed bounded
-  Fejer circuits would pin nonidentity templates to finitely many projective
-  rays. It is outside the proof graph until promoted.
+  / CIRCUIT-RAY COLLAPSE (PROVED REDUCTION; not LRC(14)):** circuit-free
+  strict residuals become finitely many projective rays. Persistent marked
+  circuits remain.
+- **[THM-2066](../../01-canon/theorems/THM-2066-dyadic-seam-owner-word-crt-atlas.md)
+  / OWNER-WORD ATLAS (PROVED / FINITE-EXACT):** closes divisor-complete
+  eleven-cores through maximum `24` uniformly over odd tails.
+- **[THM-2068](../../01-canon/theorems/THM-2068-minimal-dyadic-owner-word-clock-bank.md)
+  / BOUNDED-MENU MINIMUM (PROVED / FINITE-EXACT):** seven clocks are minimum
+  only within `15..34`; this is not a universal bank.
+- **[THM-2072](../../01-canon/theorems/THM-2072-fixed-owner-clock-bank-no-go-and-half-shift-certificate.md)
+  / FIXED-BANK NO-GO (PROVED):** no fixed core-independent finite bank is
+  uniform; antipodal and bounded quarter-fan subclasses have certificates.
+- **[THM-2073](../../01-canon/theorems/THM-2073-lrc14-dyadic-deletion-tower.md)
+  / DYADIC DELETION TOWER (PROVED REDUCTION; not LRC(14)):** depth at most
+  eight to an unbounded hereditarily primitive terminal, which remains open.
+- **[THM-2069](../../01-canon/theorems/THM-2069-k-deletion-code-cogirth-crt-wheel.md)
+  / CODE-COGIRTH WHEEL (RESERVED):** proof under audit; no extremal-code
+  existence claim may be used.
+- **[THM-2074](../../01-canon/theorems/THM-2074-lrc14-density-one-relation-hyperplane-sieve.md)
+  / DENSITY-ONE SIEVE (RESERVED):** proof under audit; not LRC(14).
 - **[THM-2063](../../01-canon/theorems/THM-2063-one-fiber-linear-planar-keller-pairs.md)
-  / ONE-FIBER-LINEAR KELLER PAIRS (PROVED; JC(2) OPEN):** coefficient descent
-  gives two triangular normal forms and explicit inverses. A hypothetical
-  planar Keller counterexample has fiber degree at least two in every source
-  direction for every nonzero output-pencil member.
+  / ONE-FIBER-LINEAR KELLER PAIRS (PROVED; JC(2) OPEN):** exact triangular
+  normal forms and inverses; every survivor has all-direction fiber degree two.
+- **[THM-2071](../../01-canon/theorems/THM-2071-quadratic-fiber-square-parity-gate.md)
+  / QUADRATIC-FIBER GATE (PROVED; JC(2) OPEN):** the leading coefficient is a
+  square; the first unresolved reduced complementary degree is odd and at
+  least three. This is not a Jelonek or global cover-degree classification.
+- **[THM-2067](../../01-canon/theorems/THM-2067-galois-orbit-product-closes-one-variable-dvdk.md)
+  / ONE-VARIABLE CT EXISTENCE (PROVED):** project-internal Galois-orbit proof
+  of the bare seed used by THM-2022; no effective return bound.
+- **[THM-2070](../../01-canon/theorems/THM-2070-horizontal-wick-embedding-and-dihedral-return-cancellation.md)
+  / SEMIGROUP BYPASS CORRECTION (PROVED):** cofinite support returns do not
+  imply eventual mixed-coefficient noncancellation.
 - **[HYP-8905](HYP-8905-binary-symmetric-jc2-subcase-and-separate-descent-programs.md)
   / BINARY SYMMETRIC SUBCASE + JC(2) PROGRAMS (MIXED; MISTAKE-237):** the
-  homogeneous binary nilpotent-Hessian calculation is valid and lands in
-  THM-2063. Full JC(2), its four-variable symmetric/VC target, and all
-  degree-`>=3` survivors remain open. VC(4), leading-form/Jelonek, and
-  Lame/Newton descent are separate routes; NC2/GMC and rank/cycle comparisons
-  are analogies only.
-- **HYP-8900 / S224 (VERIFIED PER-ROW EVALUATOR):** pair-sum vertices and
-  reflection compute a fixed row exactly; the deep well is `14/183`. This does
-  not make the unbounded covering family finite or prove Wall A/AP rigidity.
+  homogeneous binary calculation lands in THM-2063; THM-2071 adds the scoped
+  quadratic-fiber gate. VC(4), Jelonek/leading forms, and Newton/Lamé remain
+  separate; raw `HYP-8910` claims are historical.
 - **[HYP-8879](HYP-8879-lrc-gmc-weighted-fiber-analogy-corrected.md)
-  / S102 (PARTIAL ANALOGY; MISTAKE-235):** Fejer-regularized LRC is an infinite
-  sinc-weighted lattice fiber; a fixed GMC moment is a finite mass slice with
-  different weights. The toy truncations prove no identity or AP reduction.
+  / S102 (PARTIAL ANALOGY; MISTAKE-235):** differently weighted fibers; no
+  identity, AP reduction, or LRC/GMC transfer.
 - **[HYP-8895](HYP-8895-return-semigroup-reachability-not-noncancellation.md)
-  / S223 (REACHABILITY ONLY; MISTAKE-234):** return lengths form a support
-  semigroup and characterize positive-coefficient nonvanishing. Mixed
-  coefficients can cancel on infinitely many reachable masses.
-- **HYP-8890 / S222 (OPEN DvdK-BYPASS ROUTE):** positive-coefficient real
-  saddles and periodic two-charge cases work. General complex coefficients
-  still need dominant-saddle existence, uniqueness modulo period, and
-  noncancellation, including degenerate saddles.
+  / S223 (REFUTED IN GENERAL BY THM-2070):** positive-coefficient support
+  reachability survives; mixed signs can cancel infinitely often.
+- **HYP-8890 / S222 (REFUTED IN GENERAL BY THM-2070):** no general unique
+  dominant saddle or eventual noncancellation theorem. Special positive and
+  two-charge cases survive.
 - **HYP-8878 / S101 (PROVED ELEMENTARY CRITERION):** a unique minimum-mass
   balanced channel makes the first constant term one nonzero monomial. The
   `98/116` frequency is a finite scan; coincident channels remain.
@@ -17909,3 +17911,21 @@ b((x+c)^n+(x-c)^n)/2 GIT-deformation; var(lambda^2) into the zoo.
 This current index is intentionally short. Search the linked historical ledger
 for provenance, then return here, canon, and the correction ledger for status.
   one `sorry`; normalized-channel wiring and formal DvdK remain.
+  balanced channel is one nonzero monomial; coincident channels remain.
+- **HYP-8900 / S224 (VERIFIED PER-ROW EVALUATOR):** pair-sum vertices compute
+  a fixed row exactly; this does not make the unbounded family finite.
+- **HYP-8871 / HYP-8846 (OPEN FINITE-ATLAS COMPLETION):** compose decks,
+  owner/Farey states, circuits, CRT wheels, owner words, safe-child towers,
+  clocks, pair sums, Fejer, rank, and Euler endpoints. Hereditary terminals and
+  persistent circuits are the sharpest new residuals.
+- **HYP-8885/8880/8876/8875/8870 (RETYPED OR REFUTED):** entropy, Paley,
+  modular-cusp, and Frobenius language supplies analogies only until a
+  loneliness-preserving map is proved.
+- **HYP-8865/8860/8855 (MIXED, CORRECTED):** no Heegner `-7` classification;
+  the AP chain is an index-`11!` frame, not the saturated code.
+- **HYP-8850/8845/8841/8840 (PARITY AND TERMINATION SIDECARS):** exact local
+  symmetries do not create the first survivor; global exits still require
+  labelled height, clocks, pair sums, Fejer, rank, or Euler data.
+- **HYP-8805 / THM-2022 FORMALIZATION (PARTIAL):** checked residue,
+  support-face, contradiction, extractor, and height ingredients; explicit
+  `DvdK1` and `HeightWitnessSupplier` interfaces remain. THM-2067 is not Lean.

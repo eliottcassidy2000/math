@@ -6,14 +6,16 @@ status: >
   nilpotent-Hessian subcase is proved and lands in THM-2063. The proposed
   NC2/GMC-to-JC bridge, rank/cycle boundary, and equivalence among VC(4),
   leading-form/Jelonek, and Lame/Newton descent are not proved. JC(2) remains
-  open, including higher fiber degree and higher geometric degree strata.
+  open. THM-2071 closes every quadratic-fiber pencil cell; a survivor has fiber
+  degree at least three in every source/output-pencil direction.
 source: codex-2026-07-21-HYP-8905-audit
 related:
-  - THM-1330
-  - THM-1345
-  - THM-1830
-  - THM-2045
-  - THM-2063
+  - THM-1330-keller-monoid-exact-picture-inverse-jelonek-cusp-rule
+  - THM-1345-jc2-equivariant-category-poisson-reframing-dc1-shadow
+  - THM-1830-conditional-map-what-assuming-the-2d-nullcone-conjecture-buys
+  - THM-2045-the-smooth-factorized-R-family-has-no-planar-jacobian-mate
+  - THM-2063-one-fiber-linear-planar-keller-pairs
+  - THM-2071-quadratic-fiber-square-parity-gate
   - HYP-8879
   - MISTAKE-235
   - MISTAKE-236
@@ -89,15 +91,20 @@ The following may share a descent/termination motif but remain distinct:
    worst-case behavior for the ordinary Euclidean algorithm.
 
 Any future transfer must record source, target, map, preserved predicate,
-dimension change, information loss, and a hostile example. The degree-three
-covering stratum is the first possible geometric degree after known exclusions,
-not the whole remaining problem; higher degrees remain live.
+dimension change, information loss, and a hostile example. THM-2071 makes
+fiber degree three the first possible pencil degree after known exclusions.
+This is not generic cover degree or a Jelonek classification; higher pencil
+degrees and all distinct geometric-degree questions remain live.
 
 ## Reusable mechanism
 
 The valid shared mechanism is **fiber-degree descent**. THM-2063 shows that
 fiber degree at most one in any source/output-pencil direction is terminal.
-A productive JC(2) search should therefore track the full biprojective table
+THM-2071 then strengthens its square/parity descent: centered parity and a
+noncancellation identity force the leading coefficient constant and the
+reduced complementary degree one, so every quadratic cell is tame. This is
+not generic cover degree or Jelonek data. A productive JC(2) search should
+therefore track the full biprojective table
 
 ```text
 (source-fiber direction, output-pencil direction) -> exact fiber degree,   (7)

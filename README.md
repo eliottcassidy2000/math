@@ -46,32 +46,28 @@ As of 2026-07-21:
   certificate. THM-2057 closes two scaled AP one-tail planes: the omitted-12
   core by `12a`/`14a` clocks and an `84a|w` binding phase, and the full
   `{1,...,12}` core by `13a`/`14a` clocks and a `182a|w` deep-well phase. The
-  live prize is a lossless deck/clock/Farey/endpoint discharge for every
-  remaining rank-eleven star cell; rank twelve is confined to a separate
-  finite box that still needs exact decision. THM-2058 proves the primitive
-  packet/deck-fan carrier and THM-2059 the arbitrary-clock CRT join. THM-2060/
-  2064 reduce imprimitive two-tail capacity to a dyadic seam; THM-2061
-  constrains but does not empty it, and THM-2062 adds a hereditary CRT wheel.
-  LRC(14) remains open; a failed gate means uncertified, not unsafe.
+  later chain makes the residual sharper: THM-2058/2059 give phase packets and
+  CRT joins; THM-2060/2064 isolate a dyadic seam; THM-2061/2062 fold it and add
+  a hereditary wheel; THM-2065 makes circuit-free templates finite; THM-2066
+  closes divisor-complete cores through `24`; THM-2068 compresses that bounded
+  census; and THM-2072/2073 replace the impossible universal fixed bank by an
+  adaptive depth-at-most-eight safe-child tower. LRC(14) remains open at its
+  hereditarily primitive terminal, persistent circuits, and other atlas cells.
 - **NC2 and GMC(2) are PROVED in repo canon** by THM-2022's lowest-balanced-face
-  Frobenius argument. Its modular Lean spine is root-imported and sorry-free at
-  the checked nodes, including descent, face construction, DvdK seed/reference
-  interfaces, height/gap, Lucas, and whole-face Frobenius/noncancellation. A
-  separate `GMC2NC2Capstone` module typechecks the conditional assembly skeleton
-  with one `sorry` and is deliberately not root-imported. The remaining work is
-  its concrete normalized-Wick-channel wiring and a formal proof of the cited
-  DvdK input itself. HYP-8878 removes that citation on any lowest face with a
-  unique minimum-mass balanced channel; its `98/116` prevalence is only one
-  finite small-support census. MISTAKE-234 shows that support-return
-  reachability does not control mixed-sign cancellation.
+  Frobenius argument. THM-2067 supplies its bare one-variable constant-term
+  seed internally; full DvdK is only a stronger alternate. Lean checks the
+  residue, face transport, contradiction, extractor, and height ingredients,
+  while `DvdK1` and `HeightWitnessSupplier` remain explicit interfaces—the
+  paper theorem is not yet fully formalized. THM-2070 explains why a cofinite
+  support-return semigroup cannot replace coefficient noncancellation.
 - **GMC is false from dimension 3 onward.** Dimension two is the sharp surviving
   case handled by THM-2022; dimensions one and two must not be conflated with
   the higher-dimensional counterexamples.
-- **The two-pair Poisson conjecture is false; DC(2) and JC(2) remain open.**
-  THM-2045 excludes only its factorized family, while THM-2063 tames every
-  one-fiber-linear planar pair. HYP-8905's binary symmetric subcase lands
-  there; MISTAKE-237 blocks the proposed NC2/GMC bridge. THM-2049 leaves
-  polynomial termination and the coupled `D` column as the Weyl-side gates.
+- **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300
+  gives the exact three-variable certificate. THM-2063 tames one-fiber-linear
+  planar pairs, and THM-2071 forces a square leading coefficient with odd
+  reduced degree at least three in the first quadratic-fiber survivor. Neither
+  is a cover-degree classification or an NC2/GMC bridge (MISTAKE-236/237).
 - **Tournament work has moved from isolated invariants to operations and
   decomposition:** order-join, strong cores, signed Rédei data, local
   subtournament censuses, and invariant-independence witnesses. Rank matches

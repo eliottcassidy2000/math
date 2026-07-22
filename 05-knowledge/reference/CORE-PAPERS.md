@@ -25,9 +25,10 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
 - **Reciprocal sequences:** keep the support set separate from its indexed
   multiplicities.  The external figurate papers supply examples and formulas;
   the repo's Abel--Dini and support-Dirichlet theory is a later extension.
-- **Jacobian/Dixmier/Poisson:** THM-2044 proves the two-pair Poisson conjecture
-  false in repo canon.  Stable equivalence theorems do not turn this object into
-  a direct `A_2` Dixmier or planar Jacobian counterexample; both remain open.
+- **Jacobian/Dixmier/Poisson:** the exact map in THM-1300 refutes `JC(n)` for
+  every `n>=3`; `JC(2)`, `DC(1)`, and `DC(2)` remain open.  THM-2071 closes all
+  quadratic-fiber pencil cells, not planar JC.  Separately, THM-2044 refutes the
+  two-pair Poisson conjecture; stable equivalence does not collapse these ranks.
 
 ## Lonely Runner Conjecture
 
@@ -224,6 +225,22 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
 
 ## Jacobian, Dixmier, and Poisson
 
+### July 2026 explicit dimension-three Jacobian certificate — public announcement, no paper
+
+- **Primary / freshness:** [original public announcement](https://x.com/__alpoge__/status/2079028340955197566),
+  2026-07-19, and [exact displayed map and certificate](https://jacobianfun.org/jacobian-explained).
+  **ANNOUNCEMENT ONLY:** no stable paper or peer review was located by 2026-07-21;
+  do not infer discovery credit beyond the primary wording.
+- **Imported role:** the displayed map has constant Jacobian determinant `-2`
+  and an explicit triple collision, so it refutes `JC(3)` and, by padding,
+  `JC(n)` for all `n>=3`.
+- **Repo consumer:** [THM-1300](../../01-canon/theorems/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md)
+  independently checks both identities exactly and records the downstream Weyl
+  and equivariant anatomy.
+- **Does not prove:** `JC(2)`, `DC(1)`, or `DC(2)`.  Verification, provenance,
+  publication, and priority are separate claims; use THM-1300's byte-zero
+  correction before repeating any historical attribution in its body.
+
 ### Belov--Kanel--Kontsevich — *The Jacobian Conjecture is stably equivalent to the Dixmier Conjecture*
 
 - **Primary / freshness:** [arXiv:math/0512171](https://arxiv.org/abs/math/0512171),
@@ -339,22 +356,20 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
   *Indagationes Mathematicae* **9** (1998), 221--231,
   [DOI 10.1016/S0019-3577(98)80020-7](https://doi.org/10.1016/S0019-3577(98)80020-7).
 - **Imported role:** classifies Laurent polynomials whose every positive power
-  has zero constant term.  The elementary one-variable Theorem 2 and Remark 3
-  are the exact nonzero constant-term seed used on the lowest balanced Wick
-  face in the repo's proof of NC2/GMC(2).
+  has zero constant term.  Its one-variable theorem is a stronger historical
+  route to the nonzero constant-term seed; the current internal dependency is
+  the elementary Galois-orbit proof in THM-2067.
 - **Repo consumers:**
   [THM-1630, exact citation identification](../../01-canon/theorems/THM-1630-tnc-is-duistermaat-van-der-kallen-theorem-2.md),
   [THM-1645, angular/radial split](../../01-canon/theorems/THM-1645-gmc2-angular-layer-is-dvdk-the-gap-is-purely-radial.md),
+  [THM-2067, internal bare-existence replacement](../../01-canon/theorems/THM-2067-galois-orbit-product-closes-one-variable-dvdk.md),
   [THM-2022](../../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md),
-  [HYP-8878, the unique-minimum-channel citation-free stratum](../../07-reflections/the-sharp-dvdk-free-criterion-unique-primitive-cycle-deathstar-S101.md),
-  [HYP-8890, the open saddle/Watson replacement route](../../07-reflections/bypassing-dvdk-the-saddle-point-watson-route-to-the-gmc2-angular-floor-boxeph-S222.md),
-  and [HYP-8895, the corrected support-return semigroup](../../07-reflections/one-dimensional-coprime-intervals-complete-the-dvdk-bypass-boxeph-S223.md).
+  and [THM-2070, failed-bypass correction](../../01-canon/theorems/THM-2070-horizontal-wick-embedding-and-dihedral-return-cancellation.md).
 - **Does not prove:** the Gaussian radial/factorial step, Frobenius survival of
   a complete Wick face, or an effective bound on the first nonzero constant
-  term.  Characteristic-zero hypotheses are essential. HYP-8878 bypasses the
-  citation only when the minimum balanced channel is unique; HYP-8890 has not
-  proved the general complex dominant-saddle/noncancellation step. MISTAKE-234
-  shows that HYP-8895's conductor cannot control mixed-sign cancellations.
+  term.  Characteristic-zero hypotheses are essential.  THM-2070 refutes the
+  general HYP-8890/8895 semigroup and saddle bypass: support return does not
+  imply weighted noncancellation.
 
 ### Erman--Smith--Várilly-Alvarado — *Laurent polynomials and Eulerian numbers*
 

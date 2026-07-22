@@ -7,8 +7,10 @@ status: >
   polygon, and the Farey defect inequality certifies whole unimodular cones.
   THM-2058/2059 provide exact phase packets and CRT joins; THM-2062 adds a
   hereditary CRT wheel, and THM-2065 makes every circuit-free strict residual
-  a finite ray packet. Persistent bounded marked circuits still need clocks,
-  binding phases, or Euler certificates. Uniform atlas discharge is not proved.
+  a finite ray packet. THM-2066 closes bounded divisor-complete dyadic cores,
+  while THM-2072/2073 force an adaptive safe-child route ending at an open
+  hereditary terminal. Persistent marked circuits and uniform atlas discharge
+  remain unproved.
 source: codex-2026-07-21-LRC-normal-fan-sail
 related:
   - THM-2052
@@ -25,6 +27,9 @@ related:
   - THM-2064
   - THM-2065
   - THM-2066
+  - THM-2068
+  - THM-2072
+  - THM-2073
   - HYP-2108
   - HYP-2647
   - HYP-2896
@@ -89,6 +94,13 @@ counterexample needs two complementary words. These word constraints compose
 by CRT. The bank `15..34` closes every primitive divisor-complete quotient
 core in `{1,...,24}`. Any later seam atlas should carry the word and its
 residue class modulo `2N`, not merely tail eligibility or packet cardinality.
+
+THM-2068 compresses the bounded `15..34` census to a minimum seven-clock bank,
+but THM-2072 proves that no fixed core-independent finite bank works on
+unbounded cores. THM-2073 supplies the lawful replacement: preserve the killed
+lift, safe child, and owner word through at most eight quotient steps. The
+terminal is hereditarily primitive but unbounded, so this is a state transition
+for the automaton—not an accepting state.
 
 THM-2065 supplies the next exact split. A THM-2051 bounded higher relation is
 either persistent in the coefficient template or selects one primitive

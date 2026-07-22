@@ -15,12 +15,12 @@ status: >
   effective first-return bound.
 source: codex-2026-07-21-dvdk-galois-orbit
 depends_on:
-  - THM-1550
+  - THM-1550-an-exact-criterion-for-the-toral-nullcone
 related:
-  - THM-1605
-  - THM-1630
-  - THM-2022
-  - THM-2058
+  - THM-1605-tnc-proved-monodromy-transitivity
+  - THM-1630-tnc-is-duistermaat-van-der-kallen-theorem-2
+  - THM-2022-gmc2-frobenius-lowest-balanced-face
+  - THM-2058-primitive-phase-packets-and-deck-fan-intervals
 ---
 
 # THM-2067 -- Galois orbit-products close the one-variable input

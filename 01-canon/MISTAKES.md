@@ -180,7 +180,7 @@ bridge is `MISTAKE-233`, and additive-energy/augmentation is `MISTAKE-226`.
   proved sparse-relation localization; its residual contains every genuine
   support-`3..5` relation plane, not just AP cores.
 
-## MISTAKE-234 (2026-07-21, audit of S223 / HYP-8895) -- support reachability was promoted to mixed-sign constant-term noncancellation
+## MISTAKE-234 (2026-07-21, THM-2070 audit) -- quotient data were promoted to weighted noncancellation
 
 - **What was claimed:** S223 correctly encoded the return lengths
   `R={m:0 in mS}` of a two-sided Laurent support as an additive semigroup, then
@@ -203,13 +203,25 @@ bridge is `MISTAKE-233`, and additive-energy/augmentation is `MISTAKE-226`.
   gaps have gcd one. S222/HYP-8890 explicitly leaves the general complex
   dominant-saddle/noncancellation step open, so citing it cannot close this
   gap.
+- **The same lost-coordinate error in THM-1840:** the original functional
+  corollary called `F` "diagonal by charge" (or said that it depended only on
+  charge) and then used `F(h)=F(1)CT(h)`. Diagonality does not imply projection.
+  For `Lambda=u+u^(-1)`, take `F(1)=1`,
+  `F(u^2)=F(u^(-2))=-1`, and `F(u^k)=0` otherwise. This is a perfectly
+  charge-labelled linear functional, but `F(Lambda^2)=0` while
+  `F(1)CT(Lambda^2)=2`. The missing coordinate is the functional's weight on
+  every nonzero charge, just as the semigroup quotient forgets every channel
+  coefficient and phase.
 - **Correct framing:** the return semigroup, pair-period law, and conductor are
   exact **reachability** data. For positive coefficients,
   `CT(f^m)!=0 iff m in R`; for signed or complex coefficients, retain channel
   phases and use a separate noncancellation theorem. HYP-8878's unique-minimum
   channel is one valid elementary sufficient case. HYP-8895 is therefore a
   useful support-sidecar construction, not a DvdK replacement or an effective
-  coefficient-uniform bound.
+  coefficient-uniform bound. Likewise THM-1840's functional corollary requires
+  the charge-**projecting** rule `F(u^k)=0` for every `k!=0`, with `F(1)!=0`;
+  the two-charge constant-term formula itself remains proved. THM-2070 is the
+  repaired theorem and supplies both exact counterexamples.
 
 ## MISTAKE-233 (2026-07-21, audit of S219/S220 / HYP-8880) -- classical theta and modular-curve facts were promoted to an LRC cusp-form obstruction without a map
 

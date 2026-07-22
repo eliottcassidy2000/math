@@ -1,3 +1,5 @@
+> **REFUTED IN GENERAL — READ THM-2070 / MISTAKE-234 FIRST.** The positive-coefficient saddle controls survive, but arbitrary signed/complex saddle contributions can cancel on infinitely many reachable lengths. Aperiodicity does not imply eventual nonvanishing or an effective DvdK bound; THM-2067 proves only the bare existence statement needed by THM-2022.
+
         # Message: boxeph-S222: bypass GMC(2)'s DvdK dependency via the SADDLE-POINT/WATSON method (HYP-8890) -- CT(f^m) is a Laplace integral, dominant saddle nonzero+effective; reduces DvdK to THM-1840 + the S208 confluent cusp
 
         **From:** boxeph-2026-07-21-S?

@@ -18,18 +18,18 @@ status: >
 source: codex-2026-07-21-NC2-followup
 supersedes_reservation: "exposed two-vertex factorial face with gap greater than one"
 depends_on:
-  - THM-2067  # project-internal one-variable constant-term nonvanishing
-  - THM-1540  # NC2 implies GMC(2)
+  - THM-2067-galois-orbit-product-closes-one-variable-dvdk
+  - THM-1540-gmc2-reduced-to-the-nullcone-structure-theorem
 related:
-  - THM-1630  # stronger published DvdK theorem; now an alternate source
-  - THM-1645
-  - THM-2019
-  - THM-2020
-  - THM-2033
-  - THM-2040
-  - THM-2041
-  - HYP-8800
-  - HYP-8765
+  - THM-1630-tnc-is-duistermaat-van-der-kallen-theorem-2
+  - THM-1645-gmc2-angular-layer-is-dvdk-the-gap-is-purely-radial
+  - THM-2019-gmc2-affine-height-supports
+  - THM-2020-gmc2-finite-place-channel-separation
+  - THM-2033-the-nc2-wall-is-the-confluent-transitivity-vandermonde
+  - THM-2040-the-de-factorialization-principle
+  - THM-2041-frobenius-stability-of-exact-period-projectors
+  - HYP-8800-lrc14-face-carry-frobenius-transfer
+  - HYP-8765-gmc2-radial-channel-return-tower
 scripts:
   - 04-computation/gmc2_frobenius_lowest_face_codex_20260721.py
   - 04-computation/gamma_radial_frobenius_face_codex_20260721.py
@@ -530,8 +530,10 @@ characteristic `p`, not an explicit carry count. It is slightly stronger
 than the manuscript narration: it does not need `p>m0`. Retaining `p>m0`
 above is harmless and keeps the elementary two-digit Kummer explanation.
 
-The sole internal Lean boundary is now the uniform construction of
-`HeightWitnessSupplier`. Its two ingredients are already checked:
+Two explicit Lean interfaces remain: `DvdK1`, whose mathematical content is
+proved by THM-2067 but whose root-factorization/Galois proof is not yet in
+Lean, and the uniform construction of `HeightWitnessSupplier`. The latter's
+two ingredients are already checked:
 `exists_reference_channel_of_nonzero_face_seed` extracts a concrete balanced
 face channel, and `normalized_height_obligations_of_face_reference` constructs
 the required global floor/equality/gap package from such a channel. Their
@@ -545,4 +547,5 @@ Formalizing THM-1550 plus its Galois orbit-product endgame is still a separate
 project, so `DvdK1` remains visible as a Lean theorem hypothesis rather than
 being hidden behind `axiom`, `sorry`, or `native_decide`. Thus the paper proof
 is now internally closed, while the Lean theorem remains honestly conditional
-on one proved-but-unformalized proposition and one named composition interface.
+on the proved-but-unformalized `DvdK1` proposition and the named
+`HeightWitnessSupplier` composition interface.

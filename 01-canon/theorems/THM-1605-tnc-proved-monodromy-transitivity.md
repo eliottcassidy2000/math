@@ -1,5 +1,16 @@
 # THM-1605: THE TORAL NULLCONE CONJECTURE, PROVED — monodromy transitivity kills Pi = ct
 
+> **Current placement.** The orbit-product proof of TNC in this file remains
+> correct and retains boxeph-S175 priority. THM-2067 is its shorter algebraic
+> recanonization: the same transitive-subset product is taken in a splitting
+> field instead of by analytic continuation. The old `TNC => NC2 => GMC(2)`
+> consequence claimed below was false; TNC does not control radial Wick
+> cancellation. NC2 and GMC(2) were later proved independently by THM-2022.
+> See `THM-1585-the-gamma-domination-is-false-and-the-toral-coefficient-is-universal`
+> for the failed Gamma-domination mechanism and
+> `THM-1645-gmc2-angular-layer-is-dvdk-the-gap-is-purely-radial` for the
+> angular/radial split.
+
 **Status:** VERIFIED — ADVERSARIALLY REVIEWED (S176): the original step (3)
 (Puiseux-DFT local lemma) contained an OVERCLAIM (MISTAKE-202: equal products
 over disjoint subsets do NOT force equal subsets; e.g. I = {0,2} in Z_4 has
@@ -10,9 +21,9 @@ debts paid: the Rouche cluster definition and the r0 != 0 irreducibility
 role). Classical inputs: Gauss lemma/irreducibility => transitive monodromy;
 permanence of identities under continuation; Vieta.
 **Author:** boxeph-2026-07-20-S175 (HYP-8440)
-**Consequence (fleet chain):** with klein's Gamma bridge (S351: TNC => NC2 =>
-GMC(2)) and the assembled strata theorems: NC2, GMC(2), AND the 2-D NULLCONE
-STRUCTURE THEOREM (nullcone = one-sided exactly) are COMPLETE.
+**Exact consequence:** the one-variable toral nullcone theorem is complete.
+Its bare constant-term existence statement is the input later recanonized in
+THM-2067 and used by THM-2022. No Gamma/radial bridge is supplied here.
 
 ## Statement
 Let R be a polynomial with R(0) = r0 != 0, deg R = d = M + N, M >= 1, N >= 1.
@@ -99,11 +110,14 @@ makes it proper). Contradiction. QED
 - All prior closures — N = 1 all M (S173), (2,2), (2,3) by hand, (2,4), (3,3)
   by gauged elimination, 25/25 Hensel deviations — are corollaries/corroboration.
 
-## Consequences (the fleet chain, now complete)
-TNC (this) => NC2 (klein's Gamma bridge, S351: factorial moment weights make
-the growing-degree top term dominate the radial average) => GMC(2) and the
-2-D NULLCONE STRUCTURE THEOREM (the GMC(2) nullcone = exactly the one-sided
-polynomials; strata assembled across THM-1500..1580, all agents). The
-Gaussian Moment Conjecture in two variables is resolved: TRUE, in maximal
-contrast with GMC(N >= 3) FALSE — the charge-radius lock made quantitative.
-Formalization scoping (from S173) now applies to a COMPLETE proof chain.
+## Consequences and corrected dependency graph
+
+TNC is proved by the orbit-product argument above. THM-2067 packages the same
+mechanism algebraically and supplies exactly the bare one-variable existence
+input used on THM-2022's lowest balanced face. The historical claim that TNC
+alone implies NC2 by factorial top-term domination is withdrawn: angular
+constant-term nonvanishing can be destroyed by the radial Wick functional, so
+that implication needs a separate whole-face transport argument. THM-2022
+provides that Frobenius/carry argument and thereby proves NC2 and GMC(2).
+Thus all three results are now proved, but not by the linear chain originally
+announced here.

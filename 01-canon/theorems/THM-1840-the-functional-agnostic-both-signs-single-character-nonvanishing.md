@@ -10,15 +10,15 @@ status: >
   retracted; THM-2070 gives an explicit counterexample. The general many-charge case is not
   closed by the binomial formula: its support returns can cancel coefficientwise.
 source: klein-2026-07-20-S393 (owner: prove the abstract 'both-signs single-character nullcone non-vanishing' by the functional-agnostic method; think cyclotomic)
-depends_on:
-  - THM-1830  # the conditional map naming the common return-time parent — this proves its clean case
-  - THM-1745  # mac-mini: the coprime-pair first-return time (p+q)/gcd = m₀
+depends_on: []  # the binomial/charge-balance proof below is self-contained
 related:
-  - THM-1770  # the {−1,0,1} depth-growth witness = the first cancellation past the single-character case
-  - THM-1810  # bosonic/fermionic: the many-charge cancellation is the 'no sign to cancel' wall
-  - THM-1805  # the 3-cycle as the intransitivity atom (the both-signs atom, tournament side)
-  - THM-790   # the blue parity law (1 odd / 0 even) — the charge-0/fixed-point parity lore
-  - THM-2070  # corrects the functional scope and supplies the dihedral cancellation control
+  - THM-1830-dvdez-conditional-edifice-toral-route-lrc
+  - THM-1745-multistraddle-combines-by-max-and-the-moment-bound-is-a-return-time
+  - THM-1770-gmc2-detection-depth-grows-with-radial-degree
+  - THM-1810-the-bosonic-permanent-side-is-why-gmc2-is-hard
+  - THM-1805-the-vandermonde-is-a-signed-tournament-sum-intransitivity-cancels
+  - THM-790-blue-parity-law-proved
+  - THM-2070-horizontal-wick-embedding-and-dihedral-return-cancellation
 ---
 
 # THM-1840 — two-charge nonvanishing and charge projection

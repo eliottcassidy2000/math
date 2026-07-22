@@ -538,94 +538,87 @@ changes that should alter how the next session starts.
   sparse code. Rank twelve is a finite maximal-minor box; rank eleven is a
   finite two-anchor, one-projective-parameter atlas.
 - **THM-2053/2055/2056:** the rank-eleven state has an exact transverse deck,
-  an indexed open-disk sufficient-gate failure carrier, a signed-hull owner
-  fan, and a finite Kelvin/Farey determinant certificate. Non-hull runners,
-  tie owners, basis data, and phase/endpoint sidecars remain load-bearing.
-- **THM-2057:** two scaled AP one-tail planes are closed by missing clocks and
-  affine binding phases. This models a mechanism, not a general-star theorem.
-- **THM-2058 PROVED:** exact reduced-order packets, labelled `M^{-1}`
-  transport, primitive discrepancy, bulk/boundary/null support, and one
-  coprime interval per fixed plane/pair/basis/bad-denominator/owner cell. It is
-  a carrier, not an interval discharge.
-- **THM-2059 PROVED:** generalized CRT joins core and tail packets. The
-  histogram dot product counts compatible classes and its `Na/lcm` lift counts
-  grid indices. Zero overlap rejects one clock grid only.
-- **THM-2060 PROVED:** the relative sheet order is `a/gcd(a,w)` and every
-  tail-safe bin has the sharp floor `q-ceil(q/7)`. The older one-tail dodge is
-  prior art; the exact histogram and capacity layer are the gain.
-- **THM-2064 PROVED:** a common-period union bound independently packages the
-  multi-tail capacity layer. The only two-tail capacity tie is `(2,2)`, which
-  reduces a primitive imprimitive-core branch to `2C union {x,y}`, `x,y` odd.
-  Equality names the residual; it does not prove failure.
-- **THM-2061 PROVED REDUCTION:** strict failure on that seam is a closed
-  core-safe set inside an open folded diamond. It forces divisor completeness
-  through 14, tails below `12 max(C)`, determinant and measure constraints,
-  and no survivor for normalized `max(C)<=19`. The full signed seam is open.
+  a sufficient disk-gate failure carrier, a signed-hull owner fan, and a
+  finite Kelvin/Farey certificate. Basis, labels, ties, phase, and endpoint
+  sidecars remain load-bearing.
+- **THM-2057:** two scaled AP one-tail planes are closed by clocks and affine
+  binding phases. This is a model mechanism, not a general-star theorem.
+- **THM-2058/2059 PROVED:** reduced-order phase packets and one labelled
+  coprime interval per fixed cell compose with arbitrary-clock core/tail
+  packets by an exact CRT histogram dot product. They carry intervals; they do
+  not uniformly discharge them.
+- **THM-2060/2064 PROVED:** the sheet order is `a/gcd(a,w)`, every tail-safe
+  bin has sharp floor `q-ceil(q/7)`, and the strict common-fiber union bound
+  leaves the unique two-tail capacity tie `(2,2)`.
+- **THM-2061 PROVED REDUCTION:** that tie is the signed seam
+  `2C union {x,y}`, `x,y` odd. Divisor/metric/measure constraints close
+  normalized `max(C)<=19`, not the full seam.
 - **THM-2062 PROVED:** deletion indices give an exact hereditary-primitivity
-  CRT wheel with at most two excluded projective directions per prime. It
-  compresses templates but supplies no phase-height witness.
-- **THM-2065 RESERVED:** the proposed Fejer circuit-ray collapse is under
-  audit and remains outside the proof graph.
-- **Live obligation:** compress the finite rank-eleven atlas and discharge
-  every CRT-surviving labelled interval by clocks, packet overlap, pair sums,
-  relative Fejer, Euler endpoints, folded-seam exit, or rank gain. Decide the
-  rank-twelve maximal-minor box separately.
+  CRT wheel. It filters intervals but supplies no phase-height witness.
+- **THM-2065 PROVED REDUCTION:** without a persistent height-`2^20` marked
+  circuit, strict-null points lie on finitely many projective rays and then
+  pass through the THM-2062 wheel. Persistent circuits remain open.
+- **THM-2066 PROVED / FINITE-EXACT:** complementary binary owner words close
+  every primitive divisor-complete eleven-core `C subset {1,...,24}` uniformly
+  over odd tails.
+- **THM-2068 PROVED / FINITE-EXACT:** seven clocks suffice and are necessary
+  only inside the menu `15..34`; `{25,26,27,28,32,33,34}` is one minimum bank.
+- **THM-2072 PROVED:** no fixed core-independent finite clock bank works
+  uniformly. Antipodal pairs and the bounded quarter-anchor fan nevertheless
+  give exact continuous certificates for their subclasses.
+- **THM-2073 PROVED REDUCTION:** a non-hereditarily-primitive eleven-core
+  descends through at most eight labelled binary safe-child steps to an
+  unbounded hereditarily primitive terminal. The terminal is not discharged.
+- **THM-2069 and THM-2074 are RESERVED.** Code/cogirth and density-one proof
+  candidates remain outside the proof graph until audit and promotion.
+- **Live obligations:** discharge the hereditarily primitive terminal with its
+  inherited owner labels; classify persistent marked circuits; complete all
+  other rank-eleven cells; and decide the rank-twelve box.
 
-## Corrections that changed active routes
+## NC2 / GMC and formalization
 
-- **MISTAKE-235 / HYP-8879:** LRC and GMC are differently typed weighted
-  fibers. S102's strict measure loses the tight boundary, and its finite
-  truncations prove no AP-core reduction.
-- **MISTAKE-234 / HYP-8895:** a return semigroup records support reachability.
-  Mixed coefficients can cancel on infinitely many reachable masses, so its
-  conductor is not a coefficient-uniform DvdK bound.
-- **MISTAKE-236:** THM-1330 is a necessary-structure atlas for Keller
-  nonunits, not a classification; inverse realization and irreducible seeds
-  remain open.
-- **MISTAKE-237 / HYP-8905:** the homogeneous binary symmetric-Hessian
-  calculation is valid and THM-2063 tames its one-sided outcome. There is no
-  proved `NC2 -> GMC(2) -> JC(2)` chain; the general symmetric route lands in
-  four variables. VC(4), leading-form/Jelonek, and Lame/Newton descent remain
-  separate programs.
-- **MISTAKE-230--233:** observable-fiber size is not universal entropy;
-  composite modulus 14 is not Paley/Frobenius; modular cusps and `f14` do not
-  preserve loneliness. These are typed analogies only.
-- **MISTAKE-226/227/229:** diagonal constant terms lose augmentation; the AP
-  chain is an index-`11!` frame rather than a saturated code; the tangent-disk
-  gate has no intrinsic Heegner discriminant `-7`.
+- **THM-2022 proves NC2 and GMC(2) on paper.** THM-2067 now supplies the exact
+  one-variable constant-term existence statement internally by a Galois-orbit
+  product. It gives no effective first-return bound and is weaker than full
+  Duistermaat–van der Kallen.
+- **Lean is PARTIAL at two explicit interfaces.** Normalized residue,
+  support-face transport, finite-field contradiction, and the extractor/height
+  ingredients are checked. `GMC2NC2` derives the result from `DvdK1` plus
+  `HeightWitnessSupplier`; the existential height wrapper exceeds elaboration
+  budget, and THM-2067's Galois proof is not formalized. Do not summarize the
+  current state as “one sorry” or as a complete formal proof.
+- **THM-2070 PROVED CORRECTION:** the horizontal Wick embedding is exact, and
+  `u^2+u+u^-1-u^-2` has cofinite support returns but infinitely many zero odd
+  constant terms. HYP-8890/8895 do not bypass DvdK for mixed coefficients;
+  positive coefficients and the two-charge formula survive.
 
-## Other current portfolio handoffs
+## Jacobian / Dixmier / Poisson
 
-- **THM-2063 PROVED; JC(2) OPEN:** if any nonzero output-pencil member is
-  affine along any linear source fiber, coefficient descent gives a triangular
-  normal form and explicit inverse. A hypothetical counterexample has fiber
-  degree at least two in every source/output direction. Geometric degree three
-  is the first live stratum, not the only one.
-- **NC2/GMC(2) is proved** by THM-2022's lowest-balanced-face Frobenius
-  mechanism. Root-imported formalization nodes are sorry-free; the separate
-  capstone has one `sorry`, and formal DvdK remains. GMC is false from
-  dimension three onward.
-- **Tournaments:** order-join/strong-core laws and signed Redei data are the
-  reliable operation layer. The invariant lattice is exact only through
-  `n<=6`; `H>=disc` is open; higher GLMY path homology remains convention-
-  disputed. A quotient must name vertices, gauge, ties, target, and loss.
+- **THM-1300 exactly refutes JC(n) for `n>=3`; JC(2) remains open.** The
+  determinant and triple collision are independently checkable; separate
+  publication/provenance claims should stay qualified.
+- **THM-2063 PROVED:** any planar Keller map with one output-pencil member
+  affine on one linear source fiber is tame. Every JC(2) survivor has fiber
+  degree at least two in every source/output-pencil direction.
+- **THM-2071 PROVED:** for a quadratic fiber member, the leading coefficient
+  is a square; constant leading coefficient is tame. The first live reduced
+  cell has a nonconstant square and odd complementary fiber degree at least
+  three. This is a pencil gate, not a cover-degree classification.
+- **MISTAKE-236/237 and HYP-8905:** THM-1330 is a necessary atlas, not a
+  classification. The binary homogeneous symmetric-Hessian calculation lands
+  in THM-2063, but no NC2/GMC-to-JC chain or equivalence among VC(4), Jelonek,
+  and Newton/Lamé programs exists. Raw `HYP-8910` prose is historical only.
+- The two-pair Poisson conjecture is false; DC(2) and JC(2) remain open.
+
+## Other durable handoffs
+
+- **Tournaments:** use order-join, strong-core laws, and signed Rédei data.
+  Exact invariant-lattice completeness stops at `n<=6`; `H>=disc` is open;
+  higher GLMY path homology remains convention-disputed.
 - **Reciprocal sequences:** use support Dirichlet profiles plus collision tax,
-  Abel--Stieltjes/log-block Dini, and the Bertrand boundary. Support and
+  Abel–Stieltjes/log-block Dini, and the full Bertrand boundary. Support and
   indexed multiplicity are different objects.
-- **Poisson/Jacobian/Dixmier:** the two-pair Poisson conjecture is false, while
-  DC(2) and planar JC remain open. Do not infer fixed-dimension transfer from
-  stable equivalence.
-
-## Process changes made durable
-
-- Startup is bounded: `AGENTS.md`, `START-HERE`, the relevant frontier
-  section, active guardrails, then exact routed files. Giant chronology is
-  never truth.
-- Every mathematical session carries Anchor / Niche / Wildcard lanes,
-  performs an inheritance pass, keeps a 3–7-node concept board, and revisits
-  connections after pulls and computations.
-- A connection records source, target, map, preserved predicate, loss,
-  sidecar, and decisive test. False claims leave a witness, first failed step,
-  surviving mechanism, repaired statement, and new question.
-- Successful meta-patterns graduate only with repeated evidence, known
-  failure modes, and explicit startup routing.
+- **Process:** every session carries Anchor / Niche / Wildcard lanes, performs
+  an inheritance pass, keeps a 3–7-node concept board, and revisits every
+  connection after pulls and computations. A connection records its map,
+  preserved predicate, loss, sidecar, and decisive test.

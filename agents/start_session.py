@@ -188,9 +188,45 @@ def topic_terms(topic: str) -> list[tuple[str, int]]:
     return deduplicated[:MAX_TOPIC_TERMS]
 
 
-def match_score(text: str, terms: list[tuple[str, int]]) -> tuple[int, int]:
+def literal_variants(term: str) -> tuple[str, ...]:
+    """Return equivalent literal spellings for a small set of repo objects.
+
+    Topic routing is intentionally literal, but a mathematical object should
+    not disappear merely because prose writes ``LRC(14)`` while a filename or
+    user writes ``LRC14``.  Keep this alias layer narrow: broad punctuation
+    stripping would create many false matches in theorem IDs and formulas.
+    """
+    compact_lrc = re.fullmatch(r"LRC(?:\(([0-9]+)\)|-?([0-9]+))", term, re.I)
+    if compact_lrc:
+        number = compact_lrc.group(1) or compact_lrc.group(2)
+        return (f"LRC{number}", f"LRC({number})", f"LRC-{number}")
+    return (term,)
+
+
+def term_occurs(text: str, term: str) -> bool:
+    """Match one routed term, including compressed same-namespace ID lists."""
     folded = text.casefold()
-    matches = [(term, weight) for term, weight in terms if term.casefold() in folded]
+    if any(variant.casefold() in folded for variant in literal_variants(term)):
+        return True
+    identifier = re.fullmatch(
+        r"(THM|HYP|MISTAKE|LEM|OPEN-Q)-([0-9]+)", term, re.I
+    )
+    if not identifier:
+        return False
+    namespace, number = identifier.groups()
+    # Maintained summaries often write ``THM-2060/2064``.  The second ID is
+    # still THM-2064, not a bare number; exact-ID routing must see it without
+    # treating every unrelated occurrence of ``2064`` as a hit.
+    compressed = rf"\b{re.escape(namespace)}-[0-9]+(?:/[0-9]+)*/{number}\b"
+    return re.search(compressed, text, flags=re.IGNORECASE) is not None
+
+
+def match_score(text: str, terms: list[tuple[str, int]]) -> tuple[int, int]:
+    matches = [
+        (term, weight)
+        for term, weight in terms
+        if term_occurs(text, term)
+    ]
     return sum(weight for _, weight in matches), len(matches)
 
 
@@ -232,14 +268,25 @@ def file_status(relative: str) -> str:
         prefix = path.read_text(encoding="utf-8", errors="replace")[:5000]
     except OSError:
         return "UNKNOWN"
-    match = re.search(r"^status:\s*(?:[>|]\s*)?(.*)$", prefix, flags=re.MULTILINE)
-    probe = match.group(1) if match else prefix[:400]
+    match = re.search(
+        r"^status:[ \t]*(?:(?P<style>[>|][+-]?)[ \t]*)?"
+        r"(?P<inline>[^\r\n]*)$",
+        prefix,
+        flags=re.MULTILINE,
+    )
+    probe = match.group("inline") if match else prefix[:400]
     if match:
         # A folded YAML status often mentions proved dependencies after declaring
         # the file OPEN. Read only its indented block, then honor the first
         # declared status token instead of a global priority list.
         continuation: list[str] = []
-        for line in prefix[match.end():].splitlines():
+        remaining = prefix[match.end():].splitlines()
+        # ``$`` stops before the status line's newline, so splitlines() starts
+        # with one synthetic empty row.  Skipping it is essential: otherwise a
+        # folded status is truncated to its first continuation line.
+        if remaining and not remaining[0]:
+            remaining = remaining[1:]
+        for line in remaining:
             if line.startswith((" ", "\t")):
                 continuation.append(line.strip())
                 continue
@@ -260,15 +307,20 @@ def scored_files(
     scores: dict[str, tuple[int, int]] = {}
     identifier_paths: set[str] = set()
     for term, weight in terms:
-        files = run(
-            "rg", "--files-with-matches", "--fixed-strings", "--ignore-case",
-            "--", term, *trees
-        )
-        if files.returncode not in (0, 1):
-            continue
-        for relative in files.stdout.splitlines():
+        matched_paths: set[str] = set()
+        for variant in literal_variants(term):
+            files = run(
+                "rg", "--files-with-matches", "--fixed-strings", "--ignore-case",
+                "--", variant, *trees
+            )
+            if files.returncode in (0, 1):
+                matched_paths.update(files.stdout.splitlines())
+        for relative in matched_paths:
             score, count = scores.get(relative, (0, 0))
-            filename_bonus = weight if term.casefold() in Path(relative).name.casefold() else 0
+            filename = Path(relative).name.casefold()
+            filename_bonus = weight if any(
+                variant.casefold() in filename for variant in literal_variants(term)
+            ) else 0
             scores[relative] = (score + weight + filename_bonus, count + 1)
             if weight >= 100:
                 identifier_paths.add(relative)
@@ -292,7 +344,7 @@ def topic_hits(
         for line_number, line in enumerate(maintained_route_lines(relative), 1):
             score, count = match_score(line, terms)
             identifier_hit = any(
-                weight >= 100 and term.casefold() in line.casefold()
+                weight >= 100 and term_occurs(line, term)
                 for term, weight in terms
             )
             if count >= required_matches and (not has_identifier or identifier_hit):

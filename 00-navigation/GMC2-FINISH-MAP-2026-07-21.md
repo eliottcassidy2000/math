@@ -3,12 +3,15 @@
 > **SUPERSEDED:** THM-2022 now proves NC2 and GMC(2). This map is pre-closure
 > route history. Use [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments)
 > and [`THM-2022`](../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md)
-> for current status.
+> for current status. THM-2067 is now the project-internal proof of the bare
+> one-variable constant-term seed; the stronger DvdK theorem is an alternate,
+> not a load-bearing paper dependency.
 
 > **CLOSED (THM-2022, Frobenius lowest balanced face).** The NC2 residual
 > described below is now proved for arbitrary finite support and arbitrary
 > complex coefficients. After algebraic descent, expose the lowest balanced
-> Wick face, retain its nonzero DvdK constant term `Q`, and choose a good prime
+> Wick face, retain its nonzero constant term `Q` by THM-2067 (or alternatively
+> the stronger DvdK theorem), and choose a good prime
 > `p`. Kummer makes every non-`p`-dilated channel pay a carry; strict off-face
 > channels pay an extra factorial quotient. After dividing by the common
 > `(p*A0)!`, the complete residue layer is the `p`-dilation of the face and is
@@ -57,28 +60,33 @@ LRC14 finish-maps. Corrections welcome via court case.*
 `E[Z^aW^b]=δ_{ab}a!`; if `E[P^m]=0 ∀m≥1` then `E[QP^m]=0` for `m≫0`. The **charge** of `Z^aZ̄^b` is
 `a−b`; `E` kills nonzero charge; `r=|Z|²~Exp(1)`.
 
-## The master reduction (PROVED, Lean-formalized)
+## The master reduction (PROVED; Lean endpoint partial at two explicit interfaces)
 
 **NC2 / DvdEZ ⟹ GMC(2)**: if the nullcone `N₂={P:E[P^m]=0∀m}` is exactly the **charge-one-sided**
 polynomials (all charges ≥1, or all ≤−1, no charge-0-straddle), then GMC(2) holds by charge
-additivity (THM-1510 §C, THM-1535, THM-1830; Lean `mathieuZhao_of_charge_pos`, no `sorry`).
+additivity (THM-1510 §C and
+`THM-1540-gmc2-reduced-to-the-nullcone-structure-theorem`; Lean
+`mathieuZhao_of_charge_pos`, no `sorry`). The full Lean endpoint still takes
+`DvdK1` and `HeightWitnessSupplier` as explicit interfaces.
 NC2 is a **stronger sufficient target**, not a proved reformulation equivalent to literal GMC(2).
 The repository's chosen NC2 route is therefore:
 
 > **PROVE: no two-sided `P` lies in the nullcone `N₂`.**  ("Two-sided" = has a positive-charge and a
 > negative-charge monomial.)
 
-## The split (PROVED): angular = DvdK, gap = radial
+## Historical split (both pieces now closed): angular seed + radial transport
 
 Polar bridge (THM-1645, verified exact): `E[P^m] = L( CT_u[Λ_s(u)^m] )`, `Λ_s(u)=P(√s u,√s/u)`,
 `CT_u` = charge/angular projection, `L(g)=∫₀^∞ g e^{−s}ds` (`L(s^k)=k!`). Monomial
 `Z^aZ̄^b ↦ s^{(a+b)/2}u^{a−b}`; charge support is `s`-independent.
 
-- **ANGULAR layer `CT_u` = the Duistermaat–van der Kallen theorem** (1998), applied uniformly in `s`
-  (THM-1630/1645). **CLOSED.**
-- **RADIAL layer** = the whole gap: DvdK gives `CT_u[Λ_s^m]≠0` at some `m` for a.e. `s`; GMC(2) needs
+- **ANGULAR layer `CT_u`:** the bare existence statement is now proved
+  internally by THM-2067; DvdK (1998, THM-1630/1645) is a stronger alternate.
+- **RADIAL layer (the historical gap):** angular nonvanishing gives
+  `CT_u[Λ_s^m]≠0` at some `m` for a.e. `s`, while GMC(2) needs
   `L(CT_u[Λ_s^m])≠0` at a *fixed* `m`. Obstructed only by `ker L≠0` (`L(s−1)=1!−0!=0`) — **Laplace
-  determinacy, not tori.**
+  determinacy, not tori.** THM-2022 closes this by transporting the whole
+  lowest face modulo a good prime, not by pointwise radial dominance.
 
 ## The proved strata (the skeleton is broad)
 
@@ -186,7 +194,8 @@ common factor cannot be extracted.
   or resultants followed by a factorial-Hankel/Vandermonde determinant; do not
   separate first-return atoms.
 
-**Post-closure single sentence:** DvdK supplies a nonzero angular face sum, and
+**Post-closure single sentence:** THM-2067 supplies a nonzero angular face sum
+(with DvdK as a stronger alternate), and
 THM-2022 transports that *whole sum* through the radial Wick functional by a
 good-prime Frobenius/carry congruence; therefore arbitrary cross-atom and
 resonance cancellation cannot persist, NC2 holds, and the proved charge

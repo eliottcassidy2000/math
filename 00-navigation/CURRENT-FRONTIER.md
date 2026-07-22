@@ -82,7 +82,7 @@ not unsafe. The reusable certificate architecture is
   `59,880` cores through `24`; THM-2068 proves the minimum bank; THM-2072 rules
   out a fixed uniform bank; THM-2073/2076 give a safe-child
   tower. THM-2075 preserves nonempty-core component/Euler/owner data; THM-2078
-  closes terminal maximum `<=24`. MISTAKE-230 forbids descending the empty full
+  closes terminal maximum `<=24`. MISTAKE-238 forbids descending the empty full
   row across zero-child tails; THM-2079 pairs addresses `a,2^r-1-a` and flips
   owner bits. THM-2080 gives the exact mixed `1/14`--`1/7` overlap fold. For an
   odd guard every danger comb spends at least `1/42` of its mass inside the
@@ -257,17 +257,16 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 
 ### Live work
 
-Package THM-2022 for publication. In Lean, replace the capstone's one `sorry`
-with concrete normalized Wick-channel wiring; keep the cited DvdK theorem
-explicit until formalized. HYP-8878 supplies an elementary citation-free seed
+Package THM-2022 for publication. In Lean, compose the checked extractor and
+height theorem into `HeightWitnessSupplier` without exhausting elaboration,
+and formalize THM-2067 to discharge `DvdK1`. HYP-8878 supplies an elementary seed
 when the lowest Laurent face has a **unique minimal balanced channel**: the
 first constant term is then one nonzero monomial. Its `98/116` figure is a
 finite small-support census, not a general density, and coincident minimum
-channels remain. HYP-8890's saddle/Watson approach is open, and MISTAKE-234
-shows HYP-8895's support semigroup does not prevent infinitely many mixed-sign
-cancellations. Continue to
-transfer the `seed/selector/preserver/exit` design without pretending a
-preserver supplies the seed.
+channels remain. THM-2070 refutes HYP-8890's general saddle/Watson bypass and
+HYP-8895's semigroup bypass; only their explicitly positive or two-charge
+subcases survive. Continue to transfer the `seed/selector/preserver/exit`
+design without pretending a preserver supplies the seed.
 
 ## Tournaments
 

@@ -1,17 +1,14 @@
 # LRC(14) proof map — current reductions, obligations, and historical routes
 
-> **DETAILED MACHINERY MAP:** read
-> [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) first. This file
-> preserves old proof skeletons and their failure surfaces. The control panel
-> below is current; dated sections after it are searchable provenance and may
-> contain obligation labels superseded by later theorems or corrections.
+> **DETAILED MACHINERY MAP:** read [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14)
+> first. The control panel is current; dated sections preserve searchable proof
+> history and may contain obligation labels superseded by later corrections.
 
 ## 2026-07-21 current control panel
 
 **Status: OPEN.** LRC(14) means thirteen distinct nonzero relative speeds. The
-old uniform `q<=25` shortcut is false, and uniform emptiness of the twelve-speed
-sporadic branch is not proved. Do not begin with a larger blind census or the
-dated two-route dichotomy below; begin with the proved structured kernel.
+old uniform `q<=25` shortcut is false; uniform twelve-speed sporadic emptiness
+is unproved. Begin with the structured kernel, not a larger blind census.
 
 ### The present reduction graph
 
@@ -34,6 +31,10 @@ hypothetical LRC(14) counterexample
                     |-- tail-sheet capacity -> dyadic seam          [THM-2060/2064]
                     |-- folded seam pins/metric/finite low-core box [THM-2061]
                     |-- hereditary-primitivity CRT wheel            [THM-2062]
+                    |-- circuit-free relation rays become finite    [THM-2065]
+                    |-- owner words close divisor-complete max<=24  [THM-2066]
+                    |-- fixed-bank no-go -> adaptive safe children  [THM-2072/2073]
+                    |     `-- hereditarily primitive terminal       [OPEN]
                     |-- general clock / pair-sum / Fejer / Euler    [OPEN]
                     |-- active relation outside W
                     |     `-- rank 12 -> finite maximal-minor box [THM-2052]
@@ -41,13 +42,12 @@ hypothetical LRC(14) counterexample
                           `-- weak Euler point or strict interval [HYP-8841]
 ```
 
-The four input lines are proved necessary conditions in their cited scopes.
-Every displayed gate is sufficient, not necessary: a bad deck, disk, or Farey
-ray means only “not certified here.” THM-2058 makes each fixed deck/owner fiber
-an exact labelled one-dimensional carrier; it does not discharge that carrier.
-THM-2065 is reserved under audit and stays outside this graph. THM-2060/2064
-reduce capacity but do not decide the signed seam; THM-2061 closes only its
-stated metric/finite strata. The target is uniform labelled discharge.
+The four inputs are proved necessary in their cited scopes; every gate is only
+sufficient, so a bad deck, disk, or Farey ray means “uncertified.” THM-2058
+provides an exact carrier, not its discharge. THM-2065 leaves marked circuits;
+THM-2066/2068 close only the bounded `max(C)<=24` census; THM-2072 forbids a
+universal bank; THM-2073 ends at an open hereditary terminal. THM-2069/2074
+remain reserved.
 
 ### Live interfaces
 
@@ -60,6 +60,9 @@ stated metric/finite strata. The target is uniform labelled discharge.
 | CRT packet join | THM-2059's reduction-histogram dot product counts compatible classes; the `Na/lcm` lift counts safe grid phases | Select clocks uniformly; zero overlap rejects only that clock grid. |
 | Tail sheets / dyadic seam | THM-2060/2064 give sharp capacity; THM-2061 gives the exact folded obstruction, divisor pins, metric box, and `max(C)<=19` census | Empty the remaining signed seam uniformly, or route each survivor back to the labelled atlas. |
 | Hereditary primitivity | THM-2062 gives a prime-labelled CRT wheel with at most two bad projective directions per prime | Compose the wheel with phase-height exits; positive direction density alone cannot prove safety. |
+| Circuit rays | THM-2065 sends every circuit-free strict-null template to finitely many projective rays before the CRT wheel | Classify/discharge persistent height-`2^20` marked circuits; a relation is not evidence of failure. |
+| Dyadic owner words | THM-2066 closes divisor-complete eleven-cores through `24`; THM-2068 gives a seven-clock minimum within `15..34` | Do not extrapolate the bounded bank: THM-2072 proves every fixed core-independent finite bank blind somewhere. |
+| Safe-child tower | THM-2073 gives a labelled depth-`<=8` descent for nonhereditary eleven-cores | Discharge the unbounded hereditarily primitive terminal with inherited owner labels. |
 | Relative Fejer | After zero-character factors are removed, THM-2054 gives an explicit lifted-character average error for nonzero line frequencies when bounded resonances lift | Prove the model-specific plateau and route every bounded scalar resonance. |
 | Rank code | THM-2052 supplies eleven independent bounded support-at-most-three rows | Produce an active row outside the code when available; rank twelve gives a finite box but is not required for finiteness. |
 | Euler endpoint | THM-2047 retains owner, sign, side, height, and paired deletion; HYP-2108 gives `P_w` | Prove `P_w>=0` on any disk points not discharged arithmetically. |
@@ -129,9 +132,9 @@ retain ties and hyperedges otherwise.
    alone. Record basis covariance explicitly.
 2. Kelvin-invert each owner sector, build the finite acute unimodular fan from
    THM-2056, and attach `D_N`, pair sums, and clock-kill data to every bad ray.
-3. Split each deck by THM-2058 primitive order and owner interval. Search each
-   core for missing clocks `N<=14`, then use THM-2059 CRT histograms on larger
-   clocks; treat THM-2060's saturation claim only as a hostile audit target.
+3. Split each deck by THM-2058 primitive order and owner interval. Compose
+   THM-2059 histograms with THM-2066 owner words; use THM-2073 safe children
+   after THM-2072 rules out a fixed bank. Preserve the terminal owner labels.
 4. Put the eleven-dimensional relation code in exact row-echelon form and
    record, for every peel/endpoint-owner set, whether an active bounded row
    lies outside the current code.
@@ -141,9 +144,8 @@ retain ties and hyperedges otherwise.
 6. Build an owner-labelled relation-overlap hypergraph. Test directed edges
    only when deletion, first exit, or owner transfer gives a real implication;
    otherwise retain the signed hypergraph and its linear rank.
-7. Partition resonance-lift/nonaliasing cells only after proving the
-   model-specific lifted plateau missing from THM-2054's application; keep its
-   numerical budget separate from the model identification and route
+7. Partition resonance cells only after proving THM-2054's missing lifted
+   plateau; separate its numerical budget from model identification and route
    nonlifting resonances separately.
 
 > ## 2026-07-19 S78 CONTINUATION — TWO FINITE FRONTS MOVE, AND THE FANO QUOTIENT IS LOCAL-SURJECTIVE

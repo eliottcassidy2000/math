@@ -1,21 +1,20 @@
 ---
 id: THM-1550
-title: "AN EXACT ALGEBRAIC CRITERION FOR THE TORAL NULLCONE — the infinite family CT(Λ^m)=0 collapses to ONE identity. For Λ = u^{−M}R(u) with R(0) ≠ 0 and deg R = d = M+N, let u_1(t),…,u_M(t) be the M roots of u^M = tR(u) tending to 0. Then CT(Λ^m) = 0 for every m ≥ 1 ⟺ Π(t) := ∏u_i(t) equals c·t EXACTLY ⟺ ∏_{i}R(u_i(t)) is constant in t. Proved by an exact Wiener–Hopf factorisation of CT(log(1−tΛ)) — no asymptotics, no genericity, no saddle points. Two consequences: (i) THM-1530's M=1 theorem becomes a one-liner (Π = u_1 = tR(u_1) = ct ⟹ R(ct) ≡ c ⟹ R constant); (ii) substituting u = εv with ε = t^{1/M} turns the criterion into '∏v_i(ε) is constant' for v^M = R(εv), and the order-ε^k condition carries Σ_i ζ^{(k+1)i}, which is nonzero EXACTLY when M | (k+1) — so M=1 constrains every order, M=2 the odd orders, M=3 every third. That is the precise arithmetic of why M ≥ 2 is a different problem, and it says the conditions, though sparse, are still infinite against d free coefficients. GMC(2) IS NOT FINISHED HERE."
+title: "Exact Wiener--Hopf criterion for the one-variable toral nullcone"
 status: >
-  THE CRITERION: PROVED, exactly.  The factorisation argument is complete and elementary
-  (the log of each inside factor u^{-M}∏(u−u_i) = ∏(1−u_i/u) has no constant term when
-  expanded in 1/u; likewise log(1−u/a_j) for outside roots).
-  THE ORDER ARITHMETIC: PROVED (a root-of-unity sum).
-  THE M=1 COROLLARY: PROVED (re-derivation of THM-1530 in one line).
-  THE M,N >= 2 CASE: STILL OPEN.  Bounded search only -- zero counterexamples, cross-checked
-  against exact integer CT arithmetic rather than a tolerance.
-  RETRACTED IN PLACE: my first numerical test of the criterion was BROKEN and its Parts 1-2
-  are void.  See §5.  The criterion itself was never in question -- it is an identity.
-  GMC(2) REMAINS OPEN.  This sharpens the last gap; it does not close it.
+  PROVED. The exact factorization criterion, root-of-unity order arithmetic,
+  and M=1 corollary are sound. The historical M,N>=2 residue recorded in this
+  file was subsequently closed by the orbit-product proof in
+  THM-1605-tnc-proved-monodromy-transitivity, recanonized algebraically as
+  THM-2067-galois-orbit-product-closes-one-variable-dvdk. Thus TNC is proved.
+  NC2 and GMC(2) are also proved, but independently by
+  THM-2022-gmc2-frobenius-lowest-balanced-face; this criterion alone is not an
+  NC2/GMC bridge. The broken near-t=0 numerical constancy test remains
+  retracted in §5; it never affected the exact identity.
 source: klein-2026-07-20-S347 (owner: aim to finish GMC(2) by finishing the stronger two-dimensional nullcone conjecture)
 concurrency: >
-  The fleet closed several strata while this was being written, and they are cited not
-  duplicated:
+  HISTORICAL SNAPSHOT, not current frontier. Several strata were reported while
+  this was being written:
   - death-star THM-1515 CARRIED THROUGH my Bessel-EMP and proved GMC(2) on the {−1,0,1}
     stratum -- the gap THM-1510/THM-1530 had left open.  That is their result, and it used
     my setup; credit runs both ways and theirs is the closing step.
@@ -23,22 +22,30 @@ concurrency: >
     pinned the residue exactly: "P at n = 2 with charges of BOTH signs".
   - boxeph THM-1525 proved the W-linear class and named the wall the resurgent regime.
   - mac-mini THM-1500/1520 hold the master theorem and the one-sided-charge branch.
-  THE REMAINING GAP IN ALL THREE FRAMINGS IS THE SAME OBJECT: TNC with M, N >= 1.  This file
-  gives it an exact criterion.
+  The then-remaining TNC gap was the both-signs case. THM-1605/THM-2067 later
+  closed it; THM-2022 separately closed NC2/GMC(2).
 depends_on:
-  - THM-1530  # the toral nullcone framing and the M=1 Lagrange proof
-related: [THM-1510, THM-1515, THM-1525, THM-1535]
+  - THM-1530-the-toral-nullcone-and-the-extreme-weight-lagrange-proof
+related:
+  - THM-1510-gmc2-two-weight-case-proved-via-the-exponential-moment-problem
+  - THM-1515-gmc2-on-the-minus1-0-1-stratum
+  - THM-1525-gmc2-w-linear-lagrange-proof
+  - THM-1535-charge-lattice-nullcone-and-gmc2
+  - THM-1605-tnc-proved-monodromy-transitivity
+  - THM-2067-galois-orbit-product-closes-one-variable-dvdk
+  - THM-2022-gmc2-frobenius-lowest-balanced-face
 script: 04-computation/tnc_exact_criterion_klein_S347.py (+ .out)
 ---
 
 # THM-1550 — an exact criterion for the toral nullcone
 
 **TNC.** For a Laurent polynomial `Λ`, when is `CT(Λ^m) = 0` for every `m ≥ 1`?
-Conjecturally: exactly when all exponents share a strict sign. By THM-1530 this is NC2's
-leading order, and NC2 ⟹ GMC(2).
+The answer is now proved: exactly when all nonzero exponents share a strict
+sign (THM-1605/THM-2067). This file supplies the exact criterion used by those
+closing proofs. It does not itself identify the Gaussian nullcone.
 
 Write `Λ(u) = u^{−M}R(u)` with `R` a polynomial, `R(0) = r_0 ≠ 0`, `deg R = d = M+N`, and
-`M, N ≥ 1` (both signs present — the only remaining case).
+`M, N ≥ 1` (both signs present — the historical hard case).
 
 ## 1. The criterion
 
@@ -98,9 +105,10 @@ contribution to `Σ_iδ_i` carries the factor
 `M = 1` constrains **every** order — which is exactly why Lagrange–Bürmann closes it
 immediately. `M ≥ 2` constrains only a sparse arithmetic progression. This is the precise
 mechanism behind THM-1530's observation that the `M ≥ 2` case is *structurally* different, and
-it also says the conditions remain **infinite** in number against `d = M+N` free coefficients —
-which is why TNC should still hold; a proof needs the sparse subsequence to be independent,
-and that is what remains.
+it also says the conditions remain **infinite** in number against `d = M+N`
+free coefficients. At the time this suggested an independence proof. The
+successful later mechanism was different: transitivity plus a uniform-incidence
+orbit product turns `Pi(t)=ct` into a valuation contradiction (THM-1605/2067).
 
 ## 4. Verification
 
@@ -126,13 +134,14 @@ controls all pass. **The criterion itself was never in question — it is an ide
 test of it was wrong.** Recorded because the failure mode is specific and reusable: *when a
 quantity has a limit, testing "is it constant" near the limit point tests nothing.*
 
-## 6. Honest status
+## 6. Current placement
 
-GMC(2) is **not** finished. What the fleet now holds: one-signed/charge-definite (opus,
-mac-mini), two-weight in every degree (THM-1510), `{−1,0,1}` (death-star, carrying my
-Bessel-EMP), `W`-linear (boxeph), leading symbol with extreme weight `±1` (THM-1530). The
-residue in every framing is the same object — **TNC with `M, N ≥ 2`** — and this file reduces
-it to a single exact identity plus a stated independence question. That is a sharper handle,
-not a closure.
+This theorem reduces total constant-term vanishing to one exact small-root
+identity. THM-1605 first ruled that identity out in the both-signs case by a
+monodromy orbit product; THM-2067 gives the clean splitting-field version and
+is the current internal source for the one-variable input used by THM-2022.
+The bounded search and sparse-order discussion above are provenance and
+diagnostics, not open proof obligations. TNC, NC2, and GMC(2) are all closed;
+only the first is closed by building directly on this criterion.
 
 *Files: `04-computation/tnc_exact_criterion_klein_S347.py` (+ `.out`).*

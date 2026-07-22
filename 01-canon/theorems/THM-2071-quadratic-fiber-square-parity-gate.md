@@ -14,11 +14,11 @@ status: >
 source: codex-2026-07-21-JC2-quadratic-fiber
 depends_on: []
 related:
-  - THM-2063
-  - THM-1345
-  - THM-1330
-  - THM-2045
-  - MISTAKE-229
+  - THM-2063-one-fiber-linear-planar-keller-pairs
+  - THM-1345-jc2-equivariant-category-poisson-reframing-dc1-shadow
+  - THM-1330-keller-monoid-exact-picture-inverse-jelonek-cusp-rule
+  - THM-2045-the-smooth-factorized-R-family-has-no-planar-jacobian-mate
+  - MISTAKE-237
 script: 04-computation/jc2_quadratic_fiber_square_gate_codex_20260721.py
 output: 05-knowledge/results/jc2_quadratic_fiber_square_gate_codex_20260721.out
 script_sha256: 3d5ce81db8601a3035db28ae63bf3d003d4f72372d304c3250098a64a8efb267
@@ -420,7 +420,7 @@ degree at least three in the chosen direction.
 This remains a rank-one-at-infinity coefficient theorem, not VC(4). Neither
 `mu_y` nor the degree of `P` along one linear fiber has been identified with a
 generic function-field cover degree. THM-1330's Jelonek/monodromy constraints
-remain separate necessary data, and MISTAKE-229 forbids calling this descent
+remain separate necessary data, and MISTAKE-237 forbids calling this descent
 equivalent to the Jelonek, Vanishing-Conjecture, or Lame-for-polygons programs.
 
 ## 8. Exact symbolic referee

@@ -25,7 +25,7 @@ related:
   - THM-2022-gmc2-frobenius-lowest-balanced-face
   - THM-2067-galois-orbit-product-closes-one-variable-dvdk
   - HYP-8890
-  - HYP-8895
+  - HYP-8895-return-semigroup-reachability-not-noncancellation
 ---
 
 # THM-2070 -- horizontal Wick embedding and dihedral return cancellation
