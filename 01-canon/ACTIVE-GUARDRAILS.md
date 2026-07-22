@@ -1,30 +1,21 @@
 # Active Guardrails
 
-**Short hazard sheet — refreshed 2026-07-22.** Read this at startup; search
-[`MISTAKES.md`](MISTAKES.md) for witnesses, repairs, and lineage. This sheet
-records current prohibitions, not the whole history.
+**Short hazard sheet — refreshed 2026-07-22.** Read this at startup; search [`MISTAKES.md`](MISTAKES.md) for witnesses, repairs, and lineage. This records current prohibitions, not the whole history.
 
 ## Universal
 
-1. **Chronology is not truth.** Logs, broadcasts, and reflections can contain
-   a claim and its refutation minutes apart. Resolve status through corrections
+1. **Chronology is not truth.** Logs, broadcasts, and reflections can contain a claim and its refutation minutes apart. Resolve status through corrections
    and repaired canon.
-2. **IDs can collide.** Cite `ID + slug/path`; check frontmatter, current
-   indexes, and remote history before reserving or following a number.
-3. **Keep logical direction visible.** Mark necessary, sufficient, iff,
-   reduction, finite-exact, heuristic, and reserved statements distinctly.
-4. **A quotient owes a loss ledger.** Record source, target, map, preserved
-   predicate, forgotten coordinate, restoration sidecar, and hostile test.
+2. **IDs can collide.** Cite `ID + slug/path`; check frontmatter, current indexes, and remote history before reserving or following a number.
+3. **Keep logical direction visible.** Mark necessary, sufficient, iff, reduction, finite-exact, heuristic, and reserved statements distinctly.
+4. **A quotient owes a loss ledger.** Record source, target, map, preserved predicate, forgotten coordinate, restoration sidecar, and hostile test.
 
 ## Lonely Runner
 
-5. **No uniform `q<=25` theorem.** THM-762/764 give
-   `26*{1,...,12} union {339}` with first good period `27`.
-6. **Uniform twelve-speed sporadic emptiness is OPEN.** Finite height, AP
-   rigidity, single-far classification, and bounded censuses do not classify
+5. **No uniform `q<=25` theorem.** THM-762/764 give `26*{1,...,12} union {339}` with first good period `27`.
+6. **Uniform twelve-speed sporadic emptiness is OPEN.** Finite height, AP rigidity, single-far classification, and bounded censuses do not classify
    every non-AP/deep multi-defect tight set.
-7. **Good-period existence is a maximum, not a mean or count.** MISTAKE-127,
-   129, and 130; always test the tight AP at its own ruler.
+7. **Good-period existence is a maximum, not a mean or count.** MISTAKE-127, 129, and 130; always test the tight AP at its own ruler.
 8. **Giri--Kravitz isolation is qualitative.** THM-1289's one-sided `delta` is
    ineffective and does not give whole-window finiteness.
 9. **Enumeration filters need future-multiple audits.** MISTAKE-194: prove no

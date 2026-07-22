@@ -152,6 +152,4 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 ## Maintaining this brief
 
 Only put session-independent facts here. When a headline changes, update this page, `CURRENT-FRONTIER.md`, and any stale startup banner in the same commit.
-Preserve the old argument in its historical file; make supersession visible
-rather than silently rewriting provenance. The startup script prints current
-commits, so this page should not duplicate an inevitably stale commit diary.
+Preserve old arguments in historical files and expose supersession; the startup script prints current commits, so do not duplicate a stale commit diary here.
