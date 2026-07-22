@@ -123,34 +123,29 @@ not unsafe. The reusable certificate architecture is
   the bounded guard-ratio branch `q/h=r/s`, `r,s<=57`, finite template-by-
   template. THM-2095 makes its marked commensurate pair arithmetically finite:
   the common scale has `240` choices, the reduced ratio has `1165`, and only
-  `279600` triples `(r,s,d)` survive before the other labels. THM-2112
-  independently quantifies the two-torus escape: one reduced ratio has height
-  at most `R_7=5*28^8*(7*57^42)^17`, a BV/Fourier recursion bounds all seven,
-  and the full depth-four row obeys
-  `max(S)<=floor((128/3)L_7^8)`. This is an explicit finite box, not an
-  executed or empty audit. THM-2098 splits ranks 8--11 between at least seven
-  transverse bands, with collision/tree budget `5(n-7)/49`, and at least seven
-  guard-proportional bands. THM-2099/2103 compute the pair spectrum and prove
-  that pair-tree data plus signed affine rank still miss exact dyadic rows.
-  THM-2104 closes every constant quotient-valuation layer at each of
-  `2,3,5`, while THM-2105 forces exact affine clock covers through denominator
-  fourteen plus opposite-parity carrier pairs at `3,5,7`, all in the all-
-  transverse model. THM-2114 then adds the general replacement carrier:
-  strict tree surplus, connectivity in every maximum graphic-matroid basis
-  at equality, and finite-ring Kakeya needles. Its prime-row needle forces a
-  `13`-content blocker through terminal rank `12`
-  and an `11`-content blocker through rank `10`; in particular an all-primitive
-  rank-two cover in these ranges is impossible. After specialization this
-  forces `13|h*product(Q)` and, through rank `10`, `11|h*product(Q)`. THM-2115
-  adds the signed Fourier-Toeplitz gate on the guard half-fiber: frequency `84`
-  closes a row invisible to every THM-2105 clock and its saturated half-fiber
-  pair tree. THM-2116 consumes the generic first `13`-terminal blocker: almost
-  every safe guard-kernel orbit is an exact six-toothpick-plus-singleton
-  partition or a seven-toothpick cover with one doubled point. A positive-
-  measure set of two-singleton phases escapes the almost-everywhere cover. The
-  six persistent height-114
-  cut rows make THM-2065 alone vacuous; location, content, phase, and torsion
-  sidecars are essential.
+  `279600` triples `(r,s,d)` survive before the other labels. THM-2112 gives
+  the explicit finite box `R_7=5*28^8*(7*57^42)^17` and
+  `max(S)<=floor((128/3)L_7^8)`; it is not an executed empty audit. THM-2098
+  splits ranks 8--11 between at least seven transverse and seven
+  guard-proportional bands, with collision/tree budget `5(n-7)/49`.
+  THM-2099/2103 prove pair-tree data plus signed affine rank miss exact dyadic
+  rows. THM-2104 closes constant quotient valuations at `2,3,5`; THM-2105
+  forces affine clocks through denominator fourteen and opposite-parity
+  carriers at `3,5,7` in the all-transverse model. THM-2114 adds strict tree
+  surplus, all-maximum-basis connectivity, and finite-ring Kakeya needles. Its
+  prime row forces a `13`-content blocker through terminal rank `12` and an
+  `11`-content blocker through rank `10`, excluding all-primitive covers there;
+  specialization gives `13|h*product(Q)` and, through rank `10`,
+  `11|h*product(Q)`. THM-2115's half-fiber Toeplitz gate closes at frequency
+  `84` a row invisible to every THM-2105 clock and its saturated pair tree.
+  THM-2116 turns the generic first `13`-blocker into either a
+  six-toothpick-plus-singleton partition or a seven-toothpick cover with one
+  doubled point; a positive-measure two-singleton phase set escapes.
+  THM-2117 gives a sharper harmonic separation: one exact rank-eight row
+  passes all small clocks, its maximum Hunter tree, and every scalar Fourier
+  minor, yet has an open safe interval. Retain a joint Toeplitz/Fejer
+  certificate, not scalar packets. The six persistent height-114 cut rows
+  make THM-2065 alone vacuous; location, content, phase, and torsion remain.
 - **PROVED relative decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   lifts bounded scalar relations; `H=2^19` clears recorded margins.
   MISTAKE-080/082 still require shape-specific torus models.

@@ -35,19 +35,17 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
   congruence covers modulo `2m` for every `2<=m<=7`; at each odd prime
   `ell=3,5,7`, either a universal `2ell`-carrier occurs or opposite-parity
   odd `ell`-carriers cover the two clock halves.
-- **THM-2114 (PROVED):** route the residual further by strict tree surplus,
-  all-maximum-tree equality, and finite-ring needles. Every rank-`<=12` torus
-  cover needs a `13`-content blocker; rank `<=10` also needs an `11`-content
-  blocker, hence the specialized guard/terminal list displays both primes.
-- **THM-2115 (PROVED):** on the guard half-fiber, a binary-shifted terminal
-  cover forces an explicit signed divisor sequence to be Toeplitz-PSD. A
-  frequency-`84` coefficient closes an exact rank-eight row that passes all
-  THM-2105 clocks and saturates its half-fiber Hunter tree.
-- **THM-2116 (PROVED REDUCTION):** with a unique independent `13`-content
-  terminal blocker in rank eight and seven mod-`13` transverse residuals,
-  almost every safe guard-kernel orbit is either a disjoint six-toothpick-plus-
-  singleton partition of `F_13`, or a seven-toothpick cover with one doubled
-  point. The colored steps differ; the two extremal patterns remain open.
+- **THM-2114 (PROVED):** strict tree surplus, all-maximum-tree equality, and
+  finite-ring needles force a `13`-content blocker through rank `12` and an
+  `11`-content blocker through rank `10`, excluding all-primitive covers.
+- **THM-2115 (PROVED):** the half-fiber signed divisor sequence is Toeplitz-PSD;
+  frequency `84` closes a row passing all small clocks and its Hunter tree.
+- **THM-2116 (PROVED REDUCTION):** the generic first `13`-blocker yields a
+  six-toothpick-plus-singleton partition or seven toothpicks with one double;
+  the colored patterns remain open.
+- **THM-2117 (PROVED SEPARATION):** clocks, the maximum Hunter tree, and every
+  scalar Fourier minor can pass despite an open safe interval. Retain a joint
+  Toeplitz/Fejer certificate, not scalar divisor-packet bounds.
 - **THM-2112 (PROVED):** the same rank-seven lane has an explicit whole-row
   box via `R_7=5*28^8*(7*57^42)^17` and a BV/Fourier ratio recursion. The box
   is not enumerated or proved empty.

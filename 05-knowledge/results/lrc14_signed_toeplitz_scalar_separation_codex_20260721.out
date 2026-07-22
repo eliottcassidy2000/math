@@ -1,0 +1,39 @@
+LRC14 SIGNED HALF-FIBER SCALAR/TOEPLITZ SEPARATION -- exact audit
+family (speed, parity): ((840, 0), (4228, 1), (4984, 1), (5691, 1), (7070, 1), (4256, 1), (6195, 1), (4445, 1))
+small clocks m=2..7: PASS (speed 840 is universal)
+  m=2: (0, 1, 2, 3)
+  m=3: (0, 1, 2, 3, 4, 5)
+  m=4: (0, 1, 2, 3, 4, 5, 6, 7)
+  m=5: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+  m=6: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+  m=7: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+maximum Hunter tree mass: 3142001236410829/21994608830427660
+Hunter slack 1/7-tree: 85739364551/21994608830427660
+Hunter tree edges (indices, exact mass):
+  (4,6) 2554/125139
+  (1,4) 10894/533785
+  (4,5) 5483/268660
+  (3,6) 11421/559615
+  (2,7) 6459/316484
+  (2,6) 15003/735140
+  (0,3) 387/18970
+LCM closures audited: 181
+largest multi-divisor score: 67/472 at r=49560, packet=(840, 6195)
+multi-divisor gap to 1/7: 3/3304
+singleton analytic envelope sin(pi/7)/pi: 0.138109483615507 < 1/7
+strict-safe beta: 223163/6285230
+  speed=840 parity=0: distance=15714/89789, margin=18601/179578
+  speed=4228 parity=1: distance=341993/897890, margin=19847/64135
+  speed=4984 parity=1: distance=414471/897890, margin=25024/64135
+  speed=5691 parity=1: distance=195603/448945, margin=327071/897890
+  speed=7070 parity=1: distance=841/1778, margin=51/127
+  speed=4256 parity=1: distance=347231/897890, margin=141548/448945
+  speed=6195 parity=1: distance=41240/89789, margin=69653/179578
+  speed=4445 parity=1: distance=229/707, margin=51/202
+merged danger components: 12825
+safe components: 12824
+danger union mass: 4148003705637341/5865229021447376
+safe mass: 1717225315810035/5865229021447376
+largest safe gap: (1103/31115, 176/4949), length=51/448945
+full Toeplitz separation: Fejer convergence on the open safe gap
+PASS
