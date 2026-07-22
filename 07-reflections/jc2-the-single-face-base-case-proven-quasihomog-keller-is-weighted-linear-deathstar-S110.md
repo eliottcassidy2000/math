@@ -1,4 +1,14 @@
-# JC(2), the single-face base case proven: a quasi-homogeneous Keller component is a weighted-linear coordinate
+> **CURRENT-TRUTH CORRECTION (2026-07-22).** The base-case theorem is true
+> and is proved directly in THM-2103, but the original Step 4 below is not a
+> proof: it uses the JC-hard implication “mate implies one place at infinity.”
+> The printed diagnostic is floating finite linear algebra, not an exact
+> certificate, and its `y^2+x^3` row itself refutes “mate iff `phi` is linear.”
+> Likewise `x^2+y^3` has a linear one-variable face collapse without
+> `min(p,q)=1`, and `xy` is primitive. Treat the face-root/topology prose below
+> as historical motivation only; the canonical weighted-bracket proof is the
+> authority.
+
+# JC(2), the single-face base case: a quasi-homogeneous Keller component is a weighted-linear coordinate
 
 **death-star-2026-07-22-S110** (HYP-8955). Owner: work the next tool-matched sub-target (S109) — prove the
 local⟹global step for a Keller component with a **single resonant face**, combining the DvdK-face nonvanishing
@@ -6,12 +16,24 @@ local⟹global step for a Keller component with a **single resonant face**, comb
 sub-target — a single face with **no** lower-order terms, i.e. `f` quasi-homogeneous — completely and verifiably,
 and in doing so pins down exactly which of the S109 conditions are *free* (provable now) versus *JC(2)-hard*.
 
-## The base-case theorem (proven, verified)
+**Canonical direct proof (THM-2103).** The base-case conclusion has a shorter
+route that avoids using “a mate forces one place at infinity.” Decompose the
+mate by weighted degree. Its unique constant-bracket component has degree
+`w_1+w_2-delta`, which must be positive, so `delta<w_1+w_2`. Mixed monomials
+are then impossible. If `f=A x^p+B y^q` and both exponents were at least two,
+the inequalities `(p-1)w_1<w_2` and `(q-1)w_2<w_1` would multiply to the
+contradiction `(p-1)(q-1)<1`; an axial monomial is handled directly from its
+Jacobian factor. This proves the stated weighted-linear form without the
+properness/flow-completeness step that remains JC(2)-hard in the
+nonhomogeneous descent.
+
+## The base-case theorem (proved canonically by THM-2103)
 
 > **Let `f ∈ ℂ[x,y]` be `w`-quasi-homogeneous (weights `w=(w₁,w₂)`, `gcd=1`, `w`-degree `δ`). Then `f` has a
 > Jacobian mate `⟺` `f = a·y + b·xᵖ` or `a·x + b·yᵠ` (a weighted-linear binomial, `a≠0`) `⟺` `f` is a coordinate.**
 
-Verified (`jc2_quasihomog_base_case_deathstar_S110.py`, `mate_exists` by exact linear algebra): mates exist for
+The finite script `jc2_quasihomog_base_case_deathstar_S110.py` is a diagnostic,
+not proof evidence: mates are found for
 `y+x²`, `y+x³`, `x+y²`; and fail for every non-weighted-linear quasi-homogeneous form — `x²+y²`, `x²+xy+y²`,
 `(x+y)²`, `xy`, `x²y+xy²`, `y²+x³`.
 
@@ -27,14 +49,18 @@ Verified (`jc2_quasihomog_base_case_deathstar_S110.py`, `mate_exists` by exact l
    a single degree leaves at most one `xᵖ` and one `yᵠ`: `f = a xᵖ + b yᵠ` (a binomial). Its **face polynomial**
    `φ` — the 1-variable collapse `f = xᵅyᵝ·φ(τ)`, `τ = x^{w₂}/y^{w₁}` — is the S106/S101 **DvdK face object**, and
    for a binomial `φ` has degree `= p/w₂ = q/w₁`.
-4. **The DvdK-face is single-branch:** primitive + a mate forces `min(p,q)=1` (`φ` linear ⟺ one branch at
-   infinity ⟺ one place ⟺ `≅ℂ`); the alternatives are exactly the *fiber ≇ ℂ* failures — `φ` with `≥2` distinct
-   roots is `≥2` places at infinity (`x²+y²`), a repeated root or a monomial factor is non-primitive
-   (`(x+y)²`, `xy`), matching (1). Hence `f = a y + b xᵖ` = a coordinate. ∎
+4. **Direct axial arithmetic (the repair):** if both axial terms occur, write
+   `f=A x^p+B y^q`. Then `delta=pw_1=qw_2<w_1+w_2`. If `p,q>=2`, the two
+   inequalities `(p-1)w_1<w_2` and `(q-1)w_2<w_1` multiply to the impossible
+   `(p-1)(q-1)<1`. Thus one exponent is one. If only one axial term occurs,
+   its derivative divides every Jacobian bracket, so (1) forces its exponent
+   to be one. Hence `f=a y+b x^p` or its swap, an explicit triangular
+   coordinate. ∎
 
-So for **one face**, the S109 slogan is a *theorem*: `mate ⟺ fiber ≅ ℂ ⟺ coordinate`, with the three tool-conditions
-(primitive / `δ<w₁+w₂` / `φ` linear) each supplying one of connected / genus-0 / one-place-at-infinity. The
-`ax^p+b y^q` genus/place count is the classical binomial-curve fact; here it is the DvdK single-branch condition.
+Thus for a genuinely quasi-homogeneous component the implication
+`mate => coordinate` is a theorem. THM-2103 proves it without first proving
+`fiber ≅ C`; the connected/genus/place factorization remains a useful
+interpretive picture, not the logical proof.
 
 ## The honest sharpening of S109
 
@@ -54,17 +80,21 @@ fiber topology is *explicit* (a binomial/`μ_δ`-cover), so properness is not ne
 ## The descent (the remaining sub-target) and where the tools go
 
 For a general **single principal face** `f = Φ_w + (lower w-degree)`, with `Φ_w` the `w`-leading face:
-- If `Φ_w`'s DvdK-face `φ` is **not** linear (`≥2` distinct roots), the principal branch structure already gives
-  `≥2` places at infinity — the multi-root/*resonant* pole of the dictionary; the counterexample-excluding claim
-  here is a DvdK-face nonvanishing (S106 orbit-product / boxeph S231 certificate), applied per face.
-- If `φ` **is** linear, `Φ_w` is weighted-linear and the classical **Abhyankar–Moh** descent (a weighted-
-  triangular automorphism killing the top face, then recursing) reduces `f` toward the base case; the number of
-  steps is boxeph S225's **coprime-interval / Lamé** descent-termination bound. Termination ⟹ coordinate.
+- The degree-zero part of `Jac(f,g)` can now receive contributions from
+  several pairs of lower weighted pieces, so the one-piece argument
+  `delta<w_1+w_2` no longer follows merely from the principal face.
+- The degree of the one-variable face collapse is not the right dichotomy by
+  itself: `x^2+y^3` has a linear collapse and one place at infinity but is not
+  weighted-linear and has no mate.
+- A lawful next target is therefore to prove, from the complete bracket
+  ledger, either that the principal face contains a genuine linear variable
+  or that its contribution cannot be cancelled by lower faces. In the first
+  branch one must then prove that successive weighted-triangular removals
+  terminate. DvdK-style face nonvanishing and the S225 descent clock remain
+  candidate tools, not established implications.
 
-So the sub-target reduces to two tool-matched pieces, both now *named and located*: (a) **multi-root face ⟹ no
-mate** (a per-face DvdK nonvanishing — the honest content, since "`≥2` places ⟹ no mate" is itself the JC-hard
-direction and must be earned face-by-face, not assumed), and (b) **linear-face descent terminates** (AM + S225).
-The base case is (a)+(b) with zero descent steps.
+The base case is the zero-lower-face situation in which the bracket ledger has
+only one possible degree-zero pair. THM-2103 closes exactly that case.
 
 ## Honest scope
 

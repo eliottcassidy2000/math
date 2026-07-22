@@ -11,7 +11,7 @@ status: >
   orbit of that M-subset gives (ct)^r=C^eta, while Vieta makes C the nonzero
   constant (-1)^d r_0/r_d. The t-adic valuations disagree. This is a
   project-internal proof of exactly the bare existence input used by THM-2022;
-  it does not prove DvdK's stronger critical-value/limsup theorem. THM-2098
+  it does not prove DvdK's stronger critical-value/limsup theorem. THM-2101
   later refines the same root object to an unconditional effective, generally
   non-sharp first-return bound.
 source: codex-2026-07-21-dvdk-galois-orbit
@@ -22,7 +22,7 @@ related:
   - THM-1630-tnc-is-duistermaat-van-der-kallen-theorem-2
   - THM-2022-gmc2-frobenius-lowest-balanced-face
   - THM-2058-primitive-phase-packets-and-deck-fan-intervals
-  - THM-2098-effective-compound-root-bound-for-one-variable-constant-terms
+  - THM-2101-effective-compound-root-bound-for-one-variable-constant-terms
 ---
 
 # THM-2067 -- Galois orbit-products close the one-variable input
@@ -209,7 +209,7 @@ THM-2067 remains a project-internal route to the bare seed that THM-2022
 needs: the lowest balanced face gives a non-one-sided one-variable Laurent
 polynomial, and (10) supplies a nonzero face constant term before finite-field
 reduction.  The current THM-2022 paper proof instead cites the independent,
-effective, Galois-free-after-the-small-root-identity THM-2098.
+effective, Galois-free-after-the-small-root-identity THM-2101.
 
 This does **not** reproduce DvdK's stronger conclusion about a nonzero
 critical value and
@@ -219,7 +219,7 @@ limsup |CT(f^m)|^(1/m).
 ```
 
 By itself this orbit contradiction gives no bound on the first nonzero `m`.
-THM-2098 later gives an independent effective proof using the compound
+THM-2101 later gives an independent effective proof using the compound
 polynomial of every same-size root-subset product and obtains the explicit
 bound
 
@@ -230,7 +230,7 @@ a=min(M,N).
 
 Its coefficient-specific pole clearing makes that proof Galois-free beyond
 the small-root logarithmic identity; this theorem remains a historical and
-conceptual route to bare existence, not a dependency of THM-2098.  The
+conceptual route to bare existence, not a dependency of THM-2101.  The
 estimate is generally non-sharp; the sharp Sturmfels/ESV target
 `m<=M+N` remains open when `a>=2`. In particular, S222's general mixed-complex saddle
 asymptotic and S223's assertion that mixed-sign cancellations are merely
