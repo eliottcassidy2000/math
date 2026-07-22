@@ -7,6 +7,10 @@
 - **CLOCK-FLOOR DECOMPOSITION:** mu = MAIN (1-2delta)^n + resonance corrections. MAIN = clock/Eisenstein FLOOR = (6/7)^13 for LRC14 (1-2/14=6/7 = THM-878 floor = boxeph S221 Eisenstein floor). Covering REQUIRES resonances to cancel (6/7)^13.
 - **QUANTITATIVE REDUCTION (verified):** |corrections|/MAIN = 0.03-0.10 for Sidon cores (mu~=MAIN>0 => robustly LONELY, never covering) vs 0.89-0.96 for APs (AP {1..5} at 1/6 covers). So LRC(14) reduces to the maximal-resonance (AP) cores = S101 GMC2 coincident-cycle hard stratum = degenerate tournament zeta (S99) = codex relation-rich / boxeph tight-AP (S214). S101 unique-cycle transferred: few resonances => floor survives => lonely.
 - **HONEST:** not a proof (Fourier gap-decomposition is standard); contribution = the unification + MAIN=clock-floor + the Sidon-vs-AP reduction + naming the residual (zeta coincident-cycle degeneracy). Engine to finish: rigorous |corrections|<MAIN for all non-AP 13-cores. reflection lrc-and-gmc2-are-one-integer-kernel-...-S102. HYP-8879.
+> **CURRENT-TRUTH WARNING (2026-07-21):** This is chronological provenance,
+> not a status authority. Entries may be corrected after filing. Start with
+> [`START-HERE.md`](START-HERE.md), [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md),
+> and [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
 
 ## boxeph-2026-07-21-S222 -- bypass GMC(2)'s DvdK dependency via the saddle-point/Watson method (HYP-8890)
 ## death-star-2026-07-21-S101 -- SHARP DvdK-free criterion (refines S100 a lot): a UNIQUE minimal balanced channel (unique tournament-zeta primitive cycle) => GMC(2) DvdK-free, coefficient-independently. 84% of supports. HYP-8878.
@@ -38,6 +42,8 @@
 - S223: candidate a/q coprime (three-distance/CF).
 
 **VERIFIED:** M(deep well {1..12,182}) = 14/183 EXACTLY at t*=14/183, q=183=182+1=Phi_6(14) (pair-sum vertex, coprime CF [0;13,14]); 14/183>1/14 => LRC holds rigorously. SHARPENED disproof search (exact M): deep well 14/183, AP12+364 28/365, non-AP {1..11,13,168} 14/173, 2*AP 7/92 (non-primitive) -- ALL >= 1/14. No disproof.
+## boxeph-2026-07-21-S221 -- the cusp frame is a repo-wide difficulty-LOCATOR (HYP-8885)
+## death-star-2026-07-21-S100 -- CONFINE the GMC(2) DvdK dependency: elementary except in the resonant-signed corner (a verified sharpening, not a full bypass). HYP-8877.
 
 **REDUCTION (the progress):** Wall A <=> every PRIMITIVE covering 13-set has some pair-sum vertex a/q in (0,1/2] with min_v||v a/q|| >= 1/14 -- the exact-arithmetic (residues mod q) form of the n=12 AP-core rigidity (S214 rank-11 vertex). Mirror halves the domain, pair-sum finitizes the vertices, coprime/CF names the target (q=Phi_6(14)).
 
@@ -84,6 +90,15 @@
   unit-stabilizer identity for primitive packets. At `N=27` the stabilizer is
   `{1,-1}`, giving nine packet images with incidence one; the same calculation
   proves that an unlabelled packet loses signed orientation and creates no seed.
+- **Exact cusp replacement:** phase height gives a proved bulk/boundary/null
+  trichotomy. Strict templates occur primitively on all sufficiently large
+  prime grids; tight templates have finite support on level-14 pair-sum clocks;
+  subthreshold templates have no packets. This is the lawful pointwise carrier,
+  unlike the retracted modular-form attachment in MISTAKE-226.
+- **Unique-channel no-go:** at `N=29`, the template
+  `(1,2,3,4,5,6,8,9,10,11,12,13,14)` has unique antipodal maximizers `+/-4`
+  but height only `2/29`. HYP-8878's uniqueness principle therefore schedules
+  singleton cells but cannot replace the LRC height coordinate.
 - **Referee repair:** the theorem now scopes transverse coefficients to nonzero
   integers, cites the arity-free THM-2047 pair-sum theorem and the exact
   `THM-1065-doubling-family-mod-six-characterization.md` source for the

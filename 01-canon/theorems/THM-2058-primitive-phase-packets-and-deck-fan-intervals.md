@@ -6,8 +6,9 @@ status: >
   are elementary. A transverse denominator-N safe packet is the disjoint
   union of its reduced phase-order packets. Counts obey divisor summation,
   Mobius inversion, an exact rational Ehrhart/Beatty shift law, and a primitive-
-  phase discrepancy bound. Across a longitudinal fiber the entire labelled
-  packet transports by the unit M. After fixing a bad N and a THM-2055 hull
+  phase discrepancy bound, yielding an exact bulk/boundary/null trichotomy.
+  Unit stabilizers give a uniform-incidence orbit norm. Across a longitudinal
+  fiber the entire labelled packet transports by M. After fixing a bad N and a THM-2055 hull
   owner, positivity, owner, and determinant constraints cut M to one explicit
   interval of coprime integers, minus finitely many collision points. Non-hull
   adjacent-pair representatives remain essential deck sidecars. This is an
@@ -19,7 +20,7 @@ depends_on:
   - THM-2047
   - THM-1065-doubling-family-mod-six-characterization
 related:
-  - THM-1002
+  - THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case
   - THM-1605-tnc-proved-monodromy-transitivity
   - THM-685
   - THM-2041
@@ -29,8 +30,8 @@ related:
   - HYP-8871
 script: 04-computation/lrc14_primitive_phase_packet_referee_codex_20260721.py
 output: 05-knowledge/results/lrc14_primitive_phase_packet_referee_codex_20260721.out
-script_sha256: ad40c2702303288a6315d96dcf783a22fcbb202f1308d4cf4f84e86126f459c3
-output_sha256: abacef8c372ad141806d9ce7f70b416b1fe3f5ee062f876dcb6dda648efbf813
+script_sha256: e9da9f9f5a5fdb1dc0f35814fb72b467327e76a2b90524259041e680035f7f34
+output_sha256: d51938376295392390408574772e19a809d8f4d2ee42bd4526bd0e35f85abadb
 ---
 
 # THM-2058 -- primitive phase packets and deck/fan intervals
@@ -233,6 +234,69 @@ Therefore the explicit inequality on the right certifies a primitive safe
 phase of exact order `N`. For mere safe existence, THM-2053's widest-component
 cutoff can be sharper; (16) is useful when the primitive order or owner-labelled
 packet itself is required.
+
+### Exact bulk, boundary, and null trichotomy
+
+Put
+
+```text
+M(m)=max_(theta in R/Z) min_k ||m_k theta||.
+```
+
+The primitive support has three qualitatively different, completely rigorous
+forms.
+
+1. If `M(m)>1/14`, then `rho>0`, and (16) gives
+
+   ```text
+   p_p(m)>0 for every prime p with rho(p-1)>2K.          (16a)
+   ```
+
+   Thus every sufficiently large prime grid contains a strict primitive phase:
+   equality would have the form `r/p=1/14` for an integer residue numerator
+   `r`, impossible for prime `p`.
+2. If `M(m)=1/14`, then `G(m)` is finite. Every `a/q in G(m)` in lowest terms
+   satisfies
+
+   ```text
+   14 divides q,       q divides x+y<=2R                 (16b)
+   ```
+
+   for an active opposite-slope pair `x,y` of absolute template speeds,
+   allowing a self-pair. Hence primitive support is finite and lies on the
+   explicit level-14 pair-sum clocks `q<=2R`. More exactly,
+
+   ```text
+   p_N(m)=#{theta in G(m):reduced denominator(theta)=N},
+   L_N(m)=#{theta in G(m):denominator(theta) divides N}.
+   ```
+
+   Every active speed at `a/q` also satisfies
+
+   ```text
+   a|m_k| == +/-q/14 (mod q).                           (16b')
+   ```
+
+   Thus two active runners give an ordinary edge, while three or more give an
+   explicit antipodal congruence resonance; there is no coefficient
+   cancellation hiding in this terminology.
+3. If `M(m)<1/14`, then
+
+   ```text
+   p_N(m)=L_N(m)=0 for every N.                          (16c)
+   ```
+
+For (16a), a strict point has a safe open neighborhood, so `rho>0`; specialize
+(16) to a prime. In the boundary case, a positive-length component of `G(m)`
+would contain an open subinterval on which one fixed nonzero-slope affine
+branch realizes the lower envelope, impossible at a constant maximum. Thus
+all components are singletons. At a reduced safe phase, the minimum residue
+numerator is an integer `r` and `r/q=1/14`, proving `14|q`; THM-2047's
+opposite-slope top-vertex theorem gives `q|(x+y)`. The null case is immediate.
+
+This is the lawful LRC version of a bulk/boundary/null split. It uses exact
+phase height, not a modular-form cusp: MISTAKE-226 records that no proved map
+pulls the level-14 newform back to this signed pointwise predicate.
 
 ## 4. A bounded primitive packet seed
 
@@ -450,6 +514,14 @@ The archive analogies become useful only after stating what they preserve.
    owner sector as `S_24` and still fails the determinant gate. The non-hull
    representative `r=5` restores the exit because `113|w_k+5` and
    `D_113(1,...,11,-5,13)=9/113`.
+5. **A unique maximizing packet does not create height.** For
+   `m=(1,2,3,4,5,6,8,9,10,11,12,13,14)` at `N=29`, the unique antipodal
+   primitive maximizers are `+/-4`, but their numerator is only `2`, so
+   `D_29=2/29<1/14` and the safe packet is empty. Indeed every other unit
+   `a!=+/-4` has `+/-a^(-1)` in the template and therefore numerator `1`,
+   while `+/-4` avoid `+/-1` but hit `+/-2`. Thus HYP-8878's unique-channel
+   noncancellation principle transfers only as a search scheduler; the LRC
+   predicate still requires the missing height coordinate.
 
 The surviving synthesis is exact: the signed hull is the determinant sidecar,
 the labelled primitive phase packet is the residue sidecar, and (22) counts the
@@ -463,9 +535,9 @@ discharge the surviving rows. QED.
 The stored referee checks 720 set-level packet decompositions and 720 Mobius
 inversions, the exact Beatty shift law including the zero-measure `S_24`
 singleton regression, unit transport with labelled residue vectors, the
-primitive orbit--stabilizer norm, the CRT and spanning-tree no-gos, all six
-one-tail deck values, six deck/fan interval counts, and six depths of the
-same-sector Hasse family. It
+primitive orbit--stabilizer norm, the bulk/boundary/null trichotomy, the CRT,
+spanning-tree, and unique-maximizer no-gos, all six one-tail deck values, six
+deck/fan interval counts, and six depths of the same-sector Hasse family. It
 passes both
 
 ```text

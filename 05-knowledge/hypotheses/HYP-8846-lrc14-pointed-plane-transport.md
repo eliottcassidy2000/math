@@ -40,7 +40,9 @@ related:
   - HYP-8860
   - HYP-8871
   - HYP-8877
+  - HYP-8878
   - HYP-8885
+  - HYP-8890
 ---
 
 # HYP-8846 -- pointed transport, not an unpointed plane escape
@@ -193,6 +195,12 @@ fiber representatives. A sign-only matroid is insufficient.
 - THM-2058 imports HYP-3456's Beatty clock at count level and THM-685's grid
   discrepancy at primitive-order level. Its Mobius packets are phase strata,
   not THM-2041 Fourier projectors; unit Frobenius creates no safe seed.
+- It also makes the repo's cusp diagnostic exact without modular forms. If the
+  template height is strictly above `1/14`, every sufficiently large prime
+  grid has a primitive safe phase. At equality, primitive support is finite
+  and lies on explicit denominators `q` with `14|q` and `q|(x+y)<=2R`. Below
+  threshold all packets vanish. This bulk/boundary/null trichotomy retains the
+  signed pointwise predicate that MISTAKE-226 shows the level-14 newform lacks.
 - The orbit-product argument from
   `THM-1605-tnc-proved-monodromy-transitivity.md` does transfer exactly to a
   primitive packet. If `H` is its unit stabilizer, there are
@@ -254,12 +262,18 @@ fiber representatives. A sign-only matroid is insufficient.
   zero-mode/finite-Fourier fluctuation split. THM-2057 is its rigid `N<=14`
   nonemptiness specialization; THM-2058 supplies primitive-order and owner-
   interval structure inside the resulting packet.
-- HYP-8877's GMC confinement and HYP-8885's cusp frame are useful schedulers,
-  not proof transfers. They suggest prioritizing nonresonant/single-owner
-  cells before tied multi-packet cells and naming the genus-one remainder, but
-  neither gives an LRC safe seed, an interval exit, or a lawful loss of signed
-  owner data. THM-2058's CRT, spanning-tree, mask-walk, and fixed-jet controls
-  are the falsifying checks against treating either analogy as a certificate.
+- HYP-8877/8878's GMC confinement, HYP-8885's cusp frame, and HYP-8890's
+  saddle route are schedulers, not proof transfers. A unique antipodal
+  maximizer can still have height `2/29<1/14`, and exact Beatty counting already
+  replaces asymptotic saddle counting on one LRC packet. THM-2058's CRT,
+  spanning-tree, mask-walk, fixed-jet, and unique-maximizer controls falsify
+  any attempt to use resonance, uniqueness, or genus without a height/owner
+  sidecar.
+- Two further archive controls sharpen that warning. Tournament `c_3` is
+  already spectral (`tr(A^3)=3c_3`), so it cannot recover a hidden cospectral
+  sidecar. The tight AP row `{1,...,13}` has six ordinary two-wall transverse
+  maxima, not a higher-multiplicity Jacobian-style cusp. Here “boundary” means
+  zero phase measure plus exact denominator data, not singularity multiplicity.
 
 ## Tournament analysis
 

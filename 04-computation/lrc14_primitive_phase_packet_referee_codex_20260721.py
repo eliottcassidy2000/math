@@ -172,6 +172,33 @@ def main() -> None:
             len(safe_packet(s24, n + 14)) == len(safe_packet(s24, n)),
             f"S24 singleton period N={n}",
         )
+    boundary_orders = tuple(
+        n for n in range(1, 49) if primitive_packet(s24, n)
+    )
+    require(boundary_orders == (14,), "S24 finite primitive boundary support")
+
+    bulk_primes = (29, 31, 37, 41, 43)
+    require(
+        all(primitive_packet(m_beatty, prime) for prime in bulk_primes),
+        "strict bulk prime packets",
+    )
+    null_template = tuple(range(1, 15))
+    null_grid_checks = 0
+    for n in range(1, 241):
+        require(safe_packet(null_template, n) == (), f"null grid N={n}")
+        null_grid_checks += 1
+
+    unique_max_template = (1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14)
+    unique_scores = {
+        x: min(least_abs(x * a, 29) for a in unique_max_template)
+        for x in range(1, 29)
+        if gcd(x, 29) == 1
+    }
+    unique_best = max(unique_scores.values())
+    unique_maximizers = tuple(x for x, score in unique_scores.items() if score == unique_best)
+    require(unique_best == 2, "unique-maximizer numerator")
+    require(unique_maximizers == (4, 25), "unique antipodal maximizers")
+    require(safe_packet(unique_max_template, 29) == (), "unique-maximizer no-go")
 
     crt_template = (1, -1, 2, 4, 7)
     require(
@@ -248,6 +275,8 @@ def main() -> None:
     print("unit_transport_N27=M1:{2,25},M2:{1,26}")
     print("orbit_norm_N27=stabilizer:2,packets:9,incidence:1")
     print("singleton_period_S24=Q14,packet:{1,3,5,9,11,13}")
+    print("bulk_boundary_null=bulk_primes:5,boundary_orders:{14},null_grids:240")
+    print("unique_max_no_go=N29,maximizers:{4,25},numerator:2,safe_packet:empty")
     print("CRT_no_go=p3:2,p5:4,p15:0")
     print("one_tail_deck_numerators=" + ",".join(f"{k}:{v}" for k, v in one_tail_values.items()))
     print("fan_interval_fingerprints=" + ",".join(interval_fingerprints))

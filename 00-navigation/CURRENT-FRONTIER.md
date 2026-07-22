@@ -127,44 +127,29 @@ structural supplier/seed and a lossless exit.
   the relation-rich AP boundary—remains open.
 - **PROVED rank descent and explicit residual atlas:** THM-2052 combines
   THM-763's finite primitive-height bound with a pigeonhole/code argument.
-  Every hypothetical counterexample has at least eleven independent
-  support-at-most-three relations of height `91^6`. It is therefore either a
-  rank-twelve finite-box case, or belongs to one of finitely many two-anchor
-  star templates `a_i v_p+b_i v_q+c_i v_i=0` with `c_i!=0`. Modulo common
-  dilation each template has only one projective parameter. Pair-relation
-  clusters plus genuine cross-cluster triples give the same structural split.
-  THM-2053 proves `max_i|a z_i-b u_i|<=(a^2+b^2)/91`; its round corollary
-  removes `||(a,b)||>=91L`. Adjacent normalized columns supply the repeat
-  projection elementarily, raising the parameter torus to margin `1/13`.
-  Every row also obeys `M(v)>=1/13-R/(2N)`, with `N|(v_i+v_j)`. The exact deck
-  `D_N(m)` removes whole fibers independently of longitudinal data; bad moduli
-  form a divisibility down-set with a rational conductor (AP cutoff `156`).
-  THM-2055 independently restricts determinant failure to hull-owner tangent
-  sectors; non-hull representatives remain load-bearing in the deck sidecar.
-  THM-2056 Kelvin-inverts those sectors to the fixed polar polygon
-  `(1/91)R^{-1}K^o` and proves the Farey defect rule
+  Every hypothetical counterexample has eleven independent support-at-most-three
+  relations of height `91^6`, hence is rank-twelve finite-box or lies in one of
+  finitely many two-anchor stars `a_i v_p+b_i v_q+c_i v_i=0`, `c_i!=0`.
+  Modulo dilation each star has one projective parameter; pair clusters and
+  cross-cluster triples give the same split. THM-2053 proves
+  `max_i|a z_i-b u_i|<=(a^2+b^2)/91`, removing `||(a,b)||>=91L`, while adjacent
+  normalized columns raise the parameter torus elementarily to margin `1/13`.
+  Every row obeys `M(v)>=1/13-R/(2N)`, `N|(v_i+v_j)`; the exact deck `D_N(m)`
+  removes longitudinal fibers, with a divisibility down-set and AP cutoff `156`.
+  THM-2055 restricts failure to hull-owner sectors while non-hull deck sidecars
+  remain essential. THM-2056 Kelvin-inverts them to `(1/91)R^{-1}K^o` and proves
   `2u.v>=A_p(u)+A_p(v)` for whole acute unimodular cones. THM-2057 closes two
   entire one-tail planes: `{a,2a,...,11a,13a,w}` by a `12a` / `14a` / `84a`
   certificate, and `{a,2a,...,12a,w}` by a `13a` / `14a` / `182a` certificate.
-  More generally, a missing clock `N<=14`
-  forces `Na|w` in any one-tail counterexample over `aC`. THM-2059 removes the
-  small-modulus restriction from the carrier: for every `N`, safe core and
-  tail residue packets meet by an exact CRT fiber-product formula, whose
-  reduction-histogram dot product counts the safe `k/(Na)` grid phases. Its
-  exact zero-mode/fluctuation split gives a Cauchy--Parseval certificate; the
-  audit certifies `14195` of `14978` positive packet rows from the zero mode
-  alone. The other `783` positive rows need exact modes, while zero-packet
-  rows remain explicit disjoint-support obstructions rather than being
-  silently discarded.
-  Although that plane
-  has `640690` distinct-speed primitive determinant failures, the arithmetic
-  carrier has only three leaves. HYP-8871 targets exact deck/Farey discharge
-  with clock/binding/Euler sidecars over the remaining finite intersection;
-  THM-2058 currently claims/reserves the primitive phase-packet and coprime
-  longitudinal-interval terminal inside each fixed bad deck; its checked file
-  remains a stub. The decisive next composition is to feed those primitive
-  packet counts into THM-2059's exact CRT histograms, then use the resulting
-  disjoint-support obstruction as the signed Euler/deletion sidecar.
+  More generally, a missing clock `N<=14` forces `Na|w` over `aC`. Despite
+  `640690` primitive determinant failures, its arithmetic carrier has three
+  leaves. THM-2059 removes the small-clock restriction: arbitrary-`N` core and
+  tail packets meet by an exact CRT histogram dot product. Its zero-mode
+  Cauchy--Parseval bound certifies `14195/14978` positive packet rows; `783`
+  require exact modes, while zeros are explicit disjoint-support obstructions.
+  THM-2058 supplies primitive-order and coprime owner intervals inside each bad
+  deck. HYP-8871 now targets using the CRT obstruction as a signed Euler/
+  deletion sidecar over the remaining finite atlas.
 - **PROVED relative whole-product decorrelation:**
   [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says bounded scalar relations must lift to vector-character relations. Two
@@ -451,7 +436,7 @@ The most reusable current bridges are not literal object identifications:
 |---|---|---|
 | Whole-layer Frobenius / orbit norm | NC2 balanced face and TNC monodromy orbit | Exact finite-abelian packet preservation and uniform-incidence norms transfer; LRC still lacks the seed and exit, and `-1` in the packet stabilizer forces a signed orientation sidecar. |
 | Quotient + sidecar | spectrum/SCC/support quotients | Which lost coordinate restores the target predicate? |
-| Maximum vs average | LRC good periods | Is a mean statistic masking a resonant extremal elsewhere? |
+| Bulk / boundary / null | THM-2058 phase height | Strict templates occur on all large prime grids; tight support lies on finitely many level-14 pair-sum clocks; subthreshold packets vanish. |
 | Operation-response | tournament joins/support unions | Which observables add, multiply, localize, or collide? |
 | One-sided accumulation | LRC spectrum | Can qualitative isolation be made effective by finite state/pinning data? |
 | Support Dirichlet profile | integer sequences | Do tournament/LRC census supports have functional or automatic structure? |
