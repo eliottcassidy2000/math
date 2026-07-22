@@ -1,3 +1,32 @@
+## kind-pasteur-2026-07-22-S128c152 -- hderiv F=D_m piece DONE (my assigned leg of the 3-way split): frame generating function = moment series, F=1 discharged, kernel-pure
+
+**Owner:** work hderiv yourself, pull often, keep up with changes as they occur.
+
+**What I did:** the owner put me directly on hderiv. Pulled every cycle through very heavy concurrency
+(death-star landed the (LaurentSeries F)[[t]] frame + logDeriv + xCoeff0 infra + the hderiv assembly;
+mac-mini a complete-modulo-pieces proof; boxeph the frame bridge + capstone). Rather than duplicate,
+claimed and delivered MY leg of death-star confirmed 3-way split (kps = F=D_m, death-star = (c) degree
+lemma, mac-mini = (a) h-side).
+
+**DELIVERED kernel-pure [propext,Classical.choice,Quot.sound] (GMC2DvdKFrameExtraction.lean, pushed, in root):**
+- oneSubCX_mul_mkGeom / inverse_oneSubCX: the geometric inverse (1 - C w*X)^{-1} = mk(w^.), general
+  CommRing -- a Mathlib gap, reusable.
+- inverse_PhiFrame: honest Ring.inverse(PhiFrame Rl M) = C(x^{-M}) * mk(w^.), w = Rl*x^{-M}, via the
+  factoring Phi = C(x^M)*(1 - C(w)*X) + the geometric inverse.
+- xCoeff0_CRl_mul_inverse_PhiFrame: leg (c) proper -- xCoeff0(R/Phi) = mk(n => (Rl^{n+1}).coeff(M(n+1)))
+  = (F-1)/t. Computes the D_m series that death-star xCoeff0_xM_div_PhiFrame left symbolic.
+- xCoeff0_xM_div_PhiFrame_eq_moments: F := xCoeff0(x^M/Phi) = mk(m => (Rl^m).coeff(M*m)) = sum D_m t^m.
+- xCoeff0_xM_div_PhiFrame_eq_one_of_vanish: under (forall m>=1, (Rl^m).coeff(M*m)=0) => F = 1. This
+  DIRECTLY DISCHARGES the hF1 hypothesis of death-star GMC2DvdKHderiv.hderiv_of_frame.
+
+**NET:** hderiv now needs only (c) degree lemma [death-star] + (a) h-side [mac-mini] + the R->Rl
+frame-moment vs polynomial-moment transport [death-star transpose]; everything else, including my F=D_m
+leg + death-star assembly, is kernel-pure. Coordinated: claimed the leg by broadcast BEFORE building,
+confirmed net-new by grep (nobody computed Ring.inverse(PhiFrame) or the D_m series), pushed, notified
+the wiring. Frequent pulls throughout; resolved 2 root-import rebase conflicts (kept all fleet imports).
+
+**HONEST:** did NOT close the full hderiv (the (c)/(a)/transpose legs are others). Delivered exactly my
+assigned F=D_m leg. HYP-9016. Reflection gmc2-hderiv-fdm-leg-geometric-inverse-kps-S128c152.
 ## death-star-2026-07-22-S116 -- the unified (LaurentSeries F)[[t]] frame: VERIFIED + LANDED, dissolves the two-completion hderiv blocker; fleet converged (mac-mini's complete hderiv proof + boxeph's de-risked bridge live in it)
 
 **Owner:** continue + extend the unit-in-(LaurentPolynomial F)[t] insight, pulling in related concepts; push/pull often. (Poisson/Dixmier "counterexample" abstract from S115 still flagged as an unverified JC(4)/DC(4)-disproof claim, not integrated.)
