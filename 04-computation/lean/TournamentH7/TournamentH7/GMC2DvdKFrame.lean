@@ -63,7 +63,40 @@ noncomputable def xCoeff0 : PowerSeries (LaurentSeries F) →+ PowerSeries F whe
       = (PowerSeries.coeff (R := LaurentSeries F) k φ).coeff 0 := by
   simp [xCoeff0, PowerSeries.coeff_mk]
 
+/-! ## The logarithmic derivative (general, reusable)
+
+`logDeriv φ = φ'/φ` for a formal power series.  The one structural fact behind the `hderiv` identity
+is that on a *product of units* it is additive: `logDeriv (Φ) = logDeriv P + logDeriv h` becomes
+`−R/Φ = P_t/P + h_t/h` when `Φ = P·h`.  This is a clean group-hom-like statement (units → additive),
+absent from Mathlib, valid over any commutative ring. -/
+
+section LogDeriv
+
+variable {R : Type*} [CommRing R]
+
+/-- The logarithmic derivative `φ'/φ` of a formal power series (via `Ring.inverse`; the honest `φ'·φ⁻¹`
+whenever `φ` is a unit). -/
+noncomputable def logDeriv (φ : R⟦X⟧) : R⟦X⟧ := PowerSeries.derivativeFun φ * Ring.inverse φ
+
+/-- **The logarithmic derivative is additive on products of units** (the algebraic core of `hderiv`).
+`Φ = P·h ⟹ logDeriv Φ = logDeriv P + logDeriv h`, i.e. `−R/Φ = P_t/P + h_t/h`. -/
+theorem logDeriv_mul {φ ψ : R⟦X⟧} (hφ : IsUnit φ) (hψ : IsUnit ψ) :
+    logDeriv (φ * ψ) = logDeriv φ + logDeriv ψ := by
+  have hφi : φ * Ring.inverse φ = 1 := Ring.mul_inverse_cancel φ hφ
+  have hψi : ψ * Ring.inverse ψ = 1 := Ring.mul_inverse_cancel ψ hψ
+  simp only [logDeriv, PowerSeries.derivativeFun_mul, Ring.mul_inverse_rev]
+  linear_combination (PowerSeries.derivativeFun φ * Ring.inverse φ) * hψi
+    + (PowerSeries.derivativeFun ψ * Ring.inverse ψ) * hφi
+
+/-- Log-derivative of a unit times the unit recovers the derivative: `(logDeriv φ)·φ = φ'`. -/
+theorem logDeriv_mul_self {φ : R⟦X⟧} (hφ : IsUnit φ) :
+    logDeriv φ * φ = PowerSeries.derivativeFun φ := by
+  rw [logDeriv, mul_assoc, Ring.inverse_mul_cancel φ hφ, mul_one]
+
+end LogDeriv
+
 end GMC2DvdKFrame
 
 #print axioms GMC2DvdKFrame.isUnit_PhiFrame
 #print axioms GMC2DvdKFrame.xCoeff0
+#print axioms GMC2DvdKFrame.logDeriv_mul
