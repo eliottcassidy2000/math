@@ -101,10 +101,12 @@ not unsafe. The reusable certificate architecture is
   THM-2088 makes cut rank seven finite
   (`max(h,max Q)<=91421508108581`); rank six is persistent, with THM-2089 flat
   form `q_i=u_i(z+v_i h)`. THM-2082 retains residue incidence; THM-2086 closes
-  `7|h`, five `7|q`, and the lacunary cone, while THM-2094's conditional
-  fourfold-moment certificate removes four `7|q`. The live modular profile is
-  `7 not|h`, one to three `7|q`, in nonlacunary templates. THM-2090 splices
-  the persistent cut to the
+  `7|h`, five `7|q`, and the lacunary cone. THM-2091 turns the remaining
+  containment into the centered triple-energy lower bound `2059/90090`, and
+  THM-2094 uses the full conditional law on the `1/7` grid to eliminate the
+  exactly-four-`7|q` profile. Thus this analytic residual is now `7 not|h`,
+  one to three `7|q`, nonlacunary templates. THM-2090 splices the persistent
+  cut to the
   global rank-eleven code: the full row is finite, all thirteen speeds form a
   height-`91^6` last-guard/terminal-anchor star, or `(h,Q)` is literally frozen
   and only the three earlier guards plus two original tails move on one affine

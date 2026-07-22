@@ -35,7 +35,9 @@ related:
   - THM-2085
   - THM-2086
   - THM-2090
+  - THM-2091
   - THM-2092
+  - THM-2094
 ---
 
 # THM-2096 -- an effective guard/speed-ratio alternative
