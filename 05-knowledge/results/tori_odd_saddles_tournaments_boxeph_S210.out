@@ -1,0 +1,63 @@
+
+========================================================================
+P1  ODD (antisymmetric) => EVEN RANK => ODD game support (Fisher-Ryan). Census n<=5.
+========================================================================
+  n=3 (8 tournaments): rank(A-A^T) even for ALL? True ; game-support sizes seen=[1, 3] ALL ODD? True
+  n=4 (64 tournaments): rank(A-A^T) even for ALL? True ; game-support sizes seen=[1, 3] ALL ODD? True
+  n=5 (1024 tournaments): rank(A-A^T) even for ALL? True ; game-support sizes seen=[1, 3, 5] ALL ODD? True
+  => antisymmetric payoff forces odd equilibrium support; transitive->1 (Condorcet SADDLE),
+     regular odd-n -> n (uniform). Pure saddle point exists <=> transitive.
+
+========================================================================
+P2  TORUS needs SADDLES: Poincare(T^n)=(1+t)^n, chi=0; bagel T^2 = 1 max, 2 saddle, 1 min
+========================================================================
+  T^1: Poincare (1+t)^1 Betti=[1, 1]  chi=sum(-1)^k b_k=0  (saddles at odd index balance extrema)
+  T^2: Poincare (1+t)^2 Betti=[1, 2, 1]  chi=sum(-1)^k b_k=0  (saddles at odd index balance extrema)
+  T^3: Poincare (1+t)^3 Betti=[1, 3, 3, 1]  chi=sum(-1)^k b_k=0  (saddles at odd index balance extrema)
+  T^4: Poincare (1+t)^4 Betti=[1, 4, 6, 4, 1]  chi=sum(-1)^k b_k=0  (saddles at odd index balance extrema)
+  T^5: Poincare (1+t)^5 Betti=[1, 5, 10, 10, 5, 1]  chi=sum(-1)^k b_k=0  (saddles at odd index balance extrema)
+  T^2 height function (standing bagel): 1 max + 2 SADDLES + 1 min ; chi=1-2+1=0 ; b_1=2=handle.
+  Poincare-Hopf: sum of indices = chi = 0 => the 2 index-1 SADDLES exactly cancel max+min.
+  Ties S207: bagel-cake = T_n-1 (reduced Euler / handle term) is the same chi=0 saddle balance.
+
+========================================================================
+P3  TRANSITIVE = gradient (sink, no torus)  vs  3-CYCLE = recurrent (invariant torus)
+========================================================================
+  transitive: start (1/3,1/3,1/3) -> end (1.0, 0.0, 0.0)  (flows to Condorcet winner 0 = SINK, gradient, no torus)
+  3-cycle : dH/dt = H * sum_i(Mx)_i, and sum_i(Mx)_i = sum_j x_j*(col sum M_j); col sums=[0, 0, 0] = 0
+            => dH/dt = 0 EXACTLY: H=x0 x1 x2 is a conserved quantity (analytic).
+  3-cycle : numeric (RK4) H drift over 20000 steps=8.78e-16 (->0 with dt: confirms invariant)
+  3-cycle : orbit returns near start? min later-distance to start=0.0000 (small => CLOSED ORBIT = recurrent = invariant torus; center at (1/3,1/3,1/3))
+  => saddle-point (equilibrium) is PURE for transitive (gradient); MIXED-on-odd-support for cyclic,
+     with replicator orbits foliating an invariant torus. Intransitivity = the toroidal/recurrent set.
+
+========================================================================
+P4  ODD FUNCTIONS on the torus: involution theta->-theta, 2-torsion fixed pts, sign character
+========================================================================
+  T^1: sigma(theta)=-theta has 2=2^1 fixed points (2-torsion); odd f vanishes at all.
+  T^2: sigma(theta)=-theta has 4=2^2 fixed points (2-torsion); odd f vanishes at all.
+  T^3: sigma(theta)=-theta has 8=2^3 fixed points (2-torsion); odd f vanishes at all.
+  far-set weight ghat(k)=-sin(2 pi k delta)/(pi k) = EVEN in k (sinc=sin/k=odd/odd): |G| t->-t invariant. Check:
+     k=1: ghat(k)=-0.30273  ghat(-k)=-0.30273  even? True
+     k=2: ghat(k)=-0.09355  ghat(-k)=-0.09355  even? True
+     k=3: ghat(k)= 0.06237  ghat(-k)= 0.06237  even? True
+  ODD sector = sawtooth B_1 coeff c_k=1/(2 pi i k): c_{-k}=-c_k. Check |c_k| and antisymmetry:
+     k=1: |c_k|=0.15915  c_{-k}=-c_k (odd in k) -> the signed-discrepancy is the ODD sector
+     k=2: |c_k|=0.07958  c_{-k}=-c_k (odd in k) -> the signed-discrepancy is the ODD sector
+     k=3: |c_k|=0.05305  c_{-k}=-c_k (odd in k) -> the signed-discrepancy is the ODD sector
+  Vandermonde is the SIGN (odd) character: V=540, one transposition -> -540 = -V? True
+  => odd/reality sector of the LRC torus integral (t->-t) = the antisymmetric part; the tournament
+     Vandermonde = sign character = the SAME odd object. Tori + oddness + saddles are one antisymmetry.
+
+========================================================================
+SUMMARY
+========================================================================
+  The hinge is ANTISYMMETRY (oddness): a tournament's payoff M=A-A^T is odd.
+   - odd => even rank => ODD equilibrium support (Fisher-Ryan); pure SADDLE point <=> transitive.
+   - TORUS chi=0 needs SADDLES (Poincare-Hopf); the standing bagel = 1 max/2 saddle/1 min = the handle.
+   - TRANSITIVE = gradient flow to a sink (no torus); 3-CYCLE = conserved H, closed orbits = invariant
+     TORUS (recurrent). Intransitivity IS the toroidal recurrent set.
+   - the involution theta->-theta (2^n 2-torsion fixed points) defines the ODD sector; LRC t->-t mirror
+     pairs, the signed-discrepancy sawtooth B_1, and the transitivity Vandermonde (sign character) are all
+     this one oddness (the far-set weight and |G| itself are EVEN).
+  Tori, odd functions, saddle points, and tournaments are four faces of antisymmetry.
