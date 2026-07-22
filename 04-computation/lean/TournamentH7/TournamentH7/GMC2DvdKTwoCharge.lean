@@ -86,7 +86,57 @@ theorem dvdk1_pair (p n : ℕ) (hp : 0 < p) (hn : 0 < n)
         (GMC2ConstantTermRelations.constantTermRelation (pairQ p n) m) ≠ 0 :=
   ⟨p + n, by omega, exists_nonzero_ct_pair p n hp hn c hc⟩
 
+/-- Swapped orientation: index 0 carries the NEGATIVE charge `-n`, index 1 the `+p`. -/
+def pairQ' (p n : ℕ) : Fin 2 → ℤ := ![-(n : ℤ), (p : ℤ)]
+
+/-- Unique balanced composition for the swapped pair: `p` copies of `-n`, `n` of `+p`. -/
+def pairR' (p n : ℕ) : Fin 2 → ℕ := ![p, n]
+
+lemma pairR'_mem (p n : ℕ) :
+    pairR' p n ∈ Finset.piAntidiag (Finset.univ : Finset (Fin 2)) (p + n) := by
+  rw [Finset.mem_piAntidiag]
+  exact ⟨by simp [pairR', Fin.sum_univ_two], by intro i _; exact Finset.mem_univ i⟩
+
+lemma pairR'_balanced (p n : ℕ) :
+    GMC2ConstantTermRelations.totalCharge (pairQ' p n) (pairR' p n) = 0 := by
+  simp [GMC2ConstantTermRelations.totalCharge, pairQ', pairR', Fin.sum_univ_two]; ring
+
+lemma balanced_unique' (p n : ℕ) (hp : 0 < p) (hn : 0 < n)
+    (r : Fin 2 → ℕ)
+    (hr : r ∈ Finset.piAntidiag (Finset.univ : Finset (Fin 2)) (p + n))
+    (hbal : GMC2ConstantTermRelations.totalCharge (pairQ' p n) r = 0) :
+    r = pairR' p n := by
+  rw [Finset.mem_piAntidiag] at hr
+  obtain ⟨hsum, -⟩ := hr
+  simp only [Fin.sum_univ_two] at hsum
+  simp only [GMC2ConstantTermRelations.totalCharge, pairQ', Fin.sum_univ_two,
+    Matrix.cons_val_zero, Matrix.cons_val_one] at hbal
+  have h0 : (r 1 : ℤ) * p = (r 0 : ℤ) * n := by linarith
+  have hcast : (r 0 : ℤ) + (r 1 : ℤ) = (p : ℤ) + n := by exact_mod_cast hsum
+  have hr1 : (r 1 : ℤ) = n := by nlinarith [h0, hcast, hp, hn]
+  have hr0 : (r 0 : ℤ) = p := by linarith [hr1, hcast]
+  funext i; fin_cases i
+  · simpa [pairR'] using (by exact_mod_cast hr0 : r 0 = p)
+  · simpa [pairR'] using (by exact_mod_cast hr1 : r 1 = n)
+
+/-- **Elementary two-charge DvdK, swapped orientation.** -/
+theorem exists_nonzero_ct_pair' (p n : ℕ) (hp : 0 < p) (hn : 0 < n)
+    (c : Fin 2 → ℂ) (hc : ∀ i, c i ≠ 0) :
+    MvPolynomial.aeval c
+      (GMC2ConstantTermRelations.constantTermRelation (pairQ' p n) (p + n)) ≠ 0 := by
+  rw [GMC2ConstantTermRelations.aeval_constantTermRelation]
+  rw [Finset.sum_eq_single (pairR' p n)]
+  · rw [if_pos (pairR'_balanced p n)]
+    have hmult : (Nat.multinomial Finset.univ (pairR' p n) : ℂ) ≠ 0 := by
+      have : 0 < Nat.multinomial Finset.univ (pairR' p n) := Nat.multinomial_pos _ _
+      exact_mod_cast this.ne'
+    exact mul_ne_zero hmult (Finset.prod_ne_zero_iff.mpr (fun i _ => pow_ne_zero _ (hc i)))
+  · intro r hr hne
+    exact if_neg (fun hbal => hne (balanced_unique' p n hp hn r hr hbal))
+  · intro h; exact absurd (pairR'_mem p n) h
+
 end GMC2DvdKTwoCharge
 
 #print axioms GMC2DvdKTwoCharge.exists_nonzero_ct_pair
 #print axioms GMC2DvdKTwoCharge.dvdk1_pair
+#print axioms GMC2DvdKTwoCharge.exists_nonzero_ct_pair'

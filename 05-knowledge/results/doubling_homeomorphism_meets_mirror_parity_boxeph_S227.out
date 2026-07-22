@@ -1,0 +1,45 @@
+
+========================================================================
+P1  the DOUBLING IDENTITY  phi_{2C}(t) = phi_C(2t)  (the tower engine)
+========================================================================
+  ||(2c)t|| = ||c(2t)|| for all c  =>  phi_{2C}(t)=phi_C(2t) ? True
+  => G_{2C}(delta) = D^{-1}(G_C(delta)): the safe set of 2C is the doubling-preimage of C's. The tower
+     lifts a safe set through doubling; codex THM-2073's 'unique safe child' picks one preimage sheet.
+
+========================================================================
+P2  doubling as a CONTINUOUS BIJECTION: 2-to-1 on S^1, but a homeomorphism on each address half
+========================================================================
+  D:t->2t is 2-to-1 (preimages t/2 and t/2+1/2). The BINARY ADDRESS a in {0,1} (which half [0,1/2) or
+  [1/2,1)) makes D|_[a/2,(a+1)/2) a homeomorphism onto S^1 (THM-2075 addresses). Verify the two preimages:
+  s=0.3: D(t)=s at t=0.15 (addr 0) and t=0.65 (addr 1) ; 2*0.15=0.3, 2*0.65=0.30000000000000004
+  s=0.7: D(t)=s at t=0.35 (addr 0) and t=0.85 (addr 1) ; 2*0.35=0.7, 2*0.85=0.7
+  => the deck involution tau:t->t+1/2 swaps the two address sheets; on a single sheet D is a
+     continuous bijection. (Distinct from my mirror iota:t->1-t, which is the reality/reversal Z/2.)
+
+========================================================================
+P3  chi-INVARIANCE (THM-2075) + MIRROR-PARITY (S212): chi even AND doubling-invariant
+========================================================================
+  S=[1, 2, 3, 4, 6] [2*{1,2,3} ∪ {1,3} odd]: chi(G_{1/14})=8 [EVEN]; has even speed (=> iota free => chi even, S212)? True
+  S=[1, 2, 4, 6, 7, 8, 10, 12] [2*{1..6} ∪ {1,7}]: chi(G_{1/14})=24 [EVEN]; has even speed (=> iota free => chi even, S212)? True
+  C=[1, 2, 3]: chi(G_C)=4, chi(G_{2C})=8  (G_{2C}=D^{-1}G_C: 2-to-1 preimage; ratio 8/4)
+  C=[1, 2, 3, 4, 5]: chi(G_C)=10, chi(G_{2C})=20  (G_{2C}=D^{-1}G_C: 2-to-1 preimage; ratio 20/10)
+  => chi is EVEN for covering sets (mirror-parity) and tracked by the doubling map (THM-2075). A DISPROOF
+     (chi=0) is preserved down the dyadic tower: chi(G_S)=0 => chi(G_terminal)=0, still even.
+
+========================================================================
+P4  the SHARPENED reduction (my S212 + codex THM-2073/2075)
+========================================================================
+  Assembling: THM-2073 (unique safe-child law; every dyadic-seam disproof descends to a hereditarily-
+  primitive TERMINAL core in <= 8 levels) + THM-2075 (doubling is a homeomorphism, chi/#components/endpoints
+  INVARIANT down the tower) + my S212/HYP-8845 (for a covering set G_delta is iota-invariant so chi is EVEN):
+
+    A disproof of LRC(14) in the strict dyadic seam (S=2C ∪ {x,y}, THM-2061) has chi(G_{1/14})=0. By
+    THM-2075 chi is doubling-invariant, so the terminal core also has chi=0; by mirror-parity chi is even,
+    so the disproof needs chi=0 EXACTLY (never 1). Therefore:
+
+  >> Wall A (dyadic-seam case) <=> NO hereditarily-primitive TERMINAL core has chi(G_{1/14})=0.
+
+  This composes two frontier theorems into a strictly smaller target: the terminal hereditarily-primitive
+  cores (one speed per 2-adic valuation, THM-2073's normal form) -- a finite, mirror-symmetric class on which
+  the exact pair-sum covering-min (my S224) and the chi>=2 mirror criterion decide loneliness rigorously.
+  'Making doubling a continuous bijection' (THM-2075) is what lets chi (and the disproof) descend intact.
