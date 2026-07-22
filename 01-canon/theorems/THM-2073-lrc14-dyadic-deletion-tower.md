@@ -8,7 +8,9 @@ status: >
   owned by that guard and the two original odd tails. The construction
   iterates: every quotient remains primitive and divisor-complete through 14,
   exactly one safe child survives at each binary lift, and the chain ends at
-  a hereditarily primitive core after at most eight levels. The resulting
+  a hereditarily primitive core after at most eight levels by the theorem's
+  internal cardinality argument; THM-2080 subsequently sharpens the live
+  depth bound to four. The resulting
   2-adic normal form has one speed of each valuation below the terminal
   scale. Exact capacity, ownership, endpoint, and denominator-26 residue
   shells pass normally and under Python optimization.
@@ -23,6 +25,7 @@ related:
   - THM-2068
   - THM-2072
   - THM-2076
+  - THM-2080
 script: 04-computation/lrc14_dyadic_deletion_tower_referee_codex_20260721.py
 output: 05-knowledge/results/lrc14_dyadic_deletion_tower_referee_codex_20260721.out
 script_sha256: a65a72a538897d3d9b2f6a25ce8c9099e88679fe8292b2e7213d7816e5b095e4
@@ -380,9 +383,9 @@ distinctness. Hence
 ```
 
 THM-2076 subsequently sharpens (32) to `r<=5` by the strict Haar-capacity
-tax of the terminal guard, and THM-2080's sharp unequal-comb overlap removes
-terminal rank six and improves this further to `r<=4`. The present theorem
-retains (32) as the elementary cardinality bound proved internally here.
+tax of the terminal guard, and THM-2080 sharpens it again to `r<=4` by an
+unequal-comb Hunter bound. The present theorem retains (32) as the elementary
+cardinality bound proved internally here.
 
 ## 5. Frontier effect and guardrails
 

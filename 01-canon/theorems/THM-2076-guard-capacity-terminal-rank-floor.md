@@ -7,7 +7,8 @@ status: >
   s>(1-4delta)/(2delta). At delta=1/14 this forces s>=6. Therefore every
   nontrivial THM-2073 dyadic tower has terminal core size at least six and
   depth at most five, sharpening the elementary depth-eight cardinality
-  bound. Together with THM-2075, its top safe set has measure strictly below
+  bound. THM-2080 subsequently uses unequal comb overlap to force terminal
+  size at least seven and depth at most four. Together with THM-2075, its top safe set has measure strictly below
   2^(1-r)/7. This is a structural reduction, not LRC(14).
 source: codex-2026-07-21-LRC-guard-capacity-rank-floor
 depends_on:

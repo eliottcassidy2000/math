@@ -9,7 +9,9 @@ status: >
   comb. Consequently a nontrivial THM-2073 terminal has at least seven
   speeds and the dyadic deletion tower has depth at most four. This removes
   the entire former r=5 lane, but does not close hereditary terminals of
-  sizes 7 through 10 or LRC(14).
+  sizes 7 through 10 or LRC(14). At rank seven the same exact star gives a
+  nonpositive signed residue-correction invoice and a mod-7 anti-alignment
+  router for the surviving depth-four lane.
 source: codex-2026-07-22-LRC14-unequal-comb
 depends_on:
   - THM-638
@@ -21,8 +23,8 @@ related:
   - MISTAKE-239
 script: 04-computation/lrc14_unequal_comb_overlap_referee_codex_20260722.py
 output: 05-knowledge/results/lrc14_unequal_comb_overlap_referee_codex_20260722.out
-script_sha256: 0ae2220c80f1eba0cf93819d4b442d88dc6ceeee06ae851a24eeb1f3ebd12696
-output_sha256: 3cccf25892254dcc129448e0ab53060c26f7e10b04158b366de3b3b3095955d5
+script_sha256: 2d27596fc9227485c8d40fadc8475dc790ce0ff8a9cf750738502ede438ab244
+output_sha256: 6abcb58c25cbf38b4c30b2acc1faf44ed0023b3e66c3e57737cf00ef7340f943
 hash_basis: repository blobs with LF line endings
 ---
 
@@ -237,7 +239,75 @@ for the preceding odd guard, and `|Q_r|=11-r`. Equation (3) makes
 THM-2077's former `r=5` six-comb saturation ledger is now a vacuous hostile
 control rather than a live residual.
 
-## 4. Scope and assumption challenge
+## 4. The exact depth-four residue invoice
+
+The same calculation reroutes the surviving deepest lane. Suppose `|Q|=7`
+and `G_Q subset E_h`. For each `q in Q`, reduce as in (9) and write
+
+```text
+x_q=(a_q mod 14)/14,       y_q=(b_q mod 7)/7.
+```
+
+Using the exact overlap (11), Hunter's guard-centred star gives
+
+```text
+1
+ <=measure(E_h union union_(q in Q)D_q)
+ <=2/7+7/7-sum_(q in Q)[2/49+2F(x_q,y_q)/(a_q b_q)]
+ =1-2 sum_(q in Q)F(x_q,y_q)/(a_q b_q).
+```
+
+Consequently every depth-four terminal must pay the signed invoice
+
+```text
+sum_(q in Q) F(x_q,y_q)/(a_q b_q)<=0.                  (20)
+```
+
+Because `h` is odd, every `a_q` is odd. The exact mod-14 sign table is
+
+```text
+F<0 iff
+  a mod 14 in {1,3,5}  and b mod 7 in {4,5,6},
+or
+  a mod 14 in {9,11,13} and b mod 7 in {1,2,3};        (21)
+
+F=0 iff 7|a or 7|b.                                   (22)
+```
+
+Thus (20) says: either every leaf is `7`-adically neutral, or at least one
+reduced guard/speed ratio lies in the anti-aligned residue sectors (21).
+Equation (22) has the invariant valuation form
+
+```text
+F=0 iff v_7(h)!=v_7(q).                                (23)
+```
+
+In particular, if `7` does not divide `h`, primitivity of `Q` supplies a
+speed not divisible by `7`, so not every leaf is neutral and an anti-aligned
+leaf is mandatory. This is a genuine `chi_7`/Fano-scale probe because it is
+derived from the cover predicate and retains the signed reduced ratio; a
+seven-colour or tournament quotient without that sign cannot recover (20).
+
+The invoice is necessary, not sufficient. Let
+
+```text
+L=lcm(2,3,...,14)=360360,
+h=1,
+Q={4,5,6,11,12,13,L}.
+```
+
+This seven-set is hereditarily primitive and divisor-complete, yet
+
+```text
+sum F/(ab)=-5167/210210<0.                              (24)
+```
+
+So arithmetic sign alone leaves ample Hunter slack even though the actual
+guard containment still fails. The next depth-four target is to combine
+(20)--(23) with the terminal component address, endpoint owners, and the two
+original tail tubes, rather than to enumerate unsigned Fano colours.
+
+## 5. Scope and assumption challenge
 
 This theorem removes all nontrivial tower depths `5,6,7,8`; THM-2076 had
 already removed `6,7,8` by a scalar Haar-capacity tax. It does not treat the

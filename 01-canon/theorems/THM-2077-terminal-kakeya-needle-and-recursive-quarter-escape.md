@@ -18,6 +18,7 @@ depends_on:
 related:
   - THM-2061
   - THM-2078
+  - THM-2080
   - THM-841
   - THM-848
   - THM-1196
@@ -37,8 +38,9 @@ Q_i=2Q_(i+1) union {h_i},     0<=i<r,                 (1)
 
 where `x,y` and every `h_i` are odd, every `Q_i` is primitive and contains a
 multiple of each integer `2,...,14`, and `Q_r` is hereditarily primitive.
-The tower has `|Q_i|=11-i`.  THM-2073 gives `r<=8`, and the guard-capacity
-rank floor of THM-2076 sharpens this to
+The tower has `|Q_i|=11-i`.  THM-2073 gives `r<=8`, THM-2076 sharpens this
+to five, and the unequal-comb overlap theorem THM-2080 sharpens the live
+bound to
 
 ```text
 0<=r<=4.                                                (1a)
@@ -398,10 +400,11 @@ or prove LRC(14).  THM-2078 separately uses the present height box to exclude
 the whole finite slice `B<=24`; the remaining nontrivial terminal lane has
 `B>=25`.
 
-### Scalar nonclosure witness at depth five
+### Scalar nonclosure witness at the now-removed depth five
 
-The height, quarter-escape, determinant, and mirror-address conclusions do
-not by themselves rule out `r=5`.  Here is an exact compatible packet that
+THM-2080 rules out `r=5` by the global guard-containment predicate. The
+height, quarter-escape, determinant, and mirror-address conclusions below do
+not by themselves do so. Here is an exact compatible packet that
 isolates the missing implication.  Put
 
 ```text
