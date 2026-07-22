@@ -92,6 +92,9 @@ mistake.
      are not cusp values. Do not call it the LRC obstruction, or call scaling a
      `Gamma_0` level structure, until an explicit transform from signed owner
      channels to modular data proves a safe-phase implication.
+     THM-2059 gives the exact replacement carrier: safe core and tail residue
+     packets form a CRT fiber product, and their reduction-histogram dot
+     product counts the actual safe grid phases for every modulus.
 
 ## NC2 / GMC
 

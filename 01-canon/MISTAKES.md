@@ -7,7 +7,7 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
-## MISTAKE-226 (2026-07-21, codex audit of HYP-8880 / boxeph-S220) -- shared divisor labels were promoted to an identification of LRC clocks with modular cusps and of the level-14 newform with the LRC obstruction
+## MISTAKE-226 (2026-07-21, codex audit of HYP-8880/S220 and its HYP-8885/S221 reuse) -- shared divisor labels were promoted to an identification of LRC clocks with modular cusps and of the level-14 newform with the LRC obstruction
 
 - **What was claimed:** S220 identified the modular orbits used by THM-2057
   with the cusps of `X_0(N)`, called dilation invariance a `Gamma_0` level
@@ -24,8 +24,9 @@ Format per entry:
   phase-height value after reparametrizing time; it does not change one
   modular object to level `Na`. Moreover `X_0(12)` has six cusps, so genus
   zero means `S_2(Gamma_0(12))=0`, not "cuspless." The numbers `a_2,a_7` are
-  Hecke coefficients at primes, not labels of modular cusps. LMFDB's exact
-  orbit `14.2.a.a` has coefficient field `Q`, CM `no`, and
+  Hecke coefficients at primes, not labels of modular cusps. [LMFDB's exact
+  orbit `14.2.a.a`](https://www.lmfdb.org/ModularForm/GL2/Q/holomorphic/14/2/a/a/)
+  has coefficient field `Q`, CM `no`, and
   `f=eta(z)eta(2z)eta(7z)eta(14z)`; no cited result gives it an algebraic
   period field `Q(sqrt(-7))`. Finally, neither `f` nor `sym^2 f` was shown to
   compute or bound the signed phase-height certificate `max_t min_v ||vt||`.
@@ -37,7 +38,10 @@ Format per entry:
   coefficient, period, or `L`-value and proving that its sign or nonvanishing
   supplies a safe phase. Until then the proved LRC content is THM-2057's
   finite-clock orbit sieve and affine binding phases, independent of modular
-  forms.
+  forms. The same restriction applies to HYP-8885: “cusp” is only a generic
+  difficulty metaphor for its tournament fibers, radial kernels, and figurate
+  deviations unless a genuine modular or cohomological decomposition is
+  supplied.
 
 ---
 

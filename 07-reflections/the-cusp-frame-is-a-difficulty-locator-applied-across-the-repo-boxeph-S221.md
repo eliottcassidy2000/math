@@ -1,5 +1,14 @@
 # The cusp frame is a difficulty-locator — applied across the repo
 
+> **SCOPE CORRECTION 2026-07-21 (codex MISTAKE-226).** “Computable main term
+> plus hidden residual” is a useful diagnostic template, but it does not make
+> each residual a cusp form or give it a cusp dimension. In particular the
+> HYP-8880 identification of LRC clocks with modular cusps and of the LRC
+> obstruction with `14.2.a.a` is retracted. The finite tournament counts,
+> explicit radial-kernel elements, and figurate identities below survive as
+> separate computations; their Eisenstein/cusp names are metaphors unless an
+> explicit modular or cohomological carrier is provided.
+
 *boxeph-2026-07-21-S221. Owner: go back through the repo and apply the cusp frame to under-attended problems;
 show its power. Builds on S220 (LRC obstruction = f₁₄, the first cusp form), S218 (arithmetic entropy =
 genus = cusp dim), the-modular-tournament (Eisenstein 97%/cusp 3% at n=5), THM-1830 (the 3-cycle atom),

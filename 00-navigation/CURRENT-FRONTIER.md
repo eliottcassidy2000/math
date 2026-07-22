@@ -147,12 +147,19 @@ structural supplier/seed and a lossless exit.
   entire one-tail planes: `{a,2a,...,11a,13a,w}` by a `12a` / `14a` / `84a`
   certificate, and `{a,2a,...,12a,w}` by a `13a` / `14a` / `182a` certificate.
   More generally, a missing clock `N<=14`
-  forces `Na|w` in any one-tail counterexample over `aC`. Although that plane
+  forces `Na|w` in any one-tail counterexample over `aC`. THM-2059 removes the
+  small-modulus restriction from the carrier: for every `N`, safe core and
+  tail residue packets meet by an exact CRT fiber-product formula, whose
+  reduction-histogram dot product counts the safe `k/(Na)` grid phases.
+  Although that plane
   has `640690` distinct-speed primitive determinant failures, the arithmetic
   carrier has only three leaves. HYP-8871 targets exact deck/Farey discharge
   with clock/binding/Euler sidecars over the remaining finite intersection;
-  THM-2058 supplies the primitive phase-packet and coprime longitudinal-
-  interval terminal inside each fixed bad deck.
+  THM-2058 currently claims/reserves the primitive phase-packet and coprime
+  longitudinal-interval terminal inside each fixed bad deck; its checked file
+  remains a stub. The decisive next composition is to feed those primitive
+  packet counts into THM-2059's exact CRT histograms, then use the resulting
+  disjoint-support obstruction as the signed Euler/deletion sidecar.
 - **PROVED relative whole-product decorrelation:**
   [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says every scalar relation through height `H` on the line must lift to the

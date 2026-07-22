@@ -23,6 +23,7 @@ related:
   - THM-2056
   - THM-2057
   - THM-2058
+  - THM-2059
   - HYP-2108
   - HYP-1842
   - HYP-1977
@@ -214,10 +215,11 @@ matrices, and bound a reduced-basis `L` directly from the sparse triple code.
   whole Farey cones. HYP-8871 now couples this exact address to scaled safe
   clocks, killed-clock divisibility, affine binding, and Euler sidecars.
   MISTAKE-225 records why Heegner form classes cannot replace the carrier.
-- THM-2058 adds the exact phase-order packet and longitudinal-interval carrier
-  inside each bad transverse deck. This is complementary to THM-2057: the
-  former decomposes a fixed bad denominator, while the latter removes whole
-  one-tail families by missing-clock divisibility before interval enumeration.
+- THM-2058 claims the phase-order packet and longitudinal-interval carrier
+  inside each bad transverse deck, but its checked theorem file is still a
+  reserved stub. THM-2059 proves the missing composition: safe core and tail
+  packets meet by an exact CRT reduction-histogram dot product for arbitrary
+  `N`. THM-2057 is its rigid `N<=14` nonemptiness specialization.
 
 ## Tournament analysis
 

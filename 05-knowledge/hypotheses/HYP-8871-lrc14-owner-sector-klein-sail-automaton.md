@@ -17,6 +17,7 @@ related:
   - THM-2056
   - THM-2057
   - THM-2058
+  - THM-2059
   - HYP-2108
   - HYP-2647
   - HYP-2896
@@ -47,10 +48,13 @@ THM-2055/2056 change the finite object. For each THM-2052 two-anchor star:
    open-tope/boundary-cocircuit state until a strict phase or owner-labelled
    Euler endpoint accepts the state.
 
-THM-2058 refines step 8 inside a fixed bad transverse deck: split the safe
-count by primitive phase order and reduce each hull-owner longitudinal fiber
-to an explicit coprime interval. Its interval carrier should be joined to the
-missing-clock lcm tax before any raw parameter enumeration.
+THM-2058 claims a refinement of step 8 inside a fixed bad transverse deck:
+split the safe count by primitive phase order and reduce each hull-owner
+longitudinal fiber to an explicit coprime interval. Its checked theorem file is
+still a reserved stub. THM-2059 now supplies the exact join operation: reduce
+the core packet and tail packet modulo their common gcd and take the histogram
+dot product. This CRT carrier should be joined to the missing-clock lcm tax
+before any raw parameter enumeration.
 
 The key hoped-for compression is **interval acceptance**: adjacent Farey nodes
 with the same active hull owner and the same signed phase-height wall word
@@ -110,6 +114,12 @@ satisfy `Na|w`. Intersecting all such taxes forces
 `a*lcm{missing clocks}|w`. The next atlas computation should therefore record
 the missing-clock lcm of every candidate lower-rank core before opening any
 Farey residual.
+
+THM-2059 extends that leaf beyond `N<=14`. For each candidate clock it records
+the whole reduction histogram of safe core residues and the corresponding tail
+histogram. A positive dot product is an exact safe phase; a zero dot product
+exports the two disjoint residue supports as the next wall label. This is the
+first exact interface between the primitive-packet proposal and the clock tax.
 
 ## Assumption challenge
 

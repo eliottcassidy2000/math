@@ -13,6 +13,8 @@ related:
   - THM-560
   - THM-563
   - THM-566
+  - THM-2057
+  - THM-2059
   - HYP-+2878
   - OPEN-Q-108
 results:
@@ -31,6 +33,11 @@ results:
 > Central unit orbits on the `12a` and `14a` clocks handle the two nondivisible
 > branches; simultaneous killing forces `84a|w` and scales the affine binding
 > phase proved below.
+
+> **Arbitrary-clock carrier (THM-2059, 2026-07-21).** For any `N`, not only
+> `N<=14`, the core-safe and tail-safe packets meet by an exact CRT
+> reduction-histogram dot product. The small-clock argument below is the rigid
+> case where every nonzero core residue is automatically safe.
 
 The owner asked to hold together the exact LRC fact
 
