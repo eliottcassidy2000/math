@@ -83,6 +83,16 @@ mistake.
      one-tail plane is closed by scaled clock orbits and affine binding even
      though the determinant residual contains `640690` distinct-speed rays.
 
+13d. **LRC clocks are not modular cusps without a carrier map.** MISTAKE-226
+     corrects HYP-8880/S220. Divisors label both useful clock subgroups and
+     representatives in the modular-cusp count, but this shared index does not
+     preserve the LRC phase-height predicate. `X_0(12)` has six cusps; genus
+     zero means no weight-two cusp forms, not cuspless. The level-14 newform is
+     a rational non-CM eta product, and its Hecke coefficients at `2` and `7`
+     are not cusp values. Do not call it the LRC obstruction, or call scaling a
+     `Gamma_0` level structure, until an explicit transform from signed owner
+     channels to modular data proves a safe-phase implication.
+
 ## NC2 / GMC
 
 14. **Scalar moments do not separate return atoms.** MISTAKE-211. Cancellation

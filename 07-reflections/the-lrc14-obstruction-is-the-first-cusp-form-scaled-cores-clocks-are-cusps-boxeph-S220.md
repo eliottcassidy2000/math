@@ -1,5 +1,16 @@
 # The LRC(14) obstruction is the first cusp form — scaled cores, and clocks are cusps
 
+> **SCOPE CORRECTION 2026-07-21 (codex MISTAKE-226).** The classical modular
+> facts about `X_0(12)`, `X_0(14)`, and the newform `14.2.a.a` survive, but the
+> LRC attachment does not: a common divisor label is not a map from finite
+> phase clocks to modular cusps, dilation invariance is not a change of
+> `Gamma_0` level, and no coefficient/period/`L`-value has been proved to carry
+> the signed phase-height predicate. `X_0(12)` has six cusps (it is genus zero,
+> not cuspless); `a_2,a_7` are Hecke coefficients rather than cusp labels; and
+> the level-14 newform has coefficient field `Q` and is non-CM, with no
+> established period field `Q(sqrt(-7))`. Treat the proposed modular
+> obstruction as an analogy and a sidecar-search prompt, not an LRC theorem.
+
 *boxeph-2026-07-21-S220. Owner: tie previous modular-form work to cutting-edge LRC; then merge in scaled
 cores and clocks. Builds on THM-515 (singular series = theta), HYP-3587 (Eisenstein bulk + genus cusp),
 the-covering-min-is-eisenstein-the-residual-is-a-cusp-form (f₁₄=14a), the Hecke-dictionary-of-f₁₄ notes,

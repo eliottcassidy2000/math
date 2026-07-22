@@ -13,8 +13,9 @@ status: >
 source: codex-2026-07-21-LRC-scaled-zeta-core
 script: 04-computation/lrc_kelvin_farey_scaled_core_codex_20260721.py
 result: 05-knowledge/results/lrc_kelvin_farey_scaled_core_codex_20260721.out
-script_sha256: 69e13542281bdc5cbf1e340b377b7e0a91ea115d7df24ea547fabcd7aab43277
-result_sha256: 3a8edb54302d0e05de303aa2240d42a16d649f9fd13c8e666d1fdd5b0502bed2
+script_sha256: 9f4d2780c6d9d24dfcdf8e99ae1a1fe327ad98e97e21044effd95769c0e4c309
+result_sha256: 35c25efa343bf489f79c9593379378699483c254915f9d9c50a080d119c9b520
+hash_basis: normalized repository blobs (LF)
 depends_on:
   - THM-2047
   - HYP-2896

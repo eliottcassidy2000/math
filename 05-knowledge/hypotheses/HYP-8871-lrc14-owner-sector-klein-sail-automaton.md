@@ -24,6 +24,7 @@ related:
   - HYP-8841
   - HYP-8846
   - MISTAKE-225
+  - MISTAKE-226
 ---
 
 # HYP-8871 -- Kelvin-Farey addresses with clock/binding sidecars
@@ -69,6 +70,13 @@ parameters. Clock killing adds exact divisibility states. Hence every fixed
 star has a finite exact cell structure. The missing uniform theorem is to
 show that every unresolved ray has either a complete safe-unit orbit or a
 bounded-depth chain of killed clocks ending in an affine binding/Euler family.
+
+The modular-form proposal HYP-8880 currently ranks below these carriers.
+MISTAKE-226 shows that divisor labels alone do not map a finite phase clock to
+a cusp of `X_0(N)`, and no coefficient of the rational level-14 eta product is
+known to preserve phase height. A modular sidecar becomes admissible here only
+after it is pulled back to a signed owner-channel sum with a proved safe-phase
+implication.
 
 ## Proved model and the new conjectural rule
 

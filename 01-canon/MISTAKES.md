@@ -7,6 +7,40 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-226 (2026-07-21, codex audit of HYP-8880 / boxeph-S220) -- shared divisor labels were promoted to an identification of LRC clocks with modular cusps and of the level-14 newform with the LRC obstruction
+
+- **What was claimed:** S220 identified the modular orbits used by THM-2057
+  with the cusps of `X_0(N)`, called dilation invariance a `Gamma_0` level
+  structure, and declared the unique weight-two level-14 newform to be the
+  obstruction to LRC(14). It read `a_2=-1` and `a_7=1` as values at a
+  `2`-cusp and `7`-cusp, called `X_0(12)` cuspless, and assigned the newform
+  the period field `Q(sqrt(-7))`.
+- **Why it is wrong:** a common divisor index is not a predicate-preserving
+  map. Cusps of `X_0(N)` are represented by rational boundary points and have
+  multiplicities counted by
+  `sum_(d|N) phi(gcd(d,N/d))`; the THM-2057 clocks are finite phase orbits in
+  `Z/(Na)`. No map between those objects, their operations, or their LRC
+  witness predicate was supplied. Dilation `S -> aS` leaves the same LRC
+  phase-height value after reparametrizing time; it does not change one
+  modular object to level `Na`. Moreover `X_0(12)` has six cusps, so genus
+  zero means `S_2(Gamma_0(12))=0`, not "cuspless." The numbers `a_2,a_7` are
+  Hecke coefficients at primes, not labels of modular cusps. LMFDB's exact
+  orbit `14.2.a.a` has coefficient field `Q`, CM `no`, and
+  `f=eta(z)eta(2z)eta(7z)eta(14z)`; no cited result gives it an algebraic
+  period field `Q(sqrt(-7))`. Finally, neither `f` nor `sym^2 f` was shown to
+  compute or bound the signed phase-height certificate `max_t min_v ||vt||`.
+- **Correct framing:** retain the classical facts that `X_0(14)` has genus
+  one, its weight-two newspace is one-dimensional, and its normalized newform
+  is the displayed non-CM eta product; also retain the clock/cusp comparison
+  as a source of candidate signed sidecars. It becomes an LRC mechanism only
+  after defining an explicit transform from phase-owner data to a modular
+  coefficient, period, or `L`-value and proving that its sign or nonvanishing
+  supplies a safe phase. Until then the proved LRC content is THM-2057's
+  finite-clock orbit sieve and affine binding phases, independent of modular
+  forms.
+
+---
+
 ## MISTAKE-224 (2026-07-21, codex audit of HYP-8835) -- valid antisymmetry examples were promoted to equivalences among transitivity, saddles, tori, and LRC symmetry
 
 - **What was claimed:** S210 said a pure saddle in the antisymmetric tournament

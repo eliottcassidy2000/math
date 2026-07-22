@@ -5,6 +5,25 @@
 **TARGET:** DvdK (THM-1630) is the SOLE imported premise of THM-2022 -- used to get a nonzero face constant term Q; residues+Liouville, NON-effective.
 
 **BYPASS (verified, bypass_dvdk_via_saddle_point_watson_boxeph_S222.py):** the needed direction 'f two-sided => CT(f^m)!=0 for some/all large m' is a SADDLE-POINT/WATSON (Laplace) integral. CT(f^m)=[z^0]f^m = (1/2pi) int f(r* e^{i th})^m d th on the saddle circle |z|=r* (r* = mean-exponent-zero radius, exists IFF 0 in int Newton polytope = two-sided). Dominant-saddle asymptotic CT(f^m) ~ rho^m c/sqrt(m), rho=dominant modulus>0 => NONZERO for large m, EFFECTIVE, no residues/Liouville/DvdK.
+## codex-2026-07-21 -- modular-form bridge audited; second scaled AP-tail plane closed
+
+- **MISTAKE-226:** HYP-8880/S220 conflated divisor-indexed LRC clocks with
+  modular cusps, dilation with `Gamma_0` level, and Hecke coefficients with
+  cusp values. The level-14 weight-two newform is a rational non-CM eta
+  product, but no transform connects it or its symmetric square to the signed
+  phase-height predicate. The modular proposal is retained only as a sidecar
+  search prompt.
+- **THM-2057 extension:** the missing-clock sieve also closes every
+  `{a,2a,...,12a,w}`. The `13a` and `14a` clocks cover all cases except
+  `182a|w`; on that ray `t=14m/[a(182m+1)]` gives exact strict margin
+  `14m/(182m+1)>1/14`. The exact audit passed all `800000` rows with
+  `a<=80,w<=10000`.
+- **Next decisive target:** join THM-2058's primitive phase-packet interval
+  carrier to THM-2057's missing-clock lcm tax inside each THM-2053 transverse
+  deck. Use modular coefficients only if they can be pulled back to signed
+  owner-channel sums; the eta-product factorization suggests an
+  inclusion--exclusion sidecar, not an obstruction theorem.
+## death-star-2026-07-21-S99 -- MERGE: "scale the core, then close on a modular clock" is ONE proof-shape across the nullcone (GMC2, my capstone) and covering (LRC, THM-2057) threads. Lens, not a reduction. HYP-8876.
 
 **VERIFIED cases:** (A) two-sided<=>saddle<=>CT eventually nonzero; one-sided=>CT==0 (the DvdK conclusion, trivial). (B) positive-coeff f=2z+3/z+1: CT(f^m)~f(r*)^m/sqrt(2pi m sig^2), ratio->1. (C) MIXED-sign f=z^2+1/z-1 (the real DvdK case): CT!=0 all m, growth rate |CT|^(1/m)->rho~2.3>0. (D) periodicity (equal-modulus saddles cancel) = the coprime m0 = THM-1840 (elementary); DEGENERATE f(r*)=0 (f=z+1/z-2 => CT=(-1)^m C(2m,m)) = the coalescing/confluent saddle = my S208/HYP-8775 hyper-Bessel cusp (in hand).
 
