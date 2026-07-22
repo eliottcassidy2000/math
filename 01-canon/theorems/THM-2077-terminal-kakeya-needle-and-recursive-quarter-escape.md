@@ -13,9 +13,11 @@ depends_on:
   - THM-2072
   - THM-2073
   - THM-2075
+  - THM-2076
 related:
   - THM-2061
   - THM-841
+  - THM-848
   - THM-1196
   - THM-1260
 ---
@@ -33,7 +35,14 @@ Q_i=2Q_(i+1) union {h_i},     0<=i<r,                 (1)
 
 where `x,y` and every `h_i` are odd, every `Q_i` is primitive and contains a
 multiple of each integer `2,...,14`, and `Q_r` is hereditarily primitive.
-The tower has `|Q_i|=11-i` and `0<=r<=8`.  Write
+The tower has `|Q_i|=11-i`.  THM-2073 gives `r<=8`, and the guard-capacity
+rank floor of THM-2076 sharpens this to
+
+```text
+0<=r<=5.                                                (1a)
+```
+
+Write
 
 ```text
 mu=M(Q_r),             B=max(Q_r),
@@ -91,6 +100,68 @@ one connected component of `G_(Q_r)`.  The componentwise affine inverse in
 THM-2075 halves its length at each of the `r-i` lifts and keeps the whole
 interval on one sheet, proving (4)--(5). QED.
 
+### Exact address and tail H-drift formula
+
+The binary address in the preceding proof has an explicit nearest-integer
+form.  On one terminal component choose compatible real lifts and put
+
+```text
+sigma_r=sigma,
+epsilon_i=1-N_(h_i)(sigma_(i+1)) mod 2,
+sigma_i=(sigma_(i+1)+epsilon_i)/2,       0<=i<r.       (6a)
+```
+
+The blocked child has bit `N_(h_i)(sigma_(i+1)) mod 2`, so `epsilon_i` is
+the safe bit.  Indeed, for a candidate child with bit `k`,
+
+```text
+h_i(sigma_(i+1)+k)/2
+```
+
+is strictly `1/14`-dangerous exactly when
+`N_(h_i)(sigma_(i+1))+h_i k` is even.  Since `h_i` is odd, that is exactly
+`k=N_(h_i)(sigma_(i+1)) mod 2`.  Eligibility keeps each nearest integer,
+hence each bit, constant on the relevant component.
+
+Consequently the terminal address is
+
+```text
+a=sum_(i=0)^(r-1) 2^(r-1-i)epsilon_i,
+sigma_0=(sigma+a)/2^r.                                 (6b)
+```
+
+For either original tail `z in {x,y}`, let `N_z` be its constant nearest
+integer on the lifted top component and define
+
+```text
+K_z=2^r N_z-za.                                       (6c)
+```
+
+The strict top-level tail inequality is then exactly
+
+```text
+|z sigma-K_z|<2^r/7.                                  (6d)
+```
+
+Moreover complementary top-sheet ownership gives
+
+```text
+K_x y-K_y x
+ =2^r(N_x y-N_y x)
+ ==2^r mod 2^(r+1).                                   (6e)
+```
+
+The congruence is signed and unambiguous: `x,y` are odd and `N_x,N_y` have
+opposite parity, so the parenthesized determinant is odd.  Thus the literal
+H-drift state is not only the real interval displacement.  It is the packet
+
+```text
+(a,K_x,K_y),                                          (6f)
+```
+
+whose determinant carries exact dyadic valuation `r`.  Forgetting `a`
+destroys the individual `K_z`, even though it cancels from their determinant.
+
 ## 2. All-depth relative-height bounds
 
 Every tower guard and each original tail is forced to contain one of the
@@ -127,14 +198,15 @@ max(S)
 The weak inequality in (13) allows the terminal speed `2^(r+1)B`; the guard
 and tail bounds themselves are strict.
 
-There is also a folded-owner sidecar.  On a real lift of `I_0`, let `N_x`
-and `N_y` be the constant nearest integers and put
+There is also a folded-owner sidecar.  Use (6c) on the terminal component
+containing `I_r` and put
 
 ```text
-D=|N_x y-N_y x|.
+Delta=|K_x y-K_y x|,            D=Delta/2^r.
 ```
 
-Then `D` is a positive odd multiple of `gcd(x,y)` and
+Then `D` is a positive odd multiple of `gcd(x,y)`, equation (6e) fixes the
+exact dyadic valuation of `Delta`, and
 
 ```text
 D/(xy)+2^(1-r)rho < 1/(7x)+1/(7y).                   (14)
@@ -165,18 +237,18 @@ Applying the same tooth-length argument to (5) proves (9).  Since
 The speeds contributed by `2C` are `2^(r+1)q` with `q in Q_r` and
 `2^(i+1)h_i`; taking their maximum together with the tails proves (13).
 
-Finally, the two tails have opposite nearest-integer parity throughout
-`G_C` by THM-2061.  On the connected interval `I_0` each nearest integer is
-constant.  Their tooth centres are separated by `D/(xy)`, and the
-intersection of their open teeth has length at most
+Finally, (6d) puts the terminal interval `I_r` strictly inside two open
+intervals of radii `2^r/(7x)` and `2^r/(7y)`.  Their centres are separated by
+`Delta/(xy)`, so their intersection has length at most
 
 ```text
-1/(7x)+1/(7y)-D/(xy).
+2^r/(7x)+2^r/(7y)-Delta/(xy).
 ```
 
-The compact interval `I_0` is strictly contained in that intersection, so
-(5) gives (14).  Odd tail speeds and opposite parities make the determinant
-odd and nonzero; divisibility by `gcd(x,y)` is immediate. QED.
+The compact interval `I_r` has length `2rho` and is strictly contained in
+that intersection.  Divide the resulting inequality by `2^r` to obtain
+(14).  Equation (6e) makes `D` odd and positive after taking the absolute
+value; divisibility by `gcd(x,y)` is immediate. QED.
 
 The open/closed convention is load-bearing and favourable.  The intervals
 `I_i` are **closed weak-safe** intervals.  Guards and tails are **strictly
@@ -261,8 +333,10 @@ the terminal maximum B.                               (20)
 
 This converts the non-hereditarily-primitive lane into a terminal-core
 problem with two finite sidecars: the component address word from THM-2075
-and the relative-height box above.  It does not bound `B`, classify the
-hereditarily primitive terminal core, or prove LRC(14).
+and the relative-height box above.  THM-2076 has already removed depths six
+through eight, so (17) and (19) need be iterated at most five times.  This
+does not bound `B`, classify the hereditarily primitive terminal core, or
+prove LRC(14).
 
 The old viewpoints now have precise scopes.
 
