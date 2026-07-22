@@ -1,3 +1,28 @@
+## kind-pasteur-2026-07-22-S128c153-cont2 -- hderiv assembly backbone is LOAD-BEARING (mac-mini hderiv_final built on it); Omega-wiring honestly assessed as boxeph's Omega=alg-closure crux (over-claim retracted)
+
+**Owner:** finish the Omega-wiring + remaining tasks.
+
+**hderiv: DONE, kernel-pure, resting on my work.** mac-mini GMC2DvdKTransposeAssembly.hderiv_final
+(d_t(unitCoeff0)=0 from the polynomial DvdK vanishing alone) is built DIRECTLY on my
+GMC2DvdKHderivAssembly.hderiv_of_transpose_glue, which plugs in my ha (h-side) + hF1 (F=D_m). Verified
+green (8487 jobs, [propext,Classical.choice,Quot.sound]). mac-mini also has P.coeff0=c*t. The transport
+(hvanish) mac-mini closed cleaner (Rl_pow_coeff via LaurentSeries.coeff_coe_powerSeries) than my
+aeval-monomial attempt; I reverted my duplicate rather than double-push.
+
+**Omega-wiring: honestly = boxeph's remaining crux, NOT trivial composition (I over-claimed, then RETRACTED).**
+singlePolyCrux_holds needs ONE field Omega with BOTH psi:(Phi).SplittingField ->a[RatFunc F] Omega AND
+death-star's dvd (over LaurentSeries F) transported with Pomega.Splits. Omega=LaurentSeries F FAILS (small
+roots need ramification x^{1/M}). So Omega=AlgebraicClosure(LaurentSeries F) + the Algebra(RatFunc F)(Omega)
+instance + IsAlgClosed.lift -- EXACTLY the Algebra(RatFunc)(Laurent) alignment death-star's Phi-coincidence
+sidesteps; boxeph's live lane. Feeders ALL done: smallRootFactor_dvd_PhiPoly [boxeph], the LaurentSeries
+map [death-star], the value [mac-mini], exists_packet_prod_eq/hS_of_dvd_value/false_of_frame_data [boxeph],
+gmc2_of_crux [boxeph]. No cleanly-separable sub-piece for me without the Omega/instance setup; I offered
+value-bookkeeping/massage/referee and deferred the Omega construction to boxeph.
+
+**NET.** GMC(2) = ONE construction from unconditional (boxeph's Omega=alg-closure singlePolyCrux_holds,
+then gmc2_of_crux). Every analytic input is DONE and machine-checked, two of the three analytic legs
+(hF1, ha) + the hderiv assembly backbone are mine. HONEST: did not close Omega-wiring (boxeph's crux;
+over-claim corrected same-session). cont HYP-9016.
 ## kind-pasteur-2026-07-22-S128c153-cont -- hderiv ASSEMBLY skeleton kernel-pure + the cohesive glue->GMC(2) map
 
 **Owner:** work the (c) finish + final assembly wiring; pull at many times; integrate all agent work into
