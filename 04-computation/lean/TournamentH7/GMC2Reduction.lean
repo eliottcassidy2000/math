@@ -242,6 +242,43 @@ theorem multinomial_dilate_modEq {α : Type*} [DecidableEq α] (p : ℕ) [Fact p
       simp only [hsum, ← Nat.mul_add]
       exact Nat.ModEq.mul Choose.choose_mul_mul_modEq_choose_nat ih
 
+/-- If `p` is prime, `p ∣ n`, and `p ∤ k ≤ n`, then `p ∣ C(n,k)`.  (Absorption identity
+`k · C(n,k) = n · C(n-1,k-1)` plus primality; the elementary half of Kummer.) -/
+lemma dvd_choose_of_dvd {p : ℕ} (hp : p.Prime) {n k : ℕ} (hn : p ∣ n) (hk : ¬ p ∣ k)
+    (hkn : k ≤ n) : p ∣ n.choose k := by
+  have hk1 : 1 ≤ k := Nat.one_le_iff_ne_zero.mpr (fun h => hk (h ▸ dvd_zero p))
+  have hn1 : 1 ≤ n := le_trans hk1 hkn
+  have habs : n * (n - 1).choose (k - 1) = n.choose k * k := by
+    have h := Nat.succ_mul_choose_eq (n - 1) (k - 1)
+    simp only [Nat.succ_eq_add_one, Nat.sub_add_cancel hn1, Nat.sub_add_cancel hk1] at h
+    linarith [h]
+  have hdvd : p ∣ n.choose k * k := habs ▸ (dvd_mul_of_dvd_left hn _)
+  exact (hp.dvd_mul.mp hdvd).resolve_right hk
+
+/-- **THM-2022 §4 no-carry channel survival (11)–(12).** If `p` is prime, `p ∣ ∑ r`, and some part
+`r i` is *not* divisible by `p`, then `p ∣ multinomial S r`.  Thus at mass `p·m0` the only channels
+surviving mod `p` are the `p`-dilated ones — a non-dilated allocation crosses a carry wall. -/
+lemma multinomial_dvd_of_exists_not_dvd {α : Type*} [DecidableEq α] {p : ℕ} (hp : p.Prime)
+    (S : Finset α) (r : α → ℕ) (hsum : p ∣ ∑ i ∈ S, r i)
+    (hex : ∃ i ∈ S, ¬ p ∣ r i) : p ∣ Nat.multinomial S r := by
+  classical
+  revert hsum hex
+  induction S using Finset.induction with
+  | empty => intro _ hex; obtain ⟨i, hi, _⟩ := hex; exact absurd hi (Finset.notMem_empty i)
+  | insert a s ha ih =>
+      intro hsum hex
+      rw [Nat.multinomial_insert ha]
+      rw [Finset.sum_insert ha] at hsum
+      by_cases hra : p ∣ r a
+      · have hsum_s : p ∣ ∑ i ∈ s, r i := (Nat.dvd_add_right hra).mp hsum
+        have hex_s : ∃ i ∈ s, ¬ p ∣ r i := by
+          obtain ⟨i, hi, hpi⟩ := hex
+          rcases Finset.mem_insert.mp hi with rfl | his
+          · exact absurd hra hpi
+          · exact ⟨i, his, hpi⟩
+        exact dvd_mul_of_dvd_right (ih hsum_s hex_s) _
+      · exact dvd_mul_of_dvd_left (dvd_choose_of_dvd hp hsum hra (Nat.le_add_right _ _)) _
+
 /-! ### THM-2022 §5 — Frobenius non-cancellation of the lowest balanced face
 
 In the residue field at a good prime `p`, the natural-number Wick/multinomial weights are
@@ -387,6 +424,8 @@ end GMC2
 #print axioms GMC2.mathieuZhao_of_nc2At
 #print axioms GMC2.gmc2_of_nc2
 #print axioms GMC2.multinomial_dilate_modEq
+#print axioms GMC2.dvd_choose_of_dvd
+#print axioms GMC2.multinomial_dvd_of_exists_not_dvd
 #print axioms GMC2.sum_natCast_mul_pow_char
 #print axioms GMC2.face_sum_frobenius
 #print axioms GMC2.face_sum_ne_zero
