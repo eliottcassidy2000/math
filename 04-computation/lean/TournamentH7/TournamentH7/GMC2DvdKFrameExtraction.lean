@@ -52,7 +52,72 @@ theorem inverse_oneSubCX (w : R) :
 
 end Geometric
 
+/-! ## The frame extraction leg (c): `xCoeff0(−R/Φ)` is the DvdK moment series
+
+Using the geometric inverse, `Φ = C(xᴹ)·(1 − C(w)·X)` with `w = Rl·x⁻ᴹ`, so the honest inverse is
+`Φ⁻¹ = C(x⁻ᴹ)·∑ wⁿ Xⁿ`.  Then `C(Rl)·Φ⁻¹ = ∑ wⁿ⁺¹ Xⁿ`, and applying `xCoeff0` reads off the DvdK
+moments `(Rlⁿ⁺¹).coeff (M·(n+1))` — the generating-function series `∑_{m≥1} D_m tᵐ⁻¹`. This is
+death-star's frame input (2) `[x⁰](−R/Φ) = −∑ D_m tᵐ⁻¹`, the piece their `xCoeff0_xM_div_PhiFrame`
+was left needing. -/
+
+section FrameExtraction
+
+open GMC2DvdKFrame
+
+variable {F : Type*} [Field F]
+
+/-- **Honest inverse of the frame `Φ` via the geometric series.**  `Φ⁻¹ = C(x⁻ᴹ)·∑ wⁿ Xⁿ`, where
+`w = Rl·x⁻ᴹ` (`x⁻ᴹ = HahnSeries.single (−M) 1`).  Built from `Φ = C(xᴹ)·(1 − C(w)·X)` and `inverse_oneSubCX`. -/
+theorem inverse_PhiFrame (Rl : LaurentSeries F) (M : ℕ) :
+    Ring.inverse (PhiFrame Rl M)
+      = C (HahnSeries.single (-(M:ℤ)) 1) * mk (fun n => (Rl * HahnSeries.single (-(M:ℤ)) (1:F)) ^ n) := by
+  have hΦ : IsUnit (PhiFrame Rl M) := isUnit_PhiFrame Rl M
+  set w : LaurentSeries F := Rl * HahnSeries.single (-(M:ℤ)) 1 with hw
+  have hxx : (HahnSeries.single (1:ℤ) (1:F)) ^ M * HahnSeries.single (-(M:ℤ)) 1 = 1 := by
+    rw [HahnSeries.single_pow, one_pow, HahnSeries.single_mul_single, one_mul, nsmul_eq_mul, mul_one]
+    norm_num
+  have hfac : PhiFrame Rl M * C (HahnSeries.single (-(M:ℤ)) (1:F)) = 1 - C w * X := by
+    have e1 : C ((HahnSeries.single (1:ℤ) (1:F)) ^ M) * C (HahnSeries.single (-(M:ℤ)) (1:F)) = 1 := by
+      rw [← map_mul, hxx, map_one]
+    rw [PhiFrame, sub_mul, e1, mul_assoc, ← map_mul, ← hw]; ring
+  have hprod : PhiFrame Rl M * (C (HahnSeries.single (-(M:ℤ)) (1:F)) * mk (fun n => w ^ n)) = 1 := by
+    rw [← mul_assoc, hfac, oneSubCX_mul_mkGeom]
+  calc Ring.inverse (PhiFrame Rl M)
+      = Ring.inverse (PhiFrame Rl M) *
+          (PhiFrame Rl M * (C (HahnSeries.single (-(M:ℤ)) (1:F)) * mk (fun n => w ^ n))) := by
+        rw [hprod, mul_one]
+    _ = (Ring.inverse (PhiFrame Rl M) * PhiFrame Rl M) *
+          (C (HahnSeries.single (-(M:ℤ)) (1:F)) * mk (fun n => w ^ n)) := by ring
+    _ = C (HahnSeries.single (-(M:ℤ)) (1:F)) * mk (fun n => w ^ n) := by
+        rw [Ring.inverse_mul_cancel _ hΦ, one_mul]
+
+/-- **Leg (c): the DvdK moment extraction.**  `xCoeff0 (C Rl · Φ⁻¹) = ∑_{n} (Rlⁿ⁺¹).coeff(M(n+1)) tⁿ`
+— the generating function `(F(t)−1)/t` of the DvdK moments `D_{n+1} = (Rlⁿ⁺¹).coeff(M(n+1))`. -/
+theorem xCoeff0_CRl_mul_inverse_PhiFrame (Rl : LaurentSeries F) (M : ℕ) :
+    xCoeff0 (C Rl * Ring.inverse (PhiFrame Rl M))
+      = mk (fun n => (Rl ^ (n + 1)).coeff ((M : ℤ) * (n + 1))) := by
+  set w : LaurentSeries F := Rl * HahnSeries.single (-(M:ℤ)) 1 with hw
+  -- `C Rl · Φ⁻¹ = ∑ wⁿ⁺¹ Xⁿ`
+  have hstep : C Rl * Ring.inverse (PhiFrame Rl M) = mk (fun n => w ^ (n + 1)) := by
+    rw [inverse_PhiFrame, ← mul_assoc, ← map_mul, ← hw]
+    ext n
+    rw [coeff_C_mul, coeff_mk, coeff_mk, pow_succ']
+  rw [hstep]
+  ext n
+  rw [coeff_xCoeff0, coeff_mk, coeff_mk]
+  -- `(wⁿ⁺¹).coeff 0 = (Rlⁿ⁺¹).coeff (M(n+1))`
+  have hexp : (n + 1) • (-(M:ℤ)) = -(M:ℤ) * (n + 1) := by rw [nsmul_eq_mul]; push_cast; ring
+  have hwpow : w ^ (n + 1) = Rl ^ (n + 1) * HahnSeries.single (-(M:ℤ) * (n + 1)) 1 := by
+    rw [hw, mul_pow, HahnSeries.single_pow, one_pow, hexp]
+  rw [hwpow, mul_comm (Rl ^ (n + 1)) _,
+    show (0 : ℤ) = (M : ℤ) * (n + 1) + -(M:ℤ) * (n + 1) by ring,
+    HahnSeries.coeff_single_mul_add, one_mul]
+
+end FrameExtraction
+
 end GMC2DvdKFrameExtraction
 
 #print axioms GMC2DvdKFrameExtraction.oneSubCX_mul_mkGeom
 #print axioms GMC2DvdKFrameExtraction.inverse_oneSubCX
+#print axioms GMC2DvdKFrameExtraction.inverse_PhiFrame
+#print axioms GMC2DvdKFrameExtraction.xCoeff0_CRl_mul_inverse_PhiFrame
