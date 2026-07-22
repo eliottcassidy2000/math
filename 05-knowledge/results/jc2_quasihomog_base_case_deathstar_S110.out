@@ -1,0 +1,39 @@
+==========================================================================
+BASE CASE: quasi-homogeneous f.  mate <=> face polynomial phi is LINEAR (deg 1)
+  phi(tau) = the 1-variable collapse of the face (the DvdK/S106 object).
+  f                         mate?  phi_deg #distinct roots monomial factor
+  y + x^2      (coord)      True   1       1               (none)
+  y + x^3      (coord)      True   1       1               (none)
+  x + y^2      (coord)      True   1       1               (none)
+  x^2          (2 lines)    False  0       1               x^2 y^0
+  x^2 + y^2    (homog2)     False  2       2               (none)
+  x^2+xy+y^2   (homog2)     False  2       2               (none)
+  (x+y)^2      (sq)         False  2       1               (none)
+  xy           (fiber C*)   False  0       1               x^1 y^1
+  x^2 y + x y^2 (=xy(x+y))  False  1       1               x^1 y^1
+  y^2 + x^3    (cusp)       False  1       1               (none)
+
+PATTERN:  mate=True  <=>  phi has degree 1 (=> exactly 1 root, and no monomial factor)
+          i.e. f = a*x^p + b*y  (or swap) = a WEIGHTED-LINEAR coordinate.
+  phi deg>=2 (>=2 roots, or a repeated root like (tau+1)^2) OR a monomial factor => NO mate.
+  This is the S106 DvdK-face single-root condition, made exact for one face.
+==========================================================================
+FREE LEMMA (provable, no JC): mate => f is PRIMITIVE (not p(h), deg p>=2)
+  Proof: f=p(h) => {f,g}=p'(h){h,g}; =1 forces p'(h) a unit => p linear. QED
+  So mate => connected generic fibers.  (necessary, NOT sufficient: xy is
+  primitive with fiber C* and no mate -- connectedness misses the C* punctures.)
+   non-primitive (x+y)^2 = p(x+y),p=t^2    : mate=False  (predicted False)
+   non-primitive x^2 = p(x),p=t^2          : mate=False  (predicted False)
+   non-primitive x^2+2x = p(x),p=t^2+2t    : mate=False  (predicted False)
+
+==========================================================================
+HONEST LADDER for a quasi-homogeneous (single-face) Keller component f:
+   mate exists (1 in im D_f)
+     => f PRIMITIVE                                  [FREE lemma, proven above]
+     => face poly phi LINEAR (deg 1, single branch)  [DvdK/S106 face, = 1 place at inf]
+     => weighted degree delta < w1+w2                [S107 weight/valuation, = genus 0]
+     => f = y + a x^p  (weighted-linear)  = a COORDINATE.
+   Conversely y+a x^p is a coordinate. So for ONE face: mate <=> coordinate. PROVEN.
+   The three failure modes are exactly 'fiber not = C':
+     phi>=2 roots (>=2 places, e.g. x^2+y^2) | phi repeated / monomial factor
+     (non-primitive, e.g. (x+y)^2, xy) | delta>=w1+w2 (genus>0, e.g. y^2+x^3 cusp).
