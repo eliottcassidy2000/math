@@ -19,6 +19,7 @@ related:
   - THM-2084
   - THM-2118
   - THM-2127
+  - THM-2132
   - HYP-3132
   - HYP-3138
   - HYP-3161

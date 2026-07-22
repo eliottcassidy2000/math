@@ -93,11 +93,11 @@ Older chronology is in
 - THM-2118 proves all-degree cubic Faber boundary/flux coprimality, removes every
   finite centering/depressed-coefficient pole, and invokes THM-2102's power-free
   face theorem to close cubic source fibers. THM-2127 assembles arbitrary later
-  faces in the proper-power train: unless `rad(h)|A` for the first lower face,
-  one factor sees a unique pole and the pair is tame; affine roots are also
-  classified by a moving residue. THM-2129 makes odd balanced quartics empty and
-  leaves exactly `(z^2-1)^2` in twice-odd degree. Factor-initial and global
-  quartic square-face descent, JC(2), and DC(2) remain open.
+  faces away from `rad(h)|A`; THM-2132 closes every exact two-face branch and
+  forces a later factorwise Newton-chord vertex for noncentral arbitrary tails.
+  Affine roots close by a moving residue. THM-2129 leaves `(z^2-1)^2` at the
+  twice-odd quartic boundary. Central prefixes, the small-degree chord branch,
+  quartic square descent, JC(2), and DC(2) remain open.
 - THM-2117/2121 show scalar clocks/minors can miss safe cells, while every strict
   safe cell has a finite full Toeplitz/Fejer certificate; boundary-only points
   remain outside that certificate's scope.

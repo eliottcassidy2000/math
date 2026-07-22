@@ -416,10 +416,11 @@ into tournament operation laws and LRC residue packets.
   syzygy gauge remain decisive for `DC(2)`.
 - **Planar source fibers:** THM-2063/2071 close affine/quadratic pencil members;
   THM-2084/2110/2118 close the cubic source-fiber stratum. THM-2102/2113 close
-  power-free top faces; THM-2127 handles arbitrary later faces whenever the
-  first lower face misses a factor of the top root, and classifies affine roots.
-  THM-2129 makes odd balanced quartics empty and leaves only `(z^2-1)^2` in
-  twice-odd degree. Factor-initial and general quartic square descent remain.
+  power-free top faces; THM-2127 handles arbitrary tails away from the factor-
+  initial locus and classifies affine roots. THM-2132 closes all exact two-face
+  branches and forces a factorwise Newton chord for noncentral arbitrary tails.
+  THM-2129 leaves only `(z^2-1)^2` at the twice-odd quartic boundary. Central
+  prefixes, the small-degree chord branch, and quartic square descent remain.
 - MISTAKE-228/229 block the old atlas and NC2/GMC chain. `JC(2)` and `DC(2)`
   remain open; these are source-fiber gates, not generic cover-degree results.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer

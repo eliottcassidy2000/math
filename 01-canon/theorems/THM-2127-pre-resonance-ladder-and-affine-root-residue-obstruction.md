@@ -19,6 +19,7 @@ depends_on:
 related:
   - THM-2045
   - THM-2071
+  - THM-2132
   - HYP-8950
 ---
 
@@ -618,3 +619,7 @@ affine in one polynomial coordinate. What the arguments add is an exact
 division of labor: away from the factor-initial locus, no collection of later
 faces or resonant seeds can cancel the unique deepest factor valuation; on the
 affine-root locus, moving residues kill every rational continuation at once.
+
+THM-2132 subsequently closes the factor-initial locus when there are exactly
+two nonconstant faces, and for arbitrary tails forces a later face on an
+explicit factorwise Newton chord outside a small numerical branch.

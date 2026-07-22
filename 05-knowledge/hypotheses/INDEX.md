@@ -59,9 +59,9 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
 - **THM-2101/2111 (PROVED PAPER):** three additive DvdK proofs avoid root products, including a purely t-adic Newton-packet proof; the
   effective first return is a compound-determinant order at most
   `binom(M+N,min(M,N))`. Sharpening and Lean assembly are separate.
-- **THM-2102/2110/2113/2118/2127/2129 (PROVED planar-JC strata):** cubic source
-  fibers, exact coprime two-face trains, and affine-root families close. The
-  balanced quartic triple is empty in odd degree and has one twice-odd square.
+- **THM-2102/2110/2113/2118/2127/2129/2132 (PROVED planar-JC strata):** cubic source
+  fibers, all exact two-face trains, and affine-root families close. Arbitrary
+  factor-initial tails must grow a Newton chord; one twice-odd quartic square remains.
 
 ## LRC(14) — OPEN
 
