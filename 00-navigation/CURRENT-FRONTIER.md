@@ -138,9 +138,9 @@ not unsafe. The reusable certificate architecture is
   specialization gives `13|h*product(Q)` and, through rank `10`,
   `11|h*product(Q)`. THM-2115's half-fiber Toeplitz gate closes at frequency
   `84` a row invisible to every THM-2105 clock and its saturated pair tree.
-  THM-2116 reduces the first `13`-blocker to two toothpick patterns; THM-2120
-  eliminates the unique independent branch, and THM-2122 eliminates every
-  multiple-terminal branch under transversality. Guard/dependent cases remain.
+  THM-2116/2120/2122/2123 eliminate every terminal-blocker branch under
+  transversality. A rank-eight cover must now have a guard `13`-blocker or a
+  nonblocker terminal projectively parallel to the guard modulo thirteen.
   THM-2117 gives a sharp separation: one exact rank-eight row passes clocks,
   its maximum Hunter tree, and every scalar minor, yet has an open safe cell.
   THM-2121 makes the joint gate finite at order `14nV^2+1`; retain the

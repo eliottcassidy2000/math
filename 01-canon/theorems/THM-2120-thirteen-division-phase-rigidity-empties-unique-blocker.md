@@ -24,6 +24,7 @@ related:
   - THM-2114
   - THM-2115
   - THM-2122
+  - THM-2123
 external: Settled Lonely Runner Conjecture for at most eight integer speeds (LRC(9) in the total-runner convention).
 ---
 
@@ -240,7 +241,8 @@ The exact scope is important. This theorem does not handle a blocker in the
 guard, two or more terminal blockers, `g,u` dependent, residuals that fail
 mod-13 transversality, or terminal ranks above eight. Those are now the live
 prime-invoice branches for this theorem; THM-2122 later closes the multiple-
-terminal-blocker branch under guard nonvanishing and residual transversality.
+terminal-blocker branch, and THM-2123 closes the dependent unique-blocker
+branch, under guard nonvanishing and residual transversality.
 
 The challenged assumption is that the seven colored toothpicks should be
 classified as a finite graph on `F_13`. That graph is only one fiber. The map

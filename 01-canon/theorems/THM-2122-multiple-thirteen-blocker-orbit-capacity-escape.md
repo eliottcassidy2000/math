@@ -215,10 +215,10 @@ at least two terminal blockers                    -> empty by THM-2122.      (23
 
 The blockers in the second line may be mutually dependent, mutually
 independent, repeated up to sign, or individually proportional to the guard;
-none of that affects the proof. The live rank-eight prime-invoice branches are
-now a guard 13-blocker, a unique terminal blocker dependent on the guard, or a
+none of that affects the proof. THM-2123 later closes the unique dependent
+blocker as well. The live rank-eight branches are now a guard 13-blocker or a
 residual terminal nontransverse to the guard modulo 13. Ranks nine through
-twelve also remain outside the `2(8-b)<13` count as stated.
+twelve remain outside the `2(8-b)<13` count as stated.
 
 ## 6. Assumption challenge and Tournament Analysis
 
