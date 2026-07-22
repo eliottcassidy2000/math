@@ -205,6 +205,39 @@ theorem mathieuZhao_of_nc2At (P Q : MvPolynomial (Fin 2) ℂ)
   · exact mathieuZhao_of_charge_pos P Q hpos
   · exact mathieuZhao_of_charge_neg P Q hneg
 
+/-- The full 2-D nullcone conjecture NC2 (both directions), as a single statement over all `P`.
+The easy direction (`←`, one-sided ⇒ null) is `moments_zero_of_charge_oneSided`; the hard
+direction (`→`, null ⇒ one-sided) is the content of THM-2022. -/
+def NC2 : Prop := ∀ P : MvPolynomial (Fin 2) ℂ, NC2At P
+
+/-- **GMC(2) is a corollary of NC2, with no analytic gap.** Given NC2 (the hard classification),
+for every `P` whose positive moments all vanish and every multiplier `Q`, the products
+`E (Q * P^m)` vanish for all large `m`.  This is the clean logical reduction: the entire GMC(2)
+problem rests on the single theorem `NC2`. -/
+theorem gmc2_of_nc2 (hNC2 : NC2) (P Q : MvPolynomial (Fin 2) ℂ)
+    (hnull : ∀ m : ℕ, 1 ≤ m → E (P ^ m) = 0) :
+    ∃ N : ℕ, ∀ m ≥ N, E (Q * P ^ m) = 0 :=
+  mathieuZhao_of_nc2At P Q (hNC2 P) hnull
+
+/-! ### THM-2022 §5 — Frobenius non-cancellation of the lowest balanced face
+
+In the residue field at a good prime `p`, the natural-number Wick/multinomial weights are
+Frobenius-fixed, so the normalized moment layer collapses to an exact `p`-th power `Q̄^p`.
+This is the algebraic engine of THM-2022: an entire *tied* balanced face survives as one
+Frobenius power and therefore cannot cancel.  Proved here in full generality over any
+commutative ring of characteristic `p`. -/
+
+/-- **Frobenius collapse of a natCast-weighted channel sum.** Over a commutative ring of
+characteristic `p`, `(∑ w_s g_s)^p = ∑ w_s g_s^p` — the weights `w_s : ℕ` are fixed by the
+Frobenius endomorphism.  With `g_s` the channel monomial value and `w_s` the multinomial
+coefficient, the right side is the `p`-dilated face layer and the left is `Q̄^p` (THM-2022 (15)). -/
+theorem sum_natCast_mul_pow_char {R : Type*} [CommRing R] (p : ℕ) [ExpChar R p]
+    {ι : Type*} (S : Finset ι) (w : ι → ℕ) (g : ι → R) :
+    (∑ s ∈ S, (w s : R) * g s) ^ p = ∑ s ∈ S, (w s : R) * (g s) ^ p := by
+  rw [sum_pow_char]
+  refine Finset.sum_congr rfl (fun s _ => ?_)
+  rw [mul_pow, ← frobenius_def, map_natCast]
+
 end GMC2
 
 -- Axiom audit: should be only propext / Classical.choice / Quot.sound (Mathlib standard).
@@ -212,3 +245,5 @@ end GMC2
 #print axioms GMC2.mathieuZhao_of_charge_neg
 #print axioms GMC2.moments_zero_of_charge_oneSided
 #print axioms GMC2.mathieuZhao_of_nc2At
+#print axioms GMC2.gmc2_of_nc2
+#print axioms GMC2.sum_natCast_mul_pow_char

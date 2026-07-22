@@ -151,6 +151,7 @@ theorem exponent_pair_eq_of_same_charge_on_face
     exact_mod_cast hq
   have haQ : (a i : ℚ) = (a j : ℚ) := by
     unfold tiltedHeight at hi hj
+    rw [hqQ] at hi
     linarith
   have ha : a i = a j := by exact_mod_cast haQ
   have hb : b i = b j := by
