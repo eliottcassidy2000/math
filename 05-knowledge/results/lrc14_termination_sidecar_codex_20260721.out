@@ -1,16 +1,17 @@
 LRC14 TERMINATION-SIDECAR AUDIT
-AP: M=1/14 top_count=6 G_volume=0 chi=6 positive_components=0 points=6 first_exit=None peel_violations=0 first_tax_speed=None germ=66ec4276cb43
-GW12to24: M=1/14 top_count=6 G_volume=0 chi=6 positive_components=0 points=6 first_exit=None peel_violations=0 first_tax_speed=None germ=66ec4276cb43
-liar12to26: M=1/12 top_count=4 G_volume=426/35035 chi=10 positive_components=4 points=6 first_exit=(12, 1, 2) peel_violations=0 first_tax_speed=None germ=66ec4276cb43
-K33_12to36: M=3/41 top_count=2 G_volume=1/1260 chi=8 positive_components=2 points=6 first_exit=(41, 17, 1) peel_violations=0 first_tax_speed=None germ=66ec4276cb43
-far12to96: M=8/101 top_count=2 G_volume=5219/840840 chi=14 positive_components=8 points=6 first_exit=(41, 17, 1) peel_violations=1 first_tax_speed=96 germ=66ec4276cb43
-cover12to84: M=7/89 top_count=2 G_volume=563/105105 chi=8 positive_components=8 points=0 first_exit=(41, 17, 1) peel_violations=1 first_tax_speed=84 germ=fb90bebb537a
-P10plusK33: M=2/27 top_count=2 G_volume=4/2205 chi=10 positive_components=4 points=6 first_exit=(27, 8, 1) peel_violations=0 first_tax_speed=None germ=66ec4276cb43
-tax_gain_Cover14: M=7/43 top_count=2 G_volume=589595/5213208 chi=50 positive_components=48 points=2 first_exit=(16, 7, 12) peel_violations=1 first_tax_speed=93 germ=ec1b626fabcc
+AP: M=1/14 top_count=6 G_volume=0 chi=6 positive_components=0 points=6 first_exit=None peel_violations=0 first_tax_speed=None germ=66ec4276cb43 unit_circuit=((1, 1), (2, 1), (3, -1))
+GW12to24: M=1/14 top_count=6 G_volume=0 chi=6 positive_components=0 points=6 first_exit=None peel_violations=0 first_tax_speed=None germ=66ec4276cb43 unit_circuit=((1, 1), (2, 1), (3, -1))
+liar12to26: M=1/12 top_count=4 G_volume=426/35035 chi=10 positive_components=4 points=6 first_exit=(12, 1, 2) peel_violations=0 first_tax_speed=None germ=66ec4276cb43 unit_circuit=((1, 1), (2, 1), (3, -1))
+K33_12to36: M=3/41 top_count=2 G_volume=1/1260 chi=8 positive_components=2 points=6 first_exit=(41, 17, 1) peel_violations=0 first_tax_speed=None germ=66ec4276cb43 unit_circuit=((1, 1), (2, 1), (3, -1))
+far12to96: M=8/101 top_count=2 G_volume=5219/840840 chi=14 positive_components=8 points=6 first_exit=(41, 17, 1) peel_violations=1 first_tax_speed=96 germ=66ec4276cb43 unit_circuit=((1, 1), (2, 1), (3, -1))
+cover12to84: M=7/89 top_count=2 G_volume=563/105105 chi=8 positive_components=8 points=0 first_exit=(41, 17, 1) peel_violations=1 first_tax_speed=84 germ=fb90bebb537a unit_circuit=((1, 1), (2, 1), (3, -1))
+P10plusK33: M=2/27 top_count=2 G_volume=4/2205 chi=10 positive_components=4 points=6 first_exit=(27, 8, 1) peel_violations=0 first_tax_speed=None germ=66ec4276cb43 unit_circuit=((1, 1), (2, 1), (3, -1))
+tax_gain_Cover14: M=7/43 top_count=2 G_volume=589595/5213208 chi=50 positive_components=48 points=2 first_exit=(16, 7, 12) peel_violations=1 first_tax_speed=93 germ=ec1b626fabcc unit_circuit=((1, 1), (11, 1), (12, -1))
 HOSTILE PAIR
 AP_vs_12to26_complete_unit_germ_equal=PASS
 AP_M=1/14; 12to26_M=1/12; first_exit=(12,1,2)=PASS
 signed_threshold_topology_separates_zero_volume_points_from_strict_arcs=PASS
+every_control_has_a_height1_support_at_most5_circuit=PASS
 TERMINATION CONTROLS
 GW_boundary_has_no_strict_exit=PASS
 12to96_first_exit=(41,17,1)=PASS
@@ -26,10 +27,11 @@ switch_gauge=quotient the named row bank by each carrier signature
   residue14: metric=(2, -6, 1)
   peel_tax: metric=(6, -4, 3)
   unit_germ: metric=(8, -3, 2)
-score_histogram=(0, 1, 2, 3, 4, 5, 6)
+  raw_unit_circuit: metric=(10, -2, 1)
+score_histogram=(0, 1, 2, 3, 4, 5, 6, 7)
 directed_3cycles=0
-scc_sizes=(1, 1, 1, 1, 1, 1, 1)
+scc_sizes=(1, 1, 1, 1, 1, 1, 1, 1)
 hamiltonian_path_count=1
-tie_hamiltonian_path=('threshold_topology', 'fused_termination', 'phase_height', 'first_exit', 'residue14', 'peel_tax', 'unit_germ')
-assumption_challenge=period-14 unit germs preserve tight contact but destroy magnitude and global exit; the valuation/first-exit sidecar is load-bearing
+tie_hamiltonian_path=('threshold_topology', 'fused_termination', 'phase_height', 'first_exit', 'residue14', 'peel_tax', 'unit_germ', 'raw_unit_circuit')
+assumption_challenge=period-14 unit germs preserve tight contact but destroy magnitude and global exit; raw short-circuit existence is also blind unless the circuit is localized to an active owner
 verdict=PASS; local germ acyclicity is not termination, while signed topology, peel tax, and resolved exits are compatible exact carriers

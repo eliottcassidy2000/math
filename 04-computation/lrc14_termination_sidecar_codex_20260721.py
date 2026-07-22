@@ -16,7 +16,7 @@ from __future__ import annotations
 
 from fractions import Fraction
 from hashlib import sha256
-from itertools import combinations, permutations
+from itertools import combinations, permutations, product
 from math import gcd
 
 
@@ -150,6 +150,18 @@ def unit_germ(speeds: tuple[int, ...]) -> tuple[tuple[int, tuple[tuple[int, int]
     return tuple(answer)
 
 
+def unit_circuit(speeds: tuple[int, ...]) -> tuple[tuple[int, int], ...] | None:
+    """First exact support-2..5 relation with coefficients in {+1,-1}."""
+    for support in range(2, 6):
+        for subset in combinations(speeds, support):
+            # Global sign is irrelevant, so normalize the first coefficient to +1.
+            for tail in product((-1, 1), repeat=support - 1):
+                signs = (1,) + tail
+                if sum(sign * speed for sign, speed in zip(signs, subset)) == 0:
+                    return tuple(zip(subset, signs))
+    return None
+
+
 def peel_tax(
     speeds: tuple[int, ...]
 ) -> tuple[tuple[int, Fraction, Fraction, int, Fraction], ...]:
@@ -181,6 +193,7 @@ def carrier_tournament(records: dict[str, dict[str, object]]) -> dict[str, objec
     truth = {name: record["maximum"] > THRESHOLD for name, record in records.items()}
     carriers = {
         "residue14": (1, lambda r: r["residue14"]),
+        "raw_unit_circuit": (1, lambda r: r["unit_circuit"]),
         "unit_germ": (2, lambda r: r["unit_germ"]),
         "peel_tax": (3, lambda r: r["peel_tax"]),
         "first_exit": (4, lambda r: r["first_exit"]),
@@ -262,6 +275,7 @@ def main() -> None:
             "first_exit": exit_certificate,
             "peel_tax": tax,
             "unit_germ": unit_germ(speeds),
+            "unit_circuit": unit_circuit(speeds),
             "residue14": tuple(sorted(v % 14 for v in speeds)),
         }
         volume, chi, positive, points = topology
@@ -271,7 +285,8 @@ def main() -> None:
             f"G_volume={compact_fraction(volume)} chi={chi} "
             f"positive_components={positive} points={points} "
             f"first_exit={exit_certificate} peel_violations={len(tax)} "
-            f"first_tax_speed={first_tax} germ={digest(records[name]['unit_germ'])}"
+            f"first_tax_speed={first_tax} germ={digest(records[name]['unit_germ'])} "
+            f"unit_circuit={records[name]['unit_circuit']}"
         )
 
     ap = records["AP"]
@@ -282,10 +297,12 @@ def main() -> None:
     assert ap["topology"] == (Fraction(0), 6, 0, 6)
     assert liar["topology"][0] > 0
     assert liar["first_exit"] == (12, 1, 2)
+    assert all(record["unit_circuit"] is not None for record in records.values())
     print("HOSTILE PAIR")
     print("AP_vs_12to26_complete_unit_germ_equal=PASS")
     print("AP_M=1/14; 12to26_M=1/12; first_exit=(12,1,2)=PASS")
     print("signed_threshold_topology_separates_zero_volume_points_from_strict_arcs=PASS")
+    print("every_control_has_a_height1_support_at_most5_circuit=PASS")
 
     gw = records["GW12to24"]
     assert gw["maximum"] == Fraction(1, 14)
@@ -323,7 +340,8 @@ def main() -> None:
     print(f"tie_hamiltonian_path={tournament['tie_hamiltonian_path']}")
     print(
         "assumption_challenge=period-14 unit germs preserve tight contact but destroy "
-        "magnitude and global exit; the valuation/first-exit sidecar is load-bearing"
+        "magnitude and global exit; raw short-circuit existence is also blind unless "
+        "the circuit is localized to an active owner"
     )
     print(
         "verdict=PASS; local germ acyclicity is not termination, while signed topology, "

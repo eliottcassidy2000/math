@@ -175,9 +175,25 @@ structural supplier/seed and a lossless exit.
    exit by `q<=2 max(S)`; the sole Wall-A branch is owner-labelled Euler-point
    survival when no positive pair-sum margin occurs.
    [THM-2051](../01-canon/theorems/THM-2051-fejer-bv-small-relation-alternative-for-lrc14.md)
-   now proves that every remaining hard row has a support-`2..5` relation of
-   coefficient height at most `2^20`. The open deletion/Euler argument is
-   therefore localized to that finite union of circuit templates.
+   now proves that every remaining hard row has a genuine support-`3..5`
+   relation of coefficient height at most `2^21` after paying pairs exactly.
+   [THM-2052](../01-canon/theorems/THM-2052-finite-height-forces-high-rank-bounded-relation-code.md)
+   goes much further: every hypothetical counterexample already has eleven
+   independent bounded three-support relations and lies in a finite atlas of
+   rational subspaces of dimension at most two. The exact
+   HYP-8841 bank also shows why incidence is load-bearing: all eight controls,
+   tight and strict alike, already have a height-one three-term circuit (the
+   first seven share `1+2=3`). The next target is an **active-owner circuit**
+   lemma tying a bounded relation to the peeled speed or a surviving Euler
+   endpoint, not mere circuit existence. HYP-2108 supplies the exact gate: for
+   core-safe components with midpoint `m_i` and length `l_i`, prove for some
+   peel `w` that
+   `P_w=max_i(||w m_i||+(w/2)l_i-1/14)>=0`. Equality already preserves a weak
+   endpoint; strict positivity opens an interval. The sharpened target is
+   **Euler survival or rank gain**: prove `P_w>=0`, or manufacture a twelfth
+   independent relation, which reaches the finite maximal-minor terminal.
+   HYP-8845 halves the covering branch by mirror symmetry: one survivor on
+   `[0,1/2]` automatically supplies its partner and `chi>=2`.
 
 The characteristic-7 result
 [THM-2043](../01-canon/theorems/THM-2043-period14-parity-hasse-jet-completeness.md),

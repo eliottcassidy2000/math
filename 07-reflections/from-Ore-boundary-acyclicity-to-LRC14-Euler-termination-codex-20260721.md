@@ -113,22 +113,55 @@ cyclic endpoint word/Euler valuation, with magnitude retained on every owner.
 An unlabelled toric layer, scalar energy, or fixed residue packet cannot state
 the required survival event.
 
-THM-2051 now proves the structural cut: absence of a bounded support-`2..5`
-integer relation forces positive safe volume. The unresolved Euler lemma only
-faces rows for which every peel tax passes, a coefficient-height-`<=2^20`
-short relation exists, and every pair-sum margin is nonpositive. This is a
-proved narrowing; classification and descent within the circuit hyperplanes
-remain open.
+The extensive repo pull identifies HYP-2108 as the exact prior-art interface.
+For a peel `S=C union {w}` and a lifted core-safe component of midpoint `m_i`
+and length `l_i`, containment in one open `w`-danger arc is equivalent to
+
+```text
+||w m_i||+(w/2)l_i<1/14.
+```
+
+Thus weak endpoint survival is exactly
+`P_w(C)=max_i(||w m_i||+(w/2)l_i-1/14)>=0`. The active-owner circuit theorem is
+no longer a vague incidence request: it must force `P_w(C)>=0` on THM-2051's
+bounded circuit hyperplanes after the tax and positive-margin branches are
+removed. HYP-3117/HYP-3120 independently name endpoint owner as the missing
+proof-circuit input.
+
+THM-2051 now proves the structural cut in stronger form: after paying pair
+covariances exactly, absence of a bounded support-`3..5` relation of height
+`2^21` forces positive safe volume. THM-2052 then uses the finite-height theorem
+and a pigeonhole code to show every hypothetical counterexample already has
+eleven independent bounded three-support relations, hence lies in a finite
+atlas of rational subspaces of dimension at most two. The unresolved Euler
+lemma only faces this atlas. One new independent row reaches rank twelve and a
+finite maximal-minor terminal.
+
+The enlarged audit immediately challenges an overoptimistic reading of that
+reduction. Every control already has a height-one support-three circuit; AP and
+the six AP-derived strict controls all share `1+2=3`. The genuine Cover14 tax
+row has `1+11=12`. Raw circuit existence therefore merges tight and strict
+routes even more badly than the local germ. A useful circuit must meet the
+peeled speed or an active endpoint owner, or change the signed cyclic wall
+word. The next target is an active-owner circuit lemma, not a census of more
+relations.
+
+The resulting decisive target is not just active incidence but
+**rank-or-Euler**: the HYP-2108 endpoint functional satisfies `P_w>=0` for some
+peel, or the active endpoint-owner packet produces a relation outside the
+rank-eleven code. HYP-8845 adds a clean equivariant dividend on covering rows:
+one half-circle survivor automatically has a mirror partner, so `chi>=2`.
 
 ## Tournament methodology
 
 The audit deliberately uses proof carriers as vertices. Pairwise comparison
 uses `(cross-route merges,-fiber count,cost)`, and the switch quotients the
 named row bank by each carrier signature. The tournament is transitive with
-score histogram `0,...,6`, no directed triangles, singleton SCCs, and one
+score histogram `0,...,7`, no directed triangles, singleton SCCs, and one
 Hamiltonian path. The ranking is diagnostic rather than a proof: threshold
 topology and the fused termination carrier lead, while raw unit germs finish
-last. The quotient preserves certificate discrimination on the named bank and
+near last and raw unit-circuit existence finishes last. The quotient preserves
+certificate discrimination on the named bank and
 destroys the circle geometry, which remains in the signed phase-height word.
 
 ## Artifacts

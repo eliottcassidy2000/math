@@ -21,6 +21,10 @@ related:
   - THM-2050
   - THM-2051
   - THM-2052
+  - HYP-2108
+  - HYP-3117
+  - HYP-3120
+  - HYP-8845
 script: 04-computation/lrc14_termination_sidecar_codex_20260721.py
 output: 05-knowledge/results/lrc14_termination_sidecar_codex_20260721.out
 ---
@@ -93,6 +97,27 @@ at-most-three relations of height `91^6`. Thus every counterexample lies in a
 finite atlas of rational subspaces of dimension at most two. The unresolved
 rank jump is from at least eleven to twelve, where the maximal-minor bound
 becomes finite.
+
+The companion audit supplies the essential hostile control for that statement:
+every one of its eight rows already has a coefficient-height-one circuit of
+support three. The first seven, including AP, GW, `12->26`, `12->36`,
+`12->96`, `12->84`, and P10+K33, all share the irrelevant relation
+
+```text
+1+2-3=0.                                                   (2c)
+```
+
+The genuine Cover14 tax-gain row similarly has `1+11-12=0`. Raw circuit
+existence therefore ranks below even the local unit germ in the carrier
+tournament. The next theorem must localize a circuit to the peeled speed, an
+active endpoint owner, or a relation that changes the signed cyclic wall word;
+a relation elsewhere in the row cannot drive deletion.
+
+THM-2052 makes independence load-bearing too. A useful active-owner relation
+must lie outside the already harvested rank-at-least-eleven code; otherwise it
+does not descend. One new independent row raises the code to rank twelve, where
+the maximal-minor bound makes the remaining decision finite. Thus the refined
+target is **Euler survival or rank gain**, not merely active incidence.
 
 The proposed LRC14 termination theorem is:
 
@@ -177,12 +202,13 @@ With proof carriers as tournament vertices, the observable is
 ```
 
 and the switch/gauge quotients the named bank by a carrier signature. The
-tournament is transitive (score histogram `0,...,6`, no directed triangles,
+tournament is transitive (score histogram `0,...,7`, no directed triangles,
 singleton SCCs, one Hamiltonian path). Signed threshold topology wins; the
-fused germ/tax/exit carrier is second; raw unit germs are last. This challenges
-the assumption that a deeper local packet should be sought. The missing item
-is a labelled deletion law that preserves Euler points when the strict-volume
-tests do not fire.
+fused germ/tax/exit carrier is second; raw unlocalized circuit existence is
+last. This challenges both the assumption that a deeper local packet should be
+sought and the assumption that the THM-2051 circuit can be used without an
+incidence sidecar. The missing item is a labelled deletion law that preserves
+Euler points when the strict-volume tests do not fire.
 
 ## Next decisive target
 
@@ -219,4 +245,56 @@ no positive pair-sum margin exists.                            (6)
 
 The Euler endpoint-survival lemma only needs to be proved on this structured
 intersection. This is now a proved narrowing of the LRC reduction, but it does
-not orient a Noetherian move inside any circuit hyperplane.
+not orient a Noetherian move inside any circuit hyperplane. The first necessary
+refinement is an **active-owner circuit lemma**: either a bounded circuit meets
+the peeled/endpoint-owner set, or a different peel/strict exit is available.
+
+## Prior-art interface and exact inequality to prove
+
+HYP-2108 already supplies the model active-owner gate in its multiple-speed
+branch, while HYP-3117/HYP-3120 explain why endpoint ownership is a required
+proof-circuit input. In the notation of the exact deletion identity, peel
+`S=C union {w}` and write each positive-length component of
+`G_{1/14}(C)` as
+
+```text
+I_i=[m_i-l_i/2,m_i+l_i/2].
+```
+
+Because a connected interval contained in the open danger set
+`D_w={t:||wt||<1/14}` must lie in one danger component, direct endpoint
+arithmetic gives
+
+```text
+I_i subset D_w
+ iff ||w m_i|| + (w/2)l_i < 1/14.                    (7)
+```
+
+At equality an endpoint is weak-safe and already proves LRC14. Therefore the
+third clause of the deletion trichotomy is exactly
+
+```text
+P_w(C):=max_i (||w m_i||+(w/2)l_i-1/14) >= 0.        (8)
+```
+
+This is the concrete next decisive target. Let `W` be an eleven-dimensional
+bounded relation code supplied by THM-2052:
+
+> On every residual row for which all THM-2048 peel taxes pass and all pair-sum
+> margins are nonpositive, either some peel `w` satisfies `P_w(C)>=0`, or the
+> active endpoint-owner data supplies a bounded relation `k dot v=0` with
+> `k notin W`.
+
+Equations (7)--(8) do not prove the target; they identify the exact missing
+input. The raw relation `1+2=3` does not mention `w`, `m_i`, or the endpoint
+owners and hence cannot control `P_w`. A successful circuit-elimination step
+must manufacture an independent incidence row or emit a strict exit. This
+recovers, in the new Fejer/phase-height setting, the older endpoint-cover
+circuit rather than inventing another scalar carrier.
+
+HYP-8845 supplies a symmetry dividend on the covering branch. The involution
+`t->1-t` acts freely on `G_{1/14}` when an even speed is present, so a surviving
+endpoint/component comes with its mirror and `chi` is even. It is enough to
+force (8) on one half-circle; the mirror produces the second Euler component.
+This halves the owner-word problem but does not supply the rank gain or the
+first survivor.
