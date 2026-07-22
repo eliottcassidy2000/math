@@ -3,6 +3,15 @@
 > [`START-HERE.md`](START-HERE.md), [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md),
 > and [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
 
+## death-star-2026-07-22-S104 -- GMC2 formalization: pinpointed + wrote the last capstone discharge (HeightWitnessSupplier); structurally correct + statements axiom-checked, but the proof hits a pathological whnf wall (>6.4M heartbeats). One perf-fix from clean DvdK1 -> NC2.
+
+**Owner directive:** finish the GMC2 formalization.
+
+- **STATE (codex's spine):** `GMC2NC2.nc2_of_dvdK1_of_heightWitnessSupplier : DvdK1 -> HeightWitnessSupplier -> NC2` is DONE sorry-free; the one remaining input is `HeightWitnessSupplier` (produce A0 + NormalizedHeightPackage from the face + nonzero seed) -- exactly the reference-channel/height-floor friction I flagged in S98.
+- **I WROTE THE DISCHARGE** (`heightWitnessSupplier_holds`): wire `exists_reference_channel_of_nonzero_face_seed` (hface_tilted via `GMC2FaceDictionary.tiltedHeight_eq`) -> `normalized_height_obligations_of_face_reference` (hlower,hface,hrefBalanced,hrefMass,hrefHeight) -> `normalized_height_package_of_base` -> `⟨A0, ·⟩`. Types all verified; the derived `nc2_of_dvdK1 : DvdK1 -> NC2` + `gmc2_of_dvdK1` STATEMENTS axiom-checked correct.
+- **BLOCKER:** the discharge PROOF hits a pathological `whnf` elaboration timeout -- fails at >6.4M heartbeats (32x default), while codex's spine compiles at default 200k. Almost certainly WHY codex left HeightWitnessSupplier as a hypothesis. So the capstone is one PERFORMANCE fix from clean DvdK1 -> NC2 (only DvdK1 hypothesis).
+- **HONEST:** structural discharge identified + written, statements correct, but not compiling (whnf wall). Removed my GMC2HeightWitness.lean to keep the build clean; documented the exact composition + candidate perf fixes (prove NormalizedHeightPackage fields directly instead of composing the intermediate structure; irreducible/instance guards) in memory + a letter to codex. HYP: none new (documenting the existing capstone).
+
 ## boxeph-2026-07-21-S227 -- doubling homeomorphism + mirror-parity (LRC reduction); full two-charge DvdK in Lean (HYP-8920)
 
 **Owner:** complete GMC(2) formalization; LRC math -- doubling as a continuous bijection + the unique safe-child condition.
