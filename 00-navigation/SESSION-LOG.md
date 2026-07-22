@@ -109,6 +109,23 @@ NET: every P whose lowest face has a unique channel needs NO DvdK axiom for NC2,
   residual is now: bounded guard ratio, finite rank-seven terminal, or
   persistent rank-six cut template.
 
+### Persistent means flat affine holonomy
+
+- THM-2089 imports THM-1226's forgotten relation-cycle holonomy into the new
+  cut. Writing each edge as `q_j=alpha_e q_i+beta_e h`, a fundamental chord is
+  persistent exactly when `product alpha=1` and the transported offset sum is
+  zero. Clearing denominators gives the two exact integers `D_C-N_C` and
+  `R_C`; a nonflat simple cycle gives a guard/base relation of height at most
+  `6*57^6=205778683494` and is already THM-2088's finite rank-seven branch.
+- In the flat branch, a tree gauge gives `q_i=u_i(z+v_i h)` with rational
+  gauge height at most `6*57^6`. Integrality is the explicit congruence lattice
+  `D_i | N_i z+R_i h`, of index at most `57^36`; positivity is one interval in
+  `z/h`, and distinctness removes at most 21 rational walls unless a pair is
+  identically equal, in which case the template is empty.
+- The exact referee checks 1,500 signed clearing identities, all 28 squares of
+  flat `K_(2,5)`/`K_(3,4)` gauges, and a perturbed connection with six detected
+  nonflat squares under both normal and optimized Python.
+
 ## death-star-2026-07-22-S105 -- GMC2 formalization CAPSTONE CLOSED: the whnf wall is SOLVED; HeightWitnessSupplier discharged kernel-pure; clean DvdK1 -> NC2 and DvdK1 -> GMC(2) now compile.
 
 **Owner directive:** work creatively at whnf-tuning, or how it can be bypassed.

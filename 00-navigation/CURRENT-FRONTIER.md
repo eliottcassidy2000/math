@@ -164,7 +164,12 @@ supplier/seed and a lossless exit.
   the primitive terminal tuple finite with
   `max(h,max Q)<=91421508108581`; rank six is precisely the persistent
   two-parameter cut-template branch. Only that persistent branch can remain
-  unbounded without a two-term guard ratio.
+  unbounded without a two-term guard ratio. THM-2089 gives it a flat affine-
+  holonomy normal form `q_i=u_i(z+v_i h)`: every fundamental cycle has both
+  product-one multiplicative holonomy and zero signed offset. The gauge has
+  height at most `6*57^6`, its integer parameters form a congruence lattice of
+  index at most `57^36`, and its real projective locus is one rational interval
+  minus collision walls. Earlier guards and original tails are not yet spliced.
 - **PROVED relative whole-product decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says bounded scalar relations must lift to vector-character relations. Two
   telescopes bound the whole product; rowwise `H=2^19` clears every recorded

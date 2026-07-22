@@ -1738,4 +1738,10 @@ Exact THM-2085 constant audit. Degrees `1` through `56` have no positive
 coordinatewise Selberg/Hunter margin; degree `57` gives mixed-overlap floor
 `5363/164836`, restricted-edge floor `655135/66923416`, and contradiction
 margin `6435/8365427`. Normal and optimized runtime assertions pass.
+
+### lrc14_persistent_cut_affine_holonomy_referee_codex_20260722.out
+Exact THM-2089 signed-cycle audit. It checks 1,500 rational clearing
+identities, all 10 squares of a flat `K_(2,5)` gauge, all 18 squares of a flat
+`K_(3,4)` gauge, and detects six nonflat squares after one offset perturbation.
+The universal simple-cycle relation-height invoice is `205778683494`.
 | `poisson_rank2_symplectic_suspension_codex_20260721.py` | [STORED; THM-2044/2045, HYP-8802] | Independently reconstructs the owner-supplied rank-two Poisson counterexample from `R=x(2-3xq)` as a symplectic suspension of THM-1300. Exact checks: all six canonical brackets; expanded term counts `(2,35,246,78)`; three rational source points with common image and exact fibre size transported from THM-1300. Proves every `x(a-b x^r q^s)`, `ab!=0`, `r,s>=1`, has no planar Jacobian mate by a weighted-sector leading-coefficient obstruction; 64 monomial identities are audited. Quantum modes repair the entire `R`-column exactly, then reduce `M(Sq,T)-1` from tangent degree two to an explicit constant. Homogeneous repairs propagate weights `6->{6,12}`, `12->{12,18}`, `18->{18,24}` without closing, exposing the DC(2) termination cascade. | `poisson_rank2_symplectic_suspension_codex_20260721.out` |

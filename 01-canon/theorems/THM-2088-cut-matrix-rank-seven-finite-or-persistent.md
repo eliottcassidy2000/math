@@ -18,6 +18,7 @@ related:
   - THM-2065
   - THM-2069
   - THM-2086
+  - THM-2089
 ---
 
 # THM-2088 -- the cut matrix is finite or persistent
@@ -174,6 +175,11 @@ seam tails. To apply THM-2062/2065 to the full thirteen-speed row, Branch III
 must be spliced to those five outer coordinates, preserving owner addresses
 and translated-grid incidence. THM-2086's claimed lacunary cone is a
 complementary attempt to remove part of that splice.
+
+THM-2089 subsequently identifies Branch III with a flat affine connection on
+the cut graph. Every fundamental cycle must have product-one multiplicative
+holonomy and zero offset holonomy; the resulting terminal template has an
+explicit rational gauge and finite-index integrality lattice.
 
 ## 5. Assumption challenge and Tournament Analysis
 
