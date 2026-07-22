@@ -173,8 +173,8 @@ no-pair residual produced by the short-relation cut.
 This still does not parameterize the earlier dyadic guards or the two original
 seam tails. To apply THM-2062/2065 to the full thirteen-speed row, Branch III
 must be spliced to those five outer coordinates, preserving owner addresses
-and translated-grid incidence. THM-2086's claimed lacunary cone is a
-complementary attempt to remove part of that splice.
+and translated-grid incidence. THM-2086 proves complementary all-height
+modular and lacunary exclusions inside that splice.
 
 THM-2089 subsequently identifies Branch III with a flat affine connection on
 the cut graph. Every fundamental cycle must have product-one multiplicative

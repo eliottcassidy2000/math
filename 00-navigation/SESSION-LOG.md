@@ -7,6 +7,11 @@
 - **NEW ROUTE (sketch, crux open):** transfer S106's manufactured-valuation Galois orbit-product (THM-2067) to JC(2)'s places at infinity. (a) Lefschetz reduces a counterexample to Q-bar coefficients [valid]; (b) roots of h lie in a number field so Gal permutes the places at infinity in orbits [valid -- the arithmetic supplies the orbit THM-2067 needs, which S205's LRC packet lacked]; (c) OPEN CRUX: exhibit a product of local invariants over a Galois orbit of places, rational yet with a valuation incompatible with jac=1 (the analogue of Pi(t)=ct vs the Vieta norm). Framing: boxeph S146 Euler ledger = topological reciprocity; this route = its arithmetic (valuation/norm, Weil-reciprocity-flavored) refinement; it sharpens boxeph S225's descent-FEASIBILITY engine to a CANCELLATION/valuation one.
 - **Parallel tool (boxeph S231, same day):** F invertible <=> a coordinate certificate x=P(f,g) exists (Nullstellensatz), the EFFECTIVE face; boxeph's DvdK monomial certificate is the same coin. Dictionary gains a unified "certificate exists <=> tame; effective degree bound = open part" column.
 - **HONEST:** anchors classical (Abhyankar-Moh / van der Kulk), verified in-repo + assembled; the dictionary is a synthesis not an implication; the route's crux is open. JC(2) remains open. HYP-8940.
+> **CURRENT-TRUTH WARNING (2026-07-21):** This is chronological provenance,
+> not a status authority. Entries may be corrected after filing. Start with
+> [`START-HERE.md`](START-HERE.md), [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md),
+> and [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
+
 ## boxeph-2026-07-22-S231 -- eliminate DvdK for the residual 12% of straddling supports via a monomial certificate (kernel-pure Lean, HYP-8932)
 
 **Owner:** get rid of DvdK for the remaining ~12% of straddling supports.

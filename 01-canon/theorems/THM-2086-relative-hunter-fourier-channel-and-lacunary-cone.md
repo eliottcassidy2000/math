@@ -24,6 +24,8 @@ depends_on:
   - THM-2083
 related:
   - THM-2082
+  - THM-2087
+  - THM-2088
 script: 04-computation/lrc14_relative_hunter_fourier_lacunary_codex_20260722.py
 output: 05-knowledge/results/lrc14_relative_hunter_fourier_lacunary_codex_20260722.out
 script_sha256: 67fbb82f4aa07a4835e8c9673c8bbd0698e8f9330d04aae2cc4dd5a78a8c1426
@@ -566,7 +568,7 @@ with residue label as tie gauge. But its tournament fingerprints do not
 determine any term in (13): orientations discard rational weights, fold signs,
 and the ternary relation lattice supporting `R_h`.
 
-The fastest-speed star in Section 5 is an honest Hunter tree, not a tournament
+The fastest-speed star in Section 6 is an honest Hunter tree, not a tournament
 claim. Its faithful sidecar is `(I_q; rho_pq; R_h(p,q))`, or equivalently the
 labelled three-frequency relation hypergraph. The challenged assumption was
 that either global pair overlaps or scalar mixed overlaps should suffice.
@@ -579,4 +581,4 @@ all scalar survivors and the exact hostile decomposition (18)--(20), exhausts
 the odd reduced spectrum (29), audits both modular identities
 (29g)--(29t), and tests (21) by exact boundary atomization on a broad finite
 triple bank. It uses explicit runtime checks; normal and `python -O`
-transcripts byte-match and end in `RESULT=PASS`. QED.
+transcripts byte-match and end in `PASS`. QED.
