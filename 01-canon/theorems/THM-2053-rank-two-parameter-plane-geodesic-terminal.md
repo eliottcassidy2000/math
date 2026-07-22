@@ -6,14 +6,16 @@ status: >
   Ungar's 1982 planar direction theorem. The torus-geodesic estimate is
   elementary and unconditional. Every rational two-plane containing a
   positive row has a full-support repeat projection, hence torus margin at
-  least 1/13; every primitive parameter direction of norm at least 91 times
-  the plane Lipschitz constant is LRC14-safe. This makes every THM-2052 plane
-  finite in parameter space, but does not enumerate the disks or prove
-  LRC(14).
+  least 1/13. The exact anisotropic terminal is
+  max_i|a z_i-b u_i|<=(a^2+b^2)/91; in particular every primitive parameter
+  direction of norm at least 91 times the plane Lipschitz constant is
+  LRC14-safe. This makes every THM-2052 plane finite in parameter space, but
+  does not enumerate the residual sets or prove LRC(14).
 source: codex-2026-07-21-DC2-LRC14-termination
 depends_on:
   - THM-2052
   - LRCUpTo13
+  - "T. Sungkawichai and T. Trakulthongchai, Eleven, twelve, and thirteen lonely runners, arXiv:2604.23906v1 (preprint)"
   - "P. Ungar, 2N noncollinear points determine at least 2N directions, JCTA 33 (1982), 343-347"
 related:
   - HYP-4342
@@ -48,13 +50,22 @@ independently.
 
 ## 2. General primitive-geodesic rate
 
-For every primitive `d=(a,b)`,
+For every primitive `d=(a,b)`, define
 
 ```text
-M_T(U)-L(U)/(2 sqrt(a^2+b^2)) <= M(d) <= M_T(U).        (3)
+E_U(d)=max_i |a z_i-b u_i|/(2(a^2+b^2)).               (3)
 ```
 
-This is the all-direction version of HYP-4342's `(1,N)` rate.
+Then
+
+```text
+M_T(U)-E_U(d) <= M(d) <= M_T(U),                       (4)
+E_U(d)<=L(U)/(2 sqrt(a^2+b^2)).                        (5)
+```
+
+This is the exact all-direction version of HYP-4342's `(1,N)` rate. The first
+bound retains the oriented area between the target direction and each column;
+the second is its round Lipschitz envelope.
 
 ### Proof
 
@@ -64,14 +75,14 @@ Let
 C_d={(at,bt) mod Z^2:t in R/Z}.
 ```
 
-The right inequality in (3) is immediate because `C_d` is a subset of the
+The right inequality in (4) is immediate because `C_d` is a subset of the
 two-torus and `F_U(at,bt)` is exactly the objective in (2).
 
 For the left inequality, put `n=(b,-a)`. Since `gcd(a,b)=1`, the subcircle
 `C_d` is the kernel of the primitive character
 
 ```text
-(x,y) |-> bx-ay mod Z.                                  (4)
+(x,y) |-> bx-ay mod Z.                                  (6)
 ```
 
 Given any torus point `X`, choose a lift to `R^2` and an integer `m` with
@@ -86,18 +97,24 @@ Moving `X` in the normal direction by
 -(n dot X-m)n/||n||_2^2
 ```
 
-lands in the kernel (4). Hence every torus point is within Euclidean distance
+lands in the kernel (6). Hence every torus point is within Euclidean distance
 
 ```text
-1/(2||n||_2)=1/(2 sqrt(a^2+b^2))                       (5)
+1/(2||n||_2)=1/(2 sqrt(a^2+b^2)).                      (7)
 ```
 
 of `C_d`.
 
-The circle-distance function is one-Lipschitz, so each character
-`(x,y)|->||u_i x+z_i y||` is `||c_i||_2`-Lipschitz. Their pointwise minimum
-`F_U` is therefore `L(U)`-Lipschitz. Apply (5) to a maximizer of `F_U`; its
-nearby point on `C_d` loses at most the error in (3). QED.
+More precisely, the normal displacement is `-s n/||n||^2` with `|s|<=1/2`.
+Its change in the `i`th character is at most
+
+```text
+|c_i dot n|/(2||n||^2)
+ = |b u_i-a z_i|/(2(a^2+b^2)).                         (8)
+```
+
+Apply (8) to a maximizer of `F_U` and take the maximum over `i`; this proves
+the left inequality in (4). Cauchy--Schwarz gives (5). QED.
 
 The proof uses only elementary torus geometry. It does not invoke LRC and it
 does not assume that the coordinates `v(d)_i` are positive or distinct.
@@ -109,16 +126,16 @@ Call `U` **full-support-repeat exposed** if some primitive direction
 
 ```text
 p_i=a_0u_i+b_0z_i !=0 for every i,
-|p_i|=|p_j| for some i!=j.                              (6)
+|p_i|=|p_j| for some i!=j.                              (9)
 ```
 
 For `n=13`, the standing cited LRC through thirteen total runners implies
 
 ```text
-M_T(U)>=1/13.                                           (7)
+M_T(U)>=1/13.                                          (10)
 ```
 
-Indeed, the thirteen nonzero integers in (6) have at most twelve distinct
+Indeed, the thirteen nonzero integers in (9) have at most twelve distinct
 absolute values. Apply the cited theorem to that set of at most twelve speeds.
 It supplies a time `t_0` at which every distinct speed has distance at least
 `1/(k+1)>=1/13`. Repetitions and sign changes do not change circle distance,
@@ -128,22 +145,42 @@ so
 F_U(a_0t_0,b_0t_0)>=1/13,
 ```
 
-which proves (7).
+which proves (10).
 
-Combining (3) and (7) gives the explicit terminal
+Combining (4) and (10) gives the exact anisotropic terminal
 
 ```text
-sqrt(a^2+b^2)>=91 L(U)  ==>  M(d)>=1/14,               (8)
+max_i |a z_i-b u_i| <= (a^2+b^2)/91
+                         ==> M(d)>=1/14.               (11)
 ```
 
-because
+Indeed, (11) says `E_U(d)<=1/182`, and
 
 ```text
 1/13-1/14=1/182
 ```
 
-and `L/(2||d||)<=1/182` under (8). Equality in (8) is allowed: LRC needs a
-weak `1/14` witness.
+so equality is allowed: LRC needs a weak `1/14` witness. By (5), the convenient
+round corollary is
+
+```text
+sqrt(a^2+b^2)>=91 L(U)  ==>  M(d)>=1/14.              (12)
+```
+
+There is an exact geometric form of the parameters not certified by (11).
+Put `Jc_i=(z_i,-u_i)`. Failure of (11) is equivalent to membership in one of
+the `2n` open disks
+
+```text
+||d-(91 sigma/2)Jc_i||^2 < (91^2/4)||c_i||^2,
+                  i=1,...,n,  sigma in {+1,-1}.        (13)
+```
+
+Indeed, after choosing `sigma` to match the sign of `Jc_i dot d`, the
+inequality is just `||d||^2<91 sigma Jc_i dot d` completed to a square. Every
+circle in (13) has the origin on its boundary. Thus the exact residual carrier
+is a union of tangent disks in the integer parameter lattice, not the whole
+round envelope from (12).
 
 ## 4. Every genuine two-plane has the repeat direction
 
@@ -154,7 +191,7 @@ the columns span `R^2`.
 Form the finite centrally symmetric point set
 
 ```text
-P={+c_i,-c_i:1<=i<=n} subset R^2,                      (9)
+P={+c_i,-c_i:1<=i<=n} subset R^2,                     (14)
 ```
 
 discarding repetitions, and let `N=|P|`. It is non-collinear, contains no
@@ -163,13 +200,13 @@ columns. Every radial direction contributes at least the two distinct points
 `p,-p`, so
 
 ```text
-|D|<=N/2.                                              (10)
+|D|<=N/2.                                             (15)
 ```
 
 Ungar's planar direction theorem says that `N=2m` non-collinear points
 determine at least `N` distinct secant directions.
 
-Suppose, toward a contradiction, that (6) fails. Take distinct `p,q in P`. If
+Suppose, toward a contradiction, that (9) fails. Take distinct `p,q in P`. If
 their secant direction `span(p-q)` is not in `D`, choose a primitive integer
 direction `d_0` perpendicular to `p-q`. (All points are integral, so such a
 direction is integral.) Then
@@ -181,15 +218,21 @@ d_0 dot p=d_0 dot q,
 and this common equality gives two equal absolute projected speeds. Moreover
 `d_0 dot c_k` is nonzero for every `k`, because a zero would make `c_k`
 parallel to `p-q`, putting the secant direction in `D`. Thus `d_0` would
-satisfy (6), a contradiction.
+satisfy (9), a contradiction.
 
-Therefore failure of (6) would force **every** secant direction of `P` to
+Therefore failure of (9) would force **every** secant direction of `P` to
 belong to `D`. The number of directions determined by `P` would be at most
-`|D|<=N/2`, contradicting Ungar's lower bound `N`. Hence (6) always holds.
+`|D|<=N/2`, contradicting Ungar's lower bound `N`. Hence (9) always holds.
 
-Reference for the exact external input: P. Ungar, *2N noncollinear points
-determine at least 2N directions*, Journal of Combinatorial Theory, Series A
-33 (1982), 343--347, DOI `10.1016/0097-3165(82)90045-0`.
+References for the external inputs:
+
+- T. Sungkawichai and T. Trakulthongchai, *Eleven, twelve, and thirteen lonely
+  runners*, arXiv:`2604.23906v1` (2026), a computer-assisted preprint proving
+  the needed case of twelve nonzero speeds. The theorem above is conditional
+  on that standing cited result until its ordinary external review matures.
+- P. Ungar, *2N noncollinear points determine at least 2N directions*, Journal
+  of Combinatorial Theory, Series A 33 (1982), 343--347,
+  DOI `10.1016/0097-3165(82)90045-0`.
 
 ## 5. Consequence for the THM-2052 atlas
 
@@ -202,34 +245,41 @@ primitive generator up to sign, so that atlas cell is already a single exact
 row. For a two-dimensional kernel, Section 4 supplies the repeat direction;
 choose a saturated basis. A primitive positive speed row has a primitive parameter
 direction: if `(a,b)=g(a',b')` with `g>1`, every speed is divisible by `g`.
-Equation (8) leaves only the finite disk
+The exact residual consists only of primitive parameters violating (11). By
+(12), it is contained in the finite disk
 
 ```text
-a^2+b^2 < (91L(U))^2.                                  (11)
+a^2+b^2 < (91L(U))^2.                                 (16)
 ```
 
-Every row in (11) can be decided exactly by the pair-sum ruler theorem.
+Every row in (16) can be decided exactly by the pair-sum ruler theorem.
 Therefore the entire THM-2052 atlas has an explicit finite parameter-space
 terminal **without harvesting a twelfth bounded relation**.
 
+THM-763 already gives a global but enormous finite speed ceiling
+`sum_i v_i<=91^12`; this theorem does not claim first decidability. Its new
+content is a plane-intrinsic uniform safe tail and the structured tangent-disk
+residual (13), obtained without enumerating every speed row below that ceiling.
+
 What remains is computational/structural rather than infinitary: construct or
 compress the finite atlas, choose controlled saturated bases, and discharge
-the finite disks (11). This theorem does not claim those disks have been
-enumerated and does not prove LRC(14).
+the tangent-disk residual (13). This theorem does not claim those lattice
+points have been enumerated and does not prove LRC(14).
 
 ## 6. Quantifier repair and assumption challenge
 
 HYP-4346 says that if infinitely many independent directions share finitely
 many scale-only templates, then the plane collapses. Applied naively, it only
 produces *some* escaping direction and has the wrong quantifier for a specified
-target row. Equations (3) and (8) are the repair: the repeat direction plus
-the settled lower-dimensional theorem raises the two-torus to `1/13`, and
+target row. Equations (4), (11), and (12) are the repair: the repeat direction
+plus the settled lower-dimensional theorem raises the two-torus to `1/13`, and
 then every sufficiently long **specified** target direction inherits the
 `1/14` bound with an explicit loss.
 
 This also challenges the earlier assumption that the only terminal above
 rank eleven is a twelfth bounded relation. Rank twelve is still a valid
-maximal-minor terminal, but the torus-geodesic disk is already a terminal at
-rank eleven. The next decisive problem is to make (11) small enough to check:
-use lattice-reduced saturated bases and exploit the bounded triple-code shape,
-rather than search for another local scalar invariant.
+maximal-minor terminal, but the torus-geodesic region is already a terminal at
+rank eleven. The next decisive problem is to exploit the anisotropic quadratic
+gate (11) and tangent disks (13), not enumerate the whole round envelope (16):
+use lattice-reduced saturated bases and the bounded triple-code shape, rather
+than search for another local scalar invariant.

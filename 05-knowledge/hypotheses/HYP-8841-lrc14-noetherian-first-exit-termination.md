@@ -122,11 +122,20 @@ put `L=max_i sqrt(u_i^2+z_i^2)`. The general primitive-subcircle rate and
 Ungar's planar direction theorem give
 
 ```text
-sqrt(a^2+b^2)>=91L  ==>  M(v(a,b))>=1/14.             (2d)
+max_i |a z_i-b u_i| <= (a^2+b^2)/91
+                         ==> M(v(a,b))>=1/14,          (2d)
+sqrt(a^2+b^2)>=91L  ==>  M(v(a,b))>=1/14.             (2e)
 ```
 
-Thus rank eleven itself has a finite parameter-disk terminal. Rank twelve is
-still useful, but is no longer the unique route to finiteness.
+Thus rank eleven itself has a finite anisotropic terminal, whose coarse
+complement lies in a parameter disk. Rank twelve is still useful, but is no
+longer the unique route to finiteness.
+
+More exactly, failure of (2d) lies in the union of the `26` open disks centered
+at `+-(91/2)(z_i,-u_i)` with radii `(91/2)sqrt(u_i^2+z_i^2)`. Their boundary
+circles all pass through the origin. The finite residual should therefore be
+enumerated as primitive lattice points in tangent disks intersected with the
+two-anchor positivity cone, not as every point in the coarse round disk.
 
 The companion audit supplies the essential hostile control for that statement:
 every one of its eight rows already has a coefficient-height-one circuit of
@@ -134,7 +143,7 @@ support three. The first seven, including AP, GW, `12->26`, `12->36`,
 `12->96`, `12->84`, and P10+K33, all share the irrelevant relation
 
 ```text
-1+2-3=0.                                                   (2e)
+1+2-3=0.                                                   (2f)
 ```
 
 The genuine Cover14 tax-gain row similarly has `1+11-12=0`. Raw circuit

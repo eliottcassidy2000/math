@@ -5,10 +5,10 @@ status: >
   OPEN finite completion program after a proved large-direction theorem.
   THM-2052 reduces every hypothetical counterexample to a finite atlas of
   rational planes. THM-2053 now proves that every two-dimensional atlas cell
-  has torus margin at least 1/13 and every primitive parameter direction of
-  norm at least 91L is LRC14-safe. The missing work is controlled basis/atlas
-  compression and exact discharge of the remaining finite disks, not an
-  infinitary pointed transport theorem.
+  has torus margin at least 1/13. Its exact safe gate is
+  max_i|a z_i-b u_i|<=(a^2+b^2)/91; the round corollary is ||(a,b)||>=91L.
+  The missing work is controlled basis/atlas compression and exact discharge
+  of the finite anisotropic residuals, not an infinitary transport theorem.
 source: codex-2026-07-21-DC2-LRC14-termination
 related:
   - THM-2050
@@ -48,16 +48,25 @@ v(a,b)_i=a u_i+b z_i.
 
 For every primitive `(a,b)`, the corresponding subcircle is
 `1/(2sqrt(a^2+b^2))`-dense in the parameter two-torus. The phase-height
-objective is `L`-Lipschitz. A planar-direction argument produces a
+objective is `L`-Lipschitz. Keeping the actual normal displacement gives the
+sharper error
+
+```text
+E(a,b)=max_i |a z_i-b u_i|/(2(a^2+b^2)).
+```
+
+A planar-direction argument produces a
 full-support projection with a repeated absolute speed, so settled LRC for at
 most twelve distinct speeds gives two-torus margin at least `1/13`. Therefore
 
 ```text
-sqrt(a^2+b^2)>=91L  ==>  M(v(a,b))>=1/14.              (1)
+max_i |a z_i-b u_i| <= (a^2+b^2)/91
+                         ==> M(v(a,b))>=1/14.           (1)
 ```
 
-This is pointed: it applies to the specified `(a,b)`, not merely to a different
-direction in the same plane.
+In particular, `sqrt(a^2+b^2)>=91L` implies (1). This is pointed: it applies
+to the specified `(a,b)`, not merely to a different direction in the same
+plane.
 
 ## The revised terminal
 
@@ -82,12 +91,25 @@ close large directions. Wall transport is a finite-disk accelerator.
 For each rank-eleven bounded triple code from THM-2052:
 
 1. compute a saturated kernel basis by Smith/Hermite normal form;
-2. lattice-reduce the basis to minimize `L` and hence the radius `91L`;
-3. enumerate primitive parameter pairs inside the disk;
+2. lattice-reduce the basis to minimize the determinant gate and its round
+   envelope `91L`;
+3. enumerate only primitive parameter pairs violating (1): equivalently,
+   lattice points in the `26` open disks centered at
+   `+-(91/2)(z_i,-u_i)` with radii `(91/2)||(u_i,z_i)||`; use the round disk
+   only as a coarse outer bound;
 4. reject zero, repeated, nonpositive, non-distinct, or imprimitive speed rows;
 5. run the exact pair-sum phase-height test;
 6. retain `P_w`, endpoint-owner, peel-tax, and relation-rank labels for any
    survivors, then quotient only by transformations preserving those fields.
+
+Each residual circle has the origin on its boundary. This tangent-disk picture
+is the preferred parameter carrier: intersect it with the star's positivity
+cone and primitive lattice before any phase-height work.
+
+This is structural compression, not the first proof of finiteness: THM-763
+already supplies the global ceiling `sum v_i<=91^12`. The potential gain is
+that the plane gate discards whole projective tails before raw speed
+enumeration and retains the geometry needed for resonance fans.
 
 The finite atlas is astronomically large if generated as all possible bounded
 triple rows. The theorem-facing next step is therefore an atlas-compression
@@ -158,6 +180,7 @@ finite in parameter space, not that the finite disks are empty of
 counterexamples. The next decisive target is:
 
 > Bound and classify reduced saturated bases of THM-2052's bounded
-> support-three rank-eleven codes strongly enough that every disk (1) is
-> either covered by the existing exact finite window or splits into finitely
-> many HYP-2896-style resonance fans with explicit phase-height certificates.
+> support-three rank-eleven codes strongly enough that every residual to (1)
+> is either covered by the existing exact finite window or splits into
+> finitely many HYP-2896-style resonance fans with explicit phase-height
+> certificates.

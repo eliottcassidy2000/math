@@ -1,9 +1,9 @@
 # From Ore boundary acyclicity to LRC14 Euler termination
 
 **Session:** codex-2026-07-21-DC2-LRC14-termination  
-**Status:** two proved no-go/structure theorems, one exact carrier audit, and a
-sharpened open target; neither DC(2), planar JC(2), nor LRC(14) is claimed
-solved.
+**Status:** three proved no-go/structure theorems, one exact carrier audit, and
+an explicit finite-atlas target; neither DC(2), planar JC(2), nor LRC(14) is
+claimed solved.
 
 ## Outcome first
 
@@ -133,9 +133,37 @@ covariances exactly, absence of a bounded support-`3..5` relation of height
 `2^21` forces positive safe volume. THM-2052 then uses the finite-height theorem
 and a pigeonhole code to show every hypothetical counterexample already has
 eleven independent bounded three-support relations, hence lies in a finite
-atlas of rational subspaces of dimension at most two. The unresolved Euler
-lemma only faces this atlas. One new independent row reaches rank twelve and a
-finite maximal-minor terminal.
+atlas of rational subspaces of dimension at most two. Its two-anchor refinement
+makes these finitely many one-projective-parameter star families.
+
+THM-2053 closes the infinitary part of that branch. If `u,z` is a saturated
+basis of a two-plane, `L=max_i||(u_i,z_i)||`, and `v(a,b)=a u+b z`, then
+
+```text
+M_T-max_i|a z_i-b u_i|/(2(a^2+b^2)) <= M(v(a,b)) <= M_T.
+```
+
+The centrally symmetric set of signed columns has a nonradial secant by
+Ungar's planar direction theorem. Perpendicular projection therefore has full
+support and a repeated absolute speed. Settled LRC through thirteen total
+runners gives `M_T>=1/13`, so the exact safe gate is
+`max_i|a z_i-b u_i|<=(a^2+b^2)/91`. Its round corollary removes every
+primitive `||(a,b)||>=91L`. Each rank-eleven star consequently leaves only a
+finite anisotropic residual; a twelfth relation is a shortcut, not the unique
+finiteness mechanism.
+
+Completing the square makes that residual concrete. Gate failure is the union
+over `i` and `sigma=+-1` of the open disks
+
+```text
+||(a,b)-(91 sigma/2)(z_i,-u_i)||^2
+    < (91^2/4)(u_i^2+z_i^2).
+```
+
+All `26` boundary circles pass through the origin. The faithful next vertex is
+therefore a primitive lattice point in a tangent disk intersected with the
+star's positivity cone, not a raw relation matrix or even the whole round
+parameter ball.
 
 The enlarged audit immediately challenges an overoptimistic reading of that
 reduction. Every control already has a height-one support-three circuit; AP and
@@ -146,11 +174,20 @@ peeled speed or an active endpoint owner, or change the signed cyclic wall
 word. The next target is an active-owner circuit lemma, not a census of more
 relations.
 
-The resulting decisive target is not just active incidence but
-**rank-or-Euler**: the HYP-2108 endpoint functional satisfies `P_w>=0` for some
-peel, or the active endpoint-owner packet produces a relation outside the
-rank-eleven code. HYP-8845 adds a clean equivariant dividend on covering rows:
-one half-circle survivor automatically has a mirror partner, so `chi>=2`.
+The resulting decisive target is now **finite fan-or-Euler discharge**. Compute
+a reduced saturated basis for each two-anchor template, enumerate only the
+primitive parameters failing the quadratic gate inside `||(a,b)||<91L`, and
+quotient only by data preserving pair-sum
+margins and endpoint ownership. HYP-2896 supplies the worked model: its
+one-tail family splits at the divisibility walls `12|w` and `14|w` into cells
+with a `q=12` witness, a `q=14` witness, or one affine binding phase. HYP-8845
+adds a clean equivariant dividend on covering rows: one half-circle survivor
+automatically has a mirror partner, so `chi>=2`.
+
+This also repairs a tempting misuse of HYP-4346. An unpointed rigidity theorem
+that finds *some* safe direction in a plane says nothing about the specified
+counterexample direction. The uniform geodesic estimate has the right
+quantifier: it handles every specified direction outside the finite disk.
 
 ## Tournament methodology
 
@@ -168,6 +205,9 @@ destroys the circle geometry, which remains in the signed phase-height word.
 
 - THM-2049: Ore boundary correction acyclicity.
 - THM-2050: period-14 local-germ blindness.
+- THM-2053: every rank-two parameter plane has an explicit finite geodesic
+  terminal.
 - HYP-8841: Noetherian first-exit/Euler termination target.
+- HYP-8846: pointed finite-plane completion program.
 - `dc2_ore_descent_codex_20260721.py` and matching output.
 - `lrc14_termination_sidecar_codex_20260721.py` and matching output.

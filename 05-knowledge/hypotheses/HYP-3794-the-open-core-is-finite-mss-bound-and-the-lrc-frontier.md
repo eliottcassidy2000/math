@@ -1,7 +1,7 @@
 ---
 id: HYP-3794
 title: THE OPEN CORE IS FINITE -- the Malikiosis-Santos-Schymura velocity bound (unconditional, 2024) caps a LRC14 counterexample's speeds at C(14,2)^12 = 91^12 ~ 3.2e23, so the repo's 15-session premise "THM-523 does not bound speeds => UNBOUNDED far configs are the difficulty" is OBSOLETE: there are NO unbounded speeds in a counterexample, and the huge-speed analytic work (equidistribution HYP-3786/3788, signed correction HYP-3787, >=7-huge cross-harmonic) is EFFECTIVIZING a finite ceiling, not handling infinity. The modern frontier (LRC proven for 8,9,10 runners, 2025-26) closes cases by ELEMENTARY prime-filtering + this product bound (Rosenfeld arXiv:2509.14111), NO analysis -- and Rosenfeld's prime-filtering (Lemma 6/7) IS the repo's band-prime reduction (HYP-3750, primes {17,19,23}) and covering reduction (THM-523). The repo already holds the state-of-the-art tool; the frontier template says lean into prime-filtering.
-status: INSPIRATION / REFRAME (the MSS bound and the frontier are external facts, verified via arXiv:2411.06903, 2509.14111; the reframing of the repo's open core as FINITE is a sound consequence). NOT a proof and NOT a closure: 91^12 is finite but unsearchable, so the analytic/lazy-cut work is still needed to reduce the ceiling. FLAGS a possible soundness issue: THM-525 reportedly relies on LRC(12 runners) as proven, but the web frontier (July 2026) is 10 runners -- the Sungkawichai-Trakulthongchai LRC(12)/LRC(13) citation needs verification by theorem owners.
+status: INSPIRATION / REFRAME (the MSS bound and the frontier are external facts, verified via arXiv:2411.06903, 2509.14111; the reframing of the repo's open core as FINITE is a sound consequence). NOT a proof and NOT a closure: 91^12 is finite but unsearchable, so the analytic/lazy-cut work is still needed to reduce the ceiling. 2026-07-21 CORRECTION: the former citation warning is resolved at the primary-source level by Sungkawichai--Trakulthongchai arXiv:2604.23906v1, which explicitly claims computer-assisted proofs for k=10,11,12 nonzero speeds. It remains a preprint, not a peer-reviewed input.
 source: mac-mini-2026-06-30-S78
 related:
   - THM-523    # covering reduction = the MSS/Rosenfeld reduction to the gcd=1 hard core
@@ -21,6 +21,15 @@ references:
 ---
 
 # HYP-3794 -- the open core is FINITE (MSS bound) and the frontier is prime-filtering
+
+## 2026-07-21 citation correction
+
+The status-line warning inherited from June is obsolete. Primary arXiv record
+`2604.23906v1`, submitted 2026-04-26, explicitly states a computer-assisted
+proof for `k in {10,11,12}` nonzero speeds. Thus the repository's named
+`LRCUpTo13` node has a matching primary preprint source. This resolves the
+identity/scope question only: the source remains a v1 preprint, and it does not
+prove the open `k=13` case called LRC(14) here.
 
 The owner asked to work the remaining open core and any concept that could inspire it. The decisive
 inspiration was external and the repo was unaware of it (`grep`: zero mentions of Malikiosis / Santos /

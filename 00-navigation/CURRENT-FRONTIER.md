@@ -133,7 +133,16 @@ structural supplier/seed and a lossless exit.
   star templates `a_i v_p+b_i v_q+c_i v_i=0` with `c_i!=0`. Modulo common
   dilation each template has only one projective parameter. Pair-relation
   clusters plus genuine cross-cluster triples give the same structural split.
-  The live problem is now classification/exit on these one-parameter stars.
+  THM-2053 then proves the exact directional safe gate
+  `max_i|a z_i-b u_i|<=(a^2+b^2)/91`; the round corollary removes every
+  primitive parameter outside `||(a,b)||<91L`. A primitive subcircle is close
+  to the parameter torus, while Ungar's planar direction theorem supplies a
+  repeated-speed projection and the settled lower-dimensional theorem raises
+  the torus margin to `1/13`. Thus every star is finite in primitive parameter
+  space. Gate failure is exactly a union of `26` explicit open disks in the
+  integer parameter plane, each boundary through the origin. The live problem
+  is atlas compression and exact lattice-point discharge of these tangent-disk
+  residuals, not an infinitary one-parameter tail.
 - **Scope separation:**
   [THM-1149](../01-canon/theorems/THM-1149-compact-essential-crown-and-farey-blocker.md)
   proves that tight deletion and an all-loose essential crown are different
@@ -194,15 +203,21 @@ structural supplier/seed and a lossless exit.
    one-projective-parameter star atlas. The exact HYP-8841 bank also shows why
    incidence is load-bearing: all eight controls, tight and strict alike,
    already have a height-one three-term circuit (the first seven share
-   `1+2=3`). The next target is an **active-owner circuit** lemma on those star
-   families, tying a bounded relation to the peeled speed or a surviving Euler
-   endpoint rather than merely detecting a circuit. HYP-2108 supplies the
+   `1+2=3`).
+   [THM-2053](../01-canon/theorems/THM-2053-rank-two-parameter-plane-geodesic-terminal.md)
+   now removes every parameter satisfying its exact quadratic determinant
+   gate; all failures lie in the finite disk `||(a,b)||<91L`. The next target is therefore a
+   **finite resonance-fan/Euler classification** on those disks, not an
+   infinitary active-owner transport theorem. HYP-2108 supplies the
    exact gate: for core-safe components with midpoint `m_i` and length `l_i`,
    prove for some peel `w` that
    `P_w=max_i(||w m_i||+(w/2)l_i-1/14)>=0`. Equality already preserves a weak
-   endpoint; strict positivity opens an interval. The sharpened target is
-   **Euler survival or rank gain**: prove `P_w>=0`, or manufacture a twelfth
-   independent relation, which reaches the finite maximal-minor terminal.
+   endpoint; strict positivity opens an interval. HYP-2896 is the exact
+   one-parameter model: divisibility walls split its tail into `q=12`, `q=14`,
+   and one affine binding-phase cell. The sharpened target is to prove an
+   analogous finite fan on each reduced two-anchor disk; a twelfth relation is
+   still a useful maximal-minor shortcut, but no longer the only finiteness
+   mechanism.
    HYP-8845 halves the covering branch by mirror symmetry: one survivor on
    `[0,1/2]` automatically supplies its partner and `chi>=2`.
 
