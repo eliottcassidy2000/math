@@ -12,8 +12,10 @@ status: >
   independently of longitudinal coefficients; THM-2055 then cuts the bad
   fibers into hull-owner tangent sectors. THM-2058 reduces each such
   intersection to one exact coprime interval in the longitudinal coordinate.
-  The missing work is uniform atlas compression and discharge of the surviving
-  rows, not an infinitary pointed transport theorem.
+  THM-2062 now equips that interval with an exact hereditary-primitivity CRT
+  wheel having at most two bad projective directions per prime. The missing
+  work is uniform template compression and phase-height discharge of the
+  surviving residue classes, not an infinitary pointed transport theorem.
 source: codex-2026-07-21-DC2-LRC14-termination
 related:
   - THM-2050
@@ -25,10 +27,14 @@ related:
   - THM-2057
   - THM-2058
   - THM-2059
+  - THM-2060
+  - THM-2061
+  - THM-2062
   - HYP-2108
   - HYP-1842
   - HYP-1977
   - HYP-2647
+  - HYP-2764
   - HYP-2896
   - HYP-2986
   - HYP-3267
@@ -135,6 +141,15 @@ the coprime integers in that interval, minus explicit speed-collision points.
 Non-hull representatives of a repeated normalized-column value must remain in
 the deck sidecar even though THM-2055 may delete them as determinant owners.
 
+THM-2062 inserts hereditary primitivity before longitudinal enumeration. For
+each rational-rank-two deletion of a saturated coefficient template, its
+specialized gcd divides one fixed determinantal index. At every prime the bad
+parameters occupy at most two projective directions, so a fixed-`N` interval
+carries an exact squarefree CRT wheel; a zero local factor deletes the whole
+fiber. A rational-rank-one deletion instead forces one primitive linear form
+to equal `+-1` and leaves a one-dimensional coprime wheel. Thus hereditary
+primitivity is no longer an a-posteriori row test inside the interval.
+
 ## The revised terminal
 
 The rank-eleven program now has two finite terminals rather than one:
@@ -169,9 +184,11 @@ For each rank-eleven bounded triple code from THM-2052:
    remaining fiber with its active-owner tangent disk;
 5. use THM-2058 to enumerate coprime longitudinal coordinates in the resulting
    interval, then delete the explicit nonpositive and collision walls;
-6. run the exact pair-sum phase-height test, beginning with the exposed ruler
+6. apply THM-2062's deletion-index CRT wheel (or rank-one affine terminal) and
+   discard every hereditary-imprimitive residue class;
+7. run the exact pair-sum phase-height test, beginning with the exposed ruler
    `N|(v_i+v_j)` and its template residues;
-7. retain `P_w`, endpoint-owner, peel-tax, and relation-rank labels for any
+8. retain `P_w`, endpoint-owner, peel-tax, and relation-rank labels for any
    survivors, then quotient only by transformations preserving those fields.
 
 Each tangent-disk boundary contains the origin, but the actual carrier is the
@@ -263,6 +280,25 @@ fiber representatives. A sign-only matroid is insufficient.
   zero-mode/finite-Fourier fluctuation split. THM-2057 is its rigid `N<=14`
   nonemptiness specialization; THM-2058 supplies primitive-order and owner-
   interval structure inside the resulting packet.
+- THM-2060 identifies the clock-independent ratio
+  `h/gcd(N,h)=a/gcd(a,w)` and gives the sharp per-bin lower bound
+  `beta_j>=q-ceil(q/7)`. Its one-tail existence consequence was already the
+  sheet theorem THM-760/761/765; the useful new object is a full-support CRT
+  histogram and a finite exceptional-residue atlas. Multi-tail capacity leaves
+  only the primitive seam `2C union {x,y}` with two odd tails.
+- THM-2061 folds that seam exactly: strict failure requires the closed weak-
+  safe set of the eleven-core to lie in the open diamond
+  `||((x+y)/2)t||+||((x-y)/2)t||>6/7`. It forces a core multiple of every
+  `2<=N<=14`, bounds both tails strictly below `12 max(C)`, imposes a gcd-
+  sharpened centre determinant, and closes every normalized core in
+  `{1,...,19}`. The sharp target measure `4/63` is only a sieve; component
+  ownership remains decisive.
+- THM-2062 transfers hereditary primitivity to every saturated two-anchor
+  template: deletion indices yield at most two forbidden projective directions
+  per prime and an exact CRT product on each THM-2058 interval. This is the
+  first direct template-only compression of the coprime owner intervals; its
+  positive global density also proves that it cannot replace phase-height
+  discharge on an entire rank-two cone.
 - HYP-8877/8878's GMC confinement, HYP-8885's cusp frame, and HYP-8890's
   saddle route are schedulers, not proof transfers. A unique antipodal
   maximizer can still have height `2/29<1/14`, and exact Beatty counting already
@@ -323,6 +359,6 @@ counterexamples. The next decisive target is:
 > Bound and classify reduced saturated bases and transverse templates of
 > THM-2052's bounded support-three rank-eleven codes strongly enough that every
 > THM-2058 coprime interval inside an exact bad deck and THM-2055 tangent owner
-> sector is either empty, covered by the existing finite window, or splits into
-> finitely many HYP-2896-style resonance fans with explicit phase-height
-> certificates.
+> sector, after THM-2062's at-most-two-direction CRT wheel, is either empty,
+> covered by THM-2061's dyadic finite window, or splits into finitely many
+> HYP-2896-style resonance fans with explicit phase-height certificates.

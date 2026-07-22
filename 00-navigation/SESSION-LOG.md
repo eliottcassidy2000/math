@@ -14,6 +14,25 @@
 ## codex-2026-07-21 -- HYP-8879 strict-measure boundary correction
 
 **HONEST:** JC(2) OPEN (JC(n>=3) FALSE, Keller THM-1300). Worked it via 3 reduction PROGRAMS (none complete): (A) de Bondt+Zhao => VC(4) (JC(2)<=>a dim-4 Laplacian moment nullcone, doubling n->2n); (B) klein-S329 Euler-Zariski cover-degree-3 bootstrap (cuspidal Jelonek curve, ramification-parabola escape, NO CF); (C) mac-mini-S137 golden-corner/Lame (subtractive Euclid on Newton slopes).
+- **MISTAKE-227:** S102's integral with `g=1[||x||>1/14]` detects only
+  `M(S)>1/14`. It vanishes on the tight AP `{1,...,13}`, whose weak safe set is
+  the six-point packet `U_14/14`, so zero measure is not an LRC counterexample.
+- **Surviving bridge:** after Fejer convergence control, the integer-kernel
+  expansion is a strict-bulk observable. THM-2058's exact denominator packets
+  handle equality; finite Sidon/AP ratios prove no AP-core reduction.
+- **THM-2060 proved with prior-art boundary:** the clock-independent order is
+  `q=a/gcd(a,w)`, and every tail histogram bin has the sharp floor
+  `q-ceil(q/7)`. The qualitative one-tail dodge was already THM-760/761/765;
+  the new gain is exact CRT support, multiplicity, and clock composition.
+- **THM-2061 proved reduction:** the only primitive imprimitive-eleven-core
+  residue is the dyadic two-odd-tail seam. Strict failure is an open folded-
+  diamond cover of the closed core-safe set; it forces divisor completeness
+  through `14`, tails below `12 max(C)`, measure at most `4/63`, and has no
+  survivor for normalized cores in `{1,...,19}`.
+- **THM-2062 proved atlas sieve:** deletion determinantal indices turn
+  hereditary primitivity on every saturated two-anchor interval into an exact
+  squarefree CRT wheel with at most two bad projective directions per prime;
+  rank-one deletions become affine `+-1` terminals plus a 1D coprime wheel.
 
 **VERIFIED (jc2_via_vanishing_conjecture_and_the_cf_termination_boxeph_S225.py):** 2D symmetric case EASY -- nilpotent Hessian <=> P prop (x+iy)^d (harmonic), Delta^m(P^m)=0, invertible. Lame worst-case = Fibonacci (longest Euclid chain <200 = (144,89)). [Restricted JC(2) proved elsewhere: THM-1345 equivariant, THM-1370 elliptic, THM-1365 poly-Galois, geom-degree<=2, THM-2063.]
 

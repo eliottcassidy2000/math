@@ -1,0 +1,14 @@
+THM-2060 CRT TAIL-COSET SATURATION AUDIT
+valuation/lcm identity rows checked: 1280000
+tail histogram bins checked: 2736144
+sharp q values observed through h<=210: 154
+packet/direct-grid rows checked: 83520
+proper noncoprime positive rows: 8085
+two-tail order pairs checked: 249001
+two-tail equality pairs: [(2, 2)]
+small full-unit exceptional sets checked: 13
+boundary AP exceptional residues mod 14: [0]
+guardrails: q=1 converse rejected; finite bulk clock iff rejected
+carrier: common lift-sheet cover / CRT reduction histograms
+tournament: rejected except binary ownership gauge at q1=q2=2
+PASS

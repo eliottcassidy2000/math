@@ -5,9 +5,10 @@ status: >
   OPEN completion program downstream of THM-2055/2056, now with one full model
   closed by THM-2057. Kelvin inversion replaces tangent disks by a fixed polar
   polygon, and the Farey defect inequality certifies whole unimodular cones.
-  Residual rays should carry scaled safe-clock orbits, affine binding phases,
-  or owner-labelled Euler certificates. Uniform sidecar propagation over the
-  full THM-2052 star atlas is not proved here.
+  THM-2058/2059 provide exact phase packets and CRT joins; THM-2062 adds a
+  deletion-index hereditary CRT wheel to every longitudinal interval. Residual
+  rays still need scaled clocks, affine binding phases, or owner-labelled Euler
+  certificates. Uniform discharge over the full THM-2052 atlas is not proved.
 source: codex-2026-07-21-LRC-normal-fan-sail
 related:
   - THM-2052
@@ -18,6 +19,9 @@ related:
   - THM-2057
   - THM-2058
   - THM-2059
+  - THM-2060
+  - THM-2061
+  - THM-2062
   - HYP-2108
   - HYP-2647
   - HYP-2896
@@ -48,13 +52,23 @@ THM-2055/2056 change the finite object. For each THM-2052 two-anchor star:
    open-tope/boundary-cocircuit state until a strict phase or owner-labelled
    Euler endpoint accepts the state.
 
-THM-2058 claims a refinement of step 8 inside a fixed bad transverse deck:
+THM-2058 proves a refinement of step 8 inside a fixed bad transverse deck:
 split the safe count by primitive phase order and reduce each hull-owner
-longitudinal fiber to an explicit coprime interval. Its checked theorem file is
-still a reserved stub. THM-2059 now supplies the exact join operation: reduce
-the core packet and tail packet modulo their common gcd and take the histogram
-dot product. This CRT carrier should be joined to the missing-clock lcm tax
-before any raw parameter enumeration.
+longitudinal fiber to an explicit coprime interval. THM-2059 supplies the exact
+join operation: reduce the core and tail packets modulo their common gcd and
+take the histogram dot product. THM-2060 makes every tail bin uniformly
+positive unless `a|w`, with the sharp floor `q-ceil(q/7)`, and turns selected
+clocks into a finite exceptional-residue atlas. These carriers should be joined
+to the missing-clock lcm tax before raw parameter enumeration.
+
+THM-2062 supplies the missing deletion sidecar on the resulting interval. A
+rank-two deletion contributes one determinantal index; at each prime all
+deletions exclude at most two projective directions. For fixed `N`, the
+allowed `M` form an exact squarefree CRT wheel, while a rank-one deletion is an
+affine `+-1` terminal with a one-dimensional coprime wheel. This is an exact
+interval split event, not a phase certificate. THM-2061 separately resolves
+the only primitive imprimitive-eleven-core lane down to a dyadic folded seam,
+then closes every normalized quotient core in `{1,...,19}`.
 
 THM-2059 also gives a bulk filter before exact support comparison. Its positive
 zero Fourier mode wins whenever the product of total packet masses exceeds
@@ -75,10 +89,11 @@ endpoint-owner exchange.
 ```
 
 All geometric event equations are rational linear or quadratic in the two
-parameters. Clock killing adds exact divisibility states. Hence every fixed
-star has a finite exact cell structure. The missing uniform theorem is to
-show that every unresolved ray has either a complete safe-unit orbit or a
-bounded-depth chain of killed clocks ending in an affine binding/Euler family.
+parameters. Clock killing and THM-2062 add exact periodic states. Hence every
+fixed star has a finite exact cell structure. The missing uniform theorem is
+to show that every CRT-surviving interval has either a complete safe-unit orbit,
+a THM-2061 folded-seam exit, or a bounded-depth killed-clock chain ending in an
+affine binding/Euler family.
 
 The modular-form proposal HYP-8880 currently ranks below these carriers.
 MISTAKE-226 shows that divisor labels alone do not map a finite phase clock to

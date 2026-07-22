@@ -143,12 +143,12 @@ structural supplier/seed and a lossless exit.
   certificate, and `{a,2a,...,12a,w}` by a `13a` / `14a` / `182a` certificate.
   More generally, a missing clock `N<=14` forces `Na|w` over `aC`. Despite
   `640690` primitive determinant failures, its arithmetic carrier has three
-  leaves. THM-2059 removes the small-clock restriction: arbitrary-`N` core and
-  tail packets meet by an exact CRT histogram dot product. Its zero-mode
-  Cauchy--Parseval certifies `14195/14978` positive rows; `783` require exact
-  modes, while zeros are explicit disjoint-support obstructions. THM-2058 gives
-  primitive-order/coprime-owner intervals; HYP-8871 targets the CRT obstruction
-  as a signed Euler/deletion sidecar over the remaining atlas.
+  leaves. THM-2059 makes arbitrary-`N` core/tail composition an exact CRT
+  histogram dot product; its zero-mode split isolates disjoint-support zeros.
+  THM-2060 gives every tail bin the sharp floor `q-ceil(q/7)` unless `a|w`,
+  leaving only a dyadic primitive two-tail seam. THM-2061 folds that seam,
+  pins its core through `2..14`, bounds its tails, and closes `max(C)<=19`.
+  THM-2062 puts an exact hereditary CRT wheel on THM-2058's coprime intervals.
 - **PROVED relative whole-product decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says bounded scalar relations must lift to vector-character relations. Two
   telescopes bound the whole product; rowwise `H=2^19` clears every recorded

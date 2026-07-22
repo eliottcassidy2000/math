@@ -1,0 +1,15 @@
+THM-2061 STRICT DYADIC TWO-TAIL SEAM AUDIT
+fold/parity/diamond rational rows checked: 120714
+all-unit eligible odd residues mod 2N:
+ even N=2,4,6,8,10,12,14: none
+ odd N=3,5,7,9,11,13: [N]
+independent exact measure rows checked: 5217
+reduced measure-cap rows checked: 202861
+sharp reduced maximizer: [(5, 4)]
+finite core slice N=19: all=75582 primitive=75582 divisor_pinned=1365
+finite universal odd tails=0 complementary pairs=0
+finite max intrinsic odd cap / hardest core: 62 (62, Fraction(1, 220), (1, 2, 3, 4, 8, 9, 10, 11, 12, 13, 14), 24)
+endpoint polarity: closed weak core / strict open tail teeth
+carrier: ordered core components + parity words + rational tooth slacks
+tournament: binary ownership only; widths and determinant remain sidecars
+PASS

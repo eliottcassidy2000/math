@@ -96,9 +96,9 @@ mistake.
      packets form a CRT fiber product, and their reduction-histogram dot
      product counts the actual safe grid phases for every modulus.
 
-13e. **Safe-set measure detects strict exits, not the tight boundary.** MISTAKE-227:
-     the strict-indicator integral is positive iff `M(v)>1/14`; the tight AP has six weak phases but zero measure. Use Fejer sums for bulk and THM-2058
-     packets at equality; finite Sidon/AP ratios prove no non-AP reduction.
+13e. **Keep strict/boundary and clock completeness visible.** MISTAKE-227: the
+     strict integral misses tight weak phases; use Fejer bulk and THM-2058 packets. In
+     THM-2060 `a|w` does not mean packet zero, finite clocks are not a bulk iff; THM-2061 requires a closed weak core inside strictly open tail teeth; THM-2062 can kill a fixed `N` fiber at `p=2` but has positive global direction density.
 
 ## NC2 / GMC
 

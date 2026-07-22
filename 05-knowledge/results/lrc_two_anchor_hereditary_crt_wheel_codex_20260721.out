@@ -1,0 +1,14 @@
+THM-2062 TWO-ANCHOR HEREDITARY CRT-WHEEL AUDIT
+saturated four-row templates checked: 5000
+all-rank-two templates: 4917
+rank-one deletion templates/incidences: 83
+determinantal parameter checks: 1732779
+local prime/template checks: 20000
+global projective-density checks: 20000
+two-direction prime patterns: 1698
+fixed-N CRT fibres / residues checked: 39336 273672
+rank-one parameter checks: 14608
+guardrails: affine line alone insufficient; p=2 affine fibre can die
+carrier: deletion indices + prime-labelled projective annihilators
+tournament fingerprint: at most two vertices, always transitive
+PASS
