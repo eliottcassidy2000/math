@@ -1,23 +1,23 @@
-deep well {1..12,182}: covering=True  M=14/183 (~0.07650) at t*=(14, 183) ; =14/183? True ; >1/14? True
+deep well {1..12,182}: covering=True  scan-LB=14/183 (~0.07650) at t=(14, 183) ; recovers canonical 14/183? True ; >1/14? True
   margin 14/183 - 1/14 = 13/2562 (~0.00507) -- a disproof must dip below 1/14 by more than this
 
-DISPROOF-CANDIDATE SEARCH (any M < 1/14 = a counterexample):
-  AP12 + far=182                         M=14/183     (~0.07650)
-  AP12 + far=364                         M=28/365     (~0.07671)
-  AP12 + far=5460                        M=92/1197    (~0.07686)
+CANDIDATE SAFETY SCAN (LB > 1/14 certifies safe; LB < 1/14 proves nothing):
+  AP12 + far=182                         LB(q<=1200)=14/183     (~0.07650)  SAFE WITNESS
+  AP12 + far=364                         LB(q<=1200)=28/365     (~0.07671)  SAFE WITNESS
+  AP12 + far=5460                        LB(q<=1200)=92/1197    (~0.07686)  SAFE WITNESS
   skip12: {1..11,13,182}                 NOT COVERING (skip)
-  skip7:  {1..6,8..13,182}               M=13/95      (~0.13684)
-  2*AP: {2,4..24,182}                    M=7/92       (~0.07609)  (below deep-well!)
-  Fibonacci12 + 720720                   M=5/29       (~0.17241)
-  Fib-ish covering {1,2,3,4,5,8,9,10,11,12,13,7,182} M=2/23       (~0.08696)
-  random#1 [7, 8, 15, 21, '..', 3]       M=3/19       (~0.15789)
-  random#2 [1, 16, 29, 32, '..', 1716]   M=18/103     (~0.17476)
-  random#3 [1, 7, 8, 14, '..', 360]      M=24/127     (~0.18898)
-  random#4 [5, 6, 17, 22, '..', 1890]    M=69/467     (~0.14775)
-  random#5 [2, 10, 19, 20, '..', 1584]   M=198/815    (~0.24294)
-  random#6 [6, 8, 24, 26, '..', 2]       M=4/31       (~0.12903)
+  skip7:  {1..6,8..13,182}               LB(q<=1200)=13/95      (~0.13684)  SAFE WITNESS
+  2*AP: {2,4..24,182}                    LB(q<=1200)=7/92       (~0.07609)  SAFE WITNESS
+  Fibonacci12 + 720720                   LB(q<=1200)=5/29       (~0.17241)  SAFE WITNESS
+  Fib-ish covering {1,2,3,4,5,8,9,10,11,12,13,7,182} LB(q<=1200)=2/23       (~0.08696)  SAFE WITNESS
+  random#1 [7, 8, 15, 21, '..', 3]       LB(q<=1200)=3/19       (~0.15789)  SAFE WITNESS
+  random#2 [1, 16, 29, 32, '..', 1716]   LB(q<=1200)=18/103     (~0.17476)  SAFE WITNESS
+  random#3 [1, 7, 8, 14, '..', 360]      LB(q<=1200)=24/127     (~0.18898)  SAFE WITNESS
+  random#4 [5, 6, 17, 22, '..', 1890]    LB(q<=1200)=69/467     (~0.14775)  SAFE WITNESS
+  random#5 [2, 10, 19, 20, '..', 1584]   LB(q<=1200)=198/815    (~0.24294)  SAFE WITNESS
+  random#6 [6, 8, 24, 26, '..', 2]       LB(q<=1200)=4/31       (~0.12903)  SAFE WITNESS
 
-  tightest (smallest M) candidates: [(0.07609, '2*AP: {2,4..24,182}'), (0.0765, 'AP12 + far=182'), (0.07671, 'AP12 + far=364'), (0.07686, 'AP12 + far=5460')]
-  => deep-well AP is the covering-min; no covering set beat 1/14 (or 14/183) in this search.
-     A disproof must be a NON-AP covering set with lower higher-order autocorrelation than the AP
-     (THM-730: AP maximizes additive triples; the AP is anti-golden, NOT Fibonacci = the foil).
+  smallest sampled lower bounds: [(0.07609, '2*AP: {2,4..24,182}'), (0.0765, 'AP12 + far=182'), (0.07671, 'AP12 + far=364'), (0.07686, 'AP12 + far=5460')]
+  => every displayed candidate has an explicit sampled witness above 1/14.
+     This finite family is excluded; no global ranking or anti-golden necessity follows.
+     THM-730 proves only that a non-AP 12-core loses additive triples.

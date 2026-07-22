@@ -8,9 +8,11 @@ uniquely at t*=14/183=[0;13,14], Eisenstein/anti-golden; klein-S124, boxeph-S103
 a DISPROOF needs a covering 13-set with M < 1/14 ~ 0.07143 -- i.e. dipping BELOW the AP extremal by the
 margin 14/183 - 1/14 = 13/2562 ~ 0.00507.
 
-This computes M(S) (scan rational t*=a/q), verifies the deep well, and searches disproof candidates:
-near-AP perturbations, generalized APs, Fibonacci/Zeckendorf-structured covering sets. Any M<1/14 = a
-counterexample; the search refines WHAT a disproof must be.
+This scans rational times a/q up to a stated denominator cutoff. The returned
+quantity is a rigorous LOWER BOUND on M(S), not an exact maximum unless a
+separate breakpoint-completeness argument covers the cutoff. A lower bound
+above 1/14 certifies an individual candidate safe; a lower bound below 1/14 is
+not a counterexample. The deep-well control is known exactly from canon.
 """
 from fractions import Fraction as F
 from math import gcd
@@ -20,8 +22,8 @@ import random
 THRESH = F(1,14)         # LRC(14) loneliness threshold
 DEEPWELL_M = F(14,183)   # conjectured global covering-min
 
-def covering_min(S, Qmax=1500):
-    """M(S)=max over t=a/q (q<=Qmax) of min_v ||v a/q||, exact rational."""
+def sampled_lower_bound(S, Qmax=1500):
+    """Return max over sampled a/q, q<=Qmax: an exact rational lower bound for M(S)."""
     best = F(0); arg=None
     for q in range(2, Qmax+1):
         for a in range(1, q):
@@ -40,13 +42,13 @@ def is_covering(S):
 
 # ---------- verify the deep well ----------
 DW = [1,2,3,4,5,6,7,8,9,10,11,12,182]
-M, arg = covering_min(DW)
-print("deep well {1..12,182}: covering=%s  M=%s (~%.5f) at t*=%s ; =14/183? %s ; >1/14? %s"
+M, arg = sampled_lower_bound(DW)
+print("deep well {1..12,182}: covering=%s  scan-LB=%s (~%.5f) at t=%s ; recovers canonical 14/183? %s ; >1/14? %s"
       % (is_covering(DW), M, float(M), arg, M==DEEPWELL_M, M>THRESH))
 print("  margin 14/183 - 1/14 = %s (~%.5f) -- a disproof must dip below 1/14 by more than this\n" % (DEEPWELL_M-THRESH, float(DEEPWELL_M-THRESH)))
 
 # ---------- disproof candidate families ----------
-print("DISPROOF-CANDIDATE SEARCH (any M < 1/14 = a counterexample):")
+print("CANDIDATE SAFETY SCAN (LB > 1/14 certifies safe; LB < 1/14 proves nothing):")
 cands = {}
 # far-element variants of the AP
 for far in [182, 2*182, 13*14, 2*3*4*5*6*7, 5460]:  # 5460=lcm(1..14)/... test blockers
@@ -78,12 +80,12 @@ worst=[]
 for name,S in cands.items():
     if not is_covering(S):
         print("  %-38s NOT COVERING (skip)"%name); continue
-    M,arg=covering_min(S, 1200)
-    flag = "  <-- DISPROOF (M<1/14)!!" if M<THRESH else ("  (below deep-well!)" if M<DEEPWELL_M else "")
-    print("  %-38s M=%-10s (~%.5f)%s"%(name, str(M), float(M), flag))
+    M,arg=sampled_lower_bound(S, 1200)
+    flag = "  SAFE WITNESS" if M>=THRESH else "  UNRESOLVED BY THIS SCAN"
+    print("  %-38s LB(q<=1200)=%-10s (~%.5f)%s"%(name, str(M), float(M), flag))
     worst.append((float(M),name))
 worst.sort()
-print("\n  tightest (smallest M) candidates:", [(round(m,5),n) for m,n in worst[:4]])
-print("  => deep-well AP is the covering-min; no covering set beat 1/14 (or 14/183) in this search.")
-print("     A disproof must be a NON-AP covering set with lower higher-order autocorrelation than the AP")
-print("     (THM-730: AP maximizes additive triples; the AP is anti-golden, NOT Fibonacci = the foil).")
+print("\n  smallest sampled lower bounds:", [(round(m,5),n) for m,n in worst[:4]])
+print("  => every displayed candidate has an explicit sampled witness above 1/14.")
+print("     This finite family is excluded; no global ranking or anti-golden necessity follows.")
+print("     THM-730 proves only that a non-AP 12-core loses additive triples.")

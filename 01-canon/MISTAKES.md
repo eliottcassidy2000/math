@@ -7,6 +7,39 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-221 (2026-07-21, codex audit of HYP-8815) -- a finite LRC witness scan and an AP/Fibonacci contrast were promoted to a necessary autocorrelation characterization
+
+- **What was claimed:** HYP-8815 called a scan over rationals `a/q` with
+  `q<=Qmax` an exact covering-min search, inferred that every hypothetical
+  LRC(14) counterexample must be near-AP and anti-golden with a CF-blocking far
+  element, and stated an iff with beating the AP at higher-order
+  autocorrelation by making THM-731's `disc_v` smaller.
+- **Why it is wrong:** the finite scan returns a rigorous **lower bound** on
+  `M(S)` unless a separate breakpoint-completeness bound covers all possible
+  maximizers. A lower bound above `1/14` safely excludes an explicit packet, but
+  cannot give its exact `M`, rank all families, or detect a counterexample when
+  it falls below threshold. The script's own `AP12+5460` scan reports
+  `92/1197`, strictly below THM-724's proved lower bound `420/5461`, a concrete
+  certificate that the scan did not find the maximum. THM-730 proves only the AP's unique
+  Schur-triple maximum; it explicitly leaves the resummation to loneliness
+  open. THM-731's `disc_v` is peel-dependent and enters
+  `L_cert=(6/7)|G'|-sqrt((6/49)disc_v)`, so **smaller** discrepancy makes the
+  sufficient safety bound larger, the opposite of the claimed direction.
+  A few loose Fibonacci-flavored packets do not prove a uniform golden
+  exclusion, near-AP necessity, large continued-fraction quotients, or ownership
+  of all covering moduli by the maximum speed.
+- **Correct framing:** a counterexample may be divided by its gcd and therefore
+  taken primitive; it must be Cover14 with `M<1/14`; and THM-1017 excludes an AP
+  maximum-deletion core, so THM-730 gives that core a strict additive-triple
+  deficit (`T<=65`). Also, `L=0` and THM-731 force
+  `disc_v>=6|G'_{~v}|^2` for every peel. These are the rigorous necessary
+  conditions. Anti-golden, near-AP,
+  Fibonacci-foil, and joint-order-autocorrelation language remains a useful
+  search hypothesis with hostile controls, not a characterization. The repaired
+  script labels every denominator-truncated value as a sampled lower bound.
+
+---
+
 ## MISTAKE-215 (2026-07-21, codex audit of HYP-8795 / THM-2040) -- a prime-local minimum-face normalization was promoted to a global common-factorial/Vandermonde factorization
 
 - **What was claimed:** dividing every NC2 moment by a purported common

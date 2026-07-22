@@ -88,6 +88,15 @@ structural supplier/seed and a lossless exit.
 - **REFUTED method:** averaging a good-period count. MISTAKE-127/129/130 show
   that existence is governed by the maximum over periods; the resonant tight AP
   is the mandatory hostile control.
+- **CORRECTED search frame:** HYP-8815/MISTAKE-221 gives a proved necessary
+  kernel: after gcd normalization, a counterexample is primitive Cover14 with
+  `M<1/14`, and its maximum-deletion core is non-AP, hence has Schur-triple
+  count at most `65` by THM-1017/730. Since its lonely-time measure is zero,
+  THM-731 also forces `disc_v>=6|G'_{~v}|^2` for every peel; small discrepancy
+  is a safety signal. “Near-AP,” “anti-golden,” Fibonacci-foil, CF-blocker, and
+  full-autocorrelation iff claims remain heuristic. The finite rational-time
+  scan supplies lower-bound safety witnesses for listed packets, not exact
+  global maxima.
 - **Scope separation:**
   [THM-1149](../01-canon/theorems/THM-1149-compact-essential-crown-and-farey-blocker.md)
   proves that tight deletion and an all-loose essential crown are different

@@ -61,12 +61,14 @@ HEADLINE_SENTINELS = {
         "## LRC(14)",
         "**OPEN.**",
         "first good period `q=27`",
+        "disc_v>=6|G'_{~v}|^2",
         "proves NC2 and hence unrestricted GMC(2)",
         "GMC is false for every dimension at least 3",
     ),
     "01-canon/ACTIVE-GUARDRAILS.md": (
         "No uniform `q <= 25` good-period theorem",
         "Uniform twelve-speed sporadic emptiness is OPEN",
+        "HYP-8815 is a heuristic, not a disproof characterization",
         "NC2/GMC(2) is proved, not fully formalized",
     ),
 }
