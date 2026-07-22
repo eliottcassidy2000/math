@@ -1,0 +1,77 @@
+import Mathlib
+import TournamentH7.GMC2DvdKHderiv
+import TournamentH7.GMC2DvdKTranspose
+import TournamentH7.GMC2DvdKFrameHSide
+import TournamentH7.GMC2DvdKFrameExtraction
+
+/-!
+# `hderiv` assembly through the transpose: plugging in the frame-leg lemmas
+
+The `hderiv` assembly `GMC2DvdKHderiv.hderiv_of_frame` takes five per-object inputs on the frame factors
+`Pfr, hfr`.  Through death-star's transpose `phi = map(ofPowerSeries) ∘ tauHom`, the Weierstrass unit's
+image `hfr = phi Wu` is *definitionally* `map ofPowerSeries (tau Wu)` — exactly the disk form of the h-side
+lemma.  So the two analytic inputs `ha` and `hF1` are discharged here by
+
+* `GMC2DvdKFrameHSide.xCoeff0_logDeriv_map_ofPowerSeries` (my h-side (a)), and
+* `GMC2DvdKFrameExtraction.xCoeff0_xM_div_PhiFrame_eq_one_of_vanish` (my F=D_m / F=1),
+
+leaving `hderiv` reduced to exactly the **concrete transpose glue** (`hfact = phi(Φ)=PhiFrame`, `Pfr`'s
+monic/unit data, the `xCoeff0 hfr` unit, and the polynomial-to-frame moment transport `hvanish`) —
+death-star's / boxeph's lane.  When those land, `hderiv` (and hence GMC(2)) closes with no new analysis.
+-/
+
+open PowerSeries
+
+namespace GMC2DvdKHderivAssembly
+
+variable {F : Type*} [Field F]
+
+/-- **`hderiv` through the transpose.**  For the transported Weierstrass unit `hfr = phi Wu` and a
+distinguished frame factor `Pfr`, given the concrete transpose glue — the factorization `hfact`, `Pfr` a
+unit with `xCoeff0(logDeriv Pfr)=0` (the (c) degree lemma), `xCoeff0(phi Wu)` a unit, and the vanishing of
+every positive frame moment `(Rlᵐ).coeff(M·m)` — the `t`-derivative of `xCoeff0(phi Wu) = h(0,t)` vanishes.
+The h-side `ha` and the `F=1` input `hF1` are supplied internally by the frame-leg lemmas. -/
+theorem hderiv_via_transpose (Rl : LaurentSeries F) (M : ℕ)
+    (Wu : PowerSeries (PowerSeries F)) (hWu : IsUnit Wu)
+    (Pfr : PowerSeries (LaurentSeries F))
+    (hfact : GMC2DvdKFrame.PhiFrame Rl M = Pfr * GMC2DvdKTranspose.phi Wu)
+    (hPu : IsUnit Pfr)
+    (hc : GMC2DvdKFrame.xCoeff0 (GMC2DvdKFrame.logDeriv Pfr) = 0)
+    (hg : IsUnit (GMC2DvdKFrame.xCoeff0 (GMC2DvdKTranspose.phi Wu)))
+    (hvanish : ∀ m : ℕ, 1 ≤ m → (Rl ^ m).coeff ((M : ℤ) * m) = 0) :
+    PowerSeries.derivativeFun (GMC2DvdKFrame.xCoeff0 (GMC2DvdKTranspose.phi Wu)) = 0 := by
+  have hphi : GMC2DvdKTranspose.phi Wu
+      = PowerSeries.map (HahnSeries.ofPowerSeries ℤ F) (GMC2DvdKTranspose.tau Wu) := by
+    rw [GMC2DvdKTranspose.phi, RingHom.comp_apply]; rfl
+  have hHu : IsUnit (GMC2DvdKTranspose.tau Wu) := by
+    have h := hWu.map GMC2DvdKTranspose.tauHom
+    rwa [show GMC2DvdKTranspose.tauHom Wu = GMC2DvdKTranspose.tau Wu from rfl] at h
+  rw [hphi] at hfact hg ⊢
+  exact GMC2DvdKHderiv.hderiv_of_frame Rl M Pfr _ hfact hPu
+    (hHu.map (PowerSeries.map (HahnSeries.ofPowerSeries ℤ F)))
+    hc
+    (GMC2DvdKFrameHSide.xCoeff0_logDeriv_map_ofPowerSeries hHu)
+    hg
+    (GMC2DvdKFrameExtraction.xCoeff0_xM_div_PhiFrame_eq_one_of_vanish Rl M hvanish)
+
+/-- **`hderiv` on the concrete Weierstrass unit.**  With the bridge `xCoeff0(phi Wu) = unitCoeff0` (the
+frame's constant-in-`x` coefficient equals mac-mini's Weierstrass `h(0,t)`), `hderiv_via_transpose` becomes
+the literal DvdK statement `d_t(unitCoeff0) = 0`. -/
+theorem hderiv_of_transpose_glue (Rl : LaurentSeries F) (M : ℕ)
+    (Wu : PowerSeries (PowerSeries F)) (hWu : IsUnit Wu)
+    (Pfr : PowerSeries (LaurentSeries F))
+    (hfact : GMC2DvdKFrame.PhiFrame Rl M = Pfr * GMC2DvdKTranspose.phi Wu)
+    (hPu : IsUnit Pfr)
+    (hc : GMC2DvdKFrame.xCoeff0 (GMC2DvdKFrame.logDeriv Pfr) = 0)
+    (hg : IsUnit (GMC2DvdKFrame.xCoeff0 (GMC2DvdKTranspose.phi Wu)))
+    (hvanish : ∀ m : ℕ, 1 ≤ m → (Rl ^ m).coeff ((M : ℤ) * m) = 0)
+    (unitCoeff0 : PowerSeries F)
+    (hbridge : GMC2DvdKFrame.xCoeff0 (GMC2DvdKTranspose.phi Wu) = unitCoeff0) :
+    PowerSeries.derivativeFun unitCoeff0 = 0 := by
+  rw [← hbridge]
+  exact hderiv_via_transpose Rl M Wu hWu Pfr hfact hPu hc hg hvanish
+
+end GMC2DvdKHderivAssembly
+
+#print axioms GMC2DvdKHderivAssembly.hderiv_via_transpose
+#print axioms GMC2DvdKHderivAssembly.hderiv_of_transpose_glue
