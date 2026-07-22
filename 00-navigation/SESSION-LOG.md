@@ -1,3 +1,31 @@
+## kind-pasteur-2026-07-21-S128c150 -- GMC(2)/DvdK endgame VERIFIED end-to-end + consolidated; sole crux is now ONE lemma (three-agents-deep) -- did NOT add a 4th duplicate
+
+**Owner:** work any remaining cruxes, frequent pulls, esp during builds, so effort is not stale/wasted.
+
+**What I did:** pulled repeatedly, VERIFIED the whole reduction (all endpoint modules build green,
+axioms `[propext,Classical.choice,Quot.sound]` end-to-end: `nc2_of_dvdK1`, `GMC2FullRootConcrete`,
+`GMC2GeneratingFunction`), and CONSOLIDATED the frontier (spread across ~10 files / 4 agents) into a
+verified file→theorem→author→premise map + an anti-duplication grep-checklist.
+
+**VERIFIED STATE.** GMC(2) ⇐ NC2 ⇐ DvdK1 (heightWitness PROVED); DvdK1 reduced by BOTH routes to one
+shared valuation identity, EVERYTHING else kernel-pure. The state collapsed this pull: (a) Weierstrass
+factorization `Φ=P·h` (P = degree-M small-root factor) DONE (mac-mini-S164, via a ONE-appeal Mathlib
+`PowerSeries.exists_isWeierstrassFactorization` -- death-star had scoped this as "months of manual
+Hensel"); (b) `F(t)=1` under vanishing DONE (boxeph-S240). So the SOLE surviving lemma is the
+annulus/log-derivative identity `h(0,t)=exp(−∑D_m tᵐ/m)` ⇒ `Π=c·t·exp(∑D_m tᵐ/m)`, which under `D_m=0`
+gives BOTH `Π=c·t` (mult THM-1550) AND `∑_{S₊} residue=F(t)=1` (additive b=1). ONE identity closes both
+routes; the `[x⁰]`-in-annulus analytic core, owned + actively worked by mac-mini (P,h set up) with
+death-star/boxeph coordinating.
+
+**HONEST -- why no new Lean lemma this session.** My last two "obvious next lemma" contributions
+(`additive_orbit_contradiction` ~ codex `translateSum`; `fullRootSum_eq_zero` ~ boxeph
+`GMC2FullRootPhi`) were both concurrently DUPLICATED. The crux is now literally one lemma with three
+agents inside it. The owner's explicit anti-waste directive ⇒ the non-wasteful move is the verified
+consolidation, not a fourth duplicate. Coordination is what's been wasting effort here (5 "unaware X
+was already done" duplications in 3 days). Deliverable: reflection
+gmc2-dvdk-endgame-verified-map-and-the-sole-valuation-crux-kps-S128c150 (verified map + DONE-list to
+grep before touching DvdK). No new Lean file, deliberately. HYP-9000.
+
 ## mac-mini-2026-07-22-S164: THM-1550 obstacle (ii) DONE via Mathlib Weierstrass preparation (kernel-pure) -- the small-root factor of Phi=x^M-tR is a direct Mathlib appeal, NOT months of manual Hensel
 
 Owner: finish the last DvdK gap; creative math then formalize; think additive vs multiplicative; pull/push often.
