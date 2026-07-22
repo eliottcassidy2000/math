@@ -23,6 +23,11 @@ related:
   - MISTAKE-243
 formalization:
   - 04-computation/lean/TournamentH7/TournamentH7/GMC2LaurentShiftCheckA.lean
+script: 04-computation/dvdk_additive_orbit_residue_codex_20260722.py
+output: 05-knowledge/results/dvdk_additive_orbit_residue_codex_20260722.out
+script_sha256: d2f67a19df74b6095b0ab5f8a08eed3ddb874e3422609f89c8b60e4c05222f29
+output_sha256: d2f4ebf4607ceeec3936c5ff124be0326b916e6adae6069ed31dbe99e6e2ce30
+hash_basis: repository blobs with LF line endings
 ---
 
 # THM-2101 -- the additive orbit-residue bypass

@@ -1,0 +1,6 @@
+symmetric: M=1 degree=2 first_nonzero=2 small_minus_series=2.220e-16 full_sum=2.220e-16
+three_charge: M=2 degree=3 first_nonzero=2 small_minus_series=0.000e+00 full_sum=2.220e-16
+dihedral_signed: M=2 degree=4 first_nonzero=2 small_minus_series=0.000e+00 full_sum=1.110e-16
+asymmetric_extent: M=3 degree=5 first_nonzero=2 small_minus_series=1.110e-16 full_sum=2.220e-16
+one_sided_boundary: M=2 degree=2 all_positive_CT_zero=True full_sum_minus_one=0.000e+00
+PASS

@@ -1,0 +1,13 @@
+overlap_checks=1280
+carrier_checks=316
+discrepancy_checks=3160
+minimum_mass_floor_slack=1/462
+k=1 delta=25/42 coefficient=216/25 components_bound=28793689650 next_speed_bound=248777478576
+k=2 delta=221/462 coefficient=990/221 components_bound=277571168226 next_speed_bound=1243418355401
+k=3 delta=841/2310 coefficient=2640/841 components_bound=1520989523627 next_speed_bound=4774568778091
+k=4 delta=577/2310 coefficient=1485/577 components_bound=6295558301718 next_speed_bound=16202606721059
+k=5 delta=313/2310 coefficient=792/313 components_bound=22498165022777 next_speed_bound=56928264210988
+k=6 delta=7/330 coefficient=330/49 components_bound=79426429233765 next_speed_bound=534912686676376
+terminal_max_bound=534912686676376
+full_row_max_bound=22822941298192042
+PASS

@@ -1,0 +1,6 @@
+triangular_power_free_jacobian=1
+proper_power_terminal_L=-x terminal_jacobian=1
+approximate_root_absorbed=True
+synchronized_nonlift_bracket=9*x^5/2
+terminal_face_checks=64
+PASS
