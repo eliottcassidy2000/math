@@ -1,0 +1,9 @@
+THM-2051 FEJER--BV TRIANGLE-PAIR REFEREE
+exceptional cutoff=-1/220 list=[(1, 10, Fraction(-3, 490)), (1, 11, Fraction(-4, 539)), (1, 12, Fraction(-5, 588)), (1, 13, Fraction(-6, 637)), (2, 11, Fraction(-4, 539)), (3, 10, Fraction(-3, 490)), (3, 11, Fraction(-4, 539))]
+oriented exceptional triangles=182
+exceptional triangle minimum=-150/8281 minimizers=[(Fraction(1, 13), Fraction(13, 1)), (Fraction(13, 1), Fraction(1, 13))]
+universal triangle floor=-1297/70070 comparison gap=361/910910
+global pair-sum floor=-1297/2695 pair reserve=1668/18865
+H=1048576 higher-support tail<221806728/2517633377 final margin>43815012/138469835735
+TOURNAMENT ANALYSIS=not applicable: symmetric weighted triangles are indispensable
+RESULT=PASS

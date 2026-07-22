@@ -1,7 +1,7 @@
 ---
 id: THM-2051
 title: Fejer--BV whole-product approximation gives a genuine-higher-relation-or-positive-BONF5 alternative for LRC(14)
-status: PROVED. The basic form says that no exact relation of support two through five and coefficient height at most 2^20 forces positive continuous BONF5. The stronger pair-exact form uses THM-965's sharp covariance floor and requires dissociation only for supports three through five, at height 2^21. Hence every thirteen-speed row either has a positive-measure strict lonely set or a genuine 3-, 4-, or 5-speed relation of bounded height. The proof bypasses the THM-946 absolute strip/slab estimates, but does not classify the higher-relation branch or prove LRC(14).
+status: PROVED. The basic form says that no exact relation of support two through five and coefficient height at most 2^20 forces positive continuous BONF5. The stronger form packs THM-965's exact pair covariances through all speed triangles and requires dissociation only for supports three through five at the same height 2^20. Hence every thirteen-speed row either has a positive-measure strict lonely set or a genuine 3-, 4-, or 5-speed relation of height at most 2^20. The proof bypasses the THM-946 absolute strip/slab estimates, but does not classify the higher-relation branch or prove LRC(14).
 source: codex-2026-07-21-LRC-unrelated-transfer
 depends_on:
   - THM-604
@@ -19,6 +19,10 @@ script: 04-computation/lrc14_fejer_bv_higher_circuit_referee_codex_20260721.py
 output: 05-knowledge/results/lrc14_fejer_bv_higher_circuit_referee_codex_20260721.out
 script_sha256: 9da37dfd4bc3e87538202080cd5d46f15c738c1086a56ee1304c9309bbd7e70b
 output_sha256: 55d38afb379280ab51f61ef3675d5e5fafa2b34af229998d735466787cad3b62
+triangle_script: 04-computation/lrc14_fejer_bv_triangle_pair_referee_codex_20260721.py
+triangle_output: 05-knowledge/results/lrc14_fejer_bv_triangle_pair_referee_codex_20260721.out
+triangle_script_sha256: b43213c980d798e7a4da62b815587eb634427df3033038ec894cca83103cfbc7
+triangle_output_sha256: c4d1caf6cb92602624d86bb02de21386ff9cee5f690c1d337555a9584ac6cb97
 ---
 
 # THM-2051 -- Fejer--BV small-relation alternative
@@ -206,17 +210,16 @@ measure{t: no bad interval is active} >= BONF5(v)>0,
 
 which proves the theorem. QED.
 
-## 6. Pair-exact sharpening: only genuine higher relations remain
+## 6. Triangle-packed pair sharpening: only genuine higher relations remain
 
 The pair term in (4) can be paid directly instead of approximated. This
-removes the support-two hypothesis, at the cost of moving the higher-support
-Fejer horizon from `2^20` to `2^21`.
+removes the support-two hypothesis without increasing the Fejer horizon.
 
 **Theorem B (stronger alternative).** Suppose there is no relation
 
 ```text
 sum_(i in A) k_i v_i=0,
-3<=|A|<=5,             0<|k_i|<=H_1=2^21.             (15)
+3<=|A|<=5,             0<|k_i|<=H_1=2^20.             (15)
 ```
 
 Then `BONF5(v)>0`. Consequently every thirteen-speed row satisfies
@@ -224,7 +227,7 @@ Then `BONF5(v)>0`. Consequently every thirteen-speed row satisfies
 ```text
 positive-measure strict loneliness
     OR
-an exact support-3-to-5 relation of coefficient height at most 2^21.   (16)
+an exact support-3-to-5 relation of coefficient height at most 2^20.   (16)
 ```
 
 *Proof.* For distinct speeds `a,b`, divide by `g=gcd(a,b)` and write the
@@ -253,45 +256,92 @@ in (17) gives the exact minima at each possible `A`:
 | 4 | 5 | `2/245` |
 
 Thus every pair moment is at least `-6/637`, with equality exactly at reduced
-ratio `1:13`. Since the pair coefficient in (4) is positive,
+ratio `1:13`.
+
+The individual floor cannot be attained independently on all `78` pairs.
+Equation (17) also gives
 
 ```text
-(24/343) sum_(|A|=2) delta_A
- >=(24/343) C(13,2)(-6/637)
- =-864/16807.                                          (19)
+delta_(A,B)>=-1/(4AB).
 ```
 
-After paying (19), the equilibrium reserve is
+Hence `delta_(A,B)<-1/220` is possible only for `AB<=54`. Exact substitution
+in this finite coprime core gives precisely seven exceptional reduced ratios:
+
+| reduced ratio | covariance |
+|---:|---:|
+| `1:10` | `-3/490` |
+| `1:11` | `-4/539` |
+| `1:12` | `-5/588` |
+| `1:13` | `-6/637` |
+| `2:11` | `-4/539` |
+| `3:10` | `-3/490` |
+| `3:11` | `-4/539` |
+
+Consider any triangle of three distinct speeds. If at most one edge is
+exceptional, the sum of its three pair covariances is at least
 
 ```text
-2052/16807-864/16807=1188/16807.                       (20)
+-6/637-2/220=-1297/70070.                              (19)
+```
+
+If at least two edges are exceptional, they share a vertex. Normalize that
+speed to `1`. The other two ratios belong, with either orientation, to
+
+```text
+R={13,12,11,11/2,11/3,10,10/3}.
+```
+
+The speeds are distinct, so the two oriented ratios differ. Substitution of
+the `14*13=182` possibilities in (17) gives minimum triangle sum
+`-150/8281`, attained at ratios `{1/13,13}`. This is strictly above (19), since
+
+```text
+1297/70070-150/8281=361/910910>0.
+```
+
+Now sum (19) over all `C(13,3)=286` speed triangles. Every pair occurs in
+exactly eleven triangles, so
+
+```text
+sum_(|A|=2) delta_A>=-(286/11)(1297/70070)
+                         =-1297/2695.                  (20)
+```
+
+Because the pair coefficient in (4) is positive, the equilibrium term plus
+the entire pair layer therefore has the stronger reserve
+
+```text
+2052/16807+(24/343)(-1297/2695)=1668/18865.            (21)
 ```
 
 Apply the proof of Sections 3--4 only to supports `s=3,4,5`. Their telescope
-constant is
+constant remains
 
 ```text
 K_high=sum_(s=3)^5 C(13,s)|E_s|s(6/7)^(s-1)
-      =10316592/2401.                                  (21)
+      =10316592/2401.                                  (22)
 ```
 
-At `H_1=2^21`, put `N_1=H_1+1<2^22`. Since `log 2<1`, (7) gives
+At `H_1=2^20`, put `N_1=H_1+1<2^21`. Since `log 2<1`, (7) gives
 
 ```text
-epsilon_(H_1)<45/(2N_1),
-K_high epsilon_(H_1)<25791480/559473817.               (22)
+epsilon_(H_1)<43/(2N_1),
+K_high epsilon_(H_1)<221806728/2517633377.             (23)
 ```
 
 The exact remaining margin is
 
 ```text
-1188/16807-25791480/559473817
- =96283836/3916316719>0.                               (23)
+1668/18865-221806728/2517633377
+ =43815012/138469835735>0.                            (23a)
 ```
 
-This proves Theorem B. The finite pair core, all coefficients, and both
-rational margins are independently checked by the stored optimization-safe
-referee. QED.
+This proves Theorem B. The earlier referee preserves the independent pair
+floor and the original `2^21` proof as a reproducibility checkpoint. The
+second stored optimization-safe referee checks the seven exceptional ratios,
+all `182` oriented triangles, the double count, and (23a), both normally and
+under Python optimization. QED.
 
 ## 7. Geometry of the surviving relation branch
 
@@ -348,7 +398,7 @@ cancellation that those estimates discarded.
 Theorem B gives HYP-8841 a finite higher-relation sidecar: a row either
 terminates at a strict positive-measure exit, or it lands on one of finitely
 many relation templates `(A,(k_i))` with `3<=|A|<=5` and
-`|k_i|<=2^21`. It does not show that a move inside such a hyperplane decreases
+`|k_i|<=2^20`. It does not show that a move inside such a hyperplane decreases
 a Noetherian height, and it does not classify the structured branch. The tight
 AP is deliberately not in the dissociated branch: it has many tiny
 support-three relations.

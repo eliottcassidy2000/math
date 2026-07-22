@@ -119,7 +119,7 @@ structural supplier/seed and a lossless exit.
   “middle” sought by THM-935/946. THM-965 gives the sharp universal pair-
   covariance floor `delta_(a,b)>=-6/637`, so pairs can be paid exactly. If a
   thirteen-speed row has no exact support-three-through-five relation with all
-  coefficient magnitudes at most `2^21`, whole-product Fejer--BV approximation
+  coefficient magnitudes at most `2^20`, whole-product Fejer--BV approximation
   gives continuous `BONF5>0` and therefore a positive-measure strict lonely
   set. The proof avoids the unresolved termwise `T4/T5` strip/slab bounds. The
   LRC residual is now localized to finitely many genuine higher-relation
@@ -185,7 +185,8 @@ structural supplier/seed and a lossless exit.
    survival when no positive pair-sum margin occurs.
    [THM-2051](../01-canon/theorems/THM-2051-fejer-bv-small-relation-alternative-for-lrc14.md)
    now proves that every remaining hard row has a genuine support-`3..5`
-   relation of coefficient height at most `2^21`.
+   relation of coefficient height at most `2^20` after triangle-packing the
+   exact pair covariances.
    [THM-2052](../01-canon/theorems/THM-2052-finite-height-forces-high-rank-bounded-relation-code.md)
    goes much further: every hypothetical counterexample already has eleven
    independent bounded three-support relations. It either reaches the

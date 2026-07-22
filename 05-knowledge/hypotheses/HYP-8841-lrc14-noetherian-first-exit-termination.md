@@ -7,11 +7,11 @@ status: >
   every audited one-lift alias has a labelled strict exit by q<=42, including
   an infinite Hasse-indistinguishable family. THM-2051 adds a universal finite-
   height higher-relation gate: either there is a positive-measure strict exit or a
-  support-three-through-five relation of coefficient height at most 2^21. The target is a
-  height-decreasing termination theorem inside that structured branch. THM-2053
-  now makes every rank-eleven rational plane finite in parameter space; the
-  target is atlas compression plus signed Euler/resolved-phase discharge of
-  those finite disks.
+  support-three-through-five relation of coefficient height at most 2^20. The
+  target is a height-decreasing termination theorem inside that structured
+  branch. THM-2053 now makes every rank-eleven rational plane finite in
+  parameter space; the remaining target is atlas compression plus signed
+  Euler/resolved-phase discharge of those finite disks.
 source: codex-2026-07-21-DC2-LRC14-termination
 related:
   - THM-523
@@ -80,7 +80,7 @@ obeys one of the finitely many templates
 
 ```text
 sum_(i in A) k_i v_i=0,
-3<=|A|<=5,      0<|k_i|<=2^21.                       (2b)
+3<=|A|<=5,      0<|k_i|<=2^20.                       (2b)
 ```
 
 Thus a valid height descent may be localized to a finite union of rational
@@ -134,7 +134,7 @@ support three. The first seven, including AP, GW, `12->26`, `12->36`,
 `12->96`, `12->84`, and P10+K33, all share the irrelevant relation
 
 ```text
-1+2-3=0.                                                   (2d)
+1+2-3=0.                                                   (2e)
 ```
 
 The genuine Cover14 tax-gain row similarly has `1+11-12=0`. Raw circuit
