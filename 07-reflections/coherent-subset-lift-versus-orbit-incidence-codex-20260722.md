@@ -23,7 +23,7 @@ available, refusing to average can hide a short proof.
 
 ## LRC: pair averaging needs a coherent-fiber sidecar
 
-THM-2120 computes every transverse pair weight from the primitive relation
+THM-2126 computes every transverse pair weight from the primitive relation
 
 ```text
 A g+B f+C f'=0.
@@ -106,6 +106,6 @@ Can that compatibility be retained as a divisibility/phase/multiplicity sidecar?
 Or does a transitive action make every translate identical and the full sum impossible?
 ```
 
-THM-2120 answers “retain the fiber,” THM-2102 answers “retain the divisibility
+THM-2126 answers “retain the fiber,” THM-2102 answers “retain the divisibility
 class,” and THM-2101 answers “sum the orbit.” The distinction is structural;
 no LRC-to-GMC-to-JC implication is claimed.

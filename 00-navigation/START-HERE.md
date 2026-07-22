@@ -105,7 +105,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     strengthen tree energy; THM-2097 makes every depth-four rank-seven
     template finite template-by-template. THM-2100 upgrades the bounded
     guard-ratio lane to one uniform full-row box
-    `max(S)<=22,822,941,298,192,042`. THM-2120 computes the exact rank-eight
+    `max(S)<=22,822,941,298,192,042`. THM-2126 computes the exact rank-eight
     pair spectrum: the universal strict tree-margin target is false, and scalar
     divisor-complete one-deletion-primitive rows have no uniform positive
     margin. Those families fail newer clock/content gates; the actual finite

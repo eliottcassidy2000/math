@@ -30,7 +30,7 @@ not actually computed.
 Current high-signal status: THM-2058--2120 are proved only in their stated
 scopes, except records explicitly marked reserved/refuted/superseded.
 THM-2061/2065/2073 remain reductions, THM-2074 is density-one only, THM-2100
-is a finite box without discharge, and THM-2120 is a pair-spectrum boundary,
+is a finite box without discharge, and THM-2126 is a pair-spectrum boundary,
 so none proves LRC(14). THM-2101 is RESERVED: its formal algebraic core is
 checked, but the analytic small-root subset bridge is absent. THM-2102 sharpens
 the planar-JC top-face descent without settling JC(2). MISTAKE-238--244 are the

@@ -83,7 +83,7 @@
     are proved only in their stated lanes; CLAIMED/RESERVED files remain open.
 27b. **A finite box is not a discharge.** THM-2100 and THM-2112 bound rank-
     seven rows by very different routes; neither enumerates or empties them.
-27c. **No scalar-filtered uniform pair margin.** THM-2120 has
+27c. **No scalar-filtered uniform pair margin.** THM-2126 has
     `tau-5/49 -> 0` on scalar divisor-complete one-deletion-primitive rows,
     but those rows fail newer clock/content gates. Retain relation labels,
     finite-ring needles, all maximum bases, and higher active intersections.

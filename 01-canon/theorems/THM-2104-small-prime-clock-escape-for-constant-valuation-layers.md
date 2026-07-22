@@ -21,7 +21,7 @@ related:
   - THM-2073
   - THM-2095
   - THM-2099
-  - THM-2120
+  - THM-2126
 ---
 
 # THM-2104 -- small-prime clocks for constant valuation layers

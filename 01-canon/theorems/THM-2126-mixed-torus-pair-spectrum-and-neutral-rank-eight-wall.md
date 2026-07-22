@@ -1,5 +1,5 @@
 ---
-id: THM-2120
+id: THM-2126
 title: "The mixed-torus pair spectrum has a neutral rank-eight wall"
 status: >
   PROVED. THM-2099's exact primitive-relation pair weight, including
@@ -27,14 +27,18 @@ related:
   - THM-2105
   - THM-2114
   - THM-2115
+  - THM-2120
+  - THM-2122
+  - THM-2123
+  - THM-2124
 script: 04-computation/lrc14_mixed_torus_pair_spectrum_codex_20260722.py
 output: 05-knowledge/results/lrc14_mixed_torus_pair_spectrum_codex_20260722.out
-script_sha256: f091abbf0e63f1b3a7464bf325d33fcb22c476e070109d5448021d1718e025c8
+script_sha256: dd4e381bd736fce11c49b07010d812e20e57fd7fc770d5f0523291e568338f42
 output_sha256: f3eb9d8b0a42e422d3af98a197f08bb6fbaa62b46ad0b37a69a33935852aa80a
 hash_basis: repository blobs with LF line endings
 ---
 
-# THM-2120 -- the Fourier-neutral wall and vanishing scalar-filter tree margin
+# THM-2126 -- the Fourier-neutral wall and vanishing scalar-filter tree margin
 
 This refines THM-2099 rather than superseding it. THM-2099 supplies the exact
 finite-fiber spectrum and already disproves a universal strict tree gate with

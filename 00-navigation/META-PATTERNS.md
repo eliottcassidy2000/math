@@ -146,7 +146,7 @@ the translated subset with the same multiplicity.
 **Counterindication:** do not orbit-average merely because a group acts. The
 subset identity must be equivariant, its right side invariant, and the full
 sum/product independently controlled. Otherwise preserve a sidecar instead.
-**Evidence:** THM-2120's exact LRC pair spectrum forgets the common mod-seven
+**Evidence:** THM-2126's exact LRC pair spectrum forgets the common mod-seven
 guard fiber and admits a neutral rank-eight wall; THM-2102's scalar first-defect
 identity `L=0` does not imply the divisibility needed to lift a common
 approximate root; THM-2101 succeeds in the opposite direction because Galois

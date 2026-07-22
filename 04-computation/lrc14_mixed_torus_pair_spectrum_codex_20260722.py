@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact pair spectrum and a hostile rank-eight equality family (THM-2120)."""
+"""Exact pair spectrum and a hostile rank-eight equality family (THM-2126)."""
 from fractions import Fraction as F
 from itertools import combinations
 from math import gcd, lcm, pi, sin
