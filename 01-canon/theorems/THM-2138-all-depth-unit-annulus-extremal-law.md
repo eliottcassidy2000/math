@@ -1,14 +1,17 @@
 ---
 id: THM-2138
-title: "All-depth unit-annulus extremality closes the six-plus-one scalar tail"
+title: "All-depth unit-annulus extremality closes both scalar flood tails"
 status: >
   PROVED AND HOSTILE-REFEREED. For every m>=3, the largest
   intersection of one terminal unit mask with the 13-primitive guard-safe
   annulus modulo 13^m is attained by exactly the two sign classes a=6 and
   12a=-1. Its size is (10*13^m+130*(-1)^m)/91. For m>=5 every other mask
   loses at least twelve points. Consequently six such masks never cover the
-  unit annulus. Together with THM-2135's exact mod-169 certificate, this
-  eliminates the complete six-unit/one-deep scalar tail from THM-2133.
+  unit annulus. A separate root-fibre bound shows that every positive-
+  valuation mask is no larger than the unit maximum and loses more than ten
+  points at every even depth. Together with THM-2135's exact mod-169
+  certificate, these facts eliminate both the six-unit/one-deep and the
+  five-unit/two-deep scalar tails from THM-2133.
 source: codex-2026-07-22-LRC-unit-annulus-all-depth
 depends_on:
   - THM-2133
@@ -130,9 +133,14 @@ C_d(N)=floor((N-1)/(7d))-floor((N-1)/(91d)).          (13)
 
 The function in (13) counts the positive integers up to `(N-1)/(7d)` that
 are not divisible by thirteen, so it is nonincreasing in `d`.  Moreover,
-because `13^m` is `1,13` modulo `84` according as `m` is even, odd, while
-modulo `1092=13*84` the second floor is determined by
-`13^(m-1)=13,1 mod 84` in the two parities,
+because `13^m` is `1,13` modulo `84` according as `m` is even, odd, and
+explicitly
+
+```text
+N=169 mod 1092 if m is even,       N=13 mod 1092 if m is odd,
+```
+
+the two floors give
 
 ```text
 C_12(N)
@@ -341,7 +349,123 @@ In the six-plus-one scalar tail of THM-2133, write the deep coefficient as
 cover into exactly such a six-mask cover of `U_N`. THM-2135 separately
 excludes `m=2`. Hence the entire six-unit/one-deep scalar tail is empty.
 
-## 5. Scope and preserved information
+## 5. Positive-valuation masks
+
+The same annulus has a simpler bound when the terminal multiplier is not a
+thirteen-unit.  Let
+
+```text
+N=13^m=AQ,       A=13^s,       Q=13^q,       1<=s<m,
+r=Aa,            13 does not divide a,       q=m-s.  (34)
+```
+
+For `S_r` defined as in (1), one has
+
+```text
+|S_r|<=L_s B_q,
+L_s=A-floor(2A/7),
+B_q=12(Q+13(-1)^q)/91.                               (35)
+```
+
+Indeed, put `y=az mod Q`.  There are exactly `A` lifts modulo `N` of each
+terminal-dangerous unit phase `y`, and all of them remain thirteen-units.
+They form one translate of the equally spaced `A`-point grid.  The
+guard-unsafe arc has length `2/7`; since `7` does not divide `A`, every such
+grid translate places at least `floor(2A/7)` roots in it.  At most `L_s`
+lifts are therefore guard-safe.  The number of terminal-dangerous units
+modulo `Q` is `B_q`, with `B_1=0`. Summing over those
+phases proves (35).
+
+This fibre bound fits the unit extremum exactly.  Put
+
+```text
+sigma=(-1)^s,       eta=(-1)^q,       epsilon=sigma eta,
+delta=5 if s is odd, and delta=2 if s is even.        (36)
+```
+
+Since `A=(-1)^s mod 7`, equation (35) has
+
+```text
+L_s=(5A+delta)/7.                                    (37)
+```
+
+With `M_m` from (2), direct expansion gives
+
+```text
+637(M_m-L_s B_q)
+ =10AQ-12delta Q-780A eta-156delta eta+910epsilon.   (38)
+```
+
+The four parity rows of the right side are
+
+```text
+s odd,  q odd:   10Q(A-6)+780A+1690,
+s odd,  q even:  10Q(A-6)-780A-1690,
+s even, q odd:   Q(10A-24)+780A-598,
+s even, q even:  Q(10A-24)-780A+598.                 (39)
+```
+
+All are nonnegative.  The only equality is `A=13,Q=169`, in the second
+row: for `A=13` that row is `70(Q-169)`, while for `A>=13^3` its value at
+the least even-depth `Q=169` is `910(A-13)`; the other rows are visibly
+positive at their least allowed powers and increase in each variable.
+Thus
+
+```text
+|S_(13^s a)|<=M_m,                                   (40)
+```
+
+with equality possible only for `(m,s)=(3,1)`.  More importantly, when `m`
+is even the parities in (39) agree.  The odd/odd row is at least `12740`
+(a mask deficit of `20`) at `A=Q=13`, and the even/even row is at least
+`150332` (a deficit of `236`) at `A=Q=169`. Therefore every positive-
+valuation mask at even depth obeys
+
+```text
+|S_(13^s a)|<=M_m-20.                                (41)
+```
+
+## 6. The five-plus-two tail is empty
+
+Write the two actual deep coefficients in case (II) of THM-2135 as
+
+```text
+c_1=13v_1,       c_2=13v_2,
+alpha=nu_13(c_1),       beta=nu_13(c_2),
+1<=alpha<=beta.                                        (42)
+```
+
+This notation records the valuations of the coefficients appearing in the
+danger combs, not the valuations of `v_1,v_2`.
+
+Take `N=13^(beta+1)`, multiply torsion numerators by `H^(-1) mod N`, and
+restrict to the unit annulus `U_N`.  This normalization is legitimate because
+`H` is a thirteen-unit: it makes the guard coefficient one, keeps every unit
+tooth a unit, and leaves `alpha,beta` unchanged. The coefficient
+of valuation `beta` is safe there: after division by `N`, its value is a
+nonzero thirteenth root and hence has norm at least `1/13>1/14`.  If
+`alpha=beta`, both deep coefficients are safe, leaving only five unit masks;
+these have total capacity less than `|U_N|`, since (2) and (32) give
+`|U_N|-5M_m=(10N-780epsilon)/91>0`. If `alpha<beta`, the shallower
+coefficient is one positive-valuation mask with `s=alpha`, while the deeper
+coefficient is safe, leaving five unit masks plus that one nonunit mask.
+
+For odd `m=beta+1`, equations (33) and (40) bound their total capacity by
+
+```text
+6M_m=|U_N|-10.                                       (43)
+```
+
+For even `m`, equations (32), (33), and (41) bound it by
+
+```text
+5M_m+(M_m-20)=|U_N|-10.                              (44)
+```
+
+The base `m=2` is already part of THM-2135's exact mod-169 certificate.
+Thus case (II) is impossible at every pair of deep valuations.
+
+## 7. Scope and preserved information
 
 The proof uses the congruence lattice rather than a tournament. Its source
 object is a unit terminal phase, the map is inversion followed by
@@ -352,15 +476,18 @@ the shortest lattice direction together with the noncentral chord lengths;
 the extremizers are the two one-line directions and not merely the two
 largest floor sums.
 
-This closes case (I) of THM-2135. It does not address the five-unit/two-deep
-tail, the fivefold nonblocker-guard pencil, or higher relation ranks, so
-LRC(14) remains open.
+This closes both scalar cases (I) and (II) of THM-2135. It does not address
+the fivefold nonblocker-guard pencil or higher relation ranks, so LRC(14)
+remains open.
 
 ## Hostile audit
 
 An independent referee checked the lattice bijection and primitive
 subtraction, the complete `d<=12` equality classification, every entry of
 the `d=13..43` rational table, the Minkowski and error constants, and the
-even-depth union argument.  The audit found no counterexample or substantive
-gap and requested only the three local clarifications incorporated above.
+even-depth union argument. A second hostile pass checked the root-fibre
+count, the `B_q,L_s` formulas, all four parity expansions and their equality
+cases, and the valuation-normalized five-plus-two application through eight
+levels in each parameter. The audits found no counterexample or substantive
+gap and requested only the local clarifications incorporated above.
 QED.
