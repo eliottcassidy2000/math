@@ -20,6 +20,7 @@ related:
   - THM-2063
   - HYP-8950
   - HYP-8955
+  - THM-2113
 script: 04-computation/jc2_power_free_face_descent_codex_20260722.py
 output: 05-knowledge/results/jc2_power_free_face_descent_codex_20260722.out
 script_sha256: e836e3c589ef388b5ab8d01e27ba18cb39337972aa3ebc473214e1d337066163

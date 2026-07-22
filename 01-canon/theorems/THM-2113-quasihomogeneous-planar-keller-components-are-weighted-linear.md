@@ -21,6 +21,7 @@ related:
   - THM-2071
   - HYP-8950
   - HYP-8955
+  - THM-2102
 ---
 
 # THM-2113 -- the quasi-homogeneous planar Keller base case

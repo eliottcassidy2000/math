@@ -30,6 +30,7 @@ related:
   - THM-2103
   - THM-2104
   - THM-2105
+  - THM-2120
   - THM-2116
   - THM-2120
 script: 04-computation/lrc14_quarter_torsion_toothpick_codex_20260722.py

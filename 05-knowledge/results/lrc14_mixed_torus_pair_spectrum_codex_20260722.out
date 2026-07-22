@@ -1,0 +1,26 @@
+zero_layer=0
+first_positive_layer=1/392
+finite_kernel_relation=(2, 1, -1) saturated_index=1 nonsaturated_index=2
+finite_kernel_weight=1/98
+neutrality_checks=2007
+max_fourier_error=3.782e-15
+equality_guard=1 equality_speeds=(2, 9, 16, 23, 30, 37, 44, 51)
+equality_pair_weight=5/343 equality_tree_weight=5/49
+equality_mod7_needle_residues=(1, 1, 1, 1, 1, 1, 1, 1, 1)
+equality_maxbasis_control_point=(Fraction(3, 50), Fraction(47, 175)) active=(0, 1)
+asymptotic_tree_margins:
+  N=8 tau=1217/11760 margin=17/11760 (+1.445578e-03)
+  N=15 tau=2267/22050 margin=17/22050 (+7.709751e-04)
+  N=29 tau=4367/42630 margin=17/42630 (+3.987802e-04)
+  N=50 tau=7517/73500 margin=17/73500 (+2.312925e-04)
+  N=99 tau=14867/145530 margin=17/145530 (+1.168144e-04)
+  N=197 tau=29567/289590 margin=17/289590 (+5.870368e-05)
+  N=400 tau=60017/588000 margin=17/588000 (+2.891156e-05)
+live_clock_lcm=360360
+divisor_complete_hereditary_margins:
+  k=0 N=1 maxQ=14 margin=17/1470
+  k=1 N=360361 maxQ=2522534 margin=17/529730670
+  k=2 N=720721 maxQ=5045054 margin=17/1059459870
+  k=10 N=3603601 maxQ=25225214 margin=17/5297293470
+  k=100 N=36036001 maxQ=252252014 margin=17/52972921470
+PASS

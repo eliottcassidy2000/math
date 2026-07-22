@@ -4,21 +4,11 @@
 
 ## The five-minute orientation
 
-1. **Main prize:** the Lonely Runner Conjecture for 14 total runners (13
-   nonzero relative speeds) is **OPEN**. LRC is known through 13 total runners.
-2. **Do not chase the old shortcuts:** uniform good period `q <= 25` is false,
-   and uniform emptiness of the twelve-speed sporadic tight branch remains open.
-3. **Major new closure:** NC2, hence unrestricted GMC(2), is **PROVED in repo
-   canon** by THM-2022, with the one-variable seed now proved internally by
-   THM-2067. Lean checks the residue, support-face, contradiction, extractor,
-   and `GMC2HeightWitness.heightWitnessSupplier_holds` (the abstract
-   `HeightWitnessSupplier`); the root-imported endpoint is
-   `DvdK1 -> NC2 -> GMC(2)`. General `DvdK1` is the sole formal leaf.
-4. **Truth discipline:** correction/repaired canon outranks canon, which
-   outranks exact computation, hypothesis, synthesis, and historical prose.
-5. **Research posture:** use an Anchor / Niche / Wildcard portfolio. Recover
-   prior work, explain mechanisms and failures, generate alternate objects and
-   quotients, and test connections rather than collecting slogans.
+1. **Main prize:** the Lonely Runner Conjecture for 14 total runners (13 nonzero relative speeds) is **OPEN**. LRC is known through 13 total runners.
+2. **Do not chase the old shortcuts:** uniform good period `q <= 25` is false, and uniform emptiness of the twelve-speed sporadic tight branch remains open.
+3. **Major new closure:** NC2 and unrestricted GMC(2) are **PROVED in canon** (THM-2022; effective one-variable seed THM-2111). Lean kernel-checks the residue, face, contradiction, extractor, and abstract `HeightWitnessSupplier`; the root endpoint remains `DvdK1 -> NC2 -> GMC(2)`, with general `DvdK1` the sole formal leaf. THM-2101 is a reserved additive residue bypass: its Check A/orbit/Lagrange core and irreducibility are checked, but the analytic small-root subset bridge is not.
+4. **Truth discipline:** correction/repaired canon outranks canon, which outranks exact computation, hypothesis, synthesis, and historical prose.
+5. **Research posture:** use an Anchor / Niche / Wildcard portfolio. Recover prior work, explain mechanisms and failures, generate alternate objects and quotients, and test connections rather than collecting slogans.
 
 Run the bounded packet before reading large files:
 
@@ -26,10 +16,7 @@ Run the bounded packet before reading large files:
 python3 agents/start_session.py --topic "<target statement or object>"
 ```
 
-Then read the relevant frontier section, the active guardrails, and the exact
-theorem or evidence it links. `SESSION-LOG.md`, `TANGENTS.md`, reflections, old
-frontier snapshots, the full mistakes ledger, and the giant hypothesis index
-are searchable history—not mandatory warm-up.
+Then read the relevant frontier section, the active guardrails, and the exact theorem or evidence it links. `SESSION-LOG.md`, `TANGENTS.md`, reflections, old frontier snapshots, the full mistakes ledger, and the giant hypothesis index are searchable history—not mandatory warm-up.
 
 ## Sixteen high-signal facts to reuse, not re-derive
 
@@ -54,7 +41,10 @@ are searchable history—not mandatory warm-up.
 7. **NC2 and GMC(2) are proved.** THM-2022 uses algebraic torus descent, a
    lowest balanced face, THM-2067's Galois-orbit constant-term seed, and
    good-prime Kummer/Lucas/Frobenius amplification of the *whole* face. DvdK
-   is a stronger alternate, not the current paper dependency.
+   is a stronger alternate, not the current paper dependency. THM-2101 records
+   a plausible additive orbit-residue bypass, but remains RESERVED until its
+   analytic small-root subset is transported into the splitting field. Lean
+   checks only the algebraic incidence/Lagrange/irreducibility core.
 8. **Support return is not coefficient noncancellation.** THM-2070 gives a
    cofinite aperiodic return set with infinitely many zero odd constant terms.
    HYP-8930's fixed-support unique-channel lemma survives. HYP-8931 is vacuous:
@@ -74,7 +64,11 @@ are searchable history—not mandatory warm-up.
     is the exact new counterexample. THM-2063 closes one-fiber-linear pairs;
     THM-2071 closes quadratic fibers, and THM-2084's cubic Faber gate makes
     reduced degree `13` the first unresolved cubic cell. These are source-fiber
-    statements, not generic-cover, Jelonek, VC(4), or full planar classification.
+   statements, not generic-cover, Jelonek, VC(4), or full planar classification.
+   THM-2102 proves that any Keller component with one power-free positive-weight
+   top face is triangular. Every hard component therefore has proper-power top
+   faces; its first lower layer is governed by an exact approximate-root
+   divisibility quotient or resonant shear class, not a DvdK face condition.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed
@@ -109,7 +103,15 @@ are searchable history—not mandatory warm-up.
     close modular/lacunary branches; THM-2088--2093 reduce all no-pair cut
     lanes to finite banks; THM-2091/2094/2096 close the four-`7|q` branch and
     strengthen tree energy; THM-2097 makes every depth-four rank-seven
-    template finite template-by-template. The finite rows remain undischarged.
+    template finite template-by-template. THM-2100 upgrades the bounded
+    guard-ratio lane to one uniform full-row box
+    `max(S)<=22,822,941,298,192,042`. THM-2120 computes the exact rank-eight
+    pair spectrum: the universal strict tree-margin target is false, and scalar
+    divisor-complete one-deletion-primitive rows have no uniform positive
+    margin. Those families fail newer clock/content gates; the actual finite
+    rows and cover-equality branch remain undischarged. THM-2114--2116 route
+    the live residue through finite-ring needles, all maximum bases,
+    half-fiber Toeplitz tests, and an order-thirteen toothpick orbit.
 16. **Shared syntax is not a bridge.** MISTAKE-230--233/HYP-8885 retract the
     universal entropy/modular frame; MISTAKE-235 leaves S102's LRC/GMC sums as
     analogy, not AP-core reduction. Fiber size is observable-relative, and
@@ -121,11 +123,11 @@ are searchable history—not mandatory warm-up.
 
 | Topic | Read first | Then use |
 |---|---|---|
-| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2092; preserve terminal address/owner/guard sidecars |
+| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2105; preserve terminal address/owner/guard/mod-seven-fiber sidecars |
 | LRC / Frobenius wildcard | [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) | THM-2041 packets; keep seed and pointwise exit explicit |
 | LRC literature | [`CORE-PAPERS.md#lonely-runner-conjecture`](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [`LRC-TECHNIQUE-INDEX.md`](LRC-TECHNIQUE-INDEX.md), source paper |
-| NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2067/2070, formal interfaces, guardrails |
-| Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071, HYP-8905 |
+| NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2111, reserved THM-2101, formal interfaces, guardrails |
+| Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102, HYP-8905 |
 | Tournaments | [`CURRENT-FRONTIER.md#tournaments`](CURRENT-FRONTIER.md#tournaments) | [`TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md`](TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md), [`THE-ZOO.md`](THE-ZOO.md) with its freshness banner |
 | Integer sequences | [`CURRENT-FRONTIER.md#integer-sequences`](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005 and their frozen outputs |
 | Broad portfolio | [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md) | [`PROBLEM-ATLAS-2026-07-20.md`](PROBLEM-ATLAS-2026-07-20.md) only as historical provenance |

@@ -22,6 +22,7 @@ related:
   - THM-2069
   - THM-2096
   - THM-2104
+  - THM-2120
   - THM-2114
 script: 04-computation/lrc14_rank8_tree_pencil_dichotomy_scout_codex_20260722.py
 output: 05-knowledge/results/lrc14_rank8_tree_pencil_dichotomy_scout_codex_20260722.out

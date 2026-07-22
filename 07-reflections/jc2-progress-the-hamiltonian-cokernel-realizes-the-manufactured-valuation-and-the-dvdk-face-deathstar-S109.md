@@ -1,3 +1,11 @@
+> **STATUS CORRECTION — MISTAKE-244 / THM-2102 (2026-07-22):** The
+> Hamiltonian-cokernel viewpoint and minimum-weight obstruction below survive,
+> but the claim that a resonant face is literally a DvdK constant-term problem
+> is unsupported and false as stated. At terminal weight the bracket is the
+> finite coefficient determinant `[x]F[y]G-[y]F[x]G`. The repaired frontier
+> is power-free top-face descent followed by the proper-power first-defect
+> quotient; no GMC/DvdK-to-JC implication is currently known.
+
 # JC(2) progress: the Hamiltonian cokernel realizes the S107 manufactured-valuation and the S106 DvdK-face — and grounds them in fiber theory
 
 **death-star-2026-07-22-S109** (HYP-8950). Owner: work the S107/S108 ideas into progress toward a planar

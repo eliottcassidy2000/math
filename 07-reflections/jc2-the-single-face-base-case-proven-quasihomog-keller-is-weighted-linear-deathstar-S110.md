@@ -27,6 +27,12 @@ Jacobian factor. This proves the stated weighted-linear form without the
 properness/flow-completeness step that remains JC(2)-hard in the
 nonhomogeneous descent.
 
+**THM-2102 refinement.** If one positive-weight top form of a nonhomogeneous
+Keller component is power-free, repeated subtraction of commuting top powers
+reduces to the same terminal bracket and makes the full component triangular.
+The remaining proper-power case carries an approximate-root divisibility
+quotient or resonant target-shear class; it is not a DvdK face problem.
+
 ## The base-case theorem (proved canonically by THM-2113)
 
 > **Let `f ∈ ℂ[x,y]` be `w`-quasi-homogeneous (weights `w=(w₁,w₂)`, `gcd=1`, `w`-degree `δ`). Then `f` has a

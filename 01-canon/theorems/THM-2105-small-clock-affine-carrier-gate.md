@@ -20,6 +20,7 @@ related:
   - THM-2069
   - THM-2072
   - THM-2104
+  - THM-2120
 ---
 
 # THM-2105 -- small-clock affine carrier gate

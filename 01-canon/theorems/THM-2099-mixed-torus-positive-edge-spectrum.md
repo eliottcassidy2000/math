@@ -24,6 +24,7 @@ related:
   - THM-1221
   - THM-2096
   - THM-2103
+  - THM-2120
 script: 04-computation/lrc14_mixed_torus_edge_spectrum_scout_codex_20260722.py
 output: 05-knowledge/results/lrc14_mixed_torus_edge_spectrum_scout_codex_20260722.out
 script_sha256: cba376cfd8ef7297aa9dba2bd8f65bf8fdc5908687f0736a2fc1227871377ce2

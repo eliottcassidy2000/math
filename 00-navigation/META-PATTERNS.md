@@ -1,8 +1,7 @@
 # Meta-Patterns for Mathematical Research
 
 **Status:** CURRENT
-**Role:** compact method cards distilled from repeated successes and failures
-**Use:** scan the triggers relevant to the current session; follow links for the full evidence.
+**Role/Use:** compact cards from repeated successes and failures; scan relevant triggers and follow links for evidence.
 
 These cards are defaults, not slogans. Each names when it applies, what to do,
 why it works, and when it can mislead. New cards require evidence from distinct
@@ -10,79 +9,59 @@ threads or a severe failure with a demonstrated repair.
 
 ## Search the statement before the method
 
-**Trigger:** inheriting a target, naming an invariant, or proposing a “new”
-lemma.
-**Action:** search exact constants, inequalities, quantifiers, construction
-shape, theorem IDs, and canonical synonym families. Dereference every cited
-ID.
-**Mechanism:** different methods give the same theorem disjoint vocabularies;
-method-keyword searches therefore miss prior solutions and refutations.
-**Counterindication:** independent rederivation remains valuable when explicitly
-framed as verification and compared proof-by-proof.
-**Evidence:** MISTAKE-183, MISTAKE-187, MISTAKE-189, MISTAKE-200, and
-MISTAKE-158 in [`MISTAKES.md`](../01-canon/MISTAKES.md).
+**Trigger:** inheriting a target, naming an invariant, or proposing a “new” lemma.
+**Action:** search exact constants, inequalities, quantifiers, construction shape,
+theorem IDs, and canonical synonym families; dereference every cited ID.
+**Mechanism:** methods give the same theorem disjoint vocabularies, so method-keyword
+searches miss prior solutions and refutations.
+**Counterindication:** independent rederivation remains useful when framed as verification and compared proof-by-proof.
+**Evidence:** MISTAKE-183, 187, 189, 200, and 158 in [`MISTAKES.md`](../01-canon/MISTAKES.md).
 
 ## Correct the object before sharpening the technique
 
 **Trigger:** many increasingly elaborate methods stall at the same residual.
-**Action:** ask whether the optimized quantity is the theorem's actual object;
-replace a mean by a maximum, an intrinsic shadow by a marked/observer object,
-or a scalar by its profile when necessary.
-**Mechanism:** an information-losing object cannot be repaired by a stronger
-bound on that object.
-**Counterindication:** retain successful local estimates as components after
-the reframe; an object correction does not erase valid lemmas.
+**Action:** ask whether the optimized quantity is the actual object; replace a
+mean by a maximum, an intrinsic shadow by a marked/observer object, or a scalar
+by its profile.
+**Mechanism:** no stronger bound repairs an information-losing object.
+**Counterindication:** retain valid local estimates as components after the reframe.
 **Evidence:** the `L -> M` and observer-lens reframes in §1 of
 [`lrc14-history-synthesis-patterns-and-reframings-opus-S399.md`](../07-reflections/lrc14-history-synthesis-patterns-and-reframings-opus-S399.md),
 and the support-profile correction in MISTAKE-209.
 
 ## Type every analogy and every implication
 
-**Trigger:** two formulas look identical, an analogy suggests an iff, or a
-scalar equation is read coefficientwise.
-**Action:** write a type ledger and implication ledger before transporting the
-claim. Distinguish nodes/exponents, supports/multiplicities, labels/classes,
-scalar/polynomial identities, graph/tournament spectra, and different notions
-of dimension or rank. A rank coincidence needs ambient modules and an explicit
-map; a spectral formula needs its normalization and exceptional-prime scope.
-**Mechanism:** many compelling false bridges are type errors hidden by shared
-notation.
-**Counterindication:** analogies remain productive as conjecture generators if
-their missing map is stated openly.
-**Evidence:** MISTAKE-209, MISTAKE-211, MISTAKE-212, MISTAKE-214–216,
-MISTAKE-222–225, and MISTAKE-227–229 in
-[`MISTAKES.md`](../01-canon/MISTAKES.md).
+**Trigger:** formulas look identical, an analogy suggests an iff, or a scalar equation is read coefficientwise.
+**Action:** write type and implication ledgers. Distinguish nodes/exponents,
+supports/multiplicities, labels/classes, scalar/polynomial identities,
+graph/tournament spectra, and notions of dimension/rank. Rank coincidences need
+ambient modules and an explicit map; spectra need normalization and exceptional-prime scope.
+**Mechanism:** shared notation hides type-error bridges.
+**Counterindication:** analogies remain productive conjecture generators when the missing map is explicit.
+**Evidence:** MISTAKE-209, 211, 212, 214–216, 222–225, and 227–229 in [`MISTAKES.md`](../01-canon/MISTAKES.md).
 
 ## Audit saturation and basis covariance before naming a lattice bridge
 
-**Trigger:** two objects have the same rank, a convenient generator Gram looks
-canonical, or a coordinate inequality is assigned a discriminant/class group.
-**Action:** name both ambient modules and construct the map. Compute kernel,
-cokernel or saturation index, discriminant, and minimal vectors. For a
-coordinate quadratic claim, prove its `GL_n(Z)` covariance and construct the
-actual invariant form from the full configuration before invoking arithmetic
-equivalence classes.
-**Mechanism:** a full-rank generating frame can have enormous finite index, and
-a max of several linear forms against a chosen-coordinate norm need not be one
-quadratic-form representation problem. Equal rank hides precisely the torsion
-and basis dependence that control short vectors.
-**Counterindication:** rank and Gram comparisons are useful diagnostics once
-explicitly labeled as frames; class-group tools become legitimate after a
-basis-invariant form and target-preserving correspondence are proved.
+**Trigger:** objects have equal rank, a generator Gram looks canonical, or a coordinate inequality gets a discriminant/class group.
+**Action:** name ambient modules and construct the map; compute kernel, cokernel
+or saturation index, discriminant, and minimal vectors. For coordinate quadratic claims,
+prove `GL_n(Z)` covariance and build the invariant form before arithmetic classes.
+**Mechanism:** full-rank frames can have huge finite index, and a max of linear
+forms against a chosen norm need not be one quadratic representation problem;
+equal rank hides torsion and basis dependence controlling short vectors.
+**Counterindication:** rank/Gram comparisons are useful when explicitly labeled
+as frames; class-group tools need a basis-invariant form and target-preserving map.
 **Evidence:** MISTAKE-227's index-`11!` AP chain frame and MISTAKE-229's repair
 of the nonexistent Heegner discriminant on THM-2053's tangent-disk union.
 
 ## Preserve the selected side, not only the walls
 
-**Trigger:** a problem is recast as avoiding hyperplanes, hypertori, resonance
-walls, or forbidden bands.
+**Trigger:** a problem is recast as avoiding hyperplanes, hypertori, resonance walls, or forbidden bands.
 **Action:** distinguish the bare arrangement, its ordinary complement, a
 thickened complement, and a selected inequality-cell complex. Record wall
 owner, orientation/sign, selected side, height functional, and deletion unit.
-**Mechanism:** intersection posets and complement cohomology forget which side
-is feasible and which top cell realizes an extremum.
-**Counterindication:** ordinary arrangement invariants are sufficient when the
-target predicate is actually invariant under all forgotten labels and sides.
+**Mechanism:** intersection posets and complement cohomology forget the feasible side and extremal top cell.
+**Counterindication:** ordinary arrangement invariants suffice when the target is invariant under all forgotten labels and sides.
 **Evidence:** MISTAKE-224's repair of the Fourier-lattice/toric-complement
 conflation and the exact phase-height recovery of
 [THM-1002's pair-sum ruler](../01-canon/theorems/THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case.md).
@@ -149,6 +128,30 @@ operation factors through the quotient.
 **Evidence:** the interface field and stress tests in
 [`perspective-groupoid-controlled-forgetting-codex-s261.md`](../07-reflections/perspective-groupoid-controlled-forgetting-codex-s261.md),
 plus the collision-tax correction in MISTAKE-209.
+
+## After a scalar quotient, choose between a coherent lift and orbit incidence
+
+**Trigger:** a pair average, leading-layer equation, or subset statistic is
+exact, but the original target asks whether many local pieces coexist
+simultaneously.
+**Action:** identify the distinguished subset/fiber before averaging. Then make
+an explicit choice: either retain the alignment/divisibility data needed to
+lift the scalar equality, or prove that a transitive group action makes every
+translate have the same scalar value and sum all translates by uniform
+incidence. In the second route, look for a full-object invariant with an
+incompatible value.
+**Mechanism:** scalarization usually destroys coherent compatibility, but a
+transitive orbit can turn that loss into a theorem when every point occurs in
+the translated subset with the same multiplicity.
+**Counterindication:** do not orbit-average merely because a group acts. The
+subset identity must be equivariant, its right side invariant, and the full
+sum/product independently controlled. Otherwise preserve a sidecar instead.
+**Evidence:** THM-2120's exact LRC pair spectrum forgets the common mod-seven
+guard fiber and admits a neutral rank-eight wall; THM-2102's scalar first-defect
+identity `L=0` does not imply the divisibility needed to lift a common
+approximate root; THM-2101 succeeds in the opposite direction because Galois
+transitivity converts the small-root residue subset sum `1` into the full-root
+Lagrange sum `0`.
 
 ## Existence is a maximum or tail question, not automatically a mean question
 
