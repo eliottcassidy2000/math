@@ -206,22 +206,37 @@ Format per entry:
   Hartley information after fixing an ambient universe, equivalence relation,
   and observable. It is not Shannon entropy without a probability law, and
   changing `L` can force any chosen object to have fiber size one or the whole
-  universe. The four examples do not use one map or even one type of fiber.
+  universe. For the two isomorphism classes of three-vertex tournaments, a
+  constant `L` gives the transitive class a fiber of size two, while the
+  identity observable gives every class a singleton fiber. Thus the proposed
+  rigid-versus-hard law can be reversed by changing the observable. The four
+  examples do not use one map or even one type of fiber.
   In particular:
-  - the script verifies tournament score fibers only through `n=5`; it does
-    not prove that regular scores maximize them in general, and MISTAKE-227
-    blocks identifying a translated transitive score vector with the LRC AP
-    relation carrier;
+  - the tournament claim is already false at `n=5`: the regular score
+    `(2,2,2,2,2)` has one isomorphism class, whereas the score
+    `(1,2,2,2,3)` has three. Those three classes are not cospectral; their
+    adjacency characteristic polynomials are
+    `x^5-4x^2-4x-1`,
+    `(x^2+x+1)(x^3-x^2-3)`, and
+    `(x^2+x+2)(x^3-x^2-x-1)`. MISTAKE-227 also blocks identifying a
+    translated transitive score vector with the LRC AP relation carrier;
   - a finite continued-fraction partial-quotient geometric mean is not an
-    entropy and has no maximum (`[0;N]` makes it arbitrarily large), so
-    `14/183=[0;13,14]` is not a maximal information point;
+    entropy and has no maximum (`[0;N]` makes it arbitrarily large). Every
+    nonterminal finite CF prefix has continuum many real extensions, while a
+    complete rational expansion has a singleton fiber, so the displayed
+    Hartley formula cannot distinguish golden prefixes from `[0;13,14]`;
   - bounded LRC danger count gives exact inclusion--exclusion by depth `13`,
     while `B5>0` is only a sufficient certificate, not a uniform depth-five
-    classifier; THM-1790 gives an unbounded-in-degree GMC moment-depth floor,
-    not an infinite entropy; and
+    classifier. Explicitly, the distributions with weights
+    `(1,15,15,1)/32` on `{0,2,4,6}` and `(6,20,6)/32` on `{1,3,5}` have the
+    same moments through degree five, by the sixth finite-difference identity,
+    but masses `1/32` and `0` at zero. THM-1790 gives an unbounded-in-degree
+    GMC moment-depth floor, not an infinite entropy; and
   - the genus routine labels its formula a heuristic and silently falls back
     when divisibility fails. It is a finite table, not a proof of genus theory
-    or of invisibility to every congruence test.
+    or of invisibility to every congruence test. Its prose also calls the
+    within-genus part “odd,” but the fundamental discriminant `D=-39` has
+    `h=4`, two genera, and even within-genus fiber size `2`.
 - **Correct framing:** for a fixed finite universe and quotient, define the
   explicit Hartley fiber size `H_0=log2|L^{-1}(L(X))|`; add a probability law
   before using Shannon language. The exact survivors are the `n<=5`

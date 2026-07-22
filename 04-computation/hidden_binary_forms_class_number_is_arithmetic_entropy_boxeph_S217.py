@@ -1,6 +1,14 @@
 #!/usr/bin/env python3
 """hidden_binary_forms_class_number_is_arithmetic_entropy_boxeph_S217.py -- boxeph-2026-07-21-S217
 
+HISTORICAL / REFUTED SYNTHESIS (MISTAKE-230, MISTAKE-229).  The reduced-form
+tables remain useful finite checks.  The rational-prime ``log2(h)`` entropy
+claim is invalid because inverse proper classes represent the same integers,
+and the transfer to the THM-2053 LRC gate is invalid because that gate has no
+discriminant-minus-seven form.  This script intentionally retains the original
+calculation so the failure is reproducible; its interpretive conclusions are
+not current mathematics.
+
 Hidden binary forms + information theory. The binary form of disc -p (S215/S216 anisotropic gate) does not
 live alone: its DISCRIMINANT has a whole CLASS GROUP of forms (Gauss composition). The hidden forms are the
 NON-PRINCIPAL classes. Information-theoretic reading:
@@ -17,6 +25,11 @@ determined by local S215 Legendre data. That is WHY 7 is rigid; the difficulty i
 from math import gcd, log2
 
 def sep(t): print("\n"+"="*72+"\n"+t+"\n"+"="*72)
+
+sep("STATUS: HISTORICAL / REFUTED SYNTHESIS -- READ MISTAKE-230 AND MISTAKE-229")
+print("  Retained: reduced-form tables and finite representation checks.")
+print("  Retracted: rational primes split among h oriented classes; log2(h) is their entropy; any LRC transfer.")
+
 def legendre(a,p):
     a%=p
     if a==0: return 0

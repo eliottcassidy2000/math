@@ -1,5 +1,11 @@
 
 ========================================================================
+STATUS: HISTORICAL / REFUTED SYNTHESIS -- READ MISTAKE-230 AND MISTAKE-229
+========================================================================
+  Retained: reduced-form tables and finite representation checks.
+  Retracted: rational primes split among h oriented classes; log2(h) is their entropy; any LRC transfer.
+
+========================================================================
 A  the CLASS GROUP = hidden binary forms; class number h(D) = arithmetic ENTROPY log2 h
 ========================================================================
   disc   -3: h=1  forms=[(1, 1, 1)] ; HEEGNER h=1: ZERO entropy (rigid)

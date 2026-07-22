@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 """arithmetic_entropy_across_the_repo_boxeph_S218.py -- boxeph-2026-07-21-S218
 
+HISTORICAL / REFUTED SYNTHESIS (MISTAKE-231).  The claimed repo-wide entropy
+invariant is retracted.  The script mixes a finite-fiber Hartley count, score
+statistics, a continued-fraction digit mean, and moment depth; these are not
+one invariant.  It intentionally retains the original calculations so their
+exact survivors and counterexamples remain reproducible.  Printed conclusions
+below are historical unless the status banner identifies them as retained.
+
 Extend "arithmetic entropy" (S217) and apply it across the repo. Unified definition:
 
   H_arith(X | L) = log2 | { X' : L(X') = L(X) } |   -- the bits of a GLOBAL object X HIDDEN from its
@@ -24,6 +31,10 @@ from math import log2, gcd
 from itertools import combinations, permutations
 
 def sep(t): print("\n"+"="*72+"\n"+t+"\n"+"="*72)
+
+sep("STATUS: HISTORICAL / REFUTED SYNTHESIS -- READ MISTAKE-231")
+print("  Retained: small reduced-form tables, n<=5 score-fiber census, and elementary arithmetic.")
+print("  Retracted: one repo-wide entropy invariant, regular=max fiber, CF extrema, depth-5 classification, and LRC transfer.")
 
 # ==========================================================================
 sep("P1  BINARY FORMS | genus: h = genera x deep; the DEEP part is the hidden arithmetic entropy")

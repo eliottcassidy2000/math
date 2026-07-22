@@ -1,5 +1,11 @@
 
 ========================================================================
+STATUS: HISTORICAL / REFUTED SYNTHESIS -- READ MISTAKE-231
+========================================================================
+  Retained: small reduced-form tables, n<=5 score-fiber census, and elementary arithmetic.
+  Retracted: one repo-wide entropy invariant, regular=max fiber, CF extrema, depth-5 classification, and LRC transfer.
+
+========================================================================
 P1  BINARY FORMS | genus: h = genera x deep; the DEEP part is the hidden arithmetic entropy
 ========================================================================
   disc   -3: h= 1 = genera 1 x deep  1 ; H_genus(local)=0.00 + H_deep(HIDDEN)=0.00 bits

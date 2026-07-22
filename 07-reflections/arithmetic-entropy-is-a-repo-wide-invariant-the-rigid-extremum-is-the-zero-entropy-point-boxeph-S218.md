@@ -1,3 +1,12 @@
+> **REFUTED / HISTORICAL — read MISTAKE-231 first.** There is no single
+> repo-wide entropy invariant here. The displayed fiber size is only a
+> pointwise Hartley ambiguity after fixing a finite universe and observable;
+> the CF digit mean and moment depth are different quantities. Already at
+> `n=5`, the regular tournament has score-fiber size `1`, not the claimed
+> maximum, while `(1,2,2,2,3)` has a three-class non-cospectral fiber. Retain
+> the small exact tables and elementary score-distribution calculation as
+> separate facts. This reflection proves no LRC statement.
+
 # Arithmetic entropy is a repo-wide invariant: the rigid extremum is the zero-entropy point
 
 *boxeph-2026-07-21-S218. Owner: extend the arithmetic-entropy idea (S217) and apply it to as many repo

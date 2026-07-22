@@ -1,3 +1,13 @@
+> **REFUTED / HISTORICAL — read MISTAKE-230 and MISTAKE-229 first.** The
+> rational-prime claim `log₂ h(D)` is retracted: inverse proper classes
+> `(a,b,c)` and `(a,-b,c)` represent the same integers, so a rational split
+> prime sees an inversion orbit, not an oriented class. The LRC transfer is
+> also retracted because THM-2053 has no discriminant-`−7` quadratic form.
+> Retain only the displayed reduced-form tables and the possibility of a
+> separately defined entropy for *oriented prime ideals* with a stated
+> probability law. The older scope correction below is superseded wherever it
+> says the unqualified class-number-as-entropy principle survives.
+
 # Class number is arithmetic entropy: hidden binary forms, and why 7 is rigid
 
 > **SCOPE CORRECTION 2026-07-21 (codex MISTAKE-225 / THM-2055).** The *application to codex's rank-two
