@@ -3,15 +3,10 @@
 **Rolling state — refreshed 2026-07-21.** This file supersedes dated frontier
 snapshots as a statement of present status. A linked theorem is the proof
 source; this document records how the pieces compose and what remains.
-
-Status vocabulary:
-
-- **PROVED:** a complete in-repo proof or exact reduction is recorded.
-- **CITED:** an external theorem is imported with its hypotheses and provenance.
-- **FINITE-EXACT:** exhaustive over the stated finite universe.
-- **VERIFIED:** reproducible evidence, not a general proof.
-- **CONDITIONAL:** implication depends on a named open input.
-- **OPEN / REFUTED / SUPERSEDED:** literal meanings.
+Status vocabulary: **PROVED** means an in-repo proof or exact reduction;
+**CITED** imports an external theorem; **FINITE-EXACT** is exhaustive only on
+its stated finite universe; **VERIFIED** is reproducible evidence;
+**CONDITIONAL**, **OPEN**, **REFUTED**, and **SUPERSEDED** have literal scope.
 
 ## LRC(14)
 
@@ -22,25 +17,12 @@ speeds, corresponding to 14 total runners. External work settles at most 13
 total runners. The residual is not a missing routine finite run and not a
 uniform small-period lemma.
 
-The two most useful decompositions of the remaining obstruction are:
-
-```text
-global LRC(14)
-  -> finite-height / spectrum / pinning shell
-  -> compact-covering structural shell
-       -> extract a tight or AP-like 12-speed core
-       -> use the proved post-extraction far-element exit
-```
-
-and
-
-```text
-safe certificate
-  = seed + selector + preserver + pointwise exit.
-```
-
-We have strong selectors and preservers. The genuinely missing objects are the
-structural supplier/seed and a lossless exit.
+Two working decompositions are
+`global -> finite-height/pinning shell -> compact structural shell ->
+tight or AP-like core -> far-element exit` and
+`safe certificate = seed + selector + preserver + pointwise exit`.
+Selectors and preservers are strong; the missing objects are the structural
+supplier/seed and a lossless exit.
 
 ### What is closed
 
@@ -161,7 +143,9 @@ structural supplier/seed and a lossless exit.
   maximum spanning-tree weight of the outside-guard pair intersections. Its
   exact three-frequency replay closes all `4,120` rank-seven pairs through
   terminal height `24`; proving the same strict inequality at all heights is
-  the live depth-four target.
+  the live depth-four target. At rank seven its scalar deficit is exactly the
+  negative signed-fold sum divided by `196`, hence equals outside-cover
+  multiplicity under containment.
   THM-2062 adds the hereditary wheel; THM-2065 makes circuit-free residuals finite.
 - **PROVED relative whole-product decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says bounded scalar relations must lift to vector-character relations. Two

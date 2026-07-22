@@ -1,4 +1,23 @@
-## boxeph-2026-07-22-S229 -- kernel-pure Lean: the unique-channel DvdK-free criterion (any support) + the cancellation<->inclusion-exclusion dictionary (HYP-8930)
+> **CURRENT-TRUTH WARNING (2026-07-21):** This is chronological provenance,
+> not a status authority. Entries may be corrected after filing. Start with
+> [`START-HERE.md`](START-HERE.md), [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md),
+> and [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
+
+## codex-2026-07-22 -- live-pull correction and the true depth-five exit
+
+- MISTAKE-231 retracts the first, colliding THM-2080 terminal-resonance gate:
+  it reversed the implication `G_Q subset E_h`, which covers `E_h^c`, not
+  `E_h`. Its exact mixed-radius fold formula survives inside the valid THM-2080.
+- The first-reserved THM-2080 is valid: for odd `h`, every 1/14 danger comb
+  overlaps the 1/7 guard comb by at least `1/42`, with equality only at
+  `q=6h`. Hunter's star makes six distinct danger combs insufficient to cover
+  the guard complement. Hence terminal size is at least seven and the dyadic
+  tower has depth at most four.
+- For THM-2081's rank-seven deficit, the THM-2080 fold formula shows that
+  negative mod-14 correlation pays exactly for multiplicity excess in a cover
+  of `E_h^c`; this is the live scalar boundary, not a small-ratio gate.
+
+## boxeph-2026-07-22-S229 -- kernel-pure Lean: the unique-channel DvdK-free criterion (any support) + the cancellation/inclusion-exclusion dictionary (HYP-8930)
 
 **Owner:** work the next Lean DvdK target; mine past results on cancellation and inclusion-exclusion.
 
