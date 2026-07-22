@@ -756,3 +756,4 @@ import TournamentH7.GMC2Thm2067Reduced
 import TournamentH7.GMC2FullRootPhi
 >>>>>>> Stashed changes
 import TournamentH7.GMC2GeneratingFunction
+import TournamentH7.GMC2TopLagrange
