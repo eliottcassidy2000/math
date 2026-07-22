@@ -57,29 +57,39 @@ theorem logDeriv_map {u : PowerSeries A} (hu : IsUnit u) :
 
 end General
 
-/-! ## Disk specialization (reduction; see reflection `hderiv-disk-annulus-split-...`)
+/-! ## Disk specialization: `xCoeff0` on `F⟦x⟧⟦t⟧` is the ring hom `map constantCoeff`
 
-The h-side `ha` follows from `logDeriv_map` on the **disk subring** `F⟦x⟧⟦t⟧ ↪ F⸨x⸩⟦t⟧` (image of
-`PowerSeries.map (HahnSeries.ofPowerSeries ℤ F)`), where `xCoeff0 = PowerSeries.map (constantCoeff)` is a
-ring homomorphism (because `[x⁰]` is multiplicative on *power* series — **false** on Laurent series, e.g.
-`1 + t(x+x⁻¹)`).  Concretely, for a unit `H : F⟦x⟧⟦t⟧` with `hfr = map ofPowerSeries H` (the form the
-transpose delivers):
+On the **disk subring** `F⟦x⟧⟦t⟧ ↪ F⸨x⸩⟦t⟧` (image of `map (ofPowerSeries ℤ F)`), `xCoeff0` is the ring
+homomorphism `map constantCoeff` — because `[x⁰]` is multiplicative on *power* series (false on Laurent
+series, e.g. `1 + t(x+x⁻¹)`).  The Weierstrass unit lands here, so the h-side is `logDeriv_map` twice. -/
 
-```
-xCoeff0(logDeriv hfr) = xCoeff0(map ofPowerSeries (logDeriv H))     [logDeriv_map, ψ = ofPowerSeries]
-                      = map constantCoeff (logDeriv H)              [xCoeff0∘ofPowerSeries = constantCoeff]
-                      = logDeriv (map constantCoeff H)              [logDeriv_map, ψ = constantCoeff]
-                      = derivativeFun g * Ring.inverse g,  g := xCoeff0 hfr = map constantCoeff H
-```
+section Disk
 
-— exactly `GMC2DvdKHderiv.hderiv_of_frame`'s hypothesis `ha`.  The two `logDeriv_map` applications above are
-the kernel-pure lemma proved in this module; the remaining `xCoeff0 ∘ ofPowerSeries = constantCoeff` step is
-elementary (`ofPowerSeries_apply_coeff` at index `0`) and is finalized against the transpose's concrete
-embedding of `hfr` (death-star's lane), so the h-side composes the moment the transpose lands.
--/
+variable {F : Type*} [Field F]
+
+/-- **`[x⁰]` on the disk subring is `constantCoeff`.** -/
+theorem xCoeff0_map_ofPowerSeries (H : PowerSeries (PowerSeries F)) :
+    GMC2DvdKFrame.xCoeff0 (PowerSeries.map (HahnSeries.ofPowerSeries ℤ F) H)
+      = PowerSeries.map (PowerSeries.constantCoeff (R := F)) H := by
+  ext k
+  rw [GMC2DvdKFrame.coeff_xCoeff0, coeff_map, coeff_map]
+  simpa using HahnSeries.ofPowerSeries_apply_coeff (PowerSeries.coeff k H) 0
+
+/-- **The h-side (a), on the disk.**  For a unit `H : F⟦x⟧⟦t⟧`, with `hfr = map ofPowerSeries H` (the form
+the transpose delivers), `xCoeff0(logDeriv hfr) = g_t · g⁻¹` with `g = xCoeff0 hfr`.  Exactly
+`GMC2DvdKHderiv.hderiv_of_frame`'s hypothesis `ha`. -/
+theorem xCoeff0_logDeriv_map_ofPowerSeries {H : PowerSeries (PowerSeries F)} (hH : IsUnit H) :
+    GMC2DvdKFrame.xCoeff0 (GMC2DvdKFrame.logDeriv (PowerSeries.map (HahnSeries.ofPowerSeries ℤ F) H))
+      = derivativeFun (GMC2DvdKFrame.xCoeff0 (PowerSeries.map (HahnSeries.ofPowerSeries ℤ F) H))
+        * Ring.inverse (GMC2DvdKFrame.xCoeff0 (PowerSeries.map (HahnSeries.ofPowerSeries ℤ F) H)) := by
+  simp only [xCoeff0_map_ofPowerSeries]
+  rw [← logDeriv_map (HahnSeries.ofPowerSeries ℤ F) hH, xCoeff0_map_ofPowerSeries,
+    logDeriv_map (PowerSeries.constantCoeff (R := F)) hH, GMC2DvdKFrame.logDeriv]
+
+end Disk
 
 end GMC2DvdKFrameHSide
 
-#print axioms GMC2DvdKFrameHSide.derivativeFun_map
-#print axioms GMC2DvdKFrameHSide.map_ringInverse_unit
 #print axioms GMC2DvdKFrameHSide.logDeriv_map
+#print axioms GMC2DvdKFrameHSide.xCoeff0_map_ofPowerSeries
+#print axioms GMC2DvdKFrameHSide.xCoeff0_logDeriv_map_ofPowerSeries

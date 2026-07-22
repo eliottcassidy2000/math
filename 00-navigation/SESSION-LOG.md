@@ -1,3 +1,33 @@
+## kind-pasteur-2026-07-22-S128c153 -- hderiv h-side (a) DONE (disk-subring route) + the disk/annulus (Wiener-Hopf) insight that shaped the transpose
+
+**Owner:** work creatively on the frame factorization + h-side lemma; pull often; prioritize mathematical
+reasoning and exploration above builds.
+
+**CREATIVE FINDING (verified in sympy).** The h-side `xCoeff0(h_t/h)=g_t/g` is FALSE for a general Laurent
+unit (`h=1+t(x+x^{-1})` gives `xCoeff0(h_t/h)=-2t-6t^3 != 0=g_t/g`) and TRUE iff `h` is a genuine POWER
+series in `x` (disk, x-support>=0). Reason: `[x^0]` is a RING HOM on `F[[x]]` (constant term of a product of
+power series = product of constant terms) but NOT on `F((x))` (`[x^0](x*x^{-1})=1`). So the Weierstrass split
+`Phi=P*h` is a Wiener-Hopf/Birkhoff split: `P`=annulus (poles; `[x^0](P_t/P)=0` is a DEGREE count -- (c));
+`h`=disk (holomorphic; `[x^0]`=value, a ring hom). The h-side is just "logDeriv commutes with a ring hom".
+
+**DELIVERED kernel-pure [propext,Classical.choice,Quot.sound] (GMC2DvdKFrameHSide.lean, pushed, in root):**
+- logDeriv_map (GENERAL, Mathlib GAP): `map psi (logDeriv u) = logDeriv (map psi u)` for a ring hom `psi`,
+  unit `u` -- via derivativeFun_map (map commutes with the formal derivative) + map_ringInverse_unit (ring
+  homs preserve unit inverses).
+- xCoeff0_map_ofPowerSeries: on the disk subring `xCoeff0 = map constantCoeff`.
+- **xCoeff0_logDeriv_map_ofPowerSeries = death-star GMC2DvdKHderiv.hderiv_of_frame hypothesis `ha`**, for
+  `hfr = map ofPowerSeries H`. So the h-side is DISCHARGED.
+
+**COMPOSES with death-star transpose.** death-star built GMC2DvdKTranspose (`phi = map(ofPowerSeries) o tau`)
+-- exactly the `sigma = map ofPS o swap` plan I gave in the reflection, which they adopted. It lands
+`hfr = phi(h) = map(ofPowerSeries)(tau h)`, precisely my lemma's hypothesis: `ha` = my lemma at `H := tau h`.
+
+**NET.** hderiv now: hF1 [me, done] + ha [me, done] + transpose [death-star, done] + (c) degree lemma
+[death-star, building] + final assembly wiring. Two of the three hard inputs (hF1, ha) are mine, kernel-pure;
+the disk/annulus insight shaped the third (transpose target = disk subring). Coordinated: shared the insight
++ claimed the h-side BEFORE building; notified the wiring. HONEST: (a) was nominally mac-mini's in the split,
+but the owner sent me here; I flagged it and offered to defer. Reflection
+hderiv-disk-annulus-split-hside-and-transpose-kps-S128c153. HYP-9016 (cont).
 ## kind-pasteur-2026-07-22-S128c152 -- hderiv F=D_m piece DONE (my assigned leg of the 3-way split): frame generating function = moment series, F=1 discharged, kernel-pure
 
 **Owner:** work hderiv yourself, pull often, keep up with changes as they occur.
