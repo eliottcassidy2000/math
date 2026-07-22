@@ -75,10 +75,10 @@ Older chronology is in
 
 ## NC2 / GMC formalization
 
-- THM-2022 proves NC2/GMC(2). THM-2101 gives two independent product-free paper
-  proofs of strict two-sided DvdK: additive monodromy, and one transcendental
-  specialization where a contour sum contradicts Galois incidence. Its
-  irreducibility and orbit/Lagrange core are kernel-checked; analytic wrappers
+- THM-2022 proves NC2/GMC(2). THM-2101 gives three product-free paper proofs of
+  strict two-sided DvdK: monodromy, transcendental specialization, and a purely
+  t-adic Newton-packet/partial-fraction argument. Its irreducibility and
+  orbit/Lagrange core are kernel-checked; global wrappers
   remain. General complex `DvdK1` is the sole formal endpoint premise, not a
   paper gap. THM-2111 gives the bound `binom(M+N,min(M,N))`.
 - HYP-8925/8930 give positive-coefficient and fixed-support unique-channel

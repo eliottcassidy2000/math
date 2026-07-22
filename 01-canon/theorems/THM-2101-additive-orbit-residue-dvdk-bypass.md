@@ -1,18 +1,20 @@
 ---
 id: THM-2101
-title: "Two additive orbit-residue proofs of one-variable DvdK"
+title: "Three additive orbit-residue proofs of one-variable DvdK"
 status: >
   PROVED ON PAPER; FORMALIZATION PARTIAL. For a genuinely two-sided complex
-  Laurent polynomial, all positive-power constant terms cannot vanish. Two
+  Laurent polynomial, all positive-power constant terms cannot vanish. Three
   independent additive proofs use the same barycentric residue observable.
   One analytically continues the small-root identity through transitive
   monodromy; the other specializes once at a small parameter transcendental
   over the coefficient field and applies a Galois root-packet lemma. Both
-  contradict the zero full-root Lagrange sum and bypass the small-root product,
-  Hensel factorization, logarithms, and Wiener--Hopf. Check A, irreducibility,
-  additive incidence, and the full-root identity are kernel-checked. The
-  analytic monodromy route, the transcendental contour/lift wrapper, and the
-  final DvdK1 interface are not yet formalized.
+  contradict the zero full-root Lagrange sum. A third, purely t-adic proof uses
+  the two slopes of the Newton polygon and formal partial fractions in a
+  Laurent Tate algebra; it needs neither continuation nor specialization.
+  All three bypass the small-root product, Hensel factorization, logarithms,
+  and Wiener--Hopf. Check A, irreducibility, additive incidence, and the full-
+  root identity are kernel-checked. The three global wrappers and final DvdK1
+  interface are not yet formalized.
 source: codex-2026-07-22-GMC2-additive-orbit-residue
 related:
   - THM-1550
@@ -32,7 +34,7 @@ output_sha256: d2f4ebf4607ceeec3936c5ff124be0326b916e6adae6069ed31dbe99e6e2ce30
 hash_basis: repository blobs with LF line endings
 ---
 
-# THM-2101 -- two additive orbit-residue proofs of the strict DvdK theorem
+# THM-2101 -- three additive orbit-residue proofs of the strict DvdK theorem
 
 ## 1. Statement
 
@@ -182,10 +184,11 @@ This is impossible over `C`. Assumption (4) is false, proving (2). QED.
 
 ## 5. Exact scope and hostile boundary
 
-Both signs in the Laurent support are load-bearing. If `N=0`, then
-`M-1=d-1`, (13) has an `u^(-1)` term, and the full-root sum need not vanish.
-For example `f=u^(-1)` has every positive constant term zero, while its small
-cluster is the full root set and its residue sum is one.
+Both signs in the Laurent support are load-bearing. If the positive endpoint
+is absent, then `deg R<=M`; the degree of `Phi` can be `M`, so the tested
+exponent `M-1` is the top Lagrange exponent and the full-root sum need not
+vanish. For example `f=u^(-1)` has every positive constant term zero, while
+its small cluster is the full root set and its residue sum is one.
 
 No simplicity problem is hidden: the basepoint is chosen outside the finite
 branch-value set. No choice of a global small-root subset is claimed. The
@@ -431,3 +434,123 @@ dominated-convergence, `RatFunc.liftAlgHom`, and splitting-field lift pieces.
 THM-1550/HYP-8960's Henselian small-root-product route remains independently
 interesting, and its power-series local-ring instance is now kernel-checked,
 but it is not a dependency of this additive proof.
+
+## 9. Purely t-adic root-packet proof
+
+There is a third proof with no complex contour, transcendental specialization,
+or analytic continuation. Retain (1), (4), and
+
+```text
+Phi(X,t)=X^M-tR(X),                 d=M+N.              (20)
+```
+
+Let `F=C(t)`, let `L/F` be a splitting field of `Phi`, and choose an
+`F`-embedding
+
+```text
+iota:L -> algebraic closure of C((t)).                 (21)
+```
+
+Such an embedding exists by the extension theorem for algebraic closures.
+All the image roots lie in one finite extension `E/C((t))`; equip `E` with the
+extended `t`-adic valuation `v`, normalized by `v(t)=1`.
+
+### 9.1. The Newton polygon selects the packet
+
+The coefficient of `X^M` in `Phi` is `1-tr_M` and has valuation zero. The
+nonzero coefficients away from degree `M` have valuation one; missing
+coefficients have valuation infinity. Because `r_0 r_d!=0`, the lower Newton
+polygon has exactly the two segments
+
+```text
+(0,1) -> (M,0) -> (M+N,1),                            (22)
+```
+
+of slopes `-1/M` and `1/N`. The Newton-polygon root theorem therefore gives
+exactly
+
+```text
+M roots with v(alpha)=1/M,
+N roots with v(alpha)=-1/N.                            (23)
+```
+
+In particular no root has valuation zero. Pull the positive-valuation roots
+back through `iota` and call the resulting subset of the roots in `L`
+`S_+`. This is a place-selected packet; it is not asserted Galois-stable.
+
+### 9.2. Formal partial fractions recover the constant terms
+
+Work in the Laurent Tate algebra over `E` on the unit annulus `|X|=1`, for the
+nonarchimedean norm associated with `v`. Since constants in `C^*` have norm
+one, `|t f(X)|<1` in the Gauss norm. Thus
+
+```text
+X^(M-1)/Phi(X,t)
+ =1/[X(1-tf(X))]
+ =sum_(m>=0) t^m f(X)^m/X.                            (24)
+```
+
+The polynomial `Phi` is irreducible over `C(t)` by Section 3 and is separable
+in characteristic zero. Since `M-1<d`, its ordinary partial fractions in `E`
+are
+
+```text
+X^(M-1)/Phi(X,t)
+ =sum_(Phi(alpha,t)=0)
+   [alpha^(M-1)/Phi_X(alpha,t)]/(X-alpha).             (25)
+```
+
+Both sides have canonical convergent expansions on the unit annulus. Namely,
+
+```text
+1/(X-alpha)=X^(-1) sum_(j>=0)(alpha/X)^j,   v(alpha)>0;
+1/(X-alpha)=-alpha^(-1) sum_(j>=0)(X/alpha)^j,
+                                                   v(alpha)<0.              (26)
+```
+
+The coefficient of `X^(-1)` in (26) is one in the first case and zero in the
+second. Taking that continuous Laurent coefficient in (24)--(25) gives the
+exact identity in `E`
+
+```text
+sum_(m>=0) CT(f^m)t^m
+ =sum_(alpha in iota(S_+)) alpha^(M-1)/Phi_X(alpha,t). (27)
+```
+
+No root product or choice of logarithm occurs: the valuation chooses precisely
+which simple-pole expansions contribute to one Laurent coefficient.
+
+Under the vanishing assumption (4), the left side of (27) is one. Define the
+corresponding global packet sum in the splitting field by
+
+```text
+b=sum_(alpha in S_+) alpha^(M-1)/Phi_X(alpha,t) in L. (28)
+```
+
+Equation (27) says `iota(b)=1`. Injectivity of (21) gives `b=1`, so in
+particular `b` belongs to the base field `F`.
+
+Apply the root-packet lemma of Section 8.1 to the irreducible polynomial
+`Phi`, the subset `S_+`, and `k=M-1`. Since
+
+```text
+M-1<=M+N-2=d-2,                                      (29)
+```
+
+that lemma says `b=0`. This contradiction proves the
+theorem again. QED.
+
+### 9.3. What the t-adic proof isolates
+
+The two-sided hypothesis is visible as the second Newton slope. If the positive
+endpoint is absent, then `deg R<=M` and `deg_X(Phi)=M`, so `M-1` is the top
+Lagrange exponent and the zero full-root identity is unavailable. For
+`f=X^(-1)`, the positive packet is the whole root set and its sum is one.
+Characteristic zero is also load-bearing: it
+is used for separability and for `|G|!=0` in the root-packet lemma. Finally,
+the least-exponent shift is essential; overshifting inserts a zero root and
+destroys the irreducible packet setup.
+
+This proof is algebraic after passing to one valued-field place. Its missing
+formal wrapper is Newton-polygon root counting plus the Laurent Tate-algebra
+coefficient identity (27), not any analytic small-root or product theorem.

@@ -256,15 +256,15 @@ addresses, endpoint owners, and both original odd-tail owner words.
   contradiction, irreducibility, and the additive orbit/Lagrange core are
   kernel-checked and root-imported. The endpoints `nc2_of_dvdK1` and
   `gmc2_of_dvdK1` retain general complex `DvdK1` as their sole formal premise.
-  THM-2101 proves strict two-sided DvdK on paper by two independent product-free
-  additive routes: monodromy and one small transcendental specialization. Its
-  analytic contour/monodromy/lift wrappers remain Lean assembly. THM-2111 gives
+  THM-2101 proves strict two-sided DvdK on paper by three product-free additive
+  routes: monodromy, transcendental specialization, and a purely t-adic Newton-
+  packet proof. Their global wrappers remain Lean assembly. THM-2111 gives
   the effective seed; THM-2067 is only the historical small-root-product route.
 
 ### Why THM-2022 works
 
-THM-2101 makes the lowest balanced Wick face nonzero by an additive small-root
-residue sum and transitive monodromy. THM-2111 bounds its first return by
+THM-2101 makes the lowest balanced Wick face nonzero by an additive root-packet
+residue sum and transitive incidence. THM-2111 bounds its first return by
 `binom(M+N,min(M,N))` and identifies it with an exact compound-determinant
 order. After specialization at a good prime,
 Kummer kills non-dilated channels, strict height kills dilated off-face terms,
@@ -297,8 +297,8 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 Package THM-2022 for publication and sharpen THM-2111's compound degree from
 the binomial bound toward the conjecturally sharp `M+N`; the current result is
 already a paper-level removal of the external DvdK dependency. Formalization
-of general complex `DvdK1` is separate: reciprocal-monic Hensel now constructs
-each ramified small root, while branch products, analytic continuation, and the wrapper remain.
+of general complex `DvdK1` is separate: reciprocal-monic Hensel constructs each
+ramified root, while the t-adic packet coefficient and final wrapper remain.
 Positive/two-charge/unique-channel formal leaves are substantive, not general.
 But HYP-8931's `LowestFaceUniqueChannel P` class is inconsistent by the empty
 level-set witness `lambda=0, delta=-1, F=empty` (MISTAKE-240), so its

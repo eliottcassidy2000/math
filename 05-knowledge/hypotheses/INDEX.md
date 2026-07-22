@@ -16,9 +16,9 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
 - **HYP-8960:** reciprocal monicization now constructs each root of
   `Z^M-R(sZ)` from a simple nonzero residue root. Simultaneous branch/product
   control and the Wiener--Hopf identity remain open.
-- **THM-2101:** strict two-sided DvdK has two product-free paper proofs,
-  monodromy and one transcendental specialization. Their contour/monodromy,
-  splitting-lift, and final `DvdK1` wrappers remain Lean assembly.
+- **THM-2101:** strict two-sided DvdK has three product-free paper proofs:
+  monodromy, transcendental specialization, and a purely t-adic packet proof.
+  Their global constructions and final `DvdK1` wrapper remain Lean assembly.
 
 ## Results that change the live graph
 
@@ -56,7 +56,7 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
   and forces a rank-eight sparse mod-11 alternative or `143|det(g,c_i)`.
 - **THM-2095 (PROVED):** the live guard-ratio scale divides `252576225`; the
   `240*1165=279600` marked-pair ledger does not bound the other six speeds.
-- **THM-2101/2111 (PROVED PAPER):** additive DvdK avoids root products; the
+- **THM-2101/2111 (PROVED PAPER):** three additive DvdK proofs avoid root products, including a purely t-adic Newton-packet proof; the
   effective first return is a compound-determinant order at most
   `binom(M+N,min(M,N))`. Sharpening and Lean assembly are separate.
 - **THM-2102/2110/2113/2118/2127/2129 (PROVED planar-JC strata):** cubic source

@@ -6,7 +6,7 @@
 
 1. **Main prize:** LRC(14), with 13 nonzero relative speeds, is **OPEN**; LRC is known through 13 total runners.
 2. **Do not chase old shortcuts:** uniform good period `q <= 25` is false; uniform emptiness of the twelve-speed sporadic branch remains open.
-3. **Major closure:** THM-2022 proves NC2 and GMC(2); THM-2111 is effective and THM-2101 gives two product-free additive proofs. Lean checks the algebraic core, `HeightWitnessSupplier`, and reciprocal-monic small-root construction; general `DvdK1` remains the sole formal leaf.
+3. **Major closure:** THM-2022 proves NC2 and GMC(2); THM-2111 is effective and THM-2101 gives three product-free additive proofs, including a purely t-adic packet proof. Lean checks the algebraic core and `HeightWitnessSupplier`; general `DvdK1` remains the sole formal leaf.
 4. **Truth discipline:** corrected canon outranks canon, exact computation, hypothesis, synthesis, and historical prose.
 5. **Research posture:** use Anchor / Niche / Wildcard; demand mechanisms, hostile controls, and preserved/lost coordinates.
 

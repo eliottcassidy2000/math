@@ -41,9 +41,9 @@ Format per entry:
   at a missing dependency `.olean` and therefore certified nothing.
 - **Correct framing:** the original formal claim required a dependency-aware
   rebuild and a genuine analytic bridge. The core was subsequently repaired
-  and root-imported. THM-2101 is proved on paper by two product-free routes,
-  additive monodromy and one transcendental specialization, while their
-  analytic contour/monodromy, splitting-lift, and final `DvdK1` wrappers remain
+  and root-imported. THM-2101 is proved on paper by three product-free routes:
+  additive monodromy, transcendental specialization, and a purely t-adic
+  Newton-packet proof. Their global wrappers and final `DvdK1` interface remain
   unformalized in Lean.
 
 ---
