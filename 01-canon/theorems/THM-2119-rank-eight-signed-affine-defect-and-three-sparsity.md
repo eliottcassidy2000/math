@@ -1,5 +1,5 @@
 ---
-id: THM-2117
+id: THM-2119
 title: "Signed affine defect and three-sparsity gates for rank-eight torus covers"
 status: >
   RESERVED / PROOF UNDER FINAL AUDIT. The intended theorem strengthens
@@ -21,7 +21,7 @@ related:
   - THM-2115
 ---
 
-# THM-2117 -- reserved signed-affine defect gate
+# THM-2119 -- reserved signed-affine defect gate
 
 The theorem number is reserved while the three fiber cases, strict-boundary
 audit, and interaction with the live clock/Toeplitz carriers are written.

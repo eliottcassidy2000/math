@@ -1,5 +1,5 @@
 ---
-id: THM-2116
+id: THM-2118
 title: "All-degree cubic Faber boundary and flux polynomials are coprime"
 status: >
   RESERVED / PROOF UNDER FINAL REFEREE. For every n>=1 not divisible by
@@ -18,7 +18,7 @@ script: 04-computation/jc2_cubic_faber_boundary_flux_coprimality_codex_20260722.
 output: 05-knowledge/results/jc2_cubic_faber_boundary_flux_coprimality_codex_20260722.out
 ---
 
-# THM-2116 -- reserved all-degree cubic Faber coprimality
+# THM-2118 -- reserved all-degree cubic Faber coprimality
 
 The theorem number and referee filenames are reserved while the exact proof,
 independent coefficient recurrences, and frozen transcript are completed.
