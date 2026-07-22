@@ -1,17 +1,16 @@
 ---
 id: THM-2071
-title: "Quadratic-fiber square/parity gate for planar Keller pencils"
+title: "Quadratic-fiber rigidity and tame normal form for planar Keller pencils"
 status: >
   PROVED. If one member P of a complex planar Keller pair has degree two
-  along a linear source fiber, then its leading fiber coefficient is a square
-  polynomial. After minimizing the complementary component modulo target
-  shears Q -> Q-H(P), its fiber degree is odd. If the quadratic leading
-  coefficient is constant, the reduced degree is one and the map has an
-  explicit tame normal form. Consequently a hypothetical JC(2)
-  counterexample with a quadratic pencil member must have a nonconstant
-  square leading coefficient and odd reduced complementary fiber degree at
-  least three. This is a pencil-direction gate, not a reduction of JC(2), a
-  statement about generic cover degree, or a Jelonek classification.
+  along a linear source fiber, then its leading fiber coefficient is constant,
+  its complementary component has reduced fiber degree one, and the pair has
+  an explicit tame normal form. The intermediate square/parity descent is
+  strengthened by a centered parity decomposition and a noncancellation law
+  with central-binomial coefficient. Consequently no hypothetical JC(2)
+  counterexample has a quadratic member in any output-pencil/source-foliation
+  direction. This is a pencil-direction theorem, not a statement about generic
+  cover degree or a Jelonek classification.
 source: codex-2026-07-21-JC2-quadratic-fiber
 depends_on: []
 related:
@@ -22,12 +21,12 @@ related:
   - MISTAKE-229
 script: 04-computation/jc2_quadratic_fiber_square_gate_codex_20260721.py
 output: 05-knowledge/results/jc2_quadratic_fiber_square_gate_codex_20260721.out
-script_sha256: 147ade74f38ed8285cbfd5ab9960f6622626cb36db8df5eadf743beb716984fa
-output_sha256: 1bf684ba0a0588702df2bae7c5709586a6c15da07c32e579833a3d5b84ff2d2d
+script_sha256: 3d5ce81db8601a3035db28ae63bf3d003d4f72372d304c3250098a64a8efb267
+output_sha256: 2b692ddf3606a0226bb22b88b0a2060a5ecff951b41ba02a8dee3af111821030
 hash_basis: repository blobs with LF line endings
 ---
 
-# THM-2071 -- quadratic-fiber square/parity gate
+# THM-2071 -- quadratic-fiber rigidity and tame normal form
 
 Let
 
@@ -48,17 +47,15 @@ the natural numbers.
 
 The conclusions are:
 
-1. `mu_y(P,Q)` is odd.
-2. `A=a U^2` for some `a in C*` and `U in C[x]`. Over `C` the scalar may be
-   absorbed into `U`, so `A` itself is a square.
-3. If `mu_y(P,Q)=1`, the map is tame and has the explicit normal form in
-   Section 3 below.
-4. More strongly, if `A` is constant, then `mu_y(P,Q)=1`; hence every
-   constant-leading quadratic-fiber Keller pair is tame.
+1. `A` is constant.
+2. `mu_y(P,Q)=1`.
+3. The pair is tame and has the explicit normal form in Section 3 below.
 
-In particular, a nonsquare `A` admits no polynomial Jacobian mate at all. A
-simple root, or any root of odd multiplicity, in the top fiber coefficient is
-already an obstruction.
+The proof first gives two useful intermediate constraints: the reduced degree
+is odd, and `A=aU^2` is a square up to a nonzero scalar. A centered parity
+argument then rules out every nonconstant `U` simultaneously. Thus not only a
+nonsquare `A`, but every nonconstant top fiber coefficient, admits no
+polynomial Jacobian mate in this quadratic-fiber setting.
 
 ## 1. Top-coefficient law
 
@@ -205,54 +202,167 @@ tame. This degree-one endpoint can also be fed to THM-2063 after the nonlinear
 target shear; (6)--(15) record the stronger normal form native to the
 quadratic descent.
 
-## 4. Constant quadratic coefficient forces the tame endpoint
+## 4. Centered parity rigidity closes every odd residual degree
 
-Assume now only that `A in C*`; the reduced odd degree `n` may initially be
-arbitrary. Completing the square by the polynomial source shear
-
-```text
-Y=y+B/(2A),             P=A Y^2+D(x),
-D=C-B^2/(4A),
-```
-
-preserves the reduced fiber degree. Write the reduced complement as
+Absorb the scalar in the square gate into `U`, so `A=U^2`. Work temporarily
+over `K=C(x)` and set
 
 ```text
-Q_0=sum_j q_j(x)Y^j.
+h=B/(2U),             z=Uy+h,             D=C-h^2.
 ```
 
-The Jacobian equation is
+Then `P=z^2+D`. If a polynomial `Q_0(x,y)` is written as an element of
+`K[z]`, the chain rule gives the exact identity
 
 ```text
-D' (Q_0)_Y-2AY (Q_0)_x=kappa.                         (16)
+J_xy(P,Q_0)=U L(Q_0),
+L=D' partial_z-2z partial_x,                             (16)
 ```
 
-The top coefficient in (16) makes `q_n` constant. For the odd coefficient
-chain, comparison of the coefficient of `Y^(j-1)` gives
+where `partial_x` in `L` holds `z` fixed. Notice that `L(P)=0`, `L` sends the
+even part in `z` to an odd polynomial, and it sends the odd part to an even
+polynomial.
+
+Split `Q_0=Q_ev+Q_odd` by `z`-parity. Since `kappa/U` is even, (16) gives
 
 ```text
-q_(j-2)'=(j/(2A))D' q_j,          j=n,n-2,...,3.      (17)
+L(Q_ev)=0,                 L(Q_odd)=kappa/U.            (17)
 ```
 
-Starting from nonzero constant `q_n`, recurrence (17) shows inductively that
-`q_1=f(D)` for a polynomial `f` of degree `(n-1)/2` with nonzero leading
-coefficient. The constant term of (16) is
+The first equation loses no polynomial information. Indeed, write the even
+part uniquely as
 
 ```text
-D' q_1=kappa.                                         (18)
+Q_ev=sum_i c_i(x)P^i,                 c_i in K.
 ```
 
-Let `G'=f`. Then (18) gives
+Because `L(P)=0`,
 
 ```text
-G(D(x))=kappa x+constant.                             (19)
+L(Q_ev)=-2z sum_i c_i'(x)P^i.
 ```
 
-If `n>=3`, then `deg G=(n+1)/2>=2`; equation (19) is impossible by degree
-multiplicativity. (`D` cannot be constant, since then (18) reads `0=kappa`.)
-Hence `n=1`, and Section 3 proves tameness.
+The powers of `P=z^2+D` are independent over `K`, so every `c_i'=0` and
+every `c_i` lies in `C`. Thus `Q_ev=H(P)` for an honest `H in C[T]`. It can be
+removed by a target shear even though the parity split was performed over
+`K`. After this shear, rename the nonzero odd part as `Q_0` and write
 
-## 5. Pencil and coordinate invariance
+```text
+Q_0=sum_(j=0)^r a_j(x)z^(2j+1),          a_r!=0.        (18)
+```
+
+The highest coefficient in `L(Q_0)` says `a_r=c in C*`. The coefficients of
+`z^(2j)`, followed by the constant coefficient, give the full triangular
+system
+
+```text
+2a_(j-1)'=(2j+1)D'a_j,       j=r,r-1,...,1,
+D'a_0=kappa/U.                                        (19)
+```
+
+In particular `D'` is not identically zero. Starting from `a_r=c`, (19)
+shows recursively that every `a_j` is a polynomial in `D`; more precisely,
+
+```text
+a_(r-k)(D)=c binom(r+1/2,k)D^k + lower powers of D,
+                                      0<=k<=r.          (20)
+```
+
+Now use the information that was discarded by merely working over `K[z]`:
+the original constant fiber coefficient
+
+```text
+q_0(x)=Q_0(x,0)=sum_(j=0)^r a_j(D)h^(2j+1)             (21)
+```
+
+is a polynomial in `x`. If `h` had a finite pole, then `D=C-h^2` would have
+leading polar part `-h^2`. By (20), every top-degree contribution in (21)
+has the same polar order, and their total coefficient is
+
+```text
+c S_r,
+S_r=sum_(k=0)^r (-1)^k binom(r+1/2,k)
+   =(-1)^r binom(2r,r)/4^r !=0.                        (22)
+```
+
+The last equality is the finite alternating-binomial identity. Hence the
+leading pole cannot cancel. This contradicts `q_0 in C[x]`, so `h` has no
+finite pole. Therefore
+
+```text
+h in C[x],                    equivalently U divides B. (23)
+```
+
+It follows that `D=C-h^2` and `a_0(D)` are polynomials. The last equation in
+(19) now says that the polynomial `D'a_0(D)` equals `kappa/U`. Consequently
+`1/U` is a polynomial, so `U` is constant. Let `d=deg D`; the same equation
+forces `d>=1`. Formula (20) says `deg_T a_0=r`, and therefore
+
+```text
+0=deg(D'a_0(D))=(r+1)d-1.
+```
+
+Thus `r=0` and `d=1`. The reduced complementary degree is `2r+1=1`, and
+Section 3 supplies the tame normal form and polynomial inverse. This also
+shows directly that the apparent nonconstant-square residual was empty at
+every odd degree, not only in the cubic case.
+
+## 5. The cubic system and the rational-integrability audit
+
+For `r=1`, retain an inessential constant target term and write
+
+```text
+Q_0=c z^3+E(x)z+F(x).
+```
+
+Equation (16) is equivalent coefficient by coefficient to
+
+```text
+E'=(3c/2)D',             F'=0,             D'E=kappa/U.
+```
+
+Hence, for constants `e,f in C`,
+
+```text
+E=(3c/2)D+e,             F=f,
+((3c/4)D^2+eD)'=kappa/U.                           (24)
+```
+
+On returning to `y`, the linear coefficient is
+
+```text
+q_1=U((3c/2)C+e)+(3c/8)B^2/U.                     (25)
+```
+
+Thus polynomiality of `q_1` already gives `U | B^2`. The constant coefficient
+is stronger:
+
+```text
+q_0=-(c/2)h^3+((3c/2)C+e)h+f.                     (26)
+```
+
+At a finite pole of `h`, the first term in (26) cannot cancel, so `h` is a
+polynomial and `U | B`, exactly the `r=1` instance of (22).
+
+Equation (24) also exposes an independent rational-integrability obstruction.
+For nonconstant `U in C[x]`, a rational function `R in C(x)` satisfying
+
+```text
+R'=1/U                                                   (27)
+```
+
+exists if and only if `U=u(x-alpha)^m` with `u in C*` and `m>=2`. To prove
+necessity, write the distinct-root multiplicities of `U` as `m_i`. A rational
+derivative has no simple pole, so every `m_i>=2`, and `R` has pole order
+`m_i-1` at that root. If `d=deg U` and there are `s` distinct roots, the
+rational-map degree of `R` is therefore `d-s`. At infinity, integrating
+`R'=1/U` shows that `R-R(infinity)` has a zero of order `d-1`. A fiber
+multiplicity cannot exceed the map degree, so `d-1<=d-s`, whence `s=1`.
+The converse is immediate by integrating a negative power. Applied to (24),
+this lemma reduces the cubic branch to a single-root power even before (26);
+the pole noncancellation then eliminates that last family.
+
+## 6. Pencil and coordinate invariance
 
 The gate is intrinsic to a pair consisting of an output direction and a
 linear source foliation.
@@ -289,84 +399,44 @@ theorem in a new affine coordinate system.
 
 Consequently, for an arbitrary planar Keller map and any nonzero output-pencil
 member `R`, any linear complement defines the same reduced degree. Combining
-this theorem with THM-2063 gives the all-directions gate for a hypothetical
-counterexample:
+this theorem with THM-2063 gives the following all-directions gate for a
+hypothetical counterexample:
 
 ```text
 deg_fiber R <= 1    is impossible by THM-2063;
 
-deg_fiber R = 2     forces
-                    (top quadratic coefficient) = nonconstant square,
-                    mu_fiber(R, complement) in {3,5,7,...}.             (20)
+deg_fiber R = 2     is impossible by THM-2071.                         (28)
 ```
 
-## 6. Newton/Jelonek frontier and the exact remaining lemma
+## 7. Newton/Jelonek frontier after closing the quadratic face
 
 In the Newton picture, `A(x)` is the coefficient polynomial on the top
-`y=2` row. The theorem says that its zero divisor must be even. Hence the
-generic squarefree top row, and in particular every simple top-row zero, is
-excluded. The constant top row is not a residual: Section 4 closes it. The
-first unresolved cell is therefore
+`y=2` row. Sections 2 and 4 show successively that its zero divisor would
+have to be even and then that it must be empty. Thus the entire quadratic
+fiber face is closed; there is no surviving nonconstant-square/cubic cell.
+The next unresolved source-fiber degree for a hypothetical counterexample is
+degree at least three in the chosen direction.
 
-```text
-A=U(x)^2 with U nonconstant,       mu_y=3.             (21)
-```
+This remains a rank-one-at-infinity coefficient theorem, not VC(4). Neither
+`mu_y` nor the degree of `P` along one linear fiber has been identified with a
+generic function-field cover degree. THM-1330's Jelonek/monodromy constraints
+remain separate necessary data, and MISTAKE-229 forbids calling this descent
+equivalent to the Jelonek, Vanishing-Conjecture, or Lame-for-polygons programs.
 
-The next coefficient equation already centers this cell. After absorbing a
-scalar so `A=U^2`, writing the reduced cubic top as `q_3=cU^3`, and using a
-remaining linear target shear to normalize the quadratic coefficient, one
-gets
-
-```text
-q_2=(3c/2)B U.                                         (22)
-```
-
-Indeed, the coefficient of `y^3` is
-
-```text
-2A'q_2-2Aq_2'+3B'q_3-Bq_3'=0.
-```
-
-After substituting `A=U^2` and `q_3=cU^3`, this becomes
-
-```text
-(q_2/U^2)'=(3c/2)(B/U)',
-```
-
-so `q_2=eU^2+(3c/2)BU`; subtracting `eP` gives (22).
-
-These are exactly the first two coefficients of
-
-```text
-c (U y+B/(2U))^3,
-```
-
-but the centered expression need not be polynomial when `U` does not divide
-`B`. A precise missing lemma is therefore:
-
-> decide whether the lower two coefficient equations in the cubic residual
-> (21)--(22) force a polynomial centering/divisibility, force a contradiction,
-> or admit a genuinely new Keller-pencil normal form.
-
-This is a rank-one-at-infinity coefficient problem, not VC(4). The integer
-`mu_y=3` is also not the generic function-field cover degree `3`: no map
-between those two degree strata is proved. THM-1330's Jelonek/monodromy
-constraints remain separate necessary data, and MISTAKE-229 forbids calling
-this descent equivalent to the Jelonek, Vanishing-Conjecture, or
-Lame-for-polygons programs.
-
-## 7. Exact symbolic referee
+## 8. Exact symbolic referee
 
 The companion script verifies:
 
 - (2) for complementary degrees `1` through `7`;
 - the even target-shear cancellation for powers `P^1` through `P^4`;
 - the three equations (6)--(8);
-- the odd-chain primitive degrees in Section 4 for `n=3,5,7`;
+- the centered cubic system (24), including (25);
+- the triangular odd recurrence and central-binomial noncancellation (20)--(22)
+  for `r=0` through `6`;
 - a nontrivial rational instance of (14), its constant Jacobian, and both
   compositions of (15);
 - bounded hostile linear-system searches against a nonsquare top coefficient
   and a square-but-nonconstant control.
 
-The bounded searches are controls only; the proof above is degree-uniform.
-The stored output ends in `RESULT: PASS`. QED.
+The bounded searches are controls only; the centered proof above is
+degree-uniform. The stored output ends in `RESULT: PASS`. QED.

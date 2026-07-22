@@ -4,7 +4,8 @@ top-coefficient law n=1..7: PASS [True, True, True, True, True, True, True]
   [y^(n+1)] J(P,Q) = n*A'*q_n - 2*A*q_n'
 even top cancellation k=1..4: PASS [True, True, True, True]
 reduced-degree-one coefficient system: PASS [True, True, True]
-constant-leading odd-tail obstruction n=3,5,7: PASS primitive degrees [2, 3, 4]
+centered cubic system and q_1/q_0 translation: PASS (True, True, True)
+centered odd-tail noncancellation r=0..6: PASS coefficients [1, -1/2, 3/8, -5/16, 35/128, -63/256, 231/1024]
 explicit tame normal form and two-sided inverse: PASS
 bounded hostile mate searches (deg_x<=3, deg_y<=5): PASS [True, True]
 RESULT: PASS

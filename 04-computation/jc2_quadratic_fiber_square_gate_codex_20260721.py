@@ -13,6 +13,7 @@ from sympy import (
     Poly,
     Rational,
     S,
+    binomial,
     diff,
     expand,
     integrate,
@@ -75,29 +76,83 @@ linear_checks = [
 assert all(linear_checks)
 print(f"reduced-degree-one coefficient system: PASS {linear_checks}")
 
-# 4. If A is constant, completion of the square gives P=A*Y^2+D(x).
-# The odd coefficient chain has
-#   q_(j-2)' = (j/(2A))*D'*q_j.
-# Thus q_1 is a polynomial in D of degree (n-1)/2, and its antiderivative
-# has degree (n+1)/2.  For n>=3 it cannot compose with nonconstant D to an
-# affine polynomial in x, as the constant bracket would require.
+# 4. Centered coordinates P=z^2+D turn the bracket into
+#   U*(D'*partial_z-2*z*partial_x).  Check the complete cubic system and its
+# translation back to the original fiber coefficient q_1.
 z = symbols("z")
-antiderivative_degrees = []
-for n in (3, 5, 7):
-    q_odd = 1
-    for j in range(n, 1, -2):
-        integration_constant = symbols(f"k{n}_{j}")
-        q_odd = integrate(Rational(j, 4) * q_odd, z) + integration_constant
-    primitive = integrate(q_odd, z)
-    assert Poly(q_odd, z).degree() == (n - 1) // 2
-    assert Poly(primitive, z).degree() == (n + 1) // 2
-    antiderivative_degrees.append(Poly(primitive, z).degree())
+Dcenter = Function("Dcenter")(x)
+Ucenter = Function("Ucenter")(x)
+E = Function("E")(x)
+F = Function("F")(x)
+c, e, f = symbols("c e f", nonzero=True)
+
+
+def centered_operator(q):
+    return expand(diff(Dcenter, x) * diff(q, z) - 2 * z * diff(q, x))
+
+
+Qcubic = c * z**3 + E * z + F
+Lcubic = centered_operator(Qcubic)
+cubic_checks = (
+    simplify(Lcubic.coeff(z, 2) - (3 * c * diff(Dcenter, x) - 2 * diff(E, x)))
+    == 0,
+    simplify(Lcubic.coeff(z, 1) + 2 * diff(F, x)) == 0,
+    simplify(Lcubic.coeff(z, 0) - diff(Dcenter, x) * E) == 0,
+)
+assert all(cubic_checks)
+Enormal = Rational(3, 2) * c * Dcenter + e
+Qnormal = c * z**3 + Enormal * z + f
+assert simplify(centered_operator(Qnormal) - diff(Dcenter, x) * Enormal) == 0
+
+hcenter = B / (2 * Ucenter)
+Doriginal = C - hcenter**2
+zoriginal = Ucenter * y + hcenter
+Qoriginal = expand(c * zoriginal**3 + (Rational(3, 2) * c * Doriginal + e) * zoriginal + f)
+expected_q1 = Ucenter * (Rational(3, 2) * c * C + e) + Rational(3, 8) * c * B**2 / Ucenter
+expected_q0 = -Rational(1, 2) * c * hcenter**3 + (Rational(3, 2) * c * C + e) * hcenter + f
+assert simplify(Qoriginal.coeff(y, 1) - expected_q1) == 0
+assert simplify(Qoriginal.coeff(y, 0) - expected_q0) == 0
+print(f"centered cubic system and q_1/q_0 translation: PASS {cubic_checks}")
+
+# 5. The full odd recurrence has
+#   2*d(a_(j-1))/dD=(2j+1)*a_j.
+# Check its leading coefficients and the nonzero polar coefficient in q_0
+# exactly through r=6.  The proof uses the same closed formula for every r.
+T, hvar, cvar = symbols("T hvar cvar")
+pole_coefficients = []
+for r in range(7):
+    a = [None] * (r + 1)
+    a[r] = c
+    for j in range(r, 0, -1):
+        integration_constant = symbols(f"lambda_{r}_{j}")
+        a[j - 1] = (
+            integrate(Rational(2 * j + 1, 2) * a[j], T)
+            + integration_constant
+        )
+
+    for k in range(r + 1):
+        j = r - k
+        expected_lead = c * binomial(Rational(2 * r + 1, 2), k)
+        assert simplify(Poly(a[j], T).LC() - expected_lead) == 0
+
+    q_at_y_zero = expand(
+        sum(a[j].subs(T, cvar - hvar**2) * hvar ** (2 * j + 1) for j in range(r + 1))
+    )
+    observed_pole = Poly(q_at_y_zero, hvar).coeff_monomial(hvar ** (2 * r + 1))
+    alternating_sum = sum(
+        (-1) ** k * binomial(Rational(2 * r + 1, 2), k)
+        for k in range(r + 1)
+    )
+    expected_pole = c * (-1) ** r * binomial(2 * r, r) / 4**r
+    assert simplify(observed_pole - c * alternating_sum) == 0
+    assert simplify(observed_pole - expected_pole) == 0
+    pole_coefficients.append(simplify(observed_pole / c))
 print(
-    "constant-leading odd-tail obstruction n=3,5,7: PASS "
-    f"primitive degrees {antiderivative_degrees}"
+    "centered odd-tail noncancellation r=0..6: PASS "
+    f"coefficients {pole_coefficients}"
 )
 
-# 5. A nontrivial exact member of the resulting tame normal form, together
+# 6. A nontrivial exact member of the resulting tame normal form, together
 # with the displayed inverse in both directions.
 A0 = Rational(3, 2)
 ell = Rational(5, 3)
@@ -126,10 +181,9 @@ assert source_roundtrip == (0, 0)
 assert target_roundtrip == (0, 0)
 print("explicit tame normal form and two-sided inverse: PASS")
 
-# 6. Hostile bounded controls.  The theorem proves the nonsquare case
-# impossible at every degree; these finite systems merely catch sign or
-# coefficient mistakes.  The square-but-nonconstant row is a control that the
-# square condition is necessary, not advertised as sufficient.
+# 7. Hostile bounded controls.  The theorem proves both nonconstant-leading
+# cases impossible at every degree; these finite systems merely catch sign or
+# coefficient mistakes and do not supply the uniform proof.
 P_nonsquare = x * y**2 + (x + 1) * y + x**2
 P_square_nonconstant = x**2 * y**2 + (x + 1) * y + x**2
 hostile = []
