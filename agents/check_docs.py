@@ -175,7 +175,7 @@ forbid(
 expected_recent = {
     2084: "PROVED", 2085: "PROVED", 2086: "PROVED", 2087: "PROVED",
     2088: "PROVED", 2089: "PROVED", 2090: "PROVED", 2091: "PROVED",
-    2092: "PROVED", 2093: "PROVED", 2094: "PROVED", 2095: "CLAIMED",
+    2092: "PROVED", 2093: "PROVED", 2094: "PROVED", 2095: "PROVED",
     2096: "PROVED", 2097: "PROVED",
 }
 for number, expected in expected_recent.items():
@@ -216,11 +216,11 @@ for theorem_id, status in status_by_id.items():
             fail(f"{theorem_id}: proved dependency graph imports {dependency}")
 
 # Router smoke tests: exact claimed IDs must be visibly quarantined.
-smoke = run(sys.executable, "agents/start_session.py", "--topic", "THM-2095", "--max-matches", "8")
+smoke = run(sys.executable, "agents/start_session.py", "--topic", "THM-741", "--max-matches", "8")
 if smoke.returncode != 0:
     fail(f"start_session.py smoke failed: {smoke.stderr.strip()}")
 else:
-    for token in ("Unproved candidates (not results)", "[CLAIMED]", "THM-2095"):
+    for token in ("Unproved candidates (not results)", "[CLAIMED]", "THM-741"):
         if token not in smoke.stdout:
             fail(f"start_session.py: claimed-route smoke lacks {token!r}")
 

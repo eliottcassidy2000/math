@@ -22,8 +22,8 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
   rank-seven template finite template-by-template; no bank is yet discharged.
 - **THM-2084 (PROVED, cubic source-fiber scope):** a non-tame cubic stratum
   begins, if at all, at unresolved reduced degree `13`; this is not JC(2).
-- **THM-2095 (CLAIMED STUB / UNPROVED):** the p-adic guard-ratio scale terminal
-  is a target, not an established finite reduction.
+- **THM-2095 (PROVED):** the live guard-ratio common scale divides `252576225`
+  and its marked pair is bounded; this does not bound the other six speeds.
 
 ## LRC(14) — OPEN
 
@@ -39,6 +39,8 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
   rank-seven coefficient template is finite template-by-template.
 - **Other lanes:** shallower terminal sizes, remaining rank-eleven atlas cells,
   marked circuits, and the rank-twelve box.
+- **THM-741 (CLAIMED STUB / UNPROVED):** the global near-AP four-slot census
+  is incomplete; route it with candidates, not proved canon.
 
 ## NC2 / GMC and Lean
 

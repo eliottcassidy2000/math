@@ -119,10 +119,8 @@ not unsafe. The reusable certificate architecture is
   `max(S)<2912*lcm(1,...,57)^6*(91^6)^13`. Thus every no-pair rank-seven
   branch is now finite. THM-2097's mixed-threshold two-torus escape also makes
   the bounded guard-ratio branch `q/h=r/s`, `r,s<=57`, finite template-by-
-  template. All resulting boxes still need discharge. The six cut rows already
-  give persistent height-114 circuits, so
-  THM-2065 alone remains vacuous here; location and phase sidecars are
-  essential.
+  template; all boxes still need discharge. The six persistent height-114 cut
+  rows make THM-2065 alone vacuous; location and phase sidecars are essential.
 - **PROVED relative decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   lifts bounded scalar relations; `H=2^19` clears recorded margins.
   MISTAKE-080/082 still require shape-specific torus models.

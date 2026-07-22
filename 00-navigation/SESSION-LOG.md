@@ -33,8 +33,10 @@ Older chronology is in
   exact Cayley-tree variance gain and raises finite-bank threshold closures.
 - THM-2097's mixed two-torus escape makes every depth-four rank-seven template,
   including the bounded guard-ratio branch, finite template-by-template.
-- **Remaining:** exact discharge of those finite banks and shallower/other
-  atlas lanes. THM-2095 is an unproved p-adic refinement. LRC(14) is not closed.
+- THM-2095 proves the guard-ratio common scale divides `252576225` on the live
+  branch and bounds its marked pair; the other six terminal speeds remain.
+- **Remaining:** exact discharge of finite banks and shallower/other atlas
+  lanes. LRC(14) is not closed.
 
 ## NC2 / GMC formalization
 

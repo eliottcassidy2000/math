@@ -114,8 +114,8 @@ are searchable history—not mandatory warm-up.
     universal entropy/modular frame; MISTAKE-235 leaves S102's LRC/GMC sums as
     analogy, not AP-core reduction. Fiber size is observable-relative, and
     genus, cusp forms, Paley spectra, or weighted kernels need an explicit
-    loneliness-preserving map. THM-2095 remains an unproved stub; Lean also
-    requires satisfiable hypotheses and root-import reach.
+    loneliness-preserving map. THM-2095 now bounds the guard-ratio common scale,
+    not the other six speeds; Lean requires satisfiable hypotheses and root reach.
 
 ## Where to go by topic
 
