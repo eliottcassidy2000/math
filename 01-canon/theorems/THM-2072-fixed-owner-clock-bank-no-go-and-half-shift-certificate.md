@@ -19,6 +19,8 @@ depends_on:
 related:
   - THM-2060
   - THM-2068
+  - THM-2073
+  - THM-2075
   - THM-645
 ---
 
@@ -226,6 +228,52 @@ linear drift budgets on the selected phase `t`. The recursion retains the
 actual representative and the products `ct`; reducing `t` modulo a coarse
 clock would lose the bounds in (10).
 
+### Depth-two H-drift corollary
+
+Suppose
+
+```text
+C=4Q union {h_0,2h_1},       h_0,h_1 odd,               (12)
+```
+
+and `G_Q` is nonempty. By symmetry it meets `[0,1/2]`; define its first safe
+time
+
+```text
+tau(Q)=min(G_Q intersect [0,1/2])>0.                    (13)
+```
+
+Then the seam over `C` is impossible whenever
+
+```text
+tau(Q)<=min(5/(7h_0),6/(7h_1)).                         (14)
+```
+
+Indeed the four-layer in the recursion is exactly `D=Q`. Taking
+`t=tau(Q)`, the two conditions in (14) become
+
+```text
+h_0t<=5/7,          (2h_1)t<=12/7,
+```
+
+which are precisely (10). Equivalently, define the dimensionless drift
+
+```text
+H_Q(h_0,h_1)=tau(Q) max(7h_0/5,7h_1/6).                 (15)
+```
+
+The certificate is `H_Q<=1`, including equality. Therefore any hypothetical
+strict seam with the depth-two THM-2073 normal form must satisfy the sharp
+necessary condition
+
+```text
+H_(Q_2)(h_0,h_1)>1.                                    (16)
+```
+
+This is the functional form of the first nontrivial guard drift. It retains
+the depth-two carrier through `tau(Q_2)` and the first two ordered guards; a
+guard multiset, component count, or unlabelled wall word cannot recover it.
+
 ### Quarter-anchor bounded-fan corollary
 
 Let `c_0` be the smallest member of `C` divisible by `4`, and assume
@@ -233,23 +281,23 @@ Let `c_0` be the smallest member of `C` divisible by `4`, and assume
 ```text
 c_0<=c<=7c_0 for every c in C divisible by 4,
 c<=5c_0/2 for every odd c in C,
-c<=6c_0   for every c in C with c=2 mod 4.               (12)
+c<=6c_0   for every c in C with c=2 mod 4.               (17)
 ```
 
 Then the recursion applies with
 
 ```text
-t=2/(7c_0),       theta=1/4+1/(14c_0).                  (13)
+t=2/(7c_0),       theta=1/4+1/(14c_0).                  (18)
 ```
 
-For `c=4d`, condition (12) gives
+For `c=4d`, condition (17) gives
 
 ```text
 1/14<=dt=c/(14c_0)<=1/2,
 ```
 
-so `t in G_D`. The last two inequalities in (12) are exactly the two drift
-budgets in (10). This proves the corollary. In particular, (12) holds when
+so `t in G_D`. The last two inequalities in (17) are exactly the two drift
+budgets in (10). This proves the corollary. In particular, (17) holds when
 `c_0` is the unique multiple of `4` and `c_0=max(C)`. The bounded fan spreads
 the `4`-divisible teeth across `[1/14,1/2]`, while the quarter anchor leaves
 wide safe bands for both remaining residue layers. QED.
@@ -275,10 +323,15 @@ Two precise replacement targets remain open:
 2. **Antipodal safe-pair lemma.** Determine which primitive
    divisor-complete eleven-cores satisfy (9), and close those that do by
    Section 2 before any tail search.
+3. **Tower drift lemma.** On every depth-at-least-two THM-2073 residual,
+   contradict (16) from divisor completeness, the safe-child addresses, or
+   the metric guard bounds; equivalently, force one sufficiently early safe
+   phase of `Q_2`.
 
 These targets are complementary: the first retains labelled rational
-ownership, while the second bypasses ownership through a two-point geometric
-obstruction.
+ownership, the second bypasses ownership through a two-point geometric
+obstruction, and the third transports that obstruction down the dyadic
+safe-child tower.
 
 ## 4. Assumption challenge and tournament relevance
 
@@ -291,4 +344,6 @@ the tail cannot be dangerous at both endpoints. There is no intrinsic
 orientation and hence no tournament theorem to exploit. The faithful objects
 are the labelled complement graph plus the nonemptiness sidecar in the
 rational lane, and the antipodal-pair incidence system in the continuous
-lane.
+lane. On a depth-two tower a sufficient drift sidecar is the ordered
+tuple `(Q_2,tau(Q_2),h_0,h_1)` from (15), not a tournament on its speeds or
+guards.
