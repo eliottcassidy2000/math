@@ -1,0 +1,57 @@
+
+========================================================================
+A  the CLASS GROUP = hidden binary forms; class number h(D) = arithmetic ENTROPY log2 h
+========================================================================
+  disc   -3: h=1  forms=[(1, 1, 1)] ; HEEGNER h=1: ZERO entropy (rigid)
+  disc   -4: h=1  forms=[(1, 0, 1)] ; HEEGNER h=1: ZERO entropy (rigid)
+  disc   -7: h=1  forms=[(1, 1, 2)] ; HEEGNER h=1: ZERO entropy (rigid)
+  disc   -8: h=1  forms=[(1, 0, 2)] ; HEEGNER h=1: ZERO entropy (rigid)
+  disc  -11: h=1  forms=[(1, 1, 3)] ; HEEGNER h=1: ZERO entropy (rigid)
+  disc  -15: h=2  forms=[(1, 1, 4), (2, 1, 2)] ; 1 HIDDEN non-principal form(s), entropy log2(2)=1.00 bits
+  disc  -23: h=3  forms=[(1, 1, 6), (2, -1, 3), (2, 1, 3)] ; 2 HIDDEN non-principal form(s), entropy log2(3)=1.58 bits
+  disc  -31: h=3  forms=[(1, 1, 8), (2, -1, 4), (2, 1, 4)] ; 2 HIDDEN non-principal form(s), entropy log2(3)=1.58 bits
+  disc  -47: h=5  forms=[(1, 1, 12), (2, -1, 6), (2, 1, 6), (3, -1, 4), (3, 1, 4)] ; 4 HIDDEN non-principal form(s), entropy log2(5)=2.32 bits
+  => 3,7,11 (Paley/Heegner, disc -3,-7,-11) have ONLY the principal form: zero arithmetic entropy.
+     -23 (h=3), -31 (h=3), -47 (h=5): hidden non-principal forms = the class-group information.
+
+========================================================================
+B  representation-LOCALITY: h=1 decided by Legendre (1 bit); h>1 splits (D/p)=1 primes among the forms
+========================================================================
+  disc -7 (h=1): 'represented by the unique form (1,1,2)'  <=>  (D/p)=1 (ONE Legendre bit)? True
+     sample: [(2, '(D/p)=+1', 'rep'), (3, '(D/p)=-1', '---'), (5, '(D/p)=-1', '---'), (11, '(D/p)=+1', 'rep'), (13, '(D/p)=-1', '---'), (17, '(D/p)=-1', '---'), (19, '(D/p)=-1', '---'), (23, '(D/p)=+1', 'rep')]
+  disc -23 (h=3): forms [(1, 1, 6), (2, -1, 3), (2, 1, 3)]; (D/p)=1 <=> represented? True
+     but (D/p)=1 primes SPLIT among the 3 classes: counts [2, 9, 0]
+     principal (1,1,6) primes: [59, 101]
+     non-principal (2,+-1,3) primes: [2, 3, 13, 29, 31, 41, 47, 71]
+  => for h=1 the Legendre bit DETERMINES representation; for h>1, WHICH form costs log2(h) extra bits
+     (the class group = Gal(Hilbert class field), invisible to any local/Legendre test). = arithmetic entropy.
+
+========================================================================
+C  the info-theoretic principle, and LRC(14)=2*7
+========================================================================
+  CLASS NUMBER = ARITHMETIC ENTROPY (bits beyond local Legendre to decide representation):
+    h=1 (Heegner -3,-7,-11 = Paley 3,7,11): 0 bits -- local (S215 Legendre) DETERMINES global. RIGID.
+    h>1 (-23:log2 3=1.58, -47:log2 5=2.32 bits): hidden non-principal forms = class-group entropy.
+  LRC(14)=2*7 -> disc -7 -> h=1 -> ZERO arithmetic entropy: codex's THM-2053 anisotropic gate residual
+  (S216) is fully pinned by local Legendre data (S215) -- there are NO hidden bits for a counterexample to
+  hide in. The difficulty of 7 is exactly its rigidity: a class-number-1 gate has no slack.
+
+========================================================================
+D  bonus hidden entropy: the tournament SCORE distribution -- transitive (max) vs Paley (0)
+========================================================================
+  n=7: transitive score-dist entropy = 2.807 bits (=log2 7, MAX spread) ;  Paley/regular = -0.000 bits (delta, MIN)
+  n=11: transitive score-dist entropy = 3.459 bits (=log2 11, MAX spread) ;  Paley/regular = -0.000 bits (delta, MIN)
+  n=13: transitive score-dist entropy = 3.700 bits (=log2 13, MAX spread) ;  Paley/regular = -0.000 bits (delta, MIN)
+  => the reify-ladder poles are entropy extremes: transitive/AP = max score-entropy (the nullcone
+     vertex, the rank-11 gate); Paley = zero score-entropy (the symmetric pole, disc -p, i*sqrt p).
+
+========================================================================
+SUMMARY
+========================================================================
+  Hidden binary forms: the disc -p gate (S216) sits in a CLASS GROUP of forms (Gauss composition); the
+  non-principal classes are the hidden forms. INFORMATION THEORY: class number h(D) = the ARITHMETIC ENTROPY
+  = bits beyond local Legendre needed to decide representation. Heegner (h=1: -3,-7,-11 = Paley 3,7,11) = 0
+  bits = local determines global = the S216 residual is RIGID. LRC(14)=2*7 -> -7 -> h=1 -> no hidden bits.
+  Bonus: the tournament score distribution's entropy separates the reify-ladder poles (transitive max /
+  Paley zero). Both readings: the anisotropic gate is hard BECAUSE it has zero hidden entropy -- nowhere for
+  a counterexample to hide, and no class-group slack to exploit; only the local Legendre/Paley data (S215).

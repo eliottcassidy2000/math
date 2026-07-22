@@ -1,14 +1,16 @@
-## boxeph-2026-07-21-S216 -- the anisotropic determinant gate: Heegner rigidity of codex's rank-two residual (HYP-8865)
+## boxeph-2026-07-21-S217 -- class number = arithmetic entropy: hidden binary forms, and why 7 is rigid (HYP-8870)
 
-**Owner:** keep pushing for LRC leverage; think 'anisotropic determinant gate'.
+**Owner:** look for even more hidden binary forms; think information theory.
 
-**THE GATE ALREADY EXISTS = codex THM-2053 (PROVED, pulled):** every rank-two relation plane has the ANISOTROPIC terminal max_i|a z_i - b u_i| <= (a^2+b^2)/91 => d=(a,b) LRC14-safe. D_i=a z_i - b u_i is the 2x2 DETERMINANT (wedge of d with column c_i=(u_i,z_i)); RHS = anisotropic norm form. DET grows linearly, norm quadratically => large directions safe (verified (700,700),(2000,1)); RESIDUAL = finite short vectors of the anisotropic norm form.
+**HIDDEN FORMS:** the disc -p anisotropic gate (S216) sits in a whole CLASS GROUP of binary forms (Gauss composition); the NON-PRINCIPAL classes are the hidden forms. Verified: h(-3)=h(-7)=h(-11)=1 (Paley/Heegner, principal only); h(-15)=2, h(-23)=3, h(-31)=3, h(-47)=5 (hidden forms enumerated).
 
-**LEVERAGE (synthesis, verified anisotropic_determinant_gate_heegner_residual_boxeph_S216.py):** the residual is a BINARY QUADRATIC FORM controlled by its DISCRIMINANT. My S215 Paley factor x^2+x+(p+1)/4 = the anisotropic principal form of disc -p; h(-3)=h(-7)=h(-11)=1 (Heegner, +2's -4,-8) => UNIQUE form => RIGID single-class residual (contrast h(-15)=2, h(-23)=3, h(-31)=3). LRC(14)=2*7 -> disc -7, h=1 -> rigid. p mod4 (kps-S17) = local anisotropy (disc/p) (S215): 3,7,11 anisotropic (free Z2, Borsuk-Ulam, HARD, Euler branch), 5,13 isotropic (automorphism, Brouwer, EASY).
+**INFO THEORY (verified, hidden_binary_forms_class_number_is_arithmetic_entropy_boxeph_S217.py):** CLASS NUMBER h(D) = the ARITHMETIC ENTROPY = log2(h) bits BEYOND local Legendre (D/p) to decide which form represents p. disc -7 (h=1): p represented <=> (D/p)=1 (ONE Legendre bit determines all). disc -23 (h=3): (D/p)=1 primes SPLIT among 3 classes (principal 59,101,.. vs non-principal 13,29,31,..) -- which class = the Artin symbol in the Hilbert class field Cl(D)=Gal(H/K), invisible to any local test = log2(3)=1.58 hidden bits.
 
-**RANK-OR-EULER = ISOTROPIC-vs-ANISOTROPIC (unification of HYP-8841):** isotropic residual direction = a resonance = bounded relation outside the rank-11 code => rank 11->12 (codex rank branch, THM-2052); anisotropic residual = no resonance = lonely = chi-survivor (my S212/HYP-8845 Euler branch, chi>=2). The gate's discriminant + Heegner class number + Legendre character decides the branch. LRC(14)'s -7 Heegner anisotropy => finite rigid single-class residual, deciding certificate = Euler/chi => why 7 (apex) is first hard-but-tractable (kps-S17).
+**WHY 7 IS RIGID:** LRC(14)=2*7 -> disc -7 -> h=1 -> ZERO arithmetic entropy. codex THM-2053's anisotropic gate residual is fully pinned by local S215 Legendre data -- NO hidden bits, no class-group slack. So (1) a counterexample has NOWHERE to hide; (2) the certificate must be the exact local (Euler/chi/Borsuk-Ulam, p=3mod4) one. Rigidity = why 7 is the first hard-but-tractable case (kps-S17). Heegner h=1 imag. quadratics = -3,-4,-7,-8,-11,-19,-43,-67,-163; -7 is LRC(14)'s.
 
-**Honest:** THM-2053 + kps-S17 standing; Heegner/Paley facts classical+verified; my contribution = the synthesis/leverage-framing (residual = binary form, Heegner rigidity, rank-or-Euler = isotropic/anisotropic). A target, not a closure. Ties THM-2053+THM-2052+kps-S17+S212+S214+S215. Artifacts: reflection the-anisotropic-determinant-gate-...-boxeph-S216.md, HYP-8865, script (+.out).
+**BONUS:** tournament score-distribution entropy separates the reify-ladder poles: transitive (0..n-1, entropy log2 n = MAX spread, the nullcone/rank-11 gate vertex) vs Paley/regular (all (n-1)/2, entropy 0, the symmetric disc -p pole).
+
+**Honest:** class-group/Heegner/representation facts classical + verified; the contribution is the info-theoretic FRAMING (class number = arithmetic entropy; non-principal forms = hidden forms; S216 rigidity = zero hidden entropy for -7). Conceptual sharpening, not a proof step. Ties S215+S216+kps-S17. Artifacts: reflection class-number-is-arithmetic-entropy-...-boxeph-S217.md, HYP-8870, script (+.out).
 
 ## codex-2026-07-21-LRC-normal-fan-sail -- THM-2055 and MISTAKE-225
 
