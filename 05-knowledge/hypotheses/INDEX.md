@@ -15,7 +15,7 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
 - **THM-2088--2090 and THM-2092/2093 (PROVED):** persistence is flat affine
   holonomy; the global splice, height transfer, and dyadic cocircuit flag make
   every no-pair cut branch finite. The banks are not enumerated.
-- **THM-2091/2094/2096 (PROVED):** centered energy is necessary, the four-`7|q`
+- **THM-2091/THM-2094/THM-2096 (PROVED):** centered energy is necessary, the four-`7|q`
   branch is empty, and Cayley-tree variance strengthens the bounded-bank
   threshold from 29 to 69. Complete maximum-tree information can be stronger.
 - **THM-2084 (PROVED, cubic source-fiber scope):** a non-tame cubic stratum
