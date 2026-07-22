@@ -21,8 +21,9 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
   threshold from 29 to 69. Complete maximum-tree information can be stronger.
 - **THM-2097 (PROVED):** mixed two-torus escape makes every depth-four
   rank-seven template finite template-by-template; no bank is yet discharged.
-- **THM-2098/2099 (PROVED):** rank eight has collision budget `5/49`, but
-  dyadic affine pencils refute any pair-tree-only closure; retain pencil rank.
+- **THM-2098/2099/2103 (PROVED):** rank eight has collision budget `5/49`, but
+  dyadic rows refute pair-tree and pair-tree-plus-affine-rank closure; retain
+  threshold-labelled clock residues.
 - **THM-2084 (PROVED, cubic source-fiber scope):** a non-tame cubic stratum
   begins, if at all, at unresolved reduced degree `13`; this is not JC(2).
 - **THM-2095 (PROVED):** the live guard-ratio common scale divides `252576225`
