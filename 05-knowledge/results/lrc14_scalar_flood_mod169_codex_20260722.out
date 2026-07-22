@@ -1,0 +1,7 @@
+scalar flood exact mod-169 certificate
+universe=110; unit_sign_classes=78; distinct_restricted_masks=77
+mask_sizes={0: 1, 8: 1, 12: 3, 16: 21, 18: 40, 20: 11}
+pair_intersections={0: 555, 2: 1508, 4: 613, 6: 148, 8: 58, 10: 44}
+max_5_union=88; witness=(16, 30, 46, 61, 76); uncovered=22; nodes=3785; prunes=1880
+max_6_union=96; witness=(27, 28, 29, 30, 55, 83); uncovered=14; nodes=59593; prunes=29796
+PASS

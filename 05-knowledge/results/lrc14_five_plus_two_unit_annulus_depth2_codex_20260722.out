@@ -1,0 +1,6 @@
+five-plus-two exact unit-annulus certificate
+modulus=2197; deep_classes=78; unit_classes=1014; base_annulus=1450
+universe_sizes={1210: 2, 1218: 1, 1222: 3, 1226: 21, 1228: 40, 1230: 11}
+capacity_margins={30: 1, 50: 1, 80: 1, 88: 1, 108: 1, 110: 2, 120: 1, 128: 1, 130: 1, 138: 2, 140: 1, 146: 1, 148: 3, 158: 2, 160: 1, 162: 2, 166: 4, 168: 3, 170: 1, 172: 1, 176: 2, 178: 6, 180: 3, 186: 9, 188: 7, 196: 5, 198: 10, 208: 5}
+worst_margin=30; worst_rows=[(14, 1230, 240, (183,))]
+PASS
