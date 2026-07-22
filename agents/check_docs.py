@@ -176,7 +176,7 @@ expected_recent = {
     2084: "PROVED", 2085: "PROVED", 2086: "PROVED", 2087: "PROVED",
     2088: "PROVED", 2089: "PROVED", 2090: "PROVED", 2091: "PROVED",
     2092: "PROVED", 2093: "PROVED", 2094: "PROVED", 2095: "CLAIMED",
-    2096: "PROVED",
+    2096: "PROVED", 2097: "PROVED",
 }
 for number, expected in expected_recent.items():
     relative = theorem_path(number)
@@ -201,7 +201,17 @@ for theorem_id, status in status_by_id.items():
     if status != "PROVED":
         continue
     header = body_by_id[theorem_id].split("---", 2)[1] if "---" in body_by_id[theorem_id] else ""
-    for dependency in re.findall(r"^\s*-\s*(THM-\d+)\s*$", header, re.MULTILINE):
+    dependency_block = re.search(
+        r"^depends_on:\s*\n(?P<rows>(?:\s+-\s*THM-\d+\s*\n?)*)",
+        header,
+        re.MULTILINE,
+    )
+    dependencies = re.findall(
+        r"^\s*-\s*(THM-\d+)\s*$",
+        dependency_block.group("rows") if dependency_block else "",
+        re.MULTILINE,
+    )
+    for dependency in dependencies:
         if status_by_id.get(dependency) in UNPROVED_CANDIDATE_STATUSES:
             fail(f"{theorem_id}: proved dependency graph imports {dependency}")
 

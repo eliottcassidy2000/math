@@ -115,9 +115,10 @@ not unsafe. The reusable certificate architecture is
   `16,16,8,4,2`; the six cut rows bound the common guard/anchor gcd by
   `lcm(1,...,57)^6`; and a denominator-cleared THM-2053 gate gives
   `max(S)<2912*lcm(1,...,57)^6*(91^6)^13`. Thus every no-pair rank-seven
-  branch is now finite. The unbounded structural residual is the separate
-  bounded guard-ratio branch `q/h=r/s`, `r,s<=57`; all finite boxes still need
-  discharge. The six cut rows already give persistent height-114 circuits, so
+  branch is now finite. THM-2097's mixed-threshold two-torus escape also makes
+  the bounded guard-ratio branch `q/h=r/s`, `r,s<=57`, finite template-by-
+  template. All resulting boxes still need discharge. The six cut rows already
+  give persistent height-114 circuits, so
   THM-2065 alone remains vacuous here; location and phase sidecars are
   essential.
 - **PROVED relative decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)

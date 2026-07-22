@@ -31,9 +31,10 @@ Older chronology is in
 - THM-2091's centered-energy inequality and THM-2094's exact conditional
   moment certificate exclude the four-`7|q` terminal branch; THM-2096 adds an
   exact Cayley-tree variance gain and raises finite-bank threshold closures.
-- **Remaining:** the `1..3` modular counts, bounded guard-ratio families, exact
-  finite banks, and shallower/other atlas lanes. THM-2095 is an unproved
-  p-adic guard-ratio stub. LRC(14) is not closed.
+- THM-2097's mixed two-torus escape makes every depth-four rank-seven template,
+  including the bounded guard-ratio branch, finite template-by-template.
+- **Remaining:** exact discharge of those finite banks and shallower/other
+  atlas lanes. THM-2095 is an unproved p-adic refinement. LRC(14) is not closed.
 
 ## NC2 / GMC formalization
 

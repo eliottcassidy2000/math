@@ -108,7 +108,8 @@ are searchable history—not mandatory warm-up.
     THM-2081--2087 make the rank-seven relation bound effective at `57` and
     close modular/lacunary branches; THM-2088--2093 reduce all no-pair cut
     lanes to finite banks; THM-2091/2094/2096 close the four-`7|q` branch and
-    strengthen the surviving finite-bank energy threshold by tree variance.
+    strengthen tree energy; THM-2097 makes every depth-four rank-seven
+    template finite template-by-template. The finite rows remain undischarged.
 16. **Shared syntax is not a bridge.** MISTAKE-230--233/HYP-8885 retract the
     universal entropy/modular frame; MISTAKE-235 leaves S102's LRC/GMC sums as
     analogy, not AP-core reduction. Fiber size is observable-relative, and
