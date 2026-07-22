@@ -279,6 +279,24 @@ lemma multinomial_dvd_of_exists_not_dvd {α : Type*} [DecidableEq α] {p : ℕ} 
         exact dvd_mul_of_dvd_right (ih hsum_s hex_s) _
       · exact dvd_mul_of_dvd_left (dvd_choose_of_dvd hp hsum hra (Nat.le_add_right _ _)) _
 
+/-- **THM-2022 §4 off-face vanishing (case 2).** An *off-face* dilated channel (radial height
+`A' > A0`) has its Wick factorial ratio killed by `p`: `p · (p·A0)! ∣ (p·A')!`.  After normalizing
+the moment by `(p·A0)!`, its quotient `(p·A')!/(p·A0)!` is divisible by `p` — it contains the factor
+`p·(A0+1)`.  So the surviving residue layer is exactly the *on-face* dilated channels. -/
+lemma factorial_dilate_dvd {p : ℕ} (hp : 1 ≤ p) {A0 A' : ℕ} (h : A0 < A') :
+    p * (p * A0).factorial ∣ (p * A').factorial := by
+  have h1 : p * (A0 + 1) ≤ p * A' := mul_le_mul_left' (by omega) p
+  have hdvd1 : (p * (A0 + 1)).factorial ∣ (p * A').factorial := Nat.factorial_dvd_factorial h1
+  have heq : p * (A0 + 1) = p * A0 + p := by ring
+  rw [heq] at hdvd1
+  have hpdvd : p ∣ (p * A0 + 1).ascFactorial p :=
+    dvd_trans (Nat.dvd_factorial hp le_rfl) (Nat.factorial_dvd_ascFactorial _ _)
+  calc p * (p * A0).factorial
+      ∣ (p * A0).factorial * (p * A0 + 1).ascFactorial p := by
+        rw [mul_comm p]; exact mul_dvd_mul_left _ hpdvd
+    _ = (p * A0 + p).factorial := Nat.factorial_mul_ascFactorial _ _
+    _ ∣ (p * A').factorial := hdvd1
+
 /-! ### THM-2022 §5 — Frobenius non-cancellation of the lowest balanced face
 
 In the residue field at a good prime `p`, the natural-number Wick/multinomial weights are
@@ -426,6 +444,7 @@ end GMC2
 #print axioms GMC2.multinomial_dilate_modEq
 #print axioms GMC2.dvd_choose_of_dvd
 #print axioms GMC2.multinomial_dvd_of_exists_not_dvd
+#print axioms GMC2.factorial_dilate_dvd
 #print axioms GMC2.sum_natCast_mul_pow_char
 #print axioms GMC2.face_sum_frobenius
 #print axioms GMC2.face_sum_ne_zero
