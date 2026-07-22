@@ -113,8 +113,10 @@ NET: every P whose lowest face has a unique channel needs NO DvdK axiom for NC2,
   at most `2*57^2=6498`.
 - This is the guard-localized two-anchor star missing from the global relation
   alternative. It is still unbounded and does not prove LRC(14), but it exposes
-  exactly the coefficient-row interface for THM-2062/2065 and the residue-
-  incidence interface for THM-2082.
+  a local coefficient-row interface for THM-2062/2065 and the residue-incidence
+  interface for THM-2082. The prior dyadic guards and original seam tails still
+  need to be reconstructed in the same two parameters before the thirteen-row
+  circuit-ray theorem can be applied.
 
 ## death-star-2026-07-22-S105 -- GMC2 formalization CAPSTONE CLOSED: the whnf wall is SOLVED; HeightWitnessSupplier discharged kernel-pure; clean DvdK1 -> NC2 and DvdK1 -> GMC(2) now compile.
 

@@ -205,16 +205,21 @@ thirteen-speed row: it is forced by a complete short-relation cut localized
 to the last guard. This preserves the coordinate needed by THM-2079's
 mirror-complement owner address and THM-2082's translated-grid carrier test.
 
-Equation (18) is in the form needed by the coefficient-row technology of
-THM-2052/2062 after saturation. THM-2065 can collapse circuit-free parameter
-rays, but persistent marked circuits and exact safe-phase sidecars remain.
-Thus (19) is a strict structural reduction, not LRC(14).
+Equation (18) is locally in the coefficient-row form used by THM-2052/2062.
+It does **not** yet instantiate those thirteen-row theorems: the terminal core
+plus its last guard has been parameterized, while the earlier dyadic guards
+and two original seam tails must still be expressed in the same two parameters
+or spliced to their existing relation rows. Only after that reconstruction
+and saturation can THM-2065 collapse circuit-free rays. Persistent marked
+circuits and exact safe-phase sidecars would still remain. Thus (19) is a
+strict structural reduction, not LRC(14).
 
 The next finite computation should enumerate primitive cut templates up to
 simultaneous sign and component swap, then attach:
 
 1. odd guard-ratio parity from (11);
-2. the rank-two deletion/cogirth wheel of THM-2062/2069;
+2. reconstruction of the earlier guards/tails, then the rank-two deletion/
+   cogirth wheel of THM-2062/2069;
 3. THM-2082 translated-prime-grid incidence;
 4. THM-2081 exact restricted-edge margins on persistent circuits.
 
