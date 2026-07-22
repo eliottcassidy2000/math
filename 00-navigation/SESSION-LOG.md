@@ -3,6 +3,22 @@
 > [`START-HERE.md`](START-HERE.md), [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md),
 > and [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
 
+## codex-2026-07-21 -- THM-2068/2073 owner-bank compression and dyadic safe-child descent
+
+- **Minimum bounded owner bank:** THM-2068 turns the THM-2066 census into an
+  exact set-cover problem. Inside clocks `15..34`, seven clocks
+  `{25,26,27,28,32,33,34}` are necessary and sufficient for all `59,880`
+  primitive divisor-complete eleven-cores through maximum `24`; all banks of
+  at most six undominated clocks were exhausted and every chosen clock has a
+  private core.
+- **Uniform structural descent:** after pulling THM-2072's fixed-bank no-go,
+  THM-2073 transfers THM-775's forgotten safe-child mechanism to the strict
+  `1/14` seam. Every imprimitive deletion has gcd two, the first four lifts
+  are partitioned `2+1+1`, and descent iterates through divisor-complete
+  quotient cores (including the new denominator-`26` shell) to a hereditary
+  terminal after at most eight levels. Exact referees pass normally and under
+  `python -O`. LRC(14) remains open on the hereditary terminal lane.
+
 ## codex-2026-07-21 -- THM-2063/2064/2066, planar atlas audit, and dyadic owner words
 
 - **Planar JC(2):** THM-2063 completely classifies Keller pairs having any

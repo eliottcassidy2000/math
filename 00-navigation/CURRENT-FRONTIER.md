@@ -149,7 +149,11 @@ structural supplier/seed and a lossless exit.
   dyadic seam. THM-2061 folds it; THM-2066's complementary owner-word bank
   closes all `59,880` divisor-complete quotient cores through `24`, and
   THM-2068 proves that `{25,26,27,28,32,33,34}` is a minimum sub-bank inside
-  the original `15..34` clock window.
+  the original `15..34` clock window. THM-2072 proves that no fixed finite
+  bank extends uniformly to unbounded cores. THM-2073 supplies the structural
+  replacement on the non-hereditarily-primitive lane: a divisor-complete
+  binary safe-child tower of depth at most eight, ending at a hereditarily
+  primitive quotient core.
   THM-2062 adds the hereditary wheel; THM-2065 makes circuit-free residuals finite.
 - **PROVED relative whole-product decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says bounded scalar relations must lift to vector-character relations. Two

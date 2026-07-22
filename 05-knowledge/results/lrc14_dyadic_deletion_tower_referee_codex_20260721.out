@@ -1,0 +1,8 @@
+LRC14 DYADIC DELETION-TOWER AUDIT -- exact arithmetic
+capacity equality: alpha=[2], beta=[2, 4] PASS
+1/7 all-unit guard shell: 2:[], 3:[3], 4:[], 5:[5], 6:[], 7:[7], 8:[], 9:[9], 10:[], 11:[11], 12:[], 13:[13], 14:[]
+2/7 all-unit singleton shell: 3:[3], 5:[5], 7:[7], 9:[9], 11:[11], 13:[13]
+doubled-denominator guard shell: 6:[], 10:[], 14:[], 18:[], 22:[], 26:[]
+four-lift formulas: 23487 guard and 46163 singleton eligible cases PASS
+antipodal odd-tail exclusions: 1004950 PASS
+PASS
