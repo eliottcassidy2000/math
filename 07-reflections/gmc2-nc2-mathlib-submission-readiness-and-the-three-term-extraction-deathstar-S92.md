@@ -45,12 +45,21 @@ recurrence alone — a natural, self-contained Mathlib contribution.
    test-build confirms: `Mathlib.Algebra.Polynomial.Eval.Defs`, `Mathlib.Data.Real.Basic`,
    `Mathlib.Tactic.LinearCombination`, `Mathlib.Tactic.Positivity`. Build dropped **8475 → 1202 jobs** — a real,
    large reduction, and the standard Mathlib-PR requirement (`shake`-clean) met by construction.
-3. **Hermite bridge — identified as future work (itself Mathlib-new).** Mathlib's `Polynomial.hermite : ℕ → ℤ[X]`
-   has **only the derivative-form recurrence** `hermite_succ` (= `X*hermite n − derivative (hermite n)`); it has
-   **no three-term recurrence** `derivative (hermite (n+1)) = (n+1)•hermite n` and **no** "consecutive Hermite
-   polynomials share no root." So connecting `hermiteReal` to `Polynomial.hermite` first requires *proving* that
-   missing three-term lemma (not term-simple via `coeff_hermite_succ_succ` — a genuine ladder identity). That lemma
-   **plus** the `no_common_root_poly` corollary would be a self-contained Mathlib contribution on its own; deferred.
+3. **Hermite bridge — DONE, and it is itself Mathlib-new.** New file `TournamentH7/HermiteThreeTerm.lean`
+   (kernel-pure, warning-free) proves what Mathlib lacked:
+   - **`Polynomial.derivative_hermite_succ`**: the ladder relation `(hermite (n+1))' = (n+1) • hermite n`.
+     Single-step induction from Mathlib's `hermite_succ` — the `H_n'` terms cancel, closed by the `module` tactic.
+   - **`Polynomial.hermite_recurrence`**: the classical **three-term recurrence**
+     `hermite (n+2) = X·hermite (n+1) − (n+1)·hermite n` (a one-liner from the ladder relation).
+   - **`ThreeTermRecurrence.hermite_no_common_root`**: *no two consecutive Hermite polynomials share a root* —
+     `Polynomial.hermite` exhibited as the `ThreeTerm ℤ` instance `hermiteZ` (`a≡0`, `b m = m`), so the general
+     `no_common_root_poly` applies verbatim. This is the compelling **application** that motivates the abstract
+     lemma for Mathlib: a concrete, named orthogonal family that Mathlib already ships, now known root-coprime.
+   To make `hermiteZ` land cleanly the structure hypothesis was **weakened to `hb : ∀ n, b (n+1) ≠ 0`** (only
+   `b 1, b 2, …` occur in the recurrence; Hermite has `b 0 = 0`) — a strict generalization, rebuilt kernel-pure.
+   (`module`, `derivative_smul`, and `smul_eq_C_mul` all need care: the Module-ℤ smul in the statements does not
+   syntactically match the `SMulZeroClass` smul those lemmas are stated with, so they fire via `map_smul` /
+   `show … from`, not bare `rw`.)
 4. **`mathieuZhao_of_charge_pos`**: still on `import Mathlib`; minimal-import trim pending (statement stands alone).
 
 ## The owner's "divide by (pA₀)!" is exactly THM-2022's crux (vindication + correction)
@@ -74,7 +83,11 @@ The full NC2/GMC(2) proof is **THM-2022** (proved on paper; Frobenius/Kummer/Luc
 with the one-variable Duistermaat–van der Kallen constant-term theorem THM-1630 as its deep analytic input — a
 citation, not in Mathlib); its formalization is the real multi-session target and is correctly **excluded** from
 the present submission claim.
+A **second** PR-ready file now accompanies it: `HermiteThreeTerm.lean` supplies the three-term Hermite recurrence
+(Mathlib-missing) and the "consecutive Hermite share no root" corollary, kernel-pure — the concrete Mathlib-object
+application of the abstract lemma.
 Cross-links: GMC2Reduction/GMC2HermiteNoCommonRoot/GMC2MomentBasics (existing kernel-pure corpus), S62 (Hermite
 no-common-root origin), THM-2022 (full proof; corrects S89–S91 via MISTAKE-214/215), THM-1630 (DvdK constant-term,
 the citation input), THM-1540 (NC2⇒GMC(2)), memory `lean-mathlib-cast-pitfalls`. Files
-`04-computation/lean/TournamentH7/TournamentH7/ThreeTermRecurrence.lean` (recast + minimal imports, S93). HYP-8805.
+`04-computation/lean/TournamentH7/TournamentH7/ThreeTermRecurrence.lean` (recast + minimal imports, weakened `hb`,
+S93) and `…/HermiteThreeTerm.lean` (three-term Hermite recurrence + no-common-root, S93). HYP-8805.

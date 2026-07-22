@@ -3,6 +3,16 @@
 > [`START-HERE.md`](START-HERE.md), [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md),
 > and [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
 
+## death-star-2026-07-21-S93 -- Mathlib-PR packaging of the three-term no-common-root: Polynomial-R recast + minimal imports + the Mathlib-MISSING three-term Hermite recurrence proved, with "consecutive Hermite share no root" as the flagship application. All kernel-pure. HYP-8805.
+
+**Owner directive:** work the natural next continuations of the S92 formalization toward finalized completion; pull/push often.
+
+- **Absorbed the fleet correction:** NC2/GMC(2) are PROVED on paper by THM-2022 (codex; Frobenius amplification of the lowest balanced Wick face, certificate `Q^p`, DvdK constant-term THM-1630 as citation input). My S89-S91 Vandermonde/Paley synthesis is superseded (MISTAKE-214/215). **Honest vindication:** THM-2022 §4 IS the owner's S91 "divide by (pA0)!" directive -- that instinct was the crux; my error was the residue (it is `Q^p` via Kummer/Lucas, not a Vandermonde).
+- **`ThreeTermRecurrence.lean` upgraded to PR-quality:** (1) **Polynomial-R recast** -- added `ThreeTerm.poly : ℕ → R[X]` (`noncomputable`), the `eval_poly` bridge, and `no_common_root_poly` in `Polynomial.IsRoot` form; (2) **minimal imports** (`import Mathlib` → 4 modules; build **8475→1202 jobs**); (3) **`hb` weakened to `∀ n, b (n+1) ≠ 0`** (only b at ≥1 occurs; Hermite has b0=0) -- strict generalization.
+- **NEW `HermiteThreeTerm.lean` (the compelling application):** proved **`derivative_hermite_succ`** (`(hermite (n+1))' = (n+1)•hermite n`) and **`hermite_recurrence`** (three-term `hermite(n+2)=X·hermite(n+1)-(n+1)·hermite n`) -- **both Mathlib-MISSING** (Mathlib ships only the derivative-form `hermite_succ`); then **`hermite_no_common_root`** (no two consecutive Hermite polys share a root) by exhibiting `Polynomial.hermite` as the `ThreeTerm ℤ` instance `hermiteZ`. `module` tactic closes the ladder identity (H_n' terms cancel).
+- **All 8 results verified kernel-pure** (`[propext, Classical.choice, Quot.sound]`, no sorry/native_decide), warning-free. Two PR-ready files, wired to root. Lean pitfall saved (Module-ℤ smul ≠ SMulZeroClass smul: use `map_smul`/`show…from`, not bare `rw`; `module` needs `mul_smul_comm` first).
+- **Remaining (non-blocking):** `mathieuZhao_of_charge_pos` minimal-import trim; formalizing THM-2022 itself (DvdK not in Mathlib) is the real multi-session target. reflection gmc2-nc2-mathlib-submission-readiness-...-S92 (updated). NC2/GMC(2) FULL = THM-2022 (proved on paper), not this Lean payload.
+
 ## boxeph-2026-07-21-S205 -- JC<->LRC = one n=12 AP-rigidity; comprehensive view; Keller counterexample verified; red-team suite (HYP-8810)
 ## boxeph-2026-07-21-S207 -- cake, bagel, Moser and Fibonacci are ONE Pascal triangle (HYP-8820)
 
