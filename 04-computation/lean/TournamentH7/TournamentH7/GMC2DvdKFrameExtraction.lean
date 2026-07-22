@@ -113,6 +113,31 @@ theorem xCoeff0_CRl_mul_inverse_PhiFrame (Rl : LaurentSeries F) (M : ℕ) :
     show (0 : ℤ) = (M : ℤ) * (n + 1) + -(M:ℤ) * (n + 1) by ring,
     HahnSeries.coeff_single_mul_add, one_mul]
 
+/-- **The frame generating function is the moment series.**  Composing death-star's
+`xCoeff0_xM_div_PhiFrame` (`xᴹ/Φ = 1 + t·(R/Φ)`) with leg (c), the frame `F := xCoeff0(xᴹ/Φ)` equals
+`∑_m (Rlᵐ).coeff(M·m) tᵐ` — the DvdK moment generating function `∑ D_m tᵐ` (`D_0 = 1`). -/
+theorem xCoeff0_xM_div_PhiFrame_eq_moments (Rl : LaurentSeries F) (M : ℕ) :
+    xCoeff0 (C ((HahnSeries.single (1:ℤ) (1:F)) ^ M) * Ring.inverse (PhiFrame Rl M))
+      = mk (fun m => (Rl ^ m).coeff ((M : ℤ) * m)) := by
+  rw [xCoeff0_xM_div_PhiFrame, xCoeff0_CRl_mul_inverse_PhiFrame]
+  ext m
+  cases m with
+  | zero => simp [HahnSeries.coeff_one]
+  | succ k => simp [coeff_succ_X_mul]
+
+/-- **F = 1 in the frame under DvdK vanishing (discharges `hderiv_of_frame`'s `hF1`).**  If every
+positive frame moment `(Rlᵐ).coeff(M·m)` (`m ≥ 1`) vanishes, then `xCoeff0(xᴹ/Φ) = 1`. -/
+theorem xCoeff0_xM_div_PhiFrame_eq_one_of_vanish (Rl : LaurentSeries F) (M : ℕ)
+    (hvanish : ∀ m : ℕ, 1 ≤ m → (Rl ^ m).coeff ((M : ℤ) * m) = 0) :
+    xCoeff0 (C ((HahnSeries.single (1:ℤ) (1:F)) ^ M) * Ring.inverse (PhiFrame Rl M)) = 1 := by
+  rw [xCoeff0_xM_div_PhiFrame_eq_moments]
+  ext m
+  cases m with
+  | zero => simp [HahnSeries.coeff_one]
+  | succ k =>
+    rw [coeff_mk, coeff_one, if_neg (Nat.succ_ne_zero k)]
+    exact hvanish (k + 1) (by omega)
+
 end FrameExtraction
 
 end GMC2DvdKFrameExtraction
@@ -121,3 +146,5 @@ end GMC2DvdKFrameExtraction
 #print axioms GMC2DvdKFrameExtraction.inverse_oneSubCX
 #print axioms GMC2DvdKFrameExtraction.inverse_PhiFrame
 #print axioms GMC2DvdKFrameExtraction.xCoeff0_CRl_mul_inverse_PhiFrame
+#print axioms GMC2DvdKFrameExtraction.xCoeff0_xM_div_PhiFrame_eq_moments
+#print axioms GMC2DvdKFrameExtraction.xCoeff0_xM_div_PhiFrame_eq_one_of_vanish
