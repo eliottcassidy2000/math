@@ -746,3 +746,6 @@ import TournamentH7.GMC2ReciprocalSmallRoots
 import TournamentH7.GMC2Thm2067Wrapper
 import TournamentH7.GMC2GalRootAction
 import TournamentH7.GMC2Thm2067Concrete
+import TournamentH7.GMC2PhiVieta
+import TournamentH7.GMC2DvdKParameterIrreducible
+import TournamentH7.GMC2DvdKAssembly
