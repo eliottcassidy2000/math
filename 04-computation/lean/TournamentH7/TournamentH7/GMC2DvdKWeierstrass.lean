@@ -119,66 +119,10 @@ theorem coeff_zero_smallRootFactor_mul_unit (R : Polynomial F) (M : ℕ) (hM : 1
     PowerSeries.coeff_zero_eq_constantCoeff, constantCoeff_Phi R M hM] at key
   exact key.symm
 
-/-- Reducing mod `t` (the ring hom `constantCoeff : F[[t]] → F`) sends `Φ` to `x^M`. -/
-theorem map_constantCoeff_Phi (R : Polynomial F) (M : ℕ) (hM : 1 ≤ M) :
-    PowerSeries.map (PowerSeries.constantCoeff (R := F)) (Phi R M) = PowerSeries.X ^ M := by
-  rw [Phi, map_sub, map_pow, PowerSeries.map_X, map_mul, PowerSeries.map_C,
-    PowerSeries.constantCoeff_X, map_zero, zero_mul, sub_zero]
-
-/-- The distinguished small-root factor reduces mod `t` to `x^M`. -/
-theorem smallRootFactor_map_constantCoeff (R : Polynomial F) (M : ℕ) :
-    (smallRootFactor R M).map (PowerSeries.constantCoeff (R := F)) = (Polynomial.X : Polynomial F) ^ M := by
-  have hd := PowerSeries.isDistinguishedAt_weierstrassDistinguished (phi_residue_ne_zero R M)
-  have hdeg : (smallRootFactor R M).natDegree = M := smallRootFactor_natDegree R M
-  ext k
-  rw [Polynomial.coeff_map, Polynomial.coeff_X_pow]
-  by_cases hk : k = M
-  · rw [if_pos hk, hk]
-    have h1 : (smallRootFactor R M).coeff M = 1 := by
-      have hmon := (smallRootFactor_monic R M).coeff_natDegree
-      rwa [hdeg] at hmon
-    rw [h1, map_one]
-  · rw [if_neg hk]
-    rcases lt_or_gt_of_ne hk with hlt | hgt
-    · have hmem : (smallRootFactor R M).coeff k ∈ IsLocalRing.maximalIdeal (PowerSeries F) :=
-        hd.toIsWeaklyEisensteinAt.mem (lt_of_lt_of_eq hlt hdeg.symm)
-      rw [PowerSeries.maximalIdeal_eq_span_X, Ideal.mem_span_singleton] at hmem
-      obtain ⟨c, hc⟩ := hmem
-      rw [hc, map_mul, PowerSeries.constantCoeff_X, zero_mul]
-    · rw [Polynomial.coeff_eq_zero_of_natDegree_lt (lt_of_eq_of_lt hdeg hgt), map_zero]
-
-/-- **`hconst` for kps's char-0 closing: `h(0,0) = 1`.**  The Weierstrass unit's `x`-constant
-term `h(0,t)` has `t`-constant term `1`, because reducing `Φ = P·h` mod `t` gives `x^M = x^M·(h mod t)`,
-so `h ≡ 1 mod t`. -/
-theorem constantCoeff_constantCoeff_weierstrassUnit (R : Polynomial F) (M : ℕ) (hM : 1 ≤ M) :
-    PowerSeries.constantCoeff (R := F)
-        (PowerSeries.constantCoeff (R := PowerSeries F)
-          (PowerSeries.weierstrassUnit (Phi R M) (phi_residue_ne_zero R M))) = 1 := by
-  have H := PowerSeries.isWeierstrassFactorization_weierstrassDistinguished_weierstrassUnit
-    (phi_residue_ne_zero R M)
-  -- `map(constantCoeff) ↑P = x^M`
-  have hPm : PowerSeries.map (PowerSeries.constantCoeff (R := F))
-      (↑(smallRootFactor R M) : (PowerSeries F)⟦X⟧) = (PowerSeries.X : F⟦X⟧) ^ M := by
-    rw [← Polynomial.polynomial_map_coe, smallRootFactor_map_constantCoeff, Polynomial.coe_pow,
-      Polynomial.coe_X]
-  -- map(constantCoeff) h = 1
-  have hh : PowerSeries.map (PowerSeries.constantCoeff (R := F))
-      (PowerSeries.weierstrassUnit (Phi R M) (phi_residue_ne_zero R M)) = 1 := by
-    have key := congrArg (PowerSeries.map (PowerSeries.constantCoeff (R := F))) H.eq_mul
-    rw [map_mul, map_constantCoeff_Phi R M hM,
-      show (↑(PowerSeries.weierstrassDistinguished (Phi R M) (phi_residue_ne_zero R M))
-        : (PowerSeries F)⟦X⟧) = ↑(smallRootFactor R M) from rfl, hPm] at key
-    exact (mul_left_cancel₀ (pow_ne_zero M PowerSeries.X_ne_zero)
-      (by rw [mul_one]; exact key)).symm
-  -- take `coeff 0` (in x) of `map(constantCoeff) h = 1`
-  have e := congrArg (PowerSeries.coeff (R := F) 0) hh
-  simpa only [PowerSeries.coeff_map, PowerSeries.coeff_zero_eq_constantCoeff, map_one] using e
-
 end
 
 #print axioms phi_weierstrass
 #print axioms smallRootFactor_natDegree
 #print axioms coeff_zero_smallRootFactor_mul_unit
-#print axioms constantCoeff_constantCoeff_weierstrassUnit
 
 end GMC2DvdKWeierstrass
