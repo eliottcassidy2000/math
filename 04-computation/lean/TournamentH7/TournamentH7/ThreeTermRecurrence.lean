@@ -8,7 +8,7 @@ import Mathlib.Tactic.Positivity
 
 A monic three-term recurrence over a commutative ring `R`,
 `p 0 = 1`,  `p 1 x = x - a 0`,  `p (n+2) x = (x - a (n+1)) * p (n+1) x - b (n+1) * p n x`,
-with nonvanishing off-diagonal `b n ≠ 0`, produces a polynomial sequence in which
+with nonvanishing off-diagonal `b (n+1) ≠ 0`, produces a polynomial sequence in which
 **no two consecutive members share a root** (over an integral domain), and hence no
 point is a root of the whole family.
 
@@ -30,8 +30,10 @@ structure ThreeTerm (R : Type*) [Zero R] where
   a : ℕ → R
   /-- Off-diagonal coefficients. -/
   b : ℕ → R
-  /-- The off-diagonal coefficients never vanish. -/
-  hb : ∀ n, b n ≠ 0
+  /-- The off-diagonal coefficients that appear in the recurrence never vanish.
+  Only `b 1, b 2, …` occur (in the `p (n+2)` step), so `b 0` is unconstrained;
+  this matches families such as Hermite where `b 0 = 0`. -/
+  hb : ∀ n, b (n + 1) ≠ 0
 
 variable {R : Type*} [CommRing R]
 
@@ -62,7 +64,7 @@ theorem ThreeTerm.no_common_root [IsDomain R] (T : ThreeTerm R) :
       have hrec := T.p_succ_succ k x
       rw [h2, h1] at hrec
       have hbpk : T.b (k + 1) * T.p k x = 0 := by linear_combination hrec
-      have hk : T.p k x = 0 := (mul_eq_zero.mp hbpk).resolve_left (T.hb (k + 1))
+      have hk : T.p k x = 0 := (mul_eq_zero.mp hbpk).resolve_left (T.hb k)
       exact ih x hk h1
 
 /-- No point is a root of every member of a three-term family (over an integral domain). -/

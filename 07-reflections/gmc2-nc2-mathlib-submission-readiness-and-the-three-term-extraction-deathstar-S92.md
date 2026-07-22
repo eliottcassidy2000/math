@@ -35,22 +35,46 @@ recurrence alone — a natural, self-contained Mathlib contribution.
 - Project-internal computational lemmas (`GMC2MomentBasics`: `E_Pspan_sq`, `E_Pfake_*` by kernel `decide`) are
   correct and kernel-pure but **specific instances**, not general theorems — they stay in-repo, not for Mathlib.
 
-## Remaining work toward an actual PR (scoped, not blocking)
-1. **`ThreeTermRecurrence`** (closest to ready): optionally recast `p : ℕ → R → R` as `Polynomial R` with
-   `.IsRoot`, and connect `hermiteReal` to Mathlib's `Polynomial.hermite` (show they satisfy the same recurrence).
-   Decide placement (`Mathlib/RingTheory/Polynomial/…` near orthogonal polynomials). The mathematics is done and
-   verified; this is packaging/idiom.
-2. **`mathieuZhao_of_charge_pos`**: strip the project `import Mathlib` to minimal imports; the statement stands
-   alone (a charge-graded expectation-vanishing lemma) and needs no Mathieu-Zhao scaffolding.
-3. A Mathlib PR wants module docstrings (present), no `set_option` hacks (none), and CI-green — the extracted file
-   already satisfies these.
+## PR-packaging progress (S93 update)
+1. **`ThreeTermRecurrence` recast — DONE.** Added the actual polynomial sequence `ThreeTerm.poly : ℕ → R[X]`
+   (`noncomputable`, since `Polynomial` over a general `CommRing` is), the evaluation bridge
+   `eval_poly : (T.poly n).eval x = T.p n x`, and the Mathlib-idiomatic **`no_common_root_poly`** stated in
+   `Polynomial.IsRoot` form. Kept the function-level `p`/`no_common_root` as the computational core. All 5 public
+   results verified kernel-pure (`[propext, Classical.choice, Quot.sound]`).
+2. **Minimal imports — DONE.** Stripped `import Mathlib` to the exact four modules `#min_imports` reports and a
+   test-build confirms: `Mathlib.Algebra.Polynomial.Eval.Defs`, `Mathlib.Data.Real.Basic`,
+   `Mathlib.Tactic.LinearCombination`, `Mathlib.Tactic.Positivity`. Build dropped **8475 → 1202 jobs** — a real,
+   large reduction, and the standard Mathlib-PR requirement (`shake`-clean) met by construction.
+3. **Hermite bridge — identified as future work (itself Mathlib-new).** Mathlib's `Polynomial.hermite : ℕ → ℤ[X]`
+   has **only the derivative-form recurrence** `hermite_succ` (= `X*hermite n − derivative (hermite n)`); it has
+   **no three-term recurrence** `derivative (hermite (n+1)) = (n+1)•hermite n` and **no** "consecutive Hermite
+   polynomials share no root." So connecting `hermiteReal` to `Polynomial.hermite` first requires *proving* that
+   missing three-term lemma (not term-simple via `coeff_hermite_succ_succ` — a genuine ladder identity). That lemma
+   **plus** the `no_common_root_poly` corollary would be a self-contained Mathlib contribution on its own; deferred.
+4. **`mathieuZhao_of_charge_pos`**: still on `import Mathlib`; minimal-import trim pending (statement stands alone).
+
+## The owner's "divide by (pA₀)!" is exactly THM-2022's crux (vindication + correction)
+THM-2022 (codex) proves NC2/GMC(2) in full, and its **§4 normalization is literally the owner's S91 directive**:
+*divide the moment of order `p·m0` by the common factorial `(p·A0)!`*. That instinct was right and is the hinge of
+the actual proof. What my S91 execution got **wrong** (now MISTAKE-215): the residue after dividing is **not** a
+Vandermonde of channel degrees — it is the Frobenius power **`Q̄^p`** of the lowest-balanced-face constant term
+`Q = CT_u(f_F^{m0})`, isolated by Kummer's carry formula (`p > m0` ⟹ no-carry ⟹ only `p`-dilated channels
+survive) and Lucas' congruence (`binom(pm0; ps) ≡ binom(m0; s)`). Likewise the S89/S90 "equal Vandermonde nodes =
+regular/Paley scores" identification is withdrawn (MISTAKE-214); the free-probability central-trinomial identity
+survives only as analogy. **Honest net:** the owner's normalization idea is vindicated as the mechanism of the
+proof; the tournament/Vandermonde/Paley *dressing* I put on it was the error. The correct object at the wall is
+`Q̄^p`, not a discriminant.
 
 ## Status
-`ThreeTermRecurrence.lean` is **Mathlib-PR-ready** (general, kernel-pure, docstringed, `autoImplicit false`, new
-to Mathlib), wired into the project root and building. The GMC(2) charge-arithmetic reduction is kernel-pure and
-PR-viable with light packaging. The full NC2/GMC(2) proof is THM-2022, but
-its finite-place whole-face argument remains to be formalized and is correctly
-excluded from the present submission claim.
+`ThreeTermRecurrence.lean` is **Mathlib-PR-ready**: general (`[CommRing R] [IsDomain R]`), kernel-pure, docstringed,
+`autoImplicit false`, minimal imports, both function- and `Polynomial`/`.IsRoot`-level statements, new to Mathlib
+(checked: Mathlib lacks even the three-term no-common-root). Wired into the project root and building. The GMC(2)
+charge-arithmetic reduction (`mathieuZhao_of_charge_pos`) is kernel-pure and PR-viable after a minimal-import trim.
+The full NC2/GMC(2) proof is **THM-2022** (proved on paper; Frobenius/Kummer/Lucas over a lowest balanced face,
+with the one-variable Duistermaat–van der Kallen constant-term theorem THM-1630 as its deep analytic input — a
+citation, not in Mathlib); its formalization is the real multi-session target and is correctly **excluded** from
+the present submission claim.
 Cross-links: GMC2Reduction/GMC2HermiteNoCommonRoot/GMC2MomentBasics (existing kernel-pure corpus), S62 (Hermite
-no-common-root origin), S87–S91 (superseded attack history), THM-2022 (full proof), memory `lean-mathlib-cast-pitfalls`. New file
-`04-computation/lean/TournamentH7/TournamentH7/ThreeTermRecurrence.lean`. HYP-8805.
+no-common-root origin), THM-2022 (full proof; corrects S89–S91 via MISTAKE-214/215), THM-1630 (DvdK constant-term,
+the citation input), THM-1540 (NC2⇒GMC(2)), memory `lean-mathlib-cast-pitfalls`. Files
+`04-computation/lean/TournamentH7/TournamentH7/ThreeTermRecurrence.lean` (recast + minimal imports, S93). HYP-8805.
