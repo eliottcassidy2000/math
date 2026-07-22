@@ -749,3 +749,4 @@ import TournamentH7.GMC2Thm2067Concrete
 import TournamentH7.GMC2PhiVieta
 import TournamentH7.GMC2DvdKParameterIrreducible
 import TournamentH7.GMC2DvdKAssembly
+import TournamentH7.GMC2RootPacketConcrete
