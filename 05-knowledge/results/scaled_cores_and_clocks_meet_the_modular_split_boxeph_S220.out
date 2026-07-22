@@ -1,0 +1,62 @@
+
+========================================================================
+P1  SCALING: M dilation-invariant; a scaled zeta-core carries the same LRC data
+========================================================================
+  deep well {1..12,182}: M=0.07650 (~14/183=0.07650)
+  c=2: M(c*deep)=0.07650 == M? True
+  c=3: M(c*deep)=0.07650 == M? True
+  c=5: M(c*deep)=0.07650 == M? True
+  => L(cS)=L(S): the scaled zeta-core (codex THM-2057) is the SAME LRC object on a refined clock.
+
+========================================================================
+P2  CLOCKS = CUSPS of X0(N): the divisors of N are the cusps = the sub-clocks
+========================================================================
+  12-clock = X0(12): #cusps=6 = divisors [1, 2, 3, 4, 6, 12] = sub-clocks ; primes [2, 3]
+  14-clock = X0(14): #cusps=4 = divisors [1, 2, 7, 14] = sub-clocks ; primes [2, 7]
+  12=2^2*3 (Eisenstein/argmax primes 2,3; Phi_6 argmax t*=14/183) ; 14=2*7 (apex Paley-7, Phi_7)
+  gcd(12,14)=2 (chirality prime) ; lcm=84 (double-kill). X0(14) cusps {1,2,7,14}: apex-7 cusp hardest.
+
+========================================================================
+P3  THE SPLIT (weight-2 X0(2p) 2nd moment): (#cusps-1) EISENSTEIN (+) genus CUSP; first cusp at p=7
+========================================================================
+  p : n=2p : X0(n) #cusps : dim Eisenstein(=#cusps-1, the FLOOR/bulk) : genus(=#cusp forms, OBSTRUCTION)
+   3 :   6  :   4       :        3                          :   0
+   5 :  10  :   4       :        3                          :   0
+   7 :  14  :   4       :        3                          :   1 <- FIRST cusp form: X0(14) genus 1 = f14=14a = the first HARD case (apex 7)
+  11 :  22  :   4       :        3                          :   2
+  13 :  26  :   4       :        3                          :   2
+  12-clock X0(12): genus 0 => CUSPLESS (pure Eisenstein, the argmax/floor, no obstruction).
+  14-clock X0(14): genus 1 => ONE cusp form f14 (the LRC(14) obstruction). genus = the S218 DEEP/hidden
+  entropy: genus 0 (argmax) = zero deep entropy = rigid ; genus 1 (LRC) = the hidden cuspidal obstruction.
+
+========================================================================
+P4  f14 = 14a: a_2=-1 (2-cusp), a_7=+1 (7-cusp) = the 2*7 clocks; period field Q(sqrt-7) = S215 disc -7
+========================================================================
+  f14 = 14a: a_2=-1 (mirror/2-cusp), a_7=1 (apex/7-cusp) -- encodes the 2*7 = the two clocks;
+  Atkin-Lehner w_2=+1, w_7=-1, root number +1, RANK 0 => L(14a,1)>0 (favorable sign).
+  period field of f14 = Q(sqrt-7) = the S215 apex disc -7 (Paley-7) -- as f14's PERIOD field, NOT a weight-1 theta.
+  the GL(3) 2nd-moment obstruction = sym^2 f14: L(f14 x f14,s) = zeta(s) * L(sym^2 f14, s) = EISENSTEIN bulk (zeta, 3/pi^2) * CUSP obstruction (sym^2).
+
+========================================================================
+P5  HONEST caveats (S219 correction + the mined negatives)
+========================================================================
+  * The Eisenstein(+)cusp split is the WEIGHT-2 X0(2p) second moment (HYP-3587), NOT L(S): THM-515's L(S)
+    is a singular INTEGRAL with NO Euler product and is not split. (Corrects S219's attachment.)
+  * The disc-(-7) binary form (S215/S219) is REAL but enters here as f14's PERIOD FIELD Q(sqrt-7); there is
+    NO weight-1 dihedral/CM theta for LRC in the repo -- 'weight-1' elsewhere is combinatorial (false friend).
+  * VALUE is modular, EXISTENCE is combinatorial: modular forms give the STRUCTURE+SIGN (genus=hardness,
+    rank 0=favorable sign, Q(sqrt-7)=period, Z/6 torsion=units), but the floor CONSTANT is NOT L(14a,1), NOT
+    L(sym^2), NOT any period -- it lives in the descent (covering-min product). (opus 3 negatives.)
+  * MISTAKE-087: the Phi_6 covering-min construction is NON-extremal ('covering-min lives in class-number-1
+    land' retracted to 'a particular non-minimal covering has class-number-1 structure').
+
+========================================================================
+SUMMARY -- scaled cores x clocks x the CORRECT modular split
+========================================================================
+  codex's SCALED ZETA-CORE (dilation-invariant, THM-2057) reduced on the 12a/14a CLOCKS = the WEIGHT-2
+  modular floor on X0(2p): the CUSPS of X0(N) ARE the divisor sub-clocks; the floor = (#cusps-1) EISENSTEIN
+  (bulk 3/pi^2) (+) genus CUSP forms. The 12-clock (X0(12), 2^2*3, argmax Phi_6) is genus 0 = CUSPLESS =
+  zero deep entropy (rigid); the 14-clock (X0(14), 2*7, apex Paley-7) is genus 1 = the ONE cusp form f14=14a
+  = the LRC(14) OBSTRUCTION at the apex-7 cusp. f14 spells 2*7 (a_2=-1,a_7=+1), period field Q(sqrt-7) (the
+  S215 disc -7). So genus (cusp forms) = the S218 deep/hidden arithmetic entropy; the difficulty of LRC(14)
+  is the first cuspidal genus, at the apex prime 7 -- VALUE modular, EXISTENCE/constant combinatorial.
