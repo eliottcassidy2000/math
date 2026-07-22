@@ -17,7 +17,6 @@ depends_on:
   - THM-2076
 related:
   - THM-2061
-  - THM-2076
   - THM-2078
   - THM-841
   - THM-848
@@ -388,8 +387,10 @@ This converts the non-hereditarily-primitive lane into a terminal-core
 problem with two finite sidecars: the component address word from THM-2075
 and the relative-height box above.  THM-2076 has already removed depths six
 through eight, so (17) and (19) need be iterated at most five times.  This
-does not bound `B`, classify the hereditarily primitive terminal core, or
-prove LRC(14).
+does not upper-bound `B`, classify the hereditarily primitive terminal core,
+or prove LRC(14).  THM-2078 separately uses the present height box to exclude
+the whole finite slice `B<=24`; the remaining nontrivial terminal lane has
+`B>=25`.
 
 The old viewpoints now have precise scopes.
 
