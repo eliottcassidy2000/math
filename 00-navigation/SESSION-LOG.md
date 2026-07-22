@@ -28,9 +28,11 @@ Older chronology is in
 - **Newest closure:** THM-2093's dyadic cocircuit flag makes the formerly
   unbounded global last-guard/terminal-anchor star finite, with an explicit
   enormous full-row bound. It does not enumerate any bank.
-- **Remaining:** separate bounded guard-ratio families, exact finite banks,
-  and shallower/other terminal and atlas lanes. THM-2091 is an unproved
-  centered-energy stub. LRC(14) is not closed.
+- THM-2091's centered-energy inequality and THM-2094's exact conditional
+  moment certificate exclude the four-`7|q` terminal branch.
+- **Remaining:** the `1..3` modular counts, bounded guard-ratio families, exact
+  finite banks, and shallower/other atlas lanes. THM-2095 is an unproved
+  p-adic guard-ratio stub. LRC(14) is not closed.
 
 ## NC2 / GMC formalization
 

@@ -15,7 +15,7 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
 - **THM-2088--2090 and THM-2092/2093 (PROVED):** persistence is flat affine
   holonomy; the global splice, height transfer, and dyadic cocircuit flag make
   every no-pair cut branch finite. The banks are not enumerated.
-- **THM-2091/2094 (PROVED):** centered triple energy is necessary, and exact
+- **THM-2091/THM-2094 (PROVED):** centered triple energy is necessary, and exact
   guard/multiplicity moments exclude the four-`7|q` terminal branch. The live
   modular counts are `1,2,3`; neither theorem is LRC(14).
 - **THM-2084 (PROVED, cubic source-fiber scope):** a non-tame cubic stratum

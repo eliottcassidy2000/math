@@ -125,7 +125,7 @@ for relative, prefix in {
 require(
     "00-navigation/START-HERE.md",
     "LRC(14)", "OPEN", "q <= 25", "THM-2084", "THM-2081--2087",
-    "THM-2088--2092", "HeightWitnessSupplier", "Anchor / Niche / Wildcard",
+    "THM-2088--2093", "HeightWitnessSupplier", "Anchor / Niche / Wildcard",
 )
 require(
     "00-navigation/CURRENT-FRONTIER.md",
@@ -135,7 +135,7 @@ require(
 )
 require(
     "01-canon/ACTIVE-GUARDRAILS.md",
-    "No uniform `q<=25` theorem", "THM-2091", "MISTAKE-240",
+    "No uniform `q<=25` theorem", "THM-2095", "MISTAKE-240",
     "Support is not an indexed multiset", "CLAIMED",
 )
 require(
@@ -145,7 +145,7 @@ require(
 )
 require(
     "05-knowledge/hypotheses/INDEX.md",
-    "THM-2091", "CLAIMED STUB", "THM-2092", "HYP-8931", "HYP-8932",
+    "THM-2091", "THM-2094", "THM-2095", "CLAIMED STUB", "THM-2092", "HYP-8931", "HYP-8932",
     "HYP-8935", "MISTAKE-240", "MISTAKE-241", "DvdK1", "sole endpoint premise",
 )
 require(
@@ -174,8 +174,8 @@ forbid(
 # One centralized recent-frontier status gate.
 expected_recent = {
     2084: "PROVED", 2085: "PROVED", 2086: "PROVED", 2087: "PROVED",
-    2088: "PROVED", 2089: "PROVED", 2090: "PROVED", 2091: "CLAIMED",
-    2092: "PROVED", 2093: "PROVED",
+    2088: "PROVED", 2089: "PROVED", 2090: "PROVED", 2091: "PROVED",
+    2092: "PROVED", 2093: "PROVED", 2094: "PROVED", 2095: "CLAIMED",
 }
 for number, expected in expected_recent.items():
     relative = theorem_path(number)
@@ -205,11 +205,11 @@ for theorem_id, status in status_by_id.items():
             fail(f"{theorem_id}: proved dependency graph imports {dependency}")
 
 # Router smoke tests: exact claimed IDs must be visibly quarantined.
-smoke = run(sys.executable, "agents/start_session.py", "--topic", "THM-2091", "--max-matches", "8")
+smoke = run(sys.executable, "agents/start_session.py", "--topic", "THM-2095", "--max-matches", "8")
 if smoke.returncode != 0:
     fail(f"start_session.py smoke failed: {smoke.stderr.strip()}")
 else:
-    for token in ("Unproved candidates (not results)", "[CLAIMED]", "THM-2091"):
+    for token in ("Unproved candidates (not results)", "[CLAIMED]", "THM-2095"):
         if token not in smoke.stdout:
             fail(f"start_session.py: claimed-route smoke lacks {token!r}")
 

@@ -106,13 +106,13 @@ are searchable history—not mandatory warm-up.
     THM-2072/2073/2075/2077 retain the dyadic terminal and owner addresses;
     THM-2078/2080 force size `7..10`, maximum `>=25`, and depth `<=4`.
     THM-2081--2087 make the rank-seven relation bound effective at `57` and
-    close modular/lacunary branches; THM-2088--2092 reduce the persistent lane,
-    and THM-2093 makes its global-star branch finite.
+    close modular/lacunary branches; THM-2088--2093 reduce all no-pair cut
+    lanes to finite banks, and THM-2091/2094 exclude the four-`7|q` branch.
 16. **Shared syntax is not a bridge.** MISTAKE-230--233/HYP-8885 retract the
     universal entropy/modular frame; MISTAKE-235 leaves S102's LRC/GMC sums as
     analogy, not AP-core reduction. Fiber size is observable-relative, and
     genus, cusp forms, Paley spectra, or weighted kernels need an explicit
-    loneliness-preserving map. THM-2091 remains an unproved stub; Lean also
+    loneliness-preserving map. THM-2095 remains an unproved stub; Lean also
     requires satisfiable hypotheses and root-import reach.
 
 ## Where to go by topic
