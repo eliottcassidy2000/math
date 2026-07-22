@@ -40,9 +40,9 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
   `11`-content blocker through rank `10`, excluding all-primitive covers.
 - **THM-2115 (PROVED):** the half-fiber signed divisor sequence is Toeplitz-PSD;
   frequency `84` closes a row passing all small clocks and its Hunter tree.
-- **THM-2116 (PROVED REDUCTION):** the generic first `13`-blocker yields a
-  six-toothpick-plus-singleton partition or seven toothpicks with one double;
-  the colored patterns remain open.
+- **THM-2116/2120 (PROVED REDUCTION/CLOSURE):** the generic first terminal
+  `13`-blocker yields two colored-toothpick patterns; global phase/kernel
+  rigidity excludes both, emptying that unique independent rank-eight branch.
 - **THM-2117 (PROVED SEPARATION):** clocks, the maximum Hunter tree, and every
   scalar Fourier minor can pass despite an open safe interval. Retain a joint
   Toeplitz/Fejer certificate, not scalar divisor-packet bounds.

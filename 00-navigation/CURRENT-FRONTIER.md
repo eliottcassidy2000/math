@@ -138,9 +138,9 @@ not unsafe. The reusable certificate architecture is
   specialization gives `13|h*product(Q)` and, through rank `10`,
   `11|h*product(Q)`. THM-2115's half-fiber Toeplitz gate closes at frequency
   `84` a row invisible to every THM-2105 clock and its saturated pair tree.
-  THM-2116 turns the generic first `13`-blocker into either a
-  six-toothpick-plus-singleton partition or a seven-toothpick cover with one
-  doubled point; a positive-measure two-singleton phase set escapes.
+  THM-2116 reduces the generic first `13`-blocker to two colored-toothpick
+  patterns; THM-2120 uses global phase/kernel rigidity to eliminate both,
+  closing that unique independent rank-eight branch; other blockers remain.
   THM-2117 gives a sharper harmonic separation: one exact rank-eight row
   passes all small clocks, its maximum Hunter tree, and every scalar Fourier
   minor, yet has an open safe interval. Retain a joint Toeplitz/Fejer

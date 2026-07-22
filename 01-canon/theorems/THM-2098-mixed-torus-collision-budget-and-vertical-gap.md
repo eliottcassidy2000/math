@@ -28,6 +28,7 @@ related:
   - THM-2099
   - THM-2114
   - THM-2116
+  - THM-2120
   - MISTAKE-239
   - MISTAKE-242
 ---

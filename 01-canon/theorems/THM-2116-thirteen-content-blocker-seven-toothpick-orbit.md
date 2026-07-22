@@ -13,8 +13,9 @@ status: >
   cover supplied by THM-2098, the same dichotomy holds for almost every base
   orbit. Two singleton phases on a pointwise-covered safe orbit give an
   immediate escape. This is the first exact consumer of THM-2114's mandatory
-  13-content blocker; it does not exclude the two extremal orbit patterns or
-  prove rank eight/LRC(14).
+  13-content blocker. THM-2120 subsequently excludes both extremal patterns
+  throughout this branch; neither theorem closes every rank-eight branch or
+  proves LRC(14).
 source: codex-2026-07-22-LRC-thirteen-blocker-toothpick-orbit
 depends_on:
   - THM-2098
@@ -22,6 +23,7 @@ depends_on:
 related:
   - THM-2095
   - THM-2105
+  - THM-2120
 ---
 
 # THM-2116 -- the first 13-blocker becomes seven finite toothpicks
@@ -253,5 +255,6 @@ chord hypergraph
 (F_13; D_1,...,D_7; r_1,...,r_7)
 ```
 
-together with the continuous base phase `X_0`.  This theorem proves the
-reduction and the two incidence ledgers; it does not eliminate them. QED.
+together with the continuous base phase `X_0`. This theorem proves the
+reduction and the two incidence ledgers. THM-2120 assembles the full base-
+phase torus and uses its finite character kernels to eliminate both. QED.

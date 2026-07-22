@@ -58,7 +58,15 @@ Older chronology is in
   a colored two-point toothpick. Almost every covered needle is therefore
   either a disjoint six-toothpick-plus-singleton partition or a seven-
   toothpick cover with one doubled point. A positive-measure two-singleton
-  phase set would close this branch; the two extremal colored patterns remain.
+  phase set would close this branch.
+- THM-2120 supplies that closure globally. Under `Y=13X`, every phase has a
+  guard-safe thirteenth root, and two residual singleton windows outside the
+  blocker band violate THM-2116. Avoiding every pair forces the blocker
+  character to equal one member of each independent pair and share the line
+  of each dependent pair. Hence all seven residuals lie on the blocker line,
+  or six equal `+/-u` and one is exceptional. A `3/7<5/7` measure count
+  excludes the latter; settled LRC(9) on the common fiber excludes the former.
+  The unique independent terminal-`13`-blocker rank-eight branch is empty.
 - **Remaining:** exact discharge of the rank-seven finite bank and both
   higher-rank branches; the depth-zero/rank-eleven and rank-twelve atlas lanes
   also remain. LRC(14) is not closed.
