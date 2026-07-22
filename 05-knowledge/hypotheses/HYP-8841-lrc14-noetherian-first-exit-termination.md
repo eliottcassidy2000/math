@@ -8,9 +8,10 @@ status: >
   an infinite Hasse-indistinguishable family. THM-2051 adds a universal finite-
   height higher-relation gate: either there is a positive-measure strict exit or a
   support-three-through-five relation of coefficient height at most 2^21. The target is a
-  height-decreasing termination theorem inside that structured branch, ending
-  either at a signed Euler boundary certificate or at a strict rational lonely
-  phase.
+  height-decreasing termination theorem inside that structured branch. THM-2053
+  now makes every rank-eleven rational plane finite in parameter space; the
+  target is atlas compression plus signed Euler/resolved-phase discharge of
+  those finite disks.
 source: codex-2026-07-21-DC2-LRC14-termination
 related:
   - THM-523
@@ -21,7 +22,10 @@ related:
   - THM-2050
   - THM-2051
   - THM-2052
+  - THM-2053
   - HYP-2108
+  - HYP-2896
+  - HYP-2986
   - HYP-3117
   - HYP-3120
   - HYP-8845
@@ -111,6 +115,19 @@ coordinates into scale clusters and genuine cross-cluster triples leave at
 most two cluster scales. The unresolved rank jump is from eleven to twelve,
 or a direct Euler/strict-exit proof on those one-parameter stars.
 
+THM-2053 removes the word "only" from that last sentence. An eleven-dimensional
+relation code has a kernel of dimension at most two. In a two-dimensional
+kernel, write every row as `v(a,b)=a u+b z` in a saturated integer basis and
+put `L=max_i sqrt(u_i^2+z_i^2)`. The general primitive-subcircle rate and
+Ungar's planar direction theorem give
+
+```text
+sqrt(a^2+b^2)>=91L  ==>  M(v(a,b))>=1/14.             (2d)
+```
+
+Thus rank eleven itself has a finite parameter-disk terminal. Rank twelve is
+still useful, but is no longer the unique route to finiteness.
+
 The companion audit supplies the essential hostile control for that statement:
 every one of its eight rows already has a coefficient-height-one circuit of
 support three. The first seven, including AP, GW, `12->26`, `12->36`,
@@ -126,11 +143,12 @@ tournament. The next theorem must localize a circuit to the peeled speed, an
 active endpoint owner, or a relation that changes the signed cyclic wall word;
 a relation elsewhere in the row cannot drive deletion.
 
-THM-2052 makes independence load-bearing too. A useful active-owner relation
-must lie outside the already harvested rank-at-least-eleven code; otherwise it
-does not descend. One new independent row raises the code to rank twelve, where
-the maximal-minor bound makes the remaining decision finite. Thus the refined
-target is **Euler survival or rank gain**, not merely active incidence.
+THM-2052 makes independence load-bearing for a relation-harvesting move. A
+useful active-owner relation must lie outside the already harvested
+rank-at-least-eleven code; otherwise it does not descend. But THM-2053 adds a
+second termination coordinate: reduced parameter norm relative to the plane's
+Lipschitz constant. Thus the refined target is **Euler/exit, rank gain, or
+entry into the finite geodesic disk**, not merely active incidence.
 
 The proposed LRC14 termination theorem is:
 
@@ -294,13 +312,14 @@ third clause of the deletion trichotomy is exactly
 P_w(C):=max_i (||w m_i||+(w/2)l_i-1/14) >= 0.        (8)
 ```
 
-This is the concrete next decisive target. Let `W` be an eleven-dimensional
-bounded relation code supplied by THM-2052:
+This remains the concrete endpoint gate inside the finite disks. Let `W` be an
+eleven-dimensional bounded relation code supplied by THM-2052:
 
 > On every residual row for which all THM-2048 peel taxes pass and all pair-sum
 > margins are nonpositive, either some peel `w` satisfies `P_w(C)>=0`, or the
 > active endpoint-owner data supplies a bounded relation `k dot v=0` with
-> `k notin W`.
+> `k notin W`, or the row is routed into the explicit THM-2053 parameter disk
+> `||(a,b)||<91L` for exact finite discharge.
 
 Equations (7)--(8) do not prove the target; they identify the exact missing
 input. The raw relation `1+2=3` does not mention `w`, `m_i`, or the endpoint
@@ -315,3 +334,10 @@ endpoint/component comes with its mirror and `chi` is even. It is enough to
 force (8) on one half-circle; the mirror produces the second Euler component.
 This halves the owner-word problem but does not supply the rank gain or the
 first survivor.
+
+The one-tail theorem HYP-2896 is the worked model for the last finite step.
+On `span((1,...,13),e_12)`, divisibility walls `12|w` and `14|w` split the
+parameter line into cells with a `q=12` witness, a `q=14` witness, or the
+affine binding phase `(35m+2)/(84m+5)`. The desired plane completion is a
+finite two-parameter version of that resonance fan, retaining HYP-2986's
+open-tope/boundary-cocircuit state and HYP-2108's endpoint owner labels.
