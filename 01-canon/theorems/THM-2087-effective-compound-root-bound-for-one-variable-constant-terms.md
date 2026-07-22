@@ -25,8 +25,8 @@ related:
   - THM-2070-horizontal-wick-embedding-and-dihedral-return-cancellation
 script: 04-computation/tnc_compound_root_effective_bound_codex_20260722.py
 output: 05-knowledge/results/tnc_compound_root_effective_bound_codex_20260722.out
-script_sha256: 8b585a8ec96360bcf9d597a8d1d1c9d84f43cec7e10de44bcac88c441ebd967f
-output_sha256: 01f27494811037e542ea7581886ddba9a1042e50bf7f05c047ec98c7b7f0d048
+script_sha256: e02ad8f52c7f88c2ac8b956fdd660e3850b309227133adf986acfc2c877d2030
+output_sha256: 71fb750cdbe5119ae18741fb9674d1849e41b95eb3b88f2037fb17a11a13d631
 hash_basis: repository blobs with LF line endings
 ---
 
