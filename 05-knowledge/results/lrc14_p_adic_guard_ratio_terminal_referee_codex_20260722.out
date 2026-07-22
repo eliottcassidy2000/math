@@ -12,5 +12,8 @@ p=29 max_e=1 counts=1,0 witness=0,0,0,0,0,0
 general_scale=3168316166400
 live_scale=252576225
 live_pair_bound=14396844825
+live_scale_divisors=240
+live_ratio_pairs=1165
+marked_pair_ledger=279600
 diagonal_margin=7/330
 PASS
