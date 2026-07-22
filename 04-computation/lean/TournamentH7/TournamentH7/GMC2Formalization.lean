@@ -37,9 +37,9 @@ import TournamentH7.GMC2HeightWitness
 # Formalization spine for NC2 and GMC(2)
 
 This aggregation module exposes the checked components of `THM-2022` through
-one stable import.  It includes the full post-specialization contradiction and
-an `NC2`/GMC(2) endpoint conditional on the exact remaining internal interface,
-`GMC2NC2.HeightWitnessSupplier`.
+one stable import. It includes the full post-specialization contradiction,
+`GMC2NC2.heightWitnessSupplier_holds`, and `NC2`/GMC(2) endpoints
+conditional only on `GMC2DvdKInterface.DvdK1`.
 
 The present spine has eight layers.
 
@@ -70,9 +70,9 @@ The present spine has eight layers.
    independent number-field reduction route, although it is no longer on the
    shortest critical path.
 8. `GMC2SupportFaceBridge` transports the exact face seed and its height
-   obligations into support-indexed channels. `GMC2NC2` proves the finite-field
-   zero/nonzero contradiction and derives both `NC2` and GMC(2) from `DvdK1`
-   plus a compact `HeightWitnessSupplier`.
+   obligations into support-indexed channels. `GMC2NC2` proves the
+   finite-field zero/nonzero contradiction. `GMC2HeightWitness` packages the
+   height obligations and derives both `NC2` and GMC(2) from `DvdK1` alone.
 
 The reference-channel extractor and the height-obligation theorem are each
 kernel-checked. Their direct existential wrapper into `HeightWitnessSupplier`

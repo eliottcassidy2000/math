@@ -41,7 +41,15 @@ HEADLINE_SENTINELS = {
         "THM-2074",
         "THM-2078",
         "THM-2080",
-        "`DvdK1` and `HeightWitnessSupplier` remain explicit interfaces",
+        "THM-2081",
+        "THM-2082",
+        "THM-2083",
+        "GMC2HeightWitness",
+        "HeightWitnessSupplier",
+        "DvdK1",
+        "HYP-8930",
+        "HYP-8931",
+        "MISTAKE-240",
         "JC is false from dimension three; JC(2) and DC(2) remain open",
         "THM-2071 closes every quadratic-fiber",
         "Dirichlet profile",
@@ -55,7 +63,9 @@ HEADLINE_SENTINELS = {
         "uniform emptiness of the twelve-speed sporadic tight branch remains open",
         "NC2, hence unrestricted GMC(2), is **PROVED in repo",
         "THM-2067",
-        "`DvdK1` and `HeightWitnessSupplier` remain",
+        "GMC2HeightWitness",
+        "HeightWitnessSupplier",
+        "DvdK1",
         "Support return is not coefficient noncancellation",
         "JC is false from dimension three; JC(2) and DC(2) remain open",
         "THM-2071 closes every quadratic-fiber",
@@ -64,7 +74,16 @@ HEADLINE_SENTINELS = {
         "THM-2069",
         "THM-2074 proves density-one strict LRC(14)",
         "THM-2078/2080 force size `7..10`, maximum `>=25`, and depth `<=4`",
+        "THM-2081",
+        "THM-2082",
+        "THM-2083",
+        "THM-2084",
+        "THM-2085",
+        "THM-2086",
         "MISTAKE-238/239",
+        "MISTAKE-240",
+        "HYP-8930",
+        "HYP-8931",
         "HYP-8885",
         "MISTAKE-235",
     ),
@@ -77,12 +96,22 @@ HEADLINE_SENTINELS = {
         "THM-2074",
         "THM-2078",
         "THM-2080",
+        "THM-2081",
+        "THM-2082",
+        "THM-2083",
+        "THM-2084",
+        "THM-2085",
+        "THM-2086",
         "MISTAKE-238",
         "MISTAKE-239",
+        "MISTAKE-240",
         "## NC2 and Gaussian moments",
         "GMC is false for every dimension at least 3",
-        "`DvdK1` and `HeightWitnessSupplier`",
-        "times out at `whnf`",
+        "GMC2HeightWitness",
+        "HeightWitnessSupplier",
+        "DvdK1",
+        "HYP-8930",
+        "HYP-8931",
         "THM-2070",
         "THM-2071",
         "HYP-8890",
@@ -102,12 +131,24 @@ HEADLINE_SENTINELS = {
         "THM-2068 is menu-relative",
         "No fixed finite bank is uniform",
         "The dyadic tower is lossless but still open",
-        "THM-2078/2080",
+        "THM-2078",
+        "THM-2080",
+        "THM-2081",
+        "THM-2082",
+        "THM-2083",
+        "THM-2084",
+        "THM-2085",
+        "THM-2086",
         "THM-2069/2074 are PROVED but sharply scoped",
         "MISTAKE-238",
         "MISTAKE-239",
+        "MISTAKE-240",
         "Paper proof is not full Lean proof",
-        "`DvdK1` and `HeightWitnessSupplier`",
+        "GMC2HeightWitness",
+        "HeightWitnessSupplier",
+        "DvdK1",
+        "HYP-8930",
+        "HYP-8931",
         "THM-2067 is bare existence, not effective DvdK",
         "Support feasibility is not weighted noncancellation",
         "Clocks are not modular cusps",
@@ -128,6 +169,12 @@ HEADLINE_SENTINELS = {
         "THM-2069 filters deletions",
         "THM-2074",
         "THM-2078/2080",
+        "THM-2081",
+        "THM-2082",
+        "THM-2083",
+        "THM-2084",
+        "THM-2085",
+        "THM-2086",
         "MISTAKE-238/239",
         "### Mandatory hostile controls",
     ),
@@ -144,6 +191,12 @@ HEADLINE_SENTINELS = {
         "THM-2069",
         "THM-2074",
         "THM-2078/2080",
+        "THM-2081",
+        "THM-2082",
+        "THM-2083",
+        "THM-2084",
+        "THM-2085",
+        "THM-2086",
     ),
 }
 
@@ -188,6 +241,10 @@ FORBIDDEN_STARTUP_TEXT = {
         "THM-2069 and THM-2074 are RESERVED",
         "THM-2074 is RESERVED",
         "depth-at-most-five safe-child tower",
+        "DvdK1 and HeightWitnessSupplier remain explicit",
+        "HeightWitnessSupplier remains explicit",
+        "HeightWitnessSupplier still remains",
+        "not root-imported",
     ),
     "00-navigation/START-HERE.md": (
         "every counterexample has a 2--5-term integer relation of height at most `2^20`",
@@ -203,6 +260,10 @@ FORBIDDEN_STARTUP_TEXT = {
         "keep THM-2069/2074 reserved",
         "keep THM-2074 reserved",
         "depth-at-most-five safe-child tower",
+        "DvdK1 and HeightWitnessSupplier remain",
+        "HeightWitnessSupplier remains explicit",
+        "S104 did not discharge the supplier",
+        "not root-imported",
     ),
     "00-navigation/CURRENT-FRONTIER.md": (
         "6. **Pointed plane transport.**",
@@ -218,6 +279,10 @@ FORBIDDEN_STARTUP_TEXT = {
         "THM-2069 (code/cogirth) and THM-2074 (density one) remain reserved",
         "THM-2074 (density one) remains reserved",
         "depth-at-most-five safe-child",
+        "times out at `whnf`",
+        "HeightWitnessSupplier remains explicit",
+        "S104 did not discharge the supplier",
+        "not root-imported",
     ),
     "01-canon/ACTIVE-GUARDRAILS.md": (
         "height-`2^21` relation",
@@ -228,6 +293,9 @@ FORBIDDEN_STARTUP_TEXT = {
         "THM-2069 and THM-2074 are RESERVED",
         "THM-2074 is RESERVED",
         "depth at most five",
+        "HeightWitnessSupplier remains explicit",
+        "S104 did not discharge the supplier",
+        "not root-imported",
     ),
     "00-navigation/LRC14-PROOF-MAP.md": (
         "height <=2^21",
@@ -506,6 +574,64 @@ def main() -> int:
             errors,
         )
 
+    # The rank-seven tail has three proved but sharply scoped mechanisms.  A
+    # short startup rewrite may change notation, but it must preserve what each
+    # theorem actually buys and what remains open.
+    for relative in (
+        "00-navigation/CURRENT-FRONTIER.md",
+        "01-canon/ACTIVE-GUARDRAILS.md",
+        "00-navigation/LRC14-PROOF-MAP.md",
+    ):
+        text = maintained_text(relative, errors)
+        require_pattern(
+            relative,
+            text,
+            "THM-2081 closes only the rank-seven height-24 shell",
+            r"THM-2081.{0,700}(?:4,?120|height\s*`?24`?|through\s*`?24`?)"
+            r".{0,700}(?:all[ -]height|unbounded height|beyond\s*`?24`?)"
+            r".{0,160}(?:open|remain|does not)",
+            errors,
+        )
+        require_pattern(
+            relative,
+            text,
+            "THM-2082 proves wheel blindness and retains projective residue incidence",
+            r"THM-2082.{0,800}(?:wheel|Hamming|prime support).{0,500}"
+            r"(?:projective residue|residue incidence|translated[ -]prime[ -]grid)",
+            errors,
+        )
+        require_pattern(
+            relative,
+            text,
+            "THM-2083 gives a uniform but noneffective short three-term relation",
+            r"(?:THM-2083|THM-2081/2083).{0,800}(?:uniform|absolute|bounded)"
+            r".{0,250}"
+            r"(?:three[ -]term|guard/two[ -]speed|a\s*h\s*\+\s*b\s*q)"
+            r".{0,500}(?:non(?:-| )?effective|no numerical|unbounded scale|"
+            r"finite (?:list|many).{0,80}templates)",
+            errors,
+        )
+        require_pattern(
+            relative,
+            text,
+            "THM-2083 allows the guard coefficient to vanish",
+            r"(?:THM-2083|THM-2081/2083).{0,900}(?:guard )?coefficient"
+            r".{0,100}(?:may|can|allowed to) vanish|"
+            r"(?:guard )?coefficient.{0,100}(?:may|can|allowed to) vanish"
+            r".{0,900}(?:THM-2083|THM-2081/2083)",
+            errors,
+        )
+        for theorem_id in (2084, 2085, 2086):
+            require_pattern(
+                relative,
+                text,
+                f"THM-{theorem_id} is claimed/reserved and outside the proof graph",
+                rf"THM-{theorem_id}.{{0,450}}(?:CLAIMED|RESERVED|"
+                r"not (?:a )?(?:result|theorem input)|outside (?:the )?proof graph|"
+                r"do not cite)",
+                errors,
+            )
+
     for relative, forbidden in FORBIDDEN_STARTUP_TEXT.items():
         text = maintained_text(relative, errors)
         normalized = " ".join(text.split())
@@ -616,7 +742,7 @@ def main() -> int:
         if count > 1:
             errors.append(f"MISTAKES.md: current-range MISTAKE-{value} occurs {count} times")
 
-    for value in (230, 231, 232, 233, 234, 235, 236, 237, 238, 239):
+    for value in (230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240):
         if f"## MISTAKE-{value}" not in mistakes:
             errors.append(f"MISTAKES.md: current correction MISTAKE-{value} is missing")
 
@@ -648,6 +774,13 @@ def main() -> int:
             "guard containment was reversed and the complement is covered",
             r"guard containment.*reversed.*E_h\^c subset union_\(q in Q\) D_q",
         ),
+        (
+            240,
+            "LowestFaceUniqueChannel is vacuous on the empty negative level set",
+            r"LowestFaceUniqueChannel.*(?:inconsistent|vacuous).*"
+            r"lambda\s*=\s*0.*delta\s*=\s*-1.*F\s*=\s*(?:empty|∅).*"
+            r"98/116.*bounded (?:support )?census.*HYP-8930.*(?:survive|substantive)",
+        ),
     ):
         require_pattern(
             "01-canon/MISTAKES.md",
@@ -678,6 +811,53 @@ def main() -> int:
             errors.append(
                 f"{relative}: S227 raw claim lacks an early MISTAKE-238 correction banner"
             )
+
+    # HYP-8931 was broadcast widely before its universal class predicate was
+    # audited.  Every raw copy must lead, at byte zero, with the explicit
+    # MISTAKE-240 witness.  Count the broadcast plus its twelve recipient
+    # inbox copies as thirteen message copies; the sender has no self-inbox
+    # replica.
+    s230_broadcast = (
+        "agents/broadcast/"
+        "MSG-2744-from-boxeph-2026-07-22-boxeph-s230-bypass-the-gmc2-d.md"
+    )
+    s230_inbox_copies = sorted(
+        str(path.relative_to(REPO))
+        for path in REPO.glob(
+            "agents/*/inbox/"
+            "MSG-*-from-boxeph-2026-07-22-boxeph-s230-bypass-the-gmc2-d.md"
+        )
+    )
+    s230_message_copies = [s230_broadcast, *s230_inbox_copies]
+    if len(s230_message_copies) != 13:
+        errors.append(
+            "HYP-8931 quarantine expects 13 replicated message copies "
+            f"(broadcast plus inboxes), found {len(s230_message_copies)}"
+        )
+    s230_quarantined_artifacts = [
+        "07-reflections/"
+        "bypassing-the-gmc2-dvdk-dependency-for-the-unique-channel-class-"
+        "boxeph-S230.md",
+        *s230_message_copies,
+        "04-computation/lean/TournamentH7/TournamentH7/"
+        "GMC2DvdKUniqueChannelBypass.lean",
+    ]
+    for relative in s230_quarantined_artifacts:
+        head = read_required(relative, errors)[:1600]
+        expected_prefix = "/-!" if relative.endswith(".lean") else "> **CORRECTION"
+        if not head.startswith(expected_prefix):
+            errors.append(
+                f"{relative}: HYP-8931 correction banner is not at byte zero"
+            )
+        require_pattern(
+            relative,
+            head,
+            "early MISTAKE-240 empty-level-set quarantine",
+            r"MISTAKE-240.*(?:inconsistent|vacuous).*lambda\s*=\s*0.*"
+            r"delta\s*=\s*-1.*(?:F\s*=\s*(?:empty|∅)|F\s*=\s*empty).*"
+            r"HYP-8930.*(?:survive|substantive)",
+            errors,
+        )
 
     phase_packets = read_required(
         "01-canon/theorems/THM-2058-primitive-phase-packets-and-deck-fan-intervals.md",
@@ -906,6 +1086,40 @@ def main() -> int:
             "script_sha256: 0ae2220c80f1eba0cf93819d4b442d88dc6ceeee06ae851a24eeb1f3ebd12696",
             "output_sha256: 3cccf25892254dcc129448e0ab53060c26f7e10b04158b366de3b3b3095955d5",
         ),
+        "THM-2081-relative-hunter-terminal-rank-seven-gate.md": (
+            "PROVED. For seven danger combs",
+            "tau_h(Q)<=Delta_h(Q)",
+            "measure(G_Q minus E_h)>=tau_h(Q)-Delta_h(Q)",
+            "exactly `131` such cores",
+            "`4,120` allowed core/guard pairs",
+            "561797/8288280>0",
+            "all-height relative-tree inequality remains open",
+            "weighted graphic matroid",
+            "script_sha256: 7391cd8a547e6b0a09736ac4f38b63339a028ffbaa03934e99f945ed7ea96ac9",
+            "output_sha256: 9899f5d57e44ba9151fe18ee73b49d9117c538595422633e5c564ec062e58fdc",
+        ),
+        "THM-2082-rank-one-code-wheel-blindness-and-translated-prime-grid.md": (
+            "PROVED. A primitive scalar speed row has, at every prime p",
+            "1+(p-1)z^(w_p)",
+            "Q_1=1",
+            "translated prime grid",
+            "p=17",
+            "12 safe grid residues",
+            "Hamming support cannot replace",
+            "projective residue incidence",
+            "not LRC(14)",
+            "script_sha256: 7aab4e6ee7c3d43fad2bace64a2318b88be1b37fbffa95ee4628aec55e1abbd0",
+            "output_sha256: 0f048f47e44fc287c80a0c3825f5a5abf457f7e5cdc72dc388b364276f22caf8",
+        ),
+        "THM-2083-rank-seven-relative-hunter-short-relation-alternative.md": (
+            "PROVED by character convergence and THM-2081",
+            "G_Q subset E_h     implies     Lambda(h,Q)<=H_7",
+            "tau_(h_n)(Q_n)-Delta_(h_n)(Q_n)->30/343>0",
+            "uniform but does not give a numerical H",
+            "finitely many relation templates",
+            "coefficient `a` of the guard is allowed to vanish",
+            "does not assert that every obstruction has a genuinely guard-involving relation",
+        ),
     }.items():
         theorem_text = read_required(f"01-canon/theorems/{theorem}", errors)
         for sentinel in sentinels:
@@ -913,6 +1127,62 @@ def main() -> int:
                 errors.append(f"{theorem}: current scoped result lacks {sentinel!r}")
         if "status: >\n  RESERVED" in theorem_text:
             errors.append(f"{theorem}: proved result regressed to RESERVED")
+
+    # These files reserve attractive next moves.  Their status is deliberately
+    # not PROVED, and no proved theorem may take one as a dependency.
+    claimed_theorems = {
+        "THM-2084-cubic-fiber-low-complement-gauss-manin-gate.md": (
+            "RESERVED / UNPROVED.",
+            "Do not cite the exclusion until",
+            "remaining proof obligation",
+            "No theorem is established here",
+        ),
+        "THM-2085-explicit-height-57-rank-seven-selberg-gate.md": (
+            "RESERVED / UNPROVED.",
+            "The target is: G_Q subset E_h forces a nonzero relation",
+            "Exact constants",
+            "under audit",
+            "`H_7<=57` must not be cited",
+            "remaining checkpoint obligation",
+        ),
+        "THM-2086-relative-hunter-fourier-channel-and-lacunary-cone.md": (
+            "RESERVED / UNPROVED EMPTY STUB",
+            "do not cite this",
+            "stub as established or as a dependency",
+            "Reserved namespace",
+        ),
+    }
+    for theorem, sentinels in claimed_theorems.items():
+        relative = f"01-canon/theorems/{theorem}"
+        theorem_text = read_required(relative, errors)
+        for sentinel in sentinels:
+            if sentinel not in theorem_text:
+                errors.append(f"{theorem}: claimed namespace lacks {sentinel!r}")
+        actual_status = file_status(relative)
+        if actual_status not in {"CLAIMED", "RESERVED"}:
+            errors.append(
+                f"{theorem}: expected CLAIMED/RESERVED, found {actual_status}"
+            )
+
+    reserved_ids = {"THM-2084", "THM-2085", "THM-2086"}
+    for path in sorted((REPO / "01-canon/theorems").glob("THM-*.md")):
+        relative = str(path.relative_to(REPO))
+        if file_status(relative) not in {"PROVED", "FINITE-EXACT", "VERIFIED"}:
+            continue
+        prefix = read_required(relative, errors)[:12000]
+        frontmatter = prefix.partition("---")[2].partition("---")[0]
+        dependency_block = re.search(
+            r"^depends_on:\s*$((?:\n\s+-[^\n]+)*)",
+            frontmatter,
+            flags=re.MULTILINE,
+        )
+        if not dependency_block:
+            continue
+        for reserved_id in reserved_ids:
+            if reserved_id in dependency_block.group(1):
+                errors.append(
+                    f"{relative}: proved dependency graph imports {reserved_id}"
+                )
 
     gmc2_paper = read_required(
         "01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md",
@@ -922,8 +1192,10 @@ def main() -> int:
         "PROVED. For every finite exact support",
         "project-internal Galois orbit-product theorem THM-2067",
         "proves the specialized normalized relation is both",
-        "zero and nonzero, then derives `NC2` and GMC(2) from `DvdK1` and the compact",
-        "`HeightWitnessSupplier`",
+        "GMC2HeightWitness",
+        "heightWitnessSupplier_holds",
+        "nc2_of_dvdK1",
+        "gmc2_of_dvdK1",
         "THM-2067 gives exactly the bare existence statement needed",
         "proved-but-unformalized `DvdK1` proposition",
     ):
@@ -933,6 +1205,25 @@ def main() -> int:
         errors.append(
             "THM-2022: stale singular Lean-boundary summary hides the separate DvdK1 interface"
         )
+    for retired in (
+        "Two explicit Lean interfaces remain",
+        "conditional on the proved-but-unformalized `DvdK1` proposition and the named\n"
+        "`HeightWitnessSupplier` composition interface",
+    ):
+        if retired in gmc2_paper:
+            errors.append(f"THM-2022: discharged height boundary returned: {retired!r}")
+    require_pattern(
+        "01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md",
+        gmc2_paper,
+        "DvdK1 is the sole remaining formal premise",
+        r"(?:sole|only).{0,180}`?DvdK1`?.{0,180}(?:formal|Lean).{0,80}"
+        r"(?:premise|leaf|hypothesis)|"
+        r"(?:formal|Lean).{0,80}(?:premise|leaf|hypothesis).{0,180}"
+        r"(?:sole|only).{0,80}`?DvdK1`?|"
+        r"`?DvdK1`?.{0,120}(?:sole|only).{0,100}"
+        r"(?:formal|explicit )?(?:premise|leaf|hypothesis)",
+        errors,
+    )
 
     lean_formalization_files = {
         "04-computation/lean/TournamentH7/TournamentH7/GMC2DvdKInterface.lean": (
@@ -950,7 +1241,7 @@ def main() -> int:
         "04-computation/lean/TournamentH7/TournamentH7/GMC2NC2Capstone.lean": (
             "former work-in-progress theorem",
             "sorry-free compatibility",
-            "It deliberately exposes both remaining inputs",
+            "compatibility surface",
             "theorem nc2_of_dvdk1_of_heightWitnessSupplier",
             "theorem gmc2_of_dvdk1_of_heightWitnessSupplier",
         ),
@@ -972,11 +1263,39 @@ def main() -> int:
             "No cancellation, DvdK-premise-free",
             "#print axioms GMC2DvdKPositive.dvdk1_positive",
         ),
+        "04-computation/lean/TournamentH7/TournamentH7/GMC2DvdKUniqueChannel.lean": (
+            "theorem ct_ne_zero_of_unique_balanced",
+            "theorem two_balanced_of_ct_zero",
+            "def balancedSet",
+            "theorem ct_ne_zero_of_card_eq_one",
+            "theorem two_le_card_balanced_of_ct_zero",
+            "theorem dvdk1_of_uniqueChannel",
+            "theorem two_charge_via_unique",
+            "#print axioms GMC2DvdKUniqueChannel.dvdk1_of_uniqueChannel",
+        ),
+        "04-computation/lean/TournamentH7/TournamentH7/GMC2DvdKUniqueChannelBypass.lean": (
+            "CORRECTION (MISTAKE-240)",
+            "vacuous under the current definition of `LowestFaceUniqueChannel`",
+            "`lambda = 0`, `delta = -1`, and `F = ∅`",
+            "HYP-8930's fixed-support unique-channel theorem survives",
+            "def LowestFaceUniqueChannel",
+            "theorem exists_nonzero_lowest_face_seed_of_uniqueChannel",
+        ),
+        "04-computation/lean/TournamentH7/TournamentH7/GMC2HeightWitness.lean": (
+            "theorem heightWitnessSupplier_holds : HeightWitnessSupplier",
+            "set c : ↥F → ℂ := fun s => P.coeff s",
+            "theorem nc2_of_dvdK1",
+            "theorem gmc2_of_dvdK1",
+            "#print axioms GMC2NC2.heightWitnessSupplier_holds",
+            "#print axioms GMC2NC2.nc2_of_dvdK1",
+            "#print axioms GMC2NC2.gmc2_of_dvdK1",
+        ),
         "04-computation/lean/TournamentH7/TournamentH7/GMC2Formalization.lean": (
-            "import TournamentH7.GMC2NC2",
+            "import TournamentH7.GMC2HeightWitness",
             "derives both `NC2` and GMC(2) from `DvdK1`",
-            "plus a compact `HeightWitnessSupplier`",
-            "this interface therefore stays explicit",
+            "heightWitnessSupplier_holds : HeightWitnessSupplier",
+            "`GMC2NC2.nc2_of_dvdK1 : DvdK1 -> NC2`",
+            "depend on no `HeightWitnessSupplier` hypothesis",
         ),
     }
     for relative, sentinels in lean_formalization_files.items():
@@ -990,24 +1309,36 @@ def main() -> int:
     lean_root = read_required(
         "04-computation/lean/TournamentH7/TournamentH7.lean", errors
     )
-    for module in ("GMC2DvdKTwoCharge", "GMC2DvdKPositive"):
-        if re.search(rf"^import\s+TournamentH7\.{module}\s*$", lean_root, re.MULTILINE):
-            errors.append(
-                f"TournamentH7.lean: standalone {module} unexpectedly became root-imported"
-            )
-
-    for relative in (
-        "00-navigation/START-HERE.md",
-        "00-navigation/CURRENT-FRONTIER.md",
-        "01-canon/ACTIVE-GUARDRAILS.md",
+    for module in (
+        "GMC2Formalization",
+        "GMC2DvdKPositive",
+        "GMC2DvdKUniqueChannel",
+        "GMC2DvdKUniqueChannelBypass",
     ):
-        formal_summary = maintained_text(relative, errors)
-        require_pattern(
-            relative,
-            formal_summary,
-            "two-charge and positive DvdK leaves are standalone/not root-imported",
-            r"(?:standalone|not root[ -]imported)",
-            errors,
+        if not re.search(
+            rf"^import\s+TournamentH7\.{module}(?:\s+--.*)?$",
+            lean_root,
+            re.MULTILINE,
+        ):
+            errors.append(f"TournamentH7.lean: root import lacks {module}")
+    if re.search(
+        r"(?:height supplier|HeightWitnessSupplier).{0,80}remain explicit",
+        lean_root,
+        re.IGNORECASE,
+    ):
+        errors.append("TournamentH7.lean: stale explicit height-supplier comment returned")
+
+    unique_channel = read_required(
+        "04-computation/lean/TournamentH7/TournamentH7/GMC2DvdKUniqueChannel.lean",
+        errors,
+    )
+    if not re.search(
+        r"^import\s+TournamentH7\.GMC2DvdKTwoCharge\s*$",
+        unique_channel,
+        re.MULTILINE,
+    ):
+        errors.append(
+            "GMC2DvdKUniqueChannel.lean: transitive root path to TwoCharge is missing"
         )
 
     for relative in (
@@ -1030,6 +1361,36 @@ def main() -> int:
         ):
             if retired.casefold() in formal_summary.casefold():
                 errors.append(f"{relative}: obsolete one-sorry summary returned: {retired!r}")
+        require_pattern(
+            relative,
+            formal_summary,
+            "HeightWitnessSupplier is discharged by the kernel-checked wrapper",
+            r"HeightWitnessSupplier.{0,260}(?:discharg|kernel[ -](?:checked|pure)|"
+            r"proved|no longer.{0,60}(?:premise|hypothesis|interface))|"
+            r"(?:discharg|kernel[ -](?:checked|pure)|proved).{0,260}"
+            r"HeightWitnessSupplier",
+            errors,
+        )
+        require_pattern(
+            relative,
+            formal_summary,
+            "general DvdK1 is the sole remaining formal leaf",
+            r"(?:sole|only|one).{0,160}(?:general )?`?DvdK1`?.{0,160}"
+            r"(?:formal )?(?:leaf|premise|hypothesis|input|interface)|"
+            r"(?:general )?`?DvdK1`?.{0,160}(?:sole|only|one).{0,160}"
+            r"(?:formal )?(?:leaf|premise|hypothesis|input|interface)",
+            errors,
+        )
+        if re.search(
+            r"HeightWitnessSupplier.{0,180}(?:remain(?:s)? explicit|"
+            r"timed?[ -]out|timeout|still (?:open|required))|"
+            r"(?:S104 did not discharge|not root[ -]imported)",
+            formal_summary,
+            re.IGNORECASE | re.DOTALL,
+        ):
+            errors.append(
+                f"{relative}: stale pre-S105 formalization boundary returned"
+            )
 
     height_boundary_summary = "\n".join(
         maintained_text(relative, errors)
@@ -1042,10 +1403,50 @@ def main() -> int:
     require_pattern(
         "current Lean summaries",
         height_boundary_summary,
-        "HeightWitnessSupplier remains explicit after the WHNF/heartbeat timeout",
-        r"HeightWitnessSupplier.{0,320}(?:whnf|heartbeats?|timed?[ -]out|timeout)",
+        "S105 discharges HeightWitnessSupplier through GMC2HeightWitness",
+        r"S105.{0,500}(?:GMC2HeightWitness|HeightWitnessSupplier).{0,300}"
+        r"(?:discharg|kernel|root[ -]import)|"
+        r"GMC2HeightWitness.{0,500}(?:S105|discharg|kernel|root[ -]import)",
         errors,
     )
+
+    # The fixed-support unique-channel lemma is substantive.  The attempted
+    # polynomial-class bypass is not: MISTAKE-240 exhibits an empty level set.
+    for relative in (
+        "00-navigation/START-HERE.md",
+        "00-navigation/CURRENT-FRONTIER.md",
+        "01-canon/ACTIVE-GUARDRAILS.md",
+        "00-navigation/SESSION-LOG.md",
+        "05-knowledge/hypotheses/INDEX.md",
+    ):
+        formal_summary = maintained_text(relative, errors)
+        require_pattern(
+            relative,
+            formal_summary,
+            "HYP-8930 fixed-support unique-channel lemma is substantive",
+            r"HYP-8930.{0,500}(?:fixed[ -]support|specified (?:support|face)|"
+            r"ct_ne_zero_of_unique_balanced|dvdk1_of_uniqueChannel).{0,300}"
+            r"(?:substantive|survive|kernel|nonzero|noncancellation)",
+            errors,
+        )
+        require_pattern(
+            relative,
+            formal_summary,
+            "HYP-8931 is vacuous by the MISTAKE-240 empty-level witness",
+            r"(?:HYP-8931|LowestFaceUniqueChannel).{0,350}"
+            r"(?:MISTAKE-240|vacuous|inconsistent).{0,350}"
+            r"lambda\s*=\s*0.{0,100}delta\s*=\s*-1.{0,120}"
+            r"(?:F\s*=\s*(?:empty|∅)|empty (?:set|face|level))",
+            errors,
+        )
+        require_pattern(
+            relative,
+            formal_summary,
+            "98/116 is a bounded census, not a general density theorem",
+            r"98/116.{0,180}(?:bounded|finite|small[ -]support)"
+            r".{0,100}census.{0,220}(?:not.{0,80}(?:density|theorem|universal)|only)",
+            errors,
+        )
 
     corrected_jc = read_required(
         "05-knowledge/hypotheses/"
@@ -1114,6 +1515,7 @@ def main() -> int:
             )
     for value in (
         8841, 8846, 8871, 8879, 8885, 8890, 8900, 8905, 8915, 8920, 8925,
+        8930, 8931,
     ):
         if f"HYP-{value}" not in current_digest:
             errors.append(
@@ -1130,10 +1532,20 @@ def main() -> int:
         "THM-2078-bounded-terminal-guard-containment-closure.md",
         "THM-2079-mirror-complement-safe-child-addresses.md",
         "THM-2080-unequal-comb-overlap-removes-depth-five.md",
+        "THM-2081-relative-hunter-terminal-rank-seven-gate.md",
+        "THM-2082-rank-one-code-wheel-blindness-and-translated-prime-grid.md",
+        "THM-2083-rank-seven-relative-hunter-short-relation-alternative.md",
+        "THM-2084-cubic-fiber-low-complement-gauss-manin-gate.md",
+        "THM-2085-explicit-height-57-rank-seven-selberg-gate.md",
+        "THM-2086-relative-hunter-fourier-channel-and-lacunary-cone.md",
         "HYP-8905-binary-symmetric-jc2-subcase-and-separate-descent-programs.md",
         "GMC2DvdKTwoCharge.lean",
         "GMC2DvdKPositive.lean",
+        "GMC2DvdKUniqueChannel.lean",
+        "GMC2DvdKUniqueChannelBypass.lean",
+        "GMC2HeightWitness.lean",
         "MISTAKE-238/239",
+        "MISTAKE-240",
         "HeightWitnessSupplier",
     ):
         if sentinel not in current_digest:
@@ -1153,12 +1565,24 @@ def main() -> int:
             r".{0,520}(?:7\s*(?:through|to|--|–|\.\.)\s*10|10\.\.7)",
         ),
         (
-            "HYP-8915/HYP-8925 Lean leaves are standalone",
-            r"HYP-8915.{0,180}STANDALONE.{0,260}HYP-8925.{0,180}STANDALONE",
+            "HeightWitnessSupplier is discharged and DvdK1 is the sole formal leaf",
+            r"HeightWitnessSupplier.{0,260}(?:discharg|kernel|proved).{0,400}"
+            r"(?:sole|only).{0,120}(?:general )?`?DvdK1`?|"
+            r"(?:sole|only).{0,120}(?:general )?`?DvdK1`?.{0,400}"
+            r"HeightWitnessSupplier.{0,260}(?:discharg|kernel|proved)",
         ),
         (
-            "HeightWitnessSupplier remains explicit after timeout",
-            r"HeightWitnessSupplier.{0,180}(?:remain explicit|timed out|whnf)",
+            "HYP-8930 survives while HYP-8931 is vacuous by MISTAKE-240",
+            r"(?=.*HYP-8930.{0,500}(?:substantive|survive|fixed[ -]support))"
+            r"(?=.*HYP-8931.{0,500}(?:MISTAKE-240|vacuous|inconsistent))",
+        ),
+        (
+            "THM-2081/2082/2083 are scoped results and THM-2084/2085/2086 are claims",
+            r"(?=.*THM-2081.{0,260}PROVED)(?=.*THM-2082.{0,260}PROVED)"
+            r"(?=.*THM-2083.{0,260}PROVED)"
+            r"(?=.*THM-2084.{0,260}(?:CLAIMED|RESERVED))"
+            r"(?=.*THM-2085.{0,260}(?:CLAIMED|RESERVED))"
+            r"(?=.*THM-2086.{0,260}(?:CLAIMED|RESERVED))",
         ),
         (
             "THM-2071 closes quadratic fibers only through degree two",
@@ -1187,14 +1611,26 @@ def main() -> int:
         "THM-2078 is",
         "THM-2079",
         "THM-2080",
+        "THM-2081",
+        "THM-2082",
+        "THM-2083",
+        "THM-2084",
+        "THM-2085",
+        "THM-2086",
         "MISTAKE-238",
         "MISTAKE-239",
+        "MISTAKE-240",
         "THM-2022 proves NC2 and GMC(2) on paper",
         "GMC2DvdKTwoCharge.lean",
         "GMC2DvdKPositive.lean",
+        "GMC2DvdKUniqueChannel.lean",
+        "GMC2DvdKUniqueChannelBypass.lean",
+        "GMC2HeightWitness.lean",
         "general `DvdK1`",
         "`HeightWitnessSupplier`",
-        "S104 did not discharge the supplier",
+        "S105",
+        "HYP-8930",
+        "HYP-8931",
         "THM-2070 correction",
         "THM-2063/2071",
         "Anchor / Niche / Wildcard",
@@ -1208,8 +1644,23 @@ def main() -> int:
             r".{0,260}max\(Q_r\)>=25",
         ),
         (
-            "HeightWitnessSupplier timed out rather than being discharged",
-            r"S104 did not discharge.{0,220}(?:whnf|heartbeats|timed out)",
+            "S105 discharged HeightWitnessSupplier, leaving general DvdK1",
+            r"S105.{0,500}(?:HeightWitnessSupplier|GMC2HeightWitness).{0,300}"
+            r"(?:discharg|kernel|root[ -]import).{0,500}"
+            r"(?:sole|only|remaining).{0,160}(?:general )?`?DvdK1`?",
+        ),
+        (
+            "HYP-8930 survives and HYP-8931 is quarantined by MISTAKE-240",
+            r"(?=.*HYP-8930.{0,500}(?:substantive|survive|fixed[ -]support))"
+            r"(?=.*HYP-8931.{0,500}(?:MISTAKE-240|vacuous|inconsistent))",
+        ),
+        (
+            "THM-2081/2082/2083 proved, THM-2084/2085/2086 claimed",
+            r"(?=.*THM-2081.{0,260}PROVED)(?=.*THM-2082.{0,260}PROVED)"
+            r"(?=.*THM-2083.{0,260}PROVED)"
+            r"(?=.*THM-2084.{0,260}(?:CLAIMED|RESERVED))"
+            r"(?=.*THM-2085.{0,260}(?:CLAIMED|RESERVED))"
+            r"(?=.*THM-2086.{0,260}(?:CLAIMED|RESERVED))",
         ),
         (
             "quadratic-fiber survivors start in degree three",
@@ -1399,6 +1850,27 @@ def main() -> int:
     if "MISTAKE-239" not in guard_direction_smoke.stdout:
         errors.append("start_session.py: guard-containment topic did not surface MISTAKE-239")
 
+    unique_channel_correction_smoke = subprocess.run(
+        (
+            sys.executable,
+            str(REPO / "agents/start_session.py"),
+            "--topic",
+            "HYP-8931 LowestFaceUniqueChannel lambda 0 delta -1 empty face",
+            "--recent",
+            "1",
+            "--max-matches",
+            "12",
+        ),
+        cwd=REPO,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if "MISTAKE-240" not in unique_channel_correction_smoke.stdout:
+        errors.append(
+            "start_session.py: HYP-8931 empty-face topic did not surface MISTAKE-240"
+        )
+
     jc_bridge_smoke = subprocess.run(
         (
             sys.executable, str(REPO / "agents/start_session.py"),
@@ -1458,6 +1930,9 @@ def main() -> int:
         ("THM-2078-bounded-terminal-guard-containment-closure.md", "THM-2078 bounded terminal guard closure"),
         ("THM-2079-mirror-complement-safe-child-addresses.md", "THM-2079 mirror complement addresses"),
         ("THM-2080-unequal-comb-overlap-removes-depth-five.md", "THM-2080 unequal comb overlap depth four"),
+        ("THM-2081-relative-hunter-terminal-rank-seven-gate.md", "THM-2081 relative Hunter rank seven"),
+        ("THM-2082-rank-one-code-wheel-blindness-and-translated-prime-grid.md", "THM-2082 wheel blindness translated prime grid"),
+        ("THM-2083-rank-seven-relative-hunter-short-relation-alternative.md", "THM-2083 rank seven short relation alternative"),
     ):
         smoke = subprocess.run(
             (
@@ -1476,6 +1951,60 @@ def main() -> int:
         )[0]
         if theorem not in canon_block:
             errors.append(f"start_session.py: {theorem} is missing from proved canon")
+
+    for theorem, topic in (
+        (
+            "THM-2084-cubic-fiber-low-complement-gauss-manin-gate.md",
+            "THM-2084 cubic fiber Gauss Manin gate",
+        ),
+        (
+            "THM-2085-explicit-height-57-rank-seven-selberg-gate.md",
+            "THM-2085 height 57 Selberg gate",
+        ),
+        (
+            "THM-2086-relative-hunter-fourier-channel-and-lacunary-cone.md",
+            "THM-2086 relative Hunter Fourier lacunary cone",
+        ),
+    ):
+        smoke = subprocess.run(
+            (
+                sys.executable,
+                str(REPO / "agents/start_session.py"),
+                "--topic",
+                topic,
+                "--recent",
+                "1",
+                "--max-matches",
+                "16",
+            ),
+            cwd=REPO,
+            text=True,
+            capture_output=True,
+            check=False,
+        )
+        proposal_packet = smoke.stdout
+        expected_routes = (
+            f"[CLAIMED] 01-canon/theorems/{theorem}",
+            f"[RESERVED] 01-canon/theorems/{theorem}",
+        )
+        if not any(expected in proposal_packet for expected in expected_routes):
+            errors.append(
+                f"start_session.py: {theorem} lacks a CLAIMED/RESERVED route"
+            )
+        canon_block = proposal_packet.partition("  Canon:")[2].partition(
+            "  Reservations (not results):"
+        )[0]
+        reservation_block = proposal_packet.partition(
+            "  Reservations (not results):"
+        )[2].partition("  Hypotheses:")[0]
+        if theorem in canon_block:
+            errors.append(
+                f"start_session.py: {theorem} leaked into proved canon"
+            )
+        if theorem not in reservation_block:
+            errors.append(
+                f"start_session.py: {theorem} is outside the claimed/reserved router"
+            )
 
     hypothesis_smoke = subprocess.run(
         (

@@ -16,13 +16,12 @@ status: >
   at least 23/1911. These are genuine all-height branches; they do not close
   the remaining relation templates or LRC(14).
 source: codex-2026-07-22-LRC-relative-Hunter-Fourier
-depends_on:
+related:
   - THM-1221
   - THM-1234
   - THM-2080
   - THM-2081
   - THM-2083
-related:
   - THM-2082
   - THM-2087
   - THM-2088

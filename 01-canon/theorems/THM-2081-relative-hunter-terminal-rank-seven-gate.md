@@ -23,6 +23,9 @@ related:
   - THM-2087
 script: 04-computation/lrc14_relative_hunter_rank7_referee_codex_20260722.py
 output: 05-knowledge/results/lrc14_relative_hunter_rank7_referee_codex_20260722.out
+script_sha256: 7391cd8a547e6b0a09736ac4f38b63339a028ffbaa03934e99f945ed7ea96ac9
+output_sha256: 9899f5d57e44ba9151fe18ee73b49d9117c538595422633e5c564ec062e58fdc
+hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2081 -- relative Hunter on the terminal guard complement

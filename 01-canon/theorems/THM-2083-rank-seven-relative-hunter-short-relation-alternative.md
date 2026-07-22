@@ -1,6 +1,6 @@
 ---
 id: THM-2083
-title: "Every rank-seven terminal guard obstruction has a uniformly bounded three-term relation"
+title: "Every rank-seven terminal guard obstruction has a bounded relation supported on a guard/two-speed triple"
 status: >
   PROVED by character convergence and THM-2081. There is an absolute H such
   that if a seven-speed safe set is contained in one guard, then some triple
@@ -22,7 +22,7 @@ related:
   - THM-2087
 ---
 
-# THM-2083 -- the rank-seven relative-Hunter short-relation alternative
+# THM-2083 -- the rank-seven relative-Hunter bounded-support relation alternative
 
 For positive integers `u_1,...,u_k`, define their integer relation height by
 
@@ -174,10 +174,12 @@ a h+b q_i+c q_j=0,
 max(|a|,|b|,|c|)<=H_7.                                 (15)
 ```
 
-This is a support-at-most-three relation involving the **guard**, not merely
-a relation internal to the terminal core. It is exactly the coordinate that
-the global THM-2051 relation alternative does not retain after forgetting the
-last safe-child guard.
+This relation is supported on the guard and two terminal speeds, but the
+coefficient `a` of the guard is allowed to vanish. Thus the theorem does not
+assert that every obstruction has a genuinely guard-involving relation; in
+that branch it recovers a bounded two-speed relation internal to the core.
+What the reduction retains beyond THM-2051 is the labelled choice of
+`(h,q_i,q_j)` and its bounded coefficient template.
 
 The result does not make the terminal speeds finite. Each template (15) is an
 unbounded rational plane and may still carry divisor-complete hereditary

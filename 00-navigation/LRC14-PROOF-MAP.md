@@ -34,7 +34,7 @@ hypothetical LRC(14) counterexample
                     |-- owner words close divisor-complete max<=24   [THM-2066]
                     |-- adaptive safe-child/address/owner terminal   [THM-2072/2073/2075/2077]
                     |     `-- size 7..10, max>=25, depth<=4          [THM-2078/2080]
-                    |          `-- guard + outer-tail discharge      [OPEN]
+                    |          `-- rank-7 tree -> bounded templates -> residue/outer-tail exit [THM-2081/2083/OPEN]
                     |-- general clock / pair-sum / Fejer / Euler    [OPEN]
                     |-- active relation outside W
                     |     `-- rank 12 -> finite maximal-minor box [THM-2052]
@@ -44,10 +44,10 @@ hypothetical LRC(14) counterexample
 
 The inputs are proved in their cited scopes; every sufficient gate can leave
 an “uncertified” row. THM-2069 filters deletions but forgets phase and owners;
-THM-2074 proves density one while all counterexamples remain in its exceptional
-hyperplanes. THM-2075/2077 preserve the dyadic carrier, THM-2078/2080 bound it,
-and MISTAKE-238/239 forbid empty-row transport and the reversed guard cover.
-The unbounded hereditary terminal, marked circuits, and other cells stay open.
+THM-2074 leaves all counterexamples in its exceptional hyperplanes. THM-2081/2083 reduce rank seven to bounded relations supported on
+guard/two-speed triples; the guard coefficient may vanish and scale remains
+unbounded. THM-2082 proves scalar wheels lose projective residue incidence;
+MISTAKE-238/239 forbid invalid transfers. THM-2084, THM-2085, and THM-2086 are RESERVED / UNPROVED.
 
 ### Live interfaces
 
@@ -59,10 +59,10 @@ The unbounded hereditary terminal, marked circuits, and other cells stay open.
 | Primitive deck/owner fiber | For a fixed plane/pair/basis, THM-2058 gives exact reduced-order packets, labelled unit transport, bulk/boundary/null support, and one coprime longitudinal interval minus collision points | Empty or discharge every surviving interval; do not replace packet labels by counts. |
 | CRT packet join | THM-2059's reduction-histogram dot product counts compatible classes; the `Na/lcm` lift counts safe grid phases | Select clocks uniformly; zero overlap rejects only that clock grid. |
 | Tail sheets / dyadic seam | THM-2060/2064 give sharp capacity; THM-2061 gives the exact folded obstruction, divisor pins, metric box, and `max(C)<=19` census | Empty the remaining signed seam uniformly, or route each survivor back to the labelled atlas. |
-| Hereditary primitivity | THM-2062/2069 identify deletion failure with low-weight evaluation codewords/cogirth and give exact CRT wheels | Compose with phase-height and owner exits; code density/existence alone cannot prove safety. |
+| Hereditary primitivity | THM-2062/2069 identify deletion failure with low-weight evaluation codewords/cogirth; THM-2082 proves the scalar wheel is incidence-blind | Use translated grids conditionally, then retain projective residue incidence, phase, and owners. |
 | Circuit rays | THM-2065 sends every circuit-free strict-null template to finitely many projective rays before the CRT wheel | Classify/discharge persistent height-`2^20` marked circuits; a relation is not evidence of failure. |
 | Dyadic owner words | THM-2066 closes divisor-complete eleven-cores through `24`; THM-2068 gives a seven-clock minimum within `15..34` | Do not extrapolate the bounded bank: THM-2072 proves every fixed core-independent finite bank blind somewhere. |
-| Safe-child tower | THM-2073/2075/2077 preserve the terminal carrier; THM-2078/2080 force size `7..10`, maximum `>=25`, depth `<=4` | Discharge guard containment and both outer-tail owner constraints; mirror-complement addresses only halve search. |
+| Safe-child tower | THM-2073/2075/2077 preserve the carrier; THM-2078/2080 force size `7..10`, maximum `>=25`, depth `<=4`; THM-2081 closes 4,120 height-24 pairs and THM-2083 leaves bounded templates | All-height closure remains open: make the relation bound effective or discharge each template with guard-relative residues and both outer-tail owners. |
 | Relative Fejer | After zero-character factors are removed, THM-2054 gives an explicit lifted-character average error for nonzero line frequencies when bounded resonances lift | Prove the model-specific plateau and route every bounded scalar resonance. |
 | Rank code | THM-2052 supplies eleven independent bounded support-at-most-three rows | Produce an active row outside the code when available; rank twelve gives a finite box but is not required for finiteness. |
 | Euler endpoint | THM-2047 retains owner, sign, side, height, and paired deletion; HYP-2108 gives `P_w` | Prove `P_w>=0` on any disk points not discharged arithmetically. |
@@ -132,9 +132,9 @@ retain ties and hyperedges otherwise.
    alone. Record basis covariance explicitly.
 2. Kelvin-invert each owner sector, build the finite acute unimodular fan from
    THM-2056, and attach `D_N`, pair sums, and clock-kill data to every bad ray.
-3. Split each deck by THM-2058 primitive order and owner interval. Compose
-   THM-2059/2069 wheels with THM-2066 words and THM-2073/2075 safe children.
-   Search size-`7..10`, max-`>=25` terminals with guard/tail owners intact.
+3. Split each deck by THM-2058 primitive order and owner interval; compose THM-2059/2069 wheels with THM-2066 words and THM-2073/2075 safe children;
+   on rank seven classify THM-2081/2083 templates with guard-relative residues
+   and tail owners intact; do not collapse incidence to Hamming data.
 4. Put the eleven-dimensional relation code in exact row-echelon form and
    record, for every peel/endpoint-owner set, whether an active bounded row
    lies outside the current code.

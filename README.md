@@ -40,19 +40,23 @@ As of 2026-07-22:
   circuit-free rays. THM-2074 proves strict loneliness for density-one rows.
   On the remaining dyadic seam, THM-2073/2075/2077 retain a lossless terminal
   core/address/owner carrier, THM-2078 excludes terminal maximum at most `24`,
-  and THM-2080 forces nontrivial depth at most four. The live terminal has size
-  `7..10`, maximum at least `25`, and global odd-guard plus outer-tail owner
-  constraints. Hereditary terminals, persistent circuits, other atlas cells,
-  and the rank-twelve box remain open.
+  and THM-2080 forces nontrivial depth at most four. THM-2081 turns rank seven
+  into a guard-relative weighted-tree inequality; THM-2083 proves every
+  obstruction has a uniformly bounded relation supported on a guard/two-speed
+  triple (the guard coefficient may vanish). THM-2082
+  proves the scalar wheel cannot see the required projective residue incidence.
+  Relation templates, higher terminal ranks, other atlas cells, and the
+  rank-twelve box remain open. THM-2085/2086 are reserved proposals only.
 - **NC2 and GMC(2) are PROVED in repo canon** by THM-2022's lowest-balanced-face
   Frobenius argument. THM-2067 supplies its bare one-variable constant-term
   seed internally; full DvdK is only a stronger alternate. Lean checks the
-  residue, face transport, contradiction, extractor, and height ingredients,
-  while `DvdK1` and `HeightWitnessSupplier` remain explicit interfaces—the
-  paper theorem is not yet fully formalized. Standalone, sorry-free modules
-  handle two charges and arbitrary positive real coefficients; neither is
-  root-imported or resolves complex cancellation. THM-2070 explains why a
-  cofinite support-return semigroup cannot replace noncancellation.
+  residue, face transport, contradiction, extractor, and the root-imported
+  theorem `GMC2HeightWitness.heightWitnessSupplier_holds`. The clean endpoint is
+  `DvdK1 -> NC2 -> GMC(2)`; general complex `DvdK1` is the sole formal
+  premise. Root-imported special modules handle positive coefficients,
+  two charges, and HYP-8930's fixed-support unique channels. HYP-8931's proposed
+  polynomial-class bypass is vacuous (MISTAKE-240), and THM-2070 explains why
+  support return alone cannot replace noncancellation.
 - **GMC is false from dimension 3 onward.** Dimension two is the sharp surviving
   case handled by THM-2022; dimensions one and two must not be conflated with
   the higher-dimensional counterexamples.
@@ -61,7 +65,7 @@ As of 2026-07-22:
   planar pairs, and THM-2071 closes every quadratic-fiber pencil cell. Any
   survivor has fiber degree at least three in every source/output-pencil
   direction. This is not a cover-degree theorem or NC2/GMC bridge
-  (MISTAKE-236/237).
+  (MISTAKE-236/237). THM-2084's cubic-fiber proposal is reserved and unproved.
 - **Tournament work has moved from isolated invariants to operations and
   decomposition:** order-join, strong cores, signed Rédei data, local
   subtournament censuses, and invariant-independence witnesses. Rank matches

@@ -721,7 +721,7 @@ import TournamentH7.LRCMod23Spread
 
 import TournamentH7.GMC2HermiteNoCommonRoot  -- kind-pasteur-S128c120..c122 / THM-1585 (domination false) + THM-1660 (orthogonality closure) + THM-1620 (Pochhammer bridge: toral=Legendre, radial=Hermite) + THM-1670 (order = D, so ThreeTerm descent is (M,N)=(1,1) only). ThreeTerm.no_common_root: any monic 3-term recurrence with b n != 0 has no common root; replaces klein-S351's false Gamma-domination. Hermite/truncated-exp instances. No sorry/native_decide
 import TournamentH7.GMC2MomentBasics
-import TournamentH7.GMC2Formalization  -- codex-2026-07-21: kernel-pure NC2/GMC2 spine through concrete normalized residue and the post-height-supplier capstone. DvdK and the compact height supplier remain explicit. No sorry/native_decide
+import TournamentH7.GMC2Formalization  -- codex/death-star-2026-07-22: normalized residue plus root-imported heightWitnessSupplier_holds; general DvdK1 is the sole explicit premise. No sorry/native_decide
 
 import TournamentH7.TNCDetectionDepth  -- kind-pasteur-S128c124 / THM-1710: TNC detection depth = D. zeros_propagate: D consecutive zeros of a D-th order recurrence (nonvanishing leading coeff) propagate to all later terms, so the toral nullcone is cut out by the first D moments. Caps opus THM-1685 level count. No sorry/native_decide
 
@@ -734,7 +734,7 @@ import TournamentH7.ThreeTermRecurrence  -- death-star-S92: Mathlib-PR-ready gen
 import TournamentH7.HermiteThreeTerm  -- death-star-S93: Mathlib Hermite as a ThreeTerm instance (three-term recurrence + no-common-root)
 import TournamentH7.GMC2DvdKUniqueChannel
 import TournamentH7.GMC2DvdKPositive
-import TournamentH7.GMC2DvdKUniqueChannelBypass
+import TournamentH7.GMC2DvdKUniqueChannelBypass  -- HYP-8931 builds, but its current class predicate is vacuous; see MISTAKE-240. Fixed-support unique-channel lemmas survive.
 import TournamentH7.GMC2DvdKMonomialCertificate
 import TournamentH7.GMC2DvdKResidualExample
 import TournamentH7.GMC2OrbitProduct

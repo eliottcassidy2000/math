@@ -11,9 +11,8 @@
 3. **Major new closure:** NC2, hence unrestricted GMC(2), is **PROVED in repo
    canon** by THM-2022, with the one-variable seed now proved internally by
    THM-2067. Lean checks the residue, support-face, contradiction, extractor,
-   and height ingredients; standalone Lean modules prove the two-charge and
-   positive-coefficient leaves, but `DvdK1` and `HeightWitnessSupplier` remain
-   explicit interfaces, so the paper proof is not yet fully formalized.
+   and `GMC2HeightWitness.heightWitnessSupplier_holds`; the root-imported endpoint is
+   `DvdK1 -> NC2 -> GMC(2)`. General `DvdK1` is the sole formal leaf.
 4. **Truth discipline:** correction/repaired canon outranks canon, which
    outranks exact computation, hypothesis, synthesis, and historical prose.
 5. **Research posture:** use an Anchor / Niche / Wildcard portfolio. Recover
@@ -57,8 +56,8 @@ are searchable history—not mandatory warm-up.
    is a stronger alternate, not the current paper dependency.
 8. **Support return is not coefficient noncancellation.** THM-2070 gives a
    cofinite aperiodic return set with infinitely many zero odd constant terms.
-   HYP-8890/8895 are refuted in general; positive coefficients, two charges,
-   and HYP-8878's unique-minimum monomial criterion survive.
+   HYP-8930's fixed-support unique-channel lemma survives. HYP-8931 is vacuous:
+   `lambda=0, delta=-1, F=empty`; `98/116` is a bounded census, not a theorem (MISTAKE-240).
 9. **Whole-packet Frobenius is transferable but not an LRC proof.** THM-2041
    preserves exact-order/parity/conductor packets. LRC still needs a nonzero
    safe seed and a pointwise exit.
@@ -104,19 +103,20 @@ are searchable history—not mandatory warm-up.
     THM-2066 closes divisor-complete cores through `24`; THM-2069 proves the
     deletion-code/cogirth wheel; THM-2074 proves density-one strict LRC(14).
     THM-2072/2073/2075/2077 retain the dyadic terminal and owner addresses;
-    THM-2078/2080 force size `7..10`, maximum `>=25`, and depth `<=4`.
-    MISTAKE-238/239 block two tempting but invalid guard transfers.
+    THM-2078/2080 force size `7..10`, maximum `>=25`, and depth `<=4`;
+    THM-2081/2083 reduce rank seven to bounded relations supported on guard/two-speed triples (the guard coefficient may vanish).
+    THM-2082 proves scalar code profiles lose projective residue incidence.
 16. **Shared syntax is not a bridge.** MISTAKE-230--233/HYP-8885 retract the
     universal entropy/modular frame; MISTAKE-235 leaves S102's LRC/GMC sums as
     analogy, not AP-core reduction. Fiber size is observable-relative, and
     genus, cusp forms, Paley spectra, or weighted kernels need an explicit
-    loneliness-preserving map before entering the proof graph.
+    loneliness-preserving map before entering the proof graph. THM-2084/2085/2086 are RESERVED; kernel checking also needs satisfiable hypotheses.
 
 ## Where to go by topic
 
 | Topic | Read first | Then use |
 |---|---|---|
-| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2080; preserve terminal address/owner/guard sidecars |
+| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2083; preserve terminal address/owner/guard sidecars |
 | LRC / Frobenius wildcard | [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) | THM-2041 packets; keep seed and pointwise exit explicit |
 | LRC literature | [`CORE-PAPERS.md#lonely-runner-conjecture`](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [`LRC-TECHNIQUE-INDEX.md`](LRC-TECHNIQUE-INDEX.md), source paper |
 | NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2067/2070, formal interfaces, guardrails |

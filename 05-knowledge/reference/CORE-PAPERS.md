@@ -366,10 +366,11 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
   [THM-2022](../../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md),
   and [THM-2070, failed-bypass correction](../../01-canon/theorems/THM-2070-horizontal-wick-embedding-and-dihedral-return-cancellation.md).
 - **Does not prove:** the Gaussian radial/factorial step, Frobenius survival of
-  a complete Wick face, or an effective first return.  Standalone Lean modules
-  prove the two-charge and positive-real-coefficient leaves, but are not
-  root-imported and do not settle complex cancellation. THM-2070 refutes the
-  general semigroup/saddle bypass: support return is not noncancellation.
+  a complete Wick face, or an effective first return. Lean now root-imports
+  the height supplier and positive/two-charge/fixed-support unique-channel
+  leaves; general complex `DvdK1` remains the sole formal premise.
+  HYP-8931's proposed class bypass is vacuous (MISTAKE-240). THM-2070 refutes
+  the general semigroup/saddle bypass: support return is not noncancellation.
 
 ### Erman--Smith--Várilly-Alvarado — *Laurent polynomials and Eulerian numbers*
 

@@ -1,8 +1,19 @@
+/-!
+CORRECTION (MISTAKE-240): the theorem in this module is kernel-checked but
+vacuous under the current definition of `LowestFaceUniqueChannel`.  Taking
+`lambda = 0`, `delta = -1`, and `F = ∅` gives a valid empty level set for
+every polynomial, after which the premise demands a positive-mass composition
+on an empty type.  HYP-8930's fixed-support unique-channel theorem survives.
+Do not use this module as an NC2/GMC(2) bypass until the face predicate is
+restricted to a genuine nonempty/straddling lower face and the seed is wired
+into the descent.
+-/
+
 import TournamentH7.GMC2FaceSeed
 import TournamentH7.GMC2DvdKUniqueChannel
 
 /-!
-# Discharging the DvdK1 input for the unique-channel class
+# Candidate DvdK1 bypass for a unique-channel face (currently vacuous)
 
 The GMC(2) spine consumes the one-variable DvdK theorem in exactly one place: `GMC2FaceSeed.
 exists_nonzero_lowest_face_seed` calls `DvdK1` to produce a nonzero constant-term seed on the
@@ -10,14 +21,13 @@ rational lowest face.  Everything upstream — the slope `λ`, level `δ`, the e
 injectivity, straddling — comes from *pure Newton-polygon geometry* (`exists_rational_lowest_face_
 finset`), with no analytic input.
 
-So on any polynomial whose lowest face carries a **unique balanced channel** (death-star-S101's 84%
-of supports), the seed can be supplied by the elementary `ct_ne_zero_of_unique_balanced`
+For a specified genuine face carrying a **unique balanced channel**, the seed
+can be supplied by the elementary `ct_ne_zero_of_unique_balanced`
 (`GMC2DvdKUniqueChannel`) instead of `DvdK1`.  `exists_nonzero_lowest_face_seed_of_uniqueChannel`
 below has the *same conclusion* as codex's `exists_nonzero_lowest_face_seed` but takes a
-unique-channel hypothesis in place of the `DvdK1` premise — a drop-in, DvdK-axiom-free replacement
-for the whole unique-channel class.  The residual is exactly the coincident-channel stratum (`card ≥
-2`, the symmetric/resonant 16%), which is the irreducible DvdK content handled on paper by codex
-THM-2067.
+unique-channel hypothesis in place of the `DvdK1` premise.  However, the
+current universal class predicate below is inconsistent by MISTAKE-240, so the
+implication does not yet define a nonempty polynomial class or feed NC2.
 -/
 
 open MvPolynomial Finset
@@ -34,18 +44,17 @@ def HasUniqueBalancedChannel {ι : Type*} [Fintype ι] [DecidableEq ι] (q : ι 
     ∀ r ∈ Finset.piAntidiag (Finset.univ : Finset ι) m0,
       GMC2ConstantTermRelations.totalCharge q r = 0 → r = r0
 
-/-- The lowest-face hypothesis replacing `DvdK1` for one polynomial: every face cut out by a slope
-`λ`/level `δ` on `P`'s support has a unique balanced channel in its charges. -/
+/-- PROVISIONAL and currently inconsistent (MISTAKE-240).  A repaired version
+must quantify only over genuine nonempty/straddling lower faces. -/
 def LowestFaceUniqueChannel (P : MvPolynomial (Fin 2) ℂ) : Prop :=
   ∀ (lambda delta : ℚ) (F : Finset (Fin 2 →₀ ℕ)),
     (∀ s, s ∈ F ↔ s ∈ P.support ∧
       GMC2.radialExponentQ s - lambda * GMC2.chargeQ s = delta) →
     HasUniqueBalancedChannel (fun s : ↥F => GMC2.charge s)
 
-/-- **DvdK-free lowest-face seed for the unique-channel class.**  Identical conclusion to
-`GMC2FaceSeed.exists_nonzero_lowest_face_seed`, but with the `DvdK1` premise replaced by the
-unique-channel hypothesis `LowestFaceUniqueChannel P`.  The seed is produced by the elementary
-`ct_ne_zero_of_unique_balanced`; no external analytic axiom is used. -/
+/-- Kernel-valid implication from the provisional predicate.  It is vacuous
+because `LowestFaceUniqueChannel P` is inconsistent (MISTAKE-240); do not use
+it as a class theorem. -/
 theorem exists_nonzero_lowest_face_seed_of_uniqueChannel
     (P : MvPolynomial (Fin 2) ℂ) (hP : ¬GMC2.ChargeOneSided P)
     (hUC : LowestFaceUniqueChannel P) :

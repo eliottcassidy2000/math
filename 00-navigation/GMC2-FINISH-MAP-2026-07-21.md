@@ -60,20 +60,19 @@ LRC14 finish-maps. Corrections welcome via court case.*
 `E[Z^aW^b]=δ_{ab}a!`; if `E[P^m]=0 ∀m≥1` then `E[QP^m]=0` for `m≫0`. The **charge** of `Z^aZ̄^b` is
 `a−b`; `E` kills nonzero charge; `r=|Z|²~Exp(1)`.
 
-## The master reduction (PROVED; Lean endpoint partial at two explicit interfaces)
+## The master reduction (PROVED; Lean endpoint partial at one explicit interface)
 
 **NC2 / DvdEZ ⟹ GMC(2)**: if the nullcone `N₂={P:E[P^m]=0∀m}` is exactly the **charge-one-sided**
 polynomials (all charges ≥1, or all ≤−1, no charge-0-straddle), then GMC(2) holds by charge
 additivity (THM-1510 §C and
 `THM-1540-gmc2-reduced-to-the-nullcone-structure-theorem`; Lean
-`mathieuZhao_of_charge_pos`, no `sorry`). The full Lean endpoint still takes
-`DvdK1` and `HeightWitnessSupplier` as explicit interfaces. Two standalone,
-sorry-free leaves are checked: `GMC2DvdKTwoCharge.lean` proves both two-charge
-orientations and `GMC2DvdKPositive.lean` proves the positive-real-coefficient
-case for arbitrary finite two-sided support. Neither is root-imported or
-handles general complex cancellation. A scratch supplier compositor was
-structurally written but timed out at `whnf` beyond 6.4M heartbeats; no theorem
-was committed.
+`mathieuZhao_of_charge_pos`, no `sorry`). `GMC2HeightWitness.lean`
+root-imports `heightWitnessSupplier_holds` and the clean endpoints
+`DvdK1 -> NC2 -> GMC(2)`; general complex `DvdK1` is the sole explicit
+formal premise. Root-imported leaves cover two charges, positive real
+coefficients, and fixed-support unique channels. HYP-8931's attempted
+polynomial-class bypass is vacuous by its empty level set (MISTAKE-240), so it
+does not remove the remaining premise.
 NC2 is a **stronger sufficient target**, not a proved reformulation equivalent to literal GMC(2).
 The repository's chosen NC2 route is therefore:
 

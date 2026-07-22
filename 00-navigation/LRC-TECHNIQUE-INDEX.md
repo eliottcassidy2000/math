@@ -18,7 +18,7 @@ Add entries when you introduce a genuinely new carrier, repair a failed scalar
 quotient, or show that an old tournament/metagraph idea gives a named LRC
 packet, obstruction, or certificate.
 
-## 2026-07-21 current-use overlay
+## 2026-07-22 current-use overlay
 
 The live structured kernel is:
 
@@ -35,7 +35,9 @@ counterexample -> primitive Cover14/non-AP peel kernel
                -> circuit rays + deletion-code wheel [THM-2065/2062/2069]
                -> owner words / safe-child terminal [THM-2066/2072/2073/2075]
                -> size 7..10, max>=25, depth<=4 [THM-2078/2080]
-               -> guard/address/tail-owner or global atlas discharge.
+               -> rank-7 relative Hunter tree [THM-2081]
+               -> bounded relation templates [THM-2083]
+               -> guard-relative residue/address/tail-owner discharge.
 ```
 
 Prioritize techniques that consume that relation without erasing phase or
@@ -48,7 +50,8 @@ observer data:
 | Missing-clock binding | core residues, unit numerator orbit, killed clocks, divisibility lattice, affine binding phase | Generalize THM-2057's `12a`/`14a`/`84a` and `13a`/`14a`/`182a` closures | The theorem closes two scaled AP one-tail planes, not every star. |
 | Primitive packet/owner interval | reduced phase order, full labels, bad `N`, hull owner, coprime longitudinal coordinate | THM-2058 gives divisor/Mobius packets, bulk/boundary/null support, and one interval minus collisions | Counts alone erase phase and owner; a surviving interval is not discharged. |
 | CRT packet join | core/tail safe residues and their reduction histograms modulo the CRT gcd | THM-2059 counts compatible classes by the dot product and grid phases after the `Na/lcm` lift | A zero dot product rejects one grid only; marginal packet sizes lose compatibility. |
-| Owner-word / safe-child descent | binary killed-lift word, safe clock, component address, inherited endpoint/tail owners, quotient core | THM-2066 closes bounded cores; THM-2073/2075/2077 retain the terminal carrier; THM-2078/2080 force max `>=25`, size `7..10`, depth `<=4` | THM-2072 forbids a uniform fixed bank; mirror symmetry only halves addresses; the unbounded hereditary terminal is open. |
+| Owner-word / safe-child descent | binary killed-lift word, safe clock, component address, inherited endpoint/tail owners, quotient core | THM-2066 closes bounded cores; THM-2073/2075/2077 retain the terminal carrier; THM-2078/2080 force max `>=25`, size `7..10`, depth `<=4` | THM-2072 forbids a uniform fixed bank; mirror symmetry only halves addresses; ranks 7--10 remain open. |
+| Relative Hunter / residue incidence | restricted danger events outside the guard, exact pair weights, maximum spanning tree, projective residue-event incidence | THM-2081 closes rank seven through height 24; THM-2083 leaves bounded coefficient templates; THM-2082 supplies translated-grid exits | The bound is ineffective, its guard coefficient may vanish, and scalar/Hamming profiles forget the decisive incidence. |
 | Resonance fan | exact wall equations, pair-sum phases, cell labels, owner margins | Discharge whole disk cells symbolically as in HYP-2896 | A fan without a phase-height certificate is only a partition. |
 | Relative Fejer | bounded scalar/vector relation packets and a proved lifted plateau | Certify resonance-lift/nonaliasing cells using THM-2054's explicit budget | Numerical cutoff compatibility does not identify the model torus. |
 | Bounded relation code | exact row space, rank, support/height/sign/augmentation, and deletion incidence | Compress rank eleven stars or decide the separate rank twelve box | Repeated/dependent relations give no descent; rank twelve is finite, not yet decided. |
@@ -99,9 +102,9 @@ positive-speed gauge; calling disk membership unsafe; inventing a quadratic-
 form discriminant from `14`; accepting an unpointed safe direction; or
 orienting overlap ties arbitrarily.
 
-Anchors: THM-2051--2080, THM-2047, THM-2048, HYP-8871, HYP-8841,
+Anchors: THM-2051--2083, THM-2047, THM-2048, HYP-8871, HYP-8841,
 HYP-8846, HYP-2896, and MISTAKE-226--239. THM-2069 is a lossless deletion-code
-filter and THM-2074 is density-one only; THM-2073/2075/2077 reach but do not
+filter and THM-2074 is density-one only; THM-2081/2083 reduce but do not
 discharge the size-`7..10`, maximum-`>=25` hereditary terminal.
 
 Next agent hook: compute saturated reduced bases and tangent-disk intersections

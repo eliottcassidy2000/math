@@ -71,15 +71,20 @@ records current prohibitions, not the whole history.
     The homeomorphism starts at the nonempty core, not the empty full row
     (MISTAKE-238), and guard containment covers the guard complement, not the
     guard (MISTAKE-239). Mirror-complement addresses halve search, not prove a
-    contradiction.
+    contradiction. THM-2081's rank-seven tree gate and THM-2083's bounded-
+    support relation alternative on guard/two-speed triples leave unbounded
+    templates; the guard coefficient may vanish. Neither proves LRC(14).
+    THM-2081 closes 4,120 pairs through height 24; all-height closure is open.
 25. **THM-2069/2074 are PROVED but sharply scoped.** The deletion-code/cogirth
     wheel filters hereditary primitivity and forgets phase/owners; density-one
     strict LRC leaves every hypothetical counterexample inside the structured
-    zero-density relation hyperplanes. Neither proves universal LRC(14).
+    zero-density relation hyperplanes. THM-2082 proves rank-one Hamming support
+    can freeze while projective residue incidence changes. None proves LRC(14).
 26. **Strict measure misses the tight boundary.** MISTAKE-235: use Fejer bulk
     plus exact packets/owners/Euler data; no LRC/GMC identity or AP reduction.
 27. **Clocks are not modular cusps.** MISTAKE-233: divisor labels, `f14`, genus,
     and Hecke coefficients preserve no loneliness predicate by themselves.
+27a. **THM-2084, THM-2085, and THM-2086 are RESERVED / UNPROVED.** Keep all three outside proved dependencies.
 
 ## NC2 / GMC
 
@@ -92,11 +97,12 @@ records current prohibitions, not the whole history.
     THM-2022 mechanism is prime-local initial-form normalization.
 32. **THM-2033 is special-matrix scope.** Its determinant identity does not
     replace the general scalar Wick moment.
-33. **Paper proof is not full Lean proof.** THM-2022 is proved. Standalone
-    sorry-free modules handle two charges and positive real coefficients, but
-    are not root-imported; general complex `DvdK1` and `HeightWitnessSupplier`
-    remain interfaces. A scratch supplier composition times out at `whnf`, so
-    it is a performance lead, not a discharged theorem.
+33. **Paper proof is not full Lean proof.** THM-2022 is proved, and
+    `GMC2HeightWitness.heightWitnessSupplier_holds` is kernel-checked and root-imported.
+    General complex `DvdK1` is the sole explicit premise. HYP-8930's
+    fixed-support unique-channel lemma is substantive. HYP-8931 is vacuous:
+    `lambda=0, delta=-1, F=empty`; `98/116` is a bounded census, not a theorem
+    (MISTAKE-240).
 34. **THM-2067 is bare existence, not effective DvdK.** It proves some
     nonzero Laurent constant term by Galois orbit products; it supplies no
     first-return bound or stronger critical-value theorem.

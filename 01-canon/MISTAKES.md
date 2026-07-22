@@ -9,6 +9,32 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-240 (2026-07-22, codex semantic audit of HYP-8931/S230) -- the lowest-face unique-channel bypass has an inconsistent class predicate
+
+- **What was claimed:** HYP-8931 called
+  `exists_nonzero_lowest_face_seed_of_uniqueChannel` a nonvacuous replacement
+  for the DvdK seed on an asserted `98/116` or “84%” unique-channel class, and
+  described the remaining work as a one-line connection to NC2.
+- **Why it is wrong:** `LowestFaceUniqueChannel P` quantifies over every
+  `lambda`, `delta`, and finite set satisfying only an exact-level-set
+  equivalence. Take `lambda=0`, `delta=-1`, and `F=empty`. Radial
+  exponents are nonnegative, so this is a valid empty level set for every
+  `P`. The predicate then demands a positive-mass balanced composition on
+  the empty subtype, which cannot exist. Thus no polynomial satisfies the
+  premise. Lean correctly checks the implication, but the theorem is vacuous.
+  The `98/116` number is only a bounded support census, not a theorem or a
+  universal proportion.
+- **Correct framing:** HYP-8930's fixed-support theorem
+  `ct_ne_zero_of_unique_balanced` and its `dvdk1_of_uniqueChannel`
+  corollary are substantive: a specified unique balanced composition prevents
+  coefficient cancellation. HYP-8931 is quarantined until its class predicate
+  is restricted to a genuine nonempty/straddling lower face and a resulting
+  seed is wired into the NC2 descent. Independently,
+  `GMC2NC2.heightWitnessSupplier_holds` is now root-imported; general
+  `DvdK1` is the sole explicit formal premise.
+
+---
+
 ## MISTAKE-239 (2026-07-22, codex THM-2080 direction audit) -- terminal guard containment was reversed into a cover of the guard instead of its complement
 
 This correction initially landed under the already-used `MISTAKE-231`; 239 is

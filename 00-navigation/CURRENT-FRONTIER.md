@@ -159,11 +159,12 @@ is the proved carrier that reduces each fixed bad-denominator/owner fiber to
 labelled primitive packets and one coprime interval. It makes the terminal
 exact and finite; it does not prove that every surviving interval is empty.
 
-On the dyadic branch the live nontrivial terminal is now exact in shape:
-`r=1..4`, `|Q_r|=10..7`, and `max(Q_r)>=25`; `r=0` is the hereditary
-eleven-core. Any completion must retain `G_(Q_r) subset E_h`, component
-addresses, endpoint owners, and both original odd-tail owner constraints.
-Mirror reversal pairs addresses but supplies no contradiction.
+On the dyadic branch, `r=1..4`, `|Q_r|=10..7`, and `max(Q_r)>=25`;
+`r=0` is the hereditary eleven-core. At rank seven, THM-2081's tree gate and
+THM-2083's bounded-support relation alternative are now the highest-leverage
+target: make the bound effective or discharge every template at unbounded
+scale. THM-2085/2086 are reserved only. All ranks must retain guard containment,
+component addresses, endpoint owners, and both original odd-tail owner words.
 
 ### Independent routes that remain live
 
@@ -227,10 +228,10 @@ Mirror reversal pairs addresses but supplies no contradiction.
 - **REFUTED for higher dimensions:** explicit GMC(3) counterexamples now exist;
   GMC is false for every dimension at least 3. See the current external preprint
   entry in [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md).
-- **FORMALIZATION PARTIAL:** normalized residue, face transport, and finite-field
-  contradiction are checked. Standalone sorry-free modules prove `DvdK1` for
-  two charges and for positive real coefficients, but are not root-imported.
-  `GMC2NC2` still uses general `DvdK1` and `HeightWitnessSupplier`; on paper,
+- **FORMALIZATION PARTIAL:** normalized residue, face transport, finite-field
+  contradiction, and `GMC2NC2.heightWitnessSupplier_holds` are kernel-checked
+  and root-imported. The clean endpoints `nc2_of_dvdK1` and `gmc2_of_dvdK1`
+  have general complex `DvdK1` as their sole explicit premise. On paper,
   [THM-2067](../01-canon/theorems/THM-2067-galois-orbit-product-closes-one-variable-dvdk.md) proves the required one-variable statement internally.
 
 ### Why THM-2022 works
@@ -264,15 +265,14 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 
 ### Live work
 
-Package THM-2022 for publication. In Lean, redesign the checked extractor/height
-composition into `HeightWitnessSupplier`: the S104 scratch construction was
-structurally written but times out at `whnf` even above 6.4M heartbeats and
-committed no theorem. Formalize THM-2067 to discharge general complex `DvdK1`.
-HYP-8878 supplies an elementary seed
-when the lowest Laurent face has a **unique minimal balanced channel**: the
-first constant term is then one nonzero monomial. Its `98/116` figure is a
-finite small-support census, not a general density, and coincident minimum
-channels remain. THM-2070 refutes HYP-8890's general saddle/Watson bypass and
+Package THM-2022 for publication and formalize THM-2067 to discharge general
+complex `DvdK1`. Root-imported modules prove the positive-coefficient,
+two-charge, and HYP-8930 fixed-support unique-channel leaves. The last mechanism is
+substantive: one unique balanced composition leaves one nonzero monomial.
+But HYP-8931's `LowestFaceUniqueChannel P` class is inconsistent by the empty
+level-set witness `lambda=0, delta=-1, F=empty` (MISTAKE-240), so its
+kernel-checked implication is vacuous and not wired into NC2. Its `98/116`
+figure is a bounded census, not a theorem. THM-2070 refutes HYP-8890's saddle/Watson bypass and
 HYP-8895's semigroup bypass; only their explicitly positive or two-charge
 subcases survive. Continue to transfer the `seed/selector/preserver/exit`
 design without pretending a preserver supplies the seed.

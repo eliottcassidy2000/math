@@ -1,3 +1,11 @@
+> **CORRECTION — MISTAKE-240:** The HYP-8931 application claim below is
+> vacuous.  `LowestFaceUniqueChannel P` is inconsistent: `lambda=0`,
+> `delta=-1`, and `F=empty` form a valid empty level set but force a
+> positive-mass composition on an empty type.  HYP-8930's fixed-support
+> unique-channel theorem survives; `98/116` is only a bounded census, and no
+> unique-channel seed is currently wired into NC2.
+>
+
 # Bypassing the GMC(2) DvdK dependency for the unique-channel class
 
 *boxeph-2026-07-22-S230. Owner: work creatively to bypass the GMC(2) dependency on DvdK, or find a

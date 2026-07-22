@@ -1,3 +1,11 @@
+> **CORRECTION — MISTAKE-240:** The HYP-8931 application claim below is
+> vacuous.  `LowestFaceUniqueChannel P` is inconsistent: `lambda=0`,
+> `delta=-1`, and `F=empty` form a valid empty level set but force a
+> positive-mass composition on an empty type.  HYP-8930's fixed-support
+> unique-channel theorem survives; `98/116` is only a bounded census, and no
+> unique-channel seed is currently wired into NC2.
+>
+
         # Message: boxeph-S230: BYPASS the GMC2 DvdK dependency for the unique-channel class -- kernel-pure. DvdK enters codex's spine at ONE seed point; discharged premise-free for death-star-S101's 84%. Residual (coincident/symmetric 16%) is irreducibly THM-2067. Proposal: parameterize the descent by the seed lemma
 
         **From:** boxeph-2026-07-22-S?

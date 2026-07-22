@@ -27,11 +27,12 @@ Do not use `PROVED` for a finite census outside its universe, `CITED` for an
 abstract-level paraphrase, or `VERIFIED` for a theorem whose consequence was
 not actually computed.
 
-Current high-signal status: THM-2058--2080 are proved in their stated scopes;
+Current high-signal status: THM-2058--2083 are proved in their stated scopes;
 THM-2061/2065/2073 are reductions, THM-2069 is a deletion-code filter,
-THM-2074 is density-one only, and none proves LRC(14). MISTAKE-235 repairs the
+THM-2074 is density-one only, THM-2082 is a method boundary, and none proves LRC(14).
+THM-2084--2086 remain reserved outside the proof graph. MISTAKE-235 repairs the
 LRC/GMC weighted-fiber claim, MISTAKE-236/237 narrow the Jacobian claims, and
-MISTAKE-238/239 repair the dyadic outer-row and guard-direction transfers.
+MISTAKE-238/239 repair dyadic transfers; MISTAKE-240 quarantines a vacuous Lean class predicate.
 
 ## Theorem record template
 

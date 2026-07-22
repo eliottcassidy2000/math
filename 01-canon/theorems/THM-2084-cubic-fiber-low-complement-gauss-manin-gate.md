@@ -509,6 +509,8 @@ The companion script checks over the exact rational polynomial ring:
 - the degree-thirteen frontier covariants in (33);
 - and the tame control `P=y^3+x, Q=y` with Jacobian one.
 
-Both the normal and `python -O` runs end in `RESULT: PASS`.  The computation
-checks identities and hostile boundary controls; the proof above supplies the
-all-polynomial quantifiers.  QED.
+The normal run ends in `RESULT: PASS`. The current referee implements its
+checks with Python `assert`, so an optimized `python -O` transcript is vacuous
+and must not be cited as independent evidence. The computation checks
+identities and hostile boundary controls; the proof above supplies the
+all-polynomial quantifiers. QED.

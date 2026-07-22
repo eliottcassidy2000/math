@@ -52,18 +52,18 @@ formalization:
   - 04-computation/lean/TournamentH7/TournamentH7/GMC2SupportFaceBridge.lean
   - 04-computation/lean/TournamentH7/TournamentH7/GMC2NC2.lean
   - 04-computation/lean/TournamentH7/TournamentH7/GMC2NC2Capstone.lean
+  - 04-computation/lean/TournamentH7/TournamentH7/GMC2HeightWitness.lean
   - 04-computation/lean/TournamentH7/TournamentH7/GMC2Formalization.lean
 formalization_root_imported: true
 formalization_status: >
-  PARTIAL at one explicit internal composition interface. The concrete
+  PARTIAL at one explicit analytic interface. The concrete
   normalized three-case residue, exact support-face seed transport, and the
   finite-field zero/nonzero contradiction are kernel-checked. GMC2NC2 derives
-  NC2 and GMC(2) from DvdK1 plus HeightWitnessSupplier. The reference-channel
-  extractor and the theorem producing its three height obligations are also
-  checked separately, but their direct existential wrapper currently exhausts
-  Lean's elaboration budget. The Lean proposition `DvdK1` remains a second
-  explicit interface; THM-2067 now proves its mathematical content internally,
-  but its root-factorization/Galois proof has not been formalized.
+  NC2 and GMC(2) from DvdK1. GMC2HeightWitness proves and root-imports
+  `heightWitnessSupplier_holds`, removing that former interface. The Lean
+  proposition `DvdK1` is now the sole explicit premise; THM-2067 proves its
+  mathematical content internally, but its root-factorization/Galois proof
+  has not been formalized.
 ---
 
 # THM-2022 -- Frobenius amplification of the lowest balanced Wick face
@@ -521,31 +521,26 @@ The kernel-checked development is gathered by
 8. `GMC2SupportFaceBridge` proves exact seed reindexing into support
    coordinates and packages the global floor, exact face height, and strict
    off-face gap. `GMC2NC2` proves the specialized normalized relation is both
-   zero and nonzero, then derives `NC2` and GMC(2) from `DvdK1` and the compact
-   `HeightWitnessSupplier`. `GMC2NC2Capstone` is a sorry-free compatibility
-   surface replacing the earlier WIP skeleton.
+   zero and nonzero. `GMC2HeightWitness` seals the coefficient lookup behind
+   an opaque local definition, proves `heightWitnessSupplier_holds`, and
+   derives the root-imported endpoints `nc2_of_dvdK1` and `gmc2_of_dvdK1`.
 
 The first residue lemma uses multivariate exponent expansion in
 characteristic `p`, not an explicit carry count. It is slightly stronger
 than the manuscript narration: it does not need `p>m0`. Retaining `p>m0`
 above is harmless and keeps the elementary two-digit Kummer explanation.
 
-Two explicit Lean interfaces remain: `DvdK1`, whose mathematical content is
+One explicit Lean interface remains: `DvdK1`, whose mathematical content is
 proved by THM-2067 but whose root-factorization/Galois proof is not yet in
-Lean, and the uniform construction of `HeightWitnessSupplier`. The latter's
-two ingredients are already checked:
-`exists_reference_channel_of_nonzero_face_seed` extracts a concrete balanced
-face channel, and `normalized_height_obligations_of_face_reference` constructs
-the required global floor/equality/gap package from such a channel. Their
-direct existential composition has no known mathematical or typing gap, but
-reliably exhausts elaboration even at 800k heartbeats, so the checked capstone
-keeps that small wrapper explicit.
+Lean. The former `HeightWitnessSupplier` interface is discharged by
+`GMC2NC2.heightWitnessSupplier_holds`: sealing the `P.coeff` lookup avoids the
+elaborator's earlier `whnf` explosion without new axioms or a heartbeat
+increase.
 
 Formalizing the stronger published DvdK theorem is unnecessary for this
 paper proof: THM-2067 gives exactly the bare existence statement needed.
 Formalizing THM-1550 plus its Galois orbit-product endgame is still a separate
 project, so `DvdK1` remains visible as a Lean theorem hypothesis rather than
 being hidden behind `axiom`, `sorry`, or `native_decide`. Thus the paper proof
-is now internally closed, while the Lean theorem remains honestly conditional
-on the proved-but-unformalized `DvdK1` proposition and the named
-`HeightWitnessSupplier` composition interface.
+is now internally closed, while the Lean endpoint remains honestly conditional
+only on the proved-but-unformalized `DvdK1` proposition.
