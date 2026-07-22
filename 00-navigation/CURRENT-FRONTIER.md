@@ -167,12 +167,9 @@ structural supplier/seed and a lossless exit.
   disjoint-support obstruction as the signed Euler/deletion sidecar.
 - **PROVED relative whole-product decorrelation:**
   [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
-  says every scalar relation through height `H` on the line must lift to the
-  vector-character relation on the decorrelated torus. Two physical-space
-  telescopes bound the whole product without summing an infinite relation
-  lattice. The seven-sector budget is explicit, and rowwise `H=2^19` is below
-  every recorded pinned-base `cap-Q` margin. MISTAKE-080/082 remain load-bearing:
-  the lifted full-torus model must still be identified shape by shape.
+  says bounded scalar relations must lift to vector-character relations. Two
+  telescopes bound the whole product; rowwise `H=2^19` clears every recorded
+  pinned-base margin. MISTAKE-080/082 still require shape-specific torus models.
 - **Scope separation:**
   [THM-1149](../01-canon/theorems/THM-1149-compact-essential-crown-and-farey-blocker.md)
   proves that tight deletion and an all-loose essential crown are different
@@ -235,10 +232,10 @@ structural supplier/seed and a lossless exit.
    already have a height-one three-term circuit (the first seven share
    `1+2=3`).
    [THM-2053](../01-canon/theorems/THM-2053-rank-two-parameter-plane-geodesic-terminal.md)
-   supplies two complementary filters before rank twelve: the exact deck
-   `D_N(m)` discards whole fibers carrying `N|(v_i+v_j)` and
-   `v_k congruent m_k M (mod N)`, while THM-2055's determinant normal fan
-   prunes the bad fibers to hull-owner tangent sectors. HYP-2108 supplies the
+   supplies two complementary filters before rank twelve: its exact deck
+   discards whole fibers, while THM-2055 prunes determinant failure to hull-
+   owner sectors. THM-2058 then enumerates their intersection as labelled
+   primitive packets and coprime intervals. HYP-2108 supplies the
    endpoint gate inside those cells: for core-safe
    components with midpoint `m_i` and length `l_i`, prove for some peel `w`
    that `P_w=max_i(||w m_i||+(w/2)l_i-1/14)>=0`. Equality already preserves a
@@ -253,14 +250,13 @@ structural supplier/seed and a lossless exit.
 The characteristic-7 result
 [THM-2043](../01-canon/theorems/THM-2043-period14-parity-hasse-jet-completeness.md),
 is **PROVED, but is a carrier no-go rather than LRC(14)**. It identifies
-`F_7[C_14]` with the two length-seven local rings at `+1` and `-1`, so fourteen
-parity-Hasse coordinates are complete mod-14 data. Yet the infinite family
-`{1,...,11,13,96+3444n}` matches the tight AP in that entire packet, in every
-test through `q=13`, and in `q_threshold=14`, while `(q,a,margin)=(41,17,1)`
-is a uniform strict exit. For every fixed `k`, a CRT family also matches the
-AP's lift height modulo `7^k`. Thus raw jets, threshold, and any fixed finite
-height precision are globally insufficient. Exact owner height or an adaptive
-resolved `(q,a,margin)` certificate is the honest positive carrier; the
+`F_7[C_14]` with the two length-seven local rings at `+1` and `-1`. THM-2058's
+GW-based family keeps that packet, blockedness through `q=13`, threshold `14`,
+any prescribed finite lift depth, and the same one-tail hull-owner sector, yet
+has the uniform strict phase `47/113` with integer slack `13`. Thus raw jets,
+threshold, fan owner, and fixed height precision are jointly insufficient.
+Exact labelled phase packets or an adaptive resolved certificate are the
+honest positive carrier; the
 smallest useful atlas now visibly includes the incompatible scales
 `{14,27,41}`.
 

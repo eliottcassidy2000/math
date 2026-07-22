@@ -1,0 +1,14 @@
+THM-2058 PRIMITIVE PHASE-PACKET REFEREE
+packet_decomposition_checks=720
+mobius_inversion_checks=720
+beatty_Q=28 beatty_shift=22
+AP12_primitive_packets=p13:12,p27:2,p351:0
+unit_transport_N27=M1:{2,25},M2:{1,26}
+CRT_no_go=p3:2,p5:4,p15:0
+one_tail_deck_numerators=D34_r10:2,D37_r13:2,D41_r3:3,D48_r10:4,D51_r13:3,D113_r5:9
+fan_interval_fingerprints=34:10:1-1:1,37:13:1-1:1,41:3:1-2:2,48:10:1-2:1,51:13:1-2:2,113:5:1-6:6
+fan_interval_checks=6
+same_sector_hasse_checks=6 denominator=113 slack=13
+spanning_tree_no_go=AP12,N15,D_numerator:1,safe_packet:empty
+TOURNAMENT ANALYSIS=not applicable: phase-order packets and determinant magnitudes are load-bearing
+RESULT=PASS

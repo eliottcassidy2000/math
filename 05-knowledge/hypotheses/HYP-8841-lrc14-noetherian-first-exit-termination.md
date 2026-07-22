@@ -11,8 +11,9 @@ status: >
   target is a height-decreasing termination theorem inside that structured
   branch. THM-2053 now makes every rank-eleven rational plane finite in
   parameter space and gives an exact residue-deck conductor for every
-  transverse template; the remaining target is template compression plus
-  signed Euler/resolved-phase discharge of the finite bad-modulus cells.
+  transverse template. THM-2058 further reduces each deck/fan cell to a finite
+  one-dimensional coprime interval; the remaining target is uniform atlas
+  compression plus signed Euler/resolved-phase discharge of its survivors.
 source: codex-2026-07-21-DC2-LRC14-termination
 related:
   - THM-523
@@ -24,6 +25,8 @@ related:
   - THM-2051
   - THM-2052
   - THM-2053
+  - THM-2055
+  - THM-2058
   - HYP-2108
   - HYP-2896
   - HYP-2986
@@ -166,6 +169,14 @@ D_N=floor(N/13)/N,
 
 so every `N>=156` is safe, versus the generic `91R=1092` cutoff.
 
+THM-2058 makes this carrier exact at set level. `S_N(m)` is the disjoint union
+of primitive phase-order packets lifted from every divisor of `N`, and the
+entire labelled packet transports by `M^(-1)` across the longitudinal fiber.
+For fixed bad `N` and THM-2055 owner, positivity and determinant failure leave
+one explicit interval of coprime `M`, minus collision walls. The one-tail
+controls also prove that non-hull representatives of a repeated normalized
+value cannot be deleted from the deck sidecar.
+
 The efficient composition is therefore deck first, support-norm/tangent sector
 second, and exact pair-sum or Euler/Fejer discharge only on their finite
 intersection. Neither carrier alone proves that the residual is empty.
@@ -190,8 +201,8 @@ useful active-owner relation must lie outside the already harvested
 rank-at-least-eleven code; otherwise it does not descend. But THM-2053 adds
 two termination coordinates: reduced parameter norm, and the sharper
 transverse pair-sum coordinate `N/R`. Thus the refined target is **Euler/exit,
-rank gain, or entry into the finite bad part of a transverse residue deck**,
-not merely active incidence.
+rank gain, or discharge of the finite THM-2058 coprime intervals**, not merely
+active incidence.
 
 The proposed LRC14 termination theorem is:
 

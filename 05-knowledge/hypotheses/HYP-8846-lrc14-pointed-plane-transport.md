@@ -10,9 +10,10 @@ status: >
   Its adjacent-column refinement gives M(v)>=1/13-R/(2N), where N divides an
   exposed pair sum. Its exact residue deck D_N(m) eliminates whole N-fibers
   independently of longitudinal coefficients; THM-2055 then cuts the bad
-  fibers into hull-owner tangent sectors. The missing work is template/basis
-  compression and exact discharge of that finite intersection, not an
-  infinitary pointed transport theorem.
+  fibers into hull-owner tangent sectors. THM-2058 reduces each such
+  intersection to one exact coprime interval in the longitudinal coordinate.
+  The missing work is uniform atlas compression and discharge of the surviving
+  rows, not an infinitary pointed transport theorem.
 source: codex-2026-07-21-DC2-LRC14-termination
 related:
   - THM-2050
@@ -114,6 +115,21 @@ an interval `[alpha,beta]` meets the `N`-grid exactly when
 the conductor residue class by residue class. The generic `N<91R` region is
 therefore only a crude outer box.
 
+THM-2058 resolves the internal arithmetic of this filter. The safe packet has
+the exact reduced-order split
+
+```text
+S_N(m)=disjoint_union_(d|N) (N/d)S_d^prim(m),
+L_N=sum_(d|N)p_d,
+```
+
+and the entire labelled packet transports across the longitudinal fiber by
+`M^(-1)`. For fixed bad `N` and hull owner, the positivity, owner-cone, and
+determinant inequalities cut `M` to one explicit interval; primitive rows are
+the coprime integers in that interval, minus explicit speed-collision points.
+Non-hull representatives of a repeated normalized-column value must remain in
+the deck sidecar even though THM-2055 may delete them as determinant owners.
+
 ## The revised terminal
 
 The rank-eleven program now has two finite terminals rather than one:
@@ -139,38 +155,42 @@ For each rank-eleven bounded triple code from THM-2052:
 
 1. compute a saturated kernel basis by Smith/Hermite normal form;
 2. lattice-reduce the basis; in each positive target chamber, order the
-   normalized coefficient columns and select an adjacent exposed pair;
-3. compute its transverse template `(m_k)` and exact residue-deck conductor;
-   discard every whole `N`-fiber with `D_N(m)>=1/14`; retain `N<91R` and the
-   Euclidean disk only as independent outer checks;
+   normalized values and retain a divisor-covering sweep of labelled adjacent-
+   pair representatives, including `(g,N,m)` component data;
+3. compute the primitive phase packets and Ehrhart conductor; discard every
+   whole `N`-fiber with `D_N(m)>=1/14` and transport all owner labels by
+   `M^(-1)`;
 4. compute the signed column hull and THM-2055 normal fan, and intersect each
    remaining fiber with its active-owner tangent disk;
-5. enumerate coprime longitudinal coordinates in the positivity interval and
-   reject zero, repeated, nonpositive, non-distinct, or imprimitive rows;
+5. use THM-2058 to enumerate coprime longitudinal coordinates in the resulting
+   interval, then delete the explicit nonpositive and collision walls;
 6. run the exact pair-sum phase-height test, beginning with the exposed ruler
    `N|(v_i+v_j)` and its template residues;
 7. retain `P_w`, endpoint-owner, peel-tax, and relation-rank labels for any
    survivors, then quotient only by transformations preserving those fields.
 
-Each residual circle has the origin on its boundary. This tangent-disk picture
-is the preferred parameter carrier: intersect it with the star's positivity
-cone and primitive lattice before any phase-height work.
+Each tangent-disk boundary contains the origin, but the actual carrier is the
+intersection of its owner sector with a labelled bad phase packet. The packet
+must be computed before determinant hull deletion.
 
 This is structural compression, not the first proof of finiteness: THM-763
 already supplies the global ceiling `sum v_i<=91^12`. The potential gain is
 that the plane gate discards whole projective tails before raw speed
 enumeration and retains the geometry needed for resonance fans.
 
-The finite atlas is astronomically large if generated as all possible bounded
-triple rows. The theorem-facing next step is therefore an atlas-compression
-lemma: enumerate rank-two **column configurations/matroids**, not raw relation
-matrices, and bound a reduced-basis `L` directly from the sparse triple code.
+The finite atlas is astronomically large if generated as all bounded triple
+rows. The theorem-facing next step is an atlas-compression lemma on rank-two
+column configurations with determinant magnitudes and labelled normalized-
+fiber representatives. A sign-only matroid is insufficient.
 
 ## What the unrelated repo work contributes
 
 - HYP-4342 supplied the `(1,N)` Lipschitz/net mechanism; THM-2053 extends it to
   every primitive direction and the adjacent-column argument identifies an
   exact transverse `N`-grid on the specified row.
+- THM-2058 imports HYP-3456's Beatty clock at count level and THM-685's grid
+  discrepancy at primitive-order level. Its Mobius packets are phase strata,
+  not THM-2041 Fourier projectors; unit Frobenius creates no safe seed.
 - HYP-4346 supplied the rank-two algebra but also exposed the wrong-quantifier
   trap. It is now optional acceleration, not the bridge.
 - HYP-2896 is the scale-one model of the finite-disk fan. THM-2057 now closes
@@ -262,7 +282,7 @@ counterexamples. The next decisive target is:
 
 > Bound and classify reduced saturated bases and transverse templates of
 > THM-2052's bounded support-three rank-eleven codes strongly enough that every
-> intersection of an exact bad deck `D_N(m)<1/14` with a THM-2055 tangent
-> owner sector is either covered by the existing exact finite window or splits into
+> THM-2058 coprime interval inside an exact bad deck and THM-2055 tangent owner
+> sector is either empty, covered by the existing finite window, or splits into
 > finitely many HYP-2896-style resonance fans with explicit phase-height
 > certificates.
