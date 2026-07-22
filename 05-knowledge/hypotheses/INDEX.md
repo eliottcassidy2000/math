@@ -32,10 +32,18 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
   congruence covers modulo `2m` for every `2<=m<=7`; at each odd prime
   `ell=3,5,7`, either a universal `2ell`-carrier occurs or opposite-parity
   odd `ell`-carriers cover the two clock halves.
-- **THM-2084 (PROVED, cubic source-fiber scope):** a non-tame cubic stratum
-  begins, if at all, at unresolved reduced degree `13`; this is not JC(2).
+- **THM-2112 (PROVED):** the same rank-seven lane has an explicit whole-row
+  box via `R_7=5*28^8*(7*57^42)^17` and a BV/Fourier ratio recursion. The box
+  is not enumerated or proved empty.
+- **THM-2110/THM-2113 (PROVED, planar-JC strata):** cubic source-fiber reduced
+  degree `13` is impossible, and every positive-weight quasi-homogeneous
+  Keller component is a weighted-linear coordinate. Neither is full JC(2).
 - **THM-2095 (PROVED):** the live guard-ratio common scale divides `252576225`
-  and its marked pair is bounded; this does not bound the other six speeds.
+  and its marked pair is bounded; its `240*1165=279600` ledger does not bound
+  the other six speeds.
+- **THM-2111 (PROVED):** one-variable constant-term nonvanishing is effective
+  by `m<=binom(M+N,min(M,N))`; this removes the external DvdK dependency from
+  the THM-2022 paper proof, but not the Lean endpoint or the sharp `M+N` problem.
 
 ## LRC(14) — OPEN
 
@@ -56,7 +64,8 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
 
 ## NC2 / GMC and Lean
 
-- **Paper:** THM-2022 proves NC2/GMC(2); THM-2067 supplies its internal seed.
+- **Paper:** THM-2022 proves NC2/GMC(2); THM-2111 supplies its internal
+  effective seed, with THM-2067 as an alternate historical Galois route.
 - **Formal / HYP-8942:** `HeightWitnessSupplier`, abstract orbit-product,
   valuation contradiction, and rational t-adic closing are root-imported.
   General complex `DvdK1` remains the sole endpoint premise; irreducibility,
@@ -74,6 +83,10 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
 
 - **HYP-8950 (OPEN JC SYNTHESIS):** Hamiltonian cokernel/fiber cohomology
   realizes weight and face obstructions; local-to-global termination remains.
+- **HYP-8955 (CORRECTED BY THM-2113):** its quasi-homogeneous base conclusion
+  is true, but the original “linear face polynomial / one place” proof was not:
+  `x^2+y^3` is the hostile control. THM-2113 supplies the direct weighted-
+  bracket proof. Lower-face cancellation and descent termination remain open.
 - **HYP-8945 (OPEN UNIT-DISTANCE ROUTE):** smooth radii and the sign-changing
   Bessel kernel identify a cancellation regime, not a new asymptotic bound.
 - **Cubic JC:** extend THM-2084's Faber boundary system from reduced degree 13.

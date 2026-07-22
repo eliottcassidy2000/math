@@ -45,7 +45,7 @@ Older chronology is in
 - THM-2095 proves the guard-ratio common scale divides `252576225` on the live
   branch and bounds its marked pair. Its exact ledger has `240` scales,
   `1165` ratios, and `279600` marked triples; the other six terminal speeds
-  remain. THM-2102 independently gives an explicit whole-row rank-seven box
+  remain. THM-2112 independently gives an explicit whole-row rank-seven box
   through `R_7=5*28^8*(7*57^42)^17` and the recursive bounds `L_1,...,L_7`.
 - THM-2098 splits terminal ranks `8..11` into a transverse branch with exact
   collision/tree budget `5(n-7)/49` and a branch with at least seven
@@ -56,7 +56,7 @@ Older chronology is in
 
 ## NC2 / GMC formalization
 
-- THM-2022 proves NC2/GMC(2) on paper; THM-2101 supplies an effective,
+- THM-2022 proves NC2/GMC(2) on paper; THM-2111 supplies an effective,
   Galois-free-after-the-small-root-identity seed by
   `m<=binom(M+N,min(M,N))`. THM-2067 is an alternate historical route. Lean
   root-imports `HeightWitnessSupplier`, the abstract transitive orbit-product,
@@ -74,8 +74,8 @@ Older chronology is in
 
 ## Other active inspiration
 
-- THM-2100 closes the cubic Faber degree-`13` cell, raising the non-tame floor
-  in that source-fiber stratum to `14`. THM-2103 proves by a direct weighted-
+- THM-2110 closes the cubic Faber degree-`13` cell, raising the non-tame floor
+  in that source-fiber stratum to `14`. THM-2113 proves by a direct weighted-
   bracket argument that every quasi-homogeneous planar Keller component is a
   weighted-linear triangular coordinate. The nonhomogeneous one-principal-
   face descent, planar JC(2), and DC(2) remain open.

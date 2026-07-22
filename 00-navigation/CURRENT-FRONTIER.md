@@ -121,8 +121,22 @@ not unsafe. The reusable certificate architecture is
   `max(S)<2912*lcm(1,...,57)^6*(91^6)^13`. Thus every no-pair rank-seven
   branch is now finite. THM-2097's mixed-threshold two-torus escape also makes
   the bounded guard-ratio branch `q/h=r/s`, `r,s<=57`, finite template-by-
-  template; all boxes still need discharge. THM-2098 splits ranks 8--11 between seven transverse bands (budget `5(n-7)/49`) and seven guard-proportional bands; THM-2099/2103 expose the missing clock residue, THM-2104 closes every constant quotient-valuation layer at each of the primes `2,3,5`, and THM-2105 forces exact affine clock covers through denominator fourteen plus opposite-parity carrier pairs at `3,5,7`, all in the all-transverse model. The six persistent height-114 cut
-  rows make THM-2065 alone vacuous; location and phase sidecars are essential.
+  template. THM-2095 makes its marked commensurate pair arithmetically finite:
+  the common scale has `240` choices, the reduced ratio has `1165`, and only
+  `279600` triples `(r,s,d)` survive before the other labels. THM-2112
+  independently quantifies the two-torus escape: one reduced ratio has height
+  at most `R_7=5*28^8*(7*57^42)^17`, a BV/Fourier recursion bounds all seven,
+  and the full depth-four row obeys
+  `max(S)<=floor((128/3)L_7^8)`. This is an explicit finite box, not an
+  executed or empty audit. THM-2098 splits ranks 8--11 between at least seven
+  transverse bands, with collision/tree budget `5(n-7)/49`, and at least seven
+  guard-proportional bands. THM-2099/2103 compute the pair spectrum and prove
+  that pair-tree data plus signed affine rank still miss exact dyadic rows.
+  THM-2104 closes every constant quotient-valuation layer at each of
+  `2,3,5`, while THM-2105 forces exact affine clock covers through denominator
+  fourteen plus opposite-parity carrier pairs at `3,5,7`, all in the all-
+  transverse model. The six persistent height-114 cut rows make THM-2065
+  alone vacuous; location, phase, and clock sidecars are essential.
 - **PROVED relative decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   lifts bounded scalar relations; `H=2^19` clears recorded margins.
   MISTAKE-080/082 still require shape-specific torus models.
@@ -163,11 +177,13 @@ labelled primitive packets and one coprime interval. It makes the terminal
 exact and finite; it does not prove that every surviving interval is empty.
 
 On the dyadic branch, `r=1..4`, `|Q_r|=10..7`, and `max(Q_r)>=25`;
-`r=0` is the hereditary eleven-core. At rank seven, THM-2081's tree gate and
-THM-2083's bounded-support relation alternative are now the highest-leverage
-target: make the bound effective or discharge every template at unbounded
-scale. THM-2085/2086 are reserved only. All ranks must retain guard containment,
-component addresses, endpoint owners, and both original odd-tail owner words.
+`r=0` is the hereditary eleven-core. Rank seven/depth four is now bounded both
+template-by-template (THM-2097) and by one explicit whole-row box (THM-2112);
+the live task there is exact discharge, with THM-2095's `279600` marked-pair
+ledger and THM-2091/2094/2096 energy filters applied before enumeration.
+For ranks `8..11`, use THM-2098's transverse-collision versus vertical-
+commensurability split. All ranks must retain guard containment, component
+addresses, endpoint owners, and both original odd-tail owner words.
 
 ### Independent routes that remain live
 
@@ -235,12 +251,16 @@ component addresses, endpoint owners, and both original odd-tail owner words.
   contradiction, and `GMC2NC2.heightWitnessSupplier_holds` are kernel-checked
   and root-imported. The clean endpoints `nc2_of_dvdK1` and `gmc2_of_dvdK1`
   have general complex `DvdK1` as their sole explicit premise. On paper,
-  [THM-2067](../01-canon/theorems/THM-2067-galois-orbit-product-closes-one-variable-dvdk.md) proves the required one-variable statement internally.
+  [THM-2111](../01-canon/theorems/THM-2111-effective-compound-root-bound-for-one-variable-constant-terms.md)
+  proves the required one-variable statement internally and effectively;
+  THM-2067 is an alternate historical Galois route.
 
 ### Why THM-2022 works
 
 For fixed support, torus descent reduces a complex null point to a number
-field. THM-2067 makes the lowest balanced Wick face nonzero. At a good prime,
+field. THM-2111 makes the lowest balanced Wick face nonzero by exponent
+`binom(M+N,min(M,N))`, without a Galois endgame beyond the small-root
+logarithmic identity. At a good prime,
 Kummer kills non-dilated channels, strict height kills dilated off-face terms,
 and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 
@@ -268,8 +288,10 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 
 ### Live work
 
-Package THM-2022 for publication and formalize THM-2067 to discharge general
-complex `DvdK1`. Root-imported modules prove the positive-coefficient,
+Package THM-2022 for publication and sharpen THM-2111's compound degree from
+the binomial bound toward the conjecturally sharp `M+N`; the current result is
+already a paper-level removal of the external DvdK dependency. Formalization
+of general complex `DvdK1` is a separate endpoint. Root-imported modules prove the positive-coefficient,
 two-charge, and HYP-8930 fixed-support unique-channel leaves. The last mechanism is
 substantive: one unique balanced composition leaves one nonzero monomial.
 But HYP-8931's `LowestFaceUniqueChannel P` class is inconsistent by the empty
@@ -417,9 +439,15 @@ into tournament operation laws and LRC residue packets.
   direction. [THM-2084](../01-canon/theorems/THM-2084-cubic-fiber-low-complement-gauss-manin-gate.md)
   identifies the cubic coefficient ladder with the polynomial parts of
   `(z^3+pz+q)^(n/3)` and closes reduced complementary degrees through `11`:
-  a non-tame pair with a cubic pencil member must have reduced complement
-  degree at least `13`. The live cubic object is the all-degree Faber
-  boundary/flux/primitive triple `(E_n,Phi_n,R_n)`, beginning next at `n=13`.
+  [THM-2110](../01-canon/theorems/THM-2110-cubic-fiber-degree-thirteen-faber-tail-gate.md)
+  excludes degree `13`, so a non-tame pair with a cubic pencil member has
+  reduced complement degree at least `14`. Its adjacent-tail recurrence works
+  for every `3 not|n`; the remaining cubic problem starts beyond this finite
+  gate. [THM-2113](../01-canon/theorems/THM-2113-quasihomogeneous-planar-keller-components-are-weighted-linear.md)
+  proves directly that every positive-weight quasi-homogeneous Keller
+  component is a weighted-linear triangular coordinate. This is the zero-step
+  single-face case; cancellation by lower faces and termination of the
+  one-principal-face descent remain open.
   These are source-fiber degree gates, not generic cover-degree or Jelonek
   classifications.
   MISTAKE-228/229 block the old atlas and NC2/GMC chain; DC(2)/JC(2) remain open.

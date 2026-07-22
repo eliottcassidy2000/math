@@ -1,5 +1,5 @@
 > **CURRENT-TRUTH CORRECTION (2026-07-22).** The base-case theorem is true
-> and is proved directly in THM-2103, but the original Step 4 below is not a
+> and is proved directly in THM-2113, but the original Step 4 below is not a
 > proof: it uses the JC-hard implication “mate implies one place at infinity.”
 > The printed diagnostic is floating finite linear algebra, not an exact
 > certificate, and its `y^2+x^3` row itself refutes “mate iff `phi` is linear.”
@@ -16,7 +16,7 @@ local⟹global step for a Keller component with a **single resonant face**, comb
 sub-target — a single face with **no** lower-order terms, i.e. `f` quasi-homogeneous — completely and verifiably,
 and in doing so pins down exactly which of the S109 conditions are *free* (provable now) versus *JC(2)-hard*.
 
-**Canonical direct proof (THM-2103).** The base-case conclusion has a shorter
+**Canonical direct proof (THM-2113).** The base-case conclusion has a shorter
 route that avoids using “a mate forces one place at infinity.” Decompose the
 mate by weighted degree. Its unique constant-bracket component has degree
 `w_1+w_2-delta`, which must be positive, so `delta<w_1+w_2`. Mixed monomials
@@ -27,7 +27,7 @@ Jacobian factor. This proves the stated weighted-linear form without the
 properness/flow-completeness step that remains JC(2)-hard in the
 nonhomogeneous descent.
 
-## The base-case theorem (proved canonically by THM-2103)
+## The base-case theorem (proved canonically by THM-2113)
 
 > **Let `f ∈ ℂ[x,y]` be `w`-quasi-homogeneous (weights `w=(w₁,w₂)`, `gcd=1`, `w`-degree `δ`). Then `f` has a
 > Jacobian mate `⟺` `f = a·y + b·xᵖ` or `a·x + b·yᵠ` (a weighted-linear binomial, `a≠0`) `⟺` `f` is a coordinate.**
@@ -58,7 +58,7 @@ not proof evidence: mates are found for
    coordinate. ∎
 
 Thus for a genuinely quasi-homogeneous component the implication
-`mate => coordinate` is a theorem. THM-2103 proves it without first proving
+`mate => coordinate` is a theorem. THM-2113 proves it without first proving
 `fiber ≅ C`; the connected/genus/place factorization remains a useful
 interpretive picture, not the logical proof.
 
@@ -94,7 +94,7 @@ For a general **single principal face** `f = Φ_w + (lower w-degree)`, with `Φ_
   candidate tools, not established implications.
 
 The base case is the zero-lower-face situation in which the bracket ledger has
-only one possible degree-zero pair. THM-2103 closes exactly that case.
+only one possible degree-zero pair. THM-2113 closes exactly that case.
 
 ## Honest scope
 

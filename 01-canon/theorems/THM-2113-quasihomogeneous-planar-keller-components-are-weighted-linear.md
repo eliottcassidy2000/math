@@ -1,5 +1,5 @@
 ---
-id: THM-2103
+id: THM-2113
 title: "Quasi-homogeneous planar Keller components are weighted-linear coordinates"
 status: >
   PROVED. Let w_1,w_2 be positive weights and let f in C[x,y] be a
@@ -21,7 +21,7 @@ related:
   - HYP-8955
 ---
 
-# THM-2103 -- the quasi-homogeneous planar Keller base case
+# THM-2113 -- the quasi-homogeneous planar Keller base case
 
 Let `w=(w_1,w_2)` with `w_1,w_2` positive integers. Give `x` weight
 `w_1` and `y` weight `w_2`. Suppose that the nonconstant polynomial
@@ -139,6 +139,6 @@ principal face by itself. Showing that a nonlinear principal face cannot be
 cancelled by lower faces, or that a weighted-linear principal face can always
 be removed by a terminating triangular descent, is the remaining
 single-principal-face problem. That is a genuine planar-Jacobian obstruction;
-THM-2103 does not supply the missing properness or descent theorem.
+THM-2113 does not supply the missing properness or descent theorem.
 
 QED.
