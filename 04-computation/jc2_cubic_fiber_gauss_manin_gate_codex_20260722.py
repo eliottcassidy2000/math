@@ -17,6 +17,22 @@ import sympy as sp
 z, p, q, dp, dq, a = sp.symbols("z p q dp dq a")
 
 
+def faber(n: int) -> sp.Expr:
+    """Polynomial part at z=infinity of (z^3+pz+q)^(n/3)."""
+    out = 0
+    for i in range(n // 2 + 1):
+        for j in range(n // 3 + 1):
+            if 2 * i + 3 * j <= n:
+                out += (
+                    sp.binomial(sp.Rational(n, 3), i + j)
+                    * sp.binomial(i + j, i)
+                    * p**i
+                    * q**j
+                    * z ** (n - 2 * i - 3 * j)
+                )
+    return sp.expand(out)
+
+
 def dx(expr: sp.Expr) -> sp.Expr:
     """Formal x derivative for an expression in p,q."""
     return sp.expand(sp.diff(expr, p) * dp + sp.diff(expr, q) * dq)
@@ -67,6 +83,8 @@ E = {
         + sp.Rational(40, 27) * p * q**2
     ),
 }
+E[10] = faber(10)
+E[11] = faber(11)
 
 Phi = {
     1: p,
@@ -75,6 +93,8 @@ Phi = {
     5: -sp.Rational(5, 27) * p**3 + sp.Rational(5, 3) * q**2,
     7: -sp.Rational(7, 81) * p**4 + sp.Rational(14, 9) * p * q**2,
     8: -sp.Rational(40, 81) * p**3 * q + sp.Rational(40, 27) * q**3,
+    10: sp.Rational(70, 243) * p * q * (-p**3 + 6 * q**2),
+    11: sp.Rational(22, 2187) * (2 * p**6 - 90 * p**3 * q**2 + 135 * q**4),
 }
 
 R = {
@@ -84,6 +104,8 @@ R = {
     5: -sp.Rational(5, 9) * p**2 * q,
     7: -sp.Rational(28, 81) * p**3 * q + sp.Rational(14, 27) * q**3,
     8: sp.Rational(8, 243) * p**5 - sp.Rational(20, 27) * p**2 * q**2,
+    10: sp.Rational(35, 2187) * (p**6 - 36 * p**3 * q**2 + 27 * q**4),
+    11: sp.Rational(44, 729) * p**2 * q * (2 * p**3 - 15 * q**2),
 }
 
 
@@ -131,10 +153,12 @@ boundary_expected = {
     5: -11025,
     7: 13070456784,
     8: 21902400000000,
+    10: -285658406085931200000,
+    11: -1392286514585108181811200000,
 }
 
 print("boundary resultant gates")
-for n in (4, 5, 7, 8):
+for n in (4, 5, 7, 8, 10, 11):
     e_num = sp.together(E[n].subs({z: 1, p: a, q: -(1 + a)})).as_numer_denom()[0]
     phi_num = sp.together(Phi[n].subs({p: a, q: -(1 + a)})).as_numer_denom()[0]
     resultant = int(sp.resultant(e_num, phi_num, a))
@@ -159,30 +183,22 @@ assert sp.factor(R[8].subs(q**2, p**3 / 3)) == -sp.Rational(52, 243) * p**5
 
 # The extra n=8 Newton edge b/a=1 is killed by the unique p^5 term of R_8.
 assert sp.Poly(R[8], p, q).coeff_monomial(p**5) == sp.Rational(8, 243)
+
+# n=10: q^2=p^3/6 leaves the weight-twelve primitive nonzero.
+assert sp.factor(R[10].subs(q**2, p**3 / 6)) == -sp.Rational(595, 8748) * p**6
+
+# n=11: neither root of 2-90Y+135Y^2 is the primitive root Y=2/15.
+Y = sp.symbols("Y")
+assert sp.expand((2 - 90 * Y + 135 * Y**2).subs(Y, sp.Rational(2, 15))) == -sp.Rational(38, 5)
 print("degree-at-infinity gates: PASS")
 
 
-# First still-open degree: derive E_10 from the all-n polynomial-part formula
+# First still-open degree: derive E_13 from the all-n polynomial-part formula
 # and verify the two covariants recorded as the next frontier.
-def faber(n: int) -> sp.Expr:
-    out = 0
-    for i in range(n // 2 + 1):
-        for j in range(n // 3 + 1):
-            if 2 * i + 3 * j <= n:
-                out += (
-                    sp.binomial(sp.Rational(n, 3), i + j)
-                    * sp.binomial(i + j, i)
-                    * p**i
-                    * q**j
-                    * z ** (n - 2 * i - 3 * j)
-                )
-    return sp.expand(out)
-
-
-Phi10 = sp.Rational(70, 243) * p * q * (-p**3 + 6 * q**2)
-R10 = sp.Rational(35, 2187) * (p**6 - 36 * p**3 * q**2 + 27 * q**4)
-assert sp.expand(L(faber(10)) - z * dx(Phi10) - dx(R10)) == 0
-print("n=10 frontier covariant: PASS")
+Phi13 = sp.Rational(65, 6561) * p * (p**6 - 63 * p**3 * q**2 + 189 * q**4)
+R13 = sp.Rational(91, 6561) * q * (5 * p**6 - 60 * p**3 * q**2 + 27 * q**4)
+assert sp.expand(L(faber(13)) - z * dx(Phi13) - dx(R13)) == 0
+print("n=13 frontier covariant: PASS")
 
 
 # Positive tame control: P=y^3+x, Q=y has constant Jacobian 1 and reduced

@@ -5,13 +5,17 @@ Hermite/Gauss--Manin identities
   E_5: PASS
   E_7: PASS
   E_8: PASS
+  E_10: PASS
+  E_11: PASS
 rank-two connection: PASS
 boundary resultant gates
   n=4: resultant=48 PASS
   n=5: resultant=-11025 PASS
   n=7: resultant=13070456784 PASS
   n=8: resultant=21902400000000 PASS
+  n=10: resultant=-285658406085931200000 PASS
+  n=11: resultant=-1392286514585108181811200000 PASS
 degree-at-infinity gates: PASS
-n=10 frontier covariant: PASS
+n=13 frontier covariant: PASS
 tame cubic/linear control: PASS
 RESULT: PASS
