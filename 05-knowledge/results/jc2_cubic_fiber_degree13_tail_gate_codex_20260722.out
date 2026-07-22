@@ -1,0 +1,7 @@
+degree-13 Faber/Gauss--Manin identity: PASS
+degree-13 centering-pole resultant: -7856816824690792659 PASS
+lower-Phi upper-Newton separation at n=13: PASS
+degree-13 infinity primitive Bezout certificate: PASS
+odd-n projective-gcd and all-n discriminant controls through n=61: PASS
+trivial-cubic boundary control: PASS
+RESULT: PASS

@@ -1,12 +1,13 @@
 ---
 id: THM-2094
-title: "Finite guard/speed ratios and qualitative all-height finiteness at rank seven"
+title: "Effective guard/speed ratios and all-height finiteness at rank seven"
 status: >
-  PROVED by compactness and a connected two-torus strip-tiling obstruction.
+  PROVED by a connected two-torus strip-tiling obstruction, made effective
+  through the rank-six flat-cut parameter lattice.
   There is an absolute R_7 such that if the closed safe set of seven speeds
   lies in one open 1/7 guard comb, then some speed q has both entries of the
-  reduced ratio (h/gcd(h,q),q/gcd(h,q)) at most R_7. The proof is qualitative
-  and gives no numerical R_7. It strengthens the support-three relation
+  reduced ratio (h/gcd(h,q),q/gcd(h,q)) at most R_7. One explicit choice is
+  R_7=5*28^8*(7*57^42)^17. It strengthens the support-three relation
   alternative THM-2083 in arity, while THM-2085 remains stronger in giving
   the explicit coefficient height 57 for its three-term relation. This does
   not close the resulting finite ratio templates or LRC(14). Combined with
@@ -16,25 +17,28 @@ status: >
   primitive obstruction family must stay on one of the explicit reduced
   guard ratios of height at most 57. For odd guards, a recursive residual-
   capacity argument then bounds all seven reduced ratios and proves that only
-  finitely many primitive seven-speed guard containments exist. The resulting
-  height bound is not numerical, so the rank-seven branch is reduced to a
-  finite exact audit but is not yet closed.
+  finitely many primitive seven-speed guard containments exist. An explicit
+  BV/Fourier recursion bounds all seven ratios and then the primitive terminal
+  height. THM-2077/2092 then give the full depth-four original-row box
+  max(S)<=floor((128/3)L_7^8). The resulting finite audit is numerical but far
+  too large for a direct box run; it remains undone and LRC(14) is not closed.
 source: codex-2026-07-22-LRC14-two-torus-strip-tiling
 depends_on:
   - THM-2080
   - THM-2081
   - THM-2087
+  - THM-2088
+  - THM-2089
 related:
   - THM-2082
   - THM-2083
   - THM-2085
   - THM-2086
-  - THM-2088
-  - THM-2089
   - THM-2090
+  - THM-2092
 ---
 
-# THM-2094 -- a finite guard/speed-ratio alternative
+# THM-2094 -- an effective guard/speed-ratio alternative
 
 Put
 
@@ -55,7 +59,13 @@ rho(h,q)
 
 Thus `rho(h,q)` is exactly the height of the reduced rational ratio `q/h`.
 
-> **Theorem.** There is an absolute positive integer `R_7` such that, for
+> **Theorem.** Put
+>
+> ```text
+> R_7=5*28^8*(7*57^42)^17.                             (3a)
+> ```
+>
+> Then, for
 > every seven-element set `Q` of positive integers,
 >
 > ```text
@@ -66,10 +76,9 @@ No parity, divisor-completeness, hereditary-primitivity, or terminal-height
 assumption is needed. In the THM-2073 depth-four application those additional
 coordinates remain available after (3).
 
-The constant is not made explicit here. The point is structural: a putative
-rank-seven obstruction cannot send **all seven** reduced guard/speed ratios
-to increasing height. At least one speed belongs to a finite list of rational
-multiples of the guard.
+Thus a rank-seven obstruction cannot send **all seven** reduced guard/speed
+ratios to increasing height. At least one speed belongs to the explicit finite
+list of rational multiples of the guard of reduced height at most `(3a)`.
 
 ## 1. The compact connected-group limit
 
@@ -247,7 +256,174 @@ contradiction.
 This rules out the sequence (4). The usual bad-sequence contradiction now
 supplies one absolute `R_7`, proving (3). QED.
 
-## 4. The no-short-pair branch is finite
+## 4. Quantitative chambers and the explicit constant
+
+The compactness proof can be effectivized because THM-2087--2089 bound the
+characters in the only branch where the cut matrix has a two-dimensional
+kernel.
+
+### A quantitative strip-arrangement lemma
+
+Let
+
+```text
+a_0,a_1,...,a_7 in Z^2,
+det(a_0,a_i)!=0,                  ||a_j||_infinity<=M,  (Q1)
+```
+
+and define the strict safe region
+
+```text
+U={x in (R/Z)^2:
+     ||a_0.x||>1/7 and ||a_i.x||>1/14 for every i}.    (Q2)
+```
+
+Put
+
+```text
+D=28M^2.                                               (Q3)
+```
+
+Then `U` contains a Euclidean ball of radius strictly greater than
+
+```text
+1/(5D^8).                                              (Q4)
+```
+
+First, `U` is nonempty. If it were empty, the seven danger strips would cover
+the guard complement almost everywhere. Every map
+
+```text
+x -> (a_0.x,a_i.x)
+```
+
+is onto the two-torus by `(Q1)`, so each restricted danger strip has measure
+`5/49`. Their total measure is `5/7`, exactly the guard-complement measure.
+The cover would therefore have multiplicity one almost everywhere. Partition
+the `a_i` into rational rays. On a ray with primitive character `psi`, write
+`a_i=m_i psi`. The circle step function
+
+```text
+S(z)=sum_i 1_(||m_i z||<1/14)                          (Q5)
+```
+
+is not constant: it equals the number of indices on the ray near zero, while
+its mean is one seventh of that number. Hence some boundary value has a
+nonzero net jump. Since `det(a_0,psi)!=0`, its boundary fiber meets the strict
+guard complement in open arcs. Choose a point there away from the finitely
+many other ray and guard boundaries. Crossing the fiber changes the total
+multiplicity, contradicting multiplicity one on both adjacent open cells.
+
+It remains to quantify one cell. Lift a nonempty chamber of `U` to `R^2` and
+intersect its closure with a translated unit square. This also handles an
+unbounded strip chamber: the square sides supply vertices. The lifted
+arrangement lines have equations
+
+```text
+a_j.x=k plus-or-minus 1/14,
+a_0.x=k plus-or-minus 2/14,                            (Q6)
+```
+
+and the four square sides have integral equations. At a vertex, Cramer's rule
+uses two nonparallel integer normals of sup-height at most `M`; each vertex
+coordinate consequently has reduced denominator at most
+
+```text
+14|det|<=28M^2=D.                                      (Q7)
+```
+
+The resulting positive-area convex polygon has a nondegenerate triangle whose
+vertices are polygon vertices. A difference of two vertex coordinates has
+denominator at most `D^2`, so the doubled area of that triangle, being a
+nonzero rational number, has absolute value at least `D^(-8)`. Its area is at
+least `1/(2D^8)`, while its perimeter is at most `3 sqrt(2)`. Its incircle
+therefore has radius at least
+
+```text
+1/(3 sqrt(2) D^8)>1/(5D^8).                            (Q8)
+```
+
+The open incircle lies in the lifted chamber and proves `(Q4)`.
+
+### Applying the lemma to a flat cut
+
+Assume first that THM-2087's two-term branch does not occur. Choose its
+complete-cut relations and form the THM-2088 matrix. If its rank is seven,
+divide the whole packet by its common gcd. The primitive kernel vector is a
+maximal-minor vector; common dilation preserves containment because circle
+multiplication is onto, and it preserves every reduced pair height. THM-2088
+then gives
+
+```text
+max(h,max Q)<=91421508108581.                          (Q9)
+```
+
+Suppose instead that the cut matrix has rank six. THM-2089 supplies
+
+```text
+q_i=(N_i z+R_i h)/D_i,
+0<|N_i|,|D_i|<=A=57^6,        |R_i|<=6A,              (Q10)
+```
+
+on the integral parameter lattice `Lambda`, whose index satisfies
+
+```text
+J=[Z^2:Lambda]<=57^36.                                 (Q11)
+```
+
+Choose a Hermite-normal-form basis of `Lambda`. Every basis entry has
+absolute value at most `J`. In its coordinates `n in Z^2`, the guard and
+speeds are integral linear forms
+
+```text
+h=ell_0(n),                    q_i=ell_i(n),            (Q12)
+```
+
+and `(Q10)--(Q11)` give
+
+```text
+||ell_j||_infinity<=7AJ<=M:=7*57^42.                  (Q13)
+```
+
+Indeed, on either basis vector the numerator in `(Q10)` has magnitude at most
+`(|N_i|+|R_i|)J<=7AJ`; division by `D_i` only decreases it, and it is integral
+because the basis vector belongs to `Lambda`.
+
+The guard form is independent of every speed form. Otherwise a nonzero row
+supported on `(h,q_i)` would lie in the rank-six cut row space. But the
+speed-only kernel vector `(0,r)` from THM-2088 has every `r_i!=0`; vanishing
+on it kills the speed coefficient, and vanishing on the positive packet then
+kills the guard coefficient. Thus the characters in `(Q12)` satisfy `(Q1)`.
+
+Replace `n` by its primitive direction. This scales every frequency by the
+same positive integer, so it changes neither containment nor any reduced pair
+height. The geodesic
+
+```text
+L_n={tn:t in R/Z} subset (R/Z)^2                       (Q14)
+```
+
+has covering radius at most `1/(2||n||_2)`: it is the kernel of the primitive
+character `(-n_2,n_1)`, and the distance to that kernel is at most the circle
+distance `1/2` divided by `||n||_2`. Under containment, `L_n` misses the ball
+in `(Q4)`. Hence
+
+```text
+||n||_2<=(5/2)D^8.                                    (Q15)
+```
+
+Every coordinate form in `(Q12)` is then at most `2M||n||_2`, so for every
+speed in this flat-cut branch,
+
+```text
+rho(h,q_i)<=5MD^8
+             =5*28^8*(7*57^42)^17.                   (Q16)
+```
+
+This dominates `57` and `(Q9)`. Together with THM-2087's pair branch and
+THM-2088's rank-seven branch, `(Q16)` proves the explicit value `(3a)`. QED.
+
+## 5. The no-short-pair branch is finite
 
 There is a stronger consumer once THM-2087's complete cut is retained.
 Normalize a packet by
@@ -323,7 +499,7 @@ primitive positive integer vector. Since both the cut matrices and the pair
 rows come from finite sets, only finitely many primitive packets satisfy
 (24) and guard containment.
 
-Consequently there is an absolute, presently ineffective `B_7` such that
+Consequently there is an absolute effective `B_7` such that
 
 ```text
 G_Q subset E_h and gcd(h,Q)=1
@@ -332,10 +508,18 @@ G_Q subset E_h and gcd(h,Q)=1
 ```
 
 This proves the rank-six/rank-seven matrix input targeted by THM-2088 and
-then consumes the rank-six plane using the two-torus ratio theorem. It does
-**not** make `B_7` numerical, because `R_7` is qualitative.
+then consumes the rank-six plane using the two-torus ratio theorem. For
+example, choose six independent cut-tree rows and append the pair row of
+height at most `R_7`. Hadamard's inequality makes the primitive common kernel
+vector at most
 
-## 5. Odd guards have only finitely many primitive contained packets
+```text
+B_7=2*3^3*57^6*R_7.                                   (29a)
+```
+
+Thus this no-short-pair finite box is numerical, although enormous.
+
+## 6. Odd guards have only finitely many primitive contained packets
 
 For the terminal application `h` is odd, and THM-2080 makes the preceding
 one-ratio result recursive.
@@ -412,15 +596,135 @@ primitive, then
 
 so `d=1`. There are only finitely many patterns, hence only finitely many
 primitive odd-guard packets satisfying `G_Q subset E_h`. Equivalently, an
-absolute finite terminal-height bound exists, although this proof does not
-compute it. QED.
+absolute finite terminal-height bound exists.
 
-## 6. Frontier effect and scope
+This induction also has a numerical form. Define an increasing sequence
+`L_1,...,L_7` by
+
+```text
+L_1=R_7,                                                (R1)
+
+L_(k+1)=ceil( [98(7-k)/(5k(6-k))]
+                  L_k^(2k)(1+kL_k) ),       1<=k<=5,    (R2)
+
+L_7=ceil( (686/3)L_6^12(1+6L_6) ).                    (R3)
+```
+
+Then the `k`th smallest reduced guard/speed height is at most `L_k`.
+To prove the induction step, suppose the first `k` ratios are at most `L_k`
+and write them in lowest terms as in `(30)`. Put
+
+```text
+H=lcm(s_1,...,s_k),        h=dH,
+Q_j=H r_j/s_j,             q_j=dQ_j.                  (R4)
+```
+
+Then
+
+```text
+H<=L_k^k,              Q_j<=H L_k.                    (R5)
+```
+
+On the base circle define
+
+```text
+F_k(x)=1_(||Hx||>=1/7)
+       product_(j<=k)1_(||Q_jx||>=1/14),
+c_k=integral F_k,
+V_k=Var(F_k)<=2H+2 sum_j Q_j<=2H(1+kL_k).             (R6)
+```
+
+For a remaining speed `q`, reduce
+
+```text
+d=ga,                 q=gb,                 gcd(a,b)=1. (R7)
+```
+
+The BV Fourier estimate `|F_k_hat(m)|<=V_k/(2 pi |m|)`
+and the danger coefficient bound `|s_n|<=1/(pi|n|)` give the exact
+correlation estimate
+
+```text
+| measure(F_k(dt)1_(D_q)(t))-c_k/7 |
+ <=sum_(ell!=0) V_k/(2 pi |b ell|) * 1/(pi |a ell|)
+ =V_k/(6ab).                                           (R8)
+```
+
+Here multiplication by `g` preserves Haar measure, and the only Fourier
+relations are `ma+nb=0`, namely `(m,n)=(b ell,-a ell)`. If
+`s=gcd(H,b)`, then
+
+```text
+rho(h,q)=max(aH/s,b/s)<=Hab,                           (R9)
+```
+
+so a lower bound `rho(h,q)>L` makes the error in `(R8)` at most
+`V_k H/(6L)`.
+
+Containment says the `7-k` remaining dangers cover the residual set. If all
+their reduced heights exceeded `L`, the union bound and `(R8)--(R9)` would
+give
+
+```text
+c_k<=(7-k)(c_k/7+V_kH/(6L)).                          (R10)
+```
+
+Thus some remaining height is at most
+
+```text
+7(7-k)V_kH/(6k c_k).                                  (R11)
+```
+
+For `k<=5`, THM-2080's guard-centred Hunter star and its overlap floor give
+
+```text
+c_k>=5(6-k)/42.                                       (R12)
+```
+
+For `k=6`, the same theorem gives a uniform strict floor. Its exact proof
+shows that every overlap other than the unique equality ratio `q=6h` is at
+least `1/42+1/2940`. Six distinct speeds therefore satisfy
+
+```text
+c_6>=sum_(j<=6)measure(E_h intersect D_(q_j))-1/7
+    >=5/2940=1/588.                                   (R13)
+```
+
+Substituting `(R5)--(R6)` and `(R12)` into `(R11)` gives `(R2)`; substituting
+`(R13)` at `k=6` gives the coefficient
+
+```text
+7*588/(3*6)=686/3,                                    (R14)
+```
+
+which is `(R3)`. This proves the effective induction.
+
+Finally, if `Q` is primitive, let `S=lcm(s_1,...,s_7)`. Clearing every ratio
+simultaneously gives `h=eS` and `q_i=eS r_i/s_i`. Since `gcd(Q)=1`, `e=1`.
+Consequently
+
+```text
+h<=L_7^7,                         max Q<=L_7^8.         (R15)
+```
+
+This is an explicit all-height finite box for primitive odd-guard rank-seven
+containments. In the depth-four tower, THM-2077's terminal-to-original height
+transfer, recorded explicitly in THM-2092, now gives
+
+```text
+max(S)<=floor((128/3)max(Q))
+      <=floor((128/3)L_7^8).                           (R16)
+```
+
+Thus the entire original thirteen-speed row is in an explicit finite box on
+this branch. QED.
+
+## 7. Frontier effect and scope
 
 THM-2083 proves that some guard/two-speed triple has a uniformly bounded
 support-three relation, and THM-2085 gives the explicit height `57` for that
-statement. The present theorem exchanges effectivity for lower arity: some
-single reduced ratio
+statement. The present theorem reaches lower arity effectively, at the price
+of a vastly larger constant: some single reduced ratio
 
 ```text
 q/h=b/a,                    1<=a,b<=R_7                 (37)
@@ -430,13 +734,14 @@ comes from a finite list. This is exactly the ratio coordinate exposed by
 THM-2082's translated-prime-grid branch, so the two results can now be joined
 without pretending that rank-one code support remembers projective residues.
 
-For primitive odd-guard packets the theorem now bounds the common scale
-qualitatively as well, but it does not produce the bound or enumerate the
-finite packet bank. It therefore does not close the depth-four terminal or
-LRC(14). A useful effective continuation is to
-combine the degree-57 Selberg certificate with the boundary-ray proof to put
-a numerical value on `R_7`, then run a symbolic ratio-template argument rather
-than a height box.
+For primitive odd-guard packets the theorem now bounds every ratio and the
+common scale explicitly by `(R1)--(R15)`. It therefore turns the depth-four
+rank-seven terminal, and by `(R16)` its full original row, into a numerical
+finite audit. No THM-2090 splice is needed merely to prove this finiteness;
+its global templates can still organize the exact audit. The bound is
+deliberately coarse and far beyond a direct height-box run, so deciding every
+row remains necessary. Thus this theorem does not close the depth-four
+terminal or LRC(14).
 
 The challenged assumption is that the relevant vertices are runners. In the
 limit proof the faithful vertices are **rational character rays**; their

@@ -31,7 +31,7 @@ def bound(m: int, n: int) -> tuple[int, int, int]:
     c = comb(a + b, a)
     # Uniform incidence of one root among all a-subsets: C*a/(a+b).
     k = comb(a + b - 1, a - 1)
-    return c, k, c + k - 1
+    return c, k, c
 
 
 def multiply(p: dict[int, int], q: dict[int, int]) -> dict[int, int]:
@@ -60,10 +60,10 @@ def exponent_of(poly: sp.Expr, generator: sp.Symbol, generators: list[sp.Symbol]
     return max(monom[idx] for monom in pp.monoms())
 
 
-def symbolic_compound_check(d: int, a: int) -> tuple[int, int, int, list[int]]:
+def symbolic_compound_check(d: int, a: int) -> tuple[int, int, int, list[int], int]:
     b = d - a
     roots = sp.symbols(f"x1:{d + 1}")
-    y, t, c = sp.symbols("Y t c")
+    y, t, c, z = sp.symbols("Y t c z")
     subset_products = [sp.prod(roots[i] for i in s) for s in combinations(range(d), a)]
     compound = sp.Poly(sp.prod(y - p for p in subset_products), y)
     size = len(subset_products)
@@ -112,16 +112,31 @@ def symbolic_compound_check(d: int, a: int) -> tuple[int, int, int, list[int]]:
         coefficient_forms[j].subs(substitution) * y ** (size - j)
         for j in range(size + 1)
     )
-    cleared_line = sp.cancel(t**k * compound_in_e.subs(y, c * t))
-    numerator, denominator = sp.fraction(cleared_line)
-    require(sp.expand(denominator) == 1, ("uncleared denominator", d, a, denominator))
+    # Complement duality aligns pole_order(h_j) <= C-j with Y^(C-j).
+    # Therefore Y=c*t clears every coefficient without a uniform t^K factor.
+    direct_line = sp.cancel(compound_in_e.subs(y, c * t))
+    numerator, denominator = sp.fraction(direct_line)
+    require(sp.expand(denominator) == 1, ("line denominator", d, a, denominator))
     line_polynomial = sp.Poly(sp.expand(numerator), t)
     require(not line_polynomial.is_zero, ("zero line polynomial", d, a))
     require(
-        line_polynomial.degree() <= size + k,
-        ("line degree", d, a, line_polynomial.degree(), size + k),
+        line_polynomial.degree() == size,
+        ("line degree", d, a, line_polynomial.degree(), size),
     )
-    return size, k, theorem_bound, actual_powers
+
+    # The divided difference along two order-one lines has at worst a simple
+    # pole. Multiplying it by t must therefore be polynomial in t.
+    divided = sp.cancel(
+        t * (compound_in_e.subs(y, c * t) - compound_in_e.subs(y, z * t))
+        / ((c - z) * t)
+    )
+    divided_numerator, divided_denominator = sp.fraction(divided)
+    require(
+        sp.expand(divided_denominator) == 1,
+        ("divided-difference pole worse than simple", d, a, divided_denominator),
+    )
+    require(divided_numerator != 0, ("zero divided difference", d, a))
+    return size, k, theorem_bound, actual_powers, line_polynomial.degree()
 
 
 def exhaustive_integer_check(m: int, n: int) -> tuple[int, int, dict[int, int]]:
@@ -148,11 +163,12 @@ def exhaustive_integer_check(m: int, n: int) -> tuple[int, int, dict[int, int]]:
 def main() -> None:
     print("THM-2093 compound-root effective-bound exact referee")
     print("symbolic compound checks")
-    for d, a in ((2, 1), (3, 1), (4, 2)):
-        size, k, theorem_bound, powers = symbolic_compound_check(d, a)
+    for d, a in ((2, 1), (3, 1), (4, 2), (5, 2)):
+        size, k, theorem_bound, powers, line_degree = symbolic_compound_check(d, a)
         print(
-            f"  (a,b)=({a},{d-a}) C={size} K={k} B={theorem_bound} "
-            f"actual e_b powers by coefficient={powers}: PASS"
+            f"  (a,b)=({a},{d-a}) C={size} eta={k} bound={theorem_bound} "
+            f"deg Q={line_degree} actual e_b powers by coefficient={powers}; "
+            "direct line polynomial and simple-pole divided difference: PASS"
         )
 
     print("exact exhaustive integer-coefficient universe")
@@ -163,7 +179,7 @@ def main() -> None:
         _, _, theorem_bound = bound(m, n)
         print(
             f"  (M,N)=({m},{n}) checked={checked} max_first={latest} "
-            f"B={theorem_bound} witness={witness}: PASS"
+            f"C-bound={theorem_bound} witness={witness}: PASS"
         )
     print(f"  total exact Laurent polynomials checked={total}")
 
@@ -177,7 +193,7 @@ def main() -> None:
         first, value = answer
         require(first == n + 1 == theorem_bound, ("binomial first", n, first, theorem_bound))
         require(value == n + 1, ("binomial value", n, value))
-        print(f"  u^-1+u^{n}: first={first}=B, CT={value}: PASS")
+        print(f"  u^-1+u^{n}: first={first}=C, CT={value}: PASS")
 
     hostile = {-2: -1, -1: 1, 1: 1, 2: 1}
     # u^2+u+u^-1-u^-2 from THM-2070: CT at 1,2,3 vanishes; CT at 4 is -12.

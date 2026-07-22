@@ -205,10 +205,11 @@ THM-2022.
 
 ## 4. What has and has not been removed
 
-The THM-2022 paper proof may now cite THM-2067 instead of importing DvdK:
-the lowest balanced face gives a non-one-sided one-variable Laurent
-polynomial, and (10) supplies the nonzero face constant term used before
-finite-field reduction.
+THM-2067 remains a project-internal route to the bare seed that THM-2022
+needs: the lowest balanced face gives a non-one-sided one-variable Laurent
+polynomial, and (10) supplies a nonzero face constant term before finite-field
+reduction.  The current THM-2022 paper proof instead cites the independent,
+effective, Galois-free-after-the-small-root-identity THM-2093.
 
 This does **not** reproduce DvdK's stronger conclusion about a nonzero
 critical value and
@@ -218,15 +219,19 @@ limsup |CT(f^m)|^(1/m).
 ```
 
 By itself this orbit contradiction gives no bound on the first nonzero `m`.
-THM-2093 later adds the compound polynomial of every same-size root-subset
-product and obtains the explicit bound
+THM-2093 later gives an independent effective proof using the compound
+polynomial of every same-size root-subset product and obtains the explicit
+bound
 
 ```text
-m <= binom(M+N,a)+binom(M+N-1,a-1)-1,
+m <= binom(M+N,a),
 a=min(M,N).
 ```
 
-That estimate is generally non-sharp; the sharp Sturmfels/ESV target
+Its coefficient-specific pole clearing makes that proof Galois-free beyond
+the small-root logarithmic identity; this theorem remains a historical and
+conceptual route to bare existence, not a dependency of THM-2093.  The
+estimate is generally non-sharp; the sharp Sturmfels/ESV target
 `m<=M+N` remains open when `a>=2`. In particular, S222's general mixed-complex saddle
 asymptotic and S223's assertion that mixed-sign cancellations are merely
 finite are not needed here and remain unproved. The numerical-semigroup

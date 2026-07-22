@@ -5,10 +5,9 @@ status: >
   PROVED. For every finite exact support in C[Z,W], a complex torus point of
   the Gaussian moment nullcone descends to an algebraic torus point. The
   lowest balanced face supplies a nonzero Laurent constant term Q by the
-  project-internal Galois orbit-product theorem THM-2067 (alternatively by
-  the stronger one-variable Duistermaat--van der Kallen theorem). At a
-  suitable good prime p, divide the moment of order p*m0 by the common
-  factorial (p*A0)!.
+  project-internal effective compound-root theorem THM-2093, whose proof is
+  Galois-free beyond the small-root logarithmic identity. At a suitable good
+  prime p, divide the moment of order p*m0 by the common factorial (p*A0)!.
   Kummer and Lucas identify the surviving residue layer with the p-fold
   dilation of the face channels, and Frobenius makes its residue exactly
   Q^p. Thus no support whose charge convex hull contains zero can be null;
@@ -18,9 +17,10 @@ status: >
 source: codex-2026-07-21-NC2-followup
 supersedes_reservation: "exposed two-vertex factorial face with gap greater than one"
 depends_on:
-  - THM-2067-galois-orbit-product-closes-one-variable-dvdk
+  - THM-2093-effective-compound-root-bound-for-one-variable-constant-terms
   - THM-1540-gmc2-reduced-to-the-nullcone-structure-theorem
 related:
+  - THM-2067-galois-orbit-product-closes-one-variable-dvdk
   - THM-1630-tnc-is-duistermaat-van-der-kallen-theorem-2
   - THM-1645-gmc2-angular-layer-is-dvdk-the-gap-is-purely-radial
   - THM-2019-gmc2-affine-height-supports
@@ -28,7 +28,6 @@ related:
   - THM-2033-the-nc2-wall-is-the-confluent-transitivity-vandermonde
   - THM-2040-the-de-factorialization-principle
   - THM-2041-frobenius-stability-of-exact-period-projectors
-  - THM-2093-effective-compound-root-bound-for-one-variable-constant-terms
   - HYP-8800-lrc14-face-carry-frobenius-transfer
   - HYP-8765-gmc2-radial-channel-return-tower
 scripts:
@@ -62,9 +61,10 @@ formalization_status: >
   finite-field zero/nonzero contradiction are kernel-checked. GMC2NC2 derives
   NC2 and GMC(2) from DvdK1. GMC2HeightWitness proves and root-imports
   `heightWitnessSupplier_holds`, removing that former interface. The Lean
-  proposition `DvdK1` is now the sole explicit premise; THM-2067 proves its
-  mathematical content internally, but its root-factorization/Galois proof
-  has not been formalized.
+  proposition `DvdK1` is now the sole explicit premise; THM-2093 proves its
+  mathematical content internally and effectively (THM-2067 is an alternate
+  historical route), but the
+  small-root/compound proof has not been formalized.
 ---
 
 # THM-2022 -- Frobenius amplification of the lowest balanced Wick face
@@ -221,26 +221,28 @@ the same charge, (4) at equality would give the same `a`; then
 `b=a-q` would also agree, contradicting distinctness of the exact monomial
 support.
 
-By (5) and the Galois orbit-product nonvanishing theorem
-(`THM-2067-galois-orbit-product-closes-one-variable-dvdk.md`), the constant
-terms of all positive powers of `f_F` cannot vanish. Equivalently one may cite
-the stronger published DvdK theorem, THM-1630. Choose `m0>=1` such that
+By (5) and the effective compound-root theorem
+(`THM-2093-effective-compound-root-bound-for-one-variable-constant-terms.md`),
+the constant terms of all positive powers of `f_F` cannot vanish. Choose
+`m0>=1` such that
 
 ```text
 Q:=CT_u(f_F^m0) != 0.                                      (7)
 ```
 
-The existence of `m0` is all that the proof needs.  THM-2093 strengthens it
-effectively: if the exact negative and positive charge widths of `f_F` are
-`M,N`, one may choose
+If the exact negative and positive charge widths of `f_F` are `M,N`, the same
+theorem gives the effective choice
 
 ```text
-m0 <= binom(M+N,a)+binom(M+N-1,a-1)-1,
+m0 <= binom(M+N,a),
 a=min(M,N).                                                (7a)
 ```
 
 This bound is generally non-sharp and does not make the later good-prime
-choice coefficient-uniform.
+choice coefficient-uniform.  Beyond its small-root logarithmic identity,
+THM-2093 is Galois-free.  For bare existence one may instead cite THM-2067's
+Galois orbit-product proof or the stronger published DvdK theorem, THM-1630;
+neither is needed in this effective route.
 
 Every multiplicity vector contributing to (7) is balanced, has length
 `m0`, and is supported on `F`. For all of them, (4) gives the same integer
@@ -483,11 +485,13 @@ structure in higher dimension, for example a coordinatewise/orthant-exposed
 vector face or a rank-one lock forcing all factorial coordinates to be
 functions of one grade. A scalar Newton face alone is not sufficient.
 
-THM-2067 supplies a project-internal algebraic proof of the constant-term
-input from THM-1550: transitivity of the Galois action on the roots of
-`X^M-tR(X)` and Vieta's constant total root product forbid the small-root
-identity `Pi(t)=ct`. A stronger alternate source remains J.J. Duistermaat and
-W. van der Kallen, "Constant terms in powers of a Laurent polynomial,"
+THM-2093 supplies a project-internal effective proof of the constant-term
+input: the logarithmic small-root identity converts initial moment vanishing
+to contact with `ct`, while complementary-subset duality produces a nonzero
+degree-`C` compound polynomial that bounds that contact.  Beyond the small-root
+identity this proof is Galois-free.  THM-2067 is an alternate project-internal
+Galois route to bare existence. A stronger alternate source remains J.J.
+Duistermaat and W. van der Kallen, "Constant terms in powers of a Laurent polynomial,"
 *Indagationes Mathematicae* (N.S.) 9(2) (1998), 221--231, Theorem 2 and
 Remark 3.
 
@@ -510,7 +514,8 @@ The kernel-checked development is gathered by
    the strict integer off-face gap.
 4. `GMC2DvdKInterface` states the one-variable input as an explicit
    proposition. Its mathematical content is now proved internally by
-   THM-2067, while the Lean proof remains to be implemented. `GMC2FaceSeed`,
+   THM-2093 (with THM-2067 as an alternate route), while the Lean proof remains
+   to be implemented. `GMC2FaceSeed`,
    `GMC2FaceSeedChannel`, and the reference-channel bridge turn it into a
    nonzero exact face seed and an actual balanced multiplicity vector; no
    custom Lean axiom is declared.
@@ -551,9 +556,10 @@ elaborator's earlier `whnf` explosion without new axioms or a heartbeat
 increase.
 
 Formalizing the stronger published DvdK theorem is unnecessary for this
-paper proof: THM-2067 gives exactly the bare existence statement needed.
-Formalizing THM-1550 plus its Galois orbit-product endgame is still a separate
-project, so `DvdK1` remains visible as a Lean theorem hypothesis rather than
-being hidden behind `axiom`, `sorry`, or `native_decide`. Thus the paper proof
-is now internally closed, while the Lean endpoint remains honestly conditional
-only on the proved-but-unformalized `DvdK1` proposition.
+paper proof: THM-2093 gives the required existence statement effectively and
+without a Galois endgame. Formalizing its small-root identity plus compound
+coefficient argument is still a separate project, so `DvdK1` remains visible
+as a Lean theorem hypothesis rather than being hidden behind `axiom`, `sorry`,
+or `native_decide`. Thus the paper proof is now internally closed, while the
+Lean theorem remains honestly conditional on the one proved-but-unformalized
+`DvdK1` proposition.

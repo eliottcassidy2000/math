@@ -4,15 +4,16 @@ title: "An effective compound-root bound for one-variable constant terms"
 status: >
   PROVED. Let f be a complex Laurent polynomial with exact extreme exponents
   -M<0<N and nonzero coefficients at both extremes. Put a=min(M,N),
-  b=max(M,N), d=a+b, C=binom(d,a), and K=binom(d-1,a-1). Then
-  CT(f^m) is nonzero for some 1<=m<=C+K-1. Since K=Ca/d<=C/2,
-  this is at most floor(3C/2)-1. The proof is self-contained: the logarithmic small-root
+  b=max(M,N), d=a+b, and C=binom(d,a). Then CT(f^m) is nonzero
+  for some 1<=m<=C. The proof is self-contained: the logarithmic small-root
   identity converts L initial zero constant terms into contact of order L+2
   between the small-root product and c*t; the compound polynomial of all
-  a-subset root products has t-pole order at most K by weighted degree plus
-  complementary-subset duality; and its evaluation at
-  c*t is a nonzero polynomial of degree at most C+K by the same transitive
-  Galois orbit-product obstruction as THM-2067. For a=1 the bound is the
+  a-subset root products has coefficient pole order at most C-j in its
+  Y^(C-j) coefficient by complementary-subset duality. Consequently its
+  evaluation at c*t is already a nonzero polynomial of exact degree C;
+  subtracting the chosen small-root product loses at most one order because
+  the divided difference has at worst a simple t-pole. Beyond the small-root
+  logarithmic identity the proof is Galois-free. For a=1 the bound is the
   sharp d=M+N. This supplies an unconditional effective seed bound for
   THM-2022, but it does not prove the open sharp d bound for general a,b.
 source: codex-2026-07-22-gmc-paper-audit
@@ -25,8 +26,8 @@ related:
   - THM-2070-horizontal-wick-embedding-and-dihedral-return-cancellation
 script: 04-computation/tnc_compound_root_effective_bound_codex_20260722.py
 output: 05-knowledge/results/tnc_compound_root_effective_bound_codex_20260722.out
-script_sha256: 2134ad1e96b33334ba6459f76570a2b5d43c834ac850b4454745eace25b6ddc4
-output_sha256: 9bae425890714b6d731d8fdd9815b3c37b1d303de7636b90382db08d75c5da7f
+script_sha256: b6b61da508b546c32814e35bc79cb4089b08a09bdae13407cbed2e043146939b
+output_sha256: 0c18311e6ad230891c935e723cfccd28c3dd04780132638b3486c029b94abb4e
 hash_basis: repository blobs with LF line endings
 ---
 
@@ -52,29 +53,21 @@ Put
 
 ```text
 a=min(M,N),       b=max(M,N),       d=a+b,
-C=binom(d,a),
-K=binom(d-1,a-1)=C*a/d,
-B=C+K-1.                                                   (1)
+C=binom(d,a).                                              (1)
 ```
 
 > **Theorem.** There is an integer `m` with
 >
 > ```text
-> 1<=m<=B
+> 1<=m<=C
 > ```
 >
 > such that `CT(f^m)!=0`.
 
-Since `a<=b`, one has `K<=C/2` and hence
+If `a=1`, then `C=d`, and the bound is
 
 ```text
-B<=floor(3C/2)-1.                                         (2)
-```
-
-If `a=1`, then `C=d`, `K=1`, and the bound is
-
-```text
-B=d=M+N.                                                   (3)
+C=d=M+N.                                                   (2)
 ```
 
 Thus the theorem proves the sharp Sturmfels bound on the entire
@@ -253,105 +246,76 @@ exponent is negative.  The coefficient `h_dual_(C-j)` has total root degree
 pole_order_0(h_j)<=min(floor(ja/b),C-j).                  (20)
 ```
 
-Now `C-eta=Cb/d` is an integer.  For `j<=C-eta`, the first entry in the
-minimum in (20) is at most `eta`; for `j>=C-eta`, the second entry is at most
-`eta`.  Hence every coefficient has pole order at most
+The second entry in (20), aligned with the exponent of `Y`, is the decisive
+one.  Put `k=C-j`.  Since `h_j` is a polynomial in `t^(-1)` and has pole
+order at most `k`,
 
 ```text
-K=eta=binom(d-1,a-1).                                     (21)
+t^k h_j(t) in C[t],       deg_t(t^k h_j)<=k.             (21)
 ```
 
-It follows that
-
-```text
-Htilde(Y,t):=t^K H(Y,t) in C[t,Y].                        (22)
-```
+Thus evaluation on a line `Y=constant*t` clears each coefficient by its own
+`Y`-power.  A uniform clearing factor is unnecessary.
 
 ## 4. The evaluation at the forbidden line is nonzero
 
 Set
 
 ```text
-G(t)=Htilde(c*t,t)=t^K H(c*t,t) in C[t].                 (23)
+Q(t)=H(c*t,t)
+    =sum_(j=0)^C c^(C-j) t^(C-j) h_j(t).                 (22)
 ```
 
-First, `G` is not the zero polynomial.  Here is the full orbit argument.
-
-The polynomial `Phi` is irreducible over `C(t)`.  Indeed, in `C[X,t]` it is
-linear in `t`; in any factorization one factor is independent of `t` and
-must divide both `X^a` and `R(X)`.  Since `R(0)!=0`, their gcd is one.  Gauss
-then gives irreducibility over `C(t)`, and characteristic zero gives
-separability.  Hence the Galois group acts transitively on `Omega`.
-
-If `G` vanished identically, then one factor of the product (13) would give
-an `a`-subset `S` with
+Equation (21) shows directly that
 
 ```text
-p_S=c*t in C(t).                                          (24)
+Q(t) in C[t],       deg_t Q=C.                           (23)
 ```
 
-Let `O` be the Galois orbit of `S`, of size `r>0`.  Since (24) is fixed by
-the Galois group, every subset in `O` has the same product `c*t`.  By
-transitivity, every root lies in the same positive number `mu` of members
-of `O`.  Multiplication over `O` and (9) give
-
-```text
-(c*t)^r=((-1)^d r_0/r_d)^mu.                              (25)
-```
-
-Here `mu>0` is the common orbit-incidence number; it need not equal the
-full-family incidence `eta` in (17).  The two sides of (25) have respective
-`t`-adic valuations `r>0` and zero,
-a contradiction.  Therefore
-
-```text
-G(t)!=0.                                                  (26)
-```
-
-Second, (20)--(22) show that every coefficient
-`t^K h_j(t)` has ordinary `t`-degree at most `K`.  Substituting `Y=c*t` in
-(13) therefore gives
-
-```text
-deg_t G<=K+C.                                             (27)
-```
-
-No height estimate, coefficient sign, genericity, or saddle selection enters
-(26)--(27).
+The degree is exactly `C` because the monic term `Y^C` contributes
+`c^C t^C`, while every term with `j>0` has degree at most `C-j<C`.
+In particular `Q` is nonzero.  No irreducibility, Galois group, height
+estimate, coefficient sign, genericity, or saddle selection enters (23).
 
 ## 5. Contact cannot exceed polynomial degree
 
-The chosen small-root product is one of the roots in (13), so
+The chosen small-root product is one of the roots in (13), so, as an identity
+of algebraic germs,
 
 ```text
-Htilde(Pi(t),t)=0.                                        (28)
+H(Pi(t),t)=0.                                             (24)
 ```
 
-Because `Htilde` is a polynomial in `Y` with analytic `t`-coefficients, the
-difference
+Although the coefficients of `H` may have poles at `t=0`, complement duality
+shows that its divided difference along the two order-one germs has at worst
+a simple pole.  Indeed, putting `k=C-j` and using (24),
 
 ```text
-G(t)
- =Htilde(c*t,t)-Htilde(Pi(t),t)                           (29)
+Q(t)=H(c*t,t)-H(Pi(t),t)
+    =(c*t-Pi(t)) A(t),                                    (25)
+
+A(t)=sum_(k=1)^C h_(C-k)(t)
+       sum_(r=0)^(k-1) (c*t)^(k-1-r) Pi(t)^r.             (26)
 ```
 
-is divisible as an analytic germ by `c*t-Pi(t)`.  Under (11), equation (12)
-therefore implies
+Both `c*t` and `Pi(t)` vanish to order one.  The inner sum in (26) therefore
+vanishes to order at least `k-1`, while (20) gives
+`h_(C-k)(t)=O(t^(-k))`.  Hence
 
 ```text
-ord_(t=0) G>=L+2.                                         (30)
+A(t)=O(t^(-1)).                                           (27)
 ```
 
-On the other hand, a nonzero polynomial cannot vanish to order greater than
-its degree.  Equations (26)--(27) give
+Under (11), equations (12), (25), and (27) imply
 
 ```text
-L+2<=K+C,
-L<=K+C-2.                                                 (31)
+ord_(t=0) Q>=L+1.                                         (28)
 ```
 
-Consequently the first `B=K+C-1` positive powers cannot all have zero
-constant term.  This proves the theorem.
+On the other hand, the nonzero polynomial `Q` has degree `C` by
+(23).  If the first `C` constant terms vanished, (28) with `L=C` would give
+`ord_0 Q>=C+1`, a contradiction.  Consequently one of the first `C` powers
+has nonzero constant term.  This proves the theorem.
 
 ## 6. Boundaries, use, and what remains open
 
@@ -363,27 +327,26 @@ constant term.  This proves the theorem.
    coefficients must be nonzero and `M,N>=1`.  A nonzero constant coefficient
    is detected already at `m=1`.
 3. **The bound is sharp when `min(M,N)=1`.**  The binomial
-   `u^(-1)+u^N` has first return `N+1=d`, so (3) cannot be improved on that
+   `u^(-1)+u^N` has first return `N+1=d`, so (2) cannot be improved on that
    boundary.
 4. **The general estimate is deliberately crude.**  At `(M,N)=(2,2)`, for
-   example, (1) gives `B=8`, whereas the conjectural sharp bound is `4`.
-   Complement duality improves the one-sided weighted-degree estimate, but
-   the actual compound coefficients are sparser still: in this bidegree they
-   are only linear in the moving coordinate `e_2`.  Understanding that
-   sparsity uniformly is a precise algebraic route toward the Sturmfels
-   bound.
+   example, (1) gives `C=6`, whereas the conjectural sharp bound is `4`.
+   Complement duality removes the earlier uniform pole-clearing loss, but the
+   compound family still has `C` members.  Replacing that family-size degree by
+   the original root degree `d`, or proving that contact beyond `d+1` forces
+   a lower-dimensional degeneration, is the remaining algebraic route toward
+   the Sturmfels bound.
 5. **NC2/GMC(2) paper dependency.**  On a lowest balanced Wick face with
    charge extremes `-M,N`, THM-2022 may choose its seed exponent `m0` with
-   `m0<=B`.  Thus THM-2067's project-internal replacement of the external
-   DvdK citation is not only logically complete; it can be made effective at
-   the seed stage.  The later good prime may still depend on the algebraic
-   coefficients, so this is not a coefficient-uniform bound on the final
-   Gaussian moment order.
+   `m0<=C` directly from this theorem.  Beyond the small-root logarithmic
+   identity, the effective proof is Galois-free; THM-2067 is a related
+   historical route to bare existence, not a dependency.  The later good
+   prime may still depend on the algebraic coefficients, so this is not a
+   coefficient-uniform bound on the final Gaussian moment order.
 
-The surviving sharp problem is now concrete: replace the weighted-degree
-pole bound (16) by enough compound-coordinate structure to force contact
-degree at most `d+1`.  The theorem above proves a finite bound without
-claiming that open sharpening.
+The surviving sharp problem is now concrete: replace the full compound-family
+degree `C` by enough structure to force contact degree at most `d`.  The
+theorem above proves a finite bound without claiming that open sharpening.
 
 ## 7. Paper-proof dependency audit
 
@@ -404,11 +367,10 @@ paper chain can be made entirely project-internal as follows.
    normalized to have constant value zero; and (10) is an identity of
    convergent germs.  No asymptotic continuation or DvdK critical-value
    theorem is used.
-4. Irreducibility in Section 4 uses only `gcd(X^a,R)=1`, supplied by
-   `R(0)!=0`.  The selected small-root subset need not be Galois-invariant:
-   if its product were the rational function `ct`, its *orbit* supplies the
-   uniform-incidence norm contradiction (25).  This is precisely why no
-   unproved monodromy classification is hidden in the argument.
+4. Complementary-subset duality is a symmetric-polynomial identity.  It
+   clears the forbidden line coefficient by coefficient, and the unique
+   leading term `c^C t^C` makes `Q` nonzero.  Thus the effective proof uses
+   neither irreducibility nor a Galois-orbit or monodromy classification.
 5. THM-2022 then uses only the resulting nonzero seed, rational face height,
    ordinary algebraic specialization, Kummer/Lucas congruences, and
    Frobenius.  Those steps neither cite nor imply the stronger DvdK
