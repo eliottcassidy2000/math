@@ -20,6 +20,7 @@ related:
   - THM-1122
   - THM-1166
   - THM-2080
+  - THM-2095
 script: 04-computation/lrc14_mod7_fourfold_moment_obstruction_codex_20260722.py
 output: 05-knowledge/results/lrc14_mod7_fourfold_moment_obstruction_codex_20260722.out
 script_sha256: c4c9b8096680483e99ab54f74706a2ba51f6b4cbe194276e243d1c908e795a73
