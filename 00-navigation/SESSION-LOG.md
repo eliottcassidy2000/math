@@ -52,21 +52,19 @@ Older chronology is in
   through rank `10`; all-primitive rank-two covers in those ranges are empty,
   and the specialized LRC list must contain `13`- and (through rank ten)
   `11`-divisible guard/terminal entries.
-- THM-2116 converts the generic first rank-eight terminal `13`-blocker into an
-  exact order-thirteen orbit ledger. After freezing the guard and blocker on
-  a guard-kernel needle, each of the seven residual dangers is a singleton or
-  a colored two-point toothpick. Almost every covered needle is therefore
-  either a disjoint six-toothpick-plus-singleton partition or a seven-
-  toothpick cover with one doubled point. A positive-measure two-singleton
-  phase set would close this branch.
-- THM-2120 supplies that closure globally. Under `Y=13X`, every phase has a
-  guard-safe thirteenth root, and two residual singleton windows outside the
-  blocker band violate THM-2116. Avoiding every pair forces the blocker
-  character to equal one member of each independent pair and share the line
-  of each dependent pair. Hence all seven residuals lie on the blocker line,
-  or six equal `+/-u` and one is exceptional. A `3/7<5/7` measure count
-  excludes the latter; settled LRC(9) on the common fiber excludes the former.
-  The unique independent terminal-`13`-blocker rank-eight branch is empty.
+- THM-2116 gives the exact order-thirteen singleton/toothpick ledger for one
+  terminal `13`-blocker. THM-2120's phase-rigidity argument empties its
+  independent branch; THM-2123 empties the dependent branch, and THM-2122
+  empties multiple blockers when all residual terminals are guard-transverse.
+  Thus a rank-eight cover needs a guard `13`-blocker or a nonblocker terminal
+  projectively parallel to the guard modulo thirteen.
+- THM-2124 proves a finite-plane Kakeya rigidity theorem: for every odd prime
+  power `q>=7`, `(q+3)/2` doubled strips covering `F_q^2` have direction
+  partition `(k)` or `(k-1,1)`. Hence a guard `13`-blocker with all terminals
+  nonzero modulo thirteen forces seven of the eight terminal residues into one
+  projective pencil. In the `(7,1)` case THM-2097 makes the seven aligned
+  terminals rationally guard-proportional, leaving one transverse terminal.
+  The all-aligned `(8)` and this one-dimensional vertical handoff remain open.
 - **Remaining:** exact discharge of the rank-seven finite bank and both
   higher-rank branches; the depth-zero/rank-eleven and rank-twelve atlas lanes
   also remain. LRC(14) is not closed.

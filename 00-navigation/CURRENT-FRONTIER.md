@@ -138,11 +138,11 @@ not unsafe. The reusable certificate architecture is
   specialization gives `13|h*product(Q)` and, through rank `10`,
   `11|h*product(Q)`. THM-2115's half-fiber Toeplitz gate closes at frequency
   `84` a row invisible to every THM-2105 clock and its saturated pair tree.
-  THM-2116/2120/2122/2123/2125 force a sharp prime split: a rank-eight cover
-  needs a guard `13`-blocker, or at least five nonblocker terminals projectively
-  parallel to the guard modulo thirteen. THM-2124 is auditing the first branch.
-  THM-2117 gives a sharp separation: one exact rank-eight row passes clocks,
-  its maximum Hunter tree, and every scalar minor, yet has an open safe cell.
+  THM-2116/2120/2122/2123/2125 force a prime split: rank eight needs a guard
+  `13`-blocker or five guard-parallel nonblockers. THM-2124 sharpens the first
+  no-terminal-blocker lane to `(8)` or `(7,1)`; the latter has seven rational
+  guard-proportionals plus one transverse. THM-2117's exact test row passes
+  clocks, its Hunter tree, and scalar minors but still escapes.
   THM-2121 makes the joint gate finite at order `14nV^2+1`; retain the
   Toeplitz/Fejer certificate, not scalar packets. The height-114 cut rows
   make THM-2065 alone vacuous; location, content, phase, and torsion remain.

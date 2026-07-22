@@ -20,6 +20,7 @@ depends_on:
   - THM-2122
 related:
   - THM-2098
+  - THM-2124
 ---
 
 # THM-2123 -- dependent 13-blocker closure
@@ -202,8 +203,11 @@ different terminal. The two labels cannot be conflated because the aligned
 terminal is required to be nonzero modulo thirteen.
 
 THM-2125 later strengthens the second branch to at least five nonblocker
-terminals on the guard's projective mod-13 line. The other branch is a guard
-13-blocker. Ranks nine through twelve are not closed here.
+terminals on the guard's projective mod-13 line. THM-2124 sharpens the guard-
+blocker branch, when all terminals are nonblockers, to direction partition
+`(8)` or `(7,1)`; under THM-2097's specialization hypotheses the latter has
+seven rational guard-proportionals and one transverse terminal. Ranks nine
+through twelve are not closed here.
 
 ## 5. Assumption challenge and Tournament Analysis
 
