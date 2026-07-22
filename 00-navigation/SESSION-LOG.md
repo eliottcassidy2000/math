@@ -1,3 +1,13 @@
+## death-star-2026-07-22-S115 -- hconst DISCHARGED kernel-pure (h(0,0)=1): multiplicative THM-1550 crux reduced to hderiv ALONE
+
+**Owner:** finish up all remaining GMC2 formalization; pull often; integrate ideas. (Also handed a Poisson/Dixmier-Conjecture "counterexample" abstract -- flagged as an extraordinary JC(4)/DC(4)-disproof claim, unverifiable as written since T,D,S not given; NOT integrated; separate from the GMC2 task.)
+
+- **STATE PULLED IN:** the crux collapsed further while I was away. mac-mini S165 (coeff_zero_smallRootFactor_mul_unit: P.coeff0*h(0)=-t*r0) + kps S128c151 (which FORMALIZED my exp/log-free insight: GMC2DvdKCharZeroClosing eq_one_of_derivativeFun_eq_zero + GMC2DvdKMultiplicativeClosing.smallRootFactor_coeff0_eq_of_derivative_vanishes) reduced the multiplicative THM-1550 to exactly TWO hypotheses on the Weierstrass unit h: hconst (h(0,0)=1) + hderiv (d_t(h(0,t))=0, the [x^0]-Laurent identity).
+- **DELIVERED kernel-pure [propext,Classical.choice,Quot.sound] (GMC2DvdKUnitOrigin.lean, pushed, in root):** discharged hconst unconditionally (no CharZero): map_constantCoeff_Phi (Phi mod t = X^M via PowerSeries.map(constantCoeff), lands in F not the residue field), map_constantCoeff_smallRootFactor (P mod t = X^M from IsDistinguishedAt.mem: lower coeffs in maximalIdeal=span{X} => constantCoeff 0), unitCoeff0_constantCoeff_eq_one (= hconst: Phi=P*h reduced mod t => X^M=X^M*(h mod t) => h mod t=1 by cancelling X^M in the domain F[[x]]; X-constant term = 1), and smallRootFactor_coeff0_eq_of_derivative_vanishes' [CharZero F] composing hconst in => the multiplicative crux now takes ONLY hderiv.
+- **NET:** the ENTIRE multiplicative route is kernel-pure modulo EXACTLY hderiv (the [x^0]-Laurent log-derivative identity in derivative form, d_t(h(0,t))=0 under D_m=0) -- the sole deep survivor, mac-mini's frame lane. hconst is off the table.
+- **COORDINATION:** told mac-mini + offered the (1/x)-adic reversed-poly [x^0](P_t/P)=0 lemma if wanted; did NOT touch hderiv (their lane, avoid collision). Marker-safety: fixed my S114 root-conflict-marker slip is confirmed clean.
+- **HONEST:** did NOT close hderiv (the deep crux). Contributed the elementary uncontested hconst discharge -- a genuine finishing step (one of two remaining hypotheses removed). HYP-9008.
+
 ## kind-pasteur-2026-07-22-S128c151 -- char-0 back half: THM-1550 closed exp/log-free, modulo exactly the derivative identity d_t(h(0,t))=0; also fixed the fleet-wide broken root
 
 **Owner:** keep working collaboratively to finish up the one analytic lemma.
