@@ -1,0 +1,38 @@
+
+========================================================================
+A  TOOTHPICK A139250: simulate the CA; verify OEIS, oddness, seed-parity, 2^k Jacobsthal formula
+========================================================================
+  simulated A139250 (totals): [1, 3, 7, 11, 15, 23, 35, 43, 47, 55, 67, 79, 95, 123, 155, 171, 175]
+  OEIS A139250            : [1, 3, 7, 11, 15, 23, 35, 43, 47, 55, 67, 79, 95, 123, 155, 171, 175]
+  match OEIS? True
+  first differences (added per gen): [1, 2, 4, 4, 4, 8, 12, 8, 4, 8, 12, 12, 16, 28, 32, 16]  -> #odd terms: 1
+  A139250(n) all ODD (n>=0 total>=1)? True
+  A139250(2^k) vs (2^(2k+1)+1)/3: [(1, 1), (3, 3), (11, 11), (43, 43), (171, 171)]
+  final gen: total toothpicks=175 (odd? True); #on-axis(x=0) fixed-by-mirror=3 (odd? True)
+  => total == #axis-toothpicks (mod 2): the ODD central seed forces A139250 odd. Lefschetz parity.
+
+========================================================================
+B  TOURNAMENTS: A000568 = SC + 2*(chiral pairs); EVEN for n>=3 because SC (self-converse) is even
+========================================================================
+  n=3: A000568=2 (even? True) ; self-converse SC=2 (even? True) ; chiral pairs=0 ; check total==SC+2*pairs? True
+  n=4: A000568=4 (even? True) ; self-converse SC=2 (even? True) ; chiral pairs=1 ; check total==SC+2*pairs? True
+  n=5: A000568=12 (even? True) ; self-converse SC=8 (even? True) ; chiral pairs=2 ; check total==SC+2*pairs? True
+  n=6: A000568=56 (even? True) ; self-converse SC=12 (even? True) ; chiral pairs=22 ; check total==SC+2*pairs? True
+  => THM-587: A000568=P_n(1), SC=P_n(-1) (antipodal Lefschetz). SC=2,2,8,12,88,176 (n=3..8), all even
+     => A000568 EVEN for n>=3. count parity = SC = self-converse (achiral) FIXED-POINT count (mod 2).
+
+========================================================================
+C  THE ONE LAW + the toothpick correspondence
+========================================================================
+  count = (#involution FIXED) + 2*(#free pairs)  ==>  count == #fixed (mod 2)  [Lefschetz/Euler]:
+    TOURNAMENTS  : A000568 == SC (mod 2); SC=P_n(-1) even (n>=3)  => count EVEN. fixed = self-converse(achiral).
+    TOOTHPICK    : A139250 == #axis-toothpicks (mod 2); #axis odd (central seed) => total ODD.
+    LRC (S212)   : chi(G_delta) == #iota-fixed lonely pts (mod 2); covering => 0 fixed => EVEN (mirror pairs).
+
+  TOOTHPICK DIAGRAM <-> CHIRALITY STRUCTURE:
+    central seed toothpick (on both mirror axes, D4-fixed)   <->  the achiral / SELF-CONVERSE tournaments (R-fixed)
+    each mirror-symmetric toothpick PAIR (off axis)          <->  each CHIRAL pair {T, T^op}
+    the D4 mirror symmetry of the whole diagram              <->  the converse involution R = complement = antipode
+    self-similar doubling (A139250(2^k)=(2^(2k+1)+1)/3)      <->  the level-graded metagraph recursion (THM-587)
+  So the toothpick fractal is the PICTURE of 'one achiral seed generating chiral mirror-pairs' -- the same
+  Z/2 antipodal Euler class (P_n(+1) count / P_n(-1) fixed) that THM-587 proves and S212 uses for LRC.
