@@ -146,9 +146,9 @@ not unsafe. The reusable certificate architecture is
   guard-blocker/no-terminal-blocker lane: a mod-`169` comb kills `(7,1)`, and a
   digit section lifts `(8)` to rank collapse. THM-2130 extends root capacity
   through ranks `9..12` and forces guard content, a sparse mod-11 triple, or a
-  terminal determinant divisible by `143`. THM-2133 eliminates one through six
-  simultaneous terminal blockers and reduces seven to two scalar flood tails;
-  the fivefold guard pencil remains. THM-2117's exact scalar test row still escapes.
+  terminal determinant divisible by `143`. THM-2133 reduces simultaneous blockers
+  to scalar `6+1`/`5+2` tails; THM-2135 forces `13^4|v` in `6+1` and excludes
+  `5+2` depths `(1,1),(1,2)`. The fivefold guard pencil remains.
   THM-2121 makes the joint gate finite at order `14nV^2+1`; retain the
   Toeplitz/Fejer certificate, not scalar packets. The height-114 cut rows
   make THM-2065 alone vacuous; location, content, phase, and torsion remain.
@@ -418,10 +418,10 @@ into tournament operation laws and LRC residue packets.
 - **Planar source fibers:** THM-2063/2071 close affine/quadratic pencil members;
   THM-2084/2110/2118 close the cubic source-fiber stratum. THM-2102/2113 close
   power-free top faces; THM-2127 handles arbitrary tails away from the factor-
-  initial locus and classifies affine roots. THM-2132 closes all exact two-face
-  branches and forces a factorwise Newton chord for noncentral arbitrary tails.
-  THM-2129 leaves only `(z^2-1)^2` at the twice-odd quartic boundary. Central
-  prefixes, the small-degree chord branch, and quartic square descent remain.
+  initial locus and classifies affine roots. THM-2132 forces a factorwise Newton
+  chord; THM-2134 makes its edge a coarsened power or terminally short, and
+  THM-2136 scalarizes every local power with an exact Hermite compatibility budget.
+  THM-2129's quartic square, central prefixes, and terminal short edges remain.
 - MISTAKE-228/229 block the old atlas and NC2/GMC chain. `JC(2)` and `DC(2)`
   remain open; these are source-fiber gates, not generic cover-degree results.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer

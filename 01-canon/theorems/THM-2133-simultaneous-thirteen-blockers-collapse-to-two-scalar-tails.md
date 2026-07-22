@@ -26,6 +26,7 @@ related:
   - THM-2125
   - THM-2130
   - THM-2131
+  - THM-2135
 external: Settled Lonely Runner Conjecture for at most eight integer speeds (nine total runners).
 ---
 
@@ -450,7 +451,10 @@ pays every pair-colour invoice, but `t=1/6` is uncovered.
 
 Together, THM-2131 and this theorem leave no unconstrained normalized guard-
 blocker pencil. The sole simultaneous-blocker survivors are the scalar profiles (33),
-which still require an actual impossibility proof. In particular, the theorem
+which still require an actual impossibility proof. THM-2135 subsequently
+forces `13^4|v` in case (I), excludes valuation pairs `(1,1)` and `(1,2)` in
+case (II), and adds root-profile, divisor-colour, and flood-multiplicity
+invoices. In particular, this theorem
 does not close the non-guard-blocker fivefold pencil, finite rank-seven boxes,
 ranks nine through twelve, or LRC(14).
 

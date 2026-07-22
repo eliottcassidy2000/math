@@ -20,6 +20,8 @@ related:
   - THM-2102
   - THM-2113
   - THM-2129
+  - THM-2134
+  - THM-2136
 ---
 
 # THM-2132 -- factor-initial closure and Newton-chord escape

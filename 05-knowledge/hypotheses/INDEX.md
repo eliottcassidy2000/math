@@ -41,10 +41,10 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
   emptiness forces exact affine carriers through denominator fourteen.
 - **THM-2114/2115 (PROVED):** finite-ring needles force `13`- and `11`-content
   blockers; a joint Toeplitz certificate closes a row missed by scalar clocks.
-- **THM-2116/2120/2122/2123/2124/2125/2128/2131/2133 (PROVED):** a rank-eight cover needs a guard
+- **THM-2116/2120/2122/2123/2124/2125/2128/2131/2133/2135 (PROVED):** a rank-eight cover needs a guard
   `13`-blocker or at least five nonblocker terminals projectively parallel to
   the guard modulo thirteen. THM-2124 proves the complementary finite-plane seven-pencil theorem; THM-2128 kills `(7,1)` and THM-2131's digit lift kills
-  `(8)` when all terminals are nonblockers. THM-2133 empties simultaneous blocker counts `1..6`; seven blockers reduce to scalar `6+1` or `5+2` flood tails with necessary gcd ledgers.
+  `(8)` when all terminals are nonblockers. THM-2133 leaves scalar `6+1`/`5+2` tails; THM-2135 forces `13^4|v` in `6+1` and excludes `5+2` depths `(1,1),(1,2)`.
 - **THM-2117/2121 (PROVED):** clocks, the maximum Hunter tree, and all scalar
   minors can miss an open safe cell; every strict safe cell has a full
   Toeplitz/Fejer certificate of order at most `14nV^2+1`. Boundary-only points
@@ -59,9 +59,9 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
 - **THM-2101/2111 (PROVED PAPER):** three additive DvdK proofs avoid root products, including a purely t-adic Newton-packet proof; the
   effective first return is a compound-determinant order at most
   `binom(M+N,min(M,N))`. Sharpening and Lean assembly are separate.
-- **THM-2102/2110/2113/2118/2127/2129/2132 (PROVED planar-JC strata):** cubic source
-  fibers, all exact two-face trains, and affine-root families close. Arbitrary
-  factor-initial tails must grow a Newton chord; one twice-odd quartic square remains.
+- **THM-2102/2110/2113/2118/2127/2129/2132/2134/2136 (PROVED planar-JC strata):** cubic source
+  fibers and exact two-face trains close. A nonradial factor edge is a coarsened
+  toric scalar power or terminally short; global Hermite compatibility remains.
 
 ## LRC(14) — OPEN
 

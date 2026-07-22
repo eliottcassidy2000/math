@@ -68,10 +68,10 @@ Older chronology is in
   line escape; direction and quotient fibers are at most three, and THM-2104
   still forces valuation diversity at `2,3,5`. Its near-pencil bounds retain
   their stated outlier-transversality condition.
-- THM-2133 empties simultaneous blocker counts `1..6` and reduces seven blockers
-  to scalar `6+1`/`5+2` flood tails with necessary gcd ledgers. **Remaining:** those
-  tails, the rank-seven finite bank, fivefold guard pencil, and rank `9..12`
-  atlas lanes. LRC(14) is not closed.
+- THM-2133 reduces simultaneous blockers to scalar `6+1`/`5+2` flood tails.
+  THM-2135 forces `13^4|v` in `6+1`, excludes `5+2` depths `(1,1),(1,2)`,
+  and adds divisor-colour/root-flood invoices. **Remaining:** higher tail depths,
+  the rank-seven bank, fivefold guard pencil, and rank `9..12`. LRC(14) is open.
 
 ## NC2 / GMC formalization
 
@@ -90,14 +90,13 @@ Older chronology is in
 
 ## Other active inspiration
 
-- THM-2118 proves all-degree cubic Faber boundary/flux coprimality, removes every
-  finite centering/depressed-coefficient pole, and invokes THM-2102's power-free
-  face theorem to close cubic source fibers. THM-2127 assembles arbitrary later
-  faces away from `rad(h)|A`; THM-2132 closes every exact two-face branch and
-  forces a later factorwise Newton-chord vertex for noncentral arbitrary tails.
-  Affine roots close by a moving residue. THM-2129 leaves `(z^2-1)^2` at the
-  twice-odd quartic boundary. Central prefixes, the small-degree chord branch,
-  quartic square descent, JC(2), and DC(2) remain open.
+- THM-2118 closes cubic source fibers and THM-2127 assembles arbitrary later
+  faces away from `rad(h)|A`. THM-2132 closes exact two-face branches and forces
+  a later factorwise Newton chord; THM-2134 makes each nonradial edge a coarsened
+  residue-field power or terminally short. THM-2136 torically scalarizes those
+  local powers and gives the exact Hermite compatibility codimension, without
+  producing a global root. THM-2129's quartic square, central/short branches,
+  cross-factor obstruction, JC(2), and DC(2) remain open.
 - THM-2117/2121 show scalar clocks/minors can miss safe cells, while every strict
   safe cell has a finite full Toeplitz/Fejer certificate; boundary-only points
   remain outside that certificate's scope.

@@ -18,6 +18,7 @@ depends_on:
 related:
   - THM-2102
   - THM-2132
+  - THM-2136
 ---
 
 # THM-2134 -- the preterminal factor-edge power dichotomy
