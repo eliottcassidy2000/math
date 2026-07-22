@@ -10,7 +10,10 @@ status: >
   modulo 13 can cover almost everywhere only if at least seven terminal
   residues lie in one pencil. In the (7,1) branch, the aligned seven already
   cover; under THM-2097's LRC specialization hypotheses they are all
-  rationally guard-proportional. The all-aligned (8) branch is not excluded.
+  rationally guard-proportional, and THM-2128 excludes that branch by an exact
+  mod-169 seven-comb descent. THM-2131's digit-section lift excludes the
+  all-aligned (8) branch under the same rank-two LRC hypotheses. Thus the
+  guard-blocker/no-terminal-blocker lane is empty, but LRC(14) remains open.
 source: codex-2026-07-22-LRC-F13-double-strip-pencil
 depends_on:
   - THM-2114
@@ -19,6 +22,8 @@ related:
   - THM-2122
   - THM-2123
   - THM-2125
+  - THM-2128
+  - THM-2131
 ---
 
 # THM-2124 -- eight double strips force a sevenfold pencil
@@ -284,8 +289,8 @@ c_i in Q g,                    i=1,...,7.              (28)
 
 If the guard and all eight terminals span the ambient rational rank two, the
 exceptional terminal is consequently the sole rationally transverse
-terminal. This is a seven-high-vertical-plus-one-transverse handoff, not yet
-an exclusion of that handoff.
+terminal. THM-2128 subsequently proves that this seven-high-vertical-plus-one-
+transverse handoff is impossible.
 
 ## 3. Exact scope and the next obstruction
 
@@ -302,11 +307,13 @@ It records a necessary condition on one finite root fiber. In particular:
 4. ranks nine through twelve do not have the critical identity
    `2k=q+3`, so the same binary-form argument does not give (4) unchanged.
 
-The highest-leverage remaining questions in this lane are therefore dynamic:
-can eight mod-`13`-parallel integral characters keep choosing covering line
-offsets on almost every guard-safe root fiber, and can the high-vertical
-`(7,1)` handoff survive the one-dimensional guard arithmetic? Modulo thirteen
-alone cannot see either compatibility.
+The theorem itself leaves a dynamic question: can eight mod-`13`-parallel
+integral characters keep choosing covering line offsets on almost every
+guard-safe root fiber? THM-2131 answers no by retaining the affine offsets on
+a periodic next-digit section and lifting the pencil through every power of
+thirteen. Together with THM-2128, this empties both patterns in the guard-
+blocker/no-terminal-blocker lane; simultaneous terminal blockers are outside
+the present finite-plane model.
 
 ## 4. Kakeya duality, assumption challenge, and Tournament Analysis
 

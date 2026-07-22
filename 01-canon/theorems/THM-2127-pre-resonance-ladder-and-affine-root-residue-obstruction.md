@@ -1,20 +1,21 @@
 ---
 id: THM-2127
-title: "Full resonant trains, exact coprime two-face closure, and affine-root residues"
+title: "Full resonant trains, radical-first-face closure, and affine-root residues"
 status: >
   PROVED. THM-2102's proper-power first-defect equation has a full resonant
   solution: each resonance seeds a new fractional-binomial train, but every
-  later train has strictly higher h-adic order than the original one. Hence an
-  exact two-weighted-face component f=h^m+A with h power-free and gcd(h,A)=1
-  has a Jacobian mate only in the terminal case deg(h)+deg(A)=w_1+w_2; there
-  h,A are polynomial coordinates and the pair is an automorphism. Separately,
-  in polynomial coordinates (u,v), every f=u+P(A(u)v+B(u)) with deg P>=2 has
-  a rational, hence polynomial, mate exactly when A is constant. Its negative
-  direction is an all-order moving-pole residue obstruction. These close two
-  proper-power subclasses but do not prove planar JC.
+  nonspecial train has higher factor valuation than the original one. With
+  arbitrary later weighted faces, if the first lower face A is not divisible
+  by rad(h), a mate forces h,A to be coordinates, every later face to lie in
+  C[h], and the pair to be an automorphism. Thus every hard branch satisfies
+  rad(h)|A. Separately, in polynomial coordinates (u,v), every
+  f=u+P(A(u)v+B(u)) with deg P>=2 has a rational, hence polynomial, mate
+  exactly when A is constant. These close broad proper-power subclasses but
+  do not prove planar JC.
 source: codex-2026-07-22-JC2-proper-power-all-order
 depends_on:
   - THM-2102
+  - THM-2113
 related:
   - THM-2045
   - THM-2071
@@ -29,10 +30,11 @@ Write
 {F,G}=F_x G_y-F_y G_x.                               (1)
 ```
 
-The theorem has two complementary parts. The first solves the complete
-resonant recursion for a two-face component. The second changes to an exact
-approximate-root coordinate and detects a nonzero residue after **all** face
-orders have been assembled.
+The theorem has three complementary parts. The first solves the complete
+resonant recursion for a sparse initial defect chain. The second assembles
+**all** later weighted faces and shows that one irreducible factor of the top
+root still sees a unique deepest pole unless `rad(h)|A`. The third changes to
+an exact approximate-root coordinate and detects a nonzero moving residue.
 
 ## 1. The full resonant fractional-binomial ladder
 
@@ -98,6 +100,8 @@ Put
 s=gcd(d,rho),              L=d/s,              e=rho/s. (10)
 ```
 
+Notice that `a=md-rho=s(mL-e)`, so `a/s` is a positive integer.
+
 Then there are scalars `lambda_b`, with `lambda_0=c`, such that every face in
 this defect chain has the exact rational-function expansion
 
@@ -125,10 +129,10 @@ make the original `b=0` train the unique deepest `h`-adic pole.
 
 We first record the rigidity that makes the ladder unique.
 
-> **Centralizer lemma.** If `R in C(x,y)^*` is `w`-homogeneous of degree `e`
-> and `{h,R}=0`, then `d|e` and
+> **Centralizer lemma.** If `R in C(x,y)^*` is `w`-homogeneous of degree `E`
+> and `{h,R}=0`, then `d|E` and
 > ```text
-> R=lambda h^(e/d)                                    (12)
+> R=lambda h^(E/d)                                    (12)
 > ```
 > for some `lambda in C^*`.
 
@@ -137,15 +141,15 @@ parallel in the rational function field. Weighted Euler identities give
 
 ```text
 w_1 x h_x+w_2 y h_y=d h,
-w_1 x R_x+w_2 y R_y=e R.                              (13)
+w_1 x R_x+w_2 y R_y=E R.                              (13)
 ```
 
 Eliminating the proportionality factor between the gradients yields, with
 `dR,dh` denoting differentials,
 
 ```text
-d*(dR/R)=e*(dh/h),
-R^d=C h^e                                             (14)
+d*(dR/R)=E*(dh/h),
+R^d=C h^E                                             (14)
 ```
 
 for a nonzero constant `C`. If
@@ -154,9 +158,9 @@ for a nonzero constant `C`. If
 h=product_l p_l^(a_l),            gcd_l a_l=1,        (15)
 ```
 
-the valuations in (14) say that `d` divides every `e a_l`, hence `d|e`.
+the valuations in (14) say that `d` divides every `E a_l`, hence `d|E`.
 Taking valuations once more gives (12), after absorbing a constant `d`th
-root. This also covers negative `e` and negative powers of `h`.
+root. This also covers negative `E` and negative powers of `h`.
 
 ### Face recursion
 
@@ -227,10 +231,10 @@ At `j=K`, the exponent of `h` in the `b`th summand of (11) is
 r-m+b(mL-e)=r-m+b a/s.                               (24)
 ```
 
-The `b=0` coefficient `c binom(n/m,q+1)` is nonzero. Its `h`-adic valuation is
-strictly smaller than every `b>0` valuation because `a/s>0`; coprimality (23)
-means the powers of `A` add no `h`-adic order. Thus no resonant train can
-cancel the pole
+The `b=0` coefficient `c binom(n/m,q+1)` is nonzero. Fix any irreducible
+factor `pi` of `h`. Coprimality (23) gives `ord_pi(A)=0`, while (24) shows
+that the `pi`-adic valuations of the summands strictly increase with `b`
+because `a/s>0`. Thus no resonant train can cancel the pole
 
 ```text
 c binom(n/m,q+1) A^(q+1)/h^(m-r).                    (25)
@@ -245,71 +249,194 @@ It follows that a polynomial mate forces
 This is the key all-order point: resonance changes the formula, but not its
 lowest `h`-adic tooth.
 
-### Exact two-face coprime closure
+## 2. Arbitrary later faces and the radical-first-face closure
 
-Assume now that the component has exactly two nonconstant weighted faces,
-
-```text
-f=h^m+A,                 gcd(h,A)=1,                  (27)
-```
-
-with the hypotheses above but no mate top face fixed in advance. If `f` has
-a polynomial Jacobian mate, then `f` is a polynomial coordinate and every
-Keller pair containing it is an automorphism.
-
-To prove this, repeatedly subtract a scalar power of `f` from a mate whenever
-its leading face is `c h^n` with `m|n`. This preserves the bracket and strictly
-lowers weighted degree. The descent cannot end with
+Now let
 
 ```text
-m d+deg_w(g)<=W.                                      (28)
+f=h^m+A+R,                                             (F1)
 ```
 
-Strict inequality leaves no bracket component of weight zero. At equality,
-the top equation would be `{h^m,in_w(g)}=1`, impossible because its left side
-is divisible by the nonconstant polynomial `h^(m-1)`.
-
-The reduced mate therefore has leading face `c h^n` with
+where `h` and `m` are as above, `A` is the first lower homogeneous face,
 
 ```text
-n=q m+r,                 0<r<m,                       (29)
+deg_w(A)=a=md-rho>0,                                  (F2)
 ```
 
-and `D>0`. The pole result forces `(q+1)rho>=D`. Since `rho=md-a`,
+and every face of `R` has degree strictly below `a`. Assume the sharp factor
+condition
 
 ```text
-D-(q+1)rho=(q+1)a+r d-W<=0.                           (30)
+rad(h) does not divide A.                             (F3)
 ```
 
-In particular `a+d<=W`. If `a+d<W`, then the homogeneous bracket `{h,A}` has
-negative weighted degree and is zero. The centralizer lemma would make the
-nonconstant `A` a positive power of `h`, contradicting (27). Hence
+If `f` has a polynomial Jacobian mate, then
 
 ```text
-a+d=W,                    {h,A}=kappa in C^*.          (31)
+{h,A}=kappa in C^*,
+f=h^m+A+Q(h)                         for Q in C[T],    (F4)
 ```
 
-Substituting `W=a+d` back into (30) gives
+and `(f,-h/kappa)` is a polynomial automorphism pair. Thus every hard
+proper-power branch must satisfy `rad(h)|A`.
+
+### Mate reduction
+
+Repeatedly subtract `c f^(n/m)` from a mate whenever its leading face is
+`c h^n` with `m|n`. This preserves the bracket and strictly lowers integral
+weighted degree. Whenever `md+deg_w(g)>W`, the positive top bracket with
+`h^m` vanishes, so the polynomial centralizer lemma makes the new leading
+face another `c h^n`. The finite descent cannot finish below weight sum,
+where no bracket term has weight zero, or at equality, where it would demand
 
 ```text
-q a+(r-1)d<=0.
+{h^m,in_w(g)}=1,
 ```
 
-Positivity forces `q=0` and `r=1`: every reduced mate has top exponent
-`n=1`. Thus equality has already collapsed the face descent to its terminal
-tame control.
-
-THM-2113 makes `(h,A/kappa)` a polynomial coordinate pair. Moreover
+impossible because the left side is divisible by `h^(m-1)`. We therefore
+reach a reduced mate with
 
 ```text
-q_0=-h/kappa,                   {f,q_0}=1,             (32)
+in_w(g)=c h^n,          n=q m+r,       0<r<m,
+D=(m+n)d-W>0,           K=q+1.                         (F5)
 ```
 
-and `(f,q_0)` is explicitly invertible: recover `h=-kappa q_0`, then
-`A=f-h^m`, and finally invert the coordinates `(h,A/kappa)`. Any other
-polynomial mate is `q_0+Q(f)`. This proves the exact two-face closure. QED.
+### The full-face formal train
 
-## 2. Complete affine-root residue classification
+Index every weighted face by defect:
+
+```text
+f=sum_(delta>=0) f_delta,       deg_w(f_delta)=md-delta,
+g=sum_(t>=0) g_t,               deg_w(g_t)=nd-t,       (F6)
+```
+
+so `f_0=h^m`, `f_rho=A`, no `f_delta` occurs for `0<delta<rho`, and
+`g_0=c h^n`. Introduce a bookkeeping variable `z` and put
+
+```text
+F(z)=sum_delta f_delta z^delta,
+G(z)=sum_t g_t z^t.                                  (F7)
+```
+
+The weighted decomposition of `{f,g}=1` is exactly
+
+```text
+{F(z),G(z)}=z^D.                                      (F8)
+```
+
+For every integer `ell>=0`, define in `C(x,y)[[z]]`
+
+```text
+S_ell(z)=h^(n-ell)[F(z)/h^m]^((n-ell)/m).             (F9)
+```
+
+The binomial series is well-defined because the bracketed series has constant
+term one, and `{F,S_ell}=0`. For every `T<D`, there are scalars `lambda_ell`,
+with `lambda_0=c`, such that
+
+```text
+G(z)=sum_(ell d<=T) lambda_ell z^(ell d) S_ell(z)
+                         modulo z^(T+1).              (F10)
+```
+
+This is the full resonant train with **no** sparseness assumption on the later
+faces. To prove (F10), subtract all trains seeded below a defect `t` and let
+`H_t` be the first residual coefficient. Since `t<D`, equations (F8)--(F9)
+give `{h^m,H_t}=0`. The residual has degree `nd-t`; the graded centralizer
+lemma makes it zero unless `t=ell d`, when it is
+`lambda_ell h^(n-ell)`. Subtracting the corresponding train kills it and
+continues the finite induction.
+
+### The decisive tooth survives every later face
+
+Suppose `K rho<D`. In the coefficient of `z^(K rho)`, the `ell=0` train has
+the nonzero term
+
+```text
+c binom(n/m,K) A^K/h^(m-r).                           (F11)
+```
+
+Every term in every train is indexed by a seed `ell`, a number `N` of selected
+lower faces, and defects `delta_1,...,delta_N`, with
+
+```text
+ell d+sum_i delta_i=K rho,             delta_i>=rho.  (F12)
+```
+
+The special term (F11) is exactly `ell=0`, `N=K`, and every
+`delta_i=rho`. Every other term has `N<K`, and
+
+```text
+ell d<=(K-N)rho<(K-N)md,
+ell<m(K-N).                                           (F13)
+```
+
+Its bare `h` exponent `n-ell-mN` is therefore strictly greater than
+`n-mK=r-m`.
+
+By (F3), choose an irreducible `pi|h` with `pi` not dividing `A`. The special
+term has negative valuation `(r-m)ord_pi(h)`. Every other term has strictly
+larger `pi`-valuation because all later faces are polynomials. Thus (F11) is
+the unique deepest pole and cannot cancel, contradicting polynomiality of
+`g_(K rho)`. Therefore
+
+```text
+K rho>=D.                                             (F14)
+```
+
+### Terminal closure
+
+Substituting `K=q+1`, `rho=md-a`, and `n=qm+r` into (F14) gives
+
+```text
+(q+1)a+r d<=W,
+a+d<=W.                                               (F15)
+```
+
+If `a+d<W`, then `{h,A}=0`; if equality held but the bracket still vanished,
+the centralizer lemma would make `A` a positive rational power of `h`. Either
+conclusion makes every irreducible factor of `h` divide `A`, contrary to
+(F3). Hence `a+d=W` and `{h,A}=kappa!=0`.
+
+THM-2113 makes `h` a coordinate. If `v_0` is a coordinate mate, then
+`{h,A/kappa-v_0}=0`, so in coordinates `(h,v_0)` one has
+
+```text
+A/kappa=v_0+P(h).                                     (F16)
+```
+
+Thus `(h,A/kappa)` is a polynomial coordinate pair. Express every later
+homogeneous face in those graded coordinates of degrees `d,a`. Its degree is
+strictly below `a`, so it contains no positive power of `A/kappa` and belongs
+to `C[h]`. Summing the faces gives (F4), and
+
+```text
+q_0=-h/kappa,                  {f,q_0}=1              (F17)
+```
+
+is explicitly an automorphism mate. QED.
+
+### Sharp radical boundary
+
+The hypothesis (F3) is sharp for this mechanism. With ordinary weights,
+
+```text
+f=y^4+y^2+x,                  g=y,                    (F18)
+```
+
+one has `{f,g}=1`, `h=y`, `m=4`, `A=y^2`, `rho=2`, and the later face `x`
+has defect three. Here `rad(h)|A`. The reduced mate has `n=1`, `K=1`, and
+`D=3`, so `K rho<D`; nevertheless
+
+```text
+F(z)^(1/4)=y+(1/4)y^(-1)z^2+O(z^3),                  (F19)
+```
+
+and the resonant `ell=2` seed contributes `-(1/4)y^(-1)z^2`, cancelling the
+original pole exactly. The remaining hard object is therefore not “resonance”
+alone but cancellation of factor-initial forms on the divisor `rad(h)|A`.
+
+## 3. Complete affine-root residue classification
 
 Let `(u,v)` be polynomial coordinates on the affine plane, normalized by
 
@@ -346,10 +473,10 @@ g_0=h/a,                                              (36)
 and `(f,g_0)` is a polynomial automorphism. Every polynomial mate is
 
 ```text
-g=g_0+Q(f),                         Q in C[f],         (37)
+g=g_0+Q(f),                         Q in C[T],         (37)
 ```
 
-and every rational mate has the same form with `Q in C(f)`.
+and every rational mate has the same form with `Q in C(T)`.
 
 ### The constant case
 
@@ -417,7 +544,11 @@ P(beta)=w_0.                                          (45)
 ```
 
 It is a simple root: a simultaneous equation `P'(beta)=0` would make `beta`
-and `P(beta)` constant, contrary to the transcendence of `t`. Let
+and `P(beta)` constant, contrary to the transcendence of `t`. The polynomial
+`P(z)-w` is irreducible over `C(w)` because the rational map `P^1_z->P^1_w`
+has function-field degree `deg P`; hence the finite local inverse germ below
+and an inverse Puiseux place at infinity lie on the same algebraic function
+field. Let
 
 ```text
 z=phi(w),                    H(w)=phi'(w)              (46)
@@ -432,8 +563,12 @@ R(w_0)=sum_(j=1)^k
  (-1)^j c_j H^(j-1)(w_0)/(j-1)!.                     (47)
 ```
 
-This algebraic function is not identically zero. Indeed, if `M=deg P>=2`, an
-inverse branch at infinity has a Puiseux expansion
+Here `H^(j-1)` denotes the `(j-1)`st derivative with respect to `w`, not a
+power.
+
+This algebraic function is not identically zero. Indeed, choose a place above
+`w=infinity` on the same algebraic inverse branch. If `M=deg P>=2`, it has a
+Puiseux expansion
 
 ```text
 phi(w)=lambda w^(1/M)(1+O(w^(-1/M))),
@@ -451,7 +586,7 @@ to come from differentiating the constant term. Equation (47) therefore
 contradicts (43). No rational mate exists when `A` is nonconstant, completing
 the equivalence and the theorem. QED.
 
-## 3. Scope and sharpness
+## 4. Scope and sharpness
 
 The affine-root classification allows arbitrary `B`, arbitrary lower
 coefficients of `P`, and arbitrary degree at least two. It contains the tame
@@ -475,10 +610,11 @@ rational primitive
 [t-z]^(1-k)/(k-1).                                    (50)
 ```
 
-The theorem does not settle a general proper-power top face. The full ladder
-requires `f` to have no additional face before the tested defect; its exact
-closure assumes only the two coprime faces `h^m,A`. The residue theorem instead
-requires the primitive root to be affine in one polynomial coordinate. What
-the two arguments add is an exact division of labor: resonant trains cannot
-cancel the original `h`-adic pole in the two-face branch, while moving residues
-kill every rational continuation in the affine-root family at once.
+The theorem does not settle a general proper-power top face. The arbitrary-
+later-face closure leaves precisely the factor-initial locus `rad(h)|A`, where
+the control (F18)--(F19) shows that a later resonant seed really can cancel the
+first pole. The residue theorem instead requires the primitive root to be
+affine in one polynomial coordinate. What the arguments add is an exact
+division of labor: away from the factor-initial locus, no collection of later
+faces or resonant seeds can cancel the unique deepest factor valuation; on the
+affine-root locus, moving residues kill every rational continuation at once.

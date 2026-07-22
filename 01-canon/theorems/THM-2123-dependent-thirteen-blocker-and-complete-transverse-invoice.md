@@ -21,6 +21,9 @@ depends_on:
 related:
   - THM-2098
   - THM-2124
+  - THM-2128
+  - THM-2130
+  - THM-2131
 ---
 
 # THM-2123 -- dependent 13-blocker closure
@@ -206,8 +209,11 @@ THM-2125 later strengthens the second branch to at least five nonblocker
 terminals on the guard's projective mod-13 line. THM-2124 sharpens the guard-
 blocker branch, when all terminals are nonblockers, to direction partition
 `(8)` or `(7,1)`; under THM-2097's specialization hypotheses the latter has
-seven rational guard-proportionals and one transverse terminal. Ranks nine
-through twelve are not closed here.
+seven rational guard-proportionals and one transverse terminal. THM-2128
+later excludes `(7,1)`, and THM-2131 excludes `(8)`, emptying that guard-
+blocker/no-terminal-blocker lane. Simultaneous guard and terminal blockers,
+the fivefold nonblocker-guard pencil, and ranks nine through twelve are not
+closed here.
 
 ## 5. Assumption challenge and Tournament Analysis
 

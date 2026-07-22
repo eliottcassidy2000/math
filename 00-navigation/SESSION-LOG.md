@@ -58,8 +58,9 @@ Older chronology is in
   cover needs a guard `13`-blocker or projective guard alignment mod thirteen.
 - THM-2124 proves that `(q+3)/2` double strips covering `F_q^2` have direction
   partition `(k)` or `(k-1,1)`. A guard `13`-blocker with eight nonblocker
-  terminals therefore forces a sevenfold pencil; the `(7,1)` case descends to
-  a rank-one/high-vertical handoff, while the all-aligned `(8)` case remains.
+  terminals forces a sevenfold pencil. THM-2128's exact mod-`169` comb excludes
+  `(7,1)`; THM-2131's periodic digit section lifts `(8)` through every
+  `13`-adic level to rational-rank collapse. The no-terminal-blocker lane is empty.
 - THM-2130 replays two-coordinate capacity at `11` and `13`, extends applicable
   residual counts through rank twelve, and forces rank-eight guard content, one
   of three sparse mod-11 triples, or `143|det(g,c_i)` for some terminal. This is
@@ -69,8 +70,9 @@ Older chronology is in
   still forces valuation diversity at `2,3,5`. Its near-pencil bounds retain
   their stated outlier-transversality condition.
 - **Remaining:** exact discharge of the rank-seven finite bank and both
-  higher-rank branches; the depth-zero/rank-eleven and rank-twelve atlas lanes
-  also remain. LRC(14) is not closed.
+  simultaneous-blocker/fivefold-guard-pencil rank-eight branches; the
+  depth-zero/rank-eleven and rank-twelve atlas lanes also remain. LRC(14) is
+  not closed.
 
 ## NC2 / GMC formalization
 
@@ -92,11 +94,12 @@ Older chronology is in
 
 - THM-2118 proves all-degree cubic Faber boundary/flux coprimality, removes every
   finite centering/depressed-coefficient pole, and invokes THM-2102's power-free
-  face theorem to close the cubic source-fiber stratum. The next source-fiber
-  degree is four; general proper-power resonance, JC(2), and DC(2) remain open.
-- THM-2127 closes two proper-power subclasses. THM-2129 classifies the balanced
-  quartic boundary triple: odd degrees have no collision and twice-odd degrees
-  leave exactly `(z^2-1)^2`; global square-face descent remains open.
+  face theorem to close cubic source fibers. THM-2127 assembles arbitrary later
+  faces in the proper-power train: unless `rad(h)|A` for the first lower face,
+  one factor sees a unique pole and the pair is tame; affine roots are also
+  classified by a moving residue. THM-2129 makes odd balanced quartics empty and
+  leaves exactly `(z^2-1)^2` in twice-odd degree. Factor-initial and global
+  quartic square-face descent, JC(2), and DC(2) remain open.
 - THM-2117/2121 show scalar clocks/minors can miss safe cells, while every strict
   safe cell has a finite full Toeplitz/Fejer certificate; boundary-only points
   remain outside that certificate's scope.

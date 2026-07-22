@@ -142,12 +142,12 @@ not unsafe. The reusable certificate architecture is
   `11|h*product(Q)`. THM-2115's half-fiber Toeplitz gate closes at frequency
   `84` a row invisible to every THM-2105 clock and its saturated pair tree.
   THM-2116/2120/2122/2123/2125 force a prime split: rank eight needs a guard
-  `13`-blocker or five guard-parallel nonblockers. THM-2124 sharpens the first
-  no-terminal-blocker lane to `(8)` or `(7,1)`. THM-2130 extends root capacity
-  across applicable ranks `9..12` and forces, at rank eight, guard content, one
-  of three sparse mod-11 triples, or a terminal determinant divisible by `143`.
-  These are invoices, not closure. THM-2117's exact test row passes
-  clocks, its Hunter tree, and scalar minors but still escapes.
+  `13`-blocker or five guard-parallel nonblockers. THM-2124/2128/2131 empty the
+  guard-blocker/no-terminal-blocker lane: a mod-`169` comb kills `(7,1)`, and a
+  digit section lifts `(8)` to rank collapse. THM-2130 extends root capacity
+  through ranks `9..12` and forces guard content, a sparse mod-11 triple, or a
+  terminal determinant divisible by `143`. Simultaneous blockers and the
+  fivefold guard pencil remain. THM-2117's exact scalar test row still escapes.
   THM-2121 makes the joint gate finite at order `14nV^2+1`; retain the
   Toeplitz/Fejer certificate, not scalar packets. The height-114 cut rows
   make THM-2065 alone vacuous; location, content, phase, and torsion remain.
@@ -414,13 +414,12 @@ into tournament operation laws and LRC residue packets.
 - **Weyl boundary:** THM-2049 makes the graded Ore correction map onto and gives
   a formal beta-adic lift. Finite polynomial termination and the unused affine
   syzygy gauge remain decisive for `DC(2)`.
-- **Planar source fibers:** THM-2063 and THM-2071 close affine and quadratic
-  pencil members. THM-2084/2110 raise the cubic non-tame reduced degree to
-  `14`; THM-2118 proves the all-degree boundary-flux law and, with THM-2102,
-  closes the entire cubic source-fiber stratum. THM-2127 closes exact coprime
-  two-face and affine-root proper-power subclasses. THM-2129 classifies the
-  balanced quartic boundary triple: odd degrees are empty and twice-odd degrees
-  leave only `(z^2-1)^2`. General quartic square-face descent remains open.
+- **Planar source fibers:** THM-2063/2071 close affine/quadratic pencil members;
+  THM-2084/2110/2118 close the cubic source-fiber stratum. THM-2102/2113 close
+  power-free top faces; THM-2127 handles arbitrary later faces whenever the
+  first lower face misses a factor of the top root, and classifies affine roots.
+  THM-2129 makes odd balanced quartics empty and leaves only `(z^2-1)^2` in
+  twice-odd degree. Factor-initial and general quartic square descent remain.
 - MISTAKE-228/229 block the old atlas and NC2/GMC chain. `JC(2)` and `DC(2)`
   remain open; these are source-fiber gates, not generic cover-degree results.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer

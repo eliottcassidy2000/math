@@ -1,0 +1,14 @@
+THM-2128 exact mod-169 certificate
+universe=130; sign_classes=78; set_size=20; columns=10x13
+pair_intersections={0: 273, 2: 1690, 4: 728, 6: 182, 8: 52, 10: 78}
+orbit_table: type -> (zero_degree,pair_common,triple_common,six_neighbor_union)
+  1 -> (7, 4, 3, 110)
+  2 -> (7, 4, 3, 102)
+  3 -> (6, 4, 3, 96)
+  4 -> (6, 4, 3, 96)
+  5 -> (8, 4, 3, 112)
+  6 -> (8, 4, 3, 104)
+zero_graph_cover_cap=112
+independent_max_7_union=116; witness=(1, 3, 5, 7, 8, 9, 11); uncovered=14
+branch_and_bound_nodes=587193; prunes=292412
+PASS
