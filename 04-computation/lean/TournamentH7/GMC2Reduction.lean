@@ -261,6 +261,23 @@ theorem sum_natCast_mul_pow_char {R : Type*} [CommRing R] (p : ℕ) [ExpChar R p
   refine Finset.sum_congr rfl (fun s _ => ?_)
   rw [mul_pow, ← frobenius_def, map_natCast]
 
+/-- **THM-2022 (15): the tied balanced face survives Frobenius as `Q̄^p`.** In the residue field of
+characteristic `p`, the `p`-dilated balanced-face channel sum `∑_t multinomial(S, p·s_t) · (h_t)^p`
+equals the `p`-th power of the face constant term `Q̄ = ∑_t multinomial(S, s_t) · h_t`.  Combines the
+multinomial Lucas `multinomial_dilate_modEq` (§4, weights unchanged mod `p`) with the Frobenius
+collapse `sum_natCast_mul_pow_char` (§5).  This is the exact non-cancellation identity: `Q̄ ≠ 0`
+forces the dilated moment layer `≠ 0`. -/
+theorem face_sum_frobenius {F : Type*} [CommRing F] (p : ℕ) [Fact p.Prime] [CharP F p]
+    {α : Type*} [DecidableEq α] (S : Finset α) {ι : Type*} (T : Finset ι)
+    (s : ι → α → ℕ) (h : ι → F) :
+    ∑ t ∈ T, (Nat.multinomial S (fun i => p * s t i) : F) * (h t) ^ p
+      = (∑ t ∈ T, (Nat.multinomial S (s t) : F) * h t) ^ p := by
+  haveI : ExpChar F p := ExpChar.prime Fact.out
+  rw [sum_natCast_mul_pow_char]
+  refine Finset.sum_congr rfl (fun t _ => ?_)
+  congr 1
+  exact (CharP.cast_eq_iff_mod_eq F p).mpr (multinomial_dilate_modEq p S (s t))
+
 /-! ### THM-2022 §1 — the exact Wick channel expansion of the Gaussian moment
 
 `E` is a linear functional with `E (monomial v c) = c * wt v`.  Expanding `P^m` by the
@@ -346,4 +363,5 @@ end GMC2
 #print axioms GMC2.gmc2_of_nc2
 #print axioms GMC2.multinomial_dilate_modEq
 #print axioms GMC2.sum_natCast_mul_pow_char
+#print axioms GMC2.face_sum_frobenius
 #print axioms GMC2.wick_expansion
