@@ -732,3 +732,5 @@ import TournamentH7.HgeDiscKernel  -- klein-S400 / THM-1950: kernel_ineq max(1,x
 
 import TournamentH7.ThreeTermRecurrence  -- death-star-S92: Mathlib-PR-ready general three-term-recurrence no-common-root (generalized from GMC2Hermite to any integral domain; kernel-pure)
 import TournamentH7.HermiteThreeTerm  -- death-star-S93: Mathlib Hermite as a ThreeTerm instance (three-term recurrence + no-common-root)
+import TournamentH7.GMC2DvdKUniqueChannel
+import TournamentH7.GMC2DvdKPositive

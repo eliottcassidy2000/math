@@ -1,37 +1,17 @@
-## boxeph-2026-07-21-S228 -- kernel-pure Lean: the positive-coefficient DvdK1 (any support); cancellation is the sole crux (HYP-8925)
+## boxeph-2026-07-22-S229 -- kernel-pure Lean: the unique-channel DvdK-free criterion (any support) + the cancellation<->inclusion-exclusion dictionary (HYP-8930)
 
-## codex-2026-07-22 -- mixed guard fold removes the depth-five terminal
+**Owner:** work the next Lean DvdK target; mine past results on cancellation and inclusion-exclusion.
 
-**Owner directive:** continue the long LRC(14) session, mine forgotten ideas,
-and seek a scale-free closure of the dyadic terminal lane.
+**FORMALIZED (GMC2DvdKUniqueChannel.lean, kernel-pure [propext,Classical.choice,Quot.sound], 5 thms):**
+- ct_ne_zero_of_unique_balanced: a UNIQUE balanced composition of size m => CT(f^m) = one multinomial term => != 0 for EVERY complex c (any support, any #charges). = death-star-S101/HYP-8878 unique-primitive-cycle criterion, mechanized, coefficient-independent (the DvdK-free 84%).
+- two_balanced_of_ct_zero: contrapositive dichotomy -- CT=0 + one channel => a SECOND channel; cancellation needs >=2 coincident cycles.
+- ct_ne_zero_of_card_eq_one + two_le_card_balanced_of_ct_zero: cardinality form -- |balancedSet q m|=1 => CT!=0 (84%), CT=0 => card>=2 (hard 16%). Coincident-cycle count = a Lean Finset.card.
+- two_charge_via_unique: S226 pair theorem = the Fin 2 instance (subsumed).
+DvdK-free zone in Lean now = every support with a unique minimal channel; residual card>=2 = codex THM-2067 Galois.
 
-- THM-2080 proves the exact mixed-radius overlap law by one-sided interval
-  atoms (equivalently, a two-fold Bernoulli law).
-- The direction audit is load-bearing: `G_Q subset E_h` makes the guard
-  complement, not the guard, a subset of the union of danger combs. MISTAKE-231
-  retracts the first reversed-cover consumer while retaining the fold formula.
-- For an odd guard, every mixed overlap is at least `1/42`, with equality only
-  at `q=6h`. Hence each danger comb covers at most `5/42` outside the guard.
-  Six distinct combs cover strictly less than `5/7`, so terminal rank six is
-  impossible and the dyadic tower has depth at most four.
-- The authoritative exact referee checks `4,032` pair/formula cases, the whole
-  small-product equality ledger, and `11,088` hostile direct containments; its
-  smallest hostile complement remains positive.
-- Assumption challenge: the target carrier is the guard complement. A star
-  tournament picture is harmless but unnecessary; equality of the six leaf
-  capacities would force all six distinct speeds to equal `6h`.
+**MINE -- cancellation and inclusion-exclusion are ONE object:** THM-1820 (bridge: same moment-nullcone, discriminant=|alphabet|; LRC bounded {0..13} => Bonferroni IE terminates at k=13 => finite B5 cert; GMC unbounded => depth>=d+1). THM-406 M1b (loneliness p0=Sum_j(-1)^j S_j = IE alternating overlap-volume sum) + M2 ({p0=0} all-orders, Bonferroni one-sided = Vitali wall). THM-515 (theta/sinc lattice sum alternates, THM-504 cross-level). THM-1810 (bosonic/fermionic permanent/determinant = the shared sign-involution; THM-2070 dihedral witness). THM-671 (B5=2052/7^5~+0.1221 first positive Bonferroni truncation).
 
-## death-star-2026-07-22-S104 -- GMC2 formalization: pinpointed + wrote the last capstone discharge (HeightWitnessSupplier); structurally correct + statements axiom-checked, but the proof hits a pathological whnf wall (>6.4M heartbeats). One perf-fix from clean DvdK1 -> NC2.
-**Owner:** aim earnestly at formalizing DvdK; make it simpler / circumvent it; spill over to LRC.
+**HONEST SELF-CORRECTION of S228:** LRC covering is NOT "all-cancellation, no positive regime". There IS a positive regime -- odd-Bonferroni B5 (THM-671) + codex guard-capacity (THM-2076 union bound + THM-2080 overlap floor mu(D_q cap E_h)>=1/42) -- handling low-resonance cores (the 84% analogue), which provably cannot reach the all-orders floor on resonant/AP cores (THM-406 M2; S_5 explodes 156-172x iid, THM-686), EXACTLY as positive-coeff/unique-channel DvdK cannot reach the general complex case (THM-2067). Same positive-vs-cancellation split; only the alphabet (finite vs unbounded) differs -- why LRC cancellation terminates and GMC's does not.
 
-**FORMALIZED (GMC2DvdKPositive.lean, kernel-pure [propext,Classical.choice,Quot.sound]):**
-- ct_pos_of_balanced: c_i>0 + any balanced composition r0 of size m => CT(f^m)>0 (sum of positive terms; ANY support/#charges).
-- exists_balanced_of_twosided: two-sided q_i>0, q_j<0 => a balanced composition exists (|q_j| copies of + charge, |q_i| of -, at m=|q_i|+|q_j|).
-- dvdk1_positive: two-sided support + c_i>0 => exists m>=1, CT(f^m)>0. The positive-coefficient DvdK1, DvdK-premise-free, any support.
-
-**STRUCTURE (the simplification):** CT(f^m) as a polynomial in c has all-POSITIVE multinomial coefficients => nonzero <=> a balanced composition exists (feasibility, elementary). The SOLE difficulty is CANCELLATION for specific complex c (the counterexample f=u^2+u+u^-1-u^-2: CT=0 for all odd m, CT(f^4)=-12). Feasibility + positive-coeff + two-charge (unique composition, S226/S227) elementary/formalized; >=3 charges complex = codex THM-2067 (Galois orbit-product) = the next Lean target. A true circumvention (complex->positive) fails (S222/S223 retracted); Galois is what rules out complex cancellation.
-
-**LRC SPILLOVER:** same positive-vs-cancellation split -- LRC |G_delta|=sum_{k.v=0} prod ghat is ALL sign-cancellation (signed sinc, NO positive regime), why chi/topology (THM-2047/S212) beats volume (S211), and symmetry (mirror iota, doubling homeo THM-2075) is the LRC analogue of Galois for taming sign. Adopt codex MISTAKE-230: my S227 chi=0 descent RETRACTED (tower transports nonempty CORE sets, terminal core has safe interval => chi>0, THM-2077); doubling identity/homeo/mirror-parity survive individually.
-
-**Honest:** the no-cancellation regime of DvdK1 now kernel-pure in Lean (any support), isolating cancellation as the sole crux; NOT the general complex DvdK1 (THM-2067). Artifacts: reflection starting-to-formalize-dvdk-...-boxeph-S228.md, HYP-8925, Lean GMC2DvdKPositive.lean (4 theorems).
+**Honest:** the DvdK-free (unique-channel) side is now kernel-pure in Lean for arbitrary support, subsuming S226 and complementing S228; the coincident-cycle (card>=2) stratum remains the THM-2067 Galois frontier. The synthesis is a reading of proved theorems (THM-1820/1810/406/515/671), not a new theorem. Artifacts: reflection the-unique-channel-dvdk-in-lean-...-boxeph-S229.md, HYP-8930, Lean GMC2DvdKUniqueChannel.lean (5 theorems).
 
