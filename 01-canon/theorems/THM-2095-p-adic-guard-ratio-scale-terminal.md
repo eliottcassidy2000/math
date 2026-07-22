@@ -24,6 +24,7 @@ related:
   - THM-2069
   - THM-2082
   - THM-2094
+  - THM-2097
 script: 04-computation/lrc14_p_adic_guard_ratio_terminal_referee_codex_20260722.py
 output: 05-knowledge/results/lrc14_p_adic_guard_ratio_terminal_referee_codex_20260722.out
 ---
@@ -251,6 +252,13 @@ six speeds. The next lawful split is on the induced short-relation graph after
 deleting all guard-commensurate vertices, with THM-2091/2094 energy and
 residue sidecars retained. Claiming that the old cut propagates through the
 contaminated vertex would be circular.
+
+THM-2097 subsequently closes that infinitary residual by a different route:
+its mixed-threshold two-torus cell makes every fixed rank-two terminal
+coefficient template finite. The present theorem remains a uniform arithmetic
+sharpening which bounds `d,h,q_*` independently of the coefficient template;
+it should feed the finite enumeration rather than duplicate THM-2097's
+geodesic terminal.
 
 ## 6. Assumption challenge and Tournament Analysis
 
