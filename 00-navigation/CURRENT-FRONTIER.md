@@ -133,19 +133,23 @@ structural supplier/seed and a lossless exit.
   star templates `a_i v_p+b_i v_q+c_i v_i=0` with `c_i!=0`. Modulo common
   dilation each template has only one projective parameter. Pair-relation
   clusters plus genuine cross-cluster triples give the same structural split.
-  THM-2053 then proves the exact directional safe gate
-  `max_i|a z_i-b u_i|<=(a^2+b^2)/91`; the round corollary removes every
-  primitive parameter outside `||(a,b)||<91L`. A primitive subcircle is close
-  to the parameter torus, while Ungar's planar direction theorem supplies a
-  repeated-speed projection and the settled lower-dimensional theorem raises
-  the torus margin to `1/13`. Thus every star is finite in primitive parameter
-  space. THM-2055 sharpens the `26`-disk description: the determinant is the
-  support norm of `K=conv{+-c_i}`, so nonvertex columns are irrelevant to this
-  gate; the rational normal fan splits the residual into signed owner sectors,
-  each with one tangent disk and local bound `||d||<91||p||`. The live problem
-  is atlas compression and exact primitive-lattice discharge of these sectors,
-  not an infinitary one-parameter tail. HYP-8871 targets an ordinary
-  Farey/Klein-sail automaton with pair-sum and endpoint-owner sidecars.
+  THM-2053 proves `max_i|a z_i-b u_i|<=(a^2+b^2)/91`; its round corollary
+  removes `||(a,b)||>=91L`. Adjacent normalized columns supply the repeat
+  projection elementarily, raising the parameter torus to margin `1/13`.
+  Every row also obeys `M(v)>=1/13-R/(2N)`, with `N|(v_i+v_j)`. The exact deck
+  `D_N(m)` removes whole fibers independently of longitudinal data; bad moduli
+  form a divisibility down-set with a rational conductor (AP cutoff `156`).
+  THM-2055 independently restricts determinant failure to hull-owner tangent
+  sectors; non-hull representatives remain load-bearing in the deck sidecar.
+  HYP-8871 targets exact Farey/Klein-sail discharge of this finite intersection.
+- **PROVED relative whole-product decorrelation:**
+  [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
+  says every scalar relation through height `H` on the line must lift to the
+  vector-character relation on the decorrelated torus. Two physical-space
+  telescopes bound the whole product without summing an infinite relation
+  lattice. The seven-sector budget is explicit, and rowwise `H=2^19` is below
+  every recorded pinned-base `cap-Q` margin. MISTAKE-080/082 remain load-bearing:
+  the lifted full-torus model must still be identified shape by shape.
 - **Scope separation:**
   [THM-1149](../01-canon/theorems/THM-1149-compact-essential-crown-and-farey-blocker.md)
   proves that tight deletion and an all-loose essential crown are different
@@ -208,21 +212,18 @@ structural supplier/seed and a lossless exit.
    already have a height-one three-term circuit (the first seven share
    `1+2=3`).
    [THM-2053](../01-canon/theorems/THM-2053-rank-two-parameter-plane-geodesic-terminal.md)
-   now removes every parameter satisfying its exact quadratic determinant
-   gate; all failures lie in the finite disk `||(a,b)||<91L`. The next target is therefore a
-   **finite resonance-fan/Euler classification** on those disks, not an
-   infinitary active-owner transport theorem. HYP-2108 supplies the
-   exact gate: for core-safe components with midpoint `m_i` and length `l_i`,
-   prove for some peel `w` that
-   `P_w=max_i(||w m_i||+(w/2)l_i-1/14)>=0`. Equality already preserves a weak
-   endpoint; strict positivity opens an interval. HYP-2896 is the exact
-   one-parameter model: divisibility walls split its tail into `q=12`, `q=14`,
-   and one affine binding-phase cell. The sharpened target is to prove an
-   analogous finite fan on each reduced two-anchor disk; a twelfth relation is
-   still a useful maximal-minor shortcut, but no longer the only finiteness
-   mechanism. The incoming THM-2054 relative-Fejer program is the analytic
-   complement: prove whole off-resonance character cells safe, reserving exact
-   tangent-disk lattice enumeration for the resonant cells.
+   supplies two complementary filters before rank twelve: the exact deck
+   `D_N(m)` discards whole fibers carrying `N|(v_i+v_j)` and
+   `v_k congruent m_k M (mod N)`, while THM-2055's determinant normal fan
+   prunes the bad fibers to hull-owner tangent sectors. HYP-2108 supplies the
+   endpoint gate inside those cells: for core-safe
+   components with midpoint `m_i` and length `l_i`, prove for some peel `w`
+   that `P_w=max_i(||w m_i||+(w/2)l_i-1/14)>=0`. Equality already preserves a
+   weak endpoint; strict positivity opens an interval. HYP-2896 is the exact
+   one-parameter model, and THM-2054 is the analytic complement on vector-
+   character cells whose bounded scalar resonances all lift. The sharpened
+   target is **Euler survival, rank gain, off-resonance decorrelation, or exact
+   deck/fan discharge**.
    HYP-8845 halves the covering branch by mirror symmetry: one survivor on
    `[0,1/2]` automatically supplies its partner and `chi>=2`.
 
@@ -258,12 +259,12 @@ name the LRC predicate it preserves and the coordinate a sidecar must restore.
 - **REFUTED for higher dimensions:** explicit GMC(3) counterexamples now exist;
   GMC is false for every dimension at least 3. See the current external preprint
   entry in [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md).
-- **FORMALIZATION PARTIAL:** `GMC2Reduction.lean` now formalizes both strict
-  charge branches of the NC2-to-GMC(2) reduction, and
-  `GMC2FrobeniusFace.lean` formalizes common face height, the strict off-face
-  integer gap, and collision-free charge projection. The algebraic descent,
-  DvdK import, finite-place choice, Kummer/Lucas layer, and full
-  face-amplification chain are not all formalized.
+- **FORMALIZATION PARTIAL:** the former descent and face-construction gaps are
+  closed, alongside the Wick, normalized-moment, dilation, Kummer/Lucas,
+  Frobenius, and abstract three-case residue layers. DvdK remains an explicit
+  cited premise. The remaining internal step is the concrete normalized-channel
+  instantiation of the residue assembly and the final conditional theorem
+  `DvdK1 -> NC2`; the aggregator does not yet assert end-to-end `NC2`.
 
 ### Why THM-2022 works
 
@@ -429,7 +430,7 @@ The most reusable current bridges are not literal object identifications:
 
 | Mechanism | Proven source | Legitimate transfer question |
 |---|---|---|
-| Whole-layer Frobenius | NC2 balanced face | Can an LRC packet acquire both a nonzero seed and pointwise exit? |
+| Whole-layer Frobenius | NC2 balanced face | Exact finite-abelian packets and tiling mask-walk congruences transfer; can LRC also acquire a seed and exit? |
 | Quotient + sidecar | spectrum/SCC/support quotients | Which lost coordinate restores the target predicate? |
 | Maximum vs average | LRC good periods | Is a mean statistic masking a resonant extremal elsewhere? |
 | Operation-response | tournament joins/support unions | Which observables add, multiply, localize, or collide? |

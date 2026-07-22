@@ -10,8 +10,9 @@ status: >
   support-three-through-five relation of coefficient height at most 2^20. The
   target is a height-decreasing termination theorem inside that structured
   branch. THM-2053 now makes every rank-eleven rational plane finite in
-  parameter space; the remaining target is atlas compression plus signed
-  Euler/resolved-phase discharge of those finite disks.
+  parameter space and gives an exact residue-deck conductor for every
+  transverse template; the remaining target is template compression plus
+  signed Euler/resolved-phase discharge of the finite bad-modulus cells.
 source: codex-2026-07-21-DC2-LRC14-termination
 related:
   - THM-523
@@ -118,8 +119,8 @@ or a direct Euler/strict-exit proof on those one-parameter stars.
 THM-2053 removes the word "only" from that last sentence. An eleven-dimensional
 relation code has a kernel of dimension at most two. In a two-dimensional
 kernel, write every row as `v(a,b)=a u+b z` in a saturated integer basis and
-put `L=max_i sqrt(u_i^2+z_i^2)`. The general primitive-subcircle rate and
-Ungar's planar direction theorem give
+put `L=max_i sqrt(u_i^2+z_i^2)`. The general primitive-subcircle rate and an
+elementary adjacent-normalized-column construction give
 
 ```text
 max_i |a z_i-b u_i| <= (a^2+b^2)/91
@@ -127,15 +128,47 @@ max_i |a z_i-b u_i| <= (a^2+b^2)/91
 sqrt(a^2+b^2)>=91L  ==>  M(v(a,b))>=1/14.             (2e)
 ```
 
-Thus rank eleven itself has a finite anisotropic terminal, whose coarse
-complement lies in a parameter disk. Rank twelve is still useful, but is no
-longer the unique route to finiteness.
+Thus rank eleven itself has a finite anisotropic terminal. Rank twelve is still
+useful, but is no longer the unique route to finiteness. Failure of (2d) lies
+in `26` tangent disks through the origin. THM-2055 identifies the determinant
+as the support norm of the signed column polygon, deletes nonvertex owners, and
+splits this residual into rational normal-fan sectors with one tangent disk per
+active hull owner.
 
-More exactly, failure of (2d) lies in the union of the `26` open disks centered
-at `+-(91/2)(z_i,-u_i)` with radii `(91/2)sqrt(u_i^2+z_i^2)`. Their boundary
-circles all pass through the origin. The finite residual should therefore be
-enumerated as primitive lattice points in tangent disks intersected with the
-two-anchor positivity cone, not as every point in the coarse round disk.
+Independently, the adjacent pair exposes transverse integers `N,R` satisfying
+
+```text
+M(v)>=1/13-R/(2N),       N divides v_i+v_j.         (2e-trans)
+```
+
+Every hypothetical counterexample therefore has `N<91R`; at denominator `N`
+its residue row is a fixed transverse template up to multiplication by a
+unit. This converts the finite disk into pair-sum-ruler cells with exact
+modular labels.
+
+THM-2053 sharpens this to an exact template-only gate. Define
+
+```text
+D_N(m)=max_(ell mod N) min_k |ell m_k|_N/N.         (2e-deck)
+```
+
+The denominator-`N` samples of every row in the cell attain exactly this deck,
+independently of the longitudinal coefficients and unit `M`. Hence a
+counterexample requires `D_N(m)<1/14`. If `d|N`, then `D_N>=D_d`, so bad
+moduli form a divisibility down-set. The rational phase-height superlevel
+components of `(m_k)` give an exact finite conductor; their grid-intersection
+conditions are floor inequalities in residue classes, by the HYP-3456
+operation. For the AP control template `(1,-1,2,...,12)`,
+
+```text
+D_N=floor(N/13)/N,
+```
+
+so every `N>=156` is safe, versus the generic `91R=1092` cutoff.
+
+The efficient composition is therefore deck first, support-norm/tangent sector
+second, and exact pair-sum or Euler/Fejer discharge only on their finite
+intersection. Neither carrier alone proves that the residual is empty.
 
 The companion audit supplies the essential hostile control for that statement:
 every one of its eight rows already has a coefficient-height-one circuit of
@@ -154,10 +187,11 @@ a relation elsewhere in the row cannot drive deletion.
 
 THM-2052 makes independence load-bearing for a relation-harvesting move. A
 useful active-owner relation must lie outside the already harvested
-rank-at-least-eleven code; otherwise it does not descend. But THM-2053 adds a
-second termination coordinate: reduced parameter norm relative to the plane's
-Lipschitz constant. Thus the refined target is **Euler/exit, rank gain, or
-entry into the finite geodesic disk**, not merely active incidence.
+rank-at-least-eleven code; otherwise it does not descend. But THM-2053 adds
+two termination coordinates: reduced parameter norm, and the sharper
+transverse pair-sum coordinate `N/R`. Thus the refined target is **Euler/exit,
+rank gain, or entry into the finite bad part of a transverse residue deck**,
+not merely active incidence.
 
 The proposed LRC14 termination theorem is:
 
@@ -327,8 +361,9 @@ eleven-dimensional bounded relation code supplied by THM-2052:
 > On every residual row for which all THM-2048 peel taxes pass and all pair-sum
 > margins are nonpositive, either some peel `w` satisfies `P_w(C)>=0`, or the
 > active endpoint-owner data supplies a bounded relation `k dot v=0` with
-> `k notin W`, or the row is routed into the explicit THM-2053 parameter disk
-> `||(a,b)||<91L` for exact finite discharge.
+> `k notin W`, or the row is routed into the explicit THM-2053 cell
+> `D_N(m)<1/14`, with `N|(v_i+v_j)` and residue template `(m_k mod N)`, for
+> exact finite discharge through its rational floor-count conductor.
 
 Equations (7)--(8) do not prove the target; they identify the exact missing
 input. The raw relation `1+2=3` does not mention `w`, `m_i`, or the endpoint

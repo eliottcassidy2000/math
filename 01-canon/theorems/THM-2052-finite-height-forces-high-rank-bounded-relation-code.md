@@ -99,7 +99,7 @@ implies `(Q+1)^5>QB+1`. Therefore
 dim W_(2^20,5)(v)>=9.                                 (6)
 ```
 
-This uses exactly the height of Theorem A in THM-2051, but forces nine
+This uses exactly the common height of Theorems A and B in THM-2051, but forces nine
 independent short relation rows rather than merely one.
 
 For a lower-dimensional atlas, take

@@ -7,8 +7,12 @@ status: >
   rational planes. THM-2053 now proves that every two-dimensional atlas cell
   has torus margin at least 1/13. Its exact safe gate is
   max_i|a z_i-b u_i|<=(a^2+b^2)/91; the round corollary is ||(a,b)||>=91L.
-  The missing work is controlled basis/atlas compression and exact discharge
-  of the finite anisotropic residuals, not an infinitary transport theorem.
+  Its adjacent-column refinement gives M(v)>=1/13-R/(2N), where N divides an
+  exposed pair sum. Its exact residue deck D_N(m) eliminates whole N-fibers
+  independently of longitudinal coefficients; THM-2055 then cuts the bad
+  fibers into hull-owner tangent sectors. The missing work is template/basis
+  compression and exact discharge of that finite intersection, not an
+  infinitary pointed transport theorem.
 source: codex-2026-07-21-DC2-LRC14-termination
 related:
   - THM-2050
@@ -59,9 +63,11 @@ sharper error
 E(a,b)=max_i |a z_i-b u_i|/(2(a^2+b^2)).
 ```
 
-A planar-direction argument produces a
-full-support projection with a repeated absolute speed, so settled LRC for at
-most twelve distinct speeds gives two-torus margin at least `1/13`. Therefore
+Normalize each coefficient column `c_i` by the positive target value `v_i`.
+Two adjacent normalized columns have a sum
+parallel to no column. A perpendicular integral covector is therefore
+full-support and has a repeated absolute speed, so settled LRC for at most
+twelve distinct speeds gives two-torus margin at least `1/13`. Therefore
 
 ```text
 max_i |a z_i-b u_i| <= (a^2+b^2)/91
@@ -72,38 +78,74 @@ In particular, `sqrt(a^2+b^2)>=91L` implies (1). This is pointed: it applies
 to the specified `(a,b)`, not merely to a different direction in the same
 plane.
 
+The same adjacent pair gives a sharper intrinsic coordinate. If
+`c_i+c_j=g w_0`, extend primitive `w_0` to a lattice basis and write
+`c_k=a_k w_0+m_k eta`. Put
+
+```text
+N=phi(w_0),       R=max_k|m_k|.
+```
+
+The actual orbit samples the complete `N`-grid on the transverse circle, so
+
+```text
+M(v)>=1/13-R/(2N).                                    (2)
+```
+
+Hence `N>=91R` is safe, while every unresolved row has `N<91R`. Moreover
+`N|(v_i+v_j)` and `v_k==m_kM (mod N)` for one unit `M`; this is a pointed
+pair-sum-ruler cell, not merely a Euclidean disk.
+
+The exact first filter is
+
+```text
+D_N(m)=max_(ell mod N) min_k |ell m_k|_N/N.             (3)
+```
+
+Every row in the cell satisfies `M(v)>=D_N(m)`, with no dependence on its
+longitudinal coefficients or unit `M`. Bad `N` form a divisibility down-set.
+The rational phase-height components of the template give a sharp conductor:
+an interval `[alpha,beta]` meets the `N`-grid exactly when
+`ceil(N alpha)<=floor(N beta)`, so HYP-3456's floor-count operation resolves
+the conductor residue class by residue class. The generic `N<91R` region is
+therefore only a crude outer box.
+
 ## The revised terminal
 
 The rank-eleven program now has two finite terminals rather than one:
 
 ```text
 rank 12       -> maximal-minor box (THM-2052),
-rank 11/plane -> primitive parameter disk ||(a,b)||<91L (THM-2053).
+rank 11/plane -> parameter disk ||(a,b)||<91L,
+                  sharpened to N<91R on an exposed pair-sum ruler (THM-2053).
 ```
 
-The intended per-target routing remains useful inside that disk:
+The intended per-target routing remains useful inside those finite cells:
 
 1. some peel has the HYP-2108 endpoint functional `P_w>=0`;
 2. active owner data supplies a bounded relation outside `W`; or
 3. an exact resolved phase/topological certificate discharges the row.
 
 There is no longer a need to postulate an infinite wall-crossing transport to
-close large directions. Wall transport is a finite-disk accelerator.
+close large directions. Wall transport is a finite-cell accelerator.
 
 ## Concrete completion algorithm
 
 For each rank-eleven bounded triple code from THM-2052:
 
 1. compute a saturated kernel basis by Smith/Hermite normal form;
-2. lattice-reduce the basis to minimize the determinant gate and its round
-   envelope `91L`;
-3. enumerate only primitive parameter pairs violating (1): equivalently,
-   lattice points in the `26` open disks centered at
-   `+-(91/2)(z_i,-u_i)` with radii `(91/2)||(u_i,z_i)||`; use the round disk
-   only as a coarse outer bound;
-4. reject zero, repeated, nonpositive, non-distinct, or imprimitive speed rows;
-5. run the exact pair-sum phase-height test;
-6. retain `P_w`, endpoint-owner, peel-tax, and relation-rank labels for any
+2. lattice-reduce the basis; in each positive target chamber, order the
+   normalized coefficient columns and select an adjacent exposed pair;
+3. compute its transverse template `(m_k)` and exact residue-deck conductor;
+   discard every whole `N`-fiber with `D_N(m)>=1/14`; retain `N<91R` and the
+   Euclidean disk only as independent outer checks;
+4. compute the signed column hull and THM-2055 normal fan, and intersect each
+   remaining fiber with its active-owner tangent disk;
+5. enumerate coprime longitudinal coordinates in the positivity interval and
+   reject zero, repeated, nonpositive, non-distinct, or imprimitive rows;
+6. run the exact pair-sum phase-height test, beginning with the exposed ruler
+   `N|(v_i+v_j)` and its template residues;
+7. retain `P_w`, endpoint-owner, peel-tax, and relation-rank labels for any
    survivors, then quotient only by transformations preserving those fields.
 
 Each residual circle has the origin on its boundary. This tangent-disk picture
@@ -123,10 +165,11 @@ matrices, and bound a reduced-basis `L` directly from the sparse triple code.
 ## What the unrelated repo work contributes
 
 - HYP-4342 supplied the `(1,N)` Lipschitz/net mechanism; THM-2053 extends it to
-  every primitive direction.
+  every primitive direction and the adjacent-column argument identifies an
+  exact transverse `N`-grid on the specified row.
 - HYP-4346 supplied the rank-two algebra but also exposed the wrong-quantifier
   trap. It is now optional acceleration, not the bridge.
-- HYP-2896 is the exact one-tail model of the finite-disk fan. On
+- HYP-2896 is the exact one-tail model of the finite-cell fan. On
   `span((1,...,13),e_12)`, target rows split by the resonance walls `12|w` and
   `14|w`; the cells carry `q=12`, `q=14`, or the affine binding phase
   `(35m+2)/(84m+5)`. In the basis `u=(1,...,13),z=e_12`, writing `w=12+b`,
@@ -197,11 +240,12 @@ the destroyed identity must be recoverable through the saturated kernel basis.
 ## Honest remaining statement
 
 LRC(14) is still open. THM-2053 proves that the two-dimensional branch is
-finite in parameter space, not that the finite disks are empty of
+finite in parameter space, not that the finite transverse cells are empty of
 counterexamples. The next decisive target is:
 
-> Bound and classify reduced saturated bases of THM-2052's bounded
-> support-three rank-eleven codes strongly enough that every residual to (1)
-> is either covered by the existing exact finite window or splits into
+> Bound and classify reduced saturated bases and transverse templates of
+> THM-2052's bounded support-three rank-eleven codes strongly enough that every
+> intersection of an exact bad deck `D_N(m)<1/14` with a THM-2055 tangent
+> owner sector is either covered by the existing exact finite window or splits into
 > finitely many HYP-2896-style resonance fans with explicit phase-height
 > certificates.

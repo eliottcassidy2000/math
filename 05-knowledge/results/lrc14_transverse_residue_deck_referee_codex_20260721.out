@@ -1,0 +1,9 @@
+THM-2053 TRANSVERSE RESIDUE-DECK REFEREE
+AP_formula_checks=3600
+divisor_monotonicity_checks=2408
+small_divisor_exit_checks=26
+AP12_D13=1/13 AP12_D15=1/15
+AP12_largest_bad_modulus=155 conductor=156
+fixed_chirotope_R_values=23,39,199
+TOURNAMENT ANALYSIS=not applicable: determinant magnitudes are load-bearing
+RESULT=PASS

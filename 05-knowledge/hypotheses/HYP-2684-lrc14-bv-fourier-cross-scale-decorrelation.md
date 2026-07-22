@@ -1,7 +1,7 @@
 ---
 id: HYP-2684
 title: LRC(14) BV-Fourier cross-scale decorrelation lemma
-status: OPEN; abstract resonance-filter lemma identified, LRC coverage-function variation budget still missing
+status: PARTIAL. THM-2054 proves the abstract nonresonant filter, the exact seven-sector signed-atom budget, and the two-scale alias cutoff |M|>H sum|b_i|. At H=2^20 its uniform factorwise error is <90816/1048577; rowwise, H=2^19 is already below each recorded pinned-base cap-Q margin. The remaining gates are correct lifted-model identification, a model-specific decorrelated plateau bound, and bounded-resonance classification; MISTAKE-080/082 forbid importing Q(k-1) from cardinality alone. LRC(14) is not proved.
 source: codex-2026-06-20-S55
 depends_on:
   - HYP-2675
@@ -11,6 +11,7 @@ depends_on:
   - HYP-2681
   - HYP-2680
 related:
+  - THM-2054
   - HYP-2683
   - HYP-2679
   - HYP-2677
@@ -26,6 +27,55 @@ external:
 ---
 
 # HYP-2684 - BV-Fourier Cross-Scale Decorrelation
+
+## 2026-07-21 resolution of the abstract nonresonant step
+
+THM-2054 proves a stronger factorwise substitute for the mixed-variation
+target below. For characters `chi_i`, an integer line `lambda`, and degree-`H`
+Fejer approximants, assume every height-`H` scalar relation along the line is
+already a vector relation among the characters. Then
+
+```text
+|line product average-full-torus product average|
+ <=2 sum_i ||f_i-Fejer_H*f_i||_1
+              product_(j!=i)||f_j||_infinity.          (R)
+```
+
+The same holds after summing any finite signed Boolean atom expansion. For
+two-scale speeds `e_i=b_i+M c_i`, the resonance implication is automatic once
+
+```text
+|M|>H sum_i |b_i|.
+```
+
+Thus the abstract nonresonant/Weyl lemma is no longer open, and the actual LRC
+coverage algebra does not require a mixed-variation theorem: expand it into
+finitely many products of interval predicates and apply (R). THM-2054 now
+also performs that expansion for THM-534's six inner sectors. After deleting
+the pinned zero factor, `sum_A |A|=192`, so for `r<=11` active offsets and
+`H=2^20` the complete signed error is
+
+```text
+<90816/1048577.                                       (R1)
+```
+
+This is below the smallest recorded `cap-Q` numerical margin by
+
+```text
+46851988331/1028633065460>0.                          (R2)
+```
+
+Using the five margins row by row, the same theorem permits `H=2^19`; the
+tightest residual is the `k=9` value
+`2064067449/171439007740>0`. This halves the later two-scale alias cutoff.
+
+However, (R2) is not yet an LRC comparison. MISTAKE-080/082 show that a
+decorrelated limit and the pinned-base `Q(k-1)` model cannot be imported as a
+majorant for an arbitrary cluster shape; the exact row `[0,19,...,25]`
+already exceeds `Q(7)`. What remains is to identify the full-torus model
+produced by the chosen character lift, prove its correct plateau bound, and
+route the finite bounded-resonance branch. The older mixed-BV formulation is
+retained below as a valid alternative and historical derivation.
 
 Namespace note: an incoming concurrent session had already claimed
 `HYP-2683/T922` for wide-branch address repair.  This BV-Fourier route was
@@ -70,9 +120,10 @@ then |I_M(H)-J(H)| <= V_mix(H)/(12*M).
 ```
 
 The proof is immediate from the displayed resonance identity and
-`sum_{s>=1} 1/s^2 = pi^2/6`.  The missing LRC work is not this algebraic
-identity; it is to prove the required mixed-variation/Fourier budget for the
-actual seven-sector coverage functions and make the constants explicit.
+`sum_{s>=1} 1/s^2 = pi^2/6`. Historically the proposed next step was to prove
+the required mixed-variation budget for the seven-sector coverage functions.
+THM-2054 shows that this is optional for the actual finite product algebra;
+its factorwise coefficient budget is now the more direct target.
 
 ## Why This Came From The Web Search
 
@@ -93,8 +144,8 @@ the repo's one-far exact implementation of that principle.
 
 ## LRC(14) Proof Implication
 
-The finite decorrelated comparison is no longer the obstacle.  KPS S19 and the
-S53 audit show
+For the pinned-base models actually audited by KPS S19 and S53, the proposed
+finite decorrelated comparison is
 
 ```text
 sup p0_decorr = Q(k-1) < cap_k
@@ -103,14 +154,21 @@ sup p0_decorr = Q(k-1) < cap_k
 for `k=8..12`, with the maximum at a consecutive bounded base plus one
 independent stranger.
 
-So the next sharp target is:
+This value is a model-specific decorrelated limit, not a universal majorant.
+The next sharp target is therefore:
 
 ```text
-p0(E) <= p0_decorr(E_cluster_model) + explicit Weyl/BV error.
+p0(E) <= p0_lift(E_cluster_model) + explicit Fejer error,
+followed by a proved model-specific bound on p0_lift.               (P)
 ```
 
-If the scale gap is `G` and the mixed-variation budget is `V_mix`, the
-nonresonant part should close once
+THM-2054 closes the error term in (P) for height-separated character lifts.
+It does not identify `p0_lift` with `Q(k-1)`. If that identification and bound
+are proved for the intended pinned-base model, then the `H=2^20` estimate
+(R1)--(R2) closes its nonresonant comparison. For other shapes the full-torus
+plateau must be bounded directly.
+
+The historical mixed-BV alternative would close once
 
 ```text
 V_mix/(12*G) < cap_k - Q(k-1).
@@ -184,18 +242,18 @@ by HYP-2682/HYP-2676 rather than by the nonresonant Weyl estimate.
 
 ## Next Work Items
 
-1. Define the exact cluster coverage functions `H_C` for the HYP-2675
-   decorrelated model.
-2. Prove a finite mixed-variation bound for `H_C` in terms of sector-wall
-   counts, missed-sector profile size, or the existing `V(E)`/state-word
-   ledgers.
-3. Derive the explicit two-cluster threshold `G(k,C)` from
-   `V_mix/(12G) < cap_k-Q(k-1)`.
-4. Extend the resonance identity to `r` clusters and record the exact
-   low-height relation cutoff that sends rows into HYP-2682/HYP-2676 finite
-   atlases.
-5. Glue the remaining bounded-gap region to the finite checks already tracked
+1. For each intended cluster lift, identify the exact full-torus atom model,
+   including which cluster contains the pinned zero, and prove its own
+   plateau/cap bound. Do not reuse `Q(k-1)` by cardinality.
+2. Use THM-2054's proved rowwise `H=2^19` error budget and record the explicit
+   scale cutoff `|M|>2^19 sum|b_i|` wherever the lifted model is one of the
+   correctly identified pinned-base models; otherwise recompute its plateau
+   margin before selecting `H`.
+3. Route every failed cutoff/low-height resonance into HYP-2682/HYP-2676 or
+   the THM-2052/2053 finite relation-plane atlas.
+4. Glue the remaining bounded-gap region to the finite checks already tracked
    by HYP-2675 and OPEN-Q-108.
 
-No LRC(14) proof is claimed.  This hypothesis isolates the analytic lemma that
-would turn the now-safe decorrelated plateau into a proof of the wide branch.
+No LRC(14) proof is claimed. The abstract analytic lemma and exact signed atom
+budget are now THM-2054; this hypothesis retains model identification,
+model-specific plateau control, and resonant glue.
