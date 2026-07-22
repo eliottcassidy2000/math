@@ -153,7 +153,10 @@ structural supplier/seed and a lossless exit.
   bank extends uniformly to unbounded cores. THM-2073 supplies the structural
   replacement on the non-hereditarily-primitive lane: a divisor-complete
   binary safe-child tower of depth at most eight, ending at a hereditarily
-  primitive quotient core.
+  primitive quotient core. THM-2075 shows that doubling homeomorphically
+  conjugates every safe-set level to that terminal core: component/Euler data
+  are invariant, lengths halve, addresses are constant per component, and
+  every endpoint retains a terminal-core owner.
   THM-2062 adds the hereditary wheel; THM-2065 makes circuit-free residuals finite.
 - **PROVED relative whole-product decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says bounded scalar relations must lift to vector-character relations. Two

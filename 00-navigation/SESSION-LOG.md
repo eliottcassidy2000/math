@@ -14,7 +14,11 @@
   are partitioned `2+1+1`, and descent iterates through divisor-complete
   quotient cores (including the new denominator-`26` shell) to a hereditary
   terminal after at most eight levels. Exact referees pass normally and under
-  `python -O`. LRC(14) remains open on the hereditary terminal lane.
+  `python -O`. THM-2075 then proves that doubling is a homeomorphism along the
+  tower: component/Euler counts persist, lengths and measure halve exactly,
+  each component carries one constant binary address, and every endpoint has
+  an inherited terminal-core owner. LRC(14) remains open on the hereditary
+  terminal lane and its address assignment.
 
 ## codex-2026-07-21 -- THM-2063/2064/2066, planar atlas audit, and dyadic owner words
 **Owner:** work on completing the formalization of GMC(2).
