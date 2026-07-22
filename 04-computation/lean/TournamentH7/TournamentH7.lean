@@ -769,3 +769,4 @@ import TournamentH7.GMC2DvdKFrameHSide
 import TournamentH7.GMC2FrameBridgePacket
 import TournamentH7.GMC2FrameBridgeAssembly
 import TournamentH7.GMC2DvdKXDeg
+import TournamentH7.GMC2DvdKTranspose

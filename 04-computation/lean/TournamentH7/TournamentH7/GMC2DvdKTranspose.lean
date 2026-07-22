@@ -1,50 +1,87 @@
 import Mathlib
 
 /-!
-# The transpose embedding `F⟦t⟧⟦x⟧ ↪ (F⸨x⸩)⟦t⟧` (the sole remaining glue for `hderiv`)
+# The transpose hom `φ : (PowerSeries F)⟦X⟧ → PowerSeries (LaurentSeries F)` (the shared GMC(2) glue)
 
-The Weierstrass factorization `Φ = P·h` lives in `PowerSeries (PowerSeries F)` (outer `x`, inner `t`);
-death-star's `hderiv` frame (`GMC2DvdKFrame`) is `PowerSeries (LaurentSeries F)` (outer `t`, inner
-`x`-Laurent).  `hderiv_of_frame` needs `PhiFrame = Pfr · hfr` with `Pfr` monic of `x`-degree `M`
-(so mac-mini's `(c)` `xCoeff0_logDeriv_eq_zero_of_monic` applies) and `xCoeff0 hfr = unitCoeff0`.
+The sole remaining glue of the whole GMC(2)/hderiv formalization is mapping the Weierstrass factors
+`P, h` of `Φ = xᴹ − t·R` (living in `F⟦t⟧⟦x⟧`) into death-star's frame `(F⸨x⸩)⟦t⟧`.  This module
+builds that ring hom from scratch (no Mathlib nested-power-series curry iso exists):
 
-This module starts the swap-and-embed ring hom `psi` that transports `Φ = P·h` to the frame.
-`psi φ` has `t`-coefficient `m` equal to the Laurent series `∑_{k≥0} (φ.coeff k).coeff m · xᵏ`.
+* **`tau`** — the swap of nested power-series variables `F⟦t⟧⟦x⟧ → F⟦x⟧⟦t⟧`, `(τf)`'s `(t^a,x^b)`
+  coefficient is `f`'s `(x^b,t^a)` coefficient.  It is a ring hom; multiplicativity is the double-sum
+  reorder `Finset.sum_comm` on the two convolution antidiagonals (`tau_mul`).
+* **`phi := map (HahnSeries.ofPowerSeries) ∘ tauHom`** — post-composing the coefficient inclusion
+  `F⟦x⟧ ↪ F⸨x⸩` lands in the frame.  `phi X = C(single 1 1)` = the frame's `x` (`phi_X`).
 
-**Completion plan (fully worked out; the swap ring hom has no Mathlib shortcut — `finSuccEquiv`
-for iterated `PowerSeries` is absent, so `psi` is built coefficient-wise):**
-1. `coeff_psi`: `((coeff m (psi φ))).coeff k = coeff m (coeff k.toNat φ)` for `k ≥ 0`, `= 0` else
-   (`HahnSeries.ofPowerSeries_apply_coeff` for `k = ↑n`; support `⊆ ℕ` for `k < 0`).
-2. `map_add'`,`map_zero'`: coefficient-wise linearity.  `map_one'`: `1` has only `(k,m)=(0,0)` nonzero.
-3. `map_mul'` (the crux, TRUE by symmetry): both `psi (φχ)` and `psi φ · psi χ` have
-   `x^k`-coeff of `t`-order `m` equal to `∑_{i+j=k} ∑_{p+q=m} (φ.coeff i).coeff p · (χ.coeff j).coeff q`
-   — the same double convolution, reindexed by `Finset.sum_comm` / nested antidiagonals.
-4. `psi_Phi`: `psi (GMC2DvdKWeierstrass.Phi R M) = GMC2DvdKFrame.PhiFrame (ofPowerSeries.. R) M`
-   (compute `psi` on `X^M` and on `C X * R.map C`).
-5. Then `Pfr := psi (smallRootFactor R M)` is monic of `x`-degree `M` (from `smallRootFactor_natDegree`
-   /`_monic`), so `(c)` gives `xCoeff0(logDeriv Pfr)=0`; `hfr := psi (weierstrassUnit ..)` has
-   `xCoeff0 hfr = constantCoeff (weierstrassUnit ..) = unitCoeff0` (the `x⁰`-part of the swap is the
-   inner constant coeff); `PhiFrame = Pfr·hfr` by `map_mul' + psi_Phi + phi_eq_smallRootFactor_mul`.
-   Feed to `GMC2DvdKHderiv.hderiv_of_frame` ⇒ `hderiv` ⇒ (closing files) ⇒ GMC(2).
-
-Shared blocker with boxeph (S243 offered help); mac-mini owns the Weierstrass source and `(c)`.
+Because `phi` sends the `x`-power-series `h` into the `x`-support-`≥0` part of the frame with the right
+`x⁰`-coefficient, it supplies exactly the `Φ = P·h` factorization and `xCoeff0(h)=unitCoeff0` that
+`GMC2DvdKHderiv.hderiv_of_frame`'s `(a)` needs.
 -/
 
 open PowerSeries
 
 namespace GMC2DvdKTranspose
 
-variable {F : Type*} [CommRing F]
+variable {F : Type*} [Field F]
 
-/-- The coefficient-swap underlying the transpose embedding: `psiFun φ` has `t`-coefficient `m` the
-Laurent series `∑_{k≥0} (φ.coeff k).coeff m · xᵏ`. -/
-noncomputable def psiFun (φ : PowerSeries (PowerSeries F)) : PowerSeries (LaurentSeries F) :=
-  PowerSeries.mk fun m =>
-    HahnSeries.ofPowerSeries ℤ F (PowerSeries.mk fun k => coeff m (coeff k φ))
+/-- The swap of nested power-series variables `τ : F⟦t⟧⟦X⟧ → F⟦X⟧⟦t⟧`:
+`(τ f)`'s `(t^a, X^b)` coefficient is `f`'s `(X^b, t^a)` coefficient. -/
+noncomputable def tau (f : PowerSeries (PowerSeries F)) : PowerSeries (PowerSeries F) :=
+  PowerSeries.mk fun k => PowerSeries.mk fun n =>
+    PowerSeries.coeff (R := F) k (PowerSeries.coeff (R := PowerSeries F) n f)
 
-/-- `t`-order `m`, `x`-order `↑n` coefficient of `psiFun φ` is the double coefficient of `φ`. -/
-theorem coeff_psiFun_natCoeff (φ : PowerSeries (PowerSeries F)) (m n : ℕ) :
-    ((coeff m (psiFun φ)) : LaurentSeries F).coeff (n : ℤ) = coeff m (coeff n φ) := by
-  rw [psiFun, coeff_mk, HahnSeries.ofPowerSeries_apply_coeff, coeff_mk]
+@[simp] theorem coeff_coeff_tau (f : PowerSeries (PowerSeries F)) (a b : ℕ) :
+    PowerSeries.coeff (R := F) b (PowerSeries.coeff (R := PowerSeries F) a (tau f))
+      = PowerSeries.coeff (R := F) a (PowerSeries.coeff (R := PowerSeries F) b f) := by
+  simp [tau, PowerSeries.coeff_mk]
+
+theorem tau_add (f g : PowerSeries (PowerSeries F)) : tau (f + g) = tau f + tau g := by
+  refine PowerSeries.ext fun a => PowerSeries.ext fun b => ?_
+  simp [coeff_coeff_tau]
+
+theorem tau_one : tau (1 : PowerSeries (PowerSeries F)) = 1 := by
+  refine PowerSeries.ext fun a => PowerSeries.ext fun b => ?_
+  rw [coeff_coeff_tau]
+  by_cases ha : a = 0 <;> by_cases hb : b = 0 <;>
+    simp [PowerSeries.coeff_one, PowerSeries.coeff_zero_eq_constantCoeff, ha, hb]
+
+theorem tau_mul (f g : PowerSeries (PowerSeries F)) : tau (f * g) = tau f * tau g := by
+  refine PowerSeries.ext fun a => PowerSeries.ext fun b => ?_
+  rw [coeff_coeff_tau]
+  simp only [PowerSeries.coeff_mul, map_sum, coeff_coeff_tau]
+  exact Finset.sum_comm
+
+
+theorem tau_zero : tau (0 : PowerSeries (PowerSeries F)) = 0 := by
+  refine PowerSeries.ext fun a => PowerSeries.ext fun b => ?_
+  simp [coeff_coeff_tau]
+
+/-- The swap bundled as a ring hom. -/
+noncomputable def tauHom : PowerSeries (PowerSeries F) →+* PowerSeries (PowerSeries F) where
+  toFun := tau
+  map_one' := tau_one
+  map_mul' := tau_mul
+  map_zero' := tau_zero
+  map_add' := tau_add
+
+/-- The transpose `φ : (PowerSeries F)⟦X⟧ → PowerSeries (LaurentSeries F)`. -/
+noncomputable def phi : PowerSeries (PowerSeries F) →+* PowerSeries (LaurentSeries F) :=
+  (PowerSeries.map (HahnSeries.ofPowerSeries ℤ F)).comp tauHom
+
+theorem tau_X : tau (PowerSeries.X : PowerSeries (PowerSeries F))
+    = PowerSeries.C (PowerSeries.X : PowerSeries F) := by
+  refine PowerSeries.ext fun a => PowerSeries.ext fun b => ?_
+  rw [coeff_coeff_tau]
+  by_cases hb : b = 1 <;> by_cases ha : a = 0 <;>
+    simp [PowerSeries.coeff_X, PowerSeries.coeff_C, PowerSeries.coeff_one, ha, hb]
+
+theorem phi_X : phi (PowerSeries.X : PowerSeries (PowerSeries F))
+    = PowerSeries.C (HahnSeries.single (1 : ℤ) (1 : F)) := by
+  rw [phi, RingHom.comp_apply, show tauHom (PowerSeries.X : PowerSeries (PowerSeries F))
+    = PowerSeries.C (PowerSeries.X : PowerSeries F) from tau_X, PowerSeries.map_C,
+    HahnSeries.ofPowerSeries_X]
 
 end GMC2DvdKTranspose
+
+#print axioms GMC2DvdKTranspose.phi
+#print axioms GMC2DvdKTranspose.phi_X
