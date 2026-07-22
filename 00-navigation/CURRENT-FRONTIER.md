@@ -433,7 +433,16 @@ into tournament operation laws and LRC residue packets.
   every relevant beta grade, kills the grade-six obstruction guess, and gives
   a formal beta-adic lift. Finite polynomial termination and coupling to `D`
   are now decisive. THM-2063 tames maps with a pencil member affine on a source
-  fiber, so a JC(2) counterexample has fiber degree at least two there.
+  fiber. [THM-2071](../01-canon/theorems/THM-2071-quadratic-fiber-square-parity-gate.md)
+  closes every quadratic member in every output-pencil/source-foliation
+  direction. [THM-2084](../01-canon/theorems/THM-2084-cubic-fiber-low-complement-gauss-manin-gate.md)
+  identifies the cubic coefficient ladder with the polynomial parts of
+  `(z^3+pz+q)^(n/3)` and closes reduced complementary degrees through `11`:
+  a non-tame pair with a cubic pencil member must have reduced complement
+  degree at least `13`. The live cubic object is the all-degree Faber
+  boundary/flux/primitive triple `(E_n,Phi_n,R_n)`, beginning next at `n=13`.
+  These are source-fiber degree gates, not generic cover-degree or Jelonek
+  classifications.
   MISTAKE-228/229 block the old atlas and NC2/GMC chain; DC(2)/JC(2) remain open.
 - **Gaussian higher dimensions:** THM-1490 is one verified higher-dimensional
   construction; newer three-real-Gaussian examples supersede any claim that

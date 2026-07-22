@@ -171,6 +171,12 @@ mistake.
 33. **A binary symmetric Hessian is not full symmetric JC(2).** MISTAKE-229. The
     four-variable VC route has no proved NC2/GMC chain or descent equivalence.
 
+34. **Source-fiber degree is not generic cover degree.** THM-2071 closes a
+    quadratic output-pencil member, and THM-2084 proves that a non-tame pair
+    with a cubic member has reduced complementary fiber degree at least `13`.
+    The latter reduction is modulo target shears by `C[P]`. Neither theorem
+    classifies Jelonek curves, proves a cover-degree bound, or proves JC(2).
+
 ## Promotion checklist
 
 Before adding or upgrading a theorem: perform a type and quantifier ledger;
