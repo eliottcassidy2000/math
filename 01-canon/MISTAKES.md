@@ -6223,7 +6223,7 @@ pairs and therefore lands in conventional `A_4`. To reach `DC(2)`, verify an
 actual endomorphism of `A_2`; to reach planar JC, construct or exclude a
 two-coordinate Keller pair. Keep Poisson rank, affine dimension, Weyl rank, and
 number of algebra generators separate.
-## MISTAKE-225 (2026-07-21, codex audit of HYP-8865) -- the polygonal determinant gate was promoted to a discriminant-minus-seven Heegner form and to an isotropic/rank versus anisotropic/Euler equivalence
+## MISTAKE-225 (2026-07-21, codex audit of HYP-8865 and HYP-8870/S217) -- the polygonal determinant gate was promoted to a discriminant-minus-seven Heegner form and to an isotropic/rank versus anisotropic/Euler equivalence
 
 **What happened.** HYP-8865 correctly noticed that THM-2053 uses determinants
 `a z_i-b u_i`, but then called the residual a single binary quadratic form of
@@ -6269,7 +6269,12 @@ Only signed hull vertices matter to the determinant gate. The lawful niche
 machinery is convex polarity, rational normal fans, and ordinary
 Farey/Klein-sail enumeration, with pair-sum and endpoint-owner sidecars. The
 Paley/Heegner observations remain analogies unless an explicit predicate-
-preserving map to this polygonal norm is proved.
+preserving map to this polygonal norm is proved. HYP-8870/S217's classical
+class-group examples and entropy metaphor are valid for an independently
+specified binary quadratic form, but its conclusion that the THM-2053
+residual is pinned by discriminant `-7` inherits the same absent
+identification. HYP-8871 is the separately numbered polygonal completion
+program.
 
 **Rule.** Before importing class groups or local anisotropy, identify one
 actual quadratic form in the target theorem and compute its discriminant.

@@ -144,7 +144,7 @@ structural supplier/seed and a lossless exit.
   gate; the rational normal fan splits the residual into signed owner sectors,
   each with one tangent disk and local bound `||d||<91||p||`. The live problem
   is atlas compression and exact primitive-lattice discharge of these sectors,
-  not an infinitary one-parameter tail. HYP-8870 targets an ordinary
+  not an infinitary one-parameter tail. HYP-8871 targets an ordinary
   Farey/Klein-sail automaton with pair-sum and endpoint-owner sidecars.
 - **Scope separation:**
   [THM-1149](../01-canon/theorems/THM-1149-compact-essential-crown-and-farey-blocker.md)

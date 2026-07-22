@@ -16,7 +16,7 @@ related:
   - THM-2054
   - HYP-2896
   - HYP-2986
-  - HYP-8870
+  - HYP-8871
   - MISTAKE-225
 ---
 

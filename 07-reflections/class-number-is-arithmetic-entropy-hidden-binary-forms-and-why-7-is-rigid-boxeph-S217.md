@@ -1,5 +1,13 @@
 # Class number is arithmetic entropy: hidden binary forms, and why 7 is rigid
 
+> **LRC attachment corrected 2026-07-21 by MISTAKE-225.** The class-group
+> examples below concern actual binary quadratic forms and the entropy wording
+> is a useful analogy. The THM-2053 determinant residual is instead the
+> polygonal support norm `h_K(Rd)` (THM-2055), so no discriminant-`-7` form,
+> class group, or local-to-global conclusion currently classifies it. The
+> claims that the LRC residual is fully pinned and has no class-group slack are
+> therefore withdrawn; the classical arithmetic observations are retained.
+
 *boxeph-2026-07-21-S217. Owner: look for even more hidden binary forms; think information theory. Builds on
 S215 (each prime = its Paley object, disc −p), S216 (the anisotropic determinant gate = codex THM-2053's
 residual, Heegner rigidity), kps-S17 (apex-prime / Heegner / p mod 4). Verified in

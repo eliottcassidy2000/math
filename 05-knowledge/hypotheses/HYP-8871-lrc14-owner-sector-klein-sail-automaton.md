@@ -1,5 +1,5 @@
 ---
-id: HYP-8870
+id: HYP-8871
 title: "LRC14 owner-sector Klein-sail automaton"
 status: >
   OPEN completion program downstream of THM-2055. Replace raw two-anchor
@@ -14,6 +14,7 @@ related:
   - THM-2053
   - THM-2054
   - THM-2055
+  - THM-2056
   - HYP-2108
   - HYP-2647
   - HYP-2896
@@ -23,7 +24,7 @@ related:
   - MISTAKE-225
 ---
 
-# HYP-8870 -- owner sectors and ordinary continued fractions
+# HYP-8871 -- owner sectors and ordinary continued fractions
 
 THM-2055 changes the finite object. For each THM-2052 two-anchor star:
 

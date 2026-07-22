@@ -28,7 +28,7 @@ MISTAKE-225. The left side is max-linear, the right quadratic form has
 discriminant `-4`, and a sufficient gate's failure is only “unresolved.” The
 Paley/Heegner data has no predicate-preserving map to an arbitrary star plane.
 
-**NEXT CREATIVE TARGET (HYP-8870):** use ordinary Stern--Brocot/Klein sails in
+**NEXT CREATIVE TARGET (HYP-8871):** use ordinary Stern--Brocot/Klein sails in
 each rational owner cone. Split only at hull-owner ties, positivity/collision
 walls, pair-sum changes, Fejer resonances, or endpoint-owner exchanges. This
 keeps a genuine two-dimensional continued-fraction address without importing

@@ -29,7 +29,7 @@ related:
   - HYP-8845
   - HYP-8850
   - HYP-8860
-  - HYP-8870
+  - HYP-8871
 ---
 
 # HYP-8846 -- pointed transport, not an unpointed plane escape
@@ -157,7 +157,7 @@ matrices, and bound a reduced-basis `L` directly from the sparse triple code.
   endpoint owners needed to decide a tangent-disk point.
 - THM-2055 replaces the raw tangent-disk union by the signed column polygon's
   normal fan. Only hull vertices own the determinant maximum; each owner cone
-  has one disk and an owner-local radius. HYP-8870 proposes ordinary
+  has one disk and an owner-local radius. HYP-8871 proposes ordinary
   Stern--Brocot/Klein-sail traversal of those rational sectors. MISTAKE-225
   records why Heegner form classes cannot replace this polygonal carrier.
 
