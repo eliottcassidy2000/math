@@ -15,16 +15,19 @@
 
 ## boxeph-2026-07-21-S205 -- JC<->LRC = one n=12 AP-rigidity; comprehensive view; Keller counterexample verified; red-team suite (HYP-8810)
 ## boxeph-2026-07-21-S207 -- cake, bagel, Moser and Fibonacci are ONE Pascal triangle (HYP-8820)
+## boxeph-2026-07-21-S208 -- the missing-region law is Euler-char on an arrangement; the NC2 Vandermonde IS the braid arrangement (HYP-8825)
 
-**Owner:** relate the repo's polygonal/polyhedral (figurate) work to Fibonacci and the cake & bagel cutting sequences.
+**Owner:** see the geometry/topology under the shadow-lattice missing-region law (klein-S313) and leverage it for algebraic tricks.
 
-**MINED:** the repo's figurate framework = opus-S317 (Vandermonde-truncation law: polygonal vs polyhedral; polygonal = first two Vandermonde layers of Pascal; polyhedral row-sum=2^n, shallow-diagonal=Fibonacci; polygonal row-sum=A000127 Moser circle), klein-S313 (the (r,g) shadow lattice, g-bonacci kernels 1−x−x^{g+1}, missing-region DEFICIT-1), mac-mini-S137 (the Hurwitz golden-corner principle: JC₂'s golden Fibonacci-degree corner + LRC's penultimate-convergent extremality + the g-bonacci kernels = one shape).
+**GEOMETRY/TOPOLOGY (verified, 4 pillars, script arrangement_topology_leverage_boxeph_S208.py):**
+1. Transitivity Vandermonde V(a)=∏(a_j−a_i) (THM-2033) = BRAID ARRANGEMENT A_{n−1} defining polynomial. #transitive tournaments = braid chambers = n! = |χ_braid(−1)| = falling factorial (Zaslavsky). NC2 noncancel = arrangement COMPLEMENT; wall = FLAT.
+2. Orlik–Solomon LOCALIZATION at a flat: V(a)=ε^{ΣC(|B_i|,2)}·[∏_i V(δ|B_i)]·[∏(c_j−c_i)^{|B_i||B_j|}] (ratio→1 as ε→0). The confluent Vandermonde FACTORIZES into within-block braids × transverse.
+3. Single-block hyper-Bessel Φ_{(p,q)}=Σx^k/((qk)!(pk)!) is L-P: base Φ_{(1,1)}=I_0(2√x) rigorously (zeros −(j_{0,m}/2)², verified 1e-10); Laguerre ineq f'²−ff''≥0 passes for (1,2),(2,2),(2,3),(3,3). Szegő caveat: truncation root-reality is the WRONG test (partial sums of e^x/I_0 gain complex roots) — correctly avoided.
+4. g-bonacci kernel 1/(1−x−x^{g+1}) = Bowen–Lanford zeta 1/det(I−xM) = the repo's tournament ζ. deficit-1 (bagel−cake=T_n−1) = reduced-Euler boundary term.
 
-**SYNTHESIS (verified exact):** everything is ONE Pascal triangle read three ways.
-- Full row sums = 2^n. Shallow-DIAGONAL (skip) sums = FIBONACCI. Truncated-row sums = the figurate CUTTING sequences.
-- lazy caterer A000124 = C(n,0..2) (2D disk); CAKE A000125 = C(n,0..3) (3D ball); Moser A000127 = C(n,0)+C(n,2)+C(n,4) (polygonal row-sum); BAGEL (solid torus) = C(n,3)+n(n+1) = 1,2,6,13,24,40,62 (3 cuts->13).
-- THE SURPRISE: bagel − cake = T_n − 1 (triangular minus one) = the DEFICIT-1 = klein-S313's g-bonacci-kernel missing-region boundary effect. The torus's topological hole IS the g-bonacci kernel's off-by-one. Genuine bridge between the cutting geometry and the Fibonacci-kernel side.
-- g-bonacci kernels 1/(1−x−x^{g+1}) (verified): g=1=Fibonacci exactly; g=2,3 = the shadow-lattice family. The generating-function bridge between the row (cutting) and diagonal (Fibonacci) readings.
+**ALGEBRAIC LEVERAGE:** the wall boundary factors (geometry: arrangement = product at a flat) into single-block L-P pieces; L-P closed under products (Schur) ⟹ whole boundary L-P = HYP-8775. Geometry ⟹ algebra. Unifies missing-region law (klein-S313), NC2 Vandermonde (THM-2033), THM-805 (Tutte/acyclic), and the LRC-permutohedron braid thread under Zaslavsky/Euler.
+
+**Honest:** base case proved + necessary-condition (Laguerre ineq) evidence for the rest; full L-P for general (p0,q0) needs Fox–Wright real-zeros theory = OPEN. This is a proof STRATEGY for HYP-8775, not a completed proof. Artifacts: reflection the-missing-region-law-is-a-braid-arrangement-...-boxeph-S208.md, HYP-8825, script (+.out).
 
 **So cake/bagel/Moser (rows) and Fibonacci (diagonals) are two projections of one Pascal/figurate triangle** — the same golden/figurate scaffold on which JC₂ (golden-degree corner) and LRC(14) (anti-golden Eisenstein extremal, the penultimate-convergent it forbids) sit (mac-mini-S137).
 
