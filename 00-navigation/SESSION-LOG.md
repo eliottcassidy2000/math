@@ -25,6 +25,11 @@
   `6,...,10` were filtered, `30,594` were hereditary/divisor-complete, and no
   allowed guard survived even the necessary rational grid. LRC(14) remains
   open on the unbounded hereditary terminal lane and its address assignment.
+- **Hostile parity correction:** MISTAKE-230 retracts HYP-8920's claimed
+  `chi(G_S)=0 -> chi(G_terminal)=0` descent. THM-2075 starts at `G_C`, not at
+  the empty `G_S`; the original tails kill both outer children. Mirror
+  evenness of the nonempty terminal survives, but it does not discharge tail
+  coverage. The S227 two-charge DvdK Lean work is independent and unaffected.
 
 **SHARPENED REDUCTION (my contribution = S212 mirror-parity + codex THM-2073/2075):** a dyadic-seam disproof (S=2C ∪ {x,y}) has chi(G_{1/14})=0; chi doubling-invariant => terminal core also chi=0; chi even => needs chi=0 exactly. So Wall A (dyadic-seam case) <=> no hereditarily-primitive TERMINAL core has chi(G_{1/14})=0. Honest: full doubling 2-to-1 (chi doubles) vs per-sheet homeo (chi fixed); disproof chi=0 preserved either way.
 

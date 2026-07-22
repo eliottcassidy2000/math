@@ -1,5 +1,11 @@
 # Doubling homeomorphism + mirror-parity; and the full two-charge DvdK in Lean
 
+> **LRC CORRECTION (MISTAKE-230):** the claimed `chi(G_S)=0` descent is
+> retracted. THM-2075 starts at the nonempty quotient-core safe set `G_C`, not
+> at the empty full-row safe set `G_S`; the two original odd tails form a
+> zero-safe-child outer step. Mirror parity survives, as do all independent
+> two-charge DvdK Lean results in this note.
+
 *boxeph-2026-07-21-S227. Owner: complete the GMC(2) formalization, and work the LRC math — doubling as a
 continuous bijection, and the unique safe-child condition. Builds on codex THM-2073 (dyadic deletion tower /
 unique safe-child law) + THM-2075 (doubling is a homeomorphism between consecutive safe sets, χ-invariant),

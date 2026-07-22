@@ -7,6 +7,43 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-230 (2026-07-21, codex audit of HYP-8920/S227) -- the empty safe set of the full dyadic counterexample was transported through a homeomorphism that starts only at its nonempty quotient core
+
+- **What was claimed:** HYP-8920 combined mirror parity with THM-2075 and
+  asserted that a strict dyadic-seam counterexample `S=2C union {x,y}` has
+  `chi(G_S)=0`, that this zero Euler characteristic descends through the
+  dyadic tower, and hence that the hereditarily primitive terminal core has
+  `chi(G_(Q_r))=0`. It then called the dyadic wall equivalent to exclusion of
+  such zero-component terminals.
+- **Why it is wrong:** THM-2075's homeomorphisms are
+
+  ```text
+  G_C=G_(Q_0) -> G_(Q_1) -> ... -> G_(Q_r).
+  ```
+
+  They do **not** start at `G_S`. At the inner guard levels, exactly one safe
+  child survives and doubling is bijective. At the final outer step from
+  `C` to `S`, the two original odd tails kill both lifts over every point of
+  `G_C`; there are zero safe children. Thus `G_S=empty` while `G_C` is
+  nonempty, and no homeomorphism connects them. Transporting `chi(G_S)=0`
+  across THM-2075 is a domain error.
+- **Correct framing:** THM-2075 gives
+
+  ```text
+  chi(G_C)=chi(G_(Q_r))>0.
+  ```
+
+  The strict dyadic obstruction is instead THM-2061's folded containment of
+  the nonempty `G_C` in the two-tail danger locus. Mirror parity remains
+  valid: every divisor-complete terminal contains an even speed, reversal
+  acts freely on its nonempty safe set, and therefore its component count is
+  even (hence at least two). That fact does not stop the original tails from
+  killing the two outer lifts. The live carrier remains the terminal
+  component word, its THM-2075 dyadic addresses, and the original tail-owner
+  constraints.
+- **Unaffected work:** the two-charge DvdK Lean theorems in the same S227
+  session are independent of this LRC level mismatch and remain valid.
+
 ## MISTAKE-229 (2026-07-21, codex audit of HYP-8905/S225/S103) -- a valid binary symmetric-Hessian subcase and three analogous descent programs were promoted to an NC2-to-JC bridge and equivalent formulations of JC(2)
 
 - **What was claimed:** S103 wrote `NC2 => GMC2 => ... => JC(2)`, identified
