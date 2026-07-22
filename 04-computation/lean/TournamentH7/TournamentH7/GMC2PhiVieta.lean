@@ -68,6 +68,41 @@ theorem coeff_ratio_Phi_eq_const (R : F[X]) (M : ℕ) (hM : 1 ≤ M) (hR : R ≠
     exact Polynomial.leadingCoeff_ne_zero.mpr hR
   field_simp
 
+/-- **Vieta: the product of the roots of `Φ` is a constant** (`t`-adic valuation 0).  Over any field
+`E` where `Φ` splits, `∏ roots = (−1)^d · (r₀/lc R)`, the image of a constant of `F`.  This is the `hΩ`
+input of `GMC2Thm2067Wrapper.thm2067_contradiction` (the full-root product is a nonzero constant). -/
+theorem prod_roots_Phi (R : F[X]) (M : ℕ) (hM : 1 ≤ M) (hMd : M < R.natDegree)
+    {E : Type*} [Field E] [Algebra (RatFunc F) E]
+    (hsplit : Splits ((Phi R M).map (algebraMap (RatFunc F) E))) :
+    (((Phi R M).map (algebraMap (RatFunc F) E)).roots).prod
+      = ((-1) ^ R.natDegree : E) *
+        (algebraMap (RatFunc F) E) ((algebraMap F (RatFunc F)) (R.coeff 0 / R.leadingCoeff)) := by
+  have hR : R ≠ 0 := by intro h; rw [h] at hMd; simp at hMd
+  have hPne : Phi R M ≠ 0 := by
+    intro h; have h2 := natDegree_Phi R M hMd; rw [h, natDegree_zero] at h2; omega
+  have hnd : ((Phi R M).map (algebraMap (RatFunc F) E)).natDegree = R.natDegree := by
+    rw [Polynomial.natDegree_map_eq_of_injective (algebraMap (RatFunc F) E).injective,
+      natDegree_Phi R M hMd]
+  have hkey := Splits.coeff_zero_eq_leadingCoeff_mul_prod_roots hsplit
+  rw [hnd, Polynomial.coeff_map, Polynomial.leadingCoeff, hnd, Polynomial.coeff_map] at hkey
+  have hcd : (Phi R M).coeff R.natDegree = (Phi R M).leadingCoeff := by
+    rw [Polynomial.leadingCoeff, natDegree_Phi R M hMd]
+  have hB : (algebraMap (RatFunc F) E) ((Phi R M).coeff R.natDegree) ≠ 0 := by
+    rw [hcd, Ne, (algebraMap (RatFunc F) E).injective.eq_iff' (map_zero _)]
+    exact Polynomial.leadingCoeff_ne_zero.mpr hPne
+  have hsign : ((-1 : E) ^ R.natDegree) ≠ 0 := pow_ne_zero _ (neg_ne_zero.mpr one_ne_zero)
+  have hratio : (Phi R M).coeff 0 / (Phi R M).coeff R.natDegree
+      = (algebraMap F (RatFunc F)) (R.coeff 0 / R.leadingCoeff) := by
+    rw [hcd]; exact coeff_ratio_Phi_eq_const R M hM hR hMd
+  have hP : ((Phi R M).map (algebraMap (RatFunc F) E)).roots.prod
+      = (algebraMap (RatFunc F) E) ((Phi R M).coeff 0)
+        / (((-1 : E) ^ R.natDegree) * (algebraMap (RatFunc F) E) ((Phi R M).coeff R.natDegree)) := by
+    rw [eq_div_iff (mul_ne_zero hsign hB)]; linear_combination -hkey
+  rw [hP, mul_comm ((-1 : E) ^ R.natDegree), ← div_div, ← map_div₀, hratio, div_eq_mul_inv]
+  rw [mul_comm]; congr 1
+  rw [← inv_pow, inv_neg_one]
+
 end GMC2PhiVieta
 
 #print axioms GMC2PhiVieta.coeff_ratio_Phi_eq_const
+#print axioms GMC2PhiVieta.prod_roots_Phi
