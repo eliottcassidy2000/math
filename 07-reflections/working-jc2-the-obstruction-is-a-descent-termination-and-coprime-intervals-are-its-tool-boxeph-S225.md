@@ -7,6 +7,12 @@ Lamé), THM-1345/1365/1370 (restricted JC(2) proved), codex THM-2044/2045/2049 (
 S222/S223 (DvdK bypass / coprime intervals), S224 (Wall A), S206 (Fibonacci foil). Verified in
 `04-computation/jc2_via_vanishing_conjecture_and_the_cf_termination_boxeph_S225.py`.*
 
+> **Scope correction (MISTAKE-229).** The three programs below are not known
+> to be equivalent. VC(4) is a rigorous symmetric-reduction target;
+> leading-form/Jelonek descent is a planar route; Lame-for-polygons is a
+> proposed effective termination principle. Their common descent vocabulary
+> is a research heuristic until explicit implications are proved.
+
 ## Honest starting point
 
 JC(2) is the sole open Jacobian case (JC(n≥3) is *false* — the explicit Keller map, `det≡−2`, triple
@@ -45,8 +51,9 @@ and slowest on golden (Fibonacci) slopes* — the **same extremal** as the LRC f
 
 ## The unification: the obstruction is a single *descent termination*
 
-Pulling the three programs together, the mining shows the JC(2) obstruction has **three equivalent forms**,
-and — this is the session's creative point — they are all the **same kind of problem**:
+Pulling the three programs together suggests three potentially interacting
+forms of the JC(2) obstruction. They are all the **same kind of problem** at
+the level of search design, but no equivalence is claimed:
 
 | form | statement | it is a … |
 |---|---|---|

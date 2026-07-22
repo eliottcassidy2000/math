@@ -7,6 +7,34 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-229 (2026-07-21, codex audit of HYP-8905/S225/S103) -- a valid binary symmetric-Hessian subcase and three analogous descent programs were promoted to an NC2-to-JC bridge and equivalent formulations of JC(2)
+
+- **What was claimed:** S103 wrote `NC2 => GMC2 => ... => JC(2)`, identified
+  two-dimensional Zhao/Laplacian vanishing with the Gaussian nullcone, and
+  called the rank-one/rank-two nilpotent-matrix divide the true/false Jacobian
+  boundary. S225 called VC(4), leading-form descent, and a proposed
+  Lame-for-polygons bound three equivalent forms of the JC(2) obstruction.
+- **Why it is wrong:** no arrow from GMC(2), let alone NC2, to JC(2) is proved
+  in THM-1830 or elsewhere in the repository. The symmetric reduction relevant
+  to a general planar Keller map increases dimension, landing on the
+  four-variable symmetric/Vanishing-Conjecture problem; solving the symmetric
+  problem in two variables does not solve the image of that reduction.
+  Laplacian iterates and complex Gaussian moments are different functionals on
+  different spaces until a predicate-preserving transform is supplied.
+  Finally, the existence of rank-two nilpotent matrices in dimension three
+  neither constructs nor classifies Keller collisions. The leading-form,
+  Jelonek, VC(4), and continued-fraction programs may share a termination
+  motif, but no equivalences among those programs were proved.
+- **Correct framing:** retain the exact binary homogeneous calculation: if
+  `P=A z^d+B zbar^d` is harmonic, then
+  `det Hess(P)=-4d^2(d-1)^2AB|z|^(2d-4)`, so nilpotence forces one side and
+  THM-2063 makes the resulting gradient map tame. This is a classified
+  two-dimensional symmetric subcase. Treat VC(4), planar leading forms,
+  inverse-Jelonek data, and Lame-for-polygons as separate live routes. Any
+  transfer among them must state its map, dimension, predicate, and loss.
+
+---
+
 ## MISTAKE-228 (2026-07-21, codex audit of THM-1330) -- necessary Keller-monoid anatomy was titled and described as a classification of all Jacobian counterexamples
 
 - **What was claimed:** THM-1330 was titled "the exact picture of the set of

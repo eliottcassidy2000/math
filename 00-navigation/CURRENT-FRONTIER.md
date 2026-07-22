@@ -145,10 +145,13 @@ structural supplier/seed and a lossless exit.
   `640690` primitive determinant failures, its arithmetic carrier has three
   leaves. THM-2059 makes arbitrary-`N` core/tail composition an exact CRT
   histogram dot product; its zero-mode split isolates disjoint-support zeros.
-  THM-2060 gives every tail bin the sharp floor `q-ceil(q/7)` unless `a|w`,
-  leaving only a dyadic primitive two-tail seam. THM-2061 folds that seam,
-  pins its core through `2..14`, bounds its tails, and closes `max(C)<=19`.
-  THM-2062 puts an exact hereditary CRT wheel on THM-2058's coprime intervals.
+  THM-2060 gives every tail bin the sharp floor `q-ceil(q/7)` unless `a|w`.
+  THM-2064 generalizes the sheet count to any finite tail set: a safe core
+  clock lifts whenever `sum_w ceil(t_w/7)/t_w<1`, and the only primitive
+  imprimitive-core two-tail capacity tie is `2C union {x,y}` with `x,y` odd.
+  THM-2061 folds that exact seam, pins its core through `2..14`, bounds its
+  tails, and closes `max(C)<=19`. THM-2062 puts an exact hereditary CRT wheel
+  on THM-2058's coprime intervals.
 - **PROVED relative whole-product decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says bounded scalar relations must lift to vector-character relations. Two
   telescopes bound the whole product; rowwise `H=2^19` clears every recorded
@@ -417,7 +420,15 @@ into tournament operation laws and LRC residue packets.
   proves its simultaneous `(S,T)` associated-graded correction map is onto in
   every relevant beta grade, kills the grade-six obstruction guess, and gives
   a formal beta-adic lift. Finite polynomial termination and coupling to `D`
-  are now the decisive gates; `DC(2)` and planar `JC(2)` remain open.
+  are now the decisive gates. THM-2063 proves a complete planar normal form:
+  if any nonzero output-pencil member is affine along any linear source fiber,
+  the Keller map is tame with an explicit inverse. Thus a hypothetical JC(2)
+  counterexample has fiber degree at least two for every source direction and
+  every output-pencil direction. MISTAKE-228 relabels THM-1330 correctly as a
+  necessary-structure atlas, not a classification. MISTAKE-229 keeps the valid
+  binary symmetric-Hessian subcase but blocks the unproved NC2/GMC-to-JC chain
+  and the claim that VC(4), leading-form/Jelonek descent, and
+  Lame-for-polygons are equivalent. `DC(2)` and planar `JC(2)` remain open.
 - **Gaussian higher dimensions:** THM-1490 is one verified higher-dimensional
   construction; newer three-real-Gaussian examples supersede any claim that
   dimension four is sharp.

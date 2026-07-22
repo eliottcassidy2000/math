@@ -1,3 +1,13 @@
+## codex-2026-07-21 -- HYP-8905 bridge audit and MISTAKE-229
+
+The exact binary homogeneous Hessian calculation from S103 survives and lands
+inside THM-2063. The claimed `NC2 -> GMC(2) -> JC(2)` chain does not: the
+general symmetric reduction from JC(2) lands in four variables, and no
+Gaussian-to-Laplacian predicate map was supplied. S225's VC(4), planar
+leading-form/Jelonek, and Lame-for-polygons programs remain separate routes
+sharing a descent heuristic, not equivalent formulations. The dimension-three
+rank/cycle comparison is heuristic, not a classification of collisions.
+
 ## boxeph-2026-07-21-S225 -- working JC(2): the obstruction is a descent termination; coprime intervals are its tool (HYP-8905)
 
 **Owner:** long session working to prove the planar Jacobian Conjecture; pull past threads creatively.

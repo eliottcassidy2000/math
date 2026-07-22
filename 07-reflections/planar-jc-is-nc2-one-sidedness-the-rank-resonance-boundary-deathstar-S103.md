@@ -1,15 +1,23 @@
-# Planar JC is NC2 one-sidedness: the 2-D nilpotent Hessian forces one-sided, and the JC-true/false boundary is the GMC2 unique-vs-coincident-cycle threshold
+# The binary symmetric-Hessian subcase is one-sided; the rank/resonance comparison is heuristic
 
 **death-star-2026-07-21-S103** (HYP-8905). Owner: work to prove the planar Jacobian Conjecture, pulling in past
-threads creatively. Target is genuinely **JC(2)** — Alpöge's Keller counterexample (THM-1300) killed JC in
-dim ≥ 3. Result: the symmetric planar Jacobian / Zhao Vanishing Conjecture in dim 2 **is exactly my NC2 one-sided
-nullcone**, proved here; and the JC-true(dim 2)/false(dim ≥ 3) boundary is the *same* rank/resonance threshold as
-the GMC2 unique-cycle-vs-coincident-cycle dichotomy (S101). This places planar JC squarely inside my GMC2/NC2
-framework (THM-1830's NC2 ⟹ GMC2 ⟹ … ⟹ JC(2) program).
+threads creatively. Target is genuinely **JC(2)** — THM-1300 supplies the
+verified dimension-three counterexample. The proved result here is narrower:
+the binary homogeneous symmetric-Hessian stratum is one-sided and tame. The
+rank/resonance and GMC2 cycle comparisons are proposed analogies only.
+
+> **Scope correction (MISTAKE-229).** There is no proved
+> `NC2 => GMC(2) => JC(2)` chain. The symmetric reduction of a general planar
+> Keller map lands in four variables, so the exact two-variable calculation
+> below is a classified symmetric subcase, not the missing reduction target.
+> The rank/cycle comparison is a heuristic and does not classify Keller
+> collisions.
 
 ## 1. The 2-D nilpotent Hessian is NC2 one-sidedness (proved, verified)
 De Bondt–van den Essen reduce JC to the symmetric case `F = x + ∇P`, `P` homogeneous, **Hessian nilpotent**;
-Zhao's VC says `Hess P` nilpotent ⟺ `Δ^m(P^m) = 0 ∀m` — the *same moment-vanishing* as GMC2's `E[P^m]=0`. In two
+Zhao's VC relates Hessian nilpotence to `Δ^m(P^m) = 0 ∀m`. This is formally
+moment-like, but it is not the Gaussian functional `E[P^m]` without an
+additional transform. In two
 variables the `2×2` symmetric Hessian is nilpotent ⟺ `trace = ΔP = 0` (harmonic) **and** `det = 0`. For harmonic
 homogeneous `P = A z^d + B z̄^d` (`z=x+iy`) the exact computation gives
 ```
@@ -25,38 +33,39 @@ one-fiber-linear (codex THM-2063), and `z = F₁ + iF₂` is recovered linearly,
 one-sided `P` is holomorphic hence harmonic (`Δ = 0`), so `Δ^m(P^m)=0` holds trivially: **Zhao's VC is automatic
 on the one-sided locus, exactly as GMC2's moments vanish there.**
 
-## 2. The rank threshold = the JC-true/false boundary = the GMC2 cycle threshold
+## 2. Rank threshold analogy (not a boundary theorem)
 A `2×2` nilpotent matrix (`trace=det=0`) has **rank ≤ 1** — a *single* isotropic direction. A nilpotent `n×n`
 can reach rank `n−1`, so **dim ≥ 3 admits rank ≥ 2 = multiple isotropic directions**. This is precisely where the
 theory breaks:
 - **dim 2:** nilpotent Jacobian is forced rank ≤ 1 ⟹ rows `∇H₁, ∇H₂` are **parallel** (verified for both the
   symmetric `v=(1,i)` isotropic case and the non-symmetric `v=(0,1)` case) ⟹ `H₁,H₂` functionally dependent ⟹
   one-fiber pencil (codex THM-2063) ⟹ tame. One direction = **one-sided**.
-- **dim ≥ 3:** rank ≥ 2 = several isotropic directions = a **resonance**; Alpöge's Keller counterexample
-  (THM-1300, `det JF=−2`, triple collision) lives here — JC is **false**.
+- **dim ≥ 3:** nilpotent matrices can have rank at least two. The verified
+  Keller counterexample of THM-1300 also lives in dimension three, but no
+  theorem here derives its collision from that rank fact.
 
-**The unification.** This is the *same* threshold as GMC2 (S101): a **unique** primitive cycle (one-sided,
-non-cancelling, easy) versus **coincident** cycles (resonance, hard / counterexample-bearing). Planar JC is the
-**last one-direction dimension** — the analogue of the DvdK-free unique-cycle stratum. dim ≥ 3 JC / the
-coincident-cycle GMC2 stratum / the multi-resonance is where both a JC counterexample and the DvdK-hard case
-appear. Zhao's VC (`Δ^m P^m=0` ⟺ Hess nilpotent) **is** GMC2 (`E[P^m]=0` ⟺ one-sided): one moment-nullcone, and
-the one-sided/rank-1 conclusion is the shared "easy" pole. This also matches boxeph's arithmetic-entropy frame
-(S217/218): the rigid extremum = zero-entropy = the unique/one-sided point; difficulty = the positive-entropy
-multi-object.
+**The analogy.** S101's unique-versus-coincident cycle split suggests comparing
+rank one with multi-direction resonance. Both programs have an easy one-sided
+pole and a harder multi-object region. They are not one nullcone: Zhao's
+Laplacian iterates and GMC2's Gaussian expectation are different functionals,
+and no transfer theorem is supplied here. The comparison may schedule searches
+for a rank-sensitive certificate; it proves no Jacobian statement beyond
+Section 1.
 
 ## 3. Honest scope and what it buys
 - **Proved (verified):** the symmetric planar Jacobian / 2-D Zhao-VC / Hessian-nilpotent case — `Hess P` nilpotent
   ⟹ `P` one-sided ⟹ `x+∇P` one-fiber-linear tame. This is a genuine result, and it *is* NC2's conclusion.
-- **NOT proved:** full JC(2). The reduction "2-D nilpotent Jacobian ⟹ rank ≤ 1 ⟹ parallel gradients ⟹ functional
-  dependence" is sound and lands on codex's one-fiber-pencil frontier (THM-2063); showing the *non-symmetric*
-  rank-1 (parallel-gradient) case is always tame is the open crux, exactly where codex is working.
-- **What it buys:** planar JC now sits inside my GMC2/NC2/resonance framework — the symmetric case *is* NC2
-  one-sidedness; the JC-true/false boundary *is* the unique/coincident-cycle boundary; the counterexample
-  dimension *is* the first multi-resonance. A concrete bridge for transferring GMC2 non-cancellation machinery
-  (the `Q̄^p` single-power certificate, the unique-cycle criterion) to the pencil/tameness question, and a
-  structural reason planar JC should be true (rank forced ≤ 1) unified with why dim ≥ 3 fails (rank ≥ 2 resonance).
+- **NOT proved:** full JC(2). The relevant general symmetric reduction lands
+  in four variables. The rank-one observation and THM-2063 close special
+  planar strata; they are not a reduction of every planar Keller map to a
+  remaining non-symmetric rank-one case.
+- **What it buys:** one more exact empty cell in the planar atlas and a
+  rank-sensitive analogy worth testing. A genuine transfer of GMC2
+  noncancellation would still require an explicit map from Gaussian channels
+  to Laplacian or Keller data and a proof that it preserves the relevant
+  vanishing predicate.
 
-Cross-links: THM-1830 (NC2 ⟹ GMC2 ⟹ JC(2) program), THM-1435 (Zhao VC, Hessian-nilpotent), THM-2063 (codex
+Cross-links: THM-1830 (NC2/GMC2 conditional map, not a JC implication), THM-1435 (Zhao VC, Hessian-nilpotent), THM-2063 (codex
 one-fiber-linear planar Keller — = my one-sided maps), THM-1300 (Alpöge counterexample, dim 3), S101/HYP-8878
 (unique vs coincident cycle), S102/HYP-8879 (LRC=GMC2 resonance), S217/218 (arithmetic entropy), memory
 `gmc2-domination-dead-fact-is-algebraic`, `nc2-gmc2-lean-formalization-state`. Script

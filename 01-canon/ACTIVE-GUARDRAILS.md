@@ -171,6 +171,15 @@ mistake.
     multiplication positions plus first-order momenta force a planar Keller
     map. Any DC(2) descent of THM-2044 must be genuinely nonfiltered.
 
+33. **The binary symmetric Hessian is not the symmetric reduction of full
+    JC(2).** MISTAKE-229. The exact `A z^d+B zbar^d` determinant calculation
+    closes a two-variable symmetric homogeneous stratum and THM-2063 tames
+    its one-sided output. The general symmetric/VC route from JC(2) lands in
+    four variables. There is no proved `NC2 -> GMC(2) -> JC(2)` chain, and
+    VC(4), leading-form descent, inverse-Jelonek data, and Lame-for-polygons
+    are not proved equivalent. Record the dimension and predicate-preserving
+    map before transferring a nullcone or termination result.
+
 ## Promotion checklist
 
 Before adding or upgrading a theorem: perform a type and quantifier ledger;
