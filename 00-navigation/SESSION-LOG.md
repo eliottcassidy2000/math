@@ -1,4 +1,20 @@
 ## boxeph-2026-07-21-S222 -- bypass GMC(2)'s DvdK dependency via the saddle-point/Watson method (HYP-8890)
+## death-star-2026-07-21-S101 -- SHARP DvdK-free criterion (refines S100 a lot): a UNIQUE minimal balanced channel (unique tournament-zeta primitive cycle) => GMC(2) DvdK-free, coefficient-independently. 84% of supports. HYP-8878.
+
+**Owner directive:** an even more creative DvdK bypass -- "think one-dimensional coprime intervals."
+
+- **THE CRITERION (support-only, verified):** let m* = minimal mass of a nonzero balanced channel (min positive cycle Σk_i q_i=0 in the 1-D charge lattice). If the balanced channel at m* is UNIQUE, then CT(f_F^{m*}) = multinomial·∏c_i^{r*_i} is a SINGLE nonzero term => DvdK-free for that support, for EVERY complex coefficient (no cancellation possible; uniqueness is a support property).
+- **COVERAGE (dvdk_unique_cycle_criterion_deathstar_S101.py):** 98/116 = 84% of straddling supports (size 3-4, range +-4) DvdK-free. S100's coarse '>=3 monomials = hard' was WAY too pessimistic: [-1,1,2],[-1,2,3],[-1,3,5],[-1,1,3,5], Sylvester [-6,10,15], [-2,3,7], [-1,0,1] all DvdK-free.
+- **THIN HARD STRATUM (only genuine DvdK):** >=2 COINCIDENT minimal cycles (e.g. two antipodal pairs {-2,-1,1,2}, CT(f^2)=2c_-1c_1+2c_-2c_2 cancellable) = codim->=1 = S89-91 resonance = central-trinomial (S90) = degenerate tournament zeta.
+- **ZETA CONNECTION (THM-1926):** the minimal channel = the fundamental PRIMITIVE CYCLE (ζ starts at u^ell = shortest cycle); unique => single nonzero leading coeff => DvdK-free; coincident => degenerate.
+- **HONEST:** not a full bypass (coincident stratum is real DvdK), but a large verified confinement + a DECIDABLE elementary condition. Formalization payoff: single-term CT for unique-cycle supports, cite DvdK only on the thin coincident stratum. reflection the-sharp-dvdk-free-criterion-...-S101. HYP-8878.
+
+## boxeph-2026-07-21-S221 -- the cusp frame is a repo-wide difficulty-LOCATOR (HYP-8885)
+> **CURRENT-TRUTH WARNING (2026-07-21):** This is chronological provenance,
+> not a status authority. Entries may be corrected after filing. Start with
+> [`START-HERE.md`](START-HERE.md), [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md),
+> and [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
+## death-star-2026-07-21-S100 -- CONFINE the GMC(2) DvdK dependency: elementary except in the resonant-signed corner (a verified sharpening, not a full bypass). HYP-8877.
 
 **Owner:** creative ways to bypass the GMC(2) dependency on DvdK.
 

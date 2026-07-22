@@ -1,0 +1,18 @@
+[A] Unique minimal cycle => single nonzero CT(f^m*) => DvdK-FREE (support-only, any coeffs):
+   charges [-1, 1]: m*=2, #cycles=1 -> FREE  cycle (1, 1)
+   charges [-1, 2]: m*=3, #cycles=1 -> FREE  cycle (2, 1)
+   charges [-1, 1, 2]: m*=2, #cycles=1 -> FREE  cycle (1, 1, 0)
+   charges [-1, 2, 3]: m*=3, #cycles=1 -> FREE  cycle (2, 1, 0)
+   charges [-1, 3, 5]: m*=4, #cycles=1 -> FREE  cycle (3, 1, 0)
+   charges [-1, 0, 1]: m*=1, #cycles=1 -> FREE  cycle (0, 1, 0)
+   charges [-6, 10, 15]: m*=7, #cycles=1 -> FREE  cycle (5, 0, 2)
+   charges [-2, 3, 7]: m*=5, #cycles=1 -> FREE  cycle (3, 2, 0)
+   charges [-1, 1, 3, 5]: m*=2, #cycles=1 -> FREE  cycle (1, 1, 0, 0)
+
+[B] Scan straddling supports (sizes 3-4, range +-4): fraction DvdK-free:
+   98/116 = 84% DvdK-FREE; 18 HARD (>=2 coincident minimal cycles)
+   hard stratum examples: [(-4, -1, 2), (-2, 1, 4), (-4, -3, -1, 2), (-4, -3, 1, 2), (-4, -3, 3, 4), (-4, -2, 1, 3)] -- thin arithmetic-coincidence set (e.g. two antipodal pairs)
+
+[C] Connection: minimal balanced channel = fundamental PRIMITIVE CYCLE of the tournament/walk
+    zeta (THM-1926, zeta starts at u^ell = the shortest cycle). Unique shortest cycle => single
+    nonzero leading term. >=2 coincident shortest cycles = degenerate zeta = the ONLY DvdK-hard case.
