@@ -33,6 +33,28 @@ scripts:
 outputs:
   - 05-knowledge/results/gmc2_frobenius_lowest_face_codex_20260721.out
   - 05-knowledge/results/gamma_radial_frobenius_face_codex_20260721.out
+formalization:
+  - 04-computation/lean/TournamentH7/TournamentH7/GMC2Reduction.lean
+  - 04-computation/lean/TournamentH7/TournamentH7/GMC2WickChannels.lean
+  - 04-computation/lean/TournamentH7/TournamentH7/GMC2NormalizedMoment.lean
+  - 04-computation/lean/TournamentH7/TournamentH7/GMC2LowestFacePackage.lean
+  - 04-computation/lean/TournamentH7/TournamentH7/GMC2FaceHeightFloor.lean
+  - 04-computation/lean/TournamentH7/TournamentH7/GMC2FaceSeed.lean
+  - 04-computation/lean/TournamentH7/TournamentH7/GMC2FaceSeedDescent.lean
+  - 04-computation/lean/TournamentH7/TournamentH7/GMC2IntegralFaceSeedDescent.lean
+  - 04-computation/lean/TournamentH7/TournamentH7/GMC2ChannelDilation.lean
+  - 04-computation/lean/TournamentH7/TournamentH7/GMC2FrobeniusResidue.lean
+  - 04-computation/lean/TournamentH7/TournamentH7/GMC2ResidueAssembly.lean
+  - 04-computation/lean/TournamentH7/TournamentH7/GMC2Formalization.lean
+formalization_status: >
+  PARTIAL, with the former descent and face-construction gaps closed. Exact
+  Wick and integral normalized relations, rational lowest-face existence,
+  height floors/gaps, explicit DvdK seed extraction, seed-preserving
+  number-field and direct finite-field specialization, channel dilation,
+  multinomial isolation/Lucas, whole-face Frobenius, and abstract three-case
+  residue assembly are kernel-checked. DvdK remains an explicit cited premise.
+  The remaining Lean composition is the concrete normalized-channel
+  instantiation of the three residue cases and the final theorem DvdK1 -> NC2
 ---
 
 # THM-2022 -- Frobenius amplification of the lowest balanced Wick face
@@ -111,6 +133,45 @@ c=(c_1,...,c_k) in (K^*)^k                              (2)
 
 for some number field `K`. It is enough to exclude (2).
 
+There is a shorter equivalent descent, now used by the Lean development.
+Starting directly from a complex torus point `z`, take the subalgebra
+
+```text
+A=Q[z_1,...,z_k,z_1^(-1),...,z_k^(-1)] subset C.
+```
+
+It is nonzero, finite type over `Q`, all `z_i` are units, and every rational
+moment relation remains zero in `A`. A maximal quotient of `A` is finite over
+`Q`; the quotient map preserves the relations and cannot kill a unit. This
+avoids both the infinite moment ideal and its Noetherian finite-sublist step.
+It produces exactly the point (2).
+
+### 2.1. Shorter integral specialization: let the quotient choose the prime
+
+For the formal proof there is a still shorter route.  Once the lowest-face
+constant term `Q(c)` is known to be nonzero, form the finite-type integral
+subalgebra
+
+```text
+A_Z=Z[c_1,...,c_k,c_1^(-1),...,c_k^(-1),Q(c)^(-1)] subset C.
+```
+
+Every maximal quotient of `A_Z` is a finite field of some prime
+characteristic `p`: finite type over the Jacobson ring `Z` makes the field
+finite as a `Z`-module, and integrality rules out characteristic zero.  The
+coordinates and `Q` remain nonzero because they are units.  More strongly,
+the quotient map preserves **every** integral polynomial relation that
+vanishes at `c`.
+
+The order of quantifiers matters.  The normalized moment polynomial used
+below depends on the residue characteristic `p`, so it should be selected
+only after the quotient reveals `p`.  Universal preservation of zero
+relations permits exactly this.  Since the non-dilated multinomial-isolation
+lemma is valid for every prime (it does not require `p>m0`), an arbitrary
+maximal quotient works.  Thus the number-field and good-prime construction
+remains a valid independent route, but it is no longer required on the
+formalization's critical path.
+
 ## 3. The lowest balanced face retains a nonzero toral address
 
 Assume the support is not strictly one-sided. Equivalently,
@@ -178,9 +239,10 @@ Choose a rational prime `p` satisfying
 p>m0,                                                       (9)
 ```
 
-outside the finite set of primes that ramify in `K` or at which one of the
-algebraic numbers `c_i` or `Q` is not a unit. Fix a prime ideal
-`pfrak` of `K` above `p`. Put
+outside the finite set at which one of the algebraic numbers `c_i` or `Q`
+fails to be a local unit. (One may also exclude ramified rational primes,
+although ramification is not used.) Let `O_K` be the ring of integers of `K`
+and fix a prime ideal `pfrak` of `O_K` above `p`. Put
 
 ```text
 M=p*m0.
@@ -210,9 +272,12 @@ r=p*s,       |s|=m0.                                       (12)
 
 Balance of `r` is equivalent to balance of `s`.
 
-By (10), every channel factorial in (1) is divisible by `(p*A0)!`.
-After dividing the entire moment by that integer, there are exactly three
-cases modulo `pfrak`.
+Work termwise in the localization `O_(K,pfrak)`. By (10), every channel
+factorial in (1) is divisible as a rational integer by `(p*A0)!`, so this
+common integer factor can be cancelled *before* reduction. We do not invert
+its residue—it is generally zero modulo `pfrak`. The resulting normalized
+sum is `pfrak`-integral, and its terms fall into exactly three cases after
+reduction.
 
 1. If `r` is not divisible componentwise by `p`, (11) makes the multinomial
    coefficient divisible by `p`, so the normalized term vanishes.
@@ -399,3 +464,58 @@ functions of one grade. A scalar Newton face alone is not sufficient.
 The constant-term input is J.J. Duistermaat and W. van der Kallen,
 "Constant terms in powers of a Laurent polynomial," *Indagationes
 Mathematicae* (N.S.) 9(2) (1998), 221--231, Theorem 2 and Remark 3.
+
+## 10. Lean formalization ledger
+
+The kernel-checked development is gathered by
+`TournamentH7.GMC2Formalization`. The aggregator is an import surface, not yet
+an end-to-end `NC2` theorem.
+
+1. `GMC2Reduction` and `GMC2ChargeGeometry` prove both strict charge branches,
+   identify failure of one-sidedness with charge straddling, define full
+   `NC2`, and prove `NC2 -> GMC(2)`.
+2. `GMC2WickChannels`, `GMC2MomentRelations`, `GMC2MomentTransport`, and their
+   integral copies prove the exact expansion (1) and its universal polynomial
+   interpretation. `GMC2NormalizedMoment` proves cancellation of the common
+   minimum factorial before reduction.
+3. `GMC2LowestFaceExistence`, its exact-face package, the coordinate
+   dictionary, and `GMC2FaceHeightFloor` prove rational exposing data, the
+   balanced height floor, equality on the face, scaling to mass `p*m0`, and
+   the strict integer off-face gap.
+4. `GMC2DvdKInterface` states the published one-variable input as an explicit
+   proposition. `GMC2FaceSeed`, `GMC2FaceSeedChannel`, and the reference-channel
+   bridge turn it into a nonzero exact face seed and an actual balanced
+   multiplicity vector; no custom Lean axiom is declared.
+5. The former descent gap is closed twice. `GMC2TorusDescent` and
+   `GMC2FaceSeedDescent` preserve all moment relations and the nonzero seed in
+   a number field. `GMC2IntegralSpecialization`,
+   `GMC2IntegralTorusSpecialization`, and
+   `GMC2IntegralFaceSeedDescent` instead specialize directly to a finite field
+   of an output prime characteristic while universally preserving every
+   integral zero relation.
+6. `GMC2ChannelDilation` proves extension-by-zero and componentwise-dilation
+   identities for mass, charge, bidegree, height, and coefficient products,
+   together with injectivity, the exact antidiagonal image, and finite-sum
+   reindexing.
+7. `GMC2FrobeniusResidue` proves non-`p`-dilated multinomial isolation,
+   multinomial Lucas, the whole-face identity `Qbar^p`, non-cancellation, and
+   strict normalized-factorial divisibility. `GMC2ResidueAssembly` proves the
+   abstract three-case sum theorem. `GMC2GoodReduction` certifies the longer
+   number-field prime-reduction route independently.
+
+The first residue lemma uses multivariate exponent expansion in
+characteristic `p`, not an explicit carry count. It is slightly stronger
+than the manuscript narration: it does not need `p>m0`. Retaining `p>m0`
+above is harmless and keeps the elementary two-digit Kummer explanation.
+
+The remaining internal composition is narrow but nontrivial: instantiate the
+abstract three-case residue theorem with the normalized Wick term and the
+exact dilation image, then transport its nonzero value through the direct
+finite-field seed package to contradict moment nullity. That will yield the
+conditional theorem `DvdK1 -> NC2`; `gmc2_of_nc2` then closes GMC(2).
+
+Formalizing the published DvdK theorem itself is a separate substantial
+project. It remains visible as a theorem hypothesis, not hidden behind
+`axiom`, `sorry`, or `native_decide`. Thus the paper theorem is proved, while
+the Lean theorem remains honestly partial at one cited input and one named
+cross-layer assembly.
