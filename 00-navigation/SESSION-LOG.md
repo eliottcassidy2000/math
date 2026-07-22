@@ -100,6 +100,22 @@ NET: every P whose lowest face has a unique channel needs NO DvdK axiom for NC2,
   deletion primitivity. Its frozen unbounded family rules out extracting a
   height cutoff from scalar code/cogirth, fold, and divisor sidecars alone.
 
+### Short-relation cut, not one relation
+
+- THM-2087 observes that THM-2085 needs only a relation-free spanning tree.
+  Under containment the graph `ij <=> lambda(h,q_i,q_j)>57` is therefore
+  disconnected. The complementary short-relation graph contains a spanning
+  `K_(a,7-a)` and at least six indexed height-57 relations.
+- If any speed has a two-term guard relation, it is `q/h=r/s` with coprime
+  `r,s<=57`; terminal guard oddness makes `s` odd. Otherwise all cross-relation
+  speed coefficients are nonzero. Eliminating one opposite-component anchor
+  puts every speed in `A_q h+B_q x+C_q q=0`, `C_q!=0`, with coefficient height
+  at most `2*57^2=6498`.
+- This is the guard-localized two-anchor star missing from the global relation
+  alternative. It is still unbounded and does not prove LRC(14), but it exposes
+  exactly the coefficient-row interface for THM-2062/2065 and the residue-
+  incidence interface for THM-2082.
+
 ## death-star-2026-07-22-S105 -- GMC2 formalization CAPSTONE CLOSED: the whnf wall is SOLVED; HeightWitnessSupplier discharged kernel-pure; clean DvdK1 -> NC2 and DvdK1 -> GMC(2) now compile.
 
 **Owner directive:** work creatively at whnf-tuning, or how it can be bypassed.

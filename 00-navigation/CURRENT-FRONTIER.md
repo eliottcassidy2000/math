@@ -155,7 +155,11 @@ supplier/seed and a lossless exit.
   THM-2065 makes circuit-free residuals finite. THM-2082 proves the rank-one
   wheel sees only prime support: an unbounded terminal family freezes it and
   every scalar filter. Its translated grid gives a safe phase or carrier-ratio
-  branch, so projective residue incidence remains live.
+  branch, so projective residue incidence remains live. THM-2087 upgrades the
+  one-relation ledger to a complete-cut theorem: the relation-free graph is
+  disconnected, so at least six height-57 triple relations cross one spanning
+  cut. Either one speed has a bounded rational guard ratio, or all seven speeds
+  lie in a guard-anchored two-anchor star of coefficient height at most `6498`.
 - **PROVED relative whole-product decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says bounded scalar relations must lift to vector-character relations. Two
   telescopes bound the whole product; rowwise `H=2^19` clears every recorded

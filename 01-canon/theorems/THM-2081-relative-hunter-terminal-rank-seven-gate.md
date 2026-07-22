@@ -19,6 +19,8 @@ related:
   - THM-1221
   - THM-2078
   - THM-2083
+  - THM-2085
+  - THM-2087
 script: 04-computation/lrc14_relative_hunter_rank7_referee_codex_20260722.py
 output: 05-knowledge/results/lrc14_relative_hunter_rank7_referee_codex_20260722.out
 ---
@@ -203,6 +205,11 @@ THM-2085 makes its bound explicit: relative-tree failure forces a nonzero
 integer relation of coefficient height at most `57` on some triple
 `(h,q_i,q_j)`. Thus only finitely many coefficient templates, rather than the
 whole projective three-frequency space, remain.
+
+THM-2087 retains the graph carrier implicit here: the pairs without such a
+short relation cannot contain a spanning tree. Hence the short-relation graph
+contains a complete cut of at least six indexed relations, forcing either a
+bounded guard ratio or a guard-anchored height-`6498` two-anchor star.
 
 The useful next split is exact:
 

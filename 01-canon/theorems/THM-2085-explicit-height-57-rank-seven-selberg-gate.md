@@ -18,6 +18,7 @@ related:
   - THM-2051
   - THM-2082
   - THM-2086
+  - THM-2087
 script: 04-computation/lrc14_selberg_rank7_relation_gate_referee_codex_20260722.py
 output: 05-knowledge/results/lrc14_selberg_rank7_relation_gate_referee_codex_20260722.out
 script_sha256: fba7b10cb67c8929afe3ca512f471b6f3bb3e901f79027cace56514e4396ba69
@@ -250,6 +251,11 @@ prime grids can discharge templates with sparse noncarrier incidence; the
 claimed THM-2086 Fourier cone targets lacunary templates. The residual
 projective planes still require endpoint/CRT inequalities or a sharper
 relative-Hunter channel argument.
+
+THM-2087 subsequently extracts the graph information implicit in this proof:
+the relation-free pair graph must be disconnected, so a complete cut of at
+least six height-57 relations exists. It converts that cut into either a
+bounded guard ratio or a guard-anchored two-anchor star of height `6498`.
 
 ## 7. Assumption challenge and Tournament Analysis
 

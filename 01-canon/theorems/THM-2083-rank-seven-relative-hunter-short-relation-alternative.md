@@ -19,6 +19,7 @@ related:
   - THM-2054
   - THM-2082
   - THM-2085
+  - THM-2087
 ---
 
 # THM-2083 -- the rank-seven relative-Hunter short-relation alternative
@@ -183,6 +184,10 @@ unbounded rational plane and may still carry divisor-complete hereditary
 families. THM-2085 makes `H_7=57` explicit. The remaining decisive task is a
 CRT/endpoint classification on those finitely many planes, or a direct proof
 that each plane violates the relative-tree inequality.
+
+THM-2087 sharpens the surviving arrangement further: the short triple
+relations contain a complete cut, and elimination turns the non-pair branch
+into a guard-anchored two-anchor star of height `6498`.
 
 ## 6. Assumption challenge and Tournament Analysis
 
