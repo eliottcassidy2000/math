@@ -774,3 +774,4 @@ import TournamentH7.GMC2DvdKTranspose
 import TournamentH7.GMC2FrameBridgeDvd
 import TournamentH7.GMC2DvdKConnector
 import TournamentH7.GMC2DvdKTransposeAssembly
+import TournamentH7.GMC2DvdKPhiCoincide
