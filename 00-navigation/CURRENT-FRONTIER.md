@@ -119,7 +119,7 @@ not unsafe. The reusable certificate architecture is
   `max(S)<2912*lcm(1,...,57)^6*(91^6)^13`. Thus every no-pair rank-seven
   branch is now finite. THM-2097's mixed-threshold two-torus escape also makes
   the bounded guard-ratio branch `q/h=r/s`, `r,s<=57`, finite template-by-
-  template; all boxes still need discharge. THM-2098 splits ranks 8--11 between seven transverse bands (budget `5(n-7)/49`) and seven guard-proportional bands; THM-2099/2103 expose the missing clock residue, and THM-2104 closes every constant `3`-adic quotient layer by one sixth-clock phase. The six persistent height-114 cut
+  template; all boxes still need discharge. THM-2098 splits ranks 8--11 between seven transverse bands (budget `5(n-7)/49`) and seven guard-proportional bands; THM-2099/2103 expose the missing clock residue, and THM-2104 closes every constant quotient-valuation layer at each of the primes `2,3,5` by one small-prime clock, in the all-transverse model. The six persistent height-114 cut
   rows make THM-2065 alone vacuous; location and phase sidecars are essential.
 - **PROVED relative decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   lifts bounded scalar relations; `H=2^19` clears recorded margins.
