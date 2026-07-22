@@ -1,12 +1,18 @@
 # Class number is arithmetic entropy: hidden binary forms, and why 7 is rigid
 
-> **LRC attachment corrected 2026-07-21 by MISTAKE-225.** The class-group
-> examples below concern actual binary quadratic forms and the entropy wording
-> is a useful analogy. The THM-2053 determinant residual is instead the
-> polygonal support norm `h_K(Rd)` (THM-2055), so no discriminant-`-7` form,
-> class group, or local-to-global conclusion currently classifies it. The
-> claims that the LRC residual is fully pinned and has no class-group slack are
-> therefore withdrawn; the classical arithmetic observations are retained.
+> **SCOPE CORRECTION 2026-07-21 (codex MISTAKE-225 / THM-2055).** The *application to codex's rank-two
+> gate* (§"Why 7 is rigid", and the one-line reading) is **retracted** — it inherited S216's error: the gate
+> `max_i|a zᵢ−b uᵢ|` is a **polyhedral support norm** of the column polygon `conv{±cᵢ}` (THM-2055), *not* a
+> binary quadratic form of discriminant `−7` (the Euclidean comparison form is disc `−4`; the scalar
+> `91=7·13` does not move the rational square class). So "the LRC gate is rigid / fully pinned because
+> `h(−7)=1`" is **not supported** — the gate is not that form, and it has no class group. What SURVIVES and
+> is independently verified: (i) the general principle **class number = the arithmetic entropy of a binary
+> form** (§A–B: `h=1` ⟹ local Legendre determines representation, `h>1` ⟹ `log₂ h` hidden class-group bits —
+> genuine binary quadratic forms, entropy wording an analogy); (ii) the disc-`−7` form is real but as the
+> **Paley-7 tournament spectrum** `x²+x+2` (S215/THM-1830), `h(−7)=1` — *not* as codex's gate; (iii) the
+> score-entropy poles (§D). The correct gate object is codex's **normal fan / owner tangent disks**
+> (THM-2055); its information lives in the hull-vertex owner combinatorics, not a class group. Read THM-2055
+> before reusing the LRC attachment.
 
 *boxeph-2026-07-21-S217. Owner: look for even more hidden binary forms; think information theory. Builds on
 S215 (each prime = its Paley object, disc −p), S216 (the anisotropic determinant gate = codex THM-2053's
