@@ -122,8 +122,11 @@ the fiber
 Omega={alpha:Phi(alpha,t_b)=0}.                         (10)
 ```
 
-Equivalently, `Phi` is irreducible over `C(t)`: viewed as a polynomial linear
-in `t`, its two coefficients `u^M` and `-R(u)` are coprime, and Gauss applies.
+Equivalently, `Phi` is irreducible over `C(t)`. As a polynomial in `t` over
+`C[u]`, it is linear with coprime coefficients `u^M` and `-R(u)`, hence is
+irreducible in `C[u,t]`. As a polynomial in `u` over `C[t]`, it is primitive:
+the coefficients `-t r_0` and `1-t r_M` are coprime. Gauss then gives
+irreducibility in `C(t)[u]`.
 
 Analytically continue (8) around a loop representing `sigma in G_mon`.
 Permanence of a zero analytic germ and equivariance of (5) give
@@ -170,7 +173,8 @@ fiber size `|Stab(alpha)|`. Hence
 ```text
 |G_mon|
  =sum_(alpha in S_0) sum_(sigma in G_mon) w(sigma alpha)
- =M |Stab(alpha)| sum_(beta in Omega) w(beta)
+ =sum_(alpha in S_0) |Stab_G_mon(alpha)|
+                       sum_(beta in Omega) w(beta)
  =0.                                                    (15)
 ```
 
@@ -186,6 +190,16 @@ cluster is the full root set and its residue sum is one.
 No simplicity problem is hidden: the basepoint is chosen outside the finite
 branch-value set. No choice of a global small-root subset is claimed. The
 proof uses the local cluster only to seed its full monodromy orbit.
+
+The wrapper to the repository's `DvdK1` interface is elementary. For an
+injectively charged finite support, a charge zero gives the conclusion at
+`m=1`. Otherwise `0` in the convex hull supplies exact extreme charges
+`q_min<0<q_max`; set `M=-q_min`, `N=q_max`, and
+`R(u)=sum_i c_i u^(q_i+M)`. Injectivity and nonzero support coefficients give
+`r_0 r_(M+N)!=0`, while `f=u^(-M)R`. The Check A identity already formalized
+in `GMC2LaurentShiftCheckA` identifies these Laurent constant terms with the
+universal relation used by `DvdK1`. Only this concrete wrapper and the
+analytic monodromy package remain to be assembled in Lean.
 
 The result removes the small-root **product** `Pi`, THM-1550, Hensel lifting,
 Wiener--Hopf, and the logarithmic local/global bridge from the paper proof of
@@ -227,10 +241,11 @@ The challenged assumption is that Galois symmetry should act on roots or
 subset products as the primary vertices. Here the faithful vertices are the
 monodromy translates of one **root subset**, carrying additive residue weight.
 The pairwise observable is subset intersection size, and transitivity makes
-its incidence regular. Orienting two translates by the first moved root gives
-a tie Hamiltonian path, but score histograms, cycles, SCCs, edge flips, and
-path counts are irrelevant: only the uniform root incidence and the conserved
-subset sum survive the quotient.
+its incidence regular. There is no canonical tournament orientation on these
+translates: the faithful finite object is a block-incidence hypergraph, in
+fact a uniform `1`-design under the transitive action. Score histograms,
+cycles, SCCs, edge flips, and Hamiltonian-path counts would discard the only
+load-bearing data, namely uniform root incidence and the conserved subset sum.
 
 The carrier
 

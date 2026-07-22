@@ -295,9 +295,9 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 Package THM-2022 for publication and sharpen THM-2111's compound degree from
 the binomial bound toward the conjecturally sharp `M+N`; the current result is
 already a paper-level removal of the external DvdK dependency. Formalization
-of general complex `DvdK1` is a separate endpoint. Root-imported modules prove the positive-coefficient,
-two-charge, and HYP-8930 fixed-support unique-channel leaves. The last mechanism is
-substantive: one unique balanced composition leaves one nonzero monomial.
+of general complex `DvdK1` is separate: reciprocal-monic Hensel now constructs
+each ramified small root, while branch products, analytic continuation, and the wrapper remain.
+Positive/two-charge/unique-channel formal leaves are substantive, not general.
 But HYP-8931's `LowestFaceUniqueChannel P` class is inconsistent by the empty
 level-set witness `lambda=0, delta=-1, F=empty` (MISTAKE-240), so its
 kernel-checked implication is vacuous and not wired into NC2. Its `98/116`
@@ -415,9 +415,9 @@ into tournament operation laws and LRC residue packets.
 - **Planar source fibers:** THM-2063 and THM-2071 close affine and quadratic
   pencil members. THM-2084/2110 raise the cubic non-tame reduced degree to
   `14`; THM-2118 proves the all-degree boundary-flux law and, with THM-2102,
-  closes the entire cubic source-fiber stratum. Every power-free positive-weight
-  leading face is triangular. The next source-fiber degree is four; general
-  proper-power resonant descent remains open.
+  closes the entire cubic source-fiber stratum. THM-2127 also closes exact
+  coprime two-face trains and affine-root proper-power families. The next
+  source-fiber degree is four; general proper-power descent remains open.
 - MISTAKE-228/229 block the old atlas and NC2/GMC chain. `JC(2)` and `DC(2)`
   remain open; these are source-fiber gates, not generic cover-degree results.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer

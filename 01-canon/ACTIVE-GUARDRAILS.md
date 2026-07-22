@@ -115,7 +115,7 @@
      corollary requires `F(u^k)=0` for every nonzero charge, not merely a
      functional described informally as depending on charge.
 36a. **Require dependency-aware builds.** THM-2101's first module had `sorryAx`;
-     its repaired core builds, but both paper routes still need Lean wrappers (MISTAKE-243).
+     its repaired core and reciprocal-root module build, but both additive paper routes still need Lean wrappers (MISTAKE-243).
 36b. **A Newton-face Wronskian is not DvdK.** MISTAKE-244/THM-2102: retain the
      proper-power first-defect quotient; a collapsed linear edge polynomial is
      not automatically a weighted-linear coordinate or a terminating descent.

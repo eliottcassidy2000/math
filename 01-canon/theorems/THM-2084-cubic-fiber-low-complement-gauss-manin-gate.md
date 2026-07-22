@@ -61,6 +61,10 @@ The last implication uses THM-2063 at `mu=1` and THM-2071, applied with the
 two components interchanged, at `mu=2`.  The new content is the exact cubic
 connection and the exclusions of `4,5,7,8,10,11`.
 
+THM-2118 later proves the all-degree boundary coprimality and closes the
+entire cubic source-fiber stratum. This record remains the finite-degree
+Gauss--Manin/Faber derivation on which that closure builds.
+
 ## 2. The cube gate and depressed cubic
 
 Choose `H` attaining (1), replace `Q` by `Q-H(P)`, and write

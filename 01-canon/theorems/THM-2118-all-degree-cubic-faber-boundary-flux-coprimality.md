@@ -23,6 +23,10 @@ script: 04-computation/jc2_cubic_faber_boundary_flux_coprimality_codex_20260722.
 output: 05-knowledge/results/jc2_cubic_faber_boundary_flux_coprimality_codex_20260722.out
 script_sha256: a4b4ae5243c8c693c4264929b0b6e77be91ac80a5660bf99ed61a12260c71e85
 output_sha256: 0018a5b61aa5ab99ccd8cada63b46bcccf76303f39b2127516795fa7072598a2
+independent_script: 04-computation/jc2_cubic_faber_boundary_flux_coprimality_independent_codex_20260722.py
+independent_output: 05-knowledge/results/jc2_cubic_faber_boundary_flux_coprimality_independent_codex_20260722.out
+independent_script_sha256: 55ff6c1b9f0ab07ab5494bcf12dae504e7b16a46baf55896d2e0415294c597bd
+independent_output_sha256: 25aa71b00607d8500f491e256b0f8adc9009714a6ffbea7576c59947cc3eb8a7
 hash_basis: repository blobs with LF line endings
 ---
 
@@ -424,6 +428,8 @@ D=h^3+ph+q                                             (20)
 ```
 
 is polynomial, put `rho=-v(p)` and split into three exhaustive regimes.
+If `p=0`, use the convention `rho=-infinity`, which belongs to the second
+regime.
 
 ### 8.1. The regime `rho>2H`
 
@@ -444,7 +450,9 @@ is nonzero because `m/3` is not an integer. Its order is
 ```
 
 At `m=n` this strictly exceeds every lower Faber order. Hence `Phi` has a
-pole, contradicting its constancy in (19).
+pole, contradicting its constancy in (19). For the nearest possible lower
+index, the gap is `H` when `n` is even and `rho-H>0` when `n` is odd; all
+smaller indices have still smaller order.
 
 ### 8.2. The regime `rho<2H`
 
@@ -463,11 +471,15 @@ the polynomiality of the original reduced mate at `y=0`.
 
 ### 8.3. The balanced regime `rho=2H`
 
-For suitable nonzero leading coefficients,
+After normalizing by the leading coefficient of `h`, the residue-field
+leading ratios have the form
 
 ```text
-p~a h^2,                         q~-(1+a)h^3.           (24)
+p/h^2 -> a,                       q/h^3 -> -(1+a).       (24)
 ```
+
+Here `a!=0`, while `a=-1` is allowed (then the leading `h^3` coefficient of
+`q` vanishes).
 
 The unique top orders in polynomiality of `Q(x,0)` and constancy of `Phi`
 respectively force
@@ -563,8 +575,9 @@ coefficient makes `c(x)` a nonzero constant, while the absent `z^2`
 coefficient gives `r(x)=0`. Then `lambda H^3` is a scalar multiple of
 `z^3`, contradicting (35).
 
-THM-2102 now makes `P` triangular and the Keller pair a polynomial
-automorphism. This proves the cubic source-fiber theorem.
+After rescaling the mate so that its Jacobian is one, THM-2102 now makes `P`
+triangular and the Keller pair a polynomial automorphism. This proves the
+cubic source-fiber theorem.
 
 The all-degree upper-Newton primitive problem from THM-2084 remains a valid
 question about arbitrary Faber combinations, but it is no longer required to
@@ -572,16 +585,20 @@ close the cubic Keller stratum: the polynomial depressed cubic exposes a
 power-free positive-weight face first. The next unresolved source-fiber
 degree is four. `JC(2)` and `DC(2)` remain open. QED.
 
-## 11. Exact referee and validity boundary
+## 11. Two exact referees and validity boundary
 
-The companion is exactly the referee described in Section 6: over rational
+The primary companion is the referee described in Section 6: over rational
 polynomial rings it checks the translated formulas, differential identities,
 singular values, and gcd through `n=80`, with an independent `Fraction` gcd
-census through `n=200`. It does **not** computationally certify the valuation
-splits or the power-free-face application in Sections 8--10; those are
-all-degree paper arguments. Its validations use Python `assert`, so only the
-ordinary run is evidentiary; an optimized transcript is not an independent
-check.
+census through `n=200`. It uses Python `assert`, so only its ordinary run is
+evidentiary.
+
+The independently written companion named in `independent_script` reconstructs
+the original Faber sums through `n=80`, checks the first-order identity, ODE,
+gcd, degree-thirteen resultant, excluded degrees, all valuation coefficients,
+and representative power-free faces. It uses explicit exceptions; normal and
+optimized runs both match its frozen output. Neither finite sweep proves the
+all-degree valuation splits or power-free-face step: Sections 7--10 do.
 
 There is no intrinsic binary relation in this argument: the faithful carrier
 is the ordered coefficient/valuation filtration `(n;H;rho;e_n;phi_n;R_n)`.

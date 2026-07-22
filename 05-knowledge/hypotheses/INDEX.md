@@ -2,6 +2,8 @@
 > outrank hypotheses. Older entries remain in
 > [INDEX-HISTORICAL-THROUGH-2026-07-21.md](INDEX-HISTORICAL-THROUGH-2026-07-21.md).
 
+- **HYP-8960 / death-star-2026-07-22-S111 (RECIPROCAL-MONIC REPAIR, kernel-pure):** `GMC2Henselian` proves `F⟦s⟧` Henselian and lifts roots of units. Root-imported `GMC2ReciprocalSmallRoots` monicizes the genuine-degree reverse and now proves the concrete specialization: if `M<deg R`, `R(0)≠0`, `a^M=R(0)`, `a≠0`, and the characteristic does not divide `M`, then `Z^M-R(sZ)` has a power-series root reducing to `a`. All public theorems use only `[propext, Classical.choice, Quot.sound]`. This bypasses both the self-referential fixed-point proposal and unavailable degree-dropping factorization. Enumerating all branches and proving their product/Wiener--Hopf identity remain open on historical THM-1550; paper-proved THM-2101 bypasses that product, but Lean still lacks analytic block continuation and the final concrete `DvdK1` wrapper.
+- **HYP-8946 / boxeph-2026-07-22-S234 (ALGEBRAIC CORE COMPLETE; LOCAL ROUTE SUPERSEDED):** `GMC2PhiIrreducible.phi_irreducible_ratfunc` kernel-checks `X^M-tR(X)` over `F(t)` and supplies transitivity. Its original Hensel plan listed a missing local-ring instance and degree-dropping factorization; HYP-8960 now bypasses both by reciprocal monicization and directly constructs every chosen ramified root. Only branch enumeration/product descent and the Wiener--Hopf identity remain on historical THM-1550; neither is needed by THM-2101's additive paper proofs.
 # Current Hypothesis and Frontier Routing
 
 A hypothesis is unresolved unless a proved leaf is named explicitly. Search
@@ -11,8 +13,9 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
 
 - **HYP-8946:** `X^M-tR` irreducibility over `F(t)` is kernel-checked and used
   by THM-2101; degree-dropping Hensel factorization is now optional.
-- **HYP-8960:** the Henselian-local-ring and monic unit-root lemmas are checked;
-  its fixed-point and Wiener--Hopf product steps remain open.
+- **HYP-8960:** reciprocal monicization now constructs each root of
+  `Z^M-R(sZ)` from a simple nonzero residue root. Simultaneous branch/product
+  control and the Wiener--Hopf identity remain open.
 - **THM-2101:** strict two-sided DvdK has two product-free paper proofs,
   monodromy and one transcendental specialization. Their contour/monodromy,
   splitting-lift, and final `DvdK1` wrappers remain Lean assembly.
@@ -38,10 +41,10 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
   emptiness forces exact affine carriers through denominator fourteen.
 - **THM-2114/2115 (PROVED):** finite-ring needles force `13`- and `11`-content
   blockers; a joint Toeplitz certificate closes a row missed by scalar clocks.
-- **THM-2116/2120/2122/2123/2125 (PROVED):** a rank-eight cover needs a guard
+- **THM-2116/2120/2122/2123/2124/2125 (PROVED):** a rank-eight cover needs a guard
   `13`-blocker or at least five nonblocker terminals projectively parallel to
-  the guard modulo thirteen. THM-2124 is RESERVED while its seven-pencil proof
-  is audited; it is not yet canon.
+  the guard modulo thirteen. In the no-terminal-blocker guard lane, THM-2124
+  forces direction partition `(8)` or `(7,1)`; moving offsets remain live.
 - **THM-2117/2121 (PROVED):** clocks, the maximum Hunter tree, and all scalar
   minors can miss an open safe cell; every strict safe cell has a full
   Toeplitz/Fejer certificate of order at most `14nV^2+1`. Boundary-only points
@@ -54,10 +57,11 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
 - **THM-2101/2111 (PROVED PAPER):** additive DvdK avoids root products; the
   effective first return is a compound-determinant order at most
   `binom(M+N,min(M,N))`. Sharpening and Lean assembly are separate.
-- **THM-2102/2110/2113/2118 (PROVED planar-JC strata):** degree `13` is
+- **THM-2102/2110/2113/2118/2127 (PROVED planar-JC strata):** degree `13` is
   impossible, power-free positive-weight faces are triangular, and the
-  all-degree Faber law closes the entire cubic source-fiber stratum. The next
-  source-fiber degree is four; none proves JC(2).
+  all-degree Faber law closes every cubic source fiber. Exact coprime two-face
+  and affine-root proper-power families also close. Quartic and the general
+  proper-power case remain; none proves JC(2).
 
 ## LRC(14) — OPEN
 
@@ -80,22 +84,24 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
   THM-2101 two independent additive proofs, and THM-2067 the historical route.
 - **Formal / HYP-8942:** `HeightWitnessSupplier`, orbit-product,
   irreducibility, additive incidence, and full-root Lagrange identities are
-  root-imported. General complex `DvdK1` is the sole endpoint premise; analytic
-  wrappers remain.
+  root-imported; reciprocal monicization also constructs each ramified small
+  root. General complex `DvdK1` is the sole endpoint premise; analytic wrappers remain.
 - **HYP-8925/HYP-8930:** positive coefficients and a fixed-support unique
   channel prevent cancellation; neither is general `DvdK1`.
 - **HYP-8932:** monomial membership gives nonvanishing; `{-2,-1,1,2}` is
   kernel-checked. `102/116` is bounded evidence with thirteen script-only rows.
 - **HYP-8931 (MISTAKE-240):** its empty-face predicate makes the bypass vacuous.
-- **HYP-8935 (MISTAKE-241):** floating root asymptotics do not prove formal-log,
-  Hensel, or local/global root selection; the checked algebraic core survives.
+- **HYP-8935 (MISTAKE-241):** reciprocal-monic Hensel now lifts individual
+  roots concretely; branch products, analytic block transport, and the
+  `DvdK1` wrapper remain.
 
 ## Other active lenses
 
 - **HYP-8950 (OPEN JC SYNTHESIS):** Hamiltonian cokernel/fiber cohomology
   realizes weight and face obstructions; local-to-global termination remains.
-- **HYP-8955 (CORRECTED BY THM-2102/2113):** power-free faces close, but
-  repeated proper-power resonance and all-order descent remain open.
+- **HYP-8955 (CORRECTED BY THM-2102/2113/2127):** power-free faces, exact
+  coprime two-face trains, and affine-root families close; general repeated
+  proper-power descent remains open.
 - **HYP-8945 (OPEN UNIT-DISTANCE ROUTE):** the sign-changing Bessel kernel
   identifies cancellation, not a new asymptotic bound.
 - **Cross-domain incidence lesson:** HYP-2448's full barycentric root packet is

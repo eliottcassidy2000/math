@@ -741,3 +741,5 @@ import TournamentH7.GMC2OrbitProduct
 import TournamentH7.GMC2RatFuncClosing
 import TournamentH7.GMC2PhiIrreducible
 import TournamentH7.GMC2LaurentShiftCheckA
+import TournamentH7.GMC2Henselian
+import TournamentH7.GMC2ReciprocalSmallRoots

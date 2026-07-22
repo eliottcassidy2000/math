@@ -1,0 +1,8 @@
+translated Faber boundary/flux formulas: 54 degrees through n=80 PASS
+first-order identity and hypergeometric ODE: 54 degrees PASS
+exact coprimality and singular-point controls: 54 degrees PASS
+uniform valuation and parity coefficients: 54 degrees PASS
+degree-thirteen primitive resultant: -7856816824690792659 PASS
+excluded 3-divisible common-zero boundary: n=3,6,9,12,15 PASS
+depressed-cubic power-free faces and proper-cube hostile control: PASS
+RESULT: PASS

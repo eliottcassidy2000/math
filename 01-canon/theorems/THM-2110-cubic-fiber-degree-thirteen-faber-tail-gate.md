@@ -18,6 +18,7 @@ depends_on:
 related:
   - THM-2063
   - THM-2071
+  - THM-2118
   - MISTAKE-229
 script: 04-computation/jc2_cubic_fiber_degree13_tail_gate_codex_20260722.py
 output: 05-knowledge/results/jc2_cubic_fiber_degree13_tail_gate_codex_20260722.out
@@ -50,6 +51,10 @@ Consequently, if the pair is non-tame, then
 ```text
 mu >= 14.                                                   (3)
 ```
+
+THM-2118 later closes every remaining degree in this cubic source-fiber
+stratum. The adjacent-tail lemma below remains an independent all-degree
+primitive noncollision used in the historical route.
 
 The new structural input is the following all-degree fact.  For `3` not
 dividing `n`, put
@@ -295,18 +300,19 @@ thirteen.  Combining that theorem with (2) proves (3).
 
 ## 7. Scope and surviving frontier
 
-This theorem closes one more **source-fiber degree**, not a generic mapping
-degree.  The cubic source-fiber stratum remains open, beginning at reduced
-degree fourteen.  The adjacent-tail lemma settles the top primitive
-noncollision for every degree prime to three, but two other effects remain:
+This theorem closed one more **source-fiber degree**, not a generic mapping
+degree. At the time, the cubic stratum remained open from reduced degree
+fourteen. THM-2118 later closes it by an all-degree boundary law, uniform
+finite-pole cleanup, and THM-2102's power-free face. The adjacent-tail lemma
+here remains independently useful, while its original route still exposed:
 
 1. at a centering pole one needs the different pair
    `E_n(1;a,-1-a), Phi_n(a,-1-a)`;
 2. for even top degree, a lower Faber representative can join a different
    upper Newton edge, so the top pair alone does not control every branch.
 
-Those losses explain exactly why (5) is structural progress without being an
-all-degree cubic closure.  No claim about generic cover degree, Jelonek curves,
+Those losses explain why (5) alone was structural progress rather than an
+all-degree closure. No claim about generic cover degree, Jelonek curves,
 DC(2), or full `JC(2)` is made.
 
 ## 8. Exact referee
