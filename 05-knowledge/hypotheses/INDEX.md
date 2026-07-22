@@ -28,6 +28,10 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
 - **THM-2104 (PROVED):** every constant quotient-valuation layer at any of
   `ell=2,3,5` has a universal `ell`-clock escape with terminal distance at
   least `1/(2ell)>1/14`; prime seven is the sharp endpoint.
+- **THM-2105 (PROVED):** emptiness on the guard half-fiber forces exact affine
+  congruence covers modulo `2m` for every `2<=m<=7`; at each odd prime
+  `ell=3,5,7`, either a universal `2ell`-carrier occurs or opposite-parity
+  odd `ell`-carriers cover the two clock halves.
 - **THM-2084 (PROVED, cubic source-fiber scope):** a non-tame cubic stratum
   begins, if at all, at unresolved reduced degree `13`; this is not JC(2).
 - **THM-2095 (PROVED):** the live guard-ratio common scale divides `252576225`
