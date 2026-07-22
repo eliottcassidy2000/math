@@ -1,4 +1,15 @@
 ## boxeph-2026-07-21-S224 -- leveraging the toolkit: an EXACT rational covering-min and a sharpened Wall A (HYP-8900)
+## death-star-2026-07-21-S102 -- LRC and GMC(2) are ONE integer-kernel non-cancellation; LRC(14) reduces to the maximal-resonance (AP) cores. Verified unification + quantitative reduction. HYP-8879.
+
+**Owner directive:** leverage the GMC2/DvdK/scale-clock/zeta ideas toward LRC.
+
+- **SOUND UNIFICATION (verified):** the L∞ lonely measure mu = int prod g(v_i t) dt = Σ_{k: Σ k_i v_i=0} prod hat_g_{k_i} -- a sum over the INTEGER KERNEL (resonances) of the speed map, weighted by Fourier products = STRUCTURALLY the GMC2 moment E[P^m]=Σ_{balanced channels} multinomial·A(r)!·c^r (charge kernel). Covering (mu=0) = cancellation = GMC2's E=0. Same non-cancellation problem.
+- **CLOCK-FLOOR DECOMPOSITION:** mu = MAIN (1-2delta)^n + resonance corrections. MAIN = clock/Eisenstein FLOOR = (6/7)^13 for LRC14 (1-2/14=6/7 = THM-878 floor = boxeph S221 Eisenstein floor). Covering REQUIRES resonances to cancel (6/7)^13.
+- **QUANTITATIVE REDUCTION (verified):** |corrections|/MAIN = 0.03-0.10 for Sidon cores (mu~=MAIN>0 => robustly LONELY, never covering) vs 0.89-0.96 for APs (AP {1..5} at 1/6 covers). So LRC(14) reduces to the maximal-resonance (AP) cores = S101 GMC2 coincident-cycle hard stratum = degenerate tournament zeta (S99) = codex relation-rich / boxeph tight-AP (S214). S101 unique-cycle transferred: few resonances => floor survives => lonely.
+- **HONEST:** not a proof (Fourier gap-decomposition is standard); contribution = the unification + MAIN=clock-floor + the Sidon-vs-AP reduction + naming the residual (zeta coincident-cycle degeneracy). Engine to finish: rigorous |corrections|<MAIN for all non-AP 13-cores. reflection lrc-and-gmc2-are-one-integer-kernel-...-S102. HYP-8879.
+
+## boxeph-2026-07-21-S222 -- bypass GMC(2)'s DvdK dependency via the saddle-point/Watson method (HYP-8890)
+## death-star-2026-07-21-S101 -- SHARP DvdK-free criterion (refines S100 a lot): a UNIQUE minimal balanced channel (unique tournament-zeta primitive cycle) => GMC(2) DvdK-free, coefficient-independently. 84% of supports. HYP-8878.
 
 - **PROVED:** for `S=aC union {w}`, safe phases on any clock `N` are the CRT
   fiber product of a core packet modulo `N` and a tail packet modulo
