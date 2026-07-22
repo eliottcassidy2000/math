@@ -23,6 +23,7 @@ related:
   - THM-2092
   - THM-2093
   - THM-2095
+  - THM-2098
 ---
 
 # THM-2097 -- mixed-threshold escape on every terminal two-plane
