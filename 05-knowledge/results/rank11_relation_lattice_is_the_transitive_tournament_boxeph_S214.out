@@ -1,0 +1,49 @@
+
+========================================================================
+P1  L(AP) rank-11; tridiagonal Gram = PATH/Jacobi; the 11 basis vectors = adjacent-pair relations
+========================================================================
+  all 11 basis vectors satisfy sum i*a_i = 0 (in the kernel)? True
+  Gram matrix TRIDIAGONAL (a weighted path / Jacobi matrix)? True
+  diagonal G[k,k] = k^2+(k+1)^2 : [5, 13, 25, 41, 61, 85, 113, 145, 181, 221, 265]
+  off-diagonal G[k,k+1] = -k(k+2): [-3, -8, -15, -24, -35, -48, -63, -80, -99, -120]
+  the 11 basis relations d_k live on ADJACENT coordinates (k,k+1) only: True
+  => the 11 'private-coordinate' relations are the 11 covering edges of the linear order 1<2<..<12
+     = the transitive tournament's Hasse spine; the Gram path = the three-term (Jacobi) backbone.
+
+========================================================================
+P2  minimal vectors of L(AP) = additive triples; kissing number = additive energy (AP maximizes)
+========================================================================
+  minimal norm = 3; #minimal vectors (kissing number) = 60
+  #additive triples (i,j,i+j), i<=j, i+j<=12 = 30  (kissing = 2 * this = 60)
+  minimal vectors ARE the (+-)(1@i,1@j,-1@i+j) additive triples? True
+  => kissing number = 2*(#additive triples) = additive energy (S211 CT-moment); AP maximizes it.
+
+========================================================================
+P3  the 12 AP speeds ARE the transitive tournament T_12 (rank-11 braid A_11, char x^12)
+========================================================================
+  score sequence of transitive T_12: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]  = AP {0..11}? True
+  transitive adjacency is nilpotent (A^12=0 => char_A = x^12, the reify-ladder NULLCONE VERTEX)? True
+  transitivity Vandermonde prod_{i<j}(j-i) over 1..12 (braid A_11, rank 11) nonzero? True
+  => rank 11 = (12 vertices - 1) = rank(A_11 braid) = rank(L(AP)) : ONE rank-11 nullcone vertex.
+
+========================================================================
+P4  CHIRALITY: {1..12} is PALINDROMIC (v_i+v_{13-i}=13) => SELF-CONVERSE = ACHIRAL fixed point (S213)
+========================================================================
+  v_i + v_{13-i} = [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13] (all = 13)? True
+  reversal i->13-i maps the AP to itself => the AP is SELF-CONVERSE = the ACHIRAL fixed point of the
+  chirality involution (S213 toothpick seed / self-converse tournament). And pair-sums v_i+v_{13-i}=13
+  feed codex THM-2047's pair-sum wall q | v_i+v_j (t* denominator ~ 13).
+
+========================================================================
+SUMMARY
+========================================================================
+  Through 'relations = tournament' glasses the 12 AP speeds {1..12} ARE the transitive tournament T_12:
+   * its 11 covering (adjacent-pair) relations = the 11 basis vectors of the RANK-11 relation lattice L(AP),
+     whose Gram matrix is a tridiagonal PATH / Jacobi (three-term) matrix -- the '11 private-coordinate relations';
+   * its long-range additive triples = the minimal lattice vectors = kissing number = additive energy (S211),
+     which the AP uniquely maximizes (Wall A / reify-ladder extremality);
+   * it is the rank-11 nullcone vertex (char_A=x^12, braid A_11) of THM-1750;
+   * it is PALINDROMIC = SELF-CONVERSE = the ACHIRAL fixed point of the reversal involution (S213).
+  So Wall A = 'the rank-11 achiral transitive vertex is the unique extremal relation structure' -- exactly the
+  reify-ladder / chirality statement. Incoming codex relation-rank descent descends toward this rank-11 vertex;
+  my Euler/chirality side (S212/S213) says it is the achiral fixed point. Rank-or-Euler = two faces of it.
