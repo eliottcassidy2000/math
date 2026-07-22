@@ -1,0 +1,35 @@
+LRC14 SIX-PLUS-ONE UNIT-ANNULUS DEPTH-4 CERTIFICATE
+arithmetic: exact integers only; no floats; no assert dependence
+floor_sum hostile definition checks: 512/512
+
+mod 169 base certificate
+  universe=110 sign_classes=78
+  mask_size_histogram=((0, 2), (8, 1), (12, 3), (16, 21), (18, 40), (20, 11))
+  pair_intersection_histogram=((0, 632), (2, 1508), (4, 613), (6, 148), (8, 58), (10, 44))
+  smallest_component_size seeds admissible_completions max_union witness
+    1: 72 2172 96 (16, 17, 30, 31, 46, 61)
+    2: 345 35 92 (31, 46, 16, 30, 47, 61)
+    3: 608 0 0 ()
+  connected size-20/all-edge-2 exceptional packets: 0 of 462
+  independent branch_bound: nodes=95680 leaves=407 prunes=87118 max_union=96
+  maximizing labels=(14, 19, 27, 29, 63, 77)
+  uncovered residues=(28, 30, 34, 40, 42, 74, 77, 92, 95, 127, 129, 135, 139, 141)
+  positive nine-mask cover=(3, 4, 5, 7, 8, 11, 18, 75, 76)
+
+unit-annulus exhaustive floor-sum census
+  m N |U_N| sign_classes max maximizers second runners_up direct_checks
+  2 169 110 78 20 (5, 6, 14, 17, 19, 27, 41, 46, 58, 75, 82) 18 (4, 7, 11, 12, 16, 18, 20, 21, 22, 23, 24, 25, 29, 30, 31, 32, 33, 36, 38, 40, 44, 47, 48, 50, 51, 53, 54, 55, 60, 61, 63, 64, 66, 69, 71, 72, 76, 77, 79, 81) 78
+  3 2197 1450 1014 240 (6, 183) 236 (799,) 1014
+  4 28561 18830 13182 3140 (6, 2380) 3084 (5193,) 20
+  5 371293 244810 171366 40800 (6, 30941) 40058 (33754,) 20
+
+capacity consequences
+  m=2: exact maximum union 96 < 110
+  m=3: 6*240 = 1440 < 1450
+  m=4: nonmax sum <= 18784 < 18830; max-mask union = 5758
+  m=5: 6*40800 = 244800 < 244810
+CONCLUSION: v_13(v) in {0,1,2,3} is impossible; hence 13^4 divides v.
+
+reproduce:
+  python3 04-computation/lrc14_six_plus_one_unit_annulus_depth4_codex_20260722.py
+  python3 -O 04-computation/lrc14_six_plus_one_unit_annulus_depth4_codex_20260722.py
