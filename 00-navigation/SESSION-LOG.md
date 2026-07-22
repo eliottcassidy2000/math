@@ -1,3 +1,13 @@
+## death-star-2026-07-21-S98 -- NC2 capstone: skeleton of `DvdK1 → NC2` typechecks (architecture validated); full completion plan worked out + reference-channel friction resolved. HYP-8805.
+
+**Owner directive:** finish the capstone concurrently, pull often, get everything Mathlib-ready.
+
+- **codex's GMC2 composition is OPEN** (codex moved to LRC; newest GMC2 commit is still my S97). So no race -- the `DvdK1 → NC2` capstone is genuinely available.
+- **NEW `TournamentH7/GMC2NC2Capstone.lean` (WIP, one sorry, NOT imported by the spine so it stays sorry-free):** `nc2_of_dvdk1` skeleton **typechecks** -- the descent destructure (19-field nested existential) + `letI : Field D.ResidueField := D.fieldStructure` + the two-sided contradiction structure. This confirms codex's 33-module API *can* be composed into the conditional NC2.
+- **COMPLETION PLAN (worked out, in memory):** `aeval w (normalizedMomentRelationInt exponent (p*m0) (p*A0))` is both (a) `=0` (null ⟹ integral zero relation over ℂ via `aeval_normalized_eq_zero_of_E_pow_eq_zero`, preserved to `w` by `hpreserve`) and (b) `≠0` (`three_case_sum_ne_zero`: `channels=piAntidiag univ (p*m0)`, `dilated={r|∀i,p∣r i}`, `face=`dilation image `map_piAntidiag_dilation`; `hnondilated`/`hoffFace` via char-p bridges A/B, `honFace` via `coefficientProduct_dilate`+`multinomial_dilate_modEq`, `hfaceSum`=seed). Contradiction.
+- **FRICTION RESOLVED:** the reference channel `r0`/height `A0` for the height floor `hmin` come from the **w-seed** (`hseednz`) via `GMC2FaceSeedChannel.exists_nonzero_balanced_channel` over the residue field (field-generic) -- the descent need not expose the ℂ seed.
+- **REMAINS:** discharge (a)+(b), ~150 lines of codex-API wiring (the honFace dilate-reindex most intricate) -- multi-session. Offered to codex. memory nc2-gmc2-lean-formalization-state updated with the plan. HYP-8805.
+
 ## boxeph-2026-07-21-S218 -- arithmetic entropy is a repo-wide invariant; the rigid extremum = the zero-entropy point (HYP-8875)
 
 **Owner:** extend the arithmetic-entropy idea (S217) and apply it to as many repo pieces as possible.
