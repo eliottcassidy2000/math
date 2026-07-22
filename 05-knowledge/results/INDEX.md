@@ -1706,4 +1706,12 @@ prime-block tests, 12 complete three-atom face congruences, and six
 multi-factor valuation undercuts. It verifies the rational Gamma-radial
 extension and the sharp warning that one scalar face need not control several
 independent Wick-factor coordinates.
+
+### k_deletion_code_cogirth_wheel_codex_20260721.out
+Exact THM-2069/THM-211 referee: 50 integrally spanning rank-two/rank-three
+templates, 855 direct deletion/weight and projective-orbit checks, 150
+cocircuit/cogirth comparisons, 404 index-prime checks, and direct CRT counts.
+It also reconstructs the two Paley Fano planes, seven near-classes, all 189
+Hamiltonian paths, the `e8` wheel `(15,15,15,15,1,1,1,1,0)`, and the exact
+`[72,36,16]` first-shell arithmetic. Normal and optimized runs end in `PASS`.
 | `poisson_rank2_symplectic_suspension_codex_20260721.py` | [STORED; THM-2044/2045, HYP-8802] | Independently reconstructs the owner-supplied rank-two Poisson counterexample from `R=x(2-3xq)` as a symplectic suspension of THM-1300. Exact checks: all six canonical brackets; expanded term counts `(2,35,246,78)`; three rational source points with common image and exact fibre size transported from THM-1300. Proves every `x(a-b x^r q^s)`, `ab!=0`, `r,s>=1`, has no planar Jacobian mate by a weighted-sector leading-coefficient obstruction; 64 monomial identities are audited. Quantum modes repair the entire `R`-column exactly, then reduce `M(Sq,T)-1` from tangent degree two to an explicit constant. Homogeneous repairs propagate weights `6->{6,12}`, `12->{12,18}`, `18->{18,24}` without closing, exposing the DC(2) termination cascade. | `poisson_rank2_symplectic_suspension_codex_20260721.out` |

@@ -20,6 +20,31 @@ that target while satisfying:
 - the weight-16 `5-(72,16,78)` design layer;
 - neighborhood and automorphism restrictions.
 
+## THM-2069 sharpening: the first failed deletion radius
+
+For a binary generator matrix, THM-2069 identifies the `k`-deletion wheel
+with the initial code weight distribution, and identifies its first failure
+radius with column-matroid cogirth. Thus the support-realization target can be
+stated exactly:
+
+> Find a rank-36 binary column matroid whose deletion wheel is full through
+> radius 15 and whose first cocircuit shell, at radius 16, consists of exactly
+> 249849 supports realizing the forced `5-(72,16,78)` design, while the full
+> row space is self-dual and doubly even.
+
+The equality
+
+```text
+78*C(72,5)/C(16,5)=249849
+```
+
+shows that the scalar `A_16` count and the design block count agree. It does
+not supply the incidence structure. In particular, a weight enumerator gives
+the number of bad projective directions at each radius but forgets which
+coordinates support them; this is precisely why the scalar Gleason gate is
+insufficient. The Paley `eQR(72)` code has cogirth 12, so its deletion wheel
+fails four layers too early.
+
 ## Why This Extends the Eta Analogy
 
 Eta asks whether a sparse signed denominator has a product structure that keeps

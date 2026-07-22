@@ -145,27 +145,12 @@ structural supplier/seed and a lossless exit.
   `640690` primitive determinant failures, its arithmetic carrier has three
   leaves. THM-2059 makes arbitrary-`N` core/tail composition an exact CRT
   histogram dot product; its zero-mode split isolates disjoint-support zeros.
-  THM-2060/2064 prove sharp common-clock tail capacity and isolate the odd
-  dyadic seam. THM-2061 folds it; THM-2066's complementary owner-word bank
-  closes all `59,880` divisor-complete quotient cores through `24`, and
-  THM-2068 proves that `{25,26,27,28,32,33,34}` is a minimum sub-bank inside
-  the original `15..34` clock window. THM-2072 proves that no fixed finite
-  bank extends uniformly to unbounded cores. THM-2073 supplies the structural
-  replacement on the non-hereditarily-primitive lane: a divisor-complete
-  binary safe-child tower ending at a hereditarily primitive quotient core;
-  THM-2076's strict guard-capacity tax sharpens its depth from eight to five.
-  THM-2075 shows that doubling homeomorphically
-  conjugates every safe-set level to that terminal core: component/Euler data
-  are invariant, lengths halve, addresses are constant per component, and
-  every endpoint retains a terminal-core owner. THM-2078 then closes every
-  nontrivial tower with terminal maximum at most `24`, even when the original
-  seam core is unbounded. MISTAKE-230 blocks a false shortcut: the empty
-  full-row safe set does not homeomorphically descend, because the two
-  original tails form a zero-safe-child outer step; only the nonempty core
-  safe sets are conjugate down the tower. THM-2079 gives the correct symmetry:
-  terminal components pair under reversal, their depth-`r` addresses are
-  `a` and `2^r-1-a`, and each odd tail flips its owner bit, so the outer cover
-  is equivariant rather than obstructed.
+  THM-2060/2064 isolate the odd dyadic seam; THM-2061 folds it; THM-2066 closes
+  `59,880` cores through `24`; THM-2068 proves the minimum bank; THM-2072 rules
+  out a fixed uniform bank; THM-2073/2076 give a depth-at-most-five safe-child
+  tower. THM-2075 preserves nonempty-core component/Euler/owner data; THM-2078
+  closes terminal maximum `<=24`. MISTAKE-230 forbids descending the empty full
+  row across zero-child tails; THM-2079 pairs addresses `a,2^r-1-a` and flips owner bits.
   THM-2062 adds the hereditary wheel; THM-2065 makes circuit-free residuals finite.
 - **PROVED relative whole-product decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says bounded scalar relations must lift to vector-character relations. Two
@@ -278,23 +263,17 @@ name the LRC predicate it preserves and the coordinate a sidecar must restore.
 - **REFUTED for higher dimensions:** explicit GMC(3) counterexamples now exist;
   GMC is false for every dimension at least 3. See the current external preprint
   entry in [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md).
-- **FORMALIZATION PARTIAL:** normalized residue, support-face transport, and
-  finite-field contradiction are checked. `GMC2NC2` derives NC2/GMC(2) from
-  `DvdK1` plus `HeightWitnessSupplier`; the checked extractor/height theorem
-  needs a budget-safe wrapper. The Lean proposition `DvdK1` remains an
-  explicit unformalized interface, but the paper proof no longer depends on
-  the external DvdK theorem: [THM-2067](../01-canon/theorems/THM-2067-galois-orbit-product-closes-one-variable-dvdk.md)
-  proves exactly the required one-variable existence statement internally.
+- **FORMALIZATION PARTIAL:** normalized residue, face transport, and finite-field
+  contradiction are checked. `GMC2NC2` uses the still-unformalized `DvdK1` and
+  `HeightWitnessSupplier`; the extractor needs a budget-safe wrapper. On paper,
+  [THM-2067](../01-canon/theorems/THM-2067-galois-orbit-product-closes-one-variable-dvdk.md) proves the required one-variable statement internally.
 
 ### Why THM-2022 works
 
-For a fixed exact support, algebraic torus descent reduces a hypothetical
-complex null point to a number field. The lowest balanced Wick face has a
-nonzero complete constant term by THM-2067's Galois-orbit product theorem. At
-a good prime, Kummer kills non-dilated channels, strict face height
-kills dilated off-face channels, and Lucas plus Frobenius leaves the full face
-residue `Q^p`. The success is **whole-layer preservation**, not atomwise
-separation.
+For fixed support, torus descent reduces a complex null point to a number
+field. THM-2067 makes the lowest balanced Wick face nonzero. At a good prime,
+Kummer kills non-dilated channels, strict height kills dilated off-face terms,
+and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 
 ### Boundaries and repaired bridges
 
@@ -314,10 +293,9 @@ separation.
   repetition is not tournament score repetition; and no global
   de-factorialization exists.
 - [THM-2070](../01-canon/theorems/THM-2070-horizontal-wick-embedding-and-dihedral-return-cancellation.md)
-  shows that every one-variable Laurent polynomial already occurs as one
-  horizontal Wick face. Its aperiodic dihedral control has a cofinite support
-  return set but infinitely many zero constant terms, refuting the S222/S223
-  saddle-uniqueness and numerical-semigroup cancellation shortcuts.
+  embeds every Laurent polynomial as a horizontal face; its aperiodic dihedral
+  control has cofinite returns but infinitely many zero constant terms, killing
+  the S222/S223 saddle and semigroup shortcuts.
 
 ### Live work
 
@@ -464,13 +442,9 @@ The most reusable current bridges are not literal object identifications:
 | One-sided accumulation | LRC spectrum | Can qualitative isolation be made effective by finite state/pinning data? |
 | Support Dirichlet profile | integer sequences | Do tournament/LRC census supports have functional or automatic structure? |
 
-HYP-8810's new “JC(2) and LRC(14) share AP-rigidity” reflection is a useful
-**wildcard frame, not a proved common reduction**. The LRC side has the precise
-one-way THM-1017 supplier. The claimed planar-JC continued-fraction/AP wall must
-still be stated as an exact theorem with a map and preserved predicate before
-the two residuals can be called identical. Its safe present use is as a prompt:
-compare how AP/transitive/one-sided extremals sit in different nullcones, and
-test where the functionals destroy the analogy.
+HYP-8810's “JC(2) and LRC(14) share AP-rigidity” is a **wildcard frame, not a
+proved reduction**. LRC has the one-way THM-1017 supplier; the planar-JC wall
+still needs an exact map and preserved predicate. Safely compare how AP,
+transitive, and one-sided extremals sit in different nullcones.
 
-A proposed bridge is mathematical only after it names its map, preserved
-predicate, information loss, sidecar, and a falsifying control.
+A bridge must name its map, preserved predicate, loss, sidecar, and hostile control.

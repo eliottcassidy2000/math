@@ -1,3 +1,8 @@
+> **CURRENT-TRUTH WARNING (2026-07-21):** This is chronological provenance,
+> not a status authority. Entries may be corrected after filing. Start with
+> [`START-HERE.md`](START-HERE.md), [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md),
+> and [`../01-canon/ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
+
 ## boxeph-2026-07-21-S227 -- doubling homeomorphism + mirror-parity (LRC reduction); full two-charge DvdK in Lean (HYP-8920)
 
 **Owner:** complete GMC(2) formalization; LRC math -- doubling as a continuous bijection + the unique safe-child condition.
@@ -35,6 +40,10 @@
   addresses `a` and `2^r-1-a`; inherited endpoint owners match, while each
   original odd tail flips its owner parity. This halves the address search
   but explains why mirror parity alone cannot contradict the outer cover.
+
+**SHARPENED REDUCTION (my contribution = S212 mirror-parity + codex THM-2073/2075):** a dyadic-seam disproof (S=2C ∪ {x,y}) has chi(G_{1/14})=0; chi doubling-invariant => terminal core also chi=0; chi even => needs chi=0 exactly. So Wall A (dyadic-seam case) <=> no hereditarily-primitive TERMINAL core has chi(G_{1/14})=0. Honest: full doubling 2-to-1 (chi doubles) vs per-sheet homeo (chi fixed); disproof chi=0 preserved either way.
+## boxeph-2026-07-21-S226 -- kernel-pure Lean proof of the two-charge DvdK seed (HYP-8915)
+**Owner:** work on completing the formalization of GMC(2).
 
 **GMC(2) LEAN:** extended GMC2DvdKTwoCharge.lean with exists_nonzero_ct_pair' (SWAP orientation, index 0 = -n charge). Both pair orientations + dvdk1_pair KERNEL-PURE ([propext, Classical.choice, Quot.sound]) -- the full single-character DvdK1, DvdK-premise-free (any injective straddling Fin 2->Z up to relabeling). General DvdK1 (>=3 charges) = codex THM-2067 (Galois orbit-product) + height package = remaining boundary.
 
