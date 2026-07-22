@@ -58,11 +58,16 @@ mistake.
     THM-2048 adds a quantized fiber-occupancy tax and the necessary integer
     inequality `6(vmu)^2+theta(1-theta)/7<=r_v^2/3`; it is a pruning
     certificate, not yet a universal proof.
+    THM-2051 proves every counterexample has a support-`2..5`, height-`2^20`
+    relation; it closes the dissociated branch, not the structured branch.
 14. **Complete local phase coordinates need not be global LRC carriers.**
     THM-2043 proves parity-Hasse completeness modulo 14, then gives infinitely
     many rows sharing the AP's full packet and every fixed finite 7-adic height
     prefix while admitting a strict `17/41` exit. Retain exact owner height or
     adaptive `(q,a,slack)` data.
+    THM-2050 goes further: complete piecewise-linear germs near every unit
+    phase `a/14` agree for two rows with maxima `1/14` and `1/12`. A local germ
+    needs a global first-exit/magnitude/gluing sidecar.
 
 13b. **The coarse BONF5 middle is now closed, but the higher-relation branch is
      not.** THM-2051 combines whole-product Fejer--BV approximation with

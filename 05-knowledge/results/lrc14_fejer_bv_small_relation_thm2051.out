@@ -1,0 +1,13 @@
+THM-2051 exact centered BONF5 audit
+H=1048576
+B5_equilibrium=2052/16807
+centered coefficient c_2=24/343
+centered coefficient c_3=-24/49
+centered coefficient c_4=-2/7
+centered coefficient c_5=-1
+finite lower bound for exp(14)=2116278281568097/1993723875>1048577
+Fejer BV epsilon<29/2097154
+telescoping factor=1477008/343
+total centered error<21416616/359661911
+strict BONF5 margin>1102265820/17623433639
+Conclusion: no support-2..5 relation with 0<|k_i|<=2^20 implies a strict lonely interval.

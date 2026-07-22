@@ -1,89 +1,53 @@
 
 ========================================================================
-P1  additive m-energy = CT[P^m Pbar^m] = ||P||_{2m}^{2m}  (verify vs direct tuple count)
+P1  Universal constant-term identity
 ========================================================================
-  S=[1, 2, 3, 4] m=2: CT[P^m Pbar^m]=44  direct tuple count=44  equal? True
-  S=[1, 2, 3, 4] m=3: CT[P^m Pbar^m]=580  direct tuple count=580  equal? True
-  S=[1, 2, 4, 8] m=2: CT[P^m Pbar^m]=28  direct tuple count=28  equal? True
-  S=[0, 1, 3, 7] m=3: CT[P^m Pbar^m]=286  direct tuple count=286  equal? True
-  => additive m-energy IS the CT-moment of P; CT is the angular half of GMC's E=L o CT.
+S=(1, 2, 3, 4), m=2: CT[P^m Pbar^m]=44=direct additive energy
+S=(1, 2, 4, 8), m=3: CT[P^m Pbar^m]=286=direct additive energy
+S=(0, 1, 3, 7), m=3: CT[P^m Pbar^m]=286=direct additive energy
+Survivor: the diagonal CT identity is exact; its relation support is affine (augmentation zero).
 
 ========================================================================
-P2  the shared SEED (THM-1840) is a CT statement: [u^0](a u^p + b u^{-q})^m single term
+P2  Finite AP-energy scout, with its actual scope
 ========================================================================
-  (p,q)=(1,1): first return m0=(p+q)/gcd=2; constant-term index set=[1] -> exactly 1 term (single, uncancellable)
-  (p,q)=(2,3): first return m0=(p+q)/gcd=5; constant-term index set=[3] -> exactly 1 term (single, uncancellable)
-  (p,q)=(3,5): first return m0=(p+q)/gcd=8; constant-term index set=[5] -> exactly 1 term (single, uncancellable)
-  (p,q)=(2,5): first return m0=(p+q)/gcd=7; constant-term index set=[5] -> exactly 1 term (single, uncancellable)
-  => the seed is [u^0] of a single character = a CT statement; shared by E, Laplacian, and sinc alike.
+N=8, k=5, m=2: best=85; AP maximizers=4/56 rows
+N=8, k=5, m=3: best=1751; AP maximizers=4/56 rows
+N=8, k=5, m=4: best=38165; AP maximizers=4/56 rows
+N=9, k=5, m=2: best=85; AP maximizers=6/126 rows
+N=9, k=5, m=3: best=1751; AP maximizers=6/126 rows
+N=9, k=5, m=4: best=38165; AP maximizers=6/126 rows
+N=10, k=6, m=2: best=146; AP maximizers=5/210 rows
+N=10, k=6, m=3: best=4332; AP maximizers=5/210 rows
+N=10, k=6, m=4: best=135954; AP maximizers=5/210 rows
+Scope: nine finite censuses, not an all-k or all-order AP theorem; THM-730 counts a+b=c instead.
 
 ========================================================================
-P3  WALL A as CT-moment extremality: the AP maximizes additive m-energy at ALL orders m
+P3  No-carry tensorization and the AP carry obstruction
 ========================================================================
-  N=8,k=5,m=2: max E_m=85; #maximizers=4; ALL maximizers are APs? True
-  N=8,k=5,m=3: max E_m=1751; #maximizers=4; ALL maximizers are APs? True
-  N=8,k=5,m=4: max E_m=38165; #maximizers=4; ALL maximizers are APs? True
-  N=9,k=5,m=2: max E_m=85; #maximizers=6; ALL maximizers are APs? True
-  N=9,k=5,m=3: max E_m=1751; #maximizers=6; ALL maximizers are APs? True
-  N=9,k=5,m=4: max E_m=38165; #maximizers=6; ALL maximizers are APs? True
-  N=10,k=6,m=2: max E_m=146; #maximizers=5; ALL maximizers are APs? True
-  N=10,k=6,m=3: max E_m=4332; #maximizers=5; ALL maximizers are APs? True
-  N=10,k=6,m=4: max E_m=135954; #maximizers=5; ALL maximizers are APs? True
-  => the AP is the JOINT-order additive-energy maximizer (S206's Wall A) -- verified m=2,3,4.
-     A non-AP disproof must PEEL higher-order energy from triple energy; none do here.
+no-carry scale 5: E2(S1+scale*S2)=836=E2(S1)E2(S2)
+target AP at carry scale 3: E2([0..11])=1156!=836=19*44
+Thus separated-digit factorization is conditional and removes the carry relations driving AP energy.
 
 ========================================================================
-P4  the AP speed polynomial is CYCLOTOMIC: P_AP = z^{a} * prod_{d|k, d>1} Phi_d(z)  (Eisenstein link)
+P4  The missing augmentation coordinate
 ========================================================================
-  k=4: (z^k-1)/(z-1) == prod_{d|k,d>1} Phi_d ? True  (divisors used [2, 4])
-  k=6: (z^k-1)/(z-1) == prod_{d|k,d>1} Phi_d ? True  (divisors used [2, 3, 6])
-  k=8: (z^k-1)/(z-1) == prod_{d|k,d>1} Phi_d ? True  (divisors used [2, 4, 8])
-  k=12: (z^k-1)/(z-1) == prod_{d|k,d>1} Phi_d ? True  (divisors used [2, 3, 4, 6, 12])
-  => the AP is the cyclotomic extremal; k=6 carries Phi_6 (Eisenstein, x^2-x+1) = the S206 t*=14/183 arithmetic.
+m=2: unanchored energies A,B,C all equal 85
+m=3: unanchored energies A,B,C all equal 1751
+m=4: unanchored energies A,B,C all equal 38165
+but exact LRC maxima are (Fraction(1, 6), Fraction(1, 4), Fraction(1, 2))
+anchored E2 values=(146, 130, 106); Schur counts=(10, 6, 0)=CT[P^2 Pbar]
+Repair: retain M_(r,s)=CT[P^r Pbar^s]; r-s is the augmentation sidecar.
 
 ========================================================================
-P5  LOCALIZATION on the LRC side: additive m-energy FACTORS over separated resonance blocks
+P5  Exact volume ceiling
 ========================================================================
-  S1=[0, 1, 2] S2=[0, 1, 2] m=2 (t=9): E_m(S1)*E_m(S2)=361  E_m(S1(+)_t S2)=361  factor? True
-  S1=[0, 1, 3] S2=[0, 1, 2] m=3 (t=19): E_m(S1)*E_m(S2)=13959  E_m(S1(+)_t S2)=13959  factor? True
-  S1=[0, 1, 2, 3] S2=[0, 1] m=4 (t=25): E_m(S1)*E_m(S2)=566440  E_m(S1(+)_t S2)=566440  factor? True
-  => additive m-energy tensorizes over separated blocks: the CT-moment localizes exactly.
-     So high-rank Wall A reduces to single-resonance-block CT-moments = the shared SEED (THM-1840).
+S=(1, 2, 3): M=1/4; top fiber=(Fraction(1, 4), Fraction(3, 4)); Haar measure=0; Euler components=2
+Positive safe measure certifies a strict exit; Euler characteristic also detects isolated equality.
 
 ========================================================================
-SUMMARY / the leverage
+SUMMARY
 ========================================================================
-  The CONSTANT-TERM functional CT is the shared object: additive m-energy = CT[P^m Pbar^m] = the
-  ANGULAR half of GMC's polar bridge E = L o CT. Hence Wall A = 'AP maximizes additive energy at all
-  orders' is a CT-MOMENT extremality -- the same species GMC(2) proves. What GMC(2) contributes, in
-  COMBINATION with the LRC-native toric arrangement (S209) and codex's phase-height carrier:
-   (1) a PROVEN base case -- the single-character SEED (THM-1840) is a CT statement (verified);
-   (2) a PROVEN technique -- localization/factorization: the CT-moment tensorizes over separated
-       resonance blocks (verified), the additive-side mirror of the S208 Vandermonde-at-a-flat trick;
-   (3) the RANK-REDUCTION that dodges the Frobenius obstruction (S205): localization takes rank-12 Wall A
-       to single-resonance blocks where the shared seed applies.
-  OPEN: assembling (1)+(2) into Wall A needs the AP to be forced as the UNIQUE block decomposition
-  maximizing the product -- i.e. the cyclotomic (Eisenstein, Phi_6) rigidity of P4 must pin the blocks.
-  This is a strategy transporting GMC(2)'s proven machinery, not a completed proof.
-
-========================================================================
-P6  GMC vs LRC = same angular CT-lattice sum, different RADIAL weight (the precise residual)
-========================================================================
-  v=(1, 2, 3): same lattice {k.v=0}, weight=sinc (LRC)  -> lattice-sum=0.13468  (= |G_delta|)
-  v=(1, 2, 3): same lattice {k.v=0}, weight=geom/monotone -> lattice-sum=1.97327  (a Laplace-type radial)
-  => identical ANGULAR support (the relation lattice, THM-1820); only the RADIAL weight differs.
-     GMC(2) proves the angular/CT structure; the GMC(2)->LRC(14) residual is the radial swap L->sinc.
-========================================================================
-P7  VOLUME CEILING: tight good set is measure-ZERO but chi>0 (volume misses it; the GMC ceiling)
-========================================================================
-  S=[1, 2, 3]: M(S)=1/4 (minimax = SADDLE value, S210).  |G_delta| as delta -> M:
-     delta=0.2: |G_delta| (volume) = 0.13334
-     delta=0.23: |G_delta| (volume) = 0.05334
-     delta=0.24: |G_delta| (volume) = 0.02667
-     delta=0.249: |G_delta| (volume) = 0.00266
-     delta=0.25: |G_delta| (volume) = 0.00000
-  at threshold delta=1/4: |G_{1/4}| volume -> 0, but tight witnesses (isolated) at t ~= [0.25, 0.75]
-  chi(G_{1/4}) = #components = 2 > 0  ==>  NONEMPTY (runner lonely at t=1/4) though VOLUME=0.
-  => the CT-moment/additive-energy VOLUME that GMC(2) controls is a STRICT-EXIT certificate only;
-     it is measure-blind to the tight boundary. LRC(14)'s crux (Wall A, the tight AP) lives EXACTLY
-     in that measure-zero boundary -- the chi(G_delta) invariant (codex THM-2047), a SADDLE degeneration.
+Exact survivors: diagonal and mixed CT identities, the finite AP scout, conditional no-carry
+tensorization, and the volume/Euler boundary distinction.  Refuted: diagonal energy as the full
+LRC lattice, THM-730 as an E2 theorem, arbitrary rank reduction, and a GMC radial-kernel swap.
+Live repair: the mixed (r,s) table or an observer at zero restores augmentation; no implication yet.

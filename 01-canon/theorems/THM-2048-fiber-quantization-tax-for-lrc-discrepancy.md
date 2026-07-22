@@ -18,7 +18,7 @@ related:
 
 The mechanism is not specific to the number fourteen. Let a probability space
 carry a measure-preserving cyclic action `T` of order `v`. Let `D` be an
-invariant measurable set of measure `rho`, let `E` be contained in `D` modulo
+invariant measurable set of measure `rho>0`, let `E` be contained in `D` modulo
 null sets, put `a=|E|`, and define the orbit projection
 
 ```text
@@ -152,6 +152,10 @@ Equivalently, if one peel violates (5), then the full safe set has positive
 measure and supplies a strict lonely interval. This is a finite exact
 arithmetic test because the threshold endpoints, `mu`, and `r_v` are rational
 and computable from the signed wall arrangement.
+
+Indeed, the equality phases `||wt||=1/14` form a finite wall set. Removing
+them from a positive-measure weak-safe set leaves a positive-measure strict
+safe set, which is open and hence contains an interval.
 
 The new term is small but rigid: it vanishes exactly on integral conditional
 fiber occupancy and otherwise charges the distance to the nearest such

@@ -49,6 +49,11 @@ LINE_BUDGETS = {
 }
 
 HEADLINE_SENTINELS = {
+    "README.md": (
+        "LRC(14) is OPEN",
+        "THM-2051 now closes the relation-dissociated",
+        "the final `nc2 : NC2` theorem remain",
+    ),
     "00-navigation/START-HERE.md": (
         "14 total runners",
         "is **OPEN**",
@@ -58,6 +63,7 @@ HEADLINE_SENTINELS = {
         "**PROVED in repo",
         "two-pair Poisson conjecture false",
         "THM-2047](../01-canon/theorems/THM-2047-phase-height-toric-arrangement-for-lrc.md)",
+        "Every counterexample is small-relation structured",
     ),
     "00-navigation/CURRENT-FRONTIER.md": (
         "## LRC(14)",
@@ -68,6 +74,8 @@ HEADLINE_SENTINELS = {
         "GMC is false for every dimension at least 3",
         "THM-2044",
         "proves the corresponding labelled phase-height carrier",
+        "PROVED small-relation alternative",
+        "gmc2_of_nc2` is conditional",
     ),
     "01-canon/ACTIVE-GUARDRAILS.md": (
         "No uniform `q <= 25` good-period theorem",
@@ -78,7 +86,18 @@ HEADLINE_SENTINELS = {
         "Poisson rank two is not DC(2) or planar JC",
         "A thickened safe set is not an ordinary toric complement",
         "Antisymmetry is not the whole tournament-game or torus theorem",
+        "Diagonal additive energy is not the LRC relation lattice",
         "NC2/GMC(2) is proved, not fully formalized",
+    ),
+    "00-navigation/LRC14-PROOF-MAP.md": (
+        "## 2026-07-21 current control panel",
+        "support 2..5, 0<|k_i|<=2^20",
+        "### Mandatory hostile controls",
+    ),
+    "00-navigation/LRC-TECHNIQUE-INDEX.md": (
+        "SEARCHABLE ATLAS, NOT STARTUP TRUTH",
+        "## 2026-07-21 current-use overlay",
+        "## LTI-532 - Bounded-relation circuit dispatcher",
     ),
 }
 
@@ -209,9 +228,15 @@ def main() -> int:
     hypotheses = (REPO / "05-knowledge/hypotheses/INDEX.md").read_text(
         encoding="utf-8", errors="replace"
     )
+    digest_marker = "# Hypothesis Log — Index"
+    if not hypotheses.startswith("> **CURRENT DIGEST"):
+        errors.append("hypotheses/INDEX.md: current digest must remain first")
+    if digest_marker not in hypotheses:
+        errors.append("hypotheses/INDEX.md: historical boundary is missing")
+    current_digest = hypotheses.split(digest_marker, 1)[0]
     current_hypothesis_ids = [
         value
-        for value in re.findall(r"^- \*\*HYP-(\d+)\b", hypotheses, re.MULTILINE)
+        for value in re.findall(r"^- \*\*HYP-(\d+)\b", current_digest, re.MULTILINE)
         if int(value) >= 8800
     ]
     for value, count in sorted(

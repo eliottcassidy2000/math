@@ -84,19 +84,23 @@ supplier/seed and a lossless exit.
   the old inequality is inconclusive while the integer tax violates the new
   necessary inequality and forces a positive-measure lonely interval.
   “Near-AP,” “anti-golden,” Fibonacci-foil, CF-blocker, and
-  full-autocorrelation iff claims remain heuristic. THM-1002 proves every
-  maximizer lies on a pair-sum ruler `t=p/(v_i+v_j)`. Enumerating all such
+  full-autocorrelation iff claims remain heuristic. The exact
+  [THM-1002 pair-sum theorem](../01-canon/theorems/THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case.md)
+  proves every maximizer lies on a ruler `t=p/(v_i+v_j)`. Enumerating all such
   rulers makes the corrected S206 replay exact: all fifteen displayed rows are
   safe, while `{1,...,12,5460}` proves the old `q<=1200` cutoff was incomplete
   (`92/1197 < 420/5461`). This finite bank does not identify the global
   covering minimum.
 - **REFUTED arrangement shortcut / exact replacement:** MISTAKE-224 separates
-  the THM-1820 Fourier annihilator from a standard toric-complement/OS layer
-  formula. Shi counts and bounded short-relation counts do not preserve LRC.
+  the [THM-1820 relation-lattice Fourier annihilator](../01-canon/theorems/THM-1820-lrc-is-a-moment-nullcone-problem-relation-lattice-pairing.md)
+  from a standard toric-complement/OS layer formula. Shi counts and bounded
+  short-relation counts do not preserve LRC.
   THM-2047's signed phase-height complex is lossless; for `delta>0`,
   `chi(G_delta)=#components`, so it sees isolated tight witnesses that volume
   misses.
-- **PROVED finite-circuit alternative:** THM-2051 closes the coarse analytic
+- **PROVED finite-circuit alternative:**
+  [THM-2051](../01-canon/theorems/THM-2051-fejer-bv-small-relation-alternative-for-lrc14.md)
+  closes the coarse analytic
   “middle” sought by THM-935/946. THM-965 gives the sharp universal pair-
   covariance floor `delta_(a,b)>=-6/637`, so pairs can be paid exactly. If a
   thirteen-speed row has no exact support-three-through-five relation with all
@@ -182,7 +186,8 @@ supplier/seed and a lossless exit.
 1. **AP-core / tight-deletion supplier (highest leverage).**
    [THM-1017](../01-canon/theorems/THM-1017-ap-core-bridge-reduction.md) proves
    `AP core -> far element -> LRC(14)`. The extraction of that AP core from the
-   compact Cover14 residual is open (the current HYP-7310 form). Non-AP and
+   compact Cover14 residual is open (the current
+   [HYP-6820 audit](../05-knowledge/hypotheses/HYP-6820-q25-and-n12-uniformity-audit.md)). Non-AP and
    deeper multi-defect twelve-speed branches are precisely what uniform
    “sporadic emptiness” has not removed.
 2. **Six-comb global transport.** Complete endpoint/child transport, or prove a
@@ -195,10 +200,10 @@ supplier/seed and a lossless exit.
    [THM-2041](../01-canon/theorems/THM-2041-frobenius-stability-of-exact-period-projectors.md)
    supplies whole-packet preservation. The ranked
    [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md)
-   routes are: THM-671 `B5` supply; familywise Fejer/Toeplitz rigidity;
-   characteristic-3 endpoint-labelled period-14 propagation; an adaptive
-   resolved-phase sheaf; and conductor plus owner-current glue. Raw Ramanujan
-   energy is diagnostic only.
+   routes are: THM-671 `B5` supply; structured bounded-relation classification
+   after THM-2051's now-proved dissociated exit; characteristic-3 endpoint-
+   labelled period-14 propagation; an adaptive resolved-phase sheaf; and
+   conductor plus owner-current glue. Raw Ramanujan energy is diagnostic only.
 5. **Signed wall-word / Euler deletion route.**
    [THM-2047](../01-canon/theorems/THM-2047-phase-height-toric-arrangement-for-lrc.md)
    consolidates the earlier threshold tope/Cech interfaces into a
@@ -243,6 +248,13 @@ supplier/seed and a lossless exit.
    deck/fan discharge**.
    HYP-8845 halves the covering branch by mirror symmetry: one survivor on
    `[0,1/2]` automatically supplies its partner and `chi>=2`.
+6. **Pointed plane transport.** THM-2052 places every counterexample in one of
+   finitely many rational planes and leaves only the rank-`11` to rank-`12`
+   jump. [HYP-8846](../05-knowledge/hypotheses/HYP-8846-lrc14-pointed-plane-transport.md)
+   isolates the quantifier gap: a safe direction somewhere in the plane does
+   not certify the specified row. The missing result must preserve a strict
+   phase or owner-labelled Euler endpoint while transporting back to the
+   target, or emit a twelfth independent relation.
 
 The characteristic-7 result
 [THM-2043](../01-canon/theorems/THM-2043-period14-parity-hasse-jet-completeness.md),
@@ -260,12 +272,28 @@ proves the corresponding labelled phase-height carrier, its top-vertex and
 pair-sum mechanism, and exact paired deletion; deletion/localization forcing
 an AP core toward Wall A is still open.
 
+[THM-2050](../01-canon/theorems/THM-2050-period14-top-germs-do-not-determine-global-loneliness.md)
+strengthens the no-go: `AP13` and the lift replacing `12` by `26` have identical
+complete piecewise-linear germs near all six unit phases `a/14`, but maxima
+`1/14` and `1/12`. Any period-14-local proof needs a global first-exit,
+magnitude, or off-layer gluing sidecar. HYP-8841's termination tuple is only an
+open scaffold, not that theorem.
+
 Corrected HYP-8830 supplies a constructive exploratory lens for that target.
-On `(t,delta)`, the finite wall list `X_S={(v,+1),(v,-1)}` has opposite-sign
-intersection determinant `v+w`, recovering the pair-sum rulers geometrically.
+On the periodized `(t,delta)` two-torus, opposite-sign characters in
+`X_S={(v,+1),(v,-1)}` have determinant `v+w`; the top-slope proof, not the raw
+number of strip intersections, selects the pair-sum ruler.
 But `G_delta` is a selected inequality slice, not an ordinary toric complement;
 owner, sign, selected side, height, and paired deletion are essential. No
 Orlik--Solomon, Mobius, or deletion theorem currently forces the AP core.
+
+Corrected HYP-8840 gives a different CT wildcard. Diagonal energy
+`CT[P^m Pbar^m]` sees only augmentation-zero affine relations and is not
+LRC-faithful. The mixed table `CT[P^r Pbar^s]`, or equivalently adjoining the
+observer speed zero, restores augmentation `r-s` and sees the full relation
+lattice. THM-730 is the off-diagonal `(r,s)=(2,1)` sector. Whether this sidecar
+helps the THM-2051 branch is open; GMC positivity does not transfer by merely
+swapping its Bessel-type weights for LRC sinc weights (MISTAKE-226).
 
 ### Fresh perspective prompts
 
@@ -321,11 +349,13 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 
 ### Live work
 
-Package THM-2022 for publication and formalization; generalize the scalar-grade
-prime-block criterion (positive rational Gamma radial shapes are already in
-scope); identify where vector-valued Wick grades require a different exposed
-face; and transfer the four-gate `seed/selector/preserver/exit` design without
-pretending the preserver supplies the seed.
+Package THM-2022 for publication. In Lean, root-wire and jointly type the two
+standalone kernels, then formalize Kummer survival/residue-layer assembly,
+algebraic descent and good-prime specialization, and a DvdK hypothesis
+interface culminating in `nc2 : NC2`. Also identify where vector-valued Wick
+grades need a different exposed face, and transfer the four-gate
+`seed/selector/preserver/exit` design without pretending a preserver supplies
+the seed.
 
 ## Tournaments
 

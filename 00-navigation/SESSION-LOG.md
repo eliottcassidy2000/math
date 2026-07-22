@@ -385,6 +385,34 @@ Older session prose remains discoverable in git history, reflections,
 hypothesis files, and frozen outputs. Entries here record only the reusable
 survivor, correction, and next question.
 
+## codex-2026-07-21 -- structured LRC branch and startup consolidation
+
+- THM-2051 is promoted to PROVED: Fejer--BV approximation and an exact centered
+  BONF5 budget show every hypothetical LRC(14) counterexample has a relation
+  of support `2..5` and coefficient height at most `2^20`.
+- THM-2047 now consolidates the exact phase-height carrier, local top wedge,
+  Euler detector, Fejer relation formula, embedded-lattice reconstruction, and
+  paired deletion. THM-2048 adds the quantized peel tax; THM-2050 proves full
+  period-14 local germs can be globally blind.
+- The bounded startup docs, active guardrails, literature map, portfolio table,
+  current hypothesis digest, and validation script were rebuilt so historical
+  logs/reflections route ideas without overriding canon.
+- Live LRC target: classify the new bounded small-relation branch using owner-
+  labelled walls, fiber occupancy, AP extraction, or global termination.
+
+## boxeph-2026-07-21-S211 -- CT bridge, scope-repaired
+
+> **Audit:** MISTAKE-226 retracts the GMC-to-LRC and diagonal-energy claims.
+
+- Exact survivors: `CT[P^m Pbar^m]` is additive energy; the two-charge seed is
+  a CT statement; no-carry energy tensorization and AP cyclotomic factorization
+  hold in their stated scopes; volume detects strict exits but not tight fibers.
+- Missing coordinate: diagonal energy sees augmentation zero only. The mixed
+  table `CT[P^r Pbar^s]`, or observer speed zero, restores augmentation and the
+  full relation support; THM-730 is the off-diagonal `(2,1)` sector.
+- Hostile control: affine APs have identical diagonal energies at every order
+  but LRC maxima `1/6,1/4,1/2`. The corrected mixed-moment thread is open.
+
 ## boxeph-2026-07-21-S210 -- antisymmetry atlas, scope-repaired
 
 > **Audit:** MISTAKE-225 retracts the advertised one-hinge synthesis.
@@ -455,10 +483,13 @@ survivor, correction, and next question.
 - `ThreeTermRecurrence.lean` is recast over `Polynomial R` with minimal imports
   and the needed nonzero-`b` hypotheses only. `HermiteThreeTerm.lean` proves
   the Hermite recurrence and consecutive-root exclusion.
-- S94 adds a clean kernel-pure `GMC2 <= NC2` architecture and repairs the
-  formal lowest-face skeleton.
-- Scope: THM-2022 proves NC2/GMC(2) on paper. The good-prime lowest-face
-  amplification is not yet fully formalized in Lean.
+- S94 adds kernel-pure Wick expansion, both one-sided branches, conditional
+  `GMC2<=NC2`, multinomial Lucas, abstract Frobenius collapse, and standalone
+  face-height/gap/injectivity lemmas. The files are sorry-free but not
+  root-imported.
+- Scope: THM-2022 proves NC2/GMC(2) on paper. Algebraic/good-prime descent,
+  face construction, DvdK, Kummer/layer assembly, and `nc2 : NC2` remain Lean
+  obligations.
 
 ## boxeph-2026-07-21-S208 -- braid shadows, transfers retracted
 

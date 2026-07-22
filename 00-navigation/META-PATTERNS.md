@@ -80,6 +80,22 @@ perform an explicit proof step or eliminate a concrete witness.
 for odd support) and MISTAKE-224 (walls plus selected-side/height labels for
 the LRC phase-height object).
 
+## Restore a collapsed grading before transporting moments
+
+**Trigger:** a diagonal moment, scalar generating function, or total count is
+said to encode the same relations as a multigraded target.
+**Action:** expose the omitted grading or adjoin an observer that records it;
+test affine translates that preserve the diagonal but change the target.
+**Mechanism:** diagonalization silently fixes a conservation law. In
+MISTAKE-226, `CT[P^m Pbar^m]` sees only augmentation zero, while the mixed
+`CT[P^r Pbar^s]` table restores augmentation `r-s` and the full LRC relation
+support. This is the moment analogue of retaining multiplicity beside sequence
+support.
+**Counterindication:** the diagonal is sufficient only when the target is
+proved invariant under the discarded grading.
+**Evidence:** MISTAKE-226 and the support/multiplicity collision-tax repair in
+MISTAKE-209.
+
 ## A local factorization transfers only through a stated functor
 
 **Trigger:** a source polynomial, determinant, arrangement, or generating

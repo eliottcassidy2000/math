@@ -44,9 +44,14 @@ As of 2026-07-21:
 
 - **LRC(14) is OPEN.** The conjecture is known through 13 total runners; the
   repo's remaining work is structural, not the once-claimed uniform `q <= 25`
-  shortcut, which is false.
+  shortcut, which is false. THM-2051 now closes the relation-dissociated
+  branch: every hypothetical counterexample has a 2--5-term integer relation
+  of coefficient height at most `2^20`; classifying that structured branch is
+  the live prize.
 - **NC2 and GMC(2) are PROVED in repo canon** by THM-2022's lowest-balanced-face
-  Frobenius argument. The result is paper-level but not fully formalized in Lean.
+  Frobenius argument. The Lean work is partial and sorry-free at its completed
+  kernel nodes, but algebraic descent, DvdK/Kummer layer assembly, root wiring,
+  and the final `nc2 : NC2` theorem remain.
 - **GMC is false from dimension 3 onward.** Dimension two is the sharp surviving
   case handled by THM-2022; dimensions one and two must not be conflated with
   the higher-dimensional counterexamples.

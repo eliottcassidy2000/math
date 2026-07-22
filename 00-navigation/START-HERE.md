@@ -12,7 +12,10 @@ the exact current commit. Status labels and proof links live in
 2. **Do not chase the old shortcuts:** uniform good period `q <= 25` is false,
    and uniform emptiness of the twelve-speed sporadic tight branch remains open.
 3. **Major new closure:** NC2, hence unrestricted GMC(2), is **PROVED in repo
-   canon** by THM-2022. Its full proof is not yet formalized in Lean.
+   canon** by THM-2022. Its Lean formalization is partial: sorry-free,
+   kernel-pure nodes cover Wick expansion, face arithmetic, multinomial Lucas,
+   Frobenius collapse, and conditional `NC2=>GMC(2)`; algebraic descent, DvdK,
+   Kummer/layer assembly, and `nc2 : NC2` remain.
 4. **Truth discipline:** correction/repaired canon outranks canon, which
    outranks exact computation, hypothesis, synthesis, and historical prose.
 5. **Research posture:** use an Anchor / Niche / Wildcard portfolio. Recover
@@ -30,7 +33,7 @@ theorem or evidence it links. `SESSION-LOG.md`, `TANGENTS.md`, reflections, old
 frontier snapshots, the full mistakes ledger, and the giant hypothesis index
 are searchable history—not mandatory warm-up.
 
-## Twelve high-signal facts to reuse, not re-derive
+## Fourteen high-signal facts to reuse, not re-derive
 
 1. **LRC(14) is the first unresolved runner count in the present literature.**
    Sungkawichai–Trakulthongchai prove the cases with 10, 11, and 12 nonzero
@@ -74,8 +77,16 @@ are searchable history—not mandatory warm-up.
     gives an infinite AP-alias family with the same local packet and a strict
     `17/41` exit. Exact owner height or adaptive resolved phase is indispensable.
     [THM-2047](../01-canon/theorems/THM-2047-phase-height-toric-arrangement-for-lrc.md)
-    now proves the labelled phase-height carrier and pair-sum recovery;
-    deletion/localization forcing the AP core remains open.
+    proves the labelled phase-height carrier. THM-2050 further shows complete
+    local germs at all period-14 unit phases can agree while global maxima
+    differ; a global termination sidecar is mandatory.
+13. **The peel obstruction is quantized.** THM-2048 decomposes discrepancy into
+    the old `6mu^2` floor plus an exact integer fiber-occupancy variance tax. It
+    strictly improves the uniform tail test but is not a universal proof.
+14. **Every counterexample is small-relation structured.** THM-2051 proves
+    that a hypothetical LRC(14) counterexample has an exact relation of support
+    `2..5` with all nonzero coefficients at most `2^20`. The dissociated branch
+    is closed; classification of this structured branch is now a priority.
 
 ## Where to go by topic
 

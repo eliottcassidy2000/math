@@ -6,10 +6,82 @@ sequence transforms, harmonic carriers, endpoint topology, arithmetic packets,
 and proof-zipper templates all belong here when they preserve a usable LRC
 predicate.
 
-Use this file as a technique menu before starting a new pass.  Add entries when
-you introduce a genuinely new carrier, repair a failed scalar quotient, or show
-that an old tournament/metagraph idea gives a named LRC packet, obstruction, or
-certificate.
+> **SEARCHABLE ATLAS, NOT STARTUP TRUTH.** Run
+> `python3 agents/start_session.py --topic "<exact object>"` and read
+> [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) first. This file is
+> intentionally enormous and preserves historical techniques, including
+> routes later saturated or corrected. Search it by carrier, operation,
+> failure mode, theorem slug, and `LTI-*`; do not read it linearly or infer
+> current status from entry order.
+
+Add entries when you introduce a genuinely new carrier, repair a failed scalar
+quotient, or show that an old tournament/metagraph idea gives a named LRC
+packet, obstruction, or certificate.
+
+## 2026-07-21 current-use overlay
+
+The live structured kernel is:
+
+```text
+counterexample -> primitive Cover14/non-AP peel kernel
+               -> support-2..5 relation of height <=2^20  [THM-2051].
+```
+
+Prioritize techniques that consume that relation without erasing phase or
+observer data:
+
+| Technique | Faithful carrier | Current use | Hard stop |
+|---|---|---|---|
+| Bounded arithmetic circuits | primitive `(support,k,sign,augmentation)` plus deletion behavior | Split the THM-2051 structured branch into exact families | Relation existence alone is not AP rigidity or safety. |
+| Phase-height cells | owner/sign/selected side/height with paired deletion | Couple circuits to pair-sum rulers and Euler components | Ordinary arrangement or complement invariants forget feasibility. |
+| Quantized peel discrepancy | component counts, fiber occupancy, peel owner | Eliminate structured families or force positive measure | It is a necessary obstruction, not a universal classifier. |
+| Mixed CT grading | `M_(r,s)=CT[P^r Pbar^s]`, grade `r-s` | Retain affine augmentation and compare relation profiles | Diagonal energy is translation blind; no GMC transfer is known. |
+| Whole-packet Fejer/Frobenius | complete signed product/packet | Supply bounded relations, selectors, or preservers | A selector/preserver does not supply a safe seed or pointwise exit. |
+| Global endpoint transport | located tooth instances, owners, phase word | Finish the saturated six-comb branch | Another unlocated local-return charge cannot close it. |
+
+For tournament experiments, prefer relation circuits, deletion obligations,
+wall events, residue packets, or safe components as vertices. State the
+pairwise observable and preserve ties unless an intrinsic implication or
+first-exit order orients them. A score histogram on runners with no preserved
+LRC predicate is not a contribution.
+
+## LTI-532 - Bounded-relation circuit dispatcher
+
+Carrier / vertex set: primitive exact relations `(A,k)` with `2<=|A|<=5`,
+`0<|k_i|<=2^20`, together with speed owners, coefficient signs, augmentation,
+and every-owner deletion image.
+
+Pairwise observable: signed support overlap, shared owner, compatibility of
+augmentation, and whether deleting a shared owner forces, destroys, or merges
+the other circuit.
+
+Binary relation or gauge: use directed implication only when one circuit's
+deletion or first-exit obligation forces another. Exact ties and genuinely
+higher-order overlaps remain a preorder or hypergraph; no cosmetic tournament
+completion is allowed.
+
+Preserved LRC predicate: THM-2051's necessary circuit alternative and exact
+survival/destruction under labelled deletion. When joined to THM-2047 data it
+also preserves the owner/sign/side needed to ask about `G_(1/14)`.
+
+Destroyed information: the circuit quotient alone forgets phase location,
+wall magnitude, safe-set components, pair-sum maximizing rulers, and the
+global maximum.
+
+Best use: classify the surviving structured branch, cross-tab it with
+THM-2048 peel violations, and search for deletion-stable AP-like cores or
+forced circuit-overlap exits.
+
+Failure mode: treating a short relation as AP rigidity; dropping coefficient
+height or augmentation; translating nonzero relative speeds without carrying
+observer zero; or orienting overlap ties arbitrarily.
+
+Anchors: THM-2051, THM-2047, THM-2048, THM-1017, HYP-8840, MISTAKE-226.
+
+Next agent hook: enumerate normalized circuit/deletion types first on the
+mandatory AP, lifted-AP, and delayed-period controls; then ask whether the
+overlap hypergraph forces a peel violation, a deletion leaf, or an AP-core
+extension.
 
 ## Contribution Protocol
 

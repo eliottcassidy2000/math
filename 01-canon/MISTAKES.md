@@ -195,77 +195,43 @@ Format per entry:
 ---
 
 ## MISTAKE-224 (2026-07-21, codex audit of HYP-8835) -- valid antisymmetry examples were promoted to equivalences among transitivity, saddles, tori, and LRC symmetry
+## MISTAKE-226 (2026-07-21, codex audit of HYP-8840) -- unanchored additive energy, LRC Fourier volume, and GMC radial moments were promoted to one constant-term bridge
 
-- **What was claimed:** S210 said a pure saddle in the antisymmetric tournament
-  game is equivalent to a transitive tournament; that `chi(T^n)=0` means a
-  torus needs saddles; that the three-cycle replicator has an invariant torus
-  and makes intransitivity equivalent to toroidal recurrence; and that the two
-  saddles of one torus height function are the S207 binomial deficit. It
-  presented these, the inversion involution, odd Fourier sectors, and the
-  Vandermonde sign as four faces of one mechanism.
-- **Why it is wrong:** a pure optimal strategy is a Condorcet winner, not a
-  certificate that the subtournament below it is acyclic. A four-vertex
-  tournament with one vertex beating a directed three-cycle is the immediate
-  counterexample. Poincare--Hopf constrains the signed sum of isolated zeros;
-  a torus admits a nowhere-zero vector field and therefore needs no saddle.
-  The positive RPS level sets inside the two-dimensional simplex are closed
-  curves (`S^1`), not tori. For a general antisymmetric matrix,
-  `sum_i(Mx)_i=1^T Mx` need not vanish; the product integral works for the
-  balanced standard three-cycle because its column sums vanish, not from
-  antisymmetry alone. The bagel/deficit mechanism was already retracted by
-  MISTAKE-222.
-- **Correct framing:** retain the independent facts: skew matrices have even
-  rank; the standard three-cycle conserves `x_1x_2x_3`; the torus has
-  Poincare polynomial `(1+t)^n`; inversion has `2^n` fixed points; the
-  Bernoulli sawtooth is odd; and Vandermonde is alternating. On the LRC
-  phase-height complex, `t->-t` exchanges `+/-` owner walls and pairs
-  nonfixed witness components. That is a useful exact symmetry reduction, but
-  it gives no existence, AP-extraction, or positivity theorem.
+- **What was claimed:** S211 promoted nine finite AP energy maxima to an
+  all-order Wall-A theorem, called THM-730 its `m=2` case, identified the
+  unanchored additive-energy lattice with the full LRC relation lattice, used
+  separated-digit tensorization as a rank reduction for arbitrary cores, and
+  treated a geometric model weight as the GMC radial kernel. It then called
+  the one-dimensional LRC maximum a minimax saddle linking GMC volume to Euler
+  positivity.
+- **Why it is wrong:** `CT[P^m Pbar^m]` counts only affine relations
+  `k dot v=0` with augmentation `sum k_i=0`; the LRC Fourier formula uses the
+  full linear lattice. THM-730's Schur relation `a+b=c` has augmentation one,
+  so it is not an unanchored two-energy relation. The script checked only nine
+  `(N,k,m)` cases. Translation preserves every unanchored energy but changes
+  Schur data: `{1,...,5}`, `{2,...,6}`, and `{1,3,5,7,9}` have the same
+  unanchored energy at **every** order, yet their LRC maxima are `1/6,1/4,1/2`.
+  Adjoining observer zero gives anchored `E_2=146,130,106` and Schur counts
+  `10,6,0`. Separated-digit factorization
+  requires a no-carry scale and therefore removes the carry relations that
+  make an AP extremal; it does not factor an arbitrary 13-speed core. The
+  geometric weight was invented, and a raw box-truncated sinc sum is not the
+  Fejer-regularized measure in THM-2047.
+- **Correct framing:** retain the universal identity
+  `E_m(S)=CT[P^m Pbar^m]`, the single-character CT seed, conditional no-carry
+  tensorization, the AP cyclotomic factorization, and the exact volume ceiling:
+  positive Haar measure certifies a strict exit, while Euler characteristic
+  also sees a tight isolated witness. A faithful energy comparison must adjoin
+  the stationary observer `0`; then a linear relation lifts by
+  `k_0=-sum k_i`, and THM-730 is the `a+b=c+0` sector of anchored `E_2`.
+  Equivalently, retain the mixed table
+  `M_(r,s)=CT[P(z)^r P(z^(-1))^s]`: it selects augmentation `r-s`, THM-730 is
+  exactly `M_(2,1)`, and every full LRC relation appears in some bidegree.
+  Whether this augmentation sidecar helps Wall A is OPEN. Do not call the
+  maximum of a lower envelope a game/Morse saddle without an actual
+  two-player or variational correspondence.
 
 ---
-
-## MISTAKE-223 (2026-07-21, codex audit of HYP-8830) -- a Fourier annihilator and three finite experiments were promoted to a toric-arrangement/Orlik--Solomon model of LRC
-
-- **What was claimed:** S209 called the LRC safe-set measure a standard toric-
-  arrangement complement volume and its Fourier relation-lattice expansion an
-  arithmetic-Mobius sum over De Concini--Procesi layers. It identified LRC
-  resonance with the Shi arrangement, said LRCMod ladders were its finite-field
-  method, and promoted a bounded short-relation count for small speed triples
-  to toric Betti/Mobius mass and general “tight = relation-richest” AP
-  extremality. Its commit also replaced the live session-log head and deleted
-  concurrent S93/S207/S208 provenance instead of prepending its entry.
-- **Why it is wrong:** a standard toric complement deletes codimension-one
-  hypertori; the LRC safe set deletes positive-width coordinate slabs and then
-  pulls back along the one-parameter orbit `t -> (v_1t,...,v_nt)`. The exact
-  formula `|G_delta|=sum_{k dot v=0} product g_hat(k_j)` is a
-  Fejer-regularized Fourier/Poisson annihilator sum, not a Mobius-poset formula.
-  Its three decimal comparisons were evidence for that already-known identity,
-  not a verification of the new terminology. Safe volume also misses the weak
-  boundary: a tight safe fiber can be finite, nonempty, and measure zero. On a
-  torus the Shi offsets `0` and `1` coincide, while the actual LRC boundary
-  walls are `v_i t +/- delta in Z`, not pair-collision walls. Finally S209's
-  `N_R` is merely a `|k_i|<=2` count checked for primitive triples in a small
-  finite box; it is not an OS Betti number and says nothing about arbitrary
-  twelve-speed cores. Braid chambers encode total orders/transitive
-  tournaments, not all tournaments via a canonical per-tournament graphic
-  subarrangement.
-- **Concrete hostile controls:** Shi data depends only on the number of
-  coordinates, but `M({1,2,3})=1/4` whereas `M({1,3,5})=1/2`. At the AP13
-  threshold, the six unit phases `a/14` are safe, so `chi(G_{1/14})=6` while
-  Haar measure is zero. S209's short-relation statistic already loses its
-  advertised uniqueness when its arbitrary cutoff changes: at `B=1`,
-  `(1,2,3)`, `(1,3,4)`, and `(2,5,7)` all have `N_R=1`, although only the AP
-  is tight. At `t=1/14`, the AP phase coordinates `j/14` are distinct, so this
-  witness is not the braid arrangement's all-equal deepest flat.
-- **Correct framing:** THM-2047 uses the signed phase-height arrangement on
-  `(R/Z)x[0,1/2]`. Its oriented subcomplex
-  `E_S={(t,delta):delta<=min_v||vt||}` is lossless; opposite-sign wall
-  intersections give the pair-sum ruler theorem, deletion gives the exact core
-  cover identity, and `chi(G_delta)` detects nonempty isolated tight fibers
-  that volume loses. The relation-lattice formula remains a useful exact
-  Fourier selector, and toric/OS ideas may organize its circuits, but no
-  layer-localization factorization or Wall-A theorem follows yet. The session
-  log must retain the overwritten concurrent entries.
 ## MISTAKE-225 (2026-07-21, codex audit of HYP-8835) -- skew parity, tournament games, torus topology, and three sign actions were promoted to one antisymmetry theorem
 
 - **What was claimed:** S210 asserted that antisymmetry alone forces odd

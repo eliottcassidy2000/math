@@ -1,9 +1,103 @@
-# LRC(14) proof map — the two routes, their obligations, and the tractable path
+# LRC(14) proof map — current reductions, obligations, and historical routes
 
 > **DETAILED MACHINERY MAP:** read
 > [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) first. This file
-> preserves the proof skeleton and formalization surface; individual obligation
-> labels may lag later theorems or corrections.
+> preserves old proof skeletons and their failure surfaces. The control panel
+> below is current; dated sections after it are searchable provenance and may
+> contain obligation labels superseded by later theorems or corrections.
+
+## 2026-07-21 current control panel
+
+**Status: OPEN.** LRC(14) means thirteen distinct nonzero relative speeds. The
+old uniform `q<=25` shortcut is false, and uniform emptiness of the twelve-speed
+sporadic branch is not proved. Do not begin with a larger blind census or the
+dated two-route dichotomy below; begin with the proved structured kernel.
+
+### The present reduction graph
+
+```text
+hypothetical LRC(14) counterexample
+  |-- primitive Cover14 kernel with M<1/14
+  |-- non-AP maximum-deletion core and every-peel obstructions
+  `-- exact relation sum k_i v_i=0
+        support 2..5, 0<|k_i|<=2^20                 [THM-2051]
+          |
+          |-- classify/extend an AP-like deletion core
+          |     `-- far-element exit                         [THM-1017]
+          |-- couple circuit to labelled wall/deletion data [THM-2047]
+          |     `-- force chi(G_1/14)>0 or a global exit
+          |-- combine circuit with the quantized peel tax    [THM-2048]
+          |     `-- eliminate coefficient/support strata
+          `-- retain augmentation in the mixed CT table      [HYP-8840]
+                `-- discover a faithful structured invariant
+```
+
+The first three lines are proved necessary conditions in their cited scopes;
+the arrows below the bounded relation are research programs, not implications
+already in canon. A small relation is not by itself an AP, a safe phase, or a
+finite practical classification.
+
+### Live interfaces
+
+| Interface | Exact input already available | Missing theorem |
+|---|---|---|
+| AP-core supplier | THM-1017 proves `AP core -> far element -> LRC(14)` | Extract the required core from every compact structured residual. |
+| Circuit / wall word | THM-2051 supplies a bounded circuit; THM-2047 retains owner, sign, side, height, and paired deletion | Turn circuit overlap or deletion--restriction into positive Euler characteristic or a strict exit. |
+| Circuit / peel tax | THM-2048 gives an integer fiber-variance obstruction for every peel | Show each non-AP circuit type violates some peel or descends to a classified core. |
+| Global phase transport | THM-2050 proves all period-14 local germs can be identical while maxima differ | Supply first-exit magnitude, off-layer gluing, or another genuinely global termination coordinate. |
+| Finite shell | THM-763 gives finite height; THM-1290 is exhaustive through maximum speed 55 | Make the isolation gap effective or use the circuit to obtain a feasible bound. |
+| Six-comb branch | Local return and tooth-word machinery is sharply saturated | Complete endpoint/child transport or find a phase-located turn tax. |
+
+### How to represent the new structured branch
+
+Treat a primitive relation `(A,k)` as a labelled arithmetic circuit, not just
+as one scalar equation. Keep:
+
+```text
+support and coefficient signs
+primitive coefficient vector and height
+augmentation sum_i k_i
+owners and phases of the corresponding walls
+behavior under each speed deletion
+overlap data between simultaneous minimal circuits
+which peel inequality or exit obligation the circuit activates.
+```
+
+The augmentation is essential: diagonal energies
+`CT[P^m Pbar^m]` see only augmentation zero. The mixed table
+`CT[P^r Pbar^s]` restores the missing grade, but no GMC-to-LRC implication is
+known. For Tournament Analysis, first try circuits, deletion obligations,
+wall-crossing events, or safe components as vertices. Use a directed relation
+only when a real implication, first-exit order, or owner-transfer order exists;
+retain ties and hyperedges otherwise.
+
+### Mandatory hostile controls
+
+- `26*{1,...,12} union {339}`: first good period `27`, refuting `q<=25`.
+- `AP13` versus the lift replacing `12` by `26`: identical complete local
+  period-14 germs, different global maxima (`1/14` versus `1/12`).
+- `{1,...,12,5460}`: defeats the old `q<=1200` finite cutoff.
+- translated/dilated five-term APs: identical diagonal additive energies can
+  coexist with different LRC maxima; augmentation cannot be dropped.
+- ordinary toric complements, Shi counts, and short-relation counts: none
+  retains the selected side, owner, height, and global LRC predicate by itself.
+
+### First experiments worth running
+
+1. Normalize primitive support-`2..5` relations by sign, support order,
+   observer-preserving dilation, and deletion behavior; do not quotient by
+   translating all speeds unless observer zero is carried.
+2. Cross-tab circuit types against THM-2048 peel violations and THM-1002
+   pair-sum maximizing rulers on exact hostile families.
+3. Build a circuit-overlap hypergraph with owner/sign/augmentation sidecars;
+   test whether minimal counterexample assumptions force a leaf, a short
+   directed implication cycle, or a deletion-stable core.
+4. Search for a familywise Fejer/Toeplitz certificate only after the circuit
+   family has been frozen; the whole-product proof supplies a selector, not
+   the missing pointwise exit.
+5. Revisit niche operations—observer adjunction, deletion, dual circuits,
+   residue reduction, and endpoint localization—and record why each preserves
+   or destroys LRC.
 
 > ## 2026-07-19 S78 CONTINUATION — TWO FINITE FRONTS MOVE, AND THE FANO QUOTIENT IS LOCAL-SURJECTIVE
 >
