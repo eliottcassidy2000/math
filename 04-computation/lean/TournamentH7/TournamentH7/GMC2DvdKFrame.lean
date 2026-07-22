@@ -63,6 +63,48 @@ noncomputable def xCoeff0 : PowerSeries (LaurentSeries F) →+ PowerSeries F whe
       = (PowerSeries.coeff (R := LaurentSeries F) k φ).coeff 0 := by
   simp [xCoeff0, PowerSeries.coeff_mk]
 
+/-- `xCoeff0` sends `1 ↦ 1`. -/
+@[simp] theorem xCoeff0_one : xCoeff0 (1 : PowerSeries (LaurentSeries F)) = 1 := by
+  ext k
+  rw [coeff_xCoeff0]
+  rcases Nat.eq_zero_or_pos k with hk | hk
+  · subst hk; simp
+  · rw [PowerSeries.coeff_one, if_neg (by omega), PowerSeries.coeff_one, if_neg (by omega)]
+    simp
+
+/-- `xCoeff0` intertwines multiplication by `t = PowerSeries.X` (the `t`-shift). -/
+theorem xCoeff0_X_mul (φ : PowerSeries (LaurentSeries F)) :
+    xCoeff0 (PowerSeries.X * φ) = PowerSeries.X * xCoeff0 φ := by
+  ext k
+  rcases Nat.eq_zero_or_pos k with hk | hk
+  · subst hk; simp [coeff_xCoeff0]
+  · obtain ⟨j, rfl⟩ := Nat.exists_eq_succ_of_ne_zero (by omega : k ≠ 0)
+    rw [coeff_xCoeff0, PowerSeries.coeff_succ_X_mul, PowerSeries.coeff_succ_X_mul, coeff_xCoeff0]
+
+/-- `xCoeff0` of a constant-in-`t` series `C a` is `C (a₀)`, the constant `x⁰`-coefficient. -/
+@[simp] theorem xCoeff0_C (a : LaurentSeries F) :
+    xCoeff0 (PowerSeries.C a) = PowerSeries.C (a.coeff 0) := by
+  ext k
+  rw [coeff_xCoeff0]
+  rcases Nat.eq_zero_or_pos k with hk | hk
+  · subst hk; simp
+  · rw [PowerSeries.coeff_C, if_neg (by omega), PowerSeries.coeff_C, if_neg (by omega)]
+    simp
+
+/-- **(b): the `−R/Φ` side.**  Since `xᴹ = Φ + t·R`, dividing by the unit `Φ` gives
+`xᴹ/Φ = 1 + t·(R/Φ)`, so `xCoeff0 (xᴹ/Φ) = 1 + t·xCoeff0 (R/Φ)` — the relation feeding the assembly
+(with `F(t) := xCoeff0(xᴹ/Φ) = ∑ D_m tᵐ`, this reads `xCoeff0(R/Φ) = (F−1)/t`). -/
+theorem xCoeff0_xM_div_PhiFrame (Rl : LaurentSeries F) (M : ℕ) :
+    xCoeff0 (PowerSeries.C ((HahnSeries.single (1 : ℤ) (1 : F)) ^ M) * Ring.inverse (PhiFrame Rl M))
+      = 1 + PowerSeries.X * xCoeff0 (PowerSeries.C Rl * Ring.inverse (PhiFrame Rl M)) := by
+  have hΦ : IsUnit (PhiFrame Rl M) := isUnit_PhiFrame Rl M
+  have hxM : PowerSeries.C ((HahnSeries.single (1 : ℤ) (1 : F)) ^ M)
+      = PhiFrame Rl M + PowerSeries.X * PowerSeries.C Rl := by rw [PhiFrame]; ring
+  have hkey : PowerSeries.C ((HahnSeries.single (1 : ℤ) (1 : F)) ^ M) * Ring.inverse (PhiFrame Rl M)
+      = 1 + PowerSeries.X * (PowerSeries.C Rl * Ring.inverse (PhiFrame Rl M)) := by
+    rw [hxM, add_mul, Ring.mul_inverse_cancel _ hΦ, mul_assoc]
+  rw [hkey, map_add, xCoeff0_one, xCoeff0_X_mul]
+
 /-! ## The logarithmic derivative (general, reusable)
 
 `logDeriv φ = φ'/φ` for a formal power series.  The one structural fact behind the `hderiv` identity
