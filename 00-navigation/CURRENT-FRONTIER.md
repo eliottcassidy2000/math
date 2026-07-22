@@ -145,14 +145,26 @@ supplier/seed and a lossless exit.
   terminal height `24`; proving the same strict inequality at all heights is
   the live depth-four target. At rank seven its scalar deficit is exactly the
   negative signed-fold sum divided by `196`, hence equals outside-cover
-  multiplicity under containment. THM-2085/2087 force a height-57 relation cut: either `q/h=r/s`, `r,s<=57`, or a height-6498 guard-star.
-  THM-2088 makes rank seven finite (`max(h,max Q)<=91421508108581`); rank six is persistent, with THM-2089 flat form `q_i=u_i(z+v_i h)`.
-  THM-2082 retains residue incidence; THM-2086 closes `7|h`, five `7|q`, and the lacunary cone, leaving `7 not|h`, one to four `7|q`, nonlacunary templates.
-- **PROVED relative decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md) lifts bounded scalar relations; `H=2^19` clears recorded margins.
+  multiplicity under containment. THM-2085/2087 force a height-57 complete
+  relation cut: either `q/h=r/s`, `r,s<=57`, or a height-6498 guard star.
+  THM-2088 makes cut rank seven finite
+  (`max(h,max Q)<=91421508108581`); rank six is persistent, with THM-2089 flat
+  form `q_i=u_i(z+v_i h)`. THM-2082 retains residue incidence; THM-2086 closes
+  `7|h`, five `7|q`, and the lacunary cone, leaving `7 not|h`, one to four
+  `7|q`, nonlacunary templates. THM-2090 splices the persistent cut to the
+  global rank-eleven code: the full row is finite, all thirteen speeds form a
+  height-`91^6` last-guard/terminal-anchor star, or `(h,Q)` is literally frozen
+  and only the three earlier guards plus two original tails move on one affine
+  lattice line. The six cut rows already give persistent height-114 circuits,
+  so THM-2065 alone is vacuous here; location and phase sidecars are essential.
+- **PROVED relative decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
+  lifts bounded scalar relations; `H=2^19` clears recorded margins.
   MISTAKE-080/082 still require shape-specific torus models.
-- **Scope separation:** [THM-1149](../01-canon/theorems/THM-1149-compact-essential-crown-and-farey-blocker.md) separates tight deletion from an all-loose crown.
-  Equality classification applies only after extracting the tight deletion.
-- **Local-comb ceiling:** THM-1252--1274 leave global endpoint/child transport or a phase-located turn tax, not another unlocated local-return charge.
+- **Scope separation:** [THM-1149](../01-canon/theorems/THM-1149-compact-essential-crown-and-farey-blocker.md)
+  separates tight deletion from an all-loose crown. Equality classification
+  applies only after extracting the tight deletion.
+- **Local-comb ceiling:** THM-1252--1274 leave global endpoint/child transport
+  or a phase-located turn tax, not another unlocated local-return charge.
 
 ### Exact live residuals
 

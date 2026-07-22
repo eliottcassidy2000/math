@@ -18,6 +18,7 @@ related:
   - THM-2062
   - THM-2065
   - HYP-3832
+  - THM-2090
 script: 04-computation/lrc14_persistent_cut_affine_holonomy_referee_codex_20260722.py
 output: 05-knowledge/results/lrc14_persistent_cut_affine_holonomy_referee_codex_20260722.out
 script_sha256: dbc509b66e1d2e249bea94ebb01dcc5be38b3892d8f80bbb5d819b100b12758e
@@ -254,6 +255,11 @@ flatness, positivity, or integrality imply a lonely time. The next target is
 to splice those five outer coordinates into `Lambda`, then combine the
 THM-2062/2069 deletion wheel, THM-2082 translated grids, THM-2079 owner
 addresses, and THM-2081 restricted-edge margin on the resulting interval.
+
+THM-2090 subsequently performs the first global splice. Either the last guard
+and a terminal speed anchor all thirteen original speeds, or terminal
+primitivity makes `(h,Q)` literally constant and confines every remaining
+deformation to an affine line in the five outer coordinates.
 
 ## 6. Assumption challenge and Tournament Analysis
 

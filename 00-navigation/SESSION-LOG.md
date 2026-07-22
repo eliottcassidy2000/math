@@ -167,6 +167,28 @@ NET: every P whose lowest face has a unique channel needs NO DvdK axiom for NC2,
   flat `K_(2,5)`/`K_(3,4)` gauges, and a perturbed connection with six detected
   nonflat squares under both normal and optimized Python.
 
+### Global splice or frozen terminal
+
+- THM-2090 lifts a cut spanning tree to six independent support-three rows on
+  the original thirteen speeds: `a h+bq_i+cq_j=0` becomes
+  `2a(16h)+b(32q_i)+c(32q_j)=0`, of height at most `114`.
+- These six rows sit inside THM-2052's rank-at-least-eleven height-`91^6`
+  relation code. Rank twelve is finite. At rank eleven, restrict its
+  two-dimensional kernel to the last-guard/terminal block. Restriction rank
+  two makes the last guard and some terminal speed independent anchors, so
+  THM-2052's triple pigeonhole gives a height-`91^6` star for all thirteen
+  original speeds.
+- Restriction rank one is sharper: after undoing fixed dyadic scaling, every
+  admissible terminal vector is a rational multiple of one primitive `(h,Q)`.
+  Integrality makes the multiplier integral, terminal primitivity makes it
+  `+-1`, and positivity makes it `+1`. Hence `(h,Q)` is literally frozen and
+  the remaining integer points form an affine lattice line moving only the
+  three earlier guards and two original tails.
+- The six local height-114 circuits already satisfy THM-2065's persistent-
+  circuit alternative. Asking Fejer for one unspecified extra relation is now
+  provably vacuous; the finish must use circuit multiplicity/location, owner
+  addresses, translated-grid incidence, or exact relative-Hunter phase data.
+
 ## death-star-2026-07-22-S105 -- GMC2 formalization CAPSTONE CLOSED: the whnf wall is SOLVED; HeightWitnessSupplier discharged kernel-pure; clean DvdK1 -> NC2 and DvdK1 -> GMC(2) now compile.
 
 **Owner directive:** work creatively at whnf-tuning, or how it can be bypassed.

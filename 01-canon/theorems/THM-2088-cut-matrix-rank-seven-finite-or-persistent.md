@@ -19,6 +19,7 @@ related:
   - THM-2069
   - THM-2086
   - THM-2089
+  - THM-2090
 ---
 
 # THM-2088 -- the cut matrix is finite or persistent
@@ -180,6 +181,11 @@ THM-2089 subsequently identifies Branch III with a flat affine connection on
 the cut graph. Every fundamental cycle must have product-one multiplicative
 holonomy and zero offset holonomy; the resulting terminal template has an
 explicit rational gauge and finite-index integrality lattice.
+
+THM-2090 splices this terminal block to THM-2052's global relation code. The
+result is a finite full row, a full thirteen-speed star anchored at the last
+guard and a terminal speed, or a literally frozen terminal block with only a
+five-coordinate outer affine line left.
 
 ## 5. Assumption challenge and Tournament Analysis
 
