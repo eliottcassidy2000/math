@@ -55,7 +55,26 @@ theorem hS_of_embedding (Φ : (RatFunc F)[X])
       = algebraMap (RatFunc F) Φ.SplittingField (RatFunc.C c * RatFunc.X) :=
   prod_eq_algebraMap_of_embedding Φ ψ S (RatFunc.C c * RatFunc.X) hψ
 
+/-- **The bridge, reduced to the frame-side identity.**  The embedding `ψ` is *free* — for any field
+`Ω` over `RatFunc F` in which `Φ` splits, `Polynomial.IsSplittingField.lift` supplies the canonical
+`RatFunc F`-embedding of the splitting field.  So `hS` follows from a single frame-side obligation:
+that the packet product, mapped into `Ω`, equals `c·t`.  This is where the intended `Ω` is the
+algebraic closure of `LaurentSeries F`, the packet `S` is the roots that land on the Weierstrass
+distinguished factor `P` (via `P ∣ Φ`), and the value `c·t = (−1)ᴹ P.coeff 0` comes from Vieta — all
+purely algebraic, no valuation on the splitting field. -/
+theorem hS_of_splits (Φ : (RatFunc F)[X])
+    {Ω : Type*} [Field Ω] [Algebra (RatFunc F) Ω]
+    (hsplit : Splits (Φ.map (algebraMap (RatFunc F) Ω)))
+    (S : Finset (Φ.rootSet Φ.SplittingField)) (c : F)
+    (hψ : (Polynomial.IsSplittingField.lift Φ.SplittingField Φ hsplit)
+            (∏ β ∈ S, (β : Φ.SplittingField))
+        = algebraMap (RatFunc F) Ω (RatFunc.C c * RatFunc.X)) :
+    (∏ β ∈ S, (β : Φ.SplittingField))
+      = algebraMap (RatFunc F) Φ.SplittingField (RatFunc.C c * RatFunc.X) :=
+  hS_of_embedding Φ (Polynomial.IsSplittingField.lift Φ.SplittingField Φ hsplit) S c hψ
+
 end GMC2FrameBridge
 
 #print axioms GMC2FrameBridge.prod_eq_algebraMap_of_embedding
 #print axioms GMC2FrameBridge.hS_of_embedding
+#print axioms GMC2FrameBridge.hS_of_splits
