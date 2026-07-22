@@ -69,6 +69,7 @@ HEADLINE_SENTINELS = {
         "No uniform `q <= 25` good-period theorem",
         "Uniform twelve-speed sporadic emptiness is OPEN",
         "HYP-8815 is a heuristic, not a disproof characterization",
+        "A shared Pascal array is not a geometric bridge",
         "NC2/GMC(2) is proved, not fully formalized",
     ),
 }
@@ -165,6 +166,28 @@ def main() -> int:
     for value, count in sorted(Counter(recent_ids).items(), key=lambda item: int(item[0])):
         if count > 1:
             errors.append(f"MISTAKES.md: current-range MISTAKE-{value} occurs {count} times")
+
+    hypotheses = (REPO / "05-knowledge/hypotheses/INDEX.md").read_text(
+        encoding="utf-8", errors="replace"
+    )
+    current_hypothesis_ids = [
+        value
+        for value in re.findall(r"^- \*\*HYP-(\d+)\b", hypotheses, re.MULTILINE)
+        if int(value) >= 8800
+    ]
+    for value, count in sorted(
+        Counter(current_hypothesis_ids).items(), key=lambda item: int(item[0])
+    ):
+        if count > 1:
+            errors.append(
+                f"hypotheses/INDEX.md: current-range HYP-{value} occurs {count} times"
+            )
+
+    session_log = (REPO / "00-navigation/SESSION-LOG.md").read_text(
+        encoding="utf-8", errors="replace"
+    )
+    if not session_log.startswith("> **CURRENT-TRUTH WARNING"):
+        errors.append("SESSION-LOG.md: current-truth warning must remain first")
 
     if errors:
         print("Agent-facing documentation check FAILED:")

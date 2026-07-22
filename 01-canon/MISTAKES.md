@@ -7,6 +7,35 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-222 (2026-07-21, codex audit of HYP-8820) -- a shared binomial ambient array and a matching minus-one offset were promoted to a geometric and cross-problem mechanism
+
+- **What was claimed:** cake, bagel, Moser, and Fibonacci were described as
+  ordinary truncated rows or diagonals of “one Pascal triangle”; the identity
+  `bagel-cake=T_n-1` was said to prove that the torus hole **is** the deficit-one
+  boundary in a g-bonacci shadow lattice and to place JC(2) and LRC(14) on the
+  same scaffold. A broken polygonal-skip calculation was also printed as if it
+  agreed with the cited indexing.
+- **Why it is wrong:** caterer and cake are prefixes of the `n`th Pascal row.
+  Moser is the even-column functional `C(n,0)+C(n,2)+C(n,4)`, equivalently the
+  first five terms of row `n-1`; bagel is the weighted functional
+  `C(n,3)+2C(n,2)+2C(n,1)`, equivalently `cake(n+1)-2`. Thus they are not all
+  the same unshifted prefix operation. A common ambient array is a useful
+  coordinate system, not a map between the counted objects. The same scalar
+  offset `-1` supplies no bijection, operation, or preserved predicate, and the
+  JC/LRC analogy supplies none either. The removed polygonal-skip code produced
+  negative values and contradicted its own “first deviation” label.
+- **Correct framing:** the four binomial formulas, Fibonacci diagonal identity,
+  full-rank gap-diagonal g-bonacci identity in klein-S313's explicit indexing,
+  and
+  `bagel(n)=cake(n+1)-2` and
+  `bagel(n)-cake(n)=C(n,2)+C(n,1)-1=T_n-1` are exact. Treat them as a binomial-
+  reading atlas. Finite-rank shadows depart at their first deficit. The
+  shadow-lattice/torus link remains a useful test only if both defects are
+  derived from one explicit boundary-cell or valuation operation; JC and LRC
+  links additionally require a preserved predicate and loss ledger.
+
+---
+
 ## MISTAKE-221 (2026-07-21, codex audit of HYP-8815) -- a finite LRC witness scan and an AP/Fibonacci contrast were promoted to a necessary autocorrelation characterization
 
 - **What was claimed:** HYP-8815 called a scan over rationals `a/q` with

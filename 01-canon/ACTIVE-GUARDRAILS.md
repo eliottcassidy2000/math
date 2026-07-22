@@ -102,6 +102,12 @@ mistake.
 30. **Separate verification from provenance.** MISTAKE-205 withdraws the old
     Alpöge–Mathew attribution for THM-1300. State the exactly verified map and
     collision independently of uncertain discovery/publication history.
+31. **A shared Pascal array is not a geometric bridge.** MISTAKE-222. HYP-8820's
+    binomial identities and `bagel-cake=T_n-1` are exact, but a common array or
+    matching `-1` does not identify torus regions with a shadow-lattice
+    boundary, much less transfer an LRC or Jacobian predicate. Test the possible
+    connection by deriving both defects from one explicit valuation or
+    boundary-cell operation; reject it if the source objects or losses differ.
 
 ## Promotion checklist
 

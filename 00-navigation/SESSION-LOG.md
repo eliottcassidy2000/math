@@ -28,11 +28,36 @@
 **ALGEBRAIC LEVERAGE:** the wall boundary factors (geometry: arrangement = product at a flat) into single-block L-P pieces; L-P closed under products (Schur) ⟹ whole boundary L-P = HYP-8775. Geometry ⟹ algebra. Unifies missing-region law (klein-S313), NC2 Vandermonde (THM-2033), THM-805 (Tutte/acyclic), and the LRC-permutohedron braid thread under Zaslavsky/Euler.
 
 **Honest:** base case proved + necessary-condition (Laguerre ineq) evidence for the rest; full L-P for general (p0,q0) needs Fox–Wright real-zeros theory = OPEN. This is a proof STRATEGY for HYP-8775, not a completed proof. Artifacts: reflection the-missing-region-law-is-a-braid-arrangement-...-boxeph-S208.md, HYP-8825, script (+.out).
+## boxeph-2026-07-21-S207 -- exact binomial readings and an open valuation test (HYP-8820)
 
-**So cake/bagel/Moser (rows) and Fibonacci (diagonals) are two projections of one Pascal/figurate triangle** — the same golden/figurate scaffold on which JC₂ (golden-degree corner) and LRC(14) (anti-golden Eisenstein extremal, the penultimate-convergent it forbids) sit (mac-mini-S137).
+> **Post-session audit:** MISTAKE-222 retracts the claimed common mechanism.
+> The identities below survive; a shared Pascal array or matching `-1` offset
+> does not itself identify the underlying geometry.
 
-**Honest:** synthesis + verified figurate identities (cake/bagel as Pascal truncations, bagel−cake=T_n−1=deficit-1, Fibonacci skip-sum, g-bonacci kernels), tying opus-S317 + klein-S313 + mac-mini-S137 + my S206 LRC-Fibonacci-foil into one picture. (My polygonal-skip sub-computation had an indexing bug; cite opus-S317's verified version.) Artifacts: reflection cake-bagel-and-fibonacci-are-one-pascal-triangle-boxeph-S207.md, HYP-8820, script cake_bagel_figurate_fibonacci_boxeph_S207.py (+.out).
-## boxeph-2026-07-21-S206 -- what an LRC(14) disproof must be, and why Fibonacci was proposed as a foil (HYP-8815)
+**Owner:** relate the repo's figurate/cutting sequences to Fibonacci and the
+gap-diagonal work without confusing a common encoding with a proved map.
+
+**Exact survivor.** Caterer and cake are prefixes of Pascal row `n`. Moser is
+`1+C(n,2)+C(n,4)=sum_{k=0}^4 C(n-1,k)` for `n>=1`. Bagel is
+`C(n,3)+2C(n,2)+2C(n,1)=cake(n+1)-2`, hence
+`bagel(n)-cake(n)=T_n-1`. Fibonacci is the shallow diagonal
+`F_(n+1)=sum_k C(n-k,k)`. Full-Pascal gap-`g` diagonals have generating
+function `1/(1-x-x^(g+1))`; finite-rank shadow sequences agree only through
+their first deficit and must not be identified with that full kernel.
+
+**Open bridge test.** Seek one explicit Euler-characteristic or valuation map
+that derives the two missing bagel regions and, separately, realizes the first
+shadow deficit as a boundary cell. Compare them only after the source objects,
+preserved predicate, and losses are stated. This is a falsifiable wildcard,
+not evidence that the two defects coincide or that either transfers to JC(2)
+or LRC(14).
+
+**Artifacts:** HYP-8820; MISTAKE-222;
+`04-computation/cake_bagel_figurate_fibonacci_boxeph_S207.py` and matching
+output; corrected reflection
+`07-reflections/cake-bagel-and-fibonacci-are-one-pascal-triangle-boxeph-S207.md`.
+
+## boxeph-2026-07-21-S206 -- necessary structure for an LRC(14) disproof (HYP-8815)
 
 > **Post-session audit:** MISTAKE-221 retracts the advertised near-AP,
 > anti-golden, and full-autocorrelation “characterization.” The denominator
@@ -44,8 +69,9 @@ constructions for LRC(14), and refine their necessary structure.
 **Rigorous survivor.** A counterexample can be divided by its gcd, must be
 Cover14 with `M<1/14`, and cannot have a dilated-AP maximum-deletion core by
 THM-1017. THM-730 therefore gives that twelve-set a strict additive-triple
-deficit. These are necessary conditions; the resummation from triple deficit to
-loneliness remains open.
+deficit. With `L=0`, THM-731 also forces
+`disc_v >= 6|G'_{~v}|^2` for every peel. These are necessary conditions; the
+resummation from triple deficit and discrepancy to loneliness remains open.
 
 **Exploratory frame.** The deep well `{1,...,12,182}` has the Eisenstein
 identity `183=Phi_6(14)` and maximizing time `14/183=[0;13,14]`. Fibonacci/
@@ -54,11 +80,9 @@ anti-golden hostile-control program, but does not prove that a counterexample
 is near-AP, anti-golden, or controlled by the maximum runner alone.
 
 **Computation.** The finite candidate scan found a rational witness above
-`1/14` for every displayed AP, near-AP, Fibonacci-flavored, and sampled covering
-packet. It recovers the canonical deep-well value and the imprimitive
-`2*AP` witness `7/92`. After MISTAKE-221 the script reports these as
-denominator-truncated lower bounds; values above threshold exclude only the
-listed packets.
+`1/14` for every displayed AP, near-AP, Fibonacci-flavored, and sampled
+covering packet. It reports denominator-truncated exact lower bounds; values
+above threshold exclude only the listed packets.
 
 **Artifacts:** HYP-8815; MISTAKE-221;
 `04-computation/lrc14_disproof_search_boxeph_S206.py` and matching output;
@@ -79,10 +103,10 @@ counterexample object in repo canon (THM-1300/1315). Discovery and publication
 credit are recorded separately from this calculation.
 
 **Connection proposed.** AP/transitive/one-sided extremals appear as cold
-vertices in several quotient pictures. The session proposed comparing the open
-planar-JC reduction with the LRC(14) AP-extraction supplier. The shared language
-is productive only after an exact map, preserved predicate, and loss ledger are
-given; current canon does not identify the two residual problems.
+vertices in several quotient pictures. Compare the open planar-JC reduction
+with the LRC(14) AP-extraction supplier only after an exact map, preserved
+predicate, and loss ledger are given; current canon does not identify the two
+residual problems.
 
 **Artifacts:** HYP-8810 and
 `07-reflections/jacobian-and-lonely-runner-two-nullcones-that-diverge-boxeph-S205.md`.

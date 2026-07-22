@@ -275,6 +275,15 @@ conserves mass exactly at `z=1`.
 - [THM-2010](../01-canon/theorems/THM-2010-new-tournament-invariant-sequences.md)
   records four-term candidates and a no-match search. That is not proof of
   sequence novelty.
+- **EXACT identities / heuristic bridge:** corrected HYP-8820 places caterer
+  and cake as Pascal-prefix sums, Moser and bagel as fixed binomial row
+  functionals, and Fibonacci as a shallow diagonal. Algebraically,
+  `bagel(n)=cake(n+1)-2`, hence `bagel(n)-cake(n)=T_n-1`. Klein-S313's
+  full-rank gap diagonals exactly realize the g-bonacci kernels; finite-rank
+  shadows eventually differ. MISTAKE-222 blocks the stronger claim that a
+  shared array or matching `-1` identifies the torus and shadow boundaries or
+  transfers an LRC/JC predicate. The live bridge test is an explicit common
+  boundary-cell/Euler-characteristic valuation, not another prefix match.
 
 ### Live work
 
