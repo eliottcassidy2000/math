@@ -43,9 +43,9 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
 - **THM-2116/2120 (PROVED REDUCTION/CLOSURE):** the generic first terminal
   `13`-blocker yields two colored-toothpick patterns; global phase/kernel
   rigidity excludes both, emptying that unique independent rank-eight branch.
-- **THM-2117 (PROVED SEPARATION):** clocks, the maximum Hunter tree, and every
-  scalar Fourier minor can pass despite an open safe interval. Retain a joint
-  Toeplitz/Fejer certificate, not scalar divisor-packet bounds.
+- **THM-2117/2121 (PROVED):** clocks, the maximum Hunter tree, and all scalar
+  minors can pass despite an open safe cell; every such cell is detected by
+  Fejer order `<=14nV^2+1`. Retain joint Toeplitz phase, not scalar packets.
 - **THM-2112 (PROVED):** the same rank-seven lane has an explicit whole-row
   box via `R_7=5*28^8*(7*57^42)^17` and a BV/Fourier ratio recursion. The box
   is not enumerated or proved empty.

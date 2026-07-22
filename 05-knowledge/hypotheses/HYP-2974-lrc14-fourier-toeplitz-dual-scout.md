@@ -229,9 +229,12 @@ every primitive qdiv>=14 LRC14 residual has a bounded-degree negative
 Toeplitz moment certificate for F_S=D_S-1.
 ```
 
-The bounded-degree phrase is currently empirical.  The proof would need a
-structured harmonic argument, likely tracking the unit-apex residue band that
-dominates the observed negative eigenvectors.
+THM-2121 now proves the previously missing **height-dependent** statement:
+for `n` binary-shifted combs of maximum speed `V`, every open safe cell has a
+negative Fejer section of order at most `14nV^2+1`.  What remains empirical is
+the much stronger modest/uniform degree claim after the structured residual
+reductions (degree `280` in the present bank).  Improving the quadratic height
+bound still calls for the unit-apex residue structure seen in the eigenvectors.
 
 The sharper S157 target is Toeplitz PSD rigidity:
 

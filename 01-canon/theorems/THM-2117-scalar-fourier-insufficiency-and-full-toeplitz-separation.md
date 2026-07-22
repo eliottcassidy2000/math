@@ -18,6 +18,7 @@ related:
   - THM-1185
   - THM-2105
   - THM-2114
+  - THM-2121
   - HYP-2974
 ---
 
@@ -225,8 +226,9 @@ integral_T H(beta) F_K(beta-beta_0) d beta -> -1.        (21)
 
 Hence (20) is negative for some finite `K`. This proves that a larger finite
 Toeplitz section fails even though every one of its `2 by 2` principal minors
-passes. The conclusion is existential in the section size but fully exact;
-no numerical eigenvalue or floating-point sign is used.
+passes. No numerical eigenvalue or floating-point sign is used. THM-2121 later
+makes the section size effective: the displayed cell is detected by every
+integer `K>8/(51/448945)`, in particular by `K=70423`.
 
 ## 6. What this changes in the LRC route
 

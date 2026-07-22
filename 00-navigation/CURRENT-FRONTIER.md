@@ -139,12 +139,12 @@ not unsafe. The reusable certificate architecture is
   `11|h*product(Q)`. THM-2115's half-fiber Toeplitz gate closes at frequency
   `84` a row invisible to every THM-2105 clock and its saturated pair tree.
   THM-2116 reduces the generic first `13`-blocker to two colored-toothpick
-  patterns; THM-2120 uses global phase/kernel rigidity to eliminate both,
-  closing that unique independent rank-eight branch; other blockers remain.
-  THM-2117 gives a sharper harmonic separation: one exact rank-eight row
-  passes all small clocks, its maximum Hunter tree, and every scalar Fourier
-  minor, yet has an open safe interval. Retain a joint Toeplitz/Fejer
-  certificate, not scalar packets. The six persistent height-114 cut rows
+  patterns; THM-2120 eliminates both by global phase/kernel rigidity, closing
+  that unique independent rank-eight branch while other blockers remain.
+  THM-2117 gives a sharp separation: one exact rank-eight row passes clocks,
+  its maximum Hunter tree, and every scalar minor, yet has an open safe cell.
+  THM-2121 makes the joint gate finite at order `14nV^2+1`; retain the
+  Toeplitz/Fejer certificate, not scalar packets. The height-114 cut rows
   make THM-2065 alone vacuous; location, content, phase, and torsion remain.
 - **PROVED relative decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   lifts bounded scalar relations; `H=2^19` clears recorded margins.
