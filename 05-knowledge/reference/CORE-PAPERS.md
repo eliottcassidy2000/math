@@ -56,19 +56,21 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
   Series A* **33** (1982), 343–347,
   [DOI 10.1016/0097-3165(82)90045-0](https://doi.org/10.1016/0097-3165(82)90045-0).
   **PUBLISHED / stable; bibliographic record checked 2026-07-21.**
-- **Imported role:** the even-cardinality direction bound is applied to the
-  symmetric signed-column configuration of a saturated LRC parameter plane.
-  It supplies a nonradial secant direction; perpendicular projection then has
-  a repeated absolute speed. Combined with the settled lower-dimensional LRC
-  input, this is the external step giving the two-torus margin `M_T>=1/13` in
-  THM-2053.
+- **Imported role:** historical alternate lens only.  Applying the
+  even-cardinality direction bound to the symmetric signed-column
+  configuration can supply a nonradial secant whose perpendicular projection
+  has a repeated absolute speed.  The current proof of THM-2053 does **not**
+  depend on Ungar: its adjacent-normalized-column construction produces the
+  full-support repeat projection elementarily.  The standing lower-dimensional
+  LRC citation, not this paper, is the remaining external input to the torus
+  floor `M_T>=1/13`.
 - **Repo consumers:**
   [THM-2053, rank-two geodesic terminal](../../01-canon/theorems/THM-2053-rank-two-parameter-plane-geodesic-terminal.md),
   [HYP-8846, finite tangent-disk completion](../hypotheses/HYP-8846-lrc14-pointed-plane-transport.md).
-- **Does not prove:** LRC(14), the determinant gate, necessity of that gate,
-  or emptiness of any tangent disk. The anisotropic estimate and disk identity
-  are separate in-repo arguments; disk membership remains only an uncertified
-  case.
+- **Does not prove:** LRC(14), the repeat-projection lemma now used in
+  THM-2053, the determinant gate, necessity of that gate, or emptiness of any
+  tangent disk. The anisotropic estimate and disk identity are separate
+  in-repo arguments; disk membership remains only an uncertified case.
 
 ### Malikiosis--Santos--Schymura — *Linearly-exponential checking is enough...*
 

@@ -5,8 +5,9 @@ status: >
   OPEN finite completion program after a proved large-direction theorem.
   THM-2052 reduces every hypothetical counterexample to a finite atlas of
   rational planes. THM-2053 now proves that every two-dimensional atlas cell
-  has torus margin at least 1/13. Its exact safe gate is
-  max_i|a z_i-b u_i|<=(a^2+b^2)/91; the round corollary is ||(a,b)||>=91L.
+  has torus margin at least 1/13. Its exact sufficient safe gate is
+  max_i|a z_i-b u_i|<=(a^2+b^2)/91; failure is only uncertified. The round
+  corollary is ||(a,b)||>=91L.
   Its adjacent-column refinement gives M(v)>=1/13-R/(2N), where N divides an
   exposed pair sum. Its exact residue deck D_N(m) eliminates whole N-fibers
   independently of longitudinal coefficients; THM-2055 then cuts the bad
@@ -211,10 +212,14 @@ already supplies the global ceiling `sum v_i<=91^12`. The potential gain is
 that the plane gate discards whole projective tails before raw speed
 enumeration and retains the geometry needed for resonance fans.
 
-The finite atlas is astronomically large if generated as all bounded triple
-rows. The theorem-facing next step is an atlas-compression lemma on rank-two
-column configurations with determinant magnitudes and labelled normalized-
-fiber representatives. A sign-only matroid is insufficient.
+The finite atlas is astronomically large if generated as all possible bounded
+triple rows. The theorem-facing next step is therefore an atlas-compression
+lemma for labelled integral rank-two column configurations, together with a
+bound on a reduced-basis `L` from the sparse triple code. An oriented matroid
+may index the combinatorial skeleton, but it is not a sufficient quotient:
+THM-2053's fixed-chirotope family has unbounded transverse height. Any usable
+atlas must retain determinant/Plucker magnitudes (or an equivalent height
+sidecar), the transverse deck labels, and the non-hull runners.
 
 ## What the unrelated repo work contributes
 
@@ -267,10 +272,12 @@ fiber representatives. A sign-only matroid is insufficient.
 - HYP-8845/HYP-8850 parity duplicates a first survivor into its mirror. It
   cannot create that first survivor and therefore belongs after the pointed
   gate.
-- THM-2054 is the proved analytic complement: bounded scalar resonances that
-  all lift to vector-character relations give a whole-product Fejer
-  decorrelation estimate without summing the relation lattice. Its
-  model-specific full-torus identification debt remains explicit.
+- THM-2054 proves the abstract relative-Fejer theorem: when every bounded
+  scalar resonance lifts to the vector-character relation, the actual line
+  average is close to the lifted-character torus average with an explicit
+  whole-product error. Its `H=2^19` comparison is only a compatible numerical
+  budget. Applying it here still requires a model-specific lifted plateau and
+  bounded-resonance routing, and it is not an input to THM-2053.
 - HYP-8860's odd-prime Paley formulas survive only as tournament background.
   MISTAKE-228 retracts the LRC periodic table: it supplies no modulus-selection
   theorem and discards the signed coefficients and endpoint owners needed to

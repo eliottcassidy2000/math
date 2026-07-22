@@ -5,8 +5,9 @@ status: >
   PROVED from the standing cited LRC for at most twelve distinct nonzero
   speeds. The torus-geodesic estimate and the adjacent-normalized-column
   construction are elementary. Every rational two-plane in Q^13 containing a
-  primitive positive row has torus margin at least 1/13. The exact anisotropic
-  terminal is max_i|a z_i-b u_i|<=(a^2+b^2)/91. An intrinsic transverse
+  primitive positive row has torus margin at least 1/13. The resulting exact
+  sufficient gate is max_i|a z_i-b u_i|<=(a^2+b^2)/91; failure of this gate is
+  only uncertified, not unsafe. An intrinsic transverse
   coordinate also gives M(v)>=1/13-R/(2N), where N divides an exposed pair
   sum, and the exact residue deck D_N(m) gives a finite rational phase-height
   conductor independent of all longitudinal coefficients. This makes every
@@ -18,7 +19,7 @@ depends_on:
   - LRCUpTo13
   - "T. Sungkawichai and T. Trakulthongchai, Eleven, twelve, and thirteen lonely runners, arXiv:2604.23906v1 (preprint)"
 related:
-  - THM-1002
+  - THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case
   - THM-2055
   - HYP-4342
   - HYP-4346
@@ -154,7 +155,8 @@ F_U(a_0t_0,b_0t_0)>=1/13,
 
 which proves (10).
 
-Combining (4) and (10) gives the exact anisotropic terminal
+Combining (4) and (10) gives the exact anisotropic sufficient gate delivered
+by this estimate:
 
 ```text
 max_i |a z_i-b u_i| <= (a^2+b^2)/91
@@ -185,9 +187,10 @@ the `2n` open disks
 
 Indeed, after choosing `sigma` to match the sign of `Jc_i dot d`, the
 inequality is just `||d||^2<91 sigma Jc_i dot d` completed to a square. Every
-circle in (13) has the origin on its boundary. Thus the exact residual carrier
-is a union of tangent disks in the integer parameter lattice, not the whole
-round envelope from (12).
+circle in (13) has the origin on its boundary. Thus the exact uncertified
+carrier for this gate is a union of tangent disks in the integer parameter
+lattice, not the whole round envelope from (12). Membership in this carrier
+does not imply that the corresponding row is unsafe.
 
 ## 4. Adjacent normalized columns expose the repeat direction
 
@@ -285,7 +288,7 @@ put `theta=X(eta)`. The restricted objective is
 F_K(theta)=min_k ||m_k theta||.
 ```
 
-All speeds `m_k` are nonzero and the pair in (12) repeats one absolute value,
+All speeds `m_k` are nonzero and the pair in (17) repeats one absolute value,
 so there are at most twelve distinct absolute speeds. Settled LRC for at most
 twelve speeds gives
 
@@ -345,8 +348,9 @@ v_i+v_j=gN.                                           (21)
 ```
 
 Hence `N` is a divisor of an exposed pair sum, exactly the ruler type from
-THM-1002, and the complete denominator-`N` row is determined by the transverse
-template `(m_k)` up to multiplication by the unit `M`.
+[THM-1002, the pair-sum denominator bound](THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case.md),
+and the complete denominator-`N` row is determined by the transverse template
+`(m_k)` up to multiplication by the unit `M`.
 
 ## 6. Exact residue deck and phase-height conductor
 
@@ -403,7 +407,7 @@ G(m)={theta in T:min_k||m_k theta||>=1/14},
 lambda(m)=maximum length of a connected component of G(m).
 ```
 
-The set is nonempty by (13). Every closed circle arc of length at least `1/N`
+The set is nonempty by (18). Every closed circle arc of length at least `1/N`
 meets the complete `N`-grid. Hence
 
 ```text
@@ -511,8 +515,8 @@ primitive generator up to sign, so that atlas cell is already a single exact
 row. For a two-dimensional kernel, Section 4 supplies the repeat direction;
 choose a saturated basis. A primitive positive speed row has a primitive parameter
 direction: if `(a,b)=g(a',b')` with `g>1`, every speed is divisible by `g`.
-The exact residual consists only of primitive parameters violating (11). By
-(12), it is contained in the finite disk
+The residual not certified by (11) consists only of primitive parameters
+violating that sufficient gate. By (12), it is contained in the finite disk
 
 ```text
 a^2+b^2 < (91L(U))^2.                                 (23)
@@ -521,9 +525,11 @@ a^2+b^2 < (91L(U))^2.                                 (23)
 Section 6 first discards every entire fiber with
 `D_N(m)>=1/14` and leaves only the finite bad-modulus down-set inside
 `N<91R`, together with the exact pair-sum and residue data (21). Inside those
-bad fibers, THM-2055 deletes nonvertex determinant owners and intersects each
-normal-fan sector with one tangent disk from (13). Every remaining row can then
-be decided exactly by the pair-sum ruler theorem.
+bad fibers, THM-2055 deletes nonvertex determinant owners from the determinant
+test and intersects each normal-fan sector with one tangent disk from (13).
+The corresponding non-hull columns remain in the residue deck and in the LRC
+row. Every remaining row can then be decided exactly by the linked pair-sum
+denominator theorem.
 Therefore the entire THM-2052 atlas has an explicit finite parameter-space
 terminal **without harvesting a twelfth bounded relation**.
 
@@ -653,10 +659,14 @@ MISTAKE-185 warning against the old HNF shortcut.
 
 ## 10. Exact referee
 
-The stored referee checks the AP deck law for every `1<=k<=12` and
-`1<=N<=300`, divisor monotonicity on four hostile templates, every available
-small-divisor exit, the nonmonotone pair `D_13,D_15`, the exact conductor
-`156`, and the fixed-chirotope/unbounded-`R` family. It passes both
+The stored referee is an arithmetic regression, not an independent proof of
+the general saturation, transverse-grid, or conductor arguments above. It
+checks the AP deck law for every `1<=k<=12` and `1<=N<=300`, divisor
+monotonicity on four hostile templates, every available small-divisor exit,
+the nonmonotone pair `D_13,D_15`, the largest AP bad modulus `155` within that
+range, and the fixed-chirotope/unbounded-`R` family. The proof of (22j)--(22k),
+not the finite scan alone, establishes the all-modulus conductor `156`. The
+referee passes both
 
 ```text
 python 04-computation/lrc14_transverse_residue_deck_referee_codex_20260721.py

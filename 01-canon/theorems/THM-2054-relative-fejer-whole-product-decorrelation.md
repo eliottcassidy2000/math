@@ -1,7 +1,19 @@
 ---
 id: THM-2054
 title: Relative Fejer whole-product decorrelation along a character line
-status: PROVED. If every scalar resonance of height at most H along an integer line lifts to the corresponding vector-character relation, then the line average of a product and its full-torus average differ by at most twice the sum of the one-factor Fejer L1 errors. The statement extends to finite signed atom expansions. For two-scale characters (b_i,c_i) evaluated on (1,M), the lift condition is automatic when |M|>H sum_i|b_i|. For the exact seven-sector inclusion-exclusion algebra, after dropping the pinned zero factor, the complete H=2^20 error is <90816/1048577; rowwise H=2^19 is below every recorded pinned-base cap-Q margin. This proves the abstract nonresonant filter and its coefficient budget, but not model-specific LRC plateau/classification glue or LRC(14).
+status: >
+  PROVED. If every scalar resonance of height at most H along an integer line
+  lifts to the corresponding vector-character relation, then the line average
+  of a product and its lifted-character torus average differ by at most twice
+  the sum of the one-factor Fejer L1 errors. The statement extends to finite
+  signed atom expansions. For two-scale characters (b_i,c_i) evaluated on
+  (1,M), the lift condition is automatic when |M|>H sum_i|b_i|. For the exact
+  seven-sector inclusion-exclusion algebra, after dropping the pinned zero
+  factor, the complete H=2^20 error is <90816/1048577; rowwise H=2^19 is below
+  every recorded pinned-base cap-Q margin. This last comparison is only a
+  numerical budget compatibility result. The theorem proves the abstract
+  nonresonant filter and its coefficient budget, but not a model-specific LRC
+  plateau, bounded-resonance classification, or LRC(14).
 source: codex-2026-07-21-LRC-unrelated-transfer
 depends_on: []
 related:
@@ -41,7 +53,14 @@ B_i=||f_i||_infinity,
 epsilon_i=||f_i-p_i||_1,                               (1)
 ```
 
-where `F_H` is the normalized Fejer kernel of order `H>=1`.
+where, to fix the order convention used throughout this theorem,
+
+```text
+F_H(x)=sum_(|n|<=H) (1-|n|/(H+1)) exp(2 pi i n x).     (1a)
+```
+
+Thus `F_H` is the normalized positive Fejer kernel with Fourier support
+`[-H,H]`; below, `N=H+1`.
 
 ## 1. The bounded-resonance lift theorem
 
@@ -58,12 +77,15 @@ sum_i n_i chi_i=0 in Z^d.                              (2)
 Zero frequency coordinates are allowed in (2); only the all-zero tuple is
 vacuous. This point is essential for noncentered coverage atoms.
 
-Define the actual line average and the fully decorrelated torus average by
+Define the actual line average and the lifted-character torus average by
 
 ```text
 I_lambda(f)=integral_T product_i f_i(a_i t) dt,
 J_chi(f)=integral_(T^d) product_i f_i(chi_i dot x) dx.  (3)
 ```
+
+The latter need not be a product of independent one-factor averages: the
+vector relations among the `chi_i` are deliberately retained.
 
 **Theorem.** Under (2),
 
@@ -125,17 +147,21 @@ coverage functions. Suppose
 Phi(x)=sum_alpha c_alpha product_i f_(alpha,i)(chi_i dot x),
 ```
 
-with finitely many atoms. Omitted factors are simply dropped; a genuinely
-constant factor may be retained only when it is evaluated along a nonzero
-character. In particular, a zero-character point evaluation must be factored
-out before applying the theorem. Put
+with finitely many atoms. For every retained nonconstant factor, require its
+character to be nonzero along `lambda` and require (2) for that atom; one global
+condition (2), with zero frequencies inserted for omitted factors, suffices.
+Omitted factors are simply dropped. A genuinely constant factor can be pulled
+out exactly regardless of its character. A nonconstant factor evaluated on a
+zero character is instead the point value `f(0)` and must be factored out
+before applying the theorem, because an `L1` Fejer error does not control point
+evaluation. Put
 
 ```text
 B_(alpha,i)=||f_(alpha,i)||_infinity,
 epsilon_(alpha,i)=||f_(alpha,i)-F_H*f_(alpha,i)||_1.
 ```
 
-Applying (4) atom by atom gives
+Under these inherited hypotheses, applying (4) atom by atom gives
 
 ```text
 |integral_T Phi(lambda t)dt-integral_(T^d)Phi(x)dx|
@@ -207,7 +233,8 @@ relation holds. If `C!=0`, integrality gives
 contradicting (11). Thus every bounded scalar resonance lifts to the
 two-dimensional cluster relation, and (4) or (8) applies.
 
-The strict inequality in (11) is necessary. At `H=M=1`, take
+The strict cutoff in this uniform sufficient criterion cannot be weakened to
+`>=`. At `H=M=1`, take
 
 ```text
 chi_1=(1,0),       chi_2=(0,1),       lambda=(1,1).
@@ -352,9 +379,10 @@ and separate scalar from vector resonances before taking absolute values.
 
 ## 8. Exact referee
 
-The stored referee checks `sum_A|A|=192`, every rational comparison in
-Sections 5, the rowwise `H=2^19` minimum, and the strict-cutoff alias. It passes
-both
+The stored referee is an arithmetic regression, not an independent proof of
+the Haar-pushforward, BV, or lifted-model arguments. It checks
+`sum_A|A|=192`, every rational comparison in Section 5, the rowwise `H=2^19`
+minimum, and the strict-cutoff alias. It passes both
 
 ```text
 python 04-computation/lrc14_relative_fejer_atom_budget_referee_codex_20260721.py
