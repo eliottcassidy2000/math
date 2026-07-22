@@ -1,0 +1,17 @@
+THM-2129 exact quartic three-coefficient boundary referee
+sympy=1.14.0
+quartic_tail_flux_identity: PASS
+recurrence_translation_and_Groebner: n<= 14: PASS
+tournament_analysis=not_applicable_ordered_triple_and_resonance_sidecars
+n=1: unit
+n=2: radical=(beta-4,gamma); powers=1,1
+n=3: unit
+n=5: unit
+n=6: radical=(beta-4,gamma); powers=4,3
+n=7: unit
+n=9: unit
+n=10: radical=(beta-4,gamma); powers=7,5
+n=11: unit
+n=13: unit
+n=14: radical=(beta-4,gamma); powers=10,7
+VERDICT: PASS
