@@ -1,4 +1,4 @@
-/-!
+/-
 CORRECTION (MISTAKE-240): the theorem in this module is kernel-checked but
 vacuous under the current definition of `LowestFaceUniqueChannel`.  Taking
 `lambda = 0`, `delta = -1`, and `F = ∅` gives a valid empty level set for

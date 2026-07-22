@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# SCOPE CORRECTION: 102/116 is a unique-channel search only through mass 40 in
+# one bounded support universe. The other 14 pass degree-6 span-membership
+# tests; cofactors are not retained, only {-2,-1,1,2} is formalized, and no
+# uniform effective bound follows.
 """dvdk_monomial_certificate_residual_boxeph_S231.py -- boxeph-2026-07-22-S231
 
 Eliminate DvdK for the residual (coincident-channel / symmetric) straddling supports that the

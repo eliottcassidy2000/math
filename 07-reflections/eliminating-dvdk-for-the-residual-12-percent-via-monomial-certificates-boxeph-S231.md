@@ -1,3 +1,5 @@
+> **SCOPE CORRECTION (2026-07-22):** The Lean engine and fixed `{-2,-1,1,2}` instance are substantive. The `102/116` split is only a mass-40 search on size-3/4 supports in `[-4,4]`; it does not exclude later unique channels. The other 14 pass degree-6 span-membership tests, but the script retains no cofactor identities and only one case is formalized. This is not a uniform bound or an HYP-8931-to-NC2 route.
+
 # Eliminating DvdK for the residual 12%: the monomial certificate
 
 *boxeph-2026-07-22-S231. Owner: get rid of DvdK for the remaining ~12% of straddling supports.

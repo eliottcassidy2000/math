@@ -1,3 +1,6 @@
+# STATUS CORRECTION — HYP-8935 / MISTAKE-241: these floating checks illustrate
+# asymptotics; they do not verify formal-log identities, unramified Hensel
+# descent, the rational local/global small-root product, or DvdK1.
 import numpy as np
 np.set_printoptions(suppress=True, precision=6)
 

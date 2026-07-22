@@ -11,7 +11,8 @@
 3. **Major new closure:** NC2, hence unrestricted GMC(2), is **PROVED in repo
    canon** by THM-2022, with the one-variable seed now proved internally by
    THM-2067. Lean checks the residue, support-face, contradiction, extractor,
-   and `GMC2HeightWitness.heightWitnessSupplier_holds`; the root-imported endpoint is
+   and `GMC2HeightWitness.heightWitnessSupplier_holds` (the abstract
+   `HeightWitnessSupplier`); the root-imported endpoint is
    `DvdK1 -> NC2 -> GMC(2)`. General `DvdK1` is the sole formal leaf.
 4. **Truth discipline:** correction/repaired canon outranks canon, which
    outranks exact computation, hypothesis, synthesis, and historical prose.
@@ -71,9 +72,9 @@ are searchable history—not mandatory warm-up.
     full Bertrand boundary at `z=1`.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300
     is the exact new counterexample. THM-2063 closes one-fiber-linear pairs;
-    THM-2071 closes every quadratic-fiber pencil cell: any survivor has fiber
-    degree at least three in every direction. This is not a generic-cover,
-    Jelonek, VC(4), or full planar classification.
+    THM-2071 closes quadratic fibers, and THM-2084's cubic Faber gate makes
+    reduced degree `13` the first unresolved cubic cell. These are source-fiber
+    statements, not generic-cover, Jelonek, VC(4), or full planar classification.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed
@@ -103,20 +104,22 @@ are searchable history—not mandatory warm-up.
     THM-2066 closes divisor-complete cores through `24`; THM-2069 proves the
     deletion-code/cogirth wheel; THM-2074 proves density-one strict LRC(14).
     THM-2072/2073/2075/2077 retain the dyadic terminal and owner addresses;
-    THM-2078/2080 force size `7..10`, maximum `>=25`, and depth `<=4`;
-    THM-2081/2083 reduce rank seven to bounded relations supported on guard/two-speed triples (the guard coefficient may vanish).
-    THM-2082 proves scalar code profiles lose projective residue incidence.
+    THM-2078/2080 force size `7..10`, maximum `>=25`, and depth `<=4`.
+    THM-2081--2087 make the rank-seven relation bound effective at `57` and
+    close modular/lacunary branches; THM-2088--2092 reduce the persistent lane
+    to finite banks or one global last-guard/terminal-anchor star.
 16. **Shared syntax is not a bridge.** MISTAKE-230--233/HYP-8885 retract the
     universal entropy/modular frame; MISTAKE-235 leaves S102's LRC/GMC sums as
     analogy, not AP-core reduction. Fiber size is observable-relative, and
     genus, cusp forms, Paley spectra, or weighted kernels need an explicit
-    loneliness-preserving map before entering the proof graph. THM-2084/2085/2086 are RESERVED; kernel checking also needs satisfiable hypotheses.
+    loneliness-preserving map. THM-2091 remains an unproved stub; Lean also
+    requires satisfiable hypotheses and root-import reach.
 
 ## Where to go by topic
 
 | Topic | Read first | Then use |
 |---|---|---|
-| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2083; preserve terminal address/owner/guard sidecars |
+| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2092; preserve terminal address/owner/guard sidecars |
 | LRC / Frobenius wildcard | [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) | THM-2041 packets; keep seed and pointwise exit explicit |
 | LRC literature | [`CORE-PAPERS.md#lonely-runner-conjecture`](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [`LRC-TECHNIQUE-INDEX.md`](LRC-TECHNIQUE-INDEX.md), source paper |
 | NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2067/2070, formal interfaces, guardrails |

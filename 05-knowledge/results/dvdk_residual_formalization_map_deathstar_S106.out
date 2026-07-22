@@ -1,3 +1,6 @@
+STATUS CORRECTION — HYP-8935 / MISTAKE-241: this is floating illustrative
+output, not verification of formal-log identities, unramified Hensel descent,
+the rational local/global small-root product, or DvdK1.
 ======================================================================
 CHECK A: CT(f^m) == D_m=[u^{Mm}]R^m, and the cancellation pattern
 

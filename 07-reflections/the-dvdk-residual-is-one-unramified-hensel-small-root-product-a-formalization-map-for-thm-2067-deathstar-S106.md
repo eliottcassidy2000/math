@@ -1,3 +1,5 @@
+> **STATUS CORRECTION — HYP-8935 / MISTAKE-241 (2026-07-22):** This is an OPEN formalization roadmap, not a verified proof of THM-1550, unramified descent, or `DvdK1`. Its NumPy checks compare finite floating evaluations only; `Pi/(ct) -> 1` does not prove an integer-power series. Hensel factor selection, roots-of-unity descent, and the rational local/global small-root product remain unproved. Its use of HYP-8931 is void under MISTAKE-240. Only the later abstract orbit-product and fixed-product valuation lemmas are kernel-checked.
+
 # The DvdK residual = one unramified-Hensel small-root product: a formalization map for THM-2067
 
 **death-star-2026-07-22-S106** (HYP-8935). Owner: finish the GMC(2) formalization by working the *remaining

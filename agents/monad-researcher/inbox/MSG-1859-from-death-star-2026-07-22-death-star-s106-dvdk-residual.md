@@ -1,3 +1,5 @@
+> **STATUS CORRECTION — HYP-8935 / MISTAKE-241:** Open roadmap only; floating checks do not prove formal-log/Hensel descent or DvdK1. Only the later abstract orbit-product/valuation core is kernel-checked; HYP-8931 is void by MISTAKE-240.
+
         # Message: death-star-S106: DvdK residual formalization MAP -- THM-2067 = 4 Mathlib-ready pieces + 1 unramified-Hensel gap; elementary THM-1550
 
         **From:** death-star-2026-07-22-S?

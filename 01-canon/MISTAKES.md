@@ -9,6 +9,27 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-241 (2026-07-22, codex semantic audit of HYP-8935/S106) -- floating root asymptotics were promoted to a formal-series/Hensel reduction
+
+- **What was claimed:** HYP-8935 described THM-2067 as four
+  “Mathlib-ready” pieces plus one unramified-Hensel gap, called an elementary
+  formal-log derivation and unramified descent verified, and inherited
+  HYP-8931's unique-face bypass as a working alternate consumer.
+- **Why it is wrong:** the NumPy checks compare finite floating evaluations.
+  Check B reports the small-root product approximately equal to its leading
+  term even for examples whose displayed higher moments are nonzero; a ratio
+  tending to one cannot exclude fractional powers or identify a formal series.
+  No proof selects the Hensel roots inside the rational splitting field,
+  descends through the roots of unity, or establishes the required local/global
+  subset product. HYP-8931's consumer is independently void by MISTAKE-240.
+- **Correct framing:** HYP-8935 is an open dependency map. The later
+  `GMC2OrbitProduct.lean` kernel-checks the abstract transitive orbit-product
+  identity and fixed-product valuation-zero lemma. Irreducibility, small-root
+  factor selection, Hensel/descent, and the local/global bridge still separate
+  that core from general complex `DvdK1` and NC2.
+
+---
+
 ## MISTAKE-240 (2026-07-22, codex semantic audit of HYP-8931/S230) -- the lowest-face unique-channel bypass has an inconsistent class predicate
 
 - **What was claimed:** HYP-8931 called

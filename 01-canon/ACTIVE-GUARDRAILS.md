@@ -84,7 +84,9 @@ records current prohibitions, not the whole history.
     plus exact packets/owners/Euler data; no LRC/GMC identity or AP reduction.
 27. **Clocks are not modular cusps.** MISTAKE-233: divisor labels, `f14`, genus,
     and Hecke coefficients preserve no loneliness predicate by themselves.
-27a. **THM-2084, THM-2085, and THM-2086 are RESERVED / UNPROVED.** Keep all three outside proved dependencies.
+27a. **The new gates are reductions, not closures.** THM-2084--2090 and 2092
+    are proved in their stated scopes; THM-2091 is a CLAIMED / unproved stub. Their
+    finite banks and global-star residual do not prove LRC(14) or JC(2).
 
 ## NC2 / GMC
 

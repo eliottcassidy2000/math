@@ -257,6 +257,8 @@ STATUS_WORDS = (
     "VERIFIED", "PARTIAL", "CLAIMED", "PROVED", "CITED", "OPEN", "MIXED",
 )
 
+UNPROVED_CANDIDATE_STATUSES = {"RESERVED", "CLAIMED"}
+
 
 def file_status(relative: str) -> str:
     if relative.startswith("07-reflections/"):
@@ -375,8 +377,8 @@ def topic_hits(
         and "/INDEX-HISTORICAL-" not in path
     ]
     groups = (
-        ("Canon", "01-canon/theorems/", False),
-        ("Reservations (not results)", "01-canon/theorems/", True),
+        ("Established canon", "01-canon/theorems/", False),
+        ("Unproved candidates (not results)", "01-canon/theorems/", True),
         ("Hypotheses", "05-knowledge/hypotheses/", None),
         ("Historical reflections", "07-reflections/", None),
     )
@@ -389,7 +391,8 @@ def topic_hits(
                 if row[1].startswith(prefix)
                 and (
                     reservation_only is None
-                    or (file_status(row[1]) == "RESERVED") == reservation_only
+                    or (file_status(row[1]) in UNPROVED_CANDIDATE_STATUSES)
+                    == reservation_only
                 )
             ),
             key=lambda row: (row[1].endswith("/INDEX.md"), -row[0], row[1]),
@@ -455,11 +458,15 @@ def recent_guardrails(limit: int, terms: list[tuple[str, int]]) -> None:
 def session_posture(topic: str) -> None:
     section("Session posture")
     print(f"Anchor: {truncate_utf8(topic, 220)}")
+    print("Inheritance: name the closest proved mechanism, hostile example,")
+    print("corrected near miss, and least-used relevant sidecar before deriving.")
     print("Choose one underexplored Niche and one freely generated Wildcard.")
     print("Keep a 3–7 concept board; compare each new result against every item.")
     print("Explain the mechanism or failure anatomy, not only the verdict.")
     print("Type connections as map / preserved predicate / loss / sidecar / test.")
-    print("Treat every RESERVED file as unproved, including candidates under audit; never use it as a proved result or dependency.")
+    print("Select a relevant META-PATTERNS card; at closeout record cards used")
+    print("and evidence for any candidate card or counterindication.")
+    print("Treat RESERVED and CLAIMED files as unproved; never use them as proved dependencies.")
 
 
 def identity_note() -> None:

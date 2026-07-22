@@ -51,6 +51,18 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
   do not use it as an inverse theorem.  The prime shortcut also does not cross
   the composite `k+1=14` lift wall.
 
+### Vaaler — *Some extremal functions in Fourier analysis*
+
+- **Primary / freshness:** J. D. Vaaler, *Bulletin of the American Mathematical
+  Society (N.S.)* **12** (1985), 183--216, Theorem 19. **PUBLISHED / stable.**
+- **Imported role:** supplies the one-dimensional degree-`H` trigonometric
+  majorant/minorant sandwich for an interval that THM-2085 tensors with signed
+  coordinate defects.
+- **Repo consumer:** [THM-2085](../../01-canon/theorems/THM-2085-explicit-height-57-rank-seven-selberg-gate.md).
+- **Does not prove:** the relative-Hunter inequality, the signed tensor
+  bookkeeping, `H=57`, optimality of that height, or LRC(14). Those are
+  repo-derived arguments and constants.
+
 ### Ungar — *2N noncollinear points determine at least 2N directions*
 
 - **Primary / freshness:** Peter Ungar, *Journal of Combinatorial Theory,

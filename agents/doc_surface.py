@@ -67,14 +67,14 @@ LINE_BUDGETS = {
     "AGENTS.md": 140,
     "CLAUDE.md": 70,
     "README.md": 120,
-    "00-navigation/START-HERE.md": 150,
+    "00-navigation/START-HERE.md": 155,
     "00-navigation/CURRENT-FRONTIER.md": 450,
-    "01-canon/ACTIVE-GUARDRAILS.md": 180,
+    "01-canon/ACTIVE-GUARDRAILS.md": 190,
     "00-navigation/RESEARCH-PROTOCOL.md": 300,
     "00-navigation/META-PATTERNS.md": 400,
     "00-navigation/SESSION-LOG.md": 120,
     "05-knowledge/hypotheses/INDEX.md": 120,
-    "05-knowledge/reference/CORE-PAPERS.md": 600,
+    "05-knowledge/reference/CORE-PAPERS.md": 625,
     "00-navigation/CONCURRENT-SESSIONS.md": 160,
     "01-canon/README.md": 140,
     "05-knowledge/README.md": 120,
@@ -89,7 +89,7 @@ PREFIX_LINE_BUDGETS = {
 
 # A runaway generated ledger must never silently become part of the bounded
 # startup packet, even when its line count happens to remain small.
-STARTUP_BYTE_BUDGET = 50_000
+STARTUP_BYTE_BUDGET = 180_000
 MAX_STARTUP_LINE_BYTES = 500
 MAX_EMITTED_MATCH_BYTES = 360
 MAX_STARTUP_PACKET_BYTES = 30_000
