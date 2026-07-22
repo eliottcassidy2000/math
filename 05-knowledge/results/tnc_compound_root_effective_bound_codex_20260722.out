@@ -1,4 +1,4 @@
-THM-2087 compound-root effective-bound exact referee
+THM-2089 compound-root effective-bound exact referee
 symbolic compound checks
   (a,b)=(1,1) C=2 K=1 B=2 actual e_b powers by coefficient=[0, 1, 0]: PASS
   (a,b)=(1,2) C=3 K=1 B=3 actual e_b powers by coefficient=[0, 0, 1, 0]: PASS
