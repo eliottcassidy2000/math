@@ -10,7 +10,7 @@ output: 05-knowledge/results/jc_keller_monoid_cusp_rule_macmini_S135.out
 
 # THM-1330 — necessary structure of the Keller nonunit locus
 
-> **Scope correction (MISTAKE-228).** Earlier versions called the results below
+> **Scope correction (MISTAKE-236).** Earlier versions called the results below
 > an "exact picture" and called the covering data a classification. They are a
 > strong list of universal invariants and necessary conditions. They do not
 > enumerate irreducible Keller maps, prove that every abstract covering triple

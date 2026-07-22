@@ -1,7 +1,7 @@
 # THM-1830: the DvdEZ-conditional edifice, and the toral route to LRC(14)
 
-**Status:** DELIVERED — an EDIFICE MAP (what NC2 buys, each arrow graded),
-one PROVED lemma (CT-realization), one NEW NAMED CONJECTURE FAMILY (TTNC,
+**Status:** SUPERSEDED CONDITIONAL EDIFICE MAP — not a theorem-level NC2/GMC
+bridge. One PROVED lemma (CT-realization), one named conjecture family (TTNC,
 with the proved TNC as its base case), the explicit reduction SHAPE
 TTNC(14) => LRC(14) with its tight instances shown to be nonvanishing
 Ramanujan-sum arithmetic, and the honest verdict that no completed
@@ -9,6 +9,12 @@ conditional proof of LRC(14) is claimed. HYP-8625.
 **Author:** boxeph-2026-07-20-S191
 **Owner:** "assume the 2D nullcone statement (Derksen-van den Essen-Zhao);
 what can we prove? can we chain NC2 => GMC(2) => LRC(14)? get creative."
+
+> **Current scope (MISTAKE-235/237).** THM-2022 proves GMC(2) by its own
+> lowest-face/Frobenius mechanism. Nothing here proves an
+> `NC2 -> GMC(2) -> JC(2)` or `NC2/GMC(2) -> LRC(14)` chain. The CT-realization
+> lemma and Ramanujan calculations survive; TTNC and the Fock/LRC arrows remain
+> conjectural programs. Read this file as provenance for those objects only.
 
 ## 1. The edifice: what NC2 (assumed) makes unconditional
 

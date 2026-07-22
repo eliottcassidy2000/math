@@ -17,6 +17,7 @@ source: codex-2026-07-21-LRC-multitail-capacity
 depends_on:
   - THM-2059
   - THM-2060
+  - LRCUpTo13
 related:
   - THM-2057
   - THM-2058
@@ -156,7 +157,8 @@ The first equivalence is the definition of `t_w`; the second follows from
 
 ## 3. Primitive imprimitive-core reduction
 
-Let
+Let `a` be the exact gcd of an imprimitive eleven-speed core and write that
+core as `aC`, so `gcd(C)=1`. Thus
 
 ```text
 S=aC union {x,y},       |C|=11,       a>1,              (13)
@@ -179,10 +181,13 @@ satisfying (1). It forces (11). From `t_w=2` one has `h_w|2N`, hence
 a|2g_w,       a does not divide g_w.                    (14)
 ```
 
-It follows that `a` is even, `a/2|g_w|w`, and `w/(a/2)` is odd. Apply this to
-both tails. The common divisor `a/2` divides every speed in (13); primitivity
-forces `a/2=1`. Hence every remaining counterexample must lie on the exact
-dyadic seam
+It follows that `a` is even and `a/2|g_w|w`. More precisely, if
+`d_w=gcd(N,h_w)`, then `t_w=2` gives `h_w=2d_w`; hence
+`u_w=w/g_w` is odd because `gcd(u_w,h_w)=1`. Condition (14) says that the
+2-adic valuation of `a` is exactly one larger than that of `g_w`, so
+`g_w/(a/2)` is odd. Therefore `w/(a/2)` is odd. Apply this to both tails.
+The common divisor `a/2` divides every speed in (13); primitivity forces
+`a/2=1`. Hence every remaining counterexample must lie on the exact dyadic seam
 
 ```text
 S=2C union {x,y},       x,y odd.                        (15)

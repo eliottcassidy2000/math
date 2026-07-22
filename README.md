@@ -49,9 +49,10 @@ As of 2026-07-21:
   live prize is a lossless deck/clock/Farey/endpoint discharge for every
   remaining rank-eleven star cell; rank twelve is confined to a separate
   finite box that still needs exact decision. THM-2058 proves the primitive
-  packet/deck-fan carrier and THM-2059 the arbitrary-clock CRT join; neither
-  empties every interval or forces overlap. THM-2060/2061 are reserved proof
-  candidates under audit. A failed gate means uncertified, not unsafe.
+  packet/deck-fan carrier and THM-2059 the arbitrary-clock CRT join. THM-2060/
+  2064 reduce imprimitive two-tail capacity to a dyadic seam; THM-2061
+  constrains but does not empty it, and THM-2062 adds a hereditary CRT wheel.
+  LRC(14) remains open; a failed gate means uncertified, not unsafe.
 - **NC2 and GMC(2) are PROVED in repo canon** by THM-2022's lowest-balanced-face
   Frobenius argument. Its modular Lean spine is root-imported and sorry-free at
   the checked nodes, including descent, face construction, DvdK seed/reference
@@ -66,11 +67,11 @@ As of 2026-07-21:
 - **GMC is false from dimension 3 onward.** Dimension two is the sharp surviving
   case handled by THM-2022; dimensions one and two must not be conflated with
   the higher-dimensional counterexamples.
-- **The two-pair Poisson conjecture is false, while DC(2) and planar JC remain
-  open.** THM-2044 is an explicit symplectic suspension; THM-2045 obstructs
-  only its factorized first-coordinate family from de-stabilizing to the plane.
-  THM-2049 makes the local correction complex acyclic, leaving polynomial
-  termination and the coupled `D` column rather than a grade-six obstruction.
+- **The two-pair Poisson conjecture is false; DC(2) and JC(2) remain open.**
+  THM-2045 excludes only its factorized family, while THM-2063 tames every
+  one-fiber-linear planar pair. HYP-8905's binary symmetric subcase lands
+  there; MISTAKE-237 blocks the proposed NC2/GMC bridge. THM-2049 leaves
+  polynomial termination and the coupled `D` column as the Weyl-side gates.
 - **Tournament work has moved from isolated invariants to operations and
   decomposition:** order-join, strong cores, signed Rédei data, local
   subtournament censuses, and invariant-independence witnesses. Rank matches

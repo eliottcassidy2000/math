@@ -51,75 +51,105 @@
 - **HYP-8885 / boxeph-2026-07-21-S221 (VERIFIED: the cusp frame is a repo-wide difficulty-LOCATOR):** Applied the Eisenstein(floor)+cusp(obstruction) frame (S220) as a diagnostic across under-attended problems. object = EISENSTEIN (computable main term/local) + CUSP (hidden obstruction = genus = deep arithmetic entropy S218); the difficulty is always the CUSP; the frame localizes it + predicts the first-hard-case (first positive cusp dim). SWEEPS (verified): (1) TOURNAMENT COSPECTRALITY (under-attended): char_A spectrum = Eisenstein/local; the COSPECTRAL fiber = the reconstruction CUSP; cusp dim = #classes-#distinct-spectra = 1,3,28 for n=4,5,6 (first cospectral pair at n=4 = the 'genus' of tournament reconstruction = kps wall in cusp language = S218 reconstruction entropy). Transitive = spectrally unique (char x^n, Eisenstein/rigid). (2) INTRANSITIVITY c3 = the tournament's cusp form: transitive c3=0 (Eisenstein/gradient) vs regular c3=5,14,30 (n=5,7,9, the intransitive cusp); the 3-cycle atom (THM-1830) = the minimal cusp. (3) GMC(2): E=L o CT (THM-1645) = angular DvdK-closed (EISENSTEIN floor) + radial ker L != 0 (verified L(t-1)=L(t^2-3t+1)=0, the Laplace-determinacy CUSP); GMC(n>=3) false = cusp grows. (4) FIGURATE: cake/bagel = smooth Eisenstein polynomial + Fibonacci/deviation cusp (S207 recast). POWER: (1) localizes each difficulty to a small nameable cusp (genus-1 newform / cospectral fiber / c3 count / radial kernel); (2) predicts first-hard-case = first positive cusp dim (LRC p=7, tournament recon n=4, intransitivity n=3); (3) unifies as dim(cusp) = S218 deep arithmetic entropy. Honest: LRC f14 + the-modular-tournament H are literally modular; the others are the analogous main-term+obstruction structure (= arithmetic entropy). A diagnostic lens/difficulty-map, not a proof step. Script the_cusp_frame_as_a_diagnostic_across_the_repo_boxeph_S221.py.
 - **HYP-8879 / death-star-2026-07-21-S102 (VERIFIED unification + quantitative reduction: LRC and GMC(2) are ONE integer-kernel non-cancellation; LRC(14) reduces to the maximal-resonance (AP) cores):** Leveraging the GMC2/zeta/scale-clock/unique-cycle ideas toward LRC. SOUND unification: the L∞ lonely measure mu = int prod_i g(v_i t) dt (g=1[||x||>delta] indicator) = Σ_{k: Σ k_i v_i=0} prod hat_g_{k_i} -- a sum over the INTEGER KERNEL (resonances) of the speed map, weighted by Fourier products -- STRUCTURALLY IDENTICAL to the GMC2 moment E[P^m]=Σ_{balanced channels: Σ r_i q_i=0} multinomial·A(r)!·c^r (sum over the charge kernel). Covering (mu=0) = cancellation of resonances = GMC2's E=0. Verified (resonance sum reproduces direct integral). DECOMPOSITION: mu = MAIN (1-2delta)^n + corrections; MAIN = the clock/Eisenstein FLOOR = (6/7)^13 for LRC(14) (1-2/14=6/7 = THM-878 A(q)>=6/7 floor = boxeph S221 Eisenstein floor). Covering REQUIRES the resonances to cancel (6/7)^13. VERIFIED |corrections|/MAIN: 0.03-0.10 for Sidon/low-resonance cores (mu~=MAIN>0 => robustly LONELY, never covering) vs 0.89-0.96 for APs (nearly cancels; AP {1..5} at 1/6 covers, mu direct=0). So LRC(n+1) REDUCES to the maximal-resonance (AP) cores = the S101 GMC2 coincident-cycle hard stratum = degenerate tournament zeta (S99) = codex relation-rich core / boxeph tight-AP (S214). S101 unique-cycle transferred: few resonances => floor survives => lonely. HONEST: NOT a proof (the Fourier gap-decomposition is standard); the contribution is the UNIFICATION (LRC=GMC2 one integer-kernel object), the MAIN=clock-floor identification, the quantitative Sidon-vs-AP reduction, and the residual named as the zeta coincident-cycle degeneracy. Engine to finish: rigorous |corrections|<MAIN for every non-AP 13-core (resonance-count x |hat_g_k|~1/(pi k) decay). Script lrc_gmc2_resonance_unification_deathstar_S102.py (+out); reflection lrc-and-gmc2-are-one-integer-kernel-...-S102. HYP-8879.
 > **CURRENT DIGEST (2026-07-21):** this bounded file is the current hypothesis
-> router. The historical 18,000-line ledger moved to
+> router. The historical ledger is
 > [`INDEX-HISTORICAL-THROUGH-2026-07-21.md`](INDEX-HISTORICAL-THROUGH-2026-07-21.md)
-> and may preserve duplicate IDs or claims corrected later. Resolve facts
-> through linked canon and `MISTAKES.md`.
+> and intentionally preserves claims corrected later. Resolve facts through
+> linked canon and [`MISTAKES.md`](../../01-canon/MISTAKES.md).
 
 - **LRC(14) / CURRENT THEOREM CHAIN (OPEN):** THM-2051 forces a genuine
   support-`3..5`, height-`2^20` relation; THM-2052 gives rank-twelve finite
   boxes or a finite rank-eleven two-anchor atlas; THM-2053 gives the transverse
-  deck and sufficient disk gate; THM-2055/2056 the owner fan and Kelvin/Farey
-  certificate; THM-2057 closes two AP one-tail planes. None proves LRC(14).
-- **THM-2058 / PRIMITIVE PACKET AND OWNER INTERVAL (PROVED; not LRC(14)):**
-  Safe packets split exactly by reduced phase order with divisor/Mobius laws,
-  labelled `M^{-1}` transport, primitive discrepancy, and bulk/boundary/null
-  support. A fixed plane/pair/basis/bad-denominator/owner cell leaves one
-  coprime longitudinal interval minus collision points; it is not discharged.
-- **THM-2059 / CRT PACKET JOIN (PROVED; not LRC(14)):** Core-safe and tail-safe
-  packets join by generalized CRT. The histogram dot product counts compatible
-  classes and its `Na/lcm` lift counts safe grid indices. Zero overlap rejects
-  that clock grid only, not the row.
-- **THM-2060 / THM-2061 (RESERVED CANDIDATES UNDER AUDIT):** THM-2060 proposes
-  tail-coset saturation when at least two lifts remain; THM-2061 proposes a
-  parity-folded dyadic two-tail seam along THM-761's capacity route. Neither is
-  a proved dependency, a closed branch, or an LRC(14) result.
-- **HYP-8900 / S224 (VERIFIED PER-ROW EVALUATOR):** Pair-sum vertices and
-  reflection compute the exact maximum of a fixed row; the deep well is
-  `14/183`. This does not make the unbounded covering family finite or prove
-  Wall A/AP-core rigidity.
-- **[HYP-8879 / S102](HYP-8879-lrc-gmc-weighted-fiber-analogy-corrected.md)
-  (PARTIAL ANALOGY; MISTAKE-235):** Fejer-regularized LRC is an infinite
-  sinc-weighted lattice fiber; a fixed GMC moment is a finite nonnegative mass
-  slice with different weights. The `K=9` toy truncations prove no GMC
-  identity, AP-neighborhood theorem, or LRC(14) reduction.
-- **[HYP-8895 / S223](HYP-8895-return-semigroup-reachability-not-noncancellation.md)
-  (REACHABILITY ONLY; MISTAKE-234):** Return lengths form a support semigroup
-  and characterize positive-coefficient nonvanishing. Mixed coefficients can
-  cancel on infinitely many reachable masses, so no general DvdK bypass follows.
-- **HYP-8890 / S222 (OPEN DVdK-BYPASS ROUTE):** Positive-coefficient real
+  deck and disk gate; THM-2055/2056 the owner fan and Kelvin/Farey certificate;
+  THM-2057 closes two AP one-tail planes. None proves LRC(14).
+- **[THM-2058](../../01-canon/theorems/THM-2058-primitive-phase-packets-and-deck-fan-intervals.md)
+  / PRIMITIVE PACKET AND OWNER INTERVAL (PROVED; not LRC(14)):** exact
+  reduced-order packets, divisor/Mobius laws, labelled `M^{-1}` transport,
+  primitive discrepancy, and bulk/boundary/null support. A fixed
+  plane/pair/basis/bad-denominator/owner cell leaves one coprime interval minus
+  collision points; the theorem does not discharge it.
+- **[THM-2059](../../01-canon/theorems/THM-2059-crt-fiber-product-phase-packet.md)
+  / CRT PACKET JOIN (PROVED; not LRC(14)):** generalized CRT joins core and
+  tail packets. The histogram dot product counts compatible classes; its
+  `Na/lcm` lift counts grid indices. Zero rejects one clock grid, not the row.
+- **[THM-2060](../../01-canon/theorems/THM-2060-crt-tail-coset-saturation.md)
+  / SHARP TAIL COSETS (PROVED; not LRC(14)):** the clock-independent sheet
+  order is `q=a/gcd(a,w)` and each tail-safe histogram bin has the sharp floor
+  `q-ceil(q/7)`. The one-tail existence consequence was already implicit in
+  THM-760/761/765; the exact histogram and multi-tail capacity are the gain.
+- **[THM-2064](../../01-canon/theorems/THM-2064-multitail-sheet-capacity-and-dyadic-seam.md)
+  / COMMON-FIBER CAPACITY (PROVED; not LRC(14)):** independently repackages
+  THM-2060's capacity layer on one common period. If
+  `sum ceil(t_w/7)/t_w<1`, a safe sheet survives; for two tails the sole
+  capacity tie is `(2,2)`, which reduces a primitive imprimitive-core branch to
+  `2C union {x,y}`, `x,y` odd. Equality is only a residual, not failure.
+- **[THM-2061](../../01-canon/theorems/THM-2061-lrc14-dyadic-two-tail-folded-seam.md)
+  / DYADIC SEAM (PROVED REDUCTION; not LRC(14)):** failure is exactly a closed
+  core-safe set inside a strict folded diamond. It forces divisor completeness
+  through 14, `x,y<12 max(C)`, a determinant constraint, and measure at most
+  `4/63`; exact enumeration closes normalized cores with `max(C)<=19`. The
+  remaining signed seam is open.
+- **[THM-2062](../../01-canon/theorems/THM-2062-two-anchor-hereditary-primitivity-crt-wheel.md)
+  / HEREDITARY CRT WHEEL (PROVED; not LRC(14)):** deletion indices exclude at
+  most two projective directions per prime and give an exact fixed-`N` wheel;
+  rank-one deletions give affine `+-1` terminals plus a 1D wheel. This filters
+  templates but supplies no phase-height witness.
+- **[THM-2065](../../01-canon/theorems/THM-2065-two-anchor-fejer-circuit-ray-collapse.md)
+  / CIRCUIT-RAY COLLAPSE (RESERVED; PROOF UNDER AUDIT):** proposed bounded
+  Fejer circuits would pin nonidentity templates to finitely many projective
+  rays. It is outside the proof graph until promoted.
+- **[THM-2063](../../01-canon/theorems/THM-2063-one-fiber-linear-planar-keller-pairs.md)
+  / ONE-FIBER-LINEAR KELLER PAIRS (PROVED; JC(2) OPEN):** coefficient descent
+  gives two triangular normal forms and explicit inverses. A hypothetical
+  planar Keller counterexample has fiber degree at least two in every source
+  direction for every nonzero output-pencil member.
+- **[HYP-8905](HYP-8905-binary-symmetric-jc2-subcase-and-separate-descent-programs.md)
+  / BINARY SYMMETRIC SUBCASE + JC(2) PROGRAMS (MIXED; MISTAKE-237):** the
+  homogeneous binary nilpotent-Hessian calculation is valid and lands in
+  THM-2063. Full JC(2), its four-variable symmetric/VC target, and all
+  degree-`>=3` survivors remain open. VC(4), leading-form/Jelonek, and
+  Lame/Newton descent are separate routes; NC2/GMC and rank/cycle comparisons
+  are analogies only.
+- **HYP-8900 / S224 (VERIFIED PER-ROW EVALUATOR):** pair-sum vertices and
+  reflection compute a fixed row exactly; the deep well is `14/183`. This does
+  not make the unbounded covering family finite or prove Wall A/AP rigidity.
+- **[HYP-8879](HYP-8879-lrc-gmc-weighted-fiber-analogy-corrected.md)
+  / S102 (PARTIAL ANALOGY; MISTAKE-235):** Fejer-regularized LRC is an infinite
+  sinc-weighted lattice fiber; a fixed GMC moment is a finite mass slice with
+  different weights. The toy truncations prove no identity or AP reduction.
+- **[HYP-8895](HYP-8895-return-semigroup-reachability-not-noncancellation.md)
+  / S223 (REACHABILITY ONLY; MISTAKE-234):** return lengths form a support
+  semigroup and characterize positive-coefficient nonvanishing. Mixed
+  coefficients can cancel on infinitely many reachable masses.
+- **HYP-8890 / S222 (OPEN DvdK-BYPASS ROUTE):** positive-coefficient real
   saddles and periodic two-charge cases work. General complex coefficients
   still need dominant-saddle existence, uniqueness modulo period, and
   noncancellation, including degenerate saddles.
-- **HYP-8878 / S101 (PROVED ELEMENTARY CRITERION):** A unique minimum-mass
+- **HYP-8878 / S101 (PROVED ELEMENTARY CRITERION):** a unique minimum-mass
   balanced channel makes the first constant term one nonzero monomial. The
-  `98/116` frequency is only one finite scan; coincident channels remain.
-- **HYP-8885 / HYP-8880 (RETYPED/REFUTED; MISTAKE-231/233):** Typed
-  main-term/obstruction decompositions may inspire probes, but `f14`, genus,
-  cusp counts, and modular language do not preserve loneliness. Use only an
-  explicit source-to-target map with a loss ledger.
-- **HYP-8876 / S99 (REFUTED TRANSFER; MISTAKE-232):** Scaled LRC clocks and
-  finite-field Frobenius share a proof-shape analogy, not an LRC-preserving
-  map; composite modulus 14 has no Paley object.
-- **HYP-8875 / HYP-8870 (REFUTED UNIVERSAL ENTROPY; MISTAKE-230/231):** Fiber
-  cardinality is observable-relative Hartley ambiguity, not a repo-wide
-  Shannon invariant. Retain only separately typed information-loss examples.
-- **HYP-8871 / HYP-8846 (OPEN FINITE-ATLAS COMPLETION):** Compose THM-2053's
-  bad decks, THM-2055/2056 owner/Farey states, THM-2058 primitive intervals,
-  THM-2057 clocks, THM-2059 CRT compatibility, pair sums, relative Fejer,
-  rank gain, and Euler endpoints. Uniform atlas compression and discharge are
-  still missing.
-- **HYP-8865 / HYP-8860 / HYP-8855 (MIXED, CORRECTED):** Wedge and odd-prime
-  Paley facts survive separately. There is no Heegner `-7` classification of
-  THM-2053, and the adjacent AP chain is an index-`11!` frame rather than the
-  saturated THM-2052 code.
-- **HYP-8850 / HYP-8845 (VERIFIED PARITY LENSES):** Fixed points plus free
-  pairs and the LRC reflection reduction are exact in their own objects.
-  Symmetry duplicates a survivor; it does not create the first one.
-- **HYP-8841 / HYP-8840 (OPEN/CORRECTED):** Global termination needs clocks,
+  `98/116` frequency is a finite scan; coincident channels remain.
+- **HYP-8885 / HYP-8880 (RETYPED/REFUTED; MISTAKE-231/233):** typed
+  main-term/obstruction decompositions may inspire probes, but modular genus,
+  cusp counts, and `f14` do not preserve loneliness without an explicit map.
+- **HYP-8876 / S99 (REFUTED TRANSFER; MISTAKE-232):** scaled clocks and
+  finite-field Frobenius share a proof shape, not an LRC-preserving map;
+  composite modulus 14 has no Paley object.
+- **HYP-8875 / HYP-8870 (REFUTED UNIVERSAL ENTROPY; MISTAKE-230/231):** fiber
+  cardinality is observable-relative Hartley ambiguity, not a universal
+  Shannon invariant.
+- **HYP-8871 / HYP-8846 (OPEN FINITE-ATLAS COMPLETION):** compose bad decks,
+  owner/Farey states, primitive intervals, clocks, CRT and hereditary wheels,
+  folded seams, pair sums, relative Fejer, rank gain, and Euler endpoints.
+  Uniform atlas compression and phase-height discharge are still missing.
+- **HYP-8865 / HYP-8860 / HYP-8855 (MIXED, CORRECTED):** wedge and odd-prime
+  Paley facts survive separately. There is no Heegner `-7` classification, and
+  the adjacent AP chain is an index-`11!` frame, not the saturated code.
+- **HYP-8850 / HYP-8845 (VERIFIED PARITY LENSES):** fixed points plus free
+  pairs and LRC reflection are exact in their own objects. Symmetry duplicates
+  a survivor; it does not create the first one.
+- **HYP-8841 / HYP-8840 (OPEN/CORRECTED):** global termination needs clocks,
   pair sums, `P_w`, Fejer, rank, or Euler data. Mixed constant terms restore
   augmentation lost by diagonal energy but imply no GMC-to-LRC transfer.
-- **HYP-8805 / THM-2022 FORMALIZATION (PARTIAL):** Root-imported
+- **HYP-8805 / THM-2022 FORMALIZATION (PARTIAL):** the root-imported
   `GMC2Formalization` is sorry-free at proved nodes. The separate capstone has
   one `sorry`; concrete normalized-channel wiring and formal DvdK remain.
 
@@ -17878,3 +17908,4 @@ b((x+c)^n+(x-c)^n)/2 GIT-deformation; var(lambda^2) into the zoo.
 - **Historical HYP-8803 / THM-2046 / codex-2026-07-21-DC2-filtered-pullback-wall (PROVED wall + OPEN nonfiltered descent):** The linked `erdos-frontier-atlas` certificate replays exactly but constructs `Phi:A_3->A_3` and explicitly leaves DC(2) open. THM-2046 proves the structural reason: any ansatz with multiplication-position images and first-order momentum images forces `B J(P)^T=I`, hence `det J(P)` is a nonzero constant; THM-2045 excludes the suspension coordinate `R=x(a-bx^r q^s)` from that entire A2 class. The exact Ore reduction after `ell=L+g` has `[ell,x]=3x^2`, `[ell,q]=2-6xq`, `[ell,R]=0`, and after inverting `x`, `t=-1/(3x)` gives `[ell,t]=1`. Normal ordering leaves an `ell^3` residual; in the scalar theta-PBW family its top coefficient is `x^9(2theta-1)(3xq-2)^2/3`, so Weyl order is uniquely degree-optimal but still leaves `x^10(3xq-2)^2 ell^2/2`. In the boundary filtration `beta=v_x-2deg_ell`, Weyl order kills uniform grade 3 and exposes uniform grade 6, giving an exact source for HYP-8802's six-weight phenomenon. The remaining gate is boundary-integrality/extension across `x=0`, not a missing local Darboux coordinate. Script/output `dc2_ore_descent_codex_20260721`; byte-match; SHA-256 `42b6faf4...a05a` / `e3ac4781...5785`.
 This current index is intentionally short. Search the linked historical ledger
 for provenance, then return here, canon, and the correction ledger for status.
+  one `sorry`; normalized-channel wiring and formal DvdK remain.

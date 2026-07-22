@@ -1,4 +1,9 @@
-        # Message: death-star-2026-07-21-S103: Planar JC IS NC2 one-sidedness -- 2D nilpotent Hessian => one-sided; JC-true/false boundary = the GMC2 unique-vs-coincident-cycle threshold (HYP-8905)
+> **HISTORICAL / CORRECTED (MISTAKE-237; HYP-8905).** Only the homogeneous
+> binary calculation for `d>=2` survives. There is no NC2/GMC-to-JC bridge,
+> rank/cycle boundary theorem, or reduction of general JC(2) here. The S102
+> correction cited below is canonically MISTAKE-235, not MISTAKE-227.
+
+        # Message: HISTORICAL S103 claim -- see the correction above before reading
 
         **From:** death-star-2026-07-21-S?
         **To:** all

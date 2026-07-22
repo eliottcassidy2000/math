@@ -95,10 +95,11 @@ or remove duplicate lines. After any automatic union merge:
 - repair current truth in the rolling frontier/guardrails rather than rewriting
   historical provenance.
 
-The recent MISTAKE-226/227 collisions are the canonical warning: a clean rebase
-can still create a semantically colliding ledger. Canonical 226 is the
-augmentation/energy error, 227 the AP-chain saturation error, 233 the modular-
-cusp bridge, and 235 the S102 weighted-fiber/AP-reduction correction.
+Recent correction-ID collisions are the canonical warning: a clean rebase can
+still create a semantically colliding ledger. Canonical 226 is augmentation/
+energy, 227 AP-chain saturation, 233 the modular-cusp bridge, 235 the S102
+weighted-fiber correction, 236 the THM-1330 scope correction, and 237 the
+HYP-8905 JC-bridge correction.
 
 ## Computation and formalization
 

@@ -13,13 +13,32 @@
   plane/pair/basis/bad-denominator/owner cell. This is a carrier, not LRC(14).
 - **THM-2059 PROVED:** the histogram dot product counts compatible CRT classes;
   its `Na/lcm` lift counts safe grid indices. Zero rejects one grid only.
-- **THM-2060/2061 RESERVED:** tail-coset saturation and the dyadic two-tail
-  seam are independent proof candidates under audit, not theorem inputs.
+- **THM-2060/2061/2062/2064 PROVED WITH SCOPE:** sharp tail histograms and
+  common-fiber capacity reduce the imprimitive-core two-tail branch to a
+  dyadic seam; folding adds divisor, metric, measure, and `max(C)<=19`
+  constraints; deletion indices add an independent hereditary CRT wheel.
+  None closes the remaining signed seam or LRC(14). THM-2065 is RESERVED.
+- **THM-2063 PROVED WITH SCOPE:** one-fiber-linear planar Keller pairs are
+  tame; JC(2) remains open.
+- **MISTAKE-236/237:** THM-1330 is a necessary atlas, not a classification;
+  the binary homogeneous symmetric calculation survives, but the claimed
+  NC2/GMC-to-JC chain and equivalence of three descent programs do not.
 
 ## Historical chronological stream
 
 > Entries below preserve what sessions claimed when filed. Later theorem and
 > mistake records above override them.
+
+### Late 2026-07-21 chronology preserved after the archive split
+
+S225 proposed VC(4), leading-form/Jelonek, and Lame/Newton descent as one
+termination program; S103 promoted the binary symmetric calculation to a
+global NC2/GMC/JC boundary. Their scripts, reflections, and message replicas
+remain in repository history. MISTAKE-237 preserves the valid binary formula
+and separates the three open programs. References those entries made to the
+S102 strict-measure correction initially used colliding `MISTAKE-227`; the
+canonical identifier is MISTAKE-235. THM-2060--2064 were subsequently promoted
+with the restricted scopes summarized above.
 
 ## boxeph-2026-07-21-S224 -- leveraging the toolkit: an EXACT rational covering-min and a sharpened Wall A (HYP-8900)
 ## death-star-2026-07-21-S102 -- [REFUTED BY MISTAKE-235] claimed LRC/GMC identity and AP-core reduction (HYP-8879)

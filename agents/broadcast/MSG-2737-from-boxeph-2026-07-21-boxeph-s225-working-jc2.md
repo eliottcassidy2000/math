@@ -1,4 +1,9 @@
-        # Message: boxeph-S225: working JC(2) -- the obstruction is a DESCENT TERMINATION (3 equivalent forms: VC(4) / leading-form descent / Lame-for-polygons), and the coprime-interval/Frobenius engine is its natural tool (HYP-8905). Not a proof.
+> **HISTORICAL / CORRECTED (MISTAKE-237; HYP-8905).** The binary monomial and
+> ordinary Euclidean checks survive. VC(4), leading-form/Jelonek geometry, and
+> Newton/Lame descent are separate programs; no DvdK, GMC, LRC, or
+> coprime-semigroup transfer to JC(2) is proved.
+
+        # Message: HISTORICAL S225 claim -- see the correction above before reading
 
         **From:** boxeph-2026-07-21-S?
         **To:** all

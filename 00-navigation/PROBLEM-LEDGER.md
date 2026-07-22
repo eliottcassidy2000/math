@@ -4,7 +4,7 @@
 > [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) for current truth. Major later
 > changes include THM-2022 proving NC2/GMC(2), explicit GMC(3) counterexamples,
 > THM-2044/2045 separating rank-two Poisson from DC(2)/planar JC, partial NC2
-> Lean coverage, and corrections MISTAKE-211–234. Historical priority/provenance
+> Lean coverage, and corrections MISTAKE-211–237. Historical priority/provenance
 > claims below require primary-source and canon checks.
 
 ## Current portfolio at a glance
@@ -14,9 +14,9 @@ the obstruction that still matters; the long inventory below is provenance.
 
 | Area | Current truth | Highest-value next move |
 |---|---|---|
-| LRC(14) | Open. THM-2051/2052 give a bounded relation and finite atlas; THM-2053/2055/2056 give the deck, disk, owner fan, and Farey certificate. THM-2057 closes two AP one-tail planes; THM-2058 gives primitive owner intervals; THM-2059 joins clock packets by CRT. | Discharge every labelled interval by clocks, pair sums, Fejer, Euler, or rank gain. THM-2060/2061 remain reserved audits. |
+| LRC(14) | Open. THM-2051--2059 give a bounded atlas, exact owner intervals, and CRT joins. THM-2060/2064 reduce imprimitive two-tail capacity to a dyadic seam; THM-2061 constrains that seam; THM-2062 gives a hereditary CRT wheel. | Empty the signed seam, discharge every other labelled interval by clocks/pair sums/Fejer/Euler/rank gain, and decide the rank-twelve box. THM-2065 remains reserved. |
 | NC2 / GMC | NC2/GMC(2) are proved by THM-2022. The root-imported Lean spine is sorry-free at proved nodes; separate `GMC2NC2Capstone` typechecks the conditional skeleton with one `sorry`. GMC is false from dimension three. | Use HYP-8878's unique-minimum-channel lemma where applicable; wire the concrete capstone and formalize or explicitly cite DvdK on the residual. |
-| Jacobian / Dixmier / Poisson | The two-pair Poisson conjecture is false. DC(2) and planar JC remain open; filtered first-order descent is obstructed, while THM-2049 proves the associated-graded correction complex acyclic. | Decide finite polynomial termination and the coupled `D` relations, or prove boundary poles prevent a polynomial lift. |
+| Jacobian / Dixmier / Poisson | The two-pair Poisson conjecture is false. DC(2) and JC(2) remain open. THM-2063 classifies the one-fiber-linear planar stratum; MISTAKE-236/237 block atlas-as-classification and NC2/GMC bridge claims. | Attack all-direction fiber degree `>=2`, decide finite Weyl termination/coupled `D`, and keep VC(4), Jelonek, and Newton descent separate. |
 | Tournaments | Join laws and strong-core localization are proved; the invariant lattice is exact only through `n<=6`. Positive game equilibria need skew symmetry plus mod-2 support parity. GLMY path homology in degree at least three is under an active convention dispute. | Attack `H>=disc`, classify operation laws, resolve the path-homology convention case, and track positive-kernel support rather than conflating games, flows, and topology. |
 | Reciprocal sequences | Support and indexed-multiplicity Dirichlet profiles are separated by a collision tax; Abel--Stieltjes/Dini/Bertrand boundary tests are available. | Build an operation calculus for support unions/products and connect collision structure to LRC denominator spectra. |
 | Arrangement carrier | THM-2047 proves the labelled phase-height carrier, top wedge, Euler detector, Fejer formula, and paired deletion; THM-2050 proves period-14 local germs are globally blind. | Find a deletion/localization invariant preserving owner, side, height, and global termination that can force the AP-core branch. |

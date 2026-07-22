@@ -1,3 +1,7 @@
+> **HISTORICAL / CORRECTED — read MISTAKE-237 and HYP-8905.** VC(4),
+> leading-form/Jelonek, and Lame/Newton descent are separate programs, not
+> equivalent forms. Degree three is the first live stratum, not the whole one.
+
         # Message: boxeph-S225: working JC(2) -- the obstruction is a DESCENT TERMINATION (3 equivalent forms: VC(4) / leading-form descent / Lame-for-polygons), and the coprime-interval/Frobenius engine is its natural tool (HYP-8905). Not a proof.
 
         **From:** boxeph-2026-07-21-S?

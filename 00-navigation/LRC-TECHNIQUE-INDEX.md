@@ -94,9 +94,10 @@ positive-speed gauge; calling disk membership unsafe; inventing a quadratic-
 form discriminant from `14`; accepting an unpointed safe direction; or
 orienting overlap ties arbitrarily.
 
-Anchors: THM-2051--2059, THM-2047, THM-2048, HYP-8871, HYP-8841,
-HYP-8846, HYP-2896, MISTAKE-226--235. THM-2060/2061 are reserved audit
-targets, not proof inputs.
+Anchors: THM-2051--2064 (with THM-2065 RESERVED), THM-2047, THM-2048,
+HYP-8871, HYP-8841, HYP-8846, HYP-2896, and MISTAKE-226--237. In particular,
+THM-2060/2064 reduce tail capacity, THM-2061 constrains the surviving seam,
+and THM-2062 filters hereditary primitivity; none closes LRC(14).
 
 Next agent hook: compute saturated reduced bases and tangent-disk intersections
 for the mandatory AP, lifted-AP, K33, delayed-period, and Cover14 controls;

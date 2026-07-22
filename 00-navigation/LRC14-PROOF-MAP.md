@@ -31,6 +31,9 @@ hypothetical LRC(14) counterexample
                     |-- scaled AP one-tail clock/binding leaves     [THM-2057]
                     |-- primitive packet + coprime owner interval  [THM-2058]
                     |-- arbitrary-clock one-tail CRT packet join    [THM-2059]
+                    |-- tail-sheet capacity -> dyadic seam          [THM-2060/2064]
+                    |-- folded seam pins/metric/finite low-core box [THM-2061]
+                    |-- hereditary-primitivity CRT wheel            [THM-2062]
                     |-- general clock / pair-sum / Fejer / Euler    [OPEN]
                     |-- active relation outside W
                     |     `-- rank 12 -> finite maximal-minor box [THM-2052]
@@ -42,8 +45,9 @@ The four input lines are proved necessary conditions in their cited scopes.
 Every displayed gate is sufficient, not necessary: a bad deck, disk, or Farey
 ray means only “not certified here.” THM-2058 makes each fixed deck/owner fiber
 an exact labelled one-dimensional carrier; it does not discharge that carrier.
-THM-2060/2061 are reserved candidates under audit and stay outside this graph.
-The target is general labelled deck/fan discharge, not a twelfth relation alone.
+THM-2065 is reserved under audit and stays outside this graph. THM-2060/2064
+reduce capacity but do not decide the signed seam; THM-2061 closes only its
+stated metric/finite strata. The target is uniform labelled discharge.
 
 ### Live interfaces
 
@@ -54,6 +58,8 @@ The target is general labelled deck/fan discharge, not a twelfth relation alone.
 | Clock/binding sidecar | THM-2057 closes `{a,2a,...,11a,13a,w}` via `12a`/`14a` clocks and the `84a|w` binding branch, and `{a,2a,...,12a,w}` via `13a`/`14a` clocks and the `182a|w` deep-well branch | Find missing-clock cores and finite affine binding families for general stars. |
 | Primitive deck/owner fiber | For a fixed plane/pair/basis, THM-2058 gives exact reduced-order packets, labelled unit transport, bulk/boundary/null support, and one coprime longitudinal interval minus collision points | Empty or discharge every surviving interval; do not replace packet labels by counts. |
 | CRT packet join | THM-2059's reduction-histogram dot product counts compatible classes; the `Na/lcm` lift counts safe grid phases | Select clocks uniformly; zero overlap rejects only that clock grid. |
+| Tail sheets / dyadic seam | THM-2060/2064 give sharp capacity; THM-2061 gives the exact folded obstruction, divisor pins, metric box, and `max(C)<=19` census | Empty the remaining signed seam uniformly, or route each survivor back to the labelled atlas. |
+| Hereditary primitivity | THM-2062 gives a prime-labelled CRT wheel with at most two bad projective directions per prime | Compose the wheel with phase-height exits; positive direction density alone cannot prove safety. |
 | Relative Fejer | After zero-character factors are removed, THM-2054 gives an explicit lifted-character average error for nonzero line frequencies when bounded resonances lift | Prove the model-specific plateau and route every bounded scalar resonance. |
 | Rank code | THM-2052 supplies eleven independent bounded support-at-most-three rows | Produce an active row outside the code when available; rank twelve gives a finite box but is not required for finiteness. |
 | Euler endpoint | THM-2047 retains owner, sign, side, height, and paired deletion; HYP-2108 gives `P_w` | Prove `P_w>=0` on any disk points not discharged arithmetically. |

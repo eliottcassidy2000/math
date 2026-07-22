@@ -42,7 +42,8 @@ HEADLINE_SENTINELS = {
         "THM-2057 closes two scaled AP one-tail planes",
         "THM-2058 proves the primitive",
         "THM-2059 the arbitrary-clock CRT join",
-        "THM-2060/2061 are reserved proof",
+        "2064 reduce imprimitive two-tail capacity",
+        "THM-2062 adds a hereditary CRT wheel",
         "`GMC2NC2Capstone`",
         "unique minimum-mass balanced channel",
         "MISTAKE-230--233",
@@ -62,7 +63,8 @@ HEADLINE_SENTINELS = {
         "THM-2057 closes two AP one-tail families",
         "THM-2058 splits reduced-order packets",
         "THM-2059 joins",
-        "THM-2060/2061 are reserved proof",
+        "THM-2060/2064 reduce imprimitive two-tail capacity",
+        "THM-2062 adds the hereditary",
         "MISTAKE-230--233",
         "HYP-8885",
         "MISTAKE-235",
@@ -81,39 +83,42 @@ HEADLINE_SENTINELS = {
         "transverse deck D_N(m)",
         "Kelvin-Farey certificate",
         "THM-2057",
-        "PROVED primitive packet and deck/fan carrier",
+        "THM-2058's coprime intervals",
         "THM-2059",
-        "Reserved proof candidates—not theorem inputs",
         "THM-2060",
         "THM-2061",
+        "THM-2062",
+        "THM-2064",
+        "THM-2065's proposed circuit-ray collapse is",
         "TournamentH7.GMC2Formalization",
         "TournamentH7.GMC2NC2Capstone",
         "unique minimal balanced channel",
         "HYP-8890",
     ),
     "01-canon/ACTIVE-GUARDRAILS.md": (
-        "No uniform `q <= 25` good-period theorem",
+        "No uniform `q<=25` theorem",
         "Uniform twelve-speed sporadic emptiness is OPEN",
-        "HYP-8815 is a heuristic, not a disproof characterization",
+        "HYP-8815 is not a disproof characterization",
         "A shared Pascal array is not a geometric bridge",
         "Braid localization does not factor every wall object",
-        "Poisson rank two is not DC(2) or planar JC",
+        "Poisson rank two is not DC(2) or JC(2)",
         "A thickened safe set is not an ordinary toric complement",
-        "Antisymmetry is not the whole tournament-game or torus theorem",
-        "Diagonal additive energy is not the LRC relation lattice",
+        "Antisymmetry is not a whole game/torus theorem",
+        "Shared kernels are not bridges",
         "MISTAKE-226/235",
         "NC2/GMC(2) is proved, not fully formalized",
-        "HYP-8878 removes that citation only",
-        "THM-2059 only joins packets",
-        "Equal ranks do not identify lattices or tournaments",
-        "Paley spectra do not assign LRC roles to small primes",
-        "THM-2053 has no Heegner discriminant `-7`",
-        "THM-2058 is a carrier theorem, not LRC(14)",
-        "are independent reserved proof candidates",
-        "Fiber cardinality is observable-relative Hartley ambiguity",
-        "Scaled clocks are not automatically modular cusps or Frobenius",
-        "`f14`, genus, and discriminant `-7` are not the LRC obstruction",
-        "HYP-8885 may use “cusp” only as a",
+        "THM-2057 closes two planes; THM-2059 joins packets",
+        "Equal ranks do not identify lattices",
+        "Small-prime Paley spectra assign no LRC roles",
+        "THM-2058 is a carrier, not LRC(14)",
+        "THM-2060/2064 give capacity, not signed ownership",
+        "THM-2061 is a proved reduction, not an empty-seam theorem",
+        "THM-2062 filters heredity, not phase height",
+        "THM-2065 is RESERVED",
+        "Fiber size is observable-relative Hartley ambiguity",
+        "Clocks are not modular cusps",
+        "The binary symmetric Hessian is not full JC(2)",
+        "THM-1330 is a necessary atlas, not a classification",
     ),
     "00-navigation/LRC14-PROOF-MAP.md": (
         "## 2026-07-21 current control panel",
@@ -121,6 +126,8 @@ HEADLINE_SENTINELS = {
         "transverse deck D_N(m)>=1/14",
         "finite Farey address; listed rays unresolved",
         "scaled AP one-tail clock/binding leaves",
+        "tail-sheet capacity -> dyadic seam",
+        "hereditary-primitivity CRT wheel",
         "### Mandatory hostile controls",
     ),
     "00-navigation/LRC-TECHNIQUE-INDEX.md": (
@@ -130,6 +137,7 @@ HEADLINE_SENTINELS = {
         "Transverse deck",
         "Missing-clock binding",
         "CRT packet join",
+        "THM-2060/2064 reduce tail capacity",
     ),
 }
 
@@ -164,6 +172,7 @@ FORBIDDEN_STARTUP_TEXT = {
         "pointed rank-or-Euler transport is the live prize",
         "root wiring, and the final `nc2 : NC2` theorem remain",
         "THM-2058 is an empty reservation",
+        "THM-2060/2061 are reserved proof",
     ),
     "00-navigation/START-HERE.md": (
         "every counterexample has a 2--5-term integer relation of height at most `2^20`",
@@ -171,6 +180,7 @@ FORBIDDEN_STARTUP_TEXT = {
         "The remaining jump is pointed Euler survival",
         "They are not root-imported",
         "THM-2058 is an unproved empty stub",
+        "THM-2060/2061 are reserved proof",
     ),
     "00-navigation/CURRENT-FRONTIER.md": (
         "but are not root-imported",
@@ -178,10 +188,12 @@ FORBIDDEN_STARTUP_TEXT = {
         "The incoming THM-2054 relative-Fejer program",
         "THM-2058 supplies the primitive phase-packet",
         "THM-2058 is an empty reservation",
+        "Reserved proof candidates—not theorem inputs",
     ),
     "01-canon/ACTIVE-GUARDRAILS.md": (
         "height-`2^21` relation",
         "MISTAKE-225 corrects HYP-8865",
+        "are independent reserved proof candidates",
     ),
     "00-navigation/LRC14-PROOF-MAP.md": (
         "height <=2^21",
@@ -477,7 +489,7 @@ def main() -> int:
         if count > 1:
             errors.append(f"MISTAKES.md: current-range MISTAKE-{value} occurs {count} times")
 
-    for value in (230, 231, 232, 233, 234, 235):
+    for value in (230, 231, 232, 233, 234, 235, 236, 237):
         if f"## MISTAKE-{value}" not in mistakes:
             errors.append(f"MISTAKES.md: current correction MISTAKE-{value} is missing")
 
@@ -501,23 +513,93 @@ def main() -> int:
 
     for theorem, sentinels in {
         "THM-2060-crt-tail-coset-saturation.md": (
-            "RESERVED WITH A PROOF CANDIDATE UNDER ADVERSARIAL AUDIT",
-            "h/d>=2 and the core packet modulo N is nonempty",
-            "claim is made until the fiber",
+            "PROVED COROLLARY / SHARP REPACKAGING",
+            "q=h/gcd(N,h)=a/gcd(a,w)",
+            "q-ceil(q/7)",
+            "qualitative one-tail sheet dodge",
+            "result_sha256: a022b5e7bb4b6b9528365836c5546c7a977e3b7b6d0e7dc6019614e6fcc8df58",
         ),
         "THM-2061-lrc14-dyadic-two-tail-folded-seam.md": (
-            "RESERVED WITH A PROOF CANDIDATE UNDER AUDIT",
-            "2delta`-eligible",
-            "THM-761",
-            "not yet a proof",
+            "PROVED REDUCTION; NOT LRC(14)",
+            "G_C subset H^o_(a,b)",
+            "x,y<12R",
+            "sharp measure at most 4/63",
+            "result_sha256: 22fb09fa81f67418d8deaf62a5a330bc7aff3928189a81e5b3586b40203370da",
+        ),
+        "THM-2062-two-anchor-hereditary-primitivity-crt-wheel.md": (
+            "PROVED. For nonzero coefficient rows generating Z^2",
+            "|B_p|<=2",
+            "positive density globally and cannot",
+            "result_sha256: 16ae242af27a18ccead4865edeb56b8e67113e5ad239dd24e612714a0f1d7b4f",
+        ),
+        "THM-2063-one-fiber-linear-planar-keller-pairs.md": (
+            "PROVED. If one nonzero member of the output pencil",
+            "deg_m(sP+tQ)>=2",
+            "disprove JC(2).",
+            "output_sha256: b164d0266bf3ec84fa897c08947a0c3463b20e7a3f2006531a199ac7ba5ac46b",
+        ),
+        "THM-2064-multitail-sheet-capacity-and-dyadic-seam.md": (
+            "PROVED. On one safe scaled-core clock",
+            "sum_(w in W) ceil(t_w/7)/t_w < 1",
+            "- LRCUpTo13",
+            "exact gcd of an imprimitive eleven-speed core",
+            "output_sha256: 04b5e5ede02d707210400a06033061054f7e524525e22dd852602c2a33c25026",
         ),
     }.items():
-        proposal = read_required(f"01-canon/theorems/{theorem}", errors)
+        theorem_text = read_required(f"01-canon/theorems/{theorem}", errors)
         for sentinel in sentinels:
-            if sentinel not in proposal:
-                errors.append(f"{theorem}: reserved candidate lacks {sentinel!r}")
-        if re.search(r"^status:\s*>?\s*PROVED\b", proposal, re.MULTILINE):
-            errors.append(f"{theorem}: candidate was promoted without updating checks")
+            if sentinel not in theorem_text:
+                errors.append(f"{theorem}: proved result lacks {sentinel!r}")
+        if "status: >\n  RESERVED" in theorem_text:
+            errors.append(f"{theorem}: proved result regressed to RESERVED")
+
+    circuit_candidate = read_required(
+        "01-canon/theorems/THM-2065-two-anchor-fejer-circuit-ray-collapse.md",
+        errors,
+    )
+    for sentinel in (
+        "RESERVED WITH A COMPLETE PROOF UNDER AUDIT",
+        "No consumer may cite this reservation as a theorem",
+        "support-three-to-five integer relation",
+    ):
+        if sentinel not in circuit_candidate:
+            errors.append(f"THM-2065 reservation lacks {sentinel!r}")
+    if re.search(r"^status:\s*>?\s*PROVED\b", circuit_candidate, re.MULTILINE):
+        errors.append("THM-2065 was promoted without updating startup truth")
+
+    corrected_jc = read_required(
+        "05-knowledge/hypotheses/"
+        "HYP-8905-binary-symmetric-jc2-subcase-and-separate-descent-programs.md",
+        errors,
+    )
+    for sentinel in (
+        "MIXED / CORRECTED BY MISTAKE-237",
+        "det Hess(P)",
+        "-4 d^2(d-1)^2 A B",
+        "The symmetric-Jacobian reduction used for a general planar Keller map changes",
+        "Three live programs, not three equivalent forms",
+        "fiber-degree descent",
+    ):
+        if sentinel not in corrected_jc:
+            errors.append(f"HYP-8905 corrected map lacks {sentinel!r}")
+
+    for relative in (
+        "04-computation/planar_jc_is_nc2_one_sidedness_deathstar_S103.py",
+        "05-knowledge/results/planar_jc_is_nc2_one_sidedness_deathstar_S103.out",
+        "04-computation/jc2_via_vanishing_conjecture_and_the_cf_termination_boxeph_S225.py",
+        "05-knowledge/results/jc2_via_vanishing_conjecture_and_the_cf_termination_boxeph_S225.out",
+    ):
+        corrected_artifact = read_required(relative, errors)
+        if "MISTAKE-237" not in corrected_artifact or "HYP-8905" not in corrected_artifact:
+            errors.append(f"{relative}: corrected JC artifact lacks its audit route")
+        for retired in (
+            "THE UNIFICATION (JC <-> GMC2",
+            "JC(3) FALSE",
+            "Alpoge's Keller counterexample",
+            "JC(2), LRC(14), GMC(2) ALL reduce",
+        ):
+            if retired in corrected_artifact:
+                errors.append(f"{relative}: retracted JC bridge returned: {retired!r}")
 
     crt_packet = read_required(
         "01-canon/theorems/THM-2059-crt-fiber-product-phase-packet.md", errors
@@ -531,14 +613,13 @@ def main() -> int:
             errors.append(f"THM-2059 carrier lacks {sentinel!r}")
 
     hypotheses = read_required("05-knowledge/hypotheses/INDEX.md", errors)
-    digest_marker = "# Hypothesis Log — Index"
     if not hypotheses.startswith("> **CURRENT DIGEST"):
         errors.append("hypotheses/INDEX.md: current digest must remain first")
-    if digest_marker not in hypotheses:
-        errors.append("hypotheses/INDEX.md: historical boundary is missing")
     if "INDEX-HISTORICAL-THROUGH-2026-07-21.md" not in hypotheses:
         errors.append("hypotheses/INDEX.md: split historical ledger is not routed")
-    current_digest = hypotheses.split(digest_marker, 1)[0]
+    if "# Hypothesis Log — Index" in hypotheses:
+        errors.append("hypotheses/INDEX.md: historical suffix leaked into bounded router")
+    current_digest = hypotheses
     current_hypothesis_ids = [
         value
         for value in re.findall(r"^- \*\*HYP-(\d+)\b", current_digest, re.MULTILINE)
@@ -551,18 +632,24 @@ def main() -> int:
             errors.append(
                 f"hypotheses/INDEX.md: current-range HYP-{value} occurs {count} times"
             )
-    for value in (8878, 8879, 8885, 8890, 8895, 8900):
+    for value in (8878, 8879, 8885, 8890, 8895, 8900, 8905):
         if f"HYP-{value}" not in current_digest:
             errors.append(
                 f"hypotheses/INDEX.md: current digest lacks incoming HYP-{value} routing"
             )
-    if "THM-2059 / CRT PACKET JOIN" not in current_digest:
+    if "CRT PACKET JOIN (PROVED; not LRC(14))" not in current_digest:
         errors.append("hypotheses/INDEX.md: current digest lacks THM-2059 routing")
     for sentinel in (
-        "THM-2058 / PRIMITIVE PACKET AND OWNER INTERVAL",
-        "THM-2060 / THM-2061 (RESERVED CANDIDATES UNDER AUDIT)",
+        "PRIMITIVE PACKET AND OWNER INTERVAL (PROVED; not LRC(14))",
+        "SHARP TAIL COSETS (PROVED; not LRC(14))",
+        "COMMON-FIBER CAPACITY (PROVED; not LRC(14))",
+        "DYADIC SEAM (PROVED REDUCTION; not LRC(14))",
+        "HEREDITARY CRT WHEEL (PROVED; not LRC(14))",
+        "CIRCUIT-RAY COLLAPSE (RESERVED; PROOF UNDER AUDIT)",
+        "ONE-FIBER-LINEAR KELLER PAIRS (PROVED; JC(2) OPEN)",
         "HYP-8879-lrc-gmc-weighted-fiber-analogy-corrected.md",
         "HYP-8895-return-semigroup-reachability-not-noncancellation.md",
+        "HYP-8905-binary-symmetric-jc2-subcase-and-separate-descent-programs.md",
     ):
         if sentinel not in current_digest:
             errors.append(f"hypotheses/INDEX.md: current digest lacks {sentinel!r}")
@@ -701,6 +788,23 @@ def main() -> int:
     if "MISTAKE-234" not in semigroup_smoke.stdout:
         errors.append("start_session.py: return-semigroup topic did not surface MISTAKE-234")
 
+    jc_bridge_smoke = subprocess.run(
+        (
+            sys.executable, str(REPO / "agents/start_session.py"),
+            "--topic", "binary symmetric Hessian NC2 GMC JC2",
+            "--recent", "1", "--max-matches", "12",
+        ),
+        cwd=REPO, text=True, capture_output=True, check=False,
+    )
+    if "MISTAKE-237" not in jc_bridge_smoke.stdout:
+        errors.append("start_session.py: symmetric-JC topic did not surface MISTAKE-237")
+    if (
+        "[MIXED] 05-knowledge/hypotheses/"
+        "HYP-8905-binary-symmetric-jc2-subcase-and-separate-descent-programs.md"
+        not in jc_bridge_smoke.stdout
+    ):
+        errors.append("start_session.py: symmetric-JC topic lacks corrected HYP-8905")
+
     packet_smoke = subprocess.run(
         (
             sys.executable, str(REPO / "agents/start_session.py"),
@@ -724,6 +828,9 @@ def main() -> int:
     for theorem, topic in (
         ("THM-2060-crt-tail-coset-saturation.md", "THM-2060 tail coset saturation"),
         ("THM-2061-lrc14-dyadic-two-tail-folded-seam.md", "THM-2061 dyadic seam"),
+        ("THM-2062-two-anchor-hereditary-primitivity-crt-wheel.md", "THM-2062 hereditary CRT wheel"),
+        ("THM-2063-one-fiber-linear-planar-keller-pairs.md", "THM-2063 one fiber linear Keller"),
+        ("THM-2064-multitail-sheet-capacity-and-dyadic-seam.md", "THM-2064 multi tail capacity"),
     ):
         smoke = subprocess.run(
             (
@@ -733,19 +840,33 @@ def main() -> int:
             cwd=REPO, text=True, capture_output=True, check=False,
         )
         proposal_packet = smoke.stdout
-        expected = f"[RESERVED] 01-canon/theorems/{theorem}"
+        expected = f"[PROVED] 01-canon/theorems/{theorem}"
         if expected not in proposal_packet:
-            errors.append(f"start_session.py: {theorem} is not routed as reserved")
+            errors.append(f"start_session.py: {theorem} is not routed as proved")
         canon_block = proposal_packet.partition("  Canon:")[2].partition(
             "  Reservations (not results):"
         )[0]
-        if theorem in canon_block:
-            errors.append(f"start_session.py: {theorem} leaked into proved canon")
+        if theorem not in canon_block:
+            errors.append(f"start_session.py: {theorem} is missing from proved canon")
+
+    reserved_smoke = subprocess.run(
+        (
+            sys.executable, str(REPO / "agents/start_session.py"),
+            "--topic", "THM-2065 circuit ray collapse", "--recent", "1",
+            "--max-matches", "16",
+        ),
+        cwd=REPO, text=True, capture_output=True, check=False,
+    )
+    if (
+        "[RESERVED] 01-canon/theorems/THM-2065-two-anchor-fejer-circuit-ray-collapse.md"
+        not in reserved_smoke.stdout
+    ):
+        errors.append("start_session.py: THM-2065 is not routed as reserved")
 
     hypothesis_smoke = subprocess.run(
         (
             sys.executable, str(REPO / "agents/start_session.py"),
-            "--topic", "HYP-8846 HYP-8871 HYP-8879 HYP-8895",
+            "--topic", "HYP-8846 HYP-8871 HYP-8879 HYP-8895 HYP-8905",
             "--recent", "1", "--max-matches", "24",
         ),
         cwd=REPO, text=True, capture_output=True, check=False,
@@ -756,7 +877,7 @@ def main() -> int:
         "[OPEN] 05-knowledge/hypotheses/HYP-8871-lrc14-owner-sector-klein-sail-automaton.md",
         "[PARTIAL] 05-knowledge/hypotheses/HYP-8879-lrc-gmc-weighted-fiber-analogy-corrected.md",
         "[PARTIAL] 05-knowledge/hypotheses/HYP-8895-return-semigroup-reachability-not-noncancellation.md",
-        "[LEDGER] 05-knowledge/hypotheses/INDEX.md",
+        "[MIXED] 05-knowledge/hypotheses/HYP-8905-binary-symmetric-jc2-subcase-and-separate-descent-programs.md",
     ):
         if sentinel not in hypothesis_packet:
             errors.append("start_session.py: folded-status routing lacks " + repr(sentinel))

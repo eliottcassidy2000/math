@@ -1,101 +1,74 @@
 # Active Guardrails
 
 **Short hazard sheet — refreshed 2026-07-21.** Read this at startup; search
-[`MISTAKES.md`](MISTAKES.md) for the full witness, repair, and lineage before
-using a related claim. This file records current prohibitions, not every past
-mistake.
+[`MISTAKES.md`](MISTAKES.md) for witnesses, repairs, and lineage. This sheet
+records current prohibitions, not the whole history.
 
 ## Universal
 
-1. **Chronology is not truth.** A session log or reflection can contain a claim
-   and its refutation minutes apart. Check repaired canon and recent mistakes.
-2. **IDs are not unique enough.** Legacy theorem and mistake ID collisions
-   exist. Cite `ID + slug/path`, and check filename, frontmatter, indexes, and
-   remote history before reserving a number.
-3. **Keep logical direction visible.** A source, transitive tournament, finite
-   verification, or successful quotient is often sufficient without being
-   necessary. Record `necessary / sufficient / iff` explicitly.
-4. **A quotient owes a loss ledger.** State the preserved predicate, forgotten
-   coordinate, and sidecar needed to reconstruct the target.
+1. **Chronology is not truth.** Logs and reflections can contain a claim and
+   its refutation minutes apart. Resolve status through repaired canon.
+2. **IDs can collide.** Cite `ID + slug/path`; check frontmatter, current
+   indexes, and remote history before reserving or following a number.
+3. **Keep logical direction visible.** Mark every statement necessary,
+   sufficient, iff, reduction, finite-exact, or heuristic.
+4. **A quotient owes a loss ledger.** Record source, target, map, preserved
+   predicate, forgotten coordinate, restoration sidecar, and hostile test.
 
 ## Lonely Runner
 
-5. **No uniform `q <= 25` good-period theorem.** MISTAKE-143 and THM-762/764
-   give `26*{1,...,12} union {339}` with first good period `27`.
-6. **Good-period existence is a maximum, never a mean/count.** MISTAKE-127,
-   MISTAKE-129, and MISTAKE-130 explain why averaging fails at resonant tight
-   APs. Always test the extremal AP at its own ruler.
-7. **Uniform twelve-speed sporadic emptiness is OPEN.** Finite height
-   (THM-763), AP rigidity (THM-1171), single-far classification (THM-1284), and
-   bounded censuses do not classify all non-AP/deep multi-defect tight sets.
-8. **Giri–Kravitz gives qualitative one-sided isolation, not effective
-   whole-window finiteness.** THM-1289's `delta` is ineffective; their
-   Conjecture 1.5 or a new argument is needed for the larger window.
-9. **Enumeration filters need future-multiple audits.** MISTAKE-194 found an
-    unsound pair-count mask prune; prove that no later multiple can supply a
-    missing residue before pruning it.
-10. **Local six-comb returns are near their ceiling.** A charge without a
-    phase/location or endpoint/child sidecar repeats sharp counterexamples from
-    THM-1252–1274.
-11. **HYP-8815 is a heuristic, not a disproof characterization.** MISTAKE-221.
-    Primitive Cover14, `M<1/14`, and non-AP deletion are necessary; the
-    near-AP/anti-golden/CF/autocorrelation claims are not. A finite scan is only
-    a lower bound unless it enumerates all [THM-1002 pair-sum rulers](theorems/THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case.md)
-    or reaches `Q>=2 max(S)`; do not gcd-filter numerators without divisor
-    rulers. THM-731/2048 are necessary pruning tests, not classifiers.
-12. **Complete local phase coordinates need not be global LRC carriers.**
-    THM-2043 gives AP aliases with every fixed 7-adic prefix and a strict
-    `17/41` exit; THM-2050 gives identical complete unit-phase germs with
-    maxima `1/14` and `1/12`. Retain owner height and a global
-    first-exit/magnitude/gluing sidecar.
-13. **The coarse BONF5 middle is closed; the relation branch is not.** THM-2051
-    forces a support-`3..5` relation of height at most `2^20`. It does not
-    classify its relation hyperplanes or the relation-rich AP boundary.
-14. **A deck/disk/Farey failure is uncertified, not unsafe.** THM-2053 supplies
-    `D_N(m)` and an indexed union of 26 open tangent disks; THM-2055/2056 give
-    the signed-hull fan and an existential finite Kelvin/Farey certificate. The
-    determinant polygon is basis-dependent and not a Heegner form (MISTAKE-229);
-    hull deletion applies only to its maximum. Keep non-hull runners and tie owners in the
-    deck, clock, pair-sum, and endpoint sidecars.
-15. **THM-2057 closes two planes; THM-2059 only joins packets.** The former
-    closes `{a,2a,...,11a,13a,w}` through `12a`/`14a` clocks and an `84a|w`
-    binding branch, and `{a,2a,...,12a,w}` through `13a`/`14a` clocks and a
-    `182a|w` deep-well branch. THM-2059 exactly counts arbitrary-clock CRT
-    overlaps on one-tail cells; zero overlap rejects that grid, not the row.
-16. **THM-2058 is a carrier theorem, not LRC(14).** It proves exact primitive-
-    order packets, longitudinal label transport, the bulk/boundary/null
-    trichotomy, and one coprime interval per fixed bad denominator and hull
-    owner. It does not prove every surviving interval empty or safe.
-
-13d. **LRC clocks are not modular cusps without a carrier map.** MISTAKE-233
-     corrects HYP-8880/S220. Divisors label both useful clock subgroups and
-     representatives in the modular-cusp count, but this shared index does not
-     preserve the LRC phase-height predicate. `X_0(12)` has six cusps; genus
-     zero means no weight-two cusp forms, not cuspless. The level-14 newform is
-     a rational non-CM eta product, and its Hecke coefficients at `2` and `7`
-     are not cusp values. Do not call it the LRC obstruction, or call scaling a
-     `Gamma_0` level structure, until an explicit transform from signed owner
-     channels to modular data proves a safe-phase implication.
-     THM-2059 gives the exact replacement carrier: safe core and tail residue
-     packets form a CRT fiber product, and their reduction-histogram dot
-     product counts the actual safe grid phases for every modulus.
-
-13e. **Keep strict/boundary and clock completeness visible.** MISTAKE-235: the
-     strict integral misses tight weak phases; use Fejer bulk and THM-2058 packets. In
-     THM-2060 `a|w` does not mean packet zero, finite clocks are not a bulk iff; THM-2061/2064 require a closed weak core inside strictly open tail teeth; THM-2062 can kill a fixed `N` fiber at `p=2` but has positive global direction density.
-13f. **Safe-child homeomorphisms transport nonempty core safe sets, not deleted-tail covers.** MISTAKE-230: never infer terminal `chi=0` from empty `G_(2C union {x,y})`; retain the odd tails' eligibility/owner sidecar via THM-2077 addresses and H-drift.
+5. **No uniform `q<=25` theorem.** THM-762/764 give
+   `26*{1,...,12} union {339}` with first good period `27`.
+6. **Uniform twelve-speed sporadic emptiness is OPEN.** Finite height, AP
+   rigidity, single-far classification, and bounded censuses do not classify
+   every non-AP/deep multi-defect tight set.
+7. **Good-period existence is a maximum, not a mean or count.** MISTAKE-127,
+   129, and 130; always test the tight AP at its own ruler.
+8. **Giri--Kravitz isolation is qualitative.** THM-1289's one-sided `delta` is
+   ineffective and does not give whole-window finiteness.
+9. **Enumeration filters need future-multiple audits.** MISTAKE-194: prove no
+   later multiple can supply a missing residue before pruning it.
+10. **Local six-comb returns are saturated.** A charge without a phase,
+    location, endpoint, or child sidecar repeats THM-1252--1274 extremals.
+11. **HYP-8815 is not a disproof characterization.** Primitive Cover14,
+    `M<1/14`, and non-AP deletion are necessary; near-AP, anti-golden, CF, and
+    autocorrelation claims remain heuristic. THM-731/2048 only prune.
+12. **Complete local coordinates need not be global carriers.** THM-2043/2050
+    require owner height and a global first-exit/magnitude/gluing sidecar.
+13. **The coarse BONF5 middle is closed; the relation branch is not.**
+    THM-2051 forces a genuine support-`3..5` relation of height `<=2^20`; it
+    does not classify those hyperplanes or the AP boundary.
+14. **A bad deck, disk, or Farey ray means uncertified—not unsafe.** THM-2053/
+    2055/2056 are sufficient gates. Keep basis data, non-hull runners, tie
+    owners, clocks, pair sums, and endpoints. No Heegner form (MISTAKE-229).
+15. **THM-2057 closes two planes; THM-2059 joins packets.** CRT zero rejects
+    one clock grid, not the row; no uniform clock selector follows.
+16. **THM-2058 is a carrier, not LRC(14).** It proves exact reduced-order
+    packets, labelled `M^{-1}` transport, trichotomy, and one coprime interval
+    per fixed plane/pair/basis/denominator/owner; it does not discharge it.
+17. **THM-2060/2064 give capacity, not signed ownership.** The sheet order is
+    `a/gcd(a,w)` and the strict union bound is sufficient. Equality `(2,2)` is
+    the dyadic residual, not evidence of failure.
+18. **THM-2061 is a proved reduction, not an empty-seam theorem.** Closed core
+    safety and open tail teeth are load-bearing. Divisor/metric/measure pins and
+    `max(C)<=19` leave the uniform signed seam open.
+19. **THM-2062 filters heredity, not phase height.** A fixed `N` wheel may die
+    at `p=2`, while global primitive-direction density stays positive.
+20. **THM-2065 is RESERVED.** A proof-under-audit file is outside the proof
+    graph until its status is promoted.
+21. **Strict measure misses the tight boundary.** MISTAKE-235: use Fejer bulk
+    plus exact packet/owner/Euler data; no LRC/GMC identity or AP reduction.
+22. **Clocks are not modular cusps.** MISTAKE-233: shared divisor labels,
+    `f14`, genus, and Hecke coefficients preserve no loneliness predicate.
 
 ## NC2 / GMC
 
-14. **Scalar moments do not separate return atoms.** MISTAKE-211. Cancellation inside one scalar equation is real; use a whole face or genuinely independent data.
-15. **Tournament dominance is sufficient, not iff.** MISTAKE-212. A source or
-    transitive channel tournament can certify noncancellation but cannot
-    characterize every nonzero scalar moment.
-19. **Vandermonde nodes are not tournament scores.** MISTAKE-214. Repeated node
-    values do not imply regular or Paley score structure, so “NC2 wall = Paley
-    wall = LRC wall” is not a literal identity.
-20. **No global de-factorialization.** MISTAKE-215; THM-2040 is now a retired
-    pointer. Only the exact symmetric monomial wall has a common factorial; the
+23. **Scalar moments do not separate return atoms.** MISTAKE-211; use a
+    whole-face theorem or genuinely independent data.
+24. **Tournament dominance is sufficient, not iff.** MISTAKE-212.
+25. **Vandermonde nodes are not tournament scores.** MISTAKE-214; repeated
+    nodes do not imply a Paley/regular wall.
+26. **No global de-factorialization.** MISTAKE-215; THM-2040 is retired. The
     general THM-2022 mechanism is prime-local initial-form normalization.
 19. **THM-2033 is special-matrix scope.** Its determinant/Vandermonde identity
     does not replace the general scalar Wick moment.
@@ -104,94 +77,55 @@ mistake.
 
 ## Tournaments
 
-22. **SCC additivity is a sum, not a largest-component bound.** MISTAKE-220
-    repairs the earlier claim: local SCC contributions can accumulate.
-23. **Signed Rédei data is not its absolute invariant magnitude.** MISTAKE-217
-    repairs hot-shell computations whose labels silently dropped the sign
-    gauge. State whether the coordinate is signed, absolute, or label-dependent.
-24. **The invariant lattice is exact only through `n <= 6`.** THM-1966 gives an
-    independent signed Rédei coordinate at `n=7`; finite exactness is not a
-    universal completeness theorem.
-25. **`H >= disc` remains open globally.** THM-1950 reduces to strongly
-    connected tournaments and verifies finite cases only.
-26. **Do not manufacture tournaments from ties.** State the intrinsic binary
-    relation, gauge, tie semantics, preserved target, and loss. If these do not
-    exist, use a preorder, signed graph, hypergraph, packet, or another object.
-27. **Paley scope is prime and quadratic-residue specific.** THM-640 does not
-    turn composite modulus 14 into a literal Paley tournament.
-28. **Higher GLMY path-homology degrees are disputed.** The active
-    [convention court case](../02-court/active/CASE-path-homology-regularity-convention.md)
-    records incompatible calculations from degree three onward. Treat only the
-    convention-safe `beta_1/beta_2` results as canon until resolution.
-29. **Equal ranks do not identify lattices or tournaments.** MISTAKE-227. The
-    adjacent AP chain rows span an index-`11!` sublattice of
-    `ker_Z(1,...,12)`, not a saturated basis; their tridiagonal Gram belongs to
-    that path frame only. THM-2052's private two-anchor code lives in a
-    different 13-coordinate signed space. Before promoting a rank match,
-    exhibit the map and compute its saturation index and discriminant.
-30. **Paley spectra do not assign LRC roles to small primes.** MISTAKE-228.
-    The safe theorem is the odd-prime Paley graph/tournament dichotomy. Its
-    nonprincipal adjacency roots are shifted half-scaled Gauss sums; `p=2` is
-    outside the statement. Fibonacci/foil, apex, rank, and tight/slack labels
-    are heuristics until an LRC-preserving map is proved.
-31. **THM-2053 has no Heegner discriminant `-7`.** MISTAKE-229. Its parameter
-    norm is `a^2+b^2` (discriminant `-4` up to unimodular basis change), and
-    gate failure is an indexed union of 26 open tangent disks, not one binary
-    quadratic form's representation set. A Paley factor of discriminant `-7` or class number one does not classify a relation plane or force a
-    rank jump, or produce an Euler survivor.
+28. **SCC additivity is a sum.** MISTAKE-220; local contributions accumulate.
+29. **Signed Redei data is not its absolute magnitude.** MISTAKE-217; state
+    sign gauge and label dependence.
+30. **The invariant lattice is exact only through `n<=6`.** THM-1966 adds an
+    independent signed coordinate at `n=7`.
+31. **`H>=disc` remains open.** THM-1950 reduces to strong tournaments and
+    verifies finite cases only.
+32. **Do not manufacture tournaments from ties.** Without an intrinsic binary
+    relation and honest tie semantics, use a preorder, signed graph, hypergraph,
+    packet, or bipartite carrier.
+33. **Paley scope is prime and residue-specific.** Composite modulus 14 is not
+    a Paley tournament (MISTAKE-232).
+34. **Higher GLMY path homology is convention-disputed.** Treat only the
+    convention-safe `beta_1/beta_2` results as canon pending the court case.
+35. **Equal ranks do not identify lattices.** MISTAKE-227: the AP chain has
+    index `11!` in its saturation and is not THM-2052's signed code.
+36. **Small-prime Paley spectra assign no LRC roles.** MISTAKE-228. Fibonacci,
+    apex, rank, and tight/slack labels remain heuristics without a map.
 
-## Sequences, entropy, modular forms, and other transfers
+## Sequences and cross-domain transfers
 
-32. **Support is not an indexed multiset.** MISTAKE-209 and THM-2000/2005.
-    Repetitions contribute a collision tax; never compare reciprocal constants
-    without saying which profile is used.
-33. **Density zero does not imply reciprocal convergence.** Use the Abel–Dini/Bertrand boundary through iterated logarithms.
-34. **Finite prefixes and proxy supports are not all-`n` laws.** MISTAKE-219
-    repairs offsets, truncated constants, and support substitutions in the
-    reciprocal atlas. Freeze the actual support and quantify the tail.
-35. **No OEIS match is not novelty.** THM-2010's short data and search result do not prove that a sequence is new.
-36. **A shared Pascal array is not a geometric bridge.** MISTAKE-222. HYP-8820's
-    exact binomial identities and `bagel-cake=T_n-1` do not identify torus and
-    shadow boundaries or transfer LRC/JC. Demand one explicit common valuation
-    or boundary-cell operation and a loss ledger.
-37. **Braid localization does not factor every wall object.** MISTAKE-223.
-    Its exact source facts survive, but THM-2033 is special-matrix scope and no
-    hyper-Bessel or bagel/shadow Euler transfer follows without a map.
-38. **Poisson rank two is not DC(2) or planar JC.** THM-2044 disproves the
-    two-pair Poisson conjecture in four commutative variables. It does not
-    automatically quantize to `A_2`. THM-2045 excludes planar mates only for
-    `R=x(a-b*x^r*q^s)`; DC(2) and planar JC remain open.
-39. **A thickened safe set is not an ordinary toric complement.** MISTAKE-224.
-    Fourier annihilators do not give the selected-side layer poset. THM-2047's
-    live carrier keeps side, height, owner, sign, and paired deletion; it does
-    not prove Wall-A localization.
-40. **Antisymmetry is not the whole tournament-game or torus theorem.**
-    MISTAKE-225. Odd optimal support also uses the tournament block modulo two;
-    pure optimum means Condorcet winner, not transitivity. RPS levels are
-    circles in a simplex, the cutting bagel is a solid torus, and game/Morse/
-    dynamical saddles plus the three sign actions remain distinct without maps.
-41. **Diagonal additive energy is not the LRC relation lattice; shared kernels are not bridges.** MISTAKE-226/235.
-    `CT[P^m Pbar^m]` sees only augmentation zero; LRC sinc sums and GMC moments
-    have different weights and index constraints. Retain mixed grading or an
-    observer, give the map and its loss ledger, and control the full tail.
-    No-carry tensorization, finite examples, or Bessel/sinc syntax supplies a
-    GMC-to-LRC implication or an AP-core reduction.
-42. **Fiber cardinality is observable-relative Hartley ambiguity, not a
-    repo-wide entropy law.** MISTAKE-230/231 retract S217/S218. Regular
-    five-tournaments do not maximize score fibers; finite CF prefixes have
-    continuum many extensions; five moments do not determine the atom at zero;
-    and genus/class data require an explicit quotient and probability model.
-43. **Scaled clocks are not automatically modular cusps or Frobenius.**
-    MISTAKE-232 retracts HYP-8876's composite-14 Paley and proof-shape transfer.
-    The valid THM-2057 clock proof is elementary unit-orbit arithmetic.
-44. **`f14`, genus, and discriminant `-7` are not the LRC obstruction.**
-    MISTAKE-233 retracts S219/S220/HYP-8880; HYP-8885 may use “cusp” only as a
-    typed metaphor. Scaling is not a proved Gamma-zero level, cusps are not
-    clocks, and the non-CM level-14 newform has rational coefficient field—not
-    period field `Q(sqrt(-7))`. No loneliness-preserving map was supplied.
-
-33. **A binary symmetric Hessian is not full symmetric JC(2).** MISTAKE-229. The
-    four-variable VC route has no proved NC2/GMC chain or descent equivalence.
+37. **Support is not an indexed multiset.** MISTAKE-209 and THM-2000/2005;
+    repetitions contribute a collision tax.
+38. **Density zero does not imply reciprocal convergence.** Use the
+    Abel--Dini/Bertrand boundary through iterated logarithms.
+39. **Finite prefixes and proxy supports are not all-`n` laws.** MISTAKE-219;
+    freeze the support, offsets, profile, and quantified tail.
+40. **No OEIS match is not novelty.** A search miss proves no new sequence.
+41. **A shared Pascal array is not a geometric bridge.** MISTAKE-222; demand a
+    common valuation or boundary operation and a loss ledger.
+42. **Braid localization does not factor every wall object.** MISTAKE-223;
+    special-matrix identities do not transfer hyper-Bessel or Euler claims.
+43. **Poisson rank two is not DC(2) or JC(2).** THM-2044 is commutative and
+    does not automatically quantize; THM-2045 covers only its stated family.
+44. **A thickened safe set is not an ordinary toric complement.** MISTAKE-224;
+    THM-2047's carrier keeps side, height, owner, sign, and paired deletion.
+45. **Antisymmetry is not a whole game/torus theorem.** MISTAKE-225; support
+    parity, equilibrium type, topology, dynamics, and sign actions are distinct.
+46. **Shared kernels are not bridges.** MISTAKE-226/235: LRC sinc sums, GMC
+    moments, and diagonal energy have different weights and constraints.
+47. **Fiber size is observable-relative Hartley ambiguity.** MISTAKE-230/231;
+    no universal Shannon law follows without a probability model.
+48. **The binary symmetric Hessian is not full JC(2).** MISTAKE-237: the exact
+    homogeneous binary calculation lands in THM-2063, but the general
+    symmetric/VC route lands in four variables. There is no proved
+    `NC2 -> GMC(2) -> JC(2)` chain, and VC(4), leading-form/Jelonek, and
+    Lame/Newton descent are separate programs.
+49. **THM-1330 is a necessary atlas, not a classification.** MISTAKE-236;
+    inverse realization, equivalence, and irreducible Keller seeds remain open.
 
 34. **Source-fiber degree is not generic cover degree.** THM-2071 closes a
     quadratic pencil member; THM-2084 gives reduced complementary degree at
@@ -199,4 +133,7 @@ mistake.
     classifies Jelonek curves, bounds generic cover degree, or proves JC(2).
 
 ## Promotion checklist
-Before promotion audit types, quantifiers, boundaries, symmetries, quotient loss, and hostile controls. Corrections retain the witness, surviving core, repaired statement, lineage, and next question.
+Audit types, quantifiers, dimensions, symmetries, logical direction, quotient
+loss, hostile controls, dependencies, correction lineage, and optimized versus
+ordinary replay. Preserve every false claim's witness, first failed step,
+surviving mechanism, repaired statement, and next question.

@@ -1,3 +1,7 @@
+> **HISTORICAL / PARTIAL — read MISTAKE-237 and HYP-8905.** Only the binary
+> homogeneous Hessian formula and its THM-2063 subcase survive. The NC2/GMC-to-JC
+> and rank/cycle boundary claims are retracted; S102's correction is MISTAKE-235.
+
         # Message: death-star-2026-07-21-S103: Planar JC IS NC2 one-sidedness -- 2D nilpotent Hessian => one-sided; JC-true/false boundary = the GMC2 unique-vs-coincident-cycle threshold (HYP-8905)
 
         **From:** death-star-2026-07-21-S?

@@ -76,6 +76,10 @@ Format per entry:
 ---
 
 ## MISTAKE-229 (2026-07-21, codex audit of HYP-8905/S225/S103) -- a valid binary symmetric-Hessian subcase and three analogous descent programs were promoted to an NC2-to-JC bridge and equivalent formulations of JC(2)
+## MISTAKE-237 (2026-07-21, codex audit of HYP-8905/S225/S103) -- a valid binary symmetric-Hessian subcase and three analogous descent programs were promoted to an NC2-to-JC bridge and equivalent formulations of JC(2)
+
+This correction initially landed under the already-used `MISTAKE-229`; 237 is
+the canonical ID. MISTAKE-229 remains the tangent-disk/Heegner correction.
 
 - **What was claimed:** S103 wrote `NC2 => GMC2 => ... => JC(2)`, identified
   two-dimensional Zhao/Laplacian vanishing with the Gaussian nullcone, and
@@ -93,8 +97,8 @@ Format per entry:
   neither constructs nor classifies Keller collisions. The leading-form,
   Jelonek, VC(4), and continued-fraction programs may share a termination
   motif, but no equivalences among those programs were proved.
-- **Correct framing:** retain the exact binary homogeneous calculation: if
-  `P=A z^d+B zbar^d` is harmonic, then
+- **Correct framing:** retain the exact binary homogeneous calculation for
+  `d>=2`: if `P=A z^d+B zbar^d` is harmonic, then
   `det Hess(P)=-4d^2(d-1)^2AB|z|^(2d-4)`, so nilpotence forces one side and
   THM-2063 makes the resulting gradient map tame. This is a classified
   two-dimensional symmetric subcase. Treat VC(4), planar leading forms,
@@ -103,7 +107,10 @@ Format per entry:
 
 ---
 
-## MISTAKE-228 (2026-07-21, codex audit of THM-1330) -- necessary Keller-monoid anatomy was titled and described as a classification of all Jacobian counterexamples
+## MISTAKE-236 (2026-07-21, codex audit of THM-1330) -- necessary Keller-monoid anatomy was titled and described as a classification of all Jacobian counterexamples
+
+This correction initially landed under the already-used `MISTAKE-228`; 236 is
+the canonical ID. MISTAKE-228 remains the Paley/LRC-role correction.
 
 - **What was claimed:** THM-1330 was titled "the exact picture of the set of
   all counterexamples" and called the Jelonek hypersurface, complement cover,
@@ -127,36 +134,6 @@ Format per entry:
 
 ---
 
-## MISTAKE-227 (2026-07-21, codex audit of HYP-8879/S102) -- a positive-measure strict-loneliness integral was identified with the weak LRC predicate, and finite resonance examples were promoted to an AP reduction
-
-- **What was claimed:** S102 put `g(x)=1[||x||>1/14]`, expanded
-  `mu=int product_i g(v_i t)dt` over the integer relation kernel, and called
-  `mu=0` covering. From a few truncated Sidon/AP computations it then said
-  LRC(14) reduces to maximally resonant AP-neighborhood cores and that the
-  GMC unique-cycle principle transfers to low-resonance LRC rows.
-- **Why it is wrong:** `mu>0` is equivalent to a **strict** witness
-  `M(v)>1/14`; it deliberately loses the equality boundary. For the canonical
-  tight row `v={1,...,13}`, THM-2058 gives
-  `G_(1/14)=U_14/14`: six weak safe phases, no strict phase, and therefore
-  `mu=0` although LRC(14) holds. Thus zero integral does not distinguish a
-  counterexample from a tight witness. The raw infinite Fourier-kernel sum
-  also needs Fejer/other convergence control; the reported truncated value
-  `0.105` versus direct `0.100` is not an exact verification. Finally, a few
-  low-resonance examples prove no uniform non-AP bound. THM-2058's exact
-  `N=29` control has a unique antipodal maximizer but height only `2/29`, so
-  uniqueness without height is not an LRC seed.
-- **Correct framing:** retain the integer-kernel Fourier expansion as a
-  Fejer-regularized strict-bulk diagnostic and `(6/7)^13` as its zero-mode
-  term. THM-2058 supplies the lossless split: `M>1/14` gives positive measure
-  and primitive phases on every sufficiently large prime grid; `M=1/14` is a
-  finite level-14 pair-sum packet invisible to volume; `M<1/14` is null.
-  Any resonance estimate can close a class only after a uniform proved bound,
-  and equality still requires exact denominator/owner sidecars. No AP-core
-  reduction follows from S102's experiment.
-
----
-
-## MISTAKE-226 (2026-07-21, codex audit of HYP-8880/S220 and its HYP-8885/S221 reuse) -- shared divisor labels were promoted to an identification of LRC clocks with modular cusps and of the level-14 newform with the LRC obstruction
 ## MISTAKE-235 (2026-07-21, audit of S102 / HYP-8879) -- a shared kernel-sum syntax and four truncated examples were promoted to an LRC-to-GMC equivalence and an AP-core reduction
 
 This correction subsumes the narrower strict-measure repair that initially

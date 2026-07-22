@@ -253,6 +253,42 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
   the same displayed formulas preserves the relations, that stable transport
   preserves the same rank, or that THM-2044 settles DC(2) or JC(2).
 
+### de Bondt — *Symmetric Jacobians*
+
+- **Primary / freshness:** [arXiv:1206.2865v3](https://arxiv.org/abs/1206.2865),
+  revised 2013-10-24; published in *Open Mathematics*.
+- **Imported role:** proves reductions of the Jacobian Conjecture to polynomial
+  maps with specified Jacobian symmetries. In particular, it is enough in the
+  stated stable reduction to handle homogeneous maps whose Jacobian has all
+  square symmetries. Dimension and the precise symmetry class are
+  load-bearing; a planar input need not remain a binary symmetric problem.
+- **Repo consumers:** [HYP-8905 corrected map](../hypotheses/HYP-8905-binary-symmetric-jc2-subcase-and-separate-descent-programs.md)
+  and [MISTAKE-237](../../01-canon/MISTAKES.md).
+- **Does not prove:** the binary symmetric case is equivalent to full JC(2),
+  that a reduction into four variables can be solved in two variables, or any
+  NC2/GMC-to-JC implication.
+
+### Zhao — Hessian-nilpotent polynomials and the Vanishing Conjecture
+
+- **Primary / freshness:** [*Some Properties of and Open Problems on Hessian
+  Nilpotent Polynomials*, arXiv:0704.1689v2](https://arxiv.org/abs/0704.1689),
+  published in *Annales Polonici Mathematici* **93** (2008), and [*A Vanishing
+  Conjecture on Differential Operators with Constant Coefficients*,
+  arXiv:0704.1691v2](https://arxiv.org/abs/0704.1691), published in *Acta
+  Mathematica Vietnamica* **32** (2007).
+- **Imported role:** develops Hessian-nilpotent polynomials, their inversion
+  pairs, and the Laplacian/constant-coefficient Vanishing Conjecture framework.
+  The relevant JC reduction uses homogeneous Hessian-nilpotent targets and the
+  eventual vanishing of `Delta^m(P^(m+1))`; `Delta^m(P^m)=0` encodes Hessian
+  nilpotence in the cited setting.
+- **Repo consumers:** [HYP-8905](../hypotheses/HYP-8905-binary-symmetric-jc2-subcase-and-separate-descent-programs.md),
+  [THM-2063](../../01-canon/theorems/THM-2063-one-fiber-linear-planar-keller-pairs.md),
+  and MISTAKE-237.
+- **Does not prove:** equality with complex Gaussian moment functionals, an
+  `NC2 -> GMC(2) -> JC(2)` chain, or full JC(2) from the binary homogeneous
+  calculation. VC(4), planar Jelonek/leading-form descent, and Newton/Lame
+  descent remain separate programs.
+
 ### Lee--Li — *On the two-dimensional Jacobian conjecture: Magnus' formula revisited, IV*
 
 - **Primary / freshness:** [arXiv:2408.01279v1](https://arxiv.org/abs/2408.01279),
