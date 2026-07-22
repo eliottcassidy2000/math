@@ -198,10 +198,11 @@ finite replay suggests (19) has substantial room, but a height cutoff cannot
 be inferred from it. A scale-free proof must classify or bound the projective
 three-frequency edges (12), including their common-gcd and endpoint phases.
 
-THM-2083 subsequently closes the relation-free part of this target:
-relative-tree failure forces a uniformly bounded integer relation on some
-triple `(h,q_i,q_j)`. Thus only finitely many relation templates, rather than
-the whole projective three-frequency space, remain.
+THM-2083 subsequently closes the relation-free part of this target, and
+THM-2085 makes its bound explicit: relative-tree failure forces a nonzero
+integer relation of coefficient height at most `57` on some triple
+`(h,q_i,q_j)`. Thus only finitely many coefficient templates, rather than the
+whole projective three-frequency space, remain.
 
 The useful next split is exact:
 

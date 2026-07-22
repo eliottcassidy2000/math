@@ -7,8 +7,9 @@ status: >
   (h,q_i,q_j) has a nonzero integer relation of coefficient height at most H.
   Equivalently, packets whose every guard/two-speed relation height tends to
   infinity have relative-Hunter margin tending to 30/343 and cannot obstruct.
-  The theorem is uniform but does not give a numerical H or classify the
-  finitely many relation templates.
+  This compactness proof is uniform but qualitative. THM-2085 subsequently
+  makes it effective with H=57; classification of those finite coefficient
+  templates remains open.
 source: codex-2026-07-22-LRC14-relative-Hunter-compactness
 depends_on:
   - THM-2081
@@ -17,6 +18,7 @@ related:
   - THM-2051
   - THM-2054
   - THM-2082
+  - THM-2085
 ---
 
 # THM-2083 -- the rank-seven relative-Hunter short-relation alternative
@@ -157,10 +159,9 @@ for every `n`. Equation (6) contradicts (14). Therefore some absolute `H_7`
 exists, proving (3). QED.
 
 The proof is qualitative but effective in principle: replace the continuous
-boxes by upper and lower Fejer polynomials, retain all characters through a
-chosen degree, and increase that degree until the error is less than (say)
-`15/343`. The present theorem does not claim a value because no constant chase
-has yet been optimized or audited.
+boxes by one-sided trigonometric polynomials and retain all characters through
+a chosen degree. THM-2085 carries this out with signed Selberg box minorants
+and proves the explicit value `H_7=57` is sufficient.
 
 ## 5. Frontier effect
 
@@ -179,9 +180,9 @@ last safe-child guard.
 
 The result does not make the terminal speeds finite. Each template (15) is an
 unbounded rational plane and may still carry divisor-complete hereditary
-families. The next decisive task is an effective `H_7` followed by a CRT/
-endpoint classification on those finitely many planes, or a direct proof that
-each plane violates the relative-tree inequality.
+families. THM-2085 makes `H_7=57` explicit. The remaining decisive task is a
+CRT/endpoint classification on those finitely many planes, or a direct proof
+that each plane violates the relative-tree inequality.
 
 ## 6. Assumption challenge and Tournament Analysis
 

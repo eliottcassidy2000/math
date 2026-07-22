@@ -70,6 +70,26 @@ NET: every P whose lowest face has a unique channel needs NO DvdK axiom for NC2,
   tree failures; generic margins clustered near the predicted `30/343`.
   This is evidence only and is not used in THM-2083.
 
+### Effective Selberg relation gate
+
+- THM-2085 replaces THM-2083's ineffective constant by `H_7=57`. Vaaler's
+  degree-57 interval pair is assembled into the signed box minorant
+  `prod U-sum_r(U_r-L_r)prod_(s!=r)U_s`; this is pointwise below the box
+  indicator even though the minorant may be negative.
+- If every guard/two-speed triple has relation height greater than `57`, finite
+  Fourier exactness gives `I_i>=5363/164836` and every outside-guard edge
+  `w_ij>=655135/66923416`. Hence
+  `tau-Delta>=6435/8365427>0`, contradicting containment by THM-2081.
+- This does not conflict with THM-537's analytic-minorant wall: no nonnegative
+  polynomial supported inside an arc is asserted. The signed coordinate-
+  labelled correction is the entire repair. The exact rational referee passes
+  normally and under `python -O`; the same certificate is nonpositive through
+  degree `56`.
+- Incoming THM-2082 sharpens the next split. Translated prime grids retain
+  projective residue incidence, whereas the rank-one code wheel retains only
+  deletion primitivity. Its frozen unbounded family rules out extracting a
+  height cutoff from scalar code/cogirth, fold, and divisor sidecars alone.
+
 ## death-star-2026-07-22-S105 -- GMC2 formalization CAPSTONE CLOSED: the whnf wall is SOLVED; HeightWitnessSupplier discharged kernel-pure; clean DvdK1 -> NC2 and DvdK1 -> GMC(2) now compile.
 
 **Owner directive:** work creatively at whnf-tuning, or how it can be bypassed.

@@ -1,0 +1,10 @@
+THM-2085 SELBERG RANK-SEVEN RELATION-GATE REFEREE
+degrees 1..56 with positive certificate margin: none
+degree 56 margin: -20416/21173733
+degree 57 epsilon: 1/58
+degree 57 mixed lower: 5363/164836
+degree 57 restricted-edge lower: 655135/66923416
+degree 57 tree lower: 1965405/33461708
+degree 57 deficit upper: 195/3364
+degree 57 contradiction margin: 6435/8365427
+ALL EXACT-RATIONAL ASSERTIONS PASS

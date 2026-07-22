@@ -146,12 +146,16 @@ supplier/seed and a lossless exit.
   the live depth-four target. At rank seven its scalar deficit is exactly the
   negative signed-fold sum divided by `196`, hence equals outside-cover
   multiplicity under containment. THM-2083 removes the generic all-height
-  lane: every rank-seven containment has a uniformly bounded nonzero relation
-  `a h+bq_i+cq_j=0` on some guard/two-speed triple. The remaining depth-four
-  problem is a finite list of relation templates, still with unbounded scale.
-  THM-2062/2069 give its wheel; THM-2065 makes circuit-free residuals finite.
-  THM-2082 shows that wheel only sees prime support: unbounded terminals freeze it and every scalar filter.
-  Its translated grid gives a safe phase or carrier-ratio branch; projective residue incidence remains live.
+  lane, and THM-2085 makes the bound explicit: every rank-seven containment
+  has a nonzero relation `a h+bq_i+cq_j=0` on some guard/two-speed triple with
+  `max(|a|,|b|,|c|)<=57`. The degree-57 signed Selberg box certificate has
+  exact relative-Hunter margin `6435/8365427`; degree 56 does not close that
+  certificate. The remaining depth-four problem is a finite coefficient-
+  template ledger, still with unbounded scale. THM-2062/2069 give its wheel;
+  THM-2065 makes circuit-free residuals finite. THM-2082 proves the rank-one
+  wheel sees only prime support: an unbounded terminal family freezes it and
+  every scalar filter. Its translated grid gives a safe phase or carrier-ratio
+  branch, so projective residue incidence remains live.
 - **PROVED relative whole-product decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   says bounded scalar relations must lift to vector-character relations. Two
   telescopes bound the whole product; rowwise `H=2^19` clears every recorded
