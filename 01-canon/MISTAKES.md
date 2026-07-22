@@ -6223,3 +6223,55 @@ pairs and therefore lands in conventional `A_4`. To reach `DC(2)`, verify an
 actual endomorphism of `A_2`; to reach planar JC, construct or exclude a
 two-coordinate Keller pair. Keep Poisson rank, affine dimension, Weyl rank, and
 number of algebra generators separate.
+## MISTAKE-225 (2026-07-21, codex audit of HYP-8865) -- the polygonal determinant gate was promoted to a discriminant-minus-seven Heegner form and to an isotropic/rank versus anisotropic/Euler equivalence
+
+**What happened.** HYP-8865 correctly noticed that THM-2053 uses determinants
+`a z_i-b u_i`, but then called the residual a single binary quadratic form of
+discriminant `-7`, invoked class number one, and identified “isotropic” with a
+new rank relation and “anisotropic” with an Euler survivor.
+
+**Type failure.** The gate is
+
+```text
+max_i |a z_i-b u_i| <= (a^2+b^2)/91.
+```
+
+Its left side is the maximum of thirteen linear forms, hence a polyhedral
+support norm. Its right side is the Euclidean quadratic form of discriminant
+`-4`; the scalar `91=7*13` does not change that rational square class to `-7`.
+The arbitrary column polygon is not the Paley form `x^2+x+2`. Class number one
+therefore classifies no THM-2053 residual without a new, absent identification.
+
+There is a second local error: for the claimed discriminant `-p`, the Legendre
+symbol `(disc/p)` is `0`, because `p` divides the discriminant. Replacing it by
+`(-1/p)` changes the statement rather than proving it.
+
+**Quantifier failure.** Failing THM-2053's gate means only “not certified by
+this sufficient estimate.” It is not a resonance, a counterexample, or an
+Euler survivor. On the exact one-tail plane, `d=(1,0)` fails the gate but is
+the tight AP with `M=1/14`, while `d=(1,2)` also fails and has exact `M=1/12`.
+The gate alone does not distinguish tight from strict-safe rows. Likewise, an
+extra bounded relation outside the harvested rank-eleven code is additional
+signed-coding data, not isotropy of `a^2+b^2` (which has no nonzero real null
+direction).
+
+**Surviving core and repair.** The determinant and finite-short-vector
+language survives. THM-2055 gives the correct structure:
+
+```text
+K=conv{+-c_i},
+D(d)=h_K(Rd),
+residual = primitive lattice points in normal-owner cones intersected with
+           owner tangent disks.
+```
+
+Only signed hull vertices matter to the determinant gate. The lawful niche
+machinery is convex polarity, rational normal fans, and ordinary
+Farey/Klein-sail enumeration, with pair-sum and endpoint-owner sidecars. The
+Paley/Heegner observations remain analogies unless an explicit predicate-
+preserving map to this polygonal norm is proved.
+
+**Rule.** Before importing class groups or local anisotropy, identify one
+actual quadratic form in the target theorem and compute its discriminant.
+Never turn failure of a sufficient certificate into a structural branch
+equivalence.

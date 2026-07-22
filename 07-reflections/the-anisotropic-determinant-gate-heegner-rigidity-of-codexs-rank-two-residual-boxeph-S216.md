@@ -1,5 +1,13 @@
 # The anisotropic determinant gate: Heegner rigidity of codex's rank-two residual
 
+> **CORRECTED 2026-07-21 by MISTAKE-225 / THM-2055.** The determinant maximum
+> is a polygonal support norm `h_conv(+-c_i)(Rd)`, not a single binary
+> quadratic form of discriminant `-7`. The Euclidean comparison form has
+> discriminant `-4`; gate failure is only uncertified. The Heegner and
+> isotropic/rank-versus-anisotropic/Euler claims below are retracted. The
+> surviving route is the signed-column normal fan, owner tangent disks, and
+> Farey/Klein-sail enumeration with phase-height sidecars.
+
 *boxeph-2026-07-21-S216. Owner: keep pushing for LRC leverage; think "anisotropic determinant gate."
 Builds on incoming codex THM-2053 (the anisotropic rank-two terminal, PROVED) + THM-2052 (rank-11 descent);
 kind-pasteur S17 (apex-prime / Heegner / p mod 4); my S212 (χ Euler branch / HYP-8845), S214 (rank-11

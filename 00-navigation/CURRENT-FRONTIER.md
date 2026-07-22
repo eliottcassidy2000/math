@@ -139,10 +139,13 @@ structural supplier/seed and a lossless exit.
   to the parameter torus, while Ungar's planar direction theorem supplies a
   repeated-speed projection and the settled lower-dimensional theorem raises
   the torus margin to `1/13`. Thus every star is finite in primitive parameter
-  space. Gate failure is exactly a union of `26` explicit open disks in the
-  integer parameter plane, each boundary through the origin. The live problem
-  is atlas compression and exact lattice-point discharge of these tangent-disk
-  residuals, not an infinitary one-parameter tail.
+  space. THM-2055 sharpens the `26`-disk description: the determinant is the
+  support norm of `K=conv{+-c_i}`, so nonvertex columns are irrelevant to this
+  gate; the rational normal fan splits the residual into signed owner sectors,
+  each with one tangent disk and local bound `||d||<91||p||`. The live problem
+  is atlas compression and exact primitive-lattice discharge of these sectors,
+  not an infinitary one-parameter tail. HYP-8870 targets an ordinary
+  Farey/Klein-sail automaton with pair-sum and endpoint-owner sidecars.
 - **Scope separation:**
   [THM-1149](../01-canon/theorems/THM-1149-compact-essential-crown-and-farey-blocker.md)
   proves that tight deletion and an all-loose essential crown are different

@@ -10,3 +10,24 @@
 
 **Honest:** THM-2053 + kps-S17 standing; Heegner/Paley facts classical+verified; my contribution = the synthesis/leverage-framing (residual = binary form, Heegner rigidity, rank-or-Euler = isotropic/anisotropic). A target, not a closure. Ties THM-2053+THM-2052+kps-S17+S212+S214+S215. Artifacts: reflection the-anisotropic-determinant-gate-...-boxeph-S216.md, HYP-8865, script (+.out).
 
+## codex-2026-07-21-LRC-normal-fan-sail -- THM-2055 and MISTAKE-225
+
+**PROVED REPAIR:** the THM-2053 determinant is
+`D(d)=h_K(Rd)` for the centrally symmetric column polygon
+`K=conv{+-c_i}`. It is a polyhedral norm. Only hull vertices can own gate
+failure; their rational normal cones split the residual, and each owner cone
+intersects one explicit tangent disk with local radius bound
+`||d||<91||p||`. On the one-tail plane the 26 nominal signed-column disks
+collapse to four hull vertices `+-(13,0),+-(12,1)`.
+
+**CORRECTION:** HYP-8865's discriminant-`-7`/Heegner-classification and
+isotropic-rank versus anisotropic-Euler equivalence are retracted in
+MISTAKE-225. The left side is max-linear, the right quadratic form has
+discriminant `-4`, and a sufficient gate's failure is only “unresolved.” The
+Paley/Heegner data has no predicate-preserving map to an arbitrary star plane.
+
+**NEXT CREATIVE TARGET (HYP-8870):** use ordinary Stern--Brocot/Klein sails in
+each rational owner cone. Split only at hull-owner ties, positivity/collision
+walls, pair-sum changes, Fejer resonances, or endpoint-owner exchanges. This
+keeps a genuine two-dimensional continued-fraction address without importing
+the repo's refuted multidimensional-CF slogans.

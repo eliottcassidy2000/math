@@ -73,6 +73,13 @@ mistake.
      does not classify the bounded-height relation hyperplanes; the AP boundary
      is relation-rich and remains outside this strict-exit argument.
 
+13c. **The THM-2053 determinant gate is polygonal, not a Heegner form.**
+     MISTAKE-225 corrects HYP-8865. `max_i|a z_i-b u_i|` is the support norm
+     of `conv{+-c_i}`; the Euclidean right side has discriminant `-4`, not
+     `-7`. Gate failure means uncertified, not isotropic/rank or
+     anisotropic/Euler. Use THM-2055's signed hull normal fan and tangent
+     sectors; restore pair-sum and endpoint-owner data before concluding LRC.
+
 ## NC2 / GMC
 
 14. **Scalar moments do not separate return atoms.** MISTAKE-211. Cancellation
