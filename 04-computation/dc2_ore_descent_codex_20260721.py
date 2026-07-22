@@ -185,6 +185,79 @@ print("  normal:", normal_boundary_profile)
 print("  Weyl:  ", weyl_boundary_profile)
 print("Weyl order kills boundary grade 3 and exposes uniform grade 6: PASS")
 
+
+def boundary_beta(a):
+    return min(x_valuation(coefficient) - 2 * degree for degree, coefficient in a.items())
+
+
+boundary_u = sp.symbols("boundary_u")
+
+
+def boundary_initial_symbol(a, grade):
+    """Return x^(-grade) times the grade piece, with x^2*e replaced by u."""
+    answer = 0
+    for degree, coefficient in a.items():
+        for (x_degree, q_degree), scalar in sp.Poly(sp.expand(coefficient), x, q).terms():
+            if x_degree - 2 * degree == grade:
+                answer += scalar * q**q_degree * boundary_u**degree
+    return sp.expand(answer)
+
+
+def boundary_lift(symbol, x_power):
+    return from_expr(sp.expand(x**x_power * symbol.subs(boundary_u, x**2 * e)))
+
+
+def cancel_boundary_grade(residual_here):
+    """Solve the associated-graded linear correction equation at min beta."""
+    grade = boundary_beta(residual_here)
+    initial = boundary_initial_symbol(residual_here, grade)
+    P_u = 2 * boundary_u**2 - 10 * boundary_u + 9
+
+    # For C_S=x^(g-1)*int A dq and C_T=x^g*int B dq, the grade-g
+    # equation is (8/3)(u-2)A+(P(u)/9)B=-initial.  Since P(2)=-3,
+    # the following is a polynomial Bezout solution for every initial.
+    B0 = sp.expand(3 * initial.subs(boundary_u, 2))
+    numerator = sp.expand(-initial - P_u * B0 / 9)
+    A0 = sp.cancel(sp.Rational(3, 8) * numerator / (boundary_u - 2))
+    A0 = sp.Poly(A0, boundary_u, q, domain=sp.QQ).as_expr()
+    assert sp.expand(sp.Rational(8, 3) * (boundary_u - 2) * A0 + P_u * B0 / 9 + initial) == 0
+
+    int_A = sp.integrate(A0, q)
+    int_B = sp.integrate(B0, q)
+    assert sp.expand(sp.diff(int_A, q) - A0) == 0
+    assert sp.expand(sp.diff(int_B, q) - B0) == 0
+    correction_S = boundary_lift(int_A, grade - 1)
+    correction_T = boundary_lift(int_B, grade)
+    return grade, initial, correction_S, correction_T
+
+
+T_iter = ordered_lift(T_expr, sp.Rational(1, 2))
+S_iter = ordered_lift(S_expr, sp.Rational(1, 2))
+print("associated-graded simultaneous correction ladder:")
+ladder_grades = []
+for step in range(8):
+    residual_iter = add(commutator(S_iter, T_iter), ONE, scale_b=-1)
+    if not residual_iter:
+        print("  step", step, "EXACT TERMINATION")
+        break
+    grade, initial, correction_S, correction_T = cancel_boundary_grade(residual_iter)
+    ladder_grades.append(grade)
+    assert not correction_S or boundary_beta(correction_S) >= grade - 1
+    assert not correction_T or boundary_beta(correction_T) >= grade
+    S_iter = add(S_iter, correction_S)
+    T_iter = add(T_iter, correction_T)
+    new_residual = add(commutator(S_iter, T_iter), ONE, scale_b=-1)
+    new_grade = None if not new_residual else boundary_beta(new_residual)
+    assert new_grade is None or new_grade > grade
+    print(
+        "  step", step,
+        "grade", grade, "->", "zero" if new_grade is None else new_grade,
+        "initial=", sp.factor(initial),
+        "correction_terms(S,T)=", (len(correction_S), len(correction_T)),
+    )
+print("  visited grades:", ladder_grades)
+print("  associated-graded correction map is surjective because gcd(u-2,2u^2-10u+9)=1: PASS")
+
 tt = -sp.Rational(1, 3) / x
 assert sp.factor(delta(tt) - 1) == 0
 print("localized slice t=-1/(3*x), delta(t)=1: PASS")
