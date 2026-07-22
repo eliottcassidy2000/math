@@ -22,7 +22,7 @@ depends_on:
 related:
   - THM-1345
   - THM-1330
-  - THM-2097
+  - THM-2100
   - MISTAKE-229
 script: 04-computation/jc2_cubic_fiber_gauss_manin_gate_codex_20260722.py
 output: 05-knowledge/results/jc2_cubic_fiber_gauss_manin_gate_codex_20260722.out

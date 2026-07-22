@@ -1,5 +1,5 @@
 ---
-id: THM-2096
+id: THM-2099
 title: "Effective guard/speed ratios and all-height finiteness at rank seven"
 status: >
   PROVED by a connected two-torus strip-tiling obstruction, made effective
@@ -9,8 +9,9 @@ status: >
   reduced ratio (h/gcd(h,q),q/gcd(h,q)) at most R_7. One explicit choice is
   R_7=5*28^8*(7*57^42)^17. It strengthens the support-three relation
   alternative THM-2083 in arity, while THM-2085 remains stronger in giving
-  the explicit coefficient height 57 for its three-term relation. This does
-  not close the resulting finite ratio templates or LRC(14). Combined with
+  the explicit coefficient height 57 for its three-term relation. The first-
+  ratio statement alone does not close the resulting templates or LRC(14).
+  Combined with
   THM-2087's complete short-relation cut, it also proves that only finitely
   many primitive contained packets can lie in the branch where every
   guard/speed relation has height greater than 57. Thus every infinite
@@ -38,9 +39,12 @@ related:
   - THM-2091
   - THM-2092
   - THM-2094
+  - THM-2095
+  - THM-2096
+  - THM-2097
 ---
 
-# THM-2096 -- an effective guard/speed-ratio alternative
+# THM-2099 -- an effective guard/speed-ratio alternative
 
 Put
 
@@ -487,7 +491,7 @@ must vanish on `(0,r)`. Its speed coefficient times `r_i` is then zero; since
 `r_i!=0`, the speed coefficient is zero, and vanishing on the positive packet
 then kills the guard coefficient as well.
 
-THM-2096 supplies some label `i` and a nonzero pair row `ell` of height at
+THM-2099 supplies some label `i` and a nonzero pair row `ell` of height at
 most `R_7` that annihilates the actual packet. There are only finitely many
 choices of `(i,ell)`. The preceding paragraph makes `ell` independent of the
 row space of `M`, so
