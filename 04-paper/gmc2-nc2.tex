@@ -41,6 +41,11 @@ formally verified}
 \author{Eliott Cassidy}
 \email{eliottcassidy2000@gmail.com}
 
+% arXiv primary category: math.AC (Commutative Algebra); cross-list: cs.LO (Logic in Computer Science).
+\subjclass[2020]{14R15, 13F20, 68V20, 12E05}
+\keywords{Gaussian--Moments Conjecture, Mathieu--Zhao space, Jacobian Conjecture,
+Duistermaat--van der Kallen theorem, constant terms, Weierstrass preparation, formalization, Lean}
+
 \date{\today}
 
 \begin{abstract}
@@ -228,38 +233,112 @@ Theorem~\ref{thm:nc2}, to which we now turn.
 
 \section{Reduction of NC$(2)$ to the constant--term theorem}\label{sec:nc2}
 
-Suppose $\E(P^m)=0$ for all $m\ge1$ but, for contradiction, that $P$ is \emph{not} one--sided: its
-charge support is not contained in $\Z_{\ge1}$ nor in $\Z_{\le-1}$. Because $\E$ only sees the diagonal,
-only the \emph{charge--balanced} part of each power matters:
-\begin{equation}\label{eq:wick}
-  \E(P^m)\;=\;\sum_{\substack{r\in\N^{\,\supp P}\\ |r|=m,\ \sum_i r_i\,\ch(s_i)=0}}
-      \binom{m}{r}\Big(\prod_i P_{s_i}^{\,r_i}\Big)\,\big(\text{diagonal Wick weight}\big),
-\end{equation}
-the sum over compositions $r$ of $m$ across the monomials $s_i$ of $P$ whose total charge is zero.
-Passing to the associated one--dimensional charge data $q_i=\ch(s_i)\in\Z$ with coefficients
-$c_i=P_{s_i}\in\C^\times$ isolates the \emph{angular} content of \eqref{eq:wick}: the balanced
-compositions of $q=(q_i)$ are exactly the constant--term channels of the Laurent polynomial
-$f(z)=\sum_i c_i z^{q_i}$. The radial content --- the factorials $\wt$ and the Frobenius amplification
-that upgrades a single balanced face to all of them --- is carried by an elementary but non--vacuous
-combinatorial argument (the lowest--balanced--face / Kummer--carry mechanism, formalized in the module
-\texttt{GMC2NC2}) whose only external call is the following: the constant--term relations of $f$ cannot
-all vanish.
+Write $P=\sum_{i=1}^{k} c_i\,Z^{a_i}W^{b_i}$ with $c_i\in\C^\times$ and distinct exponent pairs, and let
+$q_i=a_i-b_i$ be the charges. Assume $\E(P^m)=0$ for all $m\ge1$ and, for contradiction, that $P$ is not
+one--sided, so that $0$ lies in the convex hull of $\{q_1,\dots,q_k\}$. The proof extracts an extremal
+one--variable face, applies Theorem~\ref{thm:dvdk} to it to obtain a single nonzero constant term, and
+amplifies that scalar into a nonzero moment by a characteristic--$p$ Frobenius argument.
 
-Concretely, let $q\colon\{1,\dots,k\}\to\Z$ be injective with values the distinct charges and
-$c_i\ne0$ the corresponding coefficients. For $m\ge0$ define the universal constant--term polynomial
-\begin{equation}\label{eq:ctr}
-  \mathcal C_m(q)\;=\;
-  \sum_{\substack{r\in\N^k,\ |r|=m\\ \sum_i r_i q_i=0}} \binom{m}{r}\, X^{r}\ \in\ \Q[X_1,\dots,X_k],
+\smallskip\noindent\emph{The moment expansion.} Since $\E$ annihilates every nonzero charge, only
+charge--balanced multi--indices survive in a power. For $r\in\N^k$ put $|r|=\sum_i r_i$,
+$c^r=\prod_i c_i^{r_i}$, and, when $\sum_i q_i r_i=0$, let $A(r)=\sum_i a_i r_i=\sum_i b_i r_i$ (the two
+agree by balance) be the common diagonal degree. Then
+\begin{equation}\label{eq:wick}
+  \E(P^m)\;=\;M_m(c)\;:=\!\!\sum_{\substack{r\in\N^k,\ |r|=m\\ \sum_i q_i r_i=0}}\!\!
+      \binom{m}{r}\,A(r)!\;c^r,\qquad \binom{m}{r}=\frac{m!}{\prod_i r_i!}.
 \end{equation}
-so that $\mathcal C_m(q)(c)=\CT(f^m)$. The hypothesis $\E(P^m)=0$ for all $m$ forces, after the
-Frobenius reduction, $\mathcal C_m(q)(c)=0$ for all $m\ge1$. Since $P$ is not one--sided, the charge set
-$\{q_i\}$ straddles zero. Theorem~\ref{thm:dvdk} then provides $m\ge1$ with $\mathcal C_m(q)(c)\ne0$, a
-contradiction. Hence $P$ is one--sided, proving Theorem~\ref{thm:nc2}. \qed
+The distinguishing feature of dimension two is the single monotone factorial $A(r)!$ on each balanced
+channel. Its presence is exactly why the vanishing of $\E(P^m)$ is \emph{not} the vanishing of the plain
+constant term of the associated Laurent polynomial $f(z)=\sum_i c_i z^{q_i}$,
+\begin{equation}\label{eq:ctr}
+  \CT(f^m)\;=\;\mathcal C_m(q)(c),\qquad
+  \mathcal C_m(q)=\!\!\sum_{\substack{r\in\N^k,\ |r|=m\\ \sum_i q_i r_i=0}}\!\!\binom{m}{r}\,X^{r}
+  \ \in\ \Q[X_1,\dots,X_k],
+\end{equation}
+and it is the crux of the two--dimensional case. We control it through the lowest balanced face.
+
+\smallskip\noindent\emph{The lowest balanced face.} Consider the linear program
+\begin{equation}\label{eq:lp}
+  \delta\;=\;\min\Big\{\textstyle\sum_i a_i x_i\;:\;x\ge0,\ \textstyle\sum_i x_i=1,\ \textstyle\sum_i q_i x_i=0\Big\},
+\end{equation}
+feasible precisely because $0\in\operatorname{conv}\{q_i\}$, with value $\delta\in\Q$ attained. Linear
+programming duality supplies a multiplier $\lambda\in\Q$ with
+\begin{equation}\label{eq:dual}
+  a_i-\lambda\,q_i\;\ge\;\delta\qquad(1\le i\le k).
+\end{equation}
+Let $F=\{i:a_i-\lambda q_i=\delta\}$ be the tight set. An optimal vertex of \eqref{eq:lp} is supported on
+$F$, so the face charges still straddle zero:
+\begin{equation}\label{eq:face}
+  0\in\operatorname{conv}\{q_i:i\in F\},\qquad f_F(z)=\sum_{i\in F} c_i z^{q_i}.
+\end{equation}
+Since $a_i=\delta+\lambda q_i$ on $F$, every balanced channel $s$ supported on $F$ has the \emph{same}
+diagonal degree
+\begin{equation}\label{eq:A0}
+  A(s)\;=\;\sum_{i\in F} a_i s_i\;=\;\delta|s|+\lambda\!\sum_{i\in F} q_i s_i\;=\;\delta|s|.
+\end{equation}
+
+\smallskip\noindent\emph{The seed.} The face polynomial $f_F$ has charges straddling zero, so
+Theorem~\ref{thm:dvdk} applies to it: there is $m_0\ge1$ with
+\begin{equation}\label{eq:seed}
+  Q\;:=\;\CT(f_F^{\,m_0})\;=\;\mathcal C_{m_0}(q_F)(c_F)\;\ne\;0,
+\end{equation}
+$q_F,c_F$ denoting charges and coefficients on $F$. Every channel contributing to \eqref{eq:seed} is
+balanced, of length $m_0$, and supported on $F$; by \eqref{eq:A0} all share the diagonal degree
+$A_0:=\delta\,m_0=A(s)\in\N$. (When $F$ contains a zero charge the seed is immediate, $Q=c_{i_0}$ at
+$m_0=1$; otherwise it is the substance of Theorem~\ref{thm:dvdk}.)
+
+\smallskip\noindent\emph{Frobenius amplification.} Each $M_m$ of \eqref{eq:wick} is a polynomial in
+$\Z[X_1,\dots,X_k]$ evaluated at $c$, and $Q$ is the value at $c$ of an integer polynomial that does not
+vanish. Hence the finitely generated $\Z$--algebra $\Z[c_1,\dots,c_k]\subset\C$ has a maximal ideal
+avoiding $Q$, with finite residue field $\mathbb F$ of some prime characteristic $p$; let
+$\varphi\colon\Z[c_1,\dots,c_k]\to\mathbb F$ be the quotient, $\bar c_i=\varphi(c_i)$ and
+$\bar Q=\varphi(Q)\ne0$. Every identity $M_m(c)=0$ maps to $M_m(\bar c)=0$ in $\mathbb F$.
+
+Take $m=p\,m_0$. By \eqref{eq:dual} every balanced channel $r$ of length $pm_0$ has
+\begin{equation}\label{eq:floor}
+  A(r)\;=\;\delta(pm_0)+\sum_i(a_i-\lambda q_i-\delta)\,r_i\;\ge\;p A_0,
+\end{equation}
+with equality iff $r$ is supported on $F$. The minimal factorial in \eqref{eq:wick} at $m=pm_0$ is thus
+$(pA_0)!$, and
+\[
+  N\;:=\;\frac{M_{pm_0}}{(pA_0)!}\;=\!\!\sum_{\substack{|r|=pm_0\\ \sum_i q_i r_i=0}}\!\!
+      \binom{pm_0}{r}\,\frac{A(r)!}{(pA_0)!}\;X^r\ \in\ \Z[X_1,\dots,X_k]
+\]
+is an \emph{integer} polynomial (each $A(r)!/(pA_0)!\in\Z$ by \eqref{eq:floor}). From
+$M_{pm_0}(c)=\E(P^{pm_0})=0$ we get $N(c)=0$, hence $N(\bar c)=0$ in $\mathbb F$. We evaluate $N(\bar c)$
+a second way, term by term modulo $p$:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.2em]
+\item if $r$ is not componentwise divisible by $p$, then $p\mid\binom{pm_0}{r}$ (Kummer's theorem;
+equivalently the Frobenius vanishing of the multinomial), and the term is $0$ in $\mathbb F$;
+\item if $r=p\,s$ with $s$ balanced but not supported on $F$, then $A(r)=pA(s)\ge p(A_0{+}1)$ by
+\eqref{eq:floor}, so $p\mid A(r)!/(pA_0)!$ and the term is $0$ in $\mathbb F$;
+\item if $r=p\,s$ with $s$ balanced and supported on $F$, then $A(r)=pA_0$ and $A(r)!/(pA_0)!=1$.
+\end{enumerate}
+Only the third layer survives, so, using the multinomial Lucas congruence
+$\binom{pm_0}{ps}\equiv\binom{m_0}{s}\pmod p$ and then the Frobenius endomorphism $x\mapsto x^p$ of
+$\mathbb F$ (which fixes the integers $\binom{m_0}{s}\in\mathbb F_p$),
+\[
+  N(\bar c)\;=\!\!\sum_{\substack{|s|=m_0,\ \sum_i q_i s_i=0\\ \operatorname{supp}s\subseteq F}}\!\!
+     \binom{pm_0}{ps}\,\bar c^{\,ps}
+  \;=\;\sum_{s}\binom{m_0}{s}\,\bar c^{\,ps}
+  \;=\;\Big(\sum_{s}\binom{m_0}{s}\,\bar c^{\,s}\Big)^{\!p}
+  \;=\;\bar Q^{\,p}
+\]
+in $\mathbb F$. Thus $\bar Q^{\,p}=N(\bar c)=0$, forcing $\bar Q=0$ and contradicting $\bar Q\ne0$.
+Therefore $0\notin\operatorname{conv}\{q_i\}$, i.e. $P$ is one--sided, proving Theorem~\ref{thm:nc2}.
+\qed
 
 \begin{remark}
-The zero--charge case of Theorem~\ref{thm:dvdk} is immediate: if some $q_{i_0}=0$, then at $m=1$ the
-single composition supported at $i_0$ is the unique balanced channel and $\mathcal C_1(q)(c)=c_{i_0}\ne0$.
-The content is therefore the two--sided, no--zero case, treated next.
+The mechanism is finite and characteristic--$p$; the analytic transcendence of the problem enters
+\emph{only} through the seed \eqref{eq:seed}, i.e. Theorem~\ref{thm:dvdk} applied to the one--variable
+face. In the formalization the rational face $F$, the height datum $A_0=\delta m_0$ with the floor
+\eqref{eq:floor} and the off--face gap of case~(2) are packaged in \texttt{GMC2NC2}
+(\texttt{HeightWitnessSupplier}, discharged unconditionally, and
+\texttt{normalized\_specialization\_contradiction}); the three--case Frobenius collapse to $\bar Q^{\,p}$
+is \texttt{GMC2FrobeniusResidue}/\texttt{GMC2NormalizedResidue}; and the specialization $\varphi$ is the
+integral ``let the quotient choose the prime'' descent of \texttt{GMC2IntegralFaceSeedDescent}. The seed
+itself is $\mathcal C_{m_0}(q_F)(c_F)\ne0$, supplied by \texttt{DvdK1} on the face
+(Sections~\ref{sec:univariate}--\ref{sec:analytic}).
 \end{remark}
 
 \section{The univariate reduction: from constant terms to a small--root packet}\label{sec:univariate}
@@ -477,18 +556,22 @@ structure; the correspondence to the sections above is exact.
 \item \textbf{The functional and the charge reduction.} \texttt{E}, \texttt{wt}, \texttt{charge},
 \texttt{NC2}, and the reduction \texttt{gmc2\_of\_nc2} (Proposition~\ref{prop:nc2-to-gmc2}) are in
 \texttt{GMC2Reduction}. The threshold $N=\deg_W Q+1$ is explicit.
-\item \textbf{$\text{NC}(2)\Leftarrow\text{DvdK}(1)$.} The lowest--balanced--face/Frobenius argument of
-Section~\ref{sec:nc2} is \texttt{GMC2NC2} (with the normalized specialization contradiction
-\texttt{normalized\_specialization\_contradiction} and the discharged height witness), yielding
-\texttt{nc2\_of\_dvdK1} and \texttt{gmc2\_of\_dvdK1}.
+\item \textbf{$\mathrm{NC}(2)\Leftarrow\mathrm{DvdK}(1)$.} The lowest--balanced--face and Frobenius
+argument of Section~\ref{sec:nc2} is \texttt{GMC2NC2}
+(\texttt{normalized\_specialization\_contradiction}, \texttt{HeightWitnessSupplier}), with the
+characteristic--$p$ residue computation in \texttt{GMC2FrobeniusResidue} and \texttt{GMC2NormalizedResidue}
+and the integral face--seed descent in \texttt{GMC2IntegralFaceSeedDescent}. The height witness is
+discharged in \texttt{GMC2HeightWitness}, where the unconditional endpoints \texttt{nc2\_of\_dvdK1} and
+\texttt{gmc2\_of\_dvdK1} live.
 \item \textbf{The constant--term interface.} \texttt{DvdK1} (Theorem~\ref{thm:dvdk}),
 \texttt{ChargesStraddleZero}, and the universal $\mathcal C_m(q)$ \eqref{eq:ctr}
 (\texttt{constantTermRelation}) are in \texttt{GMC2DvdKInterface},
 \texttt{GMC2LowestFaceExistence}, \texttt{GMC2ConstantTermRelations}; the zero--charge case and the
 both--signs reduction are in \texttt{GMC2DvdKZeroCharge}.
-\item \textbf{Univariate reduction.} \texttt{SinglePolyCrux} (Proposition~\ref{prop:crux}), the shift
-$R=\texttt{shiftedPolynomial}$, the identity \eqref{eq:checkA} (\texttt{GMC2LaurentShiftCheckA}), and the
-capstone \texttt{gmc2\_of\_crux} are in \texttt{GMC2DvdKUnivariateReduction}.
+\item \textbf{Univariate reduction.} The shift $R=\texttt{shiftedPolynomial}$ and the identity
+\eqref{eq:checkA} are in \texttt{GMC2LaurentShiftCheckA}; \texttt{SinglePolyCrux}
+(Proposition~\ref{prop:crux}) and the capstone \texttt{gmc2\_of\_crux} are in
+\texttt{GMC2DvdKUnivariateReduction}.
 \item \textbf{Orbit--product.} Lemma~\ref{lem:orbit} and Proposition~\ref{prop:no-ct} are
 \texttt{GMC2OrbitProduct} and \texttt{GMC2Thm2067Wrapper}
 (\texttt{thm2067\_contradiction}); irreducibility (Lemma~\ref{lem:irred}) is
@@ -545,8 +628,8 @@ of Theorem~\ref{thm:dvdk} that is elementary enough to be checked by a proof ass
 
 \subsection*{Relation to the Jacobian Conjecture}
 By \cite{DerksenEssenZhao2017}, the Gaussian--Moments Conjecture implies the Jacobian Conjecture. Since
-that conjecture fails in higher dimension, the implication cannot be run in full; the two--dimensional
-case established here is its sharp positive instance.
+the Gaussian--Moments Conjecture itself fails in higher dimension, this implication cannot be run in
+full; the two--dimensional case established here is its sharp positive instance.
 
 \subsection*{Availability}
 The Lean sources build against \texttt{mathlib} and reproduce the axiom audit above. The proof was
