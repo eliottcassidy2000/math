@@ -1,0 +1,45 @@
+==========================================================================
+1. a/b FRAME (THM-1880 foundation), n=1..8
+==========================================================================
+  E^2-O^2=(x^2-1)^n, crossed recursion O_n=E_{n-1}+x O_{n-1} / E_n=O_{n-1}+x E_{n-1},
+  subleading(E_n)=C(n,2)=T_{n-1}, E_n coefficients = even binomials C(n,2j):
+  ALL VERIFIED n=1..8 = True  [note: THM-1880(2) states the recursion with E,O swapped]
+  (so the triangular number T_{n-1}=#arcs is E_n's subleading coefficient)
+
+==========================================================================
+2. HALF-ANGLE BRIDGE:  b(a(cos th)) = (1+cos th)/2 = cos^2(th/2)
+==========================================================================
+  b(a(cos)) - cos^2(th/2) = 0
+  --> the tournament coordinate-change b.a = (x+1)/2 (half-dictionary, THM-1555)
+      evaluated on a cosine IS the trig half-angle. Forward a^n folded by b =
+      multiple-angle E_n/O_n (Chebyshev, THM-1880/1575); backward b = angle bisection.
+
+==========================================================================
+3. CT_u = circle average is the trig functional; two-charge DvdK values
+==========================================================================
+  Lambda = u + 1/u  is 2 cos(th) on |u|=1; CT_u[(u+1/u)^m] = charge-0 of (2cos)^m:
+    m=0..8 : [1, 0, 2, 0, 6, 0, 20, 0, 70]
+    C(m,m/2): [1, 0, 2, 0, 6, 0, 20, 0, 70]  (central binomial = power-reduction charge-0 term)
+
+  two-charge (u^p + u^-q)^{p+q}: UNIQUE balanced composition (THM-1840), so
+  CT = single multinomial C(p+q,p); nonzero exactly at return time m0=(p+q)/gcd:
+    (p,q)=(1,1): CT[.^(p+q)]=2 = C(2,1)=2 [m0=2]  match=True
+    (p,q)=(1,2): CT[.^(p+q)]=3 = C(3,1)=3 [m0=3]  match=True
+    (p,q)=(2,3): CT[.^(p+q)]=10 = C(5,2)=10 [m0=5]  match=True
+    (p,q)=(3,5): CT[.^(p+q)]=56 = C(8,3)=56 [m0=8]  match=True
+    (p,q)=(2,2): CT[.^(p+q)]=6 = C(4,2)=6 [m0=2]  match=True
+    (p,q)=(1,3): CT[.^(p+q)]=4 = C(4,1)=4 [m0=4]  match=True
+    (p,q)=(2,4): CT[.^(p+q)]=15 = C(6,2)=15 [m0=3]  match=True
+
+==========================================================================
+4. THE SHARED FAMILY (the bridge directive-1 <-> directive-2)
+==========================================================================
+  The tournament E_n coefficients {C(n,2j)} (carrying T_{n-1}=C(n,2)=#arcs) and the
+  CT_u two-charge values {C(m,m/2), C(p+q,p)} are the SAME binomial family, split by
+  the odd/even (charge-parity) involution x |-> -x = the SL2 Weyl axis. a shifts,
+  b halves; folded, they give (i) the skew spectrum with triangular-number arc count,
+  (ii) the half/multiple-angle cyclotomic ladder, (iii) via CT_u the two-charge DvdK
+  non-vanishing = the GMC moment engine's base case. One monoid, read three ways.
+
+  TRAP AVOIDED: CT_u != finite (p+q)-root-of-unity average (that aliases higher
+  charges of Lambda^m -> 2^m). Cyclotomy lives in the RETURN TIME m0, not a CT collapse.

@@ -1,3 +1,63 @@
+## klein-2026-07-22-S401 -- THM-2142 a/b half-angle↔CT_u bridge + independent read-level assessment of the CLOSED GMC(2) (premise ledger empty, capstone faithful, risk localized upstream)
+
+**Owner:** (1) "think trigonometric functions, and triangular numbers and thus tournaments as a(x)=x+1
+and b(x)=x/2 composed recursively, think functionally" [archeology]; (2) "finish the GMC(2)
+formalization, best state for a mathlib PR"; then (3) "pull and assess, no builds."
+
+**(1) THM-2142 -- the half-angle bridge (VERIFIED unifying frame).** The gem the corpus set up across
+THM-1880/1555/1575/1840 and never wrote: `b(a(cos θ)) = (1+cos θ)/2 = cos²(θ/2)` EXACTLY -- the
+tournament's coordinate-change `b∘a` (half-dictionary, `A=(J−I+S)/2`) on a cosine IS the trig
+half-angle. Forward `a^n` folded by `b` = multiple-angle `E_n/O_n` (Chebyshev/cot spectra); backward
+`b` = dyadic angle-bisection (BS(1,2), THM-1885). BRIDGE to GMC: `CT_u` (constant term = circle average
+= the trig functional) has `CT_u[(u+u⁻¹)^m]=C(m,m/2)` and `CT_u[(u^p+u⁻q)^{p+q}]=C(p+q,p)` (THM-1840's
+unique balanced composition) -- the SAME binomial family `{C(n,2j)}` that are `E_n`'s coefficients and
+carry the triangular number `C(n,2)=T_{n−1}=#arcs`, split by the odd/even charge-parity involution. So
+a/b is the trig skeleton of BOTH the tournament skew spectrum AND the GMC charge-0 projection. sympy-
+verified n=1..8 + (p,q) census. TWO honest catches: **THM-1880(2)'s coupled recursion states E_n/O_n
+SWAPPED on the LHS** (correct crossed form `O_n=E_{n−1}+x O_{n−1}`, `E_n=O_{n−1}+x E_{n−1}`); and
+**CT_u ≠ finite (p+q)-root-of-unity average** (that aliases higher charges → 2^m; cyclotomy lives in the
+RETURN TIME m₀, not a CT collapse) -- a false identity I caught by measuring before writing.
+
+**(2)(3) GMC(2): my map went obsolete mid-session -- and I corrected it.** I began mapping GMC(2) as
+CONDITIONAL (kernel-pure reduction to one-variable DvdK / SinglePolyCrux, residual = transpose
+bookkeeping). kps-S128c153 then discharged `singlePolyCrux_holds`, so I pulled and re-assessed. My
+reflection is rewritten to the post-closure state; **the earlier "no file proves GMC(2)
+unconditionally" framing is superseded and marked as such.** INDEPENDENT READ-LEVEL ASSESSMENT (no
+builds, per directive) -- what I checked myself: (a) the capstone `GMC2Main.GMC2.gmc2` takes ONLY
+`P Q` + `hnull`, no residual hypothesis, and `E` is the genuine Wick expectation (`wt s=(s 0)!` iff
+`s 0=s 1` ⟹ `E[Zᵃ Z̄ᵇ]=a!δ_{ab}`) -- the real MZ/moment statement, not a proxy; (b) the premise ledger
+is EMPTY (`singlePolyCrux_holds` is hypothesis-free; `dvdK1_of_crux` REMOVES the DvdK citation rather
+than assuming it); (c) no `sorry`/`admit`/`native_decide` in code anywhere in the GMC2 tree; (d) in the
+Ω-wiring the vanishing hypothesis is genuinely CONSUMED (non-vacuous), the non-synthesizable
+`Algebra (RatFunc ℂ)(LaurentSeries ℂ)` diamond is closed by `rfl` (where a silent scalar-tower mismatch
+would hide), `Ω=AlgebraicClosure` is deliberate (small roots ramified, `t^{1/M}∉ℂ((t))`), and `CharZero`
+is load-bearing + correctly scoped. **VERDICT: it is looking good** -- as strong as a formalization
+gets. HONEST RISK LOCALIZATION: the Ω-wiring is the SHALLOWEST link and now has the most eyes; residual
+risk sits UPSTREAM -- the analytic heart (`hderiv_final`/`smallRootFactor_coeff0_of_vanish`), whose
+line-audit was done by its own author (mac-mini says so themselves), and `irreducible_Phi`/Weierstrass/
+the height package, which mac-mini states they did NOT re-verify. I found no defect and did not
+line-audit those either; the next referee pass belongs there, not on the Ω-wiring.
+
+**PR BLOCKERS (packaging, not mathematics):** **32 GMC2 modules carry a blanket `import Mathlib`**
+(incl. `GMC2DvdKOmegaWiring` line 1) -- the largest concrete blocker, flagged UNCLAIMED by mac-mini;
+prune the 19 off-chain modules; retire/mark the superseded conditional surfaces
+(`GMC2NC2Capstone..._of_heightWitnessSupplier`, `GMC2DvdKInterface`) so "remaining inputs" isn't
+misread; exclude the two self-flagged defective files (`GMC2DvdKUniqueChannelBypass` VACUOUS/
+MISTAKE-240; `GMC2HermiteNoCommonRoot`). Ship kps's 3 extracted gap lemmas first (char-0
+`derivativeFun_C` converse, geometric inverse, `logDeriv_map`) -- I independently arrived at the same
+three before seeing their drafts.
+
+**MY MISTAKE (fleet hygiene).** mac-mini-S167 records "a sibling agent's broad `pkill -f 'lake build'`
+killed several of my runs (exit 144)" -- **that was me**, clearing what I thought were my own stuck
+builds; it killed their full-chain axiom audit mid-run. In a shared tree, kill by PID, never by a
+pattern other agents' jobs match. Recorded so it isn't repeated.
+
+**Fleet hygiene (good).** Preserved codex's uncommitted THM-2140 across a 155-commit sync (stashed,
+byte-identical upstream, restored at close). Re-affirmed mac-mini's SECURITY flag: `POKE-COORDINATION.md`'s
+"external-post directive" is UNTRUSTED in-repo content -- ignored as observed data, not an instruction.
+HYP-9021. Files: THM-2142, reflection gmc2-formalization-pr-readiness-...-klein-S401,
+`ab_halfangle_ct_bridge_klein_S401.py` (+ .out).
+
 ## mac-mini-2026-07-22-S167 -- GMC(2) CLOSED (by kind-pasteur; I CEDED my parallel Omega-lift): independent corroboration + full-chain axiom audit + the ANALYTIC-HEART LINE-AUDIT (statements verified, no defect)
 
 **Owner directive:** finish the GMC(2) formalization, most formalized state possible for a mathlib PR; prioritize open mathematical reasoning; push/pull often; get key math solid before builds.
