@@ -91,6 +91,46 @@ cleaner than my composite-instance bookkeeping.
 - **kind-pasteur** — the hderiv F-leg, the diagnosis that the endpoint needs `AlgebraicClosure`, and
   the landed `GMC2DvdKOmegaWiring`.
 
+## The analytic-heart line-audit (the part kernel-purity cannot establish)
+
+The referee's flag on kps's polish plan was exact: `hderiv_final` / `smallRootFactor_coeff0_of_vanish`
+are *kernel-checked but not line-audited*. Kernel-purity proves **"no `sorry`"**; it does **not** prove
+the *statement* is the one the mathematics needs. Since these are my lemmas (S165/S166) and they are
+the deepest link, I audited them on three targets. All three pass:
+
+**(i) Does `hderiv_final`'s conclusion match what the consumer requires?** Yes, exactly.
+`GMC2DvdKMultiplicativeClosing.smallRootFactor_coeff0_eq_of_derivative_vanishes` requires
+`hderiv : derivativeFun (unitCoeff0 R M) = 0`, and `unitCoeff0 R M :=
+constantCoeff (R := PowerSeries F) (weierstrassUnit (Phi R M) …)` — the `x`-constant coefficient of the
+Weierstrass unit, landing in `F⟦t⟧`, i.e. literally `h(0,t)`. `hderiv_final` produces precisely that
+proposition. The mathematics is then the honest one: `d_t h(0,t) = 0` plus `h(0,0) = 1` plus
+characteristic zero gives `h(0,t) = 1` — no exp, log, Puiseux, or Fredholm determinant.
+
+**(ii) Is `CharZero` load-bearing and correctly scoped?** Yes. `[CharZero F]` sits in the section
+variables of both `GMC2DvdKMultiplicativeClosing` and `GMC2DvdKCharZeroClosing`, and it is used exactly
+where it must be — `eq_C_of_derivativeFun_eq_zero` (a power series with vanishing derivative is
+constant), which is **false in characteristic `p`** (`tᵖ` has zero derivative). Evidence the scoping is
+deliberate rather than incidental: `GMC2DvdKCharZeroClosing` carries an explicit
+`omit [CharZero F] in` on `factorCoeff0_eq_of_unit_eq_one`, the one step that genuinely does not need
+it. GMC(2) is stated over `ℂ`, so the hypothesis is free at the point of use.
+
+**(iii) Is there a silent completion mismatch?** No — and this was the real hazard, since my own
+earlier blocker was "`[x⁰]` across two completions." It is discharged by three *proved* lemmas rather
+than by assumption:
+- everything is transported through the **single** ring hom `phi : F⟦t⟧⟦x⟧ →+* (F⸨x⸩)⟦t⟧`, and `hfact`
+  obtains the frame factorization from the Weierstrass one by `map_mul` on `H.eq_mul` — the
+  factorization is *moved*, never re-derived;
+- `Rl_pow_coeff` proves the **frame** moment `(Rl R ^ m).coeff (M·m)` equals the **polynomial** moment
+  `(Rᵐ).coeff (M·m)` — exactly the place a vanishing hypothesis could be silently swapped for a
+  different one;
+- `xCoeff0_phi_unit` proves the seam `xCoeff0 (phi h) = unitCoeff0 R M`, tying the frame's
+  `x⁰`-extraction back to the original ring's `x`-constant term.
+
+> **Audit verdict.** The analytic core states what the mathematics requires, its characteristic-zero
+> hypothesis is load-bearing and correctly placed, and the two-completion seam is closed by explicit
+> lemmas. I found no defect. This is a statement-level audit; it does not re-verify the proofs of the
+> upstream lemmas it cites.
+
 ## Honest scope, and what "most formalized" still requires
 
 - **What is claimed:** `GMC2DvdKOmegaWiring.gmc2_unconditional` has no external hypothesis and no
