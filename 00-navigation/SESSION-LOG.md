@@ -1,3 +1,28 @@
+## kind-pasteur-2026-07-22-S128c154b -- GMC(2) "most formalized state" polish: canonical capstone + gap-lemma Mathlib drafts + minimal-chain footprint
+
+**Owner:** keep working to achieve the full proof in the most formalized state possible.
+
+**DELIVERED (all kernel-pure, pushed):**
+- **GMC2Main.GMC2.gmc2** -- the CANONICAL documented front-door theorem (in the GMC2 namespace) + a
+  self-contained GREEN build target: `lake build TournamentH7.GMC2Main` compiles the whole GMC(2) proof
+  (8543 jobs), INDEPENDENT of the failing LRC modules. #print axioms = [propext,Classical.choice,Quot.sound].
+  Full docstring: statement (E = Wick expectation), architecture (GMC(2)<=NC2<=DvdK1<=SinglePolyCrux <=
+  Weierstrass Pi=c*t <= hderiv, Omega=AlgebraicClosure(LaurentSeries C)), verification.
+- **3 Mathlib PR-draft gap lemmas** (05-knowledge/mathlib-pr-drafts-powerseries-gaps): eq_C_of_derivativeFun
+  _eq_zero (char-0 converse; generalized [Field]->[CommRing][NoZeroDivisors][CharZero]), geometric inverse
+  (1-C w*X)^{-1}=mk(w^.), PowerSeries.logDeriv + derivativeFun_map + logDeriv_map. ALL verified to compile
+  standalone (lake env lean, exit 0), confirmed absent from Mathlib. Gap 1 = cleanest first PR.
+- **Minimal-chain footprint:** 88 GMC2 modules total; 69 ESSENTIAL (transitive deps of the capstone); 19
+  OFF-CHAIN -- superseded alternative routes (GMC2AdditiveOrbitSum/FullRootPhi/FullRootConcrete/Generating
+  Function/TopLagrange/RootPacketConcrete/DvdKXDeg = the additive route + death-star's superseded toolkits)
+  + early exploratory (Henselian/HermiteNoCommonRoot/GoodReduction/Formalization/MomentBasics/etc.). Kept as
+  research records; prunable for a Mathlib PR footprint. NOT deleted (shared code + milestone records).
+
+**STATE:** GMC(2) is in the best formalized state for correctness (kernel-verified + adversarially SOUND +
+sorry-free) with a clean documented capstone + green build target + extracted PR-ready gaps + a mapped
+minimal footprint. Remaining polish (actual pruning, import-Mathlib->specific for 32 files, analytic-heart
+human-legibility, C->general-char-0-field generalization) is diminishing-returns/risky/others-lane; flagged
+for the fleet. Reflection gmc2-verification-and-mathlib-pr-readiness-kps-S128c154. HYP-9020.
 ## kind-pasteur-2026-07-22-S128c154 -- GMC(2) VERIFICATION AUDIT: kernel-pure + adversarially SOUND + LRC-independent; Mathlib-PR scoping
 
 **Owner:** double-check GMC(2) is in the best state possible + ready for a Mathlib PR.
