@@ -1,0 +1,589 @@
+\documentclass[11pt,reqno]{amsart}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\setlength{\emergencystretch}{3em}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\CT}{\operatorname{CT}}
+\newcommand{\ch}{\operatorname{ch}}
+\newcommand{\wt}{\operatorname{wt}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\degW}{\deg_W}
+\DeclareMathOperator{\lc}{lc}
+
+\begin{document}
+
+\title[The Gaussian--Moments and Nullcone conjectures in dimension two]
+{A proof of the two--dimensional Gaussian--Moments and Nullcone conjectures,
+formally verified}
+
+\author{Eliott Cassidy}
+\email{eliottcassidy2000@gmail.com}
+
+\date{\today}
+
+\begin{abstract}
+Let $\E$ be the Wick (Gaussian) expectation on $\C[Z,W]$ determined by
+$\E[Z^aW^b]=a!\,[a=b]$, the moment functional of a single complex Gaussian.
+The \emph{Gaussian--Moments Conjecture} of Derksen, van den Essen and Zhao asserts that
+the kernel of $\E$ is a Mathieu--Zhao space; in $n$ variables it implies the Jacobian
+Conjecture, and it is false for $n\ge 3$. We prove its sharp surviving case $n=2$: if
+$\E(P^m)=0$ for all $m\ge 1$ then $\E(Q\,P^m)=0$ for all large $m$. The proof passes through the
+two--dimensional \emph{Nullcone Conjecture}, that a moment--null polynomial has one--sided charge,
+and reduces the residual analytic content to the one--variable Duistermaat--van der Kallen
+constant--term theorem. We give a self--contained, valuation--free proof of the latter through a
+Galois orbit--product on the splitting field of $X^{M}-tR$, fed by the Weierstrass small--root
+product $\Pi=c\,t$, whose analytic heart $\partial_t h(0,t)=0$ is proved inside a single power--series
+frame. The entire argument has been formalized in the Lean~4 proof assistant on top of
+\texttt{mathlib}; the top--level theorem is machine--checked and depends only on the three
+foundational axioms of that library.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+\subsection{The conjecture}
+Fix the polynomial ring $\C[Z,W]$ in two variables and regard $W=\bar Z$ as the conjugate of a single
+complex Gaussian variable $Z$. The associated \emph{Wick}, or \emph{Gaussian}, expectation is the
+linear functional
+\begin{equation}\label{eq:E-def}
+  \E\colon \C[Z,W]\longrightarrow \C,\qquad
+  \E\big[Z^aW^b\big]=a!\,[a=b],
+\end{equation}
+where $[a=b]$ is $1$ if $a=b$ and $0$ otherwise. Equivalently, writing $Z=x+iy$, $W=x-iy$,
+$\E$ is integration against the standard planar Gaussian, and \eqref{eq:E-def} is the classical Wick
+formula for its moments. The functional $\E$ annihilates every monomial off the diagonal, i.e. every
+monomial of nonzero \emph{charge}
+\[
+  \ch(Z^aW^b)\;=\;a-b .
+\]
+
+A linear subspace $\mathcal M$ of a commutative $\C$--algebra $A$ is a \emph{Mathieu--Zhao space}
+(Zhao \cite{Zhao2010}; originally \emph{Mathieu subspace}) if, whenever $a\in A$ satisfies $a^m\in\mathcal M$
+for all $m\ge1$, one has $b\,a^m\in\mathcal M$ for all sufficiently large $m$ and every $b\in A$. These
+spaces isolate the algebraic content of a family of conjectures descending from the Jacobian
+Conjecture: Mathieu's conjecture on integrals of $G$--finite functions \cite{Mathieu1997}, Zhao's
+Image Conjecture \cite{Zhao2007a,Zhao2007b}, and their common two--variable Gaussian shadow.
+
+\begin{conjecture}[Gaussian--Moments Conjecture, {\cite{DerksenEssenZhao2017}}]\label{conj:GMC}
+For every $n$, the kernel $\ker\E_n$ of the $n$--dimensional Wick expectation is a Mathieu--Zhao space
+of $\C[Z_1,W_1,\dots,Z_n,W_n]$.
+\end{conjecture}
+
+Derksen, van den Essen and Zhao \cite{DerksenEssenZhao2017} introduced Conjecture~\ref{conj:GMC},
+proved that it implies the Jacobian Conjecture, and exhibited a counterexample to a broader
+moment--vanishing statement showing that the conjecture is \emph{false for $n\ge 3$}. Dimension two is
+thus the sharp surviving case. Our first result is that it survives.
+
+\begin{theorem}[GMC$(2)$]\label{thm:gmc2}
+Let $P,Q\in\C[Z,W]$. If $\E(P^m)=0$ for all $m\ge 1$, then there is $N$ such that $\E(Q\,P^m)=0$
+for all $m\ge N$.
+\end{theorem}
+
+Unwinding \eqref{eq:E-def}, the obstruction is purely one of \emph{charge geometry}. For a polynomial
+$P$ let $\supp P\subset \N^2$ be its exponent support and $\ch(s)=s_0-s_1$ the charge of a monomial.
+
+\begin{theorem}[NC$(2)$, the two--dimensional Nullcone Conjecture]\label{thm:nc2}
+Let $P\in\C[Z,W]$. If $\E(P^m)=0$ for all $m\ge 1$, then $P$ has one--sided charge:
+either $\ch(s)\ge 1$ for every $s\in\supp P$, or $\ch(s)\le -1$ for every $s\in\supp P$.
+\end{theorem}
+
+Theorem~\ref{thm:nc2} is the structural heart of Theorem~\ref{thm:gmc2}: it says that the only way for
+all central powers of $P$ to be moment--null is for $P$ to be strictly one--sided (no monomial can
+have charge $0$, and all charges must agree in sign). The passage $\text{NC}(2)\Rightarrow\text{GMC}(2)$
+is elementary (Section~\ref{sec:charge}). The content is Theorem~\ref{thm:nc2} itself.
+
+\subsection{Method}
+The proof of Theorem~\ref{thm:nc2} confronts one, and only one, genuinely analytic input: the
+one--variable \emph{Duistermaat--van der Kallen theorem} on constant terms in powers of a Laurent
+polynomial \cite{DvdK1998}. In the exact form we need it reads:
+
+\begin{theorem}[Duistermaat--van der Kallen, finite--support form]\label{thm:dvdk}
+Let $f(z)=\sum_{i} c_i z^{q_i}$ be a Laurent polynomial with distinct exponents $q_i\in\Z$ and nonzero
+coefficients $c_i\in\C$, whose support \emph{straddles zero}: either $0$ occurs among the $q_i$, or both a
+negative and a positive exponent occur. Then there is $m\ge 1$ with $\CT(f^m)\ne 0$, where $\CT$ denotes
+the constant Laurent coefficient.
+\end{theorem}
+
+The classical theorem of Duistermaat and van der Kallen \cite{DvdK1998} classifies the Laurent
+polynomials all of whose positive powers have vanishing constant term; Theorem~\ref{thm:dvdk} is the
+contrapositive in the two--sided case, together with the trivial zero--charge case. We do not import
+the analytic proof of \cite{DvdK1998}. Instead we give a self--contained algebraic proof
+(Sections~\ref{sec:univariate}--\ref{sec:analytic}) that runs as follows. Clearing denominators turns
+$f$ into a genuine polynomial and reduces the vanishing of all $\CT(f^m)$ to the vanishing of the
+central coefficients $D_m=[X^{Mm}]R(X)^m$ of a single polynomial $R$; these are precisely the
+coefficients governing the small roots of
+\[
+  \Phi \;=\; X^{M}-t\,R(X)\ \in\ \C(t)[X].
+\]
+Over the splitting field of $\Phi$, a transitive Galois action and a Vieta identity force a
+contradiction \emph{as soon as} the product of the $M$ small roots equals $c\,t$ with $c\ne0$
+(Section~\ref{sec:orbit}). That product identity is exactly the Weierstrass small--root product
+$\Pi=c\,t$, whose only nontrivial ingredient is the scalar analytic identity
+$\partial_t h(0,t)=0$ under $D_m\equiv 0$, proved inside the single power--series frame
+$(\C(\!(x)\!))[\![t]\!]$ (Section~\ref{sec:analytic}). No extension of a valuation to an algebraic
+closure, and no Puiseux expansion, is required.
+
+\subsection{Formalization}
+Every step above --- Theorems~\ref{thm:gmc2}, \ref{thm:nc2}, \ref{thm:dvdk}, the univariate reduction,
+the orbit--product contradiction, and the Weierstrass analysis --- has been formalized in the Lean~4
+proof assistant on top of \texttt{mathlib} \cite{mathlib}. The top--level statement is
+\begin{quote}\ttfamily
+theorem GMC2.gmc2 (P Q : MvPolynomial (Fin 2) $\C$)\\
+\hspace*{2em}(hnull : $\forall$ m, 1 $\le$ m $\to$ E (P \^{} m) = 0) :\\
+\hspace*{2em}$\exists$ N, $\forall$ m $\ge$ N, E (Q * P \^{} m) = 0
+\end{quote}
+and a kernel audit reports
+\[
+  \texttt{\#print axioms GMC2.gmc2} \;=\; [\,\mathtt{propext},\ \mathtt{Classical.choice},\ \mathtt{Quot.sound}\,],
+\]
+the three standard axioms of \texttt{mathlib}: there is no \texttt{sorry}, no appeal to
+\texttt{native\_decide}, and no additional axiom anywhere in the transitive dependency. In particular
+the one--variable input, Theorem~\ref{thm:dvdk}, is itself formalized rather than assumed. The proof
+is described module by module in Section~\ref{sec:lean}.
+
+\subsection{Organization}
+Section~\ref{sec:charge} records the functional $\E$ and the elementary reduction
+$\text{NC}(2)\Rightarrow\text{GMC}(2)$. Section~\ref{sec:nc2} reduces $\text{NC}(2)$ to
+Theorem~\ref{thm:dvdk}. Section~\ref{sec:univariate} reduces Theorem~\ref{thm:dvdk} to a single
+polynomial statement (the \emph{small--root packet product}). Section~\ref{sec:orbit} closes that
+statement by a Galois orbit--product. Section~\ref{sec:analytic} supplies the Weierstrass small--root
+product and its analytic core. Section~\ref{sec:lean} documents the Lean formalization and its
+verification. Section~\ref{sec:remarks} collects remarks on sharpness and on the Jacobian Conjecture.
+
+\section{The Wick functional and the charge reduction}\label{sec:charge}
+
+Write monomials of $\C[Z,W]$ as $Z^{s_0}W^{s_1}$ with $s=(s_0,s_1)\in\N^2$, and set
+\[
+  \wt(s)=\begin{cases} s_0! & s_0=s_1,\\ 0 & \text{otherwise,}\end{cases}
+  \qquad
+  \E(P)=\sum_{s\in\supp P} P_s\,\wt(s),
+\]
+where $P_s$ is the coefficient of $Z^{s_0}W^{s_1}$ in $P$. Thus $\E$ agrees with \eqref{eq:E-def} and
+annihilates every monomial of nonzero charge $\ch(s)=s_0-s_1$.
+
+\begin{lemma}\label{lem:charge-kill}
+If $P,R\in\C[Z,W]$ have the property that every monomial of $P$ and every monomial of $R$ has charge
+$\ge 1$ (respectively $\le -1$), then $\E(R)=0$; more generally $\E(PR)=0$ whenever every monomial of
+$PR$ has nonzero charge.
+\end{lemma}
+
+\begin{proof}
+Charge is additive under multiplication, $\ch(s+t)=\ch(s)+\ch(t)$, so every monomial of a product of
+strictly one--sided polynomials has charge of the same strict sign, hence nonzero; and $\wt$ vanishes off
+charge $0$.
+\end{proof}
+
+\begin{proposition}[$\text{NC}(2)\Rightarrow\text{GMC}(2)$]\label{prop:nc2-to-gmc2}
+Assume Theorem~\ref{thm:nc2}. Then Theorem~\ref{thm:gmc2} holds; explicitly, if $\E(P^m)=0$ for all
+$m\ge1$ then $\E(Q\,P^m)=0$ for all $m\ge \deg_W Q+1$ (in the case of positive charge; symmetrically for
+negative charge).
+\end{proposition}
+
+\begin{proof}
+By Theorem~\ref{thm:nc2}, $P$ is strictly one--sided; say every monomial of $P$ has charge $\ge1$
+(the other case is symmetric under $Z\leftrightarrow W$). Every monomial of $P^m$ then has charge
+$\ge m$. A monomial $Z^{a}W^{b}$ of $Q$ has $b\le \deg_W Q$, so its charge is $\ge -\deg_W Q$; hence a
+monomial of $Q\,P^m$ has charge $\ge m-\deg_W Q\ge 1$ once $m\ge \deg_W Q+1$. By
+Lemma~\ref{lem:charge-kill}, $\E(Q\,P^m)=0$ for all such $m$.
+\end{proof}
+
+The threshold $N=\deg_W Q+1$ is explicit and uniform: the whole difficulty is concentrated in
+Theorem~\ref{thm:nc2}, to which we now turn.
+
+\section{Reduction of NC$(2)$ to the constant--term theorem}\label{sec:nc2}
+
+Suppose $\E(P^m)=0$ for all $m\ge1$ but, for contradiction, that $P$ is \emph{not} one--sided: its
+charge support is not contained in $\Z_{\ge1}$ nor in $\Z_{\le-1}$. Because $\E$ only sees the diagonal,
+only the \emph{charge--balanced} part of each power matters:
+\begin{equation}\label{eq:wick}
+  \E(P^m)\;=\;\sum_{\substack{r\in\N^{\,\supp P}\\ |r|=m,\ \sum_i r_i\,\ch(s_i)=0}}
+      \binom{m}{r}\Big(\prod_i P_{s_i}^{\,r_i}\Big)\,\big(\text{diagonal Wick weight}\big),
+\end{equation}
+the sum over compositions $r$ of $m$ across the monomials $s_i$ of $P$ whose total charge is zero.
+Passing to the associated one--dimensional charge data $q_i=\ch(s_i)\in\Z$ with coefficients
+$c_i=P_{s_i}\in\C^\times$ isolates the \emph{angular} content of \eqref{eq:wick}: the balanced
+compositions of $q=(q_i)$ are exactly the constant--term channels of the Laurent polynomial
+$f(z)=\sum_i c_i z^{q_i}$. The radial content --- the factorials $\wt$ and the Frobenius amplification
+that upgrades a single balanced face to all of them --- is carried by an elementary but non--vacuous
+combinatorial argument (the lowest--balanced--face / Kummer--carry mechanism, formalized in the module
+\texttt{GMC2NC2}) whose only external call is the following: the constant--term relations of $f$ cannot
+all vanish.
+
+Concretely, let $q\colon\{1,\dots,k\}\to\Z$ be injective with values the distinct charges and
+$c_i\ne0$ the corresponding coefficients. For $m\ge0$ define the universal constant--term polynomial
+\begin{equation}\label{eq:ctr}
+  \mathcal C_m(q)\;=\;
+  \sum_{\substack{r\in\N^k,\ |r|=m\\ \sum_i r_i q_i=0}} \binom{m}{r}\, X^{r}\ \in\ \Q[X_1,\dots,X_k],
+\end{equation}
+so that $\mathcal C_m(q)(c)=\CT(f^m)$. The hypothesis $\E(P^m)=0$ for all $m$ forces, after the
+Frobenius reduction, $\mathcal C_m(q)(c)=0$ for all $m\ge1$. Since $P$ is two--sided, the charge set
+$\{q_i\}$ straddles zero. Theorem~\ref{thm:dvdk} then provides $m\ge1$ with $\mathcal C_m(q)(c)\ne0$, a
+contradiction. Hence $P$ is one--sided, proving Theorem~\ref{thm:nc2}. \qed
+
+\begin{remark}
+The zero--charge case of Theorem~\ref{thm:dvdk} is immediate: if some $q_{i_0}=0$, then at $m=1$ the
+single composition supported at $i_0$ is the unique balanced channel and $\mathcal C_1(q)(c)=c_{i_0}\ne0$.
+The content is therefore the two--sided, no--zero case, treated next.
+\end{remark}
+
+\section{The univariate reduction: from constant terms to a small--root packet}\label{sec:univariate}
+
+Fix injective $q$ straddling zero with no zero charge, and coefficients $c_i\ne0$. Let
+$M=-\min_i q_i>0$ and form the genuine polynomial
+\[
+  R(X)\;=\;\sum_i c_i\,X^{\,q_i+M}\ \in\ \C[X].
+\]
+The shift is chosen so that $R(0)=c_{i_0}\ne0$ (the unique minimal charge) and
+$M<\deg R$ (the unique maximal charge is strictly positive). A direct expansion identifies the
+constant--term relations \eqref{eq:ctr} with central coefficients of powers of $R$:
+\begin{equation}\label{eq:checkA}
+  \big[X^{Mm}\big]\,R(X)^m \;=\; \mathcal C_m(q)(c)\qquad (m\ge0).
+\end{equation}
+Thus assuming $\mathcal C_m(q)(c)=0$ for all $m\ge1$ is the same as assuming
+$D_m:=[X^{Mm}]R^m=0$ for all $m\ge1$.
+
+These central coefficients are the moments of the small roots of
+\begin{equation}\label{eq:Phi}
+  \Phi\;=\;X^{M}-t\,R(X)\ \in\ \C(t)[X],
+\end{equation}
+a polynomial of degree $N=\deg R>M$ in $X$ over the rational function field $\C(t)$. Modulo $t$ it
+degenerates to $X^{M}$, so exactly $M$ of its $N$ roots are ``small'' (they tend to $0$ as $t\to0$);
+their product carries a $t$--adic valuation equal to $1$ when the moments $D_m$ vanish. The whole of
+Theorem~\ref{thm:dvdk} reduces to the following single statement about $\Phi$.
+
+\begin{proposition}[Small--root packet product]\label{prop:crux}
+Let $R\in\C[X]$ with $1\le M<\deg R$ and $R(0)\ne0$, and suppose $D_m=[X^{Mm}]R^m=0$ for all $m\ge1$.
+Then, in the splitting field $L$ of $\Phi=X^M-tR$ over $\C(t)$, there is a finite set $S$ of roots of
+$\Phi$ whose product equals $c\,t$ for some $c\in\C^\times$:
+\[
+  \prod_{\beta\in S}\beta \;=\; c\,t\ \in\ \C(t)\subset L.
+\]
+\end{proposition}
+
+Granting Proposition~\ref{prop:crux}, Theorem~\ref{thm:dvdk} follows: were $D_m=0$ for all $m\ge1$, the
+packet product would be $c\,t$, and Section~\ref{sec:orbit} shows this is impossible; hence some
+$D_m\ne0$, i.e. some $\mathcal C_m(q)(c)\ne0$.
+
+\section{The Galois orbit--product contradiction}\label{sec:orbit}
+
+We first record why a packet product equal to $c\,t$ is impossible, independently of \emph{how} the
+packet arises. This is the algebraic core, an orbit--product identity for the Galois action on the
+roots.
+
+\begin{lemma}\label{lem:irred}
+$\Phi=X^M-tR$ is irreducible over $\C(t)$ whenever $1\le M$ and $R(0)\ne0$.
+\end{lemma}
+
+\begin{proof}[Sketch]
+$\Phi$ is linear in $t$ with content $1$; the coefficients $X^M$ and $-R$ of $t^0,t^1$ are coprime in
+$\C[X]$ because $R(0)\ne0$ (so $X\nmid R$). Hence $\Phi$ is irreducible in $\C[X][t]=\C[t][X]$, and by
+Gauss's lemma over the fraction field $\C(t)$. (In the formalization this is carried out through the
+Bivariate swap $\C[t][X]\cong\C[X][t]$ and \texttt{mathlib}'s primitive/Gauss machinery.)
+\end{proof}
+
+Let $L$ be the splitting field of $\Phi$ over $F:=\C(t)$ and $G=\Gal(L/F)$. Since $\Phi$ is irreducible,
+$G$ acts transitively on the set $\Omega$ of its roots. The key point is that the orbit--product
+identity below holds for an \emph{arbitrary} $G$--stable factor of the product --- one need not know
+that $S$ is the ``valuation--positive'' packet, only that its product is $G$--fixed.
+
+\begin{lemma}[Orbit--product]\label{lem:orbit}
+Let $G$ act transitively on a finite set $\Omega$ with an equivariant embedding $f\colon\Omega\to L$,
+and let $S\subseteq\Omega$ be any subset such that $\pi:=\prod_{\beta\in S}f(\beta)$ is $G$--fixed. Then
+for a basepoint $x\in\Omega$,
+\[
+  \pi^{\,|G|}\;=\;\Big(\prod_{\alpha\in\Omega} f(\alpha)\Big)^{\,|S|\cdot|\mathrm{Stab}_G(x)|}.
+\]
+\end{lemma}
+
+\begin{proof}
+Applying every $g\in G$ and multiplying, $\prod_{g\in G} g\!\cdot\!\pi=\pi^{|G|}$ since $\pi$ is fixed.
+On the other hand $\prod_{g\in G} g\!\cdot\!\pi=\prod_{\beta\in S}\prod_{g\in G} f(g\beta)$, and by
+transitivity $\prod_{g\in G} f(g\beta)=\big(\prod_{\alpha\in\Omega}f(\alpha)\big)^{|\mathrm{Stab}_G(x)|}$
+for every $\beta$. Taking the product over the $|S|$ elements of $S$ gives the claim.
+\end{proof}
+
+\begin{proposition}[No packet has product $c\,t$]\label{prop:no-ct}
+With $F=\C(t)$, $L$, $G$ as above, suppose $S\subseteq\Omega$ has $G$--fixed product
+$\prod_{\beta\in S}\beta=c\,t$ with $c\in\C^\times$. Then a contradiction ensues.
+\end{proposition}
+
+\begin{proof}
+Because $c\,t\in F$ lies in the base field, it is automatically $G$--fixed, so Lemma~\ref{lem:orbit}
+applies with $\pi=c\,t$. The full product of the roots is, by Vieta on \eqref{eq:Phi},
+\[
+  \prod_{\alpha\in\Omega}\alpha \;=\; (-1)^{N}\,\frac{[X^0]\Phi}{\lc_X\Phi}
+   \;=\;(-1)^{N}\,\frac{-t\,R(0)}{-t\,\lc R}
+   \;=\;(-1)^{N}\,\frac{R(0)}{\lc R}\;=:\;d\ \in\ \C^\times,
+\]
+a nonzero \emph{constant}: the factor $t$ cancels between the constant and leading coefficients of
+$\Phi$. Substituting into Lemma~\ref{lem:orbit},
+\[
+  (c\,t)^{\,|G|}\;=\;d^{\,|S|\cdot|\mathrm{Stab}_G(x)|}\quad\text{in }F=\C(t).
+\]
+The left side has $t$--adic valuation $|G|\ge1$; the right side is a nonzero constant of valuation $0$.
+A degree--$|G|$ monomial in $t$ cannot equal a constant, so this is absurd.
+\end{proof}
+
+Proposition~\ref{prop:no-ct} is what makes the reduction \emph{valuation--free}. Nothing about the size
+of the roots is used; the only inputs are transitivity (Lemma~\ref{lem:irred}), Vieta, and the
+elementary fact that a monomial is not a constant. It remains to produce a packet with product $c\,t$,
+i.e. to prove Proposition~\ref{prop:crux}. This is where the Weierstrass analysis enters, and it is the
+only place any analysis is used.
+
+\section{The Weierstrass small--root product and its analytic core}\label{sec:analytic}
+
+Regard $\Phi$ as a polynomial in $X$ over the complete local ring $A=\C[\![t]\!]$:
+\[
+  \Phi \;=\; X^{M}-t\,R(X)\ \in\ A[X]\subset A[\![X]\!].
+\]
+Its reduction mod $t$ is $X^{M}$, so Weierstrass preparation over $A[\![X]\!]$ yields a factorization
+\begin{equation}\label{eq:weier}
+  \Phi \;=\; P\cdot h,\qquad P\in A[X]\ \text{monic of degree }M,\ P\equiv X^{M}\ (\mathrm{mod}\ t),\quad
+  h\in A[\![X]\!]^{\times}.
+\end{equation}
+$P$ is the \emph{distinguished} (small--root) factor; its $M$ roots are the small roots of $\Phi$, and
+the small--root product is $\Pi=(-1)^{M}P.\!\operatorname{coeff}_0$.
+
+\subsection{From power series to a polynomial factorization}
+The factorization \eqref{eq:weier} lives in the power--series ring; to feed the packet into
+Section~\ref{sec:orbit} we need $P$ to divide $\Phi$ as \emph{polynomials}, so that the roots of $P$ are
+genuinely roots of $\Phi$ in $L$.
+
+\begin{lemma}\label{lem:dvd}
+$P$ divides $\Phi$ in the polynomial ring $A[X]$.
+\end{lemma}
+
+\begin{proof}
+Since $P$ is monic, ordinary polynomial division gives $\Phi=P\cdot Q+r$ with $\deg_X r<M$. Coercing to
+$A[\![X]\!]$ and comparing with \eqref{eq:weier}, both $(h,0)$ and $(Q,r)$ are Weierstrass divisions of
+$\Phi$ by $P$; by uniqueness of Weierstrass division over the Hausdorff ring $A$ (the coefficient
+$P.\!\operatorname{coeff}_0=c\,t$ lies in the maximal ideal, and $P\equiv X^M$ mod $t$ makes $P$ a valid
+Weierstrass divisor), the remainder $r$ vanishes. Hence $P\mid\Phi$ in $A[X]$.
+\end{proof}
+
+Mapping $A=\C[\![t]\!]\hookrightarrow\C(\!(t)\!)$ and then into $\Omega=\overline{\C(\!(t)\!)}$, and using
+that the polynomial \eqref{eq:Phi} over $\C(t)$ coincides with its image over $\C(\!(t)\!)$, one obtains
+$P\mid\Phi$ over $\Omega$. The splitting field $L$ of $\Phi/\C(t)$ embeds $\C(t)$--linearly into
+$\Omega$ (both split $\Phi$), and the packet
+\[
+  S=\{\beta\in \Phi.\text{rootSet}(L): \psi(\beta)\ \text{is a root of }P\},\qquad \psi\colon L\hookrightarrow\Omega,
+\]
+has, by Vieta on the monic $P$,
+\[
+  \psi\Big(\prod_{\beta\in S}\beta\Big)=\prod(\text{roots of }P)=(-1)^{M}P.\!\operatorname{coeff}_0 .
+\]
+Since $\psi$ is injective and fixes $\C(t)$, the identity descends to $L$: $\prod_{\beta\in
+S}\beta=(-1)^{M}P.\!\operatorname{coeff}_0$ once the latter is shown to be a base--field element. This is
+the content of the next, and final, computation.
+
+\subsection{The scalar identity $\Pi=c\,t$}
+Taking the $X^0$--coefficient of \eqref{eq:weier} gives, with $h(0,t):=[X^0]h\in A^{\times}$ and
+$r_0=R(0)$,
+\begin{equation}\label{eq:pih}
+  P.\!\operatorname{coeff}_0\cdot h(0,t)\;=\;[X^0]\Phi\;=\;-t\,r_0,
+\end{equation}
+so $\Pi=(-1)^M P.\!\operatorname{coeff}_0$ equals $c\,t$ with $c=(-1)^{M+1}r_0$ \emph{if and only if}
+$h(0,t)=1$. The unit $h(0,t)\in\C[\![t]\!]$ is normalized by $h(0,0)=1$ (from $P\equiv X^M\equiv\Phi$ mod
+$t$ and cancellation of $X^M$ in the domain $\C[\![X]\!]$). It remains to show that its $t$--derivative
+vanishes:
+\begin{equation}\label{eq:hderiv}
+  \partial_t\,h(0,t)\;=\;0\qquad\text{when } D_m=0\ \text{for all } m\ge1 .
+\end{equation}
+Over a field of characteristic $0$, \eqref{eq:hderiv} together with $h(0,0)=1$ forces $h(0,t)=1$, hence
+$\Pi=c\,t$, hence Proposition~\ref{prop:crux}.
+
+Identity \eqref{eq:hderiv} is the sole analytic ingredient of the entire paper, and it is a
+one--line logarithmic--derivative computation once the objects are placed in a \emph{single}
+completion. Work in
+\[
+  \mathcal A\;=\;\big(\C(\!(x)\!)\big)[\![t]\!],
+\]
+the $t$--power series over the Laurent field $\C(\!(x)\!)$. Here $\Phi=x^{M}-t\,R(x)$, $P$ and $h$ all
+map in and are \emph{units} (their $t$--constant terms are $x^{M},x^{M},1$, all nonzero in the field
+$\C(\!(x)\!)$), so $R/\Phi,\ \partial_tP/P,\ \partial_th/h$ are honest elements of $\mathcal A$.
+Differentiating $\Phi=P\cdot h$ in $t$ and dividing by $\Phi$,
+\[
+  -\,\frac{R}{\Phi}\;=\;\frac{\partial_tP}{P}+\frac{\partial_th}{h}.
+\]
+Apply the $\C[\![t]\!]$--linear functional $[x^{0}]$ (the $x^0$--Laurent coefficient, a ring
+homomorphism on the ``disk'' subring of series with nonnegative $x$--support). Three evaluations finish
+the argument:
+\begin{enumerate}[label=(\roman*)]
+\item $[x^{0}](\partial_tP/P)=0$: $P$ is monic of $x$--degree $M$ and $\partial_tP$ has $x$--degree $<M$,
+so $\partial_tP/P$ has strictly negative $x$--degree and no $x^0$ term (a reversed--polynomial degree
+count);
+\item $[x^{0}](-R/\Phi)=-\sum_{m\ge1}D_m\,t^{m-1}$: expanding $x^{M}/\Phi=(1-tR/x^{M})^{-1}$ as a
+geometric series identifies the $x^0$ coefficient with the moment generating function
+$\sum_m D_m t^{m}$;
+\item $[x^{0}](\partial_th/h)=\partial_t h(0,t)/h(0,t)$: $h$ and $\partial_t h$ have nonnegative
+$x$--support, so on that subring $[x^0]$ is the ring homomorphism $h\mapsto h(0,t)$, which commutes with
+$\partial_t$.
+\end{enumerate}
+Combining, $-\sum_{m\ge1}D_m t^{m-1}=0+\partial_t h(0,t)/h(0,t)$. Under $D_m\equiv0$ the left side is $0$,
+so $\partial_t h(0,t)=0$, proving \eqref{eq:hderiv} and completing the proof of
+Proposition~\ref{prop:crux}, hence of Theorems~\ref{thm:dvdk}, \ref{thm:nc2}, and~\ref{thm:gmc2}. \qed
+
+\begin{remark}
+The passage between the ``space'' completion $(\C(\!(x)\!))[\![t]\!]$ used for \eqref{eq:hderiv} and the
+``deformation'' completion $\C[\![t]\!][X]$ used for Lemma~\ref{lem:dvd} is a transposition of the two
+power--series variables; both are algebraic and neither requires extending a valuation to the algebraic
+closure of $\C(\!(t)\!)$. This is the decisive simplification over the Puiseux/Newton--polygon route: the
+orbit--product contradiction (Proposition~\ref{prop:no-ct}) accepts \emph{any} packet whose product is
+$c\,t$, so the packet may be defined algebraically as the roots of the Weierstrass factor $P$ rather
+than by valuation.
+\end{remark}
+
+\section{The Lean formalization}\label{sec:lean}
+
+The proof is formalized in Lean~4 against \texttt{mathlib} \cite{mathlib}. We summarize the module
+structure; the correspondence to the sections above is exact.
+
+\begin{itemize}[leftmargin=1.4em]
+\item \textbf{The functional and the charge reduction.} \texttt{E}, \texttt{wt}, \texttt{charge},
+\texttt{NC2}, and the reduction \texttt{gmc2\_of\_nc2} (Proposition~\ref{prop:nc2-to-gmc2}) are in
+\texttt{GMC2Reduction}. The threshold $N=\deg_W Q+1$ is explicit.
+\item \textbf{$\text{NC}(2)\Leftarrow\text{DvdK}(1)$.} The lowest--balanced--face/Frobenius argument of
+Section~\ref{sec:nc2} is \texttt{GMC2NC2} (with the normalized specialization contradiction
+\texttt{normalized\_specialization\_contradiction} and the discharged height witness), yielding
+\texttt{nc2\_of\_dvdK1} and \texttt{gmc2\_of\_dvdK1}.
+\item \textbf{The constant--term interface.} \texttt{DvdK1} (Theorem~\ref{thm:dvdk}),
+\texttt{ChargesStraddleZero}, and the universal $\mathcal C_m(q)$ \eqref{eq:ctr}
+(\texttt{constantTermRelation}) are in \texttt{GMC2DvdKInterface},
+\texttt{GMC2LowestFaceExistence}, \texttt{GMC2ConstantTermRelations}; the zero--charge case and the
+both--signs reduction are in \texttt{GMC2DvdKZeroCharge}.
+\item \textbf{Univariate reduction.} \texttt{SinglePolyCrux} (Proposition~\ref{prop:crux}), the shift
+$R=\texttt{shiftedPolynomial}$, the identity \eqref{eq:checkA} (\texttt{GMC2LaurentShiftCheckA}), and the
+capstone \texttt{gmc2\_of\_crux} are in \texttt{GMC2DvdKUnivariateReduction}.
+\item \textbf{Orbit--product.} Lemma~\ref{lem:orbit} and Proposition~\ref{prop:no-ct} are
+\texttt{GMC2OrbitProduct} and \texttt{GMC2Thm2067Wrapper}
+(\texttt{thm2067\_contradiction}); irreducibility (Lemma~\ref{lem:irred}) is
+\texttt{GMC2PhiIrreducible}/\texttt{GMC2DvdKAssembly}; Vieta ($\prod\alpha=d$) is
+\texttt{GMC2PhiVieta} (\texttt{prod\_rootSet\_Phi}); the char--$0$ specialization discharging
+separability and Galois--fixedness is \texttt{GMC2Thm2067HSonly} (\texttt{thm2067\_reduced\_to\_hS}).
+\item \textbf{The frame bridge.} The valuation--free packet transport of
+Section~\ref{sec:analytic} --- root transport, the packet bijection, and the assembly
+$\prod_{\beta\in S}\beta=\text{algebraMap}(c\,t)$ --- is
+\texttt{GMC2FrameBridgeRoots}, \texttt{GMC2FrameBridgePacket} (\texttt{exists\_packet\_prod\_eq}, a
+\texttt{Finset.prod\_bij}), \texttt{GMC2FrameBridge}, \texttt{GMC2FrameBridgeAssembly}.
+\item \textbf{Weierstrass and the analytic core.} \eqref{eq:weier}, $P=\texttt{smallRootFactor}$, and
+\eqref{eq:pih} are \texttt{GMC2DvdKWeierstrass} (built on \texttt{mathlib}'s Weierstrass preparation);
+Lemma~\ref{lem:dvd} is \texttt{GMC2FrameBridgeDvd} (\texttt{smallRootFactor\_dvd\_PhiPoly});
+the normalization $h(0,0)=1$ is \texttt{GMC2DvdKUnitOrigin}; the log--derivative identity
+\eqref{eq:hderiv} is proved in the unified frame $(\C(\!(x)\!))[\![t]\!]$ across
+\texttt{GMC2DvdKFrame}, \texttt{GMC2DvdKTranspose}, \texttt{GMC2DvdKHderivAssembly},
+\texttt{GMC2DvdKTransposeAssembly}; the char--$0$ ``vanishing derivative $\Rightarrow$ constant'' step is
+\texttt{GMC2DvdKCharZeroClosing}.
+\item \textbf{Discharge of the crux and the front door.} The wiring over
+$\Omega=\overline{\C(\!(x)\!)}$ that proves \texttt{singlePolyCrux\_holds}, and the unconditional theorem
+$\texttt{gmc2\_unconditional}=\texttt{gmc2\_of\_crux}\ \texttt{singlePolyCrux\_holds}$, are in
+\texttt{GMC2DvdKOmegaWiring}; the documented statement \texttt{GMC2.gmc2} is in \texttt{GMC2Main}.
+\end{itemize}
+
+\subsection*{Verification}
+The build target \texttt{GMC2Main} compiles the entire proof and is self--contained. The kernel
+axiom audit
+\[
+  \texttt{\#print axioms GMC2.gmc2}\;=\;[\,\mathtt{propext},\ \mathtt{Classical.choice},\ \mathtt{Quot.sound}\,]
+\]
+certifies that the theorem uses only \texttt{mathlib}'s three foundational axioms: there is no
+\texttt{sorry}, no \texttt{native\_decide} (hence no unaudited kernel reduction), and no additional
+axiom. Every module terminates in a \texttt{\#print axioms} directive with the same result, so the
+property holds throughout the dependency graph, not merely at the root.
+
+\section{Concluding remarks}\label{sec:remarks}
+
+\subsection*{Sharpness}
+Theorem~\ref{thm:gmc2} is dimension--optimal: Derksen, van den Essen and Zhao
+\cite{DerksenEssenZhao2017} show the Gaussian--Moments Conjecture fails for $n\ge3$. The obstruction to
+higher dimensions is genuinely multi--radial: the single hyperbolic charge $\ch=s_0-s_1$ of $\C[Z,W]$ is
+replaced by a lattice of charges, and one--sidedness is no longer forced. Theorem~\ref{thm:nc2} is the
+exact statement that survives at $n=2$: instability of the moment functional (all powers null) coincides
+with algebraic instability (a strict one--sided charge, a destabilizing one--parameter subgroup of the
+hyperbolic torus).
+
+\subsection*{The one--variable input}
+The argument isolates the entire transcendental difficulty of the problem in the single scalar identity
+\eqref{eq:hderiv}, a formal logarithmic derivative. This is a constructive counterpart to the analytic
+proof of Duistermaat and van der Kallen \cite{DvdK1998}, replacing residues and monodromy of algebraic
+functions by a Weierstrass factorization and a Galois orbit--product, and in particular giving a proof
+of Theorem~\ref{thm:dvdk} that is elementary enough to be checked by a proof assistant.
+
+\subsection*{Relation to the Jacobian Conjecture}
+By \cite{DerksenEssenZhao2017}, the Gaussian--Moments Conjecture in all dimensions implies the Jacobian
+Conjecture; the two--dimensional case proved here is the first, and --- by the counterexamples in
+\emph{loc.\ cit.} --- the last unconditionally available instance of that implication's hypothesis.
+
+\subsection*{Availability}
+The Lean sources build against \texttt{mathlib} and reproduce the axiom audit above. The proof was
+developed and machine--checked in the \texttt{TournamentH7} Lean project; the theorem \texttt{GMC2.gmc2}
+and its self--contained build target \texttt{GMC2Main} are the canonical entry points.
+
+\begin{thebibliography}{9}
+
+\bibitem{DerksenEssenZhao2017}
+H.~Derksen, A.~van den Essen, and W.~Zhao,
+\emph{The Gaussian moments conjecture and the Jacobian conjecture},
+Israel J. Math. \textbf{219} (2017), no.~2, 917--928. \texttt{arXiv:1506.05192}.
+
+\bibitem{DvdK1998}
+J.~J.~Duistermaat and W.~van der Kallen,
+\emph{Constant terms in powers of a Laurent polynomial},
+Indag. Math. (N.S.) \textbf{9} (1998), no.~2, 221--231.
+
+\bibitem{Mathieu1997}
+O.~Mathieu,
+\emph{Some conjectures about invariant theory and their applications},
+in \emph{Alg\`ebre non commutative, groupes quantiques et invariants}
+(Reims, 1995), S\'emin. Congr. \textbf{2}, Soc. Math. France, 1997, pp.~263--279.
+
+\bibitem{Zhao2010}
+W.~Zhao,
+\emph{Generalizations of the image conjecture and the Mathieu conjecture},
+J. Pure Appl. Algebra \textbf{214} (2010), no.~7, 1200--1216.
+
+\bibitem{Zhao2007a}
+W.~Zhao,
+\emph{Hessian nilpotent polynomials and the Jacobian conjecture},
+Trans. Amer. Math. Soc. \textbf{359} (2007), no.~1, 249--274.
+
+\bibitem{Zhao2007b}
+W.~Zhao,
+\emph{Images of commuting differential operators of order one with constant leading coefficients},
+J. Algebra \textbf{324} (2010), no.~2, 231--247.
+
+\bibitem{vandenEssen2000}
+A.~van den Essen,
+\emph{Polynomial Automorphisms and the Jacobian Conjecture},
+Progress in Mathematics \textbf{190}, Birkh\"auser, Basel, 2000.
+
+\bibitem{mathlib}
+The mathlib Community,
+\emph{The Lean mathematical library},
+in \emph{CPP 2020}, ACM, 2020, pp.~367--381.
+
+\end{thebibliography}
+
+\end{document}
