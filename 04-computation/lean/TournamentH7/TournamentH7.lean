@@ -768,6 +768,7 @@ import TournamentH7.GMC2DvdKFrameExtraction
 import TournamentH7.GMC2DvdKFrameHSide
 import TournamentH7.GMC2DvdKHderivAssembly
 import TournamentH7.GMC2DvdKOmegaWiring
+import TournamentH7.GMC2Main
 import TournamentH7.GMC2FrameBridgePacket
 import TournamentH7.GMC2FrameBridgeAssembly
 import TournamentH7.GMC2DvdKXDeg
