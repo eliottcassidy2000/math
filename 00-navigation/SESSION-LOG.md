@@ -1,3 +1,30 @@
+## kind-pasteur-2026-07-22-S128c154 -- GMC(2) VERIFICATION AUDIT: kernel-pure + adversarially SOUND + LRC-independent; Mathlib-PR scoping
+
+**Owner:** double-check GMC(2) is in the best state possible + ready for a Mathlib PR.
+
+**CORRECTNESS VERIFIED (as strong as a formalization gets):** gmc2_unconditional builds green (8542-job
+chain), #print axioms = [propext,Classical.choice,Quot.sound] (no sorryAx/native_decide); NO
+sorry/admit/axiom anywhere in the chain (grep hits were docstrings + #print axioms lines); an INDEPENDENT
+adversarial referee (general-purpose subagent, full-chain read) returned SOUND -- statement is the genuine
+GMC(2) (real Wick E, non-vacuous SinglePolyCrux, vanishing hypothesis genuinely consumed), Omega-instance
+sound (rfl guards + single hS_of_dvd_value => no silent mismatch), no circularity, gmc2_of_crux chain
+gap-free (HeightWitnessSupplier discharged, orbit-product double-count correct, monomial_pow_ne_const
+refutation genuine).
+
+**REPO CAVEAT (NOT GMC(2)):** lake build TournamentH7 (whole root) FAILS -- but ONLY on in-progress LRC
+modules (LRCCoherentBlockerChronology, LRCPairTowerValuation, LRCTwoCircleII, ...). NO GMC2 file imports
+any LRC module (verified), so GMC(2) is unaffected. The LRC WIP needs fixing for a green root (fleet lane).
+
+**MATHLIB-PR READINESS (honest):** the FULL proof is NOT one PR -- 87 GMC2 files, 47 in-chain, 32 import
+Mathlib wholesale, repo naming, dead modules; whole-upstreaming = multi-week refactor. What IS PR-able now:
+3 general Mathlib-gap lemmas -- (1) eq_C_of_derivativeFun_eq_zero (char-0 converse of derivativeFun_C):
+EXTRACTED, generalized to [CommRing R][NoZeroDivisors R][CharZero R], VERIFIED to compile standalone
+(scratch PR-draft-charzero-derivative.lean) -- ready as first PR; (2) geometric inverse (1-C w*X)^{-1}=
+mk(w^.); (3) derivativeFun_map + PowerSeries.logDeriv/logDeriv_map. All confirmed absent from Mathlib.
+
+**VERDICT:** GMC(2) rigorously verified + best-state for correctness; Mathlib path = upstream the 3 gap
+lemmas first (char-0 drafted+compiles), full proof is a separate larger effort. Reflection
+gmc2-verification-and-mathlib-pr-readiness-kps-S128c154. HYP-9020 (cont).
 ## kind-pasteur-2026-07-22-S128c153-FINAL -- GMC(2) PROVEN UNCONDITIONALLY, KERNEL-PURE (Omega-wiring closed)
 
 **Owner:** finish the Omega-wiring + remaining parts. DONE.
