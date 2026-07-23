@@ -46,13 +46,15 @@ formally verified}
 \begin{abstract}
 Let $\E$ be the Wick (Gaussian) expectation on $\C[Z,W]$ determined by
 $\E[Z^aW^b]=a!\,[a=b]$, the moment functional of a single complex Gaussian.
-The \emph{Gaussian--Moments Conjecture} of Derksen, van den Essen and Zhao asserts that
-the kernel of $\E$ is a Mathieu--Zhao space; in $n$ variables it implies the Jacobian
-Conjecture, and it is false for $n\ge 3$. We prove its sharp surviving case $n=2$: if
-$\E(P^m)=0$ for all $m\ge 1$ then $\E(Q\,P^m)=0$ for all large $m$. The proof passes through the
-two--dimensional \emph{Nullcone Conjecture}, that a moment--null polynomial has one--sided charge,
-and reduces the residual analytic content to the one--variable Duistermaat--van der Kallen
-constant--term theorem. We give a self--contained, valuation--free proof of the latter through a
+The \emph{Gaussian--Moments Conjecture} and the \emph{Nullcone Conjecture} of
+Derksen, van den Essen and Zhao assert, respectively, that the kernel of the
+Gaussian moment functional is a Mathieu--Zhao space, and that a moment--null polynomial has
+one--sided charge. The former implies the Jacobian Conjecture but fails in higher dimension, so
+dimension two is the sharp surviving case. We prove both conjectures in dimension two: if
+$\E(P^m)=0$ for all $m\ge 1$ then $\E(Q\,P^m)=0$ for all large $m$, and every $P$ with $\E(P^m)=0$
+for all $m$ has strictly one--sided charge. The proof deduces the moment statement from the
+nullcone statement and reduces the residual analytic content to the one--variable
+Duistermaat--van der Kallen constant--term theorem. We give a self--contained, valuation--free proof of the latter through a
 Galois orbit--product on the splitting field of $X^{M}-tR$, fed by the Weierstrass small--root
 product $\Pi=c\,t$, whose analytic heart $\partial_t h(0,t)=0$ is proved inside a single power--series
 frame. The entire argument has been formalized in the Lean~4 proof assistant on top of
@@ -84,36 +86,47 @@ A linear subspace $\mathcal M$ of a commutative $\C$--algebra $A$ is a \emph{Mat
 (Zhao \cite{Zhao2010}; originally \emph{Mathieu subspace}) if, whenever $a\in A$ satisfies $a^m\in\mathcal M$
 for all $m\ge1$, one has $b\,a^m\in\mathcal M$ for all sufficiently large $m$ and every $b\in A$. These
 spaces isolate the algebraic content of a family of conjectures descending from the Jacobian
-Conjecture: Mathieu's conjecture on integrals of $G$--finite functions \cite{Mathieu1997}, Zhao's
-Image Conjecture \cite{Zhao2007a,Zhao2007b}, and their common two--variable Gaussian shadow.
+Conjecture \cite{vandenEssen2000}: Mathieu's conjecture on integrals of $G$--finite functions
+\cite{Mathieu1997}, Zhao's Image Conjecture and its Hessian--nilpotent form
+\cite{ZhaoImage,Zhao2007a}, and their common Gaussian shadow.
+
+Derksen, van den Essen and Zhao \cite{DerksenEssenZhao2017} formulated, and connected to the Jacobian
+Conjecture, two conjectures about the Gaussian moment functional. The first asks that its kernel be a
+Mathieu--Zhao space.
 
 \begin{conjecture}[Gaussian--Moments Conjecture, {\cite{DerksenEssenZhao2017}}]\label{conj:GMC}
-For every $n$, the kernel $\ker\E_n$ of the $n$--dimensional Wick expectation is a Mathieu--Zhao space
-of $\C[Z_1,W_1,\dots,Z_n,W_n]$.
+The kernel of the Gaussian moment expectation is a Mathieu--Zhao space of the ambient polynomial ring.
 \end{conjecture}
 
-Derksen, van den Essen and Zhao \cite{DerksenEssenZhao2017} introduced Conjecture~\ref{conj:GMC},
-proved that it implies the Jacobian Conjecture, and exhibited a counterexample to a broader
-moment--vanishing statement showing that the conjecture is \emph{false for $n\ge 3$}. Dimension two is
-thus the sharp surviving case. Our first result is that it survives.
+They proved that Conjecture~\ref{conj:GMC} implies the Jacobian Conjecture, and observed that it does
+not extend to arbitrary dimension: a counterexample to the unrestricted moment--vanishing statement
+shows that the Gaussian--Moments phenomenon fails once enough Gaussian variables are present. In the
+two--variable ring $\C[Z,W]$, which realizes a single complex Gaussian $Z$ with $W=\bar Z$ via
+\eqref{eq:E-def}, the conjecture survives; this is the sharp case, and it is our first theorem.
 
-\begin{theorem}[GMC$(2)$]\label{thm:gmc2}
+\begin{theorem}[Gaussian--Moments Conjecture in dimension two]\label{thm:gmc2}
 Let $P,Q\in\C[Z,W]$. If $\E(P^m)=0$ for all $m\ge 1$, then there is $N$ such that $\E(Q\,P^m)=0$
 for all $m\ge N$.
 \end{theorem}
 
-Unwinding \eqref{eq:E-def}, the obstruction is purely one of \emph{charge geometry}. For a polynomial
-$P$ let $\supp P\subset \N^2$ be its exponent support and $\ch(s)=s_0-s_1$ the charge of a monomial.
+The companion \emph{Nullcone Conjecture} of \cite{DerksenEssenZhao2017} makes the underlying instability
+structural: a polynomial all of whose central Gaussian moments vanish should lie in the nullcone of the
+relevant torus action, i.e. be destabilized by a one--parameter subgroup. In dimension two the torus is
+the single hyperbolic $\C^\times$ acting with weight $\ch(s)=s_0-s_1$ on $Z^{s_0}W^{s_1}$, and its
+nullcone consists precisely of the strictly one--sided polynomials. Our second theorem is this
+two--dimensional Nullcone Conjecture.
 
-\begin{theorem}[NC$(2)$, the two--dimensional Nullcone Conjecture]\label{thm:nc2}
-Let $P\in\C[Z,W]$. If $\E(P^m)=0$ for all $m\ge 1$, then $P$ has one--sided charge:
+\begin{theorem}[Nullcone Conjecture in dimension two]\label{thm:nc2}
+Let $P\in\C[Z,W]$ and write $\supp P\subset\N^2$ for its exponent support. If $\E(P^m)=0$ for all
+$m\ge 1$, then $P$ has one--sided charge:
 either $\ch(s)\ge 1$ for every $s\in\supp P$, or $\ch(s)\le -1$ for every $s\in\supp P$.
 \end{theorem}
 
+We abbreviate Theorems~\ref{thm:gmc2} and \ref{thm:nc2} by $\mathrm{GMC}(2)$ and $\mathrm{NC}(2)$.
 Theorem~\ref{thm:nc2} is the structural heart of Theorem~\ref{thm:gmc2}: it says that the only way for
-all central powers of $P$ to be moment--null is for $P$ to be strictly one--sided (no monomial can
-have charge $0$, and all charges must agree in sign). The passage $\text{NC}(2)\Rightarrow\text{GMC}(2)$
-is elementary (Section~\ref{sec:charge}). The content is Theorem~\ref{thm:nc2} itself.
+all central powers of $P$ to be moment--null is for $P$ to be strictly one--sided (no monomial can have
+charge $0$, and all charges must agree in sign). The passage $\mathrm{NC}(2)\Rightarrow\mathrm{GMC}(2)$
+is elementary (Section~\ref{sec:charge}); the content is Theorem~\ref{thm:nc2} itself.
 
 \subsection{Method}
 The proof of Theorem~\ref{thm:nc2} confronts one, and only one, genuinely analytic input: the
@@ -239,7 +252,7 @@ $c_i\ne0$ the corresponding coefficients. For $m\ge0$ define the universal const
   \sum_{\substack{r\in\N^k,\ |r|=m\\ \sum_i r_i q_i=0}} \binom{m}{r}\, X^{r}\ \in\ \Q[X_1,\dots,X_k],
 \end{equation}
 so that $\mathcal C_m(q)(c)=\CT(f^m)$. The hypothesis $\E(P^m)=0$ for all $m$ forces, after the
-Frobenius reduction, $\mathcal C_m(q)(c)=0$ for all $m\ge1$. Since $P$ is two--sided, the charge set
+Frobenius reduction, $\mathcal C_m(q)(c)=0$ for all $m\ge1$. Since $P$ is not one--sided, the charge set
 $\{q_i\}$ straddles zero. Theorem~\ref{thm:dvdk} then provides $m\ge1$ with $\mathcal C_m(q)(c)\ne0$, a
 contradiction. Hence $P$ is one--sided, proving Theorem~\ref{thm:nc2}. \qed
 
@@ -379,17 +392,16 @@ $P$ divides $\Phi$ in the polynomial ring $A[X]$.
 \begin{proof}
 Since $P$ is monic, ordinary polynomial division gives $\Phi=P\cdot Q+r$ with $\deg_X r<M$. Coercing to
 $A[\![X]\!]$ and comparing with \eqref{eq:weier}, both $(h,0)$ and $(Q,r)$ are Weierstrass divisions of
-$\Phi$ by $P$; by uniqueness of Weierstrass division over the Hausdorff ring $A$ (the coefficient
-$P.\!\operatorname{coeff}_0=c\,t$ lies in the maximal ideal, and $P\equiv X^M$ mod $t$ makes $P$ a valid
-Weierstrass divisor), the remainder $r$ vanishes. Hence $P\mid\Phi$ in $A[X]$.
+$\Phi$ by $P$; since $P\equiv X^M\pmod t$ makes $P$ a valid Weierstrass divisor over the Hausdorff ring
+$A$, uniqueness of Weierstrass division forces the remainder $r$ to vanish. Hence $P\mid\Phi$ in $A[X]$.
 \end{proof}
 
 Mapping $A=\C[\![t]\!]\hookrightarrow\C(\!(t)\!)$ and then into $\Omega=\overline{\C(\!(t)\!)}$, and using
 that the polynomial \eqref{eq:Phi} over $\C(t)$ coincides with its image over $\C(\!(t)\!)$, one obtains
-$P\mid\Phi$ over $\Omega$. The splitting field $L$ of $\Phi/\C(t)$ embeds $\C(t)$--linearly into
-$\Omega$ (both split $\Phi$), and the packet
+$P\mid\Phi$ over $\Omega$. The splitting field $L$ of $\Phi$ over $\C(t)$ embeds $\C(t)$--linearly into
+$\Omega$ by an embedding $\psi\colon L\hookrightarrow\Omega$ (both fields split $\Phi$), and the packet
 \[
-  S=\{\beta\in \Phi.\text{rootSet}(L): \psi(\beta)\ \text{is a root of }P\},\qquad \psi\colon L\hookrightarrow\Omega,
+  S=\{\,\beta\in L: \Phi(\beta)=0\ \text{and}\ \psi(\beta)\ \text{is a root of }P\,\}
 \]
 has, by Vieta on the monic $P$,
 \[
@@ -516,12 +528,12 @@ property holds throughout the dependency graph, not merely at the root.
 \section{Concluding remarks}\label{sec:remarks}
 
 \subsection*{Sharpness}
-Theorem~\ref{thm:gmc2} is dimension--optimal: Derksen, van den Essen and Zhao
-\cite{DerksenEssenZhao2017} show the Gaussian--Moments Conjecture fails for $n\ge3$. The obstruction to
-higher dimensions is genuinely multi--radial: the single hyperbolic charge $\ch=s_0-s_1$ of $\C[Z,W]$ is
-replaced by a lattice of charges, and one--sidedness is no longer forced. Theorem~\ref{thm:nc2} is the
-exact statement that survives at $n=2$: instability of the moment functional (all powers null) coincides
-with algebraic instability (a strict one--sided charge, a destabilizing one--parameter subgroup of the
+Theorem~\ref{thm:gmc2} is dimension--optimal: by \cite{DerksenEssenZhao2017} the Gaussian--Moments
+phenomenon fails once enough Gaussian variables are present. The obstruction to higher dimensions is
+genuinely multi--radial: the single hyperbolic charge $\ch=s_0-s_1$ of $\C[Z,W]$ is replaced by a
+lattice of charges, and one--sidedness is no longer forced. Theorem~\ref{thm:nc2} is the exact statement
+that survives in dimension two: instability of the moment functional (all powers null) coincides with
+algebraic instability (a strict one--sided charge, i.e. a destabilizing one--parameter subgroup of the
 hyperbolic torus).
 
 \subsection*{The one--variable input}
@@ -532,9 +544,9 @@ functions by a Weierstrass factorization and a Galois orbit--product, and in par
 of Theorem~\ref{thm:dvdk} that is elementary enough to be checked by a proof assistant.
 
 \subsection*{Relation to the Jacobian Conjecture}
-By \cite{DerksenEssenZhao2017}, the Gaussian--Moments Conjecture in all dimensions implies the Jacobian
-Conjecture; the two--dimensional case proved here is the first, and --- by the counterexamples in
-\emph{loc.\ cit.} --- the last unconditionally available instance of that implication's hypothesis.
+By \cite{DerksenEssenZhao2017}, the Gaussian--Moments Conjecture implies the Jacobian Conjecture. Since
+that conjecture fails in higher dimension, the implication cannot be run in full; the two--dimensional
+case established here is its sharp positive instance.
 
 \subsection*{Availability}
 The Lean sources build against \texttt{mathlib} and reproduce the axiom audit above. The proof was
@@ -569,7 +581,7 @@ W.~Zhao,
 \emph{Hessian nilpotent polynomials and the Jacobian conjecture},
 Trans. Amer. Math. Soc. \textbf{359} (2007), no.~1, 249--274.
 
-\bibitem{Zhao2007b}
+\bibitem{ZhaoImage}
 W.~Zhao,
 \emph{Images of commuting differential operators of order one with constant leading coefficients},
 J. Algebra \textbf{324} (2010), no.~2, 231--247.
