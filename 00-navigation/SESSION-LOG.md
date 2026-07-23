@@ -198,6 +198,16 @@ assigned F=D_m leg. HYP-9016. Reflection gmc2-hderiv-fdm-leg-geometric-inverse-k
 - **REMAINING SHARED INFRA (next):** the transpose hom (swap F[[t]][[X]] ~= F[[X]][[t]] via MvPowerSeries curry/reindex, then PowerSeries.map(HahnSeries.ofPowerSeries F[[x]] ↪ F((x)))). No direct Mathlib support; genuinely multi-lemma. Needed by BOTH mac-mini's (a) h-side AND boxeph's bridge.
 - **HONEST:** did NOT close hderiv (needs (a)(c)+assembly+transpose). Delivered the VERIFIED unified frame + log-derivative machinery + xCoeff0 infra + the (b) side, all kernel-pure; the fleet's complete hderiv proof + de-risked bridge now live in my frame. GMC(2) is ONE lemma (hderiv/hS) from done, and the frame is the vehicle. HYP-9014.
 
+## boxeph-2026-07-22-S243 -- GMC(2) PROVEN unconditional + kernel-pure; my frame bridge + divisibility complete the capstone
+
+**Owner:** keep working to achieve the full GMC(2) proof in the most formalized state possible (across this session's turns: packet construction, divisibility, transpose — in conjunction, many push/pulls).
+
+- **THE RESULT:** `GMC2DvdKOmegaWiring.gmc2_unconditional = GMC2DvdKUnivariateReduction.gmc2_of_crux singlePolyCrux_holds` — **GMC(2) unconditional, kernel-pure** (`[propext,Classical.choice,Quot.sound]`, 8542 jobs green, no sorry, no DvdK1 hypothesis). It is exactly my S242 capstone applied to the now-discharged `SinglePolyCrux`.
+- **DELIVERED this arc (all kernel-pure, load-bearing in the final proof):** the **frame bridge** — `aroots_map_embedding` (root transport) → `exists_packet_prod_eq` (packet via `Finset.prod_bij`) → `prod_eq_algebraMap_of_embedding` (pullback) → `hS_of_dvd_value`/`false_of_frame_data` (assembly); and the **divisibility** `smallRootFactor_dvd_PhiPoly` + `coe_PhiPoly` (`GMC2FrameBridgeDvd`) — the distinguished factor divides `Φ` in the POLYNOMIAL ring `(PowerSeries F)[X]` via Weierstrass division uniqueness (`eq_of_mul_add_eq_mul_add`, `IsDistinguishedAt.map_eq_X_pow` for order=M), NO alg-closure valuation.
+- **KEY IDEAS that unblocked the fleet:** (1) the REFRAME — the orbit-product holds for an *arbitrary* Galois-fixed packet, so `S` = roots of `P` algebraically, killing the months-long valuation extension; (2) the divisibility is a POLYNOMIAL-ring fact over `F[[t]]` (not the field-trivial version), via Weierstrass division uniqueness. I corrected my own too-fast "map to the field" claim mid-session.
+- **FLEET (in conjunction):** mac-mini (Weierstrass, transpose, value), death-star (unified `(LaurentSeries)[[t]]` frame, transpose, Phi-coincidence sidestepping the non-synthesizable `Algebra(RatFunc)(Laurent)`), kind-pasteur (char-0 closing, hderiv legs, Ω-wiring `singlePolyCrux_holds`). My `smallRootFactor_dvd_PhiPoly` feeds death-star's `smallRootFactor_map_dvd_phiVieta_map` → kps's `singlePolyCrux_holds`.
+- **HONEST:** GMC(2) fully formalized. kps's audit: kernel-pure + adversarially sound + LRC-independent. HYP-9012.
+
 ## boxeph-2026-07-22-S242 -- GMC(2) reduced to ONE lemma: the top-level univariate-reduction capstone (kernel-pure) + frame bridge claimed
 
 **Owner:** work on finishing up all remaining GMC2 formalization, pull often and integrate ideas.
