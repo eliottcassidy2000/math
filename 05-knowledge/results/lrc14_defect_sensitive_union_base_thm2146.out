@@ -1,0 +1,26 @@
+THM-2146 EXACT SMALL-CORE UNION LEDGER
+threshold h=3/41; universe C subset {1,...,13}, |C|<=6
+endpoint-cell method == merged-danger-interval method on every input
+
+j  inputs  min measure       equality sets                 longest      positive-length components
+0       1  1                 ()                            1            1
+1      13  35/41             all 13 singletons             varies       varies
+2      78  59/82             (1, 12)                       35/492       12
+3     286  1615/2706         (1, 11, 12)                   31/492       20
+4     715  239/492           (1, 7, 8, 9)                  157/2583     16
+5    1287  2729/7380         (1, 5, 7, 8, 9)               113/2952     18
+6    1716  153101/568260     (1, 5, 7, 8, 9, 11)           107/3608     20
+
+DEFECT-SENSITIVE SIX-SPEED RESIDUAL BASE
+Choose seven noncore speeds as the seven-speed body.
+d  core slots  extra residual speeds  proved safe base  factor over 5/41
+7           6                      0  153101/568260    153101/69300
+8           5                      1  1649/7380        1649/900
+9           4                      2  95/492           19/12
+10           3                      3  427/2706         427/330
+11           2                      4  11/82            11/10
+12           1                      5  5/41             1
+13           0                      6  5/41             1
+
+checked=4096; independent exact methods agree; all assertions passed
+scope: these bases do NOT bound the aggregate covariance with the seven-speed body
