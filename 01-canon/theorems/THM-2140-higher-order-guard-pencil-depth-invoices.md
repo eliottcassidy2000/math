@@ -282,8 +282,10 @@ then
 (1,7,0): |Delta_0|<=b_5.                             (29)
 ```
 
-Combine (29) with the valuation bounds (17)--(18).  Whenever `Delta_0` is
-nonzero,
+Combine (29) with the valuation bounds (17)--(18).  We use the extended
+convention `13^infinity=infinity`; if the displayed order statistic is
+infinite, its valuation bound already forces `Delta_0=0`.  Whenever `Delta_0`
+is nonzero,
 
 ```text
 (1,6,1): 13^a_4<=|Delta_0|<=b_3,
