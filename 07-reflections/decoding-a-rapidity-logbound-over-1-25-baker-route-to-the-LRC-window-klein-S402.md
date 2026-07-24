@@ -82,3 +82,32 @@ convergence (rapidity form + `1/25=1/(2·12+1)` + adelic proof-shape + CF fronti
 Files: this reflection; decode scripts run inline (rapidity/CF/factor analysis, lonely-measure ruleout).
 → THM-252 (rapidity lattice), HYP-1992 (LRC rapidity bridge), `rapidity-supersingular-...-adelic-s19`,
 LRC14-CONTINUED-FRACTION-FRONTIER, CONSTANTS-INDEX (`2/25`, `3/38`), Tao's optimistic conjecture thread.
+
+---
+
+## SOURCE NARROWED (klein-S403, 2026-07-23) — it is the Riesz-product "wider gap" line
+
+Checked the recent LRC literature against the fragment. **Ruled OUT** (no logs / no 1/25 / no matching
+integers in the main text): Rosenfeld "eight runners" (arXiv 2509.14111, product+prime-divisibility),
+Sungkawichai "eleven/twelve/thirteen" (2604.23906, sieve+polynomial — the paper our repo cites).
+**Strong match on THEME:** the ANALYTIC gap-improvement line — **"Riesz products and the Lonely Runner
+Conjecture: A wider gap of loneliness"** (arXiv 2511.16636, Nov 2025; Thm 1.3: `ML(V) ≥ 1/(2n)+1/n^{5/3+o(1)}`,
+Riesz-product test measures `R(x)=∏(1−p cos 2πmx)`) and its relatives. Its eq. (27) is a model-reduction
+inequality `ML(V) ≥ ML(V'') − 1/m^ε − q/p` (a DIFFERENT (27) — no logs), so the fragment's (27) is a
+different paper's / appendix's numbered equation, but the METHOD is this one.
+
+**Interpretation corrected.** In the Riesz-product / entropy method, `log((1+t)/(1−t))` is NOT primarily
+"rapidity" — it is the **binary-entropy / product-log derivative** (`d/dt[ H((1+t)/2) ] `-type term) that
+appears when estimating `∫ Φ·R` or the log of a Riesz product. (The rapidity thread THM-252/HYP-1992 uses
+the *same* function, so the two coincide — a genuine unity worth noting, but the fragment's home is the
+Riesz/`inf L>0` analytic method.) The `> 1/25` is a **wider-gap statement**: for `n≈13`, `1/(2n)=1/26≈0.0385`,
+so proving a Riesz lower bound on `ML(V)` `> 1/25=0.04` beats the trivial union bound — exactly the "wider
+gap of loneliness" claim.
+
+**Repo connection (direct):** opus-S173/S174/S178 (`LRCRieszCertificate.lean`, dissociated looseness
+uniformly Riesz-certifiable, `sup inf_R ∫MR/∫R ≤ 0.55 ⇒ inf L>0`) and **THM-518 (Bedert two-route
+diagnosis)** are the repo's internal development of exactly this method. **The key hint is now sharper:**
+the external Riesz "wider-gap" papers and the repo's opus Riesz thread are the same programme; the fragment
+is a concrete `ML(V) > 1/25` verification from that programme, and the repo should mine 2511.16636 (+ its
+appendices/relatives) for the technique and cross-check against `LRCRieszCertificate`. Still unpinned: the
+exact paper carrying the fragment's (27)+integers (likely an appendix / a companion small-`n` verification).
