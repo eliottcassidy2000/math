@@ -1,0 +1,18 @@
+THM-2161 FIXED-PREFIX MODULUS BLINDNESS REGRESSION
+V_Q={1,...,6,L+7,...,L+13}; L=lcm(2,...,Q); threshold h=3/41
+all arithmetic is exact; the all-Q proof is symbolic in THM-2161
+
+ Q  L digits  max-speed digits  bank best (q)  phase minimum  phase-denominator digits
+14         6                 6       1/14 (14)   22523/180187                         6
+15         6                 6       1/14 (14)   22523/180187                         6
+16         6                 6       1/14 (14)   90091/720734                         6
+17         8                 8       1/14 (14)  1531531/12252254                         8
+23        10                10       1/14 (14)  669278611/5354228894                        10
+41        18                18       1/14 (14)  27382523717448901/219060189739591214                        18
+47        21                21       1/14 (14)  55340080432964226901/442720643463713815214                        21
+64        28                28       1/14 (14)  147783360512852783438920201/1182266884102822267511361614                        28
+97        41                41       1/14 (14)  8715046903714059645566726116914037944601/69720375229712477164533808935312303556814                        41
+
+controls: Q=14 equality sensor; Q=47/97 large banks; every phase denominator exceeds Q
+result: every tested prefix is AP-identical to all its sensors but has a strict 3/41 phase
+all assertions passed

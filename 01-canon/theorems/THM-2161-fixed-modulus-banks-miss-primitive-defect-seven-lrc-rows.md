@@ -18,6 +18,8 @@ related:
   - THM-1002
   - THM-2072
   - THM-2163
+script: 04-computation/lrc14_fixed_modulus_bank_escape_thm2161.py
+output: 05-knowledge/results/lrc14_fixed_modulus_bank_escape_thm2161.out
 ---
 
 # THM-2161 -- fixed modulus banks miss defect-seven rows
@@ -186,13 +188,26 @@ L>=Q(Q-1),
 
 No floating-point estimate is used.
 
+The exact regression
+
+```text
+python3 04-computation/lrc14_fixed_modulus_bank_escape_thm2161.py
+python3 -O 04-computation/lrc14_fixed_modulus_bank_escape_thm2161.py
+```
+
+checks the consequence object on nine hostile prefix banks through `Q=97`,
+including exact defect, primitivity, labelled and multiset residue agreement,
+every bank certificate, the phase minimum, and its reduced denominator. This
+finite replay is a regression for the symbolic proof above, not the source of
+the all-`Q` quantifier.
+
 ## 3. Consequence for the current LRC route
 
 The source row (4) and the tight AP have identical labelled residue words at
 every prescribed modulus, but their geometric gaps differ. Hence the map
 
 ```text
-V -> (V mod q)_(q<=Q)                                 (18)
+V -> (V mod q)_(q<=Q)                                 (20)
 ```
 
 preserves every fixed-bank modulus certificate and destroys the adaptive
@@ -232,20 +247,20 @@ a multiset of exactly `j` nonzero residues by multiplicities
 
 ```text
 c_e at g^e,                         e in Z/HZ,
-S(c)=sum_e e c_e mod H.                              (20)
+S(c)=sum_e e c_e mod H.                              (21)
 ```
 
 If `a=nu_2(j)` and `2^(a+1)|H`, put
 
 ```text
-delta=H/2^(a+1).                                      (21)
+delta=H/2^(a+1).                                      (22)
 ```
 
 Global dilation by `g^delta` cyclically shifts the exponent multiplicities,
 preserves `j`, and changes the checksum by
 
 ```text
-j delta=H/2 mod H.                                    (22)
+j delta=H/2 mod H.                                    (23)
 ```
 
 It also preserves `m_q`, because multiplication of every speed by a unit
