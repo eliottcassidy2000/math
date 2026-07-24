@@ -86,6 +86,31 @@ pinned by the full `∫M log R` second-order expansion. Numerator `2457=27·91=3
 `7·13` (via `91`); denominator `6592=2⁶·103` is data-fitted/foreign (kps-S129: no factor 7) — numerator structural,
 denominator optimizer-output, consistent.
 
+## Cross-repo instances (non-LRC) — the snippet is one node of the "arctanh = universal linearizer" thesis
+Mining beyond LRC (owner: "even if it seems unrelated, let connections pop"), the snippet's `2·arctanh(t)=log_F`
+device is the repo's **formal-group bridge "between bounded and unbounded"** (grand-trichotomy.md), and shows up
+verbatim in threads that never mention LRC:
+- **Collatz rapidity defect (HYP-2148/CONJ-defect-bound).** The Collatz Syracuse defect is
+  `D(n)=Σ_i ln(1+1/(3a_i))`, and `ln(1+1/(3a)) = 2·arctanh(1/(6a+1))` **exactly** (verified: a=1→0.28768…,
+  a=5→0.06454…). So `D(n)=Σ_i 2·arctanh(1/(6a_i+1))` is a sum of the *same* rapidity terms the snippet certifies.
+  **Transfer:** the snippet's truncate+geometric-tail engine (P1) gives certified two-sided bounds on each term,
+  i.e. the analytic brick for proving `sup_n D(n) < D*≈0.2257` (the hard part stays combinatorial: which small-odd
+  multisets co-occur — but the per-term bound is exactly P1). Same adelic archimedean/p-adic shadow as THM-252.
+- **THM-2000 / Abel–Dini.** `2·arctanh(1/3)=log 2 = M(6,2)`; opus-S2 already certified `M(6,2)>M(4,3)` float-free
+  with the engine. mac-mini-S169's unification: amplitude `a=0.6 ⇒ ρ=1/3 ⇒ 2arctanh(1/3)=log2` ties the LRC
+  log-Riesz weight, THM-252 rapidity, HYP-1992, and THM-2000's log2 into ONE function `2arctanh(ρ)`.
+- **Trichotomy alignment (thematic, flagged speculative).** `2457 = 3³·7·13`: the **3** is the RAMIFIED prime =
+  "curvature" (matching Σv²=curvature) and **7·13=91=C(14,2)** sits in the `{2,3,7}` hyperbolic "forbidden world"
+  that LRC(14) inhabits; the denominator `6592=2⁶·103` is in the `{2}`-persist axis + foreign data (no 7). So the
+  snippet's *numerator* is structural (curvature × pair-core), *denominator* data-fitted — the same
+  structural/optimizer split kps-S129 saw arithmetically. (Numerology caveat: this is thematic resonance, not proof.)
+
+**Meta-insight:** the snippet is not "about" one problem — it is a **certified, second-moment-weighted instance of the
+repo's central arctanh/formal-group linearizer**, which is why it lights up LRC (log-Riesz), tournament (rapidity),
+Collatz (defect), and Abel–Dini (mass log) simultaneously. The reusable deliverable across all four is the *certified*
+part (P1) — the repo has the linearizer everywhere but has been doing it in floats or "paper proof"; the snippet shows
+the float-free version.
+
 ## Ledger
 Strongest bet: **T2** (log-energy as an efficient complement to the moment-LP) — genuinely untried, testable.
 Most actionable now: **T1** (Lean brick). Best "revive": **T3** (adelic archimedean floor). All rest on the
