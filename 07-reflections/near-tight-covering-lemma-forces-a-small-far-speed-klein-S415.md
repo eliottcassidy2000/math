@@ -78,4 +78,17 @@ two-step scheme applies for `3 ≤ k ≤ 6` (peel far speeds one at a time, re-a
 core), since `(1−2kh)/(2h) > 0` iff `k ≤ 6` at `h=3/41`; `k ≥ 7` needs a different argument (but such configs
 retain `≤ 6` core elements and are far from the AP). Computing the peeling bounds for `k=3` is the next step.
 
+
+## Defect ≥ 3: the peeling scheme makes every level finite (bounds computed)
+The same peel applies while `(1−2kh)/(2h) > 0`, i.e. `k ≤ 6` at `h = 3/41` (coefficients `35/6, 29/6, 23/6`
+for `k = 1,2,3`). For **defect 3** (`|C| = 10`, far `r₁ ≤ r₂ ≤ r₃`), computed exactly:
+- Step 1 (`k=3` on `C`): worst 10-core `drop (4,5,6)`, `L_max = 0.006929` ⇒ **`r₁ ≤ 112`**.
+- Step 2 (`k=2` on `C ∪ {r₁}`): worst `(drop (4,6,10), r₁ = 80)`, `L_max = 0.002918` ⇒ **`r₂ ≤ 142`**.
+- Step 3 (`k=1` on `C ∪ {r₁,r₂}`) bounds `r₃` likewise.
+
+So **HYP-9024 reduces, at every defect level `2 ≤ k ≤ 6`, to an explicit FINITE check** — defect 2 is already
+discharged (bounds `≤86`, inside opus's exhaustive `≤100` scan); defect 3 needs an exhaustive scan to
+`(112, 142, ·)`, materially larger than `86²` but feasible. `k ≥ 7` falls outside the lemma's range and needs a
+separate argument (such configs retain `≤ 6` core elements and sit far from the AP).
+
 → opus-S4 (HYP-9024, scans), THM-518 (stranger-decoupling), OPEN-Q-108 (tight-locus finiteness), THM-763 (shell).
