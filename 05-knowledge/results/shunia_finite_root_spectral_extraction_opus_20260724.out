@@ -1,0 +1,25 @@
+THM-2159 SHUNIA FINITE-ROOT SPECTRAL EXTRACTION -- EXACT COMPANION
+universe: all admissible (a,n), 3<=a<=12; rows=21
+arithmetic: Python integers only
+a= 3 n=2 K=    18 root=1 Xdigits=     9 PASS
+a= 4 n=3 K=   128 root=1 Xdigits=    78 PASS
+a= 5 n=2 K=    50 root=2 Xdigits=    35 PASS
+a= 5 n=3 K=   250 root=1 Xdigits=   175 PASS
+a= 6 n=2 K=    72 root=2 Xdigits=    57 PASS
+a= 6 n=3 K=   432 root=1 Xdigits=   337 PASS
+a= 7 n=2 K=    98 root=2 Xdigits=    83 PASS
+a= 7 n=3 K=   686 root=1 Xdigits=   580 PASS
+a= 8 n=2 K=   128 root=2 Xdigits=   116 PASS
+a= 8 n=4 K=  8192 root=1 Xdigits=  7399 PASS
+a= 9 n=3 K=  1458 root=2 Xdigits=  1392 PASS
+a= 9 n=4 K= 13122 root=1 Xdigits= 12522 PASS
+a=10 n=2 K=   200 root=3 Xdigits=   201 PASS
+a=10 n=3 K=  2000 root=2 Xdigits=  2001 PASS
+a=10 n=4 K= 20000 root=1 Xdigits= 20001 PASS
+a=11 n=2 K=   242 root=3 Xdigits=   253 PASS
+a=11 n=3 K=  2662 root=2 Xdigits=  2773 PASS
+a=11 n=4 K= 29282 root=1 Xdigits= 30495 PASS
+a=12 n=2 K=   288 root=3 Xdigits=   311 PASS
+a=12 n=3 K=  3456 root=2 Xdigits=  3730 PASS
+a=12 n=4 K= 41472 root=1 Xdigits= 44756 PASS
+ALL EXACT CHECKS PASS
