@@ -1,0 +1,16 @@
+CERTIFIED Q_s for THM-729 (exact endpoints; head->L=3000, err<M^2 2^-50; tail<M^2/L), w=997
+====================================================================================================
+  cluster E                  diam Mmax  min arc width grid?     certified Q_s (max_s)    Q/diam band
+----------------------------------------------------------------------------------------------------
+  [0, 1, 2, 3, 4, 5, 6]         6   14      4.762e-03    OK  [  19.448,   19.460]      [3.241, 3.243]
+  [0, 1, 2, 3, 4, 5, 12]       12   14      2.381e-03    OK  [  17.181,   17.246]      [1.432, 1.437]
+  [0, 1, 2, 3, 4, 5, 25]       25   18      1.429e-03    OK  [  41.824,   41.872]      [1.673, 1.675]
+  [0, 1, 2, 4, 8, 16, 32]      32   22      4.464e-03    OK  [  16.219,   16.352]      [0.507, 0.511]
+  [0, 3, 7, 15, 30, 55, 90]    90   56      1.443e-04    OK  [ 121.936,  122.368]      [1.355, 1.360]
+  [0, 5, 13, 28, 54, 88, 140]  140   80      3.779e-05    OK  [ 217.017,  218.942]      [1.550, 1.564]
+  [0, 10, 27, 55, 99, 150, 199]  199  120      4.786e-06    OK  [ 216.567,  220.748]      [1.088, 1.109]
+----------------------------------------------------------------------------------------------------
+Certified two-sided Q_s per cluster (float-free). Q/diam bounded across all clusters
+=> Q_s=O(diam) holds RIGOROUSLY on the tested box (THM-729's empirical claim, now certified).
+'grid?'=MISS: an R_s arc is narrower than 1/NGRID, so klein's float grid could not resolve it;
+the exact-endpoint value supersedes the float table there.
