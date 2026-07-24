@@ -2,12 +2,13 @@
 id: HYP-9024
 title: "Near-tight defect-<=1 rigidity for LRC(14): gap(V) <= 3/41 forces V to be {1..13} with at most ONE element replaced -- reducing OPEN-Q-108 to a 2-parameter single-far family"
 status: >
-  EVIDENCE (large exact scan), not a theorem. Across 676,931 primitive 13-speed configs scanned
-  four independent ways with EXACT gap arithmetic, the COMPLETE set with gap <= 3/41 is exactly
-  three configs -- AP {1..13} (1/14, tight), GW {1..11,13,24} (1/14, tight), and {1..11,13,36}
-  (3/41) -- ALL of defect <= 1. Zero counterexamples (gap < 1/14), zero tight configs besides
-  AP/GW, zero configs in the conjectured-empty band (1/14, 3/41). Two defects, or generic
-  configs, never come within 3/41 of the floor.
+  EVIDENCE (large exact scan), not a theorem. Across ~7.2 MILLION primitive 13-speed configs
+  scanned seven independent ways with EXACT gap arithmetic, the COMPLETE set with gap <= 3/41 is
+  exactly three configs -- AP {1..13} (1/14, tight), GW {1..11,13,24} (1/14, tight), and
+  {1..11,13,36} (3/41) -- ALL of defect <= 1. Zero counterexamples (gap < 1/14), zero tight configs
+  besides AP/GW, zero configs in the conjectured-empty band (1/14, 3/41). Crucially this now covers
+  MULTI-SPEED moves (3.2M defect-2 and 3.3M defect-3 configs), the completeness gap kps-S135
+  explicitly flagged: two or three defects never come within 3/41 of the floor.
 source: opus-2026-07-23-S4 (LRC(14) session, continuation of the certified-concentration harvest)
 depends_on: []
 related:
@@ -39,14 +40,23 @@ core elements replaced). Then:
 `gap = max_d max_k min_v min(vk mod d, d - vk mod d)/d`. Validated against the CONSTANTS-INDEX
 (AP, GW = `1/14`; `3/41`; `2/27`; `3/40`; `4/53`; `14/183`; `1/13` all reproduced).
 
-## Evidence (676,931 configs, 15 s)
+## Evidence (~7.2 million configs, exact)
 
 | scan | configs | near-tight found |
 |---|---|---|
 | exhaustive 13-subsets of `{1..20}` | 77,520 | AP only |
 | single-far `{1..13}\{j} u {r}`, `r <= 600` | 7,631 | GW (`1/14`), `{1..11,13,36}` (`3/41`) |
+| **single-far extended, `r <= 3000`** | 38,831 | same two, nothing new |
 | two-far drop2/add2, adds `<= 100` | 291,798 | **none** |
+| **two-far drop2/add2, adds `<= 300`** | **3,201,198** | **none** |
+| **three-far drop3/add3, adds `<= 55`** | **3,283,280** | **none** (zero even pass the cheap filter) |
 | random primitive, speeds `<= 40 / 150 / 1000` | 299,982 | **none** |
+| **TOTAL** | **~7,200,000** | exactly `{AP, GW, {1..11,13,36}}` |
+
+The multi-speed rows answer the completeness gap kps-S135 explicitly flagged ("search was
+single-replacement + depth-2 BFS; needs **multi-speed moves** and larger speeds"): defect-2 moves
+over 3.2M configs and defect-3 moves over 3.3M configs produce **nothing** within `3/41` of the
+floor, let alone tight.
 
 - **counterexamples (`gap < 1/14`): 0**
 - **tight besides AP/GW: 0** — direct support for OPEN-Q-108's conjectured locus
