@@ -2,8 +2,7 @@
 id: THM-2148
 title: "Three-target finite-kernel Fano obstruction"
 status: >
-  RESERVED / UNPROVED PROOF CANDIDATE UNDER AUDIT. The candidate theorem says
-  that if three radius-1/14 character bands cover the asymmetric source
+  PROVED. If three radius-1/14 character bands cover the asymmetric source
   rectangle cut out by radii 1/7 and 1/14, then one target lies in the exact
   integer span of the two source characters (or on their saturated rational
   line in the dependent case). The only possible obstruction on the common
@@ -28,7 +27,10 @@ output_sha256: f92309860bf01db92e53bb01095ecd0e86e46eab8d656b041aad3b890f5a50b3
 
 # THM-2148 -- three-target finite-kernel Fano obstruction
 
-**RESERVED / UNPROVED PROOF CANDIDATE UNDER AUDIT.**
+**PROVED.** The all-group proof below and its LRC application received an
+independent hostile audit, including a separate endpoint sweep through
+character-image order `99,999`.  The finite script is a control rather than
+a dependency.
 
 Let `Gamma` be a rank-two character lattice and
 
@@ -49,7 +51,7 @@ Take nonzero characters `a,b,w_1,w_2,w_3` and suppose
                          subset D_(w_1) union D_(w_2) union D_(w_3). (2)
 ```
 
-The candidate theorem has two clauses.
+The theorem has two clauses.
 
 1. If `a,b` are rationally independent, then for some `j`
 
