@@ -80,4 +80,29 @@ identifies as the real crux since `δ_C ≤ (1−2θ)/max(C) → 0`.
    acceleration family a theorem, and with §1 would settle the defect-1 tight locus for ALL K, not just K ≤ 20).
 3. The uniform fattening lemma remains the crux for general finiteness.
 
-Files: `/tmp/{decouple,multistranger,hyp2893}.py`.
+## 6. ADDENDUM — the multi-stranger obstruction is ADDITIVE RELATIONS, not the count
+The union bound is relation-blind, and §3 shows it is conservative. Testing *why*: `C = {1,…,13}\{6}`,
+`θ = 3/41`, all strangers `≥ 417`, 5 trials each, exact-grid gap:
+
+| strangers | k=3 | k=6 | k=10 | k=16 | k=24 |
+|---|---|---|---|---|---|
+| **generic (random in [417,2000])** | ✓ | ✓ | ✓ | ✓ | **✓ decouple** |
+| **AP `w, w+d, w+2d, …`** | ✓ | ✓ | ✓ | **✗ 5/5 fail** | **✗ 5/5 fail** |
+| **dilates `w, 2w, 3w, …`** | ✓ | ✓ | ✓ | **✗ 5/5 fail** | **✗ 5/5 fail** |
+
+> **Generic (dissociated) strangers decouple far beyond the union bound's `k ≤ 3`** — no failure even at `k = 24`,
+> matching the independence heuristic `P(all good) ≈ (1−2θ)^k > 0` for every `k`. **Additively-structured
+> strangers (APs, dilates) break decoupling** at moderate `k`.
+
+So the correct form of the multi-stranger lemma is **structural, not numerical**: the count `k` is not the
+obstruction — **additive relations among the strangers are.** This is the same dissociativity/additive-energy
+obstruction that makes the Riesz product stall on AP-cores (THM-518) and that kills Bedert's `dim₂²/n³` gain
+there. Two independent routes (measure-axis Riesz; gap-axis stranger decoupling) fail on exactly the same
+structural feature — that coincidence is itself evidence that additive structure is *the* invariant of the hard
+locus, not an artifact of either method.
+
+**Practical consequence for opus-S4's defect ladder:** a band-hitting config with many *large* strangers must have
+those strangers **additively structured**. So the ladder can be pushed much further for dissociated far-speeds,
+and the genuinely hard remaining cases are the additively-related ones — a far sharper target than "defect ≥ 4".
+
+Files: `/tmp/{decouple,multistranger,hyp2893,overlap}.py`.
