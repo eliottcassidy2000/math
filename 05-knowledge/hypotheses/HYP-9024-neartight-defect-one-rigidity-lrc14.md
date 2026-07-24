@@ -112,10 +112,24 @@ ten-cores x all triples from `14..82` = **14,984,684 configs** — finds **zero*
 **No defect-3 config has `gap <= 3/41`.** (`lrc14_defect3_{bounds,closure_scan}_opus_S4.py`)
 
 **Remaining.** `d = 1` (the 2-parameter family `{1..13}\{j} u {r}`, scanned to `r <= 3000`: only GW
-tight and `{1..11,13,36}` at `3/41`) and `d >= 4`. The recursion extends in principle while klein's
-lemma is valid, i.e. `h < 1/(2k)` gives `k <= 6` at `h = 3/41`; `d >= 7` needs a separate argument.
-Note higher defect gives a SMALLER core, hence a LARGER `L_max(C)`, hence TIGHTER bounds — so the
-method should get easier, not harder, as `d` grows toward 6.
+tight and `{1..11,13,36}` at `3/41`) and `d >= 4`.
+
+*Corrected note (tested, `lrc14_defectk_quicktest_opus_S4.py`).* I first expected the recursion to get
+EASIER as `d` grows (smaller core => larger `L_max(C)`). **That is false.** The minimum over cores of
+`B_k(C) = L_max(C)(1-2kh)/(2h)` does NOT grow with `k` —
+
+```
+k = 2:0.0285  3:0.0266  4:0.0298  5:0.0253  6:0.0131      (factor shrinks 29/6, 23/6, 17/6, 11/6, 5/6)
+```
+
+— because the worst core is adversarial and its `L_max` stays `~0.005-0.01` while the factor decays.
+**Recorded negative:** the immediate test "`min_C B_k(C) > k/14`" (all far speeds `>= 14` force
+`sum 1/s_i <= k/14`) FAILS at every `k` (`0.03` vs `0.14-0.43`), so the lemma alone never closes a
+defect level — `d=2,3` genuinely needed the band criterion PLUS an exhaustive scan of the finite
+region. For `d=4` that region is `~618M` configs (715 cores x C(69,4)), so brute force is infeasible;
+`d>=4` needs better pruning or a structurally different argument, and `d>=7` fails klein's hypothesis
+`h < 1/(2k)` outright. Consequently the reduction of OPEN-Q-108 to a defect-1 question is conditional
+on `d >= 4` as well.
 
 ## Honest scope
 
