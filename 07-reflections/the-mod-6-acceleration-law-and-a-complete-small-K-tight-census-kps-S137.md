@@ -72,4 +72,18 @@ extraordinarily small residual for the LRC(14) endgame — and it is the concret
 2. **Prove/refute "exotics die out"** — it is what completeness rests on; extend the exhaustive census to K=13,15,16.
 3. **Locate the `2^{n-2}` barrier family** and test whether it intersects K=14.
 
-Files: `/tmp/{law,law2,law3,census2,table,k7full,k8,small_n}.py`.
+## 6. ADDENDUM — the exotics-die-out hypothesis, further tested
+Extended the exhaustive census (TOP = 20):
+| k | K | K mod 6 | total | canonical | acceleration (law) | exotic |
+|---|---|---|---|---|---|---|
+| 12 | 13 | 1 | 1 | ✓ | absent (predicted absent ✓) | **0** |
+| 13 | 14 | **2** | 1 | ✓ | outside range (speed 24 > 20) | **0** |
+| 14 | 15 | 3 | 1 | ✓ | absent (predicted absent ✓) | **0** |
+
+So across the **full census `K = 4..15`, exotics occur ONLY at `K = 5, 6, 8`** — zero at `K = 7, 9, 10, 11, 12,
+13, 15` and zero at `K = 14` up to speed 20. The mod-6 law's presence/absence predictions match in every case
+tested. The "exotics are a small-`K` sporadic phenomenon" hypothesis is now supported by **seven** consecutive
+negative `K` values rather than four. It remains a hypothesis (speed-range limited), but it is the best-supported
+assumption in the completeness argument.
+
+Files: `/tmp/{law,law2,law3,census2,census3,table,k7full,k8,small_n}.py`.
