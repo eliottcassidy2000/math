@@ -62,22 +62,28 @@ verified across `delta = gap - 1/14` spanning two decades (`N* delta / slope ~ 0
 drift = the `log N*` correction). E.g. `2/27` (`delta=1/378`) certifies at `N*=2720`; `1/8`
 (`delta=0.054`) at `N*=100`; `1/2` at `N*=20`.
 
-## What this makes precise (the reduction)
+## What this makes precise (the reduction) -- with a self-correction
 
-The certifiable-concentration route (kps-S132) becomes an explicit two-part reduction of LRC(14):
+The corner slope in `N* ~ (slope)/delta` is the **max** binding speed at `tau*` (the min of tents is
+dominated by the steepest descending one), and a **CORRECTION** to my first draft: a large remote speed
+CAN bind. Verified on `{1..12,r}` (all gap `1/13`, `delta = 1/182`): usually only the core `{1,12}` binds
+(slope `6.5`), but for `r in {14,25,27,40}` the remote `r` also binds, and the max binding slope then
+grows with `r` (`r=40 -> {1,12,40}`, slope `17.7`). So the binding slope is **not** uniformly `~13`; it is
+bounded only by the max speed. This makes the reduction:
 
-1. **Bulk.** Every config with margin `delta = gap - 1/14 >= eps0` is certified `gap > 1/14` by the
-   float-free Fejer bound at degree `N ~ (binding slope)/eps0`. Crucially the binding runners of a
-   NEAR-tight config are its small-speed core (the `{1..n}` part), so the binding slope there is
-   BOUNDED (`~ n ~ 13`), independent of any large remote speed. So the bulk needs a UNIFORMLY bounded
-   degree `~ 13/eps0` once `eps0` is fixed.
-2. **The strip `0 < delta < eps0`** (near-extremizers) is where `N*` diverges -- exactly OPEN-Q-108,
-   the tight-locus rigidity/finiteness.
+1. **Bulk.** Every config with `delta = gap - 1/14 >= eps0` is certified `gap > 1/14` by the float-free
+   Fejer bound at degree `N ~ (max binding speed)/eps0`. The max binding speed is `<= max speed`, which is
+   bounded only by the **finite-shell theorem THM-763** (`sum v_i <= 91^12`). So the bulk degree is FINITE
+   but astronomical (`~ 91^12/eps0`), not the practical `~10^4` my draft wrongly claimed.
+2. **The strip `0 < delta < eps0`** (near-extremizers) is where `N*` diverges -- exactly OPEN-Q-108
+   (tight-locus rigidity/finiteness).
 
-So **LRC(14) via concentration = [a spectral gap `eps0 > 0` above `1/14`] + [tight-locus finiteness]**.
-The spectral gap is the conjectured emptiness of `(1/14, 3/41)` (`eps0 = 1/574`; searched, THM-1235/1240,
-NOT a theorem); with it and part (1), the whole non-tight regime is certified at Fejer degree
-`~ 13*574*log ~ 10^4-10^5`, reducing LRC(14) to the finite tight locus `{AP, GW}`.
+So **LRC(14) via concentration = [finite shell THM-763] + [a spectral gap `eps0>0` above `1/14`] + [tight-
+locus finiteness]**, at Fejer degree `~ (max speed)/eps0`. The spectral gap is the conjectured emptiness of
+`(1/14, 3/41)` (`eps0 = 1/574`; searched, THM-1235/1240, NOT a theorem). This is a valid FINITE reduction,
+not a practical certification: the degree is astronomical and two of the three inputs are open/hard. The
+durable content is the per-config certified `gap>1/14` primitive and the quantitative cost law `N* ~
+(max binding speed)/delta`.
 
 ## Honest scope
 
