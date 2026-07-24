@@ -1,0 +1,27 @@
+CONTROL: run the SAME machinery at defect 1, where the answer is known.
+Expect exactly GW {1..11,13,24} (gap 1/14) and {1..11,13,36} (gap 3/41), i.e. j=12, s in {24,36}.
+
+  near-tight defect-1 configs found: 2
+    drop j=12, far s=24   (band bound for this core: s <= 42)
+    drop j=12, far s=36   (band bound for this core: s <= 42)
+
+  CONTROL PASSES - machinery recovers exactly the known answer
+
+FULL defect-1 band bounds (s <= 2h/L_max(C)) for every dropped j:
+   drop j= 1: L_max=0.034709  => far speed s <=   4   near-tight s: []
+   drop j= 2: L_max=0.014540  => far speed s <=  10   near-tight s: []
+   drop j= 3: L_max=0.011456  => far speed s <=  12   near-tight s: []
+   drop j= 4: L_max=0.006929  => far speed s <=  21   near-tight s: []
+   drop j= 5: L_max=0.006775  => far speed s <=  21   near-tight s: []
+   drop j= 6: L_max=0.002402  => far speed s <=  60   near-tight s: []
+   drop j= 7: L_max=0.014071  => far speed s <=  10   near-tight s: []
+   drop j= 8: L_max=0.013163  => far speed s <=  11   near-tight s: []
+   drop j= 9: L_max=0.010507  => far speed s <=  13   near-tight s: []
+   drop j=10: L_max=0.005897  => far speed s <=  24   near-tight s: []
+   drop j=11: L_max=0.008130  => far speed s <=  18   near-tight s: []
+   drop j=12: L_max=0.003484  => far speed s <=  42   near-tight s: [24, 36]
+   drop j=13: L_max=0.004065  => far speed s <=  35   near-tight s: []
+
+  MAX bound over all j = 60.  So EVERY defect-1 near-tight config has far speed <= 60,
+  and exhaustive enumeration to that bound gives exactly {GW (s=24), {1..11,13,36} (s=36)}.
+  => DEFECT 1 IS CLOSED (not an unbounded family): only GW is TIGHT at defect 1.
