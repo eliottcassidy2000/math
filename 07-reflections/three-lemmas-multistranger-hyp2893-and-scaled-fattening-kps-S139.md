@@ -67,6 +67,14 @@ Evidence: all 13 twelve-subsets of `T1` and all 13 of `T2` (min `= 0.03123`, at 
 primitive 12-subsets with `max ≤ 30` (9 restarts) bottoms out at `0.052`, above the AP-core; spread sets like
 `{1,…,11} ∪ {W}` rise to the ceiling `1−2θ = 0.854`.
 
+**STRENGTHENED (larger adversarial search, completed after the first draft).** Hill-descent on
+`δ_C · max(C)` over primitive 12-subsets, **14 restarts, max ≤ 70**, starting from random sets:
+> the descent **converges to the AP-core itself** — best found `= 0.031227 = 169/5412` at
+> `C = (1,2,3,4,5,7,8,9,10,11,12,13) = {1,…,13}\{6}`, with **nothing below it.**
+
+So the AP-core is an *attractor* of the minimisation from random starts over a wide range, not merely a small
+value that happened to be tested. This is the strongest evidence yet for the conjectured constant and equality case.
+
 **Why this is the useful form.** `δ_C ≥ c/max(C)` gives `W = 1/δ_C ≤ max(C)/c ≈ 32·max(C)`:
 > **No huge jumps** — a stranger that creates a band-hitter is at most `~32×` the largest speed already present.
 That is precisely the ingredient a finiteness/descent argument needs, and it survives the objection that killed
