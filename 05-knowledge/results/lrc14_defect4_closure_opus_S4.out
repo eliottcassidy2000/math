@@ -1,0 +1,4 @@
+DEFECT-4 closure search (klein-lemma pruning at every node + band criterion at the last)
+  9-cores processed: 715/715   nodes=966,120   [15s]
+  near-tight defect-4 configs found: 0
+  => DEFECT-4 CLOSED (no config has gap<=3/41)
