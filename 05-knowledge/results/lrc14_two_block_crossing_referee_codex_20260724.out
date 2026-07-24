@@ -1,0 +1,11 @@
+THM-2145 exact two-block spectral-crossing referee
+boundary points=178, open cells=177, seven-cores=1716
+unique safe-mass minimizer=(1, 5, 7, 8, 9, 11, 13): 45107/229320
+independent union check: bad=184213/229320, safe=45107/229320
+raw common denominator 5045040: bad=4052686, safe=992354
+general N=293, H=584, C0=16769269, floor(S)=20628748, eta_upper<1439/1000000
+general crossing gap at eta0=548679648961/10510500000000000 > 0; N=292 certificate fails
+core N=150, H=298, C0=2250050, S>2760290, eta_upper<281/100000
+core crossing gap at eta0=322476924229/7825545000000000 > 0; N=149 certificate fails
+normalized retained-core carry bounds: 584*70=40880, 298*70=20860
+ALL EXACT ASSERTIONS PASSED
