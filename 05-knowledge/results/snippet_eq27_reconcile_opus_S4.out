@@ -1,0 +1,53 @@
+ratio_A (1+tA)/(1-tA) = 1285/896  expected 1285/896  -> True
+ratio_B (1+tB)/(1-tB) = 8847357/2974400  expected 8847357/2974400 -> True
+  [A] x=389, Sn-1+Sn=2181, t=x/(Sn1+Sn)=389/2181  matches t_A: True
+  [B] x=5872957, Sn-1+Sn=11821757, t=x/(Sn1+Sn)=5872957/11821757  matches t_B: True
+
+[CLAIM] (2457/6592)*L_B - U_A - 1/25 == G exactly : True
+        residual (should be 0): 0
+[CLAIM] integer form 2457*L_B - 6592*U_A >= 6592/25 : 381252578007913041913040854808609462873716072777177283/1292794676284272145114116230095022874019059389658900 >= 6592/25 -> True
+
+--- height of c_d=(T+d*U_A)/L_B over integer d (r=0 model) ---
+  d=-2: log10(height)= 52.5   c=(height ~10^52)
+  d=-1: log10(height)= 52.7   c=(height ~10^53)
+  d=+0: log10(height)= 53.0   c=(height ~10^53)
+  d=+1: log10(height)=  3.8   c=2457/6592
+  d=+2: log10(height)= 53.0   c=(height ~10^53)
+  d=+3: log10(height)= 52.7   c=(height ~10^53)
+  d=+4: log10(height)= 52.6   c=(height ~10^53)
+  d=+5: log10(height)= 52.6   c=(height ~10^53)
+
+--- factorizations ---
+  Sn-1(A)=896            = {2: 7, 7: 1}
+  Sn(A)=1285             = {5: 1, 257: 1}
+  x(A)=389               = {389: 1}
+  Sn1+Sn(A)=2181         = {3: 1, 727: 1}
+  Sn-1(B)=2974400        = {2: 6, 5: 2, 11: 1, 13: 2}
+  Sn(B)=8847357          = {3: 1, 2949119: 1}
+  x(B)=5872957           = {19: 1, 103: 1, 3001: 1}
+  Sn1+Sn(B)=11821757     = {31: 1, 381347: 1}
+  coef num 2457          = {3: 3, 7: 1, 13: 1}
+  coef den 6592          = {2: 6, 103: 1}
+  G num                  = {17: 1, 19: 1, 97: 1, 709: 1, 5659: 1, 15101: 1, 29044229: 1, 7108523489320474392469715233: 1}
+  G den                  = {2: 8, 3: 4, 5: 2, 7: 1, 31: 5, 257: 1, 727: 3, 381347: 5}
+
+--- true values ---
+  log_A = 0.360573584354389701926576054337
+  log_B = 1.09007643236397889963867871664
+  log_B / log_A = 3.0231732984981989571
+  (2457/6592)log_B - log_A = 0.0457246247351576518980953059167
+  1/25 = 0.04    margin = 0.0057246247351576518981
+  certified G = 0.0047369153018920394397
+
+--- log-prime-lattice test (Baker reading) ---
+  log_A - (log5+log257-7log2-log7) = -3.068183416e-91 (0 => exact prime combo)
+  8847357 factored: {3: 1, 2949119: 1}  -> largest prime = 2949119
+  2974400 factored: {2: 6, 5: 2, 11: 1, 13: 2}
+
+--- THM-2000 mass proximity ---
+  M(6,2)=2log2 = 1.38629436111989
+  M(4,3)=18-24log2 = 1.36446766656131
+  M(6,2)-M(4,3) = 26log2-18 = 0.021826694558578
+  log_A = 0.36057358435439   ~ M(6,2)-M(4,3)? ratio: 16.519844
+
+  pslq[log_A, log_B] small integer relation: None (None => Q-independent at that height)
