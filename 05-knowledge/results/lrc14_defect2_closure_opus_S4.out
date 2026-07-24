@@ -1,0 +1,23 @@
+DEFECT-2 CLOSURE TEST at h=3/41.
+Criterion (exact): gap(C u {s,r}) <= h  =>  r <= 2h / L_max(C u {s})
+  because D_r has bands of width 2h/r separated by gaps, so an interval longer
+  than 2h/r cannot fit inside a band.  If all r_max <= 300, my exhaustive
+  adds<=300 scan already covered every possibility => DEFECT-2 CLOSED.
+
+  (C,s) pairs tested: 4446   (L_max=0 cases: 0)
+  LARGEST r_max values:
+    drop( 6,10) s= 40: L_max(Cu{s})=0.002003  =>  r <= 73
+    drop( 6,10) s= 50: L_max(Cu{s})=0.002402  =>  r <= 60
+    drop( 6,10) s= 30: L_max(Cu{s})=0.002402  =>  r <= 60
+    drop( 6,10) s= 20: L_max(Cu{s})=0.002402  =>  r <= 60
+    drop( 4, 6) s= 42: L_max(Cu{s})=0.002428  =>  r <= 60
+    drop( 4, 6) s= 38: L_max(Cu{s})=0.002402  =>  r <= 60
+    drop(10,12) s= 60: L_max(Cu{s})=0.002613  =>  r <= 56
+    drop( 6,10) s= 60: L_max(Cu{s})=0.002613  =>  r <= 56
+    drop(10,12) s= 70: L_max(Cu{s})=0.002787  =>  r <= 52
+    drop( 6,10) s= 70: L_max(Cu{s})=0.002787  =>  r <= 52
+    drop( 6, 8) s= 16: L_max(Cu{s})=0.002831  =>  r <= 51
+    drop( 5, 6) s= 57: L_max(Cu{s})=0.003252  =>  r <= 45
+
+  MAX r_max over ALL (core, s<=70) = 73
+  my exhaustive scan covered adds <= 300  ->  CLOSED: every defect-2 near-tight config was scanned

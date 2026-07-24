@@ -2,7 +2,8 @@
 id: HYP-9024
 title: "Near-tight defect-<=1 rigidity for LRC(14): gap(V) <= 3/41 forces V to be {1..13} with at most ONE element replaced -- reducing OPEN-Q-108 to a 2-parameter single-far family"
 status: >
-  EVIDENCE (large exact scan), not a theorem. Across ~7.2 MILLION primitive 13-speed configs
+  PARTLY PROVED (defects 2 and 3 are now THEOREMS; see the closure section), plus large-scan
+  evidence elsewhere. Across ~7.2 MILLION primitive 13-speed configs
   scanned seven independent ways with EXACT gap arithmetic, the COMPLETE set with gap <= 3/41 is
   exactly three configs -- AP {1..13} (1/14, tight), GW {1..11,13,24} (1/14, tight), and
   {1..11,13,36} (3/41) -- ALL of defect <= 1. Zero counterexamples (gap < 1/14), zero tight configs
@@ -79,13 +80,42 @@ so OPEN-Q-108 collapses from "all 13-speed configs" to a Diophantine question in
 vastly smaller object, and one the repo's single-far machinery (THM-1017, the single-far
 absorption atlas) is already built for.
 
-## Suggested proof route
+## PROVED: defects 2 and 3 are CLOSED
 
-Prove the contrapositive structurally: **`d(V) >= 2 ==> gap(V) > 3/41`.** Removing two core
-elements frees two residue classes, which should leave a `tau` avoiding all remaining speeds by
-more than `3/41` (a covering/counting argument on the core's safe arcs, not a search). The
-defect-`<=1` family is then handled directly: within `{1..13}\{j} u {r}`, tightness is a congruence
-condition on `(j, r)` — exactly the object THM-1017 addresses.
+The suggested contrapositive route is now realized for `d = 2, 3`, combining klein-S415's covering
+lemma with one further elementary step.
+
+**Band-width criterion (new, elementary, exact).** Write `V = W u {r}` with `r` the largest far
+speed. `gap(V) <= h`  iff  `Lon_h(W)` is covered by `D_r = {tau : ||r tau|| <= h}`. But `D_r` is a
+union of bands of width `2h/r` separated by gaps of width `(1-2h)/r > 0`, so an interval longer than
+`2h/r` cannot lie inside a single band and must meet a gap. Hence every arc of `Lon_h(W)` has length
+`<= 2h/r`, giving
+
+```
+    r  <=  2h / L_max(W).
+```
+
+This bounds the LARGEST far speed directly, and is sharper than bounding `sum 1/r` because it uses
+the actual lonely structure of `W`.
+
+**Defect 2 (THEOREM).** klein's lemma (`k=2`, factor `29/6`) gives `min(far) <= 70`. For each of the
+78 cores and each `s in 14..70` (4,446 pairs, exact rationals) the criterion gives
+`r <= 2h/L_max(C u {s})`, with **max `r_max` = 73** (worst: `drop(6,10)`, `s=40`,
+`L_max = 0.002003`). So both far speeds are `<= 73`, a finite region contained in the exhaustive
+adds-`<=300` scan (3,201,198 configs, zero hits). **No defect-2 config has `gap <= 3/41`.**
+(`lrc14_defect2_closure_opus_S4.py`)
+
+**Defect 3 (THEOREM).** Recursion: klein's lemma (`k=3`, factor `23/6`) gives `s1 <= 112`; the lemma
+again with core `C u {s1}` (`k=2`) gives `s2 <= 141`; the band criterion gives `s3 <= 82`. Since
+`s1 <= s2 <= s3 <= 82`, ALL far speeds are `<= 82`. Exhaustive scan of that proved region — all 286
+ten-cores x all triples from `14..82` = **14,984,684 configs** — finds **zero** near-tight.
+**No defect-3 config has `gap <= 3/41`.** (`lrc14_defect3_{bounds,closure_scan}_opus_S4.py`)
+
+**Remaining.** `d = 1` (the 2-parameter family `{1..13}\{j} u {r}`, scanned to `r <= 3000`: only GW
+tight and `{1..11,13,36}` at `3/41`) and `d >= 4`. The recursion extends in principle while klein's
+lemma is valid, i.e. `h < 1/(2k)` gives `k <= 6` at `h = 3/41`; `d >= 7` needs a separate argument.
+Note higher defect gives a SMALLER core, hence a LARGER `L_max(C)`, hence TIGHTER bounds — so the
+method should get easier, not harder, as `d` grows toward 6.
 
 ## Honest scope
 
