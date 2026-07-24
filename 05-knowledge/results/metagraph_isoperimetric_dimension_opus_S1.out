@@ -1,0 +1,41 @@
+[1] A263135 LATTICE FAMILY (edge-isoperimetry of 2D vertex-transitive graphs)
+    triangular A047932 = floor(3n-sqrt(12n-3)) : verified=True
+    square     A123663 = 2n-ceil(2 sqrt n)     : verified=True
+    honeycomb  A263135(2n) = 3n-ceil(sqrt 3n)  : verified=True
+    -> all of form (d/2)N - c*sqrt(N); boundary ~ N^{1/2} => isoperimetric dim D=2
+
+[2] METAGRAPH G_n  (self-contained rebuild; cross-check vs repo canon)
+     n   V    E  #SC Hmax  avgdeg  lam2(L) normgap diam  log2V diam/log2V
+     3   2    1    2    3    1.00    2.000  2.0000    1   1.00       1.00
+     4   4    5    2    5    2.50    2.000  1.0000    2   2.00       1.00
+     5  12   30    8   15    5.00    1.603  0.5322    3   3.58       0.84
+     6  56  290   12   45   10.36    1.960  0.3171    4   5.81       0.69
+    canon check: E=1,5,30,290  SC=2,2,8,12  Hmax=3,5,15,45  diam=1,2,3,4  (all must match)
+    repo diam extends: n=7 diam=7 (log2 V=8.83, ratio .79); n=8 diam=8 (log2 V=12.75, ratio .63)
+    => diam(G_n) ~ 0.7 log2 V  (LOGARITHMIC / small-world) -- NOT sqrt(V) as a 2D lattice
+
+[3] EXACT edge-isoperimetric profile + Cheeger (n=4,5)
+    n=4: M(k) max-internal-edges = [0, 1, 3]
+          b(k) min-edge-boundary   = [2, 3, 2]
+          Cheeger edge-expansion h=min b(k)/k (k<=V/2) = 1.500   min-conductance phi = 0.600
+          sparsest cut: A[|.|=2 SC=1 NS=1 H in [1,3]] | B[|.|=2 SC=1 NS=1 H in [3,5]]  ->  H-interval? False   SC-vs-NS? False
+    n=5: M(k) max-internal-edges = [0, 1, 3, 6, 9, 13, 16, 19, 22, 25, 28]
+          b(k) min-edge-boundary   = [2, 5, 7, 9, 11, 11, 11, 9, 7, 5, 2]
+          Cheeger edge-expansion h=min b(k)/k (k<=V/2) = 1.833   min-conductance phi = 0.379
+          sparsest cut: A[|.|=6 SC=4 NS=2 H in [1,15]] | B[|.|=6 SC=4 NS=2 H in [3,15]]  ->  H-interval? False   SC-vs-NS? False
+    => sparsest cut is a BALANCED bisection spanning the full H-range and mixing SC/NS:
+       the H-gradient / principal line is a GRADIENT, not a bottleneck.
+
+[4] SPINE(SC-SC) / RIBS(SC-NS) / SEA(NS-NS) decomposition & induced dimension
+    n=4: spine(SC-SC)=1 ribs(SC-NS)=4 sea(NS-NS)=0 | spine: 2 nodes/1 edges maxdeg=1 cyclomatic=0 ~QUASI-1D (path/tree)
+    n=5: spine(SC-SC)=12 ribs(SC-NS)=16 sea(NS-NS)=2 | spine: 8 nodes/12 edges maxdeg=4 cyclomatic=5 branched
+          SEA(NS-NS) as its own graph: 4 nodes, avgdeg=1.00, lam2(L)=0.000, normgap=0.0000  (sparse)
+    n=6: spine(SC-SC)=13 ribs(SC-NS)=90 sea(NS-NS)=187 | spine: 12 nodes/13 edges maxdeg=3 cyclomatic=2 ~QUASI-1D (path/tree)
+          SEA(NS-NS) as its own graph: 44 nodes, avgdeg=8.50, lam2(L)=1.980, normgap=0.3495  (expander core)
+
+[5] VERDICT
+    honeycomb A263135 : isoperimetric dim D=2, boundary ~ sqrt(N), diam ~ sqrt(N)  [AMENABLE]
+    tournament G_n    : lam2(L)~2 (const) => boundary ~ Theta(V) at balanced cuts;
+                        diam ~ log(V); sparsest cut transverse to H & SC/NS  [SMALL-WORLD, D=inf]
+    The SEED sequence and the project's central object are ISOPERIMETRIC ANTIPODES.
+    Internal structure spans the dimension axis: SPINE(SC) quasi-1D thread; SEA(NS) expander core.
