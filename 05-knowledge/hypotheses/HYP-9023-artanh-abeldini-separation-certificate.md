@@ -7,14 +7,20 @@ status: >
   parameters t_A=389/2181, t_B=5872957/11821757 are EXACTLY telescoping ratios
   t_n=x_n/(S_n+S_{n-1}) for partial-sum pairs (896,1285) and (2974400,8847357), the
   verbatim construction of THM-2000 sec 3.1; and den(certificate) = lcm(den of the two
-  bounds) = 2^8 3^4 5^2 7 31^5 257 727^3 381347^5, built only from those bounds. NOT
-  RECOVERABLE from the snippet alone: the exact integer coefficients of RHS(27) (no
-  small-coefficient exact fit; the rational part is large, from the source's eq (27)).
+  bounds) = 2^8 3^4 5^2 7 31^5 257 727^3 381347^5, built only from those bounds. COEFFICIENT
+  RESOLVED (opus-S4, was "not recoverable"): a height cliff (only d=+1 gives c-height 10^3.8
+  vs ~10^52 for every other integer d) UNIQUELY pins (c,d,r)=(2457/6592, 1, 0), so
+  RHS(27) = (2457/6592) log(8847357/2974400) - log(1285/896), no rational part; the earlier
+  "31^5 381347^5 in den(r)" was an artifact of the t^5/5 truncation order, not eq (27).
   VERIFIED CONSTRUCTION: the same 3-term artanh sandwich certifies a genuine THM-2000
   mass ordering M(6,2)>M(4,3) float-free (log2 >= 842/1215 > 9/13 => 26 log2 - 18 >=
-  22/1215 > 0). SPECULATIVE: the same separation-certificate shape is the LRC(14)
-  inf L(S)>0 prize (structural analogy only; L is a sinc sum, not a log).
-source: opus-2026-07-23-S2 (decoding an owner-supplied external snippet)
+  22/1215 > 0). HOME (opus-S4/klein-S404/mac-mini-S169): the log-energy-beats-floor family,
+  LRC(14) wider-gap n=13 leading (2457=3*S2(AP{1..13}), 6592=2^6*S1(GW{1..11,13,24}),
+  1/25~1/(2n-1)); RULED OUT this session -- figurate-mass ordering (no M(s,d) difference
+  matches; both logs below the mass band), BOTH candidate LRC papers (Bedert 2511.16636 and
+  2604.23906, by direct fetch), and standard binomial Pade (integers are non-hypergeometric).
+  Irrationality-MEASURE not fully killed. See 07-reflections/artanh-two-log-form-pinned-and-homed-opus-S4.md.
+source: opus-2026-07-23-S2..S4 (decoding an owner-supplied external snippet)
 depends_on: [THM-2000]
 related:
   - THM-501   # LRC singular series L(S) (same "certify > rational floor" shape)
