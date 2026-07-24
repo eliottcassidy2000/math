@@ -1,0 +1,23 @@
+C:\Users\Eliott\Documents\GitHub\ephrepos\math\04-computation\lrc14_neartight_rigidity_scan_opus_S4.py:58: SyntaxWarning: invalid escape sequence '\ '
+  """|V \ {1..13}| = number of core elements replaced."""
+C:\Users\Eliott\Documents\GitHub\ephrepos\math\04-computation\lrc14_neartight_rigidity_scan_opus_S4.py:86: SyntaxWarning: invalid escape sequence '\{'
+  totals["B single-far {1..13}\{j} u {r}, r<=600"] = n
+NEAR-TIGHT RIGIDITY SCAN of 13-speed primitive configs (exact gap)
+========================================================================================
+  A exhaustive 13-subsets of {1..20}              77,520 configs
+  B single-far {1..13}\{j} u {r}, r<=600           7,631 configs
+  C two-far drop2/add2, adds<=100                291,798 configs
+  D random primitive, speeds<=40/150/1000        299,982 configs
+  TOTAL                                          676,931 configs   [14s]
+----------------------------------------------------------------------------------------
+COMPLETE set with gap <= 3/41 found anywhere in the scan: 3
+   gap=   1/14 TIGHT defect=0  tau*=   1/14  V=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+   gap=   1/14 TIGHT defect=1  tau*=   1/14  V=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]
+   gap=   3/41       defect=1  tau*=  17/41  V=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36]
+----------------------------------------------------------------------------------------
+  counterexamples (gap<1/14): 0
+  tight besides AP/GW       : 0
+  in band (1/14,3/41)       : 0
+
+LAW (empirical): gap <= 3/41  =>  defect <= 1 (at most ONE core element replaced).
+Two defects or generic configs never come within 3/41 of the floor.
