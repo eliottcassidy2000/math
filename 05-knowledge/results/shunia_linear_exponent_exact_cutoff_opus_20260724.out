@@ -1,0 +1,8 @@
+THM-2165 SHUNIA LINEAR-EXPONENT EXACT CUTOFF
+universe: every admissible (a,n), 3<=a<=500
+rows: 3462
+counts by n: n=2:477 n=3:491 n=4:490 n=5:483 n=6:468 n=7:436 n=8:372 n=9:245
+independent modular-exponentiation controls: 61
+coefficient-sum >= X rows (allowed): [(3, 2, 'K+1')]
+row digest sha256: 1a99b0f13dcf475205035e6d2aaab441a596f55f6b895c5ba1e6124b2bd458c1
+ALL EXACT INTEGER CHECKS PASS

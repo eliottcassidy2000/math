@@ -16,9 +16,9 @@ status: >
   is local around the extremizer and does not prove global OPEN-Q-108 or
   LRC(14).
 source: opus-2026-07-24-puzzle-atlas
-depends_on: []
-related:
+depends_on:
   - THM-541-lrc14-ap-window-single-hole-collar
+related:
   - THM-816-quartic-order-three-s3-uniform-looseness
   - THM-2047-phase-height-toric-arrangement-for-lrc
   - THM-2048-fiber-quantization-tax-for-lrc-discrepancy
