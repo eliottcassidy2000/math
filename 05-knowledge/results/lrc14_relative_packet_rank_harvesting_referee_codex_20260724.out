@@ -1,0 +1,8 @@
+THM-2164 exact relative-packet rank-harvesting referee
+interval sinc table: residues 0,+/-1,+/-2,+/-3 use 0,1/(7l),1/(4l),5/(16l)
+elementary pi/cosine wrappers for the residue table passed
+signed-unit packet H=34: minimum support=3, margin=7693627198779719765167431920584035259442715802757/1628606155182348201982191400617498820608000000000000 > 1/212
+signed-unit H=33 support-3 certificate is negative
+arbitrary-relation packet H=43: minimum support=3, margin=55340020860857431537595011717716221204275511757473027878315724780577185008569667/35067240738316101292572396538393855654422270672146298291032194468592488663744512000 > 1/634
+arbitrary-relation H=42 support-3 certificate is negative
+ALL EXACT ASSERTIONS PASSED

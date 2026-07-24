@@ -6,8 +6,9 @@ status: >
   safe set forces an integer relation in every strictly Kraft-admissible
   anisotropic coefficient box. For thirteen speeds this gives the first
   equal-cap certificate H=29, the certificate-minimal total cap budget 367,
-  and the dichotomy rank(W_105)>=2 or a signed subset-sum equality. These are
-  certificate statements, not a proof of LRC(14).
+  and the dichotomy rank(W_105)>=2 or a signed subset-sum equality. THM-2164
+  later removes the alternative for distinct speeds. These are certificate
+  statements, not a proof of LRC(14).
 source: codex-2026-07-24-relation-carry-spectrum
 depends_on:
   - THM-2085
@@ -16,6 +17,7 @@ related:
   - THM-2051
   - THM-2052
   - THM-2054
+  - THM-2164
 script: 04-computation/lrc14_anisotropic_selberg_kraft_referee_codex_20260724.py
 output: 05-knowledge/results/lrc14_anisotropic_selberg_kraft_referee_codex_20260724.out
 script_sha256: 4d62acd3eeb39e6df8e61249887a876c4439f6e40990f23fb433b67fb6724795
@@ -260,8 +262,8 @@ support. In particular:
 1. (16) is an anisotropic spectrum of relation boxes, not a sparse-relation
    theorem.
 2. (26) is the first unconditional rank-or-subset-sum fork produced by this
-   tensor mechanism, but it does not raise the sparse bounded-relation rank in
-   THM-2052.
+   tensor mechanism. THM-2164 subsequently resolves its subset-sum branch
+   for distinct speeds and proves `dim_Q W_105(v)>=2`.
 3. Neither branch of (26) bounds the speeds or proves LRC(14).
 4. The useful next target is a relative version modulo an already known
    relation lattice: force a new independent relation, not merely another
