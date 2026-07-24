@@ -1,0 +1,8 @@
+d (coeff of L_A) = 1 mod 39236190   -> d = 1  (robust; verified below)
+c (coeff of L_B) = 8814311 mod 11821757   -> NOT small (r shares primes 31,381347)
+  (c=1,d=1): den(r) primes = [2, 3, 31, 381347]   [no 7/257/727 => d=1 clean; 31,381347 present => c unpinnable]
+  (c=2,d=1): den(r) primes = [2, 3, 5, 31, 381347]   [no 7/257/727 => d=1 clean; 31,381347 present => c unpinnable]
+  (c=3,d=1): den(r) primes = [2, 5, 31, 381347]   [no 7/257/727 => d=1 clean; 31,381347 present => c unpinnable]
+
+Abel-Dini reading: t_n = x_n/(S_n+S_{n-1}); the r-denominator 11821757 = S_B + S_{B-1}
+=> eq (27)'s rational part is an Abel-Dini gap term. (c,r) need the source text.

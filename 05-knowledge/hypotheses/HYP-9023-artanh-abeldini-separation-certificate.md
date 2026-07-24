@@ -43,12 +43,26 @@ reflection: 07-reflections/the-artanh-abeldini-separation-certificate-opus-S2.md
 2. **Fingerprint.** `den(G) = lcm(den Lo_B, den U_A)` exactly (no foreign primes).
 3. **Form.** `RHS(27) = +c·L_B - d·L_A + rational` (L_B lower-bounded, L_A upper-bounded).
 
-## Not recoverable without eq (27)
+## Partially recovered by p-adic pinning (opus-S3, `snippet_padic_decode_opus_S3.py`)
 
-The exact `(c,d,rational)` are under-determined by the snippet: the minimal exact
-`c·Lo_B - d·U_A = G+1/25` solution has ~50-digit coefficients, so the true statement
-carries a large rational from prior algebra. Numerically `L_B ~ 3·L_A` (ratio 3.023),
-`L_A ~ 9/25`, `L_B ~ 27/25`, and `RHS(27) ~ 0.0447` sits just above `1/25`.
+The denominators have **isolated primes**: `{7,257,727}` live only on the `U_A` (L_A)
+side, `{31,381347}` only on the `Lo_B` (L_B) side. Clearing to `L=lcm` and reducing
+`NX = c·M_B − d·M_A + rL` modulo each isolated prime pins the coefficients IF the
+rational part `r` is prime to that prime:
+
+- **`d = 1` EXACTLY and robustly** (coefficient of `L_A = log(1285/896)`). Verified:
+  `den(r)` contains no `7,257,727` for any tested `c`, so the `U_A` side contributes
+  with coefficient exactly 1 and no residue.
+- **`c` (coefficient of `L_B`) is NOT pinnable**: `den(r)` always contains
+  `31⁵·381347⁵ = (S_B+S_{B−1})⁵`. So **the rational part `r` inherits the Abel–Dini
+  denominator `11821757 = S_B + S_{B−1}`** — the signature of an Abel–Dini *gap* term
+  (`x_n/S_n` or `x_n/(S_n+S_{n−1})`). This corrupts the p-adic residue for `c`.
+
+So the snippet fixes `d=1` and the Abel–Dini structure but leaves `(c, r)`
+under-determined (one equation, two unknowns). `RHS(27) = c·L_B − L_A + r`, with `r`
+an Abel–Dini rational carrying `11821757` in its denominator. Numerically `L_B ~ 3·L_A`
+(ratio 3.023), `L_A ~ 9/25`, `L_B ~ 27/25`, `RHS(27) ~ 0.0447` sits just above `1/25`.
+Finishing the decode needs eq (27)'s surrounding text (the source is external/lost).
 
 ## Verified construction (the payoff)
 
