@@ -1,0 +1,10 @@
+IMMEDIATE defect-k closure test (no scan):
+  klein lemma: sum_i 1/s_i >= B_k(C) = L_max(C)*(1-2kh)/(2h).
+  All far speeds >= 14 => sum_i 1/s_i <= k/14.
+  So if  min_C B_k(C) > k/14  then defect k is IMPOSSIBLE outright.
+
+  k=2: factor=29/6 min_C B_k=0.0285 (worst drop (6, 10))  vs k/14=0.1429   -> not closed by this test
+  k=3: factor=23/6 min_C B_k=0.0266 (worst drop (4, 5, 6))  vs k/14=0.2143   -> not closed by this test
+  k=4: factor=17/6 min_C B_k=0.0298 (worst drop (4, 5, 6, 13))  vs k/14=0.2857   -> not closed by this test
+  k=5: factor=11/6 min_C B_k=0.0253 (worst drop (3, 4, 5, 12, 13))  vs k/14=0.3571   -> not closed by this test
+  k=6: factor=5/6 min_C B_k=0.0131 (worst drop (2, 3, 5, 6, 8, 12))  vs k/14=0.4286   -> not closed by this test
