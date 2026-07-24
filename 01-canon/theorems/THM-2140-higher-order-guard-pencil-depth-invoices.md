@@ -11,7 +11,12 @@ status: >
   determinant. In nondecreasing valuation order, its 13-adic depth is at
   least a_4 for six aligned determinants and a_3 for seven. In particular
   the divided blocker is guard-aligned modulo thirteen, possibly with zero
-  reduction.
+  reduction. Each obligation also gives the real polar certificate
+  u in absconv{g/2,c_i:i in I}; hence the guard/blocker determinant is at
+  most the third-smallest aligned determinant magnitude in the six-label
+  profile and the fifth-smallest in the seven-label profile. The combined
+  size/depth gate forces rational collinearity whenever those upper bounds
+  fall below the corresponding 13-power.
   This is a recursive depth invoice, not an elimination of those two profiles
   or a proof of LRC(14).
 source: codex-2026-07-22-LRC-higher-order-guard-pencil
@@ -207,19 +212,109 @@ step, `u` is either a new blocker (`u=0 mod 13`) or an aligned nonblocker.
 The theorem does not by itself supply a fresh divided cover or license
 iteration of the same fibre argument.
 
-## 4. Scope and Tournament Analysis
+## 4. The real polar certificate and the size/depth gate
 
-The theorem does not turn (17) or (18) into rational collinearity.  A second
-step must exploit the new divided alignment, lift the subset obligations to
+The same phase containments carry an Archimedean sidecar that the integer
+annihilator does not see.  Let `V` be the real universal cover of `K`, so the
+characters are real linear forms on `V`.  For any triple or five-set `I` used
+above, put
+
+```text
+Q_I={x in V:|g(x)|<=2 and |c_i(x)|<=1 for every i in I}. (21)
+```
+
+For `x in Q_I` and `0<=t<1`, the torus point represented by `tx/14` lies in
+the strict source of (7) or (11).  Therefore
+
+```text
+distance(t u(x),14Z)<=1.                              (22)
+```
+
+As `t` moves continuously from zero, the value in (22) cannot jump between
+the disjoint intervals centred at different multiples of fourteen.  It stays
+in the component `[-1,1]`.  Letting `t` tend to one gives
+
+```text
+|u(x)|<=1                         for every x in Q_I. (23)
+```
+
+The polar of a symmetric polytope given by slab inequalities is the absolute
+convex hull of its normalized defining forms.  Thus (23) is equivalent to
+
+```text
+u in absconv({g/2} union {c_i:i in I}).               (24)
+```
+
+Explicitly, for every relevant `I` there are real numbers
+`alpha,(beta_i)_(i in I)` with
+
+```text
+u=alpha g+sum_(i in I) beta_i c_i,
+2|alpha|+sum_(i in I)|beta_i|<=1.                    (25)
+```
+
+Consequently every real linear functional `ell` on the character space
+obeys
+
+```text
+|ell(u)|<=max(|ell(g)|/2, max_(i in I)|ell(c_i)|).   (26)
+```
+
+Because (26) holds for every relevant subset, choose the subset on which the
+absolute values are smallest.  If `s_k(ell)` denotes the `k`-th smallest
+number among the aligned values `|ell(c_i)|`, then
+
+```text
+(1,6,1): |ell(u)|<=max(|ell(g)|/2,s_3(ell)),
+(1,7,0): |ell(u)|<=max(|ell(g)|/2,s_5(ell)).          (27)
+```
+
+Apply this to `ell(x)=det(g,x)`.  If
+
+```text
+b_1<=...<=b_r,             {b_i}={|Delta_i|},         (28)
+```
+
+then
+
+```text
+(1,6,1): |Delta_0|<=b_3,
+(1,7,0): |Delta_0|<=b_5.                             (29)
+```
+
+Combine (29) with the valuation bounds (17)--(18).  Whenever `Delta_0` is
+nonzero,
+
+```text
+(1,6,1): 13^a_4<=|Delta_0|<=b_3,
+(1,7,0): 13^a_3<=|Delta_0|<=b_5.                     (30)
+```
+
+Thus either
+
+```text
+b_3>=13^a_4                 or det(g,u)=0             (six labels),
+b_5>=13^a_3                 or det(g,u)=0             (seven labels). (31)
+```
+
+This is a concrete finite-box gate: insufficient Archimedean height compared
+with the forced thirteen-adic depth collapses the divided blocker onto the
+guard line.
+
+## 5. Scope and Tournament Analysis
+
+The theorem does not force (31)'s size alternative to fail in unbounded
+height.  A second step must bound that height, lift the subset obligations to
 the next digit, or combine them with the remaining multiple-blocker profiles.
 
 The challenged assumption is that runner labels or the thirteen columns are
 the final vertices.  Here the faithful vertices are the **proof obligations**:
 the twenty aligned triples in profile (3), or the twenty-one aligned
-five-sets in profile (5).  Their observable is the determinant ideal in
-(14).  Orienting two obligations by larger minimum 13-adic depth, with label
-order as a tie Hamiltonian path, produces a tournament whose score histogram
-records search priority.  Its directed cycles, SCCs, edge flips, and path
-counts do not determine which character subset generated the ideal.  The
-preserved carrier is the uniform obligation hypergraph with its integral-span
-and valuation sidecars.  QED.
+five-sets in profile (5).  Their observables are the determinant ideal in
+(14) and the polar body in (24).  Orienting two obligations by larger minimum
+13-adic depth, with label order as a tie Hamiltonian path, produces a
+tournament whose score histogram records search priority.  Its directed
+cycles, SCCs, edge flips, and path counts do not determine which character
+subset generated the ideal or which polar facet controls height.  The
+preserved carrier is the uniform obligation hypergraph with its integral-
+span, valuation, and absolute-convexity sidecars.  QED.
