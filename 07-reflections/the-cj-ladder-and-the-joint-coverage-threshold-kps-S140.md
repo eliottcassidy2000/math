@@ -92,6 +92,42 @@ the measure, and the same extremiser.
 determined by a finite search.** The bound is impractical, but the conjecture is no longer open-ended: it is a
 finite computation whose tail is proved and whose extremal regime is localised to small speeds.
 
+## 4c. THE LADDER AT `h = 1/14`, AND THE THRESHOLD IS ROBUST
+| j | 1 | 2 | 3 | 4 | 5 | 6 | 7 | **8** | **9** | 10 | 11 | 12 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `c_j` (h=1/14) | 6/7 | 11/14 | 33/56 | 3/7 | 9/28 | 1/4 | 16/77 | **11/70** | **11/84** | 117/1232 | 7/110 | 65/1848 |
+| `R_j` | .167 | .182 | .242 | .333 | .444 | .571 | .688 | **.909** | **1.091** | 1.504 | 2.245 | 4.062 |
+
+`2h = 1/7 = 0.14286`, and `c_8 = 0.15714 > 2h > c_9 = 0.13095`. **The `j = 9` joint-coverage threshold holds at
+BOTH thresholds** — it is structural, not an artifact of `θ = 3/41`.
+
+## 4d. A 7× SHARPENING OF THE DEFECT-1 STRANGER BOUND (verified)
+mac-mini bounds the defect-1 replacement by Fact A' (`w < 1/δ`). But a *single* replacement must cover the
+**whole** of `G_{C₀}`, hence its largest component — and Fact B applies to full coverage of an interval:
+> **`w ≤ 2θ/δ_{C₀}`**, which is `1/(2θ) = 7×` tighter than `1/δ_{C₀}`.
+
+| threshold | Fact A' (`1/δ`) | **Fact B (`2θ/δ`)** | factor |
+|---|---|---|---|
+| `h = 1/14` | `w ≤ 370` | **`w ≤ 53`** | 6.98× |
+| `θ = 3/41` | `w ≤ 417` | **`w ≤ 61`** | 6.84× |
+
+**Verified:** re-running the defect-1 tight classification over only `w ≤ 53` returns **exactly** `{AP, GW}` —
+identical to the `w ≤ 417` result, with a ~7× smaller search. (GW's `w = 24` sits comfortably inside.)
+
+## 4e. EXPLICIT DEFECT LADDER, and why `d = 7` is the wall
+For `S = C₀ ∪ R` with `C₀ ⊆ {1,…,13}` (`13−d` elements) and `|R| = d`: the largest component of `G_{C₀}` has
+`L ≥ c_{13−d}/13`; the `d` replacements cover it **jointly**, each covering at most `2hL + 2h/w`, so if every
+`w > W` then `d(2hL + 2h/W) ≥ L`, giving **`w_min ≤ 2hd / (L(1−2hd))`** — finite exactly while `2hd < 1`:
+
+| d | 1 | 2 | 3 | 4 | 5 | 6 | **7** |
+|---|---|---|---|---|---|---|---|
+| bound on **smallest** replacement | 308/5 = 61.6 (53 via Fact B) | 572/7 = 81.7 | 308/3 = 102.7 | 1456/11 = 132.4 | 2275/11 = 206.8 | 3003/8 = 375.4 | **UNBOUNDED** |
+
+At `d = 7`, `2hd = 1` **exactly** and the bound dies. **This is precisely why defect ≥ 7 is the residual**
+(opus-S4's HYP-9024 boundary), and it identifies the wall as the `1/(2h) = 7` measure-relaxation ceiling —
+i.e. an *artifact ceiling* in klein-S422's taxonomy, so it is the right place to attack with a structural
+(non-counting) argument.
+
 ## 5. Next
 - Finish the `{1..20}` exhaustive check of `c_12` (in flight), matching mac-mini's range for the measure.
 - Compute `c_j` for the **`h = 1/14`** threshold as well as `θ = 3/41`, so the ladder is available at both
