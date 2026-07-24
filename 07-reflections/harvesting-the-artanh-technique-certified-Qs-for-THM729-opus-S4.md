@@ -89,3 +89,39 @@ the `o(r^2)` cancellation.
 
 Artifacts: `04-computation/lrc14_second_moment_certified_opus_S4.py`,
 `05-knowledge/results/lrc14_second_moment_certified_opus_S4.out`.
+
+## UPDATE (same session): the "certify the diagonal" step deepens to an EXACT closed form
+
+Taking the diagonal step seriously gave a strictly stronger result: `Q_s` is **exactly** `pi^2 x rational`,
+no truncation. The diagonal formula `sum_i 2 pi^2 {w w_i}(1-{w w_i})` comes from the Clausen identity
+`sum_{l>=1} sin^2(pi l theta)/l^2 = (pi^2/2){theta}(1-{theta})`; but the SAME identity in cosine form,
+
+```
+sum_{l>=1} cos(2 pi l phi)/l^2 = pi^2 ( 1/6 - {phi}(1-{phi}) ),
+```
+
+applies to EVERY term of `|U_s(lw)|^2 = sum_{p,p'} eps_p eps_p' cos(2 pi l w (p-p'))`, not only the
+diagonal. Because `sum_p eps_p = 0` (equal arc-starts and -ends), the `1/6` constant cancels:
+
+```
+Q_s = -pi^2 sum_{p != p'} eps_p eps_p' {w(p-p')}(1-{w(p-p')})
+    =  pi^2 sum_{p,p'} eps_p eps_p' B2bar(w(p-p'))          =  pi^2 * (exact rational).
+```
+
+Verified for all 7 clusters (`lrc14_second_moment_exact_opus_S4.py`); each exact value lands inside the
+S4 certified interval (mutual confirmation), e.g. `Q_s([0,1,2,4,8,16,32]) = pi^2 * 1473/896 = 16.2254`,
+`Q_s([0..6],s=4) = pi^2 * 21727/11025 = 19.4501`. So THM-729's finite-box checks are now EXACT and
+Lean-trivial (exact rational arithmetic + one classical Fourier identity), superseding the interval.
+
+**Why this sharpens THM-729's OPEN piece.** `Q_s/pi^2 = sum_{p,p'} eps_p eps_p' B2bar(w(p-p'))` is a
+positive-definite **Bernoulli quadratic form** on the signed endpoint set (`B2bar` = periodic 2nd
+Bernoulli, non-negative Fourier coefficients `1/(2 pi^2 k^2)`). Split by arc:
+- **same-arc (diagonal):** `2 sum_i B2bar(w w_i)`, and `|B2bar| <= 1/6`, so it is `<= M/6 = O(M)` RIGOROUSLY
+  (THM-729's rigorous backbone, recovered exactly);
+- **cross-arc (off-diagonal):** `sum_{i != j}(...) B2bar(w(p-p'))`, and crucially `INT_0^1 B2bar = 0`, so
+  this sum is **mean-zero** and its size is controlled by the **discrepancy of `{w(p-p') mod 1}`**.
+
+So THM-729's open `Q_s = O(diam)` is now, exactly, "*the mean-zero Bernoulli quadratic form off-diagonal
+is `O(M)`*" = a 1-D discrepancy / Montgomery-Vaughan width-weighted 2nd moment on the endpoint-difference
+set -- precisely the tool THM-729 named, now with the exact object to feed it. That reduction is the natural
+continuation. Artifacts: `04-computation/lrc14_second_moment_exact_opus_S4.py` (+ `.out`).
