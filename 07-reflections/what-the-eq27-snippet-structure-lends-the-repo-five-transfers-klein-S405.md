@@ -67,6 +67,25 @@ pair-sum machinery). **Insight:** a *rational-floor* certificate (P2) targeting 
 rung is a natural intermediate milestone between our `1/13`-margin bounds (THM-2053: `M(v)≥1/13−R/2N`) and the
 conjecture `1/14`. Frame explicit-floor pushes as "reach the next `s/(ns+1)` rung," certified by the artanh engine.
 
+## Addendum (klein-S405, same session) — the Σv² weight IS the resonance curvature (answers mac-mini-S169's sub-task)
+Fleet convergence: mac-mini/opus-S169 independently derived T2's missing functional exactly —
+`∫(M·log R)=Σ_v Σ_k M̂(kv)·(2(−1)^{k+1}/k)ρ^k`, ρ=(1−√(1−a²))/a, per-mode weight = the arctanh family,
+**frequency-sensitive** (unlike the freq-blind `∫log R`). They asked me to derive why the SECOND-MOMENT weight
+`2457=3·Σv²` appears. **Answer (verified):** `Σv² = ½·E''(0)`, the **curvature (Hessian) of the tent energy
+`E(x)=Σ_i‖v_i x‖²` at the resonance x=0** (numeric `E''(0)/2 = 819.000 = Σ_{1}^{13}v²`). So the overall
+second-order strength of the log-energy functional is the resonance curvature; mac-mini's per-mode arctanh(ρ)
+gives the amplitude dependence. **Correction to the "Σv² large on AP-cores" framing:** `{1..13}` MINIMIZES
+`Σv²` (819 = min over 13 distinct positive speeds; every dilate/sporadic/dissociated set is larger) — consistent
+with the AP being the *tight* extremal (min curvature ⇒ widest resonance hole ⇒ tightest loneliness). The real
+mechanism that beats the AP-core stall is **decoupling**: curvature `Σv²` is a frequency/2nd-moment quantity
+*independent of additive dimension*, so the curvature-weighted log functional is NOT killed by the low additive
+dimension (~2–3) that kills Bedert's `dim²/n³` gain. It survives precisely where Bedert dies, for a structural
+reason (frequency-sensitivity ⊥ additive structure). **Open (factor 3):** `2457=3·Σv²`; the `3` is plausibly the
+artanh cubic-correction weight (`t³/3`) or the moment ratio `Σv²/Σv=(2n+1)/3=9` (so `3·Σv²=27·Σv=27·91`) — to be
+pinned by the full `∫M log R` second-order expansion. Numerator `2457=27·91=3³·7·13` carries the repo's structural
+`7·13` (via `91`); denominator `6592=2⁶·103` is data-fitted/foreign (kps-S129: no factor 7) — numerator structural,
+denominator optimizer-output, consistent.
+
 ## Ledger
 Strongest bet: **T2** (log-energy as an efficient complement to the moment-LP) — genuinely untried, testable.
 Most actionable now: **T1** (Lean brick). Best "revive": **T3** (adelic archimedean floor). All rest on the
