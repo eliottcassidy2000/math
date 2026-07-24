@@ -17,6 +17,7 @@ related:
   - THM-566
   - THM-1002
   - THM-2072
+  - THM-2163
 ---
 
 # THM-2161 -- fixed modulus banks miss defect-seven rows
@@ -212,6 +213,16 @@ same residues as (5), and no zero residue. Thus the theorem is a no-go for a
 fixed bank as a **uniform near-tight separator**, including the newly proposed
 defect-seven route. It is not a no-go after an additional covering-row
 restriction.
+
+THM-2163 strengthens this loss statement in a different hostile family. Its
+two primitive defect-seven rows preserve the complete labelled residue bank
+through modulus thirteen, the **entire** coefficient-height-29 relation box,
+and the scalar maximum, yet have different mod-17 margins. Thus neither
+bounded relations nor scalar magnitude restore the adaptive residue lost by
+a fixed bank. THM-2163 identifies a necessary richer state: a radix carry
+together with its quotient-owner/termination sidecar. Those coordinates
+alone do not yet give a finite complete state space, because the owner mask
+records termination but does not bound digit depth.
 
 ## 4. The exact residue analogue only halves enumeration
 

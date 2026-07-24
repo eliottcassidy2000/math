@@ -1,0 +1,11 @@
+THM-2163 exact radix relation-carry / CRT-fiber referee
+L=lcm(2,...,13)=360360; height=29
+A and B: primitive, distinct, defect=7, same max=1078865413025413
+labelled residues agree with (1,...,13) for every modulus 2..13
+coefficient-superincreasing tail verified at all 7 tail indices
+common full height-29 relation box has 98935667 vectors, all tail coefficients zero
+small-bank margins q=2..13: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+adaptive split: m_17(A)=0, m_17(B)=2; B gives M>=2/17
+exhaustive radix converse/forward toy paths accepted=1412
+carry endpoints, divisibility, quotient identity, and strict l1 bound all verified
+ALL EXACT ASSERTIONS PASSED
