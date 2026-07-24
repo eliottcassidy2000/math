@@ -1,0 +1,14 @@
+MODULUS CERTIFICATE  gap(V) >= m_q(V)/q   (depends only on V mod q)
+==========================================================================
+near-tight configs must NOT be certified by any q (their gap really is <= 3/41):
+   AP {1..13}           best bound     1/14 (q=14)  <= 3/41 ? True   missing divisors []
+   GW {1..11,13,24}     best bound     1/14 (q=14)  <= 3/41 ? True   missing divisors []
+   {1..11,13,36}        best bound     3/41 (q=41)  <= 3/41 ? True   missing divisors []
+
+DIVISIBILITY COROLLARY: gap<=3/41 forces multiples of 7,8,9,10,11,12,13 to be present.
+  AP has them as themselves; GW needs 24 for q=12; {1..11,13,36} needs 36 for q=12.
+
+defect>=7 witnesses (all certified by a SMALL q; none comes near 3/41):
+   [1, 2, 3, 4, 5, 6, 14, 16, 18, 20, 22, 24, 26] bound     2/19 (q=19)  > 3/41 ? True
+   [1, 2, 3, 4, 5, 6, 21, 24, 27, 30, 33, 36, 39] bound     5/41 (q=41)  > 3/41 ? True
+   [1, 4, 6, 7, 10, 11, 17, 21, 32, 56, 80, 103, 171] bound     6/59 (q=59)  > 3/41 ? True
