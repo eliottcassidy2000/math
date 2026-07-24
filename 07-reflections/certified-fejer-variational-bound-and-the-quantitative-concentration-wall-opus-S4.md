@@ -95,3 +95,40 @@ explicit statement of the reduction and its two open inputs -- confirming the fl
 (kps/klein/mac-mini) that the analytic route certifies the bulk and the crux is the rigidity strip.
 
 Artifacts: `04-computation/lrc14_fejer_variational_opus_S4.py`, `..._fejer_scaling_opus_S4.py` (+ `.out`).
+
+## REFINEMENT (same session): the near-tight regime IS practically certifiable
+
+The scan `lrc14_margin_vs_bindingspeed_opus_S4.py` settles the question my correction left open --
+and it corrects the correction in the GOOD direction.
+
+**Small margin is achieved only via a large remote binder.** Sorting 13-speed configs by
+`delta = gap - 1/14`, the smallest-margin ones all have binding set {one small speed, one LARGE
+remote speed} -- the **single-far** structure:
+
+```
+delta=1/574 (gap 3/41)  {1..11,13,36}  binding {5,36}     delta=1/280 (gap 3/40)  {1..12,39} binding {1,39}
+delta=1/378 (gap 2/27)  {1..12,26}     binding {1,26}     delta=3/742 (gap 4/53)  {1..12,52} binding {1,52}
+```
+
+Configs whose binders are all `<= 13` bottom out at `delta = 1/182`. So `delta` small **forces** a
+large binder, not (as I first guessed) a small one -- but the resulting degree is still modest.
+
+**Verified directly.** The hardest near-tight config `{1..11,13,36}` (`gap=3/41`, `tau*=17/41`,
+`delta=0.001742`, `maxBind=36`) is **CERTIFIED `gap>1/14`** by the float-free Fejer bound at
+`N ~ 7000` (`B_6000=0.071200 < 1/14 < B_8000=0.071618`). This matches the law
+`N* ~ 0.34 * maxBind/delta = 0.34*36/0.001742 ~ 7000`. **Practical, not astronomical.**
+
+**The only unbounded direction** is a large remote speed at MODERATE margin: `{1..12, r}` with
+`r = 13k +- 1` has `||r/13|| = 1/13 = gap`, so `r` binds while `delta = 1/182` stays fixed; then
+`N* ~ 0.34*182*r ~ 62 r`, growing only LINEARLY in `r`. These are single-far configs with a far
+runner -- exactly what THM-1017 (`AP core -> far element -> LRC(14)`) and the finite shell THM-763
+(`sum v_i <= 91^12`) already handle.
+
+**Net three-way split of the concentration route:**
+1. **near-tight** (`delta` small, the rigidity-adjacent configs): certified at degree `~10^4` -- verified;
+2. **large-far-speed** (`delta` moderate, `r` huge): `N* ~ 62 r`, route to single-far machinery / finite shell;
+3. **the tight locus** (`delta = 0`, AP & GW): never certified at any finite degree -- OPEN-Q-108, the crux.
+
+So the certified concentration route reaches the whole non-tight regime at feasible degree except for
+astronomically-large far speeds, which have their own machinery. The genuine wall is (3) alone.
+Artifact: `04-computation/lrc14_margin_vs_bindingspeed_opus_S4.py` (+ `.out`).

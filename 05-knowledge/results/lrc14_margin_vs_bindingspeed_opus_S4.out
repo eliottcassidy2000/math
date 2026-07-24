@@ -1,0 +1,48 @@
+C:\Users\Eliott\Documents\GitHub\ephrepos\math\04-computation\lrc14_margin_vs_bindingspeed_opus_S4.py:43: SyntaxWarning: invalid escape sequence '\{'
+  if len(V) == 13: fams.append((f"AP\{{{j}}}u{{{r}}}", V))
+13-speed configs sorted by margin delta = gap - 1/14  (does small delta force small binding speed?)
+========================================================================================================
+       delta      gap  config                 maxBind  binding set                  tau*
+--------------------------------------------------------------------------------------------------------
+       1/574     3/41  AP\{12}u{36}                36  [5, 36]                     17/41
+       1/574     3/41  {1..11,13,36}               36  [5, 36]                     17/41
+       1/378     2/27  AP\{13}u{26}                26  [1, 26]                      2/27
+       1/378     2/27  {1..12,26}                  26  [1, 26]                      2/27
+       1/280     3/40  AP\{13}u{39}                39  [1, 39]                      3/40
+       1/280     3/40  {1..12,39}                  39  [1, 39]                      3/40
+       3/742     4/53  AP\{12}u{48}                48  [5, 48]                     22/53
+       3/742     4/53  AP\{13}u{52}                52  [1, 52]                      4/53
+       3/742     4/53  {1..11,13,48}               48  [5, 48]                     22/53
+       3/742     4/53  {1..12,52}                  52  [1, 52]                      4/53
+       1/182     1/13  AP\{12}u{60}                60  [5, 60]                     27/65
+       1/182     1/13  AP\{13}u{14}                14  [1, 12, 14]                  1/13
+       1/182     1/13  AP\{13}u{15}                12  [1, 12]                      1/13
+       1/182     1/13  AP\{13}u{16}                12  [1, 12]                      1/13
+       1/182     1/13  AP\{13}u{17}                12  [1, 12]                      1/13
+       1/182     1/13  AP\{13}u{18}                12  [1, 12]                      1/13
+       1/182     1/13  AP\{13}u{19}                12  [1, 12]                      1/13
+       1/182     1/13  AP\{13}u{20}                12  [1, 12]                      1/13
+       1/182     1/13  AP\{13}u{21}                12  [1, 12]                      1/13
+       1/182     1/13  AP\{13}u{22}                12  [1, 12]                      1/13
+       1/182     1/13  AP\{13}u{23}                12  [1, 12]                      1/13
+       1/182     1/13  AP\{13}u{24}                12  [1, 12]                      1/13
+       1/182     1/13  AP\{13}u{25}                25  [1, 12, 25]                  1/13
+       1/182     1/13  AP\{13}u{27}                27  [1, 12, 27]                  1/13
+       1/182     1/13  AP\{13}u{28}                12  [1, 12]                      1/13
+       1/182     1/13  AP\{13}u{29}                12  [1, 12]                      1/13
+       1/182     1/13  AP\{13}u{30}                12  [1, 12]                      1/13
+       1/182     1/13  AP\{13}u{31}                12  [1, 12]                      1/13
+--------------------------------------------------------------------------------------------------------
+configs with delta < 0.004 : n=6, max binding speed = 39, median = 36.0
+configs with delta >= 0.004: n=274, max binding speed = 60
+
+HARD configs (delta<0.004 AND maxBind>20): 6
+   delta=     1/574 gap=   3/41 AP\{12}u{36}           maxBind=36 binding=[5, 36]
+   delta=     1/574 gap=   3/41 {1..11,13,36}          maxBind=36 binding=[5, 36]
+   delta=     1/378 gap=   2/27 AP\{13}u{26}           maxBind=26 binding=[1, 26]
+   delta=     1/378 gap=   2/27 {1..12,26}             maxBind=26 binding=[1, 26]
+   delta=     1/280 gap=   3/40 AP\{13}u{39}           maxBind=39 binding=[1, 39]
+   delta=     1/280 gap=   3/40 {1..12,39}             maxBind=39 binding=[1, 39]
+
+If HARD is EMPTY: small margin forces small binding speed => uniform bulk degree ~13/eps0 (PRACTICAL).
+If HARD is nonempty: N* ~ maxBind/delta is unbounded => reduction stays astronomical.
