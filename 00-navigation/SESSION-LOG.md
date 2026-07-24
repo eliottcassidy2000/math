@@ -1,3 +1,32 @@
+## opus-2026-07-23-S1 -- OEIS A263135 (honeycomb pennies) as a DIMENSION statement; the tournament metagraph G_n is its isoperimetric ANTIPODE (HYP-9022)
+
+**Seed (owner):** OEIS A263135, "max contacts among 2n vertices = 3n − ⌈√(3n)⌉" (honeycomb penny-graph).
+
+**What it actually is.** A263135 + A047932 (triangular) + A123663 (square) are ONE family — the
+edge-isoperimetric profile `(d/2)N − c√N` of a d-regular vertex-transitive graph (all verified). The
+`√N` boundary is `N^{(D−1)/D}` with `D=2`: **the `⌈√(3n)⌉` literally encodes "the honeycomb is
+2-dimensional."** So the seed is a *ruler* — a `D=2` graph to measure the project's central object with.
+
+**Result (HYP-9022, VERIFIED n=3..6 exact, corroborated to n=8).** Ported the isoperimetric question to
+the arc-flip metagraph `G_n` (iso-classes = vertices, single-arc-flip = edges). Self-contained rebuild
+reproduces canon exactly (`E=1,5,30,290`, `SC=2,2,8,12`, `Hmax=3,5,15,45`, `diam=1,2,3,4`). Three
+independent legs say `G_n` is the **isoperimetric antipode** of the honeycomb — small-world, conjecturally
+`D=∞`: (1) `diam(G_n)~0.7 log₂V` LOGARITHMIC not `√V` (uses corrected diam 1,2,3,4,7,8 to n=8,
+MISTAKE-036); (2) `λ₂(L)~2` bounded away from 0 ⟹ min edge-boundary `~Θ(V)` (linear, not `√V`); (3)
+exact sparsest cut (n=5, `φ=0.379`) is a balanced bisection TRANSVERSE to the H-gradient AND the SC/NS
+split — **the principal line is a gradient, not a bottleneck.** SEA(NS-NS)=expander core (n=6 λ₂=1.98);
+SPINE(SC-SC)=sparse quasi-1D skeleton. Retro-explains MISTAKE-035 (no H-DAG) / MISTAKE-037 (no
+H-convexity): a graph with no thin boundary can't be monotone/convex across one. Extends
+`concrete_cheeger_s92v.py` (n=5-only Cheeger, "Paley=max expander") to a cross-n dimension law; no collision.
+
+**Handoff / next (backlog "ISOPERIMETRIC DIMENSION..."):** (1) n→∞ conductance — expander or slow-decay?
+(exact φ=0.6,0.379; get n=7 via `tournament_metagraph.py`). (2) ⭐ run the battery on the even-graph
+metagraph `E_n` — honeycomb = tiling by even 6-cycles, so `E_n` is the prime candidate for a *genuinely
+2D* tournament graph (doubles as the standing opus E_n mandate). (3) densest-k profile `M_n(k)` vs the
+A000568 edge-sandwich (OPEN-Q-108). Files: HYP-9022, reflection
+`the-isoperimetric-dimension-axis-honeycomb-vs-metagraph-opus-S1.md`, script+out
+`metagraph_isoperimetric_dimension_opus_S1.*`.
+
 ## klein-2026-07-22-S401 -- THM-2142 a/b half-angle↔CT_u bridge + independent read-level assessment of the CLOSED GMC(2) (premise ledger empty, capstone faithful, risk localized upstream)
 
 **Owner:** (1) "think trigonometric functions, and triangular numbers and thus tournaments as a(x)=x+1
