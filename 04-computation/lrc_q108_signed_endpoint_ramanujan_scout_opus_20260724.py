@@ -9,9 +9,9 @@ of density 1/7 and H is the continuous periodic primitive of 1_D-1/7, then
                = (1/W) sum_[l,r] (H(Wr)-H(Wl)).
 
 This script evaluates that identity in Fraction arithmetic, retains every
-active endpoint owner, and ranks the configurations with smallest final safe
-measure and largest positive discrepancy.  It is an exploratory hostile
-scout, not a proof of the universal W>=14 inequality.
+active endpoint owner, and proves the finite part of THM-2162's exact
+one-swap stability theorem.  An optional scout mode ranks a bounded bank of
+configurations.  Neither mode proves the universal OPEN-Q-108 inequality.
 """
 
 from __future__ import annotations
@@ -26,6 +26,8 @@ from functools import reduce
 THETA = F(1, 14)
 P = F(1, 7)
 TARGET = F(7, 858)
+LOCAL_NEXT = F(3859, 420420)
+EXTREMIZER = tuple(v for v in range(1, 14) if v != 6)
 
 
 @dataclass(frozen=True)
@@ -121,6 +123,28 @@ def direct_final_measure(core: tuple[int, ...], w: int) -> F:
     return measure(good_intervals(tuple(sorted((*core, w)))))
 
 
+def independent_danger_union_measure(speeds: tuple[int, ...]) -> F:
+    """Second exact path: merge clipped danger arcs and subtract from one."""
+    danger: list[tuple[F, F]] = []
+    for v in speeds:
+        for k in range(v):
+            lo = F(k, v) - THETA / v
+            hi = F(k, v) + THETA / v
+            for shift in (-1, 0, 1):
+                a = max(F(0), lo + shift)
+                b = min(F(1), hi + shift)
+                if a < b:
+                    danger.append((a, b))
+    danger.sort()
+    merged: list[list[F]] = []
+    for a, b in danger:
+        if not merged or a > merged[-1][1]:
+            merged.append([a, b])
+        elif b > merged[-1][1]:
+            merged[-1][1] = b
+    return F(1) - sum((b - a for a, b in merged), F(0))
+
+
 def analyze(core: tuple[int, ...], w: int) -> dict[str, object]:
     intervals = good_intervals(core)
     mu = measure(intervals)
@@ -156,20 +180,99 @@ def analyze(core: tuple[int, ...], w: int) -> dict[str, object]:
     }
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--bank", type=int, default=16)
-    parser.add_argument("--w-max", type=int, default=40)
-    parser.add_argument("--top", type=int, default=12)
-    args = parser.parse_args()
+def theorem_companion() -> None:
+    print("THM-2162 SIGNED ENDPOINT / ONE-SWAP STABILITY -- EXACT COMPANION")
+    print(f"extremizer={EXTREMIZER}")
+    print(f"sharp_target={TARGET}")
+    print(f"proper_neighbor_floor={LOCAL_NEXT}=target+{LOCAL_NEXT-TARGET}")
+    print()
+    print(
+        "drop  core_mu        N+ iso  analytic_cutoff_for_neighbor_floor  "
+        "finite_W  finite_min"
+    )
 
+    checked = 0
+    equal_rows: list[tuple[int, int, F]] = []
+    for drop in EXTREMIZER:
+        core = tuple(v for v in EXTREMIZER if v != drop)
+        intervals = good_intervals(core)
+        mu = measure(intervals)
+        n_positive = sum(l < r for l, r in intervals)
+        isolated = len(intervals) - n_positive
+        slack = F(6, 7) * mu - LOCAL_NEXT
+        if slack <= 0:
+            raise AssertionError(("nonpositive analytic slack", drop, slack))
+        cutoff = F(6 * n_positive, 49) / slack
+        finite_top = cutoff.numerator // cutoff.denominator
+
+        finite_min: tuple[F, int] | None = None
+        for w in range(14, finite_top + 1):
+            row = analyze(core, w)
+            checked += 1
+            if row["final"] < LOCAL_NEXT:
+                raise AssertionError(("neighbor below floor", drop, w, row["final"]))
+            if row["final"] == LOCAL_NEXT:
+                equal_rows.append((drop, w, row["final"]))
+            if finite_min is None or row["final"] < finite_min[0]:
+                finite_min = (row["final"], w)
+
+        finite_text = (
+            "none"
+            if finite_min is None
+            else f"{finite_min[0]}@W={finite_min[1]}"
+        )
+        finite_range = "empty" if finite_top < 14 else f"14..{finite_top}"
+        print(
+            f"{drop:>4}  {str(mu):<14} {n_positive:>2} {isolated:>3}  "
+            f"{str(cutoff):<35} {finite_range:<9} {finite_text}"
+        )
+
+    expected_equal = [(10, 20, LOCAL_NEXT)]
+    if equal_rows != expected_equal:
+        raise AssertionError(("wrong equality classifier", equal_rows))
+
+    # The only proper small replacement is the formerly missing speed 6.
+    # These are the other AP-drop rows.  Their exact minimum is the drop-12
+    # value, strictly above the newly found far-neighbor floor.
+    small_rows = []
+    for drop in EXTREMIZER:
+        core = tuple(v for v in EXTREMIZER if v != drop)
+        small_rows.append((direct_final_measure(core, 6), drop))
+    small_rows.sort()
+    if small_rows[0] != (F(426, 35035), 12):
+        raise AssertionError(("unexpected small-neighbor minimum", small_rows[0]))
+    if not LOCAL_NEXT < small_rows[0][0]:
+        raise AssertionError("far-neighbor floor should beat every small neighbor")
+
+    witness = tuple(sorted((*tuple(v for v in EXTREMIZER if v != 10), 20)))
+    primary = measure(good_intervals(witness))
+    independent = independent_danger_union_measure(witness)
+    if primary != LOCAL_NEXT or independent != LOCAL_NEXT:
+        raise AssertionError(("independent replay mismatch", primary, independent))
+
+    print()
+    print(f"finite_far_rows_checked={checked}")
+    print(
+        "far_equality_classifier="
+        + ",".join(
+            f"drop={drop}:W={w}:measure={value}"
+            for drop, w, value in equal_rows
+        )
+    )
+    print(f"small_neighbor_min={small_rows[0][0]} at drop={small_rows[0][1]}")
+    print(f"independent_replay_row={witness}")
+    print(f"independent_replay_measure={independent}")
+    print("ALL EXACT CHECKS PASS")
+
+
+def bounded_scout(bank: int, w_max: int, top: int) -> None:
     smallest: list[dict[str, object]] = []
     adverse: list[dict[str, object]] = []
     checked = 0
-    for core in itertools.combinations(range(1, args.bank + 1), 11):
+    for core in itertools.combinations(range(1, bank + 1), 11):
         if reduce(gcd, core) != 1:
             continue
-        for w in range(14, args.w_max + 1):
+        for w in range(14, w_max + 1):
             if w in core:
                 continue
             row = analyze(core, w)
@@ -182,13 +285,13 @@ def main() -> None:
         key=lambda r: (r["budget_ratio"], r["epsilon"], -r["final"]),
         reverse=True,
     )
-    smallest = smallest[: args.top]
-    adverse = adverse[: args.top]
+    smallest = smallest[:top]
+    adverse = adverse[:top]
 
     print("OPEN-Q-108 SIGNED-ENDPOINT / RAMANUJAN SCOUT -- EXACT")
     print(
-        f"universe: primitive 11-subsets of [1,{args.bank}], "
-        f"14<=W<={args.w_max}, W not in core; rows={checked}"
+        f"universe: primitive 11-subsets of [1,{bank}], "
+        f"14<=W<={w_max}, W not in core; rows={checked}"
     )
     print(f"target={TARGET}")
     print()
@@ -214,6 +317,19 @@ def main() -> None:
         f"below_target={sum(r['final'] < TARGET for r in smallest)} "
         "(count only within displayed smallest rows)"
     )
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--mode", choices=("theorem", "scout"), default="theorem")
+    parser.add_argument("--bank", type=int, default=14)
+    parser.add_argument("--w-max", type=int, default=28)
+    parser.add_argument("--top", type=int, default=12)
+    args = parser.parse_args()
+    if args.mode == "theorem":
+        theorem_companion()
+    else:
+        bounded_scout(args.bank, args.w_max, args.top)
 
 
 if __name__ == "__main__":

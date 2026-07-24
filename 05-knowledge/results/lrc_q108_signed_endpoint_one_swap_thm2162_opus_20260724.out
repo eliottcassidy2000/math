@@ -1,0 +1,25 @@
+THM-2162 SIGNED ENDPOINT / ONE-SWAP STABILITY -- EXACT COMPANION
+extremizer=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+sharp_target=7/858
+proper_neighbor_floor=3859/420420=target+1/980
+
+drop  core_mu        N+ iso  analytic_cutoff_for_neighbor_floor  finite_W  finite_min
+   1  239/3003        6   4  308880/24821                        empty     none
+   2  461/12012       6   6  23760/767                           14..30    27/1547@W=17
+   3  1159/18018      8   4  411840/19321                        14..21    335/7956@W=17
+   4  389/12012       8   6  411840/7811                         14..52    335/23023@W=46
+   5  379/8580       12   4  617760/12059                        14..51    163/6006@W=19
+   7  4739/51480     10   6  257400/14657                        14..17    77771/2522520@W=14
+   8  2243/42042      8   6  2882880/107567                      14..26    6163/336336@W=16
+   9  11191/168168   10   4  900900/35213                        14..25    10837/504504@W=18
+  10  313/9702        8   6  2882880/54367                       14..53    3859/420420@W=20
+  11  1951/25480     12   4  540540/20767                        14..26    1543/60060@W=22
+  12  1546/35035      6   6  2162160/84299                       14..25    241/12012@W=24
+  13  907/17640      14   4  315315/6418                         14..49    115/6006@W=26
+
+finite_far_rows_checked=232
+far_equality_classifier=drop=10:W=20:measure=3859/420420
+small_neighbor_min=426/35035 at drop=12
+independent_replay_row=(1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 20)
+independent_replay_measure=3859/420420
+ALL EXACT CHECKS PASS

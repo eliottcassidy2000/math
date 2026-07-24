@@ -9,6 +9,25 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-245 (2026-07-24, audit of mac-mini S171/P14) -- a bounded local census was promoted to the global second OPEN-Q-108 measure
+
+- **What was claimed:** an exhaustive census on twelve-subsets of
+  `{1,...,18}`, supplemented by random rows at larger height, found
+  `426/35035` (the AP drop-12 value) as the second measure above the drop-6
+  minimum `7/858`; this was called a global two-level stability law.
+- **Why it is wrong:** the structured one-swap row
+  `{1,2,3,4,5,7,8,9,11,12,13,20}` lies just outside the exhaustive bank.
+  Two independent exact interval algorithms give
+  `3859/420420=7/858+1/980<426/35035`. Random sampling did not visit the
+  thin structured locus. This is the same failure mode as reading a random
+  search away from a dilation or relation subvariety as an extremal census.
+- **Correct framing:** THM-2162 proves that the drop-6 row is nevertheless a
+  strict local minimizer under every one-element replacement. Its exact local
+  neighbor floor is `3859/420420`, uniquely at replacement `10->20`.
+  No global second-value classification is currently proved.
+
+---
+
 ## MISTAKE-244 (2026-07-22, codex audit of HYP-8950/S109 and HYP-8955/S110) -- a Newton-face Wronskian was called DvdK, and a linear edge polynomial was confused with a weighted-linear coordinate
 
 - **What was claimed:** the resonant face equation `1 in im J(F,-)` was called

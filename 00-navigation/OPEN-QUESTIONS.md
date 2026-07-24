@@ -107,7 +107,18 @@ c=7 (the gluing calibration). Also OPEN: c >= 8 (klein `hledger_pos_of_pairbound
 overlap `P > L(c-7)/(7(c-1))`, needs the near-equal correlation lower bound). -> HYP-3980, HYP-3981,
 klein HYP-4022/4023, mac-mini HYP-3876, MISTAKE-071.
 
-**OPEN-Q-108 HYP-3900/3835 the r=2 residual after the simultaneous peel (opus-2026-07-01-S32):** The
+**OPEN-Q-108 HYP-3900/3835 the r=2 residual after the simultaneous peel (opus-2026-07-01-S32):**
+**2026-07-24 exact local update (THM-2162/MISTAKE-245):** the drop-6
+`7/858` extremizer is now proved to be a strict local minimum under every
+proper one-element replacement. Its exact neighbor floor is
+`3859/420420=7/858+1/980`, uniquely at replacement `10->20`. The former
+claim that the next value was the AP drop-12 measure `426/35035` was a
+bounded-census error. The analytic mechanism is the signed endpoint cocycle:
+only positive-length BV components pay `6/(49W)` each; isolated unit
+witnesses count for Euler existence but cancel identically from measure
+variation. Global OPEN-Q-108 remains open.
+
+**Historical route summary:** The
 multi-outlier tail of the 11-core census is CLOSED for any j<=6 far elements by the simultaneous-peel
 lemma (PROVED: meas(L_C) >= (1-j/7)meas(L_low) - (2c_low/7)sum 1/w; scale-free error 22j/(7Lambda) at a
 gap cut; guard table all positive, min margin 0.0130; MISTAKE-090 retires the false uniform-arc-count
