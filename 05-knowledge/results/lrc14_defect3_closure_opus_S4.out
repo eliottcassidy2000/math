@@ -1,0 +1,11 @@
+DEFECT-3 EXHAUSTIVE over the PROVED region (all far speeds <= 82):
+  cores=286  triples/core=52394  scanned=14,984,684  [39s]
+  near-tight (gap<=3/41) found: 0
+
+  => DEFECT-3 CLOSED: no defect-3 config has gap<=3/41
+DEFECT-3 closure attempt. factors: k=3 -> 3.8333 (23/6), k=2 -> 4.8333 (29/6)
+  max s1 (smallest far)  <= 112
+  max s2 (middle far)    <= 141
+  max s3 (largest far)   <= 82     worst=((4, 6, 10), 30, 46, np.float64(0.0017674089784376346))
+  => ALL three far speeds <= 141    [10s]
+  my exhaustive defect-3 scan covered adds <= 55 -> need scan to 141
