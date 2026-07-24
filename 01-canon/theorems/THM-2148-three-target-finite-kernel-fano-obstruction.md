@@ -20,6 +20,10 @@ related:
   - THM-2139
   - THM-2140
   - THM-2141
+script: 04-computation/lrc14_three_target_fano_kernel_referee_thm2148.py
+output: 05-knowledge/results/lrc14_three_target_fano_kernel_referee_thm2148.out
+script_sha256: 67ca620a3dedd75222c0b2a9958b9c28594c4421276f7e1b7f6a13e36c756a44
+output_sha256: f92309860bf01db92e53bb01095ecd0e86e46eab8d656b041aad3b890f5a50b3
 ---
 
 # THM-2148 -- three-target finite-kernel Fano obstruction
@@ -342,3 +346,29 @@ The historical Fano/`chi_7` lens is useful here only as an obstruction
 detector: three colours cover a Klein-four zero fibre, but the continuous
 polar sidecar rejects the third colour.  It supplies no symmetry quotient
 of the surviving determinant-incidence graph.
+
+## 6. Exact hostile controls
+
+The finite proof above is uniform and does not depend on enumeration.  The
+matching exact referee nevertheless exhausts every invariant-factor group
+
+```text
+C_m x C_n,             m|n, n<=18,                    (27)
+```
+
+and every triple of nontrivial characters.  Across `58` groups it finds no
+two-band cover and exactly `23` three-band covers.  Every cover is the
+unique triple of nonzero order-two characters on a group with two-dimensional
+two-torsion.  It also independently enumerates (17) and confirms that
+`(1,1)` is the sole required Klein-four parity absent from the polar diamond.
+
+Reproduce with
+
+```text
+python3 04-computation/lrc14_three_target_fano_kernel_referee_thm2148.py
+```
+
+The script prints the consequence objects--covering triples and polar
+parities--rather than assumptions injected into the model.  The exhaustive
+finite universe is a hostile endpoint/torsion control, not a bounded
+substitute for the all-group proof.

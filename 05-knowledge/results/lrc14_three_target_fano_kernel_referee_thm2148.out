@@ -1,0 +1,10 @@
+THM-2148 THREE-TARGET FANO KERNEL REFEREE
+invariant_factor_limit=18
+groups_checked=58
+total_pair_covers=0
+total_triple_covers=23
+positive_groups=[(2, 2), (2, 4), (4, 4), (2, 6), (6, 6), (2, 8), (4, 8), (8, 8), (2, 10), (10, 10), (2, 12), (4, 12), (6, 12), (12, 12), (2, 14), (14, 14), (2, 16), (4, 16), (8, 16), (16, 16), (2, 18), (6, 18), (18, 18)]
+polar_points=[(-1, 0), (0, -2), (0, -1), (0, 1), (0, 2), (1, 0)]
+polar_parities=[(0, 0), (0, 1), (1, 0)]
+missing_required_parity=(1, 1)
+status=PASS
