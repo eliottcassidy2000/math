@@ -1,0 +1,10 @@
+THM-2144 exact anisotropic Selberg--Kraft referee
+H=29: u=187/210, final_factor=1/42, B=1828518162230556187140793681/308944755478238922000000000000 > 0
+H=28: final_factor=-1/203, B=-1236354171303115835117980561/994142162152209023250193980923 < 0
+H=29 endpoint formula: B(h=1/12)=0 and its final factor is positive exactly for h<1/12
+budget 366 profile=(28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 29, 29): Kraft sum=33866/33847 > 1
+budget 367 profile=(28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 29, 29, 29): Kraft sum=33782/33847 < 1
+balancing exchange: strict decrease verified for 1<=low and low+2<=high<=368
+one cap 1 + twelve caps 104: Kraft sum=1730/1729 > 1
+one cap 1 + twelve caps 105: Kraft sum=12194/12217 < 1
+ALL EXACT ASSERTIONS PASSED
