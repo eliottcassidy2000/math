@@ -80,4 +80,23 @@ so it must be combined with a descent on `max(C)` or the known bounded-speed red
 3. **Combine §1(ii) + §3**: the cluster criterion is stated at scale `1/δ`, and §3 bounds `1/δ` by `max(C)/c`;
    together they say clusters are detected at scale `~max(C)`, which is the scale a descent argument runs on.
 
-Files: `/tmp/{diagnose,differences,prove2893,fatten,fatten2,fatten3}.py`.
+## 5. ADDENDUM — HYP-2893 proof attempt: step 1 proved, step 2 REFUTED (honest status)
+I tried to convert §2's localisation into a proof. Outcome is genuinely partial:
+
+**Step 1 (PROVED, and confirmed by data).** *Escapes are confined to arcs `j'/v` with `gcd(j',v) = 1`.*
+Proof: if `g = gcd(j',v) > 1`, put `w = v/g`. Then `w < v ≤ n` so `w ∈ M`, and `w j' ≡ 0 (mod v)`, hence near
+`τ = j'/v + s` we get `‖wτ‖ = |ws| ≤ w·(arc half-width)`, which is `≤ θ` — the arc is covered. ∎
+Confirmed on all 47 `(n,v)` cases: **every** escape arc is a unit mod `v` (e.g. `(8,5) → {1,2,3,4}`,
+`(8,6) → {1,5}`, `(13,12) → ∅`).
+
+**Step 2 (REFUTED — my own).** I derived "escape at arc `j'` ⟺ `w_max := max{w ∈ M : wj' ≡ ±1 mod v} ≤ 2m+1`."
+Tested: **31 of 47 cases mismatch.** The derivation was too crude: it assumed the constraint from a speed with
+`r = ±1` is a single upper bound on `|s|`, but a speed can **pass through** the danger band and be safe on the
+far side. So the admissible `s`-set is a *union* of intervals, not one interval, and the escape condition is a
+non-emptiness question for an intersection of unions — genuinely finer bookkeeping.
+
+**Honest status of (2):** the criterion is *verified* (zero mismatches, exact arithmetic, ~60 pairs) and its
+support is *localised and partly proved* (Step 1). A full proof needs the union-of-intervals analysis on the
+coprime arcs. I am **not** claiming HYP-2893 proved.
+
+Files: `/tmp/{diagnose,differences,prove2893,fatten,fatten2,fatten3,proofcheck,wmax}.py`.
