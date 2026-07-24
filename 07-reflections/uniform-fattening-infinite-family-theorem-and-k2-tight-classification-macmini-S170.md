@@ -33,14 +33,26 @@ largest bound `B = 206`, zero violations. Both halves discharged. ∎
 This is the first statement in this thread that covers an **infinite** family rather than a bounded box:
 the tail is closed by a lemma, not by enumeration. (A push to `{1..19}` was run separately.)
 
-## Result 2 — tight classification on all 1- and 2-perturbation sets
+## Result 2 — SGC'(13) and the tight classification on ALL 1-, 2-, and 3-perturbation sets
 
-> **THEOREM.** Among all sets `({1..13}\{i,j}) ∪ {w1,w2}` (and the k=1 sub-case), the **only** primitive
-> tight sets are the AP `{1,…,13}` and the Goddyn–Wong sporadic `{1,…,11,13,24}`.
+> **THEOREM (k ≤ 3).** No set obtained from `{1,…,13}` by replacing **up to three** elements has
+> `gap ∈ (1/14, 3/41)`; and among all such sets the **only** primitive tight sets (`gap = 1/14`) are the
+> AP `{1,…,13}` and the Goddyn–Wong sporadic `{1,…,11,13,24}`.
 
-*Proof.* Tight ⟹ `gap = 1/14 < 3/41 = θ`, so tight sets lie inside the same region the gap-axis
-multi-stranger + single-stranger lemmas bound: `w1 < 1/δ(11-core)`, `w2 < 1/δ(12-core)`. Exact verification
-over that derived region (180 exact gap evaluations) returns exactly AP and GW. ∎
+*Proof.* Tight ⟹ `gap = 1/14 < 3/41 = θ`, so band-hitters and tight sets lie in the same region, which the
+gap-axis multi-stranger lemma bounds (`4kθ<1` for `k≤3`, since `4·3·(3/41)=36/41<1`): with `w1<w2<w3`,
+`w1 < 1/δ(10\text{-core})`, `w2 < 1/δ(11\text{-core})`, `w3 < 1/δ(12\text{-core})`, all δ exact rationals.
+Exhaustive exact verification of that **derived** region:
+
+| k | nodes searched | exact gap evaluations | band-hitters | tight sets |
+|---|---|---|---|---|
+| 1 | all `w ≤ 417` | all j | 0 | AP, GW |
+| 2 | 513,264 | 180 | 0 | AP, GW |
+| 3 | 497,847 | 352 | 0 | AP, GW |
+∎
+
+The k=3 family is wide — every set differing from the AP in up to three positions, with the replacements
+unbounded a priori and bounded only by the lemma. No new tight set appears anywhere in it.
 
 Together with the S169 k=1 result, this is an exhaustive instance of the `{AP,GW}` conjecture
 (HYP-2561 / OPEN-Q-108) on a two-parameter family with a **derived** cutoff — strictly stronger than
