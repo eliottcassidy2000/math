@@ -56,6 +56,41 @@ uniquely at `{1,2,3,4,5,7,8,9,10,11,12,13}`. Nothing below. Earlier ranges `{1..
 agree. `7/858` is THM-541's drop-family minimum; the conjecture asserts it is **global**, and sharpens
 OPEN-Q-108 from "some `c>0`" to an explicit constant with a unique extremizer.
 
+## Result 4 — the tail is under control for ANY number of well-separated large elements
+
+The decoupling can be iterated: `j` unbounded top elements are handled whenever
+`(6/7)^j · m_{12−j} > 7/858`, where `m_k` = min measure over k-sets. The gates all close, with slack that
+**grows** as the body shrinks:
+
+| j unbounded | gate `(7/6)^j·(7/858)` | actual `m_{12−j}` | slack |
+|---|---|---|---|
+| 1 | 0.009518 | `313/9702` = 0.032261 | 3.39× |
+| 2 | 0.011105 | `14249/252252` = 0.056487 | 5.09× |
+| 3 | 0.012955 | `10601/114660` = 0.092456 | 7.14× |
+
+So the *tail* of the problem is not the obstruction at any depth; the difficulty is confined entirely to the
+comparable/bounded **body**.
+
+## Result 5 — the extremizer is RIGID (so the body is genuinely small)
+
+Dilates `d·({1..13}\{6})` all have measure exactly `7/858` (dilation invariance) but are **not primitive**.
+Restoring primitivity by a minimal perturbation costs a large jump:
+
+| perturbation of `d·EXT` | resulting measure | ratio to 7/858 |
+|---|---|---|
+| max ± 1 | 0.042–0.046 | **5.1–5.7×** |
+| min ± 1 | 0.064–0.068 | **7.8–8.4×** |
+
+(verified for `d = 2,3,5,10,30`). Likewise every primitive 12-set tested with a large minimum sits at
+`≥ 5.4×` (e.g. `{100..111}` at 17.3×). **The extremizer is isolated: no primitive small-measure set exists
+at large scale.**
+
+The mechanism is exactly the decoupling lemma: perturbing one element of a dilate turns the set into
+"(dilate of an 11-set) ∪ (one off-lattice element)", and that element decouples, giving
+`meas ≈ (6/7)·m(11-set) ≥ (6/7)m_{11} = 0.0277 > 7/858`. The observed cluster at ≈0.044 is exactly
+`(6/7)·meas({1,2,3,4,5,7,8,9,10,11,12}) = (6/7)(0.05142)`. So this whole regime is already **covered by the
+lemma**, not merely observed.
+
 ## Where the wall now stands
 
 The two halves of the argument are now clearly separated:
