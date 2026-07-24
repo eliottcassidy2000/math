@@ -1,0 +1,21 @@
+(a) TIGHT AP {1..13}: approach rate  gap - B_N  (expect ~ c log N / N; corner at tau*=1/14)
+    N      gap-B_N     (gap-B_N)*N/lnN
+     250  0.010236     0.4635
+     500  0.006090     0.4900
+    1000  0.003539     0.5123
+    2000  0.002016     0.5303
+    4000  0.001131     0.5454
+    binding slope at tau* = 7.00   (=> corner, sum|slopes|/2 ~ (1+13)/2=7)
+
+(b) CERTIFICATION DEGREE N* vs margin delta = gap - 1/14
+    config                         gap    delta      slope   N*     N* * delta / slope
+    {1..11,13,36} 3/41               3/41 0.00174   20.50  >4000  nan
+    {1..12,26} 2/27                  2/27 0.00265   13.50   2720  0.533
+    {1..12,14} 1/13                  1/13 0.00549   13.00   1200  0.507
+    {1..11,13,20}                    1/12 0.01190   12.00    420  0.417
+    {1,2,3,4,5,6,7,9,11,13,15,17,19}    1/8 0.05357   16.00    100  0.335
+    {1,3,5,7,9,11,13,15,17,19,21,23,25}    1/2 0.42857   25.00     20  0.343
+
+=> N* * delta / slope ~ const (up to log): N* ~ (binding slope)/delta. The certifiable-
+   concentration route certifies EVERY config with delta bounded below; cost ~1/delta diverges
+   at the tight locus (delta=0) = OPEN-Q-108. Quantifies 'bulk certifiable + rigidity crux'.
