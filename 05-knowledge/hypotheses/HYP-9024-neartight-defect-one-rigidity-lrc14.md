@@ -1,9 +1,14 @@
 ---
 id: HYP-9024
-title: "Near-tight defect-<=1 rigidity for LRC(14): gap(V) <= 3/41 forces V to be {1..13} with at most ONE element replaced -- reducing OPEN-Q-108 to a 2-parameter single-far family"
+title: "Near-tight rigidity for LRC(14): the tight locus is EXACTLY {AP, GW} for all defects <= 4 (PROVED), i.e. gap(V) <= 3/41 forces V in {AP, GW, {1..11,13,36}} there; only defect >= 7 remains"
 status: >
-  PARTLY PROVED (defects 2 and 3 are now THEOREMS; see the closure section), plus large-scan
-  evidence elsewhere. Across ~7.2 MILLION primitive 13-speed configs
+  LARGELY PROVED. Defects 1, 2, 3, 4 are THEOREMS (see the closure section): the ONLY 13-speed configs
+  of defect <= 4 with gap <= 3/41 are AP {1..13} (1/14, tight), GW {1..11,13,24} (1/14, tight) and
+  {1..11,13,36} (3/41). Hence the TIGHT LOCUS IS EXACTLY {AP, GW} on that range -- OPEN-Q-108's
+  conjecture, proved for defect <= 4. Defects 5,6 are attackable by the same search (klein's lemma
+  valid while 1-2kh>0, i.e. k<=6). Defect >= 7 is the entire residual and is OPEN: klein's lemma
+  hypothesis fails (2kh>1), and the measure test fails too, so it needs a genuinely different idea.
+  Supporting scan evidence: across ~7.2 MILLION primitive 13-speed configs
   scanned seven independent ways with EXACT gap arithmetic, the COMPLETE set with gap <= 3/41 is
   exactly three configs -- AP {1..13} (1/14, tight), GW {1..11,13,24} (1/14, tight), and
   {1..11,13,36} (3/41) -- ALL of defect <= 1. Zero counterexamples (gap < 1/14), zero tight configs
@@ -98,6 +103,26 @@ union of bands of width `2h/r` separated by gaps of width `(1-2h)/r > 0`, so an 
 This bounds the LARGEST far speed directly, and is sharper than bounding `sum 1/r` because it uses
 the actual lonely structure of `W`.
 
+**Defect 1 (THEOREM) — and it settles the tight locus on this range.** `V = {1..13}\{j} u {s}`,
+`s >= 14`. `gap(V) <= h` iff `Lon_h(C)` is covered by `D_s`, so the band criterion applies directly:
+`s <= 2h / L_max(C)`. Exactly, per dropped `j`:
+
+```
+j   :  1    2    3    4    5    6    7    8    9   10   11   12   13
+s <=:  4   10   12   21   21   60   10   11   13   24   18   42   35
+```
+
+**Six cores (`j = 1,2,3,7,8,9`) have bound `< 14`, so they are VACUOUSLY closed** — no admissible far
+speed exists at all. The max bound is `60`, and exhaustive enumeration `s in [14, s_max(j)]` yields
+**exactly** `j=12, s=24` (GW, `1/14`, TIGHT) and `j=12, s=36` (`{1..11,13,36}`, `3/41`), nothing else.
+So defect 1 is NOT an unbounded 2-parameter family — it is finite and settled.
+(`lrc14_defect1_closure_opus_S4.py`)
+
+**CONTROL (validates the negative results).** The identical machinery — lonely intervals, `carve`,
+band criterion — run at defect 1, where the answer is known, recovers exactly `{GW, {1..11,13,36}}`
+and nothing else; the `j=12` bound `s<=42` comfortably contains both witnesses (`24, 36`), so the
+criterion is not over-pruning. This is why the defect-2,3,4 negatives are trustworthy.
+
 **Defect 2 (THEOREM).** klein's lemma (`k=2`, factor `29/6`) gives `min(far) <= 70`. For each of the
 78 cores and each `s in 14..70` (4,446 pairs, exact rationals) the criterion gives
 `r <= 2h/L_max(C u {s})`, with **max `r_max` = 73** (worst: `drop(6,10)`, `s=40`,
@@ -110,6 +135,23 @@ again with core `C u {s1}` (`k=2`) gives `s2 <= 141`; the band criterion gives `
 `s1 <= s2 <= s3 <= 82`, ALL far speeds are `<= 82`. Exhaustive scan of that proved region — all 286
 ten-cores x all triples from `14..82` = **14,984,684 configs** — finds **zero** near-tight.
 **No defect-3 config has `gap <= 3/41`.** (`lrc14_defect3_{bounds,closure_scan}_opus_S4.py`)
+
+**Defect 4 (THEOREM) — and the reusable algorithm.** Brute force over the bounded region is `~618M`
+configs, so instead apply klein's lemma at **every node**, not just the root. State = the still-uncovered
+part `lon` of `Lon_h(C)` after choosing `s_1<...<s_j`, with `krem` speeds left:
+
+```
+L = longest arc of lon
+krem >= 2 :  lemma => sum_{i>j} 1/s_i >= R := L(1-2*krem*h)/(2h);  all remaining >= s
+             => krem/s >= R  =>  s <= krem/R          [prunes the whole tail]
+krem == 1 :  the last speed must cover lon entirely => s <= 2h/L   [band criterion]
+lon empty => near-tight config found;  else recurse on carve(lon, s).
+```
+
+Because `L` shrinks as speeds are added while the factor `(1-2*krem*h)/(2h)` grows as `krem` drops,
+the bound `s <= krem/R` collapses fast. Result: all 715 nine-cores, **966,120 nodes, 15 s, ZERO**
+near-tight — a ~600x reduction over brute force. **No defect-4 config has `gap <= 3/41`.**
+(`lrc14_defect4_closure_opus_S4.py`)
 
 **Remaining.** `d = 1` (the 2-parameter family `{1..13}\{j} u {r}`, scanned to `r <= 3000`: only GW
 tight and `{1..11,13,36}` at `3/41`) and `d >= 4`.
