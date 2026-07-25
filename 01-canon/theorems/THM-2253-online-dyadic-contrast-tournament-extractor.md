@@ -2,14 +2,14 @@
 id: THM-2253
 title: "Online dyadic-contrast tournament extraction"
 status: >
-  PROVED + VERIFIED-EXACT. For an i.i.d. source on a finite alphabet with
-  unknown nondegenerate law, orient the distinct alphabet pairs by any
-  tournament. Stop at the first right endpoint of an aligned dyadic interval
-  whose two halves are constant and distinct, and output the tournament
-  orientation of those two symbols. Swapping the homogeneous halves is a
-  composition-preserving, output-reversing involution of terminal cylinders,
-  so the output is exactly fair for every source law. If n is the initial
-  constant-run length, the stopping time satisfies
+  PROVED + VERIFIED-EXACT. For any almost-surely nonconstant exchangeable
+  source on a finite alphabet, orient the distinct alphabet pairs at each
+  dyadic node by any tournament. Stop at the first aligned dyadic interval
+  whose two halves are constant and distinct, and output their tournament
+  orientation. Swapping the homogeneous halves is a mass-preserving,
+  output-reversing involution of terminal cylinders, so the output is exactly
+  fair. Unknown-law i.i.d. categorical sources are a special case. If n is
+  the initial constant-run length, the stopping time satisfies
   tau<=n+2^nu_2(n)<=2n; unless n is a power of two it satisfies
   tau<=4n/3. This strengthens the adaptive part-(a) coin deadline and gives
   a lawful state-dependent alternative to a fixed response antipode; it does
@@ -42,9 +42,15 @@ Let `A` be a finite alphabet and let
 X_1,X_2,... in A
 ```
 
-be i.i.d. with unknown law `pi`, where `max_a pi(a)<1`. Fix any tournament
-orientation on `A`: for distinct `a,b`, exactly one of `a->b` and `b->a`
-holds.
+have an exchangeable law: every finite coordinate permutation preserves
+their distribution. Assume the source is nonconstant almost surely. An
+i.i.d. categorical source with unknown law `pi` and `max_a pi(a)<1` is the
+motivating special case.
+
+For each aligned dyadic node `I`, fix any tournament `T_I` on `A`: for
+distinct `a,b`, exactly one of `a->_I b` and `b->_I a` holds. The tournament
+may depend on the node address, or on any observed context invariant under
+swapping the two children of `I`.
 
 An aligned dyadic interval is
 
@@ -56,8 +62,8 @@ Its left and right children have length `L`. Call `I` a **contrast node**
 when each child is constant and their two symbols are distinct.
 
 Read the source from left to right. Stop at the first time `tau` which is
-the right endpoint of a contrast node. If its children carry `a,b`, output
-heads when `a->b` and tails when `b->a`.
+the right endpoint of a contrast node `I`. If its children carry `a,b`,
+output heads when `a->_I b` and tails when `b->_I a`.
 
 At a fixed right endpoint there is at most one contrast node. Aligned dyadic
 intervals are laminar. If one contrast node were strictly contained in
@@ -135,34 +141,35 @@ The same observations handle other intervals ending at `tau`. Consequently
 `sigma` maps a terminal prefix to a terminal prefix with the same stopping
 time and selected node, and applying it twice restores the prefix.
 
-The swap preserves the number of occurrences of every alphabet symbol.
-Therefore it preserves the probability of the terminal cylinder:
+The swap is a finite coordinate permutation, so exchangeability makes its
+two terminal cylinders equiprobable. In the i.i.d. special case this is the
+familiar composition identity
 
 ```text
 P_pi[X_1...X_tau=w]=product_(a in A) pi(a)^N_a(w).   (7)
 ```
 
-It is fixed-point-free and reverses heads and tails. Hence it pairs the
-terminal cylinders composition by composition and gives
+It is fixed-point-free and reverses heads and tails under the node-indexed
+tournament. Hence it pairs all terminal cylinders and gives
 
 ```text
 P_pi(heads)=P_pi(tails).                              (8)
 ```
 
-By (4) the rule stops on every nonconstant sequence. The finitely many
-constant rays have total probability zero because `max_a pi(a)<1`, so the
-two probabilities in (8) sum to one. The extracted bit is exactly fair for
-every unknown nondegenerate source law.
+By (4) the rule stops on every nonconstant sequence. These have total
+probability one by assumption, so the two probabilities in (8) sum to one.
+The extracted bit is exactly fair. In particular, this holds for every
+unknown nondegenerate i.i.d. categorical law.
 
 ## 4. Why this is a genuine tournament and not a cosmetic one
 
 The vertices are source symbols, the pairwise observable is the ordered
 pair of distinct homogeneous child labels, and ties never occur at a
-contrast node. Reversing the children reverses the tournament edge. The
-swap preserves the full composition vector, terminal time, and dyadic
-address; it forgets the internal coordinates only because each selected
-child is constant. These are precisely the data needed by the probability
-predicate.
+contrast node. Reversing the children reverses the node's tournament edge.
+The swap preserves the full composition vector, terminal time, dyadic
+address, and every allowed orientation context. It forgets the internal
+coordinates only because each selected child is constant. Exchangeability,
+not independence, is precisely the probability predicate it preserves.
 
 Unlike THM-2225's cyclic checksum, this response is state-dependent. It is
 not a homomorphism from one fixed source action to `F_2`, so it lawfully
