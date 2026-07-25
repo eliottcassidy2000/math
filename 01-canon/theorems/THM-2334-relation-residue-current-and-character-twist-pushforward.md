@@ -662,7 +662,7 @@ Take
 
 ```text
 d=2, w=(1,1), X=Y=m=0,
-J_1=J_2=1.                                         (52)
+J_1=J_2=1,             delta_hat(0)=1.             (52)
 ```
 
 Let the first endpoint factor have Fourier coefficients
