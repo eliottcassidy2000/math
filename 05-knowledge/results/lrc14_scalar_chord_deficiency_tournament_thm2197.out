@@ -1,0 +1,9 @@
+THM-2197 scalar chord deficiency/tournament audit
+guard_forbidden=(0, 1, 11, 12)
+covered_masks=((6,), (2, 3), (4, 5), (9, 10), (7, 8))
+reflection_action=(0, 3, 4, 1, 2)
+reflection_invariant_tournaments=0
+uncovered_masks=((6,), (2, 3), (4, 5), (7, 8), (8, 9))
+profiles=(1, 1, 1, 1, 1); deficiencies=((),(10,))
+deficiency_states=512; product_checks=262144; separation_checks=261632
+PASS
