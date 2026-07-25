@@ -1,0 +1,10 @@
+THM-2342 exact deep-wall first-flux-cover referee
+infinity direction cubic=h^3+(80/19683)h+704/14348907
+direction discriminant=-94208/282429536481
+Z=(2/45927)*(139968C+560y^3+34020y^2z-413343yz^2+12960y)
+leading flux direction=560+34020h-413343h^2
+direction resultant=1024192512
+certified odd infinity poles=3
+minimum double-cover branch points=4
+minimum double-cover genus=1
+VERDICT: neither rational deep-wall curve lifts through Z=T^2
