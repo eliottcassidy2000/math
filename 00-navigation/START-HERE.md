@@ -118,7 +118,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     its transverse and scalar-`4+3` lanes, leaving only scalar `5+3`.
     THM-2187/2193 give a saturated carrier, floor `7^-21`, rank seven by `78*7^21`, and safe septimal grids; THM-2188 retains slope/current.
     THM-2196/2199 prove rank twelve; THM-2208/2212 give bounded anchors and exact rulers per rank-eleven plane, while THM-2203 fixes scalar transport at `16/208`.
-    THM-2198--2239 leave `165` depth-one rows; THM-2257/2258 close `(3,4,5)`. THM-2261--2278 give sharp owner, gap, and marked-root structure. THM-2274/2283 give scalar ranks two and three; THM-2279/2282 anchor a mod-13 unit minor at `c_1`. THM-2276 lands the exact shallow ancestry atom for multipliers `1..3` and freezes `696` hard local cancellations. Target that bank and the `45` boundary rows.
+    THM-2198--2258 leave `165` depth-one rows; THM-2261--2299 force sharp owner/root structure, rank six, fixed-time return-or-resonance, and rooted current service. THM-2303 identifies relative terminal-component phase; the primitive bank stays `696`, while THM-2300 leaves `693` values without a forced same-character multiple. Target a global phase-tree edge and the `45` boundary rows.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
     the knot continuation cocycle; THM-2191 gives its catalytic group length,
     commuting stable envelope, and abstract additive dual, and closes `9_10`.

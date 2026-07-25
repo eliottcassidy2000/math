@@ -6,6 +6,7 @@ anchored_minor=8 mod13=8
 exact_strict_y_margin=3/540602608
 epsilon=1/1000000000000 eta=1/1000000000000
 terminal_root_addresses=(12, 0)
+root_character_component_checks=48
 same_discrete_root_current_signature=True
 antipodal_relative_phase_cycles=1/2
 perturbed_relative_phase_cycles=125000000001/250000000000
@@ -15,7 +16,7 @@ antipodal_Ehat52=0
 perturbed_Ehat52=nonzero
 antipodal_W4hat0=0
 perturbed_W4hat0=nonzero
-root_energy_observation_rank=1
+root_energy_packet_ledger_rank=1
 phase_augmented_rank=2
 fixed_phase_continuation_defect_rank=1
 relative_phase_transport_edges_needed_for_two_components=1

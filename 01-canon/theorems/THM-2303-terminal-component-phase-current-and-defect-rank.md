@@ -9,8 +9,9 @@ status: >
   phase-transport graph has k nonzero blocks, exactly k-1 relative phases
   remain in the generic fiber. For two interval components, cancellation is
   equivalent to equal sinc amplitudes and antipodal relative base phase.
-  On the multiplier-four THM-2299 carrier the rooted-energy/current-service
-  quotient has exact linear continuation-defect rank one. An exact strict
+  On the additive fixed-phase two-packet ledger underlying the multiplier-four
+  THM-2299 carrier, the phase-forgetting response has exact linear
+  continuation-defect rank one. An exact strict
   perturbation keeps the owner, target, clock, source and terminal root
   addresses, component masses, all rooted energies, pair relation, and
   anchored minor fixed while changing F-hat(4), E-hat(52), and W_4-hat(0)
@@ -27,8 +28,8 @@ related:
   - THM-2296-prescribed-expiration-return-or-bounded-ancestry-resonance
 script: 04-computation/lrc14_terminal_component_phase_current_thm2303.py
 output: 05-knowledge/results/lrc14_terminal_component_phase_current_thm2303.out
-script_sha256: 5d9671672d3af8dc8c269fe1b5df18e2276b7cda4f5d13fa6871f70269c52615
-output_sha256: 3ceb60ce53bb53223787a4f5ff8579f71536e897cf23a3cb788a841a47de3d7b
+script_sha256: d93c6efc689000c07cab5acc367ec395179b1233a29b529c61f9517f1abae12f
+output_sha256: df9136525f854ef18de1cebbd5a44b7b5b6ccc458f2fe59255de3a8dd1d98d65
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -120,6 +121,35 @@ comparison between two component edges. Exact target ties remain colored
 ties or are made disjoint by the explicit priority partition of THM-2299.
 A tournament would add a cosmetic orientation and forget the additive
 current (7).
+
+### Dyadic terminal-address corollary
+
+The same carrier was already latent in THM-2075's dyadic terminal word. If
+`I` is a terminal component with depth-`r` address `a_I`, its lifted
+component is
+
+```text
+s_I(I)=(I+a_I)/2^r.
+```
+
+Applying (5) with radix two gives
+
+```text
+integral_(s_I(I)) exp(-2*pi*i*n*x)dx
+ =2^(-r)exp(-2*pi*i*n*a_I/2^r)
+   integral_I exp(-2*pi*i*(n/2^r)y)dy.               (7a)
+```
+
+Thus THM-2075's address is exactly the discrete phase factor, not the whole
+phase. The affine placement of the terminal component supplies the
+continuous factor. This explains its guardrail that forgetting addresses
+can permute cyclic order, and it identifies the common mechanism behind the
+dyadic terminal tower and THM-2299's thirteen-root gauge:
+
+```text
+branch address alone is not phase transport;
+address times terminal base gauge is.                (7b)
+```
 
 ## 2. Phase transport is a spanning-tree problem
 
@@ -233,15 +263,20 @@ sum_e I_e=0.                                         (19)
 
 The phase-tree lemma says which coordinates reconstruct that polygon.
 
-## 4. Exact defect rank of rooted energy
+## 4. Exact defect rank of the additive energy-packet ledger
 
 There are two distinct debts: component weights and component positions.
-First freeze the antipodal phase directions in the two-component carrier
-and allow its two component masses to vary as `(w_-,w_+)`.
+First freeze the two equal one-sheet component packets at their antipodal
+phase directions. Distinct components contribute additively both to
+integrated rooted energy and to the Fourier current. Form the real additive
+packet ledger in which `(w_-,w_+)` are formal multiplicities of these two
+fixed packets, and extend both additive valuations linearly.
 
 On a one-sheet rooted handoff, every nonzero root character has the same
-pointwise magnitude. After integration over the same named current-service
-label, all twelve rooted-energy observations are scalar multiples of
+pointwise magnitude. Each fixed packet therefore has the same positive
+integrated energy. After dividing by that common packet energy, all twelve
+rooted-energy ledgers and the named current-service mass ledger are scalar
+multiples of
 
 ```text
 R(w_-,w_+)=w_-+w_+.                                  (20)
@@ -280,6 +315,12 @@ independently checks
 ```text
 rank R=1,       rank(R,Re N,Im N)=2.                 (25)
 ```
+
+The scope is the additive component-packet ledger. This does **not** assert
+that the quadratic functional `f -> integral |M_a|^2` is linear when one
+rescales a function on an already fixed component. Its additivity here is
+the literal additivity of integrals over disjoint fixed packets, followed by
+the formal linear extension required by THM-840.
 
 This does not pay the positional debt. If the two component masses are
 already retained, varying their relative placement leaves (20) unchanged
@@ -406,7 +447,7 @@ lost by energy:
   signed mass imbalance and relative affine base phase;
 
 minimum fixed-phase linear sidecar:
-  rank one on the canonical two-component carrier;
+  rank one on the additive canonical two-packet ledger;
 
 positional repair:
   one relative U(1) phase for two components, or a phase-transport spanning

@@ -179,6 +179,7 @@ def main() -> None:
     signatures: list[str] = []
     relative_phases: dict[str, Fraction] = {}
     terminal_addresses: dict[str, tuple[int, int]] = {}
+    root_character_component_checks = 0
 
     for name, centers in configurations.items():
         for center in centers:
@@ -213,6 +214,25 @@ def main() -> None:
             f"{name}: positive terminal address changed",
         )
 
+        # On a one-sheet word the character value is (1/13)zeta^(-a*r).
+        # Its squared magnitude is exactly 1/169, independent of a and r.
+        # Each terminal component has length 26*epsilon, hence exact energy
+        # 2*epsilon/13 in every nonzero character.
+        for character in range(1, P):
+            for address in addresses:
+                require(
+                    (-character * address) % P in range(P),
+                    f"{name}: invalid root phase exponent",
+                )
+                pointwise_squared_magnitude = Fraction(1, P**2)
+                terminal_component_length = 2 * P * EPSILON
+                energy = pointwise_squared_magnitude * terminal_component_length
+                require(
+                    energy == 2 * EPSILON / P,
+                    f"{name}: rooted component energy changed",
+                )
+                root_character_component_checks += 1
+
         phase_difference = (M * (centers[1] - centers[0])) % 1
         relative_phases[name] = phase_difference
         signature = (
@@ -223,6 +243,10 @@ def main() -> None:
         signatures.append(signature)
 
     require(signatures[0] == signatures[1], "discrete signatures differ")
+    require(
+        root_character_component_checks == 2 * 12 * 2,
+        "rooted component check census changed",
+    )
     require(
         relative_phases["antipodal"] == Fraction(1, 2),
         "unperturbed components are not antipodal",
@@ -286,6 +310,7 @@ def main() -> None:
     print(f"exact_strict_y_margin={exact_margin}")
     print(f"epsilon={EPSILON} eta={ETA}")
     print(f"terminal_root_addresses={terminal_addresses['antipodal']}")
+    print(f"root_character_component_checks={root_character_component_checks}")
     print("same_discrete_root_current_signature=True")
     print(
         "antipodal_relative_phase_cycles="
@@ -301,7 +326,7 @@ def main() -> None:
     print("perturbed_Ehat52=nonzero")
     print("antipodal_W4hat0=0")
     print("perturbed_W4hat0=nonzero")
-    print(f"root_energy_observation_rank={observation_rank}")
+    print(f"root_energy_packet_ledger_rank={observation_rank}")
     print(f"phase_augmented_rank={joint_rank}")
     print(f"fixed_phase_continuation_defect_rank={defect_rank}")
     print("relative_phase_transport_edges_needed_for_two_components=1")
