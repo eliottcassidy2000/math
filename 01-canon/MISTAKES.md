@@ -34,6 +34,23 @@ Format per entry:
 
 ---
 
+## MISTAKE-251 (2026-07-25, correction of the depth-one odd-transfer reflection) -- the 165-profile family was split as 151+14 instead of 150+15
+
+- **What was written:** the hostile Bellman classification in
+  `07-reflections/lrc14-depth-one-odd-transfer-cone-and-private-stratum-no-go-codex-20260725.md`
+  said that `151` profiles have exactly one depth-one blocker and `14`
+  profiles have two.
+- **Why it is wrong:** the current family is
+  `(1,b,c)` with `5<=c<=19` and `1<=b<c`. The repeated-first-depth subfamily
+  is `(1,1,c)` for all fifteen values `c=5,...,19`; the remaining sum is
+  `3+4+...+17=150`.
+- **Correct framing:** the exact split is `150+15=165`. The two hostile
+  Bellman constructions and every bound in the reflection are unchanged;
+  only the class counts were wrong. THM-2255 uses and freezes the corrected
+  split.
+
+---
+
 ## MISTAKE-249 (2026-07-24, correction of THM-2176) -- right continuation was called a two-sided congruence for an arbitrary monoid
 
 - **What was claimed:** the universal continuation theorem began with an

@@ -187,8 +187,9 @@ rows with deepest depth at least five and `(3,4,5)`. THM-2243 centers the
 latter's composite union; THM-2250 closes every unequal-core partition, and
 THM-2257's exact `169`-image sieve contradicts the capacity of its common-core
 branch. The exact scalar ledger is therefore `165`, all at first depth one.
-THM-2234 supplies private depth-one expansion; THM-2211/2216/2218/2238 retain
-carry and tail sidecars. The open scalar target is THM-2239's time-zero literal loss joined to cross-time owner switching/carry. LRC(14) remains open.
+THM-2234 supplies private expansion. THM-2255's cap `25/1183` forces exclusive-owner mass: the
+`150` strict rows have an expiration image `>=88159/415800>1/7`, while the `15` `(1,1,c)` rows have only `>=14627/207900<1/7`. Open targets are its
+labelled handoff and THM-2239's time-zero literal. LRC(14) remains open.
 
 ### Independent routes that remain live
 

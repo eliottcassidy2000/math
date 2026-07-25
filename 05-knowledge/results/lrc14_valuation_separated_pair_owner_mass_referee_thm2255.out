@@ -1,0 +1,7 @@
+THM-2255 independent exact interval referee
+directly intersected finite pairs: 70
+direct interval maximum: 25/1183
+direct reduced equality classes: [(1, 169)]
+strict-depth exclusive-owner floor: 88159/1171170
+double-depth exclusive-owner floor: 14627/585585
+all independent checks passed

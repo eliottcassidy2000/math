@@ -173,10 +173,10 @@ THM-2233 four-bit arbitrary-coupling Bellman bound for this score is at least
                     >961/6930                         (15)
 ```
 
-by the exact margin `1986977/2376990`.  This covers all `151` profiles with
+by the exact margin `1986977/2376990`.  This covers all `150` profiles with
 exactly one depth-one core, independently of the two deeper valuations.
 
-For the `14` profiles `(1,1,c)`, require one fixed peeled shallow owner to
+For the `15` profiles `(1,1,c)`, require one fixed peeled shallow owner to
 fire and the sole deep positive owner to be absent.  This event lies in the
 peeled owner's nonprivate stratum and contributes
 

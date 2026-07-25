@@ -1,0 +1,13 @@
+THM-2255 exact folded-formula companion
+analytic tail starts at ab=346
+tail bound at ab=346: 1433/67816 = 0.021130706617907
+sharp ramified pair cap: 25/1183 = 0.021132713440406
+finite coprime bank size: 70
+finite maximum: 25/1183
+reduced equality classes: [(1, 169)]
+hostile equality rho(1,169): 25/1183
+strict-depth total exclusive-owner floor: 88159/1171170
+strict-depth labelled pigeonhole floor: 88159/3513510
+double-depth total exclusive-owner floor: 14627/585585
+double-depth labelled pigeonhole floor: 14627/1756755
+all exact checks passed
