@@ -2,7 +2,7 @@
 id: THM-2332
 title: "Degree-eighteen genus-zero square-class and Hurwitz-signature trap"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. In every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In every
   remaining three- or four-sparse stratum of the genuine nonsplit
   polynomial exact-square-prefix degree-eighteen branch, the trigonal
   spectral curve is absolutely irreducible. Its branch discriminant is
@@ -33,7 +33,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2332 -- the residual degree-eighteen locus is a low-branch square class
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2297 puts the degree-eighteen spectral equation in the weighted form
 
@@ -352,3 +352,14 @@ transitive product-one `S_3` signature in (19)--(20).  The
 order-discriminant formula, the two Riemann--Hurwitz uses, and the Keller
 implication are the mathematical proof above, not computer assumptions.
 QED.
+
+The independent hostile audit reconstructed all `32` monomials of (6)
+with custom sparse polynomial arithmetic, independently checked
+(9)--(13), and verified the infinity completion directly over `C[[z]]`
+as a finite étale algebra with three DVR factors. It audited the cubic
+order and integral closure over the PID `C[y]`, the square-index
+discriminant formula, tame different exponents, both Riemann--Hurwitz
+uses, and the constant-trajectory deck exclusion. As a cross-check,
+`deg disc(O)=4` forces index degree four and independently recovers the
+three square-factor degrees. Normal, optimized, and stored transcripts
+and both hashes agree.
