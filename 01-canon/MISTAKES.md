@@ -9,6 +9,21 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-249 (2026-07-24, correction of THM-2176) -- right continuation was called a two-sided congruence for an arbitrary monoid
+
+- **What was claimed:** the universal continuation theorem began with an
+  arbitrary monoid and called equality of the right-continuation profiles
+  `z |-> f(x+z)` the largest monoid congruence contained in `ker(f)`.
+- **Why it is wrong:** the displayed proof establishes stability under right
+  multiplication. In a noncommutative monoid it gives the largest right
+  congruence, not necessarily a two-sided congruence.
+- **Correct framing:** THM-2176 now states the theorem for a commutative
+  monoid, which is exactly the connected-sum setting used there. In the
+  noncommutative generalization one must either retain both-sided contexts or
+  say “largest right congruence.” The min-plus kernel theorem is unaffected.
+
+---
+
 ## MISTAKE-248 (2026-07-24, correction of THM-2158) -- one quartic pole congruence was presented as two independent conditions
 
 - **What was claimed:** polynomiality of the canonical quartic approximate

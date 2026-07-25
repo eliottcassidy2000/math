@@ -10,9 +10,13 @@ status: >
   unknotting number. The interaction defect is a normalized symmetric
   nonnegative 2-coboundary, monotone on product Gordian cones. The
   T(2,7)-mirror counterexample is pure geodesic bypass, not translation
-  contraction, and connected-sum homogenization remains nonadditive. This
-  theorem does not compute the still-unknown exact unknotting number of the
-  counterexample or give a finite complete knot invariant.
+  contraction, and connected-sum homogenization remains nonadditive. A
+  slack-aware propagation inequality quantifies approximate descent. After
+  quotienting each knot independently by mirror, one relative chirality bit
+  is necessary and sufficient to repair the quotient ambiguity on the first
+  counterexample fiber. This theorem does not compute the still-unknown exact
+  unknotting number of the counterexample or give a finite complete knot
+  invariant.
 source: codex-2026-07-24-knot-relations
 depends_on: []
 related:
@@ -123,8 +127,8 @@ where `u(K)=d_G(K,U)`.
 
 ## 2. The universal continuation profile
 
-The next statement does not require a metric. Let `M` be any monoid and let
-`f:M->Y` be any observable. Define
+The next statement does not require a metric. Let `M` be any commutative
+monoid and let `f:M->Y` be any observable. Define
 
 ```text
 Pi_f(x):M->Y,            Pi_f(x)(z)=f(x+z),           (11)
@@ -516,5 +520,188 @@ THM-2174 now supplies the matching continuation-congruence warning: endpoint
 phase labels without signed magnitude preserve extensive algebraic state but
 not the target measure. The universal theorem above explains exactly what a
 successful replacement must do, but proves no new LRC(14) case by itself.
+
+## 9. Slack-aware propagation
+
+The rooted-order monotonicity (29) has an exact quantitative extension.
+Define the descent excess
+
+```text
+e(x;a)=d(x,a)+ell(a)-ell(x)>=0.                       (55)
+```
+
+For all `x,y,a,b`,
+
+```text
+ell(x+y)<=d(x,a)+d(y,b)+ell(a+b),                    (56)
+
+sigma(x,y)>=sigma(a,b)-e(x;a)-e(y;b).                (57)
+```
+
+Indeed, joint nonexpansivity and a final path to the root give
+
+```text
+ell(x+y)
+ <=d(x+y,a+b)+ell(a+b)
+ <=d(x,a)+d(y,b)+ell(a+b).                           (58)
+```
+
+Substituting
+
+```text
+ell(x)-d(x,a)=ell(a)-e(x;a)
+```
+
+and its `y,b` counterpart into (58) gives (57).
+
+Thus exact rooted descent is not a cosmetic hypothesis: it is precisely the
+zero-slack case. For knots, if
+
+```text
+K<=_0 L_1,
+mirror(K)<=_0 mirror(L_2),                           (59)
+```
+
+then mirror invariance of Gordian distance and (57) give
+
+```text
+u(L_1#mirror(L_2))
+ <=u(L_1)+u(L_2)-sigma(K,mirror(K))
+ <=u(L_1)+u(L_2)-1                                  (60)
+```
+
+for `K=T(2,7)`. If a proposed crossing-change descent is not certified
+minimal, its two excesses in (57) must be paid. This is the exact boundary of
+the propagation mechanism.
+
+## 10. The relative mirror gauge
+
+Let the abstract metric monoid additionally carry an involutive isometric
+monoid automorphism `iota`. Then
+
+```text
+ell(iota(x))=ell(x),
+Pi_(iota(x))(z)=Pi_x(iota(z)),
+P_(iota(x))(a,b)=P_x(iota(a),iota(b)).                (61)
+```
+
+For a kernel put
+
+```text
+J(P)(a,b)=P(iota(a),iota(b)).                         (62)
+```
+
+Equations (5) and (61) give
+
+```text
+P_(iota(x))=J(P_x),
+J(P tensor Q)=J(P) tensor J(Q).                      (63)
+```
+
+Consequently, independently retaining only the two kernel orbits
+
+```text
+{P_x,J(P_x)},             {P_y,J(P_y)}               (64)
+```
+
+loses a relative `Z/2` alignment. After fixing the gauge of the first factor,
+the two possible products are
+
+```text
+P_x tensor P_y=P_(x+y),
+P_x tensor J(P_y)=P_(x+iota(y)).                     (65)
+```
+
+A simultaneous flip preserves the pair orbit; flipping only one factor can
+change the target.
+
+### Exact minimality on the first knot fiber
+
+Return to `K=T(2,7)`, put
+
+```text
+Kbar=mirror(K),
+X=K#Kbar,
+q=u(X),                         2<=q<=5.              (66)
+```
+
+Signature calibration and summandwise crossing changes give the certified
+distance table
+
+| `d_G` | `U` | `K` | `Kbar` | `X` |
+|---|---:|---:|---:|---:|
+| `U` | `0` | `3` | `3` | `q` |
+| `K` | `3` | `0` | `6` | `3` |
+| `Kbar` | `3` | `6` | `0` | `3` |
+| `X` | `q` | `3` | `3` | `0` |
+
+On the continuation dictionary `{U,K,Kbar}`, the corresponding rows are
+
+| profile | `U` | `K` | `Kbar` |
+|---|---:|---:|---:|
+| `Pi_U` | `0` | `3` | `3` |
+| `Pi_K` | `3` | `6` | `q` |
+| `Pi_Kbar` | `3` | `q` | `6` |
+
+The involution fixes `U,X` and swaps `K,Kbar`. In the independent mirror
+quotient, the pair of chiral classes `([K],[K])` has exactly two orbits under
+simultaneous mirroring and factor swap:
+
+```text
+same chirality:     {(K,K),(Kbar,Kbar)},
+opposite chirality: {(K,Kbar),(Kbar,K)}.             (67)
+```
+
+Their root costs are `6` and `q<=5`. Every target-preserving refinement of
+the independent mirror quotient must therefore split this fiber: at least one
+bit is necessary. The relative sign “same/opposite” selects the branch, so
+one bit is sufficient and hence minimal **on this finite fiber**. It does not
+compute `q`. For three free mirror-orbit lifts it obeys the gauge law
+
+```text
+rho(x,y)rho(y,z)=rho(x,z).                            (68)
+```
+
+At amphichiral fixed points a literal sign is undefined; the canonical object
+is the diagonal pair orbit in (67), not a globally assigned chirality sign.
+
+### Mirror-blind scalar no-go
+
+Let `F` be any individual descriptor satisfying `F(iota(x))=F(x)`. There is
+no binary rule
+
+```text
+G(F(x),F(y))=ell(x+y)                                (69)
+```
+
+even on `{K,Kbar}`: the inputs for `(K,K)` and `(K,Kbar)` are identical,
+while their outputs are `6` and `q<=5`.
+
+This excludes not only `ell` but every mirror-blind one-body compression.
+For example the radial profile
+
+```text
+R_x(r)=inf_{ell(z)<=r} ell(x+z)                      (70)
+```
+
+obeys `R_(iota(x))=R_x` by the substitution `z |-> iota(z)`. Its natural
+min-plus law is only lax:
+
+```text
+R_(x+y)(T)
+ <=inf_(r+s<=T) [R_x(r)+R_y(s)].                     (71)
+```
+
+At `T=0`, (71) is already strict for `(K,Kbar)`, since `q<6`.
+Connected-sum homogenization is mirror-blind as well:
+
+```text
+ell_hash(K+K)=6,
+ell_hash(K+Kbar)<=q<=5.                              (72)
+```
+
+Thus neither homogenization nor radialization replaces the missing relative
+gauge. The sidecar repairs exactly this quotient ambiguity; it is not a
+finite complete knot invariant.
 
 QED.

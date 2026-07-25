@@ -237,10 +237,20 @@ distance or LRC owner currents here.
 
 ### The anonymous shared conversation
 
-The supplied ChatGPT share exposed only the title "Counterexample to Dinitz
-Conjecture"; its body was unavailable. The standard Dinitz conjecture was
-proved by Galvin, so the title cannot be treated as evidence without the
-missing variant and statement. Nothing in this session depends on it.
+The supplied [public ChatGPT conversation](https://chatgpt.com/share/6a60b2eb-0b64-83ee-9c76-7931ca1de063)
+was recovered in a signed-in browser after the first source pass. It concerns
+Goemans' cost-enhanced single-source unsplittable-flow conjecture, not the
+classical Dinitz list-coloring conjecture. Its seven-vertex construction was
+then rebuilt from the graph, checked against Conjecture 1.3 of
+Traub--Vargas Koch--Zenklusen, generalized to a nonempty open
+three-parameter region, and independently exhausted at graph level in
+[THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md).
+
+The native binary carrier is again not a tournament. Three cheap path choices
+have the symmetric conflict graph `K_3`; their fractional marginals sum to
+`16/15`, violating the triangle stable-set facet. An orientation would erase
+the independent-set predicate. The faithful quotient is the conflict graph
+together with its fractional point and complementary cost separator.
 
 ## 6. Tournament consequences
 
@@ -326,3 +336,5 @@ evaluate a scalar or tournament shadow last.
   [*XX^t Can Be Faster*](https://arxiv.org/pdf/2505.09814).
 - Krenn--Gu--Soltesz,
   [*Questions on the structure of perfect matchings inspired by quantum physics*](https://arxiv.org/pdf/1902.06023).
+- Traub--Vargas Koch--Zenklusen,
+  [*Single-Source Unsplittable Flows in Planar Graphs*](https://arxiv.org/pdf/2308.02651).

@@ -15,6 +15,7 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
 - **LRC:** fourteen runners (thirteen nonzero speeds) remains open; the April 2026 computation reaches twelve nonzero speeds.
 - **Gaussian moments:** [THM-2022](../../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md) proves the two-real-Gaussian case; Long's July 2026 preprint gives three-dimensional counterexamples, so the checked boundary is `true through 2 / false from 3`.
 - **Tournament attribution:** arXiv:2412.10572 is Irving--Omar, arXiv:2307.05569 Grinberg--Stanley, and arXiv:2406.09697 Klanderman--Montee--Piotrowski--Rice--Shader.
+- **Unsplittable flows:** [THM-2177](../../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture; the cost-free `d_max` and planar cost-preserving `2d_max` theorems remain intact.
 - **Reciprocal sequences:** separate support from indexed multiplicity; external figurate formulas do not supply the repo's Abel--Dini/support-Dirichlet extensions.
 - **Jacobian/Dixmier/Poisson:** THM-1300 refutes `JC(n)` for `n>=3`; `JC(2)`, `DC(1)`, and `DC(2)` remain open. THM-2071 closes quadratic-fiber pencil cells only; THM-2044 separately refutes the two-pair Poisson conjecture.
 

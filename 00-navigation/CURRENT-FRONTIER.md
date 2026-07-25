@@ -389,16 +389,8 @@ into tournament operation laws and LRC residue packets.
 
 ## Other active portfolio
 
-- **Knots / operation-ready relations:** [THM-2176](../01-canon/theorems/THM-2176-gordian-continuation-profile-and-interaction-cocycle.md)
-  proves that `Pi_K(J)=u(K#J)` is the universal connected-sum-stable
-  refinement of unknotting number. The defect
-  `sigma(K,J)=u(K)+u(J)-u(K#J)` is a nonnegative symmetric 2-coboundary,
-  monotone on product Gordian cones. The `T(2,7)` mirror counterexample is
-  pure geodesic bypass rather than translation contraction, and
-  connected-sum homogenization remains nonadditive. The full profile is
-  infinite; the live target is a certified finite continuation dictionary
-  with crossing-change witnesses, mirror/signature sidecars, and cocycle
-  checks.
+- **Knots / operation-ready relations:** [THM-2176](../01-canon/theorems/THM-2176-gordian-continuation-profile-and-interaction-cocycle.md) makes `Pi_K(J)=u(K#J)` the universal connected-sum refinement and its defect a positive 2-coboundary. The `T(2,7)` mirror pair is pure geodesic bypass; one relative-chirality bit minimally repairs independent mirror quotienting on this fiber. Homogenization remains nonadditive; a finite continuation dictionary remains open.
+- **Unsplittable cost flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture: a planar acyclic instance has fractional cost `58` but capacity-good integral cost at least `60`. Its carrier is the `K_3` stable-set facet; the planar `2d_max` theorem remains intact.
 - **Jacobian/Dixmier:** THM-1300/1315 verify and analyze the three-dimensional
   Keller collision, but provenance is unsettled (MISTAKE-205) and it does not
   decide `DC(2)`. THM-2044--2046 separate the rank-two Poisson suspension from

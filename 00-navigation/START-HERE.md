@@ -112,12 +112,12 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     `(2,5,1)`; the exact fivefold residual is `(1,6,1)`, `(1,7,0)`, `(2,6,0)`,
     `(3,5,0)`. THM-2140 gives depth/polar invoices; THM-2148/2168 give the
     three-blocker Fano classification, top-two depth majorization, and the still-open scalar `4+3/5+3` tails. THM-2144/2164/2167 force two height-`<=105` relations and an adaptive rank-two radix carrier; THM-2169 bounds a relation on every deletion. THM-2166 compresses defect six to carry `<=708`, while THM-2146/2161 expose the covariance/adaptive-scale obstruction at defect at least seven.
-16. **Shared syntax is not a bridge.** MISTAKE-230--233/HYP-8885 retract the
-    universal entropy/modular frame; MISTAKE-235 leaves S102's LRC/GMC sums as
-    analogy, not AP-core reduction. Fiber size is observable-relative, and
-    genus, cusp forms, Paley spectra, or weighted kernels need an explicit
-    loneliness-preserving map. THM-2095 now bounds the guard-ratio common scale,
-    not the other six speeds; Lean requires satisfiable hypotheses and root reach.
+16. **Use the native operation carrier, not shared syntax.**
+    [THM-2176](../01-canon/theorems/THM-2176-gordian-continuation-profile-and-interaction-cocycle.md)
+    makes the connected-sum continuation profile universal and exposes a
+    relative-chirality sidecar; [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md)
+    refutes Goemans' cost conjecture through a symmetric conflict graph, not a
+    tournament. MISTAKE-230--235 forbid syntax-only LRC/GMC/modular bridges.
 
 ## Where to go by topic
 
@@ -130,7 +130,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 | Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102/2118/2127, HYP-8905 |
 | Tournaments | [`CURRENT-FRONTIER.md#tournaments`](CURRENT-FRONTIER.md#tournaments) | [`TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md`](TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md), [`THE-ZOO.md`](THE-ZOO.md) with its freshness banner |
 | Integer sequences | [`CURRENT-FRONTIER.md#integer-sequences`](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005 and their frozen outputs |
-| Broad portfolio | [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md) | [`PROBLEM-ATLAS-2026-07-20.md`](PROBLEM-ATLAS-2026-07-20.md) only as historical provenance |
+| Broad portfolio | [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md) | THM-2176/2177; [`PROBLEM-ATLAS-2026-07-20.md`](PROBLEM-ATLAS-2026-07-20.md) only as historical provenance |
 | Formalization | relevant theorem's `formalization` field | `00-navigation/*FORMALIZATION*`, then a clean build/axiom audit |
 | Research method | [`RESEARCH-PROTOCOL.md`](RESEARCH-PROTOCOL.md) | [`META-PATTERNS.md`](META-PATTERNS.md), relevant reflections |
 | Agent process | [`../agents/README.md`](../agents/README.md) | [`CONCURRENT-SESSIONS.md`](CONCURRENT-SESSIONS.md) |
