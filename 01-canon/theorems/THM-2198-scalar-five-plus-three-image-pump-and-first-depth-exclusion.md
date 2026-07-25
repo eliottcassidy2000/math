@@ -19,7 +19,10 @@ status: >
   global sheet-time incidence deficit: for every pair of shallower masks,
   the five largest conditional unit-mask capacities miss the residual by at
   least 86 points. Hence (1,1,2) is empty and every surviving scalar 5+3
-  branch has unique deepest blocker depth at least three. Deeper profiles
+  branch has unique deepest blocker depth at least three. The signed
+  residual is exactly a -1 eigenfunction of the thirteen-root transfer;
+  over a divided-deep safe parent, a positive defect has one labelled
+  deep-danger anti-defect root and twelve neutral roots. Deeper profiles
   remain open, so this is not a proof of LRC(14).
 source: codex-2026-07-24-scalar-five-plus-three-transition
 depends_on:
@@ -722,7 +725,97 @@ private deepest-owned subpiece is topologically positive but has no uniform
 mass floor proved here.  The star records a destroyed integral-division
 coordinate, not a cosmetic wildcard.
 
-## 6. Exact audit and hostile controls
+## 6. Signed residual eigenlaw and the one-anti-defect root
+
+The labelled movie has a complementary exact signed law. Put
+
+```text
+v_j=c_j/13,
+B(y)=sum_(j=1)^3 1_(D_(v_j))(y),
+R(x)=1_(C_H)(x)-sum_(i=1)^5 1_(D_(q_i))(x),
+(cal L f)(y)=sum_(T(x)=y) f(x).                       (S1)
+```
+
+For a thirteen-unit `q`, the root windows (6)--(8) give, away from
+endpoints,
+
+```text
+cal L 1_(D_q)=2-1_(D_q).                              (S2)
+```
+
+The guard-root count (9)--(10) is equivalently
+
+```text
+cal L 1_(C_H)=10-1_(C_H).                             (S3)
+```
+
+There are exactly five unit masks, so the constant terms cancel:
+
+```text
+cal L R=-R.                                           (S4)
+```
+
+The cover (2) also gives the almost-everywhere pointwise inequality
+
+```text
+R<=B o T.                                             (S5)
+```
+
+Indeed, `R` is positive exactly on `A_0`, where some covering blocker
+`c_j=13v_j` makes `v_jT(x)=c_jx` dangerous; off `A_0`, `R<=0`.
+Applying `cal L` to (S5), and using `cal L(B o T)=13B`, gives
+
+```text
+-13B<=R<=B o T.                                       (S6)
+```
+
+Thus a positive residual over the divided-deep safe state `{B=0}` forces
+its image into `{B>0}`. In particular,
+
+```text
+B(y)=B(Ty)=0        ==>        R(y)=0.                (S7)
+```
+
+The deepest blocker itself can pay this transition. Write
+
+```text
+c_3=13^beta u,        13 does not divide u,
+v_3=c_3/13.
+```
+
+For `x=z/13^(beta+1)`, `13` not dividing `z`, and `y=T(x)`,
+
+```text
+v_3y=uz/13                  (safe),
+v_3T(y)=uz                  (maximally dangerous).    (S8)
+```
+
+Multiplication by thirteen has erased the nonzero root digit. A recursive
+state cannot infer that one of the two shallower blockers pays (S6) unless
+it retains this pre-collapse `F_13` digit.
+
+More precisely, let `y` be generic with `B(y)=0`. Equation (S6) and
+`R<=1` give `R(y) in {0,1}`. Every root `x` of `y` satisfies
+`R(x)<=B(Tx)=0`, while (S4) says that the thirteen integer residuals sum
+to `-R(y)`. Hence
+
+```text
+R(y)=0  ==>  {R(x):Tx=y}={0^13},
+R(y)=1  ==>  {R(x):Tx=y}={-1,0^12}.                  (S9)
+```
+
+In the second line the unique `-1` root has `B(x)>0`; otherwise the left
+side of (S6) at `x` would force `R(x)>=0`. A positive defect over a
+deep-safe parent therefore emits one canonically labelled deep-danger
+anti-defect root and twelve neutral roots. Equation (S9) is the exact
+one-step desuspended automaton.
+
+These statements hold away from the finite band boundaries and images of
+the cover-null set. On the `13`-power torsion annuli they are exact: all
+inequalities are strict, and a failure of (2) would thicken to an open
+failure.
+
+## 7. Exact audit and hostile controls
 
 The companion uses two independent descriptions:
 
@@ -767,7 +860,7 @@ python3 04-computation/lrc14_scalar_five_plus_three_image_pump_thm2198.py
 python3 -O 04-computation/lrc14_scalar_five_plus_three_image_pump_thm2198.py
 ```
 
-## 7. Connection and loss ledger
+## 8. Connection and loss ledger
 
 The exact carrier is
 

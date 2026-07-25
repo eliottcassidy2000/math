@@ -12,10 +12,14 @@ status: >
   independent relations by that same height. Hence every primitive zero-Haar
   row has maximum speed at most 12^6 H^12. Retaining THM-2193's first seven
   anisotropic row heights sharpens this to the explicit 197-digit ceiling in
-  (23). The bounds remain enormous; the finite primitive locus is not
-  enumerated or emptied, so this does not prove LRC(14).
+  (23). Starting instead with THM-2051 marks a complete basis by one
+  support-three-to-five relation of height 2^20, with the other eleven rows
+  at height H, as in (24)--(25). The bounds remain enormous; the finite
+  primitive locus is not enumerated or emptied, so this does not prove
+  LRC(14).
 source: codex-2026-07-24-effective-carry-lock-rank-ladder
 depends_on:
+  - THM-2051-fejer-bv-small-relation-alternative-for-lrc14
   - THM-2053-rank-two-parameter-plane-geodesic-terminal
   - THM-2193-uniform-rank-six-safe-torus-floor
   - LRCUpTo13
@@ -243,9 +247,39 @@ max_i (v_prim)_i
                                                                (23)
 ```
 
+There is an orthogonal sparse-marked refinement. THM-2051 supplies, for
+every repetition-free positive zero-Haar row, a nonzero relation `k.v=0`
+with
+
+```text
+3<=|supp(k)|<=5,              ||k||_infinity<=M=2^20. (24)
+```
+
+Start the rank lift from `ker(k)` rather than from `Q^13`. Applying the
+effective lift through dimensions twelve down to two gives eleven further
+relations, each of height at most `H`, independent of `k` and its
+predecessors. Hence the complete relation basis can retain the marked
+small-support circuit.
+
+For primitive `v`, every maximal cofactor of the resulting `12 x 13`
+matrix has one row norm at most `sqrt(5)M` and eleven row norms at most
+`sqrt(12)H`. Therefore
+
+```text
+max_i v_i
+ <=sqrt(5) M (sqrt(12)H)^11
+ <1927445*2^20*(78*182^13)^11,                       (25)
+```
+
+because `ceil(sqrt(5*12^11))=1927445`. This bound is not numerically
+competitive with the anisotropic seven-row estimate (23). Its value is
+structural: the full bounded basis now carries THM-2051's sparse marked
+circuit into THM-2196's circuit/carry charts.
+
 This `197`-digit number is an explicit finite primitive box and relation-rank
 certificate, but it is still vastly larger than the speed ceiling in
 THM-763. Neither theorem enumerates or eliminates the box. The contribution
 here is that every carry-lock rank lift is simultaneously available at one
-universal Fourier height; there is no residual compactness minimum and no
-uncomputed sequence `H_8,...,H_12`. QED.
+universal Fourier height, and can retain one marked sparse row; there is no
+residual compactness minimum and no uncomputed sequence `H_8,...,H_12`.
+QED.
