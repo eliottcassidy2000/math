@@ -2,7 +2,7 @@
 id: THM-2317
 title: "Alexander fibre fan and the prime-marked Gordian quotient"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE UNDER INDEPENDENT AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED, WITH CITED KNOT INPUTS.
   Maximal-ideal Alexander-fibre dimensions of a finite knot packet form a
   finite integral slope set whose support function is a polyhedral lower
   envelope for ordinary and homogenized unknotting number on the physical
@@ -11,7 +11,7 @@ status: >
   complete two-knot fibre fan has only slopes (0,0) and (1,1): its exact
   lower envelope is P+Q and cannot sharpen THM-2308. The factor-marked
   Gordian graph is a Cartesian product with l1 distance; connected-sum
-  realization is a symmetric path-functor and a nonexpansive metric
+  realization is a symmetric path-functor and an exact metric
   quotient. Its marked move corollas compose by fibre product, whereas
   support labels, binary relations, and shortest-path scalarization do not.
   Brittenham--Hermiller nonadditivity is exactly strict quotient contraction,
@@ -28,16 +28,18 @@ related:
   - THM-2315-marked-target-gain-corolla-and-pairwise-composition-boundary
 script: 04-computation/alexander_fibre_gordian_quotient_thm2317.py
 output: 05-knowledge/results/alexander_fibre_gordian_quotient_thm2317.out
-script_sha256: 6214a5717292a14f2f3462f46c870fd2cf98f3f85042c0f20ce26ee95cdbe113
+script_sha256: c3a3051f3367bba676c26603e136a699d4f568b59dee4c89c1b7f4dffa17c2d7
 output_sha256: 5921d911f0f3dd26dfb8d2f76893968a9cc8a56b656ccf71be61c5a8684db6a9
 hash_basis: working-tree bytes (LF)
 external:
   - "Mark Brittenham and Susan Hermiller, Unknotting number is not additive under connected sum, arXiv:2506.24088v2."
+  - "Horst Schubert, Die eindeutige Zerlegbarkeit eines Knotens in Primknoten, Sitzungsberichte der Heidelberger Akademie der Wissenschaften 1949/3, 57--104."
 ---
 
 # THM-2317 -- the scalar is a quotient of a marked path object
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED, WITH CITED KNOT
+INPUTS.**
 
 Unknotting number is subadditive and is now known not to be additive under
 connected sum. There are two different information losses behind that scalar
@@ -129,23 +131,26 @@ lemma.
 > Consequently `nu_q` extends from the connected-sum monoid to an additive
 > integer-valued Gordian-`1`-Lipschitz functional on its Grothendieck group.
 
-To prove the one-crossing case, use the standard band-twist form of a
-crossing change. Simultaneous Seifert surfaces for `J` and `L` have the same
-genus and, in suitable homology bases, Seifert matrices `V_J,V_L` with
+To prove the one-crossing case, start with the same oriented diagram before
+and after the crossing change. Oriented Seifert smoothing gives the same
+discs and bands; only the full twist of the changed band differs. Thus the
+two canonical Seifert surfaces have the same genus and naturally identified
+homology. If `w` is the integral column whose entries count algebraic
+passage of the chosen homology curves through that band, changing the twist
+changes the Seifert pairing by
 
 ```text
-V_L-V_J=+E_(rr)             or             -E_(rr). (4d)
+V_L-V_J=+w w^T              or             -w w^T.  (4d)
 ```
 
-One way to see (4d) is to apply the Seifert disk-band construction
-simultaneously, take the core of the changed band as the last basis element,
-and observe that reversing the crossing changes only that band's
-self-linking by one; all mutual linkings are unchanged.
+Indeed, the local full twist contributes one signed crossing for every
+ordered pair of passages through the band, which is exactly the displayed
+outer product. No primitivity or diagonal-basis assertion is needed.
 
 The square Alexander presentation matrices `tV-V^T` therefore differ by
 
 ```text
-+/-(t-1)E_(rr),                                      (4e)
++/-(t-1)w w^T,                                       (4e)
 ```
 
 a matrix of rank at most one after reduction to `k_q`. Over a field, the
@@ -276,7 +281,9 @@ a Delta=1+t^2+...+t^12.
 ```
 
 The two polynomials `a,b` generate the unit ideal: reducing `a` modulo
-`b=t+1` gives `a(-1)=1`. Since `Lambda` is a domain,
+`b=t+1` gives `a(-1)=1`. If `au+bv=0`, a Bezout identity for `(a,b)`
+shows that `b` divides `u`; write `u=bw`, and cancellation in the domain
+`Lambda` gives `v=-aw`. Hence
 
 ```text
 ker d_1=Lambda (b,-a)^T.                             (13)
@@ -463,6 +470,15 @@ Their product distance is `d_G(J,L)` by (20), proving equality. Hence
 `Sigma_I` is an exact metric quotient globally, even though a geodesic need
 not lift from a prescribed distributed representative. QED.
 
+Schubert cancellation also shows that the root fibre is a singleton:
+
+```text
+Sigma_I(x)=U                 iff                 x=0_I.       (22b)
+```
+
+Indeed, the free commutative prime-decomposition monoid has no nontrivial
+product equal to its identity.
+
 At the root `0_I=(U,...,U)`, define the **quotient contraction defect**
 
 ```text
@@ -478,11 +494,15 @@ the larger unmarked Gordian graph.
 
 Equivalently, strict defect means that no unmarked geodesic from
 `Sigma_I(x)` to the unknot lifts to a coordinatewise path from `x` to
-`0_I` of the same length. This is the precise path-lifting obstruction.
+`0_I` of the same length. Conversely, when the defect is zero, any marked
+product geodesic from `x` to `0_I` maps edge-for-edge to an unmarked path
+whose length equals the endpoint distance, hence to an unmarked geodesic.
+This is the precise path-lifting equivalence.
 
 ## 4. The marked crossing-move corolla composes functorially
 
-For `x in Gamma_I`, let `E_x` be its set of oriented outgoing marked edges.
+For `x in Gamma_I`, let `E_x` be its set of oriented outgoing marked edges,
+and put `E_I=disjoint_union_x E_x`.
 An element retains
 
 ```text

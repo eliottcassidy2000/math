@@ -10,6 +10,11 @@ number.
 from heapq import heappop, heappush
 
 
+def require(condition: bool, message: str) -> None:
+    if not condition:
+        raise RuntimeError(message)
+
+
 def mul(a: tuple[int, ...], b: tuple[int, ...]) -> tuple[int, ...]:
     out = [0] * (len(a) + len(b) - 1)
     for i, x in enumerate(a):
@@ -22,20 +27,31 @@ def add3(x: tuple[int, int, int], y: tuple[int, int, int]) -> tuple[int, int, in
     return (x[0] + y[0], x[1] + y[1], x[2] + y[2])
 
 
+def eval_mod2(poly: tuple[int, ...], value: int) -> int:
+    return sum(coefficient * (value**degree) for degree, coefficient in enumerate(poly)) % 2
+
+
 a = (1, 1, 1, 1, 1, 1, 1)
 b = (1, 1)
 delta = (1, -1, 1, -1, 1, -1, 1)
 one_plus_t7 = (1, 0, 0, 0, 0, 0, 0, 1)
 even_sum = (1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1)
 
-assert mul(b, delta) == one_plus_t7
-assert mul(a, delta) == even_sum
-assert sum(((-1) ** j) for j in range(7)) == 1  # a(-1)=1
+require(mul(b, delta) == one_plus_t7, "b*Delta factorization failed")
+require(mul(a, delta) == even_sum, "a*Delta factorization failed")
+require(sum(((-1) ** j) for j in range(7)) == 1, "a(-1) is not one")
 
 f = (1, 1, 0, 1)  # t^3+t+1, ascending coefficients
 g = (1, 0, 1, 1)  # t^3+t^2+1
-assert tuple(c % 2 for c in mul(f, g)) == tuple(c % 2 for c in delta)
-assert sum(delta) % 2 == 1  # Delta(1) is nonzero at (2,t+1)
+require(
+    tuple(c % 2 for c in mul(f, g)) == tuple(c % 2 for c in delta),
+    "mod-two factorization failed",
+)
+require(
+    eval_mod2(f, 0) == eval_mod2(f, 1) == 1,
+    "the cubic q1 factor has a root over F_2",
+)
+require(sum(delta) % 2 == 1, "Delta vanishes at the q0 control")
 
 generators = (
     ((1, 0, 0), 1),
@@ -67,15 +83,15 @@ def word_dist(target: tuple[int, int, int], radius: int = 4) -> int:
             if new_cost < distance.get(nxt, 10**9):
                 distance[nxt] = new_cost
                 heappush(queue, (new_cost, nxt))
-    raise AssertionError("target escaped the finite hostile-control box")
+    raise RuntimeError("target escaped the finite hostile-control box")
 
 
 singletons = [word_dist((1, 0, 0)), word_dist((0, 1, 0)), word_dist((0, 0, 1))]
 pairs = [word_dist((1, 1, 0)), word_dist((1, 0, 1)), word_dist((0, 1, 1))]
 triple = word_dist((1, 1, 1))
-assert singletons == [1, 1, 1]
-assert pairs == [2, 2, 2]
-assert triple == 2
+require(singletons == [1, 1, 1], "wrong singleton word lengths")
+require(pairs == [2, 2, 2], "wrong pair word lengths")
+require(triple == 2, "wrong triple word length")
 
 print("FOX b*Delta=1+t^7: exact")
 print("FOX a*Delta=sum_(j=0)^6 t^(2j): exact")
