@@ -2,11 +2,11 @@
 id: THM-2310
 title: "Quantitative beta-shift gluing of positive handoffs"
 status: >
-  PROVED CANDIDATE UNDER INDEPENDENT AUDIT. For the integer beta-shift, two
+  PROVED + INDEPENDENTLY AUDITED. For the integer beta-shift, two
   positive finite unions of intervals meet after r iterates whenever
   12 beta^r mu(A)mu(B)>Var(1_A)Var(1_B). Consequently every finite path of
   positive finite-interval transition carriers can be realized, in order, by
-  one orbit after finite explicitly computable waits. In particular a pure
+  one orbit after finite explicitly bounded waits. In particular a pure
   directed 2-cycle or 3-cycle in THM-2305 gives a single-orbit closed label
   itinerary, although not a periodic orbit. Thus disjoint incoming/outgoing
   owner subsets are not the residual obstruction at support level. The waits
@@ -25,7 +25,7 @@ related:
 
 # THM-2310 -- quantitative beta-shift gluing of positive handoffs
 
-**PROVED CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + INDEPENDENTLY AUDITED.**
 
 THM-2305 isolates the honest terminal relation. A pure word gives a
 time-oriented edge between exclusive owners, while the simultaneous word gives
@@ -256,9 +256,11 @@ and a positive-measure subset of `F_1` whose points traverse every carrier in
 the prescribed order.
 
 At each induction step the least wait satisfying (4) for the current
-reachable set and the next carrier is computable from their interval
-endpoints. The reachable mass can shrink, so this statement does not replace
-those recursive data by a fictitious uniform short wait.
+reachable set and the next carrier is bounded explicitly by their masses and
+variations. For the rational interval endpoints in the scalar LRC carrier,
+these quantities and the wait are computable exactly. The reachable mass can
+shrink, so this statement does not replace those recursive data by a
+fictitious uniform short wait.
 
 If the labels in (20) form a directed cycle, append `F_1` as the final target
 set. The same argument gives a positive set of initial points whose orbit
