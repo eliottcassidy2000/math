@@ -2,8 +2,8 @@
 id: THM-2276
 title: "Shallow pair crossing, ancestry phase cone, and the 696-multiplier hard bank"
 status: >
-  RESERVED / COMPLETE PROOF CANDIDATE UNDER AUDIT. Candidate: every one of
-  the 120 interior first-depth-one scalar profiles has a primitive
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. Every one of the 120
+  interior first-depth-one scalar profiles has a primitive
   two-coordinate guard/blocker or unit/blocker crossing of height at most
   9841. Its carry is exactly plus or minus m*c_1, where 1<=m<=757 and m
   is a thirteen-unit. The strict c_1-private locus is nonempty and open.
@@ -15,9 +15,8 @@ status: >
   possible thirteen-unit multipliers 4<=m<=757 has an exact two-interval
   local c_1-private carrier with the same pair relation and every-residue
   root energy but zero ancestry and descended atoms at the relation
-  frequency. The local witness does not assert a global scalar cover. No
-  profile is excluded, and this file is not a proved dependency until
-  independently audited.
+  frequency. The local witness does not assert a global scalar cover, no
+  profile is excluded, and LRC(14) remains open.
 source: codex-2026-07-25-shallow-owner-phase-cone
 depends_on:
   - THM-2266-depth-one-deep-pair-centered-signed-dual-and-relation-atlas
@@ -40,7 +39,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2276 -- shallow pair crossing and the ancestry phase-cone boundary
 
-**RESERVED / COMPLETE PROOF CANDIDATE UNDER AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 Use
 
@@ -92,7 +91,7 @@ A(z)=alpha_H H+sum_i alpha_iq_i
 Call `A(z)` its guard/unit-versus-blocker carry and call `z` a crossing
 when `A(z)!=0`.
 
-The candidate proves that there is a primitive two-coordinate relation `p`
+The theorem proves that there is a primitive two-coordinate relation `p`
 and an integer `m` such that
 
 ```text
@@ -599,7 +598,7 @@ never imply support at an arbitrary member of the residue class.
 
 ## 7. Connection and loss ledger
 
-The candidate connection is
+The proved connection is
 
 ```text
 source:
@@ -636,6 +635,13 @@ guard/unit and blocker safe approximants. A closure theorem must still
 couple this ancestry atom to current service or to a signed cover identity
 at the same exact frequency.
 
+THM-2282 is complementary rather than a shortcut through the hard bank. It
+forces a `c_1`-anchored relation minor whose outside coefficient is a
+thirteen-unit. That controls a coefficient **residue**, while the phase cone
+depends on the absolute shallow multiplier `m` in `A(p)=plus or minus m c_1`.
+It therefore does not turn any of the `696` values in (12) into one of the
+three low multipliers.
+
 The local witnesses in Section 5 do not arise from, and do not refute, a
 global counterexample. They freeze the exact first missing implication.
 No valuation profile is excluded here, and LRC(14) remains open.
@@ -655,9 +661,6 @@ the height `9841`, the exact `699=3+696` multiplier split, rational
 two-interval cancellation at every hard multiplier, all one/two-sheet
 root-character obstructions, and all `104400` local strict-profile
 witnesses including their scalar labels, pair relation, center margins,
-and an explicit admissible rational half-width. The normal and optimized
-transcripts are required to be byte-identical.
-
-Nothing may depend on this file until its proof, dependency scope, and
-companion have been independently audited and the reserved status has been
-promoted.
+and an explicit admissible rational half-width. Every load-bearing check is
+optimization-safe. Independent normal and optimized replays are
+byte-identical to each other and to the stored transcript. QED.
