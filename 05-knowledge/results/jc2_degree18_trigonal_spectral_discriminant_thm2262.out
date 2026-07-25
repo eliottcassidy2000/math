@@ -1,0 +1,22 @@
+faber_flux_bank=PASS degrees=2,6,10,14,18
+independent_multinomial_bank=PASS degrees=2,6,10,14,18
+centered_coordinate=y=9*s-2*alpha
+first_flux_Z=-2*(-1680*alpha**4 - 2240*alpha**3*y + 8640*alpha**2*beta + 22680*alpha**2*u - 840*alpha**2*y**2 + 8640*alpha*beta*y - 31104*alpha*gamma - 58320*beta*u + 2160*beta*y**2 + 93312*delta - 15552*gamma*y + 45927*u**2 - 5670*u*y**2 + 35*y**4)/(5103*y)
+spectral_G_associate=1
+spectral_G_sha256=a536ca52632acc0f5ac0630dfcc0ca433e1ac24d54346b302b3183180c8e1ed7
+branch_discriminant_degree=12
+branch_discriminant_lc=-153384762202971019112448
+branch_discriminant_sha256=05bf2aef4d6209c73e4d16ef40cd9a26cd9b3ee409a4af621ad0de9c5bd0ebee
+squarefree_specialization=(alpha,beta,gamma,delta,Psi0)=(0,1,1,1,1)
+squarefree_specialization_gcd_degree=0
+weighted_infinity_cubic=-26040609*v**3 + 1607445*v**2 - 138915*v + 1127
+weighted_infinity_discriminant=-153384762202971019112448
+exceptional_u=-20*(7*alpha**2 - 18*beta)/567
+exceptional_delta=(490*alpha**4 - 2520*alpha**2*beta + 3402*alpha*gamma + 2025*beta**2)/10206
+exceptional_Psi0=2*(14*alpha**2 - 45*beta)*(56*alpha**3 - 225*alpha*beta + 486*gamma)/45927
+exceptional_third_over_q=T*(2187*T**2 - 4480*alpha**3 + 17280*alpha*beta - 31104*gamma)/124416
+exceptional_keller_primitive=(1701*T^3-K*T)'
+exceptional_sidecar_T3_coefficient=-21/1024
+squarefree_discriminant_implies_genus_four=MATHEMATICAL_PROOF_REQUIRED
+monomial_cusp_sidecar_pole=MATHEMATICAL_PROOF_REQUIRED
+status=THM2262_DEGREE18_TRIGONAL_SPECTRAL_EXACT_REFEREE
