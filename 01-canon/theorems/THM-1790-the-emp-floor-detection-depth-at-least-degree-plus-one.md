@@ -19,6 +19,7 @@ related:
   - THM-1710
   - THM-1770
   - THM-2022
+  - THM-2173
   - HYP-8765
 external: >
   Eric Edo and Arno van den Essen, The Strong Factorial Conjecture,

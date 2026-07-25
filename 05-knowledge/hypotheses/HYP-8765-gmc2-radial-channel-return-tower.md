@@ -106,6 +106,14 @@ polynomial then has its first `2d+1` Gaussian moments zero. Hence the cutoff,
 if true, is dimension-sharp and cannot follow from bounded carry reachability
 without a coefficient-phase noncancellation theorem.
 
+THM-2173 removes contiguity from that lower bound. Every prescribed
+`t`-slot radial envelope has a nonzero member killing the first `t-1`
+factorial moments; for two and three prescribed slots the witness uses every
+slot. The corresponding exact three- and four-monomial Gaussian polynomials
+vanish through moments `3` and `5`, respectively. Thus the proposed `2t`
+cutoff is support-sharp from below already on arbitrary two- and three-slot
+radial addresses.
+
 ## Exact evidence and falsification pressure
 
 Exact rational/symbolic saturation sweeps give:
