@@ -129,10 +129,11 @@ surviving special-matrix scope in THM-2033.
 ## Controlled forgetting requires a sidecar
 
 **Trigger:** quotienting, canonicalizing, projecting, folding, taking moments, or replacing an object by an invariant.
-**Action:** state the next operation, predicate preserved, coordinate forgotten, and sidecar needed to make it legal. Identify the kernel of the quotient and test whether every future transition/consumer is constant on its orbits. If not, retain the induced kernel action or a separating next-step response; for inverse limits, retain a termination, height, or depth coordinate.
-**Mechanism:** equality of current responses is weaker than a continuation congruence. A quotient can classify the present object yet fail under extension, gluing, chirality, phase transport, or obstruction detection. Compatible finite prefixes can define a completion point without terminating in the original discrete class.
+**Action:** state the next operation, predicate preserved, coordinate forgotten, and sidecar needed to make it legal. Test whether every future consumer is constant on the quotient kernel. For linear response `R` and next observable `N`, THM-840 makes the minimum repairing sidecar rank exact: `dim N(ker R)`.
+If nonzero, retain a separating next-step response; for inverse limits, retain a termination, height, or depth coordinate.
+**Mechanism:** equality of current responses is weaker than a continuation congruence. A kernel direction is a genuine gauge only when every named continuation kills it; otherwise it is a control/memory direction whose linear repair cost is its continuation-defect rank. Compatible finite prefixes can define a completion point without terminating in the original discrete class.
 **Counterindication:** no sidecar is needed when every named consumer provably factors through the quotient, the kernel acts trivially on the future state, or termination is uniformly bounded.
-**Evidence:** [interface stress tests](../07-reflections/perspective-groupoid-controlled-forgetting-codex-s261.md), MISTAKE-209, THM-2163/2174/2228, THM-2230/2241 (target-shear quotient is safe for properness and the monic tail), THM-2240 (an explicit grade-six kernel splitter at grade seven), THM-2218 (zero Fourier mode loses lift phase), and THM-2242 (pattern histograms preserve the free exterior optimum but lose the labelled core cost).
+**Evidence:** THM-840's kernel/rank criterion; [interface stress tests](../07-reflections/perspective-groupoid-controlled-forgetting-codex-s261.md); THM-2237 (defect rank one); THM-2230/2241 (safe target-shear quotient); THM-2240 (infinite grade-six-to-seven defect rank); THM-2163/2174/2228 (carry/termination sidecars); and THM-2242 (histograms lose labelled core cost).
 
 ## After a scalar quotient, choose between a coherent lift and orbit incidence
 
