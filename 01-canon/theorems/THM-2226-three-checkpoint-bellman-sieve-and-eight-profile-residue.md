@@ -9,9 +9,10 @@ status: >
   (0,1,2), fails the 961/6930 target; all other 15 pass, with worst passing
   bound 7444136/62748517. Consequently 217 of the 225 profiles with
   lambda_1 in {4,5} are empty, leaving exactly eight explicitly listed
-  profiles. Together with THM-2224 this reduces the current scalar valuation
-  ledger from 679 to 462. The geometric chain genuinely defeats a uniform
-  three-checkpoint inequality, and LRC(14) remains open.
+  profiles. Together with the completed depth-four ledger THM-2219 and the
+  high-first-depth closure THM-2224, this reduces the current scalar
+  valuation ledger from 675 to 458. The geometric chain genuinely defeats
+  a uniform three-checkpoint inequality, and LRC(14) remains open.
 source: codex-2026-07-24-three-checkpoint-clause-bellman
 depends_on:
   - THM-2203-fixed-dyadic-coordinate-section-and-covector-intersection
@@ -19,6 +20,7 @@ depends_on:
   - THM-2224-transfer-owner-word-temporal-union-bound
 related:
   - THM-2198-scalar-five-plus-three-image-pump-and-first-depth-exclusion
+  - THM-2219-scalar-depth-four-sparse-tail-exclusion
 script: 04-computation/lrc14_three_checkpoint_clause_bellman_thm2226.py
 output: 05-knowledge/results/lrc14_three_checkpoint_clause_bellman_thm2226.out
 script_sha256: b54b10b026ebcbf2661df1d20013f39d06be193973a61ddb88a281ff0154b30f
@@ -250,11 +252,13 @@ respectively. The only eight not closed here are
 (5,7,9), (5,7,10), (5,8,9), (5,8,10).                (22)
 ```
 
-Thus this theorem empties `217` additional profiles. Relative to current
-canon, the scalar valuation ledger falls from `679` after THM-2224 to
+Thus this theorem empties `217` additional profiles. THM-2219 and the two
+earlier depth-four theorems leave `1130` profiles before the independent
+high-first-depth sieve. THM-2224 removes `455`, leaving `675`; the present
+theorem therefore leaves
 
 ```text
-679-217=462.                                          (23)
+1130-455-217=458.                                    (23)
 ```
 
 The eight rows in (22), the other low-first-depth profiles, owner/current
