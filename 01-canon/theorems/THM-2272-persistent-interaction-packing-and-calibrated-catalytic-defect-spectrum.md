@@ -187,7 +187,7 @@ graph on `[r]` the symmetric edge weights
 w_ij=underlineDelta({i,j}).                         (15)
 ```
 
-For every matching `Q`,
+For every matching `Q` in the induced graph on `S`,
 
 ```text
 Delta_z(S)>=sum_({i,j} in Q)w_ij,                   (16)
