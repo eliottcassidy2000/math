@@ -11,11 +11,12 @@ status: >
   an effective near-aligned product theorem, and one tail recovers the
   qualitative O(1/W) scale of THM-2174. More strongly, every profile with at
   most six tail speeds has the pointwise floor 1-m/7. Hence every arbitrary-
-  residue seven-core/six-tail affine ray closes effectively; the zero-profile
-  residual for a positive-measure core can occur only with at least seven
-  tail constraints and is not an LRC 7+6 obstruction. For seven-element
-  cores inside {1,...,13}, THM-2166 gives the uniform near-aligned cone
-  NL>=89||r||_1.
+  residue seven-core/six-tail affine ray, and an explicit l1 tube around the
+  entire endpoint grid, closes effectively. The normalized tail and residue
+  may vary inside that tube. The zero-profile residual for a positive-measure
+  core can occur only with at least seven tail constraints and is not an LRC
+  7+6 obstruction. For seven-element cores inside {1,...,13}, THM-2166 gives
+  the stronger uniform cone NL>=89||r||_1.
 source: codex-2026-07-24-relation-carry-spectrum
 depends_on:
   - THM-2182-endpoint-grid-product-and-tail-overlap-sidecar
@@ -23,6 +24,7 @@ depends_on:
 related:
   - THM-2162-signed-endpoint-cocycle-and-bv-component-split
   - THM-2174-endpoint-phase-scale-obstruction
+  - THM-735-bonferroni-simultaneous-multi-peel-defeats-the-clustered-non-isolated-wall
 script: 04-computation/lrc14_two_scale_tail_continuation_thm2184.py
 output: 05-knowledge/results/lrc14_two_scale_tail_continuation_thm2184.out
 script_sha256: 246d28ecdb9bc816091b3c1a76f6458bdd594794c1000cb72fa452d426cb730f
@@ -315,6 +317,32 @@ Q>=89R                                                (24g)
 is sufficient when `R>=1`; for `R=0` the exact product is already
 positive. This is uniform over all `1716` seven-element cores in the bank.
 
+In fact no fixed-ray hypothesis is needed for the quantitative tube. Combining
+(7) and (24b) gives, uniformly in the positive integer vector `c` and the
+integer vector `r`,
+
+```text
+measure(G_(E union {NLc_i+r_i}))
+ >=1/(49e_2)-5||r||_1/(2NL).                         (24h)
+```
+
+Consequently the row is strictly safe whenever
+
+```text
+||r||_1<2NL/(245e_2).                                (24i)
+```
+
+Both `c` and `r` may vary with `N` here. In particular, every sequence of
+positive, distinct six-tails
+
+```text
+W_i(N)=NLc_i(N)+r_i(N),       ||r(N)||_1=o(N),
+```
+
+is eventually safe beside the fixed seven-core. This is an explicit
+endpoint-grid tube, not just a union of fixed affine rays. The theorem does
+not assert that an arbitrary tail admits such a simultaneous approximation.
+
 More generally, for any tail length, if
 
 ```text
@@ -401,10 +429,20 @@ again inside (21). With `k=0`, the exact measure is `81/280`, as (20)
 requires. The companion computes all one-dimensional measures by rational
 danger-interval union and independently checks the displayed arithmetic.
 
+THM-735 is the essential prior comparison. Its simultaneous multi-peel
+already proves that every fixed positive-measure body with at most six
+sufficiently remote tail speeds is eventually safe, with no alignment or
+separation required among the tail speeds. THM-2184 does not supersede that
+far-cone theorem. It instead gives the exact joint continuation law, a
+component-count-free grid error, and the explicit endpoint-grid tube (24i).
+Thus the two results are complementary descriptions of the same terminal
+region: THM-735 is alignment-free at sufficient distance, while THM-2184 is
+phase-sensitive and exact near the endpoint grid.
+
 The typed ledger is:
 
 ```text
-source:       endpoint-aligned core plus affine tail ray;
+source:       endpoint-aligned core plus grid-decomposed tail;
 map:          midpoint disintegration on NL cells;
 preserved:    full joint normalized-tail law Phi;
 lost:         O(||r||_1/(NL)) slow phase drift;
@@ -412,6 +450,6 @@ finite exit:  exact rational two-torus profile P;
 residual:     only P=0, including possible measure-zero weak witnesses.     (31)
 ```
 
-This theorem does not prove that every LRC row lies on one affine tail ray,
-does not classify the zero-profile two-torus arrangements, and does not by
-itself prove LRC(14). QED.
+This theorem does not force every LRC row into the THM-735 far cone or the
+endpoint-grid tube, does not classify the zero-profile two-torus
+arrangements, and does not by itself prove LRC(14). QED.

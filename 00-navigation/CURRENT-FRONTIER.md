@@ -180,14 +180,24 @@ exact and finite; it does not prove that every surviving interval is empty.
 Orthogonally, THM-2144/2164/2167 give height-`29/105` independent relations,
 at most `208875` carry pairs, and `2,924,250` carry-owner states; THM-2171
 repairs order/distinctness with cap `5,430,750`, while THM-2169 puts every
-deletion on a height-`1247` plane. THM-2174 isolates the exact danger clutter,
-fixed-window pump, and scale-sensitive endpoint current; THM-2178 forces a
-third bounded relation unless the known plane has a support-`<=3` digit mod
-`14`. THM-2168 eliminates the transverse and scalar-`4+3` parts of `(3,5,0)`,
-leaving only scalar `5+3`. THM-2145/2166/2179 give defect-six and `41`-unit
-forks. THM-2182 closes endpoint-aligned `7+6` rows, and THM-2184 closes every
-fixed arbitrary-residue affine ray at large scale; a uniform decomposition
-of the unrestricted residual is open.
+deletion on a height-`1247` plane. THM-2174 isolates the exact danger clutter
+and scale-sensitive endpoint current. THM-735 closes every fixed core's remote
+six-tail
+cone without tail isolation.
+[THM-2182](../01-canon/theorems/THM-2182-endpoint-grid-product-and-tail-overlap-sidecar.md)
+factors aligned tails exactly, while THM-2184 retains their complete joint
+law and proves the varying tube `W_i=NLc_i+r_i`,
+`||r||_1<2NL/(245e_2)`. The residual must evade both terminals through a
+changing core or genuinely non-gridlike multiscale data.
+THM-2178 forces a third bounded relation unless the known plane has a
+support-`<=3` digit mod `14`; THM-2168 eliminates the transverse and scalar
+`4+3` parts of `(3,5,0)`, leaving only scalar `5+3`.
+THM-2145/2166 give every defect-six split a far-height-`298`,
+core-height-`57`, carry-`<=708` crossing relation. THM-2179 gives a
+stronger-`3/41` positive floor or a body-touching `41`-unit packet of height
+`180` at defect six and `140` at defect `>=7`. These are structural forks,
+not closure; the body relation still lacks a phase-preserving reduction to
+the far-cone or grid-tube terminal.
 
 ### Independent routes that remain live
 

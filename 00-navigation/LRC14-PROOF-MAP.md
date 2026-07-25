@@ -69,7 +69,7 @@ THM-2130 intersects `11/13` labels into a sparse exception or `143` determinant;
 | AP-core supplier | THM-1017 proves `AP core -> far element -> LRC(14)` | Extract the required core from every compact structured residual. |
 | Global phase transport | THM-2050 proves all period-14 local germs can be identical while maxima differ | Supply first-exit magnitude, off-layer gluing, or another genuinely global termination coordinate. |
 | Finite shell | THM-763 bounds a primitive counterexample by `sum v_i<=91^12`; THM-1290 is exhaustive through maximum speed 55 | Turn THM-2052--2059 structural finiteness into a feasible exact decision. |
-| Defect split / reversed peel | THM-2145/2166 give defect-six carry `<=708` with two-core support; THM-2179 gives defect-`>=7` a `3/41` positive exit or a body-touching height-`140` relation with `41`-unit coefficients; THM-2161 refutes fixed banks | Combine the new body relation with aligned phase windows/current; scalar peel covariances are exactly refuted by THM-2179's hostile row. |
+| Defect split / tail continuation | THM-2145/2166 give defect-six carry `<=708`; THM-2179 gives a `3/41` exit or a body-touching `41`-unit relation of height `180` at defect six and `140` at defect `>=7`; THM-735 closes each fixed-core far cone; THM-2184 proves the varying endpoint-grid tube `||r||_1<2NL/(245e_2)` | Turn the body relation into either terminal while retaining phase; otherwise control the changing-core, non-gridlike residual. Scalar peel covariances are refuted by THM-2179's hostile row. |
 
 ### How to represent the new structured branch
 
