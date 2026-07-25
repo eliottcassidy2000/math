@@ -1,0 +1,19 @@
+THM-2252 DEPTH-THREE CROSS-BLOCK SPECTRAL RESONANCE GATE
+target=961/6930
+jackson_N=99 degree=196
+eta_rational_cap=2129/500000
+eta_exact_upper_lt_cap=PASS
+two_step_transition=((145/169,24/169),(144/169,25/169))
+pair_zero_correlation=870/1183
+cross_block_factorized_carrier=1144584995/11589168409 decimal=0.098763341303344
+smoothed_relation_free_cap=5017879304282732213894543/36216151278125000000000000 decimal=0.138553632210875
+simple_cap=433/3125 target_minus=487/4331250
+previous_N=98 relation_free_ledger_closes=NO
+internal_same_core_169_relation=ABSORBED_AS_BLOCK_CONSTANT
+common_core_cross_block_syzygy=(a0,b1,b2,b3)=(0,13,-1,0)
+forced_relation=a0*H+b1*u1+13*b2*u2+169*b3*u3=0
+guard_coefficient_height=15
+block_coefficient_height=33320
+aggregate_vector_nonzero=YES
+certificate_digest=8c3e0e43c0dc40cd7c42464f8e5d965eda11b766e100af6ffa3139845cca1226
+status=THM2252_PROVED_VERIFIED_EXACT
