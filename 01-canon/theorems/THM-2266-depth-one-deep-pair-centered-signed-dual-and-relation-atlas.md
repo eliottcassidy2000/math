@@ -506,15 +506,25 @@ The digest of all `120` profile-specific cutoffs is
 
 Equation (43) is a finite primitive-ratio atlas. There are exactly `3,643`
 ordered coprime pairs `(a,b)` with `ab<=757`, or `1,822` unordered shapes.
-For whichever pair in (36) triggers (43), the corresponding two speeds
-`v=ga`, `w=gb` satisfy the primitive bounded relation
+For whichever pair in (36) triggers (43), the corresponding two normalized
+integers `v=ga`, `w=gb` satisfy the primitive bounded relation
 
 ```text
 bv-aw=0,               max(a,b)<=757.                (47)
 ```
 
-The content of (43) is the bounded height, not the tautological fact that
-two integer speeds are rationally related.
+These are not always two original row speeds: `u_1` is the normalized core
+of the actual blocker `c_1=13u_1`. Translating (47) back to an original
+speed pair may multiply one coefficient by `13`, but still gives height
+at most
+
+```text
+13*757=9841.                                         (47a)
+```
+
+The content of (43) is this bounded normalized atlas (and its height-`9841`
+original-speed image), not the tautological fact that two integers are
+rationally related.
 
 ## 7. Boundary anatomy and interaction with THM-2255
 

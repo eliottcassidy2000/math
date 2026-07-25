@@ -9,6 +9,34 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-253 (2026-07-25, concurrent namespace audit) -- two theorem identifiers were allocated twice
+
+- **What happened:** concurrent sessions promoted both the expiration
+  owner-absorber cut and the mixed scalar relation theorem as `THM-2271`.
+  They also allocated `THM-2272` to both the persistent knot-interaction
+  theorem and a later empty common-anchor reservation. Filename slugs kept
+  the mathematical statements distinguishable, but bare-ID citations became
+  ambiguous.
+- **First failure:** reservations checked their intended filenames but did
+  not re-fetch and check the full YAML-ID namespace immediately before the
+  reservation commit. Concurrently allocated IDs then crossed in flight.
+- **Repair:** preserve the earlier allocations by creation time:
+  `THM-2271` remains the proved expiration owner-absorber cut and
+  `THM-2272` remains the proved persistent knot-interaction theorem.
+  Concurrent reservations had already assigned `THM-2274` to the mixed-scalar
+  relative-rank candidate and `THM-2276` to the shallow-owner residue-aligned
+  crossing candidate. The later proved mixed-scalar theorem, its companion,
+  and its transcript therefore move coherently to `THM-2275`; the later
+  unproved common-anchor stub moves to `THM-2277`. An intermediate repair
+  that sent the stub to already-occupied `THM-2276` was itself corrected
+  before either file became a proved dependency. All hashes and internal
+  reproduction commands were regenerated.
+- **Rule:** before reserving, fetch and check filename, frontmatter `id`,
+  current remote history, and the next several candidate IDs. Cite every
+  theorem by ID plus slug; a bare number never resolves historical collisions.
+
+---
+
 ## MISTAKE-252 (2026-07-25, integrity repair for THM-2243) -- correct mathematics was paired with stale frontmatter hashes
 
 - **What was recorded:** THM-2243's frontmatter claimed script hash

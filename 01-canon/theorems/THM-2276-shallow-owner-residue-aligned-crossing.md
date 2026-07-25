@@ -16,7 +16,7 @@ depends_on: []
 related:
   - THM-2266-depth-one-deep-pair-centered-signed-dual-and-relation-atlas
   - THM-2269-marked-expiration-root-spectrum-and-branch-state-no-go
-  - THM-2271-mixed-scalar-relation-and-guard-blocker-crossing
+  - THM-2275-mixed-scalar-relation-and-guard-blocker-crossing
   - THM-2273-shallow-owner-flow-and-deep-successor-gap-spread
 ---
 
