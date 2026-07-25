@@ -1,5 +1,5 @@
 ---
-id: THM-2288
+id: THM-2295
 title: "Weighted basis-safe floor and scalar rank-five harvest"
 status: >
   RESERVED / UNPROVED EMPTY STUB. Intended target: adapt THM-2190's
@@ -11,7 +11,7 @@ source: codex-2026-07-25-weighted-basis-rank-five
 depends_on: []
 ---
 
-# THM-2288 -- RESERVED / UNPROVED EMPTY STUB
+# THM-2295 -- RESERVED / UNPROVED EMPTY STUB
 
 This identifier is reserved while the weighted guard cases, full-lattice
 survivor equality, exact Jackson boundary, fixed-section lift, and scope are
