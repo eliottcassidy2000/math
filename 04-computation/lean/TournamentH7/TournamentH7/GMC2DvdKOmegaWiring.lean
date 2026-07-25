@@ -98,15 +98,28 @@ theorem singlePolyCrux_holds : GMC2DvdKUnivariateReduction.SinglePolyCrux := by
       = RatFunc.C ((-1) ^ (M + 1) * R.coeff 0) * RatFunc.X by
     rw [map_mul, map_pow, map_neg, map_one, pow_succ]; ring]
 
-/-- **GMC(2), unconditional.**  Boxeph's `gmc2_of_crux` applied to the now-proved `SinglePolyCrux`.
-Every input — the analytic core (`hderiv`), the frame factorization, the degree lemma, and this
-Omega-wiring — is kernel-pure. -/
+/-- **The exact one-variable DvdK interface, unconditional.**  This exposes the intermediate
+theorem proved by the Omega-wiring rather than leaving it visible only inside the GMC(2)
+composition. -/
+theorem dvdK1_unconditional : GMC2DvdKInterface.DvdK1 :=
+  GMC2DvdKUnivariateReduction.dvdK1_of_crux singlePolyCrux_holds
+
+/-- **NC2, unconditional.**  The lowest-face Frobenius proof consumes the now-proved DvdK
+interface and has no remaining height-witness premise. -/
+theorem nc2_unconditional : GMC2.NC2 :=
+  GMC2NC2.nc2_of_dvdK1 dvdK1_unconditional
+
+/-- **GMC(2), unconditional.**  The elementary charge reduction applied to unconditional NC2.
+Every input — the analytic core (`hderiv`), the frame factorization, the degree lemma, the
+Omega-wiring, and the lowest-face Frobenius package — is kernel-pure. -/
 theorem gmc2_unconditional (P Q : MvPolynomial (Fin 2) ℂ)
     (hnull : ∀ m : ℕ, 1 ≤ m → GMC2.E (P ^ m) = 0) :
     ∃ N : ℕ, ∀ m ≥ N, GMC2.E (Q * P ^ m) = 0 :=
-  GMC2DvdKUnivariateReduction.gmc2_of_crux singlePolyCrux_holds P Q hnull
+  GMC2.gmc2_of_nc2 nc2_unconditional P Q hnull
 
 end GMC2DvdKOmegaWiring
 
 #print axioms GMC2DvdKOmegaWiring.singlePolyCrux_holds
+#print axioms GMC2DvdKOmegaWiring.dvdK1_unconditional
+#print axioms GMC2DvdKOmegaWiring.nc2_unconditional
 #print axioms GMC2DvdKOmegaWiring.gmc2_unconditional

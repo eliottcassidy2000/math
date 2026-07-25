@@ -1,6 +1,6 @@
 ---
 id: THM-2297
-title: "Degree-eighteen target-translation normal form and one-sparse closure"
+title: "Degree-eighteen target-translation normal form and sparse-plane closure"
 status: >
   PROVED + VERIFIED-EXACT. The centered coordinate y=9s-2alpha in
   THM-2262 is the exact invariant of the legal target translation
@@ -11,10 +11,12 @@ status: >
   of B,C,D,W is nonzero is empty: the B- and D-axes have squarefree branch
   discriminant, the C-axis normalizes to a smooth genus-one cubic, the W-axis
   to a genus-four superelliptic cover, and the invariant origin is a monomial
-  cusp killed by the exact degree-eighteen polynomial Faber sidecar. Hence
-  every survivor on the singular trigonal locus uses at least two normalized
-  parameters. This does not close the multi-parameter singular locus or
-  prove JC(2).
+  cusp killed by the exact degree-eighteen polynomial Faber sidecar. More
+  strongly, the whole plane B=D=0 is empty: off its axes its normalization is
+  a connected trigonal cover of genus at least two, uniformly through all
+  critical-value collisions. Hence every survivor uses at least two
+  normalized parameters and at least one of B,D is nonzero. This does not
+  close the residual multi-parameter singular locus or prove JC(2).
 source: codex-2026-07-25-degree18-target-translation-gauge
 depends_on:
   - THM-2262-degree-eighteen-trigonal-spectral-discriminant-reduction
@@ -23,8 +25,8 @@ related:
   - THM-2285-centered-grid-footprint-and-generic-keller-lines
 script: 04-computation/jc2_degree18_target_translation_normal_form_thm2297.py
 output: 05-knowledge/results/jc2_degree18_target_translation_normal_form_thm2297.out
-script_sha256: c0754573c0c114b3d6f53148a93639840a7dbd4d0abb3b4c063616e99612abc3
-output_sha256: 6431b2556cbe183ffdb25749bf9f1455715bebfd5ac04dfa2c17a154cc3136a0
+script_sha256: 2d8e42ccb3b3d4d1e698c22bc92a0909b72da191a013a330b4a6d61842b9703b
+output_sha256: 476d04c5efbae1d06c77b37b44d632d868bf5f7202e0795611dbdc08467d6b9e
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -262,9 +264,10 @@ Equation (20) is a spectral covariance statement. It is not permission to
 discard the scaling of the Keller one-form or polynomial sidecar in a later
 argument.
 
-## 5. Every one-sparse invariant stratum is empty
+## 5. The one-sparse strata and the C--W plane are empty
 
-We now close all cases in which at most one of `(B,C,D,W)` is nonzero.
+We first close all cases in which at most one of `(B,C,D,W)` is nonzero,
+then close the whole coordinate plane joining the `C`- and `W`-axes.
 
 ### 5.1 The B- and D-axes are squarefree
 
@@ -330,9 +333,10 @@ binary cubic homogenizing `L`. Hence its genus is one.
 
 The rational Keller trajectory gives a map from `P^1` to this smooth cubic,
 so it is constant. Therefore `z,y,v,u` are constant. Equation (12) then
-makes `Z=T^2` constant, and the nonzero square root `q` becomes constant over
-the algebraically closed constant field, contradicting the genuine deck.
-The `C`-axis is empty.
+makes `N_2` constant; the first-flux formula (11) of THM-2262 makes
+`Z=T^2` constant. The nonzero square root `q` then becomes constant over the
+algebraically closed constant field, contradicting the genuine deck. The
+`C`-axis is empty.
 
 For reference, the nonsquarefree affine branch discriminant is
 
@@ -384,7 +388,73 @@ Delta_0(y;0,0,0,1)
 shows why the raw squarefree test alone missed this genus-four
 normalization.
 
-### 5.4 The invariant origin is a sidecar-killed cusp
+### 5.4 The whole C--W plane has positive-genus normalization
+
+The two axes conceal a stronger statement. Set
+
+```text
+B=D=0,                         C W!=0.               (31a)
+```
+
+With `v=u/y^2` and `z=1/y`, equation (14) is
+
+```text
+L(v)=435456 C z^3+5878656 W z^5=:R(z).              (31b)
+```
+
+This cubic in `v` is irreducible over `C(z)`. Indeed, reducibility would give
+a rational root `v=f(z)`. A finite pole of `f` cannot occur because `R` is a
+polynomial. If `f` has pole order `m` at infinity, then `L(f)` has pole order
+`3m`, whereas `R` has pole order five. This is impossible. Thus the
+normalization is a connected degree-three cover of the `z`-line.
+
+The two critical values of `L` are the roots of
+
+```text
+27 tau^2+68992 tau+226193408,                        (31c)
+```
+
+whose discriminant is
+
+```text
+-19668992000!=0.                                    (31d)
+```
+
+They are distinct and nonzero. On the other side,
+
+```text
+R'(z)=z^2(1306368 C+29393280 W z^2).                (31e)
+```
+
+The critical point `z=0` maps to zero, hence to neither critical value of
+`L`. The other two critical points are simple and have opposite nonzero
+critical values. Let `c` be the number of collisions between these two
+values and the two critical values of `L`; then `0<=c<=2`.
+
+Without a collision, the two critical values of `L`, each with five simple
+preimages under `R`, contribute ten simple ramification points. At a
+collision both `L-L(v_0)` and `R-R(z_0)` vanish to exact order two. The
+affine curve has an ordinary node there, and its two normalization branches
+are unramified over `z`; the collision therefore removes two from the
+ramification count. At infinity the pole orders are three and five. Their
+coprimality gives one point of ramification index three, contributing two.
+Riemann--Hurwitz on the connected degree-three cover gives
+
+```text
+2g-2=-6+(10-2c)+2=6-2c,
+
+g=4-c>=2.                                            (31f)
+```
+
+A rational Keller trajectory into this normalization is consequently
+constant. Thus `z,y,v,u` are constant; covariance (12) makes `N_2` constant,
+and the first-flux formula (11) of THM-2262 makes `Z=T^2`
+constant. The nonzero square root `q` then becomes constant over the
+algebraically closed constant field, contradicting the genuine deck. Sections
+5.2 and 5.3 close the two axes, and the next section closes their
+intersection. Hence the entire plane `B=D=0` is empty.
+
+### 5.5 The invariant origin is a sidecar-killed cusp
 
 It remains to exclude
 
@@ -518,6 +588,8 @@ alpha=0 after the legal translation P -> P+2alpha/9;
 
 at least two of B,C,D,W are nonzero;
 
+at least one of B,D is nonzero;
+
 Disc_y(Disc_u G_0)=0;
 
 the third flux N_3 and Keller one-form remain active;
@@ -525,15 +597,17 @@ the third flux N_3 and Keller one-form remain active;
 the whole-polynomial Faber sidecar remains active.                   (47)
 ```
 
-The first two lines remove a translation orbit and all one-sparse weighted
-strata. The spectral covariance lowers the parameter geometry from five
-affine constants to a weighted four-coordinate cone, or a three-dimensional
-weighted projective search before imposing the singular hypersurface.
+The first three lines remove a translation orbit, all one-sparse weighted
+strata, and the residual `C`--`W` coordinate plane. The spectral covariance
+lowers the parameter geometry from five affine constants to a weighted
+four-coordinate cone, or a three-dimensional weighted projective search
+before imposing the singular hypersurface.
 
 This is not a closure of the remaining two-, three-, or four-coordinate
-singular locus. In particular, a repeated branch value does not identify a
-specific component of the normalization, and the spectral scaling alone is
-not a target-preserving quotient of the Keller one-form.
+singular locus, on which `(B,D)!=(0,0)`. In particular, a repeated branch
+value does not identify a specific component of the normalization, and the
+spectral scaling alone is not a target-preserving quotient of the Keller
+one-form.
 
 ## 7. Exact reproduction
 
@@ -552,11 +626,14 @@ Both runs are byte-identical to the stored output. The companion verifies:
   `N_3`, and the complete spectral cubic;
 - the weights, the 32-term branch discriminant, and its degree;
 - exact axis factorizations and gcd degrees;
-- the infinity-cubic discriminant; and
+- the infinity-cubic discriminant;
+- the vanishing raw `C`--`W` branch resultant, the two critical-value
+  polynomial, and its nonzero discriminant used in the genus lower bound; and
 - all three nonzero resultants (35), (38), and (45).
 
-The smooth-cubic, superelliptic genus, rational-primitive, and sidecar
-valuation arguments are the mathematical proof above rather than delegated
-computer conclusions. The theorem remains scoped to the genuine nonsplit,
-polynomial exact-square-prefix, reduced degree-eighteen branch. It does not
-close other terminal branches or prove the planar Jacobian conjecture.
+The smooth-cubic, trigonal collision, superelliptic genus,
+rational-primitive, and sidecar valuation arguments are the mathematical
+proof above rather than delegated computer conclusions. The theorem remains
+scoped to the genuine nonsplit, polynomial exact-square-prefix, reduced
+degree-eighteen branch. It does not close other terminal branches or prove
+the planar Jacobian conjecture.

@@ -188,7 +188,8 @@ THM-2234/2255 supply private expansion and exclusive-owner mass; THM-2263 sharpe
 THM-2271/2273/2278 force absorber energy, gap spread, and labelled root modes but no blocker return.
 THM-2274 gives scalar rank two at adaptive heights `35/198/594`; THM-2283 proves general/live odd-guard rank-two safe-torus floors `40/273` and `152/1029`, then scalar rank three at `102/198/594` (fixed-section `204/396/1188`).
 THM-2295 supersedes the uniform rank count with scalar rank five at height `196` (fixed-section `392`); THM-2283 remains the sharper support-at-least-three rank-three certificate at degree `102` and the exact rank-two torus classifier.
-On `120` interiors, THM-2277 removes a shared anchor and THM-2279/2282 anchor a mod-13 unit minor at `c_1`; THM-2276 lands exact ancestry for `m<=3` and freezes `696` local cancellations for `4<=m<=757`. Global landing on that bank and `45` boundary rows remain open.
+On `120` interiors, THM-2277 removes a shared anchor and THM-2279/2282 anchor a mod-13 unit minor at `c_1`; THM-2276 lands exact ancestry for `m<=3` and freezes `696` local cancellations for `4<=m<=757`.
+THM-2296 includes all `165` rows, including the `45` boundary rows: at the selected prescribed clock it forces either a quantitative blocker return or a common ancestry/current-service atom `n<=4S^2-1`. The missing bridge is now a gauge-faithful nonzero root character with signed base phase, current target service, and the exact THM-2276 carry on one atom.
 
 ### Independent routes that remain live
 
@@ -243,14 +244,12 @@ On `120` interiors, THM-2277 removes a shared anchor and THM-2279/2282 anchor a 
 - **REFUTED for higher dimensions:** explicit GMC(3) counterexamples now exist;
   GMC is false for every dimension at least 3. See the current external preprint
   entry in [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md).
-- **FORMALIZATION COMPLETE:** `GMC2Main.gmc2` is unconditional, root-imported,
-  and kernel-pure with only `propext`, `Classical.choice`, and `Quot.sound`.
-  Legacy endpoints `nc2_of_dvdK1` and `gmc2_of_dvdK1` retain `DvdK1` as a
-  reusable implication, while `GMC2DvdKOmegaWiring.singlePolyCrux_holds`
+- **FORMALIZATION COMPLETE:** `GMC2Main` exposes unconditional, root-imported
+  `dvdK1`, `nc2`, and `gmc2`, each kernel-pure with only `propext`, `Classical.choice`, and `Quot.sound`.
+  Legacy implication endpoints retain `DvdK1`, while `GMC2DvdKOmegaWiring.singlePolyCrux_holds`
   discharges the premise in the front-door theorem. THM-2101's three additive
   routes remain valuable optional formalization targets, not proof blockers.
-  Its orbit/Lagrange core is already kernel-checked. THM-2111 gives
-  the effective seed; THM-2067 is only the historical small-root-product route.
+  Its orbit/Lagrange core is kernel-checked; THM-2111 gives the effective seed, while THM-2067 is only the historical small-root-product route.
 
 ### Why THM-2022 works
 
@@ -419,10 +418,11 @@ into tournament operation laws and LRC residue packets.
   odd-leading survivors to degree `>=14` with `R deg(q)>=deg(V)`. THM-2245
   forces degree fourteen onto a singular spectral quartic; THM-2247 closes it.
   THM-2262 makes the degree-eighteen generic spectrum a genus-four trigonal
-  cover, kills its exceptional center by a Faber-sidecar pole, and leaves only
-  an explicit degree-twelve branch-discriminant locus. Split/even descent and other
-  short edges remain; THM-2206 blocks field-valued `C_2` Hasse repair. Integral
-  `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
+  cover and leaves an explicit degree-twelve branch locus; THM-2297 removes
+  target translation, yields a weighted `(2,3,4,5)` cone, and closes every
+  one-sparse stratum plus the `B=D=0` plane by genus. Thus every survivor has
+  `(B,D)!=(0,0)`. Split/even descent and other short edges remain; THM-2206
+  blocks field-valued `C_2` Hasse repair. Integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 

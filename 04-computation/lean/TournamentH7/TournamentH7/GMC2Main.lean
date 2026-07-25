@@ -29,13 +29,24 @@ GMC(2)  ⇐  NC2  ⇐  DvdK1  ⇐  SinglePolyCrux  (= the small-root packet prod
 
 ## Verification
 
-`#print axioms GMC2.gmc2 = [propext, Classical.choice, Quot.sound]` — no `sorry`, no `native_decide`, no
-extra axioms; the whole transitive dependency is `sorry`-free and hermetic; independently adversarially
-reviewed as sound.  (See reflections `gmc2-proven-unconditional-omega-wiring-closed` and
+The front door exposes all three completed endpoints: `GMC2.dvdK1`, `GMC2.nc2`, and `GMC2.gmc2`.
+Each `#print axioms` result is `[propext, Classical.choice, Quot.sound]` — no `sorry`, no
+`native_decide`, and no extra axiom. The whole transitive dependency is `sorry`-free and hermetic;
+independent adversarial review found no hidden premise. (See reflections
+`gmc2-proven-unconditional-omega-wiring-closed` and
 `gmc2-verification-and-mathlib-pr-readiness`.)
 -/
 
 namespace GMC2
+
+/-- **One-variable DvdK in the exact finite-support form used by the proof, proven
+unconditionally.** -/
+theorem dvdK1 : GMC2DvdKInterface.DvdK1 :=
+  GMC2DvdKOmegaWiring.dvdK1_unconditional
+
+/-- **The two-variable Gaussian nullcone classification, proven unconditionally.** -/
+theorem nc2 : NC2 :=
+  GMC2DvdKOmegaWiring.nc2_unconditional
 
 /-- **GMC(2), proven unconditionally.**  For `P Q : ℂ[X₀, X₁]`, if every central power `E(Pᵐ)` vanishes
 (`m ≥ 1`) then `E(Q · Pᵐ)` vanishes for all large `m`.  The canonical statement; kernel-pure. -/
@@ -46,4 +57,6 @@ theorem gmc2 (P Q : MvPolynomial (Fin 2) ℂ)
 
 end GMC2
 
+#print axioms GMC2.dvdK1
+#print axioms GMC2.nc2
 #print axioms GMC2.gmc2

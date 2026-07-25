@@ -9,8 +9,8 @@ Translating the first Keller target by ``P_c = P + c`` preserves the map and
 changes the Faber basis by a finite binomial transform.  At
 ``c = 2*alpha/9`` this kills ``alpha``.  This script verifies the full Faber
 identity, the four resulting invariant parameters, covariance of all retained
-spectral data, the weighted cone structure, and the exact one-sparse axis
-checks used in THM-2297.
+spectral data, the weighted cone structure, the exact one-sparse axis checks,
+and the critical-value data closing the full C--W plane in THM-2297.
 """
 
 from __future__ import annotations
@@ -382,6 +382,75 @@ def main() -> None:
         "infinity cubic discriminant changed",
     )
 
+    # The whole B=D=0 plane has a repeated branch value in the original
+    # y-projection.  In the faithful z=1/y chart its equation is separated:
+    #
+    #   L(v) = 435456*C*z^3 + 5878656*W*z^5.
+    #
+    # The two critical values of L are distinct and nonzero.  Since the two
+    # nonzero critical points of the right side are simple, at most two branch
+    # collisions occur; the normalization therefore has genus at least two.
+    cw_discriminant = sp.factor(
+        branch_discriminant.subs({bvar: 0, dvar: 0})
+    )
+    require(
+        sp.resultant(cw_discriminant, sp.diff(cw_discriminant, y), y) == 0,
+        "C-W plane should be invisible to the raw squarefree test",
+    )
+    critical_value = sp.symbols("tau")
+    critical_value_polynomial = sp.factor(
+        sp.resultant(
+            sp.diff(infinity_cubic, v),
+            critical_value - infinity_cubic,
+            v,
+        )
+    )
+    primitive_critical_value_polynomial = sp.factor(
+        critical_value_polynomial
+        / sp.Poly(critical_value_polynomial, critical_value).LC()
+        * 27
+    )
+    require(
+        primitive_critical_value_polynomial
+        == 27 * critical_value**2 + 68992 * critical_value + 226193408,
+        "critical-value polynomial changed",
+    )
+    critical_value_discriminant = sp.discriminant(
+        primitive_critical_value_polynomial,
+        critical_value,
+    )
+    require(
+        critical_value_discriminant == -19668992000,
+        "critical values are no longer distinct",
+    )
+    require(
+        primitive_critical_value_polynomial.subs(critical_value, 0) != 0,
+        "zero became a critical value",
+    )
+    inverse_y = sp.symbols("z")
+    cw_right_side = (
+        435456 * gvar * inverse_y**3
+        + 5878656 * pvar * inverse_y**5
+    )
+    require(
+        sp.expand(
+            sp.diff(cw_right_side, inverse_y)
+            - inverse_y**2
+            * (1306368 * gvar + 29393280 * pvar * inverse_y**2)
+        )
+        == 0,
+        "C-W critical-point factorization changed",
+    )
+    require(
+        sp.factor(
+            435456 * gvar
+            + 5878656 * pvar
+            * (-sp.Rational(2, 45) * gvar / pvar)
+        )
+        == sp.Rational(870912, 5) * gvar,
+        "nonzero C-W critical images changed",
+    )
+
     # On the invariant origin, G=y^6 L(u/y^2), Z=k(v)y^3, and
     # F is a nonzero constant times y^6/T.  The three resultants below
     # certify that none of the needed coefficients vanishes at a root of L.
@@ -444,6 +513,18 @@ def main() -> None:
         print(f"axis_{name}_factor={axis_data[name][0]}")
     print(f"infinity_cubic={infinity_cubic}")
     print(f"infinity_discriminant={infinity_discriminant}")
+    print("CW_raw_branch_resultant=0")
+    print(
+        "infinity_critical_value_polynomial="
+        f"{primitive_critical_value_polynomial}"
+    )
+    print(
+        "infinity_critical_value_discriminant="
+        f"{critical_value_discriminant}"
+    )
+    print("CW_nonzero_critical_points=z^2=-2*C/(45*W)")
+    print("CW_critical_images=(870912/5)*C*(+/-z)^3")
+    print("CW_normalization_genus_lower_bound=2")
     print(f"origin_Z_resultant={origin_resultants['Z']}")
     print(f"origin_F_resultant={origin_resultants['F']}")
     print(f"origin_sidecar_resultant={origin_resultants['sidecar']}")

@@ -26,6 +26,12 @@ axis_origin_gcd_degree=11
 axis_origin_factor=-153384762202971019112448*y**12
 infinity_cubic=-26040609*v**3 + 1607445*v**2 - 138915*v + 1127
 infinity_discriminant=-153384762202971019112448
+CW_raw_branch_resultant=0
+infinity_critical_value_polynomial=27*tau**2 + 68992*tau + 226193408
+infinity_critical_value_discriminant=-19668992000
+CW_nonzero_critical_points=z^2=-2*C/(45*W)
+CW_critical_images=(870912/5)*C*(+/-z)^3
+CW_normalization_genus_lower_bound=2
 origin_Z_resultant=22220417174433988608
 origin_F_resultant=-1305960654728555144789507775025586141921280
 origin_sidecar_resultant=422187926314245783552
