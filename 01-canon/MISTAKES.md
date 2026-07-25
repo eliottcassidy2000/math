@@ -30,6 +30,12 @@ Format per entry:
   fetch and verify uniqueness immediately afterward. During a collision
   repair, cite the slug and keep both files unproved until uniqueness is
   restored.
+- **Same-day recurrence:** the dual rank-six reconstruction stub and the
+  mirror-double stable-mixture stub crossed in flight at `THM-2307` despite
+  both owners checking a then-current remote. The earlier dual-rank
+  reservation keeps `THM-2307`; the later mirror-double reservation moves
+  immediately and coherently to `THM-2308`. Both were still unproved stubs,
+  so no mathematical statement or proved dependency changed.
 
 ---
 

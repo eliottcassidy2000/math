@@ -1,5 +1,5 @@
 ---
-id: THM-2307
+id: THM-2308
 title: "Mirror-double Nakanishi floor and sharp stable mixture profile"
 status: >
   RESERVED / UNPROVED PROOF CANDIDATE UNDER AUDIT. Intended target: use a
@@ -13,7 +13,7 @@ source: codex-2026-07-25-knot-stable-refinement
 depends_on: []
 ---
 
-# THM-2307 -- RESERVED / UNPROVED PROOF CANDIDATE UNDER AUDIT
+# THM-2308 -- RESERVED / UNPROVED PROOF CANDIDATE UNDER AUDIT
 
 The Alexander-module fiber argument, mirror symmetry, dual calibration,
 concavity, sharp extremal norms, and all scope boundaries are being written
