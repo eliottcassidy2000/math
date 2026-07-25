@@ -188,7 +188,7 @@ Pass harmlessly to a valued extension containing `lambda` with
 S(X)=T(X/lambda).                                     (20)
 ```
 
-Its residue is a nonconstant cubic truncation
+Its residue is a nonconstant polynomial of degree at most three,
 
 ```text
 S_0(X)=1+A X+B X^2+C X^3,                            (21)
@@ -392,7 +392,9 @@ The valuations of the top first and second flux teeth are
 -(n+2)A_0+r rho=r(rho-4A_0)<0.                       (43)
 ```
 
-No lower Faber degree can cancel them. For `m'=4j-2<n` and any
+Only the second displayed valuation is asserted to be negative; the first
+tooth is used through the exact identity `Phi_Q=0`. No lower Faber degree
+can cancel either tooth. For `m'=4j-2<n` and any
 nonpolynomial order `q>=j`, its `t`-th flux valuation is at least
 
 ```text
@@ -472,7 +474,7 @@ Psi_Q=a^4(2Omega-Lambda)+k a^3 Lambda.                (49)
 
 Write `A=A_0` and `C=C_0`. Since `0<C<2A`, regularity of `B_Q` forces
 `C=A` and `k!=0`: its two polar terms must have equal valuation.
-Constancy of `Phi_Q` then forces
+Now `c-1/2` is a unit because `v(c)=C>0`. Constancy of `Phi_Q` then forces
 
 ```text
 v(Lambda)=A.                                         (50)

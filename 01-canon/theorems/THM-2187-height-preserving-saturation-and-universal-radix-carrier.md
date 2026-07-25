@@ -10,9 +10,12 @@ status: >
   plane, this removes adaptive prime selection without increasing the
   sign-sharp 208875 carry-pair bound: base 14, or any fixed composite bank,
   is available. It also sharpens THM-2178's saturated-basis height from
-  286650 to 105. With THM-2185, every zero-safe row moreover has a saturated
-  rank-three relation basis of height at most 500, surjective modulo every
-  base with unrestricted fibres q^10. The remaining pumping loss is
+  286650 to 105. More generally, adjoining a height-H vector to a saturated
+  basis (b_i) costs at most max(H,H/2+sum_i ||b_i||_infinity/2). With
+  THM-2190, every zero-safe row therefore has a saturated rank-six basis
+  with height profile (29,105,178,258,416,718), surjective modulo every
+  base with unrestricted fibres q^7. A universal finite, nonnumeric
+  saturated rank-seven carrier also follows. The remaining pumping loss is
   phase/current, not radix rank.
 source: codex-2026-07-24-LRC-saturated-relation-plane
 depends_on:
@@ -22,6 +25,7 @@ depends_on:
   - THM-2171
   - THM-2178
   - THM-2185
+  - THM-2190
 related:
   - THM-2167
   - THM-2174
@@ -89,28 +93,29 @@ primitivity to the ambient lattice.
 
 ## 2. Universal residue fibres
 
-Let `B` be the `2 x d` matrix with rows `m,n`. Since its row lattice `L`
-is saturated, Smith normal form has both invariant factors equal to one.
-Equivalently, the gcd of the `2 x 2` minors is one, and there is an integral
-right inverse
+Let `B` be any `r x d` matrix whose rows form a basis of a saturated
+rank-`r` sublattice of `Z^d`. Smith normal form has all invariant factors
+equal to one, so there is an integral right inverse
 
 ```text
-B R=I_2.                                               (7)
+B R=I_r.                                               (7)
 ```
 
 Reduction of (7) modulo any integer `q>=2` proves that
 
 ```text
-(Z/qZ)^d -> (Z/qZ)^2,             x |-> Bx            (8)
+(Z/qZ)^d -> (Z/qZ)^r,             x |-> Bx            (8)
 ```
 
 is surjective. Every fibre therefore has exactly
 
 ```text
-q^(d-2)                                               (9)
+q^(d-r)                                               (9)
 ```
 
-elements. For prime `q`, the two rows are independent over `F_q`.
+elements. For prime `q`, the rows are independent over `F_q`. In the
+rank-two situation of Section 1, the equivalent minor criterion is that
+the gcd of the `2 x 2` minors is one.
 
 There is also an exact live-owner statement. For `O subset {1,...,d}`, let
 `B_O` be the restriction to those columns and let `I_O(q)` be its image.
@@ -218,73 +223,123 @@ dim_Q W_(H_sat)(v)>=3,                                (19)
 or the saturated plane modulo `14` contains a nonzero word supported on
 at most three coordinates. No other part of THM-2178's proof changes.
 
-## 5. Saturated rank three at height 500
+## 5. Iterated saturated extension
 
-THM-2185 now proves unconditionally that a zero-safe distinct positive row
-has
-
-```text
-dim_Q W_500(v)>=3.                                    (20)
-```
-
-Let `(b_1,b_2)` be the saturated basis from Section 3, so
+The preceding centering argument works in every rank. Let `L` be a
+saturated rank-`r` sublattice of `Z^d`, let `(b_1,...,b_r)` be a basis of
+`L`, and let `c in Z^d` be rationally independent of `L`, with
 
 ```text
-||b_1||_infinity,||b_2||_infinity<=105,
+||c||_infinity<=H.                                    (20)
 ```
 
-and choose a relation `c` outside their rational plane with
-`||c||_infinity<=500`. Put
+Put
 
 ```text
-L_3=(Qb_1+Qb_2+Qc) intersection Z^13.                (21)
+L'=(Q L+Q c) intersection Z^d.                        (21)
 ```
 
-The rank-two lattice `L_2=Zb_1+Zb_2` is primitive in `L_3`: it is already
-saturated in `Z^13`, so `L_3/L_2` is a subgroup of the torsion-free group
-`Z^13/L_2`. Extend `(b_1,b_2)` to a basis
-`(b_1,b_2,n_0)` of `L_3` and write
+The quotient `L'/L` is a subgroup of the torsion-free group `Z^d/L`, so
+`L` is primitive in `L'`. Extend the displayed basis by `n_0` and write
 
 ```text
-c=a_1b_1+a_2b_2+D n_0,                 D>=1.          (22)
+c=sum_(i=1)^r a_i b_i+D n_0,             D>=1.        (22)
 ```
 
-Replace `n_0` by `n_0+k_1b_1+k_2b_2` to center both coefficients:
+Replacing `n_0` by `n_0+sum_i k_i b_i` centers every coefficient modulo
+`D`:
 
 ```text
-|a_1|,|a_2|<=D/2.                                    (23)
+|a_i|<=D/2.                                           (23)
 ```
 
-If `D=1`, choose both coefficients zero and take `n=c`. If `D>=2`, then
+If `D=1`, all coefficients can be made zero and one may take `n=c`. If
+`D>=2`, the centered vector satisfies
 
 ```text
 ||n||_infinity
- <=500/D+(|a_1|+|a_2|)105/D
- <=250+105=355.                                      (24)
+ <=H/D+sum_i (|a_i|/D)||b_i||_infinity
+ <=H/2+(1/2)sum_i ||b_i||_infinity.                  (24)
 ```
 
-Thus `L_3` has a saturated basis whose first two vectors have height at
-most `105` and whose third has height at most `500`. Smith normal form
-again supplies an integral right inverse. For every `q>=2`,
+Thus `(b_1,...,b_r,n)` is a basis of `L'`, retaining the old basis exactly,
+with
 
 ```text
-(Z/qZ)^13 -> (Z/qZ)^3
+||n||_infinity
+ <=max(H,H/2+(1/2)sum_i ||b_i||_infinity).            (25)
+```
+
+The asymmetry is useful: a short distinguished anchor and every previously
+constructed carry coordinate survive saturation unchanged.
+
+## 6. Explicit saturated rank-six carrier
+
+Let `v` be a zero-safe distinct positive thirteen-speed row. Start with the
+saturated rank-two carrier of Section 3 and label its basis so that
+
+```text
+(||b_1||_infinity,||b_2||_infinity)<=(29,105).        (26)
+```
+
+THM-2190 supplies the nested rank thresholds
+
+```text
+dim_Q W_178(v)>=3,
+dim_Q W_204(v)>=4,
+dim_Q W_262(v)>=5,
+dim_Q W_450(v)>=6.                                   (27)
+```
+
+At each height choose a bounded relation outside the rational span already
+constructed, saturate the enlarged span, and apply (25). The successive
+calculations are
+
+```text
+b_3: max(178, 178/2+(29+105)/2)                 =178,
+b_4: max(204, 204/2+(29+105+178)/2)             =258,
+b_5: max(262, 262/2+(29+105+178+258)/2)         =416,
+b_6: max(450, 450/2+(29+105+178+258+416)/2)     =718. (28)
+```
+
+Consequently every such row has a saturated relation lattice with a basis
+of height profile
+
+```text
+(29,105,178,258,416,718).                            (29)
+```
+
+For every integer base `q>=2`, its six-row digit map
+
+```text
+(Z/qZ)^13 -> (Z/qZ)^6                                (30)
 ```
 
 is surjective, and every unrestricted simultaneous digit fibre has exactly
 
 ```text
-q^10                                                   (25)
+q^7                                                     (31)
 ```
 
-words. In base `14`, this is `14^10`; live-owner fibres split exactly into
-their mod-`2` and mod-`7` image sizes.
+words. In base `14`, this is `14^7`; every owner-restricted fibre is still
+given exactly by (10)--(11), now with the ranks of the six-row column
+restriction. The height-`105` rank-two subcarrier remains useful because
+its sign-sharp carry count is much smaller, while (29) gives four genuinely
+transverse universal-radix coordinates when rank is the scarce resource.
 
-This supersedes the sparse-code terminal in Section 4 as a relation-rank
-question. The height-`105` rank-two subcarrier remains useful because its
-carry count is much smaller and its first anchor is height `29`.
+THM-2190 also gives a universal finite, presently nonnumeric `H_*` with
+`dim_Q W_(H_*)(v)>=7`. Adjoining such a seventh relation to (29) gives a
+saturated rank-seven basis whose final height is at most
 
-## 6. Exact boundary
+```text
+max(H_*,H_*/2+852),                                  (32)
+```
+
+because the six displayed heights sum to `1704`. Its unrestricted
+modulo-`q` fibres have size `q^6`. This is an honest finite universal
+carrier, but not yet an effective state bound because `H_*` is uncomputed.
+
+## 7. Exact boundary
 
 Saturation repairs base selection, unrestricted fibre rank, and the loose
 basis height. It does not make a repeated carry state target-preserving.
@@ -296,11 +351,12 @@ scale-sensitive endpoint term need not repeat.
 The faithful carrier is therefore
 
 ```text
-saturated relation plane
- + optional saturated height-500 third relation
+saturated height-(29,105) relation plane
+ + optional explicit saturated rank-six extension (29)
+ + optional nonnumeric saturated seventh relation (32)
  + exact composite-radix owner image
  + quotient-tie sidecar
- + full phase/current continuation data.             (26)
+ + full phase/current continuation data.             (33)
 ```
 
 A fixed base is now free; the final sidecar is not. QED.
