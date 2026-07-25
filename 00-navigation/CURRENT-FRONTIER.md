@@ -188,7 +188,7 @@ latter's composite union; THM-2250 closes every unequal-core partition, and
 THM-2257's exact `169`-image sieve contradicts the capacity of its common-core
 branch. The exact scalar ledger is therefore `165`, all at first depth one.
 THM-2234/2255 supply private expansion and exclusive-owner mass; THM-2263 sharpens the expiration-image floors to `15041431/70270200>1/7` on all `150` strict rows and `5229541/70270200>1/14` on the `15` repeated-first rows.
-THM-2261 makes raw expiration blind. THM-2144/2164 force height-`29` relations and rank two; THM-2145/2166 force bounded crossing and low-carry relations through every `6+7` cut. THM-2267/2268 show switching is global but static service and raw carry forget its ancestry. The open object is an ancestry-weighted multicore handoff retaining that cut frequency and THM-2239's time-zero literal. LRC(14) remains open.
+THM-2261 makes raw expiration blind. THM-2144--2166 give bounded rank/crossing; THM-2270 makes crossing simultaneous, while THM-2271's scalar crossing is divisible by `13`. THM-2267/2268 force global switching; THM-2269 gives marked energy in every nonzero mod-13 residue. The open bridge must descend the crossing through selected-owner roots and land its exact frequency, not only its residue, in marked ancestry. LRC(14) remains open.
 
 ### Independent routes that remain live
 

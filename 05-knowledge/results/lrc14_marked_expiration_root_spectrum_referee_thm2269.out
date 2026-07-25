@@ -1,0 +1,13 @@
+THM-2269 independent exact referee
+orthogonality_masks_checked=91
+orthogonality_energy_values=(12,22)
+uniform_mode_lower=4/169
+trigonometric_coefficients_checked=95
+residue_classes_checked=13
+strict_residue_floor=15041431/11875663800
+repeated_residue_floor=5229541/11875663800
+strict_every_residue_floor=15041431/501746795550
+repeated_every_residue_floor=5229541/501746795550
+hostile_profiles_checked=150
+hostile_orbit=(79/338,1/26,1/2,1/2)
+ALL_CHECKS_PASSED

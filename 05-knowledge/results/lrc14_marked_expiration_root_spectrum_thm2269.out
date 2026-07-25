@@ -1,0 +1,25 @@
+THM-2269 primary exact verification
+root_masks_checked=91
+nonconstant_energy_histogram={12: 13, 22: 78}
+uniform_angle_minimizers=(6,7)
+uniform_character_energy_lower=4/169
+fibre_lp_certificate=12a+22b-12(a+b)=10b>=0
+strict_image_floor=15041431/70270200
+strict_total_nonzero_residue_energy=15041431/989638650
+strict_one_residue_energy=15041431/11875663800
+strict_every_residue_energy=15041431/501746795550
+repeated_image_floor=5229541/70270200
+repeated_total_nonzero_residue_energy=5229541/989638650
+repeated_one_residue_energy=5229541/11875663800
+repeated_every_residue_energy=5229541/501746795550
+strict_minus_one_core_carrier=24332839/11875663800
+hostile_x=79/338
+hostile_q=(2, 339, 677, 1015, 1353)
+strict_profiles_checked=150
+hostile_branch_states=
+  t=0 phase=79/338 literal=1 owners=(1, 0, 0)
+  t=1 phase=1/26 literal=0 owners=(0, 0, 0)
+  t=2 phase=1/2 literal=0 owners=(0, 0, 0)
+  t=3 phase=1/2 literal=0 owners=(0, 0, 0)
+marked_current_bits_at_t1=(1,0)
+ALL_CHECKS_PASSED
