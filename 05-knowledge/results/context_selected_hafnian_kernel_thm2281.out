@@ -1,0 +1,8 @@
+THM-2281 context-selected hafnian kernel exact audit
+exhaustive direct=hafnian evaluations: 746496
+exhaustive digest: 3ee779e94b0381537dcca2e858f730d6308685fd318d483b87e42bd778af69fa
+selector-erasure response vectors (rr,rb,br,bb): (1, 0, 0, 1) vs (2, 0, 0, 0)
+phase-erasure response vectors (rr,rb,br,bb): (0, 0, 0, 0) vs (2, 0, 0, 0)
+leaf-forcing entry probes: 10
+leaf-probe digest: a29b7c631e1fde3c1fa1519a8c6171ede4f74664dfd1c3d400bad58eb1b1bdd1
+all exact assertions passed
