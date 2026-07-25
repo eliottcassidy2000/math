@@ -10,7 +10,11 @@ status: >
   Hall, the permanent, optimal transport, and the Kantorovich dual give
   equivalent exact certificates and a quantitative imbalance deficit. The
   quotient loses the labelled core kernel G and therefore does not classify
-  the full tournament distance. In every jointly nonexpansive commutative
+  the full tournament distance in general. When the common quotient is
+  transitive, however, every nonidentity split transport pays an explicit
+  prefix-crossing tax: G(X)>=G(NI)+max_r sum_(i<=r<j)X_ij. Consequently the
+  full pinned response is exactly G(NI), independently of the exterior
+  context, and NI is its unique minimizing transport matrix. In every jointly nonexpansive commutative
   metric monoid, the continuation-kernel map is an isometric embedding. For knots, Schubert
   prime decomposition then makes every Green class in the kernel image a
   singleton, the unknot the only idempotent and regular element, and prime
@@ -360,4 +364,75 @@ bipartite and therefore not a partial cube.
 
 Any genuine partial-cube claim for a knot or tournament response graph must
 construct convex cuts or Djokic--Winkler theta classes. The continuation
-kernel alone supplies neither. QED.
+kernel alone supplies neither.
+
+## 8. A transitive quotient closes the full split response
+
+Return to THM-2221's pinned equal-order tournament model. Suppose the common
+quotient is the transitive order
+
+```text
+1<2<...<q
+```
+
+and the corresponding source and target blocks `T_i,S_i` all have order
+`N`. Put
+
+```text
+A_0=sum_(i=1)^q d_iso(T_i,S_i)=G(NI).                (36)
+```
+
+For every admissible integer block transport `X`, whose row and column
+margins are all `N`, define its crossing number at the `r`th prefix cut by
+
+```text
+k_r(X)=sum_(i<=r<j)X_(i,j),
+kappa(X)=max_(1<=r<q) k_r(X).                        (37)
+```
+
+Then the exact core kernel has the prefix tax
+
+```text
+G(X)>=A_0+kappa(X).                                  (38)
+```
+
+To prove (38), fix a bijection `pi` realizing `X` and a prefix cut `r`.
+The margin equalities imply
+
+```text
+sum_(i<=r<j)X_(i,j)=sum_(j<=r<i)X_(i,j)=k_r(X).      (39)
+```
+
+View the two tournaments as the order-joins of their prefix and suffix
+aggregates. THM-2183's two-image uncrossing applies to these two equal-size
+cuts: each swap removes one pair of opposite crossings and lowers the core
+reversal cost by at least one. After `k_r(X)` swaps the bijection respects
+this prefix cut. Its remaining cost is at least the global core distance,
+which is `A_0` by iterating THM-2183's exact order-join product. Hence
+
+```text
+g(pi)>=A_0+k_r(X).
+```
+
+Minimize over all `pi` realizing `X`, then maximize over `r`, to obtain
+(38).
+
+The full pinned response therefore collapses exactly:
+
+```text
+R_(P,Q)(mu)
+ =min_X [G(X)+<X,D_mu>]
+ =A_0.                                               (40)
+```
+
+Indeed, `X=NI` attains `A_0`, since `D_mu` has zero diagonal. Every other
+integer transport has `kappa(X)>=1`: if all prefix crossings vanished, no
+entry above the diagonal could be positive, and the equal margins would
+then also kill every entry below it. Thus `X=NI`. Since `D_mu` is
+nonnegative, (38) makes every nonidentity transport strictly more
+expensive.
+
+This is the exact boundary of the histogram loss in Section 3. The
+complement histogram alone does not determine `G` for a general core, but
+transitive order supplies a Monge uncrossing sidecar strong enough to make
+the entire exterior context irrelevant to the minimum. QED.
