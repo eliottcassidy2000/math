@@ -1,0 +1,16 @@
+scope=FINITE-EXACT local hostile control; not a global cover
+probe=profile_(1,2,5)_within_fibre_horizon_two
+z=325007/700000 H=1 c1=26 c2=338 c3=742586
+unit_speeds=(118300001, 236600001, 354900001, 473200001, 591500001)
+universe=n in [0,168], x_n=(z+n)/169; filters=||x||>1/7, ||26x||>=1/14, five ||q_i x||>=1/14
+obligations=112 indices=(24, 25, 26, 27, 28, 29, 30, 31, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 137, 138, 139, 140, 141, 142, 143, 144)
+by_first_digit={0: 10, 1: 10, 2: 9, 3: 9, 4: 9, 5: 9, 7: 9, 8: 9, 9: 9, 10: 9, 11: 10, 12: 10}
+terminal_norms=owner2:24993/350000,owner3:40379/350000
+owner_words={(338,): 112} common_stalks=1 switches=0
+carry_pair_distribution={(0, 12): 10, (1, 12): 9, (2, 12): 10, (3, 12): 9, (4, 12): 9, (5, 12): 9, (6, 12): 9, (7, 12): 9, (8, 12): 9, (9, 12): 10, (10, 12): 9, (11, 12): 10}
+stalk_sha256=2dd687441cf92ca8c60e4e8e4b9614926f3e3c5658e599f9d1f137d96761a165
+complex=full_111_simplex faces=5192296858534827628530496329220096 minimal_nonfaces=()
+all_pairs=6216 all_triples=227920 obstruction_fraction=0
+carry_c=338 sheet_slope=2 residue_increment=2 raw_integer_winding=338 holonomy_defect=0
+carry_c=742586 sheet_slope=4394 residue_increment=0 raw_integer_winding=742586 holonomy_defect=0
+verdict=full-simplex collapse at this local horizon

@@ -554,3 +554,100 @@ The reusable meta-pattern is:
 > carrier of the forced bridge and ask whether every proposed sidecar meets
 > that carrier.  A large sidecar on a disjoint stratum is mathematically
 > invisible.
+
+## 7. Exact stopping certificate for a horizon-two owner/carry complex
+
+**FINITE-EXACT LOCAL STOPPING CERTIFICATE; NOT A THEOREM OR PROFILE
+EXCLUSION.**  The hostile row below need not extend to a global scalar cover.
+It tests only whether owner labels, common carry lifts, and minimal nonfaces
+inside one `169`-sheet fibre can close the `(1,2,5)` row.
+
+Reuse the sharp THM-2246 phase
+
+```text
+z=325007/700000,                 x_n=(z+n)/169,
+H=1,                            c_1=26,
+c_2=338=2*13^2,                 c_3=742586=2*13^5,
+q_i=1+169*700000 i,             1<=i<=5.             (42)
+```
+
+The finite universe is `0<=n<169`.  Retain exactly the obligations satisfying
+
+```text
+||x_n||>1/7,
+||26x_n||>=1/14,
+||q_i x_n||>=1/14 for every i.                       (43)
+```
+
+There are exactly `112` such sheets, with no load-bearing boundary equality.
+At the terminal phase,
+
+```text
+||2z||=24993/350000<1/14,
+||2*13^3 z||=40379/350000>1/14.                      (44)
+```
+
+Consequently `c_2` owns every one of the `112` obligations and `c_3` owns
+none.  This is a unique persistent owner word on the fixed local row.
+
+The negative result survives retaining honest common carries rather than
+independent owner bits.  Write `n=h+13k`, where `0<=h,k<13`, and put
+
+```text
+p_c(n)=floor(c x_n).
+```
+
+For both `c=c_2,c_3`, exact arithmetic gives
+
+```text
+p_c(n)
+ =floor((c/169)z)+(c/169)h+13(c/169)k
+ =floor((c/169)z)+(c/169)n.                          (45)
+```
+
+Thus the leaf carries descend through one common root word.  Around the
+marked sheets, their raw integer windings are respectively
+
+```text
+338,                            742586,
+```
+
+but after subtracting the forced linear sheet slopes `2` and `4394`, every
+edge defect and both total holonomy defects are zero.  The mod-`13` carry
+increments are `2` and `0`; the deep owner is residue-flat without producing
+an integer obstruction.  There are also zero owner switches.
+
+Now form the coverability complex whose facets are the obligation sets
+serviced by legal common owner/carry stalks.  The stalk in (42)--(45) services
+the entire `112`-element universe through `c_2`.  Hence the complex is already
+the full `111`-simplex:
+
+```text
+number of faces = 2^112
+                = 5192296858534827628530496329220096,
+minimal nonfaces = empty,
+obstruction fraction = 0.                            (46)
+```
+
+In particular, all `6216` pairs and all `227920` triples are faces.  Moving
+from a graph or tournament to the full minimal-nonface complex does not help
+at this horizon: there is no nonface to detect.
+
+This refutes only a **within-fibre horizon-two closure** based on the data in
+(43)--(45).  It does not refute an invariant that uses the global covering
+condition, several terminal phases simultaneously, or transition maps
+between fibres.  The sharply delimited next finite object is therefore a
+multi-terminal stalk diagram for fixed actual speeds: retain the relative
+carry gauge on overlaps of adjacent terminal chambers and test its transition
+cocycle after the individual linear slopes have been quotiented out.  A
+single-fibre raw winding is gauge-predicted and cannot pay the missing mass.
+
+Reproduction:
+
+```text
+python3 04-computation/lrc14_profile125_horizon_two_owner_carry_stopping.py
+python3 -O 04-computation/lrc14_profile125_horizon_two_owner_carry_stopping.py
+```
+
+The checked transcript is
+`05-knowledge/results/lrc14_profile125_horizon_two_owner_carry_stopping.out`.
