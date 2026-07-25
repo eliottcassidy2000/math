@@ -80,6 +80,23 @@ def mixed_bispectrum(sites, left, middle, right):
     return total
 
 
+def ramanujan_unit_kernel(delta):
+    """Sum of the primitive 91st-root characters at one difference."""
+    return (P - 1 if delta % P == 0 else -1) * (
+        Q - 1 if delta % Q == 0 else -1
+    )
+
+
+def primitive_cross_energy(sites, left, right):
+    require(len(sites) == len(left) == len(right), "cross-energy lengths")
+    return sum(
+        left[i]
+        * right[j]
+        * ramanujan_unit_kernel(sites[j] - sites[i])
+        for i, j in product(range(len(sites)), repeat=2)
+    )
+
+
 for prime in (P, Q):
     for a, b in product(range(prime), repeat=2):
         require(
@@ -165,6 +182,18 @@ require(
     "mixed-source full positivity",
 )
 
+quadratic_word = [1] + [0] * 7
+quadratic_bare = [1] + [0] * 6 + [12]
+require(
+    [ramanujan_unit_kernel(d) for d in range(8)]
+    == [72, 1, 1, 1, 1, 1, 1, -6],
+    "primitive cross-kernel values",
+)
+quadratic_cross = primitive_cross_energy(
+    list(range(8)), quadratic_word, quadratic_bare
+)
+require(quadratic_cross == 0, "primitive quadratic cross hostile")
+
 wild_sites = [53, 79, 37, 27, 40, 58, 1]
 wild_masses = [283, 57, 16, 270, 174, 4, 196]
 wild_value = unit_bispectrum(wild_sites, wild_masses)
@@ -205,6 +234,7 @@ print(f"LRC total/pair floors: {lrc_total_constant}, {lrc_pair_constant}")
 print(f"positive controls: {len(positive_vectors)}")
 print(f"mixed consecutive hostile: {mixed_value}")
 print(f"same-source full current: {mixed_full}")
+print(f"primitive quadratic cross hostile: {quadratic_cross}")
 print(f"nonconsecutive seven-site hostile: {wild_value}")
 print("Schur landing: h1,h2<=J^2-1; h3<=2J^2-1")
 print("LRC jump/charge bounds: J<=6S; A,B<=3276S^2-1; C<=6552S^2-1")

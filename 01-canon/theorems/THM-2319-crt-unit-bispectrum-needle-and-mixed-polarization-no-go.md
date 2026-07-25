@@ -2,7 +2,7 @@
 id: THM-2319
 title: "CRT unit-bispectrum needle and mixed-polarization no-go"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. On Z/91,
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. On Z/91,
   every nonzero rational root vector supported on thirteen consecutive
   sites has all 72 primitive-character transforms nonzero. For nonnegative
   vectors, the whole bispectrum restricted to unit characters k,l,k+l is
@@ -21,8 +21,9 @@ status: >
   LRC(14), even on eight consecutive sites the polarization with two bare
   source legs and one word-restricted leg can be negative. Thus the theorem
   supplies an all-unit word-current triangle but not its incidence with a
-  bare-source shell edge. No scalar row is excluded and LRC(14) remains
-  open.
+  bare-source shell edge. Even the complete primitive quadratic bare/word
+  cross-energy can cancel, so it is not a positivity certificate for
+  same-index alignment. No scalar row is excluded and LRC(14) remains open.
 source: codex-2026-07-25-crt-unit-bispectrum
 depends_on:
   - THM-2305-canonical-blocker-word-handoff-hypergraph
@@ -35,14 +36,14 @@ related:
   - THM-2318-one-shot-three-prime-mobius-amplifier
 script: 04-computation/lrc14_crt_unit_bispectrum_needle_thm2319.py
 output: 05-knowledge/results/lrc14_crt_unit_bispectrum_needle_thm2319.out
-script_sha256: 65ad1e46ab39b7a99ce97c7e4b611a37a5bb2d0f61c3b9b88b2e886bbcbe589d
-output_sha256: cd8e23fb29ed99a518ca10226ad26ad81b101b91e17c0283d0ae23176893611e
+script_sha256: dd974caf261358eef1a9c7db79fcc421f02bf053af218aedbeb1af85dbe33a38
+output_sha256: 4a9f88da5b827148cd21165ca0880cdd79a0444e881314c2c5b25064a80089a1
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2319 -- a thirteen-tooth needle has a positive 91-unit face
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2312 makes every nonzero thirteenth-root character available on one
 positive blocker word, but its charge-zero contraction does not force the
@@ -626,6 +627,42 @@ So neither the unit restriction, the interval needle, nonnegativity, nor a
 literal subfunction makes the required two-source/one-word current
 positive.
 
+Even the complete primitive quadratic cross-energy has no positivity
+principle. On the consecutive sites `0,...,7`, its translation kernel is
+the Ramanujan sum
+
+```text
+c_91(d)=sum_(k in U) zeta^(kd).
+```
+
+For differences among these eight sites,
+
+```text
+c_91(0)=72,        c_91(+/-7)=-6,
+c_91(d)=1 otherwise.                                (44a)
+```
+
+Take the word and bare vectors
+
+```text
+a=(1,0,0,0,0,0,0,0),
+b=(1,0,0,0,0,0,0,12).                              (44b)
+```
+
+Then `0<=a<=b`, and every primitive transform of each vector is nonzero:
+`M_k(a)=1`, while `M_k(b)=1+12 zeta^(-7k)` cannot vanish by absolute
+values. Nevertheless
+
+```text
+sum_(k in U) M_k(a)conjugate(M_k(b))
+ =72+12(-6)=0.                                      (44c)
+```
+
+This does not say that common nonzero colours are absent—in this witness
+all 72 colours survive. It says that summing the complete primitive
+quadratic cross-face cannot provide a positive certificate for the
+same-index coupling missing from (35c).
+
 The consecutive geometry in the positive theorem is also essential. On
 the seven nonconsecutive sites
 
@@ -672,13 +709,15 @@ destroyed or unselected:
   phase, target-plane gain, and orbit holonomy;
 
 sharp hostile mechanisms:
-  the eight-consecutive mixed polarization (42) and the nonconsecutive
-  seven-site current (45);
+  the eight-consecutive mixed polarization (42), the vanishing primitive
+  quadratic cross-face (44c), and the nonconsecutive seven-site current
+  (45);
 
 needed sidecar:
-  a same-index theorem coupling (35c), followed by a unit-coloured
-  c_3-edge incident to that common marked vertex; alternatively a
-  three-prime collision cell which preserves the same colour and grade. (46)
+  a same-index theorem coupling (35c) by more than aggregate quadratic
+  positivity, followed by a unit-coloured c_3-edge incident to that common
+  marked vertex; alternatively a three-prime collision cell which preserves
+  the same colour and grade.                                           (46)
 ```
 
 The theorem answers the `Fano/chi_7` probe at the current level: seven is
@@ -692,10 +731,10 @@ No scalar profile is excluded, and LRC(14) remains open.
 
 The companion checks the prime kernels directly, the CRT coefficient
 table, the `3960=1980+1980` pair counts, every rational constant in
-(9)--(15), deterministic positive controls, the exact mixed hostile
-(35)--(37), the nonconsecutive hostile (38), and the endpoint landing
-bounds. Every load-bearing test raises explicitly under ordinary and
-optimized Python.
+(9)--(15), deterministic positive controls, the exact mixed and primitive
+quadratic hostile controls, the nonconsecutive hostile, and the endpoint
+landing bounds. Every load-bearing test raises explicitly under ordinary
+and optimized Python.
 
 Reproduce with
 

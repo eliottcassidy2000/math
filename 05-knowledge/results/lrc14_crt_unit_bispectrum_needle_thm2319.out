@@ -8,6 +8,7 @@ LRC total/pair floors: 20069595/2, 445991/176
 positive controls: 5
 mixed consecutive hostile: -3042309124
 same-source full current: 12219375808488
+primitive quadratic cross hostile: 0
 nonconsecutive seven-site hostile: -4459059900
 Schur landing: h1,h2<=J^2-1; h3<=2J^2-1
 LRC jump/charge bounds: J<=6S; A,B<=3276S^2-1; C<=6552S^2-1
