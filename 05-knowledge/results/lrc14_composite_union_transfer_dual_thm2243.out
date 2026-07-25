@@ -1,0 +1,31 @@
+THM-2243 COMPOSITE-UNION TRANSFER-DUAL DEPTH-THREE EXCLUSION
+rho=-1/13 r=rho^2=1/169
+orbit_identity=U_k=U_o_S^(3-k):PASS
+negative_carrier_q=POINTWISE_ZERO
+hinge_identity=(1-q)_+=U1*(169-U3)/168:PASS
+target=961/6930
+post_thm2233_residue=224
+depth_three_profiles=29
+composite_union_closed=28
+hostile_profile=(3, 4, 5)
+hostile_bound=8907541/62377224 decimal=0.142801176916754
+hostile_excess=42493973/10292241960
+worst_closed_profile=(3, 4, 6)
+worst_closed_bound=18956451/270301304 decimal=0.070130815943085
+worst_closed_margin=1310115793/19114163640
+standalone_remaining_profiles=196
+standalone_remaining_shape=lambda1=1:165; lambda1=2:29; exceptional=(3,4,5),(4,6,8)
+canonical_remaining_with_thm2239=166
+canonical_remaining_shape=lambda1=1:165; exceptional=(3,4,5):1
+post_thm2233_residue_digest=d7617205a31504563f5f3d14eebc7d6dfd6148349f43a468949a8ecd850f8505
+depth_three_digest=d1cd2ef956e3b929735390fc3f92c262a1fab945c65662eb0594c666fcfdd1be
+closed_digest=057e60270d63c8e192adfb14c96f70c50b4f20fc68f216a41e8472be5fe1f9ea
+standalone_remaining_digest=d33487ee4439a501a2492a4bfe477cf7a7112eeaf0598e58f8271294347525a1
+canonical_remaining_digest=fa7c60161dd2a1a0de77bd3a1133d030ab65d4633f881a0833f67cac0cc25d09
+bound_digest=d0d86f8b91dcfb6fead5f83da4c81f416cec6d189c9e119065dfe7d60fe3bb6e
+bellman_states=195584
+lp_calls=195613
+distinct_exact_lp_calls=65437
+exact_dual_certificates=65437
+exact_primal_dual_vertex_parity=PASS
+status=THM2243_PROVED_VERIFIED_EXACT
