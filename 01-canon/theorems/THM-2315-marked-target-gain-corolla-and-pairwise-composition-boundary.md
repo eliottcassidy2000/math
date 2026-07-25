@@ -30,8 +30,8 @@ related:
   - THM-2307-dual-rank-six-reconstruction-spectrum-and-selector-no-go
 script: 04-computation/lrc14_target_gain_corolla_thm2315.py
 output: 05-knowledge/results/lrc14_target_gain_corolla_thm2315.out
-script_sha256: TO_BE_FILLED
-output_sha256: TO_BE_FILLED
+script_sha256: 99c398529307e9463b7197b62f2440ec3677c0b130278f0077f73452b74323ca
+output_sha256: 82ef8f3b156ba52804690d7a1835c31a8649f2fe7422b3237df0c104163b528f
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -458,8 +458,9 @@ Accordingly:
 1. an ordinary gain graph is too small: the pure axes `0,infinity` are not
    elements of the gain group `F_13^*`, and a fork is one hyperedge rather
    than a pair edge;
-2. a signed hypergraph retains the word and perhaps square class, but loses
-   ten bits of exact gain choice and the complex current;
+2. a signed hypergraph retains the word and perhaps square class, but
+   collapses the twelve gains to two six-element classes and loses the
+   complex current;
 3. the underlying or oriented-matroid shadow needs boundary, field, and
    phase sidecars;
 4. the marked projective **gain corolla** is faithful for THM-2309's

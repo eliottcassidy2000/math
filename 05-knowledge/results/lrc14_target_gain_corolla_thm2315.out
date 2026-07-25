@@ -1,0 +1,15 @@
+THM-2315 exact companion
+projective_support_counts={'a': 1, 'b': 1, 'ab': 12}
+labelled_boundary_torus_size=12
+unordered_boundary_normalizer_size=24
+inversion_fixed_gains=[1, 12]
+inverse_gain_pairs=5
+minimal_tie_head_selectors=32
+quadratic_character_classes=6+6
+pair_marginal_collision=(1, 1)
+mass_repair_census=216
+forced_hafnian_reads=(1, 1)
+pair_product_collided_gains=(2, 6)
+composition_universe_size=4
+positive_vs_empty_pullback=2,0
+all_checks=PASS
