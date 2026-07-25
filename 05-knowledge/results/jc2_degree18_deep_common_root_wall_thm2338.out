@@ -1,0 +1,9 @@
+THM-2338 exact deep-common-root-wall referee
+wall factorization: F=9261*y^6*G6
+Disc(G6)=-2^29*3^30*5^9*7^15*23*(361B^3+30618C^2)^3*(62500B^6+7654500B^3C^2+199644669C^4)
+ratio t0=-361/30618
+ratio t+=-250/13041 + 500*sqrt(3)/117369
+ratio t-=-250/13041 - 500*sqrt(3)/117369
+multiple-root gcd degrees=[1, 1, 1]
+generic B-chart and B=0 edge: residual sextic squarefree
+VERDICT: exactly three H4 orbits and no H2 orbit on the wall
