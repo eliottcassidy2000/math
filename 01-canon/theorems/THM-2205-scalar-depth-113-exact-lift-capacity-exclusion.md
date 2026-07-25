@@ -300,7 +300,9 @@ Their sum is `12660`, and
 13946-12660=1286.                                   (29)
 ```
 
-An independent certificate uses the coarser pointwise envelope
+An independent certificate recorded in
+`agents/broadcast/MSG-2826-from-klein-2026-07-24-thm-2205-depth-113-exact-c.md`
+uses the coarser pointwise envelope
 
 ```text
 C_q(a,b)<=min(C_q(a),C_q(b)),                        (29a)
@@ -323,12 +325,14 @@ DP at the same pair gives instead
  (2366,14278),(2356,14275)),                         (29c)
 ```
 
-and exact margin `1438`.  Thus the independent computation and the present
-one agree entry for entry on a canonical hostile row.  The number `1438`
-is the actual margin at the **envelope-worst pair**, not the minimum of all
-actual pair margins.  The latter occurs at the different pair `(183,799)`
-and is `1286`, as in (27)--(29).  This distinction reconciles the two
-minimization problems rather than merely observing that both are positive.
+and exact margin `1438`.  The companion's direct-residue reconstruction
+agrees entry for entry with the transpose/intersection DP on this canonical
+hostile row, and both reproduce the independently reported values.  The
+number `1438` is the actual margin at the **envelope-worst pair**, not the
+minimum of all actual pair margins.  The latter occurs at the different
+pair `(183,799)` and is `1286`, as in (27)--(29).  This distinction
+reconciles the two minimization problems rather than merely observing that
+both are positive.
 
 To freeze both the carrier and the scan, the exact digests are
 
