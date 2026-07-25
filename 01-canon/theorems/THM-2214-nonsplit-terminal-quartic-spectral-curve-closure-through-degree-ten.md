@@ -1,5 +1,5 @@
 ---
-id: THM-2213
+id: THM-2214
 title: "Nonsplit terminal quartic spectral-curve closure through reduced degree ten"
 status: >
   RESERVED / UNPROVED EMPTY STUB. Namespace reservation for the candidate
@@ -16,7 +16,7 @@ related:
   - THM-2202-uniform-all-degree-quartic-pole-closure
 ---
 
-# THM-2213 -- RESERVED / UNPROVED EMPTY STUB
+# THM-2214 -- RESERVED / UNPROVED EMPTY STUB
 
 This file reserves the theorem identifier and filename only. It contains no
 proved mathematical claim and has no proved dependencies.
