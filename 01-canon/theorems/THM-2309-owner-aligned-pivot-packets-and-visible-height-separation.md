@@ -2,19 +2,21 @@
 id: THM-2309
 title: "Owner-aligned pivot packets and the visible-height separation"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. Every chosen
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. Every chosen
   blocker owner and every omitted unit have an exact rank-six relation packet
   with that owner plus the other five units as a thirteen-unit pivot. Two
   exact target grafts make all nine columns bright modulo thirteen; the row
-  heights are at most the scalar l1 height. In an arbitrary rank-six packet,
-  one-blocker plus five-unit pivots are classified exactly by the cocircuit
-  outside the unit hyperplane, and a nine-column bright representable packet
-  can miss the selected owner completely. If at least two scalar coordinates
-  are seven-units, a CRT lift gives an owner-aligned packet bright at both
-  seven and thirteen and hence a large all-91-unit exact-address bank, but at
-  row-dependent Bezout height. None of these packets is forced into the
-  degree-526 visible survivor span or the prescribed handoff phase, so no
-  scalar row is excluded and LRC(14) remains open.
+  heights are at most the scalar l1 height. The full mod-thirteen relation
+  code then splits as this packet plus the two-dimensional target-blocker
+  plane. In an arbitrary rank-six packet, one-blocker plus five-unit pivots
+  are classified exactly by the cocircuit outside the unit hyperplane, and a
+  bright representable packet can miss the selected owner completely. If at
+  least two scalar coordinates are seven-units, a CRT lift gives an
+  owner-aligned packet bright at both primes and hence a large all-91-unit
+  exact-address bank, but at row-dependent Bezout height. No theorem
+  identifies the algebraic target-plane support with the analytic terminal
+  word or forces these packets into the degree-526 visible span, so no scalar
+  row is excluded and LRC(14) remains open.
 source: codex-2026-07-25-owner-aligned-pivot
 depends_on:
   - THM-2301-essential-affine-arrangement-and-visible-rank-six-address-bank
@@ -32,7 +34,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2309 -- owner-aligned pivots exist, but not at visible height
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2301 proves a coefficient-independent rank-six packet, but its pivot
 atlas does not prescribe which blocker occurs in a unit minor. THM-2305
@@ -196,6 +198,57 @@ Unlike THM-2301's height-`1453(13^n-1)/2` bank, (15) depends on the scalar
 row. In exchange, the selected source and both target labels occur in the
 prescribed pivot/complement configuration.
 
+## 3a. The exact two-target quotient
+
+The owner pivot has a sharper dual meaning. Reduce modulo thirteen and put
+
+```text
+K=(w modulo 13)^perp subset F_13^9,
+L=rowspace(R_(j,u_0) modulo 13).                    (15a)
+```
+
+Then `dim K=8` and `dim L=6`. Because `L[P]=F_13^P`, every `x in K` has a
+unique `ell in L` agreeing with it on the six pivot coordinates. The
+residual `x-ell` is supported on
+
+```text
+C={a,b,u_0}.
+```
+
+On `C`, the scalar word has only the nonzero coordinate `w_(u_0)`.
+Orthogonality forces the residual's `u_0` coordinate to vanish. Therefore
+
+```text
+K=L direct_sum span(e_a,e_b),
+K/L canonically identified with F_13^{ {a,b} }.     (15b)
+```
+
+Every mod-thirteen relation class has a unique owner-gauge representative
+on the two target blockers. The `169` quotient classes split as
+
+```text
+zero:                         1,
+pure a-axis:                 12,
+pure b-axis:                 12,
+mixed a,b support:          144.                    (15c)
+```
+
+Projectively, the `14` nonzero directions are two pure axes and twelve
+mixed directions. This is the same **type decomposition** as THM-2305's
+terminal words `{a}`, `{b}`, and `{a,b}`. It is not yet an identification
+of the objects: THM-2305 stratifies points of a current-service set, while
+(15b) stratifies residue classes of exact relation addresses. The exact
+missing landing statement is
+
+```text
+terminal word sigma
+  -> a nonzero contributing relation address x
+     with support(pi_(a,b)(x))=sigma,                (15d)
+```
+
+where `pi_(a,b)` is projection along (15b). A fork belongs naturally to
+the mixed locus, not to a cosmetically oriented edge.
+
 ## 4. What an arbitrary rank-six packet can force
 
 The failure at bounded visible height is matroidal and exact. Let `F` be
@@ -262,6 +315,21 @@ the cocircuit perfectly, but it does not select the analytically chosen
 owner. The intrinsic object is the unary incidence `t in C^*`, not a
 pairwise orientation. Turning the tied blockers in `H` into a tournament
 would add information not present in the packet.
+
+There is also an exact link to THM-2307. When `rank(H)=5`, the annihilator
+of `H` in the row-coefficient space is one-dimensional. Its corresponding
+row in `R` is supported exactly on `C^*`. Hence
+
+```text
+e_t in rowspace(R) iff C^*={t}.                     (21a)
+```
+
+Thus THM-2307's literal-dark branch detects a singleton cocircuit, not the
+selected source. Its no-literal branch still permits `C^*={a,b}`, giving
+all twelve target pivots but none of the six source pivots. The quotient
+blocker gains in `F^6/H` form a projective three-label vector with zero
+entries off `C^*`; this unary support and its gain ratios are legitimate,
+but they do not define a tournament orientation.
 
 ## 5. A sharp bright hostile packet
 
@@ -333,6 +401,9 @@ logical no-go:
 rank six + no dark columns + all-unit Kakeya addresses
 does not force the selected-owner pivot.                         (26)
 ```
+
+Here `C^*={a}`, so `e_a` is the literal-dark row predicted by (21a). The
+packet sees a pure **target** cocircuit while missing the source owner.
 
 ## 6. A simultaneous septimal/thirteen-adic packet
 
@@ -478,8 +549,9 @@ map:
 
 preserved:
   all nine scalar labels, the selected source, both target blockers in
-  the pivot complement, exact integer relation equations, all-depth
-  injectivity, and in (34)--(35) nonzero interval Fourier support;
+  the pivot complement, the exact target-plane quotient (15b), exact
+  integer relation equations, all-depth injectivity, and in (34)--(35)
+  nonzero interval Fourier support;
 
 destroyed:
   the coefficient-independent height 526, membership in W_vis, the actual
@@ -494,7 +566,8 @@ sharp hostile controls:
 
 needed sidecar:
   prove that THM-2305's bounded signed handoff coefficient lands on one
-  owner-aligned exact address in the visible carrier, or retain a
+  owner-aligned exact address in the visible carrier with terminal word
+  equal to its target-plane support as in (15d), or retain a
   terminal-component phase current while replacing the visible packet by
   the row-dependent one.                                            (38)
 ```
