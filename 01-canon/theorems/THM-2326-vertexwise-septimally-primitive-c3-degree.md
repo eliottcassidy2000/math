@@ -25,8 +25,8 @@ related:
   - THM-2323-primitive-fixed-colour-cross-correlation-and-same-gauge-word-alignment
 script: 04-computation/lrc14_vertexwise_septimal_c3_degree_thm2326.py
 output: 05-knowledge/results/lrc14_vertexwise_septimal_c3_degree_thm2326.out
-script_sha256: e0a8fda969ad141822b837b555a6b97fd37b348c70d50d05a0fea15cb0dbc375
-output_sha256: 7334acaadfd1f20c179917418c773e65aca7571b6b26ce97c416bac7b856ae77
+script_sha256: 96d8e49098bb2d942a7ced8d4e71d1c2c22746a4cae4b17250f3c67e5af819cb
+output_sha256: 032baa54d0751f8754851245e7aca8cef39171db9d1721e51633cc2eb1c886c0
 hash_basis: working-tree bytes (LF)
 ---
 

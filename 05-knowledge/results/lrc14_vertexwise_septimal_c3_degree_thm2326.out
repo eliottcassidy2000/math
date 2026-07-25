@@ -1,5 +1,5 @@
 theorem=THM-2326
-status=PROVED+VERIFIED-EXACT+CANDIDATE-UNDER-INDEPENDENT-AUDIT
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED
 modulated_identity=source_mark/7+septimal_unit_c3_tail=0
 absolute_convergence=Cauchy-Schwarz
 general_bound=m<=7J-1

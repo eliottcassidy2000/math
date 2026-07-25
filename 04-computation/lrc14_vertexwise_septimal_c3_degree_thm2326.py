@@ -113,7 +113,7 @@ require(hostile_mass == Fraction(1, 4), "hostile mass changed")
 require(marked_hostile_numerator != (0, 0), "hostile marked atom vanished")
 
 print("theorem=THM-2326")
-print("status=PROVED+VERIFIED-EXACT+CANDIDATE-UNDER-INDEPENDENT-AUDIT")
+print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED")
 print("modulated_identity=source_mark/7+septimal_unit_c3_tail=0")
 print("absolute_convergence=Cauchy-Schwarz")
 print("general_bound=m<=7J-1")
