@@ -10,8 +10,10 @@ the ranked targets below are OPEN unless explicitly marked otherwise.
 The closest proved mechanisms are now:
 
 1. **LRC anchor:** THM-2190 forces a nested bounded relation flag through
-   rank six and a seventh relation at some universal finite height. THM-2168
-   leaves only the fully scalar `5+3` lane in its local `(3,5,0)` census.
+   rank six; THM-2193 gives the uniform floor `7^-21` and an explicit seventh
+   relation by height `78*7^21`. THM-2168 leaves only fully scalar `5+3` in
+   its local `(3,5,0)` census, and THM-2192 gives that lane an anchored
+   root-sheet chord law with a unique deepest blocker.
 2. **Knot niche:** THM-2176 separates connected-sum interaction into
    translation contraction and geodesic bypass. THM-2191 identifies the
    exact translation-invariant metric envelope and closes the `9_10` side.
@@ -49,13 +51,13 @@ be read only through their explicit corrections.
 
 | concept | faithful object | information destroyed by its common shadow | cheapest decisive test |
 |---|---|---|---|
-| bounded LRC relations | complete saturated relation lattice plus phase current | rank, support, or residues lose the Archimedean lift | compare exact safe mass on the finite six-plane family forced by THM-2190 |
+| bounded LRC relations | complete saturated relation lattice plus phase current | rank, support, or residues lose the Archimedean lift | test how THM-2193's rank-seven flag intersects THM-2192's scalar character kernel |
 | scalar `5+3` terminal | root sheets and signed chord lengths on the guard circle | valuation depths alone lose which side of each root is covered | enumerate the normalized root-sheet chambers, not speed boxes |
 | reversed peel | the aggregate signed covariance `sum_v epsilon_v(E)` | replacing it by `sum_v |epsilon_v(E)|` discards cancellation | compute the joint Fourier multiplier of the at-most-six peel set |
 | critical affine ray | equality skeleton plus tangent support polygon | the limiting two-torus mass loses the boundary incidence rate | classify torsion maximizers and their active facets |
 | graded LRC continuation | fixed core, remaining-slot budget, Boolean state, endpoint scale | unrestricted contexts admit the null AP absorber | decide whether a zero state can persist through all legal slot depths |
 | knot catalysis | common-context metric `d_cat`, not only `u(K#J)` | the scalar interaction defect conflates contraction and bypass | calibrate `u_cat` by a translation-invariant lower metric |
-| tournament substitution | quotient, block tuple, automorphism gauge, and mixing cost | a fixed block correspondence ignores quotient automorphisms | test the first prime quotient `C_3` after minimizing over `Aut(C_3)` |
+| tournament substitution | quotient, block tuple, transport matrix, and mixing cost | fixed correspondence and quotient automorphisms both miss partial cyclic transport | test integral block transport on `C_3` and `C_5` with block orders at most three |
 
 The recurring structure is now unusually clear:
 
@@ -137,7 +139,7 @@ This is a small, certificate-sized target with a complete lower-bound floor.
 The uncalibrated pretzel families are the next search pool; candidates with
 `c*=u` should be discarded before any connected-sum search.
 
-## 4. LRC target A: close the scalar `5+3` root-sheet invoice
+## 4. LRC target A: propagate the scalar `5+3` ownership transition
 
 THM-2168 has already removed every other local case in `(3,5,0)`. The
 remaining characters all lie on the guard line: one guard, five aligned
@@ -160,40 +162,34 @@ The missing half is now exact: prove an upper bound incompatible with (A),
 or show directly that its extremal root word cannot realize the original
 cover.
 
-The proposed faithful reduction is:
+THM-2192 has now completed the first root-sheet reduction. For a phase safe
+for the three divided deep teeth, the five unit masks form an anchored
+monomer-dimer diagram on the thirteen roots: either five disjoint doubletons
+partition ten sheets, a singleton plus four doubletons partitions nine, or
+five doubletons have exactly one outside endpoint/duplicate ownership
+defect. It proves the signed overlap invoice, excludes eight of `252`
+unit-length multisets, and forces the deepest actual blocker to be unique.
 
-1. primitive-normalize the common guard coordinate;
-2. cut the guard-safe set into root sheets at every guard/aligned endpoint;
-3. on each sheet, write the three blocker intersections as oriented chords;
-4. charge every chord to its entering and leaving roots, retaining the
-   `13`-adic daughter label and the signed endpoint current;
-5. prove that a complete cover would require either an exact daughter
-   relation already discharged by THM-2168 or an impossible cyclic
-   interlacing of three chord pairs.
+The next target is no longer a static chamber census. It is a transition
+law under multiplication by thirteen:
 
-This attacks the exact information lost by the determinant-depth invoice.
-The cheapest hostile computation is not a box over speeds. It is a chamber
-enumeration over cyclic endpoint orders after normalizing the scalar
-coefficients modulo the common period. Each chamber should output:
+1. normalize the unique deepest blocker;
+2. follow the anchored four-sheet guard block from one `13`-adic level to
+   the next;
+3. record which shallower deep comb owns every entering/leaving chord;
+4. prove that two shallower combs cannot shelter every ownership transition;
+5. route any periodic transition word either to one of THM-2192's eight
+   forbidden profiles or to THM-2168's daughter relation.
 
-```text
-root order,
-active blocker on each open chord,
-endpoint ownership,
-signed current,
-daughter/non-daughter status.
-```
+The cheapest hostile computation should enumerate **transition words
+between adjacent depths**, not another static residue profile. A failure
+should return a minimal periodic ownership word with its winding
+coefficients. The matching Archimedean alternative is an upper bound on
+`H+sum q_i` contradicting (A).
 
-A successful enumeration should be converted into a short circular
-uncrossing lemma. A failure should return the minimal realizable root word,
-which would be a much sharper residual than “scalar `5+3`.”
+## 5. LRC target B: transfer rank seven into the scalar kernel
 
-This target is already reserved as THM-2192, but its current status is
-`RESERVED / UNPROVED EMPTY STUB`.
-
-## 5. LRC target B: quantify only the rank-six planes that can occur
-
-THM-2190 proves
+THM-2190 proves the nested beginning
 
 ```text
 dim W_178>=3,
@@ -202,39 +198,42 @@ dim W_262>=5,
 dim W_450>=6
 ```
 
-for every zero-safe row, and then uses finiteness plus instancewise
-rank-six positivity to obtain a seventh relation at an uncomputed universal
-height `H_*`.
-
-The broad question
+and THM-2193 now proves, uniformly,
 
 ```text
-inf_L Haar(K_L intersection J^13)>0
+Haar(K_L intersection J^13)>=7^-21
 ```
 
-over every saturated rank-six lattice is mathematically natural, but it is
-stronger than the proof needs. The sharper effective target is the finite
-family `F` of six-planes admitting a nested basis with height profile
+for every admissible saturated rank-six lattice. It follows that every
+zero-safe row has rank seven by the explicit height
 
 ```text
-(105,105,178,204,262,450).
+78*7^21=43566577398496152546.
 ```
 
-Compute or bound
+Thus the former rank-six floor target is closed.
+
+THM-2192 identifies the actual next loss. In the nine-coordinate scalar
+model, the scalar character kernel has dimension eight. A general
+rank-seven bounded relation space in the ambient twelve-dimensional
+relation space is guaranteed by Grassmann only to meet that kernel in
+dimension three. Eight controlled internal relations would bound the
+primitive scalar row; five dimensions are missing.
+
+The sharp target is therefore a cover-conditioned internal-rank theorem:
 
 ```text
-delta_F=min_(S in F) Haar(K_(S intersection Z^13) intersection J^13).
+zero-safe scalar 5+3 cover
+  => dim(S intersection L_scalar) substantially exceeds 3,
 ```
 
-Any positive rational lower bound makes `H_*` explicit. The intended
-compression is by signed coordinate permutations, Smith data of successive
-spans, and deletion matroid before exact toric-box integration. THM-2188
-warns that rank and finite residues alone cannot determine the mass, so the
-complete primitive slope data must survive canonicalization.
-
-The more ambitious uniform question is reserved as THM-2193 and remains an
-empty unproved stub. A negative family there would not harm the finite-family
-target.
+or else a named chord-transition obstruction. The cheapest test is to
+project THM-2193's seven-relation flags through the scalar lift on each of
+THM-2192's `244` surviving residue profiles, retaining maximal minors and
+endpoint ownership. A uniform one-dimension gain is already structural;
+iterating it through `13`-adic transitions is the plausible route to all
+five missing dimensions. A generic rank-eight harvest without this
+internal-coordinate control would still miss the target.
 
 ## 6. LRC target C: reverse the peel and keep the signed aggregate
 
@@ -364,19 +363,32 @@ baseline, where `Aut_n(Q)` preserves the factor-order vector:
 min_(sigma in Aut_n(Q)) sum_i d_iso(A_i,B_(sigma(i))).
 ```
 
-The sharp remaining question is whether vertex-level mixing can beat that
-block-automorphism minimum. Record quotient, factor tuple, best quotient
-automorphism, block transport matrix, cross-arc gain, and internal-arc loss.
-A counterexample would replace “substitution product” by finite optimal
-transport over quotient blocks; a positive result needs a cycle-exchange
-uncrossing beyond THM-2183's two-image swap.
+THM-2195 now refutes this repair too. In the cyclic five-tournament, give
+the vertices of a directed triangle block order `N` and the other two
+vertices block order one. The only size-compatible quotient automorphism is
+the identity. Rotating the triangle costs at most `6N` exterior arc
+reversals, while the identity-gauged factor sum can be forced above `6N`
+by taking two `N`-vertex tournaments at isomorphism distance greater than
+`3N`.
+
+The sharp remaining object is therefore a genuine block-transport metric.
+Record quotient, factor tuple, an integral vertex-flow matrix between
+blocks, cross-arc gain, internal-arc loss, and the realizability constraints
+that distinguish a flow from a vertex bijection. The cheapest decisive
+test exhausts `C_3` and `C_5` substitutions with block orders at most three:
+compare exact `d_iso` with the best whole-block permutation and with the
+best relaxed transport. A gap between the latter two identifies the missing
+integrality or internal-fragmentation sidecar; equality suggests a finite
+optimal-transport formula and a cycle-exchange uncrossing theorem.
 
 ## 10. Ranked execution order
 
-1. **Scalar `5+3` chord invoice (THM-2192, OPEN):** closest local obstruction
-   to the anchor and small enough for an exact chamber theorem.
-2. **Finite-family rank-six floor (OPEN):** makes THM-2190's seventh relation
-   effective without solving the unnecessarily broad uniform problem.
+1. **Scalar `5+3` ownership transition (OPEN):** THM-2192 proves the static
+   chord law and unique-deepest reduction; propagate it between adjacent
+   `13`-adic levels.
+2. **Rank-seven internal transfer (OPEN):** THM-2193 closes the uniform
+   rank-six floor; force its explicit seventh relation flag into the
+   eight-dimensional scalar character kernel.
 3. **Signed reversed-peel aggregate (OPEN):** potentially merges the global
    defect-at-least-seven lane with the scalar endpoint-current lane.
 4. **Critical equality-skeleton classifier (OPEN):** closes unbounded affine
@@ -386,9 +398,9 @@ uncrossing beyond THM-2183's two-image swap.
    falling into THM-2191's AP-absorber collapse.
 6. **`10_6` two-certificate audit (OPEN):** the smallest cited positive
    catalysis candidate after the `9_10` closure.
-7. **Automorphism-gauged substitution transport (OPEN):** THM-2195 proves
-   transitivity is exactly the fixed-correspondence boundary; decide whether
-   quotient automorphisms are the only remaining block-level savings.
+7. **Integral block-transport metric (OPEN):** THM-2195 refutes both fixed
+   correspondence and the quotient-automorphism repair; formulate the
+   realizable transport cost and test whether it exactly recovers `d_iso`.
 
 The portfolio is intentionally coupled. A root-sheet chamber, a toric
 equality skeleton, and a quotient-block transport matrix are all finite

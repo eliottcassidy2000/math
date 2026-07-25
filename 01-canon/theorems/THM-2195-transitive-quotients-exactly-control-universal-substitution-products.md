@@ -11,8 +11,10 @@ status: >
   order, while two internal factor distances can be chosen quadratic. For
   Q=C3 there is an explicit nine-vertex witness with product sum two and
   substitution distance zero. This classifies the fixed-correspondence
-  product law; it does not classify the automorphism-gauged or optimal
-  block-transport distance.
+  product law. Minimizing the factor sum over size-compatible quotient
+  automorphisms still fails universally: the cyclic five-tournament gives
+  an asymptotic counterexample. The remaining exact object is an optimal
+  block-transport cost, not a product formula.
 source: codex-2026-07-24-tournament-substitution-product
 depends_on:
   - THM-2183-order-join-is-an-exact-tournament-metric-product
@@ -228,7 +230,80 @@ This is minimal in mechanism: block order two has only one tournament
 isomorphism class, so order three is the first factor order that can carry
 the mismatch.
 
-## 5. Boundary and the surviving problem
+## 5. The automorphism gauge also fails
+
+Put `n_i=|T_i|=|S_i|` and define the size-compatible automorphisms
+
+```text
+Aut_n(Q)={sigma in Aut(Q):n_i=n_(sigma(i)) for every i}.
+```
+
+The next natural candidate would be the well-typed automorphism-gauged sum
+
+```text
+D_aut(T,S)
+ =min_(sigma in Aut_n(Q)) sum_i d_iso(T_i,S_(sigma(i))). (24)
+```
+
+The witness (23) is absorbed by (24), because cyclic rotation is an
+automorphism of `C_3`. Nevertheless, (24) is not a universal formula.
+
+Take the cyclic five-tournament on `Z/5Z`,
+
+```text
+x->_Q y        iff        y-x in {1,2}.              (25)
+```
+
+Its automorphism group consists exactly of the five translations. Indeed,
+after composing with a translation, an automorphism may be assumed to fix
+zero. It must preserve the outneighborhood `{1,2}` and its oriented edge
+`1->2`, hence fixes both vertices; the same argument fixes the
+inneighborhood `{3,4}`.
+
+The vertices
+
+```text
+C={0,1,3}                                             (26)
+```
+
+form the directed triangle
+
+```text
+0->1->3->0.
+```
+
+Give these three blocks order `N` and the other two blocks order one. No
+nonidentity translation preserves this block-order vector: a nonempty
+proper subset of `Z/5Z` is not invariant under a nonzero translation.
+Therefore
+
+```text
+Aut_n(Q)={identity}.                                  (27)
+```
+
+Apply the construction (9)--(11) on `C`. The automorphism-gauged cost is
+then still
+
+```text
+D_aut(T,S)=2d_iso(A,B),                              (28)
+```
+
+whereas the partial triangle rotation pays at most
+
+```text
+3N(5-3)=6N.                                          (29)
+```
+
+The counting argument (16)--(19), now with `q=5`, supplies `N`-vertex
+tournaments with `d_iso(A,B)>3N`. For those factors,
+
+```text
+d_iso(Q[T_i],Q[S_i])<=6N<D_aut(T,S).                 (30)
+```
+
+Thus quotient automorphisms do not account for every substitution bypass.
+
+## 6. Boundary and the surviving problem
 
 THM-2183's two-image swap works because a transitive quotient presents
 constant cuts in one consistent order. A directed triangle permits a
@@ -236,26 +311,12 @@ cyclic block transport. In a larger quotient, its cost against the exterior
 is linear in `N`; internal tournament separation is quadratic, so the
 triangle transport eventually wins.
 
-The theorem classifies exactly the displayed, fixed-correspondence identity
-(3). Put `n_i=|T_i|=|S_i|` and define the size-compatible automorphisms
-
-```text
-Aut_n(Q)={sigma in Aut(Q):n_i=n_(sigma(i)) for every i}.
-```
-
-It does **not** prove or refute the well-typed automorphism-gauged formula
-
-```text
-min_(sigma in Aut_n(Q)) sum_i d_iso(T_i,S_(sigma(i))), (24)
-```
-
-nor a formula allowing fractional or vertex-level transport between
-quotient blocks. The witness (23) is absorbed by (24), because cyclic
-rotation is an automorphism of `C_3`. For a general `Q`, the construction
-uses a triangle rotation which need not be a global automorphism and pays
-the exterior invoice (13). The correct next object is therefore a block
-transport matrix carrying both internal edit costs and quotient-arc
-disagreement costs.
+The theorem now rules out both the fixed-correspondence product and its
+quotient-automorphism repair outside their stated regimes. It does not
+classify a formula allowing fractional or vertex-level transport between
+quotient blocks. The correct next object is a block transport matrix carrying
+internal edit costs, block-size conservation, and quotient-arc disagreement
+costs.
 
 This boundary is the tournament analogue of THM-2176's distinction between
 decomposition-respecting cost and bypass after forgetting a product marker.

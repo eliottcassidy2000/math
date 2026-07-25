@@ -56,7 +56,8 @@ Then read the relevant frontier section, the active guardrails, and the exact th
    count multiplicative and triangle count additive (THM-1862); signed Rédei
    data is join-multiplicative (THM-1936); zeta lives on the strong core
    (THM-1926). THM-2195 makes transitivity exactly the universal
-   fixed-correspondence substitution-product boundary. The known invariant lattice is exact only through `n <= 6`.
+   fixed-correspondence substitution-product boundary and shows that a
+   quotient-automorphism minimum still fails. The known invariant lattice is exact only through `n <= 6`.
 11. **A reciprocal integer sequence has two profiles.** THM-2000/2005 separate
     support from indexed multiplicity by a collision tax; the reusable object
     is the support Dirichlet profile, with Abel–Stieltjes/log-block Dini and the
