@@ -184,9 +184,12 @@ THM-2174's exact-measure quotient is infinite, while its fixed-core
 positive-/zero-Haar quotient has one or two states and no uniform core modulus.
 THM-735 and THM-2182/2184 give remote-tail and grid/mixed-core terminals;
 THM-2186 gives a strict toric exit. THM-2168/2192 leave only scalar `5+3`,
-with an all-depth invoice, one deepest blocker, anchored sheet ownership, and
-eight empty residue profiles. THM-2179's body relation still lacks a
-phase-preserving route into these terminals.
+with an all-depth invoice, one deepest blocker, and anchored sheet ownership.
+THM-2192 eliminates `36/252` unit residue-length profiles and leaves `216`;
+THM-2198 supplies the exact labelled root-image movie and eliminates
+valuation profile `(1,1,2)`, so every survivor has deepest depth at least
+three. THM-2179's body relation still lacks a phase-preserving route into
+these terminals.
 
 ### Independent routes that remain live
 

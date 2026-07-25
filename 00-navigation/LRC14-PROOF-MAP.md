@@ -69,7 +69,7 @@ THM-2130 intersects `11/13` labels into a sparse exception or `143` determinant;
 | AP-core supplier | THM-1017 proves `AP core -> far element -> LRC(14)` | Extract the required core from every compact structured residual. |
 | Global phase transport | THM-2050 proves all period-14 local germs can be identical while maxima differ | Supply first-exit magnitude, off-layer gluing, or another genuinely global termination coordinate. |
 | Finite shell | THM-763 bounds a primitive counterexample by `sum v_i<=91^12`; THM-1290 is exhaustive through maximum speed 55 | Turn THM-2052--2059 structural finiteness into a feasible exact decision. |
-| Defect split / tail continuation | THM-2179 gives a `3/41` exit or height-`180/140` body relation; THM-735 closes far cones; THM-2184 proves grid/mixed-core tubes and a scalar quotient-remainder exit; THM-2186 makes the toric equality skeleton exact | Turn the body relation into one terminal while retaining phase. THM-2174 gives only a fixed-core two-state first-period flag; changing cores and critical equality remain. |
+| Defect split / tail continuation | THM-2179 gives a `3/41` exit or height-`180/140` body relation; THM-735 closes far cones; THM-2184 proves grid/mixed-core tubes and an abstract scalar quotient-remainder criterion; THM-2186 makes the toric equality skeleton exact | The canonical full endpoint grid never satisfies THM-2184's continuation inequality; compressed residual grids from masking/cancellation remain open. Turn the body relation into one terminal while retaining phase. THM-2174 gives only a fixed-core two-state first-period flag; changing cores and critical equality remain. |
 
 ### How to represent the new structured branch
 

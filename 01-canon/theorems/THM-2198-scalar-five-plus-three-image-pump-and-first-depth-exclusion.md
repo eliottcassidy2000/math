@@ -239,8 +239,9 @@ Z(y)=B_H(y)\{s:omega_s(y)>0}.                         (18)
 ```
 
 Equations (14)--(17) update `omega`, `B_H`, and `Z` exactly, one labelled
-event packet at a time.  Equation (12) says that fibre coverage is automatic
-when at least one deep bit is on; when every deep bit is off, it is exactly
+event packet at a time.  Away from the image of the null exceptional set in
+(2), equation (12) says that fibre coverage is automatic when at least one
+deep bit is on; when every deep bit is off, fibre coverage is exactly
 
 ```text
 Z(y)=emptyset.                                        (19)
@@ -316,12 +317,12 @@ bits
 1_(D_(c_1/13))(y),          1_(D_(c_2/13))(y).       (22)
 ```
 
-On an image phase where either bit is on, the whole thirteen-root fibre is
-covered.  On the residual phase set where both bits are off, the five
-labelled unit-mask movies must cover every sheet of `B_H(y)`.  This is the
-precise two-shallower-mask obstruction: it is a global matching movie over
-the common residual image phases, not two extra chords inside one static
-fibre.
+On an image phase where either bit is on, that deep bit covers the whole
+thirteen-root fibre.  Outside the null image of the exceptional set, on the
+residual phase set where both bits are off, the five labelled unit-mask
+movies must cover every sheet of `B_H(y)`.  This is the precise
+two-shallower-mask obstruction: it is a global matching movie over the
+common residual image phases, not two extra chords inside one static fibre.
 
 ## 4. The first unique depth `(1,1,2)` is empty
 
@@ -387,11 +388,17 @@ Let
 c_1(u,v)>=...>=c_5(u,v)
 ```
 
-be the five largest cardinalities among the distinct sets
+be the five largest cardinalities obtained by first taking the globally
+distinct unit masks `S_a` and then intersecting each with `R_(u,v)`:
 
 ```text
 S_a intersection R_(u,v).
 ```
+
+Two globally distinct masks may coincide after this intersection; retaining
+both only enlarges the deliberately generous sum bound.  The checker also
+verifies that quotienting the sole global duplicate does not change the five
+largest entries.
 
 The exact exhaustive result is
 
