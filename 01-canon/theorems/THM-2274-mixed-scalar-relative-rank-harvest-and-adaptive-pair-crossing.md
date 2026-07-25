@@ -2,15 +2,17 @@
 id: THM-2274
 title: "Mixed scalar relative-rank harvest and adaptive pair crossing"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. Every live scalar
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. Retaining THM-2145's
+  exact Jackson moment sharpens the scalar rank-two height from 2116 to
+  594. Every live scalar
   five-unit/three-blocker cover has two independent scalar relations of
-  coefficient height at most 2116. Starting from THM-2275's primitive
+  coefficient height at most 594. Starting from THM-2275's primitive
   height-20 relation, support at least three is handled by a degree-35
   mixed relative Selberg packet. If the relation has support two, smoothing
   across the adaptive cut formed by those two coordinates gives an
-  independent crossing relation: height 708 when the pair contains the
-  guard and height 2116 otherwise. All 36 pair types are covered. The fixed
-  THM-2203 section lifts rank two to the original row at height 4232. This
+  independent crossing relation: height 198 when the pair contains the
+  guard and height 594 otherwise. All 36 pair types are covered. The fixed
+  THM-2203 section lifts rank two to the original row at height 1188. This
   removes THM-2275's dependency-ray exception for rank, but excludes no
   scalar profile and does not prove LRC(14).
 source: codex-2026-07-25-mixed-scalar-relative-rank
@@ -29,9 +31,9 @@ related:
   - THM-2270-simultaneous-balanced-cut-relation-and-six-uniform-orientation
 script: 04-computation/lrc14_mixed_scalar_relative_rank_thm2274.py
 output: 05-knowledge/results/lrc14_mixed_scalar_relative_rank_thm2274.out
-script_sha256: c0e4faeabd2fc1cdaef671662a5885abc6742272b2bfa310fece529ed6caedf6
-output_sha256: 689787c7a78a1b5599f1e024de22ddd70ba944b3e4067aebef36d87686748490
-hash_basis: LF-normalized working-tree bytes
+script_sha256: 578704d9db77a3503d44f700faface4266f7ee76f5e3ccc260dcbcee741cebc5
+output_sha256: 8afad7b2eaec39b2a9c86d44c6e4505111120a25bb705c3c6530660c3c742c4a
+hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2274 -- mixed scalar relative-rank harvest
@@ -49,7 +51,7 @@ support at least three
 
 support two
   -> use the support as an adaptive 2+7 cut
-  -> independent relation of height at most 708 or 2116.        (1)
+  -> independent relation of height at most 198 or 594.         (1)
 ```
 
 The support-two branch is not treated as an exceptional dependency ray.
@@ -96,7 +98,7 @@ W_K^*=span_Q{r in Lambda_*:||r||_infinity<=K}.        (6)
 Then
 
 ```text
-dim_Q W_2116^*>=2.                                    (7)
+dim_Q W_594^*>=2.                                     (7)
 ```
 
 More precisely, THM-2275 gives a primitive
@@ -110,9 +112,9 @@ The second relation can be chosen with height
 ```text
 35,       if |supp(p)|>=3;
 
-708,      if |supp(p)|=2 and the H-coordinate is in supp(p);
+198,      if |supp(p)|=2 and the H-coordinate is in supp(p);
 
-2116,     if |supp(p)|=2 and the H-coordinate is not in supp(p). (9)
+594,      if |supp(p)|=2 and the H-coordinate is not in supp(p). (9)
 ```
 
 Replacing THM-2275's relation by its primitive generator preserves (8).
@@ -325,29 +327,51 @@ L_A(r)!=0                                             (32)
 
 is automatically independent of `p`.
 
-Use THM-2275's mixed form of the positive crossing lemma. Smooth every
-safe interval with the normalized squared-Fejer polynomial at bandwidth
-`N`. Each coordinate has
+Use THM-2145's positive crossing lemma and normalized squared-Fejer
+Jackson smoother
 
 ```text
-L1 error <3/(2N),          Fourier degree 2N-2.        (33)
+J_N=F_N^2/integral F_N^2,
+q_(N,i)=J_N*chi_i,                  degree=2N-2.       (33)
 ```
 
-For a two-coordinate block and a seven-coordinate block, the total
-telescope errors are
+The proof of that lemma is unchanged when the guard and ordinary
+coordinates use their different interval indicators: the symmetric
+difference of either interval with its translate by `x` is at most
+`2||x||`. Thus every coordinate has the same exact error bound
 
 ```text
-eta_A=3/N,              eta_B=21/(2N).                (34)
+eta_N
+ =1/2-[4/(pi^2 C_0)]
+       sum_(1<=k<=2N-3, k odd) C_k/k^2,              (34)
+
+C_0=N(2N^2+1)/3,
+
+C_k=(4N^3-6Nk^2+2N+3k^3-3k)/6,       0<=k<=N,
+C_k=((2N-k)^3-(2N-k))/6,              N<k<=2N-2.     (35)
 ```
 
-If the exact block-safe masses have lower bounds `alpha,beta`, a crossing
-relation follows whenever
+All `C_k` are integers. The rational inequality `pi<355/113` gives the
+strict upper bound
 
 ```text
-(alpha-eta_A)(beta-eta_B)>eta_A+eta_B.                (35)
+bar_eta_N
+ =1/2-[4(113/355)^2/C_0]
+       sum_(1<=k<=2N-3, k odd) C_k/k^2
+ >eta_N.                                             (36)
 ```
 
-The extracted relation satisfies (32).
+For a two-coordinate block and a seven-coordinate block, use telescope
+errors `2bar_eta_N` and `7bar_eta_N`. If the exact block-safe masses have
+lower bounds `alpha,beta`, a crossing relation follows whenever
+
+```text
+(alpha-2bar_eta_N)(beta-7bar_eta_N)>9bar_eta_N.       (37)
+```
+
+The extracted relation satisfies (32). Retaining the exact Jackson moment
+in (34), rather than replacing it by the preliminary `3/(2N)` envelope,
+is what reduces the final height.
 
 ### 5.1 The pair contains the guard
 
@@ -366,27 +390,27 @@ THM-1221 therefore gives
 mu(B-safe)>=15/154.                                   (37)
 ```
 
-At `N=355`, the exact margin in (35) is
+At `N=100`, exact rational substitution in (36)--(37) gives
 
 ```text
-(4/7-3/355)(15/154-21/710)-27/710
- =21177/135854950
- >0.                                                  (38)
+(4/7-2bar_eta_100)(15/154-7bar_eta_100)
+ -9bar_eta_100
+ >1/100000.                                           (38)
 ```
 
 The resulting crossing relation has height
 
 ```text
-2N-2=708.                                             (39)
+2N-2=198.                                             (39)
 ```
 
-At `N=354`, the same ledger has margin
+At `N=99`, the same rational-upper-bound ledger is below
 
 ```text
--3/15010072<0.                                        (40)
+-1/100000.                                            (40)
 ```
 
-This is the adjacent boundary of (35), not an impossibility claim.
+This is the adjacent boundary of (37), not an impossibility claim.
 
 ### 5.2 The pair omits the guard
 
@@ -406,24 +430,24 @@ speeds. THM-2137's exact odd-guard six-comb floor gives
 mu(B-safe)>=delta_6=191/6930.                         (42)
 ```
 
-At `N=1059`, equation (35) has exact margin
+At `N=298`, equation (37) has exact rational margin
 
 ```text
-(66/91-3/1059)(191/6930-21/2118)-27/2118
- =44021/78582173670
- >0.                                                  (43)
+(66/91-2bar_eta_298)(191/6930-7bar_eta_298)
+ -9bar_eta_298
+ >1/100000.                                           (43)
 ```
 
 The crossing relation has height
 
 ```text
-2N-2=2116.                                            (44)
+2N-2=594.                                             (44)
 ```
 
-At `N=1058`, the same ledger gives
+At `N=297`, the same rational-upper-bound ledger is below
 
 ```text
--861505/47060301288<0.                                (45)
+-1/100000.                                            (45)
 ```
 
 Again, this is certificate-relative.
@@ -474,17 +498,17 @@ The height-20 first relation lifts to height at most `40`. The second
 relation heights in (9) lift respectively to
 
 ```text
-70,          1416,          4232.                    (49)
+70,          396,          1188.                     (49)
 ```
 
 Hence the original thirteen-speed row has two independent relations
 supported on the fixed nine-coordinate section by uniform height
 
 ```text
-4232.                                                 (50)
+1188.                                                 (50)
 ```
 
-The factor two in (48) is load-bearing. No original-row height `2116`
+The factor two in (48) is load-bearing. No original-row height `594`
 claim is made.
 
 ## 7. What this improves, and what it does not
@@ -499,8 +523,8 @@ restriction:
 
 ```text
 every live scalar cover
-  -> scalar relation rank at least two by height 2116
-  -> fixed-section original relation rank at least two by height 4232.
+  -> scalar relation rank at least two by height 594
+  -> fixed-section original relation rank at least two by height 1188.
                                                                (51)
 ```
 
@@ -542,8 +566,8 @@ destroyed:
   post-expiration geometry;
 
 cheapest hostile probes:
-  support three containing the guard, a guard pair at N=354/355,
-  and an ordinary pair at N=1058/1059;
+  support three containing the guard, a guard pair at N=99/100,
+  and an ordinary pair at N=297/298;
 
 needed sidecar:
   an anchored minor, bounded cofactor/carry termination, or a labelled
@@ -569,10 +593,12 @@ all thirteen support/guard types at degrees 34 and 35;
 the exact worst type and fractions (28)--(29);
 the complete 8+28 scalar pair partition;
 the four adjacent crossing margins (38), (40), (43), (45);
-the scalar heights 708 and 2116;
-the fixed-section height 4232.                             (53)
+the scalar heights 198 and 594;
+the fixed-section height 1188.                             (53)
 ```
 
 Independent audit separately reconstructed the relative coefficient
-majorant, checked all pair types and distinctness hypotheses, recomputed
-the four crossing margins, and verified that (48) preserves rank. QED.
+majorant, rebuilt the exact Jackson coefficient sum, checked that the common
+translation-error bound applies to both interval lengths, checked all pair
+types and distinctness hypotheses, recomputed the `99/100` and `297/298`
+boundaries, and verified that (48) preserves rank. QED.

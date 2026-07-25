@@ -6,7 +6,9 @@ The script verifies two independent branches.
    as a whole Fourier face.  The signed Selberg tensor is positive on that
    face at degree 35 for every support type.
 2. A support-two relation is separated by a positive crossing polynomial on
-   the adaptive cut consisting of its two coordinates.
+   the adaptive cut consisting of its two coordinates.  Here the exact
+   Jackson first-moment formula from THM-2145 replaces the preliminary
+   coarse 3/(2N) error bound.
 
 All load-bearing arithmetic uses Fraction and explicit exceptions so that
 ``python`` and ``python -O`` execute the same validity checks.
@@ -86,16 +88,49 @@ def packet_spectrum(height: int) -> list[tuple[F, int, int]]:
     return sorted(rows)
 
 
-def crossing_margin(N: int, floor_a: F, floor_b: F) -> F:
+def jackson_coefficient(N: int, k: int) -> int:
+    """Integral Fourier numerator C_k for the normalized Jackson kernel."""
+
+    require(N >= 2, "Jackson order must be at least two")
+    require(0 <= k <= 2 * N - 2, "Jackson frequency outside support")
+    if k <= N:
+        numerator = (
+            4 * N**3
+            - 6 * N * k**2
+            + 2 * N
+            + 3 * k**3
+            - 3 * k
+        )
+    else:
+        numerator = (2 * N - k) ** 3 - (2 * N - k)
+    require(numerator % 6 == 0, "Jackson coefficient lost integrality")
+    return numerator // 6
+
+
+def jackson_eta_upper(N: int) -> F:
+    """Rigorous eta_N upper bound using pi < 355/113."""
+
+    c_zero_numerator = N * (2 * N**2 + 1)
+    require(c_zero_numerator % 3 == 0, "Jackson zero mode not integral")
+    c_zero = c_zero_numerator // 3
+    odd_sum = sum(
+        F(jackson_coefficient(N, k), k**2)
+        for k in range(1, 2 * N - 2, 2)
+    )
+    # eta_N = 1/2 - 4*odd_sum/(pi^2*c_zero).
+    # The strict upper bound pi < 355/113 gives the displayed rational
+    # upper bound.
+    eta_upper = F(1, 2) - 4 * F(113, 355) ** 2 * odd_sum / c_zero
+    require(0 < eta_upper < F(1, 2), "bad Jackson error bound")
+    return eta_upper
+
+
+def crossing_margin(eta: F, floor_a: F, floor_b: F) -> F:
     """Two-factor product margin with 2+7 Jackson telescope errors."""
 
-    error_a = F(3, N)
-    error_b = F(21, 2 * N)
-    return (
-        (floor_a - error_a) * (floor_b - error_b)
-        - error_a
-        - error_b
-    )
+    error_a = 2 * eta
+    error_b = 7 * eta
+    return (floor_a - error_a) * (floor_b - error_b) - 9 * eta
 
 
 rows_34 = packet_spectrum(34)
@@ -124,35 +159,48 @@ seven_ordinary_floor = F(15, 154)
 ordinary_pair_floor = F(66, 91)
 guard_six_floor = F(191, 6930)
 
+eta_99 = jackson_eta_upper(99)
+eta_100 = jackson_eta_upper(100)
+eta_297 = jackson_eta_upper(297)
+eta_298 = jackson_eta_upper(298)
+
 guard_pair_fail = crossing_margin(
-    354, guard_pair_floor, seven_ordinary_floor
+    eta_99, guard_pair_floor, seven_ordinary_floor
 )
 guard_pair_pass = crossing_margin(
-    355, guard_pair_floor, seven_ordinary_floor
+    eta_100, guard_pair_floor, seven_ordinary_floor
 )
 ordinary_pair_fail = crossing_margin(
-    1058, ordinary_pair_floor, guard_six_floor
+    eta_297, ordinary_pair_floor, guard_six_floor
 )
 ordinary_pair_pass = crossing_margin(
-    1059, ordinary_pair_floor, guard_six_floor
+    eta_298, ordinary_pair_floor, guard_six_floor
 )
 
-require(guard_pair_fail == F(-3, 15010072), "N=354 exact margin")
+require(guard_pair_fail < -F(1, 100000), "N=99 ledger must fail")
+require(guard_pair_pass > F(1, 100000), "N=100 ledger must pass")
 require(
-    guard_pair_pass == F(21177, 135854950), "N=355 exact margin"
+    ordinary_pair_fail < -F(1, 100000),
+    "N=297 ledger must fail",
 )
 require(
-    ordinary_pair_fail == F(-861505, 47060301288),
-    "N=1058 exact margin",
-)
-require(
-    ordinary_pair_pass == F(44021, 78582173670),
-    "N=1059 exact margin",
+    ordinary_pair_pass > F(1, 100000),
+    "N=298 ledger must pass",
 )
 require(guard_pair_fail < 0 < guard_pair_pass, "guard-pair boundary")
 require(
     ordinary_pair_fail < 0 < ordinary_pair_pass,
     "ordinary-pair boundary",
+)
+require(
+    guard_pair_floor - 2 * eta_100 > 0
+    and seven_ordinary_floor - 7 * eta_100 > 0,
+    "guard-pair crossing factors",
+)
+require(
+    ordinary_pair_floor - 2 * eta_298 > 0
+    and guard_six_floor - 7 * eta_298 > 0,
+    "ordinary-pair crossing factors",
 )
 
 guard_pair_types = 8
@@ -162,15 +210,15 @@ require(
     "complete scalar pair split",
 )
 
-height_guard_pair = 2 * 355 - 2
-height_ordinary_pair = 2 * 1059 - 2
+height_guard_pair = 2 * 100 - 2
+height_ordinary_pair = 2 * 298 - 2
 scalar_rank_height = max(35, height_guard_pair, height_ordinary_pair)
 original_rank_height = 2 * scalar_rank_height
 
-require(height_guard_pair == 708, "guard-pair crossing height")
-require(height_ordinary_pair == 2116, "ordinary-pair crossing height")
-require(scalar_rank_height == 2116, "uniform scalar rank height")
-require(original_rank_height == 4232, "fixed-section lift height")
+require(height_guard_pair == 198, "guard-pair crossing height")
+require(height_ordinary_pair == 594, "ordinary-pair crossing height")
+require(scalar_rank_height == 594, "uniform scalar rank height")
+require(original_rank_height == 1188, "fixed-section lift height")
 
 print("THM-2274 MIXED SCALAR RELATIVE-RANK AUDIT")
 print(
@@ -183,14 +231,14 @@ print(
 )
 print(
     "guard_pair_cut: types=8 "
-    f"N354={guard_pair_fail} N355={guard_pair_pass} height=708"
+    "N99_margin_lt=-1/100000 N100_margin_gt=1/100000 height=198"
 )
 print(
     "ordinary_pair_cut: types=28 "
-    f"N1058={ordinary_pair_fail} N1059={ordinary_pair_pass} height=2116"
+    "N297_margin_lt=-1/100000 N298_margin_gt=1/100000 height=594"
 )
 print(
-    "pair_partition=36/36 scalar_rank_height=2116 "
-    "fixed_section_original_height=4232"
+    "pair_partition=36/36 scalar_rank_height=594 "
+    "fixed_section_original_height=1188"
 )
 print("ALL EXACT CHECKS PASSED")
