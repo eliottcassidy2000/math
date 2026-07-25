@@ -386,10 +386,10 @@ and the gap cross-product in the corpus atlas.
 ## Tournament Analysis must preserve content
 
 **Trigger:** pairwise data suggests a tournament representation.
-**Action:** require an intrinsic binary relation, name the preserved target, keep exact ties, and audit alternate vertices.
-**Mechanism:** cosmetic tie-breaking manufactures a transitive ranking and turns equality, scalar order, or proof regimes into a contentless “tournament.”
-**Counterindication:** a meaningful gauge may resolve ties when the gauge is part of the theorem.
-**Evidence:** MISTAKE-212/214 and the audit in [`the-underlying-object-is-the-support-dirichlet-profile-codex-20260721.md`](../07-reflections/the-underlying-object-is-the-support-dirichlet-profile-codex-20260721.md).
+**Action:** require an intrinsic binary relation, name the preserved target, keep exact ties, audit alternate vertices, and compute endpoint-swap parity before orienting: antisymmetric signs may orient, while symmetric signs are gain/colors and retain switching or phase data.
+**Mechanism:** cosmetic tie-breaking manufactures a contentless tournament; for a character of an alternating field, its value on `-1` decides orientation versus symmetric coloring, while a Pfaffian orientation of a symmetric kernel is an extra gauge whose existence may depend on the contraction family.
+**Counterindication:** a meaningful gauge may resolve ties when its gauge, support, and preserved contraction are part of the theorem.
+**Evidence:** MISTAKE-212/214; THM-2294 (real/`chi_7` tournaments versus `chi_13` coloring); THM-2292 (switched calibration gain graph and mirror tie); THM-2290 (hafnian kernel and the order-four Pfaffian-gauge boundary); and [`the-underlying-object-is-the-support-dirichlet-profile-codex-20260721.md`](../07-reflections/the-underlying-object-is-the-support-dirichlet-profile-codex-20260721.md).
 
 ## Type a shared sum as a weighted fiber before transferring it
 
