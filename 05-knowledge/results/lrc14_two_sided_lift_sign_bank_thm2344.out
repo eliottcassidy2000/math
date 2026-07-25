@@ -1,0 +1,12 @@
+theorem=THM-2344-secondary-sign-bank
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED
+relation_coordinates_all_91_units=PASS
+two_sided_lifts_dp=334825
+two_sided_lifts_enumerated=334825
+positive_term_signs=167404
+negative_term_signs=167421
+unweighted_sign_imbalance=-17
+grouped_coefficient_cancellation=NOT-CLAIMED
+scalar_rows_excluded=0
+lrc14_status=OPEN
+all_checks=PASS

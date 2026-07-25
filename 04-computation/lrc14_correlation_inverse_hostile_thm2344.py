@@ -328,7 +328,7 @@ require(real_twists == P, "annihilator row size changed")
 require(nonzero_phases == GROUP_SIZE - 1, "nonzero phase census changed")
 
 print("theorem=THM-2344")
-print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED")
+print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED")
 print(f"target_group_size={GROUP_SIZE}")
 print(f"target_character_orthogonality_checks={orthogonality_checks}")
 print("canonical_reflection=K(-ell)=conjugate(K(ell))")

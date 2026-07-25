@@ -2,7 +2,7 @@
 id: THM-2344
 title: "Correlation-inverse rigidity and the aligned-axis transported-word hostile"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. In the
   centered interval/complement specialization of THM-2334, the phase-free
   target response satisfies K(-ell)=conjugate(K(ell)); equivalently its
   inverse target transform is real. If THM-2343's zero-only boundary
@@ -10,7 +10,10 @@ status: >
   arrays are shifted convolution inverses. On the odd target group, this
   bad response is real exactly on the annihilator of p, so one real
   detecting twist, or global evenness/real-valuedness of K, excludes it.
-  Reflection and physical-factor positivity alone do not. More sharply,
+  More generally, central phase-conjugate covariance about `h` can meet
+  the constant boundary only at `h=p`; translated endpoints reduce the
+  aligned case to perfect periodic autocorrelation. Reflection and
+  physical-factor positivity alone do not. More sharply,
   with only one active translated coordinate and 13 dividing the word
   dilation, an arbitrary nonconstant transported word changes the
   endpoint amplitude but cannot change its target character. A centered
@@ -19,10 +22,14 @@ status: >
   H(s,t)=c. Thus at least two independently translated base coordinates
   or genuine cross-coordinate mixing are necessary. The hostile is a
   sharp local factorized control, not a canonical nine-coordinate
-  terminal-word row. No scalar row, word-matching component, visible
-  all-unit aggregate, terminal phase, or LRC(14) closure is proved.
+  terminal-word row. On a typed nine-factor control, 334,825 exact
+  two-sided lifts split as 167,404 positive and 167,421 negative terms,
+  so the unweighted sign law is not coherent. No scalar row, grouped-sum
+  cancellation, word-matching component, visible all-unit aggregate,
+  terminal phase, or LRC(14) closure is proved.
 source: codex-2026-07-25-correlation-inverse-rigidity
 depends_on:
+  - THM-2331-two-sided-septimal-address-embedding-in-marked-current
   - THM-2334-relation-residue-current-and-character-twist-pushforward
   - THM-2343-deep-comb-affine-target-catalyst
 related:
@@ -32,14 +39,18 @@ related:
   - THM-2340-owner-word-anova-target-landing
 script: 04-computation/lrc14_correlation_inverse_hostile_thm2344.py
 output: 05-knowledge/results/lrc14_correlation_inverse_hostile_thm2344.out
-script_sha256: 3c8fff49a50dfa037c6207f2c111ea86704b9e9de8bd304a8076b5e7ea22bf23
-output_sha256: d75408ac3990ba69dadb862e39913d5d104c99256c395a86494313dd1daf0337
+script_sha256: ce2513ecd6e8290677d69bb5a00b8cb64216035331ebd10887353a34463271fd
+output_sha256: c5e17223240b8a383c8a17a6869bb500e363e4010c2a286f62fb4310e11a4bed
+secondary_script: 04-computation/lrc14_two_sided_lift_sign_bank_thm2344.py
+secondary_output: 05-knowledge/results/lrc14_two_sided_lift_sign_bank_thm2344.out
+secondary_script_sha256: 2f37db2a2a9150a83e31bc75cd090f79c8151eb064b35137b5912aab6ac63f23
+secondary_output_sha256: ace877a717d5cd2746e9ba88f71bd40c70392d90b80579a77e3504d7b0435d2e
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2344 -- reflection narrows the hostile but does not kill it
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 The independent audit rederived the quotient-safe reflection law, both
 finite Fourier signs in the endpoint cross-correlation, the shifted-unit
@@ -276,7 +287,79 @@ current theorem supplies that target.  Physical positivity fixes the
 sign of selected untwisted factors, not the phase of coordinate-shifted
 Fourier coefficients.
 
-## 4. Exact aligned danger/safe hostile
+## 4. Odd-centre covariance and the perfect-autocorrelation boundary
+
+The preceding Hermitian law is centred at the origin of character space.
+A more flexible conditional separator lives directly in correlation space.
+For arbitrary complex arrays `U,V` on a finite abelian group `G`, put
+
+```text
+R_(U,V)(s)=sum_x U(x)conjugate(V(x+s)),
+
+H(chi)=chi(p)U_hat(chi)conjugate(V_hat(chi)).       (20a)
+```
+
+The sign convention of Section 2 gives
+
+```text
+A_H(q)=R_(U,V)(p-q).                                (20b)
+```
+
+Assume that `G` has odd order and that for some `h in G` and `|eta|=1`,
+
+```text
+R_(U,V)(2h-s)=eta conjugate(R_(U,V)(s))
+                                                   for every s. (20c)
+```
+
+If `H` is a nonzero constant, (20b) says
+`R_(U,V)=c delta_p`. Its singleton support must be fixed by
+`s -> 2h-s`, so `2h-p=p`. Multiplication by two is injective on an
+odd group; therefore
+
+```text
+h=p.                                                (20d)
+```
+
+Thus covariance about any proved centre `h!=p` certifies nonconstancy.
+Equivalently, it is enough to prove that for some `theta`,
+
+```text
+exp(-i theta) chi(h)
+ U_hat(chi)conjugate(V_hat(chi))
+```
+
+is real for every character and that `h!=p`: at a nonzero constant
+boundary the displayed value would be a nonzero real scalar times
+`chi(h-p)`, while character separation on an odd group supplies a
+nonreal value.
+
+The aligned boundary is exact. Define
+
+```text
+(T_h U)(x)=U(x-h).
+```
+
+If `V=alpha T_h U`, with `alpha!=0` and `U` nonzero, then
+
+```text
+H(chi)
+ =conjugate(alpha)chi(p-h)|U_hat(chi)|^2.           (20e)
+```
+
+For `h!=p` this is nonconstant. For `h=p` it is constant exactly when
+`|U_hat(chi)|` is constant, equivalently when the periodic
+autocorrelation
+
+```text
+R_(U,U)(s)
+```
+
+vanishes for every `s!=0`. The residual is therefore a perfect periodic
+autocorrelation array, not unspecified cancellation. The point-mass
+hostile in the next section attains this boundary.
+
+## 5. Exact aligned danger/safe hostile
 
 Let
 
@@ -384,7 +467,7 @@ Accordingly it proves the logical insufficiency of reflection,
 centeredness, factor positivity, an untwisted positive scalar, and
 one-tooth support.  It does not prove that a canonical row is bad.
 
-### 4.1 Arbitrary same-axis transported words preserve the bad character
+## 6. Arbitrary same-axis transported words preserve the bad character
 
 The constant transported word in the first hostile is not the essential
 reason for failure.  Normalize the active deepest coordinate by
@@ -476,7 +559,65 @@ the next escape must use at least two independently translated base
 coordinates, or a cross-coordinate coupling that prevents all endpoint
 harmonics from sharing one target residue.
 
-## 5. Refined remaining problem
+## 7. A typed nine-factor sign-incoherence control
+
+The one-tooth hostile deliberately makes the other coordinates inert.
+The genuine nine-factor sign law still does not supply a coherent
+termwise sidecar. Use THM-2331's typed control in the labelled order
+
+```text
+w=(13,13^3,2*13^5,1,14,27,40,53,66),
+
+r=(-27,-27,-27,20110798,-41,-27,-27,-27,38),
+
+X=13,                 m=1,                 i_3=2.  (28a)
+```
+
+Then `r.w=0` and every coordinate of `r` is a unit modulo `91`. Put
+
+```text
+d=m e_(i_3)-r
+```
+
+and exhaust
+
+```text
+U_7={
+ u_bar in F_7^9:
+ u_bar.w=X,
+ u_bar_i!=0,
+ u_bar_i+d_i!=0 for every i
+}.                                                  (28b)
+```
+
+For each residue vector, take centred representatives and correct the
+speed-one guard coordinate by the unique multiple of seven needed to
+make the left frequency exactly `X`. This is THM-2331's exact Bezout
+lift, and the right endpoint is `v=u+d`.
+
+For the `c_1`-owner rectangle, seven ordinary complements and the guard
+complement occur at **each** endpoint. Their sixteen fixed minus signs
+cancel. The remaining signs are the exact centred danger-arc signs on
+the non-guard right endpoint, the two wider guard-arc signs, and the
+positive deepest-comb sign. Independent dynamic programming and literal
+enumeration give
+
+```text
+|U_7|=334,825,
+
+positive terms=167,404,
+negative terms=167,421.                             (28c)
+```
+
+Both signs therefore occur in nearly equal numbers in one exact typed
+address bank. This proves no cancellation: magnitudes differ, the whole
+address orbit is infinite, and an unweighted sign count is not a grouped
+coefficient. The control word has the correct strict valuation type but
+is not asserted to satisfy the scalar cover. Its consequence is only
+that septimal support and interval signs do not furnish a sign-coherent
+fibre sum.
+
+## 8. Refined remaining problem
 
 The boundary now has three equivalent descriptions:
 
@@ -522,7 +663,7 @@ No scalar profile is excluded.  The ledger remains `165`; repeated-first
 rows and alternative resonances remain outside THM-2327; and LRC(14)
 remains open.
 
-## 6. Exact companion
+## 9. Exact companions
 
 The companion verifies target-character orthogonality, the
 correlation/product transform with exact rational point masses, the
@@ -551,3 +692,32 @@ Both transcripts must match
 ```
 
 byte-for-byte after LF normalization.
+
+The separately scoped nine-factor sign bank is reproduced by
+
+```bash
+python3 04-computation/lrc14_two_sided_lift_sign_bank_thm2344.py
+python3 -O 04-computation/lrc14_two_sided_lift_sign_bank_thm2344.py
+```
+
+Both runs must equal
+
+```text
+05-knowledge/results/lrc14_two_sided_lift_sign_bank_thm2344.out
+```
+
+It checks the exact relation and all-unit address, counts the finite-field
+universe by a path independent of literal enumeration, and verifies every
+term sign with ordinary and optimized Python.
+
+## 10. Independent audit
+
+The independent audit rederived the Hermitian law including transported-word
+neutrality, quotient descent, every DFT/correlation sign, the shifted inverse
+criterion, the odd annihilator and covariance tests, and the translated
+perfect-autocorrelation boundary. It found and repaired one typing issue in
+the hostile: the deepest tooth must lie in the mod-thirteen kernel, now
+witnessed by `w=(1,13,26)`. The auditor independently checked the aligned
+danger/safe amplitudes and the `334,825=167,404+167,421` sign bank. Both
+companions, hashes, dependency slugs, documentation checks, and ordinary and
+optimized transcripts passed.

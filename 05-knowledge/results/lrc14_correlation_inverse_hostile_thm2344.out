@@ -1,5 +1,5 @@
 theorem=THM-2344
-status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED
 target_group_size=169
 target_character_orthogonality_checks=28561
 canonical_reflection=K(-ell)=conjugate(K(ell))
