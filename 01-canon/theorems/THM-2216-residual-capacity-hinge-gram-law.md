@@ -64,7 +64,19 @@ C_AB(q)
 ```
 
 These are exact consequences of (1)--(2); no independence assumption is
-made.  Put
+made.  The gap between the singleton meet and the actual pair row is also
+exactly directed:
+
+```text
+C_A(q)-C_AB(q)=X_(B\A)(q),
+C_B(q)-C_AB(q)=X_(A\B)(q),
+
+min(C_A(q),C_B(q))-C_AB(q)
+ =min(X_(B\A)(q),X_(A\B)(q)).                       (4a)
+```
+
+Thus the meet envelope loses precisely the cheaper of the two directed
+exclusive blocker losses, not an unspecified correlation error.  Put
 
 ```text
 Y_AB=disjoint_union_(x notin A union B)Y_x,
@@ -219,6 +231,60 @@ This is a different, lower-dimensional Gram kernel, not the exact kernel
 in (16).  It can be strictly weaker when the two tail coordinates are
 imbalanced.  Equality in (20) holds exactly when, for every label `q`, the
 two truncated coordinates are equal or at least one is zero.
+
+### Finite threshold search and comparison with marginal order statistics
+
+For fixed rows `C_u,C_v`, define
+
+```text
+B_H(theta)
+ =p theta+sum_q
+   sqrt((C_u(q)-theta)_+(C_v(q)-theta)_+).          (21a)
+```
+
+On an interval containing no coordinate value from either row, each
+nonzero summand has the form
+
+```text
+sqrt((a-theta)(b-theta)).
+```
+
+Its second derivative is
+
+```text
+-(a-b)^2 /
+ [4((a-theta)(b-theta))^(3/2)]<=0.                 (21b)
+```
+
+Hence `B_H` is concave on every such interval.  Its global minimum over
+`theta>=0` is therefore attained at
+
+```text
+theta in {0} union {C_u(q):q in Q}
+                   union {C_v(q):q in Q}.          (21c)
+```
+
+This makes optimized exact Hellinger certification a finite breakpoint
+search; it does not require a continuous optimization.
+
+There are now three rigorous meet envelopes:
+
+```text
+Top_p(min(C_u,C_v)),
+min_theta B_H(theta),
+sum_(k=1)^p min(C_u,(k),C_v,(k)).                  (21d)
+```
+
+The first is at most each of the latter two.  The two upper bounds are
+incomparable.  For `p=2`, padding with zero coordinates if desired,
+
+```text
+C_u=(0,1), C_v=(1,0): Hellinger=0 < marginal=1;
+C_u=(0,1), C_v=(0,2): marginal=1 < Hellinger=sqrt(2). (21e)
+```
+
+Thus one should take the cheapest certified envelope row by row rather
+than treating either relaxation as universally stronger.
 
 It also admits a completely integral upper certificate.  Fix an integer
 scale `S` and put
