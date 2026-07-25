@@ -29,7 +29,7 @@ related:
 
 THM-2282 gives a bounded rank-two relation plane with a
 `c_1`-anchored minor that is a unit modulo thirteen. THM-2283 independently
-forces three-dimensional scalar relation rank at height `3540`. The two
+forces three-dimensional scalar relation rank at height `594`. The two
 statements do not immediately combine: the third short relation may reduce
 modulo thirteen into the old plane.
 
@@ -239,7 +239,7 @@ Delta_2=p_(c_1)r_k!=0 mod 13.                        (23)
 THM-2283 proves
 
 ```text
-dim_Q span{x in Lambda_*:||x||_infinity<=3540}>=3.   (24)
+dim_Q span{x in Lambda_*:||x||_infinity<=594}>=3.    (24)
 ```
 
 If every relation in (24) lay in `span_Q(p,r)`, their span would have
@@ -247,7 +247,7 @@ dimension at most two. Hence there is
 
 ```text
 s_0 in Lambda_* minus span_Q(p,r),
-||s_0||_infinity<=3540.                              (25)
+||s_0||_infinity<=594.                               (25)
 ```
 
 ## 3. The third row and its exact height
@@ -265,7 +265,7 @@ this display; below `p` again denotes the relation row.
 Equations (21) and (25) give the invariant
 
 ```text
-M=max(3540,ceil((9841+4921)/2))
+M=max(594,ceil((9841+4921)/2))
  =7381.                                              (27)
 ```
 
@@ -505,7 +505,7 @@ The proved chain is now
 ```text
 120 interior scalar profiles
   -> rank two with a c_1-anchored F_13 pivot
-  -> scalar rank at least three at height 3540
+  -> scalar rank at least three at height 594
   -> centered thirteen-adic pivot extension
   -> a bounded c_1-anchored rank-three flag over F_13
   -> blocker-complete or guard/unit-marked pivot.     (51)

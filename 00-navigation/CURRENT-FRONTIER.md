@@ -171,14 +171,11 @@ labelled primitive packets and one coprime interval. It makes the terminal
 exact and finite; it does not prove that every surviving interval is empty.
 
 THM-2187/2190/2193 give a saturated relation flag, floor `7^-21`, and rank seven by `78*7^21`; deep grids still lose slope/current (THM-2188).
-THM-2196/2199 give finite carry charts, projective finiteness, floor `182^-13`, and rank twelve; THM-2208/2212 reduce each rank-eleven plane to
-bounded anchors and 91 ruler systems. THM-2174's exact quotient remains
+THM-2196/2199 give finite carry charts, projective finiteness, floor `182^-13`, and rank twelve; THM-2208/2212 reduce each rank-eleven plane to bounded anchors and 91 ruler systems. THM-2174's exact quotient remains
 infinite; its fixed-core Boolean shadow has at most two states.
-THM-735 and THM-2182/2184 give remote-tail and grid/mixed-core terminals;
-THM-2186 gives a strict toric exit. THM-2168/2192 leave scalar `5+3`;
+THM-735 and THM-2182/2184 give remote-tail and grid/mixed-core terminals; THM-2186 gives a strict toric exit. THM-2168/2192 leave scalar `5+3`;
 THM-2197/2201 retain deficiency and the Hasse jet. THM-2198/2204/2205/2207
-close depth three; THM-2213/2215/2219 close every depth-four profile, leaving
-`1,130`. THM-2222/2224 close the `455` profiles with `lambda_1>=6`;
+close depth three; THM-2213/2215/2219 close every depth-four profile, leaving `1,130`. THM-2222/2224 close the `455` profiles with `lambda_1>=6`;
 THM-2226 closes `217` more; THM-2229 leaves `240`. THM-2233's exact guard-danger Bellman closes `(2,2,c)`, `5<=c<=19`, and `(5,7,9)`, leaving
 `224`. THM-2239 separately centers a nonnegative signed charge for each
 blocker core and closes another `58`: all `29` first-depth-two rows, `28/29`
@@ -188,7 +185,10 @@ latter's composite union; THM-2250 closes every unequal-core partition, and
 THM-2257's exact `169`-image sieve contradicts the capacity of its common-core
 branch. The exact scalar ledger is therefore `165`, all at first depth one.
 THM-2234/2255 supply private expansion and exclusive-owner mass; THM-2263 sharpens the expiration-image floors to `15041431/70270200>1/7` on all `150` strict rows and `5229541/70270200>1/14` on the `15` repeated-first rows.
-THM-2271/2273/2278 force absorber energy, gap spread, and labelled root modes but no blocker return. THM-2274 gives scalar rank two at height `594` (original `1188`); THM-2283 gives rank three. On `120` interiors, THM-2277 removes a shared anchor and THM-2279/2282 anchor a mod-13 unit minor at `c_1`; THM-2276 lands exact ancestry for `m<=3` and freezes `696` local cancellations for `4<=m<=757`. Global landing on that bank and `45` boundary rows remain open.
+THM-2271/2273/2278 force absorber energy, gap spread, and labelled root modes but no blocker return.
+THM-2274 gives scalar rank two at adaptive heights `35/198/594`; THM-2283 proves general/live odd-guard rank-two safe-torus floors `40/273` and `152/1029`, then scalar rank three at `102/198/594` (fixed-section `204/396/1188`).
+THM-2295 supersedes the uniform rank count with scalar rank five at height `196` (fixed-section `392`); THM-2283 remains the sharper support-at-least-three rank-three certificate at degree `102` and the exact rank-two torus classifier.
+On `120` interiors, THM-2277 removes a shared anchor and THM-2279/2282 anchor a mod-13 unit minor at `c_1`; THM-2276 lands exact ancestry for `m<=3` and freezes `696` local cancellations for `4<=m<=757`. Global landing on that bank and `45` boundary rows remain open.
 
 ### Independent routes that remain live
 

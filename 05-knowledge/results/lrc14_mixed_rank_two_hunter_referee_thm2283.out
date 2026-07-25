@@ -1,0 +1,11 @@
+THM-2283 INDEPENDENT HUNTER / JACKSON REFEREE
+floors=general:40/273,odd_guard:152/1029,guard_pair:19/126,ordinary_pair:2060/13377
+minimal_union_graph_counts=m3:8,m4:10,m5:11,m6:1
+m6_disjoint_triple_support_partitions=10
+tree_enumerator=connected_edge_subsets;Hunter_pointwise=all_trees_all_active_sets
+odd_Case_D=m3:guard_out=2099520/10706059,guard_in=155520/823543;m4:guard_out=155520/823543,guard_in=149040/823543;m5:guard_out=19440/117649,guard_in=18360/117649;m6:guard_out=2880/16807,guard_in=2592/16807
+Jackson_coefficients_directly_reconstructed=600
+Jackson_boundaries=uniform:N51_true_FAIL,N52_PASS,degree102;guard_pair:N50_true_FAIL,N51_PASS,degree100;ordinary_pair:N49_true_FAIL,N50_PASS,degree98
+uniform_N52_gap_gt=1/600
+adaptive_scalar_rank3_heights=102,198,594;fixed_section_heights=204,396,1188
+ALL INDEPENDENT EXACT CHECKS PASSED
