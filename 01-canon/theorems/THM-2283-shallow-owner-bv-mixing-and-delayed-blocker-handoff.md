@@ -1,5 +1,5 @@
 ---
-id: THM-2279
+id: THM-2283
 title: "Shallow-owner BV mixing and delayed blocker handoff"
 status: >
   PROVED + VERIFIED-EXACT, with a CITED word-overlap corollary. In every
@@ -29,17 +29,17 @@ related:
   - THM-2261-expiration-image-surjectivity-and-one-core-carrier-no-go
   - THM-2267-static-owner-coverage-is-flag-and-transition-holonomy-is-a-cut-kernel
   - THM-2268-two-shell-private-owner-trident-and-raw-carry-cocycle-no-go
-  - THM-2278-expiration-support-forces-a-weighted-owner-absorber-cut
+  - THM-2271-expiration-support-forces-a-weighted-owner-absorber-cut
 external:
   - "Dmitrii Zakharov, An isoperimetric inequality for word overlap, arXiv:2602.20143v2."
-script: 04-computation/lrc14_shallow_owner_bv_delayed_handoff_thm2279.py
-output: 05-knowledge/results/lrc14_shallow_owner_bv_delayed_handoff_thm2279.out
-script_sha256: 770ea814e5ed91abd256a846a9668d257a46fb4f04713e4650bf6b2ad4f6139f
-output_sha256: cdf7ad7a5105ab74a709d3985a3e60d0e6e5b1046fd567ca75f9b34fb2eec453
+script: 04-computation/lrc14_shallow_owner_bv_delayed_handoff_thm2283.py
+output: 05-knowledge/results/lrc14_shallow_owner_bv_delayed_handoff_thm2283.out
+script_sha256: f86e54985fac18dfee254de5b6276729641506f52d5ad3e57f72c5d4b4341f78
+output_sha256: d47193a0e0e2a860f5ca1f06bd5c31b0f8bcf7e5ecd8f28827b43f8d122e6dee
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2279 -- BV mixing forces a delayed blocker-only handoff
+# THM-2283 -- BV mixing forces a delayed blocker-only handoff
 
 Use the scalar five-unit/three-blocker notation
 
@@ -520,8 +520,8 @@ depth-one extremum in (12), and the ideal Zakharov threshold `194/195`.
 Reproduce with
 
 ```bash
-python3 04-computation/lrc14_shallow_owner_bv_delayed_handoff_thm2279.py
-python3 -O 04-computation/lrc14_shallow_owner_bv_delayed_handoff_thm2279.py
+python3 04-computation/lrc14_shallow_owner_bv_delayed_handoff_thm2283.py
+python3 -O 04-computation/lrc14_shallow_owner_bv_delayed_handoff_thm2283.py
 ```
 
 Normal and optimized transcripts are byte-identical to the stored output.

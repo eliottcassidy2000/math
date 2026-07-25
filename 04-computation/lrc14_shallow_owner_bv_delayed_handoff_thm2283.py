@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact arithmetic companion for THM-2279.
+"""Exact arithmetic companion for THM-2283.
 
 This checks the uniform shallow-owner/target floors, the first ideal
 Zakharov word-length threshold, and the delayed-tail hostile family on all
@@ -103,7 +103,7 @@ for b, c in strict_profiles:
             assert circle_norm(T(y_infinity, k)) >= Fraction(1, 14)
         checks += 1
 
-print("THM-2279 exact companion")
+print("THM-2283 exact companion")
 print(f"strict_profiles={len(strict_profiles)}")
 print(f"tail_family_checks={checks}")
 print(f"L0={L0}")

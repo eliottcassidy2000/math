@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact audit for THM-2281.
+"""Exact audit for THM-2285.
 
 The theorem itself is algebraic.  This script independently checks the
 direct inherited-color matching sum against the hafnian of the selected
@@ -41,6 +41,20 @@ def perfect_pairings(vertices: tuple[int, ...]):
         rest = vertices[1:index] + vertices[index + 1 :]
         for tail in perfect_pairings(rest):
             yield ((u, v),) + tail
+
+
+def signed_perfect_pairings(vertices: tuple[int, ...]):
+    """Yield the monomial signs in the recursive Pfaffian expansion."""
+    if not vertices:
+        yield (), 1
+        return
+    u = vertices[0]
+    for index in range(1, len(vertices)):
+        v = vertices[index]
+        recursive_sign = -1 if (index + 1) % 2 else 1
+        rest = vertices[1:index] + vertices[index + 1 :]
+        for tail, tail_sign in signed_perfect_pairings(rest):
+            yield ((u, v),) + tail, recursive_sign * tail_sign
 
 
 def colored_pair_kernel(
@@ -248,13 +262,67 @@ def leaf_probe_audit() -> tuple[int, str]:
     return checked, digest.hexdigest()
 
 
+def tournament_pfaffian_audit() -> tuple[int, int, int, int]:
+    """Count universal tournament sign gauges at orders four and six."""
+
+    def universal_counts(n: int) -> tuple[int, int]:
+        vertices = tuple(range(n))
+        pairs = tuple((u, v) for u in vertices for v in vertices if u < v)
+        pfaffian_terms = tuple(signed_perfect_pairings(vertices))
+        exact = 0
+        up_to_global_sign = 0
+        for bits in product((-1, 1), repeat=len(pairs)):
+            signs = dict(zip(pairs, bits))
+            coefficients = []
+            for pairing, pfaffian_sign in pfaffian_terms:
+                coefficient = pfaffian_sign
+                for edge in pairing:
+                    coefficient *= signs[edge]
+                coefficients.append(coefficient)
+            if all(value == 1 for value in coefficients):
+                exact += 1
+            if len(set(coefficients)) == 1:
+                up_to_global_sign += 1
+        return exact, up_to_global_sign
+
+    exact_four, global_four = universal_counts(4)
+    exact_six, global_six = universal_counts(6)
+    assert exact_four > 0
+    assert global_four > 0
+    assert exact_six == 0
+    assert global_six == 0
+
+    # The explicit order-four gauge used in the proof: reverse only 0--2
+    # relative to the increasing-label orientation.
+    explicit_signs = {
+        (u, v): (-1 if (u, v) == (0, 2) else 1)
+        for u in range(4)
+        for v in range(u + 1, 4)
+    }
+    explicit_coefficients = []
+    for pairing, pfaffian_sign in signed_perfect_pairings((0, 1, 2, 3)):
+        coefficient = pfaffian_sign
+        for edge in pairing:
+            coefficient *= explicit_signs[edge]
+        explicit_coefficients.append(coefficient)
+    assert explicit_coefficients == [1, 1, 1]
+
+    return exact_four, global_four, exact_six, global_six
+
+
 def main() -> None:
     exhaustive_count, exhaustive_digest = exhaustive_four_vertex_audit()
     selector_first, selector_second = selector_erasure_collision()
     phase_first, phase_second = phase_erasure_collision()
     leaf_count, leaf_digest = leaf_probe_audit()
+    (
+        exact_four,
+        global_four,
+        exact_six,
+        global_six,
+    ) = tournament_pfaffian_audit()
 
-    print("THM-2281 context-selected hafnian kernel exact audit")
+    print("THM-2285 context-selected hafnian kernel exact audit")
     print(f"exhaustive direct=hafnian evaluations: {exhaustive_count}")
     print(f"exhaustive digest: {exhaustive_digest}")
     print(
@@ -267,6 +335,11 @@ def main() -> None:
     )
     print(f"leaf-forcing entry probes: {leaf_count}")
     print(f"leaf-probe digest: {leaf_digest}")
+    print(
+        "universal tournament Pfaffian gauges "
+        "(exact/up-to-global-sign): "
+        f"n=4 {exact_four}/{global_four}, n=6 {exact_six}/{global_six}"
+    )
     print("all exact assertions passed")
 
 

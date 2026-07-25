@@ -1,5 +1,5 @@
 ---
-id: THM-2281
+id: THM-2285
 title: "Context-selected colored pair kernels are hafnian-complete"
 status: >
   PROVED + VERIFIED-EXACT. For a finite loopless endpoint-colored weighted
@@ -16,8 +16,13 @@ status: >
   multisets but response vectors (1,0,0,1) and (2,0,0,0). Erasing complex
   weights also loses cancellation. Thus the exact Krenn carrier is a
   context-indexed pair tensor plus hafnian contraction, whereas an
-  uncolored graph, support relation, or tournament is not. The theorem does
-  not identify the matching, owner-transition, and knot kernels.
+  uncolored graph, support relation, or tournament is not. A tournament can
+  instead serve as a Pfaffian sign gauge: one universal gauge exists at
+  orders two and four, but no universal gauge, even up to overall sign,
+  exists at any even order at least six; a K3,3
+  permanent-versus-determinant sign product is the exact obstruction. The
+  theorem does not identify the matching, owner-transition, and knot
+  kernels.
 source: codex-2026-07-25-context-selected-hafnian-kernel
 depends_on: []
 related:
@@ -27,14 +32,14 @@ related:
   - THM-2267-static-owner-coverage-is-flag-and-transition-holonomy-is-a-cut-kernel
 external:
   - "Mario Krenn, Xuemei Gu, and Daniel Soltesz, Questions on the Structure of Perfect Matchings Inspired by Quantum Physics, arXiv:1902.06023v2."
-script: 04-computation/context_selected_hafnian_kernel_thm2281.py
-output: 05-knowledge/results/context_selected_hafnian_kernel_thm2281.out
-script_sha256: 63e92ba52c95806d43bd49b0ddda5995d55d24a30cf115f7746099ed4e5274d2
-output_sha256: 0cf475b79461342ed1eb4e6c3eb7f7a84c3e598af2d40a8dbc1485933a824ad6
+script: 04-computation/context_selected_hafnian_kernel_thm2285.py
+output: 05-knowledge/results/context_selected_hafnian_kernel_thm2285.out
+script_sha256: 1b83d56ec85235824ee6b9f7f1eb73f64c2f77b933a6e48b6a8206373c605fed
+output_sha256: 172507126a6ff2665b0438231e861d0f80e74c7163f112e2e2ebe043b6fc2ebf
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2281 -- the exact pair object retains its selectors
+# THM-2285 -- the exact pair object retains its selectors
 
 The inherited-color amplitude of Krenn--Gu--Soltesz is a sum over an
 entire perfect-matching fiber. That warning is sometimes read too broadly
@@ -334,7 +339,120 @@ drop selector indices;
 use a coefficient quotient which does not preserve sums/products. (22)
 ```
 
-## 5. Relation to knots, owner transitions, and higher dividends
+## 5. A tournament can be a sign gauge, but only universally through order four
+
+The preceding counterexamples use a tournament as a quotient and show why
+that fails. There is a different, legitimate role for an orientation: it
+can supply the signs which turn a matching sum into a Pfaffian.
+
+Now work over the complex numbers. Let `V={1,...,2m}` be ordered and let
+`A` be an arbitrary symmetric zero-diagonal matrix. A tournament signing is
+a choice
+
+```text
+s_(i,j) in {+1,-1},                    i<j,          (23)
+```
+
+equivalently the orientation `i->j` for sign `+1` and `j->i` for sign
+`-1`. Form the skew-symmetric matrix
+
+```text
+B_(i,j)=s_(i,j)A_(i,j),                i<j,
+B_(j,i)=-B_(i,j).                                     (24)
+```
+
+Call the signing a **universal Pfaffian tournament gauge** when
+
+```text
+Pf(B)=haf(A)                                           (25)
+```
+
+for every `A`. Allowing the right side to have one fixed overall sign gives
+the weaker up-to-global-sign version.
+
+> **Theorem 4 (sharp universal tournament-gauge boundary).**
+>
+> 1. At order two, the signing `s_(1,2)=+1` is universal.
+> 2. At order four, take `s_(1,3)=-1` and every other increasing-label
+>    sign equal to `+1`. This is a universal gauge.
+> 3. At every even order `2m>=6`, no universal gauge exists, even up to one
+>    overall sign.
+
+### Orders two and four
+
+Order two is immediate. At order four,
+
+```text
+Pf(B)=B_12 B_34-B_13 B_24+B_14 B_23.                (26)
+```
+
+With the displayed signing, (26) becomes
+
+```text
+A_12 A_34+A_13 A_24+A_14 A_23=haf(A).               (27)
+```
+
+Because `A` may be any selected kernel, the same tournament gauge works
+simultaneously for every coloring context on four vertices.
+
+### The `K_(3,3)` obstruction from order six onward
+
+Suppose an up-to-global-sign universal gauge existed at some even order
+`2m>=6`. Select six vertices and partition them into two triples
+
+```text
+L={l_1,l_2,l_3},             R={r_1,r_2,r_3}.       (28)
+```
+
+Pair all remaining vertices in a fixed matching `P_0`. Specialize `A` so
+that every edge of `P_0` has weight one, the entries between `L` and `R`
+are independent variables `x_(i,j)`, and every other entry is zero.
+Every surviving perfect matching is forced to use `P_0` and then a perfect
+matching of `K_(3,3)`. Therefore
+
+```text
+haf(A)=per(X),                X=(x_(i,j))_(i,j=1)^3. (29)
+```
+
+After permuting the six displayed vertices into `L,R` order and factoring
+the forced outside pairs, the Pfaffian is, up to one fixed sign,
+
+```text
+det(S hadamard_product X)                             (30)
+```
+
+for a `3 x 3` sign matrix `S=(epsilon_(i,j))`. Thus universality would
+force the six determinant monomial coefficients
+
+```text
+sgn(pi) product_(i=1)^3 epsilon_(i,pi(i)),
+                                      pi in Sym(3), (31)
+```
+
+to have one common sign.
+
+Multiply (31) over all six permutations. Every
+`epsilon_(i,j)` occurs exactly `(3-1)!=2` times, so all matrix signs
+multiply to `+1`. There are three odd permutations, hence the product of
+the permutation signs is `-1`. The product of six equal signs, however, is
+`+1`. This is the contradiction
+
+```text
+-1=+1.                                               (32)
+```
+
+The forced outside pairs show that the six-vertex obstruction embeds in
+every larger even order. This proves Theorem 4.
+
+This result gives the exact positive scope for a tournament here. At orders
+two and four it can be a universal **orientation gauge** for the full
+selected kernel. From order six onward, an orientation can work only after
+the selected support is restricted enough that its surviving matching
+monomials have coherent Pfaffian signs. Such a graph-specific orientation
+must retain that support/cycle sidecar; it is not a tournament quotient of
+the inherited-color problem.
+
+## 6. Relation to knots, owner transitions, and higher dividends
 
 The theorem supplies a shared validity test, not an identification of three
 different objects.
@@ -368,7 +486,7 @@ monoid interaction. It is a derived coordinate on the contracted response,
 not a replacement for the selected pair kernel under arbitrary graph
 extensions.
 
-## 6. Exact audit and loss ledger
+## 7. Exact audit and loss ledger
 
 The verification script independently compares the direct matching-fiber
 sum with the selected-kernel hafnian on `746,496` exact integer evaluations
@@ -377,7 +495,10 @@ of four-vertex colored multigraphs. It also checks:
 ```text
 selector-erasure collision: (1,0,0,1) versus (2,0,0,0);
 phase-erasure collision:    (0,0,0,0) versus (2,0,0,0);
-ten forced-leaf probes on a five-vertex hostile graph bank. (23)
+ten forced-leaf probes on a five-vertex hostile graph bank;
+universal Pfaffian tournament gauges:
+  order 4 exact/up-to-sign = 8/16,
+  order 6 exact/up-to-sign = 0/0.                    (33)
 ```
 
 The proof, rather than the finite audit, establishes the all-size theorem.
