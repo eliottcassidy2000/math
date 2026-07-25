@@ -993,7 +993,3 @@ An independent audit derived (17)--(23), caught the distinction between the
 selected owner's prescribed expiration and the common clock `b+1`, improved
 the coarse coefficient `169` to the sharp pointwise coefficient `156`, and
 verified the exact rooted-carrier scope. QED.
-
-The same-label mass ledger, bilinear endpoint-Prony reuse, exact valuation
-split, and one-sheet selector Fourier calculation are being written and
-independently checked. Until promotion, this file is not a proved dependency.
