@@ -178,8 +178,8 @@
     three; THM-2084's cubic lower bound is likewise a source-fiber statement,
     not generic cover degree, Jelonek geometry, VC(4), or full JC(2).
 61. **Quartic pole closure is not terminal square-prefix descent.** THM-2202
-    removes every twice-odd finite pole. THM-2206 proves that field-valued
-    `C_2` Hasse depth loses parity or Hamiltonian squares; integral `2`-adic order raising and nonmonic descent remain open.
+    removes every twice-odd finite pole. THM-2214 closes nonsplit terminal
+    degrees through ten; THM-2217 gives only an odd-leading factor-support wall. Split/even nonmonic descent remains open.
 62. **Safe-torus mass is not primitive-line recurrence.** THM-2193 gives a uniform Haar floor and many septimal torsion points, while its THM-2188
     factorization preserves these across opposite primitive-slope outcomes.
 

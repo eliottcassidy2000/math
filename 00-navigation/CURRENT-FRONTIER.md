@@ -416,9 +416,10 @@ into tournament operation laws and LRC residue packets.
   reduced degree `4r-2`: below the cusp
   `r nu(Lambda)=(2r-1)nu(c)` the first/second flux orders separate, while
   above it the unique `c^(2r-1)` boundary tooth does. Thus no quartic
-  finite-pole survivor remains. THM-2181 compresses exact square prefixes and
-  closes monic depressed polynomial quartics. The terminal nonmonic
-  square-prefix/quadratic-member descent and other short edges remain.
+  finite-pole survivor remains. THM-2181 closes monic depressed quartics;
+  THM-2214 closes nonsplit terminal degrees through ten, and THM-2217 forces
+  odd-leading survivors to degree `>=14` with `R deg(q)>=deg(V)`. Split/even
+  terminal descent and other short edges remain.
 - THM-2206 proves that a field-valued `C_2` Hasse jet has parity depth only or
   loses Hamiltonian squares; integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer

@@ -66,9 +66,9 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     is the exact new counterexample. THM-2063/2071 close linear/quadratic source
     fibers; THM-2084/2118/2102 close cubics. THM-2158/2180 reduce the twice-odd
     nonmonic quartic to `V|(4gamma-(beta/V)^2)`; THM-2189 proves it on the
-    nonsplit deck and THM-2194 closes degree six; THM-2202 closes every
-    twice-odd reduced degree. THM-2206 blocks a field-valued `C_2` Hasse repair;
-    integral `2`-adic order raising is open, as is terminal nonmonic square-prefix descent.
+    nonsplit deck and THM-2202 closes every twice-odd finite pole. THM-2214
+    closes nonsplit terminal degrees through ten; THM-2217 forces odd-leading
+    survivors to degree `>=14` and `R deg(q)>=deg(V)`. Nonmonic descent remains open.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed

@@ -23,6 +23,7 @@ depends_on:
 related:
   - THM-2194-uniform-degree-six-quartic-pole-closure
   - THM-2206-quadratic-deck-augmentation-and-hamiltonian-characteristic-incompatibility
+  - THM-2217-square-prefix-pole-alternative-and-odd-leading-degree-terminal-wall
 script: 04-computation/jc2_nonsplit_terminal_degree10_spectral_curve_thm2214.py
 output: 05-knowledge/results/jc2_nonsplit_terminal_degree10_spectral_curve_thm2214.out
 script_sha256: f17728dae43d5160c6fc38ad7a858cf6f99b5d46b0c04634a8674696e5d3f18f
