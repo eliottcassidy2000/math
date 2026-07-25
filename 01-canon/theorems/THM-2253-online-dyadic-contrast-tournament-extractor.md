@@ -1,5 +1,5 @@
 ---
-id: THM-2252
+id: THM-2253
 title: "Online dyadic-contrast tournament extraction"
 status: >
   PROVED + VERIFIED-EXACT. For an i.i.d. source on a finite alphabet with
@@ -19,14 +19,14 @@ related:
   - THM-2160-dyadic-checksum-extracts-a-fair-bit-under-the-critical-run-deadline
   - THM-2225-dyadic-critical-run-extractors-and-cyclic-checksum-shell-bisection
   - THM-2235-response-antipode-barriers-for-lrc-sheets-tournament-cycles-and-knot-kernels
-script: 04-computation/categorical_coin_online_dyadic_contrast_thm2252.py
-output: 05-knowledge/results/categorical_coin_online_dyadic_contrast_thm2252.out
-script_sha256: 24c15227ecfa65e6dac47d8661d0fe2678c1ddeccbc08fc311079633e91796c2
-output_sha256: dc7528ce7d3cf759410ed8f40c5ded8de01c18ffb247fbf9422ee156f16e6e91
+script: 04-computation/categorical_coin_online_dyadic_contrast_thm2253.py
+output: 05-knowledge/results/categorical_coin_online_dyadic_contrast_thm2253.out
+script_sha256: 17f1d6653e09eab85f7cda370fe72abf1aeacbc8f9f87a48c20d47c511f988dd
+output_sha256: 148b8a49b136ff77c491d33f17bca9c5f408318c902bce7628f36f0ba40bc8fc
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2252 -- the first dyadic contrast is a fair tournament edge
+# THM-2253 -- the first dyadic contrast is a fair tournament edge
 
 THM-2225 answers the binary critical-run puzzle by a dyadic block
 compression and, for the sharper deadline, a cyclic checksum. The compression
@@ -191,8 +191,8 @@ pass.
 Run
 
 ```bash
-python3 04-computation/categorical_coin_online_dyadic_contrast_thm2252.py
-python3 -O 04-computation/categorical_coin_online_dyadic_contrast_thm2252.py
+python3 04-computation/categorical_coin_online_dyadic_contrast_thm2253.py
+python3 -O 04-computation/categorical_coin_online_dyadic_contrast_thm2253.py
 ```
 
 The companion exhausts binary terminal prefixes through length `16` and

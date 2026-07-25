@@ -4,4 +4,4 @@ binary_deadline_audit=PASS max_n=16 hostile_continuations=65856 sharp_constant_r
 ternary_deadline_audit=PASS max_n=8 hostile_continuations=13344 sharp_constant_right=48
 deadline_formula=tau<=n+2^nu2(n)
 nonpower_corollary=tau<=4n/3
-status=THM-2252_PROVED_VERIFIED_EXACT
+status=THM-2253_PROVED_VERIFIED_EXACT
