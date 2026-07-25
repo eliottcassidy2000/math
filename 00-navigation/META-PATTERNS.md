@@ -115,15 +115,15 @@ to factor “the same way.”
 **Action:** draw the source-to-target construction and prove it respects the
 product or localization. Separate vanishing order, codimension, nonzero local
 units, analytic limits, and derived valuations. If the arrow is missing, keep
-the factorization as a source-side theorem and test the proposed transfer.
+the factorization as a source-side theorem and test the proposed transfer. For optimization,
+one Cartesian argmin is insufficient: test rectangles or every separable perturbation.
 **Mechanism:** products are not preserved automatically by scalar summation,
 confluence, asymptotic limits, constant-term functionals, or passage to a
 different cell complex.
 **Counterindication:** use product closure immediately when an exact theorem
 shows that the target construction is multiplicative.
-**Evidence:** MISTAKE-215 (special determinant versus general moment) and
-MISTAKE-223 (braid localization versus hyper-Bessel/Euler claims), with the
-surviving special-matrix scope in THM-2033.
+**Evidence:** MISTAKE-215/223; THM-2348 (robust factorization iff mixed ANOVA
+vanishes); and THM-2033's surviving special-matrix scope.
 
 ## Controlled forgetting requires a sidecar
 
