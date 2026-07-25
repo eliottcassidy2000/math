@@ -300,7 +300,8 @@ The remaining scalar task is therefore not another smaller static chord
 quotient. THM-2207 eliminates the final depth-three word, and
 THM-2213/2215/2219 close every depth-four profile. THM-2224/2226 further
 reduce the ledger to `458`, THM-2227 excludes six special residues, and
-THM-2229's positive-set Bellman leaves exactly `240`. Those accepted carry
+THM-2229's positive-set Bellman leaves `240`; THM-2233/2239 leave exactly
+`194`, split as `165` first-depth-one and `29` first-depth-three rows. Those accepted carry
 words still require bounded relations, signed guard-hole correlation,
 endpoint current, or owner/incidence refinements beyond the arbitrary-
 coupling relaxations.

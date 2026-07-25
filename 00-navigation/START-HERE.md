@@ -118,7 +118,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     its transverse and scalar-`4+3` lanes, leaving only scalar `5+3`.
     THM-2187/2193 give a saturated carrier, floor `7^-21`, rank seven by `78*7^21`, and safe septimal grids; THM-2188 retains slope/current.
     THM-2196/2199 prove rank twelve; THM-2208/2212 give bounded anchors and exact rulers per rank-eleven plane, while THM-2203 fixes scalar transport at `16/208`.
-    THM-2198--2229 close depths three/four and leave exactly `240` scalar profiles; THM-2232 excludes only the high-first common-core model, THM-2234 gives private first-depth-one expansion, THM-2211 retains carry, and THM-2235 forbids an odd-sheet XOR-antipode shortcut.
+    THM-2198--2229 reduce the scalar ledger to `240`; THM-2233/2239 leave exactly `194` profiles, split as `165` at first depth one and `29` at first depth three. THM-2234 gives private first-depth-one expansion, THM-2211 retains carry, and THM-2235 forbids an odd-sheet XOR-antipode shortcut.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
     the knot continuation cocycle; THM-2191 gives its catalytic group length,
     commuting stable envelope, and abstract additive dual, and closes `9_10`.

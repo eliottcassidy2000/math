@@ -14,7 +14,7 @@ status: >
   permutations supported on their alternating affine code. In the knot
   continuation-kernel semigroup, the only min-plus unit is the unknot. These
   are exact no-go/structure results,
-  not closures of the 458-profile LRC residue, tournament core transport,
+  not closures of the remaining scalar LRC residue, tournament core transport,
   knot catalysis, or LRC(14).
 source: codex-2026-07-25-response-antipode-barriers
 depends_on:

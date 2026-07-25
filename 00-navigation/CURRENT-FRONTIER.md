@@ -180,16 +180,17 @@ THM-2197/2201 retain deficiency and the Hasse jet. THM-2198/2204/2205/2207
 close depth three; THM-2213/2215/2219 close every depth-four profile, leaving
 `1,130`. THM-2222/2224 close the `455` profiles with `lambda_1>=6`;
 THM-2226 closes `217` more and THM-2227 independently closes six special residues. THM-2229 retains `A_+` at every unit `13`-time, subsumes those six,
-and leaves exactly `240`: `165` first-depth-one rows, `73` first-depth-two/
-three rows, and `(4,6,8),(5,7,9)`.
-THM-2232 excludes the realizable same-core model in the last two profiles by
-a signed dual, but closes no unrestricted profile. THM-2234 proves a private
-two-owner mass and two-step expansion for every first-depth-one blocker.
+and leaves exactly `240`. THM-2233's guard-danger Bellman leaves `224`;
+THM-2239's separately centered signed dual closes all `29` first-depth-two
+rows and `(4,6,8)`. Exactly `194` remain: `165` at first depth one and `29`
+at first depth three.
+THM-2232 retains same-core stability; THM-2234 proves a private two-owner
+mass and two-step expansion for every first-depth-one blocker.
 THM-2211 proves exact propagation needs carry; THM-2216/2218 expose exact tail-Gram/Fourier carriers, and THM-2238 gives a separate terminal-cover
 fork. THM-2237 isolates the missing top Walsh coordinate; THM-2235 forbids a
 fixed-XOR/odd-sheet antipode. The open scalar target is to combine signed
-stability/owner incidence with the `240` rows; THM-2233 is only a reserved
-guard-danger Bellman proposal. LRC(14) remains open.
+leakage/owner incidence on the `194` rows, beginning with THM-2234's private
+expansion on the `165` first-depth-one rows. LRC(14) remains open.
 
 ### Independent routes that remain live
 
@@ -397,15 +398,14 @@ Classify profiles under support operations rather than compare only their value
 at one; study analytic continuation/abscissae and automatic/Mahler structure;
 track collision taxes for census sequences; and feed support identities back
 into tournament operation laws and LRC residue packets.
-
 ## Other active portfolio
 
 - **Knots / operation-ready relations:** [THM-2176](../01-canon/theorems/THM-2176-gordian-continuation-profile-and-interaction-cocycle.md) gives the continuation kernel; [THM-2191](../01-canon/theorems/THM-2191-catalytic-localization-of-the-gordian-metric.md) gives the greatest connected-sum-invariant minorant and stable group length.
-  THM-2220 proves every fixed context has stable slope `u_hash`, catalytic saving on powers is sublinear, and response ideals compose only laxly; the `T(2,7)` mirror shortcut proves exact diagonal convolution fails.
+  THM-2220 gives fixed-context slope/sublinear saving; THM-2242 makes the kernel embedding isometric and proves singleton Green classes, with the unknot the only idempotent/regular element and prime knots the atoms.
   Positive catalysis remains open; the sharp cited seed is conditional `10_6` (`c*=2`, `u in {2,3}`), then uncalibrated pretzels.
 - **Unsplittable cost flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture: a planar acyclic instance has fractional cost `58` but capacity-good integral cost at least `60`. Its carrier is the `K_3` stable-set facet; the planar `2d_max` theorem remains intact.
 - **Jacobian/Dixmier:** THM-1300/1315 verify and analyze the three-dimensional Keller collision, but provenance is unsettled (MISTAKE-205) and it does not decide
-  `DC(2)`; THM-2044--2046 block planar and first-order cotangent descent.
+  `DC(2)`; THM-2230 computes the planar response fiber, while THM-2241 gives the exact monic test `D_P^(d+1)(x)=0` and the shear-covariant resultant nonproper curve.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibers:** THM-2063/2071 close affine/quadratic pencil members;
   THM-2084/2110/2118 close cubics; THM-2102/2113 close power-free top faces;
@@ -421,7 +421,8 @@ into tournament operation laws and LRC residue packets.
   THM-2214 closes nonsplit terminal degrees through ten, and THM-2217 forces
   odd-leading survivors to degree `>=14` with `R deg(q)>=deg(V)`. Split/even
   terminal descent and other short edges remain. THM-2206 blocks field-valued
-  `C_2` Hasse repair; integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
+  `C_2` Hasse repair; the next monic consumer is a joint `E_14/E_10` flux-tail
+  test. Integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
@@ -434,7 +435,7 @@ The most reusable current bridges are not literal object identifications:
 | Whole-layer Frobenius / orbit norm | NC2 balanced face and TNC monodromy orbit | Exact finite-abelian packet preservation and uniform-incidence norms transfer; LRC still lacks the seed and exit, and `-1` in the packet stabilizer forces a signed orientation sidecar. |
 | Quotient + sidecar | spectrum/SCC/support quotients | Which lost coordinate restores the target predicate? |
 | Bulk / boundary / null | THM-2058 phase height | Strict templates occur on all large prime grids; tight support lies on finitely many level-14 pair-sum clocks; subthreshold packets vanish. |
-| Operation-response | tournament joins/support unions | THM-2183/2195 classify the exact transitive product and marked derivative; THM-2221 makes pinned exterior context the cut-semimetric term `<X,D>` for arbitrary split transport. Classify the core kernel `G(X)` and unpinned exchange. |
+| Operation-response | tournament joins/support unions | THM-2183/2195 classify the exact transitive product; THM-2221 gives `<X,D>`, and THM-2242 identifies the sharp complement-histogram Wasserstein deficit and its dual. Classify the core kernel `G(X)` and unpinned exchange. |
 | One-sided accumulation | LRC spectrum | Can qualitative isolation be made effective by finite state/pinning data? |
 | Support Dirichlet profile | integer sequences | Do tournament/LRC census supports have functional or automatic structure? |
 | Continuation congruence / min-plus kernel | Gordian connected-sum profile and THM-840/853 | Which finite sidecar is a target-preserving quotient under every named future operation? |
@@ -446,5 +447,4 @@ HYP-8810's “JC(2) and LRC(14) share AP-rigidity” is a **wildcard frame, not 
 proved reduction**. LRC has the one-way THM-1017 supplier; the planar-JC wall
 still needs an exact map and preserved predicate. THM-2045 supplies one exact
 JC-side sector obstruction to compare, not an AP reduction.
-
 A bridge must name its map, preserved predicate, loss, sidecar, and hostile control.
