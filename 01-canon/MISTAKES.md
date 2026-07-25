@@ -32,6 +32,14 @@ Format per entry:
   rerun all three checks on the resulting tree: filename, exact YAML ID, and
   remote history. If inspecting without rebasing, search `origin/main^{tree}`
   directly; do not rely on the current worktree or commit subject.
+- **Same-day recurrence:** two sessions independently found the same
+  two-colour marked-edge triangle and crossed in flight at `THM-2327`.
+  Commit `681c74c8b` reserved
+  `THM-2327-two-colour-marked-unit-c3-triangle.md` first; the later
+  `211f569a9` reservation used a different slug but the identical target.
+  The later stub was deleted rather than renumbered, because there is only
+  one mathematical theorem to promote. The proof and audit were already
+  broadcast to the earlier owner; no proved dependency cited either stub.
 
 ---
 
