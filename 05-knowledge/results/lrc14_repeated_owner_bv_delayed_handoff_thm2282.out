@@ -1,0 +1,9 @@
+THM-2282 REPEATED-OWNER BV DELAYED HANDOFF -- exact audit
+profiles: 15; deepest depths: 5..19
+selected-owner depth set: [1, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+exclusive total/owner floor: 5229541/197927730 5229541/593783190
+target floor: 2593/90090
+horizon factor: 2375132760/5229541
+handoff floor: 13560199813/106987855174200
+expiration image/half-comb margin: 5229541/70270200 210241/70270200
+all exact checks passed
