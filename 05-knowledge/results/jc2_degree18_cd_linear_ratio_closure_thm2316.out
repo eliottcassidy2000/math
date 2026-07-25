@@ -1,0 +1,16 @@
+weighted_ratio=D^3/C^4=-22143375/6397664
+rational_representative=C=D=-6397664/22143375
+integer_scaled_curve=-48427561125*u**3 + 2989355625*u**2*y**2 - 258339375*u*y**4 + 28427563008*u + 2095875*y**6 + 233971712*y**3 - 1052872704*y**2
+branch_discriminant=-464767295827968*(15*y - 52)**2*(2864799140625*y**10 + 19862607375000*y**9 + 103285558350000*y**8 + 367474086720000*y**7 + 527020367328000*y**6 - 762214033152000*y**5 - 6205500108288000*y**4 - 55515871936512000*y**3 - 144341267034931200*y**2 - 333588706036285440*y - 578220423796228096)/1953125
+degree_10_factor=squarefree_and_coprime_to_15y-52
+simple_branch_points=10
+exceptional_fibre=y=52/15,u=2704/10935,smooth_total_ramification_e3
+infinity_cubic=-26040609*v**3 + 1607445*v**2 - 138915*v + 1127
+infinity_discriminant=-153384762202971019112448
+infinity=3_distinct_unramified_points
+absolute_irreducibility=PASS_Groebner_basis_[1]
+total_ramification=12
+normalization_genus=4
+hostile_control_C=D=1_squarefree=PASS
+riemann_hurwitz_and_deck_contradiction=MATHEMATICAL_PROOF_REQUIRED
+status=THM2316_CD_LINEAR_RATIO_EXACT_REFEREE
