@@ -295,6 +295,10 @@ def exact_positive_control() -> tuple[int, int, int, int]:
 
 minimum, equality_witness, atlas_rows = exhaustive_two_pivot_atlas()
 require(minimum == 3, "sharp completion minimum changed")
+support_one_hostile = sum(
+    (residue - 0) % P == 0 for residue in allowed(1)
+)
+require(support_one_hostile == 0, "support-one hostile disappeared")
 require(RESIDUE_LIFT_FLOOR == 234_375, "residue lift constant changed")
 term_bank = RESIDUE_LIFT_FLOOR * TARGET_VECTOR_BANK
 projective_term_bank = RESIDUE_LIFT_FLOOR * PROJECTIVE_BANK
@@ -318,6 +322,7 @@ print("status=PROVED+VERIFIED-EXACT+CANDIDATE-UNDER-INDEPENDENT-AUDIT")
 print(f"two_pivot_atlas_rows={atlas_rows}")
 print(f"sharp_two_pivot_minimum={minimum}")
 print("sharp_witness=" + ",".join(str(entry) for entry in equality_witness))
+print(f"support_one_hostile_count={support_one_hostile}")
 print(f"residue_lifts_per_address={RESIDUE_LIFT_FLOOR}")
 print(f"target_vector_term_bank={term_bank}")
 print(f"projective_term_bank={projective_term_bank}")

@@ -3,6 +3,7 @@ status=PROVED+VERIFIED-EXACT+CANDIDATE-UNDER-INDEPENDENT-AUDIT
 two_pivot_atlas_rows=12348
 sharp_two_pivot_minimum=3
 sharp_witness=1,1,1,1,1
+support_one_hostile_count=0
 residue_lifts_per_address=234375
 target_vector_term_bank=734664038400000000
 projective_term_bank=8815968460800000000
