@@ -749,8 +749,8 @@ the `s=3` gap word has three short and five long gaps, while `s=5` has
 five short and three long gaps.
 
 > **EXPLORATORY ONLY -- OPEN.** The resulting `3+5` / `5+3` star-order
-> split is a cheap object to compare with the still-open Fano and
-> `4+3` / `5+3` carriers. No incidence-preserving map to those carriers
+> split is a cheap object to compare with the still-open rank-one scalar
+> `5+3` Fano carrier. No incidence-preserving map to that carrier
 > has been proved. This observation is not a dependency, theorem,
 > reduction, or claimed explanation of the Fano residual.
 

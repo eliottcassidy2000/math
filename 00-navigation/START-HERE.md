@@ -115,8 +115,9 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     its transverse and scalar-`4+3` lanes, leaving only scalar `5+3`.
     THM-2167/2171 give `208875` carry pairs and ordered cap `5430750`;
     THM-2169 gives deletion height `1247`, while THM-2174 isolates phase
-    windows/current. THM-2178/2179 and THM-735/2182/2184 add relation, far-cone,
-    and grid-tube forks; the unrestricted phase decomposition remains open.
+    windows/current. THM-2179 and THM-735/2182/2184/2186 add relation, far-cone,
+    grid-tube, and toric-profile exits; THM-2185 forces rank three at height
+    `500`, but the unrestricted phase-preserving pump remains open.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
     the knot continuation cocycle; THM-2177 refutes Goemans' cost conjecture
     through a conflict graph. MISTAKE-230--235 forbid syntax-only bridges.
@@ -125,7 +126,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 | Topic | Read first | Then use |
 |---|---|---|
-| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2174; preserve carry/owner/tie, danger-clutter, endpoint-current, and transverse Plücker sidecars |
+| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2186; preserve carry/owner/tie, danger-clutter, endpoint-current, and equality-skeleton sidecars |
 | LRC / Frobenius wildcard | [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) | THM-2041 packets; keep seed and pointwise exit explicit |
 | LRC literature | [`CORE-PAPERS.md#lonely-runner-conjecture`](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [`LRC-TECHNIQUE-INDEX.md`](LRC-TECHNIQUE-INDEX.md), source paper |
 | NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2101/2111, formal interfaces, guardrails |
