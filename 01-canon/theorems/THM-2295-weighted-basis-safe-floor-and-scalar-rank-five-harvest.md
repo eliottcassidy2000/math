@@ -420,7 +420,7 @@ The elementary weighted basis floor stops exactly after rank four:
 alpha_5=0.                                           (44)
 ```
 
-At relation rank five, the six basis coordinates no longer have enough
+At relation rank five, the four basis coordinates no longer have enough
 safe budget to pay all five extras by this union bound. A strict
 facet-intersection theorem, analogous to the rank-six boundary of
 THM-2190 and its uniform repair in THM-2193, is needed to force rank six.
