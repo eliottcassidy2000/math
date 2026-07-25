@@ -1,0 +1,20 @@
+unit_charge_top5:
+  (a,b)=(1,6) deficit=5/294
+  (a,b)=(11,1) deficit=8/539
+  (a,b)=(3,5) deficit=3/245
+  (a,b)=(1,5) deficit=3/245
+  (a,b)=(9,2) deficit=4/441
+depth_one_13_divisible_charge_rows:
+  (a,b)=(1,13) deficit=5/637
+  (a,b)=(1,26) deficit=3/1274
+compatible_guard=99
+compatible_units=(594, 9, 165, 495, 22)
+compatible_depth_one=1287
+private_mass_floor=2593/90090
+first_image_floor=2593/69300
+second_image_floor=33709/831600
+ten_cap_witness_phase=1/169 private_sheets=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11) unit_sheets=((0,), (0,), (0,), (0,), (0,))
+twelve_cap_witness_image_roots=(13, 26, 39, 52, 65, 78, 91, 104, 117, 130, 143, 156)
+twelve_cap_witness_first_preimages=(351, 364, 377, 390, 403, 923, 598, 611, 624, 637, 481, 325)
+strict_13_power_endpoint_control=PASS
+status=THM2234_PRIVATE_TWO_OWNER_MASS
