@@ -1,0 +1,24 @@
+scalar depth-(3,3,4) cyclic-capacity certificate
+arithmetic: exact integers; no float; no assert dependence
+
+primitive depth-five universe
+  N=371293 Q=28561 primitive_phases=26364 |U_N|=244810
+  guard_fibre_histogram=((9, 18830), (10, 7534))
+  unit_sign_classes=171366 lift_families=13182 depth_three_sign_classes=78
+  all depth-three blocker direct/group parity=78/78 PASS
+  all six depth-four sign classes empty on U_N PASS
+
+complete depth-(3,3,4) branch certificate
+  unordered_pairs=3081 including_diagonal=78
+  candidate_evaluations=35974 maximum_prefix=64 expansions=0
+  unique_worst_pair=(1,84) residual_size=188290
+  top_five_(capacity,label)=((33928, 2198), (33918, 2196), (32518, 1098), (32496, 1099), (31408, 6))
+  minimum_capacity_margin=24022 minimizers=1
+  pair_table_digest=97ae53fb2a59bf4bd8a34e18dfb919063ef502eed938fda9fb30c0c901fdea68
+  branch_trace_digest=3f92815e67a77af35d97d44cbf50cd5622b444b0d1e13917e8fd44bc549aac3f
+  candidate_evaluation_histogram=((5, 78), (8, 312), (9, 201), (10, 190), (11, 109), (12, 1220), (13, 82), (14, 861), (15, 28))
+  direct hostile residual/top-five replay=PASS
+  hostile_family_sum_checks=13182 PASS
+
+CONCLUSION
+  actual blocker valuation profile (3,3,4) is empty
