@@ -29,10 +29,18 @@ related:
   - THM-2199-effective-positive-subspace-rank-lift
   - THM-2266-depth-one-deep-pair-centered-signed-dual-and-relation-atlas
   - THM-2270-simultaneous-balanced-cut-relation-and-six-uniform-orientation
-script: 04-computation/lrc14_mixed_scalar_relative_rank_thm2274.py
-output: 05-knowledge/results/lrc14_mixed_scalar_relative_rank_thm2274.out
-script_sha256: 578704d9db77a3503d44f700faface4266f7ee76f5e3ccc260dcbcee741cebc5
-output_sha256: 8afad7b2eaec39b2a9c86d44c6e4505111120a25bb705c3c6530660c3c742c4a
+script:
+  - 04-computation/lrc14_mixed_scalar_relative_rank_thm2274.py
+  - 04-computation/lrc14_mixed_scalar_relative_rank_referee_thm2274.py
+output:
+  - 05-knowledge/results/lrc14_mixed_scalar_relative_rank_thm2274.out
+  - 05-knowledge/results/lrc14_mixed_scalar_relative_rank_referee_thm2274.out
+script_sha256:
+  - 578704d9db77a3503d44f700faface4266f7ee76f5e3ccc260dcbcee741cebc5
+  - 6c22b818cd89a6957e46b2367389ade35357df0f574e33ca57b46cef947c45dc
+output_sha256:
+  - 8afad7b2eaec39b2a9c86d44c6e4505111120a25bb705c3c6530660c3c742c4a
+  - c39b4b238432707d61cba0a163dafc7966f550fe0d2f7e2b12b79a711189dda2
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -582,6 +590,9 @@ Run
 ```bash
 python 04-computation/lrc14_mixed_scalar_relative_rank_thm2274.py
 python -O 04-computation/lrc14_mixed_scalar_relative_rank_thm2274.py
+
+python 04-computation/lrc14_mixed_scalar_relative_rank_referee_thm2274.py
+python -O 04-computation/lrc14_mixed_scalar_relative_rank_referee_thm2274.py
 ```
 
 Both modes reproduce the stored transcript after platform newline
@@ -597,8 +608,9 @@ the scalar heights 198 and 594;
 the fixed-section height 1188.                             (53)
 ```
 
-Independent audit separately reconstructed the relative coefficient
-majorant, rebuilt the exact Jackson coefficient sum, checked that the common
-translation-error bound applies to both interval lengths, checked all pair
-types and distinctness hypotheses, recomputed the `99/100` and `297/298`
-boundaries, and verified that (48) preserves rank. QED.
+Independent audit separately reconstructed all `1,584` Jackson coefficients
+by direct Fejer convolution, certified both rational `pi` brackets with
+Machin alternating sums, checked that the common translation-error bound
+applies to both interval lengths, checked all pair types and distinctness
+hypotheses, proved true-error failure at `N=99,297`, certified positivity at
+`N=100,298`, and verified that (48) preserves rank. QED.

@@ -5,10 +5,11 @@ status: >
   PROVED + INDEPENDENTLY AUDITED. Every one of the 120 interior
   first-depth-one scalar profiles has two bounded scalar relations with a
   nonzero 2 by 2 coefficient minor on columns c_1 and k for some coordinate
-  k outside the THM-2266 pair support. The scalar determinant has absolute
-  value at most 42320. The fixed THM-2203 section gives a nonzero
+  k outside the THM-2266 pair support. After the exact-Jackson sharpening
+  in THM-2274, the scalar determinant has absolute value at most 15140.
+  The fixed THM-2203 section gives a nonzero
   original-row minor at c_1 and the corresponding coordinate, of absolute
-  value at most 84640. The determinant need not be a thirteen-unit, no
+  value at most 30280. The determinant need not be a thirteen-unit, no
   owner transition is selected, no profile is excluded, and LRC(14)
   remains open.
 source: codex-2026-07-25-shallow-blocker-anchored-minor
@@ -40,7 +41,7 @@ height-20 relation independent of the shallow pair
 
 height-20 relation dependent on the shallow pair
   -> adaptive crossing gives a c_1-anchored minor
-     at most 14160 or 42320.                            (1)
+     at most 3960 or 11880.                             (1)
 ```
 
 The theorem is elementary after the three source theorems, but it retains
@@ -213,7 +214,8 @@ Equations (17) and (24) imply
 0<|p_(c_1)|<=20.                                     (25)
 ```
 
-THM-2275 applies its positive crossing construction to the adaptive cut
+THM-2274 Section 5 applies its exact-Jackson crossing construction to the
+adaptive cut
 
 ```text
 A | A^c.                                              (26)
@@ -228,9 +230,9 @@ L_A(s):=sum_(j in A)s_j(w_*)_j!=0,                   (27)
 with height
 
 ```text
-||s||_infinity<=708,       if A={H,c_1},
+||s||_infinity<=198,       if A={H,c_1},
 
-||s||_infinity<=2116,      if A={q_i,c_1}.            (28)
+||s||_infinity<=594,       if A={q_i,c_1}.            (28)
 ```
 
 Since `s.w_*=0`, its complementary partial sum is `-L_A(s)` and is
@@ -251,9 +253,9 @@ Delta_(c_1,k)
 Equations (25), (28), and (29) give the two exact uniform bounds
 
 ```text
-|Delta_(c_1,k)|<=20*708=14160,       guard-owner;
+|Delta_(c_1,k)|<=20*198=3960,        guard-owner;
 
-|Delta_(c_1,k)|<=20*2116=42320,      owner-unit.      (31)
+|Delta_(c_1,k)|<=20*594=11880,       owner-unit.      (31)
 ```
 
 Combining (22) and (31) proves the scalar statement:
@@ -262,11 +264,12 @@ Combining (22) and (31) proves the scalar statement:
 > and a coordinate `k` outside the triggering pair such that
 >
 > ```text
-> 0<|Delta_(c_1,k)|<=42320.                            (32)
+> 0<|Delta_(c_1,k)|<=15140.                            (32)
 > ```
 
 The first row may have height `9841`; the second has height `20` in
-Section 2 or at most `2116` in Section 3.
+Section 2 or at most `594` in Section 3. The uniform minor bound is now
+set by the independent height-20 branch (22), not by the adaptive fallback.
 
 ## 4. Fixed-section lift
 
@@ -282,16 +285,16 @@ the `H` column is doubled. Therefore the lifted original-row minor
 satisfies
 
 ```text
-0<|Delta_original(c_1,k)|<=2*42320=84640.             (34)
+0<|Delta_original(c_1,k)|<=2*15140=30280.             (34)
 ```
 
 The two original relation rows have uniform height at most
 
 ```text
-max(2*9841,2*2116)=19682.                             (35)
+max(2*9841,2*594)=19682.                              (35)
 ```
 
-No claim is made that `84640` is sharp.
+No claim is made that `30280` is sharp.
 
 ## 5. Exact residue boundary and frontier role
 
