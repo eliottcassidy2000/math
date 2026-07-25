@@ -47,11 +47,16 @@ marked current's Abel expansion. It deliberately does not say that terms
 in one target fibre have a nonzero sum. The first aggregate statement is
 available, but its sharp boundary is the zero target fibre.
 
+Let `i_3` denote the coordinate index of the deepest scalar speed,
+`w_(i_3)=c_3`, and let `e_(i_3)` be that coordinate vector. This is a
+labelled scalar coordinate, independent of any numeric basis indices used
+inside an auxiliary owner packet.
+
 The operation is finite-character projection:
 
 ```text
 expanded harmonic pair (u,v)
-  -> exact relation r=u+m e_3-v
+  -> exact relation r=u+m e_(i_3)-v
   -> target quotient q=pi(r) in K_13/L_13
   -> sum all terms with the same q.                 (1)
 ```
@@ -186,7 +191,7 @@ A_q(rho)
  =omega rho^|m| d_hat(m)
    sum_(
      u.w=X, v.w=Y,
-     pi(u+m e_3-v)=q
+     pi(u+m e_(i_3)-v)=q
    )
      a(u) conjugate(a(v))
      rho^(||u||_1+||v||_1).                         (16)
@@ -195,7 +200,7 @@ A_q(rho)
 Every sum is absolutely convergent. The relation inside (16) is exact:
 
 ```text
-(u+m e_3-v).w=X+m c_3-Y=0.                         (17)
+(u+m e_(i_3)-v).w=X+m c_3-Y=0.                     (17)
 ```
 
 Equations (6)--(7) make each quotient label in (16) well-defined.
@@ -245,7 +250,7 @@ Finite-character orthogonality applied to (16) gives
 ```text
 A_q(rho)
  =1/169 sum_(chi in G^)
-    conjugate(chi(q)) chi(pi(m e_3))
+    conjugate(chi(q)) chi(pi(m e_(i_3)))
     omega rho^|m| d_hat(m)
     F_X^chi(rho) conjugate(F_Y^chi(rho)).           (22)
 ```
