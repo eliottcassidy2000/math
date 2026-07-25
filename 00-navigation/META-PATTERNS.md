@@ -136,9 +136,10 @@ forgotten, and the sidecar required to make the next operation legal.
 extension, gluing, chirality, phase transport, or obstruction detection.
 **Counterindication:** no sidecar is needed when a theorem proves the next
 operation factors through the quotient.
-**Evidence:** the interface field and stress tests in
+**Evidence:** the interface stress tests in
 [`perspective-groupoid-controlled-forgetting-codex-s261.md`](../07-reflections/perspective-groupoid-controlled-forgetting-codex-s261.md),
-plus the collision-tax correction in MISTAKE-209.
+MISTAKE-209, THM-2160's stratified binomial completion, and THM-2174's
+window/current defect ledger.
 
 ## After a scalar quotient, choose between a coherent lift and orbit incidence
 

@@ -25,9 +25,10 @@ and the [recovered unbounded 2026-07-22--23 ledger](SESSION-LOG-HISTORICAL-2026-
   finite selected-cut-rank-seven branch or persistent rank six; THM-2089
   identifies persistence with flat affine holonomy. THM-2090 globally splices
   it, and THM-2092 makes the frozen/bounded-terminal lanes finite.
-- **Newest closure:** THM-2093's dyadic cocircuit flag makes the formerly
-  unbounded global last-guard/terminal-anchor star finite, with an explicit
-  enormous full-row bound. It does not enumerate any bank.
+- **Newest carrier:** THM-2167/2171/2169 make bounded relation planes finite;
+  THM-2174 isolates windows/current. THM-2168 eliminates transverse and
+  scalar-`4+3` three-blocker lanes; only scalar `5+3` survives. THM-2184 closes
+  every fixed arbitrary-residue `7+6` affine ray, not their uniform union.
 - THM-2091's centered-energy inequality and THM-2094's exact conditional
   moment certificate exclude the four-`7|q` terminal branch; THM-2096 adds an
   exact Cayley-tree variance gain and raises finite-bank threshold closures.
@@ -88,13 +89,13 @@ and the [recovered unbounded 2026-07-22--23 ledger](SESSION-LOG-HISTORICAL-2026-
 
 ## Other active inspiration
 
-- THM-2118 proves all-degree cubic Faber boundary/flux coprimality, removes every
-  finite centering/depressed-coefficient pole, and invokes THM-2102's power-free
-  face theorem to close the cubic source-fiber stratum. The next source-fiber
-  degree is four; general proper-power resonance, JC(2), and DC(2) remain open.
-- THM-2127 closes two proper-power subclasses. THM-2129 classifies the balanced
-  quartic boundary triple: odd degrees have no collision and twice-odd degrees
-  leave exactly `(z^2-1)^2`; global square-face descent remains open.
+- THM-2118 closes cubic source fibres. THM-2158 makes quartic regularity one
+  translation-invariant pole divisor, and THM-2180 proves `V|beta` in the
+  reduced twice-odd Keller branch, leaving only
+  `V|(4gamma-(beta/V)^2)`.
+- THM-2181 restores exact-square-prefix compression and closes every already
+  monic depressed polynomial quartic. It does not prove the remaining
+  nonmonic pole congruence or terminal monicization; JC(2) and DC(2) remain open.
 - THM-2117/2121 show scalar clocks/minors can miss safe cells, while every strict
   safe cell has a finite full Toeplitz/Fejer certificate; boundary-only points
   remain outside that certificate's scope.

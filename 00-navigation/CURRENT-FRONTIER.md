@@ -135,8 +135,8 @@ Its indispensable coordinates are primitive parameter, integral columns, transve
   THM-2139/2141 close fivefold profiles `(1,5,2)` and `(2,5,1)`; the exact residual
   is `(1,6,1)`, `(1,7,0)`, `(2,6,0)`, `(3,5,0)`. THM-2140 supplies one-blocker
   depth/polar invoices. THM-2148/2168 classify the three-target Fano exception,
-  force top-two `13`-adic depth majorization, and reduce guard-line incidence to
-  `(0,0),(0,1),(4,3),(5,3)`; the scalar `4+3/5+3` tails remain open.
+  force top-two `13`-adic depth and one daughter-free common exact blocker pair,
+  and leave guard-line `(0,0),(0,1),(4,3),(5,3)`; scalar tails remain open.
   THM-2121's finite joint gate still requires its Toeplitz/Fejer and phase sidecars.
 - **PROVED relative decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   lifts bounded scalar relations; `H=2^19` clears recorded margins.
@@ -177,16 +177,17 @@ is the proved carrier that reduces each fixed bad-denominator/owner fiber to
 labelled primitive packets and one coprime interval. It makes the terminal
 exact and finite; it does not prove that every surviving interval is empty.
 
-Orthogonally, THM-2144/2164 force two height-`<=105` relations and THM-2169 gives height-`1247` relations on every deletion. THM-2167 has at most `2,924,250` sign-sharp carry-owner states; THM-2171 repairs order/distinctness/primitivity with ordered cap `5,430,750`.
-THM-2174 shows why this still fails: aligned finite windows preserve bounded-denominator danger clutters, but endpoint current `C_r/W` retains scale. THM-2178 forces a third bounded relation unless the known plane has a support-`<=3` digit mod `14`.
-THM-2145/2166 give every defect-six split a bounded crossing relation. THM-2179
-adds a stronger-`3/41` exit or `41`-unit packet at defect six (height `180`)
-and above (height `140`); these are forks, not LRC closure.
-[THM-2182](../01-canon/theorems/THM-2182-endpoint-grid-product-and-tail-overlap-sidecar.md)
-closes every endpoint-aligned `7+6` row by exact product and `1/(49e_2)`;
-THM-2184 extends this to every fixed arbitrary-residue `7+6` affine ray for
-large scale through the full joint two-torus continuation profile. Supplying
-one uniform affine-ray decomposition for the unrestricted residual is open.
+Orthogonally, THM-2144/2164/2167 give height-`29/105` independent relations,
+at most `208875` carry pairs, and `2,924,250` carry-owner states; THM-2171
+repairs order/distinctness with cap `5,430,750`, while THM-2169 puts every
+deletion on a height-`1247` plane. THM-2174 isolates the exact danger clutter,
+fixed-window pump, and scale-sensitive endpoint current; THM-2178 forces a
+third bounded relation unless the known plane has a support-`<=3` digit mod
+`14`. THM-2168 eliminates the transverse and scalar-`4+3` parts of `(3,5,0)`,
+leaving only scalar `5+3`. THM-2145/2166/2179 give defect-six and `41`-unit
+forks. THM-2182 closes endpoint-aligned `7+6` rows, and THM-2184 closes every
+fixed arbitrary-residue affine ray at large scale; a uniform decomposition
+of the unrestricted residual is open.
 
 ### Independent routes that remain live
 
@@ -404,8 +405,12 @@ into tournament operation laws and LRC residue packets.
 - **Planar source fibers:** THM-2063/2071 close affine/quadratic pencil members;
   THM-2084/2110/2118 close cubics; THM-2102/2113 close power-free top faces;
   THM-2127--2136 reduce arbitrary tails to coarsened-power/short Newton edges.
-  THM-2129's quartic square and terminal short edges remain.
-- MISTAKE-228/229 block the old atlas; `JC(2)` and `DC(2)` remain open.
+  THM-2158/2180 reduce the quartic pole to
+  `V|(4gamma-(beta/V)^2)`; THM-2181 compresses exact square prefixes and closes
+  every monic depressed polynomial quartic. A terminal monicization step is
+  still needed even after the congruence.
+- MISTAKE-228/229 block the old atlas and NC2/GMC chain. `JC(2)` and `DC(2)`
+  remain open; these are source-fiber gates, not generic cover-degree results.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 

@@ -1,6 +1,7 @@
 # Dyadic tail character versus GMC orbit incidence and JC pole descent
 
-**Status:** proved mechanism comparison and scoped negative transfer audit.
+**Status:** proved mechanism comparison, stratified-completion transfer, and
+scoped negative audits.
 The fair-extraction theorem is [THM-2160](../01-canon/theorems/THM-2160-dyadic-checksum-extracts-a-fair-bit-under-the-critical-run-deadline.md).
 The GMC and Jacobian conclusions below identify what that mechanism preserves
 and loses; they are not new implications between the three problems.
@@ -30,10 +31,24 @@ depends on the sidecar `j`; the checksum alone does not determine the proof.
 At total weight `h`, the two remaining words `0^h1^h` and `1^h0^h` have
 opposite checksums.
 
-The one-flip improvement has a different cause. Position `h` has coefficient
-zero in `Z/hZ`, so the checksum ignores the last tail bit. That bit is read
-only when it is itself the first change. Thus the sharper deadline is a
-kernel-coordinate fact, not a stronger cancellation estimate.
+The checksum's one-flip improvement has a different cause. Position `h` has
+coefficient zero in `Z/hZ`, so it globally ignores the last tail bit.
+THM-2160 proves that a composition-exact shell coloring cannot globally ignore
+two fixed tail coordinates: its signed layer enumerator would have a double
+root at `-1`, while the required endpoint polynomial has a simple root.
+
+The faster construction escapes this no-go by **stratified obliviousness**.
+Writing `h=2t` and relative tail `z`, it decides the exact-`n=h` stratum
+`z_1=1` from only
+
+```text
+z_2+...+z_t mod 2,
+```
+
+then completes each Hamming layer on `z_1=0` by its exact signed binomial
+defect. It stops at `3h/2` on the dyadic boundary, and a weight-`h-1`
+obstruction proves that this half-tail use is shell-optimal. Thus the sample
+`00001` needs only flip six, not flips six and seven.
 
 The reusable object is therefore an affine cyclic cocycle on fixed-composition
 shells:
@@ -46,6 +61,9 @@ Hamming shell --rotation--> Hamming shell
 
 Exchangeability makes all atoms in a shell equiprobable. Without that
 constant-weight property, the same bijection need not preserve the target.
+The stronger lesson is that a quotient may ignore many coordinates on one
+stratum only if a complementary stratum retains enough information to pay
+the exact defect.
 
 ## 2. GMC: the faithful generalization is incidence, not pairing
 
@@ -76,6 +94,15 @@ and the three weights sum to zero around a three-cycle. No two are negatives
 of one another, and an odd three-element root set has no fixed-point-free
 involution. Any proposed universal pair cancellation therefore fails before
 the analytic or t-adic packet-selection step.
+
+The exact group-theoretic boundary is simple. For a transitive `G`-set
+`G/H` and a sign character `chi:G->{+/-1}`, a `chi`-equivariant bicoloring
+exists exactly when `H subset ker(chi)`: the color of `gH` must be
+`chi(g)` times the base color, and this is well-defined precisely under that
+stabilizer condition. When it exists, it is balanced. Dyadic coin rotations
+satisfy the criterion on their relevant orbits. For `X^3-2`,
+`G=S_3`, `H=S_2`, and the sign character is nontrivial on `H`, so even the
+abstract coloring is obstructed.
 
 The correct replacement is already formalized in
 [`GMC2RootPacketAlgebra.lean`](../04-computation/lean/TournamentH7/TournamentH7/GMC2RootPacketAlgebra.lean):
@@ -124,27 +151,38 @@ H_0=V z^2+(beta/(2V))z+(4 gamma V^2-beta^2)/(8V^3).
 
 The deck involution fixes the entire base fraction field. Hence invariance
 cannot imply polynomial regularity: for any nonunit `V`, the fixed element
-`1/V` is not in `C[x]`. The exact missing sidecar is the valuation vector
+`1/V` is not in `C[x]`. The apparent two-coordinate valuation sidecar
+actually compresses to the single effective divisor
 
 ```text
-nu_pi(beta)-nu_pi(V),
-nu_pi(4 gamma V^2-beta^2)-3nu_pi(V)
+sum_pi max(0,
+  3nu_pi(V)-nu_pi(4 gamma V^2-beta^2))[pi].
 ```
 
-at every irreducible `pi|V`.
+The cubic congruence automatically forces `V|beta` in the UFD `C[x]`, and
+this divisor is invariant under polynomial fibre translations. THM-2180
+goes further in the reduced Keller branch: the normalized hostile face
+`(Z-1)^3(Z+3)` proves `V|beta` directly, leaving only
 
-The hostile quartic is already sharp:
+```text
+V divides 4gamma-(beta/V)^2.
+```
+
+The generic hostile quartic is already sharp for this last pole:
 
 ```text
 P=x^2 z^4+x z^3,
 H_0=xz^2+z/2-1/(8x).
 ```
 
-It passes the first divisibility and is deck invariant, while the constant
+It has polynomial linear coefficient and is deck invariant, while the constant
 coefficient retains a finite pole. Thus the coin's output-toggling character
 has no analogue on the live JC obstruction: the pole lies in the deck's
-trivial representation. A useful future operation must lower or exclude the
-two valuation defects, not apply the involution again.
+trivial representation. THM-2181 compresses the exact square prefix and closes
+the already monic depressed case, but a polynomial root with leading term
+`Vz^2` still needs a terminal monicization or quadratic-member lemma. The
+useful future operation must first lower or exclude the remaining pole divisor,
+not apply the involution again.
 
 The typed ledger is:
 
@@ -153,11 +191,59 @@ coin checksum -> quartic deck:
 map: character parity suggests even/odd decomposition only;
 preserved predicate: fraction-field descent of deck-invariant expressions;
 destroyed coordinate: finite-prime valuation and polynomial integrality;
-restoring sidecar: the two local divisibility defects above;
+restoring sidecar: the single translation-invariant pole divisor above;
 decisive hostile test: x^2 z^4+x z^3.
 ```
 
-## 4. Research consequence
+## 4. LRC: stratified completion becomes phase-danger geometry
+
+THM-2167's good-prime digit equation also cuts each unrestricted layer into
+equal affine fibres of size `q^11`. That superficial resemblance to a Hamming
+shell is real but insufficient: lonely-runner success is not exchangeable
+inside one carry fibre. THM-2174 exhibits millions of primitive distinct rows
+on one carry-owner path realizing every divisor-mask target for the original
+row and its single deletions.
+
+The faithful finite-denominator quotient is the **phase-danger clutter**
+
+```text
+Min_subset{{i:14|a v_i|_Q<Q}:a in (Z/QZ)^*}.
+```
+
+At `Q<=14` it collapses to the divisor mask. At `Q=25`, aligned two-digit
+words matter and every separate zero-digit mask can agree while exact phase
+success differs.
+
+Here the coin's stratified completion suggests the right positive move, not a
+false equivalence. A repeated radix state may ignore an arbitrarily long
+middle block on the stratum where its two boundary `h`-digit windows agree;
+that pump preserves every denominator dividing `q^h`. The complementary
+unbounded stratum must pay an endpoint-current defect. THM-2162/2174 make
+that payment exact:
+
+```text
+sum [H(Wr)-H(Wl)]=6W mu/7,
+W<=K/(7mu)
+```
+
+for a positive-mass deletion core extended to a zero-safe row.
+
+Thus the LRC analogue of the coin theorem is not a global involution. It is a
+two-lane carrier:
+
+```text
+bounded phase depth -> aligned digit-window completion;
+unbounded phase scale -> signed endpoint current.
+```
+
+The divisor masks and danger clutters are hypergraphs under deletion
+containment. Forcing them into a tournament would lose the relevant arity;
+THM-2168 instead passes to the generated character lattice and uses the
+labelled blocker incidence graph. That transverse quotient eliminates the
+all-independent and scalar-`4+3` three-blocker lanes; the truly rank-one
+scalar `5+3` tail is exactly where the quotient loses dimension.
+
+## 5. Research consequence
 
 The puzzle contributes a useful diagnostic rather than a new cross-problem
 theorem:
@@ -167,6 +253,6 @@ theorem:
 3. ask whether weights are constant, equivariant, or valuation-sensitive;
 4. locate any ignored coordinate as the kernel of an explicit observable.
 
-For GMC the answer is full orbit incidence, already formalized. For the
-quartic Jacobian branch the ignored coordinate is not harmless: it is exactly
-the finite-pole valuation sidecar still missing from descent.
+For GMC the answer is full orbit incidence, already formalized. For LRC it is
+the danger clutter plus endpoint current. For the quartic Jacobian branch it
+is the one translation-invariant finite-pole divisor.

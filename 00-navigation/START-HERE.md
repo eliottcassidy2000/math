@@ -63,8 +63,10 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300
     is the exact new counterexample. THM-2063/2071 close linear/quadratic source
     fibers; THM-2084 supplies the cubic Faber gate, and THM-2118/2102 close every
-    cubic source fiber. THM-2127 closes two proper-power subclasses; THM-2129
-    leaves one balanced quartic square. General square-face descent remains;
+    cubic source fiber. THM-2158 reduces quartic regularity to one
+    translation-invariant pole divisor; THM-2180 forces its linear coefficient
+    regular in the twice-odd Keller branch, and THM-2181 closes every already
+    monic depressed polynomial quartic. The remaining pole congruence is open;
     none is a generic-cover, Jelonek, VC(4), or full planar classification.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
@@ -111,23 +113,25 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     all-depth scalar closure. THM-2139/2141 close profiles `(1,5,2)` and
     `(2,5,1)`; the exact fivefold residual is `(1,6,1)`, `(1,7,0)`, `(2,6,0)`,
     `(3,5,0)`. THM-2140 gives depth/polar invoices; THM-2148/2168 give the
-    three-blocker Fano classification, top-two depth majorization, and the still-open scalar `4+3/5+3` tails. THM-2144/2164/2167 force two height-`<=105` relations and an adaptive rank-two radix carrier; THM-2169 bounds a relation on every deletion. THM-2166 compresses defect six to carry `<=708`, while THM-2146/2161 expose the covariance/adaptive-scale obstruction at defect at least seven.
-16. **Use the native operation carrier, not shared syntax.**
-    [THM-2176](../01-canon/theorems/THM-2176-gordian-continuation-profile-and-interaction-cocycle.md)
-    makes the connected-sum continuation profile universal and exposes a
-    relative-chirality sidecar; [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md)
-    refutes Goemans' cost conjecture through a symmetric conflict graph, not a
-    tournament. MISTAKE-230--235 forbid syntax-only LRC/GMC/modular bridges.
+    Fano classification and top-two depth majorization; THM-2168 now eliminates
+    its transverse and scalar-`4+3` lanes, leaving only scalar `5+3`.
+    THM-2167/2171 give `208875` carry pairs and ordered cap `5430750`;
+    THM-2169 gives deletion height `1247`, while THM-2174 isolates phase
+    windows/current. THM-2178/2179 and THM-2182/2184 add relation and affine-ray
+    forks; the unrestricted phase decomposition and full theorem remain open.
+16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
+    the knot continuation cocycle; THM-2177 refutes Goemans' cost conjecture
+    through a conflict graph. MISTAKE-230--235 forbid syntax-only bridges.
 
 ## Where to go by topic
 
 | Topic | Read first | Then use |
 |---|---|---|
-| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2168; preserve terminal address/owner/guard/mod-seven-fiber sidecars |
+| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2174; preserve carry/owner/tie, danger-clutter, endpoint-current, and transverse Plücker sidecars |
 | LRC / Frobenius wildcard | [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) | THM-2041 packets; keep seed and pointwise exit explicit |
 | LRC literature | [`CORE-PAPERS.md#lonely-runner-conjecture`](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [`LRC-TECHNIQUE-INDEX.md`](LRC-TECHNIQUE-INDEX.md), source paper |
 | NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2101/2111, formal interfaces, guardrails |
-| Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102/2118/2127, HYP-8905 |
+| Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102/2118/2158/2180/2181 |
 | Tournaments | [`CURRENT-FRONTIER.md#tournaments`](CURRENT-FRONTIER.md#tournaments) | [`TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md`](TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md), [`THE-ZOO.md`](THE-ZOO.md) with its freshness banner |
 | Integer sequences | [`CURRENT-FRONTIER.md#integer-sequences`](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005 and their frozen outputs |
 | Broad portfolio | [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md) | THM-2176/2177; [`PROBLEM-ATLAS-2026-07-20.md`](PROBLEM-ATLAS-2026-07-20.md) only as historical provenance |
@@ -137,17 +141,11 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 ## Before promoting a result
 
-- Search the exact statement, not only the method vocabulary.
-- Read [`ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md) and recent
-  matching `MISTAKE-*` entries.
-- State scope, quantifiers, logical direction, mechanism, boundary, dependency,
-  and what the result does **not** prove.
-- For a connection, name the map, preserved predicate, information loss,
-  sidecar, and decisive test.
-- For computation, freeze universe, filters, controls, command, output, and
-  code/output hashes where practical.
-- For identifiers, check filename, frontmatter, indexes, and remote history;
-  cite ID plus slug because legacy collisions exist.
+- Search the exact statement and matching `MISTAKE-*`; read [`ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
+- State scope, quantifiers, direction, mechanism, boundary, dependencies, and non-consequences.
+- For a connection, name the map, preserved predicate, loss, sidecar, and decisive test.
+- For computation, freeze universe, filters, controls, command, output, and hashes where practical.
+- Check identifiers against filenames, frontmatter, indexes, and remote history; cite ID plus slug.
 
 ## Maintaining this brief
 
