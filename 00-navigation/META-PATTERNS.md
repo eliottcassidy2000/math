@@ -25,12 +25,12 @@
 **Counterindication:** not when scale is fixed, aggregation destroys the target, or the gain is only ambient. Require a proved seed and retain a slope/current sidecar when the target is a distinguished primitive line.
 **Evidence:** THM-2022 (face then finite place), THM-2159/2165 (spectral quantum then exponent), THM-2162/2163/2166 (current/packet then scale), THM-2193/2298 (missing-facet floors and hostile placement audits), and THM-2160 (Pascal completion).
 
-## Discretize phase on the native global boundary atlas
+## Discretize phase on boundary atlas
 
-**Trigger / action:** when local components have arbitrary `U(1)` phase but global endpoints lie in a finite algebraic atlas, rewrite the coefficient as an oriented current and expand extremal phases over the field of lower phases.
-**Mechanism:** the atlas turns continuous freedom into finitely many cyclotomic or monomial coordinates, so cancellation kills each coordinate.
-**Counterindication:** separation is not nonvanishing; arbitrary cuts lie outside the atlas and a uniform comb can cancel every current. Keep color, amplitude, or owner data.
-**Evidence:** THM-2022 (whole lowest-face preservation), THM-2303/2304 (component phase to cyclotomic endpoint currents), and THM-2299 (the arbitrary-cut hostile boundary).
+**Trigger / action:** if phases have algebraic endpoints, rewrite coefficients as currents over the lower-phase field.
+**Mechanism:** finite cyclotomic/monomial coordinates make cancellation coordinatewise.
+**Counterindication:** not a nonvanishing proof; arbitrary cuts and uniform-comb cancellation require color/amplitude/owner.
+**Evidence:** THM-2022 preserves the lowest face; THM-2303/2304 extract endpoint currents; THM-2299 gives the hostile cut.
 
 ## Search the statement before the method
 
