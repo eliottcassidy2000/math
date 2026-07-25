@@ -1,0 +1,21 @@
+scope=FINITE-EXACT arithmetic; universal analysis remains theorem-side
+endpoint_atoms_per_R<=2R
+centered_lift_windows=mod13:13R-1,mod7:7R-1
+vandermonde_exact_cases=15 radii=1..5 starts=(-R,0,R+1)
+homometric_A=(0, 1, 2, 6, 8, 11)
+homometric_B=(0, 1, 6, 7, 9, 11)
+homometric_difference_signature=((-11, 1), (-10, 1), (-9, 1), (-8, 1), (-7, 1), (-6, 2), (-5, 2), (-4, 1), (-3, 1), (-2, 2), (-1, 2), (0, 6), (1, 2), (2, 2), (3, 1), (4, 1), (5, 2), (6, 2), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1))
+homometric_translate_or_reflection=False
+proper_owner_arc_table=((1, '1/7', '6/7'), (2, '2/7', '5/7'), (3, '3/7', '4/7'), (4, '4/7', '3/7'), (5, '5/7', '2/7'), (6, '6/7', '1/7'))
+hostile_multiplier_boundary=7
+hostile_interval=[-1/(2d),1/(2d)) scaled_interval=[-1/2,1/2)
+hostile_exact_sample_checks=4176 d=7..64
+atlas_bound=757 oriented=3643 unordered=1822
+owner_multiplier_le_6=1372 histogram=(757, 189, 168, 95, 121, 42)
+owner_multiplier_le_6_and_other_7_unit=1176 histogram=(649, 162, 144, 81, 104, 36)
+cyclic_component_exhaustive=(1, 2, 3, 4, 5, 6, 7, 8) for S=1..8
+primitive_speed_ceiling=14233009024696169404573191587473930320680794956575198364055678006806827357976205356500821273826531456252902899449503310895399282827074500730156340741088127740309697466937985642005305031005306880000
+primitive_speed_ceiling_digits=197
+scalar_comb_order_bound=8895630640435105877858244742171206450425496847859498977534798754254267098735128347813013296141582160158064312155939569309624551766921562956347712963180079837693560916836241026253315644378316800000
+endpoint_lift_abs_bound=115643198325656376412157181648225683855531459022173486707952383805305472283556668521569172849840568082054836058027214401025119172969980318432520268521341037890016291918871133341293103376918118399999
+all_checks=PASS
