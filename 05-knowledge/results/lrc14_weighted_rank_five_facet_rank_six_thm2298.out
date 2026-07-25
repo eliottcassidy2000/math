@@ -1,0 +1,13 @@
+THM-2298 weighted rank-five facet and rank-six referee
+ordinary_local_raw_cases=11664,min=9/2401,orbit=h1:(1;0,0,1)
+guardfacet_ordinary_local_raw_cases=11664,min=36/2401,orbits=h1:(1;0,0,1)|(6;0,0,0)
+ordinaryfacet_guard_local_raw_cases=5928,min=36/2401,orbit=h1:(1;0,0,1)
+uniform_deficits=ordinary:117/31213,guardfacet:432/31213,guardtarget:432/31213
+guard_basis_floor=2160/31213,guard_extra_floor=900/31213
+uniform_rank5_safe_floor=900/31213
+Machin_pi_upper=104348/33215
+exact_Jackson_scan_N=2..264:first_accepted=264
+N263_FAIL:-7/1000000<gap<-6/1000000<0
+N264_PASS:1/10000<102/1000000<gap<103/1000000
+scalar_rank>=6_height=526,fixed_section_height=1052
+all exact checks passed

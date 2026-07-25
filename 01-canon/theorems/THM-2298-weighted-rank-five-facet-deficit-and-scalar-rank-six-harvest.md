@@ -2,20 +2,642 @@
 id: THM-2298
 title: "Weighted rank-five facet deficit and scalar rank-six harvest"
 status: >
-  RESERVED / PROOF CANDIDATE UNDER AUDIT. Intended target: adapt the
-  coefficient-uniform facet-deficit mechanism of THM-2193 to a
-  nine-coordinate rank-five torus with one guard-safe interval of mass
-  5/7 and eight ordinary safe intervals of mass 6/7, prove a uniform
-  mixed-safe floor, and use it to force six independent scalar relations
-  at an explicit finite height. Nothing in this file is yet a proved
-  result or dependency.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. For the concentric
+  nine-coordinate scalar geometry with one guard danger interval of mass
+  2/7 and eight ordinary danger intervals of mass 1/7, every saturated
+  rank-five relation lattice with nonzero coordinate characters has safe
+  Haar mass at least 900/31213. The critical union-bound cancellation is
+  repaired by exact one-facet deficits. A complete rational
+  truncated-power enumeration of the finite local core has sharp minima
+  9/2401, 36/2401, and 36/2401 in the three weighted geometries. The
+  inherited Machin/Jackson certificate first clears at N=264, proving
+  that every one of the 165 live scalar covers has relation rank at least
+  six by height 526; the fixed original-row section has rank at least six
+  by height 1052. No profile is excluded, no owner or exact atom is
+  selected, and LRC(14) remains open.
 source: codex-2026-07-25-weighted-rank-five-facet-deficit
-depends_on: []
+depends_on:
+  - THM-2193-uniform-rank-six-safe-torus-floor
+  - THM-2203-fixed-dyadic-coordinate-section-and-covector-intersection
+  - THM-2283-mixed-rank-two-safe-torus-floor-and-scalar-rank-three-harvest
+  - THM-2295-weighted-basis-safe-floor-and-scalar-rank-five-harvest
+related:
+  - THM-2190-basis-safe-floor-and-height-500-rank-six-harvest
+  - THM-2284-thirteen-adic-anchored-rank-three-plucker-lift
+  - THM-2296-prescribed-expiration-return-or-bounded-ancestry-resonance
+script: 04-computation/lrc14_weighted_rank_five_facet_rank_six_thm2298.py
+output: 05-knowledge/results/lrc14_weighted_rank_five_facet_rank_six_thm2298.out
+script_sha256: 81ad45216fdfb9de725c70c702ce14607319d7fdac21379afb1e150d02a69c9d
+output_sha256: 6423d48cada35c2e666679dc7d6e288e8e003c202d1a6683a24760f7c712b1fc
+hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2298 -- RESERVED / PROOF CANDIDATE UNDER AUDIT
+# THM-2298 -- weighted rank-five facet deficit and scalar rank six
 
-The provisional weighted basis cases, four-dimensional facet
-disintegration, bounded local-core cube, exact floor, Jackson height, and
-fixed-section lift are being written and independently hostile-audited.
-Until promotion, this file is not a proved dependency.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
+
+THM-2295 retains a rational coordinate basis and union-bounds only the
+extra characters. At relation rank five there are four basis coordinates
+and five extras. The weighted union bound is then exactly critical:
+
+```text
+guard in basis:
+  (5/7)(6/7)^3=5(1/7)(6/7)^3;
+
+guard extra:
+  (6/7)^4=(2/7)(6/7)^3+4(1/7)(6/7)^3.              (1)
+```
+
+THM-2193 repairs the analogous uniform cancellation by measuring what is
+lost when a danger character is restricted to one danger facet of the
+basis-safe box. Here the concentric scalar intervals and the unequal guard
+width make those facet deficits much larger than an isotropic cube
+certificate. Their finite arithmetic core can be evaluated exactly.
+
+## 1. Concentric mixed scalar geometry
+
+On `R/Z`, put
+
+```text
+I_0={x:||x||<1/7},              J_0=(R/Z) minus I_0,
+
+I_i={x:||x||<1/14},             J_i=(R/Z) minus I_i,
+                                  1<=i<=8.           (2)
+```
+
+Thus
+
+```text
+p_0=measure(I_0)=2/7,           q_0=measure(J_0)=5/7,
+
+p=measure(I_i)=1/7,             q=measure(J_i)=6/7. (3)
+```
+
+Let
+
+```text
+w=(w_0,...,w_8) in Z^9,         w_i!=0,
+
+Lambda(w)={m in Z^9:m.w=0}.                          (4)
+```
+
+For a saturated rank-five lattice
+
+```text
+L subset Lambda(w),                                  (5)
+```
+
+write
+
+```text
+K_L={x in (R/Z)^9:l.x=0 mod 1 for every l in L}.     (6)
+```
+
+The main safe-floor statement is
+
+> **Weighted rank-five facet theorem.**
+>
+> ```text
+> measure_(K_L){
+>   x_0 in J_0 and x_i in J_i for 1<=i<=8
+> }
+> >=900/31213.                                      (7)
+> ```
+
+The coordinate characters are nonzero on `K_L`: if `e_i` belonged to
+`L subset Lambda(w)`, then `w_i=0`, contrary to (4).
+
+The concentric placement in (2) is part of the theorem. The masses in (3)
+alone are insufficient. On a four-torus, take four ordinary basis
+characters and make all five extra characters equal to the first basis
+character. Translate the one length-`2/7` and four length-`1/7` extra
+danger arcs so that they partition that basis character's length-`6/7`
+safe interval. Every coordinate character is nonzero, but the mixed safe
+box is empty. Thus independently translated arcs destroy both (7) and the
+parity-centre reduction below.
+
+## 2. Coordinate cover and the exact facet identity
+
+The free character lattice
+
+```text
+X=Z^9/L                                               (8)
+```
+
+has rank four and is generated by the nine coordinate classes. Choose
+four of those classes as a rational basis. As in THM-2190 and THM-2193,
+their finite-index span gives a finite Haar-preserving cover
+
+```text
+rho:(R/Z)^4 -> K_L                                   (9)
+```
+
+on which the basis coordinates and five extras pull back as
+
+```text
+D y_1,...,D y_4,
+
+a_i.y,                 a_i in Z^4 minus {0}.         (10)
+```
+
+Let `B` be the event that all four basis coordinates are safe. For an
+extra coordinate `i`, let
+
+```text
+A_i={y:a_i.y lies in its danger interval}.           (11)
+```
+
+Choose a basis coordinate `j` with `(a_i)_j!=0` and let `C_j` impose the
+safe conditions on the other three basis coordinates, but no condition
+on coordinate `j`. Haar integration in `y_j` gives
+
+```text
+measure(A_i intersection C_j)
+ =p_i product_(k!=j) q_k,                            (12)
+```
+
+where `p_i` is the target danger mass and the `q_k` are the three retained
+basis-safe masses.
+
+Define the facet deficit
+
+```text
+Delta_i(j)
+ =measure{
+    a_i.y is target-danger,
+    D y_j is basis-danger,
+    D y_k is basis-safe for k!=j
+  }.                                                  (13)
+```
+
+Up to null endpoints,
+
+```text
+measure(A_i intersection B)
+ =p_i product_(k!=j)q_k-Delta_i(j).                  (14)
+```
+
+No independence among the five extra characters is asserted.
+
+## 3. Exact disintegration of a weighted facet
+
+Fix one extra vector `a`, its chosen nonzero basis coordinate `j`, and put
+
+```text
+g=gcd(D,a_1,a_2,a_3,a_4),
+
+h=D/g,                 b=a/g.                        (15)
+```
+
+Then
+
+```text
+gcd(h,b_1,b_2,b_3,b_4)=1,       b_j!=0.              (16)
+```
+
+For `z=D y mod 1`, the fibre representatives are
+
+```text
+y=(m+z)/D,             m in (Z/DZ)^4,                (17)
+```
+
+and
+
+```text
+a.y=(b.m+b.z)/h mod 1.                               (18)
+```
+
+The residue map `m -> b.m mod h` is surjective. For a target danger
+radius `t in {1/14,1/7}`, define
+
+```text
+N_(h,t)(u)
+ =#{r in Z/hZ:||(r+u)/h||<t}.                        (19)
+```
+
+Let `R_j` be the four-dimensional `z`-box with coordinate `j` in its
+basis danger interval and the other three coordinates in their basis-safe
+intervals. Exact fibre counting gives
+
+```text
+Delta_i(j)
+ =integral_(R_j) N_(h,t)(b.z)/h dz.                  (20)
+```
+
+This identity keeps the target type, facet type, and coefficient
+arithmetic separate.
+
+## 4. The strong residue and slicing regimes
+
+First suppose the target is ordinary, so `t=1/14`.
+
+If `h>=7`, then almost everywhere
+
+```text
+N_(h,1/14)(u)>=floor(h/7),
+
+floor(h/7)/h>=1/13.                                  (21)
+```
+
+Thus
+
+```text
+ordinary facet -> ordinary target:
+  Delta>=p q^3/13=216/31213;
+
+guard facet -> ordinary target:
+  Delta>=p_0 q^3/13=432/31213.                       (22)
+```
+
+Now let `1<=h<=6` and
+
+```text
+B_0=max_k |b_k|>=7.                                  (23)
+```
+
+Slice in a coordinate attaining `B_0`. A real interval of length
+`lambda` contains `floor(B_0 lambda)` full coefficient periods, and the
+ordinary target occupies length `h/7` in every period. After the factor
+`1/h` in (20), use
+
+```text
+floor(B_0/7)/B_0>=1/13,
+
+floor(2B_0/7)/B_0>=2/13,
+
+floor(6B_0/7)/B_0>=6/13.                             (24)
+```
+
+The middle inequality is checked directly at `B_0=7`; for `B_0>=8` it
+follows from `floor(x)>=x-1`. According as the slicing coordinate is the
+facet coordinate or one of the three ordinary-safe coordinates, (24)
+again gives exactly the two bounds in (22).
+
+For a guard target, `t=1/7`. If `h>=4`, then
+
+```text
+N_(h,1/7)(u)>=floor(2h/7),
+
+floor(2h/7)/h>=1/6.                                  (25)
+```
+
+The last inequality is direct for `h=4,5,6`; for `h=7s+r`,
+`0<=r<=6`, it is equivalent to
+`5s+6 floor(2r/7)-r>=0`.
+
+On an ordinary facet this gives
+
+```text
+Delta>=p q^3/6=36/2401.                              (26)
+```
+
+If `1<=h<=3` and `B_0>=7`, the target occupies length `2h/7` in every
+coefficient period. The first and third inequalities in (24), with this
+factor two, give
+
+```text
+ordinary facet -> guard target:
+  Delta>=p_0 q^3/13=432/31213.                       (27)
+```
+
+## 5. Complete exact local core
+
+It remains to treat
+
+```text
+1<=h<=6,          max_k |b_k|<=6                    (28)
+```
+
+for ordinary targets, and `1<=h<=3` for a guard target. This is a finite
+rational polytope problem.
+
+After centring the facet box, let its coordinate radii be
+
+```text
+ordinary facet: (1/14,3/7,3/7,3/7),
+
+guard facet:    (1/7, 3/7,3/7,3/7).                 (29)
+```
+
+Sign changes do not alter the calculation. The facet coordinate is
+centred at zero, while the three safe coordinates are centred at `1/2`;
+replacing a safe coefficient `c` by `-c` changes `c/2` by an integer
+modulo one. The three safe coordinates may also be permuted. Hence a
+complete list consists of
+
+```text
+1<=h<=6,
+1<=a=|b_j|<=6,
+0<=c_1<=c_2<=c_3<=6,
+gcd(h,a,c_1,c_2,c_3)=1.                              (30)
+```
+
+The companion nevertheless loops over all raw absolute triples before
+using the permutation cache.
+
+For completeness, here is the exact volume formula used by the referee.
+Let `r_k` be the radii in (29), let
+
+```text
+W_k=2|b_k|r_k
+```
+
+for the nonzero coefficients, and let
+
+```text
+epsilon=(c_1+c_2+c_3) mod 2,
+
+offset=epsilon/2-sum_k |b_k|r_k.                     (31)
+```
+
+For active dimension `d`, define the truncated-power box CDF
+
+```text
+F_W(x)
+ =1/d! sum_(S subset {1,...,d})
+    (-1)^|S| (x-sum_(k in S)W_k)_+^d.               (32)
+```
+
+Put `T=h/14` for an ordinary target and `T=h/7` for a guard target.
+After the Jacobian `product |b_k|^(-1)` and the lengths of inactive
+coordinates, the target-strip volume is the finite sum
+
+```text
+sum_(n in Z)[
+  F_W(n+T-offset)-F_W(n-T-offset)
+].                                                    (33)
+```
+
+All inputs in (33) are rational. The raw exhaustive counts and minima are
+
+```text
+geometry                           raw cases     minimum
+
+ordinary facet -> ordinary target   11664        9/2401
+
+guard facet -> ordinary target      11664       36/2401
+
+ordinary facet -> guard target       5928       36/2401. (34)
+```
+
+The first and third minima occur, up to sign and permutation, at
+
+```text
+h=1,       (|b_j|;|b_safe|)=(1;0,0,1).              (35)
+```
+
+The guard-facet minimum has the additional orbit
+
+```text
+h=1,       (|b_j|;|b_safe|)=(6;0,0,0).              (36)
+```
+
+Combining (22), (26), (27), and (34) gives the uniform facet deficits
+
+```text
+delta_OO>=min(9/2401,216/31213)
+         =117/31213,
+
+delta_GO>=min(36/2401,432/31213)
+         =432/31213,
+
+delta_OG>=min(36/2401,432/31213)
+         =432/31213.                                 (37)
+```
+
+Here the first letter denotes the basis facet type and the second the
+target type: `O` is ordinary and `G` is guard.
+
+## 6. The two critical weighted ledgers
+
+### 6.1 The guard belongs to the basis
+
+The four-coordinate basis-safe mass is
+
+```text
+measure(B)=q_0 q^3=1080/2401.                        (38)
+```
+
+All five extras are ordinary. Let `s` be the number whose pullback has a
+nonzero coefficient on the guard basis coordinate.
+
+For those `s` extras, choose the guard facet in (14). Each baseline costs
+`p q^3=216/2401` and returns at least `delta_GO`. For the remaining
+`5-s`, choose any nonzero ordinary basis coefficient. Their smaller
+baseline costs only
+
+```text
+p q_0 q^2=180/2401.                                  (39)
+```
+
+Discarding their nonnegative deficits, the union bound and (37) give
+
+```text
+measure_(K_L)(Safe_mix)
+ >=1080/2401
+   -s(216/2401)
+   -(5-s)(180/2401)
+   +s(432/31213)
+
+ =(2340-36s)/31213
+ >=2160/31213.                                      (40)
+```
+
+The minimum occurs at the critical value `s=5`.
+
+### 6.2 The guard is an extra coordinate
+
+Now all four basis coordinates are ordinary:
+
+```text
+measure(B)=q^4=1296/2401.                            (41)
+```
+
+The four ordinary extras have total baseline `4p q^3`; the guard extra
+has baseline `p_0q^3`. These sum exactly to (41). Their five deficits
+survive:
+
+```text
+measure_(K_L)(Safe_mix)
+ >=4 delta_OO+delta_OG
+
+ >=4(117/31213)+432/31213
+
+ =900/31213.                                        (42)
+```
+
+Equations (40) and (42) prove (7).
+
+## 7. Six bounded scalar relations
+
+For `H>=0`, put
+
+```text
+W_H^*(w)
+ =span_Q(Lambda(w) intersection [-H,H]^9).           (43)
+```
+
+Assume the concentric mixed safe event on the scalar line is null. Suppose
+for contradiction that
+
+```text
+r=dim_Q W_526^*(w)<=5.                               (44)
+```
+
+Take the full bounded-relation lattice
+
+```text
+L=W_526^*(w) intersection Z^9.                       (45)
+```
+
+It is saturated, lies in `Lambda(w)`, and has rank `r`. If `r<=4`,
+THM-2295 gives the stronger floor
+
+```text
+1296/16807>900/31213.                                (46)
+```
+
+If `r=5`, use (7). Thus `900/31213` is valid in every case in (44).
+
+Use THM-2283 and THM-2295's normalized squared-Fejer approximants at
+
+```text
+N=264,          H=2N-2=526.                          (47)
+```
+
+Every Fourier frequency lies in `[-526,526]^9`. Because (45) is the full
+bounded-relation lattice, the complete line and `K_L` survivor sets agree
+exactly, just as in THM-2295.
+
+Each of the two nine-factor telescopes costs at most `9 eta_264`. The null
+line event and the torus floor would therefore imply
+
+```text
+900/31213<=18 eta_264.                               (48)
+```
+
+The inherited Machin certificate
+
+```text
+pi<104348/33215                                      (49)
+```
+
+and the exact odd-mode Jackson formula give the opposite strict inequality.
+The companion reconstructs the closed Jackson coefficients by convolution
+at `N=263,264`, scans every `N=2,...,264`, and verifies
+
+```text
+N=263:
+  -7/1000000
+   <900/31213-18 eta_bar_263
+   <-6/1000000<0;
+
+N=264:
+  1/10000
+   <102/1000000
+   <900/31213-18 eta_bar_264
+   <103/1000000.                                    (50)
+```
+
+Thus `264` is the first passing bandwidth for this exact cap and ledger.
+Equation (48) is impossible, so
+
+```text
+dim_Q W_526^*(w)>=6.                                 (51)
+```
+
+This applies to every one of the `165` live scalar first-depth-one
+profiles.
+
+THM-2203's fixed-section lift
+
+```text
+(x_H,x_rest) |->(2x_H,x_rest)                        (52)
+```
+
+is integral and injective. Hence the original fixed section has relation
+rank at least six by height
+
+```text
+2(526)=1052.                                         (53)
+```
+
+## 8. Scope, equality boundaries, and information loss
+
+The exact local minimum `9/2401` in (34) is a genuine boundary, not a
+rounding artifact. It comes from a two-coordinate tangent triangle at
+`h=1`. The `N=263` statement is only failure of this exact Jackson
+certificate; it is not an optimality theorem over all kernels.
+
+The improvement over THM-2295 is
+
+```text
+THM-2295: rank>=5 by scalar height 196;
+
+THM-2298: rank>=6 by scalar height 526.               (54)
+```
+
+THM-2295 remains much sharper for the first five relations. THM-2298 is
+the first mixed scalar theorem to cross the critical rank-five facet.
+
+Neither theorem chooses a useful basis. Relation rank six alone does not
+retain support, signs, a mod-13 pivot, an exact Fourier lift, a prescribed
+expiration, or owner ancestry. THM-2284, THM-2286, and THM-2296 retain
+different pieces of that missing labelled information; no proved gluing
+theorem combines them with (51).
+
+The connection and loss ledger is
+
+```text
+source:
+  THM-2193's exact facet disintegration, the concentric mixed scalar
+  intervals, and THM-2295's full-lattice Jackson comparison;
+
+target:
+  a coefficient-uniform rank-five mixed safe floor and a sixth bounded
+  scalar relation on every live profile;
+
+map:
+  split by guard-in-basis versus guard-extra, evaluate the three weighted
+  facet types, retain all five critical deficits, and compare the full
+  degree-526 survivor lattice;
+
+preserved:
+  guard/ordinary type, concentric interval centres, all nine scalar
+  labels, the complete bounded survivor set, rational rank, and the
+  fixed-section lift;
+
+destroyed:
+  the chosen relation basis, support, signs, Plucker labels, exact
+  frequency, root sheet, owner, and ancestry;
+
+hostile boundary:
+  independently translated intervals with the same masses, the
+  h=1 two-coordinate tangent minimizer, the N=263 cap failure, and
+  high-cogirth rank-six relation codes;
+
+needed sidecar:
+  a labelled pivot/owner atlas that turns one of the six rows into the
+  same exact atom seen by the prescribed-expiration resonance.           (55)
+```
+
+No scalar profile is excluded. LRC(14) remains open.
+
+## 9. Exact reproduction
+
+Run
+
+```bash
+python3 04-computation/lrc14_weighted_rank_five_facet_rank_six_thm2298.py
+python3 -O 04-computation/lrc14_weighted_rank_five_facet_rank_six_thm2298.py
+```
+
+Both executions must match
+
+```text
+05-knowledge/results/lrc14_weighted_rank_five_facet_rank_six_thm2298.out
+```
+
+byte-for-byte after LF normalization. The companion uses only integer and
+`Fraction` arithmetic, enumerates every raw absolute local tuple, and keeps
+all validity checks active under optimized Python. QED.
