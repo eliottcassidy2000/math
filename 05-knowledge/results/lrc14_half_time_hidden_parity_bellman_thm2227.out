@@ -1,0 +1,10 @@
+valuations=(0, 2, 4) bound=1086371907/5710115047 decimal=0.190253943757361 tower=916159/4826809 tower_decimal=0.189806350323785 verdict=FAIL
+valuations=(0, 2, 5) bound=541866697/5710115047 decimal=0.094895933363845 tower=895649983/10604499373 tower_decimal=0.084459430992132 verdict=PASS
+valuations=(0, 3, 4) bound=464433205/5710115047 decimal=0.081335174716665 tower=57121111/815730721 tower_decimal=0.070024469508731 verdict=PASS
+valuations=(0, 3, 5) bound=1005912252/10604499373 decimal=0.094857118343667 tower=895649983/10604499373 tower_decimal=0.084459430992132 verdict=PASS
+target=961/6930
+closed_profiles=((4, 6, 9), (4, 7, 8), (4, 7, 9), (5, 7, 10), (5, 8, 9), (5, 8, 10))
+remaining_profiles=((4, 6, 8), (5, 7, 9))
+standalone_thm2219_thm2226_scalar_ledger=452
+exact_primal_dual_vertex_parity=PASS
+status=THM2227_HALF_TIME_HIDDEN_PARITY_BELLMAN
