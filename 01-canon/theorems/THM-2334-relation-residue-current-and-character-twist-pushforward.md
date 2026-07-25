@@ -1,5 +1,5 @@
 ---
-id: THM-2333
+id: THM-2334
 title: "Relation-residue current and character-twist pushforward"
 status: RESERVED / UNPROVED EMPTY STUB. The intended target is an exact
   Abel-regularized pushforward of the marked mixed Fourier current along
@@ -17,7 +17,7 @@ related:
   - THM-2331-two-sided-septimal-address-embedding-in-marked-current
 ---
 
-# THM-2333 -- relation-residue current and character-twist pushforward
+# THM-2334 -- relation-residue current and character-twist pushforward
 
 **RESERVED / UNPROVED EMPTY STUB.**
 

@@ -9,6 +9,28 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-257 (2026-07-25, concurrent namespace audit) -- THM-2333 crossed between fetch and push
+
+- **What happened:** one session fetched `origin/main`, verified that no
+  `THM-2333` filename or YAML ID was present in the fetched tree, and reserved
+  `THM-2333-relation-residue-current-and-character-twist-pushforward.md`.
+  During the short interval before its push, earlier commit `d40de3b406`
+  landed the distinct
+  `THM-2333-abel-target-fibre-sum-landing-and-zero-fibre-boundary.md`
+  reservation. Rebasing the later reservation therefore created a duplicate
+  ID on `origin/main`.
+- **First failure:** a clean fetch-and-search reduces but does not eliminate
+  the final compare-and-swap race between concurrent reservations. A
+  successful rebase is not sufficient: the rebased tree must be searched
+  again for both the exact YAML ID and filename before pushing.
+- **Repair:** the earlier Abel target-fibre reservation keeps `THM-2333`. The
+  later relation-residue pushforward stub moved coherently to `THM-2334`
+  before receiving proof content. Neither stub is in the proved dependency
+  graph.
+- **Rule:** after every reservation rebase, rerun the namespace search on the
+  actual rebased tree. If a collision appeared, preserve the earlier remote
+  owner and renumber or delete the later reservation before push.
+
 ## MISTAKE-256 (2026-07-25, concurrent namespace audit) -- a fetched but unreplayed THM-2325 reservation was missed
 
 - **What happened:** commit `ba9d0cd284` reserved
