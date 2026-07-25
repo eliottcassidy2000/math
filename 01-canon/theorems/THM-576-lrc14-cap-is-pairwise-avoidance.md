@@ -1,9 +1,10 @@
 ---
 id: THM-576
 title: The covering caps are a pairwise avoidance probability — min meas(lonely(P)) = C(14-|P|,2)/C(14,2) for |P|<=3
-status: VERIFIED EXACT (j<=3, search over P subset {1..16}); j=2 PROVED elementarily; j=4,5 = the two binding deviation constants
+status: PROVED for j<=3; j=3 is the sharp global three-comb theorem in THM-1166. VERIFIED EXACT for j=4,5, which give the two binding deviation constants
 author: kind-pasteur-2026-06-27-S31ag
 depends_on:
+  - THM-1166
   - HYP-3090    # cap_k = C(k+1,2)/91 pattern (this is its refined, proved-for-small form)
 related:
   - HYP-3085    # mac-mini gK8 low-order moment-LP (S2 = pairwise; this IS the order-2 exactness)
@@ -46,9 +47,9 @@ with known minimizers.
   giving `1/182`; doubling by `x → 1−x` gives `1/91`. So `min meas(lonely) = 5/7 + 1/91 = 65/91 + 1/91 =
   66/91 = C(12,2)/C(14,2)`. The minimum is the **least-overlapping** comb pair (`13 ≡ −1` is the largest
   speed whose comb decouples from `1`'s). ∎
-- **j = 3:** VERIFIED EXACT (search over `P ⊆ {1..16}`), minimizer `{1,12,13}`; the order-2 inclusion–
-  exclusion closes because the triple overlap of `{1,12,13}` contributes exactly the pair-count value
-  (proof analogous to j=2, not yet written symbolically).
+- **j = 3:** PROVED globally by THM-1166 Theorem D. Every three-comb danger
+  union has measure at most `36/91`, with equality only at scaled/permuted
+  `(1,12,13)`. Hence the minimum lonely mass is `55/91`.
 - **j = 4, 5:** VERIFIED EXACT (the cap_9, cap_8 values and minimizers above).
 
 ## Why it matters

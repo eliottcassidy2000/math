@@ -1,9 +1,10 @@
 ---
 id: THM-577
-title: Closed-form forbidden-arc overlap (apex-14 threshold) ⟹ symbolic evaluation of the coverage-extremal caps cap_11=66/91 and cap_10=55/91 (closing the value half of THM-576's j=3 search-only case); the binding dip at k=8,9 is a finite computable higher-order remainder
-status: PROVED (overlap lemma: rigorous derivation + verified 0 mismatches over all 120 pairs p,q<=16; symbolic cap_11, cap_10 by assembly). The OPTIMALITY of the minimizer (that {1,12,13} attains the min) remains from THM-576's exact search; this theorem makes its VALUE symbolic.
+title: Closed-form forbidden-arc overlap (apex-14 threshold) ⟹ symbolic evaluation of the coverage-extremal caps cap_11=66/91 and cap_10=55/91; the binding dip at k=8,9 is a finite computable higher-order remainder
+status: PROVED (overlap lemma: rigorous derivation + verified 0 mismatches over all 120 pairs p,q<=16; symbolic cap_11, cap_10 by assembly). THM-1166 Theorem D now proves globally that {1,12,13}, up to scale and permutation, is the unique cap_10 minimizer.
 source: mac-mini-2026-06-27-S64
 depends_on:
+  - THM-1166
   - THM-576   # cap_k = min meas(lonely(P)) = pairwise avoidance; identifies the minimizers (by search)
   - THM-534   # the moment-LP / inclusion-exclusion frame
 related:
@@ -51,8 +52,9 @@ cap_10 = meas(lonely{1,12,13}) = 1 − 3/7 + [o(1,12)+o(1,13)+o(12,13)] − F(1,
 ```
 The triple `F(1,12,13) = 1/91 = 1/(7·13)` is the **narrowest nested arc** inside the speed-1 container
 `I_0=(−1/14,1/14)` (the speed-13 central arc, contained in the speed-12 central arc). Both caps thus have a
-**fully symbolic** value via the overlap lemma — closing the VALUE half of THM-576's `j=3` (k=10) case, which
-was previously only exact-by-search. (`cap_12=6/7`, `cap_13=1` are the trivial `j=1,0` rows.)
+**fully symbolic** value via the overlap lemma. THM-1166 Theorem D subsequently
+proves the matching global optimality and uniqueness. (`cap_12=6/7`,
+`cap_13=1` are the trivial `j=1,0` rows.)
 
 ## The binding dip (k=8,9) as a finite higher-order remainder
 Write the inclusion–exclusion as `meas(lonely(P)) = (1 − j/7) + Σ_{r≥2} O_r`, `O_r=(−1)^r Σ_{|T|=r}F(T)`.
@@ -71,8 +73,9 @@ binding rows reduce to a finite symbolic remainder, not a search.
 ## Net / what remains
 - **Symbolic VALUE of the coverage extremal: PROVED for k≥10** (cap_10..13 = `C(k+1,2)/91`, closed form),
   and the k=8,9 dips are finite computable remainders of the same closed-form overlaps.
-- **OPTIMALITY** (that the named config attains the min over all `P`) is still THM-576's exact search; the
-  symbolic optimality (a packing/spreading argument that the top-cluster minimizes the inclusion–exclusion)
-  is the remaining gap = the concentration extremality (OPEN-Q-108 / gK8 HYP-3085). The apex-14 threshold
+- **OPTIMALITY at j=3** is now global: THM-1166 Theorem D proves the named
+  configuration is the unique minimizer up to scale and permutation. The
+  remaining concentration extremality concerns the `j=4,5` binding rows
+  (OPEN-Q-108 / gK8 HYP-3085). The apex-14 threshold
   in `o(p,q)` (offset ON iff `p+q>14`) is the structural lever for that argument: overlaps grow only across
   the apex, so spreading speeds to the cluster `{1, …, 13}` extremes minimizes total overlap.

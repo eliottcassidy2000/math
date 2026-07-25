@@ -16,11 +16,16 @@ status: >
   may vary inside that tube. The zero-profile residual for a positive-measure
   core can occur only with at least seven tail constraints and is not an LRC
   7+6 obstruction. For seven-element cores inside {1,...,13}, THM-2166 gives
-  the stronger uniform cone NL>=89||r||_1.
+  the stronger uniform cone NL>=89||r||_1. The proof works unchanged for any
+  rational-grid measurable core. On THM-2168's scalar 5+3 residual this gives
+  both a uniform three-tail tube and a sharper explicit congruence terminal.
 source: codex-2026-07-24-relation-carry-spectrum
 depends_on:
-  - THM-2182-endpoint-grid-product-and-tail-overlap-sidecar
+  - THM-1166-seven-wall-fano-gcd-discrepancy
+  - THM-2137-deep-scalar-tail-boundary-complexity
   - THM-2166-hybrid-core-smoothing-low-carry-crossing
+  - THM-2168-three-target-second-depth-majorization
+  - THM-2182-endpoint-grid-product-and-tail-overlap-sidecar
 related:
   - THM-2162-signed-endpoint-cocycle-and-bv-component-split
   - THM-2174-endpoint-phase-scale-obstruction
@@ -342,6 +347,93 @@ W_i(N)=NLc_i(N)+r_i(N),       ||r(N)||_1=o(N),
 is eventually safe beside the fixed seven-core. This is an explicit
 endpoint-grid tube, not just a union of fixed affine rays. The theorem does
 not assert that an arbitrary tail admits such a simultaneous approximation.
+
+### Rational-grid cores and the scalar `5+3` terminal
+
+Nothing in the proof of (7) uses the special form of `G_E` beyond the
+cell-constancy in (9). Let `A` be any measurable subset of the circle whose
+indicator is constant almost everywhere on each `1/J` cell, and define
+
+```text
+P_(A;c,r)=integral_A Phi_(c,r)(t)dt.                 (GC.1)
+```
+
+Repeating Sections 1--2 with `1_A` in place of `1_(G_E)` gives
+
+```text
+|measure(A intersection intersection_i {t:W_i(N)t in G})
+      -P_(A;c,r)|
+ <=5||r||_1/(2NJ),       W_i(N)=NJc_i+r_i.           (GC.2)
+```
+
+Thus the continuation theorem is really a rational-grid core theorem; an
+ordinary lonely set is only its main application.
+
+Apply this to the scalar survivor in Section 9 of THM-2168. In that notation
+put
+
+```text
+A=C_H minus union_(i=1)^5 D_(q_i),
+C_H={t:||Ht||>1/7},                                  (SC.1)
+```
+
+and choose `J` divisible by `7H` and every `14q_i`. Then `1_A` is
+`1/J`-cell-constant almost everywhere, while THM-2137 gives
+
+```text
+measure(A)>=961/6930.                                (SC.2)
+```
+
+For any three-tail profile, the pointwise union bound in the `x` fibre gives
+`Phi>=4/7`. Hence
+
+```text
+P_(A;c,r)>=1922/24255,                               (SC.3)
+
+measure(A intersection intersection_(j=1)^3
+        {t:(NJc_j+r_j)t in G})>0
+whenever ||r||_1<3844NJ/121275.                      (SC.4)
+```
+
+There is a sharper terminal for the original three blockers. Write them as
+
+```text
+13s_j=Mw_j,             M=13^d,
+M=nJ+k,                 n>=1,       k in Z,          (SC.5)
+```
+
+where `d` is their minimum common 13-adic depth and the `w_j` are distinct.
+Taking `c_j=w_j` and `r_j=kw_j` in (GC.2) recovers the original
+speeds exactly. The residue is proportional, so translation in `x` makes
+the profile constant. The sharp three-comb theorem of THM-1166 supplies
+
+```text
+Phi_(w,kw)=measure(G_{w_1,w_2,w_3})>=55/91,
+P_(A;w,kw)>=961/11466.                               (SC.6)
+```
+
+Consequently the scalar `5+3` covering branch is impossible whenever
+
+```text
+|k| sum_(j=1)^3 w_j < 961nJ/28665.                   (SC.7)
+```
+
+This is an intrinsically small-quotient obstruction. Indeed, `J` is even
+while `M=13^d` is odd, so `k` is always nonzero. If
+`X=max(H,q_1,...,q_5)`, then `X>=B/6`, `J>=7X`, and the THM-2168 invoice
+`B>=(12493/35640)M` gives
+
+```text
+M/J <=213840/87451<2.446.                            (SC.8)
+```
+
+Since `sum_j w_j>=6`, for `n>=3` the left side of (SC.7) is at least
+`6(n-213840/87451)J`, which is greater than its right side. Thus only the
+neighboring grid scales `n=1,2` can satisfy (SC.7); choosing `n=1` also
+handles `M<J` through a negative residue. The terminal is not a large-`n`
+asymptotic and does not close arbitrary scalar blockers. Its preserved
+coordinate is precisely the signed quotient remainder discarded by an
+unlabelled common scale.
 
 More generally, for any tail length, if
 
