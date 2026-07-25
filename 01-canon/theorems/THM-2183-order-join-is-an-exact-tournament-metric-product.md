@@ -2,10 +2,12 @@
 id: THM-2183
 title: "Order-join is an exact product for tournament reversal distance"
 status: >
-  PROVED + VERIFIED-EXACT. For equal corresponding factor orders,
+  PROVED (all equal corresponding factor orders) + VERIFIED-EXACT
+  (all labelled factor quadruples with 1<=a,b<=3 and the n=4 quotient).
+  For equal corresponding factor orders,
   unlabeled arc-reversal distance satisfies
   d_iso(A join X,B join Y)=d_iso(A,B)+d_iso(X,Y).
-  A strict two-edge uncrossing eliminates every block-mixing bijection.
+  A strict two-vertex image-swap uncrossing eliminates every block-mixing bijection.
   Thus common order-join factors cancel metrically, fixed block-size joins
   embed Cartesian products isometrically, and no SCC or marked-cut
   hypothesis is needed. The full unlabeled tournament flip graph is still
@@ -13,6 +15,8 @@ status: >
 source: codex-2026-07-24-knot-relations
 depends_on: []
 related:
+  - THM-1390-waggly-filtration-is-a-map-graph-hierarchy
+  - THM-1400-dsat-is-the-known-diameter-and-the-halfcube-correction
   - THM-1862
   - THM-1936
   - THM-1975
@@ -27,7 +31,8 @@ hash_basis: working-tree bytes (LF)
 # THM-2183 -- order-join is an exact tournament metric product
 
 For tournaments `T,S` of the same order, define unlabeled arc-reversal
-distance by
+distance in the **unmerged `S_n` quotient** (isomorphism only, with no
+complement identification) by
 
 ```text
 d_iso(T,S)
@@ -67,6 +72,12 @@ a_0 in A,       x_0 in X,
 d=pi(a_0) in Y, e=pi(x_0) in B.                     (4)
 ```
 
+More precisely, the two crossing counts agree:
+
+```text
+k=|pi(A) intersection Y|=|pi(X) intersection B|>0. (4a)
+```
+
 Let `pi'` swap only the two images `d,e`. The pair `{a_0,x_0}` is a mismatch
 before the swap: `a_0->_P x_0`, whereas `e->_Q d`. It agrees afterward, so
 this pair saves one reversal.
@@ -101,8 +112,8 @@ z in X, pi(z) in B:   (p,q)=(1,0),
   C'-C=r-s-|r-s|<=0.                               (7)
 ```
 
-Thus `pi'` costs at least one fewer reversal than `pi`. It also removes one
-crossed pair of vertices from (4). Repeating the swap eliminates every
+Thus `pi'` costs at least one fewer reversal than `pi`. It also replaces `k`
+by `k-1` in (4a). Repeating the swap eliminates every
 block crossing while strictly decreasing the cost at each step.
 
 It follows that no optimal bijection mixes the blocks. Every block-respecting
@@ -154,7 +165,7 @@ case.
 
 ## 3. Exact negative control for knot interaction
 
-The binary exchange in (7) is a Monge law: every attempt to exploit the
+The two-vertex image swap in (7) is a Monge law: every attempt to exploit the
 unlabeled quotient by mixing the two constant-cut blocks can be locally
 improved. This is precisely what is absent from connected-sum crossing
 changes. If one retains a connected-sum sphere, the decomposition-respecting
@@ -186,7 +197,10 @@ isomorphism classes represented by masks
 are pairwise at `d_iso` distance one. They form a triangle. Since every
 partial cube is bipartite, the quotient flip graph is not a partial cube.
 Exact orbit enumeration gives four vertices and five edges for this
-four-vertex quotient.
+four-vertex quotient. That census is already recorded in
+THM-1390-waggly-filtration-is-a-map-graph-hierarchy; (13) makes its triangle
+an explicit negative control here. THM-1400 records why cubical parity does
+not survive the `S_n` quotient.
 
 This is the useful boundary:
 
@@ -196,7 +210,7 @@ each fixed order-join patch:      exact isometric product.      (14)
 ```
 
 The companion audit checks (2) for all labelled factor quadruples with
-`1<=a,b<=3` and independently reconstructs the four-vertex quotient and
+`1<=a,b<=3` and separately reconstructs the four-vertex quotient and
 triangle (13).
 
 QED.

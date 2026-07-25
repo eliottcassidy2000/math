@@ -22,7 +22,9 @@ This sidecar preserves detailed records routed compactly from
   upper bounds. It does not supply a finite complete knot invariant, a
   connected-sum congruence for `u`, or additivity after homogenization.
   THM-2176's cocycle, universal-profile theorem, and pure-bypass
-  decomposition are repo-derived consequences.
+  decomposition are repo-derived consequences. Its calibrated positive-torus,
+  `10_139`, and Baader-intermediate families are likewise pure bypass in both
+  directions; the pretzel bounds do not exclude translation catalysis.
 
 ## Brittenham--Hermiller -- *Unknotting number and connected sums: The knots 4_1 and 5_1*
 
@@ -39,7 +41,10 @@ This sidecar preserves detailed records routed compactly from
 - **Does not prove:** that the candidate trefoil partner `10_6` has
   unknotting number three; the paper explicitly retains `u(10_6) in {2,3}`.
   It does not classify symbionts or determine all composite unknotting
-  numbers.
+  numbers. THM-2176's directional audit makes the `5_1,8_2` seed pure bypass
+  in both directions and the `4_1,9_10` seed pure bypass in the figure-eight
+  direction; reverse translation catalysis is compatible with the known
+  bounds but not proved.
 
 ## Zakharov -- *An isoperimetric inequality for word overlap*
 

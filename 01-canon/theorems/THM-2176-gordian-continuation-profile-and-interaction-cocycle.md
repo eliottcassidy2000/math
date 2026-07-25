@@ -26,6 +26,8 @@ related:
   - THM-1975-the-path-cover-polynomial-is-the-refined-compositional-invariant
   - THM-2162-signed-endpoint-cocycle-and-bv-component-split
   - THM-2174-endpoint-phase-scale-obstruction
+  - THM-2182-endpoint-grid-product-and-tail-overlap-sidecar
+  - THM-2183-order-join-is-an-exact-tournament-metric-product
 external:
   - "Mark Brittenham and Susan Hermiller, Unknotting number is not additive under connected sum, arXiv:2506.24088v2."
   - "Mark Brittenham and Susan Hermiller, Unknotting number and connected sums: The knots 4_1 and 5_1, arXiv:2601.18757v1."
@@ -393,6 +395,68 @@ side at full calibrated length. It is a **geodesic bypass**, not a catalyst
 which makes one summand intrinsically cheaper. The exact value `u(X)` remains
 open in the cited paper, so (41) is a lower bound, not an exact defect.
 
+### The published symbiont atlas and the still-missing mechanism
+
+The second Brittenham--Hermiller paper supplies two further direct seeds and
+one conditional candidate.
+Applying (32)--(38), with the mirroring convention that makes the displayed
+signatures oppose, gives:
+
+| pair | certified sum data | directional verdict |
+|---|---|---|
+| `4_1,9_10` | `u=(1,3)`, `u(4_1#9_10)<=3` | `C_(9_10)(4_1)=0`; reverse `C` is zero or one |
+| `5_1,8_2` | `u=(2,2)`, `u(5_1#8_2)<=3` | `C=0` in both directions |
+| `3_1,10_6` | `u(10_6) in {2,3}`, sum at most three | conditional symbiosis only if `u(10_6)=3`; one direction has `C=0` |
+
+For `4_1,9_10`, prime decomposition supplies the nonzero lower bound and
+unknotting the figure-eight summand supplies the one-change upper bound, so
+`d_G(4_1#9_10,9_10)=1`. Thus the
+strict saving is pure bypass in the `4_1` direction, while reverse translation
+catalysis is permitted but not proved. For the oppositely signed `5_1,8_2`
+pair, signature saturates both translated side lengths at two, so the saving
+is pure bypass in both directions.
+
+The positive-torus families, the cited `10_139` examples, and the Baader
+intermediate families are also pure bypass in both directions: the additive
+1-Lipschitz invariant `tau` calibrates both summands. The pretzel family has
+only the bounds needed for strict subadditivity, so this calibration argument
+does not decide its directional `C` terms.
+
+Accordingly, the audited published examples prove many bypasses but **no
+instance with `C_y(x)>0`**. Actual connected-sum translation catalysis is a
+sharper open target than another strict-subadditivity example.
+
+The named knots appearing along the displayed shortcut sequences must not be
+silently inserted into the rooted order (26): the composite unknotting
+numbers are upper bounds, so those paths are not known to be geodesics.
+
+### The defect is exactly loss under forgetting a product marker
+
+Give `M x M` the product metric
+
+```text
+d_1((x,y),(x',y'))=d(x,x')+d(y,y').                 (42a)
+```
+
+The merge map
+
+```text
+q:M x M -> M,                 q(x,y)=x+y             (42b)
+```
+
+is 1-Lipschitz by (1). Its root-distance contraction is exactly
+
+```text
+d_1((x,y),(0,0))-d(q(x,y),q(0,0))
+  =ell(x)+ell(y)-ell(x+y)
+  =sigma(x,y).                                       (42c)
+```
+
+For knots, this is the precise abstract version of retaining the two summand
+labels or a decomposition marker and then forgetting it. THM-2183 proves that
+the analogous order-join map for tournaments is isometric on every fixed
+block-size product, so its metric quotient defect vanishes identically.
+
 ## 6. Connected-sum homogenization does not restore additivity
 
 For every `x`, the sequence
@@ -479,10 +543,18 @@ The tournament comparison is operation-specific:
 
 - under order-join, THM-1862 proves `H(A▷B)=H(A)H(B)`, so `log H` has zero
   interaction defect and its continuation profile collapses to its scalar;
+- more strongly, THM-2183 proves
+  `d_iso(A▷X,B▷Y)=d_iso(A,B)+d_iso(X,Y)`: a strict two-vertex image swap
+  eliminates every block-mixing bijection, so forgetting the displayed join
+  cut creates no metric interaction inside a fixed-size patch;
 - under cyclic substitution, scalar `H` does not compose on the verified
   finite universe of THM-1975, while its path-cover profile does there;
 - the old Reidemeister-R3 tournament analogy is only a hostile warning:
   3-cycle reversal preserves `H` at `n=4` but already fails at `n=5`.
+
+The ambient unlabeled tournament flip graph nevertheless contains a triangle
+already at four vertices and is not a partial cube. Thus the theorem is a
+local operation law, not a claim that the whole quotient metric is cubical.
 
 The general rule is therefore not "replace knots by a tournament." It is:
 
@@ -514,12 +586,43 @@ product Gordian cones must respect (29);
 every proposed cocycle table must satisfy (21).       (54)
 ```
 
+The cited seeds give a small certificate-backed dictionary
+
+```text
+D_0={U,7_1,5_1,8_2}.                                (55)
+```
+
+It separates the following mirror pairs (with signatures oriented so that
+`5_1` and `8_2` oppose):
+
+```text
+Pi_(7_1)|_{U,7_1}        =(3,6),
+Pi_(mirror 7_1)|_{U,7_1} =(3,at most 5);
+
+Pi_(5_1)|_{U,8_2}        =(2,at most 3),
+Pi_(mirror 5_1)|_{U,8_2} =(2,4);
+
+Pi_(8_2)|_{U,5_1}        =(2,at most 3),
+Pi_(mirror 8_2)|_{U,5_1} =(2,4).                    (56)
+```
+
+The same `7_1` query separates every `tau`-calibrated mirror pair in its
+published rooted cone. This dictionary is neither globally minimal nor
+complete. In particular, neither cited paper certifies a continuation which
+splits `9_10` or `10_6` from its mirror; the amphichiral knot `4_1` cannot
+split the former.
+
 For LRC, THM-2162 has already realized the legitimate common-intermediate
 transfer by retaining a whole safe core before integrating the next comb.
 THM-2174 now supplies the matching continuation-congruence warning: endpoint
 phase labels without signed magnitude preserve extensive algebraic state but
-not the target measure. The universal theorem above explains exactly what a
-successful replacement must do, but proves no new LRC(14) case by itself.
+not the target measure. THM-2182 supplies the positive whole-profile version:
+on an endpoint-aligned grid the **entire normalized tail** factors exactly,
+closing every `7+6` aligned row, while two tails with identical phase-zero
+labels, zero one-comb currents, equal marginal masses, and equal reciprocal
+sum still have different joint continuations. The universal theorem above
+explains why the joint tail law, not another marginal scalar, is the required
+sidecar.
 
 ## 9. Slack-aware propagation
 

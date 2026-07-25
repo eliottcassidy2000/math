@@ -180,6 +180,9 @@ exact and finite; it does not prove that every surviving interval is empty.
 Orthogonally, THM-2144/2164 force two height-`<=105` relations and THM-2169 gives height-`1247` relations on every deletion. THM-2167 has at most `2,924,250` sign-sharp carry-owner states; THM-2171 repairs order/distinctness/primitivity with ordered cap `5,430,750`.
 THM-2174 shows why this still fails: aligned finite windows preserve bounded-denominator danger clutters, but endpoint current `C_r/W` retains scale. THM-2178 forces a third bounded relation unless the known plane has a support-`<=3` digit mod `14`.
 THM-2145/2166 give every defect-six split a far-height-`298`, core-height-`57`, carry-`<=708` crossing relation. For defect `>=7`, THM-2179 gives a stronger-`3/41` positive floor or a body-touching height-`140`, `41`-unit packet. These are structural forks, not closure; phase/current remains.
+[THM-2182](../01-canon/theorems/THM-2182-endpoint-grid-product-and-tail-overlap-sidecar.md)
+closes every endpoint-aligned `7+6` row by exact product and `1/(49e_2)`;
+forcing such an alignment, with the joint ratio/gcd tail law intact, is open.
 
 ### Independent routes that remain live
 
@@ -297,14 +300,13 @@ design without pretending a preserver supplies the seed.
 - THM-1805 makes directed triangles the basic Vandermonde-cancellation atom.
   THM-1862/1936 make `H` and signed Rédei data multiplicative under order-join,
   while `c3` is additive.
-- THM-1880/1885 identify the transitive skew recurrence with a Chebyshev--Pell
-  frame carrying the `BS(1,2)^+` action.
-- THM-1926 factors tournament zeta over the strong core; THM-1940 expresses
-  `var(lambda^2)` through the four-vertex census.
-- THM-1965 is complete only through `n<=6`; THM-1966 proves a new independent
-  signed-Rédei coordinate at `n=7`.
-- THM-2013/2016 give cyclic temperature and the reducibility ceiling. `H`
-  remains an empirical thermometer, not a coordinate of every shell.
+- [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md)
+  makes `d_iso` exactly `l1` on fixed order-join patches by image-swap
+  uncrossing; the ambient quotient still has triangles and is not a partial cube.
+- THM-1880/1885 give the Chebyshev--Pell/`BS(1,2)^+` transitive frame.
+- THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
+- THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
+- THM-2013/2016 bound cyclic temperature/reducibility; `H` remains empirical.
 
 ### Live work and limits
 
@@ -389,27 +391,19 @@ into tournament operation laws and LRC residue packets.
 
 ## Other active portfolio
 
-- **Knots / operation-ready relations:** [THM-2176](../01-canon/theorems/THM-2176-gordian-continuation-profile-and-interaction-cocycle.md) makes `Pi_K(J)=u(K#J)` the universal connected-sum refinement and its defect a positive 2-coboundary. The `T(2,7)` mirror pair is pure geodesic bypass; one relative-chirality bit minimally repairs independent mirror quotienting on this fiber. Homogenization remains nonadditive; a finite continuation dictionary remains open.
+- **Knots / operation-ready relations:** [THM-2176](../01-canon/theorems/THM-2176-gordian-continuation-profile-and-interaction-cocycle.md) makes `Pi_K(J)=u(K#J)` universal and its defect a cone-monotone positive 2-coboundary. One relative-chirality bit minimally repairs the first mirror fiber; `{U,7_1,5_1,8_2}` separates calibrated seeds. All fully calibrated published pairs are pure bypass, so positive translation catalysis is open; homogenization remains nonadditive.
 - **Unsplittable cost flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture: a planar acyclic instance has fractional cost `58` but capacity-good integral cost at least `60`. Its carrier is the `K_3` stable-set facet; the planar `2d_max` theorem remains intact.
 - **Jacobian/Dixmier:** THM-1300/1315 verify and analyze the three-dimensional
-  Keller collision, but provenance is unsettled (MISTAKE-205) and it does not
-  decide `DC(2)`. THM-2044--2046 separate the rank-two Poisson suspension from
-  planar mates and first-order cotangent descent.
-- **Weyl boundary:** THM-2049 makes the graded Ore correction map onto and gives
-  a formal beta-adic lift. Finite polynomial termination and the unused affine
-  syzygy gauge remain decisive for `DC(2)`.
+  Keller collision, but provenance is unsettled (MISTAKE-205) and it does not decide
+  `DC(2)`; THM-2044--2046 block planar and first-order cotangent descent.
+- **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibers:** THM-2063/2071 close affine/quadratic pencil members;
-  THM-2084/2110/2118 close the cubic source-fiber stratum. THM-2102/2113 close
-  power-free top faces; THM-2127 handles arbitrary tails away from the factor-
-  initial locus and classifies affine roots. THM-2132 forces a factorwise Newton
-  chord; THM-2134 makes its edge a coarsened power or terminally short, and
-  THM-2136 scalarizes every local power with an exact Hermite compatibility budget.
-  THM-2129's quartic square, central prefixes, and terminal short edges remain.
-- MISTAKE-228/229 block the old atlas and NC2/GMC chain. `JC(2)` and `DC(2)`
-  remain open; these are source-fiber gates, not generic cover-degree results.
+  THM-2084/2110/2118 close cubics; THM-2102/2113 close power-free top faces;
+  THM-2127--2136 reduce arbitrary tails to coarsened-power/short Newton edges.
+  THM-2129's quartic square and terminal short edges remain.
+- MISTAKE-228/229 block the old atlas; `JC(2)` and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
-  three-real-Gaussian examples supersede “dimension four is sharp.” Use
-  [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md) for the full portfolio.
+  three-real-Gaussian examples supersede “dimension four is sharp.”
 
 ## Cross-domain connection discipline
 
@@ -420,7 +414,7 @@ The most reusable current bridges are not literal object identifications:
 | Whole-layer Frobenius / orbit norm | NC2 balanced face and TNC monodromy orbit | Exact finite-abelian packet preservation and uniform-incidence norms transfer; LRC still lacks the seed and exit, and `-1` in the packet stabilizer forces a signed orientation sidecar. |
 | Quotient + sidecar | spectrum/SCC/support quotients | Which lost coordinate restores the target predicate? |
 | Bulk / boundary / null | THM-2058 phase height | Strict templates occur on all large prime grids; tight support lies on finitely many level-14 pair-sum clocks; subthreshold packets vanish. |
-| Operation-response | tournament joins/support unions | Which observables add, multiply, localize, or collide? |
+| Operation-response | tournament joins/support unions | THM-2183 makes reversal distance exactly `l1` on fixed join patches; which other substitutions admit such an uncrossing? |
 | One-sided accumulation | LRC spectrum | Can qualitative isolation be made effective by finite state/pinning data? |
 | Support Dirichlet profile | integer sequences | Do tournament/LRC census supports have functional or automatic structure? |
 | Continuation congruence / min-plus kernel | Gordian connected-sum profile and THM-840/853 | Which finite sidecar is a target-preserving quotient under every named future operation? |

@@ -1,7 +1,8 @@
 ---
 source: codex-2026-07-24-knot-relations
 status: >
-  SYNTHESIS. The proved mathematical output is THM-2176. The external
+  SYNTHESIS. The proved mathematical outputs are THM-2176, THM-2182, and
+  THM-2183. The external
   transfers below are separated into cited facts, exact repo analogues,
   executable proposals, and no-go statements. No knot-to-LRC or
   knot-to-tournament equivalence is asserted.
@@ -14,6 +15,8 @@ related:
   - THM-2162
   - THM-2174
   - THM-2176
+  - THM-2182
+  - THM-2183
 ---
 
 # The Gordian object is a min-plus profile, not a tournament
@@ -55,8 +58,8 @@ substitution, while the full path-system profile does.
 | continuation profile `Pi_K(J)` | future unknotting cost | append `J` | diagrams and isotopy witnesses | split `7_1` from its mirror using continuation `7_1` |
 | defect cocycle `sigma(K,J)` | strict subadditivity | merge sums | additive one-body gauges | enforce the triple cocycle identity |
 | rooted Gordian order | membership in a minimal unknotting path | descend toward the unknot | incomparable branches | test product-cone monotonicity |
-| tournament order-join | edit response and compositional invariants | `A▷-` | block provenance under unlabeled matching | search for join-induced metric contraction |
-| LRC safe-core profile | future safe measure/truth | insert combs | scale and signed current | replay THM-2174 as a congruence failure |
+| tournament order-join | edit response and compositional invariants | `A▷-` | ambient quotient shortcuts | apply THM-2183's block-mixing uncrossing |
+| LRC safe-core profile | future safe measure/truth | insert combs | joint normalized-tail overlap | compare THM-2182's `{3,12}` and `{4,6}` tails |
 | inherited-color amplitude | whole-fiber interference | sum over perfect matchings | matching identity after scalarization | compare full amplitude with a tournament projection |
 
 ## 3. What THM-2176 changes
@@ -151,6 +154,19 @@ Connected-sum homogenization does not repair the scalar. Fekete gives a
 homogeneous limit, but signature fixes the two one-body limits at three while
 the repeated five-change certificate keeps the mirror-pair limit at most
 five.
+
+The wider published atlas sharpens the mechanism. The `5_1,8_2` seed and all
+`tau`-calibrated torus/Baader families are pure bypass in both directions.
+The `4_1,9_10` seed is pure bypass in the figure-eight direction, while its
+reverse translation term is unresolved. The candidate `3_1,10_6` seed is
+conditional on `u(10_6)=3`. Across the two audited papers, no example proves
+positive translation catalysis. That is now the genuinely new knot target.
+
+There is also a clean quotient interpretation. Give ordered pairs of knots
+the `l1` product Gordian metric, then forget the two summand labels by
+`(K,L)|->K#L`. The contraction of root distance is exactly `sigma(K,L)`.
+Thus the interaction defect measures information lost by forgetting the
+decomposition marker, not merely failure of one numerical formula.
 
 ## 4. Four relation algebras, only one of them a tournament
 
@@ -268,19 +284,23 @@ finite universe: scalar `H` is not enough, while the path-cover profile is.
 The open general transfer kernel should be viewed as a tournament continuation
 profile, not merely as "one more invariant."
 
-The metric question is sharper. For labeled tournaments, adjoining the same
-order-join block is trivially isometric in arc Hamming distance. For unlabeled
-arc-reversal distance an optimal bijection could mix blocks. The decisive
-question is:
+The metric question has a sharper exact answer. THM-2183 proves, in the
+unmerged isomorphism quotient,
 
 ```text
-d_iso(A▷X,A▷Y) ?= d_iso(X,Y).                         (1)
+d_iso(A▷X,B▷Y)=d_iso(A,B)+d_iso(X,Y).                 (1)
 ```
 
-If true, order-join has no analogue of translation catalysis. If false, the
-first block-mixing witness identifies the missing modular-decomposition
-sidecar. Either outcome is more informative than orienting a tournament of
-knot types.
+A two-vertex image-swap uncrossing strictly improves every block-mixing
+bijection. Thus fixed order-join patches are isometric Cartesian products and
+have no analogue of knot translation catalysis, even after the cut marker is
+forgotten.
+
+The ambient quotient still has shortcuts: its four-vertex tournament layer
+contains a triangle and is not a partial cube. The distinction is therefore
+operation-local. Relabelling creates global bypasses, but the constant one-way
+cut prevents them from entering a fixed join patch. Knots lack precisely this
+Monge uncrossing once the connected-sum sphere is forgotten.
 
 ## 7. LRC consequence and next targets
 
@@ -301,16 +321,33 @@ THM-2174 is the first hostile splitter. Endpoint phase labels, even together
 with substantial relation and owner data, do not determine the future measure
 because the current retains a `1/W` scale.
 
+THM-2182 now gives the positive whole-profile counterpart. If `L` is a
+positive multiple of every core endpoint denominator, then
+
+```text
+measure(G_(E union LC))=measure(G_E)measure(G_C).     (2)
+```
+
+The map `t=(j+x)/L` preserves the entire normalized tail product, not its
+marginals. It closes every aligned seven-core/six-tail row with the explicit
+floor `1/(49e_2)`. Conversely, normalized tails `{3,12}` and `{4,6}` have the
+same phase-zero word, zero one-comb currents, equal one-comb masses, and equal
+reciprocal sum, yet their joint masses differ by `measure(G_E)/84`. This
+isolates joint ratio/gcd overlap as an indispensable interaction sidecar.
+
 The next concrete portfolio is:
 
-1. **Knot anchor:** build a certified finite continuation table for
-   `U, 7_1, mirror(7_1), 4_1, 5_1, 8_2, 9_10`, storing intervals when exact
-   unknotting numbers are unknown; Moore-refine it under available sums.
-2. **Tournament niche:** prove or refute (1), retaining optimal bijections and
-   SCC/modular block provenance.
-3. **LRC wildcard:** run an RXTX-style exact span-and-cover search on the
-   THM-2169 deletion relations, then reject every cover that fails
-   THM-2174's scale-current test.
+1. **Knot anchor:** search specifically for positive translation catalysis
+   `C_J(K)>0`; all currently calibrated published families are pure bypass.
+   Use the certified dictionary `{U,7_1,5_1,8_2}` as the first continuation
+   table and keep interval values where exact unknotting numbers are unknown.
+2. **Tournament niche:** classify which other modular/substitution cuts admit
+   THM-2183-style Monge uncrossing; the ambient quotient triangle is the
+   mandatory hostile control.
+3. **LRC wildcard:** combine THM-2178's mod-14 rank fork and THM-2179's
+   body-touching packet with THM-2182's exact product. The decisive supplier
+   would force or manufacture an endpoint-aligned `7+6` split without losing
+   distinctness.
 4. **Word-overlap hostile probe:** test the first-hit convolution on one cyclic
    endpoint-owner packet; stop immediately if rotations make the layers
    non-disjoint.

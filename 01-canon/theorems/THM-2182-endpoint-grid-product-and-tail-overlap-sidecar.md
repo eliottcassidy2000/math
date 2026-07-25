@@ -2,14 +2,15 @@
 id: THM-2182
 title: "Endpoint-grid product and the joint tail-overlap sidecar"
 status: >
-  PROVED + VERIFIED-EXACT. If L is divisible by 14e for every speed in
-  a finite core E, then every scaled tail factors exactly:
+  PROVED (general product and aligned 7+6 closure) + VERIFIED-EXACT
+  (explicit thirteen-speed witness). If the positive integer L is divisible
+  by 14e for every speed in a finite core E, then every scaled tail factors exactly:
   measure(G_(E union LC))=measure(G_E)measure(G_C). Hence every aligned
   seven-core/six-tail row is strictly LRC(14)-safe, quantitatively by
   1/(49e_2). The tails {3,12} and {4,6} prove that phase-zero labels,
   zero one-comb endpoint currents, equal one-comb masses, and equal
   reciprocal sums still do not determine a two-comb continuation; the
-  missing coordinate is their joint normalized overlap law.
+  interaction-level missing coordinate is their joint normalized overlap law.
 source: codex-2026-07-24-knot-relations
 depends_on: []
 related:
@@ -34,7 +35,7 @@ G_E=intersection_(e in E) ((R/Z)\D_e).               (1)
 ```
 
 All statements about measure are unchanged if either inequality is made
-weak at the finitely many boundary points. For an integer `L` and a set
+weak at the finitely many boundary points. For a positive integer `L` and a set
 `C`, write
 
 ```text
@@ -44,7 +45,7 @@ LC={Lc:c in C}.                                      (2)
 ## 1. Exact endpoint-grid product
 
 > **Endpoint-grid product theorem.** Let `E` and `C` be finite sets of
-> positive integers. If
+> positive integers, and let `L` be a positive integer. If
 >
 > ```text
 > 14e divides L             for every e in E,         (3)
@@ -112,8 +113,8 @@ Let
 E={e_1<e_2<...<e_7},        C={c_1,...,c_6},         (10)
 ```
 
-where both sets have distinct positive entries, and take any `L` satisfying
-(3). Because `L>max E`, the row `E union LC` has thirteen distinct positive
+where both sets have distinct positive entries, and take any positive `L`
+satisfying (3). Because `L>max E`, the row `E union LC` has thirteen distinct positive
 relative speeds.
 
 Each danger set has measure `1/7`. The circular interval
@@ -156,8 +157,8 @@ arbitrary thirteen-speed row admits such a split.
 
 ## 3. Why marginal endpoint data cannot replace the tail law
 
-Let `K` be any finite positive-speed core with `measure(G_K)>0`, and let
-`L` satisfy
+Let `K` be any finite positive-speed core with `measure(G_K)>0`, and let the
+positive integer `L` satisfy
 
 ```text
 14k divides L             for every k in K.          (16)
@@ -219,8 +220,9 @@ mu/84>0.                                             (23)
 
 Thus the tuple in (19), despite retaining phase, scale through the reciprocal
 sum, and every one-tail continuation, is not continuation-congruent for a
-two-tail insertion. The first missing coordinate is the ratio/gcd-sensitive
-**joint normalized-tail overlap law**.
+two-tail insertion. A missing interaction-level coordinate is the
+ratio/gcd-sensitive **joint normalized-tail overlap law**; no minimality among
+all possible sidecars is asserted.
 
 ## 4. Exact thirteen-speed witness
 
@@ -231,7 +233,7 @@ K={1,2,3,4,5,6,8,9,10,11,12},
 L=55440=lcm(14k:k in K).                             (24)
 ```
 
-Two independent exact interval evaluators give
+Two algorithmically distinct exact interval evaluators give
 
 ```text
 measure(G_K)=883/6930.                               (25)
