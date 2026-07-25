@@ -9,10 +9,11 @@ status: >
   canonical residues modulo 2^m eventually stabilize to an ordinary
   positive integer. The two conditions are independent, the equality-one
   tail boundary defeats every finite strict-prefix test, no positive-integer
-  itinerary is eventually periodic, and explicit denominator-19 rational
-  pseudo-Z-numbers survive every prescribed finite horizon. This is an exact
-  reformulation and obstruction theorem, not a proof that Z-numbers exist
-  or do not exist.
+  itinerary is eventually periodic, the positive-integer itinerary set is
+  countable dense and co-dense in the binary shift, and explicit
+  denominator-19 rational pseudo-Z-numbers survive every prescribed finite
+  horizon. This is an exact reformulation and obstruction theorem, not a
+  proof that Z-numbers exist or do not exist.
 source: codex-2026-07-24-mahler-carry-tail
 depends_on: []
 related:
@@ -344,6 +345,22 @@ contains an ultimately periodic word (repeat a loop between two visits to
 one accepting state). This statement concerns ordinary-integer realization;
 it does not assert that the unknown `Z`-number language or its finite-prefix
 language is nonsofic.
+
+There is a complementary topological consequence:
+
+> The set `I_+` is countable, dense, and co-dense in the full binary shift.
+
+Countability is immediate from its indexing by `A>=1`. For any cylinder of
+length `m`, Section 1 gives its canonical residue `r_m`. If `r_m>0`, start the
+ordinary orbit at `A=r_m`; if `r_m=0`, start it at `A=2^m`. Either choice has
+the prescribed first `m` digits, proving density. The same cylinder also
+contains the prescribed prefix followed by an endlessly repeated finite
+block. This extension is ultimately periodic and hence is not in `I_+`,
+proving co-density.
+
+Thus no finite carry prefix, however long, distinguishes ordinary realization
+from a purely formal `2`-adic path. This is stronger than saying that a
+particular fixed cutoff fails.
 
 There is nevertheless no finite-time obstruction to the Mahler inequality.
 For every `M>=1`, choose the unique
