@@ -1,0 +1,18 @@
+counts ((2, 4, 20), (4, 2, 20), (20, 20, 90))
+reverse-root-counts ((1, 2, 10), (2, 1, 10), (2, 2, 9))
+P (1/13,2/13,10/13); (2/13,1/13,10/13); (2/13,2/13,9/13)
+JP (2/13,1/13,10/13); (1/13,2/13,10/13); (2/13,2/13,9/13)
+P2=(JP)2 (25/169,24/169,120/169); (24/169,25/169,120/169); (24/169,24/169,121/169)
+stationary (Fraction(1, 7), Fraction(1, 7), Fraction(5, 7)) centered-eigenvalue-P -1/13
+midpoint-bridge-phi (-3/25,0,-1/12); (0,3/25,1/12); (-1/12,1/12,0)
+midpoint-bridge-danger (1/25,1/12,1/12); (1/12,4/25,1/6); (1/12,1/6,20/121)
+danger-lump P 1/13 2/13 danger-lump JP 2/13 11/78
+guard-weights u=H (Fraction(0, 1), Fraction(0, 1), Fraction(1, 1)) u=6H (Fraction(5, 6), Fraction(5, 6), Fraction(2, 3))
+correct u=H value 28460/199927 value-target 728279/197927730 leading 368770/2599051 repair-raw 1210/15379
+correct u=6H value 734515/5198102 value-target 3386176/1286530245 leading 2197495/15594306 repair-raw 3025/46137
+twisted u=H value 354710/2599051 value-target -5649673/2573060490 leading 353590/2599051 repair-raw 160/2197
+twisted u=6H value 1057220/7797153 value-target -7929973/2573060490 leading 1054370/7797153 repair-raw 950/15379
+corrections 15270/2599051 89105/15594306
+unguarded 514705/2599051 decorrelated 2573525/18193357 decorrelated-target 50101739/18011423430
+direct-grid-cells 5198102 integer-leading-repair ((737540, 408980), (4394990, 2044900), (1026506, 490776)) values (Fraction(28460, 199927), Fraction(734515, 5198102), Fraction(514705, 2599051))
+AUDIT PASS

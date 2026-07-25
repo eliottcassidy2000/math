@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-250 (2026-07-25, correction of the post-THM-2250 all-equal hostile controls) -- a 169-step kernel was assigned the wrong 13-step stochastic square root
+
+- **What was claimed:** a session-level continuation of THM-2250 used a
+  three-state unit-13 chain to evaluate the all-equal `(3,4,5)` whole-clause
+  cylinder. It reported `354710/2599051<961/6930` for `u=H` and
+  `1057220/7797153<961/6930` for `u=6H`, apparently closing both hostile
+  relations. These values were not promoted into a theorem.
+- **Why it is wrong:** the calculation began from the known unit-169 kernel
+  and chose the parity-twisted square root `JP`. The exact unit-13 transition
+  is `P=(-I+14Pi)/13`. Both `P` and `JP` have the same square, but `JP`
+  reverses the one-step eigen-sign of the antisymmetric annular observable
+  `1_A-1_B`. It also fails the known binary danger lump:
+  its `A->A` probability is `2/13`, whereas exact thirteen-root counting
+  gives `1/13`. Squaring destroyed precisely this midpoint `Z/2` sign.
+- **Correct framing:** THM-2254 derives `P` pointwise from all thirteen roots
+  and records the exact midpoint bridge. The corrected bounds are
+  `28460/199927>961/6930` for `u=H` and
+  `734515/5198102>961/6930` for `u=6H`. Thus neither relation is closed by
+  this cylinder. THM-2250's reduction of `(3,4,5)` to equal normalized cores
+  is unaffected; the all-equal branch and LRC(14) remain open.
+
+---
+
 ## MISTAKE-249 (2026-07-24, correction of THM-2176) -- right continuation was called a two-sided congruence for an arbitrary monoid
 
 - **What was claimed:** the universal continuation theorem began with an
