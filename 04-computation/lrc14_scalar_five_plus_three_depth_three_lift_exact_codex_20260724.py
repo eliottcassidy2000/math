@@ -344,6 +344,111 @@ def audit_depth(exponent: int) -> AuditResult:
         "direct worst capacities disagree with the lift",
     )
 
+    # Independent-certificate reconciliation at m=4.  A separate proof
+    # bounds the pair capacity by the pointwise minimum of the two
+    # one-shallow capacities.  Its bound-worst pair is (6,1098); this is
+    # not the actual-global-worst pair above.  Reproduce both its envelope
+    # row and its exact row so the two minima cannot be conflated.
+    if exponent == 4:
+        quotient_label_to_exponent = {
+            sign_label(e, quotient): e
+            for e in range(quotient_group_size)
+        }
+        cross_left = quotient_label_to_exponent[6]
+        cross_right = quotient_label_to_exponent[1098]
+        cross_intersection = np.flatnonzero(
+            shallow[cross_left].astype(bool)
+            & shallow[cross_right].astype(bool)
+        )
+        cross_capacities = (
+            full_capacities_i32
+            - loss_i32[cross_left]
+            - loss_i32[cross_right]
+            + root_matrix_transpose[cross_intersection]
+            .sum(axis=0, dtype=np.uint16)
+            .astype(np.int32)
+        )
+        cross_residual = (
+            universe_half
+            - int(shallow_height[cross_left])
+            - int(shallow_height[cross_right])
+            + int(fibre_heights[cross_intersection].sum())
+        )
+        cross_order = np.lexsort(
+            (np.arange(group_size), -cross_capacities)
+        )
+        cross_top_exponents = tuple(map(int, cross_order[:5]))
+        cross_top = tuple(
+            map(int, cross_capacities[cross_order[:5]])
+        )
+        cross_top_labels = tuple(
+            sign_label(e, modulus) for e in cross_top_exponents
+        )
+        require(cross_residual == 6775, "cross-control residual changed")
+        require(
+            cross_top == (1318, 1192, 1185, 1183, 1178),
+            "cross-control exact capacities changed",
+        )
+        require(
+            cross_top_labels == (6, 12, 5, 14278, 14275),
+            "cross-control exact labels changed",
+        )
+        require(
+            cross_residual - sum(cross_top) == 719,
+            "cross-control exact margin changed",
+        )
+
+        one_left = full_capacities_i32 - loss_i32[cross_left]
+        one_right = full_capacities_i32 - loss_i32[cross_right]
+        minimum_envelope = np.minimum(one_left, one_right)
+        envelope_order = np.lexsort(
+            (np.arange(group_size), -minimum_envelope)
+        )
+        envelope_exponents = tuple(map(int, envelope_order[:5]))
+        envelope_top = tuple(
+            map(int, minimum_envelope[envelope_order[:5]])
+        )
+        envelope_labels = tuple(
+            sign_label(e, modulus) for e in envelope_exponents
+        )
+        require(
+            envelope_top == (1438, 1330, 1315, 1306, 1298),
+            "cross-control envelope capacities changed",
+        )
+        require(
+            envelope_labels == (6, 2380, 5, 5193, 14278),
+            "cross-control envelope labels changed",
+        )
+        require(
+            cross_residual - sum(envelope_top) == 88,
+            "cross-control envelope margin changed",
+        )
+
+        direct_cross_residual = tuple(
+            z
+            for z in full_universe
+            if all(
+                14 * norm_mod(P * a * z, modulus) >= modulus
+                for a in (6, 1098)
+            )
+        )
+        direct_cross_capacities = tuple(
+            sum(
+                14 * norm_mod(q * z, modulus) < modulus
+                for z in direct_cross_residual
+            )
+            for q in cross_top_labels
+        )
+        require(
+            len(direct_cross_residual) == 2 * cross_residual,
+            "direct cross-control residual changed",
+        )
+        require(
+            direct_cross_capacities
+            == tuple(2 * value for value in cross_top),
+            "direct cross-control capacities changed",
+        )
+
     # A depth-(m-1) blocker is safe on every primitive depth-m numerator.
     deepest_sizes = tuple(
         sum(
@@ -450,6 +555,15 @@ def main() -> None:
         f"worst_top5_full={tuple(2 * x for x in result.worst_top_half)};"
         f"worst_unit_labels={result.worst_unit_labels};"
         f"minimum_margin_full={2 * result.minimum_half_margin}"
+    )
+    print(
+        "independent_crosscheck="
+        "pair:(6,1098);residual:13550;"
+        "exact_top5:((2636,6),(2384,12),(2370,5),"
+        "(2366,14278),(2356,14275));exact_margin:1438;"
+        "single_mask_min_envelope_top5:((2876,6),(2660,2380),"
+        "(2630,5),(2612,5193),(2596,14278));"
+        "envelope_margin:176"
     )
     print(f"root_matrix_sha256={result.root_matrix_sha256}")
     print(f"loss_matrix_sha256={result.loss_matrix_sha256}")

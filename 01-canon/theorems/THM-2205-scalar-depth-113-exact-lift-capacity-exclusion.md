@@ -24,8 +24,8 @@ related:
   - THM-2204-scalar-depth-223-thirteen-lift-capacity-law
 script: 04-computation/lrc14_scalar_five_plus_three_depth_three_lift_exact_codex_20260724.py
 output: 05-knowledge/results/lrc14_scalar_five_plus_three_depth_three_lift_exact_codex_20260724.out
-script_sha256: d885ecf2557fe8832b4f2f198be202dc7a40fc26c00a350818880fba28726ba6
-output_sha256: 2308347d6816677b7fa6c459c2b8fa60ed78356172da7e4f20b356215ed119f8
+script_sha256: d84a16a9f90b736effbb214d01d7f963213bf68b49db78ebba269c9e0344e4a6
+output_sha256: 03748512dcbfab82ab0089c7e73d6365257dd705367b4760c6fca24679b2d000
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -299,6 +299,36 @@ Their sum is `12660`, and
 ```text
 13946-12660=1286.                                   (29)
 ```
+
+An independent certificate uses the coarser pointwise envelope
+
+```text
+C_q(a,b)<=min(C_q(a),C_q(b)),                        (29a)
+```
+
+where `C_q(a)` is the capacity after deleting only shallow mask `a`.
+Its **envelope-worst** pair is `(6,1098)`, with residual `13550`.
+At that pair its five largest upper bounds are
+
+```text
+((2876,6),(2660,2380),(2630,5),
+ (2612,5193),(2596,14278)),                          (29b)
+```
+
+leaving the conservative margin `176`.  The exact transpose/intersection
+DP at the same pair gives instead
+
+```text
+((2636,6),(2384,12),(2370,5),
+ (2366,14278),(2356,14275)),                         (29c)
+```
+
+and exact margin `1438`.  Thus the independent computation and the present
+one agree entry for entry on a canonical hostile row.  The number `1438`
+is the actual margin at the **envelope-worst pair**, not the minimum of all
+actual pair margins.  The latter occurs at the different pair `(183,799)`
+and is `1286`, as in (27)--(29).  This distinction reconciles the two
+minimization problems rather than merely observing that both are positive.
 
 To freeze both the carrier and the scan, the exact digests are
 

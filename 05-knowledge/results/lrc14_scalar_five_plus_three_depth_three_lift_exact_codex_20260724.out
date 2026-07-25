@@ -5,6 +5,7 @@ fibre_histogram_half=((9, 725), (10, 289));universe_full=18830;shallow_mask_base
 shallow_pairs_with_repetition=514605;margin_histogram_size=569
 worst_pair_exponents=(30, 599);worst_pair_labels=(183, 799)
 worst_residual_full=13946;worst_top5_full=(2700, 2652, 2506, 2434, 2368);worst_unit_labels=(2380, 5193, 10386, 1190, 7139);minimum_margin_full=1286
+independent_crosscheck=pair:(6,1098);residual:13550;exact_top5:((2636,6),(2384,12),(2370,5),(2366,14278),(2356,14275));exact_margin:1438;single_mask_min_envelope_top5:((2876,6),(2660,2380),(2630,5),(2612,5193),(2596,14278));envelope_margin:176
 root_matrix_sha256=6c3a3cf58a37cb1e728864487e7fca97c5772d39a2fbace2b0df56df1fa75d97
 loss_matrix_sha256=dd37b559a3b811df8e17bc3cb1238b27ddabb36b50fb0e227c716d5baf40cde0
 pair_summary_sha256=7c05788531e385a83c641c49e119a13e1a301fe1c17dd8bcf394e45819e5b186
