@@ -1,0 +1,15 @@
+finite_cylinder_vectors_checked=826353
+accepted_cylinder_counts=((2, 5, (1, 1, -1), 1024), (3, 4, (2, -3, 1), 6561), (4, 3, (1, -2, 1), 4096))
+accepted_cylinder_digest=08e26f7d17ac9eaad9ee451fb2d42041c21c1b83cdfc0907b5f0dff7c25287bf
+composite_radix_control=q4_depth3_PASS
+qadic_kernel_cylinder_equivalence=PASS
+sharp_mixed_sign_carry_bounds=PASS
+primitive_lrc_family=V_N=(1,...,11,13^N,13^N+1)
+primitive_lrc_exponents_checked=2..128
+carry_owner_plateau_states_checked=8255
+carry_owner_digit_plateau_states_checked=8128
+plateau_clock_transitions_checked=8509
+plateau_family_digest=3566f07b001b863dcc5c65480bdeba0eda00d295aab4995efbb2084d4e734973
+generic_radix_clock_transitions_checked=26751
+exact_radix_clock=PASS
+all_exact_checks=PASS
