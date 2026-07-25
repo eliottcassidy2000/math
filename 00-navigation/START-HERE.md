@@ -66,9 +66,9 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     is the exact new counterexample. THM-2063/2071 close linear/quadratic source
     fibers; THM-2084/2118/2102 close cubics. THM-2158/2180 reduce the twice-odd
     nonmonic quartic to `V|(4gamma-(beta/V)^2)`; THM-2189 proves it on the
-    nonsplit deck and in degree two, and THM-2194 proves degree six uniformly.
-    Every finite-pole survivor is split (`V=W^2`) of reduced degree at least ten; THM-2181 closes monic depressed quartics; the split pole and terminal
-    nonmonic square-prefix descent remain, not a planar classification.
+    nonsplit deck and THM-2194 closes degree six; THM-2202 then closes every
+    twice-odd reduced degree uniformly. No quartic finite-pole survivor remains.
+    THM-2181 closes monic depressed quartics; the terminal nonmonic square-prefix descent remains, not a planar classification.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed
@@ -133,7 +133,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 | LRC / Frobenius wildcard | [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) | THM-2041 packets; keep seed and pointwise exit explicit |
 | LRC literature | [`CORE-PAPERS.md#lonely-runner-conjecture`](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [`LRC-TECHNIQUE-INDEX.md`](LRC-TECHNIQUE-INDEX.md), source paper |
 | NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2101/2111, formal interfaces, guardrails |
-| Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102/2118/2158/2180/2181/2189/2194 |
+| Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102/2118/2158/2180/2181/2189/2194/2202 |
 | Tournaments | [`CURRENT-FRONTIER.md#tournaments`](CURRENT-FRONTIER.md#tournaments) | [`TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md`](TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md), [`THE-ZOO.md`](THE-ZOO.md) with its freshness banner |
 | Integer sequences | [`CURRENT-FRONTIER.md#integer-sequences`](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005 and their frozen outputs |
 | Broad portfolio | [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md) | THM-2176/2177/2191; [`PROBLEM-ATLAS-2026-07-20.md`](PROBLEM-ATLAS-2026-07-20.md) only as historical provenance |

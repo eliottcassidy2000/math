@@ -412,12 +412,13 @@ into tournament operation laws and LRC residue packets.
   THM-2158/2180 make deck descent automatic and reduce the twice-odd nonmonic
   branch to `V|(4gamma-(beta/V)^2)`. THM-2189 forces this pole congruence on
   every nonsplit deck and, without a deck hypothesis, in reduced mate degree
-  two. THM-2194 closes reduced degree six uniformly by an exact five-row Faber
-  boundary/flux bank. Hence every remaining finite-pole survivor is split,
-  has `V=W^2` and leading coefficient `W^4`, and has reduced mate degree at
-  least ten. THM-2181 compresses exact square prefixes and closes monic
-  depressed polynomial quartics. The split degree-`>=10` pole, the terminal
-  nonmonic square-prefix descent, and other short edges remain.
+  two, and THM-2194 closes reduced degree six. THM-2202 closes every twice-odd
+  reduced degree `4r-2`: below the cusp
+  `r nu(Lambda)=(2r-1)nu(c)` the first/second flux orders separate, while
+  above it the unique `c^(2r-1)` boundary tooth does. Thus no quartic
+  finite-pole survivor remains. THM-2181 compresses exact square prefixes and
+  closes monic depressed polynomial quartics. The terminal nonmonic
+  square-prefix/quadratic-member descent and other short edges remain.
 - MISTAKE-228/229 block the old atlas and NC2/GMC chain. `JC(2)` and `DC(2)`
   remain open; these are source-fiber gates, not generic cover-degree results.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer

@@ -177,9 +177,9 @@
     complement fiber-linear, hence tame. Survivors have fiber degree at least
     three; THM-2084's cubic lower bound is likewise a source-fiber statement,
     not generic cover degree, Jelonek geometry, VC(4), or full JC(2).
-61. **The quartic pole is closed only in stated decks/degrees.** THM-2189 proves
-    `V|(4gamma-b^2)` nonsplit and in degree two; THM-2194 proves degree six.
-    The split degree-`>=10` pole and terminal square-prefix descent remain.
+61. **Quartic pole closure is not terminal square-prefix descent.** THM-2202
+    proves `V|(4gamma-b^2)` on every deck in every twice-odd reduced degree,
+    removing the finite pole. Its polynomial root still has leading coefficient `V`; the nonmonic quadratic-member descent remains.
 62. **Safe-torus mass is not primitive-line recurrence.** THM-2193 gives a uniform Haar floor and many septimal torsion points, while its THM-2188
     factorization preserves these across opposite primitive-slope outcomes.
 
