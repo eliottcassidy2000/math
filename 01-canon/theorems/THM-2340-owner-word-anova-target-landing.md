@@ -2,7 +2,7 @@
 id: THM-2340
 title: "Owner-word ANOVA and exact target-support landing criteria"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. For any
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. For any
   complex 13 by 13 target-character twist matrix, normalized Fourier
   inversion splits its target coefficient energy orthogonally into the
   zero fibre, pure-a axis, pure-b axis, and mixed locus. These four
@@ -15,23 +15,31 @@ status: >
   matching a terminal word to its target-support locus. It proves no
   component positive, excludes no scalar row, and does not prove LRC(14).
 source: codex-2026-07-25-owner-word-anova
-depends_on: []
+depends_on:
+  - THM-2334-relation-residue-current-and-character-twist-pushforward
+  - THM-2337-expiration-word-residue-invisibility-and-first-bockstein-sidecar
 related:
-  - THM-2195-tournament-transitivity-as-universal-substitution-boundary
+  - THM-2195-transitive-quotients-exactly-control-universal-substitution-products
   - THM-2305-canonical-blocker-word-handoff-hypergraph
   - THM-2309-owner-aligned-pivot-packets-and-visible-height-separation
   - THM-2334-relation-residue-current-and-character-twist-pushforward
   - THM-2337-expiration-word-residue-invisibility-and-first-bockstein-sidecar
 script: 04-computation/lrc14_owner_word_anova_thm2340.py
 output: 05-knowledge/results/lrc14_owner_word_anova_thm2340.out
-script_sha256: 1cdfef35649a04b464e8ffa4d1b1f9529f171da3ade8b2f04e94b6735a3a722e
-output_sha256: 06df584972923b17a24b00e66ab04ea5e371508c7bf57f9fc98173b6dd754242
+script_sha256: e96788e30e648794c861c2617f8b66fbf46a67492f7662970ecbe0bc01a96946
+output_sha256: 4055c3c280ce152928dc87f4f82d81576410ed1e4fd96ea32a5a934b475920f2
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2340 -- pure owners are main effects; a fork is interaction
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
+
+The independent audit rederived the normalized Fourier conventions, the
+ordered main-effect identities, the double-centring/fork equivalence, the
+complete orthogonal energy invoice, and all three support-mask Gram kernels.
+It also checked target-swap covariance and replayed the exact companion under
+ordinary and optimized Python with byte-identical output.
 
 THM-2334 turns the full marked LRC current into a `13 x 13` matrix of
 target-character twists.  Its total nonzero-target energy is the variance

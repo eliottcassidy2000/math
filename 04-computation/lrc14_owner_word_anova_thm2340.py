@@ -214,7 +214,7 @@ require(interaction_energy[3] > 0 and interaction_energy[:3] == (0, 0, 0), "fork
 require(1 + (P - 1) + (P - 1) + (P - 1) ** 2 == P**2, "ANOVA dimensions changed")
 
 print("theorem=THM-2340")
-print("status=PROVED+VERIFIED-EXACT+CANDIDATE-UNDER-INDEPENDENT-AUDIT")
+print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED")
 print(f"target_twist_matrix_size={P}x{P}")
 print(f"matrices_checked={checked_matrices}")
 print("anova_dimensions=1+12+12+144=169")

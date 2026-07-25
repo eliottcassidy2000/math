@@ -1,5 +1,5 @@
 theorem=THM-2340
-status=PROVED+VERIFIED-EXACT+CANDIDATE-UNDER-INDEPENDENT-AUDIT
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED
 target_twist_matrix_size=13x13
 matrices_checked=6
 anova_dimensions=1+12+12+144=169
