@@ -2,7 +2,8 @@
 id: THM-2342
 title: "Degree-eighteen deep-wall first-flux cover obstruction"
 status: >
-  PROVED + VERIFIED-EXACT. On each of THM-2341's two genus-zero
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. On each of
+  THM-2341's two genus-zero
   deep-wall spectral curves, the recovered first-flux function Z has a
   pole of order three at all three points at infinity. Hence the
   connected double cover T^2=Z has at least four branch points and
@@ -28,7 +29,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2342 -- the first-flux cover empties the deep wall
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2338 finds exactly three low-square-class points on the simultaneous
 wall
@@ -297,4 +298,12 @@ and the double-cover genus lower bound. The line-through-node,
 irreducibility, valuation, lifting, and Riemann--Hurwitz arguments are
 the mathematical proof above. No executable check uses Python `assert`.
 
-Independent audit is pending. QED.
+The independent hostile audit rebuilt the infinity cubic discriminant,
+inverse depressed-coordinate translation, first-flux factorization, and
+resultant (15) using custom rational and Sylvester arithmetic. It also
+checked that the three infinity intersections are transverse, that both
+`y` and `z` have order `-1` there, and that a common zero of `A` and
+`B_infinity` would force a line component. Finally, it audited the
+function-field lifting argument even for a non-birational map
+`P^1 -> C_tilde`, the parity/Riemann--Hurwitz step, the complete wall
+ledger, both execution modes, and both hashes. QED.
