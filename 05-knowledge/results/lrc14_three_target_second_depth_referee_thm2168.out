@@ -1,0 +1,14 @@
+THM-2168 EXACT HOSTILE CONTROLS
+finite groups: 57
+nontrivial characters: 3414
+translated band states: 76876
+half-size states: 168
+groups with two-band covers: 38
+covering half-fibre pairs: 84
+all covers: same order-two character, complementary cosets = PASS
+fixed evaluated row: (1, 2, 39)
+shear N,M and determinants: (0, 0, 13, 1)
+shear N,M and determinants: (1, 5, 26, 6)
+shear N,M and determinants: (12, -7, 169, -6)
+shear N,M and determinants: (1000, 2000, 13013, 2001)
+evaluation-shear blindness = PASS
