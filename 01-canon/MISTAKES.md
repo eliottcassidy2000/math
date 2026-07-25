@@ -63,6 +63,13 @@ Format per entry:
   crossed in flight at `THM-2310`. The earlier handoff theorem keeps
   `THM-2310`; the later unproved bispectrum stub moved to `THM-2312` before
   promotion.
+- **Third same-day recurrence:** the biprime collision-frontier reservation
+  at `10:04:29` and the marked target-gain corolla reservation at `10:08:31`
+  crossed in flight at `THM-2313`. The earlier biprime reservation keeps
+  `THM-2313`; the later corolla file, companion names, transcript name, and
+  reproduction commands move coherently to `THM-2315` before promotion.
+  The corolla was still unproved when the collision was detected, so no
+  proved dependency changed.
 
 ---
 
