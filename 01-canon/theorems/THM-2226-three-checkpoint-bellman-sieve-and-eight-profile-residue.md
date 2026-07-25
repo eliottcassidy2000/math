@@ -23,8 +23,8 @@ related:
   - THM-2219-scalar-depth-four-sparse-tail-exclusion
 script: 04-computation/lrc14_three_checkpoint_clause_bellman_thm2226.py
 output: 05-knowledge/results/lrc14_three_checkpoint_clause_bellman_thm2226.out
-script_sha256: 6afb6f32905753f45710cbe6cdbc096f3e2d891751b9c0894f34864028277784
-output_sha256: 7b891802b76f40cb450daa25fbfaf12ef8c6823d2b8f1c548b02549d1863267a
+script_sha256: cf678dd9847beae769df7912f3c6ec1003c512bf3f08c115af6c4a125892a04c
+output_sha256: 9e50e2eaa83a8efb92986c3ffd64d21766b33490650dda07205755a4ac2199c7
 hash_basis: working-tree bytes (LF)
 ---
 
