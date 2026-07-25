@@ -1,0 +1,11 @@
+faber_flux_bank=PASS degrees=2,6,10,14
+independent_multinomial_bank=PASS degrees=2,6,10,14
+centered_coordinate=y=7*s-2*alpha
+first_flux_dT=(343*T**2 - 640*alpha**3 - 480*alpha**2*y + 2688*alpha*beta + 1344*beta*y - 6272*gamma + 40*y**3)/(1960*y)
+exceptional_y_zero_flux=-(343*T**2 - 640*alpha**3 + 2688*alpha*beta - 6272*gamma)/3136
+spectral_B=43904*(-10*alpha**3 + 42*alpha*beta - 98*gamma + 5*y**3)
+spectral_H=13720*Psi0 + 1200*alpha**4 - 1600*alpha**3*y - 6720*alpha**2*beta - 300*alpha**2*y**2 + 6720*alpha*beta*y + 7840*alpha*gamma + 7056*beta**2 + 840*beta*y**2 - 15680*gamma*y + 425*y**4
+spectral_identity=(235298*T^2+B)^2=(10976*y)^2*H
+third_observable_over_q=-T*(-343*T**2 + 640*alpha**3 - 320*alpha**2*y - 2688*alpha*beta + 896*beta*y + 6272*gamma + 160*y**3)/(8960*y)
+squarefree_H_implies_genus_one=MATHEMATICAL_PROOF_REQUIRED
+status=THM2242_DEGREE14_SPECTRAL_QUARTIC_EXACT_REFEREE
