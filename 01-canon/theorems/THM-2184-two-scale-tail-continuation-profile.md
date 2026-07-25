@@ -13,10 +13,13 @@ status: >
   most six tail speeds has the pointwise floor 1-m/7. Hence every arbitrary-
   residue seven-core/six-tail affine ray closes effectively; the zero-profile
   residual for a positive-measure core can occur only with at least seven
-  tail constraints and is not an LRC 7+6 obstruction.
+  tail constraints and is not an LRC 7+6 obstruction. For seven-element
+  cores inside {1,...,13}, THM-2166 gives the uniform near-aligned cone
+  NL>=89||r||_1.
 source: codex-2026-07-24-relation-carry-spectrum
 depends_on:
   - THM-2182-endpoint-grid-product-and-tail-overlap-sidecar
+  - THM-2166-hybrid-core-smoothing-low-carry-crossing
 related:
   - THM-2162-signed-endpoint-cocycle-and-bv-component-split
   - THM-2174-endpoint-phase-scale-obstruction
@@ -277,6 +280,40 @@ N>245e_2||r||_1/(2L).                                (24c)
 
 This is the arbitrary-residue strengthening of (23), not merely a
 proportional-tail result.
+
+For the literal defect-six core bank
+
+```text
+E subset {1,...,13},                 |E|=7,
+```
+
+THM-2166's exact sweep sharpens the crude second-speed floor to
+
+```text
+measure(G_E)>=45107/229320.                           (24d)
+```
+
+For six tails, (24a) and (6) therefore give
+
+```text
+P_(E;c,r)>=45107/1605240.                             (24e)
+```
+
+Combining this with (7), every positive distinct row on such a ray is
+strictly safe whenever, with `Q=NL` and `R=||r||_1`,
+
+```text
+Q>(4013100/45107)R.                                   (24f)
+```
+
+Since `4013100/45107<89`, the clean integer cone
+
+```text
+Q>=89R                                                (24g)
+```
+
+is sufficient when `R>=1`; for `R=0` the exact product is already
+positive. This is uniform over all `1716` seven-element cores in the bank.
 
 More generally, for any tail length, if
 
