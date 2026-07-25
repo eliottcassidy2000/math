@@ -20,6 +20,10 @@ status: >
   Moreover max{u_hash(K),c*(K)} <= u_cat(K) <= u(K), while u_hash(K) is
   exactly the maximum of |phi(K)| over all abstract additive real-valued
   Gordian-1-Lipschitz invariants phi.
+  The full catalyst response J -> d_G(K#J,J) is antitone under adding
+  summands. Every fixed-saving locus, and in particular the optimal-catalyst
+  locus, is therefore an additive upper ideal; on any fixed finite alphabet
+  of prime knots it has a finite antichain basis.
   Hence positive translation catalysis forces a strict connected-sum
   homogenization gap; in particular a one-crossing saving for a knot of
   unknotting number three forces u_hash<=2. Owens--Strle's equality
@@ -774,6 +778,99 @@ group length. These are distinct coordinates not identified by the algebra
 in (G23). Whether catalytic capacity or the lattice-scale gap is determined
 by ordinary unknotting number on knots remains open; abstract metric monoids
 alone cannot settle that knot-specific question.
+
+### Catalyst response ideals and finite prime alphabets
+
+The diagonal minimum in (15) has a useful order refinement. For every
+`x,y in M`, define the complete context response
+
+```text
+rho_x(y)=d(x+y,y).                                  (G24)
+```
+
+Simultaneous translation is nonexpansive, so for every `z`,
+
+```text
+rho_x(y+z)<=rho_x(y).                               (G25)
+```
+
+The response is also subadditive in the object coordinate. More generally,
+the path which first removes `x` and then removes `x'` gives
+
+```text
+rho_(x+x')(y+z)<=rho_x(y)+rho_(x')(z).              (G26)
+```
+
+Indeed,
+
+```text
+d(x+x'+y+z,x'+y+z)<=rho_x(y)
+```
+
+because its two endpoints are obtained from those defining `rho_x(y)` by
+adding `x'+z`; similarly
+
+```text
+d(x'+y+z,y+z)=rho_(x')(y+z)<=rho_(x')(z).
+```
+
+Thus (G26) follows from the triangle inequality. The old scalar and the
+catalytic localization are respectively the initial value and the infimum
+of this antitone response:
+
+```text
+rho_x(0)=ell(x),             inf_y rho_x(y)=ell_cat(x). (G27)
+```
+
+Suppose now that `d` is integer-valued. For an integer saving threshold
+`s>=0`, put
+
+```text
+I_s(x)={y:rho_x(y)<=ell(x)-s}.                      (G28)
+```
+
+Equation (G25) says exactly that `I_s(x)` is an additive upper ideal:
+
+```text
+y in I_s(x)  =>  y+z in I_s(x) for every z.         (G29)
+```
+
+The set of values in (G27) is a nonempty subset of the nonnegative
+integers, so its infimum is attained. Consequently the optimal contexts
+
+```text
+I_opt(x)={y:rho_x(y)=ell_cat(x)}                    (G30)
+```
+
+also form a nonempty additive upper ideal. Once a catalyst realizes a
+saving, adding arbitrary further context cannot destroy that saving; once
+it realizes the optimum, every larger context remains optimal.
+
+For knots, fix finitely many oriented prime-knot types
+`P_1,...,P_r`. Their connected-sum submonoid is `N^r`, ordered
+coordinatewise by divisibility of summands. Every intersection
+
+```text
+I_s(K) intersection <P_1,...,P_r>
+```
+
+has finitely many minimal elements. Here is the short proof. Any infinite
+sequence in `N^r` contains indices `i<j` with the `i`th vector at most the
+`j`th coordinatewise: for `r=1` this is immediate; inductively, either one
+first coordinate repeats infinitely often or an infinite subsequence has
+strictly increasing first coordinate, and the induction hypothesis applied
+to the remaining coordinates finishes. Hence `N^r` has no infinite
+antichain. The minimal elements of an upper set form an antichain, so they
+are finite, and upward closure reconstructs the whole set.
+
+Therefore, on every fixed finite prime alphabet, each saving level of the
+Gordian catalyst response is encoded by a finite antichain of **minimal
+contexts**. This is an existence theorem, not an effective bound on those
+contexts, and it does not imply a finite basis when all prime-knot types are
+allowed. It nevertheless gives the correct binary-relation reframe:
+`J catalyzes K by at least s` is a role-sensitive incidence relation,
+monotone in the context divisibility order, rather than a tournament on
+knot types.
 
 This completion is native to commutative connected sum. Tournament
 substitution is an operadic, generally noncommutative composition:
