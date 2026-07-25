@@ -186,9 +186,9 @@ THM-2186 gives a strict toric exit. THM-2168/2192 leave only scalar `5+3`,
 with one deepest blocker, 36 empty profiles, and degree-at-most-20 static
 Hafnian pumps. THM-2197/2201 give Boolean deficiency and a faithful triangular
 Hasse-jet carrier. THM-2198/2204/2205/2207 close every deepest-depth-three
-profile; THM-2203 fixes scalar transport at `16/208` and bounds the remaining
-deepest depth by `4..19`. Labelled guard-hole correlation remains. THM-2209's
-quadratic peel certifies THM-2179's level-one hostile row.
+profile; THM-2203 fixes scalar transport at `16/208` and leaves exactly `1,136`
+valuation profiles at deepest depth `4..19`. Labelled guard-hole correlation
+remains; THM-2209's quadratic peel closes only the level-one hostile row.
 
 ### Independent routes that remain live
 
@@ -310,7 +310,7 @@ design without pretending a preserver supplies the seed.
   makes `d_iso` exactly `l1` on fixed order-join patches by image-swap
   uncrossing; the ambient quotient still has triangles and is not a partial cube.
 - [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md)
-  classifies the universal product: iff transitive; `C_3` gives `0` versus `2`, and `C_5` defeats the automorphism gauge. Triangle rotation costs exactly `2N` times exterior nonconstant-incidence mass (`4N` in `C_5`); global optimal transport remains open.
+  classifies the universal product: iff transitive; `C_3` gives `0` versus `2`, and `C_5` defeats the automorphism gauge. A partial automorphism has exact marked cost equal to the weighted Hamming derivative of exterior incidence words; its kernel is the extendable subgroup and its cyclic orbits retain run counts. Global unmarked transport remains open.
 - THM-1880/1885 give the Chebyshev--Pell/`BS(1,2)^+` transitive frame.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
@@ -419,9 +419,8 @@ into tournament operation laws and LRC residue packets.
   finite-pole survivor remains. THM-2181 closes monic depressed quartics;
   THM-2214 closes nonsplit terminal degrees through ten, and THM-2217 forces
   odd-leading survivors to degree `>=14` with `R deg(q)>=deg(V)`. Split/even
-  terminal descent and other short edges remain.
-- THM-2206 proves that a field-valued `C_2` Hasse jet has parity depth only or
-  loses Hamiltonian squares; integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
+  terminal descent and other short edges remain. THM-2206 blocks field-valued
+  `C_2` Hasse repair; integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
@@ -434,7 +433,7 @@ The most reusable current bridges are not literal object identifications:
 | Whole-layer Frobenius / orbit norm | NC2 balanced face and TNC monodromy orbit | Exact finite-abelian packet preservation and uniform-incidence norms transfer; LRC still lacks the seed and exit, and `-1` in the packet stabilizer forces a signed orientation sidecar. |
 | Quotient + sidecar | spectrum/SCC/support quotients | Which lost coordinate restores the target predicate? |
 | Bulk / boundary / null | THM-2058 phase height | Strict templates occur on all large prime grids; tight support lies on finitely many level-14 pair-sum clocks; subthreshold packets vanish. |
-| Operation-response | tournament joins/support unions | THM-2183/2195 make reversal distance exactly `l1` precisely for transitive fixed-correspondence substitution quotients and refute the quotient-automorphism repair; what realizable integral block-transport cost recovers `d_iso`? |
+| Operation-response | tournament joins/support unions | THM-2183/2195 make reversal distance exactly `l1` precisely for transitive fixed-correspondence quotients; marked partial automorphisms have a weighted cyclic-transition derivative, but what unmarked transport/uncrossing law recovers `d_iso`? |
 | One-sided accumulation | LRC spectrum | Can qualitative isolation be made effective by finite state/pinning data? |
 | Support Dirichlet profile | integer sequences | Do tournament/LRC census supports have functional or automatic structure? |
 | Continuation congruence / min-plus kernel | Gordian connected-sum profile and THM-840/853 | Which finite sidecar is a target-preserving quotient under every named future operation? |

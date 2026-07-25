@@ -57,7 +57,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
    data is join-multiplicative (THM-1936); zeta lives on the strong core
    (THM-1926). THM-2195 makes transitivity exactly the universal
    fixed-correspondence substitution-product boundary and shows that a
-   quotient-automorphism minimum still fails. The known invariant lattice is exact only through `n <= 6`.
+   quotient-automorphism minimum still fails; its marked partial-automorphism cost is the weighted cyclic derivative of exterior incidence words. Unmarked transport remains open. The known invariant lattice is exact only through `n <= 6`.
 11. **A reciprocal integer sequence has two profiles.** THM-2000/2005 separate
     support from indexed multiplicity by a collision tax; the reusable object
     is the support Dirichlet profile, with Abel–Stieltjes/log-block Dini and the
@@ -65,10 +65,10 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300
     is the exact new counterexample. THM-2063/2071 close linear/quadratic source
     fibers; THM-2084/2118/2102 close cubics. THM-2158/2180 reduce the twice-odd
-    nonmonic quartic to `V|(4gamma-(beta/V)^2)`; THM-2189 proves it on the
-    nonsplit deck and THM-2202 closes every twice-odd finite pole. THM-2214
-    closes nonsplit terminal degrees through ten; THM-2217 forces odd-leading
-    survivors to degree `>=14` and `R deg(q)>=deg(V)`. Nonmonic descent remains open.
+    nonmonic quartic to `V|(4gamma-(beta/V)^2)`; THM-2202 removes every
+    twice-odd finite pole. THM-2214 closes nonsplit terminal degrees `2,6,10`;
+    THM-2217 forces odd-leading survivors to degree `>=14` with `R deg(q)>=deg(V)`. Split/even descent, other short edges, integral
+    `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed
@@ -118,7 +118,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     its transverse and scalar-`4+3` lanes, leaving only scalar `5+3`.
     THM-2187/2193 give a saturated carrier, floor `7^-21`, rank seven by `78*7^21`, and safe septimal grids; THM-2188 retains slope/current.
     THM-2196/2199 prove rank twelve at height `78*182^13`; THM-2208 gives one candidate per rank-eleven state and THM-2203 fixes scalar transport at `16/208`.
-    THM-2198/2204/2205/2207 close every deepest-depth-three scalar profile; THM-2203 bounds every remaining deepest depth by `4..19`, and THM-2209 retains the peel-pair layer.
+    THM-2198/2204/2205/2207 close every deepest-depth-three scalar profile; THM-2203 leaves exactly `1,136` valuation profiles at deepest depth `4..19`, and THM-2209 retains but does not close the peel-pair layer.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
     the knot continuation cocycle; THM-2191 gives its catalytic group length,
     commuting stable envelope, and abstract additive dual, and closes `9_10`.

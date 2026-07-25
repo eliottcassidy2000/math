@@ -86,7 +86,7 @@
 27c. **Current LRC reductions are not closures.** THM-2138 empties `6+1/5+2`, and THM-2139/2141 close only `(1,5,2)/(2,5,1)`; four fivefold profiles remain.
     THM-2140 and THM-2148/2168 give depth, polar, Fano, and valuation invoices; generated-lattice collapse eliminates all-independent and scalar `4+3`, but scalar `5+3` remains. THM-2192 forces one unique deepest blocker; THM-2198/2204/2205/2207 exclude every deepest-depth-three profile. THM-2203 bounds the residual depth by `4..19`; the lift sum still loses labelled guard-hole correlation.
     THM-2143's strict Gibbs test misses equality; THM-2161 proves fixed modulus banks blind. THM-2179 repairs the scalar-covariance dead end only to a `3/41` exit or body relation: height `180` at defect six and `140` at defect at least seven.
-    THM-2187/2193 force rank seven; THM-2196/2199 force rank twelve and a finite box but do not enumerate it. THM-2203 closes scalar transport only in actual dyadic rank eight. THM-2198/2204/2205/2207 close all depth-three profiles; depths `4..19`, owner/current, and labelled guard-hole correlation remain. None proves LRC(14).
+    THM-2187/2193 force rank seven; THM-2196/2199 force rank twelve and a finite box but do not enumerate it. THM-2203 closes scalar transport only in actual dyadic rank eight. THM-2198/2204/2205/2207 close all depth-three profiles; `1,136` profiles at depths `4..19`, owner/current, and labelled guard-hole correlation remain. None proves LRC(14).
 
 ## NC2 / GMC
 
@@ -177,9 +177,9 @@
     complement fiber-linear, hence tame. Survivors have fiber degree at least
     three; THM-2084's cubic lower bound is likewise a source-fiber statement,
     not generic cover degree, Jelonek geometry, VC(4), or full JC(2).
-61. **Quartic pole closure is not terminal square-prefix descent.** THM-2202
-    removes every twice-odd finite pole. THM-2214 closes nonsplit terminal
-    degrees through ten; THM-2217 gives only an odd-leading factor-support wall. Split/even nonmonic descent remains open.
+61. **Spectral/factor-support walls are not JC(2).** THM-2202 removes every
+    twice-odd finite pole; THM-2214 closes only nonsplit terminal degrees
+    `2,6,10`, and THM-2217 gives only an odd-leading factor-support inequality. Split/even descent, other short edges, `JC(2)`, and `DC(2)` remain open.
 62. **Safe-torus mass is not primitive-line recurrence.** THM-2193 gives a uniform Haar floor and many septimal torsion points, while its THM-2188
     factorization preserves these across opposite primitive-slope outcomes.
 
