@@ -6,4 +6,4 @@ degree6_terminal_reduction=PASS
 singular_cubic_normalization=PASS
 singular_keller_primitive=PASS
 cusp_reconstruction=PASS pole_coefficient=5/16
-status=EXACT_SYMBOLIC_REFEREE_ONLY
+status=THM-2214_EXACT_SYMBOLIC_REFEREE_ONLY

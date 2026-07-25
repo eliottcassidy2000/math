@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact symbolic referee for the nonsplit quartic terminal draft.
+"""Exact symbolic referee for THM-2214's nonsplit quartic terminal closure.
 
 The accompanying proof, not this script, supplies the all-field and
 all-polynomial quantifiers.  This file checks:
@@ -286,7 +286,7 @@ def main() -> None:
     check_flux_bank_and_elimination()
     check_singular_normalization()
     check_cusp_reconstruction()
-    print("status=EXACT_SYMBOLIC_REFEREE_ONLY")
+    print("status=THM-2214_EXACT_SYMBOLIC_REFEREE_ONLY")
 
 
 if __name__ == "__main__":
