@@ -95,10 +95,23 @@ theorem degree_two_observables_agree (c : Finset (Fin 3) → ℤ) :
   conv_rhs => rw [Finset.sum_comm]
   apply Finset.sum_congr rfl
   intro S hS
-  rw [← Finset.mul_sum, ← Finset.mul_sum]
-  congr 1
-  exact walsh_agree_through_degree_two S
-    (Finset.mem_filter.mp hS).2
+  calc
+    ∑ x, parityWeight false x * (c S * walshCharacter S x) =
+        c S * walshCoefficient false S := by
+      unfold walshCoefficient
+      rw [Finset.mul_sum]
+      apply Finset.sum_congr rfl
+      intro x _
+      ring
+    _ = c S * walshCoefficient true S := by
+      rw [walsh_agree_through_degree_two S
+        (Finset.mem_filter.mp hS).2]
+    _ = ∑ x, parityWeight true x * (c S * walshCharacter S x) := by
+      unfold walshCoefficient
+      rw [Finset.mul_sum]
+      apply Finset.sum_congr rfl
+      intro x _
+      ring
 
 /-- In fact every nonconstant Walsh character below top degree vanishes on
 both fibers. -/
