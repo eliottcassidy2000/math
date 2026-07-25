@@ -1,0 +1,30 @@
+THM-2207 scalar depth-(1,2,3) labelled guard-hole audit
+arithmetic: exact integers; no assert dependence
+
+depth-four primitive root geometry
+  N=28561 Q=2197 primitive_phases=2028 |U_N|=18830
+  guard_fibre_histogram=((9, 1450), (10, 578))
+  unit_sign_classes=13182 depth_one_sign_classes=1014 depth_two_sign_classes=78 depth_three_sign_classes=6
+  shallow direct/image parity=1014+78 PASS
+  depth-three primitive-layer safety=6/6 PASS
+
+full labelled branch-and-bound scan
+  typed_shallow_pairs=79092
+  exact_candidate_evaluations=940857 average=11.896 maximum=27
+  unique_minimum_margin=1608
+  unique_minimum_row=(depth_one=799,depth_two=46,residual=13526)
+  unique_minimum_top_five=((2604, 5193), (2472, 10386), (2292, 7773), (2288, 10388), (2262, 7775))
+  pair_table_sha256=79b9b75f3732e47b43c2bba726906250ce0c1069b90d8952c33caa8a8364570f
+
+independent one-owner Ky-Fan certificate
+  coarse_positive_pairs=79091/79092
+  minimum_positive_coarse_margin=36 at (depth_one,depth_two)=(1,1)
+  sole_coarse_exception=(1098,84) residual=13310 coarse_upper=13328 coarse_margin=-18
+  exception_exact_top_five=((2396, 6), (2330, 14275), (2324, 14278), (2296, 5), (2288, 12))
+  exception_exact_margin=1676
+
+definition-level full-residue controls
+  unique minimum row direct parity=PASS
+  sole coarse exception direct parity=PASS
+
+verdict: depth-(1,2,3) excluded
