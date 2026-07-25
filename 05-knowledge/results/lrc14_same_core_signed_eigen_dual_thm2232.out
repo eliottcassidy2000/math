@@ -1,0 +1,29 @@
+stationary=(6/7,1/7)
+transition=((11/13,2/13),(12/13,1/13))
+reverse_root_law=P(previous=1|terminal=b)=(2-b)/13
+target=961/6930
+a=4 profile=(4,6,8)
+a=4 centered_X0_correction=-4884270/62748517
+a=4 raw_correlation_defect_coefficient=4884270/62748517 centered_defect_coefficient=0
+a=4 positive_checkpoint_mass=916159/4826809 unsigned_margin=1710418421/33449786370
+a=4 negative_checkpoint_mass=9440713/33787663
+a=4 signed_dual_capacity=2303649491556761/51185893014090757 target_margin=33225352210052863747/354718238587648946010
+a=4 dual_range=(-255878338/62748517,2) positive_lipschitz=318626855/62748517 negative_lipschitz=2
+a=4 atom_stability_coefficient=2210850905/62748517 required_total_core_distance=33225352210052863747/12497970889120926859650
+a=4 hostile_majorant_endpoint_checks=4536
+a=4 naive_untruncated_majorant_failure=word=000001010 q=-1 Rplus=0 Rminus=0 left=0 naive=-5
+a=5 profile=(5,7,9)
+a=5 centered_X0_correction=4884270/815730721
+a=5 raw_correlation_defect_coefficient=-4884270/815730721 centered_defect_coefficient=0
+a=5 positive_checkpoint_mass=916159/4826809 unsigned_margin=1710418421/33449786370
+a=5 negative_checkpoint_mass=916159/4826809
+a=5 signed_dual_capacity=2711005672365842843/60552911435669365531 target_margin=5629154082883281339043/59947382321312671875690
+a=5 dual_range=(-4,1636345712/815730721) positive_lipschitz=5 negative_lipschitz=1636345712/815730721
+a=5 atom_stability_coefficient=36781146495/815730721 required_total_core_distance=5629154082883281339043/2703016319465029128110550
+a=5 hostile_majorant_endpoint_checks=8512
+a=5 naive_untruncated_majorant_failure=word=0000010000 q=2 Rplus=0 Rminus=0 left=0 naive=-1
+direct_vs_integer_weight_markov_evaluation=PASS
+pointwise_positive_part_majorant=PASS
+same_core_profiles_excluded=2
+unrestricted_profiles_excluded=0
+full_profile_closure_requires_inverse_or_stability_step=YES
