@@ -1,0 +1,10 @@
+THM-2274 INDEPENDENT EXACT JACKSON REFEREE
+pi_brackets_certified=103993/33102<pi<355/113
+jackson_coefficients_reconstructed=1584
+guard_pair_boundary=N99:true_margin_negative,N100:certified_positive,height:198
+ordinary_pair_boundary=N297:true_margin_negative,N298:certified_positive,height:594
+interval_error=2*first_Jackson_moment_independent_of_interval_length
+adaptive_pair_partition=guard:8,ordinary:28,total:36
+scalar_rank_height=594
+fixed_section_original_height=1188
+ALL_EXACT_CHECKS_PASSED
