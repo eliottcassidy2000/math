@@ -1,0 +1,31 @@
+offsets=(0, 1, 2) bound=5934/28561 decimal=0.207765834529603 verdict=FAIL
+offsets=(0, 2, 4) bound=7444136/62748517 decimal=0.118634453145721 verdict=PASS
+offsets=(0, 2, 3) bound=563616/4826809 decimal=0.116767827357577 verdict=PASS
+offsets=(0, 1, 3) bound=563616/4826809 decimal=0.116767827357577 verdict=PASS
+offsets=(0, 1, 1) bound=3316/28561 decimal=0.116102377367739 verdict=PASS
+offsets=(0, 0, 1) bound=3316/28561 decimal=0.116102377367739 verdict=PASS
+offsets=(0, 3, 4) bound=6682804/62748517 decimal=0.106501385522785 verdict=PASS
+offsets=(0, 1, 4) bound=6682804/62748517 decimal=0.106501385522785 verdict=PASS
+offsets=(0, 0, 0) bound=216/2197 decimal=0.098315885298134 verdict=PASS
+offsets=(0, 2, 2) bound=35980/371293 decimal=0.096904600948577 verdict=PASS
+offsets=(0, 0, 2) bound=35980/371293 decimal=0.096904600948577 verdict=PASS
+offsets=(0, 3, 5) bound=71415556/815730721 decimal=0.087547954443167 verdict=PASS
+offsets=(0, 2, 5) bound=71415556/815730721 decimal=0.087547954443167 verdict=PASS
+offsets=(0, 3, 3) bound=343000/4826809 decimal=0.071061440384320 verdict=PASS
+offsets=(0, 0, 3) bound=343000/4826809 decimal=0.071061440384320 verdict=PASS
+offsets=(0, 3, 6) bound=649461896/10604499373 decimal=0.061243994002545 verdict=PASS
+unique_failing_offsets=(0, 1, 2)
+failing_bound=5934/28561
+target=961/6930
+failing_bound_minus_target=13675499/197927730
+worst_passing_offsets=(0, 2, 4)
+worst_passing_bound=7444136/62748517
+target_minus_worst_passing=8713462357/434847222810
+geometric_three_checkpoint_actual=916159/4826809
+closed_profiles=217
+closed_lambda1_4=116/120
+closed_lambda1_5=101/105
+remaining_profiles=((4, 6, 8), (4, 6, 9), (4, 7, 8), (4, 7, 9), (5, 7, 9), (5, 7, 10), (5, 8, 9), (5, 8, 10))
+conditional_current_scalar_ledger=462
+gap_compression_controls=PASS
+exact_primal_dual_vertex_parity=PASS

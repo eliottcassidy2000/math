@@ -187,9 +187,9 @@ THM-2197/2201 give Boolean deficiency and a faithful triangular Hasse-jet carrie
 THM-2198/2204/2205/2207 close every deepest-depth-three profile; THM-2203 fixes scalar transport at `16/208` and leaves `1,136` profiles at depths `4..19`.
 THM-2213/2215 close `(3,3,4)` and `(2,3,4)` by exact affine-needle capacity carriers, leaving four depth-four and `1,134` total finite profiles.
 THM-2222 reduces `lambda_1>=6` to a four-checkpoint three-comb inequality; THM-2224 proves `S_4(B)<=3272/28561<961/6930` for every `B`.
-Thus `lambda_1<=5`, all `455` high-first-depth profiles are empty, and the current scalar valuation ledger has `679` profiles.
+Thus `lambda_1<=5` and `455` profiles are empty; THM-2226's three-checkpoint sieve removes `217` more, leaving a current scalar ledger of `462`.
 THM-2216 identifies the exact meet-tail PSD Gram kernel `K_theta=R_theta R_theta^T`; THM-2218 gives the integral/Fourier/Hasse carrier, signed top-k energy, and common-lift regret.
-The missing input is a closure mechanism for those `679` low-first-depth profiles; THM-2209's quadratic peel closes only the level-one hostile row. LRC(14) remains open.
+The missing input is a closure mechanism for those `462` low-first-depth profiles; THM-2209's quadratic peel closes only the level-one hostile row. LRC(14) remains open.
 
 ### Independent routes that remain live
 
