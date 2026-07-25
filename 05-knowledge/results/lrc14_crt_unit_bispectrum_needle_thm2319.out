@@ -1,0 +1,15 @@
+THM-2319 exact companion
+unit pairs: total=3960 carry0=1980 carry1=1980
+primitive characters surviving on rational needles: 72
+CRT coefficient table: {'all_equal': 3960, 'two_same_fibre': -330, 'two_cross_fibre': 55, 'three_one_pair': -10, 'three_fibres': 4}
+needle floor: 1305/98
+carry-one selected-pair floor: 29/8624
+LRC total/pair floors: 20069595/2, 445991/176
+positive controls: 5
+mixed consecutive hostile: -3042309124
+same-source full current: 12219375808488
+nonconsecutive seven-site hostile: -4459059900
+Schur landing: h1,h2<=J^2-1; h3<=2J^2-1
+LRC jump/charge bounds: J<=6S; A,B<=3276S^2-1; C<=6552S^2-1
+bare/word primitive-colour bounds: 182S-1, 546S-1
+PASS
