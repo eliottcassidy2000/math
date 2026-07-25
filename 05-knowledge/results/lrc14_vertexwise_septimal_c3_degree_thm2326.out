@@ -1,0 +1,17 @@
+theorem=THM-2326
+status=PROVED+VERIFIED-EXACT+CANDIDATE-UNDER-INDEPENDENT-AUDIT
+modulated_identity=source_mark/7+septimal_unit_c3_tail=0
+absolute_convergence=Cauchy-Schwarz
+general_bound=m<=7J-1
+canonical_bound=m<=14S-1
+preserved=source_label,grade,root_character
+landing_rows=100000
+hostile=13-translate real indicator
+hostile_signed_multiplier_rows=200001
+hostile_survivors_imply_13_divides_m=true
+hostile_mass=1/4
+hostile_marked_numerator=1-i
+remaining_colour=13
+scalar_rows_excluded=0
+lrc14_status=OPEN
+all_checks=PASS
