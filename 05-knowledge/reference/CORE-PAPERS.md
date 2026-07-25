@@ -309,8 +309,7 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
 
 ### Lee--Li — *On the two-dimensional Jacobian conjecture: Magnus' formula revisited, IV*
 
-- **Primary / freshness:** [arXiv:2408.01279v1](https://arxiv.org/abs/2408.01279),
-  submitted 2024-08-02. **PREPRINT.**
+- **Primary / freshness:** [arXiv:2408.01279v1](https://arxiv.org/abs/2408.01279), submitted 2024-08-02. **PREPRINT.**
 - **Imported role:** develops inner polynomials for a planar Jacobian pair and
   constrains the northeastern Newton-polygon vertex. The repo uses this as the
   current positive framework in which to test THM-2045's weighted-sector /
@@ -320,6 +319,12 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
   [corrected JC/LRC reflection](../../07-reflections/jacobian-and-lonely-runner-two-nullcones-that-diverge-boxeph-S205.md).
 - **Does not prove:** planar JC, an arithmetic-progression reduction, or that
   every inner edge has THM-2045's unique constant-producing sector.
+
+### Cheng--McKay--Wang / Moskowicz — the planar Jacobian centralizer theorem
+
+- **Primary:** Cheng--McKay--Wang, [*Younger mates and the Jacobian conjecture*](https://doi.org/10.1090/S0002-9939-1995-1257100-4), *Proc. AMS* **123** (1995), Theorem 1 over `C`; characteristic-zero field form in Moskowicz, [*The two-dimensional Centralizer Conjecture*](https://arxiv.org/abs/1802.04685v2), Theorem 2.3.
+- **Imported role:** `Jac(P,B) in k*` and `Jac(P,w)=0` imply `w in k[P]`; [THM-2228](../../01-canon/theorems/THM-2228-planar-jacobian-response-fiber-and-exact-target-shear-quotient.md) derives that every response fiber is exactly one target-shear orbit.
+- **Does not prove:** planar JC or that `P` is a coordinate. The unit-mate and characteristic-zero hypotheses are essential.
 
 ### Han--Pan--Chen — *Normal forms of elements in the Weyl algebra and Dixmier Conjecture*
 
