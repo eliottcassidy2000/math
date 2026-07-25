@@ -1,0 +1,17 @@
+THM-2279 exact companion
+strict_profiles=150
+tail_family_checks=450
+L0=5696989/367580070
+e0=L0/2=5696989/735160140 ~= 0.007749317039958
+G1=10/91
+eta0=delta5-G1=2593/90090 ~= 0.028782328782329
+handoff_floor=e0*eta0/2=14772292477/132461154025200 ~= 0.000111521695441
+BV_horizon_condition: 13^k >= (4/e0) S = 2940640560/5696989 S
+expiration_support_floor=5696989/87001200
+ideal_word_product=14772292477/7837938108000
+first_ideal_Zakharov_threshold=195
+C_194 ~= 0.001891413091820 >= product
+C_195 ~= 0.001881738323399 < product
+hostile_root_word=(3,0)
+hostile_futures=0^infinity versus 0^R 1^infinity for arbitrary R>=c
+scope=no fixed-expiration return, no profile exclusion, no LRC14 proof
