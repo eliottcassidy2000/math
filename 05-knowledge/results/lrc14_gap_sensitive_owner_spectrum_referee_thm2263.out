@@ -1,0 +1,6 @@
+THM-2263 INDEPENDENT INTERVAL REFEREE
+direct endpoint checks: 8
+small same-valuation pairs: 9
+strict equality carrier sum: 12531/199927
+repeated equality carrier sum: 3206/28561
+all independent checks passed

@@ -1,0 +1,12 @@
+THM-2263 GAP-SENSITIVE OWNER SPECTRUM -- exact audit
+folded quotient interval: [-5/3, 24]
+lower endpoint bank/equalities: 75 [(1, 12), (12, 1)]
+strict profiles/worst: 150 [(1, 3, 5)]
+strict pair cap sum: 12531/199927
+strict exclusive/owner: 15041431/197927730 15041431/593783190
+strict expiration image: 15041431/70270200
+repeated profiles/worst: 15 [(1, 1, 5)]
+repeated pair cap sum: 3206/28561
+repeated exclusive/expiration: 5229541/197927730 5229541/70270200
+cross-score interval: [-32/11, 34]
+all exact checks passed
