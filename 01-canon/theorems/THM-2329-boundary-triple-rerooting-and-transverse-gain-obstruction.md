@@ -2,7 +2,7 @@
 id: THM-2329
 title: "Boundary-triple rerooting and the transverse-gain obstruction"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. Re-rooting
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. Re-rooting
   the nonzero THM-2327 word/deepest-comb/bare Fourier triangle at its
   three legs gives the same nonzero monomial with projective shallow
   input labels [1:0], [0:1], and [1:-1]. Under THM-2321's canonical
@@ -24,14 +24,14 @@ related:
   - THM-2325-prescribed-target-gain-full-lattice-91-unit-needle-bank
 script: 04-computation/lrc14_boundary_triple_rerooting_thm2329.py
 output: 05-knowledge/results/lrc14_boundary_triple_rerooting_thm2329.out
-script_sha256: f126dfd7e16576cb21453b529e727995d0e78d12882f2c116d7927b55fe73504
-output_sha256: 1e7150fc0d04720f78c89b4a6b080853ac0985110d0405673678bb79162e40ff
+script_sha256: 9aba042a1772e9d21adf65306bd727a03d767ce4f83cb75832f4a71788d388d6
+output_sha256: feb0fb7a847bbe34d39dc45d11d839881aff4996c694b9f23ac65705e3d3e0ac
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2329 -- boundary-triple rerooting and transverse gain
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2327 produces an actual nonzero heterogeneous Fourier triangle
 
@@ -364,3 +364,13 @@ Both transcripts must match
 ```
 
 byte-for-byte after LF normalization.
+
+The independent audit rederived the three exact Fourier rerootings,
+the shallow-character reductions, the six-element anharmonic orbit, and
+the equivalence between the eleven complementary directions and
+`r,s,r+s!=0`. It separately checked the function-role typing and the
+distinction between a nonzero ordinary deep frequency and its trivial
+shallow character. Normal, optimized, and stored transcripts agree
+byte-for-byte; the recorded hashes match. Target polarization, relation
+address incidence, repeated-first rows, and the resonance branch remain
+outside the theorem.

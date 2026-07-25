@@ -1,5 +1,5 @@
 theorem=THM-2329
-status=PROVED+VERIFIED-EXACT+CANDIDATE-UNDER-INDEPENDENT-AUDIT
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED
 boundary_labels=[1:0],[0:1],[1:-1]
 target_label_map=pure_a,pure_b,mixed_gain_-1
 rerooted_monomials=identical

@@ -142,7 +142,7 @@ for owner_grade in range(0, 7):
 
 
 print("theorem=THM-2329")
-print("status=PROVED+VERIFIED-EXACT+CANDIDATE-UNDER-INDEPENDENT-AUDIT")
+print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED")
 print("boundary_labels=[1:0],[0:1],[1:-1]")
 print("target_label_map=pure_a,pure_b,mixed_gain_-1")
 print("rerooted_monomials=identical")
