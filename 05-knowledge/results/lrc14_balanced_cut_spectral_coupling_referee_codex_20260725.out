@@ -1,0 +1,15 @@
+THM-2265 exact referee
+fejer_square_mass_and_moment_bound=PASS N=2..200
+six_speed_safe_floor=18/91
+seven_speed_safe_floor=15/154
+equal_N_1161_margin=-2293/699620922
+equal_N_1162_margin=465/35106344
+first_positive_equal_bandwidth=1162
+anisotropic_bandwidth=(1161,1162) heights=(2320,2322) margin=449/75023949
+anisotropic_bandwidth=(1130,1187) heights=(2258,2372) margin=4569/4699279585
+anisotropic_bandwidth=(1019,1304) heights=(2036,2606) margin=93/423215156
+anisotropic_bandwidth=(600,4427) heights=(1198,8852) margin=9/326526200
+balanced_relation_height=2322
+largest_seven_core_sum=70
+defect_six_core_carry_bound=162540
+ALL_CHECKS_PASS
