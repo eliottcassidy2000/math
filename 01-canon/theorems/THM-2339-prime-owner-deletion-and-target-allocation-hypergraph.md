@@ -2,8 +2,8 @@
 id: THM-2339
 title: "Prime-owner deletion law and composite-target allocation hypergraph"
 status: >
-  CLAIMED + VERIFIED-EXACT, PROOF CANDIDATE UNDER INDEPENDENT AUDIT. The
-  candidate derives every composite-target lift as a finite min-plus
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. Every composite-target
+  lift is a finite min-plus
   allocation of its labelled prime-summand occurrences among the current
   partition blocks. Boolean Möbius inversion of each block's target-subset
   score gives canonical, blockwise-unique coefficients relative to the
@@ -37,10 +37,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2339 -- prime-owner deletion and target allocation
 
-**CLAIMED + VERIFIED-EXACT; PROOF CANDIDATE UNDER INDEPENDENT AUDIT.**
-
-This file contains a complete proof candidate and an exact companion, but it
-is not yet a proved dependency.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2336 evaluates THM-2330's lift spectrum when the target is prime. There
 is then one prime token, so every endpoint assigns it to a single block;
@@ -817,3 +814,14 @@ byte for byte. The script uses explicit runtime checks rather than `assert`,
 so optimized execution retains every verification. It verifies the finite
 abstract control and the displayed algebraic identities; it is not a
 Gordian-distance computation.
+
+## 11. Independent audit
+
+An independent audit checked the Schubert allocation quotient, empty and
+prime-token boundaries, the `O(m 3^|S|)` recursion, and every Möbius sign.
+It separately verified the blockwise/global gauge distinction, deletion and
+first-collision algebra, all owner-tie boundaries, and the guarded
+Brittenham--Hermiller specialization. The auditor also enumerated the
+radius-two Cayley balls of both hostile word metrics independently of the
+companion. Dependency slugs, hashes, ordinary and optimized transcripts, and
+the documentation validity checks all passed.
