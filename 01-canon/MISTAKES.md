@@ -9,6 +9,28 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-255 (2026-07-25, quantitative handoff-gluing audit) -- a positive-value floor was used in the wrong direction
+
+- **What was written:** for the arrival density
+  `g=P_beta^k 1_F`, every positive value is at least `beta^(-k)`;
+  the first THM-2310 candidate then cited this floor as the reason that
+  `measure({g>0})>=measure(F)`.
+- **First failure:** a positive lower bound on `g` gives an upper bound on
+  the measure of its support from its integral, not the claimed lower bound.
+  The displayed conclusion was true, but that implication did not prove it.
+- **Repair:** use the other pointwise bound, `0<=g<=1`, together with
+  `integral g=measure(F)`. Then
+  `measure(F)=integral_{g>0}g<=measure({g>0})`. Retain
+  `g>=beta^(-k)` on `{g>0}` only for the later lower bound on the mass of a
+  lifted overlap. The independent audit caught the error before THM-2310 was
+  promoted out of candidate status.
+- **Rule:** for a nonnegative density, an upper pointwise bound controls
+  support measure from below; a positive lower pointwise bound controls it
+  from above. Record which direction is being used before transporting a
+  mass statement through a Perron image.
+
+---
+
 ## MISTAKE-254 (2026-07-25, concurrent namespace audit) -- THM-2304 was reserved twice in flight
 
 - **What happened:** one session pushed the canonical blocker-word handoff
@@ -36,6 +58,11 @@ Format per entry:
   reservation keeps `THM-2307`; the later mirror-double reservation moves
   immediately and coherently to `THM-2308`. Both were still unproved stubs,
   so no mathematical statement or proved dependency changed.
+- **Second same-day recurrence:** the quantitative handoff-gluing reservation
+  at `09:47:56` and the sparse-root bispectrum reservation at `09:49:32`
+  crossed in flight at `THM-2310`. The earlier handoff theorem keeps
+  `THM-2310`; the later unproved bispectrum stub moved to `THM-2312` before
+  promotion.
 
 ---
 

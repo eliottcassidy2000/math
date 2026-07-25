@@ -140,12 +140,30 @@ support
 Arr(F,k)={y:P_beta^k 1_F(y)>0}.                       (11)
 ```
 
-It is a finite union of intervals contained in `Y`. Every positive value of
-`P_beta^k 1_F` is at least `beta^(-k)`, so
+It is a finite union of intervals contained in `Y`. The normalized Perron
+operator preserves the integral and
+
+```text
+0<=P_beta^k1_F<=1.
+```
+
+Therefore
+
+```text
+measure(F)
+ =integral_(Arr(F,k))P_beta^k1_F
+ <=measure(Arr(F,k)).
+```
+
+In particular,
 
 ```text
 measure(Arr(F,k))>=measure(F)>0.                     (12)
 ```
+
+Separately, because `1_F` is an indicator, every positive value of
+`P_beta^k1_F` is at least `beta^(-k)`. This second fact will give the
+quantitative lifting estimate in (18).
 
 Every jump of `P_beta^k1_F` is an image of a jump of `1_F`. Positivity can
 change only at those jumps. Hence
