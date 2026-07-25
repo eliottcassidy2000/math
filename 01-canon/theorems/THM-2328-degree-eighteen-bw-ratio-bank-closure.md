@@ -2,7 +2,7 @@
 id: THM-2328
 title: "Degree-eighteen B--W ratio-bank closure"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. In the genuine
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the genuine
   nonsplit polynomial exact-square-prefix degree-eighteen branch of
   THM-2262/2297, all eight B--W ratio points in THM-2311's exactly
   two-sparse bank are empty. The two-point quadratic orbit has an
@@ -33,7 +33,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2328 -- the full B--W ratio bank has positive genus
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2311 reduces the exactly-two-sparse degree-eighteen branch to a finite
 weighted-projective bank.  On the `B`--`W` line,
@@ -424,3 +424,13 @@ factorization and tangent certificates (21)--(25), separable infinity,
 both ramification counts, the bank arithmetic, and the squarefree hostile
 control.  The Riemann--Hurwitz and deck steps are the mathematical proof
 above, not computer assumptions. QED.
+
+The independent hostile audit reconstructed the two discriminants by the
+hand cubic formula over direct quotient rings `Q[a]/(P_2)` and
+`Q[a]/(P_6)`, without using the companion's `CRootOf`, discriminant, or
+orbit helpers. It reproduced the linear gcds, squarefree residuals,
+triple and node factorizations, all three local power-basis certificates,
+the genera, and the squarefree hostile control. A separate finite-field
+Rabin implementation checked both ratio fields. Normal, optimized, and
+stored transcripts and both hashes agree; the source-bank, infinity,
+flux/deck, and `31=6+4+4+9+8` ledgers also passed.
