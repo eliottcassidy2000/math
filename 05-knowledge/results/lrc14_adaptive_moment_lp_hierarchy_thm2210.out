@@ -1,0 +1,9 @@
+nonzero_packet_cases_j0_to_j5=1086
+sharp_prefix_cases_j_to_20=231
+exact_primal_dual_values=PASS
+adaptive_lp_nesting_and_full_inversion=PASS
+sharp_fixed_prefix_coefficients=PASS
+degree1_degree2_closed_forms=PASS
+fixed_prefix_nonnesting_witness=PASS j=4 support={0,4}
+strict_cubic_gain_witness=PASS j=4 support={0,3}
+status=THM-2210_EXACT_FINITE_REFEREE_ONLY
