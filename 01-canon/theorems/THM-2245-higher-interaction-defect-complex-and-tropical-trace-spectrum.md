@@ -7,8 +7,8 @@ status: >
   abstract simplicial complex. Its minimal nonfaces are irreducible
   multiway interaction certificates, and they can have arbitrary arity even
   in translation-invariant integer word metrics; hence the binary
-  interaction graph, and a fortiori any tournament orientation of it, is
-  not a complete compositional carrier. For the faithful min-plus
+  interaction graph, and a fortiori any pairwise orientation of its
+  one-skeleton, is not a complete compositional carrier. For the faithful min-plus
   continuation kernel, raw root length, catalytic root length, and
   homogenized root length are respectively a pinned diagonal, the infimal
   diagonal, and the asymptotic infimal-diagonal slope. Every fixed diagonal
@@ -308,8 +308,10 @@ ell_cat(K)=u_cat(K),
 ell_hash(K)=u_hash(K).                              (24)
 ```
 
-Schubert prime decomposition gives a canonical labelled multiset of prime
-summands, so (5) defines its **unknotting interaction complex**. A
+Schubert prime decomposition gives a canonical multiset of prime summands up
+to permutation. After choosing labels for its occurrences, (5) defines an
+**unknotting interaction complex** canonical up to relabelling and
+simplicial isomorphism. A
 Brittenham--Hermiller symbiont pair is a two-vertex minimal nonface.
 Equations (6)--(14) show what the binary symbiont relation omits: a
 higher-order minimal nonface could have every pair additive and become
