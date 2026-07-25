@@ -1,0 +1,22 @@
+THM-2283 exact mixed safe-torus and scalar rank-three referee
+danger_minorant=-(N-1)(N-3)(N-4)/12
+mixed_three_wise_baseline=23/147
+case_B_support3_ordinary=152/1029
+case_B_support3_guard=307/2058
+case_C_support2_ordinary=311/2058
+case_C_support2_guard=1/7
+case_D_union_floors=m3:guard_in=139968/823543,guard_out=155520/823543;m4:guard_in=15552/117649,guard_out=19440/117649;m5:guard_in=1296/16807,guard_out=2160/16807;m6:guard_in=0,guard_out=180/2401
+delicate_core_mean=1,pair_count=15,star_pair_rank=5
+delicate_haar_pair_floor=1/49,core_safe_floor=1/147,full_safe_floor=72/16807
+Machin_directions=atan(1/5):k6_upper;atan(1/239):k1_lower
+Machin_truncation_pi_upper=471661273023004128472/150134446131591796875
+Machin_pi_upper<104348/33215,margin=464759401292/1565687795372314453125
+sharp_Jackson_scan_N=2..1771:first_accepted=1771
+sharp_N1770_FAIL:eta_cap>11903/50000000>4/16807
+sharp_N1771_PASS:eta_cap<23794/100000000,gap>424089/420175000000>1/1000000
+coarse_355_over_113_scan_N=2..1772:first_accepted=1772
+coarse_N1771_FAIL:eta_cap>119/500000>4/16807
+coarse_N1772_PASS:eta_cap<2379/10000000,gap>145323/84035000000>1/600000
+scalar_relation_height=3540,fixed_section_height=7080
+coarse_fallback_scalar_height=3542,fixed_section_height=7084
+all exact checks passed
