@@ -1,0 +1,7 @@
+binary_terminal_audit=PASS max_length=16 terminals=80 shells=40
+ternary_tournament_terminal_audit=PASS max_length=10 terminals=144 shells=72
+binary_deadline_audit=PASS max_n=16 hostile_continuations=65856 sharp_constant_right=32
+ternary_deadline_audit=PASS max_n=8 hostile_continuations=13344 sharp_constant_right=48
+deadline_formula=tau<=n+2^nu2(n)
+nonpower_corollary=tau<=4n/3
+status=THM-2249_PROVED_VERIFIED_EXACT
