@@ -1,0 +1,12 @@
+THM-2193 septimal/slope addendum exact referee
+profile=(29, 105, 178, 258, 416, 718)
+profile_product=41768105783040
+minor_bound=9021910849136640
+torsion_threshold=111673769007323628596227411751731200
+septimal_coset_depths=1..6 PASS
+lucas_depths=1..4 PASS
+hostile_ambient_mass=617/8580
+hostile_endpoint_numerator=4319/8580
+hostile_test_speed=9182502529207
+hostile_pumped_mass=94332401940/1311786075601
+ALL EXACT CHECKS PASS

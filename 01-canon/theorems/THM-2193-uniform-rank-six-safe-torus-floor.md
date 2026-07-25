@@ -12,17 +12,29 @@ status: >
   most 78*7^21=43566577398496152546. In combination with THM-2190's first
   six relations, every twelve-speed deletion of such a zero-safe row has six
   independent relations of height at most
-  900*(78*7^21)=39209919658646537291400. This does not prove LRC(14).
+  900*(78*7^21)=39209919658646537291400. For the explicit saturated
+  rank-six carrier, every sufficiently deep septimal parameter grid also
+  contains at least six safe cover points. The THM-2188 hostile family
+  proves why this finite certificate does not control the primitive runner
+  slope. This does not prove LRC(14).
 source: codex-2026-07-24-rank-six-safe-torus-floor
 depends_on:
   - THM-2190-basis-safe-floor-and-height-500-rank-six-harvest
 related:
+  - THM-2160-dyadic-checksum-extracts-a-fair-bit-under-the-critical-run-deadline
+  - THM-2174-endpoint-phase-scale-obstruction
+  - THM-2187-height-preserving-saturation-and-universal-radix-carrier
+  - THM-2188-finite-phase-bank-and-pairwise-overlap-no-go
   - THM-2185-rank-two-safe-cube-floor-and-height-500-rank-three-harvest
   - THM-2164-relative-packet-rank-harvesting
 script: 04-computation/lrc14_uniform_rank_six_safe_torus_floor_thm2193.py
 output: 05-knowledge/results/lrc14_uniform_rank_six_safe_torus_floor_thm2193.out
 script_sha256: 8fd4d9ec70711e90c4b0c513465c12a6f212f9e6fafb3d4f9e69737112dfcbd5
 output_sha256: 7a8d5d3418bfb744d71c18d99f6b16db5ca6940db2488db4143af701e6db0cf1
+addendum_script: 04-computation/lrc14_septimal_torsion_slope_addendum_thm2193.py
+addendum_output: 05-knowledge/results/lrc14_septimal_torsion_slope_addendum_thm2193.out
+addendum_script_sha256: 17a5528b38974f85fbaf578c5a618852d02d807202c2dfe816761131487524be
+addendum_output_sha256: f4e618ccb79a7f1c8eaaddfbf9c2c953776deac31eaf5a031ec8c229df85d922
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -584,7 +596,236 @@ independent deletion relations, each of height at most
  =39209919658646537291400.                           (64)
 ```
 
-## 7. Scope
+## 7. A bounded carrier has an exact septimal certificate
+
+The coefficient-free floor above is stronger than any
+presentation-dependent estimate. A bounded presentation nevertheless
+reveals an additional finite statement which the Haar proof alone does not
+record.
+
+Let a saturated rank-six lattice have a basis matrix whose row heights are
+
+```text
+h_1,...,h_6.
+```
+
+Choose a nonsingular `6 x 6` column submatrix `P`, write the other seven
+columns as `N`, and set
+
+```text
+D=|det(P)|,
+M=216 product_(i=1)^6 h_i.                           (65)
+```
+
+Use the complementary coordinates on the finite cover in Section 1. The
+seven free characters pull back to `D y_j`, while the six pivot characters
+pull back to rows `a_i` of `adj(P)N`, up to harmless signs. Hadamard's
+inequality, applied to the pivot minor and every one-column replacement,
+gives
+
+```text
+D<=M,                    |(a_i)_j|<=M.               (66)
+```
+
+Fix a nonzero `a=a_i`, choose `j` with `a_j!=0`, and put
+
+```text
+g=gcd(D,a_1,...,a_7),       h=D/g,       b=a/g.      (67)
+```
+
+The corresponding facet-defect set
+
+```text
+{y:
+  a.y in I,
+  D y_j in I,
+  D y_k in interior(J) for k!=j}                     (68)
+```
+
+contains an open axis-parallel cube of side
+
+```text
+1/(196 D ||b||_1).                                   (69)
+```
+
+Here is a quantitative proof. Write `y=(m+z)/D`. At the base centre take
+
+```text
+z_j=0,                     z_k=1/2 for k!=j.          (70)
+```
+
+Because `gcd(h,b_1,...,b_7)=1`, the residues `b.m mod h` are all
+available. If `sum_(k!=j)b_k` is even, choose `m` so that `b.(m+z)=0`
+modulo `h`. If it is odd, choose `m` so that the numerator has circular
+distance `1/2` from zero. For `h>=8`, this already lies strictly inside
+the target interval of numerator radius `h/14`.
+
+In the remaining odd case `1<=h<=7`, the available numerator motion inside
+the base box has radius
+
+```text
+Lambda
+ =|b_j|/14+(3/7)sum_(k!=j)|b_k|
+ >=1/2.                                              (71)
+```
+
+Move toward the cancelling face, proportionally in all coordinates, by the
+fraction
+
+```text
+theta=(1/2-h/28)/Lambda<=13/14.                      (72)
+```
+
+The target numerator is then `h/28` from zero, every base coordinate is at
+least `1/196` from its relevant face, and the target is at least `1/28`
+from its boundary. In every even or `h>=8` case the margins are larger.
+An `l_infinity` perturbation of radius
+
+```text
+1/(392||b||_1)
+```
+
+therefore remains in (68). Dividing by `D` proves (69).
+
+For the explicit saturated carrier in THM-2187,
+
+```text
+(h_1,...,h_6)=(29,105,178,258,416,718),
+M=9021910849136640.                                  (73)
+```
+
+Since `||b||_1<=7M`, every facet cube has side at least `1/R`, where
+
+```text
+R=196*7M^2
+ =111673769007323628596227411751731200.              (74)
+```
+
+Now take `Q=7^k>R` and the product parameter grid
+`(Q^(-1)Z/Z)^7`. The strict danger interval modulo `Q` consists of exactly
+`Q/7` consecutive residues. More generally, if a nonzero multiplier `c`
+has `nu_7(c)=s<k`, every coset modulo `7^s` meets that interval in exactly
+
+```text
+Q/(7*7^s)                                            (75)
+```
+
+residues. Multiplication by `c` has `7^s` preimages per image point, so
+every translate has exactly `Q/7` dangerous inputs. The inequality `Q>R`
+ensures `s<k` for `D` and for each selected nonzero coefficient
+`(a_i)_(j_i)`.
+
+Let `B_Q` be the parameter points on which all seven `D y_j` are safe, and
+let `A_(i,Q)` be the danger event for `a_i`. The discrete analogue of
+(13) is exact:
+
+```text
+|B_Q|=(6Q/7)^7,
+
+|A_(i,Q) intersection B_Q|
+ =(Q/7)(6Q/7)^6-Delta_(i,Q),                         (76)
+```
+
+where `Delta_(i,Q)` counts the points on the omitted danger facet. Every
+cube (69) has side greater than `1/Q`, so `Delta_(i,Q)>=1`. Therefore
+
+```text
+|B_Q \ union_i A_(i,Q)|
+ >=(6Q/7)^7-6(Q/7)(6Q/7)^6+sum_i Delta_(i,Q)
+ >=6.                                                (77)
+```
+
+Thus every septimal parameter cover above (74) contains at least six safe
+grid points. Their images in `K_L` need not be six distinct points; the
+certificate is an existence statement on the finite cover.
+
+The combinatorial shadow is Lucas--Pascal cancellation:
+
+```text
+binom(7^k-1,j)=(-1)^j mod 7,
+binom(7^k,j)=0 mod 7             for 0<j<7^k.         (78)
+```
+
+The six safe colours and one danger colour cancel the bulk exactly in
+(77); the six omitted facets are the surviving layer defects. Unlike the
+bare congruence, (69)--(77) retain interval order, coefficient depth, and
+strict endpoint margins.
+
+## 8. Ambient carrier versus primitive runner slope
+
+THM-2188 is the sharp transfer boundary for both (50) and (77). Put
+
+```text
+C={1,2,3,4,5,6,8,9,10,11,12,13},
+mu=measure(G_C)=4319/51480,
+
+pi(x)=(x_*,sum_(c in C)c x_c),
+L_C=ker(pi).                                         (79)
+```
+
+The quotient character group is `Z^2`, so
+
+```text
+K_(L_C) congruent (R/Z)^2,
+x_*=s,                         x_c=c t.              (80)
+```
+
+Its safe region is exactly
+
+```text
+J times G_C,
+```
+
+of positive Haar mass
+
+```text
+(6/7)mu=617/8580.                                    (81)
+```
+
+The row `C union {w}` is not the whole ambient carrier. It is the primitive
+one-dimensional slope
+
+```text
+Gamma_w:t |-> (wt,t).                                (82)
+```
+
+THM-2174's endpoint-current formula gives its exact safe mass:
+
+```text
+measure(Gamma_w intersection (J times G_C))
+ =6mu/7-C_C(w mod 720720)/w.                         (83)
+```
+
+On the residue class `w=7 mod 720720`, the numerator is
+`C_C(7)=6mu`. Hence `w=7` gives zero. For arbitrary finite bank height `B`
+and septimal depth `h`, put
+
+```text
+W=7+lcm(720720,1,...,B,7^h).                         (84)
+```
+
+The residue and endpoint phase word is unchanged, but
+
+```text
+measure(Gamma_W intersection (J times G_C))
+ =4319(W-7)/(60060W)>0.                              (85)
+```
+
+Moreover `Gamma_W` and `Gamma_7` agree on every parameter of order `7^k`
+for `k<=h`. Thus positive ambient mass and every prescribed finite
+septimal bank may coexist with opposite one-dimensional safety outcomes.
+The finite certificate (77) does not descend to a runner line without the
+additional state
+
+```text
+primitive transverse slope + Archimedean current 6mu/w. (86)
+```
+
+Section 6 succeeds for a different reason: complete Fourier resonance data
+at the smoothing height transfers a discrepancy on the ambient torus back
+to a new bounded relation on the line.
+
+## 9. Scope
 
 The theorem closes the uniform rank-six safe-torus question left open in
 THM-2190 and makes its seventh-relation height effective. It does not:
@@ -593,11 +834,15 @@ THM-2190 and makes its seventh-relation height effective. It does not:
 2. provide a comparable safe-torus floor in rank seven;
 3. turn the seven global relations into the full terminal certificate needed
    by the current LRC(14) proof graph; or
-4. prove LRC(14).
+4. turn the finite septimal certificate into a target-preserving runner
+   pump; or
+5. prove LRC(14).
 
 Reproduction:
 
 ```bash
 python3 04-computation/lrc14_uniform_rank_six_safe_torus_floor_thm2193.py
 python3 -O 04-computation/lrc14_uniform_rank_six_safe_torus_floor_thm2193.py
+python3 04-computation/lrc14_septimal_torsion_slope_addendum_thm2193.py
+python3 -O 04-computation/lrc14_septimal_torsion_slope_addendum_thm2193.py
 ```
