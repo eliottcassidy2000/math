@@ -1,5 +1,5 @@
 ---
-id: THM-2286
+id: THM-2291
 title: "Repeated-owner BV mixing and delayed blocker handoff"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENT HOSTILE AUDIT ACCEPTED. In every
@@ -28,14 +28,14 @@ related:
   - THM-2268-two-shell-private-owner-trident-and-raw-carry-cocycle-no-go
   - THM-2271-expiration-support-forces-a-weighted-owner-absorber-cut
   - THM-2288-shallow-owner-bv-mixing-and-delayed-blocker-handoff
-script: 04-computation/lrc14_repeated_owner_bv_delayed_handoff_thm2286.py
-output: 05-knowledge/results/lrc14_repeated_owner_bv_delayed_handoff_thm2286.out
+script: 04-computation/lrc14_repeated_owner_bv_delayed_handoff_thm2291.py
+output: 05-knowledge/results/lrc14_repeated_owner_bv_delayed_handoff_thm2291.out
 script_sha256: 129939aa70a5e838f314cc3738cb2d656c3c4818ffc453b970b8e4f51da721af
 output_sha256: 64788559e0c93d142e59979a8e1f446fa206b164cdbdcb3b20463155adaf2171
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2286 -- delayed blocker-only handoff on every repeated row
+# THM-2291 -- delayed blocker-only handoff on every repeated row
 
 Use the scalar five-unit/three-blocker notation
 
@@ -351,8 +351,8 @@ horizon normalization, the positive handoff constant, and the
 half-comb/full-comb stopping inequalities in (28). Reproduce with
 
 ```bash
-python3 04-computation/lrc14_repeated_owner_bv_delayed_handoff_thm2286.py
-python3 -O 04-computation/lrc14_repeated_owner_bv_delayed_handoff_thm2286.py
+python3 04-computation/lrc14_repeated_owner_bv_delayed_handoff_thm2291.py
+python3 -O 04-computation/lrc14_repeated_owner_bv_delayed_handoff_thm2291.py
 ```
 
 Normal and optimized transcripts are byte-identical to the stored output.

@@ -1,4 +1,4 @@
-THM-2285 context-selected hafnian kernel exact audit
+THM-2290 context-selected hafnian kernel exact audit
 exhaustive direct=hafnian evaluations: 746496
 exhaustive digest: 3ee779e94b0381537dcca2e858f730d6308685fd318d483b87e42bd778af69fa
 selector-erasure response vectors (rr,rb,br,bb): (1, 0, 0, 1) vs (2, 0, 0, 0)

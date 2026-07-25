@@ -1,5 +1,5 @@
 ---
-id: THM-2278
+id: THM-2271
 title: "Expiration support forces a weighted owner-absorber cut"
 status: >
   PROVED + VERIFIED-EXACT. In every one of the 150 strict first-depth-one
@@ -24,14 +24,14 @@ related:
   - THM-2261-expiration-image-surjectivity-and-one-core-carrier-no-go
   - THM-2266-depth-one-deep-pair-centered-signed-dual-and-relation-atlas
   - THM-2268-two-shell-private-owner-trident-and-raw-carry-cocycle-no-go
-script: 04-computation/lrc14_expiration_owner_absorber_cut_thm2278.py
-output: 05-knowledge/results/lrc14_expiration_owner_absorber_cut_thm2278.out
-script_sha256: c91cc9caad447bcc271c5031b5814ad528b94d6be62fb231c2e2d0fbb87f056b
-output_sha256: 4cd686250ad45ceb7f112f35ca986d37ed2d595351afb92000267ca2d69706bf
+script: 04-computation/lrc14_expiration_owner_absorber_cut_thm2271.py
+output: 05-knowledge/results/lrc14_expiration_owner_absorber_cut_thm2271.out
+script_sha256: d238f51a61ac81f9786730f0d6440deafe2a714b9c5badb3eeb206139240db6e
+output_sha256: d7510603b3d9cbbc397403fdbf90fc77a051c13e564aa42659c6660a15af16aa
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2278 -- a strict owner expiration pays a positive absorber cut
+# THM-2271 -- a strict owner expiration pays a positive absorber cut
 
 THM-2263 raises the strict-row labelled expiration-image floor above one
 danger-comb capacity.  THM-2267 supplies the exact transition cut kernel.
@@ -365,8 +365,8 @@ floors, the `169/20` expiration factor, the strict cut floor in (18), and
 the repeated-row failure in (26).  Reproduce with
 
 ```bash
-python3 04-computation/lrc14_expiration_owner_absorber_cut_thm2278.py
-python3 -O 04-computation/lrc14_expiration_owner_absorber_cut_thm2278.py
+python3 04-computation/lrc14_expiration_owner_absorber_cut_thm2271.py
+python3 -O 04-computation/lrc14_expiration_owner_absorber_cut_thm2271.py
 ```
 
 Normal and optimized transcripts are byte-identical to the stored output.

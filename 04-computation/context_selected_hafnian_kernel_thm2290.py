@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact audit for THM-2285.
+"""Exact audit for THM-2290.
 
 The theorem itself is algebraic.  This script independently checks the
 direct inherited-color matching sum against the hafnian of the selected
@@ -322,7 +322,7 @@ def main() -> None:
         global_six,
     ) = tournament_pfaffian_audit()
 
-    print("THM-2285 context-selected hafnian kernel exact audit")
+    print("THM-2290 context-selected hafnian kernel exact audit")
     print(f"exhaustive direct=hafnian evaluations: {exhaustive_count}")
     print(f"exhaustive digest: {exhaustive_digest}")
     print(

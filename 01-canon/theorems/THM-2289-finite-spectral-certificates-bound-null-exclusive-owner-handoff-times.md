@@ -481,7 +481,7 @@ it gives the explicit mass
 ```
 
 at every sufficiently large time. The two conclusions are complementary.
-THM-2286 gives the analogous larger, coefficient-dependent delayed floor on
+THM-2291 gives the analogous larger, coefficient-dependent delayed floor on
 the repeated-first branch.
 
 ## 6. Sharp stopping boundaries and hostile controls

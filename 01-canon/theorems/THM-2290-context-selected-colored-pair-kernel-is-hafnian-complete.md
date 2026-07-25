@@ -1,5 +1,5 @@
 ---
-id: THM-2285
+id: THM-2290
 title: "Context-selected colored pair kernels are hafnian-complete"
 status: >
   PROVED + VERIFIED-EXACT. For a finite loopless endpoint-colored weighted
@@ -32,14 +32,14 @@ related:
   - THM-2267-static-owner-coverage-is-flag-and-transition-holonomy-is-a-cut-kernel
 external:
   - "Mario Krenn, Xuemei Gu, and Daniel Soltesz, Questions on the Structure of Perfect Matchings Inspired by Quantum Physics, arXiv:1902.06023v2."
-script: 04-computation/context_selected_hafnian_kernel_thm2285.py
-output: 05-knowledge/results/context_selected_hafnian_kernel_thm2285.out
+script: 04-computation/context_selected_hafnian_kernel_thm2290.py
+output: 05-knowledge/results/context_selected_hafnian_kernel_thm2290.out
 script_sha256: 1b83d56ec85235824ee6b9f7f1eb73f64c2f77b933a6e48b6a8206373c605fed
 output_sha256: 172507126a6ff2665b0438231e861d0f80e74c7163f112e2e2ebe043b6fc2ebf
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2285 -- the exact pair object retains its selectors
+# THM-2290 -- the exact pair object retains its selectors
 
 The inherited-color amplitude of Krenn--Gu--Soltesz is a sum over an
 entire perfect-matching fiber. That warning is sometimes read too broadly
