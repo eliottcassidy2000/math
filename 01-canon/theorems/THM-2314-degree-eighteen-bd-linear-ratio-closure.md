@@ -1,5 +1,5 @@
 ---
-id: THM-2313
+id: THM-2314
 title: "Degree-eighteen B--D linear-ratio closure"
 status: >
   RESERVED / UNPROVED PROOF CANDIDATE UNDER AUDIT. Intended scope: the two
@@ -13,7 +13,7 @@ depends_on:
   - THM-2311-degree-eighteen-two-sparse-weighted-ratio-bank
 ---
 
-# THM-2313 -- RESERVED / UNPROVED PROOF CANDIDATE UNDER AUDIT
+# THM-2314 -- RESERVED / UNPROVED PROOF CANDIDATE UNDER AUDIT
 
 This namespace is reserved for an exact audit of the two rational
 linear-factor points on the degree-eighteen `B`--`D` weighted line. It is not
