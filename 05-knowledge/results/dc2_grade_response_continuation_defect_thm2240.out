@@ -1,0 +1,29 @@
+THM-2240 DC2 GRADE-RESPONSE CONTINUATION DEFECT
+ambient=Q[x,q][ell;delta], delta=3*x^2*d_x+(2-6*x*q)*d_q
+symbol_lift=sum f_k(q)u^k -> sum f_k(q)x^(p+2k)ell^k
+weyl_grade6= 2*(u - 2)*(u - 1)
+standard_grade7= -3*q*(10*u**2 - 36*u + 29)/2
+C1_grade6_piece_S= 8*(u - 2)*(2*u**2 - 10*u + 9)/3
+C1_grade6_piece_T= -8*(u - 2)*(2*u**2 - 10*u + 9)/3
+C1_grade7_piece_S= 8*q*(2*u - 5)*(2*u**2 - 8*u + 5)
+C1_grade7_piece_T= -8*q*(u - 2)*(4*u**2 - 22*u + 19)
+C1_grade7= q*(34*u**2 - 100*u + 121)/2
+C1_splitter= 8*q*(4*u**2 - 13*u + 13)
+arbitrary_q_syzygy_response=4*K*(J+q*J_q)+18*J_u
+q_layer_response=[4*(r+2)*K*c_r+18*c_r']/(r+1)
+L_a=20*(u-2)*a+2*(2*u^2-6*u+1)*a'
+L_b=D*b+u*(u-2)*(u-4)*b'/3
+L_a_axis_leading=4*(n+5)*lc(a), degree=n+1
+L_b_axis_leading=(n+6)*lc(b)/3, degree=n+2
+q_layer_numerator_leading=16*(r+2)*lc(c_r), degree=n+2
+axiswise_injectivity_checks=n:0..8; r:0..5; u_degree:0..6 PASS
+combined_ab_kernel_a= -25*u**2 + 140*u - 146
+combined_ab_kernel_b= 20*(15*u - 34)
+combined_ab_kernel_response= 0
+hostile_full_ore_arbitrary_q_crosscheck=PASS
+common_next_rung_splitter= 8*q*(4*u**2 - 13*u + 13)
+constant_c_from_u2= 15/32
+remaining_u_coefficient= 21/4
+pure_homogeneous_grade6_rung_cannot_skip_grade7=PASS
+scope=next-rung beta6/beta7 attachments excluded; formal recursion unchanged
+all_exact_checks=PASS
