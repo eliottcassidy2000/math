@@ -28,6 +28,7 @@ related:
   - THM-2174-endpoint-phase-scale-obstruction
   - THM-2182-endpoint-grid-product-and-tail-overlap-sidecar
   - THM-2183-order-join-is-an-exact-tournament-metric-product
+  - THM-2184-two-scale-tail-continuation-profile
 external:
   - "Mark Brittenham and Susan Hermiller, Unknotting number is not additive under connected sum, arXiv:2506.24088v2."
   - "Mark Brittenham and Susan Hermiller, Unknotting number and connected sums: The knots 4_1 and 5_1, arXiv:2601.18757v1."
@@ -622,7 +623,10 @@ closing every `7+6` aligned row, while two tails with identical phase-zero
 labels, zero one-comb currents, equal marginal masses, and equal reciprocal
 sum still have different joint continuations. The universal theorem above
 explains why the joint tail law, not another marginal scalar, is the required
-sidecar.
+sidecar. THM-2184 makes that law explicit as a rational two-torus continuation
+profile and proves an effective `O(1/(NL))` comparison for arbitrary fixed
+residues. Its pointwise six-tail floor closes every fixed `7+6` affine ray at
+large scale; THM-2182 is exactly the zero-residue face.
 
 ## 9. Slack-aware propagation
 

@@ -17,6 +17,7 @@ related:
   - THM-2176
   - THM-2182
   - THM-2183
+  - THM-2184
 ---
 
 # The Gordian object is a min-plus profile, not a tournament
@@ -335,6 +336,19 @@ same phase-zero word, zero one-comb currents, equal one-comb masses, and equal
 reciprocal sum, yet their joint masses differ by `measure(G_E)/84`. This
 isolates joint ratio/gcd overlap as an indispensable interaction sidecar.
 
+Incoming THM-2184 identifies the next state exactly:
+
+```text
+Phi_(c,r)(t)=integral_x product_i 1_G(c_i x+r_i t)dx.
+```
+
+This rational two-torus profile retains the full internal tail overlap and
+approximates tails `W_i=NLc_i+r_i` with explicit error
+`5||r||_1/(2NL)`. Since `Phi_(c,r)(t)>=1/7` for six tail constraints, every
+fixed arbitrary-residue `7+6` affine ray is eventually strict. Alignment is
+therefore a zero-error face, not the true boundary; the remaining supplier
+problem is uniform control when the affine-ray data itself changes.
+
 The next concrete portfolio is:
 
 1. **Knot anchor:** search specifically for positive translation catalysis
@@ -345,9 +359,9 @@ The next concrete portfolio is:
    THM-2183-style Monge uncrossing; the ambient quotient triangle is the
    mandatory hostile control.
 3. **LRC wildcard:** combine THM-2178's mod-14 rank fork and THM-2179's
-   body-touching packet with THM-2182's exact product. The decisive supplier
-   would force or manufacture an endpoint-aligned `7+6` split without losing
-   distinctness.
+   defect-six body-touching packet with THM-2184. The decisive supplier now
+   needs a bounded family of affine-ray profiles, not exact zero-residue
+   alignment.
 4. **Word-overlap hostile probe:** test the first-hit convolution on one cyclic
    endpoint-owner packet; stop immediately if rotations make the layers
    non-disjoint.

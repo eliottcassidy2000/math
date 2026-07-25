@@ -179,10 +179,14 @@ exact and finite; it does not prove that every surviving interval is empty.
 
 Orthogonally, THM-2144/2164 force two height-`<=105` relations and THM-2169 gives height-`1247` relations on every deletion. THM-2167 has at most `2,924,250` sign-sharp carry-owner states; THM-2171 repairs order/distinctness/primitivity with ordered cap `5,430,750`.
 THM-2174 shows why this still fails: aligned finite windows preserve bounded-denominator danger clutters, but endpoint current `C_r/W` retains scale. THM-2178 forces a third bounded relation unless the known plane has a support-`<=3` digit mod `14`.
-THM-2145/2166 give every defect-six split a far-height-`298`, core-height-`57`, carry-`<=708` crossing relation. For defect `>=7`, THM-2179 gives a stronger-`3/41` positive floor or a body-touching height-`140`, `41`-unit packet. These are structural forks, not closure; phase/current remains.
+THM-2145/2166 give every defect-six split a bounded crossing relation. THM-2179
+adds a stronger-`3/41` exit or `41`-unit packet at defect six (height `180`)
+and above (height `140`); these are forks, not LRC closure.
 [THM-2182](../01-canon/theorems/THM-2182-endpoint-grid-product-and-tail-overlap-sidecar.md)
 closes every endpoint-aligned `7+6` row by exact product and `1/(49e_2)`;
-forcing such an alignment, with the joint ratio/gcd tail law intact, is open.
+THM-2184 extends this to every fixed arbitrary-residue `7+6` affine ray for
+large scale through the full joint two-torus continuation profile. Supplying
+one uniform affine-ray decomposition for the unrestricted residual is open.
 
 ### Independent routes that remain live
 
