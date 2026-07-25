@@ -2,7 +2,7 @@
 id: THM-2323
 title: "Primitive fixed-colour cross-correlation and same-gauge word alignment"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. Let N be
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. Let N be
   any positive integer divisible by seven. If 0<=f<=g are
   nonzero rational-valued step functions with rational breakpoints,
   supported in one open circle arc of length 1/7, then for every primitive
@@ -44,7 +44,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2323 -- primitive colour forces a bare/word diagonal
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2319 lands every primitive `91`-colour separately in the Fourier
 spectra of the bare owner source and of its literal positive-word subset.
@@ -672,3 +672,11 @@ The two transcripts must match
 ```
 
 byte-for-byte after LF normalization.
+
+The independent audit rederived the arbitrary-`N` Galois acute-sector
+argument, the Parseval and endpoint-product Vandermonde landing, the
+`N=91` quantitative bounds, and the coherent CRT fibre with its exact
+`gcd(a,91)` boundary. It also reproduced the ordinary, optimized, and
+stored transcripts byte-for-byte, verified both recorded hashes, and
+confirmed that the arbitrary-`N` conclusion is levelwise syndetic and
+does not assert compatible gauge indices across different moduli.
