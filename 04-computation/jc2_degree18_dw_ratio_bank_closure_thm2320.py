@@ -218,6 +218,15 @@ def main() -> None:
     ).monic()
     require(repeated_linear.degree() == 1, "cubic repeated factor is not linear")
     node_y = field_reduce(-repeated_linear.coeff_monomial(1), field)
+    expected_node_y = (
+        3790040625 * alpha**2
+        - 25880297472 * alpha
+        - 343597383680
+    ) / 42471522304
+    require(
+        field_reduce(node_y - expected_node_y, field) == 0,
+        "cubic node y-coordinate changed",
+    )
     quotient, remainder = cubic_discriminant.div(
         sp.Poly((y - node_y) ** 2, y, extension=alpha)
     )
@@ -246,6 +255,15 @@ def main() -> None:
     repeated_u = sp.gcd(node_fibre, node_fibre.diff()).monic()
     require(repeated_u.degree() == 1, "cubic exceptional root is not double")
     node_u = field_reduce(-repeated_u.coeff_monomial(1), field)
+    expected_node_u = (
+        -7058559375 * alpha**2
+        + 104983822336 * alpha
+        + 206158430208
+    ) / 25517520000
+    require(
+        field_reduce(node_u - expected_node_u, field) == 0,
+        "cubic node u-coordinate changed",
+    )
     simple_u = field_reduce(sp.Rational(5, 81) * node_y**2 - 2 * node_u, field)
     require(
         sp.Poly(
@@ -293,6 +311,38 @@ def main() -> None:
     tangent_discriminant = field_reduce(
         tangent_uy**2 - 4 * tangent_u2 * tangent_y2,
         field,
+    )
+    expected_tangent_u2 = (
+        6561
+        * (
+            611312821875 * alpha**2
+            - 11216021225472 * alpha
+            - 19310172962816
+        )
+        / 202520000
+    )
+    expected_tangent_discriminant = (
+        -sp.Rational(
+            945539748965690376192,
+            57572832660675048828125,
+        )
+        * (
+            136966554945917353125 * alpha**2
+            - 4257922067489564393472 * alpha
+            - 7854173444688698146816
+        )
+    )
+    require(
+        field_reduce(tangent_u2 - expected_tangent_u2, field) == 0,
+        "cubic tangent u^2 coefficient changed",
+    )
+    require(
+        field_reduce(
+            tangent_discriminant - expected_tangent_discriminant,
+            field,
+        )
+        == 0,
+        "cubic tangent discriminant changed",
     )
     require(tangent_u2 != 0, "cubic node gained a vertical tangent")
     require(tangent_discriminant != 0, "cubic tangent cone is not ordinary")
@@ -355,8 +405,20 @@ def main() -> None:
     print("cubic_ratio_field=degree_3_irreducible_mod_13")
     print("cubic_orbit_size=3")
     print("cubic_Delta=universal_lead*(y-Y(alpha))^2*h10")
+    print(
+        "cubic_node_Y="
+        "(3790040625*alpha^2-25880297472*alpha-343597383680)"
+        "/42471522304"
+    )
+    print(
+        "cubic_node_R="
+        "(-7058559375*alpha^2+104983822336*alpha+206158430208)"
+        "/25517520000"
+    )
     print("cubic_h10=degree_10_squarefree_coprime")
     print("cubic_exceptional_fibre=ordinary_node_two_unramified_branches")
+    print("cubic_tangent_u2=explicit_nonzero_power_basis_element")
+    print("cubic_tangent_discriminant=explicit_nonzero_power_basis_element")
     print("cubic_absolute_irreducibility=PASS_global_Groebner_basis_[1]")
     print("cubic_total_ramification=10")
     print("cubic_normalization_genus=3")
