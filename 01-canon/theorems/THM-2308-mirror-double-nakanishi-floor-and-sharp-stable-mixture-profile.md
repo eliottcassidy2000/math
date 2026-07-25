@@ -352,6 +352,34 @@ symmetry, the same entire opposite-sign chamber, and, for `r>=2`, the same
 physical floor (16). They attain respectively the lower and upper sides of
 (27) at every point.
 
+The sharpness is not an artifact of discarding the integer-valued raw
+metric. Let `L=Z a direct_sum Z b` and, for either model norm, put
+
+```text
+d_*(v,w)=ceiling(p_*(v-w)).                          (31a)
+```
+
+Then `d_*` is an integer-valued translation-invariant metric: the triangle
+inequality follows from
+
+```text
+ceiling(x+y)<=ceiling(x)+ceiling(y).
+```
+
+Its homogenized group norm is exactly the chosen model,
+
+```text
+lim_(n->infinity)d_*(nv,0)/n=p_*(v).                (31b)
+```
+
+Rationalization and continuous extension recover the displayed norm on the
+whole real plane from this lattice identity.
+
+Moreover its raw one-body costs are three, its mirror-double raw cost is
+`ceiling(r)<=5`, and its positive lattice cone obeys the floor `P+Q`.
+Thus even cancellativity, exact translation invariance, integrality, and
+the known raw upper and lower data do not select one envelope.
+
 For the actual range `2<=r<=5`, the two envelopes differ strictly whenever
 
 ```text
