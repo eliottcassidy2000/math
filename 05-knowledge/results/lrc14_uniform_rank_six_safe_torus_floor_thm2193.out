@@ -1,0 +1,13 @@
+THM-2193 exact uniform rank-six safe-torus referee
+strong_facet_floor=46656/10706059
+local_cube_radius=1/686, side=1/343
+local_facet_floor=1/3351275184499704042
+uniform_rank_six_floor=1/558545864083284007=7^-21
+critical_deficit_count=6
+residue_h=7..100000 and slice_B=7..100000 exact sweeps passed
+local_h=1..6 parity/margin audit passed
+Jackson_eta_N<3/(2N)
+N_star=21783288699248076274
+H_star=43566577398496152546
+deletion_rank=6, deletion_height=39209919658646537291400
+all exact checks passed
