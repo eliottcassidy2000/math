@@ -323,7 +323,7 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
 ### Cheng--McKay--Wang / Moskowicz — the planar Jacobian centralizer theorem
 
 - **Primary:** Cheng--McKay--Wang, [*Younger mates and the Jacobian conjecture*](https://doi.org/10.1090/S0002-9939-1995-1257100-4), *Proc. AMS* **123** (1995), Theorem 1 over `C`; characteristic-zero field form in Moskowicz, [*The two-dimensional Centralizer Conjecture*](https://arxiv.org/abs/1802.04685v2), Theorem 2.3.
-- **Imported role:** `Jac(P,B) in k*` and `Jac(P,w)=0` imply `w in k[P]`; [THM-2228](../../01-canon/theorems/THM-2228-planar-jacobian-response-fiber-and-exact-target-shear-quotient.md) derives that every response fiber is exactly one target-shear orbit.
+- **Imported role:** `Jac(P,B) in k*` and `Jac(P,w)=0` imply `w in k[P]`; [THM-2230](../../01-canon/theorems/THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient.md) derives that every response fiber is exactly one target-shear orbit.
 - **Does not prove:** planar JC or that `P` is a coordinate. The unit-mate and characteristic-zero hypotheses are essential.
 
 ### Han--Pan--Chen — *Normal forms of elements in the Weyl algebra and Dixmier Conjecture*

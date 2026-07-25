@@ -1,5 +1,5 @@
 ---
-id: THM-2228
+id: THM-2230
 title: "Planar Jacobian response fibers are exactly target-shear orbits"
 status: >
   PROVED + CITED. Over any characteristic-zero field, if P has one
@@ -23,7 +23,7 @@ related:
   - THM-2225-dyadic-critical-run-extractors-and-cyclic-checksum-shell-bisection
 ---
 
-# THM-2228 -- the Jacobian response is the exact target-shear quotient
+# THM-2230 -- the Jacobian response is the exact target-shear quotient
 
 Let `k` be a field of characteristic zero and put
 
