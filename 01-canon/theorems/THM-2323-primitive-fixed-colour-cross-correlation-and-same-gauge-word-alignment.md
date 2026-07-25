@@ -6,9 +6,10 @@ status: >
   divisible by seven and satisfy phi(N)>2(N/7-1). If 0<=f<=g are
   nonzero rational-valued step functions with rational breakpoints,
   supported in one open circle arc of length 1/7, then for every primitive
-  N-character k there is one common nonnegative gauge index
-  0<=h<=J_f J_g-1 at which both Fourier coefficients
-  f-hat(k+Nh) and g-hat(k+Nh) are nonzero. The mechanism is a fixed-colour
+  N-character k every block of J_f J_g consecutive gauge indices contains
+  one at which both Fourier coefficients f-hat(k+Nh) and
+  g-hat(k+Nh) are nonzero. In particular there is a common nonnegative
+  index 0<=h<=J_f J_g-1. The mechanism is a fixed-colour
   cross-correlation Laurent polynomial of width 2(N/7-1), whose positive
   diagonal coefficient and rationality prevent primitive-root vanishing;
   Parseval and endpoint-product Vandermonde then land the common index.
@@ -274,13 +275,14 @@ nonzero term, and `h+alpha` never vanishes for an integer `h` because
 
 A nonzero exponential sum on `L` distinct nodes cannot vanish at `L`
 consecutive integers, by invertibility of the corresponding Vandermonde
-matrix. Apply this to the block beginning at zero. Equations
-(14), (17), and (18) yield
+matrix. The same argument applies to a block beginning at any integer.
+Equations (14), (17), and (18) yield
 
-> **Primitive same-gauge theorem.** For every `k` coprime to `N`, some
+> **Primitive same-gauge theorem.** For every `k` coprime to `N` and every
+> integer `H`, some
 >
 > ```text
-> 0<=h<=J_f J_g-1
+> H<=h<=H+J_f J_g-1
 > ```
 >
 > satisfies
@@ -289,7 +291,7 @@ matrix. Apply this to the block beginning at zero. Equations
 > f_hat(k+Nh)g_hat(k+Nh)!=0.                         (19)
 > ```
 
-In particular the common positive frequency obeys
+Taking `H=0`, the first common positive frequency obeys
 
 ```text
 1<=k+Nh<=N J_f J_g-1.                               (20)
@@ -297,7 +299,9 @@ In particular the common positive frequency obeys
 
 This conclusion is diagonal: it retains the same primitive colour and the
 same gauge index in both functions. A separate landing theorem for the two
-functions would not imply it.
+functions would not imply it. It also makes the common-index set
+two-sided syndetic, with gauge gaps at most `J_fJ_g`; the first bounded
+positive atom is only its smallest immediately useful consequence.
 
 ## 5. The all-depth `7*13^a` stalk
 
@@ -325,8 +329,9 @@ pair `f<=g` has a common gauge satisfying (19), with frequency at most
 This is a genuine stalk law: increasing the thirteen depth enlarges the
 physical root needle from `13` to `13^a` teeth, while the cyclotomic degree
 grows fast enough to dominate twice its correlation width at every level.
-It does not assert compatibility of the selected gauge indices between
-different depths.
+At each fixed depth and colour the common spectrum is a bounded-gap
+toothpick. It does not assert compatibility of the selected gauge indices
+between different depths.
 
 ## 6. Exact LRC word/bare specialization at `N=91`
 
@@ -367,8 +372,9 @@ R=12,
 2R=24<72=phi(91).
 ```
 
-Apply (19) to (22). For every one of the `72` unit colours `k`, there is
-one common index
+Apply (19) to (22). For every one of the `72` unit colours `k`, every
+block of `12S^2` consecutive gauge indices contains a common index. In
+particular there is one
 
 ```text
 0<=h<=12S^2-1                                       (26)
