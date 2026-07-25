@@ -126,9 +126,27 @@ def run():
         == (2028, 1014, 13182),
         "sign-class universe changed",
     )
+    require(
+        2 * len(phases) < 2**16,
+        "uint16 singleton-capacity bound failed",
+    )
+    require(
+        N % 7 != 0
+        and N % 14 != 0
+        and Q % 14 != 0,
+        "a strict guard or terminal endpoint can occur",
+    )
 
     sheets = np.arange(P, dtype=np.int64)
     roots = phases[:, None] + Q * sheets[None, :]
+    primitive_residues = np.arange(1, N, dtype=np.int64)
+    primitive_residues = primitive_residues[
+        primitive_residues % P != 0
+    ]
+    require(
+        np.array_equal(np.sort(roots.ravel()), primitive_residues),
+        "root fibres do not biject onto the primitive residues",
+    )
     guard = 7 * norm_numerators(roots, N) > N
     guard_counts = guard.sum(axis=1, dtype=np.int64)
     require(
@@ -183,6 +201,15 @@ def run():
     gram_upper_numerators = features @ features.T
 
     scale_squared = SCALE * SCALE
+    maximum_baseline = int(
+        np.abs(residual_weights - MASK_COUNT * THETA).max()
+    )
+    require(
+        maximum_baseline * scale_squared
+        + int(gram_upper_numerators.max())
+        < 2**63,
+        "int64 margin accumulator bound failed",
+    )
     margin_numerators = (
         (residual_weights - MASK_COUNT * THETA) * scale_squared
         - gram_upper_numerators
