@@ -46,8 +46,9 @@ D_a={t in R/Z:||at||<1/14},
 C_H={t in R/Z:||Ht||>1/7}.                          (1)
 ```
 
-Suppose that `H,q_1,...,q_5` are positive thirteen-units, the three actual
-blocker coefficients `c_1,c_2,c_3` are positive multiples of thirteen, and
+Suppose that `H,q_1,...,q_5` are positive thirteen-units, `H` is odd, the
+`q_i` are pairwise distinct, the three actual blocker coefficients
+`c_1,c_2,c_3` are pairwise distinct positive multiples of thirteen, and
 
 ```text
 C_H subset union_(i=1)^5 D_(q_i)
