@@ -1,5 +1,5 @@
 ---
-id: THM-2323
+id: THM-2324
 title: "Degree-eighteen rational B--C ratio closure"
 status: >
   RESERVED / UNPROVED PROOF CANDIDATE UNDER AUDIT. Intended target: close
@@ -13,7 +13,7 @@ source: codex-2026-07-25-degree18-bc-rational-closure
 depends_on: []
 ---
 
-# THM-2323 -- RESERVED / UNPROVED PROOF CANDIDATE UNDER AUDIT
+# THM-2324 -- RESERVED / UNPROVED PROOF CANDIDATE UNDER AUDIT
 
 The exact representatives, two complete discriminant factorizations,
 ordinary-node checks, global irreducibility certificates, ramification
