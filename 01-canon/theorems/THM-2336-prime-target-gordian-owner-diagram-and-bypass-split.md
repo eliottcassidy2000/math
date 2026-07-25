@@ -1,19 +1,20 @@
 ---
 id: THM-2336
-title: "Prime-target Gordian owner fan and exact translation-bypass split"
+title: "Prime-target Gordian owner diagram and exact translation-bypass split"
 status: >
-  PROVED CANDIDATE UNDER INDEPENDENT AUDIT. For any labelled knot packet,
+  PROVED + INDEPENDENTLY AUDITED. For any labelled knot packet,
   any partition of its labels, and any nontrivial prime target J,
   THM-2330's lift cost is the root block cost plus the minimum of
   d_G(K_B,J)-u(K_B) over the current partition blocks. The minimizing
-  blocks form a tied tropical owner fan on prime targets. If one block is
+  blocks form an additively weighted owner diagram on prime targets. If one block is
   J, it is automatically a minimizer. For a two-knot packet (K,J), the
   target obstruction at J is exactly THM-2176's directional translation
   term C_J(K), while the drop from the unknot obstruction to the J
-  obstruction is exactly the directional bypass term B_J(K). Thus the
-  three landmark values at U,K,J recover both directional splits of the
-  symmetric connected-sum defect. No new unknotting-number value, knot
-  classification, or positive catalyst is asserted.
+  obstruction is exactly the directional bypass term B_J(K). If both K
+  and J are prime, the three landmark values at U,K,J recover both
+  directional splits of the symmetric connected-sum defect. No new
+  unknotting-number value, knot classification, or positive catalyst is
+  asserted.
 source: codex-2026-07-25-prime-target-owner-fan
 depends_on:
   - THM-2330-partition-lattice-gordian-lift-spectrum
@@ -23,16 +24,16 @@ related:
   - THM-2248-higher-interaction-defect-complex-and-tropical-trace-spectrum
 ---
 
-# THM-2336 -- prime-target Gordian owner fan
+# THM-2336 -- prime-target Gordian owner diagram
 
-**PROVED CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + INDEPENDENTLY AUDITED.**
 
 THM-2330 replaces the single number `u(#_i K_i)` by a target- and
 partition-indexed lifting spectrum. At a general target its endpoint fibre
 contains every distribution of the target's prime factors among the current
 blocks. At a prime target there is only one token to distribute. This makes
 the entire lift cost explicit and turns the surviving binary comparison into
-a tied tropical owner relation rather than a tournament.
+a tied weighted owner relation rather than a tournament.
 
 ## 1. Setup
 
@@ -126,15 +127,16 @@ The triangle inequality through the unknot gives the sharp universal range
 -u(J)<=s_B(J)<=u(J).                               (7)
 ```
 
-Thus the functions `s_B` form a tropical lower envelope on the set of prime
+Thus the functions `s_B` form a min-plus lower envelope on the set of prime
 knots. The cells
 
 ```text
 V_B={J prime:B in Own_pi(J)}                        (8)
 ```
 
-are a tied Gordian owner fan. Formula (3), not an arbitrary orientation of
-the ties, is the invariant statement.
+form an additively weighted Gordian Voronoi/owner diagram. No polyhedral or
+conical fan structure is asserted. Formula (3), not an arbitrary orientation
+of the ties, is the invariant statement.
 
 ## 3. A prime block owns itself
 
@@ -275,7 +277,7 @@ with two vanishing prime-summand landmarks. Its shortcut is entirely the
 cost of bypassing both separated-summand waypoints, not translation
 contraction. No exact value of `u(K#J)` is used or inferred.
 
-## 6. Why the owner fan is not a tournament
+## 6. Why the owner diagram is not a tournament
 
 The intrinsic comparison at a fixed prime target is
 
@@ -306,7 +308,7 @@ is proved to preserve the desired lift cost.
 
 For a composite target, its prime multiset must be distributed among all
 blocks and the one-token formula (2) becomes a genuine min-plus allocation
-problem. The prime owner fan is the exact boundary case, not a
+problem. The prime owner diagram is the exact boundary case, not a
 classification of the full target spectrum.
 
 ## 7. Scope
@@ -320,3 +322,10 @@ classification of the full target spectrum.
   signature calibration and upper-bound shortcut.
 - No binary relation on prime knots is claimed to classify knots, Gordian
   distance, or unknotting number.
+
+The independent audit rederived the prime-factorization fibre, both forms of
+the owner formula, the sharp score range and tie convention, the prime-block
+specialization, and every translation/bypass identity against THM-2176's
+definitions. It also checked the both-prime scope of the three-landmark
+statement, the Brittenham--Hermiller guardrails, the non-polyhedral owner
+diagram terminology, the unique theorem ID, and the documentation surface.
