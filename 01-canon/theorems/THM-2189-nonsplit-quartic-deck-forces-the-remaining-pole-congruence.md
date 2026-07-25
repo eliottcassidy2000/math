@@ -12,11 +12,10 @@ status: >
   noncancellable Faber tooth in either the first or second flux. Hence the
   canonical approximate root is polynomial throughout the nonsplit branch.
   The same congruence holds for reduced mate degree two even on a split deck.
-  Together with THM-2194, every remaining finite-pole survivor must have
-  V=W^2 and reduced degree at least ten, so its leading coefficient is W^4.
-  The nonsplit polynomial-root
-  branch still needs terminal nonmonic square-prefix descent; the split branch
-  retains both pole and terminal debt.
+  THM-2202 subsequently extends the same pole closure to every split
+  twice-odd degree, so no quartic finite-pole survivor remains.
+  Both polynomial-root branches still need the terminal nonmonic
+  square-prefix descent.
 source: codex-2026-07-24-JC-nonsplit-quartic-pole
 depends_on:
   - THM-2129
@@ -25,6 +24,7 @@ depends_on:
 related:
   - THM-2181
   - THM-2194
+  - THM-2202
 ---
 
 # THM-2189 -- the nonsplit deck kills the last finite pole
@@ -510,12 +510,12 @@ Thus every survivor of the quartic pole analysis has leading coefficient
 V^2=W^4.                                               (52)
 ```
 
-By Section 5 and THM-2194, a finite-pole survivor in this split fourth-power
-branch must also have reduced mate degree at least ten. Deck anti-invariance
-no longer forces `Phi_Q=0` there.
+THM-2202 subsequently closes every reduced degree `4r-2` in this split
+fourth-power branch, so no quartic finite-pole survivor remains. Deck
+anti-invariance did not force `Phi_Q=0` there; the later theorem replaces it
+with an all-degree two-chamber filtration.
 
-This is only the exact **pole** frontier. In the nonsplit branch, (4) makes
-`H_0` polynomial but does not monicize its leading term `Vz^2`; the terminal
-nonmonic square-prefix/quadratic-member step remains. In the split branch,
-both that terminal debt and the degree-at-least-ten pole debt remain. The
-theorem proves neither general JC(2) nor DC(2). QED.
+This theorem is only an exact **pole** result. After THM-2202, `H_0` is
+polynomial on both branches but its leading term `Vz^2` is still nonmonic.
+The terminal square-prefix/quadratic-member step remains. Neither theorem
+proves general JC(2) or DC(2). QED.

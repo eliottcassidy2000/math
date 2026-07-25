@@ -11,10 +11,10 @@ status: >
   and degree-three odd seeds. The residual E_6+uE_2+vE_1 bank has six
   valuation supports; a cubic-cusp identity and a two-flux comparison make
   each support impossible. Thus the canonical quadratic approximate root is
-  polynomial for reduced degrees two and six on either deck. Every remaining
-  finite-pole survivor is split, has leading coefficient W^4, and has reduced
-  mate degree at least ten. The terminal nonmonic square-prefix step remains
-  open.
+  polynomial for reduced degrees two and six on either deck. THM-2202
+  subsequently extends the closure to every twice-odd reduced degree, so no
+  quartic finite-pole survivor remains. The terminal nonmonic square-prefix
+  step remains open.
 source: codex-2026-07-24-split-degree-six-pole
 depends_on:
   - THM-2129
@@ -23,6 +23,7 @@ depends_on:
   - THM-2189
 related:
   - THM-2181
+  - THM-2202
 script: 04-computation/jc2_quartic_degree6_phase_bank_codex_20260724.py
 output: 05-knowledge/results/jc2_quartic_degree6_phase_bank_codex_20260724.out
 script_sha256: af27371539b4cf4cbd41751736c118df03103a4cee6d4039a2b1f003a2c7e83f
@@ -490,20 +491,14 @@ false at every divisor of `V`, proving (3).
 
 THM-2189 proves (3) for every nonsplit quadratic deck and, uniformly on
 either deck, for reduced mate degree two. The present theorem adds degree
-six on either deck. Therefore every remaining finite-pole survivor must
-satisfy
-
-```text
-V=W^2 in C[x],                 V^2=W^4,
-reduced mate degree n>=10.                                  (51)
-```
+six on either deck. THM-2202 subsequently extends the closure to every
+twice-odd reduced degree, so no quartic finite-pole survivor remains.
 
 This closes the pole, not the planar Jacobian conjecture. Even after (3),
 the polynomial approximate root (4) has leading coefficient `V`, and the
 terminal nonmonic square-prefix/quadratic-member descent is still required.
-For split degrees at least ten, both that terminal issue and the finite-pole
-congruence remain open. No statement about general JC(2) or DC(2) is
-claimed.
+The terminal issue remains open even though the finite-pole congruence no
+longer does. No statement about general JC(2) or DC(2) is claimed.
 
 ## 7. Exact referee
 

@@ -1,0 +1,8 @@
+symbolic_faber_bank=PASS degrees=1,2,3,5,6,7,9,10
+degree10_top_row=PASS observables=3
+odd_residue_bank=PASS rows=5
+mu_substitution_identities=PASS degrees=6,10
+finite_hostile_bank=PASS cases=4508 survivors=0
+split_Lambda_zero_degree10_control=PASS
+exact_square_positive_control=PASS
+scope=FINITE_REFEREE_ONLY symbolic_valuation_proof_supplies_quantifiers
