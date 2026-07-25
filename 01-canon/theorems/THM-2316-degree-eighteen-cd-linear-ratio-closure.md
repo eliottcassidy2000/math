@@ -2,7 +2,7 @@
 id: THM-2316
 title: "Degree-eighteen C--D ratio-bank closure"
 status: >
-  PROVED + VERIFIED-EXACT. In the genuine nonsplit polynomial
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the genuine nonsplit polynomial
   exact-square-prefix degree-eighteen branch of THM-2262/2297, all four
   C--D ratio points in THM-2311's two-sparse bank are empty. The rational
   linear point has an absolutely irreducible genus-four trigonal spectrum:
@@ -23,14 +23,14 @@ related:
   - THM-2314-degree-eighteen-bd-linear-ratio-closure
 script: 04-computation/jc2_degree18_cd_linear_ratio_closure_thm2316.py
 output: 05-knowledge/results/jc2_degree18_cd_linear_ratio_closure_thm2316.out
-script_sha256: f61104412da79fd49c7fd90b21b404799a0c0eb70091c583204ff42940ebbb3a
-output_sha256: f76fb74cb3b4e535de03011a48e73892b42875ac219047c3a57c6370a2f61af1
+script_sha256: 3ef6865e7eb1352599fa12921d67b7f0bd762d98beb6303a26cb84b549b3debb
+output_sha256: be3c80d70786f7688c21c996daa0cefecb8d76764b63c88b024296b495f3a516
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2316 -- the full C--D ratio bank has positive genus
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2311 reduces the exactly two-sparse degree-eighteen branch to a finite
 weighted-projective bank. On the `C`--`D` line, its factors are
@@ -411,8 +411,9 @@ to the relevant projective normalization. Riemann--Hurwitz forbids a
 nonconstant map from genus zero to genus four or genus three. Thus `u,y`
 are constant.
 
-The wall `y=0` is already empty by THM-2262. Its inherited first-flux
-identity
+Undo the constant weighted curve isomorphism used to choose (3) or (22).
+The wall `y=0` is already empty by THM-2262, and in the original
+normalization its inherited first-flux identity
 
 ```text
 Z=T^2=-2N_2/(5103y)                                 (32)

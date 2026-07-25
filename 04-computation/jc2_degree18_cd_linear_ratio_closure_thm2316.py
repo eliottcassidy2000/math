@@ -390,7 +390,7 @@ def main() -> None:
     print("closed_CD_ratios=4")
     print("hostile_control_C=D=1_squarefree=PASS")
     print("riemann_hurwitz_and_deck_contradiction=MATHEMATICAL_PROOF_REQUIRED")
-    print("status=THM2316_CD_LINEAR_RATIO_EXACT_REFEREE")
+    print("status=THM2316_FULL_CD_BANK_EXACT_REFEREE")
 
 
 if __name__ == "__main__":

@@ -22,4 +22,4 @@ cubic_normalization_genus=3
 closed_CD_ratios=4
 hostile_control_C=D=1_squarefree=PASS
 riemann_hurwitz_and_deck_contradiction=MATHEMATICAL_PROOF_REQUIRED
-status=THM2316_CD_LINEAR_RATIO_EXACT_REFEREE
+status=THM2316_FULL_CD_BANK_EXACT_REFEREE
