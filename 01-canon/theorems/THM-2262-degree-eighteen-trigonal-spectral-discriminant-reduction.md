@@ -2,7 +2,7 @@
 id: THM-2262
 title: "Degree-eighteen trigonal spectral discriminant reduction"
 status: >
-  PROVED + VERIFIED-EXACT. In the polynomial exact-square-prefix, genuine
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the polynomial exact-square-prefix, genuine
   nonsplit terminal quartic branch, every reduced degree-eighteen Keller
   mate lies on the explicit singular-discriminant locus of a trigonal
   spectral curve G(u,y)=0. Off y=0 the first two Faber fluxes eliminate
@@ -500,7 +500,8 @@ python3 04-computation/jc2_degree18_trigonal_spectral_discriminant_thm2262.py
 python3 -O 04-computation/jc2_degree18_trigonal_spectral_discriminant_thm2262.py
 ```
 
-Both runs are byte-identical to the stored output. The companion checks
+Both runs are byte-identical to the stored output, including an independent
+replay and hostile proof audit. The companion checks
 the five Faber rows by two coefficient engines; the `Z` elimination and
 the full cubic (13); the degree and leading coefficient of (14); the
 squarefree specialization (17); the infinity cubic and its discriminant;
