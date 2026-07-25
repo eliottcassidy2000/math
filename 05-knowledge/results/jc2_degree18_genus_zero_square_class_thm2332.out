@@ -1,0 +1,15 @@
+depressed_p=16/964467*(-24300*B**2 + 1890*B*y**2 + 122472*D + 245*y**4)
+depressed_q=64/703096443*(11340*B*y**4 + 183708*C*y**3 + 539*y**6 + y**2*(72900*B**2 - 367416*D) + y*(2361960*B*C + 2480058*W))
+branch_identity=Delta=-2099434729254912*(4*P^3+49*Q^2)
+branch_scalar_factorization=-2^12*3^21*7^2
+mordell_degree=12
+mordell_leading_coefficient=73060029
+infinity_cubic=-26040609*v**3 + 1607445*v**2 - 138915*v + 1127
+infinity_discriminant=-153384762202971019112448
+high_support_irreducibility=PASS_C_or_W_coefficient_obstruction
+connected_degree3_genus0_signatures=(3,3),(3,2,2),(2,2,2,2)
+transposition_counts=0,2,4
+odd_square_class_degrees=0,2,4
+square_factor_degrees=6,5,4
+index_discriminant_and_Riemann_Hurwitz=MATHEMATICAL_PROOF_REQUIRED
+status=THM2332_GENUS_ZERO_SQUARE_CLASS_TRAP_EXACT_REFEREE
