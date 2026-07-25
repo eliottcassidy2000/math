@@ -2,7 +2,7 @@
 id: THM-2301
 title: "Essential affine arrangements and the visible rank-six address bank"
 status: >
-  PROVED + VERIFIED-EXACT. The sharp complement bound for m essential
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. The sharp complement bound for m essential
   affine hyperplanes in F_q^d is (q-m+d-1)(q-1)^(d-1) in the stated
   range. The actual degree-526 Fourier survivor relations for THM-2298's
   comparison already span rational rank at least six. Combining THM-2275, THM-2295,
@@ -36,7 +36,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2301 -- essential arrangements and visible rank-six addresses
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2294's anchored rank-three packet leaves at least `72` all-unit
 addresses over `F_13`. The count is one instance of a sharp theorem for
