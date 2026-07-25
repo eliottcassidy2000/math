@@ -20,6 +20,8 @@ depends_on: []
 related:
   - THM-2129
   - THM-2136
+  - THM-2180
+  - THM-2181
 ---
 
 # THM-2158 -- the quartic deck is not the pole obstruction
@@ -288,21 +290,25 @@ The remaining nonmonic-quartic route can now be factored as
 twice-odd leading equation
   -> leading coefficient V^2
   -> canonical H_0 in C(x)[z], with automatic deck descent
-  -> prove the single finite-pole congruence (18)
+  -> THM-2180 forces V|beta and kills the first pole stratum
+  -> prove V|(4gamma-(beta/V)^2)
   -> polynomial exact-square prefix
-  -> close the resulting polynomial square-prefix branch.          (27)
+  -> prove a terminal monicization/quadratic-member lemma.          (27)
 ```
 
 Accordingly, “quadratic-deck compatibility” is not a separate mathematical
 obstruction. The actual missing lemma is that the Keller coefficient
-equations force (18), or else provide a descent which strictly reduces the
-translation-invariant divisor (24). This theorem does not prove either
-assertion. The historical exact-square-prefix candidate formerly cited as
-`THM-2147` is absent from current main and is not a proved dependency here;
-it must be restored and audited under a collision-free ID before use.
-In particular, deck invariance must not be confused with polynomial
-regularity, as (20)--(21) demonstrate. The general quartic source-fibre
-stratum, JC(2), and DC(2) remain open.
+equations force the remaining congruence in (27), or else provide a descent
+which strictly reduces the translation-invariant divisor (24). THM-2180
+proves that the linear coefficient is already regular in the reduced Keller
+branch, and THM-2181 restores the formerly dangling exact-square-prefix
+theorem under a collision-free ID. Even after the remaining coefficient is
+made polynomial, its approximate root has leading term `Vz^2`; THM-2181's
+proved monic depressed application does not by itself monicize that root or
+force a quadratic mate. Thus both the congruence and the subsequent terminal
+lemma remain open. In particular, deck invariance must not be confused with
+polynomial regularity, as (20)--(21) demonstrate. The general quartic
+source-fibre stratum, JC(2), and DC(2) remain open.
 
 There is no faithful Tournament Analysis in this argument. The carrier is
 the ordered coefficient jet `(V,beta,gamma)`, the quadratic involution, and

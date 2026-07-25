@@ -1,6 +1,6 @@
 ---
 id: THM-2168
-title: "Three-target second-depth majorization and the evaluation-shear boundary"
+title: "Three-target second-depth majorization and generated-lattice collapse"
 status: >
   PROVED. A three-band cover of the asymmetric source rectangle has the
   following odd-prime strengthening of THM-2148: either one target is the
@@ -16,13 +16,22 @@ status: >
   independent height-13 two-term relations. Bounded scalar relation rank does
   not close the remaining profile: evaluation-kernel shears preserve every
   W_H and the mod-13 profile while moving determinant and polar data without
-  bound. This is a strict reduction and loss ledger, not an elimination of
-  (3,5,0) or a proof of LRC(14).
+  bound. Whenever the displayed guard and terminal characters have rational
+  rank two, passage to their generated lattice forces all five aligned
+  terminals to remain nonzero on the guard line modulo 13 and leaves a
+  transverse divided blocker. Every nondaughter source then descends two
+  blocker bands exactly; fibre pruning and the two-target lemma force a
+  daughter after all. Thus the all-independent and scalar 4+3 lanes are
+  empty. Only the fully scalar 5+3 tail survives inside (3,5,0). This is not
+  a proof of LRC(14).
 source: codex-2026-07-24-LRC-Fano-rank-height-synthesis
 depends_on:
   - THM-2080
+  - THM-2123
+  - THM-2125
   - THM-2138
   - THM-2139
+  - THM-2141
   - THM-2148
   - THM-2164
 related:
@@ -440,20 +449,149 @@ python3 04-computation/lrc14_three_target_second_depth_referee_thm2168.py
 The finite sweep is a hostile control, not a dependency of the all-group
 proof.
 
-## 8. Scope
+## 8. Generated-lattice collapse outside the fully scalar lane
 
-The theorem narrows the all-independent `(3,5,0)` branch to a two-deep-blocker
-invoice, isolates exact daughter locks as its only singleton escape, and
-reduces every nontrivial guard-line branch to scalar `4+3` or `5+3`.  It also
-names the missing transverse lift for using the new bounded relation rank.
+The cover itself supplies the transverse information which the scalar
+relation deck loses. Assume first that the displayed characters have
+rational rank two, and regard their raw span
+
+```text
+Gamma_0=Zg+sum_(i=1)^5 Zc_i+sum_(j=1)^3 Zu_j          (40)
+```
+
+as a new abstract rank-two character lattice. This is the **generated
+character lattice**, not the saturation of (40) in the old `Gamma`.
+Restriction
+
+```text
+Hom(Gamma,R/Z) -> Hom(Gamma_0,R/Z)
+```
+
+is surjective because `R/Z` is divisible and pushes Haar measure to Haar
+measure. Hence the almost-everywhere cover, the evaluation cocharacter,
+positivity, distinctness, and the identities `c_*j=13u_j` all descend.
+Moreover
+
+```text
+g notin 13Gamma_0,                                    (41)
+```
+
+because `Gamma_0 subset Gamma` and the original profile has
+`g notin 13Gamma`.
+
+There are already three terminal blockers `13u_j`. THM-2123/2125 applied
+in `Gamma_0` therefore force the only five remaining terminals to satisfy
+
+```text
+c_i mod 13 in F_13^* g mod 13,       i=1,...,5.       (42)
+```
+
+At least one `u_j` is transverse to the guard modulo `13`; otherwise every
+generator in (40) would lie on one line in the two-dimensional space
+`Gamma_0/13Gamma_0`.
+
+This observation removes the `(4,3)` case in (21). Indeed, if all three
+`u_j` lie on `Qg`, let `alpha` generate the saturated guard line in
+`Gamma_0` and write
+
+```text
+g=B alpha,                 u_j=M_j alpha.              (43)
+```
+
+Equation (41) gives `13 does not divide B`, so every `u_j mod 13` lies on
+the guard line. Together with (42), all generators in (40) would again lie
+on one line modulo `13`, a contradiction. The same argument does not apply
+to `(5,3)`: there the generated lattice has rational rank one. Thus the
+fully scalar `5+3` tail remains.
+
+It remains to eliminate the `k=0` alternatives in (21). There are five
+distinct `c_i` but only three `u_j`; positivity excludes `u_j=-c_i`.
+Choose a source `c_i` with no exact daughter `u_j=+/-c_i`, and put
+
+```text
+Lambda_i=Zg+Zc_i,
+S_i=Sat_2(Lambda_i)
+   ={x in Gamma_0:2^m x in Lambda_i for some m>=0},
+
+T_i={j:u_j in Lambda_i},
+A_i={j:u_j in S_i}.                                  (44)
+```
+
+Smith normal form gives
+
+```text
+[Gamma_0:S_i]=oddpart |det_(Gamma_0)(g,c_i)|.         (45)
+```
+
+The right side is divisible by `13` by (42). Every determinant of two
+elements of `S_i` is divisible by this index. Consequently
+
+```text
+j in A_i  implies  det(g,u_j)=0 mod 13,               (46)
+```
+
+so every member of `A_i` is guard-aligned modulo `13`.
+
+For a nondaughter source, the structural alternative behind Section 2 is
+
+```text
+|T_i|>=2,
+or |T_i|=1 and A_i={1,2,3}.                           (47)
+```
+
+In particular `|A_i|>=2`. But at least one `u_j` is transverse modulo
+`13`, so (46) gives `|A_i|<=2`. Thus `A_i` consists of the two aligned
+targets. The singleton branch in (47) is impossible, and hence
+
+```text
+T_i=A_i={a,b},          u_c notin Lambda_i,           (48)
+```
+
+where `{a,b,c}={1,2,3}`.
+
+Now let
+
+```text
+L=ker(g) intersection ker(c_i).
+```
+
+On each source phase in (19), the bands of `u_a,u_b` are constant along
+the finite `L`-fibre. If both were inactive, the band of `u_c` would have
+to contain that entire fibre. But `u_c notin Lambda_i=L^perp`, so its
+restriction to `L` is nontrivial. A translate of a closed radius-`1/14`
+arc cannot contain a nontrivial finite character image: for image order
+`m>=2` it contains at most `floor(m/7)+1<m` grid values. Therefore the
+third band can be pruned:
+
+```text
+{||g.Y||<1/7,||c_i.Y||<1/14}
+             subset D_(u_a) union D_(u_b).            (49)
+```
+
+THM-2141's two-target asymmetric lemma applied to (49) forces
+`u_a=+/-c_i` or `u_b=+/-c_i`, contradicting the choice of `c_i`.
+
+Thus all `k=0` cases are empty. Together with the rank-two argument above,
+the only survivor of the complete census (21) is the rank-one scalar
+`(k,r)=(5,3)` tail.
+
+## 9. Scope
+
+The theorem first narrows `(3,5,0)` to a two-deep-blocker invoice and
+isolates exact daughters as its only singleton escape. The generated-lattice
+argument then supplies the missing transverse coordinate: it eliminates both
+all-independent cases and the scalar `4+3` lane, leaving only the genuinely
+rank-one `5+3` tail. It also explains why bounded scalar relation rank alone
+could not see the collapse.
 It does not:
 
-- exclude the scalar `4+3` or `5+3` branches;
+- exclude the fully scalar `5+3` branch;
 - give an upper Archimedean bound matching (31);
 - lift THM-2164's second scalar relation to a zero character sum; or
-- eliminate `(3,5,0)`.
+- prove LRC(14).
 
 The faithful carrier remains THM-2148's labelled bipartite source/blocker
 incidence graph, now with edge type (integral, order-two, or daughter),
-13-adic depth, and determinant magnitude.  No intrinsic binary orientation
-is present, so a tournament would discard the load-bearing sidecars. QED.
+13-adic depth, determinant magnitude, and the generated-lattice quotient.
+No intrinsic binary orientation is present, so a tournament would discard
+the load-bearing sidecars. QED.
