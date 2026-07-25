@@ -420,8 +420,8 @@ into tournament operation laws and LRC residue packets.
   finite-pole survivor remains. THM-2181 compresses exact square prefixes and
   closes monic depressed polynomial quartics. The terminal nonmonic
   square-prefix/quadratic-member descent and other short edges remain.
-- MISTAKE-228/229 block the old atlas and NC2/GMC chain. `JC(2)` and `DC(2)`
-  remain open; these are source-fiber gates, not generic cover-degree results.
+- THM-2206 proves that a field-valued `C_2` Hasse jet has parity depth only or
+  loses Hamiltonian squares; integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
