@@ -79,14 +79,14 @@
     in their stated scopes; THM-2095 bounds only a commensurate pair's scale.
     THM-2098's collision budget is pure-transverse only; low mixed rows do not
     inherit it, and the depth-zero size-eleven core has no guard (MISTAKE-242).
-    Finite banks do not prove LRC(14). THM-2099--2105 and THM-2112/2114--2116 are
-    proved only in stated lanes; THM-2099 is proved but not a closure.
+    Finite banks do not prove LRC(14). THM-2099--2105 and THM-2112/2114--2116 are proved only in stated lanes; THM-2099 is proved but not a closure.
     Files marked CLAIMED or RESERVED remain unproved. **A finite box is not a
     discharge:** THM-2100 and THM-2112 bound rank-seven rows by different routes; neither enumerates or empties them.
 27c. **Current LRC reductions are not closures.** THM-2138 empties `6+1/5+2`, and THM-2139/2141 close only `(1,5,2)/(2,5,1)`; four fivefold profiles remain.
-    THM-2140/2148/2168 give depth, polar, Fano, and valuation invoices; generated-lattice descent leaves scalar `5+3`. THM-2192 forces a unique deepest blocker; THM-2198/2204/2205/2207 close depth three, THM-2213/2215/2219 close every depth-four profile, THM-2222/2224 remove `455` high-first-depth profiles, and THM-2226 removes another disjoint `217`. THM-2216/2218 retain labelled meet-tail Gram/Fourier data for the residue.
+    THM-2140/2148/2168 give depth, polar, Fano, and valuation invoices; generated-lattice descent leaves scalar `5+3`. THM-2192 forces a unique deepest blocker; THM-2198/2204/2205/2207 close depth three, while THM-2213/2215/2219 close every depth-four profile.
+    THM-2222/2224 remove `455` high-first-depth profiles, THM-2226 removes another disjoint `217`, and THM-2229's unit-time positive-set sieve subsumes THM-2227's six rows and closes another `212`. THM-2216/2218 retain labelled meet-tail Gram/Fourier data for the residue.
     THM-2143's strict Gibbs test misses equality; THM-2161 proves fixed modulus banks blind. THM-2179 repairs the scalar-covariance dead end only to a `3/41` exit or body relation: height `180` at defect six and `140` at defect at least seven.
-    THM-2187/2193 force rank seven; THM-2196/2199 force rank twelve and a finite box but do not enumerate it. THM-2203 closes scalar transport only in actual dyadic rank eight. The exact combined scalar ledger has `458` profiles: `450` with first depth at most three and the eight THM-2226 residues at first depth four or five. Owner/current and low-first/high-last closure remain; none proves LRC(14).
+    THM-2187/2193 force rank seven; THM-2196/2199 force rank twelve and a finite box but do not enumerate it. THM-2203 closes scalar transport only in actual dyadic rank eight. The exact combined scalar ledger has `240` profiles: `238` with first depth at most three and the two rows `(4,6,8),(5,7,9)`. Owner/current and low-first/high-last closure remain; none proves LRC(14).
 
 ## NC2 / GMC
 

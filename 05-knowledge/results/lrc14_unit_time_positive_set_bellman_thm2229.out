@@ -1,0 +1,27 @@
+target=961/6930
+positive_set_root_cap=10/13
+unit_danger_root_cap=2/13
+lambda1=2 closed=106/153 worst_passing=625252/4826809 target_minus_worst=305567089/33449786370 least_failing=4480/28561
+lambda1=3 closed=107/136 worst_passing=49000/371293 target_minus_worst=17242573/2573060490 least_failing=824660/4826809
+lambda1=4 closed=119/120 worst_passing=2896/28561 target_minus_worst=7377841/197927730 least_failing=60792/371293
+lambda1=5 closed=104/105 worst_passing=74441360/815730721 target_minus_worst=268038598081/5653013896530 least_failing=59340/371293
+raw_closed=436
+overlap_low_ten=1 profiles=((3, 3, 4),)
+overlap_thm2226=217
+overlap_thm2224=0
+overlap_thm2227=6
+new_thm2226_residue_exclusions=((4, 6, 9), (4, 7, 8), (4, 7, 9), (5, 7, 10), (5, 8, 9), (5, 8, 10))
+independent_new_from_458_ledger=218
+additive_new_after_thm2227=212
+novel_lambda1_2_rule=(lambda2=3 and lambda3>=6) or (lambda2>=5 and lambda3!=lambda2+2)
+novel_lambda1_3_rule=(lambda2=3 and lambda3>=6) or (lambda2=4 and lambda3>=7) or (lambda2>=6 and lambda3!=lambda2+2)
+independent_new_digest=faaffb4b19876496fbfae38353afe47b9fb8a5e7d6dd2d09f1cd2ed0ee4dde70
+additive_new_digest=745ffa20cf37a651caa9e4002bc3f5753eeca71652b2e349e3c819b3ef1de03b
+combined_remaining=240
+remaining_lambda1_1=all 165 profiles with lambda3>=5
+remaining_lambda1_2=(2,2,c) for 5<=c<=19; (2,3,5); (2,4,c) for 5<=c<=19; (2,b,b+2) for 5<=b<=17
+remaining_lambda1_3=(3,3,5); (3,4,5); (3,4,6); (3,5,c) for 6<=c<=19; (3,b,b+2) for 6<=b<=17
+remaining_digest=badfa3ea08f248ac7b483319e37e410de47e22d456f35a3d26b4f55692d939b3
+remaining_lambda1_le_3=238
+remaining_high_first=((4, 6, 8), (5, 7, 9))
+exact_primal_dual_vertex_parity=PASS
