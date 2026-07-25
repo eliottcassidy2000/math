@@ -2,7 +2,7 @@
 id: THM-2195
 title: "Transitive quotients exactly control universal tournament substitution products"
 status: >
-  PROVED. Fix a quotient tournament Q. For all factor tuples of equal
+  PROVED + VERIFIED-EXACT. Fix a quotient tournament Q. For all factor tuples of equal
   corresponding positive orders, unlabeled arc-reversal distance between
   Q-substitutions is the sum of corresponding factor distances if and only
   if Q is transitive. The positive direction iterates THM-2183's order-join
@@ -17,14 +17,25 @@ status: >
   directed-triangle block has exact external cost twice its block order times
   the total order of exterior quotient vertices whose triangle-incidence word
   is nonconstant. Thus the cyclic-five witness costs 4N, not merely at most
-  6N, and wins once d_iso(A,B)>2N. The remaining exact object is an optimal
-  general block-transport cost, not a product formula.
+  6N, and wins once d_iso(A,B)>2N. More generally, every partial automorphism
+  of an induced quotient has prescribed-block cost equal to the weighted
+  Hamming derivative of its exterior incidence words. Its zero kernel is
+  exactly the subgroup extending to the whole quotient, while each cyclic
+  orbit records twice its number of nonconstant binary runs. This is exact
+  only with block markers retained; unrestricted vertex transport can be
+  cheaper. The remaining object is an optimal unmarked block-transport cost,
+  not a product formula.
 source: codex-2026-07-24-tournament-substitution-product
 depends_on:
   - THM-2183-order-join-is-an-exact-tournament-metric-product
 related:
   - THM-1960
   - THM-2176
+script: 04-computation/tournament_partial_automorphism_derivative_thm2195.py
+output: 05-knowledge/results/tournament_partial_automorphism_derivative_thm2195.out
+script_sha256: 40ed4030f43b08424fa8487cb4f79389e7a9de0691db5b73287213ee7245bd69
+output_sha256: cde1dc3ef1ff3f4cdff2b561ba90fdbc767c5a459b664d48cae2343fb697253d
+hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2195 -- transitive quotients exactly control universal substitution products
@@ -366,7 +377,145 @@ exact cost for this integral block map, not a proof that it is globally
 optimal among vertex-level bijections. Its preserved sidecar is the exterior
 incidence word, compressed losslessly here to the nonconstant mass in (31).
 
-## 6. Boundary and the surviving problem
+## 6. Partial-automorphism derivative
+
+The triangle formula is the first case of a general exact marked-block law.
+Let `I=V(Q)`, let `C subset I`, and let
+
+```text
+rho in Aut(Q[C]).
+```
+
+Extend it to a permutation `sigma` of `I` by fixing `I\C`. Suppose the
+source and target blocks satisfy
+
+```text
+|T_i|=|S_(sigma(i))|=:n_i.                           (37)
+```
+
+Let `d_sigma` be the minimum reversal cost among bijections which send each
+whole source block `T_i` onto the target block `S_(sigma(i))`. For an
+unordered quotient pair define the well-defined bit
+
+```text
+Delta_Q(i,j;sigma)
+ =1_[(i->_Q j) xor (sigma(i)->_Q sigma(j))].          (38)
+```
+
+Then
+
+```text
+d_sigma(Q[T_i],Q[S_i])
+ =sum_(i in I)d_iso(T_i,S_(sigma(i)))
+  +sum_({i,j} subset I)n_i n_j Delta_Q(i,j;sigma).   (39)
+```
+
+Indeed, unordered vertex pairs partition into internal block pairs and
+cross-block pairs. Internal minimizations are independent. On a fixed
+quotient pair either all `n_i n_j` cross pairs agree or all reverse. This
+also proves the corresponding formula for an arbitrary size-compatible
+block permutation; minimizing it over such permutations is the exact
+whole-block comparator.
+
+Now assume the blocks over `C` all have order `N`, and put `n_t=m_t` for
+`t notin C`. Encode the incidence of an exterior vertex by
+
+```text
+b_t(c)=1_[c->_Q t],                    c in C.        (40)
+```
+
+The `C`--`C` contribution in (39) vanishes because `rho` is an automorphism
+of `Q[C]`; the exterior--exterior contribution vanishes because `sigma`
+fixes the exterior. Hence the exact external derivative is
+
+```text
+E_Q(C,rho;m)
+ =N sum_(t notin C)m_t d_H(b_t,b_t composed rho).    (41)
+```
+
+There is no factor `1/2`: every changed coordinate represents exactly
+`N m_t` unordered cross-block pairs.
+
+Writing
+
+```text
+A_t={c in C:c->_Q t},
+```
+
+gives the equivalent set formula
+
+```text
+d_H(b_t,b_t composed rho)
+ =|A_t symmetric_difference rho^(-1)(A_t)|
+ =2(|A_t|-|A_t intersection rho^(-1)(A_t)|).         (42)
+```
+
+Thus every row cost is even and `E_Q` is a multiple of `2N`. More
+structurally,
+
+```text
+E_Q(C,rho;m)=0
+ iff every b_t is constant on every rho-orbit
+ iff rho extends by the identity to an automorphism of Q.       (43)
+```
+
+If `rho` is transitive on `C`, the zero condition says exactly that `C` is
+a tournament module.
+
+For a cyclic orbit
+
+```text
+O=(c_0,...,c_(ell-1)),       rho(c_j)=c_(j+1),
+```
+
+its contribution to the Hamming distance is the cyclic transition count
+
+```text
+tau_t(O)=#{j:b_t(c_j)!=b_t(c_(j+1))}.                (44)
+```
+
+It is zero for a constant word and otherwise twice the number of cyclic
+`1`-runs. The length-three case has only the values zero and two, recovering
+(32). Longer cycles retain genuinely more data: a binary word on a
+five-cycle can have transition cost two or four. The triangle's
+nonconstant-exterior mass is therefore a low-order collapse of the cyclic
+run ledger, not the general invariant.
+
+Equivalently, with the weighted exterior signature
+
+```text
+kappa(c)=(b_t(c))_(t notin C),
+```
+
+equation (41) is
+
+```text
+E_Q(C,rho;m)
+ =N sum_(c in C)d_m(kappa(c),kappa(rho(c))).          (45)
+```
+
+More generally,
+
+```text
+D_m(alpha,beta)
+ =N sum_(t notin C)m_t
+      d_H(b_t composed alpha,b_t composed beta)      (46)
+```
+
+is a right-invariant pseudometric on `Aut(Q[C])`. Its zero kernel consists
+exactly of the automorphisms extending to `Q` while fixing the complement
+pointwise. The derivative therefore measures the precise obstruction to
+extending a local symmetry.
+
+The scope marker remains essential. Equations (39)--(46) are exact among
+unsplit block bijections inducing the prescribed permutation. They give a
+constructive upper bound for unrestricted `d_iso`, not a positive lower
+bound. If source and target substitutions are identical, the identity has
+cost zero even when a chosen nonextendable partial rotation has positive
+cost. Any global optimality claim still needs a block-preservation or
+uncrossing theorem.
+
+## 7. Boundary and the surviving problem
 
 THM-2183's two-image swap works because a transitive quotient presents
 constant cuts in one consistent order. A directed triangle permits a
@@ -385,5 +534,24 @@ This boundary is the tournament analogue of THM-2176's distinction between
 decomposition-respecting cost and bypass after forgetting a product marker.
 Here transitivity is exactly the condition which makes every such bypass
 uncrossable.
+
+## 8. Exact indexing referee
+
+Run
+
+```bash
+python3 04-computation/tournament_partial_automorphism_derivative_thm2195.py
+python3 -O 04-computation/tournament_partial_automorphism_derivative_thm2195.py
+```
+
+The companion exhausts all `1,098` labelled tournaments of orders two
+through five, every nonempty induced vertex set, and every automorphism of
+that induced tournament: `41,026` partial-automorphism cases. It separately
+checks literal expanded block pairs, quotient weights, exterior Hamming
+words, symmetric differences, orbit transitions, parity, the extension
+kernel, and the right-invariant pseudometric law. Ordinary and optimized
+runs are byte-identical to the frozen output. The script is an exact
+indexing referee; the unordered-pair partition above supplies the proof for
+arbitrary order.
 
 QED.
