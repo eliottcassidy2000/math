@@ -2,7 +2,7 @@
 id: THM-2323
 title: "Primitive fixed-colour cross-correlation and same-gauge word alignment"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. Let N be
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. Let N be
   any positive integer. If 0<=f<=g are
   nonzero rational-valued step functions with rational breakpoints,
   supported in one open circle arc of length 1/7, then for every primitive
@@ -53,7 +53,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2323 -- primitive colour forces a bare/word diagonal
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2319 lands every primitive `91`-colour separately in the Fourier
 spectra of the bare owner source and of its literal positive-word subset.
@@ -365,13 +365,13 @@ positive atom is only its smallest immediately useful consequence.
 ## 5. The arbitrary-modulus stalk
 
 There is no restriction on the primes or exponents of `N`, nor any
-requirement that seven divide it. The earlier family
+requirement that seven divide it. One visible subfamily is
 
 ```text
 N_a=7*13^a,                 a>=1.
 ```
 
-Then
+For this family,
 
 ```text
 R_a=13^a-1,
@@ -389,9 +389,9 @@ At each fixed depth and colour the common spectrum is a bounded-gap
 toothpick. The theorem is levelwise and does not assert compatible gauge
 indices between depths.
 
-is only one visible stalk. One may instead use every positive modulus
-`N>=2`, with exact radius `ceil(N/7)-1`, or the arithmetic-comb version
-(11a)--(11c) whenever `gcd(a,N)=1`. This full modulus freedom is
+The full theorem is not limited to that stalk. One may use every positive
+modulus `N>=2`, with exact radius `ceil(N/7)-1`, or the arithmetic-comb
+version (11a)--(11c) whenever `gcd(a,N)=1`. This full modulus freedom is
 load-bearing in Section 7.
 
 ## 6. Exact LRC word/bare specialization at `N=91`
@@ -872,10 +872,13 @@ The two transcripts must match
 
 byte-for-byte after LF normalization.
 
-The independent audit rederived the arbitrary-`N` Galois acute-sector
-argument, the Parseval and endpoint-product Vandermonde landing, the
-`N=91` quantitative bounds, and the coherent CRT fibre with its exact
-`gcd(a,91)` boundary. It also reproduced the ordinary, optimized, and
+The independent audit rederived the arbitrary-`N` and automorphic-`D_a`
+Galois acute-sector arguments, the Parseval and endpoint-product
+Vandermonde landing, the `P_g` support and jump transport, the `N=13d'`
+primitive lifts and physical `gq_i` edge, and the conditional coherent
+`N=91d'` fibre with its exact `gcd(a,91)` boundary. It confirmed that
+Section 7 is restricted to positive-return middle-owner word strata in
+the `150` strict rows. It also reproduced the ordinary, optimized, and
 stored transcripts byte-for-byte, verified both recorded hashes, and
-confirmed that the arbitrary-`N` conclusion is levelwise syndetic and
-does not assert compatible gauge indices across different moduli.
+confirmed that the arbitrary-`N` conclusion is levelwise syndetic rather
+than a compatible choice of gauge indices across moduli.
