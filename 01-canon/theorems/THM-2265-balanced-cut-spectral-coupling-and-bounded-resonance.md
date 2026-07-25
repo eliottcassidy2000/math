@@ -2,13 +2,12 @@
 id: THM-2265
 title: "Balanced-cut spectral coupling and bounded resonance"
 status: >
-  PROVED. A positive band-limited coupling lemma converts blockwise safe mass
-  plus an empty joint safe set into a shared nonzero Fourier frequency. Every
-  strict LRC(14) counterexample therefore has, across every labelled 6+7 cut,
-  a genuine crossing integer relation of coordinate height at most 2322.
-  The theorem includes an anisotropic bandwidth budget and a defect-six
-  bounded core-carry corollary; it does not claim the resulting atlas is
-  computationally small.
+  SUPERSEDED / WEAKER DUPLICATE OF THM-2145. The proof and exact checks are
+  valid, but THM-2145 already proves the same abstract positive crossing
+  mechanism with universal height 584 and defect-six height 298, while
+  THM-2166 gives the stronger low-carry/core-sparse form. Retained only for
+  its independent derivation and anisotropic bandwidth formula; do not use
+  this theorem as the canonical crossing dependency.
 source: codex-2026-07-25-balanced-cut-spectral-coupling
 depends_on:
   - THM-1166
@@ -16,12 +15,23 @@ depends_on:
 related:
   - THM-1221-seven-wall-strict-spectrum-hunter-floor
   - THM-2085-explicit-height-57-rank-seven-selberg-gate
+  - THM-2145-two-block-spectral-crossing-and-6-plus-7-carry
+  - THM-2166-hybrid-core-smoothing-low-carry-crossing
 script: 04-computation/lrc14_balanced_cut_spectral_coupling_referee_codex_20260725.py
 output: 05-knowledge/results/lrc14_balanced_cut_spectral_coupling_referee_codex_20260725.out
 script_sha256: 8d8f634c68da777d20e870758d0d9980e43c71457129c5dad40cd16f76fca20d
 output_sha256: bbc663b973c2f8ce75a4e8923953506e6db1a48102e44560441a3b4ede0c9bf1
 hash_basis: working-tree bytes (LF)
 ---
+
+> **SUPERSEDED / WEAKER DUPLICATE.** THM-2145, which predates this file,
+> already proves the abstract common-frequency crossing lemma, universal
+> height `584`, and defect-six height `298` with carry at most `20860`.
+> THM-2166 further improves the defect-six carrier to `|nu|<=708`, far
+> height `298`, and a core representation of support at most two and height
+> `57`. The derivation below remains correct and supplies a convenient
+> anisotropic bandwidth formula, but no current theorem should depend on its
+> weaker headline bounds.
 
 # THM-2265 -- balanced-cut spectral coupling and bounded resonance
 
@@ -210,8 +220,9 @@ seven coordinates of `E`, the exact sufficient condition is
   >9/N_F+21/(2N_E).                                    (23)
 ```
 
-It yields coefficient bounds `2N_F-2` on `F` and `2N_E-2` on `E`. This is a
-second relation budget, complementary to THM-2264's Selberg--Kraft budget:
+It yields coefficient bounds `2N_F-2` on `F` and `2N_E-2` on `E`. This is an
+independently derived relation budget, superseded in its headline consequences
+by THM-2145/2166 and parallel to THM-2144's Selberg--Kraft budget:
 one may trade a smaller coefficient atlas on one side of a cut for a larger
 carry range on the other. For example,
 

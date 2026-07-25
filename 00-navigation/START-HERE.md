@@ -118,7 +118,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     its transverse and scalar-`4+3` lanes, leaving only scalar `5+3`.
     THM-2187/2193 give a saturated carrier, floor `7^-21`, rank seven by `78*7^21`, and safe septimal grids; THM-2188 retains slope/current.
     THM-2196/2199 prove rank twelve; THM-2208/2212 give bounded anchors and exact rulers per rank-eleven plane, while THM-2203 fixes scalar transport at `16/208`.
-    THM-2198--2239 leave `165` first-depth-one rows and `(3,4,5)`; THM-2257/2258 close the latter independently. THM-2263 gives profile-sharp owner floors, but THM-2261 proves raw expiration blind. THM-2144/2164 and THM-2265 give bounded rank/cross-cut relations; THM-2267/2268 show the missing target is an ancestry-weighted multicore gluing, not static owner data or raw carry. THM-2211 retains full carry; THM-2235 forbids an odd-sheet XOR shortcut.
+    THM-2198--2239 leave `165` first-depth-one rows and `(3,4,5)`; THM-2257/2258 close the latter independently. THM-2263 gives profile-sharp owner floors, but THM-2261 proves raw expiration blind. THM-2144/2164 and THM-2145/2166 give bounded rank and low-carry cross-cut relations; THM-2267/2268 show the missing target is an ancestry-weighted multicore gluing, not static owner data or raw carry. THM-2211 retains full carry; THM-2235 forbids an odd-sheet XOR shortcut.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
     the knot continuation cocycle; THM-2191 gives its catalytic group length,
     commuting stable envelope, and abstract additive dual, and closes `9_10`.
