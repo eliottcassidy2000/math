@@ -1,0 +1,23 @@
+THM-2339 exact allocation and prime-owner controls
+hostile word-length table
+a: d0=1 d1=1
+b: d0=1 d1=1
+a+b: d0=2 d1=2
+p: d0=1 d1=1
+q: d0=1 d1=1
+p+q: d0=2 d1=2
+p-a: d0=2 d1=2
+q-a: d0=2 d1=2
+p-b: d0=2 d1=2
+q-b: d0=2 d1=2
+p-a-b: d0=2 d1=2
+q-a-b: d0=2 d1=2
+p+q-a: d0=2 d1=1
+p+q-b: d0=2 d1=2
+p+q-a-b: d0=1 d1=1
+d0: allocations=(3, 4, 4, 3) w_a=(0, 1, 1, 1) mu_a=(0, 1, 1, -1) w_b=(0, 1, 1, 1) mu_b=(0, 1, 1, -1) Lambda=3 Omega=2 dp_energy=1
+d1: allocations=(2, 4, 4, 3) w_a=(0, 1, 1, 0) mu_a=(0, 1, 1, -2) w_b=(0, 1, 1, 1) mu_b=(0, 1, 1, -1) Lambda=2 Omega=1 dp_energy=0
+symbolic integer identity banks
+deletion_cases=375
+collision_cases=3900
+all exact controls passed
