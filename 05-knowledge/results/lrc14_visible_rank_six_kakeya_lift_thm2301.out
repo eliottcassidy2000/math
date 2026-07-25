@@ -1,0 +1,10 @@
+THM-2301 visible rank-six Kakeya referee
+generic_rank6_heights=20,196,196,206,309,526;sum=1453
+visible_rank6_heights=462,526,526,757,1136,1704;sum=5111
+visible_full_rank8_heights=462,526,526,757,1136,1704,2556,3834;sum=11501
+F13_anchored_rank_law_r2_to_r9=5,72,1008,13824,186624,2488320,32845824,429981696
+rank6_base_counts=F7:unanchored=23328,normalized=3888;F13:unanchored=2239488,normalized=186624
+intrinsic_packet_height_sums=F7:207018,F13:78993;fixed_section=414036,157986
+rank6_blocker_pivot_atlas=one=18,two=45,three=20,total=83
+visible_support=N=264,H=526,one_coordinate_count=903,zeros_exactly_nonzero_multiples_of_7
+all exact checks passed
