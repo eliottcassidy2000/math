@@ -175,9 +175,13 @@ radix free. THM-2190 forces the exact ladder
 `W_178>=3,W_204>=4,W_262>=5,W_450>=6`, rank five on every deletion by
 `235800`. THM-2193 proves the uniform rank-six torus floor `7^-21`, forces
 rank seven by height `78*7^21`, and rank six on every deletion explicitly.
-THM-2188 shows why
-rank is not the terminal: finite phase banks, pair matrices, and even a common
-saturated rank-eleven carrier can agree across opposite zero-safety outcomes.
+For the bounded rank-six carrier its septimal addendum gives at least six safe
+cover-grid points on every `7^k` grid past the explicit determinant threshold;
+nonunit coefficients are handled exactly by residue-coset balance. The same
+addendum factors THM-2188 into a positive safe torus and a primitive slope and
+exhibits opposite outcomes with identical bounded phase data. Thus rank and
+torsion abundance are not the terminal: the missing datum is the slope/current,
+not another finite phase statistic.
 THM-2174 keeps infinitely many exact-measure states but compresses the
 positive-Haar/zero-Haar observable on each fixed-core residue ray to a one- or
 two-state first-period flag; it gives no uniform changing-core modulus.
@@ -409,10 +413,14 @@ into tournament operation laws and LRC residue packets.
   THM-2084/2110/2118 close cubics; THM-2102/2113 close power-free top faces;
   THM-2127--2136 reduce arbitrary tails to coarsened-power/short Newton edges.
   THM-2158/2180 make deck descent automatic and reduce the twice-odd nonmonic
-  branch to `V|(4gamma-(beta/V)^2)`; THM-2181 compresses exact square prefixes
-  and closes monic depressed polynomial quartics. The pole congruence, a
-  terminal nonmonic monicization/quadratic-member step, and other short edges
-  remain.
+  branch to `V|(4gamma-(beta/V)^2)`. THM-2189 forces this pole congruence on
+  every nonsplit deck and, without a deck hypothesis, in reduced mate degree
+  two. THM-2194 closes reduced degree six uniformly by an exact five-row Faber
+  boundary/flux bank. Hence every remaining finite-pole survivor is split,
+  has `V=W^2` and leading coefficient `W^4`, and has reduced mate degree at
+  least ten. THM-2181 compresses exact square prefixes and closes monic
+  depressed polynomial quartics. The split degree-`>=10` pole, the terminal
+  nonmonic square-prefix descent, and other short edges remain.
 - MISTAKE-228/229 block the old atlas and NC2/GMC chain. `JC(2)` and `DC(2)`
   remain open; these are source-fiber gates, not generic cover-degree results.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer

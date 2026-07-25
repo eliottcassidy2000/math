@@ -20,10 +20,10 @@
 ## Expose the obstruction first, choose the scale second
 
 **Trigger:** a proof needs a prime, bandwidth, radix, exponent, or cutoff, but every fixed choice loses cancellation or creates an uncontrolled tail.
-**Action:** retain the whole colliding face, relation packet, or current; prove that aggregate nonzero or quantify its defect; only then choose a scale outside the finite bad set or below the error budget.
-**Mechanism:** the exposed obstruction has fewer degrees of freedom, so its valuation, spectral quantum, Fourier height, or carry size dictates a compatible scale.
-**Counterindication:** not when scale is externally fixed or aggregation destroys the target; require a proved positive/nonzero seed, not a suggestive leading term.
-**Evidence:** THM-2022 (face then finite place), THM-2159/2165 (spectral quantum then exponent), THM-2162 (whole current then Fourier cutoff), and THM-2163/2166 (relation/carry packet then radix/depth).
+**Action:** retain the whole colliding face, relation packet, or current; prove it nonzero or quantify its defect. At exact bulk cancellation, write the deficit identity and disintegrate the missing facet before bounding. Only then choose a scale outside the finite bad set or below the error budget.
+**Mechanism:** the exposed obstruction has fewer degrees of freedom, so its valuation, spectral quantum, Fourier height, carry size, or positive boundary defect dictates a compatible scale; Pascal/Lucas bulk cancellation can leave precisely the virtual boundary bits needed for completion.
+**Counterindication:** not when scale is fixed, aggregation destroys the target, or the gain is only ambient. Require a proved seed and retain a slope/current sidecar when the target is a distinguished primitive line.
+**Evidence:** THM-2022 (face then finite place), THM-2159/2165 (spectral quantum then exponent), THM-2162/2163/2166 (current/packet then scale), THM-2193 (missing-facet floor and hostile slope audit), and THM-2160 (Pascal completion).
 
 ## Search the statement before the method
 

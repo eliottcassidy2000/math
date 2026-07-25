@@ -64,9 +64,10 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300
     is the exact new counterexample. THM-2063/2071 close linear/quadratic source
     fibers; THM-2084/2118/2102 close cubics. THM-2158/2180 reduce the twice-odd
-    nonmonic quartic to `V|(4gamma-(beta/V)^2)`; THM-2181 closes monic depressed
-    quartics. A terminal nonmonic monicization step remains even after that
-    congruence; none is a generic-cover, Jelonek, VC(4), or planar classification.
+    nonmonic quartic to `V|(4gamma-(beta/V)^2)`; THM-2189 proves it on the
+    nonsplit deck and in degree two, and THM-2194 proves degree six uniformly.
+    Every finite-pole survivor is split (`V=W^2`) of reduced degree at least ten; THM-2181 closes monic depressed quartics; the split pole and terminal
+    nonmonic square-prefix descent remain, not a planar classification.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed
@@ -115,9 +116,9 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     Fano classification and top-two depth majorization; THM-2168 now eliminates
     its transverse and scalar-`4+3` lanes, leaving only scalar `5+3`.
     THM-2187 makes the short carrier saturated; THM-2193 gives the rank-six
-    torus floor `7^-21` and rank seven by height `78*7^21`. THM-2174/2188
-    show phase/current remains the debt. THM-2192 leaves scalar `5+3` open
-    but forces a unique deepest blocker and an anchored chord carrier.
+    torus floor `7^-21`, rank seven by height `78*7^21`, and explicit safe septimal-grid points; its THM-2188 audit proves torsion coverage still does
+    not control the primitive slope. THM-2174/2188 leave phase/current debt;
+    THM-2192 leaves scalar `5+3` open with one deepest blocker and a chord carrier.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
     the knot continuation cocycle; THM-2191 localizes Gordian distance by
     common catalysts and closes `9_10` through the four-ball crossing metric.
@@ -132,7 +133,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 | LRC / Frobenius wildcard | [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) | THM-2041 packets; keep seed and pointwise exit explicit |
 | LRC literature | [`CORE-PAPERS.md#lonely-runner-conjecture`](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [`LRC-TECHNIQUE-INDEX.md`](LRC-TECHNIQUE-INDEX.md), source paper |
 | NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2101/2111, formal interfaces, guardrails |
-| Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102/2118/2158/2180/2181 |
+| Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102/2118/2158/2180/2181/2189/2194 |
 | Tournaments | [`CURRENT-FRONTIER.md#tournaments`](CURRENT-FRONTIER.md#tournaments) | [`TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md`](TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md), [`THE-ZOO.md`](THE-ZOO.md) with its freshness banner |
 | Integer sequences | [`CURRENT-FRONTIER.md#integer-sequences`](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005 and their frozen outputs |
 | Broad portfolio | [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md) | THM-2176/2177/2191; [`PROBLEM-ATLAS-2026-07-20.md`](PROBLEM-ATLAS-2026-07-20.md) only as historical provenance |

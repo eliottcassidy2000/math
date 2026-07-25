@@ -175,13 +175,13 @@
 60. **THM-2071 closes the quadratic-fiber locus, not JC(2).** Centered parity
     and pole noncancellation force the square factor constant and the reduced
     complement fiber-linear, hence tame. Survivors have fiber degree at least
-    three in every direction; this does not classify generic cover degree,
-    Jelonek geometry, VC(4), or full JC(2).
-
-34. **Source-fiber degree is not generic cover degree.** THM-2071 closes a
-    quadratic pencil member; THM-2084 gives reduced complementary degree at
-    least `13` for a non-tame cubic member modulo `C[P]` shears. Neither
-    classifies Jelonek curves, bounds generic cover degree, or proves JC(2).
+    three; THM-2084's cubic lower bound is likewise a source-fiber statement,
+    not generic cover degree, Jelonek geometry, VC(4), or full JC(2).
+61. **The quartic pole is closed only in stated decks/degrees.** THM-2189 proves
+    `V|(4gamma-b^2)` nonsplit and in degree two; THM-2194 proves degree six.
+    The split degree-`>=10` pole and terminal square-prefix descent remain.
+62. **Safe-torus mass is not primitive-line recurrence.** THM-2193 gives a uniform Haar floor and many septimal torsion points, while its THM-2188
+    factorization preserves these across opposite primitive-slope outcomes.
 
 ## Promotion checklist
 Audit types, quantifiers, dimensions, symmetries, logical direction, quotient
