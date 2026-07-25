@@ -1,0 +1,16 @@
+THM-2184 exact two-scale continuation controls
+nonconstant_profile_at_zero=6/7
+nonconstant_profile=36/49
+nonconstant_levels=(1, 2, 5, 10)
+nonconstant_deviations=(Fraction(-2, 3185), Fraction(-2, 12789), Fraction(-2, 80017), Fraction(-2, 320117))
+core=(1, 2, 3, 4, 5, 6, 8)
+endpoint_modulus=1680
+core_mass=27/70
+normalized_tail=(3, 12)
+normalized_tail_mass=3/4
+proportional_profile=81/280
+proportional_levels=(1, 2, 5)
+proportional_deviations=(Fraction(47, 1412040), Fraction(47, 2823240), Fraction(47, 7056840))
+aligned_deviation=0
+independent_pair_evaluators=interval_union,boundary_cells
+all exact checks passed
