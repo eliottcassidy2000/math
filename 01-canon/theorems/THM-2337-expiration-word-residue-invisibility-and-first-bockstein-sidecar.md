@@ -2,7 +2,7 @@
 id: THM-2337
 title: "Expiration-word residue invisibility and the first Bockstein sidecar"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. On every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. On every
   positive strict shallow-owner word stratum covered by THM-2327, an
   atomic terminal-word harmonic is multiplied by
   R=13^(lambda_j+1), so it is identically invisible to THM-2309's
@@ -35,14 +35,21 @@ related:
   - THM-2334-relation-residue-current-and-character-twist-pushforward
 script: 04-computation/lrc14_expiration_word_bockstein_thm2337.py
 output: 05-knowledge/results/lrc14_expiration_word_bockstein_thm2337.out
-script_sha256: 910a2c4d4bc643d7ea83c5ae135f23ba5221c8c2824d4bed9bb9bba407610c72
-output_sha256: 0d66033569526d98635f6fecb01ce55c8acdb75c5ad8d7128534fe7c35d211d3
+script_sha256: ecb31e065e628f47336dd3d874924463352f770d5dd58d4fa4088e4eb1e87903
+output_sha256: c9b1941a3266c24a6265610d8c6385a5cf046d61b3923eaa489fac29b7a2f3fd
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2337 -- the word survives, but its target response is one layer late
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
+
+The independent audit checked the residue depth and CRT typing, the
+two-pivot lift and exact term count, all finite-character signs in the
+joint target/jet decomposition, the `L1` Abel boundary passage, the
+factor-coloured gauge loss and weight cocycle, and the three word-support
+mask energies.  It also reproduced the companion under ordinary and
+optimized Python with byte-identical output.
 
 THM-2333 groups a nonzero zero-word-mode slice by the mod-thirteen target
 quotient and proves that some target fibre survives.  That operation

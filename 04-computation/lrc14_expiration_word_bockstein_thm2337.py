@@ -289,7 +289,7 @@ require(
 require(hostile_zero == 1 and hostile_nonzero == 0, "joint hostile changed")
 
 print("theorem=THM-2337")
-print("status=PROVED+VERIFIED-EXACT+CANDIDATE-UNDER-INDEPENDENT-AUDIT")
+print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED")
 print(f"residue_scaling_checks={residue_checks}")
 print(f"sharp_first_layer_checks={sharp_layers}")
 print(f"two_pivot_floor={pivot_floor}")

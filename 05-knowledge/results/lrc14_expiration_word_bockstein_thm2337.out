@@ -1,5 +1,5 @@
 theorem=THM-2337
-status=PROVED+VERIFIED-EXACT+CANDIDATE-UNDER-INDEPENDENT-AUDIT
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED
 residue_scaling_checks=728
 sharp_first_layer_checks=672
 two_pivot_floor=3
