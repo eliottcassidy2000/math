@@ -12,12 +12,15 @@ status: >
   defect-six input is the independently exact seven-core floor
   B_7=39965/211068, uniquely attained by {1,5,7,8,9,11,13}; Jackson N=91
   closes its ledger while N=90 does not. The proof retains every internal
-  core relation and all higher overlap cancellation. These body-touching
-  relations need not genuinely cross the core/body cut, so neither packet
-  closes LRC(14). Under the ordinary zero-safe premise and defect at least
-  seven, combining the height-140 packet with THM-2169 gives an anchored
-  rank-two base-41 carrier with at most 27200916 carry pairs; saturation
-  makes the same plane universal-radix at a slightly larger count.
+  core relation and all higher overlap cancellation. A two-speed
+  down-conversion lemma proves that body endpoints can all have denominator
+  divisible by 41 while fixed frequencies 1 through 13 retain nonzero
+  limiting Fourier mass; denominator separation cannot repair scalar peeling.
+  These body-touching relations need not genuinely cross the core/body cut,
+  so neither packet closes LRC(14). Under the ordinary zero-safe premise and
+  defect at least seven, combining the height-140 packet with THM-2169 gives
+  an anchored rank-two base-41 carrier with at most 27200916 carry pairs;
+  saturation makes the same plane universal-radix at a slightly larger count.
 source: codex-2026-07-24-reversed-peel-relation-packet
 depends_on:
   - THM-2145
@@ -345,7 +348,128 @@ rational-cap ledgers. This does not prove that no nonadjacent smaller cutoff
 could close through a different estimate, nor any optimality for the actual
 smoothing error or true relation height. QED.
 
-## 5. Why the six signed scalar discrepancies cannot repair the hostile row
+## 5. Why endpoint denominators and six scalar signs do not repair the route
+
+### 5.1 Near-equal large speeds down-convert to fixed low frequencies
+
+There is a tempting extra input in the reversed direction: every boundary
+created by a body speed `v>=14` has a large denominator. This does **not**
+make the body indicator have small low-frequency Fourier mass.
+
+Let
+
+```text
+s(x)=1_{||x||>=3/41},
+c_k=Fourier(s,k),
+E_N={N,N+1}.                                         (25a)
+```
+
+Thus
+
+```text
+c_0=35/41,
+c_k=-sin(6 pi k/41)/(pi k),              k!=0.       (25b)
+```
+
+Use the convention
+
+```text
+Fourier(phi,k)=integral_T phi(t)e(-kt)dt.
+```
+
+> **Large-denominator down-conversion lemma.** For every fixed
+> `f in {1,...,13}` and every `N>f`,
+>
+> ```text
+> Fourier(1_(G_h(E_N)),f)
+>   =c_f^2+R_(N,f),
+>
+> |R_(N,f)|
+>   <=(1/6)((N-f)^(-2)+N^(-2)).                      (25c)
+> ```
+>
+> In particular,
+>
+> ```text
+> limit_(N->infinity) Fourier(1_(G_h(E_N)),f)
+>   =(sin(6 pi f/41)/(pi f))^2>0.                    (25d)
+> ```
+
+Indeed
+
+```text
+1_(G_h(E_N))(t)=s(Nt)s((N+1)t).
+```
+
+The frequency equation for a product Fourier term is
+
+```text
+aN+b(N+1)=f.
+```
+
+All its integer solutions are
+
+```text
+a=q(N+1)-f,                 b=f-qN,       q in Z.
+```
+
+Consequently
+
+```text
+Fourier(1_(G_h(E_N)),f)
+ =sum_(q in Z)c_(q(N+1)-f)c_(f-qN).                 (25e)
+```
+
+This convolution is absolutely convergent: for `q>=1`, both nonzero
+indices have magnitude at least `q(N-f)`, while for `q<=-1`, both have
+magnitude at least `|q|N`. Since `|c_k|<=1/(pi|k|)` for `k!=0`, the terms
+with `q!=0` have total absolute value at most
+
+```text
+(1/pi^2)sum_(q>=1)q^(-2)
+  ((N-f)^(-2)+N^(-2))
+ =(1/6)((N-f)^(-2)+N^(-2)).
+```
+
+The `q=0` term is `c_(-f)c_f=c_f^2`. This proves (25c)--(25d).
+Equivalently, the coefficient pair `(-f,f)` uses the exact relation
+
+```text
+(-f)N+f(N+1)=f:                                     (25f)
+```
+
+two high carrier frequencies heterodyne to the fixed low frequency `f`.
+
+On the other hand, every boundary point belonging to the `v`-comb has
+the form
+
+```text
+(41k+/-3)/(41v).                                    (25g)
+```
+
+Its numerator is coprime to `41`, so its reduced denominator is still a
+multiple of `41`. Hence every boundary of `G_h(E_N)` has reduced
+denominator at least `41`, uniformly in `N`, while each of the thirteen
+fixed low Fourier coefficients in (25d) stays away from zero.
+
+This identifies the first failed implication in the proposed
+endpoint-denominator repair:
+
+```text
+large boundary denominators
+  -/-> small low-frequency mass of the body indicator. (25h)
+```
+
+What is missing is the relation lattice of the body boundaries. Nearly
+equal large speeds can subtract before any frequency-decay estimate is
+available. The scalar discrepancy against a small comb is a signed trace
+of these coefficients on the lattice `fZ`; denominator size alone does
+not control that trace. LEM-011 computes a different object--the Fourier
+transform of the uncovered-measure function on independent phase
+variables--and does not provide the missing one-dimensional bound for
+`1_(G_h(E))`.
+
+### 5.2 The six signed scalar discrepancies still fail on the hostile row
 
 The proposed reversed-peel repair was to replace six absolute discrepancies
 by their signed sum. The named hostile row shows that this does not touch the
