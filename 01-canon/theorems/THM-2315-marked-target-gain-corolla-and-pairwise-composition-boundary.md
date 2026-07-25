@@ -104,11 +104,11 @@ or vector sizes `12,12,144` before projectivization.
 
 ### Exact automorphism group
 
-The projective transformations preserving `A` and `B` individually are
-exactly the diagonal transformations modulo common scalar. Thus
+The projective-linear transformations preserving `A` and `B` individually
+are exactly the diagonal transformations modulo common scalar. Thus
 
 ```text
-T=Aut(G;A,B)=k^*,
+T=PGL(V)_(A,B)=k^*,
 c.G_g=G_(cg).                                        (6)
 ```
 
@@ -116,7 +116,7 @@ The mixed locus is one free transitive `T`-orbit. If target labels may be
 swapped, the full boundary normalizer is
 
 ```text
-N=Aut(G;{A,B})=k^* semidirect C_2,                   (7)
+N=N_(PGL(V))({A,B})=k^* semidirect C_2,              (7)
 ```
 
 where the nontrivial element interchanges `A,B` and sends
@@ -146,8 +146,10 @@ word support can demand an address in the correct fibre of s;
 word support alone cannot select its exact gain.                    (10)
 ```
 
-Any exact-gain selection must use a symmetry-breaking sidecar such as a
-root character, endpoint, shell address, or chosen coordinate scale.
+Any exact-gain selection must use additional data that break this torus
+symmetry. A root character, endpoint, shell address, or chosen coordinate
+scale is only a candidate sidecar until an equivariant landing map using it
+is proved.
 
 ## 2. Why the gain does not produce a tournament
 
@@ -271,16 +273,18 @@ mu_j=(p_a,p_b,d)
 ```
 
 THM-2305 retains the source, clock, word, and mass. THM-2312 further gives,
-on every positive word, a nonzero phase-sensitive cubic current
+on every positive word, a nonzero gauge-invariant cubic phase-closure current
 
 ```text
 C_(r,s)(Q_(j,sigma))                                 (20)
 ```
 
-for some nonzero root-character pair. Thus the best current analytic
-summary is a **clocked measured word-corolla decorated by a cubic current**.
-It still forgets the individual transition witness and does not land the
-current on a relation address in the gain fibre (10).
+for some nonzero root-character pair. On one-sheet fibres this current can
+be pure mass cubed, so (20) is not a theorem about an ordinary terminal
+component phase. Thus the best current analytic summary is a **clocked
+measured word-corolla decorated by a cubic closure current**. It still
+forgets the individual transition witness and does not land the current on
+a relation address in the gain fibre (10).
 
 The canonical relation between the analytic and algebraic summaries is
 therefore only the incidence correspondence
@@ -405,10 +409,12 @@ set-level association law.
 
 Positive prescribed-clock handoffs are not closed under this composition.
 The obstruction is already finite. Let an intermediate probability space
-have four atoms of mass `1/4`. In one model, incoming arrival and outgoing
+have four atoms of mass `1/4`, and take all arrival and departure maps below
+to be subset inclusions into it. In one model, incoming arrival and outgoing
 departure supports are both `{1,2}`; in another they are `{1,2}` and
-`{3,4}`. Both models have the same source/target labels, word types, and
-incoming/outgoing masses `1/2`. Their prescribed fibre products have masses
+`{3,4}`. Decorate both models with the same labels, word types, and any
+identical allowed gain data. Their incoming/outgoing masses are all `1/2`,
+whereas their prescribed fibre products have masses
 
 ```text
 1/2 and 0.                                           (29)
@@ -425,13 +431,15 @@ chosen from masses and variations, changes the prescribed clock, and is not
 a canonical identity correspondence. It therefore does not turn the
 original prescribed handoffs into a strict path category.
 
-This is also the exact 2-Segal boundary. A Hall/2-Segal multiplication
-determined from the one-step corollas would have to assign the same
-two-step structure constant to the two models in (29), while their actual
-pullback witnesses differ. Retaining the full spans gives ordinary
-bicategorical associativity; forgetting them to the one-skeleton does not
-determine the 2-simplex. THM-2310 supplies existence after a noncanonical
-delay, not a 2-Segal identification of prescribed decompositions.
+This is also the exact **one-skeleton reconstruction boundary** for a
+2-Segal interpretation. A Hall/2-Segal multiplication determined from the
+one-step corollas would have to assign the same two-step structure constant
+to the two models in (29), while their actual pullback witnesses differ.
+Retaining the full spans gives ordinary bicategorical associativity;
+forgetting them to the one-skeleton does not determine the 2-simplex.
+This is not a no-go for a witness-enriched 2-Segal object. THM-2310 supplies
+existence after a noncanonical delay, not a 2-Segal identification of
+prescribed decompositions.
 
 Forks require one more enlargement. Their terminal set
 `Q_(j,{a,b})` is not either exclusive-owner state `E_a` or `E_b`. To compose
@@ -451,7 +459,7 @@ The faithful hierarchy is:
 | directed measured hypergraph | pure/fork word and mass | intermediate intersection |
 | marked gain line `(15)` | exact algebraic target residue | analytic word/current landing |
 | clocked witness span | prescribed set-level composition | Fourier component phase |
-| word-span plus cubic current | owner, clock, word, witness, root-relative cubic phase | shell/address landing |
+| word-span plus cubic current | owner, clock, word, witness, gauge-invariant cubic phase closure | terminal-component and shell/address landing |
 
 Accordingly:
 
