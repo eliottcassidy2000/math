@@ -10,9 +10,11 @@ status: >
   positive THM-2305 blocker-word stratum, p=13, one ordered nonzero
   character pair has integrated real bispectrum at least
   (322959/16)rho^3. This retains the selected owner, prescribed clock, and
-  complete target word in one phase-sensitive cubic current. It is
-  invariant under absolute root translation and does not force the
-  gcd(m,91)=1 shell colour, an ordinary pair coefficient, or LRC(14).
+  complete target word in one gauge-invariant cubic phase-closure current.
+  It is invariant under cyclic root translation; in particular, on
+  one-sheet fibres it is pure mass cubed and does not recover terminal
+  component phase. It does not force the gcd(m,91)=1 shell colour, an
+  ordinary pair coefficient, or LRC(14).
 source: codex-2026-07-25-sparse-root-bispectrum
 depends_on:
   - THM-2305-canonical-blocker-word-handoff-hypergraph
@@ -246,7 +248,7 @@ one pair satisfies
 Re C_(k,l)(Q)>=(322959/16)rho_Q^3>0.                (21)
 ```
 
-Thus one exact phase-sensitive cubic current is nonzero on the same source
+Thus one exact cubic phase-closure current is nonzero on the same source
 owner, prescribed clock, and complete terminal blocker word.
 
 For THM-2305's selected large word, its two mass floors give the explicit
@@ -281,10 +283,79 @@ The three factors in (15) cancel this common character gauge:
 zeta^(-kh)zeta^(-lh)zeta^((k+l)h)=1.                (23)
 ```
 
-Therefore the bispectrum retains relative root phase while deliberately
-forgetting the absolute root address. It is the zero base-frequency
-coefficient of a cubic word-restricted current. It is not a nonnegative
-quadratic energy and it is not an ordinary pair Fourier coefficient.
+The cyclic invariance has an exact continuous-gauge refinement. Recall the
+periodic gauge
+
+```text
+N_k(y)=exp(-2*pi*i*k*y/13)M_k(y).
+```
+
+For representatives `1<=k,l<=12`, put
+
+```text
+c=(k+l) mod 13 in {1,...,12},
+q=(k+l-c)/13 in {0,1}.
+```
+
+Then the balanced root degrees leave precisely the carry frequency:
+
+```text
+M_k M_l conjugate(M_(k+l))
+ =exp(2*pi*i*q*y)N_k N_l conjugate(N_c).            (23a)
+```
+
+Thus `C_(k,l)(Q)` is the zero spatial coefficient of the raw cubic current,
+equivalently the spatial coefficient at frequency `-q` of the
+gauge-corrected cubic product. Exactly `66` allowed pairs have `q=0` and
+`66` have `q=1`. The bispectrum can retain gauge-invariant cross-character
+phase closure and this single radix-carry oscillation when two sheets are
+present, while deliberately forgetting the absolute root address. It is
+not a nonnegative quadratic energy and it is not an ordinary pair Fourier
+coefficient.
+
+The one-sheet boundary makes the loss exact. If the unique occupied root is
+`r` with mass `A`, then
+
+```text
+M_k=A zeta^(-kr),
+M_k M_l conjugate(M_(k+l))=A^3                     (23c)
+```
+
+for every allowed pair `(k,l)`. Hence the entire bispectrum collection is
+blind even to the root address on a one-sheet fibre. In THM-2303's two
+hostile multiplier-four carriers `F_0,F_1`, all active fibres are one-sheet,
+the two component widths agree, and every integrated bispectrum in the two
+states is identical. With its `epsilon=10^(-12)`, each is exactly
+
+```text
+measure(R)/13^3=52*epsilon/13^3
+               =1/42250000000000.                  (23d)
+```
+
+Nevertheless the prescribed linear verdict is zero for `F_0` and nonzero
+for `F_1`. Thus (21) is a genuine signed cubic current, but not a lawful
+THM-2303 phase-tree edge.
+
+This is forced by character charge, not an accident of the example. A
+Fourier monomial
+
+```text
+product_i M_(a_i) product_j conjugate(M_(b_j))
+```
+
+has charge
+
+```text
+chi=sum_i a_i-sum_j b_j mod 13.
+```
+
+Its translates are multiplied by `zeta^(-h*chi)`. If a same-charge scalar
+is real nonnegative on every translate and positive on one, then necessarily
+`chi=0`; for nonzero charge the thirteen orbit values sum to zero. Uniform
+scalar positivity is therefore confined to the invariant sector. Reaching
+an ordinary nonzero-character current requires an external charged sidecar,
+such as a marked root address or a unit-coloured shell edge, before the
+charge-zero contraction.
 
 This is the useful whole-face move. Individual bispectra may have either
 sign or complex phase; their complete nonzero-character sum has the positive
@@ -302,8 +373,8 @@ source:
   nonnegative predecessor sheets;
 
 target:
-  a nonzero phase-sensitive third-order current on that same owner, clock,
-  and complete target word;
+  a nonzero gauge-invariant cubic phase-closure current on that same owner,
+  clock, and complete target word;
 
 map:
   sum the complete nonzero-character bispectrum face, prove its cubic
@@ -316,7 +387,7 @@ preserved:
 destroyed:
   absolute root address, the identity of a uniform character pair, linear
   Fourier amplitude, terminal-component pair phase, shell multiplier,
-  and relation-lattice ancestry;
+  nonzero character charge, and relation-lattice ancestry;
 
 needed sidecar:
   land (21) on a THM-2302 shell edge with gcd(m,91)=1, or couple it to
