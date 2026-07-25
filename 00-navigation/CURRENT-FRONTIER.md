@@ -184,12 +184,12 @@ positive-/zero-Haar quotient has one or two states and no uniform core modulus.
 THM-735 and THM-2182/2184 give remote-tail and grid/mixed-core terminals; THM-2186 gives a strict toric exit.
 THM-2168/2192 leave only scalar `5+3`, with one deepest blocker, 36 empty profiles, and degree-at-most-20 static Hafnian pumps.
 THM-2197/2201 give Boolean deficiency and a faithful triangular Hasse-jet carrier.
-THM-2198/2204/2205/2207 close every deepest-depth-three profile; THM-2203 fixes scalar transport at `16/208` and leaves `1,136` profiles at depths `4..19`.
-THM-2213/2215 close `(3,3,4)` and `(2,3,4)` by exact affine-needle capacity carriers; THM-2219 closes the other four depth-four profiles, leaving `1,130` profiles with deepest depth at least five.
+THM-2198/2204/2205/2207 close every deepest-depth-three profile; THM-2203 fixes scalar transport at `16/208`.
+THM-2213/2215/2219 close all six deepest-depth-four profiles by exact affine-needle and sparse labelled-correlation capacity carriers, forcing `lambda_3>=5`.
 THM-2222 reduces `lambda_1>=6` to a four-checkpoint three-comb inequality; THM-2224 proves `S_4(B)<=3272/28561<961/6930` for every `B`.
-Thus `lambda_1<=5` and `455` profiles are empty; THM-2226's three-checkpoint sieve removes `217` more, leaving a current scalar ledger of `458`.
+Thus `lambda_1<=5`; THM-2226's three-checkpoint sieve removes another `217` profiles. The exact combined scalar ledger has `458` profiles: `450` with `lambda_1<=3<=lambda_3-2` and the eight listed THM-2226 residues at first depth four or five.
 THM-2216 identifies the exact meet-tail PSD Gram kernel `K_theta=R_theta R_theta^T`; THM-2218 gives the integral/Fourier/Hasse carrier, signed top-k energy, and common-lift regret.
-The missing input is a closure mechanism for those `458` low-first-depth profiles; THM-2209's quadratic peel closes only the level-one hostile row. LRC(14) remains open.
+The missing input is a closure mechanism for those `458` low-first/high-last profiles; THM-2209's quadratic peel closes only the level-one hostile row. LRC(14) remains open.
 
 ### Independent routes that remain live
 

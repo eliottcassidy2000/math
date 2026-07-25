@@ -26,6 +26,6 @@ closed_profiles=217
 closed_lambda1_4=116/120
 closed_lambda1_5=101/105
 remaining_profiles=((4, 6, 8), (4, 6, 9), (4, 7, 8), (4, 7, 9), (5, 7, 9), (5, 7, 10), (5, 8, 9), (5, 8, 10))
-conditional_current_scalar_ledger=462
+combined_current_scalar_ledger=458
 gap_compression_controls=PASS
 exact_primal_dual_vertex_parity=PASS

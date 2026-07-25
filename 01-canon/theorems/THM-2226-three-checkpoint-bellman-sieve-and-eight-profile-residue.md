@@ -23,8 +23,8 @@ related:
   - THM-2219-scalar-depth-four-sparse-tail-exclusion
 script: 04-computation/lrc14_three_checkpoint_clause_bellman_thm2226.py
 output: 05-knowledge/results/lrc14_three_checkpoint_clause_bellman_thm2226.out
-script_sha256: b54b10b026ebcbf2661df1d20013f39d06be193973a61ddb88a281ff0154b30f
-output_sha256: 4754bacc76f8ea1f40a4260ab5fd2558c07ed7ce9eb0628d95c3970fa890259e
+script_sha256: 6afb6f32905753f45710cbe6cdbc096f3e2d891751b9c0894f34864028277784
+output_sha256: 7b891802b76f40cb450daa25fbfaf12ef8c6823d2b8f1c548b02549d1863267a
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -252,10 +252,10 @@ respectively. The only eight not closed here are
 (5,7,9), (5,7,10), (5,8,9), (5,8,10).                (22)
 ```
 
-Thus this theorem empties `217` additional profiles. THM-2219 and the two
-earlier depth-four theorems leave `1130` profiles before the independent
-high-first-depth sieve. THM-2224 removes `455`, leaving `675`; the present
-theorem therefore leaves
+Thus this theorem empties `217` additional profiles. These all have first
+depth four or five and hence are disjoint from THM-2219's four profiles with
+deepest depth four. THM-2219 and the two earlier depth-four theorems leave
+`1130` profiles; THM-2224 removes `455`; therefore the present theorem leaves
 
 ```text
 1130-455-217=458.                                    (23)

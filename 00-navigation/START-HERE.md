@@ -118,7 +118,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     its transverse and scalar-`4+3` lanes, leaving only scalar `5+3`.
     THM-2187/2193 give a saturated carrier, floor `7^-21`, rank seven by `78*7^21`, and safe septimal grids; THM-2188 retains slope/current.
     THM-2196/2199 prove rank twelve at height `78*182^13`; THM-2208 gives one candidate per rank-eleven state and THM-2203 fixes scalar transport at `16/208`.
-    THM-2198/2204/2205/2207 close every deepest-depth-three scalar profile; THM-2203 leaves exactly `1,136` valuation profiles at deepest depth `4..19`, and THM-2209 retains but does not close the peel-pair layer.
+    THM-2198/2204/2205/2207 close depth three; THM-2213/2215/2219 close all six depth-four profiles; THM-2222/2224 force `lambda_1<=5`; and THM-2226 removes another `217` profiles. Exactly `458` scalar profiles remain: `450` at first depth at most three and eight listed residues at first depth four or five.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
     the knot continuation cocycle; THM-2191 gives its catalytic group length,
     commuting stable envelope, and abstract additive dual, and closes `9_10`.

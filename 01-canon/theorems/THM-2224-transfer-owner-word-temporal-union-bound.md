@@ -10,8 +10,10 @@ status: >
   using the 26/169 root-sheet cap. An exact 25-schedule rational LP referee
   independently enumerates primal and dual vertices; ordinary and optimized
   outputs are byte-identical. Consequently THM-2222's scalar branch has
-  lambda_1<=5, removing all 455 profiles with lambda_1>=6. The relaxed
-  equality value is not claimed realizable, and LRC(14) remains open.
+  lambda_1<=5, removing all 455 profiles with lambda_1>=6. Together with
+  the complete depth-four exclusion THM-2219, this leaves 675 profiles
+  before the later THM-2226 sieve. The relaxed equality value is not claimed
+  realizable, and LRC(14) remains open.
 source: codex-2026-07-24-four-checkpoint-clause-bellman
 depends_on:
   - THM-2222-scalar-transfer-parity-tower-and-four-checkpoint-survivor-reduction
@@ -19,6 +21,8 @@ related:
   - THM-2198-scalar-five-plus-three-image-pump-and-first-depth-exclusion
   - THM-2203-fixed-dyadic-coordinate-section-and-covector-intersection
   - THM-2210-nested-binomial-minorant-and-adaptive-moment-lp-hierarchy
+  - THM-2219-scalar-depth-four-sparse-tail-exclusion
+  - THM-2226-three-checkpoint-bellman-sieve-and-eight-profile-residue
 script: 04-computation/lrc14_four_checkpoint_clause_bellman_thm2224.py
 output: 05-knowledge/results/lrc14_four_checkpoint_clause_bellman_thm2224.out
 script_sha256: 579010b917bc87f447886480a5fdb314ae4a086f8fa901c67c37edadceb3ea55
@@ -300,9 +304,14 @@ lambda_1<=5                                           (26)
 ```
 
 in every scalar survivor. The `455` profiles with `lambda_1>=6` are empty.
-After the two independent depth-four exclusions THM-2213 and THM-2215, the
-current scalar valuation ledger falls from `1,134` to `679`.
+After the complete depth-four exclusions THM-2213/2215/2219, the current
+scalar valuation ledger falls from `1,130` to `675`, all satisfying
+
+```text
+lambda_1<=5<=lambda_3.
+```
 
 The theorem is uniform in `B`; it does not use THM-2222's enormous finite
-height once the four-checkpoint reduction has been reached. It does not
-settle the remaining `679` scalar profiles or LRC(14). QED.
+height once the four-checkpoint reduction has been reached. It does not by
+itself settle the remaining `675` scalar profiles after THM-2219, and the
+later THM-2226 sieve still does not settle LRC(14). QED.

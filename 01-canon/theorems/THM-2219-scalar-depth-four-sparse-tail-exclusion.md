@@ -28,6 +28,7 @@ related:
   - THM-2222-scalar-transfer-parity-tower-and-four-checkpoint-survivor-reduction
   - THM-2223-four-checkpoint-selberg-relation-and-carry-gate
   - THM-2224-transfer-owner-word-temporal-union-bound
+  - THM-2226-three-checkpoint-bellman-sieve-and-eight-profile-residue
 scripts:
   - 04-computation/lrc14_depth4_hinge_gram_exact_correlation_audit.py
   - 04-computation/lrc14_depth4_remaining_sparse_tail_exact_correlation_audit.py
@@ -393,6 +394,10 @@ leaves `1130-455=675` scalar profiles, all with
 ```text
 lambda_1<=5,                 lambda_3>=5.             (44)
 ```
+
+The still later three-checkpoint sieve THM-2226 removes a disjoint `217`
+profiles with `lambda_1` equal to four or five, leaving the present exact
+count `675-217=458`.
 
 This is a large exact pruning of the scalar finite ledger, not a proof that
 the remaining profiles or LRC(14) are empty. The successful mechanism is

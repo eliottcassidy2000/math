@@ -258,7 +258,7 @@ def main():
         raise RuntimeError("per-first-depth closure drift")
     if total_by_first != {4: 120, 5: 105}:
         raise RuntimeError("per-first-depth total drift")
-    if 679 - len(closed) != 462:
+    if 675 - len(closed) != 458:
         raise RuntimeError("current scalar ledger drift")
 
     compression_controls = (
@@ -284,7 +284,7 @@ def main():
     print("closed_lambda1_4=116/120")
     print("closed_lambda1_5=101/105")
     print(f"remaining_profiles={open_profiles}")
-    print("conditional_current_scalar_ledger=462")
+    print("combined_current_scalar_ledger=458")
     print("gap_compression_controls=PASS")
     print("exact_primal_dual_vertex_parity=PASS")
 
