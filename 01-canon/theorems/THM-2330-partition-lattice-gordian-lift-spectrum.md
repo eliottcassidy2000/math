@@ -2,8 +2,8 @@
 id: THM-2330
 title: "Partition-lattice Gordian lift spectrum and exact merge cocycle"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE, PENDING INDEPENDENT AUDIT, WITH CITED
-  KNOT INPUTS. For a labelled knot packet, a partition of its labels, and a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED, WITH CITED KNOT INPUTS.
+  For a labelled knot packet, a partition of its labels, and a
   target knot, the minimum marked product distance over all target
   factorizations is attained. Its excess over ordinary Gordian distance is
   exactly the obstruction to a compartment-preserving geodesic lift. These
@@ -12,12 +12,14 @@ status: >
   packets, and admit a stable homogenization. At the unknot, the construction
   is exactly the partition transform of the higher subset defect from
   THM-2248. Brittenham--Hermiller's T(2,7)-mirror example gives a finite and
-  stable sole-merge drop of at least one, but no exact value of the connected
+  stable sole-merge drop of at least one, and their cited large-gap family
+  makes finite sole-cover drops unbounded; no exact value of the connected
   sum's unknotting number is claimed. Exact conical word-metric controls show
   both that the root defect complex does not determine target-conditioned
-  lifting and that every fixed-arity pair/tournament shadow can miss the
-  final partition-refinement drop. The abstract controls are not asserted to
-  be knot examples.
+  lifting and that every fixed-arity root-defect truncation, hence every
+  graph or tournament built only from original pair defects, can miss the
+  final partition-refinement drop. The abstract controls are not asserted
+  to be knot examples.
 source: codex-2026-07-25-partition-gordian-lift
 depends_on:
   - THM-2248-higher-interaction-defect-complex-and-tropical-trace-spectrum
@@ -39,8 +41,8 @@ external:
 
 # THM-2330 -- the missing object is a partition-indexed lift spectrum
 
-**PROVED + VERIFIED-EXACT CANDIDATE, PENDING INDEPENDENT AUDIT, WITH
-CITED KNOT INPUTS.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED, WITH CITED KNOT
+INPUTS.**
 
 THM-2317 identifies connected-sum nonadditivity as strict contraction under
 the map which forgets labelled factor compartments. Its root defect records
@@ -459,6 +461,24 @@ Omega_x^hash(0hat;U)
 The bypass persists linearly after homogenization, but (39) still supplies
 no exact stable diagonal.
 
+There is also no universal upper bound on a single partition-cover drop.
+Brittenham--Hermiller's cited Corollary 1.6 gives, for every `N>=1`,
+infinitely many knots `L` satisfying
+
+```text
+u(L#mirror(L))<=2u(L)-N.                            (39a)
+```
+
+For the two-label packet `(L,mirror(L))`, the unique cover therefore has
+
+```text
+c_(L,mirror(L))^U(0hat,1hat)
+ =2u(L)-u(L#mirror(L))>=N.                          (39b)
+```
+
+This is an unbounded **finite** merge-drop statement. No stable lower bound
+for these additional families is asserted.
+
 ## 7. Two exact hostile controls
 
 The following controls are abstract conical metric monoids, not knots.
@@ -510,7 +530,7 @@ The new generator gives a global shortcut which cannot be assigned to
 either nonnegative compartment. This is the smallest target-conditioned
 reason that (19) cannot replace the full spectrum.
 
-### 7.2 Every fixed-arity shadow can miss the terminal merge
+### 7.2 Every fixed-arity root-defect truncation can miss the terminal merge
 
 Fix `r>=3`, put `M=N^r`, and let
 
@@ -619,4 +639,6 @@ python3 -O 04-computation/partition_gordian_lift_spectrum_thm2330.py
 
 Both transcripts must equal the stored output byte-for-byte after LF
 normalization. The companion verifies the exact finite controls, not any
-unknown knot value.
+unknown knot value. The ordinary run owns the runtime assertions; the
+optimized run is transcript-parity evidence because Python removes
+`assert` statements under `-O`.
