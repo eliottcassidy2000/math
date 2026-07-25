@@ -2,7 +2,7 @@
 id: THM-2343
 title: "Deep-comb affine target catalyst and inverse-character boundary"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. On every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. On every
   positive strict shallow-owner word stratum covered by THM-2327, the
   deepest-comb phase in THM-2334's 169-twist current is the character of
   a nonzero pure deepest-axis vector p. Removing that known character
@@ -29,14 +29,20 @@ related:
   - THM-2344-correlation-inverse-rigidity-and-aligned-tooth-twist-hostile
 script: 04-computation/lrc14_deep_comb_affine_catalyst_thm2343.py
 output: 05-knowledge/results/lrc14_deep_comb_affine_catalyst_thm2343.out
-script_sha256: 57558e0fe4736c032835841a228113764b9756651e9f39deef74cc5089f8b4f3
-output_sha256: b8a9ba1b70881b8e1258fde68495fb0660a018c5da902cf230a7ec89dc00f1ce
+script_sha256: 09d6d41dd1f2988f39af997efd7f322617edae89cdb31806f1a7469ba9a31f4b
+output_sha256: 5d8e769557f576637b6485a55b9061594de6fdd2c5619fe2404d2748f02abe26
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2343 -- the deepest comb is a target translation
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
+
+The independent audit rederived the deep-axis typing, all Fourier signs,
+the affine translation law and inverse-character iff, the Parseval distance
+identity, the explicit coordinate escape tests, and the `12+12+144`
+partition.  It also replayed the exact companion under ordinary and
+optimized Python with byte-identical output.
 
 THM-2334 reduces nonzero-target landing to nonconstancy of a `13 x 13`
 twist current `H`.  That criterion treats the deepest-comb phase and the
@@ -299,8 +305,8 @@ The excluded point `-p` is exactly the inverse-character coefficient in
 ```
 
 Hence a phase-free zero-target aggregate already lands in the correct
-full target-support type when the terminal word is the pure deepest
-owner.  For the pure-other and fork words, a nonzero affine component is
+full target-support type when the terminal word is the pure deepest-target
+word.  For the pure-other and fork words, a nonzero affine component is
 still required.
 
 The exact word-matching energies are

@@ -1,5 +1,5 @@
 theorem=THM-2343
-status=PROVED+VERIFIED-EXACT+CANDIDATE-UNDER-INDEPENDENT-AUDIT
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED
 target_group_size=169
 deep_axis_nonzero_phases=12
 translation_orthogonality_checks=342732

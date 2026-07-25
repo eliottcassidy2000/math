@@ -185,7 +185,7 @@ require(inverse_hostile_support == 1, "inverse hostile support changed")
 require(constant_catalyst_support == 1, "constant catalyst support changed")
 
 print("theorem=THM-2343")
-print("status=PROVED+VERIFIED-EXACT+CANDIDATE-UNDER-INDEPENDENT-AUDIT")
+print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED")
 print(f"target_group_size={GROUP_SIZE}")
 print(f"deep_axis_nonzero_phases={mask_rows}")
 print(f"translation_orthogonality_checks={translation_checks}")
