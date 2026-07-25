@@ -129,10 +129,10 @@ surviving special-matrix scope in THM-2033.
 ## Controlled forgetting requires a sidecar
 
 **Trigger:** quotienting, canonicalizing, projecting, folding, taking moments, or replacing an object by an invariant.
-**Action:** state the next operation, predicate preserved, coordinate forgotten, and sidecar needed to make it legal; for inverse limits, retain a termination, height, or depth coordinate.
-**Mechanism:** a quotient can classify the present object yet fail under extension, gluing, chirality, phase transport, or obstruction detection. Compatible finite prefixes can define a completion point without terminating in the original discrete class.
-**Counterindication:** no sidecar is needed when the next operation factors through the quotient or termination is uniformly bounded.
-**Evidence:** [interface stress tests](../07-reflections/perspective-groupoid-controlled-forgetting-codex-s261.md), MISTAKE-209, THM-2049's nonterminating beta-adic lift, THM-2163's bounded carry alphabet with an owner/termination mask, THM-2160, THM-2174, and THM-2228's separation of formal `2`-adic compatibility from ordinary stabilization.
+**Action:** state the next operation, predicate preserved, coordinate forgotten, and sidecar needed to make it legal. Identify the kernel of the quotient and test whether every future transition/consumer is constant on its orbits. If not, retain the induced kernel action or a separating next-step response; for inverse limits, retain a termination, height, or depth coordinate.
+**Mechanism:** equality of current responses is weaker than a continuation congruence. A quotient can classify the present object yet fail under extension, gluing, chirality, phase transport, or obstruction detection. Compatible finite prefixes can define a completion point without terminating in the original discrete class.
+**Counterindication:** no sidecar is needed when every named consumer provably factors through the quotient, the kernel acts trivially on the future state, or termination is uniformly bounded.
+**Evidence:** [interface stress tests](../07-reflections/perspective-groupoid-controlled-forgetting-codex-s261.md), MISTAKE-209, THM-2163/2174/2228, THM-2230/2241 (target-shear quotient is safe for properness and the monic tail), THM-2240 (an explicit grade-six kernel splitter at grade seven), THM-2218 (zero Fourier mode loses lift phase), and THM-2242 (pattern histograms preserve the free exterior optimum but lose the labelled core cost).
 
 ## After a scalar quotient, choose between a coherent lift and orbit incidence
 
