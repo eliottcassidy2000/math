@@ -30,8 +30,8 @@ hash_basis: working-tree bytes (LF)
 # THM-2171 -- radix quotient-order pumping
 
 THM-2167's rank-two carry pump preserves its relations and positivity, but
-its owner mask alone can merge coordinates. This theorem identifies the
-minimal finite order datum that repairs that loss. It also proves that common
+its owner mask alone can merge coordinates. This theorem identifies a finite
+order datum that repairs that loss. It also proves that common
 gcd changes are harmless for LRC. The remaining failure is not algebraic:
 the safe phase predicate is genuinely nonconstant on the repaired pump
 fibres.
