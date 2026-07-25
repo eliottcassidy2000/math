@@ -15,6 +15,8 @@ source: codex-2026-07-24-biased-coin-dyadic-shell
 depends_on: []
 related:
   - THM-2162
+  - THM-2198-scalar-five-plus-three-image-pump-and-first-depth-exclusion
+  - THM-2201-cyclic-root-fibre-hasse-jet-transition-carrier
 script: 04-computation/biased_coin_dyadic_half_tail_referee_codex_20260724.py
 output: 05-knowledge/results/biased_coin_dyadic_half_tail_referee_codex_20260724.out
 ---
@@ -393,5 +395,36 @@ which is not exchangeable inside composition classes cannot inherit the
 involution without an additional weight or orbit-incidence sidecar. This
 distinction is essential in LRC incidence fibers, GMC root packets, and
 valuation-sensitive polynomial descent.
+
+There is nevertheless one exact algebraic bridge to THM-2201. For
+`h=2^r`,
+
+```text
+F_2[C_h]
+ =F_2[g]/(g^h-1)
+ =F_2[epsilon]/(epsilon^h),          epsilon=g-1.     (31)
+```
+
+Thus the same Pascal/Hasse change of basis which triangularizes the
+thirteen-sheet LRC fibre also triangularizes a dyadic shell. Dyadicity in
+(25) is exactly the characteristic-two identity
+`g^h-1=(g-1)^h`; the binomial coefficients off the two endpoints vanish.
+The two problems then ask different questions of the local algebra:
+
+```text
+biased coin:
+  find one balanced composition coloring, so a carefully chosen quotient
+  may ignore one fixed coordinate;
+
+LRC root fibre:
+  reconstruct every labelled owner incidence under deletion/insertion, so
+  the full Hasse jet is required and the socle epsilon^12 records the
+  occupancy-thirteen state lost by augmentation.                    (32)
+```
+
+This explains both the usefulness and the limit of the puzzle analogy. The
+critical run suggests looking for a first invisible filtration coordinate;
+it does not license replacing THM-2198's guard, deep-owner bits, or winding
+word by an unweighted fair coloring.
 
 QED.
