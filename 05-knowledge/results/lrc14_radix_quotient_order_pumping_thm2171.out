@@ -1,0 +1,14 @@
+THM-2171 exact hostile audit
+monotone owner/tie transitions checked = 79086
+equal-sidecar block deletions checked = 5554
+nontrivial positive ordered pumps = 5554
+relation-splice implications checked = 2762
+relation-splice converses checked = 2762
+target witness V = (1, 4, 5, 8, 9, 12, 13, 16, 17, 20, 21, 24, 25)
+pumped row V' = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+relations r,s = (0, 2, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0) ; (0, 3, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0)
+M(V) = 3/29 at t=25/29
+M(V') = 1/14 at t=13/14
+rank-two carry states = 2729^2 = 7447441
+ordered-path state cap = 26*2729^2 = 193633466
+all exact checks passed
