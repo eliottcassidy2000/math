@@ -1,5 +1,5 @@
 ---
-id: THM-2306
+id: THM-2307
 title: "Dual rank-six reconstruction spectrum and bounded-selector no-go"
 status: >
   RESERVED / UNPROVED PROOF CANDIDATE UNDER AUDIT. Intended target: for a
@@ -14,7 +14,7 @@ source: codex-2026-07-25-dual-rank-six-reconstruction-spectrum
 depends_on: []
 ---
 
-# THM-2306 -- RESERVED / UNPROVED PROOF CANDIDATE UNDER AUDIT
+# THM-2307 -- RESERVED / UNPROVED PROOF CANDIDATE UNDER AUDIT
 
 The dual affine-plane count, sharp 77-point model, polynomial-selector
 boundary, rank-seven/rank-eight continuation, and composition with
