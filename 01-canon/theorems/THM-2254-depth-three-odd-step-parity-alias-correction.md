@@ -10,8 +10,10 @@ status: >
   sign on the antisymmetric state. The formerly reported u=H and u=6H
   whole-clause closures used JP. Under the correct P their exact bounds are
   28460/199927 and 734515/5198102, both above 961/6930. The correction
-  supplies the exact lost midpoint Z/2 bridge coordinate but no exclusion:
-  the all-equal branch and LRC(14) remain open.
+  supplies the exact lost midpoint Z/2 bridge coordinate but no exclusion
+  by itself. Subsequently THM-2257 closes the all-equal branch by an
+  independent 169-image sieve; LRC(14) remains open on the 165
+  first-depth-one scalar rows.
 source: codex-sol-2026-07-25-depth-three-parity-alias-audit
 depends_on:
   - THM-2250-depth-three-pair-incidence-partition-reduction
@@ -379,5 +381,7 @@ ordinary/optimized transcript identity.             (29)
 ```
 
 This is a correction and a negative structural theorem. It excludes no
-new coefficient relation or valuation profile. After THM-2250, the
-all-equal `(3,4,5)` branch remains open, and LRC(14) remains open.
+new coefficient relation or valuation profile. Subsequently THM-2257 closes
+the all-equal `(3,4,5)` branch by a different exact image argument. The
+alias correction remains valid, and LRC(14) remains open on the 165
+first-depth-one scalar rows.
