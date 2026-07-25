@@ -1,5 +1,5 @@
 theorem=THM-2327
-status=PROVED+VERIFIED-EXACT+CANDIDATE-UNDER-INDEPENDENT-AUDIT
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED
 primitive_pair=N=13D,K1=K0+D
 first_colour=13_does_not_divide_t
 second_colour=7_does_not_divide_s

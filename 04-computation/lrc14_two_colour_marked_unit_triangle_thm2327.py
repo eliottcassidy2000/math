@@ -176,7 +176,7 @@ for multiplier in range(-10_000, 10_001):
 
 
 print("theorem=THM-2327")
-print("status=PROVED+VERIFIED-EXACT+CANDIDATE-UNDER-INDEPENDENT-AUDIT")
+print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED")
 print("primitive_pair=N=13D,K1=K0+D")
 print("first_colour=13_does_not_divide_t")
 print("second_colour=7_does_not_divide_s")

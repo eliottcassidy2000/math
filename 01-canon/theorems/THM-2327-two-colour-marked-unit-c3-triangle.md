@@ -2,7 +2,7 @@
 id: THM-2327
 title: "Two-colour triangle for marked unit c3 incidence"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. On every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. On every
   positive canonical shallow-owner word stratum in the 150 strict-row
   bank, and for every nonzero root character, there is a c_3-multiple
   edge with multiplier coprime to 91 incident to a bare-source vertex
@@ -27,14 +27,14 @@ related:
   - THM-2321-prescribed-root-character-bispectrum-slice-positivity
 script: 04-computation/lrc14_two_colour_marked_unit_triangle_thm2327.py
 output: 05-knowledge/results/lrc14_two_colour_marked_unit_triangle_thm2327.out
-script_sha256: d400c9da4b5691256d22babda4de1c062ef68df9939243941e03a46f458e4dda
-output_sha256: d5fb9c874ff41fc807352cdd5100d9145f10e7f0e6821ce53351a1c0f5fc4e87
+script_sha256: 811f1dcefe2352839cc6a357e61de5820141c63757673c42614342b4a24e271b
+output_sha256: 8293aaa296f83f445eb815206f094cf019beb1864bdf52ca5cc124008a8bc406
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2327 -- two-colour marked unit `c_3` triangle
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 The shallow-owner obstruction had become a quantifier mismatch. THM-2323
 marks a bare Fourier vertex by the full positive word. THM-2326 gives
@@ -506,3 +506,14 @@ Both transcripts must match
 ```
 
 byte-for-byte after LF normalization.
+
+The independent audit rederived the full `7|a` branch without invoking
+THM-2323's conditional `gcd(a,91)=1` conclusion, checked both primitive
+`13D` lifts, the exact grade/root preservation, all three colour-completion
+cases, and the bound `|m|<=156S^2+14S-13`. A second pass checked the
+owner-generic word identity, jump ledger, gcd normalization, and THM-2326
+incidence separately for `j=1`, so the strict shallow-owner scope is
+uniform. The promoted ordinary, optimized, and stored transcripts agree
+byte-for-byte; the recorded hashes match. Target gain, terminal phase,
+full-lattice address incidence, and scalar exclusion remain outside the
+theorem.
