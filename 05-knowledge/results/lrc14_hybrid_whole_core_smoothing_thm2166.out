@@ -1,0 +1,17 @@
+THM-2166 HYBRID WHOLE-CORE SMOOTHING -- EXACT REFEREE
+universe: all C(13,7)=1716 retained cores; 178 boundary points / 177 open cells
+independent core paths: iterative closed-interval intersection and global arrangement-cell runs -- exact agreement
+positive-component_distribution={12: 4, 14: 31, 16: 171, 17: 1, 18: 452, 20: 584, 22: 262, 24: 152, 26: 54, 28: 5}
+support carriers: contains_1=924, consecutive_pair=792
+independent set-valued sparse bank: height 57 covers all 1417 carries for every core; height 56 has exactly the 3 recorded hostile cores
+
+far Jackson: N=150, H=298, C0=2250050, floor(odd_sum)=2760290, eta_upper<439/156250
+core Jackson: N=355, H=708, C0=29826035, floor(odd_sum)=36709039, eta_upper<371/312500
+independent Jackson paths: cubic coefficient formula and direct integer Fejer convolution -- exact agreement
+
+binding_core=(1, 5, 7, 8, 9, 11, 13) mass=45107/229320 positive_components=20 isolated=4
+minimum certified margin=41050267/1222741406250 (~3.35723210077e-05) > 0
+consequence: common scalar frequency 0<|nu|<=708; far coefficient height<=298; core arithmetic support<=2 and coefficient height<=57
+HOSTILE TYPE CHECK: support<=2 is NOT Fourier-vector sparsity; the natural torus product has nonzero support-3 coefficient at (1, 1, 1, 0, 0, 0, 0)
+full relation l1<=1902; the same exact rational-pi ledger is negative at core N=354
+ALL EXACT ASSERTIONS PASSED
