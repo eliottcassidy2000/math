@@ -45,6 +45,10 @@ related:
   - THM-2196
   - THM-2199
   - THM-2022
+  - THM-2198
+  - THM-2184
+  - THM-2197
+  - THM-2200
 script: 04-computation/lrc14_scalar_five_plus_three_root_sheet_chords_thm2192.py
 output: 05-knowledge/results/lrc14_scalar_five_plus_three_root_sheet_chords_thm2192.out
 script_sha256: 6c8796b6aeeb7539157974c9ec2b6eb91d32263e1d72cb569e7dbd970657b50e
@@ -848,7 +852,7 @@ The `z_l` are independent in `ker(V)`, while the last image is not in
 however, can encode the full unknown rows `V,w`; this construction has no
 noncircular height control.
 
-the scalar relation image `T(L_eval)` has dimension eight.  If a bounded
+The scalar relation image `T(L_eval)` has dimension eight.  If a bounded
 relation space `S subset Lambda(V)_Q` has dimension `r`, Grassmann's
 inequality gives only
 
@@ -882,8 +886,7 @@ W_H(V)=Lambda(V)_Q,                       dim=12.     (29)
 ```
 
 Indeed its left side has dimension at least twelve and lies in the
-twelve-dimensional full relation space. Consequently, if the injective lift
-(27) exists, then
+twelve-dimensional full relation space. Consequently, for every lift (27),
 
 ```text
 W_H(V) intersection T(L_eval)=T(L_eval),              (30)

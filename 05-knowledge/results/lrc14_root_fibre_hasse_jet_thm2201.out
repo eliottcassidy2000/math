@@ -1,0 +1,9 @@
+THM-2201 cyclic root-fibre Hasse-jet exact audit
+field=F_13; sheets=13; algebra=F_13[epsilon]/(epsilon^13)
+pascal_det_mod13=1
+basis_translation_checks=169
+endpoint_delete_insert_checks=169
+occupancy_subsets_size_at_most_10=8100
+full_fibre_jet=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1)
+aggregate_deletion_hostile_pair=PASS
+PASS

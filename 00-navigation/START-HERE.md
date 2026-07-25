@@ -116,9 +116,9 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     `(3,5,0)`. THM-2140 gives depth/polar invoices; THM-2148/2168 give the
     Fano classification and top-two depth majorization; THM-2168 now eliminates
     its transverse and scalar-`4+3` lanes, leaving only scalar `5+3`.
-    THM-2187/2193 give a saturated carrier, floor `7^-21`, rank seven by `78*7^21`, and safe septimal grids; THM-2188 retains slope/current. THM-2196/2199 prove
-    rank twelve by explicit height `78*182^13` and projective finiteness. THM-2192/2198 leave scalar `5+3` with `216/252` residue profiles but exclude
-    valuation `(1,1,2)`, so deepest depth is at least three; the branch remains open.
+    THM-2187/2193 give a saturated carrier, floor `7^-21`, rank seven by `78*7^21`, and safe septimal grids; THM-2188 retains slope/current.
+    THM-2196/2199 prove rank twelve by explicit height `78*182^13` and projective
+    finiteness; THM-2192/2198 leave 216 scalar profiles but close valuation `(1,1,2)`.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
     the knot continuation cocycle; THM-2191 localizes Gordian distance by
     common catalysts and closes `9_10` through the four-ball crossing metric.

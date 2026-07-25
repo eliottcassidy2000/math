@@ -30,6 +30,12 @@ depends_on:
   - THM-2192-scalar-five-plus-three-root-sheet-chord-invoice
 related:
   - THM-2197-scalar-chord-coverage-has-a-boolean-deficiency-quotient
+  - THM-2184-two-scale-tail-continuation-profile
+  - THM-2196-bounded-relation-cone-circuit-atlas-and-carry-lock-rank-ladder
+  - THM-2199-effective-positive-subspace-rank-lift
+  - THM-2022-gmc2-frobenius-lowest-balanced-face
+  - THM-2200-convex-semigroup-and-finite-place-support-hole-trichotomy
+  - THM-2201-cyclic-root-fibre-hasse-jet-transition-carrier
 script: 04-computation/lrc14_scalar_five_plus_three_image_pump_thm2198.py
 output: 05-knowledge/results/lrc14_scalar_five_plus_three_image_pump_thm2198.out
 script_sha256: b3f5b37d4e0fb34070851fcedecf9435e08d9f78fafb651c5a6c4b39528e0eee
@@ -539,8 +545,38 @@ There is also exact division support.  If `b=13^r c`, then
 x in D_b iff T^r(x) in D_c.                          (M7)
 ```
 
-Applying this identity to (2), and discarding only the image of the null
-exceptional set, gives
+There is an exact finite-place formulation of the first image. Regard the
+integer-valued transfer
+
+```text
+T_*1_A=n_A
+```
+
+as a function with values in `F_13`. Since `A subset C_H` forces
+`0<=n_A<=10<13`,
+
+```text
+supp_(F_13)(T_*1_A)=T(A).                            (M7a)
+```
+
+Thus reduction modulo thirteen loses no occupied first-image fibre. Together
+with
+
+```text
+integral n_A=13 measure(A),       ||n_A||_infinity<=10, (M7b)
+```
+
+this is exactly the support/`L1` content of (M3). It is the set-transfer
+analogue of THM-2022's whole-layer finite-place survival, while THM-2200's
+Frobenius law concerns independent polynomial copies.
+
+The analogy stops after one image. A general fibre has occupancy at most
+thirteen, and occupancy thirteen becomes zero in `F_13`; moreover the five
+unit coefficients are not integrally divisible under `T`. This is why later
+steps use only (M4) and the labelled event word rather than iterating (M7a).
+
+Applying (M7) to (2), and discarding only the image of the null exceptional
+set, gives
 
 ```text
 A_r subset union_(j=1)^3 D_(c_j/13^r)
@@ -753,6 +789,23 @@ needed sidecar:
 decisive test:
   the depth-three global incidence deficit (29).      (35)
 ```
+
+THM-2199 places every primitive zero-Haar row in an explicit finite box, so
+an exhaustive extension of (29) is possible in principle. Its bound is vast
+and no such audit is performed. The rank theorem makes the remaining search
+finite but does not replace coefficient winding by a smaller state.
+
+THM-2201 rewrites the labelled sheet component as five Hasse jets in
+
+```text
+F_13[C_13]=F_13[epsilon]/(epsilon^13).
+```
+
+In that basis deck translation is triangular and endpoint insertion/deletion
+is affine. The occupancy-thirteen failure of (M7a) is exactly the top term
+`epsilon^12`. This is a faithful representation of the movie, not a rule for
+deriving its event word; the guard, deep bits, and winding in (35) remain
+load-bearing.
 
 Stacking the successive chord matchings resembles a labelled
 Brauer/matching cobordism.  That analogy is useful only at the carrier level.

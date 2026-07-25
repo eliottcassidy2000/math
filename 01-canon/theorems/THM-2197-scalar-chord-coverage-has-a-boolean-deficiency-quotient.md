@@ -27,6 +27,8 @@ related:
   - THM-2195-transitive-quotients-exactly-control-universal-substitution-products
   - THM-840
   - THM-853
+  - THM-2198
+  - THM-2201
 script: 04-computation/lrc14_scalar_chord_deficiency_tournament_thm2197.py
 output: 05-knowledge/results/lrc14_scalar_chord_deficiency_tournament_thm2197.out
 script_sha256: 7022c8b26d870282f5a89ab807f69abd0437bf669f7ea48561358526aa0ad3c9
