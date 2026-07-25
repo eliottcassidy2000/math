@@ -310,7 +310,7 @@ design without pretending a preserver supplies the seed.
   makes `d_iso` exactly `l1` on fixed order-join patches by image-swap
   uncrossing; the ambient quotient still has triangles and is not a partial cube.
 - [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md)
-  classifies the universal product exactly: iff transitive. Marked partial-automorphism cost is a weighted Hamming derivative and PSD-Gram permutation-trace defect; subgroup averaging is orbit variance. Unmarked transport remains open.
+  classifies the universal product exactly: iff transitive. Marked partial-automorphism cost is a weighted Hamming derivative and PSD-Gram permutation-trace defect; subgroup averaging is orbit variance. THM-2242's prefix tax closes the full pinned split response for transitive common quotients; genuinely nontransitive and unpinned transport remain open.
 - THM-1880/1885 give the Chebyshev--Pell/`BS(1,2)^+` transitive frame.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
@@ -435,7 +435,7 @@ The most reusable current bridges are not literal object identifications:
 | Whole-layer Frobenius / orbit norm | NC2 balanced face and TNC monodromy orbit | Exact finite-abelian packet preservation and uniform-incidence norms transfer; LRC still lacks the seed and exit, and `-1` in the packet stabilizer forces a signed orientation sidecar. |
 | Quotient + sidecar | spectrum/SCC/support quotients | Which lost coordinate restores the target predicate? |
 | Bulk / boundary / null | THM-2058 phase height | Strict templates occur on all large prime grids; tight support lies on finitely many level-14 pair-sum clocks; subthreshold packets vanish. |
-| Operation-response | tournament joins/support unions | THM-2183/2195 classify the exact transitive product; THM-2221 gives `<X,D>`, and THM-2242 identifies the sharp complement-histogram Wasserstein deficit and its dual. Classify the core kernel `G(X)` and unpinned exchange. |
+| Operation-response | tournament joins/support unions | THM-2183/2195 classify the exact transitive product; THM-2221 gives `<X,D>`, and THM-2242 identifies the sharp complement-histogram Wasserstein deficit and its dual, then closes the full transitive split response by a prefix tax. Classify nontransitive `G(X)` and unpinned exchange. |
 | One-sided accumulation | LRC spectrum | Can qualitative isolation be made effective by finite state/pinning data? |
 | Support Dirichlet profile | integer sequences | Do tournament/LRC census supports have functional or automatic structure? |
 | Continuation congruence / min-plus kernel | Gordian connected-sum profile and THM-840/853 | Which finite sidecar is a target-preserving quotient under every named future operation? |
