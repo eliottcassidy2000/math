@@ -28,6 +28,7 @@ related:
   - THM-2215-scalar-depth-234-affine-needle-capacity-exclusion
   - THM-2216-residual-capacity-hinge-gram-law
   - THM-2218-labelled-guard-hole-fourier-and-signed-lift-energy
+  - THM-2221-tournament-context-cut-metric-and-pinned-transport-response
 script: 04-computation/lrc14_scalar_parity_tower_four_checkpoint_thm2222.py
 output: 05-knowledge/results/lrc14_scalar_parity_tower_four_checkpoint_thm2222.out
 script_sha256: 1ee54ce28580d198c5f4919ec6c50e001f3300a59c2e804bb256ad46d3afa900
@@ -113,8 +114,9 @@ L 1_(C_H)=10-1_(C_H).                                (9)
 ```
 
 The complement count is the number of integers in an interval of radius
-`13/7`: it is three when `||Hy||<=1/7` and four otherwise, so the safe
-count is ten minus the guard bit. Endpoint choices are null.
+`13/7`: away from endpoints it is three when `||Hy||<1/7` and four
+otherwise, so the safe count is ten minus the guard bit. Endpoint choices
+are null.
 
 Equations (4), (8), and (9) telescope:
 
@@ -316,6 +318,23 @@ measure is at least `1/7>delta_5`. Exact transfer gives more. Squaring
 L^2 1_(D_1)=24+1_(D_1).                             (28)
 ```
 
+For the map `S(x)=169x`, normalized transfer duality now gives
+
+```text
+P(X_j=1 | X_(j+1)=0)=24/169,
+P(X_j=1 | X_(j+1)=1)=25/169.                        (28a)
+```
+
+The conditional law factors every finite reverse word because the
+normalized transfer of each partition indicator is constant on the two
+atoms `{X=0}` and `{X=1}`. The invariant atom masses are `(6/7,1/7)`,
+and
+
+```text
+(6/7)(24/169)=(1/7)(144/169),                       (28b)
+```
+
+so detailed balance identifies the same kernel forward and backward.
 Therefore `(X_j)` is the stationary reversible Markov chain with
 
 ```text
@@ -421,6 +440,38 @@ Thus degree three contains enough information on the canonical hostile
 chain, but only after retaining the nonmonotone binomial-basis
 combination. This is the upper-LP dual of THM-2210's adaptive lower
 hierarchy and a decisive positive/hostile control for any finite search.
+
+### The moment packet is information-theoretically sharp
+
+The upper LP in (34) cannot be improved using arbitrary four-bit laws with
+the same moments through degree three. Let `mu_even` and `mu_odd` be the
+uniform laws on the even- and odd-parity cosets of `{0,1}^4`. Every proper
+marginal of either law is uniform. Consequently both laws have
+
+```text
+M_1=2,       M_2=3/2,       M_3=1/2.                (39a)
+```
+
+But their all-one atoms are
+
+```text
+mu_even(1111)=1/8,       mu_odd(1111)=0.             (39b)
+```
+
+Equation (34) gives `U_3=1/8`, with equality for `mu_even`. Thus the
+adaptive cubic certificate is the exact best algebraic upper bound from
+that packet. The missing coordinate is the top Walsh/parity character,
+which is precisely the kind of higher whole-fibre correlation discarded
+by THM-2221's cut metric. Since
+
+```text
+1/8<961/6930,                                          (39c)
+```
+
+this ambiguity does not itself defeat the desired estimate. It does prove
+that any further improvement must use the special comb dynamics,
+cross-checkpoint arithmetic, or an explicit top-character/carry sidecar;
+another generic manipulation of moments through degree three cannot help.
 
 ## 8. Representations and the remaining obstruction
 
