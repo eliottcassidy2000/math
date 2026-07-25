@@ -231,6 +231,30 @@ This is strictly sharper than asking vaguely whether endpoint twists
 vary.  They may be nonconstant and still lie on the bad character line;
 they may be constant and then land successfully at `p`.
 
+In the ordered dual coordinates `ell=(s,t)` and with
+`p=(0,m)`, the entire bad line is explicitly
+
+```text
+K(s,t)=c zeta^(-m t).                               (17a)
+```
+
+It is constant in the other-target character `s` and is one fixed
+geometric progression in the deep character `t`.  Consequently any one
+of
+
+```text
+K(s,t)!=K(0,t) for some s,t,
+
+K(0,t+1)!=zeta^(-m)K(0,t) for some t,
+
+K(s,t)^13!=K(0,0)^13 for some s,t                  (17b)
+```
+
+is already a certificate of nonzero target survival.  The converses of
+the individual tests in (17b) are not asserted; the complete iff remains
+(17a).  This turns the next computation from a generic variance search
+into a rigid character-matching audit.
+
 ## 5. Affine word-support masks
 
 The three nonzero target loci in the ordered `(o,d)` coordinates are
