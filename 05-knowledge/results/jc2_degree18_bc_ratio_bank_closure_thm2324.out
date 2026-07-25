@@ -1,0 +1,28 @@
+rational_linear_orbits=2
+rational_weighted_representatives=B=C=1/t
+rational_absolute_irreducibility=PASS_two_Groebner_bases_[1]
+rational_Delta=(linear_exceptional)^2*h10
+rational_h10=degree_10_squarefree_coprime
+rational_exceptional_fibres=ordinary_nodes_nonvertical
+rational_normalization_genera=(3, 3)
+quadratic_ratio_field=degree_2_irreducible_mod_19
+quadratic_orbit_size=2
+quadratic_absolute_irreducibility=PASS_global_Groebner_basis_[1]
+quadratic_Delta=universal_lead*(y-Y(alpha))^2*h10
+quadratic_h10=degree_10_squarefree_coprime
+quadratic_exceptional_fibre=smooth_total_ramification_e3
+quadratic_normalization_genus=4
+quintic_ratio_field=degree_5_irreducible_mod_13
+quintic_orbit_size=5
+quintic_absolute_irreducibility=PASS_global_Groebner_basis_[1]
+quintic_Delta=universal_lead*(y-Y(alpha))^2*h10
+quintic_h10=degree_10_squarefree_coprime
+quintic_exceptional_fibre=ordinary_node_two_unramified_branches
+quintic_normalization_genus=3
+infinity_cubic=-26040609*v**3 + 1607445*v**2 - 138915*v + 1127
+infinity_discriminant=-153384762202971019112448
+infinity=3_distinct_unramified_points
+closed_BC_ratios=9
+hostile_control_B=C=1_squarefree=PASS
+riemann_hurwitz_and_deck_contradiction=MATHEMATICAL_PROOF_REQUIRED
+status=THM2324_FULL_BC_BANK_EXACT_REFEREE
