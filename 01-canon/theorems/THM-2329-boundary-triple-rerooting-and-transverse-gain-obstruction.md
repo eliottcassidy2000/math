@@ -203,6 +203,10 @@ The three rerootings (9)--(11) therefore have input-character pairs
 They exhaust `B_13`. No choice of multiplier `m`, gauge, owner grade, or
 root character changes this projective set: the load-bearing fact is
 that a `c_3` shift is trivial at every shallower thirteen-adic scale.
+Here “trivial” always means trivial **shallow character after division by
+`13^lambda` and reduction modulo thirteen**. The ordinary frequencies
+`B` and `-B` are nonzero, and their nonzero deepest-comb coefficients are
+load-bearing in (1).
 All six ordered rerootings give these three directions twice. On a
 general slope `g`, the six slopes are
 
