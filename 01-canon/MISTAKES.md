@@ -9,6 +9,32 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-256 (2026-07-25, concurrent namespace audit) -- a fetched but unreplayed THM-2325 reservation was missed
+
+- **What happened:** commit `ba9d0cd284` reserved
+  `THM-2325-prescribed-target-gain-full-lattice-91-unit-needle-bank.md`.
+  A second session fetched that commit while it was still one commit behind,
+  searched only its checked-out files plus commit subjects, and saw no
+  `THM-2325` string because the reservation commit subject did not contain the
+  numeric ID. It then rebased but failed to repeat the filename/YAML search
+  before reserving the distinct cyclotomic-chromatic candidate as THM-2325 in
+  later commit `dced8e4253`.
+- **First failure:** a remote fetch is not a namespace check until the fetched
+  tree has either been inspected directly or replayed into the worktree. A
+  subject-only history grep is not a substitute for searching YAML IDs and
+  filenames in the fetched commit.
+- **Repair:** the earlier prescribed-target-gain theorem keeps THM-2325. The
+  later cyclotomic-chromatic file was deleted rather than renumbered because
+  its narrower divisor-splitting argument was independently superseded before
+  promotion by THM-2323's nonnegative-sector strengthening. No proved
+  dependency ever cited the duplicate file.
+- **Rule:** after the final fetch/rebase immediately preceding a reservation,
+  rerun all three checks on the resulting tree: filename, exact YAML ID, and
+  remote history. If inspecting without rebasing, search `origin/main^{tree}`
+  directly; do not rely on the current worktree or commit subject.
+
+---
+
 ## MISTAKE-255 (2026-07-25, quantitative handoff-gluing audit) -- a positive-value floor was used in the wrong direction
 
 - **What was written:** for the arrival density
