@@ -1,8 +1,36 @@
-THM-2198 scalar five-plus-three first-depth audit
-N=2197; annulus=1450; unit_classes=1014; shallow_classes=78
-shallow_pairs_with_repetition=3081; reduction_checks=90
-conditional_margin_range=86..218; worst_rows=[(14, 46, 1046, 960, ((204, 183), (200, 799), (190, 599), (186, 1000), (180, 1007)))]
-margin_histogram_size=66; margin_histogram_total=3081
-table_sha256=d31e5c874d8b5893ff33fc35095c18dcdf865c7f8296285c1b3441a8d8d679d9
-strict_torsion_witnesses_thicken_to_open_intervals=yes
-PASS
+THM-2198 scalar five-plus-three image-pump audit
+arithmetic: exact integers only; no floats; no assert dependence
+
+depth-three primitive guard annulus
+  N=2197 Q=169 |U_N|=1450
+  primitive image phases=156 fibre_histogram=((9, 110), (10, 46))
+  unit_sign_classes=1014 depth_one_sign_classes=78 depth_two_nonzero_unit_parts=12
+  direct/root-pump parity: guard=PASS units=1014/1014 depth_one=78/78
+  all_guard_normalization_checks=129792
+  depth_two_mask_sizes=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+first-depth capacity certificate
+  unordered_depth_one_pairs=3081 including_diagonal=78
+  distinct_unit_masks=1013 duplicated_empty_labels=(1, 1098)
+  unique_worst_pair=(14,46) residual_size=1046
+  worst_residual_image_fibres=((9, 74), (10, 38)) phases=112
+  top_five_(intersection,label)=((204, 183), (200, 799), (190, 599), (186, 1000), (180, 1007))
+  conditional_margin_range=86..218 histogram_support=66
+  H_drift_(label,capacity,singletons,outside)=((183, 204, 0, 20), (799, 200, 0, 24), (599, 190, 10, 24), (1000, 186, 0, 38), (1007, 180, 12, 32))
+  H_drift=sum(singletons+outside)-C_frames=86 with C_frames=74
+  full_table_sha256=d31e5c874d8b5893ff33fc35095c18dcdf865c7f8296285c1b3441a8d8d679d9
+  consequence: every residual needs at least six distinct unit masks
+
+hostile controls
+  inherited single-active check: minimum_margin=30 worst=(14, 1230, 240, (183,)) PASS
+  crude_5max_nonpositive_rows=((7, 14, -22, 94, 228), (14, 61, 0, 102, 216), (23, 46, -2, 98, 224))
+  diagonal blocker pairs retained; repeated coefficient residues quotiented only after union-idempotence
+  positive five-mask constructed-union control: labels=(3, 4, 5, 7, 11) size=1024 PASS
+
+CONCLUSION
+  actual blocker valuation profile (1,1,2) cannot cover the primitive guard-safe annulus
+  after THM-2192, every scalar 5+3 survivor has deepest depth >=3
+
+reproduce:
+  python3 04-computation/lrc14_scalar_five_plus_three_image_pump_thm2198.py
+  python3 -O 04-computation/lrc14_scalar_five_plus_three_image_pump_thm2198.py

@@ -2,491 +2,760 @@
 id: THM-2198
 title: "Scalar five-plus-three image pump and first-depth exclusion"
 status: >
-  PROVED + VERIFIED-EXACT. In the scalar five-unit/three-deep survivor, the
-  mixed residual expands under multiplication by thirteen by a factor at
-  least 13/10 on its first image. Until the least blocker valuation is
-  exhausted, every image remains inside the correspondingly divided
-  three-comb carrier. If the least valuation is unique, removing its unit
-  owner leaves measure at least 2593/69300 which propagates to the second
-  valuation. Independently, the deepest blocker has a positive-measure
-  private transition word: repeated-minimum profiles force owner word
-  (0,0,1), while a strict valuation ladder forces (0,0,1) and then
-  (*,0,1). Sharp two-/three-comb caps classify equality as the ratios
-  (1,13) and (1,12,13). An exhaustive exact 13^3 annulus argument eliminates
-  the entire first profile (lambda_1,lambda_2,lambda_3)=(1,1,2), with a
-  uniform conditional-capacity margin of 86. The scalar 5+3 branch remains
-  open at all other profiles, so this is not a proof of LRC(14).
+  PROVED + VERIFIED-EXACT. Multiplication by thirteen has an exact labelled
+  root-image law on the scalar five-unit/three-deep cover. On every
+  thirteen-root fibre, a unit mask is a moving singleton/chord given by a
+  two-integer window, the guard is the complement of a moving
+  three/four-integer block, and a 13-divisible mask is one all-or-nothing
+  fibre bit after its coefficient is divided by thirteen. The resulting
+  insertion/deletion word records labelled ownership, simultaneous event
+  packets, full integer winding, and the active bits of the two shallower
+  blockers left after the unique deepest blocker becomes safe. Independently,
+  the mixed residual expands in measure by at least 13/10 on its first image
+  and never contracts thereafter. Division support yields quantitative and
+  private-owner transition words through the first two blocker valuations,
+  with equality carriers (1,13) and (1,12,13). On the first possible
+  unique-depth profile (1,1,2), an exact depth-three audit gives a
+  global sheet-time incidence deficit: for every pair of shallower masks,
+  the five largest conditional unit-mask capacities miss the residual by at
+  least 86 points. Hence (1,1,2) is empty and every surviving scalar 5+3
+  branch has unique deepest blocker depth at least three. Deeper profiles
+  remain open, so this is not a proof of LRC(14).
 source: codex-2026-07-24-scalar-five-plus-three-transition
 depends_on:
-  - THM-1166
-  - THM-2137
-  - THM-2138
-  - THM-2168
-  - THM-2192
+  - THM-1166-seven-wall-fano-gcd-discrepancy
+  - THM-2137-deep-scalar-tail-boundary-complexity
+  - THM-2138-all-depth-unit-annulus-extremal-law
+  - THM-2168-three-target-second-depth-majorization
+  - THM-2192-scalar-five-plus-three-root-sheet-chord-invoice
 related:
-  - THM-2184
-  - THM-2196
-  - THM-2197
+  - THM-2197-scalar-chord-coverage-has-a-boolean-deficiency-quotient
 script: 04-computation/lrc14_scalar_five_plus_three_image_pump_thm2198.py
 output: 05-knowledge/results/lrc14_scalar_five_plus_three_image_pump_thm2198.out
-script_sha256: 5129dff3175bb5c433b395c1f6be6e36b21fb86798510968a3e188df69c6c9b4
-output_sha256: e96d69f6e06e05a61397c3a6d43ece2b8317a748b9ba52cdca13a811c95c2124
+script_sha256: b3f5b37d4e0fb34070851fcedecf9435e08d9f78fafb651c5a6c4b39528e0eee
+output_sha256: 5e2130ac4078da4c3e4f600f7c29e1f8290cea2ffcbdc012e144117d9d786d76
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2198 -- the scalar `5+3` image pump
 
-Use the scalar notation of THM-2168 and THM-2192:
+Use the scalar-cover notation
 
 ```text
-C_H={t:||Ht||>1/7},
-D_a={t:||at||<1/14},
-A_0=C_H minus union_(i=1)^5 D_(q_i),                 (1)
+D_a={t in R/Z:||at||<1/14},
+C_H={t in R/Z:||Ht||>1/7}.                          (1)
 ```
 
-where `H,q_1,...,q_5` are positive thirteen-units, `H` is odd, and the
-`q_i` are distinct. Let the three actual blockers, also distinct as
-inherited from the LRC row, be
+Suppose that `H,q_1,...,q_5` are positive thirteen-units, the three actual
+blocker coefficients `c_1,c_2,c_3` are positive multiples of thirteen, and
 
 ```text
-b_j=13s_j,
-lambda_j=nu_13(b_j),          lambda_1<=lambda_2<lambda_3, (2)
+C_H subset union_(i=1)^5 D_(q_i)
+             union union_(j=1)^3 D_(c_j)             (2)
 ```
 
-after relabelling. Thus the unique-deepest conclusion of THM-2192 has
-already been used. Suppose, outside a null set,
+almost everywhere.  This is THM-2168's fully scalar `5+3` residual.  Put
 
 ```text
-A_0 subset D_(b_1) union D_(b_2) union D_(b_3).      (3)
+lambda_j=nu_13(c_j).
 ```
 
-Put `T(t)=13t` on `R/Z`. The following sections give the image pump,
-owner transition, and first exact discharge.
-
-## 1. Root-image expansion
-
-For a Borel set `A subset C_H`, define
+THM-2192 proves that a survivor can be labelled so that
 
 ```text
-n_A(y)=#{x in A:T(x)=y}.                              (4)
+1<=lambda_1<=lambda_2<lambda_3.                      (3)
 ```
 
-The thirteen-root guard count in THM-2192 gives
+We first prove the exact all-depth transition law missing from the static
+carrier, then exclude the first possible profile `(1,1,2)`.
+
+## 1. Exact root-image disintegration
+
+Let
 
 ```text
-#{x:T(x)=y, x in C_H}
- =10 if y in E_H,
- =9  if y in C_H,                                    (5)
+rho:R/Z -> R/Z,                   rho(x)=13x.
 ```
 
-away from endpoints. Consequently
+Choose a representative `0<=y<1`.  Its thirteen roots are
 
 ```text
-0<=n_A(y)<=10,
-{y:n_A(y)>0}=T(A)                                    (6)
+x_k=(y+k)/13,                    k in F_13.           (4)
 ```
 
-up to finite endpoint conventions. Here `T(A)` is Borel: partitioning the
-circle into the thirteen standard sheets writes it as a finite union of
-Borel images under sheetwise Borel isomorphisms. Haar disintegration gives
+Label the root sheets in the **reversed guard trivialization** by
+
+```text
+s=-Hk mod 13.                                         (5)
+```
+
+This is the sign-reverse of THM-2192's convention in which increasing the
+sheet label increases the guard value.  The reversal makes the integer
+window itself run in the positive direction; no unoriented chord length or
+coverage predicate changes.
+
+For any thirteen-unit `q`, put
+
+```text
+I_q(y)=Z intersection (qy-13/14,qy+13/14),
+delta_q=Hq^(-1) mod 13,                               (6)
+```
+
+where the inverse in `delta_q` is taken modulo thirteen.  Put also
+
+```text
+J_H(y)=Z intersection (Hy-13/7,Hy+13/7).              (7)
+```
+
+Then the exact fibre incidences are
+
+```text
+A_q(y)={s:x_k in D_q}
+      ={delta_q d mod 13:d in I_q(y)},                (8)
+
+F_H(y)={s:x_k notin C_H}
+      ={d mod 13:d in J_H(y)},                        (9)
+
+B_H(y)={s:x_k in C_H}=F_13\F_H(y).                   (10)
+```
+
+Indeed, `x_k in D_q` precisely when some `n in Z` satisfies
+
+```text
+|q(y+k)-13n|<13/14.
+```
+
+Writing `d=13n-qk` gives
+
+```text
+|qy-d|<13/14,             d=-qk mod 13.
+```
+
+Equation (5) now gives `s=Hq^(-1)d`, proving (8).  The identical argument
+with radius `13/7` and `q=H` proves (9).
+
+A blocker divisible by thirteen behaves differently.  If `c=13v`, then
+
+```text
+cx_k=v(y+k)=vy mod 1.                                 (11)
+```
+
+Consequently
+
+```text
+{s:x_k in D_(13v)}
+ =F_13 if y in D_v,
+ =emptyset otherwise.                                (12)
+```
+
+Thus multiplication by thirteen converts every divisible blocker into one
+all-or-nothing fibre bit and divides its coefficient by thirteen.  This is
+the **image pump**.
+
+The same formula is exact on every primitive torsion layer.  For `m>=2`,
+put `N=13^m`, `Q=13^(m-1)`, and reduce a primitive numerator
+
+```text
+z mod N -> r=z mod Q.
+```
+
+The thirteen lifts of `r/Q` are exactly
+
+```text
+z=r+kQ,                       k in F_13,              (13)
+```
+
+and remain primitive.  Equations (8)--(12), with `y=r/Q`, disintegrate the
+primitive guard-safe annulus at depth `m` into its depth-`m-1` image phases.
+No measure approximation or phase mesh occurs.
+
+## 2. The labelled event word, ownership current, and winding
+
+The integer windows make the continuous transition law explicit.  Away from
+boundary events, if `n in Z`, then
+
+```text
+qy in (n-1/14,n+1/14)       => I_q(y)={n},
+qy in (n+1/14,n+13/14)      => I_q(y)={n,n+1}.        (14)
+```
+
+As `qy` increases, the crossing
+
+```text
+qy=n+1/14
+```
+
+inserts the endpoint labelled `delta_q(n+1)`, and the crossing
+
+```text
+qy=n+13/14
+```
+
+deletes the endpoint labelled `delta_q n`.  Thus a unit mask evolves by
+
+```text
+singleton -> chord -> next singleton,                (15)
+```
+
+with toothpick step `delta_q`.  Over one turn of `y`, it has `q`
+insertions and `q` deletions.  Its net sheet displacement in the
+trivialization (4)--(5) is
+
+```text
+q delta_q=H mod 13.                                  (16)
+```
+
+The residue step alone therefore does not determine the movie: the full
+positive integer `q` is its winding sidecar.
+
+The guard has the parallel law
+
+```text
+Hy in (n-1/7,n+1/7)
+       =>J_H(y)={n-1,n,n+1},
+Hy in (n+1/7,n+6/7)
+       =>J_H(y)={n-1,n,n+1,n+2}.                     (17)
+```
+
+At `Hy=n+1/7`, guard-unsafe sheet `n+2` is inserted; at
+`Hy=n+6/7`, sheet `n-1` is deleted.  Hence `B_H(y)` has nine or ten
+sheets, exactly as in THM-2192.
+
+Finally, the bit belonging to `13v` turns on at
+
+```text
+vy=n-1/14
+```
+
+and off at `vy=n+1/14`.  If several displayed rational event times agree,
+they form one simultaneous labelled event packet.  They are not
+arbitrarily tie-broken into a tournament.
+
+For the five unit masks define the ownership current and deficiency
+
+```text
+omega_s(y)=#{i:s in A_(q_i)(y)},
+Z(y)=B_H(y)\{s:omega_s(y)>0}.                         (18)
+```
+
+Equations (14)--(17) update `omega`, `B_H`, and `Z` exactly, one labelled
+event packet at a time.  Equation (12) says that fibre coverage is automatic
+when at least one deep bit is on; when every deep bit is off, it is exactly
+
+```text
+Z(y)=emptyset.                                        (19)
+```
+
+This supplies the data absent from THM-2197's static Boolean quotient:
+deleting an endpoint updates its labelled ownership count, the cyclic event
+word says which update occurs next, and the integer coefficients retain
+winding.  Chord lengths or the deficiency set alone do not determine this
+transition.
+
+There is an exact functional form for the corresponding `H`-drift.  Let
+`P` be any finite generic set of image phases on which every deep bit is
+off.  Define
+
+```text
+e_i(y)=1_(|I_(q_i)(y)|=1),
+o_i(y)=|A_(q_i)(y) intersection F_H(y)|,
+chi_C(y)=1_(y in C_H),                               (20)
+
+H_P=sum_(y in P)|B_H(y)|
+       -sum_(i=1)^5 sum_(y in P)|A_(q_i)(y)
+                                      intersection B_H(y)|.
+```
+
+Since a unit mask has `2-e_i(y)` endpoints and
+
+```text
+|B_H(y)|=10-chi_C(y),
+```
+
+one has the identity
+
+```text
+H_P=sum_(i,y)e_i(y)+sum_(i,y)o_i(y)
+                         -sum_y chi_C(y).             (21)
+```
+
+Thus the functional is exactly
+
+```text
+singleton-event loss + guard-outside endpoint loss
+                         - nine-sheet C-frame credit.
+```
+
+Fibrewise coverage implies `H_P<=0`; the converse need not hold because
+incidence overlap is forgotten.  This is the signed event invoice behind
+the toothpick self-similarity, not an independence heuristic.
+
+## 3. The unique deepest blocker leaves two shallower processes
+
+Take the primitive layer
+
+```text
+N=13^(lambda_3+1).
+```
+
+Write `c_3=13^lambda_3 u_3` with `u_3` a thirteen-unit.  At a primitive
+point `t=z/N`,
+
+```text
+c_3t=u_3z/13.
+```
+
+This is a nonzero thirteenth root, whose circle norm is at least
+`1/13>1/14`.  The unique deepest blocker is therefore safe throughout this
+layer.
+
+Under the first image map, the other two blockers become the all-or-nothing
+bits
+
+```text
+1_(D_(c_1/13))(y),          1_(D_(c_2/13))(y).       (22)
+```
+
+On an image phase where either bit is on, the whole thirteen-root fibre is
+covered.  On the residual phase set where both bits are off, the five
+labelled unit-mask movies must cover every sheet of `B_H(y)`.  This is the
+precise two-shallower-mask obstruction: it is a global matching movie over
+the common residual image phases, not two extra chords inside one static
+fibre.
+
+## 4. The first unique depth `(1,1,2)` is empty
+
+Suppose for contradiction that
+
+```text
+(lambda_1,lambda_2,lambda_3)=(1,1,2).                (23)
+```
+
+Set
+
+```text
+N=13^3=2197,                     Q=13^2=169.
+```
+
+Multiplying primitive numerators by `H` modulo `N` normalizes the guard to
+one and replaces every coefficient by its product with `H^(-1)`.  This is a
+bijection and preserves all three valuations.  The primitive guard-safe
+universe is
+
+```text
+U={z mod N:13 does not divide z and 7||z||_N>N},
+|U|=1450.                                            (24)
+```
+
+Here `||z||_N=min(z mod N,-z mod N)`.  The unit sign classes are
+
+```text
+(Z/NZ)^*/{+/-1},                 1014 classes,       (25)
+```
+
+and the unit parts of a depth-one blocker run through
+
+```text
+(Z/QZ)^*/{+/-1},                 78 classes.         (26)
+```
+
+Both possible shallow blockers are retained even when they reduce to the
+same sign class: the exact audit uses all
+
+```text
+C(78+1,2)=3081
+```
+
+unordered pairs including the diagonal.
+
+For a unit label `a mod N` and a shallow unit part `u mod Q`, define
+
+```text
+S_a={z in U:14||az||_N<N},
+T_u={z in U:14||13uz||_N<N}.                         (27)
+```
+
+For every shallow pair put
+
+```text
+R_(u,v)=U\(T_u union T_v).                            (28)
+```
+
+Let
+
+```text
+c_1(u,v)>=...>=c_5(u,v)
+```
+
+be the five largest cardinalities among the distinct sets
+
+```text
+S_a intersection R_(u,v).
+```
+
+The exact exhaustive result is
+
+```text
+|R_(u,v)|-sum_(i=1)^5 c_i(u,v)>=86                  (29)
+```
+
+for all `3081` pairs.  The minimum is unique up to the fixed sign-class
+representatives:
+
+```text
+(u,v)=(14,46),                 |R_(u,v)|=1046,
+
+(c_1,...,c_5)=(204,200,190,186,180),                 (30)
+
+corresponding unit labels=(183,799,599,1000,1007).
+```
+
+The image-pump form of the worst residual has `112` active base phases:
+
+```text
+74 fibres of size 9 and 38 fibres of size 10,
+74*9+38*10=1046.                                    (31)
+```
+
+Thus (29) is a global sheet-time incidence, or zeroth Hall, deficit across
+the entire matching movie.  Even before overlaps among the five chosen
+movies are subtracted, their total conditional capacity is at most `960`,
+leaving `86` residual sheet-time vertices.
+
+For the five extremal labels in (30), the rows
+
+```text
+(label,capacity,singleton losses,outside-endpoint losses)
+
+((183, 204,  0,20),
+ (799, 200,  0,24),
+ (599, 190, 10,24),
+ (1000,186,  0,38),
+ (1007,180, 12,32)).                                 (32)
+```
+
+The `74` nine-sheet frames are exactly the `C_H` frames.  Hence (21) reads
+
+```text
+H_P=(20+24+34+38+44)-74=86.                          (33)
+```
+
+This is the promised exact `H`-drift at the hostile boundary.
+
+To see why (29) proves the theorem, reduce the five actual unit coefficients
+modulo `N` and sign.  Repeated residue masks cannot enlarge a union, so at
+most five distinct sets `S_a` occur.  Their union inside any `R_(u,v)` has
+cardinality at most the sum of the five largest individual cardinalities,
+which is strictly below `|R_(u,v)|` by (29).  Hence some `z in U` is safe
+for all eight terminal masks.
+
+There are no torsion endpoints: `N` and `Q` are powers of thirteen and are
+coprime to seven and fourteen.  The uncovered point therefore satisfies
+every guard and terminal inequality strictly and thickens to an uncovered
+open interval.  This contradicts the almost-everywhere cover (2), proving
+that (23) is impossible.
+
+By (3), depth two was the first possible value of the unique deepest
+blocker.  We have proved
+
+```text
+lambda_3>=3                                            (34)
+```
+
+in every surviving scalar `5+3` branch.
+
+## 5. Quantitative measure pump and private owner words
+
+The labelled root law has a complementary measure consequence.  Define the
+mixed residual
+
+```text
+A_0=C_H minus union_(i=1)^5 D_(q_i),                 (M1)
+A_r=T^r(A_0),                     T(t)=13t.
+```
+
+For a Borel set `A subset C_H`, let
+
+```text
+n_A(y)=#{x in A:T(x)=y}.                             (M2)
+```
+
+Equations (9)--(10) give `0<=n_A(y)<=10`, and, up to the finite endpoint
+set,
+
+```text
+{y:n_A(y)>0}=T(A).
+```
+
+The set `T(A)` is Borel: on the thirteen standard sheets, `T` is a Borel
+isomorphism, so the image is a finite union of Borel images.  Haar
+disintegration gives
 
 ```text
 measure(A)=(1/13) integral n_A(y)dy
-          <=(10/13)measure(T(A)).                     (7)
+          <=(10/13)measure(T(A)),
+
+measure(T(A))>=(13/10)measure(A).                    (M3)
 ```
 
-Therefore
+For every Borel `B`, one also has
 
 ```text
-measure(T(A))>=(13/10)measure(A).                     (8)
-```
-
-For every Borel set `B`, multiplication by thirteen also obeys
-
-```text
-measure(T(B))>=measure(B).                            (9)
+measure(T(B))>=measure(B).                           (M4)
 ```
 
 Indeed `B subset T^(-1)(T(B))`, while Haar invariance gives
-`measure(T^(-1)(E))=measure(E)`. We also use below that the Lipschitz map
-`T` sends null sets to null sets.
+`measure(T^(-1)(E))=measure(E)`.  Multiplication by thirteen is Lipschitz
+and sends null sets to null sets.
 
 THM-2137 gives the sharp five-unit residual floor
 
 ```text
-measure(A_0)>=961/6930.                              (10)
+measure(A_0)>=961/6930.                              (M5)
 ```
 
-Combining (8)--(10), and writing `A_r=T^r(A_0)`, yields
+Consequently
 
 ```text
-measure(A_r)>=12493/69300              for every r>=1. (11)
+measure(A_r)>=12493/69300             for every r>=1. (M6)
 ```
 
-The number in (11) is not a union-bound heuristic. It is the residual mass
-in (10), multiplied by the exact largest proportion `10/13` of a
-thirteen-root fibre which can lie on the guard-danger side.
+The first factor is the exact `13/10` root-image expansion; all later images
+use noncontraction (M4).  In the ownership coordinates, `n_(A_0)(y)` is the
+cardinality of the safe-sheet deficiency.  Thus the support image and its
+occupancy are both retained.
 
-In the rooted sheet coordinates of THM-2197, the set
+There is also exact division support.  If `b=13^r c`, then
 
 ```text
-Z(y)=A_0 intersection T^(-1)({y})                   (12)
+x in D_b iff T^r(x) in D_c.                          (M7)
 ```
 
-is precisely the safe-sheet deficiency, and `n_(A_0)(y)=|Z(y)|`.
-Thus `A_1` is its nonempty projection. The new ingredient is the occupancy
-sidecar `|Z|`; merely recording whether `Z` is empty loses (7).
-
-## 2. Division support and the first quantitative owner transition
-
-If `b=13^r c`, then
+Applying this identity to (2), and discarding only the image of the null
+exceptional set, gives
 
 ```text
-x in D_b     iff     T^r(x) in D_c.                  (13)
+A_r subset union_(j=1)^3 D_(c_j/13^r)
+                         for 0<=r<=lambda_1.          (M8)
 ```
 
-Multiplication by `T^r` sends null sets to null sets. Applying (13) to (3)
-therefore gives, for every `0<=r<=lambda_1`,
+### 5.1. A unique least valuation
+
+Suppose first that the whole valuation ladder is strict:
 
 ```text
-A_r subset union_(j=1)^3 D_(b_j/13^r)                (14)
-```
-
-almost everywhere.
-
-Assume first that the least valuation is unique:
-
-```text
-lambda_1<lambda_2<lambda_3.                           (15)
+lambda_1<lambda_2<lambda_3.
 ```
 
 Put
 
 ```text
-a_1=b_1/13^lambda_1,
-R_1=A_(lambda_1) minus D_(a_1).                       (16)
+a_1=c_1/13^lambda_1,
+R_1=A_(lambda_1) minus D_(a_1).                      (M9)
 ```
 
-The coefficient `a_1` is a thirteen-unit, so its danger comb has measure
-`1/7`. Equations (11), (14), and (16) give the exact positive remainder
+Since `a_1` is a thirteen-unit and every danger comb has measure `1/7`,
+(M6), (M8), and (M9) give
 
 ```text
-measure(R_1)
- >=12493/69300-1/7
- =2593/69300.                                        (17)
+measure(R_1)>=12493/69300-1/7
+             =2593/69300.                            (M10)
 ```
 
-Moreover, for every `0<=u<=lambda_2-lambda_1`,
+For every `0<=u<=lambda_2-lambda_1`,
 
 ```text
 T^u(R_1)
- subset D_(b_2/13^(lambda_1+u))
-       union D_(b_3/13^(lambda_1+u)),                 (18)
+ subset D_(c_2/13^(lambda_1+u))
+       union D_(c_3/13^(lambda_1+u)),
 
-measure(T^u(R_1))>=2593/69300.                        (19)
+measure(T^u(R_1))>=2593/69300.                       (M11)
 ```
 
-At the second valuation put
+At the second valuation, define
 
 ```text
-a_2=b_2/13^lambda_2,
-c_3=b_3/13^lambda_2,
-R_2=T^(lambda_2-lambda_1)(R_1).                       (20)
+a_2=c_2/13^lambda_2,
+d_3=c_3/13^lambda_2,
+R_2=T^(lambda_2-lambda_1)(R_1).                      (M12)
 ```
 
-Then `a_2` is a thirteen-unit, `13|c_3`, and
+Then `a_2` is a thirteen-unit, `13|d_3`, and the sharp pair floor in
+THM-1166 yields
 
 ```text
 2593/69300<=measure(R_2)
-             <=measure(D_(a_2) union D_(c_3))
-             <=25/91.                                (21)
+             <=measure(D_(a_2) union D_(d_3))
+             <=25/91.                                (M13)
 ```
 
-The last inequality is the sharp pair-union cap obtained from the
-THM-1166 intersection floor. Equality in the last inequality is possible
-only when
+Equality in the last inequality occurs only for reduced ratio `(1,13)`.
+Thus saturation forces
 
 ```text
-c_3=13a_2.                                           (22)
-```
-
-Thus saturation of the two-comb carrier forces
-
-```text
+d_3=13a_2,
 lambda_3=lambda_2+1
 ```
 
-and equality of the remaining unit parts. This is an equality-carrier
-classification, not a claim that every survivor saturates (21).
+and equality of the remaining unit parts.  This classifies the equality
+carrier; it does not claim that a survivor must saturate (M13).
 
-## 3. A deepest-private transition word
+### 5.2. A deepest-private transition
 
-The quantitative remainder (17) is not the only transition forced by the
-cover. THM-2138 proves that five unit masks and any two positive-valuation
-masks cannot cover `C_H`. Hence
+THM-2138 says that five unit masks and any two positive-valuation masks
+cannot cover `C_H`.  Hence
 
 ```text
-P_3=A_0 minus (D_(b_1) union D_(b_2))                (23)
+P_3=A_0 minus (D_(c_1) union D_(c_2))                (M14)
 ```
 
-contains a nonempty open set. The full cover (3) makes `b_3` its unique
-deep owner:
+contains a nonempty open set.  The cover (2) makes `c_3` its unique deep
+owner:
 
 ```text
-P_3 subset D_(b_3)                                   (24)
+P_3 subset D_(c_3)                                   (M15)
 ```
 
-almost everywhere. Its images have positive measure by (9). Equation (13)
-also preserves every owner bit whose coefficient can still be divided:
+almost everywhere.  Its images retain positive measure by (M4), and (M7)
+gives
 
 ```text
-T^r(P_3) subset D_(b_3/13^r)
-                      for 0<=r<=lambda_3,             (25)
+T^r(P_3) subset D_(c_3/13^r)
+                         for 0<=r<=lambda_3,          (M16)
 
-T^r(P_3) intersection D_(b_j/13^r)=empty
-                      for j=1,2 and r<=lambda_j,     (26)
+T^r(P_3) intersection D_(c_j/13^r)=empty
+                         for j=1,2 and r<=lambda_j,  (M17)
 ```
 
 up to null boundaries.
 
-This gives the exact minimal owner words.
-
-### Repeated least valuation
-
-If
+If the least valuation is repeated,
 
 ```text
-lambda_1=lambda_2<lambda_3,                           (27)
+lambda_1=lambda_2<lambda_3,
 ```
 
-then at the first transition `r=lambda_1`,
+then at `r=lambda_1` the blocker-owner word is
 
 ```text
-T^r(P_3)
- subset D_(b_3/13^r) minus (D_(a_1) union D_(a_2)),  (28)
+(0,0,1).                                             (M18)
 ```
 
-with positive measure. In blocker order `(1,2,3)`, the forced word is
+At that level, (M6), (M8), and THM-1166 give
 
 ```text
-(0,0,1).                                             (29)
+12493/69300<=measure(A_r)<=36/91.                    (M19)
 ```
 
-At the same level (14) and THM-1166 give
+Equality in the upper bound forces the normalized triple to be a scaled
+permutation of `(1,12,13)`.  Since exactly two entries are thirteen-units,
+this has the oriented form
 
 ```text
-12493/69300<=measure(A_r)<=36/91.                    (30)
+{c_1/13^r,c_2/13^r}={g,12g},
+c_3/13^r=13g,                                       (M20)
 ```
 
-If the upper bound is attained, the three normalized blockers are a scaled
-permutation of
+for a thirteen-unit `g`; in particular `lambda_3-r=1`.
+
+Under the strict ladder, (M17) first gives
 
 ```text
-(1,12,13).                                           (31)
+(0,0,1) at r=lambda_1.                               (M21)
 ```
 
-Because exactly two normalized blockers are thirteen-units, (31) means
+At `r=lambda_2`, the first blocker is no longer integrally divisible and
+its old zero bit is genuinely lost.  The surviving word is
 
 ```text
-{a_1,a_2}={g,12g},       b_3/13^r=13g               (32)
+(*,0,1).                                             (M22)
 ```
 
-for one thirteen-unit `g`. In particular the valuation gap is one.
+Indeed `T^lambda_1(P_3) subset R_1`, so
+`T^lambda_2(P_3)` lies in `R_2 minus D_(a_2)` and has positive measure.
+The quantitative statement (M10) controls the two-carrier remainder; the
+private deepest-owned subpiece is topologically positive but has no uniform
+mass floor proved here.  The star records a destroyed integral-division
+coordinate, not a cosmetic wildcard.
 
-### Strict valuation ladder
+## 6. Exact audit and hostile controls
 
-Under (15), equation (26) first gives
+The companion uses two independent descriptions:
 
-```text
-(0,0,1) at r=lambda_1.                               (33)
-```
+1. direct strict inequalities on residues modulo `2197`;
+2. the root-image integer windows (6)--(12), phase by phase modulo `169`.
 
-At `r=lambda_2` the first blocker can no longer be divided integrally, so
-its old zero bit is honestly lost. The surviving word is exactly
-
-```text
-(*,0,1).                                             (34)
-```
-
-Indeed `T^lambda_1(P_3) subset R_1`, and hence
-`T^lambda_2(P_3) subset R_2 minus D_(a_2)`. The latter set has positive
-measure, although (17) does not give it a uniform mass floor. This
-distinguishes:
+It verifies equality of all `1014` unit masks and all `78` depth-one masks
+between the two descriptions.  It also checks:
 
 ```text
-quantitative transition:
-    R_2 has mass at least 2593/69300 in the last two carriers;
-
-topological owner transition:
-    a positive piece of R_2 is privately owned by the deepest carrier. (35)
-```
-
-The star in (34) is not a cosmetic wildcard. Multiplication beyond
-`lambda_1` has destroyed the integral division identity for `b_1`.
-
-## 4. Exact exclusion of the first valuation profile
-
-The first unique-deepest profile is
-
-```text
-(lambda_1,lambda_2,lambda_3)=(1,1,2).                (36)
-```
-
-It is empty.
-
-Put
-
-```text
-N=13^3=2197,
-U_N={z mod N:13 does not divide z and 7||z||_N>N}.   (37)
-```
-
-Before normalization, the primitive guard-danger annulus is
-
-```text
-U_N(H)={z mod N:13 does not divide z and 7||Hz||_N>N}.
-```
-
-Because `H` is a thirteen-unit, the coordinate bijection
-`z' = Hz mod N` sends `U_N(H)` onto the canonical set `U_N` in (37).
-In the new coordinate every terminal coefficient `a` becomes
-`aH^(-1) mod N`; this preserves unit/sign classes and all three
-thirteen-valuations. The five unit masks are indexed, up to sign, by the
-
-```text
-phi(13^3)/2=1014
-```
-
-unit classes modulo `13^3`.
-
-Write the two depth-one blockers as `13a,13b`. Their masks on `U_N` depend
-only on the sign classes of `a,b` modulo `13^2`; there are
-
-```text
-phi(13^2)/2=78
-```
-
-such classes. Repetition is allowed, because distinct integer blockers may
-have the same sign class at this modulus. Thus there are exactly
-
-```text
-78*79/2=3081                                           (38)
-```
-
-unordered shallow pairs with repetition.
-
-The depth-two blocker is invisible on `U_N`: for a unit numerator `z`,
-
-```text
-13^2 c z/13^3=cz/13
-```
-
-is a nonzero thirteenth root, whose circle norm is at least
-`1/13>1/14`.
-
-Fix one shallow pair and let `R_(a,b)` be the subset of `U_N` safe from
-both shallow blockers. For each of the `1014` unit sign classes `q`, put
-
-```text
-m_q(a,b)=#{z in R_(a,b):14||qz||_N<N}.               (39)
-```
-
-Order these `1014` integers decreasingly:
-
-```text
-m_(1)>=...>=m_(1014).                                 (40)
-```
-
-Any five actual unit coefficients use at most five distinct sign-class
-masks. Repeating a class does not enlarge their union. After duplicates are
-removed, the elementary union bound therefore gives the
-conditional-capacity upper bound
-
-```text
-#(R_(a,b) intersection union_(i=1)^5 unit_mask_i)
- <=m_(1)+...+m_(5).                                  (41)
-```
-
-This is why five times the largest individual mask would be the wrong
-quantity: it spends the same residue class five times even though its union
-is idempotent.
-
-The exact audit enumerates the full universes in (38)--(40) and proves
-
-```text
-#R_(a,b)-sum_(i=1)^5 m_(i)>=86                        (42)
-```
-
-for every shallow pair, including repetitions. The unique worst row is
-
-```text
-(a,b)=(14,46),
-#R=1046,
-(m_(1),...,m_(5))=(204,200,190,186,180),             (43)
-```
-
-with unit labels `(183,799,599,1000,1007)`, so the conditional cap is
-`960`.
-
-Thus at least one primitive guard-danger torsion residue is safe from all
-eight terminal masks. No endpoint ambiguity can hide it: `13^3` is coprime
-to both seven and fourteen, so every guard and terminal inequality at such
-a residue is strict. The uncovered residue thickens to an uncovered open
-interval, contradicting the almost-everywhere cover. This proves (36).
-
-The companion performs direct depth-one versus reduced-mask checks for all
-`78` classes, verifies that all twelve nonzero depth-two unit parts give the
-empty mask, checks all `3081*1014` conditional incidences, and freezes the
-full table digest
-
-```text
+|U|=1450;
+root-fibre histogram=(110 fibres of size 9, 46 of size 10);
+all 2028 guard-unit normalizations;
+129792 coefficient-normalization identities;
+twelve nonzero depth-two unit parts (six sign classes), all empty on U;
+all 3081 shallow pairs, including 78 diagonal pairs;
+1013 distinct unit masks;
+the sole sign-representative duplicate {1,1098}, both empty;
+the exact unique minimum (30);
+the event-loss decomposition (32)--(33);
+the full conditional table digest
 d31e5c874d8b5893ff33fc35095c18dcdf865c7f8296285c1b3441a8d8d679d9.
 ```
 
-Normal and optimized Python outputs are byte-identical.
-
-## 5. Carry-chart and continuation boundary
-
-THM-2197 proves that static mask addition factors through the Boolean
-deficiency semilattice. Equations (7), (18), and (25) explain why the
-all-depth transition does not: deletion and multiplication require
-occupancy, blocker labels, and the coefficient winding which says when
-division by thirteen is still integral.
-
-THM-2196 gives every zero-Haar row a finite semilinear relation/carry chart.
-The present owner word factors through such a chart only after retaining
-the **full carry vector and resulting integer coefficients**. A stabilized
-chart or its finite residue alone does not determine the valuations in (2),
-the sign classes in (39), or the event at which the star in (34) appears.
-Consequently THM-2196's qualitative projective finiteness does not turn
-(42) into an effective audit of all remaining profiles; coefficient winding
-is still the required sidecar.
-
-The exact connection ledger is
+Three pairs show why the tempting repeated-maximum bound
 
 ```text
-source:       mixed scalar residual A_0;
-map:          repeated multiplication by thirteen;
-preserved:    residual mass, while support owners divide integrally;
-lost:         a blocker bit immediately after its valuation is exhausted;
-sidecar:      rooted occupancy, labelled owner incidence, valuation,
-              and full coefficient/carry winding;
-decisive test:
-              the (1,1,2) annulus, where all 3081 shallow pairs fail. (44)
+|R|-5 max_a |S_a intersection R|
 ```
 
-## 6. Scope
+is insufficient: its margins are `-22,0,-2` at shallow pairs
+`(7,14),(14,61),(23,46)`.  Keeping the five fixed labelled movies and using
+their five separate capacities repairs the estimate, with margins
+`94,102,98` on those hostile rows.  The inherited one-active-mask direction
+also reappears with minimum margin `30`, and a constructed five-mask union is
+included as a positive-direction control.
 
-The theorem:
+Normal and optimized Python transcripts are byte-identical.  Reproduce with
 
-1. supplies the first quantitative multiplication-by-thirteen pump;
-2. separates repeated-minimum and strict-ladder valuation profiles;
-3. forces a positive deepest-private transition through the second
-   valuation;
-4. identifies the sharp `(1,13)` and `(1,12,13)` equality carriers; and
-5. eliminates the complete first profile `(1,1,2)`.
+```text
+python3 04-computation/lrc14_scalar_five_plus_three_image_pump_thm2198.py
+python3 -O 04-computation/lrc14_scalar_five_plus_three_image_pump_thm2198.py
+```
 
-It does not eliminate `(1,1,lambda_3)` for `lambda_3>=3`, any strict ladder,
-or any profile with larger common depth. It gives no uniform lower measure
-for the private piece after the second unit owner is removed, no upper bound
-on the unit boundary height, and no proof of LRC(14). QED.
+## 7. Connection and loss ledger
+
+The exact carrier is
+
+```text
+source:
+  scalar 5+3 cover on a thirteen-root tower;
+map:
+  x -> 13x, with occupancy and sheets labelled by -Hk mod 13;
+target:
+  a cyclic movie of rooted, labelled mask--sheet incidences;
+preserved:
+  fibre coverage, owner multiplicity, event ties, coefficient labels,
+  full winding, division support, quantitative image mass, and the two
+  shallower deep-mask bits;
+destroyed by the static chord quotient:
+  endpoint identity through deletion, event order, winding, and deep bits;
+needed sidecar:
+  the labelled ownership current plus the simultaneous event word;
+decisive test:
+  the depth-three global incidence deficit (29).      (35)
+```
+
+Stacking the successive chord matchings resembles a labelled
+Brauer/matching cobordism.  That analogy is useful only at the carrier level.
+Without chirality and over/under crossing data it is not a braid, and without
+Reidemeister-compatible crossing data it is not a knot invariant.  The
+winding and ownership sidecars are load-bearing; a knot or tournament
+quotient that forgets them cannot recover (29).
+
+The theorem identifies the recursive state, supplies measure and private-owner
+transitions, and excludes the first unique-depth profile.  It does not
+exclude `lambda_3>=3`, give a uniform mass floor for the private piece after
+the second valuation, bound the unit coefficient winding, classify the
+remaining `216` residue-length profiles of THM-2192, or prove LRC(14).
+QED.

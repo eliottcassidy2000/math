@@ -16,7 +16,7 @@ status: >
   but do not replace the
   safe-sheet deficiency sidecar; deletion and phase propagation further
   require ownership/incidence, cyclic event order, and winding data. This
-  does not eliminate any of THM-2192's remaining 244 residue profiles and
+  does not eliminate any of THM-2192's remaining 216 residue profiles and
   is not a proof of LRC(14).
 source: codex-2026-07-24-scalar-chord-tournament-no-go
 depends_on:
@@ -232,8 +232,9 @@ Z(second carrier)={10}.                              (21)
 Both lists come from exact strict scalar danger inequalities on the same
 root fibre with positive distinct thirteen-unit coefficients.  Consequently
 the hostile control is stronger than a freely placed abstract chord
-diagram: the `244/252` length-profile quotient in THM-2192 is a necessary
-static filter, but it cannot decide root-sheet coverage.
+diagram: THM-2192's guard-safe `244/252` quotient and its stronger
+actual-lane guard-danger `216/252` quotient are necessary static filters,
+but a length profile cannot decide root-sheet coverage.
 
 ## 4. Vertices, observable, ties, target, and lost data
 
