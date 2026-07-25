@@ -28,10 +28,11 @@ status: >
   every branch in which the maximum valuation among the three actual blockers
   is repeated; a survivor has a unique deepest blocker. The scalar
   five-plus-three tail is narrowed but not emptied. THM-2199 removes its
-  abstract relation-dimension deficit. An injective linear lift always exists,
-  but can encode the unknown scalar row in its denominators; the residual is
-  a noncircular arithmetic lift with bounded denominator/Plucker height and
-  height transport. This is not a proof of LRC(14).
+  abstract relation-dimension deficit, and THM-2203 identifies the actual
+  dyadic-terminal scalar row with a fixed denominator-16/208 coordinate
+  section, closing the former noncircular lift and height-transport debt.
+  The residual is exact noncancellation on the finite primitive locus, not
+  finiteness. This is not a proof of LRC(14).
 source: codex-2026-07-24-scalar-five-plus-three-root-sheets
 depends_on:
   - THM-1155
@@ -49,6 +50,7 @@ related:
   - THM-2184
   - THM-2197
   - THM-2200
+  - THM-2203
 script: 04-computation/lrc14_scalar_five_plus_three_root_sheet_chords_thm2192.py
 output: 05-knowledge/results/lrc14_scalar_five_plus_three_root_sheet_chords_thm2192.out
 script_sha256: 6c8796b6aeeb7539157974c9ec2b6eb91d32263e1d72cb569e7dbd970657b50e
@@ -876,7 +878,7 @@ guarantee.  Neither (27) nor this internal-rank condition is supplied by
 THM-2190 or THM-2193.  Thus even THM-2193's explicit height
 `78*7^21` rank-seven harvest does not by itself close scalar `5+3`.
 
-### Rank-twelve update: dimension is no longer the debt
+### Rank-twelve and fixed-section update: transport is no longer the debt
 
 THM-2199 upgrades the bounded relation span for every zero-Haar candidate.
 Put `H=78*182^13`. Then
@@ -894,15 +896,11 @@ dim T(L_eval)=8.
 ```
 
 Thus the Grassmann dimension loss in (28) disappears at rank twelve. This
-does **not** yet produce eight bounded relations in the nine scalar
-coordinates: the automatic `T` above is circular, and the structural
-reduction supplies neither bounded denominators nor a height-controlled
-inverse on `T(L_eval)`. The exact scalar relation-rank residual is therefore
-a noncircular arithmetic lift plus height transport, not lift existence or
-a shortage of ambient relation dimension.
+alone does **not** produce eight bounded relations in arbitrary scalar
+coordinates: the automatic `T` above is circular.
 
-The height debt is genuine even after the ambient relation lattice has a
-bounded basis. Inside `Z^12`, the rational eight-planes
+The warning is genuine for arbitrary eight-planes. Inside `Z^12`, the
+rational eight-planes
 
 ```text
 R_N=span_Q{e_1,...,e_7,N e_8+e_9}                    (31)
@@ -910,9 +908,32 @@ R_N=span_Q{e_1,...,e_7,N e_8+e_9}                    (31)
 
 have unbounded primitive lattice height: every integral vector in `R_N`
 with nonzero `(e_8,e_9)` projection is an integer multiple of
-`N e_8+e_9`. Thus no bounded basis of the ambient rank-twelve lattice can
-bound the Plucker height of `T(L_eval)` without extra arithmetic control on
-`T`.
+`N e_8+e_9`.
+
+THM-2203 supplies exactly the arithmetic control missing from that general
+example in the **actual live dyadic-terminal rank-eight lane**. Unwinding the
+THM-2073 tower and using primitivity of `Q_3` gives
+
+```text
+V_I=(8H,16q_1,...,16q_5,208s_1,208s_2,208s_3).       (32)
+```
+
+Hence the lift in (27) can be chosen as the fixed coordinate diagonal with
+denominator `208` (or `16` before dividing the three blocker coefficients).
+Moreover, eliminating the other four coordinates from THM-2199's bounded
+rank-twelve basis gives eight independent integral relations supported on
+`I`, of height at most
+
+```text
+80(78*182^13)^5.                                      (33)
+```
+
+Thus the abstract planes `R_N` remain a useful hostile control but do not
+describe this scalar lane. The former scalar-lift, denominator, Plucker
+height, and height-transport debts are closed. THM-2199's direct global
+primitive box is numerically stronger than the resulting internal minor
+bound, so the exact remaining task is to empty the finite primitive scalar
+locus, not to prove another finiteness theorem.
 
 ## 7. Scope
 

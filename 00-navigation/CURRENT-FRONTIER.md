@@ -187,9 +187,9 @@ THM-2186 gives a strict toric exit. THM-2168/2192 leave only scalar `5+3`,
 with one deepest blocker, 36 empty profiles, and degree-at-most-20 static
 Hafnian pumps. THM-2197/2201 give Boolean deficiency and a faithful triangular
 Hasse-jet carrier. THM-2198 gives the exact event movie and `[13]` owner pump,
-closing `(1,1,2)`. THM-2204 closes `(2,2,3)` with exact margin `1830` and proves the all-depth thirteen-lift sum law; a spread-`2460` family shows that
-its scalar sum loses the labelled guard-hole correlation vector. At deepest depth three only `(1,1,3)` and `(1,2,3)` remain. THM-2199 removes ambient
-relation dimension, not this noncircular scalar transport.
+closing `(1,1,2)`. THM-2204 closes `(2,2,3)` with exact margin `1830`; its
+lift sum loses labelled guard-hole correlation. THM-2203 closes actual dyadic
+scalar transport at denominators `16/208`. At depth three only `(1,1,3)/(1,2,3)` remain.
 
 ### Independent routes that remain live
 
