@@ -1,0 +1,10 @@
+THM-2271 exact arithmetic audit
+strict profiles: 150
+strict labelled owner floor: 15041431/593783190
+strict expiration-image floor: 15041431/70270200
+one-comb capacity: 1/7
+strict owner-absorber cut floor: 5002831/70270200
+repeated-first profiles: 15
+repeated expiration-image floor: 5229541/70270200
+repeated image minus one-comb capacity: -4809059/70270200
+all exact assertions passed
