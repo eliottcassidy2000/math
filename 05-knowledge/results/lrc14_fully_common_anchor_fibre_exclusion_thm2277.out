@@ -1,0 +1,12 @@
+THM-2277 exact referee
+fibre_ratio: n=1 -> 1
+fibre_ratio: n>=2 -> <=1/2, equality iff n=2
+fibre_ratio: n>=3 -> <=1/3, equality iff n=3
+guard_rays=9 unit_rays=19
+unlabelled_multiplier_packets=104652
+labelled_multiplier_packets=12558240
+max_boundary_budget=122
+private_mass=2593/90090 deep_factor=2197
+one_comb_floor=438217/990 integer_requirement=443 margin_over_122=317437/990
+two_comb_sigma_cap=25/91 two_comb_floor=5696821/24750 integer_requirement=231 margin_over_122=2677321/24750
+verdict=PASS
