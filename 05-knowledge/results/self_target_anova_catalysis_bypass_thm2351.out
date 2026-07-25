@@ -1,0 +1,16 @@
+theorem=THM-2351
+status=CLAIMED+VERIFIED-EXACT+UNDER-INDEPENDENT-AUDIT
+algebraic_ledger_cases=3184
+pure_bypass_boundary_cases=212
+zero_bypass_boundary_cases=127
+directionally_asymmetric_cases=2496
+equal_prime_quotient_cases=168
+brittenham_hermiller_parameter_cases=5
+self_target_optimum_is_always_unique=YES
+pair_tensor_equals_minus_total_bypass_over_four=YES
+root_plus_pair_detects_any_mutual_catalysis=YES
+corrected_unaries_recover_both_directions=YES
+continuation_rows_recover_catalysis_and_bypass=YES
+pair_skew_sector=ZERO
+full_anova_stronger_than_directional_pair_ledger=NO
+all_checks=PASS
