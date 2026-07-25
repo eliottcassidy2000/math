@@ -1,0 +1,32 @@
+THM-2204 scalar depth-(2,2,3) thirteen-lift capacity audit
+arithmetic: exact integers; no floats; no assert dependence
+
+depth-four primitive root geometry
+  N=28561 Q=2197 primitive_phases=2028 |U_N|=18830
+  guard_fibre_histogram=((9, 1450), (10, 578))
+  unit_sign_classes=13182 base_unit_sign_classes=1014 depth_two_sign_classes=78
+  depth-two direct/image parity=78/78 PASS
+
+complete depth-(2,2,3) capacity certificate
+  unordered_shallow_pairs=3081 including_diagonal=78
+  unique_worst_pair=(11,79) residual_size=14484
+  top_five_(capacity,label)=((2614, 1858), (2614, 1860), (2504, 929), (2504, 930), (2418, 6))
+  minimum_capacity_margin=1830 minimizers=1
+  full_table_digest=b82b4f22fe2242197fc8ee587a99acd026120d52001d9093e8b465557cc57024
+  independent direct hostile row parity=PASS
+
+thirteen-lift recursive law and obstruction
+  lift_families=1014 size=13 family_sum_checks=3124134 PASS
+  exact_identity=sum_l C_l=2W-W_a
+  maximum_within_family_spread=2460 first_witness=(shallow_pair=(4,4),base=1098,min=0,max=2460)
+  witness_(sign_label,capacity)=((1098, 2460), (1099, 2454), (3295, 2456), (3296, 2452), (5492, 2454), (5493, 2452), (7689, 2450), (7690, 2456), (9886, 2456), (9887, 2450), (12083, 2452), (12084, 2452), (14280, 0))
+  witness_family_sum=29444
+  consequence: family sums alone do not control lifted top-five order statistics
+
+CONCLUSION
+  actual blocker valuation profile (2,2,3) is empty
+  profiles (1,1,3) and (1,2,3) remain open
+
+reproduce:
+  python3 04-computation/lrc14_scalar_depth223_thirteen_lift_capacity_thm2204.py
+  python3 -O 04-computation/lrc14_scalar_depth223_thirteen_lift_capacity_thm2204.py
