@@ -2,17 +2,18 @@
 id: THM-2264
 title: "Signed Selberg--Kraft relation spectrum"
 status: >
-  PROVED. A full-coordinate signed Selberg tensor gives a quantitative
-  relation-or-loneliness alternative. Every hypothetical LRC(14)
-  counterexample has a nonzero relation of coefficient height at most 29;
-  without such a relation its loneliness maximum is at least 1/12. More
-  generally, every anisotropic height box satisfying the explicit Kraft
-  inequality contains a relation. By height 105 the bounded-relation space
-  has rank at least two unless a {-1,0,1} subset-sum relation exists.
+  SUPERSEDED / EXACT DUPLICATE OF THM-2144. The anisotropic signed-box
+  theorem, height-29 gate, total Kraft budget 367, and height-105
+  rank-or-subset-sum fork below were already proved in THM-2144. Section 3's
+  table of selected coordinatewise Kraft specializations is a convenient
+  corollary only. THM-2164 is strictly stronger at the final rank step:
+  distinct zero-safe LRC rows satisfy rank(W_105)>=2 unconditionally.
 source: codex-2026-07-25-signed-selberg-kraft
 depends_on:
-  - THM-2085
+  - THM-2144
 related:
+  - THM-2144-anisotropic-selberg-kraft-relation-box
+  - THM-2164-relative-packet-rank-harvesting
   - THM-2085-explicit-height-57-rank-seven-selberg-gate
   - THM-2052-finite-height-forces-high-rank-bounded-relation-code
 script: 04-computation/lrc14_signed_selberg_kraft_relation_spectrum_referee_codex_20260725.py
@@ -21,6 +22,13 @@ script_sha256: 62eb53f3c859274bb2c396d8954d0a2a4c06ef54e2d7aba574760eb5859ae91b
 output_sha256: 26ec7df7421a2678f21385de742094076b93897e0f7dde0a3991d42d51e9d0ca
 hash_basis: working-tree bytes (LF)
 ---
+
+> **SUPERSEDED / EXACT DUPLICATE.** Sections 1, 2, and 4 restate
+> THM-2144, while Section 3 merely tabulates direct substitutions in
+> THM-2144's Kraft inequality. For distinct zero-safe LRC rows, THM-2164
+> removes the subset-sum alternative and proves `rank W_105>=2`.
+> This file is retained only to preserve correction lineage and the
+> convenience table; it is not an independent proved dependency.
 
 # THM-2264 -- signed Selberg--Kraft relation spectrum
 
