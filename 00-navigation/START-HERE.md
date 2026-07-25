@@ -118,7 +118,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     its transverse and scalar-`4+3` lanes, leaving only scalar `5+3`.
     THM-2187/2193 give a saturated carrier, floor `7^-21`, rank seven by `78*7^21`, and safe septimal grids; THM-2188 retains slope/current.
     THM-2196/2199 prove rank twelve; THM-2208/2212 give bounded anchors and exact rulers per rank-eleven plane, while THM-2203 fixes scalar transport at `16/208`.
-    THM-2198--2258 leave `165` depth-one rows. On the `150` strict rows, THM-2323/2326/2327 give a marked bare/word `91`-unit `c_3` edge, THM-2329 gives its three boundary gains, and THM-2331 embeds every THM-2325 target-fibre address termwise. Target a cancellation-surviving target-polarized fibre sum, bounded visibility and terminal phase—not another term count—or close the `15` repeated-first/resonance rows and THM-2304 middle-depth balance.
+    THM-2198--2258 leave `165` depth-one rows. On `150` strict rows, THM-2323/2326/2327 give a marked word/`91`-unit edge and THM-2331 embeds every target address termwise. THM-2334/2337 land the full semantic current in some target/word-jet fibre, but the target may be zero. THM-2340 makes matching word support an exact row/column/interaction test. Force that component, visibility, and phase—or close the `15` repeated-first/resonance rows and THM-2304 middle-depth balance.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
     the knot continuation cocycle; THM-2191 gives its catalytic group length,
     commuting stable envelope, and abstract additive dual, and closes `9_10`.
