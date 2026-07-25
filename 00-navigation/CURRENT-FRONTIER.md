@@ -176,20 +176,19 @@ floor `7^-21`, rank seven by `78*7^21`, and explicit deletion rank six.
 Its septimal addendum gives safe deep `7^k` cover points but factors THM-2188
 into a positive torus and opposite primitive slopes. Rank/torsion abundance
 still loses slope/current.
-THM-2196 gives finite circuit/carry charts, universal but uncomputed relation
-heights through rank twelve, and (with THM-2053) projective finiteness; its
-one-carry gate `n>91||c||_infinity` ignores ray height. The primitive locus is
+THM-2196/2199 give finite circuit/carry charts, safe-torus floor `182^-13`,
+all twelve relations by `H=78*182^13`, and projective finiteness; the one-carry
+gate `n>91||c||_infinity` ignores ray height. The finite primitive locus is
 neither enumerated nor emptied.
 THM-2174's exact-measure quotient is infinite, while its fixed-core
 positive-/zero-Haar quotient has one or two states and no uniform core modulus.
 THM-735 and THM-2182/2184 give remote-tail and grid/mixed-core terminals;
 THM-2186 gives a strict toric exit. THM-2168/2192 leave only scalar `5+3`,
-with an all-depth invoice, one deepest blocker, and anchored sheet ownership.
-THM-2192 eliminates `36/252` unit residue-length profiles and leaves `216`;
-THM-2198 supplies the exact labelled root-image movie and eliminates
-valuation profile `(1,1,2)`, so every survivor has deepest depth at least
-three. THM-2179's body relation still lacks a phase-preserving route into
-these terminals.
+with one deepest blocker and 36 empty profiles, leaving `216`. THM-2197
+identifies Boolean deficiency; THM-2198 supplies the exact labelled root-image
+movie and closes `(1,1,2)`, so deepest depth is at least three. THM-2199
+removes ambient relation dimension, not noncircular scalar height transport;
+THM-2179 still lacks a phase-preserving route into these terminals.
 
 ### Independent routes that remain live
 
@@ -436,7 +435,8 @@ The most reusable current bridges are not literal object identifications:
 | One-sided accumulation | LRC spectrum | Can qualitative isolation be made effective by finite state/pinning data? |
 | Support Dirichlet profile | integer sequences | Do tournament/LRC census supports have functional or automatic structure? |
 | Continuation congruence / min-plus kernel | Gordian connected-sum profile and THM-840/853 | Which finite sidecar is a target-preserving quotient under every named future operation? |
-| Relation-cone circuit/carry atlas | THM-2196 | NC2 charge channels, ordered tournament joins, and invariant-null knot packets inherit affine carry charts, but respectively still need whole-face coefficient phase, SCC/block order, and the full continuation kernel; JC pole descent additionally loses residue roots and flux. |
+| Relation-cone circuit/carry atlas | THM-2196/2199 | NC2 charge channels, ordered tournament joins, and invariant-null knot packets inherit affine carry charts, but respectively still need whole-face coefficient phase, SCC/block order, and the full continuation kernel; JC pole descent additionally loses residue roots and flux. |
+| Integrality/support-hole spectrum | THM-2192/2022/509/2177 | Nineteen scalar holes fill bounded Hafnian powers while Frobenius kills prime dilates modulo the prime; tournament join similarly fills the doubled `(8,10)` hole, whereas the flow `K_3` obstruction is LP-separated. Retain semigroup coefficients and operation sidecars, not convex support alone. |
 | Weighted-sector obstruction | THM-2045 factorized `R` family | Does the unique constant-producing sector fail on a broader Lee–Li inner edge? |
 
 HYP-8810's “JC(2) and LRC(14) share AP-rigidity” is a **wildcard frame, not a

@@ -15,15 +15,18 @@ status: >
   profile. Chirality or coefficient labels can break the tournament symmetry,
   but do not replace the
   safe-sheet deficiency sidecar; deletion and phase propagation further
-  require ownership/incidence, cyclic event order, and winding data. This
-  does not eliminate any of THM-2192's remaining 216 residue profiles and
-  is not a proof of LRC(14).
+  require ownership/incidence, cyclic event order, and winding data.
+  THM-840's operation-kernel criterion proves the deficiency quotient is not
+  deletion-Markov. This does not eliminate any of THM-2192's remaining 216
+  residue profiles and is not a proof of LRC(14).
 source: codex-2026-07-24-scalar-chord-tournament-no-go
 depends_on:
   - THM-2192-scalar-five-plus-three-root-sheet-chord-invoice
 related:
   - THM-2183-order-join-is-an-exact-tournament-metric-product
   - THM-2195-transitive-quotients-exactly-control-universal-substitution-products
+  - THM-840
+  - THM-853
 script: 04-computation/lrc14_scalar_chord_deficiency_tournament_thm2197.py
 output: 05-knowledge/results/lrc14_scalar_chord_deficiency_tournament_thm2197.out
 script_sha256: 7022c8b26d870282f5a89ab807f69abd0437bf669f7ea48561358526aa0ad3c9
@@ -289,6 +292,11 @@ first family still covers `x` and the second does not.  An updateable phase
 state must therefore retain at least the safe-sheet ownership counts, and a
 coefficient-wise update requires the labelled incidence sets.
 
+Formally, let `O` be the deficiency observation and let `D_1` delete the
+first labelled mask. The two states in (24) lie in `ker(O)` but not in
+`ker(O after D_1)`. THM-840's operation-kernel criterion therefore proves
+that no deterministic deletion update exists on the deficiency quotient.
+
 Nor do static incidences determine which update occurs next.  The all-depth
 problem additionally needs:
 
@@ -308,7 +316,19 @@ transport, even beyond the quotient-automorphism gauge.  Neither case
 recovers the ownership current in (25).
 
 The theorem therefore rules out a static tournament shortcut and identifies
-the correct finite state to carry into the next computation.  It does not
+the correct finite state to carry into the next computation. Once exact
+first-depth transformations have been derived on a finite refinement of
+(25), their future-coverage equivalence
+
+```text
+x equivalent y
+iff every future transition word accepts x exactly when it accepts y
+```
+
+is the canonical coarsest target-recognizing transition congruence; ordinary
+Moore partition refinement computes it, as in THM-853. This is an exact
+implementation prescription, not a claim that the required first-depth
+transformations have already been constructed. The theorem does not
 exclude any additional residue profile, construct the phase transition
 word, control the unique deepest blocker of THM-2192, or prove LRC(14).
 QED.
