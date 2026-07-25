@@ -10,12 +10,15 @@ status: >
   M_repeat=((331095^9-1)(331095^7-1))/2 on the 15 repeated-first rows.
   Consequently a genuine blocker-to-other-blocker handoff occurs within
   the corresponding coefficient-independent number of steps after the
-  owner's prescribed expiration, and every M_branch+1 distinct times
-  contain one. A null time forces a genuinely crossing Jackson certificate
-  A+13^k B=0 with A,B nonzero; the same signed certificate cannot occur at
-  two times. The theorem gives positive measure but no uniform mass at the
-  selected bounded time, does not force the exact expiration time, excludes
-  no valuation profile, and does not prove LRC(14).
+  owner's prescribed expiration. Its Haar mass is strictly larger than
+  12331416859/792352055420125200 on a strict row and
+  10450627633/246356440619713023600 on a repeated-first row. Every
+  M_branch+1 distinct times contain such a quantitatively positive time.
+  The mechanism is that any exceptional time has a genuinely crossing
+  Jackson certificate A+13^k B=0 with A,B nonzero, while the same signed
+  certificate cannot occur at two times. The theorem does not force the
+  exact expiration time, excludes no valuation profile, and does not prove
+  LRC(14).
 source: codex-2026-07-25-bounded-handoff-probe
 depends_on:
   - THM-2080-unequal-comb-overlap-removes-depth-five
@@ -122,20 +125,35 @@ Z_j={k in Z_(>=0):
        measure(E_j intersection T^(-k)R_j)=0}.       (6)
 ```
 
-The theorem proves the coefficient-independent branch bounds
+Define the quantitative branch floors
 
 ```text
-#Z_j<=M_strict
+gamma_strict
+ =12331416859/792352055420125200,
+
+gamma_repeat
+ =10450627633/246356440619713023600.                 (6a)
+```
+
+The theorem proves the stronger coefficient-independent branch bounds
+
+```text
+#{k:measure(E_j intersection T^(-k)R_j)
+       <=gamma_strict}
+ <=M_strict
  =((115919^9-1)(115919^7-1))/2
  =531427494109850809274382490322199270940210549004984817720024492918545763422455682
 
 on strict rows, and
 
-#Z_j<=M_repeat
+#{k:measure(E_j intersection T^(-k)R_j)
+       <=gamma_repeat}
+ <=M_repeat
  =((331095^9-1)(331095^7-1))/2
  =10428262671922434393098039414106300324101457669423374402844539686260225238346754941835938
 
-on repeated-first rows.                                   (7)
+on repeated-first rows. In particular `#Z_j` obeys the same applicable
+bound.                                                     (7)
 ```
 
 Put `M_branch=M_strict` or `M_repeat` according to the row. Then some
@@ -147,7 +165,7 @@ k in {lambda_j+1,...,lambda_j+1+M_branch}           (8)
 has
 
 ```text
-measure(E_j intersection T^(-k)R_j)>0.              (9)
+measure(E_j intersection T^(-k)R_j)>gamma_branch.   (9)
 ```
 
 More strongly, every `M_branch+1` distinct nonnegative times contain a time
@@ -226,22 +244,37 @@ integral Q_E>alpha-9epsilon_N,
 integral Q_R>beta-7epsilon_N.                       (17)
 ```
 
-If `k in Z_j`, a second product telescope gives
+For every `k>=0`, a second product telescope gives
 
 ```text
-integral Q_E(x)Q_R(T^k x) dx<16epsilon_N.           (18)
+|integral Q_E(x)Q_R(T^k x) dx
+  -measure(E_j intersection T^(-k)R_j)|
+ <16epsilon_N.                                      (18)
 ```
 
-Therefore, whenever
+Put
+
+```text
+gamma_N
+ =(alpha-9epsilon_N)(beta-7epsilon_N)-16epsilon_N.
+```
+
+Whenever
 
 ```text
 alpha-9epsilon_N>0,
 beta-7epsilon_N>0,
 
-(alpha-9epsilon_N)(beta-7epsilon_N)>16epsilon_N,    (19)
+gamma_N>0,                                          (19)
 ```
 
-one has
+every time satisfying
+
+```text
+measure(E_j intersection T^(-k)R_j)<=gamma_N
+```
+
+obeys
 
 ```text
 (integral Q_E)(integral Q_R)
@@ -404,8 +437,9 @@ Subtracting,
 
 The integer factor in parentheses is nonzero, while the crossing property
 in (24) says `b.v=B!=0`. This is impossible. Thus the nonempty certificate
-sets attached to distinct null times occupy disjoint signed classes.
-Equations (32)--(34) prove (7).
+sets attached by Section 2 to distinct times of handoff mass at most
+`gamma_branch` occupy disjoint signed classes. Equations (32)--(34) prove
+the stronger bounds in (7).
 
 Notice what the argument does not use: no upper bound on
 
@@ -415,7 +449,8 @@ H+sum_i q_i+sum_h c_h
 
 and no boundary complexity of `E_j` or `R_j`. This supplies the
 coefficient-independent horizon missing from the BV route, at the price of
-qualitative positive measure and an enormous finite certificate count.
+a much smaller quantitative mass floor and an enormous finite certificate
+count.
 
 ## 5. The endpoint is a genuine blocker handoff
 
@@ -432,13 +467,13 @@ c_j -> {c_h,c_l}.                                   (37)
 ```
 
 handoff. Partitioning the target by a measurable first available blocker
-shows that one named target label receives positive measure. The theorem
-does not say that the orbit's first switch occurs at `k`; it identifies
-the source and endpoint service labels.
+shows that one named target label receives mass strictly larger than
+`gamma_branch/2`. The theorem does not say that the orbit's first switch
+occurs at `k`; it identifies the source and endpoint service labels.
 
 Combining Sections 4--5 gives a coefficient-independent bounded
 post-expiration occurrence on both branches. On the strict branch,
-THM-2283 remains complementary: for its possibly different shallow label,
+THM-2288 remains complementary: for its possibly different shallow label,
 it gives the explicit mass
 
 ```text
@@ -446,6 +481,8 @@ it gives the explicit mass
 ```
 
 at every sufficiently large time. The two conclusions are complementary.
+THM-2286 gives the analogous larger, coefficient-dependent delayed floor on
+the repeated-first branch.
 
 ## 6. Sharp stopping boundaries and hostile controls
 
@@ -471,19 +508,21 @@ Three limitations are load-bearing.
    with both partial sums nonzero. This is an arithmetic hostile control,
    not a scalar cover or LRC counterexample. It proves that the size of one
    certificate alone cannot bound its time uniformly; the finite-type
-   injection across *all* null times is essential.
+   injection across *all* exceptional times is essential.
 
-3. **No uniform mass at the bounded occurrence.** Fourier support detects
-   strict inequality in (20), but supplies no lower bound for the
-   corresponding intersection. An arbitrarily small positive correlation
-   is compatible with the proof.
+3. **The uniform mass and horizon are certificate-scale.** The explicit
+   floors in (6a) are positive but much smaller than the BV delayed floors,
+   while the certificate counts in (7) are enormous. Equations (27) and
+   (30) show only minimality for the coarse `3/(2N)` Jackson ledger, not
+   optimality of either constant.
 
 The theorem applies to all `150` strict profiles and all `15`
 repeated-first profiles `(1,1,c)`. It excludes no profile and does not prove
 LRC(14). Its new structural content is that no first-depth-one scalar
-counterexample can suppress blocker-only ancestry return at infinitely many
-times: only finitely many null times, of uniformly bounded spectral type,
-are possible.
+counterexample can suppress a fixed quantitative blocker-only ancestry
+return at infinitely many times: outside at most `M_branch` uniformly
+bounded spectral exceptions, every time has mass greater than
+`gamma_branch`.
 
 ## 7. Exact verification
 
