@@ -1,0 +1,24 @@
+normalization=B=1,C=W=0
+ratio_1=D=4075/85176
+ratio_1_Delta=-56684737689882624*(91*y**2 + 1215)**2*(1577224103*y**8 + 203464170*y**6 - 147517112925*y**4 + 1389005982000*y**2 - 3037628182500)/4826809
+ratio_1_h8_squarefree=PASS
+ratio_1_special_fibres=2 smooth total-ramification points, e=3
+ratio_1_simple_branch_points=8
+ratio_1_total_ramification=12
+ratio_1_normalization_genus=4
+ratio_2=D=25/126
+ratio_2_Delta=-19442865027629740032*y**6*(7889*y**6 + 211680*y**4 + 1814400*y**2 + 2916000)
+ratio_2_h6_squarefree=PASS
+ratio_2_shifted_curve=-26040609*U**3 + 1607445*U**2*y**2 - 138915*U*y**4 - 816480*U*y**2 + 1127*y**6 - 10080*y**4
+ratio_2_tangent_cone=-5103*U*(5103*U**2 + 160*y**2)
+ratio_2_origin=ordinary triple point, delta=3, 3 unramified branches
+ratio_2_simple_branch_points=6
+ratio_2_total_ramification=6
+ratio_2_normalization_genus=1
+infinity_cubic=-26040609*v**3 + 1607445*v**2 - 138915*v + 1127
+infinity_discriminant=-153384762202971019112448
+infinity=3 distinct unramified points
+absolute_irreducibility=PASS Groebner bases [1],[1]
+hostile_control_D=1 squarefree=PASS
+riemann_hurwitz_and_deck_contradiction=MATHEMATICAL_PROOF_REQUIRED
+status=THM2314_BD_LINEAR_RATIO_EXACT_REFEREE
