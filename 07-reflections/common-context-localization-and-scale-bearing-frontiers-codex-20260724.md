@@ -25,8 +25,12 @@ pointwise-nested hierarchy in
 [THM-2240](../01-canon/theorems/THM-2240-dc2-grade-response-gauge-is-not-a-continuation-state.md),
 [THM-2241](../01-canon/theorems/THM-2241-monic-transverse-response-depth-and-resultant-nonproper-quotient.md),
 [THM-2242](../01-canon/theorems/THM-2242-tournament-complement-transport-and-knot-kernel-green-rigidity.md),
+[THM-2243](../01-canon/theorems/THM-2243-composite-union-transfer-dual-depth-three-profile-exclusion.md),
 [THM-2244](../01-canon/theorems/THM-2244-prior-centered-single-odd-clause-bellman-depth-three-exclusion.md),
 [THM-2245](../01-canon/theorems/THM-2245-degree-fourteen-spectral-quartic-discriminant-reduction.md),
+[THM-2246](../01-canon/theorems/THM-2246-depth-one-private-joint-two-step-fibre-cap.md),
+[THM-2248](../01-canon/theorems/THM-2248-higher-interaction-defect-complex-and-tropical-trace-spectrum.md),
+[THM-2249](../01-canon/theorems/THM-2249-directed-triangle-forced-quotient-frustration.md),
 [THM-2216](../01-canon/theorems/THM-2216-residual-capacity-hinge-gram-law.md),
 and [THM-2218](../01-canon/theorems/THM-2218-labelled-guard-hole-fourier-and-signed-lift-energy.md);
 the ranked targets below are OPEN unless explicitly marked otherwise.
@@ -48,10 +52,12 @@ The closest proved mechanisms are now:
    THM-2198 supplies the image pump and anti-defect digit; THM-2204/2205/
    2207 close depth three, THM-2213/2215/2219 close all depth-four profiles,
    THM-2224/2226/2227 reduce the scalar ledger to `452`, THM-2229 leaves
-   `240`, THM-2233 leaves `224`, and THM-2239's separately centered signed
-   dual leaves `194`. THM-2244's prior-centered odd clause closes `28/29`
-   first-depth-three rows. Exactly `166` remain: the `165` first-depth-one
-   rows and `(3,4,5)`. THM-2211 proves exact
+   `240`, THM-2233 leaves `224`, and THM-2239's nonnegative separately
+   centered charge closes another `58`. Exactly `166` remain: the `165`
+   first-depth-one rows and `(3,4,5)`. THM-2243 and THM-2244 independently
+   reclose the same `28` depth-three rows by nonlinear-union and prior-base
+   mechanisms. THM-2246 sharpens the depth-one two-step cap from `120` to
+   `112` but proves that local packet sharp and excludes no row. THM-2211 proves exact
    propagation needs unbounded floor carry.
    THM-2216 turns the residual top-five problem into an exact tail-Gram
    kernel, while THM-2218 retains the labelled nonconstant Fourier modes
@@ -63,7 +69,9 @@ The closest proved mechanisms are now:
    and finite response-ideal antichains on finite prime alphabets. THM-2235
    proves its exact continuation-kernel semigroup has no nontrivial units,
    while THM-2242 makes the kernel embedding isometric and classifies its
-   Green relations.
+   Green relations. THM-2248 upgrades pairwise symbiosis to the exact
+   zero-defect simplicial complex and separates pinned, catalytic, and
+   homogenized min-plus traces.
 3. **Tournament wildcard:** THM-2183 proves exact `l1` product distance for
    order-join and exhibits the two-image Monge uncrossing which knots lack.
    THM-2195 gives the subgroup Gram variance, and THM-2221 identifies the
@@ -72,7 +80,9 @@ The closest proved mechanisms are now:
    THM-2242 identifies the remaining free exterior response with a finite
    weighted-Hamming transport problem and its Kantorovich dual. On a
    transitive common quotient its prefix-crossing tax closes the full split
-   response exactly.
+   response exactly. THM-2249 gives every quotient the forced-pair energy
+   `F_R(X)<=G(X)`; on `C_3` its zero layer is exactly the three rotations
+   and its first positive layer has a sharp linear floor.
 4. **Least-used sidecar:** THM-2186's torsion equality skeleton and tangent
    polygon turn a critical affine ray into an eventual residue-wise
    `A/(Bc+D)` law. This is more precise than another residue atlas.
@@ -118,12 +128,12 @@ be read only through their explicit corrections.
 | concept | faithful object | information destroyed by its common shadow | cheapest decisive test |
 |---|---|---|---|
 | bounded LRC relations | canonical rank-eleven plane, two anchors, or its primitive cofactor vector | rank/sign shadows lose the Archimedean projective slope | apply order chambers, divisibility, gcd-ruler, weak/strict ILP, and equality-sign filters |
-| scalar `5+3` terminal | positive residual, corewise prior-centered scores, owner, and floor carry | arbitrary couplings forget labelled incidence; every single-prior score fails on `(3,4,5)` | join THM-2234's private expansion to Fourier/owner data on the `165` first-depth-one rows; build a composite or multidirectional score for `(3,4,5)` |
+| scalar `5+3` terminal | positive residual, nonnegative corewise charges, composite-union orbit, owner, and floor carry | arbitrary couplings forget labelled incidence; atomwise and nonlinear union scores both fail on `(3,4,5)` | join THM-2234's private expansion to time-zero/Fourier owner data on the `165` first-depth-one rows; add pair incidence for `(3,4,5)` |
 | reversed peel | factorial overlap moments and the rational minorant polyhedron | level one discards pair mass; one fixed cubic can miss the data-optimal vertex | optimize the exact moment/incidence fork only on the `166` surviving states |
 | critical affine ray | equality skeleton plus tangent support polygon | the limiting two-torus mass loses the boundary incidence rate | classify torsion maximizers and their active facets |
 | graded LRC continuation | fixed core, remaining-slot budget, Boolean state, endpoint scale | unrestricted contexts admit the null AP absorber | decide whether a zero state can persist through all legal slot depths |
 | knot catalysis | noninvertible min-plus continuation kernel, not only `u(K#J)` | the scalar interaction defect conflates contraction and bypass | calibrate `10_6`; THM-2235 rules out inverse-kernel shortcuts |
-| tournament substitution | quotient, block tuple, transport matrix, alternating code, and mixing cost | fixed correspondence and Gram variance miss partial cyclic transport and antipode deficit | test even-cycle code membership, then integral transport on `C_3/C_5` |
+| tournament substitution | quotient, block tuple, transport matrix, alternating code, forced-pair energy `F_R`, and residual `G-F_R` | fixed correspondence and Gram variance miss partial cyclic transport and antipode deficit | classify `G-F_R` on `C_3`, then the zero/first-positive layers on `C_5` |
 
 The recurring structure is now unusually clear:
 
@@ -250,6 +260,21 @@ singleton, the unknot the only idempotent and regular element, and prime
 knots exactly the semigroup atoms. Catalysis is therefore metric contraction
 along rigid principal-ideal rays, not an algebraic identification.
 
+THM-2248 shows that pairwise symbiosis is still only a shadow. For a labelled
+packet `x_1,...,x_r`, the zero sets of
+
+```text
+Delta(S)=sum_(i in S)ell(x_i)-ell(sum_(i in S)x_i)
+```
+
+form a simplicial complex. Its minimal nonfaces are irreducible multiway
+interactions, and abstract integer word metrics realize them in every arity.
+For knots no higher-arity example is yet known; this is a search schema, not
+an existence claim. The same theorem separates the pinned diagonal `u(K)`,
+infimal diagonal `u_cat(K)`, and asymptotic min-plus trace `u_hash(K)`. A
+tournament on prime summands cannot encode this hypergraph without
+composite-face sidecars.
+
 The next knot target is no longer “find another nonadditive pair.” It is:
 
 > Find `K` with `c*(K)<u(K)` and an explicit `J` with
@@ -368,9 +393,11 @@ THM-2201 represents the full sheet incidence by a faithful triangular
 Hasse jet, and THM-2203 pulls eight bounded covectors through the actual
 dyadic scalar section. THM-2207 closes depth three; THM-2213/2215/2219
 close all depth-four profiles. THM-2224/2226/2227 reduce the finite scalar
-ledger to `452`; THM-2229 leaves `240`, THM-2233 leaves `224`, and THM-2239
-leaves `194`. THM-2244 closes `28/29` first-depth-three rows, leaving exactly
-`166`: the `165` first-depth-one rows and `(3,4,5)`.
+ledger to `452`; THM-2229 leaves `240`, THM-2233 leaves `224`, and the
+strengthened THM-2239 closes `58` more. Exactly `166` remain: the `165`
+first-depth-one rows and `(3,4,5)`. THM-2243 and THM-2244 give independent
+nonlinear-union and prior-centering proofs for the same `28` depth-three
+exclusions; they are not counted twice.
 
 THM-2211 now closes the state-design question. For fixed coefficient
 residues, the current floor digit and three phase regimes give at most
@@ -530,46 +557,53 @@ removes the fifteen `(2,2,c)` rows and `(5,7,9)`, leaving `224`.
 
 THM-2239 then changes the observable rather than tightening the same
 unsigned intersection. For each normalized blocker core it centers every
-checkpoint separately on the transfer eigenvalue
+checkpoint separately on the transfer eigenvalue and applies the least
+parity-dependent shift making the atom nonnegative:
 
 ```text
 rho=-1/13,
-Y_(j,t)=X_(j,t)-rho^t X_(j,0).
+Z_(j,t)=X_(j,t)-rho^t X_(j,0)+max(rho^t,0).
 ```
 
-The odd-checkpoint score has zero signed residual integral for each core
-individually. Positive-part duality is therefore legal with unrelated
-cores and every cross-core coupling still free. The exact four-bit Bellman
-closes `(4,6,8)` and all `29` first-depth-two rows. Its worst newly closed
-row is `(2,3,5)`, with
+Each `Z_(j,t)` is response-null, nonnegative, and at least one whenever its
+danger atom is active. The selected-clause score therefore vanishes
+pointwise on the negative carrier. Positive-part duality is legal with
+unrelated cores and every cross-core coupling still free. The exact
+three-bit arbitrary-coupling Bellman closes `(4,6,8)`, all `29`
+first-depth-two rows, and `28/29` first-depth-three rows. Every one of
+`39,295` rational coupling LPs has matching primal and dual certificates.
+The largest passing depth-three bound occurs at `(3,5,6)`:
 
 ```text
-7265183507/74231495611 < 961/6930.
-```
-
-At that stage `194` scalar profiles remain: `165` at first depth one and
-`29` at first depth three. This is the session's decisive reframe: the
-GMC-style lesson that low unsigned moments miss a top atom is bypassed by a
-signed transfer eigen-observable, not by pretending the missing atom was
-recoverable. The boundary is equally exact: the same canonical score gives
-about `0.1998478` on `(3,17,19)`, above the target.
-
-THM-2244 breaks that boundary by centering the single odd checkpoint at a
-different strictly prior opposite-parity time for each labelled core. The
-score remains response-null and is pointwise nonpositive on the negative
-carrier; its exact three-bit arbitrary-coupling Bellman closes `28/29`
-depth-three rows. The closest new pass is `(3,5,6)`:
-
-```text
-1511656180038/12545122758259 < 961/6930.
+1471733046268/12545122758259 < 961/6930.
 ```
 
 Exactly `166` profiles remain: all `165` first-depth-one rows and
-`(3,4,5)`. The four admissible single-prior centers all fail on `(3,4,5)`,
-while depth one has no strictly prior base at all. Those are two different
-obstructions: the isolated depth-three row needs a composite or
-multidirectional response-null score; depth one needs the owner/private-mass
-and labelled-incidence carrier of THM-2234.
+`(3,4,5)`. This is the session's decisive reframe: the GMC-style lesson that
+low unsigned moments miss a top atom is bypassed by a signed transfer
+eigen-observable, not by pretending the missing atom was recoverable.
+
+THM-2244 supplies an independent alternate mechanism: center the single odd
+checkpoint at a different strictly prior opposite-parity time for each
+labelled core. THM-2243 supplies a second one: take the union of the three
+danger atoms before centering its two-step transfer orbit. Both reclose the
+same `28` depth-three rows and therefore do not decrement the ledger again.
+The nonlinear union route gives the sharpest current hostile value on the
+survivor:
+
+```text
+8907541/62377224
+ =961/6930+42493973/10292241960.
+```
+
+Thus `(3,4,5)` now has an exact remaining gap about `0.004129`; another
+atomwise or union count is not the missing coordinate. It needs realized
+guard/owner incidence or within-union labelled multiplicity. Depth one has
+no strictly prior base at all. THM-2246 couples the guard and peeled
+complement on the same two-step fibre and improves the occupancy cap
+`120->112`, but an aligned exact `169`-root phase attains `112` and the
+resulting image floor is still below `1/7`. The `165` rows therefore need a
+cross-fibre owner/time-zero law, not another product of local caps.
 
 THM-2237 explains why this state addition is genuine. For general `p`,
 moments through degree `p-1` leave one affine freedom, and the exact
@@ -581,10 +615,11 @@ THM-2235 blocks the tempting THM-2225 antipode shortcut. Every raw
 checkpoint marginal is at most `3/7`, so a measure-preserving fixed-XOR
 response on the four-bit word is trivial; a `13`-power sheet group also has
 no homomorphism to Walsh `2`-torsion. THM-2239 shows the lawful replacement:
-a separately centered noninvertible signed transfer, and THM-2244 shows that
-the response base may be chosen corewise. The remaining rows need
-owner/carry incidence, a genuinely multidirectional score, or the directed
-top correlation `W_4`.
+a separately centered nonnegative signed charge. THM-2244 shows that the
+response base may be chosen corewise, while THM-2243 shows that nonlinear
+union events can be centered as whole transfer orbits. The remaining rows
+need owner/carry incidence, within-union multiplicity, or the directed top
+correlation `W_4`.
 
 The relation carry must also remain distinct. THM-2196's chart carries
 parametrize a nonnegative coefficient cone; THM-2211's state is a
@@ -1036,14 +1071,32 @@ response equals `G(NI)` for every exterior context, and `NI` is the unique
 minimizing transport. Thus the transitive quotient is no longer part of the
 open core kernel.
 
-The sharp remaining object is `G(X)` for genuinely nontransitive common
-cores, together with unpinned core/context exchange. The cheapest decisive
-test optimizes the Kantorovich dual over low-`G` permutations, then exhausts
-`C_3` and `C_5` substitutions with block orders at most three. It should
-subtract the proved `<X,D_mu>` term and isolate integrality, internal
-fragmentation, and core exchange. THM-2210 suggests adding collision moments
-degree by degree rather than jumping directly to the full vertex permutation
-polytope.
+THM-2249 supplies the replacement when the quotient has cycles. For every
+common quotient tournament `R`,
+
+```text
+F_R(X)=sum_(i->_R k) sum_(l->_R j) X_ij X_kl <=G(X)
+```
+
+counts a literal subset of the forced core reversals. On `C_3`, Hall
+decomposition of `X` into rotation/reflection permutation layers proves
+that `F=0` exactly on the three cyclic whole-block rotations. Every other
+transport pays the sharp floor
+
+```text
+phi(1)=3,
+phi(N)=3(N-1) for 2<=N<=4,
+phi(N)=2N+1  for N>=5.
+```
+
+Thus the first nontransitive core is already reduced to three automorphism
+sectors whenever the exterior/internal rotation upper bound lies below
+`phi(N)`. The sharp remaining object is the residual `G-F_R`, first on
+`C_3` and then on `C_5`, together with unpinned core/context exchange. The
+cheapest decisive test subtracts both proved terms `<X,D_mu>` and `F_R`,
+then isolates internal fragmentation. THM-2210 suggests adding collision
+moments degree by degree rather than jumping directly to the full vertex
+permutation polytope.
 
 ## 10. Jacobian wildcard: the degree-fourteen terminal wall
 
@@ -1141,13 +1194,15 @@ ramification control, and uniform order raising.
    joining THM-2234's private two-owner mass and two-step expansion to
    THM-2239's separately centered signed score. Retain owner labels through
    THM-2218's Fourier carrier and THM-2238's terminal fibre/global fork.
-2. **The isolated `(3,4,5)` composite-score gate (OPEN):** all four legal
-   single-prior centers fail, so add an even/second transfer observable or a
-   genuinely multidirectional response-null score. Treat THM-2243 as a
-   reserved route, not a dependency. Join any gain to THM-2218's thresholded
-   Parseval ledger, THM-2216's meet-tail Gram, and THM-2238's incomparable
-   branches; keep THM-2211 carry and THM-2203 relations as independent
-   sidecars.
+   THM-2246 proves the co-adapted local cap `112` sharp, so require
+   cross-fibre time-zero/owner incidence.
+2. **The isolated `(3,4,5)` pair-incidence gate (OPEN):** THM-2243's
+   nonlinear union orbit leaves the exact gap `42493973/10292241960`, while
+   THM-2239/2244 atomwise routes also fail. Add realized guard/owner or
+   within-union labelled multiplicity; do not count the same 28 rows again.
+   Join any gain to THM-2218's thresholded Parseval ledger, THM-2216's
+   meet-tail Gram, and THM-2238's incomparable branches; keep THM-2211
+   carry and THM-2203 relations as independent sidecars.
 3. **THM-2212 relation-atlas execution (OPEN):** enumerate canonical
    rank-eleven planes through order chambers and bounded anchors, then run
    the cofactor/divisibility/gcd-ruler/weak-strict/equality-sign pipeline.
@@ -1161,9 +1216,9 @@ ramification control, and uniform order raising.
    smallest-alphabet continuation antichain and catalyst-length invoice.
    THM-2235 rules out inverse-kernel shortcuts, while THM-2242 reduces
    algebraic divisibility to principal kernel ideals but not catalysis.
-7. **Tournament transport-dual/core join (OPEN):** optimize THM-2242's
-   Kantorovich potentials over low-`G(X)` core permutations, then classify
-   fragmentation and unpinned core/context exchange in `C_3/C_5`.
+7. **Tournament residual-frustration join (OPEN):** classify `G-F_R` on
+   THM-2249's three `C_3` rotation sectors, then classify the zero and first
+   positive layers on `C_5`; keep unpinned core/context exchange separate.
 8. **Degree-fourteen singular-conic descent (OPEN):** normalize THM-2245's
    multiple-root spectral quartic, compute the branch divisor of the residual
    `T`-double-cover, and apply the retained third flux/Keller one-form.

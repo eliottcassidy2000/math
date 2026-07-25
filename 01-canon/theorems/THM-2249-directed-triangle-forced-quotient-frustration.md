@@ -3,11 +3,10 @@ id: THM-2249
 title: "Directed-triangle forced quotient frustration"
 status: >
   PROVED + VERIFIED-EXACT. In THM-2221's equal-block pinned transport
-  model with common quotient the directed triangle, every transport X has
-  a forced core-reversal energy
-  F(X)=sum_(i,j)X_ij X_(i+1,j-1). It is a literal subset of the core cost:
-  G(X)>=F(X). Hall decomposition into permutation layers gives an exact
-  rotation/reflection formula. The zero layer consists precisely of the
+  model, every common quotient R has an explicit quadratic forced-pair
+  lower envelope F_R(X)<=G(X). For the directed triangle this is
+  F(X)=sum_(i,j)X_ij X_(i+1,j-1). Hall decomposition into permutation
+  layers gives an exact rotation/reflection formula. The zero layer consists precisely of the
   three whole-block cyclic rotations. Every other transport pays the sharp
   floor phi(1)=3, phi(N)=3(N-1) for 2<=N<=4, and phi(N)=2N+1 for N>=5.
   This yields an exact rotation-reduction certificate for the full pinned
@@ -65,6 +64,36 @@ set retains exactly those automorphisms.
 
 ## 1. The forced quotient energy
 
+The forced-pair construction works for every common quotient tournament
+`R`, not only `C_3`. Define
+
+```text
+F_R(X)=sum_(i->_R k) sum_(l->_R j) X_ij X_kl.              (5a)
+```
+
+Then, for every core bijection and every common quotient,
+
+```text
+g(pi)>=F_R(X_pi),
+G(X)>=F_R(X).                                              (5b)
+```
+
+Indeed, a source vertex from `T_i` mapped into `S_j` and a source vertex
+from `T_k` mapped into `S_l` form a reversed pair whenever
+
+```text
+i ->_R k,             l ->_R j.                            (5c)
+```
+
+There are exactly `X_ij X_kl` such pairs. The families in (5a) are
+disjoint and use only pairs whose source and target quotient labels are
+both distinct. Their orientations are forced by the two quotient copies;
+all omitted pair classes contribute nonnegative cost. This proves (5b).
+On a whole-block transport `X=NP_sigma`, the same formula becomes `N^2`
+times the number of quotient arcs reversed by `sigma`, exactly recovering
+the quotient term in THM-2221's whole-block formula.
+
+Now specialize to `R=C_3`.
 All indices below are modulo three. Define
 
 ```text
