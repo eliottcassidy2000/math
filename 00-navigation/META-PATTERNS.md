@@ -23,7 +23,14 @@
 **Action:** retain the whole colliding face, relation packet, or current; prove it nonzero or quantify its defect. At exact bulk cancellation, write the deficit identity and disintegrate the missing facet before bounding. Only then choose a scale outside the finite bad set or below the error budget.
 **Mechanism:** the exposed obstruction has fewer degrees of freedom, so its valuation, spectral quantum, Fourier height, carry size, or positive boundary defect dictates a compatible scale; Pascal/Lucas bulk cancellation can leave precisely the virtual boundary bits needed for completion.
 **Counterindication:** not when scale is fixed, aggregation destroys the target, or the gain is only ambient. Require a proved seed and retain a slope/current sidecar when the target is a distinguished primitive line.
-**Evidence:** THM-2022 (face then finite place), THM-2159/2165 (spectral quantum then exponent), THM-2162/2163/2166 (current/packet then scale), THM-2193 (missing-facet floor and hostile slope audit), and THM-2160 (Pascal completion).
+**Evidence:** THM-2022 (face then finite place), THM-2159/2165 (spectral quantum then exponent), THM-2162/2163/2166 (current/packet then scale), THM-2193/2298 (missing-facet floors and hostile placement audits), and THM-2160 (Pascal completion).
+
+## Discretize phase on the native global boundary atlas
+
+**Trigger / action:** when local components have arbitrary `U(1)` phase but global endpoints lie in a finite algebraic atlas, rewrite the coefficient as an oriented current and expand extremal phases over the field of lower phases.
+**Mechanism:** the atlas turns continuous freedom into finitely many cyclotomic or monomial coordinates, so cancellation kills each coordinate.
+**Counterindication:** separation is not nonvanishing; arbitrary cuts lie outside the atlas and a uniform comb can cancel every current. Keep color, amplitude, or owner data.
+**Evidence:** THM-2022 (whole lowest-face preservation), THM-2303/2304 (component phase to cyclotomic endpoint currents), and THM-2299 (the arbitrary-cut hostile boundary).
 
 ## Search the statement before the method
 
@@ -54,23 +61,15 @@ and the support-profile correction in MISTAKE-209.
 ## Audit saturation and basis covariance before naming a lattice bridge
 
 **Trigger:** objects have equal rank, a generator Gram looks canonical, or a coordinate inequality gets a discriminant/class group.
-**Action:** name ambient modules and construct the map; compute kernel, cokernel
-or saturation index, discriminant, and minimal vectors. For coordinate quadratic claims,
-prove `GL_n(Z)` covariance and build the invariant form before arithmetic classes.
-**Mechanism:** full-rank frames can have huge finite index, and a max of linear
-forms against a chosen norm need not be one quadratic representation problem;
-equal rank hides torsion and basis dependence controlling short vectors.
-**Counterindication:** rank/Gram comparisons are useful when explicitly labeled
-as frames; class-group tools need a basis-invariant form and target-preserving map.
-**Evidence:** MISTAKE-227's index-`11!` AP chain frame and MISTAKE-229's repair
-of the nonexistent Heegner discriminant on THM-2053's tangent-disk union.
+**Action:** name ambient modules and construct the map; compute kernel, cokernel or saturation index, discriminant, and minimal vectors. For coordinate quadratic claims, prove `GL_n(Z)` covariance and build the invariant form before arithmetic classes.
+**Mechanism:** full-rank frames can have huge finite index, and a max of linear forms against a chosen norm need not be one quadratic representation problem; equal rank hides torsion and basis dependence controlling short vectors.
+**Counterindication:** rank/Gram comparisons are useful when explicitly labeled as frames; class-group tools need a basis-invariant form and target-preserving map.
+**Evidence:** MISTAKE-227's index-`11!` AP chain frame and MISTAKE-229's repair of the nonexistent Heegner discriminant on THM-2053's tangent-disk union.
 
 ## Preserve the selected side, not only the walls
 
 **Trigger:** a problem is recast as avoiding hyperplanes, hypertori, resonance walls, or forbidden bands.
-**Action:** distinguish the bare arrangement, its ordinary complement, a
-thickened complement, and a selected inequality-cell complex. Record wall
-owner, orientation/sign, selected side, height functional, and deletion unit.
+**Action:** distinguish the bare arrangement, ordinary/thickened complements, and selected inequality cells; record wall owner, sign, selected side, height, and deletion unit.
 **Mechanism:** intersection posets and complement cohomology forget the feasible side and extremal top cell.
 **Counterindication:** ordinary arrangement invariants suffice when the target is invariant under all forgotten labels and sides.
 **Evidence:** MISTAKE-224's repair of the Fourier-lattice/toric-complement
