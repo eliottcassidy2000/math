@@ -174,10 +174,9 @@ THM-2168--2257 leave exactly `165` first-depth-one rows (`150` strict, `15` repe
 THM-2296/2305 retain prescribed pure edges/forks; THM-2299 kills pair phase and THM-2303 names the missing terminal-component current. THM-2323/2326/2327 force a marked `91`-unit deepest edge on every positive strict shallow-owner word stratum, not the repeated/resonance rows.
 THM-2321/2329 type root/target gain; THM-2325/2331 put every nonzero target address into the Abel expansion, while THM-2333 permits zero-only aggregation.
 [THM-2334](../01-canon/theorems/THM-2334-relation-residue-current-and-character-twist-pushforward.md) retains the full word and turns target landing into a `169`-twist DFT. [THM-2337](../01-canon/theorems/THM-2337-expiration-word-residue-invisibility-and-first-bockstein-sidecar.md) recovers a surjective but gauge-dependent first jet and an exact masked energy.
-[THM-2340](../01-canon/theorems/THM-2340-owner-word-anova-target-landing.md) identifies pure-word landing with ordered main effects and fork landing with interaction.
-[THM-2343](../01-canon/theorems/THM-2343-deep-comb-affine-target-catalyst.md) proves that the deepest phase translates all target support by a nonzero pure-axis charge; zero-only landing is exactly one inverse-character line, not generic cancellation.
-[THM-2344](../01-canon/theorems/THM-2344-correlation-inverse-rigidity-and-aligned-tooth-twist-hostile.md) identifies that line with shifted convolution inverses. A zero twist, real off-annihilator twist, or off-centre covariance breaks it; an aligned tooth attains it, while any same-axis transported word preserves it and a typed `334825`-lift bank has both signs.
-Force at least two independently translated coordinates or cross-axis word/base mixing, then retain `91`-unit visibility and THM-2303 phase; otherwise attack the `15` repeated rows. The ledger remains `165`.
+[THM-2340](../01-canon/theorems/THM-2340-owner-word-anova-target-landing.md) identifies word main effects/interactions; [THM-2343](../01-canon/theorems/THM-2343-deep-comb-affine-target-catalyst.md) makes deepest phase a nonzero pure-axis translation and zero-only landing one inverse-character line.
+[THM-2344](../01-canon/theorems/THM-2344-correlation-inverse-rigidity-and-aligned-tooth-twist-hostile.md) makes that line a shifted convolution inverse. Zero/real/covariance tests break it; aligned and arbitrary same-axis words attain it, while a typed `334825`-lift bank has both signs.
+Force two translated coordinates or cross-axis mixing, then retain `91`-unit visibility and THM-2303 phase; otherwise attack the `15` repeated rows. The ledger remains `165`.
 
 ### Independent routes that remain live
 
