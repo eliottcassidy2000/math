@@ -2,25 +2,352 @@
 id: THM-2279
 title: "Shallow-blocker anchored relation minor"
 status: >
-  RESERVED / UNPROVED PROOF CANDIDATE UNDER AUDIT. Candidate: every one of
-  the 120 interior first-depth-one scalar profiles has two bounded scalar
-  relations with a nonzero 2 by 2 coefficient minor on columns c_1 and k
-  for some k outside the THM-2266 pair support; the determinant has absolute
-  value at most 42320. No statement in this file is a proved dependency
-  until the normalized-pair lifts, independent/dependent split, determinant
-  bounds, and exact scope are independently audited.
+  PROVED + INDEPENDENTLY AUDITED. Every one of the 120 interior
+  first-depth-one scalar profiles has two bounded scalar relations with a
+  nonzero 2 by 2 coefficient minor on columns c_1 and k for some coordinate
+  k outside the THM-2266 pair support. The scalar determinant has absolute
+  value at most 42320. The fixed THM-2203 section gives a nonzero
+  original-row minor at c_1 and the corresponding coordinate, of absolute
+  value at most 84640. The determinant need not be a thirteen-unit, no
+  owner transition is selected, no profile is excluded, and LRC(14)
+  remains open.
 source: codex-2026-07-25-shallow-blocker-anchored-minor
-depends_on: []
-related:
+depends_on:
+  - THM-2203-fixed-dyadic-coordinate-section-and-covector-intersection
   - THM-2266-depth-one-deep-pair-centered-signed-dual-and-relation-atlas
   - THM-2274-mixed-scalar-relative-rank-harvest-and-adaptive-pair-crossing
   - THM-2275-mixed-scalar-relation-and-guard-blocker-crossing
+related:
+  - THM-2269-marked-expiration-root-spectrum-and-branch-state-no-go
+  - THM-2273-shallow-owner-flow-and-deep-successor-gap-spread
   - THM-2276-shallow-owner-residue-aligned-crossing
 ---
 
-# THM-2279 -- RESERVED / UNPROVED PROOF CANDIDATE
+# THM-2279 -- shallow-blocker anchored relation minor
 
-The pair normalization, two-coordinate relation-line argument, adaptive-cut
-fallback, `15140/14160/42320` bounds, and the distinction between a nonzero
-integer minor and a mod-thirteen unit minor are under final audit. Nothing
-may depend on this file until its status is promoted.
+**PROVED + INDEPENDENTLY AUDITED.**
+
+THM-2274 proves rank two on the fixed scalar section, but rank alone does
+not say where a nonzero minor occurs. THM-2266 supplies the missing anchor:
+every interior profile has a primitive two-coordinate relation supported
+on the shallow blocker `c_1` and one guard/unit coordinate.
+
+The resulting dichotomy is
+
+```text
+height-20 relation independent of the shallow pair
+  -> c_1-anchored minor at most 15140;
+
+height-20 relation dependent on the shallow pair
+  -> adaptive crossing gives a c_1-anchored minor
+     at most 14160 or 42320.                            (1)
+```
+
+The theorem is elementary after the three source theorems, but it retains
+the coordinate that their rank statements individually forget.
+
+## 1. Scalar setup and the shallow pair
+
+Use an interior first-depth-one scalar profile
+
+```text
+c_1=13u_1,        c_2=13^b u_2,        c_3=13^c u_3,
+
+3<=b<=c-2,                    5<=c<=19,                (2)
+```
+
+inside the live scalar cover, with scalar row
+
+```text
+w_*=(H,q_1,...,q_5,c_1,c_2,c_3).                     (3)
+```
+
+THM-2266 proves that one of the six reduced pairs
+
+```text
+(H,u_1),             (u_1,q_i), 1<=i<=5              (4)
+```
+
+has coprime product at most `757`.
+
+### 1.1 Guard-owner normalization
+
+If `(H,u_1)` triggers, put
+
+```text
+g=gcd(H,u_1),        a=H/g,        d=u_1/g.           (5)
+```
+
+Then
+
+```text
+gcd(a,d)=1,          13 does not divide ad,
+ad<=757,                                                (6)
+```
+
+and the actual scalar relation is
+
+```text
+13d H-a c_1=0.                                        (7)
+```
+
+Its coefficient vector `p` is primitive because
+`gcd(13d,a)=1`. It is supported on
+
+```text
+A={H,c_1},                                             (8)
+```
+
+and its `c_1` coefficient satisfies
+
+```text
+0<|p_(c_1)|=a<=757.                                   (9)
+```
+
+### 1.2 Owner-unit normalization
+
+If `(u_1,q_i)` triggers, put
+
+```text
+g=gcd(u_1,q_i),      a=u_1/g,      d=q_i/g.           (10)
+```
+
+Again
+
+```text
+gcd(a,d)=1,          13 does not divide ad,
+ad<=757,                                                (11)
+```
+
+and the actual scalar relation is
+
+```text
+d c_1-13a q_i=0.                                      (12)
+```
+
+It is primitive because `gcd(d,13a)=1`, is supported on
+
+```text
+A={q_i,c_1},                                          (13)
+```
+
+and satisfies
+
+```text
+0<|p_(c_1)|=d<=757.                                   (14)
+```
+
+In either case,
+
+```text
+||p||_infinity<=13*757=9841,                          (15)
+
+p_k=0                         for every k notin A.    (16)
+```
+
+The `c_1` coefficient in (9) or (14), not the full height (15), controls
+the anchored determinant.
+
+## 2. Independent height-20 branch
+
+THM-2275 supplies a nonzero scalar relation
+
+```text
+r.w_*=0,                    ||r||_infinity<=20.       (17)
+```
+
+First suppose
+
+```text
+r notin Qp.                                            (18)
+```
+
+The rational relation space on the two positive coordinates indexed by
+`A` is one-dimensional: the solutions of
+
+```text
+x(w_*)_(A_1)+y(w_*)_(A_2)=0                           (19)
+```
+
+form exactly the line generated by the primitive pair relation `p|A`.
+Therefore (18) implies that
+
+```text
+r_k!=0                 for some k notin A.            (20)
+```
+
+Use the two relation rows `(p,r)` and the two columns `(c_1,k)`. Their
+minor is
+
+```text
+Delta_(c_1,k)
+ =det [[p_(c_1),p_k],[r_(c_1),r_k]]
+ =p_(c_1) r_k,                                        (21)
+```
+
+by (16). Equations (9), (14), (17), and (20) give
+
+```text
+0<|Delta_(c_1,k)|<=757*20=15140.                     (22)
+```
+
+## 3. Dependent height-20 branch
+
+Now suppose
+
+```text
+r in Qp.                                              (23)
+```
+
+Because `p` is a primitive integer vector, Bezout's identity shows that
+every integer vector in `Qp` is an integer multiple of `p`. Thus
+
+```text
+r=np,                         0!=n in Z.              (24)
+```
+
+Equations (17) and (24) imply
+
+```text
+||p||_infinity<=20,
+0<|p_(c_1)|<=20.                                     (25)
+```
+
+THM-2275 applies its positive crossing construction to the adaptive cut
+
+```text
+A | A^c.                                              (26)
+```
+
+It gives a scalar relation `s` such that
+
+```text
+L_A(s):=sum_(j in A)s_j(w_*)_j!=0,                   (27)
+```
+
+with height
+
+```text
+||s||_infinity<=708,       if A={H,c_1},
+
+||s||_infinity<=2116,      if A={q_i,c_1}.            (28)
+```
+
+Since `s.w_*=0`, its complementary partial sum is `-L_A(s)` and is
+nonzero. Hence
+
+```text
+s_k!=0                 for some k notin A.            (29)
+```
+
+The rows `(p,s)` and columns `(c_1,k)` now have minor
+
+```text
+Delta_(c_1,k)
+ =det [[p_(c_1),0],[s_(c_1),s_k]]
+ =p_(c_1)s_k!=0.                                      (30)
+```
+
+Equations (25), (28), and (29) give the two exact uniform bounds
+
+```text
+|Delta_(c_1,k)|<=20*708=14160,       guard-owner;
+
+|Delta_(c_1,k)|<=20*2116=42320,      owner-unit.      (31)
+```
+
+Combining (22) and (31) proves the scalar statement:
+
+> Every one of the `120` interior profiles has two scalar relation rows
+> and a coordinate `k` outside the triggering pair such that
+>
+> ```text
+> 0<|Delta_(c_1,k)|<=42320.                            (32)
+> ```
+
+The first row may have height `9841`; the second has height `20` in
+Section 2 or at most `2116` in Section 3.
+
+## 4. Fixed-section lift
+
+THM-2203 lifts scalar relation coefficients by
+
+```text
+(x_H,x_rest) |->(2x_H,x_rest)                         (33)
+```
+
+on the fixed nine-coordinate original-row section. The map is injective,
+so the minor in (32) stays nonzero. If `k!=H`, it is unchanged. If `k=H`,
+the `H` column is doubled. Therefore the lifted original-row minor
+satisfies
+
+```text
+0<|Delta_original(c_1,k)|<=2*42320=84640.             (34)
+```
+
+The two original relation rows have uniform height at most
+
+```text
+max(2*9841,2*2116)=19682.                             (35)
+```
+
+No claim is made that `84640` is sharp.
+
+## 5. Exact residue boundary and frontier role
+
+The primitive pair coefficient at `c_1` is a thirteen-unit:
+
+```text
+13 does not divide p_(c_1).                           (36)
+```
+
+Consequently
+
+```text
+nu_13(Delta_(c_1,k))
+ =nu_13(r_k)          in Section 2,
+
+nu_13(Delta_(c_1,k))
+ =nu_13(s_k)          in Section 3.                   (37)
+```
+
+Neither THM-2275's height-20 tensor nor its squared-Fejer crossing forces
+the selected outside coefficient in (37) to be nonzero modulo thirteen.
+The crossing construction controls divisibility by seven, which is
+orthogonal to this issue. Thus (32) is a nonzero integer minor, not a
+thirteen-unit minor.
+
+This is the precise handoff to the residue-aligned perturbation proposed
+in THM-2276. It is also the first relation minor with a prescribed shallow
+blocker column that can be compared to THM-2269's marked residue energy and
+THM-2273's gap ancestry.
+
+The connection and loss ledger is
+
+```text
+source:
+  THM-2266's primitive shallow pair, THM-2275's height-20
+  scalar relation, and its adaptive crossing fallback;
+
+target:
+  a nonzero bounded relation minor with prescribed column c_1;
+
+map:
+  if the height-20 row leaves the pair, read its outside coefficient;
+  if it stays on the pair, use that dependence to lower the primitive
+  pair height and cross the pair cut;
+
+preserved:
+  the shallow blocker label, the fixed scalar section, relation
+  independence, and an explicit determinant bound;
+
+destroyed:
+  the outside label k, its mod-thirteen residue, root-sheet ancestry,
+  the exact crossing frequency, and owner transition data;
+
+needed sidecar:
+  force the outside coefficient to be a thirteen-unit or identify its
+  exact marked residue and transport it through a named owner root.       (38)
+```
+
+The theorem excludes no scalar profile and does not prove LRC(14). QED.
