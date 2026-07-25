@@ -2,22 +2,27 @@
 """Exact referee for THM-2179.
 
 The all-row argument in THM-2179 is Fourier/Jackson analysis.  This companion
-checks every rational constant in that argument, verifies the adjacent
-Jackson cutoff, and replays the named reversed-peel hostile row by two exact
-interval algorithms.  Assertions remain active under ``python -O``.
+checks every rational constant in the defect-at-least-seven and defect-six
+packets, exhausts the seven-core floor by two exact interval algorithms,
+verifies the adjacent Jackson cutoffs, and replays the named reversed-peel
+hostile row.  Assertions remain active under ``python -O``.
 """
 
 from fractions import Fraction
+from itertools import combinations
 
 
 RADIUS = Fraction(3, 41)
 DANGER_MASS = 2 * RADIUS
 SAFE_MASS = 1 - DANGER_MASS
-JACKSON_N = 71
-RELATION_HEIGHT = 2 * JACKSON_N - 2
+D7_JACKSON_N = 71
+D7_RELATION_HEIGHT = 2 * D7_JACKSON_N - 2
+D6_JACKSON_N = 91
+D6_RELATION_HEIGHT = 2 * D6_JACKSON_N - 2
 PI_UPPER_NUMERATOR = 355
 PI_UPPER_DENOMINATOR = 113
-ETA_SIMPLE_CAP = Fraction(297, 50_000)
+D7_ETA_SIMPLE_CAP = Fraction(297, 50_000)
+D6_ETA_SIMPLE_CAP = Fraction(93, 20_000)
 
 CORE_FLOORS = {
     0: Fraction(1),
@@ -27,6 +32,7 @@ CORE_FLOORS = {
     4: Fraction(239, 492),
     5: Fraction(2729, 7380),
     6: Fraction(153101, 568260),
+    7: Fraction(39965, 211068),
 }
 
 HOSTILE_SMALL = (1, 2, 3, 4, 6, 8)
@@ -138,6 +144,27 @@ def safe_measure_by_cells(speeds: tuple[int, ...]) -> Fraction:
     )
 
 
+def seven_core_masses_by_global_cells() -> tuple[
+    dict[tuple[int, ...], Fraction], tuple[Fraction, ...]
+]:
+    """Evaluate all seven-cores simultaneously on one global arrangement."""
+    points = boundary_points(tuple(range(1, 14)))
+    masses = {
+        core: Fraction(0) for core in combinations(range(1, 14), 7)
+    }
+    for left, right in zip(points, points[1:]):
+        midpoint = (left + right) / 2
+        safe_speeds = tuple(
+            speed
+            for speed in range(1, 14)
+            if not is_dangerous(speed, midpoint)
+        )
+        width = right - left
+        for core in combinations(safe_speeds, 7):
+            masses[core] += width
+    return masses, points
+
+
 def danger_arcs(
     speeds: tuple[int, ...],
 ) -> list[tuple[Fraction, Fraction]]:
@@ -196,35 +223,43 @@ def hostile_depth_ledger() -> tuple[
 
 
 def main() -> None:
-    require(RELATION_HEIGHT == 140, "Jackson degree changed")
+    require(D7_RELATION_HEIGHT == 140, "defect-seven Jackson degree changed")
+    require(D6_RELATION_HEIGHT == 180, "defect-six Jackson degree changed")
 
-    # Independent closed form versus direct convolution for the full support.
-    for k in range(0, RELATION_HEIGHT + 1):
-        require(
-            jackson_coefficient(JACKSON_N, k)
-            == jackson_coefficient_by_convolution(JACKSON_N, k),
-            f"Jackson coefficient mismatch at {k}",
-        )
-        require(
-            jackson_coefficient(JACKSON_N, k) > 0,
-            f"Jackson multiplier vanished at {k}",
-        )
+    # Independent closed form versus direct convolution for both supports.
+    for jackson_n, relation_height in (
+        (D7_JACKSON_N, D7_RELATION_HEIGHT),
+        (D6_JACKSON_N, D6_RELATION_HEIGHT),
+    ):
+        for k in range(0, relation_height + 1):
+            require(
+                jackson_coefficient(jackson_n, k)
+                == jackson_coefficient_by_convolution(jackson_n, k),
+                f"Jackson coefficient mismatch at N={jackson_n}, k={k}",
+            )
+            require(
+                jackson_coefficient(jackson_n, k) > 0,
+                f"Jackson multiplier vanished at N={jackson_n}, k={k}",
+            )
 
-    c_zero = JACKSON_N * (2 * JACKSON_N**2 + 1) // 3
-    odd_sum = sum(
+    c_zero_71 = D7_JACKSON_N * (2 * D7_JACKSON_N**2 + 1) // 3
+    odd_sum_71 = sum(
         (
-            Fraction(jackson_coefficient(JACKSON_N, k), k * k)
-            for k in range(1, RELATION_HEIGHT, 2)
+            Fraction(jackson_coefficient(D7_JACKSON_N, k), k * k)
+            for k in range(1, D7_RELATION_HEIGHT, 2)
         ),
         Fraction(0),
     )
-    eta_cap = jackson_eta_pi_cap(JACKSON_N)
-    advertised_eta_cap = Fraction(357148519, 60146943550)
-    require(c_zero == 238631, "Jackson C_0 changed")
-    require(odd_sum > 290903, "odd Jackson sum lost its simple floor")
+    eta_cap_71 = jackson_eta_pi_cap(D7_JACKSON_N)
+    advertised_eta_cap_71 = Fraction(357148519, 60146943550)
+    require(c_zero_71 == 238631, "N=71 Jackson C_0 changed")
     require(
-        eta_cap < advertised_eta_cap < ETA_SIMPLE_CAP,
-        "Jackson eta cap chain failed",
+        odd_sum_71 > 290903,
+        "N=71 odd Jackson sum lost its simple floor",
+    )
+    require(
+        eta_cap_71 < advertised_eta_cap_71 < D7_ETA_SIMPLE_CAP,
+        "N=71 Jackson eta cap chain failed",
     )
 
     # N=70 is the hostile adjacent control for this exact global ledger.
@@ -236,7 +271,7 @@ def main() -> None:
         plateau = CORE_FLOORS[core_size] * SAFE_MASS**defect
         error = (
             13 + core_size * SAFE_MASS**defect
-        ) * ETA_SIMPLE_CAP
+        ) * D7_ETA_SIMPLE_CAP
         margin = plateau - error
         require(margin > 0, f"defect {defect} margin did not close")
         plateau_rows.append((defect, core_size, plateau, margin))
@@ -244,7 +279,7 @@ def main() -> None:
     weakest_plateau = CORE_FLOORS[6] * SAFE_MASS**7
     weakest_margin = weakest_plateau - (
         13 + 6 * SAFE_MASS**7
-    ) * ETA_SIMPLE_CAP
+    ) * D7_ETA_SIMPLE_CAP
     expected_margin = Fraction(
         478970390236831, 39525379884148950000
     )
@@ -264,13 +299,112 @@ def main() -> None:
         "the N=70 adjacent hostile control unexpectedly closes",
     )
 
-    # Exact support: the safe interval transform vanishes precisely at 41Z.
-    supported_positive_modes = tuple(
-        k for k in range(1, RELATION_HEIGHT + 1) if k % 41
+    # Exhaust the 1,716 seven-cores by independent exact interval algorithms.
+    seven_core_masses, seven_core_points = (
+        seven_core_masses_by_global_cells()
     )
     require(
-        len(supported_positive_modes) == 137,
+        len(seven_core_points) == 184,
+        "seven-core global boundary count changed",
+    )
+    seven_core_minimum: Fraction | None = None
+    seven_core_minimizers: list[tuple[int, ...]] = []
+    seven_core_count = 0
+    for core in combinations(range(1, 14), 7):
+        core_tuple = tuple(core)
+        mass_by_cells = seven_core_masses[core_tuple]
+        mass_by_union = safe_measure_by_union(core_tuple)
+        require(
+            mass_by_cells == mass_by_union,
+            f"seven-core evaluators disagree at {core_tuple}",
+        )
+        seven_core_count += 1
+        if seven_core_minimum is None or mass_by_cells < seven_core_minimum:
+            seven_core_minimum = mass_by_cells
+            seven_core_minimizers = [core_tuple]
+        elif mass_by_cells == seven_core_minimum:
+            seven_core_minimizers.append(core_tuple)
+    expected_seven_core_minimizer = (1, 5, 7, 8, 9, 11, 13)
+    require(seven_core_count == 1716, "seven-core census size changed")
+    require(
+        seven_core_minimum == CORE_FLOORS[7],
+        "seven-core floor changed",
+    )
+    require(
+        seven_core_minimizers == [expected_seven_core_minimizer],
+        "seven-core minimizer is no longer unique",
+    )
+
+    # The seven-core floor closes the d=6 ledger at N=91.
+    c_zero_91 = D6_JACKSON_N * (2 * D6_JACKSON_N**2 + 1) // 3
+    odd_sum_91 = sum(
+        (
+            Fraction(jackson_coefficient(D6_JACKSON_N, k), k * k)
+            for k in range(1, D6_RELATION_HEIGHT, 2)
+        ),
+        Fraction(0),
+    )
+    eta_cap_91 = jackson_eta_pi_cap(D6_JACKSON_N)
+    advertised_eta_cap_91 = Fraction(586539659, 126632692550)
+    require(c_zero_91 == 502411, "N=91 Jackson C_0 changed")
+    require(
+        odd_sum_91 > 614083,
+        "N=91 odd Jackson sum lost its simple floor",
+    )
+    require(
+        eta_cap_91 < advertised_eta_cap_91 < D6_ETA_SIMPLE_CAP,
+        "N=91 Jackson eta cap chain failed",
+    )
+
+    defect_six_plateau = CORE_FLOORS[7] * SAFE_MASS**6
+    defect_six_error_coefficient = 13 + 7 * SAFE_MASS**6
+    defect_six_margin = defect_six_plateau - (
+        defect_six_error_coefficient * D6_ETA_SIMPLE_CAP
+    )
+    expected_defect_six_plateau = Fraction(
+        73466285703125, 1002595001939388
+    )
+    expected_defect_six_error_coefficient = Fraction(
+        74619214508, 4750104241
+    )
+    expected_defect_six_margin = Fraction(
+        287560991216713, 1253243752424235000
+    )
+    require(
+        defect_six_plateau == expected_defect_six_plateau,
+        "defect-six plateau changed",
+    )
+    require(
+        defect_six_error_coefficient
+        == expected_defect_six_error_coefficient,
+        "defect-six error coefficient changed",
+    )
+    require(
+        defect_six_margin == expected_defect_six_margin > 0,
+        "defect-six margin failed",
+    )
+    eta_cap_90 = jackson_eta_pi_cap(90)
+    require(
+        defect_six_plateau
+        - defect_six_error_coefficient * eta_cap_90
+        < 0,
+        "the N=90 defect-six adjacent control unexpectedly closes",
+    )
+
+    # Exact support: the safe interval transform vanishes precisely at 41Z.
+    supported_positive_modes_140 = tuple(
+        k for k in range(1, D7_RELATION_HEIGHT + 1) if k % 41
+    )
+    require(
+        len(supported_positive_modes_140) == 137,
         "height-140 41-unit support census changed",
+    )
+    supported_positive_modes_180 = tuple(
+        k for k in range(1, D6_RELATION_HEIGHT + 1) if k % 41
+    )
+    require(
+        len(supported_positive_modes_180) == 176,
+        "height-180 41-unit support census changed",
     )
 
     # The named failure of all scalar one-peel sign rearrangements.
@@ -330,23 +464,48 @@ def main() -> None:
 
     print("THM-2179 exact reversed-peel relation-packet referee")
     print(
-        f"Jackson N={JACKSON_N}, relation_height={RELATION_HEIGHT}, "
-        f"C_0={c_zero}"
+        f"defect>=7: Jackson N={D7_JACKSON_N}, "
+        f"relation_height={D7_RELATION_HEIGHT}, C_0={c_zero_71}"
     )
-    print("odd_Jackson_sum>290903")
+    print("defect>=7: odd_Jackson_sum>290903")
     print(
-        f"eta_pi_cap<{advertised_eta_cap}"
-        f"<{ETA_SIMPLE_CAP}"
+        f"defect>=7: eta_pi_cap<{advertised_eta_cap_71}"
+        f"<{D7_ETA_SIMPLE_CAP}"
     )
-    print("N=70 fails the same exact global margin ledger")
+    print("defect>=7: N=70 fails the same exact global margin ledger")
     print(
         f"weakest_lifted_plateau={weakest_plateau} "
         f"(defect=7, core_size=6)"
     )
     print(f"universal_positive_margin>{weakest_margin}")
     print(
-        "nonzero_relation_modes="
-        f"{2 * len(supported_positive_modes)} signed 41-units"
+        "height_140_nonzero_relation_modes="
+        f"{2 * len(supported_positive_modes_140)} signed 41-units"
+    )
+    print(
+        f"seven_core_census={seven_core_count}, "
+        f"floor={seven_core_minimum}, "
+        f"unique_minimizer={seven_core_minimizers[0]}"
+    )
+    print(
+        f"defect=6: Jackson N={D6_JACKSON_N}, "
+        f"relation_height={D6_RELATION_HEIGHT}, C_0={c_zero_91}"
+    )
+    print("defect=6: odd_Jackson_sum>614083")
+    print(
+        f"defect=6: eta_pi_cap<{advertised_eta_cap_91}"
+        f"<{D6_ETA_SIMPLE_CAP}"
+    )
+    print(f"defect_six_lifted_plateau={defect_six_plateau}")
+    print(
+        "defect_six_error_coefficient="
+        f"{defect_six_error_coefficient}"
+    )
+    print(f"defect_six_positive_margin>{defect_six_margin}")
+    print("defect=6: N=90 fails the same exact global margin ledger")
+    print(
+        "height_180_nonzero_relation_modes="
+        f"{2 * len(supported_positive_modes_180)} signed 41-units"
     )
     print(f"hostile_small={HOSTILE_SMALL}")
     print(f"hostile_body={HOSTILE_BODY}")

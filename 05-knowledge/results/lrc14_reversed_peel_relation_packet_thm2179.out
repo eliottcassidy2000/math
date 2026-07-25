@@ -1,11 +1,20 @@
 THM-2179 exact reversed-peel relation-packet referee
-Jackson N=71, relation_height=140, C_0=238631
-odd_Jackson_sum>290903
-eta_pi_cap<357148519/60146943550<297/50000
-N=70 fails the same exact global margin ledger
+defect>=7: Jackson N=71, relation_height=140, C_0=238631
+defect>=7: odd_Jackson_sum>290903
+defect>=7: eta_pi_cap<357148519/60146943550<297/50000
+defect>=7: N=70 fails the same exact global margin ledger
 weakest_lifted_plateau=281440305453125/3162030390731916 (defect=7, core_size=6)
 universal_positive_margin>478970390236831/39525379884148950000
-nonzero_relation_modes=274 signed 41-units
+height_140_nonzero_relation_modes=274 signed 41-units
+seven_core_census=1716, floor=39965/211068, unique_minimizer=(1, 5, 7, 8, 9, 11, 13)
+defect=6: Jackson N=91, relation_height=180, C_0=502411
+defect=6: odd_Jackson_sum>614083
+defect=6: eta_pi_cap<586539659/126632692550<93/20000
+defect_six_lifted_plateau=73466285703125/1002595001939388
+defect_six_error_coefficient=74619214508/4750104241
+defect_six_positive_margin>287560991216713/1253243752424235000
+defect=6: N=90 fails the same exact global margin ledger
+height_180_nonzero_relation_modes=352 signed 41-units
 hostile_small=(1, 2, 3, 4, 6, 8)
 hostile_body=(95, 163, 187, 206, 208, 214, 332)
 hostile_body_mass=7521335361151/22863470734060

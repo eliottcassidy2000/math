@@ -1,20 +1,20 @@
 ---
 id: THM-2179
-title: "Reversed-peel relative Jackson relation packet at defect at least seven"
+title: "Reversed-peel relative Jackson relation packets at defect at least six"
 status: >
-  PROVED + VERIFIED-EXACT. At the stronger radius 3/41, every thirteen-speed
-  row of defect at least seven relative to any chosen dilated AP
-  g*{1,...,13} either has safe measure greater than
+  PROVED + VERIFIED-EXACT. At the stronger radius 3/41, relative to any chosen
+  dilated AP g*{1,...,13}, a thirteen-speed row of defect at least seven either
+  has safe measure greater than
   478970390236831/39525379884148950000 or has an outside-core-touching
-  integer relation of coefficient height at most 140, with every nonzero
-  coefficient a 41-unit. The proof lifts all retained AP-core factors onto
-  one torus coordinate and every outside-core factor onto its own coordinate,
-  thereby retaining every internal core relation and all higher overlap
-  cancellation. On the named hostile row all six scalar peel covariances are
-  positive, so replacing their absolute values by their signed sum gives
-  exactly the same negative level-one bound; the higher-overlap packet is
-  load-bearing. The relation alternative is not a closure of defect at least
-  seven or of LRC(14).
+  41-unit integer relation of coefficient height at most 140. At defect six,
+  the corresponding alternatives have safe margin
+  287560991216713/1253243752424235000 and coefficient height 180. The new
+  defect-six input is the independently exact seven-core floor
+  B_7=39965/211068, uniquely attained by {1,5,7,8,9,11,13}; Jackson N=91
+  closes its ledger while N=90 does not. The proof retains every internal
+  core relation and all higher overlap cancellation. These body-touching
+  relations need not genuinely cross the core/body cut, so neither packet
+  closes LRC(14).
 source: codex-2026-07-24-reversed-peel-relation-packet
 depends_on:
   - THM-2145
@@ -22,16 +22,17 @@ depends_on:
 related:
   - THM-2054
   - THM-2086
+  - THM-2166
   - THM-735
   - THM-2171
 script: 04-computation/lrc14_reversed_peel_relation_packet_thm2179.py
 output: 05-knowledge/results/lrc14_reversed_peel_relation_packet_thm2179.out
-script_sha256: 846b94e89a661367c98ff03b156cdf5af32a09e15a359723b914b48fe1c35d66
-output_sha256: 7863caa0824646b18cf4d894b59e9c342f7ab49bba23f6f172d58e476d4db2b6
+script_sha256: 8d3e990db5d656e7667e402b1d94f09b6e39dcd737f1fb7c6d4c64fc9d219949
+output_sha256: 7f5dfef83cad9ff167d521dd7d38f34bf1bad272e0d0c574edc0b32a7702ec7c
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2179 -- reversed-peel relative Jackson relation packet
+# THM-2179 -- reversed-peel relative Jackson relation packets
 
 Put
 
@@ -45,7 +46,7 @@ The radius in (1) is strictly larger than `1/14`. A positive-measure exit
 here therefore proves the ordinary lonely-runner target for that row, but a
 failure to obtain this stronger exit is not a counterexample to LRC(14).
 
-## 1. The dilated-AP defect-seven relation-packet alternative
+## 1. The dilated-AP defect-six relation-packet alternatives
 
 Let `V` be a set of thirteen distinct positive integers and fix any integer
 scale `g>=1`. Put
@@ -60,16 +61,22 @@ j=|F|,                  d=|E|=13-j.                   (2)
 
 Every speed lying in the chosen dilated AP is assigned to `F`; `E` is the
 disjoint remainder. Thus `d` is the defect of `V` relative to `A_g`. Suppose
-`d>=7`, equivalently `j<=6`.
+`d>=6`, equivalently `j<=7`. Define
+
+```text
+M_d = 478970390236831/39525379884148950000  if d>=7,
+      287560991216713/1253243752424235000   if d=6,
+
+H_d = 140 if d>=7,
+      180 if d=6.                                      (2a)
+```
 
 > **Theorem.** At least one of the following holds:
 >
 > 1. the stronger safe set has the explicit positive-measure exit
 >
 >    ```text
->    measure(G_h(V))
->      >478970390236831/39525379884148950000
->      >0;                                             (3)
+>    measure(G_h(V))>M_d>0;                            (3)
 >    ```
 >
 > 2. there are integers `(a_f)_(f in F)` and `(b_e)_(e in E)` such that
@@ -77,7 +84,7 @@ disjoint remainder. Thus `d` is the defect of `V` relative to `A_g`. Suppose
 >    ```text
 >    sum_(f in F) a_f f+sum_(e in E)b_e e=0,
 >    some b_e!=0,
->    |a_f|,|b_e|<=140,                                 (4)
+>    |a_f|,|b_e|<=H_d,                                 (4)
 >    ```
 >
 >    and every nonzero coefficient in (4) is not divisible by `41`.
@@ -124,26 +131,25 @@ most `2||x||`. Consequently the proof of THM-2145 gives
 eta_N=2 integral ||x||J_N(x)dx.                       (7)
 ```
 
-Take
+Choose the Jackson degree according to the defect:
 
-```text
-N=71,                    H=2N-2=140.                  (8)
-```
+| regime | `N` | `H=2N-2` | `C_0` | certified odd sum |
+|---|---:|---:|---:|---:|
+| `d>=7` | 71 | 140 | 238631 | `sum_(1<=k<=139, k odd) C_k/k^2>290903` |
+| `d=6` | 91 | 180 | 502411 | `sum_(1<=k<=179, k odd) C_k/k^2>614083` |
 
-For the integer Jackson coefficients `C_k` of THM-2145, exact arithmetic
-gives
-
-```text
-C_0=238631,
-sum_(1<=k<=139, k odd) C_k/k^2>290903.                (9)
-```
-
-The circle-distance Fourier series and `pi<355/113` therefore give
+Write these choices as `N_d` and `H_d`. For the integer Jackson coefficients
+`C_k` of THM-2145, the circle-distance Fourier series and `pi<355/113` give
+the strict caps
 
 ```text
 eta_71
  <357148519/60146943550
- <297/50000.                                          (10)
+ <297/50000,
+
+eta_91
+ <586539659/126632692550
+ <93/20000.                                           (10)
 ```
 
 The nonzero Fourier coefficients are also explicit. For `k!=0`,
@@ -152,15 +158,13 @@ The nonzero Fourier coefficients are also explicit. For `k!=0`,
 Fourier(1_G,k)=-sin(6 pi k/41)/(pi k).                (11)
 ```
 
-Every Jackson multiplier is positive throughout `[-140,140]`. Since `41`
+Every Jackson multiplier is positive throughout `[-H_d,H_d]`. Since `41`
 is coprime to `6`,
 
 ```text
-Fourier(q_71,k)!=0
+Fourier(q_(N_d),k)!=0
 iff
-k=0
-or
-0<|k|<=140 and 41 does not divide k.                  (12)
+k=0, or 0<|k|<=H_d and 41 does not divide k.          (12)
 ```
 
 This is the source of the `41`-unit assertion in (4).
@@ -185,10 +189,10 @@ chi_v dot lambda=v
 for every `v in V`. The actual line product and lifted product are
 
 ```text
-Q_line(t)=product_(v in V)q_71(vt),
+Q_line(t)=product_(v in V)q_(N_d)(vt),
 
-Q_lift(x)=product_(f in F)q_71(fx_0)
-          product_(i=1)^d q_71(x_i).                  (14)
+Q_lift(x)=product_(f in F)q_(N_d)(fx_0)
+          product_(i=1)^d q_(N_d)(x_i).               (14)
 ```
 
 The crucial point is that all retained-core factors still share `x_0`. Thus
@@ -199,7 +203,7 @@ Put
 
 ```text
 I=integral_T Q_line,
-A_F=integral_T product_(f in F)q_71(ft),
+A_F=integral_T product_(f in F)q_(N_d)(ft),
 J=integral_(T^(d+1))Q_lift
   =A_F(35/41)^d.                                      (15)
 ```
@@ -207,8 +211,8 @@ J=integral_(T^(d+1))Q_lift
 The product telescope, (7), and Haar invariance give
 
 ```text
-|I-measure(G_h(V))|<=13 eta_71,                       (16)
-|A_F-measure(G_h(F))|<=j eta_71.                      (17)
+|I-measure(G_h(V))|<=13 eta_(N_d),                    (16)
+|A_F-measure(G_h(F))|<=j eta_(N_d).                   (17)
 ```
 
 Now compare the finite Fourier expansions of `I` and `J`. A scalar
@@ -246,14 +250,14 @@ so the definition of `C` in (2) gives
 measure(G_h(F))=measure(G_h(C)).                       (20a)
 ```
 
-No coprimality or primitivity assumption on `g` is needed. THM-2146 gives the
-exact minimum
+No coprimality or primitivity assumption on `g` is needed. Put
 
 ```text
 B_j=min_({C subset {1,...,13}:|C|=j}) measure(G_h(C))
 ```
 
-for `0<=j<=6`:
+THM-2146 gives the rows through `j=6`. The exact companion to this theorem
+extends the census through `j=7`:
 
 | `j` | `B_j` |
 |---:|---:|
@@ -264,16 +268,27 @@ for `0<=j<=6`:
 | 4 | `239/492` |
 | 5 | `2729/7380` |
 | 6 | `153101/568260` |
+| 7 | `39965/211068` |
+
+For the last row, both a complete boundary-cell evaluator and an independently
+merged danger-interval evaluator inspect all
+`binomial(13,7)=1716` seven-cores. They agree term by term, and the minimizer
+is unique:
+
+```text
+C={1,5,7,8,9,11,13}.                                  (20b)
+```
 
 Equations (15)--(17), under the no-relation equality (20), imply
 
 ```text
 measure(G_h(V))
  >=B_j(35/41)^d
-   -(13+j(35/41)^d)eta_71.                            (21)
+   -(13+j(35/41)^d)eta_(N_d).                         (21)
 ```
 
-The seven exact comparisons `7<=d<=13`, `j=13-d`, give
+For `d>=7`, the seven exact comparisons `7<=d<=13`, `j=13-d`,
+give
 
 ```text
 B_j(35/41)^d
@@ -297,11 +312,33 @@ B_6(35/41)^7
 >0.                                                   (24)
 ```
 
-This proves (3) whenever (4) is absent, and therefore proves the theorem.
-The adjacent value `N=70` fails the same exact global margin ledger. Thus
-`N=71`, or coefficient height `140`, is certificate-minimal for this
-particular Jackson/core-floor calculation; no optimality for the true
-relation height is asserted. QED.
+For `d=6`, `j=7`, the newly exact row instead gives
+
+```text
+B_7(35/41)^6
+ =73466285703125/1002595001939388,
+
+13+7(35/41)^6
+ =74619214508/4750104241.                            (24a)
+```
+
+Insert the strict `eta_91<93/20000` cap from (10). The remaining margin is
+
+```text
+B_7(35/41)^6
+ -(13+7(35/41)^6)(93/20000)
+
+=287560991216713/1253243752424235000
+>0.                                                   (24b)
+```
+
+Thus both rows of (2a) prove (3) whenever (4) is absent. The adjacent values
+`N=70` for the `d>=7` uniform ledger and `N=90` for the `d=6` ledger fail
+the same rational-cap tests. Thus `N=71` and `N=91` close while their
+immediate predecessors `N=70` and `N=90` do not under the displayed
+rational-cap ledgers. This does not prove that no nonadjacent smaller cutoff
+could close through a different estimate, nor any optimality for the actual
+smoothing error or true relation height. QED.
 
 ## 5. Why the six signed scalar discrepancies cannot repair the hostile row
 
@@ -402,14 +439,15 @@ all of its overlaps before taking any Fourier absolute value.
 
 ## 6. Consequence, transfer, and exact boundary
 
-At every chosen scale `g`, the theorem converts the defect-`>=7` branch
-relative to `g{1,...,13}` into the exact dichotomy
+At every chosen scale `g`, the theorem converts the defect-`>=6` branch
+relative to `g{1,...,13}` into the exact dichotomies
 
 ```text
-strong 3/41 positive-measure exit
-or
-height-140 outside-core-touching relation packet with 41-unit
-coefficients.                                               (33)
+d>=7: strong 3/41 positive-measure exit
+       or height-140 outside-core-touching 41-unit relation;
+
+d=6:  strong 3/41 positive-measure exit
+       or height-180 outside-core-touching 41-unit relation. (33)
 ```
 
 This is a substantial reduction of the unbounded-height branch, but it is
@@ -426,32 +464,50 @@ not its closure:
 5. absence of the stronger `3/41` exit is not failure of the `1/14` LRC
    predicate.
 
+There is an important overlap but no dominance with THM-2166. For `g=1`,
+defect six, and zero ordinary `1/14` safe measure, the stronger safe exit in
+(33) is impossible, so THM-2179 forces a relation of global height `180`.
+This is numerically below THM-2166's far-factor height `298`. But THM-2179's
+relation may lie wholly in the outside-core body and supplies neither a
+nonzero cut carry nor a sparse core representation. THM-2166 instead forces
+a genuinely crossing relation, with far height `298`, core support at most
+two, core height `57`, and cut carry at most `708`. Moreover, THM-2179 allows
+an arbitrary chosen dilate `g{1,...,13}` and is an all-row
+strong-exit/relation dichotomy, whereas THM-2166 is stated for an undilated
+seven-core under the zero-safe premise. THM-2179 therefore has lower global
+height and broader trigger/scale scope; THM-2166 has the stronger
+crossing/carry/sparsity conclusion. Neither dominates.
+
 The reusable mechanism is broader than the displayed constants. Put all
 factors whose internal correlations must be preserved on common torus
 coordinates, put the genuinely free factors on separate coordinates, and
 compare line and lifted constant terms only after positive whole-product
 smoothing. A discrepancy then produces a bounded relation that touches a
 decorrelated coordinate. This is the relative-character idea of THM-2054
-combined with THM-2145's sharper Jackson kernel and THM-2146's exact
-small-core floor.
+combined with THM-2145's sharper Jackson kernel, THM-2146's small-core
+floors, and the exact seven-core extension above.
 
 ## 7. Exact referee
 
 The companion performs the following exact checks:
 
 1. direct convolution and the closed Jackson formula agree on all `141`
-   coefficients at `N=71`, and every multiplier in the support is positive;
-2. the odd Jackson sum, both rational eta caps, the seven defect margins, the
-   displayed fraction (24), and the hostile adjacent `N=70` check all pass;
-3. the height-`140` support has exactly `274` signed nonzero `41`-unit modes;
-4. the hostile row is evaluated by two independent rational interval
+   coefficients at `N=71` and all `181` coefficients at `N=91`, with every
+   multiplier in both supports positive;
+2. the two odd Jackson sums, all rational eta caps, the seven `d>=7`
+   margins, the `d=6` margin, and the adjacent `N=70` and `N=90` controls
+   all pass;
+3. two independent rational interval algorithms agree on every one of the
+   `1716` seven-cores and certify both `B_7` and its unique minimizer;
+4. the height-`140` and height-`180` supports respectively have exactly
+   `274` and `352` signed nonzero `41`-unit modes;
+5. the hostile row is evaluated by two independent rational interval
    algorithms--complete boundary cells and merged danger intervals;
-5. the six epsilon signs, their sum, the negative level-one bound, the full
+6. the six epsilon signs, their sum, the negative level-one bound, the full
    danger-depth distribution, the higher-overlap correction, and the
    aggregate covariance are checked exactly.
 
 Normal and optimized Python executions agree, and after newline normalization
-they match the stored LF transcript. An independent proof audit separately
-checked the character lift, the line and lift telescope directions, the
-body-touching scope, the `N=71` sharpening, and every displayed rational
-margin.
+they match the stored LF transcript. An independent proof audit checked the
+global arrangement, termwise union comparison, Jackson ledger, arbitrary
+scale lift, relation scope, and THM-2166 comparison, and accepted the addendum.
