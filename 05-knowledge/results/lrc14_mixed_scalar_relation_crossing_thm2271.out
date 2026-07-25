@@ -1,0 +1,12 @@
+THM-2271 exact referee
+mixed_tensor_degree_19 budget=13762/13589 bracket=-173/13589
+mixed_tensor_degree_20 budget=147/152 bracket=5/152 constant=8938717390/794280046581
+crossing_N_231 unit_lower=691/6930 deep_lower=1171/2002 joint_error=9/154 margin=-1649/13873860
+crossing_N_232 unit_lower=80291/803880 deep_lower=24701/42224 joint_error=27/464 margin=8134831/33943029120
+first_symmetric_bandwidth=232 scalar_crossing_height=462 positive_7_unit_modes=396
+generic_pair_atlas=3643 generic_unordered=1822
+thirteen_unit_pair_atlas=3279 thirteen_unit_unordered=1640
+odd_H_dependency_rays=(1, 3, 5, 7, 9, 11, 15, 17, 19)
+q_dependency_rays=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 20)
+max_scalar_pair_lift_height=9841
+ALL_CHECKS_PASS
