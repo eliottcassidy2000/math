@@ -62,8 +62,10 @@ Format per entry:
   rebuild and a genuine analytic bridge. The core was subsequently repaired
   and root-imported. THM-2101 is proved on paper by three product-free routes:
   additive monodromy, transcendental specialization, and a purely t-adic
-  Newton-packet proof. Their global wrappers and final `DvdK1` interface remain
-  unformalized in Lean.
+  Newton-packet proof. Their global wrappers remain unformalized in Lean.
+  Later `GMC2DvdKOmegaWiring.singlePolyCrux_holds` closed the independent
+  small-root route, so `GMC2Main.gmc2` is now unconditional; this does not
+  retroactively validate the failed build described above.
 
 ---
 
@@ -104,10 +106,10 @@ Format per entry:
 - **Correct framing:** HYP-8935 is an open dependency map. The later
   `GMC2OrbitProduct.lean` kernel-checks the abstract transitive orbit-product
   identity and fixed-product valuation-zero lemma, and
-  `GMC2PhiIrreducible.lean` now checks irreducibility. Small-root selection,
-  Hensel/descent, and the local/global bridge remain open for that route.
-  THM-2101 bypasses them on paper by monodromy and by one transcendental
-  specialization; the analytic and final `DvdK1` wrappers remain Lean work.
+  `GMC2PhiIrreducible.lean` now checks irreducibility. The claim audited here
+  remains invalid, but later exact Weierstrass, frame, transpose, and Omega
+  modules independently close the small-root route and prove
+  `GMC2Main.gmc2`. THM-2101's additive wrappers remain optional Lean work.
 
 ---
 
@@ -131,9 +133,10 @@ Format per entry:
   corollary are substantive: a specified unique balanced composition prevents
   coefficient cancellation. HYP-8931 is quarantined until its class predicate
   is restricted to a genuine nonempty/straddling lower face and a resulting
-  seed is wired into the NC2 descent. Independently,
-  `GMC2NC2.heightWitnessSupplier_holds` is now root-imported; general
-  `DvdK1` is the sole explicit formal premise.
+  seed is wired into the NC2 descent. Independently, the later root-imported
+  `GMC2Main.gmc2` closes GMC(2) unconditionally through
+  `GMC2DvdKOmegaWiring.singlePolyCrux_holds`; HYP-8931 is neither used nor
+  rehabilitated by that closure.
 
 ---
 

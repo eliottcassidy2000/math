@@ -74,13 +74,11 @@ and the [recovered unbounded 2026-07-22--23 ledger](SESSION-LOG-HISTORICAL-2026-
 
 ## NC2 / GMC formalization
 
-- THM-2022 proves NC2/GMC(2). THM-2101 gives two independent product-free paper
-  proofs of strict two-sided DvdK: additive monodromy, and one transcendental
-  specialization where a contour sum contradicts Galois incidence. Its
-  irreducibility and orbit/Lagrange core are kernel-checked; analytic wrappers
-  remain. General complex `DvdK1` is the sole formal endpoint premise, not a
-  paper gap. THM-2111 separately gives the
-  effective compound-root bound `binom(M+N,min(M,N))`.
+- THM-2022 proves NC2/GMC(2), and root-imported `GMC2Main.gmc2` is now an
+  unconditional kernel-pure Lean theorem. Its Ω-wiring derives the legacy
+  `DvdK1` endpoint from `singlePolyCrux_holds`. THM-2101's additive proofs
+  retain partial alternate wrappers; THM-2111 separately gives the effective
+  compound-root bound `binom(M+N,min(M,N))`.
 - HYP-8925/8930 give positive-coefficient and fixed-support unique-channel
   leaves. HYP-8932 adds a monomial-certificate engine and one kernel-checked
   `{-2,-1,1,2}` instance. `102/116` is a mass-40 bounded census; thirteen

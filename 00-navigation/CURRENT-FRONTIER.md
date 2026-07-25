@@ -253,13 +253,13 @@ addresses, endpoint owners, and both original odd-tail owner words.
 - **REFUTED for higher dimensions:** explicit GMC(3) counterexamples now exist;
   GMC is false for every dimension at least 3. See the current external preprint
   entry in [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md).
-- **FORMALIZATION PARTIAL:** normalized residue, face transport, finite-field
-  contradiction, irreducibility, and the additive orbit/Lagrange core are
-  kernel-checked and root-imported. The endpoints `nc2_of_dvdK1` and
-  `gmc2_of_dvdK1` retain general complex `DvdK1` as their sole formal premise.
-  THM-2101 proves strict two-sided DvdK on paper by three product-free additive
-  routes: monodromy, transcendental specialization, and a purely t-adic Newton-
-  packet proof. Their global wrappers remain Lean assembly. THM-2111 gives
+- **FORMALIZATION COMPLETE:** `GMC2Main.gmc2` is unconditional, root-imported,
+  and kernel-pure with only `propext`, `Classical.choice`, and `Quot.sound`.
+  Legacy endpoints `nc2_of_dvdK1` and `gmc2_of_dvdK1` retain `DvdK1` as a
+  reusable implication, while `GMC2DvdKOmegaWiring.singlePolyCrux_holds`
+  discharges the premise in the front-door theorem. THM-2101's three additive
+  routes remain valuable optional formalization targets, not proof blockers.
+  Its orbit/Lagrange core is already kernel-checked. THM-2111 gives
   the effective seed; THM-2067 is only the historical small-root-product route.
 
 ### Why THM-2022 works
@@ -296,11 +296,11 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 ### Live work
 
 Package THM-2022 for publication and sharpen THM-2111's compound degree from
-the binomial bound toward the conjecturally sharp `M+N`; the current result is
-already a paper-level removal of the external DvdK dependency. Formalization
-of general complex `DvdK1` is separate: reciprocal-monic Hensel constructs each
-ramified root, while the t-adic packet coefficient and final wrapper remain.
-Positive/two-charge/unique-channel formal leaves are substantive, not general.
+the binomial bound toward the conjecturally sharp `M+N`. The external DvdK
+dependency is removed both on paper and in the unconditional Lean front door.
+Formalizing THM-2101's additive monodromy, transcendental, and t-adic packet
+routes remains useful independent corroboration, not a dependency of
+`GMC2Main.gmc2`. Positive/two-charge/unique-channel leaves are reusable special cases, not the general mechanism.
 But HYP-8931's `LowestFaceUniqueChannel P` class is inconsistent by the empty
 level-set witness `lambda=0, delta=-1, F=empty` (MISTAKE-240), so its
 kernel-checked implication is vacuous and not wired into NC2. Its `98/116`

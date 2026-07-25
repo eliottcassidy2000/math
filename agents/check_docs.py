@@ -133,7 +133,8 @@ for relative, prefix in {
 require(
     "00-navigation/START-HERE.md",
     "LRC(14)", "OPEN", "q <= 25", "THM-2084", "THM-2081--2087",
-    "THM-2088--2093", "HeightWitnessSupplier", "Anchor / Niche / Wildcard",
+    "THM-2088--2093", "GMC2Main.gmc2", "singlePolyCrux_holds",
+    "Anchor / Niche / Wildcard",
 )
 require(
     "00-navigation/CURRENT-FRONTIER.md",
@@ -149,12 +150,14 @@ require(
 require(
     "00-navigation/SESSION-LOG.md",
     "LRC(14)", "OPEN", "THM-2092", "MISTAKE-240", "MISTAKE-241",
-    "DvdK1", "sole formal", "Anchor / Niche / Wildcard",
+    "DvdK1", "GMC2Main.gmc2", "singlePolyCrux_holds",
+    "Anchor / Niche / Wildcard",
 )
 require(
     "05-knowledge/hypotheses/INDEX.md",
     "THM-2091", "THM-2094", "THM-2095", "THM-2096", "CLAIMED STUB", "THM-2092", "HYP-8931", "HYP-8932",
-    "HYP-8935", "MISTAKE-240", "MISTAKE-241", "DvdK1", "sole endpoint premise",
+    "HYP-8935", "MISTAKE-240", "MISTAKE-241", "DvdK1",
+    "GMC2Main.gmc2", "singlePolyCrux_holds",
 )
 require(
     "01-canon/MISTAKES.md",
