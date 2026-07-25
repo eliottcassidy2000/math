@@ -54,17 +54,17 @@ formalization:
   - 04-computation/lean/TournamentH7/TournamentH7/GMC2NC2Capstone.lean
   - 04-computation/lean/TournamentH7/TournamentH7/GMC2HeightWitness.lean
   - 04-computation/lean/TournamentH7/TournamentH7/GMC2Formalization.lean
+  - 04-computation/lean/TournamentH7/TournamentH7/GMC2DvdKOmegaWiring.lean
+  - 04-computation/lean/TournamentH7/TournamentH7/GMC2Main.lean
 formalization_root_imported: true
 formalization_status: >
-  PARTIAL at one explicit analytic interface. The concrete
-  normalized three-case residue, exact support-face seed transport, and the
-  finite-field zero/nonzero contradiction are kernel-checked. GMC2NC2 derives
-  NC2 and GMC(2) from DvdK1. GMC2HeightWitness proves and root-imports
-  `heightWitnessSupplier_holds`, removing that former interface. The Lean
-  proposition `DvdK1` is now the sole explicit premise; THM-2111 proves its
-  mathematical content internally and effectively (THM-2067 is an alternate
-  historical route), but the
-  small-root/compound proof has not been formalized.
+  COMPLETE for the GMC(2) statement through an independent checked route:
+  root-imported `GMC2Main.gmc2` is unconditional, and
+  `GMC2DvdKOmegaWiring.singlePolyCrux_holds` discharges the legacy `DvdK1`
+  endpoint with only Mathlib's standard axioms. The specific Frobenius
+  lowest-face implementation listed above remains a valuable partial
+  formalization of this theorem's paper mechanism; it is no longer the
+  formal proof boundary.
 ---
 
 # THM-2022 -- Frobenius amplification of the lowest balanced Wick face

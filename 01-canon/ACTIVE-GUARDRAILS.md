@@ -99,9 +99,9 @@
     THM-2022 mechanism is prime-local initial-form normalization.
 32. **THM-2033 is special-matrix scope.** Its determinant identity does not
     replace the general scalar Wick moment.
-33. **Paper proof is not full Lean proof.** THM-2022 is proved, and
-    `GMC2HeightWitness.heightWitnessSupplier_holds` is kernel-checked and root-imported.
-    General complex `DvdK1` is the sole explicit premise. HYP-8930's
+33. **Distinguish legacy endpoints from the front door.** `nc2_of_dvdK1` and
+    `gmc2_of_dvdK1` still expose `DvdK1`, but root-imported `GMC2Main.gmc2`
+    now discharges the crux unconditionally and kernel-purely. HYP-8930's
     fixed-support unique-channel lemma is substantive. HYP-8931 is vacuous:
     `lambda=0, delta=-1, F=empty`; `98/116` is a bounded census, not a theorem
     (MISTAKE-240).
@@ -115,7 +115,7 @@
      corollary requires `F(u^k)=0` for every nonzero charge, not merely a
      functional described informally as depending on charge.
 36a. **Require dependency-aware builds.** THM-2101's first module had `sorryAx`;
-     its repaired core and reciprocal-root module build, but both additive paper routes still need Lean wrappers (MISTAKE-243).
+     its repaired additive core builds, but its alternate global wrappers remain partial; this no longer blocks `GMC2Main.gmc2` (MISTAKE-243).
 36b. **A Newton-face Wronskian is not DvdK.** MISTAKE-244/THM-2102: retain the
      proper-power first-defect quotient; a collapsed linear edge polynomial is
      not automatically a weighted-linear coordinate or a terminating descent.

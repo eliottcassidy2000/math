@@ -1,7 +1,8 @@
 ---
 source: opus-2026-07-24-puzzle-atlas
-status: SYNTHESIS. The proved outputs are THM-2159 and THM-2162. Every other
-  bridge below is explicitly typed as proved input, live proposal, or no-go.
+status: SYNTHESIS. The proved outputs are THM-2159, THM-2162, THM-2165, and
+  THM-2169; incoming THM-2163/2164/2166 are integrated as proved inputs.
+  Every other bridge below is explicitly typed as proved, live, or no-go.
 related:
   - THM-2022
   - THM-2047
@@ -12,6 +13,10 @@ related:
   - THM-2161
   - THM-2162
   - THM-2163
+  - THM-2164
+  - THM-2165
+  - THM-2166
+  - THM-2169
   - MISTAKE-245
 ---
 
@@ -28,7 +33,8 @@ to identify the objects rather than force a common vocabulary.
   local costs.
 - Shunia's quotient-ring paper is `arXiv:2404.00332`. Its Section 6 states
   the finite modular root formula as Conjecture 6.1 after proving only a limit
-  representation. THM-2159 now proves the finite formula.
+  representation. THM-2159 proves it at the stated exponent, and THM-2165
+  strengthens that exponent from `2a^n` to `a+1`.
 - The Annals paper is Ben Green, *Roth's theorem in the primes*. The relevant
   technique is a restriction estimate plus a structured/uniform split, not
   “primes make every sparse set random.”
@@ -81,16 +87,19 @@ THM-2159 rescales the coefficients of
 
 by `rho^r`, `rho=a^(1/n)`. The recurrence becomes a lazy directed random
 walk on the `n`-cycle. Its nonconstant Fourier modes contract by an explicit
-factor, and `K=2a^n` makes the last-coefficient ratio lie within half the
-algebraic distance
+factor. THM-2165 sharpens the gap estimate: already `K=a+1` makes the
+last-coefficient ratio lie within half the algebraic distance
 
 ```text
 min(rho-floor(rho),ceil(rho)-rho)>=1/(n a^(n-1))
 ```
 
-of `rho`. Kronecker evaluation at `X=a^K` is lossless and the lower digits
-perturb the ratio by less than the other half. Natural division therefore
-extracts the exact integer root.
+of `rho`. Kronecker evaluation at `X=a^K` stays globally below the modulus
+and the lower positions perturb the ratio by less than the other half.
+Natural division therefore extracts the exact integer root. The stronger
+digitwise-no-carry surrogate fails once, at `(3,2,K+1)`, without harming the
+global evaluation. Moreover `K=a` fails at `(8,4)` and `(14,4)`, so `+1` is
+the least nonnegative uniform additive constant.
 
 The mechanism is:
 
@@ -140,7 +149,7 @@ with its signed endpoint current intact -- reveals cancellation.
 | source | target | map | preserved predicate | destroyed information | status / cheapest test |
 |---|---|---|---|---|---|
 | nonadditive unknotting | LRC one-far discrepancy | common intermediate knot -> whole core safe union | total post-operation cost/measure | attribution to separately optimized summands | **REALIZED**, THM-2162 |
-| Shunia quotient ring | exact integer root | coefficient scaling -> cyclic Markov walk | last-coordinate ratio | raw modular appearance | **REALIZED**, THM-2159 |
+| Shunia quotient ring | exact integer root | coefficient scaling -> cyclic Markov walk | last-coordinate ratio | raw modular appearance | **REALIZED**, THM-2159/2165 |
 | Green restriction | LRC relation dichotomy | uniform Fourier mass -> relation-free branch | structured/uniform split | owner labels if scalarized | **ALREADY REALIZED**, THM-2051/2054 |
 | Ramanujan sums | endpoint cocycle | group owner endpoints by exact period after integrating | signed harmonic current | individual boundary owner unless retained | **LIVE**, exact finite form is THM-2162; arbitrary-body form THM-884 |
 | partial cube | phase-height cells | wall cells -> even-cycle/Theta carrier | adjacency and component topology | interval length and signed current | **NO-GO alone**; THM-2162 shows Euler/BV split |
@@ -182,9 +191,12 @@ expose a face/relation/carry
   -> descend or isolate.
 ```
 
-This is the natural interface between THM-2145's `6+7` crossing carry and
-the reserved THM-2163 radix descent. The prime must be selected from the
-actual carry state, not prescribed before the row is seen.
+This is now realized twice. THM-2163 proves exact radix carry descent and
+its converse while identifying the quotient-owner mask as the termination
+sidecar. THM-2166 retains a seven-speed core as one BV object, smooths only
+the six far coordinates factorwise, and forces a crossing carry of magnitude
+at most `708`. The base or prime must still be selected from the actual carry
+state, not prescribed before the row is seen.
 
 ## 6. Why the raw analogies fail together
 
@@ -213,18 +225,20 @@ the coordinate on which its hypothesis acts.
    condition. Test the two-swap structured collar, but first derive a
    two-new-comb signed primitive which retains their joint overlap; do not
    sum two absolute one-comb errors.
-2. **Relation carry.** Combine THM-2145 with THM-2163. At each radix step,
-   choose a prime avoiding the current coefficient/carry minors. The cheapest
-   hostile control is THM-2161's AP-mimic family, which defeats every
-   preselected prime bank.
+2. **Ranked relation carry.** THM-2163/2166 now supply the exact carrier.
+   Combine THM-2164's second independent height-105 relation with the
+   low-carry crossing relation, choosing a base only after exposing a nonzero
+   relation minor. The cheapest hostile control remains THM-2161's AP-mimic
+   family, which defeats every preselected bank.
 3. **Endpoint Hall carrier.** Build the weighted Ferrers comparison matrix
    between left and right endpoint `H`-values. Frobenius--Koenig is legal only
    if the weight threshold implies the target signed sum. Test first on the
    exact `10->20` equality row and on the AP/GW isolated controls.
-4. **Shunia exponent sharpening.** The proof uses deliberately coarse
-   contraction. Determine the least uniform `K(a,n)` which still beats both
-   the algebraic quantum and the Kronecker digit error. This is separate from
-   the proved sufficiency of `2a^n`.
+4. **Relation-conditioned Q108.** THM-2169 proves that every twelve-speed
+   deletion of a zero-safe thirteen-row has a relation of height at most
+   `11130` (or `4558` away from a directed divisibility lock). Re-run the
+   Q108 stability program on this bounded-relation locus before attacking
+   arbitrary twelve-sets.
 
 ## 8. Meta-pattern candidate
 
@@ -233,7 +247,8 @@ Evidence now comes from four distinct threads:
 - NC2: expose the lowest balanced face, then choose the prime;
 - Shunia: rescale to the spectral walk, then compare with the integer quantum;
 - LRC one-swap: form the whole core union, then integrate its signed boundary;
-- relation carry: expose the crossing frequency, then choose the radix.
+- relation carry: expose the crossing frequency, then choose the radix;
+- LRC deletion: expose two relation packets, then eliminate the chosen runner.
 
 The candidate rule is:
 
@@ -244,7 +259,5 @@ EXPOSE FIRST, CHOOSE SCALE SECOND.
 Trigger: local costs, fixed moduli, or unsigned norms are losing large
 cancellations. Counterindication: the scale is part of the problem statement
 and cannot adapt, or the exposure map forgets the target predicate. Evidence:
-THM-2022, THM-2159, THM-2161/2162, and THM-2145/2163.
-
-This should be promoted to META-PATTERNS only after THM-2163 is audited:
-at present its fourth instance is a live provisional proof, not canon.
+THM-2022, THM-2159/2165, THM-2161/2162, and
+THM-2145/2163/2166/2169.

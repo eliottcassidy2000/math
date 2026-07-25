@@ -721,7 +721,7 @@ import TournamentH7.LRCMod23Spread
 
 import TournamentH7.GMC2HermiteNoCommonRoot  -- kind-pasteur-S128c120..c122 / THM-1585 (domination false) + THM-1660 (orthogonality closure) + THM-1620 (Pochhammer bridge: toral=Legendre, radial=Hermite) + THM-1670 (order = D, so ThreeTerm descent is (M,N)=(1,1) only). ThreeTerm.no_common_root: any monic 3-term recurrence with b n != 0 has no common root; replaces klein-S351's false Gamma-domination. Hermite/truncated-exp instances. No sorry/native_decide
 import TournamentH7.GMC2MomentBasics
-import TournamentH7.GMC2Formalization  -- codex/death-star-2026-07-22: normalized residue plus root-imported heightWitnessSupplier_holds; general DvdK1 is the sole explicit premise. No sorry/native_decide
+import TournamentH7.GMC2Formalization  -- conditional Frobenius/height surface; the unconditional kernel-pure front door is imported below as GMC2Main. No sorry/native_decide
 
 import TournamentH7.TNCDetectionDepth  -- kind-pasteur-S128c124 / THM-1710: TNC detection depth = D. zeros_propagate: D consecutive zeros of a D-th order recurrence (nonvanishing leading coeff) propagate to all later terms, so the toral nullcone is cut out by the first D moments. Caps opus THM-1685 level count. No sorry/native_decide
 
