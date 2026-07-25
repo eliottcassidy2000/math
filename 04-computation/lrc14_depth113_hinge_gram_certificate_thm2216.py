@@ -244,6 +244,74 @@ def run():
         f"minimizer record changed: {records}",
     )
 
+    # Exact cut-metric polarization.  Starting at shallow label 1, choose
+    # each new landmark by farthest-first traversal in the truncated l1
+    # metric.  Landmark distance differences lower-bound every pair distance.
+    energies = excess.sum(axis=1, dtype=np.int64)
+    metric_rhs = (
+        energies[:, None]
+        + energies[None, :]
+        - 2 * (residual_weights - MASK_COUNT * THETA)
+    )
+    landmark_lower = np.zeros_like(metric_rhs)
+    minimum_to_bank = np.full(
+        len(shallow),
+        np.iinfo(np.int64).max,
+        dtype=np.int64,
+    )
+    landmark_labels = []
+    landmark_coverage = []
+    landmark = 0
+    for step in range(7):
+        distances = np.abs(excess - excess[landmark]).sum(
+            axis=1,
+            dtype=np.int64,
+        )
+        landmark_labels.append(int(shallow[landmark]))
+        minimum_to_bank = np.minimum(minimum_to_bank, distances)
+        landmark_lower = np.maximum(
+            landmark_lower,
+            np.abs(distances[:, None] - distances[None, :]),
+        )
+        covered = landmark_lower[upper_triangle] > metric_rhs[upper_triangle]
+        landmark_coverage.append(int(covered.sum()))
+        if step < 6:
+            landmark = int(np.argmax(minimum_to_bank))
+
+    require(
+        landmark_labels == [1, 183, 799, 244, 1098, 659, 824],
+        f"farthest-first landmark labels changed: {landmark_labels}",
+    )
+    require(
+        landmark_coverage
+        == [513548, 514564, 514588, 514597, 514603, 514603, 514605],
+        f"landmark coverage changed: {landmark_coverage}",
+    )
+    require(
+        landmark_coverage[-1] == len(upper_margins),
+        "seven-landmark metric certificate did not close every pair",
+    )
+
+    binding_left = int(np.flatnonzero(shallow == 5)[0])
+    binding_right = int(np.flatnonzero(shallow == 1098)[0])
+    binding_distance = int(
+        np.abs(excess[binding_left] - excess[binding_right]).sum(
+            dtype=np.int64,
+        )
+    )
+    binding_energies = (
+        int(energies[binding_left]),
+        int(energies[binding_right]),
+    )
+    binding_kernel = (
+        binding_energies[0] + binding_energies[1] - binding_distance
+    ) // 2
+    require(
+        (*binding_energies, binding_kernel, binding_distance)
+        == (654, 1458, 302, 1508),
+        "binding cut/Gram polarization drift",
+    )
+
     print("depth-(1,1,3) fixed-threshold Hellinger-Gram certificate")
     print("arithmetic=exact integers; floating_point=none")
     print(
@@ -264,6 +332,12 @@ def run():
     print(f"minimum_margin={minimum}/{scale_squared}")
     print(f"minimizers={records}")
     print(f"margin_matrix_digest={digest(margin_numerators)}")
+    print(f"farthest_first_landmarks={landmark_labels}")
+    print(f"landmark_pair_coverage={landmark_coverage}")
+    print(
+        "binding_cut_gram=(E_5,E_1098,K,D)="
+        f"{(*binding_energies, binding_kernel, binding_distance)}"
+    )
 
 
 if __name__ == "__main__":

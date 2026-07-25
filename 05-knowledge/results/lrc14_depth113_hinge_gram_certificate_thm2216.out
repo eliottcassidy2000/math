@@ -9,3 +9,6 @@ minimum_margin_numerator=786095718332
 minimum_margin=786095718332/10000000000
 minimizers=[(5, 1098, 13580, 4413904281668, 786095718332)]
 margin_matrix_digest=55c6b5256310e085fd2b67a5f83a084e3a3441b64eae88f0b2fac73793d481e3
+farthest_first_landmarks=[1, 183, 799, 244, 1098, 659, 824]
+landmark_pair_coverage=[513548, 514564, 514588, 514597, 514603, 514603, 514605]
+binding_cut_gram=(E_5,E_1098,K,D)=(654, 1458, 302, 1508)

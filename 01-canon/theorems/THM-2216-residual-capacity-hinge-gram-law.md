@@ -6,10 +6,17 @@ status: >
   the top-p sum of the pointwise meet of two singleton capacity rows has an
   exact integer Ky--Fan hinge formula. Its tail is an exact positive
   semidefinite superlevel-incidence Gram kernel K_theta=R_theta R_theta^T.
+  The same embedding has an integral l1 cut metric D_theta, and exact
+  polarization recovers K_theta from D_theta plus its diagonal energy.
+  This yields a metric-separation form of the exclusion criterion and
+  rigorous landmark lower certificates for D_theta.
   A lower-dimensional Hellinger Gram kernel gives a rigorous upper bound
   after integer upward rounding. On the scalar depth-(1,1,3) carrier, the
   threshold theta=2612 certifies all 514,605 unordered shallow-blocker
   pairs with minimum exact rounded-Gram certificate margin 78.6095718332.
+  At the same threshold, seven farthest-first cut-metric landmarks certify
+  every pair through triangle inequalities; the first landmark alone
+  certifies 513,548 pairs.
   This independently recertifies that finite profile and provides a
   uniform truncated-correlation target for the corresponding all-depth
   residual-meet problem. No such all-depth bound is proved here, and this
@@ -24,10 +31,11 @@ related:
   - THM-2205-scalar-depth-113-exact-lift-capacity-exclusion
   - THM-2207-scalar-depth-123-labelled-guard-hole-exclusion
   - THM-2218-labelled-guard-hole-fourier-and-signed-lift-energy
+  - THM-2221-tournament-context-cut-metric-and-pinned-transport-response
 script: 04-computation/lrc14_depth113_hinge_gram_certificate_thm2216.py
 output: 05-knowledge/results/lrc14_depth113_hinge_gram_certificate_thm2216.out
-script_sha256: 6b0812be6ba3ad3f84cbc994cb3f8020d1972182b5056215414971abd60d4101
-output_sha256: 675b03c1f9c329dbb8711c57445226a41ef1dbf40d7aa4fc499d25e24d3c390c
+script_sha256: 48957157479a220fec1015e12e085267cab36a735a8e5005f15df7aba3f9c1fe
+output_sha256: 1d5c5cba196c62c769a32b1e132b3c2bcf7cc557f18d61cc610a8c48b08df2cc
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -179,6 +187,83 @@ Thus the entire pair table is the positive semidefinite Gram matrix
 ```text
 K_theta=R_theta R_theta^T.                          (16)
 ```
+
+### Cut-metric polarization and landmark certificates
+
+Write the same superlevel row as a vector
+
+```text
+Phi_theta(u)_(q,s)
+ =1_{theta<s<=C_u(q)}.                              (16a)
+```
+
+Its diagonal energy, inner product, and squared distance are
+
+```text
+E_theta(u)
+ =||Phi_theta(u)||_2^2
+ =sum_q x_(u,theta)(q)
+ =K_theta(u,u),
+
+K_theta(u,v)=<Phi_theta(u),Phi_theta(v)>,
+
+D_theta(u,v)
+ =||Phi_theta(u)-Phi_theta(v)||_2^2
+ =sum_q |x_(u,theta)(q)-x_(v,theta)(q)|.            (16b)
+```
+
+Because the features are binary, `D_theta` is simultaneously a squared
+Hilbert distance, an integral `l1` metric, and a nonnegative sum of
+elementary cut semimetrics. Exact polarization gives
+
+```text
+K_theta(u,v)
+ =[E_theta(u)+E_theta(v)-D_theta(u,v)]/2.           (16c)
+```
+
+This is precisely THM-2221's context-cut construction applied to the
+superlevel features `(q,s)`, with owners as the core labels. The two
+theorems are therefore two views of one embedding, not merely analogous:
+THM-2216 reads its Gram overlap, while THM-2221 reads its Hamming
+transport response. The diagonal energy is a necessary sidecar.
+Complementing a feature column preserves its cut metric but can change
+both `E_theta` and `K_theta`.
+
+Substitution into (13) yields the exact metric form
+
+```text
+Top_p(m_uv)
+ =min_theta [
+    p theta
+    +(E_theta(u)+E_theta(v)-D_theta(u,v))/2
+   ].                                               (16d)
+```
+
+Consequently the one-threshold exclusion criterion is equivalently
+
+```text
+D_theta(u,v)
+ >E_theta(u)+E_theta(v)-2(W_uv-p theta).            (16e)
+```
+
+Unlike a raw overlap ordering, `D_theta` admits metric acceleration. For
+any landmark owner `a`, the triangle inequality gives
+
+```text
+D_theta(u,v)
+ >=|D_theta(u,a)-D_theta(v,a)|.                     (16f)
+```
+
+Thus a landmark bank `A` already certifies exclusion whenever
+
+```text
+max_(a in A)|D_theta(u,a)-D_theta(v,a)|
+ >E_theta(u)+E_theta(v)-2(W_uv-p theta).            (16g)
+```
+
+This is a rigorous route from a small number of owner--landmark distances
+to many pair exclusions. It does not assert that a uniformly small
+landmark bank exists at every depth.
 
 Combining (3), (6), and (13), a `p`-mask cover would imply, for every
 integer threshold,
@@ -353,6 +438,35 @@ minimum margin=786095718332/10^10
 Thus five terminal masks cannot cover the residual for any shallow pair.
 This is an independent fixed-threshold recertificate of the finite
 depth-`(1,1,3)` exclusion already proved in THM-2205.
+
+The exact cut metric supplies a much smaller second certificate. Start
+with shallow label `1`, and repeatedly add an owner maximizing its minimum
+`D_theta`-distance from the current bank, using the first index to break
+ties. The first seven landmark labels are
+
+```text
+[1,183,799,244,1098,659,824].                       (28a)
+```
+
+After each addition, the numbers of unordered pairs certified by (16g)
+are
+
+```text
+[513548,514564,514588,514597,514603,514603,514605]. (28b)
+```
+
+Thus seven owner--landmark distance columns certify all `514605` pairs.
+This avoids an all-pairs computation of the `13182`-coordinate truncated
+label overlap; the separate residual-size table `W_uv` is still retained.
+At the binding Hellinger pair `(5,1098)`, direct polarization gives
+
+```text
+(E_5,E_1098,K,D)=(654,1458,302,1508),
+2K=E_5+E_1098-D.                                    (28c)
+```
+
+The landmark result is a finite exact compression theorem for this
+carrier, not yet an all-depth uniform landmark bound.
 
 The script uses no floating point and no `assert` for load-bearing checks.
 Normal and `python -O` runs are byte-identical.  The singleton-capacity
