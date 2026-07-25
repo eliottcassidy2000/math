@@ -4,7 +4,8 @@ title: "Directed-triangle forced quotient frustration"
 status: >
   PROVED + VERIFIED-EXACT. In THM-2221's equal-block pinned transport
   model, every common quotient R has an explicit quadratic forced-pair
-  lower envelope F_R(X)<=G(X). For the directed triangle this is
+  lower envelope F_R(X)<=G(X), and F_R(X)=0 exactly for the scaled
+  whole-block automorphisms NP_sigma of R. For the directed triangle this is
   F(X)=sum_(i,j)X_ij X_(i+1,j-1). Hall decomposition into permutation
   layers gives an exact rotation/reflection formula. The zero layer consists precisely of the
   three whole-block cyclic rotations. Every other transport pays the sharp
@@ -21,8 +22,8 @@ related:
   - THM-2242-tournament-complement-transport-and-knot-kernel-green-rigidity
 script: 04-computation/tournament_directed_triangle_frustration_thm2249.py
 output: 05-knowledge/results/tournament_directed_triangle_frustration_thm2249.out
-script_sha256: 64718d49b4588e0a46d60a506229f8fb2d6c84b7928fd6a6b8f94bb50b6b85b3
-output_sha256: f48e0616f6cd7df45d09715feb087737b4e6d71e7e8b10167fe3871d476417cf
+script_sha256: 7a9c40fe6fcc4578c150c7c1f4cf6b59d57bbbfa2238691ba2b52e119239e237
+output_sha256: db3d219c36975ed3deebaf113615b4238e7123492f5df3f571ef53e44969c1f8
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -131,14 +132,15 @@ Thus `F` is not an analogy or a relaxation imported from another problem.
 It counts a literal, canonically specified subset of the reversals in every
 bijection with transport `X`.
 
-## 2. Hall layers and the six-type table
+## 2. Hall layers and the universal zero theorem
 
+Return temporarily to an arbitrary common quotient `R` on label set `C`.
 View `X` as the multiplicity matrix of an `N`-regular bipartite multigraph
-between source and target labels. Hall's theorem gives a perfect matching.
-Delete it and repeat. Hence
+between two copies of `C`. Hall's theorem gives a perfect matching. Delete
+it and repeat. Hence
 
 ```text
-X=sum_(t=1)^N P_(sigma_t),       sigma_t in S_3.            (9)
+X=sum_(t=1)^N P_(sigma_t),       sigma_t in Sym(C).         (9)
 ```
 
 This is the integral Birkhoff decomposition, proved here by repeated
@@ -147,20 +149,82 @@ matching rather than by a convexity claim.
 For two permutation layers define
 
 ```text
-f(sigma,tau)
- =#{i:tau(i+1)=sigma(i)-1}.                               (10)
+f_R(sigma,tau)
+ =#{(i,k):i->_R k and tau(k)->_R sigma(i)}.                (10)
 ```
 
-Expanding (5) through (9) gives
+Expanding (5a) through (9) gives
 
 ```text
-F(X)=sum_(s,t) f(sigma_s,sigma_t).                        (11)
+F_R(X)=sum_(s,t) f_R(sigma_s,sigma_t).                    (11)
+```
+
+This proves the universal zero-layer classification
+
+```text
+F_R(X)=0
+ iff X=NP_sigma for one sigma in Aut(R).                   (12)
+```
+
+First, `f_R(sigma,sigma)` is exactly the number of quotient arcs reversed
+by `sigma`. Thus (11) can vanish only if every layer `sigma_t` is an
+automorphism.
+
+It remains to show that two distinct automorphism layers cannot coexist in
+a zero sum. Suppose `sigma,tau in Aut(R)` and both cross terms vanish.
+Conjugate target labels by `sigma^(-1)` and put
+
+```text
+alpha=sigma^(-1) tau.                                     (12a)
+```
+
+Then, for every source arc `i->k`, the two zero conditions say
+
+```text
+alpha(k)=i or i->alpha(k),
+alpha(i)=k or alpha(i)->k.                                (12b)
+```
+
+Assume `alpha(i)!=i`. If `alpha(i)->i`, the second condition in (12b)
+gives
+
+```text
+N^+(i) subset N^+(alpha(i)).                              (12c)
+```
+
+The two sets have equal cardinality because `alpha` is an automorphism, so
+they would be equal. But `i` belongs to the right set and not the left, a
+contradiction. Hence
+
+```text
+i->alpha(i).                                               (12d)
+```
+
+An automorphism cannot have a two-cycle, since swapping the two vertices
+would reverse their mutual arc. Along the `alpha`-orbit of `i`, repeatedly
+apply the first condition in (12b) to (12d). It gives
+
+```text
+i->alpha(i), i->alpha^2(i), ..., i->alpha^(m-1)(i),        (12e)
+```
+
+where `m>=3` is the orbit length. Applying `alpha` to the last arc gives
+`alpha(i)->i`, contradicting (12d). Therefore `alpha=id` and `sigma=tau`.
+Every layer in (9) is the same automorphism, proving the forward direction
+of (12); the reverse direction is immediate.
+
+## 3. The directed-triangle six-type table
+
+Now return to `R=C_3`. Equation (10) becomes
+
+```text
+f(sigma,tau)=#{i:tau(i+1)=sigma(i)-1}.                     (12f)
 ```
 
 Write the three rotations and reflections as
 
 ```text
-R_a(i)=i+a,             H_a(i)=a-i,        a in Z/3Z.     (12)
+R_a(i)=i+a,             H_a(i)=a-i,        a in Z/3Z.     (13a)
 ```
 
 The complete interaction table is
@@ -173,7 +237,8 @@ f(H_a,H_b)=3 if a=b, and 0 otherwise.                     (13)
 
 Each line follows directly from the single congruence in (10). Suppose a
 decomposition (9) contains `r_a` copies of `R_a` and `s_a` copies of `H_a`;
-put `r=sum_a r_a`, `s=sum_a s_a`, so `r+s=N`. Equations (11)--(13) give the
+put `r=sum_a r_a`, `s=sum_a s_a`, so `r+s=N`. Equations (11), (13a), and
+(13) give the
 exact layer formula
 
 ```text
@@ -187,7 +252,7 @@ Although a transport can have more than one matching decomposition, the
 right side always equals the intrinsic expression (5). No uniqueness of
 the layer counts is asserted or needed.
 
-## 3. Exact zero layer and sharp positive floor
+## 4. Exact zero layer and sharp positive floor
 
 Equation (14) first gives
 
@@ -259,7 +324,7 @@ This is the first positive universal core tax for the nontransitive
 directed-triangle quotient. It grows linearly with block size even though
 the three automorphism transports remain exactly free at quotient level.
 
-## 4. Exact rotation-reduction certificate
+## 5. Exact rotation-reduction certificate
 
 Let `D=D_mu` be any nonnegative pinned exterior cut semimetric from
 THM-2221. For each rotation put
@@ -328,7 +393,7 @@ transport matrix. The first line improves THM-2221's core-blind nonidentity
 bound by the exact additive frustration `phi(N)`; the second line is the
 unavoidable separate check on the two zero-frustration rotations.
 
-## 5. Boundary and connection contract
+## 6. Boundary and connection contract
 
 The theorem deliberately stops short of claiming `G=F`.
 
@@ -364,15 +429,18 @@ a cosmetic tournament on transports. It is a nonnegative quadratic
 cycle-frustration energy plus three automorphism-sector sidecars. Unpinned
 core/context exchange and larger strongly connected quotients remain open.
 
-## 6. Independent exact audit
+## 7. Independent exact audit
 
-The companion enumerates every `3 x 3` nonnegative integer transport with
-all margins `N` for `1<=N<=12` (`13,558` tables total). It verifies (14),
-the three-element zero layer, and the sharp floor (16). It also checks all
-`720` bijections of two six-vertex, three-block cores and all `64` choices
-of source/target internal orientations (`46,080` full-cost checks), proving
-computationally that the pairs counted by `F` are always present in the
-actual reversal cost. Normal and optimized runs reproduce the stored
-transcript exactly.
+The companion first audits the universal zero theorem on all `1,098`
+labelled quotient tournaments of orders two through five: `124,468`
+permutation checks identify the diagonal zero terms with automorphisms, and
+`774` distinct automorphism-pair checks find a positive cross term. It then
+enumerates every `3 x 3` nonnegative integer transport with all margins `N`
+for `1<=N<=12` (`13,558` tables total), verifying (14), the three-element
+zero layer, and the sharp floor (16). Finally it checks all `720` bijections
+of two six-vertex, three-block cores and all `64` choices of source/target
+internal orientations (`46,080` full-cost checks), proving computationally
+that the pairs counted by `F` are always present in the actual reversal
+cost. Normal and optimized runs reproduce the stored transcript exactly.
 
 QED.

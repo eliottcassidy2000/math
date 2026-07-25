@@ -8,8 +8,9 @@ Universe:
   * all 2^3 source and 2^3 target internal orientations for those cores.
 
 The proof of THM-2249 is uniform in N.  The bounded census is an independent
-hostile audit of the formula, its zero layer, its sharp floor, and the claim
-that the forced quotient pairs are a literal subset of the reversal cost.
+hostile audit of the universal zero-layer lemma through quotient order five,
+the directed-triangle formula, its sharp floor, and the claim that the forced
+quotient pairs are a literal subset of the reversal cost.
 """
 
 from itertools import permutations, product
@@ -134,6 +135,68 @@ def add_matrices(*matrices):
     )
 
 
+def tournament_from_mask(order: int, mask: int):
+    adjacency = [
+        [False for _ in range(order)] for _ in range(order)
+    ]
+    bit = 0
+    for i in range(order):
+        for j in range(i + 1, order):
+            if (mask >> bit) & 1:
+                adjacency[i][j] = True
+            else:
+                adjacency[j][i] = True
+            bit += 1
+    return adjacency
+
+
+def quotient_pair_frustration(adjacency, sigma, tau) -> int:
+    order = len(adjacency)
+    return sum(
+        adjacency[i][k] and adjacency[tau[k]][sigma[i]]
+        for i in range(order)
+        for k in range(order)
+    )
+
+
+def is_automorphism(adjacency, sigma) -> bool:
+    order = len(adjacency)
+    return all(
+        adjacency[i][k] == adjacency[sigma[i]][sigma[k]]
+        for i in range(order)
+        for k in range(i + 1, order)
+    )
+
+
+def audit_universal_zero_layer() -> tuple[int, int, int]:
+    tournament_count = 0
+    permutation_checks = 0
+    automorphism_pair_checks = 0
+    for order in range(2, 6):
+        sym = tuple(permutations(range(order)))
+        for mask in range(1 << (order * (order - 1) // 2)):
+            tournament_count += 1
+            adjacency = tournament_from_mask(order, mask)
+            automorphisms = []
+            for sigma in sym:
+                diagonal_zero = (
+                    quotient_pair_frustration(adjacency, sigma, sigma) == 0
+                )
+                assert diagonal_zero == is_automorphism(adjacency, sigma)
+                permutation_checks += 1
+                if diagonal_zero:
+                    automorphisms.append(sigma)
+            for index, sigma in enumerate(automorphisms):
+                for tau in automorphisms[index + 1 :]:
+                    assert (
+                        quotient_pair_frustration(adjacency, sigma, tau)
+                        + quotient_pair_frustration(adjacency, tau, sigma)
+                        > 0
+                    )
+                    automorphism_pair_checks += 1
+    return tournament_count, permutation_checks, automorphism_pair_checks
+
+
 def core_arc(
     vertex_a: tuple[int, int],
     vertex_b: tuple[int, int],
@@ -215,6 +278,16 @@ def main() -> None:
     assert table == expected
     for row in table:
         print(" ".join(map(str, row)))
+
+    tournaments, permutation_checks, automorphism_pairs = (
+        audit_universal_zero_layer()
+    )
+    print(
+        "universal_zero_layer "
+        f"orders=2..5 tournaments={tournaments} "
+        f"permutation_checks={permutation_checks} "
+        f"automorphism_pair_checks={automorphism_pairs}"
+    )
 
     for n in range(1, 13):
         tables = tuple(transport_tables(n))
