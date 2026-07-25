@@ -1,0 +1,35 @@
+scalar depth-(1,2,3) exact branch certificate
+arithmetic: exact integers; no float; no assert dependence
+
+depth-four primitive root geometry
+  N=28561 Q=2197 primitive_phases=2028 |U_N|=18830
+  guard_fibre_histogram=((9, 1450), (10, 578))
+  unit_sign_classes=13182 depth_one_sign_classes=1014 depth_two_sign_classes=78
+  depth-one direct/image parity=1014/1014 PASS
+  depth-two direct/image parity=78/78 PASS
+  six depth-three sign classes empty on U_N PASS
+
+mixed shallow-pair branch certificate
+  mixed_pairs=79092
+  bound=min(one-blocker capacities, F-X_A-X_B+2|A intersection B|)
+  candidate_evaluations=940857 average=11.895729024427 maximum=27
+  unique_worst_pair=(799,46) residual_size=13526
+  top_five_(capacity,label)=((2604, 5193), (2472, 10386), (2292, 7773), (2288, 10388), (2262, 7775))
+  minimum_capacity_margin=1608 minimizers=1
+  pair_table_digest=79b9b75f3732e47b43c2bba726906250ce0c1069b90d8952c33caa8a8364570f
+  branch_trace_digest=2699c79c62d4c0e5805529b26dc4ce7ae5ed1f0146be25714b898ea42176802a
+  candidate_prefix_histogram=((5, 48), (6, 119), (7, 152), (8, 413), (9, 4110), (10, 10029), (11, 15964), (12, 19420), (13, 17035), (14, 9897), (15, 1530), (16, 218), (17, 66), (18, 9), (19, 6), (20, 6), (21, 11), (22, 12), (23, 17), (24, 8), (25, 12), (26, 6), (27, 4))
+  direct all-unit hostile-row parity=PASS
+
+hostile lift-family sidecar
+  top_family_bases=(799, 599, 1015, 597, 1013)
+  base=799 family_sum=27052 rows=((799, 2034), (1398, 2036), (2996, 2036), (3595, 2040), (5193, 2604), (5792, 2040), (7390, 2038), (7989, 2032), (9587, 2040), (10186, 2038), (11784, 2040), (12383, 2036), (13981, 2038))
+  base=599 family_sum=25864 rows=((599, 1950), (1598, 1950), (2796, 1946), (3795, 1946), (4993, 1954), (5992, 1950), (7190, 1948), (8189, 1950), (9387, 1944), (10386, 2472), (11584, 1954), (12583, 1948), (13781, 1952))
+  base=1015 family_sum=25180 rows=((1015, 1910), (1182, 1928), (3212, 1918), (3379, 1912), (5409, 1900), (5576, 1900), (7606, 1880), (7773, 2292), (9803, 1898), (9970, 1936), (12000, 1908), (12167, 1906), (14197, 1892))
+  base=597 family_sum=25054 rows=((597, 1894), (1600, 1896), (2794, 1904), (3797, 1892), (4991, 1900), (5994, 1896), (7188, 1890), (8191, 1898), (9385, 1898), (10388, 2288), (11582, 1900), (12585, 1900), (13779, 1898))
+  base=1013 family_sum=25202 rows=((1013, 1916), (1184, 1928), (3210, 1920), (3381, 1910), (5407, 1952), (5578, 1900), (7604, 1882), (7775, 2262), (9801, 1902), (9972, 1928), (11998, 1906), (12169, 1904), (14195, 1892))
+  hostile_family_sum_checks=1014 PASS
+
+CONCLUSION
+  actual blocker valuation profile (1,2,3) is empty
+  this certificate does not address profile (1,1,3)
