@@ -1,0 +1,9 @@
+polynomial_parts=PASS degrees=2,6,10
+faber_flux_bank=PASS degrees=2,6,10
+independent_multinomial_bank=PASS degrees=2,6,10
+degree10_spectral_elimination=PASS
+degree6_terminal_reduction=PASS
+singular_cubic_normalization=PASS
+singular_keller_primitive=PASS
+cusp_reconstruction=PASS pole_coefficient=5/16
+status=EXACT_SYMBOLIC_REFEREE_ONLY
