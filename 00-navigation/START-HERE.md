@@ -120,8 +120,8 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     THM-2196/2199 prove rank twelve by explicit height `78*182^13` and projective
     finiteness; THM-2192/2198 leave 216 scalar profiles but close valuation `(1,1,2)`.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
-    the knot continuation cocycle; THM-2191 localizes Gordian distance by
-    common catalysts and closes `9_10` through the four-ball crossing metric.
+    the knot continuation cocycle; THM-2191 gives its catalytic group length,
+    commuting stable envelope, and abstract additive dual, and closes `9_10`.
     THM-2177 refutes Goemans' cost conjecture through a conflict graph.
     MISTAKE-230--235 forbid syntax-only bridges.
 

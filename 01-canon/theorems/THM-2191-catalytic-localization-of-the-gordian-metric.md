@@ -3,18 +3,23 @@ id: THM-2191
 title: "Catalytic localization of the Gordian metric"
 status: >
   PROVED (abstract metric-monoid localization, maximality, diagonal-kernel
-  formula, catalytic-capacity identity, amplification inequality, and
-  homogenization bounds) + CITED APPLICATION (classical prime-decomposition
-  cancellation and Owens--Strle's singular-concordance computations for
-  knots). The common-translation envelope of any
+  formula, catalytic-capacity identity, amplification inequality,
+  Grothendieck group-length descent, localization/homogenization
+  commutation, and abstract pairwise stable Lipschitz duality) + CITED APPLICATION (classical
+  prime-decomposition cancellation and Owens--Strle's
+  singular-concordance computations for knots). The common-translation
+  envelope of any
   commutative nonexpansive metric monoid is its greatest
-  translation-invariant pseudometric below the original metric. For knots,
-  integrality and connected-sum cancellation make this envelope an attained
-  genuine metric d_cat. Its root norm u_cat is the minimum diagonal of
-  THM-2176's min-plus kernel, and u(K)-u_cat(K) is exactly the maximum
-  directional catalytic saving. Moreover
-  max{u_hash(K),c*(K)} <= u_cat(K) <= u(K), with
-  sup_phi |phi(K)| <= u_hash(K).
+  translation-invariant pseudometric below the original metric, and it
+  descends to the greatest group length below the original metric on the
+  Grothendieck completion. Localization and homogenization commute exactly.
+  For knots, integrality and connected-sum cancellation make the
+  unhomogenized envelope an attained genuine metric d_cat. Its root length
+  u_cat is the minimum diagonal of THM-2176's min-plus kernel, and
+  u(K)-u_cat(K) is exactly the maximum directional catalytic saving.
+  Moreover max{u_hash(K),c*(K)} <= u_cat(K) <= u(K), while u_hash(K) is
+  exactly the maximum of |phi(K)| over all abstract additive real-valued
+  Gordian-1-Lipschitz invariants phi.
   Hence positive translation catalysis forces a strict connected-sum
   homogenization gap; in particular a one-crossing saving for a knot of
   unknotting number three forces u_hash<=2. Owens--Strle's equality
@@ -41,9 +46,10 @@ many bypasses but no certified catalyst. The right next object is not another
 binary relation. It is the metric obtained by allowing the same auxiliary
 summand on both sides and then optimizing it away.
 
-The construction is universal, and its comparison with connected-sum
+The construction is universal. Its comparison with connected-sum
 homogenization turns any future catalytic witness into an asymptotic
-self-power shortcut.
+self-power shortcut; its group completion identifies the exact stable
+additive shadow left after all common contexts have been removed.
 
 ## 1. Common-translation localization
 
@@ -153,7 +159,7 @@ rho(a,b)<=d_cat(a,b).                                (12)
 This proves maximality. The localization does not guess a preferred
 catalyst: it is forced by the universal property.
 
-## 2. The catalytic root norm and THM-2176's kernel
+## 2. The catalytic root length and THM-2176's kernel
 
 Put
 
@@ -436,15 +442,16 @@ For the connected-sum homogenized unknotting number `u_hash` of THM-2176,
 (32) and (40e) read
 
 ```text
-sup_phi |phi(K)|<=u_hash(K),
+max_phi |phi(K)|=u_hash(K),
 
 max{u_hash(K),c*(K)}
  <=u_cat(K)
  <=u(K),                                             (41)
 ```
 
-where the supremum ranges over additive real-valued Gordian
-1-Lipschitz invariants.
+where the maximum ranges over all abstract additive real-valued Gordian
+1-Lipschitz invariants. Section 6 proves both attainment and the stronger
+pairwise form; the maximizing invariant can depend on `K`.
 
 All fully additive-calibrated published symbiont families audited in
 THM-2176 have
@@ -521,7 +528,261 @@ the displayed translated distance if its value is three, and test the
 uncalibrated pretzel families against `c*` or another
 translation-invariant metric floor.
 
-## 6. Hostile boundary examples
+## 6. Grothendieck completion and exact stable duality
+
+The catalytic metric is not merely a better scalar knot invariant. It is
+the pullback of a canonical length on the group completion, and its stable
+shadow is exactly the stable shadow of the original metric.
+
+### The universal group length
+
+For a commutative monoid `M`, write `Gr(M)` for its Grothendieck group. Use
+pair representatives
+
+```text
+[a]-[b]=[(a,b)],
+```
+
+where
+
+```text
+(a,b)~(c,d)
+ iff there is e in M with a+d+e=c+b+e.               (G1)
+```
+
+Define
+
+```text
+N([a]-[b])=d_cat(a,b).                               (G2)
+```
+
+This is well-defined without a cancellation assumption. If (G1) holds,
+exact translation invariance (8) gives
+
+```text
+d_cat(a,b)
+ =d_cat(a+d+e,b+d+e)
+ =d_cat(c+b+e,d+b+e)
+ =d_cat(c,d).                                        (G3)
+```
+
+Equations (5), (8), and (10) show that `N` is a symmetric subadditive group
+length:
+
+```text
+N(0)=0,
+N(-x)=N(x),
+N(x+y)<=N(x)+N(y).                                   (G4)
+```
+
+It need not yet be homogeneous, and it may vanish away from zero; “group
+length” or “pseudonorm” is therefore the precise term. If the monoid embeds
+in its completion and `d_cat` is a metric, `N` is nondegenerate.
+
+The length has the same universal property as `d_cat`. If `L` is any
+symmetric subadditive length on `Gr(M)` whose pullback obeys
+
+```text
+L([a]-[b])<=d(a,b),                                  (G5)
+```
+
+then `(a,b) -> L([a]-[b])` is a translation-invariant pseudometric below
+`d`. Universal maximality (12) yields
+
+```text
+L(x)<=N(x)                         for every x in Gr(M). (G6)
+```
+
+Thus `N` is the greatest group length whose pullback is bounded by the
+original metric.
+
+For oriented knots, prime decomposition makes the connected-sum monoid
+cancellative and free commutative on its oriented prime-knot types.
+Consequently its group completion is free abelian, the knot monoid embeds,
+and
+
+```text
+N([K]-[L])=d_cat(K,L),
+N([K])=u_cat(K).                                     (G7)
+```
+
+This is the promised operation-respecting refinement: a knot is first
+recorded by its prime-exponent vector in a free abelian group, and
+`d_cat` supplies the largest Gordian-controlled length on those formal
+differences.
+
+### Localization and homogenization commute
+
+For arbitrary `a,b in M`, joint nonexpansivity makes
+
+```text
+D_n(a,b)=d(na,nb)
+```
+
+subadditive in `n`. Hence
+
+```text
+D_infty(a,b)=lim_(n->infinity) d(na,nb)/n            (G8)
+```
+
+exists. The same is true with `d_cat`.
+
+Fix positive integers `k,n` and a common context `c`. Apply the triangle
+inequality along the following chain of endpoints:
+
+```text
+nka+c,
+(n-1)ka+kb+c,
+...,
+ka+(n-1)kb+c,
+nkb+c.
+```
+
+Each adjacent pair in the displayed chain is a common translate of
+`ka+c,kb+c`, so its distance is at most `d(ka+c,kb+c)`. Attaching and
+removing the one unchanged context costs at most `d(c,0)` at either end,
+and therefore
+
+```text
+d(nka,nkb)
+ <=n d(ka+c,kb+c)+2d(c,0).                          (G9)
+```
+
+Divide by `n` and let `n` tend to infinity. Since
+`D_infty(ka,kb)=kD_infty(a,b)`, then infimizing over `c` gives
+
+```text
+kD_infty(a,b)<=d_cat(ka,kb).                         (G10)
+```
+
+On the other hand `d_cat<=d`. Therefore
+
+```text
+D_infty(a,b)
+ <=d_cat(ka,kb)/k
+ <=d(ka,kb)/k.                                      (G11)
+```
+
+Letting `k` tend to infinity squeezes the middle term to the common value:
+
+```text
+lim_(k->infinity) d_cat(ka,kb)/k
+ =D_infty(a,b).                                     (G12)
+```
+
+Equivalently, if
+
+```text
+p(x)=lim_(n->infinity) N(nx)/n,                     (G13)
+```
+
+then `p([a]-[b])=D_infty(a,b)`. Thus common-context localization and
+connected-sum homogenization commute exactly. The function `p` is now an
+integer-homogeneous seminorm:
+
+```text
+p(nx)=|n|p(x),
+p(x+y)<=p(x)+p(y).                                  (G14)
+```
+
+### Every stable knot pair has an abstract additive calibration
+
+Let `G` be the free abelian knot group from (G7). Because it is torsion-free,
+`p` rationalizes to a seminorm on
+
+```text
+G_Q=G tensor_Z Q,
+p(x/n)=p(x)/n                 for n>0.               (G15)
+```
+
+This is well-defined: if `x/n=y/m`, torsion-freeness gives `mx=ny`, and
+integer homogeneity gives `mp(x)=np(y)`.
+
+Fix `x in G`. On the rational line `Qx`, define
+
+```text
+f_0(qx)=q p(x).                                     (G16)
+```
+
+This functional is dominated by `p`. Algebraic Hahn--Banach over `Q`, with
+real codomain, extends it to a rational-linear
+
+```text
+f:G_Q->R
+```
+
+with `f(y)<=p(y)`. Applying the same inequality to `-y` and using symmetry
+of `p` upgrades this to
+
+```text
+|f(y)|<=p(y) for every y,
+f(x)=p(x).                                          (G17)
+```
+
+Restrict `f` to knot classes and put `phi(K)=f([K])`. Then `phi` is
+additive and, by (G12), (G17), and `p<=N<=d_G`,
+
+```text
+|phi(K)-phi(L)|
+ <=p([K]-[L])
+ <=d_G(K,L).                                        (G18)
+```
+
+Taking `x=[K]-[L]` calibrates that chosen pair. Conversely, every additive
+Gordian-1-Lipschitz invariant is bounded by the stable limit after applying
+it to `nK,nL` and dividing by `n`. Hence
+
+```text
+D_infty(K,L)
+ =max_phi |phi(K)-phi(L)|,                          (G19)
+
+u_hash(K)
+ =max_phi |phi(K)|.                                 (G20)
+```
+
+The calibrator in (G19) is abstract, nonconstructive, and pair-dependent.
+It need not factor through concordance and need not resemble a classical
+knot invariant. The result closes the **abstract duality gap**, not the
+computational problem of finding a recognizable certificate.
+
+There are consequently three exact levels:
+
+```text
+u(K)       raw distance to the unknot;
+u_cat(K)   greatest common-context-invariant group length;
+u_hash(K)  homogenized group seminorm = abstract additive dual. (G21)
+```
+
+The gaps carry different information. Put
+
+```text
+kappa(K)=u(K)-u_cat(K),
+beta(K,L)=u_cat(K)+u_cat(L)-u_cat(K#L).              (G22)
+```
+
+Then `kappa` is catalytic capacity, `beta>=0` is the triangle defect after
+all common contexts have already been localized away, and the ordinary
+connected-sum defect splits exactly as
+
+```text
+u(K)+u(L)-u(K#L)
+ =kappa(K)+kappa(L)-kappa(K#L)+beta(K,L).            (G23)
+```
+
+Finally `u_cat(K)-u_hash(K)` is the nonhomogeneous lattice-scale gap of the
+group length. These are distinct coordinates not identified by the algebra
+in (G23). Whether catalytic capacity or the lattice-scale gap is determined
+by ordinary unknotting number on knots remains open; abstract metric monoids
+alone cannot settle that knot-specific question.
+
+This completion is native to commutative connected sum. Tournament
+substitution is an operadic, generally noncommutative composition:
+THM-2195 shows that transitive quotients retain an exact ordered product,
+whereas a directed quotient triangle permits partial cyclic block
+transport. Its missing refinement is therefore a labelled transport
+matrix, not a forced Grothendieck group length.
+
+## 7. Hostile boundary examples
 
 The hypotheses and converses above are sharp.
 
@@ -629,7 +890,7 @@ contexts; THM-2174's fixed-core two-state first-period flag is one such
 restricted carrier. Catalytic localization itself supplies no LRC pump or
 proof.
 
-## 7. Typed frontier
+## 8. Typed frontier
 
 The construction changes the knot search from an unstructured pair hunt to
 three nested targets:
@@ -638,7 +899,7 @@ three nested targets:
 source:       Gordian metric plus connected sum;
 operation:    add one common catalyst to both endpoints;
 envelope:     greatest translation-invariant metric below d_G;
-one-body norm:u_cat(K)=min_J P_K(J,J);
+one-body length:u_cat(K)=min_J P_K(J,J);
 dual floor:   additive 1-Lipschitz invariants;
 homog. floor: connected-sum homogenization u_hash;
 metric floor: four-ball crossing number c*;

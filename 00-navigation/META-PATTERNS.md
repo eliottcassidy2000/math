@@ -13,7 +13,7 @@
 ## Localize a metric by common contexts before hunting catalysts
 
 **Trigger / action:** when common nonexpansive factors can contract distance, form `d_ctx(x,y)=inf_z d(x+z,y+z)`; in noncommutative settings retain left, right, and two-sided contexts separately.
-**Mechanism:** in a commutative metric monoid this is the greatest translation-invariant pseudometric below `d`; its root defect is exact catalytic capacity, fixed savings amplify to homogenized savings, and operation-specific uncrossing can instead prove `d_ctx=d`.
+**Mechanism:** in a commutative metric monoid this is the greatest translation-invariant pseudometric below `d` and the greatest group length below `d` on the Grothendieck completion; its root defect is exact catalytic capacity, fixed savings amplify to homogenized savings, and localization commutes with homogenization. On a torsion-free completion the stable seminorm has pairwise abstract additive calibrators by rational Hahn--Banach. Operation-specific uncrossing can instead prove `d_ctx=d`.
 **Counterindication:** cancellation without properness/integrality can still permit total collapse; integrality without cancellation need not give a metric; a homogenization gap need not imply a catalyst.
 **Evidence:** THM-2191 (Gordian localization and hostile collapses), THM-2183 (exact common-factor isometries), and THM-840/853 (continuation contexts).
 

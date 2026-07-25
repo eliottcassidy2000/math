@@ -10,15 +10,19 @@ This sidecar preserves detailed records routed compactly from
   [DOI 10.1007/978-3-642-45813-2](https://doi.org/10.1007/978-3-642-45813-2).
   **PUBLISHED / stable; primary bibliographic record checked 2026-07-24.**
 - **Imported role:** unique prime decomposition makes the connected-sum
-  monoid of oriented knot types cancellative. This is the sole external input
-  needed to upgrade THM-2191's common-translation pseudometric to a genuine
-  catalytic Gordian metric.
+  monoid of oriented knot types free commutative, hence cancellative with
+  torsion-free free-abelian group completion. This upgrades THM-2191's
+  common-translation pseudometric to a genuine catalytic Gordian metric and
+  supplies the algebraic carrier on which its stable Hahn--Banach duality is
+  applied.
 - **Repo consumers:**
   [THM-2191, catalytic Gordian localization](../../01-canon/theorems/THM-2191-catalytic-localization-of-the-gordian-metric.md).
 - **Does not prove:** any equality or inequality for unknotting number,
   existence of a positive Gordian catalyst, attainment of a nonintegral
   metric envelope, or equality between connected-sum homogenization and the
-  catalytic norm.
+  unhomogenized catalytic length. THM-2191's group-length construction,
+  localization/homogenization commutation, and abstract additive duality are
+  repo-derived consequences.
 
 ## Brittenham--Hermiller -- *Unknotting number is not additive under connected sum*
 
