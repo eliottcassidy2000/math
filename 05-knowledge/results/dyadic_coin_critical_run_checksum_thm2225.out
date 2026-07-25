@@ -1,0 +1,7 @@
+exhaustive_shell_sizes=M2:2,M4:6,M8:30,M16:510
+exhaustive_checks=block_swap+shell_balance+last_bit_merge+path_bound
+dyadic_antipode_audit_max_half=4096
+dyadic_path_bound_rows=8191
+hostile_m6_j2_checksum_counts=(7,8)
+hostile_congruence=2*delta!=3_mod_6
+status=THM-2225_PROVED_VERIFIED_EXACT
