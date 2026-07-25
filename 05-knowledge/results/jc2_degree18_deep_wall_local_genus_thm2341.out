@@ -1,0 +1,9 @@
+THM-2341 exact deep-wall local-genus referee
+blow-up discriminant=(-4096/96873331012983)*G6
+common-root resultant=7715736*(361B^3+30618C^2)
+y=0: G6(0,t0)=810648, quadratic resultant=-295233008801472000000
+t0 common root=-486C/19, Q'=-4251528*C/19
+multiple-root gcd degrees=[1, 1, 1]
+ramification totals=(6, 4, 4)
+normalization genera=(1, 0, 0)
+VERDICT: t0 is genus one; t+ and t- are genus zero
