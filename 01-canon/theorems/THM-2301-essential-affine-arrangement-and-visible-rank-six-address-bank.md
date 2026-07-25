@@ -27,6 +27,7 @@ depends_on:
 related:
   - THM-2282-thirteen-adic-saturation-and-unit-anchored-minor
   - THM-2294-anchored-plucker-tournament-and-kakeya-address-bank
+  - THM-2299-rooted-current-service-energy-and-base-phase-no-go
 script: 04-computation/lrc14_visible_rank_six_kakeya_lift_thm2301.py
 output: 05-knowledge/results/lrc14_visible_rank_six_kakeya_lift_thm2301.out
 script_sha256: f79a10e3184b35d0a78209d943462fadfb468761e6023fd93c2ad9b2bf3879f9
@@ -599,6 +600,15 @@ land on a zero interval Fourier factor. Likewise, `chi_7(-1)=-1` permits
 the tournament-valued quadratic-character orientation from THM-2294, but
 that orientation does not retain the phases or amplitudes in (G1).
 
+THM-2299 supplies the decisive hostile local control. Its profile-`(1,3,5)`
+row already has a `c_1`-anchored mod-thirteen rank-six packet of height
+`13`, with unit minor `-4`, together with one-sheet rooted activity and
+prescribed `c_1`-to-`c_2` service. The required exact pair atom nevertheless
+vanishes by cancellation between two terminal components. That witness is
+not a global scalar cover, but it proves that rank six, a prescribed blocker
+anchor, and root-character support still do not recover the missing base
+phase.
+
 ## 8. Fixed-section lift and exact stopping boundary
 
 THM-2298's fixed original-row section doubles only the guard coefficient:
@@ -654,6 +664,7 @@ destroyed:
 
 sharp hostile controls:
   the rank-six parallel-pencil packet (B5), intrinsic carrier darkness,
+  THM-2299's height-13 c_1-anchored rank-six phase-cancellation row,
   signed cancellation among nonzero septimal survivors, and amplitude
   decay at deep addresses;
 
