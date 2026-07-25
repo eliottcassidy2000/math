@@ -1,0 +1,8 @@
+THM-2198 scalar five-plus-three first-depth audit
+N=2197; annulus=1450; unit_classes=1014; shallow_classes=78
+shallow_pairs_with_repetition=3081; reduction_checks=90
+conditional_margin_range=86..218; worst_rows=[(14, 46, 1046, 960, ((204, 183), (200, 799), (190, 599), (186, 1000), (180, 1007)))]
+margin_histogram_size=66; margin_histogram_total=3081
+table_sha256=d31e5c874d8b5893ff33fc35095c18dcdf865c7f8296285c1b3441a8d8d679d9
+strict_torsion_witnesses_thicken_to_open_intervals=yes
+PASS
