@@ -181,16 +181,14 @@ close depth three; THM-2213/2215/2219 close every depth-four profile, leaving
 `1,130`. THM-2222/2224 close the `455` profiles with `lambda_1>=6`;
 THM-2226 closes `217` more and THM-2227 independently closes six special residues. THM-2229 retains `A_+` at every unit `13`-time, subsumes those six,
 and leaves exactly `240`. THM-2233's guard-danger Bellman leaves `224`;
-THM-2239's separately centered signed dual closes all `29` first-depth-two
-rows and `(4,6,8)`. Exactly `194` remain: `165` at first depth one and `29`
-at first depth three.
-THM-2232 retains same-core stability; THM-2234 proves a private two-owner
-mass and two-step expansion for every first-depth-one blocker.
-THM-2211 proves exact propagation needs carry; THM-2216/2218 expose exact tail-Gram/Fourier carriers, and THM-2238 gives a separate terminal-cover
-fork. THM-2237 isolates the missing top Walsh coordinate; THM-2235 forbids a
-fixed-XOR/odd-sheet antipode. The open scalar target is to combine signed
-leakage/owner incidence on the `194` rows, beginning with THM-2234's private
-expansion on the `165` first-depth-one rows. LRC(14) remains open.
+THM-2239's separately centered signed dual closes all `29` first-depth-two rows and `(4,6,8)`. THM-2244's corewise prior-centered odd clause closes `28/29`
+first-depth-three rows. Exactly `166` remain: the `165` first-depth-one profiles
+and `(3,4,5)`. THM-2232 retains same-core stability; THM-2234 proves private
+two-owner mass and two-step expansion for every first-depth-one blocker.
+THM-2211 proves exact propagation needs carry; THM-2216/2218 expose exact tail-Gram/Fourier carriers, and THM-2238 gives a separate terminal-cover fork. THM-2237 isolates the missing top Walsh coordinate; THM-2235 forbids a
+fixed-XOR/odd-sheet antipode. The open scalar target joins signed owner incidence
+to THM-2234 on the `165` depth-one rows; `(3,4,5)` needs a composite or
+multidirectional score rather than another single-core centering. LRC(14) is open.
 
 ### Independent routes that remain live
 
@@ -405,7 +403,7 @@ into tournament operation laws and LRC residue packets.
   Positive catalysis remains open; the sharp cited seed is conditional `10_6` (`c*=2`, `u in {2,3}`), then uncalibrated pretzels.
 - **Unsplittable cost flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture: a planar acyclic instance has fractional cost `58` but capacity-good integral cost at least `60`. Its carrier is the `K_3` stable-set facet; the planar `2d_max` theorem remains intact.
 - **Jacobian/Dixmier:** THM-1300/1315 verify and analyze the three-dimensional Keller collision, but provenance is unsettled (MISTAKE-205) and it does not decide
-  `DC(2)`; THM-2230 computes the planar response fiber, THM-2240 proves the grade-six Weyl response is not a continuation state, and THM-2241 gives the exact monic test `D_P^(d+1)(x)=0` plus the shear-covariant resultant nonproper curve.
+  `DC(2)`; THM-2230 computes the planar response fiber, THM-2240 proves the grade-six Weyl response is not a continuation state, THM-2241 gives the exact monic test `D_P^(d+1)(x)=0` plus the shear-covariant resultant nonproper curve, and THM-2245 forces every nonsplit terminal degree-fourteen survivor onto an explicit singular spectral quartic.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibers:** THM-2063/2071 close affine/quadratic pencil members;
   THM-2084/2110/2118 close cubics; THM-2102/2113 close power-free top faces;
@@ -420,9 +418,11 @@ into tournament operation laws and LRC residue packets.
   finite-pole survivor remains. THM-2181 closes monic depressed quartics;
   THM-2214 closes nonsplit terminal degrees through ten, and THM-2217 forces
   odd-leading survivors to degree `>=14` with `R deg(q)>=deg(V)`. Split/even
-  terminal descent and other short edges remain. THM-2206 blocks field-valued
-  `C_2` Hasse repair; the next monic consumer is a joint `E_14/E_10` flux-tail
-  test. Integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
+  terminal descent and other short edges remain. THM-2245's joint `E_14/E_10`
+  flux test forces a displayed spectral quartic singular, leaving a normalized
+  conic plus a residual `T`-double-cover, the exact third flux, and the Keller
+  one-form. Its branch divisor is the next consumer. THM-2206 blocks field-valued `C_2` Hasse repair. Integral `2`-adic order raising, `JC(2)`,
+  and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
