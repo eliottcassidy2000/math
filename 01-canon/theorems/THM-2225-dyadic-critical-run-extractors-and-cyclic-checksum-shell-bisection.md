@@ -151,8 +151,8 @@ s(rho y)=s(y)+j mod m.                              (10)
 Put `g=gcd(j,m)`. Along any cyclic-rotation orbit, the checksum visits
 every residue in one coset modulo `g` equally often. Indeed, the checksum
 advances by `j`, whose additive order modulo `m` is `m/g`; if the word
-has a longer stabilizer period, each residue is merely repeated the same
-number of times.
+has a longer rotation orbit than that additive order, each residue is
+merely repeated the same number of times.
 
 Because `m` is a power of two and `j<m`,
 
@@ -225,9 +225,17 @@ j delta=m/2 mod m
 iff gcd(j,m) divides m/2.                           (18)
 ```
 
-For every `1<=j<m`, condition (18) holds exactly when even `m` is a power
-of two. If `m` has an odd factor, write `m=2^a u` with odd `u>1` and take
-`j=2^a`; then `gcd(j,m)` does not divide `m/2`. The smallest checksum
+Condition (18) holds simultaneously for every `1<=j<m` exactly when even
+`m` is a power of two. If `m` has an odd factor, write `m=2^a u` with odd
+`u>1` and take `j=2^a`; then `gcd(j,m)` does not divide `m/2`. Lucas's
+theorem gives
+
+```text
+binom(m,2^a)=1 mod 2,                                (19)
+```
+
+so that weight shell has odd cardinality and no binary coloring can
+bisect it at all, not merely no checksum coloring. The smallest checksum
 hostile example is `m=6,j=2`: the lower/upper counts are `7` and `8`.
 
 This distinguishes two notions that look similar in a Gram shadow.
