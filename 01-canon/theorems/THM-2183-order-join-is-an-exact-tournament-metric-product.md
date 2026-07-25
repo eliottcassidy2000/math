@@ -21,6 +21,7 @@ related:
   - THM-1936
   - THM-1975
   - THM-2176
+  - THM-2195-transitive-quotients-exactly-control-universal-substitution-products
 script: 04-computation/tournament_order_join_metric_product_thm2183.py
 output: 05-knowledge/results/tournament_order_join_metric_product_thm2183.out
 script_sha256: 80424d559ac9a1f473ac9c239f8f70795220cd51c7342617bb336f8e8a933f70
@@ -208,6 +209,10 @@ This is the useful boundary:
 global relabelling quotient:      has bypass triangles;
 each fixed order-join patch:      exact isometric product.      (14)
 ```
+
+THM-2195 sharpens the operation boundary: the corresponding-factor `l1`
+law holds universally for a fixed substitution quotient exactly when that
+quotient is transitive. A directed triangle supplies the obstruction.
 
 The companion audit checks (2) for all labelled factor quadruples with
 `1<=a,b<=3` and separately reconstructs the four-vertex quotient and

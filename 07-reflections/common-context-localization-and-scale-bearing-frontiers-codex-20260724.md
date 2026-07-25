@@ -1,7 +1,8 @@
 # Common-context localization and the next scale-bearing frontiers
 
-**Status:** synthesis with one new proved theorem routed to
-[THM-2191](../01-canon/theorems/THM-2191-catalytic-localization-of-the-gordian-metric.md);
+**Status:** synthesis with new proved theorems routed to
+[THM-2191](../01-canon/theorems/THM-2191-catalytic-localization-of-the-gordian-metric.md)
+and [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md);
 the ranked targets below are OPEN unless explicitly marked otherwise.
 
 ## 1. Inheritance pass
@@ -34,6 +35,9 @@ The canonical hostile examples are:
 - THM-2191's cancellative metric monoid whose common-context envelope
   collapses, and its discrete-metric example where homogenization saves
   without any catalyst.
+- THM-2191's LRC safe-measure monoid: the full AP packet `{1,...,13}` is a
+  null absorbing context, so unrestricted common-context localization
+  collapses identically even though fixed-core continuation remains useful.
 
 The corrected near misses are equally directive. Finite radix saturation is
 free (THM-2187), but finite phase banks are blind (THM-2188). A
@@ -49,6 +53,7 @@ be read only through their explicit corrections.
 | scalar `5+3` terminal | root sheets and signed chord lengths on the guard circle | valuation depths alone lose which side of each root is covered | enumerate the normalized root-sheet chambers, not speed boxes |
 | reversed peel | the aggregate signed covariance `sum_v epsilon_v(E)` | replacing it by `sum_v |epsilon_v(E)|` discards cancellation | compute the joint Fourier multiplier of the at-most-six peel set |
 | critical affine ray | equality skeleton plus tangent support polygon | the limiting two-torus mass loses the boundary incidence rate | classify torsion maximizers and their active facets |
+| graded LRC continuation | fixed core, remaining-slot budget, Boolean state, endpoint scale | unrestricted contexts admit the null AP absorber | decide whether a zero state can persist through all legal slot depths |
 | knot catalysis | common-context metric `d_cat`, not only `u(K#J)` | the scalar interaction defect conflates contraction and bypass | calibrate `u_cat` by a translation-invariant lower metric |
 | tournament substitution | quotient, block tuple, automorphism gauge, and mixing cost | a fixed block correspondence ignores quotient automorphisms | test the first prime quotient `C_3` after minimizing over `Aut(C_3)` |
 
@@ -139,6 +144,21 @@ remaining characters all lie on the guard line: one guard, five aligned
 terminals, and three divided blockers. This is not a request for another
 global rank theorem. It is a one-circle covering problem with arithmetic
 labels.
+
+Incoming exact work sharpens this lane without closing it. THM-1166 now
+proves that three distinct danger combs have union mass at most `36/91`,
+with equality only at scaled/permuted `(1,12,13)`. Combining that with
+THM-2137's scalar residual floor, THM-2168 obtains
+
+```text
+H+sum_(i=1)^5 q_i
+ >=(12493/35640)13^(a+1),                            (A)
+```
+
+where `a` is the minimum `13`-adic depth of the three divided blockers.
+The missing half is now exact: prove an upper bound incompatible with (A),
+or show directly that its extremal root word cannot realize the original
+cover.
 
 The proposed faithful reduction is:
 
@@ -280,44 +300,78 @@ This can terminate whole affine families at once. It also directly repairs
 the finite-bank blindness of THM-2188: residue supplies the phase, while the
 tangent support denominator supplies the missing Archimedean lift.
 
-## 8. Tournament target: separate automorphism savings from true mixing
+## 8. LRC target E: grade localization by remaining slots
 
-THM-2183 proves exact product distance for the transitive two-block quotient.
-For a general substitution `Q[A_1,...,A_k]`, the fixed-correspondence formula
-
-```text
-sum_i d_iso(A_i,B_i)
-```
-
-cannot even be the right first guess when `Aut(Q)` permutes quotient
-vertices. The corrected baseline is
+THM-2191 gives the safe-measure pseudometric
 
 ```text
-min_(sigma in Aut(Q)) sum_i d_iso(A_i,B_(sigma(i))).
+d_mu(A,B)=measure(G_A symmetric_difference G_B)
 ```
 
-The sharp question is whether a vertex-level mixing bijection can beat this
-block-automorphism minimum. The first test object is the prime quotient
-`Q=C_3`; the first informative equal block size is three, because order two
-has only one tournament type.
+on speed sets under union. Unrestricted common-context localization is
+identically zero because union with `{1,...,13}` annihilates every safe set
+almost everywhere. This is a useful no-go: the knot construction cannot be
+ported to LRC without retaining the resource consumed by a context.
 
-Record, for every counterexample:
+The faithful object is a **graded continuation kernel** indexed by the
+number of runner slots still available. Contexts may use only the remaining
+slots and must preserve distinctness/primitivity. THM-2174 solves the
+one-tail Boolean quotient on a fixed core and residue ray: it has one state,
+or two states consisting of the least positive representative followed by a
+permanent positive sink.
+
+The sharp global target is:
+
+> Show that no legal chain of zero-Haar Boolean states has total depth
+> thirteen, unless its terminal row is one of the already classified
+> equality carriers.
+
+The transition state must retain core relation plane, residue ray, endpoint
+current, least-representative flag, and remaining-slot count. The first
+hostile test is THM-2188's pair of rows: it verifies that deleting `1/W`
+from the state falsely merges a zero and a positive transition. A positive
+result would turn LRC into a finite-depth no-null-path theorem rather than a
+global finite-state claim.
+
+## 9. Tournament result: transitivity is the exact fixed-product boundary
+
+THM-2195 now classifies the fixed-correspondence law. For a quotient
+tournament `Q`,
 
 ```text
-quotient Q,
-factor tuple,
-best quotient automorphism,
-transport matrix between blocks,
-cross-arc gain,
-internal-arc loss.
+d_iso(Q[A_i],Q[B_i])=sum_i d_iso(A_i,B_i)
 ```
 
-If no counterexample appears for `C_3`, seek a cycle-exchange uncrossing
-generalizing THM-2183's two-image swap. If one appears, the transport matrix
-is the correct new invariant, and “substitution product” should be replaced
-by a finite optimal-transport problem over quotient blocks.
+for every equal-corresponding-order factor tuple if and only if `Q` is
+transitive. The positive direction iterates THM-2183. If `Q` is
+nontransitive, rotate three large blocks around a directed triangle.
+Triangle/exterior disagreements cost only linearly in the block order,
+whereas two factor distances can be chosen quadratic.
 
-## 9. Ranked execution order
+For `Q=C_3`, take `A=T_3`, `B=C_3` and
+
+```text
+T=(A,B,A),                 S=(A,A,B).
+```
+
+The factor sum is two, but cyclic block rotation is an isomorphism between
+the nine-vertex substitutions, so their distance is zero.
+
+This witness is absorbed by the corrected, size-compatible automorphism
+baseline, where `Aut_n(Q)` preserves the factor-order vector:
+
+```text
+min_(sigma in Aut_n(Q)) sum_i d_iso(A_i,B_(sigma(i))).
+```
+
+The sharp remaining question is whether vertex-level mixing can beat that
+block-automorphism minimum. Record quotient, factor tuple, best quotient
+automorphism, block transport matrix, cross-arc gain, and internal-arc loss.
+A counterexample would replace “substitution product” by finite optimal
+transport over quotient blocks; a positive result needs a cycle-exchange
+uncrossing beyond THM-2183's two-image swap.
+
+## 10. Ranked execution order
 
 1. **Scalar `5+3` chord invoice (THM-2192, OPEN):** closest local obstruction
    to the anchor and small enough for an exact chamber theorem.
@@ -327,11 +381,14 @@ by a finite optimal-transport problem over quotient blocks.
    defect-at-least-seven lane with the scalar endpoint-current lane.
 4. **Critical equality-skeleton classifier (OPEN):** closes unbounded affine
    families and supplies the right Archimedean sidecar.
-5. **`10_6` two-certificate audit (OPEN):** the smallest cited positive
+5. **Graded no-null continuation path (OPEN):** respects the thirteen-slot
+   resource and uses THM-2174's exact one-tail two-state quotient without
+   falling into THM-2191's AP-absorber collapse.
+6. **`10_6` two-certificate audit (OPEN):** the smallest cited positive
    catalysis candidate after the `9_10` closure.
-6. **Prime-quotient substitution transport (OPEN):** decides whether
-   THM-2183 is a transitive-quotient phenomenon or the first case of a
-   broader automorphism-gauged product law.
+7. **Automorphism-gauged substitution transport (OPEN):** THM-2195 proves
+   transitivity is exactly the fixed-correspondence boundary; decide whether
+   quotient automorphisms are the only remaining block-level savings.
 
 The portfolio is intentionally coupled. A root-sheet chamber, a toric
 equality skeleton, and a quotient-block transport matrix are all finite
