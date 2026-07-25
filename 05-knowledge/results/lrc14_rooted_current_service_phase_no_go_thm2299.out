@@ -1,0 +1,25 @@
+theorem=THM-2299
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED
+return_floor_strict=39002430583/53493927587100
+return_floor_repeat=13560199813/53493927587100
+rooted_energy_floor_strict=1521189591381733719889/2861600288693898428086410000
+rooted_energy_floor_repeat=183879018968485234969/2861600288693898428086410000
+named_edge_energy_floor_strict=1521189591381733719889/11446401154775593712345640000
+named_edge_energy_floor_repeat=183879018968485234969/11446401154775593712345640000
+two_sheet_phase_bound=sin(pi/26)>1/13
+covariant_jump_rows=71
+gauge_index_bound_on_named_edge=h<=4S-1
+hostile_profile=(1,3,5)
+hostile_speeds=H:1;q:(4, 2, 3, 6, 10);c:(13, 2197, 742586)
+hostile_pair=13q1-4c1=0;K=52;kappa=4
+hostile_second_relation=q1-2q2=0
+hostile_anchored_minor=8
+hostile_source_centers=(Fraction(127, 208), Fraction(129, 208))
+hostile_target_centers=(Fraction(3, 16), Fraction(13, 16))
+hostile_epsilon=1/1000000000000
+hostile_minimum_margin=3/540602608;label=target_c3
+hostile_source_mass=1/3250000000000
+hostile_rooted_energy_each_character=1/3250000000000
+hostile_exact_cancellations=Fhat(4)=Ehat(52)=What_4(0)=0
+hostile_scope=local_strict_labels_only;not_a_global_cover
+all_checks=PASS
