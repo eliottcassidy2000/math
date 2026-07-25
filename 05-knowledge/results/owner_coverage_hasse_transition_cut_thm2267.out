@@ -1,0 +1,9 @@
+THM-2267 exact audit
+static service families: 512 Hasse checks: 6144 flat-square checks: 3072
+static Mobius checks: 3584 cut checks: 13824 flag checks: 4096
+three-label four-cycle systems: 2401 cut-floor checks: 14406 cycle-gap checks: 2401
+binary forced-alternation formula checks: 1089
+collision static Delta fingerprint: (0,0,0,0)
+identity-gluing switch energy: 0
+swap-gluing switch energy: 8
+all exact assertions passed
