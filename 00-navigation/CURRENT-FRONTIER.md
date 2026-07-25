@@ -176,20 +176,19 @@ floor `7^-21`, rank seven by `78*7^21`, and explicit deletion rank six.
 Its septimal addendum gives safe deep `7^k` cover points but factors THM-2188
 into a positive torus and opposite primitive slopes. Rank/torsion abundance
 still loses slope/current.
-THM-2196/2199 give finite circuit/carry charts, safe-torus floor `182^-13`,
-all twelve relations by `H=78*182^13`, and projective finiteness; the one-carry
-gate `n>91||c||_infinity` ignores ray height. The finite primitive locus is
-neither enumerated nor emptied.
+THM-2196/2199 give finite carry charts, floor `182^-13`, and all twelve
+relations by `H=78*182^13`; THM-2208 leaves one primitive candidate per
+rank-eleven/transverse state. The finite atlas is not enumerated.
 THM-2174's exact-measure quotient is infinite, while its fixed-core
 positive-/zero-Haar quotient has one or two states and no uniform core modulus.
 THM-735 and THM-2182/2184 give remote-tail and grid/mixed-core terminals;
 THM-2186 gives a strict toric exit. THM-2168/2192 leave only scalar `5+3`,
 with one deepest blocker, 36 empty profiles, and degree-at-most-20 static
 Hafnian pumps. THM-2197/2201 give Boolean deficiency and a faithful triangular
-Hasse-jet carrier. THM-2198 gives the exact event movie and `[13]` owner pump,
-closing `(1,1,2)`. THM-2204 closes `(2,2,3)` with exact margin `1830`; its
-lift sum loses labelled guard-hole correlation. THM-2203 closes actual dyadic
-scalar transport at denominators `16/208`. At depth three only `(1,1,3)/(1,2,3)` remain.
+Hasse-jet carrier. THM-2198/2204/2205 close `(1,1,2)/(2,2,3)/(1,1,3)`;
+the lift sum still loses guard-hole correlation. THM-2203 fixes scalar
+transport at `16/208`; only `(1,2,3)` remains at depth three. THM-2209's
+quadratic peel certifies THM-2179's level-one hostile row.
 
 ### Independent routes that remain live
 

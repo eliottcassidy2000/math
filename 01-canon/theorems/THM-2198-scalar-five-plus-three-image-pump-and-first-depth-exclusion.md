@@ -810,6 +810,99 @@ deep-safe parent therefore emits one canonically labelled deep-danger
 anti-defect root and twelve neutral roots. Equation (S9) is the exact
 one-step desuspended automaton.
 
+### 6.1. The first lifted digit gate
+
+The remaining repeated-minimum profiles have the normalized form
+
+```text
+c_1=13a,       c_2=13b,       c_3=13^k c,       k>=2, (S10)
+```
+
+with `a,b,c` thirteen-units. Put `v_3=13^(k-1)c` and take a critical
+primitive parent
+
+```text
+y=z/13^k,             13 does not divide z.
+```
+
+Then `v_3y=cz/13` is safe. On its thirteen roots
+
+```text
+x_r=(z+r13^k)/13^(k+1),             r in F_13,
+```
+
+the deepest divided phase is independent of the root digit:
+
+```text
+v_3x_r=cz/169 mod 1.                                (S11)
+```
+
+Suppose also that `a,b` are safe at `y` and `R(y)=1`. Then `B(y)=0`, so
+(S9) supplies a unique anti-defect root `x_kappa` with `B(x_kappa)>0`.
+There are exactly `156` primitive classes modulo `169`. On the `132`
+classes satisfying
+
+```text
+14||cz||_169>169,
+```
+
+the deepest divided comb is safe on all thirteen roots, and therefore
+`x_kappa` must lie in `D_a union D_b`: one of the two shallower blockers
+is forced to shelter the exceptional digit. On the remaining `24` classes,
+the deepest comb is dangerous on every root and can shelter the digit by
+itself. The count is exact: these are the twelve positive and twelve
+negative primitive residues of norm below `169/14`.
+
+More generally, on every `r`-fold descendant fibre with `1<=r<=k-1`,
+
+```text
+x=(z+n13^k)/13^(k+r)
+       ==> v_3x=cz/13^(r+1) mod 1.                   (S12)
+```
+
+The primitive danger count and density at that digit depth are
+
+```text
+B_(r+1)=12(13^(r+1)+13(-1)^(r+1))/91,
+
+B_(r+1)/phi(13^(r+1))
+ =1/7+(-1)^(r+1)/(7*13^r).                           (S13)
+```
+
+The smallest density is `24/169`, at `r=2`. Since
+
+```text
+24/169-961/6930=3911/1171170>0,                      (S14)
+```
+
+THM-2137's base `A_0` floor alone cannot empty the deepest digit gate.
+This does not obstruct the stronger image pump (M6), whose first-image
+mass exceeds `1/7`; it says that advancing the private defect selector
+requires its label/carry or a new uniform floor after owner deletion.
+
+Full winding is genuinely necessary even for one terminal. Take
+
+```text
+H=1,       y=1/50,       q=5,       q'=18.
+```
+
+The two coefficients agree modulo thirteen and have the same current
+integer window `{0,1}`, hence the same current chord. At the root
+
+```text
+x=(y+2)/13=101/650,
+```
+
+their integer windows differ because
+
+```text
+floor(5x)=0,                 floor(18x)=2.            (S15)
+```
+
+Thus the next chords are distinct. Modulo-thirteen chord data cannot update
+the movie; `q mod 169`, or the equivalent full carry/winding coordinate, is
+already forced at the first lift.
+
 These statements hold away from the finite band boundaries and images of
 the cover-null set. On the `13`-power torsion annuli they are exact: all
 inequalities are strict, and a failure of (2) would thicken to an open
