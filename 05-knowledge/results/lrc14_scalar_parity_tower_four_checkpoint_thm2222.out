@@ -1,0 +1,16 @@
+delta5=961/6930
+B6=3877322523365316
+lambda1_ge_6_profile_count=455
+conditional_post_depth3_ledger_before_depth4_closures=681
+conditional_current_ledger_after_thm2213_thm2215=679
+geometric_chain_transition=[[145,24],[144,25]]/169
+geometric_chain_stationary=(6/7,1/7)
+geometric_chain_K3=916159/4826809
+geometric_chain_K3_minus_delta=1710418421/33449786370
+geometric_chain_K4=3385513/33787663
+geometric_chain_K4_minus_delta=-1286905579/33449786370
+geometric_four_checkpoint_p1=127310580000/965009442943
+geometric_naive_cubic_upper=864315097/5710115047
+geometric_adaptive_cubic_upper=128521281793/965009442943
+delta_minus_adaptive_upper=5245941691819/955359348513570
+status=THM-2222_EXACT_ARITHMETIC_REFEREE_OPEN_S4
