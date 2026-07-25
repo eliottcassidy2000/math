@@ -35,8 +35,8 @@ related:
   - THM-2334-relation-residue-current-and-character-twist-pushforward
 script: 04-computation/lrc14_expiration_word_bockstein_thm2337.py
 output: 05-knowledge/results/lrc14_expiration_word_bockstein_thm2337.out
-script_sha256: 37a9804ea7f5079bb4f3fc340fb4ba5de6ea94a8449f97fbcc35f3fd43ddbf13
-output_sha256: 8f98b8076b572b7ce638ebce0132fc844fa74edf86ad19db7a026e1000ca973f
+script_sha256: 910a2c4d4bc643d7ea83c5ae135f23ba5221c8c2824d4bed9bb9bba407610c72
+output_sha256: 0d66033569526d98635f6fecb01ce55c8acdb75c5ad8d7128534fe7c35d211d3
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -531,18 +531,84 @@ P_{ {a,b} }(q)=(1-Z_a(q))(1-Z_b(q)).                (45)
 ```
 
 Their supports have sizes `12,12,144`, exactly the two pure axes and
-mixed locus of THM-2309.  Because (44) is a finite character polynomial,
+mixed locus of THM-2309.  Put
 
 ```text
-sum_q P_sigma(q) A_q                               (46)
+A(q)=sum_(z in B)lim_(rho->1-)A_(q,z)(rho).          (46)
 ```
 
-is an explicit finite linear combination of the shifted semantic
-currents in (32).  The remaining word/support landing problem is now the
-single statement that (46) is nonzero for the actual `sigma`.  Equation
-(34) proves that some unmasked fibre survives; it does not prove (46).
-The first-jet polarizer (26) and target mask (45) are termwise fully
-occupied but not yet coupled after summation.
+This is the full-word target aggregate from THM-2334.  The exact
+word/support landing statistic is the nonnegative masked energy
+
+```text
+E_sigma=sum_(q in G)P_sigma(q)|A(q)|^2.             (47)
+```
+
+It satisfies
+
+```text
+E_sigma>0
+ iff some surviving target q has
+     support(q)=sigma.                              (48)
+```
+
+There is no cancellation between distinct desired target vectors in
+(47).  Moreover it has a finite `169`-twist Gram formula.  Write
+
+```text
+A(q)=1/169 sum_(ell in G^)
+       exp(-2*pi*i ell.q/13) H(ell)
+```
+
+for the uncoloured specialization of (29), and define the unnormalized
+mask transform
+
+```text
+P_sigma_hat(s)
+ =sum_(q in G)P_sigma(q)exp(2*pi*i s.q/13).
+```
+
+Then
+
+```text
+E_sigma
+ =1/169^2 sum_(ell,ell' in G^)
+   H(ell)conjugate(H(ell'))
+   P_sigma_hat(ell'-ell).                           (49)
+```
+
+If
+
+```text
+h(x)=12 when x=0,
+h(x)=-1 when x!=0,
+```
+
+the three exact kernels are
+
+```text
+P_{ {a} }_hat(s_a,s_b)=h(s_a),
+P_{ {b} }_hat(s_a,s_b)=h(s_b),
+P_{ {a,b} }_hat(s_a,s_b)=h(s_a)h(s_b).             (50)
+```
+
+Thus their only entries are `-12,-1,1,12,144`, and (49) is an explicit
+positive-semidefinite quadratic form in the same shifted currents already
+constructed in (32).
+
+Because (44) is a finite character polynomial, the simpler linear test
+
+```text
+sum_q P_sigma(q) A(q)
+```
+
+is also an explicit finite linear combination of those currents.  Its
+nonvanishing is sufficient but not necessary: different desired target
+vectors can cancel.  Equations (47)--(50), not that linear test, give the
+necessary-and-sufficient remaining word/support landing problem.
+Equation (34) proves only that some unmasked fibre survives.  The
+first-jet polarizer (26) and target mask (45) are termwise fully occupied
+but not yet coupled after summation.
 
 ## 7. Response images, the coin checksum, and the zero boundary
 
@@ -553,7 +619,7 @@ The present response audit separates both ingredients:
 ```text
 mod-13 address response of beta:       image {0};
 first-jet target response tau(beta):   image F_13^2;
-coefficient-preserving gauge action:   absent.       (47)
+coefficient-preserving gauge action:   absent.       (51)
 ```
 
 The second image contains every polarizer in (26), and for each fixed
@@ -592,7 +658,7 @@ full semantic word
 ```
 
 still need a coefficient-sensitive coupling, such as positivity of
-(46), a controlled gauge cocycle, or terminal-component phase.
+(47), a controlled gauge cocycle, or terminal-component phase.
 
 ## 8. Exact remaining boundary
 
@@ -614,7 +680,7 @@ survivor lies in the word-support mask P_sigma       OPEN;
 survivor has nonzero target q                        OPEN;
 bounded visible/Jackson survivor                     OPEN;
 terminal-component phase transport                   OPEN;
-scalar-row exclusion                                 OPEN.              (48)
+scalar-row exclusion                                 OPEN.              (52)
 ```
 
 For THM-2334, the consequence is concrete: pushing the current only by

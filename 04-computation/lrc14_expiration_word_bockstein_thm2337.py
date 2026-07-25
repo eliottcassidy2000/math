@@ -164,6 +164,53 @@ def support_mask_atlas() -> tuple[int, int, int]:
     return counts["pure_a"], counts["pure_b"], counts["fork_ab"]
 
 
+def mask_fourier_kernels() -> tuple[int, ...]:
+    """Verify the exact integer Gram kernels of the three support masks."""
+    points = tuple(product(range(P), repeat=2))
+
+    def scalar_cyclotomic_value(counts: list[int]) -> int:
+        """Evaluate a root sum known to be rational via Phi_13."""
+        require(
+            all(count == counts[1] for count in counts[1:]),
+            "mask transform stopped being a rational integer",
+        )
+        return counts[0] - counts[1]
+
+    observed = set()
+    for name in ("pure_a", "pure_b", "fork_ab"):
+        for frequency in points:
+            counts = [0] * P
+            for point in points:
+                selected = {
+                    "pure_a": point[0] != 0 and point[1] == 0,
+                    "pure_b": point[0] == 0 and point[1] != 0,
+                    "fork_ab": point[0] != 0 and point[1] != 0,
+                }[name]
+                if selected:
+                    exponent = (
+                        frequency[0] * point[0]
+                        + frequency[1] * point[1]
+                    ) % P
+                    counts[exponent] += 1
+            value = scalar_cyclotomic_value(counts)
+            nonzero_transform = lambda coordinate: 12 if coordinate == 0 else -1
+            predicted = {
+                "pure_a": nonzero_transform(frequency[0]),
+                "pure_b": nonzero_transform(frequency[1]),
+                "fork_ab": (
+                    nonzero_transform(frequency[0])
+                    * nonzero_transform(frequency[1])
+                ),
+            }[name]
+            require(value == predicted, "support-mask Fourier kernel changed")
+            observed.add(value)
+    require(
+        observed == {-12, -1, 1, 12, 144},
+        "support-mask kernel range changed",
+    )
+    return tuple(sorted(observed))
+
+
 def gauge_and_weight_hostile() -> Fraction:
     """Check exact address gauge invariance and its nontrivial weight cocycle."""
     depth = 2
@@ -227,6 +274,7 @@ pivot_floor = two_pivot_floor()
 response_size, polarizers = target_response_atlas()
 nonzero_word_codes, zero_word_codes = word_role_codes()
 pure_a_count, pure_b_count, fork_count = support_mask_atlas()
+mask_kernel_values = mask_fourier_kernels()
 gauge_ratio = gauge_and_weight_hostile()
 nonzero_antipodes, reversing_image_size = odd_antipode_audit()
 hostile_zero, hostile_nonzero = symbolic_zero_only_hostile()
@@ -253,6 +301,7 @@ print(f"ordered_zero_word_codes={zero_word_codes}")
 print(f"pure_a_mask_size={pure_a_count}")
 print(f"pure_b_mask_size={pure_b_count}")
 print(f"fork_mask_size={fork_count}")
+print("mask_fourier_kernel_values=" + ",".join(map(str, mask_kernel_values)))
 print(f"support_preserving_gauge_ratio={gauge_ratio}")
 print(f"nonzero_involutive_target_translations={nonzero_antipodes}")
 print(f"pointwise_reversing_response_size={reversing_image_size}")
@@ -262,7 +311,7 @@ print(f"joint_hostile_total_terms={JOINT_GROUP_SIZE**2}")
 print("joint_hostile_surviving_label=zero")
 print("full_semantic_fibre_limits=EXIST")
 print("some_semantic_target_jet_fibre=NONZERO")
-print("word_support_masked_aggregate=OPEN")
+print("word_support_masked_energy=OPEN")
 print("nonzero_target_fibre=OPEN")
 print("terminal_phase=OPEN")
 print("scalar_rows_excluded=0")
