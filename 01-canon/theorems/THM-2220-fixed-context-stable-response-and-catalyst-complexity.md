@@ -7,10 +7,11 @@ status: >
   context response rho_(nx)(y) has the same asymptotic slope ell_hash(x),
   with finite-scale error at most 2ell(y). Catalytic capacity along powers
   is sublinear, and an eta-optimal catalyst saving kappa(nx)-eta has length
-  at least half that saving. Absolute-cost response ideals form a lax
-  monoidal antichain calculus; exact diagonal convolution fails already for
-  T(2,7) and its mirror. The full min-plus continuation kernel is the
-  required exact sidecar. No positive knot catalyst is produced.
+  at least half that saving. Absolute-cost response ideals obey a lax
+  monoidal law; on any fixed finite prime-knot alphabet they have finite
+  antichain bases. Exact diagonal convolution fails already for T(2,7) and
+  its mirror. The full min-plus continuation kernel is the required exact
+  sidecar. No positive knot catalyst is produced.
 source: klein-2026-07-24-fixed-context-stable-response
 depends_on:
   - THM-2191-catalytic-localization-of-the-gordian-metric
@@ -43,7 +44,7 @@ ell_hash(x)=lim_(n->infinity) ell(nx)/n.             (2)
 ```
 
 The last limit exists by subadditivity.  A context `y` therefore defines a
-new one-body length
+subadditive response pseudolength
 
 ```text
 ell^[y](x)=rho_x(y).                                 (3)
@@ -132,14 +133,19 @@ kappa(nx)/n -> 0.                                    (12)
 
 Here is a short proof which does not assume (12) from the
 localization--homogenization commutation theorem.  Fix positive `k` and a
-context `c`.  Concatenating `n` translated copies of a path from `kx+c` to
-`c`, and paying the two endpoints, gives
+context `c`.  Iterate (4) and then apply the endpoint estimate (10) to get
 
 ```text
 ell(nkx) <= n rho_(kx)(c)+2ell(c).                   (13)
 ```
 
-After division by `n` and passage to the limit,
+After division by `n`, use the subsequence homogeneity
+
+```text
+lim_(n->infinity) ell(nkx)/n=k ell_hash(x)
+```
+
+and pass to the limit:
 
 ```text
 k ell_hash(x)<=rho_(kx)(c).                          (14)
@@ -177,7 +183,7 @@ For an `eta_n`-optimal context
 `rho_(nx)(y_n)<=ell_cat(nx)+eta_n`, the repaired form is
 
 ```text
-ell(y_n)>=(kappa(nx)-eta_n)/2.                       (19)
+ell(y_n)>=max(0,kappa(nx)-eta_n)/2.                  (19)
 ```
 
 Thus a growing catalytic saving requires a growing context, even though
@@ -231,20 +237,23 @@ I_s(x)={y:rho_x(y)<=ell(x)-s},
 sigma(x,x')=ell(x)+ell(x')-ell(x+x').                (25)
 ```
 
-Then (22) gives the defect-tax law
+If `s+t>=sigma(x,x')`, (22) gives the defect-tax law
 
 ```text
 I_s(x)+I_t(x')
  subset I_max(0,s+t-sigma(x,x'))(x+x').             (26)
 ```
 
-The same inclusion holds with the Minkowski sum on the left replaced by
-the intersection `I_s(x) intersection I_t(x')`, by the fixed-context
-inequality (4).  The loss `sigma` is necessary: a pre-existing geodesic
-bypass in the merged object can consume all separately accounted saving.
+If `s+t<sigma(x,x')`, the same displayed formula follows from the
+universal bound `rho_(x+x')(w)<=ell(x+x')`, which gives membership in
+`I_0`.  The same split proof works with the Minkowski sum on the left
+replaced by `I_s(x) intersection I_t(x')`, using (4) in the first case.
+The `sigma` tax is forced by converting absolute-cost bounds into saving
+relative to `ell(x+x')`; no sharpness of this tax is claimed here.
 
 On a fixed finite prime alphabet `P_1,...,P_r` for knots, every ideal in
-(20) or (25) has a finite minimal antichain in `N^r` by Dickson's lemma.
+(20) or (25), after intersection with that alphabet submonoid, has a finite
+minimal antichain in `N^r` by Dickson's lemma.
 Equation (22) says that pairwise sums of source antichain generators lie in
 the target ideal; equivalently each such sum dominates some target-minimal
 generator.  This is a finite antichain calculus, but only in the inclusion
@@ -278,11 +287,17 @@ u(J_n)>= [u(nK)-u_cat(nK)]/2                         (31)
 
 for every optimal catalyst `J_n`.
 
-If all `J_n` use a fixed prime alphabet and
+If all `J_n` use a fixed nonempty prime alphabet and
 `J_n=#_i a_(n,i)P_i`, put `U=max_i u(P_i)`.  Since
 
 ```text
 u(J_n)<=sum_i a_(n,i)u(P_i)<=U ||a_n||_1,           (32)
+```
+
+with
+
+```text
+s_n=u(nK)-d_G(nK#J_n,J_n),
 ```
 
 an extra saving `s_n` forces the exponent-height escape
@@ -307,8 +322,11 @@ so `u(K)=u(Kbar)=3`, while Brittenham--Hermiller give
 u(K#Kbar)<=5.                                        (35)
 ```
 
-Half-signature is additive and Gordian-1-Lipschitz, and it calibrates each
-of `K` and `Kbar`.  Hence for every context `J` and every `n`,
+Signed half-signature is additive, and its absolute difference is
+Gordian-1-Lipschitz.  For `nK#J` versus `J`, and separately for the mirror
+with the opposite sign, it gives the lower bound `3n`; unknotting the `n`
+displayed summands gives the upper bound `3n`.  Hence for every context
+`J` and every `n`,
 
 ```text
 d_G(nK#J,J)=3n,
@@ -341,7 +359,8 @@ Equation (21) always gives
 rho_(x+z)(w)<=(rho_x square rho_z)(w).               (39)
 ```
 
-The knot monoid is conical, so the only decomposition of `U` is `U#U`.
+The knot monoid is conical by Schubert prime decomposition, as imported in
+THM-2191, so the only decomposition of `U` is `U#U`.
 Consequently
 
 ```text
@@ -367,6 +386,9 @@ responses having the same homogeneous shadow does **not** make
 u_hash(K)=u_hash(Kbar)=3,
 u_hash(K#Kbar)<=5.                                  (42)
 ```
+
+The last inequality follows by repeating the at-most-five crossing-change
+certificate independently on each of `n` copies and dividing by `n`.
 
 ## 7. Equality and failure boundaries
 

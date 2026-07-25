@@ -2,22 +2,25 @@
 id: THM-2221
 title: "Tournament context cut metric and pinned transport response"
 status: >
-  PROVED. For a tournament substitution core with pinned exterior context,
-  the whole incidence-word histogram collapses exactly, for every reversal-
-  cost transport response, to an integer cut semimetric D_mu. For arbitrary
-  split block transport X the exterior cost is <X,D_mu>, and the full pinned
-  response is min_X[G(X)+<X,D_mu>]. Whole-block transpositions recover every
-  entry of D_mu, so this is the exact exterior-response quotient. Bypass-
+  PROVED. For equal-order tournament substitution blocks over one labelled
+  quotient, with block-uniform pinned exterior context and unit Hamming
+  reversal cost, the whole incidence-word histogram collapses exactly for
+  every prescribed exterior transport-cost probe to an integer cut
+  semimetric D_mu. For arbitrary split block transport X the exterior cost
+  is <X,D_mu>, and the full pinned response is min_X[G(X)+<X,D_mu>].
+  Whole-block transpositions recover every entry of D_mu. Bypass-
   suppression loci are additive upper ideals with finite antichain bases.
   Vertex marginals do not determine D_mu, while D_mu itself discards
-  higher-order parity needed for Krenn-type complex amplitudes. The core
-  kernel G and unpinned core/context exchange remain open.
+  higher correlations and phase which can affect general whole-fiber complex
+  amplitudes; no Krenn matching realization is asserted. The core kernel G
+  and unpinned core/context exchange remain open.
 source: klein-2026-07-24-tournament-context-cut-transport
 depends_on:
   - THM-2195-transitive-quotients-exactly-control-universal-substitution-products
 related:
   - THM-2183-order-join-is-an-exact-tournament-metric-product
   - THM-2191-catalytic-localization-of-the-gordian-metric
+  - THM-2216-residual-capacity-hinge-gram-law
   - THM-2220-fixed-context-stable-response-and-catalyst-complexity
 external:
   - "Mario Krenn, Xuemei Gu, and Daniel Soltesz, Questions on the Structure of Perfect Matchings Inspired by Quantum Physics, arXiv:1902.06023."
@@ -25,11 +28,14 @@ external:
 
 # THM-2221 -- tournament context cut metric and pinned transport response
 
-The scope is pinned exterior context and arbitrary vertex transport among
-the core blocks.  This is not an unrestricted formula for `d_iso`, because
-core vertices may not trade places with pinned exterior vertices.  The
-theorem supplies the exact exterior term of the transport kernel; the
-core-pair kernel remains a necessary sidecar.
+Assume throughout: one common labelled quotient tournament, equal positive
+order `N` in every corresponding core block, unit arc-reversal/Hamming cost,
+and block-uniform pinned exterior adjacency identical label by label in
+source and target.  Admissible bijections may transport vertices arbitrarily
+among the core blocks but may not exchange them with pinned exterior
+vertices.  This is not an unrestricted formula for `d_iso`; it supplies the
+exact exterior term of the transport kernel, while the core-pair kernel
+remains a necessary sidecar.
 
 ## 1. Inheritance and the missing coordinate
 
@@ -54,7 +60,7 @@ the core blocks, paired with a min-plus core transport kernel.
 ## 2. Pinned contexts and their color fibers
 
 Let `C` be a finite set of core block labels, and let `R` be a tournament on
-`C`.  For clarity suppose every core block has order `N>=1`.  Let
+`C`.  As assumed above, every core block has the same order `N>=1`.  Let
 
 ```text
 P = R[T_c : c in C],
@@ -63,7 +69,9 @@ Q = R[S_c : c in C],                 |T_c|=|S_c|=N.       (1)
 
 A pinned exterior context consists of labelled vertices `t` which occur
 identically in the source and target and which every admissible bijection
-fixes.  Arcs among exterior vertices are also identical and hence cost zero.
+fixes.  Each `t` has uniform adjacency to all vertices inside a displayed
+core block, with that block-label incidence identical in source and target.
+Arcs among exterior vertices are also identical and hence cost zero.
 The incidence color of `t` on the core is the binary word
 
 ```text
@@ -132,6 +140,51 @@ D_mu(c,d)=m(c)+m(d)-2m(c,d).                         (7a)
 
 Thus one-coordinate exterior scores lose precisely the pairwise
 co-incidence needed even before any higher-order color question is asked.
+
+### Signed Gram gauge and negative type
+
+The incoming signed-coordinate viewpoint of THM-2195 identifies an
+equivalent semidefinite chart.  Put
+
+```text
+M_mu=sum_w mu(w),
+s_w(c)=2w(c)-1,
+
+Gamma_mu=sum_w mu(w) s_w s_w^T.                    (7b)
+```
+
+Then `Gamma_mu` is positive semidefinite, has constant diagonal `M_mu`,
+and
+
+```text
+D_mu(c,d)=[M_mu-Gamma_mu(c,d)]/2.                  (7c)
+```
+
+Indeed,
+
+```text
+|w(c)-w(d)|=[1-s_w(c)s_w(d)]/2
+```
+
+word by word.  Consequently `D_mu` is of conditional negative type:
+whenever `sum_c a_c=0`,
+
+```text
+a^T D_mu a=-1/2 a^T Gamma_mu a<=0.                 (7d)
+```
+
+For every admissible transport matrix `X`, whose total mass is
+`N|C|`,
+
+```text
+<X,D_mu>
+ =[M_mu N|C|-<X,Gamma_mu>]/2.                      (7e)
+```
+
+Thus the cut-cost minimization is equivalently a signed-Gram trace reward.
+Adding a constant context word changes `(M_mu,Gamma_mu)` by
+`(1,mathbf1*mathbf1^T)` and leaves (7c)--(7e) invariant.  The cut metric is the
+gauge-free observable; the raw Gram matrix is not.
 
 ## 3. Exact split-transport formula
 
@@ -224,7 +277,7 @@ Equations (13)--(15) recover the prescribed-block law of THM-2195.  If
 If `sigma` is a cycle, (15) is exactly the number of binary transitions
 around that cycle.
 
-## 5. Exact classification of exterior response profiles
+## 5. Exact classification of prescribed exterior-cost probes
 
 Write
 
@@ -234,7 +287,7 @@ E_mu(sigma)=N sum_c D_mu(c,sigma(c)).                       (16)
 
 This is the exterior reversal cost of the whole-block permutation `sigma`.
 
-> **Theorem 2 (response-equivalence classification).** For two context
+> **Theorem 2 (prescribed exterior-cost classification).** For two context
 > histograms `mu,nu`, the following are equivalent:
 >
 > 1. `D_mu=D_nu`;
@@ -262,6 +315,10 @@ D_(mu+nu)=D_mu+D_nu.                                       (18)
 
 This is the operation-ready classification.  It should not be enlarged into a
 tournament: its observable is symmetric, weighted, and legitimately tied.
+It is not an injectivity statement for the single minimized scalar
+`R_P,Q(mu)`: after pinning has forced identity transport, different larger
+singleton pinning levels have different `D_mu` but the same saturated value
+`R_P,Q=A_0`.
 
 ## 6. Min-plus context profile and finite pinning bases
 
@@ -304,22 +361,38 @@ is an additive upper ideal:
 mu in J_s  =>  mu+nu in J_s for every nu.                  (23)
 ```
 
-It is nonempty.  Add `K` copies of every singleton cut word `1_{c}`.  Their
-sum gives
+It is nonempty.  Let `mu_K` consist of `K` copies of every singleton cut
+word `1_{c}`.  Their sum gives
 
 ```text
 D(c,d)=2K for c!=d.                                        (24)
 ```
 
-Every `X!=NI` then pays at least `2K` externally, while the finite values
-`G(X)` are nonnegative.  Thus the explicit choice
+Put
 
 ```text
-2K>A_0                                                     (24a)
+q(X)=sum_(c!=d)X(c,d).
 ```
 
-forces every `X!=NI` to cost more than the identity transport.  Hence
-`R_P,Q=A_0` and `S=0`.
+Then the exact added exterior cost is `2Kq(X)`.  Every nonidentity integer
+transport with equal row and column margins has `q(X)>=2`: its nonzero
+off-diagonal flow has zero divergence and therefore contains a directed
+cycle of length at least two.  Identity
+transport is optimal exactly when
+
+```text
+2Kq(X)>=A_0-G(X)             for every X!=NI,        (24a)
+```
+
+and it is uniquely optimal if all these inequalities are strict.  Since
+`G(X)>=0`, the crude but explicit sufficient condition
+
+```text
+4K>A_0                                                     (24b)
+```
+
+forces every `X!=NI` to cost more than identity.  Hence `R_P,Q=A_0` and
+`S=0`.  No sharpness is claimed for the sufficient bound (24b).
 
 Because the word alphabet is finite, Dickson's lemma applies to
 `N^({0,1}^C)`: every upper ideal has finitely many minimal elements.
@@ -416,9 +489,10 @@ sum_w mu_odd (w)(-1)^(w(0)+w(1)+w(2)) = -4.                (33)
 
 Thus the map `mu -> D_mu` destroys higher color correlation.  That loss is
 harmless for reversal cost because every kernel (15) is a sum of two-point
-cut functions.  It is not harmless for a sum-product or complex-amplitude
-observable of the Krenn type.  Such a target requires the full weighted
-fiber ledger (including phase), not merely `D`.
+cut functions.  It can matter for a general sum-product or complex-amplitude
+whole-fiber observable, which requires the full weighted ledger (including
+phase), not merely `D`.  The parity witness is an information-theoretic
+boundary; no realization as a Krenn perfect-matching instance is asserted.
 
 ## 8. Connection contract
 
@@ -443,7 +517,7 @@ destroyed:
 
 needed sidecars:
   G(X) for core-pair reversal cost;
-  the full complex fiber ledger for Krenn-type cancellation;
+  the full complex fiber ledger for general whole-fiber cancellation;
   a larger membership/transport kernel if exterior vertices themselves may
   exchange with core vertices;
 
