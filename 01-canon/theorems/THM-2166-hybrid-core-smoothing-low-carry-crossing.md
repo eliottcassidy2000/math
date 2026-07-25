@@ -2,21 +2,22 @@
 id: THM-2166
 title: "Hybrid whole-core smoothing and low-carry crossing"
 status: >
-  PROVED + VERIFIED-EXACT. In every zero-measure defect-six 6+7 split, with
-  the retained seven-core contained in {1,...,13}, there is a nonzero scalar
-  crossing frequency of size at most 708. The six far coefficients have
-  height at most 298 and every nonzero one is prime to 7. The core side can
-  be arithmetically re-encoded on at most two retained speeds, with coefficient
-  height at most 57, which is certificate-minimal for representing the full
-  interval of possible carries. This support-two conclusion is not Fourier-vector
-  sparsity: the natural core product has nonzero support-three coefficients.
-  The exact 1,716-core mass/component sweep and the Jackson ledger have two
-  independent implementations.
+  PROVED + VERIFIED-EXACT. For a zero-measure defect-six split with seven
+  retained speeds in {1,...,13}, a common scalar frequency has nonzero
+  magnitude at most 708. Its six far coefficients have height 298 and every
+  nonzero one is a 7-unit. The core side has an arithmetic representation
+  on at most two retained speeds with coefficient height 57. Height 57 is
+  certificate-minimal for representing the full possible carry interval.
+  This is not Fourier-vector sparsity: the natural core product has nonzero
+  support-three coefficients. Two independent exact implementations verify
+  the 1,716-core geometry, Jackson ledger, and sparse carry bank.
 source: codex-2026-07-24-relation-carry-spectrum
 depends_on:
   - THM-2145
-  - THM-2162
   - THM-2163
+related:
+  - THM-2054
+  - THM-2162
 script: 04-computation/lrc14_hybrid_core_low_carry_referee_codex_20260724.py
 output: 05-knowledge/results/lrc14_hybrid_core_low_carry_referee_codex_20260724.out
 script_sha256: 025c9d2a516587c12bba120fce06bb6579869bc0bf37577b2d507f336703c4a8
@@ -33,414 +34,295 @@ hash_basis: working-tree bytes (LF)
 At radius `1/14`, put
 
 ```text
-G={x in R/Z: ||x||_(R/Z)>=1/14},
+G={x in R/Z: ||x||>=1/14},
 G_A={t: at in G for every a in A}.                    (1)
 ```
 
-Let
+Let `E` be a seven-subset of `{1,...,13}` and let `F` be a disjoint
+six-set of distinct positive integer speeds. If
 
 ```text
-E subset {1,...,13},       |E|=7,                     (2)
-F={six distinct positive integer speeds},             (3)
-E intersect F=empty.
+mu(G_E intersect G_F)=0,                              (2)
 ```
 
-Suppose
+then there are an integer `nu` and coefficient vectors `(a_f)_(f in F)`,
+`(b_e)_(e in E)` such that
 
 ```text
-mu(G_(E union F))=0.                                  (4)
+0<|nu|<=708,
+sum_(f in F) a_f f=nu,
+|a_f|<=298,             a_f!=0 implies 7 does not divide a_f,
+sum_(e in E) b_e e=-nu,
+#{e:b_e!=0}<=2,         |b_e|<=57.                   (3)
 ```
 
-Then there are an integer `nu`, far coefficients `(a_f)_(f in F)`, and
-core coefficients `(b_e)_(e in E)` such that
+Thus `sum a_f f+sum b_e e=0` is genuinely crossing. We call `nu` its
+**cut carry**.
+
+## 1. The hybrid smoothing inequality
+
+Use THM-2145's normalized Jackson kernel and safe-interval smoother
 
 ```text
-0<|nu|<=708,                                          (5)
-sum_(f in F) a_f f=nu,                                (6)
-|a_f|<=298, and a_f!=0 implies 7 does not divide a_f, (7)
-sum_(e in E) b_e e=-nu,                               (8)
-#{e:b_e!=0}<=2,             |b_e|<=57.                (9)
+J_N=F_N^2/integral F_N^2,
+q_N=J_N*1_G,
+eta_N=2 integral ||x||J_N(x)dx.                      (4)
 ```
 
-In particular
+For the far block take `N=150` and set
 
 ```text
-sum_(f in F) a_f f+sum_(e in E)b_e e=0               (10)
+P_F(t)=product_(f in F)q_150(ft).                     (5)
 ```
 
-is genuinely crossing: both labelled restrictions have nonzero value. The
-number `nu` is the **cut carry**.
-
-## 1. Smooth the far block factorwise and the core as one set
-
-Use the normalized Jackson kernels and interval smoothers of THM-2145:
+The factor height is `2N-2=298`. The product telescope, Haar invariance,
+and the six-speed floor used in THM-2145 give
 
 ```text
-J_N=F_N^2/integral F_N^2,       q_N=J_N*1_G,          (11)
-eta_N=2 integral ||x|| J_N(x) dx.                     (12)
+||P_F-1_(G_F)||_1<=6eta_150,
+integral P_F>=61/273-6eta_150.                        (6)
 ```
 
-For the far block use `N=150`, so `q=q_150` has degree `298`,
+For the core, first assemble its exact one-dimensional safe set. Let
+`beta_E=mu(G_E)` and let `K_E` be the number of its positive-length circular
+components; isolated weak-safe points are deliberately omitted. Put
 
 ```text
-0<=q<=1,       ||q-1_G||_1<=eta_150,
-eta_150<439/156250.                                   (13)
-```
-
-Put
-
-```text
-Q_F(t)=product_(f in F) q(ft).                        (14)
-```
-
-The product telescope and Haar invariance give
-
-```text
-||Q_F-1_(G_F)||_1<=6 eta_150.                         (15)
-```
-
-By the six-speed floor used in THM-2145,
-
-```text
-integral Q_F>=mu(G_F)-6eta_150
-             >=61/273-6eta_150.                      (16)
-```
-
-Now retain the actual one-dimensional core geometry. Let `K_E` be the
-number of **positive-length circular components** of `G_E`; isolated weak-safe
-points are not counted. Define
-
-```text
-R_E=J_355*1_(G_E).                                    (17)
+R_E=J_355*1_(G_E).                                    (7)
 ```
 
 Then
 
 ```text
-0<=R_E<=1,             integral R_E=mu(G_E),
-Fourier(R_E,nu)=0 for |nu|>708.                       (18)
+0<=R_E<=1,        integral R_E=beta_E,
+Fourier(R_E,k)=0 for |k|>708.                         (8)
 ```
 
-If a circle set is a union of `K` positive-length intervals, translation by
-`x` changes its indicator in `L^1` by at most `2K||x||`. Averaging against
-`J_355` therefore gives
+A translation by `x` changes a union of `K_E` circular intervals by at most
+`2K_E||x||` in symmetric-difference measure. Hence
 
 ```text
-||R_E-1_(G_E)||_1<=K_E eta_355.                       (19)
+||R_E-1_(G_E)||_1<=K_E eta_355.                       (9)
 ```
 
-This is the whole-core counterpart of THM-2162's BV component split. An
-isolated point has measure zero and its two endpoint terms cancel; charging
-it as a component would use the wrong carrier.
+This is the BV-component distinction of THM-2162: an isolated point matters
+for a weak witness but cancels from every `L^1` variation.
 
-## 2. The hybrid crossing inequality
-
-For any `[0,1]`-valued `Q,R` and indicators `f,g`,
+For `[0,1]`-valued `P,R` and indicators `f,g`,
 
 ```text
-QR-fg=(Q-f)R+f(R-g),
-|QR-fg|<=|Q-f|+|R-g|.                                 (20)
+PR-fg=(P-f)R+f(R-g),
+|PR-fg|<=|P-f|+|R-g|.                                 (10)
 ```
 
-Apply this with
+Apply (10) with `(P,R,f,g)=(P_F,R_E,1_(G_F),1_(G_E))`. By (2),
 
 ```text
-(Q,R,f,g)=(Q_F,R_E,1_(G_F),1_(G_E)).
+integral P_F R_E<=6eta_150+K_E eta_355.               (11)
 ```
 
-Equation (4) says `integral fg=0`, so (15), (19), and (20) imply
+Therefore a nonzero common Fourier frequency follows if
 
 ```text
-integral Q_F R_E<=6eta_150+K_E eta_355.               (21)
+(61/273-6eta_150)beta_E
+   >6eta_150+K_E eta_355.                             (12)
 ```
 
-Consequently a strict common-frequency certificate follows whenever
+## 2. Exact all-core certificate
+
+The danger-comb arrangement for speeds `1,...,13` has `178` rational
+boundary points and `177` open cells. The primary exact sweep computes
+`(beta_E,K_E)` on every one of the `binomial(13,7)=1716` cores.
+
+The Jackson odd-mode formula, using `pi<355/113`, gives
 
 ```text
-(61/273-6eta_150)mu(G_E)
-   >6eta_150+K_E eta_355.                             (22)
+eta_150<439/156250,
+eta_355<371/312500.                                   (13)
 ```
 
-This is where smoothing the core as a whole helps: its mean is exactly
-`mu(G_E)`. Only its one-dimensional BV boundary is charged on the right.
-
-## 3. Exact 1,716-core and Jackson ledger
-
-The companion computes `(mu(G_E),K_E)` for every
+Substituting these caps into the left side of (12) minus the right, its
+unique minimum is
 
 ```text
-binomial(13,7)=1716
+41050267/1222741406250>0                              (14)
 ```
 
-core in two independent ways:
-
-1. iterative intersection of exact closed rational safe intervals, deleting
-   isolated intervals only when counting `K_E`; and
-2. a sweep over the `178` exact global boundary points and `177` open cells,
-   where mass is the sum of safe-cell widths and `K_E` is the cyclic number
-   of safe-cell runs.
-
-The two ledgers agree on every core. The positive-component distribution is
+at
 
 ```text
-K_E : number of cores
- 12 :   4
- 14 :  31
- 16 : 171
- 17 :   1
- 18 : 452
- 20 : 584
- 22 : 262
- 24 : 152
- 26 :  54
- 28 :   5.                                            (23)
+E_*=(1,5,7,8,9,11,13),
+beta_(E_*)=45107/229320,       K_(E_*)=20.            (15)
 ```
 
-For `N=355`, the exact Jackson coefficient formula and a second direct
-integer convolution of the Fejer coefficients agree at every mode. With
-`pi<355/113`, the odd-mode ledger gives
+The same core has four isolated weak-safe points, correctly charged zero.
+The rational-`pi` ledger is negative with `J_354`, so `355` is the first of
+these two adjacent Jackson choices to close this certificate. No optimality
+among other kernels is claimed.
+
+The independent companion repeats every load-bearing finite step by a
+different path:
+
+- iterative exact interval intersection versus global arrangement-cell runs;
+- direct integer convolution of Fejer coefficients versus the cubic Jackson
+  formula; and
+- ordinary integer sets versus the primary bit masks for sparse carries.
+
+The two core paths agree on every mass and positive-component count. The
+independent component distribution is
 
 ```text
-C_0=29826035,
-sum_(1<=k<=707, k odd) C_k/k^2>36709039,
-eta_355<11872/10000000=371/312500.                    (24)
+K_E : 12  14  16  17  18  20  22  24  26  28
+count:  4  31 171   1 452 584 262 152  54   5.        (16)
 ```
 
-The same independent coefficient check at `N=150` reproduces (13).
+Normal and optimized executions reproduce both stored transcripts.
 
-Insert the rational caps from (13), (24) into the left side of (22) minus
-the right side, for all `1,716` cores. Its exact minimum is
+## 3. Frequency extraction
+
+Equations (6)--(15) imply
 
 ```text
-41050267/1222741406250>0,                             (25)
+(integral P_F)(integral R_E)>integral P_F R_E.         (17)
 ```
 
-uniquely at
+Finite Fourier orthogonality says the zero-mode contribution on the right is
+the left side of (17). Thus some nonzero integer `nu` satisfies
 
 ```text
-E=(1,5,7,8,9,11,13),
-mu(G_E)=45107/229320,          K_E=20.                (26)
+Fourier(P_F,nu) Fourier(R_E,-nu)!=0,
+0<|nu|<=708.                                          (18)
 ```
 
-That core also has four isolated weak-safe points, which correctly contribute
-zero to (19). Equations (22)--(26) prove
+Expanding the nonzero coefficient of `P_F` supplies integers `a_f` with
 
 ```text
-(integral Q_F)(integral R_E)>integral Q_F R_E.         (27)
+sum_f a_f f=nu.                                       (19)
 ```
 
-The margin in (25) is small enough that both the positive-component convention
-and the exact per-core pairing of mass with component count are load-bearing;
-combining the global mass minimum with the global component maximum would
-lose the certificate.
-
-The same exact rational-`pi` ledger is negative with `J_354` on the core.
-Thus `N=355` is the first of these two adjacent Jackson choices to certify
-this inequality; no optimality among other positive kernels is asserted.
-
-The independent companion named in the header repeats every load-bearing
-finite claim by a different path: iterative rational interval intersection
-versus the arrangement run count, direct integer convolution of the Fejer
-coefficients versus the cubic Jackson formula, and ordinary integer sets
-versus the primary bit masks for the height-`57` carry bank. Normal and
-optimized executions match its stored transcript.
-
-## 4. Extract the scalar frequency and the far coefficients
-
-Both factors in (27) are finite trigonometric polynomials. Fourier
-orthogonality gives
+By THM-2145, the nonzero Fourier support of `q_150` consists exactly of
+the `k` with
 
 ```text
-integral Q_F R_E
- =sum_nu Fourier(Q_F,nu) Fourier(R_E,-nu).             (28)
+0<|k|<=298,             7 does not divide k.          (20)
 ```
 
-The zero-mode term on the right is the left side of (27). Hence at least one
-nonzero integer `nu` has
+Zero modes are allowed in the product, so (19)--(20) give the far part of
+(3).
 
-```text
-Fourier(Q_F,nu) Fourier(R_E,-nu)!=0.                  (29)
-```
+## 4. Sparse arithmetic encoding of the core
 
-Equation (18) gives `0<|nu|<=708`.
-
-Expand the nonzero coefficient of `Q_F`. At least one convolution summand
-supplies integers `(a_f)` with
-
-```text
-sum_f a_f f=nu.                                       (30)
-```
-
-THM-2145 proves that the nonzero Fourier support of `q_150` consists exactly
-of the integers `k` with
-
-```text
-0<|k|<=298,             7 does not divide k.          (31)
-```
-
-Zero modes are also allowed in the product. Thus (30)--(31) prove (6)--(7).
-Notice that the core coefficient in (29) is used only to bound the scalar
-frequency and make it nonzero; no coefficient-vector origin has yet been
-assigned to it.
-
-## 5. The support-two core encoding
-
-Every seven-subset `E` of `{1,...,13}` obeys the following elementary
-dichotomy:
-
-```text
-1 in E,
-or E contains one whole pair among
-(2,3),(4,5),(6,7),(8,9),(10,11),(12,13).              (32)
-```
-
-Indeed, if `1` is absent, seven elements selected from the six displayed
-pairs force a full pair by pigeonhole.
-
-If `1 in E`, set
-
-```text
-b_1=-nu,             b_e=0 otherwise.                 (33)
-```
-
-If `(r,r+1) subset E`, set
-
-```text
-b_r=nu,              b_(r+1)=-nu,                    (34)
-```
-
-and all other core coefficients to zero. Then
-
-```text
-nu*r-nu*(r+1)=-nu.                                   (35)
-```
-
-This already proves a support-two encoding of height `708`, but the exact
-finite carrier is much smaller. For an integer `B`, define
+For height `B`, define
 
 ```text
 C_B(E)=union_({e,f} subset E)
-       {ae+bf: |a|,|b|<=B}.                           (36)
+       {ce+df: |c|,|d|<=B}.                           (21)
 ```
 
-An exhaustive integer-set computation over all `1,716` cores proves
+An exhaustive exact computation over all `1,716` cores and all `1,417`
+possible carries proves
 
 ```text
-[-708,708] subset C_57(E)       for every E.           (37)
+[-708,708] subset C_57(E)          for every E.        (22)
 ```
 
-The bound is sharp for representing the entire unrestricted carry interval:
-at height `56` exactly three cores fail,
+It also proves sharpness for this unrestricted carry interval. At height
+`56` exactly three cores fail:
 
 ```text
 (1,2,3,4,5,6,7)       misses +/-699,+/-705,+/-706,
 (1,2,3,4,5,6,8)       misses +/-701,
-(1,2,4,5,6,8,10)      misses +/-701.                  (38)
+(1,2,4,5,6,8,10)      misses +/-701.                  (23)
 ```
 
-Thus (5) and (37) supply coefficients satisfying (8)--(9), completing the
-theorem. Equations (32)--(35) remain the conceptual reason support two is
-always possible; (37) is the exact height refinement.
+Equations (18), (22) supply the core coefficients in (3).
 
-## 6. Hostile type check: this is not core Fourier sparsity
-
-The strongest tempting interpretation of (9) is false. On the natural
-seven-torus, put
+There is also a conceptual, nonsharp proof of support two. Every seven-subset
+`E` either contains `1`, or, after partitioning `{2,...,13}` into
 
 ```text
-Phi(x_1,...,x_7)=product_(j=1)^7 1_G(x_j).            (39)
+(2,3),(4,5),(6,7),(8,9),(10,11),(12,13),
 ```
 
-Its coefficient at the support-three vector
+pigeonhole forces a consecutive pair `(r,r+1)`. One may represent `-nu` by
+`-nu*1`, or by `nu*r-nu*(r+1)`. This has height `708`; (22) is the exact
+height refinement.
+
+## 5. Hostile type check: support two is not Fourier sparsity
+
+The whole-core scalar smoother forgets labelled coefficient-vector origins.
+On the natural seven-torus,
 
 ```text
-(1,1,1,0,0,0,0)
+Phi(x_1,...,x_7)=product_(j=1)^7 1_G(x_j)
 ```
 
-is
+has support-three coefficient
 
 ```text
-Fourier(1_G,1)^3 Fourier(1_G,0)^4
-=(-sin(pi/7)/pi)^3(6/7)^4!=0.                        (40)
+Fourier(Phi,(1,1,1,0,0,0,0))
+=Fourier(1_G,1)^3 Fourier(1_G,0)^4
+=(-sin(pi/7)/pi)^3(6/7)^4!=0.                        (24)
 ```
 
-Thus core Fourier coefficients do **not** vanish outside support two. The
-whole-core operation first restricts the labelled product to the
-one-dimensional speed line and then smooths that scalar function. Different
-coefficient vectors have already collided at a common scalar frequency, so
-their owner support cannot be recovered.
-
-The valid statement is precisely the repaired one proved above:
+Thus higher-support core Fourier coefficients do not vanish. The valid
+mechanism is
 
 ```text
-scalar Fourier cutoff |nu|<=708
-  + the special additive geometry of seven-subsets of {1,...,13}
-  -> a new support-two arithmetic encoding.           (41)
+scalar cutoff |nu|<=708
+  + a finite additive property of seven-subsets of {1,...,13}
+  -> a support-two arithmetic re-encoding.            (25)
 ```
 
-This distinction is essential if the theorem is generalized to other core
-sizes or banks.
+This distinction is load-bearing for any generalization.
 
-## 7. Consequences and limits
+## 6. Defect-six and radix consequences
 
-Compared with THM-2145, the cut carry falls from `20860` to `708`, at the
-same time as the core restriction contracts to two coefficients of height
-`57`. This is a post-extraction re-encoding, not preservation of the
-factorwise coefficient owners.
-
-If exactly one far coefficient in (6) is nonzero, then
+If exactly one far coefficient in (19) is nonzero, then
 
 ```text
 |a_f|f=|nu|<=708,
 ```
 
-so that far speed is itself at most `708`. Otherwise at least two far speeds
-have a height-`298`, `7`-unit near-cancellation of nonzero magnitude at most
+so that far speed is at most `708`. Otherwise at least two far speeds have
+a height-`298`, `7`-unit near-cancellation of nonzero magnitude at most
 `708`.
 
-The full relation satisfies
+The full coefficient vector `m=(a,b)` satisfies
 
 ```text
-||a,b||_1<=6*298+2*57=1902.                           (42)
+||m||_1<=6*298+2*57=1902.                             (26)
 ```
 
-Therefore THM-2163's generic radix carries obey `|kappa_j|<1902`. There is
-also a sharper dyadic tail. Write
+THM-2163 gives the generic radix bound `|kappa_j|<1902`. For a sharper
+dyadic tail, divide only the far speeds:
 
 ```text
-F=2^j Z_j+R_j,             D_j=Z_j mod 2,
-lambda_j=(a.R_j-nu)/2^j=-a.Z_j.                       (43)
+F=2^j Z_j+R_j,       D_j=Z_j mod 2,
+lambda_j=(a.R_j-nu)/2^j=-a.Z_j.                       (27)
 ```
 
 Then
 
 ```text
 lambda_0=-nu,
-lambda_(j+1)=(lambda_j+a.D_j)/2.                      (44)
+lambda_(j+1)=(lambda_j+a.D_j)/2.                      (28)
 ```
 
 For `j>=4` all core speeds have terminated, so `lambda_j` is the full
-relation carry and only the six far owners remain. Moreover
+relation carry and only six far owners remain. Moreover
 
 ```text
 |lambda_j|
  <=((2^j-1)||a||_1+|nu|)/2^j
- <=1788-1080/2^j<1788,                               (45)
+ <=1788-1080/2^j<1788,                               (29)
 ```
 
-hence the integer carry satisfies `|lambda_j|<=1787`. The owner-mask warning
-of THM-2163 remains unchanged: neither finite bound controls the number of
-radix levels.
+hence `|lambda_j|<=1787`.
 
-The theorem does not prove that the extracted relation is independent of
-previous relations, prevent a one-far/one-core reduced-pair tautology, bound
-all six far speeds, or close defect six. What it proves is the sharper finite
-object that a next descent may use:
-
-```text
-one nonzero scalar cut carry in [-708,708],
-six height-298 far digits with nonzero digits prime to 7,
-and at most two height-57 explicitly encoded core owners. (46)
-```
+This is a much smaller state than THM-2145's raw cut-carry range, but it does
+not bound radix depth. The owner mask remains essential, the multi-far branch
+still permits arbitrarily large speeds, and defect six and LRC(14) remain
+open.
 
 QED.

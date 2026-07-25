@@ -1,0 +1,12 @@
+THM-2166 exact hybrid whole-core smoothing referee
+boundary points=178, open cells=177, seven-cores=1716
+all 1716 cores contain speed 1 or an adjacent pair
+support<=2 core representation: height 57 covers every |nu|<=708
+height 56 fails on exactly 3 cores; hostile missing frequencies are +/-699,+/-705,+/-706 or +/-701
+eta_150<439/156250, eta_355<371/312500; alpha_6-6eta_150>0
+unique margin minimizer=(1, 5, 7, 8, 9, 11, 13): mass=45107/229320, BV components=20
+all-core hybrid margin=41050267/1222741406250 > 0
+the same exact rational-pi ledger is negative at core N=354
+far height=298, core height=57, scalar carry<=708, core support<=2
+l1<=1902; after four dyadic digits the full carry satisfies |kappa|<=1787
+ALL EXACT ASSERTIONS PASSED
