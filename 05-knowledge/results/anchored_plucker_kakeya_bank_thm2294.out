@@ -1,0 +1,12 @@
+THM-2294 exact audit
+anchored reconstruction: pivot_det=-3 columns=6 plucker_quadruples=5
+offset witness: same_edge_field=(1, 1, -1) Z_values=(0, 1)
+F_13 line bank: raw_union=104 raw_avoid=65 rank3_union=97 rank3_avoid=72
+rank3 union maxima m=2..8: (25, 37, 49, 61, 73, 85, 97)
+all-depth counts n=1..4: (72, 12168, 2056392, 347530248)
+height bounds n=1..4: (132858, 1860012, 24313014, 316202040)
+positive tournament: weighted_sum=(0, 0) local=True strong=True cycles=20 scores=(4, 3, 3, 3, 3, 4, 4, 4)
+quadratic negation products: chi_7=-1 chi_13=1
+K4 enumeration: all_cycle_histogram=((0, 24), (1, 16), (2, 24)) up_to_sign_gauges=16 positive_gauges=8 gauge_cycle_histogram=((1, 16),)
+knot hostile ledger: (C_Kbar(K), C_K(Kbar), sigma)=(0,0,>=1)
+ALL CHECKS PASSED

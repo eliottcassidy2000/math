@@ -47,6 +47,24 @@ This sidecar preserves detailed records routed compactly from
   `10_139`, and Baader-intermediate families are likewise pure bypass in both
   directions; the pretzel bounds do not exclude translation catalysis.
 
+## Yang -- *Unknotting number of the connected sum of n identical knots*
+
+- **Primary / freshness:** Zhiqing Yang, *Journal of Knot Theory and Its
+  Ramifications* **17** (2008), 253--255,
+  [DOI 10.1142/S0218216508006130](https://doi.org/10.1142/S0218216508006130).
+  **PUBLISHED / stable; theorem statement and bibliographic record checked
+  2026-07-25.**
+- **Imported role:** if a knot `K` has nontrivial Alexander polynomial, then
+  the connected sum of `n` identical copies has unknotting number at least
+  `n`. Applied to `T(2,7)#mirror(T(2,7))`, whose Alexander polynomial is
+  nontrivial, this gives the stable lower bound
+  `u_hash(T(2,7)#mirror(T(2,7)))>=1`.
+- **Repo consumer:** [THM-2292, common catalytic section and Helly calibration
+  nerve](../../01-canon/theorems/THM-2292-common-catalytic-section-and-helly-calibration-nerve.md).
+- **Does not prove:** additivity under repeated sum, the exact raw or stable
+  unknotting number of the Brittenham--Hermiller mirror pair, existence of a
+  positive catalyst, or completeness of any pairwise knot invariant.
+
 ## Owens--Strle -- *Immersed disks, slicing numbers and concordance unknotting numbers*
 
 - **Primary / freshness:** [arXiv:1311.6702v3](https://arxiv.org/abs/1311.6702),
@@ -139,8 +157,13 @@ This sidecar preserves detailed records routed compactly from
 - **Does not prove:** that the matching object is a tournament, a min-plus
   Gordian model, or an LRC certificate. Pairwise orientation loses edge
   absence, multiedges, endpoint colors, matching multiplicity, and complex
-  amplitudes. Current claims on the maintained page require their own
-  paper/formal-proof audit before entering the proved dependency graph.
+  amplitudes. The maintained page was updated on 2026-07-23 to report an
+  AlphaProof Nexus result for even `n` at `d>=n`; the linked formal statement
+  visibly covers the diagonal `d=n`, while the accompanying arXiv overview
+  does not by itself supply the full paper proof of the page's monotone
+  extension. Treat that status as dynamic-page/formal-artifact scope until
+  the exact Lean theorem and the `d>n` reduction are audited. None of the
+  repo's hafnian/Pfaffian results depends on this update.
 
 ## Traub--Vargas Koch--Zenklusen -- *Single-Source Unsplittable Flows in Planar Graphs*
 
