@@ -30,20 +30,14 @@ Its indispensable coordinates are primitive parameter, integral columns, transve
 ### Proved reductions and terminals
 
 - **CITED:** LRC through 13 total runners. The newest step is
-  [Sungkawichai–Trakulthongchai](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture),
-  a computer-assisted proof for 10–12 nonzero speeds.
+  [Sungkawichai–Trakulthongchai](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture), a computer-assisted proof for 10–12 nonzero speeds.
 - **PROVED finite-circuit alternative:**
   [THM-2051](../01-canon/theorems/THM-2051-fejer-bv-small-relation-alternative-for-lrc14.md)
-  closes the coarse analytic
-  “middle” sought by THM-935/946. THM-965 gives the sharp universal pair-
-  covariance floor `delta_(a,b)>=-6/637`, so pairs can be paid exactly. If a
-  thirteen-speed row has no exact support-three-through-five relation with all
-  coefficient magnitudes at most `2^20`, whole-product Fejer--BV approximation
-  gives a positive-measure strict lonely set. THM-2074 counts the exact finite
-  hyperplane ledger, proves only `O(B^12)` exceptions (hence density one), and
-  gives certified packets on every fixed prime-power tower. The residual is
-  templates, but descent or classification within those hyperplanes—including
-  the relation-rich AP boundary—remains open.
+  closes the coarse analytic “middle” sought by THM-935/946. THM-965 gives the
+  sharp pair-covariance floor `delta_(a,b)>=-6/637`. Without a support-three-
+  through-five relation of height `2^20`, Fejer--BV gives positive strict-safe
+  measure. THM-2074 counts the finite hyperplane ledger and proves density one;
+  descent/classification within it, including the AP boundary, remains open.
 - **PROVED rank descent and explicit residual atlas:** THM-2052 combines
   THM-763's finite primitive-height bound with a pigeonhole/code argument.
   Every hypothetical counterexample has eleven independent support-at-most-three
@@ -144,13 +138,10 @@ Its indispensable coordinates are primitive parameter, integral columns, transve
   lifts bounded scalar relations; `H=2^19` clears recorded margins.
   MISTAKE-080/082 still require shape-specific torus models.
 - **Scope separation:** [THM-1149](../01-canon/theorems/THM-1149-compact-essential-crown-and-farey-blocker.md)
-  proves that tight deletion and an all-loose essential crown are different
-  branches. Equality classification after a tight deletion cannot be applied
-  before extracting that deletion.
+  separates tight deletion from an all-loose crown; extract the deletion before applying its equality classification.
 - **Local-comb ceiling:** THM-1252 through THM-1274 close or sharply saturate
-  most purely local six-comb return arguments. The live residue is global
-  endpoint/child transport or a phase-located turn tax, not another unlocated
-  local-return charge.
+  local six-comb arguments. The live residue is global endpoint/child transport
+  or a phase-located turn tax, not another unlocated local charge.
 ### Exact live obligation
 
 Rank-twelve cells already lie in finite maximal-minor boxes but still need
@@ -179,19 +170,17 @@ is the proved carrier that reduces each fixed bad-denominator/owner fiber to
 labelled primitive packets and one coprime interval. It makes the terminal
 exact and finite; it does not prove that every surviving interval is empty.
 
-Orthogonally, THM-2144/2164/2167 give height-`29/105` independent relations,
-at most `208875` carry pairs, and `2,924,250` carry-owner states; THM-2171
-repairs order/distinctness with cap `5,430,750`, while THM-2169 puts every
-deletion on a height-`1247` plane. THM-2174 isolates the exact danger clutter
-and scale-sensitive endpoint current. THM-2185 forces rank three by height
-`500` and rank two on every deletion by `105000`; THM-735 closes fixed-core
+Orthogonally, THM-2144/2164/2167 give height-`29/105` relations, `208875`
+carry pairs, and `2,924,250` carry-owner states; THM-2171 repairs order at cap
+`5,430,750`. THM-2174 isolates danger clutter and endpoint current. THM-2190 forces the exact ladder
+`W_178>=3,W_204>=4,W_262>=5,W_450>=6`, deletion rank five by `235800`,
+and rank seven at some absolute finite height; THM-735 closes fixed-core
 remote six-tail cones without tail isolation.
 [THM-2182](../01-canon/theorems/THM-2182-endpoint-grid-product-and-tail-overlap-sidecar.md)
 factors aligned tails exactly, while THM-2184 retains their complete joint
 law and proves the varying tube `W_i=NLc_i+r_i`,
-`||r||_1<2NL/(245e_2)`. THM-2186 gives the complementary exact maximum and
-projective drift on an octagon-needle ray, plus a general toric-needle
-terminal whenever its strict two-clock profile is nonempty. The residual must
+`||r||_1<2NL/(245e_2)`. THM-2186 gives the exact octagon-needle maximum,
+projective drift, and a toric-needle terminal whenever its strict two-clock profile is nonempty. The residual must
 change core, remain genuinely non-gridlike, or live on a critical equality
 skeleton. THM-2168 separately leaves only scalar `5+3` in `(3,5,0)`.
 THM-2145/2166 give every defect-six split a far-height-`298`,

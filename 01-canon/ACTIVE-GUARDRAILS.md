@@ -86,7 +86,7 @@
 27c. **Current LRC reductions are not closures.** THM-2138 empties `6+1/5+2`, and THM-2139/2141 close only `(1,5,2)/(2,5,1)`; four fivefold profiles remain.
     THM-2140 and THM-2148/2168 give depth, polar, Fano, and top-two valuation invoices; the generated-lattice argument now eliminates all-independent and scalar `4+3`, but rank-one scalar `5+3` remains.
     THM-2143's strict Gibbs test misses equality; THM-2161 proves fixed modulus banks blind. THM-2179 repairs the scalar-covariance dead end only to a `3/41` exit or body relation: height `180` at defect six and `140` at defect at least seven.
-    THM-2166's carry `<=708`, THM-2169's height-`1247` deletion relations, THM-2171's order-preserving finite pump, and THM-2185's unconditional height-`500` rank-three harvest still retain phase/current debt. THM-2174 proves finite endpoint labels insufficient because the exact cocycle is `C_r/W`; THM-2186 retains the equality skeleton and tangent magnitude on one exact family. None proves LRC(14).
+    THM-2166's carry `<=708`, THM-2171's ordered pump, and THM-2190's height-`450` rank-six plus existential bounded rank-seven harvest still retain phase/current debt. THM-2174 proves finite endpoint labels insufficient because the exact cocycle is `C_r/W`; THM-2186 retains the equality skeleton and tangent magnitude on one exact family. None proves LRC(14).
 
 ## NC2 / GMC
 
