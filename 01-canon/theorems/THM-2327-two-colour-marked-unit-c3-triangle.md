@@ -3,9 +3,10 @@ id: THM-2327
 title: "Two-colour triangle for marked unit c3 incidence"
 status: >
   PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. On every
-  canonical middle-owner profile and for every nonzero root character,
-  there is a c_3-multiple edge with multiplier coprime to 91 incident
-  to a bare-source vertex carrying the same positive-word coefficient.
+  positive canonical shallow-owner word stratum in the 150 strict-row
+  bank, and for every nonzero root character, there is a c_3-multiple
+  edge with multiplier coprime to 91 incident to a bare-source vertex
+  carrying that positive-word coefficient.
   The first edge is obtained at modulus 13D from the gcd-normalized
   bare/word carrier and has multiplier 1 modulo 13. THM-2326 gives an
   incident edge whose multiplier is nonzero modulo 7. If neither edge
@@ -26,8 +27,8 @@ related:
   - THM-2321-prescribed-root-character-bispectrum-slice-positivity
 script: 04-computation/lrc14_two_colour_marked_unit_triangle_thm2327.py
 output: 05-knowledge/results/lrc14_two_colour_marked_unit_triangle_thm2327.out
-script_sha256: accf57d1160adcff66750228c6f821ff2609d93919ca12f1e45554188bf85820
-output_sha256: c0dc2b32e541180fdc06d7c13cb933338b27ffeb1154e0e94ed51de820aa6475
+script_sha256: d400c9da4b5691256d22babda4de1c062ef68df9939243941e03a46f458e4dda
+output_sha256: d5fb9c874ff41fc807352cdd5100d9145f10e7f0e6821ce53351a1c0f5fc4e87
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -35,7 +36,7 @@ hash_basis: working-tree bytes (LF)
 
 **PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
 
-The middle-owner obstruction had become a quantifier mismatch. THM-2323
+The shallow-owner obstruction had become a quantifier mismatch. THM-2323
 marks a bare Fourier vertex by the full positive word. THM-2326 gives
 every such vertex an incident `c_3` edge whose multiplier avoids seven.
 THM-2293 gives a `91`-unit edge somewhere, but not necessarily at the
@@ -61,8 +62,9 @@ one of t, s, or s-t is a unit modulo 91.             (1)
 
 At least one endpoint of the selected unit edge is one of the marked
 vertices `A,B`. This closes the unit-colour/word-mark incidence gap on
-the canonical middle-owner carrier. It does not yet connect that edge to
-a prescribed target-plane gain or terminal-component phase.
+the positive canonical shallow-owner word branch of the strict bank. It
+does not yet connect that edge to a prescribed target-plane gain or
+terminal-component phase.
 
 ## 1. The abstract two-colour completion
 
@@ -96,17 +98,19 @@ edge-coloured triangle, not a tournament: orienting the edges would add
 no information, while forgetting either divisibility colour destroys the
 proof.
 
-## 2. The gcd-normalized middle-owner carrier
+## 2. The gcd-normalized shallow-owner carrier
 
-Work in the canonical strict LRC(14) setup with middle owner `E=E_2` and
-deepest blocker speed `c_3`. Write
+Work on one positive-return word stratum in the `150` strict canonical
+LRC(14) rows, with either shallow owner `E=E_j`, `j in {1,2}`, and deepest
+blocker speed `c_3`. The `15` repeated-first rows and any alternative
+resonance branch are outside this theorem's scope. Write
 
 ```text
-c_2=13^b u_2,
-c_3=13^c u_3,                  c>b,
+c_j=13^lambda u_j,
+c_3=13^c u_3,                  c>lambda,
 
-g=gcd(c_2,c_3),
-a=c_2/g,
+g=gcd(c_j,c_3),
+a=c_j/g,
 D=c_3/g.                                           (5)
 ```
 
@@ -121,12 +125,12 @@ gcd(a,D)=1,
 Let `Q` be any positive canonical word supplied by THM-2305 and put
 
 ```text
-E_Q=E intersection T^(-(b+1))Q.                    (7)
+E_Q=E intersection T^(-(lambda+1))Q.               (7)
 ```
 
 Thus `E_Q` is a positive-measure literal subset of `E`; a nonzero
 coefficient of `1_(E_Q)` retains the complete word ancestry. Normalize
-by the common speed factor rather than by all of `c_2`:
+by the common speed factor rather than by all of `c_j`:
 
 ```text
 F_Q=P_g 1_(E_Q),
@@ -148,31 +152,33 @@ D_a={x:||a x||<1/14}.                              (10)
 ```
 
 Indeed, if the inverse branch `(x+r)/g` contributes to (8), then it lies
-in `E subset D_(c_2)=D_(ga)`, and hence
+in `E subset D_(c_j)=D_(ga)`, and hence
 
 ```text
 ||a(x+r)||=||a x||<1/14.                           (11)
 ```
 
 This normalization is the decisive quotient repair. Normalizing by
-`c_2` puts the spectrum on the sublattice of `c_2`-multiples and forces
+`c_j` puts the spectrum on the sublattice of `c_j`-multiples and forces
 every `c_3`-edge multiplier to contain the quotient `a`. Normalizing by
 `g` retains the missing coset coordinate.
 
 The jump ledger is unchanged. Write
 
 ```text
-g=13^b v,                  13 does not divide v.
+g=13^lambda v,             13 does not divide v.
 ```
 
 THM-2319 proves
 
 ```text
-G=P^b 1_E                       has at most 2S jumps,
-P^b 1_(E_Q)=G(1_Q after T)      has at most 6S jumps. (12)
+G=P^lambda 1_E
+                                  has at most 2S jumps,
+P^lambda 1_(E_Q)=G(1_Q after T)
+                                  has at most 6S jumps. (12)
 ```
 
-Since `P_g=P_v P^b` and Perron transport cannot increase the number of
+Since `P_g=P_v P^lambda` and Perron transport cannot increase the number of
 nonzero image jumps,
 
 ```text
@@ -190,7 +196,8 @@ The fixed-colour argument of THM-2323 extends from one danger arc to
 gcd(a,N)=1,                                        (14)
 ```
 
-and let `f,h` be nonzero rational step functions satisfying
+and let `f,h` be nonzero rational-valued step functions with rational
+breakpoints satisfying
 
 ```text
 0<=f<=h,
@@ -266,11 +273,11 @@ Apply Section 3 to (8) with
 N=13D.                                             (21)
 ```
 
-By (6), `gcd(a,N)=1`. Fix any desired nonzero middle-shell root character
+By (6), `gcd(a,N)=1`. Fix any desired nonzero owner-shell root character
 `kappa modulo 13`. Since
 
 ```text
-g=13^b v_g,                 13 does not divide v_g,
+g=13^lambda v_g,            13 does not divide v_g,
 ```
 
 choose a unit class `K_0 modulo D` satisfying
@@ -315,7 +322,7 @@ satisfy
 (1_E)_hat(B)(1_(E_Q))_hat(B)!=0.                   (26)
 ```
 
-Both are exact grade-`b` atoms of root character `kappa`. Moreover,
+Both are exact grade-`lambda` atoms of root character `kappa`. Moreover,
 
 ```text
 B-A
@@ -341,7 +348,7 @@ colour. It may still have `7|t`.
 Apply THM-2326 to the marked bare atom `A`. Since
 
 ```text
-nu_13(A)=b<c=nu_13(c_3),
+nu_13(A)=lambda<c=nu_13(c_3),
 ```
 
 there is an integer
@@ -396,8 +403,8 @@ The uniform bound is
  <=156S^2+14S-13.                                  (34)
 ```
 
-No condition on `a`, no bound on the unit cofactor of `D`, and no scalar
-row restriction remains.
+No condition on `a` or bound on the unit cofactor of `D` remains within
+the positive shallow-owner word branch of the strict bank.
 
 ## 6. The exact mixed Fourier triangle
 
@@ -435,7 +442,7 @@ valid.
 
 ## 7. What this closes and what remains
 
-The marked middle-owner ledger is now:
+The marked shallow-owner ledger is now:
 
 ```text
 THM-2323:
@@ -462,8 +469,9 @@ The following are not consequences:
 
 - (36) does not choose a projective target gain in the THM-2315 corolla;
 - it does not retain the terminal-component phase/current of THM-2303;
-- it does not identify a full-lattice relation address from THM-2325
-  with this analytic frequency triangle;
+- it does not identify a full-lattice relation address from
+  THM-2325-prescribed-target-gain-full-lattice-91-unit-needle-bank with
+  this analytic frequency triangle;
 - it does not exclude any of the `165` live scalar profiles.
 
 The remaining object is therefore narrower than “find a unit edge.” It
