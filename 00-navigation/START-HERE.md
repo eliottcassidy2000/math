@@ -116,10 +116,9 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     `(3,5,0)`. THM-2140 gives depth/polar invoices; THM-2148/2168 give the
     Fano classification and top-two depth majorization; THM-2168 now eliminates
     its transverse and scalar-`4+3` lanes, leaving only scalar `5+3`.
-    THM-2187 makes the short carrier saturated; THM-2193 gives the rank-six
-    torus floor `7^-21`, rank seven by height `78*7^21`, and explicit safe septimal-grid points; its THM-2188 audit proves torsion coverage still does
-    not control the primitive slope. THM-2174/2188 leave phase/current debt;
-    THM-2192 leaves scalar `5+3` open with one deepest blocker and a chord carrier.
+    THM-2187/2193 give a saturated carrier, floor `7^-21`, rank seven by `78*7^21`, and safe septimal grids; THM-2188 retains slope/current.
+    THM-2196 proves projective zero-Haar finiteness via a circuit/carry rank
+    ladder without enumeration; THM-2192 leaves scalar `5+3` at one rooted blocker.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
     the knot continuation cocycle; THM-2191 localizes Gordian distance by
     common catalysts and closes `9_10` through the four-ball crossing metric.
@@ -130,7 +129,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 | Topic | Read first | Then use |
 |---|---|---|
-| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2190; preserve carry/owner/tie, positive-Haar first-period/current, joint continuation, and equality skeleton |
+| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2196; effectivize circuit carries while preserving owner/tie, positive-Haar current, joint continuation, and equality skeleton |
 | LRC / Frobenius wildcard | [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) | THM-2041 packets; keep seed and pointwise exit explicit |
 | LRC literature | [`CORE-PAPERS.md#lonely-runner-conjecture`](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [`LRC-TECHNIQUE-INDEX.md`](LRC-TECHNIQUE-INDEX.md), source paper |
 | NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2101/2111, formal interfaces, guardrails |

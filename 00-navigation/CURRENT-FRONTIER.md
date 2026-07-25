@@ -170,29 +170,23 @@ is the proved carrier that reduces each fixed bad-denominator/owner fiber to
 labelled primitive packets and one coprime interval. It makes the terminal
 exact and finite; it does not prove that every surviving interval is empty.
 
-THM-2187 saturates the height-`105` relation plane and makes every fixed
-radix free. THM-2190 forces the exact ladder
-`W_178>=3,W_204>=4,W_262>=5,W_450>=6`, rank five on every deletion by
-`235800`. THM-2193 proves the uniform rank-six torus floor `7^-21`, forces
-rank seven by height `78*7^21`, and rank six on every deletion explicitly.
-For the bounded rank-six carrier its septimal addendum gives at least six safe
-cover-grid points on every `7^k` grid past the explicit determinant threshold;
-nonunit coefficients are handled exactly by residue-coset balance. The same
-addendum factors THM-2188 into a positive safe torus and a primitive slope and
-exhibits opposite outcomes with identical bounded phase data. Thus rank and
-torsion abundance are not the terminal: the missing datum is the slope/current,
-not another finite phase statistic.
-THM-2174 keeps infinitely many exact-measure states but compresses the
-positive-Haar/zero-Haar observable on each fixed-core residue ray to a one- or
-two-state first-period flag; it gives no uniform changing-core modulus.
-THM-735 closes fixed-core remote six-tail cones; THM-2182/2184 give exact grid
-products, varying tubes, and a mixed-core scalar quotient-remainder terminal.
-THM-2186 gives exact octagon-needle drift and a strict toric exit. THM-2168
-leaves only scalar `5+3` in `(3,5,0)`, now with the all-depth invoice
-`B>=(12493/35640)13^d`. THM-2192 forces a unique deepest blocker, an exact
-root-sheet ownership law, and eight empty residue profiles; the tail remains
-open. THM-2179's `3/41` exit/body relation
-still lacks a phase-preserving route into these terminals.
+THM-2187 saturates the height-`105` plane; THM-2190 forces
+`W_178>=3,W_204>=4,W_262>=5,W_450>=6`; THM-2193 gives the rank-six torus
+floor `7^-21`, rank seven by `78*7^21`, and explicit deletion rank six.
+Its septimal addendum gives safe deep `7^k` cover points but factors THM-2188
+into a positive torus and opposite primitive slopes. Rank/torsion abundance
+still loses slope/current.
+THM-2196 gives finite semilinear circuit/carry charts. With THM-2053 it proves
+every infinite zero-Haar family has a common-dilation subsequence, so the
+primitive locus is finite; its one-carry gate `n>91||c||_infinity` ignores ray
+height. The finite locus is neither enumerated nor emptied.
+THM-2174's exact-measure quotient is infinite, while its fixed-core
+positive-/zero-Haar quotient has one or two states and no uniform core modulus.
+THM-735 and THM-2182/2184 give remote-tail and grid/mixed-core terminals;
+THM-2186 gives a strict toric exit. THM-2168/2192 leave only scalar `5+3`,
+with an all-depth invoice, one deepest blocker, anchored sheet ownership, and
+eight empty residue profiles. THM-2179's body relation still lacks a
+phase-preserving route into these terminals.
 
 ### Independent routes that remain live
 
@@ -439,6 +433,7 @@ The most reusable current bridges are not literal object identifications:
 | One-sided accumulation | LRC spectrum | Can qualitative isolation be made effective by finite state/pinning data? |
 | Support Dirichlet profile | integer sequences | Do tournament/LRC census supports have functional or automatic structure? |
 | Continuation congruence / min-plus kernel | Gordian connected-sum profile and THM-840/853 | Which finite sidecar is a target-preserving quotient under every named future operation? |
+| Relation-cone circuit/carry atlas | THM-2196 | NC2 charge channels, ordered tournament joins, and invariant-null knot packets inherit affine carry charts, but respectively still need whole-face coefficient phase, SCC/block order, and the full continuation kernel; JC pole descent additionally loses residue roots and flux. |
 | Weighted-sector obstruction | THM-2045 factorized `R` family | Does the unique constant-producing sector fail on a broader Lee–Li inner edge? |
 
 HYP-8810's “JC(2) and LRC(14) share AP-rigidity” is a **wildcard frame, not a

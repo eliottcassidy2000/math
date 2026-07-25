@@ -86,7 +86,7 @@
 27c. **Current LRC reductions are not closures.** THM-2138 empties `6+1/5+2`, and THM-2139/2141 close only `(1,5,2)/(2,5,1)`; four fivefold profiles remain.
     THM-2140 and THM-2148/2168 give depth, polar, Fano, and valuation invoices; generated-lattice collapse eliminates all-independent and scalar `4+3`, but scalar `5+3` remains despite the new all-depth height and quotient-remainder terminals.
     THM-2143's strict Gibbs test misses equality; THM-2161 proves fixed modulus banks blind. THM-2179 repairs the scalar-covariance dead end only to a `3/41` exit or body relation: height `180` at defect six and `140` at defect at least seven.
-    THM-2187 makes rank six saturated; THM-2193 gives the uniform floor `7^-21` and rank seven by `78*7^21`. THM-2188 proves static finite carriers target-blind, and THM-2192 proves rank seven alone loses five scalar-kernel dimensions in the `5+3` lane. THM-2174's exact cocycle is `C_r/W`; THM-2186 retains one equality skeleton. None proves LRC(14).
+    THM-2187/2193 saturate rank six, give floor `7^-21`, and force rank seven by `78*7^21`. Relative to `LRCUpTo13`, THM-2196 makes primitive zero-Haar rows qualitatively finite but neither enumerates them nor preserves weak existence. THM-2188/2192/2174/2186 retain static, scalar-kernel, current, and equality debts. None proves LRC(14).
 
 ## NC2 / GMC
 
