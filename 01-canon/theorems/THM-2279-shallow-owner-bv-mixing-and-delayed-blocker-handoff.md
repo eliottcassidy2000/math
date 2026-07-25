@@ -67,8 +67,8 @@ c_1=13u_1,       c_2=13^b u_2,       c_3=13^c u_3,
 2<=b<c,                         5<=c<=19,             (3)
 ```
 
-where `H,q_1,...,q_5,u_1,u_2,u_3` are thirteen-units and the usual
-distinctness hypotheses hold. Put
+where `H,q_1,...,q_5,u_1,u_2,u_3` are thirteen-units, `H` is odd, and the
+usual distinctness hypotheses hold. Put
 
 ```text
 S=H+sum_(i=1)^5 q_i+sum_(r=1)^3 c_r.                 (4)
@@ -282,8 +282,10 @@ Omega={0,1,...,12}.
 ```
 
 For a word `w=(w_1,...,w_n) in Omega^n`, let `I_w` be its half-open
-base-13 cylinder. For an open finite union of intervals `U`, define its
-inner language
+base-13 cylinder. For a finite union of intervals `U`, first change its
+finitely many endpoint memberships arbitrarily, which changes none of the
+measures or positive-measure conclusions below, and define its inner
+language
 
 ```text
 L_n(U)={w:I_w subset U},               alpha_n(U)=|L_n(U)|/13^n. (25)
