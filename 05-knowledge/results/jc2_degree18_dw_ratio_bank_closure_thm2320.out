@@ -1,0 +1,24 @@
+rational_ratio=W^4/D^5=-935886848/430565625
+rational_representative=D=W=-430565625/935886848
+rational_integer_scaled_curve=-3885692518656*u**3 + 239857562880*u**2*y**2 - 20728431360*u*y**4 + 3632067084375*u + 168167168*y**6 - 134521003125*y**2 + 403563009375*y
+rational_branch_discriminant=-1628150074335205281*(104*y - 405)**2*(851140463828047757312*y**10 + 6629074766353064263680*y**9 + 38722720389995062886400*y**8 + 201060278948051288064000*y**7 + 609926274714380083200000*y**6 + 999177077047752345600000*y**5 - 1467500022145297296000000*y**4 - 26582121110232749880000000*y**3 - 59732448939525919050000000*y**2 - 282296044395397652343750000*y - 549662971058346390380859375)/97719251621562548224
+rational_h10=degree_10_squarefree_coprime
+rational_exceptional_fibre=smooth_total_ramification_e3
+rational_absolute_irreducibility=PASS_Groebner_basis_[1]
+rational_total_ramification=12
+rational_normalization_genus=4
+cubic_ratio_field=degree_3_irreducible_mod_13
+cubic_orbit_size=3
+cubic_Delta=universal_lead*(y-Y(alpha))^2*h10
+cubic_h10=degree_10_squarefree_coprime
+cubic_exceptional_fibre=ordinary_node_two_unramified_branches
+cubic_absolute_irreducibility=PASS_global_Groebner_basis_[1]
+cubic_total_ramification=10
+cubic_normalization_genus=3
+infinity_cubic=-26040609*v**3 + 1607445*v**2 - 138915*v + 1127
+infinity_discriminant=-153384762202971019112448
+infinity=3_distinct_unramified_points
+closed_DW_ratios=4
+hostile_control_D=W=1_squarefree=PASS
+riemann_hurwitz_and_deck_contradiction=MATHEMATICAL_PROOF_REQUIRED
+status=THM2320_FULL_DW_BANK_EXACT_REFEREE
