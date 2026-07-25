@@ -306,11 +306,10 @@ design without pretending a preserver supplies the seed.
 - THM-1805 makes directed triangles the basic Vandermonde-cancellation atom.
   THM-1862/1936 make `H` and signed Rédei data multiplicative under order-join,
   while `c3` is additive.
-- [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md)
-  makes `d_iso` exactly `l1` on fixed order-join patches by image-swap
-  uncrossing; the ambient quotient still has triangles and is not a partial cube.
+- [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md) makes `d_iso` exactly `l1` on fixed order-join patches by image-swap uncrossing; the ambient quotient still has triangles and is not a partial cube.
 - [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md)
-  classifies the universal product exactly: iff transitive. Marked partial-automorphism cost is a weighted Hamming derivative and PSD-Gram permutation-trace defect; subgroup averaging is orbit variance. THM-2242 closes the full transitive pinned split response; THM-2249 gives every quotient a quadratic forced-pair lower envelope and classifies its zero set as a single scaled automorphism transport. THM-2256 then gives the exact scale dichotomy: zero-cost automorphism/nonautomorphism contact makes the first forced gap bounded, while its absence makes it linear; the transitive quotient has exact gap one and `C_3` has the THM-2249 sharp linear floor. Residual `G-F_R`, larger nontransitive quotients, and unpinned transport remain open.
+  classifies the universal product iff transitive. Marked partial-automorphism cost is a weighted Hamming derivative and PSD-Gram permutation-trace defect; subgroup averaging is orbit variance. THM-2242 closes the transitive pinned response; THM-2249 gives every quotient a quadratic forced-pair envelope and a single scaled-automorphism zero set.
+  THM-2256's scale dichotomy is bounded under zero-cost automorphism/nonautomorphism contact and linear otherwise. The transitive quotient has exact gap one; `C_3` has THM-2249's sharp linear floor. Residual `G-F_R`, larger nontransitive quotients, and unpinned transport remain open.
 - THM-1880/1885 give the Chebyshev--Pell/`BS(1,2)^+` transitive frame.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
