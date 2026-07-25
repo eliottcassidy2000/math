@@ -14,12 +14,19 @@ status: >
   on any chosen nine coordinates, of height at most 80H_0^5. For
   H_0=78*182^13 this supplies eight internal scalar relations, a bounded
   saturated integral basis, unrestricted fibres in every composite radix,
-  and an explicit scalar-kernel minor bound. THM-2199's direct global
-  primitive box is strictly smaller, so the theorem closes the scalar
-  transport/Smith/radix interface debt, not LRC(14), global finiteness, or
-  the remaining exact scalar noncancellation problem.
+  and an explicit scalar-kernel minor bound. Combining the fixed coordinate
+  section with the MSS height ceiling and the elementary largest-speed tooth
+  bound forces every actual scalar blocker valuation to be at most 19.
+  Hence THM-2192's unique-deepest scalar tail has only 1,140 valuation
+  profiles, not an infinite all-depth ledger. THM-2199's direct global
+  primitive box is strictly smaller than the internal-minor box, so the
+  theorem closes the scalar transport/Smith/radix and infinitary-profile
+  debts, not LRC(14), feasible enumeration, or the remaining exact scalar
+  noncancellation problem.
 source: codex-2026-07-24-fixed-dyadic-scalar-section
 depends_on:
+  - THM-759-tight-instance-ratio-bound
+  - THM-763-strict-finite-height-for-tight-lrc-instances
   - THM-2073-lrc14-dyadic-deletion-tower
   - THM-2076-guard-capacity-terminal-rank-floor
   - THM-2077-terminal-kakeya-needle-and-recursive-quarter-escape
@@ -304,25 +311,123 @@ onto eight relation digits is surjective and every unrestricted fibre has
 exactly `m` elements. This closes the Smith and composite-radix interfaces,
 but owner-restricted fibres still require the phase/current sidecar.
 
-## 4. Numerical comparison and exact remaining debt
+## 4. The all-depth scalar ledger is actually finite
+
+The fixed factors in (11) expose a consequence which is invisible in the
+abstract scalar cover.  Let `S` be a primitive hypothetical LRC(14)
+counterexample, so
+
+```text
+M(S)<=1/14.
+```
+
+THM-763, applied with thirteen nonzero speeds and the settled
+lower-dimensional LRC, gives
+
+```text
+sum_(v in S) v <= binom(14,2)^12=91^12
+ =322475487413604782665681.                           (32)
+```
+
+There is also a useful non-strict version of THM-759's danger-tooth
+argument.  Write `w` for the largest speed, `w_2` for the second largest,
+and `S_0=S\{w}`.  The settled twelve-speed theorem gives
+
+```text
+mu=M(S_0)>=1/13.
+```
+
+If
+
+```text
+w>w_2/(14mu-1),
+```
+
+choose a maximizing phase of `S_0` and a circular interval radius `rho`
+strictly between
+
+```text
+1/(14w)  and  (mu-1/14)/w_2.
+```
+
+Every speed in `S_0` stays strictly `1/14`-safe on that interval, while the
+interval is wider than one closed danger tooth of `w`.  It therefore contains
+a phase at which `w` is strictly safe as well, contradicting
+`M(S)<=1/14`.  Consequently
+
+```text
+w<=w_2/(14mu-1)<=13w_2,
+w<=13/14 sum_(v in S)v <=13/14*91^12.                (33)
+```
+
+Return to the actual scalar section.  Its three original blocker coordinates
+are `208s_j`.  If
+
+```text
+lambda_j=nu_13(13s_j),
+```
+
+then positivity gives
+
+```text
+208*13^(lambda_j-1)<=208s_j<=w.                      (34)
+```
+
+The first excluded valuation is separated by an exact integer gap:
+
+```text
+208*13^19
+ =304079420398092791020816
+ >13/14*91^12
+ =598883048053837453521979/2.                        (35)
+```
+
+Equations (33)--(35) prove
+
+```text
+lambda_j<=19                  for j=1,2,3.            (36)
+```
+
+THM-2192 orders the actual blocker depths as
+
+```text
+1<=lambda_1<=lambda_2<lambda_3.
+```
+
+For a fixed deepest value `c`, the shallower pair is a two-element multiset
+from `{1,...,c-1}`, so there are `binom(c,2)` choices.  Therefore the entire
+valuation ledger has
+
+```text
+sum_(c=2)^19 binom(c,2)=binom(20,3)=1140             (37)
+```
+
+profiles.  Exact exclusions such as THM-2198 and THM-2204/2205 remove rows
+from this finite ledger.  The number `1140` is not a feasible full
+root-capacity enumeration: the largest torsion layer still has order
+`13^20`, and the unit labels and owner-current sidecars remain enormous.
+The gain is a quantifier correction.  “All deeper profiles” means a finite
+depth-`19` list in the actual dyadic LRC lane, not an unbounded family.
+
+## 5. Numerical comparison and exact remaining debt
 
 THM-2077 equation (13), at `r=3`, propagates (26) back through the tower:
 
 ```text
 max(S)<=(144/5)max(Q_3)
-       <=(72/5) 8^4(80H_0^5)^8.                       (32)
+       <=(72/5) 8^4(80H_0^5)^8.                       (38)
 ```
 
 This is an explicit internal-carrier box, but it is not a new or improved
 finite reduction. THM-2199 already gives the much smaller direct bound
 
 ```text
-max(S)<=12^6 H_0^12                                   (33)
+max(S)<=12^6 H_0^12                                   (39)
 ```
 
 for every primitive zero-Haar row, and (11) then bounds `u` immediately.
-The exponent `12` in (33) is strictly better than the exponent `40` in
-(26)/(32). The value of Sections 1--3 is instead structural:
+The exponent `12` in (39) is strictly better than the exponent `40` in
+(26)/(38). The value of Sections 1--4 is instead structural:
 
 ```text
 source:          actual dyadic-terminal n=8 row;
@@ -331,7 +436,7 @@ preserved:       evaluation, scalar kernel, integrality after clearing 208;
 destroyed:       four outer dyadic/tail coordinates;
 needed sidecar:  none for scalar height transport;
 decisive test:   eight supported covectors from the four-coordinate
-                 elimination lemma.                                  (34)
+                 elimination lemma.                                  (40)
 ```
 
 Consequently the scalar-lift and denominator/Plucker-height debts in
