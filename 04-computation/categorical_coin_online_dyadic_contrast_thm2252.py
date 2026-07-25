@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact finite referee for THM-2249's online dyadic-contrast extractor.
+"""Exact finite referee for THM-2252's online dyadic-contrast extractor.
 
 The mathematical proof is an involution on terminal cylinders.  This
 companion exhausts binary and ternary controls, checks that the first
@@ -208,7 +208,7 @@ def main() -> None:
     )
     print("deadline_formula=tau<=n+2^nu2(n)")
     print("nonpower_corollary=tau<=4n/3")
-    print("status=THM-2249_PROVED_VERIFIED_EXACT")
+    print("status=THM-2252_PROVED_VERIFIED_EXACT")
 
 
 if __name__ == "__main__":
