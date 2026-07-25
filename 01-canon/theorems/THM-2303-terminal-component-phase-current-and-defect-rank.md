@@ -2,7 +2,8 @@
 id: THM-2303
 title: "Terminal-component phase current and its exact defect rank"
 status: >
-  PROVED + VERIFIED-EXACT. A rooted blocker handoff has an intrinsic directed
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. A rooted blocker handoff
+  has an intrinsic directed
   component-current multigraph, and each component carries an exact U(1)
   Fourier current whose sum is the desired coefficient. Magnitudes and a
   spanning tree of relative phase transports determine vanishing; if the
@@ -13,10 +14,10 @@ status: >
   THM-2299 carrier, the phase-forgetting response has exact linear
   continuation-defect rank one. An exact strict
   perturbation keeps the owner, target, clock, source and terminal root
-  addresses, component masses, all rooted energies, pair relation, and
-  anchored minor fixed while changing F-hat(4), E-hat(52), and W_4-hat(0)
-  from zero to nonzero. The carrier is local, not a global scalar cover; no
-  LRC(14) profile is excluded.
+  addresses, component masses, all rooted energies, and a height-13
+  c_1-anchored rank-six relation packet fixed while changing F-hat(4),
+  E-hat(52), and W_4-hat(0) from zero to nonzero. The carrier is local, not
+  a global scalar cover; no LRC(14) profile is excluded.
 source: codex-2026-07-25-terminal-component-phase-current
 depends_on:
   - THM-840-hamming-five-continuation-congruence-boundary
@@ -28,14 +29,14 @@ related:
   - THM-2296-prescribed-expiration-return-or-bounded-ancestry-resonance
 script: 04-computation/lrc14_terminal_component_phase_current_thm2303.py
 output: 05-knowledge/results/lrc14_terminal_component_phase_current_thm2303.out
-script_sha256: d93c6efc689000c07cab5acc367ec395179b1233a29b529c61f9517f1abae12f
-output_sha256: df9136525f854ef18de1cebbd5a44b7b5b6ccc458f2fe59255de3a8dd1d98d65
+script_sha256: 6b54fd8a107b93e5983a2c101cbe6a23541d50d80a245c58ea1e8ed69e57722e
+output_sha256: 84b69c6b0bdd9a8a18ff81a51eaf6c796e51a78c1aefea2cca85c06193cd7c1a
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2303 -- terminal-component phase current
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2299 shows that current service can fire every rooted character
 pointwise while the prescribed pair coefficient cancels between two terminal
@@ -350,6 +351,40 @@ and their `(c_1,q_2)` anchored minor is
 8!=0 mod 13.                                        (28)
 ```
 
+The stronger rank-six packet subsequently recorded in THM-2299 is present
+unchanged in both perturbation states. Order the scalar columns as
+
+```text
+(H,q_1,q_2,q_3,q_4,q_5,c_1,c_2,c_3).
+```
+
+For `i=1,...,5`, take
+
+```text
+s_i=e_(q_i)-q_i e_H,
+```
+
+and append the pair row
+
+```text
+p=13e_(q_1)-4e_(c_1).
+```
+
+The six relation heights are
+
+```text
+(4,2,3,6,10,13),                                   (28a)
+```
+
+and on columns `(q_1,...,q_5,c_1)` their determinant is
+
+```text
+-4!=0 mod 13.                                       (28b)
+```
+
+Thus both phase states retain a `c_1`-anchored mod-thirteen rank-six packet
+at height `13`, not only the two-row minor in (28).
+
 Put
 
 ```text
@@ -385,10 +420,10 @@ time 2:   c_2-only current service.                  (32)
 Both have source root address `8`; their two terminal inverse-root addresses
 are `(12,0)`. Their component half-widths and masses agree. On every terminal
 root fiber the ancestry word has one sheet, so all twelve rooted characters
-have the same pointwise magnitude and the same integrated energy in the two
-carriers. The owner, target, clock, complete root-address multiset, component
-masses, pair relation, second relation, and anchored minor are therefore
-identical.
+have the same pointwise magnitude on their corresponding supports and the
+same integrated energy in the two carriers. The owner, target, clock,
+complete root-address multiset, component masses, pair relation, second
+relation, and anchored rank-six packet are therefore identical.
 
 Their relative base phases are different:
 
@@ -422,7 +457,7 @@ Hence every coefficient in (34)--(36) vanishes for `s=0` and is nonzero for
 
 This proves necessity, not only sufficiency, of an affine component-phase
 sidecar. No combination of the fixed discrete data in (32), root energies,
-component masses, or the anchored relation minor determines the prescribed
+component masses, or the anchored rank-six packet determines the prescribed
 pair coefficient. A phase-tree edge between the two components would.
 
 ## 6. Connection and stopping boundary
@@ -441,7 +476,8 @@ map:
   gauge-faithful phase on every component;
 
 preserved:
-  owner, target, clock, branch address, component, and exact Fourier sum;
+  owner, target, clock, branch address, component, exact Fourier sum, and
+  on the hostile row a height-13 anchored rank-six packet;
 
 lost by energy:
   signed mass imbalance and relative affine base phase;
@@ -467,9 +503,10 @@ profile is excluded, and LRC(14) remains open.
 ## 7. Exact verification
 
 The companion uses integer and `Fraction` arithmetic. It checks the scalar
-row, both relations, anchored minor, exact margin (31), every source and
-terminal label at every interval endpoint, source and terminal root
-addresses, equality of the discrete/rooted-energy signatures, both rational
+row, both initial relations, the full rank-six relation packet and anchored
+minor, exact margin (31), every source and terminal label at every interval
+endpoint, source and terminal root addresses, all `48` root-character/
+component energies, equality of the discrete signatures, both rational
 relative phases, and the exact ranks (25). The Fourier zero/nonzero verdicts
 then follow from the proved formula (14)--(16), not from floating-point
 sampling.

@@ -156,6 +156,48 @@ def main() -> None:
     require(anchored_minor == 8, "anchored minor changed")
     require(anchored_minor % P != 0, "anchored minor lost mod-13 rank")
 
+    # The incoming THM-2299 rank-six sharpening is literal on this same row.
+    # Coordinates are (H,q1,...,q5,c1,c2,c3).
+    rank_six_rows: list[list[Fraction]] = []
+    for unit_index, q in enumerate(UNITS, start=1):
+        row = [Fraction(0) for _ in range(9)]
+        row[0] = -q
+        row[unit_index] = 1
+        rank_six_rows.append(row)
+        speeds = (H,) + UNITS + BLOCKERS
+        require(
+            sum(coefficient * speed for coefficient, speed in zip(row, speeds))
+            == 0,
+            f"unit/H relation {unit_index} failed",
+        )
+
+    pair_row = [Fraction(0) for _ in range(9)]
+    pair_row[1] = P
+    pair_row[6] = -M
+    rank_six_rows.append(pair_row)
+    speeds = (H,) + UNITS + BLOCKERS
+    require(
+        sum(
+            coefficient * speed
+            for coefficient, speed in zip(pair_row, speeds)
+        )
+        == 0,
+        "rank-six pair row failed",
+    )
+    require(rank_rational(rank_six_rows) == 6, "relation packet lost rank six")
+
+    rank_six_minor_matrix = [
+        [row[index] for index in (1, 2, 3, 4, 5, 6)]
+        for row in rank_six_rows
+    ]
+    require(
+        rank_rational(rank_six_minor_matrix) == 6,
+        "anchored rank-six minor lost rank",
+    )
+    rank_six_minor = -M
+    require(rank_six_minor == -4, "anchored rank-six minor changed")
+    require(rank_six_minor % P != 0, "rank-six minor vanished mod 13")
+
     negative_center = Fraction(-1, 16)
     positive_center = Fraction(1, 16)
     configurations = {
@@ -298,6 +340,7 @@ def main() -> None:
             f"antipodal_phase={relative_phases['antipodal']}",
             f"perturbed_phase={relative_phases['perturbed']}",
             f"ranks={observation_rank},{joint_rank},{defect_rank}",
+            f"rank_six_minor={rank_six_minor}",
         ]
     )
     signature_digest = sha256(digest_payload.encode()).hexdigest()
@@ -307,6 +350,11 @@ def main() -> None:
     print(f"pair_relation=13*{UNITS[0]}-{M}*{C1}=0")
     print(f"independent_relation={UNITS[0]}-2*{UNITS[1]}=0")
     print(f"anchored_minor={anchored_minor} mod13={anchored_minor % P}")
+    print("rank_six_relation_heights=4,2,3,6,10,13")
+    print(
+        f"anchored_rank_six_minor={rank_six_minor} "
+        f"mod13={rank_six_minor % P}"
+    )
     print(f"exact_strict_y_margin={exact_margin}")
     print(f"epsilon={EPSILON} eta={ETA}")
     print(f"terminal_root_addresses={terminal_addresses['antipodal']}")
