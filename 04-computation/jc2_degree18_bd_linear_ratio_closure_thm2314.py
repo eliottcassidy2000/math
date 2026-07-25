@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
-"""Exact referee for the two rational B--D points in THM-2311.
+"""Exact referee for the full B--D ratio bank in THM-2311.
 
 On the B--D weighted line, put B=1 and C=W=0.  This script verifies the
-complete branch-discriminant factorizations at
+complete branch-discriminant factorizations at the two rational points
 
     D = 4075/85176,   D = 25/126,
 
-proves the residual factors squarefree, checks the geometry of the exceptional
-fibres, proves absolute irreducibility by an exact polynomial-root Groebner
-test, and freezes the ramification counts used in THM-2314.
+and uniformly over the quartic field containing the other four points.  It
+proves the residual factors squarefree, checks the geometry of every
+exceptional fibre, proves absolute irreducibility by exact polynomial-root
+Groebner tests, and freezes the ramification counts used in THM-2314.
 
 The Riemann--Hurwitz and rational-map arguments remain mathematical steps in
 the theorem text; the script certifies their exact algebraic inputs.
@@ -52,10 +53,10 @@ def even_root_groebner(
     curve: sp.Expr,
     u: sp.Symbol,
     y: sp.Symbol,
+    extension: sp.Expr | None = None,
 ) -> sp.GroebnerBasis:
     """Test for a polynomial root u=a*y^2+b over the algebraic closure."""
     a, b, x = sp.symbols("a b x")
-    in_x = sp.expand(curve.subs({u: a * x + b, y**2: x}))
     # Simultaneous substitution of y**2 is safest through Poly's even terms.
     even_curve = sp.Poly(curve, y)
     require(
@@ -74,16 +75,133 @@ def even_root_groebner(
     coefficients = [
         sp.Poly(in_x, x).coeff_monomial(x**index) for index in range(4)
     ]
-    return sp.groebner(coefficients, a, b, order="lex", domain=sp.QQ)
+    if extension is None:
+        return sp.groebner(
+            coefficients,
+            a,
+            b,
+            order="lex",
+            domain=sp.QQ,
+        )
+    return sp.groebner(
+        coefficients,
+        a,
+        b,
+        order="lex",
+        extension=extension,
+    )
+
+
+def polynomial_power_mod(
+    base: sp.Expr,
+    exponent: int,
+    modulus: sp.Poly,
+) -> sp.Poly:
+    """Binary powering in ``domain[x]/(modulus)``."""
+    generator = modulus.gens[0]
+    result = sp.Poly(1, generator, domain=modulus.domain)
+    factor = sp.Poly(base, generator, domain=modulus.domain).rem(modulus)
+    while exponent:
+        if exponent & 1:
+            result = (result * factor).rem(modulus)
+        factor = (factor * factor).rem(modulus)
+        exponent //= 2
+    return result
+
+
+def field_reduce(expression: sp.Expr, field: sp.AlgebraicField) -> sp.Expr:
+    """Return the canonical power-basis representative in an algebraic field."""
+    return sp.factor(field.to_sympy(field.from_sympy(sp.cancel(expression))))
 
 
 def main() -> None:
-    u, y, x, v, r = sp.symbols("u y x v r")
+    u, y, x, v, r, t = sp.symbols("u y x v r t")
 
     t_ramified = sp.Rational(4075, 85176)
     t_triple = sp.Rational(25, 126)
     g_ramified = spectral_curve(u, y, t_ramified)
     g_triple = spectral_curve(u, y, t_triple)
+
+    # The remaining four ratios form one irreducible quartic orbit.  The
+    # mod-11 Rabin certificate makes irreducibility independent of a black-box
+    # factorization over Q.
+    quartic = (
+        46376717184 * t**4
+        - 30805790400 * t**3
+        + 7600635000 * t**2
+        - 772734375 * t
+        + 22656250
+    )
+    require(
+        sp.Poly(quartic, t).content() == 1,
+        "quartic ratio polynomial is not primitive",
+    )
+    quartic_mod_11 = sp.Poly(quartic, t, modulus=11).monic()
+    expected_mod_11 = sp.Poly(t**4 + 4 * t**2 - t + 2, t, modulus=11)
+    require(
+        quartic_mod_11 == expected_mod_11,
+        "quartic mod-11 representative mismatch",
+    )
+    frobenius_2 = (
+        polynomial_power_mod(t, 11**2, quartic_mod_11)
+        - sp.Poly(t, t, modulus=11)
+    ).rem(quartic_mod_11)
+    frobenius_4 = (
+        polynomial_power_mod(t, 11**4, quartic_mod_11)
+        - sp.Poly(t, t, modulus=11)
+    ).rem(quartic_mod_11)
+    require(
+        sp.gcd(quartic_mod_11, frobenius_2).degree() == 0
+        and frobenius_4.is_zero,
+        "quartic mod-11 Rabin irreducibility certificate failed",
+    )
+    quartic_discriminant = sp.discriminant(quartic, t)
+    require(
+        quartic_discriminant
+        == -499128191381233551206575897907721679687500000000000000,
+        "quartic discriminant mismatch",
+    )
+
+    alpha = sp.CRootOf(quartic, 0)
+    field = sp.QQ.algebraic_field(alpha)
+    g_quartic = spectral_curve(u, y, alpha)
+
+    # Canonical power-basis coordinates for the repeated branch value, its
+    # double u-root, and the remaining simple u-root.
+    x_node = (
+        36
+        * (
+            40119541056 * alpha**3
+            - 21007917000 * alpha**2
+            + 3603521250 * alpha
+            - 206640625
+        )
+        / 212384375
+    )
+    u_node = (
+        4
+        * (
+            139498220736 * alpha**3
+            - 60035887800 * alpha**2
+            + 8517363750 * alpha
+            - 89421875
+        )
+        / 1911459375
+    )
+    u_simple = (
+        -4
+        * (
+            78398736192 * alpha**3
+            - 15032190600 * alpha**2
+            - 982878750 * alpha
+            - 55859375
+        )
+        / 1911459375
+    )
+    require(
+        field_reduce(x_node, field) != 0,
+        "quartic repeated branch value is zero",
+    )
 
     delta_ramified = sp.factor(sp.discriminant(g_ramified, u))
     delta_triple = sp.factor(sp.discriminant(g_triple, u))
@@ -129,6 +247,87 @@ def main() -> None:
     )
     require(h6.subs(y, 0) != 0, "h6 meets the ordinary triple point")
 
+    # Uniform factorization over K=Q(alpha) for the four quartic conjugates.
+    delta_quartic = sp.Poly(
+        sp.discriminant(g_quartic, u),
+        y,
+        extension=alpha,
+    )
+    node_square = sp.Poly((y**2 - x_node) ** 2, y, extension=alpha)
+    quartic_quotient, quartic_remainder = delta_quartic.div(node_square)
+    require(
+        quartic_remainder.is_zero
+        and field_reduce(quartic_quotient.LC(), field)
+        == -153384762202971019112448,
+        "quartic branch-discriminant square factor mismatch",
+    )
+    quartic_h8 = quartic_quotient.monic()
+    quartic_c6 = (
+        72
+        * (
+            922749444288 * alpha**3
+            - 483182091000 * alpha**2
+            + 82880988750 * alpha
+            - 2932296875
+        )
+        / 4884840625
+    )
+    quartic_c4 = (
+        1944
+        * (
+            631974788928 * alpha**3
+            - 296771655600 * alpha**2
+            + 47250853125 * alpha
+            - 1982984375
+        )
+        / 6838776875
+    )
+    quartic_c2 = (
+        -46656
+        * (
+            16379078688 * alpha**3
+            - 9715000680 * alpha**2
+            + 1784010375 * alpha
+            - 101481250
+        )
+        / 1914857525
+    )
+    quartic_c0 = (
+        314928
+        * (
+            8097522048 * alpha**3
+            - 3930368400 * alpha**2
+            + 631785000 * alpha
+            - 33953125
+        )
+        / 1914857525
+    )
+    expected_quartic_h8 = sp.Poly(
+        y**8
+        + quartic_c6 * y**6
+        + quartic_c4 * y**4
+        + quartic_c2 * y**2
+        + quartic_c0,
+        y,
+        extension=alpha,
+    )
+    require(
+        quartic_h8 == expected_quartic_h8,
+        "quartic residual h8 coefficient bank mismatch",
+    )
+    require(
+        sp.gcd(quartic_h8, quartic_h8.diff()).degree() == 0,
+        "quartic residual h8 is not squarefree",
+    )
+    require(
+        sp.gcd(
+            quartic_h8,
+            sp.Poly(y**2 - x_node, y, extension=alpha),
+        ).degree()
+        == 0,
+        "quartic residual h8 meets the node factor",
+    )
+
     # Every member has the same three distinct, unramified weighted branches
     # at infinity: put u=v*y^2 and r=1/y.
     infinity_polynomial = (
@@ -140,7 +339,7 @@ def main() -> None:
         == -153384762202971019112448,
         "weighted infinity cubic is not separable",
     )
-    for curve in (g_ramified, g_triple):
+    for curve in (g_ramified, g_triple, g_quartic):
         infinity_chart = sp.expand(
             r**6 * curve.subs({u: v / r**2, y: 1 / r})
         )
@@ -205,12 +404,92 @@ def main() -> None:
         "ordinary triple-point tangent directions coalesce",
     )
 
+    # The quartic orbit has two ordinary nodes, one over each square root of
+    # x_node.  Work first with H(u,x)=G(u,y), x=y^2.  The fibre is one simple
+    # root plus one double root, and H=H_u=H_x=0 at the latter.
+    h_quartic = sp.expand(g_quartic.subs(y**2, x))
+    require(not h_quartic.has(y), "quartic x-chart still contains y")
+    actual_node_fibre = sp.Poly(
+        h_quartic.subs(x, x_node),
+        u,
+        extension=alpha,
+    )
+    expected_node_fibre = sp.Poly(
+        -26040609 * (u - u_simple) * (u - u_node) ** 2,
+        u,
+        extension=alpha,
+    )
+    require(
+        actual_node_fibre == expected_node_fibre,
+        "quartic node fibre factorization mismatch",
+    )
+    node_substitution = {u: u_node, x: x_node}
+    for expression, label in (
+        (h_quartic, "H"),
+        (sp.diff(h_quartic, u), "H_u"),
+        (sp.diff(h_quartic, x), "H_x"),
+    ):
+        require(
+            field_reduce(expression.subs(node_substitution), field) == 0,
+            f"quartic node {label} does not vanish",
+        )
+
+    node_u2 = field_reduce(
+        sp.diff(h_quartic, u, 2).subs(node_substitution) / 2,
+        field,
+    )
+    expected_node_u2 = field_reduce(
+        -sp.Rational(472392, 4334375)
+        * (
+            108948478464 * alpha**3
+            - 37534039200 * alpha**2
+            + 3767242500 * alpha
+            - 72640625
+        ),
+        field,
+    )
+    require(
+        node_u2 == expected_node_u2 and node_u2 != 0,
+        "quartic node has a vertical tangent component",
+    )
+    node_tangent_discriminant = field_reduce(
+        4
+        * x_node
+        * (
+            sp.diff(h_quartic, u, x).subs(node_substitution) ** 2
+            - sp.diff(h_quartic, u, 2).subs(node_substitution)
+            * sp.diff(h_quartic, x, 2).subs(node_substitution)
+        ),
+        field,
+    )
+    expected_node_tangent_discriminant = field_reduce(
+        sp.Rational(78364164096, 173375)
+        * (
+            13250490624 * alpha**3
+            - 29352342600 * alpha**2
+            + 9881156250 * alpha
+            - 904703125
+        ),
+        field,
+    )
+    require(
+        node_tangent_discriminant == expected_node_tangent_discriminant
+        and node_tangent_discriminant != 0,
+        "quartic singularity is not an ordinary node",
+    )
+
     # Absolute irreducibility.  A polynomial u-root has y-degree <=2.  Since
     # the curve is even in y, any root produces an even root a*y^2+b (either
     # directly, or as the third root beside r(y),r(-y)).  The exact coefficient
-    # ideals are the unit ideal at both points.
+    # ideals are the unit ideal at the two rational points and over K.
     groebner_ramified = even_root_groebner(g_ramified, u, y)
     groebner_triple = even_root_groebner(g_triple, u, y)
+    groebner_quartic = even_root_groebner(
+        g_quartic,
+        u,
+        y,
+        extension=alpha,
+    )
     require(
         len(groebner_ramified.polys) == 1
         and groebner_ramified.polys[0].as_expr() == 1,
@@ -220,6 +499,11 @@ def main() -> None:
         len(groebner_triple.polys) == 1
         and groebner_triple.polys[0].as_expr() == 1,
         "25/126 curve has a polynomial u-root",
+    )
+    require(
+        len(groebner_quartic.polys) == 1
+        and groebner_quartic.polys[0].as_expr() == 1,
+        "quartic-orbit curve has a polynomial u-root",
     )
 
     # Hostile control: away from the THM-2311 bank, D=1 has no repeated
@@ -248,13 +532,31 @@ def main() -> None:
     print("ratio_2_simple_branch_points=6")
     print("ratio_2_total_ramification=6")
     print("ratio_2_normalization_genus=1")
+    print(f"quartic_ratio_polynomial={quartic}")
+    print("quartic_mod_11=T^4+4*T^2-T+2 irreducible=PASS")
+    print(f"quartic_discriminant={quartic_discriminant}")
+    print(
+        "quartic_node_x="
+        "36*(40119541056*a^3-21007917000*a^2+3603521250*a-206640625)"
+        "/212384375"
+    )
+    print(
+        "quartic_Delta="
+        "-153384762202971019112448*(y^2-X(a))^2*h8(y;a)"
+    )
+    print("quartic_h8_degree=8 squarefree_and_coprime=PASS")
+    print("quartic_special_fibres=2 ordinary nodes, delta=1 each")
+    print("quartic_node_branches=4 total, all unramified over y")
+    print("quartic_simple_branch_points=8")
+    print("quartic_total_ramification=8")
+    print("quartic_normalization_genus=2 for all 4 conjugates")
     print(f"infinity_cubic={infinity_polynomial}")
     print(f"infinity_discriminant={infinity_discriminant}")
     print("infinity=3 distinct unramified points")
-    print("absolute_irreducibility=PASS Groebner bases [1],[1]")
+    print("absolute_irreducibility=PASS Groebner bases [1],[1],[1 over K]")
     print("hostile_control_D=1 squarefree=PASS")
     print("riemann_hurwitz_and_deck_contradiction=MATHEMATICAL_PROOF_REQUIRED")
-    print("status=THM2314_BD_LINEAR_RATIO_EXACT_REFEREE")
+    print("status=THM2314_FULL_BD_RATIO_BANK_EXACT_REFEREE")
 
 
 if __name__ == "__main__":

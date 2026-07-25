@@ -1,19 +1,19 @@
 ---
 id: THM-2314
-title: "Degree-eighteen B--D linear-ratio closure"
+title: "Degree-eighteen B--D ratio-bank closure"
 status: >
   PROVED + VERIFIED-EXACT. In the genuine nonsplit polynomial
-  exact-square-prefix degree-eighteen branch of THM-2262/2297, the two
-  rational linear-factor points D/B^2=4075/85176 and D/B^2=25/126 in
-  THM-2311's B--D bank are empty. After the weighted normalization B=1,
-  both trigonal spectral curves are absolutely irreducible. At the first
-  ratio there are eight simple branch points and two smooth totally
-  ramified cubic fibres, giving normalization genus four. At the second,
-  y=0 is an ordinary triple point with three unramified normalization
-  branches, while six other simple branch points give normalization genus
-  one. A rational Keller trajectory is therefore constant and yields the
-  inherited nonsplit-deck contradiction. Four algebraic B--D ratios and 29
-  two-sparse ratios overall remain; this does not prove JC(2).
+  exact-square-prefix degree-eighteen branch of THM-2262/2297, all six
+  weighted ratios in THM-2311's B--D bank are empty. After B=1
+  normalization, every spectral curve is absolutely irreducible. The two
+  rational ratios have normalization genera four and one: their repeated
+  branch factors encode respectively smooth total cubic ramification and
+  one ordinary triple point. The four roots of the irreducible quartic
+  factor uniformly have two ordinary nodes and eight simple branch points,
+  hence normalization genus two. Positive genus makes every rational
+  Keller trajectory constant and yields the inherited nonsplit-deck
+  contradiction. Exactly 25 two-sparse ratios on the other four planes
+  remain; this does not prove JC(2).
 source: codex-2026-07-25-degree18-bd-linear-ratios
 depends_on:
   - THM-2262-degree-eighteen-trigonal-spectral-discriminant-reduction
@@ -23,12 +23,12 @@ related:
   - THM-2247-nonsplit-terminal-quartic-degree-fourteen-closure
 script: 04-computation/jc2_degree18_bd_linear_ratio_closure_thm2314.py
 output: 05-knowledge/results/jc2_degree18_bd_linear_ratio_closure_thm2314.out
-script_sha256: 99e7a5a92be4cb75446d08b973f19fe1dfba7ad182b5ad095e8324613ce61714
-output_sha256: 414d2cb756f8e3b8144582d84762f9430128c469b2a378932b8e7ed238a638a5
+script_sha256: 9d81ea499269344d23aded1dd1bacc6faad729d37dc2ef5e3d63e00e68e48a29
+output_sha256: fe597f0aedf5a1fb8a4ec800cded5e7471fb45ebc04e0effefd62603adc0dcd6
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2314 -- the two rational B--D ratios have positive-genus spectra
+# THM-2314 -- the full B--D ratio bank has positive-genus spectra
 
 THM-2311 reduces every exactly two-sparse degree-eighteen survivor to one of
 `31` weighted-projective ratio points. On the `B`--`D` line, two of its six
@@ -38,11 +38,13 @@ points are rational:
 D/B^2=4075/85176,                 D/B^2=25/126.      (1)
 ```
 
-The repeated branch values behind these factors have quite different local
-meanings. The first ratio replaces two ordinary branch values by smooth
-total ramification and does not lower the genus at all. The second creates
-an ordinary triple point and lowers genus four to genus one. Both remain
-too curved to carry a rational Keller trajectory.
+The other four are the roots of one irreducible quartic. The repeated branch
+values behind the three factors have different local meanings. The first
+rational ratio replaces two ordinary branch values by smooth total
+ramification and does not lower the genus. The second creates an ordinary
+triple point and lowers genus four to genus one. Each quartic ratio creates
+two ordinary nodes and lowers genus four to genus two. All six remain too
+curved to carry a rational Keller trajectory.
 
 ## 1. Exact normalized curves
 
@@ -78,7 +80,7 @@ The scaling in (3) is used only to identify isomorphic algebraic curves.
 It is not treated as a target-preserving quotient of the retained Keller
 one-form.
 
-## 2. Both spectral curves are absolutely irreducible
+## 2. All six spectral curves are absolutely irreducible
 
 The leading `u` coefficient in (4) is a nonzero constant. If `G_t` were
 reducible over `C(y)`, its cubic degree would give a root `r(y)`. After
@@ -107,7 +109,7 @@ u=ay^2+b.                                            (7)
 ```
 
 Substitute (7) in (4) and set its four coefficients in `y^2` equal to
-zero. Exact Buchberger reduction over `Q` gives
+zero. At the rational points, exact Buchberger reduction over `Q` gives
 
 ```text
 t=4075/85176:       reduced Groebner basis {1},
@@ -115,10 +117,34 @@ t=4075/85176:       reduced Groebner basis {1},
 t=25/126:           reduced Groebner basis {1}.      (8)
 ```
 
-The coefficient ideals remain the unit ideal after extending constants to
-`C`; (7) is impossible. Therefore both `G_t` are absolutely irreducible.
-Their projective normalizations are connected degree-three covers of the
-`y`-line.
+For the remaining points, let the primitive polynomial
+
+```text
+p(t)
+ =46376717184t^4-30805790400t^3+7600635000t^2
+   -772734375t+22656250.                             (8a)
+```
+
+Modulo `11`, its monic reduction is
+
+```text
+t^4+4t^2-t+2.
+```
+
+Writing `bar p` for this monic reduction, the Rabin certificate
+
+```text
+gcd(bar p,t^(11^2)-t)=1,   t^(11^4)-t=0 mod bar p   (8b)
+```
+
+proves that this reduction, and hence (8a), is irreducible. Put
+`K=Q(alpha)` for one root. The same four coefficient equations from (7)
+have reduced Groebner basis `{1}` in `K[a,b]`. A unit ideal stays a unit
+after passing to an algebraic closure and under every complex embedding of
+`K`. Thus (7) is impossible at all four conjugates as well.
+
+All six `G_t` are therefore absolutely irreducible. Their projective
+normalizations are connected degree-three covers of the `y`-line.
 
 ## 3. The common infinity fibre is unramified
 
@@ -128,7 +154,7 @@ At infinity use
 r=1/y,                         v=u/y^2.              (9)
 ```
 
-For either ratio,
+For every ratio in the bank,
 
 ```text
 r^6G_t(v/r^2,1/r)=L_infinity(v)+O(r^2),
@@ -282,7 +308,107 @@ Riemann--Hurwitz now gives
 The ordinary-triple delta `3` independently explains the drop from the
 genus-four generic spectrum to genus one.
 
-## 6. Positive genus closes both Keller ratios
+## 6. Every quartic ratio has a genus-two normalization
+
+Let `alpha` be a root of the irreducible polynomial (8a). Its discriminant
+is the nonzero integer
+
+```text
+-499128191381233551206575897907721679687500000000000000.
+                                                            (23a)
+```
+
+The four complex embeddings of `K=Q(alpha)` therefore give exactly the four
+remaining `B`--`D` ratios. In the power basis of `K`, put
+
+```text
+X
+ =36/212384375
+
+  *(40119541056alpha^3-21007917000alpha^2
+      +3603521250alpha-206640625).                  (23b)
+```
+
+This is nonzero: its displayed representative is a nonzero polynomial of
+degree three, while the minimal polynomial of `alpha` has degree four.
+Exact division in `K[y]` gives
+
+```text
+Delta_alpha(y)
+ =-153384762202971019112448
+
+  *(y^2-X)^2 h_8(y),                                (23c)
+
+deg h_8=8,
+
+gcd(h_8,h_8')=1,                 gcd(h_8,y^2-X)=1.  (23d)
+```
+
+Thus `h_8` gives eight distinct simple branch values. It remains to
+interpret the squared quadratic. Write `H(u,x)=G_alpha(u,y)` with `x=y^2`
+and put
+
+```text
+R
+ =4/1911459375
+
+  *(139498220736alpha^3-60035887800alpha^2
+      +8517363750alpha-89421875).                   (23e)
+```
+
+At `x=X`, the cubic has one simple root and the double root `R`. Exact
+reduction gives
+
+```text
+H(R,X)=H_u(R,X)=H_x(R,X)=0.                         (23f)
+```
+
+Hence each of the two points
+
+```text
+(u,y)=(R,+sqrt(X)),              (R,-sqrt(X))
+```
+
+is singular. In local coordinates `U=u-R`, `Y=y-y_0`, the coefficient of
+`U^2` in the tangent cone is
+
+```text
+A
+ =-472392/4334375
+
+  *(108948478464alpha^3-37534039200alpha^2
+      +3767242500alpha-72640625),                   (23g)
+```
+
+and its tangent discriminant is
+
+```text
+Theta
+ =78364164096/173375
+
+  *(13250490624alpha^3-29352342600alpha^2
+      +9881156250alpha-904703125).                  (23h)
+```
+
+Both are nonzero for the same degree reason as `X`. Therefore the tangent
+cone has two distinct lines, and neither is `Y=0`. Each singularity is an
+ordinary node of delta invariant one; its two normalization branches are
+unramified for the `y`-projection.
+
+The node factor in (23c) contributes no normalization ramification.
+The eight simple roots in (23d) each contribute one, and Section 3 removes
+infinity. Therefore, uniformly under all four embeddings,
+
+```text
+sum_P(e_P-1)=8,
+
+2g-2=3*(-2)+8=2,                   g=2.              (23i)
+```
+
+Equivalently, the two ordinary nodes account for the genus drop from four
+to two.
+
+## 7. Positive genus closes all six Keller ratios
 
 A putative Keller trajectory supplies
 
@@ -292,10 +418,11 @@ A putative Keller trajectory supplies
 
 If nonconstant, (24) extends to a nonconstant morphism from `P^1` to the
 connected projective normalization. Riemann--Hurwitz forbids such a map
-when the target genus is `4` or `1`. Hence `u` and `y` are constant.
+when the target genus is `4`, `1`, or `2`. Hence `u` and `y` are constant.
 
-The wall `y=0` is already empty by THM-2262, so the inherited first-flux
-identity
+Undoing the constant weighted curve isomorphism of Section 1 shows that the
+original retained `u` and `y` are constant as well. The wall `y=0` is
+already empty by THM-2262, so its inherited first-flux identity
 
 ```text
 Z=T^2=-2N_2/(5103y)                                 (25)
@@ -305,24 +432,17 @@ makes `Z`, then nonzero `T`, and then `q` constant. The genuine nonsplit
 deck fixes the algebraically closed constant field but sends `q` to `-q`.
 This contradicts `q!=0`.
 
-Therefore neither ratio in (1) can carry a degree-eighteen Keller
-trajectory in the stated branch.
+Therefore none of the six `B`--`D` ratios can carry a degree-eighteen
+Keller trajectory in the stated branch.
 
-## 7. Consequence, loss ledger, and scope
+## 8. Consequence, loss ledger, and scope
 
-The `B`--`D` bank of THM-2311 shrinks from six points to the four roots of
-
-```text
-22656250-772734375t+7600635000t^2
- -30805790400t^3+46376717184t^4.                    (26)
-```
-
-Across all exactly two-sparse planes, the unresolved bank shrinks from
-`31` to `29`.
+The entire six-point `B`--`D` bank of THM-2311 is empty. Across all exactly
+two-sparse planes, the unresolved bank shrinks from `31` to `25`.
 
 ```text
 source:
-  THM-2311's two rational B--D ratio points;
+  THM-2311's full six-point B--D ratio bank;
 
 map:
   weighted normalization B=1, followed by normalization of G_t;
@@ -341,16 +461,16 @@ why no restoration is needed here:
 hostile control:
   the nearby representative D=1 has squarefree branch discriminant,
   detecting an accidentally generic or identically repeated computation.
-                                                            (27)
+                                                            (26)
 ```
 
-This theorem closes only the two ratios in (1), inside the genuine
-nonsplit polynomial exact-square-prefix degree-eighteen branch. The four
-quartic `B`--`D` ratios, the other `25` two-sparse ratios, every
-three-/four-sparse singular stratum, split/even-leading descent, other
-Newton edges, `JC(2)`, and `DC(2)` remain open.
+This theorem closes only the `B`--`D` bank, inside the genuine nonsplit
+polynomial exact-square-prefix degree-eighteen branch. The other `25`
+two-sparse ratios, every three-/four-sparse singular stratum,
+split/even-leading descent, other Newton edges, `JC(2)`, and `DC(2)` remain
+open.
 
-## 8. Exact reproduction
+## 9. Exact reproduction
 
 Run
 
@@ -360,9 +480,11 @@ python3 -O 04-computation/jc2_degree18_bd_linear_ratio_closure_thm2314.py
 ```
 
 Both runs are byte-identical to the stored output. The companion verifies
-the two complete discriminant factorizations; squarefreeness and
-coprimality; the common separable infinity cubic; both exceptional local
-charts; the ordinary-triple tangent cone; absolute irreducibility through
-unit Groebner bases; and a squarefree `D=1` hostile control. The local
-normalization, Riemann--Hurwitz, and deck arguments are the mathematical
-proof above rather than delegated computer conclusions.
+the two rational discriminant factorizations; the mod-`11` irreducibility
+certificate and uniform quartic-field factorization; every squarefree and
+coprime residual; the common separable infinity cubic; the smooth total
+ramification, ordinary triple, and ordinary-node local charts; absolute
+irreducibility through unit Groebner bases over `Q` and `K`; and a
+squarefree `D=1` hostile control. The local normalization,
+Riemann--Hurwitz, and deck arguments are the mathematical proof above
+rather than delegated computer conclusions.
