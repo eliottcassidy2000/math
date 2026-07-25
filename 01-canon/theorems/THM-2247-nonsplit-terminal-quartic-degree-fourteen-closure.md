@@ -20,9 +20,9 @@ status: >
 source: codex-2026-07-25-degree14-singular-cover
 depends_on:
   - THM-2214-nonsplit-terminal-quartic-spectral-curve-closure-through-degree-ten
+  - THM-2217-square-prefix-pole-alternative-and-odd-leading-degree-terminal-wall
   - THM-2245-degree-fourteen-spectral-quartic-discriminant-reduction
 related:
-  - THM-2217-square-prefix-pole-alternative-and-odd-leading-degree-terminal-wall
   - THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient
 script: 04-computation/jc2_nonsplit_terminal_degree14_closure_thm2247.py
 output: 05-knowledge/results/jc2_nonsplit_terminal_degree14_closure_thm2247.out
