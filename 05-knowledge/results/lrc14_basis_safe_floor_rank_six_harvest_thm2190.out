@@ -1,0 +1,13 @@
+THM-2190 exact basis-safe floor and rank-six-harvest referee
+safe_floors_r2_to_r5=241864704/1977326743,30233088/282475249,3359232/40353607,279936/5764801
+rank_six_union_ledger=0
+rank_six_facet_odd_variation=1/2+h/14>1/2
+Jackson_N=251, degree=500, C_0=10542251
+eta_251_pi_cap<21/12500
+rank_five_Jackson_gap=175809327/36030006250
+optimized_first_N_r2_to_r5=90,103,132,226
+optimized_heights_r3_to_r6=178,204,262,450
+adjacent_N_r2_to_r5=89,102,131,225 all fail exact cap
+nested_basis_heights=105,105,178,204,262,450
+deletion_rank=5, optimized_height=235800, simple_height=500000
+all exact checks passed
