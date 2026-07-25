@@ -10,9 +10,10 @@ status: >
   H=78*182^13=18750922831149193194381342621696. Taking T to be the
   orthogonal complement of all relations through height H forces twelve
   independent relations by that same height. Hence every primitive zero-Haar
-  row has maximum speed at most 12^6 H^12. The bounds are explicit but
-  enormous; the finite primitive locus is not enumerated or emptied, so this
-  does not prove LRC(14).
+  row has maximum speed at most 12^6 H^12. Retaining THM-2193's first seven
+  anisotropic row heights sharpens this to the explicit 197-digit ceiling in
+  (23). The bounds remain enormous; the finite primitive locus is not
+  enumerated or emptied, so this does not prove LRC(14).
 source: codex-2026-07-24-effective-carry-lock-rank-ladder
 depends_on:
   - THM-2053-rank-two-parameter-plane-geodesic-terminal
@@ -222,9 +223,29 @@ max_i (v_prim)_i
  =12^6 H^12.                                          (22)
 ```
 
-This is an explicit finite primitive box and an explicit relation-rank
-certificate, but it is vastly larger than the speed ceiling in THM-763.
-Neither theorem enumerates or eliminates the box. The contribution here is
-that every carry-lock rank lift is simultaneously available at one universal
-Fourier height; there is no residual compactness minimum and no uncomputed
-sequence `H_8,...,H_12`. QED.
+There is a substantially sharper bound inside the same proof. THM-2193
+already supplies seven independent relations with height profile
+
+```text
+(105,105,178,204,262,450,78*7^21).
+```
+
+All seven lie in `W_H(v)`. Extend them to a basis of the twelve-dimensional
+space `W_H(v)` by five actual members of the height-`H` relation box. Applying
+Hadamard with the row heights left anisotropic gives
+
+```text
+max_i (v_prim)_i
+ <=12^6 *105^2*178*204*262*450
+          *(78*7^21)*(78*182^13)^5
+
+ =14233009024696169404573191587473930320680794956575198364055678006806827357976205356500821273826531456252902899449503310895399282827074500730156340741088127740309697466937985642005305031005306880000.
+                                                               (23)
+```
+
+This `197`-digit number is an explicit finite primitive box and relation-rank
+certificate, but it is still vastly larger than the speed ceiling in
+THM-763. Neither theorem enumerates or eliminates the box. The contribution
+here is that every carry-lock rank lift is simultaneously available at one
+universal Fourier height; there is no residual compactness minimum and no
+uncomputed sequence `H_8,...,H_12`. QED.
