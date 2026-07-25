@@ -170,25 +170,21 @@ is the proved carrier that reduces each fixed bad-denominator/owner fiber to
 labelled primitive packets and one coprime interval. It makes the terminal
 exact and finite; it does not prove that every surviving interval is empty.
 
-Orthogonally, THM-2144/2164/2167 give height-`29/105` relations, `208875`
-carry pairs, and `2,924,250` carry-owner states; THM-2171 repairs order at cap
-`5,430,750`. THM-2174 isolates danger clutter and endpoint current. THM-2190 forces the exact ladder
-`W_178>=3,W_204>=4,W_262>=5,W_450>=6`, deletion rank five by `235800`,
-and rank seven at some absolute finite height; THM-735 closes fixed-core
-remote six-tail cones without tail isolation.
-[THM-2182](../01-canon/theorems/THM-2182-endpoint-grid-product-and-tail-overlap-sidecar.md)
-factors aligned tails exactly, while THM-2184 retains their complete joint
-law and proves the varying tube `W_i=NLc_i+r_i`,
-`||r||_1<2NL/(245e_2)`. THM-2186 gives the exact octagon-needle maximum,
-projective drift, and a toric-needle terminal whenever its strict two-clock profile is nonempty. The residual must
-change core, remain genuinely non-gridlike, or live on a critical equality
-skeleton. THM-2168 separately leaves only scalar `5+3` in `(3,5,0)`.
-THM-2145/2166 give every defect-six split a far-height-`298`,
-core-height-`57`, carry-`<=708` crossing relation. THM-2179 gives a
-stronger-`3/41` positive floor or a body-touching `41`-unit packet of height
-`180` at defect six and `140` at defect `>=7`. These are structural forks,
-not closure; the body relation still lacks a phase-preserving reduction to
-the far-cone or grid-tube terminal.
+THM-2187 saturates the height-`105` relation plane and makes every fixed
+radix free. THM-2190 forces the exact ladder
+`W_178>=3,W_204>=4,W_262>=5,W_450>=6`, rank five on every deletion by
+`235800`, and rank seven at some absolute finite height. THM-2188 shows why
+rank is not the terminal: finite phase banks, pair matrices, and even a common
+saturated rank-eleven carrier can agree across opposite zero-safety outcomes.
+THM-2174 keeps infinitely many exact-measure states but compresses the
+positive-Haar/zero-Haar observable on each fixed-core residue ray to a one- or
+two-state first-period flag; it gives no uniform changing-core modulus.
+THM-735 closes fixed-core remote six-tail cones; THM-2182/2184 give exact grid
+products, varying tubes, and a mixed-core scalar quotient-remainder terminal.
+THM-2186 gives exact octagon-needle drift and a strict toric exit. THM-2168
+leaves only scalar `5+3` in `(3,5,0)`, now with the all-depth invoice
+`B>=(12493/35640)13^d`; it remains open. THM-2179's `3/41` exit/body relation
+still lacks a phase-preserving route into these terminals.
 
 ### Independent routes that remain live
 

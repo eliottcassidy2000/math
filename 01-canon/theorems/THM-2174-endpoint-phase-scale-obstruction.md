@@ -12,7 +12,11 @@ status: >
   preserves the full endpoint phase word modulo 1680 and three independent
   crossing relations while changing exact safe measure. Thus both aligned
   finite residue words and scale-sensitive endpoint current are real phase
-  coordinates; no fixed window proves LRC(14).
+  coordinates; no fixed window proves LRC(14). Nevertheless, on each fixed
+  core and residue ray the Boolean positive-Haar/zero-Haar continuation
+  quotient is a one- or two-state first-period flag, even when the
+  exact-measure quotient is infinite. This quotient does not preserve weak
+  safe-set nonemptiness.
 source: codex-2026-07-24-LRC-post-2168-closure
 depends_on:
   - THM-2162
@@ -24,6 +28,8 @@ related:
   - THM-2167
   - THM-2168
   - THM-2169
+  - THM-2176
+  - THM-2191
 script: 04-computation/lrc14_endpoint_phase_scale_obstruction_thm2174.py
 output: 05-knowledge/results/lrc14_endpoint_phase_scale_obstruction_thm2174.out
 script_sha256: 561050e451f5d60526381e3c750da9fd45904cac9ce4af92a9263682bba552ce
@@ -474,4 +480,61 @@ geometry, while nonzero endpoint current retains scale itself.
 The two companion computations independently verify (8)--(24) and
 (31)--(40), normally and under `-O`. What remains open is to force from
 zero-safety either bounded phase depth or a repeated state carrying enough
-endpoint current. QED.
+endpoint current.
+
+## 10. The positive-Haar continuation quotient has at most two states
+
+There is a useful distinction between preserving the exact measure and
+preserving only whether that measure vanishes. For the fixed core `E`, put
+`mu=measure(G_E)>0`. Equations (5) and the definition of `epsilon_W` give,
+on the residue class `W=r mod L_E`,
+
+```text
+measure(G_(E union {W}))=6mu/7-C_E(r)/W.             (43)
+```
+
+The right side can vanish for at most one positive `W`. It vanishes exactly
+when
+
+```text
+C_E(r)>0,             W=W_*=7C_E(r)/(6mu),           (44)
+```
+
+and `W_*` is an integer in the chosen residue class. Equation (42) then gives
+the effective core-dependent bound
+
+```text
+W_*<=K/(7mu).                                        (45)
+```
+
+Let `W_0` be the least positive integer in the residue class and write
+`W_n=W_0+nL_E`. The measure in (43) is nonnegative for every `n`; when
+`C_E(r)>0`, it is strictly increasing in `W`. Therefore a zero at any
+`W_n` with `n>0` would force the smaller value at `W_0` to be negative,
+which is impossible. A zero can occur only at `W_0`.
+
+Regard the Boolean continuation profile at index `n` as the infinite word
+
+```text
+(1_(measure(G_(E union {W_(n+j)}))>0))_(j>=0).       (46)
+```
+
+If `measure(G_(E union {W_0}))>0`, all profiles are the all-one word and the
+quotient has one state. If that measure is zero, its profile is
+`(0,1,1,...)`, while every `n>=1` has the all-one profile. The quotient then
+has exactly two states:
+
+```text
+least positive representative,        permanent positive sink.           (47)
+```
+
+By contrast, when `C_E(r)!=0`, equation (7) makes the exact-measure profiles
+pairwise distinct, so their continuation quotient is infinite. Thus a pump
+preserving only the positive-Haar/zero-Haar observable on one fixed residue
+ray need not remember the full real number `1/W`; it needs only the flag
+`W=W_0`. Globally, every zero-Haar one-tail extension of this fixed core is
+one least positive representative, and hence has `W<=L_E`. Weak nonemptiness
+may still survive on a measure-zero endpoint set and is not encoded by this
+quotient. This does not give a uniform pump for changing cores: the endpoint
+modulus `L_E` itself is not bounded here. The result is a fixed-core
+compression theorem, not LRC(14). QED.

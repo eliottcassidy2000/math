@@ -26,6 +26,7 @@ depends_on:
   - THM-2176-gordian-continuation-profile-and-interaction-cocycle
 related:
   - THM-2183-order-join-is-an-exact-tournament-metric-product
+  - THM-2188-finite-phase-bank-and-pairwise-overlap-no-go
 external:
   - "Horst Schubert, Die eindeutige Zerlegbarkeit eines Knotens in Primknoten, Sitzungsberichte der Heidelberger Akademie der Wissenschaften 1949/3, 57--104, DOI 10.1007/978-3-642-45813-2."
   - "Brendan Owens and Saso Strle, Immersed disks, slicing numbers and concordance unknotting numbers, Communications in Analysis and Geometry 24 (2016), 1107--1138, DOI 10.4310/CAG.2016.v24.n5.a8, arXiv:1311.6702."
@@ -584,6 +585,48 @@ d_cat(0,a)=0.                                        (52)
 
 In the knot application, integrality supplies attainment and cancellation
 then prevents collapse.
+
+### The LRC safe-set monoid has a null absorber
+
+The same construction gives an exact transfer boundary for LRC. Let the
+commutative monoid consist of finite speed sets under union, and put
+
+```text
+d_mu(A,B)=measure(G_A symmetric_difference G_B).    (LRC.1)
+```
+
+This is a pseudometric, and union is nonexpansive because
+
+```text
+G_(A union C)=G_A intersection G_C.                 (LRC.2)
+```
+
+In fact the full joint law (1) holds: the symmetric difference of
+`G_A intersection G_C` and `G_B intersection G_D` is contained in the union
+of `G_A symmetric_difference G_B` and `G_C symmetric_difference G_D`.
+
+However, the complete arithmetic-progression packet
+
+```text
+P={1,2,...,13}
+```
+
+has `measure(G_P)=0`. Therefore, for every `A,B`,
+
+```text
+d_mu(A union P,B union P)=0,
+inf_C d_mu(A union C,B union C)=0.                  (LRC.3)
+```
+
+So unrestricted common-context localization collapses identically on the
+positive-Haar safe-measure observable. The obstruction is not
+noncancellativity alone but the presence of a null absorbing context for that
+a.e. predicate. This does not collapse weak nonemptiness or THM-2047's Euler
+data: isolated AP points are invisible to `d_mu`. A useful measure-level LRC
+quotient must be graded by remaining runner slots or forbid already terminal
+contexts; THM-2174's fixed-core two-state first-period flag is one such
+restricted carrier. Catalytic localization itself supplies no LRC pump or
+proof.
 
 ## 7. Typed frontier
 

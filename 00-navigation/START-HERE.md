@@ -113,11 +113,11 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     `(3,5,0)`. THM-2140 gives depth/polar invoices; THM-2148/2168 give the
     Fano classification and top-two depth majorization; THM-2168 now eliminates
     its transverse and scalar-`4+3` lanes, leaving only scalar `5+3`.
-    THM-2167/2171 give `208875` carry pairs and ordered cap `5430750`;
-    THM-2169 gives deletion height `1247`, while THM-2174 isolates phase
-    windows/current. THM-2179 and THM-735/2182/2184/2186 add relation, far-cone,
-    grid-tube, and toric-profile exits. THM-2190 forces rank six by height
-    `450` and some absolute bounded rank seven, but phase-preserving discharge remains open.
+    THM-2187 makes the short relation plane saturated and radix-universal;
+    THM-2190 forces rank six by height `450`, deletion rank five by `235800`,
+    and a finite seventh relation. THM-2174/2188 show phase/current remains
+    the debt. THM-735/2184/2186 give far-cone, grid/mixed-core, and toric exits;
+    scalar `5+3` remains open.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
     the knot continuation cocycle; THM-2191 localizes Gordian distance by
     common catalysts and closes `9_10` through the four-ball crossing metric.
@@ -128,14 +128,14 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 | Topic | Read first | Then use |
 |---|---|---|
-| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2190; preserve carry/owner/tie, danger-clutter, endpoint-current, and equality-skeleton sidecars |
+| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2190; preserve carry/owner/tie, positive-Haar first-period/current, joint continuation, and equality skeleton |
 | LRC / Frobenius wildcard | [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) | THM-2041 packets; keep seed and pointwise exit explicit |
 | LRC literature | [`CORE-PAPERS.md#lonely-runner-conjecture`](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [`LRC-TECHNIQUE-INDEX.md`](LRC-TECHNIQUE-INDEX.md), source paper |
 | NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2101/2111, formal interfaces, guardrails |
 | Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102/2118/2158/2180/2181 |
 | Tournaments | [`CURRENT-FRONTIER.md#tournaments`](CURRENT-FRONTIER.md#tournaments) | [`TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md`](TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md), [`THE-ZOO.md`](THE-ZOO.md) with its freshness banner |
 | Integer sequences | [`CURRENT-FRONTIER.md#integer-sequences`](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005 and their frozen outputs |
-| Broad portfolio | [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md) | THM-2176/2177; [`PROBLEM-ATLAS-2026-07-20.md`](PROBLEM-ATLAS-2026-07-20.md) only as historical provenance |
+| Broad portfolio | [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md) | THM-2176/2177/2191; [`PROBLEM-ATLAS-2026-07-20.md`](PROBLEM-ATLAS-2026-07-20.md) only as historical provenance |
 | Formalization | relevant theorem's `formalization` field | `00-navigation/*FORMALIZATION*`, then a clean build/axiom audit |
 | Research method | [`RESEARCH-PROTOCOL.md`](RESEARCH-PROTOCOL.md) | [`META-PATTERNS.md`](META-PATTERNS.md), relevant reflections |
 | Agent process | [`../agents/README.md`](../agents/README.md) | [`CONCURRENT-SESSIONS.md`](CONCURRENT-SESSIONS.md) |
