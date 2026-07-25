@@ -2,7 +2,7 @@
 id: THM-2331
 title: "Two-sided septimal address embedding in a marked current"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. Let
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. Let
   w be a primitive nine-coordinate scalar word with at least two
   coordinates nonzero modulo seven. Given an exact relation r with
   r.w=0, any integer frequency triangle X+m w_3=Y, and any requirement
@@ -31,14 +31,14 @@ related:
   - THM-2329-boundary-triple-rerooting-and-transverse-gain-obstruction
 script: 04-computation/lrc14_two_sided_address_embedding_thm2331.py
 output: 05-knowledge/results/lrc14_two_sided_address_embedding_thm2331.out
-script_sha256: f9afd297c5dc002949b48260bfa06dbbb6f46281c0c4c27f76630f1770095f42
-output_sha256: cfc79484cfe134b4a37ee3268064f3e264022eee379de2ffa7ad4e528f0fdd5b
+script_sha256: 9bbd2cbbc7bde26099f359c72f0b3d03a27d36a4af892851f01fc30d301e7fde
+output_sha256: 0018fb9a3db8db0c92e478ca710d19b9fe746c14a4dc226eedfbf1e51c032758
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2331 -- every target address embeds termwise in the marked current
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2327 gives a genuine nonzero mixed Fourier triangle
 
@@ -284,17 +284,24 @@ address `r`.
 
 ## 4. Why Abel regularization is the correct statement
 
-The atomic interval Fourier series are not absolutely summable. For
-`0<rho<1`, multiply every atomic coefficient at index `n` by
+The interval and word Fourier series need not be absolutely summable.
+Treat the current as a finite product of its nine left rectangle factors,
+the extra word indicator `1_W`, the deepest-comb factor, and the nine
+right rectangle factors. For `0<rho<1`, Poisson-smooth each **base**
+interval before composing it with its speed:
 
 ```text
-rho^|n|.                                           (22)
+I_hat(k) -> rho^|k| I_hat(k).                       (22)
 ```
 
-The resulting factor expansions are absolutely convergent. Their products
-converge in `L^1` to the exact rectangle and word products as `rho` tends
-to one from below, so their Fourier coefficients Abel-converge to the
-three exact coefficients in (1).
+Use the same base-index rule for the deepest comb, and ordinary-frequency
+Poisson smoothing for `1_W`. Each resulting Fourier series is absolutely
+convergent. Composition with an integer speed preserves Haar `L^1`
+convergence; smoothing also preserves the zero mode
+`(1_W)_hat(0)=measure(W)`. Hence the finite products converge in `L^1`
+to the exact rectangle, word, and comb products as `rho` tends to one
+from below. Their Fourier coefficients Abel-converge to the three exact
+coefficients in (1).
 
 For every fixed `rho`, the term selected above equals
 
@@ -375,6 +382,7 @@ The remaining proof object is narrower:
 termwise address participation              PROVED here;
 cancellation-free address sub-sum            OPEN;
 bounded visible/Jackson membership           OPEN;
+function-role/target polarization             OPEN;
 terminal-component phase transport           OPEN;
 scalar-row exclusion                         OPEN.   (28)
 ```
@@ -408,3 +416,13 @@ Both transcripts must match
 ```
 
 byte-for-byte after LF normalization.
+
+The independent audit rederived the sharp two-pivot count and equality
+case, the oriented identity `r=u+m e_3-v`, the exact Bezout lift and
+heights, and the separate guard and danger/safe support laws. It checked
+that base-index Abel smoothing makes (23) an exact nonzero term for every
+fixed `0<rho<1`, while giving no aggregate or limiting survival claim.
+It also verified injectivity and all bank constants, reproduced the
+ordinary, optimized, and stored transcripts byte-for-byte, matched both
+recorded hashes, and confirmed that target polarization, visibility, and
+terminal phase remain open.

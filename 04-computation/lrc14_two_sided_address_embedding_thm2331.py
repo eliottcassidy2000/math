@@ -335,7 +335,7 @@ require(
 ) = exact_positive_control()
 
 print("theorem=THM-2331")
-print("status=PROVED+VERIFIED-EXACT+CANDIDATE-UNDER-INDEPENDENT-AUDIT")
+print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED")
 print(f"two_pivot_atlas_rows={atlas_rows}")
 print(f"atomic_support_rows={atomic_rows}")
 print(f"sharp_two_pivot_minimum={minimum}")

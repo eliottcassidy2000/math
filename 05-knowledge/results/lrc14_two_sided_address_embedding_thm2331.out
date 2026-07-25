@@ -1,5 +1,5 @@
 theorem=THM-2331
-status=PROVED+VERIFIED-EXACT+CANDIDATE-UNDER-INDEPENDENT-AUDIT
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED
 two_pivot_atlas_rows=12348
 atomic_support_rows=4002
 sharp_two_pivot_minimum=3
