@@ -1,0 +1,22 @@
+theorem=THM-2300
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED
+weighted_root_lemma=Q_nonnegative_proper_vector_fires_all_12_characters
+proper_root_thresholds=((1, Fraction(1, 7)), (2, Fraction(2, 7)), (3, Fraction(3, 7)), (4, Fraction(4, 7)), (5, Fraction(5, 7)), (6, Fraction(6, 7)))
+sharp_threshold=m<=6:arc_length<=6/7<12/13;m=7:full_circle_possible
+endpoint_window_rows=199
+endpoint_bound=n=1(mod13);0<abs(n)<=13S-1
+pair_height_multiplier_bound=(13S-1)*9841
+thirteen_unit_atlas=699
+primitive_base_landed=3
+new_same_character_semihard=3
+primitive_base_hard=696
+same_character_multiple_hard=693
+bank_identity=699=3+3+693;primitive_hard=696
+source_and_multiplicity_multiplier=same_via_Perron
+source_image_multipliers=separate;not_claimed_equal
+hostile_interval_rows=751
+hostile_first=(7, Fraction(1, 14), Fraction(1, 7))
+hostile_last=(757, Fraction(1, 1514), Fraction(1, 757))
+hostile_law=P_m 1_[-1/(2m),1/(2m))=1/m;all_nonzero_multiples_vanish
+hostile_scope=owner_support_only;not_private;not_a_global_cover
+all_checks=PASS
