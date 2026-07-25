@@ -2,7 +2,7 @@
 id: THM-2312
 title: "Sparse-root bispectrum positivity and exact word current"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. For a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. For a
   nonnegative function on a cyclic group of order p with at most two
   occupied sites, the sum of all bispectra whose three characters are
   nonzero is at least (p-2)(p-4)/4 times the cube of the total mass. The
@@ -31,7 +31,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2312 -- a whole-character bispectrum survives
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2302 identifies the first potentially sufficient rooted object as
 third-order: a phase-sensitive coefficient incident to the same owner and
