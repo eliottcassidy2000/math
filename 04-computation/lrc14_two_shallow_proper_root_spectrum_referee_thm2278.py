@@ -13,6 +13,11 @@ from math import ceil
 import sympy as sp
 
 
+def require(condition: bool, message: str) -> None:
+    if not condition:
+        raise RuntimeError(message)
+
+
 def circle_norm(x: Fraction) -> Fraction:
     residue = x % 1
     return min(residue, 1 - residue)
@@ -28,25 +33,29 @@ for size in range(1, 7):
     for support in combinations(range(13), size):
         polynomial = sum(x**j for j in support)
         norm = abs(int(sp.resultant(phi_13, polynomial, x)))
-        assert norm >= 1
+        require(norm >= 1, f"zero cyclotomic norm on {support}")
         norm_histogram[norm] += 1
         mask_count += 1
 
-assert mask_count == 4095
-assert sorted(norm_histogram.items()) == [
-    (1, 754),
-    (27, 364),
-    (53, 936),
-    (79, 624),
-    (131, 312),
-    (157, 312),
-    (313, 156),
-    (547, 156),
-    (599, 156),
-    (625, 39),
-    (729, 130),
-    (911, 156),
-]
+require(mask_count == 4095, "reduced-mask count")
+require(
+    sorted(norm_histogram.items())
+    == [
+        (1, 754),
+        (27, 364),
+        (53, 936),
+        (79, 624),
+        (131, 312),
+        (157, 312),
+        (313, 156),
+        (547, 156),
+        (599, 156),
+        (625, 39),
+        (729, 130),
+        (911, 156),
+    ],
+    "cyclotomic norm histogram",
+)
 
 # Independently build every endpoint-free parent-phase cell for
 # D_u on a thirteen-root fibre, for all nonzero residues u mod 13.
@@ -77,14 +86,23 @@ for unit in range(1, 13):
             < Fraction(1, 14)
             for root in range(13)
         )
-        assert count in (1, 2)
+        require(
+            count in (1, 2),
+            f"bad root count unit={unit} parent={parent}",
+        )
         local_counts.add(count)
         root_count_histogram[count] += 1
         root_cell_count += 1
-    assert local_counts == {1, 2}
+    require(
+        local_counts == {1, 2},
+        f"incomplete root-count spectrum for unit {unit}",
+    )
 
-assert root_count_histogram == Counter({1: 90, 2: 78})
-assert root_cell_count == 168
+require(
+    root_count_histogram == Counter({1: 90, 2: 78}),
+    "unit root-count histogram",
+)
+require(root_cell_count == 168, "unit root-cell count")
 
 # Referee arithmetic uses the already proved THM-2273 image floor directly.
 mode_floor = Fraction(5, 21) ** 5
@@ -92,16 +110,31 @@ image_floor = Fraction(5696989, 76962600)
 integral_floor = mode_floor * image_floor
 residue_floor = integral_floor / 13**2
 
-assert mode_floor == Fraction(3125, 4084101)
-assert mode_floor * Fraction(21, 5) ** 5 == 1
-assert integral_floor == Fraction(712123625, 12572921264904)
-assert residue_floor == Fraction(712123625, 2124823693768776)
+require(
+    mode_floor == Fraction(3125, 4084101),
+    "cyclotomic floor fraction",
+)
+require(
+    mode_floor * Fraction(21, 5) ** 5 == 1,
+    "norm/AM-GM certificate",
+)
+require(
+    integral_floor == Fraction(712123625, 12572921264904),
+    "vector-mode integral floor",
+)
+require(
+    residue_floor == Fraction(712123625, 2124823693768776),
+    "residue energy floor",
+)
 
 gap_counts = {
     offset: ceil(Fraction(7 * 13**offset, 6) * image_floor)
     for offset in range(4)
 }
-assert gap_counts == {0: 1, 1: 2, 2: 15, 3: 190}
+require(
+    gap_counts == {0: 1, 1: 2, 2: 15, 3: 190},
+    "minimum gap counts",
+)
 
 print("THM-2278 independent exact referee")
 print(f"cyclotomic_masks_checked={mask_count}")

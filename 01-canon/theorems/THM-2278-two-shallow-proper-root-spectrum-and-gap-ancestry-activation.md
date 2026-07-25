@@ -2,23 +2,22 @@
 id: THM-2278
 title: "Two-shallow proper-root spectrum and gap-ancestry activation"
 status: >
-  RESERVED / PROOF COMPLETE UNDER INDEPENDENT AUDIT. Candidate: on every
-  strict first-depth-one scalar profile, the two THM-2273 shallow-owner flows
-  have a common-time labelled root word whose every nonzero C_13 character
-  has pointwise squared norm at least (5/21)^5 on the common image.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. On every strict
+  first-depth-one scalar profile, the two THM-2273 shallow-owner flows have a
+  common-time labelled root word whose every nonzero C_13 character has
+  pointwise squared norm at least (5/21)^5 on the common image.
   Consequently every nonzero global mod-13 residue carries labelled Fourier
   energy at least 712123625/2124823693768776, and the same character is
   active on every deepest-successor safe gap hit by the common image. The
-  proof and two exact companions are complete, but no statement in this
-  file is a proved dependency until the time indices, proper-root argument,
-  cyclotomic norm floor, Fourier normalization, gap-localization claim, and
-  hostile boundaries have passed independent audit.
+  labels retain the later middle-owner root address, not the earlier shallow
+  root digits or one exact integer Fourier atom; no scalar profile is
+  excluded.
 source: codex-2026-07-25-two-shallow-proper-root-spectrum
-depends_on: []
-related:
-  - THM-590-apex-7-cyclotomic-gap
+depends_on:
   - THM-2269-marked-expiration-root-spectrum-and-branch-state-no-go
   - THM-2273-shallow-owner-flow-and-deep-successor-gap-spread
+related:
+  - THM-590-apex-7-cyclotomic-gap
   - THM-2276-shallow-owner-residue-aligned-crossing
 script:
   - 04-computation/lrc14_two_shallow_proper_root_spectrum_thm2278.py
@@ -27,8 +26,8 @@ output:
   - 05-knowledge/results/lrc14_two_shallow_proper_root_spectrum_thm2278.out
   - 05-knowledge/results/lrc14_two_shallow_proper_root_spectrum_referee_thm2278.out
 script_sha256:
-  - 4a2a18e7587a97a10f58ebb9e4f002ce57e2014ef08cfdc2e5eed8c2b4bc0cb3
-  - 0f9e383b6e8811d326d4d77f8c5f1d6edff5c52fa37fa94e49ae183bd59be04c
+  - e0b87c60290c9e78c3a7a52af1ee45ce8f6607ed1e5e10382f6ca60f9b4403bd
+  - 0fc7e795b2852476477e6eb9713816317d2f82d2044be39ba3dc724284da558a
 output_sha256:
   - d07b1c021be7985279c08efca6df9f5958fb7619a85dbe404136182e418ea534
   - 22cefb6e3374f55ae2fc4d7eb268a16264556a95fc4b2f41cf41b7fc1f5ae415
@@ -37,8 +36,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2278 -- two labelled shallow flows fire on every root character
 
-> **RESERVED / PROOF COMPLETE UNDER INDEPENDENT AUDIT.** Nothing may depend
-> on this file until the status is promoted.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 The marked spectrum in THM-2269 occurs at one owner's expiration. THM-2273
 instead transports two shallow exclusive-owner flows to one common time and
@@ -443,5 +441,8 @@ THM-2273's full `150`-profile mass bank, the exact Fourier floors, and all
 gap-count boundaries. The referee independently evaluates the cyclotomic
 resultant of all `4,095` complement-reduced masks and constructs every
 endpoint-free unit-comb root cell for all twelve nonzero residues modulo
-thirteen. Both normal/optimized transcript pairs are byte-identical. The
-proof awaits independent scope audit before promotion.
+thirteen. Both companions use explicit raising checks, so normal and
+optimized modes execute the same audit and produce byte-identical
+transcripts. Independent audit separately checked the time indices,
+proper-root argument, Fourier factor `169`, gap localization, constants,
+and all scope warnings. QED.
