@@ -13,7 +13,7 @@ status: >
   13^k >= (2375132760/5229541)S, a set of mass at least
   13560199813/106987855174200 travels from the exclusive owner to a
   state serviced by another blocker and by neither the marked owner,
-  guard absorber, nor any unit mask. Thus, together with THM-2283, every
+  guard absorber, nor any unit mask. Thus, together with THM-2288, every
   one of the 165 remaining first-depth-one profiles forces a positive
   ancestry-compatible delayed blocker-only handoff. This excludes no
   profile and does not place the handoff at prescribed expiration.
@@ -27,7 +27,7 @@ related:
   - THM-2267-static-owner-coverage-is-flag-and-transition-holonomy-is-a-cut-kernel
   - THM-2268-two-shell-private-owner-trident-and-raw-carry-cocycle-no-go
   - THM-2271-expiration-support-forces-a-weighted-owner-absorber-cut
-  - THM-2283-shallow-owner-bv-mixing-and-delayed-blocker-handoff
+  - THM-2288-shallow-owner-bv-mixing-and-delayed-blocker-handoff
 script: 04-computation/lrc14_repeated_owner_bv_delayed_handoff_thm2286.py
 output: 05-knowledge/results/lrc14_repeated_owner_bv_delayed_handoff_thm2286.out
 script_sha256: 129939aa70a5e838f314cc3738cb2d656c3c4818ffc453b970b8e4f51da721af
@@ -324,7 +324,7 @@ has positive measure.                               (29)
 The BV proof establishes (29) only after the coefficient-dependent mixing
 horizon (6). THM-2261's expiration-surjectivity example explains why the
 fixed-time implication cannot be recovered from raw owner support, and
-the finite root-word controls in THM-2283 explain why terminal phase or
+the finite root-word controls in THM-2288 explain why terminal phase or
 carry cannot be dropped when trying to transport the delayed handoff back
 to expiration.
 
@@ -332,7 +332,7 @@ Accordingly the theorem proves neither a scalar-profile exclusion nor
 LRC(14). Its exact gain is the removal of a branch gap:
 
 ```text
-150 strict profiles (THM-2283)
+150 strict profiles (THM-2288)
  + 15 repeated-first profiles (this theorem)
  = 165 first-depth-one profiles
 
