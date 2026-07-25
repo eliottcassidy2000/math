@@ -1,0 +1,11 @@
+depth-(1,1,3) fixed-threshold Hellinger-Gram certificate
+arithmetic=exact integers; floating_point=none
+phases=2028 shallow=1014 terminals=13182
+pairs=514605 p=5 theta=2612 scale=100000
+capacity_table_digest=f93144ef35b6b733ad08390a4d133d99c785fa92efde821fc909efd67bf0dc5a
+maximum_excess=528
+criterion_numerator=(W-p*theta)*scale^2-(V_int V_int^T)
+minimum_margin_numerator=786095718332
+minimum_margin=786095718332/10000000000
+minimizers=[(5, 1098, 13580, 4413904281668, 786095718332)]
+margin_matrix_digest=55c6b5256310e085fd2b67a5f83a084e3a3441b64eae88f0b2fac73793d481e3

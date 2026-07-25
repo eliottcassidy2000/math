@@ -10,12 +10,14 @@ status: >
   the thirteen coefficient lifts of one unit class obey an exact all-depth
   family-sum law: their capacities sum to 2W-W_a. This scalar recurrence
   does not determine the lifted top-five order statistic or retain sharp
-  recursive control. In the
-  audited universe one fixed-sum lift family has capacities ranging from
-  zero to 2,460; the missing recursive state is its labelled guard-hole
-  correlation vector, equivalently its nonconstant Fourier data. The
-  THM-2205/2207 subsequently close (1,1,3)/(1,2,3); profiles of deepest
-  valuation at least four remain open.
+  recursive control. In the audited universe one fixed-sum lift family has
+  capacities ranging from zero to 2,460; the missing recursive state is its
+  labelled guard-hole correlation vector, equivalently its nonconstant
+  Fourier data. Later THM-2205 and THM-2207 close the profiles (1,1,3) and
+  (1,2,3), while THM-2216 reframes the surviving all-depth problem as a
+  truncated-capacity Gram bound. Those later results are not dependencies
+  of the present proof. Profiles with deepest valuation at least four are
+  outside this theorem.
 source: codex-2026-07-24-scalar-depth223-lift-capacity
 depends_on:
   - THM-2192-scalar-five-plus-three-root-sheet-chord-invoice
@@ -25,7 +27,9 @@ related:
   - THM-2197-scalar-chord-coverage-has-a-boolean-deficiency-quotient
   - THM-2200-convex-semigroup-and-finite-place-support-hole-trichotomy
   - THM-2201-cyclic-root-fibre-hasse-jet-transition-carrier
+  - THM-2205-scalar-depth-113-exact-lift-capacity-exclusion
   - THM-2207-scalar-depth-123-labelled-guard-hole-exclusion
+  - THM-2216-residual-capacity-hinge-gram-law
 script: 04-computation/lrc14_scalar_depth223_thirteen_lift_capacity_thm2204.py
 output: 05-knowledge/results/lrc14_scalar_depth223_thirteen_lift_capacity_thm2204.out
 script_sha256: 9c16e1e7a69834f9304c877f1627232f374688aa7f8d2372c260dfdbfa056ac8
@@ -450,8 +454,9 @@ controlling its minimum.  Likewise, THM-2200's independent-product support
 pumps classify static matching holes but do not preserve this dynamic
 phase alignment.
 
-This theorem closes only the actual valuation profile `(2,2,3)` and does
-not establish a uniform all-depth top-five recurrence. THM-2205 and
-THM-2207 separately close `(1,1,3)` and `(1,2,3)` using their larger typed
-sign-class universes. Profiles with deepest valuation at least four remain
-open. QED.
+This theorem itself closes only the actual valuation profile `(2,2,3)`.
+The later exact audits THM-2205 and THM-2207 close `(1,1,3)` and `(1,2,3)`.
+THM-2216 shows that the required top-five meet envelope is a truncated
+capacity Gram kernel, but no uniform all-depth correlation estimate is
+known.  Profiles with deepest valuation at least four remain outside the
+present theorem.  QED.

@@ -12,9 +12,11 @@ status: >
   unordered shallow pairs. The unique minimum conditional top-five margin
   is 1,286. The previous depth-three audit is recovered as a positive
   control with margin 86. Together with THM-2204 this closes the repeated
-  repeated shallower-depth profiles (1,1,3) and (2,2,3). THM-2207
-  subsequently closes the mixed profile (1,2,3); profiles with deepest
-  valuation at least four remain open. This is not a proof of LRC(14).
+  shallower-depth profiles (1,1,3) and (2,2,3). Later THM-2207 closes the
+  mixed profile (1,2,3), and THM-2216 independently recertifies the present
+  branch by a fixed-threshold Hellinger Gram bound. Profiles with deepest
+  valuation at least four are outside this theorem; this is not a proof of
+  LRC(14).
 source: codex-2026-07-24-scalar-depth113-exact-lift
 depends_on:
   - THM-2192-scalar-five-plus-three-root-sheet-chord-invoice
@@ -23,6 +25,7 @@ related:
   - THM-2201-cyclic-root-fibre-hasse-jet-transition-carrier
   - THM-2204-scalar-depth-223-thirteen-lift-capacity-law
   - THM-2207-scalar-depth-123-labelled-guard-hole-exclusion
+  - THM-2216-residual-capacity-hinge-gram-law
 script: 04-computation/lrc14_scalar_five_plus_three_depth_three_lift_exact_codex_20260724.py
 output: 05-knowledge/results/lrc14_scalar_five_plus_three_depth_three_lift_exact_codex_20260724.out
 script_sha256: d84a16a9f90b736effbb214d01d7f963213bf68b49db78ebba269c9e0344e4a6
@@ -405,8 +408,9 @@ Together, THM-2198, THM-2204, and the present theorem exclude
 (1,1,2),       (2,2,3),       (1,1,3).               (33)
 ```
 
-The mixed profile `(1,2,3)` is not covered by either repeated-depth audit,
-but is closed separately by THM-2207. All profiles with `lambda_3>=4`
-remain open. The next exact object is the finite lift transition on the
-labelled correlation/Hasse-jet carrier, not its scalar family sum. This
-theorem does not prove LRC(14). QED.
+The later THM-2207 closes the mixed profile `(1,2,3)`, while THM-2216
+independently recertifies `(1,1,3)` through a single fixed-threshold
+Hellinger Gram matrix.  Profiles with `lambda_3>=4` are outside the present
+theorem.  The next exact object is the finite lift transition on the
+labelled correlation/Hasse-jet carrier, not its scalar family sum.  This
+theorem does not prove LRC(14).  QED.
