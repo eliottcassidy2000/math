@@ -1,0 +1,20 @@
+singular_coefficient_matching=PASS
+beta=-5*(-17*D - 12*alpha**2 + 34*e**2)/168
+gamma=-5*(-68*D*alpha - 17*D*e - 16*alpha**3 + 136*alpha*e**2)/1568
+Psi0=-5*(289*D**2 + 136*D*alpha**2 + 68*D*alpha*e - 1224*D*e**2 + 16*alpha**4 - 272*alpha**2*e**2 + 1088*e**4)/10976
+spectral_B=-233240*D*e + 219520*y**3
+smooth_conic_sextic=D**3*(c + 20) + 6*D**2*e*u*(c + 20) + D*u**2*(-D*c - 60*D + 8*c*e**2 + 240*e**2) - 6*e*u**5*(c - 20) + 10*e*u**3*(-7*D + 16*e**2) + u**6*(c - 20) + u**4*(-D*c + 60*D + 8*c*e**2 - 240*e**2)
+smooth_conic_cover=T^2=1372*S6(u)/(235298*u^3)
+square_residual_u2=(69*D**2*c + 1420*D**2 - 250*D*c*e**2 - 7360*D*e**2 + 293*c*e**4 + 5500*e**4)/4
+square_residual_u1=e*(71*D**2*c + 1130*D**2 - 282*D*c*e**2 - 5730*D*e**2 + 259*c*e**4 + 5380*e**4)/2
+square_residual_resultant=-953700000*c - 19776270000
+square_obstruction_norms=e_zero:-7025,e_nonzero:60461
+reducible_component_sigma=-1 cubic_discriminant=8500*e**6*(4*c + 85)
+reducible_component_sigma=1 cubic_discriminant=-8500*e**6*(4*c - 85)
+cusp_sigma=-1 lambda^2=-16*c/343 - 320/343 F=T*y**2*(-c - 30)/560 polar_coefficient=(-2*c - 30)/(245*lambda)
+cusp_sigma=1 lambda^2=16*c/343 - 320/343 F=T*y**2*(c - 30)/560 polar_coefficient=(2*c - 30)/(245*lambda)
+hostile_nonzero_norms={'c_minus_20': -25, 'c_minus_15': -200, 'c_minus_30': 475}
+hostile_sign_replays=[(-1, -1, True), (-1, 1, True), (1, -1, True), (1, 1, True)]
+branch_count_and_riemann_hurwitz=MATHEMATICAL_PROOF_REQUIRED
+rational_primitive_and_pole_endgame=MATHEMATICAL_PROOF_REQUIRED
+status=THM2247_NONSPLIT_TERMINAL_DEGREE14_EXACT_REFEREE
