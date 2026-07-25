@@ -1,5 +1,5 @@
 ---
-id: THM-2242
+id: THM-2245
 title: "Degree-fourteen spectral quartic discriminant reduction"
 status: >
   PROVED + VERIFIED-EXACT. In the nonsplit terminal quartic exact-square
@@ -22,14 +22,14 @@ depends_on:
 related:
   - THM-2217-square-prefix-pole-alternative-and-odd-leading-degree-terminal-wall
   - THM-2240-dc2-grade-response-gauge-is-not-a-continuation-state
-script: 04-computation/jc2_degree14_spectral_quartic_discriminant_thm2242.py
-output: 05-knowledge/results/jc2_degree14_spectral_quartic_discriminant_thm2242.out
-script_sha256: a04aeca4249be737c41c760cb6b7fe52ab896af85e66df7ed1cbd16e6cea26e2
-output_sha256: 9c3ab147f8a292bf164e02e4caf92921c24693ef1f0b79d2cad2f5dec9edcb4a
+script: 04-computation/jc2_degree14_spectral_quartic_discriminant_thm2245.py
+output: 05-knowledge/results/jc2_degree14_spectral_quartic_discriminant_thm2245.out
+script_sha256: fdad44cf1923cf99d20c45823784f3741ad8c1a29307e639899ae66a5423792d
+output_sha256: 401e56f6e069b23e4aec77eea767fd784b1d703b5bd11f3886b4c800cb1b0678
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2242 -- degree fourteen lands on a singular spectral quartic
+# THM-2245 -- degree fourteen lands on a singular spectral quartic
 
 THM-2214 closes nonsplit terminal quartic mates through reduced fibre degree
 ten. THM-2230 shows that the reduced degree and the nonresonant Faber
@@ -270,8 +270,8 @@ degrees, or prove the planar Jacobian conjecture.
 Run
 
 ```bash
-python3 04-computation/jc2_degree14_spectral_quartic_discriminant_thm2242.py
-python3 -O 04-computation/jc2_degree14_spectral_quartic_discriminant_thm2242.py
+python3 04-computation/jc2_degree14_spectral_quartic_discriminant_thm2245.py
+python3 -O 04-computation/jc2_degree14_spectral_quartic_discriminant_thm2245.py
 ```
 
 The exact companion checks the degree-fourteen bank by two independent

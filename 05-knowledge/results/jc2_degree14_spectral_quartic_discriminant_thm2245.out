@@ -8,4 +8,4 @@ spectral_H=13720*Psi0 + 1200*alpha**4 - 1600*alpha**3*y - 6720*alpha**2*beta - 3
 spectral_identity=(235298*T^2+B)^2=(10976*y)^2*H
 third_observable_over_q=-T*(-343*T**2 + 640*alpha**3 - 320*alpha**2*y - 2688*alpha*beta + 896*beta*y + 6272*gamma + 160*y**3)/(8960*y)
 squarefree_H_implies_genus_one=MATHEMATICAL_PROOF_REQUIRED
-status=THM2242_DEGREE14_SPECTRAL_QUARTIC_EXACT_REFEREE
+status=THM2245_DEGREE14_SPECTRAL_QUARTIC_EXACT_REFEREE

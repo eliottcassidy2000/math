@@ -313,7 +313,7 @@ def main() -> None:
     )
     print(f"third_observable_over_q={sp.factor(expected_third)}")
     print("squarefree_H_implies_genus_one=MATHEMATICAL_PROOF_REQUIRED")
-    print("status=THM2242_DEGREE14_SPECTRAL_QUARTIC_EXACT_REFEREE")
+    print("status=THM2245_DEGREE14_SPECTRAL_QUARTIC_EXACT_REFEREE")
 
 
 if __name__ == "__main__":

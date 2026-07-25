@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact prior-centered single-odd-clause Bellman certificate for THM-2241.
+"""Exact prior-centered single-odd-clause Bellman certificate for THM-2244.
 
 This companion keeps every available even checkpoint in the positive carrier
 and selects odd checkpoint 1 in the negative carrier.  For each labelled core
@@ -705,6 +705,7 @@ def exact_current_ledger():
         key=lambda row: row[4],
     )
 
+    print("theorem=THM-2244")
     print("thm2233_lowfirst_reference_ledger=223")
     print("thm2239_current_ledger=194")
     print("exact_prior_center_inadmissible_depth_one=165")

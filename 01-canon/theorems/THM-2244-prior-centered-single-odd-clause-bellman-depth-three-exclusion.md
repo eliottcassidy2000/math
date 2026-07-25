@@ -1,5 +1,5 @@
 ---
-id: THM-2241
+id: THM-2244
 title: "Prior-centered single-odd-clause Bellman exclusion of depth-three scalar profiles"
 status: >
   PROVED + VERIFIED-EXACT + HOSTILE-AUDITED. In the scalar five-unit plus
@@ -25,14 +25,14 @@ related:
   - THM-2218-labelled-guard-hole-fourier-and-signed-lift-energy
   - THM-2232-same-core-signed-eigen-markov-dual-exclusion
   - THM-2234-first-depth-one-private-two-owner-mass-and-two-step-expansion
-script: 04-computation/lrc14_prior_centered_single_odd_clause_bellman_thm2241.py
-output: 05-knowledge/results/lrc14_prior_centered_single_odd_clause_bellman_thm2241.out
-script_sha256: 5684f143f7dbde691cf4a972ef6ec2f3e67b70d7a7da069f5bbb82311f4e4623
-output_sha256: 660f542326d93f7f631d139339ef097467ff9b867bbe7ac87eea3be8d5f9add1
+script: 04-computation/lrc14_prior_centered_single_odd_clause_bellman_thm2244.py
+output: 05-knowledge/results/lrc14_prior_centered_single_odd_clause_bellman_thm2244.out
+script_sha256: 55c009410f347820abff74d6741edc310bb45a250b01b0ec5034efcfef3cac14
+output_sha256: 0cc0d068e903c3b0c9623e10475bfaeb9208b4aec2a80d9a6c765cd50c528e26
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2241 -- the first odd clause closes all but one depth-three row
+# THM-2244 -- the first odd clause closes all but one depth-three row
 
 THM-2239 leaves the exact scalar valuation ledger
 
@@ -407,8 +407,8 @@ needed continuation:
 Run
 
 ```bash
-python3 04-computation/lrc14_prior_centered_single_odd_clause_bellman_thm2241.py --exact-ledger
-python3 -O 04-computation/lrc14_prior_centered_single_odd_clause_bellman_thm2241.py --exact-ledger
+python3 04-computation/lrc14_prior_centered_single_odd_clause_bellman_thm2244.py --exact-ledger
+python3 -O 04-computation/lrc14_prior_centered_single_odd_clause_bellman_thm2244.py --exact-ledger
 ```
 
 Both modes reproduce the stored transcript byte for byte. The companion
