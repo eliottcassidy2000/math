@@ -1,0 +1,9 @@
+THM-2335 exact cyclic square-class referee
+square-root recursion: degrees 11..6 uniquely reconstructed
+residual equations: E5,E4,E3,E2,E1,E0 verified exactly
+B=0 branch: only (C,D,W)=(0,0,0); B!=0,C=0 resultant=14658253353277217122876416000000
+B!=0,C!=0 first branch gap=20348640145/235409415318
+B!=0,C!=0 second branch resultant=-466513778248576599586500
+positive control: affine apex is a square
+hostile control: normalized B-axis has E4=617375
+VERDICT: 4P^3+49Q^2 is a square iff B=C=D=W=0
