@@ -722,6 +722,7 @@ import TournamentH7.LRCMod23Spread
 import TournamentH7.GMC2HermiteNoCommonRoot  -- kind-pasteur-S128c120..c122 / THM-1585 (domination false) + THM-1660 (orthogonality closure) + THM-1620 (Pochhammer bridge: toral=Legendre, radial=Hermite) + THM-1670 (order = D, so ThreeTerm descent is (M,N)=(1,1) only). ThreeTerm.no_common_root: any monic 3-term recurrence with b n != 0 has no common root; replaces klein-S351's false Gamma-domination. Hermite/truncated-exp instances. No sorry/native_decide
 import TournamentH7.GMC2MomentBasics
 import TournamentH7.GMC2ParityGuardrail  -- codex: exact Bool^3 parity fibers agree on mass/singleton/pair moments and every degree<=2 Walsh observable, but split cubically; xor convolution closes with factor 4. Ordinary kernel reduction only
+import TournamentH7.GMC2ParityPolarization  -- codex: exact parity-fiber difference = top Walsh pairing = third mixed finite difference; equality/detection iff cubic polarization vanishes/is nonzero. Structural guardrail, not a GMC2 proof premise
 import TournamentH7.GMC2Formalization  -- conditional Frobenius/height surface; the unconditional kernel-pure front door is imported below as GMC2Main. No sorry/native_decide
 
 import TournamentH7.TNCDetectionDepth  -- kind-pasteur-S128c124 / THM-1710: TNC detection depth = D. zeros_propagate: D consecutive zeros of a D-th order recurrence (nonvanishing leading coeff) propagate to all later terms, so the toral nullcone is cut out by the first D moments. Caps opus THM-1685 level count. No sorry/native_decide
