@@ -366,11 +366,13 @@ Both transcripts must match
 byte-for-byte after LF normalization.
 
 The independent audit rederived the three exact Fourier rerootings,
-the shallow-character reductions, the six-element anharmonic orbit, and
-the equivalence between the eleven complementary directions and
-`r,s,r+s!=0`. It separately checked the function-role typing and the
-distinction between a nonzero ordinary deep frequency and its trivial
-shallow character. Normal, optimized, and stored transcripts agree
-byte-for-byte; the recorded hashes match. Target polarization, relation
-address incidence, repeated-first rows, and the resonance branch remain
-outside the theorem.
+the shallow-character reductions, and all six ordered rerootings of
+`(kappa,0,-kappa)`, recovering exactly the three boundary directions
+twice each. It independently counted the `132=11*12` transverse nonzero
+vectors, checked the THM-2315/2321 function-role and label typing and the
+`+1` hostile comparison, and distinguished a nonzero ordinary deep
+frequency from its trivial shallow character. Normal, optimized, and
+stored transcripts agree byte-for-byte; the recorded hashes match.
+Target polarization, homogeneous-word current, relation-address
+incidence, repeated-first rows, and the resonance branch remain outside
+the theorem.
