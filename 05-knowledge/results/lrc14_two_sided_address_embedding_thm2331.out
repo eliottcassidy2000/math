@@ -1,6 +1,7 @@
 theorem=THM-2331
 status=PROVED+VERIFIED-EXACT+CANDIDATE-UNDER-INDEPENDENT-AUDIT
 two_pivot_atlas_rows=12348
+atomic_support_rows=4002
 sharp_two_pivot_minimum=3
 sharp_witness=1,1,1,1,1
 support_one_hostile_count=0

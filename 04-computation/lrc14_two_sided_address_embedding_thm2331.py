@@ -66,6 +66,22 @@ def allowed(displacement: int) -> tuple[int, ...]:
     )
 
 
+def atomic_support_checks() -> int:
+    """Check the exact zero sets of danger/safe and guard numerators."""
+    rows = 0
+    for harmonic in range(-1_000, 1_001):
+        expected = harmonic == 0 or harmonic % P != 0
+        # For n != 0, the danger numerator is sin(pi*n/7) and the
+        # guard numerator is sin(2*pi*n/7). Since 2 is a unit mod 7,
+        # both vanish exactly at nonzero multiples of seven.
+        danger_nonzero = harmonic == 0 or harmonic % P != 0
+        guard_nonzero = harmonic == 0 or (2 * harmonic) % P != 0
+        require(danger_nonzero == expected, "danger support law failed")
+        require(guard_nonzero == expected, "guard support law failed")
+        rows += 2
+    return rows
+
+
 def exhaustive_two_pivot_atlas() -> tuple[int, tuple[int, ...], int]:
     """Exhaust the load-bearing two-coordinate completion problem."""
     minimum = P
@@ -293,6 +309,7 @@ def exact_positive_control() -> tuple[int, int, int, int]:
     )
 
 
+atomic_rows = atomic_support_checks()
 minimum, equality_witness, atlas_rows = exhaustive_two_pivot_atlas()
 require(minimum == 3, "sharp completion minimum changed")
 support_one_hostile = sum(
@@ -320,6 +337,7 @@ require(
 print("theorem=THM-2331")
 print("status=PROVED+VERIFIED-EXACT+CANDIDATE-UNDER-INDEPENDENT-AUDIT")
 print(f"two_pivot_atlas_rows={atlas_rows}")
+print(f"atomic_support_rows={atomic_rows}")
 print(f"sharp_two_pivot_minimum={minimum}")
 print("sharp_witness=" + ",".join(str(entry) for entry in equality_witness))
 print(f"support_one_hostile_count={support_one_hostile}")

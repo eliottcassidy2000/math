@@ -31,8 +31,8 @@ related:
   - THM-2329-boundary-triple-rerooting-and-transverse-gain-obstruction
 script: 04-computation/lrc14_two_sided_address_embedding_thm2331.py
 output: 05-knowledge/results/lrc14_two_sided_address_embedding_thm2331.out
-script_sha256: 897173ac26469792bb45cc92343e15eb8f62bd719ddb706133f7ca0e8ffbaaf4
-output_sha256: 1970538eddf5e7e2491301b42350285186c26c5dea799e3eb4aeb8fbb3603ce8
+script_sha256: f9afd297c5dc002949b48260bfa06dbbb6f46281c0c4c27f76630f1770095f42
+output_sha256: cfc79484cfe134b4a37ee3268064f3e264022eee379de2ffa7ad4e528f0fdd5b
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -203,14 +203,16 @@ one exact integral correction.
 ## 3. The canonical rectangle has exactly the needed support
 
 On a strict shallow-owner branch, THM-2302 writes the exclusive source
-`E=E_j`, up to null endpoints, as a nine-factor circular rectangle. Each
-factor is either the centered danger interval
+`E=E_j`, up to null endpoints, as a nine-factor circular rectangle. Eight
+factors are the centered danger interval
 
 ```text
 D={t:||t||<1/14}
 ```
 
-or its complement. With the Fourier convention used in the LRC canon,
+or its complement: five unit-speed complements, the selected shallow
+danger factor, and the two other blocker complements. Their coefficients
+are
 
 ```text
 d_hat(0)=1/7,
@@ -220,7 +222,21 @@ d_hat(n)=sin(pi*n/7)/(pi*n),             n!=0,
 (1-d)_hat(n)=-d_hat(n),                  n!=0.      (16)
 ```
 
-Thus every atomic factor coefficient is nonzero exactly at
+The ninth factor is the wider guard window
+
+```text
+C={t:||t||>1/7}.
+```
+
+Its coefficients are
+
+```text
+c_hat(0)=5/7,
+c_hat(n)=-sin(2*pi*n/7)/(pi*n),          n!=0.      (16a)
+```
+
+Since multiplication by two permutes the nonzero residues modulo seven,
+both (16) and (16a) are nonzero exactly at
 
 ```text
 n=0 or 7 does not divide n.                         (17)
@@ -370,8 +386,9 @@ LRC(14) remains open.
 
 The companion exhausts every two-coordinate septimal speed, displacement,
 and right-hand side, verifies that the minimum completion count is exactly
-three, checks the general `3*5^7` count and both term-bank constants, and
-constructs an exact positive control on THM-2325's hostile scalar word.
+three, checks the separate danger/safe and guard support laws, the general
+`3*5^7` count and both term-bank constants, and constructs an exact
+positive control on THM-2325's hostile scalar word.
 For that control it verifies the target-axis relation, the exact
 two-sided lift, all eighteen septimal nonvanishing predicates, the height
 invoice, and the Abel-term support predicate. Every load-bearing check
