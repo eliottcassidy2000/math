@@ -1,0 +1,10 @@
+THM-2345 exact common-root-wall saturation referee
+wall factorization: F=1323*y^2*G10, deg_y(G10)=10
+deep factorization: G10|_(20C+21W=0)=7*y^4*G6
+subresultant degrees: 10,9,8,7,6,5,4,3,2,1,0
+stripped terminal coefficient count: 5
+Groebner basis: [(15309*C^2+250)*(30618*C^2+361)^3*(199644669*C^4+7654500*C^2+62500), 20*C+21*W]
+ideal membership: 20*C+21*W has zero remainder
+deep control gcd degree: 3
+off-deep control gcd degrees: (0, 0)
+VERDICT: gcd degree >=3 forces 20*C+21*W=0 on B=1
