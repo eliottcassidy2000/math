@@ -14,17 +14,22 @@ status: >
   closes its ledger while N=90 does not. The proof retains every internal
   core relation and all higher overlap cancellation. These body-touching
   relations need not genuinely cross the core/body cut, so neither packet
-  closes LRC(14).
+  closes LRC(14). Under the ordinary zero-safe premise and defect at least
+  seven, combining the height-140 packet with THM-2169 gives an anchored
+  rank-two base-41 carrier with at most 27200916 carry pairs; saturation
+  makes the same plane universal-radix at a slightly larger count.
 source: codex-2026-07-24-reversed-peel-relation-packet
 depends_on:
   - THM-2145
   - THM-2146
+  - THM-2169
 related:
   - THM-2054
   - THM-2086
   - THM-2166
   - THM-735
   - THM-2171
+  - THM-2187
 script: 04-computation/lrc14_reversed_peel_relation_packet_thm2179.py
 output: 05-knowledge/results/lrc14_reversed_peel_relation_packet_thm2179.out
 script_sha256: 8d3e990db5d656e7667e402b1d94f09b6e39dcd737f1fb7c6d4c64fc9d219949
@@ -487,7 +492,78 @@ decorrelated coordinate. This is the relative-character idea of THM-2054
 combined with THM-2145's sharper Jackson kernel, THM-2146's small-core
 floors, and the exact seven-core extension above.
 
-## 7. Exact referee
+## 7. Zero-safe fixed-base-41 corollary
+
+Assume now that the ordinary radius-`1/14` safe measure of `V` is zero and
+that, at a chosen AP scale `g`, the defect in (2) satisfies `d>=7`. Since
+
+```text
+G_(3/41)(V) subset G_(1/14)(V),                       (34)
+```
+
+the positive exit in (3) is impossible. Take the height-`140` relation `m`
+from the other branch and primitive-normalize it. Every nonzero coefficient
+remains a `41`-unit because the normalizing gcd is itself a `41`-unit.
+Choose an outside-core label `e` with
+
+```text
+m_e!=0 mod 41.                                        (35)
+```
+
+THM-2169 applied to deletion of `e` gives a primitive nonzero relation `u`
+with
+
+```text
+u_e=0,                    ||u||_infinity<=1247.       (36)
+```
+
+Primitivity supplies some `j!=e` with `u_j!=0 mod 41`. Therefore
+
+```text
+det [[m_e,m_j],[u_e,u_j]]=m_e u_j!=0 mod 41.          (37)
+```
+
+The two relations are independent over both `F_41` and `Q`. Their
+unrestricted simultaneous base-`41` digit fibres have size `41^11`.
+Primitive coefficient bounds give
+
+```text
+||m||_1<=12*140+139=1819,
+||u||_1<=11*1247+1246=14963.                          (38)
+```
+
+Thus there are at most
+
+```text
+1818*14962=27200916                                   (39)
+```
+
+positive-row carry pairs, and THM-2171's ordered algebraic cap is
+
+```text
+26*27200916=707223816.                                (40)
+```
+
+This raw pair retains the deletion anchor `u_e=0` and the `41`-unit pivot.
+Applying THM-2187 to its rational-plane saturation instead retains `m`,
+gives a universal-radix second basis vector of height at most `1247`, and
+has the slightly larger universal bound
+
+```text
+1818*(13*1247-2)=29467962                             (41)
+```
+
+carry pairs. Saturation may lose the zero at coordinate `e`, so the raw
+base-`41` and saturated universal-base forms are complementary rather than
+identical.
+
+This corollary is conditional on zero-safety and `d>=7` at the chosen scale.
+It does not say that either pivot stays live at every level, retain phase
+current, or close LRC(14). THM-2179's distinctive gain is the scale-local
+outside-core touch; THM-2187 already makes arbitrary saturated planes
+universal-radix.
+
+## 8. Exact referee
 
 The companion performs the following exact checks:
 

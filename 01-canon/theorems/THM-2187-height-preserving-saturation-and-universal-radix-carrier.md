@@ -10,8 +10,10 @@ status: >
   plane, this removes adaptive prime selection without increasing the
   sign-sharp 208875 carry-pair bound: base 14, or any fixed composite bank,
   is available. It also sharpens THM-2178's saturated-basis height from
-  286650 to 105. The remaining pumping loss is phase/current, not radix
-  rank.
+  286650 to 105. With THM-2185, every zero-safe row moreover has a saturated
+  rank-three relation basis of height at most 500, surjective modulo every
+  base with unrestricted fibres q^10. The remaining pumping loss is
+  phase/current, not radix rank.
 source: codex-2026-07-24-LRC-saturated-relation-plane
 depends_on:
   - THM-2144
@@ -19,6 +21,7 @@ depends_on:
   - THM-2164
   - THM-2171
   - THM-2178
+  - THM-2185
 related:
   - THM-2167
   - THM-2174
@@ -215,7 +218,73 @@ dim_Q W_(H_sat)(v)>=3,                                (19)
 or the saturated plane modulo `14` contains a nonzero word supported on
 at most three coordinates. No other part of THM-2178's proof changes.
 
-## 5. Exact boundary
+## 5. Saturated rank three at height 500
+
+THM-2185 now proves unconditionally that a zero-safe distinct positive row
+has
+
+```text
+dim_Q W_500(v)>=3.                                    (20)
+```
+
+Let `(b_1,b_2)` be the saturated basis from Section 3, so
+
+```text
+||b_1||_infinity,||b_2||_infinity<=105,
+```
+
+and choose a relation `c` outside their rational plane with
+`||c||_infinity<=500`. Put
+
+```text
+L_3=(Qb_1+Qb_2+Qc) intersection Z^13.                (21)
+```
+
+The rank-two lattice `L_2=Zb_1+Zb_2` is primitive in `L_3`: it is already
+saturated in `Z^13`, so `L_3/L_2` is a subgroup of the torsion-free group
+`Z^13/L_2`. Extend `(b_1,b_2)` to a basis
+`(b_1,b_2,n_0)` of `L_3` and write
+
+```text
+c=a_1b_1+a_2b_2+D n_0,                 D>=1.          (22)
+```
+
+Replace `n_0` by `n_0+k_1b_1+k_2b_2` to center both coefficients:
+
+```text
+|a_1|,|a_2|<=D/2.                                    (23)
+```
+
+If `D=1`, choose both coefficients zero and take `n=c`. If `D>=2`, then
+
+```text
+||n||_infinity
+ <=500/D+(|a_1|+|a_2|)105/D
+ <=250+105=355.                                      (24)
+```
+
+Thus `L_3` has a saturated basis whose first two vectors have height at
+most `105` and whose third has height at most `500`. Smith normal form
+again supplies an integral right inverse. For every `q>=2`,
+
+```text
+(Z/qZ)^13 -> (Z/qZ)^3
+```
+
+is surjective, and every unrestricted simultaneous digit fibre has exactly
+
+```text
+q^10                                                   (25)
+```
+
+words. In base `14`, this is `14^10`; live-owner fibres split exactly into
+their mod-`2` and mod-`7` image sizes.
+
+This supersedes the sparse-code terminal in Section 4 as a relation-rank
+question. The height-`105` rank-two subcarrier remains useful because its
+carry count is much smaller and its first anchor is height `29`.
+
+## 6. Exact boundary
 
 Saturation repairs base selection, unrestricted fibre rank, and the loose
 basis height. It does not make a repeated carry state target-preserving.
@@ -228,9 +297,10 @@ The faithful carrier is therefore
 
 ```text
 saturated relation plane
+ + optional saturated height-500 third relation
  + exact composite-radix owner image
  + quotient-tie sidecar
- + full phase/current continuation data.             (20)
+ + full phase/current continuation data.             (26)
 ```
 
 A fixed base is now free; the final sidecar is not. QED.
