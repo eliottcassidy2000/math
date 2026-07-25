@@ -104,8 +104,7 @@ support. This is the moment analogue of retaining multiplicity beside sequence
 support.
 **Counterindication:** the diagonal is sufficient only when the target is
 proved invariant under the discarded grading.
-**Evidence:** MISTAKE-226 and the support/multiplicity collision-tax repair in
-MISTAKE-209.
+**Evidence:** MISTAKE-226/209 and THM-2352's q-adic plateau spectrum.
 
 ## A local factorization transfers only through a stated functor
 

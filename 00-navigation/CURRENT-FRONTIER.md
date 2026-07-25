@@ -336,10 +336,10 @@ support profile       D_A(z) = sum_{a in support} a^{-z}
 indexed multiplicity  = D_A(z) + collision tax.
 ```
 
-At `z=1`, Abel–Stieltjes and logarithmic block occupancy give the exact
-convergence criterion. Density zero is insufficient; the critical family
-continues through every Bertrand/iterated-log scale. Egyptian splitting
-conserves mass exactly at `z=1`.
+[THM-2352](../01-canon/theorems/THM-2352-q-adic-prefix-residue-collision-spectrum.md): q-adic support has abscissa zero; indexed plateaux realize thresholds. Termination is finite support, conditioning-blind.
+
+At `z=1`, Abel–Stieltjes/log occupancy is exact; density zero fails through
+the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
 
 ### Established landmarks
 

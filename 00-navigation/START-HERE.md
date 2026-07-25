@@ -58,9 +58,8 @@ Then read the relevant frontier section, the active guardrails, and the exact th
    fixed-correspondence substitution-product boundary and shows that a
    quotient-automorphism minimum still fails; its marked partial-automorphism cost is the weighted cyclic derivative of exterior incidence words. Unmarked transport remains open. The known invariant lattice is exact only through `n <= 6`.
 11. **A reciprocal integer sequence has two profiles.** THM-2000/2005 separate
-    support from indexed multiplicity by a collision tax; the reusable object
-    is the support Dirichlet profile, with Abel–Stieltjes/log-block Dini and the
-    full Bertrand boundary at `z=1`.
+    support from multiplicity; THM-2352 makes q-adic support abscissa zero but
+    indexed plateaux realize every threshold, while finite conditioning loses termination.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300
     is the exact new counterexample. THM-2063/2071 close linear/quadratic source
     fibers; THM-2084/2118/2102 close cubics. THM-2158/2180 reduce the twice-odd
