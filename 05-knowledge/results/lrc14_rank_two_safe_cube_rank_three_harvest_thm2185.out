@@ -1,0 +1,13 @@
+THM-2185 exact rank-two safe-cube and rank-three-harvest referee
+danger_minorant=-(N-1)(N-3)(N-4)/12
+three_wise_floor=18/343
+unique_support_three_floor=15/343
+unique_support_two_floor=53/1029
+two_sparse_line_floors_m3_to_m6=241864704/1977326743,30233088/282475249,3359232/40353607,279936/5764801
+universal_ambient_floor=15/343
+Jackson_N=251, relation_height=500, C_0=10542251
+eta_251_pi_cap<21/12500
+N=250 rational-pi ledger does not clear 15/8918
+final_height_500_gap=111/2143750
+deletion_rank_two_height=105000
+all exact checks passed
