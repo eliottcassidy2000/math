@@ -1,0 +1,14 @@
+THM-2174 exact endpoint-phase scale obstruction
+core=(1, 2, 3, 4, 5, 6, 8)
+core_endpoint_modulus=1680
+core_mass=27/70, BV_components=16
+C_1=-27/490, C_2=-27/245
+source_far=(3361, 3362, 6721, 6722, 10081, 10082)
+pumped_far=(1681, 1682, 3361, 3362, 5041, 5042)
+repeated_owner=(7, 8, 9, 10, 11, 12), repeated_tie_mask=(6, 8, 10)
+independent_height_one_crossing_relations=3
+source_safe_measure=1561405750435498559/10390707539702618590
+pumped_safe_measure=317645844187362436/2113439446871390435
+measure_difference=126112336463776271349/4405994577616688706478598
+independent_exact_evaluators=interval_union,boundary_cells
+all exact checks passed
