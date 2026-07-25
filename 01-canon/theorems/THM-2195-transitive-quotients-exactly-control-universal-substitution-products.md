@@ -13,8 +13,12 @@ status: >
   substitution distance zero. This classifies the fixed-correspondence
   product law. Minimizing the factor sum over size-compatible quotient
   automorphisms still fails universally: the cyclic five-tournament gives
-  an asymptotic counterexample. The remaining exact object is an optimal
-  block-transport cost, not a product formula.
+  an asymptotic counterexample. The canonical rotation of an equal-size
+  directed-triangle block has exact external cost twice its block order times
+  the total order of exterior quotient vertices whose triangle-incidence word
+  is nonconstant. Thus the cyclic-five witness costs 4N, not merely at most
+  6N, and wins once d_iso(A,B)>2N. The remaining exact object is an optimal
+  general block-transport cost, not a product formula.
 source: codex-2026-07-24-tournament-substitution-product
 depends_on:
   - THM-2183-order-join-is-an-exact-tournament-metric-product
@@ -302,6 +306,65 @@ d_iso(Q[T_i],Q[S_i])<=6N<D_aut(T,S).                 (30)
 ```
 
 Thus quotient automorphisms do not account for every substitution bypass.
+
+### Exact cost of the partial triangle rotation
+
+The coarse count in (13) can be replaced by an exact quotient derivative.
+Allow the outside blocks to have arbitrary positive orders `m_t`, equal in
+the source and target, and keep identical factors there. For `t notin C`, put
+
+```text
+epsilon_C(t)=
+  0  if t beats all of C or loses to all of C,
+  1  otherwise.                                      (31)
+```
+
+Use the canonical map which rotates the three `N`-vertex blocks by `rho`,
+uses the internal isomorphisms from (9), and fixes every outside block. Its
+cost is exactly
+
+```text
+E_Q(C,rho;m)=2N sum_(t notin C) m_t epsilon_C(t).     (32)
+```
+
+Indeed, fix `t notin C` and encode its incidences by the cyclic binary word
+
+```text
+b_t(l)=1_(l->_Q t),                  l in C.          (33)
+```
+
+The number of quotient incidences changed by the rotation is
+
+```text
+#{l in C:b_t(l)!=b_t(rho(l))}.                        (34)
+```
+
+A cyclic binary word of length three has zero transitions when constant and
+exactly two transitions otherwise. Each changed incidence contributes all
+`N m_t` cross-block pairs. Internal pairs, pairs within `C`, pairs wholly
+outside `C`, and constant-incidence exterior pairs contribute zero. Summing
+over `t` proves (32).
+
+For the cyclic five-tournament in (25)--(26), both exterior vertices `2,4`
+have nonconstant incidence to `C`, and both exterior blocks are singletons.
+Therefore the displayed block map has exact cost
+
+```text
+E_Q(C,rho;m)=4N.                                      (35)
+```
+
+Consequently (30) sharpens to
+
+```text
+d_iso(Q[T_i],Q[S_i])<=4N<D_aut(T,S)
+              whenever d_iso(A,B)>2N.                (36)
+```
+
+The construction in Section 3 already supplies factors with
+`d_iso(A,B)>3N`, so the witness remains unconditional. Equation (32) is an
+exact cost for this integral block map, not a proof that it is globally
+optimal among vertex-level bijections. Its preserved sidecar is the exterior
+incidence word, compressed losslessly here to the nonconstant mass in (31).
 
 ## 6. Boundary and the surviving problem
 

@@ -311,7 +311,7 @@ design without pretending a preserver supplies the seed.
   makes `d_iso` exactly `l1` on fixed order-join patches by image-swap
   uncrossing; the ambient quotient still has triangles and is not a partial cube.
 - [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md)
-  proves the universal fixed-correspondence substitution product holds iff the quotient is transitive; `C_3` gives a nine-vertex distance-`0` versus factor-sum-`2` witness. A cyclic-`C_5` large-block construction also defeats the size-compatible automorphism minimum. Exact integral block transport remains open.
+  classifies the universal product: iff transitive; `C_3` gives `0` versus `2`, and `C_5` defeats the automorphism gauge. Triangle rotation costs exactly `2N` times exterior nonconstant-incidence mass (`4N` in `C_5`); global optimal transport remains open.
 - THM-1880/1885 give the Chebyshev--Pell/`BS(1,2)^+` transitive frame.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
