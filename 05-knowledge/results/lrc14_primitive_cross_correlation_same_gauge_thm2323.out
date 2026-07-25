@@ -6,11 +6,14 @@ deterministic_fixed_colour_nonzero=72
 c_91(7)=-6
 aggregate_hostile_sum=0
 aggregate_hostile_fixed_colour_nonzero=72
-stalk_gap(a)=46*13^(a-1)+2 > 0 for all a>=1
+galois_sector: |d|<=N/7-1 gives |arg(zeta^d)|<2*pi/7<pi/2
+arbitrary_prime_control: N=210, 2R=58>=phi(N)=48
+arbitrary_prime_fixed_colour_nonzero=48
 lrc_common_h<=12*S^2-1
 lrc_common_n<=1092*S^2-1
-full_fibre=K7xK13, vertices=91, degree=72, chi=7
-deleted_fibre=K6xK13, vertices=78, degree=60, chi=6
-conditional_thresholds: alpha>=1,r<=6; alpha=0,r<=5
-coherent_lift_controls=2
+full_fibre=K7xK13, vertices=91, degree=72
+deleted_fibre=K6xK13, vertices=78, degree=60
+direct_N=91*d_prime incidence controls=2
+normalized_unit_edge_bound<=1092*S^2-1
+seven_divisible_a_obstruction=exact
 all exact checks passed

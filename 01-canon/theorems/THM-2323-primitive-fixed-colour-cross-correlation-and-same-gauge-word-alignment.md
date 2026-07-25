@@ -3,28 +3,29 @@ id: THM-2323
 title: "Primitive fixed-colour cross-correlation and same-gauge word alignment"
 status: >
   PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. Let N be
-  divisible by seven and satisfy phi(N)>2(N/7-1). If 0<=f<=g are
+  any positive integer divisible by seven. If 0<=f<=g are
   nonzero rational-valued step functions with rational breakpoints,
   supported in one open circle arc of length 1/7, then for every primitive
   N-character k every block of J_f J_g consecutive gauge indices contains
   one at which both Fourier coefficients f-hat(k+Nh) and
   g-hat(k+Nh) are nonzero. In particular there is a common nonnegative
-  index 0<=h<=J_f J_g-1. The mechanism is a fixed-colour
-  cross-correlation Laurent polynomial of width 2(N/7-1), whose positive
-  diagonal coefficient and rationality prevent primitive-root vanishing;
-  Parseval and endpoint-product Vandermonde then land the common index.
-  The hypothesis holds for the complete stalk N=7*13^a, a>=1. At N=91,
+  index 0<=h<=J_f J_g-1. The mechanism is a nonnegative rational
+  fixed-colour cross-correlation Laurent polynomial: Galois straightens
+  any primitive colour to the standard root, where its complete support
+  lies in the acute sector |arg|<2*pi/7 and cannot cancel. Parseval and
+  endpoint-product Vandermonde then land the common index. At N=91,
   applying the theorem to THM-2319's word source H_Q and bare source H_E
   gives, for every one of the 72 unit colours, a common index
   h<=12S^2-1 and common multiplier n<=1092S^2-1. This closes the
   bare/word same-gauge-index loss. Conditionally, for the middle owner,
   write c_2/gcd(c_2,c_3)=a and
-  c_3/gcd(c_2,c_3)=7^alpha*13^delta*r with gcd(r,91)=1. If
-  gcd(a,91)=1 and either alpha>=1,r<=6 or alpha=0,r<=5, a
-  K_7 x K_13 / K_6 x K_13 colouring argument forces two common
-  bare/word atoms to form a unit-coloured c_3 edge. Outside this explicit
-  arithmetic branch, the theorem does not force edge incidence, select
-  target-plane gain, or exclude a scalar row. LRC(14) remains open.
+  c_3/gcd(c_2,c_3)=d'. If gcd(a,91)=1, exposure at N=91d' and its
+  K_7 x K_13 / K_6 x K_13 primitive fibre force two common bare/word
+  atoms to form a unit-coloured c_3 edge, with no restriction on the
+  unit cofactor of d'. If gcd(a,91)>1 this normalized sublattice cannot
+  yield a unit-coloured edge. The theorem does not select target-plane
+  gain, control terminal-component phase, or exclude a scalar row.
+  LRC(14) remains open.
 source: codex-2026-07-25-primitive-fixed-colour-cross-correlation
 depends_on:
   - THM-2319-crt-unit-bispectrum-needle-and-mixed-polarization-no-go
@@ -36,8 +37,8 @@ related:
   - THM-2321-prescribed-root-character-bispectrum-slice-positivity
 script: 04-computation/lrc14_primitive_cross_correlation_same_gauge_thm2323.py
 output: 05-knowledge/results/lrc14_primitive_cross_correlation_same_gauge_thm2323.out
-script_sha256: a62af2e409d87570634e8c069652be54f9ec2d3f1f345b7c1c719fdc1e700649
-output_sha256: ad146cf6eb5bafd1eb8301a1a2cbb67e05046798ed3219c8868ae28fc7e36d24
+script_sha256: 520e35ddd167e1087ee35cb9e34f3805fa6211e569c7a933a8123d594eb6dea2
+output_sha256: c11dc72e33ade2f598b4f0551fc71e71ddde4709bcfb18cb4131a6bf32b16b0f
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -54,22 +55,19 @@ example for which its sum over all `72` colours is zero.
 
 The missing operation is to freeze one primitive colour before taking the
 cross-correlation. The physical support then makes the correlation a short
-rational Laurent polynomial. Its width is smaller than the cyclotomic
-degree, so it cannot vanish. This is a phase-sensitive algebraic
-nonvanishing statement, not a lower bound on the real part.
+nonnegative rational Laurent polynomial. Galois conjugation straightens
+the chosen primitive colour to the standard root; all physical shifts then
+lie in one acute sector and cannot cancel. This is a phase-sensitive
+algebraic nonvanishing statement, not a lower bound on the real part of the
+original colour.
 
 ## 1. Root fibres and the fixed-colour cross-correlation
 
-Let `N` be a positive multiple of seven, put
+Let `N` be a positive multiple of seven and put
 
 ```text
 R=N/7-1,
-```
-
-and assume
-
-```text
-phi(N)>2R.                                           (1)
+2*pi*R/N<2*pi/7<pi/2.                               (1)
 ```
 
 Let `I` be one open circle arc of length `1/7`. Let `f,g` be
@@ -147,27 +145,38 @@ c_0
 Thus
 
 ```text
-P(X)=sum_(d=-R)^R c_d X^(d+R) in Q[X]              (9)
+Q(X)=sum_(d=-R)^R c_d X^d in Q[X,X^(-1)]           (9)
 ```
 
-is nonzero and has degree at most `2R`.
+is a nonzero rational Laurent polynomial with nonnegative coefficients.
 
-## 2. Cyclotomic width forbids fixed-colour cancellation
+## 2. Galois straightens every primitive colour into an acute sector
 
-Suppose `C_k=0`. Since `zeta^k` is a primitive `N`th root, (7)--(9) give
+Suppose `C_k=0`. Since `k` is a unit modulo `N`, the Galois automorphism
 
 ```text
-P(zeta^k)=zeta^(kR)C_k=0.
+sigma_(k^(-1)): zeta -> zeta^(k^(-1))
 ```
 
-The minimal polynomial of `zeta^k` over `Q` is `Phi_N`, of degree
-`phi(N)`. Therefore `Phi_N` divides `P`. This contradicts
+fixes every rational coefficient and sends `zeta^k` to `zeta`. Applying
+it to (7) gives
 
 ```text
-deg(P)<=2R<phi(N)                                   (10)
+0=sigma_(k^(-1))(C_k)
+ =sum_(d=-R)^R c_d zeta^d.                          (10)
 ```
 
-and the fact that `P` is nonzero. We have proved:
+But (1), nonnegativity of the `c_d`, and (8) give
+
+```text
+Re sum_(d=-R)^R c_d zeta^d
+ =sum_(d=-R)^R c_d cos(2*pi*d/N)
+ >=cos(2*pi*R/N) sum_(d=-R)^R c_d
+ >cos(2*pi/7) sum_(d=-R)^R c_d
+ >0.                                                (10a)
+```
+
+This contradicts (10). We have proved:
 
 > **Fixed-colour cross-correlation lemma.** Under (1)--(2),
 >
@@ -175,10 +184,11 @@ and the fact that `P` is nonzero. We have proved:
 > C_k!=0 for every k in (Z/NZ)^*.                    (11)
 > ```
 
-The rationality in (2) is load-bearing: it places `P` in `Q[X]`, so the
-full cyclotomic minimal polynomial is forced by one primitive zero.
-Nonnegativity is used at the diagonal (8). The common short support is
-load-bearing at (6).
+The rationality in (2) is load-bearing because it fixes every coefficient
+under the Galois straightening. Nonnegativity is load-bearing in (10a),
+and (8) makes the final inequality strict. The common short support is
+load-bearing at (6). No totient lower bound is needed: arbitrary extra
+prime factors of `N` do not weaken (11).
 
 The lemma explains why THM-2319's aggregate hostile control is not a
 counterexample. On sites `0` and `7`, take
@@ -197,9 +207,9 @@ sum_(k unit mod 91) (1+12 zeta^(7k))
  =0,                                                (12)
 ```
 
-but every fixed summand is nonzero: the rational polynomial
-`1+12X^7` has degree seven, below `deg Phi_91=72`. The colour sum can
-cancel even though no colour does.
+but every fixed summand is nonzero. Galois straightens it to
+`1+12zeta^7`, whose two terms lie in the acute sector of (10a). The colour
+sum can cancel even though no colour does.
 
 ## 3. Parseval gives a common gauge
 
@@ -303,9 +313,10 @@ functions would not imply it. It also makes the common-index set
 two-sided syndetic, with gauge gaps at most `J_fJ_g`; the first bounded
 positive atom is only its smallest immediately useful consequence.
 
-## 5. The all-depth `7*13^a` stalk
+## 5. The arbitrary-prime stalk
 
-Take
+There is no restriction on the primes or exponents in `N/7`. In
+particular, take
 
 ```text
 N_a=7*13^a,                 a>=1.
@@ -315,23 +326,21 @@ Then
 
 ```text
 R_a=13^a-1,
-phi(N_a)=72*13^(a-1),
-
-phi(N_a)-2R_a
- =46*13^(a-1)+2
- >0.                                                (21)
+2*pi*R_a/N_a<2*pi/7<pi/2.                          (21)
 ```
 
-Thus (1) holds at every depth. For every primitive `N_a`-colour, the same
+For every primitive `N_a`-colour, the same
 pair `f<=g` has a common gauge satisfying (19), with frequency at most
 `N_a J_fJ_g-1`.
 
 This is a genuine stalk law: increasing the thirteen depth enlarges the
-physical root needle from `13` to `13^a` teeth, while the cyclotomic degree
-grows fast enough to dominate twice its correlation width at every level.
+physical root needle from `13` to `13^a` teeth, while Galois always
+straightens the selected primitive colour back into the same acute sector.
 At each fixed depth and colour the common spectrum is a bounded-gap
-toothpick. It does not assert compatibility of the selected gauge indices
-between different depths.
+
+More generally, one may multiply `N_a` by any integer. The proof is
+unchanged as long as the resulting modulus remains divisible by seven.
+This arbitrary-prime freedom is load-bearing in Section 7.
 
 ## 6. Exact LRC word/bare specialization at `N=91`
 
@@ -369,7 +378,7 @@ For `N=91`,
 
 ```text
 R=12,
-2R=24<72=phi(91).
+2*pi*R/91<2*pi/7<pi/2.
 ```
 
 Apply (19) to (22). For every one of the `72` unit colours `k`, every
@@ -418,9 +427,9 @@ This removes the same-gauge-index loss explicitly left in THM-2319.
 
 ## 7. A conditional unit-coloured incidence corollary
 
-There is one arithmetic range in which the diagonal theorem does force
-the still-missing edge incidence. This is a conditional corollary, not a
-property of every live scalar row.
+There is one exact arithmetic boundary on which the diagonal theorem
+forces the still-missing edge incidence. This is a conditional corollary,
+not a property of every live scalar row.
 
 Work with the middle owner, so
 
@@ -434,72 +443,62 @@ Put
 ```text
 g=gcd(c_2,c_3),
 a=c_2/g,
-d'=c_3/g,
-
-d'=7^alpha 13^delta r,
-gcd(r,91)=1.                                        (29)
+d'=c_3/g.                                           (29)
 ```
 
-By the definition of `g`, one has `gcd(a,d')=1`, and here `delta>=1`.
-Assume additionally
+By the definition of `g`,
 
 ```text
-gcd(a,91)=1,                                        (30)
+gcd(a,d')=1,
+13 divides d'.                                      (30)
 ```
 
-and one of the two small-cofactor conditions
+The second fact uses `c>b`. Hence `13` does not divide `a`. Assume
+additionally
 
 ```text
-alpha>=1 and r<=6,
-
-or
-
-alpha=0 and r<=5.                                   (31)
+gcd(a,91)=1.                                        (31)
 ```
 
-Condition (30) is explicit and load-bearing. It is not implied merely by
+Condition (31) is explicit and load-bearing. It is automatic when seven
+divides `d'`, by (30); otherwise it is exactly the requirement that the
+unshared quotient `a` not contain a factor seven. It is not implied merely by
 the existence of THM-2293's unit-coloured edge, because the endpoints of
 that edge need not be integer multiples of `c_2`.
 
 Set
 
 ```text
-g_0=7^alpha 13^delta,
-N=91g_0.                                            (32)
+N=91d'.                                             (32)
 ```
 
-This modulus satisfies the abstract width hypothesis:
-
-```text
-phi(N)=72g_0,
-2(N/7-1)=26g_0-2,
-phi(N)-2(N/7-1)=46g_0+2>0.                          (33)
-```
-
-Choose an integer `K_0`, prime to `g_0`, whose residue modulo thirteen
+Choose the representative `1<=K_0<d'` of a unit class modulo `d'` whose
+residue modulo thirteen
 gives any prescribed physical root character after multiplication by
-`u_2`. For `z in Z/91Z`, use the coherent lift
+`u_2`. Such a choice exists by CRT: prescribe the required nonzero
+thirteen residue and a unit residue modulo every other prime-power factor
+of `d'`.
+For the integer representatives `z=0,...,90`, put
 
 ```text
 K_z=K_0+d'z.                                        (34)
 ```
 
-If `alpha>=1`, every `K_z` is a unit modulo `N`: its residues modulo seven
-and thirteen are the fixed nonzero residues of `K_0`. If `alpha=0`, its
-residue modulo thirteen is still fixed and nonzero, while exactly one
-row `z modulo 7` makes it divisible by seven. Delete that row.
+Then `1<=K_z<N`.
+If seven divides `d'`, choose `K_0` nonzero modulo seven; every `K_z` is
+then a unit modulo `N`. If seven does not divide `d'`, exactly one row
+`z modulo 7` makes `K_z` divisible by seven; delete that row. At every
+other prime of `N`, the residue of `K_z` is the fixed unit residue of
+`K_0`. Thus all retained `K_z` are primitive modulo `N`, even when `d'`
+has arbitrarily many additional prime factors.
 
 Apply the primitive same-gauge theorem at modulus `N` to every retained
 residue. Choose one positive common bare/word atom in that residue and
-write it relative to the coherent lift as
+write it as
 
 ```text
-q_z=K_z+N H_z,                  H_z in Z.            (35)
+q_z=K_z+N h_z,             0<=h_z<=J_(H_Q)J_(H_E)-1. (35)
 ```
-
-The integer `H_z` may be negative because `K_z` is a coherent lift rather
-than the canonical representative; the atom `q_z` itself is positive and
-obeys the bound (20).
 
 Join two parameters when
 
@@ -507,64 +506,80 @@ Join two parameters when
 z_2-z_1 in (Z/91Z)^*.                               (36)
 ```
 
-By CRT, the full graph in the `alpha>=1` case is
+By CRT, the full graph when seven divides `d'` is
 
 ```text
 Cay(Z/91Z,(Z/91Z)^*) = K_7 x K_13,                 (37)
 ```
 
 the categorical product: two vertices are adjacent exactly when both CRT
-coordinates differ. Its chromatic number is seven. In the `alpha=0` case,
-deleting one complete mod-seven row leaves `K_6 x K_13`, whose chromatic
-number is six. The upper bounds colour by the first coordinate, and the
-matching diagonal gives cliques of sizes seven and six, respectively.
-
-Colour each retained vertex by
-
-```text
-H_z mod r.                                          (38)
-```
-
-Under (31), fewer colours are available than the chromatic number.
-Therefore two adjacent vertices have the same colour. For their coherent
-lifts,
-
-```text
-H_(z_2)-H_(z_1)=rw
-```
-
-for some integer `w`, and (29), (32), (34), and (35) give
+coordinates differ. If seven does not divide `d'`, deleting the one
+forbidden row leaves `K_6 x K_13`. Either graph has an edge. Choose any
+adjacent retained pair. Equations (32), (34), and (35) give
 
 ```text
 q_(z_2)-q_(z_1)
- =d'[(z_2-z_1)+91w].                                (39)
+ =d'[(z_2-z_1)+91(h_(z_2)-h_(z_1))].                (38)
 ```
 
-The bracket in (39) is coprime to `91` by adjacency. Multiplying by
+The bracket in (38) is coprime to `91` by adjacency. Multiplying by
 `c_2=ga` and using `c_3=gd'` gives
 
 ```text
 c_2 q_(z_2)-c_2 q_(z_1)
  =m c_3,
 
-m=a[(z_2-z_1)+91w],
-gcd(m,91)=1.                                        (40)
+m=a[(z_2-z_1)+91(h_(z_2)-h_(z_1))],
+gcd(m,91)=1.                                        (39)
 ```
 
-Both endpoints in (40) are bare-source coefficients and literal
+Both endpoints in (39) are bare-source coefficients and literal
 positive-word coefficients, at the same owner grade and prescribed root
-character. Thus (40) is a THM-2293-type unit-coloured `c_3` edge whose
+character. Thus (39) is a THM-2293-type unit-coloured `c_3` edge whose
 two endpoints are both marked by the same positive word.
+
+Put `L=J_(H_Q)J_(H_E)<=12S^2`. Each selected atom lies between `1` and
+`NL-1`. Hence the bracket `B` in (39) satisfies
+
+```text
+0<|B|=|q_(z_2)-q_(z_1)|/d'
+     <91L,
+
+|B|<=1092S^2-1,
+|m|<=a(1092S^2-1).                                  (39a)
+```
+
+The normalized edge bound is independent of the size and prime
+factorization of `d'`; only the unavoidable quotient `a` remains.
 
 This argument uses a genuine graph but not a tournament. Its intrinsic
 binary relation is unit difference in the CRT fibre, which is symmetric;
-the chromatic obstruction retains precisely the lift coordinate lost by
-reducing a Fourier address modulo `N`.
+the coherent lift retains precisely the integer coordinate lost by reducing
+a Fourier address modulo `N`.
 
-## 8. Remaining incidence boundary
+The hypothesis (31) is also the exact failure boundary of this normalized
+sublattice. If two `c_2`-multiple vertices satisfy
 
-Equation (27) marks one vertex. It does not prove that the vertex is an
-endpoint of THM-2293's edge
+```text
+c_2(q_2-q_1)=m c_3,
+```
+
+then coprimality of `a,d'` forces
+
+```text
+d' divides q_2-q_1,
+m=a(q_2-q_1)/d'.                                   (40)
+```
+
+Thus every such multiplier is divisible by `a`. If `7` divides `a`, no
+edge between two `c_2`-multiple vertices can have multiplier coprime to
+`91`. A different affine coset or a non-`c_2`-multiple shell atom is then
+genuinely necessary.
+
+## 8. Exact remaining boundary
+
+Equation (27) alone marks one vertex and does not prove that this particular
+vertex is an endpoint of THM-2293's edge
 
 ```text
 A-A'=m c_3,                 gcd(m,91)=1.             (41)
@@ -574,8 +589,10 @@ THM-2302's endpoint recurrence gives every marked vertex an incident
 `c_3`-multiple edge only after forgetting the condition `gcd(m,91)=1`.
 THM-2293 supplies a unit-coloured edge somewhere in the same character
 graph, not necessarily at the vertex in (27). These are distinct
-quantifiers in general. Section 7 combines them only under the explicit
-arithmetic hypotheses (30)--(31).
+quantifiers at modulus `91`. Section 7 resolves the incidence by exposing
+the larger modulus `91d'` whenever (31) holds. When seven divides `a`,
+equation (40) proves that the complete `c_2`-multiple carrier is the wrong
+affine lattice for a unit-coloured edge.
 
 Nor does the fixed-colour correlation retain the target-plane gain or the
 relative terminal-component phase of THM-2303. The complete connection
@@ -591,27 +608,29 @@ target:
 
 map:
   freeze one primitive colour, form its physical cross-correlation, use
-  support width plus cyclotomic degree to forbid cancellation, and land a
-  nonnegative gauge by endpoint-product Vandermonde;
+  rational Galois straightening plus the acute support sector to forbid
+  cancellation, and land a syndetic gauge set by endpoint-product
+  Vandermonde;
 
 preserved:
   source owner, exact word, prescribed clock, primitive N-colour,
   ordinary Fourier frequency, same gauge index, owner grade, and at N=91
-  the complete seven/thirteen unit condition;
+  the complete seven/thirteen unit condition; at N=91d' under (31), two
+  word-marked endpoints and their unit-coloured c_3 edge;
 
 destroyed or unselected:
-  which terminal component carries the phase, target-plane gain, a second
-  shell vertex, and unit-coloured c_3-edge incidence;
+  which terminal component carries the phase and exact target-plane gain;
+  when seven divides a, the needed non-c_2-multiple affine shell coset;
 
 needed sidecar:
-  outside Section 7's low-cofactor branch, a unit-coloured marked-degree
-  theorem at the common vertex, or an exact third-order coefficient
-  coupling that vertex to a THM-2293 shell edge;
+  target-gain alignment and phase-tree transport on the edge in Section 7;
+  on the seven-divisible-a branch, an affine-coset shift before applying
+  the same fixed-colour mechanism;
 
 cheapest decisive next test:
-  rerun the THM-2302 seven-periodic hostile mechanism with the newly forced
-  marked frequency coprime to 91, and classify the endpoint-orbit patterns
-  which could still concentrate every incident multiplier on 7Z or 13Z.
+  couple the two word-marked endpoints in (39) to THM-2315's target-gain
+  corolla, and separately test whether one legal owner/pivot translation
+  escapes the exact seven-divisible obstruction (40).
                                                                (42)
 ```
 
@@ -625,14 +644,17 @@ LRC(14) remains open.
 
 ## 9. Exact companion
 
-The companion verifies the `N=91` support width and cyclotomic degree, the
-all-depth identity (21), exact construction of `Phi_91`, all `72`
-primitive colours on a deterministic rational needle, the aggregate-zero
-hostile control (12) together with fixed-colour nonvanishing, the
+The companion verifies the `N=91` acute support sector, the arbitrary-prime
+control `N=210` where the old totient-width test fails, exact construction
+of the relevant cyclotomic polynomials, all primitive colours on
+deterministic rational needles, the aggregate-zero hostile control (12)
+together with fixed-colour nonvanishing, the
 `12S^2-1` gauge bound, and the `1092S^2-1` frequency bound. Every
 load-bearing check raises explicitly in ordinary and optimized Python.
-It also checks the two CRT fibre graphs and their chromatic thresholds,
-the coherent-lift factorization (39)--(40), and the exact modulus gap (33).
+It also checks the two CRT fibre graphs, primitive coherent lifts at
+modulus `91d'` with a large composite unit cofactor, the factorization
+(38)--(40), the normalized edge bound (39a), and both sides of the exact
+seven-divisibility boundary.
 
 Reproduce with
 

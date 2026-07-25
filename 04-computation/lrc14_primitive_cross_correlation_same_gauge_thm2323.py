@@ -132,7 +132,7 @@ require(set(range(-R, R + 1))
         "thirteen-tooth difference support mismatch")
 require(len(UNITS) == 72, "wrong primitive colour count")
 require(len(PHI) - 1 == euler_phi(N) == 72, "wrong Phi_91 degree")
-require(2 * R == 24 < euler_phi(N), "cyclotomic width inequality failed")
+require(4 * R < N, "91-needle is not in the acute Galois sector")
 
 # A deterministic rational word/bare needle: 0 <= word <= bare.
 bare = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9]
@@ -185,18 +185,50 @@ require(72 + 12 * ramanujan_sum(91, 7) == 0,
 require(reduce_mod(hostile_sum, PHI) == [0],
         "aggregate hostile field cancellation failed")
 
-# The all-depth 7*13^a stalk.  The displayed difference is exact for all a;
-# sample many levels as an independent arithmetic control.
+# The acute-sector inequality is independent of the prime factorization.
 for a in range(1, 21):
     n = 7 * 13**a
     radius = 13**a - 1
-    phi_n = euler_phi(n)
-    require(phi_n == 72 * 13 ** (a - 1),
-            f"totient formula failed at a={a}")
-    require(phi_n - 2 * radius == 46 * 13 ** (a - 1) + 2,
-            f"stalk width identity failed at a={a}")
-    require(phi_n > 2 * radius,
-            f"stalk cyclotomic inequality failed at a={a}")
+    require(4 * radius < n,
+            f"stalk acute-sector inequality failed at a={a}")
+
+for cofactor in (1, 2, 3, 5, 6, 11, 30, 330, 2310):
+    n = 7 * cofactor
+    radius = n // 7 - 1
+    require(4 * radius < n,
+            f"arbitrary-prime acute sector failed at cofactor={cofactor}")
+
+# N=210 is an exact control beyond the old degree comparison:
+# 2R=58 >= phi(210)=48, yet every primitive fixed colour is nonzero.
+N_WIDE = 210
+R_WIDE = N_WIDE // 7 - 1
+PHI_WIDE = cyclotomic(N_WIDE)
+UNITS_WIDE = [k for k in range(1, N_WIDE) if gcd(k, N_WIDE) == 1]
+bare_wide = [1 + (3 * r + r * r) % 11 for r in range(R_WIDE + 1)]
+word_wide = [
+    value if r % 4 in (0, 1) else 0
+    for r, value in enumerate(bare_wide)
+]
+correlation_wide = {}
+for d in range(-R_WIDE, R_WIDE + 1):
+    correlation_wide[d] = sum(
+        word_wide[r] * bare_wide[r + d]
+        for r in range(R_WIDE + 1)
+        if 0 <= r + d <= R_WIDE
+    )
+require(correlation_wide[0] > 0, "wide control lost its diagonal")
+require(2 * R_WIDE >= euler_phi(N_WIDE),
+        "wide control does not cross the old degree boundary")
+wide_fixed_nonzero = 0
+for k in UNITS_WIDE:
+    terms = [(k * d, coefficient)
+             for d, coefficient in correlation_wide.items()]
+    remainder = reduce_mod(field_polynomial(terms, N_WIDE), PHI_WIDE)
+    require(remainder != [0],
+            f"wide fixed-colour correlation vanished at k={k}")
+    wide_fixed_nonzero += 1
+require(wide_fixed_nonzero == euler_phi(N_WIDE) == 48,
+        "wide primitive-colour count mismatch")
 
 # LRC jump and height ledgers.
 for S in range(1, 101):
@@ -256,26 +288,39 @@ require(all(
 ), "six-colouring control failed")
 
 
-def coherent_lift_control(alpha, delta, r, a, z_left, z_right, h_left, w):
-    require(delta >= 1 and gcd(r, 91) == 1, "bad cofactor data")
-    g0 = 7**alpha * 13**delta
-    d_prime = g0 * r
-    modulus = 91 * g0
-    require(euler_phi(modulus) - 2 * (modulus // 7 - 1)
-            == 46 * g0 + 2, "conditional modulus gap failed")
+def direct_incidence_control(d_prime, a, h_left, h_right):
+    require(d_prime % 13 == 0, "d' must contain the deep 13 factor")
+    require(gcd(a, d_prime) == 1 and gcd(a, 91) == 1,
+            "physical multiplier hypotheses failed")
+    modulus = 91 * d_prime
     k0 = 1
+    require(1 <= k0 < d_prime and gcd(k0, d_prime) == 1,
+            "bad K0 representative")
+    retained = [
+        z for z in range(91)
+        if gcd(k0 + d_prime * z, modulus) == 1
+    ]
+    expected_count = 91 if d_prime % 7 == 0 else 78
+    require(len(retained) == expected_count,
+            "wrong primitive coherent-fibre size")
+    require(all(1 <= k0 + d_prime * z < modulus for z in retained),
+            "K_z left its canonical range")
+    pair = next(
+        (left, right)
+        for left in retained
+        for right in retained
+        if adjacent_91(left, right)
+    )
+    z_left, z_right = pair
     k_left = k0 + d_prime * z_left
     k_right = k0 + d_prime * z_right
-    h_right = h_left + r * w
     q_left = k_left + modulus * h_left
     q_right = k_right + modulus * h_right
-    bracket = (z_right - z_left) + 91 * w
+    bracket = (z_right - z_left) + 91 * (h_right - h_left)
     require(adjacent_91(z_left, z_right), "chosen fibre edge is not unit")
     require(q_right - q_left == d_prime * bracket,
-            "coherent-lift factorization failed")
+            "direct-modulus factorization failed")
     require(gcd(bracket, 91) == 1, "bracket lost unit colour")
-    require(gcd(a, 91) == 1 and gcd(a, d_prime) == 1,
-            "physical multiplier hypotheses failed")
     g = 13**3
     c2 = g * a
     c3 = g * d_prime
@@ -285,16 +330,43 @@ def coherent_lift_control(alpha, delta, r, a, z_left, z_right, h_left, w):
             "physical c3-edge identity failed")
     require(gcd(multiplier, 91) == 1,
             "physical multiplier lost unit colour")
+    S = 1
+    jump_product = 12 * S * S
+    require(0 <= h_left < jump_product and 0 <= h_right < jump_product,
+            "sample gauges exceed the LRC product bound")
+    require(1 <= q_left <= modulus * jump_product - 1,
+            "left atom exceeds its positive bound")
+    require(1 <= q_right <= modulus * jump_product - 1,
+            "right atom exceeds its positive bound")
+    require(abs(bracket) <= 91 * jump_product - 1,
+            "normalized edge bound failed")
+    require(abs(multiplier) <= a * (1092 * S * S - 1),
+            "physical edge bound failed")
+    return len(retained)
 
 
-coherent_lift_control(
-    alpha=1, delta=2, r=5, a=11,
-    z_left=0, z_right=1, h_left=2, w=3,
+full_direct_count = direct_incidence_control(
+    d_prime=7 * 13**2 * 330,
+    a=17,
+    h_left=2,
+    h_right=5,
 )
-coherent_lift_control(
-    alpha=0, delta=2, r=5, a=11,
-    z_left=0, z_right=1, h_left=2, w=3,
+deleted_direct_count = direct_incidence_control(
+    d_prime=13**2 * 330,
+    a=17,
+    h_left=2,
+    h_right=5,
 )
+require(full_direct_count == 91 and deleted_direct_count == 78,
+        "direct incidence fibre controls failed")
+
+# Exact failure boundary: if seven divides a, every normalized multiplier
+# a*B is seven-divisible, regardless of the unit bracket B.
+obstructed_a = 7
+unit_brackets = [b for b in range(-200, 201) if gcd(b, 91) == 1]
+require(unit_brackets, "empty unit-bracket control")
+require(all(gcd(obstructed_a * b, 91) > 1 for b in unit_brackets),
+        "seven-divisible-a obstruction failed")
 
 print("THM-2323 exact companion")
 print(f"N={N}, R={R}, 2R={2*R}, phi(N)={euler_phi(N)}")
@@ -304,11 +376,14 @@ print(f"deterministic_fixed_colour_nonzero={fixed_colour_nonzero}")
 print(f"c_91(7)={ramanujan_sum(91, 7)}")
 print("aggregate_hostile_sum=0")
 print(f"aggregate_hostile_fixed_colour_nonzero={hostile_fixed_nonzero}")
-print("stalk_gap(a)=46*13^(a-1)+2 > 0 for all a>=1")
+print("galois_sector: |d|<=N/7-1 gives |arg(zeta^d)|<2*pi/7<pi/2")
+print("arbitrary_prime_control: N=210, 2R=58>=phi(N)=48")
+print(f"arbitrary_prime_fixed_colour_nonzero={wide_fixed_nonzero}")
 print("lrc_common_h<=12*S^2-1")
 print("lrc_common_n<=1092*S^2-1")
-print("full_fibre=K7xK13, vertices=91, degree=72, chi=7")
-print("deleted_fibre=K6xK13, vertices=78, degree=60, chi=6")
-print("conditional_thresholds: alpha>=1,r<=6; alpha=0,r<=5")
-print("coherent_lift_controls=2")
+print("full_fibre=K7xK13, vertices=91, degree=72")
+print("deleted_fibre=K6xK13, vertices=78, degree=60")
+print("direct_N=91*d_prime incidence controls=2")
+print("normalized_unit_edge_bound<=1092*S^2-1")
+print("seven_divisible_a_obstruction=exact")
 print("all exact checks passed")
