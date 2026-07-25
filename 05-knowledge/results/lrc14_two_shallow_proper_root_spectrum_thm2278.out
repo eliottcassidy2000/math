@@ -1,0 +1,15 @@
+THM-2278 primary exact verification
+proper_nonempty_root_masks=8190
+complement_reduced_root_masks=4095
+half_energy_by_size={1: 6, 2: 11, 3: 15, 4: 18, 5: 20, 6: 21}
+cyclotomic_mode_floor=3125/4084101
+strict_profiles_checked=150
+unique_shallow_mass_minimizer=(1,3,5)
+shallow_mass_floor=5696989/367580070
+common_time_image_floor=5696989/76962600
+vector_mode_integral_floor=712123625/12572921264904
+every_residue_energy_floor=712123625/2124823693768776
+minimum_gap_counts_by_depth_offset={0: 1, 1: 2, 2: 15, 3: 190}
+profile_split=adjacent:15,nonadjacent:135,b2:15,interior:120
+exact_frequency_landing=NOT_PROVED
+ALL_CHECKS_PASSED

@@ -1,0 +1,12 @@
+THM-2278 independent exact referee
+cyclotomic_masks_checked=4095
+cyclotomic_norm_histogram={1: 754, 27: 364, 53: 936, 79: 624, 131: 312, 157: 312, 313: 156, 547: 156, 599: 156, 625: 39, 729: 130, 911: 156}
+unit_root_cells_checked=168
+unit_root_count_histogram={1: 90, 2: 78}
+cyclotomic_mode_floor=3125/4084101
+common_time_image_floor=5696989/76962600
+vector_mode_integral_floor=712123625/12572921264904
+every_residue_energy_floor=712123625/2124823693768776
+minimum_gap_counts_by_depth_offset={0: 1, 1: 2, 2: 15, 3: 190}
+exact_frequency_landing=NOT_PROVED
+ALL_CHECKS_PASSED
