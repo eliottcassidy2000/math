@@ -2,7 +2,7 @@
 id: THM-2326
 title: "Vertexwise septimally primitive c3 degree"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. Let f be a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. Let f be a
   step function supported outside the danger comb D_c, with J jumps, and
   let f-hat(A) be nonzero with c not dividing A. Modulating the exact
   disjointness f*1_(D_c)=0 by A forces an incident coefficient
@@ -10,7 +10,7 @@ status: >
   shallow canonical exclusive source E_j and c=c_3, every marked shell
   vertex has a same-grade, same-root-character c_3-neighbour with
   septimally primitive multiplier m<=14S-1. Thus THM-2323's common
-  bare/word vertex has a canonical incident edge whose only remaining
+  bare/word vertex has an incident canonical-source edge whose only remaining
   forbidden colour can be 13. A sharp thirteen-periodic real indicator
   shows that endpoint recurrence alone cannot remove that factor.
   No 91-unit incident edge, scalar-row exclusion, or proof of LRC(14) is
@@ -32,7 +32,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2326 -- every marked canonical vertex has septimally primitive c3 degree
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2302 gives every marked shell vertex an incident `c_3`-multiple edge,
 but its endpoint recurrence does not control the multiplier colour.
@@ -342,7 +342,8 @@ THM-2323:
   every primitive colour has a common bare/word marked vertex;
 
 THM-2323 conditional incidence branch:
-  under its explicit low-cofactor criterion, two common bare/word marks
+  under its explicit gcd(a,91)=1 / normalized-sublattice criterion,
+  two common bare/word marks
   themselves form a 91-unit c_3 edge;
 
 remaining outside THM-2323's conditional branch:
@@ -379,3 +380,10 @@ The transcripts must match
 ```
 
 byte-for-byte after LF normalization.
+
+The independent audit rederived the modulation identity and the
+residuewise endpoint-Vandermonde landing, checked the `nu_13(A)<c`
+specialization used by the canonical source, and reproduced the normal,
+optimized, and stored transcripts and both recorded hashes.  It also
+confirmed the hostile thirteen-periodic indicator as the sharp boundary
+of the endpoint-recurrence mechanism.

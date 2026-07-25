@@ -337,6 +337,8 @@ This is a genuine stalk law: increasing the thirteen depth enlarges the
 physical root needle from `13` to `13^a` teeth, while Galois always
 straightens the selected primitive colour back into the same acute sector.
 At each fixed depth and colour the common spectrum is a bounded-gap
+toothpick. The theorem is levelwise and does not assert compatible gauge
+indices between depths.
 
 More generally, one may multiply `N_a` by any integer. The proof is
 unchanged as long as the resulting modulus remains divisible by seven.
