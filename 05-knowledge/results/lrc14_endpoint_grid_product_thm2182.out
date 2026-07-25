@@ -1,0 +1,10 @@
+THM-2182 ENDPOINT-GRID PRODUCT -- exact audit
+endpoint_modulus=55440
+core_measure=883/6930
+tail_1=(3, 12), tail_1_measure=3/4
+tail_2=(4, 6), tail_2_measure=16/21
+row_1_measure=883/9240
+row_2_measure=7064/72765
+gap=883/582120
+evaluators=interval_union,boundary_cells
+all exact checks passed

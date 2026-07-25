@@ -1,0 +1,8 @@
+THM-2183 ORDER-JOIN METRIC PRODUCT -- exact audit
+factor_orders=1..3 by 1..3
+labelled_quadruples=4761
+metric_product_failures=0
+n4_quotient_vertices=4
+n4_quotient_edges=5
+n4_triangle=(0, 2, 4)
+all exact checks passed
