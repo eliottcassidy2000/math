@@ -1,0 +1,40 @@
+theorem=THM-2313
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED
+collision_set=upper_subset_of_N^2
+frontier_cases=13-axis,7-axis,interior
+mixed_selector=1-[13|n]-[7|n]+[91|n]=[gcd(n,91)=1]
+mixed_corner_sign=positive
+13_axis_shell_sign=negative
+7_axis_shell_sign=negative
+13_axis_landing=n<=13*J_A*J_B-1<=104*S^2-1
+7_axis_landing=n<=7*J_A*J_B-1<=56*S^2-1
+mixed_landing=n<=91*J_A*J_B-1<=728*S^2-1
+mixed_valuations=(nu13(c)+s-1,nu7(c)+t-1)
+upper_sets_4x4=70
+nonempty_disjoint_origin_upper_sets_4x4=68
+abstract_frontier_points_checked=139
+selector_rows=8001
+unit_residues_mod91=72
+prony_rows_mod13=1536
+prony_rows_mod7=768
+prony_rows_mod91=9216
+jump_bound_rows=392
+valuation_ledger_rows=123750
+hostile_gap_rows=195
+hostile_first_t_by_s_0_through_9=(12, 10, 9, 7, 6, 4, 4, 2, 1, 0)
+hostile_frontier=((0, 12), (1, 10), (2, 9), (3, 7), (4, 6), (5, 4), (7, 2), (8, 1), (9, 0))
+hostile_frontier_scales=(13841287201, 3672178237, 6819759583, 1809323971, 3360173089, 891474493, 3074677333, 5710115047, 10604499373)
+hostile_frontier_size=9
+hostile_interior_count=7
+hostile_interior_valuations=(((1, 10), (1, 9)), ((2, 9), (2, 8)), ((3, 7), (3, 6)), ((4, 6), (4, 5)), ((5, 4), (5, 3)), ((7, 2), (7, 1)), ((8, 1), (8, 0)))
+hostile_local_J_A=4
+hostile_local_J_B=4
+hostile_local_mod91_bound=1455
+hostile_profile135_aligned_s=3
+hostile_profile135_aligned_corner=(3,7)
+hostile_7^6_mod13=12
+hostile_required_unit_residue_mod13=9
+mixed_shell_does_not_prescribe_root_character=true
+symmetric_collision_is_not_one_sided_forward_gluing=true
+no_cycle_phase_holonomy_claim=true
+all_checks=PASS
