@@ -78,6 +78,34 @@ the union of the two charge-one-sided coordinate subspaces and prove NC2.
 The factor (k-1) is the rank of the integer relation lattice
 \(\ker(q:\mathbb Z^k\to\mathbb Z)\); it replaces the false universal factor two.
 
+## Exact Strong Factorial boundary on two charges
+
+The pure two-charge family identifies the conjectural upper cutoff with a
+known open problem. Let `H=sC(s)` have `t` nonzero monomials and put
+
+```text
+P=W+ZC(s).
+```
+
+Then `P` has `k=t+1` monomials, primitive return `R=2`, odd moments vanish,
+and
+
+```text
+E[P^(2j)]=binom(2j,j)L(H^j).
+```
+
+Thus the proposed cutoff `(k-1)R=2t` is exactly the `n=1` one-variable
+instance of Edo--van den Essen's Strong Factorial Conjecture: some
+`L(H^j)` with `1<=j<=t` must be nonzero. This is an upper-bound
+obstruction, not a proof route already available in the literature.
+
+THM-1790 proves the complementary projective lower side for every degree
+cap `d`: one can choose nonzero `H` in the `(d+1)`-dimensional space
+`s*C[s]_(<=d+1)` with `L(H^j)=0` for `1<=j<=d`. The lifted two-charge
+polynomial then has its first `2d+1` Gaussian moments zero. Hence the cutoff,
+if true, is dimension-sharp and cannot follow from bounded carry reachability
+without a coefficient-phase noncancellation theorem.
+
 ## Exact evidence and falsification pressure
 
 Exact rational/symbolic saturation sweeps give:
@@ -241,8 +269,11 @@ limits and therefore generic nonvanishing; a symmetric monomial subfamily is
 closed even at zeros of the leading limit by the universal \(1/m\) derivative
 term.
 
-This reduces the single-pair analytic problem to the finite band
-\(|\deg h-r\deg b|\le r\) (HYP-8766). HYP-8765 remains the complementary
-many-monomial/many-circuit target: it asks for radical membership when several
-primitive relations and radial channels collide, where no single endpoint need
-dominate.
+Historically this reduced the single-pair analytic method to the finite band
+\(|\deg h-r\deg b|\le r\) (HYP-8766). THM-2170 now computes a nonzero
+lowest-face seed, at return level \(1\) or \(r\), for every arbitrary-radial
+three-weight slice, and THM-2022 amplifies that seed. Thus neither this band nor
+the many-circuit regime is an NC2 proof obligation. HYP-8765 remains the
+stronger effective target: obtain a uniform moment cutoff or explicit
+pair-radical exponent despite collisions among several primitive relations and
+radial channels.

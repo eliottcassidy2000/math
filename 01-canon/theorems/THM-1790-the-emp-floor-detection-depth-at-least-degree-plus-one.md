@@ -1,81 +1,229 @@
 ---
 id: THM-1790
-title: "THE EMP FLOOR: the GMC(2) detection depth is ≥ d+1 for every radial degree d — a proven, unconditional lower bound that grows without limit in the degree, upgrading THM-1770's single witness to a law. A pure charge-0 P = B(|Z|²) with B a monic polynomial of radial degree d survives EXACTLY d moments: there is a nonzero B with L(B¹)=⋯=L(B^d)=0, but the (d+1)st moment forces B=0 (EMP, THM-1510). Verified exactly d=1,2,3,4 (survival = d, so EMP detection depth = d+1). Since a GMC(2) P may contain such a charge-0 part, its detection depth is ≥ d+1 — so the depth grows with the radial degree from the radial (EMP) layer ALONE, before any charge interaction. Combined with THM-1710's toral depth = span, the GMC(2) detection depth is ≥ max(span, d+1): it grows in BOTH the charge span and the radial degree. Hence no degree-uniform finite bound exists (confirming THM-1770), and the analytic bridge must dominate resonance of order ≥ d+1 at radial degree d."
+title: "Projective EMP floor and the two-charge doubled-depth ladder"
 status: >
-  PROVED lower bound (the load-bearing direction): a monic degree-d B has d free coefficients,
-  and L(B¹)=⋯=L(B^d)=0 is d polynomial equations in those d unknowns with a nonzero solution —
-  EXHIBITED exactly for d = 1,2,3,4 (nonempty variety by Gröbner), so survival ≥ d and
-  detection depth ≥ d+1 on that range. The EXACT value (survival = d, i.e. the (d+1)st moment
-  forces B=0) is VERIFIED d = 1,2,3,4 (the ideal ⟨L(B¹),…,L(B^{d+1})⟩ = ⟨1⟩); d=5,6 exceeded
-  the Gröbner time budget and are not claimed. The upper half (survival ≤ d) is EMP (THM-1510):
-  no nonzero B survives all moments. The d=1,2 solutions are THM-1510's explicit roots
-  (B = s−1; B = s²+(−4±2i)s+(2∓2i)).
-  This does NOT prove GMC(2). It proves the detection depth is unbounded in radial degree,
-  sharpening THM-1770 from a single witness to a floor. GMC(2) remains OPEN.
-source: klein-2026-07-20-S383 (owner: look for more load-bearing results)
+  PROVED for every degree bound d. Krull height gives a nonzero polynomial
+  of degree at most d whose first d factorial moments vanish. The same
+  argument inside s*C[s] gives a two-sided charge-{-1,+1} polynomial of
+  radial degree at most d whose first 2d+1 Gaussian moments vanish. EMP
+  guarantees a later nonzero moment, so detection depth is unbounded even
+  at fixed charge span two. The earlier claim of exact survival=d was
+  verified only for d<=4 and is not asserted generally; its former
+  "d equations in d monic coefficients" existence argument was invalid.
+source: >
+  klein-2026-07-20-S383 finite controls; repaired and generalized by
+  codex-2026-07-24-NC2-radial-face-synthesis
 depends_on:
-  - THM-1510  # EMP: L(B^m)=0 ∀m ⟹ B=0 (the upper half; the d=1,2 roots)
-  - THM-1770  # detection depth grows with radial degree (the single witness this generalises)
+  - THM-1510
 related:
-  - THM-1710  # toral detection depth = span (the other axis of the floor)
-  - THM-1740  # bounded GMC(2) = finite Gröbner per stratum (what the floor bounds below)
-script: 04-computation/gmc2_emp_depth_klein_S383.py (+ .out)
+  - THM-1710
+  - THM-1770
+  - THM-2022
+  - HYP-8765
+external: >
+  Eric Edo and Arno van den Essen, The Strong Factorial Conjecture,
+  arXiv:1304.3956v2, especially Definition 2.7 and Conjecture 2.8.
 ---
 
-# THM-1790 — the EMP floor
+# THM-1790 -- the projective EMP floor
 
-## The statement
-
-For the radial functional `L(g) = ∫₀^∞ g(s) e^{−s} ds` (`L(s^k) = k!`), a **monic polynomial**
-`B(s)` of degree `d` has a **survival depth** = the largest `k` with a nonzero such `B`
-satisfying `L(B¹) = ⋯ = L(B^k) = 0`. Then:
-
-> **Survival = d, so the EMP detection depth is `d+1`.** (Verified exactly `d = 1,2,3,4`.)
-
-A pure charge-0 `P = B(|Z|²)` has `E[P^m] = L(B^m)`, so this is the GMC(2) detection depth on
-the pure-radial stratum. Since a general GMC(2) `P` may contain a degree-`d` charge-0 part:
-
-> **The GMC(2) detection depth is `≥ d+1` for every radial degree `d`.**
-
-## Why — the two halves
-
-- **Survival ≥ d (lower bound, the load-bearing half).** A monic degree-`d` `B` has `d` free
-  coefficients `b_0,…,b_{d−1}`. The conditions `L(B¹)=⋯=L(B^d)=0` are `d` polynomial equations
-  in those `d` unknowns; a nonzero solution is exhibited by Gröbner for `d = 1,2,3,4` (the
-  variety is nonempty, `≠ ⟨1⟩`). So a nonzero degree-`d` polynomial kills the first `d` moments.
-- **Survival ≤ d (upper bound).** By EMP (THM-1510), `L(B^m) = 0 ∀m ⟹ B = 0`; and exactly, the
-  `(d+1)`-st moment already forces it — `⟨L(B¹),…,L(B^{d+1})⟩ = ⟨1⟩` for `d = 1,2,3,4`. The
-  `d = 1,2` witnesses are THM-1510's explicit roots: `B = s − 1` (killed at `m=2`);
-  `B = s² + (−4 ± 2i)s + (2 ∓ 2i)` (killed at `m=3`).
-
-## The floor, and what it bears
-
-Two independent lower bounds on the GMC(2) detection depth, on orthogonal axes:
+Let
 
 ```text
-  THM-1710   toral:  depth ≥ span   (charge width, at radial degree 0)
-  THM-1790   radial: depth ≥ d+1    (radial degree, at charge span 0)
-  ⟹  detection depth ≥ max(span, d+1)  — grows in BOTH parameters.
+L:C[s]->C,              L(s^n)=n!.                    (1)
 ```
 
-This is the proven form of THM-1770's finding. THM-1770 exhibited one two-sided `d=1` witness
-of depth `> 2`; this replaces it with a law: the depth is bounded **below** by `d+1`, so it
-grows without limit as the radial degree grows, **from the EMP layer alone** — before any
-interaction between charges. Consequences:
+For a polynomial class, its detection depth is the least `D` such that no
+nonzero member can satisfy
 
-- **No degree-uniform finite bound exists** (HYP-8540's span-only bound is not merely false but
-  false by an unbounded margin — the gap to the true depth is `≥ d+1 − span`, itself unbounded).
-- **The analytic bridge must dominate resonance of order `≥ d+1`** at radial degree `d`. Any
-  bridge argument that produces a bound independent of `d` is therefore impossible; the correct
-  bridge statement must carry the degree, and EMP's Laplace asymptotic
-  (`L(B^m) ~ c_d^m (dm)! e^{c_{d−1}/(c_d d)}`, THM-1510) is exactly the tool that survives the
-  degree — which is why EMP, not elimination, is the piece that generalises.
+```text
+L(B)=...=L(B^D)=0.                                    (2)
+```
 
-## Scope
+The theorem proves lower bounds. It does not identify the exact depth in
+every degree.
 
-Exact on `d ≤ 4` (survival `= d`), and the lower bound `≥ d+1` is what the floor needs. Does not
-prove GMC(2); it proves the detection depth is unbounded in the radial degree, which is the
-load-bearing constraint on any proof of GMC(2): it must be an argument uniform in `m` that does
-not go through a finite moment cutoff.
+## 1. Projective existence lemma
 
-*Files: `04-computation/gmc2_emp_depth_klein_S383.py` (+ `.out`).*
+Fix `d>=1` and let
+
+```text
+V_d={B in C[s]:deg B<=d}.                              (3)
+```
+
+This vector space has dimension `d+1`. For `1<=j<=d`, define the homogeneous
+form
+
+```text
+F_j(B)=L(B^j),             degree(F_j)=j.              (4)
+```
+
+**Lemma.** There is a nonzero `B in V_d` such that
+
+```text
+F_1(B)=...=F_d(B)=0.                                  (5)
+```
+
+### Proof
+
+Choose coefficient coordinates `b_0,...,b_d` on `V_d`. The ideal
+
+```text
+I=(F_1,...,F_d) subset C[b_0,...,b_d]                 (6)
+```
+
+is generated by `d` homogeneous polynomials, so Krull's height theorem gives
+
+```text
+height(I)<=d.                                          (7)
+```
+
+If the affine common zero set were only the origin, its radical would be the
+irrelevant maximal ideal
+
+```text
+(b_0,...,b_d),                                         (8)
+```
+
+which has height `d+1`, contradicting (7). Equivalently, the `d`
+hypersurfaces have a common point in `P(V_d)`. Any representative gives the
+required nonzero `B`. QED.
+
+The witness cannot be a nonzero constant because `L(B)=B`.
+
+## 2. Pure-radial detection floor
+
+For the witness in (5), the first `d` factorial moments vanish. THM-1510's
+eventual moment property says
+
+```text
+L(B^j)=0 for every j>=1       implies       B=0.       (9)
+```
+
+Hence some later moment is nonzero. The degree-at-most-`d` radial stratum has
+detection depth at least
+
+```text
+d+1.                                                   (10)
+```
+
+This statement is valid for every `d`; the witness is not claimed to have
+degree exactly `d` or to be monic.
+
+The historical exact computations show that the first `d+1` equations have
+only the zero solution for `d=1,2,3,4`, so the lower bound is exact in those
+four finite cases. They do not prove a general upper bound.
+
+## 3. A two-sided fixed-charge ladder
+
+Apply the same lemma to the `(d+1)`-dimensional space
+
+```text
+V'_d=s*C[s]_(<=d+1)
+    ={H:s divides H, deg H<=d+1}.                     (11)
+```
+
+There is a nonzero `H in V'_d` with
+
+```text
+L(H^j)=0,              1<=j<=d.                       (12)
+```
+
+Write `H=s h(s)`, so `deg h<=d`, and define
+
+```text
+P=W+Z h(ZW).                                           (13)
+```
+
+This polynomial has only charges `-1` and `+1` and is genuinely two-sided.
+Odd moments vanish by charge. In an even moment only the equal-choice term
+is balanced, so
+
+```text
+E[P^(2j)]=binom(2j,j)L(H^j).                           (14)
+```
+
+Equations (12)--(14) prove
+
+```text
+E[P^m]=0,              1<=m<=2d+1.                    (15)
+```
+
+EMP applied to `H` gives `L(H^j)!=0` for some later `j`, so a later even
+moment of `P` is nonzero. Thus the charge-span-two, radial-degree-at-most-`d`
+stratum has detection depth at least
+
+```text
+2d+2.                                                  (16)
+```
+
+In particular, no moment cutoff depending only on charge span, a bounded
+carry alphabet, or a fixed return level can detect the two-dimensional
+nullcone.
+
+## 4. Exact base control
+
+At `d=1`, take
+
+```text
+H=s(s-2),             h=s-2,
+P=W+Z(s-2).                                             (17)
+```
+
+Then
+
+```text
+L(H)=2!-2*1!=0,
+L(H^2)=4!-4*3!+4*2!=8.                                (18)
+```
+
+Therefore
+
+```text
+E[P^m]=0 for m=1,2,3,
+E[P^4]=binom(4,2)*8=48.                               (19)
+```
+
+This is the first rung of the doubled-depth ladder.
+
+## 5. Boundary with the Strong Factorial Conjecture
+
+Suppose `H` has exactly `t` nonzero monomials. Edo--van den Essen's Strong
+Factorial Conjecture in one variable asserts, in particular, that among
+
+```text
+L(H^n),...,L(H^(n+t-1))                                (20)
+```
+
+at least one is nonzero for every `n>=1`.
+
+For (13), the proposed HYP-8765 cutoff `(k-1)R` on this pure two-charge
+family, with `k=t+1` support monomials and primitive return `R=2`, would
+require exactly the `n=1` instance:
+
+```text
+some L(H^j)!=0 for 1<=j<=t.                            (21)
+```
+
+Thus a universal sharp upper cutoff here reaches a known open conjectural
+boundary. The projective theorem proves the complementary lower bound:
+with at most `d+1` allowed radial monomials, one can kill the first `d`
+factorial moments.
+
+This explains the correct transfer from relation/carry work. Carry
+reachability organizes balanced words, but coefficient-phase
+noncancellation needs a separate seed. THM-2022 supplies that seed
+existentially and preserves it by Frobenius; it does not imply a uniform
+finite detection depth.
+
+## 6. Correction lineage
+
+The previous version of THM-1790 asserted an all-`d` lower bound but justified
+existence by saying that `d` equations in `d` monic coefficients must have a
+solution. That implication is false in affine space. The old Groebner
+computations proved only `d<=4`.
+
+The repair changes the object: use `d+1` homogeneous coordinates and pass to
+projective space. Krull height then proves a nonzero common zero for every
+`d`. The exact upper statement `survival=d` remains `FINITE-EXACT` only for
+`d<=4`; no general equality is claimed.

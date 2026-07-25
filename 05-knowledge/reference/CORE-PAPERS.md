@@ -384,6 +384,20 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
   HYP-8931's proposed class bypass is vacuous (MISTAKE-240). THM-2070 refutes
   the general semigroup/saddle bypass: support return is not noncancellation.
 
+### Edo--van den Essen — *The Strong Factorial Conjecture*
+
+- **Primary / freshness:** [arXiv:1304.3956v2](https://arxiv.org/abs/1304.3956);
+  *J. Algebra* **397** (2014), 443--456, [DOI](https://doi.org/10.1016/j.jalgebra.2013.09.011).
+  **PUBLISHED / stable; source and journal record checked 2026-07-24.**
+- **Imported role:** Definition 2.7/Conjecture 2.8 say a `t`-monomial has a
+  nonzero moment in every `t` consecutive powers. The Gaussian identity
+  `E[(W+Zh)^(2j)]=binom(2j,j)L((sh)^j)` identifies its `n=1` two-charge case.
+- **Repo consumers:** [THM-1790](../../01-canon/theorems/THM-1790-the-emp-floor-detection-depth-at-least-degree-plus-one.md)
+  and [HYP-8765](../hypotheses/HYP-8765-gmc2-radial-channel-return-tower.md).
+- **Does not prove:** SFC, the full HYP-8765 cutoff, or a uniform NC2 depth.
+  THM-2022 instead uses a coefficient-dependent good prime; THM-1790 proves
+  the complementary projective lower bound.
+
 ### Erman--Smith--Várilly-Alvarado — *Laurent polynomials and Eulerian numbers*
 
 - **Primary / freshness:** [arXiv:0908.2609v2](https://arxiv.org/abs/0908.2609),

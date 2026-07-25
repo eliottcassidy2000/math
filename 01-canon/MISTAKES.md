@@ -9,6 +9,48 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-247 (2026-07-24, audit of THM-1795) -- generic recurrence order was promoted to a uniform nullcone cutoff
+
+- **What was claimed:** four computed cells and a creative-telescoping
+  heuristic were promoted to the exact formula
+  `D(M,N,d)=(M+N)(2d+1)`, and this recurrence order was declared to be the
+  number of moments cutting out every bounded coefficient stratum.
+- **Why it is wrong:** the general `s`-degree bound, telescoper order, and
+  minimality were not proved. Even a valid P-recurrence propagates initial
+  zeros only where its leading coefficient is nonzero; that coefficient may
+  vanish at small indices or on parameter loci. A generic specialized order
+  therefore does not by itself give a uniform algebraic detection depth.
+- **Correct framing:** retain the formula as a conjecture verified on four
+  generic cells. To turn it into a cutoff, construct a uniform symbolic
+  recurrence, prove its order and leading coefficient, control every
+  exceptional locus, and then prove zero propagation on the required initial
+  interval. THM-1740 supplies bounded-stratum finiteness without this explicit
+  size, while THM-1790 supplies the rigorous unbounded linear lower scale.
+
+---
+
+## MISTAKE-246 (2026-07-24, audit and repair of THM-1790) -- affine equation counting was mistaken for projective nonemptiness
+
+- **What was claimed:** the old proof of THM-1790 parameterized a monic
+  degree-`d` polynomial by `d` affine coefficients and asserted that the `d`
+  equations `L(B^j)=0`, `1<=j<=d`, must have a solution. It then advertised
+  exact survival depth `d` for every exact degree.
+- **Why it is wrong:** `d` equations in `d` affine variables may cut out the
+  empty set or only a forbidden point; equation counting alone supplies no
+  solution. The exact computations through `d=4` did not prove the all-degree
+  statement.
+- **Correct framing:** work in the `(d+1)`-dimensional vector space
+  `C[s]_{\le d}`. The `d` moment equations are homogeneous. If their only
+  common affine zero were the origin, the radical of their ideal would have
+  height `d+1`, contradicting Krull's height theorem. Hence a nonzero
+  degree-at-most-`d` witness exists. This proves a degree-cap detection lower
+  bound, not an exact-degree or monic witness and not exact survival `d`.
+  Applying the same argument in `s*C[s]_{\le d+1}` gives the repaired
+  two-charge lower bound in THM-1790. A matching effective upper bound is the
+  one-variable boundary of the Strong Factorial Conjecture and remains open.
+
+---
+
 ## MISTAKE-245 (2026-07-24, audit of mac-mini S171/P14) -- a bounded local census was promoted to the global second OPEN-Q-108 measure
 
 - **What was claimed:** an exhaustive census on twelve-subsets of

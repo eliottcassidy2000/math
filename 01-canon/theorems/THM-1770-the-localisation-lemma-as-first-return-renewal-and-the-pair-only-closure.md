@@ -6,7 +6,8 @@ status: >
   Part (A) is PROVED: a least-size balanced word is primitive. Parts (B)--(D)
   are RETRACTED: distinct coefficient monomials can cancel in one scalar moment
   equation, so atomwise vanishing, renewal isolation, and star/pair-only closure
-  do not follow. The valid target is a multilevel radical/resultant theorem.
+  do not follow. A multilevel radical/resultant theorem remains a stronger
+  effective target, but THM-2022 now proves NC2 without atomwise isolation.
 source: mac-mini-2026-07-20-S153 (owner: take the localisation lemma in the first-return /
   covering argument direction)
 depends_on:
@@ -19,6 +20,9 @@ related:
   - THM-1745  # max-over-straddles = first-return ordering
   - HYP-8590  # the localisation lemma this structures
   - THM-2014  # a valid entropy-versus-factorial separation theorem on an infinite slice
+  - THM-1790  # projective family proving unbounded fixed-charge detection depth
+  - THM-2022  # whole-face Frobenius proof of NC2
+  - THM-2170  # explicit arbitrary-radial three-weight face seed
 ---
 
 # THM-1770 — the localisation lemma as first-return / renewal
@@ -67,9 +71,10 @@ prime-modulus setting does not turn this scalar complex sum into separate equati
 
 First-return order remains a useful filtration, but (A) alone does not isolate an atom.
 At successive multiples of a primitive return, new radial channels and mixed balanced
-relations appear. A valid induction must eliminate earlier channels by explicit cumulants,
-resultants, or a factorial-Hankel/Vandermonde determinant. That multilevel triangularity is
-the open content of HYP-8765; it is not supplied by disjoint monomial support.
+relations appear. A valid effective induction would have to eliminate earlier channels by
+explicit cumulants, resultants, or a factorial-Hankel/Vandermonde determinant. That
+multilevel triangularity remains the stronger content of HYP-8765; it is not supplied by
+disjoint monomial support and is no longer needed to prove NC2 after THM-2022.
 
 ## (D) Pair-only/star closure — RETRACTED at this level of generality
 
@@ -92,8 +97,9 @@ For each positive-negative coefficient pair the needed statement is
 \quad\text{for some }N.
 \]
 
-Proving these inclusions for every pair would imply one-sidedness. The charge quotient alone
-is insufficient: a monomial must retain both charge (a-b) and radial height (a+b), because
+Proving these inclusions for every pair would imply one-sidedness, but THM-2022 bypasses
+them by preserving the complete lowest balanced face. The charge quotient alone is
+insufficient: a monomial must retain both charge (a-b) and radial height (a+b), because
 balanced words with the same charge carry different factorial weights. See MISTAKE-211 and
 the resolved court case for the exact audit.
 
@@ -105,8 +111,8 @@ the resolved court case for the exact audit.
   twice-return cutoff.
 - **Still valid independently:** exact two-character/binomial results and any named support
   closed by a complete multilevel resultant calculation.
-- Radial degrees are not passive multiplicities. They create independent channels and can
-  increase detection depth even at fixed charge support.
+- Radial degrees are not passive multiplicities. THM-1790 proves that they make detection
+  depth grow without bound even on the fixed charge set `{-1,+1}`.
 
 *Artifacts:* `04-computation/gmc2_first_return_localisation_macmini_S153.py` (+out).
 *Correction artifacts:* MISTAKE-211 and

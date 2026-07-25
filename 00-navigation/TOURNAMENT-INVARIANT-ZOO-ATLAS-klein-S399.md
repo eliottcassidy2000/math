@@ -84,8 +84,8 @@ Five habitats. Each invariant: **name — what it measures — status — canoni
 | **charge q(zᵃz̄ᵇ)=a−b** | torus/U(1) weight; homomorphism to ℤ^{n/2} | THM-1535 (charge lemma, all dims) |
 | **CT_u (toral functional)** | charge-0 projection = DvdK constant term | THM-1540 §A |
 | **E[Pᵐ]=L_s(CT_u[Λ_sᵐ])** | the **Laplace moment engine** | THM-1800; parametric recurrence validated |
-| **detection depth** | # moments to cut the nullcone = P-recurrence order | THM-1710 (=M+N), THM-1795 (=(M+N)(2d+1)) |
-| **EMP floor** | monic deg-d survives exactly d moments ⟹ depth≥d+1 | THM-1790 (grows unboundedly) |
+| **detection depth** | # moments needed to cut the nullcone; recurrence order alone is not enough without a nonsingular zero-propagation gate | THM-1710 (=M+N in its proved scope); THM-1795's `(M+N)(2d+1)` is conjectural |
+| **EMP floor** | degree-cap witnesses kill the first `d` radial moments; a fixed-span-two lift kills through `2d+1` | THM-1790 (unbounded depth, proved) |
 | **charge-radius lock** | charge≡radius parity ⟹ integer moments only (no √π) | THM-1700 |
 | **bosonic/fermionic** | permanent (GMC, no cancel) vs determinant (Vandermonde) | THM-1810 |
 | **coprime-pair return time** | m₀=(p+q)/gcd; moments combine by MAX | THM-1745 (mac-mini) |

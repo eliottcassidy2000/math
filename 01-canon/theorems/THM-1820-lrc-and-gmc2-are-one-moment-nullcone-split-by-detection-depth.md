@@ -1,6 +1,6 @@
 ---
 id: THM-1820
-title: "LRC(14)-COVERING AND GMC(2) ARE ONE MOMENT-NULLCONE PROBLEM, SPLIT BY DETECTION DEPTH — both are 'positivity of a moment functional past a cancellation wall' (death-star-S67) on kind-pasteur's moment-nullcone ladder (THM-1750), and they differ in exactly one invariant: the detection depth is FINITE for LRC and UNBOUNDED for GMC(2), for one structural reason — boundedness of the moment alphabet. LRC(14)-covering: M(S) ≥ 1/14 ⟺ ∃t with danger count X(t)=0, X ∈ {0,…,13}; the alphabet is BOUNDED so the Bonferroni inclusion-exclusion Σ(−1)^k S_k terminates at k=13 and a FINITE-depth certificate exists — the actual covering certificate is B5 (depth 5, THM-671), the depth where the SIGNED (fermionic) Bonferroni truncation first stays positive against the worst correlated adversarial instance (B3 goes negative there; the iid mean is positive already at depth 2 but is too optimistic). GMC(2): the moment engine E[P^m]=L_s(CT_u[Λ_s^m]) is the permanent/hafnian functional (THM-1810), its alphabet is the UNBOUNDED radial degree, so no finite depth certifies and the detection depth grows (≥ d+1, EMP floor, THM-1790). Same wall; opposite finiteness; the discriminant is |alphabet|."
+title: "LRC(14) and GMC(2): bounded versus unbounded uniform certificate depth"
 status: >
   A structural synthesis on the moment-nullcone ladder, tying THM-671 (LRC B5), THM-1750
   (kp template), THM-1770/1790 (GMC depth), THM-1810 (bosonic/fermionic), and death-star-S67
@@ -11,12 +11,15 @@ status: >
   SELF-CORRECTION on record: an interim run labelled the iid Bonferroni's positive-turn (depth 2)
   as "the LRC detection depth"; that is the iid MEAN, too optimistic — the real correlated/
   adversarial depth is 5 (THM-671). Corrected below.
-  Proves no open problem. GMC(2) and LRC(14) both remain open (LRC(14)-covering is B5-certified
-  per instance; the uniform finish is separate).
+  Proves no open problem. THM-2022 has since proved GMC(2); LRC(14) remains
+  open. The synthesis survives only as an effective-complexity contrast:
+  GMC(2) has no moment cutoff uniform in radial degree, even though its
+  qualitative nullcone is known.
 source: klein-2026-07-20-S389 (owner: work LRC and moment nullcone)
 depends_on:
   - THM-671   # the discrete quintic Bonferroni B5 certificate for LRC covering (the finite depth)
   - THM-1790  # the EMP floor: GMC(2) detection depth ≥ d+1 (the unbounded depth)
+  - THM-2022  # qualitative GMC(2), proved independently of a uniform cutoff
 related:
   - THM-1750  # kind-pasteur: the moment-nullcone template (rational<algebraic<holonomic ladder)
   - THM-1810  # bosonic/fermionic: the Bonferroni is the signed/fermionic truncation
@@ -25,6 +28,12 @@ script: 04-computation/lrc_moment_nullcone_klein_S389.py (+ .out)
 ---
 
 # THM-1820 — LRC and GMC(2) are one moment-nullcone, split by detection depth
+
+> **CURRENT-SCOPE CORRECTION (2026-07-24).** THM-2022 proves GMC(2).
+> THM-1790 strengthens the effective obstruction to depth at least `2d+2`
+> already at fixed charge span two. This file therefore compares certificate
+> complexity; it is not an open-GMC reduction and does not say that any fixed
+> bounded stratum lacks a finite certificate.
 
 ## The shared structure
 
@@ -52,18 +61,20 @@ wall*.
 
 > **GMC's alphabet is the radial degree — unbounded.** The moment engine is the
 > **permanent/hafnian** functional (THM-1810): no sign, no cancellation, no termination. The
-> detection depth **grows** with the degree (`≥ d+1`, EMP floor, THM-1790). No finite depth
-> certifies.
+> detection depth is unbounded across radial-degree caps (indeed `≥2d+2` at
+> fixed charge span two, THM-1790). Thus no single depth works uniformly in
+> radial degree.
 
 ```text
    LRC(14)-covering :  |alphabet| = |X| ≤ 13   ⟹  detection depth 5 (B5), ≤13    ⟹  FINITE certificate
-   GMC(2)           :  |alphabet| = radial deg, unbounded  ⟹  depth ≥ d+1       ⟹  NO finite certificate
+   GMC(2)           :  radial degree unbounded  ⟹  depth ≥ 2d+2 at span two  ⟹  NO DEGREE-UNIFORM cutoff
 ```
 
 **Same wall, opposite finiteness, for one structural reason: boundedness of the moment
 alphabet.** This is the precise content behind death-star-S67's reflection, and it explains the
 asymmetry the fleet has felt — why LRC(14)-covering yields to a fixed quintic certificate while
-GMC(2) resists every finite-degree elimination (THM-1770).
+GMC(2) has no degree-uniform finite elimination cutoff (THM-1790), although
+its qualitative nullcone is proved by THM-2022.
 
 ## The bosonic/fermionic reading (THM-1810), on both
 
@@ -78,9 +89,11 @@ so there is no terminating alternation to exploit and no fixed positive depth. L
 
 The tight LRC instance (`2·{1..13}` at its stuck modulus, covering-min `14/183`) is the danger
 measure **closest to having no zero** — the analog of a GMC nullcone member **barely failing
-one-sidedness**. Both are the extremal point of a moment variety, and the detection depth is how
-many moments are needed to *see* that extremal point: `5` for LRC (bounded), `d+1 → ∞` for GMC
-(unbounded). The moment-nullcone ladder (THM-1750) holds both; the rung is the alphabet size.
+one-sidedness**. Both are extremal points of moment varieties, but their
+effective depths behave differently: the cited LRC certificate has fixed
+depth, while the GMC degree-cap depth tends to infinity, at least as
+`2d+2`. The moment-nullcone ladder (THM-1750) holds both; the rung is the
+alphabet size.
 
 ## Scope
 

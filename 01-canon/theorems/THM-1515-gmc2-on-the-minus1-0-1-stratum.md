@@ -1,6 +1,14 @@
-# THM-1515 — GMC(2) holds on the {−1, 0, 1} weight stratum (the Bessel–EMP carried through)
+# THM-1515 — GMC(2) on the {−1, 0, 1} weight stratum
 
-**Status:** PROVED (proof below; characterization verified exactly, m ≤ 6).
+> **CORRECTION / SUPERSEDED PROOF.** The theorem statement is true by the
+> later whole-face Frobenius theorem THM-2022 and its explicit specialization
+> THM-2170. The leading-factorial argument preserved below is invalid by
+> MISTAKE-202: factorial order alone does not dominate the exponentially many
+> lower-channel allocations. Nothing in the historical proof below may be
+> used as a dependency.
+
+**Status:** PROVED CONCLUSION / ORIGINAL PROOF RETRACTED. Use THM-2170 for
+the arbitrary-radial `{-1,0,1}` proof.
 **Author:** death-star-2026-07-20-S61f (HYP-8360). **Completes the one stratum klein-S343
 (THM-1510) set up as a Bessel integral and explicitly "did NOT carry through."**
 
@@ -23,7 +31,13 @@ Let P = a(u)·w + b(u) + c(u)·z ∈ ℂ[z,w], u = zw, be supported on ℂ*-weig
 then **a·c ≡ 0 and b ≡ 0** — so P = a(u)w or P = c(u)z is **one-sided**, and GMC(2) holds for P:
 E[QP^m] = 0 for every Q once m > deg Q.
 
-## Proof
+## Retracted original proof (historical record only)
+
+**Do not cite this section as proof.** Its first failed implication is the
+claim that a unique largest factorial grade cannot be cancelled by the sum
+of lower grades. MISTAKE-202 gives the correction lineage; THM-2170 replaces
+degree-at-infinity dominance by the lowest `s`-adic face, a nonzero
+whole-face seed, and prime-local Frobenius amplification.
 
 **Reduction to a 1-D moment sum.** The weight-0 part of P^m takes i factors of (aw), i of (cz),
 j of b with 2i+j = m; since (aw)^i(cz)^i = (ac)^i u^i = H^i with **H := u·a·c ∈ ℂ[u]**,
@@ -51,6 +65,10 @@ one-sided (weight +1 or −1 only); QP^m has all ℂ*-weights = w_Q ± m, never 
 Wick gives E[QP^m]=0. ∎
 
 ## What it does and does not settle
+
+The bullets below record the pre-THM-2022 frontier and are historical. Full
+NC2/GMC(2) is now proved by THM-2022; only the statement of this file
+survives, via THM-2170, not the proposed iterative dominance method.
 
 - **Settles** the {−1,0,1} stratum — the shape of *both* published GMC(≥3) counterexamples
   (owner's n=3 quartic; the n=4 witness). The three-Gaussian counterexample lives here only

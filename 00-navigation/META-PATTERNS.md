@@ -7,6 +7,14 @@ These cards are defaults, not slogans. Each names when it applies, what to do,
 why it works, and when it can mislead. New cards require evidence from distinct
 threads or a severe failure with a demonstrated repair.
 
+## Expose the obstruction first, choose the scale second
+
+**Trigger:** a proof needs a prime, bandwidth, radix, exponent, or cutoff, but every fixed choice loses cancellation or creates an uncontrolled tail.
+**Action:** retain the whole colliding face, relation packet, or current; prove that aggregate nonzero or quantify its defect; only then choose a scale outside the finite bad set or below the error budget.
+**Mechanism:** the exposed obstruction has fewer degrees of freedom, so its valuation, spectral quantum, Fourier height, or carry size dictates a compatible scale.
+**Counterindication:** not when scale is externally fixed or aggregation destroys the target; require a proved positive/nonzero seed, not a suggestive leading term.
+**Evidence:** THM-2022 (face then finite place), THM-2159/2165 (spectral quantum then exponent), THM-2162 (whole current then Fourier cutoff), and THM-2163/2166 (relation/carry packet then radix/depth).
+
 ## Search the statement before the method
 
 **Trigger:** inheriting a target, naming an invariant, or proposing a “new” lemma.
@@ -374,26 +382,15 @@ and the gap cross-product in the corpus atlas.
 ## Tournament Analysis must preserve content
 
 **Trigger:** pairwise data suggests a tournament representation.
-**Action:** require an intrinsic binary relation, name the preserved target
-predicate, keep exact ties as ties/confluent data, and audit alternate vertex
-sets.
-**Mechanism:** cosmetic tie-breaking always manufactures a transitive ranking
-and can turn node equality, scalar order, or proof regimes into a contentless
-“tournament.”
-**Counterindication:** a meaningful gauge may resolve ties when the gauge itself
-is part of the theorem.
-**Evidence:** MISTAKE-212, MISTAKE-214, and the tournament audit in
-[`the-underlying-object-is-the-support-dirichlet-profile-codex-20260721.md`](../07-reflections/the-underlying-object-is-the-support-dirichlet-profile-codex-20260721.md).
+**Action:** require an intrinsic binary relation, name the preserved target, keep exact ties, and audit alternate vertices.
+**Mechanism:** cosmetic tie-breaking manufactures a transitive ranking and turns equality, scalar order, or proof regimes into a contentless “tournament.”
+**Counterindication:** a meaningful gauge may resolve ties when the gauge is part of the theorem.
+**Evidence:** MISTAKE-212/214 and the audit in [`the-underlying-object-is-the-support-dirichlet-profile-codex-20260721.md`](../07-reflections/the-underlying-object-is-the-support-dirichlet-profile-codex-20260721.md).
 
 ## Type a shared sum as a weighted fiber before transferring it
 
 **Trigger:** two problems are both written as “a sum over a kernel.”
-**Action:** record `Z(M,A,b,w)=sum_{x in M, Ax=b} w(x)`, including the monoid,
-grading/fiber, regularization, weight ring, and target predicate on each side.
-**Mechanism:** LRC uses an infinite Fejer-regularized fiber in `Z^n` with sinc
-weights; a fixed GMC moment uses a finite fiber in `N^s` of `(1,q)` with
-multinomial, factorial, radial, and coefficient weights. The schema is shared,
-but the typed objects and quantifiers are not.
-**Counterindication:** transfer only after a map intertwines the fibers and
-weights and preserves the desired nonvanishing or witness predicate.
-**Evidence:** MISTAKE-226/234/235 and THM-2059's successful typed CRT fiber product.
+**Action:** record `Z(M,A,b,w)=sum_{x in M, Ax=b} w(x)`: monoid, fiber, regularization, weight ring, and target predicate.
+**Mechanism:** LRC has an infinite Fejer-regularized `Z^n` fiber with sinc weights; a GMC moment has a finite `N^s` fiber with multinomial, factorial, radial, and coefficient weights. Syntax is shared; types and quantifiers are not.
+**Counterindication:** transfer only through a map intertwining fibers and weights while preserving the target.
+**Evidence:** MISTAKE-226/234/235 and THM-2059's typed CRT fiber product.
