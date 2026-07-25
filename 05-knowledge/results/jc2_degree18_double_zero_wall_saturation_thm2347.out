@@ -1,0 +1,13 @@
+THM-2347 exact double-zero-wall saturation referee
+normalized wall: 20*C+21*W=0 and Q=y^2*R4
+Mordell degree/leading coefficient: 12 / 73060029
+subresultant degrees: 12,11,10,9,8,7,6,5,4,3,2,1,0
+selected exact (J-order,C-order): [(3, 0), (5, 1), (6, 0)]
+shifted generator signatures: [(15,9,15,89),(13,8,13,70),(16,10,16,104)]
+grevlex variables: (X,J), where X=C^2 and J=126*D-25
+Groebner basis degrees: 7,6,2
+middle basis factors: J*(30618*X+361)^3*(199644669*X^2+7654500*X+62500)
+terminal basis element: J^2
+deep control gcd degree: 5
+off-deep hostile gcd degrees: (0, 0)
+VERDICT: gcd degree >=4 forces 126*D-25=0 on B=1, C!=0
