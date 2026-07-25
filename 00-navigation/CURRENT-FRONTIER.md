@@ -181,14 +181,13 @@ relations by `H=78*182^13`; THM-2208 leaves one primitive candidate per
 rank-eleven/transverse state. The finite atlas is not enumerated.
 THM-2174's exact-measure quotient is infinite, while its fixed-core
 positive-/zero-Haar quotient has one or two states and no uniform core modulus.
-THM-735 and THM-2182/2184 give remote-tail and grid/mixed-core terminals;
-THM-2186 gives a strict toric exit. THM-2168/2192 leave only scalar `5+3`,
-with one deepest blocker, 36 empty profiles, and degree-at-most-20 static
-Hafnian pumps. THM-2197/2201 give Boolean deficiency and a faithful triangular
-Hasse-jet carrier. THM-2198/2204/2205/2207 close every deepest-depth-three
-profile; THM-2203 fixes scalar transport at `16/208` and leaves exactly `1,136`
-valuation profiles at deepest depth `4..19`. Labelled guard-hole correlation
-remains; THM-2209's quadratic peel closes only the level-one hostile row.
+THM-735 and THM-2182/2184 give remote-tail and grid/mixed-core terminals; THM-2186 gives a strict toric exit.
+THM-2168/2192 leave only scalar `5+3`, with one deepest blocker, 36 empty profiles, and degree-at-most-20 static Hafnian pumps.
+THM-2197/2201 give Boolean deficiency and a faithful triangular Hasse-jet carrier.
+THM-2198/2204/2205/2207 close every deepest-depth-three profile; THM-2203 fixes scalar transport at `16/208` and leaves `1,136` profiles at depths `4..19`.
+THM-2213/2215 close `(3,3,4)` and `(2,3,4)` by exact affine-needle capacity carriers, leaving four depth-four and `1,134` total finite profiles.
+THM-2216 identifies the exact meet-tail PSD Gram kernel `K_theta=R_theta R_theta^T`; THM-2218 gives the integral/Fourier/Hasse carrier, signed top-k energy, and common-lift regret.
+The missing input is a uniform truncated-correlation or regret bound, not another scalar family average; THM-2209's quadratic peel closes only the level-one hostile row.
 
 ### Independent routes that remain live
 
