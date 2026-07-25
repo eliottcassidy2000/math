@@ -1,16 +1,18 @@
 ---
 id: THM-1166
 title: Seven-wall quadratic/Fano gcd discrepancy -- sharp global pair/tree credits, common-dilate closure, and exact covered-needle gcd-error laws
-status: PROVED complementary S75/S76 packages.  At radius 1/14 every pair has overlap at least 1/91, every triple has pair sum at least 51/1183 and an edge at least 1/63, and the original argument gives every seven-packet a 110/1183 global tree and every seven-comb packet global uncovered mass at least 1/12.  THM-1221 strictly supersedes those two global constants by the strict-spectrum values 15/154.  The Fano, forest, and density-weighted gcd-error necessities here remain live; neither theorem alone supplies uniform localization, crown collapse, or LRC(14)
-source: codex-2026-07-18-S75/S76
+status: PROVED complementary S75/S76 packages plus sharp three-comb addendum.  At radius 1/14 every pair has overlap at least 1/91, every triple has pair sum at least 51/1183 and an edge at least 1/63, and every union of three distinct danger combs has measure at most 36/91, with equality only at scaled/permuted (1,12,13).  The original argument gives every seven-packet a 110/1183 global tree and every seven-comb packet global uncovered mass at least 1/12.  THM-1221 strictly supersedes those two seven-packet global constants by the strict-spectrum values 15/154.  The Fano, forest, and density-weighted gcd-error necessities here remain live; neither theorem alone supplies uniform localization, crown collapse, or LRC(14)
+source: codex-2026-07-18-S75/S76; codex-2026-07-24-sharp-three-comb-union
 depends_on: [LEM-042, LEM-043, THM-965, THM-1153, THM-1155]
-related: [THM-856, THM-1025, THM-1156, THM-1221, THM-1226, THM-1234, HYP-7678, HYP-7870]
+related: [THM-576, THM-856, THM-1025, THM-1156, THM-1221, THM-1226, THM-1234, THM-2137, THM-2168, HYP-7678, HYP-7870]
 script:
   - 04-computation/lrc14_seven_wall_fano_gcd_codex_20260718.py
   - 04-computation/lrc14_seven_wall_pair_tree_referee_codex_S76.py
+  - 04-computation/lrc14_three_comb_union_referee_thm1166.py
 output:
   - 05-knowledge/results/lrc14_seven_wall_fano_gcd_codex_20260718.out
   - 05-knowledge/results/lrc14_seven_wall_pair_tree_referee_codex_S76.out
+  - 05-knowledge/results/lrc14_three_comb_union_referee_thm1166.out
 lean: 04-computation/lean/TournamentH7/TournamentH7/LRCSevenWallFanoGCD.lean
 referee:
   - 04-computation/lrc14_fano_gcd_discrepancy_referee_codex_20260718.py
@@ -892,3 +894,107 @@ is an error controlled by harmonic endpoint mass rather than the
 density-weighted gcd debt `E`, or an owner-incidence argument that uses
 coverage to defeat the localization counterexample.  HYP-7678, the seventh
 ratio jump, and LRC(14) remain open.
+
+## S77 sharp three-comb union addendum
+
+The pair floor alone does not give the sharp union bound because the triple
+intersection enters inclusion--exclusion with the opposite sign.  The exact
+pair formula nevertheless leaves only a small finite cleanup.
+
+> **Theorem D (sharp global three-comb union).** For any three distinct
+> positive integers `a,b,c`,
+>
+> ```text
+> measure(D_a union D_b union D_c)<=36/91.             (S77.1)
+> ```
+>
+> Equality holds exactly for scaled and permuted copies of `(1,12,13)`.
+> Equivalently, every three distinct danger combs have common safe mass at
+> least `55/91`.
+
+Put
+
+```text
+rho_ab=measure(D_a intersection D_b),
+tau=measure(D_a intersection D_b intersection D_c),
+Q=rho_ab+rho_ac+rho_bc-tau.                           (S77.2)
+```
+
+Since `tau` is at most the smallest of the three pair intersections, `Q` is
+at least the weight `T` of a maximum spanning tree on the three speeds:
+
+```text
+Q>=T=the sum of the two largest pair overlaps.         (S77.3)
+```
+
+For an edge, let `p` be the product of numerator and denominator of its
+reduced speed ratio. Order the three edge products as
+`p_1<=p_2<=p_3`. The two edges with products `p_2,p_3` form a spanning tree.
+The folded pair lower bound in the S76 package therefore gives
+
+```text
+T>=2(1/49-1/(4p_2)).                                  (S77.4)
+```
+
+If `p_2>=64`, the right side exceeds `3/91` by exactly
+
+```text
+2(1/49-1/(4*64))-3/91=3/81536.                        (S77.5)
+```
+
+It remains only to consider `p_2<=63`. The two smallest-product edges share
+a vertex. Normalize that common speed to one. Their two oriented reduced
+ratios belong to the complete bank
+
+```text
+R_63={r!=1: numerator(r) denominator(r)<=63},
+|R_63|=208.                                           (S77.6)
+```
+
+The exact `208*207=43,056` ordered pairs of distinct ratios contain only
+fourteen primitive triples with `T<=3/91`. Exact interval intersection and
+an independent complete-breakpoint arrangement agree on every triple
+intersection. Their values of `Q` are
+
+```text
+(1,12,13)       3/91
+(1,12,27)       29/756
+(1,12,40)       17/420
+(1,12,66)       13/308
+(1,13,169)      50/1183
+(4,9,108)       8/189
+(1,10,55)       3/70
+(3,10,120)      3/70
+(1,12,156)      47/1092
+(1,13,156)      47/1092
+(12,13,156)     47/1092
+(2,11,132)      10/231
+(1,12,144)      11/252
+(2,11,110)      17/385.                              (S77.7)
+```
+
+Thus `Q>=3/91`, with equality only at `(1,12,13)` up to scaling and
+permutation. Three-term inclusion--exclusion now gives
+
+```text
+measure(D_a union D_b union D_c)
+ =3/7-Q
+ <=3/7-3/91
+ =36/91.                                              (S77.8)
+```
+
+This proves Theorem D. It also promotes the `j=3` value and minimizer in
+THM-576 from bounded exact search to a global theorem. The aggregate sharp
+pair-sum floor `51/1183` in Theorem A is compatible but is not by itself
+sufficient for (S77.1): one must retain the triple intersection, and the
+maximum-tree reduction is genuinely strict-low only after the fourteen-row
+cleanup. For example, `(1,12,27)` has maximum-tree weight `2/63<3/91`, while
+its net redundancy is `29/756>3/91`.
+
+The independent referee is optimization-stable and its normal and `-O`
+outputs are byte-identical after LF normalization:
+
+```text
+source  ad8121cd66929205f4929b03642d9a2a16e01a1469c0caff43b6045575dd1bb6
+output  50775cbfcfcbb7cbee7ea6c051ce44e06c984e7f91ef8d6892394f4441ea5eda
+```

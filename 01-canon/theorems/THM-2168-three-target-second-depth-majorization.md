@@ -22,27 +22,38 @@ status: >
   transverse divided blocker. Every nondaughter source then descends two
   blocker bands exactly; fibre pruning and the two-target lemma force a
   daughter after all. Thus the all-independent and scalar 4+3 lanes are
-  empty. Only the fully scalar 5+3 tail survives inside (3,5,0). This is not
-  a proof of LRC(14).
+  empty. Only the fully scalar 5+3 tail survives inside (3,5,0). On that
+  survivor, if a is the minimum 13-adic depth of the three divided blocker
+  coefficients, the original terminal cover and the sharp THM-1166
+  three-comb union theorem force the all-depth boundary invoice
+  H+sum(q_i)>=(12493/35640)13^(a+1). This is not a proof of LRC(14).
 source: codex-2026-07-24-LRC-Fano-rank-height-synthesis
 depends_on:
+  - THM-1166
   - THM-2080
   - THM-2123
   - THM-2125
+  - THM-2137
   - THM-2138
   - THM-2139
   - THM-2141
   - THM-2148
   - THM-2164
 related:
+  - THM-576
   - THM-2073
   - THM-2140
   - THM-2169
+  - THM-2184
 script: 04-computation/lrc14_three_target_second_depth_referee_thm2168.py
 output: 05-knowledge/results/lrc14_three_target_second_depth_referee_thm2168.out
 script_sha256: 1ae4e345188c8b40897d02c446d2edfb4c0aed44541535314064bb8d9db00077
 output_sha256: 582b9f2a99bac4eaca784b41e5be3af2aaa69d54a4b21842ad208962aa73a7bf
 hash_basis: working-tree bytes (LF)
+addendum_script: 04-computation/lrc14_three_comb_union_referee_thm1166.py
+addendum_output: 05-knowledge/results/lrc14_three_comb_union_referee_thm1166.out
+addendum_script_sha256: ad8121cd66929205f4929b03642d9a2a16e01a1469c0caff43b6045575dd1bb6
+addendum_output_sha256: 50775cbfcfcbb7cbee7ea6c051ce44e06c984e7f91ef8d6892394f4441ea5eda
 ---
 
 # THM-2168 -- three-target second-depth majorization
@@ -575,7 +586,108 @@ Thus all `k=0` cases are empty. Together with the rank-two argument above,
 the only survivor of the complete census (21) is the rank-one scalar
 `(k,r)=(5,3)` tail.
 
-## 9. Scope
+## 9. Sharp all-depth invoice on the scalar `5+3` survivor
+
+The factor of thirteen in the boundary invoice comes from the original
+terminal cover, not from the divided local containments (19). We record both
+maps explicitly.
+
+Let `alpha` be the positive primitive generator of the rank-one generated
+lattice and write
+
+```text
+g=H alpha,              c_i=q_i alpha,        i=1,...,5,
+u_j=s_j alpha,          c_*j=13s_j alpha,     j=1,2,3. (50)
+```
+
+The coefficients are positive, `H` is odd, the five `q_i` are distinct
+thirteen-units, and the three `s_j` are distinct. Scalarizing the five local
+root containments (19) gives
+
+```text
+E_H intersection D_(q_i)
+             subset union_(j=1)^3 D_(s_j),            i=1,...,5, (51)
+E_H={t:||Ht||<1/7}.
+```
+
+These divided containments drive the rational-line census, but they do not
+contain the factor thirteen.
+
+The original eight-terminal covering assumption instead pushes forward to
+
+```text
+C_H subset union_(i=1)^5 D_(q_i)
+              union union_(j=1)^3 D_(13s_j)           almost everywhere,
+C_H={t:||Ht||>1/7}.                                  (52)
+```
+
+Consequently, with
+
+```text
+L=C_H minus union_(i=1)^5 D_(q_i),
+B=H+sum_(i=1)^5 q_i,                                 (53)
+```
+
+one has
+
+```text
+L subset union_(j=1)^3 D_(13s_j)                     almost everywhere. (54)
+```
+
+This `L`, rather than any one source set in (51), is the residual to which
+THM-2137 applies. Put
+
+```text
+a=min_j nu_13(s_j),             d=a+1,
+M=13^d,
+13s_j=Mw_j.                                           (55)
+```
+
+The `w_j` remain distinct positive integers. THM-2137's sharp five-unit
+residual estimate gives
+
+```text
+measure(L)>=delta_5=961/6930.                         (56)
+```
+
+The sharp three-comb union theorem in THM-1166 gives
+
+```text
+sigma=measure(union_(j=1)^3 D_(w_j))<=36/91.          (57)
+```
+
+Applying THM-2137's support/variation inequality to (54)--(57) proves
+
+```text
+B>=M measure(L)/sigma
+ >=(961/6930)/(36/91) 13^d
+ =(12493/35640)13^d
+ =(12493/35640)13^(a+1).                              (58)
+```
+
+Thus minimum original terminal depths `d=1,...,6` force the integer floors
+
+```text
+d=1       2       3        4         5          6
+B>=5      60      771      10012     130151     1691957. (59)
+```
+
+The aggregate pair-sum floor `51/1183` from THM-1166 is not enough by itself
+for (57), because three-term inclusion--exclusion also contains the triple
+intersection. The sharp union addendum retains that coordinate. Equation
+(58) is uniform in the unit parts of all three deep coefficients, but it is
+only a lower height invoice; it supplies no upper bound on `B` and therefore
+does not eliminate the scalar branch.
+
+The mixed set `L` in (53) is also the exact core left after the guard and five
+unit terminals are made safe, and its known cover is by the **original**
+bands `D_(13s_j)`. It is not the local source in (51), whose cover uses the
+divided bands `D_(s_j)`. A continuation-profile argument may therefore use
+`1_L` as its rational cell-constant core indicator, but that is a
+mixed-core extension of THM-2184 rather than a literal instance of its
+currently stated ordinary `G_E` theorem.
+
+## 10. Scope
 
 The theorem first narrows `(3,5,0)` to a two-deep-blocker invoice and
 isolates exact daughters as its only singleton escape. The generated-lattice
@@ -586,6 +698,7 @@ could not see the collapse.
 It does not:
 
 - exclude the fully scalar `5+3` branch;
+- turn the lower height invoice (58) into an upper bound;
 - give an upper Archimedean bound matching (31);
 - lift THM-2164's second scalar relation to a zero character sum; or
 - prove LRC(14).

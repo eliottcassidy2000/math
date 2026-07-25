@@ -1,0 +1,13 @@
+THM-1166 sharp three-comb union referee
+analytic reduction: p_2>=64 gives tree excess 3/81536
+oriented reduced ratios with product<=63: 208
+ordered incident-ratio configurations: 43056
+primitive triples with tree weight<=3/91: 14
+exact interval/breakpoint and folded/interval cross-checks: PASS
+minimum net pair-minus-triple redundancy: 3/91 at (1,12,13)
+next net redundancy: 29/756 at (1,12,27)
+global three-comb union maximum: 36/91
+equality: scaled and permuted copies of (1,12,13)
+scalar 5+3 invoice constant: 12493/35640
+terminal depths 1..6 force B floors: 5,60,771,10012,130151,1691957
+source_sha256=ad8121cd66929205f4929b03642d9a2a16e01a1469c0caff43b6045575dd1bb6
