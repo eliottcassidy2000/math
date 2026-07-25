@@ -184,11 +184,11 @@ THM-2226 closes `217` more; THM-2229 leaves `240`. THM-2233's exact guard-danger
 blocker core and closes another `58`: all `29` first-depth-two rows, `28/29`
 first-depth-three rows, and `(4,6,8)`. The exact scalar ledger is now `166`:
 all `165` first-depth-one rows with deepest depth at least five, and
-`(3,4,5)`. THM-2232 is the common-core control; THM-2234 supplies private
-first-depth-one expansion. THM-2211 retains carry; THM-2216/2218/2238 retain
-tail-Gram/Fourier/terminal sidecars. The open scalar target is THM-2239's
-time-zero literal loss plus `(3,4,5)`; owner/current and cross-core incidence
-remain the likely sidecars. LRC(14) remains open.
+`(3,4,5)`. THM-2243 centers its composite union; THM-2250 closes every
+unequal-core partition, leaving only `u_0=u_1=u_2`. THM-2234 supplies private
+depth-one expansion; THM-2211/2216/2218/2238 retain carry and tail sidecars.
+The open scalar targets are THM-2239's time-zero literal loss and the
+all-equal `(3,4,5)` branch. LRC(14) remains open.
 
 ### Independent routes that remain live
 
@@ -403,7 +403,7 @@ into tournament operation laws and LRC residue packets.
   Positive catalysis remains open; the sharp cited seed is conditional `10_6` (`c*=2`, `u in {2,3}`), then uncalibrated pretzels.
 - **Unsplittable cost flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture: a planar acyclic instance has fractional cost `58` but capacity-good integral cost at least `60`. Its carrier is the `K_3` stable-set facet; the planar `2d_max` theorem remains intact.
 - **Jacobian/Dixmier:** THM-1300/1315 verify and analyze the three-dimensional Keller collision, but provenance is unsettled (MISTAKE-205) and it does not decide
-  `DC(2)`; THM-2230 computes the planar response fiber, THM-2240 proves the grade-six Weyl response is not a continuation state, THM-2241 gives the exact monic test `D_P^(d+1)(x)=0` plus the shear-covariant resultant nonproper curve, and THM-2245 forces every nonsplit terminal degree-fourteen survivor onto an explicit singular spectral quartic.
+  `DC(2)`; THM-2230 computes the planar response fiber, THM-2240 proves the grade-six Weyl response is not a continuation state, THM-2241 gives the exact monic test `D_P^(d+1)(x)=0` plus the shear-covariant resultant nonproper curve, and THM-2247 closes nonsplit terminal reduced degree fourteen.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibers:** THM-2063/2071 close affine/quadratic pencil members;
   THM-2084/2110/2118 close cubics; THM-2102/2113 close power-free top faces;
@@ -417,12 +417,12 @@ into tournament operation laws and LRC residue packets.
   above it the unique `c^(2r-1)` boundary tooth does. Thus no quartic
   finite-pole survivor remains. THM-2181 closes monic depressed quartics;
   THM-2214 closes nonsplit terminal degrees through ten, and THM-2217 forces
-  odd-leading survivors to degree `>=14` with `R deg(q)>=deg(V)`. Split/even
-  terminal descent and other short edges remain. THM-2245's joint `E_14/E_10`
-  flux test forces a displayed spectral quartic singular, leaving a normalized
-  conic plus a residual `T`-double-cover, the exact third flux, and the Keller
-  one-form. Its branch divisor is the next consumer. THM-2206 blocks field-valued `C_2` Hasse repair. Integral `2`-adic order raising, `JC(2)`,
-  and `DC(2)` remain open.
+  odd-leading survivors to degree `>=14` with `R deg(q)>=deg(V)`. THM-2245
+  forces degree fourteen onto a singular spectral quartic; THM-2247 closes its
+  smooth-conic sextic-square and reducible-cusp Keller-one-form branches. The
+  next nonsplit terminal degree is at least `18`. Split/even descent and other
+  short edges remain; THM-2206 blocks field-valued `C_2` Hasse repair. Integral
+  `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
