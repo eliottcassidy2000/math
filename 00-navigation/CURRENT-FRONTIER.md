@@ -1,6 +1,6 @@
 # Current Mathematical Frontier
 
-**Rolling state — refreshed 2026-07-24.** This supersedes dated snapshots; linked theorems are proof sources, while this file records composition and residuals.
+**Rolling state — refreshed 2026-07-25.** This supersedes dated snapshots; linked theorems are proof sources, while this file records composition and residuals.
 Status: **PROVED** in-repo proof; **CITED** scoped import; **FINITE-EXACT** exhaustive stated universe; **VERIFIED** reproducible evidence; **CONDITIONAL**, **OPEN**, **REFUTED**, and **SUPERSEDED** are literal.
 
 ## LRC(14)
@@ -187,9 +187,10 @@ branch. The exact scalar ledger is therefore `165`, all at first depth one.
 THM-2234/2255 supply private expansion and exclusive-owner mass; THM-2263 sharpens the expiration-image floors to `15041431/70270200>1/7` on all `150` strict rows and `5229541/70270200>1/14` on the `15` repeated-first rows. THM-2271/2273/2278 force absorber energy, gap spread, and labelled root modes; THM-2286 gives bounded exact lifts, THM-2288/2291 force delayed blocker handoffs, and THM-2289 bounds exceptional times.
 THM-2295 gives scalar rank five at height `196` (fixed `392`); THM-2298 crosses the critical facet and gives rank six at `526` (fixed `1052`). THM-2283 retains the support-at-least-three rank-three certificate at degree `102` and the exact rank-two torus classifier.
 THM-2301 makes the resulting septimal/thirteen-adic bright-or-dark address banks exact, but signed survivor phases may cancel. On `120` interiors THM-2287 now gives a `c_1`-anchored rank-six flag and exact `21`-pattern atlas; all `165` have its shorter unanchored packet.
-THM-2296 reaches prescribed expiration with quantitative return or a bounded common ancestry/current-service atom. THM-2305 canonically refines its return into a pure owner edge or two-target fork, retaining every rooted character and a bounded signed coefficient on the same word; THM-2299's hostile anchored rank-six flag still kills the exact pair base phase.
-THM-2303 identifies the missing coordinate as terminal-component currents plus relative phase-tree transport, with defect rank one only on its real additive fixed-phase two-packet ledger.
-THM-2300 forces same-character relation multiples for `m<=6`, leaving `693` no-forced multipliers, but the primitive/base bank remains `696`; `m=7` is sharp. THM-2304 splits full nine-bank pair-frequency cancellation into `13^(c-b)-1>=168` deepest currents. Force one colored current or close its actual-`c_2`/virtual-`c_3` middle-depth balance while retaining service; the other `45` lack the anchor, not rank or rooted return.
+THM-2296/2305 retain prescribed return as a pure owner edge or two-target fork with every root character and one bounded signed exact-word coefficient; THM-2299's hostile anchored rank-six flag still kills its pair base phase.
+THM-2302 aligns the shell-selected label, a grade-`b` vertex, and named service at one gauge, but its `c_3` edge can lose the unit colour. THM-2306 forces a source/current owner-multiple on one first-collision shell; THM-2303 identifies the remaining datum as relative component phase-tree transport.
+THM-2300 leaves `693` no-forced multipliers (`m=7` sharp). THM-2304 separates at least `168` deepest currents; THM-2307 leaves `77/7` dual impostors at ranks six/seven and reconstructs only at rank eight.
+THM-2309 gives every owner a full-lattice pure-`a`/pure-`b`/fork target-plane pivot, but not at visible height. THM-2310 composes finite pure-edge paths after bounded waits, which destroy the prescribed phase. Land one signed exact-word current in its target-plane class at the original clock, or close THM-2304's middle-depth balance.
 
 ### Independent routes that remain live
 
@@ -302,17 +303,16 @@ design without pretending a preserver supplies the seed.
 
 ### Reliable structural toolkit
 
-- THM-1805 makes directed triangles the basic Vandermonde-cancellation atom.
-  THM-1862/1936 make `H` and signed Rédei data multiplicative under order-join,
-  while `c3` is additive.
+- THM-1805 makes directed triangles the Vandermonde-cancellation atom; THM-1862/1936 make `H` and signed Rédei data multiplicative under order-join while `c3` is additive.
 - [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md) makes `d_iso` exactly `l1` on fixed order-join patches by image-swap uncrossing; the ambient quotient still has triangles and is not a partial cube.
-- [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md)
-  classifies the universal product iff transitive. Marked partial-automorphism cost is a weighted Hamming derivative and PSD-Gram permutation-trace defect; subgroup averaging is orbit variance. THM-2242 closes the transitive pinned response; THM-2249 gives every quotient a quadratic forced-pair envelope and a single scaled-automorphism zero set.
+- [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md) classifies the universal product iff transitive. Marked partial-automorphism cost is a weighted Hamming derivative and PSD-Gram permutation-trace defect; THM-2242/2249 close the transitive response and give every quotient a forced-pair envelope with one scaled-automorphism zero set.
   THM-2256's scale dichotomy is bounded under zero-cost automorphism/nonautomorphism contact and linear otherwise. The transitive quotient has exact gap one; `C_3` has THM-2249's sharp linear floor. Residual `G-F_R`, larger nontransitive quotients, and unpinned transport remain open.
 - THM-1880/1885 give the Chebyshev--Pell/`BS(1,2)^+` transitive frame.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
 - THM-2013/2016 bound cyclic temperature/reducibility; `H` remains empirical.
+- THM-2290 makes the endpoint-colour-selected matching kernel hafnian-complete and limits universal Pfaffian tournament gauges to orders two and four.
+  THM-2294 reconstructs an anchored contraction from its Plucker edge field: real antisymmetric signs can orient, while symmetric character data are colours. These swap-parity boundaries do not license tournamentizing matching or handoff fibres.
 
 ### Live work and limits
 
@@ -390,15 +390,13 @@ conserves mass exactly at `z=1`.
 
 ### Live work
 
-Classify profiles under support operations rather than compare only their value
-at one; study analytic continuation/abscissae and automatic/Mahler structure;
-track collision taxes for census sequences; and feed support identities back
-into tournament operation laws and LRC residue packets.
+Classify profiles under support operations; study analytic continuation and automatic/Mahler structure; track collision taxes; and feed support identities into tournament laws and LRC residue packets.
 ## Other active portfolio
 
 - **Knots / operation-ready relations:** [THM-2176](../01-canon/theorems/THM-2176-gordian-continuation-profile-and-interaction-cocycle.md) gives the continuation kernel; [THM-2191](../01-canon/theorems/THM-2191-catalytic-localization-of-the-gordian-metric.md) gives the greatest connected-sum-invariant minorant and stable group length.
   THM-2220 gives fixed-context slope/sublinear saving; THM-2242 makes the kernel embedding isometric and proves singleton Green classes, with the unknot the only idempotent/regular element and prime knots the atoms.
-  Positive catalysis remains open; the sharp cited seed is conditional `10_6` (`c*=2`, `u in {2,3}`), then uncalibrated pretzels.
+  THM-2292 confines the Brittenham--Hermiller `T(2,7)`/mirror plane to two same-sign chambers. THM-2308 proves `u((#^P K)#(#^Q mirror(K)))>=P+Q`, puts the stable diagonal in `[2,5]`, and reduces the chambers to one concave profile between sharp abstract norm envelopes.
+  Positive catalysis and the exact diagonal remain open; the sharp cited seed is conditional `10_6` (`c*=2`, `u in {2,3}`), then uncalibrated pretzels.
 - **Unsplittable cost flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture: a planar acyclic instance has fractional cost `58` but capacity-good integral cost at least `60`. Its carrier is the `K_3` stable-set facet; the planar `2d_max` theorem remains intact.
 - **Jacobian/Dixmier:** THM-1300/1315 verify and analyze the three-dimensional Keller collision, but provenance is unsettled (MISTAKE-205) and it does not decide
   `DC(2)`; THM-2230 computes the planar response fiber, THM-2240 proves the grade-six Weyl response is not a continuation state, THM-2241 gives the exact monic test `D_P^(d+1)(x)=0` plus the shear-covariant resultant nonproper curve, THM-2262 reduces nonsplit degree eighteen to a singular trigonal discriminant, and THM-2297 quotients target translation to four weighted invariants and closes every one-sparse stratum.
