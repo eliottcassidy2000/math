@@ -30,7 +30,7 @@
 **Trigger / action:** if phases have algebraic endpoints, rewrite coefficients as currents over the lower-phase field.
 **Mechanism:** finite cyclotomic/monomial coordinates make cancellation coordinatewise.
 **Counterindication:** not a nonvanishing proof; arbitrary cuts and uniform-comb cancellation require color/amplitude/owner.
-**Evidence:** THM-2022 preserves the lowest face; THM-2303/2304 extract endpoint currents; THM-2299 gives the hostile cut.
+**Evidence:** THM-2022 preserves the lowest face; THM-2303/2304 extract endpoint currents; THM-2299/2344 give the hostile cut and aligned-tooth boundary.
 
 ## Search the statement before the method
 

@@ -2,7 +2,7 @@
 id: THM-2346
 title: "Global allocation ANOVA normal form and tournament boundary"
 status: >
-  CLAIMED + VERIFIED-EXACT, PROOF CANDIDATE UNDER INDEPENDENT AUDIT. Every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. Every
   finite allocation energy has a unique uniform Hoeffding/ANOVA expansion
   into zero-marginal token interactions. For the target-allocation energies
   of THM-2339, the global tensors are explicit centred-indicator transforms
@@ -29,7 +29,16 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2346 -- global allocation ANOVA normal form
 
-**CLAIMED + VERIFIED-EXACT; PROOF CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
+
+The independent audit rederived the commuting-projection expansion and
+the centred-indicator Möbius bridge, including the triangular
+lower-order terms.  It checked the Gram eigenvalues and their exceptional
+`k=1` and two-colour kernels, the complete score-table gauge iff, the
+equal-prime quotient, and the symmetric-versus-alternating tournament
+boundary.  The two-token hostiles and all rank controls replay identically
+under ordinary and optimized Python; the stored transcript and both LF
+hashes match.
 
 THM-2339 gives a geometrically canonical Boolean Möbius table for every
 individual packet block, but it deliberately does not claim uniqueness after

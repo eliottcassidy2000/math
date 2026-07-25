@@ -2,7 +2,7 @@
 id: THM-2344
 title: "Correlation-inverse rigidity and the aligned-tooth twist hostile"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. In the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the
   centered interval/complement specialization of THM-2334, the phase-free
   target response satisfies K(-ell)=conjugate(K(ell)); equivalently its
   inverse target transform is real. If THM-2343's zero-only boundary
@@ -34,7 +34,15 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2344 -- reflection narrows the hostile but does not kill it
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+
+The independent audit rederived the quotient-safe reflection law, both
+finite Fourier signs in the endpoint cross-correlation, the shifted-unit
+equivalence, and the odd-order real-value separator.  It checked the
+danger and safe aligned-tooth models directly, including the positive
+amplitude and all `169` cancelling full twists.  Ordinary and optimized
+replays match the stored transcript byte-for-byte after LF normalization,
+and both recorded hashes match.
 
 THM-2343 identifies one sharp failure line for the full target current:
 
