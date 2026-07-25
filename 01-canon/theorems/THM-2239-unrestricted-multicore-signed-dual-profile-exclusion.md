@@ -2,394 +2,493 @@
 id: THM-2239
 title: "Unrestricted multicore signed-dual profile exclusion"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. In the scalar five-unit
-  plus three-blocker branch, a separately centered odd-checkpoint score and
-  the four-bit arbitrary-coupling Bellman law close the sole remaining
-  high-first profile (4,6,8), with no equality, common-core, or overlap
-  assumption on the normalized blockers. The same score closes all 29
-  profiles of first depth two left by THM-2233. The exact scalar ledger drops
-  from 224 to 194: 165 profiles of first depth one and 29 of first depth
-  three remain. The worst of the 30 new exclusions is (2,3,5), with capacity
-  7265183507/74231495611 < 961/6930. LRC(14) remains open.
-source: klein-2026-07-25-unrestricted-multicore-signed-dual
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED + HOSTILE-AUDITED. In the
+  scalar five-unit/three-blocker branch, separately center the three blocker
+  danger processes along the signed transfer eigenline and add the least
+  pointwise shift making every centered atom nonnegative and at least one
+  when active. Selected odd-checkpoint clauses then annihilate the entire
+  negative-support term in the signed dual. An exact arbitrary-coupling
+  three-bit Bellman bound closes all 29 remaining first-depth-two profiles,
+  28 of the 29 remaining first-depth-three profiles, and the unrestricted
+  profile (4,6,8), with no equality or overlap hypothesis on the normalized
+  cores. Relative to THM-2233, exactly 58 profiles are newly excluded and
+  the exact scalar ledger falls from 224 to 166: the 165 first-depth-one
+  profiles with deepest depth at least five, and (3,4,5). Every one of
+  39,295 distinct rational coupling LPs has matching exact primal and dual
+  certificates. LRC(14) remains open.
+source: klein-codex-2026-07-25-unrestricted-multicore-signed-dual
 depends_on:
   - THM-2198-scalar-five-plus-three-image-pump-and-first-depth-exclusion
   - THM-2222-scalar-transfer-parity-tower-and-four-checkpoint-survivor-reduction
   - THM-2233-guard-danger-hidden-state-bellman-profile-exclusion
 related:
   - THM-2080-unequal-comb-overlap-removes-depth-five
+  - THM-2218-labelled-guard-hole-fourier-and-signed-lift-energy
+  - THM-2227-sharp-parity-three-checkpoint-bellman-profile-exclusion
+  - THM-2229-unit-time-positive-set-bellman-profile-exclusion
   - THM-2232-same-core-signed-eigen-markov-dual-exclusion
 script: 04-computation/lrc14_unrestricted_multicore_signed_dual_thm2239.py
 output: 05-knowledge/results/lrc14_unrestricted_multicore_signed_dual_thm2239.out
-script_sha256: e88978746022bdddb417ba3588337030bcb135456f465c10a07e405cd2808782
-output_sha256: 7ca34e6f6215c7c71030e1bb8de24ce4f4dfbc77a50ef111fca21cbc35080774
+script_sha256: 37ee166558bf6b90c4ce3be2e79c485eb205710a7e5b5fbe66285d6864f7d15f
+output_sha256: b7d7b3d353945215be716b0b29671195585069e3415bffd5a8374635f8cffdf6
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2239 -- unrestricted multicore signed-dual exclusion
+# THM-2239 -- a nonnegative multicore signed dual
 
-THM-2233 leaves `224` scalar valuation profiles, including one profile whose
-first depth is at least four:
+The same-core calculation in THM-2232 shows that unsigned checkpoint mass is
+not the right object: the positive and negative parts of the *same* residual
+must be transported with opposite parity. The obstruction there appeared to
+require a shared normalized blocker core. It does not. The missing move is to
+center each core separately and then make the centered atoms pointwise
+nonnegative.
 
-```text
-(4,6,8).                                               (1)
-```
-
-The unsigned guard-hidden Bellman capacity of (1) is still above the scalar
-residual floor. The missing coordinate is the sign of the original
-five-unit residual. Keeping that sign through a separately centered score
-does more than close (1): it removes every first-depth-two profile still in
-the ledger.
-
-## 1. Signed residual and checkpoint carriers
+## 1. Scalar residual and checkpoint carriers
 
 On `T=R/Z`, put
 
 ```text
-D_b={x:||bx||<1/14},       C_H={x:||Hx||>1/7}.         (2)
+D_a={x:||ax||<1/14},       C_H={x:||Hx||>1/7}.       (1)
 ```
 
-Work in the scalar `5+3` branch of THM-2198. Thus the guard `H` and the five
-unit coefficients `q_i` are thirteen-units, while
+Work in THM-2198's scalar five-unit/three-blocker branch. Thus
+`H,q_1,...,q_5,u_1,u_2,u_3` are thirteen-units,
 
 ```text
-c_j=13^(lambda_j)u_j,       13 does not divide u_j,
-1<=lambda_1<=lambda_2<lambda_3<=19.                   (3)
+c_j=13^(lambda_j)u_j,
+
+1<=lambda_1<=lambda_2<lambda_3<=19,                 (2)
 ```
 
-No relation among `u_1,u_2,u_3` is assumed. Define
+and the signed five-unit residual is
 
 ```text
-R=1_(C_H)-sum_(i=1)^5 1_(D_(q_i)),
-R_+=max(R,0),                 R_-=max(-R,0).           (4)
+R=1_(C_H)-sum_(i=1)^5 1_(D_(q_i)).                  (3)
 ```
 
-Since `R<=1`, its positive part is the indicator of
+Write `R_+=max(R,0)`, `R_-=max(-R,0)`, and
 
 ```text
-A_+=C_H setminus union_(i=1)^5D_(q_i).                (5)
+p=integral R_+=integral R_- >= delta_5:=961/6930.   (4)
 ```
 
-THM-2198 and the zero integral of `R` give
+The equality follows from `integral R=5/7-5/7=0`; the lower bound is
+THM-2198. Pointwise,
 
 ```text
-p:=integral R_+=integral R_- >=delta_5:=961/6930,
-0<=R_+<=1,                       0<=R_-<=5.            (6)
+0<=R_+<=1,       0<=R_-<=5.                         (5)
 ```
 
-Let `S(x)=13x mod 1` and write
+Let `Sx=13x mod 1` and define three distinct danger processes, without any
+relation among their cores:
 
 ```text
-X_(j,t)(x)=1_(D_(u_j))(S^t x),
-B_k(x)=sum_(j=1)^3 X_(j,lambda_j-k)(x)                (7)
+X_(j,t)(x)=1_(D_(u_j))(S^t x),       j=1,2,3.        (6)
 ```
 
-for every `0<=k<=lambda_1`. Put
+For every checkpoint `0<=k<=lambda_1`, put
 
 ```text
-E={0,2,...,2 floor(lambda_1/2)},
-O={1,3,...,2 ceil(lambda_1/2)-1},                     (8)
-
-P=C_H intersection intersection_(k in E){B_k>=1},
-N=intersection_(k in O){B_k>=1}.                      (9)
+U_k={OR_(j=1)^3 X_(j,lambda_j-k)=1}.                (7)
 ```
 
-THM-2222's transfer-parity tower says, almost everywhere,
+THM-2222's transfer-parity inclusions give
 
 ```text
-support(R_+) subset P,
-support(R_-) subset N.                               (10)
+{R_+>0} subset U_k       when k is even,
+{R_->0} subset U_k       when k is odd.             (8)
 ```
 
-The guard in `P` is not an extra hypothesis: positive residual already
-means guard membership.
-
-## 2. The multicore centered score
-
-Put
+Consequently, if
 
 ```text
-rho=-1/13,
-Y_(j,t)=X_(j,t)-rho^t X_(j,0).                       (11)
+P_lambda
+ =intersection_(0<=k<=lambda_1, k even) U_k,        (9)
 ```
 
-The unnormalized transfer operator satisfies `L^tR=(-1)^tR`. Transfer
-duality therefore gives, separately for every core `u_j`,
+and `O` is any nonempty set of available odd checkpoints, then
+
+```text
+{R_+>0} subset P_lambda,
+{R_->0} subset N_O:=intersection_(k in O)U_k.       (10)
+```
+
+Only the selected odd clauses in `O` will be needed below.
+
+## 2. The nonnegative centered charge
+
+Let `L` be the unnormalized transfer operator for `S`. THM-2222 proves
+
+```text
+L^tR=(-1)^tR.                                       (11)
+```
+
+Transfer duality applied separately to every unit core gives, with
+`rho=-1/13`,
 
 ```text
 integral R X_(j,t)
- =rho^t integral R X_(j,0),
-integral R Y_(j,t)=0.                                (12)
+ =rho^t integral R X_(j,0).                         (12)
 ```
 
-Let `o=|O|` and define the canonical odd-checkpoint score
+The raw centered atom
 
 ```text
-q=o-sum_(k in O)sum_(j=1)^3
-       Y_(j,lambda_j-k).                             (13)
+Y_(j,t)=X_(j,t)-rho^tX_(j,0)                        (13)
 ```
 
-Equations (6), (12), and `integral R=0` imply
+has zero signed correlation with `R`, but for even `t` it can be negative.
+Add exactly the parity-dependent constant needed to repair this:
 
 ```text
-integral Rq=0.                                       (14)
+Z_(j,t)
+ =Y_(j,t)+max(rho^t,0)
+ =X_(j,t)-rho^tX_(j,0)+max(rho^t,0).                (14)
 ```
 
-This is the decisive difference from the common-core dual of THM-2232:
-every normalized blocker has its own centered eigenline. Equation (14)
-therefore survives arbitrary cross-core relations, coincidences, and
-root-digit couplings.
-
-## 3. A sign-safe pointwise majorant
-
-From (6) and (14),
+Since `integral R=0`, equations (12)--(14) imply
 
 ```text
-p=integral [R_+(1-q)+R_-q].                          (15)
+integral R Z_(j,t)=0.                               (15)
 ```
 
-Using (10) pointwise, without assuming that `q` lies in `[0,1]`,
+More importantly, an exhaustive two-bit check gives the pointwise facts
 
 ```text
-p<=integral [
-     1_P(1-q)_+ + 5 1_N q_+
-   ].                                                (16)
+Z_(j,t)>=0,
+X_(j,t)=1  implies  Z_(j,t)>=1.                     (16)
 ```
 
-Indeed, if `1-q<0`, then `R_+(1-q)<=0`; otherwise use `R_+<=1_P`.
-Likewise, if `q<0`, then `R_-q<=0`; otherwise use `R_-<=5 1_N`.
-Thus no absolute-value or termwise sign estimate enters (16).
+Indeed, for even `t`, `Z=X_t+rho^t(1-X_0)`; for odd `t`,
+`Z=X_t+|rho|^tX_0`.
 
-For the high-first profile (1), `O={1,3}` and all six times
-`lambda_j-k` are odd. Hence
+For `m=|O|`, define
 
 ```text
-Y_(j,t)=X_(j,t)+13^(-t)X_(j,0)>=X_(j,t).             (17)
+q_O
+ =m-sum_(k in O)sum_(j=1)^3 Z_(j,lambda_j-k).       (17)
 ```
 
-On `N`, each of `B_1,B_3` is at least one, so
+Equation (15) gives `integral Rq_O=0`. On `N_O`, each selected clause
+contains at least one active danger atom. By (16), each clause contributes
+at least one to the double sum in (17), with multiplicity retained.
+Therefore
 
 ```text
-q=2-sum_(k in {1,3})sum_jY_(j,lambda_j-k)
- <=2-B_1-B_3<=0.                                    (18)
+q_O<=0 on N_O.                                      (18)
 ```
 
-The negative term in (16) is therefore identically zero for (1). This is
-an algebraic sign consequence, not a numerical feature of the optimizer.
-
-## 4. Exact four-bit score Bellman recursion
-
-Retain the simultaneous hidden state
+Now use `integral Rq_O=0` and (4):
 
 ```text
-Z_t=(G_t,X_(1,t),X_(2,t),X_(3,t)),
-G_t=1_(C_H)(S^t x).                                  (19)
+p
+ =integral [R_+(1-q_O)+R_-q_O]
+ <=integral 1_(P_lambda)(1-q_O)_+.                  (19)
 ```
 
-For a fixed future state
+The negative-support term is nonpositive by (10) and (18); the positive
+term is bounded using (5). This is the key unrestricted-core dual
+inequality. It neither assumes independence nor compares two distinct
+cores.
+
+## 3. Exact arbitrary-coupling Bellman majorant
+
+For a future bit vector `xi in {0,1}^3`, root counting gives the exact
+one-coordinate current marginals
 
 ```text
-xi=(g,x_1,x_2,x_3) in {0,1}^4,                       (20)
+P(X_(j,t)=1 | X_(j,t+1)=xi_j)
+ =(2-xi_j)/13.                                      (20)
 ```
 
-the exact thirteen-root identities give the current-coordinate marginals
+The three current bits use the same root digit, so their joint law is not
+independent and can depend on more than `xi`. Enlarge it pointwise to the
+full coupling polytope
 
 ```text
-P(G_current=1 | xi)=(10-g)/13,
-P(X_(j,current)=1 | xi)=(2-x_j)/13.                  (21)
+K_xi={
+ pi_eta>=0:
+ sum_eta pi_eta=1,
+ sum_(eta:eta_j=1)pi_eta=(2-xi_j)/13, j=1,2,3
+}.                                                  (21)
 ```
 
-The three danger bits and guard bit share one root digit and need not be
-independent. Let `C(xi)` be the polytope of **all** joint laws on
-`{0,1}^4` having the four marginals (21). Every actual common-root law is
-feasible, so maximizing over `C(xi)` is a safe relaxation for arbitrary
-unit cores.
+At a terminal time, enlarge the actual joint law in the same way to every
+law on `{0,1}^3` with all three marginals equal to `1/7`.
 
-The Bellman state retains:
+The companion runs a backward Bellman recurrence over:
 
 ```text
-a set A of already hit guard/even/odd clauses;
-an exact rational score s accumulated from (13);
-the future four-bit state xi.                        (22)
+time t;
+the labelled mask of even clauses in P_lambda already hit;
+the total multiplicity of selected odd-charge atoms already hit;
+the future bit vector xi.                           (22)
 ```
 
-At unit time `t`, a bit vector `z` hits the guard clause when `t=0` and its
-guard bit is one, and hits checkpoint clause `k` when
+At every transition it maximizes over `K_xi`. At the terminal state it
+returns exactly
 
 ```text
-t=lambda_j-k and z_j=1                               (23)
+1_(P_lambda)(1-q_O)_+.                              (23)
 ```
 
-for some `j`. Let `H_t(z)` be this clause mask. The score increment is
+Call the resulting rational number `B(lambda;O)`. The actual three-core
+root process is feasible in every enlargement in (21), fibre by fibre.
+Backward root induction and then the terminal Haar average therefore prove
 
 ```text
-d_t(z)
- =-sum_({(k,j):k in O, lambda_j-k=t}) z_j
-  +1_(t=0) sum_(k in O)sum_j
-       rho^(lambda_j-k) z_j.                         (24)
+integral 1_(P_lambda)(1-q_O)_+
+ <=B(lambda;O).                                     (24)
 ```
 
-The two terms in (24) cancel automatically when `lambda_j-k=0`.
-Starting with
+No Markov property for the *joint* three-core process is asserted. The
+Bellman process is an adversarial relaxation retaining only the exact
+single-core conditional marginals. Combining (4), (19), and (24), any
+profile satisfying
 
 ```text
-V_(-1)(A,s,xi)
- =1_(all P clauses in A)(1-o-s)_+
-  +5 1_(all N clauses in A)(o+s)_+,                  (25)
+B(lambda;O)<961/6930                                (25)
 ```
 
-define
+is impossible.
+
+## 4. Exact rational LP certificates
+
+The coupling polytope in (21) has eight variables and four equality
+constraints. Its columns are
 
 ```text
-V_t(A,s,xi)
- =max_(pi in C(xi)) sum_z pi_z
-    V_(t-1)(A union H_t(z),s+d_t(z),z).              (26)
+A_eta=(1,eta_1,eta_2,eta_3)^T.                      (26)
 ```
 
-After time `lambda_3`, maximize over every terminal joint bit law with
-stationary marginals
+Exactly `58` of the `binom(8,4)` four-column bases are invertible. The
+companion enumerates all nonnegative basic distributions, deduplicates
+their vertices, and obtains the following vertex counts for the eight
+future vectors in lexicographic bit order:
 
 ```text
-(5/7,1/7,1/7,1/7).                                  (27)
+(6,9,9,6,9,6,6,6).                                 (27)
 ```
 
-Backward root induction, exactly as in THM-2233, shows that this terminal
-value bounds the right side of (16). The accumulator in (22) preserves the
-signed affine observable that an ordinary clause-only Bellman state loses.
-
-Every coupling polytope has sixteen nonnegative atom variables and five
-independent equalities. The companion enumerates all exact basic feasible
-laws and, for every distinct maximization in (26), constructs an exact
-dual-feasible basic certificate with the same value.
-
-## 5. Exact profile consequence
-
-THM-2233's exact `224`-profile residue is
+The terminal marginal polytope has six vertices. Every Bellman maximum is
+first computed over all exact rational vertices. For an optimal basis `I`,
+the companion then solves
 
 ```text
-all 165 profiles with lambda_1=1 and lambda_3>=5;
-
-(2,3,5);
-(2,4,c), 5<=c<=19;
-(2,b,b+2), 5<=b<=17;
-
-(3,3,5), (3,4,5), (3,4,6);
-(3,5,c), 6<=c<=19;
-(3,b,b+2), 6<=b<=17;
-
-(4,6,8).                                             (28)
+A_I^T y=c_I                                         (28)
 ```
 
-The exact recurrence (25)--(27) closes the following `30` profiles:
+and verifies exactly
 
 ```text
-(2,3,5);
-(2,4,c), 5<=c<=19;
-(2,b,b+2), 5<=b<=17;
-(4,6,8).                                             (29)
+A_eta^T y>=c_eta       for every eta,
+b^T y=the primal optimum.                           (29)
 ```
 
-The worst capacity among (29) is
+Thus every maximum has an independent feasible dual certificate of the
+same value. The full computation makes `45,617` LP calls and encounters
+`39,295` distinct objective/right-side pairs; every distinct pair passes
+the exact primal-dual check.
+
+## 5. The complete newly closed census
+
+THM-2233 leaves exactly 224 scalar profiles. Its 29 first-depth-two rows
+are
 
 ```text
-B(2,3,5)
- =7265183507/74231495611
- =0.097871980716543...,
-
-delta_5-B(2,3,5)
- =2998392225523/73489180654890>0.                    (30)
+S_2
+ ={(2,3,5)}
+  union {(2,4,c):5<=c<=19}
+  union {(2,b,b+2):5<=b<=17},                       (30)
 ```
 
-For the sole high-first row,
+and its 29 first-depth-three rows are
 
 ```text
-B(4,6,8)
- =13063069772240011/358301251098635299
- =0.036458342615845...,
-
-delta_5-B(4,6,8)
- =36257204112023606587/354718238587648946010>0.      (31)
+S_3
+ ={(3,3,5),(3,4,5),(3,4,6)}
+  union {(3,5,c):6<=c<=19}
+  union {(3,b,b+2):6<=b<=17}.                       (31)
 ```
 
-Combining (6), (16), and the strict bounds (30)--(31) proves that every
-profile in (29) is empty. The current scalar ledger becomes
+For every row in `S_2 union S_3`, choose the single odd checkpoint
 
 ```text
-224-30=194,                                          (32)
+O={1},
+
+q=1-sum_(j=1)^3 Z_(j,lambda_j-1).                   (32)
 ```
 
-consisting exactly of the `165` first-depth-one rows and the following `29`
-first-depth-three rows:
+The exact Bellman computation gives
 
 ```text
-(3,3,5), (3,4,5), (3,4,6);
-(3,5,c), 6<=c<=19;
-(3,b,b+2), 6<=b<=17.                                (33)
+B(lambda;{1})<delta_5      for every lambda in S_2, (33)
+
+B(lambda;{1})<delta_5
+  for every lambda in S_3\{(3,4,5)}.                (34)
 ```
 
-In particular, every surviving scalar profile now has first depth either
-one or three. This theorem closes the unrestricted high-first branch, but
-does not close the scalar lane or LRC(14).
-
-## 6. Failure boundary of the canonical score
-
-The all-ones score (13) is not a universal closure. As an exact hostile
-control, its capacity at the surviving profile `(3,17,19)` is
+The largest bound in (33) occurs at `(2,4,5)`:
 
 ```text
-229985997674091853361506127343787104565593
---------------------------------------------------
-1150805888298461593768523506367492533368331
+B((2,4,5);{1})
+ =8945166533/74231495611,
 
- =0.199847776251945... > delta_5.                    (34)
+delta_5-B((2,4,5);{1})
+ =1335209029783/73489180654890>0.                   (35)
 ```
 
-The exact excess is
+The largest passing bound in (34) occurs at `(3,5,6)`:
 
 ```text
-69696929318090707454812338981897758581799057
----------------------------------------------------
-1139297829415476977830838271303817608034647690 >0.  (35)
+B((3,5,6);{1})
+ =1471733046268/12545122758259,
+
+delta_5-B((3,5,6);{1})
+ =265250422864237/12419671530676410>0.              (36)
 ```
 
-Thus the next depth-three step must change the affine weights, add another
-signed observable, or retain more realized root information. Merely rerunning
-the canonical odd-checkpoint score cannot be presented as a complete scalar
-closure.
+For the high row `(4,6,8)`, choose both available odd checkpoints:
 
-THM-2080's guard-danger pair cap is compatible with the four-bit state, but
-is not used in (30)--(31). The exact `-1/13` transfer phase kills the negative
-carrier pointwise for the high row `(4,6,8)`. For the first-depth-two rows,
-the robust hidden-state recursion instead prices both sign-safe terms in
-(16).
+```text
+O={1,3},
+
+q=2
+  -Z_(1,3)-Z_(1,1)
+  -Z_(2,5)-Z_(2,3)
+  -Z_(3,7)-Z_(3,5).                                (37)
+```
+
+All six times in (37) are odd. The exact robust bound is
+
+```text
+B((4,6,8);{1,3})
+ =17322925655936326/358301251098635299,
+
+delta_5-B((4,6,8);{1,3})
+ =32039946787164254737/354718238587648946010>0.     (38)
+```
+
+Equations (25), (33), (34), and (38) exclude all 29 rows in `S_2`,
+28 rows in `S_3`, and `(4,6,8)`: exactly 58 profiles.
+
+The six odd-time root corrections in (37), grouped by core, are
+
+```text
+(170/2197, 170/371293, 170/62748517).               (39)
+```
+
+Their sum is strictly below one. Thus the zero-charge terminal atom has
+zero positive-part cost, including the worst choice of the three time-zero
+bits. This is frozen as a boundary check in the companion.
+
+The resulting exact scalar ledger is
+
+```text
+165 first-depth-one profiles
+  (1,b,c),  5<=c<=19, 1<=b<c;
+
+the single profile (3,4,5).                         (40)
+```
+
+It has `165+1=166` rows. This is a scalar-branch reduction, not a proof of
+LRC(14).
+
+## 6. Hostile and equality controls
+
+The same carrier deliberately fails on the nearest surviving shallow row:
+
+```text
+B((3,4,5);{1})
+ =17878637620/74231495611
+ =delta_5
+  +1072703906621/10498454379270.                    (41)
+```
+
+Equation (41) is a failure of this relaxed certificate, not a realizable
+counterexample.
+
+At first depth one, the only first-blocker charge available from checkpoint
+one has time zero. Formula (14) then gives
+
+```text
+Z_(1,0)=1                                           (42)
+```
+
+identically. It certifies the odd clause without recording whether its
+first-blocker literal fired, so the present nonnegative-charge carrier loses
+its discriminating coordinate at exactly the remaining large family.
+
+A tempting alternative is to scale the even-time raw centered atom by its
+minimum value on the active set. At time two this leaves the inactive atom
+
+```text
+-rho^2/(1-rho^2)=-1/168<0.                          (43)
+```
+
+It therefore invalidates the clausewise implication used in (18).
+The additive shift in (14), not this scaling, is the hostile-safe repair.
+
+Finally, impose the common-core specialization `u_1=u_2=u_3` only as an
+independent control for `(4,6,8)`. Direct exact Markov enumeration gives
+
+```text
+unsigned even-checkpoint mass =916159/4826809,
+
+signed capacity
+ =2303649491556761/51185893014090757.                (44)
+```
+
+The signed value in (44) is THM-2232's certificate and is no larger than
+the unrestricted robust bound in (38), confirming the direction of the
+arbitrary-coupling relaxation.
 
 ## 7. Connection and loss ledger
 
+The proved connection is
+
 ```text
 source:
-  the original signed five-unit residual and every transfer-parity
-  checkpoint;
+  the signed five-unit residual, all even checkpoint supports, selected
+  odd checkpoint supports, and the separate transfer eigen-correlations
+  for each normalized blocker core;
+
+target:
+  a finite three-bit clause-and-charge Bellman capacity;
 
 map:
-  center each blocker core separately on the -1/13 eigenline, sum the
-  odd-checkpoint atoms into q, and attach q as a Bellman score;
+  center each danger atom along rho=-1/13, add its least nonnegative
+  parity shift, sum one unit of charge per selected odd clause, and use
+  the resulting q<=0 certificate to discard the negative-support term;
 
 preserved:
-  residual sign, guard membership, all even and odd checkpoint clauses,
-  exact one-coordinate root laws, and arbitrary cross-core coupling;
+  every even clause label, every selected odd-clause multiplicity, exact
+  profile times, the three individual time-zero correction bits, exact
+  1-versus-2 root counts, and exact stationary marginals;
 
 destroyed:
-  the actual joint root pattern inside each marginal polytope, owner labels,
-  arithmetic relations among distinct cores, and all score directions
-  orthogonal to the chosen affine q;
+  the shared root digit, cross-core phase and incidence, guard and five-unit
+  danger bits, owners/current, unselected odd clauses, and every joint
+  restriction beyond the three one-coordinate root marginals;
 
-needed sidecar for (33):
-  optimized checkpoint weights, a complementary even-checkpoint score,
-  a second transfer eigen-observable, or a realizability restriction on
-  the relaxed root couplings.                                (36)
+cheapest hostile probes:
+  (3,4,5), the time-zero identity Z_(1,0)=1, the invalid -1/168 scaled
+  atom, and the exact common-core specialization;
+
+needed sidecar:
+  a first-depth-one literal/owner coordinate that survives time-zero
+  centering, or cross-core incidence strong enough to sharpen (3,4,5).
+                                                               (45)
 ```
 
-## 8. Exact and independent audit
+The structural gain is that common-core alignment was never the essential
+part of THM-2232. The essential object is a separately centered,
+pointwise-positive charge whose clause sum has a fixed sign on the negative
+residual. The precise remaining obstruction is now visible: at time zero
+that charge becomes a constant and forgets the literal it was meant to
+certify.
+
+## 8. Reproduction
 
 Run
 
@@ -398,27 +497,9 @@ python3 04-computation/lrc14_unrestricted_multicore_signed_dual_thm2239.py
 python3 -O 04-computation/lrc14_unrestricted_multicore_signed_dual_thm2239.py
 ```
 
-The exact companion checks:
-
-```text
-the 224-profile input residue and all set digests;
-all 30 claimed strict exclusions and their exact worst row;
-the pointwise-zero negative term for (4,6,8);
-the exact 194-profile output residue;
-one exact surviving hostile control;
-61,748 score-Bellman states;
-54,483 local LP calls;
-44,631 distinct exact primal/dual certificates;
-ordinary/optimized/stored transcript identity.       (37)
-```
-
-An independent implementation rebuilt every local coupling LP directly
-with SciPy/HiGHS rather than using the exact vertex enumerator. For (1) it
-returned
-
-```text
-0.036458342615845143,
-```
-
-within `1.4e-17` of (31), and independently audited the schedule, signs,
-support inclusions, terminal law, and arbitrary-core quantifiers. QED.
+Both modes produce the stored transcript byte for byte. All load-bearing
+checks use explicit exceptions rather than Python assertions. The companion
+freezes the post-THM-2233 universe, every low-row and high-row bound, the
+closed and remaining sets, SHA-256 digests of the full bound and profile
+ledgers, the hostile values (41)--(44), every coupling-polytope census, and
+exact primal-dual equality for every distinct LP. QED.

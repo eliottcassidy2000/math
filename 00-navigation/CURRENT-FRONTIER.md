@@ -179,16 +179,17 @@ THM-2186 gives a strict toric exit. THM-2168/2192 leave scalar `5+3`;
 THM-2197/2201 retain deficiency and the Hasse jet. THM-2198/2204/2205/2207
 close depth three; THM-2213/2215/2219 close every depth-four profile, leaving
 `1,130`. THM-2222/2224 close the `455` profiles with `lambda_1>=6`;
-THM-2226 closes `217` more and THM-2227 independently closes six special residues. THM-2229 retains `A_+` at every unit `13`-time, subsumes those six,
-and leaves exactly `240`. THM-2233's guard-danger Bellman leaves `224`;
-THM-2239's separately centered signed dual closes all `29` first-depth-two rows and `(4,6,8)`. THM-2244's corewise prior-centered odd clause closes `28/29`
-first-depth-three rows. Exactly `166` remain: the `165` first-depth-one profiles
-and `(3,4,5)`. THM-2232 retains same-core stability; THM-2234 proves private
-two-owner mass and two-step expansion for every first-depth-one blocker.
-THM-2211 proves exact propagation needs carry; THM-2216/2218 expose exact tail-Gram/Fourier carriers, and THM-2238 gives a separate terminal-cover fork. THM-2237 isolates the missing top Walsh coordinate; THM-2235 forbids a
-fixed-XOR/odd-sheet antipode. The open scalar target joins signed owner incidence
-to THM-2234 on the `165` depth-one rows; `(3,4,5)` needs a composite or
-multidirectional score rather than another single-core centering. LRC(14) is open.
+THM-2226 closes `217` more; THM-2229 leaves `240`. THM-2233's exact
+guard-danger Bellman closes `(2,2,c)`, `5<=c<=19`, and `(5,7,9)`, leaving
+`224`. THM-2239 separately centers a nonnegative signed charge for each
+blocker core and closes another `58`: all `29` first-depth-two rows, `28/29`
+first-depth-three rows, and `(4,6,8)`. The exact scalar ledger is now `166`:
+all `165` first-depth-one rows with deepest depth at least five, and
+`(3,4,5)`. THM-2232 is the common-core control; THM-2234 supplies private
+first-depth-one expansion. THM-2211 retains carry; THM-2216/2218/2238 retain
+tail-Gram/Fourier/terminal sidecars. The open scalar target is THM-2239's
+time-zero literal loss plus `(3,4,5)`; owner/current and cross-core incidence
+remain the likely sidecars. LRC(14) remains open.
 
 ### Independent routes that remain live
 
