@@ -1,5 +1,5 @@
 ---
-id: THM-2260
+id: THM-2262
 title: "Degree-eighteen trigonal spectral discriminant reduction"
 status: >
   RESERVED / UNPROVED PROVISIONAL STUB. Reserved for the exact degree-eighteen
@@ -10,7 +10,7 @@ status: >
 source: codex-2026-07-25-degree18-trigonal-spectral
 ---
 
-# THM-2260 -- degree-eighteen trigonal spectral discriminant reduction
+# THM-2262 -- degree-eighteen trigonal spectral discriminant reduction
 
 **RESERVED / UNPROVED PROVISIONAL STUB.**
 
