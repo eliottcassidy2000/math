@@ -5,8 +5,9 @@ The script uses only integer arithmetic and fractions.  It checks:
 
 * the degree-19/20 mixed Selberg tensor boundary;
 * the N=231/232 symmetric mixed-crossing boundary;
+* the N=354/355 and N=1058/1059 adaptive-cut boundaries;
 * the exact 7-unit Fourier-support condition through height 462; and
-* the primitive THM-2266 dependency-ray classification.
+* the primitive THM-2266 dependency rays and all fixed-section lift heights.
 """
 
 from fractions import Fraction
@@ -22,6 +23,10 @@ ALPHA_GUARD = Fraction(5, 7)
 ALPHA_SAFE = Fraction(6, 7)
 DELTA_FIVE = Fraction(961, 6930)
 DEEP_SAFE_FLOOR = Fraction(55, 91)
+GUARD_OWNER_PAIR_FLOOR = Fraction(4, 7)
+SEVEN_TERMINAL_SAFE_FLOOR = Fraction(15, 154)
+OWNER_UNIT_PAIR_FLOOR = Fraction(66, 91)
+DELTA_SIX = Fraction(191, 6930)
 PAIR_PRODUCT_MAX = 757
 
 
@@ -48,6 +53,16 @@ def crossing_data(bandwidth: int) -> tuple[Fraction, Fraction, Fraction, Fractio
     joint_error = Fraction(27, 2 * bandwidth)
     margin = unit_lower * deep_lower - joint_error
     return unit_lower, deep_lower, joint_error, margin
+
+
+def adaptive_crossing_data(
+    bandwidth: int, left_floor: Fraction, right_floor: Fraction
+) -> tuple[Fraction, Fraction, Fraction, Fraction]:
+    left_lower = left_floor - Fraction(3, bandwidth)
+    right_lower = right_floor - Fraction(21, 2 * bandwidth)
+    joint_error = Fraction(27, 2 * bandwidth)
+    margin = left_lower * right_lower - joint_error
+    return left_lower, right_lower, joint_error, margin
 
 
 def coprime_atlas(require_thirteen_units: bool) -> tuple[tuple[int, int], ...]:
@@ -108,6 +123,67 @@ def main() -> None:
 
     height = 2 * first_valid - 2
     require(height == 462, "crossing height drift")
+
+    guard_owner_354 = adaptive_crossing_data(
+        354, GUARD_OWNER_PAIR_FLOOR, SEVEN_TERMINAL_SAFE_FLOOR
+    )
+    guard_owner_355 = adaptive_crossing_data(
+        355, GUARD_OWNER_PAIR_FLOOR, SEVEN_TERMINAL_SAFE_FLOOR
+    )
+    require(
+        guard_owner_354[3] == Fraction(-3, 15010072),
+        "N=354 guard-owner margin drift",
+    )
+    require(
+        guard_owner_355[3] == Fraction(21177, 135854950),
+        "N=355 guard-owner margin drift",
+    )
+    require(
+        guard_owner_354[3] < 0 < guard_owner_355[3],
+        "guard-owner adaptive boundary sign drift",
+    )
+    first_guard_owner = None
+    for bandwidth in range(2, 356):
+        left_lower, right_lower, _, margin = adaptive_crossing_data(
+            bandwidth, GUARD_OWNER_PAIR_FLOOR, SEVEN_TERMINAL_SAFE_FLOOR
+        )
+        if left_lower > 0 and right_lower > 0 and margin > 0:
+            first_guard_owner = bandwidth
+            break
+    require(first_guard_owner == 355, "first guard-owner bandwidth drift")
+    guard_owner_height = 2 * first_guard_owner - 2
+    require(guard_owner_height == 708, "guard-owner crossing height drift")
+
+    owner_unit_1058 = adaptive_crossing_data(
+        1058, OWNER_UNIT_PAIR_FLOOR, DELTA_SIX
+    )
+    owner_unit_1059 = adaptive_crossing_data(
+        1059, OWNER_UNIT_PAIR_FLOOR, DELTA_SIX
+    )
+    require(
+        owner_unit_1058[3] == Fraction(-861505, 47060301288),
+        "N=1058 owner-unit margin drift",
+    )
+    require(
+        owner_unit_1059[3] == Fraction(44021, 78582173670),
+        "N=1059 owner-unit margin drift",
+    )
+    require(
+        owner_unit_1058[3] < 0 < owner_unit_1059[3],
+        "owner-unit adaptive boundary sign drift",
+    )
+    first_owner_unit = None
+    for bandwidth in range(2, 1060):
+        left_lower, right_lower, _, margin = adaptive_crossing_data(
+            bandwidth, OWNER_UNIT_PAIR_FLOOR, DELTA_SIX
+        )
+        if left_lower > 0 and right_lower > 0 and margin > 0:
+            first_owner_unit = bandwidth
+            break
+    require(first_owner_unit == 1059, "first owner-unit bandwidth drift")
+    owner_unit_height = 2 * first_owner_unit - 2
+    require(owner_unit_height == 2116, "owner-unit crossing height drift")
+
     for interval_numerator in (5, 6):
         for mode in range(-height, height + 1):
             if mode == 0:
@@ -178,6 +254,51 @@ def main() -> None:
     require(max_h_owner_lift == 9841, "H-owner lifted height drift")
     require(max_owner_q_lift == 9841, "owner-q lifted height drift")
 
+    small_original_height = 2 * 20
+    natural_crossing_original_height = 2 * height
+    guard_owner_crossing_original_height = 2 * guard_owner_height
+    owner_unit_crossing_original_height = 2 * owner_unit_height
+    guard_owner_pair_original_height = 2 * max_h_owner_lift
+    owner_unit_pair_original_height = max_owner_q_lift
+    uniform_scalar_rank_height = max(
+        max_h_owner_lift,
+        max_owner_q_lift,
+        guard_owner_height,
+        owner_unit_height,
+    )
+    uniform_original_rank_height = max(
+        guard_owner_pair_original_height,
+        owner_unit_pair_original_height,
+        guard_owner_crossing_original_height,
+        owner_unit_crossing_original_height,
+    )
+    require(small_original_height == 40, "small fixed-section lift drift")
+    require(
+        natural_crossing_original_height == 924,
+        "natural crossing fixed-section lift drift",
+    )
+    require(
+        guard_owner_crossing_original_height == 1416,
+        "guard-owner crossing fixed-section lift drift",
+    )
+    require(
+        owner_unit_crossing_original_height == 4232,
+        "owner-unit crossing fixed-section lift drift",
+    )
+    require(
+        guard_owner_pair_original_height == 19682,
+        "guard-owner pair fixed-section lift drift",
+    )
+    require(
+        owner_unit_pair_original_height == 9841,
+        "owner-unit pair fixed-section lift drift",
+    )
+    require(uniform_scalar_rank_height == 9841, "scalar rank height drift")
+    require(
+        uniform_original_rank_height == 19682,
+        "original rank height drift",
+    )
+
     print("THM-2275 exact referee")
     print(
         "mixed_tensor_degree_19 "
@@ -204,6 +325,44 @@ def main() -> None:
         f"positive_7_unit_modes={positive_seven_unit_modes}"
     )
     print(
+        "guard_owner_N_354 "
+        f"left_lower={guard_owner_354[0]} "
+        f"right_lower={guard_owner_354[1]} "
+        f"joint_error={guard_owner_354[2]} "
+        f"margin={guard_owner_354[3]}"
+    )
+    print(
+        "guard_owner_N_355 "
+        f"left_lower={guard_owner_355[0]} "
+        f"right_lower={guard_owner_355[1]} "
+        f"joint_error={guard_owner_355[2]} "
+        f"margin={guard_owner_355[3]}"
+    )
+    print(
+        f"first_guard_owner_bandwidth={first_guard_owner} "
+        f"scalar_crossing_height={guard_owner_height} "
+        f"original_crossing_height={guard_owner_crossing_original_height}"
+    )
+    print(
+        "owner_unit_N_1058 "
+        f"left_lower={owner_unit_1058[0]} "
+        f"right_lower={owner_unit_1058[1]} "
+        f"joint_error={owner_unit_1058[2]} "
+        f"margin={owner_unit_1058[3]}"
+    )
+    print(
+        "owner_unit_N_1059 "
+        f"left_lower={owner_unit_1059[0]} "
+        f"right_lower={owner_unit_1059[1]} "
+        f"joint_error={owner_unit_1059[2]} "
+        f"margin={owner_unit_1059[3]}"
+    )
+    print(
+        f"first_owner_unit_bandwidth={first_owner_unit} "
+        f"scalar_crossing_height={owner_unit_height} "
+        f"original_crossing_height={owner_unit_crossing_original_height}"
+    )
+    print(
         f"generic_pair_atlas={len(generic_atlas)} "
         f"generic_unordered={len({tuple(sorted(pair)) for pair in generic_atlas})}"
     )
@@ -216,6 +375,15 @@ def main() -> None:
     print(
         f"max_scalar_pair_lift_height="
         f"{max(max_h_owner_lift, max_owner_q_lift)}"
+    )
+    print(
+        "fixed_section_heights "
+        f"small={small_original_height} "
+        f"natural_crossing={natural_crossing_original_height} "
+        f"guard_owner_pair={guard_owner_pair_original_height} "
+        f"owner_unit_pair={owner_unit_pair_original_height} "
+        f"uniform_scalar_rank={uniform_scalar_rank_height} "
+        f"uniform_original_rank={uniform_original_rank_height}"
     )
     print("ALL_CHECKS_PASS")
 

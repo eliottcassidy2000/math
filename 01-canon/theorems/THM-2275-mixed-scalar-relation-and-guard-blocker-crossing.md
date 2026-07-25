@@ -8,15 +8,17 @@ status: >
   crossing the six guard/unit coordinates against the three blockers,
   with every nonzero coefficient prime to seven. Through THM-2203 these
   become original-row relations supported on the fixed nine-coordinate
-  section, of heights at most 40 and 924. Combining the height-20 relation
-  with THM-2266, every one of the 120 interior first-depth-one profiles
-  either has bounded scalar relation rank at least two by height 9841, or
-  lies on one of nine odd guard-owner rays or nineteen owner-unit rays per
-  labelled unit coefficient. No scalar profile is excluded and LRC(14)
-  remains open.
+  section, of heights at most 40 and 924. More strongly, every one of the
+  120 interior first-depth-one profiles has scalar relation rank at least
+  two by height 9841: THM-2266 supplies a support-two relation of height at
+  most 9841, and a trigger-adapted safe-factor cut supplies an independent
+  crossing relation of height at most 708 or 2116. The two relations lift
+  to the fixed original-row section with uniform height at most 19682.
+  No scalar profile is excluded and LRC(14) remains open.
 source: codex-2026-07-25-mixed-scalar-relation
 depends_on:
   - THM-1166-seven-wall-fano-gcd-discrepancy
+  - THM-1221-seven-wall-strict-spectrum-hunter-floor
   - THM-2085-explicit-height-57-rank-seven-selberg-gate
   - THM-2137-deep-scalar-tail-boundary-complexity
   - THM-2145-two-block-spectral-crossing-and-6-plus-7-carry
@@ -30,8 +32,8 @@ related:
   - THM-2263-thirteen-adic-gap-pair-spectrum-and-profile-sharp-owner-floor
 script: 04-computation/lrc14_mixed_scalar_relation_crossing_thm2275.py
 output: 05-knowledge/results/lrc14_mixed_scalar_relation_crossing_thm2275.out
-script_sha256: 819bd9370ff9adca1e50b0ed50010d0593de5a943b8420c5ec6d779abe257f34
-output_sha256: 2c06ff1fe272cfe3bde909f288d6e54096653d99cea6eb41ff558d95acf799d3
+script_sha256: 703b6daead45608a42783c713abfce3065c860cb44cea90cb6ccc6bcb375a4c4
+output_sha256: 6d1699f9c2678892c92bc0906a99f60f36e6de634bda81ae48f6471fe206c6ed
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -85,6 +87,19 @@ a_H H+sum_(i=1)^5 a_i q_i
 
 where every displayed coefficient is either zero or prime to seven.
 
+For every interior first-depth-one profile, THM-2266 supplies a primitive
+support-two relation `p` of height at most `9841`. A safe-factor cut adapted
+to the support of `p` supplies a second relation `s`, independent of `p`,
+with
+
+```text
+||s||_infinity<=708       if supp(p)={H,c_1},
+||s||_infinity<=2116      if supp(p)={q_i,c_1}.       (7a)
+```
+
+Consequently every such scalar row has relation rank at least two by
+height `9841`.
+
 The source is the scalar cover itself. The proof does not attempt to
 project an arbitrary relation supplied on the original thirteen-speed row.
 That distinction is what makes (5)--(6) survive the scalar quotient.
@@ -135,6 +150,12 @@ Likewise (6) lifts to a supported original-row relation of height at most
 and its two partial sums are `+16A` and `-16A`, where the nonzero carry
 `A` is the left side of (6). The diagonal section therefore preserves
 crossing as well as linear independence.
+
+The adaptive relations in (7a) lift with heights at most `1416` and
+`4232`, respectively. The THM-2266 pair relation lifts with height at most
+`19682` in the guard-owner case and at most `9841` in the owner-unit case.
+Thus the supported original-row relation lattice has rank at least two by
+the uniform height `19682`.
 
 ## 2. A mixed-length signed Selberg tensor
 
@@ -474,10 +495,9 @@ then lift their outputs back through the fixed diagonal section (8). They
 do not claim that the ambient relation theorems were false or weaker in
 their stated domains.
 
-## 6. The THM-2266 dependency rays
+## 6. Trigger-adapted cuts give unconditional rank two
 
-There is a sharp consequence for the 120 interior first-depth-one profiles.
-Write
+Consider any of the 120 interior first-depth-one profiles. Write
 
 ```text
 c_1=13u_1,
@@ -536,74 +556,151 @@ and are at most
 13*757=9841.                                         (53)
 ```
 
-Choose the relation `r` from (5), and let `p` be the primitive relation
-from the pair supplied by THM-2266. If `r,p` are independent over `Q`,
-then
+Let `p` denote this primitive support-two relation. We choose the
+factorization of the null joint safe event according to `supp(p)`.
+
+### 6.1 The guard-owner trigger
+
+Suppose `supp(p)={H,c_1}`. Put those two safe coordinates in the first
+block:
+
+```text
+A={H,c_1},
+B={q_1,...,q_5,c_2,c_3}.                             (54)
+```
+
+The first block-safe event is the intersection of an interval of mass
+`5/7` and one of mass `6/7`, so the union bound gives
+
+```text
+measure(G_A)>=4/7.                                   (55)
+```
+
+The seven speeds in `B` are distinct positive integers: the five `q_i`
+are pairwise distinct thirteen-units, whereas `c_2,c_3` are distinct
+multiples of thirteen. THM-1221 therefore gives
+
+```text
+measure(G_B)>=15/154.                                (56)
+```
+
+With the squared-Fejer approximants of Section 4, the two block errors and
+their sum are
+
+```text
+eta_A=3/N,       eta_B=21/(2N),
+eta_A+eta_B=27/(2N).                                 (57)
+```
+
+At `N=355`, the exact margin in (22) is
+
+```text
+(4/7-3/355)(15/154-21/710)-27/710
+ =21177/135854950
+ >0.                                                  (58)
+```
+
+The adjacent value fails:
+
+```text
+margin at N=354 =-3/15010072<0.                      (59)
+```
+
+An exact scan of the rational margin shows that `355` is the first
+bandwidth accepted by this ledger. The mixed crossing lemma therefore
+gives a scalar relation `s` of height
+
+```text
+2N-2=708                                             (60)
+```
+
+whose `A`-partial sum is nonzero. But `p` is supported inside `A` and its
+`A`-partial sum is `p.w_*=0`. Hence `s` cannot be a rational multiple of
+`p`.
+
+### 6.2 The owner-unit trigger
+
+Suppose instead that `supp(p)={q_i,c_1}`. Use
+
+```text
+A={q_i,c_1},
+B={H,q_1,...,q_(i-1),q_(i+1),...,q_5,c_2,c_3}.      (61)
+```
+
+THM-1166's sharp pair overlap gives
+
+```text
+measure(G_A)>=1-2/7+1/91=66/91.                      (62)
+```
+
+The second block consists of the odd guard and six distinct positive
+terminal coefficients. THM-2137's six-plus-one scalar-tail estimate is
+uniform in those six coefficients and gives
+
+```text
+measure(G_B)>=delta_6=191/6930.                      (63)
+```
+
+The error ledger is again (57). At `N=1059`,
+
+```text
+(66/91-3/1059)(191/6930-21/2118)-27/2118
+ =44021/78582173670
+ >0,                                                  (64)
+```
+
+whereas
+
+```text
+margin at N=1058 =-861505/47060301288<0.             (65)
+```
+
+The exact rational scan makes `1059` the first accepted bandwidth for
+this ledger. It produces a relation `s` of height
+
+```text
+2N-2=2116                                            (66)
+```
+
+with nonzero `A`-partial sum. As in Section 6.1, the support-two relation
+`p` is internal to `A` and has zero `A`-partial sum. The two relations are
+therefore independent.
+
+Together the two cases prove
 
 ```text
 dim_Q span{m in Z^9:m.w_*=0, ||m||_infinity<=9841}
- >=2.                                                 (54)
+ >=2.                                                 (67)
 ```
 
-Suppose instead that `r` and `p` are dependent. A primitive integer vector
-has coordinates with gcd one. If an integer vector is a rational multiple
-of it, Bezout's identity shows that the multiplier is an integer. Thus
+for every interior profile. The fixed diagonal lift in Section 1 preserves
+the two-dimensional span and gives supported original-row rank at least
+two by height `19682`.
 
-```text
-r=np,                   0!=n in Z,
-||p||_infinity<=||r||_infinity<=20.                  (55)
-```
+### 6.3 The old dependency rays are diagnostic only
 
-For (48), equations (52) and (55) force
-
-```text
-d=1,              1<=a<=20,              13 does not divide a.
-```
-
-Moreover `H=au_1` and `H` is odd, so both `a` and `u_1` are odd. The exact
-guard-owner dependency rays are therefore
+For comparison, let `r` be the height-twenty relation from (5). If `r`
+is proportional to the primitive `p`, Bezout's identity forces `r=np`
+with nonzero integer `n`. Equations (48)--(52) then give exactly the nine
+guard-owner rays
 
 ```text
 H=a u_1,
-a in {1,3,5,7,9,11,15,17,19}.                       (56)
+a in {1,3,5,7,9,11,15,17,19},                       (68)
 ```
 
-For (50), equations (52) and (55) force
-
-```text
-a=1,              1<=d<=20,              13 does not divide d.
-```
-
-The exact owner-unit dependency rays are
+and the nineteen owner-unit rays
 
 ```text
 q_i=d u_1,
 d in {1,2,3,4,5,6,7,8,9,10,11,12,
-      14,15,16,17,18,19,20}.                         (57)
+      14,15,16,17,18,19,20}.                         (69)
 ```
 
-Thus every one of the 120 interior rows satisfies the proved alternative
-
-```text
-bounded scalar relation rank at least two by height 9841,
-
-or one of the nine rays (56),
-
-or one of the nineteen rays (57) for some labelled i. (58)
-```
-
-Zero coefficients in `r` create no loophole: proportionality to `p`
-forces exactly the same two-coordinate support. The five `q_i` are
-pairwise distinct, so a fixed multiplier in (57) can occur for at most one
-label. If repeated `q` labels were allowed abstractly, their difference
-would itself give a height-one relation independent of (48) or (50);
-repetition would strengthen the rank branch rather than create another
-exception.
-
-The fixed diagonal lift in Section 1 preserves the two-dimensional span.
-It gives two supported original-row relations of heights at most `40` and
-`19682`; the latter uniform value allows for doubling the guard coefficient
-in (48).
+These rays diagnose when the two *smallest previously selected* relations
+can coincide. They are not exceptions to (67): the adaptive crossing
+relation has nonzero partial sum on the support block and bypasses all of
+them.
 
 ## 7. Exact verification and scope
 
@@ -614,12 +711,14 @@ the exact degree-19 and degree-20 tensor budgets;
 the positive tensor constant (17);
 the N=231 and N=232 crossing margins;
 the first common-bandwidth boundary under this ledger;
+the N=354/355 guard-owner adaptive margins and first boundary;
+the N=1058/1059 owner-unit adaptive margins and first boundary;
 all Fourier residues through height 462;
 the 3,643/1,822 generic THM-2266 pair census;
 the 3,279/1,640 thirteen-unit subcensus;
 primitivity of every actual pair lift;
-the nine rays (56) and nineteen rays (57);
-the uniform scalar pair-lift height 9841.             (59)
+the diagnostic nine rays (68) and nineteen rays (69);
+all scalar and fixed-section lift heights.            (70)
 ```
 
 Reproduce with
@@ -638,15 +737,14 @@ particular:
 1. the height-twenty relation need not cross the unit/blocker cut;
 2. the height-462 crossing relation may be a support-two
    commensurability and need not raise relation rank;
-3. alternative (58) leaves its displayed rays and its rank-two branch
-   unclassified;
-4. no relation here selects a blocker owner or retains a root digit,
+3. the adaptive relation proves rank two but does not select a blocker
+   owner or retain a root digit,
    endpoint current, or post-expiration target;
-5. THM-2261's expiration-surjectivity obstruction and THM-2263's missing
+4. THM-2261's expiration-surjectivity obstruction and THM-2263's missing
    labelled target inclusion remain;
-6. none of the 165 scalar profiles is removed.
+5. none of the 165 scalar profiles is removed.
 
 The gain is a finite, quotient-faithful relation sidecar: one small
 supported relation on every scalar row, one bounded nonzero unit-to-blocker
-carry, and a sharply reduced dependency locus when the deep-pair relation
-is present. LRC(14) remains open. QED.
+carry, and unconditional bounded relation rank two on all 120 interior
+profiles. LRC(14) remains open. QED.
