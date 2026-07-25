@@ -1,0 +1,21 @@
+THM-2330 exact conical word-metric controls
+
+target-conditioned hostile
+root_lambda_l1=2
+root_lambda_shortcut=2
+target_lambda_l1=3
+target_lambda_shortcut=3
+target_omega_l1=0
+target_omega_shortcut=2
+
+arbitrary-arity partition controls
+r=3 partition_count=5 cover_count=6 positive_cover_drops=3 max_cover_drop=1 comparable_triples=22 proper_arity_agreement=2 terminal_root_omega_l1=0 terminal_root_omega_shortcut=1
+r=4 partition_count=15 cover_count=31 positive_cover_drops=7 max_cover_drop=1 comparable_triples=154 proper_arity_agreement=3 terminal_root_omega_l1=0 terminal_root_omega_shortcut=1
+r=5 partition_count=52 cover_count=160 positive_cover_drops=15 max_cover_drop=1 comparable_triples=1304 proper_arity_agreement=4 terminal_root_omega_l1=0 terminal_root_omega_shortcut=1
+r=6 partition_count=203 cover_count=856 positive_cover_drops=31 max_cover_drop=1 comparable_triples=12915 proper_arity_agreement=5 terminal_root_omega_l1=0 terminal_root_omega_shortcut=1
+
+disjoint-packet min-plus convolution
+target_count=27
+convolution_checks=27
+
+all exact controls passed
