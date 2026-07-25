@@ -1,5 +1,5 @@
 ---
-id: THM-2245
+id: THM-2247
 title: "Higher interaction defect complex and tropical trace spectrum"
 status: >
   PROVED. For every finite labelled family in a commutative nonexpansive
@@ -27,7 +27,7 @@ related:
   - THM-2235-response-antipode-barriers-for-lrc-sheets-tournament-cycles-and-knot-kernels
 ---
 
-# THM-2245 -- the interaction object is a complex, not a graph
+# THM-2247 -- the interaction object is a complex, not a graph
 
 THM-2176 replaces unknotting number by its continuation kernel and records
 the pair interaction

@@ -179,8 +179,7 @@ THM-2186 gives a strict toric exit. THM-2168/2192 leave scalar `5+3`;
 THM-2197/2201 retain deficiency and the Hasse jet. THM-2198/2204/2205/2207
 close depth three; THM-2213/2215/2219 close every depth-four profile, leaving
 `1,130`. THM-2222/2224 close the `455` profiles with `lambda_1>=6`;
-THM-2226 closes `217` more; THM-2229 leaves `240`. THM-2233's exact
-guard-danger Bellman closes `(2,2,c)`, `5<=c<=19`, and `(5,7,9)`, leaving
+THM-2226 closes `217` more; THM-2229 leaves `240`. THM-2233's exact guard-danger Bellman closes `(2,2,c)`, `5<=c<=19`, and `(5,7,9)`, leaving
 `224`. THM-2239 separately centers a nonnegative signed charge for each
 blocker core and closes another `58`: all `29` first-depth-two rows, `28/29`
 first-depth-three rows, and `(4,6,8)`. The exact scalar ledger is now `166`:

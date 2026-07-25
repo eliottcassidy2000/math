@@ -1,5 +1,5 @@
 ---
-id: THM-2244
+id: THM-2246
 title: "Depth-one private joint two-step fibre cap"
 status: >
   PROVED + VERIFIED-EXACT + LOCALLY SHARP. In THM-2234's first-depth-one
@@ -20,14 +20,14 @@ related:
   - THM-2198-scalar-five-plus-three-image-pump-and-first-depth-exclusion
   - THM-2201-cyclic-root-fibre-hasse-jet-transition-carrier
   - THM-2239-unrestricted-multicore-signed-dual-profile-exclusion
-script: 04-computation/lrc14_depth_one_private_joint_two_step_cap_thm2244.py
-output: 05-knowledge/results/lrc14_depth_one_private_joint_two_step_cap_thm2244.out
-script_sha256: d66102a61924c7bf27f1204a65bf6dd9a80a73f71ae769c4d5eb4c98956bf3b3
+script: 04-computation/lrc14_depth_one_private_joint_two_step_cap_thm2246.py
+output: 05-knowledge/results/lrc14_depth_one_private_joint_two_step_cap_thm2246.out
+script_sha256: 938e175990f22feb72b5dbd00ad147279593358b705d0b99af7a157944def791
 output_sha256: aac91038011114312c11aeb41be67fa436a0c35bd43a65ae2413230375281a46
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2244 -- the private two-step cap is 112, not 120
+# THM-2246 -- the private two-step cap is 112, not 120
 
 Retain THM-2234's notation. Thus
 
@@ -256,8 +256,8 @@ gain. QED.
 Run
 
 ```bash
-python3 04-computation/lrc14_depth_one_private_joint_two_step_cap_thm2244.py
-python3 -O 04-computation/lrc14_depth_one_private_joint_two_step_cap_thm2244.py
+python3 04-computation/lrc14_depth_one_private_joint_two_step_cap_thm2246.py
+python3 -O 04-computation/lrc14_depth_one_private_joint_two_step_cap_thm2246.py
 ```
 
 Both modes reproduce the stored transcript byte for byte. The companion

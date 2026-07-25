@@ -7,12 +7,13 @@ status: >
   checkpoint k=1. For each normalized blocker core, center that odd atom at
   its earliest strictly prior time of the opposite atom parity. The resulting
   affine score is response-null and pointwise nonpositive on the negative
-  carrier. Its exact three-bit arbitrary-coupling Bellman recursion closes 57
-  low-first profiles in the 223-row reference census: all 29 first-depth-two
-  profiles and 28 of the 29 first-depth-three profiles. Relative to THM-2239,
-  the first-depth-two rows are an independent overlap control and the 28
-  depth-three exclusions are new. The current scalar ledger drops from 194
-  to 166, consisting exactly of the 165 first-depth-one rows and (3,4,5).
+  carrier. Its exact three-bit arbitrary-coupling Bellman recursion
+  independently closes 57 low-first profiles in the 223-row reference
+  census: all 29 first-depth-two profiles and 28 of the 29 first-depth-three
+  profiles. These rows are now all also closed by the stronger nonnegative
+  charge in THM-2239, so this theorem supplies an alternate mechanism and
+  hostile audit but no additional current ledger decrement. Both routes
+  leave the same 166-row ledger: the 165 first-depth-one rows and (3,4,5).
   The closest new pass is (3,5,6), with exact bound
   1511656180038/12545122758259<961/6930. LRC(14) remains open.
 source: codex-2026-07-25-prior-centered-single-odd-clause
@@ -34,7 +35,8 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2244 -- the first odd clause closes all but one depth-three row
 
-THM-2239 leaves the exact scalar valuation ledger
+An earlier, weaker form of THM-2239 left the intermediate scalar valuation
+ledger
 
 ```text
 194 = 165 first-depth-one profiles + 29 first-depth-three profiles. (1)
@@ -42,13 +44,15 @@ THM-2239 leaves the exact scalar valuation ledger
 
 A single odd checkpoint, centered separately and strictly earlier on each
 normalized blocker core, excludes 28 of the 29 depth-three rows. The sole
-survivor is `(3,4,5)`.
+survivor is `(3,4,5)`. The strengthened current THM-2239 subsequently
+subsumes all 57 exclusions proved here.
 
 The point of the construction is not the number of retained clauses. It is
 the freedom to choose a different prior response base for each labelled core.
-That coordinate is absent from the common-time score in THM-2239.
+That coordinate was absent from the earlier common-time score and remains a
+useful independent control on THM-2239's stronger shifted charge.
 
-## 1. Scalar residual and the current ledger
+## 1. Scalar residual and the intermediate ledger
 
 On `T=R/Z`, put
 
@@ -307,7 +311,7 @@ delta_5-B(3,5,6)
 Combining (4), (15), and (28) with the exact profile census proves that every
 row in (26) is empty. The 29 depth-two passes are an independent overlap
 control for THM-2239 and are not counted again. Relative to THM-2239's current
-ledger, the novel decrement is
+ledger at the time this route was developed, the then-new decrement was
 
 ```text
 194-28=166.                                         (29)
@@ -415,8 +419,8 @@ Both modes reproduce the stored transcript byte for byte. The companion
 freezes:
 
 ```text
-the 223-row low-first reference census and THM-2239's 194-row ledger;
-all 57 raw passes and the 28-row novel intersection;
+the 223-row low-first reference census and the intermediate 194-row ledger;
+all 57 raw passes and the 28-row then-new intersection;
 the complete profile/bound/margin digest;
 the closest raw and closest novel passes;
 all four prior-center values for (3,4,5);
@@ -425,5 +429,6 @@ the weakened guard-free three-bit (4,6,8) geometric control;
 the exact 166-row consequence.                       (37)
 ```
 
-This theorem closes only scalar valuation profiles. Owner/current branches
-and LRC(14) remain open. QED.
+This theorem supplies an independent scalar exclusion certificate. It adds
+no decrement beyond current THM-2239; owner/current branches and LRC(14)
+remain open. QED.

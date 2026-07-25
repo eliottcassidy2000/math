@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact referee for THM-2244's joint two-step private-fibre cap.
+"""Exact referee for THM-2246's joint two-step private-fibre cap.
 
 THM-2234 bounds the first private image with guard occupancy 10 and the
 second with peeled-complement occupancy 12.  Those caps cannot saturate
