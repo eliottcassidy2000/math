@@ -2,7 +2,7 @@
 id: THM-2323
 title: "Primitive fixed-colour cross-correlation and same-gauge word alignment"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. Let N be
+  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. Let N be
   any positive integer. If 0<=f<=g are
   nonzero rational-valued step functions with rational breakpoints,
   supported in one open circle arc of length 1/7, then for every primitive
@@ -20,10 +20,11 @@ status: >
   applying the theorem to THM-2319's word source H_Q and bare source H_E
   gives, for every one of the 72 unit colours, a common index
   h<=12S^2-1 and common multiplier n<=1092S^2-1. This closes the
-  bare/word same-gauge-index loss. For the middle owner, Perron transport
-  by g=gcd(c_2,c_3) and exposure at N=13c_3/g universally force two common
-  bare/word atoms whose c_3-edge multiplier is nonzero modulo thirteen,
-  with size at most 156S^2-12. Conditionally, for the middle owner,
+  bare/word same-gauge-index loss. On every positive-return middle-owner
+  word stratum in the 150 strict-row bank, Perron transport by
+  g=gcd(c_2,c_3) and exposure at N=13c_3/g force two common bare/word
+  atoms whose c_3-edge multiplier is nonzero modulo thirteen, with size
+  at most 156S^2-12. Conditionally, on the same word stratum,
   write c_2/gcd(c_2,c_3)=a and
   c_3/gcd(c_2,c_3)=d'. If gcd(a,91)=1, exposure at N=91d' and its
   K_7 x K_13 / K_6 x K_13 primitive fibre force two common bare/word
@@ -52,7 +53,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2323 -- primitive colour forces a bare/word diagonal
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
+**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
 
 THM-2319 lands every primitive `91`-colour separately in the Fourier
 spectra of the bare owner source and of its literal positive-word subset.
@@ -478,12 +479,14 @@ This removes the same-gauge-index loss explicitly left in THM-2319.
 
 ## 7. A universal thirteen-primitive edge and a conditional unit refinement
 
-The arithmetic-comb theorem first forces a two-word `c_3` edge on every
-middle-owner row whose multiplier is nonzero modulo thirteen. A larger
-exposure then upgrades both endpoints to a full `91`-unit edge on one
-exact arithmetic branch.
+The arithmetic-comb theorem first forces a two-word `c_3` edge, with
+multiplier nonzero modulo thirteen, on every positive-return middle-owner
+word stratum in the `150` strict canonical rows. A larger exposure then
+upgrades both endpoints to a full `91`-unit edge on one exact arithmetic
+branch. The `15` repeated-first rows and alternative resonance branches
+are outside this word-stratum statement.
 
-Work with the middle owner, so
+Work on one such positive word stratum, with middle owner, so
 
 ```text
 c_2=13^b u_2,
@@ -594,10 +597,10 @@ t=1+13(h_1-h_0),
 ```
 
 The strict positivity follows already from `t congruent 1 mod 13`.
-Thus every middle-owner row has a bounded `c_3` edge whose two endpoints
-are marked by the same literal positive word and whose multiplier is a
-thirteen-unit. No factor `a=c_2/g` survives: the correct physical atoms
-on this carrier are `gq_i`, not `c_2q_i`.
+Thus every such positive middle-owner word stratum has a bounded `c_3`
+edge whose two endpoints are marked by the same literal positive word and
+whose multiplier is a thirteen-unit. No factor `a=c_2/g` survives: the
+correct physical atoms on this carrier are `gq_i`, not `c_2q_i`.
 
 This is the exact complementary colour to the vertexwise seven-unit edge
 of THM-2326. Combining those two incidences without falsely marking the
@@ -777,9 +780,10 @@ THM-2302's endpoint recurrence gives every marked vertex an incident
 `c_3`-multiple edge only after forgetting the condition `gcd(m,91)=1`.
 THM-2293 supplies a unit-coloured edge somewhere in the same character
 graph, not necessarily at the vertex in (27). These are distinct
-quantifiers at modulus `91`. Section 7.1 now puts a thirteen-unit edge
-through two word-marked vertices on every row. Section 7.2 upgrades that
-same two-word conclusion to a `91`-unit edge whenever (31) holds. When
+quantifiers at modulus `91`. On the stated positive strict-row word
+strata, Section 7.1 now puts a thirteen-unit edge through two word-marked
+vertices. Section 7.2 upgrades that same two-word conclusion to a
+`91`-unit edge whenever (31) holds. When
 seven divides `a`, equation (40) proves only that the complete
 `c_2`-multiple carrier is the wrong affine lattice for that stronger
 two-word unit edge; the `P_g` carrier (30a) has already escaped the
@@ -808,9 +812,10 @@ map:
 preserved:
   source owner, exact word, prescribed clock, primitive N-colour,
   ordinary Fourier frequency, same gauge index, owner grade, and at N=91
-  the complete seven/thirteen unit condition; at N=13d', two word-marked
-  endpoints and a thirteen-unit c_3 edge; at N=91d' under (31), the same
-  with a full unit colour and the mixed deepest-comb triangle (39d);
+  the complete seven/thirteen unit condition; on each stated positive
+  strict-row word stratum at N=13d', two word-marked endpoints and a
+  thirteen-unit c_3 edge; at N=91d' under (31), the same with a full unit
+  colour and the mixed deepest-comb triangle (39d);
 
 destroyed or unselected:
   which terminal component carries the phase, exact target-plane gain,
