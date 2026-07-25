@@ -1,0 +1,14 @@
+THM-2287 anchored scalar rank-six flag exact companion
+status=PROVED_VERIFIED_EXACT_INDEPENDENTLY_AUDITED
+uniform_heights=9841,4921,7381,11072,16608,24912;sum=74735
+uniform_recurrence_slacks=6,0,6,6,6
+uniform_nested_determinant_caps=3725197,54991358114,1826592951114624,121344222928446701568,15114636407967321147310080
+rank5_atlas=35:(blockers0,1,2)=(5,20,10);rank6_atlas=21:(1,10,10);minimum_unit_labels=3
+complement_atlas=21:(blockers0,1,2)=(10,10,1);residue_quotient_columns=3
+uniform_addresses=13^(6n);scalar_height=74735*(13^n-1)/2;depth1=448410;fixed_depth1=896820
+Kakeya_base_floor=4*13^5=1485172;c1_normalized=5*13^4=142805;two_digit_noncollapsed=6*13^3=13182
+spectral_augmented_determinant_cap=38285374021381224466136432640
+THM2299_phase_hostile:speeds=1,4,2,3,6,10,13,2197,742586;rank6_height=13;pivot_det=-4_mod13;Fhat4=Ehat52=What4_0=0
+short_heights=20,196,196,206,309,526;sum=1453;anchored_D6=3086987197593600
+all165_unanchored:heights=20,196,196,206,309,526;pivot_atlas=83:(blockers1,2,3)=(18,45,20);D6_cap=18521923185561600;depth1=8718;fixed_depth1=17436
+all exact checks passed
