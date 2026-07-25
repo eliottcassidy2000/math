@@ -1,0 +1,24 @@
+theorem=THM-2322
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED
+epsilon=1/1000000000000
+F_centers=(Fraction(-1, 16), Fraction(1, 16))
+R_centers=(Fraction(3, 16), Fraction(13, 16))
+C_centers=(Fraction(7, 16), Fraction(9, 16))
+source_and_current_mass=1/3250000000000
+odd_common_spine=all_nonzero_odd_q_at_frequency_13q
+odd_spine_points_checked=100000
+parallel_c3_rails=13
+ladder=N_m=13^3*(17+338m)
+root_character=4
+thirteen_adic_grade=3
+toothpick_step=c3=742586
+first_rung=37349
+second_rung=779935
+both_marks=local_source_and_exact_c2_current
+sample_rungs_checked=100000
+septimal_deletion=m_congruent_2_mod_7
+unit_survivor_edge_gaps=[1, 2]
+canonical_Ej_incidence=false
+scalar_rows_excluded=0
+lrc14_status=OPEN
+all_checks=PASS
