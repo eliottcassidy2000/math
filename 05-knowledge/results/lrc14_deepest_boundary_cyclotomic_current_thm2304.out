@@ -1,0 +1,15 @@
+strict_profiles=120
+pair_frequency_valuation=1
+relative_degree=13^(c-b)
+minimum_relative_degree=169
+minimum_nontrivial_currents=168
+maximum_nontrivial_currents=665416609183179840
+nondeep_conductor_exponent<=b-1
+deepest_conductor_exponent<=c-1
+nontrivial_deep_class_conductor_exponent>=b
+single_deepest_tooth=two_distinct_classes_at_least_one_nontrivial
+recursive_shell_count=12*(1+13+...+13^(c-b-1))
+recursive_shell_count_equals=13^(c-b)-1
+full_deepest_comb_control=zero_at_pair_frequency
+arbitrary_cut_endpoint_control=OUTSIDE_THEOREM_UNIVERSE
+status=THM2304_CYCLOTOMIC_CURRENT_EXACT_REFEREE
