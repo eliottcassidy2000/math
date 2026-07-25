@@ -1,0 +1,10 @@
+target 961/6930 0.13867243867243867
+distinct uncontrolled 8963699/62748517 0.1428511688969478 FAIL
+distinct penalties (((3, (0, 1)), Fraction(7, 64)), ((3, (1, 2)), Fraction(1, 2)), ((4, (0, 1)), Fraction(1, 256)), ((4, (1, 2)), Fraction(1, 14)), ((5, (1, 2)), Fraction(1, 128))) certified 159719273895/1574234794496 0.10145835580145146 PASS gap 28998933529879/779246223275520 relaxed 40924182149/787117397248 cap 1241/25088 calls 309 duals 159 bases 3008 vertex_census (94, 73, 73, 41, 73, 41, 41, 30, 34, 71, 71, 36, 71, 36, 36, 30, 34)
+eq01 uncontrolled 62694053/439239619 0.14273314675650878 FAIL
+eq01 penalties (((3, (0, 1)), Fraction(1, 2)), ((4, (0, 1)), Fraction(1, 8)), ((5, (0, 1)), Fraction(1, 128))) certified 897681961/8649641728 0.10378255992893767 PASS gap 149383550777/4281572655360 relaxed 15834701/270301304 cap 81/1792 calls 169 duals 79 bases 58 vertex_census (9, 8, 8, 6, 6, 8, 8, 6, 6)
+eq02 uncontrolled 62692901/439239619 0.1427305240422768 FAIL
+eq02 penalties (((3, (0, 1)), Fraction(2, 3)), ((4, (0, 1)), Fraction(3, 32)), ((5, (0, 1)), Fraction(1, 128))) certified 32921235043/337336027392 0.09759181459958324 PASS gap 2286565797041/55660444519680 relaxed 18763571/439239619 cap 295/5376 calls 137 duals 83 bases 58 vertex_census (9, 8, 8, 6, 6, 8, 8, 6, 6)
+eq12 uncontrolled 62691380/439239619 0.1427270612398924 FAIL
+eq12 penalties (((3, (0, 1)), Fraction(2, 3)), ((4, (0, 1)), Fraction(1, 256))) certified 11106308699/96381722112 0.11523251977272161 PASS gap 2609352610927/111320889039360 relaxed 7571445773/112445342464 cap 515/10752 calls 135 duals 77 bases 58 vertex_census (9, 8, 8, 6, 6, 8, 8, 6, 6)
+all_equal uncontrolled 52940/371293 0.1425828119571336 FAIL
