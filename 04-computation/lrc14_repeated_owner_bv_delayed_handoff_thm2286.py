@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact arithmetic audit for THM-2282's repeated-owner BV handoff."""
+"""Exact arithmetic audit for THM-2286's repeated-owner BV handoff."""
 
 from fractions import Fraction
 
@@ -88,7 +88,7 @@ def main():
         "unexpected full-comb crossing",
     )
 
-    print("THM-2282 REPEATED-OWNER BV DELAYED HANDOFF -- exact audit")
+    print("THM-2286 REPEATED-OWNER BV DELAYED HANDOFF -- exact audit")
     print(f"profiles: {len(profiles)}; deepest depths: 5..19")
     print(f"selected-owner depth set: {sorted(selected_depths)}")
     print(f"exclusive total/owner floor: {REPEATED_EXCLUSIVE} {OWNER_FLOOR}")

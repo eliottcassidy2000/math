@@ -1,5 +1,5 @@
 ---
-id: THM-2282
+id: THM-2286
 title: "Repeated-owner BV mixing and delayed blocker handoff"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENT HOSTILE AUDIT ACCEPTED. In every
@@ -13,7 +13,7 @@ status: >
   13^k >= (2375132760/5229541)S, a set of mass at least
   13560199813/106987855174200 travels from the exclusive owner to a
   state serviced by another blocker and by neither the marked owner,
-  guard absorber, nor any unit mask. Thus, together with THM-2279, every
+  guard absorber, nor any unit mask. Thus, together with THM-2283, every
   one of the 165 remaining first-depth-one profiles forces a positive
   ancestry-compatible delayed blocker-only handoff. This excludes no
   profile and does not place the handoff at prescribed expiration.
@@ -27,15 +27,15 @@ related:
   - THM-2267-static-owner-coverage-is-flag-and-transition-holonomy-is-a-cut-kernel
   - THM-2268-two-shell-private-owner-trident-and-raw-carry-cocycle-no-go
   - THM-2271-expiration-support-forces-a-weighted-owner-absorber-cut
-  - THM-2279-shallow-owner-bv-mixing-and-delayed-blocker-handoff
-script: 04-computation/lrc14_repeated_owner_bv_delayed_handoff_thm2282.py
-output: 05-knowledge/results/lrc14_repeated_owner_bv_delayed_handoff_thm2282.out
-script_sha256: a9dc305d820fdd801b0e9f94da3ce413e383fb8816533f584f149a99bfd1f3c9
-output_sha256: eb99e08182cf57987078e65bc5ae8cfb49ed712f2294dbcb09417d25b07acbef
+  - THM-2283-shallow-owner-bv-mixing-and-delayed-blocker-handoff
+script: 04-computation/lrc14_repeated_owner_bv_delayed_handoff_thm2286.py
+output: 05-knowledge/results/lrc14_repeated_owner_bv_delayed_handoff_thm2286.out
+script_sha256: 129939aa70a5e838f314cc3738cb2d656c3c4818ffc453b970b8e4f51da721af
+output_sha256: 64788559e0c93d142e59979a8e1f446fa206b164cdbdcb3b20463155adaf2171
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2282 -- delayed blocker-only handoff on every repeated row
+# THM-2286 -- delayed blocker-only handoff on every repeated row
 
 Use the scalar five-unit/three-blocker notation
 
@@ -324,7 +324,7 @@ has positive measure.                               (29)
 The BV proof establishes (29) only after the coefficient-dependent mixing
 horizon (6). THM-2261's expiration-surjectivity example explains why the
 fixed-time implication cannot be recovered from raw owner support, and
-the finite root-word controls in THM-2279 explain why terminal phase or
+the finite root-word controls in THM-2283 explain why terminal phase or
 carry cannot be dropped when trying to transport the delayed handoff back
 to expiration.
 
@@ -332,7 +332,7 @@ Accordingly the theorem proves neither a scalar-profile exclusion nor
 LRC(14). Its exact gain is the removal of a branch gap:
 
 ```text
-150 strict profiles (THM-2279)
+150 strict profiles (THM-2283)
  + 15 repeated-first profiles (this theorem)
  = 165 first-depth-one profiles
 
@@ -351,8 +351,8 @@ horizon normalization, the positive handoff constant, and the
 half-comb/full-comb stopping inequalities in (28). Reproduce with
 
 ```bash
-python3 04-computation/lrc14_repeated_owner_bv_delayed_handoff_thm2282.py
-python3 -O 04-computation/lrc14_repeated_owner_bv_delayed_handoff_thm2282.py
+python3 04-computation/lrc14_repeated_owner_bv_delayed_handoff_thm2286.py
+python3 -O 04-computation/lrc14_repeated_owner_bv_delayed_handoff_thm2286.py
 ```
 
 Normal and optimized transcripts are byte-identical to the stored output.
