@@ -1,0 +1,8 @@
+THM-2273 independent interval/root referee
+direct_odd_bank=2 max=10/91 equality=[(1, 1)]
+direct_even_bank=22 max=725/7098 equality=[(1, 6)]
+direct_gap_two_danger=25/1183
+root_laws_checked_parents=169
+safe_gap_speeds_checked=(1,13,169)
+common_time_minimax_factor=2197/460
+status=INDEPENDENT_DIRECT_INTERVAL_ROOT_PASS

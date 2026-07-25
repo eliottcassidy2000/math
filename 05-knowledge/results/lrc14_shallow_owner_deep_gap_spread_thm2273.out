@@ -1,0 +1,31 @@
+THM-2273 SHALLOW-OWNER / DEEP-SUCCESSOR GAP SPREAD
+guard_deep_normalized_odd_max=5/49 equality=[(1, 1)]
+guard_deep_normalized_even_max=5/294 equality=[(1, 6)]
+strict_profiles=150 worst=[(1, 3, 5)]
+uniform_shallow_exact_one_floor=5696989/367580070
+coarse_floor_gain=29/72773428
+transport_factors=A:169/20 C:169/120 B:2197/240 optimized:2197/460
+uniform_common_time_image=5696989/76962600
+uniform_image_minus_1/14=1397623/538738200
+uniform_image_minus_6/91=4357723/538738200
+b2_floor/image/gaps=80120351/5146120980 80120351/1077476400 15
+adjacent_floor/image/minus_1/13=271263857/16724893185 271263857/3501798300 1894757/3501798300
+uniform_successor_gap_counts:
+  c-b=1: 1
+  c-b=2: 2
+  c-b=3: 15
+  c-b=4: 190
+  c-b=5: 2467
+  c-b=6: 32065
+  c-b=7: 416844
+  c-b=8: 5418960
+  c-b=9: 70446474
+  c-b=10: 915804157
+  c-b=11: 11905454038
+  c-b=12: 154770902485
+  c-b=13: 2012021732303
+  c-b=14: 26156282519928
+  c-b=15: 340031672759064
+  c-b=16: 4420411745867827
+  c-b=17: 57465352696281748
+status=PROVED_VERIFIED_EXACT
