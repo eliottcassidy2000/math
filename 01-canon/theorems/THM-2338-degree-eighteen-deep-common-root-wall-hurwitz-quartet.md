@@ -2,7 +2,8 @@
 id: THM-2338
 title: "Degree-eighteen deep common-root wall and the Hurwitz quartet"
 status: >
-  PROVED + VERIFIED-EXACT. On the simultaneous wall 126D=25B^2 and
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. On the
+  simultaneous wall 126D=25B^2 and
   21W=-20BC, the structured Mordell polynomial 4P^3+49Q^2 has
   square-class degree at most four at exactly three weighted-projective
   parameter orbits. Every one has square-class degree exactly four;
@@ -25,7 +26,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2338 -- three Hurwitz quartets on the deep common-root wall
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Retain THM-2332's structured polynomials
 
@@ -246,4 +247,12 @@ their separation, each number-field gcd in (13)--(15), the
 radical-free relations (16), and generic squarefree hostile controls.
 No executable check uses Python `assert`.
 
-Independent audit is pending. QED.
+The independent hostile audit rebuilt (3)--(5) with custom sparse
+arithmetic and recovered (6) from a custom exact `11 x 11`
+Sylvester/Bareiss determinant. Evenness and weighted degree reduce the
+normalized discriminant to degree at most five in `t`; six independent
+exact samples therefore certify the full factorization without reusing
+the SymPy path. Custom Euclidean algorithms over `Q(sqrt(3))` reproduced
+all three degree-one gcds and their signs. The audit also checked the
+edge chart, orbit quotient, support, controls, hashes, and byte-identical
+normal/optimized transcripts. QED.
