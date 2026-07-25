@@ -188,7 +188,7 @@ latter's composite union; THM-2250 closes every unequal-core partition, and
 THM-2257's exact `169`-image sieve contradicts the capacity of its common-core
 branch. The exact scalar ledger is therefore `165`, all at first depth one.
 THM-2234 supplies private expansion. THM-2255's cap `25/1183` forces exclusive-owner mass: the `150` strict rows have an expiration image `>=88159/415800>1/7`,
-while the `15` `(1,1,c)` rows have only `>=14627/207900<1/7`. Open targets are its labelled handoff and THM-2239's time-zero literal. LRC(14) remains open.
+while the `15` `(1,1,c)` rows have only `>=14627/207900<1/7`. THM-2261 proves the raw guard-owner expiration image is the whole circle, so a target must use global multicore cover data. Open targets are that labelled handoff and THM-2239's time-zero literal. LRC(14) remains open.
 
 ### Independent routes that remain live
 

@@ -1,0 +1,13 @@
+THM-2261 exact verification
+transition=((Fraction(11, 13), Fraction(2, 13)), (Fraction(12, 13), Fraction(1, 13)))
+stationary=(Fraction(6, 7), Fraction(1, 7))
+carrier_word_count=25
+carrier_mass=6055/28561
+expiration_floor=88159/415800
+crossing_gap=240199/11875663800
+witness_x=79/338
+unit_speeds=(339, 677, 1015, 1353, 1691)
+strict_profiles_checked=150
+witness_expiration_y=1/2
+witness_future_word=000000000000
+ALL_CHECKS_PASSED
