@@ -1,0 +1,15 @@
+THM-2264 exact referee
+equal_degree_identity=PASS n=5..200
+lrc14_H29_budget=182/187
+lrc14_H29_B=1828518162230556187140793681/308944755478238922000000000000
+lrc14_H28_last_factor=-1/203
+anisotropic_profile=1x21+(13-1)x29 margin=23/25993
+anisotropic_profile=2x25+(13-2)x29 margin=13/2771
+anisotropic_profile=3x26+(13-3)x29 margin=89/31603
+anisotropic_profile=5x27+(13-5)x29 margin=1/935
+anisotropic_profile=10x28+(13-10)x29 margin=65/33847
+balanced_total_366_budget=33866/33847
+balanced_total_367_budget=33782/33847
+height_1_105_budget=12194/12217
+height_1_105_margin=23/12217
+ALL_CHECKS_PASS
