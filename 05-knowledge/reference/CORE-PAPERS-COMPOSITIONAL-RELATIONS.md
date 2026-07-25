@@ -93,3 +93,28 @@ This sidecar preserves detailed records routed compactly from
   absence, multiedges, endpoint colors, matching multiplicity, and complex
   amplitudes. Current claims on the maintained page require their own
   paper/formal-proof audit before entering the proved dependency graph.
+
+## Traub--Vargas Koch--Zenklusen -- *Single-Source Unsplittable Flows in Planar Graphs*
+
+- **Primary / freshness:** [arXiv:2308.02651v1](https://arxiv.org/abs/2308.02651),
+  submitted 2023-08-04. **PREPRINT v1; Definition 1.1, Conjecture 1.3, and
+  Theorems 1.7--1.8 checked 2026-07-24.**
+- **Imported role:** states Goemans' exact cost-enhanced `d_max` conjecture and
+  proves the planar cost-free two-sided `d_max` and cost-preserving two-sided
+  `2d_max` conclusions.
+- **Repo consumer:** [THM-2177](../../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md)
+  independently refutes the exact cost conjecture with a planar graph-level
+  certificate and a nonempty open parameter region.
+- **Does not prove:** the `d_max` cost conjecture. THM-2177 does not contradict
+  either planar theorem; its all-cheap routing satisfies the `2d_max` result.
+
+## Swamy--Traub--Vargas Koch--Zenklusen -- *Unsplittable Cost Flows from Unweighted Error-Bounded Variants*
+
+- **Primary / freshness:** [arXiv:2510.21287v1](https://arxiv.org/abs/2510.21287),
+  submitted 2025-10-24. **PREPRINT v1; checked 2026-07-24.**
+- **Imported role:** records the exact cost conjecture as open in the
+  pre-counterexample literature and derives a cost guarantee with `2d_max`
+  error from the Morell--Skutella unweighted two-sided conjecture.
+- **Does not prove:** the exact `d_max` statement. The public conversation
+  supplying THM-2177's integer instance is not peer reviewed; the repo result
+  rests on its independent proof and exhaustive checker, not a priority claim.
