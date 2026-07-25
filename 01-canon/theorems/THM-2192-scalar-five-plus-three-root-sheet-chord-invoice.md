@@ -24,7 +24,9 @@ status: >
   length-count separator. The unit-annulus law also eliminates
   every branch in which the maximum valuation among the three actual blockers
   is repeated; a survivor has a unique deepest blocker. The scalar
-  five-plus-three tail is narrowed but not emptied, so this is not a proof of
+  scalar five-plus-three tail is narrowed but not emptied. THM-2196 removes
+  its abstract relation-dimension deficit conditional on an injective lift,
+  but does not construct or height-control that lift. This is not a proof of
   LRC(14).
 source: codex-2026-07-24-scalar-five-plus-three-root-sheets
 depends_on:
@@ -36,6 +38,7 @@ related:
   - THM-2186
   - THM-2190
   - THM-2193
+  - THM-2196
 script: 04-computation/lrc14_scalar_five_plus_three_root_sheet_chords_thm2192.py
 output: 05-knowledge/results/lrc14_scalar_five_plus_three_root_sheet_chords_thm2192.out
 script_sha256: 6c8796b6aeeb7539157974c9ec2b6eb91d32263e1d72cb569e7dbd970657b50e
@@ -783,6 +786,30 @@ bounded relations inside `T(L_eval)` beyond the worst-case rank-seven
 guarantee.  Neither (27) nor this internal-rank condition is supplied by
 THM-2190 or THM-2193.  Thus even THM-2193's explicit height
 `78*7^21` rank-seven harvest does not by itself close scalar `5+3`.
+
+### Rank-twelve update: dimension is no longer the debt
+
+THM-2196 upgrades the bounded relation span for every zero-Haar candidate:
+
+```text
+W_(H_12)(V)=Lambda(V)_Q,                  dim=12.     (29)
+```
+
+Indeed its left side has dimension at least twelve and lies in the
+twelve-dimensional full relation space. Consequently, if the injective lift
+(27) exists, then
+
+```text
+W_(H_12)(V) intersection T(L_eval)=T(L_eval),         (30)
+dim T(L_eval)=8.
+```
+
+Thus the Grassmann dimension loss in (28) disappears at rank twelve. This
+does **not** yet produce eight bounded relations in the nine scalar
+coordinates: neither theorem constructs `T`, bounds its denominators, nor
+controls the height of an inverse image under `T`. The exact scalar
+relation-rank residual is therefore lift existence plus height transport,
+not a shortage of ambient relation dimension.
 
 ## 7. Scope
 

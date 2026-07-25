@@ -6,15 +6,17 @@ status: >
   specializations) +
   PROVED RELATIVE TO CITED LOWER-DIMENSIONAL LRC through THM-609
   and THM-2053 (seven-label divergence, the carry-lock rank ladder, and
-  projective finiteness of zero-Haar rows). Every bounded rank-r relation
+  projective finiteness of zero-Haar rows), with a universal but presently
+  uncomputed finite-height rank-twelve harvest. Every bounded rank-r relation
   matrix with a strictly positive kernel vector has a finite semilinear atlas
   whose generators are primitive nonnegative circuits of support at most
   r+1 and explicitly bounded height. Applying THM-2190/2193 gives finite
   seven-carry/rank-six and six-carry/rank-seven atlases. THM-2053 turns every
   stabilized carry subspace of dimension at least two into a positive-Haar
   torus unless a new fixed independent relation survives. Consequently every
-  infinite zero-Haar sequence has a common-dilation subsequence, and the
-  primitive zero-Haar locus is finite. This does not prove LRC(14).
+  infinite zero-Haar sequence has a common-dilation subsequence, the
+  primitive zero-Haar locus is finite, and universal finite heights
+  H_8,...,H_12 exist. This does not compute those heights or prove LRC(14).
 source: codex-2026-07-24-relation-carry-spectrum
 depends_on:
   - THM-2190-basis-safe-floor-and-height-500-rank-six-harvest
@@ -463,7 +465,94 @@ Then `||t_n-t_0||<=1/(2n)`, and
 Thus `t_n` is a strict safe time. The threshold is independent of the size
 of `u`.
 
-## 5. Boundary and exact loss
+## 5. A uniform finite-height rank-twelve harvest
+
+The subsequence rank ladder can be made uniform, though not numerically
+efficient in the present proof. Recall
+
+```text
+W_H(v)=span_Q{a in Z^13:a.v=0, ||a||_infinity<=H}.           (39)
+```
+
+> **Finite-height rank-twelve theorem.** Relative to `LRCUpTo13`, there are
+> universal finite integers
+>
+> ```text
+> H_7=78 7^21 < H_8 < ... < H_12                           (40)
+> ```
+>
+> such that every positive, repetition-free thirteen-speed row with zero
+> Haar-safe mass satisfies
+>
+> ```text
+> dim_Q W_(H_r)(v)>=r                  for 7<=r<=12.         (41)
+> ```
+
+The base `r=7` is THM-2193. Suppose `H_r` has been chosen for some
+`7<=r<=11`. Let `F_r` be the finite family of rational `r`-planes spanned by
+independent integer rows of height at most `H_r` and whose orthogonal
+contains a positive vector. For `S in F_r`, put
+
+```text
+L_S=S intersection Z^13,
+delta(S)=Haar_(K_(L_S))(K_(L_S) intersection J^13),
+J=[1/14,13/14].                                             (42)
+```
+
+The rational speed subspace `T=S^perp` has dimension `13-r>=2` and contains
+a positive real row. Its positive cone is open in `T`, so it also contains a
+positive rational row and, after scaling, a positive integer row. Moreover
+`T^perp intersection Z^13=S intersection Z^13=L_S`. Section 4 therefore
+gives `delta(S)>0`. Finiteness gives
+
+```text
+delta_r=min_(S in F_r) delta(S)>0.                          (43)
+```
+
+Use the normalized squared-Fejer approximants from THM-2193, Section 6.
+Their one-coordinate `L1` error `eta_N` tends to zero and their Fourier
+degree is `2N-2`. Choose `N_r` large enough that
+
+```text
+26 eta_(N_r)<delta_r,
+H_(r+1)=2N_r-2>H_r.                                        (44)
+```
+
+Now let `v` have zero Haar-safe mass and suppose (41) holds at rank `r`. If
+`dim W_(H_r)(v)>=r+1`, monotonicity gives the next step. Otherwise put
+
+```text
+S=W_(H_r)(v),                 L=L_S.                        (45)
+```
+
+If `dim W_(H_(r+1))(v)=r`, every line resonance in the approximant's Fourier
+box belongs to the full saturated lattice `L`, while every element of `L`
+is a line resonance. The line and `K_L` Fourier averages therefore agree
+exactly. Product telescoping, exactly as in THM-2193, would give
+
+```text
+delta_r<=delta(S)<=26 eta_(N_r),                            (46)
+```
+
+contrary to (44). Hence the next rank appears. Induction proves (40)--(41).
+
+Choose twelve independent rows of height at most `H_12` and place them in a
+`12 x 13` matrix. Its signed maximal minors generate the one-dimensional
+integer kernel. After dividing their gcd, the primitive speed row satisfies
+the Hadamard bound
+
+```text
+max_i v_i<=(sqrt(12)H_12)^12=12^6 H_12^12.                 (47)
+```
+
+Thus the rank ladder is finite and constructive in principle: enumerate
+each `F_r`, compute the rational-polyhedral masses (42), and choose `N_r`.
+No such enumeration is performed here, so `H_8,...,H_12` and (47) remain
+nonnumeric. THM-763 supplies a much better explicit height ceiling by a
+different zonotopal argument; the new content is the bounded **relation-rank
+flag** through rank twelve.
+
+## 6. Boundary and exact loss
 
 The atlas is lossless only while the carry vector is retained. Forgetting
 the carries leaves a finite carrier but destroys endpoint current, phase
@@ -474,8 +563,8 @@ and removes every infinitary projective escape: only common dilation can
 survive indefinitely. It does not:
 
 1. enumerate or discharge the finite primitive zero-Haar locus;
-2. improve THM-763's effective height ceiling;
-3. bound the new relations produced by the carry-lock argument;
+2. compute or optimize `H_8,...,H_12`;
+3. improve THM-763's effective speed ceiling;
 4. preserve weak safe-set nonemptiness after forgetting the carries; or
 5. prove LRC(14).
 

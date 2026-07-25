@@ -176,10 +176,10 @@ floor `7^-21`, rank seven by `78*7^21`, and explicit deletion rank six.
 Its septimal addendum gives safe deep `7^k` cover points but factors THM-2188
 into a positive torus and opposite primitive slopes. Rank/torsion abundance
 still loses slope/current.
-THM-2196 gives finite semilinear circuit/carry charts. With THM-2053 it proves
-every infinite zero-Haar family has a common-dilation subsequence, so the
-primitive locus is finite; its one-carry gate `n>91||c||_infinity` ignores ray
-height. The finite locus is neither enumerated nor emptied.
+THM-2196 gives finite circuit/carry charts, universal but uncomputed relation
+heights through rank twelve, and (with THM-2053) projective finiteness; its
+one-carry gate `n>91||c||_infinity` ignores ray height. The primitive locus is
+neither enumerated nor emptied.
 THM-2174's exact-measure quotient is infinite, while its fixed-core
 positive-/zero-Haar quotient has one or two states and no uniform core modulus.
 THM-735 and THM-2182/2184 give remote-tail and grid/mixed-core terminals;
