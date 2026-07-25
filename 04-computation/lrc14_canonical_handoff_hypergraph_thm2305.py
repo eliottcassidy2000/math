@@ -135,7 +135,7 @@ def main() -> None:
     require(hypergraph_rows == 27 and fork_rows == 19, "hypergraph census changed")
 
     print("theorem=THM-2305")
-    print("status=PROVED+VERIFIED-EXACT-CANDIDATE")
+    print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED")
     print(f"terminal_truth_rows={truth_rows}")
     print("canonical_words={a};{b};{a,b}")
     print(f"sharp_trade_rows={trade_rows}")

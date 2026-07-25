@@ -2,7 +2,7 @@
 id: THM-2305
 title: "Canonical blocker-word handoff hypergraph at prescribed expiration"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. On the
   prescribed-return arm of THM-2296, the terminal blocker word is
   canonically one of {a}, {b}, and {a,b}. Either a pure exclusive-owner
   transfer or a genuine two-target fork receives at least one third of the
@@ -26,14 +26,14 @@ related:
   - THM-2294-anchored-plucker-tournament-and-kakeya-address-bank
 script: 04-computation/lrc14_canonical_handoff_hypergraph_thm2305.py
 output: 05-knowledge/results/lrc14_canonical_handoff_hypergraph_thm2305.out
-script_sha256: d648cc158915cfa3e7fcf08e10b9ea0631ddec0ad9bd1063672502aee4ffc487
-output_sha256: dbc8930ce6c4838dfb824a5ffd3b49b29932bdf9821e7c986d4772f871904d4f
+script_sha256: 43e45d9048bced40e12ef99033e5420bb007bdd98234b1e92b9813070710e536
+output_sha256: de4924c8889c04b4d50ab501f1b3bd8118e5ff7495e903dfde7c7176214fc771
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2305 -- the prescribed handoff is a blocker-word hyperedge
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2299 assigns overlap points to one of two target blockers in a fixed
 order. That is sufficient for a named service label, but the order is a

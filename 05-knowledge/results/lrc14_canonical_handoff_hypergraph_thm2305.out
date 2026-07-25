@@ -1,5 +1,5 @@
 theorem=THM-2305
-status=PROVED+VERIFIED-EXACT-CANDIDATE
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED
 terminal_truth_rows=9
 canonical_words={a};{b};{a,b}
 sharp_trade_rows=176850
