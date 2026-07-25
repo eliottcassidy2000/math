@@ -1,0 +1,19 @@
+THM-2167 RANK-TWO ADAPTIVE CARRY REFEREE
+primes=(2, 3, 5, 7, 11, 13)
+prime_product=30030
+height=105
+minor_bound=22050
+abstract_endpoint_determinant=2310
+abstract_endpoint_independence=((2, False), (3, False), (5, False), (7, False), (11, False), (13, True))
+binary_rank_two_digit_fibres=[((0, 0), 2048), ((0, 1), 2048), ((1, 0), 2048), ((1, 1), 2048)]
+binary_fibre_size=2048
+ap_carry_r=(0, 0, 0, 0, 0)
+ap_carry_s=(0, 1, 1, 0, 0)
+pump_owner=(0, 1, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+pump_carry_r=(0, 0, 0, 0)
+pump_carry_s=(0, 0, 0, 0)
+pump_row=(13, 16, 1, 2, 9, 10, 11, 12, 14, 15, 17, 18, 19)
+pumped_row=(4, 4, 1, 2, 3, 4, 5, 3, 5, 3, 5, 6, 7)
+pump_preserves=positivity,two_relations
+pump_destroys=distinctness
+status=PASS
