@@ -130,8 +130,8 @@
 40. **`H>=disc` remains open.** THM-1950 reduces to strong tournaments and
     verifies finite cases only.
 41. **Do not manufacture tournaments from ties.** Without an intrinsic binary
-    relation and honest tie semantics, use a preorder, signed graph,
-    hypergraph, packet, or bipartite carrier.
+    relation and honest tie semantics, use the actual carrier. THM-2221's
+    pinned-context observable is a symmetric cut semimetric plus core kernel.
 42. **Paley scope is prime and residue-specific.** Composite modulus 14 is not
     a Paley tournament (MISTAKE-232).
 43. **Higher GLMY path homology is convention-disputed.** Treat only the

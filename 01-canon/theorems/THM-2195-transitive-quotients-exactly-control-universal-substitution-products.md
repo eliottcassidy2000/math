@@ -36,6 +36,7 @@ related:
   - THM-1960
   - THM-2176
   - THM-2216-residual-capacity-hinge-gram-law
+  - THM-2221-tournament-context-cut-metric-and-pinned-transport-response
 script: 04-computation/tournament_partial_automorphism_derivative_thm2195.py
 output: 05-knowledge/results/tournament_partial_automorphism_derivative_thm2195.out
 script_sha256: 596740b0b85cba16d5a84c82b90dbdebdbc8a7b67ded24aa303cd89e1ed6485b
@@ -636,11 +637,11 @@ is linear in `N`; internal tournament separation is quadratic, so the
 triangle transport eventually wins.
 
 The theorem now rules out both the fixed-correspondence product and its
-quotient-automorphism repair outside their stated regimes. It does not
-classify a formula allowing fractional or vertex-level transport between
-quotient blocks. The correct next object is a block transport matrix carrying
-internal edit costs, block-size conservation, and quotient-arc disagreement
-costs.
+quotient-automorphism repair outside their stated regimes. The later
+THM-2221 supplies the exact pinned-exterior term for arbitrary split
+block transport as an integer cut-metric pairing. It does not classify the
+remaining core kernel or allow core vertices to exchange with the pinned
+exterior.
 
 This boundary is the tournament analogue of THM-2176's distinction between
 decomposition-respecting cost and bypass after forgetting a product marker.

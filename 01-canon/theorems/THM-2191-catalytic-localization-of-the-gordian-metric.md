@@ -37,6 +37,8 @@ related:
   - THM-2183-order-join-is-an-exact-tournament-metric-product
   - THM-2188-finite-phase-bank-and-pairwise-overlap-no-go
   - THM-2195-transitive-quotients-exactly-control-universal-substitution-products
+  - THM-2220-fixed-context-stable-response-and-catalyst-complexity
+  - THM-2221-tournament-context-cut-metric-and-pinned-transport-response
 external:
   - "Horst Schubert, Die eindeutige Zerlegbarkeit eines Knotens in Primknoten, Sitzungsberichte der Heidelberger Akademie der Wissenschaften 1949/3, 57--104, DOI 10.1007/978-3-642-45813-2."
   - "Brendan Owens and Saso Strle, Immersed disks, slicing numbers and concordance unknotting numbers, Communications in Analysis and Geometry 24 (2016), 1107--1138, DOI 10.4310/CAG.2016.v24.n5.a8, arXiv:1311.6702."
