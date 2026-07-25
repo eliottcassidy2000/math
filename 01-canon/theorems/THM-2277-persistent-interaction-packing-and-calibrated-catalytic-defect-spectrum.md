@@ -1,5 +1,5 @@
 ---
-id: THM-2272
+id: THM-2277
 title: "Persistent interaction packing and the calibrated catalytic defect spectrum"
 status: >
   PROVED (abstract commutative nonexpansive metric-monoid theorem) + CITED
@@ -34,7 +34,7 @@ external:
   - "Mark Brittenham and Susan Hermiller, Unknotting number is not additive under connected sum, arXiv:2506.24088v2."
 ---
 
-# THM-2272 -- persistent interaction packing and calibrated spectra
+# THM-2277 -- persistent interaction packing and calibrated spectra
 
 THM-2259 retains a separate Boolean defect game over every diagonal
 continuation. There are two useful ways to compress that stalk, and they

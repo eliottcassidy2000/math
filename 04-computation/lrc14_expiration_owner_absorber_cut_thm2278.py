@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact arithmetic audit for THM-2271."""
+"""Exact arithmetic audit for THM-2278."""
 
 from fractions import Fraction
 
@@ -28,7 +28,7 @@ def main():
     assert repeated_gap == -Fraction(4809059, 70270200)
     assert repeated_gap < 0
 
-    print("THM-2271 exact arithmetic audit")
+    print("THM-2278 exact arithmetic audit")
     print("strict profiles:", strict_profiles)
     print("strict labelled owner floor:", strict_owner)
     print("strict expiration-image floor:", strict_image)
