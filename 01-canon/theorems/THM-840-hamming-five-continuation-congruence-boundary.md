@@ -1,10 +1,10 @@
 ---
 id: THM-840
 title: Exact endpoint geometry is insertion-Markov while the Hamming-five handoff quotient is not
-status: PROVED (operation-kernel congruence and exact insertion/deletion boundary) + FINITE-EXACT (handoff, residual, maximin, and tournament replay)
+status: PROVED (operation-kernel congruence, minimal linear continuation-sidecar rank, and exact insertion/deletion boundary) + FINITE-EXACT (handoff, residual, maximin, and tournament replay)
 source: codex-2026-07-15-S10 continuation
 depends_on: [THM-822, THM-828, THM-832]
-related: [THM-837, HYP-6820]
+related: [THM-837, THM-2230, THM-2237, THM-2240, HYP-6820]
 verification:
   - 04-computation/lrc13_hamming_five_continuation_congruence_codex_S10.py
   - 05-knowledge/results/lrc13_hamming_five_continuation_congruence_codex_S10.out
@@ -55,6 +55,102 @@ the criterion. ∎
 Static injectivity or gluing is a different question.  It asks whether some
 family of observations reconstructs `x`; (1) asks whether one observation's
 equivalence classes are congruences for the named operations.
+
+## 1a. Exact rank of a linear continuation sidecar
+
+There is a quantitative linear form of the same criterion. Let
+
+```text
+R:V -> Y,                    N:V -> Z                 (1a)
+```
+
+be linear maps of vector spaces over one field. Here `R` is the present
+response and `N` is one named next observable. A linear sidecar
+
+```text
+S:V -> W                                               (1b)
+```
+
+makes `N` recoverable from `(R,S)` if and only if
+
+```text
+ker(R) intersection ker(S) subset ker(N).             (1c)
+```
+
+When (1c) holds, the induced recovery map on `im(R,S)` is automatically
+linear. Define the continuation-defect rank
+
+```text
+d_R(N)=dim N(ker R).                                   (1d)
+```
+
+Then the minimum possible rank of a repairing linear sidecar is exactly
+
+```text
+min_S rank(S)=d_R(N).                                  (1e)
+```
+
+This statement includes infinite dimensions: if `d_R(N)` is infinite, no
+finite-rank linear sidecar can repair the response for this named
+continuation.
+
+### Proof
+
+Condition (1c) is the operation-kernel criterion applied to the joint
+observation `(R,S)`. If it holds, restriction to `ker R` makes `N` factor
+through `S|_(ker R)`. Therefore
+
+```text
+dim N(ker R)<=dim S(ker R)<=rank(S),                  (1f)
+```
+
+which proves the lower bound.
+
+Conversely, restrict `N` to `ker R` and identify
+
+```text
+ker R/(ker R intersection ker N) ~= N(ker R).        (1g)
+```
+
+Use this quotient map as `S` on `ker R`, and extend it linearly from
+`ker R` to all of `V`, keeping codomain `N(ker R)`. Its rank is
+`d_R(N)`, and its kernel on `ker R` is exactly
+`ker R intersection ker N`. Thus (1c) holds and proves (1e).
+
+The ambient size of `V/ker R` is irrelevant. Only the image of the present
+kernel under the named future observable measures the required memory.
+Accordingly:
+
+```text
+d_R(N)=0       means the present kernel is a genuine gauge for N;
+d_R(N)>0       means it contains control/memory directions.             (1h)
+```
+
+Two current applications delimit the scope.
+
+- In THM-2237, truncated Boolean moments leave one affine direction, and
+  the even/odd parity laws prove that the top atom is nonconstant on it.
+  Hence the missing top-Walsh scalar has continuation-defect rank exactly
+  one.
+- In THM-2240, take `R=d_6` on pure grade-six Ore corrections and let `N`
+  be the change in the grade-seven residual. The arbitrary-`q` syzygy axis
+  maps injectively under `N`. Thus `d_R(N)` is infinite. On the span of
+  parameters
+
+  ```text
+  C(q,u)=sum_(r=0)^R sum_(s=0)^n c_(r,s)q^r u^s,
+  ```
+
+  the independent `q` layers and the injectivity of each layer already
+  force sidecar rank at least `(R+1)(n+1)`.
+
+This does not prove Ore or Weyl nontermination: THM-2240 permits
+state-dependent next-rung corrections. It says only that no fixed
+finite-rank linear statistic of the unrestricted current fiber makes that
+specific one-step response exact. Conversely, THM-2230's target-shear
+kernel is a true gauge for every downstream predicate proved invariant
+under target shears; for nonlinear predicates this is the set-theoretic
+kernel criterion, not a use of the linear rank formula.
 
 ## 2. Exact endpoint geometry is Markov for monotone addition
 
