@@ -2,7 +2,8 @@
 id: THM-2335
 title: "Degree-eighteen cyclic square-class stratum is empty"
 status: >
-  PROVED + VERIFIED-EXACT. For the structured quartic P and sextic Q of
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For the
+  structured quartic P and sextic Q of
   the degree-eighteen Jacobian spectral cone, 4P(y)^3+49Q(y)^2 is a
   square in C[y] if and only if B=C=D=W=0. Consequently the projective
   cyclic Hurwitz stratum H=1 isolated by THM-2332 is empty, including
@@ -28,7 +29,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2335 -- the cyclic square-class stratum is empty
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Use the structured polynomials from THM-2332:
 
@@ -330,4 +331,11 @@ substitution, computes both exact resultants and the first-branch gap,
 and includes the affine-apex positive control and a rejecting `B`-axis
 hostile control. No executable check uses Python `assert`.
 
-Independent audit is pending. QED.
+The independent hostile audit rebuilt `F`, the full top-down square-root
+recursion, and all six residual identities with a custom
+`Fraction`/dictionary polynomial ring rather than SymPy. It separately
+recomputed both Sylvester determinants, the first-branch gap, weighted
+normalization, every face split, and the affine-apex converse. It also
+confirmed byte-identical normal and optimized transcripts, both hashes,
+and the absence of floating-point, random, or optimized-away assertion
+paths. QED.
