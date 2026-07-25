@@ -9,6 +9,30 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-254 (2026-07-25, concurrent namespace audit) -- THM-2304 was reserved twice in flight
+
+- **What happened:** one session pushed the canonical blocker-word handoff
+  hypergraph reservation as `THM-2304`. Before seeing that remote commit, a
+  concurrent session pushed the deepest-boundary cyclotomic-current
+  reservation under the same YAML ID. The filenames were distinct and
+  neither empty stub had become a proved dependency, but the bare identifier
+  was temporarily ambiguous on `origin/main`.
+- **First failure:** checking the next ID before the first reservation did not
+  prevent a second reservation made from a stale remote view. The collision
+  was detected only after both in-flight commits landed.
+- **Repair:** the deepest-boundary cyclotomic-current reservation keeps
+  `THM-2304`. The earlier handoff-hypergraph stub is deleted and its theorem,
+  companion, transcript, hashes, and reproduction commands move coherently to
+  `THM-2305` before promotion. No mathematical claim or proved dependency
+  changes.
+- **Rule:** an ID check is a compare-and-swap operation, not a one-time read.
+  Fetch and search YAML IDs immediately before the reservation push, then
+  fetch and verify uniqueness immediately afterward. During a collision
+  repair, cite the slug and keep both files unproved until uniqueness is
+  restored.
+
+---
+
 ## MISTAKE-253 (2026-07-25, concurrent namespace audit) -- two theorem identifiers were allocated twice
 
 - **What happened:** concurrent sessions promoted both the expiration
