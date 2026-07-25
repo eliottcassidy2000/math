@@ -2,7 +2,7 @@
 id: THM-2333
 title: "Abel target-fibre sum landing and the zero-fibre boundary"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. On every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. On every
   positive strict shallow-owner word stratum covered by THM-2327, the
   zero mode of the extra word factor and the two nonzero bare endpoint
   coefficients form a nonzero convolution slice of the marked
@@ -34,7 +34,13 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2333 -- one target fibre survives, but it may be zero
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
+
+The independent audit re-derived the zero-word-mode slice, the
+finite-character projection with its conjugation conventions, extension
+independence of the target characters, existence of every Abel fibre
+limit, and the exact zero-only hostile.  It also reproduced the companion
+under normal and optimized Python with byte-identical output.
 
 THM-2331 embeds every prescribed target address as a nonzero term of the
 marked current's Abel expansion. It deliberately does not say that terms
