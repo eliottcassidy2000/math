@@ -1,6 +1,6 @@
 ---
 id: THM-2344
-title: "Correlation-inverse rigidity and the aligned-tooth twist hostile"
+title: "Correlation-inverse rigidity and the aligned-axis transported-word hostile"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the
   centered interval/complement specialization of THM-2334, the phase-free
@@ -10,9 +10,14 @@ status: >
   arrays are shifted convolution inverses. On the odd target group, this
   bad response is real exactly on the annihilator of p, so one real
   detecting twist, or global evenness/real-valuedness of K, excludes it.
-  Reflection and physical-factor positivity alone do not: a centered
-  danger/safe one-tooth model has positive scalar amplitude,
-  K(s,t)=c zeta^(-t), and all 169 full twists H(s,t)=c. The hostile is a
+  Reflection and physical-factor positivity alone do not. More sharply,
+  with only one active translated coordinate and 13 dividing the word
+  dilation, an arbitrary nonconstant transported word changes the
+  endpoint amplitude but cannot change its target character. A centered
+  safe factor times one transported danger factor gives a positive
+  12-tooth example with K(s,t)=c zeta^(-t) and all 169 full twists
+  H(s,t)=c. Thus at least two independently translated base coordinates
+  or genuine cross-coordinate mixing are necessary. The hostile is a
   sharp local factorized control, not a canonical nine-coordinate
   terminal-word row. No scalar row, word-matching component, visible
   all-unit aggregate, terminal phase, or LRC(14) closure is proved.
@@ -27,8 +32,8 @@ related:
   - THM-2340-owner-word-anova-target-landing
 script: 04-computation/lrc14_correlation_inverse_hostile_thm2344.py
 output: 05-knowledge/results/lrc14_correlation_inverse_hostile_thm2344.out
-script_sha256: 41e8f674c4f8ccc059e3ead0673ff50423115a994f25d71b186792a2276a710b
-output_sha256: 69c350342bac1814ac5622d443bc514571ab9371a8d7fced17362da6ed9b0ad7
+script_sha256: 3c8fff49a50dfa037c6207f2c111ea86704b9e9de8bd304a8076b5e7ea22bf23
+output_sha256: d75408ac3990ba69dadb862e39913d5d104c99256c395a86494313dd1daf0337
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -40,9 +45,12 @@ The independent audit rederived the quotient-safe reflection law, both
 finite Fourier signs in the endpoint cross-correlation, the shifted-unit
 equivalence, and the odd-order real-value separator.  It checked the
 danger and safe aligned-tooth models directly, including the positive
-amplitude and all `169` cancelling full twists.  Ordinary and optimized
-replays match the stored transcript byte-for-byte after LF normalization,
-and both recorded hashes match.
+amplitude and all `169` cancelling full twists.  It separately rederived
+the arbitrary same-axis transported-word congruence, checked the
+nonconstant twelve-tooth geometry including null boundaries, and verified
+its positive amplitude.  Ordinary and optimized replays match the stored
+transcript byte-for-byte after LF normalization, and both recorded hashes
+match.
 
 THM-2343 identifies one sharp failure line for the full target current:
 
@@ -56,11 +64,13 @@ guard, and complement is real and even.  That structure makes `K`
 Hermitian.  It forces the scalar `c` in (1) to be real, and it gives a
 cheap odd-order escape test.  It does **not** contradict (1).
 
-The exact surviving hostile is an aligned Fourier tooth.  Its endpoint
-translation contributes the inverse of the deepest-comb character, so the
-two phases cancel and every full twist is equal.  Thus the next proof
-needs a genuine non-alignment mechanism, not positivity or reflection
-alone.
+The exact surviving hostile is an aligned Fourier residue class.  Its
+endpoint translation contributes the inverse of the deepest-comb
+character, so the two phases cancel and every full twist is equal.  Even
+an arbitrary nonconstant transported word on the same axis cannot alter
+that residue character.  Thus the next proof needs a genuine
+multi-coordinate non-alignment mechanism, not positivity, reflection, or
+word nonconstancy alone.
 
 ## 1. Reflection of the canonical target twists
 
@@ -374,6 +384,98 @@ Accordingly it proves the logical insufficiency of reflection,
 centeredness, factor positivity, an untwisted positive scalar, and
 one-tooth support.  It does not prove that a canonical row is bad.
 
+### 4.1 Arbitrary same-axis transported words preserve the bad character
+
+The constant transported word in the first hostile is not the essential
+reason for failure.  Normalize the active deepest coordinate by
+
+```text
+x=c_3 tau.
+```
+
+Let `I,W` be arbitrary bounded-variation functions, let `13|R`, and
+consider the one-axis left and bare endpoint factors
+
+```text
+l_t(x)=I(x+t/13)W(Rx),
+f_t(x)=I(x+t/13).                                  (29a)
+```
+
+For integers `a,b`, Abel expansion followed by the ordinary boundary
+limit gives
+
+```text
+L_t(a)
+ =sum_beta I_hat(a-R beta)W_hat(beta)
+             zeta^((a-R beta)t)
+ =zeta^(a t)L_0(a),                                (29b)
+
+F_t(b)=zeta^(b t)I_hat(b).                         (29c)
+```
+
+The second equality in (29b) is the entire mechanism: every word
+harmonic changes the base harmonic by a multiple of `R`, hence by zero
+modulo `13`.  The word may be nonconstant and may have arbitrarily many
+harmonics; it changes `L_0(a)` but not the target character.
+
+If the physical triangle is aligned with this coordinate,
+
+```text
+b=a+m,
+```
+
+then, whenever the displayed endpoint coefficients are nonzero,
+
+```text
+K(s,t)
+ =d_hat(m)L_0(a)conjugate(I_hat(b))zeta^(-m t),
+
+H(s,t)=zeta^(m t)K(s,t)
+      =d_hat(m)L_0(a)conjugate(I_hat(b)).           (29d)
+```
+
+Thus **every** full target twist is constant for an arbitrary same-axis
+transported word.  Nonconstancy of the word alone cannot break the
+correlation-inverse boundary.
+
+There is an exact centered interval instance with a genuinely
+nonconstant word.  In (29a), take
+
+```text
+I=g,       W=d,       R=13,       a=1, b=2, m=1.   (29e)
+```
+
+Modulo null endpoints,
+
+```text
+g(x)d(13x)
+```
+
+is exactly the union of the twelve noncentral `13`-adic teeth.  Each has
+length `1/91` and centre `k/13`, `1<=k<=12`.  Therefore
+
+```text
+C:=L_0(1)
+  =sin(pi/91)/pi sum_(k=1)^12 zeta^(-k)
+  =-sin(pi/91)/pi <0.                              (29f)
+```
+
+Since `g_hat(2)=-d_hat(2)<0` and `d_hat(1)>0`, (29d) becomes
+
+```text
+K(s,t)=d_hat(1)C g_hat(2)zeta^(-t),
+
+H(s,t)=d_hat(1)C g_hat(2)>0                        (29g)
+```
+
+for all `169` target twists.  This example contains an actual
+nonconstant transported danger factor and still lies on the bad line.
+It remains a one-active-coordinate local model rather than a canonical
+nine-coordinate row.  Its precise consequence is a necessity statement:
+the next escape must use at least two independently translated base
+coordinates, or a cross-coordinate coupling that prevents all endpoint
+harmonics from sharing one target residue.
+
 ## 5. Refined remaining problem
 
 The boundary now has three equivalent descriptions:
@@ -409,11 +511,12 @@ phase attack:
 ```
 
 The hostile says the missing input must use interaction among multiple
-coordinates, the nonconstant transported word, owner asymmetry, or a
-visible-address/terminal-phase sidecar.  A tournament is not intrinsic
-here: the carrier is a real group-algebra correlation and its obstruction
-is an affine shift.  Orienting endpoint residues would discard amplitudes,
-convolution, and the distinguished translation `p`.
+independently translated coordinates, word/base coupling across distinct
+axes, owner asymmetry, or a visible-address/terminal-phase sidecar.  A
+nonconstant same-axis word is explicitly insufficient.  A tournament is
+not intrinsic here: the carrier is a real group-algebra correlation and
+its obstruction is an affine shift.  Orienting endpoint residues would
+discard amplitudes, convolution, and the distinguished translation `p`.
 
 No scalar profile is excluded.  The ledger remains `165`; repeated-first
 rows and alternative resonances remain outside THM-2327; and LRC(14)
@@ -427,8 +530,12 @@ singleton support shift, all `169` aligned-tooth phase cancellations,
 Hermitian reflection, the thirteen-point real-value annihilator, the
 odd-order evenness obstruction, and the danger/safe coefficient sign
 ledger, including both the positive-array danger variant and the safe
-variant.  Every load-bearing check raises explicitly under ordinary and
-optimized Python.
+variant.  It also checks the general same-axis residue congruence over
+`32,760` hostile parameter choices, the exact twelve-tooth geometry, the
+cyclotomic identity `sum_(k=1)^12 zeta^(-k)=-1`, the positive
+nonconstant-word amplitude, and all `169` resulting phase
+cancellations.  Every load-bearing check raises explicitly under
+ordinary and optimized Python.
 
 Reproduce with
 

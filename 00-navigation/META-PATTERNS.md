@@ -29,8 +29,8 @@
 
 **Trigger / action:** if phases have algebraic endpoints, rewrite coefficients as currents over the lower-phase field.
 **Mechanism:** finite cyclotomic/monomial coordinates make cancellation coordinatewise.
-**Counterindication:** not a nonvanishing proof; arbitrary cuts and uniform-comb cancellation require color/amplitude/owner.
-**Evidence:** THM-2022 preserves the lowest face; THM-2303/2304 extract endpoint currents; THM-2299/2344 give the hostile cut and aligned-tooth boundary.
+**Counterindication:** not a nonvanishing proof; arbitrary cuts and uniform-comb cancellation require color/amplitude/owner. A factor can be nonconstant yet phase-invisible: under a target-neutral dilation, all same-axis word harmonics remain in one residue class, so only cross-axis mixing can change the target character.
+**Evidence:** THM-2022 preserves the lowest face; THM-2303/2304 extract endpoint currents; THM-2299/2344 give the hostile cut and aligned-axis boundary, including the nonconstant twelve-tooth control.
 
 ## Search the statement before the method
 

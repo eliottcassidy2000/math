@@ -170,15 +170,12 @@ is the proved carrier that reduces each fixed bad-denominator/owner fiber to
 labelled primitive packets and one coprime interval. It makes the terminal
 exact and finite; it does not prove that every surviving interval is empty.
 
-THM-2187/2190/2193 and THM-2196/2199 force relation ranks seven and twelve; THM-2208/2212 bound the rank-eleven anchors. THM-2188 warns that grids still lose slope/current.
-THM-2168--2257 close every earlier scalar branch and `(3,4,5)`, leaving exactly `165` first-depth-one rows: `150` strict and `15` repeated-first. THM-2234/2255/2263 give their sharp private-mass and expiration floors; THM-2271--2291 add root modes, bounded lifts, handoffs, and exceptional-time bounds.
-THM-2295/2298 force scalar ranks five/six by `196/526`; THM-2301 gives bright/dark address banks, THM-2287 anchors rank six on `120` interiors, and THM-2307 shows only rank eight reconstructs the dual word.
-THM-2296/2305 retain prescribed return as an exact pure edge or fork. THM-2299 still kills its pair phase; THM-2303 identifies the missing terminal-component phase/current.
-THM-2323/2326/2327 force a marked `91`-unit deepest edge on every positive strict shallow-owner word stratum. The repeated-first rows and alternative resonance arms remain outside this input.
-THM-2321/2329 type the root and target gain; THM-2325/2331 put every nonzero target address, with many two-sided lifts, into the Abel expansion. THM-2333 warns that only the zero target may aggregate.
+THM-2168--2257 leave exactly `165` first-depth-one rows (`150` strict, `15` repeated-first); THM-2234/2255/2263 give sharp private-mass/expiration floors. THM-2295/2298 force scalar ranks five/six by `196/526`; THM-2287/2301/2307 supply anchored rank six, address banks, and the rank-eight dual-word threshold.
+THM-2296/2305 retain prescribed pure edges/forks; THM-2299 kills pair phase and THM-2303 names the missing terminal-component current. THM-2323/2326/2327 force a marked `91`-unit deepest edge on every positive strict shallow-owner word stratum, not the repeated/resonance rows.
+THM-2321/2329 type root/target gain; THM-2325/2331 put every nonzero target address into the Abel expansion, while THM-2333 permits zero-only aggregation.
 [THM-2334](../01-canon/theorems/THM-2334-relation-residue-current-and-character-twist-pushforward.md) retains the full word and turns target landing into a `169`-twist DFT. [THM-2337](../01-canon/theorems/THM-2337-expiration-word-residue-invisibility-and-first-bockstein-sidecar.md) recovers a surjective but gauge-dependent first jet and an exact masked energy.
-[THM-2340](../01-canon/theorems/THM-2340-owner-word-anova-target-landing.md) identifies pure-word landing with ordered main effects and fork landing with interaction. THM-2343 demodulates the deep phase; THM-2344 proves zero-only landing is exactly a shifted endpoint convolution inverse and gives a sharp aligned-tooth hostile.
-Break that inverse using multiple-coordinate/word asymmetry, then retain all-`91`-unit visibility and THM-2303 phase; otherwise attack the `15` repeated/resonance rows. The ledger remains `165`.
+[THM-2340](../01-canon/theorems/THM-2340-owner-word-anova-target-landing.md) identifies pure-word landing with ordered main effects and fork landing with interaction. THM-2343 demodulates the deep phase; THM-2344 proves zero-only landing is exactly a shifted endpoint convolution inverse. Its strengthened aligned-axis hostile shows that even an arbitrary nonconstant transported word preserves the bad character when only one base coordinate is actively translated.
+Break that inverse using at least two independently translated base coordinates or genuine cross-coordinate word/base mixing, then retain all-`91`-unit visibility and THM-2303 phase; otherwise attack the `15` repeated/resonance rows. The ledger remains `165`.
 
 ### Independent routes that remain live
 

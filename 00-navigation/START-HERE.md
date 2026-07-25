@@ -118,7 +118,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     THM-2187/2193 give a saturated carrier, floor `7^-21`, rank seven by `78*7^21`, and safe septimal grids; THM-2188 retains slope/current.
     THM-2196/2199 prove rank twelve; THM-2208/2212 give bounded anchors and exact rulers per rank-eleven plane, while THM-2203 fixes scalar transport at `16/208`.
     THM-2198--2258 leave `165` depth-one rows. On the `150` strict rows, THM-2323--2334 reach exact target aggregates and reduce nonzero-target survival to `169` coordinate twists.
-    THM-2337/2340 identify pure-word landing with main effects or interaction; THM-2343/2344 reduce zero-only failure to a shifted endpoint convolution inverse and exhibit its aligned-tooth hostile. Break that inverse, retain all-`91`-unit visibility and terminal phase, or close the `15` repeated/resonance rows.
+    THM-2337/2340 identify pure-word landing with main effects or interaction; THM-2343/2344 reduce zero-only failure to a shifted endpoint convolution inverse. THM-2344's strengthened hostile proves that an arbitrary nonconstant word on one aligned active axis still cannot break it. Force two-coordinate or cross-axis mixing, retain all-`91`-unit visibility and terminal phase, or close the `15` repeated/resonance rows.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
     the knot continuation cocycle; THM-2191 gives its catalytic group length,
     commuting stable envelope, and abstract additive dual, and closes `9_10`.

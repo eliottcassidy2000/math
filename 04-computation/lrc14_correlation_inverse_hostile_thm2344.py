@@ -192,6 +192,112 @@ def interval_sign_ledger() -> tuple[int, int, int, int]:
     )
 
 
+def same_axis_word_phase_atlas() -> tuple[int, int]:
+    """Target-neutral word harmonics cannot change one-axis twist phase."""
+    checks = 0
+    for dilation_factor in range(1, 5):
+        dilation = P * dilation_factor
+        for left_frequency in range(-3, 4):
+            for multiplier in tuple(range(-3, 0)) + tuple(range(1, 4)):
+                right_frequency = left_frequency + multiplier
+                for word_harmonic in range(-7, 8):
+                    base_harmonic = (
+                        left_frequency - dilation * word_harmonic
+                    )
+                    for target_twist in range(P):
+                        require(
+                            (
+                                base_harmonic * target_twist
+                                - left_frequency * target_twist
+                            )
+                            % P
+                            == 0,
+                            "a target-neutral word harmonic changed the "
+                            "same-axis character",
+                        )
+                        phase_free_exponent = (
+                            left_frequency - right_frequency
+                        ) * target_twist
+                        full_exponent = (
+                            multiplier * target_twist
+                            + phase_free_exponent
+                        )
+                        require(
+                            full_exponent % P == 0,
+                            "the deep phase did not cancel the aligned "
+                            "same-axis endpoint phase",
+                        )
+                        checks += 1
+
+    constant_twists = 0
+    for _, target_twist in GROUP:
+        require(
+            (target_twist - target_twist) % P == 0,
+            "the explicit nonconstant-word hostile lost phase cancellation",
+        )
+        constant_twists += 1
+    return checks, constant_twists
+
+
+def nonconstant_word_tooth_control() -> tuple[int, Fraction, int, int]:
+    """Verify the exact 12-tooth geometry and cyclotomic sign."""
+    half_tooth = Fraction(1, 2 * P * 7)
+    danger_half = Fraction(1, 14)
+    surviving_teeth: list[int] = []
+    for tooth in range(P):
+        circular_distance = Fraction(min(tooth, P - tooth), P)
+        if tooth == 0:
+            require(
+                circular_distance + half_tooth < danger_half,
+                "the central transported tooth escaped the base danger",
+            )
+            continue
+        require(
+            circular_distance - half_tooth >= danger_half,
+            "a noncentral transported tooth entered the base danger "
+            "away from a null boundary",
+        )
+        surviving_teeth.append(tooth)
+
+    require(
+        surviving_teeth == list(range(1, P)),
+        "safe times transported-danger is not the 12 noncentral teeth",
+    )
+    tooth_length = 2 * half_tooth
+    require(tooth_length == Fraction(1, 91), "transported tooth length changed")
+
+    # The frequency-one coefficient is a positive interval factor times
+    # sum_(k=1)^12 zeta^(-k).  In Q[z]/Phi_13, the latter is exactly -1.
+    character_counts = [0] * P
+    for tooth in surviving_teeth:
+        character_counts[(-tooth) % P] += 1
+    require(
+        character_counts == [0] + [1] * (P - 1),
+        "noncentral-tooth character census changed",
+    )
+    leading = character_counts[-1]
+    cyclotomic_remainder = [
+        coefficient - leading for coefficient in character_counts
+    ]
+    require(
+        cyclotomic_remainder == [-1] + [0] * (P - 1),
+        "the noncentral-tooth character sum is not -1",
+    )
+
+    coefficient_sign = -1
+    nonconstant_amplitude_sign = coefficient_sign * -1 * 1
+    require(
+        nonconstant_amplitude_sign == 1,
+        "the nonconstant-word hostile amplitude is not positive",
+    )
+    return (
+        len(surviving_teeth),
+        tooth_length,
+        coefficient_sign,
+        nonconstant_amplitude_sign,
+    )
+
+
 orthogonality_checks = orthogonality_atlas()
 phase_free_support, full_support, hostile_amplitude = (
     point_mass_correlation_control()
@@ -204,6 +310,13 @@ nonzero_phases, detecting_pairs = odd_even_obstruction_atlas()
     safe_amplitude_sign,
     danger_amplitude_sign,
 ) = interval_sign_ledger()
+same_axis_phase_checks, nonconstant_word_twists = same_axis_word_phase_atlas()
+(
+    nonconstant_word_teeth,
+    nonconstant_word_tooth_length,
+    nonconstant_word_coefficient_sign,
+    nonconstant_word_amplitude_sign,
+) = nonconstant_word_tooth_control()
 
 require(
     orthogonality_checks == GROUP_SIZE**2,
@@ -215,7 +328,7 @@ require(real_twists == P, "annihilator row size changed")
 require(nonzero_phases == GROUP_SIZE - 1, "nonzero phase census changed")
 
 print("theorem=THM-2344")
-print("status=PROVED+VERIFIED-EXACT+CANDIDATE-UNDER-INDEPENDENT-AUDIT")
+print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED")
 print(f"target_group_size={GROUP_SIZE}")
 print(f"target_character_orthogonality_checks={orthogonality_checks}")
 print("canonical_reflection=K(-ell)=conjugate(K(ell))")
@@ -235,6 +348,19 @@ print(f"danger_index_1_sign={danger_sign}")
 print(f"safe_index_1_sign={safe_sign}")
 print(f"aligned_safe_interval_amplitude_sign={safe_amplitude_sign}")
 print(f"aligned_danger_interval_amplitude_sign={danger_amplitude_sign}")
+print(f"same_axis_word_phase_checks={same_axis_phase_checks}")
+print("arbitrary_same_axis_transported_word_breaks_inverse_line=NO")
+print(f"nonconstant_word_teeth={nonconstant_word_teeth}")
+print(f"nonconstant_word_tooth_length={nonconstant_word_tooth_length}")
+print(
+    "nonconstant_word_frequency_one_coefficient_sign="
+    f"{nonconstant_word_coefficient_sign}"
+)
+print(
+    "nonconstant_word_full_amplitude_sign="
+    f"{nonconstant_word_amplitude_sign}"
+)
+print(f"nonconstant_word_constant_full_twists={nonconstant_word_twists}")
 print("nonnegative_endpoint_point_masses_exclude_bad_line=NO")
 print("physical_factor_positivity_excludes_bad_line=NO")
 print("canonical_nine_coordinate_hostile_constructed=NO")

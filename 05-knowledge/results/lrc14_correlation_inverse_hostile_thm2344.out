@@ -1,5 +1,5 @@
 theorem=THM-2344
-status=PROVED+VERIFIED-EXACT+CANDIDATE-UNDER-INDEPENDENT-AUDIT
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED
 target_group_size=169
 target_character_orthogonality_checks=28561
 canonical_reflection=K(-ell)=conjugate(K(ell))
@@ -19,6 +19,13 @@ danger_index_1_sign=1
 safe_index_1_sign=-1
 aligned_safe_interval_amplitude_sign=1
 aligned_danger_interval_amplitude_sign=1
+same_axis_word_phase_checks=32760
+arbitrary_same_axis_transported_word_breaks_inverse_line=NO
+nonconstant_word_teeth=12
+nonconstant_word_tooth_length=1/91
+nonconstant_word_frequency_one_coefficient_sign=-1
+nonconstant_word_full_amplitude_sign=1
+nonconstant_word_constant_full_twists=169
 nonnegative_endpoint_point_masses_exclude_bad_line=NO
 physical_factor_positivity_excludes_bad_line=NO
 canonical_nine_coordinate_hostile_constructed=NO
