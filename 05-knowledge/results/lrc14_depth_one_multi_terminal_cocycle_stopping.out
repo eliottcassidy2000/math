@@ -1,0 +1,19 @@
+scope=FINITE-EXACT local hostile control; not a global cover
+probe=profile_(1,2,5)_multi_terminal_overlap_cocycle
+H=1 c1=26 c2=338 c3=742586
+unit_speeds=(118300001, 236600001, 354900001, 473200001, 591500001)
+original_terminal=325007/700000 carry_wall=157/338
+nearest_membership_boundary=155/233248167061 label=unit_5 n=72 target=253625740+1/14
+nearest_other_carry_boundary=157/199927000338 label=unit_5 n=60 target=211625740
+epsilon=155/699744501183 minus=650058500789/1399489002366 plus=650058501409/1399489002366
+terminal=original z=325007/700000 obligations=112 owners={(338,): 112} gauge=(0, 2040) relative=4080
+terminal=minus z=650058500789/1399489002366 obligations=68 owners={(338, 742586): 68} gauge=(0, 2040) relative=4080
+terminal=wall z=157/338 obligations=68 owners={(338, 742586): 68} gauge=(0, 2041) relative=4082
+terminal=plus z=650058501409/1399489002366 obligations=68 owners={(338, 742586): 68} gauge=(0, 2041) relative=4082
+adjacent_chambers=minus,plus common_obligations=68 membership_symmetric_difference=0 carry_delta=(0, 1) relative_jump=2
+overlap_loop=('original', 'minus', 'plus', 'original') relative_edge_values=(0, 2, -2) holonomy=0
+persistent_section=338 owner_switches=0 common_complex=full_67_simplex faces=295147905179352825856 minimal_nonfaces=()
+common_pairs=2278 common_triples=50116
+diagram_sha256=71a706f6aa8926eb73c6018e12baee4af69a61d004d5918d91f4b10af3ca4e88
+general_identity=for owners 169a,169b, F(z)=a*floor(bz)-b*floor(az) is 1-periodic and dF is exact
+verdict=nonzero adjacent relative carry does not force owner switching; the three-terminal holonomy vanishes
