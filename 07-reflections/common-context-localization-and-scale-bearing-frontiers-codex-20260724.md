@@ -22,6 +22,7 @@ pointwise-nested hierarchy in
 [THM-2225](../01-canon/theorems/THM-2225-dyadic-critical-run-extractors-and-cyclic-checksum-shell-bisection.md),
 [THM-2235](../01-canon/theorems/THM-2235-response-antipode-barriers-for-lrc-sheets-tournament-cycles-and-knot-kernels.md),
 [THM-2239](../01-canon/theorems/THM-2239-unrestricted-multicore-signed-dual-profile-exclusion.md),
+[THM-2240](../01-canon/theorems/THM-2240-dc2-grade-response-gauge-is-not-a-continuation-state.md),
 [THM-2241](../01-canon/theorems/THM-2241-monic-transverse-response-depth-and-resultant-nonproper-quotient.md),
 [THM-2242](../01-canon/theorems/THM-2242-tournament-complement-transport-and-knot-kernel-green-rigidity.md),
 [THM-2216](../01-canon/theorems/THM-2216-residual-capacity-hinge-gram-law.md),
@@ -1031,6 +1032,20 @@ train the quotient kills the odd seeds `P^j`, while the first genuine lower
 seed `E_10` enters at defect `4rho+alpha`, before the next `E_14` tooth at
 `5rho`. A one-seed divisibility cascade therefore cannot be iterated.
 
+THM-2240 supplies the complementary DC2 warning. In the Ore boundary,
+equality of the grade-six response is not a one-step continuation state:
+the syzygy `C=1` changes the grade-seven residual by
+
+```text
+8q(4u^2-13u+13).
+```
+
+The two integration-constant axes are separately injective into the next
+residual, although their combined map has a nonzero kernel. No pure
+grade-six representative skips grade seven, but an attached next rung can
+still respond. Thus neither the current response class nor a pure-rung
+no-skip result proves Weyl nontermination.
+
 THM-2241 supplies a global finite decision invariant. After monicizing `P`
 to `y`-degree `d`,
 
@@ -1092,8 +1107,9 @@ ramification control, and uniform order raising.
    fragmentation and unpinned core/context exchange in `C_3/C_5`.
 8. **Joint `E_14/E_10` response-tail descent (OPEN):** combine THM-2241's
    degree-sharp monic transverse tail with THM-2230's normalized response
-   quotient and the nonmonic square-prefix flux train. THM-2206's
-   degree-six `I^j/I^(j+1)` audit remains an orthogonal order-raising test.
+   quotient and the nonmonic square-prefix flux train. On DC2, retain
+   THM-2240's grade-seven gauge axes while testing attached-rung termination;
+   THM-2206's `I^j/I^(j+1)` audit remains orthogonal.
 
 The portfolio is intentionally coupled. A root-sheet chamber, a toric
 equality skeleton, and a quotient-block transport matrix are all finite
