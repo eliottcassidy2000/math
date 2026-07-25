@@ -1,0 +1,11 @@
+four_bit_table=(Da(z),CH(z),A,G,I_floor,joint_cap)
+(0, 0, 11, 10, 8, 102)
+(0, 1, 11, 9, 7, 103)
+(1, 0, 12, 10, 9, 111)
+(1, 1, 12, 9, 8, 112)
+joint_two_step_cap=112
+private_floor=2593/90090 old_second_floor=33709/831600
+new_second_floor=33709/776160 decimal=0.043430478251907
+gain=33709/11642400 relative_factor=15/14 one_seventh_minus=77171/776160
+hostile=H=1 a=2 deep_owner=2 z=325007/700000 q=(118300001, 236600001, 354900001, 473200001, 591500001)
+hostile_counts=A=12 G=9 I=8 eligible169=112
