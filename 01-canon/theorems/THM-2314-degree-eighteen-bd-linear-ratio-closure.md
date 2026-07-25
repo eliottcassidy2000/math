@@ -2,7 +2,7 @@
 id: THM-2314
 title: "Degree-eighteen B--D ratio-bank closure"
 status: >
-  PROVED + VERIFIED-EXACT. In the genuine nonsplit polynomial
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the genuine nonsplit polynomial
   exact-square-prefix degree-eighteen branch of THM-2262/2297, all six
   weighted ratios in THM-2311's B--D bank are empty. After B=1
   normalization, every spectral curve is absolutely irreducible. The two
@@ -23,8 +23,8 @@ related:
   - THM-2247-nonsplit-terminal-quartic-degree-fourteen-closure
 script: 04-computation/jc2_degree18_bd_linear_ratio_closure_thm2314.py
 output: 05-knowledge/results/jc2_degree18_bd_linear_ratio_closure_thm2314.out
-script_sha256: 9d81ea499269344d23aded1dd1bacc6faad729d37dc2ef5e3d63e00e68e48a29
-output_sha256: fe597f0aedf5a1fb8a4ec800cded5e7471fb45ebc04e0effefd62603adc0dcd6
+script_sha256: b5b1df662e9b57b80b7088c4ee6fbe1ea684173e3ddb8036ad0a86813282d8a5
+output_sha256: 6412f65fff89df14628ca7ed0c47067da3122252261d4dfb3fb01bdde57f59c2
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -134,14 +134,23 @@ t^4+4t^2-t+2.
 Writing `bar p` for this monic reduction, the Rabin certificate
 
 ```text
-gcd(bar p,t^(11^2)-t)=1,   t^(11^4)-t=0 mod bar p   (8b)
+t^(11^2)-t=-t^3+3t^2-3t+4 mod bar p,
+
+gcd(bar p,t^(11^2)-t)=1,   t^(11^4)-t=0 mod bar p.  (8b)
 ```
 
 proves that this reduction, and hence (8a), is irreducible. Put
 `K=Q(alpha)` for one root. The same four coefficient equations from (7)
 have reduced Groebner basis `{1}` in `K[a,b]`. A unit ideal stays a unit
 after passing to an algebraic closure and under every complex embedding of
-`K`. Thus (7) is impossible at all four conjugates as well.
+`K`. Independently, if `E_0,...,E_3` are the four root-coefficient
+equations, exact elimination before adjoining a root gives
+
+```text
+<E_0,E_1,E_2,E_3,p(t)>=<1> in Q[a,b,t].             (8c)
+```
+
+Thus (7) is impossible at all four conjugates as well.
 
 All six `G_t` are therefore absolutely irreducible. Their projective
 normalizations are connected degree-three covers of the `y`-line.
@@ -484,7 +493,7 @@ the two rational discriminant factorizations; the mod-`11` irreducibility
 certificate and uniform quartic-field factorization; every squarefree and
 coprime residual; the common separable infinity cubic; the smooth total
 ramification, ordinary triple, and ordinary-node local charts; absolute
-irreducibility through unit Groebner bases over `Q` and `K`; and a
-squarefree `D=1` hostile control. The local normalization,
-Riemann--Hurwitz, and deck arguments are the mathematical proof above
-rather than delegated computer conclusions.
+irreducibility through unit Groebner bases over `Q`, `K`, and the global
+ideal (8c); and a squarefree `D=1` hostile control. The local
+normalization, Riemann--Hurwitz, and deck arguments are the mathematical
+proof above rather than delegated computer conclusions.

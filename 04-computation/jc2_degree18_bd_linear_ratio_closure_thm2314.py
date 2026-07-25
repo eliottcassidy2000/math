@@ -150,8 +150,14 @@ def main() -> None:
         polynomial_power_mod(t, 11**4, quartic_mod_11)
         - sp.Poly(t, t, modulus=11)
     ).rem(quartic_mod_11)
+    expected_frobenius_2 = sp.Poly(
+        -t**3 + 3 * t**2 - 3 * t + 4,
+        t,
+        modulus=11,
+    )
     require(
-        sp.gcd(quartic_mod_11, frobenius_2).degree() == 0
+        frobenius_2 == expected_frobenius_2
+        and sp.gcd(quartic_mod_11, frobenius_2).degree() == 0
         and frobenius_4.is_zero,
         "quartic mod-11 Rabin irreducibility certificate failed",
     )
@@ -490,6 +496,32 @@ def main() -> None:
         y,
         extension=alpha,
     )
+    # Independent uniform path: impose p(t)=0 before adjoining any chosen
+    # root.  The coefficient ideal in QQ[a,b,t] is already the unit ideal.
+    root_a, root_b = sp.symbols("root_a root_b")
+    symbolic_quartic_curve = spectral_curve(u, y, t)
+    symbolic_root_substitution = sp.Poly(
+        sp.expand(
+            symbolic_quartic_curve.subs(
+                u,
+                root_a * y**2 + root_b,
+            )
+        ),
+        y,
+    )
+    symbolic_root_equations = [
+        symbolic_root_substitution.coeff_monomial(y ** (2 * index))
+        for index in range(4)
+    ]
+    symbolic_root_equations.append(quartic)
+    groebner_quartic_uniform = sp.groebner(
+        symbolic_root_equations,
+        root_a,
+        root_b,
+        t,
+        order="lex",
+        domain=sp.QQ,
+    )
     require(
         len(groebner_ramified.polys) == 1
         and groebner_ramified.polys[0].as_expr() == 1,
@@ -504,6 +536,11 @@ def main() -> None:
         len(groebner_quartic.polys) == 1
         and groebner_quartic.polys[0].as_expr() == 1,
         "quartic-orbit curve has a polynomial u-root",
+    )
+    require(
+        len(groebner_quartic_uniform.polys) == 1
+        and groebner_quartic_uniform.polys[0].as_expr() == 1,
+        "uniform quartic root-coefficient ideal is not the unit ideal",
     )
 
     # Hostile control: away from the THM-2311 bank, D=1 has no repeated
@@ -533,7 +570,11 @@ def main() -> None:
     print("ratio_2_total_ramification=6")
     print("ratio_2_normalization_genus=1")
     print(f"quartic_ratio_polynomial={quartic}")
-    print("quartic_mod_11=T^4+4*T^2-T+2 irreducible=PASS")
+    print(
+        "quartic_mod_11=T^4+4*T^2-T+2,"
+        "T^121-T=-T^3+3*T^2-3*T+4,gcd=1,"
+        "T^14641-T=0 irreducible=PASS"
+    )
     print(f"quartic_discriminant={quartic_discriminant}")
     print(
         "quartic_node_x="
@@ -553,7 +594,10 @@ def main() -> None:
     print(f"infinity_cubic={infinity_polynomial}")
     print(f"infinity_discriminant={infinity_discriminant}")
     print("infinity=3 distinct unramified points")
-    print("absolute_irreducibility=PASS Groebner bases [1],[1],[1 over K]")
+    print(
+        "absolute_irreducibility=PASS "
+        "Groebner bases [1],[1],[1 over K],[1 over QQ[a,b,t]/(p)]"
+    )
     print("hostile_control_D=1 squarefree=PASS")
     print("riemann_hurwitz_and_deck_contradiction=MATHEMATICAL_PROOF_REQUIRED")
     print("status=THM2314_FULL_BD_RATIO_BANK_EXACT_REFEREE")
