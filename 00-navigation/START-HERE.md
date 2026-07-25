@@ -1,6 +1,6 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-07-24; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
+**Rolling brief — refreshed 2026-07-25; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
 
 ## The five-minute orientation
 
@@ -118,7 +118,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     its transverse and scalar-`4+3` lanes, leaving only scalar `5+3`.
     THM-2187/2193 give a saturated carrier, floor `7^-21`, rank seven by `78*7^21`, and safe septimal grids; THM-2188 retains slope/current.
     THM-2196/2199 prove rank twelve; THM-2208/2212 give bounded anchors and exact rulers per rank-eleven plane, while THM-2203 fixes scalar transport at `16/208`.
-    THM-2198--2258 leave `165` depth-one rows; THM-2295/2298 force ranks five/six by `196/526`, THM-2301 gives bright/dark banks, and THM-2287 anchors rank six at `c_1` on `120` interiors. THM-2305 makes prescribed return a pure edge or fork, THM-2303 identifies relative component phase, and THM-2304 makes full pair-frequency cancellation satisfy at least `168` deepest-current equations. Target one colored current or its final middle-depth balance, plus anchor-free structure for the other `45`.
+    THM-2198--2258 leave `165` depth-one rows; THM-2295/2298 force ranks five/six, THM-2287 anchors rank six on `120`, and THM-2303/2304/2305 retain phase, deepest currents, and edge/fork words. THM-2313/2318 land an exact grade-three `91`-unit hostile residual. Target its residue-to-incident-edge/gain coupling or middle-depth balance, plus anchor-free structure for the other `45`.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
     the knot continuation cocycle; THM-2191 gives its catalytic group length,
     commuting stable envelope, and abstract additive dual, and closes `9_10`.

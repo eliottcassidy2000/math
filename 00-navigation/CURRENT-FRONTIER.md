@@ -190,7 +190,8 @@ THM-2301 makes the resulting septimal/thirteen-adic bright-or-dark address banks
 THM-2296/2305 retain prescribed return as a pure owner edge or two-target fork with every root character and one bounded signed exact-word coefficient; THM-2299's hostile anchored rank-six flag still kills its pair base phase.
 THM-2302 aligns the shell-selected label, a grade-`b` vertex, and named service at one gauge, but its `c_3` edge can lose the unit colour. THM-2306 forces a source/current owner-multiple on one first-collision shell; THM-2303 identifies the remaining datum as relative component phase-tree transport.
 THM-2300 leaves `693` no-forced multipliers (`m=7` sharp). THM-2304 separates at least `168` deepest currents; THM-2307 leaves `77/7` dual impostors at ranks six/seven and reconstructs only at rank eight.
-THM-2309 gives every owner a full-lattice pure-`a`/pure-`b`/fork target-plane pivot, but not at visible height. THM-2310 composes finite pure-edge paths after bounded waits, which destroy the prescribed phase. Land one signed exact-word current in its target-plane class at the original clock, or close THM-2304's middle-depth balance.
+THM-2309 gives every owner a full-lattice pure-`a`/pure-`b`/fork target-plane pivot, but not at visible height; THM-2310's bounded waits destroy prescribed phase; THM-2312 gives every positive canonical word a nonzero cubic current; and THM-2313's `7 x 13` Pareto antichain isolates interior source/current atoms with residual core coprime to `91`.
+THM-2318 uses `7` and `65537` as one-shot Möbius directions: the hostile cube `(3,1,1)` lands `N=13^3 n`, `gcd(n,91)=1`, so exact grade and no added seven factor coexist. The live gate is coupling that root-residue torsor to an incident `c_3` edge and exact target-plane gain at the original clock, or closing THM-2304's middle-depth balance.
 
 ### Independent routes that remain live
 
