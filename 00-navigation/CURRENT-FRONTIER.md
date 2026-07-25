@@ -135,8 +135,10 @@ Its indispensable coordinates are primitive parameter, integral columns, transve
   THM-2139/2141 close fivefold profiles `(1,5,2)` and `(2,5,1)`; the exact residual
   is `(1,6,1)`, `(1,7,0)`, `(2,6,0)`, `(3,5,0)`. THM-2140 supplies one-blocker
   depth/polar invoices. THM-2148/2168 classify the three-target Fano exception,
-  force top-two `13`-adic depth and one daughter-free common exact blocker pair,
-  and leave guard-line `(0,0),(0,1),(4,3),(5,3)`; scalar tails remain open.
+  force top-two `13`-adic depth and a daughter-free common exact blocker pair,
+  and reduce guard-line incidence to `(0,0),(0,1),(4,3),(5,3)`.
+  Generated-lattice descent empties all-independent and scalar `4+3`; only the
+  rank-one scalar `5+3` tail survives inside `(3,5,0)`.
   THM-2121's finite joint gate still requires its Toeplitz/Fejer and phase sidecars.
 - **PROVED relative decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   lifts bounded scalar relations; `H=2^19` clears recorded margins.
@@ -415,10 +417,11 @@ into tournament operation laws and LRC residue packets.
 - **Planar source fibers:** THM-2063/2071 close affine/quadratic pencil members;
   THM-2084/2110/2118 close cubics; THM-2102/2113 close power-free top faces;
   THM-2127--2136 reduce arbitrary tails to coarsened-power/short Newton edges.
-  THM-2158/2180 reduce the quartic pole to
-  `V|(4gamma-(beta/V)^2)`; THM-2181 compresses exact square prefixes and closes
-  every monic depressed polynomial quartic. A terminal monicization step is
-  still needed even after the congruence.
+  THM-2158/2180 make deck descent automatic and reduce the twice-odd nonmonic
+  branch to `V|(4gamma-(beta/V)^2)`; THM-2181 compresses exact square prefixes
+  and closes monic depressed polynomial quartics. The pole congruence, a
+  terminal nonmonic monicization/quadratic-member step, and other short edges
+  remain.
 - MISTAKE-228/229 block the old atlas and NC2/GMC chain. `JC(2)` and `DC(2)`
   remain open; these are source-fiber gates, not generic cover-degree results.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer

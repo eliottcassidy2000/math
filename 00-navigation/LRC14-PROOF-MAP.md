@@ -47,7 +47,7 @@ THM-2085--2097/2112 make rank-seven rows finite, not discharged.
 At guarded sizes `8..10`, THM-2098 has pure, low-mixed, and high-vertical lanes;
 only the pure lane inherits its collision budget, and depth-zero eleven is separate.
 THM-2114/2116/2120--2125 force content and modular pencils; THM-2117/2119/2121 add full-Toeplitz and three-sparsity gates.
-THM-2130 intersects `11/13` labels into a sparse exception or `143` determinant; THM-2128/2131 exclude both no-terminal-blocker pencils. THM-2133--2138 empty the scalar `6+1/5+2` tails. THM-2139/2141 close fivefold profiles `(1,5,2)` and `(2,5,1)`, leaving exactly `(1,6,1)`, `(1,7,0)`, `(2,6,0)`, and `(3,5,0)`. THM-2140 gives the one-blocker depth/polar invoice. THM-2148/2168 classify the three-target Fano fibre, force the top two blocker depths above the top two aligned depths, and reduce every substantial guard-line branch to the still-open scalar `4+3/5+3` tails. MISTAKE-238/239/242 still block invalid transfers; none of these reductions closes LRC(14).
+THM-2130 intersects `11/13` labels into a sparse exception or `143` determinant; THM-2128/2131 exclude both no-terminal-blocker pencils. THM-2133--2138 empty the scalar `6+1/5+2` tails. THM-2139/2141 close fivefold profiles `(1,5,2)` and `(2,5,1)`, leaving exactly `(1,6,1)`, `(1,7,0)`, `(2,6,0)`, and `(3,5,0)`. THM-2140 gives the one-blocker depth/polar invoice. THM-2148/2168 classify the three-target Fano fibre and force the top two blocker depths; generated-lattice descent then empties all-independent and scalar `4+3`, leaving only rank-one scalar `5+3` inside `(3,5,0)`. MISTAKE-238/239/242 still block invalid transfers; none of these reductions closes LRC(14).
 
 ### Live interfaces
 

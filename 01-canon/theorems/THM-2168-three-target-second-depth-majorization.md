@@ -11,7 +11,7 @@ status: >
   profile, the largest and second-largest divided-blocker 13-adic depths
   dominate the largest and second-largest aligned depths. Rational guard-line
   incidence has the exact residual census (0,0), (0,1), (4,3), or (5,3);
-  the latter two are precisely the still-open scalar 4+3 and 5+3 tails.
+  the latter two are the intermediate scalar 4+3 and 5+3 candidates.
   Exact daughter pairs are the only singleton depth exceptions and give
   independent height-13 two-term relations. Bounded scalar relation rank does
   not close the remaining profile: evaluation-kernel shears preserve every

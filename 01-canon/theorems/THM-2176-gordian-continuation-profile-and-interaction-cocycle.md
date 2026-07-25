@@ -624,9 +624,11 @@ labels, zero one-comb currents, equal marginal masses, and equal reciprocal
 sum still have different joint continuations. The universal theorem above
 explains why the joint tail law, not another marginal scalar, is the required
 sidecar. THM-2184 makes that law explicit as a rational two-torus continuation
-profile and proves an effective `O(1/(NL))` comparison for arbitrary fixed
-residues. Its pointwise six-tail floor closes every fixed `7+6` affine ray at
-large scale; THM-2182 is exactly the zero-residue face.
+profile and proves an effective `O(||r||_1/(NL))` comparison. Its pointwise
+six-tail floor gives the varying endpoint-grid tube
+`||r||_1<2NL/(245e_2)`, even when the normalized integer tail and residue
+change with `N`; THM-2182 is exactly the zero-residue face. THM-735 supplies
+the complementary alignment-free far cone.
 
 ## 9. Slack-aware propagation
 

@@ -62,12 +62,10 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     full Bertrand boundary at `z=1`.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300
     is the exact new counterexample. THM-2063/2071 close linear/quadratic source
-    fibers; THM-2084 supplies the cubic Faber gate, and THM-2118/2102 close every
-    cubic source fiber. THM-2158 reduces quartic regularity to one
-    translation-invariant pole divisor; THM-2180 forces its linear coefficient
-    regular in the twice-odd Keller branch, and THM-2181 closes every already
-    monic depressed polynomial quartic. The remaining pole congruence is open;
-    none is a generic-cover, Jelonek, VC(4), or full planar classification.
+    fibers; THM-2084/2118/2102 close cubics. THM-2158/2180 reduce the twice-odd
+    nonmonic quartic to `V|(4gamma-(beta/V)^2)`; THM-2181 closes monic depressed
+    quartics. A terminal nonmonic monicization step remains even after that
+    congruence; none is a generic-cover, Jelonek, VC(4), or planar classification.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed
@@ -117,8 +115,8 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     its transverse and scalar-`4+3` lanes, leaving only scalar `5+3`.
     THM-2167/2171 give `208875` carry pairs and ordered cap `5430750`;
     THM-2169 gives deletion height `1247`, while THM-2174 isolates phase
-    windows/current. THM-2178/2179 and THM-2182/2184 add relation and affine-ray
-    forks; the unrestricted phase decomposition and full theorem remain open.
+    windows/current. THM-2178/2179 and THM-735/2182/2184 add relation, far-cone,
+    and grid-tube forks; the unrestricted phase decomposition remains open.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
     the knot continuation cocycle; THM-2177 refutes Goemans' cost conjecture
     through a conflict graph. MISTAKE-230--235 forbid syntax-only bridges.

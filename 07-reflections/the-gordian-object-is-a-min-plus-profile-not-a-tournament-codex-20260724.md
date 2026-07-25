@@ -345,9 +345,10 @@ Phi_(c,r)(t)=integral_x product_i 1_G(c_i x+r_i t)dx.
 This rational two-torus profile retains the full internal tail overlap and
 approximates tails `W_i=NLc_i+r_i` with explicit error
 `5||r||_1/(2NL)`. Since `Phi_(c,r)(t)>=1/7` for six tail constraints, every
-fixed arbitrary-residue `7+6` affine ray is eventually strict. Alignment is
-therefore a zero-error face, not the true boundary; the remaining supplier
-problem is uniform control when the affine-ray data itself changes.
+endpoint-grid tube `||r||_1<2NL/(245e_2)` is strict even when `c` and `r`
+vary with `N`. Alignment is therefore a zero-error face, not the true
+boundary; together with THM-735's fixed-body far cone, the residual requires
+a changing core or genuinely non-gridlike multiscale data.
 
 The next concrete portfolio is:
 
@@ -360,8 +361,8 @@ The next concrete portfolio is:
    mandatory hostile control.
 3. **LRC wildcard:** combine THM-2178's mod-14 rank fork and THM-2179's
    defect-six body-touching packet with THM-2184. The decisive supplier now
-   needs a bounded family of affine-ray profiles, not exact zero-residue
-   alignment.
+   needs to force either the far cone or the endpoint-grid tube while
+   retaining the relation's phase, not exact zero-residue alignment.
 4. **Word-overlap hostile probe:** test the first-hit convolution on one cyclic
    endpoint-owner packet; stop immediately if rotations make the layers
    non-disjoint.
