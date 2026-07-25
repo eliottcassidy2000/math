@@ -248,7 +248,7 @@ only a finite positive control. A proof would still need:
 1. compatible clearing of all `n/4` Faber denominators;
 2. `2`-torsion-freeness of the observable lattice;
 3. an all-degree integral identity stable under arbitrary complex
-   coefficient specialization; and
+   coefficient specialization;
 4. control of ramification in the actual integral quadratic root algebra; and
 5. the uniform order-raising implication (20).
 

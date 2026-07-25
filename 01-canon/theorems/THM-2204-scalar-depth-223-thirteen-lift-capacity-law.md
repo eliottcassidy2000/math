@@ -14,7 +14,8 @@ status: >
   audited universe one fixed-sum lift family has capacities ranging from
   zero to 2,460; the missing recursive state is its labelled guard-hole
   correlation vector, equivalently its nonconstant Fourier data. The
-  profiles (1,1,3) and (1,2,3), and all deeper profiles, remain open.
+  THM-2205/2207 subsequently close (1,1,3)/(1,2,3); profiles of deepest
+  valuation at least four remain open.
 source: codex-2026-07-24-scalar-depth223-lift-capacity
 depends_on:
   - THM-2192-scalar-five-plus-three-root-sheet-chord-invoice
@@ -24,6 +25,7 @@ related:
   - THM-2197-scalar-chord-coverage-has-a-boolean-deficiency-quotient
   - THM-2200-convex-semigroup-and-finite-place-support-hole-trichotomy
   - THM-2201-cyclic-root-fibre-hasse-jet-transition-carrier
+  - THM-2207-scalar-depth-123-labelled-guard-hole-exclusion
 script: 04-computation/lrc14_scalar_depth223_thirteen_lift_capacity_thm2204.py
 output: 05-knowledge/results/lrc14_scalar_depth223_thirteen_lift_capacity_thm2204.out
 script_sha256: 9c16e1e7a69834f9304c877f1627232f374688aa7f8d2372c260dfdbfa056ac8
@@ -448,7 +450,8 @@ controlling its minimum.  Likewise, THM-2200's independent-product support
 pumps classify static matching holes but do not preserve this dynamic
 phase alignment.
 
-This theorem closes only the actual valuation profile `(2,2,3)`.  It does
-not close `(1,1,3)` or `(1,2,3)`, whose shallower coefficients range over
-larger sign-class universes, and it does not establish a uniform
-all-depth top-five recurrence.  Those remain open.  QED.
+This theorem closes only the actual valuation profile `(2,2,3)` and does
+not establish a uniform all-depth top-five recurrence. THM-2205 and
+THM-2207 separately close `(1,1,3)` and `(1,2,3)` using their larger typed
+sign-class universes. Profiles with deepest valuation at least four remain
+open. QED.

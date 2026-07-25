@@ -22,8 +22,9 @@ status: >
   branch has unique deepest blocker depth at least three. The signed
   residual is exactly a -1 eigenfunction of the thirteen-root transfer;
   over a divided-deep safe parent, a positive defect has one labelled
-  deep-danger anti-defect root and twelve neutral roots. Deeper profiles
-  remain open, so this is not a proof of LRC(14).
+  deep-danger anti-defect root and twelve neutral roots. This theorem alone
+  leaves deeper profiles; THM-2204/2205/2207 later close all profiles of
+  deepest valuation three. This is not a proof of LRC(14).
 source: codex-2026-07-24-scalar-five-plus-three-transition
 depends_on:
   - THM-1166-seven-wall-fano-gcd-discrepancy
@@ -39,6 +40,7 @@ related:
   - THM-2022-gmc2-frobenius-lowest-balanced-face
   - THM-2200-convex-semigroup-and-finite-place-support-hole-trichotomy
   - THM-2201-cyclic-root-fibre-hasse-jet-transition-carrier
+  - THM-2207-scalar-depth-123-labelled-guard-hole-exclusion
 script: 04-computation/lrc14_scalar_five_plus_three_image_pump_thm2198.py
 output: 05-knowledge/results/lrc14_scalar_five_plus_three_image_pump_thm2198.out
 script_sha256: b3f5b37d4e0fb34070851fcedecf9435e08d9f78fafb651c5a6c4b39528e0eee
@@ -1001,8 +1003,8 @@ winding and ownership sidecars are load-bearing; a knot or tournament
 quotient that forgets them cannot recover (29).
 
 The theorem identifies the recursive state, supplies measure and private-owner
-transitions, and excludes the first unique-depth profile.  It does not
-exclude `lambda_3>=3`, give a uniform mass floor for the private piece after
-the second valuation, bound the unit coefficient winding, classify the
-remaining `216` residue-length profiles of THM-2192, or prove LRC(14).
-QED.
+transitions, and excludes the first unique-depth profile. By itself it does
+not exclude `lambda_3>=3`; THM-2204/2205/2207 later close the depth-three
+rows. It gives no uniform mass floor after owner deletion, does not bound unit
+coefficient winding, classify the remaining `216` residue-length profiles,
+or prove LRC(14). QED.

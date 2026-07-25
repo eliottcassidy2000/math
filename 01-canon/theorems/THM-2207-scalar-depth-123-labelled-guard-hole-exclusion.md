@@ -4,18 +4,16 @@ title: "Scalar depth-(1,2,3) labelled guard-hole exclusion"
 status: >
   PROVED + VERIFIED-EXACT. In the scalar five-unit/three-blocker branch, the
   actual blocker valuation profile (1,2,3) is empty. On the primitive
-  13^4 guard-safe annulus, the depth-one and depth-two masks are pullbacks
-  from 1,014 and 78 sign classes. For every one of their 79,092 typed
-  pairs, an exact labelled root-fibre branch certificate determines the five
-  largest conditional capacities among all 13,182 unit sign classes. The
-  unique minimum full-annulus deficit is 1,608. Direct full-torsion
-  enumeration independently reconstructs every unit capacity on the hostile
-  row. Together with THM-2198, THM-2204, and THM-2205, this empties every
-  scalar profile whose unique deepest blocker has valuation at most three.
-  Thus a surviving scalar branch has deepest valuation at least four. In the
-  actual dyadic-terminal lane THM-2203 also gives the upper bound nineteen,
-  leaving 1,136 finite valuation profiles; none of those deeper profiles is
-  settled here, and this is not a proof of LRC(14).
+  13^4 guard-safe annulus, an exact labelled branch certificate determines
+  the five largest conditional capacities for all 1,014*78 typed shallow
+  pairs and all 13,182 unit sign classes. The unique minimum deficit is
+  1,608. A second one-owner Ky-Fan certificate closes 79,091 of the 79,092
+  pairs and reduces its sole exception to a direct margin of 1,676. Direct
+  full-residue controls reproduce both named rows. Together with THM-2198
+  and THM-2204/2205, this excludes every unique-deepest profile through
+  depth three. THM-2203 bounds every remaining scalar deepest valuation by
+  4..19, leaving 1,136 finite profiles. None is settled here, and this is
+  not a proof of LRC(14).
 source: codex-klein-2026-07-24-scalar-depth123-labelled-capacity
 depends_on:
   - THM-2192-scalar-five-plus-three-root-sheet-chord-invoice
@@ -49,23 +47,23 @@ C_H subset union_(i=1)^5 D_(q_i)
 ```
 
 almost everywhere. The coefficients `H,q_1,...,q_5` are positive
-thirteen-units, and the three actual blockers are positive multiples of
-thirteen. After relabelling, THM-2192 gives
+thirteen-units, the three actual blockers are positive multiples of
+thirteen, and after relabelling
 
 ```text
 1<=lambda_1<=lambda_2<lambda_3,
 lambda_j=nu_13(c_j).                                 (3)
 ```
 
-This theorem excludes
+This theorem excludes the last profile of deepest valuation three:
 
 ```text
 (lambda_1,lambda_2,lambda_3)=(1,2,3).                (4)
 ```
 
-The finite object is a mixed-depth labelled root-fibre matrix. The proof
-keeps the correlations between each unit label, each guard hole, and the two
-different blocker scales. It does not replace a thirteen-lift family by its
+The finite carrier is the mixed-depth labelled root-capacity vector. It
+retains the correlation between each unit label, each guard hole, and the
+two different blocker scales. No thirteen-lift family is replaced by its
 average.
 
 ## 1. The mixed primitive layer
@@ -77,9 +75,10 @@ N=13^4=28561,                    Q=13^3=2197.         (5)
 ```
 
 Multiplication of primitive numerators by `H modulo N` normalizes the guard
-to one and replaces every terminal coefficient by its product with
-`H^(-1) modulo N`. This is a bijection and preserves all three
-thirteen-valuations. Define
+to one and replaces each terminal coefficient by its product with
+`H^(-1) modulo N`. This bijection preserves all three thirteen-valuations.
+
+Define
 
 ```text
 U_N={z mod N:13 does not divide z and 7||z||_N>N},
@@ -92,15 +91,17 @@ The exact cardinality is
 |U_N|=18830.                                         (7)
 ```
 
-The depth-three blocker is safe everywhere on `U_N`. If its normalized
-coefficient is `13^3w`, then at a primitive numerator
+The depth-three blocker is safe throughout `U_N`. Its normalized
+coefficient is `13^3w` with `w` a unit modulo thirteen, and at a primitive
+numerator
 
 ```text
 13^3w*z/13^4=wz/13
 ```
 
-is a nonzero thirteenth root, whose norm is at least
-`1/13>1/14`.
+is a nonzero thirteenth root. Its norm is at least `1/13>1/14`. The exact
+companions check this directly for all six unit sign classes modulo
+thirteen.
 
 Every primitive phase `r modulo Q` has thirteen primitive roots
 
@@ -111,7 +112,8 @@ z=r+kQ modulo N,                    k in F_13.        (8)
 There are `phi(Q)=2028` such phases. Let
 
 ```text
-h(r)=#{k:z in U_N}.                                  (9)
+B(r)={k in F_13:r+kQ belongs to C_1},
+h(r)=|B(r)|.                                         (9)
 ```
 
 Exact root counting gives
@@ -122,8 +124,8 @@ h(r) in {9,10},
 sum_r h(r)=18830.                                    (10)
 ```
 
-A depth-one coefficient has the form `13u`. Its activity is constant on
-the roots (8) and is the phase bit
+A depth-one coefficient has the form `13u`. Its danger bit is constant on
+the roots (8):
 
 ```text
 A_u(r)=1_[14||ur||_Q<Q].                             (11)
@@ -135,33 +137,31 @@ The unit part `u modulo Q`, up to sign, ranges through
 phi(Q)/2=1014                                        (12)
 ```
 
-labels. A depth-two coefficient has the form `13^2v`; its phase bit is
+classes. A depth-two coefficient has the form `13^2v`; its phase bit is
 
 ```text
-B_v(r)=1_[14||13vr||_Q<Q],                           (13)
+B_v(r)=1_[14||v(r mod 13^2)||_(13^2)<13^2],          (13)
 ```
 
 where `v modulo 13^2`, up to sign, ranges through
 
 ```text
-phi(13^2)/2=78                                       (14)
+phi(13^2)/2=78.                                      (14)
 ```
 
-labels. The two blockers have different types, so their complete labelled
-pair universe has
+The two blocker types cannot be interchanged. Their complete typed pair
+universe therefore has
 
 ```text
 1014*78=79092                                        (15)
 ```
 
-rows. This includes every possible coincidence of their effective masks.
+rows.
 
-For a unit sign class `q modulo N`, define its guard-surviving root count
-above a phase by
+For a unit sign class `q modulo N`, define the guard-surviving root count
 
 ```text
-w_q(r)=#{k:z=r+kQ belongs to U_N and
-              14||qz||_N<N}.                        (16)
+w_q(r)=#{k in B(r):14||q(r+kQ)||_N<N}.               (16)
 ```
 
 The root-window law of THM-2198 gives
@@ -170,49 +170,38 @@ The root-window law of THM-2198 gives
 w_q(r) in {0,1,2}.                                   (17)
 ```
 
-There are
+There are `phi(N)/2=13182` unit sign classes. The two threshold sets
 
 ```text
-phi(N)/2=13182                                       (18)
+E_q^1={r:w_q(r)>=1},             E_q^2={r:w_q(r)=2}  (18)
 ```
 
-unit sign classes.
+therefore determine every conditional capacity.
 
-For a mixed blocker pair `(u,v)`, put
+For a mixed blocker pair put
 
 ```text
 P_(u,v)={r:A_u(r)=B_v(r)=0}.                         (19)
 ```
 
-The full residual size and the conditional capacity of a unit class are
-exactly
+Its full residual size and a unit class's conditional capacity are
 
 ```text
-R(u,v)=sum_(r in P_(u,v)) h(r),
-C_q(u,v)=sum_(r in P_(u,v)) w_q(r).                  (20)
+R(u,v)=sum_(r in P_(u,v))h(r),
+
+C_q(u,v)=sum_(r in P_(u,v))w_q(r)
+        =|P_(u,v) intersection E_q^1|
+         +|P_(u,v) intersection E_q^2|.              (20)
 ```
 
-If (2) held, the deepest blocker would contribute nothing on `U_N`, while
-the five unit masks would have to cover this residual. Duplicate unit sign
-classes are redundant in a union. Therefore the union has size at most the
-sum of the five largest capacities among the distinct classes in (18).
-Consequently a strict inequality
-
-```text
-R(u,v)>sum_(i=1)^5 C_(i)(u,v)                        (21)
-```
-
-for every pair contradicts (2).
+This is an exact disintegration of the full torsion masks.
 
 ## 2. The exact branch certificate
 
-Equation (17) permits a short exact certificate for all the order
-statistics in (21). For a fixed unit class put
+For a fixed unit class put
 
 ```text
-F_q=sum_r w_q(r),
-X_q(A)=sum_(r in A) w_q(r),
-X_q(B)=sum_(r in B) w_q(r).                          (22)
+F_q=sum_r w_q(r),             X_q(S)=sum_(r in S)w_q(r).
 ```
 
 With `A={r:A_u(r)=1}` and `B={r:B_v(r)=1}`,
@@ -220,17 +209,10 @@ inclusion--exclusion gives
 
 ```text
 C_q(u,v)
- =F_q-X_q(A)-X_q(B)+X_q(A intersection B).           (23)
+ =F_q-X_q(A)-X_q(B)+X_q(A intersection B).           (21)
 ```
 
-By (17),
-
-```text
-X_q(A intersection B)<=2|A intersection B|.         (24)
-```
-
-The exact capacity is also no larger than either one-blocker capacity.
-Hence
+Since `w_q(r)<=2`, and the residual lies in each one-owner complement,
 
 ```text
 C_q(u,v)<=U_q(u,v),
@@ -239,127 +221,237 @@ U_q(u,v)=min(
  F_q-X_q(A),
  F_q-X_q(B),
  F_q-X_q(A)-X_q(B)+2|A intersection B|
-).                                                   (25)
+).                                                   (22)
 ```
 
-For each pair the certificate visits unit classes in decreasing order of
-the integer upper bound (25), computes their exact capacities from two
-bitsets representing `w_q>=1` and `w_q>=2`, and maintains the five largest
-exact pairs `(capacity,-label)`. It stops only when the next upper bound is
-**strictly** smaller than the fifth retained capacity. Every unvisited exact
-capacity is then strictly smaller as well. In particular, an equality at
-the cutoff is evaluated, so the canonical smaller-label tie break cannot be
-lost.
+For each typed pair, the certificate visits unit classes in decreasing
+order of the exact integer bound (22), evaluates capacities from the two
+bitsets (18), and retains the five largest `(capacity,-label)` pairs. It
+stops only when the next bound is strictly smaller than the fifth retained
+capacity. All cutoff ties are therefore evaluated.
 
-This certifies all 79,092 rows after
+Across all `79092` pairs this requires
 
 ```text
 940857 exact candidate evaluations,
-average 11.895729024427 per row,
-maximum 27 in one row.                               (26)
+average 11.895729024427 per pair,
+maximum 27 on any pair.                              (23)
 ```
 
-No pruning decision uses floating point. All stored counts are exact
-integers within their audited dtypes.
+No pruning decision uses floating point, an unchecked integer width, or an
+optimization-sensitive assertion.
+
+### General owner-overlap lemma
+
+The bound is not special to two owners. For arbitrary active phase masks
+`A_1,...,A_k`, put
+
+```text
+m(r)=#{i:r in A_i},             R=(union_i A_i)^c.
+```
+
+The pointwise identity
+
+```text
+1_(m=0)=1-m+(m-1)_+
+```
+
+gives the exact correction
+
+```text
+sum_(r in R)w_q(r)
+ =F_q-sum_i X_q(A_i)+sum_r(m(r)-1)_+ w_q(r).         (24)
+```
+
+Whenever `w_q<=2`,
+
+```text
+sum_(r in R)w_q(r)
+ <=F_q-sum_i X_q(A_i)+2sum_r(m(r)-1)_+.              (25)
+```
+
+It is also bounded by every one-owner complement capacity. Thus owner
+overlap multiplicity plus the two thresholds (18) gives a rigorous
+candidate cutoff for later rooted problems. It does not identify which
+labels attain that cutoff.
 
 ## 3. Exact deficit and hostile row
+
+Order the capacities decreasingly:
+
+```text
+C_(1)(u,v)>=...>=C_(13182)(u,v).
+```
 
 The exhaustive result is
 
 ```text
-R(u,v)-sum_(i=1)^5 C_(i)(u,v)>=1608                  (27)
+R(u,v)-sum_(i=1)^5 C_(i)(u,v)>=1608                 (26)
 ```
 
-on the full primitive annulus, for every one of the 79,092 typed pairs.
-The minimum is unique in the least-positive sign-representative convention.
-It occurs at
+on the full primitive annulus for every typed pair. The minimum is unique
+in the least-positive sign convention:
 
 ```text
-(u,v)=(799,46),
-R(u,v)=13526.                                        (28)
+(u,v)=(799,46),                  R(u,v)=13526,
+
+((C_(i),q_i))_(i=1)^5
+ =((2604,5193),(2472,10386),(2292,7773),
+   (2288,10388),(2262,7775)).                        (27)
 ```
 
-The exact five largest `(capacity,unit label)` pairs there are
+The five capacities sum to `11918`, leaving
 
 ```text
-((2604,5193),(2472,10386),(2292,7773),
- (2288,10388),(2262,7775)).                          (29)
+13526-11918=1608.                                    (28)
 ```
 
-Their capacities sum to `11918`, and
+Two digests freeze the complete search:
 
 ```text
-13526-11918=1608.                                    (30)
-```
-
-Two frozen digests protect the full scan:
-
-```text
-pair-table:
+pair table:
 79b9b75f3732e47b43c2bba726906250ce0c1069b90d8952c33caa8a8364570f
 
 branch trace:
 2699c79c62d4c0e5805529b26dc4ce7ae5ed1f0146be25714b898ea42176802a.
-                                                               (31)
+                                                               (29)
 ```
 
-The companion performs the following hostile controls.
+The primary companion independently enumerates all `18830` full torsion
+points and all `13182` unit classes on the hostile row, reproducing
+(27)--(28). It also checks direct/image parity for every shallow class and
+THM-2204's lift-family sum on all `1014` hostile-residual families.
 
-1. For all 1,014 depth-one classes and all 78 depth-two classes, direct
-   evaluation on every root in (8) agrees with the reduced phase bits
-   (11) and (13).
-2. On the unique hostile row, an independent direct enumeration of all
-   18,830 full torsion points reconstructs all 13,182 unit capacities and
-   reproduces (28)--(30).
-3. All six depth-three sign classes modulo thirteen are checked directly
-   to be inactive on `U_N`.
-4. The unit classes split into 1,014 coefficient-lift families of size
-   thirteen. On the hostile residual, every family satisfies THM-2204's
-   exact sum law. The five hostile unit labels lie over base classes
-   `(799,599,1015,597,1013)`; their complete labelled family rows are
-   retained in the output.
+## 4. Independent one-owner certificate
 
-The source handoff and independent audit map are recorded in
-`agents/broadcast/MSG-2828-from-klein-2026-07-24-thm-2207-frozen-artifacts-and.md`.
-Fresh ordinary and `python3 -O` runs are byte-identical to the canonical
-output. Neither `assert` nor optimization-sensitive control flow is used.
+A second exact companion gives a cheaper proof with a different
+intermediate object. Define
 
-Because `N` and `Q` are powers of thirteen, they are coprime to seven and
-fourteen. Thus neither a guard equality nor a danger equality can occur on
-these torsion universes. The strict predicates in (6), (11), (13), and
-(16) therefore agree with the almost-everywhere cover without an endpoint
-convention.
+```text
+C_q^1(u)=sum_(r:A_u(r)=0)w_q(r),
+C_q^2(v)=sum_(r:B_v(r)=0)w_q(r),                    (30)
+```
 
-Equations (21) and (27) contradict (2), proving that the actual blocker
-profile `(1,2,3)` is empty. ∎
+and let `K_1(u),K_2(v)` be the sums of their five largest entries. Residual
+containment gives Ky-Fan monotonicity:
 
-## 4. Consequence and structural boundary
+```text
+sum_(i=1)^5 C_(i)(u,v)<=min(K_1(u),K_2(v)).           (31)
+```
 
-The unique-deepest ordering (3) leaves only these profiles through depth
-three:
+The one-owner scan proves
+
+```text
+R(u,v)-min(K_1(u),K_2(v))>0
+```
+
+for `79091` of the `79092` pairs. The least positive coarse margin is `36`
+at
+
+```text
+(u,v)=(1,1),             R=13310,
+min(K_1,K_2)=13274.                                  (32)
+```
+
+There is exactly one nonpositive coarse row:
+
+```text
+(u,v)=(1098,84),         R=13310,
+min(K_1,K_2)=13328,          coarse margin=-18.       (33)
+```
+
+Its exact top five are
+
+```text
+((2396,6),(2330,14275),(2324,14278),
+ (2296,5),(2288,12)),                                 (34)
+```
+
+with sum `11634` and exact margin
+
+```text
+13310-11634=1676.                                    (35)
+```
+
+Direct strict inequalities on the full residue universe independently
+reproduce both (27) and (33)--(35). This companion is
+
+```text
+04-computation/lrc14_scalar_depth123_labelled_guard_hole_thm2207.py
+05-knowledge/results/lrc14_scalar_depth123_labelled_guard_hole_thm2207.out
+
+LF SHA256:
+3c32b7c55197b5ff96ef892df1b29b61fc79df71494d1980decb34bc870032d8
+41dd14abaed66e37719eaefc216646082937aa70a76781e154dbed078604e1b3.
+                                                               (36)
+```
+
+An independent referee reconstructed the one-owner proof from definitions,
+audited the primary pruning rule and tie handling, recomputed the hostile
+row, and replayed both normal and optimized companions. The verdict was
+`ACCEPT / PROVED + VERIFIED-EXACT`.
+
+## 5. Exclusion of `(1,2,3)`
+
+If (2) held, the depth-three blocker would contribute nothing on `U_N`.
+For the actual shallow pair, the five unit masks would have to cover every
+point counted by `R(u,v)`. Duplicate unit sign classes are redundant in a
+union, and the union of at most five masks has size at most the sum of the
+five largest individual capacities. Equation (26) says that this sum is
+strictly smaller than the residual.
+
+Hence one primitive residue is safe from all five unit masks and both
+shallow blockers. It is safe from the depth-three blocker by Section 1 and
+lies in the guard-danger set by construction. Powers of thirteen are
+coprime to seven and fourteen, so no relevant torsion equality occurs. The
+missed point satisfies every inequality strictly and thickens to an
+uncovered open interval, contradicting the almost-everywhere cover (2).
+This proves that (4) is empty.
+
+## 6. Consequence and structural boundary
+
+The unique-deepest ordering (3) leaves only
 
 ```text
 depth 2: (1,1,2);
-depth 3: (1,1,3), (1,2,3), (2,2,3).                 (32)
+depth 3: (1,1,3), (1,2,3), (2,2,3).                 (37)
 ```
 
 THM-2198 excludes the first, THM-2205 excludes `(1,1,3)`, this theorem
-excludes `(1,2,3)`, and THM-2204 excludes `(2,2,3)`. Therefore
+excludes `(1,2,3)`, and THM-2204 excludes `(2,2,3)`. Therefore every
+surviving scalar `5+3` branch has
 
 ```text
-every surviving scalar 5+3 branch has lambda_3>=4.   (33)
+4<=lambda_3<=19,                                     (38)
 ```
 
-In the actual dyadic-terminal LRC lane, THM-2203 independently gives
-`lambda_3<=19` and counts 1,140 profiles before these four exclusions.
-Thus (32) leaves 1,136 profiles. This is a finite ledger, not a feasible
-flat enumeration: the depth-twenty torsion layer and its labelled
-owner-current sidecars remain enormous.
+where the upper bound is THM-2203. That theorem counts `1140` profiles
+before the four exclusions, so `1136` remain.
 
-The mechanism here also identifies what a deeper proof must preserve. The
-scalar family sum from THM-2204 is insufficient: the hostile top five live
-in five different lift families, and their order is controlled by the
-phasewise alignment of guard holes with labelled unit endpoints. THM-2201's
-Hasse-jet carrier or an equivalent sparse correlation state is the natural
-recursive object. A future depth transition must compress that state
-without destroying the conditional top-five order statistic.
+The exact carrier ledger is
+
+```text
+source:
+  one depth-one owner, one depth-two owner, and a unit label;
+map:
+  disintegrate the depth-four torsion layer into thirteen-root phases;
+target:
+  owner phase masks and threshold sets E_q^1,E_q^2;
+preserved:
+  exact residual size and every labelled conditional unit capacity;
+destroyed by scalar averaging:
+  phase-aligned guard-hole correlation and the top-five order statistic;
+cheapest decisive test:
+  the sole one-owner exception (1098,84).             (39)
+```
+
+THM-2204's lift-family sum is only the zeroth correlation moment. The
+hostile top five lie in five different lift families. THM-2201's full
+triangular Hasse jets retain more information than (18), but the present
+profile needs only the two thresholds because every root count is at most
+two.
+
+The remaining depth-`4..19` ledger is finite but not feasibly flat: its
+largest torsion layer and owner-current sidecars remain enormous. This
+theorem gives no uniform higher-depth top-five recurrence, does not empty
+the primitive rank-twelve locus, and does not prove LRC(14). QED.

@@ -185,9 +185,9 @@ THM-735 and THM-2182/2184 give remote-tail and grid/mixed-core terminals;
 THM-2186 gives a strict toric exit. THM-2168/2192 leave only scalar `5+3`,
 with one deepest blocker, 36 empty profiles, and degree-at-most-20 static
 Hafnian pumps. THM-2197/2201 give Boolean deficiency and a faithful triangular
-Hasse-jet carrier. THM-2198/2204/2205 close `(1,1,2)/(2,2,3)/(1,1,3)`;
-the lift sum still loses guard-hole correlation. THM-2203 fixes scalar
-transport at `16/208`; only `(1,2,3)` remains at depth three. THM-2209's
+Hasse-jet carrier. THM-2198/2204/2205/2207 close every deepest-depth-three
+profile; THM-2203 fixes scalar transport at `16/208` and bounds the remaining
+deepest depth by `4..19`. Labelled guard-hole correlation remains. THM-2209's
 quadratic peel certifies THM-2179's level-one hostile row.
 
 ### Independent routes that remain live
