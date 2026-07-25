@@ -2,7 +2,7 @@
 id: THM-2334
 title: "Relation-residue current and character-twist pushforward"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. The
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. The
   27-factor word/deepest-comb/bare Fourier expansion has a canonical
   exact-address pushforward: for every fixed relation address its whole
   gauge-orbit coefficient is absolutely convergent even without Abel
@@ -43,7 +43,14 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2334 -- the current is a measure on relation-address orbits
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
+
+The independent audit rederived the fixed-address summability estimate,
+the `l1` Abel pushforward, relation-lattice reduction and character duality
+for both prime and composite moduli, every transform sign and normalization,
+the target Parseval identity, and the CRT scope boundary.  It also reproduced
+the exact companion under ordinary and optimized Python and checked the
+positive-factor hostile after explicitly normalizing its deep coefficient.
 
 THM-2331 proves that every prescribed all-`91`-unit target address occurs
 as a nonzero term in the marked mixed current. That is a support theorem.
