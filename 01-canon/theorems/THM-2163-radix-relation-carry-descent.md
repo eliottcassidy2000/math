@@ -3,13 +3,14 @@ id: THM-2163
 title: "Radix relation-carry descent and full-box CRT blindness"
 status: >
   PROVED. Every nonzero integer relation has an exact base-q carry path with
-  fewer than 2||m||_1 states; the path starts and terminates at zero, and the
-  digit recurrence has a converse reconstruction theorem. Quotient-owner
-  masks are the missing termination sidecar. An explicit primitive defect-
-  seven pair has identical labelled residues for q=2,...,13, identical full
-  coefficient-height-29 relation boxes, and the same maximum, but its
-  mod-17 margins are 0 and 2. Thus a fixed CRT bank plus bounded relations
-  plus scalar magnitude still mixes the next modular certificate.
+  fewer than 2||m||_1 states; for a positive row the sign-sharp count is only
+  ||m||_1-1. The path starts and terminates at zero, and the digit recurrence
+  has a converse reconstruction theorem. Quotient-owner masks are the missing
+  termination sidecar. An explicit primitive defect-seven pair has identical
+  labelled residues for q=2,...,13, identical full coefficient-height-29
+  relation boxes, and the same maximum, but its mod-17 margins are 0 and 2.
+  Thus a fixed CRT bank plus bounded relations plus scalar magnitude still
+  mixes the next modular certificate.
 source: codex-2026-07-24-relation-carry-spectrum
 depends_on: []
 related:
@@ -115,6 +116,29 @@ which is (7)--(8). Since every coordinate of `R_j/q^j` lies in `[0,1)`,
 
 Equations (6) and (10) follow from `R_0=0` and `Z_J=0`. QED.
 
+For the positive rows relevant to LRC there is a sign-sharp state count.
+Write
+
+```text
+P=sum_(m_i>0)m_i,              N=sum_(m_i<0)(-m_i).
+```
+
+Both are positive because `V_i>0`, `m.V=0`, and `m!=0`. The first expression
+in (5), together with `0<=R_(j,i)/q^j<1`, gives
+
+```text
+-N<kappa_j<P.                                         (14a)
+```
+
+The integer interval in (14a) contains exactly
+
+```text
+P+N-1=||m||_1-1                                       (14b)
+```
+
+values. This refinement uses positivity; the symmetric bound (11) remains
+the correct statement for the nonnegative generality of (1).
+
 ## 2. Converse reconstruction
 
 The carry rule loses no relation information. Let digit vectors
@@ -186,10 +210,11 @@ A zero digit does not imply that its coordinate has terminated: higher
 digits can remain. Therefore a carry-only automaton can cycle and cannot
 bound the search depth. The owner mask is not optional bookkeeping.
 
-If `|m_i|<=H`, then `||m||_1<=dH`. For the thirteen-coordinate relations of
-THM-2144 at height `29`, (9) gives `|kappa_j|<377`; for THM-2145's low-core
-height `298`, it gives `|kappa_j|<3874`. These are real finite state bounds,
-but neither supplies a bound on the number of digit levels.
+If `|m_i|<=H`, then `||m||_1<=dH`. For the positive thirteen-coordinate
+relations of THM-2144 at height `29`, (14b) gives at most `376` carry values
+before primitive normalization; for THM-2145's low-core height `298`, it
+gives at most `3873`. These are real finite state bounds, but neither supplies
+a bound on the number of digit levels.
 
 ## 4. A relation-preserving CRT hostile pair
 

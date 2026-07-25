@@ -1,17 +1,22 @@
 ---
 id: THM-2160
-title: "A dyadic checksum extracts a fair bit within the sharp critical-run envelope"
+title: "Dyadic shell extraction and the optimal half-tail critical-run rule"
 status: >
   PROVED. Let independent flips have probabilities p and 1-p, with 0<p<1,
   and let n be the length of the first constant run. If h is the largest
-  power of two not exceeding n, a cyclic checksum on the second half of the
-  first 2h flips splits every fixed-composition shell exactly in half. The
-  resulting deterministic bit is fair for every p. It is decided after at
-  most 2n flips, and in fact after at most max(2,2n-1). The stronger uniform
-  envelope max(2,2n-2) is impossible.
+  power of two not exceeding n, exact fixed-composition bisection gives a
+  deterministic fair bit for every p. A cyclic checksum proves the requested
+  max(2,2n-1) deadline. A sharper owner-stratified rule has T(1)=2, T(2)=3,
+  and T(n)<=2n-2 for n>=3; when n=h>=2 it stops at 3h/2, which is optimal
+  among branchwise composition-exact h-shell rules. Such shell bisection is
+  possible exactly when h is a power of two, and a global shell coloring can
+  ignore at most one fixed tail coordinate.
 source: codex-2026-07-24-biased-coin-dyadic-shell
 depends_on: []
-related: []
+related:
+  - THM-2162
+script: 04-computation/biased_coin_dyadic_half_tail_referee_codex_20260724.py
+output: 05-knowledge/results/biased_coin_dyadic_half_tail_referee_codex_20260724.out
 ---
 
 # THM-2160 -- dyadic critical-run fair extraction
@@ -195,9 +200,192 @@ p^2,                    p(1-p), p(1-p),              (1-p)^2,
 ```
 
 and no such subset sum is identically `1/2`: evaluation at `p=0` already
-gives constant term zero or one. Thus (13) is globally one-step sharp.
+gives constant term zero or one. Thus the single envelope
+`max(2,2n-1)` cannot be shifted down uniformly by one. The obstruction is
+only `n=2`; the next construction improves every `n>=3`.
 
-## 5. Transfer boundary
+## 5. A faster half-tail construction
+
+The checksum is especially simple, but it is not deadline-optimal on a
+dyadic shell. Assume `h>=2`, write
+
+```text
+h=2t,
+b=X_1,
+z_i=X_(h+i) xor b.                                    (15)
+```
+
+The shell condition is `z!=0`. We first define the heads set for `b=0`.
+On the stratum `z_1=1`, output heads exactly when
+
+```text
+z_2+...+z_t=0 mod 2.                                  (16)
+```
+
+Thus every sequence with exact critical value `n=h` is decided after the
+first `t=h/2` relative tail bits.
+
+It remains to complete (16) on `z_1=0` so that every relative Hamming layer
+is bisected. Let `A_j` be the number of heads of relative weight `j` already
+prescribed by (16). Its generating polynomial is
+
+```text
+A(u)
+ =u ((1+u)^(t-1)+(1-u)^(t-1))/2 (1+u)^t
+ ={u(1+u)^(h-1)+u(1+u)(1-u^2)^(t-1)}/2.              (17)
+```
+
+Write
+
+```text
+e_j=[u^j]u(1+u)(1-u^2)^(t-1).                         (18)
+```
+
+Among the still-unlabelled words with `z_1=0` and weight `j`, choose exactly
+
+```text
+R_j=(binom(h-1,j)-e_j)/2                              (19)
+```
+
+as heads, for each `1<=j<h`; a lexicographic choice makes the rule fully
+deterministic. The endpoint `z=1^h` can initially be labelled arbitrarily.
+
+This completion is legal. Explicitly,
+
+```text
+e_(2a+1)=e_(2a+2)=(-1)^a binom(t-1,a).                (20)
+```
+
+Since `h-1` and `t-1` have all binary digits equal to one, Lucas' theorem
+makes both binomial coefficients in (19)--(20) odd, so `R_j` is integral.
+Moreover
+
+```text
+|e_j|<=binom(h-1,j).                                  (21)
+```
+
+For example, inject an `a`-subset of `t-1` positions into a `j`-subset of
+`2t-1` positions by adjoining `a+1` fixed positions when `j=2a+1`, or
+`a+2` fixed positions when `j=2a+2`; the latter case has `a<=t-2` because
+`j<h`. Hence `0<=R_j<=binom(h-1,j)`.
+
+Pascal's identity and (17)--(19) now give
+
+```text
+A_j+R_j
+ ={binom(h-1,j-1)+e_j+binom(h-1,j)-e_j}/2
+ =binom(h,j)/2.                                       (22)
+```
+
+Thus every nonendpoint relative-weight layer is bisected. For `b=1`, use
+the complementary label on the same relative word `z`. Its layers are also
+bisected, and the two middle-composition words, both represented by
+`z=1^h`, receive opposite labels. The fixed-composition proof of Section 2
+therefore proves fairness for every `p`.
+
+If `n=h`, rule (16) stops at
+
+```text
+h+t=3h/2.                                             (23)
+```
+
+If `h<n<=2h-1`, then `z_1=0`; reading through flip `2h` determines the
+completion (19). Consequently
+
+```text
+T(1)=2,          T(2)=3,
+T(n)<=2n-2                         for every n>=3.     (24)
+```
+
+Indeed, (23) is at most `2h-2` for `h>=4`, while `n>h` gives
+`2h<=2n-2`. For the sample `00001`, `h=4,t=2`; only flip six is additionally
+needed, and the lower-branch convention outputs heads exactly when `X_6=0`.
+
+## 6. Why dyadic shells, and what is optimal
+
+### 6.1 Dyadicity is necessary and sufficient
+
+Consider the same length-`2h` shell for an arbitrary positive integer `h`
+and demand equal heads/tails counts in every total-composition class. At
+total weights `j=1,...,h-1`, only the prefix `0^h` occurs and the class has
+size `binom(h,j)`. Therefore all internal binomial coefficients must be even.
+Over `F_2`,
+
+```text
+(1+u)^h=1+u^h
+```
+
+holds exactly when `h` is a power of two: if the binary expansion of `h`
+has two or more nonzero digits, Lucas' theorem supplies an internal `j` with
+`binom(h,j)` odd. Conversely, Sections 1--2 construct the bisection when
+`h` is a power of two. Hence
+
+```text
+composition-exact h-shell extraction exists
+iff h is a power of two.                              (25)
+```
+
+Equivalently, cyclic rotation partitions every nonconstant binary necklace
+of dyadic length into even orbits; an alternating coloring of each orbit,
+plus the middle pair, gives a noncanonical sufficiency proof.
+
+### 6.2 The half-tail deadline is shell-optimal
+
+Fix either initial-bit branch and suppose every word with exact critical
+value `n=h` is decided from only the first `d` relative tail bits. In the
+relative-weight-`h-1` layer, the `h` words have one zero and must split
+`h/2`--`h/2`. The exceptional word with `z_1=0` contributes either zero or
+one head, so the `h-1` exact-`n=h` words must contribute `h/2` or `h/2-1`.
+
+Among those words, zeros in positions `2,...,d` yield `d-1` distinguishable
+prefixes, while all `h-d` zeros in later positions share one prefix.
+Therefore their possible head counts lie in
+
+```text
+[0,d-1] union [h-d,h-1].                              (26)
+```
+
+Neither required count belongs to (26) when `d<h/2`. Thus
+
+```text
+d>=h/2,                                               (27)
+```
+
+and (16) attains equality. The time `3h/2` in (23) is optimal within this
+branchwise composition-exact shell model; (27) is not asserted as a lower
+bound for every conceivable cross-shell stopping rule.
+
+### 6.3 One globally ignored coordinate is maximal
+
+Fix one branch and encode a composition-bisecting coloring by
+`f:{0,1}^h->{-1,+1}`, extending it to the omitted zero word if necessary.
+If `f` is independent of a fixed set of `r` tail coordinates, its signed
+layer enumerator factors as
+
+```text
+F(u)=sum_z f(z)u^|z|=(1+u)^r G(u).                    (28)
+```
+
+Composition balance kills every coefficient of degree `1,...,h-1`, so
+
+```text
+F(u)=epsilon_0+epsilon_h u^h.                         (29)
+```
+
+For even `h`, divisibility by `1+u` forces
+`epsilon_h=-epsilon_0`. The root `u=-1` of
+`epsilon_0(1-u^h)` is simple, proving
+
+```text
+r<=1.                                                 (30)
+```
+
+The checksum's ignored final coordinate is therefore maximal among global
+fixed-coordinate quotients. The faster rule evades (30) by stratified
+obliviousness: it ignores half the tail on `z_1=1` but may inspect the whole
+tail on `z_1=0`, where (19) pays the exact layer defect.
+
+## 7. Transfer boundary
 
 The mechanism is a composition-preserving cyclic symmetry. It works because
 Bernoulli cylinder mass depends only on Hamming weight. A target distribution

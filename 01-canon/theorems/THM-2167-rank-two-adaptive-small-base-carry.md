@@ -2,17 +2,20 @@
 id: THM-2167
 title: "Rank-two adaptive small-base carry descent"
 status: >
-  PROVED from THM-2163 and THM-2164. Every zero-safe distinct thirteen-speed
-  row has two relations of height at most 105 which remain independent modulo some
-  prime q in {2,3,5,7,11,13}. In that base every digit layer lies in an
-  affine codimension-two fibre of size q^11. The simultaneous carry has
-  at most 2729^2 states; after sorting, the owner mask has fourteen
-  possible suffix values. Repeated carry-owner states may be deleted while
-  preserving positivity and both relations, but not distinctness or the
-  lonely-runner target. Thus the theorem gives a finite adaptive automaton
-  and an exact pumping boundary, not a proof of LRC(14).
+  PROVED from THM-2144, THM-2163, and THM-2164. Every zero-safe distinct
+  thirteen-speed row has primitive independent relations of heights 29 and
+  at most 105 which remain independent modulo some prime q in
+  {2,3,5,7,11,13}. In that base every unrestricted digit layer is an affine
+  codimension-two fibre of size q^11; the owner-restricted fibre has exact
+  size q^(|O|-r), where r is the live-column rank. The sign-sharp support
+  split gives at most 208875 simultaneous carry pairs and, after sorting,
+  at most 2924250 carry-owner states. Repeated carry-owner states may be
+  deleted while preserving positivity and both relations, but not
+  distinctness or the lonely-runner target. Thus the theorem gives a finite
+  adaptive automaton and an exact pumping boundary, not a proof of LRC(14).
 source: codex-2026-07-24-rank-carry-synthesis
 depends_on:
+  - THM-2144
   - THM-2163
   - THM-2164
 related:
@@ -40,12 +43,12 @@ The theorem turns the analytic rank conclusion of THM-2164 into a bounded
 radix carrier.  Its final pumping statement also identifies why bounded
 relations alone do not make the speed search finite.
 
-## 1. A bounded rank-two lattice has a small good prime
+## 1. A mixed-height rank-two lattice has a small good prime
 
 Let `r,s in Z^13` be linearly independent over `Q`, with
 
 ```text
-||r||_infinity,||s||_infinity<=H.                     (2)
+||r||_infinity<=29,              ||s||_infinity<=105. (2)
 ```
 
 Some two-coordinate minor
@@ -57,7 +60,7 @@ Delta_(i,j)=r_i s_j-r_j s_i                           (3)
 is nonzero.  Every such minor obeys
 
 ```text
-|Delta_(i,j)|<=2H^2.                                  (4)
+|Delta_(i,j)|<=2*29*105=6090.                         (4)
 ```
 
 If the reductions of `r,s` were dependent over `F_p` for every prime
@@ -72,20 +75,20 @@ then every prime in `P` would divide (3).  Since the primes are distinct,
 30030=product_(p in P)p
 ```
 
-would divide its nonzero value.  At `H=105`, however,
+would divide its nonzero value.  But
 
 ```text
-2H^2=22050<30030.                                     (6)
+6090<30030.                                           (6)
 ```
 
 This is impossible.  We have proved:
 
-> **Small-prime lemma.** Two independent integer vectors of coefficient
-> height at most `105` remain independent modulo at least one prime
+> **Small-prime lemma.** Independent integer vectors of respective heights
+> at most `29` and `105` remain independent modulo at least one prime
 > `q in {2,3,5,7,11,13}`.
 
 The endpoint `13` cannot simply be removed from this abstract argument:
-the two vectors `(105,0)` and `(0,22)` have determinant
+the two vectors `(22,0)` and `(0,105)` have determinant
 `2310=2*3*5*7*11`, so they are dependent modulo every earlier prime and
 independent modulo `13`.
 
@@ -97,17 +100,18 @@ Let `V_1,...,V_13` be pairwise distinct positive integers and suppose
 mu{t:||V_i t||>=1/14 for every i}=0.                  (7)
 ```
 
-THM-2164 proves
+THM-2144 supplies a nonzero height-29 relation. Divide by its coefficient
+gcd and call the primitive result `r`. THM-2164 proves
 
 ```text
 dim_Q W_105(V)>=2.                                    (8)
 ```
 
-Choose two independent members
+Choose a primitive member independent of `r`:
 
 ```text
 r,s in Lambda(V),
-||r||_infinity,||s||_infinity<=105.                   (9)
+||r||_infinity<=29,              ||s||_infinity<=105. (9)
 ```
 
 The small-prime lemma supplies a prime `q<=13` for which their reductions
@@ -160,18 +164,37 @@ in (13), has exactly
 q^(13-2)=q^11                                           (15)
 ```
 
-elements.  Owner restrictions may delete elements of this fibre, but can
-never enlarge it.
+elements.
 
-The strict bounds in (12) give at most
+For a positive row, THM-2163 sharpens each symmetric carry interval to
+exactly `||a||_1-1` possible integers. Split on the support of the
+height-29 anchor `r`. If `|supp(r)|>=3`, THM-2164 permits choosing
+`||s||_infinity<=43`. Primitivity gives
 
 ```text
-(2||r||_1-1)(2||s||_1-1)
- <=2729^2
- =7,447,441                                             (16)
+||r||_1<=12*29+28=376,
+||s||_1<=12*43+42=558,
 ```
 
-carry pairs.  Conversely, any finite digit word and carry-pair path obeying
+and hence at most
+
+```text
+375*557=208875                                         (16)
+```
+
+carry pairs. If `|supp(r)|=2`, its primitive opposite coefficients are
+coprime, distinct positive integers at most `29`, so `||r||_1<=57`.
+The height-105 companion has `||s||_1<=1364`; this branch has at most
+
+```text
+56*1363=76328
+```
+
+carry pairs. Thus (16) is universal. If `r` is signed-unit, THM-2164 gives
+a height-34 companion, the good prime may be taken in `{2,3,5,7}`, and
+there are at most `12*440=5280` pairs.
+
+Conversely, any finite digit word and carry-pair path obeying
 (12), with both endpoint carries zero, reconstructs by THM-2163 a
 nonnegative integer row satisfying both relations.  Thus the construction
 is exact in both directions; it is not merely a necessary congruence test.
@@ -187,24 +210,40 @@ After relabelling, assume
 Put
 
 ```text
-O_j={i:V_i>=q^j}.                                     (17)
+O_j={i:V_i>=q^j},
+rho_j=rank_(F_q)((r;s) restricted to columns O_j).   (17)
 ```
 
 The masks are nested suffixes, so only fourteen values are possible,
 including the empty suffix.  The combined carry-owner carrier has at most
 
 ```text
-14*7,447,441=104,264,174                              (18)
+14*208875=2924250                                     (18)
 ```
 
-states.  It records that
+states. Since the actual right-hand side in (13) belongs to the image of
+the live columns, the owner-supported digit fibre is a nonempty affine
+space of exact size
 
 ```text
-support(D_j) subset O_j,       O_J=empty.              (19)
+q^(|O_j|-rho_j).                                      (19)
 ```
 
-A zero digit at an active coordinate still does not mean termination:
-higher nonzero digits may remain.
+Thus the digit constraint stays genuinely codimension two exactly while
+`rho_j=2`; one may repivot as owners disappear. The good-prime argument
+proves only `rho_0=2`, and live rank can fall immediately. A zero digit at
+an active coordinate still does not mean termination: higher nonzero digits
+may remain.
+
+If a next suffix `O_(j+1) subset O_j` is prescribed and a live pivot pair
+survives in `O_(j+1)`, choosing the nonpivot digits gives exactly
+
+```text
+q^(|O_(j+1)|-2)(q-1)^(|O_j\O_(j+1)|)                 (19a)
+```
+
+compatible digit vectors. If a pivot exits, its solved digit must also be
+nonzero, so the same product is only an upper bound followed by a filter.
 
 There is an exact pumping statement.  Suppose `0<=j<k<=J` and
 

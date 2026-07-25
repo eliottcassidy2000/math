@@ -1,0 +1,17 @@
+THM-2160 DYADIC HALF-TAIL REFEREE
+all counts are exact integers; enumeration controls run through h=16
+
+ h   t=h/2   min R_j   max R_j   exact-n=h deadline
+  2       1         0         0                   3
+  4       2         1         1                   6
+  8       4         1        19                  12
+ 16       8         1      3235                  24
+ 32      16         1  150273315                  48
+ 64      32         1  458156035385917731                  96
+128      64         1  5987786510482020716992052979330785571                 192
+256     128         1  1442164705862301584522437089465571721941040712004272528868643038760224825635                 384
+
+classification control h<=256: 8 dyadic and 247 nondyadic shells
+sample 00001: h=4, t=2, decision after X6
+result: every layer completion and every shell-local lower-bound sensor passed
+all assertions passed

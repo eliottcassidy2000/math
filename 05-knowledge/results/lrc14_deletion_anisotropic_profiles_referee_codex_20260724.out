@@ -1,0 +1,16 @@
+THM-2169 DELETION-ADAPTED ANISOTROPIC PROFILE REFEREE
+all Kraft sums are exact rational numbers
+
+   max-low: 12194/12217 < 1
+  max-high: 12446/12595 < 1
+ other-low: 3257870/3258253 < 1
+ other-mid: 1061102/1064965 < 1
+other-high: 2022566/2025505 < 1
+ other-top: 51854/51925 < 1
+
+exhaustive height audit M=1..29: worst=1247 at M=29 (other-top)
+M=29 symmetric-template optimum, delete max: bound=1247, caps=(7; 36x12)
+M=29 symmetric-template optimum, delete other: bound=1247, caps=(27, 9; 34x11)
+primitive twelve-coordinate l1 bound: 14963
+sign-sharp positive-row carry alphabet: 14962
+all assertions passed
