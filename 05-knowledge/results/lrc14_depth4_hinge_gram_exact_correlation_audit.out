@@ -1,0 +1,21 @@
+EXACT DEPTH-FOUR HINGE/GRAM CORRELATION AUDIT
+carrier N / signed order / generator = (371293, 171366, 2)
+guard universe / theta / terminal count = (244810, 33150, 5)
+NTT modulus / length / primitive root = (5767169, 524288, 3)
+arithmetic = exact finite-field/integer; floating point = none
+singleton depth-3 rows / tail entries / digest = (78, 711, '9b37be73cfe5646dbf0595c6668ab5ff63a85784be1caacac1f39194bfcdb3d9')
+singleton depth-2 rows / tail entries / digest = (1014, 16216, '3e655cc2563ad2ae6b1f3e412f8a299c1b37bb05690d6cdcdb1a011dd686077a')
+334 pair audit = (3081, 3347, (1, 14, 172610, 3513, 169263), 1, '45a92892c1fe6c939f8ffc30dcf91223bfcecf14325a6491520d5cffb25a8431')
+234 pair audit = (79092, 5277, (466, 41, 175278, 4251, 170001), 1, '4b1c0599c4fbd69b0cb4b1e4227630956980480fc8fb3e352b9bbe1b0b43f942')
+224 pair audit = (514605, 4876, (550, 719, 177938, 7312, 173062), 1, '2de536ab4586b9ede50ecbdac26fd2eef3d88a38fcb84c1ba3bf98ef715bda54')
+234 one-owner audit = (2170, (170, 1, 175248, 173078), 10)
+224 one-owner audit = (3530, (508, 1015, 177888, 174358), 1)
+334 hostile top five = ((33928, 2198), (33918, 2196), (32518, 1098), (32496, 1099), (31408, 6))
+234 hostile top five = ((29664, 142637), (29646, 2198), (29646, 142635), (29628, 2196), (29224, 6))
+224 one-owner-minimizer top five = ((29662, 171534), (29648, 30941), (29644, 6), (29620, 85853), (29612, 171536)) residual = 177888
+direct min-row tail intersection counts = (3, 4, 8)
+334 hostile family-energy audit = (220540, 0, 10079244328, 1572362069200) residual = 188290
+234 hostile family-energy audit = (205311, 0, 8741366936, 1363643623888) residual = 175248
+pair digest schema = little-endian <6q: left,right,W,H,5theta+H,margin
+singleton digest schema = <q owner label then exponent-ordered <i4 capacities
+VERDICT = all 334, 234, and 224 pair margins are positive
