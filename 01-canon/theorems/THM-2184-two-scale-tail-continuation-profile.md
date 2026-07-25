@@ -18,7 +18,11 @@ status: >
   7+6 obstruction. For seven-element cores inside {1,...,13}, THM-2166 gives
   the stronger uniform cone NL>=89||r||_1. The proof works unchanged for any
   rational-grid measurable core. On THM-2168's scalar 5+3 residual this gives
-  both a uniform three-tail tube and a sharper explicit congruence terminal.
+  a uniform three-tail tube and a formally valid explicit congruence
+  criterion. Combining the all-depth invoice with the full six-coefficient
+  endpoint grid and THM-2192's unique-deepest law shows that this particular
+  canonical full-grid instance never fires; compressed residual grids are
+  not excluded. This is a route no-go, not a closure of scalar 5+3.
 source: codex-2026-07-24-relation-carry-spectrum
 depends_on:
   - THM-1166-seven-wall-fano-gcd-discrepancy
@@ -26,6 +30,7 @@ depends_on:
   - THM-2166-hybrid-core-smoothing-low-carry-crossing
   - THM-2168-three-target-second-depth-majorization
   - THM-2182-endpoint-grid-product-and-tail-overlap-sidecar
+  - THM-2192-scalar-five-plus-three-root-sheet-chord-invoice
 related:
   - THM-2162-signed-endpoint-cocycle-and-bv-component-split
   - THM-2174-endpoint-phase-scale-obstruction
@@ -34,6 +39,10 @@ script: 04-computation/lrc14_two_scale_tail_continuation_thm2184.py
 output: 05-knowledge/results/lrc14_two_scale_tail_continuation_thm2184.out
 script_sha256: 246d28ecdb9bc816091b3c1a76f6458bdd594794c1000cb72fa452d426cb730f
 output_sha256: 28132bb89bc6fb836e8af3099d3afecc091137da8d4fac0f9462af275bc2706f
+independent_script: 04-computation/lrc14_scalar_endpoint_grid_no_go_thm2184.py
+independent_output: 05-knowledge/results/lrc14_scalar_endpoint_grid_no_go_thm2184.out
+independent_script_sha256: 43d914f9214ab3f9e9f5f979da2d79b88238b826efb7346376995d075d139aff
+independent_output_sha256: 417b2288811fc9bd9c62bc36509d9e937fca7961722fe026c020f6afde91ea58
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -429,11 +438,111 @@ M/J <=213840/87451<2.446.                            (SC.8)
 
 Since `sum_j w_j>=6`, for `n>=3` the left side of (SC.7) is at least
 `6(n-213840/87451)J`, which is greater than its right side. Thus only the
-neighboring grid scales `n=1,2` can satisfy (SC.7); choosing `n=1` also
-handles `M<J` through a negative residue. The terminal is not a large-`n`
-asymptotic and does not close arbitrary scalar blockers. Its preserved
-coordinate is precisely the signed quotient remainder discarded by an
-unlabelled common scale.
+neighboring grid scales `n=1,2` remain as apparent candidates under this
+weak maximum-coordinate estimate; choosing `n=1` also represents `M<J`
+through a negative residue.
+
+There is, however, a decisive obstruction to using (SC.7) with the
+**canonical full six-coefficient endpoint grid** of the actual THM-2168
+residual.  The guard and five unit coefficients there are pairwise distinct.
+Write
+
+```text
+J=14Q.
+```
+
+The grid divisibilities imply `q_i|Q`.  They also imply `H|2Q`, and the
+oddness of `H` improves this to `H|Q`.  Thus
+
+```text
+a_0=Q/H,                 a_i=Q/q_i,  i=1,...,5,
+```
+
+are six distinct positive integers.  Ordering them and using the sixth
+harmonic number gives the sharp divisor envelope
+
+```text
+B/Q=sum_(i=0)^5 1/a_i
+   <=1+1/2+1/3+1/4+1/5+1/6
+    =49/20,
+B<=7J/40.                                             (SC.9)
+```
+
+This envelope is arithmetically sharp even with an odd guard and
+thirteen-unit coefficients: take `Q=60`, `H=15`, and
+`(q_i)=(60,30,20,12,10)`.  Combining (SC.9) with THM-2168's all-depth
+invoice yields
+
+```text
+J/M >=(40/7)(12493/35640)
+     =12493/6237
+     =2+19/6237,
+M/J <=6237/12493<1/2.                                (SC.10)
+```
+
+THM-2192 makes the normalized-tail obstruction still farther away.  Order
+the actual blocker valuations as
+
+```text
+lambda_1<=lambda_2<lambda_3,          d=lambda_1.
+```
+
+If `lambda_2=d`, then two distinct `w_j` are thirteen-units and the third
+is divisible by thirteen, so
+
+```text
+sum_j w_j>=1+2+13=16.
+```
+
+If `lambda_2>d`, the last two normalized coefficients are divisible by
+`13` and `13^2`, respectively, and the stronger floor is
+
+```text
+sum_j w_j>=1+13+169=183.                             (SC.11)
+```
+
+In particular, (SC.10) makes `k=M-nJ` negative for every `n>=1`, and the
+two valuation cases above give
+
+```text
+|k| sum_j w_j/J
+ >=16(n-6237/12493).
+```
+
+The difference between this lower bound and the right side of (SC.7),
+after division by `J`, is increasing in `n`; already at `n=1` it is
+
+```text
+16(1-6237/12493)-961/28665
+ =219788159/27547065>0.                              (SC.12)
+```
+
+Hence neither `n=1` nor `n=2` -- indeed, no `n>=1` -- can satisfy (SC.7)
+for any `J` satisfying the full-grid divisibilities chosen after (SC.1).
+Moreover `J` is a multiple of fourteen, so
+
+```text
+k=13^d-nJ ==(-1)^d (mod 14);
+```
+
+`k` is odd, and since it is negative, `|k|` is `13` modulo fourteen for
+even `d` and `1` modulo fourteen for odd `d`.  The signed quotient remainder
+is therefore fully controlled, but in the direction opposite to the
+continuation tube.
+
+The criterion (SC.7) remains formally valid for an abstract rational-grid
+core.  What (SC.9)--(SC.12) prove is a precise no-go for this canonical
+full-grid application: a grid required to resolve each of the six shallow
+coefficients is already more than twice the minimum deep scale.  They do not
+exclude a smaller grid arising from boundary masking or cancellation in the
+actual residual set.  The remaining scalar target must therefore use either
+such compressed endpoint information or data discarded by the proportional
+continuation profile, such as THM-2192's root-sheet ownership, signed overlap,
+or matching-support constraints.  This does not exclude the scalar branch.
+The independent companion checks the sharp divisor row, both valuation
+minima, every rational constant in (SC.10)--(SC.12), the monotone `n=1`
+endpoint, and the signed mod-fourteen remainder law with checks active under
+optimized Python.
 
 More generally, for any tail length, if
 

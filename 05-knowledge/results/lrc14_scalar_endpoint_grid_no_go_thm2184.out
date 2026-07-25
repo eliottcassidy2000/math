@@ -1,0 +1,11 @@
+THM-2184 scalar endpoint-grid no-go exact audit
+harmonic_six_envelope=49/20
+equality_control=Q:60;H:15;q:60,30,20,12,10;complements:1,2,3,4,5,6
+finite_divisor_hostile_check=Q<= 360:PASS
+invoice_grid_ratio=J/M>=12493/6237=2+19/6237
+deep_to_grid_ratio=M/J<=6237/12493<1/2
+unique_deepest_W_minima=repeated_min_depth:16;strict_depths:183
+SC7_normalized_gap_n1=219788159/27547065
+SC7_normalized_gap_n2=659617678/27547065
+k_mod_14=d_even:1,d_odd:13;abs_k_mod_14=d_even:13,d_odd:1
+SC7_trigger_on_canonical_full_six_coefficient_grid=EMPTY

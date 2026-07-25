@@ -8,25 +8,38 @@ status: >
   doubletons partition the ten guard-safe sheets, while over the guard-safe
   base arc there is either a singleton-plus-four-chord partition or a
   five-chord cover with exactly one incidence defect. This gives a signed
-  three-deep-union overlap invoice. The induced anchored chord diagram on
-  F_13 excludes eight of the 252 possible multisets of five unit residue
-  lengths, uniformly at every 13-adic depth. The unit-annulus law also
-  eliminates every branch in which the maximum valuation among the three
-  actual blockers is repeated; a survivor has a unique deepest blocker. The
-  scalar five-plus-three tail is narrowed but not emptied, so this is not a
-  proof of LRC(14).
+  three-deep-union overlap invoice. On the guard-safe base arc, the induced
+  anchored chord diagram on F_13 excludes eight of the 252 possible
+  multisets of five unit residue lengths, uniformly at every 13-adic depth.
+  On the guard-danger base arc, a ten-vertex perfect-matching carrier realizes
+  only 216 of the 252 profiles. Each of the other 36 either belongs to the
+  already-empty eight or forces the three divided blockers to cover the whole
+  fat guard comb almost everywhere; the odd guard and distinct positive
+  blocker coefficients make that fat-guard cover impossible in the actual
+  LRC scalar lane. Thus all 36 missing guard-danger profiles are uniformly
+  empty there. Three additive endpoint-potential inequalities detect 17 of
+  those missing profiles, but the other 19 lie inside the convex hull of the
+  feasible length-count vectors. They are genuine holes in the coloured
+  perfect-matching/Hafnian support, invisible to every affine-linear
+  length-count separator. The unit-annulus law also eliminates
+  every branch in which the maximum valuation among the three actual blockers
+  is repeated; a survivor has a unique deepest blocker. The scalar
+  five-plus-three tail is narrowed but not emptied, so this is not a proof of
+  LRC(14).
 source: codex-2026-07-24-scalar-five-plus-three-root-sheets
 depends_on:
+  - THM-1155
   - THM-2138
-related:
+  - THM-2148
   - THM-2168
+related:
   - THM-2186
   - THM-2190
   - THM-2193
 script: 04-computation/lrc14_scalar_five_plus_three_root_sheet_chords_thm2192.py
 output: 05-knowledge/results/lrc14_scalar_five_plus_three_root_sheet_chords_thm2192.out
-script_sha256: 73509cb41b4990a107e491d4ad12b505f440ad9629b2c861a45b417b0c7c7a08
-output_sha256: 59ed9e6744b0c15ce8c308c71c9e5e9bb001e2752e54e3727b41311260253319
+script_sha256: 6c8796b6aeeb7539157974c9ec2b6eb91d32263e1d72cb569e7dbd970657b50e
+output_sha256: 7a2416e8fedca07a04c0c00cc82b39e73a4eb7e997cf017c5189fc8cead83104
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -57,6 +70,9 @@ C_H subset union_(i=1)^5 D_(q_i)
 This is the exact one-dimensional cover in the fully scalar `(5,3)` branch
 of THM-2168.  No distinctness assumption is needed for the local theorem,
 although the LRC application has positive distinct terminal values.
+For the fat-guard exclusion in Section 4.2, we use the additional facts from
+THM-2168's actual scalar lane that `H` is positive and odd and the three
+`v_j` are distinct and positive.
 
 Define
 
@@ -350,6 +366,318 @@ the `244/252` profile census, the exact list (20), and the root-step
 arithmetic for all nonzero residue classes.  It uses integer and rational
 arithmetic only and gives byte-identical normal and optimized-Python output.
 
+### 4.1. The guard-danger matching fork
+
+There is a second anchored carrier whenever `G intersection E_H` has
+positive measure.  Choose a generic phase in that set.  Equation (6) says
+that the three consecutive guard-unsafe vertices are omitted and the five
+unit chords form a perfect matching of the remaining ten vertices.  There
+are exactly
+
+```text
+9!!=945                                                (21a)
+```
+
+such anchored vertex-labelled matchings.  Their length multisets realize
+only `216` of the `252` ambient profiles.  The `36` missing profiles are
+
+```text
+(1,1,1,1,2), (1,1,1,2,3), (1,1,2,2,2), (1,1,2,3,3),
+(1,2,2,2,3), (1,2,3,3,3), (1,3,4,4,4), (1,4,4,4,5),
+(1,5,5,5,5), (2,2,2,2,2), (2,2,2,3,3), (2,2,2,4,4),
+(2,3,3,3,3), (2,3,5,5,5), (2,4,4,4,4), (2,4,5,5,5),
+(2,5,5,5,6), (2,6,6,6,6), (3,3,3,3,3), (3,3,3,3,4),
+(3,3,3,4,4), (3,4,4,4,4), (3,5,5,5,5), (3,5,6,6,6),
+(3,6,6,6,6), (4,4,4,4,5), (4,4,6,6,6), (4,5,5,5,5),
+(4,5,5,6,6), (4,5,6,6,6), (4,6,6,6,6), (5,5,5,5,6),
+(5,5,5,6,6), (5,5,6,6,6), (5,6,6,6,6), (6,6,6,6,6).
+                                                               (21b)
+```
+
+All eight profiles in (20) occur in (21b), as they must: the guard-safe
+carrier already excludes them without a case split.  For any of the other
+`28` profiles in (21b), the exact conclusion is the following fat-guard
+alternative:
+
+```text
+E_H subset D_(v_1) union D_(v_2) union D_(v_3)
+                                              almost everywhere. (21c)
+```
+
+Indeed, if (21c) failed on positive measure, then `G intersection E_H`
+would have positive measure after discarding the finite deep-band
+boundaries.  A generic phase there would supply the forbidden ten-vertex
+matching.  Thus (21c) follows.  In the abstract local theorem, where `H`
+need not be odd and the `v_j` need not be distinct, this remains a genuine
+structural alternative.  The actual LRC scalar lane excludes it in the next
+subsection.  The companion separately verifies the `945`, `216/252`, exact
+`36`, and eight-profile subset assertions.
+
+### 4.2. The odd-guard obstruction empties the fat-guard fork
+
+Assume now the actual scalar-lane hypotheses: `H` is positive and odd, and
+the `v_j` are distinct positive integers.  Then
+
+```text
+E_H is not contained almost everywhere in
+             D_(v_1) union D_(v_2) union D_(v_3).     (21d)
+```
+
+The proof has a finite-kernel part and a one-interval part.  First replace
+each open `D_a` by
+
+```text
+bar(D_a)={t:||at||<=1/14}.
+```
+
+An almost-everywhere open cover of the open set `E_H` implies the pointwise
+closed cover
+
+```text
+E_H subset union_(j=1)^3 bar(D_(v_j)).                (21e)
+```
+
+Indeed, a point at which all three inequalities were strictly reversed
+would thicken to an uncovered open interval.
+
+Restrict (21e) to
+
+```text
+F=ker(H) isomorphic to Z/HZ.
+```
+
+THM-2148's finite three-colour lemma says that either some restricted
+character is trivial or the three restrictions are the nonzero characters
+of a `C_2 x C_2` quotient.  A cyclic group has no such quotient.  After
+relabelling,
+
+```text
+H divides v_1.                                       (21f)
+```
+
+Write `v_1=Hk_1`.  Since `bar(D_(k_1))` has measure `1/7`, there is an open
+phase interval in `E_1` on which it is inactive.  Over any phase `y` in
+that interval, (21e) says that the two remaining translated bands cover
+the `H`-root torsor.  A nontrivial restricted character has odd image order
+`m>=3`.  Any translate of a closed radius-`1/14` band contains at most
+
+```text
+floor(m/7)+1
+```
+
+values of the `m`-grid, and
+
+```text
+2(floor(m/7)+1)<m                 for odd m>=3.       (21g)
+```
+
+This is THM-2148's translated-grid bound with its closed-endpoint
+convention; no generic-position assumption is hidden here.
+Thus two nontrivial restrictions cannot cover the torsor, so a second
+restriction is trivial and `H|v_2`.  The two closed quotient combs
+`bar(D_(k_1)),bar(D_(k_2))` overlap on an open neighbourhood of zero.
+Their union therefore has measure strictly below `2/7=measure(E_1)`.
+Choose an open phase interval in `E_1` where both are inactive.  The third
+band must cover the whole root torsor there, which is impossible for a
+nontrivial restriction.  Hence
+
+```text
+H divides v_1,v_2,v_3.                               (21h)
+```
+
+Put `v_j=Hk_j` and order the distinct positive quotients
+`k_1<k_2<k_3`.  The cover would descend to
+
+```text
+E_1 subset D_(k_1) union D_(k_2) union D_(k_3)
+                                               almost everywhere. (21i)
+```
+
+THM-1155's exact interval-fragmentation bound says that a comb `D_k`
+meets an interval of length `L` in measure at most
+
+```text
+L/7+1/(7k).
+```
+
+Applying it to `E_1`, of length `2/7`, gives
+
+```text
+1/k_1+1/k_2+1/k_3>=8/7.                              (21j)
+```
+
+If `k_1>=2`, distinctness bounds the left side by
+`1/2+1/3+1/4=13/12<8/7`.  Thus `k_1=1`.  On
+
+```text
+J=(1/14,1/7)
+```
+
+the first comb is absent, so the same bound for the other two gives
+
+```text
+1/k_2+1/k_3>=5/14.                                   (21k)
+```
+
+The pointwise closed consequence (21e), now in the quotient, can be tested
+at `1/11` and `1/13`.  A nonzero residue on either grid has norm at least
+`1/11` or `1/13`, both strictly greater than `1/14`.  Therefore one of
+`k_2,k_3` is divisible by eleven and one is divisible by thirteen.
+
+If different quotients carry the two divisibilities, their reciprocal sum
+is at most
+
+```text
+1/11+1/13=24/143<5/14,
+```
+
+contrary to (21k).  If the same quotient `r` carries both, then `r>=143`;
+(21k) forces the other quotient to be `2`.  But `D_2` is empty on `J`,
+while the fragmentation bound gives
+
+```text
+measure(J intersection D_r)
+ <=1/98+1/(7r)
+ <=1/98+1/1001
+ =157/14014<1/14=measure(J).                          (21l)
+```
+
+This is the final contradiction and proves (21d).  Consequently every one
+of the `36` profiles missing from the guard-danger matching census is
+uniformly empty in the actual scalar `5+3` lane; exactly `216/252` profiles
+are not excluded by this carrier test.
+
+Oddness is load-bearing in the translated finite-kernel step.  For even `H`, two
+nontrivial restrictions can have the same order-two direction and occupy
+complementary translated cosets.  The theorem neither asserts that this
+abstract exception occurs globally nor classifies it.  Distinctness is
+load-bearing in (21j), and sign is forgotten by `D_a=D_(-a)`; the actual
+positive distinct coefficients supply the needed absolute-value
+distinctness.  The first structural conclusion `H|v_j` for at least one
+`j` uses neither oddness nor distinctness; oddness enters only when the
+translated two-band cover is pruned.
+
+### 4.3. Pairwise linear shadows and nineteen matching-support holes
+
+The `36` exclusions have two mathematically different mechanisms.  Let
+
+```text
+c_r=#{i:ell_i=r},                       1<=r<=6.
+```
+
+Every perfect matching of
+
+```text
+S={3,4,...,12} subset F_13
+```
+
+obeys the three additive edge inequalities
+
+```text
+sum_(r=1)^6 r c_r<=25,
+c_2<=4,
+c_2+3c_3+2c_4<=12.                                 (21m)
+```
+
+All three have short endpoint-potential certificates.  For the first, put
+`p_v=dist_(F_13)(v,8)`; the triangle inequality gives
+`ell(u,v)<=p_u+p_v`, and `sum_(v in S)p_v=25`.  For the second, the four
+vertices `{5,6,9,10}` meet every length-two edge of `S`.  For the third,
+use edge weights
+
+```text
+w_2=1,       w_3=3,       w_4=2,       w_1=w_5=w_6=0
+```
+
+and the endpoint potentials, in the order `3,4,...,12`,
+
+```text
+(1,0,0,2,3,3,2,0,0,1).
+```
+
+Every edge satisfies `w_(ell(u,v))<=p_u+p_v`, and the potentials sum to
+`12`.  Summing any of these pointwise inequalities over the five disjoint
+matching edges proves (21m).
+
+Exactly `17` of the `36` missing profiles violate at least one inequality
+in (21m): the first detects the twelve profiles of total length above
+`25`, the second detects `(2,2,2,2,2)`, and the third detects
+
+```text
+(2,3,3,3,3), (3,3,3,3,3), (3,3,3,3,4), (3,3,3,4,4).
+```
+
+The other `19` are
+
+```text
+11112, 11123, 11222, 11233, 12223, 12333, 13444,
+14445, 15555, 22233, 22244, 23555, 24444, 24555,
+25556, 34444, 35555, 44445, 45555,                    (21n)
+```
+
+where a word denotes the sorted length multiset.  These are not merely
+missed by the three chosen potentials.  Every profile in (21n) lies in the
+convex hull of feasible matching profiles.
+
+Here is a compact exact certificate.  Name the feasible anchors
+
+```text
+A=11111, B=12222, C=13333, D=11333, E=22333,
+F=44444, G=55555, H=22223, I=22224, J=22225,
+K=33335, L=22666, M=33444.
+```
+
+One matching witness for each anchor, with hyphens separating multi-digit
+vertices, is
+
+```text
+A:34,56,78,9-10,11-12;   B:34,57,68,9-11,10-12;
+C:36,45,7-10,8-11,9-12; D:34,56,7-10,8-11,9-12;
+E:35,46,7-10,8-11,9-12; F:3-12,48,59,6-10,7-11;
+G:38,49,5-10,6-11,7-12; H:35,46,79,8-11,10-12;
+I:3-12,46,57,8-10,9-11; J:35,46,7-12,8-10,9-11;
+K:36,47,5-10,8-11,9-12; L:39,4-11,57,6-12,8-10;
+M:3-12,47,59,6-10,8-11.
+```
+
+Interpreting each word as its vector `(c_1,...,c_6)`, the nineteen convex
+identities are
+
+```text
+11112=3A/4+B/4;             11123=A/2+B/4+C/4;
+11222=A/4+3B/4;             11233=A/4+B/4+C/2;
+12223=3B/4+C/4;             12333=(D+E)/2;
+13444=3A/20+C/4+3F/5;       14445=A/5+3F/5+G/5;
+15555=A/5+4G/5;             22233=(H+E)/2;
+22244=3I/4+F/4;             23555=J/4+K/4+G/2;
+24444=I/4+3F/4;             24555=J/4+F/5+11G/20;
+25556=J/12+L/3+7G/12;       34444=(M+F)/2;
+35555=K/4+3G/4;             44445=4F/5+G/5;
+45555=F/5+4G/5.                                      (21o)
+```
+
+It follows immediately that no affine-linear one-sided inequality in the
+six length counts which holds on every feasible matching profile can exclude
+any profile in (21n).
+
+Equivalently, form the coloured matching polynomial
+
+```text
+P_S(x_1,...,x_6)
+ =sum_(perfect matchings M of S) product_({u,v} in M) x_(ell(u,v)).
+                                                               (21p)
+```
+
+This is the Hafnian of the symmetric adjacency matrix whose `uv` entry is
+`x_(ell(u,v))`.  The profiles in (21n) are zero coefficients lying inside
+the Newton polytope of `P_S`: genuine matching-support holes.  Thus a
+length-additive binary relation sees only `17/36` exclusions.  The other
+`19` require the global vertex-disjointness sidecar, and any recursive lift
+must retain either the matching itself, the Hafnian support, or the
+phase-by-phase matching movie.  The companion verifies all `135`
+edge-potential inequalities, the exact `17+19` split, feasibility of every
+anchor, and all nineteen rational identities in (21o).
+
 ## 5. Why the octagon `5+3` word is not the map
 
 THM-2186's octagon target is the minimum of all pairwise distances among
@@ -463,13 +791,16 @@ The theorem supplies:
 1. an all-depth root-sheet equality law;
 2. the signed overlap target (16);
 3. the unique-deepest valuation reduction (17f);
-4. the faithful anchored monomer-dimer carrier; and
-5. eight uniformly empty residue profiles.
+4. the faithful anchored monomer-dimer carrier;
+5. thirty-six uniformly empty residue profiles in the actual scalar lane;
+6. the odd-guard theorem excluding the only fat-guard escape; and
+7. the exact split of those exclusions into `17` endpoint-potential
+   shadows and `19` nonlinear holes in the matching/Hafnian support.
 
 It does not prove the strict reverse of (16) for every coefficient row,
-classify the remaining `244` residue profiles, bound the three deep
+classify the remaining `216` residue profiles, bound the three deep
 valuations in the unique-deepest lane, control its two active
-positive-valuation masks, or prove LRC(14).  The next exact target is to
-propagate the anchored chord ownership through multiplication by thirteen
-and show that the two shallower divided-deep combs cannot shelter every
-ownership transition. QED.
+positive-valuation masks on the surviving `216` guard-danger profiles, or
+prove LRC(14).  The next exact target is to propagate the anchored chord
+ownership through multiplication by thirteen and show that the two shallower
+divided-deep combs cannot shelter every ownership transition. QED.
