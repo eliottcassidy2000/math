@@ -19,11 +19,13 @@ status: >
   Triangle balance is exact in rank at most two but is insufficient from
   rank three onward without the signed nerve sidecar. The
   Brittenham--Hermiller T(2,7)-mirror packet spans an exact stable rank-two
-  plane, has a two-word chirality calibration code, and obeys a quantitative
-  code-distance/matching defect bound. Conversely, the l_infinity boundary
-  simplex attains the rank bound and gives the first balanced-pair failure
-  in rank three. No unknown ordinary or homogenized unknotting number is
-  computed, and no positive Gordian catalyst is produced.
+  plane, has a two-word chirality calibration code, obeys a quantitative
+  code-distance/matching defect bound, and is exactly linear on both
+  opposite-sign calibration chambers; all possible stable nonadditivity is
+  confined to the two same-sign chambers. Conversely, the l_infinity
+  boundary simplex attains the rank bound and gives the first balanced-pair
+  failure in rank three. No unknown ordinary or homogenized unknotting
+  number is computed, and no positive Gordian catalyst is produced.
 source: codex-2026-07-25-catalytic-calibration-nerve
 depends_on:
   - THM-2191-catalytic-localization-of-the-gordian-metric
@@ -702,7 +704,37 @@ The first inequality can also be seen by grouping
 coefficient as the exact wrong-pair stable defect and the minority count as
 the Hamming distance to coherent calibration.
 
-Equations (BH7)--(BH13) refine the operation-ready description of this
+The calibration fan gives a sharper geometric description of the whole
+stable plane. For real coefficients `x,y` of opposite signs,
+
+```text
+p(xa+yb)=3(|x|+|y|)                    whenever xy<=0. (BH14)
+```
+
+The triangle inequality gives the upper bound, while half-signature has
+absolute value `3(|x|+|y|)` in either opposite-sign chamber. Thus no stable
+saving is possible there. For coefficients of one sign, put
+`P=|x|`, `Q=|y|`. Half-signature and the decomposition
+
+```text
+Pa+Qb=(P-Q)a+Q(a+b)                    when P>=Q
+```
+
+(and its symmetric counterpart when `Q>=P`) give
+
+```text
+3|P-Q|
+ <=p(xa+yb)
+ <=3|P-Q|+p(a+b)min(P,Q).                         (BH15)
+```
+
+At `P=Q`, homogeneity gives the exact radial value `P p(a+b)`; on the
+chamber walls the value is `3P` or `3Q`. Hence the unknown stable geometry
+is localized, not merely bounded: it lies inside the two same-sign cones
+between their diagonal ray and walls. This refines the classification
+object without computing the still-unknown number `p(a+b)`.
+
+Equations (BH7)--(BH15) refine the operation-ready description of this
 counterexample but compute neither `u(K#Kbar)` nor `u_hash(K#Kbar)`.
 They produce no positive Gordian catalyst and do not promote a stable
 inequality to an ordinary unknotting lower bound.
