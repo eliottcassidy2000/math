@@ -30,7 +30,7 @@ related:
   - THM-2267-static-owner-coverage-is-flag-and-transition-holonomy-is-a-cut-kernel
   - THM-2268-two-shell-private-owner-trident-and-raw-carry-cocycle-no-go
   - THM-2270-simultaneous-balanced-cut-relation-and-six-uniform-orientation
-  - THM-2271-mixed-scalar-relation-and-guard-blocker-crossing
+  - THM-2275-mixed-scalar-relation-and-guard-blocker-crossing
 script:
   - 04-computation/lrc14_marked_expiration_root_spectrum_thm2269.py
   - 04-computation/lrc14_marked_expiration_root_spectrum_referee_thm2269.py
@@ -481,7 +481,7 @@ composition theorem must retain this valuation address and show that a
 bounded cross-cut frequency lands in the marked spectral support rather than
 merely in an energetic residue class.
 
-THM-2271 makes this valuation issue unavoidable on the quotient-faithful
+THM-2275 makes this valuation issue unavoidable on the quotient-faithful
 scalar cut. Its crossing frequency has the form
 
 ```text
@@ -503,7 +503,7 @@ integer
 K_scalar/13^nu_13(K_scalar) mod 13,                  (41c)
 ```
 
-but THM-2271 does not transport this descended frequency to `1_F`. This
+but THM-2275 does not transport this descended frequency to `1_F`. This
 identifies the missing map more sharply: preserve the scalar
 guard/unit-versus-blocker labels while descending the frequency through the
 same selected-owner root address.

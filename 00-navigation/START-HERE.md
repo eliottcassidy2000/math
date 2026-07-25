@@ -118,7 +118,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     its transverse and scalar-`4+3` lanes, leaving only scalar `5+3`.
     THM-2187/2193 give a saturated carrier, floor `7^-21`, rank seven by `78*7^21`, and safe septimal grids; THM-2188 retains slope/current.
     THM-2196/2199 prove rank twelve; THM-2208/2212 give bounded anchors and exact rulers per rank-eleven plane, while THM-2203 fixes scalar transport at `16/208`.
-    THM-2198--2239 leave `165` depth-one rows; THM-2257/2258 close `(3,4,5)`. THM-2261 makes raw expiration blind; THM-2263 gives sharp owner floors. THM-2267/2268 force switch structure, and THM-2269 puts marked energy in every nonzero mod-13 residue. THM-2144--2166 and THM-2270/2271 give bounded global/scalar crossing relations. The open bridge lands a descended crossing frequency itself in marked ancestry. THM-2211 retains carry; THM-2235 blocks odd-sheet XOR.
+    THM-2198--2239 leave `165` depth-one rows; THM-2257/2258 close `(3,4,5)`. THM-2261 makes raw expiration blind; THM-2263 gives sharp owner floors. THM-2267/2268 force switch structure, and THM-2269 puts marked energy in every nonzero mod-13 residue. THM-2144--2166 and THM-2270/2275 give bounded global/scalar crossing relations. The open bridge lands a descended crossing frequency itself in marked ancestry. THM-2211 retains carry; THM-2235 blocks odd-sheet XOR.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
     the knot continuation cocycle; THM-2191 gives its catalytic group length,
     commuting stable envelope, and abstract additive dual, and closes `9_10`.
