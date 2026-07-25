@@ -1,0 +1,13 @@
+THM-2178 exact mod-14 transverse-code checks
+cosine_taylor=17471/19208
+cosine_cap_gap=207/480200
+scaled_fourier_margin=14431688605
+universal_count_lower_bound=6805833364678152211/245000000
+saturated_basis_cap=286650
+affine_code_size=196
+affine_code_distance=6
+affine_allowed_kernel_count=176136387828
+low_code_size=196
+low_code_distance=2
+low_allowed_kernel_count=285311670611
+all exact checks passed
