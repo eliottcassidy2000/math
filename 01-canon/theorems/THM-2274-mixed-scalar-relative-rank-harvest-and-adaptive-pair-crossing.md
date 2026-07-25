@@ -17,7 +17,7 @@ related:
   - THM-2145-two-block-spectral-crossing-and-6-plus-7-carry
   - THM-2164-relative-packet-rank-harvesting
   - THM-2203-fixed-dyadic-coordinate-section-and-covector-intersection
-  - THM-2271-mixed-scalar-relation-and-guard-blocker-crossing
+  - THM-2275-mixed-scalar-relation-and-guard-blocker-crossing
 ---
 
 # THM-2274 -- RESERVED / UNPROVED PROOF CANDIDATE

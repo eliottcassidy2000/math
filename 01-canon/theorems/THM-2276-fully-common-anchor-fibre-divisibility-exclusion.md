@@ -1,5 +1,5 @@
 ---
-id: THM-2272
+id: THM-2276
 title: "Fully common-anchor fibre divisibility exclusion"
 status: >
   RESERVED / UNPROVED EMPTY STUB. Reserved for an audited exclusion of the
@@ -14,10 +14,10 @@ related:
   - THM-2137-deep-scalar-tail-boundary-complexity
   - THM-2234-first-depth-one-private-two-owner-mass-and-two-step-expansion
   - THM-2266-depth-one-deep-pair-centered-signed-dual-and-relation-atlas
-  - THM-2271-mixed-scalar-relation-and-guard-blocker-crossing
+  - THM-2275-mixed-scalar-relation-and-guard-blocker-crossing
 ---
 
-# THM-2272 -- RESERVED / UNPROVED EMPTY STUB
+# THM-2276 -- RESERVED / UNPROVED EMPTY STUB
 
 The root-count dichotomy, odd-fibre exclusion, divided one- and two-comb
 targets, coefficient budget, and exact rational margins are under audit.

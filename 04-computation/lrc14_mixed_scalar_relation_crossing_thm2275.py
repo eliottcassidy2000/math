@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact referee for THM-2271.
+"""Exact referee for THM-2275.
 
 The script uses only integer arithmetic and fractions.  It checks:
 
@@ -178,7 +178,7 @@ def main() -> None:
     require(max_h_owner_lift == 9841, "H-owner lifted height drift")
     require(max_owner_q_lift == 9841, "owner-q lifted height drift")
 
-    print("THM-2271 exact referee")
+    print("THM-2275 exact referee")
     print(
         "mixed_tensor_degree_19 "
         f"budget={budget_19} bracket={1 - budget_19}"

@@ -1,5 +1,5 @@
 ---
-id: THM-2271
+id: THM-2275
 title: "Mixed scalar relation and guard-blocker crossing"
 status: >
   PROVED + VERIFIED-EXACT. Every scalar five-unit/three-blocker cover has
@@ -28,14 +28,14 @@ related:
   - THM-2144-anisotropic-selberg-kraft-relation-box
   - THM-2261-expiration-image-surjectivity-and-one-core-carrier-no-go
   - THM-2263-thirteen-adic-gap-pair-spectrum-and-profile-sharp-owner-floor
-script: 04-computation/lrc14_mixed_scalar_relation_crossing_thm2271.py
-output: 05-knowledge/results/lrc14_mixed_scalar_relation_crossing_thm2271.out
-script_sha256: 8a5a78b6a1ceb5cf3d863b0c3b59c66ae3abd115a611932696d31a67f043639c
-output_sha256: 680c18d73762d96018ff65680b130b42c4e7e0f027ef494e72754bbd1ce28ae6
+script: 04-computation/lrc14_mixed_scalar_relation_crossing_thm2275.py
+output: 05-knowledge/results/lrc14_mixed_scalar_relation_crossing_thm2275.out
+script_sha256: 819bd9370ff9adca1e50b0ed50010d0593de5a943b8420c5ec6d779abe257f34
+output_sha256: 2c06ff1fe272cfe3bde909f288d6e54096653d99cea6eb41ff558d95acf799d3
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2271 -- mixed scalar relations after the quotient
+# THM-2275 -- mixed scalar relations after the quotient
 
 Put
 
@@ -625,8 +625,8 @@ the uniform scalar pair-lift height 9841.             (59)
 Reproduce with
 
 ```bash
-python 04-computation/lrc14_mixed_scalar_relation_crossing_thm2271.py
-python -O 04-computation/lrc14_mixed_scalar_relation_crossing_thm2271.py
+python 04-computation/lrc14_mixed_scalar_relation_crossing_thm2275.py
+python -O 04-computation/lrc14_mixed_scalar_relation_crossing_thm2275.py
 ```
 
 The two modes produce identical stdout. After the platform newline is
