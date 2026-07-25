@@ -67,7 +67,7 @@ R_+=max(R,0),                 R_-=max(-R,0).           (4)
 Since `R<=1`, its positive part is the indicator of
 
 ```text
-A_+=C_H\union_(i=1)^5D_(q_i).                         (5)
+A_+=C_H setminus union_(i=1)^5D_(q_i).                (5)
 ```
 
 THM-2198 and the zero integral of `R` give
@@ -358,9 +358,10 @@ the canonical odd-checkpoint score cannot be presented as a complete scalar
 closure.
 
 THM-2080's guard-danger pair cap is compatible with the four-bit state, but
-is not used in (30)--(31). The proved mechanism is stronger and cleaner:
-the exact `-1/13` transfer phase kills the negative carrier while the robust
-hidden-state recursion prices the remaining positive carrier.
+is not used in (30)--(31). The exact `-1/13` transfer phase kills the negative
+carrier pointwise for the high row `(4,6,8)`. For the first-depth-two rows,
+the robust hidden-state recursion instead prices both sign-safe terms in
+(16).
 
 ## 7. Connection and loss ledger
 
