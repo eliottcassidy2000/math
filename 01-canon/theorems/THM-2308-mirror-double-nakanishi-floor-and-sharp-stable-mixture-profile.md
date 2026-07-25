@@ -360,10 +360,11 @@ For the actual range `2<=r<=5`, the two envelopes differ strictly whenever
 
 Indeed, if the maximum in (28) is `r|s|`, the gap is
 `(6-r)|t|>0`; if it is `6|t|`, the gap is
-`r(|s|-|t|)>0`. Therefore the collected input forces exact values only on
-the diagonal ray `t=0` and the chamber walls `|s|=|t|`; it cannot force an
-additional interior ray. The models are abstract norms, not claims of knot
-realizability.
+`r(|s|-|t|)>0`. Therefore, within the still-unknown central cone, the
+collected input forces exact values only on the diagonal ray `t=0` and its
+walls `|s|=|t|`; it cannot force an additional central interior ray. The
+entire outer cone is already exact by (20). The models are abstract norms,
+not claims of knot realizability.
 
 ## 5. The mixture defect is one concave projective profile
 
