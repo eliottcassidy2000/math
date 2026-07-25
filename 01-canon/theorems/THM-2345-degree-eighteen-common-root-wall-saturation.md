@@ -2,7 +2,7 @@
 id: THM-2345
 title: "Degree-eighteen common-root wall saturation"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. On the
   degree-eighteen wall 126D=25B^2, every B!=0 point whose structured
   Mordell polynomial has square-class degree at most four lies on the
   deeper wall 20BC+21W=0. Equivalently, in the normalized B=1 chart the
@@ -29,7 +29,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2345 -- the common-root wall saturates to the deep wall
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2332 says that every degree-eighteen Keller survivor has structured
 Mordell polynomial
@@ -274,4 +274,13 @@ zero remainder in (19). It also checks a generic deep point with gcd
 degree three and two squarefree off-deep hostile controls. No executable
 check uses Python `assert`.
 
-Independent audit is pending. QED.
+The independent hostile audit rebuilt (5)--(6) from exact rational
+samples, checked the square-class/gcd implication including higher
+collisions, and recomputed the saturation with the reversed variable
+order `(C,W)`. That independent basis again contains `20C+21W`; after
+substituting `C=-21W/20`, its other basis element agrees with (18) up to
+the nonzero scalar `512*10^12`. A separate hand-coded finite-field gcd
+engine found exactly the deep line and no off-deep jump for every prime
+from `29` through `97`. The audit also checked specialization, weighted
+normalization, the `B=0` dependency, both execution modes, both hashes,
+and the documentation gate. QED.
