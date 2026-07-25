@@ -1,0 +1,6 @@
+symbolic_faber_bank=PASS degrees=1,2,3,5,6 observables=15
+cubic_cusp_identity=PASS
+finite_hostile_bank=PASS cases=4508 survivors=0
+hostile_split_degree6_control=PASS
+exact_square_positive_control=PASS
+scope=FINITE_REFEREE_ONLY symbolic_valuation_proof_supplies_quantifiers

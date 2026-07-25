@@ -12,8 +12,9 @@ status: >
   noncancellable Faber tooth in either the first or second flux. Hence the
   canonical approximate root is polynomial throughout the nonsplit branch.
   The same congruence holds for reduced mate degree two even on a split deck.
-  Every remaining finite-pole survivor must have V=W^2 and reduced degree at
-  least six, so its leading coefficient is W^4. The nonsplit polynomial-root
+  Together with THM-2194, every remaining finite-pole survivor must have
+  V=W^2 and reduced degree at least ten, so its leading coefficient is W^4.
+  The nonsplit polynomial-root
   branch still needs terminal nonmonic square-prefix descent; the split branch
   retains both pole and terminal debt.
 source: codex-2026-07-24-JC-nonsplit-quartic-pole
@@ -23,6 +24,7 @@ depends_on:
   - THM-2180
 related:
   - THM-2181
+  - THM-2194
 ---
 
 # THM-2189 -- the nonsplit deck kills the last finite pole
@@ -508,12 +510,12 @@ Thus every survivor of the quartic pole analysis has leading coefficient
 V^2=W^4.                                               (52)
 ```
 
-By Section 5, a finite-pole survivor in this split fourth-power branch must
-also have reduced mate degree at least six. Deck anti-invariance no longer
-forces `Phi_Q=0` there.
+By Section 5 and THM-2194, a finite-pole survivor in this split fourth-power
+branch must also have reduced mate degree at least ten. Deck anti-invariance
+no longer forces `Phi_Q=0` there.
 
 This is only the exact **pole** frontier. In the nonsplit branch, (4) makes
 `H_0` polynomial but does not monicize its leading term `Vz^2`; the terminal
 nonmonic square-prefix/quadratic-member step remains. In the split branch,
-both that terminal debt and the degree-at-least-six pole debt remain. The
+both that terminal debt and the degree-at-least-ten pole debt remain. The
 theorem proves neither general JC(2) nor DC(2). QED.
