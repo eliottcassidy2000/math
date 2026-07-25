@@ -1,0 +1,28 @@
+theorem=THM-2306
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED
+strict_word_mass_floor=39002430583/160481782761300
+repeat_word_mass_floor=13560199813/160481782761300
+strict_owner_mass_floor=15041431/593783190
+repeat_owner_mass_floor=5229541/593783190
+strict_covariance_magnitude_floor=586652368446484273/95291384904891722547000
+repeat_covariance_magnitude_floor=70913620890275833/95291384904891722547000
+ordinary_common_atom=q<=J_A*J_B-1<=8S^2-1
+shell_ledger=I_s-I_(s+1)
+first_nonzero_aggregate_shell=r-1
+first_collision_shell=frequency_c*13^(r-1)*n_with_13_not_dividing_n
+residue_common_atom=n<=13*J_A*J_B-1<=104S^2-1
+exact_valuation=nu13(c)+r-1
+normalization_grid_rows=4036
+jump_bound_rows=392
+component_collision_bound_rows=6272
+valuation_shell_rows=4800
+residue_prony_bank_rows=3072
+delayed_collision_rows=189
+hostile_source_center_orbit_mod16=(1, 13, 9, 5)
+hostile_current_center_orbit_mod16=(7, 11, 15, 3)
+thm2299_local_first_collision_depth=9
+thm2299_local_additional_valuation=8
+collision_delay_unbounded_without_mass_variation_input=true
+current_atom_is_product_arrival_not_bare_arrival=true
+owner_subgroup_does_not_select_prescribed_pair_subgroup=true
+all_checks=PASS
