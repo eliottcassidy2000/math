@@ -1,5 +1,5 @@
 ---
-id: THM-2310
+id: THM-2312
 title: "Sparse-root bispectrum positivity and exact word current"
 status: >
   RESERVED / UNPROVED PROOF CANDIDATE UNDER AUDIT. Intended target: on every
@@ -14,7 +14,7 @@ source: codex-2026-07-25-sparse-root-bispectrum
 depends_on: []
 ---
 
-# THM-2310 -- RESERVED / UNPROVED PROOF CANDIDATE UNDER AUDIT
+# THM-2312 -- RESERVED / UNPROVED PROOF CANDIDATE UNDER AUDIT
 
 The finite Fourier identity, sharp two-sheet minimization, quantitative
 word-stratum corollary, hostile boundaries, and exact companion are being
