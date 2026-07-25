@@ -28,7 +28,9 @@ Format per entry:
   `28460/199927>961/6930` for `u=H` and
   `734515/5198102>961/6930` for `u=6H`. Thus neither relation is closed by
   this cylinder. THM-2250's reduction of `(3,4,5)` to equal normalized cores
-  is unaffected; the all-equal branch and LRC(14) remain open.
+  is unaffected. **Subsequent status:** THM-2257 closes the all-equal branch
+  by a different exact `169`-image sieve; the parity-alias correction remains
+  valid, while the `165` first-depth-one scalar rows and LRC(14) remain open.
 
 ---
 
