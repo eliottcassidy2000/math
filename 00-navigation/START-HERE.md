@@ -67,7 +67,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     fibers; THM-2084/2118/2102 close cubics. THM-2158/2180 reduce the twice-odd
     nonmonic quartic to `V|(4gamma-(beta/V)^2)`; THM-2202 removes every
     twice-odd finite pole. THM-2214 closes nonsplit terminal degrees `2,6,10`;
-    THM-2217 forces the odd train; THM-2247 closes degree `14`; THM-2262 reduces degree `18` to a singular degree-twelve trigonal discriminant, and THM-2297 removes target translation, closes all one-sparse strata and the `B=D=0` plane, and forces `(B,D)!=(0,0)`. Split/even descent, the remaining multi-parameter locus, other short edges, integral
+    THM-2217 forces the odd train; THM-2247 closes degree `14`; THM-2262 reduces degree `18` to a singular trigonal discriminant, THM-2297 closes all one-sparse strata and the `B=D=0` plane, THM-2311 reduces the exactly two-sparse residue to `31` weighted ratios, and THM-2314 closes its two rational `B`--`D` points by normalization genera `4` and `1`, leaving `29`. Split/even descent, the remaining multi-parameter locus, other short edges, integral
     `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
