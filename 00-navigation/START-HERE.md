@@ -24,8 +24,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
    Sungkawichai–Trakulthongchai prove the cases with 10, 11, and 12 nonzero
    speeds; see the scoped import in
    [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md).
-2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit
-   `26*{1,...,12} union {339}`, whose first good period is `27`.
+2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see
    MISTAKE-127/129/130.
@@ -118,7 +117,8 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     its transverse and scalar-`4+3` lanes, leaving only scalar `5+3`.
     THM-2187/2193 give a saturated carrier, floor `7^-21`, rank seven by `78*7^21`, and safe septimal grids; THM-2188 retains slope/current.
     THM-2196/2199 prove rank twelve; THM-2208/2212 give bounded anchors and exact rulers per rank-eleven plane, while THM-2203 fixes scalar transport at `16/208`.
-    THM-2198--2258 leave `165` depth-one rows. On `150` strict rows, THM-2323/2326/2327 give a marked word/`91`-unit edge and THM-2331 embeds every target address termwise. THM-2334/2337 land the full semantic current in some target/word-jet fibre, but the target may be zero. THM-2340 makes matching word support an exact row/column/interaction test. Force that component, visibility, and phase—or close the `15` repeated-first/resonance rows and THM-2304 middle-depth balance.
+    THM-2198--2258 leave `165` depth-one rows. On the `150` strict rows, THM-2323--2334 reach exact target aggregates and reduce nonzero-target survival to `169` coordinate twists.
+    THM-2337/2340 identify pure-word landing with ordered main effects and fork landing with two-way interaction. Prove that component nonzero, then retain all-`91`-unit visibility and terminal phase, or close the `15` repeated/resonance rows.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
     the knot continuation cocycle; THM-2191 gives its catalytic group length,
     commuting stable envelope, and abstract additive dual, and closes `9_10`.

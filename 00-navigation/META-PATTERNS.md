@@ -397,4 +397,4 @@ and the gap cross-product in the corpus atlas.
 **Action:** record `Z(M,A,b,w)=sum_{x in M, Ax=b} w(x)`: monoid, fiber, regularization, weight ring, and target predicate.
 **Mechanism:** LRC has an infinite Fejer-regularized `Z^n` fiber with sinc weights; a GMC moment has a finite `N^s` fiber with multinomial, factorial, radial, and coefficient weights. Syntax is shared; types and quantifiers are not.
 **Counterindication:** transfer only through a map intertwining fibers and weights while preserving the target.
-**Evidence:** MISTAKE-226/234/235 and THM-2059's typed CRT fiber product.
+**Evidence:** MISTAKE-226/234/235; THM-2059's typed CRT fiber product; THM-2330's min-plus target fibre; THM-2334's relation-orbit transform; THM-2337's gauge-lost factor jet; and THM-2340's main-effect/interaction decomposition.
