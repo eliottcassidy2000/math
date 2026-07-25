@@ -10,8 +10,9 @@ status: >
   Every remaining admissible pair 3<=a<=500 is checked by exact integer
   arithmetic (3,462 pairs), including 61 independent modular-power controls.
   The single coefficient-sum carry at (a,n,t)=(3,2,K+1) is harmless: the
-  evaluated quotient polynomial is still below the modulus. No minimality of
-  K=a+1 is claimed; K=a already fails at (8,4) and (14,4).
+  evaluated quotient polynomial is still below the modulus. No pointwise
+  minimality is claimed. Within the additive family K=a+c with c a
+  nonnegative integer, c=1 is optimal: c=0 fails at (8,4) and (14,4).
 source: opus-2026-07-24-puzzle-atlas
 depends_on:
   - THM-2159-shunia-finite-root-spectral-extraction
@@ -20,8 +21,8 @@ related:
   - THM-2054
 script: 04-computation/shunia_linear_exponent_exact_cutoff_opus_20260724.py
 output: 05-knowledge/results/shunia_linear_exponent_exact_cutoff_opus_20260724.out
-script_sha256: 2ca182ad425bc8957ceeff7c702821008b7083fd0fabb164615e9c2adba9db7e
-output_sha256: bf247e23f02463f7edb18fcafccb8dd223afeb642a9be408c96e0f65d651405b
+script_sha256: 5add81557bae0de7b490c6b8c8e336919c4560b05ceea8fdbc1b0bef1b5c5096
+output_sha256: 3805b9c25ad3a5728380f12048f8b105b6556a0c4891706b8a95623390faa6ce
 hash_basis: working-tree bytes (LF)
 external:
   - "Joseph M. Shunia, Polynomial quotient rings and Kronecker substitution for deriving combinatorial identities, arXiv:2404.00332v6"
@@ -52,8 +53,15 @@ floor(a^(1/n)) = (R_(K+1) div R_K)-1.                (1)
 Thus the exponent `2a^n` in Shunia's Conjecture 6.1 can be replaced
 uniformly by the linear exponent `a+1`.
 
-No optimality claim is made. The apparently adjacent proposal `K=a` is
-false: exact computation gives failures at `(a,n)=(8,4)` and `(14,4)`.
+No pointwise-minimality claim is made. In the uniform additive family
+
+```text
+K=a+c,             c in Z_(>=0),
+```
+
+however, the constant `c=1` is optimal: exact computation gives failures
+for `c=0` at `(a,n)=(8,4)` and `(14,4)`. In both rows the true root is `1`
+and the formula with `K=a` extracts `2`.
 
 ## 2. Inherited cyclic walk
 
@@ -107,6 +115,16 @@ We prove
 eta_K < 1/[8n 2^(n-1)a] <= delta/(8rho).             (6)
 ```
 
+All elementary logarithmic comparisons below can be made rational: use
+
+```text
+log 2<7/10,
+```
+
+which follows by truncating the positive exponential series at `7/10`.
+The displayed target integers are bounded above by the indicated powers of
+two; no floating-point estimate is a proof dependency.
+
 For `n>=6`, the chord bound for sine on `[0,pi/6]` gives
 
 ```text
@@ -138,6 +156,9 @@ For `n=9`, at the lower endpoint `a=501`,
   >log(8n(n-1)2^(n-1)a).
 ```
 
+For the last inequality, the logarithm's argument is below `2^27`, so its
+logarithm is below `189/10`.
+
 For `n>=10`, the lower endpoint is `a=2^(n-1)`. At `n=10`,
 
 ```text
@@ -145,10 +166,18 @@ For `n>=10`, the lower endpoint is `a=2^(n-1)`. At `n=10`,
  >log(8*10*9*2^9*2^9).
 ```
 
-The left side is multiplied by more than `3/2` when `n` increases, while
-the right side increases by less than `2`. This proves the inequality by
-induction. For fixed `n`, `4a/n^2-log(Ca)` is increasing throughout this
-range. Hence (6) holds on the `d=1` branch.
+The logarithm's argument is below `2^28`, so the right side is below `19.6`.
+The left side is multiplied by more than `3/2` when `n` increases. The
+right side increases by
+
+```text
+log((n+1)/(n-1))+2log 2<2
+```
+
+(`(n+1)/(n-1)<=11/9` and the exponential series gives
+`log(11/9)<1/4`). This proves the inequality by induction. For fixed `n`,
+`4a/n^2-log(Ca)` is increasing throughout this range. Hence (6) holds on
+the `d=1` branch.
 
 ### The `d>=2` branch
 
@@ -193,7 +222,8 @@ For `n>=9`, this branch has `a>2^n`, so (10) is greater than
 ```
 
 At `n=9` this exceeds `25`, while the target logarithm at the lower endpoint
-is less than `19`. The same multiplicative-versus-additive induction proves
+is less than `20` (use the upper endpoint expression
+`8n(n-1)2^(2n)<2^28`). The same multiplicative-versus-additive induction proves
 the result for every larger `n`.
 
 The remaining cycle sizes are stronger. At `a=501`:
@@ -332,6 +362,9 @@ it:
 5. verifies the final natural-number quotient; and
 6. on 61 hostile and boundary pairs, independently compares both values with
    Python's modular exponentiation.
+
+It also independently replays the two exact `K=a` failures, establishing the
+stated optimality inside the nonnegative additive family.
 
 Normal and optimized runs reproduce
 

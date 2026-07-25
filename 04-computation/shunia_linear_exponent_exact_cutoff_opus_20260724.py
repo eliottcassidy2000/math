@@ -37,6 +37,7 @@ MODULAR_CONTROL_A = {
     499,
     500,
 }
+PREDECESSOR_FAILURES = ((8, 4), (14, 4))
 
 
 def nth_root_floor(a: int, n: int) -> int:
@@ -132,6 +133,16 @@ def main() -> None:
     )
     print(f"independent modular-exponentiation controls: {modular_controls}")
     print(f"coefficient-sum >= X rows (allowed): {coefficient_carry_rows}")
+    predecessor_rows = []
+    for a, n in PREDECESSOR_FAILURES:
+        k = a
+        x = a**k
+        modulus = x**n - a
+        extracted = pow(x + 1, k + 1, modulus) // pow(x + 1, k, modulus) - 1
+        root = nth_root_floor(a, n)
+        require(extracted != root, (a, n, "K=a should fail"))
+        predecessor_rows.append((a, n, root, extracted))
+    print(f"K=a exact failures (root, extracted): {predecessor_rows}")
     print(f"row digest sha256: {digest.hexdigest()}")
     print("ALL EXACT INTEGER CHECKS PASS")
 
