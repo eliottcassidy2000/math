@@ -1,0 +1,37 @@
+faber_translation_bank=PASS degrees=2,6,10,14,18
+whole_reduced_mate_translation=PASS
+translation_c=2*alpha/9
+beta_bar=-(7*alpha**2 - 18*beta)/18
+gamma_bar=(35*alpha**3 - 135*alpha*beta + 243*gamma)/243
+delta_bar=-(35*alpha**4 - 180*alpha**2*beta + 648*alpha*gamma - 1944*delta)/1944
+Psi_bar=(6561*Psi0 - 14*alpha**5 + 90*alpha**3*beta - 486*alpha**2*gamma + 2916*alpha*delta)/6561
+second_flux_shift=2*alpha*(7*alpha**4 - 45*alpha**2*beta + 243*alpha*gamma - 1458*delta)/6561
+spectral_G_covariance=PASS
+Z_elimination_covariance=PASS
+third_flux_covariance=PASS
+weights=(y,u,B,C,D,W)=(1,2,2,3,4,5)
+spectral_G_weight=6
+branch_discriminant_y_degree=12
+branch_discriminant_weight=12
+branch_discriminant_terms=32
+axis_B_gcd_degree=0
+axis_B_factor=-56684737689882624*(7*y**2 + 90)*(386561*y**10 + 5402250*y**8 - 52787700*y**6 - 178605000*y**4 + 7348320000*y**2 - 23619600000)
+axis_C_gcd_degree=5
+axis_C_factor=-136100055193408180224*y**6*(1127*y**6 + 149688*y**3 + 25509168)
+axis_D_gcd_degree=0
+axis_D_factor=-19442865027629740032*(7889*y**12 + 7429968*y**8 + 5475968064*y**4 + 793437161472)
+axis_W_gcd_degree=1
+axis_W_factor=-136100055193408180224*y**2*(1127*y**10 + 2020788*y**5 + 4649045868)
+axis_origin_gcd_degree=11
+axis_origin_factor=-153384762202971019112448*y**12
+infinity_cubic=-26040609*v**3 + 1607445*v**2 - 138915*v + 1127
+infinity_discriminant=-153384762202971019112448
+origin_Z_resultant=22220417174433988608
+origin_F_resultant=-1305960654728555144789507775025586141921280
+origin_sidecar_resultant=422187926314245783552
+normalized_G_sha256=5b0fda01668173072c952b45ece479cd7670ee840afa7a668dd7b6bb6947f7bc
+normalized_Delta_sha256=5ce9f8296972ca43106c98095cf6e233f8b6c5be6442a6797cfbcbf108e65731
+axis_C_normalization=z^3=L(v)/(435456*C),genus=1
+axis_W_normalization=z^5=L(v)/(5878656*W),genus=4
+origin_cusp_sidecar=MATHEMATICAL_PROOF_REQUIRED
+status=THM2297_DEGREE18_TARGET_TRANSLATION_EXACT_REFEREE
