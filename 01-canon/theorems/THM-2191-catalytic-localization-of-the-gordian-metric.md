@@ -388,6 +388,18 @@ d_*(K,L)
 c*(K)=d_*(K,U).                                      (40b)
 ```
 
+Owens--Strle's orientation convention identifies an immersed concordance
+from `K_1` to `K_2` with an immersed disk bounded by `-K_1#K_2`. Therefore
+
+```text
+d_*(K_1,K_2)=c*(-K_1#K_2),
+d_*(K,U)=c*(-K)=c*(K),                               (40b')
+```
+
+where the last equality follows because concordance inversion preserves the
+unsigned number of double points. This identifies (40b) with their
+four-ball crossing number without an orientation ambiguity.
+
 A crossing-change trace is such an immersed concordance, so
 
 ```text
@@ -398,9 +410,10 @@ The function `d_*` is a pseudometric on knot types and a metric on smooth
 concordance classes. It is exactly connected-sum-translation invariant.
 One direction follows by adding the product annulus of a common summand.
 For the reverse direction, an immersed concordance between `K#J` and `L#J`
-may be summed with the concordance inverse `-J`; the slice knot `J#(-J)` is
-then removed by smooth concordances at both ends, without adding double
-points. Hence
+may be summed with the oriented concordance inverse `-J` (the mirror with
+reversed orientation); the ribbon, hence slice, knot `J#(-J)` is then
+removed by smooth concordances at both ends, without adding double points.
+Hence
 
 ```text
 d_*(K#J,L#J)=d_*(K,L).                               (40d)
@@ -459,10 +472,14 @@ u_cat(9_10)=3.                                       (44)
 ```
 
 Since adding any common summand never costs more than `u(9_10)`, (44)
-actually gives the uniform identity
+actually gives the uniform identity. Equivalently, for every `J` the direct
+sandwich is
 
 ```text
-d_G(9_10#J,J)=3                   for every knot J.  (45)
+3=d_*(9_10,U)
+ =d_*(9_10#J,J)
+ <=d_G(9_10#J,J)
+ <=d_G(9_10,U)=3.                                  (45)
 ```
 
 In particular,
@@ -487,9 +504,11 @@ u(10_6)=3 and d_G(10_6#3_1,3_1)=2
   => c*(10_6)=u_cat(10_6)=u_hash(10_6)=2.            (47)
 ```
 
-The second line uses (28), (40e), and `u(3_1)=1`. More generally, every
-one-crossing catalyst for a knot with unknotting number three forces its
-entire self-power sequence below slope three:
+The second line uses (28), (40e), and `u(3_1)=1`: the upper bound
+`u_hash(10_6)<=2` comes from amplification, while the opposite bound is
+supplied by the additive signature calibration `|sigma(10_6)|/2=2`.
+More generally, every one-crossing catalyst for a knot with unknotting
+number three forces its entire self-power sequence below slope three:
 
 ```text
 u(nK)<=2n+O(1).                                      (48)
@@ -592,5 +611,7 @@ unknotting number,” which is used for a different twist-family construction
 in the literature. “Catalytic Gordian metric” is descriptive repo-local
 terminology, not a priority claim; related abstract constructions occur in
 the theory of subinvariant metrics, metric monoids, and group completion.
+Likewise, “singular-concordance metric” is descriptive here; Owens--Strle
+call `d_*` the crossing number distance.
 
 QED.

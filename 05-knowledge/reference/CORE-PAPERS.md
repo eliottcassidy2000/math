@@ -455,12 +455,9 @@ places, so the links below, not a bare `THM-N`, are the canonical addresses.
 
 ## Knots and compositional relations
 
-Detailed source/import/guardrail records for Brittenham--Hermiller, Zakharov,
-Rybin--Zhang--Luo, and Krenn--Gu--Soltesz are preserved in the
-[compositional-relations source sidecar](CORE-PAPERS-COMPOSITIONAL-RELATIONS.md).
-THM-2176 is the canonical knot consumer: it imports only the cited
-crossing-change certificates and derives the continuation profile, positive
-interaction coboundary, and pure-bypass split inside the repo.
+Detailed source/import/guardrail records for Brittenham--Hermiller, Zakharov, Rybin--Zhang--Luo, Krenn--Gu--Soltesz, Schubert, and Owens--Strle are preserved in the
+[compositional-relations source sidecar](CORE-PAPERS-COMPOSITIONAL-RELATIONS.md). THM-2176 derives the continuation profile, positive interaction coboundary, and pure-bypass split from cited crossing certificates.
+THM-2191 uses prime-decomposition cancellation and the four-ball crossing metric to construct catalytic Gordian localization and close the `9_10` reverse direction.
 
 ## Tournaments
 

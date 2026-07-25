@@ -10,6 +10,13 @@
 **Counterindication:** skip the sidecar when target constancy is proved or the defect has no exact zero/positivity implication.
 **Evidence:** THM-2158 (deck versus pole divisor), THM-2174 (residue versus `C_r/W`), and THM-2176 (unknotting scalar versus continuation profile).
 
+## Localize a metric by common contexts before hunting catalysts
+
+**Trigger / action:** when common nonexpansive factors can contract distance, form `d_ctx(x,y)=inf_z d(x+z,y+z)`; in noncommutative settings retain left, right, and two-sided contexts separately.
+**Mechanism:** in a commutative metric monoid this is the greatest translation-invariant pseudometric below `d`; its root defect is exact catalytic capacity, fixed savings amplify to homogenized savings, and operation-specific uncrossing can instead prove `d_ctx=d`.
+**Counterindication:** cancellation without properness/integrality can still permit total collapse; integrality without cancellation need not give a metric; a homogenization gap need not imply a catalyst.
+**Evidence:** THM-2191 (Gordian localization and hostile collapses), THM-2183 (exact common-factor isometries), and THM-840/853 (continuation contexts).
+
 ## Expose the obstruction first, choose the scale second
 
 **Trigger:** a proof needs a prime, bandwidth, radix, exponent, or cutoff, but every fixed choice loses cancellation or creates an uncontrolled tail.
@@ -21,19 +28,15 @@
 ## Search the statement before the method
 
 **Trigger:** inheriting a target, naming an invariant, or proposing a “new” lemma.
-**Action:** search exact constants, inequalities, quantifiers, construction shape,
-theorem IDs, and canonical synonym families; dereference every cited ID.
-**Mechanism:** methods give the same theorem disjoint vocabularies, so method-keyword
-searches miss prior solutions and refutations.
+**Action:** search exact constants, inequalities, quantifiers, construction shape, theorem IDs, and canonical synonym families; dereference every cited ID.
+**Mechanism:** methods give the same theorem disjoint vocabularies, so method-keyword searches miss prior solutions and refutations.
 **Counterindication:** independent rederivation remains useful when framed as verification and compared proof-by-proof.
 **Evidence:** MISTAKE-183, 187, 189, 200, and 158 in [`MISTAKES.md`](../01-canon/MISTAKES.md).
 
 ## Correct the object before sharpening the technique
 
 **Trigger:** many increasingly elaborate methods stall at the same residual.
-**Action:** ask whether the optimized quantity is the actual object; replace a
-mean by a maximum, an intrinsic shadow by a marked/observer object, or a scalar
-by its profile.
+**Action:** ask whether the optimized quantity is the actual object; replace a mean by a maximum, an intrinsic shadow by a marked/observer object, or a scalar by its profile.
 **Mechanism:** no stronger bound repairs an information-losing object.
 **Counterindication:** retain valid local estimates as components after the reframe.
 **Evidence:** the `L -> M` and observer-lens reframes in §1 of
@@ -43,10 +46,7 @@ and the support-profile correction in MISTAKE-209.
 ## Type every analogy and every implication
 
 **Trigger:** formulas look identical, an analogy suggests an iff, or a scalar equation is read coefficientwise.
-**Action:** write type and implication ledgers. Distinguish nodes/exponents,
-supports/multiplicities, labels/classes, scalar/polynomial identities,
-graph/tournament spectra, and notions of dimension/rank. Rank coincidences need
-ambient modules and an explicit map; spectra need normalization and exceptional-prime scope.
+**Action:** write type and implication ledgers: distinguish nodes/exponents, supports/multiplicities, labels/classes, scalar/polynomial identities, graph/tournament spectra, and notions of dimension/rank; rank coincidences need ambient modules and explicit maps, while spectra need normalization and exceptional-prime scope.
 **Mechanism:** shared notation hides type-error bridges.
 **Counterindication:** analogies remain productive conjecture generators when the missing map is explicit.
 **Evidence:** MISTAKE-209, 211, 212, 214–216, 222–225, and 227–229 in [`MISTAKES.md`](../01-canon/MISTAKES.md).

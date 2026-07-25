@@ -397,21 +397,10 @@ into tournament operation laws and LRC residue packets.
 
 ## Other active portfolio
 
-- **Knots / operation-ready relations:**
-  [THM-2176](../01-canon/theorems/THM-2176-gordian-continuation-profile-and-interaction-cocycle.md)
-  makes `Pi_K(J)=u(K#J)` universal and its defect a cone-monotone positive
-  2-coboundary.
-  [THM-2191](../01-canon/theorems/THM-2191-catalytic-localization-of-the-gordian-metric.md)
-  now gives the greatest connected-sum-invariant metric below Gordian
-  distance, with root norm `u_cat(K)=min_J d_G(K#J,J)` and
-  `max{u_hash(K),c*(K)}<=u_cat(K)<=u(K)`. Owens--Strle's
-  `c*(9_10)=u(9_10)=3` closes the formerly unresolved reverse `4_1,9_10`
-  direction as pure bypass. Positive catalysis is still open; the sharp
-  cited-seed boundary is conditional `10_6` (`c*=2`, `u in {2,3}`),
-  followed by the uncalibrated pretzel families.
+- **Knots / operation-ready relations:** [THM-2176](../01-canon/theorems/THM-2176-gordian-continuation-profile-and-interaction-cocycle.md) gives the continuation profile and positive interaction coboundary; [THM-2191](../01-canon/theorems/THM-2191-catalytic-localization-of-the-gordian-metric.md) gives the greatest connected-sum-invariant minorant of Gordian distance and `max{u_hash,c*}<=u_cat<=u`.
+  Since `c*(9_10)=u(9_10)=3`, the reverse `4_1,9_10` direction is pure bypass. Positive catalysis remains open; the sharp cited seed is conditional `10_6` (`c*=2`, `u in {2,3}`), then uncalibrated pretzels.
 - **Unsplittable cost flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture: a planar acyclic instance has fractional cost `58` but capacity-good integral cost at least `60`. Its carrier is the `K_3` stable-set facet; the planar `2d_max` theorem remains intact.
-- **Jacobian/Dixmier:** THM-1300/1315 verify and analyze the three-dimensional
-  Keller collision, but provenance is unsettled (MISTAKE-205) and it does not decide
+- **Jacobian/Dixmier:** THM-1300/1315 verify and analyze the three-dimensional Keller collision, but provenance is unsettled (MISTAKE-205) and it does not decide
   `DC(2)`; THM-2044--2046 block planar and first-order cotangent descent.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibers:** THM-2063/2071 close affine/quadratic pencil members;

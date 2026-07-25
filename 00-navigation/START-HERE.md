@@ -119,8 +119,10 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     grid-tube, and toric-profile exits. THM-2190 forces rank six by height
     `450` and some absolute bounded rank seven, but phase-preserving discharge remains open.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
-    the knot continuation cocycle; THM-2177 refutes Goemans' cost conjecture
-    through a conflict graph. MISTAKE-230--235 forbid syntax-only bridges.
+    the knot continuation cocycle; THM-2191 localizes Gordian distance by
+    common catalysts and closes `9_10` through the four-ball crossing metric.
+    THM-2177 refutes Goemans' cost conjecture through a conflict graph.
+    MISTAKE-230--235 forbid syntax-only bridges.
 
 ## Where to go by topic
 

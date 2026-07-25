@@ -406,17 +406,19 @@ signatures oppose, gives:
 
 | pair | certified sum data | directional verdict |
 |---|---|---|
-| `4_1,9_10` | `u=(1,3)`, `u(4_1#9_10)<=3` | `C_(9_10)(4_1)=0`; reverse `C` is zero or one |
+| `4_1,9_10` | `u=(1,3)`, `u(4_1#9_10)<=3` | `C=0` in both directions; reverse closure uses THM-2191 and `c*(9_10)=3` |
 | `5_1,8_2` | `u=(2,2)`, `u(5_1#8_2)<=3` | `C=0` in both directions |
 | `3_1,10_6` | `u(10_6) in {2,3}`, sum at most three | conditional symbiosis only if `u(10_6)=3`; one direction has `C=0` |
 
 For `4_1,9_10`, prime decomposition supplies the nonzero lower bound and
 unknotting the figure-eight summand supplies the one-change upper bound, so
 `d_G(4_1#9_10,9_10)=1`. Thus the
-strict saving is pure bypass in the `4_1` direction, while reverse translation
-catalysis is permitted but not proved. For the oppositely signed `5_1,8_2`
-pair, signature saturates both translated side lengths at two, so the saving
-is pure bypass in both directions.
+strict saving is pure bypass in the `4_1` direction. THM-2191 combines the
+translation-localized Gordian metric with Owens--Strle's exact
+`c*(9_10)=3` to force `d_G(9_10#J,J)=3` for every `J`, closing the reverse
+direction too. For the oppositely signed `5_1,8_2` pair, signature saturates
+both translated side lengths at two, so the saving is pure bypass in both
+directions.
 
 The positive-torus families, the cited `10_139` examples, and the Baader
 intermediate families are also pure bypass in both directions: the additive
@@ -425,8 +427,10 @@ only the bounds needed for strict subadditivity, so this calibration argument
 does not decide its directional `C` terms.
 
 Accordingly, the audited published examples prove many bypasses but **no
-instance with `C_y(x)>0`**. Actual connected-sum translation catalysis is a
-sharper open target than another strict-subadditivity example.
+instance with `C_y(x)>0`**. The unconditional `4_1,9_10` ambiguity is now
+closed; conditional `10_6` and the uncalibrated pretzel families remain.
+Actual connected-sum translation catalysis is a sharper open target than
+another strict-subadditivity example.
 
 THM-2191 packages that target exactly. Its common-catalyst metric has root
 norm

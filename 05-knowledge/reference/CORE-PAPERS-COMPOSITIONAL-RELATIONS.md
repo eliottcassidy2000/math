@@ -57,6 +57,11 @@ This sidecar preserves detailed records routed compactly from
   `c*(K)<=u_cat(K)`. This closes the reverse `4_1,9_10` direction as pure
   bypass and isolates conditional `10_6` as the first cited seed not settled
   by that floor.
+- **Version caveat:** Table 3's printed `u(10_6)=3` is the obsolete value
+  corrected by the newer Brittenham--Hermiller audit to
+  `u(10_6) in {2,3}`. The imported `c*(10_6)=2` does not depend on that
+  column: the same row gives
+  `2=|sigma|/2<=g*<=c*<=u_s=2`.
 - **Repo consumers:**
   [THM-2191, catalytic Gordian localization](../../01-canon/theorems/THM-2191-catalytic-localization-of-the-gordian-metric.md)
   and [THM-2176](../../01-canon/theorems/THM-2176-gordian-continuation-profile-and-interaction-cocycle.md).
