@@ -15,10 +15,10 @@ status: >
   dim_Q W_178>=3, dim_Q W_204>=4, dim_Q W_262>=5, and dim_Q W_450>=6.
   Every twelve-speed deletion then has five independent relations of height
   at most 235800. Finiteness of the possible bounded six-planes and the
-  instancewise rank-six positivity also imply a universal finite, presently
-  uncomputed height H_* with dim_Q W_(H_*)>=7. The theorem does not compute
-  H_*, give a rank-seven safe-cube floor, produce rank eight, or prove
-  LRC(14).
+  instancewise rank-six positivity also imply a universal finite height H_*
+  with dim_Q W_(H_*)>=7. THM-2193 subsequently sharpens the rank-six mass to
+  the uniform floor 7^(-21) and makes H_*=78*7^21 explicit. Neither theorem
+  produces rank eight or proves LRC(14).
 source: codex-2026-07-24-basis-safe-floor
 depends_on:
   - THM-2185-rank-two-safe-cube-floor-and-height-500-rank-three-harvest
@@ -27,6 +27,7 @@ related:
   - THM-2054-relative-fejer-whole-product-decorrelation
   - THM-2164-relative-packet-rank-harvesting
   - THM-2178-mod14-transverse-code-rank-harvest
+  - THM-2193-uniform-rank-six-safe-torus-floor
 script: 04-computation/lrc14_basis_safe_floor_rank_six_harvest_thm2190.py
 output: 05-knowledge/results/lrc14_basis_safe_floor_rank_six_harvest_thm2190.out
 script_sha256: c5f0e317abbb152a2723315a5dcde06658e6c798df2da9f45796291b3c96e8dc
@@ -295,10 +296,9 @@ deficits in (26). The next open analytic interface is therefore
 inf_L measure_(K_L)(K_L intersection J^13)>0 ?        (28)
 ```
 
-over saturated rank-six relation lattices satisfying (4), or an effective
-lower bound in terms of a bounded lattice presentation. Such a bound would
-give a direct explicit seventh-relation height. Section 6 instead obtains an
-existential universal height from finite bounded-seed compactness.
+over saturated rank-six relation lattices satisfying (4). This is open within
+the present argument. THM-2193 later answers it affirmatively with the floor
+`7^(-21)` and converts the compactness height below into an explicit one.
 
 ## 4. One-height rank-six harvest
 
@@ -598,7 +598,8 @@ most
 
 If only `r_7` is nonzero in the deleted coordinate, retain the first six.
 Thus every deletion has relation rank at least six by height `900H_*`.
-This is an absolute bound, but it remains nonnumeric because `H_*` does.
+This is an absolute bound. THM-2193 later permits
+`H_*=78*7^21` and hence the explicit deletion height `900H_*`.
 
 ## 8. Exact referee and boundaries
 
@@ -617,6 +618,6 @@ The companion uses only exact integer and `Fraction` arithmetic. It:
 Normal and optimized executions are required to agree with the frozen
 transcript.
 
-The theorem does not compute `H_*`, prove a rank-seven safe-cube floor,
-produce an eighth independent relation, give a finite speed cap, or prove
-LRC(14). QED.
+The present proof does not compute `H_*`; THM-2193 supersedes that boundary.
+Neither result produces an eighth independent relation, a finite speed cap,
+or LRC(14). QED.

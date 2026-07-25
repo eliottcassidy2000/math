@@ -14,9 +14,9 @@ status: >
   basis (b_i) costs at most max(H,H/2+sum_i ||b_i||_infinity/2). With
   THM-2190, every zero-safe row therefore has a saturated rank-six basis
   with height profile (29,105,178,258,416,718), surjective modulo every
-  base with unrestricted fibres q^7. A universal finite, nonnumeric
-  saturated rank-seven carrier also follows. The remaining pumping loss is
-  phase/current, not radix rank.
+  base with unrestricted fibres q^7. THM-2193 makes the saturated
+  rank-seven extension explicit at height 78*7^21, with fibres q^6.
+  The remaining pumping loss is phase/current, not radix rank.
 source: codex-2026-07-24-LRC-saturated-relation-plane
 depends_on:
   - THM-2144
@@ -26,6 +26,7 @@ depends_on:
   - THM-2178
   - THM-2185
   - THM-2190
+  - THM-2193
 related:
   - THM-2167
   - THM-2174
@@ -327,17 +328,24 @@ restriction. The height-`105` rank-two subcarrier remains useful because
 its sign-sharp carry count is much smaller, while (29) gives four genuinely
 transverse universal-radix coordinates when rank is the scarce resource.
 
-THM-2190 also gives a universal finite, presently nonnumeric `H_*` with
-`dim_Q W_(H_*)(v)>=7`. Adjoining such a seventh relation to (29) gives a
+THM-2193 gives
+
+```text
+H_*=78*7^21=43566577398496152546,
+dim_Q W_(H_*)(v)>=7.
+```
+
+Adjoining such a seventh relation to (29) gives a
 saturated rank-seven basis whose final height is at most
 
 ```text
 max(H_*,H_*/2+852),                                  (32)
 ```
 
-because the six displayed heights sum to `1704`. Its unrestricted
+because the six displayed heights sum to `1704`. Since `H_*>1704`, the
+maximum in (32) is exactly `H_*`. Its unrestricted
 modulo-`q` fibres have size `q^6`. This is an honest finite universal
-carrier, but not yet an effective state bound because `H_*` is uncomputed.
+carrier with an explicit, deliberately crude height.
 
 ## 7. Exact boundary
 
@@ -353,7 +361,7 @@ The faithful carrier is therefore
 ```text
 saturated height-(29,105) relation plane
  + optional explicit saturated rank-six extension (29)
- + optional nonnumeric saturated seventh relation (32)
+ + optional height-`78*7^21` saturated seventh relation (32)
  + exact composite-radix owner image
  + quotient-tie sidecar
  + full phase/current continuation data.             (33)

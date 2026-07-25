@@ -113,11 +113,10 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     `(3,5,0)`. THM-2140 gives depth/polar invoices; THM-2148/2168 give the
     Fano classification and top-two depth majorization; THM-2168 now eliminates
     its transverse and scalar-`4+3` lanes, leaving only scalar `5+3`.
-    THM-2187 makes the short relation plane saturated and radix-universal;
-    THM-2190 forces rank six by height `450`, deletion rank five by `235800`,
-    and a finite seventh relation. THM-2174/2188 show phase/current remains
-    the debt. THM-735/2184/2186 give far-cone, grid/mixed-core, and toric exits;
-    scalar `5+3` remains open.
+    THM-2187 makes the short carrier saturated; THM-2193 gives the rank-six
+    torus floor `7^-21` and rank seven by height `78*7^21`. THM-2174/2188
+    show phase/current remains the debt. THM-2192 leaves scalar `5+3` open
+    but forces a unique deepest blocker and an anchored chord carrier.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
     the knot continuation cocycle; THM-2191 localizes Gordian distance by
     common catalysts and closes `9_10` through the four-ball crossing metric.

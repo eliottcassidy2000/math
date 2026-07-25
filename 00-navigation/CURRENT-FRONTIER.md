@@ -173,7 +173,9 @@ exact and finite; it does not prove that every surviving interval is empty.
 THM-2187 saturates the height-`105` relation plane and makes every fixed
 radix free. THM-2190 forces the exact ladder
 `W_178>=3,W_204>=4,W_262>=5,W_450>=6`, rank five on every deletion by
-`235800`, and rank seven at some absolute finite height. THM-2188 shows why
+`235800`. THM-2193 proves the uniform rank-six torus floor `7^-21`, forces
+rank seven by height `78*7^21`, and rank six on every deletion explicitly.
+THM-2188 shows why
 rank is not the terminal: finite phase banks, pair matrices, and even a common
 saturated rank-eleven carrier can agree across opposite zero-safety outcomes.
 THM-2174 keeps infinitely many exact-measure states but compresses the
@@ -183,7 +185,9 @@ THM-735 closes fixed-core remote six-tail cones; THM-2182/2184 give exact grid
 products, varying tubes, and a mixed-core scalar quotient-remainder terminal.
 THM-2186 gives exact octagon-needle drift and a strict toric exit. THM-2168
 leaves only scalar `5+3` in `(3,5,0)`, now with the all-depth invoice
-`B>=(12493/35640)13^d`; it remains open. THM-2179's `3/41` exit/body relation
+`B>=(12493/35640)13^d`. THM-2192 forces a unique deepest blocker, an exact
+root-sheet ownership law, and eight empty residue profiles; the tail remains
+open. THM-2179's `3/41` exit/body relation
 still lacks a phase-preserving route into these terminals.
 
 ### Independent routes that remain live
