@@ -128,18 +128,11 @@ surviving special-matrix scope in THM-2033.
 
 ## Controlled forgetting requires a sidecar
 
-**Trigger:** quotienting, canonicalizing, projecting, folding, taking moments,
-or replacing an object by an invariant.
-**Action:** state the next operation, the predicate preserved, the coordinate
-forgotten, and the sidecar required to make the next operation legal.
-**Mechanism:** a quotient may classify the present object while failing under
-extension, gluing, chirality, phase transport, or obstruction detection.
-**Counterindication:** no sidecar is needed when a theorem proves the next
-operation factors through the quotient.
-**Evidence:** the interface stress tests in
-[`perspective-groupoid-controlled-forgetting-codex-s261.md`](../07-reflections/perspective-groupoid-controlled-forgetting-codex-s261.md),
-MISTAKE-209, THM-2160's stratified binomial completion, and THM-2174's
-window/current defect ledger.
+**Trigger:** quotienting, canonicalizing, projecting, folding, taking moments, or replacing an object by an invariant.
+**Action:** state the next operation, predicate preserved, coordinate forgotten, and sidecar needed to make it legal; for inverse limits, retain a termination, height, or depth coordinate.
+**Mechanism:** a quotient can classify the present object yet fail under extension, gluing, chirality, phase transport, or obstruction detection. Compatible finite prefixes can define a completion point without terminating in the original discrete class.
+**Counterindication:** no sidecar is needed when the next operation factors through the quotient or termination is uniformly bounded.
+**Evidence:** [interface stress tests](../07-reflections/perspective-groupoid-controlled-forgetting-codex-s261.md), MISTAKE-209, THM-2049's nonterminating beta-adic lift, THM-2163's bounded carry alphabet with an owner/termination mask, THM-2160, THM-2174, and THM-2228's separation of formal `2`-adic compatibility from ordinary stabilization.
 
 ## After a scalar quotient, choose between a coherent lift and orbit incidence
 
