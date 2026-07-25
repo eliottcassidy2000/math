@@ -1,0 +1,21 @@
+THM-2312 SPARSE-ROOT BISPECTRUM AUDIT
+direct cyclotomic cases: 377
+two-sheet formula:
+  B_p=(p-2)*((p-1)*(a^3+b^3)-3*a*b*(a+b))
+  B_p/(a+b)^3=(p-2)*((p-1)-3*p*x), x=ab/(a+b)^2
+  x<=1/4 gives B_p>=(p-2)(p-4)(a+b)^3/4
+C13 constants:
+  nonzero character pairs: 132
+  fibre-to-mass coefficient floor: 217503/4
+  word measure gain from mu(Q)<=1/7: 49
+  whole-word coefficient floor: 10657647/4
+  one-pair real-part floor: 322959/16
+THM-2305 word-stratum corollary:
+  strict pair floor = 59330091441448204464161088965287/204762211570812550122621742116528000000
+  repeated-first pair floor = 2493436238631076936119894860797/204762211570812550122621742116528000000
+sharp hostile boundaries:
+  p=3, two equal sheets: -2
+  p=4, two equal sheets: 0
+  p=13, seven equal sheets: -42
+  p=13, signed weights (1,-1): 0
+AUDIT PASS
