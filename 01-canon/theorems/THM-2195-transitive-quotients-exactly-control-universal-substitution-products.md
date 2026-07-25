@@ -21,20 +21,25 @@ status: >
   of an induced quotient has prescribed-block cost equal to the weighted
   Hamming derivative of its exterior incidence words. Its zero kernel is
   exactly the subgroup extending to the whole quotient, while each cyclic
-  orbit records twice its number of nonconstant binary runs. This is exact
-  only with block markers retained; unrestricted vertex transport can be
-  cheaper. The remaining object is an optimal unmarked block-transport cost,
-  not a product formula.
+  orbit records twice its number of nonconstant binary runs. In signed
+  coordinates the derivative is a constant minus the permutation trace of
+  a positive-semidefinite Gram matrix. Averaging over any automorphism subgroup is exactly the
+  exterior-word variance lost under projection to the subgroup-orbit
+  constants; this quantitatively detects failure of the whole subgroup to
+  extend. These statements are exact only with block markers retained;
+  unrestricted vertex transport can be cheaper. The remaining object is an
+  optimal unmarked block-transport cost, not a product formula.
 source: codex-2026-07-24-tournament-substitution-product
 depends_on:
   - THM-2183-order-join-is-an-exact-tournament-metric-product
 related:
   - THM-1960
   - THM-2176
+  - THM-2216-residual-capacity-hinge-gram-law
 script: 04-computation/tournament_partial_automorphism_derivative_thm2195.py
 output: 05-knowledge/results/tournament_partial_automorphism_derivative_thm2195.out
-script_sha256: 40ed4030f43b08424fa8487cb4f79389e7a9de0691db5b73287213ee7245bd69
-output_sha256: cde1dc3ef1ff3f4cdff2b561ba90fdbc767c5a459b664d48cae2343fb697253d
+script_sha256: 596740b0b85cba16d5a84c82b90dbdebdbc8a7b67ded24aa303cd89e1ed6485b
+output_sha256: b4985d152d600cb014e8e79bb2dcefd908a80269144bbbe0f5d32ffd7f30e61e
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -515,7 +520,114 @@ cost zero even when a chosen nonextendable partial rotation has positive
 cost. Any global optimality claim still needs a block-preservation or
 uncrossing theorem.
 
-## 7. Boundary and the surviving problem
+## 7. Signed Gram trace and subgroup-orbit variance
+
+The Hamming derivative has an exact positive-semidefinite form.  Put
+
+```text
+n=|C|,                         M=sum_(t notin C)m_t,
+s_t(c)=2b_t(c)-1 in {-1,+1},
+G_C=sum_(t notin C)m_t s_t s_t^T.                  (47)
+```
+
+Thus `G_C` is positive semidefinite.  For `rho in Aut(Q[C])`, define its
+permutation trace against `G_C` by
+
+```text
+Tr_rho(G_C)=sum_(c in C)G_C(c,rho(c)).              (48)
+```
+
+The binary sign identity
+
+```text
+d_H(b_t,b_t composed rho)
+ =1/2[n-sum_c s_t(c)s_t(rho(c))]                   (49)
+```
+
+and (41) give
+
+```text
+E_Q(C,rho;m)
+ =N/2[nM-Tr_rho(G_C)].                              (50)
+```
+
+This is a genuine Gram representation, not a spectral lower bound by
+itself: different permutation traces of the same PSD matrix can still be
+close to the identity trace.
+
+There is, however, an exact averaged law.  Let
+
+```text
+Gamma <= Aut(Q[C])
+```
+
+be any subgroup, let `O` range over its vertex orbits in `C`, and put
+
+```text
+r_t(O)=#{c in O:b_t(c)=1}.                          (51)
+```
+
+Uniformly averaging (41) over `Gamma` gives
+
+```text
+1/|Gamma| sum_(rho in Gamma) E_Q(C,rho;m)
+ =2N sum_(t notin C)m_t
+      sum_O r_t(O)(|O|-r_t(O))/|O|.                 (52)
+```
+
+Indeed, for a fixed `c in O`, the image `rho(c)` is uniform on `O`.
+Among all ordered pairs in `O`, exactly
+`2r_t(O)(|O|-r_t(O))` have opposite bits.  Summing the resulting
+probability over the `|O|` possible starting vertices proves (52).
+
+Equivalently, let
+
+```text
+(P_rho v)(c)=v(rho(c)),
+Pi_Gamma=1/|Gamma| sum_(rho in Gamma)P_rho          (53)
+```
+
+be the orthogonal projection onto vectors constant on every `Gamma`-orbit.
+Then
+
+```text
+1/|Gamma| sum_rho E_Q(C,rho;m)
+ =N/2 sum_(t notin C)m_t
+       (||s_t||_2^2-||Pi_Gamma s_t||_2^2).          (54)
+```
+
+On an orbit `O`, the projected sign has value
+`(2r_t(O)-|O|)/|O|`; expanding (54) therefore recovers (52).
+
+The zero and positive cases are now exact:
+
+```text
+average derivative=0
+ iff every exterior word b_t is constant on every Gamma-orbit
+ iff every rho in Gamma extends by the identity on I\C
+     to an automorphism of Q.                       (55)
+```
+
+If the subgroup fails to extend, one nonconstant orbit contributes at least
+`N m_t`, because
+
+```text
+2r(|O|-r)/|O|>=1             for 1<=r<|O|.
+```
+
+Hence the average is at least `N min_(t notin C)m_t`, and some nonidentity
+element of `Gamma` has derivative at least that average.  The exact formula
+(52), rather than this coarse corollary, retains which exterior words and
+orbits break the symmetry.
+
+This is the tournament-side transfer of the Gram viewpoint used for
+residual capacities in THM-2216.  There the Gram inner product upper-bounds
+a selected top-`p` cover; here the Gram trace measures the cost of a
+prescribed local symmetry.  In both cases positive semidefiniteness becomes
+quantitative only after the relevant sidecar is retained: label alignment
+there, subgroup orbits here.
+
+## 8. Boundary and the surviving problem
 
 THM-2183's two-image swap works because a transitive quotient presents
 constant cuts in one consistent order. A directed triangle permits a
@@ -535,7 +647,7 @@ decomposition-respecting cost and bypass after forgetting a product marker.
 Here transitivity is exactly the condition which makes every such bypass
 uncrossable.
 
-## 8. Exact indexing referee
+## 9. Exact indexing referee
 
 Run
 
@@ -545,13 +657,14 @@ python3 -O 04-computation/tournament_partial_automorphism_derivative_thm2195.py
 ```
 
 The companion exhausts all `1,098` labelled tournaments of orders two
-through five, every nonempty induced vertex set, and every automorphism of
-that induced tournament: `41,026` partial-automorphism cases. It separately
-checks literal expanded block pairs, quotient weights, exterior Hamming
-words, symmetric differences, orbit transitions, parity, the extension
-kernel, and the right-invariant pseudometric law. Ordinary and optimized
-runs are byte-identical to the frozen output. The script is an exact
-indexing referee; the unordered-pair partition above supplies the proof for
-arbitrary order.
+through five, all `32,766` nonempty induced-subtournament automorphism
+groups, and every automorphism in them: `41,026` partial-automorphism cases.
+It separately checks literal expanded block pairs, quotient weights,
+exterior Hamming words, symmetric differences, orbit transitions, parity,
+the extension kernel, the right-invariant pseudometric law, the signed Gram
+trace, and the full-automorphism-group orbit/projection averages. Ordinary
+and optimized runs are byte-identical to the frozen output. The script is an
+exact indexing referee; the subgroup averaging proof above applies to every
+subgroup and in arbitrary order.
 
 QED.

@@ -309,7 +309,7 @@ design without pretending a preserver supplies the seed.
   makes `d_iso` exactly `l1` on fixed order-join patches by image-swap
   uncrossing; the ambient quotient still has triangles and is not a partial cube.
 - [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md)
-  classifies the universal product: iff transitive; `C_3` gives `0` versus `2`, and `C_5` defeats the automorphism gauge. A partial automorphism has exact marked cost equal to the weighted Hamming derivative of exterior incidence words; its kernel is the extendable subgroup and its cyclic orbits retain run counts. Global unmarked transport remains open.
+  classifies the universal product exactly: iff transitive. Marked partial-automorphism cost is a weighted Hamming derivative and PSD-Gram permutation-trace defect; subgroup averaging is orbit variance. Unmarked transport remains open.
 - THM-1880/1885 give the Chebyshev--Pell/`BS(1,2)^+` transitive frame.
 - THM-1926 factors zeta over the strong core; THM-1940 gives `var(lambda^2)`.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.

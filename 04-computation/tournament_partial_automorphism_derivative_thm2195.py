@@ -6,9 +6,11 @@ exhausts every labelled tournament of orders 2 through 5, every nonempty
 induced vertex set, and every automorphism of that induced subtournament.  It
 checks the quotient-pair formula against literal expanded block pairs, then
 checks the Hamming, symmetric-difference, orbit-transition, extension-kernel,
-and right-invariant-pseudometric descriptions independently.
+right-invariant-pseudometric, signed-Gram-trace, and full-automorphism-group
+orbit-variance descriptions independently.
 """
 
+from fractions import Fraction
 from itertools import combinations, permutations
 
 
@@ -94,6 +96,24 @@ def cycles(
     return tuple(answer)
 
 
+def group_orbits(
+    vertices: tuple[int, ...],
+    autos: tuple[tuple[int, ...], ...],
+) -> tuple[tuple[int, ...], ...]:
+    """Return the vertex orbits of the supplied permutation group."""
+    position = {c: j for j, c in enumerate(vertices)}
+    unseen = set(vertices)
+    answer = []
+    while unseen:
+        start = min(unseen)
+        orbit = {image[position[start]] for image in autos}
+        require(start in orbit, "identity missing from automorphism group")
+        require(orbit <= unseen, "automorphism orbits overlap")
+        unseen -= orbit
+        answer.append(tuple(sorted(orbit)))
+    return tuple(answer)
+
+
 def check_case(
     out: tuple[tuple[bool, ...], ...],
     vertices: tuple[int, ...],
@@ -162,6 +182,21 @@ def check_case(
     require(hamming_sum == transition_sum, "orbit transition mismatch")
     require(hamming_sum % (2 * scale) == 0, "parity mismatch")
 
+    # Encode each exterior incidence word by signs.  The weighted matrix
+    # G=sum_t weights[t] s_t s_t^T is positive semidefinite, and the
+    # derivative is a constant minus its permutation trace.
+    weight_total = sum(weights[t] for t in exterior)
+    gram_trace = sum(
+        weights[t]
+        * (1 if out[c][t] else -1)
+        * (1 if out[rho[c]][t] else -1)
+        for t in exterior
+        for c in vertices
+    )
+    gram_numerator = scale * (len(vertices) * weight_total - gram_trace)
+    require(gram_numerator % 2 == 0, "Gram trace parity mismatch")
+    require(gram_numerator // 2 == hamming_sum, "Gram trace mismatch")
+
     extends = all(
         out[i][j] == out[sigma[i]][sigma[j]]
         for i, j in combinations(range(q), 2)
@@ -215,10 +250,75 @@ def check_pseudometric(
                 )
                 require(dab == translated, "right invariance mismatch")
 
+    # Average the derivative from the identity over the entire automorphism
+    # group in two independent ways: direct enumeration and orthogonal
+    # projection of every sign word onto the orbit-constant subspace.
+    identity = vertices
+    direct_average = Fraction(
+        sum(
+            weighted_signature_distance(
+                out, vertices, identity, rho, weights, scale
+            )
+            for rho in autos
+        ),
+        len(autos),
+    )
+    exterior = tuple(t for t in range(q) if t not in vertices)
+    orbits = group_orbits(vertices, autos)
+    orbit_average = Fraction(0)
+    projected_norm = Fraction(0)
+    for t in exterior:
+        for orbit in orbits:
+            orbit_size = len(orbit)
+            ones = sum(out[c][t] for c in orbit)
+            orbit_average += (
+                scale
+                * weights[t]
+                * Fraction(2 * ones * (orbit_size - ones), orbit_size)
+            )
+            sign_sum = orbit_size - 2 * ones
+            projected_norm += weights[t] * Fraction(
+                sign_sum * sign_sum, orbit_size
+            )
+    require(direct_average == orbit_average, "group orbit average mismatch")
+
+    weight_total = sum(weights[t] for t in exterior)
+    projection_average = Fraction(scale, 2) * (
+        len(vertices) * weight_total - projected_norm
+    )
+    require(
+        direct_average == projection_average,
+        "group projection average mismatch",
+    )
+
+    all_extend = True
+    for image in autos:
+        rho = map_from_image(vertices, image)
+        sigma = {i: rho[i] if i in rho else i for i in range(q)}
+        all_extend &= all(
+            out[i][j] == out[sigma[i]][sigma[j]]
+            for i, j in combinations(range(q), 2)
+        )
+    orbit_words_constant = all(
+        len({out[c][t] for c in orbit}) == 1
+        for t in exterior
+        for orbit in orbits
+    )
+    require(
+        (direct_average == 0) == all_extend == orbit_words_constant,
+        "group extension kernel mismatch",
+    )
+    if direct_average > 0 and exterior:
+        require(
+            direct_average >= scale * min(weights[t] for t in exterior),
+            "broken-orbit quantitative floor mismatch",
+        )
+
 
 def main() -> None:
     labelled_tournaments = 0
     partial_automorphisms = 0
+    partial_automorphism_groups = 0
     for q in range(2, 6):
         edge_count = q * (q - 1) // 2
         for mask in range(1 << edge_count):
@@ -230,6 +330,7 @@ def main() -> None:
                 )
                 autos = automorphisms(out, vertices)
                 partial_automorphisms += len(autos)
+                partial_automorphism_groups += 1
                 for image in autos:
                     check_case(out, vertices, image)
                 check_pseudometric(out, vertices, autos)
@@ -238,10 +339,13 @@ def main() -> None:
     require(partial_automorphisms == 41026, "case census drift")
     print("labelled_tournaments_q2_to_q5=1098")
     print("nonempty_partial_automorphism_cases=41026")
+    print(f"partial_automorphism_groups={partial_automorphism_groups}")
     print("expanded_block_pair_formula=PASS")
     print("hamming_symmetric_difference_transition_forms=PASS")
     print("extension_kernel_and_parity=PASS")
     print("right_invariant_pseudometric=PASS")
+    print("signed_gram_trace_formula=PASS")
+    print("automorphism_group_orbit_variance=PASS")
     print("status=THM-2195_EXACT_INDEXING_REFEREE_ONLY")
 
 
