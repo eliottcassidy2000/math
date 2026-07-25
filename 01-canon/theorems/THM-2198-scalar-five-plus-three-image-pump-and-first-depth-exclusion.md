@@ -41,6 +41,7 @@ related:
   - THM-2200-convex-semigroup-and-finite-place-support-hole-trichotomy
   - THM-2201-cyclic-root-fibre-hasse-jet-transition-carrier
   - THM-2207-scalar-depth-123-labelled-guard-hole-exclusion
+  - THM-2211-carry-regime-root-transducer-and-infinite-autonomous-index
 script: 04-computation/lrc14_scalar_five_plus_three_image_pump_thm2198.py
 output: 05-knowledge/results/lrc14_scalar_five_plus_three_image_pump_thm2198.out
 script_sha256: b3f5b37d4e0fb34070851fcedecf9435e08d9f78fafb651c5a6c4b39528e0eee

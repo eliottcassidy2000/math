@@ -15,6 +15,8 @@ depends_on:
   - THM-2179-reversed-peel-relative-jackson-relation-packet
   - THM-732-disc-v-bernoulli-edge-pair-dedekind-form-exact-certificates-far-element-tail
 related:
+  - THM-2210-nested-binomial-minorant-and-adaptive-moment-lp-hierarchy
+  - THM-2236-pointwise-nested-binomial-minorants-and-cubic-vertex-fan
   - THM-735-bonferroni-simultaneous-multi-peel-defeats-the-clustered-non-isolated-wall
   - THM-594-pair-overlap-law-mirsky-newman-floor
   - LEM-011-exact-fourier-transform-uncovered-measure

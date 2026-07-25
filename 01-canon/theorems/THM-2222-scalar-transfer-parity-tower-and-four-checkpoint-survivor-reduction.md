@@ -29,6 +29,7 @@ related:
   - THM-2216-residual-capacity-hinge-gram-law
   - THM-2218-labelled-guard-hole-fourier-and-signed-lift-energy
   - THM-2221-tournament-context-cut-metric-and-pinned-transport-response
+  - THM-2238-terminal-cover-moment-hinge-gram-and-fibrewise-convex-hierarchy
 script: 04-computation/lrc14_scalar_parity_tower_four_checkpoint_thm2222.py
 output: 05-knowledge/results/lrc14_scalar_parity_tower_four_checkpoint_thm2222.out
 script_sha256: 1ee54ce28580d198c5f4919ec6c50e001f3300a59c2e804bb256ad46d3afa900

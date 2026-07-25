@@ -32,6 +32,7 @@ related:
   - THM-2207-scalar-depth-123-labelled-guard-hole-exclusion
   - THM-2218-labelled-guard-hole-fourier-and-signed-lift-energy
   - THM-2221-tournament-context-cut-metric-and-pinned-transport-response
+  - THM-2238-terminal-cover-moment-hinge-gram-and-fibrewise-convex-hierarchy
 script: 04-computation/lrc14_depth113_hinge_gram_certificate_thm2216.py
 output: 05-knowledge/results/lrc14_depth113_hinge_gram_certificate_thm2216.out
 script_sha256: 48957157479a220fec1015e12e085267cab36a735a8e5005f15df7aba3f9c1fe

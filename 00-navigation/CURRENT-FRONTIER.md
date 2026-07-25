@@ -170,26 +170,26 @@ is the proved carrier that reduces each fixed bad-denominator/owner fiber to
 labelled primitive packets and one coprime interval. It makes the terminal
 exact and finite; it does not prove that every surviving interval is empty.
 
-THM-2187 saturates the height-`105` plane; THM-2190 forces
-`W_178>=3,W_204>=4,W_262>=5,W_450>=6`; THM-2193 gives the rank-six torus
-floor `7^-21`, rank seven by `78*7^21`, and explicit deletion rank six.
-Its septimal addendum gives safe deep `7^k` cover points but factors THM-2188
-into a positive torus and opposite primitive slopes. Rank/torsion abundance
-still loses slope/current.
-THM-2196/2199 give finite carry charts, floor `182^-13`, and all twelve
-relations by `H=78*182^13`; THM-2208 leaves one primitive candidate per
-rank-eleven/transverse state. The finite atlas is not enumerated.
-THM-2174's exact-measure quotient is infinite, while its fixed-core
-positive-/zero-Haar quotient has one or two states and no uniform core modulus.
-THM-735 and THM-2182/2184 give remote-tail and grid/mixed-core terminals; THM-2186 gives a strict toric exit.
-THM-2168/2192 leave only scalar `5+3`, with one deepest blocker, 36 empty profiles, and degree-at-most-20 static Hafnian pumps.
-THM-2197/2201 give Boolean deficiency and a faithful triangular Hasse-jet carrier; THM-2198/2204/2205/2207 close every deepest-depth-three profile, while THM-2203 fixes scalar transport at `16/208`.
-THM-2213/2215/2219 close all six deepest-depth-four profiles by exact affine-needle and sparse labelled-correlation capacity carriers, forcing `lambda_3>=5`.
-THM-2222 reduces `lambda_1>=6` to a four-checkpoint three-comb inequality; THM-2224 proves `S_4(B)<=3272/28561<961/6930` for every `B`.
-Thus `lambda_1<=5`; THM-2226's three-checkpoint sieve removes another `217` profiles, and THM-2227 independently closes six of its eight geometric-window residues.
-THM-2229 retains `A_+` together with every even checkpoint at unit `13`-time, subsumes those six rows, and closes another `212`. The exact combined scalar ledger has `240` profiles: `238` with `lambda_1<=3` and exactly `(4,6,8),(5,7,9)` at first depth four or five.
-THM-2216 identifies the exact meet-tail PSD Gram kernel `K_theta=R_theta R_theta^T`; THM-2218 gives the integral/Fourier/Hasse carrier, signed top-k energy, and common-lift regret.
-The missing input is a closure mechanism for the `165` first-depth-one rows, the `73` remaining first-depth-two/three rows, and the two geometric-window schedules; THM-2209's quadratic peel closes only the level-one hostile row. LRC(14) remains open.
+THM-2187/2190/2193 give a saturated relation flag, floor `7^-21`, and rank seven by `78*7^21`; deep grids still lose slope/current (THM-2188).
+THM-2196/2199 give finite carry charts, projective finiteness, floor `182^-13`, and rank twelve; THM-2208/2212 reduce each rank-eleven plane to
+bounded anchors and 91 ruler systems. THM-2174's exact quotient remains
+infinite; its fixed-core Boolean shadow has at most two states.
+THM-735 and THM-2182/2184 give remote-tail and grid/mixed-core terminals;
+THM-2186 gives a strict toric exit. THM-2168/2192 leave scalar `5+3`;
+THM-2197/2201 retain deficiency and the Hasse jet. THM-2198/2204/2205/2207
+close depth three; THM-2213/2215/2219 close every depth-four profile, leaving
+`1,130`. THM-2222/2224 close the `455` profiles with `lambda_1>=6`;
+THM-2226 closes `217` more and THM-2227 independently closes six special residues. THM-2229 retains `A_+` at every unit `13`-time, subsumes those six,
+and leaves exactly `240`: `165` first-depth-one rows, `73` first-depth-two/
+three rows, and `(4,6,8),(5,7,9)`.
+THM-2232 excludes the realizable same-core model in the last two profiles by
+a signed dual, but closes no unrestricted profile. THM-2234 proves a private
+two-owner mass and two-step expansion for every first-depth-one blocker.
+THM-2211 proves exact propagation needs carry; THM-2216/2218 expose exact tail-Gram/Fourier carriers, and THM-2238 gives a separate terminal-cover
+fork. THM-2237 isolates the missing top Walsh coordinate; THM-2235 forbids a
+fixed-XOR/odd-sheet antipode. The open scalar target is to combine signed
+stability/owner incidence with the `240` rows; THM-2233 is only a reserved
+guard-danger Bellman proposal. LRC(14) remains open.
 
 ### Independent routes that remain live
 

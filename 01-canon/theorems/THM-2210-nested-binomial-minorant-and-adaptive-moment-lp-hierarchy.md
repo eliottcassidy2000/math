@@ -18,6 +18,7 @@ depends_on: []
 related:
   - THM-2209-sharp-quadratic-reversed-peel-and-joint-fourier-ledger
   - THM-2216-residual-capacity-hinge-gram-law
+  - THM-2236-pointwise-nested-binomial-minorants-and-cubic-vertex-fan
 script: 04-computation/lrc14_adaptive_moment_lp_hierarchy_thm2210.py
 output: 05-knowledge/results/lrc14_adaptive_moment_lp_hierarchy_thm2210.out
 script_sha256: 0fa36f21c161b36997b7a419c5c44ecf4d3f48b98cdcfa26eabee6c5078fffe4
@@ -254,6 +255,14 @@ L_2=L_3=1/2.                                         (21)
 Thus adaptive optimal values are nested while the canonical alternating
 certificates are not. If degree zero is included, the smaller example
 `j=2,p_2=1` has `B_0=0>B_1=-1`.
+
+This does not contradict THM-2236. Its pointwise-nested family does not
+freeze the lower coefficients to the alternating prefix (12); instead it
+changes all higher coefficients so that the degree-`d` polynomial
+dominates its predecessor. For `j>=4` the families agree in degrees one
+and two and first diverge at degree three; for `j<=3` the hierarchy
+terminates before any divergence. THM-2236 is a structured normalized subhierarchy
+of the unrestricted adaptive LP (5)--(7).
 
 ## 6. What happens at low degree
 

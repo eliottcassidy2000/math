@@ -16,6 +16,7 @@ depends_on:
   - THM-2052-finite-height-forces-high-rank-bounded-relation-code
   - THM-2199-effective-positive-subspace-rank-lift
 related:
+  - THM-2212-cofactor-anchor-ruler-pruning-of-rank-eleven-states
   - THM-2196-bounded-relation-cone-circuit-atlas-and-carry-lock-rank-ladder
   - THM-763-strict-finite-height-for-tight-lrc-instances
   - THM-668-pair-sum-ruler-witness-structure
