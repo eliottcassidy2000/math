@@ -86,7 +86,7 @@
     THM-2140/2148/2168 give depth, polar, Fano, and valuation invoices; generated-lattice descent leaves scalar `5+3`. THM-2192 forces a unique deepest blocker; THM-2198/2204/2205/2207 close depth three, while THM-2213/2215/2219 close every depth-four profile.
     THM-2222/2224 remove `455` high-first-depth profiles, THM-2226 removes another disjoint `217`, THM-2229 closes another `212`, THM-2233 closes `16`, and THM-2239's nonnegative signed charge closes `58`. THM-2216/2218 retain labelled meet-tail Gram/Fourier data.
     THM-2143's strict Gibbs test misses equality; THM-2161 proves fixed modulus banks blind. THM-2179 repairs the scalar-covariance dead end only to a `3/41` exit or body relation: height `180` at defect six and `140` at defect at least seven.
-    THM-2187/2193 force rank seven; THM-2196/2199 force rank twelve and a finite box but do not enumerate it. THM-2203 closes scalar transport only in actual dyadic rank eight. The exact scalar ledger has `166` profiles: `165` first-depth-one rows and `(3,4,5)`; THM-2250 forces the latter's normalized cores equal. THM-2239's first-depth-one charge degenerates to `Z_(1,0)=1`; owner switching/carry and the exact common-core branch remain. None proves LRC(14).
+    THM-2187/2193 force rank seven; THM-2196/2199 force rank twelve but do not enumerate its finite box. THM-2203 closes scalar transport only in dyadic rank eight. THM-2250/2257 empty final depth-three `(3,4,5)`, leaving exactly `165` first-depth-one rows. There THM-2239's charge degenerates to `Z_(1,0)=1`; cross-time owner switching/carry remains. None proves LRC(14).
 
 ## NC2 / GMC
 

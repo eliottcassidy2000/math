@@ -182,13 +182,13 @@ close depth three; THM-2213/2215/2219 close every depth-four profile, leaving
 THM-2226 closes `217` more; THM-2229 leaves `240`. THM-2233's exact guard-danger Bellman closes `(2,2,c)`, `5<=c<=19`, and `(5,7,9)`, leaving
 `224`. THM-2239 separately centers a nonnegative signed charge for each
 blocker core and closes another `58`: all `29` first-depth-two rows, `28/29`
-first-depth-three rows, and `(4,6,8)`. The exact scalar ledger is now `166`:
-all `165` first-depth-one rows with deepest depth at least five, and
-`(3,4,5)`. THM-2243 centers its composite union; THM-2250 closes every
-unequal-core partition, leaving only `u_0=u_1=u_2`. THM-2234 supplies private
-depth-one expansion; THM-2211/2216/2218/2238 retain carry and tail sidecars.
-The open scalar targets are THM-2239's time-zero literal loss and the
-all-equal `(3,4,5)` branch. LRC(14) remains open.
+first-depth-three rows, and `(4,6,8)`. This leaves all `165` first-depth-one
+rows with deepest depth at least five and `(3,4,5)`. THM-2243 centers the
+latter's composite union; THM-2250 closes every unequal-core partition, and
+THM-2257's exact `169`-image sieve contradicts the capacity of its common-core
+branch. The exact scalar ledger is therefore `165`, all at first depth one.
+THM-2234 supplies private depth-one expansion; THM-2211/2216/2218/2238 retain
+carry and tail sidecars. The open scalar target is THM-2239's time-zero literal loss joined to cross-time owner switching/carry. LRC(14) remains open.
 
 ### Independent routes that remain live
 
