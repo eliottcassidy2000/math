@@ -3,6 +3,23 @@
 This sidecar preserves detailed records routed compactly from
 `CORE-PAPERS.md`. Freshness dates are per entry.
 
+## Schubert -- *Die eindeutige Zerlegbarkeit eines Knotens in Primknoten*
+
+- **Primary / freshness:** Horst Schubert, *Sitzungsberichte der Heidelberger
+  Akademie der Wissenschaften* 1949/3, 57--104,
+  [DOI 10.1007/978-3-642-45813-2](https://doi.org/10.1007/978-3-642-45813-2).
+  **PUBLISHED / stable; primary bibliographic record checked 2026-07-24.**
+- **Imported role:** unique prime decomposition makes the connected-sum
+  monoid of oriented knot types cancellative. This is the sole external input
+  needed to upgrade THM-2191's common-translation pseudometric to a genuine
+  catalytic Gordian metric.
+- **Repo consumers:**
+  [THM-2191, catalytic Gordian localization](../../01-canon/theorems/THM-2191-catalytic-localization-of-the-gordian-metric.md).
+- **Does not prove:** any equality or inequality for unknotting number,
+  existence of a positive Gordian catalyst, attainment of a nonintegral
+  metric envelope, or equality between connected-sum homogenization and the
+  catalytic norm.
+
 ## Brittenham--Hermiller -- *Unknotting number is not additive under connected sum*
 
 - **Primary / freshness:** [arXiv:2506.24088v2](https://arxiv.org/abs/2506.24088),
@@ -26,6 +43,27 @@ This sidecar preserves detailed records routed compactly from
   `10_139`, and Baader-intermediate families are likewise pure bypass in both
   directions; the pretzel bounds do not exclude translation catalysis.
 
+## Owens--Strle -- *Immersed disks, slicing numbers and concordance unknotting numbers*
+
+- **Primary / freshness:** [arXiv:1311.6702v3](https://arxiv.org/abs/1311.6702),
+  published in *Communications in Analysis and Geometry* **24** (2016),
+  1107--1138,
+  [DOI 10.4310/CAG.2016.v24.n5.a8](https://doi.org/10.4310/CAG.2016.v24.n5.a8).
+  **PUBLISHED / stable; PDF and Tables 2--3 checked 2026-07-24.**
+- **Imported role:** defines the immersed-concordance distance `d_*` and
+  four-ball crossing number `c*`. Its exact low-crossing table gives
+  `c*(9_10)=u(9_10)=3` and `c*(10_6)=2`. THM-2191 proves that `d_*` is a
+  translation-invariant pseudometric below Gordian distance, hence
+  `c*(K)<=u_cat(K)`. This closes the reverse `4_1,9_10` direction as pure
+  bypass and isolates conditional `10_6` as the first cited seed not settled
+  by that floor.
+- **Repo consumers:**
+  [THM-2191, catalytic Gordian localization](../../01-canon/theorems/THM-2191-catalytic-localization-of-the-gordian-metric.md)
+  and [THM-2176](../../01-canon/theorems/THM-2176-gordian-continuation-profile-and-interaction-cocycle.md).
+- **Does not prove:** existence of a positive connected-sum catalyst,
+  `u(10_6)=3` under the current Brittenham--Hermiller audit, equality
+  `u_hash=u_cat`, or any classification of the pretzel symbiont families.
+
 ## Brittenham--Hermiller -- *Unknotting number and connected sums: The knots 4_1 and 5_1*
 
 - **Primary / freshness:** [arXiv:2601.18757v1](https://arxiv.org/abs/2601.18757),
@@ -43,8 +81,9 @@ This sidecar preserves detailed records routed compactly from
   It does not classify symbionts or determine all composite unknotting
   numbers. THM-2176's directional audit makes the `5_1,8_2` seed pure bypass
   in both directions and the `4_1,9_10` seed pure bypass in the figure-eight
-  direction; reverse translation catalysis is compatible with the known
-  bounds but not proved.
+  direction. THM-2191, using the separate Owens--Strle four-ball crossing
+  computation, now closes the reverse direction too; that conclusion is not
+  supplied by this paper alone.
 
 ## Zakharov -- *An isoperimetric inequality for word overlap*
 

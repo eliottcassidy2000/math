@@ -29,6 +29,7 @@ related:
   - THM-2182-endpoint-grid-product-and-tail-overlap-sidecar
   - THM-2183-order-join-is-an-exact-tournament-metric-product
   - THM-2184-two-scale-tail-continuation-profile
+  - THM-2191-catalytic-localization-of-the-gordian-metric
 external:
   - "Mark Brittenham and Susan Hermiller, Unknotting number is not additive under connected sum, arXiv:2506.24088v2."
   - "Mark Brittenham and Susan Hermiller, Unknotting number and connected sums: The knots 4_1 and 5_1, arXiv:2601.18757v1."
@@ -426,6 +427,20 @@ does not decide its directional `C` terms.
 Accordingly, the audited published examples prove many bypasses but **no
 instance with `C_y(x)>0`**. Actual connected-sum translation catalysis is a
 sharper open target than another strict-subadditivity example.
+
+THM-2191 packages that target exactly. Its common-catalyst metric has root
+norm
+
+```text
+u_cat(K)=min_J d_G(K#J,J)=min_J P_K(J,J),
+```
+
+and positive translation catalysis exists exactly when `u_cat(K)<u(K)`.
+More strongly, any one-crossing catalytic saving forces the connected-sum
+homogenized unknotting number down by at least one. Its
+singular-concordance floor, together with Owens--Strle's
+`c*(9_10)=u(9_10)=3`, now proves the reverse `4_1,9_10` direction is pure
+bypass too. The conditional `10_6` and uncalibrated pretzel lanes remain.
 
 The named knots appearing along the displayed shortcut sequences must not be
 silently inserted into the rooted order (26): the composite unknotting
