@@ -13,8 +13,11 @@ status: >
   context spectrum is the root defect translated by the catalytic-saving
   spectrum of the merged composite; its minimum is the root defect, its
   supremum is the catalytic defect, and replicated spectra collapse
-  uniformly to one stable rate. For K=T(2,7) and its mirror, p positive and
-  q negative occurrences have context-uniform defect at least
+  uniformly to one stable rate. For individually additively calibrated knot
+  atoms, Hahn--Banach identifies that rate with the exact deficit between
+  independent atomic calibrations and one coherently signed common
+  calibration. For K=T(2,7) and its mirror, p
+  positive and q negative occurrences have context-uniform defect at least
   min(p,q), more sharply (6-u(K#mirror(K)))min(p,q). The pair-spectrum span
   of K,mirror(K) is exactly the catalytic capacity of their composite.
   This computes neither u(K#mirror(K)) nor a positive Gordian catalyst.
@@ -399,6 +402,65 @@ contexts changes the stable interaction rate
 A-ell_hash(X).                                      (32)
 ```
 
+### Stable duality is a common-calibrator theorem
+
+Specialize now to knots, so `ell=u`, and let `L` be the class of additive
+real-valued Gordian-1-Lipschitz invariants. THM-2191's rational
+Hahn--Banach theorem says that the supremum below is attained:
+
+```text
+u_hash(X)
+ =max_(phi in L)|phi(X)|
+ =sup_(phi in L)|sum_(i=1)^r phi(x_i)|.             (32a)
+```
+
+Consequently the stable replicated defect rate in (32) has the exact dual
+form
+
+```text
+sum_(i=1)^r u(x_i)-u_hash(X)
+
+ =sum_(i=1)^r u(x_i)
+  -sup_(phi in L)|sum_(i=1)^r phi(x_i)|.            (32b)
+```
+
+If every atom is individually additively calibrated, then THM-2191 also
+gives
+
+```text
+u(x_i)=max_(phi in L)|phi(x_i)|,
+```
+
+and (32b) becomes
+
+```text
+sum_i max_(phi in L)|phi(x_i)|
+ -max_(phi in L)|sum_i phi(x_i)|.                   (32c)
+```
+
+This is exactly a **common-calibrator incompatibility**. The first term may
+choose a different functional and a different absolute-value sign for every
+atom. The second must choose one functional and one final sign for the
+whole packet.
+
+The equality case is precise. The rate in (32c) vanishes if and only if
+there are `phi in L` and one sign `epsilon in {+1,-1}` such that
+
+```text
+epsilon phi(x_i)=u(x_i)                 for every i. (32d)
+```
+
+Indeed,
+
+```text
+|sum_i phi(x_i)|<=sum_i|phi(x_i)|<=sum_i u(x_i).    (32e)
+```
+
+Equality throughout forces every atom to be calibrated by the same `phi`
+and all nonzero values `phi(x_i)` to have one sign; the converse is
+immediate. Thus separate calibrators are not enough. Stable additivity asks
+for one coherently signed common calibrator.
+
 ## 5. The Brittenham--Hermiller mirror pair
 
 Let
@@ -499,6 +561,21 @@ five-change certificate. For every sequence of context knots `J_n`,
 
 uniformly in the choice of `J_n`. The exact values of `q_X`,
 `u_cat(X)`, and `u_hash(X)` remain open within the bounds used here.
+
+The common-calibrator form is
+
+```text
+6-u_hash(X)
+ =6-max_(phi in L)|phi(K)+phi(Kbar)|
+ >=1.                                               (41a)
+```
+
+Half-signature supplies separate calibrations with values `3` and `-3`, so
+its two atomic calibrations have opposite signs. The inequality in (41a),
+which follows from `u_hash(X)<=u(X)<=5`, proves that no other additive
+Gordian-1-Lipschitz invariant coherently calibrates both atoms either. The
+positive stable defect is exactly the cost of that common-calibration
+failure.
 
 ## 6. Relation ledger and honest frontier
 
