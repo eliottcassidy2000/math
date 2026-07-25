@@ -188,7 +188,7 @@ latter's composite union; THM-2250 closes every unequal-core partition, and
 THM-2257's exact `169`-image sieve contradicts the capacity of its common-core
 branch. The exact scalar ledger is therefore `165`, all at first depth one.
 THM-2234/2255 supply private expansion and exclusive-owner mass; THM-2263 sharpens the expiration-image floors to `15041431/70270200>1/7` on all `150` strict rows and `5229541/70270200>1/14` on the `15` repeated-first rows.
-THM-2271 forces absorber-cut energy and THM-2273 spreads shallow flows across successor gaps, but neither returns to a blocker. THM-2270 gives simultaneous cut crossing; THM-2275 gives scalar relations; THM-2274 forces scalar rank two by height `2116` (original `4232`). THM-2269 marks mod-13 energy. The open bridge is an anchored minor whose exact frequency survives owner roots and returns to blocker ancestry. LRC(14) remains open.
+THM-2271/2273 force absorber energy and gap spread but no blocker return. THM-2274 gives scalar rank two by `2116`; THM-2283 gives rank three on all `165` rows by `3540`, from safe-torus floor `72/16807`. On `120` interiors, THM-2277 excludes a shared anchor; THM-2279/2282 give a `c_1`-anchored unit minor mod `13`. THM-2269 marks residues but mixes lifts and ancestry. The bridge needs a marked lift or signed whole-class control; no profile is excluded. LRC(14) remains open.
 
 ### Independent routes that remain live
 

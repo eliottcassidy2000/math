@@ -1,7 +1,7 @@
 # LRC14: marginal spectra are addresses; simultaneous geometry is the proof object
 
-Source: codex-2026-07-25, the affine-chord scout, THM-2258, and the incoming
-THM-2263/THM-2265 synthesis.
+Source: codex-2026-07-25, the affine-chord scout, THM-2258, and the
+THM-2263/THM-2145/THM-2270 synthesis.
 
 Status:
 
@@ -19,9 +19,10 @@ Status:
   lesson to the remaining depth-one owner ledger. Gapwise pair extrema must
   obey one multiplicative ladder, and the unique strict worst profile is
   `(1,3,5)`, not three independent copies of the global pair maximum.
-- **PROVED invariant from THM-2265, not a closure:** bounded relations cross
-  every labelled `6+7` cut. This is more than relation rank, but it does not
-  yet produce a small atlas or exclude a row.
+- **PROVED invariant from canonical THM-2145, with a simultaneous
+  strengthening in THM-2270, not a closure:** bounded relations cross every
+  labelled `6+7` cut, and one larger relation can cross all `1716` cuts at
+  once. This is more than relation rank, but it does not exclude a row.
 
 Nothing in this reflection decrements the current ledger beyond the
 independent THM-2257/THM-2258 closure. LRC(14) remains open with the 165
@@ -182,21 +183,22 @@ image. The next useful object must retain the named root sheets or the
 handoff target supplied by the full scalar cover. A better mass comparison
 without that target cannot close a row.
 
-## 4. THM-2265 beyond relation rank: no balanced cut annihilates the space
+## 4. THM-2145/2270 beyond relation rank: no balanced cut annihilates the space
 
-THM-2264 is an exact duplicate of THM-2144 and is superseded; THM-2164
-already proves unconditionally
+THM-2264 is an exact duplicate of THM-2144 and is superseded. THM-2265 is
+a valid but weaker duplicate of canonical THM-2145 and must not be used as
+the dependency. THM-2164 already proves unconditionally
 
 ```text
 dim W_105>=2
 ```
 
-for the distinct zero-safe rows. THM-2265 contributes a different
-coordinate. Put `W=W_2322` and choose a basis from bounded relation
+for the distinct zero-safe rows. THM-2145 contributes a different
+coordinate. Put `W=W_584` and choose a basis from bounded relation
 generators
 
 ```text
-m^(1),...,m^(r),             ||m^(j)||_infinity<=2322.
+m^(1),...,m^(r),             ||m^(j)||_infinity<=584.
 ```
 
 Define the thirteen column charges
@@ -211,15 +213,17 @@ Every basis row is a relation, so
 sum_i b_i=0.                                         (14)
 ```
 
-THM-2265 says exactly that
+THM-2145 says exactly that
 
 ```text
 sum_(i in F)b_i !=0             for every |F|=6.     (15)
 ```
 
 Indeed, if the vector sum vanished, every element of `W` would have zero
-weighted transfer across that cut, contradicting the bounded crossing
+weighted transfer across that cut, contradicting the height-`584` crossing
 relation supplied for `F`. By (14), no seven-subsum vanishes either.
+THM-2270 further proves that one height-`504576` relation crosses all
+`1716` cuts simultaneously; its support is at least eight.
 
 Rank alone does not imply (15): a high-rank relation space may lie inside
 the kernel of one cut functional. The new invariant is a zero-sum vector
@@ -270,4 +274,5 @@ not the simultaneous object.
 - `04-computation/lrc14_depth_three_affine_chord_projective_companion.py`
 - `05-knowledge/results/lrc14_depth_three_affine_chord_projective_companion.out`
 - `01-canon/theorems/THM-2263-thirteen-adic-gap-pair-spectrum-and-profile-sharp-owner-floor.md`
-- `01-canon/theorems/THM-2265-balanced-cut-spectral-coupling-and-bounded-resonance.md`
+- `01-canon/theorems/THM-2145-two-block-spectral-crossing-and-6-plus-7-carry.md`
+- `01-canon/theorems/THM-2270-simultaneous-balanced-cut-relation-and-six-uniform-orientation.md`
