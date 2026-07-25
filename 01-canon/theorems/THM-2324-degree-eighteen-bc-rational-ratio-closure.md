@@ -2,7 +2,7 @@
 id: THM-2324
 title: "Degree-eighteen B--C ratio-bank closure"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. In the genuine
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the genuine
   nonsplit polynomial exact-square-prefix degree-eighteen branch of
   THM-2262/2297, all nine B--C ratio points in THM-2311's two-sparse bank
   are empty. The two rational points have absolutely irreducible
@@ -33,7 +33,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2324 -- the full B--C ratio bank has positive genus
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2311 reduces the exactly two-sparse degree-eighteen branch to a finite
 weighted-projective bank. On the `B`--`C` line, with
@@ -110,8 +110,30 @@ of the remaining terms. Hence every possible root is
 u=ay^2+by+c.                                        (6)
 ```
 
-For each rational point, substituting (6) and equating the seven
-coefficients of `1,y,...,y^6` gives the reduced Groebner basis
+There is in fact a uniform coefficient proof that avoids specialization.
+Let
+
+```text
+L_infinity(a)
+ =1127-138915a+1607445a^2-26040609a^3.
+```
+
+The `y^6` coefficient after (6) is `L_infinity(a)`, and the `y^5`
+coefficient is `b L'_infinity(a)`.  The infinity cubic is separable, so
+these two equations force `b=0`.  With `b=0`, the `y^3` coefficient is
+exactly
+
+```text
+-435456 C.
+```
+
+Every point in the off-axis `B`--`C` bank has `C!=0`, a contradiction.
+Thus absolute irreducibility is already forced by the interaction between
+the separable infinity fibre and the odd `C`-term.
+
+As an independent exact control, for each rational point substituting (6)
+and equating the seven coefficients of `1,y,...,y^6` gives the reduced
+Groebner basis
 
 ```text
 {1}.                                                 (7)
@@ -131,7 +153,8 @@ and adjoin `P_3(t)` or `P_4(t)`. Exact Buchberger reduction over
 {1}.                                                 (8)
 ```
 
-Thus every curve below is absolutely irreducible, and its projective
+Thus both the coefficient argument and the Gröbner computation show that
+every curve below is absolutely irreducible, and its projective
 normalization is a connected degree-three cover of the `y`-line.
 
 ## 3. The two rational points have genus three
@@ -485,3 +508,11 @@ quadratic and quintic ratio polynomials, the field factorizations
 ramification count, and a squarefree hostile control. The
 Riemann--Hurwitz and deck steps are the mathematical proof above, not
 computer assumptions. QED.
+
+The independent hostile audit also reconstructed the two rational
+discriminants and tangent cones using pure fraction arithmetic, checked
+both quadratic conjugates over `F_53` and all five quintic conjugates over
+`F_353`, reran the ordinary companion byte-for-byte, and verified the
+ratio-field irreducibility, infinity, ramification, deck, and scope
+ledgers.  It found the coefficient proof in Section 2 independently of
+the four Gröbner certificates.
