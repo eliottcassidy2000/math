@@ -1,0 +1,31 @@
+THM-2258 LRC14 DEPTH-THREE UNIFORM FIVE-CHARGE OVERLAP
+profile=(3, 4, 5) target=961/6930
+uniform_bellman_bound=8907541/62377224 bound_minus_target=42493973/10292241960
+forced_five_charge_sum=5092517/8911032
+global_top_four=((Fraction(5, 42), 1, 6), (Fraction(9, 77), 11, 1), (Fraction(4, 35), 1, 5), (Fraction(4, 35), 3, 5)) top_four_product_cutoff=245/12
+fifth_ratio_cutoff=122343163/1143582440 product_cutoff=2001269270/39557541 hence_ab<=50
+direct_interval_capacity_checks=102
+candidate_ratios=((Fraction(5, 42), 1, 6), (Fraction(9, 77), 11, 1), (Fraction(4, 35), 1, 5), (Fraction(4, 35), 3, 5), (Fraction(1, 9), 9, 1), (Fraction(1, 9), 9, 2), (Fraction(17, 154), 11, 2), (Fraction(19, 175), 25, 1), (Fraction(3, 28), 1, 4), (Fraction(3, 28), 1, 12), (Fraction(3, 28), 1, 20), (Fraction(3, 28), 3, 4), (Fraction(3, 28), 5, 4))
+candidate_five_subsets=1287 qualifying_capacity_subsets=15
+ratios=((1, 4), (1, 5), (1, 6), (3, 5), (11, 1)) H=33 q=(3, 55, 132, 165, 198) charge_sum=2641/4620 residual=131/462 residual_minus_bound=32191527/228716488 overlap_rebate=31/220 active_atoms=298/1167
+ratios=((1, 5), (1, 6), (1, 12), (3, 5), (11, 1)) H=33 q=(3, 55, 165, 198, 396) charge_sum=2641/4620 residual=733/2310 residual_minus_bound=28510301/163368920 overlap_rebate=269/1540 active_atoms=316/1695
+ratios=((1, 5), (1, 6), (1, 20), (3, 5), (11, 1)) H=33 q=(3, 55, 165, 198, 660) charge_sum=2641/4620 residual=661/2310 residual_minus_bound=163927979/1143582440 overlap_rebate=221/1540 active_atoms=538/2223
+ratios=((1, 5), (1, 6), (3, 4), (3, 5), (11, 1)) H=33 q=(3, 44, 55, 165, 198) charge_sum=2641/4620 residual=317/1155 residual_minus_bound=150561431/1143582440 overlap_rebate=29/220 active_atoms=262/991
+ratios=((1, 5), (1, 6), (3, 5), (5, 4), (11, 1)) H=165 q=(15, 132, 275, 825, 990) charge_sum=2641/4620 residual=1121/3850 residual_minus_bound=2545059661/17153736600 overlap_rebate=3431/23100 active_atoms=1162/4775
+ratios=((1, 5), (1, 6), (3, 5), (9, 1), (11, 1)) H=99 q=(9, 11, 165, 495, 594) charge_sum=3989/6930 residual=6103/20790 residual_minus_bound=4654771921/30876725880 overlap_rebate=46/297 active_atoms=674/2707
+ratios=((1, 5), (1, 6), (3, 5), (9, 2), (11, 1)) H=99 q=(9, 22, 165, 495, 594) charge_sum=3989/6930 residual=5977/20790 residual_minus_bound=4467640249/30876725880 overlap_rebate=221/1485 active_atoms=674/2707
+ratios=((1, 5), (1, 6), (3, 5), (11, 1), (11, 2)) H=33 q=(3, 6, 55, 165, 198) charge_sum=664/1155 residual=237/770 residual_minus_bound=566042537/3430747320 overlap_rebate=389/2310 active_atoms=234/915
+ratios=((1, 5), (1, 6), (3, 5), (11, 1), (25, 1)) H=825 q=(33, 75, 1375, 4125, 4950) charge_sum=6619/11550 residual=2407/8250 residual_minus_bound=4258598051/28589561000 overlap_rebate=207/1375 active_atoms=5602/22551
+ratios=((1, 5), (1, 6), (9, 1), (9, 2), (11, 1)) H=99 q=(9, 11, 22, 495, 594) charge_sum=3967/6930 residual=3041/10395 residual_minus_bound=4623583309/30876725880 overlap_rebate=3133/20790 active_atoms=660/2399
+ratios=((1, 5), (1, 6), (9, 1), (11, 1), (11, 2)) H=99 q=(9, 11, 18, 495, 594) charge_sum=283/495 residual=3092/10395 residual_minus_bound=682152979/4410960840 overlap_rebate=46/297 active_atoms=656/2435
+ratios=((1, 5), (1, 6), (9, 2), (11, 1), (11, 2)) H=99 q=(9, 18, 22, 495, 594) charge_sum=283/495 residual=2047/6930 residual_minus_bound=1570402819/10292241960 overlap_rebate=353/2310 active_atoms=638/2413
+ratios=((1, 6), (3, 5), (9, 1), (9, 2), (11, 1)) H=99 q=(9, 11, 22, 165, 594) charge_sum=3967/6930 residual=3203/10395 residual_minus_bound=5104779037/30876725880 overlap_rebate=3457/20790 active_atoms=458/1735
+ratios=((1, 6), (3, 5), (9, 1), (11, 1), (11, 2)) H=99 q=(9, 11, 18, 165, 594) charge_sum=283/495 residual=6451/20790 residual_minus_bound=5171611777/30876725880 overlap_rebate=317/1890 active_atoms=442/1771
+ratios=((1, 6), (3, 5), (9, 2), (11, 1), (11, 2)) H=99 q=(9, 18, 22, 165, 594) charge_sum=283/495 residual=2113/6930 residual_minus_bound=1668424171/10292241960 overlap_rebate=25/154 active_atoms=442/1771
+worst_residual=317/1155 worst_minus_uniform_bound=150561431/1143582440
+minimum_overlap_rebate=29/220
+row_digest=ff97788ad8f4f9d7f7e5d96a193994263148dd5bbc69ebf58c3976a30c49d666
+consequence=scalar_depth_three_profile_(3,4,5)_EMPTY
+independent_ledger_effect=166_to_165
+canonical_ledger=165_already_by_THM-2257_no_additional_decrement
+scope=LRC14_OPEN_165_first_depth_one_rows_and_non_scalar_frontiers
