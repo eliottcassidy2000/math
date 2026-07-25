@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-258 (2026-07-25, concurrent namespace audit) -- THM-2350 crossed during the reservation rebase
+
+- **What happened:** after fetching `origin/main` at `6b23df8f4`, one
+  session verified that `THM-2350` was free and committed the q-adic
+  prefix-residue collision-spectrum reservation. During that interval,
+  earlier commit `4890b8d25` landed the distinct
+  `THM-2350-owner-pivot-dual-dipole-normal-form.md` reservation. Rebasing
+  the later commit exposed the collision, but the combined pull/push command
+  pushed it before a post-rebase YAML/filename search was run.
+- **First failure:** the pre-reservation search was correct but stale after
+  the rebase. A successful automatic rebase does not validate a scarce ID,
+  and combining rebase with push removes the manual collision gate required
+  by MISTAKE-257.
+- **Repair:** the earlier owner-pivot reservation keeps `THM-2350`. The
+  later carry-spectrum stub first moved to `THM-2351`, but before that repair
+  could push, earlier commit `341e689d9` reserved `THM-2351` for the distinct
+  self-target ANOVA ledger. The carry stub therefore moved again to
+  `THM-2352`, still before receiving proof content. None of the reservations
+  had entered the proved dependency graph.
+- **Rule:** never combine the final reservation rebase and push. Rebase,
+  search the resulting tree again for the exact YAML ID and filename, and
+  only then push.
+
 ## MISTAKE-257 (2026-07-25, concurrent namespace audit) -- THM-2333 crossed between fetch and push
 
 - **What happened:** one session fetched `origin/main`, verified that no
