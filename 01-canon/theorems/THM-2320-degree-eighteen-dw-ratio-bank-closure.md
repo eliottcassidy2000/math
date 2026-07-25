@@ -2,7 +2,7 @@
 id: THM-2320
 title: "Degree-eighteen D--W ratio-bank closure"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. In the genuine
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the genuine
   nonsplit polynomial exact-square-prefix degree-eighteen branch of
   THM-2262/2297, all four D--W ratio points in THM-2311's two-sparse bank
   are empty. The rational point has an absolutely irreducible genus-four
@@ -31,7 +31,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2320 -- the full D--W ratio bank has positive genus
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2311 reduces the exactly two-sparse degree-eighteen branch to a finite
 weighted-projective bank. On the `D`--`W` line, its factors are
@@ -489,3 +489,11 @@ factorization (23), node coordinates (24), (26), tangent cone (29), the
 rational and global unit Groebner bases, separable infinity, ramification
 arithmetic, and a squarefree hostile control. The Riemann--Hurwitz and deck
 steps are the mathematical proof above, not computer assumptions. QED.
+
+The independent audit reran both execution modes and reproduced every
+displayed field identity by a separate exact quotient-ring path. Finite
+field replays at thirteen and nineteen independently checked the ordinary
+node, smooth cubic fibre, and residual squarefreeness. It also found a
+shorter irreducibility cross-check: separability of the common infinity
+cubic forces the lower coefficients of any putative root
+`u=ay^2+by+c` to vanish, after which the nonzero `Wy` term is impossible.
