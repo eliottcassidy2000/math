@@ -10,7 +10,7 @@ status: >
   most 2d values along a d-coordinate radix path, so every feasible bounded
   relation system has an explicit small positive ordered representative. For
   the LRC(14) rank-two carrier the effective path cap is
-  26*2729^2=193633466. An exact thirteen-speed witness proves that the
+  26*208875=5430750. An exact thirteen-speed witness proves that the
   1/14-safe-set predicate is still mixed on these pump fibres; phase is the
   genuinely missing sidecar.
 source: codex-2026-07-24-relation-carry-spectrum
@@ -22,8 +22,8 @@ related:
   - THM-2161
 script: 04-computation/lrc14_radix_quotient_order_pumping_thm2171.py
 output: 05-knowledge/results/lrc14_radix_quotient_order_pumping_thm2171.out
-script_sha256: 815da09174e3f102a9561cb6a90f6feaaef1a06937c4532d0334b14cef0f9c42
-output_sha256: 7326bc5a7f1968cea68ab978016d6f766c33a0346bf085ea6f6adc5f1764c767
+script_sha256: 1d8e90747525954b25edc7365e396ffe6e45ede71a93866288c4765e8d72c759
+output_sha256: a9d3cae83d65d3302eb544e0057c051259ff89b7ab377bb708012e6693e44282
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -253,26 +253,18 @@ predicate.
 
 ## 5. The LRC(14) rank-two carrier
 
-For THM-2167's two relations `r,s`,
+For THM-2167's height-29 anchor `r` and its companion `s`, positivity and
+the support split prove
 
 ```text
-||r||_infinity,||s||_infinity<=105,
-||r||_1,||s||_1<=13*105=1365.                        (24)
+number of simultaneous carry pairs <=208875.         (24)
 ```
 
-Hence their carry pair has at most
-
-```text
-C<=(2*1365-1)^2
-  =2729^2
-  =7,447,441                                          (25)
-```
-
-values. The owner/tie pair assumes at most `2*13=26` values along the path,
+The owner/tie pair assumes at most `2*13=26` values along the path,
 so the effective ordered-path cap is
 
 ```text
-26*2729^2=193,633,466.                                (26)
+26*208875=5,430,750.                                  (25)
 ```
 
 Whenever a longer path repeats a full state, the pump preserves the two

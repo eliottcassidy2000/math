@@ -25,8 +25,8 @@ related:
   - THM-2164
 script: 04-computation/lrc14_rank_two_adaptive_carry_referee_thm2167.py
 output: 05-knowledge/results/lrc14_rank_two_adaptive_carry_referee_thm2167.out
-script_sha256: 40ab89f2679fe374791eaee0aa4e89df1ec11f9f981881c8983485478bf47ae3
-output_sha256: e066ab1d834140f3620bc7e2b93ea3915fa116f4d5f4af5984f81000ffa11147
+script_sha256: a998305b3057247894015a231b68a6a0320bd83e3734902c6cccd0985a39ce39
+output_sha256: 8c547cf57685366f463de70db531c1a622f78b662dc42230ab8fecfaf6859a3c
 hash_basis: working-tree bytes (LF)
 ---
 

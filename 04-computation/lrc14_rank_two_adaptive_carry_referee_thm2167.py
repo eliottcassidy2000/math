@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Exact hostile controls for THM-2167.
 
-The theorem is symbolic.  This referee checks its sharp finite constants,
-the full binary rank-two digit map, simultaneous carries, and a pump which
-preserves two relations and positivity while destroying distinctness.
+The theorem is symbolic.  This referee checks its mixed-height prime bound,
+sign-sharp state constants, full binary rank-two digit map, simultaneous
+carries, and a pump which preserves two relations and positivity while
+destroying distinctness.
 """
 
 from collections import Counter
@@ -12,7 +13,8 @@ from math import prod
 
 
 PRIMES = (2, 3, 5, 7, 11, 13)
-H = 105
+ANCHOR_HEIGHT = 29
+COMPANION_HEIGHT = 105
 
 
 def require(condition: bool, message: str) -> None:
@@ -61,12 +63,12 @@ def owner(row: tuple[int, ...], q: int, j: int) -> tuple[int, ...]:
 
 def main() -> None:
     prime_product = prod(PRIMES)
-    minor_bound = 2 * H * H
+    minor_bound = 2 * ANCHOR_HEIGHT * COMPANION_HEIGHT
     require(minor_bound < prime_product, "minor bound does not force a good prime")
 
-    sharp_r = (105, 0)
-    sharp_s = (0, 22)
-    sharp_det = 105 * 22
+    sharp_r = (22, 0)
+    sharp_s = (0, 105)
+    sharp_det = 22 * 105
     sharp_profile = tuple(
         (q, independent_mod_q(sharp_r, sharp_s, q)) for q in PRIMES
     )
@@ -83,6 +85,16 @@ def main() -> None:
         ),
         "endpoint prime profile changed",
     )
+
+    anchor_l1 = 12 * 29 + 28
+    height43_l1 = 12 * 43 + 42
+    height105_l1 = 12 * 105 + 104
+    support_ge_three_pairs = (anchor_l1 - 1) * (height43_l1 - 1)
+    support_two_pairs = (29 + 28 - 1) * (height105_l1 - 1)
+    owner_states = 14 * support_ge_three_pairs
+    require(support_ge_three_pairs == 208875, "support>=3 state count changed")
+    require(support_two_pairs == 76328, "support-two state count changed")
+    require(owner_states == 2924250, "carry-owner state count changed")
 
     ap = tuple(range(1, 14))
     r = (1, 1, -1) + (0,) * 10
@@ -142,10 +154,13 @@ def main() -> None:
     print("THM-2167 RANK-TWO ADAPTIVE CARRY REFEREE")
     print(f"primes={PRIMES}")
     print(f"prime_product={prime_product}")
-    print(f"height={H}")
+    print(f"mixed_heights={(ANCHOR_HEIGHT, COMPANION_HEIGHT)}")
     print(f"minor_bound={minor_bound}")
     print(f"abstract_endpoint_determinant={sharp_det}")
     print(f"abstract_endpoint_independence={sharp_profile}")
+    print(f"support_ge_three_carry_pairs={support_ge_three_pairs}")
+    print(f"support_two_carry_pairs={support_two_pairs}")
+    print(f"sorted_carry_owner_states={owner_states}")
     print("binary_rank_two_digit_fibres=" + str(sorted(fibres.items())))
     print(f"binary_fibre_size={2**11}")
     print(f"ap_carry_r={carry_r}")

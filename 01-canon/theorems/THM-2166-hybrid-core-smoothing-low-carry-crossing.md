@@ -8,6 +8,9 @@ status: >
   nonzero one is a 7-unit. The core side has an arithmetic representation
   on at most two retained speeds with coefficient height 57. Height 57 is
   certificate-minimal for representing the full possible carry interval.
+  Combining any nonzero far coefficient with THM-2169's relation on that
+  deletion gives a fixed-base-7 rank-two carrier with a 7-unit anchored
+  minor and at most 28442762 joint carry pairs.
   This is not Fourier-vector sparsity: the natural core product has nonzero
   support-three coefficients. Two independent exact implementations verify
   the 1,716-core geometry, Jackson ledger, and sparse carry bank.
@@ -15,9 +18,12 @@ source: codex-2026-07-24-relation-carry-spectrum
 depends_on:
   - THM-2145
   - THM-2163
+  - THM-2169
 related:
   - THM-2054
   - THM-2162
+  - THM-2167
+  - THM-2171
 script: 04-computation/lrc14_hybrid_core_low_carry_referee_codex_20260724.py
 output: 05-knowledge/results/lrc14_hybrid_core_low_carry_referee_codex_20260724.out
 script_sha256: 025c9d2a516587c12bba120fce06bb6579869bc0bf37577b2d507f336703c4a8
@@ -324,5 +330,89 @@ This is a much smaller state than THM-2145's raw cut-carry range, but it does
 not bound radix depth. The owner mask remains essential, the multi-far branch
 still permits arbitrarily large speeds, and defect six and LRC(14) remain
 open.
+
+## 7. A fixed-base-7 rank-two lift
+
+The `7`-unit support in (20) does more than control one relation. Since
+`nu!=0`, choose a far label `f` with
+
+```text
+a_f!=0,                       7 does not divide a_f. (30)
+```
+
+Apply THM-2169 to the deletion of this label. After primitive normalization
+it gives a second relation
+
+```text
+0!=u in Lambda(E union F),
+u_f=0,                  ||u||_infinity<=1247.        (31)
+```
+
+Primitivity makes some `u_j` a `7`-unit. Necessarily `j!=f`, and the
+anchored minor is
+
+```text
+det ((m_f,m_j),(u_f,u_j))=a_f u_j!=0 mod 7.          (32)
+```
+
+Thus the two relations have rank two over `F_7`: the defect-six branch has
+a **fixed** base seven, rather than THM-2167's row-adaptive prime. If `m`
+is itself primitive-normalized, (32) persists because its coefficient gcd
+divides the `7`-unit `a_f`.
+
+The state bounds are explicit. Equation (26) and positivity give at most
+
+```text
+1902-1=1901
+```
+
+carries for `m`. Since `u_f=0` and the other twelve coefficients form a
+primitive vector of height `1247`,
+
+```text
+||u||_1<=11*1247+1246=14963,
+```
+
+so `u` has at most `14962` carries. Therefore
+
+```text
+joint carry pairs <=1901*14962=28442762,              (33)
+unrestricted digit-fibre size =7^11=1977326743.       (34)
+```
+
+After sorting there are at most fourteen owner suffixes, giving
+`398198668` carry-owner states over the whole path. With THM-2171's
+quotient-tie sidecar, the effective ordered algebraic path cap is
+
+```text
+26*28442762=739511812.                                (35)
+```
+
+From digit level two onward every core speed has terminated because
+`E subset {1,...,13}` and `7^2=49`; only six far owners remain. The tail
+owner/tie pair changes at most six owner labels and six quotient cuts, so
+it assumes at most thirteen values. The corresponding ordered tail cap is
+
+```text
+13*28442762=369755906.                                (36)
+```
+
+While the two pivot owners survive, the owner-restricted digit fibre has
+exactly `7^(|O|-2)` elements.
+
+There is also a useful pump boundary. A repeated augmented THM-2171 state
+at levels `2<=j<k` preserves the literal core `E`: all of its digits lie
+below the deleted block. It preserves both relations and hence the affine
+far cut `sum_f a_f f=nu`; active far speeds remain at least `49`, so the
+core/far split stays disjoint, and the tie mask preserves strict order.
+Primitivity is automatic without normalization: no integer `d>=2` has
+seven multiples in `{1,...,13}`, so the unchanged seven-set `E` has gcd
+one. The only target loss is therefore lonely-phase geometry. A parity
+sidecar repairs literal residues modulo `14`, but no fixed residue depth
+controls the unbounded phase target of THM-2174. Live rank can also fall
+when the anchored owners terminate.
+
+This is a structural specialization, not a smaller automaton than the
+adaptive THM-2167 carrier and not a depth bound.
 
 QED.

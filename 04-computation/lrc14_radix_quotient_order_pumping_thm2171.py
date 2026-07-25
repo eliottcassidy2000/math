@@ -154,7 +154,9 @@ def main():
     transitions, pumps, nontrivial = exhaustive_order_checks()
     relation_checks, converse_checks = exhaustive_relation_checks()
     v, vp, r, s, mv, tv, mvp, tvp = target_mixed_witness()
-    carry_states = 2729**2
+    carry_states = 208875
+    require(carry_states == 375 * 557, "sign-sharp THM-2167 count")
+    require(26 * carry_states == 5430750, "ordered-path state cap")
     print("THM-2171 exact hostile audit")
     print(f"monotone owner/tie transitions checked = {transitions}")
     print(f"equal-sidecar block deletions checked = {pumps}")
@@ -166,8 +168,8 @@ def main():
     print(f"relations r,s = {r} ; {s}")
     print(f"M(V) = {mv} at t={tv}")
     print(f"M(V') = {mvp} at t={tvp}")
-    print(f"rank-two carry states = 2729^2 = {carry_states}")
-    print(f"ordered-path state cap = 26*2729^2 = {26 * carry_states}")
+    print(f"sign-sharp rank-two carry states = {carry_states}")
+    print(f"ordered-path state cap = 26*208875 = {26 * carry_states}")
     print("all exact checks passed")
 
 

@@ -1,6 +1,6 @@
 ---
 id: THM-2158
-title: "Quartic quadratic-deck parity and the exact finite-pole criterion"
+title: "Quartic deck parity and the single translation-invariant pole divisor"
 status: >
   PROVED. Let a quartic over C[x] have leading coefficient V^2. After the
   customary quadratic base change U^2=V, monicization, and depression, the
@@ -9,19 +9,17 @@ status: >
   canonical square approximate root Z^2+p/2 and its linear remainder are
   deck invariant and already lie in C(x)[z]. Thus quadratic-deck descent is
   automatic; the remaining obstruction is finite-pole regularity. The
-  approximate root is polynomial exactly when V divides the cubic
-  coefficient beta and, writing beta=V beta_1, V divides
-  4 gamma-beta_1^2, where gamma is the quadratic coefficient. Equivalently,
-  V divides beta and V^3 divides 4 gamma V^2-beta^2. This is an exact
-  two-jet criterion, not a proof that Keller equations force it, so the
-  nonmonic quartic stratum and planar JC remain open.
+  approximate root is polynomial exactly when the single congruence
+  V^3 divides 4 gamma V^2-beta^2 holds; in the UFD C[x] it automatically
+  forces V to divide beta. The resulting effective pole divisor is invariant
+  under every polynomial fibre translation. This is an exact one-divisor
+  criterion, not a proof that Keller equations force it, so the nonmonic
+  quartic stratum and planar JC remain open.
 source: codex-2026-07-22-JC2-quartic-deck-parity
 depends_on: []
 related:
   - THM-2129
   - THM-2136
-  - THM-2141
-  - THM-2147
 ---
 
 # THM-2158 -- the quartic deck is not the pole obstruction
@@ -163,37 +161,50 @@ This uniqueness is the exact descent statement. On the quadratic deck, the
 monic depressed square root must be `Z^2+p/2`; over the base, it must be the
 same uniquely characterized polynomial (11).
 
-## 3. Exact finite-pole criterion
+## 3. One congruence is the exact finite-pole criterion
+
+Put
+
+```text
+D=4 gamma V^2-beta^2.                                (16)
+```
 
 Because the coefficients of a polynomial in `R[z]` are independent, (11)
-gives
+first gives
 
 ```text
 H_0 in R[z]
  iff beta/V in R
-     and (4 gamma V^2-beta^2)/V^3 in R.              (16)
+     and D/V^3 in R.                                 (17)
 ```
 
-Since `R=C[x]` is a UFD, this is equivalently
+The second condition already implies the first. Indeed, `V^3|D` implies
+`V^2|D`; reducing `D=4 gamma V^2-beta^2` modulo `V^2` gives
+`V^2|beta^2`. At every irreducible `pi`,
 
 ```text
-V divides beta,
-V^3 divides 4 gamma V^2-beta^2.                     (17)
+2 nu_pi(beta)>=2 nu_pi(V),
 ```
 
-Writing `beta=V beta_1`, the second condition becomes
+so unique factorization gives `V|beta`. Therefore
 
 ```text
-V divides 4 gamma-beta_1^2.                         (18)
+H_0 in R[z]    iff    V^3 divides D.                 (18)
 ```
 
-Thus the obstruction is exactly the first two coefficient jets of the
-quartic at the finite divisor `V=0`. If (17) holds, both `H_0` and
-`P-H_0^2` belong to `R[z]`, and the latter has `z`-degree at most one. If
-(17) fails, deck invariance still holds but the canonical approximate root
-has a genuine finite pole.
+Writing `beta=V beta_1`, this single condition is equivalently
 
-The two conditions are independent and sharp. With `V=x`:
+```text
+V divides 4 gamma-beta_1^2.                         (19)
+```
+
+Thus the finite-pole obstruction is one congruence rather than two
+independent conditions. If (18) holds, both `H_0` and `P-H_0^2` belong to
+`R[z]`, and the latter has `z`-degree at most one. If (18) fails, deck
+invariance still holds but the canonical approximate root has a genuine
+finite pole.
+
+With `V=x`, the polynomial
 
 ```text
 P_1=x^2 z^4+z^3
@@ -202,10 +213,10 @@ P_1=x^2 z^4+z^3
 has
 
 ```text
-H_0=xz^2+z/(2x)-1/(8x^3),                            (19)
+H_0=xz^2+z/(2x)-1/(8x^3),                            (20)
 ```
 
-so the first divisibility already fails. The polynomial
+and exhibits simultaneous failure. The polynomial
 
 ```text
 P_2=x^2 z^4+xz^3
@@ -214,20 +225,62 @@ P_2=x^2 z^4+xz^3
 passes `V|beta` but has
 
 ```text
-H_0=xz^2+z/2-1/(8x),                                 (20)
+H_0=xz^2+z/2-1/(8x),                                 (21)
 ```
 
-so the second jet still carries a pole. In the positive control
+so that weaker condition is insufficient. There can be no converse example
+which passes `V^3|D` while failing `V|beta`. In the positive control
 
 ```text
 P_3=x^2 z^4+xz^3+(1/4)z^2+z
-   =(xz^2+z/2)^2+z,                                  (21)
+   =(xz^2+z/2)^2+z,                                  (22)
 ```
 
-both conditions hold and the canonical approximate root is polynomial.
-These are algebraic controls, not asserted Keller components.
+the single congruence holds and the canonical approximate root is
+polynomial. These are algebraic controls, not asserted Keller components.
 
-## 4. Consequence and exact scope
+## 4. The effective pole divisor is translation invariant
+
+For each irreducible `pi|V`, put
+
+```text
+e=nu_pi(V),       b=nu_pi(beta),       d=nu_pi(D).    (23)
+```
+
+The constant coefficient of `H_0` is `D/(8V^3)`. Hence the complete
+effective obstruction is
+
+```text
+Pole(H_0)
+ =sum_pi max(0,3 nu_pi(V)-nu_pi(D))[pi].             (24)
+```
+
+If `b<e`, the two summands of `D` have unequal valuations `2e` and `2b`,
+so
+
+```text
+d=2b,
+nu_pi(D/(8V^3))=2b-3e<b-e=nu_pi(beta/(2V)).          (25)
+```
+
+If `b>=e`, the linear coefficient is integral. Thus whenever the constant
+coefficient has a pole, it is strictly deeper than both the linear
+coefficient and every polynomial coefficient.
+
+Under a polynomial fibre translation `z |-> z+t`, `t in R`,
+
+```text
+V z^2+a z+c
+ |-> V z^2+(a+2Vt)z+(c+a t+Vt^2).                   (26)
+```
+
+If `c` has a pole, (25) shows that neither added term can cancel its leading
+polar part; its negative valuation is unchanged. If `c` is integral, the
+whole approximate root is integral by (18), and translation preserves
+integrality. Therefore the divisor (24) is invariant under every polynomial
+fibre translation.
+
+## 5. Consequence and exact scope
 
 The remaining nonmonic-quartic route can now be factored as
 
@@ -235,22 +288,25 @@ The remaining nonmonic-quartic route can now be factored as
 twice-odd leading equation
   -> leading coefficient V^2
   -> canonical H_0 in C(x)[z], with automatic deck descent
-  -> prove the two finite-pole divisibilities (17)
+  -> prove the single finite-pole congruence (18)
   -> polynomial exact-square prefix
-  -> apply THM-2147 under its weighted hypotheses.                  (22)
+  -> close the resulting polynomial square-prefix branch.          (27)
 ```
 
 Accordingly, “quadratic-deck compatibility” is not a separate mathematical
 obstruction. The actual missing lemma is that the Keller coefficient
-equations force (17), or else provide a descent which strictly reduces the
-finite pole divisor. This theorem does not prove either assertion. In
-particular, deck invariance must not be confused with polynomial regularity,
-as (19)--(20) demonstrate. The general quartic source-fiber stratum, JC(2),
-and DC(2) remain open.
+equations force (18), or else provide a descent which strictly reduces the
+translation-invariant divisor (24). This theorem does not prove either
+assertion. The historical exact-square-prefix candidate formerly cited as
+`THM-2147` is absent from current main and is not a proved dependency here;
+it must be restored and audited under a collision-free ID before use.
+In particular, deck invariance must not be confused with polynomial
+regularity, as (20)--(21) demonstrate. The general quartic source-fibre
+stratum, JC(2), and DC(2) remain open.
 
 There is no faithful Tournament Analysis in this argument. The carrier is
 the ordered coefficient jet `(V,beta,gamma)`, the quadratic involution, and
 the pole divisor. Replacing these by pairwise orientations would erase the
-valuation multiplicities in (17), which are exactly the surviving data.
+valuation multiplicities in (24), which are exactly the surviving data.
 
 QED.

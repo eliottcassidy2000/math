@@ -1,0 +1,16 @@
+THM-2174 PHASE-DANGER CLUTTER REFEREE
+base5_relation_rank=2
+AB_carries=((0, 0), (-1, 1), (-1, 1), (0, 0))
+AB_owners=((1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (7, 8, 9, 11, 12, 13), ())
+AB_m5=(1,0)
+fixed_quotient_dp_states=448073
+fixed_quotient_counts=(76787, 346271, 1783379, 2206437)
+fixed_quotient_distinct_masks=1836
+fixed_quotient_singletons=(28268, 44204, 28268, 3794, 7962, 86304, 44260, 44260, 44260, 5406, 3095, 3095, 3095)
+UW_zero_masks=((), (7, 9), (1, 2, 3, 4, 5, 6, 10), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13))
+UW_exact_m25=(1, 2)
+UW_unrestricted_m25=(5, 5)
+U_clutter25=((1,), (2,), (3,), (5,), (6,), (8,), (10,), (11,), (4, 12), (7, 9, 13))
+W_clutter25=((),)
+first_metric_depths=((2,4),(3,3),(5,2),(7,2),(11,2),(13,2))
+all assertions passed

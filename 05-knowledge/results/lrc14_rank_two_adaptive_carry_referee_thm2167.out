@@ -1,10 +1,13 @@
 THM-2167 RANK-TWO ADAPTIVE CARRY REFEREE
 primes=(2, 3, 5, 7, 11, 13)
 prime_product=30030
-height=105
-minor_bound=22050
+mixed_heights=(29, 105)
+minor_bound=6090
 abstract_endpoint_determinant=2310
 abstract_endpoint_independence=((2, False), (3, False), (5, False), (7, False), (11, False), (13, True))
+support_ge_three_carry_pairs=208875
+support_two_carry_pairs=76328
+sorted_carry_owner_states=2924250
 binary_rank_two_digit_fibres=[((0, 0), 2048), ((0, 1), 2048), ((1, 0), 2048), ((1, 1), 2048)]
 binary_fibre_size=2048
 ap_carry_r=(0, 0, 0, 0, 0)

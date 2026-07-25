@@ -9,6 +9,25 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-248 (2026-07-24, correction of THM-2158) -- one quartic pole congruence was presented as two independent conditions
+
+- **What was claimed:** polynomiality of the canonical quartic approximate
+  root was said to require two independent conditions,
+  `V|beta` and `V^3|(4 gamma V^2-beta^2)`, and the examples were described
+  as showing both directions of independence.
+- **Why it is wrong:** the second congruence implies the first in the UFD
+  `C[x]`. Modulo `V^2` it gives `V^2|beta^2`; irreducible valuations then
+  give `V|beta`. There is no example satisfying the cubic congruence while
+  failing linear-coefficient regularity.
+- **Correct framing:** THM-2158 now uses the single condition
+  `V^3|(4 gamma V^2-beta^2)`. Its failure defines one effective pole
+  divisor. Whenever the constant coefficient has a pole, it is strictly
+  deeper than the linear coefficient, so polynomial fibre translations
+  cannot cancel it. The divisor, not an independent pair of jet flags, is
+  the faithful remaining quartic carrier.
+
+---
+
 ## MISTAKE-247 (2026-07-24, audit of THM-1795) -- generic recurrence order was promoted to a uniform nullcone cutoff
 
 - **What was claimed:** four computed cells and a creative-telescoping
