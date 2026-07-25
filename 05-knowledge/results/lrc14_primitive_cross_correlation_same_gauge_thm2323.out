@@ -6,11 +6,17 @@ deterministic_fixed_colour_nonzero=72
 c_91(7)=-6
 aggregate_hostile_sum=0
 aggregate_hostile_fixed_colour_nonzero=72
-galois_sector: |d|<=N/7-1 gives |arg(zeta^d)|<2*pi/7<pi/2
-arbitrary_prime_control: N=210, 2R=58>=phi(N)=48
+galois_sector: |d|<=ceil(N/7)-1 gives |arg(zeta^d)|<2*pi/7<pi/2
+arbitrary_modulus_control: N=30, 2R=phi(N)=8
+arbitrary_modulus_fixed_colour_nonzero=8
+arithmetic_comb_control: N=65, a=3, surviving |ad|<N/7
+arithmetic_comb_fixed_colour_nonzero=48
+old_degree_failure_control: N=210, 2R=58>=phi(N)=48
 arbitrary_prime_fixed_colour_nonzero=48
 lrc_common_h<=12*S^2-1
 lrc_common_n<=1092*S^2-1
+P_g_carrier=N=13*d_prime, primitive_colours=2
+universal_thirteen_unit_edge_bound<=156*S^2-12
 full_fibre=K7xK13, vertices=91, degree=72
 deleted_fibre=K6xK13, vertices=78, degree=60
 direct_N=91*d_prime incidence controls=2

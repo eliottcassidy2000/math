@@ -198,6 +198,122 @@ for cofactor in (1, 2, 3, 5, 6, 11, 30, 330, 2310):
     require(4 * radius < n,
             f"arbitrary-prime acute sector failed at cofactor={cofactor}")
 
+# The exact radius works without any seven-divisibility hypothesis.
+for n in range(2, 501):
+    radius = (n + 6) // 7 - 1
+    require(0 <= radius and 7 * radius < n,
+            f"arbitrary-modulus support radius failed at n={n}")
+    require(4 * radius < n,
+            f"arbitrary-modulus acute sector failed at n={n}")
+
+# N=30 is a direct non-seven-divisible control, at the old degree
+# boundary 2R=phi(N).
+N_NONSEVEN = 30
+R_NONSEVEN = (N_NONSEVEN + 6) // 7 - 1
+PHI_NONSEVEN = cyclotomic(N_NONSEVEN)
+UNITS_NONSEVEN = [
+    k for k in range(1, N_NONSEVEN) if gcd(k, N_NONSEVEN) == 1
+]
+bare_nonseven = [2, 7, 1, 8, 2]
+word_nonseven = [2, 0, 1, 0, 2]
+require(len(bare_nonseven) == R_NONSEVEN + 1,
+        "nonseven needle length mismatch")
+correlation_nonseven = {}
+for d in range(-R_NONSEVEN, R_NONSEVEN + 1):
+    correlation_nonseven[d] = sum(
+        word_nonseven[r] * bare_nonseven[r + d]
+        for r in range(R_NONSEVEN + 1)
+        if 0 <= r + d <= R_NONSEVEN
+    )
+nonseven_fixed_nonzero = 0
+for k in UNITS_NONSEVEN:
+    terms = [
+        (k * d, coefficient)
+        for d, coefficient in correlation_nonseven.items()
+    ]
+    remainder = reduce_mod(
+        field_polynomial(terms, N_NONSEVEN), PHI_NONSEVEN
+    )
+    require(remainder != [0],
+            f"nonseven fixed-colour correlation vanished at k={k}")
+    nonseven_fixed_nonzero += 1
+require(2 * R_NONSEVEN == euler_phi(N_NONSEVEN) == 8,
+        "nonseven old-degree boundary mismatch")
+require(nonseven_fixed_nonzero == euler_phi(N_NONSEVEN),
+        "nonseven primitive-colour count mismatch")
+
+# The D_a automorphic form at a!=1.  The sites are indexed by their
+# short signed a-residues, so every surviving displacement obeys
+# |signed(a*d)|<N/7.  Galois straightening is then exact over Phi_N.
+def signed_residue(value, modulus):
+    residue = value % modulus
+    if 2 * residue > modulus:
+        residue -= modulus
+    return residue
+
+
+N_ARITH = 65
+A_ARITH = 3
+PHI_ARITH = cyclotomic(N_ARITH)
+UNITS_ARITH = [
+    k for k in range(1, N_ARITH) if gcd(k, N_ARITH) == 1
+]
+INV_A_ARITH = pow(A_ARITH, -1, N_ARITH)
+short_residues = list(range(-4, 5))
+arith_sites = [(e * INV_A_ARITH) % N_ARITH for e in short_residues]
+bare_arith = {
+    site: 1 + (5 * index + index * index) % 11
+    for index, site in enumerate(arith_sites)
+}
+word_arith = {
+    site: value if index % 3 != 1 else 0
+    for index, (site, value) in enumerate(bare_arith.items())
+}
+require(all(0 <= word_arith[r] <= bare_arith[r] for r in arith_sites),
+        "arithmetic-comb word/bare order failed")
+correlation_arith = {}
+for d in range(N_ARITH):
+    coefficient = sum(
+        word_arith[r] * bare_arith.get((r + d) % N_ARITH, 0)
+        for r in arith_sites
+    )
+    if coefficient:
+        correlation_arith[d] = coefficient
+        displacement = signed_residue(A_ARITH * d, N_ARITH)
+        require(7 * abs(displacement) < N_ARITH,
+                f"arithmetic-comb support escaped at d={d}")
+require(correlation_arith.get(0, 0) > 0,
+        "arithmetic-comb diagonal vanished")
+arith_fixed_nonzero = 0
+for k in UNITS_ARITH:
+    terms = [
+        (k * d, coefficient)
+        for d, coefficient in correlation_arith.items()
+    ]
+    remainder = reduce_mod(field_polynomial(terms, N_ARITH), PHI_ARITH)
+    require(remainder != [0],
+            f"arithmetic-comb correlation vanished at k={k}")
+    straightened = [
+        (A_ARITH * d, coefficient)
+        for d, coefficient in correlation_arith.items()
+    ]
+    automorphism = A_ARITH * pow(k, -1, N_ARITH)
+    mapped_terms = [
+        (automorphism * exponent, coefficient)
+        for exponent, coefficient in terms
+    ]
+    require(field_polynomial(mapped_terms, N_ARITH)
+            == field_polynomial(straightened, N_ARITH),
+            f"arithmetic-comb Galois map failed at k={k}")
+    straight_remainder = reduce_mod(
+        field_polynomial(straightened, N_ARITH), PHI_ARITH
+    )
+    require(straight_remainder != [0],
+            f"arithmetic-comb straightening vanished at k={k}")
+    arith_fixed_nonzero += 1
+require(arith_fixed_nonzero == euler_phi(N_ARITH) == 48,
+        "arithmetic-comb primitive-colour count mismatch")
+
 # N=210 is an exact control beyond the old degree comparison:
 # 2R=58 >= phi(210)=48, yet every primitive fixed colour is nonzero.
 N_WIDE = 210
@@ -243,6 +359,64 @@ for S in range(1, 101):
             f"gauge bound failed at S={S}")
     require(n_max == 1092 * S * S - 1,
             f"frequency bound failed at S={S}")
+
+# Universal P_g carrier at N=13*d': two primitive colours separated by
+# d' give two common word/bare atoms at a thirteen-primitive c3 distance.
+# The residue enumeration also checks P_v P_(13^b)=P_g.
+P_POWER = 13**2
+V_UNIT = 17
+composite_residues = {
+    s + V_UNIT * r
+    for s in range(V_UNIT)
+    for r in range(P_POWER)
+}
+require(composite_residues == set(range(V_UNIT * P_POWER)),
+        "P_v P_(13^b) residue enumeration failed")
+
+D_CARRIER = 13 * 5 * 11
+N_CARRIER = 13 * D_CARRIER
+K0_CARRIER = 2
+K1_CARRIER = K0_CARRIER + D_CARRIER
+require(gcd(K0_CARRIER, D_CARRIER) == 1,
+        "carrier K0 is not primitive over d'")
+require(1 <= K0_CARRIER < K1_CARRIER < N_CARRIER,
+        "carrier colours left their canonical range")
+require(gcd(K0_CARRIER, N_CARRIER) == 1
+        and gcd(K1_CARRIER, N_CARRIER) == 1,
+        "carrier colours are not primitive")
+
+G_CARRIER = 13**3 * V_UNIT
+A_COFACTOR = 3
+require(gcd(A_COFACTOR, D_CARRIER) == 1,
+        "middle-owner normalized factors are not coprime")
+C2_CARRIER = G_CARRIER * A_COFACTOR
+C3_CARRIER = G_CARRIER * D_CARRIER
+require(gcd(C2_CARRIER, C3_CARRIER) == G_CARRIER,
+        "middle-owner common carrier mismatch")
+H0_CARRIER = 2
+H1_CARRIER = 5
+Q0_CARRIER = K0_CARRIER + N_CARRIER * H0_CARRIER
+Q1_CARRIER = K1_CARRIER + N_CARRIER * H1_CARRIER
+T_CARRIER = 1 + 13 * (H1_CARRIER - H0_CARRIER)
+require(Q1_CARRIER - Q0_CARRIER == D_CARRIER * T_CARRIER,
+        "13-colour coherent-lift factorization failed")
+require(G_CARRIER * (Q1_CARRIER - Q0_CARRIER)
+        == T_CARRIER * C3_CARRIER,
+        "physical P_g carrier edge failed")
+require(T_CARRIER % 13 != 0,
+        "P_g carrier multiplier lost thirteen-primitivity")
+require((G_CARRIER // 13**3) * K0_CARRIER % 13
+        == (G_CARRIER // 13**3) * K1_CARRIER % 13,
+        "P_g carrier root character changed")
+require(abs(T_CARRIER) <= 156 - 12,
+        "P_g carrier multiplier bound failed at S=1")
+for S in range(1, 101):
+    L = 12 * S * S
+    require(all(
+        0 < abs(1 + 13 * delta) <= 13 * L - 12
+        and (1 + 13 * delta) % 13 != 0
+        for delta in range(-(L - 1), L)
+    ), f"universal thirteen-unit bound failed at S={S}")
 
 # CRT fibre graphs used in the conditional incidence corollary.
 def adjacent_91(left, right):
@@ -376,11 +550,17 @@ print(f"deterministic_fixed_colour_nonzero={fixed_colour_nonzero}")
 print(f"c_91(7)={ramanujan_sum(91, 7)}")
 print("aggregate_hostile_sum=0")
 print(f"aggregate_hostile_fixed_colour_nonzero={hostile_fixed_nonzero}")
-print("galois_sector: |d|<=N/7-1 gives |arg(zeta^d)|<2*pi/7<pi/2")
-print("arbitrary_prime_control: N=210, 2R=58>=phi(N)=48")
+print("galois_sector: |d|<=ceil(N/7)-1 gives |arg(zeta^d)|<2*pi/7<pi/2")
+print("arbitrary_modulus_control: N=30, 2R=phi(N)=8")
+print(f"arbitrary_modulus_fixed_colour_nonzero={nonseven_fixed_nonzero}")
+print("arithmetic_comb_control: N=65, a=3, surviving |ad|<N/7")
+print(f"arithmetic_comb_fixed_colour_nonzero={arith_fixed_nonzero}")
+print("old_degree_failure_control: N=210, 2R=58>=phi(N)=48")
 print(f"arbitrary_prime_fixed_colour_nonzero={wide_fixed_nonzero}")
 print("lrc_common_h<=12*S^2-1")
 print("lrc_common_n<=1092*S^2-1")
+print("P_g_carrier=N=13*d_prime, primitive_colours=2")
+print("universal_thirteen_unit_edge_bound<=156*S^2-12")
 print("full_fibre=K7xK13, vertices=91, degree=72")
 print("deleted_fibre=K6xK13, vertices=78, degree=60")
 print("direct_N=91*d_prime incidence controls=2")
