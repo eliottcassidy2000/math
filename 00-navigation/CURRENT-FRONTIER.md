@@ -408,6 +408,16 @@ into tournament operation laws and LRC residue packets.
 
 ## Other active portfolio
 
+- **Knots / operation-ready relations:** [THM-2176](../01-canon/theorems/THM-2176-gordian-continuation-profile-and-interaction-cocycle.md)
+  proves that `Pi_K(J)=u(K#J)` is the universal connected-sum-stable
+  refinement of unknotting number. The defect
+  `sigma(K,J)=u(K)+u(J)-u(K#J)` is a nonnegative symmetric 2-coboundary,
+  monotone on product Gordian cones. The `T(2,7)` mirror counterexample is
+  pure geodesic bypass rather than translation contraction, and
+  connected-sum homogenization remains nonadditive. The full profile is
+  infinite; the live target is a certified finite continuation dictionary
+  with crossing-change witnesses, mirror/signature sidecars, and cocycle
+  checks.
 - **Jacobian/Dixmier:** THM-1300/1315 verify and analyze the three-dimensional
   Keller collision, but provenance is unsettled (MISTAKE-205) and it does not
   decide `DC(2)`. THM-2044--2046 separate the rank-two Poisson suspension from
@@ -440,6 +450,7 @@ The most reusable current bridges are not literal object identifications:
 | Operation-response | tournament joins/support unions | Which observables add, multiply, localize, or collide? |
 | One-sided accumulation | LRC spectrum | Can qualitative isolation be made effective by finite state/pinning data? |
 | Support Dirichlet profile | integer sequences | Do tournament/LRC census supports have functional or automatic structure? |
+| Continuation congruence / min-plus kernel | Gordian connected-sum profile and THM-840/853 | Which finite sidecar is a target-preserving quotient under every named future operation? |
 | Weighted-sector obstruction | THM-2045 factorized `R` family | Does the unique constant-producing sector fail on a broader Lee–Li inner edge? |
 
 HYP-8810's “JC(2) and LRC(14) share AP-rigidity” is a **wildcard frame, not a
