@@ -1,0 +1,18 @@
+THM-2334 exact companion
+relation_quotient_points_checked=818
+finite_pushforward_terms=42
+finite_exact_addresses=36
+finite_current=45790133/55566000
+mod5_character_twists=125
+character_factorization=PASS
+representative_invariance=PASS
+residue_inversion=PASS
+target_character_count=169
+target_orthogonality_kernels=169
+word_charge_mod13=0
+word_charge_mod7_units=[1, 6]
+hostile_f1_lower_bound=196/405
+hostile_full_current=1
+hostile_address_terms=6
+hostile_address_coefficient=0
+all checks passed
