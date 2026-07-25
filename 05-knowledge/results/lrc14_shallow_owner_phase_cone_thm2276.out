@@ -1,0 +1,21 @@
+THM-2276 shallow-owner phase-cone exact verification
+ordered_thirteen_unit_pair_shapes=3279
+unordered_thirteen_unit_pair_shapes=1640
+guard_owner_max_height=9841
+owner_unit_max_height=9841
+possible_multiplier_count=699
+low_phase_cone_multipliers=1,2,3
+hard_bank_count=696
+hard_bank_sha256=82eab21ee07fb5bf847d69d600768ac59413008a87711bf1f774f6282a4df6ec
+cancellation_carrier_sha256=bf40ae677c619490026453216b0e62b7f3c3434027179b4e4e2baebf9b2b4a4a
+two_sheet_character_checks=144
+strict_profile_count=150
+local_private_witness_checks=104400
+local_private_witness_sha256=7cda059f0e86ba88db754b31edba3a74043793f8ff210987853e8cba554b7bc1
+smallest_local_epsilon=3/2383604805753688904762284 at_m_b_c=(757, 2, 19)
+carrier_m=4 center=1/16 epsilon=1/224 left=-15/224 right=15/224
+carrier_m=5 center=1/20 epsilon=3/280 left=-17/280 right=17/280
+carrier_m=12 center=1/48 epsilon=1/96 left=-1/32 right=1/32
+carrier_m=14 center=1/56 epsilon=1/112 left=-3/112 right=3/112
+carrier_m=757 center=1/3028 epsilon=1/6056 left=-3/6056 right=3/6056
+PASS
