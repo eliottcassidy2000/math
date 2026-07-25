@@ -187,8 +187,8 @@ rows with deepest depth at least five and `(3,4,5)`. THM-2243 centers the
 latter's composite union; THM-2250 closes every unequal-core partition, and
 THM-2257's exact `169`-image sieve contradicts the capacity of its common-core
 branch. The exact scalar ledger is therefore `165`, all at first depth one.
-THM-2234 supplies private expansion. THM-2255's cap `25/1183` forces exclusive-owner mass: the `150` strict rows have an expiration image `>=88159/415800>1/7`,
-while the `15` `(1,1,c)` rows have only `>=14627/207900<1/7`. THM-2261 proves the raw guard-owner expiration image is the whole circle, so a target must use global multicore cover data. Open targets are that labelled handoff and THM-2239's time-zero literal. LRC(14) remains open.
+THM-2234/2255 supply private expansion and exclusive-owner mass; THM-2263 sharpens the expiration-image floors to `15041431/70270200>1/7` on all `150` strict rows and `5229541/70270200>1/14` on the `15` repeated-first rows.
+THM-2261 proves the raw guard-owner expiration image is the whole circle, so the target must use global multicore cover data. THM-2264 forces a height-`29` relation and THM-2265 a height-`2322` crossing relation through every `6+7` cut. The open object is a marked multicore handoff retaining those global frequencies and THM-2239's time-zero literal. LRC(14) remains open.
 
 ### Independent routes that remain live
 
@@ -402,7 +402,7 @@ into tournament operation laws and LRC residue packets.
   Positive catalysis remains open; the sharp cited seed is conditional `10_6` (`c*=2`, `u in {2,3}`), then uncalibrated pretzels.
 - **Unsplittable cost flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture: a planar acyclic instance has fractional cost `58` but capacity-good integral cost at least `60`. Its carrier is the `K_3` stable-set facet; the planar `2d_max` theorem remains intact.
 - **Jacobian/Dixmier:** THM-1300/1315 verify and analyze the three-dimensional Keller collision, but provenance is unsettled (MISTAKE-205) and it does not decide
-  `DC(2)`; THM-2230 computes the planar response fiber, THM-2240 proves the grade-six Weyl response is not a continuation state, THM-2241 gives the exact monic test `D_P^(d+1)(x)=0` plus the shear-covariant resultant nonproper curve, and THM-2247 closes nonsplit terminal reduced degree fourteen.
+  `DC(2)`; THM-2230 computes the planar response fiber, THM-2240 proves the grade-six Weyl response is not a continuation state, THM-2241 gives the exact monic test `D_P^(d+1)(x)=0` plus the shear-covariant resultant nonproper curve, and THM-2262 reduces nonsplit terminal degree eighteen to an explicit singular trigonal discriminant.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibers:** THM-2063/2071 close affine/quadratic pencil members;
   THM-2084/2110/2118 close cubics; THM-2102/2113 close power-free top faces;
@@ -417,9 +417,10 @@ into tournament operation laws and LRC residue packets.
   finite-pole survivor remains. THM-2181 closes monic depressed quartics;
   THM-2214 closes nonsplit terminal degrees through ten, and THM-2217 forces
   odd-leading survivors to degree `>=14` with `R deg(q)>=deg(V)`. THM-2245
-  forces degree fourteen onto a singular spectral quartic; THM-2247 closes its
-  smooth-conic sextic-square and reducible-cusp Keller-one-form branches. The
-  next nonsplit terminal degree is at least `18`. Split/even descent and other
+  forces degree fourteen onto a singular spectral quartic; THM-2247 closes it.
+  THM-2262 makes the degree-eighteen generic spectrum a genus-four trigonal
+  cover, kills its exceptional center by a Faber-sidecar pole, and leaves only
+  an explicit degree-twelve branch-discriminant locus. Split/even descent and other
   short edges remain; THM-2206 blocks field-valued `C_2` Hasse repair. Integral
   `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer

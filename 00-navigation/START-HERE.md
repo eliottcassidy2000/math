@@ -67,7 +67,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     fibers; THM-2084/2118/2102 close cubics. THM-2158/2180 reduce the twice-odd
     nonmonic quartic to `V|(4gamma-(beta/V)^2)`; THM-2202 removes every
     twice-odd finite pole. THM-2214 closes nonsplit terminal degrees `2,6,10`;
-    THM-2217 forces the odd train and THM-2247 closes degree `14`, so the next nonsplit terminal degree is at least `18`. Split/even descent, other short edges, integral
+    THM-2217 forces the odd train; THM-2247 closes degree `14`; THM-2262 reduces degree `18` to a singular degree-twelve trigonal discriminant after killing its exceptional-center cusp. Split/even descent, the singular trigonal locus, other short edges, integral
     `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
@@ -118,7 +118,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     its transverse and scalar-`4+3` lanes, leaving only scalar `5+3`.
     THM-2187/2193 give a saturated carrier, floor `7^-21`, rank seven by `78*7^21`, and safe septimal grids; THM-2188 retains slope/current.
     THM-2196/2199 prove rank twelve; THM-2208/2212 give bounded anchors and exact rulers per rank-eleven plane, while THM-2203 fixes scalar transport at `16/208`.
-    THM-2198--2239 leave `165` first-depth-one rows and `(3,4,5)`; THM-2250/2257 close the latter. THM-2234 gives private expansion. THM-2255 gives quantitative exclusive-owner mass and a greater-than-one-comb expiration spill on the `150` strict rows. THM-2261 proves raw expiration maps onto the whole circle, so the missing target must use global multicore cover data. THM-2211 retains carry; THM-2235 forbids an odd-sheet XOR-antipode shortcut.
+    THM-2198--2239 leave `165` first-depth-one rows and `(3,4,5)`; THM-2250/2257/2258 close the latter by two independent mechanisms. THM-2263 gives profile-sharp owner floors, but THM-2261 proves raw expiration maps onto the whole circle. THM-2264/2265 force bounded global and cross-cut relations; the missing target must couple those frequencies to a marked multicore handoff. THM-2211 retains carry; THM-2235 forbids an odd-sheet XOR-antipode shortcut.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
     the knot continuation cocycle; THM-2191 gives its catalytic group length,
     commuting stable envelope, and abstract additive dual, and closes `9_10`.
