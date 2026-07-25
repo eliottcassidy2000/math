@@ -3,16 +3,18 @@ id: THM-2179
 title: "Reversed-peel relative Jackson relation packet at defect at least seven"
 status: >
   PROVED + VERIFIED-EXACT. At the stronger radius 3/41, every thirteen-speed
-  row of AP defect at least seven either has safe measure greater than
-  478970390236831/39525379884148950000 or has a body-touching integer
-  relation of coefficient height at most 140, with every nonzero coefficient
-  a 41-unit. The proof lifts all small-core factors onto one torus coordinate
-  and every noncore factor onto its own coordinate, thereby retaining every
-  internal small-core relation and all higher overlap cancellation. On the
-  named hostile row all six scalar peel covariances are positive, so replacing
-  their absolute values by their signed sum gives exactly the same negative
-  level-one bound; the higher-overlap packet is load-bearing. The relation
-  alternative is not a closure of defect at least seven or of LRC(14).
+  row of defect at least seven relative to any chosen dilated AP
+  g*{1,...,13} either has safe measure greater than
+  478970390236831/39525379884148950000 or has an outside-core-touching
+  integer relation of coefficient height at most 140, with every nonzero
+  coefficient a 41-unit. The proof lifts all retained AP-core factors onto
+  one torus coordinate and every outside-core factor onto its own coordinate,
+  thereby retaining every internal core relation and all higher overlap
+  cancellation. On the named hostile row all six scalar peel covariances are
+  positive, so replacing their absolute values by their signed sum gives
+  exactly the same negative level-one bound; the higher-overlap packet is
+  load-bearing. The relation alternative is not a closure of defect at least
+  seven or of LRC(14).
 source: codex-2026-07-24-reversed-peel-relation-packet
 depends_on:
   - THM-2145
@@ -43,17 +45,22 @@ The radius in (1) is strictly larger than `1/14`. A positive-measure exit
 here therefore proves the ordinary lonely-runner target for that row, but a
 failure to obtain this stronger exit is not a counterexample to LRC(14).
 
-## 1. The defect-seven relation-packet alternative
+## 1. The dilated-AP defect-seven relation-packet alternative
 
-Let `V` be a set of thirteen distinct positive integers. Split it as
+Let `V` be a set of thirteen distinct positive integers and fix any integer
+scale `g>=1`. Put
 
 ```text
-F=V intersection {1,...,13},
+A_g={g,2g,...,13g},
+F=V intersection A_g,
 E=V\F,
+C={c in {1,...,13}:gc in F},
 j=|F|,                  d=|E|=13-j.                   (2)
 ```
 
-Thus the AP defect of `V` is `d`. Suppose `d>=7`, equivalently `j<=6`.
+Every speed lying in the chosen dilated AP is assigned to `F`; `E` is the
+disjoint remainder. Thus `d` is the defect of `V` relative to `A_g`. Suppose
+`d>=7`, equivalently `j<=6`.
 
 > **Theorem.** At least one of the following holds:
 >
@@ -75,8 +82,9 @@ Thus the AP defect of `V` is `d`. Suppose `d>=7`, equivalently `j<=6`.
 >
 >    and every nonzero coefficient in (4) is not divisible by `41`.
 
-We call (4) **body-touching** or **large-involving**. It need not genuinely
-cross the cut. If
+We call (4) **body-touching** or **outside-core-touching**. The elements of
+`E` need not be numerically larger than those of `F`. The relation need not
+genuinely cross the cut. If
 
 ```text
 sum_(e in E)b_e e=0,
@@ -183,9 +191,9 @@ Q_lift(x)=product_(f in F)q_71(fx_0)
           product_(i=1)^d q_71(x_i).                  (14)
 ```
 
-The crucial point is that all small factors still share `x_0`. Thus the lift
-retains their complete relation lattice, exact union geometry, and every
-higher overlap. Only the noncore factors are decorrelated.
+The crucial point is that all retained-core factors still share `x_0`. Thus
+the lift retains their complete relation lattice, exact union geometry, and
+every higher overlap. Only the outside-core factors are decorrelated.
 
 Put
 
@@ -231,10 +239,18 @@ internal relations in the small block cause no alias and no hypothesis.
 
 ## 4. The exact defect-sensitive margin
 
-THM-2146 gives the exact minimum
+Integer multiplication on the time circle is surjective and Haar preserving,
+so the definition of `C` in (2) gives
 
 ```text
-B_j=min_({F subset {1,...,13}:|F|=j}) measure(G_h(F))
+measure(G_h(F))=measure(G_h(C)).                       (20a)
+```
+
+No coprimality or primitivity assumption on `g` is needed. THM-2146 gives the
+exact minimum
+
+```text
+B_j=min_({C subset {1,...,13}:|C|=j}) measure(G_h(C))
 ```
 
 for `0<=j<=6`:
@@ -386,20 +402,24 @@ all of its overlaps before taking any Fourier absolute value.
 
 ## 6. Consequence, transfer, and exact boundary
 
-The theorem converts the entire defect-`>=7` branch into the exact dichotomy
+At every chosen scale `g`, the theorem converts the defect-`>=7` branch
+relative to `g{1,...,13}` into the exact dichotomy
 
 ```text
 strong 3/41 positive-measure exit
 or
-height-140 body-touching relation packet with 41-unit coefficients. (33)
+height-140 outside-core-touching relation packet with 41-unit
+coefficients.                                               (33)
 ```
 
 This is a substantial reduction of the unbounded-height branch, but it is
 not its closure:
 
-1. the relation may have support two or lie wholly inside the noncore body;
+1. the relation may have support two or lie wholly inside the outside-core
+   body;
 2. it need not be independent of relations already known;
-3. bounded coefficients do not bound the speed magnitudes;
+3. bounded coefficients do not bound the speed magnitudes, and an
+   outside-core speed need not be numerically large;
 4. THM-2171 gives a finite algebraic representative for fixed relation
    systems, but its target-mixing example forbids replacing the original row
    without a phase/current argument; and
