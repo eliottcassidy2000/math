@@ -328,6 +328,12 @@ independence, or another theorem making the pairing a function of the totals.
 **Evidence:** THM-2059's CRT packet theorem repairs the marginal-size loss; the
 same error genus is exposed by MISTAKE-231's observable-relative fiber counts
 and by observer/cut-payload quotients in the tournament atlas.
+## Rank the extremal spectrum, then restore simultaneous geometry
+
+**Trigger / action:** when a close bound sums sharp local caps with shared arithmetic labels, rank the exact spectrum, use a tail to force a finite high-capacity bank, then impose the literal union, ratio cocycle, affine anchor, or cut functional and price its compatibility debt.
+**Mechanism:** independently sharp marginals may force higher intersections or incompatible triangle products that no marginal reoptimization sees.
+**Counterindication:** skip this when labels are independent, the target factors through their totals, or no tail makes the bank finite; never erase an anchor needed by the simultaneous predicate.
+**Evidence:** THM-2258's `13`-ratio/`15`-subset atlas recovers overlap rebate `29/220`; THM-2263 replaces three independent pair maxima by the compatible ladder `(1,169,28561)`. The affine-chord companion and THM-2265 record the anchor/cut sidecars.
 
 ## “One item left” requires a typed residual
 

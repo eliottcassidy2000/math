@@ -1,0 +1,27 @@
+DEPTH-THREE AFFINE-CHORD PROJECTIVE COMPANION
+profile=(3, 4, 5) target=961/6930
+score=(169*1_U1-1_U3)/168
+positive_carrier=C_H intersect U0 intersect U2
+negative_carrier=U1 intersect U3 score_on_negative=1
+chord_direction=a_j=-H*u_j^(-1) mod 13, modulo sign
+affine_anchor=beta_j arbitrary per parent/history
+direct_fraction_root_checks=471
+direct_sign_quotient_checks=12
+terminal_invertible_bases=3008 terminal_vertices=34
+raw_transition_policies=91113984 unique_transition_policies=1338240
+projective_raw_transition_policies=11389248 projective_unique_transition_policies=167280
+label_universe=12^3=1728
+mixed_direction_labels=1680 same_direction_labels=48
+mixed_direction_closed=1680/1680 worst_labels=(1, 1, 2) worst_bound=567556891/5676327384 target_margin=36232889557/936594018360
+mixed_direction_worst_maximizers=((1, 1, 2), (1, 1, 3), (1, 1, 4), (1, 1, 5), (1, 1, 6), (1, 1, 7), (1, 1, 8), (1, 1, 9), (1, 1, 10), (1, 1, 11), (1, 12, 2), (1, 12, 3), (1, 12, 4), (1, 12, 5), (1, 12, 6), (1, 12, 7), (1, 12, 8), (1, 12, 9), (1, 12, 10), (1, 12, 11), (2, 2, 1), (2, 2, 3), (2, 2, 4), (2, 2, 5), (2, 2, 6), (2, 2, 7), (2, 2, 8), (2, 2, 9), (2, 2, 10), (2, 2, 12), (2, 11, 1), (2, 11, 3), (2, 11, 4), (2, 11, 5), (2, 11, 6), (2, 11, 7), (2, 11, 8), (2, 11, 9), (2, 11, 10), (2, 11, 12), (11, 2, 1), (11, 2, 3), (11, 2, 4), (11, 2, 5), (11, 2, 6), (11, 2, 7), (11, 2, 8), (11, 2, 9), (11, 2, 10), (11, 2, 12), (11, 11, 1), (11, 11, 3), (11, 11, 4), (11, 11, 5), (11, 11, 6), (11, 11, 7), (11, 11, 8), (11, 11, 9), (11, 11, 10), (11, 11, 12), (12, 1, 2), (12, 1, 3), (12, 1, 4), (12, 1, 5), (12, 1, 6), (12, 1, 7), (12, 1, 8), (12, 1, 9), (12, 1, 10), (12, 1, 11), (12, 12, 2), (12, 12, 3), (12, 12, 4), (12, 12, 5), (12, 12, 6), (12, 12, 7), (12, 12, 8), (12, 12, 9), (12, 12, 10), (12, 12, 11))
+same_direction_failing=48/48 worst_labels=(1, 1, 1) worst_bound=8907541/62377224 bound_minus_target=42493973/10292241960
+same_direction_closest_to_target labels=(4, 4, 4) bound=5168763/36386714 bound_minus_target=30424837/9005711715
+same_direction_minimizers=((4, 4, 4), (4, 4, 9), (4, 9, 4), (4, 9, 9), (5, 5, 5), (5, 5, 8), (5, 8, 5), (5, 8, 8), (6, 6, 6), (6, 6, 7), (6, 7, 6), (6, 7, 7), (7, 6, 6), (7, 6, 7), (7, 7, 6), (7, 7, 7), (8, 5, 5), (8, 5, 8), (8, 8, 5), (8, 8, 8), (9, 4, 4), (9, 4, 9), (9, 9, 4), (9, 9, 9))
+all_label_maximizers=((1, 1, 1), (1, 1, 12), (1, 12, 1), (1, 12, 12), (2, 2, 2), (2, 2, 11), (2, 11, 2), (2, 11, 11), (11, 2, 2), (11, 2, 11), (11, 11, 2), (11, 11, 11), (12, 1, 1), (12, 1, 12), (12, 12, 1), (12, 12, 12))
+row_digest=39d7332e4d8bbeb565dad8d9ebcf2429dd8da8fb44662b4c97f8fd7c38121960
+distinct_terminal_primal_dual_checks=23
+integer_terminal_vertex_parity=PASS
+independent_direct_root_incidence=PASS
+finite_exact_companion_consequence=every_hypothetical_(3,4,5)_survivor_has_u1=+-u2=+-u3_mod_13
+canonical_status=SUPERSEDED_IN_CONSEQUENCE_BY_THM-2250_exact_core_equality
+current_scope=profile_EMPTY_independently_by_THM-2257_and_THM-2258_LRC14_OPEN
