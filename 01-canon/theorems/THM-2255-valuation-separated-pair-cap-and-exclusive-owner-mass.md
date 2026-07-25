@@ -27,6 +27,7 @@ related:
   - THM-2234-first-depth-one-private-two-owner-mass-and-two-step-expansion
   - THM-2239-unrestricted-multicore-signed-dual-profile-exclusion
   - THM-2246-depth-one-private-joint-two-step-fibre-cap
+  - THM-2257-depth-three-common-core-169-image-sieve-exclusion
 script:
   - 04-computation/lrc14_valuation_separated_pair_owner_mass_thm2255.py
   - 04-computation/lrc14_valuation_separated_pair_owner_mass_referee_thm2255.py
@@ -374,6 +375,14 @@ The theorem proves a large exclusive-owner carrier and a forced
 post-expiration spill. It does **not** prove that the spill is covered by a
 named family of successor combs. Equation (35) therefore does not contradict
 the scalar cover and excludes none of the `165` profiles.
+
+THM-2257 clarifies the exact missing implication by positive contrast. Its
+depth-three image lower bound closes because a transported negative-support
+inclusion puts the whole image inside a named union of known mass. Equation
+(35) supplies the analogous lower image in depth one, but there is presently
+no valid post-expiration inclusion. The next theorem must create that target
+set; comparing the two image sizes without it would repeat an invalid
+image-of-cover transfer.
 
 The honest finite relation has the three labelled owner strata as vertices.
 In the strict class, orient `i -> j` when `lambda_i<lambda_j`; this valuation

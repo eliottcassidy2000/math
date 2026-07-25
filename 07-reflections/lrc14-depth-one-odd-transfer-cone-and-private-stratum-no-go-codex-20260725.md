@@ -26,9 +26,10 @@ Status split:
   using the separate root caps `10,12`.  THM-2246's sharper joint cap `112`
   changes the second-image floor but not the qualitative obstruction.
 
-Nothing below excludes a valuation profile.  The current scalar ledger stays
-`165` depth-one profiles plus the all-equal normalized-core branch of
-`(3,4,5)` isolated by incoming THM-2250, and LRC(14) remains open.
+Nothing below excludes a valuation profile.  At the time of this audit,
+THM-2250 left `165` depth-one profiles plus the all-equal normalized-core
+branch of `(3,4,5)`. THM-2257 subsequently closed that depth-three branch;
+the depth-one no-go statements below are unaffected, and LRC(14) remains open.
 
 ## 1. The response quotient
 
