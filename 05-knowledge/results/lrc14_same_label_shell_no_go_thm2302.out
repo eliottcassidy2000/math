@@ -1,0 +1,19 @@
+THM-2302 exact companion
+strict_profiles=150
+interior_profiles=120
+nu0=227189785662847/58436012221844400
+energy_to_mass=156
+beta=2593/90090
+e_star=227189785662847/26519324819222476800
+delta_star=84157587746251753/341303710423393276416000
+pairwise_slack_min=0
+selector_mass_G=6/91
+selector_energy=1_(D_s^c) for each nonzero root character
+total_selector_energy=12*1_(D_s^c)
+selector_cells=1:4,2:6,13:28,26:54,169:340
+common_shell_clock_source_valuation>=b+1>shell_valuation=b
+rooted_common_index_bound=8*S^2-1
+marked_uncolored_degree_bound=2*S
+seven_periodic_first_visible_multiplier=7
+hostile_scope=rooted middle-owner/deep-exclusion only; not full LRC cover
+ALL_CHECKS_PASSED
