@@ -2,7 +2,7 @@
 id: THM-2315
 title: "The marked target-gain corolla and the pairwise composition boundary"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. THM-2309's
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. THM-2309's
   two-target quotient is the projective line over F_13 with two labelled
   boundary axes. Its twelve mixed fork gains form one orbit under the
   labelled-boundary torus, so the terminal-word quotient has no equivariant
@@ -37,7 +37,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2315 -- the owner relation is a marked gain corolla, not a tournament
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2305 and THM-2309 expose two objects with the same three support types:
 
