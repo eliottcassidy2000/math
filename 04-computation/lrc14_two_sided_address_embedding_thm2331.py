@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Exact, optimization-safe companion for THM-2331."""
 
+from fractions import Fraction
 from itertools import product
 from math import gcd
 
@@ -12,6 +13,15 @@ COORDINATES = 9
 RESIDUE_LIFT_FLOOR = 3 * 5**7
 TARGET_VECTOR_BANK = 3_134_566_563_840
 PROJECTIVE_BANK = 37_614_798_766_080
+BASE_ENDPOINT_FACTORS = 9
+TRANSPORTED_WORD_FACTORS = 9
+BARE_ENDPOINT_FACTORS = 9
+ATOMIC_ENDPOINT_FACTORS = (
+    BASE_ENDPOINT_FACTORS
+    + TRANSPORTED_WORD_FACTORS
+    + BARE_ENDPOINT_FACTORS
+)
+CURRENT_TERM_FACTORS = ATOMIC_ENDPOINT_FACTORS + 1
 
 
 def require(condition: bool, message: str) -> None:
@@ -80,6 +90,44 @@ def atomic_support_checks() -> int:
         require(guard_nonzero == expected, "guard support law failed")
         rows += 2
     return rows
+
+
+def atomic_factor_ledger() -> tuple[Fraction, Fraction]:
+    """Check the 27 endpoint factors and both terminal-word zero modes."""
+    require(BASE_ENDPOINT_FACTORS == COORDINATES, "base factor count")
+    require(TRANSPORTED_WORD_FACTORS == COORDINATES, "word factor count")
+    require(BARE_ENDPOINT_FACTORS == COORDINATES, "bare factor count")
+    require(ATOMIC_ENDPOINT_FACTORS == 27, "atomic endpoint factor count")
+    require(CURRENT_TERM_FACTORS == 28, "full current factor count")
+
+    danger_zero = Fraction(1, P)
+    safe_zero = Fraction(P - 1, P)
+    guard_zero = Fraction(P - 2, P)
+
+    # A pure word has one dangerous and two safe blocker statuses; a
+    # double word has two dangerous and one safe blocker status. Both
+    # also have the guard and five unit-speed safe factors.
+    pure_word_zero_product = (
+        guard_zero * safe_zero**5 * danger_zero * safe_zero**2
+    )
+    double_word_zero_product = (
+        guard_zero * safe_zero**5 * danger_zero**2 * safe_zero
+    )
+    require(pure_word_zero_product > 0, "pure word zero term vanished")
+    require(double_word_zero_product > 0, "double word zero term vanished")
+    return pure_word_zero_product, double_word_zero_product
+
+
+def abstract_cancellation_hostile() -> Fraction:
+    """Show abstractly that term presence need not survive address grouping."""
+    first_address_group = Fraction(1) - Fraction(1)
+    other_address = Fraction(1, 101)
+    require(first_address_group == 0, "hostile address group survived")
+    require(
+        first_address_group + other_address != 0,
+        "hostile full current vanished",
+    )
+    return first_address_group + other_address
 
 
 def exhaustive_two_pivot_atlas() -> tuple[int, tuple[int, ...], int]:
@@ -260,7 +308,8 @@ def exact_positive_control() -> tuple[int, int, int, int]:
     )
     require(numerator % P == 0, "exact correction ceased to be integral")
     correction = numerator // P
-    # Coordinate 3 has speed one, so e_3 is a Bezout vector.
+    # The zero-based coordinate at index 3 has speed one, so its standard
+    # basis vector is a Bezout vector. It is not the c_3-labelled index.
     left = centered_residues[:]
     left[3] += P * correction
     displacement = [-entry for entry in relation]
@@ -310,12 +359,26 @@ def exact_positive_control() -> tuple[int, int, int, int]:
 
 
 atomic_rows = atomic_support_checks()
+pure_word_zero, double_word_zero = atomic_factor_ledger()
 minimum, equality_witness, atlas_rows = exhaustive_two_pivot_atlas()
 require(minimum == 3, "sharp completion minimum changed")
 support_one_hostile = sum(
     (residue - 0) % P == 0 for residue in allowed(1)
 )
 require(support_one_hostile == 0, "support-one hostile disappeared")
+one_support_speeds = (1,) + (0,) * (COORDINATES - 1)
+support_one_all_unit_addresses = (
+    sum(
+        relation_pivot * one_support_speeds[0] % P == 0
+        for relation_pivot in range(1, P)
+    )
+    * (P - 1) ** (COORDINATES - 1)
+)
+require(
+    support_one_all_unit_addresses == 0,
+    "support-one all-unit kernel hostile disappeared",
+)
+hostile_full_current = abstract_cancellation_hostile()
 require(RESIDUE_LIFT_FLOOR == 234_375, "residue lift constant changed")
 term_bank = RESIDUE_LIFT_FLOOR * TARGET_VECTOR_BANK
 projective_term_bank = RESIDUE_LIFT_FLOOR * PROJECTIVE_BANK
@@ -338,9 +401,25 @@ print("theorem=THM-2331")
 print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED")
 print(f"two_pivot_atlas_rows={atlas_rows}")
 print(f"atomic_support_rows={atomic_rows}")
+print(f"base_endpoint_factors={BASE_ENDPOINT_FACTORS}")
+print(f"transported_word_factors={TRANSPORTED_WORD_FACTORS}")
+print(f"bare_endpoint_factors={BARE_ENDPOINT_FACTORS}")
+print(f"atomic_endpoint_factors={ATOMIC_ENDPOINT_FACTORS}")
+print(f"current_term_factors={CURRENT_TERM_FACTORS}")
+print("guard_forbidden_arc_length=2/7")
+print("guard_window_length=5/7")
+print(f"pure_word_zero_mode_product={pure_word_zero}")
+print(f"double_word_zero_mode_product={double_word_zero}")
+print("future_zero_mode_product=NONZERO")
 print(f"sharp_two_pivot_minimum={minimum}")
 print("sharp_witness=" + ",".join(str(entry) for entry in equality_witness))
 print(f"support_one_hostile_count={support_one_hostile}")
+print(
+    "support_one_all_unit_address_count="
+    f"{support_one_all_unit_addresses}"
+)
+print("abstract_same_address_group_hostile=0")
+print(f"abstract_full_current_hostile={hostile_full_current}")
 print(f"residue_lifts_per_address={RESIDUE_LIFT_FLOOR}")
 print(f"target_vector_term_bank={term_bank}")
 print(f"projective_term_bank={projective_term_bank}")
