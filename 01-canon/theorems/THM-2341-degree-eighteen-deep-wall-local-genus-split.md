@@ -2,7 +2,8 @@
 id: THM-2341
 title: "Degree-eighteen deep-wall local genus split"
 status: >
-  PROVED + VERIFIED-EXACT. Of the three H_4 square-class orbits on
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Of the three
+  H_4 square-class orbits on
   THM-2338's deep common-root wall, the rational ratio
   t_0=-361/30618 has a genuine totally ramified three-cycle and
   normalization genus one. It cannot carry a rational Keller
@@ -27,7 +28,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2341 -- one deep-wall ratio is elliptic and two are rational
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2338 isolates three four-support square-class ratios on
 
@@ -325,4 +326,10 @@ The Eisenstein, complete-local-ring splitting, and
 Riemann--Hurwitz arguments are the mathematical proof above, not
 computer assumptions. No executable check uses Python `assert`.
 
-Independent audit is pending. QED.
+The independent hostile audit rebuilt the local charts with exact
+`Fraction` and `Q(sqrt(3))` arithmetic. It separately recovered the
+blow-up discriminant and `y=0` étale fibre, the common-root resultant,
+the simple `P,Q` vanishing and Eisenstein criterion at `t_0`, and the
+degree-two complete-local-ring split at `t_+/-`. It checked nonzero
+second residual derivatives, all branch contributions,
+Riemann--Hurwitz, transcript parity, hashes, and documentation. QED.
