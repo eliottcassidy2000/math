@@ -23,8 +23,8 @@ related:
   - THM-2244-prior-centered-single-odd-clause-bellman-depth-three-exclusion
 script: 04-computation/lrc14_composite_union_transfer_dual_thm2243.py
 output: 05-knowledge/results/lrc14_composite_union_transfer_dual_thm2243.out
-script_sha256: 756b85f6dae672ecaf8ce6f011f5d8c61053a191f90adb14b195857369c6e40c
-output_sha256: b7cc692350a2e330429ad6510aaf40b28c5d475d48d31749c01b9c9e1265c0cb
+script_sha256: 81e51c5399a4c00b07effc49bda755ead45ed76ecd19f9253d0fdaf66ca7dc56
+output_sha256: 6b44e1c56454e3ec04aa521821da2fd72fdcaf2048a618edd42d78bd5ceea716
 hash_basis: working-tree bytes (LF)
 ---
 

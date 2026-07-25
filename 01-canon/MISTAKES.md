@@ -9,6 +9,22 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-252 (2026-07-25, integrity repair for THM-2243) -- correct mathematics was paired with stale frontmatter hashes
+
+- **What was recorded:** THM-2243's frontmatter claimed script hash
+  `756b85f...` and output hash `b7cc692...` on working-tree LF bytes.
+- **Why it was wrong:** direct `sha256sum` on the tracked companion and
+  transcript gives respectively `81e51c5...` and `6b44e1c...`. The stale
+  metadata made a faithful replay look like artifact drift even though the
+  computation itself remained reproducible.
+- **Correct framing:** the frontmatter now records the actual full hashes.
+  Normal and optimized-mode runs are byte-identical to one another and to
+  the stored transcript, including the hostile `(3,4,5)` value
+  `8907541/62377224`. This is an integrity-metadata repair, not a change to
+  THM-2243's statement, proof, constants, or status.
+
+---
+
 ## MISTAKE-250 (2026-07-25, correction of the post-THM-2250 all-equal hostile controls) -- a 169-step kernel was assigned the wrong 13-step stochastic square root
 
 - **What was claimed:** a session-level continuation of THM-2250 used a
