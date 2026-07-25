@@ -1,0 +1,32 @@
+THM-2233 GUARD-DANGER HIDDEN-STATE BELLMAN
+target=961/6930
+bit_states=16
+invertible_bases=3008
+coupling_vertex_counts=(94, 73, 73, 41, 73, 41, 41, 30, 34, 71, 71, 36, 71, 36, 36, 30, 34)
+profile=(4, 6, 8) bound=800688435/5710115047 decimal=0.140222820102490 relation=>=target absolute_margin=8764327769/5653013896530
+profile=(5, 7, 9) bound=10149510390/74231495611 decimal=0.136727817572033 relation=<target absolute_margin=142908611353/73489180654890
+lambda1=1 raw_closed=0/171 novel_vs_240_ledger=0
+lambda1=2 raw_closed=121/153 novel_vs_240_ledger=15
+lambda1=3 raw_closed=107/136 novel_vs_240_ledger=0
+lambda1=4 raw_closed=119/120 novel_vs_240_ledger=0
+lambda1=5 raw_closed=105/105 novel_vs_240_ledger=1
+raw_closed_total=452
+overlap_low_exact=1
+overlap_thm2227=6
+overlap_thm2229=436
+novel_vs_240_ledger=16
+novel_profiles=((2, 2, 5), (2, 2, 6), (2, 2, 7), (2, 2, 8), (2, 2, 9), (2, 2, 10), (2, 2, 11), (2, 2, 12), (2, 2, 13), (2, 2, 14), (2, 2, 15), (2, 2, 16), (2, 2, 17), (2, 2, 18), (2, 2, 19), (5, 7, 9))
+combined_remaining=224
+remaining_lambda1_1=all 165 profiles with lambda3>=5
+remaining_lambda1_2=(2,3,5); (2,4,c) for 5<=c<=19; (2,b,b+2) for 5<=b<=17
+remaining_lambda1_3=(3,3,5),(3,4,5),(3,4,6); (3,5,c) for 6<=c<=19; (3,b,b+2) for 6<=b<=17
+remaining_high_first=((4,6,8),)
+raw_closed_digest=1534c393cd40c008e958ac6376defeb6ab050d6a2fe82f0b6bc74756f7b3c19f
+novel_digest=1a038c930394ed7be3e7410d875c5cc09409543b1f3b3f5405ba2aeaff376079
+remaining_digest=d7617205a31504563f5f3d14eebc7d6dfd6148349f43a468949a8ecd850f8505
+lp_calls=1598061
+lp_cache_hits=1413312
+distinct_exact_lp_calls=184749
+exact_dual_certificates=184749
+exact_primal_dual_vertex_parity=PASS
+status=THM2233_GUARD_DANGER_HIDDEN_STATE_BELLMAN
