@@ -619,7 +619,7 @@ The present response audit separates both ingredients:
 ```text
 mod-13 address response of beta:       image {0};
 first-jet target response tau(beta):   image F_13^2;
-coefficient-preserving gauge action:   absent.       (51)
+canonical address-gauge action:        not weight preserving.          (51)
 ```
 
 The second image contains every polarizer in (26), and for each fixed
@@ -629,7 +629,7 @@ The second image contains every polarizer in (26), and for each fixed
 `q -> -q` fixes the zero fibre, precisely the fibre left open by
 THM-2333 and (34).
 
-Surjective response is therefore necessary but not sufficient.  The
+Even surjective response is therefore not sufficient.  The
 exact finite-group hostile remains sharp even after the target jet is
 retained.  On
 
