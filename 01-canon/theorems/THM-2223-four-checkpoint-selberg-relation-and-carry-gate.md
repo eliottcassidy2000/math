@@ -14,9 +14,11 @@ status: >
   44,264,640 raw nonzero checkpoint templates modulo simultaneous sign.
   The 13-adic first-digit invoice further forces two distinct blocker
   depths to differ by at most seven, unconditionally excluding the 21
-  profiles (a,a,c) with 6<=a<c<=19 and c-a>=8. This reduces the remaining
-  open cubic triple box to an explicit union of relation-and-carry planes;
-  it does not prove their extremal bound or LRC(14).
+  profiles (a,a,c) with 6<=a<c<=19 and c-a>=8. This reduces the checkpoint
+  box to an explicit union of relation-and-carry planes. THM-2224
+  subsequently closes the whole lambda_1>=6 branch by a clause-state
+  Bellman bound; the present theorem remains a structural resonance/carry
+  classification and does not prove LRC(14).
 source: codex-2026-07-24-four-checkpoint-selberg-carry
 depends_on:
   - THM-2085-explicit-height-57-rank-seven-selberg-gate
@@ -25,6 +27,7 @@ related:
   - THM-2144-anisotropic-selberg-kraft-relation-box
   - THM-2163-radix-relation-carry-descent
   - THM-2210-nested-binomial-minorant-and-adaptive-moment-lp-hierarchy
+  - THM-2224-transfer-owner-word-temporal-union-bound
 script: 04-computation/lrc14_four_checkpoint_selberg_carry_gate_thm2223.py
 output: 05-knowledge/results/lrc14_four_checkpoint_selberg_carry_gate_thm2223.out
 script_sha256: cc4f9e4b1af41061061915a250851344993ce9f0ed714211948b17e575614a3a
@@ -35,8 +38,10 @@ hash_basis: working-tree bytes (LF)
 # THM-2223 -- four checkpoints force a bounded carry
 
 This theorem applies the relation-and-carry spectrum to the finite extremal
-problem isolated by THM-2222. It is a reduction of that problem, not its
-solution.
+problem isolated by THM-2222. It was a reduction of that problem, not its
+solution; THM-2224 later solves the extremal inequality uniformly. The
+bounded resonance and disjoint-carry conclusions below remain useful
+structural information about any row near the four-checkpoint threshold.
 
 ## 1. Checkpoint event and relation packet
 
@@ -319,11 +324,12 @@ survival
   => an explicit bounded relation with a disjoint base-169 carry word. (23)
 ```
 
-The remaining problem is to bound `measure K_4(d)` uniformly on the
-surviving relation planes, or to find a hostile plane and retain the
-coordinate it exposes. Finiteness alone does not make that task
-computationally small. Apart from the 21 profiles in (22g), no closure of
-the `lambda_1>=6` branch or of LRC(14) is claimed.
+At the time of this reduction, the remaining problem was to bound
+`measure K_4(d)` uniformly on the surviving relation planes. THM-2224 now
+does so by retaining the four-clause satisfaction state and proves the whole
+`lambda_1>=6` branch empty. The present proof independently records where a
+Selberg-only argument must hand off to bounded resonance and disjoint
+base-169 carry data; it makes no additional claim toward LRC(14).
 
 ## 6. Exact arithmetic referee
 
