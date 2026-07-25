@@ -284,9 +284,15 @@ g_hat(1)<0,
 g_hat(2)<0.                                        (22)
 ```
 
-Fix any positive integer tooth speed `c_3`.  On the two-dimensional
-target character group, let `s` act on an inert constant factor and let
-`t` translate the active safe factor.  Take
+Take the primitive three-coordinate carrier
+
+```text
+w=(1,13,26),                 c_3=26.                (22a)
+```
+
+Modulo thirteen its relation kernel is the two-dimensional target plane
+on the last two coordinates. Let `s` act on the inert constant target
+factor and let `t` translate the active safe factor. Take
 
 ```text
 m=1,
