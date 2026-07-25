@@ -1,6 +1,6 @@
 # Current Mathematical Frontier
 
-**Rolling state — refreshed 2026-07-22.** This file supersedes dated frontier
+**Rolling state — refreshed 2026-07-24.** This file supersedes dated frontier
 snapshots as a statement of present status. A linked theorem is the proof
 source; this document records how the pieces compose and what remains.
 Status vocabulary: **PROVED** means an in-repo proof; **CITED** a scoped external
@@ -142,16 +142,16 @@ not unsafe. The reusable certificate architecture is
   `11|h*product(Q)`. THM-2115's half-fiber Toeplitz gate closes at frequency
   `84` a row invisible to every THM-2105 clock and its saturated pair tree.
   THM-2116/2120/2122/2123/2125 force a prime split: rank eight needs a guard
-  `13`-blocker or five guard-parallel nonblockers. THM-2124/2128/2131 empty the
-  guard-blocker/no-terminal-blocker lane: a mod-`169` comb kills `(7,1)`, and a
-  digit section lifts `(8)` to rank collapse. THM-2130 extends root capacity
-  through ranks `9..12` and forces guard content, a sparse mod-11 triple, or a
-  terminal determinant divisible by `143`. THM-2133 reduces simultaneous blockers
-  to scalar `6+1`/`5+2` tails; after THM-2135's first deep profiles, THM-2138's
-  all-depth lattice/fibre laws empty both tails. The fivefold guard pencil remains.
-  THM-2121 makes the joint gate finite at order `14nV^2+1`; retain the
-  Toeplitz/Fejer certificate, not scalar packets. The height-114 cut rows
-  make THM-2065 alone vacuous; location, content, phase, and torsion remain.
+  `13`-blocker or five guard-parallel nonblockers. THM-2124/2128/2131 empty both
+  no-terminal-blocker pencils; THM-2130 adds guard content, a sparse mod-11 triple,
+  or a `143` determinant through ranks `9..12`. THM-2133/2135 reduce simultaneous
+  blockers to scalar `6+1`/`5+2` tails, and THM-2138 empties both at every depth.
+  THM-2139/2141 close fivefold profiles `(1,5,2)` and `(2,5,1)`; the exact residual
+  is `(1,6,1)`, `(1,7,0)`, `(2,6,0)`, `(3,5,0)`. THM-2140 supplies one-blocker
+  depth/polar invoices. THM-2148/2168 classify the three-target Fano exception,
+  force top-two `13`-adic depth majorization, and reduce guard-line incidence to
+  `(0,0),(0,1),(4,3),(5,3)`; the scalar `4+3/5+3` tails remain open.
+  THM-2121's finite joint gate still requires its Toeplitz/Fejer and phase sidecars.
 - **PROVED relative decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   lifts bounded scalar relations; `H=2^19` clears recorded margins.
   MISTAKE-080/082 still require shape-specific torus models.
@@ -191,14 +191,14 @@ is the proved carrier that reduces each fixed bad-denominator/owner fiber to
 labelled primitive packets and one coprime interval. It makes the terminal
 exact and finite; it does not prove that every surviving interval is empty.
 
-On the dyadic branch, `r=1..4`, `|Q_r|=10..7`, and `max(Q_r)>=25`;
-`r=0` is the hereditary eleven-core. Rank seven/depth four is now bounded both
-template-by-template (THM-2097) and by one explicit whole-row box (THM-2112);
-the live task there is exact discharge, with THM-2095's `279600` marked-pair
-ledger and THM-2091/2094/2096 energy filters applied before enumeration.
-For ranks `8..11`, use THM-2098's transverse-collision versus vertical-
-commensurability split. All ranks must retain guard containment, component
-addresses, endpoint owners, and both original odd-tail owner words.
+Orthogonally, THM-2144/2164 force two independent relations of height `<=105`;
+THM-2169 bounds every deletion relation by `11130`. THM-2167 chooses an adaptive
+prime `q<=13` with exact codimension-two digit fibres; its pump preserves
+positivity and both relations but can destroy distinctness and phase geometry.
+THM-2145/2166 turn every defect-six `6+7` split into a crossing relation with
+far height `298`, sparse core height `57`, and carry `<=708`; owner depth remains.
+For defect `>=7`, THM-2146 gives exact small-core/covariance invoices, while
+THM-2161 proves fixed finite modulus banks blind; an adaptive scale is required.
 
 ### Independent routes that remain live
 
@@ -227,9 +227,9 @@ addresses, endpoint owners, and both original odd-tail owner words.
   maximum to rational pair-sum vertices; reflection halves the phase interval.
   HYP-8900 replays several rows exactly, including value `14/183` for the deep
   well. This is not a uniform finite family or a proof of its Wall-A restatement.
-- **Frobenius wildcard.** THM-2041 preserves exact packets, but LRC still needs
-  a nonzero safe seed and pointwise exit. Corrected HYP-8840's mixed moments
-  preserve augmentation; neither supplies an LRC implication by itself.
+- **Artanh/Gibbs boundary.** THM-2143 proves the strict criterion
+  `p_0>0 iff Z_V(z)>z` for some rational `0<z<1`; the supplied fugacities fail
+  hostile defect-seven controls, finite-temperature bounds miss tight APs, and unrestricted signed log-Riesz functionals are unsound.
 
 ### Mandatory controls and perspective prompts
 

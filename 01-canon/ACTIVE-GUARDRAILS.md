@@ -1,6 +1,6 @@
 # Active Guardrails
 
-**Short hazard sheet — refreshed 2026-07-22.** Read this at startup; search [`MISTAKES.md`](MISTAKES.md) for witnesses, repairs, and lineage. This records current prohibitions, not the whole history.
+**Short hazard sheet — refreshed 2026-07-24.** Read this at startup; search [`MISTAKES.md`](MISTAKES.md) for witnesses, repairs, and lineage. This records current prohibitions, not the whole history.
 
 ## Universal
 
@@ -83,10 +83,10 @@
     proved only in stated lanes; THM-2099 is proved but not a closure.
     Files marked CLAIMED or RESERVED remain unproved. **A finite box is not a
     discharge:** THM-2100 and THM-2112 bound rank-seven rows by different routes; neither enumerates or empties them.
-27c. **No scalar-filtered uniform pair margin.** THM-2126 has `tau-5/49 -> 0`;
-    THM-2130 gives guard-content/sparse-mod-11 alternatives before a `143`
-    determinant. THM-2131 empties the no-terminal-blocker pencil lane; THM-2133/2135 reduce simultaneous blockers to higher-depth scalar floods. None closes LRC(14). Retain root-fiber labels, finite-ring
-    needles, all maximum bases, and higher active intersections.
+27c. **Current LRC reductions are not closures.** THM-2138 empties `6+1/5+2`, and THM-2139/2141 close only `(1,5,2)/(2,5,1)`; four fivefold profiles remain.
+    THM-2140 and THM-2148/2168 give depth, polar, Fano, and top-two valuation invoices, not elimination; scalar `4+3/5+3` tails remain.
+    THM-2143's strict Gibbs test misses equality; THM-2146 leaves aggregate covariance; THM-2161 proves fixed modulus banks blind, not defect seven hard.
+    THM-2166's carry `<=708`, THM-2167's finite rank-two automaton, and THM-2169's bounded deletion relations retain unbounded owner depth and lack a target-preserving pump. None proves LRC(14).
 
 ## NC2 / GMC
 

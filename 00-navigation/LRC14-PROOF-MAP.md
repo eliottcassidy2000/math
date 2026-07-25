@@ -4,7 +4,7 @@
 > first. The control panel is current; dated sections preserve searchable proof
 > history and may contain obligation labels superseded by later corrections.
 
-## 2026-07-22 current control panel
+## 2026-07-24 current control panel
 
 **Status: OPEN.** LRC(14) means thirteen distinct nonzero relative speeds. The
 old uniform `q<=25` shortcut is false; uniform twelve-speed sporadic emptiness
@@ -47,7 +47,7 @@ THM-2085--2097/2112 make rank-seven rows finite, not discharged.
 At guarded sizes `8..10`, THM-2098 has pure, low-mixed, and high-vertical lanes;
 only the pure lane inherits its collision budget, and depth-zero eleven is separate.
 THM-2114/2116/2120--2125 force content and modular pencils; THM-2117/2119/2121 add full-Toeplitz and three-sparsity gates.
-THM-2130 intersects `11/13` labels into a sparse exception or `143` determinant; THM-2128/2131 exclude both no-terminal-blocker pencils. THM-2133 reduces simultaneous blockers to scalar `6+1`/`5+2` tails; THM-2135 forces their first deep profiles, and THM-2138's all-depth unit-annulus and nonunit-fibre laws empty both scalar tails. MISTAKE-238/239/242 block invalid transfers; the fivefold guard pencil and higher ranks remain open.
+THM-2130 intersects `11/13` labels into a sparse exception or `143` determinant; THM-2128/2131 exclude both no-terminal-blocker pencils. THM-2133--2138 empty the scalar `6+1/5+2` tails. THM-2139/2141 close fivefold profiles `(1,5,2)` and `(2,5,1)`, leaving exactly `(1,6,1)`, `(1,7,0)`, `(2,6,0)`, and `(3,5,0)`. THM-2140 gives the one-blocker depth/polar invoice. THM-2148/2168 classify the three-target Fano fibre, force the top two blocker depths above the top two aligned depths, and reduce every substantial guard-line branch to the still-open scalar `4+3/5+3` tails. MISTAKE-238/239/242 still block invalid transfers; none of these reductions closes LRC(14).
 
 ### Live interfaces
 
@@ -63,13 +63,13 @@ THM-2130 intersects `11/13` labels into a sparse exception or `143` determinant;
 | Circuit rays | THM-2065 sends every circuit-free strict-null template to finitely many projective rays before the CRT wheel | Classify/discharge persistent height-`2^20` marked circuits; a relation is not evidence of failure. |
 | Dyadic owner words | THM-2066 closes divisor-complete eleven-cores through `24`; THM-2068 gives a seven-clock minimum within `15..34` | Do not extrapolate the bounded bank: THM-2072 proves every fixed core-independent finite bank blind somewhere. |
 | Safe-child tower | THM-2073/2075/2077 preserve the carrier; THM-2078/2080 force size `7..10`, maximum `>=25`, depth `<=4`; THM-2081 closes 4,120 height-24 pairs and THM-2083 leaves bounded templates | All-height closure remains open: make the relation bound effective or discharge each template with guard-relative residues and both outer-tail owners. |
-| Relative Fejer | After zero-character factors are removed, THM-2054 gives an explicit lifted-character average error for nonzero line frequencies when bounded resonances lift | Prove the model-specific plateau and route every bounded scalar resonance. |
-| Rank code | THM-2052 supplies eleven independent bounded support-at-most-three rows | Produce an active row outside the code when available; rank twelve gives a finite box but is not required for finiteness. |
+| Relative Fejer / Gibbs | THM-2054 lifts bounded scalar relations; THM-2143 proves `p_0>0 iff Z_V(z)>z` for some rational `z` and refutes unrestricted signed log-Riesz | Prove the model-specific plateau or a carrier that fires on the tight weak boundary; the supplied fugacities fail hostile controls. |
+| Rank code / adaptive carry | THM-2052 gives rank eleven; THM-2144/2164 give two height-`<=105` relations; THM-2167 selects `q<=13`; THM-2169 bounds every deletion relation by `11130` | Produce an active row outside the code or a target-preserving carry pump; distinctness and phase geometry remain sidecars. |
 | Euler endpoint | THM-2047 retains owner, sign, side, height, and paired deletion; HYP-2108 gives `P_w` | Prove `P_w>=0` on any disk points not discharged arithmetically. |
 | AP-core supplier | THM-1017 proves `AP core -> far element -> LRC(14)` | Extract the required core from every compact structured residual. |
 | Global phase transport | THM-2050 proves all period-14 local germs can be identical while maxima differ | Supply first-exit magnitude, off-layer gluing, or another genuinely global termination coordinate. |
 | Finite shell | THM-763 bounds a primitive counterexample by `sum v_i<=91^12`; THM-1290 is exhaustive through maximum speed 55 | Turn THM-2052--2059 structural finiteness into a feasible exact decision. |
-| Six-comb branch | Local return and tooth-word machinery is sharply saturated | Complete endpoint/child transport or find a phase-located turn tax. |
+| Defect split / six-comb branch | THM-2145/2166 give defect-six carry `<=708` with two-core support; THM-2146 gives defect-`>=7` covariance bases; THM-2161 refutes fixed banks | Terminate owner depth, bound aggregate covariance, or choose an adaptive scale; local tooth-word machinery alone is saturated. |
 
 ### How to represent the new structured branch
 

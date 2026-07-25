@@ -1,6 +1,6 @@
 # Start Here
 
-**Rolling brief — refreshed 2026-07-22; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
+**Rolling brief — refreshed 2026-07-24; update whenever a headline changes.** This is a router, not a proof source; the startup packet prints the commit and [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status links.
 
 ## The five-minute orientation
 
@@ -106,12 +106,12 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     pair spectrum: the universal strict tree-margin target is false, and scalar
     divisor-complete one-deletion-primitive rows have no uniform positive
     margin. Those families fail newer clock/content gates; the actual finite
-    rows and cover-equality branch remain undischarged. THM-2114--2131 route
-    the live rank-eight residue through finite-ring needles and content. In the
-    guard-blocker/no-terminal-blocker lane, THM-2124/2128/2131 exclude both
-    pencil types `(7,1)` and `(8)`. THM-2133 leaves scalar `6+1`/`5+2` tails;
-    THM-2135 forces `13^4|v` in `6+1` and excludes `5+2` depths `(1,1),(1,2)`.
-    The fivefold guard pencil and ranks `9..12` remain; THM-2130 adds `143`.
+    rows and cover-equality branch remain undischarged. THM-2114--2138 route
+    the live rank-eight residue through finite-ring needles, content, and
+    all-depth scalar closure. THM-2139/2141 close profiles `(1,5,2)` and
+    `(2,5,1)`; the exact fivefold residual is `(1,6,1)`, `(1,7,0)`, `(2,6,0)`,
+    `(3,5,0)`. THM-2140 gives depth/polar invoices; THM-2148/2168 give the
+    three-blocker Fano classification, top-two depth majorization, and the still-open scalar `4+3/5+3` tails. THM-2144/2164/2167 force two height-`<=105` relations and an adaptive rank-two radix carrier; THM-2169 bounds a relation on every deletion. THM-2166 compresses defect six to carry `<=708`, while THM-2146/2161 expose the covariance/adaptive-scale obstruction at defect at least seven.
 16. **Shared syntax is not a bridge.** MISTAKE-230--233/HYP-8885 retract the
     universal entropy/modular frame; MISTAKE-235 leaves S102's LRC/GMC sums as
     analogy, not AP-core reduction. Fiber size is observable-relative, and
@@ -123,7 +123,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 
 | Topic | Read first | Then use |
 |---|---|---|
-| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2105; preserve terminal address/owner/guard/mod-seven-fiber sidecars |
+| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md), THM-2053--2168; preserve terminal address/owner/guard/mod-seven-fiber sidecars |
 | LRC / Frobenius wildcard | [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) | THM-2041 packets; keep seed and pointwise exit explicit |
 | LRC literature | [`CORE-PAPERS.md#lonely-runner-conjecture`](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [`LRC-TECHNIQUE-INDEX.md`](LRC-TECHNIQUE-INDEX.md), source paper |
 | NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2101/2111, formal interfaces, guardrails |
