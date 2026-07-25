@@ -1,0 +1,8 @@
+FOX b*Delta=1+t^7: exact
+FOX a*Delta=sum_(j=0)^6 t^(2j): exact
+MOD2 Delta=(t^3+t+1)(t^3+t^2+1): exact
+FIBRE controls: q1 sees Delta; q0=(2,t+1) does not
+WORD singleton lengths: [1, 1, 1]
+WORD pair lengths: [2, 2, 2]
+WORD triple length: 2
+PAIR SHADOW: all zero defects; triple defect: 1

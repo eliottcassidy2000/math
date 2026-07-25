@@ -26,6 +26,11 @@ related:
   - THM-2248-higher-interaction-defect-complex-and-tropical-trace-spectrum
   - THM-2294-anchored-plucker-tournament-and-kakeya-address-bank
   - THM-2315-marked-target-gain-corolla-and-pairwise-composition-boundary
+script: 04-computation/alexander_fibre_gordian_quotient_thm2317.py
+output: 05-knowledge/results/alexander_fibre_gordian_quotient_thm2317.out
+script_sha256: 6214a5717292a14f2f3462f46c870fd2cf98f3f85042c0f20ce26ee95cdbe113
+output_sha256: 5921d911f0f3dd26dfb8d2f76893968a9cc8a56b656ccf71be61c5a8684db6a9
+hash_basis: working-tree bytes (LF)
 external:
   - "Mark Brittenham and Susan Hermiller, Unknotting number is not additive under connected sum, arXiv:2506.24088v2."
 ---
@@ -374,7 +379,7 @@ Let `Gamma_G` be the undirected Gordian graph: its vertices are oriented
 knot types and two vertices are adjacent when one crossing change relates
 them. Its path metric is `d_G`.
 
-For a finite label set `I`, form the Cartesian product graph
+For a finite nonempty label set `I`, form the Cartesian product graph
 
 ```text
 Gamma_I=box_(i in I) Gamma_G.                        (19)
@@ -384,6 +389,13 @@ A vertex is a labelled tuple `x=(x_i)_(i in I)`, and one edge changes
 exactly one coordinate by one Gordian edge. The label is a sidecar: when
 the `x_i` are prime factors it refines Schubert's unordered prime
 decomposition by retaining the factor names.
+
+The labels are persistent **compartments**, not a claim that every later
+`x_i` remains prime or that the tuple is the prime decomposition of its
+realization. Every coordinate is allowed to be an arbitrary knot. For
+example, `(A#B,U)` and `(A,B)` have the same realization in a two-label
+product but are different marked states. This is one of the fibres which
+`Sigma_I` deliberately collapses.
 
 > **Marked product theorem.** For all `x,y in Gamma_I`,
 >
@@ -404,6 +416,16 @@ decomposition by retaining the factor names.
 > ```text
 > d_G(Sigma_I(x),Sigma_I(y))<=d_I(x,y).              (22)
 > ```
+>
+> More precisely, `d_G` is the exact quotient metric:
+>
+> ```text
+> d_G(J,L)
+>  =min{
+>     d_I(x,y):
+>     Sigma_I(x)=J, Sigma_I(y)=L
+>    }.                                               (22a)
+> ```
 
 ### Proof
 
@@ -414,16 +436,32 @@ each `i` attains this sum.
 
 If an edge changes the `i`th knot by one crossing change, perform the same
 crossing change inside the `i`th connected-summand ball. This gives one
-Gordian edge between the connected sums, so `Sigma_I` is a graph map and
-(22) follows. Relabelling summands changes the connected sum only by
-isotopy, and
+crossing change between the connected sums. Its endpoints cannot become
+isotopic: otherwise cancellation of the unchanged connected-sum context
+would imply that the two `i`th-coordinate knots were already isotopic.
+Thus it is a genuine Gordian edge, `Sigma_I` is a graph map, and (22)
+follows. Relabelling summands changes the connected sum only by isotopy, and
 
 ```text
 Sigma_(I disjoint_union J)(x,y)
  =Sigma_I(x)#Sigma_J(y),
 ```
 
-which proves the symmetry and monoidal assertions. QED.
+which proves the symmetry and monoidal assertions.
+
+For completeness, (22a) has no hidden path-lifting assertion. Inequality
+(22) gives the lower bound `d_G(J,L)` for every pair in the displayed
+minimum. Conversely, choose one label `i_0` and the concentrated
+representatives
+
+```text
+x_(i_0)=J, y_(i_0)=L,
+x_i=y_i=U               for i!=i_0.
+```
+
+Their product distance is `d_G(J,L)` by (20), proving equality. Hence
+`Sigma_I` is an exact metric quotient globally, even though a geodesic need
+not lift from a prescribed distributed representative. QED.
 
 At the root `0_I=(U,...,U)`, define the **quotient contraction defect**
 
@@ -575,6 +613,27 @@ which every pair is additive while a higher packet has strict defect, so no
 pair graph, and therefore no tournament built from it, classifies quotient
 contraction in the allowed axiomatic category.
 
+The smallest self-contained hostile control is the weighted word metric on
+`Z^3` with generators
+
+```text
++/-e_1,+/-e_2,+/-e_3       of cost 1,
++/-(e_1+e_2+e_3)           of cost 2.               (34a)
+```
+
+Each singleton has length one and each pair `e_i+e_j` has length two: using
+the three-body generator would still require subtracting the missing basis
+vector and cost three. But
+
+```text
+ell(e_1+e_2+e_3)=2<3.                               (34b)
+```
+
+Thus its complete weighted pair-defect graph is empty while its triple
+defect is one. This is a translation-invariant integer metric, so symmetry,
+integrality, and exact pair data do not repair the loss. THM-2248 supplies
+the general arbitrary-arity version.
+
 The lawful relation is instead the span (25):
 
 ```text
@@ -610,3 +669,19 @@ The theorem produces three concrete stopping boundaries:
 No exact value of `u(K#Kbar)` or `u_hash(K#Kbar)` follows, no positive
 Gordian catalyst is produced, and no tournament classification of knots is
 claimed.
+
+## 8. Exact companion
+
+The companion checks the two Fox factorization identities, the mod-two
+factorization and maximal-ideal hostile control, and the three-generator
+word-metric pair-shadow collision. Reproduce with
+
+```bash
+python3 04-computation/alexander_fibre_gordian_quotient_thm2317.py
+python3 -O 04-computation/alexander_fibre_gordian_quotient_thm2317.py
+```
+
+Both transcripts must equal the stored output byte-for-byte after LF
+normalization. The companion checks the algebraic and finite hostile
+controls; it does not enumerate knots or certify any unknown unknotting
+number.
