@@ -79,8 +79,9 @@ integral |t|F_N(t)^2 dt
 ```
 
 Hence `integral |t|J_N(t)dt<3/(4N)`. Translation of one circle interval by
-`t` changes its indicator in `L1` by at most `2|t|`. Averaging this inequality
-against `J_N` proves (5). QED.
+`t` changes its indicator in `L1` by at most `2|t|`; for a long or wrapping
+interval this is the same assertion applied to its complement. Averaging this
+inequality against `J_N` proves (5). QED.
 
 ## 2. Positive spectral coupling
 
@@ -125,8 +126,13 @@ sum_(i in F)c_i v_i=-sum_(j in E)c_j v_j!=0.           (14)
 
 ### Proof
 
-If the Fourier supports of `P_F` and the reflected `P_E` shared no nonzero
-frequency, Fourier orthogonality would give
+Write `supp_hat` for Fourier support. If
+
+```text
+supp_hat(P_F) intersect (-supp_hat(P_E))={0},           (15a)
+```
+
+Fourier orthogonality would give
 
 ```text
 integral P_F P_E=(integral P_F)(integral P_E).          (15)
