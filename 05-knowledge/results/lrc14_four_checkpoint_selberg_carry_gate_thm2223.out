@@ -1,0 +1,17 @@
+FOUR-CHECKPOINT SELBERG CARRY GATE
+scalar_floor=961/6930
+first_successful_degree=16
+degree15_relation_free_bound=22667121/157351936
+degree16_relation_free_bound=26873856/200533921
+degree16_floor_gap=925325143/198528581790
+checkpoint_base=169
+place_sum=4855540
+grouped_coefficient_height=77688640
+no_carry_margins=(153, 25841, 4367113)
+options_per_checkpoint=97
+directed_nonzero_templates=88529280
+unoriented_templates=44264640
+valuation_gap_spectrum=(1, 2, 3, 4, 5, 6, 7)
+excluded_equal-shallow_profiles=21
+profile_boundary=(6, 6, 14)..(11, 11, 19)
+status=THM-2223_EXACT_ARITHMETIC_REFEREE
