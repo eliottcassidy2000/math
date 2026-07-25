@@ -1,21 +1,13 @@
 # Current Mathematical Frontier
 
-**Rolling state — refreshed 2026-07-24.** This file supersedes dated frontier
-snapshots as a statement of present status. A linked theorem is the proof
-source; this document records how the pieces compose and what remains.
-Status vocabulary: **PROVED** means an in-repo proof; **CITED** a scoped external
-import; **FINITE-EXACT** an exhaustive stated finite universe; **VERIFIED**
-reproducible evidence rather than a general proof; **CONDITIONAL**, **OPEN**,
-**REFUTED**, and **SUPERSEDED** have their literal meanings.
+**Rolling state — refreshed 2026-07-24.** This supersedes dated snapshots; linked theorems are proof sources, while this file records composition and residuals.
+Status: **PROVED** in-repo proof; **CITED** scoped import; **FINITE-EXACT** exhaustive stated universe; **VERIFIED** reproducible evidence; **CONDITIONAL**, **OPEN**, **REFUTED**, and **SUPERSEDED** are literal.
 
 ## LRC(14)
 
 ### Headline
 
-**OPEN.** In the standard reduction there are 13 distinct nonzero relative
-speeds, corresponding to 14 total runners. External work settles at most 13
-total runners. The residual is not a missing routine finite run and not a
-uniform small-period lemma.
+**OPEN.** The standard reduction has 13 distinct nonzero relative speeds (14 total runners); external work settles at most 13 total runners. The residual is neither a routine finite run nor a uniform small-period lemma.
 
 The current proof graph is:
 
@@ -32,14 +24,8 @@ counterexample
             -> clock, pair-sum, Fejer, Euler, or rank discharge [OPEN]
 ```
 
-The rank-eleven residual is therefore a finite but enormous labelled
-intersection, not merely a plane or a quadratic form; rank twelve is the
-separate finite-box branch and still needs exact decision. The rank-eleven
-object's indispensable coordinates are the primitive parameter, integral column data, transverse
-deck and bad modulus, signed-hull owner cone, pair-sum clock, and
-phase/endpoint sidecar. Failure of any sufficient gate means **uncertified**,
-not unsafe. The reusable certificate architecture is
-`seed + selector + preserver + pointwise exit`.
+The rank-eleven residual is a finite but enormous labelled intersection, not merely a plane or quadratic form; rank twelve is a separate undecided finite box.
+Its indispensable coordinates are primitive parameter, integral columns, transverse deck/bad modulus, signed-hull owner cone, pair-sum clock, and phase/endpoint sidecar. Gate failure means **uncertified**, not unsafe. The reusable architecture is `seed + selector + preserver + pointwise exit`.
 
 ### Proved reductions and terminals
 
@@ -191,14 +177,9 @@ is the proved carrier that reduces each fixed bad-denominator/owner fiber to
 labelled primitive packets and one coprime interval. It makes the terminal
 exact and finite; it does not prove that every surviving interval is empty.
 
-Orthogonally, THM-2144/2164 force two independent relations of height `<=105`;
-THM-2169 bounds every deletion relation by `11130`. THM-2167 chooses an adaptive
-prime `q<=13` with exact codimension-two digit fibres; its pump preserves
-positivity and both relations but can destroy distinctness and phase geometry.
-THM-2145/2166 turn every defect-six `6+7` split into a crossing relation with
-far height `298`, sparse core height `57`, and carry `<=708`; owner depth remains.
-For defect `>=7`, THM-2146 gives exact small-core/covariance invoices, while
-THM-2161 proves fixed finite modulus banks blind; an adaptive scale is required.
+Orthogonally, THM-2144/2164 force two height-`<=105` relations and THM-2169 gives height-`1247` relations on every deletion. THM-2167 has at most `2,924,250` sign-sharp carry-owner states; THM-2171 repairs order/distinctness/primitivity with ordered cap `5,430,750`.
+THM-2174 shows why this still fails: aligned finite windows preserve bounded-denominator danger clutters, but endpoint current `C_r/W` retains scale. THM-2178 forces a third bounded relation unless the known plane has a support-`<=3` digit mod `14`.
+THM-2145/2166 give every defect-six split a far-height-`298`, core-height-`57`, carry-`<=708` crossing relation. For defect `>=7`, THM-2179 gives a stronger-`3/41` positive floor or a body-touching height-`140`, `41`-unit packet. These are structural forks, not closure; phase/current remains.
 
 ### Independent routes that remain live
 

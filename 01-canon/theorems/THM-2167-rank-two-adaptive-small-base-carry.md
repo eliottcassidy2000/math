@@ -308,3 +308,14 @@ The finite checks are hostile controls for the constants and the pumping
 boundary.  The all-row theorem is the algebraic proof above.
 
 QED.
+
+## Forward correction after THM-2171 and THM-2174
+
+Items 1--2 in the pumping limitation above are repaired by
+THM-2171: the adjacent quotient-tie mask preserves strict order and
+distinctness, and common-gcd normalization preserves the LRC target.
+THM-2174 then isolates the genuine survivor. Aligned finite radix windows
+preserve every denominator dividing their depth, but endpoint labels alone
+still omit the scale-sensitive current `C_r/W`. Thus the final arrow in
+(23) remains invalid for phase/current reasons, not for order or
+primitivity reasons.

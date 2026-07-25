@@ -1,11 +1,14 @@
 # Meta-Patterns for Mathematical Research
 
-**Status:** CURRENT
-**Role/Use:** compact cards from repeated successes and failures; scan relevant triggers and follow links for evidence.
+**Status:** CURRENT. **Role/Use:** compact defaults from repeated successes and failures; scan triggers and evidence. Each card states applicability, action, mechanism, and counterindication; new cards require distinct-thread evidence or a severe repaired failure.
 
-These cards are defaults, not slogans. Each names when it applies, what to do,
-why it works, and when it can mislead. New cards require evidence from distinct
-threads or a severe failure with a demonstrated repair.
+## Separate symmetry descent from regularity debt
+
+**Trigger:** a deck, residue, phase, or quotient proves descent/repetition, while the target asks for integrality, zero-safety, or an exact inequality.
+**Action:** retain the finite label and define an effective defect--pole divisor, signed endpoint current, continuation profile, or magnitude coordinate--with an exact transformation and vanishing gate.
+**Mechanism:** invariance identifies a fiber but does not make the target fiber-constant; the defect records erased scale or valuation.
+**Counterindication:** skip the sidecar when target constancy is proved or the defect has no exact zero/positivity implication.
+**Evidence:** THM-2158 (deck versus pole divisor), THM-2174 (residue versus `C_r/W`), and THM-2176 (unknotting scalar versus continuation profile).
 
 ## Expose the obstruction first, choose the scale second
 
