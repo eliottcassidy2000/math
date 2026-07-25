@@ -23,6 +23,7 @@ related:
   - THM-2204-scalar-depth-223-thirteen-lift-capacity-law
   - THM-2205-scalar-depth-113-exact-lift-capacity-exclusion
   - THM-2207-scalar-depth-123-labelled-guard-hole-exclusion
+  - THM-2218-labelled-guard-hole-fourier-and-signed-lift-energy
 script: 04-computation/lrc14_depth113_hinge_gram_certificate_thm2216.py
 output: 05-knowledge/results/lrc14_depth113_hinge_gram_certificate_thm2216.out
 script_sha256: 6b0812be6ba3ad3f84cbc994cb3f8020d1972182b5056215414971abd60d4101

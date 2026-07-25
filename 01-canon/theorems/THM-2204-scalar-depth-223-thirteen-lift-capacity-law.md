@@ -30,6 +30,7 @@ related:
   - THM-2205-scalar-depth-113-exact-lift-capacity-exclusion
   - THM-2207-scalar-depth-123-labelled-guard-hole-exclusion
   - THM-2216-residual-capacity-hinge-gram-law
+  - THM-2218-labelled-guard-hole-fourier-and-signed-lift-energy
 script: 04-computation/lrc14_scalar_depth223_thirteen_lift_capacity_thm2204.py
 output: 05-knowledge/results/lrc14_scalar_depth223_thirteen_lift_capacity_thm2204.out
 script_sha256: 9c16e1e7a69834f9304c877f1627232f374688aa7f8d2372c260dfdbfa056ac8
@@ -457,6 +458,7 @@ phase alignment.
 This theorem itself closes only the actual valuation profile `(2,2,3)`.
 The later exact audits THM-2205 and THM-2207 close `(1,1,3)` and `(1,2,3)`.
 THM-2216 shows that the required top-five meet envelope is a truncated
-capacity Gram kernel, but no uniform all-depth correlation estimate is
-known.  Profiles with deepest valuation at least four remain outside the
-present theorem.  QED.
+capacity Gram kernel, and THM-2218 gives the exact Fourier/group-algebra
+carrier plus a signed lift-energy bound.  Neither supplies a uniform
+all-depth correlation estimate.  Profiles with deepest valuation at least
+four remain outside the present theorem.  QED.

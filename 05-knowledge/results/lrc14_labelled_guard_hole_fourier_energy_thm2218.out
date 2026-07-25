@@ -1,0 +1,42 @@
+THM-2204 labelled guard-hole Fourier stress audit
+arithmetic: exact integers for every certificate decision
+
+spread-2460 oriented family
+  coefficients=(1098, 3295, 5492, 7689, 9886, 12083, 14280, 16477, 18674, 20871, 23068, 25265, 27462)
+  capacities=(2460, 2456, 2454, 2450, 2456, 2452, 0, 2452, 2450, 2456, 2452, 2452, 2454)
+  hole_vector=(730, 734, 736, 740, 734, 738, 3190, 738, 740, 734, 738, 738, 736)
+  endpoint_mass=3190
+  residual_size=15932 actual_top5=12282 actual_margin=3650
+  signed_invoice=(Zplus=72261760,Zminus=866949136,D=59896,radicand=361308800,gap=3226222016)
+  readable_signed_bound=12786.778813747411 bound_margin=3145.221186252589
+
+lower-fibre obstruction
+  negative_fibres=22 minimum_margin=-5 sum_local_margins=-18
+  first_two_minimum_rows=((4, 120, 125, (25, 7, 25, 13, 20, 25, 0, 25, 20, 13, 25, 7, 25)), (6, 120, 125, (25, 25, 25, 20, 13, 7, 0, 7, 13, 20, 25, 25, 25)))
+  local_envelope=15950 global_common_lift_top5=12282 common_lift_regret=3668
+
+seven-family exhaustive signed-energy stress
+  base=1 profile=113 checked=514605 failures=0 worst_readable_slack=1760.017636307042 worst_indices=(0, 467) worst_residual=13512 worst_exact_gap=1331441056
+  base=1 profile=123 checked=79092 failures=0 worst_readable_slack=1749.746151361631 worst_indices=(0, 0) worst_residual=13310 worst_exact_gap=1299139100
+  base=1098 profile=113 checked=514605 failures=0 worst_readable_slack=1751.136666846818 worst_indices=(78, 1013) worst_residual=13510 worst_exact_gap=1327077740
+  base=1098 profile=123 checked=79092 failures=0 worst_readable_slack=1749.715889767725 worst_indices=(1013, 77) worst_residual=13310 worst_exact_gap=1299125580
+  base=799 profile=113 checked=514605 failures=0 worst_readable_slack=2485.277405665400 worst_indices=(581, 737) worst_residual=13712 worst_exact_gap=1614247616
+  base=799 profile=123 checked=79092 failures=0 worst_readable_slack=2693.595362398504 worst_indices=(737, 42) worst_residual=13526 worst_exact_gap=1615646468
+  base=599 profile=113 checked=514605 failures=0 worst_readable_slack=2630.082454042578 worst_indices=(354, 552) worst_residual=13810 worst_exact_gap=1664042820
+  base=599 profile=123 checked=79092 failures=0 worst_readable_slack=2909.112161068042 worst_indices=(552, 71) worst_residual=13504 worst_exact_gap=1633966976
+  base=1015 profile=113 checked=514605 failures=0 worst_readable_slack=3092.569549934920 worst_indices=(0, 936) worst_residual=13512 worst_exact_gap=1643056676
+  base=1015 profile=123 checked=79092 failures=0 worst_readable_slack=2783.540337715966 worst_indices=(936, 77) worst_residual=13620 worst_exact_gap=1647693552
+  base=597 profile=113 checked=514605 failures=0 worst_readable_slack=2897.924994541478 worst_indices=(551, 737) worst_residual=13848 worst_exact_gap=1710919488
+  base=597 profile=123 checked=79092 failures=0 worst_readable_slack=3083.241944682695 worst_indices=(551, 72) worst_residual=13480 worst_exact_gap=1635265540
+  base=1013 profile=113 checked=514605 failures=0 worst_readable_slack=3098.136102545446 worst_indices=(0, 935) worst_residual=13512 worst_exact_gap=1643099576
+  base=1013 profile=123 checked=79092 failures=0 worst_readable_slack=2786.229123600033 worst_indices=(935, 77) worst_residual=13624 worst_exact_gap=1648888384
+
+mixed hostile family-knapsack certificate
+  blocker_labels=(799,46) residual_size=13526
+  actual_top_five=((2604, 5193), (2472, 10386), (2292, 7773), (2288, 10388), (2262, 7775))
+  actual_margin=1608
+  exact_ceil_knapsack_numerator=159477 bound=159477/13=12267.461538461539
+  exact_margin_numerator=16361 margin=1258.538461538461
+  optimizing_bound_path=((1, 1, 31769), (599, 1, 32136), (799, 1, 33852), (1015, 1, 29796), (1098, 1, 31924))
+
+CONCLUSION: all exact stress checks PASS
