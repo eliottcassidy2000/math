@@ -28,6 +28,7 @@ related:
   - THM-2246-depth-one-private-joint-two-step-fibre-cap
   - THM-2255-valuation-separated-pair-cap-and-exclusive-owner-mass
   - THM-2261-expiration-image-surjectivity-and-one-core-carrier-no-go
+  - THM-2263-thirteen-adic-gap-pair-spectrum-and-profile-sharp-owner-floor
   - THM-2267-static-owner-coverage-is-flag-and-transition-holonomy-is-a-cut-kernel
 script: 04-computation/lrc14_depth_one_multi_terminal_cocycle_stopping.py
 output: 05-knowledge/results/lrc14_depth_one_multi_terminal_cocycle_stopping.out
@@ -392,6 +393,16 @@ torsion witnesses, lower-bound the length of a switch arc, or show that a
 switch intersects THM-2234's private measurable remainder. It excludes no
 one of the `165` first-depth-one valuation profiles and does not prove
 LRC(14).
+
+The distinction from the measurable owner ledger is useful. THM-2255 and
+THM-2263 give positive Haar mass to at least one exclusive labelled owner
+and, in every strict profile, push one such stratum past the one-comb
+threshold at expiration. The present theorem guarantees strict finite stalks
+for **every** owner and forces a nonconstant global owner tour. Neither
+result identifies which successor sheets receive the expanding measurable
+stratum. THM-2267's transition cut kernel is therefore the exact next
+consumer: it needs the common sheet/carry correspondence which (17)--(20)
+and the hostile diagram show cannot be reconstructed from raw carry alone.
 
 Reproduce the finite diagram with
 
