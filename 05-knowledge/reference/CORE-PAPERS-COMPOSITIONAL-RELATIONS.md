@@ -59,11 +59,16 @@ This sidecar preserves detailed records routed compactly from
   `n`. Applied to `T(2,7)#mirror(T(2,7))`, whose Alexander polynomial is
   nontrivial, this gives the stable lower bound
   `u_hash(T(2,7)#mirror(T(2,7)))>=1`.
-- **Repo consumer:** [THM-2292, common catalytic section and Helly calibration
-  nerve](../../01-canon/theorems/THM-2292-common-catalytic-section-and-helly-calibration-nerve.md).
+- **Repo consumers:** [THM-2292, common catalytic section and Helly
+  calibration nerve](../../01-canon/theorems/THM-2292-common-catalytic-section-and-helly-calibration-nerve.md)
+  and [THM-2308, mirror-double Nakanishi floor and stable mixture
+  profile](../../01-canon/theorems/THM-2308-mirror-double-nakanishi-floor-and-sharp-stable-mixture-profile.md).
 - **Does not prove:** additivity under repeated sum, the exact raw or stable
   unknotting number of the Brittenham--Hermiller mirror pair, existence of a
   positive catalyst, or completeness of any pairwise knot invariant.
+  THM-2308's common-maximal-ideal refinement, which gives two units per
+  repeated mirror double rather than one, is repo-derived from the
+  Alexander-module generator bound and is not a theorem stated in Yang.
 
 ## Owens--Strle -- *Immersed disks, slicing numbers and concordance unknotting numbers*
 
