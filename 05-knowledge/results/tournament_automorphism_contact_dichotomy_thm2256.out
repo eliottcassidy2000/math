@@ -1,0 +1,9 @@
+THM-2256 AUTOMORPHISM-CONTACT AUDIT
+labelled_tournament_census={2: (2, 0), 3: (6, 2), 4: (48, 16), 5: (680, 344)}
+diagonal_checks=124468
+distinct_automorphism_pair_checks=774
+class_witness_counts=bounded:736,linear:362
+exact_layer_multisets_q2_to_q4_N1_to_N4=1312036
+exact_minimum_range_by_order={2: (1, 1), 3: (1, 9), 4: (1, 9)}
+transitive_unit_controls={2: (1, 0), 3: (1, 0), 4: (1, 0), 5: (1, 0)}
+status=PASS
