@@ -2,17 +2,16 @@
 id: THM-2266
 title: "Depth-one deep-pair centered signed dual and relation-atlas reduction"
 status: >
-  RESERVED / UNPROVED PROOF CANDIDATE UNDER AUDIT + VERIFIED-EXACT
-  COMPANION. In each strict first-depth-one profile (1,b,c), a centered
-  product of the two deep negative-carrier literals can be subtracted from
-  THM-2239's charge without changing its signed residual response. The
-  resulting pointwise nonnegative dual has an exact adversarial three-core
-  Bellman bound below 961/6930 for exactly the 120 interior rows
-  3<=b<=c-2. It does not exclude those rows unconditionally: it forces one
-  of six guard/shallow-core reduced products to be at most 757. The exact
-  150-profile table, 120/30 split, 758 cutoff, and 77,646 rational
-  primal-dual LP certificates are frozen, but no result may depend on this
-  file until independent audit and explicit promotion.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. In each strict
+  first-depth-one profile (1,b,c), a centered product of the two deep
+  negative-carrier literals can be subtracted from THM-2239's charge
+  without changing its signed residual response. The resulting pointwise
+  nonnegative dual has an exact adversarial three-core Bellman bound below
+  961/6930 for exactly the 120 interior rows 3<=b<=c-2. It does not exclude
+  those rows unconditionally: it forces one of six guard/shallow-core
+  reduced products to be at most 757. The exact 150-profile table, 120/30
+  split, 758 cutoff, and 77,646 rational primal-dual LP certificates are
+  frozen and independently replayed.
 source: codex-2026-07-25-depth-one-deep-pair
 depends_on:
   - THM-1166-seven-wall-fano-gcd-discrepancy
@@ -33,9 +32,9 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2266 -- depth-one deep-pair centered signed dual
 
-**RESERVED / UNPROVED PROOF CANDIDATE UNDER AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
-This candidate repairs THM-2239's time-zero degeneration without pretending
+This theorem repairs THM-2239's time-zero degeneration without pretending
 that the remaining shallow response has disappeared. The repair retains the
 first time-zero literal and centers the *intersection* of the two deep
 literals. Its exact finite computation produces a sharp structural
@@ -49,7 +48,7 @@ alternative:
     -> not controlled by this packet.
 ```
 
-The scalar ledger is not decremented. The result, if promoted, is a finite
+The scalar ledger is not decremented. The result is a finite
 relation-atlas reduction inside 120 rows, not a proof of LRC(14).
 
 ## 1. Scalar residual and the two checkpoint carriers
@@ -470,7 +469,7 @@ B(b,c)-s
  <delta_5,                                           (42)
 ```
 
-contradicting (24). This proves the candidate's main conditional
+contradicting (24). This proves the theorem's main conditional
 conclusion:
 
 ```text
@@ -519,7 +518,7 @@ two integer speeds are rationally related.
 
 ## 7. Boundary anatomy and interaction with THM-2255
 
-The full current first-depth-one ledger has `165` rows. This candidate
+The full current first-depth-one ledger has `165` rows. This theorem
 partitions it as follows:
 
 ```text
@@ -558,7 +557,7 @@ No combination is claimed here to close any of the `165` profiles.
 
 ## 8. Connection and loss ledger
 
-The candidate connection is
+The proved connection is
 
 ```text
 source:
@@ -599,7 +598,7 @@ degenerates at time zero, center a product of the remaining active literals
 along an even transfer return. This preserves a nonlinear incidence
 coordinate while keeping exact signed response zero.
 
-## 9. Reproduction and audit boundary
+## 9. Reproduction and independent verification
 
 Run
 
@@ -626,7 +625,10 @@ all coupling-polytope vertices;
 normal versus optimized transcript equality.                        (51)
 ```
 
-The mathematical proof, dependency directions, and interpretation of the
-finite relation alternative still require independent human/agent audit.
-Until explicit status promotion, this file remains unproved and outside the
-canonical dependency graph.
+Independent audit checked the unnormalized-transfer factor and all four
+time shifts in (8)--(11), the pointwise implication (13)--(14), the signed
+rearrangement (17)--(18), Bellman time orientation and terminal state,
+every exact rational primal-dual certificate, the response sign in
+(35), and both folded-defect bounds (38)--(39). Independent normal and
+optimized replays match the stored LF-normalized transcript and the
+frontmatter hashes. QED.
