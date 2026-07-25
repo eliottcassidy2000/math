@@ -1,0 +1,11 @@
+THM-2295 weighted basis-safe and scalar rank-five referee
+mixed_basis_floors=r0:8398080/40353607,r1:1119744/5764801,r2:139968/823543,r3:15552/117649,r4:1296/16807
+worst_rank4_floor=1296/16807
+Machin_pi_upper=104348/33215
+exact_Jackson_scan_N=2..99:first_accepted=99
+N98_FAIL:-301/1000000<gap<-300/1000000<0
+N99_PASS:1/2500<481/1000000<gap<482/1000000
+eta98>43/10000>1/234;eta99<213/50000<1/234
+N99_simple_margin=180981/420175000,coarse_margin=41/218491
+scalar_rank>=5_height=196,fixed_section_height=392
+all exact checks passed
