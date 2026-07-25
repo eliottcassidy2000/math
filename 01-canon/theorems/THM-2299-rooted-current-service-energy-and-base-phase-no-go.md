@@ -13,9 +13,11 @@ status: >
   does not select the THM-2276 pair atom. An exact local profile-(1,3,5),
   multiplier-four witness retains a c_1-to-c_2 handoff at prescribed
   expiration, a one-sheet nonzero word in every root character, and a
-  c_1-anchored minor equal to 8 modulo 13, while its exact pair atom
-  vanishes. The witness is not a global scalar cover, no profile is
-  excluded, and LRC(14) remains open.
+  c_1-anchored rank-six relation packet of height 13 with unit minor -4
+  modulo 13, while its exact pair atom vanishes. Thus even bounded anchored
+  rank six does not restore the missing terminal base phase. The witness is
+  not a global scalar cover, no profile is excluded, and LRC(14) remains
+  open.
 source: codex-2026-07-25-rooted-service-base-phase
 depends_on:
   - THM-2269-marked-expiration-root-spectrum-and-branch-state-no-go
@@ -24,10 +26,11 @@ related:
   - THM-2276-shallow-owner-residue-aligned-crossing
   - THM-2278-two-shallow-proper-root-spectrum-and-gap-ancestry-activation
   - THM-2282-thirteen-adic-saturation-and-unit-anchored-minor
+  - THM-2298-weighted-rank-five-facet-deficit-and-scalar-rank-six-harvest
 script: 04-computation/lrc14_rooted_current_service_phase_no_go_thm2299.py
 output: 05-knowledge/results/lrc14_rooted_current_service_phase_no_go_thm2299.out
-script_sha256: d25bf84532f5b673bf98596000cdbe2c9e18b13f212141018e3aec963eb942f7
-output_sha256: a228c6c1a02e8ba91a85e9476b4d44529666175e98527a283909e0ef3e01b92d
+script_sha256: 8177e9c6e179cf7713352110972c533381bafddd445e9841e442cb40e1d580d8
+output_sha256: 65047375be76b92e8d447b0b771c084485d2ba1fdebd9b2af0255f064f4a702d
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -371,6 +374,52 @@ det [[-4,0],[0,-2]]=8!=0 mod 13.                    (25)
 
 Thus even the anchored mod-thirteen transversality sidecar is present.
 
+The same row actually carries the full rank-six sidecar now forced
+abstractly by THM-2298. Order the nine coordinates as
+
+```text
+(H,q_1,q_2,q_3,q_4,q_5,c_1,c_2,c_3)
+```
+
+and, for `i=1,...,5`, take the integer coefficient rows
+
+```text
+s_i=e_(q_i)-q_i e_H.
+```
+
+Together with `p=13e_(q_1)-4e_(c_1)`, they are six relations of respective
+heights
+
+```text
+(4,2,3,6,10,13).                                   (25a)
+```
+
+On the six columns
+
+```text
+(q_1,q_2,q_3,q_4,q_5,c_1)
+```
+
+their matrix is
+
+```text
+[ I_5  0 ]
+[ 13 0 0 0 0 -4 ],
+```
+
+so its determinant is exactly
+
+```text
+-4 !=0 mod 13.                                     (25b)
+```
+
+Thus the witness has a `c_1`-anchored mod-thirteen rank-six packet by
+scalar height `13`. Under THM-2203's algebraic fixed-section lift, doubling
+only the `H` coefficients gives relation heights at most `20` and preserves
+the same pivot minor. This last sentence transports the relation packet
+only; it does not assert that the local phase carrier below survives the
+dyadic time change.
+
 Put
 
 ```text
@@ -460,10 +509,10 @@ For the pair character `a=4`, the support of the rooted word is exactly
 (W_4)_hat(0)=13G_hat(4)=0.                          (34)
 ```
 
-Equations (25), (30), (31), and (34) are the sharp no-go: even one-sheet
-root ancestry, exact current `c_2` service, the correct clock, and an
-anchored unit minor do not prevent cancellation of the signed base phase
-between two terminal components.
+Equations (25b), (30), (31), and (34) are the sharp no-go: even one-sheet
+root ancestry, exact current `c_2` service, the correct clock, and a
+height-13 `c_1`-anchored rank-six unit minor do not prevent cancellation
+of the signed base phase between two terminal components.
 
 ## 5. Connection and loss ledger
 
@@ -478,7 +527,8 @@ map:
 preserved:
   selected owner j, exact depth lambda_j, exact clock lambda_j+1,
   ancestry multiplicity, current residual R_j, one named directed target
-  blocker c_t, and every nonzero C_13 root character;
+  blocker c_t, every nonzero C_13 root character, and in the hostile row a
+  c_1-anchored rank-six relation packet of height 13;
 
 quantitative output:
   uncolored rooted energy >rho_j^2, named-edge rooted energy >rho_j^2/4,
@@ -489,7 +539,8 @@ destroyed by taking only energy:
 
 smallest hostile test:
   multiplier m=4, profile (1,3,5), two quarter-turn-separated cells,
-  one rooted sheet, prescribed c_1-to-c_2 service, anchored minor 8;
+  one rooted sheet, prescribed c_1-to-c_2 service, and anchored rank-six
+  minor -4;
 
 needed sidecar:
   a genuinely global phase-coherence or signed cover identity coupling
@@ -506,7 +557,8 @@ or decide which THM-2296 arm a genuine global counterexample occupies.
 The companion uses only exact integer and `Fraction` arithmetic. It checks
 the two return floors and squared energy floors, all twelve root characters,
 the covariant jump ledger, the complete scalar row and valuation profile,
-both relation rows and the anchored minor, every source and target label,
+the height-13 anchored rank-six relation packet and its unit minor, every
+source and target label,
 the exact minimum half-width margin, the one-sheet transport and masses, and
 the quarter-turn cancellations (32)--(34). Reproduce with
 

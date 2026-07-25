@@ -14,6 +14,9 @@ hostile_speeds=H:1;q:(4, 2, 3, 6, 10);c:(13, 2197, 742586)
 hostile_pair=13q1-4c1=0;K=52;kappa=4
 hostile_second_relation=q1-2q2=0
 hostile_anchored_minor=8
+hostile_anchored_rank6_heights=(4, 2, 3, 6, 10, 13)
+hostile_anchored_rank6_columns=(q1,q2,q3,q4,q5,c1)
+hostile_anchored_rank6_minor=-4
 hostile_source_centers=(Fraction(127, 208), Fraction(129, 208))
 hostile_target_centers=(Fraction(3, 16), Fraction(13, 16))
 hostile_epsilon=1/1000000000000

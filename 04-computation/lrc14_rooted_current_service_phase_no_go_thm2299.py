@@ -96,6 +96,54 @@ def main() -> None:
     require(anchored_minor == 8, "anchored minor changed")
     require(anchored_minor % P != 0, "anchored minor ramified")
 
+    # The hostile row already has a much stronger c1-anchored rank-six
+    # relation packet.  In coordinate order
+    #
+    #   (H,q1,q2,q3,q4,q5,c1,c2,c3),
+    #
+    # take r_i=q_i-q_i_value*H and p=13q1-4c1.  On the pivot columns
+    # (q1,...,q5,c1), the first five rows are I_5 and the last row is
+    # (13,0,0,0,0,-4), so the determinant is exactly -4.
+    speed_row = (H, *qs, *cs)
+    rank_six_rows: list[tuple[int, ...]] = []
+    for i, q in enumerate(qs, start=1):
+        row = [0] * len(speed_row)
+        row[0] = -q
+        row[i] = 1
+        rank_six_rows.append(tuple(row))
+    pair_row = [0] * len(speed_row)
+    pair_row[1] = P
+    pair_row[6] = -4
+    rank_six_rows.append(tuple(pair_row))
+
+    require(
+        all(sum(a * b for a, b in zip(row, speed_row)) == 0 for row in rank_six_rows),
+        "anchored rank-six packet contains a nonrelation",
+    )
+    rank_six_heights = tuple(max(abs(a) for a in row) for row in rank_six_rows)
+    require(
+        rank_six_heights == (4, 2, 3, 6, 10, 13),
+        "anchored rank-six heights changed",
+    )
+    pivot_columns = (1, 2, 3, 4, 5, 6)
+    pivot_matrix = tuple(
+        tuple(row[j] for j in pivot_columns) for row in rank_six_rows
+    )
+    require(
+        pivot_matrix
+        == (
+            (1, 0, 0, 0, 0, 0),
+            (0, 1, 0, 0, 0, 0),
+            (0, 0, 1, 0, 0, 0),
+            (0, 0, 0, 1, 0, 0),
+            (0, 0, 0, 0, 1, 0),
+            (13, 0, 0, 0, 0, -4),
+        ),
+        "anchored rank-six pivot matrix changed",
+    )
+    rank_six_minor = -4
+    require(rank_six_minor % P != 0, "anchored rank-six minor ramified")
+
     root = 8
     require((qs[0] * root) % P == 6, "pair-aligned root changed")
 
@@ -194,6 +242,9 @@ def main() -> None:
     print("hostile_pair=13q1-4c1=0;K=52;kappa=4")
     print("hostile_second_relation=q1-2q2=0")
     print(f"hostile_anchored_minor={anchored_minor}")
+    print(f"hostile_anchored_rank6_heights={rank_six_heights}")
+    print("hostile_anchored_rank6_columns=(q1,q2,q3,q4,q5,c1)")
+    print(f"hostile_anchored_rank6_minor={rank_six_minor}")
     print(f"hostile_source_centers={source_centers}")
     print(f"hostile_target_centers={target_centers}")
     print(f"hostile_epsilon={epsilon}")
