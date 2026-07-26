@@ -1,0 +1,16 @@
+THM-2380 CROSS-WORD CHARGED CORRELATION - exact audit
+group: p=13 N=169
+cross-correlation/inverse target cells: 169/169
+direct frequency cross-correlation controls: 4
+pair-twist orbit cells: 2197
+direct pair-twist Parseval controls: 6
+raw target-projector cells/denominator: 169/371293
+complete-Cayley denominator/shared energy: 57122/125
+direct direction Parseval controls: 3
+coordinate-line energies: L1=50 L2=218
+coordinate-mask energies: E10=16 E01=100 E11=9
+one-quadrature reconstruction determinant: nonzero
+disjoint-support hostile: deletion=1 retained=0 overlap=0
+distinct-nonzero hostile: deletion=1 retained=1 overlap=0
+ordinary-union ambiguity: singletons=(1,1) union=2 oriented=(-i,+i)
+PASS

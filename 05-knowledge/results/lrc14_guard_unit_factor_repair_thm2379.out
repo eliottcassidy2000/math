@@ -1,0 +1,14 @@
+THM-2379 guard/unit factor-repair exact companion
+rational refinement: L1 boundaries=26; L2 boundaries=26; combined cells=52
+L=1: anchored cell pairs=315; distinct bit-profile pairs=69; corner_min=11/169; actual_cell_energy_min=144/28561
+L=2: anchored cell pairs=585; distinct bit-profile pairs=161; corner_min=9/169; actual_cell_energy_min=360/28561
+coefficient floors before status split: unit=11/24336; guard=1/2704
+energy floors before status split: unit=121/4112784; guard=9/456976
+four-way labelled floors: unit=11/97344; guard=1/10816
+four-way labelled energy floors: unit=121/65804544; guard=9/7311616
+91-unit bank: raw=324; live=277; septimal_zero=47; live_pairs=76729
+empty-guard: center=1/8; danger=H; open_radius=1/25256; first_boundary=q5
+empty-unit: center=1/2; danger=q1; open_radius=3/15379; first_boundary=c3
+thm2269-x0: center=79/338; danger=c1; open_radius=64/533533; first_boundary=q5
+thm2269-x1: center=1/26; danger=H,q2,q3,q4,q5; open_radius=1/41041; first_boundary=q5
+VERDICT: anchored failed-safe mass forces a mixed complement probe
