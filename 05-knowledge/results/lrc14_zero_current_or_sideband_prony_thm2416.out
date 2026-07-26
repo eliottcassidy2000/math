@@ -8,8 +8,12 @@ last strict ratio upper bound=1/999
 Boolean product jump pairs checked=16384
 cyclic composition checks=640
 J(fg)<=J(f)+J(g), J(f(R.))<=R J(f): PASS
+thirteen-fold jump-orbit checks=128
+1/13-periodic Fourier support lies in 13Z: PASS
 THM-2410 crude invoice=R*J(Q)+26*(sum(w_i)+c)
 sample crude invoice=5564
+sample quotient invoice=floor(L_crude/13)=428
+physical sideband X=13Y, 13<=X<=L-13 (SHARP)
 rational exponent-20 floor=1048576/361188648084531445929920877641340156544317601
-sideband is physical total frequency, not relation current
+sideband is 13-divisible physical frequency, not relation current
 THM-2416 exact companion PASS

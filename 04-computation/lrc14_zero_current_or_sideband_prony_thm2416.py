@@ -117,6 +117,33 @@ def main():
             )
             composition_checks += 1
 
+    # The physical THM-2410 packet is 1/13-periodic.  A quotient word
+    # therefore lifts to thirteen identical jump orbits.
+    thirteen_lift_checks = 0
+    for word in words:
+        lifted = tuple(
+            word[index % len(word)]
+            for index in range(13 * len(word))
+        )
+        require(
+            jump_count(lifted) == 13 * jump_count(word),
+            "thirteen-fold jump orbit failed",
+        )
+        thirteen_lift_checks += 1
+
+    # Exact cyclotomic check: the 13 translates cancel every character
+    # X not divisible by 13.
+    for character in range(1, 13):
+        coefficients = [0] * 13
+        for shift in range(13):
+            coefficients[(-character * shift) % 13] += 1
+        top = coefficients[12]
+        remainder = tuple(value - top for value in coefficients[:12])
+        require(
+            remainder == (0,) * 12,
+            f"thirteen-orbit Fourier cancellation failed at X={character}",
+        )
+
     gram_floor = Fraction(2, 169) ** 20
     require(gram_floor > 0, "THM-2410 rational Gram floor vanished")
 
@@ -129,6 +156,8 @@ def main():
         + 26 * (sum(sample_speeds) + sample_c)
     )
     require(sample_jump_invoice == 5564, "sample jump invoice mismatch")
+    sample_quotient_invoice = sample_jump_invoice // 13
+    require(sample_quotient_invoice == 428, "sample quotient invoice mismatch")
 
     print("THM-2416 ZERO-CURRENT OR SIDEBAND PRONY EXACT AUDIT")
     print(f"sharp Vandermonde lengths checked={sharp_cases} (L=2..9)")
@@ -140,13 +169,17 @@ def main():
     print(f"Boolean product jump pairs checked={product_pairs}")
     print(f"cyclic composition checks={composition_checks}")
     print("J(fg)<=J(f)+J(g), J(f(R.))<=R J(f): PASS")
+    print(f"thirteen-fold jump-orbit checks={thirteen_lift_checks}")
+    print("1/13-periodic Fourier support lies in 13Z: PASS")
     print("THM-2410 crude invoice=R*J(Q)+26*(sum(w_i)+c)")
     print(f"sample crude invoice={sample_jump_invoice}")
+    print(f"sample quotient invoice=floor(L_crude/13)={sample_quotient_invoice}")
+    print("physical sideband X=13Y, 13<=X<=L-13 (SHARP)")
     print(
         "rational exponent-20 floor="
         f"{gram_floor.numerator}/{gram_floor.denominator}"
     )
-    print("sideband is physical total frequency, not relation current")
+    print("sideband is 13-divisible physical frequency, not relation current")
     print("THM-2416 exact companion PASS")
 
 

@@ -1942,6 +1942,7 @@ hostile is not asserted to be a physical scalar-row trajectory.
 Exact companion for **CANDIDATE THM-2416**. It checks the sharp
 `L-1` periodic jump-Prony boundary for `2<=L<=9`, the two-jump
 no-uniform-amplitude hostile, exhaustive Boolean product/composition jump
-invoices, and the inherited rational exponent-`20` THM-2410 Gram floor.
-The surviving sideband is typed only as physical total frequency, not as
-a relation current. Normal and optimized runs agree and end in `PASS`.
+invoices, thirteen-fold jump orbits, and the inherited rational
+exponent-`20` THM-2410 Gram floor. The surviving sideband lies in `13Z`
+and is typed only as quotient-scale physical frequency, not as a relation
+current. Normal and optimized runs agree and end in `PASS`.

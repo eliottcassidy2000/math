@@ -8,8 +8,10 @@ status: >
   1<=X<=L-1. Periodicity supplies the missing zeroth Prony moment, and
   the bound L-1 is sharp. Applied to each eligible physical THM-2410
   packet, either its zero-frequency full-coordinate current survives,
-  or a bounded nonzero physical sideband survives; in the latter branch
-  the total sideband energy retains the full exponent-20 Gram floor.
+  or a bounded nonzero physical sideband survives. The common-root
+  symmetry makes the packet 1/13-periodic, so every such sideband is
+  X=13Y and quotient Prony gives 13<=X<=L-13. In that branch the total
+  sideband energy retains the full exponent-20 Gram floor.
   No uniform single-sideband amplitude follows without endpoint
   separation, and the sideband frequency is not yet a relation current.
 source: codex-2026-07-26-full-coordinate-sideband-prony
@@ -20,8 +22,8 @@ related:
   - THM-2408-endpoint-prony-resultant-clock-separation-and-shared-node-boundary
 script: 04-computation/lrc14_zero_current_or_sideband_prony_thm2416.py
 output: 05-knowledge/results/lrc14_zero_current_or_sideband_prony_thm2416.out
-script_sha256: dd5de18c529fc74744fab7657f6a7467c9cbe976e08d1745f8e0ad58628338de
-output_sha256: c21d72bf86fe9d764eb92012866bff710d94d426e29bd5eff6929fc933381129
+script_sha256: a09cb2e73e0b4cfea543d3e1688cf3e24263865b73f197946eecb566d2a60e85
+output_sha256: bc0aa5834dff424c18a58dd407e9ee0225629f9ba5acae2f888d75b30a4dacf7
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -207,23 +209,67 @@ L_(m,k)
 ```
 
 Coincident endpoints and product cancellations only improve this bound.
+The common-root symmetry below makes `L_(m,k)` divisible by thirteen.
+Writing
+
+```text
+L_(m,k)=13L_0,                                                (20)
+```
+
+equation (19) also gives the quotient invoice
+
+```text
+L_0<=floor(L_crude/13).                                      (21)
+```
 
 ## 4. Application to every eligible THM-2410 packet
 
 THM-2410 proves
 
 ```text
-B(m,k)=Fhat_(m,k)(0),                                        (20)
+B(m,k)=Fhat_(m,k)(0),                                        (22)
 
 ||F_(m,k)||_2^2
  >=mu(Q)(sin(pi/13)/13)^20
- >mu(Q)(2/169)^20                                           (21)
+ >mu(Q)(2/169)^20                                           (23)
 ```
 
 for every
 
 ```text
-m!=0,           every k_i!=0,           k.wbar=0.            (22)
+m!=0,           every k_i!=0,           k.wbar=0.            (24)
+```
+
+There is an additional exact symmetry.  From the finite definitions of
+the factors,
+
+```text
+A_(i,k_i)(x+t/13)
+ =zeta_13^(t k_i w_i)A_(i,k_i)(x).                           (25)
+```
+
+The deep and word factors are invariant because `13|c,R`.  Hence (24)
+gives
+
+```text
+F_(m,k)(x+t/13)
+ =zeta_13^(t k.wbar)F_(m,k)(x)
+ =F_(m,k)(x).                                                (26)
+```
+
+Thus there is a finite step function `f_(m,k)` with
+
+```text
+F_(m,k)(x)=f_(m,k)(13x).                                     (27)
+```
+
+Every effective quotient jump has a full orbit of thirteen distinct
+jumps, proving (20).  Fourier disintegration also gives
+
+```text
+Fhat_(m,k)(X)=0                         if 13 does not divide X,
+
+Fhat_(m,k)(13Y)=fhat_(m,k)(Y).                               (28)
 ```
 
 Therefore exactly one of the following holds.
@@ -231,7 +277,7 @@ Therefore exactly one of the following holds.
 ### Mean branch
 
 ```text
-B(m,k)!=0.                                                   (23)
+B(m,k)!=0.                                                   (29)
 ```
 
 Then THM-2410's conditional Abel extraction supplies an all-coordinate
@@ -241,27 +287,37 @@ unit residue modulo thirteen and an exact deep multiplier coprime to
 ### Sideband branch
 
 ```text
-B(m,k)=0.                                                    (24)
+B(m,k)=0.                                                    (30)
 ```
 
-The Gram floor (21) makes `F_(m,k)` nonzero.  The periodic sideband lemma
-gives
+The Gram floor (23) makes `f_(m,k)` nonzero.  Its mean is zero, and it
+has exactly `L_0` effective jumps.  The periodic sideband lemma gives
 
 ```text
-1<=X_side<=L_(m,k)-1<=L_crude-1,
+1<=Y<=L_0-1,
 
-Fhat_(m,k)(X_side)!=0,                                       (25)
+X_side=13Y,
+
+13<=X_side<=L_(m,k)-13,
+
+Fhat_(m,k)(X_side)=fhat_(m,k)(Y)!=0,                         (31)
 ```
+
+The upper bound `L_(m,k)-13` is sharp within the class of
+`1/13`-periodic finite step functions: lift the `L_0`-node sharp
+construction (10)--(12) by `F(x)=f(13x)`.
 
 and Parseval preserves the full quantitative statement
 
 ```text
 sum_(X!=0)|Fhat_(m,k)(X)|^2
  =||F_(m,k)||_2^2
- >=mu(Q)(sin(pi/13)/13)^20.                                 (26)
+ >=mu(Q)(sin(pi/13)/13)^20.                                 (32)
 ```
 
-Equation (25) is a physical total-frequency defect.  Multiplying (17)
+Equations (28) and (31) show that the defect is necessarily
+thirteen-divisible.  It is a quotient-scale physical total frequency,
+not a thirteen-unit relation coordinate.  Multiplying (17)
 by `exp(-2pi i X_side x)` changes the total frequency balance; it does
 not produce THM-2410's zero-frequency relation current, retain its exact
 Abel address, or imply an all-`91`-unit relation.  A common endpoint or
@@ -275,15 +331,16 @@ This theorem proves:
   functions;
 - the exact Parseval energy retention in the zero-mean branch;
 - the explicit THM-2410 jump invoice (19); and
-- the mean-or-bounded-sideband dichotomy for every eligible physical
-  full-coordinate packet.
+- the exact `1/13`-periodicity, quotient invoice (21), and
+  mean-or-thirteen-divisible-sideband dichotomy for every eligible
+  physical full-coordinate packet.
 
 It does not prove:
 
 - that a THM-2410 mean is nonzero;
 - any uniform magnitude for the bounded sideband;
-- that the sideband is relation-neutral or shares a preselected owner,
-  triangle, or terminal endpoint;
+- that the thirteen-divisible sideband is relation-neutral, a unit
+  residue, or shares a preselected owner, triangle, or terminal endpoint;
 - a mod-seven word-phase repair; or
 - a scalar-row exclusion or LRC(14).
 
@@ -299,7 +356,8 @@ The dependency-free companion:
 - verifies the exact two-jump norm and the rational upper bound
   `epsilon/(1-epsilon)` from (15);
 - checks the product/composition jump invoice on finite cyclic step
-  tables; and
+  tables, the thirteen-fold jump orbits, and Fourier support in `13Z`;
+  and
 - records the exact rational THM-2410 exponent-`20` Gram floor.
 
 Run:
