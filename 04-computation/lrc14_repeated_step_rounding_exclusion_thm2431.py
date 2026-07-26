@@ -3,8 +3,9 @@
 
 The script reconstructs the normalized THM-2430 exact-cover atlas,
 extracts every directed centre-difference bank for a repeated unsigned
-step, thickens those banks by the nearest-integer addition defect, and
-checks the resulting 50/91 versus 4/7 contradiction.
+step, and checks two parent-mass bounds.  The direct rounding-error
+intervals give the sharp retained cap 39/91; an independent, coarser
+nearest-integer-defect argument gives 50/91.  Both contradict 4/7.
 """
 
 from __future__ import annotations
@@ -253,12 +254,128 @@ require(
     "wrong thickened residue-bank sizes",
 )
 
-max_bank = max(map(len, expanded_banks.values()))
-require(max_bank == 50, "wrong maximum parent residue bank")
-parentwise_union = set().union(*expanded_banks.values())
+coarse_max_bank = max(map(len, expanded_banks.values()))
+require(coarse_max_bank == 50, "wrong coarse parent residue bank")
+coarse_parentwise_union = set().union(*expanded_banks.values())
 require(
-    len(parentwise_union) == 66,
-    "wrong union for the invalid parentwise-pair shortcut",
+    len(coarse_parentwise_union) == 66,
+    "wrong coarse union for the invalid parentwise-pair shortcut",
+)
+
+
+# A direct error comparison is stronger.  If signed lifts v,u obey
+# v-u=91*n and p_w=round(wY), then
+#
+#   p_v-p_u-91*nY = (uY-p_u)-(vY-p_v) in (-1,1).
+#
+# Divide the atlas centre difference by its repeated step.  If Q_d is
+# that normalized directed bank and x={nY}, then 91*x is within one of
+# Q_d.  Apart from null endpoints, this is exactly the union of the
+# unit cells indexed by Q_d and Q_d-1.
+normalized_difference_banks: dict[int, set[int]] = {}
+sharp_phase_cells: dict[int, set[int]] = {}
+for step, differences in centre_differences.items():
+    inverse = pow(step, -1, L)
+    normalized_difference_banks[step] = {
+        (inverse * difference) % L for difference in differences
+    }
+    sharp_phase_cells[step] = normalized_difference_banks[step] | {
+        (residue - 1) % L
+        for residue in normalized_difference_banks[step]
+    }
+
+expected_sharp_sizes = {
+    1: 39,
+    2: 35,
+    3: 6,
+    4: 9,
+    5: 12,
+    44: 10,
+    45: 8,
+}
+require(
+    {step: len(values) for step, values in sharp_phase_cells.items()}
+    == expected_sharp_sizes,
+    "wrong direct rounding-error phase-locus sizes",
+)
+sharp_max_bank = max(map(len, sharp_phase_cells.values()))
+require(sharp_max_bank == 39, "wrong sharp parent residue bank")
+sharp_parentwise_union = set().union(*sharp_phase_cells.values())
+require(
+    len(sharp_parentwise_union) == 57,
+    "wrong sharp union for the invalid parentwise-pair shortcut",
+)
+
+
+# Positive hostile control: THM-2427's strict local packet is not
+# pointwise excluded.  Its first two ordinary speeds have repeated
+# step one and land strictly inside the sharp phase locus.
+hostile_parent = Fraction(11, 83)
+hostile_first = 547
+hostile_second = 1821
+hostile_quotient = (hostile_second - hostile_first) // L
+require(hostile_quotient == 14, "hostile lift quotient changed")
+hostile_difference = (
+    nearest(hostile_second * hostile_parent)
+    - nearest(hostile_first * hostile_parent)
+)
+hostile_error = hostile_difference - L * hostile_quotient * hostile_parent
+hostile_phase = hostile_quotient * hostile_parent
+hostile_phase -= hostile_phase.numerator // hostile_phase.denominator
+hostile_cell = (L * hostile_phase).numerator // (L * hostile_phase).denominator
+require(
+    hostile_difference % L in normalized_difference_banks[1],
+    "local hostile left the repeated-step-one bank",
+)
+require(
+    hostile_error == Fraction(13, 83) and abs(hostile_error) < 1,
+    "local hostile rounding error changed",
+)
+require(
+    hostile_cell in sharp_phase_cells[1],
+    "local hostile left the sharp phase locus",
+)
+
+# The same finite packet is not a global scalar cover.  At another
+# endpoint-generic blocker-safe quotient parent, all ordinary words
+# remain disjoint but overlap the guard in fifteen incidences.
+global_hostile_y = Fraction(1, 5)
+global_hostile_parent = Fraction(2, 5)  # {7*y}
+global_hostile_blocker_norms = tuple(
+    circle_norm(quotient * global_hostile_y)
+    for quotient in (7, 91, 1183)
+)
+require(
+    global_hostile_blocker_norms
+    == (Fraction(2, 5), Fraction(1, 5), Fraction(2, 5)),
+    "global hostile blocker norms changed",
+)
+global_hostile_masks = []
+for index, speed in enumerate(
+    (1, 547, 1821, 3095, 4369, 5643)
+):
+    threshold = Fraction(1, 7) if index == 0 else Fraction(1, 14)
+    global_hostile_masks.append(
+        {
+            root
+            for root in range(L)
+            if circle_norm(
+                Fraction(speed) * (global_hostile_parent + root) / L
+            )
+            < threshold
+        }
+    )
+ordinary_global_union = set().union(*global_hostile_masks[1:])
+require(
+    len(ordinary_global_union) == 65
+    and sum(map(len, global_hostile_masks[1:])) == 65,
+    "global hostile ordinary disjointness changed",
+)
+require(
+    sum(map(len, global_hostile_masks)) == L
+    and len(set().union(*global_hostile_masks)) == 76
+    and len(global_hostile_masks[0] & ordinary_global_union) == 15,
+    "global hostile top-cover failure changed",
 )
 
 
@@ -307,12 +424,22 @@ require(
 )
 require(sum(uniform_fibre_masses.values()) == 1, "fibre masses do not sum to one")
 
-parent_cap = Fraction(max_bank, L)
+coarse_parent_cap = Fraction(coarse_max_bank, L)
+sharp_parent_cap = Fraction(sharp_max_bank, L)
 blocker_safe_floor = Fraction(4, 7)
-gap = blocker_safe_floor - parent_cap
-require(parent_cap == Fraction(50, 91), "wrong parent cap")
+coarse_gap = blocker_safe_floor - coarse_parent_cap
+sharp_gap = blocker_safe_floor - sharp_parent_cap
+require(coarse_parent_cap == Fraction(50, 91), "wrong coarse parent cap")
+require(sharp_parent_cap == Fraction(39, 91), "wrong sharp parent cap")
 require(blocker_safe_floor == Fraction(52, 91), "wrong blocker-safe floor")
-require(gap == Fraction(2, 91) and gap > 0, "mass contradiction failed")
+require(
+    coarse_gap == Fraction(2, 91) and coarse_gap > 0,
+    "coarse mass contradiction failed",
+)
+require(
+    sharp_gap == Fraction(13, 91) and sharp_gap > 0,
+    "sharp mass contradiction failed",
+)
 
 
 m_zero_before = {
@@ -345,12 +472,16 @@ for step in repeatable_steps:
     print(
         f"step_{step}:"
         f"centre_differences={len(centre_differences[step])},"
-        f"expanded_parent_residues={len(expanded_banks[step])}"
+        f"coarse_residues={len(expanded_banks[step])},"
+        f"sharp_phase_cells={len(sharp_phase_cells[step])}"
     )
-print(f"maximum_parent_cap={parent_cap}")
-print(f"invalid_parentwise_union_cap={len(parentwise_union)}/{L}")
+print(f"coarse_parent_cap={coarse_parent_cap}")
+print(f"sharp_parent_cap={sharp_parent_cap}")
+print(f"invalid_parentwise_sharp_union={len(sharp_parentwise_union)}/{L}")
+print("local_positive_hostile=step_1_phase_locus_PASS")
+print("global_safe_parent_hostile=union_76_guard_overlap_15_PASS")
 print(f"blocker_safe_image_floor={blocker_safe_floor}")
-print(f"strict_mass_gap={gap}")
+print(f"sharp_mass_gap={sharp_gap}")
 print("M0_remaining=" + ",".join(map(str, m_zero_after)))
 print("Mpositive_remaining=" + ",".join(map(str, m_positive_after)))
 print("ALL CHECKS PASSED")

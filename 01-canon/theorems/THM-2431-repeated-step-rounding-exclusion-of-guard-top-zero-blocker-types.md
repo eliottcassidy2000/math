@@ -8,13 +8,14 @@ status: >
   image set of parent phases of Haar mass at least 4/7=52/91. The five
   normalized ordinary steps are fixed speed-residue data. Every one
   of the 62 exact tilings repeats a step, so one fixed labelled pair
-  repeats on every parent. Its centre difference, together with the
-  nearest-integer addition defect, confines the parent to at most 50
-  of the 91 equal-mass phase residues. The resulting 50/91<52/91
-  contradiction excludes all t=5,b=0 valuation types. The deep-c_3
-  residual becomes two types at M=0 and two at M>0. This is a
-  regime-typed valuation reduction, not a scalar-profile decrement or
-  a proof of LRC(14).
+  repeats on every parent. Its exact centre-difference bank and direct
+  rounding-error interval confine the parent to at most 39 of the 91
+  equal-mass phase cells; the coarser nearest-integer addition-defect
+  argument independently gives 50. The resulting
+  39/91=3/7<4/7 contradiction excludes all t=5,b=0 valuation types.
+  The deep-c_3 residual becomes two types at M=0 and two at M>0. This
+  is a regime-typed valuation reduction, not a scalar-profile
+  decrement or a proof of LRC(14).
 source: codex-2026-07-26-repeated-step-rounding-exclusion
 depends_on:
   - THM-2427-guard-top-thirteen-root-capacity-and-residual-types
@@ -23,8 +24,8 @@ related:
   - THM-2432-guard-top-pair-cage-and-low-blocker-residual-exclusion
 script: 04-computation/lrc14_repeated_step_rounding_exclusion_thm2431.py
 output: 05-knowledge/results/lrc14_repeated_step_rounding_exclusion_thm2431.out
-script_sha256: 9c5bfadf45cd2876654b1b8f5b705fe5799525f1a193f2b9d412e38d97d9ccdf
-output_sha256: 6fa4ad91ce4c5a99ea5722f488fd89bfeb0e19eb950c68b6b0310e7bf19b44cb
+script_sha256: 0daf422a75703d6183bcc1fecf81acddae9c756165a072f10d16fd78c1533a41
+output_sha256: 74050a07e99390daaf89b2f827124256dc8879bf1b81b53fc22a34877e669b0b
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -41,13 +42,13 @@ mass cap:
 
 ```text
 fixed repeated pair
-  -> nearest-integer residue bank of size at most 50
-  -> parent mass at most 50/91
-  -> contradiction with the blocker-safe image mass 4/7=52/91.     (1)
+  -> exact rounding-error phase bank of size at most 39
+  -> parent mass at most 39/91=3/7
+  -> contradiction with the blocker-safe image mass 4/7.           (1)
 ```
 
 The word `fixed` is load-bearing. Choosing a different repeated pair
-on different parents would give only a `66/91` union bound and no
+on different parents would give only a `57/91` sharp union bound and no
 contradiction.
 
 ## 1. Typed setting and the large parent set
@@ -68,8 +69,7 @@ L=91,                          N=7^(M+1),
 u_0=H/7^M,                     u_i=q_i/7^M.                       (3)
 ```
 
-The six `u_i` are positive units modulo `91`, and the five ordinary
-speeds are pairwise distinct.
+The six `u_i` are positive units modulo `91`.
 
 Let
 
@@ -219,8 +219,10 @@ Equation (12) then gives
 u_j=sigma u_i+Ln                                                   (16)
 ```
 
-for an integer `n`. If `sigma=1`, pairwise distinctness gives
-`n!=0`; if `sigma=-1`, positivity gives `n>0`.
+for an integer `n`. In fact `n!=0`: otherwise
+`u_j=sigma u_i`, and norm symmetry makes the two physical danger
+masks identical on (8), contradicting their two nonempty, disjoint
+thirteen-point blocks in the exact tiling.
 
 Nearest-integer rounding satisfies
 
@@ -242,45 +244,67 @@ c_i(Y)-c_j(Y)
 For each repeatable `d`, let `S_d` be the set of all directed
 differences between intrinsic centres of two same-`d` ordinary blocks
 among the `62` normalized THM-2430 tilings. Each `S_d` is symmetric.
-The exact atlas gives:
-
-| `d` | `|S_d|` | `|d^(-1)S_d+{-1,0,1}|` |
-|---:|---:|---:|
-| 1 | 28 | 50 |
-| 2 | 24 | 44 |
-| 3 | 4 | 8 |
-| 4 | 6 | 12 |
-| 5 | 8 | 16 |
-| 44 | 8 | 12 |
-| 45 | 4 | 12 |
-
-The symmetry absorbs both `tau` in (18) and the reflected guard
-normalization. Consequently every `Y in P` satisfies
+Put
 
 ```text
-R(LnY) mod L
- in B_d:=d^(-1)S_d+{-1,0,1},              |B_d|<=50.              (19)
+Q_d=d^(-1)S_d mod L.                                              (19)
 ```
+
+There is a sharper use of the same rounding law than the three-valued
+defect in (17). Write
+
+```text
+rho_i(Y)=u_iY-R(u_iY),                    |rho_i(Y)|<1/2.
+```
+
+Equation (16) gives directly
+
+```text
+R(u_jY)-sigma R(u_iY)
+ =LnY+sigma rho_i(Y)-rho_j(Y).                                  (20)
+```
+
+The symmetry of `S_d` absorbs the fixed orientations in (13), (18),
+and (20). Therefore every `Y in P` satisfies
+
+```text
+dist_(R/LZ)(L{nY},Q_d)<1.                                        (21)
+```
+
+Apart from null endpoints, the locus (21) is exactly the union of the
+unit numerator cells indexed by
+
+```text
+C_d=Q_d union (Q_d-1).                                           (22)
+```
+
+The exact atlas gives both this sharp cell count and, as an independent
+coarser control, the three-valued bank from (17):
+
+| `d` | `|S_d|` | `|Q_d+{-1,0,1}|` | `|C_d|` |
+|---:|---:|---:|---:|
+| 1 | 28 | 50 | 39 |
+| 2 | 24 | 44 | 35 |
+| 3 | 4 | 8 | 6 |
+| 4 | 6 | 12 | 9 |
+| 5 | 8 | 16 | 12 |
+| 44 | 8 | 12 | 10 |
+| 45 | 4 | 12 | 8 |
 
 For every nonzero integer `n`, multiplication by `n` preserves Haar
-measure. On a Haar-uniform `x`, the variable
+measure. The `91` cells of `floor(L{nY})` have equal mass `1/91`.
+Consequently (21)--(22) imply the uniform sharp cap
 
 ```text
-R(Lx) mod L
+mu(P)<=39/91=3/7.                                                (23)
 ```
 
-has exactly `L` equal-mass fibres: residues `1,...,90` each occupy
-one interval of length `1/L`, while residue zero is the union of two
-endpoint half-intervals of total length `1/L`. Hence (19) implies
+The coarser nearest-integer-defect route through (18) independently
+gives `mu(P)<=50/91`. The sharp cap and (6) contradict one another
+with exact slack
 
 ```text
-mu(P)<=50/91.                                                      (20)
-```
-
-Equations (6) and (20) contradict one another with the exact slack
-
-```text
-52/91-50/91=2/91.                                                 (21)
+4/7-3/7=1/7.                                                     (24)
 ```
 
 This excludes every THM-2427 residual satisfying `t=5,b=0`.
@@ -296,7 +320,7 @@ At `M=0`, THM-2427's three types reduce from
 to
 
 ```text
-(1,5,1,8), (2,5,2,9).                                            (22)
+(1,5,1,8), (2,5,2,9).                                            (25)
 ```
 
 At positive `M`, its four primitive types reduce from
@@ -308,7 +332,7 @@ At positive `M`, its four primitive types reduce from
 to
 
 ```text
-(2,0,0,2), (2,5,1,8).                                            (23)
+(2,0,0,2), (2,5,1,8).                                            (26)
 ```
 
 This is a strict regime-typed valuation reduction. It does not remove
@@ -334,15 +358,25 @@ The dependency-free companion:
   the table;
 - checks the nearest-integer sum and difference defects exactly on a
   large rational control bank;
-- checks the equal-mass nearest-residue fibres and the exact `2/91`
-  contradiction; and
-- verifies the residual lists (22)--(23).
+- checks the exact sharp phase-cell bank, the independent coarse
+  nearest-residue bank, and the sharp `1/7` contradiction; and
+- retains THM-2427's strict packet as a positive local control, while
+  exhibiting a different blocker-safe parent where its six top words
+  have union size `76` and guard-overlap incidence `15`; and
+- verifies the residual lists (25)--(26).
 
-The union of all seven `B_d` has size `66`, so a proof which chooses
-the repeated pair after seeing the parent would give only `66/91`.
-This is the sharp quantifier boundary of the argument. Local physical
+The union of all seven sharp `C_d` has size `57`, so a proof which
+chooses the repeated pair after seeing the parent would give only
+`57/91`. This is the sharp quantifier boundary of the argument. Local physical
 THM-2430 packets remain possible on smaller phase sets; the theorem
 uses the scalar cover only through the large image set (6).
+
+Concretely, THM-2427's packet at `y=11/581` has `Y=11/83`, repeated
+step one, lift quotient `n=14`, and directed centre difference
+`-13 mod 91`; its rounding error is the strict value `13/83<1`.
+At the separate quotient parent `y=1/5`, all three blockers are still
+safe, but the top-word union has only `76` points. This explicitly
+separates local realizability from the global parent-mass premise.
 
 Normal and optimized runs must match
 
@@ -354,9 +388,8 @@ byte-for-byte.
 
 ## 7. Independent audit
 
-Three independent hostile audits reconstructed the `62` covers and
-all seven banks, checked the fixed-pair quantifier, the signed centre
-law, the common-root parent map including `floor(Ny)`, Haar image
-measure, and the low-blocker scope. All accepted the proof conditional
-only on promotion of THM-2430's atlas. THM-2430 is now promoted with
-the same exact transcript and audited physical typing. QED.
+Three independent hostile audits reconstructed the `62` covers and all
+seven banks, checked the fixed-pair quantifier, the signed centre law,
+the common-root parent map including `floor(Ny)`, Haar image measure,
+the direct `39/91` phase-locus cap, and the low-blocker scope.
+THM-2430 is promoted and listed as a proved dependency. QED.

@@ -2,17 +2,20 @@ THM-2431 exact companion
 normalized_tilings=62
 independent_pair_triple_invoice=620
 repeatable_steps=1,2,3,4,5,44,45
-step_1:centre_differences=28,expanded_parent_residues=50
-step_2:centre_differences=24,expanded_parent_residues=44
-step_3:centre_differences=4,expanded_parent_residues=8
-step_4:centre_differences=6,expanded_parent_residues=12
-step_5:centre_differences=8,expanded_parent_residues=16
-step_44:centre_differences=8,expanded_parent_residues=12
-step_45:centre_differences=4,expanded_parent_residues=12
-maximum_parent_cap=50/91
-invalid_parentwise_union_cap=66/91
+step_1:centre_differences=28,coarse_residues=50,sharp_phase_cells=39
+step_2:centre_differences=24,coarse_residues=44,sharp_phase_cells=35
+step_3:centre_differences=4,coarse_residues=8,sharp_phase_cells=6
+step_4:centre_differences=6,coarse_residues=12,sharp_phase_cells=9
+step_5:centre_differences=8,coarse_residues=16,sharp_phase_cells=12
+step_44:centre_differences=8,coarse_residues=12,sharp_phase_cells=10
+step_45:centre_differences=4,coarse_residues=12,sharp_phase_cells=8
+coarse_parent_cap=50/91
+sharp_parent_cap=3/7
+invalid_parentwise_sharp_union=57/91
+local_positive_hostile=step_1_phase_locus_PASS
+global_safe_parent_hostile=union_76_guard_overlap_15_PASS
 blocker_safe_image_floor=4/7
-strict_mass_gap=2/91
+sharp_mass_gap=1/7
 M0_remaining=(1, 5, 1, 8),(2, 5, 2, 9)
 Mpositive_remaining=(2, 0, 0, 2),(2, 5, 1, 8)
 ALL CHECKS PASSED
