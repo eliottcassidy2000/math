@@ -2,7 +2,7 @@
 id: THM-2357
 title: "Degree-eighteen H2 moving-root and factorization-pivot reduction"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. Every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Every
   degree-eighteen H_2 S_5^2 survivor has a unique finite three-cycle
   branch value r at which P(r)=Q(r)=0. Weighted scaling moves it to
   y=1 and gives explicit two-parameter formulas for D and W. After
@@ -32,7 +32,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2357 -- move the mixed branch to one and expose its first pivot
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2332 reduces the residual degree-eighteen problem to
 
@@ -68,6 +68,17 @@ p(r)=q(r)=0,
 
 P(r)=Q(r)=0.                                        (3)
 ```
+
+Here lowercase `p,q` are the normalized depressed-cubic coefficients,
+while uppercase `P,Q` are THM-2332's cleared polynomial covariants:
+
+```text
+p=(16/964467)P,
+
+q=(64/703096443)Q.
+```
+
+All coefficient computations below use the uppercase cleared covariants.
 
 If `r=0`, then `P(0)=0`, so the trajectory lies on the wall already
 closed by THM-2345.  Every surviving mixed branch therefore has `r!=0`.
@@ -166,6 +177,10 @@ F=(y-1)^2 R_10,                                    (11)
 
 R_10=4(y-1)p_3^3+49q_5^2=H_2 S_4^2.               (12)
 ```
+
+The quadratic `H_2` is squarefree by the proved `H_2 S_5^2`
+classification in THM-2332. Thus `Disc(H_2)!=0` is inherited structure,
+not a missing genericity assumption or an additional open localization.
 
 The degree and leading coefficient are
 
@@ -411,4 +426,27 @@ factor order, the recursion (16)--(19), pivot (20)--(24), all signatures,
 generic and `K=0` hostile gcd controls, and every tuple in (26).  No
 executable check uses Python `assert`.
 
-Independent audit is pending. QED.
+## 9. Independent hostile audit
+
+The independent audit checked the `r=0` wall and `r!=0` weighted scaling,
+the distinction between normalized lowercase `p,q` and cleared uppercase
+`P,Q`, and every incidence identity through
+
+```text
+Q'(1)=14K,
+
+R_10(1)=9604K^2.
+```
+
+It specifically rejected the invalid smooth-plane shortcut and confirmed
+that `K=0` remains an open singular-order boundary. It also rederived
+`S_4|gcd(R_10,R_10')`, the full `Sres_0,...,Sres_3` vanishing, and the
+top-down factorization recursion, whose only division is by the fixed
+nonzero `L=73060029`.
+
+The audit exhaustively checked the `L_piv` split, both closed-wall
+pullbacks, the finite-field scope, and the inherited squarefreeness of
+`H_2`. Normal, optimized, and stored transcripts and all recorded LF
+hashes agree. The accepted conclusion is only the moving-root and
+factorization-pivot atlas: the localized main lane, `K=0`, `C=0`, the
+pivot lane, and `H_4` all remain open. QED.

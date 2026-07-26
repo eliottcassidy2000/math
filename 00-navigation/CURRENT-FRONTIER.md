@@ -412,8 +412,11 @@ Classify profiles under support operations; study analytic continuation and auto
   exactly two-sparse locus to `31` ratios; THM-2314 and THM-2316 close the
   `B`--`D` and `C`--`D` banks. THM-2332 then leaves Mordell square classes
   of degrees `0,2,4`; THM-2345 closes `126D=25B^2`, and THM-2347 proves
-  the whole double-zero wall `20BC+21W=0` saturates to it. The off-wall
-  `H_2/H_4` strata and other parameter walls remain. Split/even descent
+  the whole double-zero wall `20BC+21W=0` saturates to it. THM-2357 moves
+  every residual `H_2` three-cycle to `y=1`, reduces to
+  `R_10=H_2S_4^2`, and exposes the exact `C`-linear pivot
+  `-10260B+1771s_2-1771`. Its localized main lane, pivot lane, `K=0`,
+  and `C=0` remain, as does the off-wall `H_4` stratum. Split/even descent
   and other short edges remain; THM-2206
   blocks field-valued `C_2` Hasse repair. Integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
