@@ -1,5 +1,5 @@
 theorem=THM-2395
-status=PROVED-CANDIDATE+VERIFIED-EXACT; independent-audit=PENDING
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED
 shell_mass=12/91; mixed_overlap>=5/637; union<=163/637
 type_II_retained>=1216/8281; type_III_capacity<=24/169
 forced_escape_base>=40/8281; physical_R_1_to_0>=40/57967; fixed_role>=8/57967

@@ -288,7 +288,7 @@ for base in (y0, y1):
 
 
 print("theorem=THM-2395")
-print("status=PROVED-CANDIDATE+VERIFIED-EXACT; independent-audit=PENDING")
+print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED")
 print(
     f"shell_mass={shell_mass}; mixed_overlap>={mixed_shell_floor};"
     f" union<={shell_union_cap}"

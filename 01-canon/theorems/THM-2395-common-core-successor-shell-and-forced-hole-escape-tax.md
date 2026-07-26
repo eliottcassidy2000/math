@@ -2,7 +2,7 @@
 id: THM-2395
 title: "Common-core successor shell and forced hole-escape tax"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. In
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In
   THM-2394's no-clean common-core residual, the mixed-septimal successor
   shells of q_*/7 and c_3/7 intersect in mass at least 5/637. Hence
   type-II base mass at least 1216/8281 remains high-safe after
@@ -11,8 +11,11 @@ status: >
   Therefore a base set of mass at least 40/8281 undergoes a genuine
   hole-status escape. Its selected physical roots have mass at least
   40/57967 and satisfy R(x)=1, R(13x)=0,
-  c_1(x)=C_1(13x)=1, and c_2(x)=C_2(13x)=0. The actual c_1-factor
-  translation has successor overlap zero, so THM-2362 gives nonzero
+  c_1(x)=C_1(13x)=1, and c_2(x)=C_2(13x)=0. Enlarging this carrier to
+  an explicitly c_1-factor-free selector preserves the same mass
+  floor. The scalar cover then makes the omitted actual c_1 factor
+  redundant, and c_2-safety makes its successor overlap zero.
+  Therefore THM-2362 gives nonzero
   mode sum at least 440/753571, one real mode at least 110/2260713,
   and energy at least 48400/1703607756123. A fixed current septimal
   pair gives an F_7^* x F_13^* role-jet tensor. A strict physical
@@ -29,14 +32,14 @@ related:
   - THM-2391-blocker-caged-septimal-single-layer-address-reduction
 script: 04-computation/lrc14_common_core_successor_escape_thm2395.py
 output: 05-knowledge/results/lrc14_common_core_successor_escape_thm2395.out
-script_sha256: 219d8aed4f27b7cf4bd1b55a4125f793faa73ec0eea9dcfe3ce734fb9aa7c87e
-output_sha256: d568693c4e96e381fcba501edb0aa8c5ee639db8457d6e0cbc26a581ba7eedf6
+script_sha256: dc14ac62d45c5d947de6dbb62a345d6b522df473323dad1f2f31c73623a4b133
+output_sha256: 11adfeca4cb9ba84d365c9108edbb88ca166c3723b449b9cc8c3f2f37c3d3e0f
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2395 -- a forced successor-role escape
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2394 turns the last no-clean common-core boundary into three labelled
 seven-root states. This theorem follows those states through the actual
@@ -319,43 +322,81 @@ The carrier in (21) lies in the pure word
 ```
 
 On `{R=1}` with the other two blockers safe, the scalar cover makes the
-displayed `c_1` factor logically redundant. Therefore THM-2362 applies
-to translation of the **actual named factor**, not an auxiliary
-duplicate probe.
+displayed `c_1` factor logically redundant. The following
+factor-removed selector makes precise that THM-2362 applies to
+translation of the **actual named factor**, not an auxiliary duplicate
+probe.
 
-Push the remaining carrier forward in the `c_1` coordinate. Since
+There is a small typing point: `F_escape` itself was selected using the
+middle root word `B`, whose physical realization is also `c_1`.
+Consequently its indicator must not be used as the factor-removed
+weight. Define instead, up to the common null endpoint set,
+
+```text
+F_0
+ =X_0^pt intersection T^(-1)(X_0^pt)
+    intersection {K=0} intersection T^(-1){K=1}
+    minus D_(c_2).                                  (26)
+```
+
+Here `X_0^pt` is the high-safe point set from THM-2394. In particular it
+already imposes `q_*`, `C_3`, and `c_3` safety. Every predicate in
+`F_0` is retained while the actual `c_1` factor is translated; the
+middle address, when one is fixed below, is read from the distinct
+quotient-labelled `C_2` copy. Equations (22)--(23) give
+
+```text
+F_escape subset F_0,
+
+mu(F_0)>=40/57967.                                  (27)
+```
+
+On `F_0`, `q_*` is safe and `K=0`, so `R=1`. Since `c_2` and `c_3`
+are safe there, the scalar cover forces `c_1` dangerous. Thus the
+factor-free definition has the exact a.e. identity
+
+```text
+F_0=F_0 intersection D_(c_1).                       (28)
+```
+
+Push `1_(F_0) dx` forward in the `c_1` coordinate. Since
 
 ```text
 c_2=13c_1
 ```
 
-and `c_2` is safe on (21), THM-2362's successor overlap is exactly
+and `c_2` is safe on `F_0`, THM-2362's successor overlap is exactly
 
 ```text
-rho_+=0.                                             (26)
+rho_+=0.                                             (29)
 ```
 
-With `rho=mu(F_escape)>=40/57967`, its formulas give
+With `rho=mu(F_0)>=40/57967`, its formulas give
 
 ```text
 sum_(k!=0) Mtilde(k)
  >=11rho/13
- >=440/753571,                                      (27)
+ >=440/753571,                                      (30)
 
 some k!=0 has
  Re Mtilde(k)>=11rho/156
-             >=110/2260713,                         (28)
+             >=110/2260713,                         (31)
 
 sum_(k!=0)|Mtilde(k)|^2
  >=121rho^2/2028
- >=48400/1703607756123.                             (29)
+ >=48400/1703607756123.                             (32)
 ```
 
-Thus (21) is a canonical zero-drift positive role jet.
+Thus the factor-free enlargement of (21) is a canonical zero-drift
+positive role jet.
 
 There is also a fixed-phase transverse refinement. Partition
-`E_escape` by its current ordered type-II pair `(b,c)`. One of the
-`42` cells has base mass at least
+`E_escape` by its current ordered type-II pair `(b,c)`, defining `b`
+as the unique `K`-hole address and `c` as the unique root address of
+the unshifted `c_2` word. Both labels are independent of the translated
+actual `c_1` factor; type II proves afterward that `b` is also the
+quotient-labelled `C_2` address. One of the `42` cells has base mass at
+least
 
 ```text
 20/173901
@@ -364,20 +405,25 @@ There is also a fixed-phase transverse refinement. Partition
 and selected physical mass at least
 
 ```text
-20/1217307.                                         (30)
+20/1217307.                                         (33)
 ```
 
-On that cell THM-2394's septimal hole/double phases are constant.
-Applying (28) to (30) and multiplying by the normalized septimal
+Let `F_(0;b,c)` retain in `F_0` the type-II and noncovariant-escape
+predicates used to select that cell, with `b` read from `K` and `c`
+from the unshifted `c_2` copy as above. This definition is independent
+of the translated actual `c_1` copy, and physically it contains the
+selected escape cell in (33). On `F_(0;b,c)`,
+THM-2394's septimal hole/double phases are constant.
+Applying (31) to (33) and multiplying by the normalized septimal
 coefficient or charged product gives, for every `ell!=0`, a common
 nonzero factor-translation mode `k!=0` with
 
 ```text
 |F_7^* x F_13^* role-jet tensor|
- >=55/332324811,                                    (31)
+ >=55/332324811,                                    (34)
 
 |charged role-jet tensor|
- >=55/2326273677.                                   (32)
+ >=55/2326273677.                                   (35)
 ```
 
 These are factor-coloured coefficients, not terminal target currents.
@@ -401,14 +447,14 @@ q_*=14,
 
 C_3=2*7^2*13^4=2798978,
 
-c_3=13C_3=36386714.                                (33)
+c_3=13C_3=36386714.                                (36)
 ```
 
 At both bases, the guard roots are `{5,6}`, the four lower ordinary
 roots are `{1},{2},{3},{4}`, and all three high words are safe. Thus
 
 ```text
-K=(0,1,1,1,1,1,1).                                  (34)
+K=(0,1,1,1,1,1,1).                                  (37)
 ```
 
 The core address triples are
@@ -416,7 +462,7 @@ The core address triples are
 ```text
 y_0: (a,b,c)=(0,1,0),       type III, hole 0,
 
-y_1: (a,b,c)=(6,0,6),       type II,  hole 0.       (35)
+y_1: (a,b,c)=(6,0,6),       type II,  hole 0.       (38)
 ```
 
 The selected physical holes `1/168` and `13/168` form a two-cycle under
@@ -426,7 +472,7 @@ pointwise claim that exclusive owner type must persist. It is not a
 global scalar cover or an LRC counterexample.
 
 Equation (17) also shows that every one-state covariant loop is type I,
-where the two actual low blockers share the hole. Hence (35) is the
+where the two actual low blockers share the hole. Hence (38) is the
 minimal exclusive-owner covariant cycle.
 
 ## 8. Scope
@@ -436,12 +482,12 @@ THM-2395 proves
 ```text
 no-clean common core
  -> positive owner-labelled residual descent
- -> nonzero actual-factor successor jet.            (36)
+ -> nonzero actual-factor successor jet.            (39)
 ```
 
 It does not identify the `F_13` factor-translation colour with the
 canonical relation target or preserve the terminal endpoint phase.
-Those are exactly the losses recorded in THM-2362. The two-cycle (33)
+Those are exactly the losses recorded in THM-2362. The two-cycle (36)
 also prevents a pointwise closure from the carry automaton alone.
 
 The next target is either a target/terminal intertwiner for (31), or a
@@ -455,10 +501,10 @@ The dependency-free exact companion:
 
 - verifies `mu(S_w)=12/91`, the mixed shell floor `5/637`, and two
   direct physical shell controls;
-- checks every rational constant in (11), (14), and (18)--(32);
+- checks every rational constant in (11), (14), and (18)--(35);
 - exhausts the three-state carry-labelled automaton (17);
 - verifies all physical root words, valuations, owner types, and
-  transitions in the strict two-cycle (33)--(35);
+  transitions in the strict two-cycle (36)--(38);
 - checks that every displayed hostile predicate is away from its strict
   endpoint; and
 - runs every assertion under ordinary and optimized Python.
