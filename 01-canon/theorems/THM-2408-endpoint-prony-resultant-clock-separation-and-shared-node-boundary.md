@@ -2,20 +2,20 @@
 id: THM-2408
 title: "Endpoint-Prony resultant separation and the shared-node cancellation boundary"
 status: >
-  RESERVED / PROOF-COMPLETE CANDIDATE UNDER INDEPENDENT AUDIT. In a
-  common coefficient Hilbert space, if U=O+H, then O and U cannot both
-  erase H: their squared norms sum to at least one half of the squared
-  norm of H, sharply. THM-2407 supplies this identity in one lawful
-  owner/source-deletion gauge, giving an unconditional quantitative
-  branch alternative. For two finite exponential sequences, cancellation
-  is confined exactly to common nodes with opposite coefficient vectors.
-  A node of H transverse to the O-node polynomial forces U to survive in
-  every bounded consecutive window; coprime node polynomials give the
-  r+s bound. Applied to common-gauge finite step amplitudes, the nodes are
-  the endpoint-Prony nodes in one Fourier residue progression. A strictly
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In a common
+  coefficient Hilbert space, if U=O+H, then O and U cannot both erase H:
+  their squared norms sum to at least one half of the squared norm of H,
+  sharply. THM-2407 supplies this identity in one lawful
+  owner/source-deletion gauge, giving an unconditional quantitative branch
+  alternative. For two finite exponential sequences, cancellation is
+  confined exactly to common nodes with opposite coefficient vectors. A
+  node of H transverse to the O-node polynomial forces U to survive in
+  every bounded consecutive window; coprime node polynomials give the r+s
+  bound. Applied to common-gauge finite step amplitudes, the nodes are the
+  endpoint-Prony nodes in one Fourier residue progression. A strictly
   positive rational owner can nevertheless cancel a nonnegative deletion
-  packet at every charged colour when their endpoint nodes coincide.
-  Canon does not yet separate the relevant endpoint nodes or identify a
+  packet at every charged colour when their endpoint nodes coincide. Canon
+  does not yet separate the relevant endpoint nodes or identify a
   Fourier-lift index with a terminal clock. No row exclusion or LRC(14)
   conclusion is claimed.
 source: codex-2026-07-26-endpoint-prony-resultant-clock-separation
@@ -41,7 +41,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2408 -- endpoint-Prony resultant separation
 
-**RESERVED / PROOF-COMPLETE CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2403 produces a lawful fully-all-safe current `H_+` with charged
 target/deep coefficients. THM-2407 places it in the exact target-equivariant
@@ -596,3 +596,14 @@ Both transcripts must byte-match, after LF normalization,
 
 Every truth-bearing check raises explicitly, so optimized mode executes
 the same audit.
+
+## 10. Independent hostile audit
+
+An independent audit rederived the Hilbert constants, vector-valued
+Vandermonde and shift-operator arguments, exact window lengths, endpoint
+sign, centered bound, sharp Lagrange construction, and both cancellation
+hostiles.  It also enforced the distinction after (11): the displayed
+magnitude belongs to the finite transform coefficient, while its exact
+triangle descendant is asserted only to be nonzero.  Normal, optimized,
+and stored transcripts match across sixteen LF lines with the hashes in
+the frontmatter.  The full documentation check passes.
