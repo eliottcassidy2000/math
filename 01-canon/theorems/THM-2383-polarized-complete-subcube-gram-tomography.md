@@ -2,7 +2,7 @@
 id: THM-2383
 title: "Polarized complete-subcube Gram tomography"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. For maps
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For maps
   from a labelled Boolean cube to a complex Hilbert space, the
   polarized complete-subcube Dirichlet bank has the exact 0/2 Walsh
   multiplier. Labelled Mobius inversion recovers the cross-Gram
@@ -32,7 +32,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2383 -- polarized complete-subcube Gram tomography
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2374 recovers the squared norm of every Boolean ANOVA component,
 but its sharp THM-2370 clone hostile loses the component signs and the
@@ -410,4 +410,11 @@ Both transcripts must match
 byte-for-byte after LF normalization. Every executable check raises
 explicitly under optimized Python.
 
-Independent audit of the theorem text is pending. QED.
+Two independent hostile audits rederived the `0/2` multiplier, labelled
+Mobius inversion, both linear-first polarization signs, Gram solve,
+supportwise span criterion, sharp frame bound, and every information
+boundary. The first audit caught and repaired an overbroad clone claim:
+only homogeneous quadratic difference banks invariant under
+`F -> v-F` share that hostile, not the uncentered endpoint norm table.
+Both audits replayed normal and optimized execution against the stored
+transcript and independently reproduced the recorded LF hashes. QED.

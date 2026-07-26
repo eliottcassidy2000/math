@@ -170,11 +170,11 @@ is the proved carrier that reduces each fixed bad-denominator/owner fiber to
 labelled primitive packets and one coprime interval. It makes the terminal
 exact and finite; it does not prove that every surviving interval is empty.
 THM-2168--2257 leave `165` rows; THM-2295--2349 supply packets and `91`-unit edges.
-THM-2350--2365 give dipole/colour/drift banks; THM-2356's zero-only kernel has dimension `28,393` versus `169`, and THM-2363 dominates. Audited THM-2366/2367 isolate inverse covariance, sub-`13` budgets, and septimal graft transport.
-THM-2368/2369 expose integrated-drift and balanced-slope hostiles; THM-2370's clone rules out higher mixed-energy repair. THM-2372/2377 force a `98`-fold toothpick and locate the first possible carrier at a repeated septimal layer with Bockstein carry.
-Hostile-audited THM-2378 empties hard `W=k=1` via the `3/4` versus `1/2` support clash and a transverse `5/49` gap. THM-2381 proves the same pointwise squeeze after an exact seven-bin lower partition in `k=2,(t,b)=(1,1)`; its mixed-depth anti-shield mass is exactly `36/343`.
-THM-2382 closes saturated `k=2,(t,b,W)=(5,2,7)`: thirteen safe-root demands exceed the five unit masks' total capacity ten. THM-2379 forces a `91`-unit repair colour but empty-blocker chambers prevent owner typing; THM-2380 makes same-target word/deletion overlap the charged gate, with one physical quadrature missing.
-The live objects are the rooted phase/event word on the remaining `(1,0),(2,0)` alternatives and a dual covector in `L^perp/<w>`; a pure primal class in `K/L` is not a co-shift. THM-2385 is only reserved for the `(2,0)` collision reduction. No row is removed; the ledger remains `165`.
+THM-2350--2365 give dipole/colour/drift banks (THM-2356 kernel `28,393` versus `169`; THM-2363 dominates); THM-2366/2367 isolate inverse covariance, sub-`13` budgets, and septimal graft transport.
+THM-2368/2369 expose drift/slope hostiles; THM-2370's clone kills mixed-energy repair. THM-2372/2377 force a `98`-fold toothpick and put the first carrier at a repeated septimal layer with Bockstein carry.
+THM-2378 closes `W=k=1` via `3/4` versus `1/2` and `5/49`. THM-2381 closes `k=2,(t,b)=(1,1)` by a seven-bin partition; its anti-shield mass is `36/343`.
+THM-2382 closes `k=2,(t,b,W)=(5,2,7)` by demand `13` versus capacity `10`. THM-2379's repair colour lacks owner typing; THM-2380's charged gate still needs a physical quadrature.
+Live: rooted phase/event on `(1,0),(2,0)` plus a dual covector in `L^perp/<w>`; a primal class in `K/L` is not a co-shift. THM-2385 is only RESERVED for `(2,0)`. The ledger remains `165`.
 
 ### Independent routes that remain live
 
@@ -376,7 +376,6 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   different route.
 
 ### Live work
-
 Classify profiles under support operations; study analytic continuation and automatic/Mahler structure; track collision taxes; and feed support identities into tournament laws and LRC residue packets.
 ## Other active portfolio
 
@@ -387,7 +386,7 @@ Classify profiles under support operations; study analytic continuation and auto
   [THM-2339](../01-canon/theorems/THM-2339-prime-owner-deletion-and-target-allocation-hypergraph.md) makes composite lifts finite prime-token allocations with a coloured Möbius hypergraph and exact fixed-owner deletion.
   THM-2346 gives unique global ANOVA tensors and score-table gauge; pair couplings are symmetric cohabitation energies, not orientations.
   [THM-2348](../01-canon/theorems/THM-2348-prime-type-rectangularity-and-target-token-conditioning.md) equates robust prime-type factorization with mixed-tensor/rectangle vanishing, gives exact token conditioning, and makes the two-prime correction a bounded continuation of `-sigma`.
-  THM-2374 turns every two-block mixed tensor norm into a nonnegative complete-subcube Dirichlet defect and inverts the squared Walsh-support bank; signs, owners, and knot realization are deliberately lost.
+  THM-2374 inverts the squared complete-subcube Walsh bank; THM-2383 recovers complex coefficients exactly from labelled spanning references. Physical references, owners, and knot realization remain open.
   THM-2351 proves the canonical self-target ANOVA is exactly an affine reparameterization of the directional catalysis--bypass ledger; its optimum and skew pair sector add no information. Positive catalysis and the stable diagonal remain open.
 - **Unsplittable cost flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture: a planar acyclic instance has fractional cost `58` but capacity-good integral cost at least `60`. Its carrier is the `K_3` stable-set facet; the planar `2d_max` theorem remains intact.
 - **Jacobian/Dixmier:** THM-1300/1315 verify and analyze the three-dimensional Keller collision, but provenance is unsettled (MISTAKE-205) and it does not decide
