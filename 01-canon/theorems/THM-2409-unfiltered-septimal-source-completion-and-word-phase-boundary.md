@@ -2,7 +2,7 @@
 id: THM-2409
 title: "Unfiltered septimal source completion and word-phase boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. In the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the
   source-deletion branch of THM-2407 with terminal word Q=1, translating
   the missing source danger through C_7 partitions the source-deleted
   packet exactly. For every nonzero target colour b, the seven
@@ -31,14 +31,14 @@ related:
   - THM-2410-full-coordinate-projector-local-gram-and-integrated-phase-boundary
 script: 04-computation/lrc14_unfiltered_septimal_source_completion_thm2409.py
 output: 05-knowledge/results/lrc14_unfiltered_septimal_source_completion_thm2409.out
-script_sha256: 0f93055b47514761a7d514b45b863e4f9042d7b5cff4bfd6bfdcb2b71ffdc46e
-output_sha256: 6c6a575450f2d0139429fc1161c98758732dda9fbd191a6a3a56c5d4885c442d
+script_sha256: d556d4873c6be2f704618160dfcb0f10f3d72022df8eb45b6e5f2f10b8ade67a
+output_sha256: 3e3d4a98512bfb29e87cb1f8d30b260ea42fa62a00c5b7d3412dc976a076d2ff
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2409 -- the unfiltered deletion current is septimally all or flat
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2407 leaves one sharply typed alternative. Either the genuine
 positive source owner carries all target colours, or the packet with the
@@ -216,6 +216,24 @@ sum_(kappa!=0)|Z(kappa,b)|^2
  >=|uhat(b)|^2/294.                                (15)
 ```
 
+This equality boundary is realized by a nonnegative owner table.  Give
+the original source phase the flat target row
+
+```text
+o_(0,s)=1/14,
+```
+
+and, for each `ell!=0`, put
+
+```text
+o_(ell,0)=0,             o_(ell,s)=1/84 for s!=0.
+```
+
+Then `z_0(b)=0` for every `b!=0`, while the other six `z_ell(b)` are
+equal and their sum is `uhat(b)`.  Tensoring with `r=t+1` also preserves
+the empty deep diagonal.  Thus the constant `1/294` cannot be improved
+from the anchored-zero and sum constraints alone.
+
 Let
 
 ```text
@@ -280,6 +298,10 @@ deep multiplier gcd(m,91)=1.                       (23)
 Here `m=alpha mod 13`, and the centered deep coefficient kills every
 nonzero `7|m`. The corresponding unrefined fixed-`(N,m)` coefficient may
 cancel after source residues are summed; (22) retains the residue.
+Moreover, `alpha` and `tau` are selected only after the source transform
+has selected `(kappa,b)`.  The resulting triangle need not be the
+preselected THM-2407 triangle, and it cannot be intersected with a
+THM-2410 survivor without an additional common selector.
 
 Quantitatively, Cauchy first distributes each `J(0)` cancellation over
 the twelve nonzero `alpha`, and then each `J` over thirteen `tau`.
@@ -468,7 +490,8 @@ only. It:
 - verifies the all-or-flat reduction over a symbolic
   `Q(zeta_13)` coefficient basis;
 - verifies the sharp anchored-source energy `1/294`, the mixed floor
-  `9/2798978`, and the `4732` max-mode denominator;
+  `9/2798978`, the `4732` max-mode denominator, and a positive equality
+  table;
 - checks the rational finite-table, diagonal-zero, and smooth
   low-frequency flat hostiles; and
 - verifies the fixed-word partition and its complete failure under the
@@ -488,3 +511,25 @@ Both commands must reproduce
 ```
 
 with the LF hashes in the frontmatter.
+
+## 8. Independent audit
+
+Two independent hostile audits rederived:
+
+- the lawful `Q=1` rerun of THM-2407 and the exact identities
+  `z_0(b)=0`, `sum_ell z_ell(b)=uhat(b)`;
+- irreducibility of `Phi_7` over `Q(zeta_13)` and simultaneous survival
+  of all six nontrivial source colours for every `b!=0`;
+- the sharp source-energy constant `1/294`, its positive equality
+  table, the mixed floor `9rho^2/2798978`, and the max-mode denominator
+  `4732`;
+- the normalizations `J(kappa,0,b)=Z(kappa,b)/13` and
+  `D_mix/(169*12*13)` for the eligible full-table energy;
+- the source-residue-refined absolute `(N,m)` extraction and
+  `gcd(m,91)=1`, including the fact that it need not retain the
+  preselected THM-2407 triangle; and
+- the exact failure of the seven-shift partition for a lawfully
+  co-shifted active word.
+
+Both audits replayed normal and optimized execution against the stored
+transcript and checked the LF hashes.

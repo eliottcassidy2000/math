@@ -127,6 +127,43 @@ def main():
         Fraction(1, P7) * 6 * Fraction(1, 36) - Fraction(1, 49)
     )
     require(anchored_energy == Fraction(1, 294), "anchored energy mismatch")
+
+    # Positive equality control for the anchored bound.  The original
+    # owner phase has a flat row; the other six rows vanish at s=0 and
+    # equal 1/84 elsewhere.  Hence z_0(b)=0 and z_1=...=z_6 for every
+    # nonzero target character.
+    owner_rows = (
+        (Fraction(1, 14),) * P13,
+    ) + (
+        ((Fraction(0),) + (Fraction(1, 84),) * (P13 - 1)),
+    ) * (P7 - 1)
+    for b in range(1, P13):
+        z_profile = tuple(
+            tuple(value / P13 for value in cyclotomic13_remainder(row, b))
+            for row in owner_rows
+        )
+        require(z_profile[0] == ZERO13, f"positive anchor failed at b={b}")
+        require(
+            all(value == z_profile[1] for value in z_profile[1:]),
+            f"positive equality rows differ at b={b}",
+        )
+        deletion_row = tuple(
+            sum(owner_rows[ell][s] for ell in range(P7))
+            for s in range(P13)
+        )
+        deletion_transform = tuple(
+            value / P13
+            for value in cyclotomic13_remainder(deletion_row, b)
+        )
+        require(
+            tuple(
+                sum(z_profile[ell][j] for ell in range(P7))
+                for j in range(12)
+            )
+            == deletion_transform,
+            f"positive equality partition failed at b={b}",
+        )
+
     target_floor = Fraction(27, 28561)
     mixed_floor = target_floor / 294
     require(
@@ -214,6 +251,7 @@ def main():
     print("seven shifted dangers partition one a.e.=PASS")
     print("K-valued nonflat control fires all six source colours=PASS")
     print("anchored z0=0 sharp source energy=1/294")
+    print("positive anchored equality control=PASS")
     print("joint mixed floor=9/2798978")
     print("some joint mode floor denominator=4732")
     print("finite flat-source/nonflat-target hostile target energy=12/169")
