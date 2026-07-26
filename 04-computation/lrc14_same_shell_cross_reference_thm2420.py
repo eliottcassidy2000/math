@@ -142,6 +142,12 @@ def cyclotomic_reduce_13(polynomial):
     return tuple(value - top for value in polynomial[:-1])
 
 
+def integer_monomial(exponent, coefficient=1):
+    polynomial = [0] * P
+    polynomial[exponent % P] = coefficient
+    return tuple(polynomial)
+
+
 def deterministic_value(point, salt):
     first = 1 + (sum((index + salt) * value for index, value in enumerate(point)) % 4)
     second = (
@@ -379,7 +385,26 @@ def hostile_checks():
     )
     require(dot(speeds, address) % P == 0, "affine address not periodic")
 
-    phase_word = tuple(range(P)) + tuple((residue + 6) % P for residue in range(P))
+    phase_word = []
+    sigma_bank = []
+    for cell in range(2 * P):
+        sigma_1 = 0
+        sigma_2 = cell // P
+        sigma_26 = cell % P
+        phase = (
+            safe_character[0] * sigma_1
+            + safe_character[1] * sigma_2
+            + (safe_character[2] + deepest_character) * sigma_26
+        ) % P
+        phase_word.append(phase)
+        sigma_bank.append((sigma_1, sigma_2, sigma_26))
+    phase_word = tuple(phase_word)
+    require(
+        phase_word
+        == tuple(range(P))
+        + tuple((residue + 6) % P for residue in range(P)),
+        "hostile phase word derivation failed",
+    )
     phase_counts = tuple(phase_word.count(residue) for residue in range(P))
     require(phase_counts == (2,) * P, "hostile mean phase census failed")
 
@@ -412,11 +437,35 @@ def hostile_checks():
 
     zero_reference_constants = []
     for residue in range(P):
-        if residue == 0:
-            numerator_value = 12**3
-        else:
-            numerator_value = -(12**2)
-        zero_reference_constants.append(numerator_value)
+        cell_values = []
+        for _, _, sigma_26 in sigma_bank:
+            deepest = integer_monomial(residue * sigma_26)
+            safe_1 = integer_monomial(0, 12)
+            safe_2 = integer_monomial(0, 12)
+            safe_26_character = (-residue) % P
+            if safe_26_character == 0:
+                safe_26 = integer_monomial(0, 12)
+            else:
+                safe_26 = integer_monomial(
+                    safe_26_character * sigma_26,
+                    -1,
+                )
+            value = integer_polynomial_multiply(
+                integer_polynomial_multiply(deepest, safe_1, P),
+                integer_polynomial_multiply(safe_2, safe_26, P),
+                P,
+            )
+            cell_values.append(cyclotomic_reduce_13(value))
+        require(
+            len(set(cell_values)) == 1,
+            "zero-reference sector was not constant across cells",
+        )
+        reduced = cell_values[0]
+        require(
+            not any(reduced[1:]),
+            "zero-reference constant retained a cyclotomic phase",
+        )
+        zero_reference_constants.append(reduced[0])
     require(
         zero_reference_constants[0] == 12**3
         and set(zero_reference_constants[1:]) == {-(12**2)},

@@ -26,7 +26,7 @@ related:
   - THM-2416-zero-current-or-bounded-sideband-prony-dichotomy
 script: 04-computation/lrc14_same_shell_cross_reference_thm2420.py
 output: 05-knowledge/results/lrc14_same_shell_cross_reference_thm2420.out
-script_sha256: f167a363e94e4f52f48fda76e3cba4e868f8e007f19e6b5a81d2a7e1e73882c7
+script_sha256: 73a17977ea5b0cdf901e0624fa174be0cd17bbccdf2aa356ad80021d84af3179
 output_sha256: 2ca80104b72ef36b30150f6c0c945f530a7a715bdbf68b999fde3c04a5e1a4a2
 hash_basis: working-tree bytes (LF)
 ---
