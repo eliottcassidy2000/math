@@ -4,12 +4,13 @@ different-nu7 exact law: 48 residue cells, rho=1/49
 root words: 15 double pairs (5 guard, 10 ordinary), 648648000 complete words
 top-labelled charged cells: owner/status/support=52, exact-word/status/support=78
 top-labelled DFT sums singleton/adjacent: (12/169,12/28561) / (22/169,62/28561)
+same-parent tensor cells: 13 owner-resolved septimal categories * 26 target supports = 338
 general dichotomy: delta<6/4459 -> ab<=1/[2(6/4459-delta)]
 theta=3/4459: cell>=3/231868 or ab<=743; delta=0: rho>=94/4459 and ab<=371
-repeated-first: cage<=401/3822, delta>=1/26754, top-labelled cell>=1/1391208
+repeated-first: cage<=401/3822, delta>=1/26754, top cell>=1/1391208, tensor cell>=1/9042852
 strict scan: 135/150 uniformly clean; worst middle depth b=4 (15 tied c-values)
-strict uniform floors: delta>=6042/9796423, top-labelled cell>=3021/254706998
-b=2 with different low nu7: delta>=36/57967, top-labelled cell>=9/753571
+strict uniform floors: delta>=6042/9796423, top cell>=3021/254706998, tensor cell>=3021/1655595487
+b=2 with different low nu7: delta>=36/57967, top cell>=9/753571, tensor cell>=18/9796423
 same-(nu13,nu7) b=2 preliminary bank: 52 unordered; ab<=177, min<=10, max<=85
 compatible low-union bank: 10 oriented / 6 unordered ratios {1:1,1:2,1:3,1:4,2:3,3:4}
 THM-2391 address filter: mod49 -> {(4,3)}; mod343 -> empty

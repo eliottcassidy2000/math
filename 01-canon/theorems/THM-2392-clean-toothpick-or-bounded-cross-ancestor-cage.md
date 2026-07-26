@@ -11,7 +11,10 @@ status: >
   two-root exclusive word whose normalized nonzero target spectrum is
   everywhere nonzero, with exact square/fourth-power sums respectively
   (12/169,12/28561) or (22/169,62/28561). An owner/status/translate cell
-  has mass at least delta/52. Conversely, the
+  has mass at least delta/52. THM-2391 simultaneously gives a unique
+  excess among the seven septimal siblings; joint owner resolution costs
+  only 338 cells and yields a same-parent C_7 x C_13 tensor nonzero in
+  every septimal colour and every nonzero target colour. Conversely, the
   blocker cage has mass at least 36/343-delta. Different 7-adic valuations
   force exact danger overlap 1/49; the last-lane hypotheses apply this to
   both high cross-ancestor pieces. Thus if delta<6/4459, one of the two
@@ -38,8 +41,8 @@ related:
   - THM-2390-septimal-layer-kraft-peeling-and-heavy-word-reduction
 script: 04-computation/lrc14_clean_toothpick_cross_ancestor_cage_thm2392.py
 output: 05-knowledge/results/lrc14_clean_toothpick_cross_ancestor_cage_thm2392.out
-script_sha256: 18214f69c55c9090fbe028bcd9282e354940eb9a7c3ae43c93a93bc6537a0f4f
-output_sha256: 4b512bfc3cd84d256876bf1c9dd9bb17ac78a63b7e378776b8c9f9aae1248861
+script_sha256: d88d5231f6efbefbcec515e2e50f78d7853471fea7ffc0c17424963e2e84b1be
+output_sha256: 26701b0968864af671ddb7b0faa6a9a470f65799513f3a4a8371d3bb666649d2
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -299,6 +302,91 @@ Normalization is load-bearing.  With the unnormalized DFT
 `A_k^sharp=sum_r A(r)zeta^(-kr)`, the singleton sums are `12,12` and
 the adjacent sums are `22,62`, not their normalized values above.
 
+### 3a. The same parent carries a nonzero `C_7 x C_13` tensor
+
+There is a second, transverse word over every generic `y in S`.  For
+`s in F_7`, put
+
+```text
+L_7(s)
+ =1_(E_H)(y+s/7)
+  +sum_(q_i!=q_*)1_(D_(q_i))(y+s/7)
+  +1_(D_(c_1))(y+s/7)+1_(D_(c_2))(y+s/7).            (22a)
+```
+
+Both high masks `q_*` and `c_3` are divisible by seven, so their safe
+status at `y` persists at all seven siblings.  The scalar cover gives
+`L_7(s)>=1`.  THM-2391 puts all seven displayed lower labels in the
+primitive septimal layer, and their total seven-root incidence is
+
+```text
+2+4+1+1=8.
+```
+
+Therefore there is a unique `d(y) in F_7` such that
+
+```text
+J_y(s):=L_7(s)-1=1_({d(y)})(s).                       (22b)
+```
+
+Its normalized septimal DFT is
+
+```text
+j_l=(1/7)exp(-2 pi i l d(y)/7),        l in F_7,      (22c)
+```
+
+and is nonzero for every septimal colour, including zero.
+
+The digit `d` also resolves the low-blocker owner.  Since `s=0` is the
+original parent and `K(y)=0`,
+
+```text
+L_7(0)=1_(D_(c_1))(y)+1_(D_(c_2))(y).
+```
+
+Thus
+
+```text
+d=0  iff both low blockers are active;
+
+d!=0 iff exactly one is active.                       (22d)
+```
+
+There is one simultaneous-owner category and `6*2` exclusive
+`(d,owner)` categories, hence `13` in all.  Combining these with the
+`26` singleton/adjacent support categories from Section 3 partitions
+`S` into only
+
+```text
+13*26=338
+```
+
+cells.  On one fixed owner-resolved cell `Y_7x13`,
+
+```text
+mu(Y_7x13)>=delta/338,                                (22e)
+```
+
+and the rank-one tensor coefficient
+
+```text
+j_l a_k
+```
+
+is nonzero for every `l in F_7` and every `k!=0 in F_13`.  Its magnitude
+is exactly `1/91` in the singleton status and at least
+
+```text
+2 sin(pi/26)/91
+```
+
+in the adjacent status.                               (22f)
+
+This repairs the pre-THM-2391 stopping statement that the septimal word
+need not meet `S`: it meets every generic clean parent.  The two words
+live on transverse sibling/predecessor fibres over the same parent, not
+on one common physical root.  No target/endpoint intertwiner is inferred.
+
 ## 4. The general cross-ancestor alternative
 
 The cage in (7) is contained in
@@ -469,6 +557,13 @@ The labelled-owner charged cell from (17) consequently satisfies
 rho>=1/1391208.                                       (38)
 ```
 
+The owner-resolved transverse tensor from (22e) has the simultaneous
+floor
+
+```text
+mu(Y_7x13)>=1/9042852.                                (38a)
+```
+
 On that one fixed cell, every nonzero target colour has the coefficient
 and energy floors
 
@@ -547,6 +642,10 @@ delta
 rho(labelled charged cell)
  >=(6042/9796423)/52
  =3021/254706998.                                     (40f)
+
+mu(owner-resolved Y_7x13)
+ >=(6042/9796423)/338
+ =3021/1655595487.                                    (40f')
 ```
 
 The `15` remaining strict profiles have `b=2`.  Their unresolved low
@@ -565,6 +664,8 @@ mu(Gamma)<=864/8281,
 delta>=36/57967,
 
 rho(labelled charged cell)>=9/753571.                 (40h)
+
+mu(owner-resolved Y_7x13)>=18/9796423.                (40h')
 ```
 
 It remains to record the exact boundary when the two valuations in (40g)
@@ -734,9 +835,10 @@ The new word is exact but its type is limited.
 - The selected ordinary edge is a lawful coefficient/root word, but no
   canonical expiration clock, endpoint-matched physical reference, or
   THM-2365 target covector has been identified.
-- THM-2390 forces a separate labelled seven-root partition or one-double
-  word.  It supplies no positive intersection with `S` and no alignment of
-  its septimal root with the thirteen-root toothpick.
+- THM-2390/2391's one-double septimal word meets every generic clean
+  parent by (22b), but on the transverse seven-sibling fibre rather than
+  the thirteen-predecessor fibre.  No lawful cross-fibre phase or target
+  intertwiner has been identified.
 - For the last middle-depth-two profiles, (40o)--(40q) are finite
   compatible address banks, not an exclusion of either branch.
 
@@ -767,11 +869,14 @@ The dependency-free companion:
   `648648000`, and the sharper top-labelled `52/78` cell ledgers;
 - checks the normalized and unnormalized target Parseval/fourth-power
   sums on every singleton and all thirteen adjacent edges;
+- verifies the unique septimal excess word, its thirteen exact
+  simultaneous/exclusive owner categories, the `338` joint-cell ledger,
+  and the repeated/strict tensor floors in (22e), (38a), and (40f');
 - verifies the full one-parameter product trade and the
-  `theta=3/4459`, `delta=0` specializations; and
+  `theta=3/4459`, `delta=0` specializations;
 - reconstructs the repeated-first and all `150` strict cage caps, checks
   that precisely the `135` rows with `b>=3` pass uniformly, and identifies
-  the `b=4` tie family; and
+  the `b=4` tie family;
 - independently enumerates the `52` preliminary middle-depth-two ratios,
   computes the exact compatible four-comb union for both orientations,
   recovers the ten-oriented/six-unordered bank in (40o), and checks the

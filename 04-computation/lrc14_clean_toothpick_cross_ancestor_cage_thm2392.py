@@ -261,6 +261,28 @@ print(
     f"({singleton_square_sum},{singleton_fourth_sum}) / ({square_sum},{fourth_sum})"
 )
 
+# THM-2391 supplies a unique excess among seven siblings.  Its location
+# resolves simultaneous ownership at d=0 and two exclusive owners at
+# each nonzero d.  Cross with the 26 singleton/edge supports.
+septimal_owner_categories = 1 + 6 * 2
+target_support_categories = 2 * 13
+joint_tensor_cells = septimal_owner_categories * target_support_categories
+require(septimal_owner_categories == 13, "wrong septimal owner-category count")
+require(target_support_categories == 26, "wrong target support count")
+require(joint_tensor_cells == 338, "wrong C7 x C13 cell ledger")
+for d in range(7):
+    # The normalized DFT of 1_{d} is one seventh times a root of unity,
+    # hence every one of its seven colours has exact squared magnitude 1/49.
+    septimal_magnitude_squared = F(1, 49)
+    require(
+        septimal_magnitude_squared > 0,
+        f"septimal singleton lost a Fourier colour at d={d}",
+    )
+print(
+    "same-parent tensor cells: 13 owner-resolved septimal categories "
+    "* 26 target supports = 338"
+)
+
 # General cage split after the two same-line and two nu_7-separated exact
 # pieces.  One of the remaining two low cross pairs is large.
 hole_floor = F(36, 343)
@@ -295,9 +317,14 @@ print(
 repeated_cage = 2 * F(1, 91) + 2 * F(23, 1092) + 2 * F(1, 49)
 repeated_delta = hole_floor - repeated_cage
 repeated_cell = repeated_delta / 52
+repeated_tensor_cell = repeated_delta / joint_tensor_cells
 require(repeated_cage == F(401, 3822), "wrong repeated-first cage cap")
 require(repeated_delta == F(1, 26754), "wrong repeated-first clean floor")
 require(repeated_cell == F(1, 1391208), "wrong repeated-first cell floor")
+require(
+    repeated_tensor_cell == F(1, 9042852),
+    "wrong repeated-first tensor-cell floor",
+)
 require(
     2 * repeated_cell / 13 == F(1, 9042852),
     "wrong repeated-first coefficient floor",
@@ -316,7 +343,7 @@ require(
 )
 print(
     "repeated-first: cage<=401/3822, delta>=1/26754, "
-    "top-labelled cell>=1/1391208"
+    "top cell>=1/1391208, tensor cell>=1/9042852"
 )
 
 # All 150 strict profiles.  The high C3 pairs are again exact 1/49.
@@ -347,7 +374,12 @@ require(
     "wrong strict worst-profile tie family",
 )
 strict_cell = minimum_clean / 52
+strict_tensor_cell = minimum_clean / joint_tensor_cells
 require(strict_cell == F(3021, 254706998), "wrong strict cell floor")
+require(
+    strict_tensor_cell == F(3021, 1655595487),
+    "wrong strict tensor-cell floor",
+)
 
 even_correction = F(6, 49) * (F(1, 13**4) + F(1, 13**2))
 odd_correction = F(5, 588) * (F(1, 13**3) + F(1, 13))
@@ -365,7 +397,7 @@ print(
 )
 print(
     "strict uniform floors: delta>=6042/9796423, "
-    "top-labelled cell>=3021/254706998"
+    "top cell>=3021/254706998, tensor cell>=3021/1655595487"
 )
 
 # At b=2, different low nu_7 values close the remaining zero-gap pair.
@@ -374,12 +406,17 @@ b2_cage_separated = (
 )
 b2_delta_separated = hole_floor - b2_cage_separated
 b2_cell_separated = b2_delta_separated / 52
+b2_tensor_separated = b2_delta_separated / joint_tensor_cells
 require(b2_cage_separated == F(864, 8281), "wrong separated b=2 cage")
 require(b2_delta_separated == F(36, 57967), "wrong separated b=2 clean floor")
 require(b2_cell_separated == F(9, 753571), "wrong separated b=2 cell")
+require(
+    b2_tensor_separated == F(18, 9796423),
+    "wrong separated b=2 tensor cell",
+)
 print(
     "b=2 with different low nu7: delta>=36/57967, "
-    "top-labelled cell>=9/753571"
+    "top cell>=9/753571, tensor cell>=18/9796423"
 )
 
 # Same-(nu_13,nu_7) b=2 boundary.  Orient
