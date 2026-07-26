@@ -1,0 +1,10 @@
+theorem=THM-2397
+status=PROVED-CANDIDATE+VERIFIED-EXACT; independent-audit=PENDING
+local_activity_states=63; exclusive_qstar=1; assigned_W=62
+singleton_energy=12/169; adjacent_energy=22/169; role_colour_pairs=60
+every_nonzero_colour_has_lower_role=YES; one_role_colours>=4
+universal_rho=1/1391208; fibrewise>=1/1175570760; aggregate>=1/1635463445878080
+common_rho=33/115934; fibrewise>=33/97964230; aggregate>=1089/11357385040820
+owner_rho=33/753571; fibrewise>=33/636767495; aggregate>=1089/479849517974645; septimal_tensor>=1089/3358946625822515
+row_decrement=0; ledger=165; LRC(14)=OPEN
+all_checks=PASS
