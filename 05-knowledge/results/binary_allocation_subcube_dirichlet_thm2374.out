@@ -1,0 +1,9 @@
+THM-2374 binary-allocation Dirichlet exact referee
+distinct exact rational tables: 1054
+complete-subcube spectral checks: 16864
+prime-type pair defects: 3162
+squared-support inversion cells: 15810
+two-by-two hostile Dp,Dq,Dpq,J: 49/36, 49/36, 49/24, 49/72
+distinct rectangle-contrast checks: 373
+global swap / larger-block face hostiles: PASS / PASS
+VERDICT: complete subcubes recover squared Walsh support; mixed-type defects are nonnegative
