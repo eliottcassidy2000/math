@@ -712,6 +712,9 @@ THM-2387 comparison. Normal, optimized, and stored transcripts for both
 companions agree after LF normalization; the attached hashes and the
 repository documentation check pass.
 
-The audit found no mathematical, typing, dependency, or scope defect.
-
-**QED.**
+A second independent scaling audit checked the infinity Hermite sign in
+the coordinate `q=1/t` and proved both divisor-kernel converses. Under
+`alpha=(1701/2)s`, it verified identically that the four scaled
+reconstruction formulas equal (19)--(22) and that the scaled
+sixth-order lock is `(1701/2)^3 Xi`. No mathematical, typing,
+dependency, or scope defect remains. **QED.**
