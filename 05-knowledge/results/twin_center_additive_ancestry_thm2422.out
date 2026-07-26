@@ -1,19 +1,31 @@
 THM-2422 twin-center additive ancestry exact controls
-center_limit=20000000
-A014574_centers=107407 last_center=19999548
-normalized_K=107406 last_k=3333258
-immediate_ancestry=successes:47941 failures:59465
+center_limit=100000000
+A014574_centers=440312 last_center=99999588
+normalized_K=440311 last_k=16666598
+immediate_ancestry=successes:185644 failures:254667
 first_raw_failure=6=4+2 with 2_not_A014574
 first_post_startup_failure=348=312+36 with 36_not_A014574
 normalized_hostile=58=52+6 with 6_not_K
-distinct_K_plus_K=all_checked_k_ge_3:107404 exceptions:1,2
+mod5_K_filter=K_minus_1_subset_0_2_3
+mod5_parent_channels=0:3,1:1,2:2,3:2,4:1
+HYP1994_recorded_holes_mod5_1=10_of_11
+distinct_K_plus_K=all_checked_k_ge_3:440309 exceptions:1,2
 first_hostile_repair=58=18+40; center_form:348=108+240
 canonical_parent_preview=3=1+2,5=2+3,7=2+5,10=3+7,12=2+10,17=5+12,18=1+17,23=5+18,25=2+23,30=5+25,32=2+30,33=1+32,38=5+33,40=2+38,45=5+40,47=2+45,52=5+47,58=18+40,70=12+58,72=2+70
-largest_canonical_search=candidates:456 target_k:1133072 least_parent:4777
+largest_canonical_search=candidates:492 target_k:8379508 least_parent:5343
+repair_depth_histogram_0_to_10=0:185643,1:67517,2:41034,3:29327,4:22015,5:17082,6:13501,7:10856,8:8671,9:7082,10:5968;gt10:31613
+max_repair_depth=123 targets:1133072,6803528,13153018
+reverse_parent_scan=matched:440309 max_depth:123
 summand_closure_from_2_3=[1,10000]_minus_1_4_6
 summand_fibre=r(z)=floor((z-1)/2)=(2z-3-(-1)^z)/4
 summand_cumulative=R(N)=floor((N-1)^2/4)
+restricted_summand_fibre_for_z_ge_13=r(z)-3
+swap_fixed_diagonals=addition:even_targets multiplication:perfect_squares
+multiplicative_atoms=prime_iff_tau(z)-2=0
+strict_factor_empty=prime_or_prime_square
+diagonal_hostiles=4_and_9_have_no_strict_proper_factor_pair
 fibonacci_spine=2,3,5,8,13,21,34,55,89,144,233,377,610,987,1597,2584,4181,6765
+fibonacci_target_13_parents=2+11,3+10,5+8
 synchronous_stage_max=0:3,1:5,2:8,3:15,4:28,5:55,6:109,7:217,8:433,9:865,10:1729
 synchronous_stage_size=0:2,1:3,2:5,3:11,4:25,5:52,6:106,7:214,8:430,9:862,10:1726
 dyadic_frontier=M_t=27*2^(t-4)+1 for 4<=t<=10

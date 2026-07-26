@@ -16,10 +16,11 @@ only exact integer/Boolean operations.  Every executable check calls
 verification.
 """
 
+from collections import Counter
 from math import isqrt
 
 
-CENTER_LIMIT = 20_000_000
+CENTER_LIMIT = 100_000_000
 SUMMAND_LIMIT = 10_000
 LOCAL_PRIMES = (5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43)
 
@@ -136,6 +137,28 @@ require(
     ],
     "normalized twin-center prefix drifted",
 )
+require(
+    all(k == 1 or k % 5 in {0, 2, 3} for k in necklace),
+    "the modulo-five twin-center filter failed",
+)
+mod5_parent_channels = {
+    residue: sum(
+        1
+        for left in {0, 2, 3}
+        for right in {0, 2, 3}
+        if (left + right) % 5 == residue
+    )
+    for residue in range(5)
+}
+require(
+    mod5_parent_channels == {0: 3, 1: 1, 2: 2, 3: 2, 4: 1},
+    "the modulo-five parent-channel profile changed",
+)
+known_hyp1994_holes = (16, 67, 86, 131, 151, 186, 191, 211, 226, 541, 701)
+require(
+    sum(hole % 5 == 1 for hole in known_hyp1994_holes) == 10,
+    "the modulo-five profile of the recorded HYP-1994 holes changed",
+)
 
 # Canonical parent: the least a in K with a < k-a and k-a in K.
 # Positivity makes both parents earlier than the target automatically.
@@ -171,6 +194,49 @@ require(
 require(
     58 - 52 == 6 and 6 not in necklace_set,
     "the normalized immediate-ancestry hostile changed",
+)
+
+# Independent traversal: scan possible second parents from the latest
+# necklace vertex backward.  This has the opposite order from the primary
+# least-first-parent scan and must recover the same canonical pair.
+reverse_canonical_parents = {}
+reverse_repair_depths = {}
+for target_index, k in enumerate(necklace):
+    for parent_index in range(target_index - 1, -1, -1):
+        b = necklace[parent_index]
+        a = k - b
+        if a >= b:
+            break
+        if a in necklace_set:
+            reverse_canonical_parents[k] = (a, b)
+            reverse_repair_depths[k] = target_index - 1 - parent_index
+            break
+
+require(
+    reverse_canonical_parents == canonical_parents,
+    "forward and reverse canonical-parent scans diverged",
+)
+
+# The least first parent is equivalently the latest possible second parent.
+# Its distance behind the immediate predecessor is the canonical repair depth.
+necklace_index = {value: index for index, value in enumerate(necklace)}
+repair_depths = {
+    k: necklace_index[k] - 1 - necklace_index[b]
+    for k, (_, b) in canonical_parents.items()
+}
+repair_depth_histogram = Counter(repair_depths.values())
+max_repair_depth = max(repair_depths.values())
+max_repair_targets = [
+    k for k, depth in repair_depths.items() if depth == max_repair_depth
+]
+require(repair_depths[58] == 3, "the 58 repair depth changed")
+require(
+    reverse_repair_depths == repair_depths,
+    "forward and reverse repair depths diverged",
+)
+require(
+    repair_depth_histogram[0] + 1 == len(immediate_successes),
+    "depth-zero ancestry and the immediate-gap count diverged beyond k=2=1+1",
 )
 
 # The distinct-summand closure from seeds {2,3}.
@@ -225,6 +291,81 @@ for z in range(1, SUMMAND_LIMIT + 1):
         f"cumulative summand count failed at {z}",
     )
 
+# Once z>=13, deleting the missing dependency module {1,4,6} deletes
+# exactly three labelled parent pairs and no others.
+for z in range(13, SUMMAND_LIMIT + 1):
+    restricted_count = sum(
+        1
+        for a in range(1, z)
+        if a < z - a and a not in missing and z - a not in missing
+    )
+    require(
+        restricted_count == (z - 1) // 2 - 3,
+        f"restricted summand fibre failed at {z}",
+    )
+
+# Weak/strict commutative fibres expose the swap-fixed diagonal.  Addition
+# sees the even targets; multiplication sees the perfect squares.  Deleting
+# the multiplicative unit then makes primes exactly the zero proper-divisor
+# witnesses, but the diagonal must be retained to distinguish 9 from a prime.
+for z in range(2, SUMMAND_LIMIT + 1):
+    root = isqrt(z)
+    square = int(root * root == z)
+    tau = sum(
+        1 if divisor * divisor == z else 2
+        for divisor in range(1, root + 1)
+        if z % divisor == 0
+    )
+    weak_additive = sum(1 for a in range(1, z) if a <= z - a)
+    strict_additive = sum(1 for a in range(1, z) if a < z - a)
+    weak_multiplicative = sum(
+        1 for a in range(1, root + 1) if z % a == 0
+    )
+    strict_multiplicative = weak_multiplicative - square
+    proper_weak_multiplicative = weak_multiplicative - 1
+    proper_strict_multiplicative = strict_multiplicative - 1
+
+    require(
+        weak_additive == z // 2
+        and strict_additive == z // 2 - int(z % 2 == 0),
+        f"weak/strict additive fibres failed at {z}",
+    )
+    require(
+        2 * weak_multiplicative == tau + square
+        and 2 * strict_multiplicative == tau - square,
+        f"weak/strict multiplicative fibres failed at {z}",
+    )
+    require(
+        2 * proper_weak_multiplicative == tau - 2 + square
+        and 2 * proper_strict_multiplicative == tau - 2 - square,
+        f"proper multiplicative fibres failed at {z}",
+    )
+    require(
+        (tau - 2 == 0) == bool(prime[z]),
+        f"prime zero-defect test failed at {z}",
+    )
+    require(
+        (proper_weak_multiplicative == 0) == bool(prime[z]),
+        f"weak proper-factor atom test failed at {z}",
+    )
+    require(
+        (proper_strict_multiplicative == 0)
+        == (bool(prime[z]) or bool(square and prime[root])),
+        f"strict proper-factor prime-square ambiguity failed at {z}",
+    )
+
+for square_hostile in (4, 9):
+    require(
+        not prime[square_hostile]
+        and sum(
+            1
+            for a in range(2, isqrt(square_hostile) + 1)
+            if a < square_hostile // a and square_hostile % a == 0
+        )
+        == 0,
+        f"the square-diagonal hostile at {square_hostile} changed",
+    )
+
 # The Fibonacci chain is an embedded ancestry path, not the full closure.
 fibonacci_spine = [2, 3]
 while fibonacci_spine[-1] + fibonacci_spine[-2] <= SUMMAND_LIMIT:
@@ -239,6 +380,16 @@ for index in range(2, len(fibonacci_spine)):
         fibonacci_spine[index] not in missing,
         "Fibonacci spine entered the missing dependency module",
     )
+
+parents_of_13 = [
+    (a, 13 - a)
+    for a in range(1, 13)
+    if a < 13 - a and a not in missing and 13 - a not in missing
+]
+require(
+    parents_of_13 == [(2, 11), (3, 10), (5, 8)],
+    "the first displayed nonunique Fibonacci ancestry changed",
+)
 
 # Synchronous generation has one further startup tooth and then becomes an
 # exact dyadic interval frontier.  Here S_(t+1) uses only pairs already in S_t.
@@ -294,6 +445,31 @@ for p in LOCAL_PRIMES:
         allowed == p * p - 6 * p + 12,
         f"local prime-sextuple count failed modulo {p}",
     )
+    target_profile = {}
+    for target in range(p):
+        if target in {1, p - 1}:
+            continue
+        target_count = sum(
+            1
+            for x in range(p)
+            if x not in {1, p - 1}
+            and (target - x) % p not in {1, p - 1}
+        )
+        if target == 0:
+            expected = p - 2
+        elif target in {2, p - 2}:
+            expected = p - 3
+        else:
+            expected = p - 4
+        require(
+            target_count == expected,
+            f"targetwise sextuple count failed modulo {p} at {target}",
+        )
+        target_profile[target] = target_count
+    require(
+        sum(target_profile.values()) == allowed,
+        f"targetwise and aggregate sextuple counts diverged modulo {p}",
+    )
     local_counts.append((p, allowed))
 
 parent_preview = ",".join(
@@ -301,6 +477,9 @@ parent_preview = ",".join(
     for k, (a, b) in list(canonical_parents.items())[:20]
 )
 local_preview = ",".join(f"{p}:{count}" for p, count in local_counts)
+repair_preview = ",".join(
+    f"{depth}:{repair_depth_histogram[depth]}" for depth in range(11)
+)
 
 print("THM-2422 twin-center additive ancestry exact controls")
 print(f"center_limit={CENTER_LIMIT}")
@@ -314,6 +493,9 @@ print(
 print("first_raw_failure=6=4+2 with 2_not_A014574")
 print("first_post_startup_failure=348=312+36 with 36_not_A014574")
 print("normalized_hostile=58=52+6 with 6_not_K")
+print("mod5_K_filter=K_minus_1_subset_0_2_3")
+print("mod5_parent_channels=0:3,1:1,2:2,3:2,4:1")
+print("HYP1994_recorded_holes_mod5_1=10_of_11")
 print(
     "distinct_K_plus_K="
     f"all_checked_k_ge_3:{len(necklace) - 2} "
@@ -328,6 +510,20 @@ print(
     f"least_parent:{largest_search[2]}"
 )
 print(
+    "repair_depth_histogram_0_to_10="
+    f"{repair_preview};gt10:"
+    f"{sum(count for depth, count in repair_depth_histogram.items() if depth > 10)}"
+)
+print(
+    "max_repair_depth="
+    f"{max_repair_depth} targets:"
+    + ",".join(str(target) for target in max_repair_targets)
+)
+print(
+    "reverse_parent_scan="
+    f"matched:{len(reverse_canonical_parents)} max_depth:{max_repair_depth}"
+)
+print(
     "summand_closure_from_2_3="
     f"[1,{SUMMAND_LIMIT}]_minus_1_4_6"
 )
@@ -336,10 +532,19 @@ print(
     "r(z)=floor((z-1)/2)=(2z-3-(-1)^z)/4"
 )
 print("summand_cumulative=R(N)=floor((N-1)^2/4)")
+print("restricted_summand_fibre_for_z_ge_13=r(z)-3")
+print(
+    "swap_fixed_diagonals="
+    "addition:even_targets multiplication:perfect_squares"
+)
+print("multiplicative_atoms=prime_iff_tau(z)-2=0")
+print("strict_factor_empty=prime_or_prime_square")
+print("diagonal_hostiles=4_and_9_have_no_strict_proper_factor_pair")
 print(
     "fibonacci_spine="
     + ",".join(str(value) for value in fibonacci_spine)
 )
+print("fibonacci_target_13_parents=2+11,3+10,5+8")
 print(
     "synchronous_stage_max="
     + ",".join(
