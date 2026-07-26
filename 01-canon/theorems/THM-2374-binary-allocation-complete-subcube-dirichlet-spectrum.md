@@ -21,6 +21,7 @@ depends_on:
 related:
   - THM-2248-higher-interaction-defect-complex-and-tropical-trace-spectrum
   - THM-2369-complete-line-target-dirichlet-and-balanced-observable-no-go
+  - THM-2370-deletion-martingale-drift-conservation-and-sharp-clone-hostile
 script: 04-computation/binary_allocation_subcube_dirichlet_thm2374.py
 output: 05-knowledge/results/binary_allocation_subcube_dirichlet_thm2374.out
 script_sha256: 225b8d386fe3536365c3dcefd8e1da70435f98a921f9bc3305dfd129ec55646f
@@ -283,6 +284,17 @@ It loses:
 - the constant term;
 - the minimizing owner set; and
 - the knot-theoretic realization of an abstract energy table.
+
+THM-2370 gives a sharp cross-domain stopping witness for that loss. Its
+Hilbert-valued clone cube `x -> QH_x` has only constant and singleton
+Walsh terms, so every mixed subcube defect vanishes. Global Boolean
+complementation preserves the complete squared Dirichlet bank but swaps
+which terminal endpoint is target-null. By contrast, the scalar table
+`x -> ||QH_x||_2^2` has degree-two Walsh terms created by squaring.
+Those nonlinear terms do not reconstruct the signed current, the
+terminal orientation, or an owner. Thus passing to still higher mixed
+**energy** interactions cannot repair the missing absolute charged
+reference in that hostile.
 
 Accordingly (10) is a new exact diagnostic and repackaging of
 THM-2346/2348. It proves no new Gordian distance, owner identity,
