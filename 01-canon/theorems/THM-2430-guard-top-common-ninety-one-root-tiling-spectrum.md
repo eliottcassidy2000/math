@@ -2,8 +2,8 @@
 id: THM-2430
 title: "Guard-top common ninety-one-root tiling spectrum"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT. In every THM-2427 residual type with t=5 and b=0, composing
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In every
+  THM-2427 residual type with t=5 and b=0, composing
   the septimal top-bin orbit with the blocker-free thirteen-root
   section gives one physical Z/91Z stalk. After division by 7^M, the
   guard occupies a unit-step progression of size 26 and the five
@@ -32,8 +32,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2430 -- the blocker-free guard-top stalk has a finite tiling spectrum
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2427 reduces the deep-`c_3` side to seven valuation types. Six have
 `t=5`; in three of those, no low blocker lies in the septimal top
@@ -399,4 +398,17 @@ proof of LRC(14).
 
 ## 8. Independent audit
 
-Independent hostile audit is pending. QED.
+Independent audits reconstructed the common `91`-root parent and the
+physical top-word typing, including the positive-depth quotient
+boundary. They independently recovered the `182` eligible blocks,
+`62` normalized covers, `620` pair/triple matches, guard stabilizer,
+six reflection-fixed covers, `34` affine types, and all `18` step
+spectra. They also checked the exact thirteen-slice alternatives,
+local physical realization, and the failed dynamic-pivot pruning
+mechanism.
+
+Normal and optimized companions both match the stored transcript
+byte-for-byte after LF normalization. The independently recomputed LF
+hashes are exactly the values in frontmatter. No owner, low-blocker,
+global-cover, or ledger consequence was inferred from the finite
+atlas. QED.
