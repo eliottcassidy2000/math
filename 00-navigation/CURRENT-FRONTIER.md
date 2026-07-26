@@ -170,15 +170,13 @@ is the proved carrier that reduces each fixed bad-denominator/owner fiber to
 labelled primitive packets and one coprime interval. It makes the terminal
 exact and finite; it does not prove that every surviving interval is empty.
 
-THM-2168--2257 leave `165` first-depth-one rows (`150+15`); THM-2234/2255/2263 give private-mass floors, THM-2295/2298 force ranks five/six, and THM-2287/2301/2307 give relation/address packets.
-THM-2296/2305 retain pure edges/forks; THM-2299 kills pair phase and THM-2303 names the missing component current.
-THM-2323/2326/2327 mark a `91`-unit deepest edge on each positive strict shallow word. THM-2349 uses the universal depth-one owner to obtain the same edge on all `165` rows after a finite row-dependent delay; repeated rows permit either shallow source. Every strict resonance arm now reaches the same current obstruction.
-THM-2321/2329 type root/target gain; THM-2325/2331 put every nonzero target address into the Abel expansion, while THM-2333 permits zero-only aggregation.
-THM-2334 retains the full word and turns target landing into a `169`-twist DFT; THM-2337 recovers a surjective but gauge-dependent first jet and masked energy.
-THM-2340 identifies word main effects/interactions; THM-2343 makes deepest phase a nonzero pure-axis translation and zero-only landing one inverse-character line.
-THM-2344 makes that line a shifted convolution inverse. Zero/real/covariance tests break it; arbitrary same-axis words attain it, while a typed `334825`-lift bank has both signs.
-THM-2355 gives an exact quadratic phase repair: singleton energies plus lawful `13`-twisted pair probes on a nonzero-component tree recover the THM-2303 phase transport. Whole target-twist energy retains only residue autocorrelation; even real full support can be perfect-autocorrelation blind.
-Force that lawful pair service, an acute grouped-current phase cone, or another coefficient-sensitive target-residue dispersion, then retain `91`-unit visibility. Mere multiplicity, word nonconstancy, or one additional active axis is not a certificate. The ledger remains `165`.
+THM-2168--2257 leave `165` first-depth-one rows. THM-2295/2298 force ranks five/six; THM-2287/2301/2307 give relation/address packets; THM-2296/2305 retain owner edges/forks; and THM-2299/2303 isolate the missing component phase.
+THM-2323/2326/2327 mark a `91`-unit deepest edge on positive strict words. THM-2349 reaches the same current obstruction on all `165` rows after finite row-dependent delay, including every strict resonance arm.
+THM-2325/2331 populate every nonzero target address termwise; THM-2333 permits zero-only aggregation. THM-2334/2337 retain the full word and a surjective but gauge-dependent first jet.
+THM-2340 gives target ANOVA; THM-2343/2344 identify zero-only landing with a shifted endpoint convolution inverse. Same-axis word content can preserve that boundary.
+THM-2355 reconstructs component phase from singleton energies plus lawful pair twists; whole-target energy retains only autocorrelation.
+THM-2356 gives basis-dependent planar graph chirps. A two-target graph lands; the complete one-sparse no-landing locus is `delta_0(q)B(z)`. Its exclusion needs the derived graph-channel phase functional `D_c`, not separate intensities.
+THM-2358 makes the real endpoint cone exactly sign-definiteness and gives a centered nonnegative-indicator marked-current hostile with both signs. Realize the graph-channel pair service, exclude the vertical tensor canonically, or prove a stronger sign theorem, then retain `91`-unit visibility. The ledger remains `165`.
 
 ### Independent routes that remain live
 

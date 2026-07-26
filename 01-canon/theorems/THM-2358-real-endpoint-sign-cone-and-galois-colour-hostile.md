@@ -2,7 +2,7 @@
 id: THM-2358
 title: "Real endpoint sign-cone boundary and Galois-colour hostile"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. For a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. For a
   nonzero real array, confinement to a phase cone of width less than pi
   is exactly sign-definiteness. Hence the THM-2355 cone route for
   THM-2344's real endpoint arrays is equivalent to proving both arrays
@@ -12,9 +12,10 @@ status: >
   colourwise Galois straightening gives no common physical cone. More
   sharply, a literal centered (1,13,26), R=169 target carrier has a
   nonzero marked word/deep/bare triangle while its real inverse endpoint
-  array has U_0>0 and U_1<0. Positivity, evenness, nonconstant word
-  content, two target axes, and marked-triangle nonvanishing therefore do
-  not imply an acute cone. The carrier is local, not a canonical
+  array has U_0>0 and U_1<0. Nonnegative real/even indicator and
+  complement structure, nonconstant word content, two target axes, and
+  marked-triangle nonvanishing therefore do not imply an acute cone. The
+  carrier is local, not a canonical
   nine-coordinate scalar cover; no target landing, row exclusion, or
   LRC(14) closure is proved.
 source: codex-2026-07-25-real-endpoint-sign-cone
@@ -33,7 +34,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2358 -- the real endpoint sign-cone boundary
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2355 gives a sharp sufficient condition for an endpoint
 cross-correlation to have honest support: the two arrays must lie in phase
@@ -43,9 +44,9 @@ question to an exact sign question.
 
 That collapse produces both a useful positive target and a sharp no-go.
 Sign-definite endpoint arrays would finish the inverse-character
-separation as soon as one support is nonsingleton. But positivity and
-evenness of the physical interval factors do not imply sign-definiteness
-after target inversion. This remains false even with a nonconstant
+separation as soon as one support is nonsingleton. But nonnegative
+real/even danger indicators and their complements do not imply
+sign-definiteness after target inversion. This remains false even with a nonconstant
 transported word and a literal nonzero marked triangle.
 
 ## 1. For real arrays, the cone condition is sign-definiteness
@@ -445,14 +446,14 @@ prove both grouped endpoint arrays sign-definite
   and prove one support nonsingleton;
 
 or construct a genuinely coefficient-sensitive nonlinear probe,
-  such as THM-2356's candidate planar chirp service.                 (38)
+  such as THM-2356's planar chirp coefficient service.              (38)
 ```
 
-Physical factor positivity, evenness, a nonconstant word, an extra target
-axis, the fixed-colour Galois argument, and marked-triangle nonvanishing
-do not prove the first line. THM-2356 is only a candidate under audit and
-is not used as a dependency here; its nonlinear-mask route is
-mathematically complementary to this amplitude-level half-plane no-go.
+Nonnegative real/even indicator and complement structure, a nonconstant
+word, an extra target axis, the fixed-colour Galois argument, and
+marked-triangle nonvanishing do not prove the first line. THM-2356 is not
+used as a dependency here; its nonlinear-mask route is mathematically
+complementary to this amplitude-level half-plane no-go.
 
 No canonical sign theorem, planar target--jet coupling, target landing,
 scalar-row exclusion, or LRC(14) closure is proved. The ledger remains
@@ -487,4 +488,21 @@ Both transcripts must match
 byte-for-byte after LF normalization. Every executable check raises
 explicitly under optimized Python.
 
-Independent audit is pending. QED.
+## 6. Independent audit
+
+The independent audit rederived the real-cone lemma, the exact support
+difference consequence for sign-definite arrays, and the strict
+shifted-delta boundary. It separately checked the `N=91` primitive-colour
+sign pair and the order-three nonvanishing argument.
+
+For the target-level carrier it reconstructed the support line, every
+interval in (25), the `49/182` incidence, the `1/91` tooth correction,
+and the strict sign comparison proving `U_1<0<U_0`. It also checked all
+three nonzero legs of the marked triangle and the local,
+non-canonical-carrier scope. Normal, optimized, and stored transcripts
+and both LF hashes agree.
+
+The wording was repaired to retain exactly what the construction uses:
+nonnegative real/even danger indicators and complements, not strictly
+positive factors. No canonical nine-coordinate row, target landing, or
+ledger decrement is claimed. QED.

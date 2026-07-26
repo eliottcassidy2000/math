@@ -2,7 +2,7 @@
 id: THM-2356
 title: "Finite-field chirp Gram tomography and Bockstein planar graph slices"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. For equal
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. For equal
   finite abelian groups G,A and a planar map phi:G->A, the complete
   character-intensity table of the masks eta(phi(x)) reconstructs every
   off-diagonal entry z(x)conjugate(z(y)) by an explicit double Fourier
@@ -13,9 +13,11 @@ status: >
   cannot locate a singleton and have an exact unequal-magnitude
   two-support swap ambiguity; singleton energies are a sharp uniform
   sidecar. The LRC target and first Bockstein spaces both have order 169.
-  Their canonical joint Abel array partitions into the 169 planar graphs
-  beta=q^2/2+c; on each graph the existing linear target--jet characters
-  are quadratic chirps up to a scalar phase. At least one graph signal
+  After choosing identifications G,B~=F_169, their joint Abel array
+  partitions lawfully but noncanonically into the 169 planar graphs
+  beta=q^2/2+c; on each graph the linear target--jet characters become
+  quadratic chirps up to a scalar phase. Their intensities are derived
+  quadratic functionals, not pre-existing physical probes. At least one graph signal
   survives. Any graph with target support at least two therefore forces a
   nonzero target through its recovered off-diagonal Gram entry. The exact
   no-landing locus inside the one-sparse boundary is the vertical tensor
@@ -44,7 +46,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2356 -- finite-field chirp Gram tomography and planar graph slices
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2355 gives a local quadratic repair for the terminal-component phase
 debt: singleton energies and cyclically twisted pair energies recover a
@@ -330,7 +332,9 @@ A is not zero
 ```
 
 This is a coefficient-respecting partition of the already existing joint
-array, not a gauge choice or a termwise occupancy assertion.
+array, not a gauge choice or a termwise occupancy assertion. It is lawful
+after the two identifications in (22), but those identifications and hence
+the planar foliation are not canonical LRC data.
 
 Restrict a joint linear target--jet character to one graph. Its amplitude
 is
@@ -341,9 +345,12 @@ sum_q A(q,q^2/2+c) psi(bq+a(q^2/2+c))
  =psi(ac) sum_q Z_c(q)psi(bq+a q^2/2).              (27)
 ```
 
-The leading factor has modulus one. Thus the existing linear characters,
-after retaining the graph label, give exactly the full chirped intensity
-table of Section 2 for `Z_c`.
+The leading factor has modulus one. Thus finite coefficient grouping by
+the graph label followed by the existing linear characters gives the full
+chirp amplitudes of Section 2 for `Z_c`. Squaring their moduli produces a
+derived quadratic functional of THM-2337's coefficient array. No theorem
+here asserts that this intensity table is already a physical pair-probe
+service in the canonical LRC construction.
 
 This corrects a tempting false dichotomy. Without graph restriction,
 independent linear target and jet characters recover only the
@@ -407,8 +414,8 @@ planar graph chirps + labelled graph singleton energies
   -> complete graph currents up to phase.                          (31)
 ```
 
-Thus THM-2356 supplies a canonical global alternative to THM-2355's
-lawful pair-twist tree, not merely a proposed one. It reduces the LRC
+Thus THM-2356 supplies a finite-field algebraic alternative to THM-2355's
+lawful pair-twist tree, not merely a proposed identity. It reduces the LRC
 phase/target problem to the **planar graph singleton boundary**:
 
 ```text
@@ -574,15 +581,16 @@ coordinates `q=(x,y) in F_13^2`,
 delta_0(q)=(1-x^12)(1-y^12).                       (46)
 ```
 
-As a polynomial on the two target and two jet coordinates, (46) has
-separate degrees `(12,12,0,0)` and exactly
+As an interpolation polynomial on the two target and two jet coordinates,
+(46) has separate degrees `(12,12,0,0)` and exactly
 
 ```text
 1*1*13*13=169
 ```
 
-nonzero grid values. It is the sharp THM-2285 footprint with surplus
-vector `(1,1,13,13)`.
+nonzero grid values. It is the sharp THM-2285 interpolation-footprint
+extremizer with surplus vector `(1,1,13,13)`. This is not a claim about
+the number of monomials in its expanded polynomial.
 
 Finally, the graph-chirp amplitude of (42) is
 
@@ -615,8 +623,8 @@ data can be absorbed into `B`.
 
 ### 5.2 The exact missing graph-channel observable
 
-There is a positive phase-sensitive test which detects target landing
-without a sparsity assumption. For a graph signal put
+There is a positive phase-sensitive coefficient functional which detects
+target landing without a sparsity assumption. For a graph signal put
 
 ```text
 F_c(b)=sum_q Z_c(q)psi(bq),
@@ -661,8 +669,11 @@ F_c(b)conjugate(F_c(0)),                            (52)
 ```
 
 which THM-2355 would recover from a lawful graph-channel pair twist.
-Current canon does not supply that canonical pair probe. Thus (49)--(52)
-are a precise sidecar specification, not a target-landing theorem.
+Separate intensities `|F_c(b)|^2` do not determine (49), because they lose
+the cross-frequency phase with `F_c(0)`. Current canon does not supply
+that canonical pair probe. At coefficient level `D_c` is only a derived
+quadratic functional of THM-2337. Thus (49)--(52) are a precise sidecar
+specification, not a physical target-landing theorem.
 
 ## 6. Exact companion
 
@@ -703,4 +714,26 @@ Both transcripts must match
 byte-for-byte after LF normalization. Every executable check raises
 explicitly under optimized Python.
 
-Independent audit is pending. QED.
+## 7. Independent audit
+
+The independent audit rederived the two character-orthogonality steps,
+the signs and normalization in (5) and (15), all `169` disjoint graph
+slices after chosen identifications `G,B~=F_169`, and the scalar phase in
+(27). It explicitly separated lawful coefficient grouping from a
+pre-existing physical measurement and checked that the graph foliation is
+basis-dependent.
+
+The same audit proved the at-most-one-sparse dichotomy (33)--(37),
+recomputed the factorized vertical tensor and every term count in
+(38)--(43), and checked the uncertainty and interpolation-footprint
+equalities without treating (46) as a monomial-support assertion. It
+independently verified `35` Gaussian-integer instances of (49) and `373`
+vertical cells, confirming that `D_c>0` is equivalent to nonzero-target
+support while separate chirp intensities do not determine `D_c`.
+
+Normal, optimized, and stored transcripts, LF hashes, and the exact
+companion all agree. The accepted scope is: chosen finite-field
+identifications; lawful but noncanonical graph grouping; derived
+quadratic chirp and `D_c` functionals; and a formal group-algebra hostile.
+No scalar profile is decremented until canonical structure excludes the
+vertical tensor or realizes the graph-channel phase ratio. QED.
