@@ -435,14 +435,13 @@ If the last cell also carries a fixed septimal coefficient of modulus
 132/1958569461121.                                 (39)
 ```
 
-This application does not use THM-2397. It independently recovers the
-same fixed-role quantitative carrier. THM-2397 additionally treats all
-five actual roles, signed pair and bank floors, arbitrary root-constant
-filtering, and survival through delayed `13^k` words; the present theorem
-instead supplies the general prime kernel/operator dichotomy, norm floor,
-and sharp non-covariant hostiles. The coefficients in (37)--(39) are
-fibrewise joint mixed coefficients. A product of separately integrated
-aggregate currents would contain one additional factor of `mu(Z)`.
+This application does not use THM-2397. It retains one actual named
+lower role on all twelve root colours. The current THM-2397 proof
+candidate gives complementary signed and aggregate information through
+derived least-role selectors; it is related rather than a dependency.
+The coefficients in (37)--(39) are fibrewise joint mixed coefficients.
+A product of separately integrated aggregate currents would contain one
+additional factor of `mu(Z)`.
 
 ## 6. Higher-dimensional and composite boundaries
 
