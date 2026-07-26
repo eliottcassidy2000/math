@@ -1,0 +1,36 @@
+THM-2404 IMPRIMITIVE SECTION FACTORIZATION AUDIT
+
+IMPRIMITIVE SWITCH CONTROL
+  T_49 sheet labels: 9 -> 23, displacement=14
+  intermediate residue: 2 -> 2 mod 7
+  Y=[2/7,5/14) has no boundary above z=1/4
+  D(Y)=2/7:+1, 5/14:-1
+
+PRIMITIVE SWITCH CONTROL
+  T_49 sheet labels: 9 -> 10, displacement=1
+  intermediate residue: 2 -> 3 mod 7
+  quotient exit 9/28 and entry 13/28 both lie over z=1/4
+  interior D(Y)=9/28:-1, 13/28:+1
+
+COMMON-CORE LENGTH GATE
+  Hbar has 11 components, each length 6/91, total 66/91
+  H_0=T_V^-1(Hbar): 11V components, each length 6/(91V)
+  one T_7 root lift length=6/(637V)
+  every D_u-safe component length=6/(7u)
+  imprimitive equality therefore forces u<=91V, i.e. q_*<=c_3
+  boundary u=91V: exact aligned fits=77 for V=1
+  hostile u=92,V=1: q_*=644>c_3=637, so primitive switch is forced
+
+CROSS-PRIME TARGET HOSTILE
+  primitive C_7 boundary tensor root-constant C_13 gate
+  signed boundary survives; all 12 nonzero target colours vanish
+  a nonconstant lawful 7x13 boundary table is an additional sidecar
+
+SCOPE
+  every one-sheet T_49 section factors through Y=T_7(E)
+  imprimitive iff the intermediate sheet is componentwise constant
+  q_*=7u safety forces Y subset D_u^c
+  q_*>c_3 forces a primitive q_*-typed switch only on the equality face
+  canonical owner/target transport and LRC(14) remain open
+
+PASS
