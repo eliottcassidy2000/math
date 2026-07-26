@@ -9,6 +9,33 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-266 (2026-07-26, THM-2403 candidate typing audit) -- a clean-cell projector froze the blocker gate that the target action was moving
+
+- **What was written:** the first proof candidate for THM-2403 restricted
+  integration to a fixed clean owner cell `S_j`. That cell already contained
+  the unshifted present-blocker safety factor `g_0`, while the proposed target
+  table multiplied it by the shifted gate `g_s`. The ensuing clean incidence
+  count was then read as a lawful THM-2365 target orbit.
+- **First failed implication:** writing `1_(S_j)=f g_0` and translating only
+  the displayed blocker factor produces `f g_0 g_s`, not the physical shifted
+  layer `f_s g_s`. Scalar-cover redundancy at the untwisted terminal word does
+  not make `S_j` invariant under the present-factor target action. The table
+  therefore froze or doubled a moving gate and was not the claimed canonical
+  orbit.
+- **Strongest survivor:** the finite clean-cell incidence inequality remained
+  exact and useful as a lower bound. It could not itself type the analytic
+  packet.
+- **Repair:** THM-2403 now defines the global lawful packet with all six
+  unit/guard safeties and all three present blocker safeties shifted together,
+  inserts only the target-neutral transported terminal word, and uses the
+  clean set solely inside a nonnegative global integral. Scalar cover gives
+  the genuine anchored zero globally, while the surviving local incidence
+  yields the exact `18 rho_R/13` mass gap and all twelve target colours.
+- **Rule:** if a localization predicate mentions a factor moved by the
+  action, do not insert it as a fixed projector. Globalize the orbit first and
+  restrict only the estimate, unless the entire predicate is transported
+  covariantly or separately proved target-neutral.
+
 ## MISTAKE-265 (2026-07-26, THM-2396 orbit-localization audit) -- an empty finite orbit universe was used only at global zero mass
 
 - **What was written:** the first promoted THM-2396 used the empty

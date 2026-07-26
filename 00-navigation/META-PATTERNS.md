@@ -2,6 +2,13 @@
 
 **Status:** CURRENT. **Role/Use:** compact defaults from repeated successes and failures; scan triggers and evidence. Each card states applicability, action, mechanism, and counterindication; new cards require distinct-thread evidence or a severe repaired failure.
 
+## Globalize a moving-factor orbit before localizing positivity
+
+**Trigger / action:** if a clean cell or root pattern contains a factor moved by the proposed action, build the complete lawful orbit without that fixed projector; use the cell only to lower-bound a nonnegative global integral, or transport it covariantly.
+**Mechanism:** a fixed projector freezes or duplicates the moving gate; witness restriction preserves a lower bound without changing the packet.
+**Counterindication:** fixed filters are safe when proved invariant/target-neutral, or when only a derived common-filter packet is claimed; unordered fibre counts still do not select an anchor sheet.
+**Evidence:** THM-2403/MISTAKE-266, THM-2365, THM-2370, and MISTAKE-260/THM-2362.
+
 ## Demodulate, then average a complete subgroup
 
 **Trigger / action:** when a finite unitary action grades the target by labelled characters and exact support energy is needed, demodulate by the desired character and average the squared finite difference over the whole lawful subgroup; on Boolean cubes, also Mobius-invert complementary-subcube energies, and for nonlinear seeds multiply before demodulating.
@@ -81,51 +88,24 @@
 
 ## Find the hidden second coordinate in a nearly true theorem
 
-**Trigger:** one elegant property appears to explain a theorem, but a minimal
-counterexample preserves that property.
-**Action:** compare the proof with the witness and identify the extra
-coordinate actually excluding it—parity form, selected side, height, owner,
-support, or positivity. Restate the theorem as a conjunction.
-**Mechanism:** many structural theorems are two-key locks; naming only the
-visually dominant key creates false universal transfers.
-**Counterindication:** do not add decorative hypotheses; each coordinate must
-perform an explicit proof step or eliminate a concrete witness.
-**Evidence:** MISTAKE-225 (skew symmetry plus the tournament block modulo two
-for odd support) and MISTAKE-224 (walls plus selected-side/height labels for
-the LRC phase-height object).
+**Trigger / action:** when a minimal counterexample preserves the elegant property said to explain a theorem, identify the extra coordinate actually excluding it--parity, selected side, height, owner, support, or positivity--and restate the result as a conjunction.
+**Mechanism:** many structural theorems are two-key locks; naming only the visually dominant key creates false transfers.
+**Counterindication:** every added coordinate must perform a proof step or eliminate a concrete witness.
+**Evidence:** MISTAKE-225 (skew symmetry plus the mod-two tournament block) and MISTAKE-224 (walls plus selected-side/height labels).
 
 ## Restore a collapsed grading before transporting moments
 
-**Trigger:** a diagonal moment, scalar generating function, or total count is
-said to encode the same relations as a multigraded target.
-**Action:** expose the omitted grading or adjoin an observer that records it;
-test affine translates that preserve the diagonal but change the target.
-**Mechanism:** diagonalization silently fixes a conservation law. In
-MISTAKE-226, `CT[P^m Pbar^m]` sees only augmentation zero, while the mixed
-`CT[P^r Pbar^s]` table restores augmentation `r-s` and the full LRC relation
-support. This is the moment analogue of retaining multiplicity beside sequence
-support.
-**Counterindication:** the diagonal is sufficient only when the target is
-proved invariant under the discarded grading.
+**Trigger / action:** when a diagonal moment or total count is said to encode a multigraded target, expose the omitted grading or add an observer; test translates preserving the diagonal but changing the target.
+**Mechanism:** diagonalization fixes a hidden conservation law: `CT[P^m Pbar^m]` sees augmentation zero, while mixed `CT[P^r Pbar^s]` restores grade `r-s`.
+**Counterindication:** the diagonal suffices only when the target is proved invariant under the discarded grade.
 **Evidence:** MISTAKE-226/209 and THM-2352's q-adic plateau spectrum.
 
 ## A local factorization transfers only through a stated functor
 
-**Trigger:** a source polynomial, determinant, arrangement, or generating
-function factors, and a downstream wall/limit/topological object is then said
-to factor “the same way.”
-**Action:** draw the source-to-target construction and prove it respects the
-product or localization. Separate vanishing order, codimension, nonzero local
-units, analytic limits, and derived valuations. If the arrow is missing, keep
-the factorization as a source-side theorem and test the proposed transfer. For optimization,
-one Cartesian argmin is insufficient: test rectangles or every separable perturbation.
-**Mechanism:** products are not preserved automatically by scalar summation,
-confluence, asymptotic limits, constant-term functionals, or passage to a
-different cell complex.
-**Counterindication:** use product closure immediately when an exact theorem
-shows that the target construction is multiplicative.
-**Evidence:** MISTAKE-215/223; THM-2348 (robust factorization iff mixed ANOVA
-vanishes); and THM-2033's surviving special-matrix scope.
+**Trigger / action:** when a source factorization is transferred to a wall, limit, optimization, or topological object, draw the construction and prove multiplicativity; otherwise keep it source-side and test rectangles or all separable perturbations.
+**Mechanism:** scalar summation, confluence, limits, constant terms, and passage to another cell complex need not preserve products, vanishing orders, or argmins.
+**Counterindication:** use product closure when an exact functorial theorem supplies it.
+**Evidence:** MISTAKE-215/223; THM-2348 (mixed-ANOVA criterion); and THM-2033's special-matrix scope.
 
 ## Controlled forgetting requires a sidecar
 
