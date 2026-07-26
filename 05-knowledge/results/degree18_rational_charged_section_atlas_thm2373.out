@@ -1,0 +1,10 @@
+THM-2373 degree-eighteen charged-section atlas exact referee
+higher-support chart-cover subsets: 5
+exact rational samples: 73
+G0 weighted-covariance checks: 73
+chart normalizations: 219
+chart transitions: 219
+weight-zero invariant checks: 219
+closed BC/CD/DW section formulas: PASS / PASS / PASS
+B,D-only mu2/no-weight-one hostile: PASS
+VERDICT: every higher-support spectral orbit meets a root-free rational charged chart section
