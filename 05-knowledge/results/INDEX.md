@@ -2023,7 +2023,10 @@ counts, and a signed endpoint-event sweep on `192` rational source/target
 fixtures and `2,062` chambers. It verifies the THM-2418 rank-one hostile
 through `R=13^8=815730721` without enumerating the branches, a mixed-sign
 coincident event, circle-cut controls, the positive one-cylinder and
-divisible-total boundaries, and exact restriction to `D_7`. A balanced
+divisible-total boundaries, and exact restriction to `D_7`. It verifies
+the full-target endpoint-packet flatness certificate, the complete
+one-interval criterion `R*length in 7Z` on `2,610` exact cases, and the
+sharp seven-sheet balanced-event boundary. A balanced
 `R=13` source has flat integrated carry masses `(1/2,...,1/2)` but
 pointwise ancestry energy `Gamma=2`, proving that the nonlinear
 translation-Gram detector retains chamberwise charge lost by the linear

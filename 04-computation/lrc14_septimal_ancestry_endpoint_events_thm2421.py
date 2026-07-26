@@ -236,6 +236,17 @@ def integrated_profile(
     return tuple(totals)
 
 
+def full_flat_certificate(source: IntervalSet, clock: int) -> bool:
+    """Endpoint rigidity certificate for Gamma_[0,1)=0."""
+
+    events = signed_endpoint_events(source, clock)
+    points = tuple(sorted({F(0), F(1), *events}))
+    midpoint = (points[0] + points[1]) / 2
+    return flat(arithmetic_profile(source, clock, midpoint)) and all(
+        flat(jump) for jump in events.values()
+    )
+
+
 def random_interval_set(rng: Random, denominator: int, pairs: int) -> IntervalSet:
     cuts = sorted(rng.sample(range(1, denominator), 2 * pairs))
     return tuple(
@@ -262,6 +273,8 @@ def main() -> None:
     fixture_count = 0
     chamber_checks = 0
     jump_checks = 0
+    flat_certificate_checks = 0
+    full = ((F(0), F(1)),)
     for clock in (2, 3, 6, 7, 13, 17, 29, 169):
         for trial in range(24):
             source = random_interval_set(rng, 31 + 2 * (trial % 4), 3)
@@ -270,9 +283,15 @@ def main() -> None:
             brute = brute_integral(source, target, clock)
             require(swept[:2] == brute[:2], "integral evaluator mismatch")
             require(swept[2] == brute[2], "chamber-count mismatch")
+            full_sweep = event_sweep(source, full, clock)
+            require(
+                (full_sweep[0] == 0) == full_flat_certificate(source, clock),
+                "full-target endpoint rigidity failed",
+            )
             fixture_count += 1
             chamber_checks += brute[2]
             jump_checks += swept[3]
+            flat_certificate_checks += 1
 
     # Boundary and coincident-event controls.  At y=1/2 the first source
     # interval exits ancestry bin 0 exactly when the second enters bin 1.
@@ -280,7 +299,6 @@ def main() -> None:
         (F(0), F(1, 26)),
         (F(3, 26), F(2, 13)),
     )
-    full = ((F(0), F(1)),)
     coincident_events = signed_endpoint_events(coincident_source, 13)
     require(coincident_events == {F(1, 2): (-1, 1, 0, 0, 0, 0, 0)}, "coincident event")
     coincident = event_sweep(coincident_source, full, 13)
@@ -315,6 +333,44 @@ def main() -> None:
         require(chambers == 1 and jumps == 0, "rank-one event shape")
         require(profiles == (expected,), "rank-one ancestry profile")
         rank_one_clocks.append(clock)
+
+    # Complete one-interval classification.  The profile is flat exactly
+    # when the R-scaled interval length is an integral multiple of seven.
+    single_interval_checks = 0
+    for clock in (2, 6, 7, 13, 14, 29):
+        for left_numerator in range(29):
+            for right_numerator in range(left_numerator + 1, 30):
+                source = (
+                    (F(left_numerator, 29), F(right_numerator, 29)),
+                )
+                scaled_length = clock * (source[0][1] - source[0][0])
+                predicted_flat = (
+                    scaled_length.denominator == 1
+                    and scaled_length.numerator % P == 0
+                )
+                actual_flat = event_sweep(source, full, clock)[0] == 0
+                require(actual_flat == predicted_flat, "single interval classifier")
+                single_interval_checks += 1
+
+    # The sevenfold threshold is sharp: simultaneous +1 (and then -1)
+    # events in all residues change the common ancestry level but keep the
+    # profile flat on every chamber.
+    seven_sheet_source = tuple(
+        (F(4 * prefix + 1, 52), F(4 * prefix + 3, 52))
+        for prefix in range(P)
+    )
+    seven_sheet_events = signed_endpoint_events(seven_sheet_source, 13)
+    require(
+        seven_sheet_events
+        == {F(1, 4): (1,) * P, F(3, 4): (-1,) * P},
+        "seven-sheet event packets",
+    )
+    seven_sheet = event_sweep(seven_sheet_source, full, 13)
+    require(seven_sheet[:2] == (F(0), F(0)), "seven-sheet flat hostile")
+    require(
+        seven_sheet[4] == ((0,) * P, (1,) * P, (0,) * P),
+        "seven-sheet profiles",
+    )
 
     # Positive and false-sufficient-test controls at a large clock.  Prefix
     # cylinders have grid endpoints, so their profiles are constant in y.
@@ -366,6 +422,7 @@ def main() -> None:
     print(f"random_fixtures={fixture_count}")
     print(f"random_chamber_checks={chamber_checks}")
     print(f"random_nonzero_jump_checks={jump_checks}")
+    print(f"full_flat_certificate_checks={flat_certificate_checks}")
     print(f"wrap_chamber_checks={wrap_checks}")
     print("coincident_event=1/2:(-1,1,0,0,0,0,0)")
     print(f"coincident_gamma={coincident[0]}; coincident_nonflat_mass={coincident[1]}")
@@ -375,6 +432,8 @@ def main() -> None:
         + f"; max_clock={rank_one_clocks[-1]}"
     )
     print("rank_one_gamma=0; rank_one_nonflat_mass=0")
+    print(f"single_interval_classifier_checks={single_interval_checks}")
+    print("seven_sheet_events=1/4:+ones,3/4:-ones; gamma=0")
     print(f"one_cylinder_clock={large_clock}; gamma={one[0]}; nonflat_mass={one[1]}")
     print(
         "divisible_total_profile="

@@ -26,8 +26,8 @@ related:
   - THM-2419-valuation-normalized-homogenization-of-affine-sideband-shells
 script: 04-computation/lrc14_septimal_ancestry_endpoint_events_thm2421.py
 output: 05-knowledge/results/lrc14_septimal_ancestry_endpoint_events_thm2421.out
-script_sha256: 39347ab51b9f056962cf31e8b992ee89b27af53a67c5f09a7b2abc309ac91d5c
-output_sha256: d3dd8addcf5b5ad25b72a38893e152ea0fd7416253814a98a9f9b214375a5a25
+script_sha256: b7b6f9c92646cf73f63aa9526797cea758517e79b300a510a20949a45895677f
+output_sha256: 488f6331e1fa4d4ceb46d8f351730b2000bb1568fff892f9c20651d1347f1cdd
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -145,13 +145,80 @@ reconstructs every remaining chamber. Therefore:
 and the complete step word is computable with bit complexity depending
 logarithmically on `R`, rather than by visiting all `R` prefixes.
 
+### 2.1 Full-target rigidity and the complete one-interval boundary
+
+For an interior event phase `s`, write its aggregate jump as
+
+```text
+J_s=sum_(x:{Rx}=s) sign(x)e_(floor(Rx) mod 7).                (7)
+```
+
+Choose one point `y_0` in the first open chamber. On the full terminal
+target, the endpoint law gives the exact flatness certificate
+
+```text
+Gamma_T(E;R)=0
+ iff
+ N(y_0) is constant and every J_s is a constant vector.       (8)
+```
+
+The forward implication holds because both chamber profiles adjacent to
+each event are constant, so their difference is constant. The reverse
+implication follows inductively from (5): adding a constant jump to a
+constant profile preserves the constant line.
+
+This makes the collision requirement explicit. A nonzero constant
+integer jump needs at least seven signed endpoint occurrences at the same
+terminal phase. If the map
+
+```text
+x -> {Rx}
+```
+
+is injective on all interior source endpoints, then every event is a
+signed basis vector and any such endpoint forces `Gamma_T>0`. More
+generally, any nonconstant aggregate event packet lying in the interior
+of a target interval forces `Gamma_Q>0`.
+
+For one nonwrapping interval the classification is complete:
+
+```text
+Gamma_T([a,b);R)=0
+ iff R(b-a) belongs to 7Z.                                  (9)
+```
+
+Indeed, if the two endpoint phases differ, one of their singleton events
+is nonconstant. If they agree, `R(b-a)=m` is integral and the aggregate
+jump is
+
+```text
+e_(floor(Ra) mod 7)-e_(floor(Rb) mod 7).
+```
+
+Its coordinate sum is zero, so it can be constant only when it vanishes,
+equivalently `m=0 mod 7`. Endpoints at the terminal cut give the same
+conclusion from the base profile. Conversely, if `m=7h`, every open
+terminal fibre meets exactly `7h` consecutive prefixes, hence exactly
+`h` in each residue.
+
+The sevenfold threshold is sharp. At `R=13`, the seven intervals
+
+```text
+[(4c+1)/52,(4c+3)/52),             c=0,...,6,                (10)
+```
+
+have event packets `+(1,...,1)` at `y=1/4` and `-(1,...,1)` at
+`y=3/4`. Their ancestry vector is zero, then `(1,...,1)`, then zero;
+thus it changes with terminal phase while remaining flat and having
+`Gamma_T=0`.
+
 ## 3. The exact nonflatness detector
 
 Define the target-restricted ancestry energy
 
 ```text
 Gamma_Q(E;R)
- =integral_Q sum_(c in F_7)(N_(c+1)(y)-N_c(y))^2 dy.           (7)
+ =integral_Q sum_(c in F_7)(N_(c+1)(y)-N_c(y))^2 dy.          (11)
 ```
 
 All event and target endpoints are rational, so `Gamma_Q(E;R)` is an
@@ -159,19 +226,19 @@ exact nonnegative rational number. Put
 
 ```text
 eta_Q(E;R)
- =measure{y in Q:N_0(y),...,N_6(y) are not all equal}.         (8)
+ =measure{y in Q:N_0(y),...,N_6(y) are not all equal}.        (12)
 ```
 
 Then
 
 ```text
 Gamma_Q(E;R)>0
-  iff eta_Q(E;R)>0,                                           (9)
+  iff eta_Q(E;R)>0,                                          (13)
 
-Gamma_Q(E;R)>=2 eta_Q(E;R).                                  (10)
+Gamma_Q(E;R)>=2 eta_Q(E;R).                                  (14)
 ```
 
-Indeed, the integrand in (7) vanishes exactly on constant vectors
+Indeed, the integrand in (11) vanishes exactly on constant vectors
 because the residue cycle is connected. On a nonconstant integer
 vector, the seven integer differences sum to zero and include at least
 one positive and one negative value. Their squared sum is therefore at
@@ -183,7 +250,7 @@ The functional form is a nearest-neighbour translation-Gram distance:
 
 ```text
 sum_c(N_(c+1)-N_c)^2
- =2(sum_c N_c^2-sum_c N_c N_(c+1)).                           (11)
+ =2(sum_c N_c^2-sum_c N_c N_(c+1)).                          (15)
 ```
 
 Thus `Gamma` is the seven-colour ancestry analogue of THM-2365's
@@ -203,7 +270,7 @@ Parseval gives the pointwise identity
 ```text
 sum_c(N_(c+1)-N_c)^2
  =1/7 sum_(e=1)^6
-      |zeta^e-1|^2 |Nhat_e|^2.                               (12)
+      |zeta^e-1|^2 |Nhat_e|^2.                               (16)
 ```
 
 Moreover, because the coefficients `N_c(y)` are rational, vanishing of
@@ -217,18 +284,18 @@ to be a rational multiple of `Phi_7=1+X+...+X^6`. Hence
 
 ```text
 N(y) nonflat
-  iff Nhat_e(y)!=0 for every e in F_7^*.                       (13)
+  iff Nhat_e(y)!=0 for every e in F_7^*.                      (17)
 ```
 
 At a base-thirteen clock `R=13^k`, THM-2418's physical root law is
 
 ```text
-l=n+(-1)^k r mod 7.                                          (14)
+l=n+(-1)^k r mod 7.                                          (18)
 ```
 
 Changing `k` parity reflects the root coordinate because
 `13=-1 mod 7`; changing affine origin cyclically permutes it. The energy
-(7) is invariant under both operations. This is the exact sense in
+(11) is invariant under both operations. This is the exact sense in
 which the limiting ancestry object is alternating while its scalar
 detector is all-clock: the parity is retained in the labelled event
 word and harmlessly quotiented by a dihedral-invariant energy.
@@ -245,7 +312,7 @@ has, for every `R=13^k` and almost every terminal `y`,
 
 ```text
 N(G;R)(y)
- =(13^(k-1),...,13^(k-1)).                                   (15)
+ =(13^(k-1),...,13^(k-1)).                                   (19)
 ```
 
 Both endpoints map to the terminal cut, so there are no interior events,
@@ -267,7 +334,7 @@ E=[0,1/R)
 has `N=(1,0,0,0,0,0,0)` almost everywhere and therefore
 
 ```text
-Gamma_Q(E;R)=2 measure(Q).                                   (16)
+Gamma_Q(E;R)=2 measure(Q).                                   (20)
 ```
 
 The cheap scalar test
@@ -288,7 +355,7 @@ has
 ```text
 N=(2,1,1,1,1,1,0),
 sum_c N_c=7,
-Gamma_[0,1)(E;R)=6.                                         (17)
+Gamma_[0,1)(E;R)=6.                                         (21)
 ```
 
 Thus the full vector, not total ancestry modulo seven, is the correct
@@ -301,7 +368,7 @@ of the first seven prefix cylinders: the first half for prefix residues
 ```text
 E_bal
  =union_(c=0)^2 [c/13,(2c+1)/26)
-   union union_(c=3)^6 [(2c+1)/26,(c+1)/13).                  (18)
+   union union_(c=3)^6 [(2c+1)/26,(c+1)/13).                 (22)
 ```
 
 On the first terminal half its ancestry profile is
@@ -310,7 +377,7 @@ Consequently
 
 ```text
 integral_0^1 N_c(y)dy=1/2             for every c,
-Gamma_[0,1)(E_bal;13)=2.                               (19)
+Gamma_[0,1)(E_bal;13)=2.                                    (23)
 ```
 
 Thus even the **integrated** seven carry histogram can be perfectly
@@ -319,10 +386,10 @@ event detector retains information which a linear integrated carry
 coefficient can cancel.
 
 Finally, for the exact terminal word `Q=D_7`, of mass `1/7`, the flat
-source (15) still gives zero while the one-cylinder control gives
+source (19) still gives zero while the one-cylinder control gives
 
 ```text
-Gamma_(D_7)([0,1/R);R)=2/7.                                 (20)
+Gamma_(D_7)([0,1/R);R)=2/7.                                 (24)
 ```
 
 Terminal restriction therefore neither manufactures nor automatically
@@ -341,11 +408,11 @@ a_(R,c)
 The inverse-branch disintegration gives the exact identity
 
 ```text
-R a_(R,c)=integral_Q N_c(y)dy.                               (21)
+R a_(R,c)=integral_Q N_c(y)dy.                               (25)
 ```
 
 Hence `Gamma_Q(E;R)=0` forces the centred weighted carry histogram to
-vanish. The converse is false by (18)--(19): the integrated histogram
+vanish. The converse is false by (22)--(23): the integrated histogram
 for `E_bal,Q=1,R=13` is flat although `Gamma=2`. The THM-2418
 scale-periodic classifier and the present detector therefore sit at two
 different levels:
@@ -355,7 +422,7 @@ linear integrated carry histogram
   <- can cancel across terminal chambers;
 
 pointwise ancestry event word / quadratic Gamma
-  <- retains chamberwise nonflatness.                         (22)
+  <- retains chamberwise nonflatness.                         (26)
 ```
 
 This distinction is load-bearing when a source owner changes its carry
@@ -370,20 +437,21 @@ base-thirteen clock `R`, define
 ```text
 N_(j,c)(y)
  =#{0<=n<R:
-      n=c mod 7 and (y+n)/R belongs to E_j}.                   (23)
+      n=c mod 7 and (y+n)/R belongs to E_j}.                  (27)
 ```
 
-Equations (3)--(7) give the cheapest genuine scalar-cover computation:
+Equations (3)--(5) and (11) give the cheapest genuine scalar-cover
+computation:
 
 ```text
 compute the exact endpoints of E_j and Q_(j,sigma);
 push each E_j endpoint to ({Rx},floor(Rx) mod 7,sign);
 sweep the joint E_j-event/Q_(j,sigma)-endpoint chambers;
-test Gamma_(Q_(j,sigma))(E_j;R)>0.                            (24)
+test Gamma_(Q_(j,sigma))(E_j;R)>0.                           (28)
 ```
 
 A positive value is exactly a positive-measure nonflat ancestry vector
-on the actual terminal word. By (12)--(13), it retains every charged
+on the actual terminal word. By (16)--(17), it retains every charged
 carry colour in `L^2`. It does **not** by itself prove a relation-address
 landing, prevent cancellation of a chosen linear Fourier coefficient,
 or provide THM-2419's same-affine-shell residue-zero reference.
@@ -391,8 +459,8 @@ or provide THM-2419's same-affine-shell residue-zero reference.
 No explicit genuine global scalar-cover `E_j,Q_(j,sigma)` packet is
 currently present in canon. THM-2399 supplies a strict physical packet
 whose scalar cover is only local on one forty-nine-orbit and which has a
-global safe point; feeding it into (20) as though it were global would
-erase the theorem's main boundary. Consequently (20), not a numerical
+global safe point; feeding it into (28) as though it were global would
+erase the theorem's main boundary. Consequently (28), not a numerical
 LRC row verdict, is the present advance.
 
 ## 8. Connection and information-loss ledger
@@ -424,7 +492,7 @@ destroyed by Gamma:
 needed continuation sidecar:
   retain the labelled signed event word and base profile, not Gamma alone;
   for physical word landing also retain the quotient/physical word pair,
-  and for affine-sideband composition retain a same-shell reference.     (25)
+  and for affine-sideband composition retain a same-shell reference.    (29)
 ```
 
 The endpoint word is therefore the minimal exact transport stalk for this
@@ -442,10 +510,13 @@ paths:
 
 It compares them on 192 exact random interval-set fixtures, 2,062
 chambers, 1,113 nonzero aggregate jumps, circle-cut controls, and a
-coincident mixed-sign event. It then checks (15) through `k=8`, where
-`R=815730721`, without an `R`-loop; checks (16)--(20); confirms the
-divisible-total hostile (17); and verifies the flat-integrated but
-pointwise-charged control (18)--(19). Reproduce with
+coincident mixed-sign event. It then checks (19) through `k=8`, where
+`R=815730721`, without an `R`-loop; checks (20)--(24); confirms the
+divisible-total hostile (21); and verifies the flat-integrated but
+pointwise-charged control (22)--(23). It also verifies the full-target
+event certificate on all random fixtures, the one-interval equivalence
+(9) on 2,610 exact intervals, and the sharp seven-sheet packet (10).
+Reproduce with
 
 ```bash
 python3 04-computation/lrc14_septimal_ancestry_endpoint_events_thm2421.py

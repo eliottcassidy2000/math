@@ -3,11 +3,14 @@ status=PROVED+VERIFIED-EXACT+HOSTILE-AUDITED; independent-audit=PENDING
 random_fixtures=192
 random_chamber_checks=2062
 random_nonzero_jump_checks=1113
+full_flat_certificate_checks=192
 wrap_chamber_checks=23
 coincident_event=1/2:(-1,1,0,0,0,0,0)
 coincident_gamma=2; coincident_nonflat_mass=1
 rank_one_clocks=13,169,2197,28561,371293,4826809,62748517,815730721; max_clock=815730721
 rank_one_gamma=0; rank_one_nonflat_mass=0
+single_interval_classifier_checks=2610
+seven_sheet_events=1/4:+ones,3/4:-ones; gamma=0
 one_cylinder_clock=4826809; gamma=2; nonflat_mass=1
 divisible_total_profile=2,1,1,1,1,1,0; total=7; gamma=6
 balanced_integrated_profile=1/2,1/2,1/2,1/2,1/2,1/2,1/2; pointwise_gamma=2
