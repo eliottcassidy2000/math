@@ -2,15 +2,19 @@
 id: THM-2363
 title: "Planar graph detector dominates word-support energy"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. For any
-  joint coefficient array A(q,z) on F_169^2, let A_0(q)=sum_z A(q,z)
-  and let D_graph be the sum of THM-2356's 169 planar-graph detectors.
-  Then D_graph is the nonzero-target joint l2 energy plus a nonnegative
-  graph-sum term, and
-  D_graph >= (1/169)sum_(q!=0)|A_0(q)|^2
-          >= E_sigma/169
-  for each of THM-2337's three word-support masks. The constant 1/169
-  is sharp for every mask, with a complete equality mechanism.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Fix one
+  blocker word sigma and its THM-2337 joint coefficient array
+  A^sigma(q,z). Let A^sigma_0(q)=sum_z A^sigma(q,z), and let
+  D_graph(A^sigma) be the sum of THM-2356's 169 planar-graph detectors.
+  Then D_graph(A^sigma) is the nonzero-target joint l2 energy plus a
+  nonnegative graph-sum term, and
+  D_graph(A^sigma)
+    >= (1/169)sum_(q!=0)|A^sigma_0(q)|^2
+    >= E_sigma(A^sigma)/169.
+  This holds separately for each of THM-2337's three word-support
+  masks; there is no single canonical detector coupling their distinct
+  arrays. The constant 1/169 is sharp on unrestricted coefficient
+  arrays for every mask, with a complete equality mechanism.
   D_graph can be positive when every A_0(q) vanishes, so it strictly
   refines the old aggregate energies. This is a coefficient-level
   comparison; it does not realize the missing graph-channel phase
@@ -30,16 +34,26 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2363 -- every word-support energy pays the graph detector
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2337's word-support energies and THM-2356's planar-graph detector
-look like different remaining debts. They are in fact ordered positive
-quadratic forms. The graph detector dominates every word-support energy,
-with a sharp constant.
+look like different remaining debts. For each fixed word, they are in
+fact ordered positive quadratic forms. That word's graph detector
+dominates its word-support energy, with a sharp unrestricted-array
+constant.
 
 ## 1. Joint and graph coordinates
 
-Fix the chosen identifications used in THM-2356 and write
+Fix one
+
+```text
+sigma in {{a},{b},{a,b}},
+```
+
+and the corresponding THM-2337 joint Abel array `A^sigma`. The three
+words have three distinct arrays; suppress the superscript only within
+this proof. Fix also the chosen identifications used in THM-2356 and
+write
 
 ```text
 K=F_169,                    N=|K|=169.
@@ -53,8 +67,8 @@ A(q,z) in C,                (q,z) in K x K,          (1)
 A_0(q)=sum_(z in K)A(q,z).                           (2)
 ```
 
-The aggregate (2) is exactly the uncoloured target coefficient denoted
-`A(q)` in THM-2337. For each `c in K`, put
+The aggregate (2) is exactly the uncoloured target coefficient for this
+fixed word in THM-2337. For each `c in K`, put
 
 ```text
 Z_c(q)=A(q,q^2/2+c).                                (3)
@@ -109,14 +123,8 @@ D_graph
  >=1/N sum_(q!=0)|A_0(q)|^2.                        (8)
 ```
 
-Let `P_sigma`, for
-
-```text
-sigma in {{a},{b},{a,b}},
-```
-
-be any of THM-2337's exact word-support masks. Each mask takes values in
-`{0,1}` and vanishes at `q=0`. Its landing energy is
+Let `P_sigma` be this fixed word's exact THM-2337 support mask. It takes
+values in `{0,1}` and vanishes at `q=0`. Its landing energy is
 
 ```text
 E_sigma=sum_q P_sigma(q)|A_0(q)|^2.                 (9)
@@ -130,15 +138,14 @@ D_graph
  >=E_sigma/169.                                    (10)
 ```
 
-In particular,
-
 ```text
-E_sigma>0  =>  D_graph>0.                           (11)
+E_sigma(A^sigma)>0
+  =>D_graph(A^sigma)>0.                             (11)
 ```
 
-Thus a positive answer to any old word-support landing test automatically
-pays the graph-channel coefficient debt. The three debts need not be
-attacked separately.
+The implication is independently available for all three words, but the
+three instances do not combine into one canonical `D_graph`: their
+arrays `A^sigma` are different.
 
 ## 3. Equality mechanism and sharpness
 
@@ -154,11 +161,12 @@ Equality in the first comparison in (10) has a complete description:
 The first condition is exactly equality in every instance of (7), and
 the second kills the final nonnegative term in (6). Equality in the
 masked bound also requires `A_0(q)=0` off the selected mask among
-nonzero targets.
+nonzero targets. The `q=0` row is unconstrained throughout.
 
-The constant is attained for every one of the three masks. Choose two
-distinct points `q_1,q_2` in the support of `P_sigma` and
-`alpha!=0`. Set, for every `c in K`,
+On the unrestricted space of coefficient arrays, the constant is
+attained for every one of the three masks. Choose two distinct points
+`q_1,q_2` in the support of `P_sigma` and `alpha!=0`. Set, for every
+`c in K`,
 
 ```text
 A(q_1,q_1^2/2+c)= alpha,
@@ -178,12 +186,14 @@ D_graph/E_sigma=1/N=1/169.                         (14)
 ```
 
 The supports of the three masks have sizes `12,12,144`, so the required
-pair always exists. No larger uniform constant is possible.
+pair always exists. No larger uniform constant is possible on arbitrary
+arrays. The witness (13) is not asserted to be a canonical LRC Abel
+array.
 
 ## 4. The graph detector is strictly finer
 
-The reverse implication in (11) is false. Fix `q!=0`, distinct jet
-values `z_1,z_2`, and `alpha!=0`, and put
+For one fixed word array, the reverse implication in (11a) is false. Fix
+`q!=0`, distinct jet values `z_1,z_2`, and `alpha!=0`, and put
 
 ```text
 A(q,z_1)=alpha,
@@ -196,7 +206,7 @@ with all other coefficients zero. Then
 ```text
 A_0(q)=0,
 
-E_sigma=0             for all sigma,               (16)
+every masked aggregate energy of this array is zero, (16)
 ```
 
 but the first term in (6) is `2|alpha|^2`, so
@@ -219,8 +229,8 @@ D_graph>0
   -/-> word-support aggregate survives.             (18)
 ```
 
-This identifies one common positive target rather than two unrelated
-quadratic obligations.
+This orders the two positive obligations for each fixed word. It does
+not identify or couple the three different word arrays.
 
 ## 5. Scope
 
@@ -240,10 +250,11 @@ not determine it. Therefore (10) does not realize a new physical probe,
 exclude the vertical tensor hostile, decrement any of the `165` LRC
 profiles, force a scalar-row contradiction, or prove LRC(14).
 
-It does sharpen the missing sidecar specification: a lawful realization
-of the summed graph detector would simultaneously settle every positive
-THM-2337 word-support energy, while retaining extra jet-resolved target
-information.
+It does sharpen the missing sidecar specification: for each fixed
+`sigma`, a lawful realization of `D_graph(A^sigma)` detects every
+already-positive `E_sigma(A^sigma)` and retains extra jet-resolved target
+information. It does not by itself prove that any masked energy is
+positive.
 
 ## 6. Exact companion
 
@@ -276,4 +287,6 @@ Both transcripts must match
 byte-for-byte after LF normalization. Every executable check raises
 explicitly under optimized Python.
 
-Independent audit is pending. QED.
+Independent hostile audit checked the mask-by-mask typing, equality
+boundary, unrestricted-array sharpness, coefficient/physical scope,
+normal and optimized transcripts, stored output, and LF hashes. QED.
