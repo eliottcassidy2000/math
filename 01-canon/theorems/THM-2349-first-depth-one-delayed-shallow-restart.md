@@ -1,78 +1,83 @@
 ---
 id: THM-2349
-title: "Repeated-first delayed shallow restart and the empty twin-fork branch"
+title: "First-depth-one delayed shallow restart and the repeated two-owner refinement"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. On every
-  repeated-first scalar row (1,1,c), 5<=c<=19, each of the two depth-one
-  shallow exclusive-owner sets has positive measure. For either shallow
-  owner, a finite coefficient-dependent delay produces a positive literal
-  terminal-word subset. More generally, every positive rational step
-  subset of a shallow carrier disjoint from the deepest danger comb has,
-  in every nonzero shallow root character, a marked c_3-edge whose
-  multiplier is coprime to 91. Thus the THM-2327 mixed
-  word/deepest-comb/bare triangle, THM-2334 169-twist current, and
-  THM-2343/2344 inverse-correlation boundary extend from the 150 strict
-  rows to all 165 first-depth-one rows. The repeated rows pay a
-  nonuniform delay and Fourier-height bound. No grouped current is proved
-  nonzero off the zero target, no scalar row is excluded, and LRC(14)
-  remains open.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. On every one of the
+  165 first-depth-one scalar rows, the universal depth-one blocker's
+  exclusive-owner set has positive measure and a finite coefficient-
+  dependent delay produces a positive literal terminal-word subset.
+  On the 15 repeated-first rows the second depth-one owner has the same
+  property. More generally, every positive rational step subset of a
+  shallow carrier disjoint from the deepest danger comb has, in every
+  nonzero shallow root character, a marked c_3-edge whose multiplier is
+  coprime to 91. Thus the THM-2327 mixed word/deepest-comb/bare triangle,
+  THM-2334 169-twist current, and THM-2343/2344 inverse-correlation
+  boundary hold on all 165 rows at a finite row-dependent delayed clock.
+  Previously covered positive strict strata retain their stronger
+  prescribed clock. No grouped current is proved nonzero off the zero
+  target, no scalar row is excluded, and LRC(14) remains open.
 source: codex-2026-07-25-repeated-first-twin-fork
 depends_on:
   - THM-2138-all-depth-unit-annulus-extremal-law
   - THM-2234-first-depth-one-private-two-owner-mass-and-two-step-expansion
+  - THM-2291-repeated-owner-bv-mixing-and-delayed-blocker-handoff
   - THM-2305-canonical-blocker-word-handoff-hypergraph
   - THM-2323-primitive-fixed-colour-cross-correlation-and-same-gauge-word-alignment
+  - THM-2325-prescribed-target-gain-full-lattice-91-unit-needle-bank
   - THM-2326-vertexwise-septimally-primitive-c3-degree
-related:
-  - THM-2291-repeated-owner-bv-mixing-and-delayed-blocker-handoff
-  - THM-2327-two-colour-marked-unit-c3-triangle
   - THM-2331-two-sided-septimal-address-embedding-in-marked-current
   - THM-2334-relation-residue-current-and-character-twist-pushforward
   - THM-2343-deep-comb-affine-target-catalyst
   - THM-2344-correlation-inverse-rigidity-and-aligned-tooth-twist-hostile
+related:
+  - THM-2327-two-colour-marked-unit-c3-triangle
 script: 04-computation/lrc14_repeated_first_twin_fork_thm2349.py
 output: 05-knowledge/results/lrc14_repeated_first_twin_fork_thm2349.out
-script_sha256: 0ba7dc208663095f5901e9bd18acae54d53b5a7d3f935fd0d8419e577605543f
-output_sha256: 8fb822744c7d2f00ed1ed588b9a9be916b82552e59e219893c7c1a25906cd092
+script_sha256: 86e17c6f256261a424b6001b2e41f3c3387e80d85843eea10132dbdfbf359d2c
+output_sha256: 4985eac48395a05b45b0c57da36162b84fdef22e769129ac0e0de1f23a0d7062
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2349 -- repeated rows restart at a delayed shallow word
+# THM-2349 -- every first-depth-one row restarts at a delayed shallow word
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
-The `15` repeated-first rows were outside THM-2327 for a historical rather
-than structural reason: the strict-row route supplied a shallow owner and a
-word at a uniformly controlled clock, whereas the repeated-row selection
-could choose the deepest owner. The scalar cover already forces a stronger
-fact which does not depend on that selection:
+The prescribed-clock route into THM-2327 covered positive strict
+shallow-owner strata, but it did not cover every alternative strict
+resonance arm and it did not cover the `15` repeated-first rows. The scalar
+cover already forces a stronger owner fact which is independent of those
+branches:
 
 ```text
-each shallow exclusive owner has positive measure.                 (1)
+the universal depth-one exclusive owner has positive measure;
+on a repeated-first row, both depth-one owners do.                 (1)
 ```
 
 Once (1) is retained, ordinary BV mixing supplies a later positive return
-for either shallow owner. The exact blocker-word partition can be applied at
-that later time. THM-2327's existence proof needs only a positive literal
-word subset, finite step complexity, shallow/deep valuation separation, and
-source/deep disjointness. Its prescribed clock was used for a uniform height
-invoice, not for nonvanishing.
+for the universal owner, and for either owner on a repeated row. The exact
+blocker-word partition can be applied at that later time. THM-2327's
+existence proof needs only a positive literal word subset, finite step
+complexity, shallow/deep valuation separation, and source/deep
+disjointness. Its prescribed clock was used for a uniform height invoice,
+not for nonvanishing.
 
 The consequence is a frontier unification:
 
 ```text
-150 strict rows:
-  marked 91-unit triangle at the prescribed controlled clock;
+all 165 rows:
+  marked 91-unit triangle at a finite row-dependent delayed clock,
+  hence the same 169-twist/inverse-correlation obstruction;
+
+previously covered positive strict strata:
+  retain the stronger prescribed controlled clock;
 
 15 repeated-first rows:
-  marked 91-unit triangle at a finite row-dependent delayed clock;
-
-all 165 rows:
-  the same 169-twist/inverse-correlation obstruction.               (2)
+  either shallow owner may start the delayed construction.          (2)
 ```
 
-This does not decrement the scalar ledger. It removes “the repeated rows
-have no marked target current” as a separate obstruction.
+This does not decrement the scalar ledger. It removes missing marked
+incidence as a separate obstruction on repeated and alternative resonance
+arms.
 
 ## 1. An abstract shallow-carrier triangle
 
@@ -223,6 +228,9 @@ e_hat(C)!=0,
 7 does not divide s.                                (19)
 ```
 
+Because `d/13=0 mod 13`, the shift `s d` preserves the grade-one root
+character of `A`; thus `C` has that same root character.
+
 The elementary two-colour triangle says that one of
 
 ```text
@@ -244,17 +252,17 @@ Finally,
 because `7` does not divide `m`. This proves (7) and the abstract lemma.
 QED.
 
-## 2. Every repeated row has two positive shallow owners
+## 2. Every row has a positive depth-one owner
 
-Return to a repeated-first scalar row:
+Return to any of the `165` first-depth-one scalar rows. Order the three
+blockers by valuation:
 
 ```text
-c_1=13u_1,
-c_2=13u_2,
-c_3=13^c u_3,                  5<=c<=19,             (21)
+nu_13(c_1)=1,
+1<=nu_13(c_2)<nu_13(c_3).                            (21)
 ```
 
-where all `u_i` are thirteen-units. Write
+The repeated-first rows are exactly those with `nu_13(c_2)=1`. Write
 
 ```text
 A_0=C_H minus union_(i=1)^5 D_(q_i),
@@ -266,11 +274,10 @@ E_j
 R_j=A_0 minus D_(c_j).                               (22)
 ```
 
-We claim
+We first claim, on every row,
 
 ```text
-measure(E_1)>0,
-measure(E_2)>0.                                      (23)
+measure(E_1)>0.                                      (23)
 ```
 
 Suppose, for example, that `E_1` were null. At almost every point of
@@ -285,15 +292,22 @@ C_H subset
 ```
 
 This is a five-unit/two-positive-valuation scalar cover. THM-2138 proves
-that the entire such tail is empty. Thus (24) is impossible. Swapping
-`1,2` proves both inequalities in (23).
+that the entire such tail is empty. Thus (24) is impossible.
 
-This argument also explains why the tempting twin-fork branch is empty.
-If both shallow exclusive pieces vanished, then outside `D_(c_3)` the
-two shallow danger bits would indeed be forced to agree. But either one
+On a repeated-first row, `c_2` also has exact depth one. Swapping `1,2`
+in the same deletion argument gives
+
+```text
+measure(E_2)>0.                                      (23a)
+```
+
+This explains why the tempting repeated-row twin-fork branch is empty. If
+both shallow exclusive pieces vanished, then outside `D_(c_3)` the two
+shallow danger bits would indeed be forced to agree. But either nullity
 already contradicts THM-2138 before that quotient is taken.
 
-For either `j=1,2`, THM-2234 applies because `c_j` has exact depth one:
+On every row THM-2234 applies with `j=1`; on a repeated row it also applies
+with `j=2`, because each displayed source has exact depth one:
 
 ```text
 measure(R_j)>=eta,
@@ -301,12 +315,13 @@ measure(R_j)>=eta,
 eta=2593/90090>0.                                    (25)
 ```
 
-The owner positivity in (23) is qualitative; no useful uniform lower
-bound is claimed here.
+The owner positivity in (23)--(23a) is qualitative; no useful uniform
+lower bound is claimed here.
 
 ## 3. BV mixing creates a delayed literal word
 
-Fix either shallow owner `j`, and put
+Take `j=1` on an arbitrary row, or either `j=1,2` on a repeated-first
+row, and put
 
 ```text
 e_j=measure(E_j)>0.
@@ -387,7 +402,7 @@ R=13^k,                    13 divides R.             (33)
 The jump count in (32) is finite but depends on `k`, and therefore on the
 actual coefficient row through `e_j`.
 
-## 4. Repeated-row marked unit triangles
+## 4. All-row marked unit triangles
 
 Apply the abstract lemma with
 
@@ -420,11 +435,12 @@ gcd(m,91)=1.                                        (37)
 ```
 
 This is exactly THM-2327's marked word/deepest-comb/bare triangle, now on
-a repeated-first row and at the delayed clock `k`.
+an arbitrary first-depth-one row and at the delayed clock `k`.
 
-The theorem gives this construction for **either** shallow label, not only
-for the mass-maximizing owner selected by THM-2291. What is lost is the
-strict theorem's usable uniform multiplier bound.
+On a repeated-first row the theorem gives this construction for **either**
+shallow label, not only for the mass-maximizing owner selected by
+THM-2291. On every row, what is lost relative to the prescribed-return
+strata is their usable uniform multiplier bound.
 
 ## 5. Propagation to the current frontier
 
@@ -463,9 +479,9 @@ The proofs propagate as follows.
    cross-correlation, shifted-convolution-inverse boundary, off-centre
    covariance test, and aligned-axis hostiles all remain valid.
 
-Thus the analytic obstruction on the repeated rows is no longer a missing
-marked incidence. It is the same grouped cancellation problem as on the
-strict rows:
+Thus neither a repeated row nor an alternative strict resonance arm has a
+separate missing-incidence obstruction. Every row reaches the same grouped
+cancellation problem:
 
 ```text
 break the shifted endpoint convolution inverse
@@ -481,6 +497,7 @@ address, or LRC(14) closure is proved. The exact scalar ledger remains
 
 The companion freezes:
 
+- the complete `165=150+15` valuation-profile ledger;
 - the complete `c=5,...,19` repeated-profile mass-cap ledger;
 - the exact depth-one target floor `2593/90090`;
 - the Boolean twin-fork implication which THM-2138 pre-empts;
@@ -503,16 +520,29 @@ Both transcripts must match
 
 byte-for-byte after LF normalization.
 
-## 7. Independent hostile audit
+## 7. Independent audit and scope repair
 
-An independent referee rederived the two shallow-owner positivity argument
-from THM-2138, checked the THM-2234 floor and BV transfer normalization,
-and verified that the delayed THM-2305 partition produces a positive literal
-word for either shallow owner.  The same pass checked the Perron support and
-jump transport, primitivity of `K_0,K_0+D` modulo `13D`, the complete
-two-colour triangle, the multiplier bound, and every downstream hypothesis
-used from THM-2331, THM-2334, THM-2343, and THM-2344.  It found no conflict
-with the fixed-time guardrail in THM-2291 or the corrected `150+15` split in
-MISTAKE-251.  Normal, optimized, and stored exact transcripts agree
-byte-for-byte after LF normalization, and the script/output hashes in the
-frontmatter were independently reproduced.
+The independent audit rederived the THM-2138 deletion argument, the
+`K_0,K_1` primitive lift with arbitrary extra prime factors, the exact
+grade/root calculation, the marked two-colour triangle, and both normal
+and optimized companion transcripts. It also caught a material
+overstatement in the candidate: existing THM-2327 did not cover every
+alternative strict resonance branch. The repaired proof uses the
+universal depth-one owner directly on every row, so all `165` reach the
+delayed construction without relying on that branch classification.
+
+For completeness, the THM-2326 vertex
+
+```text
+C=A+s c_3
+```
+
+has the same grade and root as `A` because
+`nu_13(c_3)>nu_13(A)=1`; this is the grade-preservation step used by all
+three edges of the triangle.
+
+The referee also checked the THM-2234 floor, BV transfer normalization,
+Perron support and jump transport, multiplier bound, and every downstream
+hypothesis used from THM-2331/2334/2343/2344. It found no conflict with the
+fixed-time guardrail in THM-2291 or the corrected `150+15` split in
+MISTAKE-251.

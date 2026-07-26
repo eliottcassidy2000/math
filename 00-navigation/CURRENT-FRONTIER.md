@@ -172,7 +172,7 @@ exact and finite; it does not prove that every surviving interval is empty.
 
 THM-2168--2257 leave `165` first-depth-one rows (`150+15`); THM-2234/2255/2263 give private-mass floors, THM-2295/2298 force ranks five/six, and THM-2287/2301/2307 give relation/address packets.
 THM-2296/2305 retain pure edges/forks; THM-2299 kills pair phase and THM-2303 names the missing component current.
-THM-2323/2326/2327 mark a `91`-unit deepest edge on each positive strict shallow word. THM-2349 proves both repeated-row shallow owners positive and obtains the same edge after a finite row-dependent delay. All `165` rows now reach one current obstruction; repeated rows lose only a uniform clock/height invoice.
+THM-2323/2326/2327 mark a `91`-unit deepest edge on each positive strict shallow word. THM-2349 uses the universal depth-one owner to obtain the same edge on all `165` rows after a finite row-dependent delay; repeated rows permit either shallow source. Every strict resonance arm now reaches the same current obstruction.
 THM-2321/2329 type root/target gain; THM-2325/2331 put every nonzero target address into the Abel expansion, while THM-2333 permits zero-only aggregation.
 THM-2334 retains the full word and turns target landing into a `169`-twist DFT; THM-2337 recovers a surjective but gauge-dependent first jet and masked energy.
 THM-2340 identifies word main effects/interactions; THM-2343 makes deepest phase a nonzero pure-axis translation and zero-only landing one inverse-character line.

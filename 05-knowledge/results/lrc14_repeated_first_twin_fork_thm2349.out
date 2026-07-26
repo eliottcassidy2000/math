@@ -1,11 +1,14 @@
 theorem=THM-2349
 status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED
+all_first_depth_one_profiles=165
+strict_profiles=150
 repeated_profiles=15
 shallow_target_floor=2593/90090
 twin_fork_uniform_floor=94254673/2573060490
 twin_fork_unique_worst_depth=5
 twin_truth_rows=1
-each_shallow_owner_positive=YES-BY-THM-2138
+universal_depth_one_owner_positive=YES-BY-THM-2138
+each_repeated_shallow_owner_positive=YES-BY-THM-2138
 twin_fork_branch=EMPTY-BY-THM-2138
 two_colour_rows=6552
 two_colour_choice_t=5616

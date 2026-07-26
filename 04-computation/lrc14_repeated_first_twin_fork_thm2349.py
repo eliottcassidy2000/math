@@ -2,10 +2,10 @@
 """Exact finite controls for THM-2349.
 
 The analytic input of THM-2349 is proved in the theorem text.  This companion
-freezes the complete repeated-profile mass ledger, the Boolean twin-fork
-implication pre-empted by THM-2138, the CRT two-colour completion, and
-representative normalized root-pair arithmetic used by the shallow-carrier
-triangle.
+freezes the complete 165-profile valuation ledger, the repeated-profile mass
+ledger, the Boolean twin-fork implication pre-empted by THM-2138, the CRT
+two-colour completion, and representative normalized root-pair arithmetic
+used by the shallow-carrier triangle.
 """
 
 from fractions import Fraction
@@ -41,6 +41,30 @@ def is_unit(value: int, modulus: int) -> bool:
 require(
     A0_FLOOR - Fraction(10, 91) == SHALLOW_TARGET_FLOOR,
     "shallow target floor changed",
+)
+
+# The post-THM-2258 valuation universe is
+# (1,b,c), 5<=c<=19, 1<=b<c: 150 strict plus 15 repeated-first.
+all_profiles = [
+    (1, middle, deepest)
+    for deepest in range(5, 20)
+    for middle in range(1, deepest)
+]
+repeated_profiles = [
+    profile for profile in all_profiles if profile[1] == 1
+]
+strict_profiles = [
+    profile for profile in all_profiles if profile[1] > 1
+]
+require(len(all_profiles) == 165, "first-depth-one universe changed")
+require(len(repeated_profiles) == 15, "repeated profile count changed")
+require(len(strict_profiles) == 150, "strict profile count changed")
+require(
+    all(
+        first == 1 and first <= middle < deepest
+        for first, middle, deepest in all_profiles
+    ),
+    "universal shallow/deep valuation separation changed",
 )
 
 # All fifteen repeated-first profiles have a positive deep-complement
@@ -158,12 +182,15 @@ for depth in range(5, 20):
 
 print("theorem=THM-2349")
 print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED")
-print("repeated_profiles=15")
+print(f"all_first_depth_one_profiles={len(all_profiles)}")
+print(f"strict_profiles={len(strict_profiles)}")
+print(f"repeated_profiles={len(repeated_profiles)}")
 print(f"shallow_target_floor={SHALLOW_TARGET_FLOOR}")
 print(f"twin_fork_uniform_floor={TWIN_FORK_FLOOR}")
 print("twin_fork_unique_worst_depth=5")
 print(f"twin_truth_rows={twin_truth_rows}")
-print("each_shallow_owner_positive=YES-BY-THM-2138")
+print("universal_depth_one_owner_positive=YES-BY-THM-2138")
+print("each_repeated_shallow_owner_positive=YES-BY-THM-2138")
 print("twin_fork_branch=EMPTY-BY-THM-2138")
 print(f"two_colour_rows={colour_rows}")
 print(f"two_colour_choice_t={choice_counts['t']}")
