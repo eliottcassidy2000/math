@@ -170,7 +170,7 @@ THM-2388--2397 reduce no-clean to `M=1` (`delta>=66/4459` there, `>=1/26754` uni
 THM-2405 leaves seven no-clean `M=1` ratios; THM-2415 caps every packet at `M<=2`, and THM-2417's fourteen strict relaxed-orbit duals exclude the entire `M=2` lane. Thus every last-lane survivor has `M=1`, uniformly, without a row decrement.
 THM-2407/2409 route colours to `gcd(m,91)=1` triangles. THM-2410/2416 give a bounded `13Z` affine shell; THM-2419 retains its charged kernel fibre and identifies a same-shell residue-zero reference as the exact sidecar. THM-2418 identifies the septimal word phase as an alternating base-thirteen carry, but its even BV-two rank-one source hostile shows that a canonical source--terminal correlation/reference is still missing.
 THM-2421 (independent audit pending) reconstructs the full pointwise seven-colour ancestry word from signed endpoints in time independent of the `13^k` branch count and gives an exact translation-Gram detector `Gamma`; a balanced `R=13` hostile proves that the linear integrated carry histogram may be flat while `Gamma>0`. The decisive `Gamma` computation on an actual global scalar-cover `E_j,Q_(j,sigma)` packet remains open. Ledger: `165`.
-Reserved only: THM-2420 will test same-shell charged/reference composition; it is not proved.
+THM-2420 is a proof-complete candidate awaiting independent hostile audit: same-shell charged/reference correlation is sufficient, but its Boolean hostile shows that a complete residue-zero projector bank and positive local Gram need not supply any reference amplitude. Constructing the physical same-shell reference remains open.
 
 ### Independent routes that remain live
 
