@@ -33,6 +33,7 @@ related:
   - THM-2418-alternating-base-thirteen-septimal-carry-matrix-and-rank-one-boundary
   - THM-2421-all-clock-septimal-ancestry-endpoint-event-detector
   - THM-2441-septimal-ancestry-event-period-collapse
+  - THM-2445-twenty-four-cell-graft-owner-conditioning
 script: 04-computation/lrc14_delayed_word_source_completion_thm2442.py
 output: 05-knowledge/results/lrc14_delayed_word_source_completion_thm2442.out
 script_sha256: 042efba1790288fee4affa61ccf70aa4969591e464e144f711d55b9a7fe75b4b
@@ -481,6 +482,54 @@ gcd(m,91)=1.                                      (27)
 The actual positive terminal word `Q_(j,sigma)`, its complete lawful
 source translate, and the deep/target colours are all retained.
 
+### 6.1 Same-coefficient form and the THM-2445 ghost
+
+The word-restoration argument is coefficientwise.  Let
+
+```text
+z_ell in Q(zeta_13),              ell in F_7,
+```
+
+be any fixed deep/target coefficient of seven unfiltered lawful source
+translates, and suppose
+
+```text
+z_0=0,                    sum_ell z_ell!=0.          (27a)
+```
+
+For the fixed positive canonical word in Section 3, (11b) gives
+`q^(epsilon)_ell>0` for every phase.  Hence the limiting coefficient
+vector
+
+```text
+(q^(epsilon)_ell z_ell)_ell
+```
+
+has phase zero equal to zero and at least one nonzero entry.  The same
+mixing and `Phi_7` argument proves that every nonzero lawful source
+colour survives at that **same fixed deep/target coefficient** for all
+sufficiently large clocks.
+
+This applies directly to THM-2445 Section 5.  In its circulant-companion
+branch, equations (22)--(23) there give (27a) at one fixed eligible
+coefficient
+
+```text
+(alpha,b,h),             alpha!=0,
+```
+
+while retaining the labelled `(c_3,q_*)` graft and common partial bare
+endpoint.  Therefore THM-2445's same-coefficient all-six-source
+completion admits any fixed positive canonical delayed word, with the
+same `(alpha,b,h)`, at every sufficiently large row-dependent clock.
+In THM-2445's alternative `D(O)>0`, the ordinary target-neutral BV
+limit of THM-2365 Section 7 already restores the delayed word.
+
+Thus the unique ownerless ghost in THM-2445 has no remaining
+**delayed-word** branch.  This corollary still does not restore the
+missing right-endpoint factors: its endpoint remains THM-2445's common
+partial bare endpoint.
+
 ## 7. Scope and sharp stopping boundary
 
 The theorem removes one specific debt:
@@ -504,6 +553,12 @@ surviving `nu_7(c_3)<=M` graft.  It does not handle the owner branch of
 THM-2407, make every relation coordinate nonzero modulo both primes,
 identify the extracted coefficient with a preselected triangle, remove
 one of the `165` scalar rows, or prove LRC(14).
+
+After composition with THM-2445, the residual graft debt is narrower:
+transport one of its twenty-three repair/blocker-labelled cells through
+the semantic terminal-word/repair alignment, and restore the fully
+masked right endpoint without losing the typed coefficient.  The ghost
+cell's delayed-word phase is discharged by Section 6.1.
 
 Its preserved object is stronger than a scalar drift statistic:
 

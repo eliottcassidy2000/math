@@ -2062,6 +2062,9 @@ large row-dependent clock, retaining a nonzero source residue modulo
 seven, every nonzero first-target colour modulo thirteen, and a deep
 multiplier coprime to `91`. Its mixing error has an exact finite-class
 `C/R` form. Normal and optimized runs byte-match and end in `PASS`.
-This closes only the source-deletion half of delayed-word completion,
-not owner-conditioned graft survival, an all-coordinate `91`-unit
-address, a scalar-row decrement, or LRC(14).
+Its coefficientwise form also restores the delayed word to THM-2445's
+same-coefficient ghost completion; together with THM-2365 it discharges
+the ghost's whole delayed-word branch. It does not align THM-2445's
+twenty-three repair/blocker cells with semantic terminal words, restore
+the fully masked endpoint, give an all-coordinate `91`-unit address,
+decrement a scalar row, or prove LRC(14).
