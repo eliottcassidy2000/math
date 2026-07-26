@@ -30,8 +30,8 @@ related:
   - THM-2409-unfiltered-septimal-source-completion-and-word-phase-boundary
 script: 04-computation/lrc14_full_coordinate_projector_thm2410.py
 output: 05-knowledge/results/lrc14_full_coordinate_projector_thm2410.out
-script_sha256: 59b4a3db4f4150e9476152ebdd57cebd023423b4f87b01a51b4b2c2cb662a2f3
-output_sha256: d0869c5461c604f9f47e6db89d5404055607af78c27fa7cabe0766bccbb0e3c4
+script_sha256: e2e9ff1261c6aae2a497706d93f51d73a300db0bed3cf8d8ea760eae4e5936bd
+output_sha256: cf38884ce00dc6c1b27180a3aaab7919feb13c3dd1553a4fe4bacb252ee13675
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -328,11 +328,21 @@ v=(1,1,1,1,1,1,0,0,0),
 T_t(s)=T(s-t v),                    t in G.                      (23)
 ```
 
-Every one-coordinate nontrivial Fourier factor is nonzero by
-prime-cyclotomic irreducibility. Hence
+Retain the fixed cyclic-consecutive deep danger mask
 
 ```text
-T_hat_t(k)=zeta^(t k.v)T_hat_0(k)!=0
+D(r)=1_(r in {0,1}),                m=1,
+
+U_t(r,s)=D(r)T_t(s).                                             (23a)
+```
+
+Every one-coordinate nontrivial Fourier factor is nonzero by
+prime-cyclotomic irreducibility, including `D_hat(1)`. Hence
+
+```text
+U_hat_t(1,k)
+ =D_hat(1)zeta^(t k.v)T_hat_0(k)
+ !=0
 ```
 
 for every `t`. The unit masks in (21) cover `G`, so also
@@ -346,13 +356,14 @@ Nevertheless
 ```text
 k.v=6!=0,
 
-(1/13)sum_t T_hat_t(k)
- =T_hat_0(k)(1/13)sum_t zeta^(6t)
+(1/13)sum_t U_hat_t(1,k)
+ =D_hat(1)T_hat_0(k)(1/13)sum_t zeta^(6t)
  =0.                                                            (25)
 ```
 
-Thus an anchored family can have a nonzero eligible local coefficient
-at every parameter value and still have zero integrated coefficient.
+Thus an anchored ten-factor family can have a nonzero eligible
+deep-inclusive local coefficient at every parameter value and still
+have zero integrated coefficient.
 
 The scope boundary is essential. The trajectory `v` in (23) is **not**
 the physical common-root trajectory `wbar`. On the physical trajectory,
@@ -376,10 +387,40 @@ shift convention. Its `m`-then-`X` expansion has exact target residue
 q=k+m e_c.                                                       (27)
 ```
 
-The fixed-residue expansion is finite after the mod-thirteen
-pushforward, and every individual exact address orbit is absolutely
-convergent. Hence (26) supplies some ordinary frequency `X` and some
-exact deep multiplier `n` with
+Type the residue fibre explicitly. If `C_rho(a;X,n)` is THM-2334's
+Poisson-smoothed exact-address coefficient, put
+
+```text
+C_13(q;X,n)
+ :=lim_(rho->1-)
+    sum_(a in Lambda; a=q mod 13) C_rho(a;X,n).                  (27a)
+```
+
+This is the **mod-thirteen Abel residue fibre** of THM-2334. It is not
+being reinterpreted as an ordinarily absolutely convergent sum over the
+infinite residue class.
+
+With this typing, THM-2365's two convergence statements give the
+absolutely iterated expansion
+
+```text
+B(m,k)
+ =sum_(n=m mod 13)
+    [sum_X C_13(q;X,n)].                                        (27b)
+```
+
+For each fixed `n`, the inner `X`-sum is absolutely convergent by
+endpoint Parseval/Cauchy--Schwarz. After that inner sum is taken, the
+outer `n`-sum is absolutely convergent by the deep-mode estimate:
+
+```text
+sum_(n=m mod 13)
+ |sum_X C_13(q;X,n)|<infinity.                                  (27c)
+```
+
+No jointly absolute double sum and no ordinary absolute residue-class
+sum is claimed. Consequently (26) supplies some exact deep multiplier
+`n` and then some ordinary frequency `X` with
 
 ```text
 n=m mod 13,
@@ -495,7 +536,7 @@ The dependency-free exact companion:
   `11`-colour deep refinement;
 - verifies the full-to-quotient normalization;
 - reconstructs the cover/incidence hostile (20)--(25) exactly in
-  `Q[zeta_13]`;
+  `Q[zeta_13]`, including its fixed nonzero deep mask/colour;
 - records the rational Gram floors with exponents `18` and `20`; and
 - checks the septimal convolution hostile (33)--(34).
 

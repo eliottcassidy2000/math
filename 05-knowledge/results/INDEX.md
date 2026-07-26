@@ -1932,7 +1932,7 @@ audit. It checks every nonempty proper `F_13` mask, the `229,692` unit
 annihilator characters, the `396,907,776` all-nonzero endpoint characters,
 and the `4,365,985,536` eligible endpoint/deep pairs. It verifies the
 lossless gauge normalization, reconstructs an exact anchored translated-pattern
-cancellation in `Q(zeta_13)`, records the endpoint/deep Gram floors, and checks
-the septimal full-support convolution hostile. Normal and optimized runs agree
-and end in `PASS`; the finite phase hostile is not asserted to be a physical
-scalar-row trajectory.
+cancellation in `Q(zeta_13)` with a fixed nonzero deep colour, records the
+endpoint/deep Gram floors, and checks the septimal full-support convolution
+hostile. Normal and optimized runs agree and end in `PASS`; the finite phase
+hostile is not asserted to be a physical scalar-row trajectory.

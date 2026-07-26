@@ -113,6 +113,7 @@ def hostile_check():
     )
     blocker_masks = ((1, 2), (3, 4), (5, 6))
     masks = unit_masks + blocker_masks
+    deep_mask = (0, 1)
     weights = (1, 2, 3, 4, 5, 11, 0, 0, 0)
     character = (1,) * 9
     trajectory = (1, 1, 1, 1, 1, 1, 0, 0, 0)
@@ -151,6 +152,17 @@ def hostile_check():
     require(
         any(cyclotomic_reduce(product_vector, P)),
         "rank-one hostile product vanished locally",
+    )
+    require(cyclic_consecutive(deep_mask), "deep hostile mask is not consecutive")
+    deep_factor = fourier_vector(deep_mask, 1, safe=False)
+    require(
+        any(cyclotomic_reduce(deep_factor, P)),
+        "deep hostile colour vanished",
+    )
+    deep_product = cyclic_convolution(product_vector, deep_factor)
+    require(
+        any(cyclotomic_reduce(deep_product, P)),
+        "deep-inclusive hostile product vanished locally",
     )
 
     anchored = 0
@@ -208,6 +220,7 @@ def main():
     print("normalization identity: 13/13^10 = 1/13^9")
     print(f"hostile unit incidence / trajectory phase: {incidence} / {hostile_phase}")
     print("hostile physical masks: cyclic-consecutive / unique double root 3")
+    print("hostile deep mask / colour: {0,1} / 1 nonzero")
     print("hostile local factors: all nonzero")
     print("hostile anchored slices: 13 / 13")
     print("hostile integrated coefficient: 0 in Q(zeta_13)")
