@@ -12,9 +12,12 @@ status: >
   if that companion is circulant, admits an unfiltered C_7 source
   completion at one fixed eligible target/deep coefficient. Thus
   arbitrary bare owner-mask cancellation reduces to typed repair
-  currents or a source-residue-refined current. Delayed-word phase,
-  canonical THM-2305 word support, and terminal endpoint transport
-  remain open; no scalar row is removed.
+  currents or a source-residue-refined current. THM-2442 subsequently
+  restores any fixed positive canonical delayed word to both ghost
+  subbranches while preserving the common partial bare endpoint.
+  Semantic word/repair alignment for the other twenty-three cells and
+  fully masked terminal endpoint transport remain open; no scalar row
+  is removed.
 source: codex-2026-07-26-post-deep-c3-graft-conditioning
 depends_on:
   - THM-2309-owner-aligned-pivot-packets-and-visible-height-separation
@@ -393,19 +396,25 @@ This is stronger than the untyped deletion conclusion of THM-2370,
 but it respects that theorem's sharp clone hostile: no monotonicity of
 drift under multiplication is used.
 
-The operation in Section 5 is lawful only for the unfiltered terminal
-word. With a delayed word, shifting the source danger alone fails to
-shift the word's source occurrence, exactly as in THM-2409. Therefore
-THM-2445 does not prove delayed-word survival, identify the
-blocker-status label with a THM-2305 word support, retain the
-preselected marked triangle, or transport the current to the canonical
-terminal endpoint. The first-failure branches still require a lawful
-factor-repair/common-filter intertwiner even if the word phase is
-subsequently supplied. The no-failure blocker statuses are local until
-the source, expiration, root, and clock data are fixed. Restoring the
-fully masked endpoint can add cross-layer terms not present at the
-partial bare endpoint. The theorem removes no scalar row and does not
-prove LRC(14). Reserved THM-2442 targets the separate word-phase step.
+The operation in Section 5 by itself is lawful only for the unfiltered
+terminal word. With a delayed word, shifting the source danger alone
+fails to shift the word's source occurrence, exactly as in THM-2409.
+THM-2442 Section 6.1 subsequently supplies the missing lawful skew:
+in branch (17), it restores any fixed positive canonical word while
+preserving the same coefficient `(alpha,b,h)`, labelled graft, and
+common partial bare endpoint. In branch (16), THM-2365 Section 7 gives
+the corresponding target-neutral BV restoration. Thus the ghost's
+delayed-word phase is discharged.
+
+The theorem plus that corollary still does not identify a
+blocker-status label with a THM-2305 word support, retain a preselected
+marked triangle, or transport the current to the canonical terminal
+endpoint. The first-failure branches require a lawful
+factor-repair/common-filter intertwiner. The no-failure blocker
+statuses are local until the source, expiration, root, and clock data
+are fixed. Restoring the fully masked endpoint can add cross-layer
+terms not present at the partial bare endpoint. No scalar row is
+removed, and LRC(14) remains open.
 
 Reducing the clock modulo seven does not repair this. At `R=13`,
 `y=1/7` gives a unique present source root but
@@ -467,7 +476,9 @@ the same noncirculance criterion, quotient, five-factor complement,
 source typing, and constants as the ordinary `L_*=1` graft.
 
 Both audits emphasized the same stopping boundary recorded above:
-the result is a partial-bare-endpoint conditioning theorem, not a
-canonical delayed-word or fully masked endpoint theorem.
+the result is a partial-bare-endpoint conditioning theorem. THM-2442
+later restores the delayed word on the ghost, but neither theorem
+supplies semantic word/repair alignment for the other cells or the
+fully masked endpoint.
 
 QED.

@@ -159,9 +159,9 @@ THM-2168--2397 leave `165` rows while supplying relation/edge/toothpick/colour c
 THM-2430--2435 reduce `nu_7(c_3)>M` to three typed punctured-stalk shapes.
 Hostile-audited THM-2436 classifies the complete punctured one-/two-blocker stalk and uses fixed-spectrum physical repeated-pair banks to empty all three remaining types. Thus the whole deep-`c_3` branch is empty, while `nu_7(c_3)<=M` retains an isolated noncirculant top graft. No scalar row is removed.
 THM-2441 makes every fixed rational delayed-clock audit finite modulo `7D_0`, preserving the centred signed event word and target-restricted nonflatness.
-Hostile-audited THM-2445 splits the complete surviving branch into `24` positive partial-endpoint cells: `23` are repair/blocker-labelled; the ghost has source-owner drift or all-six-source completion. Delayed-word and fully masked endpoint transport remain open.
+Hostile-audited THM-2445 splits the complete surviving branch into `24` positive partial-endpoint cells: `23` are repair/blocker-labelled; the ghost has source-owner drift or all-six-source completion. Hostile-audited THM-2442 restores any fixed positive canonical delayed word to both ghost subbranches at the same partial endpoint. Semantic word/repair alignment for the other `23` cells and fully masked endpoint transport remain open.
 THM-2418--2421 remain reusable carry/reference sidecars requiring a transplant.
-Next: transport a THM-2445 typed cell from the common partial endpoint to one canonical delayed-word terminal current, retaining target/repair alignment and the within-cell carry phase. Ledger: `165`.
+Next: align one of THM-2445's `23` typed cells with its semantic terminal word/repair label, then restore the omitted right-endpoint masks without losing that coefficient. Ledger: `165`.
 
 ### Independent routes that remain live
 
