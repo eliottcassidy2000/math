@@ -1,0 +1,13 @@
+THM-2383 polarized complete-subcube Gram tomography exact referee
+boolean_rank: 4
+hilbert_dimension: 3
+direct_cross_dirichlet_checks: 48
+polarization_quadrature_checks: 96
+mobius_cross_gram_cells: 45
+spanning_reconstruction_cells: 15
+proper_span_hostile: PASS
+one_quadrature_hostile: PASS
+constant_mode_hostile: PASS
+unlabelled_support_hostile: PASS
+clone_terminal_orientation_controls: 32
+VERDICT: labelled polarized subcube banks recover exactly the referenced nonconstant Walsh coefficients
