@@ -156,9 +156,9 @@ bad transverse deck D_N(m)<1/14
 
 Discharge each cell by a THM-2057 clock phase, THM-2059/HYP-2108 endpoint packet, THM-2054 nonaliasing plateau, a relation outside the rank-eleven code, or THM-2047 owner-Euler survival. HYP-8871 is the open finite-state/Farey program; THM-2058 makes its terminals finite, not empty.
 THM-2168--2397 leave `165` rows while supplying relation/edge/toothpick/colour carriers (THM-2356 kernel `28,393`; THM-2363/THM-2368). THM-2405/2415 reduce the final lane to `M<=2`; THM-2417 excludes `M=2`, and THM-2426's transverse root proof empties it.
-Hence `nu_7(c_3)>M => nu_7(H)=M`. THM-2427 leaves three guard-top types at `M=0` and four at `M>0`; the `c_3<=M` side instead has an isolated noncirculant top graft. Full owner-mask cancellation is open, so no scalar row is removed.
+Hence `nu_7(c_3)>M => nu_7(H)=M`. THM-2430 classifies the exact common-`91` tilings; THM-2431's fixed repeated-step rounding cap excludes every `t=5,b=0` type, and THM-2432 independently removes `(2,0,0,2)`. The live deep-`c_3` residual is exactly `(1,5,1,8),(2,5,2,9)` at `M=0` and `(2,5,1,8)` at `M>0`; the `c_3<=M` side instead has an isolated noncirculant top graft. No scalar row is removed.
 THM-2418--2421 remain reusable carry, affine-shell, reference, and ancestry-event sidecars, not live continuations without a transplant. In particular THM-2420 proves same-shell reference amplitude sufficient and a complete zero-reference bank insufficient.
-Next: owner-conditioned no-cancellation for `c_3<=M`, and the seven THM-2427 shapes. THM-2427's strict packet `(H;q;c;y)=(1;547,1821,3095,4369,5643;91,1183,15379;11/581)` partitions the blocker-safe `13*7` stalk and lifts self-similarly, so frozen joint-root geometry is insufficient; retain cross-base endpoint evolution, owner state, and the valuation-zero label. Ledger: `165`.
+Next: owner-conditioned no-cancellation for `c_3<=M` and the three blocker-bearing guard-top shapes. THM-2427's strict zero-blocker packet remains a sharp frozen-stalk hostile, while THM-2431 shows its required moving parent set is too large; retain cross-base endpoint evolution, owner state, and the valuation-zero label. Ledger: `165`.
 
 ### Independent routes that remain live
 

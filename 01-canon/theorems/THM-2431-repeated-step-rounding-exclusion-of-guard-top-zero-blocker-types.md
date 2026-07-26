@@ -2,14 +2,13 @@
 id: THM-2431
 title: "Repeated-step rounding exclusion of guard-top zero-blocker types"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT + THREE INDEPENDENT
-  HOSTILE AUDITS ACCEPT; AWAITING THM-2430 PROMOTION. In a THM-2427
-  residual with t=5 and b=0, the top guard and five top ordinary words
-  give the THM-2430 exact common-91-root tiling on an image set of
-  parent phases of Haar mass at least 4/7=52/91. The five normalized
-  ordinary steps are fixed speed-residue data. Every one of the 62
-  exact tilings repeats a step, so one fixed labelled pair repeats on
-  every parent. Its centre difference, together with the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In a
+  THM-2427 residual with t=5 and b=0, the top guard and five top
+  ordinary words give the THM-2430 exact common-91-root tiling on an
+  image set of parent phases of Haar mass at least 4/7=52/91. The five
+  normalized ordinary steps are fixed speed-residue data. Every one
+  of the 62 exact tilings repeats a step, so one fixed labelled pair
+  repeats on every parent. Its centre difference, together with the
   nearest-integer addition defect, confines the parent to at most 50
   of the 91 equal-mass phase residues. The resulting 50/91<52/91
   contradiction excludes all t=5,b=0 valuation types. The deep-c_3
@@ -19,19 +18,19 @@ status: >
 source: codex-2026-07-26-repeated-step-rounding-exclusion
 depends_on:
   - THM-2427-guard-top-thirteen-root-capacity-and-residual-types
-related:
   - THM-2430-guard-top-common-ninety-one-root-tiling-spectrum
+related:
+  - THM-2432-guard-top-pair-cage-and-low-blocker-residual-exclusion
 script: 04-computation/lrc14_repeated_step_rounding_exclusion_thm2431.py
 output: 05-knowledge/results/lrc14_repeated_step_rounding_exclusion_thm2431.out
-script_sha256: 8fc14647db14516c02d961a2b75a14002fdd376b8bbe9f4ac6439f4b872ab4eb
+script_sha256: 9c5bfadf45cd2876654b1b8f5b705fe5799525f1a193f2b9d412e38d97d9ccdf
 output_sha256: 6fa4ad91ce4c5a99ea5722f488fd89bfeb0e19eb950c68b6b0310e7bf19b44cb
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2431 -- a repeated step cannot persist on the required parent mass
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT + THREE INDEPENDENT
-HOSTILE AUDITS ACCEPT; AWAITING THM-2430 PROMOTION.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The corrected THM-2430 atlas has a feature which its local
 realizability does not expose: every normalized tiling repeats an
@@ -359,5 +358,5 @@ Three independent hostile audits reconstructed the `62` covers and
 all seven banks, checked the fixed-pair quantifier, the signed centre
 law, the common-root parent map including `floor(Ny)`, Haar image
 measure, and the low-blocker scope. All accepted the proof conditional
-only on promotion of THM-2430's atlas. QED conditional on that
-dependency promotion.
+only on promotion of THM-2430's atlas. THM-2430 is now promoted with
+the same exact transcript and audited physical typing. QED.
