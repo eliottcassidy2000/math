@@ -1,0 +1,58 @@
+LRC14 THM-2388 blocker-cage capacity escape -- exact candidate
+dependency_status: THM-2388_PROVED_AUDITED
+hole_mass_floor: 36/343
+deep_gap_max: d=4,cap=583/28561
+repeated_profiles_escaped: 15/15
+repeated_worst_profile: (1, 1, 6)
+repeated_cage_cap: 17981/171366
+repeated_off_cage_margin: 1693/58778538
+strict_profiles_escaped_by_pair_caps: 117/150
+strict_zero_gap_profiles_open: 30
+strict_positive_gap_coarse_failures: (1, 3, 6),(1, 4, 6),(1, 4, 7)
+compatible_pair_sum_hostiles: (1, 3, 6):251891/2399124,(1, 4, 6):20991/199927,(1, 4, 7):273066/2599051
+thirteen_adic_pair_only_escaped_profiles: 132/165
+septimally_separated_pair_overlap: 1/49
+live_repeated_off_cage_margin: 1/26754
+live_strict_profiles_escaped: 135/150
+live_strict_worst_b_family: b=4,count=15
+live_strict_off_cage_margin: 6042/9796423
+live_escaped_profiles_total: 150/165
+live_uniform_off_cage_margin: 1/26754
+b2_septimally_distinct_margin: 36/57967
+residual_lane: b=2_and_nu7(C2)=nu7(c1)
+cross_ancestor_overlap_threshold: 1219/57967
+cross_ancestor_product_tail: 402
+cross_ancestor_unordered_ratio_bank: 124
+cross_ancestor_ratio_bounds: min_coordinate<=11,max_coordinate<=197
+cross_ancestor_first_coordinate_census: 1:49,2:20,3:22,4:11,5:11,6:1,8:2,9:3,10:2,11:3
+coupled_cross_ancestor_folded_threshold: 156/595
+coupled_cross_ancestor_product_tail: 186
+coupled_cross_ancestor_unordered_ratio_bank: 52
+coupled_cross_ancestor_ratio_bounds: product<=177,a<=10,b<=85
+low_cage_union_threshold: 22/343
+low_cage_oriented_ratio_bank: 10
+low_cage_unordered_ratio_bank: 6
+low_cage_oriented_survivors: (1, 1):193/1183,(1, 2):114/1183,(2, 1):239/2366,(1, 3):263/3549,(3, 1):95/1183,(4, 1):331/4732,(2, 3):43/546,(3, 2):95/1183,(3, 4):491/7098,(4, 3):331/4732
+small_nonbank_off_cage_margin: 9/22295
+folded_tail_max: 16/73@3:73
+tail_nonbank_off_cage_margin: 934/4231591
+b2_nonbank_uniform_off_cage_margin: 934/4231591
+all_nonexceptional_uniform_off_cage_margin: 1/26754
+oriented_bockstein_descendants: (1, 1):rho=-1,d=2,(1, 2):rho=3,d=1,(2, 1):rho=-2,d=4,(1, 3):rho=2,d=1,(3, 1):rho=-3,d=6,(4, 1):rho=3,d=7,(2, 3):rho=-3,d=5,(3, 2):rho=2,d=5,(3, 4):rho=1,d=5,(4, 3):rho=1,d=7
+fallback_pattern_count: 390
+fallback_two_root_cell_mass: 1/10434060
+top_labelled_pattern_count: 52
+top_labelled_cell_mass: 1/1391208
+owner_address_count: 13
+owner_resolved_tensor_pattern_count: 338
+owner_resolved_tensor_cell_mass: 1/9042852
+singleton_nonzero_target_energy: 12/169
+singleton_nonzero_target_fourth_energy: 12/28561
+two_root_nonzero_target_energy: 22/169
+two_root_nonzero_target_fourth_energy: 62/28561
+top_cell_nonzero_target_energy_floor: 1/27257724097968
+top_cell_nonzero_target_fourth_floor: 1/8915802276011345031140748288
+tensor_nonzero_target_energy_floor: 1/8061471901974036
+tensor_nonzero_target_fourth_floor: 1/5458935655010618045250183922860864
+terminal_owner_current_transport: OPEN
+all_checks: PASS
