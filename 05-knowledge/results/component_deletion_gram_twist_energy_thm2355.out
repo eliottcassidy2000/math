@@ -1,0 +1,14 @@
+theorem=THM-2355
+status=PROVED+VERIFIED-EXACT-CANDIDATE-UNDER-INDEPENDENT-AUDIT
+pair_polarization_checks=56
+boolean_higher_interaction_checks=448
+single_deletion_checks=56
+two_component_deletion_boundary=SHARP
+untwisted_tree_energy_boundary=SHARP
+cyclic_twist_dft_checks=84
+group_energy_autocorrelation_checks=42
+real_C13_full_support_perfect_autocorrelation=YES
+acute_cone_support_equality=PASS
+cone_width_sum_pi_boundary_cancellation=YES
+lrc14_status=OPEN
+all_checks=PASS
