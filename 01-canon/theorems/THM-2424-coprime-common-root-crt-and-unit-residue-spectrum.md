@@ -2,7 +2,7 @@
 id: THM-2424
 title: "Coprime common-root CRT realization and unit-residue spectrum"
 status: >
-  RESERVED / UNPROVED PROVISIONAL PROOF CANDIDATE UNDER AUDIT. For
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For
   coprime fibre orders p,q, two profiles over the same parent have a
   canonical physical pq-root realization: evaluate them at the q- and
   p-dilates of one common inverse root. Its normalized pq-root transform
@@ -42,7 +42,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2424 -- transverse coprime fibres meet on one physical root cover
 
-**RESERVED / UNPROVED PROVISIONAL PROOF CANDIDATE UNDER AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2392 and THM-2397 retain two exact words over one clean parent:
 
@@ -508,3 +508,12 @@ Both transcripts must byte-match, after LF normalization,
 
 Every truth-bearing check raises explicitly, so optimized mode executes
 the same audit.
+
+## 9. Independent audit
+
+An independent audit rederived the CRT factorization, polyphase
+normalization, owner-cell typing, energy floors, and terminal-word
+filter. It also reproduced all exact group-ring/cyclotomic cases and
+normal/optimized/stored transcripts. The sole audit repair restricted
+the ancillary Prony bound to its required nonzero residue class; the
+unit-class theorem and constants were unchanged.
