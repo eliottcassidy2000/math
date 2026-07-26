@@ -14,7 +14,16 @@ status: >
   even for commuting Boolean rational-interval masks whose cumulative
   products are nested, with disjoint physical deletion supports and
   individual mass 1-1/(91n): cloning the exact 90/91 THM-2367
-  circulant-restoration mask gives equality. The landed
+  circulant-restoration mask gives equality. On the full
+  Hilbert-valued Boolean clone cube, the normalized Walsh expansion
+  has only its constant and n equal singleton terms; every mixed ANOVA
+  tensor and every disjoint pair Dirichlet defect vanishes. Global
+  Boolean complementation preserves the complete squared Dirichlet
+  bank while swapping the target-null terminal C with the drifting
+  terminal T. Thus a complete squared interaction spectrum still loses
+  the absolute terminal orientation. The scalar table of squared drift
+  instead has explicit nonzero degree-two terms; it still does not
+  restore phase. The landed
   target belongs to the deleted packet, not automatically to the
   canonical full-owner word. A complementary sharp anchored-slice lemma
   shows that a shifted all-safe residual which vanishes on its original
@@ -29,10 +38,11 @@ depends_on:
 related:
   - THM-2305-canonical-blocker-word-handoff-hypergraph
   - THM-2367-septimal-root-averaging-graft-and-cover-alignment
+  - THM-2374-binary-allocation-complete-subcube-dirichlet-spectrum
 script: 04-computation/lrc14_deletion_martingale_drift_thm2370.py
 output: 05-knowledge/results/lrc14_deletion_martingale_drift_thm2370.out
-script_sha256: a48396b0f979d7da646de93f7a1b1a94ce5a6a56a4ca492f9dab239d22052885
-output_sha256: 9db6ea0e5cabeb51ce1d3cd734001753ed1d625dde3d48219508938fe82b4436
+script_sha256: 34d60f9111963e1400ec77a0842806f6ad415430d5be00c50429da4b5a41f75d
+output_sha256: 82ed7199feff21923d79e9afdaef72e40d65cd61ab5cb4ac324ed052c0648fd4
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -479,6 +489,143 @@ Unequal clone widths make both inequalities strict. Omitting the last
 clone leaves exactly `D(T)/n^2` terminal drift. These are exact hostile
 controls in the companion.
 
+## 5a. The full clone cube has no mixed ANOVA
+
+The nested order is not hiding a higher Boolean interaction. Keep every
+subset of the clone masks. For
+
+```text
+x=(x_1,...,x_n) in F_2^n,
+
+H_x=the packet after applying M_j exactly when x_j=1.
+```
+
+The deleted clone supports are disjoint, so (27) strengthens to the
+whole-cube identity
+
+```text
+H_x=C+(1-|x|/n)(T-C).                              (31a)
+```
+
+Fix the character convention
+
+```text
+chi_A(x)=(-1)^(sum_(j in A)x_j),
+
+Hhat(A)=2^(-n)sum_x H_x chi_A(x).                  (31b)
+```
+
+Directly expanding (31a) gives
+
+```text
+Hhat(empty)=(T+C)/2,
+
+Hhat({j})=(T-C)/(2n)                 for every j,
+
+Hhat(A)=0                            for |A|>=2.    (31c)
+```
+
+The sign in the singleton line is positive because
+
+```text
+2^(-n)sum_x x_j(-1)^x_j=-1/2.
+```
+
+After applying the noncirculant projection `Q=I-P`, (23) turns (31c)
+into
+
+```text
+QHhat(empty)=QT/2,
+
+QHhat({j})=QT/(2n),
+
+QHhat(A)=0                            for |A|>=2.   (31d)
+```
+
+Thus all singleton deletion vectors are not merely coherent: they are
+equal and collinear.
+
+For completeness, let `U subset {1,...,n}` and average the squared
+target difference over the whole coordinate subcube:
+
+```text
+mathcal D_U
+ =E_(x in F_2^n,h in F_2^U)
+    ||QH_(x+h)-QH_x||_2^2.
+```
+
+The elementary `0/2` Walsh multiplier and (31d) give
+
+```text
+mathcal D_U
+ =2 sum_(A:A intersect U!=empty)||QHhat(A)||_2^2
+ =|U|D(T)/(2n^2).                                  (31e)
+```
+
+Consequently, for every disjoint `U,V`,
+
+```text
+mathcal D_U+mathcal D_V-mathcal D_(U union V)=0.
+```
+
+Every mixed rectangle defect and every Walsh component of degree at
+least two vanishes even though
+
+```text
+D(H_0)=D(T)>0,                 D(H_(1,...,1))=D(C)=0.
+```
+
+The **complete squared** subcube bank is also insufficient to identify
+which endpoint is terminal. Global Boolean complementation gives the
+equally physical cube
+
+```text
+Htilde_x=H_(1-x)=C+(|x|/n)(T-C).
+```
+
+It has exactly the same values of every `mathcal D_U`, equivalently the
+same **nonconstant** squared Walsh spectrum; in this example the constant
+coefficient also agrees. Yet
+
+```text
+Htilde_(1,...,1)=T
+```
+
+drifts. The forgotten coordinate is the applied/unapplied orientation,
+or equivalently the constant and signed singleton data relative to an
+absolute terminal reference. A mixed-ANOVA or rectangle certificate
+cannot supply the owner/current transfer missing in Section 7.
+
+This is a statement about the Hilbert-valued packet/current cube
+`x -> QH_x`. It must not be conflated with the scalar quadratic table
+
+```text
+e(x)=D(H_x)=D(T)(1-|x|/n)^2.
+```
+
+That scalar table has normalized Walsh coefficients
+
+```text
+ehat(empty)=D(T)(n+1)/(4n),
+
+ehat({j})=D(T)/(2n),
+
+ehat({i,j})=D(T)/(2n^2),
+
+ehat(A)=0                              for |A|>=3,
+```
+
+and therefore has positive scalar pair defects
+
+```text
+J_(U,V)=|U||V|D(T)^2/(2n^4)
+```
+
+for disjoint `U,V`. Squaring before taking the Boolean transform creates
+an interaction that was absent from the current itself. It does not
+restore the terminal phase or turn the scalar spectrum into a canonical
+owner service.
+
 ## 6. What the martingale does and does not decompose
 
 At the overlap-table and finite-transform levels, (5) is an exact linear
@@ -542,6 +689,11 @@ The exact missing service is one of:
 3. a same-clock phase mechanism transferring the deleted-packet triangle
    into the canonical full-owner current.
 
+Section 5a rules out replacing these services by a higher mixed Boolean
+interaction or by the complete **squared** clone spectrum. A subcube route
+would still need signed singleton orientation and an absolute terminal
+charged reference.
+
 Without such a service, the theorem does not exclude a scalar row. The
 ledger remains `165`, and LRC(14) remains open.
 
@@ -558,6 +710,10 @@ arithmetic to:
   (23);
 - verify (27)--(31) for `n=1,2,3,5,7,13`;
 - check the common clone-mask mass at each tested depth;
+- compute every Walsh coefficient and complete-subcube energy in
+  (31a)--(31e), verify all higher components and disjoint pair defects
+  vanish, check the globally complemented terminal hostile, and verify
+  separately the nonzero degree-two spectrum of `x -> D(H_x)`;
 - verify one unequal-clone strictness control and the omitted-final-mask
   hostile;
 - enumerate the sharp anchored-zero example (16d)--(16e) over all `2,197`

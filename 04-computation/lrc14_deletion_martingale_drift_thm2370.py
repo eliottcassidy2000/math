@@ -3,8 +3,9 @@
 
 The companion independently reconstructs the THM-2367 Boolean hostile,
 computes its target-drift energy, and then verifies the sharp clone
-construction for several deletion depths.  All assertions remain active
-under ``python -O``.
+construction for several deletion depths.  It also computes the complete
+Boolean Walsh spectrum of every tested clone cube.  All assertions remain
+active under ``python -O``.
 """
 
 from __future__ import annotations
@@ -117,6 +118,26 @@ def drift(
     )
 
 
+def normalized_walsh(
+    values: tuple[Fraction, ...],
+) -> tuple[Fraction, ...]:
+    """Return coefficients for chi_A(x)=(-1)^(sum_(j in A)x_j)."""
+    size = len(values)
+    require(size > 0 and size & (size - 1) == 0, "Walsh size is not dyadic")
+    coefficients = list(values)
+    half_block = 1
+    while half_block < size:
+        block = 2 * half_block
+        for start in range(0, size, block):
+            for offset in range(half_block):
+                low = coefficients[start + offset]
+                high = coefficients[start + half_block + offset]
+                coefficients[start + offset] = low + high
+                coefficients[start + half_block + offset] = low - high
+        half_block = block
+    return tuple(value / size for value in coefficients)
+
+
 def main() -> None:
     excluded_cells = sum(right - left for left, right in EXCLUDED)
     require(excluded_cells == 182, "hostile deletion count changed")
@@ -226,6 +247,7 @@ def main() -> None:
 
     clone_depths = (1, 2, 3, 5, 7, 13)
     clone_rows = []
+    walsh_rows = []
     for depth in clone_depths:
         layer = matrix_scale(deleted, Fraction(1, depth))
         layer_drift = drift(layer)
@@ -267,6 +289,172 @@ def main() -> None:
                 )
 
         clone_rows.append((depth, layer_drift))
+
+        # Full Boolean cube: applying the masks indexed by x leaves
+        # H_x=C+(1-|x|/n)(T-C).  Under chi_A(x)=(-1)^(A.x), its target
+        # coefficient is QT/2 at A=empty, QT/(2n) at singletons, and zero
+        # in every higher degree.
+        cube_values = tuple(
+            Fraction(depth - mask.bit_count(), depth)
+            for mask in range(1 << depth)
+        )
+        coefficients = normalized_walsh(cube_values)
+        require(coefficients[0] == Fraction(1, 2), "clone-cube mean changed")
+        require(
+            all(
+                coefficients[1 << coordinate] == Fraction(1, 2 * depth)
+                for coordinate in range(depth)
+            ),
+            "clone-cube singleton coefficient changed",
+        )
+        require(
+            all(
+                coefficient == 0
+                for mask, coefficient in enumerate(coefficients)
+                if mask != 0 and mask.bit_count() >= 2
+            ),
+            "clone cube acquired a mixed Walsh component",
+        )
+
+        coefficient_energies = tuple(value * value for value in coefficients)
+        nonconstant_vector_energies = tuple(
+            (mask, value)
+            for mask, value in enumerate(coefficient_energies)
+            if mask != 0 and value != 0
+        )
+        subcube_dirichlet = []
+        for coordinate_set in range(1 << depth):
+            value = 2 * sum(
+                energy
+                for mask, energy in nonconstant_vector_energies
+                if mask & coordinate_set
+            )
+            require(
+                value
+                == Fraction(coordinate_set.bit_count(), 2 * depth * depth),
+                "clone complete-subcube Dirichlet law changed",
+            )
+            subcube_dirichlet.append(value)
+
+        full_mask = (1 << depth) - 1
+        # Since every checked D_U is |U|/(2n^2), additivity of cardinality
+        # makes every disjoint pair defect zero.  The following exact count
+        # records the entire disjoint-pair universe without a slow 3^n loop.
+        disjoint_pair_count = sum(
+            1 << (depth - first.bit_count())
+            for first in range(1 << depth)
+        )
+        require(
+            disjoint_pair_count == 3**depth,
+            "disjoint subcube-pair count changed",
+        )
+
+        # Global Boolean complementation preserves the entire squared
+        # Dirichlet bank but swaps the terminal values C and T.
+        reversed_values = tuple(
+            Fraction(mask.bit_count(), depth)
+            for mask in range(1 << depth)
+        )
+        reversed_coefficients = normalized_walsh(reversed_values)
+        require(
+            all(
+                reversed_coefficients[mask] ** 2
+                == coefficients[mask] ** 2
+                for mask in range(1 << depth)
+            ),
+            "global clone reversal changed the squared Walsh bank",
+        )
+        require(
+            cube_values[full_mask] == 0
+            and reversed_values[full_mask] == 1,
+            "global clone reversal stopped swapping terminal drift",
+        )
+
+        # Do not confuse the Hilbert-valued packet cube with the scalar
+        # quadratic x -> D(H_x)=D(T)(1-|x|/n)^2.  The latter has genuine
+        # degree-two Walsh terms and positive pair defects.
+        scalar_energy_values = tuple(
+            raw_drift * value * value
+            for value in cube_values
+        )
+        scalar_energy_coefficients = normalized_walsh(scalar_energy_values)
+        require(
+            scalar_energy_coefficients[0]
+            == raw_drift * Fraction(depth + 1, 4 * depth),
+            "scalar drift-cube mean changed",
+        )
+        require(
+            all(
+                scalar_energy_coefficients[1 << coordinate]
+                == raw_drift * Fraction(1, 2 * depth)
+                for coordinate in range(depth)
+            ),
+            "scalar drift-cube singleton coefficient changed",
+        )
+        require(
+            all(
+                scalar_energy_coefficients[
+                    (1 << first) | (1 << second)
+                ]
+                == raw_drift * Fraction(1, 2 * depth * depth)
+                for first in range(depth)
+                for second in range(first + 1, depth)
+            ),
+            "scalar drift-cube pair coefficient changed",
+        )
+        require(
+            all(
+                coefficient == 0
+                for mask, coefficient in enumerate(scalar_energy_coefficients)
+                if mask.bit_count() >= 3
+            ),
+            "scalar drift cube acquired degree at least three",
+        )
+        scalar_energy_squares = tuple(
+            value * value
+            for value in scalar_energy_coefficients
+        )
+        nonconstant_scalar_energies = tuple(
+            (mask, value)
+            for mask, value in enumerate(scalar_energy_squares)
+            if mask != 0 and value != 0
+        )
+        scalar_subcube_dirichlet = []
+        for coordinate_set in range(1 << depth):
+            value = 2 * sum(
+                energy
+                for mask, energy in nonconstant_scalar_energies
+                if mask & coordinate_set
+            )
+            size = coordinate_set.bit_count()
+            require(
+                value
+                == raw_drift**2
+                * Fraction(
+                    size * (2 * depth * depth + 2 * depth - size - 1),
+                    4 * depth**4,
+                ),
+                "scalar drift complete-subcube law changed",
+            )
+            scalar_subcube_dirichlet.append(value)
+        if depth >= 2:
+            require(
+                scalar_subcube_dirichlet[1]
+                + scalar_subcube_dirichlet[2]
+                - scalar_subcube_dirichlet[3]
+                == raw_drift**2 * Fraction(1, 2 * depth**4),
+                "scalar drift pair defect changed",
+            )
+
+        walsh_rows.append(
+            (
+                depth,
+                coefficients[0],
+                coefficients[1],
+                subcube_dirichlet[full_mask],
+                disjoint_pair_count,
+            )
+        )
 
     # Unequal clone weights make both universal bounds strict.
     unequal_weights = (Fraction(1, 2), Fraction(1, 3), Fraction(1, 6))
@@ -381,6 +569,12 @@ def main() -> None:
         print(
             f"n={depth}: mask_mass={Fraction(91*depth-1,91*depth)}; "
             f"one_layer={layer_drift}; sum={depth*layer_drift}"
+        )
+    for depth, mean, singleton, full_dirichlet, pair_count in walsh_rows:
+        print(
+            f"cube n={depth}: mean={mean}; singleton={singleton}; "
+            f"mixed=0; D_full/D(T)={full_dirichlet}; "
+            f"zero_ordered_disjoint_pair_defects={pair_count}"
         )
     print(
         "anchored-zero: "

@@ -11,6 +11,12 @@ n=3: mask_mass=272/273; one_layer=284/34767505227; sum=284/11589168409
 n=5: mask_mass=454/455; one_layer=852/289729210225; sum=852/57945842045
 n=7: mask_mass=636/637; one_layer=852/567869252041; sum=852/81124178863
 n=13: mask_mass=1182/1183; one_layer=852/1958569461121; sum=852/150659189317
+cube n=1: mean=1/2; singleton=1/2; mixed=0; D_full/D(T)=1/2; zero_ordered_disjoint_pair_defects=3
+cube n=2: mean=1/2; singleton=1/4; mixed=0; D_full/D(T)=1/4; zero_ordered_disjoint_pair_defects=9
+cube n=3: mean=1/2; singleton=1/6; mixed=0; D_full/D(T)=1/6; zero_ordered_disjoint_pair_defects=27
+cube n=5: mean=1/2; singleton=1/10; mixed=0; D_full/D(T)=1/10; zero_ordered_disjoint_pair_defects=243
+cube n=7: mean=1/2; singleton=1/14; mixed=0; D_full/D(T)=1/14; zero_ordered_disjoint_pair_defects=2187
+cube n=13: mean=1/2; singleton=1/26; mixed=0; D_full/D(T)=1/26; zero_ordered_disjoint_pair_defects=1594323
 anchored-zero: norm=2016/2197; drift=2016/371293; ratio=1/169
 eligible deep-target coefficients: 2016
 VERDICT: n^-2 maximum and n^-1 summed deletion floors are sharp
