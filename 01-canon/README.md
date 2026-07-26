@@ -35,7 +35,9 @@ so none proves LRC(14). THM-2101 is paper-proved: its formal algebraic core is
 checked, but both analytic wrappers and the final interface are absent. THM-2118
 closes cubic source fibers; THM-2127 closes two proper-power subclasses without
 settling JC(2). Quartic and general proper-power descent are next.
-MISTAKE-238--244 are the newest mandatory corrections.
+MISTAKE-238--261 contain the newest mandatory corrections. In particular,
+MISTAKE-261 separates THM-2356's refined graph support from THM-2334's
+coarse row sum; the latter has a `28,393`-dimensional zero-only kernel.
 
 ## Theorem record template
 

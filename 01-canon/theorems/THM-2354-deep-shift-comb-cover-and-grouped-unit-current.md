@@ -402,11 +402,11 @@ complement and danger factors have product zero pointwise. The nonzero
 signal comes precisely from **relative** deep-leg drift. A naive lawful
 co-shift annihilates it.
 
-Thus (24) does not settle THM-2334's target variance or THM-2356's planar
-graph singleton boundary. A required next sidecar is an intertwiner which
-couples this relative deep colour to the target/jet character without
-destroying the overlap cone, or a coefficient-sensitive comparison showing
-that the omitted endpoint phases cannot cancel (24).
+Thus (24) does not settle THM-2334's target variance or THM-2356's
+refined-to-coarse row-sum problem. A next sidecar must transport the
+relative deep colour into the relation target/address and trivial jet
+polarizer, or control the omitted endpoint and cross-graph phases strongly
+enough to prevent cancellation.
 
 ## 6. Needle geometry and hostile controls
 
@@ -422,9 +422,9 @@ Two exact controls mark the boundary.
 
 1. **One-sparse overlap.** Take one of the two unique cells of a nonzero
    translate and let `F=E` be that cell. Then `G` is supported at exactly
-   one nonzero shift. All twelve nonzero Fourier colours survive, but the
-   shift profile is one-sparse. Grouped deep-colour noncancellation alone
-   therefore does not defeat the one-sparse planar-graph boundary.
+   one nonzero shift. All twelve deep colours survive, but no target
+   coordinate or graph-phase comparison survives; factor-colour
+   noncancellation can coexist with coarse zero-only landing.
 
 2. **Sharp energy.** The twelve-cell construction in (12) realizes equality
    in (10)--(11). No better universal constant follows from only

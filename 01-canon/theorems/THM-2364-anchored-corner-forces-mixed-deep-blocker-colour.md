@@ -29,6 +29,7 @@ depends_on:
   - THM-2354-deep-shift-comb-cover-and-grouped-unit-current
 related:
   - THM-2337-expiration-word-residue-invisibility-and-first-bockstein-sidecar
+  - THM-2356-finite-field-chirp-gram-tomography-and-bockstein-pairing
   - THM-2362-thirteen-shift-successor-statistic-and-role-jet-floor
 script: 04-computation/mixed_deep_blocker_corner_thm2364.py
 output: 05-knowledge/results/mixed_deep_blocker_corner_thm2364.out

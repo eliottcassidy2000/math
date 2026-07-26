@@ -65,7 +65,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     At degree `18`, THM-2297 closes one-sparse strata plus `B=D=0`;
     THM-2314/2316/2320/2324/2328 close all `31` exactly two-sparse ratios.
     THM-2332 leaves squarefree branch degree `0`, `2`, or `4`; THM-2335 eliminates `0`; THM-2345/2347 close two divisors.
-    THM-2359 is a verified-exact candidate closing the perfect-quartic divisor, pending audit.
+    THM-2359 is proved, verified-exact, and independently audited; it closes the perfect-quartic divisor.
     Off-wall `H_2/H_4`, split/even descent, other short edges, integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
@@ -118,6 +118,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     THM-2198--2258 leave `165` depth-one rows. On the `150` strict rows, THM-2323--2334 reach exact target aggregates and reduce nonzero-target survival to `169` coordinate twists.
     THM-2337/2340 identify pure-word landing with main effects or interaction; THM-2343/2344 reduce zero-only failure to a shifted endpoint convolution inverse. THM-2344's strengthened hostile proves that an arbitrary nonconstant word on one aligned active axis still cannot break it.
     THM-2349 supplies a finite delayed marked word/current on all `165` rows, including every repeated and strict resonance arm. Force two-coordinate or cross-axis mixing, then retain all-`91`-unit visibility and terminal phase.
+    MISTAKE-260 forbids extracting an anchored nonzero Fourier sum from an unordered inverse-root count. MISTAKE-261 corrects the separate quotient loss: THM-2356's planar graph tomography detects refined target--jet support, but coarse target landing is a row sum with a `28,393`-dimensional kernel. THM-2363's derived detector dominates coarse energy only in the forward direction and is not yet a lawful physical probe.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
     the knot continuation cocycle; THM-2191 gives its catalytic group length,
     commuting stable envelope, and abstract additive dual, and closes `9_10`.

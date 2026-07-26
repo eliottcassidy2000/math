@@ -41,6 +41,7 @@ related:
   - THM-2285-centered-grid-footprint-and-generic-keller-lines
   - THM-2303-terminal-component-phase-current-and-defect-rank
   - THM-2333-abel-target-fibre-sum-landing-and-zero-fibre-boundary
+  - THM-2334-relation-residue-current-and-character-twist-pushforward
   - THM-2344-correlation-inverse-rigidity-and-aligned-tooth-twist-hostile
   - THM-2355-component-deletion-gram-and-twist-energy-phase-transport
 script: 04-computation/finite_field_chirp_gram_tomography_thm2356.py

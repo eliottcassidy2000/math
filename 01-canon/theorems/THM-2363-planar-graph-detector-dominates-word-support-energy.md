@@ -246,9 +246,12 @@ F_c(b)conjugate(F_c(0)),
 ```
 
 or an equivalent graph-channel pair twist. Separate chirp intensities do
-not determine it. Therefore (10) does not realize a new physical probe,
-exclude the vertical tensor hostile, decrement any of the `165` LRC
-profiles, force a scalar-row contradiction, or prove LRC(14).
+not determine it. Therefore (10) neither realizes `D_graph` as a lawful
+physical probe nor forces coarse landing. It does not exclude the full
+`28,393`-dimensional coarse row-sum kernel; indeed `D_graph>0` on
+THM-2356's nonvertical one-sparse-per-graph hostile while
+`E_coarse=0`. It does not decrement any of the `165` LRC profiles, force
+a scalar-row contradiction, or prove LRC(14).
 
 It does sharpen the missing sidecar specification: for each fixed
 `sigma`, a lawful realization of `D_graph(A^sigma)` detects every

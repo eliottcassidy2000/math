@@ -4,8 +4,7 @@
 
 ## Universal
 
-1. **Chronology is not truth.** Logs, broadcasts, and reflections can contain a claim and its refutation minutes apart. Resolve status through corrections
-   and repaired canon.
+1. **Chronology is not truth.** Logs, broadcasts, and reflections can contain a claim and its refutation minutes apart. Resolve status through corrections and repaired canon.
 2. **IDs can collide.** Cite `ID + slug/path`; check frontmatter, current indexes, and remote history before reserving or following a number.
 3. **Keep logical direction visible.** Mark necessary, sufficient, iff, reduction, finite-exact, heuristic, and reserved statements distinctly.
 4. **A quotient owes a loss ledger.** Record source, target, map, preserved predicate, forgotten coordinate, restoration sidecar, and hostile test.
@@ -13,8 +12,7 @@
 ## Lonely Runner
 
 5. **No uniform `q<=25` theorem.** THM-762/764 give `26*{1,...,12} union {339}` with first good period `27`.
-6. **Uniform twelve-speed sporadic emptiness is OPEN.** Finite height, AP rigidity, single-far classification, and bounded censuses do not classify
-   every non-AP/deep multi-defect tight set.
+6. **Uniform twelve-speed sporadic emptiness is OPEN.** Finite height, AP rigidity, single-far classification, and bounded censuses do not classify every non-AP/deep multi-defect tight set.
 7. **Good-period existence is a maximum, not a mean or count.** MISTAKE-127, 129, and 130; always test the tight AP at its own ruler.
 8. **Giri--Kravitz isolation is qualitative.** THM-1289's one-sided `delta` is
    ineffective and does not give whole-window finiteness.
@@ -87,6 +85,8 @@
     THM-2222/2224 remove `455` high-first-depth profiles, THM-2226 removes another disjoint `217`, THM-2229 closes another `212`, THM-2233 closes `16`, and THM-2239's nonnegative signed charge closes `58`. THM-2216/2218 retain labelled meet-tail Gram/Fourier data.
     THM-2143's strict Gibbs test misses equality; THM-2161 proves fixed modulus banks blind. THM-2179 repairs the scalar-covariance dead end only to a `3/41` exit or body relation: height `180` at defect six and `140` at defect at least seven.
     THM-2187/2193 force rank seven; THM-2196/2199 force rank twelve but do not enumerate its finite box. THM-2203 closes scalar transport only in dyadic rank eight. THM-2250/2257 empty final depth-three `(3,4,5)`, leaving exactly `165` first-depth-one rows. THM-2349 now puts all `165` on one delayed marked-current/inverse-correlation frontier, but excludes no row; cross-axis noncancellation, all-unit visibility, and phase transport remain. None proves LRC(14).
+27d. **Refined graph activity is not coarse target landing.** MISTAKE-261: THM-2356 reconstructs each planar graph only up to its own phase, while the THM-2334 target is the cross-graph row sum. Its zero-only kernel has dimension `28,393`; vertical tensors form only the `169`-dimensional refined-zero subspace.
+    THM-2363 is a derived coefficient detector with `D_graph >= E_coarse/169`, not a converse or a lawful physical probe. MISTAKE-260 separately forbids recovering an anchored nonzero-mode sum from an unordered inverse-root count.
 
 ## NC2 / GMC
 

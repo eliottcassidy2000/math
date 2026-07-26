@@ -134,18 +134,19 @@ require(
     "00-navigation/START-HERE.md",
     "LRC(14)", "OPEN", "q <= 25", "THM-2084", "THM-2081--2087",
     "THM-2088--2093", "GMC2Main.gmc2", "singlePolyCrux_holds",
-    "Anchor / Niche / Wildcard",
+    "Anchor / Niche / Wildcard", "MISTAKE-260", "MISTAKE-261", "28,393", "THM-2363",
 )
 require(
     "00-navigation/CURRENT-FRONTIER.md",
     "LRC(14)", "THM-2081", "THM-2082", "THM-2083", "THM-2084",
     "THM-2085", "THM-2086", "THM-2085/2087", "THM-2088", "THM-2089",
-    "THM-2090", "THM-2092", "MISTAKE-240", "DvdK1",
+    "THM-2090", "THM-2092", "MISTAKE-240", "DvdK1", "28,393", "THM-2363",
 )
 require(
     "01-canon/ACTIVE-GUARDRAILS.md",
     "No uniform `q<=25` theorem", "THM-2095", "MISTAKE-240",
     "Support is not an indexed multiset", "CLAIMED",
+    "MISTAKE-260", "MISTAKE-261", "28,393", "THM-2363",
 )
 require(
     "00-navigation/SESSION-LOG.md",
@@ -178,6 +179,16 @@ forbid(
     "THM-2084, THM-2085, and THM-2086 are RESERVED",
 )
 forbid(
+    "00-navigation/CURRENT-FRONTIER.md",
+    "A two-target graph lands",
+    "complete one-sparse no-landing locus",
+)
+forbid(
+    "00-navigation/LRC14-PROOF-MAP.md",
+    "A two-target graph lands",
+    "complete one-sparse no-landing locus",
+)
+forbid(
     "05-knowledge/hypotheses/INDEX.md",
     "THM-2091 / THM-2092 (CLAIMED STUBS",
 )
@@ -191,6 +202,8 @@ expected_recent = {
     2118: "PROVED", 2119: "PROVED", 2120: "PROVED", 2121: "PROVED",
     2122: "PROVED", 2123: "PROVED", 2124: "PROVED", 2125: "PROVED",
     2126: "PROVED", 2127: "PROVED", 2129: "PROVED", 2130: "PROVED",
+    2354: "PROVED", 2356: "PROVED", 2360: "PROVED", 2362: "PROVED",
+    2363: "PROVED", 2364: "PROVED",
 }
 for number, expected in expected_recent.items():
     relative = theorem_path(number)
@@ -216,12 +229,13 @@ for theorem_id, status in status_by_id.items():
         continue
     header = body_by_id[theorem_id].split("---", 2)[1] if "---" in body_by_id[theorem_id] else ""
     dependency_block = re.search(
-        r"^depends_on:\s*\n(?P<rows>(?:\s+-\s*THM-\d+\s*\n?)*)",
+        r"^depends_on:\s*\n"
+        r"(?P<rows>(?:[ \t]+-[^\r\n]*(?:\r?\n|$))*)",
         header,
         re.MULTILINE,
     )
     dependencies = re.findall(
-        r"^\s*-\s*(THM-\d+)\s*$",
+        r"^\s*-\s*(THM-\d+)(?:-[^\s#]+)?(?:\s+#.*)?\s*$",
         dependency_block.group("rows") if dependency_block else "",
         re.MULTILINE,
     )

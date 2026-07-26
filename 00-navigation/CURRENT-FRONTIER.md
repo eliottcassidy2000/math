@@ -175,8 +175,9 @@ THM-2323/2326/2327 mark a `91`-unit deepest edge on positive strict words. THM-2
 THM-2325/2331 populate every nonzero target address termwise; THM-2333 permits zero-only aggregation. THM-2334/2337 retain the full word and a surjective but gauge-dependent first jet.
 THM-2340 gives target ANOVA; THM-2343/2344 identify zero-only landing with a shifted endpoint convolution inverse. Same-axis word content can preserve that boundary.
 THM-2355 reconstructs component phase from singleton energies plus lawful pair twists; whole-target energy retains only autocorrelation.
-THM-2356 gives basis-dependent planar graph chirps. A two-target graph lands; the complete one-sparse no-landing locus is `delta_0(q)B(z)`. Its exclusion needs the derived graph-channel phase functional `D_c`, not separate intensities.
-THM-2358 makes the real endpoint cone exactly sign-definiteness and gives a centered nonnegative-indicator marked-current hostile with both signs. Realize the graph-channel pair service, exclude the vertical tensor canonically, or prove a stronger sign theorem, then retain `91`-unit visibility. The ledger remains `165`.
+THM-2356 gives exact planar graph-chirp tomography, but refined graph activity need not survive the coarse row sum: its coarse zero-only kernel has dimension `28,393`, while `delta_0(q)B(z)` is only the `169`-dimensional refined-zero subspace. THM-2363's derived coefficient-level detector dominates every fixed-word coarse energy by `1/169`; the converse implication is false, and no lawful physical realization is known.
+THM-2354 proves a nonzero deep factor-colour current; audited THM-2364 forces a fully mixed deep/blocker-probe colour, with the literal word collapsed inside its indicator. Neither retains the target/address or terminal endpoint phase.
+THM-2358 gives the exact real sign cone and a centered-indicator hostile. Next glue cross-graph phases/depolarize the jet, or localize canonical root-twist magnetic service at the marked heights through the shared endpoint kernel, then retain `91`-unit visibility. The ledger remains `165`.
 
 ### Independent routes that remain live
 

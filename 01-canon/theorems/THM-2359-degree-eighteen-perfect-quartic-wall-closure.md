@@ -2,7 +2,7 @@
 id: THM-2359
 title: "Degree-eighteen perfect-quartic wall closure"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. On the
   degree-eighteen wall 504D=115B^2, the structured quartic is the
   perfect square 5(27B+7y^2)^2. Every point whose Mordell polynomial
   has square-class degree at most four would have gcd(F,F') of degree
@@ -16,6 +16,7 @@ status: >
 source: codex-2026-07-25-perfect-quartic-wall
 depends_on:
   - THM-2297-degree-eighteen-target-translation-normal-form
+  - THM-2311-degree-eighteen-two-sparse-weighted-ratio-bank
   - THM-2332-degree-eighteen-genus-zero-square-class-and-dessin-trap
 related:
   - THM-2335-degree-eighteen-cyclic-square-class-stratum-empty
@@ -31,7 +32,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2359 -- the perfect-quartic wall has no low square class
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2332 reduces every residual degree-eighteen Keller trajectory to
 
@@ -173,7 +174,7 @@ Sres_2=b_2y^2+b_1y+b_0.                              (15)
 Condition (13) forces every coefficient in (15) to vanish.  Only
 
 ```text
-a_3=a_0=b_2=0                                       (16)
+a_3=a_2=a_0=b_2=0                                   (16)
 ```
 
 will be needed.
@@ -328,8 +329,17 @@ at most four.  Thus the sole point surviving the coarse multiplicity test
 ## 6. Close the complete wall
 
 Let a degree-eighteen Keller trajectory satisfy (4).  The `B=0` chart is
-closed by THM-2297.  On `B!=0`, normalize as in (6).  THM-2332 gives
-(1), hence the necessary multiplicity (13).  Sections 3--4 force the
+closed by THM-2297.  On `B!=0`, normalize as in (6).  The exactly
+two-sparse point `C=W=0` is excluded by THM-2311: at
+`D/B^2=115/504`, the three necessary ratio-bank factors are
+
+```text
+-15360,                   -15/4,                   57726875/32,
+```
+
+all nonzero.  Thus at least one of `C,W` is nonzero, so the support has
+size three or four and THM-2332 applies.  It gives (1), hence the
+necessary multiplicity (13).  Sections 3--4 force the
 unique orbit (26), while Section 5 proves that orbit has squarefree degree
 six, contradicting (1).
 
@@ -352,14 +362,26 @@ python3 04-computation/jc2_degree18_perfect_quartic_wall_thm2359.py
 python3 -O 04-computation/jc2_degree18_perfect_quartic_wall_thm2359.py
 ```
 
-The ordinary transcript is byte-identical to the stored output.  The
-optimized path contains no Python `assert` and executes the same checks,
-but its final replay was deliberately stopped when the shared disk fell
-below the session safety margin; byte comparison under `-O` remains an
-independent-audit item.  The companion checks (3)--(11), the complete
+The ordinary and optimized transcripts are byte-identical to the stored
+output.  The optimized path contains no Python `assert` and executes the
+same checks.  The companion checks the wall-specialized identities
+(5)--(11), the complete
 subresultant profile (14), the `C=0` edge gcd, every chart division in
 (19)--(22), every basis element in (23), both nilpotence reductions in
 (24), and the exact orbit factorization, discriminant, and coprimality
 checks (27)--(31).  Two off-orbit hostile controls have gcd degree zero.
 
-Independent audit is pending. QED.
+## 8. Independent audit
+
+An independent proof-and-computation audit checked the weighted
+normalization, the `B=0` and exactly-two-sparse dispatches, the complete
+subresultant specialization, every ratio-chart division, the nilpotent
+Groebner conclusion, and the residual factorization over
+`Q(sqrt(-21))`.  A separate pure-rational implementation reconfirmed
+`deg gcd(F,F')=5`, the squarefreeness and coprimality of `R_6`, its value
+at the repeated root, and the displayed discriminant.  Exhaustive gcd
+scans over sixteen finite fields found exactly the predicted exceptional
+orbit and no omitted edge component.  The script and stored-output hashes
+also match the metadata.
+
+QED.

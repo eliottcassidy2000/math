@@ -480,10 +480,11 @@ the all-`91`-unit and terminal-phase sidecars.
 There is also an energy-side version of the same debt. THM-2355 shows
 that complex pair-twist transports plus singleton magnitudes reconstruct
 relative phases, whereas individual target-twist energies retain only an
-autocorrelation. The THM-2356 candidate proposes a planar target--jet
-chirp as a global replacement. Either service would preserve phase
-information which the complex holonomy (11) needs; independent linear
-twist magnitudes alone do not.
+autocorrelation. THM-2356 proves refined planar target--jet graph
+tomography, but leaves one independent phase per graph and does not
+control the coarse row sum. A lawful cross-graph pair service could
+supply phase information which the complex holonomy (11) needs;
+independent linear twist magnitudes alone do not.
 
 ## 7. Exact companion
 

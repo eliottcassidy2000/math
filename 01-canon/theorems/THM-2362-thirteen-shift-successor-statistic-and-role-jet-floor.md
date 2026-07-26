@@ -3,7 +3,7 @@ id: THM-2362
 title: "Thirteen-shift successor statistic and role-jet floor"
 status: >
   PROVED + VERIFIED-EXACT + CORRECTED AFTER INDEPENDENT HOSTILE AUDIT.
-  For the centered danger d=1_(||x||<1/14), target-coordinate shifts obey
+  centered danger d=1_(||x||<1/14), target-coordinate shifts obey
   sum_s d(y+s/13)=2-d(13y), not 2-d(y). Thus every nonnegative weight
   supported in d has a nontrivial shifted-danger Fourier mode with real
   part at least 11rho/156 and nonzero-mode energy at least
@@ -24,6 +24,7 @@ depends_on:
 related:
   - THM-2232-same-core-signed-eigen-markov-dual-exclusion
   - THM-2349-first-depth-one-delayed-shallow-restart
+  - THM-2356-finite-field-chirp-gram-tomography-and-bockstein-pairing
   - THM-2364-anchored-corner-forces-mixed-deep-blocker-colour
 script: 04-computation/thirteen_shift_successor_role_jet_thm2362.py
 output: 05-knowledge/results/thirteen_shift_successor_role_jet_thm2362.out
