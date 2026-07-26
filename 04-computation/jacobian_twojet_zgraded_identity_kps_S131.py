@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 r"""
 jacobian_twojet_zgraded_identity_kps_S131.py
-(kind-pasteur-2026-07-26-S131; companion to THM-2445)
+(kind-pasteur-2026-07-26-S131; companion to THM-2446)
 
 Exact companion for the z-graded Jacobian decomposition of 2-jet
 (z-quadratic) polynomial maps

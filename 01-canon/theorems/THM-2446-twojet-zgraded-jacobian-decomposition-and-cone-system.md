@@ -1,5 +1,5 @@
 ---
-id: THM-2445
+id: THM-2446
 title: "The 2-jet z-graded Jacobian decomposition and its cone system"
 status: >
   PROVED (the six-bracket z-graded decomposition of det J for
@@ -24,12 +24,12 @@ related:
   - THM-1340-engine-trichotomy-zaffine-keller
 script: 04-computation/jacobian_twojet_zgraded_identity_kps_S131.py
 output: 05-knowledge/results/jacobian_twojet_zgraded_identity_kps_S131.out
-script_sha256: 46ac3a640284c04150c594389affe73f3e4c2d3e8c41b2c78283d2dd2225e247
+script_sha256: 38122318f4086f4c14b570c65189bd1aca0e04179cad7fe6cabb698728cc45ae
 output_sha256: 4a439f183b9eb2b717080f64057528eba7fb505457d02585f7cb20b8596944b3
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2445 -- the 2-jet Jacobian is six brackets; its cone is Euler's
+# THM-2446 -- the 2-jet Jacobian is six brackets; its cone is Euler's
 
 **PROVED + VERIFIED-EXACT** as itemized in the status.
 
