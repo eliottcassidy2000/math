@@ -2,7 +2,7 @@
 id: THM-2401
 title: "Common-filter endpoint or first-death certificate"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. Two
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Two
   disjoint rational Boolean root packets on F_13, subjected to one
   common Boolean filtration, satisfy an exact alternative. Positive
   final two-sided mass gives a nonzero joint coefficient at all twelve
@@ -22,10 +22,10 @@ source: codex-2026-07-26-common-filter-first-death
 depends_on:
   - THM-2398-prime-cyclic-rational-restoration-dichotomy
   - THM-2323-primitive-fixed-colour-cross-correlation-and-same-gauge-word-alignment
+  - THM-2379-anchored-guard-unit-deletion-factor-repair-current
 related:
   - THM-2305-canonical-blocker-word-handoff-hypergraph
   - THM-2370-deletion-martingale-drift-conservation-and-sharp-clone-hostile
-  - THM-2379-anchored-guard-unit-deletion-factor-repair-current
   - THM-2380-cross-word-charged-target-correlation-and-pair-twist-gate
   - THM-2397-clean-root-same-parent-charged-role-partition
 script: 04-computation/lrc14_common_filter_first_death_thm2401.py
@@ -37,7 +37,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2401 -- common-filter endpoint or first-death certificate
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2398 reduces terminal survival of a clean charged pair to one
 geometric service:
@@ -560,7 +560,8 @@ Equations (47)--(48) are coefficient-derived repair currents.  If a
 literal Boolean opposite-root cell is required instead of the collapsed
 weight, use (34), which can cost an additional factor two.
 
-There is a separate blocker-word route.  Suppose the failed filter is
+There is a separate blocker-word route under the fixed
+singleton/two-root bank hypothesis of (30)--(34).  Suppose the failed filter is
 the safe indicator of a named target blocker `b`, and the certificate
 already lies in THM-2305's prescribed-expiration gauge with its source
 owner and clock fixed.  To retain physical set mass rather than the
@@ -746,3 +747,12 @@ Both transcripts must byte-match, after LF normalization,
 
 All truth-bearing checks raise explicitly, so optimized mode executes
 the same audit.
+
+An independent hostile audit reconstructed the prime-cyclic
+all-colour step, the THM-2323 landing extension, both first-death
+decompositions, the sharp `1/4` and `1/2028` examples, the weighted
+THM-2379 application, and the physical blocker-word cost.  It accepted
+the mathematics and required that THM-2379 be promoted from a related
+item to an explicit dependency; that dependency repair is incorporated
+above.  The immutable LF hashes of the accepted companion are recorded
+in the frontmatter.  QED.
