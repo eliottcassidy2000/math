@@ -157,11 +157,11 @@ bad transverse deck D_N(m)<1/14
 Discharge each cell by a THM-2057 clock phase, THM-2059/HYP-2108 endpoint packet, THM-2054 nonaliasing plateau, a relation outside the rank-eleven code, or THM-2047 owner-Euler survival. HYP-8871 is the open finite-state/Farey program; THM-2058 makes its terminals finite, not empty.
 THM-2168--2397 leave `165` rows while supplying relation/edge/toothpick/colour carriers (THM-2356 kernel `28,393`; THM-2363/THM-2368). THM-2405/2415 reduce the final lane to `M<=2`; THM-2417 excludes `M=2`, and THM-2426's transverse root proof empties it.
 Hence `nu_7(c_3)>M => nu_7(H)=M`. THM-2430 classifies the exact common-`91` tilings; THM-2431 excludes every `t=5,b=0` type, and THM-2432 removes `(2,0,0,2)`. Independently audited THM-2435 supplies the typed parent floor `(4+k)/7` and essential mass `(1+k)/7`; one fixed blocker label has an equivariant marked section of mass at least `3/1274`.
-Candidate THM-2436 classifies the complete punctured one-/two-blocker stalk and uses fixed-spectrum physical repeated-pair banks to empty all three remaining types. Thus the whole deep-`c_3` branch is empty, while `c_3<=M` retains an isolated noncirculant top graft. No scalar row is removed.
+Hostile-audited THM-2436 classifies the complete punctured one-/two-blocker stalk and uses fixed-spectrum physical repeated-pair banks to empty all three remaining types. Thus the whole deep-`c_3` branch is empty, while `c_3<=M` retains an isolated noncirculant top graft. No scalar row is removed.
 THM-2418--2421 remain reusable carry, affine-shell, reference, and ancestry-event sidecars, not live continuations without a transplant. In particular THM-2420 proves same-shell reference amplitude sufficient and a complete zero-reference bank insufficient.
 THM-2436 proves the vertical defect alternative is zero because every blocker source enters some guard pair; every nonflat stalk has a genuine mixed unit quotient character, and one fixed mode is nonzero on parent mass at least `1/252`. Its exact atlas has `2,629` one-source and `38,750` distinct-two-source assignments; four one-source arrows force both `chi_7` signs.
 Every cover repeats an unsigned ordinary step. Fixed-spectrum sharp cell caps `75`, `57`, and `67` contradict the three typed parent floors `78`, `65`, and `78` over `91`.
-Next: independently audit THM-2436's fixed-spectrum physical rounding transfer, then prove owner-conditioned no-cancellation for the sole live `c_3<=M` noncirculant top graft. Ledger: `165`.
+Next: prove owner-conditioned no-cancellation for the sole live `c_3<=M` noncirculant top graft, retaining the labelled valuation-zero speed, blocker-owned septimal fibre, and signed endpoint evolution. Ledger: `165`.
 
 ### Independent routes that remain live
 

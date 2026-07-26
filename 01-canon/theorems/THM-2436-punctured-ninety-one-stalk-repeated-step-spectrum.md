@@ -2,8 +2,8 @@
 id: THM-2436
 title: "Punctured ninety-one-stalk mixed mode and repeated-step closure"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE
-  AUDIT PENDING. Normalize the common quotient stalk by the guard
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Normalize
+  the common quotient stalk by the guard
   G={0,...,25}. In target row h its two guard sites are {h,h-1}.
   For one or two exact-depth top blockers, every hole of the
   guard-plus-five-ordinary multiplicity lies on a blocker source
@@ -42,8 +42,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2436 -- a punctured stalk cannot stay vertical
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE
-AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2435 leaves a very specific stopping boundary. Its signed
 `13 x 7` row defect either carries a unit character modulo `91`, or
@@ -738,6 +737,46 @@ byte-for-byte. The companion:
   `chi_7` sign law; and
 - raises on every count, orbit, bank, or structural drift.
 
-Optimized and unoptimized transcripts are required to agree. An
-independent hostile audit of the proof-to-parent rounding transfer is
-still pending. QED conditional on that audit.
+Optimized and unoptimized transcripts are required to agree.
+
+The independent hostile audit rebuilt the companion separately at
+`-O0` and `-O3`; both transcripts byte-match the stored output and have
+SHA-256
+
+```text
+c2659364e9d312a670f2606cde8eeb8f9ef5d82c062cfb44837970047f717f8b.
+```
+
+It also checked the two places where a finite atlas can silently lose
+the physical quantifiers.
+
+First, the cover recursion is complete without assuming disjointness:
+at every depth it branches through every AP containing a missing pivot;
+the row and cardinality tests are necessary conditions only; and at
+depth four it includes every AP containing the whole remaining set
+(or every AP when nothing remains). Sorting and set insertion remove
+order but not a support multiset. The later zero repeated-support check
+then proves that no physically relevant completion used a duplicate
+support. The separately implemented flat Algorithm-X search, exact
+source-superset reconstruction, and reflection transport are hostile
+controls on this recursion rather than restatements of it.
+
+Second, the repeated pair is selected before the parent phase varies.
+The five unsigned normalized steps are fixed physical speed-residue
+data. Once their fixed spectrum has a repeated class, choose two fixed
+physical labels in that class. The centre bank is then formed by
+unioning over every source gauge, every admissible cover, both
+directions, and every same-step support pair. It is therefore an
+overestimate for that fixed labelled pair even when the support
+assignment varies with `Y`. The common translation `kappa(Y)` cancels,
+while reversal is already in the directed bank. The resulting signed
+speed relation has fixed nonzero integer lift `n`; multiplication by
+`n` preserves Haar measure. Conditioning on the entire fixed step
+spectrum in the two exceptional step-one arguments is consequently
+lawful, and their `57/91` and `67/91` caps apply to the whole parent,
+not to a parentwise-selected subcell.
+
+Finally, the audit traced the residual list through hostile-audited
+THM-2426, THM-2427, THM-2431, and THM-2432 and the parent floors through
+hostile-audited THM-2435. Hence the three shapes in (2) exhaust the
+deep-`c_3` branch. QED.
