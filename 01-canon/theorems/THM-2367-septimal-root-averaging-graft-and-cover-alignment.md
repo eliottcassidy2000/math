@@ -14,10 +14,15 @@ status: >
   Conversely, the scalar cover supplies additive order-seven orbit
   rigidity. In a mixed guard/unit septimal layer, some blocker has
   nu_7(c_j)<=max(nu_7(H),nu_7(q_i)); if only c_3 is dominant, a sharp
-  seven-bin inequality routes a low blocker into c_1 or c_2. This is
-  additive Phi_7 rigidity, not the multiplicative chi_7/Fano structure
-  of THM-1156. It does not promote isolated drift through the full owner,
-  land a target, exclude a scalar row, or prove LRC(14).
+  seven-bin inequality routes a low blocker into c_1 or c_2. In the
+  hard W=k=1 lane the six lower factors have a mean-zero signed defect
+  supported on only three absorber combs; its endpoint current gives an
+  exact handoff congruence and a global event-capacity obstruction. This
+  excludes the displayed local N=49 chamber from extending to a scalar
+  cover. The mechanism is additive Phi_7 rigidity, not the
+  multiplicative chi_7/Fano structure of THM-1156. It does not promote
+  isolated drift through the full owner, land a target, exclude a
+  scalar row, or prove LRC(14).
 source: codex-2026-07-25-septimal-root-averaging
 depends_on:
   - THM-2296-prescribed-expiration-return-or-bounded-ancestry-resonance
@@ -30,8 +35,8 @@ related:
   - THM-2364-anchored-corner-forces-mixed-deep-blocker-colour
 script: 04-computation/lrc14_septimal_root_graft_cover_thm2367.py
 output: 05-knowledge/results/lrc14_septimal_root_graft_cover_thm2367.out
-script_sha256: 35d45bf1ebec677bbd1f9fdcca85dd0071118ec16b43f21682c423d02b2d05a9
-output_sha256: b5308a26eea333f31bd7024d9f312be361249c7de715658805e6f98fe76f521e
+script_sha256: 269e87cd870b59c00a3889212c4520d4b568b47463c079029a7cce0b1501a58c
+output_sha256: aa13c7bd1a4c25d6d2858c6639113129752fdc44f58092514bceee7c41ddc85b
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -536,29 +541,44 @@ If `W>k`, every `m_r` is positive and `W=sum_r m_r>=7`. Therefore
 W<=k        or        W>=7.                         (35)
 ```
 
-In the live first-depth-one residual, `7` does not divide `H` and
-exactly one, two, or three of the `q_i` are seven-divisible. Thus
-`M>=1`; at most three unit labels and at most `k<=2` low blockers can
-lie in the top layer, so `W<=5<7`. Equations (33)--(35) give
+There is a useful profile-free classification in the subcase
 
 ```text
-k>=1,
-
-W<=k.                                               (36)
+M>0,                         nu_7(H)<M.             (36)
 ```
 
-More precisely:
+Let
 
-- if `k=1`, exactly one `q_i` attains `M`, and the unique low blocker
-  has valuation strictly below `M`;
-- if `k=2`, at most two labels among the top `q_i,c_1,c_2` attain `M`.
+```text
+t=#{i:nu_7(q_i)=M},
+
+b=#{j in {1,2}:nu_7(c_j)=M}.
+```
+
+Then `1<=t<=5`, `0<=b<=k`, and `W=t+b`. Equations (33)--(35) give the
+complete list:
+
+- `k=0` is impossible;
+- if `k=1`, then `(t,b)=(1,0)`;
+- if `k=2`, then
+
+  ```text
+  (t,b) in {(1,0),(1,1),(2,0),(5,2)}.              (37)
+  ```
+
+The last alternative is the exceptional saturated case `W=7`; the
+other alternatives have `W<=k`. In particular, the `k=1` hard lane has
+exactly one top unit and its unique low blocker lies strictly below
+`M`. This conclusion no longer imports an unproved count of
+seven-divisible `q_i` from a differently labelled branch.
 
 The slack from low blockers is exactly why the perfect-tiling conclusion
 of Section 5 cannot simply be reused when only `c_3` is dominant.
 
 ### The hard role lane is locally sharp
 
-Positive owner mass on one orbit does not strengthen (36). Take
+Positive owner mass on one orbit does not strengthen the `k=1`
+conclusion. Take
 
 ```text
 N=49,                  x_0=1/686,
@@ -567,7 +587,7 @@ H=1,
 
 (q_1,q_2,q_3,q_4,q_5)=(7,148,171,172,243),
 
-(c_1,c_2,c_3)=(195,16562,215306).                  (37)
+(c_1,c_2,c_3)=(195,16562,215306).                  (38)
 ```
 
 The blocker thirteen-adic profile is `(1,2,3)`. Septimally, `q_1` has
@@ -598,7 +618,7 @@ D_(q_3):{18,20,22,24,26,28,30},
 
 D_(q_4):{19,21,23,25,27,29,31},
 
-D_(q_5):{7,8,9,10,32,33,34}.                      (38)
+D_(q_5):{7,8,9,10,32,33,34}.                      (39)
 ```
 
 The guard, `c_1`, and the four lower-unit masks are pairwise disjoint
@@ -609,11 +629,11 @@ The six sites
 {11,12,13,15,16,17}
 ```
 
-are genuine exclusive `c_1`-owner sites. Every pattern in (38) persists
+are genuine exclusive `c_1`-owner sites. Every pattern in (39) persists
 for
 
 ```text
-|x-x_0|<1/3014284,                                 (39)
+|x-x_0|<1/3014284,                                 (40)
 ```
 
 so this is a positive-measure chamber, not an endpoint coincidence.
@@ -622,15 +642,157 @@ one-orbit capacity and positive exclusive-owner conditioning cannot
 remove the strict-row source-role equality lane; cross-orbit or chamber
 coherence is genuinely needed.
 
-## 7. What is now missing
+## 7. The signed event current is the cross-chamber invariant
 
-Sections 1, 5, and 6 separate arithmetic availability from analytic
+The `k=W=1` lane has more global structure than one orbit sees. Retain
+(36), call the unique top unit `q_*`, call the unique low blocker `c_*`,
+and call the other two blockers `a,b`. Put
+
+```text
+A=D_(q_*) union D_a union D_b.
+```
+
+The seven-bin count used above applies on every orbit on which `a,b`
+are safe. In each of the six bins outside `D_(q_*)`, the remaining
+capacity equals the number of sites. Covering therefore forces an exact
+one-fold partition there. Consequently the lower multiplicity
+
+```text
+L(x)
+ =1_(E_H)(x)
+  +sum_(q_i!=q_*)1_(D_(q_i))(x)
+  +1_(D_(c_*))(x)
+```
+
+satisfies
+
+```text
+F=L-1=0                    almost everywhere on A^c. (41)
+```
+
+Thus the nonlinear nine-factor cover has become a nonzero-capable,
+mean-zero integer step function on six lower frequency lattices whose
+physical support lies in three absorber combs.
+
+There is a convention-free endpoint form. Index the six lower factors
+by `(v_i,a_i)`, where `(v_H,a_H)=(H,2)` and the five ordinary danger
+factors have `a_i=1`. The distributional derivative of `F` is
+
+```text
+mu_L
+ =sum_i sum_(n=0)^(v_i-1)
+   (delta_((n-a_i/14)/v_i)-delta_((n+a_i/14)/v_i)).
+                                                               (42)
+```
+
+Equation (41) says precisely
+
+```text
+mu_L restricted to T minus closure(A) is zero.       (43)
+```
+
+This repairs a tempting but false stronger claim: an individual lower
+wall need not lie in an absorber, because an exit wall may hand off to
+an entry wall at the same null point. What is forced is signed
+cancellation of the entire event cluster.
+
+The handoff arithmetic is exact. An exit of lower factor `i` coincides
+with an entry of lower factor `j` if and only if
+
+```text
+14 gcd(v_i,v_j) divides a_i v_j+a_j v_i.             (44)
+```
+
+When (44) holds there are exactly `gcd(v_i,v_j)` such coincidences.
+For two ordinary dangers this is
+
+```text
+14 gcd(v_i,v_j) divides v_i+v_j;
+```
+
+for a guard/danger pair it is the corresponding `H+2v` congruence.
+These opposing-wall incidences are an intrinsic directed event
+relation; no cosmetic tournament orientation is being imposed.
+
+This gives a cheap global obstruction. For ordered `i!=j`, put
+
+```text
+h_(ij)
+ =gcd(v_i,v_j) if (44) holds,
+ =0             otherwise.
+```
+
+For `w in {q_*,a,b}`, put
+
+```text
+g_(iw)=gcd(v_i,w),              C_(iw)=v_i/g_(iw).
+```
+
+An entry branch of `v_i` samples a closed absorber arc of length `1/7`
+on a `C_(iw)`-grid, with multiplicity `g_(iw)`. It therefore contributes
+at most
+
+```text
+g_(iw)(floor(C_(iw)/7)+1)
+```
+
+absorbed entry atoms. Every remaining entry belongs to a balanced event
+cluster and can be paired with an exit. The union bound yields the
+necessary event-capacity inequality
+
+```text
+sum_i v_i
+ <=sum_(i!=j)h_(ij)
+   +sum_i sum_(w in {q_*,a,b})
+      g_(iw)(floor(C_(iw)/7)+1).                    (45)
+```
+
+For the local chamber (38), the six lower speeds are
+
+```text
+(1,148,171,172,243,195).
+```
+
+Their total entry mass is `930`; no ordered handoff congruence (44)
+holds; and the absorber term for `(7,16562,215306)` is only `432`.
+Thus (45) fails:
+
+```text
+930>432.
+```
+
+The positive chamber in Section 6 cannot extend to a global scalar
+cover. This is a genuine cross-chamber gain over the one-orbit count.
+
+The event screen is not yet a row exclusion. For the arithmetically
+lawful control
+
+```text
+H=1,
+
+(q_*,q_2,q_3,q_4,q_5)=(7,2,3,4,5),
+
+c_*=13,
+
+a=98*13^2*60,                   b=13a,              (46)
+```
+
+the thirteen-adic blocker profile is `(1,2,3)`, the same hard septimal
+roles hold, and (45) has left side `28`, no handoffs, and absorber
+capacity `63`. Nevertheless it is not a scalar cover: `x=319/2000`
+lies in `C_H` and in none of the eight strict danger combs. Hence
+event capacity is necessary, not sufficient; the next invariant must
+see values between the event atoms or their signed Fourier phases.
+
+## 8. What is now missing
+
+Sections 1, 5--7 separate arithmetic availability from analytic
 transport:
 
 ```text
 mixed U-layer + scalar cover
   -> some blocker c has nu_7(c)<=M
-  -> some q in U gives a locally drifting lawful graft for c.        (40)
+  -> some q in U gives a locally drifting lawful graft for c.        (47)
 ```
 
 THM-2309 may use any of the six `U` labels as a graft; Section 1 includes
@@ -668,7 +830,7 @@ distinct possible refinement once a genuine incidence map is supplied.
 No scalar profile is excluded. The ledger remains `165`, and LRC(14)
 remains open.
 
-## 8. Exact companion
+## 9. Exact companion
 
 The dependency-free exact companion:
 
@@ -682,7 +844,10 @@ The dependency-free exact companion:
 - checks the peeling ratios, constants, and every one of the `165`
   valuation profiles in the full-owner hostile;
 - exhausts the top-layer weight and only-`c_3` seven-bin alternatives;
-- reproduces the `49` masks and positive chamber in (37)--(39).
+- reproduces the `49` masks and positive chamber in (38)--(40);
+- verifies the signed event-current handoff and capacity arithmetic,
+  including the `930>432` chamber exclusion and the lawful `28<=63`
+  noncover control.
 
 Run
 

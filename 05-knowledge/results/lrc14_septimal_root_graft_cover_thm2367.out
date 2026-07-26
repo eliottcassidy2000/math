@@ -14,9 +14,12 @@ full_hostile_prefactor=468/12005
 full_hostile_owner_mass=2808/84035
 full_hostile_uncovered_mass=16848/84035
 top_weight_controls=11
-c3_role_permitted_patterns=4
+c3_role_permitted_patterns=5
 hard_role_exclusive_owner_sites=6
 hard_role_chamber_radius=1/3014284
+hard_event_screen=930>432
+shield_event_screen=28<=63
+shield_noncover_witness=319/2000
 scalar_rows_excluded=0
 lrc14_status=OPEN
 all_checks=PASS

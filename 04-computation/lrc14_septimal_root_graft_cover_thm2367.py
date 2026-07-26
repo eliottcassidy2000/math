@@ -9,6 +9,7 @@ thirteen-window converse, two independent circulant hostiles, the full
 from fractions import Fraction
 from hashlib import sha256
 from itertools import product
+from math import gcd
 
 
 P = 13
@@ -377,7 +378,7 @@ require(top_weight_controls == 11, "wrong top-weight control count")
 
 c3_role_patterns: list[tuple[int, int, int]] = []
 for low_blockers in range(3):
-    for top_units in range(1, 4):
+    for top_units in range(1, 6):
         for top_low_blockers in range(low_blockers + 1):
             weight = top_units + top_low_blockers
             cover_permitted = weight <= low_blockers or weight >= 7
@@ -387,7 +388,13 @@ for low_blockers in range(3):
                 )
 require(
     c3_role_patterns
-    == [(1, 1, 0), (2, 1, 0), (2, 1, 1), (2, 2, 0)],
+    == [
+        (1, 1, 0),
+        (2, 1, 0),
+        (2, 1, 1),
+        (2, 2, 0),
+        (2, 5, 2),
+    ],
     "only-c3 role alternatives changed",
 )
 
@@ -495,6 +502,134 @@ require(
     "hard role thirteen-profile changed",
 )
 
+
+# ---------------------------------------------------------------------------
+# Signed lower-event current and cross-chamber capacity screen.
+# ---------------------------------------------------------------------------
+
+hard_lower_roles = (
+    ("H", hard_speeds["H"], 2),
+    ("q2", hard_speeds["q2"], 1),
+    ("q3", hard_speeds["q3"], 1),
+    ("q4", hard_speeds["q4"], 1),
+    ("q5", hard_speeds["q5"], 1),
+    ("c1", hard_speeds["c1"], 1),
+)
+hard_absorbers = (
+    hard_speeds["q1"],
+    hard_speeds["c2"],
+    hard_speeds["c3"],
+)
+
+
+def ordered_handoff_mass(
+    lower_roles: tuple[tuple[str, int, int], ...],
+) -> int:
+    total = 0
+    for name_i, speed_i, width_i in lower_roles:
+        for name_j, speed_j, width_j in lower_roles:
+            if name_i == name_j:
+                continue
+            common = gcd(speed_i, speed_j)
+            if (
+                width_i * speed_j + width_j * speed_i
+            ) % (14 * common) == 0:
+                total += common
+    return total
+
+
+def absorber_entry_capacity(
+    lower_roles: tuple[tuple[str, int, int], ...],
+    absorbers: tuple[int, ...],
+) -> int:
+    total = 0
+    for _, speed, _ in lower_roles:
+        for absorber in absorbers:
+            common = gcd(speed, absorber)
+            reduced = speed // common
+            total += common * (reduced // 7 + 1)
+    return total
+
+
+hard_event_mass = sum(speed for _, speed, _ in hard_lower_roles)
+hard_handoff_mass = ordered_handoff_mass(hard_lower_roles)
+hard_absorber_capacity = absorber_entry_capacity(
+    hard_lower_roles,
+    hard_absorbers,
+)
+require(hard_event_mass == 930, "hard lower event mass changed")
+require(hard_handoff_mass == 0, "hard chamber gained a wall handoff")
+require(hard_absorber_capacity == 432, "hard absorber capacity changed")
+require(
+    hard_event_mass
+    > hard_handoff_mass + hard_absorber_capacity,
+    "hard chamber no longer fails the global event screen",
+)
+
+shield_c_two = 98 * 13 ** 2 * 60
+shield_c_three = 13 * shield_c_two
+shield_lower_roles = (
+    ("H", 1, 2),
+    ("q2", 2, 1),
+    ("q3", 3, 1),
+    ("q4", 4, 1),
+    ("q5", 5, 1),
+    ("c1", 13, 1),
+)
+shield_absorbers = (7, shield_c_two, shield_c_three)
+shield_event_mass = sum(speed for _, speed, _ in shield_lower_roles)
+shield_handoff_mass = ordered_handoff_mass(shield_lower_roles)
+shield_absorber_capacity = absorber_entry_capacity(
+    shield_lower_roles,
+    shield_absorbers,
+)
+require(shield_event_mass == 28, "shield event mass changed")
+require(shield_handoff_mass == 0, "shield control gained a handoff")
+require(shield_absorber_capacity == 63, "shield capacity changed")
+require(
+    shield_event_mass
+    <= shield_handoff_mass + shield_absorber_capacity,
+    "lawful shield control unexpectedly fails event capacity",
+)
+require(
+    (
+        valuation(13, 13),
+        valuation(shield_c_two, 13),
+        valuation(shield_c_three, 13),
+    )
+    == (1, 2, 3),
+    "shield control thirteen-profile changed",
+)
+require(
+    valuation(7, 7) == 1
+    and valuation(13, 7) == 0
+    and valuation(shield_c_two, 7) > 1
+    and valuation(shield_c_three, 7) > 1,
+    "shield control septimal roles changed",
+)
+
+shield_witness = Fraction(319, 2000)
+require(
+    circle_norm(shield_witness) > Fraction(1, 7),
+    "shield noncover witness left the guard complement",
+)
+require(
+    all(
+        not danger(speed * shield_witness)
+        for speed in (
+            7,
+            2,
+            3,
+            4,
+            5,
+            13,
+            shield_c_two,
+            shield_c_three,
+        )
+    ),
+    "shield control became a cover at the exact witness",
+)
+
 print("theorem=THM-2367")
 print("status=PROVED+VERIFIED-EXACT-CANDIDATE-UNDER-INDEPENDENT-AUDIT")
 print(f"root_average_cases={root_average_cases}")
@@ -514,6 +649,15 @@ print(f"top_weight_controls={top_weight_controls}")
 print(f"c3_role_permitted_patterns={len(c3_role_patterns)}")
 print(f"hard_role_exclusive_owner_sites={len(exclusive_c1)}")
 print(f"hard_role_chamber_radius={boundary_radius}")
+print(
+    "hard_event_screen="
+    f"{hard_event_mass}>{hard_handoff_mass + hard_absorber_capacity}"
+)
+print(
+    "shield_event_screen="
+    f"{shield_event_mass}<={shield_handoff_mass + shield_absorber_capacity}"
+)
+print(f"shield_noncover_witness={shield_witness}")
 print("scalar_rows_excluded=0")
 print("lrc14_status=OPEN")
 print("all_checks=PASS")
