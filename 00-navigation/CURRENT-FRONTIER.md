@@ -1,6 +1,6 @@
 # Current Mathematical Frontier
 
-**Rolling state — refreshed 2026-07-25.** This supersedes dated snapshots; linked theorems are proof sources, while this file records composition and residuals.
+**Rolling state — refreshed 2026-07-26.** This supersedes dated snapshots; linked theorems are proof sources, while this file records composition and residuals.
 Status: **PROVED** in-repo proof; **CITED** scoped import; **FINITE-EXACT** exhaustive stated universe; **VERIFIED** reproducible evidence; **CONDITIONAL**, **OPEN**, **REFUTED**, and **SUPERSEDED** are literal.
 
 ## LRC(14)
@@ -167,12 +167,12 @@ Discharge every resulting labelled cell by at least one of:
 [THM-2058](../01-canon/theorems/THM-2058-primitive-phase-packets-and-deck-fan-intervals.md) makes each bad-denominator/owner terminal finite, not proved empty.
 THM-2168--2257 leave `165` rows. THM-2295--2377 give relation/edge/bank/toothpick carriers (THM-2356 kernel `28,393`; THM-2363/THM-2368); THM-2378/2381/2382/2385 isolate `k=2,(t,b)=(1,0)`.
 THM-2388--2397 reduce no-clean to `M=1` (`delta>=66/4459` there, `>=1/26754` universally); each literal role retains `12` target colours at large `13^k` clocks with typed deletion support.
-THM-2405 leaves seven no-clean `M=1` ratios; THM-2415 caps every packet at `M<=2`, and THM-2417's fourteen strict duals on the complete `343`-orbit relaxation exclude `M=2`. THM-2420 composes the seven- and thirteen-root sections, excludes the remaining `M=1` (and independently re-proves `M=2`), and empties the entire primitive `k=2,(t,b)=(1,0)` final septimal lane, including positive-clean packets.
-Together with THM-2378/2381/2382/2385, this proves `nu_7(c_3)>M => nu_7(H)=M`. THM-2421 then reduces that deep-`c_3`/top-guard side to three types at `M=0` and four primitive types at `M>0`; if instead `c_3` is at depth at most `M`, the deepest target has an isolated noncirculant top graft. Full owner-mask cancellation remains open, so no one of the `165` scalar rows is removed.
+THM-2405 leaves seven no-clean `M=1` ratios; THM-2415 caps every packet at `M<=2`, and THM-2417's fourteen strict duals on the complete `343`-orbit relaxation exclude `M=2`. THM-2426 composes the seven- and thirteen-root sections, excludes the remaining `M=1` (and independently re-proves `M=2`), and empties the entire primitive `k=2,(t,b)=(1,0)` final septimal lane, including positive-clean packets.
+Together with THM-2378/2381/2382/2385, this proves `nu_7(c_3)>M => nu_7(H)=M`. THM-2427 then reduces that deep-`c_3`/top-guard side to three types at `M=0` and four primitive types at `M>0`; if instead `c_3` is at depth at most `M`, the deepest target has an isolated noncirculant top graft. Full owner-mask cancellation remains open, so no one of the `165` scalar rows is removed.
 The canonical LRC instantiations in THM-2392/2397/2403/2407/2409/2410/2416/2418/2419 descend from the now-empty final lane. Their target, colour, Gram, carry, and affine-sideband mechanisms remain reusable abstract sidecars, but they are not a live counterexample continuation without a transplant theorem.
-In particular, THM-2419 identifies a same-shell residue-zero reference, while THM-2418's fixed even BV-two rank-one hostile shows why source--terminal correlation is still needed.
-The next direct obligations are owner-conditioned no-cancellation on the `c_3<=M` side and elimination of THM-2421's seven regime-typed guard-top shapes. Ledger: `165`.
-Separately, THM-2421 is an ancestry-event proof candidate under independent audit, while THM-2420 is a same-shell reference proof candidate awaiting hostile audit; neither yet supplies the required physical global packet.
+In particular, THM-2419 identifies a same-shell residue-zero reference, while THM-2418's fixed even BV-two rank-one hostile shows why source--terminal correlation is still needed; candidate THM-2420/2421 sharpen same-shell reference and ancestry-event tests but still supply no physical global packet.
+The next direct obligations are owner-conditioned no-cancellation on the `c_3<=M` side and elimination of THM-2427's seven regime-typed guard-top shapes. Ledger: `165`.
+Pure thirteen-root geometry cannot eliminate the six `t=5` shapes: THM-2427's exact common-phase example `H=1`, `q=(2,3,5,11,19)`, `y=1/2` partitions all thirteen roots. The next object must jointly retain the septimal top bin, thirteen-root, owner/blocker state, and labelled valuation-zero speed.
 
 ### Independent routes that remain live
 

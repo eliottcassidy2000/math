@@ -266,7 +266,7 @@ import TournamentH7.CombPatterns
 import TournamentH7.LRC14Assembly
 import TournamentH7.LRC14FuelCheckerBridge  -- certificate-page/ladder-pack coverage -> hpartA; repaired endgame corollary; no sorry
 import TournamentH7.LRCCommensuration
-import TournamentH7.LRCFinalLaneRootCospan  -- codex / THM-2420 kernel: unit-affine ZMod 13 roots, sharp 12-intersect-7 >= 6 cospan count, exact mass arithmetic, and nonzero-dilation Haar pullback. Does not formalize comb/fibre identification or scalar-cover exclusion
+import TournamentH7.LRCFinalLaneRootCospan  -- codex / THM-2426 kernel: unit-affine ZMod 13 roots, sharp 12-intersect-7 >= 6 cospan count, exact mass arithmetic, and nonzero-dilation Haar pullback. Does not formalize comb/fibre identification or scalar-cover exclusion
 import TournamentH7.RatIntervalsWrap
 import TournamentH7.LRCWitnessWindow
 import TournamentH7.LRCLadderPerLevel

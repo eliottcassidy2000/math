@@ -1,5 +1,5 @@
 ---
-id: THM-2420
+id: THM-2426
 title: "Compositional thirteen-root exclusion of the primitive final septimal lane"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Under
@@ -29,15 +29,15 @@ related:
   - THM-2390-septimal-layer-kraft-peeling-and-heavy-word-reduction
   - THM-2405-two-level-septimal-sheet-independence-and-middle-depth-two-cage-elimination
   - THM-2414-thirteen-skew-septimal-word-transport-and-local-stopping-atlas
-script: 04-computation/lrc14_final_lane_compositional_root_exclusion_thm2420.py
-output: 05-knowledge/results/lrc14_final_lane_compositional_root_exclusion_thm2420.out
-script_sha256: 3c756428b655c7edc9bdeb1b33f62e93dee2bcd740a1054f63a83f6b0fdf72ea
-output_sha256: 2e2e576e1ff8a485e1bbe4dfae228c8e73dfda670a5353ee107feb1759ee1186
+script: 04-computation/lrc14_final_lane_compositional_root_exclusion_thm2426.py
+output: 05-knowledge/results/lrc14_final_lane_compositional_root_exclusion_thm2426.out
+script_sha256: 5b502bcdd0c4908114f9c81f85b8c1192eea5cb392aa535bad1710e19d6078ef
+output_sha256: 449cae7e426f65796cb82692f126723d7fc16b4954c37d6233a60da90dfcf255
 hash_basis: working-tree bytes (LF)
 cite_by_filename: true
 ---
 
-# THM-2420 -- the primitive final septimal lane is empty
+# THM-2426 -- the primitive final septimal lane is empty
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
@@ -626,8 +626,8 @@ alternatives.
 Run:
 
 ```text
-python3 04-computation/lrc14_final_lane_compositional_root_exclusion_thm2420.py
-python3 -O 04-computation/lrc14_final_lane_compositional_root_exclusion_thm2420.py
+python3 04-computation/lrc14_final_lane_compositional_root_exclusion_thm2426.py
+python3 -O 04-computation/lrc14_final_lane_compositional_root_exclusion_thm2426.py
 ```
 
 The standard-library `Fraction` companion:
@@ -644,7 +644,7 @@ The standard-library `Fraction` companion:
 Normal and optimized modes reproduce:
 
 ```text
-05-knowledge/results/lrc14_final_lane_compositional_root_exclusion_thm2420.out
+05-knowledge/results/lrc14_final_lane_compositional_root_exclusion_thm2426.out
 ```
 
 ## 9. Lean kernel

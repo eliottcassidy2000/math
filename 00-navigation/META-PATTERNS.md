@@ -135,7 +135,7 @@ the transverse section can repair a hostile confined to one fibre.
 **Counterindication:** shared divisors, missing high factors, nonunit labels,
 untransported targets, and endpoint atoms can invalidate the count. A cospan
 is not automatically a tournament equivalence.
-**Evidence:** THM-2420 repairs THM-2415's one-orbit boundary and THM-2421
+**Evidence:** THM-2426 repairs THM-2415's one-orbit boundary and THM-2427
 collapses the guard-top types; THM-2413 makes addition/multiplication
 transitivity into composition through an explicit intermediate witness.
 

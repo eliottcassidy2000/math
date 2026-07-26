@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact companion for THM-2420.
+"""Exact companion for THM-2426.
 
 Checks finite exact controls for the two composed 7/13-root
 disintegrations used to exclude depths M=2 and M=1 in the primitive
@@ -298,7 +298,7 @@ def main():
     hostile_useful = useful_m2_roots(hostile_s, 13, 1, 1, 1)
     require(hostile_useful == 0, "13-divisible-H hostile did not collapse")
 
-    print("theorem=THM-2420")
+    print("theorem=THM-2426")
     print("arithmetic=Fraction-only")
     print(f"different-septimal-depth-safe-mass={e_mass}")
     print("M2-useful-root-floor=6-of-13")

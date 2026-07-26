@@ -6,10 +6,10 @@ Authors: codex (LRC multi-agent project, 2026-07-26)
 import TournamentH7.LRCCommensuration
 
 /-!
-# Finite thirteen-root and Haar kernels for THM-2420
+# Finite thirteen-root and Haar kernels for THM-2426
 
 This module formalizes three dependency-light pieces of the audited paper proof
-`THM-2420-compositional-thirteen-root-final-septimal-lane-exclusion`:
+`THM-2426-compositional-thirteen-root-final-septimal-lane-exclusion`:
 
 * multiplication by a unit and translation give a permutation of the thirteen
   roots;
@@ -22,7 +22,7 @@ The module deliberately does **not** identify these finite sets with the
 paper's danger combs, prove that endpoint-excluded fibres have the advertised
 root patterns, perform conditional Haar disintegration, or consume the
 THM-2391 scalar-cover hypotheses.  It is therefore a formalized kernel of
-THM-2420, not a Lean proof of the final-lane exclusion or of LRC(14).
+THM-2426, not a Lean proof of the final-lane exclusion or of LRC(14).
 -/
 
 open MeasureTheory MeasureTheory.Measure Set
@@ -113,7 +113,7 @@ theorem card_inter_ge_six_of_card_twelve_seven
   have hinc := Finset.card_union_add_card_inter transition phaseGood
   omega
 
-/-- The precise finite root-cospan kernel of the `M=2` count in THM-2420:
+/-- The precise finite root-cospan kernel of the `M=2` count in THM-2426:
 the unique narrow-danger deletion and any seven-root phase-good block leave
 at least six useful roots. -/
 theorem affine_thirteen_root_cospan_floor

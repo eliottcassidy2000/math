@@ -1,5 +1,5 @@
 ---
-id: THM-2421
+id: THM-2427
 title: "Guard-top thirteen-root capacity and residual type reduction"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In a
@@ -10,29 +10,32 @@ status: >
   over which all three quotient blockers are safe, every physical
   blocker disappears; the guard and t top ordinary words have capacity
   at most 4+2t. Hence t=5. Exactly three (k,t,b,W) types remain at M=0
-  and, after primitivity, four at M>0. With THM-2420 these seven
+  and, after primitivity, four at M>0. With THM-2426 these seven
   regime-typed shapes are the complete current deep-c_3 valuation
-  residual. It removes no thirteen-adic row and does not prove LRC(14).
+  residual. A common-phase 91-unit example exactly partitions the
+  thirteen roots with one guard and five ordinary words, so root
+  geometry alone cannot remove the t=5 types. It removes no
+  thirteen-adic row and does not prove LRC(14).
 source: codex-2026-07-26-guard-top-thirteen-root-capacity
 depends_on:
   - THM-2367-septimal-root-averaging-graft-and-cover-alignment
-  - THM-2420-compositional-thirteen-root-final-septimal-lane-exclusion
+  - THM-2426-compositional-thirteen-root-final-septimal-lane-exclusion
 related:
   - THM-2382-saturated-septimal-seven-bin-root-fibre-closure
   - THM-2391-blocker-caged-septimal-single-layer-address-reduction
-script: 04-computation/lrc14_guard_top_thirteen_root_capacity_thm2421.py
-output: 05-knowledge/results/lrc14_guard_top_thirteen_root_capacity_thm2421.out
-script_sha256: 23eb532242500689f8c3b35662175adac9d980b26de37763ec6e1515d0caf46b
-output_sha256: 53eff8114040449d6e8e0c8fd6368c4d4061843eae5cd3f947d6c1fb56f21dbc
+script: 04-computation/lrc14_guard_top_thirteen_root_capacity_thm2427.py
+output: 05-knowledge/results/lrc14_guard_top_thirteen_root_capacity_thm2427.out
+script_sha256: 36b407c2bb9935b141fff89f0e3e869b4b0db51da233912d1e6181bbe0a5e244
+output_sha256: 2aad369e45e2cb84c9722cfed80d7ae7333a9a380d2b9cc4bb0dad740a5614d5
 hash_basis: working-tree bytes (LF)
 cite_by_filename: true
 ---
 
-# THM-2421 -- a deep blocker and top guard force all five top ordinary words
+# THM-2427 -- a deep blocker and top guard force all five top ordinary words
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
-THM-2420 closes the whole subtop-guard/deep-`c_3` side of the septimal
+THM-2426 closes the whole subtop-guard/deep-`c_3` side of the septimal
 valuation split. The remaining deep-`c_3` side has a top guard. The
 same two-scale operation which closed the final lane now gives a short
 capacity reduction:
@@ -194,6 +197,28 @@ The bound is only a necessary capacity statement. The exact companion
 retains an abstract unit-affine guard/five-ordinary root cover as a
 positive control, so (10) does not falsely exclude `t=5`.
 
+The boundary persists for actual integer speeds at one common phase.
+At
+
+```text
+y=1/2,                H=1,                (q_1,...,q_5)=(2,3,5,11,19),
+```
+
+all six speeds are units modulo `91`, and their root masks are
+
+```text
+guard:       {0,1,11,12},
+
+ordinary:    {6}, {4,8}, {2,10}, {3,9}, {5,7}.                 (11a)
+```
+
+These six sets partition `F_13`. Thus even common-base physical
+thirteen-root geometry cannot eliminate the `t=5` rows. Any such
+elimination must use information discarded here: the simultaneous
+septimal top-bin word, owner/blocker factors, or the labelled
+valuation-zero sidecar. The example is a root-fibre hostile, not a
+realizable scalar-cover packet.
+
 ## 5. Complete residual type list
 
 THM-2367 also proves
@@ -257,7 +282,7 @@ valuation zero. The tuple alone does not record which label.
 
 ## 6. Consequence and scope
 
-THM-2420 proves
+THM-2426 proves
 
 ```text
 nu_7(c_3)>M          implies          nu_7(H)=M.
@@ -277,8 +302,8 @@ thirteen-adic profile row, or prove LRC(14). The scalar ledger remains
 Run:
 
 ```text
-python3 04-computation/lrc14_guard_top_thirteen_root_capacity_thm2421.py
-python3 -O 04-computation/lrc14_guard_top_thirteen_root_capacity_thm2421.py
+python3 04-computation/lrc14_guard_top_thirteen_root_capacity_thm2427.py
+python3 -O 04-computation/lrc14_guard_top_thirteen_root_capacity_thm2427.py
 ```
 
 The dependency-free companion:
@@ -286,14 +311,15 @@ The dependency-free companion:
 - reconstructs every strict/boundary thirteen-root mask and its
   unit-affine closure;
 - verifies the sharp support caps `4` and `2`;
-- retains an abstract `t=5` cover as a positive control;
+- retains abstract and common-phase physical `t=5` covers as positive
+  controls;
 - exhausts the `(k,t,b,W)` arithmetic; and
 - checks the three-type `M=0` and primitive four-type `M>0` lists.
 
 Normal and optimized modes must reproduce
 
 ```text
-05-knowledge/results/lrc14_guard_top_thirteen_root_capacity_thm2421.out
+05-knowledge/results/lrc14_guard_top_thirteen_root_capacity_thm2427.out
 ```
 
 byte-for-byte.
@@ -311,5 +337,6 @@ almost-everywhere exceptional set, and the identity
 It independently recovered the root caps `4` and `2`, the implication
 `W>k => t=5`, the three `M=0` types, the four primitive `M>0` types,
 and the required valuation-zero sidecar. Normal and optimized
-companions byte-match the stored transcript. The abstract `t=5` cover
-is only a capacity positive control, not a scalar-cover packet.
+companions byte-match the stored transcript. The physical `t=5` root
+partition was independently found during the frontier audit; it is
+only a capacity hostile, not a scalar-cover packet.

@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
-"""Exact companion for THM-2421.
+"""Exact companion for THM-2427.
 
 Checks the finite thirteen-root capacity used to prune the guard-top,
 deep-c3 branch, the complete (k,t,b,W) enumeration, its primitive
-M>0 reduction, and a positive abstract t=5 root-cover control.
+M>0 reduction, and positive abstract and physical common-phase t=5
+root-cover controls.
 
 Only standard-library integer and Fraction arithmetic is used.
 """
 
 from fractions import Fraction
 from itertools import combinations_with_replacement
+from math import gcd
 
 
 P = 13
@@ -32,6 +34,17 @@ def root_mask(offset, width):
         root
         for root in range(P)
         if circle_norm((offset + root) / P) < Fraction(width, 14)
+    )
+
+
+def physical_root_mask(speed, width, base):
+    """Danger roots of one actual integer speed at a common base."""
+
+    return frozenset(
+        root
+        for root in range(P)
+        if circle_norm(Fraction(speed) * (base + root) / P)
+        < Fraction(width, 14)
     )
 
 
@@ -114,6 +127,57 @@ def main():
             break
     require(cover_witness is not None, "abstract t=5 control disappeared")
 
+    # A genuine common-phase root partition.  Thus even keeping one
+    # common base and 91-unit integer speeds cannot eliminate t=5
+    # without septimal top-bin/owner/valuation data.
+    physical_base = Fraction(1, 2)
+    physical_guard_speed = 1
+    physical_ordinary_speeds = (2, 3, 5, 11, 19)
+    require(
+        all(
+            gcd(speed, 91) == 1
+            for speed in (physical_guard_speed,) + physical_ordinary_speeds
+        ),
+        "physical t=5 control lost a 91-unit speed",
+    )
+    physical_guard = physical_root_mask(
+        physical_guard_speed,
+        2,
+        physical_base,
+    )
+    physical_ordinary = tuple(
+        physical_root_mask(speed, 1, physical_base)
+        for speed in physical_ordinary_speeds
+    )
+    require(
+        physical_guard == frozenset((0, 1, 11, 12)),
+        "physical t=5 guard mask changed",
+    )
+    require(
+        physical_ordinary
+        == (
+            frozenset((6,)),
+            frozenset((4, 8)),
+            frozenset((2, 10)),
+            frozenset((3, 9)),
+            frozenset((5, 7)),
+        ),
+        "physical t=5 ordinary masks changed",
+    )
+    physical_parts = (physical_guard,) + physical_ordinary
+    require(
+        all(
+            physical_parts[left].isdisjoint(physical_parts[right])
+            for left in range(len(physical_parts))
+            for right in range(left)
+        ),
+        "physical t=5 masks stopped being disjoint",
+    )
+    require(
+        set().union(*physical_parts) == set(range(P)),
+        "physical t=5 masks stopped covering all roots",
+    )
+
     # THM-2367 gives W<=k or W>=7.  The new theorem adds t=5 whenever
     # W>k.  Here H is top, so W=2+t+b.
     thm2367_types = []
@@ -180,7 +244,7 @@ def main():
     )
 
     guard, choices = cover_witness
-    print("theorem=THM-2421")
+    print("theorem=THM-2427")
     print("arithmetic=Fraction-and-finite-Z13")
     print(
         "ordinary-root-masks="
@@ -196,6 +260,13 @@ def main():
         "abstract-t5-ordinary="
         + ";".join(str(sorted(choice)) for choice in choices)
     )
+    print("physical-t5-base=1/2,H=1,q=2,3,5,11,19")
+    print(f"physical-t5-guard={sorted(physical_guard)}")
+    print(
+        "physical-t5-ordinary="
+        + ";".join(str(sorted(mask)) for mask in physical_ordinary)
+    )
+    print("physical-t5-partition=all-13-roots")
     print(f"raw-THM2367-guard-top-types={len(thm2367_types)}")
     print(f"deep-c3-guard-top-residual-types={len(reduced_types)}")
     print(
