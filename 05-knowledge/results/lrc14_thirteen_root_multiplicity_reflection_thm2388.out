@@ -1,0 +1,25 @@
+theorem=THM-2388
+status=PROVED+VERIFIED-EXACT-CANDIDATE
+root_identity_cases=74814
+composite_transfer_cases=1685
+fourier_residue_cases=2002
+off_cage_composition_counts=13,1,0,0,0,0,0
+toothpick_mass_ratio=1/13
+septimal_top_bin_cases=180
+septimal_lower_bin_cases=5040
+X_mass=36/49
+X_unit_integral=216/343
+X_signed_unit_current=-36/343
+each_low_blocker_invoice=36/343
+remaining_excess_current=36/343
+hole_mass_interval=[36/343,72/343]
+nonnegative_ledger_states=27
+rooted_stalk_histogram_cases=468
+physical_qstar_cross_overlap=36/343
+rooted_qstar_cross_overlap=468/343
+hostile_qstar_size=7
+hostile_c2_size=7
+hostile_positive_margin=1/3014284
+hostile_roles=k2,t1,b0; blocker13=(1,2,3)
+branch_excluded=0; ledger=165; LRC(14)=OPEN
+all_checks=PASS
