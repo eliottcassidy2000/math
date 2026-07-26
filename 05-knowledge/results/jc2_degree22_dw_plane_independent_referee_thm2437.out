@@ -1,0 +1,14 @@
+THM-2437 independent D-W plane hostile referee
+direct_linear_quadratic_elimination=PASS
+delta_sign_sidecar=PASS
+explicit_quartic_discriminant=wall^4*L5*K9
+parameter_resultant=lambda^5*(231lambda+128)*S6^3*S7
+algebraic_field_gcds=S6:1,S7:1,Q5-L5:1
+degree_drop_squarefree_degree=8
+wall_collision=simple_and_otherwise_separated
+simple_finite_branch_counts=14,13,12,12,13
+uniform_genus_lower_bound=3
+y_zero_and_axis_boundaries=PASS
+quartic_sha256=9cb2f3f6780a745debf807eebec9dbcedb4aa95dc98277540c2c7837d879053f
+K9_sha256=60a764261cc9082fed037e645d2a50edeaaac19a1aa285ad0acb315e3c613344
+all_independent_exact_checks=PASS

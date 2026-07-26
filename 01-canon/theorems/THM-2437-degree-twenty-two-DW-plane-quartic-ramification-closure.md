@@ -2,7 +2,7 @@
 id: THM-2437
 title: "Degree-twenty-two D-W plane quartic ramification closure"
 status: >
-  PROVED + VERIFIED-EXACT. In the open first-flux chart of the genuine
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the open first-flux chart of the genuine
   nonsplit polynomial exact-square-prefix degree-twenty-two branch, the
   complete coefficient plane B=C=E=0 is empty. After the choice D=delta^2,
   the invariant ratio lambda=W^2/D^3 and coordinates p=delta/y^2,
@@ -26,12 +26,16 @@ script: 04-computation/jc2_degree22_dw_plane_quartic_ramification_thm2437.py
 output: 05-knowledge/results/jc2_degree22_dw_plane_quartic_ramification_thm2437.out
 script_sha256: 6fdda40f03dde5cb38cb74a5932f482d2f959159c28e334dde9b225d663d39c9
 output_sha256: dfd20f71680acda40d0c5af27125796e3ce4340e78033f0b62275a3f838acba8
+independent_script: 04-computation/jc2_degree22_dw_plane_independent_referee_thm2437.py
+independent_output: 05-knowledge/results/jc2_degree22_dw_plane_independent_referee_thm2437.out
+independent_script_sha256: 922dffb4ff1f377389c9d2ecc7c59de4c9e0f4638d2a81158b6413d04cbb07aa
+independent_output_sha256: f79df8d4cf903412b676993c7505a987316037884d1367cd75c662f0da5273f7
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2437 -- the degree-twenty-two D-W plane is empty
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2429 closes the `C,W` plane by a complete hyperelliptic fibre
 classifier. The next weighted plane is not hyperelliptic: its quotient is
@@ -472,4 +476,103 @@ floor, and the `y=0` hostile boundary. Every truth-bearing check uses explicit
 exceptions and remains active under optimized Python.
 
 Normal, optimized, and stored transcripts byte-match. The declared hashes
-are over working-tree bytes. **QED.**
+are over working-tree bytes.
+
+## 9. Independent hostile audit
+
+The audit started from the already hostile-audited THM-2411 fluxes rather
+than from the primary companion's stored quartic. It specialized
+`B=C=E=0`, inserted
+
+```text
+D=p^2y^4,       W=mu p^3y^6,       u=vy^2,       Z=zeta y^3,
+```
+
+and recovered (6)--(7) coefficient by coefficient. Writing the first flux
+as `a zeta+b` and the second as `A zeta^2+B zeta+C`, the closed formula
+
+```text
+Res_zeta(a zeta+b,A zeta^2+B zeta+C)
+ =A b^2-a B b+a^2 C
+```
+
+independently gives exactly `2295943056 R_mu`. It also checks
+`R_(-mu)(v,-p)=R_mu(v,p)`, so the choice of square root of `D` loses only
+the stated sign sidecar.
+
+The factorization proof was attacked separately. Monicity in `p` and Gauss
+exclude a hidden factor depending only on `v` and reduce every absolute
+factorization to the `1+3` or `2+2` partitions used in Section 3. In the
+first partition, squarefreeness of the quintic constant term really does
+force `r` to be a unit; the resulting degree-five `t` cannot occur in the
+degree-three quadratic coefficient. In the second, `rs=d` makes `r,s`
+coprime, so `as+cr=0` forces `a=rh,c=-sh`; their unequal degrees summing to
+five make `deg h(r-s)>=3`, contradicting the nonzero degree-two cubic
+coefficient. This covers reducibility over the algebraically closed
+constant field for every `mu!=0`. The omitted `mu=0` and `D=0` boundaries
+are exactly the hostile-audited `D` and `W` axes, respectively.
+
+For the ramification audit, a second companion used the explicit
+discriminant formula for
+
+```text
+a p^4+b p^3+c p^2+e
+```
+
+instead of calling the quartic-discriminant routine. Exact division by
+`-2^36*7*11^18(121v-7)^4L_5` reconstructed a polynomial of bidegree
+`(9,2)` whose hash is the same `K_9` hash printed by the primary
+companion. The direct identity
+
+```text
+Res_v(K_9,partial_v K_9)
+ =LC_v(K_9) Disc_v(K_9)
+```
+
+then reproduces (22)--(23), while a separate resultant reproduces (24).
+Most importantly, the exceptional fibres were not classified from the
+primary subresultant transcript. They were specialized into the exact
+number fields
+
+```text
+Q[lambda]/(S_6),    Q[lambda]/(S_7),    Q[lambda]/(Q_5).
+```
+
+Direct Euclidean gcds there give derivative-gcd degrees `1,1,0` for
+`K_9`, and the last field gives
+`deg gcd(K_9,L_5)=1` with both factors squarefree. Thus an `S_6` or `S_7`
+fibre has exactly one double and seven simple `K_9` roots, while a `Q_5`
+fibre has exactly one simple cross-collision. Rational-field replays check
+the squarefree degree-eight drop fibre, the otherwise separated simple wall
+collision, and a generic squarefree degree-nine hostile control.
+
+These independent data give the five simple finite branch counts
+
+```text
+14, 13, 12, 12, 13
+```
+
+without counting a double root, a cross-collision, the excluded wall, or
+any point at infinity. Since the cover is monic and irreducible, a simple
+finite discriminant zero contributes one tame ramification point on the
+normalization. Hence the lower bound `sum(e_P-1)>=12` and genus at least
+three do not depend on any uninspected contribution at infinity.
+
+Finally, the audit checked the constant-map step in the actual field
+`C(x)`: a nonconstant solution would lift to the normalization and give a
+nonconstant map from `P^1` to a positive-genus curve. Constancy of `(v,p)`
+then makes `y^2=delta/p`, `u`, `zeta`, `Z=T^2`, `T=q^2`, and `q` constant,
+contradicting the genuine deck. At `y=0`, the open wall gives `u!=0` and
+the first flux gives `Z=0`, contradicting `T!=0`.
+
+Run the independent path with
+
+```bash
+python3 04-computation/jc2_degree22_dw_plane_independent_referee_thm2437.py
+python3 -O 04-computation/jc2_degree22_dw_plane_independent_referee_thm2437.py
+```
+
+Its normal, optimized, and stored transcripts byte-match; both independent
+hashes agree with the frontmatter. No algebraic normalization,
+factorization, exceptional fibre, branch count, wall, axis, constant-field,
+scope, or reproducibility defect remains. **QED.**
