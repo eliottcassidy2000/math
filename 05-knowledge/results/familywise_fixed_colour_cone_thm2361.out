@@ -1,0 +1,12 @@
+THM-2361 familywise fixed-colour cone exact companion
+moduli checked: 199
+family/Galois support checks: 7921099
+arithmetic-comb straightening checks: 10473536
+order-13 character obstructions: 12
+off-diagonal gauge ledgers: 42000
+hostile: N=169, k=1, ell=14, Delta=13
+hostile image centres/half-width: (Fraction(3, 4), Fraction(1, 4)), 1/8
+hostile diagonal current: 1/2
+hostile off-diagonal current: 0
+hostile phase-compensated current: 1/2
+VERDICT: one familywise cone; off-diagonal terminal phase is essential
