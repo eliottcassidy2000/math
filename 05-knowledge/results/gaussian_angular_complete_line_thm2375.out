@@ -1,0 +1,9 @@
+THM-2375 angular complete-line tomography exact referee
+aliased cyclic labels/recovered residues: 5/5
+no-alias band/modulus/support labels: 7/7/7
+omitted-sector equality labels: 4
+sharp alias boundary: N=2d=6, mixed bank = one-sided bank
+unlabelled support hostile: PASS
+nonzero-charge monomial checks: 200
+anisotropic hostile D0 versus 2||P||^2: 14 / 16
+VERDICT: complete Hermitian orbit data recovers charge norms; scalar moments do not supply it
