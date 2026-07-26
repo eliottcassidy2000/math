@@ -9,7 +9,7 @@ status: >
   by max_(h in H) h*spf(h)<=M^(3/2). If H contains a prime, an exact
   finite cage C_H generates pairwise disjoint prime rays contained in
   both atom sets; after removing those rays, the weak and strict
-  remainders lie sharply below M^3 and M^4. Their Dirichlet series
+  remainders are sharply bounded by M^3 and M^4. Their Dirichlet series
   therefore split into a finite cage polynomial times a prime tail
   plus a finite polynomial. Additive artificial atoms instead stop
   sharply at 2L+1 and 2L+2. Composite labels in the induced
@@ -429,9 +429,14 @@ x R_odot z       iff       z=x odot s for some retained co-input s,
 ```
 
 associativity sends a two-step path with witnesses `s,t` to the composite
-witness `s odot t`.  The shortcut exists exactly when that composite witness
-is retained.  This is the precise transitivity-like feature noticed in the
-summand and multiplicand graphs.
+witness `s odot t`.  The shortcut carrying that **labelled composite
+witness** exists exactly when `s odot t` is retained.  For positive addition
+and multiplication, cancellation makes this the corresponding iff for that
+fixed input and output.  In a general associative operation, some different
+retained witness can produce the same collapsed shortcut, so associativity
+alone gives only the forward labelled-composition statement.  This is the
+precise transitivity-like feature noticed in the summand and multiplicand
+graphs.
 
 It is not a tournament statement: the relation need not orient every pair,
 and forgetting the labelled co-input loses the valuation-box cage.  The

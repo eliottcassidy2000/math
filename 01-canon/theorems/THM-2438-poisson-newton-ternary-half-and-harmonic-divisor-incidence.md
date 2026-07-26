@@ -3,12 +3,12 @@ id: THM-2438
 title: "Poisson--Newton ternary half and harmonic divisor incidence"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. The
-  exponential generating function of the forward
-  differences of any sequence is its original exponential generating
-  function multiplied by exp(-x). Consequently the Newton coefficients
+  formal exponential generating function of the forward differences
+  of any sequence valued in a commutative Q-algebra is its original
+  exponential generating function multiplied by exp(-x). Consequently the Newton coefficients
   of the central binomial sequence are the central trinomial numbers,
   and the Newton coefficients of the two central Pascal halves count
-  nonnegative and positive {-1,0,1}-walks. For any integer support H,
+  nonnegative and positive {-1,0,1}-walks. For any positive-integer support H,
   its reciprocal sum is the extended limiting mean of its divisor
   incidence. It is finite exactly when the mean weak or strict
   multiplicative fibre loss caused by deleting H is finite, and in the
@@ -23,6 +23,7 @@ depends_on:
   - THM-2433-operation-fibre-deletion-incidence-and-startup-scar
 related:
   - THM-2422-operation-fibres-summand-closure-and-twin-center-ancestry
+  - THM-2449-switching-fourth-moment-signed-c4-and-gram-energy
 script: 04-computation/poisson_newton_harmonic_incidence_thm2438.py
 output: 05-knowledge/results/poisson_newton_harmonic_incidence_thm2438.out
 script_sha256: f45b8011dbe7e37a0ebf37483d5d5889659258cc3405af57fce6d932af2fca48
@@ -513,6 +514,9 @@ different object.
 
 1. Equation (3) uses exponential generating functions.  Multiplying an
    ordinary generating function by `exp(-x)` is a different transform.
+   THM-2412 records the separate analytic boundary: the Newton expansion
+   of `2^n` at `z=1` terminates for `n in N_0`, but for nonintegral `n`
+   that point is a convergence boundary rather than a formal consequence.
 2. The ternary words in (13) are Newton coefficients of binary layers, not
    a bijection between the original sets and words at the same index.
 3. `4^n` has difference eigenvalue three.  Only `2^n` has eigenvalue one.
@@ -525,7 +529,9 @@ different object.
 6. Cauchy convolution on additive fibres and Dirichlet convolution on
    multiplicative fibres are not conjugate by the Stirling transform.
 7. The min--max switching energy of THM-2412 retains cycle-product
-   obstructions not present in the one-dimensional ternary walk count.
+   obstructions not present in the one-dimensional ternary walk count;
+   THM-2449 identifies its first nonconstant even-moment relaxation with
+   signed-four-cycle, equivalently Gram, energy.
 
 ## 9. Exact companion
 

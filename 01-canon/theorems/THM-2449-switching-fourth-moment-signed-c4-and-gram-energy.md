@@ -25,7 +25,7 @@ output_sha256: 341a32d8738d1f7bad972f2913601015d6995a9956dbbb2847d59193af2c79d3
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2449 -- the first even switching invariant is Gram energy
+# THM-2449 -- the first nonconstant even switching moment is Gram energy
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
