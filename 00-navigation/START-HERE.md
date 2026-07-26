@@ -66,7 +66,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     THM-2314/2316/2320/2324/2328 close all `31` exactly two-sparse ratios.
     THM-2332 leaves squarefree branch degree `0`, `2`, or `4`; THM-2335 eliminates `0`; THM-2345/2347 close two divisors.
     THM-2359 closes the perfect-quartic divisor. THM-2371 and THM-2376 close the full degree-eighteen `H_2S_5^2` stratum; hostile-audited THM-2406 closes the remaining `H_4` locus and hence the inherited reduced degree-eighteen branch.
-    At degree `22`, hostile-audited THM-2411 closes `mathcal A=0`; candidate THM-2423 closes `W`, while hostile-audited THM-2425/2428 close the `C,D,E,B` axes in `mathcal A!=0`. Mixed strata, split/even descent, integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
+    At degree `22`, hostile-audited THM-2411 closes `mathcal A=0`; candidate THM-2423 closes `W`, while hostile-audited THM-2425/2428 close the `C,D,E,B` axes in `mathcal A!=0`. Candidate THM-2429 closes the first support-two plane `C,W`. Other mixed strata, split/even descent, integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed

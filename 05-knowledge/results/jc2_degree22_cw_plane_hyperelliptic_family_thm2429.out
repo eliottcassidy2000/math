@@ -1,0 +1,12 @@
+THM-2429 degree-22 C-W plane exact referee
+weighted_flux_reduction=PASS
+quadratic_family_degree_in_p=2
+generic_residual=degree_5_squarefree,genus_2
+parameter_discriminant=(231lambda+100)*squarefree_septic
+rational_exception=lambda_-100/231,double_linear_plus_squarefree_cubic,genus_1
+degree_drop=lambda_-50/99,squarefree_quartic,genus_1
+septic_exceptions=one_double_root_plus_cubic,genus_1
+family_sha256=e08538f523e6bfe14177759341eb1a30de643c5bbb813418c2b4f5ae0e447551
+septic_sha256=5bd929a5b4dfb055a3bc5c00fcd95257b29bb167fef5a9103501cbc2503dfd3d
+y_zero_hostile_control=PASS
+all_exact_checks=PASS
