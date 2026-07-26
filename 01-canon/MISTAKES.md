@@ -9,6 +9,31 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-259 (2026-07-25, concurrent namespace and rebase audit) -- THM-2356 crossed and a second conflict block escaped inspection
+
+- **What happened:** a session fetched and verified that `THM-2356` was
+  free, then committed
+  `THM-2356-degree-eighteen-perfect-quartic-wall-closure.md`. During the
+  interval before push, the earlier
+  `THM-2356-finite-field-chirp-gram-tomography-and-bockstein-pairing.md`
+  reservation landed. The later reservation rebased across it without a
+  post-rebase namespace search. In the same rebase, a status-word conflict
+  in `THM-2347` was resolved after inspecting only the frontmatter and first
+  visible marker block; a second conflict block in the audit appendix was
+  accidentally committed.
+- **First failure:** the session repeated MISTAKE-258's forbidden combined
+  rebase-and-push pattern. It also treated one resolved conflict hunk as
+  evidence that the whole file was marker-free instead of running a global
+  marker search and `agents/check_docs.py` before push.
+- **Repair:** the earlier chirp reservation keeps `THM-2356`; the still-empty
+  perfect-quartic stub moved coherently to the next free namespace
+  `THM-2359`. The two independently valid `THM-2347` audit summaries were
+  merged into one marker-free appendix without changing its proved claim.
+- **Rule:** after every reservation rebase, search the rebased tree again for
+  the exact YAML ID and filename before a separate push. After every manual
+  conflict resolution, search every edited file for all three conflict
+  markers and run the documentation gate before committing.
+
 ## MISTAKE-258 (2026-07-25, concurrent namespace audit) -- THM-2350 crossed during the reservation rebase
 
 - **What happened:** after fetching `origin/main` at `6b23df8f4`, one
