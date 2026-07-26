@@ -1,0 +1,13 @@
+theorem=THM-2399
+status=PROVED-CANDIDATE+VERIFIED-EXACT; independent-audit=PENDING
+profile=1,2,5; base=8104501/10000019; orbit_size=49
+H=1273; qstar=77; lower_q=431,643,566,720
+C=1,13,1399489; c=13,169,18193357
+top_rows=0; safe_row_holes=3,5,5,2,3,5
+local_scalar_cover_failures=0
+clean_count=1; clean_raw_index=34; clean_normalized_address=(3,5)
+strict_phase_margin=459267/980001862
+consequence=THM2396_orbitwise_N_S>=1_is_locally_sharp
+global_safe_point=3/14; global_cover=FALSE
+row_decrement=0; LRC(14)=OPEN
+all_checks=PASS
