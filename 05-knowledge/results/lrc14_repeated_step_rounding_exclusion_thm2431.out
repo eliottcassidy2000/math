@@ -1,0 +1,18 @@
+THM-2431 exact companion
+normalized_tilings=62
+independent_pair_triple_invoice=620
+repeatable_steps=1,2,3,4,5,44,45
+step_1:centre_differences=28,expanded_parent_residues=50
+step_2:centre_differences=24,expanded_parent_residues=44
+step_3:centre_differences=4,expanded_parent_residues=8
+step_4:centre_differences=6,expanded_parent_residues=12
+step_5:centre_differences=8,expanded_parent_residues=16
+step_44:centre_differences=8,expanded_parent_residues=12
+step_45:centre_differences=4,expanded_parent_residues=12
+maximum_parent_cap=50/91
+invalid_parentwise_union_cap=66/91
+blocker_safe_image_floor=4/7
+strict_mass_gap=2/91
+M0_remaining=(1, 5, 1, 8),(2, 5, 2, 9)
+Mpositive_remaining=(2, 0, 0, 2),(2, 5, 1, 8)
+ALL CHECKS PASSED
