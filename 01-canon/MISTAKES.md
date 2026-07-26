@@ -9,6 +9,32 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-267 (2026-07-26, THM-2412 verification and quotient audit) -- optimized transcript equality was not optimized verification
+
+- **What was written:** the promoted THM-2412 companion used sixteen
+  truth-bearing Python `assert` statements and cited equality of its normal,
+  optimized, and stored transcripts as exact optimized verification.  Its
+  prose also displayed the lowering identities without an explicit `k>=1`
+  range, called two nested subset half-spaces a partition, and called the raw
+  central sign-vector count the gauge-class count.
+- **First failed implication:** `python -O` removes every `assert`, so the
+  optimized transcript exercised no truth-bearing checks.  Separately,
+  `P_n={|S|<=n}` contains `M_n={|S|<n}`; only the reflected strict upper copy
+  of `M_n`, together with the fixed equator, gives the numerical partition.
+  The involution `x~-x` also halves the balanced sign-vector count for
+  `v=2n>=2`.
+- **Repair:** every check now uses an explicit `require` guard that remains
+  active under optimization; normal, `-O`, and stored transcripts were
+  replayed exactly and the LF script hash was updated.  Equations (1) and (5)
+  now state `k>=1` and handle constants separately, the central split is
+  called a reflected numerical partition, and `C(2n,n)/2` is recorded as the
+  post-gauge balanced class count.
+- **Rule:** transcript equality is evidence only when both executions retain
+  the predicates being checked.  For Python companions, use explicit raises
+  (or another optimization-stable guard) for every truth-bearing assertion,
+  and distinguish a numerical reflected decomposition from a literal
+  disjoint set partition or quotient count.
+
 ## MISTAKE-266 (2026-07-26, THM-2403 candidate typing audit) -- a clean-cell projector froze the blocker gate that the target action was moving
 
 - **What was written:** the first proof candidate for THM-2403 restricted

@@ -11,6 +11,18 @@ from fractions import Fraction
 from math import comb, factorial
 
 
+TRUTH_CHECKS = 0
+
+
+def require(condition, message):
+    """Truth-bearing check that remains active under ``python -O``."""
+
+    global TRUTH_CHECKS
+    TRUTH_CHECKS += 1
+    if not condition:
+        raise RuntimeError(message)
+
+
 def trim(p):
     q = list(p)
     while len(q) > 1 and q[-1] == 0:
@@ -108,7 +120,7 @@ def main():
                 if k == 0
                 else scale(falling_poly(k - 1, h), k)
             )
-            assert lhs == rhs
+            require(lhs == rhs, f"lowering identity failed at h={h}, k={k}")
             checked_basis += 1
 
         for degree in range(11):
@@ -117,8 +129,10 @@ def main():
                 Fraction(((-1) ** k) * (degree + k + 1), k + 1)
                 for k in range(degree + 1)
             )
-            assert difference_quotient(umbral(p, h), h) == umbral(
-                derivative(p), h
+            require(
+                difference_quotient(umbral(p, h), h)
+                == umbral(derivative(p), h),
+                f"umbral intertwiner failed at h={h}, degree={degree}",
             )
             checked_intertwiners += 1
 
@@ -135,7 +149,10 @@ def main():
                     lam**k * falling_value(x, k, h) / factorial(k)
                     for k in range(n + 1)
                 )
-                assert newton == (1 + h * lam) ** n
+                require(
+                    newton == (1 + h * lam) ** n,
+                    f"discrete exponential failed at h={h}, lambda={lam}, n={n}",
+                )
                 checked_exponentials += 1
 
     plus = []
@@ -145,13 +162,19 @@ def main():
         p = inclusive_half(n)
         m = strict_half(n)
         center = comb(2 * n, n)
-        assert p == (4**n + center) // 2
-        assert m == (4**n - center) // 2
-        assert p + m == 4**n
-        assert p - m == center
+        require(p == (4**n + center) // 2, f"inclusive half failed at n={n}")
+        require(m == (4**n - center) // 2, f"strict half failed at n={n}")
+        require(p + m == 4**n, f"reflected sum failed at n={n}")
+        require(p - m == center, f"central difference failed at n={n}")
         if n:
-            assert p == 4 * plus[-1] - catalan(n - 1)
-            assert m == 4 * minus[-1] + catalan(n - 1)
+            require(
+                p == 4 * plus[-1] - catalan(n - 1),
+                f"plus Catalan leakage failed at n={n}",
+            )
+            require(
+                m == 4 * minus[-1] + catalan(n - 1),
+                f"minus Catalan leakage failed at n={n}",
+            )
         plus.append(p)
         minus.append(m)
         checked_central += 1
@@ -159,27 +182,38 @@ def main():
     # The first coefficients of the two claimed ordinary generating functions.
     # (1-4z)^(-1/2) has coefficient C(2n,n).
     for n, (p, m) in enumerate(zip(plus, minus)):
-        assert 2 * p == 4**n + comb(2 * n, n)
-        assert 2 * m == 4**n - comb(2 * n, n)
+        require(
+            2 * p == 4**n + comb(2 * n, n),
+            f"plus generating coefficient failed at n={n}",
+        )
+        require(
+            2 * m == 4**n - comb(2 * n, n),
+            f"minus generating coefficient failed at n={n}",
+        )
 
     checked_tournaments = 0
     for vertices in range(1, 10):
         edges = comb(vertices, 2)
         shells = [comb(edges, k) for k in range(edges + 1)]
-        assert sum(shells) == 2**edges
+        require(
+            sum(shells) == 2**edges,
+            f"tournament Hamming shells failed at v={vertices}",
+        )
         checked_tournaments += 1
 
     # Hostiles to the two most tempting overstatements.
     x_squared = (Fraction(0), Fraction(0), Fraction(1))
-    assert difference_quotient(x_squared, Fraction(1)) == (
-        Fraction(1),
-        Fraction(2),
+    require(
+        difference_quotient(x_squared, Fraction(1))
+        == (Fraction(1), Fraction(2)),
+        "power-basis hostile value changed",
     )
-    assert difference_quotient(x_squared, Fraction(1)) != derivative(
-        x_squared
+    require(
+        difference_quotient(x_squared, Fraction(1)) != derivative(x_squared),
+        "power-basis hostile no longer separates difference and derivative",
     )
-    assert 2 ** comb(4, 2) == 64
-    assert 2**4 == 16
+    require(2 ** comb(4, 2) == 64, "tournament edge-slot count changed")
+    require(2**4 == 16, "vertex-exponent hostile control changed")
 
     print("theorem=THM-2412")
     print("arithmetic=Fraction-only")
@@ -195,6 +229,7 @@ def main():
     print(f"tournament-Hamming-shell-checks={checked_tournaments}")
     print("hostile-power-basis=D_1(x^2)=2x+1")
     print("hostile-tournament-exponent=v=4 gives 2^6,not 2^4")
+    print(f"optimization-stable-truth-checks={TRUTH_CHECKS}")
     print("status=PASS")
 
 

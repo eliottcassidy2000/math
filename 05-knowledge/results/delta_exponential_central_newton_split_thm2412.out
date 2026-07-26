@@ -12,4 +12,5 @@ Catalan-leakage=plus:-C_(n-1),minus:+C_(n-1)
 tournament-Hamming-shell-checks=9
 hostile-power-basis=D_1(x^2)=2x+1
 hostile-tournament-exponent=v=4 gives 2^6,not 2^4
+optimization-stable-truth-checks=304
 status=PASS

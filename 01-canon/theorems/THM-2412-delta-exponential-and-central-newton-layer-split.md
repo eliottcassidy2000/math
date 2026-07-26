@@ -9,8 +9,10 @@ status: >
   solution is (1+h)^(x/h), so h=1 gives 2^N while the fixed-endpoint
   h->0 limit gives e^x. On the central Bernoulli-triangle cut,
   A032443=(4^n+C(2n,n))/2 and shifted A000346=
-  (4^n-C(2n,n))/2 partition 4^n; the central binomial coefficient is
-  exactly the reflection-fixed tie layer and Catalan numbers are the
+  (4^n-C(2n,n))/2 form a reflected numerical partition of 4^n; the
+  underlying lower half-spaces are nested, not a literal set partition.
+  The central binomial coefficient is exactly the reflection-fixed tie
+  layer and Catalan numbers are the
   signed one-step leakage. For tournaments the exponent is the number
   C(v,2) of independent arc slots, not the number of vertices and not a
   causal source of the base two. No nonintegral Newton-series
@@ -28,8 +30,8 @@ external: >
   "Min max of a quadratic form of plus-minus ones".
 script: 04-computation/delta_exponential_central_newton_split_thm2412.py
 output: 05-knowledge/results/delta_exponential_central_newton_split_thm2412.out
-script_sha256: b4c4decc432ca3b4948b28e03f6f0753ec7e69186bdd2285d2c1792495c7b088
-output_sha256: 7995b067b71bc152a44393c2cd5efa596c2f5f6f3a16f5d0b8ea78fcaaa3b34a
+script_sha256: 115d24c673a04c14e6a0bfcc0f06e3c7479ada0dce1686d243e1a6e0bde08720
+output_sha256: 821ea1a0241d1e47397d74ffff6b55d92f36b84a5243d8fb52ef451bb1fe9d4c
 hash_basis: working-tree bytes (LF)
 cite_by_filename: true
 ---
@@ -43,8 +45,10 @@ lists of coefficients. They are the same lowering-operator calculus in
 two polynomial bases:
 
 ```text
-continuous:  D(x^k)=k x^(k-1),
-discrete:    D_h(x^(falling k,h))=k x^(falling k-1,h).               (1)
+continuous:  D(x^k)=k x^(k-1),                         k>=1,
+discrete:    D_h(x^(falling k,h))=k x^(falling k-1,h),  k>=1,        (1)
+
+D(1)=D_h(1)=0.
 ```
 
 The associated eigenfunctions are `e^(lambda x)` and
@@ -77,13 +81,13 @@ x^(falling k,h)
 x^(falling 0,h)=1.                                                   (4)
 ```
 
-Direct cancellation gives
+Direct cancellation gives, for `k>=1`,
 
 ```text
 D_h x^(falling k,h)=k x^(falling k-1,h).                             (5)
 ```
 
-For `k>=1`, one proof factors the numerator (with the remaining product
+For the same range, one proof factors the numerator (with the remaining product
 empty when `k=1`):
 
 ```text
@@ -228,6 +232,11 @@ M_n counts |S|<n,
 C(2n,n) counts the balanced equator.                                 (22)
 ```
 
+The first two families in (22) are nested, not disjoint.  The equality
+`P_n+M_n=4^n` is a numerical/reflected partition: complement reflection
+pairs the strict lower family counted by `M_n` with the strict upper
+family `|S|>n`, while the equator is the fixed layer.
+
 The ordinary generating functions, as formal power series (and
 analytically for `|z|<1/4`), are
 
@@ -329,9 +338,11 @@ Q_a(-x)=Q_a(x),                                                       (33)
 ```
 
 so the global sign is a gauge. This is the precise tournament/two-graph
-reading of the linked MathOverflow min--max expression. The central
-binomial term in (19) is the balanced sign equator when the number of
-vertex-sign slots is even.
+reading of the linked MathOverflow min--max expression. Before
+quotienting by the free global gauge, the central binomial term in (19)
+counts the balanced sign equator when the number of vertex-sign slots
+is even. For `v=2n>=2`, the corresponding balanced gauge classes number
+`C(2n,n)/2`.
 
 This reformulation does **not** prove that the normalized min--max limit
 exists or determine its value. Cycle products, not the scalar total
@@ -377,7 +388,8 @@ The standard-library rational companion checks:
 - the hostile failures `D_1(x^2)!=2x` and
   `#T_4=2^6!=2^4`.
 
-Both modes reproduce:
+All `304` truth-bearing checks use the explicit `require` guard, so
+optimization cannot erase the verification. Both modes reproduce:
 
 ```text
 05-knowledge/results/delta_exponential_central_newton_split_thm2412.out

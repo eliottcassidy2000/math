@@ -5,9 +5,10 @@ status: >
   PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. For a
   primitive integer speed row w and nonzero sideband X, the affine
   address shell Lambda_X={a:a.w=X} has the canonical finite quotient
-  Lambda_X/|X|Lambda, naturally bijective with ker(w mod |X|). A
-  nonzero Abel sideband therefore has a surviving finite kernel fibre
-  without choosing an origin. If 13|X and every address has all-unit
+  Lambda_X/|X|Lambda, naturally bijective with ker(w mod |X|). When
+  its finite-fibre Abel boundary limits exist, a nonzero Abel sideband
+  has a surviving finite kernel fibre without choosing an origin. If
+  13|X and every address has all-unit
   residue q, that fibre reduces to q. Adjoining the artificial observer
   speed X homogenizes every address with coefficient -1; valuation
   normalization gives the alternative pair (13^d,-X/13^d). A Bezout
@@ -143,6 +144,13 @@ C(u)!=0.                                                 (12)
 
 No endpoint, Bezout vector, or atomic representative has been selected.
 
+In the THM-2334/THM-2416 application, the `K_M`-character twists are the
+same bounded-product Abel currents with a finite root-of-unity weight.
+The boundary argument of THM-2334 applies to every one of these finitely
+many twists, and finite Fourier inversion then supplies the individual
+limits assumed above.  Absolute convergence at a fixed `rho<1` alone
+would not imply those boundary limits in an arbitrary series.
+
 For THM-2416, `M` is divisible by thirteen and every atomic address in
 the selected sideband has one residue
 
@@ -211,8 +219,9 @@ r_z=a-Xz in Lambda,                                      (19)
 r_z=q mod13.                                             (20)
 ```
 
-So every affine atom algebraically determines an all-unit mod-thirteen
-physical relation after a section is chosen.  If
+Equation (20) uses the additional hypotheses `13|X` and (13).  Under
+those hypotheses every affine atom algebraically determines an all-unit
+mod-thirteen physical relation after a section is chosen.  If
 
 ```text
 z'=z+lambda,              lambda in Lambda,
@@ -283,27 +292,28 @@ affine current while retaining its full mod-thirteen charge.  Equations
 inside one residue class is necessarily neutral.
 
 This source--reference composition is formally analogous to the
-operation-cospan witness composition in candidate THM-2413: the hidden
+operation-cospan witness composition in THM-2413: the hidden
 affine witnesses compose only after a distinct compatible witness is
 retained.  The analogy is explanatory, not a dependency or an LRC
 consequence.
 
 ## 6. The remaining mod-seven coordinate
 
-Write `X=13Y`.
+Write `X=13Y_1`, where `Y_1=X/13`; this is distinct from the
+valuation-normalized unit `Y_d=X/13^d` in (17) when `d>1`.
 
-- If `7|Y`, then `91|X`, so the canonical finite fibre in `K_M` reduces
+- If `7|Y_1`, then `91|X`, so the canonical finite fibre in `K_M` reduces
   to a fibre in `K_91`.  This does not make its coordinates units
   modulo seven.
-- If `7` does not divide `Y`, the scalar `Y mod7` is the exact
+- If `7` does not divide `Y_1`, the scalar `Y_1 mod7` is the exact
   one-dimensional affine defect.  The observer coordinate in (15) or
-  (18) cancels it algebraically, but no physical Boolean factor realizes
-  that observer.
+  (18) cancels the equivalent nonzero residue of `X` algebraically, but
+  no physical Boolean factor realizes that observer.
 
 This is the same carry-scale boundary represented by the rank-one
 projector plus charged leakage in candidate THM-2418.  That reflection
-analogy, and the fixed-layer/signed-leakage analogy with candidate
-THM-2412, are cross-frontier explanations only; neither candidate is
+analogy, and the fixed-layer/signed-leakage analogy with THM-2412, are
+cross-frontier explanations only; none of these related theorems is
 used in the proof.
 
 ## 7. Exact scope
