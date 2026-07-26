@@ -323,7 +323,7 @@ require(endpoint_margin is not None and endpoint_margin > 0, "hostile margin")
 
 
 print("theorem=THM-2388")
-print("status=PROVED+VERIFIED-EXACT-CANDIDATE")
+print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED")
 print(f"root_identity_cases={root_identity_cases}")
 print(f"composite_transfer_cases={transfer_cases}")
 print(f"fourier_residue_cases={fourier_residue_cases}")

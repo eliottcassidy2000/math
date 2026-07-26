@@ -2,7 +2,7 @@
 id: THM-2388
 title: "Last septimal excess ledger and blocker-caged toothpick specialization"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. This
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. This
   specializes THM-2198/2222's already-proved thirteen-root -1
   eigenline and unique anti-defect root to the remaining
   k=2,(t,b)=(1,0) septimal excess. On
@@ -30,14 +30,14 @@ related:
   - THM-2385-two-top-septimal-blocker-collision-reduction
 script: 04-computation/lrc14_thirteen_root_multiplicity_reflection_thm2388.py
 output: 05-knowledge/results/lrc14_thirteen_root_multiplicity_reflection_thm2388.out
-script_sha256: c49b83c8763322ca5b12d18db63a015810dccaf9c5ac3bff7779d3d2a73a7a2d
-output_sha256: 5cb8a06de1cbf8ec5b3844a4819bb9d687c4859c7ed312f350f471b3d4931355
+script_sha256: 68ca5451f1374d4dcfcd1998275dff3a146e97d1f575c405b926fd8a38d89401
+output_sha256: 15d68bdd541d9bc1ece7dd2614a869a08dec1a82eedcad4dbd2ca96557f4edb6
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2388 -- the last septimal lane has an exact excess ledger
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Among THM-2367's only-`c_3`-dominant alternatives, the still-live lane
 addressed here is
@@ -560,10 +560,9 @@ root chosen in (21) and the sign balance (25). Any tournament/Fano
 refinement must retain those sidecars; a cosmetic three-colouring is not an
 equivalence.
 
-This theorem does not close (1). THM-2385 separately owns the two-top
-collision branch and must not be treated as proved while it remains
-reserved. No thirteen-adic row is removed here, the ledger remains `165`,
-and LRC(14) remains open.
+This theorem does not close (1). THM-2385 separately closes the two-top
+collision branch. No thirteen-adic row is removed here, the ledger
+remains `165`, and LRC(14) remains open.
 
 ## 7. Exact companion
 

@@ -172,7 +172,7 @@ exact and finite; it does not prove that every surviving interval is empty.
 THM-2168--2257 leave `165` rows; THM-2295--2349 supply packets and `91`-unit edges.
 THM-2350--2367 give LRC banks (THM-2356 kernel `28,393` versus `169`; THM-2363 dominates); THM-2368--2377 expose hostiles and force the `98`-toothpick/repeated-layer carrier.
 THM-2378 closes `W=k=1`; THM-2381/2382 close `(1,1)`/`(5,2,7)`; THM-2385 closes `(2,0)`, leaving only `k=2,(1,0)`.
-THM-2388 is a CANDIDATE locating `36/343` excess and its blocker cage, not positive off-cage mass. The audited first-collision control gives reduced overlap/phase; THM-2379/2380/2384 still leave owner-typed terminal restoration, a true dual dipole, and endpoint reference. The ledger remains `165`.
+THM-2388 is proved and independently audited: it locates `36/343` excess and its blocker cage, not positive off-cage mass. The audited first-collision control gives reduced overlap/phase; THM-2379/2380/2384 still leave owner-typed terminal restoration, a true dual dipole, and endpoint reference. The ledger remains `165`.
 
 ### Independent routes that remain live
 
