@@ -30,8 +30,8 @@ related:
   - THM-2414-thirteen-skew-septimal-word-transport-and-local-stopping-atlas
 script: 04-computation/lrc14_septimal_carry_matrix_thm2418.py
 output: 05-knowledge/results/lrc14_septimal_carry_matrix_thm2418.out
-script_sha256: 9c4969c22b72232b498d607c05a78cb5910f33c9f63ac083d78a790b1857cfa1
-output_sha256: 11ad8203ce0cf431d6eb47b8dbb8b32b4bd54e06ea8e9cf803371892ef4fbf15
+script_sha256: 3d2025843aaad23ba22d836247b09e28fb920e388e0ca2e519798203b805d0ab
+output_sha256: f23a5daf98afa88d945614844d5e855fd17291e50b92185a27a25e4fc985f243
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -410,7 +410,9 @@ six-dimensional charged subspace.  With an arbitrary terminal profile,
 T_(G,Q)=(1/13)J diag(q),                                   (41)
 ```
 
-still has rank one; every normalized source row is identical.
+has rank at most one, and has rank one exactly when `q` is not the zero
+profile.  Whenever a row has positive mass, every normalized source row
+is identical.
 
 The mechanism has a complete rational family.  If
 
@@ -537,12 +539,33 @@ classifies every deeper clock of any fixed rational finite-step source.
 Unlike (50), different period classes may alternate between flat and
 all-six survival.
 
+That last possibility really occurs.  At denominator `39`, take the
+Boolean source supported on cells
+
+```text
+{0,5,8,9,13,16,18}.                                        (55)
+```
+
+Here `ord_21(13)=2`.  At extra depths `d=0,1,2,3`, the unscaled
+carry-count vectors are respectively
+
+```text
+(1,1,1,1,1,1,1),
+(15,19,18,17,12,4,6),
+(169,169,169,169,169,169,169),
+(2199,2203,2202,2201,2196,2188,2190).                       (56)
+```
+
+The last vector is the second plus the uniform vector `(2184,...,2184)`.
+Thus the even class is flat while the odd class has all six charged
+colours, exactly realizing the scale-period alternative.
+
 ## 8. Canonical scope and the missing sidecar
 
 For a THM-2305 terminal stratum `Q_(j,sigma)`, positivity proves only
 
 ```text
-sum_l q_l>0.                                                   (55)
+sum_l q_l>0.                                                   (57)
 ```
 
 It does not prove that its seven cylinder masses are nonconstant.
@@ -589,7 +612,8 @@ The dependency-free exact companion:
 - exhausts all `8,192` Boolean depth-one source profiles and checks the
   fixed-cylinder tail formula; and
 - checks the eventual finite scale-periodicity on rational endpoint
-  denominators coprime to thirteen.
+  denominators coprime to thirteen, including the period-two
+  flat/all-six Boolean control (55)--(56).
 
 Run:
 

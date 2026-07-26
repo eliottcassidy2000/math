@@ -9,6 +9,56 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-271 (2026-07-26, THM-2418 fixed-source amendment audit) -- a nonwrapping prefix-block proof was stated with wrapped circular endpoints, and its verifier checked the wrong source
+
+- **What was written:** the fixed-source amendment described
+  `[A/B,(A+p)/B)` as a circular source without restricting the displayed
+  lift, called `J diag(q)` rank one for every terminal profile, and cited a
+  variation check on an unrelated three-cell tuple as verification of the
+  thirteen-cell source `[3/13,10/13)`.
+- **Minimal witnesses:** for `(B,p,A)=(5,3,4)`, wrapping the cells
+  `{4,0,1}` gives residue counts `(1,2,0)`, not one of each.  For `q=0`,
+  `J diag(q)` has rank zero.  The unrelated tuple did not test the claimed
+  interval at all.
+- **Repair:** the universal law now assumes the nonwrapping lift
+  `0<=A<A+p<=B` (and analogously `0<=A<A+7t<=13^s`), calls the centred
+  half-open interval inversion-even only almost everywhere, and states rank
+  at most one, with equality exactly for a nonzero terminal profile.  The
+  companion constructs the actual thirteen-cell block and checks its two
+  circular jumps, mass, and carry counts through eight clocks.  A separate
+  denominator-39 Boolean control realizes the claimed flat/all-six period
+  alternation.
+- **Rule:** a consecutive integer block is not automatically a consecutive
+  block after circle reduction.  State the chosen nonwrapping lift, include
+  zero-profile boundaries in rank claims, and make a verifier construct the
+  exact object named by the theorem.
+
+## MISTAKE-270 (2026-07-26, THM-2419 affine-shell audit) -- an affine torsor was used without exposing primitivity, Fourier normalization, or the amplitude sidecar
+
+- **What was written:** the first promoted affine-sideband theorem applied
+  the full-kernel residue count without explicitly normalizing the selected
+  speed row to primitive form, suppressed the quotient-character
+  normalization, and described a same-shell residue-zero address as
+  sufficient without separately requiring a nonzero labelled cross-packet
+  coefficient and phase.
+- **Minimal witness / first failed implication:** for `w=(2,2),X=2`, the
+  shell residues modulo two are only `(0,1),(1,0)`, while
+  `ker(w mod2)` is all four residues.  An address in a residue-zero reference
+  fibre also carries no amplitude by itself.  Summing all `M^n` ambient
+  twists repeats every quotient character `M` times.
+- **Repair:** THM-2419 now assumes primitive `w` (or performs a lawful
+  common-gcd normalization), writes
+  `C(u)=M^(1-n) sum_[ell] chi_ell(-u)H(ell)` over
+  `(Z/M)^n/<w>` and the equivalent `M^-n` ambient formula, and scopes the
+  same-shell reference as address-level sufficiency only.  Its exact
+  companion tests signed primitive fibres, the nonprimitive hostile,
+  quotient-versus-ambient Fourier multiplicity, signed `X`, and the CRT
+  reductions.  A physical conclusion still needs a nonzero cross-reference
+  coefficient with a common Abel gauge and phase.
+- **Rule:** affine-shell counting needs primitivity; quotient Fourier sums
+  need their repetition factor; and a surviving address is not a surviving
+  current until amplitude and relative phase are transported.
+
 ## MISTAKE-267 (2026-07-26, THM-2412 verification and quotient audit) -- optimized transcript equality was not optimized verification
 
 - **What was written:** the promoted THM-2412 companion used sixteen

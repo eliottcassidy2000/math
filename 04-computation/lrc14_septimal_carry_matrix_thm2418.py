@@ -476,6 +476,14 @@ def main():
         (0, 5, tuple(Fraction((3 * cell + 1) % 7, 7) for cell in range(5))),
         (
             1,
+            3,
+            tuple(
+                Fraction(int(cell in (0, 5, 8, 9, 13, 16, 18)))
+                for cell in range(39)
+            ),
+        ),
+        (
+            1,
             2,
             tuple(Fraction((cell * cell + 2) % 5, 5) for cell in range(26)),
         ),
@@ -505,6 +513,37 @@ def main():
                     masses[residue] += value * count / denominator_tail
 
             uniform = len(set(masses)) == 1
+            if base_depth == 1 and denominator_tail == 3:
+                alternating_expected = (
+                    (Fraction(1, 3),) * P,
+                    (
+                        Fraction(5),
+                        Fraction(19, 3),
+                        Fraction(6),
+                        Fraction(17, 3),
+                        Fraction(4),
+                        Fraction(4, 3),
+                        Fraction(2),
+                    ),
+                    (Fraction(169, 3),) * P,
+                    (
+                        Fraction(733),
+                        Fraction(2203, 3),
+                        Fraction(734),
+                        Fraction(2201, 3),
+                        Fraction(732),
+                        Fraction(2188, 3),
+                        Fraction(730),
+                    ),
+                )
+                require(
+                    tuple(masses) == alternating_expected[extra_depth],
+                    "Boolean period-two carry histogram failed",
+                )
+                require(
+                    uniform == (extra_depth % 2 == 0),
+                    "Boolean flat/all-six alternation failed",
+                )
             charged = []
             for character in range(1, P):
                 vector = value_fourier_vector(masses, character)
@@ -550,6 +589,7 @@ def main():
     print("one histogram classifies all deeper clocks: PASS")
     print(f"rational finite-step scale-period checks={rational_period_checks}")
     print("one ord_(7D0)(13) period classifies every rational tail: PASS")
+    print("D0=3 Boolean period-2 flat/all-six alternation: PASS")
     print("canonical source-terminal correlation remains OPEN")
     print("THM-2418 exact companion PASS")
 

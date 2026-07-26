@@ -17,7 +17,8 @@ universal odd (B,p) equal-carry blocks checked=20
 depth-one Boolean cylinder profiles=8192 (flat tails=65)
 fixed-cylinder tail Fourier formulas checked=108
 one histogram classifies all deeper clocks: PASS
-rational finite-step scale-period checks=144
+rational finite-step scale-period checks=168
 one ord_(7D0)(13) period classifies every rational tail: PASS
+D0=3 Boolean period-2 flat/all-six alternation: PASS
 canonical source-terminal correlation remains OPEN
 THM-2418 exact companion PASS
