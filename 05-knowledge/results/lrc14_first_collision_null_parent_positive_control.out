@@ -1,0 +1,13 @@
+LRC14 first-collision null-parent positive control
+endpoint_grid: 231868
+parent_line_counts: 2184,2184,2184,2184,2184,2184,2184,2184,2184,2184,2184,2184,2184
+retained_line_counts: 2184,2072,1988,1988,1988,1988,1988,1988,1988,1988,1988,1988,2072
+deletion_line_counts: 0,112,196,196,196,196,196,196,196,196,196,196,112
+cross_correlation_numerators: 5562,5587,5620,5629,5629,5629,5629,5629,5629,5629,5629,5620,5587
+strict_nonzero_target_colours: 12
+strict_nonzero_deep_target_pairs: 144
+signed_nonzero_target_gram_mass: -54/891474493
+absolute_nonzero_target_gram_mass: 54/891474493
+complete_cayley_energy: 5982/10331448031704891637
+canonical_owner_word_transfer: OPEN
+all_checks: PASS
