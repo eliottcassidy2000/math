@@ -1,0 +1,13 @@
+THM-2360 conditional Laurent-UFD cube descent exact companion
+quadratic ring: C[x,t]/(t^2-x^2+1)=C[s,s^-1]
+conjugation: s -> s^-1
+B=s^5*(7q+S*t): degree 10 with nonzero constant
+endpoint product under leading relation: -a3^3/256
+norm: B*B^vee=-4*X0*P6^3
+X0=(s^2-2*x0*s+1)/2; P6=s^3*p(x) is reciprocal
+generic allocation norm ratio: 432000
+linear/cube overlap multiplicity: 4; norm ratio: 27648
+repeated-p-root norm ratio: 93312
+hostile nonmaximal gcd: (x-2)^2
+hostile discriminant multiplier: (x-2)^6
+VERDICT: cube descent is exact conditional on Res(p,q)!=0 and q(x0)!=0
