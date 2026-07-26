@@ -1,0 +1,12 @@
+THM-2369 complete-line target Dirichlet exact referee
+coordinate-line character multipliers: 338
+target mask cells: pure-1=12, pure-2=12, fork=144
+line energy identity: D1=2(E10+E11), D2=2(E01+E11)
+full-Cayley target multipliers: 169
+deep-colour target lines/sharp share: 168 / 1/13
+balanced bispectrum cells: 28561
+balanced modulation checks: 33800
+charged slope labels/one-direction fibres: 169 / 13
+inverse-character flat edges: 338
+reference polarization: (Fraction(-151, 231), Fraction(-46, 1155))
+VERDICT: complete lines recover target type; balanced observables lose character slope
