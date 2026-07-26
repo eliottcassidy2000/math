@@ -168,7 +168,7 @@ Discharge every resulting labelled cell by at least one of:
 THM-2168--2257 leave `165` rows. THM-2295--2377 give relation/edge/bank/toothpick carriers (THM-2356 kernel `28,393`; THM-2363/THM-2368); THM-2378/2381/2382/2385 isolate `k=2,(t,b)=(1,0)`.
 THM-2388--2397 reduce no-clean to `M=1` (`delta>=66/4459` there, `>=1/26754` universally); each literal role retains `12` target colours at large `13^k` clocks with typed deletion support.
 THM-2405 leaves seven no-clean `M=1` ratios; THM-2415 caps every packet at `M<=2` via `W_H=W_(13H)` on a complete deep orbit.
-THM-2407/2409 route all target and, at `Q=1`, all nonzero source colours to `gcd(m,91)=1` triangles. Use the depth cap or finish delayed-word phase transport. Ledger: `165`.
+THM-2407/2409 route target and, at `Q=1`, nonzero source colours to `gcd(m,91)=1` triangles. THM-2410/2416 turn full-coordinate mean cancellation into a bounded `13Z` affine shell with full Gram energy. Exact-relation and delayed-word phase transport remain open. Ledger: `165`.
 
 ### Independent routes that remain live
 

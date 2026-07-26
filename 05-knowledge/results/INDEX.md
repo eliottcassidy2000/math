@@ -1939,7 +1939,8 @@ hostile is not asserted to be a physical scalar-row trajectory.
 
 ### lrc14_zero_current_or_sideband_prony_thm2416.out
 
-Exact companion for **CANDIDATE THM-2416**. It checks the sharp
+Exact companion for **THM-2416, PROVED + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED**. It checks the sharp
 `L-1` periodic jump-Prony boundary for `2<=L<=9`, the two-jump
 no-uniform-amplitude hostile, exhaustive Boolean product/composition jump
 invoices, thirteen-fold jump orbits, and the inherited rational

@@ -2,7 +2,7 @@
 id: THM-2416
 title: "Zero current or bounded sideband Prony dichotomy"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. A
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. A
   nonzero periodic finite step function with zero mean and L effective
   jump nodes has a nonzero Fourier coefficient at some integer
   1<=X<=L-1. Periodicity supplies the missing zeroth Prony moment, and
@@ -29,7 +29,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2416 -- zero current or bounded sideband
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2410 proves a positive local Gram for every eligible full-coordinate
 packet, but correctly stops because its integrated linear coefficient can
@@ -393,3 +393,23 @@ Both commands must reproduce
 ```
 
 with the LF hashes in the frontmatter.
+
+## 7. Independent audit
+
+An independent hostile audit accepted:
+
+- the distributional Fourier sign, periodic zeroth jump moment, sharp
+  `L-1` Vandermonde bound, and `1/P'(z_j)` equality construction;
+- the two-jump no-uniform-amplitude boundary;
+- the absolute-speed product/composition jump invoice;
+- the exact common-root covariance, `1/13` descent, jump-orbit identity
+  `L=13L_0`, and Fourier support in `13Z`;
+- the eligible condition `m!=-k_c`, the exponent-`20` Gram/Parseval
+  inheritance, and the quotient invoice;
+- retention of the all-unit mod-thirteen residue on the affine shell
+  `a.w=X_side`, without exact-relation or mod-seven overclaim; and
+- all negative scope statements.
+
+Normal and optimized execution byte-match the stored transcript.  The
+auditor independently verified both LF hashes and the documentation
+gate.
