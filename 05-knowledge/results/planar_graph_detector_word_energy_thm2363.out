@@ -1,0 +1,11 @@
+THM-2363 planar-graph detector / word-energy exact companion
+field: F_169=F_13[t]/(t^2-2)
+graph partition cells: 28561
+deterministic Gaussian-integer controls: 80
+word masks checked: a, b, ab
+sharp detector: 4394
+sharp masked energy: 742586
+sharp ratio: D_graph/E_sigma=1/169
+jet-cancellation aggregate energy: 0
+jet-cancellation graph detector: 52
+VERDICT: D_graph >= E_sigma/169, and 1/169 is sharp
