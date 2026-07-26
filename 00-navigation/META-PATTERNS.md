@@ -123,6 +123,22 @@
 **Counterindication:** an action alone is insufficient: the identity must be equivariant, its right side invariant, and the full sum independently controlled.
 **Evidence:** THM-2126 (lost guard fibre), THM-2102 (missing divisibility), and THM-2101 (successful Galois incidence).
 
+## Compose witness fibres before taking their scalar shadow
+
+**Trigger:** different finite-to-one maps make different masks constant, but
+one orbit misses the target phase or transitivity hides its middle witness.
+**Action:** retain base/root labels and form the actual cospan; disintegrate one
+fibre, keep its set-valued section, cross the transverse fibre, then scalarize.
+Record operation order, units, strict endpoints, and the target-landing map.
+**Mechanism:** successive constancy turns correlation into finite incidence;
+the transverse section can repair a hostile confined to one fibre.
+**Counterindication:** shared divisors, missing high factors, nonunit labels,
+untransported targets, and endpoint atoms can invalidate the count. A cospan
+is not automatically a tournament equivalence.
+**Evidence:** THM-2420 repairs THM-2415's one-orbit boundary and THM-2421
+collapses the guard-top types; THM-2413 makes addition/multiplication
+transitivity into composition through an explicit intermediate witness.
+
 ## Existence is a maximum or tail question, not automatically a mean question
 
 **Trigger:** proving a witness exists, excluding a covering configuration, or

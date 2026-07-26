@@ -1,5 +1,8 @@
 # Script Results Index
 
+- `lrc14_guard_top_thirteen_root_capacity_thm2421.py` -> matching `.out` [THM-2421 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. In the remaining deep-`c_3`/top-guard branch, THM-2367's top-bin inequality makes the top words cover pointwise whenever `W>k`. A quotient-blocker-safe thirteen-root fibre then removes every physical blocker, so `13<=4+2t` forces all five ordinary words to be top. Exactly three `(k,t,b,W)` types remain at `M=0` and four primitive types at `M>0`, with a valuation-zero sidecar. Hashes `23eb5322...f46b` / `53eff811...1dbc`.
+- `lrc14_final_lane_compositional_root_exclusion_thm2420.py` -> matching `.out` [THM-2420 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. THM-2417 already excludes `M=2`; at the remaining `M=1`, the exact thirteen-root phase section `6/637` loses at most the sharp central-comb overlap `1/182`, leaving `5/1274`. This forces two doubled guard roots and empties the final lane; a transverse proof independently excludes `M=2` with floor `36/4459`. With the earlier branch closures this proves `nu_7(c_3)>M => nu_7(H)=M`; a root-imported Lean module checks the finite cospan, mass arithmetic, and Haar-dilation kernel. Hashes `6cbef621...9458` / `2e2e576e...1186`.
+- `lrc14_septimal_carry_matrix_thm2418.py` -> matching `.out` [THM-2418 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. The canonical base-thirteen prefix gives the exact alternating septimal carry and a full-rank Haar kernel whose six charged singular values are `13^-k`. Terminal conditioning preserves every colour precisely when its cylinder survives, but source-prefix weighting can collapse the whole matrix to rank one even for an even centred BV-two source of mass at least `7/13`; no physical row exclusion follows. Hashes `dbf91237...9863` / `d9daa1a3...193`.
 - `prime_drift_twin_center_weld_thm2413.py` -> matching `.out` [THM-2413 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. After equal-parent deletion, rooted additive and multiplicative transitivity defects number `x-1` and `tau(x)-2`, so primes are precisely the zero multiplicative-defect vertices. A014574 centers give Boolean divisor diamonds for `m^2-1`, obey an exact Brun-supported reciprocal identity, and are midpoint labels of adjacent slope-two prime-drift plateaux; discriminant four alone fails at `m=8`. A373813 is a distinct affine-line hypergraph cover. Hashes `35d0a623...dc48` / `bc612c8b...2287`.
 - `delta_exponential_central_newton_split_thm2412.py` -> matching `.out` [THM-2412 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. The scaled falling-factorial map exactly intertwines derivative and forward difference; `(1+h lambda)^N` is the terminating Gregory--Newton exponential and tends jointly to `e^(lambda X)` at fixed endpoint. The two nested central Boolean halves are `(4^n +- C(2n,n))/2`, forming a reflected numerical partition with opposite Catalan leakage. Tournament count is `2^C(v,2)`, and the plus-minus form is switching energy, not a solved asymptotic. All `304` truth-bearing checks remain active under `-O`. Hashes `115d24c6...08720` / `821ea1a0...9d4c`.
 - `jc2_degree22_w_axis_origin_closure_thm2423.py` -> matching `.out` [THM-2423 PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING]. On the open first-flux chart with `B=C=D=E=0`, the nonzero-`W` branch is the squarefree genus-two curve `r^2=L_5(v)` and admits no nonconstant rational trajectory. At `W=0`, the first two fluxes make `v=u/y^2` a root of `L_5` and reconstruct nonzero constant `Z/y^3`; the third flux is a nonzero `h^11`, and the full Faber sidecar kills the Keller one-form's eleventh-power cusp. This empties the full `W`-axis of `mathcal A!=0`; the `B,C,D,E` axes remain open. Hashes `c00b75c1...b583` / `56618ccf...59b2`.
@@ -1955,6 +1958,31 @@ invoices, thirteen-fold jump orbits, and the inherited rational
 exponent-`20` THM-2410 Gram floor. The surviving sideband lies in `13Z`
 and retains an all-unit mod-13 affine residue, but is not an exact
 relation current. Normal and optimized runs agree and end in `PASS`.
+
+### lrc14_final_lane_compositional_root_exclusion_thm2420.out
+
+Exact companion for **THM-2420, PROVED + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED**. It replays the different-depth mass `6/49`, the
+`M=2` thirteen-root useful-root floor and exact seven-root landing, and
+the `M=1` section/central-overlap subtraction. Exact interval sweeps
+check `3,367` reduced narrow-comb phase pairs and `624` generic
+thirteen-root bases; the overlap ceiling `1/182` and final `5/1274`
+floor are sharp. The inherited `13`-unit condition is load-bearing.
+Normal and optimized runs agree and end in `PASS`; the result empties
+the primitive final septimal lane. With the earlier branch closures it
+also proves `nu_7(c_3)>M => nu_7(H)=M`, but decrements no scalar row.
+
+### lrc14_guard_top_thirteen_root_capacity_thm2421.out
+
+Exact companion for **THM-2421, PROVED + VERIFIED-EXACT +
+INDEPENDENTLY HOSTILE-AUDITED**. It reconstructs all strict and
+boundary thirteen-root words and their unit-affine closures, giving
+ordinary support at most `2` and guard support at most `4`. It keeps an
+abstract guard-plus-five-ordinary cover as a positive control, exhausts
+all guard-top `(k,t,b,W)` arithmetic, and reproduces the three `M=0`
+and four primitive `M>0` residual types. Normal and optimized runs
+byte-match and end in `PASS`; none of the seven regime-typed shapes is
+asserted realizable.
 
 ### lrc14_septimal_carry_matrix_thm2418.out
 

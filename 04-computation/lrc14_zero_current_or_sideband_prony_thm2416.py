@@ -174,7 +174,8 @@ def main():
     print("THM-2410 crude invoice=R*J(Q)+26*(sum(|w_i|)+|c|)")
     print(f"sample crude invoice={sample_jump_invoice}")
     print(f"sample quotient invoice=floor(L_crude/13)={sample_quotient_invoice}")
-    print("physical sideband X=13Y, 13<=X<=L-13 (SHARP)")
+    print("physical sideband X=13Y, 13<=X<=L-13 (PASS)")
+    print("ambient 1/13-periodic L-13 boundary=SHARP")
     print(
         "rational exponent-20 floor="
         f"{gram_floor.numerator}/{gram_floor.denominator}"

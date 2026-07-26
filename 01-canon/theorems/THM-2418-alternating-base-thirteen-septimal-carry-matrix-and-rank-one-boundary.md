@@ -114,7 +114,10 @@ M_k
 ```
 
 Thus the word phase is not an independent colour. It is the alternating
-digit carry of the real base transition.
+digit carry of the canonical base transition. For an arbitrary real
+lift one must first replace `y` by `{y}` (or retain the additional
+integer-gauge term); equation (8) is not a digit expansion of
+`floor(Ry)` outside the canonical interval.
 
 For `c in F_7`, define the pointwise affine permutation matrix
 

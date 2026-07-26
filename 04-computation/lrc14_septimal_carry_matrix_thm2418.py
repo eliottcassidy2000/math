@@ -121,10 +121,14 @@ def value_fourier_vector(values, character):
     return vector
 
 
-def jump_count(values):
+def subset_jump_count(length, subset):
+    """Cyclic jumps of the indicator of a sparse subset."""
+
+    candidates = set(subset)
+    candidates.update((index + 1) % length for index in subset)
     return sum(
-        values[index] != values[index - 1]
-        for index in range(len(values))
+        ((index in subset) != ((index - 1) % length in subset))
+        for index in candidates
     )
 
 

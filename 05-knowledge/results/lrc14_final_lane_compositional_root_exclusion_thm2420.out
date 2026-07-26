@@ -1,0 +1,18 @@
+theorem=THM-2420
+arithmetic=Fraction-only
+different-septimal-depth-safe-mass=6/49
+M2-useful-root-floor=6-of-13
+M2-transformed-band-floor=36/637
+M2-landed-phase-floor=36/4459
+M2-exact-cases=5,minimum=5249/624260
+M1-root-section-mass=6/637
+narrow-phase-overlap-ceiling=1/182
+M1-landed-phase-floor=5/1274
+M1-exact-cases=6,minimum=5/1274
+half-ratio-checks=9230
+independent-overlap-checks=3367,maximum=1/182
+direct-13-root-bases-checked=624
+hostile-13-divisible-H-useful-roots=0
+conclusion=primitive-final-lane-empty
+scope=no scalar-row decrement and no LRC(14) conclusion
+status=PASS
