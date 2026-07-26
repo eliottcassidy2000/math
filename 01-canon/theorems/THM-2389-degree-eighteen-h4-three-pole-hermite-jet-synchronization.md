@@ -590,8 +590,8 @@ Both transcripts must match
 ```
 
 byte-for-byte after LF normalization. Every executable check raises
-explicitly under optimized Python. Independent audit and hash attachment
-are pending before status promotion.
+explicitly under optimized Python. The declared hashes have been
+reproduced; independent audit remains pending before status promotion.
 
 The secondary coordinate-free companion independently verifies
 (32)--(37), derives the triangular reconstruction formulas after the
