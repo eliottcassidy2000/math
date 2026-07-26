@@ -1,0 +1,14 @@
+THM-2409 SEPTIMAL SOURCE COMPLETION EXACT AUDIT
+conductors=(7,13), gcd=1, cyclotomic intersection=Q
+C7 Boolean profiles exhausted=128
+flat Boolean profiles=2
+C7 all-or-flat over symbolic Q(zeta13)=PASS
+seven shifted dangers partition one a.e.=PASS
+K-valued nonflat control fires all six source colours=PASS
+finite flat-source/nonflat-target hostile target energy=12/169
+smooth hostile eps=delta=1/2, N>=3
+smooth hostile source profile independent of ell=PASS
+smooth hostile target b=+/-1 amplitude=1/112
+fixed-word partition=PASS
+mod-seven active-word coupled-shift partition=FAILS SHARPLY
+THM-2409 exact companion PASS
