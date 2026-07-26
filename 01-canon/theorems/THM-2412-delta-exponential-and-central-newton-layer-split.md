@@ -2,7 +2,8 @@
 id: THM-2412
 title: "Delta exponential and central Gregory--Newton layer split"
 status: >
-  PROVED + VERIFIED-EXACT. Differentiation on powers and forward
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  Differentiation on powers and forward
   difference on falling factorials are conjugate lowering operators under
   the Stirling transform. Their eigenfunctions are e^(lambda x) and
   (1+lambda)^n; hence 2^n, not an arbitrary power, is the eigenvalue-one
@@ -28,7 +29,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2412 -- delta exponentials and the central Newton split
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 There are three exact objects here:
 
@@ -421,3 +422,14 @@ python3 -O 04-computation/delta_exponential_central_newton_split_thm2412.py
 
 Both outputs must byte-match the stored transcript. Every executable check
 raises explicitly under optimized Python.
+
+## 8. Independent hostile audit
+
+An independent audit rederived the lowering identities, both Stirling
+transforms, the scaled-`h` intertwiner, the terminating exponential, the
+Pascal-half split, and both Catalan convolutions. It separately checked the
+reflection-fixed tie layer and the tournament arc-slot count, including the
+non-homomorphism, ordinary-monomial, nonunit-eigenvalue, and sixth-term
+hostiles. Normal and optimized transcripts byte-match the stored output, and
+the recorded hashes match the audited files. No claim about nonintegral
+Newton convergence or switching asymptotics is used.

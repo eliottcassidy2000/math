@@ -2,7 +2,8 @@
 id: THM-2413
 title: "Prime-index affine drift and twin-center summand--multiplicand weld"
 status: >
-  PROVED + VERIFIED-EXACT, with explicitly separated CITED consequences.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED, with explicitly
+  separated CITED consequences.
   A rational line through prime-index points is exactly a level set of
   H_(a,b)(n)=b p_n-a n, so A373813 is a minimum affine-drift-level-set
   cover. For slope two, H_(2,1) has one initial descent and is
@@ -31,14 +32,16 @@ script_sha256: c72f49d17e314df356f8d493abdaef32264d7cc0fcc1519fba0fbb70bfd66037
 output_sha256: 4fd91fd2d31d270e02c1a75228048d52c1d4968cd4d5fc5436e039f40992d2de
 secondary_script: 04-computation/prime_drift_twin_center_weld_thm2413.py
 secondary_output: 05-knowledge/results/prime_drift_twin_center_weld_thm2413.out
-secondary_script_sha256: 13330b8db5c13b3a789278997f3edfe64a00d60cccae68d9055fdf538482f2ab
-secondary_output_sha256: 674c3e67a9578b2353a4bd4d2e953a50804cdeac0328d146fe0cd2eb85590254
+secondary_script_sha256: 35d0a623b87ae5f0fa5e651c7c956b2c9343b5e8f14862dd535c8aa3911edc48
+secondary_output_sha256: bc612c8b6419f3752744d318d1880378230c39abdade7f29497ca606dab72287
+secondary_scope: independent normal-run evidence; its Python assertions are not optimization-safe
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2413 -- prime drift and the twin-center operation weld
 
-**PROVED + VERIFIED-EXACT, WITH CITED CONSEQUENCES SEPARATED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED, WITH CITED
+CONSEQUENCES SEPARATED.**
 
 Let `p_n` be the `n`-th prime and let
 
@@ -502,3 +505,19 @@ python3 -O 04-computation/prime_index_drift_twin_center_thm2413.py
 
 Both outputs must byte-match the stored transcript. Every executable check
 raises explicitly under optimized Python.
+
+## 10. Independent hostile audit
+
+The audit reconstructed every affine-drift fibre and slope-two boundary
+without using the primary incidence routine. A separate SciPy/HiGHS set-cover
+formulation reproduced the exact A373813 prefix through `N=27`; direct
+divisor enumeration reproduced the Boolean-diamond and diagonal-deletion
+defect laws; and exact rational arithmetic reproduced the center-reciprocal
+identity. It retained the startup descent, `3,5,7`, discriminant-four
+composite, and slope-four eight-point hostiles.
+
+The primary normal and optimized transcripts byte-match the stored output.
+The secondary operation-weld program independently matches its stored
+normal-run transcript; because it uses Python `assert`, it is not evidence
+for optimized execution. Brun convergence and the 2026 prime-line
+asymptotics remain `CITED`, not computationally promoted.

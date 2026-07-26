@@ -35,6 +35,44 @@ Format per entry:
   and distinguish a numerical reflected decomposition from a literal
   disjoint set partition or quotient count.
 
+## MISTAKE-269 (2026-07-26, THM-2418 carry-cocycle quantifier) -- a base-thirteen prefix formula omitted the integer part of an unrestricted real phase
+
+- **What was written:** candidate THM-2418 introduced an arbitrary real
+  `y`, then identified `floor(13^k y)` with the alternating reduction of
+  the first `k` digits of the fractional part.
+- **Minimal witness:** for `y=1,k=1`, the displayed digit is zero while
+  `floor(13y)=13=6 mod 7`.
+- **First failed implication:** the digit expansion reconstructs
+  `floor(13^k {y})`; for unrestricted `y` it omits
+  `13^k floor(y)`, whose residue is `(-1)^k floor(y) mod 7`.
+- **Repair:** the theorem now works on the canonical torus phase
+  `y in [0,1)`, exactly the domain used by its Haar kernel, physical
+  application, and verifier. Equivalently, an unrestricted-real version
+  must add the omitted integer-part term. The terminal all-colour
+  consequence also retains its necessary rational-profile hypothesis.
+- **Rule:** before identifying a radix prefix with a floor, either reduce
+  the phase to its canonical fundamental domain or carry the integer-part
+  cocycle explicitly.
+
+## MISTAKE-268 (2026-07-26, HYP-1994 twin-center necklace typing) -- the exceptional center 4 was put in a carrier asserted to lie in `6Z`
+
+- **What was written:** HYP-1994 used one symbol `C` both for all twin-prime
+  centers, including the center `4` of `(3,5)`, and for a carrier declared to
+  satisfy `C subset 6Z`; it then formed `K=C/6`.
+- **First failed implication:** `4` is not divisible by six, so `C subset 6Z`
+  and the integral typing of `K` already fail at the first member. This is a
+  carrier error, not evidence against the finite necklace computation.
+- **Strongest survivor:** every nonexceptional twin center is divisible by
+  six, and the finite centered-Goldbach packets checked in the hypothesis
+  retain their stated exact scope; the exceptional pair is checked
+  separately in that range.
+- **Repair:** write `C_all=A014574`, `C_6=C_all minus {4}`, and
+  `K=C_6/6`. All scaled sumset statements now use `C_6`; statements about the
+  full twin-center sequence use `C_all`.
+- **Rule:** when an eventually congruence-restricted sequence has startup
+  exceptions, type the restricted subcarrier before scaling it. Do not hide
+  an exceptional element inside quotient notation.
+
 ## MISTAKE-266 (2026-07-26, THM-2403 candidate typing audit) -- a clean-cell projector froze the blocker gate that the target action was moving
 
 - **What was written:** the first proof candidate for THM-2403 restricted

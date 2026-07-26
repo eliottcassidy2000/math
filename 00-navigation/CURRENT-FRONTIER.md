@@ -167,8 +167,8 @@ Discharge every resulting labelled cell by at least one of:
 [THM-2058](../01-canon/theorems/THM-2058-primitive-phase-packets-and-deck-fan-intervals.md) makes each bad-denominator/owner terminal finite, not proved empty.
 THM-2168--2257 leave `165` rows. THM-2295--2377 give relation/edge/bank/toothpick carriers (THM-2356 kernel `28,393`; THM-2363/THM-2368); THM-2378/2381/2382/2385 isolate `k=2,(t,b)=(1,0)`.
 THM-2388--2397 reduce no-clean to `M=1` (`delta>=66/4459` there, `>=1/26754` universally); each literal role retains `12` target colours at large `13^k` clocks with typed deletion support.
-THM-2405 leaves seven no-clean `M=1` ratios; THM-2415 caps every packet at `M<=2` via `W_H=W_(13H)` on a complete deep orbit.
-THM-2407/2409 route colours to `gcd(m,91)=1` triangles. THM-2410/2416 give a bounded `13Z` affine shell; THM-2419 retains its charged kernel fibre and identifies a same-shell residue-zero reference as the exact sidecar. Bezout/self-pairing fail; reference existence and delayed-word phase remain open. Ledger: `165`.
+THM-2405 leaves seven no-clean `M=1` ratios; THM-2415 caps every packet at `M<=2`, and THM-2417's fourteen strict relaxed-orbit duals exclude the entire `M=2` lane. Thus every last-lane survivor has `M=1`, uniformly, without a row decrement.
+THM-2407/2409 route colours to `gcd(m,91)=1` triangles. THM-2410/2416 give a bounded `13Z` affine shell; THM-2419 retains its charged kernel fibre and identifies a same-shell residue-zero reference as the exact sidecar. THM-2418 identifies the septimal word phase as an alternating base-thirteen carry, but its even BV-two rank-one source hostile shows that a canonical source--terminal correlation/reference is still missing. Ledger: `165`.
 
 ### Independent routes that remain live
 

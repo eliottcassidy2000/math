@@ -2,13 +2,13 @@
 id: THM-2418
 title: "Alternating base-thirteen septimal carry matrix and rank-one boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. For
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For
   R=13^k, the physical-to-terminal seven-root map is the affine
   permutation l=floor(Ry)+(-1)^k r modulo seven, and the carry is the
   alternating sum of the first k base-thirteen digits. Haar averaging
   gives an explicit seven-state kernel K_k=P^k of rank seven; its six
   charged singular values are exactly 1/R. A terminal-only rational
-  cylinder profile is nonflat exactly when every six nonzero septimal
+  cylinder profile is nonflat exactly when all six nonzero septimal
   colours survives, with attenuation 1/R. This does not close the real
   word problem: a flat centred-comb terminal word is exact, a
   one-cylinder word makes the terminal matrix rank one, and for every k
@@ -31,7 +31,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2418 -- the septimal word phase is an alternating digit carry
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2409 isolates the real-word obstruction: modulo thirteen the
 transported word is neutral, while modulo seven the same coordinate
@@ -56,8 +56,8 @@ THM-2414. Its application boundary is the main result.
 
 ## 1. The exact affine carry cocycle
 
-For a seven-unit integer `A`, width `a in {1,2}`, and real base `y`,
-put
+For a seven-unit integer `A`, width `a in {1,2}`, and canonical phase
+`y in [0,1)`, put
 
 ```text
 W_(A,a)(y)
@@ -282,9 +282,9 @@ q nonconstant
   iff Mhat(e)!=0 for every e in F_7^*.                         (28)
 ```
 
-This is the exact positive survivor. For example, any positive terminal
-word missing one complete seventh-cylinder fires all six terminal-only
-carry colours.
+This is the exact positive survivor. For example, any positive **rational
+terminal-cylinder profile** missing one complete seventh-cylinder fires all
+six terminal-only carry colours.
 
 ## 4. Two sharp terminal boundaries
 
@@ -359,8 +359,8 @@ prefix cylinders:
 S_k=[3/R,1-3/R).                                              (35)
 ```
 
-In both cases `1_(S_k)` is real and even, has exactly two circular
-jumps, and
+In both cases `1_(S_k)` is real and even almost everywhere (the half-open
+endpoint convention is immaterial), has exactly two circular jumps, and
 
 ```text
 mu(S_k)
@@ -380,7 +380,7 @@ K_(S_k)=(h/R)J.                                               (37)
 ```
 
 It has rank one and annihilates the whole six-dimensional charged
-subspace. With an arbitrary terminal profile,
+subspace. With an arbitrary positive-mass terminal profile,
 
 ```text
 T_(S_k,Q)=(h/R)J diag(q),                                    (38)
@@ -464,3 +464,30 @@ Both transcripts must byte-match, after LF normalization,
 
 Every truth-bearing finite check raises explicitly, so optimized mode
 executes the same audit.
+
+## 8. Independent hostile audit
+
+An independent derivation reconstructed the carry kernel directly from
+residue counts. With `A(r,l)=1_(r+l=6 mod 7)` and
+`Pi=J/7`, it obtained
+
+```text
+P=(2J-A)/13,
+K_(2m)=Pi+13^(-2m)(I-Pi),
+K_(2m+1)=Pi-13^(-(2m+1))(A-Pi),
+K_k K_k^T=Pi+13^(-2k)(I-Pi).
+```
+
+Thus the rank-seven and charged-singular-value claims are independent of
+the companion implementation. The audit separately reconstructed both
+rank-one deletions: at even depth it removes the unique excess residue
+zero, and at odd depth it removes one copy of residues `0,...,5`, leaving
+exactly `floor(R/7)` copies of every residue. Direct reconstruction through
+depth ten passed.
+
+The affine law was checked on the corrected canonical domain `y in [0,1)`.
+Normal and optimized companion transcripts byte-match the stored output and
+the frontmatter hashes. The audit also reproduced the flat `D_7` hostile,
+the one-cylinder `D_2 intersection D_1^c` hostile, and the necessity of
+rationality in the terminal all-colour statement. It infers no canonical
+source current, row exclusion, or LRC(14) consequence.
