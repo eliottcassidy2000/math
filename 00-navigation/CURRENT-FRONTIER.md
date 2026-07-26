@@ -172,7 +172,7 @@ exact and finite; it does not prove that every surviving interval is empty.
 THM-2168--2257 leave `165` rows; THM-2295--2377 supply the relation/edge/bank/toothpick carriers (THM-2356 kernel `28,393`, THM-2363 dominant, THM-2368 root routing), and THM-2378/2381/2382/2385 leave only `k=2,(t,b)=(1,0)`.
 THM-2388--2393 reduce the last lane to a possible `M=1` common-core chain. THM-2396's empty relaxed `Z/49Z` word localizes orbitwise to
 `delta>=66/4459` there and `delta>=1/26754` universally. THM-2397 gives every literal role all twelve target colours, survives large `13^k` clocks, and types literal deletion support.
-THM-2400 removes the clean-parent root-gauge tax (`13` owner/digit cells) and makes every nonzero standard owner target unequal-slope. THM-2399 makes one-orbit `N_S>=1` sharp; the debt is a lawful unequal-slope current plus canonical endpoint transport. Ledger: `165`.
+THM-2400 removes the `13`-cell root-gauge tax and forces unequal owner slopes. THM-2399 makes `N_S>=1` sharp; THM-2402 makes equality one-sheet and types primitive switches by `q_*`. Open: switch existence, current, and endpoint transport. Ledger: `165`.
 
 ### Independent routes that remain live
 

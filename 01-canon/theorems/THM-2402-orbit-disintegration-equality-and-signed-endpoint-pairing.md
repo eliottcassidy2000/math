@@ -2,7 +2,7 @@
 id: THM-2402
 title: "Orbit-disintegration equality and signed endpoint pairing"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. For
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For
   T_q(x)=qx on the circle, if E lies over H and every H-fibre meets E,
   then q mu(E)-mu(H)=integral_H(N_E-1). Equality is equivalent to an
   almost-everywhere one-sheet measurable section and gives the exact
@@ -35,7 +35,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2402 -- orbit equality is a one-sheet endpoint-paired section
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2396 obtains the common-core clean-mass floor by integrating the
 pointwise statement that every high-safe forty-nine-root orbit contains
@@ -434,3 +434,27 @@ Both transcripts must byte-match
 
 after LF normalization. Every executable assertion remains active
 under optimized Python.
+
+## 9. Independent hostile audit
+
+An independent evaluator rederived the measurable disintegration and
+one-sheet equivalence without using the companion, checked the factor
+`q` and sign in the Fourier and distributional-boundary pushforwards,
+and verified that the endpoint conclusion is signed and confined to
+the interior base. It separately checked both sharp multiplicity
+support examples, the common-core `66/4459` specialization, the exact
+endpoint congruence, and the conditional—not existential—`q_*` label
+consequence.
+
+Ordinary and optimized companion runs both LF-byte-match the stored
+transcript. The independently recomputed hashes are
+
+```text
+source  854520c367c075cfa52a5b56592f14c2ae189849cc94533f7f620259c659c975
+output  f9c642cbf3236a63dfd2a926aa5e2e0ea239e072efd47deb8e79de469f90841f.
+```
+
+The audit explicitly accepted the stopping boundary: this theorem
+classifies equality and types a primitive switch if one exists; it
+does not force that switch or transport it into a canonical target
+endpoint.
