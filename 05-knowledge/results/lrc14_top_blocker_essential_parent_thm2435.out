@@ -1,0 +1,17 @@
+THM-2435 exact companion
+labelled_six_unit_profiles=352947
+unit_gap_histogram=0:2520,1:50400,2:157500,3:119700,4:22155,5:672
+one_blocker_cover_profiles=68040
+one_blocker_essential_profiles=50400
+two_blocker_cover_profiles=1093680
+two_blocker_essential_profiles=970200
+essential_parent_floor=1/7
+aggregate_physical_floor=1/637
+fixed_label_parent_floor=1/14
+fixed_label_physical_floor=1/1274
+per_nonzero_septimal_colour_floor=1/8918
+total_charged_septimal_floor=3/4459
+one_blocker_per_colour_floor=1/4459
+one_blocker_total_charged_floor=6/4459
+target_dark_hostile_frequencies=1:78,2:65,3:52,4:39,5:26,6:13
+ALL CHECKS PASSED
