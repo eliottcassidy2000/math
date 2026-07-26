@@ -1,5 +1,5 @@
 theorem=THM-2355
-status=PROVED+VERIFIED-EXACT-CANDIDATE-UNDER-INDEPENDENT-AUDIT
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED
 pair_polarization_checks=56
 boolean_higher_interaction_checks=448
 single_deletion_checks=56

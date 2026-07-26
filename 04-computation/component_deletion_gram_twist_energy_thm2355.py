@@ -450,7 +450,7 @@ def main() -> None:
     )
 
     print("theorem=THM-2355")
-    print("status=PROVED+VERIFIED-EXACT-CANDIDATE-UNDER-INDEPENDENT-AUDIT")
+    print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED")
     print(f"pair_polarization_checks={polarization_checks}")
     print(f"boolean_higher_interaction_checks={mobius_checks}")
     print(f"single_deletion_checks={deletion_checks}")

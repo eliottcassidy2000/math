@@ -127,11 +127,10 @@ vanishes); and THM-2033's surviving special-matrix scope.
 ## Controlled forgetting requires a sidecar
 
 **Trigger:** quotienting, canonicalizing, projecting, folding, taking moments, or replacing an object by an invariant.
-**Action:** state the next operation, predicate preserved, coordinate forgotten, and sidecar needed to make it legal. Test whether every future consumer is constant on the quotient kernel. For linear response `R` and next observable `N`, THM-840 makes the minimum repairing sidecar rank exact: `dim N(ker R)`.
-If nonzero, retain a separating next-step response; for inverse limits, retain a termination, height, or depth coordinate.
-**Mechanism:** equality of current responses is weaker than a continuation congruence. A kernel direction is a genuine gauge only when every named continuation kills it; otherwise it is a control/memory direction whose linear repair cost is its continuation-defect rank. Compatible finite prefixes can define a completion point without terminating in the original discrete class.
-**Counterindication:** no sidecar is needed when every named consumer provably factors through the quotient, the kernel acts trivially on the future state, or termination is uniformly bounded.
-**Evidence:** THM-840's kernel/rank criterion; [interface stress tests](../07-reflections/perspective-groupoid-controlled-forgetting-codex-s261.md); THM-2237 (defect rank one); THM-2230/2241 (safe target-shear quotient); THM-2240 (infinite grade-six-to-seven defect rank); THM-2163/2174/2228 (carry/termination sidecars); and THM-2242 (histograms lose labelled core cost).
+**Action:** state the next operation, preserved predicate, forgotten coordinate, and legal sidecar. Test every future consumer on the quotient kernel. THM-840 gives linear repair rank `dim N(ker R)`; for complex component sums, THM-2355 gives the quadratic repair: singleton energies plus complete pair unions or lawful cyclic twists on a nonzero-support tree.
+**Mechanism:** equal current responses need not form a continuation congruence. A kernel is gauge only when every named continuation kills it; otherwise retain a separating response, or a termination/height/depth coordinate for inverse limits.
+**Counterindication:** no sidecar is needed when all consumers factor through the quotient. A whole twist-energy ledger retains only autocorrelation and can still miss full-support perfect arrays.
+**Evidence:** THM-840; THM-2355; THM-2237/2240 (finite/infinite defect rank); THM-2230/2241 (safe shear); THM-2163/2174/2228 (carry/termination); THM-2242 (histograms lose core cost).
 
 ## After a scalar quotient, choose between a coherent lift and orbit incidence
 

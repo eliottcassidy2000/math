@@ -177,7 +177,8 @@ THM-2321/2329 type root/target gain; THM-2325/2331 put every nonzero target addr
 THM-2334 retains the full word and turns target landing into a `169`-twist DFT; THM-2337 recovers a surjective but gauge-dependent first jet and masked energy.
 THM-2340 identifies word main effects/interactions; THM-2343 makes deepest phase a nonzero pure-axis translation and zero-only landing one inverse-character line.
 THM-2344 makes that line a shifted convolution inverse. Zero/real/covariance tests break it; arbitrary same-axis words attain it, while a typed `334825`-lift bank has both signs.
-Force coefficient-sensitive target-residue dispersion or lawful cross-axis mixing, then retain `91`-unit visibility and THM-2303 phase. Mere multiplicity, a nonconstant transported word, or an additional active axis is not by itself a certificate. The ledger remains `165`.
+THM-2355 gives an exact quadratic phase repair: singleton energies plus lawful `13`-twisted pair probes on a nonzero-component tree recover the THM-2303 phase transport. Whole target-twist energy retains only residue autocorrelation; even real full support can be perfect-autocorrelation blind.
+Force that lawful pair service, an acute grouped-current phase cone, or another coefficient-sensitive target-residue dispersion, then retain `91`-unit visibility. Mere multiplicity, word nonconstancy, or one additional active axis is not a certificate. The ledger remains `165`.
 
 ### Independent routes that remain live
 

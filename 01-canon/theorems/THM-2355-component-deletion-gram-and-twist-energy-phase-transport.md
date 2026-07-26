@@ -2,7 +2,7 @@
 id: THM-2355
 title: "Component-deletion Gram reconstruction and twist-energy phase transport"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. A finite
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. A finite
   grouped complex current is reconstructed at the energy level by its
   singleton and complete pair-union energies; equivalently its Boolean
   energy has interaction degree at most two. For every cyclic twist of
@@ -29,14 +29,14 @@ related:
   - THM-2344-correlation-inverse-rigidity-and-aligned-tooth-twist-hostile
 script: 04-computation/component_deletion_gram_twist_energy_thm2355.py
 output: 05-knowledge/results/component_deletion_gram_twist_energy_thm2355.out
-script_sha256: 9b0c665e8e49842fedd9907d0dccab3e30a740ced5ed7de9a143f973822da694
-output_sha256: 16d972e04559ba3a2dbcec504a526eb961014b4e589622c58885269d41e07f3f
+script_sha256: a5a7f348f65333eb7bbd57e2b76465ec9af7022d6537919f439335a429e015ac
+output_sha256: 76363ba3d9cfdc10219fcf7299deda621d1edccff2031d6c6b28f9a824cb92be
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2355 -- component-energy phase transport
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2303 identifies the current obstruction exactly: rooted energies retain
 component sizes, while the desired Fourier coefficient is the complex sum
@@ -440,4 +440,21 @@ Both transcripts must match
 05-knowledge/results/component_deletion_gram_twist_energy_thm2355.out
 ```
 
-byte-for-byte after LF normalization.  Independent audit is pending.
+byte-for-byte after LF normalization.
+
+## 7. Independent hostile audit
+
+The first audit rejected the original tree claim.  It supplied the exact
+path hostile (12a): pair-twist responses alone have a bipartite magnitude
+ambiguity.  The statement was repaired to retain labelled singleton
+energies and to span only the nonzero-component support, and that hostile
+was added to both theorem and companion.  The same audit found that the
+first script version merely compared a formal coefficient dictionary with
+the asserted DFT.  The referee now constructs every twisted current in
+`Q(i,zeta_p)`, squares it, and performs the normalized cyclotomic sum.
+
+A second independent pass accepted the repaired phase propagation, all
+`84` actual twist-DFT checks, the Boolean and deletion identities, the
+finite-group autocorrelation sign and normalization, the real full-support
+`C_13` hostile, and both cone boundaries.  It independently reproduced the
+LF hashes and byte-identical normal, optimized, and stored transcripts.
