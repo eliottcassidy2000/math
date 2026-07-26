@@ -2,7 +2,7 @@
 id: THM-2362
 title: "Thirteen-shift successor statistic and role-jet floor"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. For the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For the
   centered danger d=1_(||x||<1/14), target-coordinate shifts obey
   sum_s d(y+s/13)=2-d(13y), not 2-d(y). Thus every nonnegative weight
   supported in d has a nontrivial shifted-danger Fourier mode with real
@@ -23,6 +23,7 @@ depends_on:
 related:
   - THM-2232-same-core-signed-eigen-markov-dual-exclusion
   - THM-2349-first-depth-one-delayed-shallow-restart
+  - THM-2364-anchored-corner-forces-mixed-deep-blocker-colour
 script: 04-computation/thirteen_shift_successor_role_jet_thm2362.py
 output: 05-knowledge/results/thirteen_shift_successor_role_jet_thm2362.out
 script_sha256: 7682f49a5c613c871308890f94edbb2352857a60c7756f805a4a7b948718d894
@@ -32,7 +33,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2362 -- a target shift sees the successor bit
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The thirteen-root count has two similar-looking but inequivalent forms.
 The distinction is a scale:
@@ -317,4 +318,8 @@ Both transcripts must match
 byte-for-byte after LF normalization. Every executable check raises
 explicitly under optimized Python.
 
-Independent audit is pending. QED.
+Independent hostile audit checked the target-shift and inverse-root
+operations separately, every DFT normalization and constant, successor
+typing, pure-word redundancy, fork/complement failure boundaries, normal
+and optimized transcripts, stored output, LF hashes, and documentation
+routing. QED.
