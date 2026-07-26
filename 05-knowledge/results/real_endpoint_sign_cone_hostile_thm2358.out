@@ -1,0 +1,9 @@
+THM-2358 exact real-endpoint sign-cone referee
+bare r=1 interval lengths /364: t=-2:11, t=-1:25, t=0:26, t=1:25, t=2:11
+bare danger incidence: 49/182 (=7/26); maximum active roots: 2
+D_13 intersection D_169: 1/91 (13 live teeth)
+strict sign gap: 49*cos(pi/7)>49*(2/3)>26
+inverse target support line size: 13
+left/right/deep triangle signs: positive / positive / positive
+N=91 primitive colours: k=76 positive, k=53 negative, none zero
+VERDICT: centered positive/even word factors do not force one acute endpoint cone
