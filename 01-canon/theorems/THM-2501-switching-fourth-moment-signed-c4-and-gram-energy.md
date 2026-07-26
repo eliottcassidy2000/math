@@ -1,5 +1,5 @@
 ---
-id: THM-2456
+id: THM-2501
 title: "Switching fourth moment, signed four-cycles, and Gram energy"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For a
@@ -18,14 +18,14 @@ depends_on:
   - THM-2412-delta-exponential-and-central-newton-layer-split
 related:
   - THM-2294-anchored-plucker-tournament-and-kakeya-address-bank
-script: 04-computation/switching_fourth_moment_signed_c4_gram_thm2456.py
-output: 05-knowledge/results/switching_fourth_moment_signed_c4_gram_thm2456.out
-script_sha256: e9c934f4c55d25c2305b6844683bce40c451c9444b79089999c1b8a3dffc93fe
-output_sha256: 21df4f3ede5eb0220bb8c902c6982d0af88e54ff53e806081c4e8c41b14f5f7d
+script: 04-computation/switching_fourth_moment_signed_c4_gram_thm2501.py
+output: 05-knowledge/results/switching_fourth_moment_signed_c4_gram_thm2501.out
+script_sha256: 794b1ac3cca869558266a67843bd8e8e01eb14b85b64d3669fdd8284443c28c2
+output_sha256: 8a270da8c5ec95f45a2a74565ec954c4dddbb2cd8991bcb578c8bb5ca49374fe
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2456 -- the first nonconstant even switching moment is Gram energy
+# THM-2501 -- the first nonconstant even switching moment is Gram energy
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
@@ -190,8 +190,8 @@ minimizing (5), and no extremal conclusion is imported from that paper.
 Run
 
 ```text
-python3 04-computation/switching_fourth_moment_signed_c4_gram_thm2456.py
-python3 -O 04-computation/switching_fourth_moment_signed_c4_gram_thm2456.py
+python3 04-computation/switching_fourth_moment_signed_c4_gram_thm2501.py
+python3 -O 04-computation/switching_fourth_moment_signed_c4_gram_thm2501.py
 ```
 
 The dependency-free referee:
@@ -207,7 +207,7 @@ The dependency-free referee:
 Normal and optimized runs reproduce
 
 ```text
-05-knowledge/results/switching_fourth_moment_signed_c4_gram_thm2456.out
+05-knowledge/results/switching_fourth_moment_signed_c4_gram_thm2501.out
 ```
 
 byte-for-byte.  A separate read-only brute-force audit reconstructed

@@ -58,7 +58,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
    quotient-automorphism minimum still fails; its marked partial-automorphism cost is the weighted cyclic derivative of exterior incidence words. Unmarked transport remains open. The known invariant lattice is exact only through `n <= 6`.
 11. **A reciprocal integer sequence has two profiles.** THM-2000/2005 separate support from multiplicity; THM-2352 separates q-adic thresholds.
     THM-2438 gives the formal Poisson--Newton EGF transform and reciprocal support = mean divisor scar at the Abel--Dini/Bertrand boundary.
-    THM-2433/2455 classify finite holes: additive atoms stop linearly; prime holes emit exact disjoint prime rays.
+    THM-2433/2500 classify finite holes: additive atoms stop linearly; prime holes emit exact disjoint prime rays.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is the exact new counterexample. THM-2063/2071 close linear/quadratic source fibers; THM-2084/2118/2102 close cubics; THM-2202 removes every twice-odd finite pole.
     THM-2214 closes nonsplit terminal degrees `2,6,10`, THM-2217 forces the odd train, and THM-2247 closes degree `14`.
     At degree `18`, THM-2297 closes one-sparse strata plus `B=D=0`;

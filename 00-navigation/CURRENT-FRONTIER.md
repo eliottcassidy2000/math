@@ -289,7 +289,7 @@ design without pretending a preserver supplies the seed.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
 - THM-2013/2016 bound cyclic temperature/reducibility; `H` remains empirical.
 - THM-2290 makes the endpoint-colour-selected matching kernel hafnian-complete and limits universal Pfaffian tournament gauges to orders two and four.
-  THM-2294 reconstructs an anchored contraction from its Plucker edge field: real antisymmetric signs can orient, while symmetric character data are colours. THM-2456 makes the first nonconstant even moment of a symmetric sign switching problem exactly signed-`C4`/Gram energy, whereas a skew tournament matrix has identically zero quadratic form. These swap-parity boundaries do not license tournamentizing matching or handoff fibres.
+  THM-2294 reconstructs an anchored contraction from its Plucker edge field: real antisymmetric signs can orient, while symmetric character data are colours. THM-2501 makes the first nonconstant even moment of a symmetric sign switching problem exactly signed-`C4`/Gram energy, whereas a skew tournament matrix has identically zero quadratic form. These swap-parity boundaries do not license tournamentizing matching or handoff fibres.
 
 ### Live work and limits
 
@@ -342,7 +342,7 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   coefficients are central trinomials, the two Pascal halves become ternary
   walks, and reciprocal support is limiting mean divisor incidence/fibre scar.
   Abel--Dini/Bertrand is the boundary; Cauchy and Dirichlet convolution differ.
-- Hostile-audited [THM-2455](../01-canon/theorems/THM-2455-finite-hole-relative-atoms-prime-rays-and-cover-bounds.md) classifies finite multiplicative hole modules. Prime-free holes have finitely
+- Hostile-audited [THM-2500](../01-canon/theorems/THM-2500-finite-hole-relative-atoms-prime-rays-and-cover-bounds.md) classifies finite multiplicative hole modules. Prime-free holes have finitely
   many artificial atoms at most `max h*spf(h)`; a prime hole creates
   disjoint cage rays `m*q` with sharp `M^3/M^4` finite remainders. Additive
   atoms stop at `2L+1/2L+2`, induced composite covers obey a sharp `M^2` law,
