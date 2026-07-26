@@ -155,6 +155,47 @@ def quotient_phase_interval(start, stop, denominator_tail):
     return [right[index] - left[index] for index in range(P)]
 
 
+def weighted_carry_masses(source_values, terminal_values, dilation):
+    """Exact masses for G(y)Q({Ry}) on the seven carry classes."""
+
+    source_denominator = len(source_values)
+    terminal_denominator = len(terminal_values)
+    breakpoints = {Fraction(0), Fraction(1)}
+    breakpoints.update(
+        Fraction(index, terminal_denominator)
+        for index in range(1, terminal_denominator)
+    )
+    for index in range(1, source_denominator):
+        scaled = Fraction(dilation * index, source_denominator)
+        breakpoint = scaled - floor(scaled)
+        if breakpoint:
+            breakpoints.add(breakpoint)
+    ordered = sorted(breakpoints)
+
+    masses = [Fraction(0)] * P
+    for left, right in zip(ordered, ordered[1:]):
+        midpoint = (left + right) / 2
+        terminal_index = floor(midpoint * terminal_denominator)
+        terminal_value = terminal_values[terminal_index]
+        length = right - left
+        for prefix in range(dilation):
+            source_index = floor(
+                source_denominator * (prefix + midpoint) / dilation
+            )
+            masses[prefix % P] += (
+                length
+                * source_values[source_index]
+                * terminal_value
+                / dilation
+            )
+    return tuple(masses)
+
+
+def centered_scaled_histogram(masses, dilation):
+    mean = sum(masses, Fraction(0)) / P
+    return tuple(dilation * (mass - mean) for mass in masses)
+
+
 def main():
     cocycle_checks = 0
     for denominator in (17, 19, 31, 101):
@@ -390,6 +431,39 @@ def main():
         )
         fixed_source_checks += 1
 
+    danger_source_checks = 0
+    require(
+        Fraction(81, 169) - Fraction(13, 28)
+        == Fraction(15, 28) - Fraction(88, 169)
+        == Fraction(71, 4732),
+        "D2 source clearance failed",
+    )
+    require(
+        floor(Fraction(13 * 81, 169))
+        == floor(Fraction(13 * 88, 169))
+        == 6,
+        "D2 source left its one predecessor sheet",
+    )
+    require(
+        jump_count(tuple(int(81 <= cell < 88) for cell in range(169)))
+        == 2,
+        "D2 source variation failed",
+    )
+    for depth in range(2, 8):
+        unit = 13 ** (depth - 2)
+        lower = 81 * unit
+        upper = 88 * unit
+        counts = [
+            residue_count(upper, residue) - residue_count(lower, residue)
+            for residue in range(P)
+        ]
+        require(counts == [unit] * P, "D2 source carry balance failed")
+        require(
+            Fraction(upper - lower, 13**depth) == Fraction(7, 169),
+            "D2 source mass failed",
+        )
+        danger_source_checks += 1
+
     universal_block_checks = 0
     for base, prime in ((5, 3), (7, 5), (11, 3), (13, 7), (17, 5)):
         anchor = (base - prime) // 2
@@ -565,6 +639,72 @@ def main():
             else:
                 period_bank[key] = signature
 
+    weighted_tail_checks = 0
+    fixed_source = tuple(Fraction(int(3 <= cell < 10)) for cell in range(13))
+    terminal_profile = (
+        Fraction(1),
+        Fraction(0),
+        Fraction(2, 3),
+        Fraction(1, 5),
+        Fraction(4, 7),
+    )
+    for depth in range(1, 5):
+        masses = weighted_carry_masses(
+            fixed_source,
+            terminal_profile,
+            13**depth,
+        )
+        require(
+            len(set(masses)) == 1,
+            "fixed source failed against a nonconstant terminal weight",
+        )
+        weighted_tail_checks += 1
+
+    general_source = tuple(
+        Fraction((cell * cell + 3 * cell + 2) % 7, 7)
+        for cell in range(26)
+    )
+    general_terminal = tuple(
+        Fraction((2 * cell + 1) % 5, 5)
+        for cell in range(5)
+    )
+    parity_signatures = {}
+    for depth in range(1, 5):
+        dilation = 13**depth
+        masses = weighted_carry_masses(
+            general_source,
+            general_terminal,
+            dilation,
+        )
+        signature = centered_scaled_histogram(masses, dilation)
+        parity = depth % 2
+        if parity in parity_signatures:
+            require(
+                signature == parity_signatures[parity],
+                "weighted source-terminal period-two law failed",
+            )
+        else:
+            parity_signatures[parity] = signature
+        weighted_tail_checks += 1
+
+    raw_scaled = []
+    centered_scaled = []
+    for depth in (1, 3):
+        dilation = 13**depth
+        masses = weighted_carry_masses(
+            (Fraction(1),),
+            (Fraction(1),),
+            dilation,
+        )
+        raw_scaled.append(tuple(dilation * mass for mass in masses))
+        centered_scaled.append(centered_scaled_histogram(masses, dilation))
+        weighted_tail_checks += 1
+    require(raw_scaled[0] != raw_scaled[1], "raw scaled masses became periodic")
+    require(
+        centered_scaled[0] == centered_scaled[1],
+        "centered scaled masses lost periodicity",
+    )
+
     print("THM-2418 SEPTIMAL CARRY MATRIX -- exact audit")
     print(f"rational affine word cocycle checks={cocycle_checks}")
     print(f"base-thirteen digit words checked={digit_words}")
@@ -580,6 +720,11 @@ def main():
     print("one-cylinder terminal profile=(1/2)e_3 / rank=1: PASS")
     print(f"fixed [3/13,10/13) source depths checked={fixed_source_checks}")
     print("fixed source variation=2 / mass=7/13 / kernel=(1/13)J")
+    print(
+        "fixed one-sheet D2 source depths checked="
+        f"{danger_source_checks} (k=2..7)"
+    )
+    print("D2 source variation=2 / mass=7/169 / kernel=(1/169)J")
     print(f"universal odd (B,p) equal-carry blocks checked={universal_block_checks}")
     print(
         "depth-one Boolean cylinder profiles="
@@ -590,6 +735,8 @@ def main():
     print(f"rational finite-step scale-period checks={rational_period_checks}")
     print("one ord_(7D0)(13) period classifies every rational tail: PASS")
     print("D0=3 Boolean period-2 flat/all-six alternation: PASS")
+    print(f"fixed source-terminal weighted checks={weighted_tail_checks}")
+    print("Q denominator-free period / centred-defect typing: PASS")
     print("canonical source-terminal correlation remains OPEN")
     print("THM-2418 exact companion PASS")
 

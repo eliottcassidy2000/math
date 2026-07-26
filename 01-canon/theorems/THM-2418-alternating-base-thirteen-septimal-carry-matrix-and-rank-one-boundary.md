@@ -30,8 +30,8 @@ related:
   - THM-2414-thirteen-skew-septimal-word-transport-and-local-stopping-atlas
 script: 04-computation/lrc14_septimal_carry_matrix_thm2418.py
 output: 05-knowledge/results/lrc14_septimal_carry_matrix_thm2418.out
-script_sha256: 3d2025843aaad23ba22d836247b09e28fb920e388e0ca2e519798203b805d0ab
-output_sha256: f23a5daf98afa88d945614844d5e855fd17291e50b92185a27a25e4fc985f243
+script_sha256: 0cd8532b58aa28a4ab4ed7abbc454c6b1c07064205f3a29d2b49ba732f679b47
+output_sha256: c72ea8192cecffc45b182d94e7e7e29981c3646b198edbb68dc7af76724a293f
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -437,6 +437,42 @@ Only a source--terminal correlation excluding equal carry counts can do
 so.  The interval (34) is a formal rational source hostile, not asserted
 to be a canonical exclusive-owner set.
 
+There is also a hostile satisfying the basic ordinary-danger and
+one-sheet source geometry.  For the ordinary speed `u=2`, put
+
+```text
+J=[81/169,88/169).                                         (43a)
+```
+
+This is the seven-cell depth-two block `81,...,87`, is
+inversion-invariant almost everywhere, has variation two and mass
+`7/169`, and lies strictly inside the central danger component
+
+```text
+(13/28,15/28) subset D_2,                                  (43b)
+```
+
+with clearance `71/4732` at both endpoints.  It lies in the single
+thirteen-branch `[6/13,7/13)`, and `T_13` maps it bijectively to
+`[3/13,10/13)`.  Thus it occupies one predecessor sheet.  At every
+depth `k>=2`, each carry residue occurs `13^(k-2)` times, so
+
+```text
+K_J=(1/169)J_7.                                             (43c)
+```
+
+More generally, a sufficiently fine nonwrapping seven-cell block can
+be chosen inside an open component of any ordinary danger comb.  If
+that block and the canonical nonwrapping representative of its
+reflection are disjoint, their union is even, BV-at-most-four, occupies
+at most two predecessor sheets, and has kernel `(2/13^K)J_7`.
+Disjointness and the canonical prefix lift are load-bearing: wrapped or
+partially overlapping reflected blocks need not have uniform carry
+counts.
+Consequently danger support and one-/two-sheet sparsity alone do not
+repair the charged colour.  The example is still not an exclusive
+owner packet and does not encode the remaining cover factors.
+
 ## 6. One cylinder histogram classifies every deeper clock
 
 Let a fixed rational source `G` be constant with rational values `g_m`
@@ -498,18 +534,18 @@ Conversely, any nonuniform rational histogram is a positive all-six
 source-colour certificate at every later clock.  This is a source-only
 statement; it still must be aligned with the terminal word/current.
 
-## 7. Every rational finite-step source has a finite scale classifier
+## 7. Every fixed rational source--terminal pair has a finite scale classifier
 
-The cylinder hypothesis also has an exact finite extension.  Let `G`
-be a rational finite-step function whose endpoints have common
+The cylinder hypothesis has an exact weighted finite extension.  Let
+`G` be a rational finite-step function whose endpoints have common
 denominator
 
 ```text
 D=13^K D_0,                 gcd(D_0,13)=1.                   (51)
 ```
 
-For `k=K+d`, refine to the grid of denominator `13^k D_0`.
-The sequence
+First take terminal weight `Q=1`.  For `k=K+d`, refine to the grid of
+denominator `13^k D_0`.  The sequence
 
 ```text
 j -> zeta_7^(e floor(j/D_0))                                (52)
@@ -560,12 +596,81 @@ The last vector is the second plus the uniform vector `(2184,...,2184)`.
 Thus the even class is flat while the odd class has all six charged
 colours, exactly realizing the scale-period alternative.
 
+Now let `Q` be any fixed integrable terminal profile and define
+
+```text
+C_(G,Q)(k,e)
+ =integral_T G(y) Q({13^k y})
+    zeta_7^(e floor(13^k y))dy.                              (57)
+```
+
+Write the step function in jump form
+
+```text
+G=g_0+sum_j gamma_j 1_[a_j,1),
+a_j=A_j/(13^K D_0),                 0<a_j<1.                 (58)
+```
+
+For `R=13^k`, put `R a_j=m_j+tau_j`, with `m_j` integral and
+`0<=tau_j<1`.  Disintegrating `y=(n+z)/R` gives, almost everywhere,
+
+```text
+R C_(G,Q)(k,e)
+ =g_0 mu(Q) sum_(n=0)^(R-1) zeta_7^(en)
+  +sum_j gamma_j [
+      mu(Q) sum_(n=m_j+1)^(R-1) zeta_7^(en)
+      +zeta_7^(e m_j) integral_[tau_j,1) Q(z)dz
+    ].                                                       (59)
+```
+
+This includes `tau_j=0`: the last integral then supplies the `n=m_j`
+term.  If `N=13^(k-K)`, the residue of `N` modulo `7D_0` determines
+`R mod7`, `m_j mod7`, and `tau_j`.  Hence
+
+```text
+13^k C_(G,Q)(k,e)
+```
+
+depends only on `13^(k-K) mod 7D_0` and is periodic with period dividing
+`ord_(7D_0)(13)`.  The denominator of `Q` does not enter this period:
+`Q` is never rescaled after the `z={Ry}` disintegration.
+
+When `G,Q` are rational finite-step functions, the seven weighted carry
+masses
+
+```text
+a_(k,r)
+ =integral_T G(y)Q({13^k y})
+    1_(floor(13^k y)=r mod7)dy                               (60)
+```
+
+are rational.  Therefore one vanished nonzero colour is equivalent to
+all seven `a_(k,r)` being equal, and hence to all six charged colours
+vanishing.  The periodic histogram object is
+
+```text
+13^k (a_(k,r)-sum_s a_(k,s)/7),                             (61)
+```
+
+not the raw scaled masses.  In particular `G=Q=1` is the immediate
+hostile to raw-mass periodicity.
+
+This weighted theorem directly covers a fixed transported terminal word
+`Q({13^k y})` only when the remaining source factor is one fixed scalar
+rational step function `G(y)`, independent of the clock, role, and root
+gauge.  A fixed finite root-indexed family can be treated entrywise, but
+that produces only a periodic matrix and does not force a common phase
+or a nonzero class.  Clock-selected Perron words, lawful co-shifts, and
+prefix/tail/root-dependent owner packets need a separate alignment
+lemma.  Even a surviving class here is a carry coefficient, not yet an
+all-`91`-unit terminal current.
+
 ## 8. Canonical scope and the missing sidecar
 
 For a THM-2305 terminal stratum `Q_(j,sigma)`, positivity proves only
 
 ```text
-sum_l q_l>0.                                                   (57)
+sum_l q_l>0.                                                   (62)
 ```
 
 It does not prove that its seven cylinder masses are nonconstant.
@@ -609,11 +714,15 @@ The dependency-free exact companion:
 - checks the flat and one-cylinder terminal hostiles; and
 - verifies the fixed even rank-one source through depth eight and the
   universal odd `(B,p)` block law;
+- verifies the fixed one-sheet `D_2` source through depths two to seven;
 - exhausts all `8,192` Boolean depth-one source profiles and checks the
   fixed-cylinder tail formula; and
 - checks the eventual finite scale-periodicity on rational endpoint
   denominators coprime to thirteen, including the period-two
-  flat/all-six Boolean control (55)--(56).
+  flat/all-six Boolean control (55)--(56); and
+- checks the weighted fixed-source/fixed-terminal period, including a
+  nonconstant denominator-five terminal profile and the distinction
+  between raw scaled masses and centred scaled defects.
 
 Run:
 

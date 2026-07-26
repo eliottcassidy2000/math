@@ -13,6 +13,8 @@ flat D_7 terminal profile=(1/7)^7: PASS
 one-cylinder terminal profile=(1/2)e_3 / rank=1: PASS
 fixed [3/13,10/13) source depths checked=8
 fixed source variation=2 / mass=7/13 / kernel=(1/13)J
+fixed one-sheet D2 source depths checked=6 (k=2..7)
+D2 source variation=2 / mass=7/169 / kernel=(1/169)J
 universal odd (B,p) equal-carry blocks checked=20
 depth-one Boolean cylinder profiles=8192 (flat tails=65)
 fixed-cylinder tail Fourier formulas checked=108
@@ -20,5 +22,7 @@ one histogram classifies all deeper clocks: PASS
 rational finite-step scale-period checks=168
 one ord_(7D0)(13) period classifies every rational tail: PASS
 D0=3 Boolean period-2 flat/all-six alternation: PASS
+fixed source-terminal weighted checks=10
+Q denominator-free period / centred-defect typing: PASS
 canonical source-terminal correlation remains OPEN
 THM-2418 exact companion PASS
