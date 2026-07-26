@@ -1,0 +1,16 @@
+THM-2398 prime-cyclic rational restoration exact companion
+prime sweep p=3: kernels=27, flat=3, PASS
+prime sweep p=5: kernels=243, flat=3, PASS
+prime sweep p=7: kernels=2187, flat=3, PASS
+prime sweep p=13: kernels=8192, flat=2, PASS
+disjoint two-sided sweep p=7: pairs=1932, PASS
+p=13 singleton/adjacent x disjoint-two-root patterns: 121, strict product floor>4/28561, PASS
+paired cyclotomic norm controls: 5, min_abs_norm=1, exponent=5, PASS
+composite C4 anchored hostile: m1=(0,0), PASS
+analytic hostile residuals: C13<1.671e-16, anchored<1.057e-16, C91<1.183e-15, PASS
+terminal alignment hostiles: 2, flat_cells=13, PASS
+last-lane all-colour floor>1/129136447986
+common-core all-colour floor>66/21522741331
+owner-cell all-colour floor>132/279795637303
+owner C7xC13 floor>132/1958569461121
+ALL CHECKS PASS
