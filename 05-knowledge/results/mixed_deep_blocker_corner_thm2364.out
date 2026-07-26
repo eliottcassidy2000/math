@@ -8,6 +8,9 @@ sharp profile mass: 6/91
 sharp mixed-colour sum: -66/15379
 each sharp mixed coefficient: -11/369096
 sharp mixed energy: 121/946054564
+sharp fork mixed-colour sum: -726/199927
+each sharp fork coefficient: -121/57578976
+sharp fork mixed energy: 14641/1918598655792
 all-row pure coefficient floor: 2593/1195871040 * e_j
 all-row fork coefficient floor: 28523/186555882240 * e_j
 VERDICT: anchored zero/full word forces a fully mixed colour

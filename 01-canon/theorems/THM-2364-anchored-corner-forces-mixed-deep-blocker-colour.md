@@ -1,6 +1,6 @@
 ---
 id: THM-2364
-title: "Anchored corner forces a fully mixed deep/word colour"
+title: "Anchored corner forces a fully mixed deep/blocker-probe colour"
 status: >
   PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. Let a
   positive set F avoid one deepest danger comb at shift zero and lie
@@ -12,8 +12,10 @@ status: >
   -11^t mu(F)/(13^(t+1)12^(t+1)), and the fully mixed Fourier energy
   is at least
   11^(2t)mu(F)^2/(13^(2(t+1))12^(t+1)). The finite transform is the
-  joint Poisson-Abel boundary of a fully grouped deep/word current,
-  whose live multipliers are separately coprime to 91. THM-2354
+  joint Poisson-Abel boundary of a collapsed f-weighted
+  deep/blocker-probe series, whose displayed live probe multipliers are
+  separately coprime to 91; the literal word remains collapsed inside
+  its indicator. THM-2354
   supplies such an F on all 165 rows. The exact pure-word coefficient
   floor is 2593 e_j/1195871040; the exact fork floor is
   28523 e_j/186555882240. On a pure word the blocker shift is the
@@ -30,12 +32,12 @@ related:
   - THM-2362-thirteen-shift-successor-statistic-and-role-jet-floor
 script: 04-computation/mixed_deep_blocker_corner_thm2364.py
 output: 05-knowledge/results/mixed_deep_blocker_corner_thm2364.out
-script_sha256: a12c5c331c29a8482ea988e9e4f21030ff78d8c8dba2ff1ba759fa96467fae2f
-output_sha256: 262e1bc24d494ec649b4f7e38ae01f1fe204d4399a0ab69d02b48d7c30be27f9
+script_sha256: 9888d27fef54d9e1f6dc6d8cc9eeda541c0a3eac029e2da74949d64f5b5733df
+output_sha256: 8d78a2ab25b94db1bf7a1ddd94893f312a25dd17b18abf3c5f6e567b03ce7bc2
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2364 -- the whole blocker word has one mixed colour
+# THM-2364 -- every named blocker gets one mixed probe colour
 
 **PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
 
@@ -50,7 +52,7 @@ force one coefficient which is nonzero in every coordinate. For a fork,
 this gives a single deep-by-`a`-by-`b` coefficient rather than two
 unrelated pair certificates.
 
-## 1. The full word-shift table
+## 1. The full blocker-probe shift table
 
 On the circle put
 
@@ -88,7 +90,8 @@ H(r,s_1,...,s_t)
 ```
 
 The first coordinate is the deepest comb. The remaining coordinates
-retain the complete nonempty blocker word.
+insert one translated probe for every label in the nonempty blocker
+word. The original word factors remain collapsed in `1_F`.
 
 ## 2. Pointwise corner factorization
 
@@ -98,13 +101,19 @@ For any function `V` on `F_13`, its normalized finite transform satisfies
 sum_(u!=0)Vhat(u)=V(0)-1/13 sum_r V(r).              (4)
 ```
 
-The exact thirteen-shift danger count is
+Away from the `26` strict-open interval endpoints, the exact
+thirteen-shift danger count is
 
 ```text
 sum_r D_(q,r)(x)=2-D_(13q,0)(x).                    (5)
 ```
 
-On `F`, the deepest zero in (2) makes the right side of (4)
+Thus (5) holds almost everywhere, which is the only sense used in all
+integrals below. At an endpoint its two sides need not agree, but the
+finite exceptional set has measure zero.
+
+On `F` away from those null boundaries, the deepest zero in (2) makes
+the right side of (4)
 
 ```text
 -(2-D_(13c,0)(x))/13.                               (6)
@@ -129,8 +138,9 @@ Hhat(u_0,...,u_t)
 zeta=exp(2*pi*i/13).
 ```
 
-Finite inversion may be performed pointwise inside the integral in (3).
-Multiplying (6)--(7) yields the exact fully mixed corner
+Finite inversion may be performed pointwise almost everywhere inside the
+integral in (3). Multiplying (6)--(7) and integrating yields the exact
+fully mixed corner
 
 ```text
 S_t
@@ -210,9 +220,16 @@ S_1<=-(11rho+rho_1^+)/169.                          (16)
 ```
 
 This is the exact synthesis of THM-2354's cover mass with THM-2362's
-successor bit. Equality in the universal floor requires single
-deep-cover multiplicity almost everywhere on `F` and zero named-blocker
-successor overlap.
+successor bit. Equality in the universal `t=1` floor holds exactly when
+
+```text
+D_(13c,0)=1,
+
+D_(13d_1,0)=0
+```
+
+almost everywhere on `F`: the deepest cover then has multiplicity one
+and the named-blocker successor overlap vanishes.
 
 ## 4. Equality boundary of the profile argument
 
@@ -248,7 +265,9 @@ not a claim that (18) is realized by a canonical LRC row.
 ## 5. Lawful joint Abel grouping
 
 Assume now that `F` is a finite union of rational intervals, as in the
-LRC application, and put `f=1_F`. With
+LRC application, and put `f=1_F`. This keeps the complete literal word
+collapsed as one support indicator; only the added deepest and blocker
+probe factors are expanded below. With
 
 ```text
 h_hat(n)=integral_T h(x)exp(-2*pi*i n x)dx,
@@ -294,9 +313,11 @@ kills multiples of seven, so every live multiplier in (21) satisfies
 gcd(m_a,91)=1.                                      (23)
 ```
 
-The coefficient forced by (11) is therefore a fully grouped
-deep/word `91`-unit Abel coefficient: two multiplier groups for a pure
-word and three for a fork.
+The coefficient forced by (11) is therefore a collapsed `f`-weighted
+deep/blocker-probe `91`-unit Abel coefficient: two added
+probe-multiplier groups for a pure word and three for a fork. Only these
+displayed probe multipliers are proved separately `91`-unit. They are
+not the original Bockstein word indices hidden inside `f`.
 
 ## 6. Uniform application to all 165 rows
 
@@ -361,9 +382,10 @@ Re Hhat(u_0,u_1,u_2)
 ```
 
 These statements hold at a finite coefficient-dependent clock on every
-one of the `165` rows. They retain the literal word, selected owner,
-clock, deepest multiplier colour, every named blocker multiplier colour,
-and the separate `91`-unit property of every multiplier group.
+one of the `165` rows. They retain the literal word as a collapsed
+support label, the selected owner and clock, the deepest probe colour,
+one added probe colour for every named blocker, and the separate
+`91`-unit property of every added multiplier group.
 
 ## 7. Pure words versus forks
 
@@ -384,10 +406,12 @@ branch, (28) is a genuine deep-colour by named-factor-colour response.
 For a fork `sigma={a,b}`, deleting either danger factor enlarges the word:
 the other danger already satisfies the scalar cover. Definition (3)
 instead retains the literal fork and inserts translated duplicates of
-both named blocker dangers. The coefficient in (29) is a lawful
-coefficient-derived duplicate-factor functional, not an observable
-already supplied by canon. A physical use requires explicit duplicate
-pair probes or an equivalent graph-channel phase-ratio sidecar.
+both named blocker dangers. The auxiliary indices in (29) are not
+THM-2337's `beta_a,b`, Bockstein-jet colours, or relation-address
+coordinates. The coefficient is a lawful coefficient-derived
+duplicate-factor functional, not an observable already supplied by
+canon. A physical use requires explicit duplicate pair probes or an
+equivalent graph-channel phase-ratio sidecar.
 
 ## 8. Scope
 
@@ -397,9 +421,9 @@ It preserves
 ```text
 literal delayed word,
 owner and clock,
-deep multiplier residue,
-every named blocker multiplier residue,
-separate 91-unit multiplier conditions,
+deep probe-multiplier residue,
+every added named-blocker probe residue,
+separate 91-unit probe-multiplier conditions,
 signed quantitative fully mixed coefficient.
 ```
 
@@ -420,10 +444,11 @@ produce a nonzero scalar-frequency survivor, realize THM-2356's missing
 graph-channel phase ratio, exclude a scalar row, decrement a profile, or
 prove LRC(14).
 
-Its gain is precise: the complete nonempty blocker hyperedge now has one
-signed, fully mixed, all-unit Abel coefficient on every row. The next
-bridge must transport that coefficient into the target/address channel
-without destroying the anchored overlap.
+Its gain is precise: the collapsed support of the complete nonempty
+blocker hyperedge now carries one signed, fully mixed, all-unit added-probe
+coefficient on every row. It does not expand or identify the original
+word indices. The next bridge must transport that probe coefficient into
+the target/address channel without destroying the anchored overlap.
 
 ## 9. Exact companion
 
@@ -431,12 +456,14 @@ The dependency-free companion uses `Fraction` arithmetic to:
 
 - exhaust the `26` open cells in the successor count (5);
 - test `64` exact anchored two-coordinate profiles;
-- test `64` exact one- and two-blocker successor-bit mixtures;
+- test `64` exact one- and two-blocker successor-bit mixtures and their
+  Cauchy lower-bound arithmetic;
 - verify the exact one-blocker refinement (14)--(16);
-- verify the fully mixed energy floor for `144` pure and `1,728` fork
-  colours;
-- count `5,184` pure and `373,248` fork ordered `91`-unit residue tuples;
-- realize the sharp abstract pure profile (17)--(19); and
+- enumerate the `144` pure and `1,728` fork coefficients of the sharp
+  factorized profiles and verify their actual mixed energies;
+- enumerate `5,184` pure and `373,248` fork ordered `91`-unit residue
+  tuples;
+- realize both sharp abstract profiles (17)--(19); and
 - reduce both all-row constants in (28)--(29) exactly.
 
 Run

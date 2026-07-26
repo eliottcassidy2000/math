@@ -5,6 +5,7 @@ from __future__ import annotations
 
 from fractions import Fraction
 from itertools import product
+from math import gcd
 from typing import Dict, List, Tuple
 
 
@@ -170,9 +171,9 @@ def check_successor_mixture(
     floor = Fraction(11**blockers, P ** (blockers + 1)) * rho
     require(corner <= -floor, f"{label}: full-corner sign floor failed")
     colour_count = NONZERO ** (blockers + 1)
-    energy = corner**2 / colour_count
+    cauchy_floor = corner**2 / colour_count
     require(
-        energy
+        cauchy_floor
         >= Fraction(
             11 ** (2 * blockers),
             P ** (2 * (blockers + 1)) * colour_count,
@@ -270,6 +271,41 @@ def main() -> None:
         "sharp profile stopped attaining the interaction-energy floor",
     )
 
+    sharp_fork_coefficient = -Fraction(
+        11**2, P**3 * NONZERO**3
+    ) * rho
+    sharp_fork_coefficients = [
+        sharp_fork_coefficient
+        for _ in product(range(1, P), repeat=3)
+    ]
+    require(
+        len(sharp_fork_coefficients) == NONZERO**3,
+        "wrong sharp fork fully mixed colour count",
+    )
+    sharp_fork_corner = sum(sharp_fork_coefficients)
+    sharp_fork_energy = sum(
+        coefficient**2 for coefficient in sharp_fork_coefficients
+    )
+    require(
+        sharp_fork_corner
+        == -Fraction(11**2, P**3) * rho
+        and sharp_fork_energy
+        == NONZERO**3 * sharp_fork_coefficient**2,
+        "sharp fork DFT enumeration changed",
+    )
+
+    unit_residues = tuple(
+        residue
+        for residue in range(91)
+        if residue % P != 0 and gcd(residue, 91) == 1
+    )
+    require(
+        len(unit_residues) == 72
+        and len(tuple(product(unit_residues, repeat=2))) == 5184
+        and len(tuple(product(unit_residues, repeat=3))) == 373248,
+        "91-unit residue tuple counts changed",
+    )
+
     eta = Fraction(2593, 90090)
     all_row_coefficient = Fraction(11, P * P * NONZERO * NONZERO) * eta / 6
     fork_coefficient = (
@@ -294,6 +330,9 @@ def main() -> None:
     print(f"sharp mixed-colour sum: {sharp_corner}")
     print(f"each sharp mixed coefficient: {sharp_coefficient}")
     print(f"sharp mixed energy: {sharp_energy}")
+    print(f"sharp fork mixed-colour sum: {sharp_fork_corner}")
+    print(f"each sharp fork coefficient: {sharp_fork_coefficient}")
+    print(f"sharp fork mixed energy: {sharp_fork_energy}")
     print(f"all-row pure coefficient floor: {all_row_coefficient} * e_j")
     print(f"all-row fork coefficient floor: {fork_coefficient} * e_j")
     print("VERDICT: anchored zero/full word forces a fully mixed colour")
