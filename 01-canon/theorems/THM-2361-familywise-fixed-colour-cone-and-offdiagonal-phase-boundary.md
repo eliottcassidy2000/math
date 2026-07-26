@@ -2,7 +2,7 @@
 id: THM-2361
 title: "Familywise fixed-colour cone and off-diagonal phase boundary"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. For any
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For any
   family of rational nonnegative root-fibre pairs supported in one open
   arc of length 1/7, one Galois automorphism depending only on the fixed
   primitive root colour places every cross-correlation in the same cone
@@ -33,7 +33,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2361 -- one root colour gives one familywise cone
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2323 proves noncancellation one fixed root colour at a time. The
 Galois automorphism in that proof is independent of the target translate:
@@ -484,4 +484,10 @@ Both transcripts must match
 byte-for-byte after LF normalization. Every executable check raises
 explicitly under optimized Python.
 
-Independent audit is pending. QED.
+Independent hostile audit rederived the familywise Galois
+straightening, the arithmetic-comb exponent, the order-thirteen
+obstruction, every sign in the off-diagonal Poisson identity, and the
+`N=169` cancellation. It also forced the common-embedding qualification
+and the explicit THM-2309/Perron reduction in Section 6. Normal and
+optimized transcripts, stored output, LF hashes, documentation routing,
+and the stopping scope all pass. QED.
