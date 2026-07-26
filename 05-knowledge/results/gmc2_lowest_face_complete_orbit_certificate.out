@@ -1,0 +1,19 @@
+GMC2 lowest-face complete-orbit certificate exact referee
+zero_residue_alias_free_power_controls: 24
+complete_residue_identity_controls: 24
+gaussian_residue_identity_controls: 8
+effective_width_invoice_controls: 49
+full_bank_width_invoice_controls: 49
+zero_residue_exact_condition: supp(f^m) intersection KZ subset {0}
+zero_residue_width_condition: K>m*max(M,N)
+full_exponent_bank_condition: K>m*(M+N)
+effective_witness_bound: binom(M+N,min(M,N))
+alias_hostile: PASS
+one_body_phase_hostile_constant_terms: 4,0
+radial_laguerre_hostiles: 12
+radial_monomial_expansion_controls: 12
+radial_charge_null_controls: 12
+radial_s_adic_orders: 1,0
+NC2_status: PROVED_BY_THM-2022
+new_NC2_step: NO
+all_checks: PASS
