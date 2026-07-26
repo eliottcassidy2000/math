@@ -1,0 +1,16 @@
+THM-2438 exact verification
+Newton/difference identities: 300
+ternary word identities: 30
+formal EGF coefficients: 100
+Bessel/central coefficients: 50
+operation pointwise identities: 30720
+operation cumulative identities: 254
+additive tail identities: 6350
+Abel/incidence identities: 894
+triangular telescoping identities: 500
+A014574 centres through 1000000: 8169
+A014574 reciprocal identities: 8169
+ternary weak/strict/zero k=0..9: [(1, 0, 1), (2, 1, 1), (6, 3, 3), (17, 10, 7), (50, 31, 19), (147, 96, 51), (435, 294, 141), (1290, 897, 393), (3834, 2727, 1107), (11411, 8272, 3139)]
+triangular reciprocal partial k=500: 1000/501
+twin-centre marked incidence through 20000: 15445/20000
+all exact checks passed
