@@ -1,316 +1,394 @@
 ---
 id: THM-2435
-title: "Top-blocker essential parent and punctured-stalk carrier"
+title: "Top-blocker essential parent and equivariant quotient-root section"
 status: >
   PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; UNDER INDEPENDENT
-  HOSTILE AUDIT. On each of the three surviving deep-c_3 valuation
-  shapes, THM-2427 supplies a common-91-root parent image of mass at
-  least 4/7. THM-2431 caps the locus where the guard and five ordinary
-  unit words cover the whole stalk at 3/7. Hence parents of mass at
-  least 1/7 have a literal gap in the six-unit cover which must be
-  filled by one of the one or two exact-depth top blockers. The
-  punctured physical packet has mass at least 1/637; one fixed actual
-  top-blocker label has mass at least 1/1274 and parent mass at least
-  1/14. Its seven-root profile is at most one-sheeted, so every
-  septimal Fourier residue class has exact energy rho/7. In particular
-  every six nonzero classes have energy at least 1/8918 each, total at
-  least 3/4459. This does not force a thirteen-unit frequency, a unique
-  owner, a terminal current, a valuation-type exclusion, or LRC(14).
+  HOSTILE AUDIT. In each of the three surviving deep-c_3 shapes, the
+  common-91 quotient stalk has parent mass at least (4+k)/7, where k
+  is the number of low quotient blockers. THM-2431 caps the six-unit
+  exact-tiling locus at 3/7, so actual exact-depth top blockers fill
+  gaps over parent mass at least (1+k)/7. One fixed blocker label
+  supports a translation-equivariant marked quotient-root section of
+  uniform mass at least 3/1274. Every one of the 91 quotient residue
+  classes has exact energy rho/91, hence at least 3/115934; the 72
+  unit classes have total energy at least 108/57967. For M=0 this is
+  a physical all-91-class packet. For M>0, physical pullback retains
+  a 7^M-fold ancestry kernel and no 91-unit current. The marker is a
+  derived 13-copy Boolean selector, not a canonical Abel endpoint
+  probe. No terminal current, valuation-shape exclusion, row
+  decrement, or proof of LRC(14) follows.
 source: codex-2026-07-26-top-blocker-essential-parent
 depends_on:
   - THM-2427-guard-top-thirteen-root-capacity-and-residual-types
   - THM-2431-repeated-step-rounding-exclusion-of-guard-top-zero-blocker-types
   - THM-2432-guard-top-pair-cage-and-low-blocker-residual-exclusion
+  - THM-2424-coprime-common-root-crt-and-unit-residue-spectrum
 related:
   - THM-2398-prime-cyclic-rational-restoration-dichotomy
   - THM-2409-unfiltered-septimal-source-orbit-and-real-word-obstruction
-  - THM-2424-coprime-common-root-crt-and-unit-residue-spectrum
+  - THM-2419-valuation-normalized-homogenization-of-affine-sideband-shells
+  - MISTAKE-273
 script: 04-computation/lrc14_top_blocker_essential_parent_thm2435.py
 output: 05-knowledge/results/lrc14_top_blocker_essential_parent_thm2435.out
-script_sha256: 99a442b35d21f6abd44b45d96cbc738a9e8d93bab5d9170baf810038c3ece9c3
-output_sha256: e6cf58a236e5ff6c48fcc5d1d0fb75627d388758a014b6ef5383cb8e8da0b867
+script_sha256: 6ae536f85fb7c53b7cd8da86e993bd582a94cb28080258737b7299c939fced69
+output_sha256: 5be089f3a1068518263bf4254ac1db9a1d8e2f9a0655b56a115a130e99907e62
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2435 -- the surviving shapes have a physical top-blocker carrier
+# THM-2435 -- essential top blockers carry a flat quotient-root section
 
 **PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; UNDER INDEPENDENT
 HOSTILE AUDIT.**
 
-THM-2431 eliminates the zero-top-blocker branch because its required
-parent image is too large for an exact six-unit tiling. On the three
-blocker-bearing survivors, the same mass mismatch cannot be a
-contradiction: it becomes a positive, physically labelled carrier:
+The three shapes left by THM-2431 and THM-2432 have one common
+mechanism:
 
 ```text
-parent image at least 4/7
-  - six-unit exact-tiling locus at most 3/7
-  = essential top-blocker parent mass at least 1/7.                 (1)
+low quotient blockers are averaged out by T_(7^(M+1))
+  -> the parent image is larger than 4/7
+  -> the six unit words cannot tile all those parents
+  -> a fixed actual top blocker fills a positive family of gaps
+  -> one equivariantly marked gap has a flat C_91 quotient spectrum. (1)
 ```
 
-Disintegrating one such gap through the common `91`-root stalk gives
-mass `1/637`. A fixed actual top blocker retains at least half of it.
-Because that blocker occupies one sheet of every septimal root fibre,
-the carrier has exact, positive energy in all six nonzero septimal
-Fourier residue classes.
+The last arrow is deliberately a quotient statement. At positive
+septimal depth, forgetting the `7^M` ancestors is exactly the
+information loss that prevents a physical `91`-unit current.
 
-## 1. The three typed survivors
+## 1. The three typed shapes
 
-Retain THM-2427's primitive scalar cover on the deep-`c_3`,
-top-guard side:
+Retain THM-2427's primitive scalar cover and put
 
 ```text
-nu_7(H)=M<nu_7(c_3),                    t=5.                       (2)
+M=nu_7(H)<nu_7(c_3),                 t=5,
+
+k=#{j in {1,2}:nu_7(c_j)<=M},
+
+b=#{j in {1,2}:nu_7(c_j)=M}.                                  (2)
 ```
 
-After THM-2431 and THM-2432, the exact residual is
+After THM-2431 and THM-2432 the residual is exactly
 
 ```text
 M=0:   (k,t,b,W)=(1,5,1,8), (2,5,2,9),
 
-M>0:   (k,t,b,W)=(2,5,1,8).                                    (3)
+M>0:   (k,t,b,W)=(2,5,1,8).                                  (3)
 ```
 
-Thus
+Set
 
 ```text
-J={j in {1,2}:nu_7(c_j)=M}
+N=7^(M+1),                    d=7^M,
+
+u_0=H/d,                      u_i=q_i/d,
+
+J={j in {1,2}:nu_7(c_j)=M},   v_j=c_j/d  for j in J.           (4)
 ```
 
-has cardinality
+The six `u_i` are units modulo `91`. Every exact-depth top blocker has
 
 ```text
-b=1,2,1
+v_j=13w_j,                    7 not|w_j.                        (5)
 ```
 
-in the three cases. Put
+All identities below are almost everywhere. Endpoints and the finite
+family of inherited exceptional pullbacks are removed once and for
+all.
 
-```text
-N=7^(M+1),                    L=91,
+## 2. The sharpened parent image
 
-u_0=H/7^M,                   u_i=q_i/7^M,
-
-v_j=c_j/7^M                 for j in J.                           (4)
-```
-
-The six `u` speeds are units modulo `91`. Each top blocker has
-
-```text
-v_j=13w_j,                  7 not|w_j.                            (5)
-```
-
-## 2. The large parent image and the six-unit locus
-
-As in THM-2427, let
+Write `c_j=13C_j` and put
 
 ```text
 A=D_(C_1)^c intersection D_(C_2)^c intersection D_(C_3)^c,
 
-P=T_N(A).                                                         (6)
+P=T_N(A).                                                       (6)
 ```
 
-Endpoint and inherited exceptional images are null and will always be
-ignored. Since
+On a generic `N`-preimage fibre:
+
+- if `nu_7(C_j)>M`, then `C_j=N e_j`, so the corresponding quotient
+  blocker is constant on the whole fibre;
+- if `nu_7(C_j)<=M`, that blocker occupies exactly `N/7` preimages.
+
+There are only `k<=2` low quotient blockers. Their union therefore
+cannot fill a fibre. Conversely, one dangerous high quotient blocker
+removes the whole fibre. Hence the image is typed exactly by
 
 ```text
-A subset T_N^(-1)(P)
+P
+ =intersection_(nu_7(C_j)>M) D_(C_j/N)^c                 a.e.    (7)
 ```
 
-and `T_N` preserves Haar measure under inverse image,
+and the union bound gives
 
 ```text
-mu(P)>=mu(A)>=4/7.                                                (7)
+mu(P)>=1-(3-k)/7=(4+k)/7.                                      (8)
 ```
 
-For `Y in P`, use the physical common-root coordinate
+This is the first gain over the older `4/7` invoice.
+
+## 3. The quotient stalk and its forced gaps
+
+Use the quotient coordinate
 
 ```text
-z_s=(Y+s)/L,                       s in Z/LZ.                      (8)
+z=T_d x.                                                        (9)
 ```
 
-The common translation `floor(Ny)` in the labelled CRT index is
-absorbed into `s`; no guard normalization is used in the packet below.
-Let
+For `Y in P`, the composed seven- and thirteen-root operation is the
+common quotient stalk
 
 ```text
-U=E_(u_0) union D_(u_1) union ... union D_(u_5).                  (9)
+z_s=(Y+s)/91,                    s in Z/91Z.                     (10)
 ```
 
-The guard has `26` points and the five ordinary words have `13` each,
-so their total incidence on (8) is exactly `91`.
+At `M=0`, this is the physical stalk. At `M>0`, it is the
+`T_(7^M)` quotient stalk from THM-2430; this distinction is
+load-bearing.
 
-Define the global exact-unit locus
+Put
 
 ```text
-mathcal E={Y: U contains every z_s in (8)}.                       (10)
+U=E_(u_0) union D_(u_1) union ... union D_(u_5),                 (11)
+
+mathcal E={Y: every root in (10) belongs to U}.                  (12)
 ```
 
-Whenever (10) holds, the six masks are an exact one-fold tiling.
-THM-2430 puts it in the corrected `62`-tiling atlas, and THM-2431's
-fixed-pair sharp phase bound applies to these same fixed speeds.
-Therefore
+The guard contributes `26` incidences and the five ordinary words
+contribute `13` each. Thus every cover in (12) is an exact one-fold
+tiling. THM-2431's fixed repeated-pair argument gives
 
 ```text
-mu(mathcal E)<=3/7.                                               (11)
+mu(mathcal E)<=3/7.                                             (13)
 ```
 
-Equations (7) and (11) give
+Equations (8) and (13) imply
 
 ```text
-mu(P minus mathcal E)>=1/7.                                      (12)
+mu(P minus mathcal E)>=(1+k)/7.                                 (14)
 ```
 
-## 3. Puncture the common stalk
+THM-2427 has `W>k`, so its top words alone cover every relevant
+orbit. Consequently each quotient root missing from the six-unit
+union (11) is covered by at least one **actual exact-depth top
+blocker** `D_(v_j)`, `j in J`. Low blockers may shadow it but are not
+needed for existence.
 
-Define the physical Boolean packet
+Define
 
 ```text
-F={z:T_L z in P,                    z notin U}.                    (13)
+F^q={z:T_91 z in P, z notin U},
+
+F_j^q=F^q intersection D_(v_j),
+
+P_j={Y: the fibre over Y meets F_j^q}.                           (15)
 ```
 
-The map
+The `P_j` cover `P\mathcal E`. Since `|J|=b`, one fixed label `j`
+satisfies
 
 ```text
-(Y,s) -> (Y+s)/L
+mu(P_j)>=(1+k)/(7b).                                            (16)
 ```
 
-is an almost-everywhere measure-preserving bijection from Haar measure
-times normalized counting measure on `Z/LZ` to physical Haar measure.
-Every parent in `P\mathcal E` has at least one gap in (9). Hence
+The three resulting invoices are
+
+| shape | `mu(P_j)` | one marked quotient root |
+|---|---:|---:|
+| `M=0,(1,5,1,8)` | `>=2/7` | `>=2/637` |
+| `M=0,(2,5,2,9)` | `>=3/14` | `>=3/1274` |
+| `M>0,(2,5,1,8)` | `>=3/7` | `>=3/637` |
+
+The fixed label is chosen before any Fourier character.
+
+## 4. The full labelled packet already sees every quotient character
+
+Use CRT coordinates
 
 ```text
-mu(F)
- =integral_P #{s:z_s notin U}/L dY
- >=1/(7*91)
- =1/637.                                                         (14)
+Z/91Z = F_7 x F_13.                                             (17)
 ```
 
-THM-2427's inequality `W>k` has already proved that the top words cover
-every septimal bin. Thus every point of `F` is covered by at least one
-of the actual top blockers:
+Because `v_j=13w_j`, the blocker `D_(v_j)` selects exactly one
+`F_7` sheet on every active generic fibre. On that sheet define
 
 ```text
-F subset union_(j in J) D_(v_j)                     a.e.          (15)
+S_j(Y)
+ ={r in F_13: the CRT root (source_sheet_j(Y),r) lies in F_j^q}.
+                                                                    (18)
 ```
 
-Low blockers can also be present and the two top blockers can overlap.
-Equation (15) is not a unique-owner assertion.
-
-For `j in J`, put
+The set `S_j(Y)` is nonempty for `Y in P_j`. It is proper: the
+length-`2/7` guard meets three or four of the thirteen target roots
+on the same source sheet, and those roots lie in `U`. Thus
 
 ```text
-F_j=F intersection D_(v_j),
-
-P_j={Y in P: some z_s belongs to F_j}.                            (16)
+1<=|S_j(Y)|<=10.                                                 (19)
 ```
 
-The sets `P_j` cover `P\mathcal E`. Since `b<=2`, one fixed actual
-blocker label satisfies
+A `C_91` character restricts on the sheet to a phase times a
+`C_13` character sum over `S_j(Y)`. For the trivial target character
+the sum is `|S_j(Y)|`. For a nontrivial target character it cannot
+vanish: by irreducibility of `Phi_13`, a rational `0/1` polynomial of
+degree at most twelve vanishing at a primitive thirteenth root would
+have to be `0` or `Phi_13`, contrary to (19). Therefore the direct
+fixed-label packet `1_(F_j^q)` has positive polyphase energy in
+**every one of the 91 quotient residue classes**.
+
+This conclusion uses no chosen root and no signed termwise
+factorization. The next section supplies a sharp uniform floor by
+selecting one root equivariantly.
+
+## 5. A translation-equivariant marked root
+
+For a nonempty proper `S subset F_13`, define the cyclic binary word
 
 ```text
-mu(P_j)>=1/(7b)>=1/14.                                           (17)
+w_(S,a)=(1_S(a+r))_(r=0)^12.                                    (20)
 ```
 
-Each parent in `P_j` supplies at least one physical root, so
+The thirteen rotations are distinct. Indeed, a nontrivial
+translation stabilizer in the prime cyclic group would make `S`
+empty or full. Let
 
 ```text
-rho:=mu(F_j)>=mu(P_j)/91>=1/1274.                                (18)
+sigma(S)=the unique a for which w_(S,a) is lexicographically maximal,
+
+with 1>0.                                                        (21)
 ```
 
-When `b=1`, the sharper bounds are
+The maximal word begins with `1`, so `sigma(S) in S`, and
 
 ```text
-mu(P_j)>=1/7,                     rho>=1/637.                     (19)
+sigma(S+t)=sigma(S)+t.                                          (22)
 ```
 
-The label in (17)--(19) is fixed before any Fourier colour is chosen.
+Pair `sigma(S_j(Y))` with the unique blocker source sheet in the CRT
+coordinates (17). This selects one quotient root on every parent in
+`P_j`. Call the resulting quotient packet `G^q`.
 
-## 4. Exact septimal polyphase energy
+The construction is rational finite-step: away from finitely many
+rational endpoints, all 91 root truth values are locally constant.
+Fixing half-open representatives makes the selector literal without
+changing any measure. It is equivariant under root translations, but
+not asserted to be reflection- or affine-unit-equivariant.
 
-Let `f=1_(F_j)` for the fixed label in Section 3 and define, for
-`ell in Z/7Z`,
+Put
 
 ```text
-C_ell(t)
- =1/7 sum_(r in Z/7Z)
-       f((t+r)/7) zeta_7^(-ell r).                               (20)
+rho_q=mu(G^q)=mu(P_j)/91.                                       (23)
 ```
 
-Because `f<=1_(D_(v_j))` and (5) holds, the seven-root profile in
-(20) has at most one occupied sheet for almost every `t`. Therefore
-every colour has the same pointwise squared magnitude:
+For the normalized `C_91` root transform and every
+`m in Z/91Z`,
 
 ```text
-|C_ell(t)|^2
- =1/49 sum_r f((t+r)/7).                                        (21)
+C_m(Y)
+ =1/91 1_(P_j)(Y) exp(-2 pi i m sigma_91(Y)/91),                 (24)
+
+|C_m(Y)|^2=1/91^2 1_(P_j)(Y).                                  (25)
 ```
 
-Integration and the standard polyphase identity give the exact law
+The polyphase identity gives the exact flat bank
 
 ```text
-sum_(n congruent ell mod 7)|fhat(n)|^2
- =integral |C_ell(t)|^2dt
- =rho/7                                                       (22)
+sum_(n congruent m mod 91)|Ghat^q(n)|^2
+ =mu(P_j)/91^2
+ =rho_q/91                                                     (26)
 ```
 
-for every `ell`, including zero. In particular, for each of the six
-nonzero septimal colours,
+for all 91 characters, including zero. Uniformly across the three
+shapes,
 
 ```text
-sum_(n congruent ell mod 7)|fhat(n)|^2
- >=1/8918,                                                       (23)
+rho_q>=3/1274,
+
+energy in each C_91 class >=3/115934,                            (27)
+
+total energy in the 72 unit classes >=108/57967.                 (28)
 ```
 
-and the total charged energy is at least
+The exact companion checks all `8190` nonempty proper `C_13` masks,
+their `630` translation orbits, and all `106470` marker-equivariance
+instances.
+
+## 6. Physical pullback and the ancestry kernel
+
+When `M=0`, `d=1` and `G^q` is a genuine physical packet. Thus both
+`M=0` shapes have positive physical Fourier energy in every residue
+class modulo `91`, with the floors (26)--(28). THM-2424's
+endpoint-Prony lemma gives a finite surviving physical lift in every
+nonzero class.
+
+When `M>0`, define the physical pullback
 
 ```text
-6/8918=3/4459.                                                   (24)
+G^phys=(T_d)^(-1)(G^q),                    d=7^M.                 (29)
 ```
 
-In the two one-blocker shapes, (19) sharpens (23)--(24) to
+Each selected quotient root has `d` physical ancestors. On the
+natural `C_(91d)` fibre, the normalized transform is
 
 ```text
-per colour >=1/4459,                  total >=6/4459.             (25)
+C_q^phys(Y)=0                         unless d|q,
+
+C_(dm)^phys(Y)
+ =1/91 1_(P_j)(Y) exp(-2 pi i m sigma_91(Y)/91).                 (30)
 ```
 
-Thus every nonzero residue class modulo seven contains a genuine
-physical Fourier frequency of the same fixed labelled packet.
-
-## 5. Bounded lifts and the exact stopping boundary
-
-The set `A`, its image `P`, all combs in (9), and `F_j` are rational
-finite-step sets. For a nonzero class `ell mod 7`, group the oriented
-jumps of `f` along the progression `ell+7n` into `L_ell` effective
-nodes. THM-2424's endpoint-Prony lift gives a surviving frequency with
+Hence the 91 annihilator characters retain exactly the energy (26),
+and all other characters vanish. Equivalently,
 
 ```text
-n_physical congruent ell mod 7,
+Ghat^phys(n)=0 unless d|n,
 
-0<|n_physical|<=7 ceil(L_ell/2)-1.                               (26)
+Ghat^phys(dn)=Ghat^q(n).                                        (31)
 ```
 
-This is a physical frequency, not a relation-current address.
+Because `gcd(d m,91)=7` whenever `m` is a `91`-unit, the
+positive-depth packet does **not** supply a physical `91`-unit
+frequency. Selecting one physical ancestor would require a new
+ancestry section and would break the present quotient-gauge theorem.
 
-No conclusion modulo thirteen follows from (22). The sharp hostile is
+## 7. What is canonical, and what is not
+
+The direct packet `F_j^q` is a Boolean factor-repair packet carrying
+one fixed actual top-blocker label. The flat quantitative section
+`G^q` is more selective: it is a finite Boolean function of the
+thirteen root translates of `F_j^q`. Current THM-2334/THM-2410
+single-copy probe algebra is not proved closed under this nonlinear
+thirteen-copy operation. Therefore (26) is a derived root-section
+Fourier bank, not a canonical Abel endpoint or relation current.
+
+The owner typing is:
+
+- in `M=0,(1,5,1,8)`, the unique top label is an exclusive blocker
+  owner on the gap;
+- in `M=0,(2,5,2,9)`, one has only exclusive owner versus
+  double-top collision;
+- in `M>0,(2,5,1,8)`, one has only exclusive top owner versus
+  top/low-blocker collision.
+
+All coverage is punctured and almost everywhere. MISTAKE-273's exact
+open-mask seam shows that no literal endpoint owner follows.
+Integrated complex coefficients can also cancel while the energy
+bank (26) remains flat.
+
+Thus THM-2435 does not yet produce a signed handoff, terminal word,
+common endpoint phase, physical positive-depth `91`-unit relation,
+valuation-shape exclusion, scalar-row decrement, or proof of
+LRC(14). It isolates two orthogonal missing coordinates:
 
 ```text
-f=1_(D_13).
+M=0:  thirteen-copy Boolean section -> lawful common-endpoint probe,
+
+M>0:  quotient root -> physical ancestry section,
+
+both: energy -> retained complex current phase.                  (32)
 ```
 
-It is `1/13`-periodic, so every Fourier frequency is divisible by
-thirteen. Nevertheless, for each `ell=1,...,6`, the frequency
-
-```text
-n=13(7-ell)
-```
-
-lies in class `ell mod 7` and has nonzero central-interval
-coefficient. Hence all six septimal classes can survive while every
-frequency is target-dark modulo thirteen. A target-root phase,
-common endpoint reference, or genuine CRT intertwiner is still
-required for a `91`-unit current.
-
-## 6. Exact companion
+## 8. Exact companion
 
 Run
 
@@ -321,22 +399,15 @@ python3 -O 04-computation/lrc14_top_blocker_essential_parent_thm2435.py
 
 The dependency-free companion:
 
-- exhausts all `352,947` labelled placements of a two-bin guard and
-  five ordinary singleton words on `F_7`;
-- checks the complete unit-gap histogram and all one-/two-blocker
-  covering and essential counts;
-- verifies the exact `1/7`, `1/637`, `1/14`, and `1/1274` mass
-  invoices;
-- verifies the singleton-sheet DFT norm and every quantitative energy
-  floor in (23)--(25); and
-- checks the six explicit target-dark frequencies of Section 5.
-
-The finite word bank contains one-gap and two-gap configurations, so
-the essential-blocker alternative is a genuine sharp branch, not a
-counting artefact. The universal factor `1/2` in (17) and the
-one-root factor `1/91` in (18) are optimal from the present data:
-two blocker labels may split the essential parents evenly, with only
-one puncture on each parent.
+- exhausts all `352947` labelled seven-bin unit profiles;
+- verifies the three sharpened `(k,b)` measure invoices;
+- exhausts all `8190` nonconstant `C_13` masks, `630` translation
+  orbits, and `106470` marker-equivariance checks;
+- performs `745290` exact cyclotomic/character checks without
+  floating point;
+- verifies the exact `C_91` flat-energy floors; and
+- checks the positive-depth ancestry annihilator and the loss of
+  physical `91`-unit residues.
 
 Normal and optimized runs must reproduce
 
@@ -346,24 +417,9 @@ Normal and optimized runs must reproduce
 
 byte-for-byte.
 
-## 7. Consequence and scope
+## 9. Independent audit
 
-Every one of the three live deep-`c_3` valuation shapes now carries:
-
-```text
-one fixed actual top-blocker label,
-positive punctured physical mass,
-all six septimal Fourier residue energies,
-and a finite physical lift in every charged septimal class.       (27)
-```
-
-This does not identify a unique scalar-cover owner, preserve a
-preselected terminal word, force a thirteen-unit frequency, exclude
-one of the three shapes, remove a scalar profile row, or prove
-LRC(14). The next decisive sidecar must couple (27) to a nonflat
-target/root coordinate without losing the fixed blocker label.
-
-## 8. Independent audit
-
-Independent hostile audit is in progress. QED conditional on that
-audit.
+Independent audits have accepted the sharpened parent image, the
+fixed-label measure invoices, the lexicographic selector, and the
+quotient/physical ancestry distinction. Final replay and immutable
+hash audit are pending. QED conditional on that final audit.

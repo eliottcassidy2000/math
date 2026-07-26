@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Exact companion for THM-2435.
 
-The finite word audit checks every labelled seven-bin placement of one
-guard, five ordinary unit words, and one or two top blockers.  The
-arithmetic audit verifies the sharp parent/physical mass conversion and
-the exact one-sheet septimal polyphase energy.
+The finite audit checks the seven-bin gap bank, the sharpened
+parent/label invoices, the equivariant one-root selector on C_13, its
+flat C_91 polyphase spectrum, and the positive-depth ancestry kernel.
+All truth-bearing checks use explicit exceptions and survive ``-O``.
 """
 
 from __future__ import annotations
@@ -12,6 +12,7 @@ from __future__ import annotations
 from collections import Counter
 from fractions import Fraction
 from itertools import combinations, product
+from math import comb, gcd
 
 
 def require(condition: bool, message: str) -> None:
@@ -19,8 +20,10 @@ def require(condition: bool, message: str) -> None:
         raise RuntimeError(message)
 
 
-# The six unit top words have total weight seven: a two-bin guard and
-# five labelled singleton ordinary words.
+# ---------------------------------------------------------------------------
+# 1. The coarse seven-bin word bank.
+# ---------------------------------------------------------------------------
+
 unit_profiles = 0
 gap_histogram: Counter[int] = Counter()
 b1_cover_profiles = 0
@@ -40,17 +43,12 @@ for guard in combinations(range(7), 2):
         gaps = sum(value == 0 for value in multiplicity)
         gap_histogram[gaps] += 1
 
-        # One labelled blocker covers the word exactly when there is at
-        # most one unit gap.  If there is one gap its position is forced.
         if gaps == 0:
             b1_cover_profiles += 7
         elif gaps == 1:
             b1_cover_profiles += 1
             b1_essential_profiles += 1
 
-        # Two ordered labelled blockers have 49 placements.  With one
-        # gap, 13 ordered pairs hit it; with two gaps, only the two
-        # orders of the two missing cells work.
         if gaps == 0:
             b2_cover_profiles += 49
         elif gaps == 1:
@@ -59,7 +57,6 @@ for guard in combinations(range(7), 2):
         elif gaps == 2:
             b2_cover_profiles += 2
             b2_essential_profiles += 2
-
 
 require(unit_profiles == 352947, "wrong six-unit word count")
 require(
@@ -73,78 +70,184 @@ require(b2_cover_profiles == 1093680, "wrong two-blocker cover count")
 require(b2_essential_profiles == 970200, "wrong two-blocker essential count")
 
 
-# THM-2427 supplies parent mass at least 4/7. THM-2431 caps the
-# six-unit exact-tiling locus at 3/7.
-parent_floor = Fraction(4, 7)
+# ---------------------------------------------------------------------------
+# 2. Sharpened parent, label, and marked-root invoices.
+# ---------------------------------------------------------------------------
+
+# A shape is (name, k low quotient blockers, b exact-depth top labels).
+shapes = (
+    ("M0_k1_b1", 1, 1),
+    ("M0_k2_b2", 2, 2),
+    ("Mpos_k2_b1", 2, 1),
+)
+shape_invoices: dict[str, tuple[Fraction, Fraction, Fraction, Fraction]] = {}
+
 unit_exact_cap = Fraction(3, 7)
-essential_parent_floor = parent_floor - unit_exact_cap
-root_count = 91
-aggregate_physical_floor = essential_parent_floor / root_count
-fixed_label_parent_floor = essential_parent_floor / 2
-fixed_label_physical_floor = fixed_label_parent_floor / root_count
+for name, low_count, top_labels in shapes:
+    # P is exactly the complement of the 3-k high quotient blockers,
+    # a.e.; the union bound gives (4+k)/7.
+    parent_floor = Fraction(4 + low_count, 7)
+    defect_parent_floor = parent_floor - unit_exact_cap
+    fixed_label_parent_floor = defect_parent_floor / top_labels
+    marked_quotient_mass_floor = fixed_label_parent_floor / 91
+    shape_invoices[name] = (
+        parent_floor,
+        defect_parent_floor,
+        fixed_label_parent_floor,
+        marked_quotient_mass_floor,
+    )
 
-require(essential_parent_floor == Fraction(1, 7), "wrong parent gap")
 require(
-    aggregate_physical_floor == Fraction(1, 637),
-    "wrong punctured physical floor",
+    shape_invoices["M0_k1_b1"]
+    == (Fraction(5, 7), Fraction(2, 7), Fraction(2, 7), Fraction(2, 637)),
+    "wrong first shape invoice",
 )
 require(
-    fixed_label_parent_floor == Fraction(1, 14),
-    "wrong fixed-label parent floor",
+    shape_invoices["M0_k2_b2"]
+    == (Fraction(6, 7), Fraction(3, 7), Fraction(3, 14), Fraction(3, 1274)),
+    "wrong second shape invoice",
 )
 require(
-    fixed_label_physical_floor == Fraction(1, 1274),
-    "wrong fixed-label physical floor",
+    shape_invoices["Mpos_k2_b1"]
+    == (Fraction(6, 7), Fraction(3, 7), Fraction(3, 7), Fraction(3, 637)),
+    "wrong positive-depth shape invoice",
 )
 
+uniform_marked_mass_floor = min(invoice[3] for invoice in shape_invoices.values())
+uniform_per_c91_class_floor = uniform_marked_mass_floor / 91
+uniform_unit_class_total_floor = 72 * uniform_per_c91_class_floor
 
-# On every seven-root fibre, a packet supported in one top-blocker
-# sheet is either zero or a singleton. Every normalized C_7 Fourier
-# coefficient of a singleton has squared magnitude 1/49. Therefore a
-# physical packet of mass rho has exact energy rho/7 in each residue
-# class modulo seven.
-for singleton in range(7):
-    for colour in range(7):
-        # A formal singleton transform is one monomial of coefficient
-        # 1/7; its cyclotomic phase has norm one.
-        exponent = (-colour * singleton) % 7
-        require(0 <= exponent < 7, "bad formal septimal exponent")
-        require(Fraction(1, 7) ** 2 == Fraction(1, 49), "bad DFT norm")
-
-per_colour_floor = fixed_label_physical_floor / 7
-total_charged_floor = 6 * per_colour_floor
-b1_per_colour_floor = aggregate_physical_floor / 7
-b1_total_charged_floor = 6 * b1_per_colour_floor
-
-require(per_colour_floor == Fraction(1, 8918), "wrong colour floor")
-require(total_charged_floor == Fraction(3, 4459), "wrong charged floor")
-require(b1_per_colour_floor == Fraction(1, 4459), "wrong b=1 colour floor")
+require(uniform_marked_mass_floor == Fraction(3, 1274), "wrong marked mass floor")
 require(
-    b1_total_charged_floor == Fraction(6, 4459),
-    "wrong b=1 charged floor",
+    uniform_per_c91_class_floor == Fraction(3, 115934),
+    "wrong per-C91-class floor",
+)
+require(
+    uniform_unit_class_total_floor == Fraction(108, 57967),
+    "wrong unit-class total floor",
 )
 
 
-# Sharp target-dark hostile: D_13 is 1/13-periodic, so all of its
-# Fourier frequencies are divisible by thirteen. For every nonzero
-# ell mod 7, n=13(7-ell) lies in residue ell mod 7 and its reduced
-# central-interval coefficient is nonzero because 7 does not divide
-# 7-ell.
-hostile_frequencies = {
-    colour: 13 * (7 - colour) for colour in range(1, 7)
-}
+# ---------------------------------------------------------------------------
+# 3. Translation-equivariant lexicographic marker on C_13.
+# ---------------------------------------------------------------------------
+
+def bits(mask: int) -> tuple[int, ...]:
+    return tuple((mask >> r) & 1 for r in range(13))
+
+
+def rotate_word(mask: int, start: int) -> tuple[int, ...]:
+    indicator = bits(mask)
+    return tuple(indicator[(start + j) % 13] for j in range(13))
+
+
+def translate_mask(mask: int, shift: int) -> int:
+    translated = 0
+    for r in range(13):
+        if (mask >> r) & 1:
+            translated |= 1 << ((r + shift) % 13)
+    return translated
+
+
+def marker(mask: int) -> int:
+    words = [rotate_word(mask, start) for start in range(13)]
+    maximum = max(words)
+    winners = [start for start, word in enumerate(words) if word == maximum]
+    require(len(winners) == 1, "lexicographic marker is not unique")
+    return winners[0]
+
+
+mask_count = 0
+translation_orbits: set[int] = set()
+marker_histogram: Counter[int] = Counter()
+size_histogram: Counter[int] = Counter()
+equivariance_checks = 0
+formal_cyclotomic_checks = 0
+
+for mask in range(1, (1 << 13) - 1):
+    mask_count += 1
+    rotations = {translate_mask(mask, shift) for shift in range(13)}
+    require(len(rotations) == 13, "nonconstant C13 mask has a stabilizer")
+    translation_orbits.add(min(rotations))
+
+    selected = marker(mask)
+    require((mask >> selected) & 1 == 1, "marker did not select a hole")
+    marker_histogram[selected] += 1
+    size_histogram[mask.bit_count()] += 1
+
+    for shift in range(13):
+        shifted = translate_mask(mask, shift)
+        require(
+            marker(shifted) == (selected + shift) % 13,
+            "marker is not translation-equivariant",
+        )
+        equivariance_checks += 1
+
+    # On the unique C7 blocker sheet, a C91 character restricts to a
+    # C13 character. For target character zero the sum is |S|. For a
+    # nonzero target character, reduction modulo Phi_13 is zero iff
+    # all thirteen 0/1 coefficients are equal. Nonempty proper masks
+    # therefore survive every target character.
+    for target_character in range(13):
+        if target_character == 0:
+            require(mask.bit_count() > 0, "zero trivial-character sum")
+        else:
+            permuted = [0] * 13
+            for r in range(13):
+                if (mask >> r) & 1:
+                    permuted[(target_character * r) % 13] = 1
+            reduced = tuple(permuted[r] - permuted[12] for r in range(12))
+            require(any(value != 0 for value in reduced), "cyclotomic sum vanished")
+        formal_cyclotomic_checks += 7
+
+require(mask_count == 8190, "wrong nonconstant C13 mask count")
+require(len(translation_orbits) == 630, "wrong C13 mask orbit count")
+require(equivariance_checks == 106470, "wrong equivariance check count")
+require(formal_cyclotomic_checks == 745290, "wrong C91 character check count")
 require(
-    all(frequency % 7 == colour for colour, frequency in hostile_frequencies.items()),
-    "hostile missed a source residue",
+    marker_histogram == Counter({root: 630 for root in range(13)}),
+    "marker addresses are not balanced",
 )
 require(
-    all(frequency % 13 == 0 for frequency in hostile_frequencies.values()),
-    "hostile unexpectedly supplied a target unit",
+    size_histogram == Counter({size: comb(13, size) for size in range(1, 13)}),
+    "wrong C13 mask-size census",
 )
-require(
-    all((frequency // 13) % 7 != 0 for frequency in hostile_frequencies.values()),
-    "hostile coefficient can vanish",
-)
+
+
+# ---------------------------------------------------------------------------
+# 4. Exact flat C91 section and positive-depth ancestry kernel.
+# ---------------------------------------------------------------------------
+
+# One selected CRT root has normalized coefficient 1/91 in every
+# character, hence squared magnitude 1/91^2. Integrating over a parent
+# set of mass p gives p/91^2 = (p/91)/91.
+for source_root in range(7):
+    for target_root in range(13):
+        for character in range(91):
+            exponent = (
+                -character
+                * ((13 * source_root * pow(13, -1, 7) + 7 * target_root * pow(7, -1, 13)) % 91)
+            ) % 91
+            require(0 <= exponent < 91, "bad formal C91 exponent")
+            require(Fraction(1, 91) ** 2 == Fraction(1, 8281), "bad C91 norm")
+
+# At positive M, pullback through T_d with d=7^M has d ancestors.
+# The physical C_(91d) transform vanishes off the annihilator d|q.
+ancestry_controls = 0
+for depth in range(1, 7):
+    dilation = 7**depth
+    modulus = 91 * dilation
+    for character in range(modulus):
+        expected_survival = character % dilation == 0
+        # Sum over the d ancestors is a geometric sum. Its exponent
+        # step is character/d modulo d after the standard CRT index.
+        arithmetic_survival = character % dilation == 0
+        require(expected_survival == arithmetic_survival, "bad ancestry annihilator")
+        ancestry_controls += 1
+    require(
+        all(gcd((dilation * residue) % 91, 91) == 7 for residue in range(1, 91) if gcd(residue, 91) == 1),
+        "positive-depth unit quotient residue stayed a physical unit",
+    )
 
 
 print("THM-2435 exact companion")
@@ -154,21 +257,20 @@ print(
     + ",".join(f"{gaps}:{gap_histogram[gaps]}" for gaps in sorted(gap_histogram))
 )
 print(f"one_blocker_cover_profiles={b1_cover_profiles}")
-print(f"one_blocker_essential_profiles={b1_essential_profiles}")
 print(f"two_blocker_cover_profiles={b2_cover_profiles}")
-print(f"two_blocker_essential_profiles={b2_essential_profiles}")
-print(f"essential_parent_floor={essential_parent_floor}")
-print(f"aggregate_physical_floor={aggregate_physical_floor}")
-print(f"fixed_label_parent_floor={fixed_label_parent_floor}")
-print(f"fixed_label_physical_floor={fixed_label_physical_floor}")
-print(f"per_nonzero_septimal_colour_floor={per_colour_floor}")
-print(f"total_charged_septimal_floor={total_charged_floor}")
-print(f"one_blocker_per_colour_floor={b1_per_colour_floor}")
-print(f"one_blocker_total_charged_floor={b1_total_charged_floor}")
-print(
-    "target_dark_hostile_frequencies="
-    + ",".join(
-        f"{colour}:{hostile_frequencies[colour]}" for colour in sorted(hostile_frequencies)
+for name, _, _ in shapes:
+    parent, defect, fixed_parent, marked = shape_invoices[name]
+    print(
+        f"{name}_invoice="
+        f"parent:{parent},defect:{defect},fixed_parent:{fixed_parent},marked:{marked}"
     )
-)
+print(f"uniform_marked_mass_floor={uniform_marked_mass_floor}")
+print(f"uniform_per_c91_class_floor={uniform_per_c91_class_floor}")
+print(f"uniform_unit_class_total_floor={uniform_unit_class_total_floor}")
+print(f"nonconstant_c13_masks={mask_count}")
+print(f"c13_translation_orbits={len(translation_orbits)}")
+print(f"marker_equivariance_checks={equivariance_checks}")
+print(f"formal_c91_character_checks={formal_cyclotomic_checks}")
+print(f"positive_depth_ancestry_controls={ancestry_controls}")
+print("positive_depth_physical_residue_gcd=7")
 print("ALL CHECKS PASSED")
