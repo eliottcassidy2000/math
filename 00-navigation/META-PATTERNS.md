@@ -11,10 +11,10 @@
 
 ## Demodulate, then average a complete subgroup
 
-**Trigger / action:** when a finite unitary action grades the target by labelled characters and exact support energy is needed, demodulate by the desired character and average the squared finite difference over the whole lawful subgroup; on Boolean cubes, also Mobius-invert complementary-subcube energies, and for nonlinear seeds multiply before demodulating.
-**Mechanism:** character orthogonality gives an exact `0/2` multiplier, so complete-line energies recover isotypic norms, support masks, and nonnegative mixed-interaction defects; with an exponent-range certificate the trivial residue of a powered Laurent polynomial is exactly its constant-term square.
-**Counterindication:** the subgroup, labels, Hermitian differences, unitarity, and alias range are load-bearing. Balanced scalar moments, unlabelled or one-body magnitude banks, partial colour faces, or pointwise modes followed by phase-cancelling integration do not supply powered cross phases or a charged selector.
-**Evidence:** THM-2369 (LRC target lines), THM-2374/2383 (Boolean Walsh/Gram tomography), THM-2375 (finite-unitary Gaussian tomography), and the audited `gmc2-lowest-face-complete-orbit-certificate-and-radial-boundary` reflection (multiply-first constant-term diagnostic and radial no-go).
+**Trigger / action:** when a finite unitary action grades a target, demodulate the desired character and average squared differences over the complete lawful subgroup; Möbius-invert Boolean subcubes, and multiply nonlinear seeds before demodulating.
+**Mechanism:** orthogonality gives an exact `0/2` multiplier, recovering isotypic norms, support masks, and nonnegative interaction defects; an exponent-range certificate can identify a powered Laurent residue with its constant-term square.
+**Counterindication:** labels, unitarity, Hermitian differences, and alias range are load-bearing. Scalar moments, partial colour faces, or phase-cancelled pointwise modes do not supply cross phases or a charged selector.
+**Evidence:** THM-2369, THM-2374/2383, THM-2375, and the audited `gmc2-lowest-face-complete-orbit-certificate-and-radial-boundary` reflection.
 
 ## Separate symmetry descent from regularity debt
 
@@ -109,35 +109,19 @@
 
 ## Controlled forgetting requires a sidecar
 
-**Trigger:** quotienting, canonicalizing, projecting, folding, taking moments, or replacing an object by an invariant.
-**Action:** state the next operation, preserved predicate, forgotten coordinate, and legal sidecar. Test every future consumer on the quotient kernel. THM-840 gives linear repair rank `dim N(ker R)`; for complex component sums, THM-2355 gives the quadratic repair: singleton energies plus complete pair unions or lawful cyclic twists on a nonzero-support tree.
-**Mechanism:** equal current responses need not form a continuation congruence. A kernel is gauge only when every named continuation kills it; otherwise retain a separating response, or a termination/height/depth coordinate for inverse limits.
-**Counterindication:** no sidecar is needed when all consumers factor through the quotient. A whole twist-energy ledger retains only autocorrelation and can still miss full-support perfect arrays.
-**Evidence:** THM-840; THM-2355; THM-2237/2240 (finite/infinite defect rank); THM-2230/2241 (safe shear); THM-2163/2174/2228 (carry/termination); THM-2242 (histograms lose core cost).
+**Trigger:** quotienting, projecting, folding, taking moments, or replacing an object by an invariant.
+**Action:** name the next consumer, preserved predicate, lost coordinate, and legal sidecar; test that consumer on the quotient kernel.
+**Mechanism:** a kernel is gauge only when every consumer kills it. Otherwise retain a separating response or a termination, height, depth, constant-field, or affine-origin coordinate. THM-840 gives linear repair rank `dim N(ker R)`; THM-2355 gives the quadratic phase repair.
+**Counterindication:** no sidecar is needed when every consumer factors through the quotient; autocorrelation alone can still miss a full-support array.
+**Evidence:** THM-840/2355; THM-2237/2240 (defect rank); THM-2163/2174/2228 (carry/termination); THM-2411 (fixed `E`); THM-2419 (affine origin/reference).
 
 ## After a scalar quotient, choose between a coherent lift and orbit incidence
 
-**Trigger:** a pair average, leading-layer equation, or subset statistic is
-exact, but the original target asks whether many local pieces coexist
-simultaneously.
-**Action:** identify the distinguished subset/fiber before averaging. Then make
-an explicit choice: either retain the alignment/divisibility data needed to
-lift the scalar equality, or prove that a transitive group action makes every
-translate have the same scalar value and sum all translates by uniform
-incidence. In the second route, look for a full-object invariant with an
-incompatible value.
-**Mechanism:** scalarization usually destroys coherent compatibility, but a
-transitive orbit can turn that loss into a theorem when every point occurs in
-the translated subset with the same multiplicity.
-**Counterindication:** do not orbit-average merely because a group acts. The
-subset identity must be equivariant, its right side invariant, and the full
-sum/product independently controlled. Otherwise preserve a sidecar instead.
-**Evidence:** THM-2126's exact LRC pair spectrum forgets the common mod-seven
-guard fiber and admits a neutral rank-eight wall; THM-2102's scalar first-defect
-identity `L=0` does not imply the divisibility needed to lift a common
-approximate root; THM-2101 succeeds in the opposite direction because Galois
-transitivity converts the small-root residue subset sum `1` into the full-root
-Lagrange sum `0`.
+**Trigger:** a scalar average or subset statistic is exact, but the target asks whether its local pieces coexist.
+**Action:** identify the distinguished fibre first. Either retain the alignment/divisibility needed to lift it, or prove a transitive action gives every translate the same value and sum by uniform incidence; then seek an incompatible full-object invariant.
+**Mechanism:** scalarization loses compatibility, while a genuinely uniform orbit can restore it.
+**Counterindication:** an action alone is insufficient: the identity must be equivariant, its right side invariant, and the full sum independently controlled.
+**Evidence:** THM-2126 (lost guard fibre), THM-2102 (missing divisibility), and THM-2101 (successful Galois incidence).
 
 ## Existence is a maximum or tail question, not automatically a mean question
 
