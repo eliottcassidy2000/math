@@ -9,12 +9,14 @@ normalized_W=(644204*Psi0 + 105*alpha**6 - 770*alpha**4*beta + 4840*alpha**3*gam
 normalized_fluxes=N1/(-7496192),N2/1319329792
 A0_u=7*(88*B + 9*y**2)/1089
 A0_E=(-71148*B**2*y + 745360*B*C + 5082*B*y**3 + 43560*C*y**2 + 287496*D*y + 945*y**5)/2108304
+constant_E_obstruction=degree5,leading_coefficient=945
+A0_trajectory_locus=EMPTY_BY_CONSTANT_FIELD_AND_NONSPLIT_DECK
 F2_associate=1/243
 F2_discriminant_scalar=63478233612288
 sextic_sha256=cd38217b285a7f81521b688ec23f198e9150c2130235c0d90f1a8fbd382c22b8
-perfect_square_iff=BC=0,D=22141*B^2/79200,W=-(2080981*B^3+13186800*C^2)/41164200
-H2_control=B=C=0,D=-175/10648,W=-175/161051,R6=42525*(y^2-2)*(y^2+1)^2
-generic_control=(B,C,D,W)=(1,1,1,1),squarefree_degree=6
-degree22_whole_polynomial_sidecar=PASS
-genus_zero_squareclass_reduction=MATHEMATICAL_PROOF_REQUIRED
-status=THM2411_DEGREE22_A0_SQUARECLASS_EXACT_REFEREE
+projected_perfect_square_iff=BC=0,D=22141*B^2/79200,W=-(2080981*B^3+13186800*C^2)/41164200
+projected_H2_control=B=C=0,D=-175/10648,W=-175/161051,R6=42525*(y^2-2)*(y^2+1)^2
+projected_generic_control=(B,C,D,W)=(1,1,1,1),squarefree_degree=6
+degree22_full_mate_whole_polynomial_sidecar=PASS
+constant_field_emptiness=MATHEMATICAL_PROOF_REQUIRED
+status=THM2411_DEGREE22_A0_EMPTY_EXACT_REFEREE

@@ -19,12 +19,14 @@ On the first-flux pole divisor
 the residual first equation solves for ``E`` and the second becomes a
 quadratic ``F2(Z,y)``.  This file independently verifies the Faber bank,
 the finite target-translation law, ``N1,N2``, the pole-divisor elimination,
-the sextic discriminant, the exact perfect-square subbranch, and the retained
+the fixed-constant ``E`` obstruction, the sextic discriminant, the exact
+perfect-square projected subbranch, and the retained full-mate
 whole-polynomial degree-22 Faber sidecar.
 
-The genus-zero argument and the statement that only squarefree degrees zero
-and two can carry a rational trajectory are mathematical parts of THM-2411.
-The ``H2*S2^2`` branch and the use of the whole-polynomial sidecar remain open.
+The constant-field argument that this obstruction empties the genuine
+``A=0`` trajectory locus is a mathematical part of THM-2411.  The
+``H0*S3^2`` and ``H2*S2^2`` calculations are projected coefficient-cone
+controls, not surviving Keller branches.
 """
 
 from __future__ import annotations
@@ -416,6 +418,28 @@ def main() -> None:
         - 1219680 * u * y**4
         + 672 * y**6
     )
+    weighted_generators = (y, u, z, b, cpar, dpar, epar, wpar)
+    weighted_values = (1, 2, 3, 2, 3, 4, 5, 6)
+
+    def weighted_degrees(expression: sp.Expr) -> set[int]:
+        polynomial = sp.Poly(sp.expand(expression), *weighted_generators)
+        return {
+            sum(power * weight for power, weight in zip(monomial, weighted_values))
+            for monomial, _ in polynomial.terms()
+        }
+
+    require(
+        weighted_degrees(pole_a) == {2}
+        and weighted_degrees(pole_k) == {5}
+        and weighted_degrees(n1) == {5}
+        and weighted_degrees(n2) == {6},
+        "normalized flux weight mismatch",
+    )
+    require(
+        sp.Poly(n1, *weighted_generators).content() == 1
+        and sp.Poly(n2, *weighted_generators).content() == 1,
+        "normalized integer flux numerator is not primitive",
+    )
     require(
         sp.factor(phi_in_uz + n1 / 7496192) == 0,
         "normalized first flux N1 mismatch",
@@ -443,6 +467,26 @@ def main() -> None:
         sp.factor(pole_k.subs({u: pole_u, epar: pole_e})) == 0,
         "A=0 residual K mismatch",
     )
+    pole_p5 = (
+        945 * y**5
+        + 5082 * b * y**3
+        + 43560 * cpar * y**2
+        + (-71148 * b**2 + 287496 * dpar) * y
+        + 745360 * b * cpar
+    )
+    require(
+        sp.factor(
+            pole_k.subs(u, pole_u)
+            - sp.Rational(16, 9) * (pole_p5 - 2108304 * epar)
+        )
+        == 0,
+        "A=0 fixed-E quintic associate mismatch",
+    )
+    pole_p5_poly = sp.Poly(pole_p5 - 2108304 * epar, y)
+    require(
+        pole_p5_poly.degree() == 5 and pole_p5_poly.LC() == 945,
+        "A=0 fixed-E obstruction lost its degree-five leading term",
+    )
 
     f2 = (
         3874403907 * z**2
@@ -466,6 +510,7 @@ def main() -> None:
         == 0,
         "A=0 second-flux quadratic associate mismatch",
     )
+    require(weighted_degrees(f2) == {6}, "F2 weight mismatch")
     f2_associate = sp.Rational(1, 243)
 
     sextic = (
@@ -489,6 +534,7 @@ def main() -> None:
         sextic_poly.degree() == 6 and sextic_poly.LC() == 42525,
         "sextic degree or leading coefficient mismatch",
     )
+    require(weighted_degrees(sextic) == {6}, "R6 weight mismatch")
 
     # Exact perfect-square branch.  Coefficient comparison is triangular:
     # y^5 kills the quadratic term, y^4/y^3 fix the remaining cubic,
@@ -522,6 +568,7 @@ def main() -> None:
     for square_control in (
         {b: 1, cpar: 0},
         {b: 0, cpar: 1},
+        {b: 0, cpar: 0},
     ):
         require(
             sp.factor(
@@ -533,10 +580,12 @@ def main() -> None:
             "perfect-square positive control failed",
         )
 
-    # The open H2*S2^2 branch is nonvacuous at the coefficient level.
+    # The projected H2*S2^2 coefficient-cone control is nonvacuous.
     h2_d = sp.factor(-sp.Rational(3 * 42525, 7762392))
     h2_w = sp.factor(-sp.Rational(2 * 42525, 78270786))
-    h2_model = 42525 * (y**2 - 2) * (y**2 + 1) ** 2
+    h2_squarefree = sp.Poly(y**2 - 2, y)
+    h2_square = sp.Poly(y**2 + 1, y)
+    h2_model = 42525 * h2_squarefree.as_expr() * h2_square.as_expr() ** 2
     require(
         sp.factor(
             sextic.subs(
@@ -547,6 +596,11 @@ def main() -> None:
         == 0,
         "H2*S2^2 positive control failed",
     )
+    require(
+        sp.gcd(h2_squarefree, h2_squarefree.diff()).degree() == 0
+        and sp.gcd(h2_squarefree, h2_square).degree() == 0,
+        "H2*S2^2 control is not squarefree and coprime",
+    )
     generic_sextic = sp.Poly(
         sextic.subs({b: 1, cpar: 1, dpar: 1, wpar: 1}),
         y,
@@ -556,7 +610,10 @@ def main() -> None:
         "generic squarefree hostile control failed",
     )
 
-    # Whole-polynomial degree-22 Faber sidecar, independent of N1/N2.
+    # Whole-polynomial degree-22 full-mate sidecar, independent of N1/N2.
+    # Individual Faber seeds need only lie in K[z]; polynomiality applies to
+    # Q minus the full polynomial truncation, so lower-seed sidecars must be
+    # retained.
     lvar = sp.symbols("L")
     sidecar = faber_sidecar(22, lvar, d, q, t, s)
     expected_sidecar = (
@@ -580,6 +637,41 @@ def main() -> None:
         sp.factor(sidecar - expected_sidecar) == 0,
         "degree-22 whole-polynomial Faber sidecar mismatch",
     )
+    lower_sidecar_14 = faber_sidecar(14, lvar, d, q, t, s)
+    lower_sidecar_10 = faber_sidecar(10, lvar, d, q, t, s)
+    lower_sidecar_6 = faber_sidecar(6, lvar, d, q, t, s)
+    lower_sidecar_2 = faber_sidecar(2, lvar, d, q, t, s)
+    expected_sidecar_14 = (
+        sp.Rational(35, 128)
+        * t
+        * (lvar**2 - 2 * lvar * s - t * d + 3 * s**2)
+    )
+    expected_sidecar_10 = -sp.Rational(5, 16) * t * (-lvar + 2 * s)
+    expected_sidecar_6 = sp.Rational(3, 8) * t
+    require(
+        sp.factor(lower_sidecar_14 - expected_sidecar_14) == 0
+        and sp.factor(lower_sidecar_10 - expected_sidecar_10) == 0
+        and sp.factor(lower_sidecar_6 - expected_sidecar_6) == 0
+        and sp.factor(lower_sidecar_2) == 0,
+        "lower whole-polynomial Faber sidecar mismatch",
+    )
+    full_mate_sidecar = sp.factor(
+        sidecar
+        + b * lower_sidecar_14
+        + cpar * lower_sidecar_10
+        + dpar * lower_sidecar_6
+        + epar * lower_sidecar_2
+    )
+    expected_full_mate_sidecar = sp.factor(
+        expected_sidecar
+        + b * expected_sidecar_14
+        + cpar * expected_sidecar_10
+        + dpar * expected_sidecar_6
+    )
+    require(
+        sp.factor(full_mate_sidecar - expected_full_mate_sidecar) == 0,
+        "degree-22 full-mate polynomial sidecar mismatch",
+    )
 
     print("faber_flux_bank=PASS degrees=2,6,10,14,18,22")
     print("independent_multinomial_bank=PASS degrees=2,6,10,14,18,22")
@@ -592,20 +684,25 @@ def main() -> None:
     print("normalized_fluxes=N1/(-7496192),N2/1319329792")
     print(f"A0_u={pole_u}")
     print(f"A0_E={pole_e}")
+    print("constant_E_obstruction=degree5,leading_coefficient=945")
+    print("A0_trajectory_locus=EMPTY_BY_CONSTANT_FIELD_AND_NONSPLIT_DECK")
     print(f"F2_associate={f2_associate}")
     print(f"F2_discriminant_scalar={discriminant_scalar}")
     print(f"sextic_sha256={canonical_hash(sextic, y, b, cpar, dpar, wpar)}")
-    print("perfect_square_iff=BC=0,D=22141*B^2/79200,"
+    print("projected_perfect_square_iff=BC=0,D=22141*B^2/79200,"
           "W=-(2080981*B^3+13186800*C^2)/41164200")
     print(
-        "H2_control="
+        "projected_H2_control="
         f"B=C=0,D={h2_d},W={h2_w},"
         "R6=42525*(y^2-2)*(y^2+1)^2"
     )
-    print("generic_control=(B,C,D,W)=(1,1,1,1),squarefree_degree=6")
-    print("degree22_whole_polynomial_sidecar=PASS")
-    print("genus_zero_squareclass_reduction=MATHEMATICAL_PROOF_REQUIRED")
-    print("status=THM2411_DEGREE22_A0_SQUARECLASS_EXACT_REFEREE")
+    print(
+        "projected_generic_control=(B,C,D,W)=(1,1,1,1),"
+        "squarefree_degree=6"
+    )
+    print("degree22_full_mate_whole_polynomial_sidecar=PASS")
+    print("constant_field_emptiness=MATHEMATICAL_PROOF_REQUIRED")
+    print("status=THM2411_DEGREE22_A0_EMPTY_EXACT_REFEREE")
 
 
 if __name__ == "__main__":

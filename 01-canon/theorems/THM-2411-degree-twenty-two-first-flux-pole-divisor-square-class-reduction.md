@@ -1,19 +1,19 @@
 ---
 id: THM-2411
-title: "Degree-twenty-two first-flux pole-divisor square-class reduction"
+title: "Degree-twenty-two first-flux pole-divisor emptiness and projected square-class atlas"
 status: >
   PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
   In the polynomial exact-square-prefix, genuine nonsplit degree-twenty-two
   terminal branch, legal target translation leaves five weighted parameters
   B,C,D,E,W. On the divisor where the first flux loses its Z coefficient,
-  the two constant Faber fluxes reduce exactly to a quadratic F_2(Z,y).
-  Its discriminant is a nonzero scalar times an explicit sextic R_6(y).
-  Every rational Keller trajectory on this divisor forces the squarefree
-  part of R_6 to have degree zero or two. The degree-zero branch is classified
-  exactly by BC=0 and two displayed parameter equations; the degree-two
-  H_2 S_2^2 branch and the whole-polynomial Faber sidecar remain open. This
-  is a necessary reduction, not a closure of degree twenty two, JC(2), or
-  DC(2).
+  the residual first flux forces the fixed constant coefficient E to equal
+  a degree-five polynomial in the centered coordinate y. Hence y is constant;
+  the second flux then makes T and q constant, contradicting the genuine
+  deck. Thus the entire first-flux pole divisor is empty. The exact quadratic
+  F_2, sextic R_6, perfect-square classification, and H_2 S_2^2 example remain
+  valid only as projected coefficient-cone controls after forgetting the
+  fixed-E sidecar. This closes only the A=0 chart, not degree twenty two,
+  JC(2), or DC(2).
 source: codex-2026-07-26-degree-twenty-two-pole-divisor
 depends_on:
   - THM-2129-quartic-faber-three-coefficient-boundary-classification
@@ -27,25 +27,27 @@ related:
   - THM-2406-degree-eighteen-H4-weighted-pole-deep-wall-collapse
 script: 04-computation/jc2_degree22_first_flux_pole_divisor_thm2411.py
 output: 05-knowledge/results/jc2_degree22_first_flux_pole_divisor_thm2411.out
-script_sha256: 560880a9bed96dd39f9ae59f86300fd78643e728356d9e081f1f523b76be2d0f
-output_sha256: 8eb1dc32906be0eea102c789c3cfd74a0713e0a8a0826d0bb580a31c0531f66a
+script_sha256: 7d14a16aab791db2da9dc2749117db6bdfe539096fe8d7670a9c852d44d956e3
+output_sha256: 916848b045d78ada4ecd6e911014668dc511c8d9c0b019bf82ca8ca2f2467000
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2411 -- the degree-twenty-two first-flux pole divisor
+# THM-2411 -- the degree-twenty-two first-flux pole divisor is empty
 
 **PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
 
 The degree-eighteen program uses a trigonal spectral curve because the first
 constant Faber flux eliminates `Z=T^2` generically. At degree twenty two, one
 important exceptional divisor behaves differently: the coefficient of `Z`
-in the first flux vanishes. Retaining that apparent failure rather than
-dividing by it reveals a simpler object. The remaining equations give a
-quadratic cover of the centered coefficient line, so the exact obstruction
-is its sextic square class.
+in the first flux vanishes. The first version of this theorem projected the
+remaining equations to a quadratic cover of the centered coefficient line.
+That projection forgot a decisive sidecar: `E` is a fixed coefficient in the
+constant field, not a function allowed to vary with `y`.
 
-This theorem classifies the rational square classes forced on that divisor.
-It does **not** eliminate either allowed square class.
+Retaining `E` closes the divisor immediately. The quadratic, sextic, and
+square-class calculations remain exact and useful as an atlas of the
+projected universal coefficient family, but they do not describe live Keller
+trajectory branches.
 
 ## 1. Inherited nonsplit terminal coordinates
 
@@ -101,8 +103,8 @@ then, in the notation of the exact-square prefix,
 A_src(2T F'+F T')=2kappa T,       kappa in C*.         (5)
 ```
 
-Nothing below spends (5). It is retained for the two square-class branches
-left open in Sections 7--8.
+Nothing below spends (5). The first two fluxes already close `mathcal A=0`;
+the one-form remains available for the complementary chart.
 
 ## 2. The degree-twenty-two target-translation normal form
 
@@ -232,7 +234,8 @@ E=[-71148B^2y+745360BC+5082By^3+43560Cy^2
     +287496Dy+945y^5]/2108304.                       (19)
 ```
 
-Substitution of (18)--(19) in (16) is lossless and gives
+Solving (17) and the residual first flux for `u` and `E` is algebraically
+reversible in the universal coefficient variety. Substitution in (16) gives
 
 ```text
 N_2=F_2/243,                                         (20)
@@ -257,14 +260,68 @@ quadratic curve
 F_2(Z,y)=0.                                          (22)
 ```
 
-No root choice or squaring has entered the reduction.
+No root choice or squaring has entered this identity. Projecting away the
+solved value of `E`, however, loses its fixed-constant condition; Section 5
+restores exactly that sidecar.
 
-## 5. The sextic square class
+## 5. The fixed-`E` sidecar empties the divisor
+
+The normalized coefficients `B,C,D,E,W` all lie in the fixed constant field
+`C`. This fact must be retained when using (19). Define
+
+```text
+P_5(Y)
+ =945Y^5+5082B Y^3+43560C Y^2
+   +(-71148B^2+287496D)Y+745360BC.                    (22a)
+```
+
+Direct substitution of (18) in the residual first flux gives the scalar
+associate
+
+```text
+mathcal K
+ =(16/9)[P_5(y)-2108304E].                            (22b)
+```
+
+Thus `mathcal K=0` makes `y` algebraic over `C`. Since `C` is algebraically
+closed and `y in C(x)`, it follows that `y in C`; the fixed leading
+coefficient `945!=0` prevents (22b) from becoming the zero polynomial.
+
+Equation (18) now makes `u` constant. Equation (21), whose leading
+`Z` coefficient is the nonzero constant `3874403907`, makes `Z` algebraic
+over `C`, hence constant. Therefore `T^2=Z`, then `T`, and finally `q` are
+constants in the algebraic function field. The genuine deck fixes constants
+but sends `q` to `-q`, contradicting (2) and `q!=0`.
+
+Consequently:
+
+> **First-flux pole-divisor closure.** There is no genuine nonsplit
+> degree-twenty-two Keller trajectory on `mathcal A=0`.
+
+```text
+{genuine degree-22 trajectories on mathcal A=0}=empty. (23)
+```
+
+The first failed inference in the earlier square-class route was the
+projection
+
+```text
+(B,C,D,E,W;Z,y) -> (B,C,D,W;Z,y).
+```
+
+It preserves the formal equation `F_2=0` but destroys the condition that `E`
+is one fixed constant for the whole trajectory.
+
+## 6. The projected sextic square-class atlas
+
+The remaining calculations in Sections 6--8 concern that projected universal
+coefficient family. They are exact algebraic controls, not surviving Keller
+branches.
 
 The quadratic discriminant is
 
 ```text
-Disc_Z(F_2)=63478233612288 R_6(y),                   (23)
+Disc_Z(F_2)=63478233612288 R_6(y),                   (24)
 ```
 
 with
@@ -274,46 +331,31 @@ R_6
  =42525y^6+205821By^4+1568160Cy^3
   +(-1920996B^2+7762392D)y^2
   -14609056B^3+66411576BD+39530700C^2+78270786W.
-                                                            (24)
+                                                            (25)
 ```
 
 In particular
 
 ```text
-deg_y R_6=6,                  lc_y R_6=42525!=0.      (25)
+deg_y R_6=6,                  lc_y R_6=42525!=0.      (26)
 ```
 
 Completing the square in `Z` identifies the normalization of (22), up to
 removing square factors, with
 
 ```text
-v^2=R_6(y).                                          (26)
+v^2=R_6(y).                                          (27)
 ```
 
-### 5.1 The centered coordinate cannot be constant
+### 6.1 What projected rationality would force
 
-Suppose `y in C`. Equation (18) makes `u` constant, and (21), whose leading
-`Z` coefficient is nonzero, makes `Z` algebraic over `C`. Since
-`Z in C(x)`, it is constant. Thus `T^2=Z`, then `T`, and finally `q` are
-constants in the algebraic function field. The constant field is the
-algebraically closed field `C`, so the deck fixes `q`. This contradicts
-(2) and `q!=0`.
-
-Hence every genuine trajectory on (17) has
-
-```text
-y notin C.                                           (27)
-```
-
-### 5.2 Rationality forces squarefree degree zero or two
-
-The pair `(Z,y)` gives a nonconstant rational map from `P^1_x` to an
-irreducible component of (22). Passing to the normalization and using
-properness extends it to a nonconstant morphism. Riemann--Hurwitz therefore
-forces that component to have genus zero.
+If one deliberately forgets the fixed-`E` sidecar and supplies a nonconstant
+rational parametrization `(Z,y)` of an irreducible component of (22), it
+extends by properness to a nonconstant morphism from `P^1`. Riemann--Hurwitz
+then forces that projected component to have genus zero.
 
 If `R_6` is a square, (22) splits and this is the degree-zero squarefree
-case. Otherwise (26) is a connected double cover. Write
+case. Otherwise (27) is a connected double cover. Write
 
 ```text
 R_6=H S^2,                 H squarefree.              (28)
@@ -326,14 +368,14 @@ Because `deg R_6=6`, `deg H` is even. The smooth projective model of
 g=(deg H-2)/2.                                      (29)
 ```
 
-Genus zero and (25) therefore force exactly
+Genus zero and (26) therefore force exactly
 
 ```text
 deg H=0                  or                  deg H=2. (30)
 ```
 
-Equivalently, every survivor on the pole divisor belongs to one of the two
-square classes
+Equivalently, the only projected square classes that can admit such a
+rational parametrization are
 
 ```text
 R_6=H_0 S_3^2,             H_0 in C*,
@@ -344,13 +386,15 @@ R_6=H_2 S_2^2,             H_2 squarefree quadratic.
                                                             (31)
 ```
 
-This is the theorem's necessary square-class reduction.
+This statement is retained only as an atlas of the quotient that forgot `E`;
+Section 5 proves that neither class lifts to a genuine trajectory on
+`mathcal A=0`.
 
-## 6. Exact classification of the perfect-square subbranch
+## 7. Exact classification of the projected perfect-square locus
 
 The first alternative in (31) can be written without an existential cubic:
 
-> **Perfect-square criterion.** The sextic (24) is a square in `C[y]` if and
+> **Perfect-square criterion.** The sextic (25) is a square in `C[y]` if and
 > only if
 >
 > ```text
@@ -369,19 +413,28 @@ The first alternative in (31) can be written without an existential cubic:
 > ```
 
 To prove necessity, normalize the leading cubic in a putative square to be
-monic. The missing `y^5` term in (24) kills its quadratic coefficient.
+monic. The missing `y^5` term in (25) kills its quadratic coefficient.
 The `y^4` and `y^3` coefficients then force the two lower coefficients in
 (33). The `y` coefficient forces `BC=0`; the `y^2` coefficient forces the
 displayed value of `D`; and the constant coefficient forces the displayed
 value of `W`. Substitution proves sufficiency. All pivots are nonzero in
 characteristic zero.
 
-Criterion (32) classifies the perfect-square divisor; it does **not** prove
-that the divisor is empty. A split spectral quadratic can still carry
-additional third-flux, Keller-one-form, or whole-polynomial constraints not
-used here.
+The axes are included, not divided away:
 
-## 7. The quadratic square class is genuinely present
+```text
+C=0:  42525[y^3+(121/50)By]^2,
+
+B=0:  42525[y^3+(1936/105)C]^2,
+
+B=C=0: 42525y^6.
+```
+
+Criterion (32) classifies the projected perfect-square coefficient locus.
+None of these points lifts to a `mathcal A=0` Keller trajectory because the
+fixed-`E` obstruction of Section 5 applies first.
+
+## 8. Projected quadratic and squarefree controls
 
 The second alternative in (31) is not a formal artifact. For example,
 
@@ -396,8 +449,9 @@ gives
 R_6=42525(y^2-2)(y^2+1)^2.                            (35)
 ```
 
-Thus the coefficient cone actually meets the `H_2S_2^2` locus. Conversely,
-at
+Thus the projected `(B,C,D,W)` coefficient cone actually meets the
+`H_2S_2^2` locus. It does not supply a constant `E` or a Keller trajectory.
+Conversely, at
 
 ```text
 (B,C,D,W)=(1,1,1,1),
@@ -409,14 +463,10 @@ the exact Euclidean algorithm gives
 gcd(R_6,R_6')=1,                                    (36)
 ```
 
-so the unrestricted pole divisor also contains generic genus-two spectral
-curves. Equations (34)--(36) are controls on the reduction, not existence
-claims for Keller trajectories.
+so the projected universal family also contains generic genus-two curves.
+Equations (34)--(36) are coefficient-cone controls only.
 
-The structured `H_2S_2^2` coefficient equations, their third flux, and their
-Keller one-form remain open.
-
-## 8. The retained whole-polynomial sidecar
+## 9. The retained whole-polynomial sidecar
 
 The flux quotient forgets that the reduced mate is a polynomial in the
 original exact-square-prefix coordinates. Preserve that information as
@@ -426,14 +476,16 @@ follows. Write
 P=H^2+L
 ```
 
-and define the finite binomial truncation
+and, for `j>=1`, define the finite binomial truncation
 
 ```text
-mathcal R_6(P,H)
- =sum_(i=0)^5 binom(11/2,i) H^(11-2i)L^i.            (37)
+mathcal R_j(P,H)
+ =sum_(i=0)^(j-1) binom(j-1/2,i)
+      H^(2j-1-2i)L^i.                                (37)
 ```
 
-Independent whole-polynomial Faber expansion gives
+Put `S_j=E_(4j-2)-mathcal R_j`. Independent Faber expansion gives the top
+sidecar
 
 ```text
 E_22-mathcal R_6(P,H)
@@ -444,12 +496,33 @@ E_22-mathcal R_6(P,H)
    ].                                                (38)
 ```
 
-Both `E_22` and `mathcal R_6(P,H)` are polynomials in `R[z]`. Formula (38)
-is therefore an exact pole-cancellation constraint on any later
-parametrization of (31). The present theorem records it but does not yet
-extract a contradiction from it.
+and the lower sidecars
 
-## 9. Exact verification and scope
+```text
+S_4=35T(L^2-2Ls-Td+3s^2)/128,
+
+S_3=-5T(-L+2s)/16,
+
+S_2=3T/8,                         S_1=0.              (39)
+```
+
+The individual `E_(4j-2)` belong a priori to `K[z]`; polynomiality does not
+apply to `E_22` alone. What is known to lie in `R[z]` is the full-mate
+difference
+
+```text
+Q-[mathcal R_6+B mathcal R_4+C mathcal R_3
+       +D mathcal R_2+E mathcal R_1]
+
+ =S_6+B S_4+C S_3+D S_2
+ in R[z].                                             (40)
+```
+
+Here `Q` and every `mathcal R_j(P,H)` are polynomials. Equation (40), not
+the top-seed identity (38) by itself, is the exact whole-polynomial
+pole-cancellation sidecar for a later parametrization.
+
+## 10. Exact verification and scope
 
 Run
 
@@ -464,13 +537,17 @@ The companion:
    recurrence and direct multinomial expansion;
 2. checks the whole-polynomial translation identity and all five invariants
    in (8);
-3. verifies (14)--(24), including the exact scalar in (23);
-4. checks both directions of (32)--(33);
-5. checks the squarefree and `H_2S_2^2` controls (34)--(36); and
-6. derives the whole-polynomial identity (38) independently of the flux
-   elimination.
+3. verifies (14)--(25), including the exact scalar in (24), and checks that
+   the fixed-`E` obstruction (22b) has degree five with leading coefficient
+   `945`;
+4. checks both directions of the projected criterion (32)--(33), including
+   the `B`-axis, `C`-axis, and their intersection;
+5. checks the projected squarefree and `H_2S_2^2` controls (34)--(36); and
+6. derives (38)--(40), including every lower Faber sidecar, independently of
+   the flux elimination.
 
 The theorem is scoped to the divisor `mathcal A=0` inside the genuine
 nonsplit, polynomial exact-square-prefix degree-twenty-two terminal branch.
-It does not treat `mathcal A!=0`, does not close either case in (31), and
-does not prove `JC(2)` or `DC(2)`.
+It proves that divisor empty. It does not treat `mathcal A!=0`, does not turn
+the projected controls (31) into trajectories, and does not prove `JC(2)` or
+`DC(2)`.
