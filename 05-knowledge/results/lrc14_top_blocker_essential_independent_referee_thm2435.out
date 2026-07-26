@@ -1,0 +1,14 @@
+THM-2435 independent finite-fibre referee
+quotient_image_controls=63
+typed_parent_floors=5/7,6/7,6/7
+typed_essential_floors=2/7,3/7,3/7
+uniform_fixed_label_mass=3/1274
+uniform_word_mass=1/637
+c13_necklace_orbits=630
+marker_covariance_checks=106470
+row_compositions=1716
+row_dirichlet_floor=4
+anova_hostile_checks=27
+positive_depth_annihilator_checks=36309
+quotient_physical_scope=PASS
+ALL INDEPENDENT CHECKS PASSED

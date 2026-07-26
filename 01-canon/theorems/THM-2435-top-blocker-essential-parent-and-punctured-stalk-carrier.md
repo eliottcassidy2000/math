@@ -41,15 +41,19 @@ related:
 script:
   - 04-computation/lrc14_top_blocker_essential_parent_thm2435.py
   - 04-computation/lrc14_top_blocker_essential_carrier_thm2435.py
+  - 04-computation/lrc14_top_blocker_essential_independent_referee_thm2435.py
 output:
   - 05-knowledge/results/lrc14_top_blocker_essential_parent_thm2435.out
   - 05-knowledge/results/lrc14_top_blocker_essential_carrier_thm2435.out
+  - 05-knowledge/results/lrc14_top_blocker_essential_independent_referee_thm2435.out
 script_sha256:
   - cdc85d8492cac4ade65fbd8e300a50fa841b967eb2e608fd2ad138e933abd8fb
   - 2b7c03f102fa53bc42ba44dc73194731bdd40c3a1eec42da9cfb4b56529c83cd
+  - 703f6846a9106d9b9d16abbceca8a7c4918a97e5322fccb11968a2440d297321
 output_sha256:
   - 5be089f3a1068518263bf4254ac1db9a1d8e2f9a0655b56a115a130e99907e62
   - 6a02977e4d1ccf5489d6e463e940e507e7ced84013742ab546bf8e6e8703a585
+  - 4eeba272a3dd686ab2e017191a03d999a176d32d43d2bcff66d0e5bd514b728e
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -580,9 +584,11 @@ python3 04-computation/lrc14_top_blocker_essential_parent_thm2435.py
 python3 -O 04-computation/lrc14_top_blocker_essential_parent_thm2435.py
 python3 04-computation/lrc14_top_blocker_essential_carrier_thm2435.py
 python3 -O 04-computation/lrc14_top_blocker_essential_carrier_thm2435.py
+python3 04-computation/lrc14_top_blocker_essential_independent_referee_thm2435.py
+python3 -O 04-computation/lrc14_top_blocker_essential_independent_referee_thm2435.py
 ```
 
-The two dependency-free companions:
+The three dependency-free companions:
 
 - exhausts all `352947` labelled seven-bin unit profiles;
 - verifies the three sharpened `(k,b)` measure invoices;
@@ -601,12 +607,17 @@ The two dependency-free companions:
   `8/7` carrier invoices and the exact `91`-branch Jacobian; and
 - checks explicit one-/two-source punctured repairs while retaining
   THM-2427's local exact tiling as a zero-essential hostile.
+- independently reconstructs the low/high quotient image criterion,
+  the three typed invoices, all `630` nontrivial `C_13` necklace
+  orbits, the sharp row-energy floor, the mixed-mode ANOVA boundary,
+  and the positive-depth annihilator on a separate code path.
 
 Normal and optimized runs must reproduce
 
 ```text
 05-knowledge/results/lrc14_top_blocker_essential_parent_thm2435.out
 05-knowledge/results/lrc14_top_blocker_essential_carrier_thm2435.out
+05-knowledge/results/lrc14_top_blocker_essential_independent_referee_thm2435.out
 ```
 
 byte-for-byte, respectively.
@@ -627,5 +638,11 @@ Independent hostile audits reconstructed and accepted:
 - every owner, endpoint, probe-algebra, and physical/quotient scope
   boundary above.
 
-Both companions and their optimized runs byte-match their stored
-transcripts, and all four LF hashes match the frontmatter. QED.
+The independent referee derives the quotient image criterion directly
+on generic `7^(M+1)` fibres rather than importing the primary
+companions. It separately reconstructs the three typed mass invoices,
+the `C_13` cyclotomic/necklace selector, the sharp integral row-defect
+energy, the two-way ANOVA boundary, and the positive-depth annihilator.
+Normal and optimized transcripts of all three companions match their
+stored outputs byte-for-byte. The quotient/physical distinction and
+every displayed constant survive the hostile replay. QED.
