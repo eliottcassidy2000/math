@@ -11,8 +11,9 @@ count.
 
 from __future__ import annotations
 
-from collections import Counter
+from collections import Counter, defaultdict
 from fractions import Fraction
+from itertools import combinations
 from math import gcd
 
 
@@ -134,6 +135,146 @@ require(pair_triple_matches == 620, "meet-in-the-middle mismatch")
 require(pair_triple_matches // 10 == len(solutions), "cover count mismatch")
 
 
+# A genuinely independent second representation rebuilds the candidate
+# universe with frozensets and retains the full meet-in-the-middle
+# solution set, rather than only its tenfold pair/triple count.
+set_universe = frozenset(range(26, 91))
+set_candidates = {
+    frozenset((start + j * step) % N for j in range(13))
+    for step in range(1, N)
+    if gcd(step, N) == 1
+    for start in range(N)
+}
+set_candidates = tuple(
+    sorted(
+        (support for support in set_candidates if support <= set_universe),
+        key=lambda support: tuple(sorted(support)),
+    )
+)
+require(len(set_candidates) == 182, "wrong set-valued candidate bank")
+require(
+    set(set_candidates)
+    == {
+        frozenset(points(mask))
+        for mask in eligible
+    },
+    "candidate representations disagree",
+)
+
+set_pairs_by_union: dict[
+    frozenset[int],
+    list[tuple[int, int]],
+] = defaultdict(list)
+for left, right in combinations(range(len(set_candidates)), 2):
+    if set_candidates[left].isdisjoint(set_candidates[right]):
+        set_pairs_by_union[
+            frozenset(set_candidates[left] | set_candidates[right])
+        ].append((left, right))
+
+set_mitm_solutions: set[frozenset[frozenset[int]]] = set()
+for first, second, third in combinations(range(len(set_candidates)), 3):
+    first_set = set_candidates[first]
+    second_set = set_candidates[second]
+    third_set = set_candidates[third]
+    if (
+        not first_set.isdisjoint(second_set)
+        or not first_set.isdisjoint(third_set)
+        or not second_set.isdisjoint(third_set)
+    ):
+        continue
+    triple = first_set | second_set | third_set
+    complement = frozenset(set_universe - triple)
+    for fourth, fifth in set_pairs_by_union.get(complement, ()):
+        support_solution = frozenset(
+            (
+                first_set,
+                second_set,
+                third_set,
+                set_candidates[fourth],
+                set_candidates[fifth],
+            )
+        )
+        if len(support_solution) == 5:
+            set_mitm_solutions.add(support_solution)
+
+bit_solutions_as_sets = {
+    frozenset(frozenset(points(mask)) for mask in solution)
+    for solution in solutions
+}
+require(
+    set_mitm_solutions == bit_solutions_as_sets,
+    "independent solution sets disagree",
+)
+
+
+# Hostile control: a dynamic least-branching pivot cannot be combined
+# with an increasing-index restriction.  The latter can postpone a
+# necessary lower-index support which does not contain the current
+# pivot, and the recursion then loses that unordered solution.
+ordered_candidates = set_candidates
+ordered_by_point: dict[int, list[int]] = defaultdict(list)
+for index, support in enumerate(ordered_candidates):
+    for point in support:
+        ordered_by_point[point].append(index)
+
+flawed_solutions: set[tuple[int, ...]] = set()
+
+
+def flawed_visit(
+    remainder: frozenset[int],
+    chosen: tuple[int, ...],
+    minimum_index: int,
+) -> None:
+    if not remainder:
+        if len(chosen) == 5:
+            flawed_solutions.add(chosen)
+        return
+    if len(chosen) >= 5:
+        return
+    pivot = min(
+        remainder,
+        key=lambda point: sum(
+            index > minimum_index
+            and ordered_candidates[index] <= remainder
+            for index in ordered_by_point[point]
+        ),
+    )
+    for index in ordered_by_point[pivot]:
+        support = ordered_candidates[index]
+        if index > minimum_index and support <= remainder:
+            flawed_visit(
+                frozenset(remainder - support),
+                chosen + (index,),
+                index,
+            )
+
+
+flawed_visit(set_universe, (), -1)
+require(len(flawed_solutions) == 35, "flawed hostile count changed")
+flawed_support_solutions = {
+    frozenset(ordered_candidates[index] for index in solution)
+    for solution in flawed_solutions
+}
+require(
+    len(bit_solutions_as_sets - flawed_support_solutions) == 27,
+    "flawed hostile miss count changed",
+)
+missed_step30_tiling = frozenset(
+    (
+        frozenset((*range(26, 31), *range(57, 61), *range(87, 91))),
+        frozenset(range(31, 44)),
+        frozenset(range(44, 57)),
+        frozenset(range(61, 74)),
+        frozenset(range(74, 87)),
+    )
+)
+require(
+    missed_step30_tiling in bit_solutions_as_sets
+    and missed_step30_tiling not in flawed_support_solutions,
+    "step-30 hostile tiling changed",
+)
+
+
 # The affine stabilizer of the normalized guard is identity plus reflection.
 guard_stabilizer = []
 for multiplier in range(N):
@@ -204,6 +345,24 @@ require(
     ratio_classes == [1, 2, 3, 18, 23, 30, 31, 45],
     "wrong signed speed-ratio classes",
 )
+ratio_residues = sorted(
+    {
+        residue
+        for ratio in ratio_classes
+        for residue in (ratio, N - ratio)
+    }
+)
+require(len(ratio_residues) == 16, "wrong oriented ratio count")
+require(
+    sorted({ratio % 7 for ratio in ratio_residues})
+    == list(range(1, 7)),
+    "septimal ratio projection is not surjective",
+)
+require(
+    sorted({ratio % 13 for ratio in ratio_residues})
+    == list(range(1, 13)),
+    "thirteen-adic ratio projection is not surjective",
+)
 
 
 # THM-2427's positive-chamber hostile is the first affine orbit.
@@ -238,6 +397,31 @@ def root_mask(speed: int, parent: Fraction, threshold: Fraction) -> set[int]:
     }
 
 
+def common_mask(
+    speed: int,
+    parent: Fraction,
+    threshold: Fraction,
+) -> frozenset[int]:
+    return frozenset(
+        root
+        for root in range(N)
+        if circle_norm(speed * (parent + root) / N) < threshold
+    )
+
+
+def first_event_radius(
+    speed: int,
+    parent: Fraction,
+    threshold: Fraction,
+) -> Fraction:
+    return min(
+        abs(circle_norm(speed * (parent + root) / N) - threshold)
+        * N
+        / speed
+        for root in range(N)
+    )
+
+
 def check_thirteen_partition(
     guard_speed: int, ordinary_speeds: tuple[int, ...], singleton_count: int
 ) -> None:
@@ -268,19 +452,90 @@ check_thirteen_partition(1, (2, 3, 5, 11, 19), singleton_count=1)
 check_thirteen_partition(2, (3, 5, 9, 11, 19), singleton_count=0)
 
 
+# Frozen-word evolution twin.  Adding 91*83 to q_1 preserves its
+# labelled mask at the denominator-83 base and its residue modulo 91,
+# but changes the first endpoint clock.
+evolution_base = Fraction(11, 83)
+evolution_guard = 1
+evolution_words = (547, 1821, 3095, 4369, 5643)
+evolution_twin_words = (
+    evolution_words[0] + 91 * 83,
+    *evolution_words[1:],
+)
+evolution_masks = (
+    common_mask(evolution_guard, evolution_base, Fraction(1, 7)),
+    *(
+        common_mask(speed, evolution_base, Fraction(1, 14))
+        for speed in evolution_words
+    ),
+)
+evolution_twin_masks = (
+    common_mask(evolution_guard, evolution_base, Fraction(1, 7)),
+    *(
+        common_mask(speed, evolution_base, Fraction(1, 14))
+        for speed in evolution_twin_words
+    ),
+)
+require(
+    evolution_masks == evolution_twin_masks,
+    "evolution twin changed the frozen labelled word",
+)
+require(
+    len(set().union(*evolution_masks)) == N
+    and sum(map(len, evolution_masks)) == N,
+    "evolution control stopped being a one-fold tiling",
+)
+evolution_radius = min(
+    [first_event_radius(evolution_guard, evolution_base, Fraction(1, 7))]
+    + [
+        first_event_radius(speed, evolution_base, Fraction(1, 14))
+        for speed in evolution_words
+    ]
+)
+evolution_twin_radius = min(
+    [first_event_radius(evolution_guard, evolution_base, Fraction(1, 7))]
+    + [
+        first_event_radius(speed, evolution_base, Fraction(1, 14))
+        for speed in evolution_twin_words
+    ]
+)
+require(
+    evolution_radius == Fraction(1, 90802),
+    "base evolution radius changed",
+)
+require(
+    evolution_twin_radius == Fraction(1, 1344600),
+    "twin evolution radius changed",
+)
+
+
 print("THM-2430 exact companion")
 print(f"all_unit_ap13={len(representations)}")
 print(f"eligible_ap13={len(eligible)}")
 print(f"exact_normalized_tilings={len(solutions)}")
 print(f"pair_triple_matches={pair_triple_matches}")
+print(f"independent_set_mitm_tilings={len(set_mitm_solutions)}")
+print("independent_solution_sets=AGREE")
+print(
+    f"flawed_increasing_pivot={len(flawed_solutions)},"
+    f"missed={len(bit_solutions_as_sets - flawed_support_solutions)}"
+)
+print("flawed_step30_hostile=PASS")
 print(f"guard_stabilizer={guard_stabilizer}")
 print(f"reflection_fixed_tilings={reflection_fixed}")
 print(f"affine_tiling_orbits={len(canonical_orbits)}")
 print(f"unsigned_step_multisets={len(step_patterns)}")
 print("signed_ratio_classes=" + ",".join(map(str, ratio_classes)))
+print("oriented_ratio_residues=" + ",".join(map(str, ratio_residues)))
+print("ratio_projection_mod7=all_6_units")
+print("ratio_projection_mod13=all_12_units")
 print("thirteen_slice_exact_types=(g,s,E)=(3,0,0),(4,1,0)")
 for index, signature in enumerate(sorted(canonical_orbits), 1):
     encoded = " ".join(f"{start}:{step}" for start, step in signature)
     print(f"orbit_{index:02d}={encoded}")
 print("thm2427_hostile_orbit=PASS")
+print("evolution_twin_q1=547,8100")
+print(f"evolution_first_event={evolution_radius}")
+print(f"evolution_twin_first_event={evolution_twin_radius}")
+print("evolution_sidecar=labelled_signed_endpoint_schedule_with_lifts")
 print("ALL CHECKS PASSED")

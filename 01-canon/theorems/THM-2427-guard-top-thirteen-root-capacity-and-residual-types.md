@@ -25,6 +25,7 @@ depends_on:
 related:
   - THM-2382-saturated-septimal-seven-bin-root-fibre-closure
   - THM-2391-blocker-caged-septimal-single-layer-address-reduction
+  - THM-2430-guard-top-common-ninety-one-root-tiling-spectrum
 script: 04-computation/lrc14_guard_top_thirteen_root_capacity_thm2427.py
 output: 05-knowledge/results/lrc14_guard_top_thirteen_root_capacity_thm2427.out
 script_sha256: 19a92396131daa3366debac4bddc43a25858a4c07e0fd0536e433b4a5960b7a6

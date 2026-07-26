@@ -11,10 +11,13 @@ status: >
   capacities total 91, so they form an exact one-fold tiling. After
   affine guard normalization there are exactly 62 tilings, 34 modulo
   reflection, with 18 unsigned step multisets and only eight possible
-  signed speed-ratio classes. Every thirteen-root slice is an exact
+  speed-ratio classes modulo sign. Every thirteen-root slice is an exact
   partition of type (guard size, singleton words)=(3,0) or (4,1).
-  All finite root types are locally physically realizable, so this is
-  a sharp finite residue reduction, not a row exclusion or LRC(14).
+  All finite root types are locally physically realizable. An exact
+  evolution twin has the same labelled tiling and residues modulo 91
+  but a different first endpoint clock, so a continuation must retain
+  the signed endpoint schedule with integer lifts. This is a sharp
+  finite residue reduction, not a row exclusion or LRC(14).
 source: codex-2026-07-26-guard-top-common-root-tiling
 depends_on:
   - THM-2424-coprime-common-root-crt-and-unit-residue-spectrum
@@ -25,8 +28,8 @@ related:
   - THM-2421-all-clock-septimal-ancestry-endpoint-event-detector
 script: 04-computation/lrc14_guard_top_common_91_tiling_thm2430.py
 output: 05-knowledge/results/lrc14_guard_top_common_91_tiling_thm2430.out
-script_sha256: 945d8c0a226ad1961e1aa0afe4dfdc6c6e737e6cf41484a34bacba25d3b7dd83
-output_sha256: afe1b761ed7389c70c24c53de71a5addea448882f9f27fa07a35901d33b24b4e
+script_sha256: d6cd66d0a2040f2a26399759c07e2091a78f391d508860c136b7d51a96a55fdb
+output_sha256: 1d3ca7a8ce2a2262c99d8ffa27f704f319d4c5b5983cc2b31088ab1dce8a43b6
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -249,6 +252,18 @@ Equation (19), together with the full `34`-type bank, is the retained
 residue sidecar. A step multiset alone does not determine its affine
 tiling type.
 
+If the signs are restored, (19) contains `16` of the `72` unit
+residues modulo `91`. Their projections are nevertheless
+
+```text
+all six units modulo 7,
+
+all twelve units modulo 13.                                  (19a)
+```
+
+Thus neither marginal root picture detects the restriction. The gain
+is genuinely joint CRT information.
+
 ## 4. The thirteen-root slack vanishes
 
 On a generic fixed thirteen-root slice, let
@@ -313,7 +328,8 @@ residue
 u=d^(-1) mod 91
 ```
 
-with the orientation adjusted if needed. As `k` varies,
+with the orientation adjusted if needed. Here `y` is the physical
+circle base in the stalk points `y+z/91`. As `k` varies,
 
 ```text
 (u+91k)y mod 1
@@ -351,19 +367,32 @@ The dependency-free companion:
 - filters the exact `182`-set normalized candidate bank;
 - obtains all `62` covers by point-pivot Algorithm X without
   index-order pruning;
-- independently obtains `620=10*62` pair/triple matches;
+- independently rebuilds the candidate universe with frozensets and
+  obtains the identical full `62`-solution set by pair/triple matching;
+- also checks the numerical checksum `620=10*62`;
 - computes the exact guard stabilizer, six fixed covers, `34` affine
   types, and `18` step spectra;
-- verifies the eight signed ratio classes;
+- verifies the eight modulo-sign ratio classes, all sixteen oriented
+  residues, and the two surjective marginal projections;
 - checks both thirteen-slice equality types; and
 - identifies THM-2427's hostile with (23).
 
-An early exploratory recursion returned only seven covers because it
-combined a dynamic uncovered-point pivot with increasing candidate
-indices. That pruning is invalid: a lower-index set not containing the
-current pivot may be required later. No seven-cover claim entered
-canon. The final companion removes that pruning and requires agreement
-with the independent meet-in-the-middle count.
+A tempting exploratory recursion combines a dynamic uncovered-point
+pivot with increasing candidate indices. It returns only `35` covers.
+That pruning is invalid: a lower-index set not containing the current
+pivot may be required later. An exact missed tiling partitions the
+guard complement by
+
+```text
+{26,...,30,57,...,60,87,...,90},
+
+{31,...,43}, {44,...,56}, {61,...,73}, {74,...,86}.   (24)
+```
+
+The first support has unoriented step `30`; the other four have step
+one. Both valid enumerators find (24), while the flawed recursion
+misses it and `26` further covers. The hostile is executable, so the
+undercount cannot silently return.
 
 Normal and optimized modes must reproduce
 
@@ -373,7 +402,94 @@ Normal and optimized modes must reproduce
 
 byte-for-byte.
 
-## 7. Consequence and scope
+## 7. Frozen tilings have distinct endpoint evolutions
+
+For integer lifts `u=(u_0,...,u_5)`, define the labelled root word
+
+```text
+W_i(theta)
+ ={z in Z/91Z:
+   ||u_i(theta+z)/91||<w_i/14},
+
+w_0=2,                     w_i=1 for i>0.             (25)
+```
+
+Its labelled endpoint events occur at
+
+```text
+theta
+ =91(n +/- w_i/14)/u_i-z                  modulo 91,  (26)
+```
+
+with the label, site, side, and entry/exit sign retained. The word is
+constant between consecutive events, so one initial labelled word and
+the ordered signed schedule (26) reconstruct its base evolution. The
+affine atlas forgets the integer lifts and hence forgets (26).
+
+This loss is exact even after retaining all speed residues modulo
+`91`. At
+
+```text
+theta_0=11/83
+```
+
+the physical tiling
+
+```text
+H=1,
+
+q=(547,1821,3095,4369,5643)                          (27)
+```
+
+is unchanged if only
+
+```text
+q_1=547
+
+is replaced by
+
+q_1'=8100=547+91*83.                                 (28)
+```
+
+Indeed, for every root `z`,
+
+```text
+(q_1'-q_1)(theta_0+z)/91
+ =83(11/83+z)
+ =11+83z in Z.                                       (29)
+```
+
+The two packets therefore have the same labelled support word and the
+same residues modulo `91`. Their first base-event radii are different:
+
+```text
+1/90802                    and                    1/1344600.       (30)
+```
+
+Thus the frozen word and its residue type do not determine even the
+next wall.
+
+For a scalar-cover continuation, (26) must also carry blocker ownership.
+On a quotient-blocker-safe component, an exiting top atom needs a
+simultaneous entering top atom; at the component boundary, a blocker
+may instead take ownership. This gives the exact transplant interface:
+
+```text
+source:       one common-root tiling;
+target:       its labelled endpoint evolution;
+map:          (25) -> signed schedule (26);
+preserved:    label, site, side, sign, integer lift;
+lost by atlas: event time and blocker handoff owner;
+next test:    exclude an unpaired exit on each blocker-safe component.
+                                                                  (31)
+```
+
+This is the live connection to THM-2367's event current and THM-2421's
+endpoint detector. If a directed relation is used, its vertices should
+be labelled endpoint events and its arrows lawful exit-to-entry
+handoffs, not runners.
+
+## 8. Consequence and scope
 
 For every THM-2427 residual satisfying `t=5,b=0`, the continuous-looking
 root-capacity problem is now the finite `34`-type bank (17), with the
@@ -388,7 +504,7 @@ continuation must use data discarded by the affine tiling:
 cross-base translate flow,
 owner and low-blocker state,
 the labelled valuation-zero speed,
-or a same-shell endpoint/reference phase.                     (24)
+or a same-shell endpoint/reference phase.                     (32)
 ```
 
 THM-2421's endpoint-event word and THM-2420's reference mechanism are
@@ -396,7 +512,7 @@ possible consumers of the finite bank, but neither is automatically
 present on this quotient stalk. There is no ledger decrement and no
 proof of LRC(14).
 
-## 8. Independent audit
+## 9. Independent audit
 
 Independent audits reconstructed the common `91`-root parent and the
 physical top-word typing, including the positive-depth quotient
@@ -404,8 +520,10 @@ boundary. They independently recovered the `182` eligible blocks,
 `62` normalized covers, `620` pair/triple matches, guard stabilizer,
 six reflection-fixed covers, `34` affine types, and all `18` step
 spectra. They also checked the exact thirteen-slice alternatives,
-local physical realization, and the failed dynamic-pivot pruning
-mechanism.
+local physical realization, the eight modulo-sign ratio classes, the
+failed dynamic-pivot pruning mechanism on (24), and the exact
+evolution twin (27)--(30). One audit used a fixed-leftmost recursion
+distinct from both executable enumeration paths.
 
 Normal and optimized companions both match the stored transcript
 byte-for-byte after LF normalization. The independently recomputed LF

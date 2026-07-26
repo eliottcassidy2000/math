@@ -3,11 +3,18 @@ all_unit_ap13=3276
 eligible_ap13=182
 exact_normalized_tilings=62
 pair_triple_matches=620
+independent_set_mitm_tilings=62
+independent_solution_sets=AGREE
+flawed_increasing_pivot=35,missed=27
+flawed_step30_hostile=PASS
 guard_stabilizer=[(1, 0), (90, 25)]
 reflection_fixed_tilings=6
 affine_tiling_orbits=34
 unsigned_step_multisets=18
 signed_ratio_classes=1,2,3,18,23,30,31,45
+oriented_ratio_residues=1,2,3,18,23,30,31,45,46,60,61,68,73,88,89,90
+ratio_projection_mod7=all_6_units
+ratio_projection_mod13=all_12_units
 thirteen_slice_exact_types=(g,s,E)=(3,0,0),(4,1,0)
 orbit_01=26:1 39:1 52:1 65:1 78:1
 orbit_02=26:1 39:1 52:1 65:2 66:2
@@ -44,4 +51,8 @@ orbit_32=44:2 45:44 47:2 88:44 90:44
 orbit_33=44:44 45:1 58:1 89:44 90:44
 orbit_34=44:44 45:2 46:2 89:44 90:44
 thm2427_hostile_orbit=PASS
+evolution_twin_q1=547,8100
+evolution_first_event=1/90802
+evolution_twin_first_event=1/1344600
+evolution_sidecar=labelled_signed_endpoint_schedule_with_lifts
 ALL CHECKS PASSED
