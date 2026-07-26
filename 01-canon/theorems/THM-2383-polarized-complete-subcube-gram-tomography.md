@@ -242,7 +242,9 @@ Consequently:
   every `H`-valued cube;
 - supportwise references spanning a known coefficient subspace recover
   every coefficient in that subspace; and
-- without the span hypothesis, the bank recovers only a projection.
+- without the span hypothesis, the cross bank recovers only a
+  projection. The self bank also gives the residual norm, but not its
+  direction or phase.
 
 Quantitatively, if the supportwise analysis map obeys the lower frame
 bound
@@ -340,8 +342,11 @@ Ftilde(1,...,1)=v.                                  (22)
 
 This is the Hilbert-valued core of THM-2370's exact Boolean clone
 hostile. The complete squared spectrum cannot decide which terminal is
-null. A spanning **oriented** reference does; another squared or mixed
-energy bank without such a reference does not.
+null. A spanning **oriented** reference does. Without one, any
+homogeneous quadratic **difference** bank invariant under
+`F -> v-F` remains unable to orient the terminal. The uncentered scalar
+endpoint table `x -> ||F(x)||^2` is not such a bank and can distinguish
+the two displayed terminal values.
 
 Finally, the factor `2` in (6) uses the complete subgroup, including
 `h=0`. If the zero shift is deleted, a nontrivial character instead has
