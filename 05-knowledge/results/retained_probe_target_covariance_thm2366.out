@@ -1,0 +1,14 @@
+THM-2366 retained-probe target covariance exact referee
+target labels/decompositions: 2197/169x13
+target-line diagonal cells: 371293
+covariance DFT cells: 169
+energy comparison: Delta/169 <= E_nz <= Delta; target cells=168
+hostile deep colours/value: 12 at -1/2366
+hostile pure coefficient/corner: -11/369096 / -66/15379
+hostile fork coefficient/corner: -121/57578976 / -726/199927
+positive intertwiner gains: 13/2, 169/4
+budget functional support/norm^2: 169/2028
+C=2 drift coefficient: 121/4455516
+C=2 unit-target energy coefficient: 121/57921708
+live 91-unit multiplier checks: 792
+VERDICT: mixed probe colour is compatible with circulation; a sub-thirteen lawful budget breaks it
