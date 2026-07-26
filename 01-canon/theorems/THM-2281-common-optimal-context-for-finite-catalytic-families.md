@@ -2,17 +2,21 @@
 id: THM-2281
 title: "Common optimal context for finite catalytic families"
 status: >
-  PROVED. In every commutative nonexpansive integer-valued metric monoid,
-  any finite family of nonempty fixed-saving context loci has a common
-  context: add one witness from each upper ideal. In particular one context
-  simultaneously attains the catalytic root length of every member of any
-  finite family. For knots, Schubert prime coordinates sharpen the sum to
-  the coordinatewise maximum of the individual witness vectors. On their
-  finite union prime alphabet, the common optimal locus contains a full
-  translated orthant, has box density one, and has a finite antichain of
-  minimal contexts. The theorem is noneffective, does not produce a positive
-  catalyst, and does not extend to arbitrary infinite families or to
-  nonattained real-valued infima.
+  PROVED + PAIRWISE ADDENDUM INDEPENDENTLY AUDITED. In every commutative
+  nonexpansive integer-valued metric monoid, any finite family of
+  nonempty fixed-saving context loci has a common context: add one
+  witness from each upper ideal. In particular one context
+  simultaneously attains the catalytic root length of every member of
+  any finite family. More strongly, every finite packet in the
+  localized metric has one common translate which realizes all
+  pairwise localized distances in the original metric. For knots,
+  Schubert prime coordinates sharpen the sum to the coordinatewise
+  maximum of the witness vectors. On their finite union prime alphabet,
+  the common optimal locus contains a full translated orthant, has box
+  density one, and has a finite antichain of minimal contexts. The
+  theorem is noneffective, does not produce a positive catalyst, and
+  does not extend to arbitrary infinite families or to nonattained
+  real-valued infima.
 source: codex-2026-07-25-common-optimal-context
 depends_on:
   - THM-2191-catalytic-localization-of-the-gordian-metric
@@ -98,6 +102,70 @@ The same proof works for any finite collection of additive upper ideals in
 a commutative monoid. The metric hypotheses are the mechanism which makes
 the response loci upper ideals and, for optimal loci, makes them nonempty.
 
+## 1a. Every finite localized metric packet has one isometric slice
+
+The preceding argument is not restricted to root responses. For arbitrary
+`a,b in M`, define the pairwise optimal-context locus
+
+```text
+I_opt(a,b)
+ ={c:d(a+c,b+c)=d_cat(a,b)}.                       (8a)
+```
+
+It is nonempty because the nonnegative integer values
+`d(a+c,b+c)` attain their infimum. It is an upper ideal: if `c` belongs
+to (8a), simultaneous nonexpansivity and the definition of `d_cat` give
+
+```text
+d_cat(a,b)
+ <=d(a+c+z,b+c+z)
+ <=d(a+c,b+c)
+ =d_cat(a,b).                                      (8b)
+```
+
+Now fix a finite labelled packet
+
+```text
+x_0,...,x_m.
+```
+
+For each unordered pair `i<j`, choose
+
+```text
+c_(ij) in I_opt(x_i,x_j)
+```
+
+and put
+
+```text
+c=sum_(i<j)c_(ij).                                  (8c)
+```
+
+Every pairwise locus is an upper ideal, so
+
+```text
+d(x_i+c,x_j+c)=d_cat(x_i,x_j)
+                                      for all i,j. (8d)
+```
+
+Thus the common translation
+
+```text
+x_i -> x_i+c                                        (8e)
+```
+
+realizes the entire finite `d_cat` distance matrix inside one ordinary
+`d`-metric slice. If `d_cat` is only a pseudometric, this is an
+isometric realization after identifying its zero-distance classes. If
+`d_cat` is a metric, it is literally an isometric embedding of the
+finite packet.
+
+Taking the packet `{0,x_1,...,x_m}` recovers the simultaneous root
+statement (8), but (8d) also preserves every off-root edge. No
+tree-metric, tournament, or pairwise compatibility hypothesis is
+needed; finite intersection of additive upper ideals is the entire
+mechanism.
+
 ## 2. Knot corollary and the coordinatewise maximum
 
 Specialize to the connected-sum monoid of oriented knots with Gordian
@@ -153,6 +221,26 @@ d_G(K_h#J_b,J_b)=u_cat(K_h)            for every h. (15)
 This maximum may be strictly smaller than the sum vector in (10). It is a
 faithful-section improvement specific to unique prime factorization; no
 claim of global size minimality is made.
+
+The pairwise form is stronger. For a finite knot packet
+
+```text
+K_0,...,K_m,
+```
+
+choose one minimizing context `J_(ij)` for every pair and apply (8c).
+Then one knot `J` satisfies
+
+```text
+d_G(K_i#J,K_j#J)=d_cat(K_i,K_j)
+                                      for all i,j. (15a)
+```
+
+Equivalently, the finite catalytic Gordian metric packet embeds
+isometrically into the ordinary Gordian metric on the single
+connected-sum slice `{K_i#J}`. Taking the coordinatewise maximum of the
+prime exponent vectors of the `J_(ij)` again gives a common context
+with (15a), possibly smaller than their connected sum.
 
 ## 3. Orthant, density, and finite minimal bank
 
@@ -233,8 +321,14 @@ cheapest hostile tests:
   infinite descending intersection (18).                            (19)
 ```
 
-The theorem produces no positive knot catalyst. If every individual optimum
-is the root value, the common context merely realizes those trivial optima.
-It also computes neither `u_cat(K)` nor a minimal common context. Its content
-is the exact finite Helly-number-one behavior created by additive upper
-ideals. QED.
+The theorem produces no positive knot catalyst. If every requested pairwise
+optimum is its original Gordian distance, the common context merely realizes
+those trivial optima. It also computes neither `d_cat(K,L)` nor a minimal
+common context. Its content is the exact finite Helly-number-one behavior
+created by additive upper ideals and the resulting finite representability
+of the localized metric.
+
+An independent audit reconstructed integer attainment, upper-ideal
+closure, the finite witness sum, the zero-class factorization in the
+pseudometric case, and the Schubert coordinatewise maximum for all pair
+contexts. It found no missing hypothesis or direction error. QED.

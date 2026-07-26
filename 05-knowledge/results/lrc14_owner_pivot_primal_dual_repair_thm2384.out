@@ -1,0 +1,9 @@
+THM-2384 owner-pivot primal/dual repair exact companion
+owner weights: projective=248832; raw=2985984; primal_pure=yes; false_dual_witness=universal
+true dual dipoles: eta_a=e_a-e_ka; eta_b=e_b-e_kb; all normalized owner weights checked
+rational refinement: L1 boundaries=26; L2 boundaries=26; combined cells=52; slopes=12
+L=1: profiles=196560; total_min=9; actual_cell_energy_min=144/28561
+L=2: profiles=365040; total_min=7; actual_cell_energy_min=360/28561
+coefficient floors: unit=1/2704; guard=7/24336
+energy floors: unit=9/456976; guard=49/4112784
+VERDICT: primal purity does not make a target covector; the two-probe corner survives without target typing

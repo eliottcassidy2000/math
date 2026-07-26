@@ -9,6 +9,36 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-263 (2026-07-25, owner-pivot repair audit) -- a pure primal relation class was treated as its target covector
+
+- **What was assumed:** for the THM-2309 owner pivot, the balanced
+  omitted-unit/helper relation
+  `h=w_k e_(u_0)-w_(u_0)e_k` has a pure nonzero class in `K/L`.
+  A proposed repair table therefore shifted just those two factors and
+  called its nonzero colour the corresponding lawful pure target.
+- **First failed implication:** target classes are primal elements of
+  `K/L`, while lawful target co-shifts are covectors in
+  `(K/L)^*=L^perp/<w>`. For normalized
+  `g=e_(u_0)-(w_(u_0)/w_k)e_k` and any other ungrafted unit row
+  `ell=w_(k')e_(u_0)-w_(u_0)e_(k') in L`,
+  one has `g.ell=w_(k')!=0`. Hence `g notin L^perp`, even though its
+  primal class is pure. Adding a gauge multiple of `w` cannot help
+  because `w.ell=0`.
+- **Strongest survivor:** the two-factor table still has two zero axes,
+  total mass at least `(11-2L)rho`, and a mixed duplicate-probe
+  coefficient at least `rho/2704` for an ordinary failed unit or
+  `7rho/24336` for a failed guard. These coefficients are positive but
+  are not canonical owner-target currents. The true pure dual is the
+  target-blocker/helper dipole `e_a-e_k`, which has different factor
+  geometry.
+- **Repair:** THM-2384 separates the primal obstruction, true dual
+  representative, and surviving analytic corner. It does not claim a
+  target landing or row exclusion.
+- **Rule:** before turning a relation address into a Fourier shift,
+  test it against every row of the chosen relation packet. Membership
+  in `K` or purity in `K/L` is not membership in `L^perp`; quotient
+  vectors and quotient characters have opposite variance.
+
 ## MISTAKE-262 (2026-07-25, post-promotion scope audit of THM-2377) -- a contrapositive retained the distinctness hypothesis it was negating
 
 - **What happened:** THM-2377 proved circulancy from two hypotheses:
