@@ -2,8 +2,8 @@
 id: THM-2459
 title: "Four-atom drift and root-service coarsening"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT. A nonzero aggregate Hilbert-valued linear observable
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. A nonzero
+  aggregate Hilbert-valued linear observable
   and one positive directed atom edge can be retained simultaneously
   by a Boolean union of at most four atoms. The exact identity gives
   norm loss at most 2r-1, where r is the number of atoms outside the
@@ -35,8 +35,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2459 -- four atoms retain drift and root service
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2457 proves that a positive directed edge in the complete-atom
 co-support graph gives root service after Boolean coarsening.  It also
@@ -478,6 +477,13 @@ Both transcripts must match
 byte-for-byte after LF normalization.  Every truth-bearing executable
 check uses explicit `require`, including under optimized Python.
 
+An independent hostile audit rederived the Hilbert identity, every
+`r=0` and loop boundary, the `128`-atom constants, the transfer of a
+positive directed edge, both sharpness constructions, and the
+aggregate-zero and observer-gate stopping boundaries.  It independently
+replayed normal and optimized modes against the stored transcript and
+reproduced both LF hashes.
+
 ## 9. Scope
 
 The theorem removes one precise post-THM-2457 debt:
@@ -499,4 +505,4 @@ the abstract vector identity; the theorem works after a positive
 semantic edge has been supplied.  No scalar profile is excluded, the
 ledger remains `165`, and LRC(14) remains open.
 
-QED candidate.
+QED.
