@@ -7,10 +7,11 @@ status: >
   delta be the mass of unit holes which are outside the quotient-blocker
   union. Every such parent has exactly one double-covered inverse root,
   guard root count four, and five ordinary root counts two. A deterministic
-  ordinary label outside the double pair gives a literal adjacent two-root
-  word whose normalized nonzero target spectrum is everywhere nonzero,
-  with exact square/fourth-power sums 22/169 and 62/28561. A labelled-owner,
-  pair, and translate cell has mass at least delta/390. Conversely, the
+  distinguished top label q_* gives either a singleton or adjacent
+  two-root exclusive word whose normalized nonzero target spectrum is
+  everywhere nonzero, with exact square/fourth-power sums respectively
+  (12/169,12/28561) or (22/169,62/28561). An owner/status/translate cell
+  has mass at least delta/52. Conversely, the
   blocker cage has mass at least 36/343-delta. Different 7-adic valuations
   force exact danger overlap 1/49; the last-lane hypotheses apply this to
   both high cross-ancestor pieces. Thus if delta<6/4459, one of the two
@@ -18,24 +19,27 @@ status: >
   1/[2(6/4459-delta)]. Every repeated-first profile forces
   delta>=1/26754. Among the 150 strict profiles, all 135 rows with b>=3
   force delta>=6042/9796423 and a fixed charged cell of mass at least
-  1007/636767495. The fifteen b=2 rows either have positive clean mass or
-  their one unresolved reduced cross pair lies in an explicit 124-ratio
-  bank with product at most 345. This is a coefficient-level root word,
-  not a canonical expiration target, branch exclusion, row decrement, or
-  proof of LRC(14).
+  3021/254706998. The fifteen b=2 rows either have positive clean mass or
+  their compatible four-piece low-blocker union lies in an exact bank of
+  ten oriented ratios, namely six up to interchange. THM-2391 reduces the
+  no-clean bank further to (4,3) at septimal depth M=2 and makes it empty
+  at M>=3. This is a coefficient-level root word, not a canonical
+  expiration target, branch exclusion, row decrement, or proof of LRC(14).
 source: codex-2026-07-26-clean-toothpick-cross-ancestor-cage
 depends_on:
   - THM-1166-seven-wall-fano-gcd-discrepancy
   - THM-2263-thirteen-adic-gap-pair-spectrum-and-profile-sharp-owner-floor
   - THM-2388-thirteen-root-multiplicity-reflection-and-blocker-caged-toothpick-law
+  - THM-2391-blocker-caged-septimal-single-layer-address-reduction
 related:
   - THM-2305-canonical-blocker-word-handoff-hypergraph
+  - THM-2377-septimal-valuation-collision-and-bockstein-carry-gate
   - THM-2380-cross-word-charged-target-correlation-and-pair-twist-sidecar
   - THM-2390-septimal-layer-kraft-peeling-and-heavy-word-reduction
 script: 04-computation/lrc14_clean_toothpick_cross_ancestor_cage_thm2392.py
 output: 05-knowledge/results/lrc14_clean_toothpick_cross_ancestor_cage_thm2392.out
-script_sha256: 1cb8732b49d8b5541db41dd0d5dd5926b6bdc96298626b04d42d59eb4892d24f
-output_sha256: 2b325668958a7329b96c9916ed91d5818fb6836fef7462d4f3fca01d119fb170
+script_sha256: 18214f69c55c9090fbe028bcd9282e354940eb9a7c3ae43c93a93bc6537a0f4f
+output_sha256: 4b512bfc3cd84d256876bf1c9dd9bb17ac78a63b7e378776b8c9f9aae1248861
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -50,7 +54,7 @@ discarding it.  The result is the exact alternative
 
 ```text
 positive clean-hole mass
-  -> one double root + a labelled adjacent two-root charged word;
+  -> one double root + a top-labelled singleton/adjacent charged word;
 
 small clean-hole mass
   -> a large quotient/original blocker cage
@@ -194,39 +198,41 @@ deterministic labelled owner in two possibilities.  This owner need not be
 exclusive; retaining the complete nonempty low-blocker word instead gives
 the three possibilities `{1},{2},{1,2}`.
 
-## 3. A literal two-root charged word
+## 3. The distinguished top-labelled charged word
 
-Fix a deterministic order on the five ordinary labels.  The double pair
-contains at most two of them, so choose the first ordinary label `q`
-outside that pair.  Its two roots in (12) are both singleton roots.
-On the `q`-scaled thirteen-grid they are adjacent.  Hence their indicator
-has the form
+Use the already distinguished top septimal label `q_*`.  It has two
+adjacent active roots in (12).  If `q_*` is outside the double pair, both
+are exclusive singleton roots.  If `q_*` belongs to the double pair,
+exactly one is double-covered and the other remains exclusive.  Let `A`
+be the indicator of the exclusive `q_*` roots and put `W=1-A`.  Thus
 
 ```text
-A(r)=1_({r_0,r_0+eta})(r),             eta in F_13^*,
+q_* outside the double pair:
+  A=1_({r_0,r_0+eta}),                 eta in F_13^*;
 
-W(r)=1-A(r).                                             (15)
+q_* inside the double pair:
+  A=1_({r_0}).                                         (15)
 ```
 
-There are thirteen possible translates of this adjacent edge.  Partition
-`S` by:
+This removes the unnecessary choice of a label outside the double pair.
+Partition `S` only by
 
 ```text
 chosen low-blocker owner:       2 possibilities,
 
-double-pair label:             15 possibilities,
+q_* double-pair status:         2 possibilities,
 
-selected-q edge translate:     13 possibilities.       (16)
+singleton/edge translate:      13 possibilities.      (16)
 ```
 
-One literal charged cell `Y` therefore has
+One literal top-labelled charged cell `Y` therefore has
 
 ```text
-rho:=mu(Y)>=delta/(2*15*13)=delta/390.                 (17)
+rho:=mu(Y)>=delta/(2*2*13)=delta/52.                  (17)
 ```
 
 If the complete low-blocker word rather than one deterministic owner is
-required, the corresponding bound is `delta/585`.
+required, the corresponding bound is `delta/78`.
 
 Use the normalized target DFT
 
@@ -241,21 +247,35 @@ zeta=exp(2 pi i/13).                                   (18)
 For every `k!=0`,
 
 ```text
-w_k=-a_k,
+w_k=-a_k.                                             (19)
+```
+
+In the singleton status,
+
+```text
+|a_k|^2=1/169,
+
+sum_(k!=0)|a_k|^2=12/169,
+
+sum_(k!=0)|a_k|^4=12/28561.                           (20a)
+```
+
+In the adjacent status,
+
+```text
 
 |a_k|^2
  =(2+2cos(2 pi k eta/13))/169
- >0.                                                   (19)
+ >0,
+
+sum_(k!=0)|a_k|^2=22/169,
+
+sum_(k!=0)|a_k|^4=62/28561.                           (20b)
 ```
 
 The strict inequality uses oddness of thirteen: `-1` is not a thirteenth
-root of unity.  The exact all-colour ledgers are
-
-```text
-sum_(k!=0)|a_k|^2=22/169,
-
-sum_(k!=0)|a_k|^4=62/28561.                            (20)
-```
+root of unity.  Thus every nonzero target colour survives in either
+status.
 
 Consequently, on the fixed cell `Y`,
 
@@ -263,18 +283,21 @@ Consequently, on the fixed cell `Y`,
 integral_Y a_k conjugate(w_k)
  =-rho |a_k|^2<0,
 
-|integral_Y a_k|
- >=(2rho/13)sin(pi/26),                               (21)
+singleton:
+  |integral_Y a_k|=rho/13,
+  integral_Y |a_k|^2=rho/169;
 
-integral_Y |a_k|^2
- >=(4rho/169)sin^2(pi/26),                            (22)
+adjacent:
+  |integral_Y a_k|>=(2rho/13)sin(pi/26),
+  integral_Y |a_k|^2
+   >=(4rho/169)sin^2(pi/26).                          (21)
 ```
 
-and the sums in (20) acquire the factor `rho`.
+The sums in (20a)--(20b) acquire the factor `rho`.
 
 Normalization is load-bearing.  With the unnormalized DFT
-`A_k^sharp=sum_r A(r)zeta^(-kr)`, the two sums are `22` and `62`, not
-`22/169` and `62/28561`.
+`A_k^sharp=sum_r A(r)zeta^(-kr)`, the singleton sums are `12,12` and
+the adjacent sums are `22,62`, not their normalized values above.
 
 ## 4. The general cross-ancestor alternative
 
@@ -364,7 +387,7 @@ one has the explicit alternative
 
 ```text
 delta>=theta:
-  a fixed labelled charged cell has mass at least theta/390;
+  a fixed top-labelled charged cell has mass at least theta/52;
 
 delta<theta:
   one of the two low cross pairs has
@@ -376,7 +399,7 @@ delta<theta:
 For example `theta=3/4459` gives
 
 ```text
-charged-cell mass>=1/579670,
+charged-cell mass>=3/231868,
 
 or
 
@@ -443,7 +466,7 @@ delta
 The labelled-owner charged cell from (17) consequently satisfies
 
 ```text
-rho>=1/10434060.                                      (38)
+rho>=1/1391208.                                       (38)
 ```
 
 On that one fixed cell, every nonzero target colour has the coefficient
@@ -451,24 +474,25 @@ and energy floors
 
 ```text
 |integral_Y a_k|
- >=sin(pi/26)/67821390,
+ >=sin(pi/26)/9042852,
 
 integral_Y |a_k|^2
- >=sin^2(pi/26)/440839035,                            (39)
+ >=sin^2(pi/26)/58778538,                             (39)
 ```
 
 while the exact summed floors are
 
 ```text
 sum_(k!=0)integral_Y |a_k|^2
- >=11/881678070,
+ >=1/19592846,
 
 sum_(k!=0)integral_Y |a_k|^4
- >=31/149003593830.                                   (40)
+ >=1/3311190974.                                      (40)
 ```
 
 Thus every repeated-first last-lane packet has a positive literal
-two-root charged word.  This is not merely the formal alternative (30).
+top-labelled singleton/adjacent charged word.  This is not merely the
+formal alternative (30).
 
 ## 6. The strict-profile cage collapses except at middle depth two
 
@@ -521,8 +545,8 @@ delta
  =6042/9796423,                                       (40e)
 
 rho(labelled charged cell)
- >=(6042/9796423)/390
- =1007/636767495.                                     (40f)
+ >=(6042/9796423)/52
+ =3021/254706998.                                     (40f)
 ```
 
 The `15` remaining strict profiles have `b=2`.  Their unresolved low
@@ -540,56 +564,160 @@ mu(Gamma)<=864/8281,
 
 delta>=36/57967,
 
-rho(labelled charged cell)>=6/3767855.                (40h)
+rho(labelled charged cell)>=9/753571.                 (40h)
 ```
 
 It remains to record the exact boundary when the two valuations in (40g)
-are equal.  Divide the unresolved pair by its gcd and write it, up to
-interchange, as
+are equal.  Divide the unresolved pair by its gcd and orient it as
 
 ```text
-(C_2,c_1)=g(a,b),
+(C_2,c_1)=13h(a,b),
 
-a<=b, gcd(a,b)=1, gcd(ab,91)=1.                       (40i)
+gcd(a,b)=1, gcd(ab,91)=1.                             (40i)
 ```
 
-The other five cage pieces have total upper bound
+The four low speeds then have the correlated form
 
 ```text
-2/91+25/1183+2/49=695/8281.                           (40j)
+(C_1,C_2,c_1,c_2)=h(b,13a,13b,169a).
 ```
 
-Therefore the extreme no-clean-hole case `delta=0` forces
+Thus the union of all four low-low cage pieces is exactly
 
 ```text
-rho(a,b)>=36/343-695/8281
-          =1219/57967,
-
-Delta(a,b)/(ab)>=144/1183.                            (40k)
+U_(a,b)
+ =(D_b union D_(13a))
+  intersection
+  (D_(13b) union D_(169a)).                           (40j)
 ```
 
-The coarse THM-1166 endpoint bound first gives `ab<=402`.  Exact
-enumeration of the finite universe
+The two pieces involving `C_3` contribute at most `2/49`, so the
+extreme no-clean-hole case `delta=0` forces
 
 ```text
-a<=b, gcd(a,b)=1, gcd(ab,91)=1, ab<=402,
-
-[F((a+b) mod 14)-F((b-a) mod 14)]/(ab)>=144/1183     (40l)
+mu(U_(a,b))>=36/343-2/49=22/343.                      (40k)
 ```
 
-leaves exactly `124` unordered pairs.  Across this bank
+Before using this compatible union, a coarse pair invoice makes the
+search finite.  Since `169=1 mod 14`, the two low cross-pair folded
+defects are the same, while their denominators differ by `169`.  The
+sum of all six pair caps is
 
 ```text
-ab<=345,                 min(a,b)<=11,
-
-max(a,b)<=197.                                        (40m)
+2/91+4/49+(170/169) Delta(a,b)/(196ab).
 ```
 
-The product maximum occurs at `(3,115)` and the coordinate maximum at
-`(1,197)`.  Thus each middle-depth-two profile either has positive
-clean-hole mass, or its one unresolved cross ancestor lies in this
-explicit finite bank.  If its low blockers have different `7`-adic
-valuations, the stronger uniform positive alternative (40h) applies.
+Absorption of `36/343` implies
+
+```text
+Delta(a,b)/(ab)>=156/595.                             (40l)
+```
+
+Since `Delta<=49`, this first gives `ab<=186`.  Exact enumeration of
+
+```text
+a<=b, gcd(a,b)=1, gcd(ab,91)=1, ab<=186,
+
+[F((a+b) mod 14)-F((b-a) mod 14)]/(ab)>=156/595      (40m)
+```
+
+leaves `52` unordered preliminary pairs, with `ab<=177`,
+`min(a,b)<=10`, and `max(a,b)<=85`.  Their small-coordinate census is
+
+```text
+1:24, 2:9, 3:8, 4:4, 5:4, 8:1, 9:1, 10:1.           (40n)
+```
+
+Now evaluate (40j) for both orientations.  Exactly ten oriented ratios
+survive (40k):
+
+| `(a,b)` | `mu(U_(a,b))` |
+|---|---:|
+| `(1,1)` | `193/1183` |
+| `(1,2)` | `114/1183` |
+| `(2,1)` | `239/2366` |
+| `(1,3)` | `263/3549` |
+| `(3,1)` | `95/1183` |
+| `(4,1)` | `331/4732` |
+| `(2,3)` | `43/546` |
+| `(3,2)` | `95/1183` |
+| `(3,4)` | `491/7098` |
+| `(4,3)` | `331/4732` |
+
+Up to interchange, this is the six-ratio bank
+
+```text
+1:1, 1:2, 1:3, 1:4, 2:3, 3:4.                       (40o)
+```
+
+THM-2391 sharpens the bank by septimal depth.  When `M>=2`, its two
+blocker progressions have steps of one common absolute value, either
+one or two.  Hence
+
+```text
+C_2/C_1=13a/b=+/-1 mod 7^M,
+
+13a=+/-b mod 7^M.                                    (40p)
+```
+
+At modulus `49`, only `(a,b)=(4,3)` from the table survives.  At modulus
+`343`, none survives.  Consequently the middle-depth-two no-clean
+boundary is
+
+```text
+M=1:  one of the ten oriented ratios above;
+
+M=2:  only (a,b)=(4,3);
+
+M>=3: impossible, so delta>0.                         (40q)
+```
+
+The ten orientations also have a canonical first septimal digit.  Choose
+the balanced nonzero residue
+
+```text
+sigma in {-3,-2,-1,1,2,3},
+
+13a=sigma b+7d.
+```
+
+Then
+
+```text
+(c_2-sigma c_1)/7=13h d,                             (40r)
+```
+
+with the complete address table
+
+| `(a,b)` | `sigma` | `d` |
+|---|---:|---:|
+| `(1,1)` | `-1` | `2` |
+| `(1,2)` | `3` | `1` |
+| `(2,1)` | `-2` | `4` |
+| `(1,3)` | `2` | `1` |
+| `(3,1)` | `-3` | `6` |
+| `(4,1)` | `3` | `7` |
+| `(2,3)` | `-3` | `5` |
+| `(3,2)` | `2` | `5` |
+| `(3,4)` | `1` | `5` |
+| `(4,3)` | `1` | `7` |
+
+Thus
+
+```text
+d in {1,2,4,5,6,7};                                  (40s)
+```
+
+the rows `(1,2),(1,3)` have descendant `13hd=C_2`, and the two rows with
+first coordinate four climb one septimal digit.  This is an exact
+THM-2377/Bockstein address sidecar; it does not by itself align the
+descendant with the top-labelled target word.
+
+Thus each middle-depth-two profile either has positive clean-hole mass,
+or its correlated four-speed cage lies in (40o), with the sharper depth
+split (40q).  If its low blockers have different `7`-adic valuations
+before invoking THM-2391, the stronger uniform positive alternative
+(40h) applies.
 
 Together, (37) and (40e) give an unconditional positive toothpick cell in
 `150` of the `165` profile rows: the `15` repeated-first rows and `135`
@@ -609,8 +737,8 @@ The new word is exact but its type is limited.
 - THM-2390 forces a separate labelled seven-root partition or one-double
   word.  It supplies no positive intersection with `S` and no alignment of
   its septimal root with the thirteen-root toothpick.
-- For the last middle-depth-two profiles, (40l) is a finite reduced-ratio
-  bank, not an exclusion of either branch.
+- For the last middle-depth-two profiles, (40o)--(40q) are finite
+  compatible address banks, not an exclusion of either branch.
 
 The first implication which fails in the unqualified THM-2388 finish is
 
@@ -629,23 +757,26 @@ landing.  No thirteen-adic row is removed, the scalar ledger remains
 
 The dependency-free companion:
 
-- verifies every rational identity in (25)--(40m);
+- verifies every rational identity in (25)--(40s);
 - checks the exact same-line `1/91` interval geometry;
 - exhausts the modulo-fourteen proof of the different-`7`-valuation
   `1/49` law;
 - enumerates all fifteen double-pair types and confirms that an ordinary
   label outside the pair always exists;
 - verifies the two root-count profiles in (13), the complete-word count
-  `648648000`, and the `390/585` cell ledgers;
+  `648648000`, and the sharper top-labelled `52/78` cell ledgers;
 - checks the normalized and unnormalized target Parseval/fourth-power
-  sums on all thirteen adjacent edges;
+  sums on every singleton and all thirteen adjacent edges;
 - verifies the full one-parameter product trade and the
   `theta=3/4459`, `delta=0` specializations; and
 - reconstructs the repeated-first and all `150` strict cage caps, checks
   that precisely the `135` rows with `b>=3` pass uniformly, and identifies
   the `b=4` tie family; and
-- independently enumerates the `124` middle-depth-two residual ratios and
-  checks the sharp product/coordinate witnesses in (40m).
+- independently enumerates the `52` preliminary middle-depth-two ratios,
+  computes the exact compatible four-comb union for both orientations,
+  recovers the ten-oriented/six-unordered bank in (40o), and checks the
+  `M=2` singleton and empty `M>=3` congruence filters in (40q); and
+- checks every balanced first-digit/Bockstein address in (40r)--(40s).
 
 Run
 
