@@ -1,0 +1,16 @@
+THM-2410 FULL-COORDINATE PROJECTOR -- exact audit
+proper nonempty F13 masks checked: 8190
+unit annihilator characters: 229692
+all-nonzero endpoint characters: 396907776
+eligible endpoint/deep pairs: 4365985536
+full states / quotient states: 137858491849 / 10604499373
+normalization identity: 13/13^10 = 1/13^9
+hostile unit incidence / trajectory phase: 14 / 6
+hostile local factors: all nonzero
+hostile anchored slices: 13 / 13
+hostile integrated coefficient: 0 in Q(zeta_13)
+endpoint Gram rational floor: 262144/12646218552730347184269489080961456410641
+deep Gram rational floor: 1048576/361188648084531445929920877641340156544317601
+septimal nontrivial colours checked per factor: 6
+septimal full-support product hostile: pointwise zero
+PASS

@@ -1919,3 +1919,15 @@ Both `126D-25B^2` and `20BC+21W` have zero normal form, as do all four
 omitted synchronization equations. Split-place controls at `p=59,101` and
 the explicit pre-lock off-wall hostile `(58,34,47)` pass in normal and
 optimized modes. This is not yet in the proved graph.
+
+### lrc14_full_coordinate_projector_thm2410.out
+
+Exact companion for **CANDIDATE THM-2410**, pending independent hostile
+audit. It checks every nonempty proper `F_13` mask, the `229,692` unit
+annihilator characters, the `396,907,776` all-nonzero endpoint characters,
+and the `4,365,985,536` eligible endpoint/deep pairs. It verifies the
+lossless gauge normalization, reconstructs an exact anchored translated-pattern
+cancellation in `Q(zeta_13)`, records the endpoint/deep Gram floors, and checks
+the septimal full-support convolution hostile. Normal and optimized runs agree
+and end in `PASS`; the finite phase hostile is not asserted to be a physical
+scalar-row trajectory.
