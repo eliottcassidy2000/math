@@ -96,6 +96,26 @@ with `c = A000930`. Values `2,1,3,2,4,3,6,4,9` -- all nine censuses
 match. Predictions: `pure-blue(12) = 6`, `13 -> 13`, `14 -> 9`,
 `15 -> 19`, `16 -> 13`.
 
+## 3b. n = 12 confirmation (same session)
+
+The pruned survivor engine
+(`04-computation/metagraph_pureblue_n12_pruned_kps_S133.cpp`, sha
+`22a96e45...`; output `..._n12_pruned_kps_S133.out`, sha
+`d0b2e6d1...`; sampler soundness: only false SURVIVORS possible,
+eliminated by exhaustive path enumeration; controls n = 9, 10, 11
+reproduce the exact known inventories) settles the even-line test:
+
+```text
+pure-blue(12) = 6, all rigid, H-multiset [1, 9, 9, 9, 9, 81]  (3)
+```
+
+exactly as predicted by (2), including the first `3^4 = 81` class
+(the palindrome `C3 C3 C3 C3`) and zero nonrigid classes (the
+center law's even-n exclusion). The 2^30 cube reduced to 163 raw
+survivors in 89 classes. The complete law now stands at TEN census
+points, with both pre-registered predictions (n = 11 rigid
+inventory; n = 12 full inventory) confirmed.
+
 ## 4. Open
 
 - Completeness of the atom alphabet: does any new pure-blue strong
