@@ -2,7 +2,7 @@
 id: THM-2419
 title: "Valuation-normalized homogenization of affine sideband shells"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. For a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For a
   primitive integer speed row w and nonzero sideband X, the affine
   address shell Lambda_X={a:a.w=X} has the canonical finite quotient
   Lambda_X/|X|Lambda, naturally bijective with ker(w mod |X|). When
@@ -37,7 +37,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2419 -- homogenizing a sideband without losing its unit residue
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2416 turns a vanished full-coordinate mean into a nonzero physical
 sideband.  Its atomic addresses do not lie in the relation lattice; they
@@ -189,16 +189,16 @@ all-unit relation.
 There is also a valuation-normalized form.  Write
 
 ```text
-d=nu_13(X)>=1,              Y=X/13^d,          13 does not divide Y.
+d=nu_13(X)>=1,              Y_d=X/13^d,        13 does not divide Y_d.
                                                                   (17)
 ```
 
 Then
 
 ```text
-widehat w=(w,13^d),          widehat a=(a,-Y),
+widehat w=(w,13^d),          widehat a=(a,-Y_d),
 
-widehat a.widehat w=0,       widehat a mod13=(q,-Y).        (18)
+widehat a.widehat w=0,       widehat a mod13=(q,-Y_d).      (18)
 ```
 
 Among pure powers `13^e` used as the extra speed, `e=d` is the unique
@@ -326,7 +326,7 @@ This theorem proves:
 - exact but section-dependent physical contraction;
 - neutral self-differences and the sufficient residue-zero reference
   sidecar; and
-- the `7|Y` CRT split.
+- the `7|Y_1` CRT split.
 
 It does not prove:
 

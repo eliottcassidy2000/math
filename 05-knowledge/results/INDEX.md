@@ -1962,8 +1962,8 @@ least `7/13`. Normal and optimized runs agree and end in `PASS`; no
 canonical source--terminal correlation or LRC(14) closure is asserted.
 ### lrc14_affine_sideband_homogenization_thm2419.out
 
-Exact companion for **THM-2419, PROVED CANDIDATE + VERIFIED-EXACT;
-INDEPENDENT AUDIT PENDING**. It exhausts `160` primitive-row/modulus
+Exact companion for **THM-2419, PROVED + VERIFIED-EXACT +
+INDEPENDENTLY HOSTILE-AUDITED**. It exhausts `160` primitive-row/modulus
 controls and `1,568` finite kernel-fibre lifts for the canonical
 `Lambda_X/(|X| Lambda) ~= ker(w mod |X|)` torsor, checks the ordinary
 and valuation-normalized artificial observers, and verifies the minimal
