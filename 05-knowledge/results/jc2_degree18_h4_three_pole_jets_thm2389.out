@@ -1,6 +1,7 @@
 THM-2389 H4 THREE-POLE HERMITE-JET EXACT COMPANION
 slope cubic: disc=-94208/282429536481; L-shift=5/243; hostile pivots f(-8/243)=-64/531441, f(4/243)=64/531441
 Hermite numerator: rank=6; kernel=B2^2; rational controls=24; split F59 controls=18; roots=(5,11,43)
+Hermite-kernel elimination: 5751081z^3+302400z-64000=0; disc=-4293966076060889088000000; split z=(35, 9, 15); determinant controls=4
 pole reconstruction: orders 0..6 verified on 9 exact rational controls; all four parameter pivots nonzero
 global residual: conditions=18; rank=18; kernel=B2^6; one sixth-order lambda lock is sharp
 VERDICT: three synchronized order-five pole jets leave exactly lambda*B2^6; one order-six equation is the full spectral identity

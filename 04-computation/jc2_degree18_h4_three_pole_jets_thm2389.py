@@ -66,6 +66,23 @@ def power(poly, exponent, limit=None):
     return out
 
 
+def polynomial_divmod(dividend, divisor):
+    numerator = trim(list(map(Q, dividend)))
+    denominator = trim(list(map(Q, divisor)))
+    require(denominator != [Q(0)], "nonzero polynomial divisor")
+    if len(numerator) < len(denominator):
+        return [Q(0)], numerator
+    quotient = [Q(0)] * (len(numerator) - len(denominator) + 1)
+    while numerator != [Q(0)] and len(numerator) >= len(denominator):
+        degree = len(numerator) - len(denominator)
+        factor = numerator[-1] / denominator[-1]
+        quotient[degree] += factor
+        for index, value in enumerate(denominator):
+            numerator[index + degree] -= factor * value
+        numerator = trim(numerator)
+    return trim(quotient), numerator
+
+
 def evaluate(poly, value):
     total = Q(0)
     for coefficient in reversed(poly):
@@ -120,6 +137,60 @@ def matrix_times_vector(matrix, vector):
         sum((Q(entry) * Q(value) for entry, value in zip(row, vector)), Q(0))
         for row in matrix
     ]
+
+
+def matrix_determinant(matrix):
+    rows = [list(map(Q, row)) for row in matrix]
+    require(rows and all(len(row) == len(rows) for row in rows), "square matrix")
+    determinant = Q(1)
+    for column in range(len(rows)):
+        pivot = next(
+            (row for row in range(column, len(rows)) if rows[row][column]),
+            None,
+        )
+        if pivot is None:
+            return Q(0)
+        if pivot != column:
+            rows[column], rows[pivot] = rows[pivot], rows[column]
+            determinant = -determinant
+        pivot_value = rows[column][column]
+        determinant *= pivot_value
+        for row in range(column + 1, len(rows)):
+            if not rows[row][column]:
+                continue
+            factor = rows[row][column] / pivot_value
+            for entry in range(column, len(rows)):
+                rows[row][entry] -= factor * rows[column][entry]
+    return determinant
+
+
+def polynomial_resultant(left, right):
+    left = trim(list(map(Q, left)))
+    right = trim(list(map(Q, right)))
+    left_degree = len(left) - 1
+    right_degree = len(right) - 1
+    size = left_degree + right_degree
+    left_descending = list(reversed(left))
+    right_descending = list(reversed(right))
+    sylvester = []
+    for shift in range(right_degree):
+        row = [Q(0)] * size
+        row[shift : shift + left_degree + 1] = left_descending
+        sylvester.append(row)
+    for shift in range(left_degree):
+        row = [Q(0)] * size
+        row[shift : shift + right_degree + 1] = right_descending
+        sylvester.append(row)
+    return matrix_determinant(sylvester)
+
+
+def determinant_three(rows):
+    (a, b, c), (d, e, f_value), (g, h, i) = rows
+    return (
+        a * (e * i - f_value * h)
+        - b * (d * i - f_value * g)
+        + c * (d * h - e * g)
+    )
 
 
 ALPHA = Q(16, 964467)
@@ -296,6 +367,111 @@ def check_hermite_family():
     return rational_controls, split_controls
 
 
+def check_quadratic_jet_elimination():
+    f_derivative = [Q(80, 19683), Q(0), Q(3)]
+    g_two = [Q(160 * 8, 1240029), Q(160 * 243, 1240029)]
+    z_polynomial = [-Q(64000), Q(302400), Q(0), Q(5751081)]
+
+    # For f(s)=0 and z=g_2(s)/f'(s), clear the denominator in
+    # 5751081 z^3+302400 z-64000 and reduce by f.
+    cleared = add(
+        add(
+            scale(power(g_two, 3), Q(5751081)),
+            scale(multiply(g_two, power(f_derivative, 2)), Q(302400)),
+        ),
+        scale(power(f_derivative, 3), Q(-64000)),
+    )
+    _, remainder = polynomial_divmod(cleared, F_POLY)
+    require(remainder == [Q(0)], "universal z-pivot cubic")
+    resultant_scale = Q(4096, 70620658308464607)
+    for z_value in (Q(0), Q(1), Q(-1), Q(2)):
+        z_f_prime_minus_g = add(
+            scale(f_derivative, z_value),
+            scale(g_two, Q(-1)),
+        )
+        require(
+            polynomial_resultant(F_POLY, z_f_prime_minus_g)
+            == resultant_scale * evaluate(z_polynomial, z_value),
+            "z-pivot resultant identity",
+        )
+
+    discriminant = (
+        -4 * z_polynomial[3] * z_polynomial[1] ** 3
+        - 27 * z_polynomial[3] ** 2 * z_polynomial[0] ** 2
+    )
+    require(
+        discriminant == -4293966076060889088000000,
+        "z-pivot cubic discriminant",
+    )
+
+    # The first split prime provides a literal distinct-root control.
+    prime = 59
+    slope_roots = (5, 11, 43)
+    z_roots = []
+    for slope in slope_roots:
+        derivative = (
+            3 * slope * slope + 80 * pow(19683, -1, prime)
+        ) % prime
+        g_value = (
+            1890 * (16 * pow(964467, -1, prime)) * slope
+            + 11340 * (64 * pow(703096443, -1, prime))
+        ) % prime
+        z_value = g_value * pow(derivative, -1, prime) % prime
+        require(
+            sum(
+                int(coefficient) * z_value**degree
+                for degree, coefficient in enumerate(z_polynomial)
+            )
+            % prime
+            == 0,
+            "split z-pivot root",
+        )
+        z_roots.append(z_value)
+    require(z_roots == [35, 9, 15], "split z-pivot values")
+    require(len(set(z_roots)) == 3, "distinct split z-pivots")
+
+    controls = 0
+    rational_z_samples = [
+        (Q(2, 3), Q(-5, 7), Q(11, 4)),
+        (Q(-4, 9), Q(7, 5), Q(13, 8)),
+    ]
+    for z_values in rational_z_samples:
+        for spectral_b, kappa in (
+            (Q(5, 3), Q(-7, 2)),
+            (Q(-11, 6), Q(4, 9)),
+        ):
+            base_k = [-kappa - spectral_b * value for value in z_values]
+            require(
+                determinant_three(
+                    [[Q(1), z_values[index], base_k[index]] for index in range(3)]
+                )
+                == 0,
+                "quadratic-jet determinant",
+            )
+            recovered_b = -(base_k[0] - base_k[1]) / (
+                z_values[0] - z_values[1]
+            )
+            recovered_kappa = -base_k[0] - recovered_b * z_values[0]
+            require(recovered_b == spectral_b, "unique B reconstruction")
+            require(recovered_kappa == kappa, "unique kappa reconstruction")
+            require(
+                base_k[2] == -recovered_kappa - recovered_b * z_values[2],
+                "third quadratic jet reconstruction",
+            )
+            hostile = list(base_k)
+            hostile[2] += 1
+            require(
+                determinant_three(
+                    [[Q(1), z_values[index], hostile[index]] for index in range(3)]
+                )
+                != 0,
+                "quadratic-jet determinant hostile",
+            )
+            controls += 1
+
+    return discriminant, tuple(z_roots), controls
+
+
 def coefficient(poly, index):
     return poly[index] if index < len(poly) else Q(0)
 
@@ -426,6 +602,9 @@ def check_global_residual_kernel():
 def main():
     discriminant = check_slope_cubic()
     rational_controls, split_controls = check_hermite_family()
+    z_discriminant, z_roots, determinant_controls = (
+        check_quadratic_jet_elimination()
+    )
     jet_controls = check_jet_reconstruction()
     global_rank = check_global_residual_kernel()
 
@@ -439,6 +618,12 @@ def main():
         "Hermite numerator: "
         f"rank=6; kernel=B2^2; rational controls={rational_controls}; "
         f"split F59 controls={split_controls}; roots=(5,11,43)"
+    )
+    print(
+        "Hermite-kernel elimination: "
+        "5751081z^3+302400z-64000=0; "
+        f"disc={z_discriminant}; split z={z_roots}; "
+        f"determinant controls={determinant_controls}"
     )
     print(
         "pole reconstruction: "

@@ -2,20 +2,22 @@
 id: THM-2389
 title: "Degree-eighteen H4 three-pole Hermite-jet synchronization"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   A putative degree-eighteen H4 survivor has a rational normalization
   whose three smooth points above infinity may be placed at
   0,1,infinity. In that coordinate y=A_3/[t(t-1)] and
   v=C_6/[t(t-1)]^2. The three v/y^2 slopes are exactly the three roots
   of one fixed separable cubic. Their missing linear jets impose six
   Hermite conditions and leave only the affine freedom
-  C_6=C_*+kappa[t(t-1)]^2. Orders two through five at each pole
-  reconstruct B,C,D,W through explicit nonzero pivots. If the three
-  reconstructions agree, the full degree-eighteen residual is
-  lambda[t(t-1)]^6; one sixth-order pole equation is therefore
-  equivalent to the complete spectral identity. This is a lossless
-  sparse coefficient reduction, not an H4 exclusion or a proof of
-  JC(2) or DC(2).
+  C_6=C_*+kappa[t(t-1)]^2. This freedom changes only the quadratic
+  pole jets; their three B-matching equations reduce losslessly to one
+  explicit 3-by-3 determinant and unique reconstruction of kappa and B.
+  Orders three through five then reconstruct C,D,W through explicit
+  nonzero pivots. If the three reconstructions agree, the full
+  degree-eighteen residual is lambda[t(t-1)]^6; one sixth-order pole
+  equation is therefore equivalent to the complete spectral identity.
+  This is a lossless sparse coefficient reduction, not an H4 exclusion
+  or a proof of JC(2) or DC(2).
 source: codex-2026-07-26-h4-three-pole-jets
 depends_on:
   - THM-2332-degree-eighteen-genus-zero-square-class-and-dessin-trap
@@ -26,18 +28,18 @@ related:
   - THM-2387-degree-eighteen-h4-elliptic-three-isogeny-atlas
 script: 04-computation/jc2_degree18_h4_three_pole_jets_thm2389.py
 output: 05-knowledge/results/jc2_degree18_h4_three_pole_jets_thm2389.out
-script_sha256: fe462d935d743a81606eb7edfdca27bea5f9b0e50f8e9378b6667a6e81b04694
-output_sha256: 225723bd7b8c6ad5e0f19832eb8e2958798654e4c4966f43cbd7f3e2273d4051
+script_sha256: 35610b7643e4927d0638863b6ed784fae892a9632c71020b175167fa02933072
+output_sha256: 3fb6d45f6b495e6502f7bc498bea3be9e7d24601832a967c602d1ccbb0f38ca7
 secondary_script: 04-computation/jc2_degree18_h4_three_pole_jet_synchronization_thm2389.py
 secondary_output: 05-knowledge/results/jc2_degree18_h4_three_pole_jet_synchronization_thm2389.out
-secondary_script_sha256: abc8a0f9ce1095230e25f24d1bbb1974a85868c87a2244f57914ed6d51a363ad
-secondary_output_sha256: 821fc5e5c24512f6bb7edf79cbe9283d3326b007af63139b799fc0d71310766c
+secondary_script_sha256: 4b8be3956753a1f830dbb89e8fe481a252bdf22ad1477bdcd8c278c17ef8c0c4
+secondary_output_sha256: cb78771b7de3ab7013b8836db24fe99233277a9a4b6b33542b3ee9b1eba842fb
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2389 -- synchronize the three infinity-pole jets
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2332 reduces every remaining degree-eighteen Keller trajectory to
 the four-simple square-class identity
@@ -305,6 +307,73 @@ reconstructs, successively,
 ```text
 B_i
  =-f_i' k_i/g_2(s_i),                             (19)
+```
+
+There is a further lossless simplification before the remaining
+reconstructions. Let `C_*` denote the Hermite solution (14) with
+`kappa=0`, and let `k_i^*` be its quadratic pole jets. Equation (15)
+is the global identity
+
+```text
+r=r_*+kappa x^2,
+
+k_i=k_i^*+kappa,                                  (19a)
+```
+
+while every `l_i,m_i,n_i,o_i` is independent of `kappa`. Put
+
+```text
+z_i=g_2(s_i)/f_i'.
+```
+
+Exact elimination of `s` from `f(s)=0` and
+`z f'(s)-g_2(s)=0` gives a nonzero scalar multiple of
+
+```text
+5751081 z^3+302400 z-64000.                       (19b)
+```
+
+Its discriminant is
+
+```text
+-4293966076060889088000000
+=-2^18*3^18*5^6*7^6*23 !=0.                      (19c)
+```
+
+Thus `z_0,z_1,z_inf` are distinct. Formula (19) says precisely
+
+```text
+k_i^*=-kappa-B z_i.
+```
+
+Consequently all three `B_i` agree for some `B` if and only if
+
+```text
+det [
+  [1,z_0,  k_0^*  ],
+  [1,z_1,  k_1^*  ],
+  [1,z_inf,k_inf^*]
+]=0.                                              (19d)
+```
+
+When (19d) holds, any two rows reconstruct the unique values
+
+```text
+B
+ =-(k_0^*-k_1^*)/(z_0-z_1),
+
+kappa
+ =-k_0^*-B z_0.                                  (19e)
+```
+
+Hence the affine Hermite variable can be removed before the
+`C,D,W` equations: two `B`-matching equations become one determinant,
+with no discarded branch and no root extraction beyond the already
+chosen slope ordering.
+
+Continuing at orders three through five gives
+
+```text
 
 C_i
  =-f_i' l_i/h_3.                                  (20)
@@ -457,6 +526,24 @@ eight pole-synchronization equations;
 one sixth-order scalar lock.                       (31)
 ```
 
+Using (19a)--(19e), the same system has the smaller lossless form
+
+```text
+four variables a_0,a_1,a_2,a_3;
+
+one quadratic-jet determinant;
+
+six C/D/W synchronization equations;
+
+one sixth-order scalar lock;
+
+unique reconstruction of kappa and B.             (32)
+```
+
+The nonvanishing pole conditions remain
+`a_0 a_3 A_3(1)!=0`. The reduction (32) is over the same fixed slope
+splitting field as (31); it introduces no new algebraic extension.
+
 It is compatible with the root-free parameter charts of THM-2373 but
 does not spend or replace their weighted scaling action. The coordinate
 `t` normalizes the three infinity points of the spectral curve, whereas
@@ -568,6 +655,8 @@ The dependency-free exact companion:
 - verifies (7)--(9) and the two hostile pivot values in (18);
 - checks the explicit Hermite family (12)--(15) and proves its
   homogeneous constraint matrix has rank six with kernel `B_2^2`;
+- verifies the resultant cubic (19b), its nonzero discriminant, and the
+  determinant/unique-reconstruction equivalence (19d)--(19e);
 - expands (6) through order six and verifies every reconstruction
   coefficient (19)--(24) on exact rational controls;
 - proves by exact row reduction that the eighteen local vanishing
@@ -590,8 +679,7 @@ Both transcripts must match
 ```
 
 byte-for-byte after LF normalization. Every executable check raises
-explicitly under optimized Python. The declared hashes have been
-reproduced; independent audit remains pending before status promotion.
+explicitly under optimized Python.
 
 The secondary coordinate-free companion independently verifies
 (32)--(37), derives the triangular reconstruction formulas after the
@@ -611,3 +699,19 @@ Both transcripts must byte-match
 ```
 
 after LF normalization.
+
+## 9. Independent hostile audit
+
+Independent audits rederived the three-pole normalization, the six
+slope assignments, the translation (9), the Hermite rank and kernel,
+every order-two-through-six recurrence, and all four pivot
+nonvanishings. They separately checked the local-to-global divisibility
+argument giving `N=lambda B_2^6`, the binary-form transport
+(32)--(37), the use and scope of proved THM-2386, and the now-proved
+THM-2387 comparison. Normal, optimized, and stored transcripts for both
+companions agree after LF normalization; the attached hashes and the
+repository documentation check pass.
+
+The audit found no mathematical, typing, dependency, or scope defect.
+
+**QED.**

@@ -261,7 +261,7 @@ def main() -> None:
         residual_packets += 1
 
     print("theorem=THM-2389")
-    print("status=PROOF-CANDIDATE+VERIFIED-EXACT+AWAITING-INDEPENDENT-AUDIT")
+    print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED")
     print("clean_cubic=w^3+12P*w+56Q")
     print("slope_polynomial=alpha^3+2940alpha+30184")
     print("slope_discriminant=-126247730112")

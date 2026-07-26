@@ -389,8 +389,8 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-2374 inverts the squared complete-subcube Walsh bank; THM-2383 recovers complex coefficients exactly from labelled spanning references. Physical references, owners, and knot realization remain open.
   THM-2351 proves the canonical self-target ANOVA is exactly an affine reparameterization of the directional catalysis--bypass ledger; its optimum and skew pair sector add no information. Positive catalysis and the stable diagonal remain open.
 - **Unsplittable cost flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture: a planar acyclic instance has fractional cost `58` but capacity-good integral cost at least `60`. Its carrier is the `K_3` stable-set facet; the planar `2d_max` theorem remains intact.
-- **Jacobian/Dixmier:** THM-1300/1315 verify and analyze the three-dimensional Keller collision, but provenance is unsettled (MISTAKE-205) and it does not decide
-  `DC(2)`; THM-2230 computes the planar response fiber, THM-2240 proves the grade-six Weyl response is not a continuation state, and THM-2241 gives the exact monic test `D_P^(d+1)(x)=0` plus its resultant curve. THM-2262/2297 reduce nonsplit degree eighteen to a four-invariant singular trigonal cone; THM-2314/2316 close both two-sparse banks, THM-2371/2376 close `H_2`, and THM-2386 proves every genuine `H_4` survivor has `Res_y(P,Q)!=0`. The coprime `H_4` locus remains open.
+- **Jacobian/Dixmier:** THM-1300/1315's three-dimensional collision has unsettled provenance (MISTAKE-205) and does not decide `DC(2)`. THM-2230/2240/2241 give the planar response fibre, grade-six boundary, and monic resultant test.
+  In degree eighteen, THM-2314/2316 close two-sparse supports, THM-2371/2376 close `H_2`, and THM-2386 makes every `H_4` survivor coprime. [THM-2389](../01-canon/theorems/THM-2389-degree-eighteen-h4-three-pole-hermite-jet-synchronization.md) reduces that lane to four variables, seven equations, and one order-six lock; emptiness remains open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibers:** THM-2063/2071 close affine/quadratic pencil members;
   THM-2084/2110/2118 close cubics; THM-2102/2113 close power-free top faces;
@@ -418,11 +418,11 @@ Classify profiles under support operations; study analytic continuation and auto
   audited THM-2371 eliminates every common-root and singular-order
   component, making THM-2360's linear-times-cube descent unconditional
   on `H_2`; hostile-audited THM-2376 eliminates that coprime cube locus
-  and closes the full degree-eighteen `H_2S_5^2` stratum. Candidate
-  THM-2373 supplies root-free `B=C`, `C=D`, `D=W` charts for the
-  remaining `H_4` lane. Split/even descent
-  and other short edges remain; THM-2206
-  blocks field-valued `C_2` Hasse repair. Integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
+  and closes the full degree-eighteen `H_2S_5^2` stratum. THM-2373 gives
+  root-free charts on `H_4`; THM-2386 removes common roots; hostile-audited
+  THM-2389 gives its lossless four-variable three-pole jet system.
+  Split/even short edges and integral `2`-adic order raising remain; THM-2206
+  blocks field-valued `C_2` Hasse repair. `JC(2)` and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
