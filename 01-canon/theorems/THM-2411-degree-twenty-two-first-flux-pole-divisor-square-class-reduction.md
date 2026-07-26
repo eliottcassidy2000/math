@@ -2,7 +2,7 @@
 id: THM-2411
 title: "Degree-twenty-two first-flux pole-divisor emptiness and projected square-class atlas"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   In the polynomial exact-square-prefix, genuine nonsplit degree-twenty-two
   terminal branch, legal target translation leaves five weighted parameters
   B,C,D,E,W. On the divisor where the first flux loses its Z coefficient,
@@ -34,7 +34,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2411 -- the degree-twenty-two first-flux pole divisor is empty
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The degree-eighteen program uses a trigonal spectral curve because the first
 constant Faber flux eliminates `Z=T^2` generically. At degree twenty two, one
@@ -551,3 +551,33 @@ nonsplit, polynomial exact-square-prefix degree-twenty-two terminal branch.
 It proves that divisor empty. It does not treat `mathcal A!=0`, does not turn
 the projected controls (31) into trajectories, and does not prove `JC(2)` or
 `DC(2)`.
+
+## 11. Independent hostile audit
+
+An independent audit reconstructed the degree-twenty-two Laurent bank from
+the recurrence and checked it against the separate finite multinomial
+formula. It rechecked the legal target translation, all five normalized
+constant coefficients, both flux numerators, and the exact associate
+
+```text
+mathcal K|_(mathcal A=0)
+ =(16/9)[P_5(y)-2108304E].
+```
+
+The audit attacked the repaired step directly. Because `E` is one fixed
+element of the algebraically closed constant field and the leading
+coefficient of `P_5` is the nonzero constant `945`, the equation cannot
+become an identity in a nonconstant `y`. Once `y` is constant, (18) makes
+`u` constant, and the nonzero `Z^2` coefficient in (21) makes `Z`, then
+`T` and `q`, constant. This contradicts the genuine deck. No use of the
+projected square-class atlas is needed for the emptiness conclusion.
+
+The auditor also checked the quotient boundary: (24)--(36) remain exact
+after forgetting `E`, but the displayed `H_2S_2^2` control does not lift to
+a trajectory and is never used as one. The full-mate polynomial sidecar,
+including all lower Faber rows, was rederived; no top-seed polynomiality
+claim survives by itself.
+
+Normal, optimized, and stored transcripts byte-match after LF normalization,
+and the declared hashes agree with the working-tree bytes. No mathematical,
+typing, dependency, or scope defect remains. **QED.**

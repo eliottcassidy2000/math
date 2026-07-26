@@ -9,6 +9,31 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-272 (2026-07-26, THM-2411 fixed-coefficient projection) -- eliminating `E` turned a constant-field coefficient into a moving function
+
+- **What was done:** the first degree-twenty-two pole-divisor reduction solved
+  the residual first flux for `E`, projected from
+  `(B,C,D,E,W;Z,y)` to `(B,C,D,W;Z,y)`, and then treated the resulting
+  quadratic/square-class family as the live Keller trajectory carrier.
+- **First failed implication:** on a trajectory, `E` is one fixed Faber
+  coefficient in the algebraically closed constant field. The projection
+  preserves the formal quadratic `F_2(Z,y)=0` but forgets the equation
+  `P_5(y)=2108304E`. Since `P_5` has fixed leading coefficient `945`, that
+  equation makes `y` constant; the second flux then makes `Z,T,q` constant
+  and contradicts the genuine deck.
+- **Strongest survivor:** the quadratic `F_2`, its sextic discriminant
+  `R_6`, the perfect-square classification, and the explicit
+  `H_2S_2^2` and squarefree controls are exact algebra on the projected
+  universal coefficient cone. They are not live trajectories.
+- **Repair:** hostile-audited
+  `THM-2411-degree-twenty-two-first-flux-pole-divisor-square-class-reduction`
+  retains fixed `E` and proves only the full `mathcal A=0` chart empty.
+  Its full-mate sidecar retains all lower Faber rows. The complementary
+  `mathcal A!=0` chart remains separate.
+- **Rule:** solving for a constant coefficient does not authorize forgetting
+  that it is constant. Before projecting a coefficient variety, name the
+  next consumer and retain every fixed-field coordinate it tests.
+
 ## MISTAKE-271 (2026-07-26, THM-2418 fixed-source amendment audit) -- a nonwrapping prefix-block proof was stated with wrapped circular endpoints, and its verifier checked the wrong source
 
 - **What was written:** the fixed-source amendment described
