@@ -621,8 +621,11 @@ Independent hostile audits reconstructed and accepted:
   normalization;
 - the geometric-order proof of the positive-depth ancestry
   annihilator; and
+- the intrinsic blocker-word invoice, all `1716` zero-sum row-defect
+  types, the sharp energy-four boundary, all six cyclotomic colours,
+  the one-source arrow census, and the mixed-character dichotomy; and
 - every owner, endpoint, probe-algebra, and physical/quotient scope
   boundary above.
 
-Normal and optimized runs byte-match the stored transcript, and the
-LF hashes match the frontmatter. QED.
+Both companions and their optimized runs byte-match their stored
+transcripts, and all four LF hashes match the frontmatter. QED.
