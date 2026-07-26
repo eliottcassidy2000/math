@@ -2,7 +2,7 @@
 id: THM-2364
 title: "Anchored corner forces a fully mixed deep/blocker-probe colour"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. Let a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Let a
   positive set F avoid one deepest danger comb at shift zero and lie
   inside t=1 or 2 named blocker combs at shift zero. The fully mixed
   corner sum of its (t+1)-dimensional thirteen-shift table is exactly
@@ -39,7 +39,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2364 -- every named blocker gets one mixed probe colour
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2354 forces a nonzero colour after shifting the deepest danger comb.
 The factor-role calculation behind THM-2362 forces nonzero colours after
@@ -101,8 +101,8 @@ For any function `V` on `F_13`, its normalized finite transform satisfies
 sum_(u!=0)Vhat(u)=V(0)-1/13 sum_r V(r).              (4)
 ```
 
-Away from the `26` strict-open interval endpoints, the exact
-thirteen-shift danger count is
+Away from the pullbacks of the `26` base strict-open interval endpoints,
+the exact thirteen-shift danger count is
 
 ```text
 sum_r D_(q,r)(x)=2-D_(13q,0)(x).                    (5)
@@ -482,4 +482,9 @@ Both transcripts must match
 byte-for-byte after LF normalization. Every executable check raises
 explicitly under optimized Python.
 
-Independent audit is pending. QED.
+Independent hostile audit checked the almost-everywhere endpoint scope,
+the exact one- and two-blocker corner formulas and constants, the
+collapsed-word versus added-probe typing, pure/fork boundary, joint Abel
+limit without undamped reordering, both equality profiles, all-row
+quantifiers, normal and optimized transcripts, stored output, LF hashes,
+and documentation routing. QED.
