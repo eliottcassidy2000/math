@@ -411,7 +411,7 @@ Classify profiles under support operations; study analytic continuation and auto
   forces that system onto the closed wall and finishes the inherited reduced degree-eighteen branch. Hostile-audited THM-2411
   empties `A=0` in the inherited genuine nonsplit polynomial exact-square-prefix degree-22 branch; hostile-audited THM-2423/2425/2428 empty all five one-sparse axes in `A!=0`.
   Hostile-audited THM-2429 closes the first support-two plane `C,W` by a complete genus-two/genus-one fibre classifier; independently hostile-audited THM-2437 closes the second plane `D,W` by a uniformly irreducible quartic and a complete exceptional-ramification classifier. The other eight support-two planes and higher mixed strata remain open. Split/even
-  short edges and integral `2`-adic order raising remain; THM-2206 blocks field-valued `C_2` Hasse repair. `JC(2)` and `DC(2)` remain open.
+  short edges and integral `2`-adic order raising remain; THM-2206 blocks field-valued `C_2` Hasse repair. THM-2446 opens the `z`-quadratic six-bracket architecture, but THM-2449 refutes its proposed plane-map cone shortcut on the separated-ruling line stratum; the conic-direction repair is open. `JC(2)` and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 

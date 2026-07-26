@@ -22,6 +22,7 @@ depends_on:
 related:
   - THM-1335-trisection-modulus-master-identities-trace-polynomiality
   - THM-1340-engine-trichotomy-zaffine-keller
+  - THM-2449-twojet-plane-map-cone-prediction-hostile
 script: 04-computation/jacobian_twojet_zgraded_identity_kps_S131.py
 output: 05-knowledge/results/jacobian_twojet_zgraded_identity_kps_S131.out
 script_sha256: 38122318f4086f4c14b570c65189bd1aca0e04179cad7fe6cabb698728cc45ae
@@ -174,12 +175,22 @@ detection floors accordingly.
 Recorded as predictions only: (P1) a swallowtail master identity
 `mu(P) L_4 = disc(z^4 + P~ z^2 + Q~ z + R~)` generalizing
 `108 a^2 L = (12a-b^2)^3 + E^2`, with Jelonek set `{L_4 = 0}` the
-swallowtail hypersurface ("A_3 at both ends"); (P2)
-`D5 = D4 = 0` plus the alpha-part of `D3` force `[w_x,w_y,w] = 0`;
-(P3) the `S_4 > V_4` tower matches resolvent-cubic /
+swallowtail hypersurface ("A_3 at both ends"); (P3) the `S_4 > V_4`
+tower matches resolvent-cubic /
 fold-double-cover layers; (P4) a Veronese-projection generative
-ansatz for the staircase. Cheapest falsification first: (P2) is pure
-bracket algebra.
+ansatz for the staircase.
+
+The former prediction (P2), that `D5=D4=0` plus the alpha-part of
+`D3` forces `[w_x,w_y,w]=0`, is **REFUTED** by THM-2449.  The entire
+separated-ruling family
+
+```text
+A=a+xn,            B=b+yn,            C=0
+```
+
+has `D5=...=D0=0` but
+`[w_x,w_y,w]=[a,b,n]^2`.  A repaired conic-direction version remains
+open; the line-direction kernel must be excluded explicitly.
 
 ## 6. Scope
 

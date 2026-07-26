@@ -1,0 +1,9 @@
+THM-2449 exact symbolic companion
+graded_brackets_D5_to_D0=0,0,0,0,0,0
+direct_jacobian=0
+plane_map_volume=[a,b,n]^2
+integral_witness_A=(1,0,x)
+integral_witness_B=(0,1,y)
+integral_witness_w=(-x,-y,1)
+integral_witness_volume=1
+ALL CHECKS PASSED
