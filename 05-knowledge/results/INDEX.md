@@ -1936,3 +1936,12 @@ cancellation in `Q(zeta_13)` with a fixed nonzero deep colour, records the
 endpoint/deep Gram floors, and checks the septimal full-support convolution
 hostile. Normal and optimized runs agree and end in `PASS`; the finite phase
 hostile is not asserted to be a physical scalar-row trajectory.
+
+### lrc14_zero_current_or_sideband_prony_thm2416.out
+
+Exact companion for **CANDIDATE THM-2416**. It checks the sharp
+`L-1` periodic jump-Prony boundary for `2<=L<=9`, the two-jump
+no-uniform-amplitude hostile, exhaustive Boolean product/composition jump
+invoices, and the inherited rational exponent-`20` THM-2410 Gram floor.
+The surviving sideband is typed only as physical total frequency, not as
+a relation current. Normal and optimized runs agree and end in `PASS`.

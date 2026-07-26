@@ -1,0 +1,15 @@
+THM-2416 ZERO-CURRENT OR SIDEBAND PRONY EXACT AUDIT
+sharp Vandermonde lengths checked=8 (L=2..9)
+moments q=0..L-2 vanish / moment L-1=1: PASS
+periodic zeroth jump moment A0=0: PASS
+first guaranteed positive sideband bound=L-1 (SHARP)
+two-jump no-amplitude denominators=2,3,10,100,1000
+last strict ratio upper bound=1/999
+Boolean product jump pairs checked=16384
+cyclic composition checks=640
+J(fg)<=J(f)+J(g), J(f(R.))<=R J(f): PASS
+THM-2410 crude invoice=R*J(Q)+26*(sum(w_i)+c)
+sample crude invoice=5564
+rational exponent-20 floor=1048576/361188648084531445929920877641340156544317601
+sideband is physical total frequency, not relation current
+THM-2416 exact companion PASS
