@@ -6,6 +6,7 @@ eligible endpoint/deep pairs: 4365985536
 full states / quotient states: 137858491849 / 10604499373
 normalization identity: 13/13^10 = 1/13^9
 hostile unit incidence / trajectory phase: 14 / 6
+hostile physical masks: cyclic-consecutive / unique double root 3
 hostile local factors: all nonzero
 hostile anchored slices: 13 / 13
 hostile integrated coefficient: 0 in Q(zeta_13)

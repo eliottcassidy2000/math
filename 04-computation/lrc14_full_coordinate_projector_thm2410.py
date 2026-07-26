@@ -45,6 +45,15 @@ def fourier_nonzero(mask, character, safe=False):
     return any(cyclotomic_reduce(fourier_vector(mask, character, safe), P))
 
 
+def cyclic_consecutive(mask):
+    chosen = set(mask)
+    size = len(chosen)
+    return any(
+        chosen == {(start + offset) % P for offset in range(size)}
+        for start in range(P)
+    )
+
+
 def all_masks_prime_cyclotomic_check():
     checked = 0
     residues = tuple(range(P))
@@ -98,7 +107,7 @@ def hostile_check():
         (9, 10, 11, 12),
         (0, 1),
         (2, 3),
-        (2, 4),
+        (3, 4),
         (5, 6),
         (7, 8),
     )
@@ -110,8 +119,23 @@ def hostile_check():
 
     union = set().union(*(set(mask) for mask in unit_masks))
     incidence = sum(len(mask) for mask in unit_masks)
+    require(
+        all(cyclic_consecutive(mask) for mask in masks),
+        "hostile contains a nonconsecutive physical mask",
+    )
     require(union == set(range(P)), "unit danger masks do not cover F_13")
     require(incidence == 14, "unit incidence is not fourteen")
+    multiplicities = {
+        residue: sum(residue in mask for mask in unit_masks) for residue in range(P)
+    }
+    require(
+        [residue for residue, count in multiplicities.items() if count == 2] == [3],
+        "hostile does not have its unique double root at three",
+    )
+    require(
+        all(count in (1, 2) for count in multiplicities.values()),
+        "hostile unit incidence profile is not physical",
+    )
     require(
         sum(a * b for a, b in zip(character, weights)) % P == 0,
         "hostile character is not in the relation annihilator",
@@ -183,6 +207,7 @@ def main():
     print(f"full states / quotient states: {full_states} / {quotient_states}")
     print("normalization identity: 13/13^10 = 1/13^9")
     print(f"hostile unit incidence / trajectory phase: {incidence} / {hostile_phase}")
+    print("hostile physical masks: cyclic-consecutive / unique double root 3")
     print("hostile local factors: all nonzero")
     print("hostile anchored slices: 13 / 13")
     print("hostile integrated coefficient: 0 in Q(zeta_13)")

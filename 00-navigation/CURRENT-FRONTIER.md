@@ -169,10 +169,9 @@ is the open finite-state/Farey program for this obligation.
 is the proved carrier that reduces each fixed bad-denominator/owner fiber to
 labelled primitive packets and one coprime interval. It makes the terminal
 exact and finite; it does not prove that every surviving interval is empty.
-THM-2168--2257 leave `165` rows; THM-2295--2377 supply the relation/edge/bank/toothpick carriers (THM-2356 kernel `28,393`, THM-2363 dominant, THM-2368 root routing), and THM-2378/2381/2382/2385 leave only `k=2,(t,b)=(1,0)`.
-THM-2388--2393 reduce the last lane to a possible `M=1` common-core chain. THM-2396's empty relaxed `Z/49Z` word localizes orbitwise to
-`delta>=66/4459` there and `delta>=1/26754` universally. THM-2397 gives every literal role all twelve target colours, survives large `13^k` clocks, and types literal deletion support.
-THM-2405 eliminates direct-cage `M=2` by a common-band cap `144/4459`; seven `M=1` ratios remain. THM-2400/2403 give unequal slopes and the all-safe current; THM-2407 routes its `12` colours/`91`-unit deep triangles to either the owner or source deletion, whose source harmonic is lost. Open: settle those ratios or repair it and get an all-coordinate address. Ledger: `165`.
+THM-2168--2257 leave `165` rows; THM-2295--2377 supply relation/edge/bank/toothpick carriers (THM-2356 kernel `28,393`; THM-2363/THM-2368), and THM-2378/2381/2382/2385 isolate `k=2,(t,b)=(1,0)`.
+THM-2388--2397 reduce it to an `M=1` common-core chain, with `delta>=66/4459` there and `delta>=1/26754` universally; every literal role has all twelve target colours through large `13^k` clocks and typed deletion support.
+THM-2405 removes direct-cage `M=2` (cap `144/4459`); seven `M=1` ratios remain. THM-2400/2403 give unequal slopes/all-safe current; THM-2407 routes `12` colours and `91`-unit deep triangles to owner or source deletion but loses its source harmonic. Open: settle the ratios or recover that harmonic and an all-coordinate address. Ledger: `165`.
 
 ### Independent routes that remain live
 

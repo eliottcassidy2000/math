@@ -30,8 +30,8 @@ related:
   - THM-2409-unfiltered-septimal-source-completion-and-word-phase-boundary
 script: 04-computation/lrc14_full_coordinate_projector_thm2410.py
 output: 05-knowledge/results/lrc14_full_coordinate_projector_thm2410.out
-script_sha256: ddf4ece85588d3970056640fd83d387289409491aff4b9e2e416f40e1600c95f
-output_sha256: fa9e9802ba97003d2415dae706f1c97b831af9ef7a7c18817896354f063eff7d
+script_sha256: 59b4a3db4f4150e9476152ebdd57cebd023423b4f87b01a51b4b2c2cb662a2f3
+output_sha256: d0869c5461c604f9f47e6db89d5404055607af78c27fa7cabe0766bccbb0e3c4
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -308,11 +308,12 @@ masks
 
 ```text
 {9,10,11,12},
-{0,1}, {2,3}, {2,4}, {5,6}, {7,8}.                             (21)
+{0,1}, {2,3}, {3,4}, {5,6}, {7,8}.                             (21)
 ```
 
-They cover `G` and have total incidence `14`. On the last three
-coordinates choose, for example,
+Every displayed mask is cyclic-consecutive. They cover `G`, have total
+incidence `14`, and have their unique double root at `3`. On the last
+three coordinates choose, for example,
 
 ```text
 {1,2}, {3,4}, {5,6}.                                           (22)
