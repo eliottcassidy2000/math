@@ -2,16 +2,17 @@
 id: THM-2369
 title: "Complete-line target Dirichlet decomposition and balanced-observable no-go"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. Averaging
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. Averaging
   THM-2350's magnetic defects over the two complete coordinate lines
   gives D_1=2(E_10+E_11), D_2=2(E_01+E_11), hence recovers the two pure
   target-axis energies and the fork energy exactly. The all-direction
   Cayley average equals total nonzero-target energy. The same formulas
   are physical finite-difference observables on THM-2365's lawful
   tensor, and line circulation transfers at least 1/13 of every positive
-  weighted energy to nonzero deep colours. Conversely every balanced
-  target-family monomial, including all intensities, autocorrelations,
-  and ordinary bispectra, is blind to character slope: constant and
+  target-only weighted colour-resolved energy to nonzero deep colours.
+  Conversely every balanced target-family monomial, including all twist
+  intensities and ordinary bispectra (hence the target-array
+  autocorrelation bank), is blind to character slope: constant and
   inverse-character currents have identical balanced data but land at a
   successful target and zero respectively. A charged edge defect is
   sufficient; two independent charged directions fix the modulation
@@ -37,7 +38,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2369 -- complete target lines separate pure and fork energy
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2350 turns target landing into magnetic Dirichlet energy on the
 owner-pivot twist torus. Nearest-neighbour edges decide whether that
@@ -197,19 +198,30 @@ with normalized squared norm on `F_13^3`. Its target action is
 Define
 
 ```text
+E^H_10=sum_(b!=0,a+h=0)|B(a,b,h)|^2,
+
+E^H_01=sum_(b=0,a+h!=0)|B(a,b,h)|^2,
+
+E^H_11=sum_(b!=0,a+h!=0)|B(a,b,h)|^2,
+
+D_H=E^H_10+E^H_01+E^H_11,                         (12a)
+
 L_1=1/13 sum_u
     ||mathcal H-T_(u,0)mathcal H||_2^2,
 
 L_2=1/13 sum_v
-    ||mathcal H-T_(0,v)mathcal H||_2^2.            (12)
+    ||mathcal H-T_(0,v)mathcal H||_2^2.            (12b)
 ```
 
-THM-2365's actual target is `q=(b,a+h)`. Therefore
+Here `B(a,b,h)` is THM-2365's normalized colour transform, whose actual
+target is `q=(b,a+h)`. These colour-resolved energies are distinct from
+the scalar `E_10,E_01,E_11` of Section 2: no collapse from `B` to the
+earlier scalar target array is being asserted. Therefore
 
 ```text
-L_1=2(E_10+E_11),
+L_1=2(E^H_10+E^H_11),
 
-L_2=2(E_01+E_11),                                  (13)
+L_2=2(E^H_01+E^H_11),                              (13)
 
 2D_H<=L_1+L_2<=4D_H.
 ```
@@ -226,8 +238,10 @@ energy at a=0
 ```
 
 Since every weight in (5) depends only on `q`, at least `1/13` of any
-positive `D_1`, `D_2`, or `D_line` energy is carried by deep colours
-`a!=0`. THM-2365 then extracts a `91`-unit deep multiplier.
+positive `L_1`, `L_2`, or `L_1+L_2` energy is carried by deep colours
+`a!=0`. The same conclusion holds for any nonnegative weight depending
+only on the target `q` and supported on `q!=0`. THM-2365 then extracts
+a `91`-unit deep multiplier.
 
 The identities remain true after retaining target-neutral THM-2364
 probe colours: apply them at each fixed probe colour and sum. This does
@@ -256,8 +270,9 @@ chi_(sum_i ell_i-sum_j m_j)(t).                    (15)
 ```
 
 It is invariant whenever the index charge in (15) is zero. Thus all
-intensities, autocorrelations, closed-index moments, and ordinary
-bispectra are blind to character slope.
+twist intensities, closed-index moments, and ordinary bispectra are
+blind to character slope. Equivalently, the autocorrelation bank of the
+target array, which is dual to the twist intensities, is blind.
 
 The sharp pair is
 
@@ -287,12 +302,23 @@ K(ell)K(m)conjugate(K(ell+m))
 in both cases. Even the complete target-family bispectrum bank cannot
 distinguish success from failure.
 
-This is the same structural lesson as the Gaussian
-moment/nullcone interface: weight-zero invariants classify orbit
-closure but do not choose a nonzero covariant weight. Here target
-landing requires a charged covariant, not another balanced moment.
-This is a mechanism analogy, not an import of a Gaussian theorem into
-LRC.
+Complex `K`-autocorrelations are deliberately absent from that list.
+Indeed
+
+```text
+C_K(d)=1/169 sum_ell K(ell+d)conjugate(K(ell))
+```
+
+equals `|c|^2` for `K_good` and
+`|c|^2 chi_d(-p_0)` for `K_bad`. Thus `C_K(d)` is a charged observable;
+its magnitude is slope-blind, but its phase can distinguish (16).
+
+This is the same structural lesson as the Gaussian moment/nullcone
+interface: weight-zero invariants live on the categorical quotient but
+do not choose a nonzero covariant weight. Here target landing requires a
+charged covariant, not another balanced moment. This is only a mechanism
+analogy, not an LRC--GMC reduction or an import of a Gaussian theorem;
+MISTAKE-235 remains in force.
 
 ## 6. The minimal charged repair
 
@@ -347,11 +373,15 @@ Qhat_ell(1)=conjugate(R)K(ell),                    (21)
 
 so two such values manufacture (19), up to the known factor `|R|^2`.
 
-THM-2361 proves nonvanishing for a diagonal fixed-colour reference, but
-does not supply the same-word, same-target pair-twist energies in (21).
-Its exact `N=169` hostile has diagonal current `1/2` and raw
-off-diagonal current zero. Therefore reference nonvanishing alone is
-not a charged-edge service.
+THM-2361 proves nonvanishing for a target-dependent diagonal
+fixed-colour family `R_ell`, not for one global fixed `R`. Even after
+pair twists were supplied, recovering (19) from that family would
+require the adjacent reference phase ratios
+`R_(ell+epsilon_j)conjugate(R_ell)`. The theorem supplies neither those
+ratios nor the same-word, same-target pair-twist energies in (21). Its
+exact `N=169` hostile has diagonal current `1/2` and raw off-diagonal
+current zero. Therefore reference nonvanishing alone is not a
+charged-edge service.
 
 ## 8. Scope and next test
 
@@ -389,8 +419,8 @@ The dependency-free companion uses `Fraction` arithmetic and an exact
 - verify all `169` full-Cayley multipliers and the factor `338`;
 - check the sharp `1/13` deep-colour transfer and equality profile;
 - exhaust the constant/inverse-character balanced-bispectrum hostile;
-- verify the rank-two charged-edge modulation map and spanning-tree
-  boundary; and
+- verify the rank-two charged-slope label map and the inverse-character
+  flat-edge profile; and
 - check the cyclic reference polarization (21).
 
 Run
@@ -409,4 +439,7 @@ Both transcripts must match
 byte-for-byte after LF normalization. Every executable check raises
 explicitly under optimized Python.
 
-Independent audit is pending. QED.
+Independent hostile audit rederived the line and Cayley normalizations,
+the colour-resolved masks, the sharp deep-colour transfer, the
+balanced/charged boundary, and the polarization identity; it also
+replayed both executable modes against the stored transcript. QED.
