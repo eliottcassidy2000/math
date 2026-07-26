@@ -9,10 +9,12 @@ status: >
   w=A cross B one has the exact identity
   [w_x,w_y,w]=[a,b,n]^2. Thus whenever a,b,n are independent the
   plane map w is dominant, refuting THM-2446's open prediction (P2)
-  even under the stronger hypothesis D_5=D_4=D_3=0. The hostile lies
-  in the line-direction stratum of A; a repaired prediction restricted
-  to a nondegenerate conic direction map remains open. This gives no
-  Keller map, wildness certificate, or planar Jacobian consequence.
+  even under the stronger hypothesis D_5=D_4=D_3=0. Subsequent
+  independent companions recorded in THM-2446 refute the same
+  prediction on the nondegenerate-conic stratum and exhibit a tame
+  Keller extension with dominant w. The surviving automatic-zero
+  strata are point-cap A and common-plane A,B. This gives no wildness
+  certificate or planar Jacobian consequence.
 source: codex-2026-07-26-twojet-plane-map-cone-hostile
 depends_on:
   - THM-2446-twojet-zgraded-jacobian-decomposition-and-cone-system
@@ -141,24 +143,53 @@ two individually rank-one motions into the independent tangent vectors
 nonzero volume `[a,b,n]`.
 
 This hostile belongs to THM-2446's line-direction stratum:
-`[A(x,y)]` traces a projective line and is independent of `y`.  Hence
-the strongest immediate repair is:
+`[A(x,y)]` traces a projective line and is independent of `y`.  At the
+time of its construction, the strongest immediate repair was:
 
 ```text
 Does a nondegenerate conic direction map [A],
 plus the appropriate D_3 slice, force [w_x,w_y,w]=0?             (10)
 ```
 
-Equation (10) remains **OPEN**.  Any replacement must explicitly exclude
-the separated-ruling kernel (1), rather than merely add more copies of
-the already vanishing brackets.
+Equation (10) is now **REFUTED** by the independent exact conic companion
+recorded in THM-2446 Section 5.  It gives
+
+```text
+A=(x^2,xy,y^2),
+
+B=(-2x^3,x^2-2x^2y,x+2xy-2xy^2),
+
+D_5=D_4=S_3=0,                 [w_x,w_y,w]=-x^8.
+```
+
+A separate exact companion extends a line-cap witness to the tame Keller
+automorphism
+
+```text
+F=(xz^2+yz+xy-x^3+x, z^2+3x^2-2y, x+z),
+
+det J(F)=-2,                   [w_x,w_y,w]=1.
+```
+
+Thus neither nondegenerate conic direction nor the full Keller system
+rescues P2.  The exact universal replacement is the identity
+
+```text
+[w_x,w_y,w]
+ =[A,B,A_x][A,B,B_y]-[A,B,A_y][A,B,B_x],           (11)
+```
+
+which exposes the missing transverse pairing rather than forcing it to
+zero.  Automatic vanishing survives for point-cap `A=fv` and when `A,B`
+take values in one common plane.
 
 ## 4. Scope
 
-The counterfamily has `det J(F)=0`; it is not a Keller map.  It refutes
-only the proposed intermediate cone implication.  It neither constructs
-nor excludes a wild `z`-quadratic Keller map, and it has no consequence
-for planar `JC(2)` or `DC(2)`.
+The counterfamily proved here has `det J(F)=0`; it is not itself a Keller
+map.  The subsequent Keller extension is tame and therefore also gives
+no wild map.  These results refute the proposed intermediate cone
+implication but neither construct nor exclude a wild `z`-quadratic
+Keller map, and they have no consequence for planar `JC(2)` or `DC(2)`.
 
 ## 5. Exact companion
 
