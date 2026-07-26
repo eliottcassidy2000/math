@@ -4,6 +4,11 @@ endpoint_configurations=13728 gated_cases=1084512 unique_mass_vectors=73220
 type_counts=1:3:858,2:3:8580,2:4:4290
 sharp_gap_table=1:3:z0:20,1:3:z1:17,1:3:z2:14,2:3:z0:7,2:3:z1:4,2:3:z2:1,2:4:z0:18,2:4:z1:14,2:4:z2:10
 gap_one_masses=2,2,0,0,3,3,3,3,3,3,2,1,2 danger_shifts=2,3
+full_configurations=23166 full_gated_cases=1830114 full_unique_mass_vectors=772
+full_size_counts=1:10296,2:12870
+full_gap_table=c1:z0:11,c1:z1:10,c1:z2:9,c2:z0:22,c2:z1:20,c2:z2:18
+full_gap_nine_masses=0,0,0,0,1,1,1,1,1,1,1,1,1
 target_phase_checks=2197 selected=169
-floors=universal_fibre_energy:1/1451594774448,universal_fibre_max:1/4173624,universal_physical_energy:1/245319516881712,universal_physical_max:1/54257112,common_core_fibre_energy:363/3360173089,common_core_fibre_max:11/115934,common_core_physical_energy:363/567869252041,common_core_physical_max:11/1507142
+deep_target_transform_checks=39 target_typing_cases=2197
+floors=universal_endpoint_energy:3/9085908032656,universal_endpoint_max:1/6028568,universal_deep_energy:3/2271477008164,universal_deep_max:1/3014284,common_core_endpoint_energy:29403/567869252041,common_core_endpoint_max:99/1507142,common_core_deep_energy:117612/567869252041,common_core_deep_max:99/753571
 ALL CHECKS PASS

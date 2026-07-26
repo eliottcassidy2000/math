@@ -1,565 +1,623 @@
 ---
 id: THM-2403
-title: "Clean-toothpick unequal-slope target-axis imbalance"
+title: "Clean toothpicks force a global fully-all-safe unequal-slope target current"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. On a
-  complete clean thirteen-root toothpick, delete q_* and lawfully move
-  any retained ordinary q_i along one owner-pivot target generator.
-  The paired ordinary target-blocker factor is root-constant and can
-  suppress at most two of the thirteen shifts. The resulting endpoint
-  mass vector has total minus thirteen times its base mass at least the
-  retained parent weight; the sharp abstract gap is one. Rational
-  cyclotomic rigidity makes all twelve nonzero target-axis characters
-  survive, with exact variance and maximum-mode floors. A common
-  Poisson--Abel expansion types these as nonzero bare-deletion target
-  marginals. This realizes a lawful unequal-slope deformation of the
-  literal deletion support, but it does not restore the deleted factor,
-  produce an all-91-unit atom, replace the bare endpoint by the
-  canonical fully masked endpoint, exclude a row, or prove LRC(14).
+  REPAIRED PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT REAUDIT
+  PENDING. In the standard owner-pivot packet, omit q_* from the pivot
+  and choose two distinct ordinary helpers. The resulting lawful target
+  dipoles move one ordinary unit factor with each target blocker. The
+  global packet retaining all six unit-safe and all three blocker-safe
+  present factors is zero at the untwisted slice by the scalar cover.
+  On the positive clean-toothpick set, one unequal-slope orbit has
+  shifted mass at least nine per parent sheet; the deep successor probe
+  doubles this before the 1/13 root Jacobian. Consequently every one of
+  the twelve nonzero first-target colours survives, and for each colour
+  some exact fixed triangle has nonzero target, a nonzero deep colour,
+  and gcd(m,91)=1. This is a lawful fully-all-safe present packet, not
+  the preselected positive shallow-owner current. It does not give an
+  all-coordinate 91-unit address, preserve a previously marked triangle
+  or owner phase, exclude a row, or prove LRC(14).
 source: codex-2026-07-26-clean-target-axis-imbalance
 depends_on:
   - THM-2309-owner-aligned-pivot-packets-and-visible-height-separation
+  - THM-2305-canonical-blocker-word-handoff-hypergraph
+  - THM-2334-relation-residue-current-and-character-twist-pushforward
+  - THM-2349-first-depth-one-delayed-shallow-restart
+  - THM-2365-lawful-target-coshift-and-h-drift-dichotomy
   - THM-2384-owner-pivot-primal-dual-obstruction-and-two-probe-repair-corner
   - THM-2392-clean-toothpick-or-bounded-cross-ancestor-cage
   - THM-2396-common-core-forty-nine-orbit-word-incompatibility
   - THM-2397-clean-root-same-parent-charged-role-partition
-  - THM-2398-prime-cyclic-rational-restoration-dichotomy
 related:
-  - THM-2334-relation-residue-current-and-character-twist-pushforward
-  - THM-2365-lawful-target-coshift-and-h-drift-dichotomy
-  - THM-2366-retained-probe-target-covariance-and-subthirteen-budget-bridge
+  - THM-2398-prime-cyclic-rational-restoration-dichotomy
   - THM-2400-clean-parent-root-gauge-quotient-and-target-slope-boundary
   - THM-2401-common-filter-endpoint-or-first-death-certificate
 script: 04-computation/lrc14_clean_target_axis_imbalance_thm2403.py
 output: 05-knowledge/results/lrc14_clean_target_axis_imbalance_thm2403.out
-script_sha256: 9c26e6372d2468c26b65daf9b898a93480b0ebb694ae8d45e7787d67a033d91f
-output_sha256: e64d9ad3ec7eb72ba0c943cbcbe4231d7485ae7fb939bdc50708aaef0ea74c17
+script_sha256: 083b51185d5b04c9c5561b37158248c1efe575c2d96045e47402842da407d376
+output_sha256: 39970491339e89ac95f931e14ab8e05d6c5ba6b16e842d2b9ffd102872cfb150
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2403 -- unequal slopes force target imbalance on a clean toothpick
+# THM-2403 -- a clean toothpick fires a global fully-all-safe target current
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**REPAIRED PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT REAUDIT
+PENDING.**
 
-THM-2397 identifies the exclusive `q_*` word with literal
+THM-2397 identifies the exclusive `q_*` root word as literal
 single-factor deletion support at one common bare endpoint. THM-2400
-records the remaining difficulty: a true target covector does not
-translate all six unit factors with one common slope.
+then isolates the lawful obstruction: a true owner-pivot target
+covector moves different factors with unequal slopes.
 
-For the standard owner-pivot target this unequal-slope branch is not a
-hostile. Only one retained unit factor moves. Its paired target blocker
-is constant across the inverse-root fibre and can erase at most two
-shift values. The exact clean-toothpick incidence then forces a strict
-mass imbalance:
-
-```text
-clean one-double root cover
-  + one retained ordinary-role translation
-  + one ordinary target-blocker safe gate
-  -> a nonconstant rational C_13 target-twist bank
-  -> all twelve nonzero target-axis characters.                 (1)
-```
-
-This is a lawful bare-deletion target marginal. The theorem deliberately
-stops before canonical fully masked endpoint restoration.
-
-## 1. The abstract clean-cover lemma
-
-Put
+That unequal-slope branch is positive. Restore the `q_*`-safe factor,
+move one other ordinary unit-safe factor together with its target
+blocker, and retain every other present safe factor. The scalar cover
+makes the untwisted packet identically zero, while a clean toothpick
+forces positive shifted mass:
 
 ```text
-G=F_13.
+global fully-all-safe present packet
+  + one lawful owner-pivot target dipole
+  + positive clean-toothpick mass
+  -> anchored nonflat rational C_13 mass bank
+  -> all twelve nonzero first-target colours
+  -> for each colour, some exact nonzero-target fixed triangle
+     with a 91-unit deep multiplier.                           (1)
 ```
 
-Let
+The clean set is used only as a positive lower-bound region inside the
+global packet. It is never inserted as a frozen projector.
+
+## 1. Two exact banks on one clean toothpick
+
+Put `G=F_13`. Let
 
 ```text
-Q_*,Q_i,Q_2,Q_3,Q_4 subset G,       |Q_j|=2,
+Q_*,Q_i,Q_2,Q_3,Q_4 subset G,          |Q_j|=2,
 
-H subset G,                          |H|=4,          (2)
+H subset G,                             |H|=4,       (2)
 ```
 
-and suppose these six labelled masks cover `G`. Their total incidence is
+be the five ordinary and one guard danger masks on a clean inverse-root
+fibre. They cover all thirteen roots. Their total incidence is
 
 ```text
-4+5*2=14.                                             (3)
+4+5*2=14,                                             (3)
 ```
 
-Hence exactly one root has multiplicity two and the other twelve have
-multiplicity one. There are no uncovered roots and no triple root.
+so exactly one root is double-covered and the other twelve are
+single-covered.
 
-Delete the two ordinary labels `Q_*` and `Q_i` and retain the root core
+Choose `Q_i` distinct from the distinguished ordinary label `Q_*`.
+Remove these two labels temporarily and put
 
 ```text
 B=G minus (H union Q_2 union Q_3 union Q_4).          (4)
 ```
 
-The roots in `B` are precisely those whose remaining incidence lies in
-`Q_* union Q_i`. Put
+Thus `B` is the set missed by the other four masks, and
 
 ```text
-b=|B|,
-
-A_0=B minus Q_i,
-
-a=|A_0|.                                             (5)
+B subset Q_* union Q_i.
 ```
 
-The set `A_0` is the exclusive `Q_*` support after its safe factor has
-been deleted. The unique double root gives exactly three possibilities:
+The literal `q_*`-deletion support at the base shift is
 
 ```text
-(a,b) in {(1,3),(2,3),(2,4)}.                        (6)
+A_0=B minus Q_i.
 ```
 
-Indeed:
-
-- if the double uses `Q_*`, then one `Q_*` root is not exclusive and
-  `(a,b)=(1,3)`;
-- if the double uses `Q_i` but not `Q_*`, then `(a,b)=(2,3)`; and
-- if the double uses neither deleted label, then `(a,b)=(2,4)`.
-
-Let `alpha in F_13^*` and translate only the retained ordinary word:
+The unique double root gives
 
 ```text
-A_s=B minus (Q_i+alpha s),             s in F_13.    (7)
+(|A_0|,|B|) in {(1,3),(2,3),(2,4)}.                  (5)
 ```
 
-For each fixed `r in B`, exactly two values of `s` put `r` in
-`Q_i+alpha s`. Therefore
+This is the three-type deletion lemma used in the first candidate
+version of this theorem.
+
+Now restore the `q_*`-safe factor and put
 
 ```text
-sum_s |A_s|=11b.                                    (8)
-```
-
-This is a complete finite incidence identity, not an averaged
-equidistribution assertion.
-
-## 2. An ordinary target-blocker gate cannot flatten the bank
-
-Let
-
-```text
-g_s in {0,1},
-
-g_0=1,
-
-#{s:g_s=0}<=2.                                      (9)
-```
-
-Since `|A_s|<=b`, equations (8)--(9) give
-
-```text
-sum_s g_s|A_s|
- >=11b-2b
- =9b.                                               (10)
-```
-
-At the base shift,
-
-```text
-g_0|A_0|=a.
-```
-
-Thus
-
-```text
-sum_s g_s|A_s|-13g_0|A_0|
- >=9b-13a
- >=1.                                               (11)
-```
-
-The three typewise floors are
-
-```text
-(a,b)=(1,3):       14,
-
-(a,b)=(2,3):        1,
-
-(a,b)=(2,4):       10.                              (12)
-```
-
-Equation (11) is sharp. Take
-
-```text
-B={0,1,3},             Q_i={2,3},
-
-g_2=g_3=0,             g_s=1 otherwise.
+C=B minus Q_*.
 ```
 
 Then
 
 ```text
-(g_s|A_s|)_(s=0)^12
- =(2,2,0,0,3,3,3,3,3,3,2,1,2),                    (13)
-
-sum_s g_s|A_s|-13g_0|A_0|=27-26=1.
+empty != C subset Q_i,             |C| in {1,2}.    (6)
 ```
 
-The two killed shifts are realized by one strict ordinary danger comb:
-at phase `z=5/26`,
+Indeed, at most one `Q_i` root can meet one of the other four masks. If
+the second met `Q_*`, that would create a second double root. If neither
+meets the other four, at most one can meet `Q_*`, again because the
+double root is unique. Hence at least one `Q_i` root lies in `C`.
+
+Let `alpha in F_13^*` and translate the retained ordinary factor:
+
+```text
+F_s=C minus (Q_i+alpha s),             s in F_13.    (7)
+```
+
+Because `C subset Q_i`,
+
+```text
+F_0=empty.                                            (8)
+```
+
+For each fixed root in `C`, exactly two shifts put it in
+`Q_i+alpha s`. Therefore
+
+```text
+sum_s |F_s|=11|C|.                                   (9)
+```
+
+## 2. One ordinary blocker gate leaves a sharp gap nine
+
+Let
+
+```text
+g_s in {0,1},       g_0=1,       #{s:g_s=0}<=2.     (10)
+```
+
+Since `|F_s|<=|C|`, equation (9) gives
+
+```text
+sum_s g_s|F_s|
+ >=11|C|-2|C|
+ =9|C|
+ >=9.                                               (11)
+```
+
+The universal constant nine is sharp in the labelled physical
+root/gate universe. Take `alpha=1` and the clean cover
+
+```text
+Q_*={0,1},             Q_i={2,3},
+
+Q_2={2,4},             Q_3={5,6},       Q_4={7,8},
+
+H={9,10,11,12}.                                      (12)
+```
+
+Then `B={0,1,3}` and `C={3}`. If `g_2=g_3=0` and all
+other `g_s=1`, the fully masked mass vector is
+
+```text
+(g_s|F_s|)_(s=0)^12
+ =(0,0,0,0,1,1,1,1,1,1,1,1,1),                    (13)
+```
+
+whose total is nine. The two killed shifts are supplied by one strict
+ordinary danger comb: at phase `z=5/26`,
 
 ```text
 ||z-s/13||<1/14
 
-iff s in {2,3}.                                     (14)
+iff s in {2,3}.                                      (14)
 ```
 
-The sharpness claim is for the labelled root/gate universe. It does not
-assert that the complete word (13) occurs on a canonical scalar row.
-
-## 3. Weighted parent sets and all twelve target characters
-
-Let `Y` be a finite rational interval set. Permit the clean masks in
-Section 1 and their common root origin to vary measurably with `y in Y`,
-while retaining the same labelled incidence hypotheses. Let
+For comparison, before restoring `Q_*`, the bank
 
 ```text
-f:Y->[0,infinity)
+A_s=B minus (Q_i+alpha s)
 ```
 
-be a nonzero rational step weight independent of the root `r`, and put
+satisfies
 
 ```text
-rho_f=integral_Y f(y)dy>0.                           (15)
+sum_s g_s|A_s|-13|A_0|>=1,                          (15)
 ```
 
-For every `y`, let `g_s(y)` satisfy (9), and define the unnormalized
-fibre-sum masses
+with sharp typewise floors `14,1,10`. Equation (15) remains a valid
+finite lemma, but it is not used to localize the analytic packet:
+freezing the clean cell would also freeze a moving blocker gate.
+
+## 3. The global lawful owner-pivot packet
+
+Return to one of the `165` scalar rows. Choose the positive shallow
+source label `j` from THM-2349, let `a` be the other low blocker, and
+put
 
 ```text
-N_s=integral_Y f(y)g_s(y)|A_s(y)|dy.                (16)
+c=c_3.
 ```
 
-Integrating (11) gives the strict anchored imbalance
+In the THM-2309 owner pivot choose
 
 ```text
-Delta_N:=sum_s N_s-13N_0>=rho_f.                    (17)
+u_0=q_*,
 ```
 
-In particular `N=(N_s)` is not constant. Every `N_s` is rational. With
-`zeta=exp(2*pi*i/13)`, put
+and choose distinct ordinary graft helpers
 
 ```text
-Ntilde(k)=(1/13)sum_s N_s zeta^(k s).               (18)
+k_a=q_i,                 k_c!=q_i,q_*.
 ```
 
-If one `Ntilde(k)` vanished for `k!=0`, the rational polynomial
+The true target covectors are the THM-2384 dipoles
 
 ```text
-P(X)=sum_s N_s X^s
+eta=e_a-e_(q_i),          ell=e_c-e_(k_c)            (16)
 ```
 
-would be divisible by `Phi_13(X)=1+X+...+X^12`.
-Since `deg P<=12`, all thirteen coefficients would be equal, contrary
-to (17). Therefore
+modulo thirteen. This is a dual statement. THM-2309's displayed primal
+quotient alone would not justify (16).
+
+Let `E_(s,t)` be the actual present packet which retains
 
 ```text
-Ntilde(k)!=0                 for every k!=0.         (19)
+all six unit/guard safe factors
+and all three blocker safe factors,                  (17)
 ```
 
-The finite variance identity and Cauchy--Schwarz give
+with every factor shifted according to the lawful target action
+`s eta+t ell`. Let `Q(Rx)` be any fixed nonnegative rational transported
+terminal word, written in its nine-factor THM-2334 form, with
 
 ```text
-sum_(k!=0)|Ntilde(k)|^2
- >=Delta_N^2/2028
- >=rho_f^2/2028,                                    (20)
-
-max_(k!=0)|Ntilde(k)|
- >=Delta_N/156
- >=rho_f/156.                                       (21)
+R=13^k,                 k>=1.
 ```
 
-Equality in the first inequality of (20), for fixed `N_0` and total
-mass, occurs when the other twelve entries are equal. Rationality is
-needed for the every-colour conclusion (19), but not for the energy
-floor (20).
-
-Under physical circle normalization,
+Because `13|R`, the word is target-neutral. At the untwisted slice the
+scalar cover gives the global pointwise identity
 
 ```text
-M_s=N_s/13,                     Mtilde=Ntilde/13.    (22)
+E_(0,0)(x)=0                    almost everywhere.  (18)
 ```
 
-Hence the corresponding floors are
+Put
 
 ```text
-sum_(k!=0)|Mtilde(k)|^2>=rho_f^2/(169*2028),
+Delta_r(x)=d(c x-r/13),
 
-max_(k!=0)|Mtilde(k)|>=rho_f/2028.                  (23)
+H_+(r,s,t)
+ =integral_T E_(s,t)(x)Q(Rx)Delta_r(x) dx.          (19)
 ```
 
-The factor thirteen in (22) is the Jacobian/discrete-root normalization;
-it must not be silently dropped.
+This is exactly the THM-2365 lawful table, with a fully-all-safe
+present packet rather than the positive shallow-owner rectangle. It is
+nonnegative. Since the `c`-safe factor moves with `t`,
 
-## 4. The ordinary blocker gate is exactly the LRC target gate
+```text
+H_+(t,s,t)=0                         for all s,t     (20)
+```
 
-Retain THM-2392/2397's complete clean-parent set `S`. For `y in S`, use
-the inverse roots
+away from the null strict endpoints.
+
+Define
+
+```text
+M_s=sum_r H_+(r,s,0).                               (21)
+```
+
+Equation (18) gives the anchored zero
+
+```text
+M_0=0.                                              (22)
+```
+
+## 4. Clean mass forces the shifted global packet to fire
+
+Let `S` be THM-2392's clean set and
+
+```text
+delta=mu(S)>0.
+```
+
+For `y in S`, write
 
 ```text
 x_r=(y+r)/13.
 ```
 
-The guard and five ordinary unit dangers give exactly the six masks in
-(2)--(3). Choose the graft helper for target `a` to be any lower
-ordinary label `q_i!=q_*`.
+At `t=0`, the dipole `eta` moves only `q_i` and blocker `a`.
+All other present factors are unchanged. The unit-root support after
+restoring `q_*` is precisely the set `F_s` from (7).
 
-Let `c_a=13C_a` be any ordinary target blocker. Since `S` lies outside
-the quotient-blocker cage,
-
-```text
-1_(D_(C_a)^c)(y)=1.                                 (24)
-```
-
-The THM-2384 owner-pivot dipole, built on THM-2309's exact pivot, is
-
-```text
-eta_a=e_a-e_(q_i).                                  (25)
-```
-
-At target shift `s`, its two moving safe factors are
-
-```text
-1-d(q_i x+s/13),
-
-1-d(c_a x-s/13),                                    (26)
-```
-
-where `d(t)=1_(||t||<1/14)`. On the inverse roots,
-
-```text
-d(q_i x_r+s/13)
- =d((q_i y+q_i r+s)/13),                            (27)
-```
-
-so the `q_i` mask is translated through every root shift because
-`q_i mod 13` is a unit. Meanwhile
+The moving blocker-safe factor is independent of the root:
 
 ```text
 g_s(y)
- :=1-d(c_a x_r-s/13)
- =1-d(C_a y-s/13)                                   (28)
+ =1-d(c_a x_r-s/13)
+ =1-d(C_a y-s/13).                                  (23)
 ```
 
-is independent of `r`. Equation (24) gives `g_0(y)=1`. The exact
-thirteen-root count, almost everywhere away from strict endpoints, is
+Since `y` lies outside all three quotient blockers,
 
 ```text
-sum_s d(C_a y-s/13)
- =2-d(c_a y)
- <=2.                                               (29)
+g_0(y)=1.
 ```
 
-Thus (28) satisfies precisely the gate hypotheses (9). Equations
-(17)--(23) apply pointwise to the lawful target action (25), not to an
-auxiliary duplicate probe.
-
-The other two blocker-safe factors are also root-constant at the base
-clean parent. They may be retained in `f`; the moving target blocker is
-kept separately as `g_s`.
-
-## 5. Target-neutral delayed words preserve the imbalance
-
-Let `Q` be any nonnegative rational circle word and let `R=13^m`,
-`m>=1`. On the inverse-root fibre,
+The exact root count, almost everywhere away from strict endpoints, is
 
 ```text
-Q(Rx_r)=Q(13^(m-1)y),                               (30)
+sum_s d(C_a y-s/13)=2-d(c_a y)<=2.                  (24)
 ```
 
-so the delayed word is root-constant and target-neutral modulo
-thirteen. Put
+Thus (10)--(11) apply pointwise on `S`.
+
+The delayed word is root-constant:
 
 ```text
-f_R(y)=1_S(y)Q(13^(m-1)y).
+Q(Rx_r)=Q(13^(k-1)y).                               (25)
 ```
 
-Whenever
+The deep successor count is also exact on `S`:
 
 ```text
-rho_R=integral_S f_R(y)dy>0,                        (31)
+sum_r Delta_r(x)=2-d(13c x),
+
+d(13c x_r)=d(cy)=0.                                 (26)
 ```
 
-Sections 3--4 give all twelve target-axis characters with `rho_f=rho_R`.
-THM-2397 proves (31) for every sufficiently large clock when `Q` has
-positive mass, via its two-BV mixing estimate. Thus a fixed positive
-delayed terminal word cannot flatten the unequal-slope target bank.
-
-For the unfiltered choice `f=1_S`, THM-2396 gives
+Put
 
 ```text
-rho_f=delta>=1/26754                                (32)
+rho_R
+ =integral_S Q(13^(k-1)y)dy.                        (27)
 ```
 
-uniformly, and `delta>=66/4459` on the common-core chain. The
-fibre-sum floors (20)--(21) become
+Disintegrating `dx` over the thirteen inverse sheets and using
+(11), (25), and (26) gives
+
+```text
+sum_s M_s
+ >=(1/13) integral_S
+      2 Q(13^(k-1)y) sum_s g_s(y)|F_s(y)| dy
+
+ >=18 rho_R/13.                                     (28)
+```
+
+Every contribution from outside `S` is nonnegative, so it can only
+strengthen (28). No indicator of `S` occurs in (19).
+
+For the unfiltered word `Q=1`,
+
+```text
+rho_R=delta.
+```
+
+For any fixed positive rational THM-2305 terminal word, THM-2397's
+two-BV estimate gives
+
+```text
+rho_R>0
+```
+
+at every sufficiently large clock. Thus (28) applies to an actual
+fixed delayed terminal word, not only to the unfiltered control.
+
+The corresponding endpoint packet without the deep successor probe
+already obeys
+
+```text
+sum_s mu(E_(s,0)Q(Rx))>=9rho_R/13.                  (29)
+```
+
+## 5. All twelve first-target colours and exact floors
+
+Every `M_s` is rational. With `zeta=exp(2*pi*i/13)`, put
+
+```text
+Mhat(b)=(1/13)sum_s M_s zeta^(b s).                 (30)
+```
+
+If `Mhat(b)=0` for some `b!=0`, the rational polynomial
+
+```text
+P(X)=sum_s M_s X^s
+```
+
+is divisible by `Phi_13(X)=1+X+...+X^12`. Since
+`deg P<=12`, every `M_s` would be equal. Equations (22) and (28)
+exclude this whenever `rho_R>0`. Hence
+
+```text
+Mhat(b)!=0                 for every b!=0.          (31)
+```
+
+Let
+
+```text
+Gamma=sum_s M_s-13M_0=sum_s M_s.
+```
+
+The sharp anchored variance and maximum-mode estimates are
+
+```text
+sum_(b!=0)|Mhat(b)|^2
+ >=Gamma^2/2028
+ >=27rho_R^2/28561,
+
+max_(b!=0)|Mhat(b)|
+ >=Gamma/156
+ >=3rho_R/338.                                      (32)
+```
+
+For the endpoint bank in (29), the corresponding floors are
+
+```text
+energy>=27rho_R^2/114244,
+
+max mode>=3rho_R/676.                               (33)
+```
+
+THM-2396 gives
+
+```text
+delta>=1/26754
+```
+
+uniformly and `delta>=66/4459` in the common-core chain. For `Q=1`,
+the deep-probe floors in (32) become
 
 ```text
 universal:
-  energy>=1/1451594774448,
-  max mode>=1/4173624;
+  energy>=3/2271477008164,
+  max mode>=1/3014284;
 
 common core:
-  energy>=363/3360173089,
-  max mode>=11/115934.                              (33)
+  energy>=117612/567869252041,
+  max mode>=99/753571.                              (34)
 ```
 
-The physical endpoint-normalized floors from (23) are
+The endpoint floors in (33) become
 
 ```text
 universal:
-  energy>=1/245319516881712,
-  max mode>=1/54257112;
+  energy>=3/9085908032656,
+  max mode>=1/6028568;
 
 common core:
-  energy>=363/567869252041,
-  max mode>=11/1507142.                             (34)
+  energy>=29403/567869252041,
+  max mode>=99/1507142.                             (35)
 ```
 
-No denominator-free positive floor is claimed for each individual one
-of the twelve nonzero modes.
+No positive lower bound is claimed for each individual exact triangle.
 
-## 6. Poisson--Abel target-current typing
+## 6. Every first-target colour yields a 91-unit deep triangle
 
-Let `E_s` be the actual bare-deletion endpoint packet: retain the guard
-and the four ordinary safe factors other than `q_*`, move `q_i` and
-`c_a` as in (26), retain the other root-constant blocker factors, and
-multiply by the delayed word in Section 5. Then
+Use the normalized full transform
 
 ```text
-mu(E_s)=M_s.                                        (35)
+B_+(a,b,h)
+ =1/13^3 sum_(r,s,t)
+    H_+(r,s,t)zeta^(a r+b s+h t).                  (36)
 ```
 
-Poisson-smooth all displayed interval factors at one common radius
-`0<rho<1`. At finite `rho` their Fourier series are absolutely
-convergent, so the product may be expanded and the finite `s`-sum may
-be taken termwise. If `n_a,n_i` are the harmonics of the two moving
-factors, the target phase is
+At the slice `t=0`, put
 
 ```text
-zeta^(s(n_i-n_a)).
+J(a,b)
+ =1/13^2 sum_(r,s)
+    H_+(r,s,0)zeta^(a r+b s)
+ =sum_h B_+(a,b,h).                                 (37)
 ```
 
-Consequently
+Equations (21) and (30) give
 
 ```text
-(1/13)sum_s mu(E_s)zeta^(k s)                       (36)
+J(0,b)=Mhat(b)/13.                                  (38)
 ```
 
-selects exactly the relation terms satisfying
+Meanwhile the diagonal zero (20) at `r=t=0` gives
 
 ```text
-n_a-n_i=k mod 13,
-
-eta_a.r=k mod 13.                                  (37)
+sum_a J(a,b)
+ =1/13 sum_s H_+(0,s,0)zeta^(b s)
+ =0.                                                (39)
 ```
 
-The remaining target coordinate is not projected in (36). Thus a
-nonzero coefficient in (36) is a nonzero target **marginal**:
+Fix `b!=0`. By (31) and (38), `J(0,b)!=0`; by (39), some
+`a!=0` has
 
 ```text
-sum_(q_b in F_13) A(k,q_b)!=0,
+J(a,b)!=0.
 ```
 
-and therefore some full target vector with first coordinate `k` has a
-nonzero coefficient. It is not a claim that the pure-axis fibre
-`(k,0)` survives.
-
-Bounded-product `L^1` convergence identifies the `rho->1-` boundary
-with (35)--(36). Internal infinite series are never reordered after
-the Abel limit. Equations (19) and (36)--(37) therefore give:
-
-> **Lawful bare-deletion target conclusion.** For every
-> `k in F_13^*`, the owner-pivot target-axis marginal of the
-> `q_*`-deletion packet is nonzero. Hence at least one full nonzero
-> target fibre with first coordinate `k` survives.
-
-This is a genuine target-shift-covariant realization of the literal
-bare-endpoint deletion support. It is not merely a root-gauge
-relabeling: the unequal slopes change `|A_s|`, and that change is the
-source of (17).
-
-## 7. Sharp boundaries and hostiles
-
-Four boundaries remain load-bearing.
-
-1. **The fully masked endpoint is zero on the clean cover.** Restoring
-   the deleted `q_*`-safe factor annihilates `A_0`. The theorem does not
-   identify the bare deletion current with the canonical fully masked
-   owner endpoint.
-2. **The all-`91`-unit mask is not retained.** Equation (37) fixes one
-   mod-thirteen target coordinate but does not control every atomic
-   relation coordinate modulo seven or thirteen. THM-2334's
-   unrestricted target aggregate and its all-unit aggregate remain
-   distinct.
-3. **A guard target gate would not satisfy (9).** A width-two guard
-   danger can occupy four root shifts. The uniform estimate would then
-   be `7b-13a`, which is negative for `(a,b)=(2,3)`. The actual three
-   target blockers are ordinary, so this hostile does not occur in
-   (25)--(29).
-4. **Arbitrary signed or root-dependent filtering can cancel.** The
-   proof uses one nonnegative root-constant weight `f` and the exact
-   ordinary blocker gate. It does not cover a change of endpoint
-   section, signed mixing, or an extra root-sheet-dependent terminal
-   filter.
-
-The gap-one example (13)--(14) shows that no stronger universal integer
-imbalance follows from the clean incidence and two-shift gate alone.
-The prime-rational all-colour step is also sharp in type: over composite
-cyclic groups, nonconstant rational mass vectors can have vanishing
-nontrivial characters.
-
-## 8. LRC interface
-
-The new proof-graph edge is
+Equation (37) then gives some `h` with
 
 ```text
-uniform clean q_* deletion support
-  + one standard owner-pivot target generator
-  + any positive root-constant delayed word
-  -> all twelve nonzero target-axis marginals
-     at the lawful common bare endpoint.                         (38)
+B_+(a,b,h)!=0.                                      (40)
 ```
 
-This removes two former debts:
-
-- unequal factor slopes are no longer merely a deformation hostile on a
-  clean toothpick; and
-- the literal deletion support now has a lawful target-shift-covariant
-  Poisson--Abel realization.
-
-It does **not** remove the final endpoint/owner debt:
+THM-2365's exact target typing is
 
 ```text
-bare deletion target marginal
-  -> canonical fully masked owner endpoint
-     with the required all-91-unit/current-phase typing.         (39)
+q=(b,a+h).                                          (41)
 ```
 
-THM-2401 remains complementary. If a common Boolean terminal filtration
-of the two charged descendants is constructed, its positive branch
-preserves all colours and its first-death branch identifies the failed
-factor. The present theorem instead supplies an unconditional lawful
-bare-deletion target marginal from the exact clean incidence.
+Thus `q!=0` because its first coordinate is the prescribed
+`b!=0`.
+
+The absolutely convergent `m`-then-`X` expansion from THM-2365 gives
+
+```text
+B_+(a,b,h)
+ =sum_(m=a mod 13) sum_X A_(X,m)(b,a+h).            (42)
+```
+
+Hence (40) supplies some exact `m,X` with
+
+```text
+A_(X,m)(q)!=0,
+
+m=a mod 13.                                         (43)
+```
+
+Since `a!=0`, thirteen does not divide `m`. The centred deep danger
+coefficient vanishes at every nonzero multiple of seven, so every live
+term in (43) also has `7` not dividing `m`. Therefore
+
+```text
+gcd(m,91)=1.                                        (44)
+```
+
+Equations (31), (40), and (43)--(44) hold separately for every
+`b in F_13^*`.
+
+## 7. The repaired localization and exact scope
+
+The first THM-2403 candidate integrated the finite deletion gap over a
+fixed clean set and then called the result a lawfully shifted packet.
+That was not correctly typed: the clean-set indicator already contains
+the unshifted quotient-blocker safe conditions. Multiplying it by the
+shifted blocker gate freezes or duplicates the factor that the target
+action is meant to move.
+
+The repair is structural:
+
+```text
+wrong:
+  insert 1_S as a fixed packet factor, then move c_a;
+
+right:
+  use the global target orbit E_(s,t),
+  use S only to lower-bound its nonnegative shifted mass.        (45)
+```
+
+This repair also reveals the stronger fully-all-safe bank (7)--(11).
+There is no owner/status/root-translate partition cost.
+
+The conclusion has exact scope:
+
+- `E_(s,t)` is a lawful physical present-factor packet retaining all
+  six unit/guard safes and all three blocker safes;
+- `Q(Rx)` is a target-neutral fixed transported terminal word;
+- `H_+` supplies a genuine THM-2334 fixed triangle with nonzero target
+  and its own `91`-unit deep multiplier;
+- the untwisted all-safe packet is identically zero, so this is not the
+  preselected positive shallow-owner rectangle;
+- the nonzero target residues may cancel after the target address is
+  forgotten, exactly as THM-2365's target-line identity requires;
+- no all-coordinate `91`-unit relation address, preselected marked
+  triangle, owner phase, or canonical positive-owner endpoint is
+  identified.
+
+Thus the unequal-slope branch is no longer an analytic hostile, and the
+fully-all-safe present packet has an exact target-current realization.
+The remaining bridge is alignment with the positive owner/terminal
+marked current and its all-coordinate address mask.
 
 No scalar row is excluded. The ledger remains `165`, and LRC(14)
 remains open.
 
-## 9. Exact companion
+## 8. Exact companion
 
 The dependency-free exact companion:
 
-- verifies canonical clean-cover examples for all three types in (6);
-- exhausts all `13,728` residual cores/retained two-root words and all
-  `1,084,512` gates with at most two killed nonzero shifts;
-- obtains the exact nine-entry sharp gap table and `73,220` distinct
-  nonconstant mass vectors;
-- checks the gap-one word and exact strict circle gate (13)--(14);
-- checks the cyclotomic reduction and variance bound on every distinct
-  mass vector;
-- verifies all `2,197` target-phase projector cases; and
-- checks every fraction in (33)--(34).
+- verifies clean-cover examples for all three deletion types;
+- exhausts `13,728` reduced deletion configurations and `1,084,512`
+  ordinary gates;
+- exhausts `23,166` restored fully-masked configurations and
+  `1,830,114` gates;
+- obtains the sharp full-mask table `11,10,9` and `22,20,18`;
+- verifies the physical gap-nine control (12)--(14);
+- checks the prime-cyclotomic reduction, anchored variance arithmetic,
+  and all fractions in (34)--(35);
+- verifies all `2,197` first-target phase-projector cases; and
+- checks the finite transform normalizations in (37)--(41).
 
 Run
 

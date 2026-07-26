@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """Exact companion for THM-2403.
 
-The script exhausts the finite clean-cover endpoint lemma, including every
-three/four-root residual core, every retained two-root word, and every
-ordinary blocker gate with zero, one, or two failed shifts.  It also checks
-the sharp gap-one word, the exact circle gate which realizes its two killed
-shifts, the prime-cyclotomic reduction, the variance bounds, and the target
-phase projector.
+The script exhausts both clean-cover endpoint lemmas: the literal
+q_*-deletion bank and the restored fully-all-safe present bank.  It includes
+every reduced three/four-root core, every relevant ordinary two-root word,
+and every ordinary blocker gate with zero, one, or two failed shifts.  It
+also checks the sharp physical controls, prime-cyclotomic reduction,
+variance bounds, target-phase projector, and exact LRC floors.
 """
 
 from fractions import Fraction
@@ -161,6 +161,90 @@ def exhaustive_endpoint_lemma():
     )
 
 
+def exhaustive_fully_masked_lemma():
+    minimum: dict[tuple[int, int], int] = {}
+    configurations = 0
+    gated_cases = 0
+    unique_mass_vectors: set[tuple[int, ...]] = set()
+    size_counts: dict[int, int] = {}
+
+    nonzero_shifts = tuple(range(1, P))
+    zero_banks = tuple(
+        frozenset(bank)
+        for size in range(3)
+        for bank in combinations(nonzero_shifts, size)
+    )
+
+    for core_size in (3, 4):
+        for core_tuple in combinations(range(P), core_size):
+            core = frozenset(core_tuple)
+            for word_tuple in combinations(range(P), 2):
+                word = frozenset(word_tuple)
+                deletion_type = (len(core - word), core_size)
+                if deletion_type not in ((1, 3), (2, 3), (2, 4)):
+                    continue
+                for q_star_tuple in combinations(range(P), 2):
+                    q_star = frozenset(q_star_tuple)
+                    if not core <= word | q_star:
+                        continue
+                    charged = core - q_star
+                    if len(charged) not in (1, 2):
+                        continue
+                    require(charged <= word, "restored base is not empty")
+
+                    configurations += 1
+                    charged_size = len(charged)
+                    size_counts[charged_size] = (
+                        size_counts.get(charged_size, 0) + 1
+                    )
+                    ungated = tuple(
+                        len(charged - translated(word, shift))
+                        for shift in range(P)
+                    )
+                    require(ungated[0] == 0, "fully masked base is nonzero")
+                    require(
+                        sum(ungated) == 11 * charged_size,
+                        "fully masked eleven-cover identity",
+                    )
+
+                    for zero_bank in zero_banks:
+                        masses = tuple(
+                            0 if shift in zero_bank else ungated[shift]
+                            for shift in range(P)
+                        )
+                        gap = sum(masses)
+                        lower = 9 * charged_size
+                        require(gap >= lower > 0, "fully masked gap failed")
+                        key = (charged_size, len(zero_bank))
+                        minimum[key] = min(minimum.get(key, gap), gap)
+                        unique_mass_vectors.add(masses)
+                        gated_cases += 1
+
+    expected_minimum = {
+        (1, 0): 11,
+        (1, 1): 10,
+        (1, 2): 9,
+        (2, 0): 22,
+        (2, 1): 20,
+        (2, 2): 18,
+    }
+    require(minimum == expected_minimum, "wrong fully masked gap table")
+
+    for masses in unique_mass_vectors:
+        require(masses[0] == 0, "lost anchored-zero slice")
+        require(sum(masses) > 0, "flat fully masked bank")
+        reduced = tuple(masses[j] - masses[12] for j in range(12))
+        require(any(reduced), "fully masked vector reduced to zero")
+
+    return (
+        configurations,
+        gated_cases,
+        len(unique_mass_vectors),
+        size_counts,
+        minimum,
+    )
+
+
 def sharp_gap_one_control():
     core = frozenset((0, 1, 3))
     word = frozenset((2, 3))
@@ -189,6 +273,29 @@ def sharp_gap_one_control():
     return masses, danger_shifts
 
 
+def sharp_fully_masked_control():
+    # This is the (2,3) physical clean-cover example in
+    # clean_cover_examples: q_*={0,1}, q_i={2,3}, core={0,1,3}.
+    core = frozenset((0, 1, 3))
+    q_star = frozenset((0, 1))
+    word = frozenset((2, 3))
+    charged = core - q_star
+    killed = frozenset((2, 3))
+    masses = tuple(
+        0
+        if shift in killed
+        else len(charged - translated(word, shift))
+        for shift in range(P)
+    )
+    require(charged == frozenset((3,)), "wrong restored charged set")
+    require(
+        masses == (0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+        "wrong sharp fully masked mass vector",
+    )
+    require(sum(masses) == 9, "fully masked gap nine is not sharp")
+    return masses
+
+
 def target_phase_projector():
     # With eta=e_a-e_i, the lawful action shifts the a-factor by -s/13
     # and the i-factor by +s/13.  Multiplying by zeta^(b s) selects
@@ -212,50 +319,132 @@ def target_phase_projector():
     return checks, live
 
 
+def deep_target_transform_control():
+    def reduced(raw: list[Fraction]) -> tuple[Fraction, ...]:
+        return tuple(raw[j] - raw[12] for j in range(12))
+
+    def scaled(
+        value: tuple[Fraction, ...], scalar: Fraction
+    ) -> tuple[Fraction, ...]:
+        return tuple(scalar * entry for entry in value)
+
+    # A deterministic nonnegative diagonal-zero tensor.  Its t=0 slice
+    # is nontrivial, so all normalizations are exercised.
+    def h_value(r: int, s: int, t: int) -> int:
+        if r == t:
+            return 0
+        return 1 + ((3 * r + 5 * s + 7 * t) % 5)
+
+    m = tuple(
+        sum(h_value(r, s, 0) for r in range(P))
+        for s in range(P)
+    )
+    j_bank: dict[tuple[int, int], tuple[Fraction, ...]] = {}
+    checks = 0
+
+    for a in range(P):
+        for b in range(P):
+            raw = [Fraction(0) for _ in range(P)]
+            for r in range(P):
+                for s in range(P):
+                    raw[(a * r + b * s) % P] += Fraction(
+                        h_value(r, s, 0), P**2
+                    )
+            j_bank[a, b] = reduced(raw)
+
+    for b in range(P):
+        raw_m = [Fraction(0) for _ in range(P)]
+        for s in range(P):
+            raw_m[(b * s) % P] += Fraction(m[s], P)
+        m_hat = reduced(raw_m)
+        require(
+            j_bank[0, b] == scaled(m_hat, Fraction(1, P)),
+            "J(0,b)=Mhat(b)/13 failed",
+        )
+        checks += 1
+
+        sum_a = tuple(
+            sum(j_bank[a, b][j] for a in range(P))
+            for j in range(12)
+        )
+        require(
+            all(entry == 0 for entry in sum_a),
+            "diagonal-zero target-line sum failed",
+        )
+        checks += 1
+
+    # Exact h-character orthogonality is the normalization behind
+    # J(a,b)=sum_h B(a,b,h).
+    for t in range(P):
+        raw_h = [Fraction(0) for _ in range(P)]
+        for h in range(P):
+            raw_h[(h * t) % P] += 1
+        expected = (
+            (Fraction(P),) + (Fraction(0),) * 11
+            if t == 0
+            else (Fraction(0),) * 12
+        )
+        require(reduced(raw_h) == expected, "h-slice orthogonality failed")
+        checks += 1
+
+    # THM-2365 selects deep residue a and endpoint residues b,h; the
+    # preserved target is q=(b,a+h).
+    target_cases = 0
+    for a in range(P):
+        for b in range(P):
+            for h in range(P):
+                q = (b, (a + h) % P)
+                require(q[0] == b and q[1] == (a + h) % P, "target typing")
+                target_cases += 1
+    require(target_cases == P**3, "wrong target typing case count")
+    return checks, target_cases
+
+
 def exact_floors():
     universal_mass = Fraction(1, 26754)
     common_core_mass = Fraction(66, 4459)
     floors = {
-        "universal_fibre_energy": universal_mass**2 / 2028,
-        "universal_fibre_max": universal_mass / 156,
-        "universal_physical_energy": universal_mass**2 / (2028 * 13**2),
-        "universal_physical_max": universal_mass / (156 * 13),
-        "common_core_fibre_energy": common_core_mass**2 / 2028,
-        "common_core_fibre_max": common_core_mass / 156,
-        "common_core_physical_energy": common_core_mass**2 / (2028 * 13**2),
-        "common_core_physical_max": common_core_mass / (156 * 13),
+        "universal_endpoint_energy": 27 * universal_mass**2 / 114244,
+        "universal_endpoint_max": 3 * universal_mass / 676,
+        "universal_deep_energy": 27 * universal_mass**2 / 28561,
+        "universal_deep_max": 3 * universal_mass / 338,
+        "common_core_endpoint_energy": 27 * common_core_mass**2 / 114244,
+        "common_core_endpoint_max": 3 * common_core_mass / 676,
+        "common_core_deep_energy": 27 * common_core_mass**2 / 28561,
+        "common_core_deep_max": 3 * common_core_mass / 338,
     }
     require(
-        floors["universal_fibre_energy"] == Fraction(1, 1451594774448),
-        "wrong universal energy floor",
+        floors["universal_endpoint_energy"] == Fraction(3, 9085908032656),
+        "wrong universal endpoint energy floor",
     )
     require(
-        floors["universal_fibre_max"] == Fraction(1, 4173624),
-        "wrong universal max floor",
+        floors["universal_endpoint_max"] == Fraction(1, 6028568),
+        "wrong universal endpoint max floor",
     )
     require(
-        floors["universal_physical_energy"] == Fraction(1, 245319516881712),
-        "wrong physical universal energy floor",
+        floors["universal_deep_energy"] == Fraction(3, 2271477008164),
+        "wrong universal deep energy floor",
     )
     require(
-        floors["universal_physical_max"] == Fraction(1, 54257112),
-        "wrong physical universal max floor",
+        floors["universal_deep_max"] == Fraction(1, 3014284),
+        "wrong universal deep max floor",
     )
     require(
-        floors["common_core_fibre_energy"] == Fraction(363, 3360173089),
-        "wrong common-core energy floor",
+        floors["common_core_endpoint_energy"]
+        == Fraction(29403, 567869252041),
+        "wrong common-core endpoint energy floor",
     )
     require(
-        floors["common_core_fibre_max"] == Fraction(11, 115934),
-        "wrong common-core max floor",
+        floors["common_core_endpoint_max"] == Fraction(99, 1507142),
+        "wrong common-core endpoint max floor",
     )
     require(
-        floors["common_core_physical_energy"] == Fraction(363, 567869252041),
-        "wrong physical common-core energy floor",
+        floors["common_core_deep_energy"] == Fraction(117612, 567869252041),
+        "wrong common-core deep energy floor",
     )
     require(
-        floors["common_core_physical_max"] == Fraction(11, 1507142),
-        "wrong physical common-core max floor",
+        floors["common_core_deep_max"] == Fraction(99, 753571),
+        "wrong common-core deep max floor",
     )
     return floors
 
@@ -269,8 +458,17 @@ def main() -> None:
         type_counts,
         minimum,
     ) = exhaustive_endpoint_lemma()
+    (
+        full_configurations,
+        full_gated_cases,
+        full_unique_vectors,
+        full_size_counts,
+        full_minimum,
+    ) = exhaustive_fully_masked_lemma()
     sharp_masses, danger_shifts = sharp_gap_one_control()
+    sharp_full_masses = sharp_fully_masked_control()
     projector_checks, projector_live = target_phase_projector()
+    transform_checks, transform_targets = deep_target_transform_control()
     floors = exact_floors()
 
     print("THM-2403 clean target-axis imbalance exact companion")
@@ -302,8 +500,34 @@ def main() -> None:
         + ",".join(map(str, danger_shifts))
     )
     print(
+        f"full_configurations={full_configurations} "
+        f"full_gated_cases={full_gated_cases} "
+        f"full_unique_mass_vectors={full_unique_vectors}"
+    )
+    print(
+        "full_size_counts="
+        + ",".join(
+            f"{size}:{full_size_counts[size]}"
+            for size in sorted(full_size_counts)
+        )
+    )
+    print(
+        "full_gap_table="
+        + ",".join(
+            f"c{size}:z{z}:{full_minimum[size,z]}"
+            for size, z in sorted(full_minimum)
+        )
+    )
+    print(
+        "full_gap_nine_masses=" + ",".join(map(str, sharp_full_masses))
+    )
+    print(
         f"target_phase_checks={projector_checks} "
         f"selected={projector_live}"
+    )
+    print(
+        f"deep_target_transform_checks={transform_checks} "
+        f"target_typing_cases={transform_targets}"
     )
     print(
         "floors="
