@@ -1,0 +1,10 @@
+THM-2441 exact ancestry event-period companion
+deterministic_grid_core: sources=510 congruent_pairs=4080
+deterministic_13_grid_core: single_intervals=1222 congruent_pairs=2444
+deterministic_power_core: sources=24 residue_classes=104 maximum_period=14
+secondary_random_fixtures: 96
+identity_checks: pairs=6724 chambers=92306 brute_profiles=177552 endpoint_words=6724 gamma=6724
+raw_hostile_profiles: (2, 2, 2, 2, 2, 2, 1) (314, 314, 314, 314, 314, 314, 313)
+raw_hostile_gamma: 2/3
+period_two_positive_gamma: (Fraction(12, 5), Fraction(16, 15), Fraction(12, 5), Fraction(16, 15), Fraction(12, 5), Fraction(16, 15))
+VERIFIED: congruent reduced clocks differ by one exact uniform ancestry vector; centered event words and target Gamma are periodic.
