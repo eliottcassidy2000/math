@@ -211,7 +211,7 @@ require(
 
 
 print("theorem=THM-2400")
-print("status=PROVED-CANDIDATE+VERIFIED-EXACT; INDEPENDENT-AUDIT-PENDING")
+print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED")
 print(
     f"disjoint_mask_pairs={mask_pairs};"
     f" common_root_translate_checks={translated_checks}"
@@ -250,6 +250,6 @@ print(
     f"unequal_slope_hostile_shifts={','.join(map(str, unequal_shifts))};"
     f" sizes={','.join(map(str, unequal_sizes))}"
 )
-print("relative_shift_bank=LIVE; common_coshift_diagonal=IDENTICALLY-ZERO")
+print("relative_shift_bank=LIVE; common_root_diagonal=IDENTICALLY-ZERO")
 print("lawful_target_current=OPEN; row_decrement=0; ledger=165")
 print("all_checks=PASS")

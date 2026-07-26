@@ -1890,7 +1890,7 @@ current realization, canonical right-endpoint transport, and the `165`-row
 ledger remain open.
 
 ### lrc14_clean_parent_root_gauge_thm2400.out
-Exact THM-2400 candidate replay. It exhausts `37,323` disjoint
+Exact THM-2400 proved and independently hostile-audited replay. It exhausts `37,323` disjoint
 exclusive/actual-role mask pairs and `485,199` common-root translates,
 proving that the root phase cancels pointwise in every joint charged
 product. Every actual role therefore survives all twelve nonzero target
@@ -1900,7 +1900,7 @@ owner/digit categories are needed for the joint `F_7 x F_13` packet.
 The replay also checks `24,336` two-factor target actions: descent to a
 common root gauge is exactly the common-slope condition, while a
 two-root unequal-slope hostile changes exclusive-word cardinality. The
-relative translation bank is live but the simultaneous co-shift
-diagonal is identically zero. Normal and optimized transcripts agree
-and end in `PASS`; independent audit and lawful endpoint transport
-remain pending.
+relative translation bank is live but the common-root diagonal is
+identically zero. Normal and optimized transcripts agree and end in
+`PASS`; lawful relative-endpoint and canonical terminal transport
+remain open.

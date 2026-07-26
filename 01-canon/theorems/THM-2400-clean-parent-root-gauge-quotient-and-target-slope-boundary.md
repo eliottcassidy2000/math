@@ -2,7 +2,7 @@
 id: THM-2400
 title: "Clean-parent root-gauge quotient and target-slope boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. On the
   complete THM-2392 clean-parent set, common root relabelling cancels
   pointwise in every literal-role charged product. Thus no
   singleton/adjacent status or root-translate cell is needed: each of
@@ -10,7 +10,7 @@ status: >
   colours and has a signed Hermitian-pair floor delta/1014, while some
   actual role/colour has floor delta/845. Fixing only one of thirteen
   owner/digit categories retains a nonzero F_7 x F_13 coefficient with
-  mass delta/13. A lawful target covector descends to this common-root
+  mass at least delta/13. A lawful target covector descends to this common-root
   gauge at the labelled factor level exactly when all unit-factor
   slopes eta_i/w_i agree; unequal slopes deform collision status and
   admit a sharp two-factor hostile. No lawful target current,
@@ -27,14 +27,14 @@ related:
   - THM-2398-prime-cyclic-rational-restoration-dichotomy
 script: 04-computation/lrc14_clean_parent_root_gauge_thm2400.py
 output: 05-knowledge/results/lrc14_clean_parent_root_gauge_thm2400.out
-script_sha256: 84b65b7cff21e9ab4a60c4b0f1b00183f2207e21211b9817f57250006ce043b5
-output_sha256: c3c57f0653161861a15e546aa19a815e30fdff4761ffb88ac2867a9271467b99
+script_sha256: 62663a4ecb47a4966729c13fabbdcc9298bf016ee69c1a80f196e553e50aa3e1
+output_sha256: 4b9aaa9265764fc0a1e3a52298b44bcd3097f68f2c28ef3089a7037e09161ebe
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2400 -- quotient the harmless root gauge before paying for a cell
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2397 fixed the singleton/adjacent status and root translate of the
 exclusive `q_*` mask. That is necessary for a separately integrated
@@ -195,7 +195,7 @@ G_i(k)!=0
 This is the direct two-sided mechanism of THM-2398, now applied before
 fixing a root gauge.
 
-### 3a. Relative translation, not common co-shift
+### 3a. Relative translation, not the common-root diagonal
 
 The distinction from a common-endpoint current is already exact at this
 level.  Let `f(y)>=0` be any root-constant rational step function and put
@@ -208,7 +208,8 @@ K_i^f(s)
 
 If `f` has positive mass on `S`, the proof of (12)--(15) is unchanged:
 `K_i^f(0)=0`, its total mass is positive, and every nonzero Fourier
-colour survives.  In contrast, the simultaneous co-shift is
+colour survives.  In contrast, simultaneous common-root relabelling
+gives the diagonal
 
 ```text
 J_i^f(s)
@@ -219,7 +220,9 @@ J_i^f(s)
 
 for every `s`, directly from (5).  Thus the complete translate bank in
 (11) is a **relative endpoint cross-correlation**, not a relabelled
-THM-2370 common co-shift current.
+THM-2370 lawful co-shift current. Equation (15b) concerns only the
+equal-slope common-root diagonal; it does not identify every THM-2370
+target action with that diagonal.
 
 The exact sufficient service is equally transparent.  A lawful polarized
 two-endpoint bank
@@ -231,10 +234,10 @@ P_i^f(s,t)
  =K_i^f(s-t)                                       (15c)
 ```
 
-recovers the entire charged spectrum.  Equivalently, the terminal maps
-on the two endpoints must supply either a common rational nonflat
-circulant as in THM-2398 or a lawful relative-shift/polarization bank.
-The diagonal `s=t` alone is the sharp zero hostile (15b).
+recovers the entire charged spectrum. For this route, either a common
+rational nonflat circulant as in THM-2398 or a lawful
+relative-shift/polarization bank would suffice. The diagonal `s=t`
+alone is the sharp zero hostile (15b).
 
 ## 4. Signed floors on the whole parent
 
@@ -525,7 +528,7 @@ The dependency-free exact companion:
 - exhausts every disjoint size-`1/2` exclusive mask and size-`2/4`
   actual-role mask on `F_13`;
 - verifies common-translate invariance of the full correlation bank;
-- checks that the common co-shift is identically zero and the polarized
+- checks that the common-root diagonal is identically zero and the polarized
   two-endpoint bank depends only on the relative shift;
 - checks the zero base shift, positive total, and all signed ledgers;
 - verifies every rational floor in (22)--(27);
@@ -547,3 +550,10 @@ Both transcripts must byte-match, after LF normalization,
 ```
 
 All truth-bearing executable checks remain active under optimized Python.
+
+Two independent hostile audits rederived the root-gauge cancellation,
+the rational cross-correlation argument, all signed floors, the exact
+thirteen-category pigeonhole, the relative/diagonal distinction, the
+factor-slope iff, and the owner-pivot no-common-slope corollary. Both
+audits replayed normal and optimized execution against the stored
+transcript and independently reproduced the recorded LF hashes. QED.

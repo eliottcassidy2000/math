@@ -1,5 +1,5 @@
 theorem=THM-2400
-status=PROVED-CANDIDATE+VERIFIED-EXACT; INDEPENDENT-AUDIT-PENDING
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED
 disjoint_mask_pairs=37323; common_root_translate_checks=485199
 common_root_gauge=POINTWISE-INVARIANT-IN-JOINT-CHARGED-PRODUCT
 every_actual_role_all_12_colours=YES
@@ -10,6 +10,6 @@ universal_owner_each=1/352671228; universal_owner_joint=1/2468698596; universal_
 common_owner_each=11/9796423; common_owner_joint=11/68574961; common_owner_bank_joint=66/342874805
 two_factor_slope_cases=24336; common_slope_cases=1872; labelled_descent=COMMON-SLOPE-IFF
 unequal_slope_hostile_shifts=0,12,1; sizes=1,0,2
-relative_shift_bank=LIVE; common_coshift_diagonal=IDENTICALLY-ZERO
+relative_shift_bank=LIVE; common_root_diagonal=IDENTICALLY-ZERO
 lawful_target_current=OPEN; row_decrement=0; ledger=165
 all_checks=PASS
