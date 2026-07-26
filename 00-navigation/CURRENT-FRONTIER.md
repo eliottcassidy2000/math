@@ -172,9 +172,9 @@ exact and finite; it does not prove that every surviving interval is empty.
 THM-2168--2257 leave `165` rows; THM-2295--2349 supply packets and `91`-unit edges.
 THM-2350--2365 give dipole/colour/drift banks (THM-2356 kernel `28,393` versus `169`; THM-2363 dominates); THM-2366/2367 isolate inverse covariance, sub-`13` budgets, and septimal graft transport.
 THM-2368/2369 expose drift/slope hostiles; THM-2370's clone kills mixed-energy repair. THM-2372/2377 force a `98`-fold toothpick and put the first carrier at a repeated septimal layer with Bockstein carry.
-THM-2378 closes `W=k=1` via `3/4` versus `1/2` and `5/49`. THM-2381 closes `k=2,(t,b)=(1,1)` by a seven-bin partition; its anti-shield mass is `36/343`.
-THM-2382 closes `k=2,(t,b,W)=(5,2,7)` by demand `13` versus capacity `10`. THM-2379's repair colour lacks owner typing; THM-2380's charged gate still needs a physical quadrature.
-THM-2384 separates primal `K/L` from dual `L^perp/<w>`; its positive remnant is only a duplicate probe. Live: rooted phase/event on `(1,0),(2,0)` plus a true dual dipole and endpoint-matched reference. THM-2385 is only RESERVED for `(2,0)`. The ledger remains `165`.
+THM-2378 closes `W=k=1` via `3/4` versus `1/2` and `5/49`; THM-2381 closes `k=2,(t,b)=(1,1)` by a seven-bin partition and exact `36/343` anti-shield.
+THM-2382 closes saturated `k=2,(5,2,7)` by root demand `13` versus capacity `10`. THM-2385 closes `(2,0)`: exactness forces `D_C1 intersect D_C2` under `D_C3`, while unequal-depth fibres and the equal-depth joint-comb lemma both forbid it.
+Thus only `k=2,(t,b)=(1,0)` remains in the septimal atlas. THM-2379/2380/2384 leave a true owner-typed dual dipole, endpoint-matched reference, and the located `36/343` multiplicity-excess word open. No whole thirteen-adic row is removed; the ledger remains `165`.
 
 ### Independent routes that remain live
 
@@ -390,7 +390,7 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-2351 proves the canonical self-target ANOVA is exactly an affine reparameterization of the directional catalysis--bypass ledger; its optimum and skew pair sector add no information. Positive catalysis and the stable diagonal remain open.
 - **Unsplittable cost flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture: a planar acyclic instance has fractional cost `58` but capacity-good integral cost at least `60`. Its carrier is the `K_3` stable-set facet; the planar `2d_max` theorem remains intact.
 - **Jacobian/Dixmier:** THM-1300/1315 verify and analyze the three-dimensional Keller collision, but provenance is unsettled (MISTAKE-205) and it does not decide
-  `DC(2)`; THM-2230 computes the planar response fiber, THM-2240 proves the grade-six Weyl response is not a continuation state, and THM-2241 gives the exact monic test `D_P^(d+1)(x)=0` plus its resultant curve. THM-2262/2297 reduce nonsplit degree eighteen to a four-invariant singular trigonal cone; THM-2314/2316 close both two-sparse banks, while THM-2345/2347 close the common-root and double-zero walls.
+  `DC(2)`; THM-2230 computes the planar response fiber, THM-2240 proves the grade-six Weyl response is not a continuation state, and THM-2241 gives the exact monic test `D_P^(d+1)(x)=0` plus its resultant curve. THM-2262/2297 reduce nonsplit degree eighteen to a four-invariant singular trigonal cone; THM-2314/2316 close both two-sparse banks, THM-2371/2376 close `H_2`, and THM-2386 proves every genuine `H_4` survivor has `Res_y(P,Q)!=0`. The coprime `H_4` locus remains open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibers:** THM-2063/2071 close affine/quadratic pencil members;
   THM-2084/2110/2118 close cubics; THM-2102/2113 close power-free top faces;
