@@ -413,7 +413,8 @@ Classify profiles under support operations; study analytic continuation and auto
   `504D=115B^2`. THM-2357 gives `R_10=H_2S_4^2` and its exact pivot;
   audited THM-2371 eliminates every common-root and singular-order
   component, making THM-2360's linear-times-cube descent unconditional
-  on `H_2`. The coprime cube locus and `H_4` remain. Split/even descent
+  on `H_2`; hostile-audited THM-2376 eliminates that coprime cube locus
+  and closes the full degree-eighteen `H_2S_5^2` stratum. `H_4` remains. Split/even descent
   and other short edges remain; THM-2206
   blocks field-valued `C_2` Hasse repair. Integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer

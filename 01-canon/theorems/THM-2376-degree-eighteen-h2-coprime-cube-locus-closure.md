@@ -2,7 +2,7 @@
 id: THM-2376
 title: "Degree-eighteen H2 coprime cube-locus closure"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. On the
   degree-ten H_2 S_4^2 locus of THM-2357, THM-2371 makes THM-2360's
   coprime Laurent factorization unconditional. Returning that
   factorization to the moving-root coordinate gives a complete
@@ -32,7 +32,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2376 -- close the coprime H2 cube locus
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2357 reduces the mixed degree-eighteen branch to
 
@@ -196,7 +196,7 @@ k=m+w.                                             (15)
 ```
 
 The norm of `u` has exact degree three and leading coefficient `2k`.
-comparison of `y^3` gives
+Thus comparison of `y^3` gives
 
 ```text
 lambda=2k/245,                         k!=0.       (16)
@@ -539,4 +539,17 @@ and factor orders, audits the pivot hostile and bad-prime control, and
 compares custom and library modular resultants. No executable check uses
 Python `assert`.
 
-Independent audit is pending. QED.
+## 7. Independent hostile audit
+
+Independent hostile audit reconstructed the Laurent-to-quadratic normal
+form from THM-2357 and THM-2360, verified that `U_3(0)!=0` makes the
+normalization lossless, derived `N(u)=lambda p_3` from UFD valuations
+rather than an ansatz, and checked every division and chart:
+`Delta,R,k,k^3-R Delta`, the `n,B,C` pivots, the complete first-factor
+split, `A=0` saturation, and `A!=0` substitution.
+
+The audit also checked that the three reduced linear equations are
+necessary, that the two determinant obstructions suffice for
+contradiction, and that degree preservation makes the nonzero mod-`17`
+resultant a valid characteristic-zero certificate. Normal, optimized,
+and stored transcripts are byte-identical. QED.
