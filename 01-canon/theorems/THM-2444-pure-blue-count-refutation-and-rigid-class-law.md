@@ -140,7 +140,20 @@ finite statement; its extrapolation is dead. kps-S66's PB2 pendant
 law and blue-mass bookkeeping are untouched (they are per-class
 statements). No proved theorem depended on (1) for n >= 9.
 
-## 6. Reproduction
+## 6. n = 10 addendum (same session)
+
+The 2^20-tiling run finished:
+`pure-blue(10) = 4 = (1,1,1) + three (9,9,1)` classes, touched
+classes `8784` (= SC(10), A002785), output
+`05-knowledge/results/metagraph_pureblue_n10_kps_S131.out`
+(sha256 LF `18f98cde5a7bbffffaf11c0a92b8425d67de4d9252d1868297ad0de55bb9c3d6`).
+This point does not discriminate against the dead formula (both give
+4) but confirms the repaired structure (3): all even-n pure-blues are
+rigid; no nonrigid class appears; no `27` class at n = 10. Data now:
+`rigid-SC(n) = 2, 1, 2, 2, 3, 3, 5, 4` and
+`nonrigid(n) = 0, 0, 1, 0, 1, 0, 1, 0` for n = 3..10.
+
+## 7. Reproduction
 
 ```bash
 python 04-computation/metagraph_pureblue_n9_kps_S131.py 5 6 7 8 9

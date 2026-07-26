@@ -1,0 +1,6 @@
+n=10: blue cube 2^20; classes touched=8784; PURE-BLUE=4 predicted=4 match=True
+    pure-blue class: H=1 |Aut|=1 tc=1
+    pure-blue class: H=9 |Aut|=9 tc=1
+    pure-blue class: H=9 |Aut|=9 tc=1
+    pure-blue class: H=9 |Aut|=9 tc=1
+ALL CONTROLS PASSED
