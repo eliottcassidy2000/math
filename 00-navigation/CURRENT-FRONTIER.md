@@ -158,7 +158,7 @@ Discharge each cell by a THM-2057 clock phase, THM-2059/HYP-2108 endpoint packet
 THM-2168--2397 leave `165` rows while supplying relation/edge/toothpick/colour carriers (THM-2356 kernel `28,393`; THM-2363/THM-2368). THM-2405/2415 reduce the final lane to `M<=2`; THM-2417 excludes `M=2`, and THM-2426's transverse root proof empties it.
 Hence `nu_7(c_3)>M => nu_7(H)=M`. THM-2427 leaves three guard-top types at `M=0` and four at `M>0`; the `c_3<=M` side instead has an isolated noncirculant top graft. Full owner-mask cancellation is open, so no scalar row is removed.
 THM-2418--2421 remain reusable carry, affine-shell, reference, and ancestry-event sidecars, not live continuations without a transplant. In particular THM-2420 proves same-shell reference amplitude sufficient and a complete zero-reference bank insufficient.
-Next: owner-conditioned no-cancellation for `c_3<=M`, and the seven THM-2427 shapes. Pure thirteen-root geometry cannot remove the six `t=5` shapes: the exact common-phase partition `H=1`, `q=(2,3,5,11,19)`, `y=1/2` forces retention of the septimal top bin, owner state, and a labelled valuation-zero speed. Ledger: `165`.
+Next: owner-conditioned no-cancellation for `c_3<=M`, and the seven THM-2427 shapes. THM-2427's strict packet `(H;q;c;y)=(1;547,1821,3095,4369,5643;91,1183,15379;11/581)` partitions the blocker-safe `13*7` stalk and lifts self-similarly, so frozen joint-root geometry is insufficient; retain cross-base endpoint evolution, owner state, and the valuation-zero label. Ledger: `165`.
 
 ### Independent routes that remain live
 

@@ -12,10 +12,12 @@ status: >
   at most 4+2t. Hence t=5. Exactly three (k,t,b,W) types remain at M=0
   and, after primitivity, four at M>0. With THM-2426 these seven
   regime-typed shapes are the complete current deep-c_3 valuation
-  residual. A common-phase 91-unit example exactly partitions the
-  thirteen roots with one guard and five ordinary words, so root
-  geometry alone cannot remove the t=5 types. It removes no
-  thirteen-adic row and does not prove LRC(14).
+  residual. A strict primitive 91-unit example with all three blockers
+  absent exactly partitions the full compositional 13-by-7 stalk on a
+  positive base chamber; it lifts self-similarly through every
+  septimal depth. Thus even frozen joint root geometry cannot remove
+  the t=5 types. It removes no thirteen-adic row and does not prove
+  LRC(14).
 source: codex-2026-07-26-guard-top-thirteen-root-capacity
 depends_on:
   - THM-2367-septimal-root-averaging-graft-and-cover-alignment
@@ -25,8 +27,8 @@ related:
   - THM-2391-blocker-caged-septimal-single-layer-address-reduction
 script: 04-computation/lrc14_guard_top_thirteen_root_capacity_thm2427.py
 output: 05-knowledge/results/lrc14_guard_top_thirteen_root_capacity_thm2427.out
-script_sha256: 36b407c2bb9935b141fff89f0e3e869b4b0db51da233912d1e6181bbe0a5e244
-output_sha256: 2aad369e45e2cb84c9722cfed80d7ae7333a9a380d2b9cc4bb0dad740a5614d5
+script_sha256: 19a92396131daa3366debac4bddc43a25858a4c07e0fd0536e433b4a5960b7a6
+output_sha256: efdd5896e0aad3b87c06fd92757bc1bd6ee76b731b2da611e2c392f270715039
 hash_basis: working-tree bytes (LF)
 cite_by_filename: true
 ---
@@ -213,11 +215,102 @@ ordinary:    {6}, {4,8}, {2,10}, {3,9}, {5,7}.                 (11a)
 ```
 
 These six sets partition `F_13`. Thus even common-base physical
-thirteen-root geometry cannot eliminate the `t=5` rows. Any such
-elimination must use information discarded here: the simultaneous
-septimal top-bin word, owner/blocker factors, or the labelled
-valuation-zero sidecar. The example is a root-fibre hostile, not a
-realizable scalar-cover packet.
+thirteen-root geometry cannot eliminate the `t=5` rows.
+
+There is a stronger compositional hostile. Put
+
+```text
+y_0=11/581,
+
+H=1,
+
+(q_1,...,q_5)=(547,1821,3095,4369,5643),
+
+(c_1,c_2,c_3)=(91,1183,15379).                                 (11b)
+```
+
+All six top speeds are units modulo `91`; in fact every `q_i` is
+congruent to `1` modulo `91`. The blockers have strict thirteen-adic
+depths `1,2,3` and septimal depth one. On the product stalk
+
+```text
+x_(h,s)=(y_0+h)/13+s/7,
+
+(h,s) in F_13 x F_7,                                             (11c)
+```
+
+the CRT coordinate
+
+```text
+r=7h+13s mod 91
+```
+
+turns the six top masks into the exact consecutive partition
+
+```text
+guard:       {0,...,12,78,...,90},
+
+ordinary:    {13,...,25}, {26,...,38}, {39,...,51},
+             {52,...,64}, {65,...,77}.                           (11d)
+```
+
+The thirteen-root section `s=0` is already the exact partition
+
+```text
+guard:       {0,1,12},
+
+ordinary:    {2,3}, {4,5}, {6,7}, {8,9}, {10,11}.                 (11e)
+```
+
+Writing `c_j=13C_j`, the three quotient-blocker phases have norms
+
+```text
+||C_1 y_0||=11/83,       ||C_2 y_0||=23/83,
+||C_3 y_0||=33/83.
+```
+
+They are all strictly outside their danger arcs. Since every `C_j` is
+divisible by seven, every physical blocker is therefore absent on the
+whole stalk (11c). The top words alone give exact one-fold coverage.
+Moreover every mask and blocker truth value persists for
+
+```text
+|y-y_0|<1/635614.                                                (11f)
+```
+
+This is a positive base chamber, not an endpoint coincidence.
+
+The same word has a toothpick-like all-depth lift. For `m>=0`, replace
+
+```text
+(H,q_i) by 7^m(H,q_i),
+
+c_j by 13^j 7^(m+1),
+
+y_0 by y_0/7^m,
+
+7 by 7^(m+1) in the second stalk coordinate.
+```
+
+Then
+
+```text
+7^m u ((y_0/7^m+h)/13+s/7^(m+1))
+ =u(y_0+7^m h)/13+us/7.                                        (11g)
+```
+
+Reduction of `h` by multiplication with `7^m` modulo thirteen and of
+`s` modulo seven recovers (11c), repeated `7^m` times. The quotient
+blocker phases remain the same three safe values. For `m>0` the
+displayed row is imprimitive, so this lift is a self-similar hostile
+to a proof mechanism, not an additional primitive residual type.
+
+Consequently even the complete frozen `13 x 7` root/bin stalk, with
+lawful blockers retained, cannot exclude the primitive
+`(k,t,b,W)=(0,5,0,7)` shape. The missing information is cross-base
+phase and endpoint evolution; in the blocker-bearing types one must
+also retain owner/blocker state and the labelled valuation-zero
+sidecar. Neither example is a global scalar-cover packet.
 
 ## 5. Complete residual type list
 

@@ -3,8 +3,9 @@
 
 Checks the finite thirteen-root capacity used to prune the guard-top,
 deep-c3 branch, the complete (k,t,b,W) enumeration, its primitive
-M>0 reduction, and positive abstract and physical common-phase t=5
-root-cover controls.
+M>0 reduction, positive abstract and physical common-phase t=5
+root-cover controls, and a strict physical 13-by-7 stalk partition
+with all three blockers absent.
 
 Only standard-library integer and Fraction arithmetic is used.
 """
@@ -37,13 +38,13 @@ def root_mask(offset, width):
     )
 
 
-def physical_root_mask(speed, width, base):
+def physical_root_mask(modulus, speed, width, base):
     """Danger roots of one actual integer speed at a common base."""
 
     return frozenset(
         root
-        for root in range(P)
-        if circle_norm(Fraction(speed) * (base + root) / P)
+        for root in range(modulus)
+        if circle_norm(Fraction(speed) * (base + root) / modulus)
         < Fraction(width, 14)
     )
 
@@ -141,12 +142,13 @@ def main():
         "physical t=5 control lost a 91-unit speed",
     )
     physical_guard = physical_root_mask(
+        P,
         physical_guard_speed,
         2,
         physical_base,
     )
     physical_ordinary = tuple(
-        physical_root_mask(speed, 1, physical_base)
+        physical_root_mask(P, speed, 1, physical_base)
         for speed in physical_ordinary_speeds
     )
     require(
@@ -176,6 +178,202 @@ def main():
     require(
         set().union(*physical_parts) == set(range(P)),
         "physical t=5 masks stopped covering all roots",
+    )
+
+    # A stronger positive control realizes the whole compositional
+    # thirteen-root by seven-bin stalk, not merely its two marginals.
+    # The quotient blockers have strict thirteen-adic depths 0,1,2
+    # after division by thirteen and are safe everywhere on the stalk.
+    joint_base = Fraction(11, 581)
+    joint_guard_unit = 1
+    joint_ordinary_units = (547, 1821, 3095, 4369, 5643)
+    joint_units = (joint_guard_unit,) + joint_ordinary_units
+    joint_widths = (2, 1, 1, 1, 1, 1)
+    joint_blockers = (13 * 7, 13**2 * 7, 13**3 * 7)
+    require(
+        all(gcd(speed, 91) == 1 for speed in joint_units),
+        "joint stalk lost a 91-unit top speed",
+    )
+
+    def joint_value(unit, depth, root13, root7):
+        """Top phase on the depth-M compositional stalk."""
+
+        top_speed = 7**depth * unit
+        base = joint_base / 7**depth
+        orbit_order = 7 ** (depth + 1)
+        point = (
+            (base + root13) / 13
+            + Fraction(root7, orbit_order)
+        )
+        return Fraction(top_speed) * point
+
+    # At depth zero, CRT identifies the product stalk with Z/91Z.
+    # In that gauge the six masks are six consecutive blocks.
+    joint_masks = []
+    for unit, width in zip(joint_units, joint_widths):
+        mask = frozenset(
+            (7 * root13 + 13 * root7) % 91
+            for root13 in range(13)
+            for root7 in range(7)
+            if circle_norm(joint_value(unit, 0, root13, root7))
+            < Fraction(width, 14)
+        )
+        joint_masks.append(mask)
+    expected_joint_masks = (
+        frozenset((*range(13), *range(78, 91))),
+        frozenset(range(13, 26)),
+        frozenset(range(26, 39)),
+        frozenset(range(39, 52)),
+        frozenset(range(52, 65)),
+        frozenset(range(65, 78)),
+    )
+    require(
+        tuple(joint_masks) == expected_joint_masks,
+        "joint Z/91 stalk masks changed",
+    )
+    require(
+        all(
+            joint_masks[left].isdisjoint(joint_masks[right])
+            for left in range(len(joint_masks))
+            for right in range(left)
+        ),
+        "joint Z/91 masks stopped being disjoint",
+    )
+    require(
+        set().union(*joint_masks) == set(range(91)),
+        "joint Z/91 masks stopped partitioning the stalk",
+    )
+    direct_joint_masks = tuple(
+        physical_root_mask(
+            91,
+            unit,
+            width,
+            7 * joint_base,
+        )
+        for unit, width in zip(joint_units, joint_widths)
+    )
+    require(
+        direct_joint_masks == tuple(joint_masks),
+        "direct Z/91 path disagrees with product-stalk path",
+    )
+
+    # The thirteen-root section is itself an exact partition.
+    joint_root13_masks = tuple(
+        frozenset(
+            root13
+            for root13 in range(13)
+            if circle_norm(joint_value(unit, 0, root13, 0))
+            < Fraction(width, 14)
+        )
+        for unit, width in zip(joint_units, joint_widths)
+    )
+    expected_joint_root13 = (
+        frozenset((0, 1, 12)),
+        frozenset((2, 3)),
+        frozenset((4, 5)),
+        frozenset((6, 7)),
+        frozenset((8, 9)),
+        frozenset((10, 11)),
+    )
+    require(
+        joint_root13_masks == expected_joint_root13,
+        "joint thirteen-root section changed",
+    )
+    require(
+        joint_root13_masks
+        == tuple(
+            physical_root_mask(13, unit, width, joint_base)
+            for unit, width in zip(joint_units, joint_widths)
+        ),
+        "direct thirteen-root path disagrees with product section",
+    )
+    for blocker in joint_blockers:
+        for root13 in range(13):
+            for root7 in range(7):
+                point = (
+                    (joint_base + root13) / 13
+                    + Fraction(root7, 7)
+                )
+                require(
+                    circle_norm(Fraction(blocker) * point)
+                    >= Fraction(1, 14),
+                    "direct product path found a dangerous blocker",
+                )
+
+    # Exact self-similarity: after multiplying all top speeds by 7^M,
+    # dividing the quotient base by 7^M, and enlarging the orbit to
+    # 7^(M+1), the depth-M word is the same 13-by-7 word repeated
+    # 7^M times.  The strict blockers remain safe at every point.
+    for depth in range(9):
+        orbit_order = 7 ** (depth + 1)
+        for root13 in range(13):
+            reduced_root13 = (7**depth * root13) % 13
+            for root7 in range(7):
+                occupancies = [
+                    circle_norm(
+                        joint_value(unit, depth, root13, root7)
+                    )
+                    < Fraction(width, 14)
+                    for unit, width in zip(joint_units, joint_widths)
+                ]
+                expected_occupancies = [
+                    circle_norm(
+                        joint_value(unit, 0, reduced_root13, root7)
+                    )
+                    < Fraction(width, 14)
+                    for unit, width in zip(joint_units, joint_widths)
+                ]
+                require(
+                    occupancies == expected_occupancies,
+                    f"depth-{depth} stalk reduction failed",
+                )
+                require(
+                    sum(occupancies) == 1,
+                    f"depth-{depth} stalk stopped being one-fold",
+                )
+            require(
+                orbit_order // 7 == 7**depth,
+                "septimal repetition count changed",
+            )
+
+        base = joint_base / 7**depth
+        for blocker_index in range(1, 4):
+            blocker = 13**blocker_index * 7 ** (depth + 1)
+            quotient_blocker = blocker // 13
+            blocker_phase = circle_norm(
+                Fraction(quotient_blocker) * base
+            )
+            require(
+                blocker_phase >= Fraction(1, 14),
+                f"depth-{depth} blocker {blocker_index} became dangerous",
+            )
+
+    # The depth-zero packet is a positive chamber, not an endpoint
+    # coincidence.  This is the exact minimum base displacement to a
+    # top-word or blocker boundary.
+    chamber_radii = []
+    for unit, width in zip(joint_units, joint_widths):
+        threshold = Fraction(width, 14)
+        for root13 in range(13):
+            for root7 in range(7):
+                slack = abs(
+                    circle_norm(
+                        joint_value(unit, 0, root13, root7)
+                    )
+                    - threshold
+                )
+                chamber_radii.append(slack * 13 / unit)
+    for blocker in joint_blockers:
+        quotient_blocker = blocker // 13
+        slack = abs(
+            circle_norm(Fraction(quotient_blocker) * joint_base)
+            - Fraction(1, 14)
+        )
+        chamber_radii.append(slack / quotient_blocker)
+    joint_chamber_radius = min(chamber_radii)
+    require(
+        joint_chamber_radius == Fraction(1, 635614),
+        "joint stalk positive-chamber radius changed",
     )
 
     # THM-2367 gives W<=k or W>=7.  The new theorem adds t=5 whenever
@@ -245,7 +443,7 @@ def main():
 
     guard, choices = cover_witness
     print("theorem=THM-2427")
-    print("arithmetic=Fraction-and-finite-Z13")
+    print("arithmetic=Fraction-and-finite-Z7xZ13")
     print(
         "ordinary-root-masks="
         f"{len(ordinary_masks)},sizes={ordinary_sizes},maximum=2"
@@ -267,6 +465,30 @@ def main():
         + ";".join(str(sorted(mask)) for mask in physical_ordinary)
     )
     print("physical-t5-partition=all-13-roots")
+    print("joint-stalk-quotient-base=11/581")
+    print("joint-stalk-top=H:1,q:547,1821,3095,4369,5643")
+    print("joint-stalk-blockers=91,1183,15379")
+    print(
+        "joint-Z91-guard="
+        + ",".join(str(root) for root in sorted(joint_masks[0]))
+    )
+    print(
+        "joint-Z91-ordinary="
+        + ";".join(
+            ",".join(str(root) for root in sorted(mask))
+            for mask in joint_masks[1:]
+        )
+    )
+    print(
+        "joint-Z13-section="
+        + ";".join(
+            ",".join(str(root) for root in sorted(mask))
+            for mask in joint_root13_masks
+        )
+    )
+    print("joint-product-stalk=exact-one-fold-on-13x7")
+    print("joint-depth-lift=verified-M0-through-M8")
+    print(f"joint-positive-chamber-radius={joint_chamber_radius}")
     print(f"raw-THM2367-guard-top-types={len(thm2367_types)}")
     print(f"deep-c3-guard-top-residual-types={len(reduced_types)}")
     print(
