@@ -2,23 +2,459 @@
 id: THM-2370
 title: "Deletion-martingale drift conservation and the sharp clone hostile"
 status: >
-  RESERVED / UNPROVED EMPTY STUB. Intended namespace for the Hilbert-space
-  deletion identity behind THM-2365 target drift, its sharp n^-2
-  single-layer and n^-1 summed-energy bounds, lawful deleted-packet target
-  extraction, and a nested Boolean rational-interval equality construction
-  cloned from THM-2367's exact 90/91 circulant-restoration hostile. No
-  canonical full-owner target, scalar-row exclusion, profile decrement, or
-  LRC(14) consequence is asserted.
+  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. For any
+  nested sequence of nonnegative THM-2365 tables, the noncirculant
+  component lost between the first and last tables is the sum of the
+  projected deletion layers. If delta is the positive difference of
+  their drift norms, one layer has drift energy at least delta^2/n^2
+  and the sum of all layer energies is at least delta^2/n. A lawful
+  physical deletion layer therefore lands its own nonzero target, with
+  a finite-colour amplitude floor delta/(n sqrt(26208)) and an exact
+  91-unit deep multiplier. Both constants are sharp even for commuting
+  nested Boolean rational-interval masks with disjoint physical
+  deletion supports and individual mass 1-1/(91n): cloning the exact
+  90/91 THM-2367 circulant-restoration mask gives equality. The landed
+  target belongs to the deleted packet, not automatically to the
+  canonical full-owner word; target-shift-covariant scalar-cover routing
+  remains open. No scalar-row exclusion, ledger decrement, or LRC(14)
+  consequence follows.
 source: codex-2026-07-25-deletion-martingale-drift
-depends_on: []
-related:
+depends_on:
   - THM-2365-lawful-target-coshift-and-h-drift-dichotomy
+related:
+  - THM-2305-canonical-blocker-word-handoff-hypergraph
   - THM-2367-septimal-root-averaging-graft-and-cover-alignment
+script: 04-computation/lrc14_deletion_martingale_drift_thm2370.py
+output: 05-knowledge/results/lrc14_deletion_martingale_drift_thm2370.out
+script_sha256: 8fcd1c92e904008f7c04f97ae59b52c5c478f8e6e76ad5b699e5d81fb58b200b
+output_sha256: 6a504daf2b2ff2071428cd3eb31cdc049f455d9e4b2f23ae9ef685f00657defc
+hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2370 -- target drift cannot disappear without entering a deletion layer
+# THM-2370 -- drift cannot disappear without entering a deletion layer
 
-**RESERVED / UNPROVED EMPTY STUB.**
+**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
 
-This file reserves only the identifier and filename. It contains no proved
-claim and is not a dependency.
+THM-2367 gives both a locally drifting lawful graft and a large Boolean
+mask which makes the final overlap tensor exactly circulant. The natural
+question is whether the drift can disappear invisibly while owner factors
+are inserted.
+
+It cannot. The missing drift must enter at least one deleted layer:
+
+```text
+initial packet = final packet disjoint-union deletion layers
+
+noncirculant part of initial packet
+  = noncirculant part of final packet
+    + sum of noncirculant deletion parts.                    (1)
+```
+
+The resulting quantitative bound is optimal, including in the positive
+Boolean interval category. Its limitation is equally exact: the surviving
+target is a target of the **deleted packet**, which need not be a canonical
+full-owner word.
+
+## 1. The orthogonal deletion identity
+
+Let
+
+```text
+H_0,H_1,...,H_n : F_13^3 -> R_(>=0)
+```
+
+be tables with
+
+```text
+H_j<=H_(j-1),
+
+L_j=H_(j-1)-H_j>=0,                    j=1,...,n.   (2)
+```
+
+Assume every table has the THM-2365 diagonal zero
+
+```text
+H_j(t,s,t)=0
+```
+
+up to the null strict-open endpoints. The same is then true for every
+`L_j`.
+
+Use normalized counting measure and let `P` be THM-2365's target-action
+projection
+
+```text
+(P H)(r,s,t)
+ =13^(-2)sum_(u,v in F_13)H(r+v,s+u,t+v).          (3)
+```
+
+Put
+
+```text
+Q=I-P,
+
+D(H)=||QH||_2^2
+    =13^(-3)sum_(r,s,t)|H(r,s,t)-(PH)(r,s,t)|^2.   (4)
+```
+
+This is exactly the nonzero-target drift energy of THM-2365. Telescoping
+(2) and applying `Q` gives
+
+```text
+QH_0-QH_n=sum_(j=1)^n QL_j.                        (5)
+```
+
+Define
+
+```text
+delta
+ =(
+    sqrt(D(H_0))-sqrt(D(H_n))
+  )_+.                                              (6)
+```
+
+The reverse triangle inequality, the triangle inequality, and
+Cauchy--Schwarz give
+
+```text
+delta
+ <=||QH_0-QH_n||_2
+ <=sum_j||QL_j||_2,                                (7)
+
+max_j D(L_j)>=delta^2/n^2,                         (8)
+
+sum_j D(L_j)>=delta^2/n.                           (9)
+```
+
+In particular, if `H_n` is circulant and `H_0` is not, then at least one
+deletion layer is noncirculant. No monotonicity of `D(H_j)` is assumed or
+needed.
+
+The constants in (8)--(9) are the Hilbert-space optimum. Simultaneous
+equality is possible when
+
+```text
+QH_n=0,
+
+QL_1=...=QL_n=QH_0/n.                              (10)
+```
+
+Section 4 realizes (10) with nested Boolean interval masks.
+
+## 2. A lawful deletion lands its own target
+
+Suppose now that the tables arise before integration. Let
+`B_(s,t)(x)>=0` be a lawful THM-2365 base packet, and let
+
+```text
+M_1^(s,t),...,M_n^(s,t) in {0,1}
+```
+
+be lawfully co-shifted Boolean factors. Insert them successively:
+
+```text
+H_j(r,s,t)
+ =integral_T
+   B_(s,t)(x) Delta_r(x)
+   product_(i=1)^j M_i^(s,t)(x) dx.                (11)
+```
+
+Then the deleted layer has the positive physical factorization
+
+```text
+L_j(r,s,t)
+ =integral_T
+   B_(s,t)(x) Delta_r(x)
+   product_(i<j)M_i^(s,t)(x)
+   (1-M_j^(s,t)(x)) dx.                            (12)
+```
+
+If (12) retains the same target quotient, diagonal zero, and
+Poisson--Abel typing as THM-2365, that theorem applies to `L_j`
+itself. Write `B_j(a,b,h)` for its normalized finite transform. For the
+layer selected by (8),
+
+```text
+sum_(
+  a!=0,
+  (b,a+h)!=(0,0)
+ ) |B_j(a,b,h)|^2
+ >=D(L_j)/13
+ >=delta^2/(13n^2).                                (13)
+```
+
+There are exactly
+
+```text
+(13-1)(13^2-1)=2016
+```
+
+eligible deep/target colours. Hence some coefficient satisfies
+
+```text
+|B_j(a,b,h)|
+ >=delta/(n sqrt(13*2016))
+ =delta/(n sqrt(26208)).                           (14)
+```
+
+Summing the THM-2365 energy bound over all layers also gives
+
+```text
+sum_j sum_(
+  a!=0,
+  (b,a+h)!=(0,0)
+ ) |B_j(a,b,h)|^2
+ >=delta^2/(13n).                                  (15)
+```
+
+The ordinary absolute `m`-then-`X` collapse of THM-2365 applies to a
+nonzero coefficient in (13). It produces exact integers `m,X` and a
+nonzero fixed-triangle target fibre for the deleted packet, with
+
+```text
+m=a mod 13,
+
+gcd(m,91)=1,
+
+q=(b,a+h)!=0.                                      (16)
+```
+
+Equation (16) does not say that the same triangle survives after the
+deleted factor is restored.
+
+## 3. The exact Boolean cancellation seed
+
+The sharpness construction begins with the exact THM-2367 interval
+hostile, reproduced independently here.
+
+Put
+
+```text
+D=16562=2*7^2*13^2
+```
+
+and let `W` be one on every half-open grid cell
+
+```text
+[j/D,(j+1)/D)
+```
+
+except the ten ranges
+
+```text
+[16555,16562), [0,13),
+[1625,1651),   [2457,2463),
+[3263,3289),   [4907,4927),
+[7449,7455),   [9087,9113),
+[10725,10751), [12363,12389).                     (17)
+```
+
+The first two ranges form one circular interval. Exactly `182` cells are
+removed, so
+
+```text
+mu(W)=90/91.                                       (18)
+```
+
+For `r,t in F_13`, define
+
+```text
+T(r,t)
+ =integral_T
+   d(13x-r/13)g(13x-t/13)g(7x+t/13) dx,           (19)
+
+C(r,t)
+ =integral_T
+   W(x)d(13x-r/13)g(13x-t/13)g(7x+t/13) dx.       (20)
+```
+
+Embed these as three-coordinate tables independent of `s`. Exact cell
+counting gives
+
+```text
+T>=C>=0,
+
+T(t,t)=C(t,t)=0,                                   (21)
+
+C(r,t)=
+  0          if r-t=0,
+  11/169     if r-t=+1 or -1,
+  11/91      otherwise.                            (22)
+```
+
+Thus `C` is circulant. The unmasked table is not, and its entire
+noncirculant part lies in the deleted tensor:
+
+```text
+D(T)=D(T-C)
+    =852/11589168409,
+
+D(C)=0,
+
+Q(T-C)=QT.                                         (23)
+```
+
+The grid in (17) resolves every strict comb boundary, so the midpoint
+count is an exact rational-interval computation, not a sampling
+approximation.
+
+## 4. Clone every physical cell: equality for all n
+
+Fix any positive integer `n`. Subdivide every grid cell in Section 3
+into `n` equal clone subcells. For `j=1,...,n`, let `U_j` be the union
+of the `j`-th clone subcell inside each of the `182` excluded cells, and
+put
+
+```text
+M_j=1_(T circle minus U_j).                         (24)
+```
+
+The masks are Boolean, rational-interval, target-independent, commuting,
+and their deleted physical supports are pairwise disjoint. Each one has
+
+```text
+mu(M_j)=1-1/(91n),                                 (25)
+```
+
+while
+
+```text
+product_(j=1)^n M_j=W,
+
+mu(product_j M_j)=90/91.                           (26)
+```
+
+Let `H_j` be (19) after inserting `M_1...M_j`. Every comb factor is
+constant almost everywhere on an original grid cell, so the clone
+decomposition is exact:
+
+```text
+H_j
+ =C+(n-j)(T-C)/n,                                  (27)
+
+L_j=H_(j-1)-H_j=(T-C)/n.                           (28)
+```
+
+Equations (23), (27), and (28) yield
+
+```text
+D(H_j)=((n-j)/n)^2 D(T),                           (29)
+
+D(L_j)=D(T)/n^2               for every j,         (30)
+
+sum_jD(L_j)=D(T)/n.                                (31)
+```
+
+Thus both (8) and (9) are sharp simultaneously for every `n`. This
+remains true despite:
+
+```text
+nonnegativity,
+Boolean masks,
+nested cumulative packets,
+commuting target-independent factors,
+pairwise-disjoint physical deletion supports,
+individual mask mass tending to one.
+```
+
+The reason disjoint physical supports do not improve `n^-2` is now
+visible: integration sends all `n` clone layers to the **same** projected
+table `QT/n`. Their target-drift vectors are perfectly coherent rather
+than orthogonal.
+
+Unequal clone widths make both inequalities strict. Omitting the last
+clone leaves exactly `D(T)/n^2` terminal drift. These are exact hostile
+controls in the companion.
+
+## 5. What the martingale does and does not decompose
+
+At the overlap-table and finite-transform levels, (5) is an exact linear
+decomposition. There is also a useful fixed-frequency form. Keep the same
+bare right endpoint from the isolated packet `H_0`; the retained left
+packet and all deletion left packets partition the original left packet.
+With that common right endpoint, every fixed `(X,m)` marked current
+decomposes linearly.
+
+This does **not** make a deletion current a subcurrent of the canonical
+full-owner current. The latter uses the fully masked bare endpoint.
+Replacing the common right endpoint by that endpoint changes the
+off-diagonal Fourier products and introduces cross-layer terms.
+
+The Boolean owner typing gives a second obstruction. At the unshifted
+cell, scalar cover may route a blocker deletion into canonical
+THM-2305 owner words. After arbitrary lawful target translations, the
+all-safe blocker cell can reappear: scalar-cover routing is not currently
+known to commute with the target action. Therefore the theorem proves
+
+```text
+full packet drifts
+  or
+some deleted packet drifts,                                (32)
+```
+
+not
+
+```text
+some canonical full-owner word drifts.
+```
+
+For the usual factor order:
+
+- deleting a guard-safe or `q_i`-safe factor lands in a guard/unit danger
+  packet, generally outside the scalar safe core;
+- deleting an owner-danger factor after the safe core is installed gives
+  an owner-complement layer, but its shifted fibres still require a
+  cover-covariant word decomposition;
+- deleting a nonowner-safe blocker produces a simultaneous blocker
+  danger/collision stratum, which can be refined only while the remaining
+  blocker bits are retained.
+
+Ordering therefore changes the physical meaning of the landed layer even
+though (8)--(9) are order-independent.
+
+## 6. The precise next bridge
+
+The exact missing service is one of:
+
+1. a target-shift-covariant deletion/owner-cover identity;
+2. a proof that every guard/unit failure and every shifted all-safe
+   residual is circulant, forcing drift into a blocker word; or
+3. a same-clock phase mechanism transferring the deleted-packet triangle
+   into the canonical full-owner current.
+
+Without such a service, the theorem does not exclude a scalar row. The
+ledger remains `165`, and LRC(14) remains open.
+
+## 7. Exact companion
+
+The dependency-free companion uses only integer bitsets and `Fraction`
+arithmetic to:
+
+- reconstruct all `16,562` rational cells and the exact `182`-cell
+  Boolean deletion;
+- verify `T>=C`, both diagonal zeros, all `169` entries of the circulant
+  profile (22), and the exact segment/matrix hashes;
+- compute the orthogonal projection and the three drift energies in
+  (23);
+- verify (27)--(31) for `n=1,2,3,5,7,13`;
+- check every individual clone-mask mass;
+- verify unequal-clone strictness and the omitted-final-mask hostile; and
+- check the exact `2016` and `26208` coefficient counts in (13)--(14).
+
+Run
+
+```bash
+python3 04-computation/lrc14_deletion_martingale_drift_thm2370.py
+python3 -O 04-computation/lrc14_deletion_martingale_drift_thm2370.py
+```
+
+Both transcripts must match
+
+```text
+05-knowledge/results/lrc14_deletion_martingale_drift_thm2370.out
+```
+
+byte-for-byte after LF normalization. Every executable check raises
+explicitly under optimized Python.
+
+Independent audit is pending. QED.

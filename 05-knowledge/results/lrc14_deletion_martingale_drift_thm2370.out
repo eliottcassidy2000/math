@@ -1,0 +1,15 @@
+THM-2370 deletion-martingale exact referee
+grid/deleted cells: 16562/182
+terminal Boolean mask mass: 90/91
+segment sha256: 4e458401005911de96cd61a26638cee0c2c75b8aa033df0c0298a3438c0514eb
+masked matrix sha256: e79dc643a13e9f4aafecd3f6b007952885902449c7aa8e5825f7f26bae4c7825
+initial/terminal drift: 852/11589168409/0
+deleted tensor drift: 852/11589168409
+n=1: mask_mass=90/91; one_layer=852/11589168409; sum=852/11589168409
+n=2: mask_mass=181/182; one_layer=213/11589168409; sum=426/11589168409
+n=3: mask_mass=272/273; one_layer=284/34767505227; sum=284/11589168409
+n=5: mask_mass=454/455; one_layer=852/289729210225; sum=852/57945842045
+n=7: mask_mass=636/637; one_layer=852/567869252041; sum=852/81124178863
+n=13: mask_mass=1182/1183; one_layer=852/1958569461121; sum=852/150659189317
+eligible deep-target coefficients: 2016
+VERDICT: n^-2 maximum and n^-1 summed deletion floors are sharp
