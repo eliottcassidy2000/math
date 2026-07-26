@@ -1,0 +1,4 @@
+p=5: H=15 |Aut|=5 tc=3  regular blue tilings=3  blue-mult(T_p)=3  PURE
+p=7: H=189 |Aut|=21 tc=9  regular blue tilings=21  blue-mult(T_p)=3  IMPURE
+p=11: H=95095 |Aut|=55 tc=1729  regular blue tilings=41699  blue-mult(T_p)=37  IMPURE
+DONE

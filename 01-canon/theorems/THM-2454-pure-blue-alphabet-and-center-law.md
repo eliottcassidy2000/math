@@ -104,13 +104,26 @@ match. Predictions: `pure-blue(12) = 6`, `13 -> 13`, `14 -> 9`,
   (n = 12, predicted all-rigid count 6, first 81-class) tests the
   even line cheaply.
 - Classification of pure-blue strong tournaments: why exactly the
-  rotational T5 and not T7/T11. Data note (same session):
-  `(H, |Aut|, tc)` for the rotational family is `(3,3,1)`, `(15,5,3)`,
-  `(189,21,9)` at `p = 3,5,7` -- i.e. `tc(T_p) = 3^{(p-3)/2}` on the
-  data so far, the 3-power grammar again. T5 is the unique case
-  where the whole `3^{(p-3)/2}`-tiling fibre stays grid-symmetric;
-  at `p = 7` at most an odd proper subset of the 9 tilings is blue.
-  Suspected mechanism: THM-643 C1's `H_sym` 3-power cap.
+  rotational T5 and not T7/T11. Exact data
+  (metagraph_rotational_bluemult_kps_S133, sha `a269a9ea...`/
+  `bcb27843...`): the rotational family has
+
+  ```text
+  p   H       |Aut|  tc     blue-mult   status
+  3   3       3      1      1           pure
+  5   15      5      3      3           pure (all 3 regular blue
+                                         tilings at n=5 are T5's)
+  7   189     21     9      3           impure
+  11  95095   55     1729   37          impure
+  ```
+
+  Note `tc(T11) = 1729`, the taxicab number. The `tc = 3^{(p-3)/2}`
+  guess dies at `p = 11`, and blue-mult does not stall at 3 either;
+  the honest law is that the purity ratio `bm/tc` collapses
+  (`1, 1, 1/3, 37/1729`), so T5 is pure because `p = 5` is the last
+  point where the regular blue stratum is small enough to coincide
+  with the fibre. A structural proof of `bm(T_p) < tc(T_p)` for all
+  `p >= 7` is the remaining open item.
 - The arc THM-4997 -> 2444 -> 2453 -> 2454 is a candidate
   META-PATTERNS case study: two refutations, each at the first
   untested point, each converting a numerological formula into a
