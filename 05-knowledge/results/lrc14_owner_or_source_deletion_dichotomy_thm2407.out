@@ -1,0 +1,15 @@
+THM-2407 OWNER-OR-SOURCE-DELETION EXACT AUDIT
+prime=13
+Boolean C13 marginals exhausted=8192
+flat Boolean marginals=2
+nonflat Boolean marginals=8190
+all-or-flat equivalence on every nonzero character=PASS
+deletion branch common base u0=o0=1
+deletion branch charged energies O,H+,U=0,12/169,12/169
+owner branch common base u0=o0=2
+owner branch charged energies O,H+,U=12/169,12/169,0
+both sharp branch controls nonnegative=PASS
+sparse 13^3 diagonal-zero tables=PASS
+J(0,b) and some a!=0 survive for all 12 colours in selected bank=PASS
+normalization convention vhat(b)=13^-1 sum_s v_s zeta^(bs)
+THM-2407 exact companion PASS
