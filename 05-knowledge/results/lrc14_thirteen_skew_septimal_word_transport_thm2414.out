@@ -1,4 +1,4 @@
-theorem=THM-2393
+theorem=THM-2414
 status=PROVED+VERIFIED-EXACT-CANDIDATE-UNDER-INDEPENDENT-AUDIT
 word_reflection_cases=207854
 capacity_scales=64

@@ -1,5 +1,5 @@
 ---
-id: THM-2393
+id: THM-2414
 title: "Thirteen-skew septimal word transport and local stopping atlas"
 status: >
   PROVED STRUCTURAL + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.
@@ -31,14 +31,14 @@ depends_on:
 related:
   - THM-2377-septimal-valuation-collision-and-bockstein-carry-gate
   - THM-2385-two-top-septimal-blocker-collision-reduction
-script: 04-computation/lrc14_thirteen_skew_septimal_word_transport_thm2393.py
-output: 05-knowledge/results/lrc14_thirteen_skew_septimal_word_transport_thm2393.out
-script_sha256: 2ee29f92566cc2144e3971a3791bd8c18ab1faf3a10ff4cea55f76d5ead8f3ac
-output_sha256: 3a3e6ee05c6f6090ec12f96d7eddb9f37be9567a64ab396c8ab9007ca2671d1e
+script: 04-computation/lrc14_thirteen_skew_septimal_word_transport_thm2414.py
+output: 05-knowledge/results/lrc14_thirteen_skew_septimal_word_transport_thm2414.out
+script_sha256: eb569fd717fcf7881bf0aacd95ea87bbd22410a9fb2b29e13ef54f894d4d5f6a
+output_sha256: 76aa1bca4892d0a8c8f4ffa61ab7b8a505400aa2da7cbfc1f4f0336ead6278f8
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2393 -- thirteen-skew septimal word transport
+# THM-2414 -- thirteen-skew septimal word transport
 
 **PROVED STRUCTURAL + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT
 AUDIT.**
@@ -705,14 +705,14 @@ The dependency-free exact companion:
 Run
 
 ```bash
-python3 04-computation/lrc14_thirteen_skew_septimal_word_transport_thm2393.py
-python3 -O 04-computation/lrc14_thirteen_skew_septimal_word_transport_thm2393.py
+python3 04-computation/lrc14_thirteen_skew_septimal_word_transport_thm2414.py
+python3 -O 04-computation/lrc14_thirteen_skew_septimal_word_transport_thm2414.py
 ```
 
 Both transcripts must byte-match
 
 ```text
-05-knowledge/results/lrc14_thirteen_skew_septimal_word_transport_thm2393.out
+05-knowledge/results/lrc14_thirteen_skew_septimal_word_transport_thm2414.out
 ```
 
 after LF normalization. Every executable check uses the

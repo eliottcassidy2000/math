@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact companion for THM-2393.
+"""Exact companion for THM-2414.
 
 This dependency-free script audits the thirteen-skew seven-root word
 reflection, the capacity-saturated quotient split, its common-valuation
@@ -487,7 +487,7 @@ require(
 )
 
 
-print("theorem=THM-2393")
+print("theorem=THM-2414")
 print("status=PROVED+VERIFIED-EXACT-CANDIDATE-UNDER-INDEPENDENT-AUDIT")
 print(f"word_reflection_cases={reflection_cases}")
 print(f"capacity_scales={capacity_cases}")
