@@ -1,0 +1,8 @@
+THM-2449 exact owner delta-replica companion
+galois_mixed_orbit_size=72
+anchored_replica_hostiles: profiles=4096 representative_zero_checks=4096 all_mode_checks=1152
+one_rectangle_controls: rectangles=72 mixed_nonzero_checks=5184
+secondary_random_signed_matrices: 256
+exact_scalar_mixing_pairs: 2408
+single_exception_clocks_13_169_2197: (True, False, False)
+VERIFIED: one owner rectangle defect forces all 72 charged source-target colours; persistent failure is delta plus six replicas.
