@@ -2,7 +2,7 @@
 id: THM-2374
 title: "Binary-allocation complete-subcube Dirichlet spectrum"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. For an
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. For an
   exactly two-block prime-token allocation, averaging squared energy
   differences over every complete Boolean coordinate subcube gives an
   exact 0/2 Walsh multiplier. The resulting Dirichlet bank recovers
@@ -30,7 +30,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2374 -- complete Boolean subcubes measure every mixed allocation mode
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2346 gives the unique labelled-token ANOVA expansion, and THM-2348
 characterizes robust factorization by the vanishing of every component
@@ -317,4 +317,6 @@ Both transcripts must match
 byte-for-byte after LF normalization. Every executable check raises
 explicitly under optimized Python.
 
-Independent audit of the theorem text is pending. QED.
+Independent hostile audit rederived (5)--(13), all hostile constants,
+the labelled-measure boundary, and the exact coverage claims; normal,
+optimized, and stored transcripts agree. QED.

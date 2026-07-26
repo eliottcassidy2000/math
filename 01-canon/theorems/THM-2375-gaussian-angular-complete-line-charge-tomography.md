@@ -2,7 +2,7 @@
 id: THM-2375
 title: "Gaussian angular complete-line charge tomography"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. For every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. For every
   finite abelian unitary action, demodulating by one labelled character
   and averaging the squared difference over the complete group orbit
   gives exactly twice the energy outside that isotypic component. The
@@ -30,7 +30,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2375 -- demodulate, then average the complete angular orbit
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2369 uses complete target-character lines to turn a covariant
 difference into an exact support-energy multiplier. The same operation
@@ -325,4 +325,6 @@ Both transcripts must match
 byte-for-byte after LF normalization. Every executable check raises
 explicitly under optimized Python.
 
-Independent audit of the theorem text is pending. QED.
+Independent hostile audit rederived the finite-unitary identity, Gaussian
+recovery formulas, and all three sharp boundaries; normal, optimized, and
+stored transcripts agree. QED.
