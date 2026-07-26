@@ -2,11 +2,13 @@
 id: THM-2371
 title: "Degree-eighteen H2 common-root elimination and unconditional cube descent"
 status: >
-  PROVED + VERIFIED-EXACT. Every point of THM-2357's degree-ten
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. Every point of
+  THM-2357's degree-ten
   H_2 S_4^2 coefficient locus satisfies q_5(1)!=0 and
   Res_y(p_3,q_5)!=0. The singular-order wall and all three exact
-  resultant components are eliminated by forced-root quotients and
-  univariate subresultant certificates. Consequently THM-2360's
+  resultant components are eliminated by square-class wall saturation
+  or by forced-root quotients and univariate subresultant certificates.
+  Consequently THM-2360's
   Laurent-UFD factorization B=c(s-r_0)U_3^3 is unconditional on the
   whole H_2 stratum. This closes the two auxiliary-hypothesis gaps, not
   the H_2 stratum itself: the final coprime linear-times-cube coefficient
@@ -23,14 +25,14 @@ related:
   - THM-2359-degree-eighteen-perfect-quartic-wall-closure
 script: 04-computation/jc2_degree18_h2_common_root_elimination_thm2371.py
 output: 05-knowledge/results/jc2_degree18_h2_common_root_elimination_thm2371.out
-script_sha256: 53e224d562d9ea843ea9f9bae8a8fa95f981c417a3770cef5c9a9dfd656cb6a3
+script_sha256: 480bdc0da7f94010da1dc83b2dba5c962f99f280b9752cc52b4f5c961f72028d
 output_sha256: 51b55ac02ffdb539941c09d296e9500cf8a157015cfd9aa428158094ee3e2863
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2371 -- eliminate the H2 common-root residual
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2357 moves the unique three-cycle value to `y=1` and reduces the
 mixed degree-eighteen branch to
@@ -213,7 +215,8 @@ R_10
 ```
 
 The sextic in (16) is squarefree: its resultant with its derivative is
-`2 mod 7`. Consequently
+`2 mod 7`. It also has value `34500` at `y=1`, so it is coprime to
+`y-1`. Consequently
 
 ```text
 gcd(R_10,R_10')=(y-1)^3,
@@ -393,8 +396,12 @@ a=0       gives 54B+7=0;
 a=-1      would give B=-7/27 but q_5(-1)=3136, so
           it is only a point at infinity of (29), not an affine point;
 
-a=1       gives (B,C)=(-7/27,245/13122), hence K=0. (30)
+a=1       gives (B,C)=(-7/27,245/13122), hence K=0;
+
+38a^2+9a+3=0 also gives K=0.                       (30)
 ```
+
+All three `K=0` parameters in (30) were already excluded by Section 2.
 
 At the common root, (8) makes `y-a` divide `S_4`. Put
 
@@ -582,4 +589,21 @@ both by SymPy and by a separate Gaussian determinant of the Sylvester
 matrix. Positive square-class controls and raw-wall hostile controls
 are included. No executable check uses Python `assert`.
 
-Independent hostile audit is pending. QED.
+## 6. Independent audit
+
+An independent hostile audit reconstructed (3)--(6), checked the
+`lambda^5` evaluation and `lambda^15` resultant scaling, and verified
+every fixed-leading-coefficient specialization. It audited the `K=0`
+generic/exceptional split, including `S_6(1)=34500`; the
+THM-2345--THM-2338 zero-root route; the antipodal `C=0` edge before
+division by `C`; and completeness of the `Psi` parametrization at
+`a=0,-1` and every `K=0` intersection. It independently checked the
+displayed modular reductions, reciprocal quotients, factor orders, and
+nonzero resultants. Normal and optimized transcripts match the stored
+output and the metadata hashes.
+
+The audited conclusion is exactly unconditional applicability of
+THM-2360 on `H_2`; it does not by itself prove the coprime coefficient
+locus empty.
+
+QED.

@@ -65,8 +65,8 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     At degree `18`, THM-2297 closes one-sparse strata plus `B=D=0`;
     THM-2314/2316/2320/2324/2328 close all `31` exactly two-sparse ratios.
     THM-2332 leaves squarefree branch degree `0`, `2`, or `4`; THM-2335 eliminates `0`; THM-2345/2347 close two divisors.
-    THM-2359 is proved, verified-exact, and independently audited; it closes the perfect-quartic divisor.
-    Off-wall `H_2/H_4`, split/even descent, other short edges, integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
+    THM-2359 closes the perfect-quartic divisor. Audited THM-2371 removes every singular/common-root exception and makes THM-2360's linear-times-cube descent unconditional on `H_2`.
+    The final coprime cube locus, off-wall `H_4`, split/even descent, integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed

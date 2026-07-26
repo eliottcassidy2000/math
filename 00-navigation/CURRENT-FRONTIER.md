@@ -411,8 +411,9 @@ Classify profiles under support operations; study analytic continuation and auto
   `0,2,4`, and THM-2335 eliminates degree `0`. THM-2345/2347 close
   `126D=25B^2` and `20BC+21W=0`; audited THM-2359 closes
   `504D=115B^2`. THM-2357 gives `R_10=H_2S_4^2` and its exact pivot;
-  THM-2360 gives conditional Laurent-UFD cube descent off a genuine
-  resultant wall. Main/pivot, `K=0`, `C=0`, and `H_4` remain. Split/even descent
+  audited THM-2371 eliminates every common-root and singular-order
+  component, making THM-2360's linear-times-cube descent unconditional
+  on `H_2`. The coprime cube locus and `H_4` remain. Split/even descent
   and other short edges remain; THM-2206
   blocks field-valued `C_2` Hasse repair. Integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer

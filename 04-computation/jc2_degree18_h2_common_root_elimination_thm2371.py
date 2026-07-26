@@ -413,6 +413,10 @@ def main() -> None:
         == 7**6 * (y - 1) ** 4 * exceptional_sextic,
         "singular-order exceptional factorization changed",
     )
+    require(
+        exceptional_sextic.subs(y, 1) == 34500,
+        "exceptional sextic met the forced root",
+    )
     exceptional_gcd = sp.gcd(
         sp.Poly(exceptional_residual, y),
         sp.Poly(sp.diff(exceptional_residual, y), y),

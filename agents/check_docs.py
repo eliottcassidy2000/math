@@ -134,13 +134,13 @@ require(
     "00-navigation/START-HERE.md",
     "LRC(14)", "OPEN", "q <= 25", "THM-2084", "THM-2081--2087",
     "THM-2088--2093", "GMC2Main.gmc2", "singlePolyCrux_holds",
-    "Anchor / Niche / Wildcard", "MISTAKE-260", "MISTAKE-261", "28,393", "THM-2363", "THM-2368",
+    "Anchor / Niche / Wildcard", "MISTAKE-260", "MISTAKE-261", "28,393", "THM-2363", "THM-2368", "THM-2371",
 )
 require(
     "00-navigation/CURRENT-FRONTIER.md",
     "LRC(14)", "THM-2081", "THM-2082", "THM-2083", "THM-2084",
     "THM-2085", "THM-2086", "THM-2085/2087", "THM-2088", "THM-2089",
-    "THM-2090", "THM-2092", "MISTAKE-240", "DvdK1", "28,393", "THM-2363", "THM-2368",
+    "THM-2090", "THM-2092", "MISTAKE-240", "DvdK1", "28,393", "THM-2363", "THM-2368", "THM-2371",
 )
 require(
     "01-canon/ACTIVE-GUARDRAILS.md",
