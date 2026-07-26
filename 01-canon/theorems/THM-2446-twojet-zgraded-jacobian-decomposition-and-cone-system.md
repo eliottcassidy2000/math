@@ -22,7 +22,7 @@ depends_on:
 related:
   - THM-1335-trisection-modulus-master-identities-trace-polynomiality
   - THM-1340-engine-trichotomy-zaffine-keller
-  - THM-2449-twojet-plane-map-cone-prediction-hostile
+  - THM-2451-twojet-plane-map-cone-prediction-hostile
 script: 04-computation/jacobian_twojet_zgraded_identity_kps_S131.py
 output: 05-knowledge/results/jacobian_twojet_zgraded_identity_kps_S131.out
 script_sha256: 38122318f4086f4c14b570c65189bd1aca0e04179cad7fe6cabb698728cc45ae
@@ -181,7 +181,7 @@ fold-double-cover layers; (P4) a Veronese-projection generative
 ansatz for the staircase.
 
 The former prediction (P2), that `D5=D4=0` plus the alpha-part of
-`D3` forces `[w_x,w_y,w]=0`, is **REFUTED** by THM-2449.  The entire
+`D3` forces `[w_x,w_y,w]=0`, is **REFUTED** by THM-2451.  The entire
 separated-ruling family
 
 ```text

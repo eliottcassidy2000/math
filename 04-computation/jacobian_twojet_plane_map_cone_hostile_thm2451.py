@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact symbolic companion for THM-2449."""
+"""Exact symbolic companion for THM-2451."""
 
 from __future__ import annotations
 
@@ -90,7 +90,7 @@ def main() -> None:
     require(witness_w == (-x, -y, 1), "witness w changed")
     require(witness_volume == 1, "witness volume changed")
 
-    print("THM-2449 exact symbolic companion")
+    print("THM-2451 exact symbolic companion")
     print("graded_brackets_D5_to_D0=0,0,0,0,0,0")
     print("direct_jacobian=0")
     print("plane_map_volume=[a,b,n]^2")

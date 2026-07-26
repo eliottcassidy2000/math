@@ -1,8 +1,9 @@
 ---
-id: THM-2449
+id: THM-2451
 title: "Separated-ruling hostile to the two-jet plane-map cone prediction"
 status: >
-  PROVED + VERIFIED-EXACT. For arbitrary constant vectors a,b,n in
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For
+  arbitrary constant vectors a,b,n in
   C^3, the separated-ruling family A=a+xn, B=b+yn, C=0 makes every
   z-graded Jacobian bracket D_5,...,D_0 vanish. Nevertheless, for
   w=A cross B one has the exact identity
@@ -17,16 +18,16 @@ depends_on:
   - THM-2446-twojet-zgraded-jacobian-decomposition-and-cone-system
 related:
   - THM-1310-conic-pair-fibers-and-design-equations
-script: 04-computation/jacobian_twojet_plane_map_cone_hostile_thm2449.py
-output: 05-knowledge/results/jacobian_twojet_plane_map_cone_hostile_thm2449.out
-script_sha256: 38ac2cc4aa67ac7ef178ec7dc57c29a60c74f1dca9473c2d3ba1ba51c3b52a7f
-output_sha256: eec94750447bd7a9e5a531dff8b9394998a32b2c64cf2b20e1ddaaa548d0f048
+script: 04-computation/jacobian_twojet_plane_map_cone_hostile_thm2451.py
+output: 05-knowledge/results/jacobian_twojet_plane_map_cone_hostile_thm2451.out
+script_sha256: f9a2d9af608887d45d1fb28b86715ed816d8e21a0379d5454884bf3daee88202
+output_sha256: 38a93824fec5b5123bf361ea4a18b28c2374c58035bd3da62c6542df3934072a
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2449 -- the first three two-jet brackets do not cone the plane map
+# THM-2451 -- the first three two-jet brackets do not cone the plane map
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2446 opens the `z`-quadratic architecture
 
@@ -164,8 +165,8 @@ for planar `JC(2)` or `DC(2)`.
 Run
 
 ```text
-python3 04-computation/jacobian_twojet_plane_map_cone_hostile_thm2449.py
-python3 -O 04-computation/jacobian_twojet_plane_map_cone_hostile_thm2449.py
+python3 04-computation/jacobian_twojet_plane_map_cone_hostile_thm2451.py
+python3 -O 04-computation/jacobian_twojet_plane_map_cone_hostile_thm2451.py
 ```
 
 The dependency-free symbolic companion expands all six brackets for
@@ -174,7 +175,15 @@ the full Jacobian determinant is zero.  Normal and optimized transcripts
 must match
 
 ```text
-05-knowledge/results/jacobian_twojet_plane_map_cone_hostile_thm2449.out
+05-knowledge/results/jacobian_twojet_plane_map_cone_hostile_thm2451.out
 ```
 
-byte-for-byte.  QED.
+byte-for-byte.
+
+An independent hostile audit reconstructed every bracket directly from
+THM-2446 and checked that the example refutes all ordinary readings of
+“the `A`-part of `D_3`”: the `C`-free part, the terms containing `A`,
+the third-slot term, the complete `D_3` after `C=0`, and the leading
+`E_3` expression with `gamma=0`.  It also confirmed that THM-2446 states
+no hidden conic-nondegeneracy premise; that condition appears only as a
+later hunt-design suggestion.  QED.
