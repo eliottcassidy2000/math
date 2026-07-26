@@ -451,6 +451,11 @@ R_13(y)
  >=0.                                               (33)
 ```
 
+Set `R_13(y)=0` when `y in D_(C_3)`, where the rooted safe-sheet
+description above is not being used. Thus every integral of `R_13`
+below is over the extended function on the whole circle, equivalently
+over `D_(C_3)^c`.
+
 Its mean is fixed by (31):
 
 ```text

@@ -2,7 +2,7 @@
 id: THM-2390
 title: "Septimal layer Kraft peeling and heavy-word reduction"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. For a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For a
   finite family of centred open danger combs of widths a_i/7,
   1<=a_i<=6, put W_e=sum_(nu_7(v_i)=e)a_i. If every W_e<7, the common
   closed safe set has Haar measure at least
@@ -37,7 +37,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2390 -- septimal layer Kraft peeling
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The closest proved mechanism is THM-2367's single top-layer count.
 THM-2377 supplies the corrected spectral near miss: pairwise-distinct
@@ -418,3 +418,9 @@ Both transcripts must byte-match
 
 after LF normalization.  Every executable check raises explicitly under
 optimized Python.
+
+An independent hostile audit reconstructed the least-valuation peel,
+checked the strict-endpoint direction, independently minimized every
+capped partition of eight, verified the `W=7,8` fibre conclusions, and
+replayed the normal, optimized, and stored transcripts with the declared
+LF-normalized hashes.  It found no proof or scope defect.

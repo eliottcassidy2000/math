@@ -166,6 +166,26 @@ tree-metric, tournament, or pairwise compatibility hypothesis is
 needed; finite intersection of additive upper ideals is the entire
 mechanism.
 
+Consequently, after quotienting zero-distance classes when necessary,
+the metric age of `(M,d_cat)` is contained in the metric age of
+`(M,d)`: every finite labelled localized distance matrix occurs
+unchanged in one ordinary translated slice. The same translation
+therefore preserves every construction determined functorially by that
+finite matrix, including its complete edge-weighted graph, all threshold
+relations
+
+```text
+i R_r j
+  iff d_cat(x_i,x_j)<=r
+  iff d(x_i+c,x_j+c)<=r,
+```
+
+its Vietoris--Rips filtration, and any tie-preserving orientation rule
+whose input is only the labelled pairwise distances. This is a
+finite-pattern statement, not a global isometric embedding: the
+translating context may depend on the packet, and (18) below forbids the
+corresponding conclusion for arbitrary infinite families.
+
 ## 2. Knot corollary and the coordinatewise maximum
 
 Specialize to the connected-sum monoid of oriented knots with Gordian
@@ -241,6 +261,16 @@ isometrically into the ordinary Gordian metric on the single
 connected-sum slice `{K_i#J}`. Taking the coordinatewise maximum of the
 prime exponent vectors of the `J_(ij)` again gives a common context
 with (15a), possibly smaller than their connected sum.
+
+In particular, after quotienting catalytic zero-distance classes (or
+allowing coincident labelled image points), every finite catalytic
+Gordian threshold graph and every finite catalytic Vietoris--Rips
+filtration is realized exactly by one ordinary Gordian connected-sum
+slice. This is one-way: no finite distance matrix realized in the
+catalytic metric can witness a pattern absent from the ordinary metric.
+It does not say that every ordinary finite pattern occurs catalytically,
+nor that a finite forbidden-pattern or absence statement cannot
+distinguish the two spaces.
 
 ## 3. Orthant, density, and finite minimal bank
 
