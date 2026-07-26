@@ -274,14 +274,23 @@ def main() -> None:
     ]
     for p in (3, 5, 13):
         for z, w in test_pairs:
-            formal = {
-                0: (gabs2(z) + gabs2(w), Rat(0)),
-                (-1) % p: gmul(z, gconj(w)),
-                1: gmul(gconj(z), w),
-            }
+            energies: list[GaussianCyclo] = []
+            for t in range(p):
+                twisted_sum = gc_add(
+                    gc_scalar(p, z),
+                    gc_times_root(w, p, t),
+                )
+                energies.append(gc_mul(twisted_sum, gc_conj(twisted_sum)))
             for k in range(p):
-                coefficient = formal.get(k, ZERO_G)
-                expected = (
+                coefficient = gc_zero(p)
+                for t, energy in enumerate(energies):
+                    root = CycloPrime.root(p, -k * t)
+                    coefficient = gc_add(
+                        coefficient,
+                        (energy[0] * root, energy[1] * root),
+                    )
+                coefficient = gc_scale(Rat(1, p), coefficient)
+                expected_scalar = (
                     (gabs2(z) + gabs2(w), Rat(0))
                     if k == 0
                     else gmul(gconj(z), w)
@@ -290,8 +299,37 @@ def main() -> None:
                     if k == p - 1
                     else ZERO_G
                 )
-                require(coefficient == expected, "twist-energy DFT failed")
+                require(
+                    coefficient == gc_scalar(p, expected_scalar),
+                    "actual cyclotomic twist-energy DFT failed",
+                )
                 twist_checks += 1
+
+    # A twist tree without labelled singleton magnitudes has a bipartite
+    # scaling ambiguity and need not decide the total current.
+    magnitude_tree_a = [
+        (Rat(-1), Rat(0)),
+        (Rat(2), Rat(0)),
+        (Rat(-1), Rat(0)),
+    ]
+    magnitude_tree_b = [
+        (Rat(-2), Rat(0)),
+        (Rat(1), Rat(0)),
+        (Rat(-2), Rat(0)),
+    ]
+    for edge in ((0, 1), (1, 2)):
+        z_a, w_a = (magnitude_tree_a[index] for index in edge)
+        z_b, w_b = (magnitude_tree_b[index] for index in edge)
+        require(
+            gabs2(z_a) + gabs2(w_a) == gabs2(z_b) + gabs2(w_b)
+            and gmul(gconj(z_a), w_a) == gmul(gconj(z_b), w_b),
+            "twist-tree magnitude hostile lost its edge response",
+        )
+    require(
+        current_energy(magnitude_tree_a, (0, 1, 2)) == 0
+        and current_energy(magnitude_tree_b, (0, 1, 2)) == 9,
+        "twist-tree magnitude hostile lost its grouped verdict",
+    )
 
     correlation_checks = 0
     for p in (3, 5, 13):
@@ -418,6 +456,7 @@ def main() -> None:
     print(f"single_deletion_checks={deletion_checks}")
     print("two_component_deletion_boundary=SHARP")
     print("untwisted_tree_energy_boundary=SHARP")
+    print("twist_tree_without_singletons_boundary=SHARP")
     print(f"cyclic_twist_dft_checks={twist_checks}")
     print(f"group_energy_autocorrelation_checks={correlation_checks}")
     print("real_C13_full_support_perfect_autocorrelation=YES")

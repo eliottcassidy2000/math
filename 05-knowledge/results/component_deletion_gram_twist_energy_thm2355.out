@@ -5,6 +5,7 @@ boolean_higher_interaction_checks=448
 single_deletion_checks=56
 two_component_deletion_boundary=SHARP
 untwisted_tree_energy_boundary=SHARP
+twist_tree_without_singletons_boundary=SHARP
 cyclic_twist_dft_checks=84
 group_energy_autocorrelation_checks=42
 real_C13_full_support_perfect_autocorrelation=YES

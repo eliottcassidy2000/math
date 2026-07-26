@@ -7,9 +7,11 @@ status: >
   singleton and complete pair-union energies; equivalently its Boolean
   energy has interaction degree at most two. For every cyclic twist of
   order p>=3, the first energy Fourier mode is the exact complex relative
-  phase transport, so twisted pair energies on a spanning tree reconstruct
-  all component phases up to one common phase. Untwisted tree energies do
-  not. Target-character energy recovers the autocorrelation of the
+  phase transport, so singleton energies together with twisted pair
+  energies on a spanning tree of the nonzero-component support reconstruct
+  all component currents up to one common phase. A twisted tree without
+  singleton magnitudes, and an untwisted energy tree, do not.
+  Target-character energy recovers the autocorrelation of the
   residue-grouped currents, not the currents themselves; a real
   full-support C_13 perfect-autocorrelation array is an exact hostile.
   If two arrays lie in phase cones whose widths sum to less than pi, their
@@ -27,8 +29,8 @@ related:
   - THM-2344-correlation-inverse-rigidity-and-aligned-tooth-twist-hostile
 script: 04-computation/component_deletion_gram_twist_energy_thm2355.py
 output: 05-knowledge/results/component_deletion_gram_twist_energy_thm2355.out
-script_sha256: 4a01e5da66f5927023b20b2953c37b20f562fc20b3f98724b85536eb5a0bc330
-output_sha256: 1b8871c34b9f27a43bf5748ecf5bf360544b5eb5d5f4107e5260b42b56a345a0
+script_sha256: 9b0c665e8e49842fedd9907d0dccab3e30a740ced5ed7de9a143f973822da694
+output_sha256: 16d972e04559ba3a2dbcec504a526eb961014b4e589622c58885269d41e07f3f
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -189,11 +191,33 @@ If both currents are nonzero, the normalized first mode
 Qhat(1)/(|z_e||z_f|)
 ```
 
-is exactly THM-2303's phase transport from `e` to `f`.  Hence cyclic
-pair-twist energy responses on the edges of any spanning tree reconstruct
-all nonzero component currents up to one common element of `U(1)` and decide
-whether their sum vanishes.  This is not an analogy: (12) literally
-constructs every edge ratio used by the phase-tree lemma.
+is exactly THM-2303's phase transport from `e` to `f`.  Hence, **together
+with the labelled singleton energies**, cyclic pair-twist responses on the
+edges of a spanning tree of the nonzero-component support reconstruct all
+nonzero component currents up to one common element of `U(1)` and decide
+whether their sum vanishes.  This is not an analogy: the singleton ledger
+supplies every magnitude and (12) literally constructs every edge ratio
+used by the phase-tree lemma.
+
+Neither qualification can be dropped.  On the path `1--2--3`, the real
+currents
+
+```text
+(-1,2,-1),                       (-2,1,-2)            (12a)
+```
+
+have identical complete pair-twist responses on both edges for every
+`p>=3`:
+
+```text
+Qhat(0)=5,
+Qhat(1)=Qhat(-1)=-2.                                (12b)
+```
+
+Their grouped sums are nevertheless `0` and `-3`.  The missing singleton
+ledger distinguishes their labelled magnitudes.  A zero-current internal
+vertex similarly transports no phase between the nonzero blocks, which is
+why the spanning tree is taken on the nonzero support.
 
 The condition `p>=3` is sharp.  At `p=2`, the `+1` and `-1` modes coincide,
 so only the real cross term survives.  The pairs `(1,i)` and `(1,-i)` have
@@ -336,10 +360,11 @@ z_e=I_e(n).
 
 Then (5) says that lawful singleton and complete pair-union Fourier energies
 would decide the grouped coefficient without choosing phase branches.
-Alternatively, (12) says that lawful thirteen-twist pair energies on a
-spanning tree would manufacture the missing phase transports exactly.
-Current canon supplies neither complete probe family; the theorem names the
-minimal quadratic service to seek.
+Alternatively, (12) says that the existing singleton magnitudes together
+with lawful thirteen-twist pair energies on a spanning tree of nonzero
+components would manufacture the missing phase transports exactly.  Current
+canon supplies no such pair-probe family; the theorem names the minimal
+quadratic service to seek.
 
 For THM-2334's target-character family, group the atomic current first by
 its target residue `q`.  Equation (15) is then the exact energy-side
@@ -370,7 +395,10 @@ component currents
 
 component currents
   -> cyclic pair-twist energies
-     preserves complex phase transport;
+     preserves complex phase transport but not labelled magnitudes;
+
+singleton energies + cyclic pair-twist tree on nonzero support
+  -> reconstructs all currents up to common phase;
 
 residue-grouped currents
   -> whole target-twist energies
@@ -391,8 +419,9 @@ explicit `Q[zeta_p]` model.  It checks:
 
 - `56` complete-pair polarization and deletion identities;
 - `448` vanishing Boolean interactions of order at least three;
-- the two-component deletion and untwisted-tree hostiles;
-- `84` cyclic twist-DFT coefficients at `p=3,5,13`;
+- the two-component deletion, untwisted-tree, and
+  twist-tree-without-singletons hostiles;
+- `84` actual cyclotomic twist-DFT coefficients at `p=3,5,13`;
 - `42` exact group-energy/autocorrelation inversions;
 - every entry and lag of the real full-support `C_13` hostile;
 - an acute-cone support-difference example; and
