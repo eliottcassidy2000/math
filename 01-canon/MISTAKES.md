@@ -9,6 +9,28 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-262 (2026-07-25, post-promotion scope audit of THM-2377) -- a contrapositive retained the distinctness hypothesis it was negating
+
+- **What happened:** THM-2377 proved circulancy from two hypotheses:
+  every lower valuation lies strictly below the graft/target layers, and
+  the lower valuations are pairwise distinct. Its promoted prose then
+  stated the collision contrapositive “under (7),” where (7) still
+  included pairwise distinctness, while concluding that two valuations
+  coincide.
+- **First failed implication:** the proof established
+  `hierarchy + distinctness -> circulant`, whose useful contrapositive is
+  `hierarchy + noncirculant -> not distinct`. Reusing the conjunction as
+  an ambient hypothesis made the displayed conclusion contradictory and
+  the statement vacuous, even though the spectral proof was sound.
+- **Repair:** the hierarchy is now (7a), distinctness is (7b), and the
+  collision gate retains only (7a). Independent hostile checks of the
+  translated-factor exclusion, exact overlaps, same-layer counts,
+  `chi_7` transfer, Bockstein carries, transcript, and hashes otherwise
+  passed unchanged.
+- **Rule:** when taking a contrapositive of `A and B -> C`, state the
+  retained hypothesis and the negated conclusion separately; never cite
+  the original conjunction while asserting `not B`.
+
 ## MISTAKE-260 (2026-07-25, post-promotion hostile audit of THM-2362) -- an unordered inverse-root count was promoted to a nonzero-mode sum without fixing the anchor sheet
 
 - **What happened:** THM-2362 correctly separated the target-factor shift

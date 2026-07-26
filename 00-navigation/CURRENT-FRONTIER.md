@@ -171,9 +171,9 @@ labelled primitive packets and one coprime interval. It makes the terminal
 exact and finite; it does not prove that every surviving interval is empty.
 
 THM-2168--2257 leave `165` rows; THM-2295--2349 supply packets and `91`-unit edges.
-THM-2350 gives dipoles; THM-2354--2365 give colour/H-drift. THM-2356's zero-only kernel has dimension `28,393` versus `169`; THM-2363 dominates. Audited THM-2366 isolates inverse covariance and sub-`13` budgets; THM-2367 gives exact septimal graft transport.
-Audited THM-2368 gives all `169` root-fibre target modes but an orbit hostile with zero integrated drift; THM-2369 makes balanced observables slope-blind. THM-2370 conserves deletion drift and kills nonzero-circulant empty residuals, while its clone rules out higher mixed-energy repair. THM-2372 forces a `98`-fold toothpick; audited THM-2377 identifies the first possible carrier as a repeated septimal layer with a Bockstein carry. Hostile-audited THM-2378 then uses rooted phase to empty hard `W=k=1`: a constant low-blocker word would force guard support `3/4` inside top-unit support `1/2`, while a transverse seven-adic fibre leaves mass at least `5/49`.
-The live object is the finite rooted cyclotomic phase/event word plus a canonical charged owner reference, now applied to the remaining `k=2` alternatives (especially saturated `W=7`), not another support-only, mixed-energy, or tournament shadow. Emptying the septimal sublane removes no thirteen-adic row; the ledger remains `165`.
+THM-2350--2365 give dipole/colour/drift banks; THM-2356's zero-only kernel has dimension `28,393` versus `169`, and THM-2363 dominates. Audited THM-2366/2367 isolate inverse covariance, sub-`13` budgets, and septimal graft transport.
+THM-2368/2369 expose integrated-drift and balanced-slope hostiles; THM-2370's clone rules out higher mixed-energy repair. THM-2372/2377 force a `98`-fold toothpick and locate the first possible carrier at a repeated septimal layer with Bockstein carry. Hostile-audited THM-2378 empties hard `W=k=1` via the `3/4` versus `1/2` support clash and a transverse `5/49` gap.
+The live object is a rooted phase/event word plus a canonical charged owner reference on the remaining `k=2` alternatives, notably saturated `W=7`. No thirteen-adic row is removed; the ledger remains `165`.
 
 ### Independent routes that remain live
 

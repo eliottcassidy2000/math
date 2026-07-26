@@ -114,9 +114,9 @@ be positive integers, let `theta_i in T`, and choose
 `phi_i in {d_0,g,u_2}`. Assume
 
 ```text
-nu_7(v_i)<nu_7(q)<nu_7(d)               for every i,
+nu_7(v_i)<nu_7(q)<nu_7(d)               for every i, (7a)
 
-nu_7(v_1),...,nu_7(v_m)                 pairwise distinct. (7)
+nu_7(v_1),...,nu_7(v_m)                 pairwise distinct. (7b)
 ```
 
 For `r,t in F_13`, define
@@ -186,10 +186,10 @@ factor survives. Passing to the `L^1` limit gives (9); Haar invariance
 under `x -> dx` gives (10). No infinite Fourier product is rearranged.
 QED.
 
-Retaining the strict hierarchy (7), the contrapositive is the
+Retaining only the strict hierarchy (7a), the contrapositive is the
 valuation-collision gate:
 
-> Under (7), if a tensor of the form (8) is noncirculant, then at least
+> Under (7a), if a tensor of the form (8) is noncirculant, then at least
 > two fixed lower speeds `v_i,v_j` have
 >
 > ```text
@@ -525,4 +525,9 @@ Both transcripts must match
 byte-for-byte after LF normalization. Every executable check raises
 explicitly under optimized Python.
 
-Independently audited. QED.
+Independent hostile audit rederived the spectral exclusion, interval
+overlaps, same-layer counts, `chi_7` sign, carry congruences, executable
+transcript, and recorded hashes. It also repaired the promoted wording
+by separating the strict hierarchy (7a) from the distinctness hypothesis
+(7b), so the collision gate is the nonvacuous contrapositive actually
+proved above. QED.
