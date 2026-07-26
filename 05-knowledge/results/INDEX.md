@@ -1906,3 +1906,15 @@ relative translation bank is live but the common-root diagonal is
 identically zero. Normal and optimized transcripts agree and end in
 `PASS`; lawful relative-endpoint and canonical terminal transport
 remain open.
+
+### jc2_degree18_h4_weighted_pole_wall_thm2406.out
+
+Exact characteristic-zero companion for **CANDIDATE THM-2406**, pending
+independent hostile audit. It constructs the full degree-six splitting field
+`Q(epsilon)` for the three infinity slopes, performs the lossless
+`a_0=1` pole-unit localization, and computes the four-element triangular
+Groebner basis of the necessary `B_inf/C_one/D_one/sixth-lock` subsystem.
+Both `126D-25B^2` and `20BC+21W` have zero normal form, as do all four
+omitted synchronization equations. Split-place controls at `p=59,101` and
+the explicit pre-lock off-wall hostile `(58,34,47)` pass in normal and
+optimized modes. This is not yet in the proved graph.

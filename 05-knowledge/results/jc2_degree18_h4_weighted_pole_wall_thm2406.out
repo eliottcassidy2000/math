@@ -1,0 +1,35 @@
+H4 WEIGHTED-POLE WALL AUDIT -- exact characteristic zero
+slope cubic irreducible; discriminant = -23*74088^2
+splitting field h(epsilon)=epsilon^6+10epsilon^4+25epsilon^2+23
+slope denominator 3epsilon^2+5 is a unit in K
+ordered slopes: alpha0=154/(3epsilon^2+5),
+alpha1/alpha_inf=-alpha0/2 +/- 21epsilon
+homogenized numerator degree after pole jets: 16
+B-pivot determinant = nonzero constant * A3(1)^4
+triangular spectral reconstruction: kappa,B,C,D,W
+constant reconstruction pivots are K-units: C,D,W
+primitive profile lock 6 55
+primitive profile B_inf 2 8
+primitive profile C_one 3 14
+primitive profile D_one 4 29
+localized unit factors:
+  B_inf/a3^4 degree 2 terms 8
+  C_one/A3(1)^3 degree 3 terms 14
+  D_one/A3(1)^2 degree 4 terms 29
+  sixth-order lock degree 6 terms 55
+reconstruction denominator A3(1)-exponents: {'kappa': 0, 'B': 0, 'C': 0, 'D': 0, 'W': 0}
+GB lock,B_inf,C_one,D_one size= 4
+triangular quotient over K:
+  eta-leading coefficient=1, inverse=1 in K[x]/(q)
+  q=x^2+(3*(253 + 83*epsilon**3 + 173*epsilon + 6*epsilon**5)/253)*x+(3*(253 + 249*epsilon**3 + 519*epsilon + 18*epsilon**5)/506)
+  eta+(-3*(73*epsilon**2 + 46 + 7*epsilon**4)*epsilon/253)*x+(-(-266*epsilon**4 - 230 - 871*epsilon**2 + 657*epsilon**3 + 414*epsilon + 63*epsilon**5)/506)=0
+  z+((-253 + 793*epsilon**3 + 775*epsilon + 100*epsilon**5)/506)*x+((-253 + 793*epsilon**3 + 775*epsilon + 100*epsilon**5)/253)=0
+  y+(-(-253 + 793*epsilon**3 + 775*epsilon + 100*epsilon**5)/253)*x+(-3*(-253 + 793*epsilon**3 + 775*epsilon + 100*epsilon**5)/506)=0
+normal form 126D-25B^2: 0
+normal form 20BC+21W: 0
+omitted synchronization normal forms: C_infinity=1 D_infinity=1 W_one=1 W_infinity=1
+finite-place control p=59 epsilon=1 slopes=(34, 4, 21) q-roots=[14, 27]
+finite-place control p=101 epsilon=96 slopes=(60, 67, 75) q-roots=[]
+sharp lock hostile p=59 (x,y,z),J,lock: ((58, 34, 47), 22, 2)
+wall handoff: P and Q share y=0; full wall closed by THM-2345
+VERDICT: exact H4 pole subsystem lies on the closed deep wall
