@@ -1,0 +1,23 @@
+theorem=THM-2391
+status=PROVED+VERIFIED-EXACT-CANDIDATE
+lifted_word_cases=210168
+least_period_checks=411600
+period_containment_pairs=28812
+slope_cases=102900
+contained_word_counts=10,52
+complementary_pair_counts=2,2
+partition_types=contiguous,parity
+binary_address_count=2
+pigeonhole_cases=256
+all_distinct_chi7_cases=24
+chi7_ratio_cross=1,3,4,6
+thirteen_pullback_cases=25320
+additive_hostile_cases=3568
+local_guard_size=14
+local_blocker_sizes=7,7
+local_q_sizes=7,7,7,7
+local_positive_margin=83/353982174
+local_roles=M2,low0,C3depth3; blocker13=(1,1,3)
+forced_lower_layer=primitive-depth-0; heavy_word=weight-8-one-double
+branch_excluded=0; ledger=165; LRC(14)=OPEN
+all_checks=PASS
