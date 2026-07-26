@@ -22,8 +22,8 @@ related:
   - THM-2408-endpoint-prony-resultant-clock-separation-and-shared-node-boundary
 script: 04-computation/lrc14_zero_current_or_sideband_prony_thm2416.py
 output: 05-knowledge/results/lrc14_zero_current_or_sideband_prony_thm2416.out
-script_sha256: a09cb2e73e0b4cfea543d3e1688cf3e24263865b73f197946eecb566d2a60e85
-output_sha256: bc0aa5834dff424c18a58dd407e9ee0225629f9ba5acae2f888d75b30a4dacf7
+script_sha256: 500e16a693b119dd591522be22d8783497767230e366f7dbdfb88b7a5e9803fe
+output_sha256: 4ffb30a2a45996879676a664e2f1579768cae6ce8abd0172057f9ea537c125b1
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -197,14 +197,14 @@ circular endpoints.  Each `A_i` or `D_m` is a sum of thirteen translates,
 so a union bound gives
 
 ```text
-J(A_(i,k_i))<=26w_i,           J(D_m)<=26c.                  (18)
+J(A_(i,k_i))<=26|w_i|,         J(D_m)<=26|c|.                (18)
 ```
 
 Consequently the effective jump count `L_(m,k)=J(F_(m,k))` obeys
 
 ```text
 L_(m,k)
- <=R J(Q)+26(sum_(i=1)^9 w_i+c)
+ <=R J(Q)+26(sum_(i=1)^9 |w_i|+|c|)
  =:L_crude.                                                   (19)
 ```
 
@@ -237,7 +237,9 @@ B(m,k)=Fhat_(m,k)(0),                                        (22)
 for every
 
 ```text
-m!=0,           every k_i!=0,           k.wbar=0.            (24)
+m!=0,           m!=-k_c,
+
+every k_i!=0,   k.wbar=0.                                    (24)
 ```
 
 There is an additional exact symmetry.  From the finite definitions of
@@ -307,17 +309,33 @@ The upper bound `L_(m,k)-13` is sharp within the class of
 `1/13`-periodic finite step functions: lift the `L_0`-node sharp
 construction (10)--(12) by `F(x)=f(13x)`.
 
-and Parseval preserves the full quantitative statement
+Because `13|X_side`, the fixed-residue expansion still retains
+
+```text
+q=k+m e_c in (F_13^*)^9.                                    (32)
+```
+
+Its exact integer frequencies lie on the affine shell
+
+```text
+a.w=X_side,
+```
+
+not on the relation hyperplane `a.w=0`.  Thus the all-unit mod-thirteen
+residue survives, while exact relation neutrality does not.
+
+And Parseval preserves the full quantitative statement
 
 ```text
 sum_(X!=0)|Fhat_(m,k)(X)|^2
  =||F_(m,k)||_2^2
- >=mu(Q)(sin(pi/13)/13)^20.                                 (32)
+ >=mu(Q)(sin(pi/13)/13)^20.                                 (33)
 ```
 
 Equations (28) and (31) show that the defect is necessarily
-thirteen-divisible.  It is a quotient-scale physical total frequency,
-not a thirteen-unit relation coordinate.  Multiplying (17)
+thirteen-divisible.  It is a quotient-scale physical total frequency
+carrying an all-unit mod-thirteen affine residue, not an exact relation
+current.  Multiplying (17)
 by `exp(-2pi i X_side x)` changes the total frequency balance; it does
 not produce THM-2410's zero-frequency relation current, retain its exact
 Abel address, or imply an all-`91`-unit relation.  A common endpoint or
@@ -339,8 +357,9 @@ It does not prove:
 
 - that a THM-2410 mean is nonzero;
 - any uniform magnitude for the bounded sideband;
-- that the thirteen-divisible sideband is relation-neutral, a unit
-  residue, or shares a preselected owner, triangle, or terminal endpoint;
+- that the thirteen-divisible sideband is relation-neutral, all-unit
+  modulo seven, or shares a preselected owner, triangle, or terminal
+  endpoint;
 - a mod-seven word-phase repair; or
 - a scalar-row exclusion or LRC(14).
 

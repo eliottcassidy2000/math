@@ -1944,5 +1944,5 @@ Exact companion for **CANDIDATE THM-2416**. It checks the sharp
 no-uniform-amplitude hostile, exhaustive Boolean product/composition jump
 invoices, thirteen-fold jump orbits, and the inherited rational
 exponent-`20` THM-2410 Gram floor. The surviving sideband lies in `13Z`
-and is typed only as quotient-scale physical frequency, not as a relation
-current. Normal and optimized runs agree and end in `PASS`.
+and retains an all-unit mod-13 affine residue, but is not an exact
+relation current. Normal and optimized runs agree and end in `PASS`.

@@ -171,7 +171,7 @@ def main():
     print("J(fg)<=J(f)+J(g), J(f(R.))<=R J(f): PASS")
     print(f"thirteen-fold jump-orbit checks={thirteen_lift_checks}")
     print("1/13-periodic Fourier support lies in 13Z: PASS")
-    print("THM-2410 crude invoice=R*J(Q)+26*(sum(w_i)+c)")
+    print("THM-2410 crude invoice=R*J(Q)+26*(sum(|w_i|)+|c|)")
     print(f"sample crude invoice={sample_jump_invoice}")
     print(f"sample quotient invoice=floor(L_crude/13)={sample_quotient_invoice}")
     print("physical sideband X=13Y, 13<=X<=L-13 (SHARP)")
@@ -179,7 +179,7 @@ def main():
         "rational exponent-20 floor="
         f"{gram_floor.numerator}/{gram_floor.denominator}"
     )
-    print("sideband is 13-divisible physical frequency, not relation current")
+    print("sideband retains unit mod13 affine residue, not exact relation")
     print("THM-2416 exact companion PASS")
 
 
