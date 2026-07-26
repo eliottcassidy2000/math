@@ -33,6 +33,7 @@ related:
   - THM-2401-common-filter-endpoint-or-first-death-certificate
   - THM-2426-compositional-thirteen-root-final-septimal-lane-exclusion
   - THM-2442-delayed-word-septimal-source-completion
+  - THM-2448-right-endpoint-cospan-transition-atlas
 script: 04-computation/lrc14_twenty_four_cell_graft_conditioning_thm2445.py
 output: 05-knowledge/results/lrc14_twenty_four_cell_graft_conditioning_thm2445.out
 script_sha256: fe989a84df2141bf0ebd4a7635a731900531091bdbc3eefcb9e6c3e7d008d1d6
@@ -479,6 +480,9 @@ Both audits emphasized the same stopping boundary recorded above:
 the result is a partial-bare-endpoint conditioning theorem. THM-2442
 later restores the delayed word on the ghost, but neither theorem
 supplies semantic word/repair alignment for the other cells or the
-fully masked endpoint.
+fully masked endpoint. THM-2448 subsequently expands every fixed
+current through the omitted right factors into a finite
+complete-mask/transition cospan; positive same-root physicalization
+remains open.
 
 QED.

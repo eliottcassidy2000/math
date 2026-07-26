@@ -34,6 +34,7 @@ related:
   - THM-2421-all-clock-septimal-ancestry-endpoint-event-detector
   - THM-2441-septimal-ancestry-event-period-collapse
   - THM-2445-twenty-four-cell-graft-owner-conditioning
+  - THM-2448-right-endpoint-cospan-transition-atlas
 script: 04-computation/lrc14_delayed_word_source_completion_thm2442.py
 output: 05-knowledge/results/lrc14_delayed_word_source_completion_thm2442.out
 script_sha256: 042efba1790288fee4affa61ccf70aa4969591e464e144f711d55b9a7fe75b4b
@@ -558,7 +559,9 @@ After composition with THM-2445, the residual graft debt is narrower:
 transport one of its twenty-three repair/blocker-labelled cells through
 the semantic terminal-word/repair alignment, and restore the fully
 masked right endpoint without losing the typed coefficient.  The ghost
-cell's delayed-word phase is discharged by Section 6.1.
+cell's delayed-word phase is discharged by Section 6.1. THM-2448
+subsequently makes the missing-factor expansion finite and exact; it
+does not supply semantic alignment or positive same-root service.
 
 Its preserved object is stronger than a scalar drift statistic:
 

@@ -1,0 +1,19 @@
+THM-2448 exact companion
+generic_cells=24
+generic_ordered_pairs=576
+generic_matched=24
+generic_unit_transitions=160,128,96,64,32
+generic_blocker_transitions=48,24
+generic_transition_total=552
+tail_terminals_by_unit_cell=1,46,22,10,4,1
+completed_denominators_by_unit_cell=24,69,45,33,27,24
+generic_complete_uniform_denominator=69
+ghost_cells=12
+ghost_matched=1
+ghost_unit_transitions=2,2,2,2,2
+ghost_blocker_transitions=1
+generic_sharp_fraction=1/24
+completed_sharp_fraction=1/69
+ghost_sharp_fraction=1/12
+matched_zero_hostile=PASS
+ALL CHECKS PASSED
