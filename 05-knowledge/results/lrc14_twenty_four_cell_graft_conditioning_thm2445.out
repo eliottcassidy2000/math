@@ -1,0 +1,15 @@
+THM-2445 exact companion
+five_bit_partition_checks=32
+lex_cell_counts=1,16,8,4,2,1
+product_cells=24
+typed_cells=23
+ghost_cells=1
+cell_energy_denominator=576
+eligible_energy_denominator=7488
+eligible_colours=2016
+coefficient_square_denominator=15095808
+source_variance_denominator=294
+source_energy_denominator=4438167552
+cyclotomic_reduction_ranks=6,6,6,6,6,6
+sharp_nontrivial_source_energy=1/294
+ALL CHECKS PASSED
