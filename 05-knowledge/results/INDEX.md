@@ -1830,3 +1830,11 @@ all `169` basis translations, all `169` endpoint delete/insert updates,
 all `8,100` occupancy subsets of size at most ten, the full-fibre jet
 `epsilon^12`, and the labelled-deletion hostile pair. Normal and optimized
 transcripts agree and end in `PASS`.
+
+### lrc14_c3_safe_double_fibre_capacity_thm2393.out
+Exact THM-2393 candidate audit. It reconstructs the ten compatible low-cage
+unions, their complete seven-root occupancy laws, the exact `396/637`
+high-safe mass, and the thirteen-root `0/10/12` refinement. Nine orientations
+force clean holes; the only no-clean residual is the adjacent-layer common-core
+chain `(C1,C2,c1,c2)=h(1,13,13,169)`. Normal and optimized transcripts agree
+and end in `PASS`; no row exclusion or LRC(14) closure is asserted.
