@@ -2,7 +2,7 @@
 id: THM-2410
 title: "Full-coordinate projector, local Gram, and integrated-phase boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. The lawful
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. The lawful
   independent C_13 translation bank of all six unit/guard safe factors,
   all three blocker safe factors, and one deep danger factor descends
   losslessly through the common-root gauge. Every all-nonzero character
@@ -37,7 +37,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2410 -- the full-coordinate local Gram does not fix integrated phase
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2403 proves that one lawful unequal-slope target line fires every
 nonzero first-target colour. The natural stronger experiment is to
@@ -493,10 +493,10 @@ for example by a common phase cone, a polarized parent-labelled Gram,
 or a genuinely joint word/present projector. Neither (14) nor the CRT
 count in (19) supplies it.
 
-Candidate THM-2409 reaches the same boundary from the complementary
+THM-2409 reaches the same boundary from the complementary
 source-deletion direction: with `Q=1` its seven translated-source
 coefficients are all-or-flat, while a lawfully shifted delayed word can
-destroy the partition identity completely. The two candidates therefore
+destroy the partition identity completely. The two theorems therefore
 agree on the next object--a joint present/word septimal phase gauge--from
 opposite coordinate systems.
 
@@ -555,3 +555,22 @@ Both transcripts must byte-match, after LF normalization,
 
 Every truth-bearing finite check raises explicitly, so optimized mode
 executes the same audit.
+
+## 10. Independent audit
+
+Two independent hostile audits accepted:
+
+- the common-root gauge, the exact `13^-9` quotient normalization, and
+  the exponent-`20` local Gram floor;
+- the exact censuses `396,907,776` and `4,365,985,536`;
+- cyclic consecutiveness and unique overlap of the repaired physical
+  masks, plus the fixed nonzero deep factor in the ten-factor hostile;
+- the hostile's deliberately nonphysical trajectory and hence its
+  precise inference-only scope;
+- the THM-2334 Abel residue-fibre typing and the absolutely iterated
+  `n`-then-`X` expansion, without joint absolute-convergence overclaim;
+- the conditional residue signs and `gcd(n,91)=1`; and
+- the mod-seven coupled-word stopping boundary.
+
+Both auditors replayed normal and optimized execution against the stored
+transcript and independently verified the LF hashes.

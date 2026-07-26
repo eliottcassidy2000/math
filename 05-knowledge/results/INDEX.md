@@ -1927,8 +1927,8 @@ the THM-2386/2345 branch handoff.
 
 ### lrc14_full_coordinate_projector_thm2410.out
 
-Exact companion for **CANDIDATE THM-2410**, pending independent hostile
-audit. It checks every nonempty proper `F_13` mask, the `229,692` unit
+Exact companion for **THM-2410, PROVED + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED**. It checks every nonempty proper `F_13` mask, the `229,692` unit
 annihilator characters, the `396,907,776` all-nonzero endpoint characters,
 and the `4,365,985,536` eligible endpoint/deep pairs. It verifies the
 lossless gauge normalization, reconstructs an exact anchored translated-pattern
