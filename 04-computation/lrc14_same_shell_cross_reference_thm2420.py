@@ -475,8 +475,20 @@ def hostile_checks():
         all(value != 0 for value in zero_reference_constants),
         "zero-reference sector unexpectedly vanished pointwise",
     )
-    self_gram_numerator = 1
-    require(self_gram_numerator == 1, "constant self-Gram failed")
+    self_gram_cells = []
+    for phase in phase_word:
+        packet = integer_monomial(phase, -1)
+        conjugate_packet = integer_monomial(-phase, -1)
+        gram = integer_polynomial_multiply(packet, conjugate_packet, P)
+        self_gram_cells.append(cyclotomic_reduce_13(gram))
+    require(
+        len(set(self_gram_cells)) == 1,
+        "self-Gram varied across quotient cells",
+    )
+    require(
+        self_gram_cells[0] == (1,) + (0,) * (P - 2),
+        "self-Gram numerator was not one",
+    )
 
     return (
         phase_counts,

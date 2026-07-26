@@ -26,7 +26,7 @@ related:
   - THM-2416-zero-current-or-bounded-sideband-prony-dichotomy
 script: 04-computation/lrc14_same_shell_cross_reference_thm2420.py
 output: 05-knowledge/results/lrc14_same_shell_cross_reference_thm2420.out
-script_sha256: 73a17977ea5b0cdf901e0624fa174be0cd17bbccdf2aa356ad80021d84af3179
+script_sha256: 18cf938ac7a3ff9036b1b9f412a2687391ee856387fd34c22dee917768df2829
 output_sha256: 2ca80104b72ef36b30150f6c0c945f530a7a715bdbf68b999fde3c04a5e1a4a2
 hash_basis: working-tree bytes (LF)
 ---
@@ -38,7 +38,8 @@ HOSTILE AUDIT.**
 
 THM-2416 produces a nonzero affine sideband and THM-2419 identifies its
 canonical finite torsor.  Homogenizing it inside the physical lattice
-requires a coefficient, not merely an address, in the residue-zero
+requires a reference with nonzero aggregate amplitude, not merely an
+address or a cancelling collection of coefficients, in the residue-zero
 sector of the same shell.  The exact operation is a polarized
 cross-correlation:
 
@@ -123,8 +124,8 @@ The support statement follows from
 `(t,v)<->(u=t+v,v)`; and (8) is the same substitution with a
 character inserted.
 
-Consequently `S_C S_R!=0` forces some charged relation fibre
-`t mod p=q` with `H(t)!=0`.  More precisely,
+Consequently `S_C S_R!=0` forces some relation fibre
+`t mod p=q` with `H(t)!=0`; it is charged when `q!=0`.  More precisely,
 
 ```text
 max_(pi(t)=q) |H(t)|
@@ -174,14 +175,18 @@ sum_(r=t mod M Lambda) h_rho(r)
  =sum_v C_rho(t+v) conjugate(R_rho(v)).                      (15)
 ```
 
-Thus finite boundary limits of the two affine packets give the finite
-correlation in Section 1.  A nonzero limiting `H(t)` is a genuine
-nonzero Abel relation-residue fibre.
+Thus coordinatewise boundary limits `C_rho(u)->C(u)` and
+`R_rho(v)->R(v)`, taken along the same Abel radii and in one common
+gauge, give the finite correlation in Section 1, with the limiting
+support conditions (4).  If in addition `S_C S_R!=0`, a nonzero
+limiting `H(t)` is a genuine nonzero Abel relation-residue fibre.
 
 Three qualifications are load-bearing:
 
-1. a residue-zero **address** is insufficient; its same-shell complex
-   coefficient must be nonzero;
+1. a residue-zero **address**, or even one nonzero coefficient inside a
+   cancelling reference packet, is insufficient for the aggregate
+   criterion; one needs `S_R!=0` or an independently nonzero
+   cross-correlation coefficient;
 2. a finite residue fibre need not select one fixed exact relation
    address at `rho=1` without an undamped `ell^1` or no-escape sidecar;
 3. (12) is a polarized quadratic cross-current.  It is not
