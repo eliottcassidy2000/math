@@ -352,10 +352,31 @@ def main() -> None:
 
     c_two_drift = Fraction(11**2, 12 * 13**5)
     c_two_unit_energy = Fraction(11**2, 12 * 13**6)
+    c_two_marginal_energy = Fraction(11**2, 2028)
+    c_two_max_mode = Fraction(11, 156)
     require(
         c_two_drift == Fraction(121, 4455516)
         and c_two_unit_energy == Fraction(121, 57921708),
         "C=2 quantitative floor changed",
+    )
+
+    marginal_base = Fraction(7, 31)
+    marginal_total = 2 * marginal_base
+    marginal_other = (marginal_total - marginal_base) / 12
+    marginal_energy = (
+        (
+            marginal_base * marginal_base
+            + 12 * marginal_other * marginal_other
+        )
+        / P
+        - (marginal_total / P) ** 2
+    )
+    require(
+        marginal_energy
+        == c_two_marginal_energy * marginal_base * marginal_base
+        and c_two_max_mode * c_two_max_mode
+        == c_two_marginal_energy / 12,
+        "sharp marginal variance or maximum-mode floor changed",
     )
 
     unit_multiplier_checks = 0
@@ -402,6 +423,8 @@ def main() -> None:
         "budget functional support/norm^2: "
         f"{coefficient_support}/{coefficient_norm_squared}"
     )
+    print(f"C=2 marginal energy coefficient: {c_two_marginal_energy}")
+    print(f"C=2 maximum-mode coefficient: {c_two_max_mode}")
     print(f"C=2 drift coefficient: {c_two_drift}")
     print(f"C=2 unit-target energy coefficient: {c_two_unit_energy}")
     print(f"live 91-unit multiplier checks: {unit_multiplier_checks}")

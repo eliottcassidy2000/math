@@ -29,8 +29,8 @@ related:
   - THM-2362-thirteen-shift-successor-statistic-and-role-jet-floor
 script: 04-computation/retained_probe_target_covariance_thm2366.py
 output: 05-knowledge/results/retained_probe_target_covariance_thm2366.out
-script_sha256: ddab2756cf99bda4e158e52af9860fad2a727bfe605d607dbcea6c96a3283f6c
-output_sha256: 5d855557f112603e621aa8551ea275b4dcc81d4152c57eb694459f8e4c8ccbcf
+script_sha256: c63bf1dc25e345b19f55887fdfab913ec898804a57ea63457d6770e5773a78c8
+output_sha256: 5790e5120b2adb3dcff9c15d895be5287f57384ec9b21ea8b3ed95c87c6ab26c
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -516,7 +516,38 @@ sum_(u,v)H(r+v,u,v)<=4H(r,0,0).                    (23b)
 Each residual orbit has respectively `13` or `169` identical values, so
 these inequalities would likewise kill it. None is presently canonical.
 
-The eta-axis implication (23) is quantitative. Define
+The eta-axis implication is quantitative already on the thirteen masses.
+Put
+
+```text
+S=sum_s M_s,
+
+Mtilde(b)=13^(-1)sum_s M_s zeta^(bs).
+```
+
+For fixed `M_0>0` and total mass `S`, nonnegativity and Cauchy--Schwarz
+on the other twelve entries give the sharp variance bound
+
+```text
+sum_(b!=0)|Mtilde(b)|^2
+ >=(13M_0-S)^2/2028
+ >=(13-C)^2M_0^2/2028,                            (23c)
+
+max_(b!=0)|Mtilde(b)|
+ >=(13-C)M_0/156.                                 (23d)
+```
+
+Equality in the first inequality occurs exactly when the other twelve
+masses are equal. If `B(a,b,h)` is THM-2365's full transform, then
+
+```text
+Mtilde(b)=13sum_h B(0,b,h).
+```
+
+Cauchy--Schwarz in `h` loses at most `13^3`, so (23c) already implies
+the H-drift bound below.
+
+Equivalently, define the lifted functional
 
 ```text
 Lambda(H)
@@ -529,8 +560,8 @@ The coefficient vector of `Lambda` has squared Euclidean norm
 13*12^2+13*12=2028=12*13^2,                        (24)
 ```
 
-and is orthogonal to every circulant table `g(r-t)`. Since THM-2365 uses
-normalized counting measure,
+and is orthogonal to every circulant table `g(r-t)`. This gives the same
+estimate directly in THM-2365's normalized counting measure:
 
 ```text
 D_H
