@@ -1857,3 +1857,13 @@ floors `40/8281` and `40/57967`. It checks the resulting zero-drift
 actual-`c1` role-jet constants, the fixed `F7* x F13*` tensor, and a
 strict physical type-II/type-III two-cycle. Normal and optimized
 transcripts agree and end in `PASS`; no row exclusion is asserted.
+### lrc14_common_core_forty_nine_orbit_thm2396.out
+Exact THM-2396 proved and independently hostile-audited replay. It constructs the complete relaxed
+`Z/49Z` word banks (`1029` ordinary and `1029` guard words), keeps all
+`2058` top-compatible four-`q` packings, and checks all `14,406`
+packing/`B` cases. Exactly `14,386` have an immediate forbidden nonzero
+hole; the last `20` require `A=C` on four or five rows, while all `49`
+speed-`22` translates agree with `A` on at most two. Normal and optimized
+transcripts agree and end in `PASS`. The candidate kills only the
+counterfactual zero-clean common-core branch; no row exclusion or
+LRC(14) closure is asserted pending independent audit.

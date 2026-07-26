@@ -1,0 +1,15 @@
+theorem=THM-2396
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED
+modulus=49; bins=7; addresses_per_bin=7
+ordinary_words=1029; guard_words=1029; B_translates=49; C_translates=49
+relevant_guard_top_pairs=2058
+q_candidate_distribution=22:588,25:588,26:294,33:588
+q_packing_distribution=0:1176,1:294,3:588
+q_packings=2058; B_packing_tests=14406
+nonzero_hole_rejections=14386; C_capacity_boundaries=20
+required_C_rows=4:18,5:2
+C_zero_masks=13; max_A_C_agreement=2; C_word_tests=980
+relaxed_49_orbit_survivors=0
+consequence=delta_zero_common_core_branch_empty
+row_decrement=0; ledger=165; LRC(14)=OPEN
+all_checks=PASS
