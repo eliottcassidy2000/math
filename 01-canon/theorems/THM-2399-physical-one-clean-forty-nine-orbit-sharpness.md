@@ -2,7 +2,7 @@
 id: THM-2399
 title: "Physical one-clean forty-nine-orbit sharpness"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. There is
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. There is
   a primitive, centered, last-lane-typed (1,2,5) scalar packet and a
   strict rational forty-nine-point orbit on which the local scalar
   cover holds at every point while the THM-2396 clean set has exactly
@@ -19,6 +19,7 @@ depends_on:
 related:
   - THM-2391-blocker-caged-septimal-single-layer-address-reduction
   - THM-2394-common-core-six-address-transversal-and-labelled-hole-trichotomy
+  - THM-2398-prime-cyclic-rational-restoration-dichotomy
 script: 04-computation/lrc14_physical_one_clean_orbit_thm2399.py
 output: 05-knowledge/results/lrc14_physical_one_clean_orbit_thm2399.out
 script_sha256: 2599e39981f7efe9b045f6428d64bef22020d108e7d0729c448b8ccb402666ea
@@ -28,7 +29,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2399 -- physical one-clean forty-nine-orbit sharpness
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2396 proves that every high-safe common-core orbit has at least one
 clean root. Its search deliberately relaxed the non-core translations,
@@ -334,3 +335,32 @@ Both transcripts must byte-match
 
 after LF normalization. Every assertion remains active under optimized
 Python.
+
+## 7. Independent hostile audit
+
+An independent evaluator reconstructed the packet without reusing the
+companion's mask tables. It verified `c=13C`, the complete `13`- and
+`7`-adic typing, distinctness and primitiveness of the nine scalar
+speeds, all seven words, the empty list of local-cover failures, and
+the unique clean root. It independently recovered
+
+```text
+raw root j=34,
+normalized root (3,5),
+x=348105147/490000931,
+strict margin=459267/980001862,
+global safe point=3/14.
+```
+
+It also reran the companion under ordinary and optimized Python. Both
+LF-normalized transcripts byte-match the stored output, with hashes
+
+```text
+source  2599e39981f7efe9b045f6428d64bef22020d108e7d0729c448b8ccb402666ea
+output  227add2e7a5eec7f71932a6f13574f0962e0eee055eb44abaee6f78dfb0a94bc.
+```
+
+The audit specifically accepted the limiting scope: this is sharpness
+of the one-orbit pointwise multiplicity theorem, not attainment of the
+integrated clean-mass floor, a global scalar cover, or an LRC
+counterexample.

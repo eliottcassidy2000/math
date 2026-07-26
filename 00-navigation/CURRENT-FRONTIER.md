@@ -172,7 +172,7 @@ exact and finite; it does not prove that every surviving interval is empty.
 THM-2168--2257 leave `165` rows; THM-2295--2377 supply the relation/edge/bank/toothpick carriers (THM-2356 kernel `28,393`, THM-2363 dominant, THM-2368 root routing), and THM-2378/2381/2382/2385 leave only `k=2,(t,b)=(1,0)`.
 THM-2388--2393 reduce the last lane to a possible `M=1` common-core chain. THM-2396's empty relaxed `Z/49Z` word localizes orbitwise to
 `delta>=66/4459` on that chain, hence `delta>=1/26754` universally and an owner-resolved `F_7 x F_13` cell everywhere. THM-2395 is retained only as
-a role-jet sidecar. The debt is uniform terminal target/endpoint landing, not positivity or hole transport. Ledger: `165`.
+a role-jet sidecar. THM-2399's physical `(1,2,5)` packet has one clean root on a locally covered `49`-orbit: `N_S>=1` is sharp for one-orbit incidence/valuations, so stronger mass needs global or terminal data. The debt is uniform terminal target/endpoint landing. Ledger: `165`.
 
 ### Independent routes that remain live
 
