@@ -1,0 +1,23 @@
+theorem=THM-2433
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED
+burnside_three_hole_target_cases=1680
+additive_coefficient_cases=100
+additive_constant_tail_start=13
+multiplicative_coefficient_cases=9999
+shadow_vertex_count=497
+additive_shadow_edges=121779
+additive_transitive_pairs=122762
+additive_two_step_failures=2+2->4|3+3->6
+multiplicative_shadow_edges=1780
+multiplicative_transitive_pairs=1979
+multiplicative_closure_exceptions=2->8|2->12|3->12
+multiplicative_two_step_failures=2*2->4|2*3->6|3*2->6
+extra_weak_atoms_through_100000=8,12
+extra_strict_nonprime_nonsquare_atoms_through_100000=8,12
+composite_divisibility_covers=2:8:4|2:12:6|2:18:9|3:12:4
+twin_centres_through_1000000=8169
+retained_twin_centres=8167
+retained_fake_twin_atoms=12
+chain_incidence_cases=100
+divisor_mobius_cases=10000
+ALL CHECKS PASSED
