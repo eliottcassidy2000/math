@@ -163,15 +163,14 @@ Discharge every resulting labelled cell by at least one of:
 4. an active relation outside the rank-eleven code; or
 5. owner-labelled Euler survival in THM-2047's phase-height complex.
 
-[HYP-8871](../05-knowledge/hypotheses/HYP-8871-lrc14-owner-sector-klein-sail-automaton.md)
-is the open finite-state/Farey program for this obligation.
-[THM-2058](../01-canon/theorems/THM-2058-primitive-phase-packets-and-deck-fan-intervals.md)
-is the proved carrier that reduces each fixed bad-denominator/owner fiber to
+[HYP-8871](../05-knowledge/hypotheses/HYP-8871-lrc14-owner-sector-klein-sail-automaton.md) is the open finite-state/Farey program for this obligation.
+[THM-2058](../01-canon/theorems/THM-2058-primitive-phase-packets-and-deck-fan-intervals.md) is the proved carrier that reduces each fixed bad-denominator/owner fiber to
 labelled primitive packets and one coprime interval. It makes the terminal
 exact and finite; it does not prove that every surviving interval is empty.
 THM-2168--2257 leave `165` rows; THM-2295--2377 supply relation/edge/bank/toothpick carriers (THM-2356 kernel `28,393`; THM-2363/THM-2368), and THM-2378/2381/2382/2385 isolate `k=2,(t,b)=(1,0)`.
-THM-2388--2397 reduce it to an `M=1` common-core chain, with `delta>=66/4459` there and `delta>=1/26754` universally; every literal role has all twelve target colours through large `13^k` clocks and typed deletion support.
-THM-2405 leaves seven `M=1` ratios. THM-2407/2409 route every target colour and, for `Q=1`, every nonzero source colour to a `gcd(m,91)=1` triangle. Delayed-word endpoint/phase transport remains open. Ledger: `165`.
+THM-2388--2397 reduce the no-clean boundary to an `M=1` common-core chain, with `delta>=66/4459` there and `delta>=1/26754` universally; every literal role has all twelve target colours through large `13^k` clocks and typed deletion support.
+THM-2405 leaves seven no-clean `M=1` ratios. THM-2415 independently caps every packet at `M<=2`, including the positive-clean packets, by forcing `W_H=W_(13H)` on a complete deep phase orbit.
+THM-2407/2409 route every target colour and, for `Q=1`, every nonzero source colour to a `gcd(m,91)=1` triangle. Exploit the bounded-depth positive-clean packets or finish delayed-word endpoint/phase transport. Ledger: `165`.
 
 ### Independent routes that remain live
 

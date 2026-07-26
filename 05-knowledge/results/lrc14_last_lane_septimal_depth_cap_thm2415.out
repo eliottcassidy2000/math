@@ -1,0 +1,14 @@
+theorem=THM-2415
+arithmetic=Fraction-only
+mu(D_13u_inter_D_u)=1/91
+mu(D_13u_minus_D_u)=12/91
+one-root-base-mass=12/13
+high-safe-base-mass=6/7
+base-intersection-floor=71/91
+transition-floor=71/637
+hostile-bank-size=288
+hostile-bank-min=930/8281 at (u,w,d)=(13,1,1)
+guard-transport=W_H={0,6}; W_13H(b)={b,b+1}; b=6 gives equality
+phase-grid-minima=N7:0,N49:3,N343:26
+M2-hostile=Q=7,D=49,H=1,y=1/91 lies in transition set but misses phase chamber
+status=PASS
