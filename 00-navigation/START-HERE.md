@@ -21,9 +21,8 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 ## Sixteen high-signal facts to reuse, not re-derive
 
 1. **LRC(14) is the first unresolved runner count in the present literature.**
-   Sungkawichai–Trakulthongchai prove the cases with 10, 11, and 12 nonzero
-   speeds; see the scoped import in
-   [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md).
+   The cited lower cases are scoped in [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md);
+   THM-2430/2431/2432 leave three deep-`c_3`/top-guard types, with ledger `165`.
 2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
 3. **Good-period existence is a maximum statement, not an average or count.**
    The tight AP at its resonant ruler defeats the tempting mean arguments; see
@@ -58,8 +57,9 @@ Then read the relevant frontier section, the active guardrails, and the exact th
    fixed-correspondence substitution-product boundary and shows that a
    quotient-automorphism minimum still fails; its marked partial-automorphism cost is the weighted cyclic derivative of exterior incidence words. Unmarked transport remains open. The known invariant lattice is exact only through `n <= 6`.
 11. **A reciprocal integer sequence has two profiles.** THM-2000/2005 separate
-    support from multiplicity; THM-2352 makes q-adic support abscissa zero but
-    indexed plateaux realize every threshold, while finite conditioning loses termination.
+    support from multiplicity; THM-2352 separates q-adic support from indexed
+    thresholds. THM-2433 proves additive finite-hole scars stabilize while
+    multiplicative scars propagate along divisor ideals.
 12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is the exact new counterexample. THM-2063/2071 close linear/quadratic source fibers; THM-2084/2118/2102 close cubics; THM-2202 removes every twice-odd finite pole.
     THM-2214 closes nonsplit terminal degrees `2,6,10`, THM-2217 forces the odd train, and THM-2247 closes degree `14`.
     At degree `18`, THM-2297 closes one-sparse strata plus `B=D=0`;

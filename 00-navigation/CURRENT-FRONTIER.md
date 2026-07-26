@@ -332,6 +332,7 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
 
 - Hostile-audited [THM-2422](../01-canon/theorems/THM-2422-operation-fibres-summand-closure-and-twin-center-ancestry.md) separates operation shadows from labelled fibres: strict closure from `{2,3}` is `N\{1,4,6}`, and synchronous growth is `M_t=27*2^(t-4)+1`.
   Every twin centre through `10^8` has distinct earlier parents (FINITE-EXACT; all-centre extension OPEN). Polygonal supports have digamma/trigamma clocks.
+- Hostile-audited [THM-2433](../01-canon/theorems/THM-2433-operation-fibre-deletion-incidence-and-startup-scar.md) gives the finite-hole Burnside calculus. The additive scar stabilizes at three lost pairs, while multiplication propagates along `4N` and `6N`; internal transitive closures, four exceptional divisibility covers, and the unique artificial twin-centre atom `12` are exact. Chain difference and divisor Möbius inversion are analogues, not a Stirling identification.
 - The maximum-cyclic-triangle support mass is exactly
   `75/4 - 24*log(2)`.
 - The condensation-hazard support is `{5,6,...}` with profile
@@ -342,7 +343,7 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
 - [THM-2010](../01-canon/theorems/THM-2010-new-tournament-invariant-sequences.md)
   records four-term candidates and a no-match search. That is not proof of
   sequence novelty.
-- [THM-2412](../01-canon/theorems/THM-2412-discrete-newton-exponential-and-central-binomial-split.md)
+- [THM-2412](../01-canon/theorems/THM-2412-delta-exponential-and-central-newton-layer-split.md)
   makes the Maclaurin/Newton analogy exact; [THM-2413](../01-canon/theorems/THM-2413-prime-index-affine-drift-and-twin-center-weld.md)
   identifies A014574 as prime-index plateaux and fixed-gap multiplicative atoms.
   [THM-2422](../01-canon/theorems/THM-2422-operation-fibres-summand-closure-and-twin-center-ancestry.md)

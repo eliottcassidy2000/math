@@ -105,7 +105,7 @@ mu(P)>=mu(A_good)>=4/7=52/91.                                      (6)
 ```
 
 The image of every removed null set is again null because `T_N` is
-finite-to-one.
+piecewise linear and Lipschitz.
 
 For `y in A_good`, write `Y={Ny}`. THM-2430 composes the thirteen
 inverse roots and the seven top-bin representatives. If

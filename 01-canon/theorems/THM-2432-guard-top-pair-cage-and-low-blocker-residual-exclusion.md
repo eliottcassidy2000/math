@@ -454,10 +454,11 @@ so the tiling persists on an open chamber. THM-2430 classifies all such
 finite tilings and likewise shows that they are locally physical.
 Neither object is a global scalar-cover packet.
 
-Reserved THM-2431 pursues a different repeated-step rounding mechanism
-for the broader `t=5,b=0` family. This theorem neither assumes nor
-promotes that route; its exclusion of the single positive-depth
-`(2,5,0,7)` type is independently supplied by (17)--(31).
+THM-2431 independently excludes the broader `t=5,b=0` family by a
+repeated-step rounding mechanism. This theorem does not depend on that
+route: its exclusion of the single positive-depth `(2,5,0,7)` type is
+supplied independently by (17)--(31). Composing the two theorems leaves
+only `(1,5,1,8),(2,5,2,9)` at `M=0` and `(2,5,1,8)` at positive depth.
 
 ## 9. Exact companion
 
