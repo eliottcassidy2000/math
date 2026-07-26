@@ -30,59 +30,26 @@ needed, not read wholesale at every startup.
 
 ## Current orientation
 
-As of 2026-07-22:
+These headline states are intentionally evergreen; dated mechanisms and exact
+live debts belong to `CURRENT-FRONTIER.md`, which is authoritative before reuse.
 
-- **LRC(14) is OPEN.** The conjecture is known through 13 total runners; the
-  repo's remaining work is structural, not the false uniform `q <= 25`
-  shortcut. THM-2051/2052 force a bounded sparse relation code of rank at least
-  eleven and a finite rank-twelve box or two-anchor atlas; THM-2053--2069 add
-  exact decks, owner fans, packets, clocks, deletion wheels, and finite
-  circuit-free rays. THM-2074 proves strict loneliness for density-one rows.
-  On the remaining dyadic seam, THM-2073/2075/2077 retain a lossless terminal
-  core/address/owner carrier, THM-2078 excludes terminal maximum at most `24`,
-  and THM-2080 forces nontrivial depth at most four. THM-2081 turns rank seven
-  into a guard-relative weighted-tree inequality; THM-2083 proves every
-  obstruction has a uniformly bounded relation supported on a guard/two-speed
-  triple (the guard coefficient may vanish). THM-2082
-  proves the scalar wheel cannot see the required projective residue incidence.
-  Relation templates, higher terminal ranks, other atlas cells, and the
-  rank-twelve box remain open. THM-2085/2086 are reserved proposals only.
-- **NC2 and GMC(2) are PROVED in repo canon** by THM-2022's lowest-balanced-face
-  Frobenius argument. THM-2067 supplies its bare one-variable constant-term
-  seed internally; full DvdK is only a stronger alternate. Lean checks the
-  residue, face transport, contradiction, extractor, and the root-imported
-  theorem `GMC2HeightWitness.heightWitnessSupplier_holds`. The clean endpoint is
-  `DvdK1 -> NC2 -> GMC(2)`; general complex `DvdK1` is the sole formal
-  premise. Root-imported special modules handle positive coefficients,
-  two charges, and HYP-8930's fixed-support unique channels. HYP-8931's proposed
-  polynomial-class bypass is vacuous (MISTAKE-240), and THM-2070 explains why
-  support return alone cannot replace noncancellation.
-- **GMC is false from dimension 3 onward.** Dimension two is the sharp surviving
-  case handled by THM-2022; dimensions one and two must not be conflated with
-  the higher-dimensional counterexamples.
-- **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300
-  gives the exact three-variable certificate. THM-2063 tames one-fiber-linear
-  planar pairs, and THM-2071 closes every quadratic-fiber pencil cell. Any
-  survivor has fiber degree at least three in every source/output-pencil
-  direction. This is not a cover-degree theorem or NC2/GMC bridge
-  (MISTAKE-236/237). THM-2084's cubic-fiber proposal is reserved and unproved.
-- **Tournament work has moved from isolated invariants to operations and
-  decomposition:** order-join, strong cores, signed Rédei data, local
-  subtournament censuses, and invariant-independence witnesses. Rank matches
-  are not bridges without an explicit map, saturation index, and discriminant;
-  small-prime Paley spectra are background, not an LRC periodic table.
-- **Entropy and modular-form language is observable-relative, not a universal
-  invariant.** MISTAKE-230--233 quarantine S217--S220, including the composite-
-  `14` Paley/Frobenius analogy and the `f14`/modular-cusp bridge. No genus,
-  period field, or Paley spectrum is presently an LRC obstruction without an
-  explicit map preserving the loneliness predicate. HYP-8885's “cusp” frame is
-  therefore a typed heuristic, not a universal difficulty theorem.
-- **For reciprocal integer sequences, the underlying object is the support
-  Dirichlet profile**, not one scalar reciprocal sum; repeated values require an
-  explicit collision tax.
+- **LRC(14) is OPEN.** The repository has strong structural reductions and exact
+  finite certificates, but no full proof.
+- **NC2 and GMC(2) are PROVED in repo canon** by THM-2022; GMC is false in every
+  dimension at least three.
+- **JC(2) and DC(2) remain OPEN.** Repo counterexamples concern JC from dimension
+  three and Poisson/DC variants only in their stated higher ranks; they do not
+  descend automatically to two variables.
+- Tournament, knot, and integer-sequence claims are operation- and
+  observable-relative: an analogy or matching invariant is not a bridge without
+  an explicit target-preserving map and the needed sidecar.
+- Reciprocal integer sequences use the support Dirichlet profile plus collision
+  tax, not a single reciprocal sum.
+- Entropy, modular, Paley, and cusp language remains heuristic unless a typed map
+  preserves the target predicate.
 
-These are summaries, not proof citations. Follow the links in
-`CURRENT-FRONTIER.md` before relying on them.
+These are routing summaries, not proof citations. Follow exact slugs, statuses,
+dependencies, and corrections in `CURRENT-FRONTIER.md` and `ACTIVE-GUARDRAILS.md`.
 
 ## Repository layers
 
