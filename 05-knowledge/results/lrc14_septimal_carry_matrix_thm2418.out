@@ -1,0 +1,18 @@
+THM-2418 SEPTIMAL CARRY MATRIX -- exact audit
+rational affine word cocycle checks=18040
+base-thirteen digit words checked=402233
+carry matrix depths checked=8 (k=1..8)
+K_k=P^k and alternating closed forms: PASS
+K_k K_k^T=Pi+13^(-2k)(I-Pi): PASS
+raw rank=7 / charged singular values=13^(-k): PASS
+raw digit Fourier phases even=1 / odd=-zeta^(-e): PASS
+terminal support/rank checks=1016
+terminal charged-colour checks=6048
+terminal nonconstant iff every rational charged colour survives: PASS
+flat D_7 terminal profile=(1/7)^7: PASS
+one-cylinder terminal profile=(1/2)e_3 / rank=1: PASS
+even centred source depths checked=8
+even centred source variation=2 / minimum mass=7/13
+equal-carry source kernel rank=1: PASS
+canonical source-terminal correlation remains OPEN
+THM-2418 exact companion PASS

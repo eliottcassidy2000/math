@@ -1947,3 +1947,14 @@ invoices, thirteen-fold jump orbits, and the inherited rational
 exponent-`20` THM-2410 Gram floor. The surviving sideband lies in `13Z`
 and retains an all-unit mod-13 affine residue, but is not an exact
 relation current. Normal and optimized runs agree and end in `PASS`.
+
+### lrc14_septimal_carry_matrix_thm2418.out
+
+Exact companion for **CANDIDATE THM-2418**, pending independent audit.
+It checks `18,040` affine word transports, all `402,233` base-thirteen
+digit words through depth five, the exact seven-state carry kernel through
+depth eight, and `6,048` rational charged terminal profiles. It verifies
+the six singular values `13^-k`, the flat and one-cylinder terminal
+boundaries, and the real/even BV-two source rank-one hostile with mass at
+least `7/13`. Normal and optimized runs agree and end in `PASS`; no
+canonical source--terminal correlation or LRC(14) closure is asserted.
