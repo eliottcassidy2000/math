@@ -62,6 +62,17 @@ def fibre_loss(n: int, holes: frozenset[int], strict: bool) -> int:
     return len(ambient) - len(retained)
 
 
+def proper_fibre_loss(n: int, holes: frozenset[int], strict: bool) -> int:
+    proper_holes = holes - {1}
+    ambient = [(a, b) for a, b in factor_pairs(n, strict) if a >= 2]
+    retained = [
+        (a, b)
+        for a, b in ambient
+        if a not in proper_holes and b not in proper_holes
+    ]
+    return len(ambient) - len(retained)
+
+
 def marked_divisor_incidence(n: int, holes: frozenset[int]) -> int:
     return sum(1 for h in holes if n % h == 0)
 
@@ -207,6 +218,7 @@ def main() -> None:
     ]
     pointwise_checks = 0
     cumulative_checks = 0
+    proper_cumulative_checks = 0
     additive_checks = 0
     for holes in hole_sets:
         for n in range(1, 121):
@@ -250,6 +262,41 @@ def main() -> None:
                 f"finite strict summatory formula failed for {holes}",
             )
             cumulative_checks += 2
+
+        proper_holes = holes - {1}
+        if proper_holes:
+            proper_limit = max(200, max(proper_holes) ** 2)
+            proper_weak_sum = sum(
+                proper_fibre_loss(n, holes, False)
+                for n in range(1, proper_limit + 1)
+            )
+            proper_strict_sum = sum(
+                proper_fibre_loss(n, holes, True)
+                for n in range(1, proper_limit + 1)
+            )
+            proper_floor_sum = sum(proper_limit // h for h in proper_holes)
+            proper_m = len(proper_holes)
+            require(
+                proper_weak_sum
+                == proper_floor_sum - proper_m * (proper_m + 1) // 2,
+                f"proper weak summatory formula failed for {holes}",
+            )
+            require(
+                proper_strict_sum
+                == proper_floor_sum - proper_m * (proper_m + 3) // 2,
+                f"proper strict summatory formula failed for {holes}",
+            )
+            proper_cumulative_checks += 2
+        else:
+            require(
+                all(
+                    proper_fibre_loss(n, holes, strict) == 0
+                    for n in range(1, 121)
+                    for strict in (False, True)
+                ),
+                f"unit-hole proper-carrier hostile failed for {holes}",
+            )
+            proper_cumulative_checks += 1
 
     partial_summation_checks = 0
     support_controls = [
@@ -328,6 +375,7 @@ def main() -> None:
     print(f"Bessel/central coefficients: {bessel_checks}")
     print(f"operation pointwise identities: {pointwise_checks}")
     print(f"operation cumulative identities: {cumulative_checks}")
+    print(f"proper-factor cumulative identities: {proper_cumulative_checks}")
     print(f"additive tail identities: {additive_checks}")
     print(f"Abel/incidence identities: {partial_summation_checks}")
     print(f"triangular telescoping identities: {triangular_checks}")

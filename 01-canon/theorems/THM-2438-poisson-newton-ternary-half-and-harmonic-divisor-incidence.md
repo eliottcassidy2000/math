@@ -2,8 +2,8 @@
 id: THM-2438
 title: "Poisson--Newton ternary half and harmonic divisor incidence"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; UNDER INDEPENDENT
-  HOSTILE AUDIT. The exponential generating function of the forward
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. The
+  exponential generating function of the forward
   differences of any sequence is its original exponential generating
   function multiplied by exp(-x). Consequently the Newton coefficients
   of the central binomial sequence are the central trinomial numbers,
@@ -25,15 +25,14 @@ related:
   - THM-2422-operation-fibres-summand-closure-and-twin-center-ancestry
 script: 04-computation/poisson_newton_harmonic_incidence_thm2438.py
 output: 05-knowledge/results/poisson_newton_harmonic_incidence_thm2438.out
-script_sha256: 458b241b6580866b6f469a3d5cf52cd941f394b6f65cfb88092be26d3c1982a0
-output_sha256: ade4f8795643d295169576f79ad04d00f3fe7a7b66ca6440d764d485cba94121
+script_sha256: f45b8011dbe7e37a0ebf37483d5d5889659258cc3405af57fce6d932af2fca48
+output_sha256: 192b0aa49b606999d2cb6b76cb55b9720aa83dc4d49b7ae09ed2379b903f5c5f
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2438 -- Newton exposes ternary drift; harmonic mass measures the multiplicative scar
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; UNDER INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Two analogies from the operation-graph program become exact after retaining
 the right incidence coordinates:
@@ -54,8 +53,7 @@ statements, not an isomorphism between addition and multiplication.
 
 ## 1. The exact Poisson--Newton transform
 
-Let `(a_n)_(n>=0)` take values in a characteristic-zero commutative
-algebra and put
+Let `(a_n)_(n>=0)` take values in a commutative `Q`-algebra and put
 
 ```text
 d_k=Delta^k a_0
@@ -191,6 +189,34 @@ alphabet.  Forward differencing does not preserve the original binary
 alphabet: changing `n` adds two binary slots, and the new-versus-old
 comparison has the three local states `-1,0,1`.
 
+There is also a direct labelled explanation of the Newton expansion.
+Pair the `2n` binary slots into `n` ordered blocks and designate the mixed
+state `01` as inactive.  If `K` is the set of the other blocks, map
+
+```text
+00 -> -1,                  10 -> 0,                  11 -> +1.
+```
+
+If `|K|=k`, the binary word has weight
+
+```text
+n+sum_(i in K)epsilon_i.                                      (13a)
+```
+
+Choosing `K` and using reflection of the ternary sum gives the literal
+decompositions
+
+```text
+A_n=sum_(k=0)^n binom(n,k)#{epsilon in {-1,0,1}^k:sum epsilon_i>=0},
+
+M_n=sum_(k=0)^n binom(n,k)#{epsilon in {-1,0,1}^k:sum epsilon_i>0}. (13b)
+```
+
+These are precisely Newton inversion applied to (11).  The pairing of
+binary slots and the choice of inactive mixed state are retained sidecars;
+the count is invariant, but there is no canonical unlabelled bijection
+after forgetting them.
+
 This sharpens the tournament analogy.  A tournament still has two
 orientations per arc and therefore `2^binom(v,2)` labelled states.
 Equation (13) describes the Newton transform of a two-slot binary layer;
@@ -257,9 +283,24 @@ sum_(n<=N) D_H^<(n)
  =sum_(h in H) floor(N/h)-m(m+1)/2.                             (17)
 ```
 
-For the proper-factor convention `a,b>=2` used in THM-2433, remove the
-unit-cofactor occurrence for each hole.  The corresponding constants in
-(17) become `m(m+1)/2` and `m(m+3)/2`; the limiting mean below is unchanged.
+For the proper-factor convention `a,b>=2` used in THM-2433, put
+
+```text
+H_x=H intersection {2,3,...},                m_x=|H_x|.
+```
+
+A hole at `1` is not a vertex of that carrier.  Remove the unit-cofactor
+occurrence for each hole in `H_x`; the corresponding constants in (17)
+are
+
+```text
+sum_(h in H_x)floor(N/h)-m_x(m_x+1)/2,
+
+sum_(h in H_x)floor(N/h)-m_x(m_x+3)/2.                         (17a)
+```
+
+The limiting mean is `sum_(h in H_x)1/h`.  It agrees with the full-carrier
+limit precisely when `1 notin H`.
 
 ## 5. Harmonic mass is exactly the limiting mean scar
 
@@ -323,7 +364,15 @@ Suppose instead that
 R_H=sum_(h in H)1/h<infinity.
 ```
 
-Let `A_H(x)=#(H intersection [1,x])`.  Then `A_H(x)/x->0`.
+Let `A_H(x)=#(H intersection [1,x])`.  Then `A_H(x)/x->0`: for fixed
+`L<x`,
+
+```text
+A_H(x)/x
+ <=A_H(L)/x+sum_(h in H,h>L)1/h,
+```
+
+and first `x`, then `L`, tends to infinity.
 The number of ordered pairs `(a,b) in H^2` with `ab<=N` is
 
 ```text
@@ -506,13 +555,19 @@ Every truth-bearing check raises explicitly under optimized Python.
 Normal and optimized transcripts must byte-match the stored output after
 LF normalization.
 
-## 10. Audit boundary
+## 10. Independent hostile audit
 
-The formal transform, central-trinomial coefficient extraction, ternary
-reflection count, pointwise collision tax, finite summatory constants,
-harmonic mean limit, and `o(N)` collision argument are proved above and
-verified independently inside the exact companion.  Promotion beyond
-candidate status still requires a separate hostile reader to reconstruct
-the infinite-support limit and check that the full/proper factor
-conventions are never mixed.  Brun convergence in (33) remains cited
-through THM-2413.
+An independent reader reconstructed the formal transform,
+central-binomial/Bessel identity, ternary reflection count, full-carrier
+collision tax, divergent inequalities, and the `P_H(N)=o(N)` argument.
+The first pass found two genuine boundary errors: “characteristic-zero
+algebra” did not provide the factorial denominators in (3), and the
+proper-factor variant mishandled the unit hostile `H={1}`.  The current
+statement repairs these by requiring a `Q`-algebra and using
+`H_x=H\{1}` in (17a); the companion now tests all proper-factor constants
+and the unit hostile explicitly.
+
+The auditor then reproduced normal, optimized, and stored transcripts
+byte-for-byte and checked the recorded hashes.  The Abel/Bertrand,
+triangular, and A014574 consequences have the stated scopes.  Brun
+convergence in (33) remains cited through THM-2413.

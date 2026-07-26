@@ -5,6 +5,7 @@ formal EGF coefficients: 100
 Bessel/central coefficients: 50
 operation pointwise identities: 30720
 operation cumulative identities: 254
+proper-factor cumulative identities: 254
 additive tail identities: 6350
 Abel/incidence identities: 894
 triangular telescoping identities: 500
