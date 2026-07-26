@@ -2,7 +2,7 @@
 id: THM-2406
 title: "Degree-eighteen H4 weighted-pole deep-wall collapse"
 status: >
-  CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   In the a_0=1 weighted chart of THM-2389, four necessary pole
   equations already force both 126D=25B^2 and 20BC+21W=0. The
   characteristic-zero certificate is over the complete slope splitting
@@ -13,9 +13,10 @@ status: >
   quotient. Both wall functions, and the four omitted synchronization
   equations, have exact zero normal form. Thus a genuine H_4 survivor
   would lie on THM-2345's already-closed complete common-root wall.
-  Conditional only on independent audit/promotion of this candidate,
-  the repo's entire degree-eighteen Keller trajectory stratum is closed;
-  this does not prove JC(2) or DC(2).
+  Together with the preceding degree-eighteen closures, this closes the
+  inherited genuine nonsplit, polynomial exact-square-prefix reduced
+  degree-eighteen branch. It does not close terminal branches outside
+  THM-2262's reduction or prove JC(2) or DC(2).
 source: codex-2026-07-26-h4-weighted-pole-wall
 depends_on:
   - THM-2332-degree-eighteen-genus-zero-square-class-and-dessin-trap
@@ -35,7 +36,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2406 -- the H4 pole section collapses to the deep wall
 
-**CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2389 replaces a putative degree-eighteen `H_4` identity by a
 three-pole Hermite system. This theorem performs the remaining
@@ -318,10 +319,10 @@ Keller trajectory. This is the required contradiction. Alternatively,
 (21) contradicts THM-2386's coprimality conclusion for a genuine
 `H_4` survivor. Therefore the `H_4S_4^2` stratum is empty.
 
-## 6. The degree-eighteen corollary
+## 6. The inherited degree-eighteen corollary
 
-Once this candidate is independently audited and promoted, the exact
-degree-eighteen branch ledger is:
+Within THM-2262/2297's inherited genuine nonsplit, polynomial
+exact-square-prefix reduction, the degree-eighteen branch ledger is:
 
 | Degree-eighteen branch | Exact closure |
 |---|---|
@@ -331,11 +332,12 @@ degree-eighteen branch ledger is:
 | higher-support `H_4S_4^2` | this theorem, via THM-2389 and THM-2345 |
 
 THM-2332 proves that these exhaust the remaining genus-zero square
-classes in the degree-eighteen reduction. Consequently the **entire
-degree-eighteen Keller trajectory stratum is empty**.
+classes in that reduction. Consequently the **inherited reduced
+degree-eighteen Keller trajectory branch is empty**.
 
-This is a degree-specific closure. Split/even order-raising at other
-degrees, the formal Weyl lift, `JC(2)`, and `DC(2)` remain open.
+This is a degree-specific, reduction-specific closure. Terminal branches
+outside THM-2262's hypotheses, split/even order-raising, the formal Weyl
+lift, `JC(2)`, and `DC(2)` remain open.
 
 ## 7. Exact controls and the sharp lock boundary
 
@@ -381,6 +383,13 @@ matching equations alone do not force the wall. The finite-place
 checks are controls for the characteristic-zero computation, not its
 logical basis.
 
-The candidate proof and exact companion are complete. Promotion into
-the proved graph awaits an independent hostile audit of the field,
-localization, equation typing, normal forms, and branch handoff.
+The independent hostile audit reconstructed the full degree-six slope
+field, checked the `a_0=1` weighted normalization and the exact
+`a_3 A_3(1)` localization, and verified every reconstruction pivot and
+denominator. It converted the four-element grevlex basis to lex order by
+FGLM, reduced all six Buchberger `S`-pairs to zero, and independently
+reduced all nineteen coefficients of the reconstructed numerator and
+the four omitted synchronization equations. Both execution modes and
+declared hashes match. Finally, it checked both handoffs: the wall
+contradicts THM-2386 directly and lies in THM-2345's complete closed
+wall. No mathematical defect was found.

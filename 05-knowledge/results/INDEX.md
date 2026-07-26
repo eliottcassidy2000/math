@@ -1,5 +1,6 @@
 # Script Results Index
 
+- `jc2_degree18_h4_weighted_pole_wall_thm2406.py` -> matching `.out` [THM-2406 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. Over the full degree-six slope splitting field, a pole-unit-saturated four-equation Gröbner certificate forces `126D=25B^2` and `20BC+21W=0`; all omitted synchronizations and all nineteen reconstructed numerator coefficients reduce to zero. THM-2386/2345 then close `H_4`, completing the inherited nonsplit exact-square-prefix reduced degree-eighteen branch, not `JC(2)` or branches outside THM-2262. Hashes `97102aff...9038` / `74006cc3...8e9`.
 - `lrc14_last_lane_septimal_depth_cap_thm2415.py` -> matching `.out` [THM-2415 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. On the uniform final-lane transition `q_*` safe, `13q_*` dangerous, `c_3` safe, exact seven-root disintegration gives mass at least `71/637`. If `M>=3`, its complete `7^(M-1)` phase orbit reaches the digit where `W_H=W_(13H)`; THM-2391's pullback then doubles both guard roots, contradicting W8. Thus every last-lane packet has `M<=2`, including positive-clean packets. The `M=2` phase hostile is exact. Hashes `63b94945...4e1` / `ad8634d1...16b`.
 - `lrc14_two_level_septimal_cage_thm2405.py` -> matching `.out` [THM-2405 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. In THM-2392's direct same-layer cage, the high parent/child band outside the top word has exact mass `72/637`; each primitive low comb occupies exactly one seventh, so the two-low contribution is at most `144/4459`. This gives `delta>=324/4459-mu(U_(a,b))`, positive floors for `(4,1),(3,4),(4,3)`, and eliminates the sole `M=2` no-clean ratio `(4,3)`. Seven `M=1` ratios remain; no profile row is removed and LRC(14) stays open. Source/output hashes are recorded in THM-2405.
 - `lrc14_clean_target_axis_imbalance_thm2403.py` -> matching `.out` [THM-2403 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED]. The global fully-all-safe owner-pivot packet is target-null at its base slice, but every nonzero first-target colour produces a fixed nonzero-target triangle with a nonzero deep colour and a `91`-unit multiplier. Exact energy floor `9rho^2/250994068`, coefficient floor `rho/228488`, and a target-owner-complement hostile delimit the result: no positive-owner alignment, all-coordinate unit address, row decrement, or LRC closure. Source/output SHA-256 `4360b869...a408` / `906ebf9b...eb57`.
@@ -1912,15 +1913,17 @@ remain open.
 
 ### jc2_degree18_h4_weighted_pole_wall_thm2406.out
 
-Exact characteristic-zero companion for **CANDIDATE THM-2406**, pending
-independent hostile audit. It constructs the full degree-six splitting field
+Exact characteristic-zero companion for **PROVED + VERIFIED-EXACT +
+INDEPENDENTLY HOSTILE-AUDITED THM-2406**. It constructs the full degree-six splitting field
 `Q(epsilon)` for the three infinity slopes, performs the lossless
 `a_0=1` pole-unit localization, and computes the four-element triangular
 Groebner basis of the necessary `B_inf/C_one/D_one/sixth-lock` subsystem.
 Both `126D-25B^2` and `20BC+21W` have zero normal form, as do all four
 omitted synchronization equations. Split-place controls at `p=59,101` and
 the explicit pre-lock off-wall hostile `(58,34,47)` pass in normal and
-optimized modes. This is not yet in the proved graph.
+optimized modes. The independent audit also rechecked all nineteen global
+coefficients, every omitted synchronization, the localized Gröbner basis, and
+the THM-2386/2345 branch handoff.
 
 ### lrc14_full_coordinate_projector_thm2410.out
 
