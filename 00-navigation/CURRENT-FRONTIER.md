@@ -172,8 +172,8 @@ exact and finite; it does not prove that every surviving interval is empty.
 
 THM-2168--2257 leave `165` rows; THM-2295--2349 supply packets and `91`-unit edges.
 THM-2350 gives dipoles; THM-2354--2365 give colour/H-drift. THM-2356's zero-only kernel has dimension `28,393` versus `169`; THM-2363 dominates. Audited THM-2366 isolates inverse covariance and sub-`13` budgets; THM-2367 gives exact septimal graft transport.
-Audited THM-2368 proves every canonical owner-pivot root fibre has all `169` target modes, axis gaps `2/169`, and mixed gap `4/169`, but an exact nonnegative orbit hostile shows all local modes can integrate back to zero drift. THM-2369 decomposes pure/fork energy and proves balanced observables slope-blind.
-The live object is therefore the finite rooted cyclotomic phase/event word through blocker multiplication and chamber integration, not another support-only or tournament shadow. The ledger remains `165`.
+Audited THM-2368 gives all `169` root-fibre target modes but an orbit hostile with zero integrated drift; THM-2369 makes balanced observables slope-blind. Hostile-audited THM-2378 then uses the missing rooted phase to empty hard `W=k=1`: a constant low-blocker word would force guard support `3/4` inside top-unit support `1/2`, while a transverse seven-adic fibre gives uncovered mass at least `5/49`.
+The live object is therefore the finite rooted cyclotomic phase/event word through blocker multiplication and chamber integration, now applied to the remaining `k=2` alternatives (especially saturated `W=7`), not another support-only or tournament shadow. Emptying this septimal sublane removes no thirteen-adic row; the ledger remains `165`.
 
 ### Independent routes that remain live
 

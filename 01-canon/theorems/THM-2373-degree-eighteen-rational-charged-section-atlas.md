@@ -2,7 +2,7 @@
 id: THM-2373
 title: "Degree-eighteen rational charged-section atlas"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. After the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. After the
   proved closure of every support of size at most two, each live
   degree-eighteen spectral survivor lies in at least one of the three
   adjacent charts BC!=0, CD!=0, or DW!=0. The Laurent ratios C/B, D/C,
@@ -13,7 +13,8 @@ status: >
   locus when the scale is retained. They are alternative gauges to
   THM-2357's moving-root normalization, not simultaneous extra
   normalizations, and do not by themselves preserve a forgotten Keller
-  one-form or close H2, H4, JC(2), or DC(2).
+  one-form or close H4, JC(2), or DC(2). THM-2371/2376 independently
+  close the full H2 stratum.
 source: codex-2026-07-25-jc-charged-section-atlas
 depends_on:
   - THM-2297-degree-eighteen-target-translation-normal-form
@@ -22,6 +23,7 @@ depends_on:
 related:
   - THM-2357-degree-eighteen-h2-moving-root-reduction
   - THM-2371-degree-eighteen-h2-common-root-elimination
+  - THM-2376-degree-eighteen-h2-coprime-cube-locus-closure
   - THM-2369-complete-line-target-dirichlet-and-balanced-observable-no-go
 script: 04-computation/degree18_rational_charged_section_atlas_thm2373.py
 output: 05-knowledge/results/degree18_rational_charged_section_atlas_thm2373.out
@@ -32,7 +34,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2373 -- a root-free scaling atlas on the live degree-eighteen cone
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2297 exposes the weighted spectral cone
 
@@ -223,7 +225,7 @@ particular, the still-open `H_4 S_4^2` coefficient system may be split
 into the three explicit lanes (15), with overlap consistency controlled
 by (12).
 
-For the `H_2` lane, THM-2357 already spends the same one-dimensional
+Historically, for the `H_2` lane THM-2357 spent the same one-dimensional
 scaling action to move its distinguished branch root to `y=1`. Equations
 (9)--(11) are alternative gauges:
 
@@ -235,9 +237,12 @@ or
 making one adjacent parameter pair equal.          (16)
 ```
 
-They cannot in general be imposed simultaneously. One may retain the
+They cannot in general be imposed simultaneously. One could retain the
 root as a variable and use this atlas, or use THM-2357's moving-root
 system; the theorem supplies no second scaling degree of freedom.
+THM-2371 and THM-2376 have since closed the full `H_2S_5^2` stratum, so
+this choice is now historical there. The live consumer is the still-open
+`H_4S_4^2` stratum.
 
 The atlas preserves the spectral curve only together with its scale
 sidecar. THM-2297 explicitly warns that discarding that sidecar is not a
@@ -254,7 +259,8 @@ On the `B,D`-only support, every Laurent monomial has weight
 ```
 
 which can never equal one for integers `a,b`. The element `rho=-1`
-fixes both nonzero coordinates, giving a genuine `mu_2` stabilizer. None
+fixes both nonzero coordinates, giving the exact kernel `mu_2` of the
+scaling action on a generic `B,D`-only point. None
 of the three adjacent charts (5) is live there.
 
 This is the sharp obstruction to a global weight-one section. It does
@@ -282,8 +288,9 @@ when the chart and scale are retained. If the scale is forgotten, it
 loses the absolute Keller normalization and may not be used as a
 Jacobian-conjecture quotient.
 
-The theorem does not close the localized `H_2` ideals, the `H_4` stratum,
-THM-2371's reserved common-root lane, `JC(2)`, or `DC(2)`.
+The theorem does not itself close the `H_4` stratum, `JC(2)`, or `DC(2)`.
+The formerly open localized `H_2` ideals and common-root lane are now
+closed independently by THM-2371 and THM-2376.
 
 ## 8. Exact companion
 
@@ -312,4 +319,19 @@ Both transcripts must match
 byte-for-byte after LF normalization. Every executable check raises
 explicitly under optimized Python.
 
-Independent audit of the theorem text is pending. QED.
+## 9. Independent audit
+
+An independent read-only audit checked:
+
+- the five support-three/four patterns and the `BC/CD/DW` cover;
+- the charge-one calculation and all three displayed rational sections;
+- covariance of `G_0`, uniqueness within a chosen chart, and the
+  weight-zero transition cocycle;
+- the exact `mu_2` stabilizer/no-charge-one obstruction on the
+  `B,D`-only boundary; and
+- normal/optimized/stored transcript identity with SHA-256 values
+  matching the front matter.
+
+The audit also caught the only stale scope statement: THM-2371 and
+THM-2376 now close `H_2`, while `H_4` remains the live degree-eighteen
+consumer. No mathematical formula changed in that repair. QED.
