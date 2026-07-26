@@ -2,8 +2,8 @@
 id: THM-2440
 title: "Sharp two-comb centred-window radius"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE
-  AUDIT PENDING. If two radius-1/14 integer danger combs cover
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. If two
+  radius-1/14 integer danger combs cover
   almost every point of {||ny||<rho} for rho>1/14, then both speeds
   are multiples of n and rho<=15/182. Equality is possible only for
   the scaled pair {n,13n}, which covers the open window almost
@@ -26,8 +26,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2440 -- the seam-safe two-comb radius is `15/182`
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE
-AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 For a positive integer `u`, write
 
@@ -257,4 +256,30 @@ classification; it does not remove another valuation shape or scalar
 row, prove owner-conditioned survival in the live `c_3<=M` graft, or
 prove LRC(14).
 
-QED conditional on independent audit.
+## 6. Independent hostile audits
+
+Two independent audits reconstructed the centre-mask count, the
+generic-fibre divisibility step, the seam-chain bound, and the equality
+classification. One audit checked the reduced geometry independently
+through `a<=30,b<=100`. The other wrote a separate full-circle exact
+merge, including wraparound gluing, and reproduced:
+
+```text
+all 856,800 bounded triples,
+the unique reduced extremizer (1,13),
+the nine scaled equality triples,
+and zero covers at radius 8/91.                               (19)
+```
+
+That second audit first found and discarded a truncated negative-tooth
+enumerator before reporting (19); the repaired circle merge also
+matched the exact origin-radius formula on every
+`1<=a<=b<=120`. Both audits explicitly checked that closure is used
+only for the finite centre mask and that equality is almost
+everywhere, not pointwise.
+
+Normal and optimized companion transcripts match the stored output
+after LF normalization, and the declared hashes match the working-tree
+bytes.
+
+QED.
