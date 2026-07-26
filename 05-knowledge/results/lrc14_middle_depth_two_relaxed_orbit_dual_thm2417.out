@@ -1,0 +1,21 @@
+THM-2417 middle-depth-two relaxed orbit dual
+N=343 progression_masks=50421
+quotient_steps=14 per side; physical_blocker_masks=2401 per side
+contiguous t=0 U=210 q_masks=490 b_masks=2401,2401 total=204 caps=35,30,30 budget=200 margin=4
+parity     t=0 U=210 q_masks=490 b_masks=2401,2401 total=1998 caps=339,320,320 budget=1996 margin=2
+contiguous t=1 U=210 q_masks=490 b_masks=2401,2401 total=204 caps=35,30,30 budget=200 margin=4
+parity     t=1 U=210 q_masks=490 b_masks=2401,2401 total=9978 caps=1702,1584,1584 budget=9976 margin=2
+contiguous t=2 U=210 q_masks=490 b_masks=2401,2401 total=735 caps=127,113,113 budget=734 margin=1
+parity     t=2 U=210 q_masks=490 b_masks=2401,2401 total=1765 caps=301,280,280 budget=1764 margin=1
+contiguous t=3 U=210 q_masks=490 b_masks=2401,2401 total=513 caps=89,78,78 budget=512 margin=1
+parity     t=3 U=210 q_masks=490 b_masks=2401,2401 total=1911 caps=326,303,303 budget=1910 margin=1
+contiguous t=4 U=210 q_masks=490 b_masks=2401,2401 total=735 caps=127,113,113 budget=734 margin=1
+parity     t=4 U=210 q_masks=490 b_masks=2401,2401 total=1765 caps=301,280,280 budget=1764 margin=1
+contiguous t=5 U=210 q_masks=490 b_masks=2401,2401 total=204 caps=35,30,30 budget=200 margin=4
+parity     t=5 U=210 q_masks=490 b_masks=2401,2401 total=9978 caps=1702,1584,1584 budget=9976 margin=2
+contiguous t=6 U=210 q_masks=490 b_masks=2401,2401 total=204 caps=35,30,30 budget=200 margin=4
+parity     t=6 U=210 q_masks=490 b_masks=2401,2401 total=1998 caps=339,320,320 budget=1996 margin=2
+control: THM-2414 W8 has M=1 and is outside the M=2 universe
+control: THM-2414 W7 has M=2 but fails both full-bin premises
+control: every stored certificate is specific to four lower q masks
+VERIFIED
