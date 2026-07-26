@@ -2,7 +2,7 @@
 id: THM-2366
 title: "Retained-probe target covariance and sub-thirteen budget bridge"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. Retaining
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. Retaining
   every THM-2364 blocker-probe shift inside THM-2365's lawful target
   tensor gives an exact dichotomy for the signed fully mixed colour:
   either a nonzero target survives with the same deep/probe colours, or
@@ -36,7 +36,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2366 -- retain the probe colours through the lawful target action
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2364 forces one signed coefficient which is nonzero in the deepest
 probe colour and in every named blocker-probe colour. THM-2365 supplies a
@@ -105,8 +105,12 @@ K(r,s,t,v)
     product_(j=1)^d D_(R c_(alpha_j),v_j)(x) dx.    (2)
 ```
 
-This definition is made first as a finite table of physical overlaps.
-It is nonnegative. The deepest complement in `F_(s,t)` gives
+This definition is made first as a finite nonnegative table of overlap
+integrals. For a pure word (`d=1`), later scalar-cover redundancy can
+retype its probe as the actual named-factor physical response. For a
+fork (`d=2`), it is a coefficient-derived duplicate-probe overlap bank,
+not a canonically available physical measurement. The deepest complement
+in `F_(s,t)` gives, pointwise almost everywhere,
 
 ```text
 K(t,s,t,v)=0                                      (3)
@@ -313,11 +317,20 @@ only a `kappa_d` fraction of the word mass.
 
 ## 4. What a noninverse coefficient lands
 
-For fixed `u`, first apply the finite probe projector in (7). Then use
-one joint Poisson-Abel smoothing of its displayed danger probes before
-expanding endpoint frequencies. At positive smoothing radius the
-probe expansion is absolutely convergent; bounded-product `L1`
-convergence gives the physical table (2) at the boundary.
+For fixed `u`, first form the finite probe projector
+
+```text
+P_u(x)
+ =13^(-d)sum_v
+   product_j D_(R c_(alpha_j),v_j)(x)zeta^(u.v).   (12h)
+```
+
+It is a bounded BV function. After this finite projection, the
+`m`-then-`X` sums are ordinary absolutely convergent sums. Only the
+internal danger-probe expansion defining `P_u` remains Abel: use one
+joint Poisson-Abel smoothing there, then bounded-product `L1`
+convergence recovers the finite overlap table (2) at the indicator
+boundary.
 
 After this finite `u`-projection, THM-2365's absolutely convergent
 deep-multiplier and endpoint-frequency extraction applies. A noninverse
@@ -342,13 +355,15 @@ multipliers are separately prime to `91`.
 
 For a pure word, scalar-cover redundancy permits the one probe colour to
 be retyped as the actual named-factor response. For a fork, `u` records
-two auxiliary duplicate-blocker probes. It is not a Bockstein, relation,
-or canonical word colour.
+two auxiliary duplicate-blocker probes in a coefficient-derived overlap
+bank, not a canonically available physical measurement. It is not a
+Bockstein, relation, or canonical word colour.
 
-Finite inversion at `v=0` sums all `u`-coloured currents back to the
-canonical uncoloured current, because the delayed word contains every
-anchored probe factor. Nonzero `u`-fibres may cancel in that sum.
-Therefore (13) is **not** a proof that THM-2334's canonical
+At the indicator boundary, finite inversion at `v=0` sums all
+`u`-coloured currents back to the canonical uncoloured current: every
+extra anchored copy collapses by `D^2=D`. This is not an identity at
+finite Poisson radius. Nonzero `u`-fibres may cancel in that boundary
+sum. Therefore (13) is **not** a proof that THM-2334's canonical
 `A_(X,m)(q)` is nonzero. A lawful `u`-selector or a common cone would be
 needed. THM-2361 does not supply it: these endpoint currents are
 off-diagonal and retain its exact terminal-phase hostile.
@@ -421,23 +436,26 @@ There is also a quantitative obstruction to a naive positive
 intertwiner. THM-2365's target action has the two generators
 
 ```text
-T_(u,v)H(r,s,t)=H(r+v,s+u,t+v).
+T_(delta_eta,delta_ell)H(r,s,t)
+ =H(r+delta_ell,s+delta_eta,t+delta_ell).
 ```
 
 The residual `G(r-t)` is constant along both. An eta-visible delayed
-blocker would compare hypothetically with the `u`-generator; a delayed
-`c_3` blocker would compare with the diagonal `v`-generator. Thus either
-pure role has probe-profile `l1` mass `2`, while its corresponding
-lawful target orbit has mass `13`. Any positive intertwiner carrying the
-hostile probe action to that target-action generator while preserving a
-nonzero anchor requires amplification at least
+blocker would compare hypothetically with the `delta_eta`-generator; a
+delayed `c_3` blocker would compare with the diagonal
+`delta_ell`-generator. Thus either pure role has probe-profile `l1` mass
+`2`, while its corresponding lawful target orbit has mass `13`. Any
+positive intertwiner carrying the hostile probe action to that
+target-action generator while preserving a nonzero anchor requires
+amplification at least
 
 ```text
 13/2.
 ```
 
 For a fork, the product probe action has mass `4`, while the full
-`(u,v)` target orbit has mass `169`, requiring amplification at least
+`(delta_eta,delta_ell)` target orbit has mass `169`, requiring
+amplification at least
 
 ```text
 169/4.                                             (19)
@@ -504,13 +522,16 @@ nonzero target landing. For a delayed `c_3` role the corresponding
 hypothetical comparison uses the diagonal target orbit
 
 ```text
-sum_v H(r+v,0,v)<=2H(r,0,0).                       (23a)
+sum_(delta_ell)
+ H(r+delta_ell,0,delta_ell)<=2H(r,0,0).            (23a)
 ```
 
 For a fork, the full product comparison is
 
 ```text
-sum_(u,v)H(r+v,u,v)<=4H(r,0,0).                    (23b)
+sum_(delta_eta,delta_ell)
+ H(r+delta_ell,delta_eta,delta_ell)
+ <=4H(r,0,0).                                      (23b)
 ```
 
 Each residual orbit has respectively `13` or `169` identical values, so
@@ -591,8 +612,9 @@ enough.
 
 For an added blocker probe, the elementary root count gives an `l1`
 budget of two. Its matched lawful THM-2365 target generator is different:
-the eta-visible role uses the `u/s` action, while a delayed `c_3` role
-uses the diagonal `v:(r,t)->(r+v,t+v)` action. Either generator
+the eta-visible role uses the `delta_eta/s` action, while a delayed
+`c_3` role uses the diagonal
+`delta_ell:(r,t)->(r+delta_ell,t+delta_ell)` action. Either generator
 co-shifts the complete present endpoint packet through a quotient-dual
 direction. Other present roles move simultaneously. Their intersections
 can expand even when the named danger alone has a two-cover count.
@@ -616,12 +638,13 @@ phase. For a pure `c_3` role, use instead the thirteen diagonal-orbit
 masses
 
 ```text
-N_v=sum_r H(r+v,0,v).
+N_(delta_ell)
+ =sum_r H(r+delta_ell,0,delta_ell).
 ```
 
 For a fork, the corresponding finite test is the full `13^2`
-`(u,v)`-orbit. These are alternative lawful tests, not identifications
-with the probe shifts.
+`(delta_eta,delta_ell)`-orbit. These are alternative lawful tests, not
+identifications with the probe shifts.
 
 ## 8. Scope on the 165-row frontier
 
@@ -653,19 +676,19 @@ open.
 The dependency-free companion uses exact cyclotomic and `Fraction`
 arithmetic to:
 
-- verify all `2,197` `(a,b,h)` target labels and all `169` target-line
-  cancellations;
-- verify two-dimensional finite inversion and the exact covariance
-  support in (10);
-- verify the exact nonzero-target energy identity, both sharp
-  `Delta/169` and `Delta` boundaries, and the fixed-colour envelope
-  scale;
-- check all twelve hostile deep colours and both sharp pure/fork
-  coefficient and corner values;
-- verify the `l1` amplification factors `13/2` and `169/4`;
+- enumerate the `2,197` target-label decompositions and verify the
+  diagonal-zero/root-orthogonality mechanism behind the `169` target
+  lines;
+- verify two-dimensional inversion on one rational hostile table and
+  inverse-character support for the representative deep colour `a=5`;
+- check the coefficient-space equality patterns attaining both bounds
+  in (12c), together with the hostile `kappa_d` scale;
+- check all twelve hostile deep colours and both pure/fork coefficient
+  and corner values;
+- check the arithmetic amplification ratios `13/2` and `169/4`;
 - enumerate the mass-functional coefficients, their circulant
   annihilation, and squared norm `2028`;
-- reduce the quantitative floors (25)--(27); and
+- check the `C=2` specializations of (23c)--(27); and
 - sweep separate live probe/deep multipliers through their `91`-unit
   boundary.
 
@@ -685,4 +708,7 @@ Both transcripts must match
 byte-for-byte after LF normalization. Every executable check raises
 explicitly under optimized Python.
 
-Independent audit is pending. QED.
+Three independent hostile passes rederived the transform and covariance
+identities, energy bounds, envelope, compatibility tensor, sharp mass
+taxes, quantitative functional, convergence typing, and physical-scope
+boundary; normal, optimized, and stored transcripts agree exactly. QED.
