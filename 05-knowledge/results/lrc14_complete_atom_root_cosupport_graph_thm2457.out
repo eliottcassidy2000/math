@@ -1,0 +1,29 @@
+THM2457 COMPLETE-ATOM ROOT CO-SUPPORT REFEREE
+atoms=128
+directed_matrix_cells=16384
+sharp_matrix_total_mass=1
+sharp_max_edge=1/16384
+two_atom_mass=1
+three_atom_mass=1
+split_base_no_floor=drift:1/4,cosupport:1/1000
+sharp_correlation_energy=1/2028
+sharp_joint_root_energy=1/342732
+sharp_max_joint_coefficient=1/2028
+global_root_denominator=33226752
+global_energy_denominator=92001420705792
+word_root_denominator=132907008
+adaptive_denominators=(2028, 32448, 16224, 8112, 4056, 2028)
+hostile_speeds=(9, 7, 8, 10, 11, 12, 13, 338, 1113879)
+hostile_profile=(1, 2, 5)
+hostile_septimal_depths=(qstar:1,c3:0)
+hostile_complete_mask=(0, 0, 0, 0, 0, 1, 0)
+hostile_deep_norms=(Fraction(2, 13), Fraction(261, 1690))
+hostile_deep_probe_norms=(Fraction(0, 1), Fraction(1, 1690))
+hostile_terminal_source_norms=(Fraction(496, 6591), Fraction(64481, 856830))
+hostile_terminal_other_norms=(Fraction(22, 507), Fraction(1429, 32955))
+hostile_terminal_deep_norms=(Fraction(0, 1), Fraction(1, 10))
+hostile_words=(('a', 'c3'), ('a',))
+hostile_minimum_margins=(Fraction(353, 92274), Fraction(11476, 2998905))
+hostile_open_radii=(Fraction(353, 34740339945948), Fraction(5738, 564530524121655))
+fraction_only_truth_checks=PASS
+ALL_CHECKS_PASSED

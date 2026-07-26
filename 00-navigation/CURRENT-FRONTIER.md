@@ -144,25 +144,12 @@ Its indispensable coordinates are primitive parameter, integral columns, transve
   or a phase-located turn tax, not another unlocated local charge.
 ### Exact live obligation
 
-Rank-twelve cells already lie in finite maximal-minor boxes but still need
-exact finite decision. For each reduced rank-eleven two-anchor star, intersect:
-
-```text
-bad transverse deck D_N(m)<1/14
-  x primitive positive parameter in the strict open-disk failure union
-  x signed-hull owner/Farey ray
-  x pair-sum clock and endpoint-owner word.
-```
-
-Discharge each cell by a THM-2057 clock phase, THM-2059/HYP-2108 endpoint packet, THM-2054 nonaliasing plateau, a relation outside the rank-eleven code, or THM-2047 owner-Euler survival. HYP-8871 is the open finite-state/Farey program; THM-2058 makes its terminals finite, not empty.
-THM-2168--2397 leave `165` rows while supplying relation/edge/toothpick/colour carriers (THM-2356 kernel `28,393`; THM-2363/THM-2368). THM-2405/2415 reduce the final lane to `M<=2`; THM-2417 excludes `M=2`, and THM-2426's transverse root proof empties it.
-THM-2430--2435 reduce `nu_7(c_3)>M` to three typed punctured-stalk shapes.
-Hostile-audited THM-2436 classifies the complete punctured one-/two-blocker stalk and uses fixed-spectrum physical repeated-pair banks to empty all three remaining types. Thus the whole deep-`c_3` branch is empty, while `nu_7(c_3)<=M` retains an isolated noncirculant top graft. No scalar row is removed.
-Its exact atlas has `2,629` one-source and `38,750` distinct-two-source assignments; fixed-spectrum sharp cell caps `75`, `57`, and `67` contradict the typed parent floors `78`, `65`, and `78` over `91`.
-THM-2440 forces two covering combs to inherit pullback frequency `n`. Its sharp closed/open-a.e. radius is `15/182` at `{n,13n}`, while literal-open is `15/196` at `{n,14n}`; the old strict `{1,13}` form misses `x=1/14` (MISTAKE-274). This is a reusable sidecar, not a graft closure. THM-2441 makes every fixed rational delayed-clock audit finite modulo `7D_0`, preserving the centred signed event word and target-restricted nonflatness.
-THM-2445/2442 give `24` positive partial-endpoint cells and restore the ghost word; THM-2448 is the sharp fixed-`X` atlas. THM-2452 closes the aggregate endpoint debt: one of `128` complete co-shifted Boolean masks copies to the bare leg, all transitions vanish after the full-`X` sum, and a fresh exact `X` and `91`-unit `m` survive. Floors are `D_0/16384` and `D_0/212992`; adaptive extension counts are `(1,16,8,4,2,1)`.
-THM-2449 reduces persistent anchored failure to two finite additive tests, with delta-plus-six-replicas as the exact hostile. THM-2418--2421 remain carry/reference sidecars.
-Next: identify the matched literal atom with its semantic THM-2305 owner/repair word and canonical THM-2401 root orientation, or build the lawful intertwiner. Ledger: `165`.
+Finite rank-twelve boxes and rank-eleven stars remain undecided (HYP-8871).
+THM-2168--2397 leave `165` rows (THM-2356 kernel `28,393`; THM-2363/THM-2368). THM-2417/2426/2436 empty `nu_7(c_3)>M`; only the noncirculant graft `nu_7(c_3)<=M` survives.
+THM-2440 separates the sharp a.e. two-comb radius `15/182` from literal-open `15/196` (MISTAKE-274). THM-2441 makes each rational delayed-clock audit finite modulo `7D_0`.
+THM-2445/2442 give `24` partial-endpoint cells and restore the ghost word; THM-2452 copies one of `128` complete masks to the bare leg, kills all transitions after full-`X` summation, and reselects a fresh exact `X` and `91`-unit `m`.
+THM-2449/2456 classify mixed-zero failure: one Boolean root chart is rigid, but chart averaging has exact uniform-offset `8/20/104` controls. THM-2457 makes common-root service a directed atom graph: an edge gives service after at most three atoms, with sharp floor `M_0/16384`, but no drift floor without root-image coupling.
+Next: exclude the physical uniform-offset mixtures or couple selected drift to a canonical semantic/root edge. Local bits alone do not determine the word: a live strict atom supports both pure and fork strata. Ledger: `165`.
 
 ### Independent routes that remain live
 

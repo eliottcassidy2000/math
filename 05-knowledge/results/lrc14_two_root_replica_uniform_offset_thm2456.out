@@ -1,0 +1,29 @@
+THM-2456 exact companion
+group_order=13
+source_rows=7
+danger_kernel_ranks=12_of_12_full
+safe_kernel_ranks=12_of_12_full
+full_support_control_rank=13
+one_chart_nontrivial_profiles=0
+two_chart_a=1
+two_chart_w=1:1/2,2:1/2
+two_chart_row_sums=14,1
+two_chart_total_mass=20
+safe_two_chart_a=11/2
+safe_two_chart_nonzero_w=11
+exclusive_constraint=7f+c<=1
+eight_chart_count=8
+eight_chart_a=1/4
+eight_chart_w=1:1/8,2:1/8
+eight_chart_total_mass=5
+eight_chart_minimal_equal_bank=8
+singleton_chart_count=20
+singleton_a=1/10
+singleton_total_mass=2
+paired_safe_chart_count=104
+paired_safe_a=11/52
+paired_safe_w=1:1/104,2:1/104
+paired_safe_total_mass=75/26
+danger_gram=2I+S+S^-1
+safe_gram_minus_danger_gram=9J
+ALL CHECKS PASSED
