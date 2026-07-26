@@ -6,6 +6,7 @@ related:
   - HYP-1965
   - HYP-1966
   - HYP-1987
+  - THM-2413-prime-index-affine-drift-and-twin-center-weld
 ---
 
 # HYP-1994: twin-prime Goldbach reduces to binary Goldbach on the twin-center necklace; last exception is 4208
@@ -19,11 +20,16 @@ Even numbers NOT of the form t1+t2 (t1,t2 in T) = OEIS A007534.
 
 **Structural claim (VERIFIED exactly on even n in (8,6000], 0 mismatches).**
 Twin pairs are centered at multiples of 6 (pair {6k-1,6k+1} has center 6k; only
-{3,5}, center 4, is anomalous). Let C = twin-pair centers, K = C/6 =
+{3,5}, center 4, is anomalous). THM-2413 identifies the full center set
+`C_all` exactly with OEIS A014574 and with the plateau edges of the slope-two
+prime-index drift. Put `C_6=C_all minus {4}` and let K = C_6/6 =
 {k : 6k±1 both prime} = {1,2,3,5,7,10,12,17,18,...} (the "twin-center necklace").
-A sum of two twin primes lands in {c1+c2-2, c1+c2, c1+c2+2}; since C⊂6Z the
-covering sum is a multiple of 6, so each mod-6 triple {6m-2,6m,6m+2} is
-representable as a UNIT iff 6m∈C+C iff m∈K+K. Hence:
+A sum chosen from two nonexceptional twin pairs lands in
+`{c1+c2-2,c1+c2,c1+c2+2}`; since `C_6 subset 6Z`, the covering center sum is a
+multiple of 6. Thus each mod-6 triple `{6m-2,6m,6m+2}` is represented by this
+packet iff `6m in C_6+C_6` iff `m in K+K`. On the stated finite range, the
+separate exhaustive check confirms that the exceptional pair `{3,5}` creates
+no additional representability status. Hence, within that verified scope:
 
   **even n>8 is a sum of two twin primes  ⇔  round(n/6) ∈ K+K.**
 

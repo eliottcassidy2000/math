@@ -1,16 +1,20 @@
 theorem=THM-2412
-arithmetic=Fraction-only
-scaled-falling-basis-checks=39
-umbral-intertwiner-checks=33
-terminating-exponential-checks=117
-central-layer-checks=13
-A032443-first=1,3,11,42,163,638
-A000346-shifted-first=1,5,22,93,386,1586
-central-sum=4^n
-central-difference=binomial(2n,n)
-Catalan-leakage=plus:-C_(n-1),minus:+C_(n-1)
-tournament-Hamming-shell-checks=9
-hostile-power-basis=D_1(x^2)=2x+1
-hostile-tournament-exponent=v=4 gives 2^6,not 2^4
-optimization-stable-truth-checks=304
-status=PASS
+status=PROVED+VERIFIED-EXACT
+falling_factorial_lowering_checks=228
+scaled_falling_lowering_checks=468
+operator_dictionary_checks=22
+finite_exponential_checks=231
+delta_unit=2^n;delta_eigenvalue=1
+four_power_newton=4^n=sum_k(3^k binom(n,k))
+tournament_binary_coordinate_checks=13
+switching_global_gauge_checks=254
+A032443_prefix=1,3,11,42,163,638
+A000346_prefix=1,5,22,93,386
+central_half_split_checks=51
+half_sum=4^(n+1);half_difference=binom(2n+2,n+1)
+catalan_convolution_ladder_checks=51
+catalan_leakage_recurrence_checks=50
+catalan*A032443=4^n;catalan*4^n=A000346;catalan^2*A032443=A000346
+operation_collision=A_(n+1)+B_n=4^(n+1)=4*4^n
+hostiles=monomial-lowering;base-not-two;central-tie-deletion;sixth-term-639
+all_checks=PASS

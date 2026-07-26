@@ -1,237 +1,304 @@
 #!/usr/bin/env python3
 """Exact companion for THM-2412.
 
-Checks the scaled Gregory--Newton lowering identity, the umbral
-intertwiner, terminating discrete exponentials, the central Bernoulli-triangle
-split, Catalan leakage recurrences, and the tournament Hamming-shell count.
-Only standard-library exact rational arithmetic is used.
+Checks the derivative/finite-difference basis dictionary, the exponential
+eigenfunction laws, the Pascal half-row split, and the Catalan convolution
+ladder using integers and Fractions only.
 """
 
-from fractions import Fraction
+from fractions import Fraction as F
 from math import comb, factorial
 
 
-TRUTH_CHECKS = 0
-
-
-def require(condition, message):
-    """Truth-bearing check that remains active under ``python -O``."""
-
-    global TRUTH_CHECKS
-    TRUTH_CHECKS += 1
+def require(condition: bool, message: str) -> None:
     if not condition:
         raise RuntimeError(message)
 
 
-def trim(p):
-    q = list(p)
-    while len(q) > 1 and q[-1] == 0:
-        q.pop()
-    return tuple(q)
+def falling(x: F, k: int) -> F:
+    value = F(1)
+    for j in range(k):
+        value *= x - j
+    return value
 
 
-def add(p, q):
-    n = max(len(p), len(q))
-    return trim(
-        [
-            (p[i] if i < len(p) else 0)
-            + (q[i] if i < len(q) else 0)
-            for i in range(n)
-        ]
+def scaled_falling(x: F, k: int, h: F) -> F:
+    value = F(1)
+    for j in range(k):
+        value *= x - j * h
+    return value
+
+
+def poly_value(coefficients: tuple[F, ...], x: F) -> F:
+    value = F(0)
+    for coefficient in reversed(coefficients):
+        value = value * x + coefficient
+    return value
+
+
+def derivative_coefficients(coefficients: tuple[F, ...]) -> tuple[F, ...]:
+    if len(coefficients) <= 1:
+        return (F(0),)
+    return tuple(j * coefficients[j] for j in range(1, len(coefficients)))
+
+
+def delta_value(coefficients: tuple[F, ...], x: F, order: int = 1) -> F:
+    return sum(
+        (-1) ** (order - j) * comb(order, j) * poly_value(coefficients, x + j)
+        for j in range(order + 1)
     )
 
 
-def scale(p, c):
-    return trim([c * x for x in p])
+def stirling_second(size: int) -> list[list[int]]:
+    table = [[0] * (size + 1) for _ in range(size + 1)]
+    table[0][0] = 1
+    for n in range(1, size + 1):
+        for k in range(1, n + 1):
+            table[n][k] = table[n - 1][k - 1] + k * table[n - 1][k]
+    return table
 
 
-def multiply(p, q):
-    out = [Fraction(0) for _ in range(len(p) + len(q) - 1)]
-    for i, x in enumerate(p):
-        for j, y in enumerate(q):
-            out[i + j] += x * y
-    return trim(out)
+def stirling_first_signed(size: int) -> list[list[int]]:
+    table = [[0] * (size + 1) for _ in range(size + 1)]
+    table[0][0] = 1
+    for n in range(1, size + 1):
+        for k in range(1, n + 1):
+            table[n][k] = table[n - 1][k - 1] - (n - 1) * table[n - 1][k]
+    return table
 
 
-def derivative(p):
-    if len(p) == 1:
-        return (Fraction(0),)
-    return trim([i * p[i] for i in range(1, len(p))])
+def convolution(left: list[int], right: list[int], n: int) -> int:
+    return sum(left[k] * right[n - k] for k in range(n + 1))
 
 
-def shift(p, h):
-    """Coefficients of p(x+h)."""
+# ---------------------------------------------------------------------------
+# 1. The lowering bases and the Stirling change of coordinates.
+# ---------------------------------------------------------------------------
 
-    out = [Fraction(0) for _ in p]
-    for j, c in enumerate(p):
-        for i in range(j + 1):
-            out[i] += c * comb(j, i) * h ** (j - i)
-    return trim(out)
+degree = 12
+S2 = stirling_second(degree)
+s1 = stirling_first_signed(degree)
+lowering_checks = 0
 
+for k in range(1, degree + 1):
+    for numerator in range(-7, 12):
+        x = F(numerator, 3)
+        require(
+            falling(x + 1, k) - falling(x, k) == k * falling(x, k - 1),
+            "Delta did not lower the falling-factorial basis exactly",
+        )
+        lowering_checks += 1
 
-def difference_quotient(p, h):
-    return scale(add(shift(p, h), scale(p, -1)), 1 / h)
-
-
-def falling_poly(k, h):
-    out = (Fraction(1),)
-    for j in range(k):
-        out = multiply(out, (-j * h, Fraction(1)))
-    return out
-
-
-def umbral(p, h):
-    """U_h(x^k)=x^(falling k,h), extended linearly."""
-
-    out = (Fraction(0),)
-    for k, c in enumerate(p):
-        out = add(out, scale(falling_poly(k, h), c))
-    return out
-
-
-def falling_value(x, k, h):
-    out = Fraction(1)
-    for j in range(k):
-        out *= x - j * h
-    return out
-
-
-def catalan(n):
-    return comb(2 * n, n) // (n + 1)
-
-
-def inclusive_half(n):
-    return sum(comb(2 * n, k) for k in range(n + 1))
-
-
-def strict_half(n):
-    return sum(comb(2 * n, k) for k in range(n))
-
-
-def main():
-    hs = (Fraction(1), Fraction(2, 3), Fraction(-3, 5))
-    checked_basis = 0
-    checked_intertwiners = 0
-    for h in hs:
-        for k in range(13):
-            lhs = difference_quotient(falling_poly(k, h), h)
-            rhs = (
-                (Fraction(0),)
-                if k == 0
-                else scale(falling_poly(k - 1, h), k)
-            )
-            require(lhs == rhs, f"lowering identity failed at h={h}, k={k}")
-            checked_basis += 1
-
-        for degree in range(11):
-            # A deterministic hostile coefficient vector with mixed signs.
-            p = tuple(
-                Fraction(((-1) ** k) * (degree + k + 1), k + 1)
-                for k in range(degree + 1)
-            )
+scaled_lowering_checks = 0
+for h in (F(1), F(2, 3), F(-3, 5)):
+    for k in range(1, degree + 1):
+        for numerator in range(-5, 8):
+            x = F(numerator, 4)
             require(
-                difference_quotient(umbral(p, h), h)
-                == umbral(derivative(p), h),
-                f"umbral intertwiner failed at h={h}, degree={degree}",
-            )
-            checked_intertwiners += 1
-
-    checked_exponentials = 0
-    for h in (Fraction(1), Fraction(2, 3), Fraction(-1, 4)):
-        for lam in (
-            Fraction(1),
-            Fraction(3, 2),
-            Fraction(-2, 3),
-        ):
-            for n in range(13):
-                x = n * h
-                newton = sum(
-                    lam**k * falling_value(x, k, h) / factorial(k)
-                    for k in range(n + 1)
+                (
+                    scaled_falling(x + h, k, h)
+                    - scaled_falling(x, k, h)
                 )
-                require(
-                    newton == (1 + h * lam) ** n,
-                    f"discrete exponential failed at h={h}, lambda={lam}, n={n}",
-                )
-                checked_exponentials += 1
-
-    plus = []
-    minus = []
-    checked_central = 0
-    for n in range(13):
-        p = inclusive_half(n)
-        m = strict_half(n)
-        center = comb(2 * n, n)
-        require(p == (4**n + center) // 2, f"inclusive half failed at n={n}")
-        require(m == (4**n - center) // 2, f"strict half failed at n={n}")
-        require(p + m == 4**n, f"reflected sum failed at n={n}")
-        require(p - m == center, f"central difference failed at n={n}")
-        if n:
-            require(
-                p == 4 * plus[-1] - catalan(n - 1),
-                f"plus Catalan leakage failed at n={n}",
+                / h
+                == k * scaled_falling(x, k - 1, h),
+                "scaled difference quotient did not lower its basic sequence",
             )
-            require(
-                m == 4 * minus[-1] + catalan(n - 1),
-                f"minus Catalan leakage failed at n={n}",
-            )
-        plus.append(p)
-        minus.append(m)
-        checked_central += 1
+            scaled_lowering_checks += 1
 
-    # The first coefficients of the two claimed ordinary generating functions.
-    # (1-4z)^(-1/2) has coefficient C(2n,n).
-    for n, (p, m) in enumerate(zip(plus, minus)):
+for j in range(degree + 1):
+    for numerator in range(-7, 12):
+        x = F(numerator, 3)
         require(
-            2 * p == 4**n + comb(2 * n, n),
-            f"plus generating coefficient failed at n={n}",
+            x**j == sum(S2[j][k] * falling(x, k) for k in range(j + 1)),
+            "second-kind Stirling basis change failed",
         )
         require(
-            2 * m == 4**n - comb(2 * n, n),
-            f"minus generating coefficient failed at n={n}",
+            falling(x, j) == sum(s1[j][k] * x**k for k in range(j + 1)),
+            "first-kind Stirling basis change failed",
         )
 
-    checked_tournaments = 0
-    for vertices in range(1, 10):
-        edges = comb(vertices, 2)
-        shells = [comb(edges, k) for k in range(edges + 1)]
+# A deterministic rational polynomial supplies a nontrivial all-coordinate
+# Maclaurin/Gregory--Newton comparison.
+coefficients = tuple(F((-1) ** j * (j + 2), j + 1) for j in range(9))
+newton_coefficients = tuple(
+    delta_value(coefficients, F(0), k) / factorial(k)
+    for k in range(len(coefficients))
+)
+
+for k, newton_coefficient in enumerate(newton_coefficients):
+    transformed = sum(
+        coefficients[j] * S2[j][k] for j in range(k, len(coefficients))
+    )
+    require(newton_coefficient == transformed, "Maclaurin-to-Newton transform")
+
+for j, maclaurin_coefficient in enumerate(coefficients):
+    transformed = sum(
+        newton_coefficients[k] * s1[k][j]
+        for k in range(j, len(coefficients))
+    )
+    require(maclaurin_coefficient == transformed, "Newton-to-Maclaurin transform")
+
+for numerator in range(-11, 18):
+    x = F(numerator, 4)
+    reconstructed = sum(
+        newton_coefficients[k] * falling(x, k)
+        for k in range(len(coefficients))
+    )
+    require(reconstructed == poly_value(coefficients, x), "Newton reconstruction")
+
+# E=exp(D), Delta=E-I, and D=log(I+Delta), all finite on polynomials.
+operator_checks = 0
+for numerator in range(-9, 13):
+    x = F(numerator, 5)
+    derivative = derivative_coefficients(coefficients)
+    exp_D = F(0)
+    current = coefficients
+    for order in range(len(coefficients)):
+        exp_D += poly_value(current, x) / factorial(order)
+        current = derivative_coefficients(current)
+    require(exp_D == poly_value(coefficients, x + 1), "E != exp(D)")
+
+    log_shift = sum(
+        F((-1) ** (order + 1), order)
+        * delta_value(coefficients, x, order)
+        for order in range(1, len(coefficients))
+    )
+    require(log_shift == poly_value(derivative, x), "D != log(I+Delta)")
+    operator_checks += 1
+
+
+# ---------------------------------------------------------------------------
+# 2. Continuous and discrete exponentials.
+# ---------------------------------------------------------------------------
+
+exponential_checks = 0
+for base in range(-3, 8):
+    for n in range(21):
         require(
-            sum(shells) == 2**edges,
-            f"tournament Hamming shells failed at v={vertices}",
+            base**n
+            == sum(comb(n, k) * (base - 1) ** k for k in range(n + 1)),
+            "finite Newton exponential failed",
         )
-        checked_tournaments += 1
+        exponential_checks += 1
 
-    # Hostiles to the two most tempting overstatements.
-    x_squared = (Fraction(0), Fraction(0), Fraction(1))
+for n in range(31):
     require(
-        difference_quotient(x_squared, Fraction(1))
-        == (Fraction(1), Fraction(2)),
-        "power-basis hostile value changed",
+        2**n == sum(falling(F(n), k) / factorial(k) for k in range(n + 1)),
+        "unit Delta exponential failed",
     )
     require(
-        difference_quotient(x_squared, Fraction(1)) != derivative(x_squared),
-        "power-basis hostile no longer separates difference and derivative",
+        4**n == sum(3**k * comb(n, k) for k in range(n + 1)),
+        "4^n Newton expansion failed",
     )
-    require(2 ** comb(4, 2) == 64, "tournament edge-slot count changed")
-    require(2**4 == 16, "vertex-exponent hostile control changed")
+    if n < 30:
+        require(2 ** (n + 1) - 2**n == 2**n, "Delta 2^n eigenvalue")
+        require(4 ** (n + 1) - 4**n == 3 * 4**n, "Delta 4^n eigenvalue")
 
-    print("theorem=THM-2412")
-    print("arithmetic=Fraction-only")
-    print(f"scaled-falling-basis-checks={checked_basis}")
-    print(f"umbral-intertwiner-checks={checked_intertwiners}")
-    print(f"terminating-exponential-checks={checked_exponentials}")
-    print(f"central-layer-checks={checked_central}")
-    print("A032443-first=1,3,11,42,163,638")
-    print("A000346-shifted-first=1,5,22,93,386,1586")
-    print("central-sum=4^n")
-    print("central-difference=binomial(2n,n)")
-    print("Catalan-leakage=plus:-C_(n-1),minus:+C_(n-1)")
-    print(f"tournament-Hamming-shell-checks={checked_tournaments}")
-    print("hostile-power-basis=D_1(x^2)=2x+1")
-    print("hostile-tournament-exponent=v=4 gives 2^6,not 2^4")
-    print(f"optimization-stable-truth-checks={TRUTH_CHECKS}")
-    print("status=PASS")
+# A labelled tournament has one binary choice for every unordered pair.
+tournament_checks = 0
+for vertices in range(13):
+    pairs = vertices * (vertices - 1) // 2
+    require(sum(comb(pairs, k) for k in range(pairs + 1)) == 2**pairs,
+            "tournament binary-coordinate count failed")
+    tournament_checks += 1
+
+switching_gauge_checks = 0
+for vertices in range(1, 8):
+    signs = {
+        (i, j): 1 if (i * 5 + j * 3 + vertices) % 2 else -1
+        for i in range(vertices)
+        for j in range(i + 1, vertices)
+    }
+    for word in range(1 << vertices):
+        x = tuple(1 if word & (1 << i) else -1 for i in range(vertices))
+        energy = sum(signs[i, j] * x[i] * x[j] for i, j in signs)
+        negated = tuple(-entry for entry in x)
+        negated_energy = sum(
+            signs[i, j] * negated[i] * negated[j] for i, j in signs
+        )
+        require(energy == negated_energy, "global switching gauge failed")
+        switching_gauge_checks += 1
 
 
-if __name__ == "__main__":
-    main()
+# ---------------------------------------------------------------------------
+# 3. Complementary Pascal half-rows and the Catalan ladder.
+# ---------------------------------------------------------------------------
+
+limit = 50
+A = [
+    sum(comb(2 * n, k) for k in range(n + 1))
+    for n in range(limit + 2)
+]
+B = [
+    sum(comb(2 * n + 2, k) for k in range(n + 1))
+    for n in range(limit + 1)
+]
+P = [4**n for n in range(limit + 2)]
+Catalan = [comb(2 * n, n) // (n + 1) for n in range(limit + 2)]
+
+require(A[:6] == [1, 3, 11, 42, 163, 638], "A032443 prefix mismatch")
+require(B[:5] == [1, 5, 22, 93, 386], "A000346 prefix mismatch")
+require(P[:5] == [1, 4, 16, 64, 256], "power-of-four prefix mismatch")
+
+split_checks = 0
+for n in range(limit + 1):
+    central = comb(2 * n + 2, n + 1)
+    require(A[n + 1] + B[n] == 4 ** (n + 1), "half-row sum failed")
+    require(A[n + 1] - B[n] == central, "central tie-layer difference failed")
+    require(A[n + 1] == (4 ** (n + 1) + central) // 2, "weak half")
+    require(B[n] == (4 ** (n + 1) - central) // 2, "strict half")
+    split_checks += 1
+
+catalan_checks = 0
+for n in range(limit + 1):
+    require(convolution(Catalan, A, n) == P[n], "Catalan*A != 4^n")
+    require(convolution(Catalan, P, n) == B[n], "Catalan*4^n != B")
+    catalan_squared_A = sum(
+        Catalan[i] * Catalan[j] * A[n - i - j]
+        for i in range(n + 1)
+        for j in range(n - i + 1)
+    )
+    require(catalan_squared_A == B[n], "Catalan^2*A != B")
+    catalan_checks += 1
+
+catalan_leakage_checks = 0
+strict_half = [0] + B[:limit]
+for n in range(1, limit + 1):
+    cat = Catalan[n - 1]
+    require(A[n] == 4 * A[n - 1] - cat, "weak-half Catalan leakage")
+    require(
+        strict_half[n] == 4 * strict_half[n - 1] + cat,
+        "strict-half Catalan leakage",
+    )
+    catalan_leakage_checks += 1
+
+# Hostile boundaries: ordinary powers are not the exact Delta-lowering basis,
+# bases other than 2 have a different Delta eigenvalue, and deleting the
+# central layer changes the half-row.
+require((F(3) + 1) ** 2 - F(3) ** 2 == 7, "monomial hostile setup")
+require(7 != 2 * F(3), "monomial basis accidentally lowered exactly")
+require(3**8 - 3**7 == 2 * 3**7, "base-three hostile setup")
+require(3**8 - 3**7 != 3**7, "base 2 was not unique at eigenvalue one")
+require(A[5] == 638 and A[5] != 639, "sixth-term prefix guard failed")
+
+
+print("theorem=THM-2412")
+print("status=PROVED+VERIFIED-EXACT")
+print(f"falling_factorial_lowering_checks={lowering_checks}")
+print(f"scaled_falling_lowering_checks={scaled_lowering_checks}")
+print(f"operator_dictionary_checks={operator_checks}")
+print(f"finite_exponential_checks={exponential_checks}")
+print("delta_unit=2^n;delta_eigenvalue=1")
+print("four_power_newton=4^n=sum_k(3^k binom(n,k))")
+print(f"tournament_binary_coordinate_checks={tournament_checks}")
+print(f"switching_global_gauge_checks={switching_gauge_checks}")
+print("A032443_prefix=1,3,11,42,163,638")
+print("A000346_prefix=1,5,22,93,386")
+print(f"central_half_split_checks={split_checks}")
+print("half_sum=4^(n+1);half_difference=binom(2n+2,n+1)")
+print(f"catalan_convolution_ladder_checks={catalan_checks}")
+print(f"catalan_leakage_recurrence_checks={catalan_leakage_checks}")
+print("catalan*A032443=4^n;catalan*4^n=A000346;catalan^2*A032443=A000346")
+print("operation_collision=A_(n+1)+B_n=4^(n+1)=4*4^n")
+print("hostiles=monomial-lowering;base-not-two;central-tie-deletion;sixth-term-639")
+print("all_checks=PASS")

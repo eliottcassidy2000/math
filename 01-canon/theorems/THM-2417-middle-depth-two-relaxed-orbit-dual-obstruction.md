@@ -2,7 +2,7 @@
 id: THM-2417
 title: "Middle-depth-two relaxed orbit dual obstruction"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. Under
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Under
   THM-2391's primitive final-lane scalar-cover hypotheses, the
   septimal top depth M=2 is impossible. On a positive-measure family
   of generic 343-orbits both C_3 and c_3 are safe. After guard gauge,
@@ -35,7 +35,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2417 -- the middle-depth-two relaxed orbit dual obstruction
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2391 reduces every survivor of the last septimal lane to one common
 primitive lower layer. At depth `M=2`, its quotient blockers have only
@@ -453,3 +453,28 @@ after LF normalization. The dependency-free verifier:
 
 Every executable check uses an optimization-safe `require` function.
 No Python `assert` is used.
+
+## 10. Independent hostile audit
+
+An independent set/frozenset implementation, sharing no bitset engine with
+the companion, reconstructed:
+
+- the simultaneous `C_3/c_3`-safe `343`-orbit and all translated null-set
+  removals;
+- the single `H`-gauge words `G,Q_t,U_t`;
+- every lower-`q` containment and both quotient support types;
+- the same-gauge physical transport
+
+  ```text
+  H C_i^(-1) -> H(13C_i)^(-1)=13^(-1)H C_i^(-1) mod 343;
+  ```
+
+- all `14` quotient steps and `2401` transported blocker masks per side;
+  and
+- all fourteen dual maxima in the table of Section 6.
+
+Every independently reconstructed margin is in `{1,2,4}` and is strictly
+positive. Normal, optimized, and stored transcripts byte-match, and the
+frontmatter hashes agree. The audit also replayed the THM-2414 `W=8/W=7`
+and THM-2415 phase-grid hostiles and confirmed that none satisfies the
+six-mask scalar-cover premises. No flaw was found.

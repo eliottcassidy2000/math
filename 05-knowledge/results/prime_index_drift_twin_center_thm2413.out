@@ -1,0 +1,17 @@
+theorem=THM-2413
+status=PROVED+FINITE-EXACT;LITERATURE-CONSEQUENCES-CITED
+prime_count=17984;drift_line_keys=1332
+drift_incidence_checks=141600
+second_difference_checks=804
+H2_initial=0,-1,-1,-1,1,1;unique_initial_descent=n1_to_n2
+H2_delta=prime_gap-2;post_n2=nonnegative;zero=exactly-twin
+A014574_prefix=4,6,12,18,30,42,60,72,102,108,138,150
+twin_centers_checked=1270
+atom_pattern_checks=19997
+unique_slope2_triple=indices_2,3,4|primes_3,5,7|line_y=2x-1
+reciprocal_term_checks=200
+reciprocal_identity=half_twin_pair=1/center+1/(center*(center^2-1))
+slope4_control=6,7,10,12,13,16,18,21|line_y=4x-11
+A373813_exact_prefix=1,1,2,2,2,3,3,3,3,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,6,6,7
+hostiles=singleton-line;slope2-isolated-pair;initial-H2-descent
+all_checks=PASS

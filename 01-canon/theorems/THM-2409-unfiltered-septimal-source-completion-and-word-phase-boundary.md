@@ -18,8 +18,10 @@ status: >
   base factors. With a genuine delayed word,
   R=13^k is a unit mod 7, so the word's source factor must be shifted
   too; then the danger partition no longer reconstructs the fixed-word
-  deletion current. No terminal-word repair, all-91-unit address, row
-  exclusion, or LRC(14) conclusion is claimed.
+  deletion current. More sharply, the THM-2334 exact-address gauge
+  permits only the skew-diagonal source/word character omega=R ell;
+  every relative word offset is gauge. No terminal-word repair,
+  all-91-unit address, row exclusion, or LRC(14) conclusion is claimed.
 source: codex-2026-07-26-septimal-source-completion
 depends_on:
   - THM-2334-relation-residue-current-and-character-twist-pushforward
@@ -456,6 +458,77 @@ sum_ell D_ell W_ell=0.                             (32)
 ```
 
 Thus the active word can destroy the partition completely.
+
+### 5.1 Skew-diagonal descent obstruction
+
+The tempting repair is to introduce an independent relative word offset.
+Algebraically that exposes real information, but it is not a lawful
+exact-address coordinate.
+
+Use THM-2334's decomposition variables `(u,beta,v)` at clock `R`. A putative
+septimal character which shifts present/bare occurrences by `ell` and the
+transported-word occurrence by `omega` is
+
+```text
+chi_(ell,omega)(u,beta,v)
+ =e_7(ell.u+omega.beta-ell.v).                    (32a)
+```
+
+Under the exact-address gauge action
+
+```text
+(u,beta,v) -> (u+p,beta+q,v+p+Rq),
+```
+
+the multiplier of (32a) is
+
+```text
+e_7((omega-Rell).q).                               (32b)
+```
+
+For every `q`, the gauge contains `(p,q)=(-Rq,q)`. Therefore
+
+```text
+chi_(ell,omega) descends to the exact-address quotient
+iff omega=Rell mod 7.                              (32c)
+```
+
+The lawful source/word characters are precisely this skew diagonal. A
+relative offset `omega_j-Rell_j` for one source occurrence is gauge-invariant
+only when it is zero.
+
+The off-diagonal algebra is nevertheless exact. Put
+
+```text
+epsilon=R mod 7 in {+1,-1},
+
+P_(ell,r)=D_ell W_(epsilon ell+r).
+```
+
+Its two-dimensional normalized transform factors as
+
+```text
+Phat(k,h)=Dhat(k-epsilon h)What(h).                 (32d)
+```
+
+For the singleton hostile `D_ell(x)=1_(x=ell)` and
+`W_a=1-D_a`, the lawful diagonal at `epsilon=1` vanishes while every
+off-diagonal averaged offset is `1/7`. Thus polarization sees exactly the
+information that (32c) declares gauge-dependent.
+
+Changing the clock changes only `epsilon=(-1)^k`; it does not create a
+transverse offset. Translating a THM-2305 word changes the literal terminal
+stratum rather than producing another character of the same current.
+Candidate THM-2414 points to the correctly typed replacement: retain the
+parent-dependent affine digit `floor(Ry) mod 7` and its torsor map on one
+same-parent cell. It supplies one physical offset per parent, not seven
+independent copies.
+
+Any lawful repair must therefore retain the parent cell, source owner,
+terminal word, clock, both septimal phase torsors, their affine transporter,
+the common root sheet/right-endpoint gauge, and target/deep colours in one
+signed joint coefficient. An off-diagonal Fourier energy without that
+sidecar cannot repair (31).
 
 ## 6. Consequence and exact boundary
 

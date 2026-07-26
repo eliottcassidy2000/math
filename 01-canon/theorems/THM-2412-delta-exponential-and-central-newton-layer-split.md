@@ -2,395 +2,422 @@
 id: THM-2412
 title: "Delta exponential and central Gregory--Newton layer split"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. The scaled
-  falling-factorial umbral map U_h(x^k)=
-  x(x-h)...(x-(k-1)h) exactly intertwines the continuous derivative
-  with the forward difference quotient. Its unit-eigenvalue lattice
-  solution is (1+h)^(x/h), so h=1 gives 2^N while the fixed-endpoint
-  h->0 limit gives e^x. On the central Bernoulli-triangle cut,
-  A032443=(4^n+C(2n,n))/2 and shifted A000346=
-  (4^n-C(2n,n))/2 form a reflected numerical partition of 4^n; the
-  underlying lower half-spaces are nested, not a literal set partition.
-  The central binomial coefficient is exactly the reflection-fixed tie
-  layer and Catalan numbers are the
-  signed one-step leakage. For tournaments the exponent is the number
-  C(v,2) of independent arc slots, not the number of vertices and not a
-  causal source of the base two. No nonintegral Newton-series
-  extension is used, and no plus-minus quadratic-form limit is claimed.
+  PROVED + VERIFIED-EXACT. Differentiation on powers and forward
+  difference on falling factorials are conjugate lowering operators under
+  the Stirling transform. Their eigenfunctions are e^(lambda x) and
+  (1+lambda)^n; hence 2^n, not an arbitrary power, is the eigenvalue-one
+  unit for Delta. After the displayed one-index shift, the two supplied
+  Pascal-half sequences give the lower weak count and, by complementing
+  subsets, its upper strict complement; the central binomial layer is their
+  exact sidecar, and
+  Catalan convolution carries weak half to 4^n to strict half. This is an
+  operator and labelled-operation theorem, not a causal derivation of the
+  number two from tournaments.
 source: codex-2026-07-26-delta-exponential
 depends_on: []
 related:
-  - THM-438-paley-cluster-integrals-are-catalan
+  - THM-361-product-sum-defect-normal-form
+  - THM-362-natural-operation-graph-shadows
   - THM-710-factorial-moment-eigen-transfer
-  - THM-1415-switching-is-the-canonical-star-quotient
-  - THM-1430-graph-switching-is-exactly-E-n
-  - THM-1470-even-tournaments-are-the-tournament-two-graph-theorem
-external: >
-  OEIS A032443 and A000346; MathOverflow question 413935,
-  "Min max of a quadratic form of plus-minus ones".
 script: 04-computation/delta_exponential_central_newton_split_thm2412.py
 output: 05-knowledge/results/delta_exponential_central_newton_split_thm2412.out
-script_sha256: 115d24c673a04c14e6a0bfcc0f06e3c7479ada0dce1686d243e1a6e0bde08720
-output_sha256: 821ea1a0241d1e47397d74ffff6b55d92f36b84a5243d8fb52ef451bb1fe9d4c
+script_sha256: 85c3d1229480c6024a7dd06da495c4c78c58da20a08b5991bb0adc928443d080
+output_sha256: 781aa07051597263073dfe7d2adc26680ed8b42c8725df96e43230908399dc67
 hash_basis: working-tree bytes (LF)
-cite_by_filename: true
 ---
 
 # THM-2412 -- delta exponentials and the central Newton split
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED + VERIFIED-EXACT.**
 
-The Maclaurin and Gregory--Newton expansions are not merely analogous
-lists of coefficients. They are the same lowering-operator calculus in
-two polynomial bases:
+There are three exact objects here:
 
 ```text
-continuous:  D(x^k)=k x^(k-1),                         k>=1,
-discrete:    D_h(x^(falling k,h))=k x^(falling k-1,h),  k>=1,        (1)
-
-D(1)=D_h(1)=0.
+continuous coordinate:     powers x^k, operator D;
+discrete coordinate:       falling factorials x^(underline k), operator Delta;
+binary layer coordinate:   subsets, graded by cardinality.
 ```
 
-The associated eigenfunctions are `e^(lambda x)` and
-`(1+h lambda)^(x/h)`. The familiar base `2` is the specialization
-`h=lambda=1`, while `e` is the fixed-endpoint limit as the lattice
-spacing tends to zero.
+The first two are conjugate through the Stirling transform. The third gives
+the coefficients of the discrete exponential. Keeping the middle layer
+rather than quotienting it away identifies the two apparently unrelated
+sequences in the prompt.
 
-The three displayed sequences in the motivating prompt form a second
-exact packet. They are the total and the two central half-spaces of a
-Boolean cube:
+## 1. Maclaurin and Gregory--Newton are the same lowering scheme
+
+Put
 
 ```text
-1,4,16,64,256,...          =4^n,
-1,3,11,42,163,...          =(4^n+C(2n,n))/2,
-1,5,22,93,386,...          =(4^(n+1)-C(2n+2,n+1))/2.                 (2)
+D f(x)=f'(x),                 Delta f(x)=f(x+1)-f(x),
+
+x^(underline k)=x(x-1)...(x-k+1).
 ```
 
-The apparent startup asymmetry is precisely a fixed boundary layer.
-
-## 1. The scaled Gregory--Newton intertwiner
-
-Fix `h!=0` in a characteristic-zero field and define
+Then
 
 ```text
-D_h f(x)=(f(x+h)-f(x))/h,                                            (3)
+D x^k = k x^(k-1),
 
-x^(falling k,h)
-  =product_(j=0)^(k-1)(x-jh),
-
-x^(falling 0,h)=1.                                                   (4)
+Delta x^(underline k) = k x^(underline (k-1)).       (1)
 ```
 
-Direct cancellation gives, for `k>=1`,
+The second identity follows by factoring:
 
 ```text
-D_h x^(falling k,h)=k x^(falling k-1,h).                             (5)
+(x+1)^(underline k)-x^(underline k)
+
+=x^(underline (k-1))((x+1)-(x-k+1))
+
+=k x^(underline (k-1)).
 ```
 
-For the same range, one proof factors the numerator (with the remaining product
-empty when `k=1`):
+Consequently every polynomial `f` of degree at most `d` has the two exact
+expansions
 
 ```text
-(x+h)^(falling k,h)-x^(falling k,h)
- =[(x+h)-(x-(k-1)h)]
-   x(x-h)...(x-(k-2)h)
- =kh x^(falling k-1,h).                                              (6)
+f(x)=sum_(k=0)^d f^(k)(0) x^k/k!,                   (2)
+
+f(x)=sum_(k=0)^d Delta^k f(0) x^(underline k)/k!
+    =sum_(k=0)^d Delta^k f(0) binom(x,k).            (3)
 ```
 
-Define the degree-preserving linear map
+Equation (2) is Maclaurin in the derivative-lowering basis. Equation (3) is
+Gregory--Newton in the difference-lowering basis. The proof of (3) is the
+same triangular interpolation proof as (2): both sides have the same value
+at zero, and applying `Delta` reduces the degree and shifts the coefficient
+list by one.
+
+If `S(j,k)` and `s(k,j)` are respectively Stirling numbers of the second kind
+and signed first kind, then
 
 ```text
-U_h:K[x]->K[x],
-U_h(x^k)=x^(falling k,h).                                            (7)
+x^j = sum_k S(j,k)x^(underline k),
+
+x^(underline k)=sum_j s(k,j)x^j.                    (4)
 ```
 
-Every image in (7) is monic of degree `k`, so `U_h` is an isomorphism.
-Equations (1) and (5) are the operator identity
+Thus the coefficient dictionaries are
 
 ```text
-D_h U_h=U_h D.                                                       (8)
+Delta^k f(0)/k!
+ =sum_(j>=k) S(j,k) f^(j)(0)/j!,                    (5)
+
+f^(j)(0)/j!
+ =sum_(k>=j) s(k,j) Delta^k f(0)/k!.                (6)
 ```
 
-Thus powers and scaled falling factorials are not competing
-approximations. They are the basic sequences of the derivative and
-forward-difference delta operators.
+No limiting argument is present for polynomials.
 
-## 2. The discrete exponential and the continuous limit
-
-On the lattice `h Z_(>=0)`, solve
+The dictionary has an exact lattice-spacing parameter. For `h!=0`, put
 
 ```text
-D_h f=lambda f,                         f(0)=1.                       (9)
+D_h f(x)=(f(x+h)-f(x))/h,
+
+x^(underline k,h)=product_(j=0)^(k-1)(x-jh),
+
+U_h(x^k)=x^(underline k,h).                         (6a)
 ```
 
-The recurrence is
+The images of `U_h` are monic of degree `k`, so `U_h` is a linear
+automorphism of the polynomial vector space (not an algebra homomorphism),
+and direct cancellation gives
 
 ```text
-f((N+1)h)=(1+h lambda)f(Nh),                                         (10)
+D_h x^(underline k,h)=k x^(underline (k-1),h),
+
+D_h U_h=U_h D.                                      (6b)
 ```
 
-so its unique solution is
+Thus the two calculi are literally intertwined, not merely asymptotic.
+
+Let `E f(x)=f(x+1)`. On polynomials the operator series terminate, so
 
 ```text
-f(Nh)=(1+h lambda)^N.                                                (11)
+E=exp(D),             Delta=exp(D)-I,
+
+D=log(I+Delta).                                      (7)
 ```
 
-The terminating Gregory--Newton expansion is exactly
+This is the exact continuous/discrete bridge. For analytic functions, (7)
+requires the usual convergence/domain hypotheses; the polynomial identity
+does not grant an unrestricted Newton series for every entire function.
+
+## 2. Exponential eigenfunctions and the special role of two
+
+For `lambda in C` and `n in Z_(>=0)`,
 
 ```text
-(1+h lambda)^N
- =sum_(k=0)^N lambda^k (Nh)^(falling k,h)/k!
- =sum_(k=0)^N C(N,k)(h lambda)^k.                                   (12)
+D exp(lambda x)=lambda exp(lambda x),                (8)
+
+Delta (1+lambda)^n=lambda(1+lambda)^n.               (9)
 ```
 
-At `h=lambda=1`,
+At `lambda=-1`, use the standard lattice convention `0^0=1`; equivalently
+check the `n=0` endpoint separately.
+
+The second line is immediate:
 
 ```text
-2^N
- =sum_(k=0)^N N^(falling k)/k!
- =sum_(k=0)^N C(N,k).                                                (13)
+(1+lambda)^(n+1)-(1+lambda)^n
+=lambda(1+lambda)^n.
 ```
 
-More generally, setting `h=1,lambda=q-1` gives
+Therefore the eigenvalue-one units are
 
 ```text
-q^N=sum_(k=0)^N (q-1)^k N^(falling k)/k!.                           (14)
+D e^x=e^x,                    Delta 2^n=2^n.         (10)
 ```
 
-So base two is not forced by discreteness alone. It is
-`1+h lambda` at unit step and unit eigenvalue.
+The `2` in (10) is exactly `1+lambda` at `lambda=1`: one copy from the
+identity part of the shift and one from `Delta`. It is not an additional
+number-theoretic assumption.
 
-For fixed `X,lambda in C` with `X!=0`, take `h=X/N` and let the positive
-integer `N` tend to infinity in (11)--(12). Then
+For every nonnegative integer `n`, Gregory--Newton is finite and gives
 
 ```text
-(1+lambda X/N)^N
- =sum_(k=0)^N lambda^k X^(falling k,X/N)/k!
- -> e^(lambda X)
- =sum_(k>=0) lambda^k X^k/k!.                                       (15)
+(1+lambda)^n
+ =sum_(k=0)^n lambda^k binom(n,k)
+ =sum_(k=0)^n lambda^k n^(underline k)/k!.           (11)
 ```
 
-For each fixed `k`, the scaled falling factorial in (15) tends to
-`X^k`, and the left side is the standard exponential limit. Equation
-(15) is the exact discrete/continuous bridge: the operator, basis, and
-eigenfunction converge together. The case `X=0` is the separate
-constant identity `1=e^0`.
-
-## 3. Bernoulli's triangle and the two central sequences
-
-Define the Bernoulli-triangle entry
+In particular,
 
 ```text
-B(r,s)=sum_(k=0)^s C(r,k),              0<=s<=r,
-B(r,-1)=0.                                                           (16)
+2^n=sum_(k=0)^n n^(underline k)/k!,                  (12)
+
+4^n=sum_(k=0)^n 3^k binom(n,k).                      (13)
 ```
 
-This is the partial-sum triangle of binomial coefficients, not the
-Bernoulli-number sequence. Its bulk rule and terminal boundary are
+More generally, the unit-eigenvalue solution of `D_h f=f`, `f(0)=1`, on
+`h Z_(>=0)` is
 
 ```text
-B(r,s)=B(r-1,s)+B(r-1,s-1),             0<=s<r,
-B(r,r)=2^r=2B(r-1,r-1),                 r>=1.                        (17)
+f(Nh)=(1+h)^N.                                      (13a)
 ```
 
-For `n>=0`, put
+At a fixed endpoint `X=Nh`,
 
 ```text
-P_n=B(2n,n)=sum_(k=0)^n C(2n,k),
-M_n=B(2n,n-1)=sum_(k=0)^(n-1) C(2n,k),                              (18)
+(1+lambda X/N)^N -> exp(lambda X),
 
-M_0=0.
+X^(underline k,X/N) -> X^k                         (13b)
 ```
 
-Reflection `k<->2n-k` has one fixed layer, `k=n`. Therefore
+as `N->infinity` for every fixed `k`. The operator, its basic basis, and
+its eigenfunction therefore pass to the continuous limit together.
+
+For generalized `x`, the binomial series
 
 ```text
-P_n=(4^n+C(2n,n))/2,
-M_n=(4^n-C(2n,n))/2,                                                 (19)
-
-P_n+M_n=4^n,
-P_n-M_n=C(2n,n).                                                     (20)
+(1+z)^x=sum_(k>=0) binom(x,k)z^k
 ```
 
-Here
+is analytic for `|z|<1` after choosing the compatible logarithm. The value
+`z=1` in (12) is deliberately asserted only at nonnegative integers, where
+the series terminates.
+
+## 3. The central Pascal sidecar
+
+Define, for `n>=0`,
 
 ```text
-P_n=A032443(n)=1,3,11,42,163,638,...,
+A_n=sum_(k=0)^n binom(2n,k),
 
-M_n=0,1,5,22,93,386,1586,...,
-M_(n+1)=A000346(n).                                                  (21)
+B_n=sum_(k=0)^n binom(2n+2,k).                       (14)
 ```
 
-The indexing shift in (21) explains why the prompt's third row begins
-with `1` rather than `0`.
-
-Equivalently, among all subsets of a `2n`-set:
+Their initial values are
 
 ```text
-P_n counts |S|<=n,
-M_n counts |S|<n,
-C(2n,n) counts the balanced equator.                                 (22)
+A: 1,3,11,42,163,638,...,
+
+B: 1,5,22,93,386,... .                              (15)
 ```
 
-The first two families in (22) are nested, not disjoint.  The equality
-`P_n+M_n=4^n` is a numerical/reflected partition: complement reflection
-pairs the strict lower family counted by `M_n` with the strict upper
-family `|S|>n`, while the equator is the fixed layer.
-
-The ordinary generating functions, as formal power series (and
-analytically for `|z|<1/4`), are
+The reflection `k -> 2n-k` pairs every noncentral layer of the row of
+Pascal's triangle. Hence
 
 ```text
-sum_(n>=0) P_n z^n
- =1/2[(1-4z)^(-1)+(1-4z)^(-1/2)],
+A_n=(4^n+binom(2n,n))/2,                             (16)
 
-sum_(n>=0) M_n z^n
- =1/2[(1-4z)^(-1)-(1-4z)^(-1/2)].                                  (23)
+B_n=(4^(n+1)-binom(2n+2,n+1))/2.                    (17)
 ```
 
-Thus the two half-space sequences are the symmetric and antisymmetric
-central projections of the same Boolean growth law.
+Equivalently, for every `n>=0`,
 
-## 4. Catalan numbers are the boundary leakage
+```text
+A_(n+1)+B_n=4^(n+1),                                (18)
+
+A_(n+1)-B_n=binom(2n+2,n+1).                        (19)
+```
+
+Thus `A_(n+1)` counts the lower weak family `|S|<=n+1`, while `B_n`
+counts the lower strict family `|S|<=n`. Those two literal families overlap.
+Complementation bijects the latter with the upper strict family
+`|S|>=n+2`, which is the actual set complement of the lower weak family.
+It is in this precise, count-preserving sense that (18) is a complementary
+split. The central binomial coefficient is the exact tie layer. Forgetting
+which side and which lower/upper realization was chosen preserves (18) and
+destroys (19).
+
+This supplies a precise tournament analogy. A labelled tournament on `m`
+vertices is a binary choice on each of the
+
+```text
+T_m=binom(m,2)
+```
+
+unordered pairs, so there are `2^(T_m)` tournaments. Fixing a reference
+orientation identifies tournaments with subsets of those `T_m` pairs.
+The power two comes from the binary orientation coordinate; the triangular
+number counts how many such coordinates there are. This is a combinatorial
+realization of (11), not a proof of the analytic eigenfunction law.
+
+It also isolates the tie guardrail: allowing a third, unoriented state would
+replace the local binary alphabet by a ternary one. A weak/strict comparison
+cannot silently delete the central layer and still be called an equivalence.
+
+There is a second exact tournament realization. Given a reference
+orientation with signs `a_(ij) in {+1,-1}`, vertex switching by
+`x_i in {+1,-1}` sends
+
+```text
+a_(ij) -> a_(ij)x_i x_j,
+
+Q_a(x)=sum_(i<j)a_(ij)x_i x_j.                      (19a)
+```
+
+Thus `Q_a(x)` is the signed edge bias of the switched representative and
+`Q_a(-x)=Q_a(x)` records the global-sign gauge. This identifies the
+plus-minus quadratic form as switching energy; it does not prove an
+asymptotic min--max limit, because cycle products retain information that
+the scalar bias destroys.
+
+## 4. Catalan convolution is the self-similar ladder
 
 Let
 
 ```text
-Cat_n=C(2n,n)/(n+1).                                                  (24)
+C_n=binom(2n,n)/(n+1),             P_n=4^n
 ```
 
-Using
+and write `*` for ordinary sequence convolution. Then
 
 ```text
-C(2n,n)=(4-2/n)C(2n-2,n-1),                                        (25)
+C*A=P,                       C*P=B,
+
+B=C*C*A.                                             (20)
 ```
 
-in (19) gives, for `n>=1`,
+Proof: set `s=sqrt(1-4z)`. The four generating functions are
 
 ```text
-P_n=4P_(n-1)-Cat_(n-1),
-M_n=4M_(n-1)+Cat_(n-1).                                             (26)
+C(z)=2/(1+s),
+
+A(z)=(1/s^2+1/s)/2=(1+s)/(2s^2),
+
+P(z)=1/s^2,
+
+B(z)=(1/s^2-1/s)/(2z)=C(z)P(z).                     (21)
 ```
 
-The same Catalan packet crosses the reflection boundary with opposite
-sign. This is the exact mechanism behind the empirical recurrences
+Multiplying the first two functions gives `P(z)`, and multiplying by
+`C(z)` again gives `B(z)`. This is an all-coefficient identity, not a
+finite-prefix pattern.
+
+The same boundary mechanism has the pointwise recurrence form. Put
 
 ```text
-3=4*1-1,       11=4*3-1,       42=4*11-2,       163=4*42-5,
-
-5=4*1+1,       22=4*5+2,       93=4*22+5,       386=4*93+14.         (27)
+M_n=(4^n-binom(2n,n))/2,                    M_0=0.
 ```
 
-The "irregularity" is therefore localized: `Cat_(n-1)` is exactly the
-signed difference between fourfold growth of the old half-space and
-the new central boundary. Catalan numbers separately count the
-standard one-sided Dyck/ballot paths; no identification with all paths
-touching this particular Boolean boundary is needed here.
-
-## 5. Tournament arc slots and the source of the two
-
-A labelled tournament on `v` vertices has
+Then `M_(n+1)=B_n`, and for `n>=1`,
 
 ```text
-E=C(v,2)                                                            (28)
+A_n=4A_(n-1)-C_(n-1),
+
+M_n=4M_(n-1)+C_(n-1).                              (21a)
 ```
 
-unordered arc slots. Fix a reference orientation. Reversing any subset
-of the `E` slots gives a unique tournament, and the Hamming shell with
-exactly `k` reversals has size
+The Catalan number is therefore the exact one-step leakage through the
+reflection-fixed middle layer: it leaves the weak half and enters the
+strict half with the opposite sign.
+
+The ladder
 
 ```text
-C(E,k)=E^(falling k)/k!.                                             (29)
+weak Pascal half --Catalan convolution--> full binary cube
+                 --Catalan convolution--> strict Pascal half
 ```
 
-Consequently
+is self-similar but asymmetric: the middle layer in (19) records the
+direction of travel.
+
+## 5. A labelled summand--multiplicand collision
+
+Equations (18) and the geometric recursion for `P_n` meet at one target:
 
 ```text
-# labelled tournaments=2^E=sum_(k=0)^E C(E,k).                       (30)
+A_(n+1)+B_n = 4^(n+1) = 4*4^n.                      (22)
 ```
 
-This gives a faithful tournament realization of (13): the factor two
-is the pair of orientations available independently in each arc slot,
-while the triangular number `C(v,2)` counts the slots. It would be
-wrong to write `2^v` or to say that tournaments cause the algebraic
-base `2`; both are realizations of the same Boolean choice product.
-
-## 6. The plus-minus quadratic form is switching energy
-
-For a fixed reference order, let `a_ij in {+1,-1}` encode the
-orientation/sign of every edge of `K_v`. For `x_i in {+1,-1}`, define
+In the labelled operation-cospan language of THM-362, (22) has
 
 ```text
-Q_a(x)=sum_(i<j) a_ij x_i x_j.                                      (31)
+additive parents:       A_(n+1), B_n;
+multiplicative parents: 4, 4^n;
+common target:          4^(n+1);
+lost quotient datum:    which operation and which Pascal half;
+needed sidecar:         binom(2n+2,n+1).
 ```
 
-Vertex switching by `x` sends
+For `n>=2`, the multiplicative parents are distinct nonunits, so neither a
+unit convention nor a diagonal convention creates the collision.
 
-```text
-a_ij -> a_ij x_i x_j.                                                (32)
-```
+The unlabelled additive shadow alone is only the order relation `x<z`, and
+the multiplicative shadow alone is divisibility. They do not retain (22).
 
-Thus `Q_a(x)` is exactly the total signed edge bias of the switched
-representative. Moreover
+## 6. Equality and failure boundaries
 
-```text
-Q_a(-x)=Q_a(x),                                                       (33)
-```
+1. Ordinary powers are not the exact difference-lowering basis:
 
-so the global sign is a gauge. This is the precise tournament/two-graph
-reading of the linked MathOverflow min--max expression. Before
-quotienting by the free global gauge, the central binomial term in (19)
-counts the balanced sign equator when the number of vertex-sign slots
-is even. For `v=2n>=2`, the corresponding balanced gauge classes number
-`C(2n,n)/2`.
+   ```text
+   Delta x^2=2x+1,               not 2x.
+   ```
 
-This reformulation does **not** prove that the normalized min--max limit
-exists or determine its value. Cycle products, not the scalar total
-bias alone, are the switching invariants that must be retained.
+2. The eigenvalue-one discrete exponential is specifically `2^n`.
+   For example, `Delta 3^n=2*3^n`.
+3. The sixth term in (15) is `638`. The five-term prefix
+   `1,3,11,42,163` does not determine a sequence; a continuation by `639`
+   belongs to a different object and fails (16).
+4. The central binomial layer is not lower-order bookkeeping: it is exactly
+   the difference between the two halves.
+5. Catalan convolution is a statement about the labelled coefficient
+   sequences. It does not turn an LRC toothpick word or an arbitrary
+   tournament quotient into the same object.
+6. Switching energy in (19a) is a scalar quotient. It does not retain the
+   switching-invariant cycle products.
 
-## 7. Scope and convergence guard
+## 7. Exact companion
 
-Equations (12)--(14) terminate because `N` is a nonnegative integer.
-They do not license the unqualified identity
+The dependency-free companion:
 
-```text
-sum_(k>=0) x^(falling k)/k!=2^x                                    (34)
-```
+- verifies `228` rational falling-factorial lowering identities;
+- verifies both Stirling coefficient transforms on a nontrivial rational
+  polynomial;
+- checks `E=exp(D)` and `D=log(I+Delta)` at `22` rational points;
+- verifies `231` finite exponential identities and the `2^n`, `4^n`
+  specializations;
+- verifies the tournament binary-coordinate count through `12` vertices;
+- checks (16)--(20) through `n=50`; and
+- retains monomial, nonunit-eigenvalue, tie-deletion, and sixth-term hostiles.
 
-for arbitrary complex `x`. The generalized series
-`sum_k binom(x,k)z^k` is ordinary inside `|z|<1`. At `z=1`, a
-nonintegral `x` gives absolute convergence for `Re(x)>0` and
-conditional convergence for `-1<Re(x)<=0`; outside that range one
-needs a separately declared summation convention such as an Abel
-value. None of these nonterminating extensions is used here.
+Run
 
-Likewise, (31)--(33) are an exact representation of the open
-plus-minus quadratic-form problem, not evidence for its asymptotic
-limit. The theorem establishes the operator dictionary, central layer
-split, and tournament Hamming-shell interpretation only.
-
-## 8. Exact companion
-
-Run:
-
-```text
+```bash
 python3 04-computation/delta_exponential_central_newton_split_thm2412.py
 python3 -O 04-computation/delta_exponential_central_newton_split_thm2412.py
 ```
 
-The standard-library rational companion checks:
-
-- `39` scaled falling-basis identities;
-- `33` mixed-sign umbral intertwiners;
-- `117` terminating exponential identities;
-- the central split and Catalan recurrences through `n=12`;
-- tournament Hamming shells through `v=9`; and
-- the hostile failures `D_1(x^2)!=2x` and
-  `#T_4=2^6!=2^4`.
-
-All `304` truth-bearing checks use the explicit `require` guard, so
-optimization cannot erase the verification. Both modes reproduce:
-
-```text
-05-knowledge/results/delta_exponential_central_newton_split_thm2412.out
-```
+Both outputs must byte-match the stored transcript. Every executable check
+raises explicitly under optimized Python.
