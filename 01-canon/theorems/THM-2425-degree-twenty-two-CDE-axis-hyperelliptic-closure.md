@@ -2,7 +2,7 @@
 id: THM-2425
 title: "Degree-twenty-two C, D, and E axis hyperelliptic closure"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   In the open first-flux chart of the genuine nonsplit polynomial
   exact-square-prefix degree-twenty-two branch, each of the three
   one-sparse coefficient axes C, D, and E is empty. After the natural
@@ -33,7 +33,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2425 -- the degree-twenty-two C, D, and E axes are empty
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2411 closes the divisor on which the first Faber flux loses its `Z`
 coefficient, and THM-2423 closes the complete `W`-axis in the complementary
@@ -331,3 +331,26 @@ exceptions and remains active under optimized Python.
 
 Normal, optimized, and stored transcripts byte-match after LF
 normalization. The declared hashes are over the working-tree bytes.
+
+## 7. Independent hostile audit
+
+An independent audit reran the normal and optimized companions and
+byte-compared both with the stored transcript; the declared source and output
+hashes match. It independently substituted the three weighted axes into the
+hostile-audited THM-2411 fluxes, reconstructed all three resultants, and
+rederived
+
+```text
+Disc_p(R_X)=constant (121v-7)^2 H_X(v)
+```
+
+with residual degrees `5,4,3`. Separate Euclidean gcds confirmed that every
+`H_X` is squarefree and that every coefficient triple has gcd one, so no
+vertical identity fibre was lost.
+
+The audit also attacked the two proof boundaries. At `y=0`, it recovered
+either `Z=0` or the displayed constant-field equations (20)--(21). On
+`y!=0`, it checked that completing the square divides only by the
+first-flux coefficient already excluded in (8), and that constant `v`
+cannot leave a varying `p_X`. No algebraic, geometric, deck, scope, or
+reproducibility defect remains. **QED.**

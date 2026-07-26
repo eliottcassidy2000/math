@@ -2,7 +2,7 @@
 id: THM-2428
 title: "Degree-twenty-two B-axis trigonal ramification closure"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   In the open first-flux chart of the genuine nonsplit polynomial
   exact-square-prefix degree-twenty-two branch, the last one-sparse
   coefficient axis B is empty. The natural weighted quotient gives an
@@ -32,7 +32,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2428 -- the degree-twenty-two B-axis is empty
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2411 closes the first-flux pole divisor. In its complementary chart,
 THM-2423 closes the `W`-axis and THM-2425 closes the hyperelliptic `C,D,E`
@@ -177,11 +177,13 @@ gcd(K_9,K_9')=gcd(K_9,Q_2)=gcd(K_9,A_3)=1.              (15)
 ```
 
 Hence the nine roots of `K_9` are distinct; none is a degree-drop point
-of the cubic or a root of the squared factor. At each one the local
-polynomial discriminant has valuation exactly one. In characteristic zero,
-the local order is therefore maximal there and the degree-three cover
-(11) has one simple ramification point. These nine finite places contribute
-at least nine to the ramification divisor.
+of the cubic or a root of the squared factor. At a root `alpha`, divide by
+the unit `A_3(alpha)` and work over `C[[v-alpha]]`. The local polynomial
+discriminant has valuation exactly one. The order-to-normalization index
+enters its discriminant with even valuation, so the order is already
+maximal. Tameness in characteristic zero then forces local type `(2,1)`:
+one simple ramification point. These nine finite places contribute at least
+nine to the ramification divisor.
 
 Let `g_B` be the genus of `mathcal C_B` and `R` the total ramification,
 including infinity. Riemann--Hurwitz gives
@@ -268,3 +270,31 @@ optimized Python.
 
 Normal, optimized, and stored transcripts byte-match after LF
 normalization. The declared hashes are over the working-tree bytes.
+
+## 7. Independent hostile audit
+
+An independent audit reran the companion normally and under `-O`,
+byte-compared both transcripts with the stored output, and verified both
+declared hashes. Direct first-flux substitution independently gave
+
+```text
+f_2(zeta=-4K/[1331 mathcal A])=112R_B/mathcal A^2,
+```
+
+which reproduces the resultant scalar in (7). Modulo `13`, it independently
+found coefficient gcd one and the root-free specialization
+`4p^3-4p^2+4p+1`; this is the same residue polynomial as (10), since
+`9=-4` in `F_13`. It checked the Gauss-primitivity and nonzero-leading-term
+steps, then rechecked that any absolute factorization would split the cubic
+linearly and make its discriminant a square.
+
+The auditor independently recomputed the discriminant as
+`-Res_p(R_B,partial_p R_B)/A_3`, recovered (12), and verified all three gcds
+in (15). It specifically attacked normalization at every `K_9` root: the
+valuation-one polynomial discriminant, even index-square correction, and
+tame local classification preserve all nine simple ramification
+contributions. Riemann--Hurwitz then gives (17) exactly as stated.
+
+Finally, the fixed-constant-field and `y=0` deck closures were checked
+against THM-2411. No mathematical, typing, boundary, scope, or
+reproducibility defect remains. **QED.**
