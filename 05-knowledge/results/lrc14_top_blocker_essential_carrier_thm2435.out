@@ -1,0 +1,20 @@
+THM-2435 exact companion
+ordinary_row_controls=216
+guard_row_controls=216
+top_blocker_coset_controls=18
+typed_k_b=1,1;2,2;2,1
+typed_essential_parent_floors=2/7,3/7,3/7
+essential_parent_floor=2/7
+aggregate_carrier_floor=2/637
+fixed_label_floor=3/1274
+canonical_word_floor=1/637
+nonzero_row_dirichlet_floor=4
+integrated_parent_dirichlet_floor=8/7
+all_six_nontrivial_F7_colors=NONZERO
+b1_arrow_energy_histogram=4:28,6:14
+disintegration_91_branch_identity=PASS
+b1_flow_word=h0:1->0
+b2_distinct_sources=holes_1,4_repaired
+b2_coincident_source_control=PASS
+local_zero_essential_hostile=PASS
+ALL CHECKS PASSED

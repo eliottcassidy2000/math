@@ -20,6 +20,7 @@ depends_on:
 related:
   - THM-2430-guard-top-common-ninety-one-root-tiling-spectrum
   - THM-2431-repeated-step-rounding-exclusion-of-guard-top-zero-blocker-types
+  - THM-2435-top-blocker-essential-parent-and-punctured-stalk-carrier
 script: 04-computation/lrc14_guard_top_pair_cage_thm2432.py
 output: 05-knowledge/results/lrc14_guard_top_pair_cage_thm2432.out
 script_sha256: 58bf8c52c8ab5ffb4ae0db252813a61ba099b82d18c9d1ecfe5e238eb8c6c006

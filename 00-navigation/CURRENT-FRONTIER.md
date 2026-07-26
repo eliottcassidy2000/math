@@ -158,7 +158,10 @@ Discharge each cell by a THM-2057 clock phase, THM-2059/HYP-2108 endpoint packet
 THM-2168--2397 leave `165` rows while supplying relation/edge/toothpick/colour carriers (THM-2356 kernel `28,393`; THM-2363/THM-2368). THM-2405/2415 reduce the final lane to `M<=2`; THM-2417 excludes `M=2`, and THM-2426's transverse root proof empties it.
 Hence `nu_7(c_3)>M => nu_7(H)=M`. THM-2430 classifies the exact common-`91` tilings; THM-2431's fixed repeated-step rounding cap excludes every `t=5,b=0` type, and THM-2432 independently removes `(2,0,0,2)`. The live deep-`c_3` residual is exactly `(1,5,1,8),(2,5,2,9)` at `M=0` and `(2,5,1,8)` at `M>0`; the `c_3<=M` side instead has an isolated noncirculant top graft. No scalar row is removed.
 THM-2418--2421 remain reusable carry, affine-shell, reference, and ancestry-event sidecars, not live continuations without a transplant. In particular THM-2420 proves same-shell reference amplitude sufficient and a complete zero-reference bank insufficient.
-Next: owner-conditioned no-cancellation for `c_3<=M`; on the three blocker-bearing survivors, build the punctured `91`-stalk atlas retaining top-blocker cosets, blocker-owned septimal fibres, cross-base evolution, and the valuation-zero label. Ledger: `165`.
+THM-2435 is a proved candidate under independent audit: its typed quotient-parent floor `(4+k)/7` minus THM-2431's `3/7` cap gives top-essential parent mass `(1+k)/7`; a fixed labelled equivariant quotient-root section has mass at least `3/1274`, flat energy in all `91` quotient classes, and an intrinsic blocker-word stratum has mass at least `1/637`.
+Every essential `F_13` row has integral zero-sum `F_7` defect with cyclic Dirichlet energy at least `4` and all six nontrivial row colours; the unnormalized parent-summed energy integrates to at least `8/7`.
+The full defect either varies across rows and already has a `91`-unit mixed quotient-stalk character, or is vertical and row-independent. The section is physical at `M=0`; at `M>0` its present pullback retains a `7^M` ancestry kernel.
+Next: audit THM-2435, transport that carrier to its first endpoint with the lower-blocker word retained, complete THM-2436's punctured row-flow atlas, and prove owner-conditioned no-cancellation for `c_3<=M`. Ledger: `165`.
 
 ### Independent routes that remain live
 

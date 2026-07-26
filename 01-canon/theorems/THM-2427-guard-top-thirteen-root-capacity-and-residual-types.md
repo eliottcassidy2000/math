@@ -28,6 +28,7 @@ related:
   - THM-2430-guard-top-common-ninety-one-root-tiling-spectrum
   - THM-2431-repeated-step-rounding-exclusion-of-guard-top-zero-blocker-types
   - THM-2432-guard-top-pair-cage-and-low-blocker-residual-exclusion
+  - THM-2435-top-blocker-essential-parent-and-punctured-stalk-carrier
 script: 04-computation/lrc14_guard_top_thirteen_root_capacity_thm2427.py
 output: 05-knowledge/results/lrc14_guard_top_thirteen_root_capacity_thm2427.out
 script_sha256: 19a92396131daa3366debac4bddc43a25858a4c07e0fd0536e433b4a5960b7a6
