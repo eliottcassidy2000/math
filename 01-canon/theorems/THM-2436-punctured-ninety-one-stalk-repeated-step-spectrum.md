@@ -780,3 +780,46 @@ Finally, the audit traced the residual list through hostile-audited
 THM-2426, THM-2427, THM-2431, and THM-2432 and the parent floors through
 hostile-audited THM-2435. Hence the three shapes in (2) exhaust the
 deep-`c_3` branch. QED.
+
+## Second independent one-source referee (kind-pasteur-2026-07-26-S131)
+
+A second code path, written before the C++ companion landed and
+committed after it, independently confirms the one-source layer:
+
+```text
+04-computation/lrc14_punctured_91_stalk_repeated_step_thm2436.py
+05-knowledge/results/lrc14_punctured_91_stalk_repeated_step_thm2436.out
+sha256 (LF): 6968b676edabe504d1587f82154827fa36036b0501b6e66e4ddc8cf1c7a602eb
+             bd7ebd5c0bee18e75ffff7c7e8dc0cd6e13a9a0063ed9197cee6180fed547f13
+```
+
+It is a genuinely different algorithm (memoized existence set-cover
+with dynamic uncovered-point pivots and waste budget, per
+guard-stabilizer orbit representative `r in {0,1,2,5}`), not a port.
+It confirms exactly: the `3276` unit-AP universe; the reflection laws;
+the punctured targets `56/56/56/55`; that no one-source cover uses
+five distinct unsigned steps (`distinct_cover=0`, the quantifier
+behind the fixed repeated pair); that centre difference `0` never
+occurs (`n != 0`); and the complete one-source repeated-pair bank --
+all seven step classes with raw/sharp/coarse sizes identical to the
+C++ table, giving the same `75/91` cap and
+`parent_mass_78_over_91_surviving_steps=NONE`. Because the Python
+bank admits any three completing masks (a formal relaxation), the
+exact agreement is a tightness result, not a tautology.
+
+Two caveats and two free consequences for future auditors:
+
+1. Column order differs: the Python prints `step:raw/coarse/sharp`,
+   the C++ prints `step raw sharp coarse`. A naive diff misreads
+   every row.
+2. The Python covers the one-source layer only; the two-source
+   atlas, the fixed-spectrum exceptional tables, and the defect/row
+   layer rest on the C++ and its promotion audit alone.
+3. The exact d=1 structures are `Q_1 = {9,...,82} \ {22,69}` and
+   `C_1 = {8,...,82}`, an interval of `75`; the `M>0` contradiction
+   margin is exactly the 16-cell complement of that interval minus
+   the 13-cell floor complement, i.e. `3` cells.
+4. The depth-limited recursion in both engines proves, though
+   neither states it: no cover of any punctured one-source stalk by
+   four or fewer ordinary words exists -- five distinct supports are
+   necessary as well as sufficient.

@@ -1,0 +1,18 @@
+THM-2436 exact companion
+unit_ap13=3276
+blocker_line_orbits=0/4,1/3,2,5/6
+line_0_target=56 distinct_cover=0 distinct_states=39748 completion_states=125894 banks=1:62/74/69,2:36/52/45,3:10/14/12,4:12/18/15,5:12/20/16,44:12/16/14,45:12/20/16
+line_1_target=56 distinct_cover=0 distinct_states=41744 completion_states=131171 banks=1:64/70/67,2:30/48/39,3:4/8/6,4:12/18/15,5:14/22/18,44:8/12/10,45:16/24/20
+line_2_target=56 distinct_cover=0 distinct_states=44744 completion_states=134650 banks=1:56/64/61,2:30/48/39,3:8/20/14,4:6/12/9,5:18/26/22,44:10/14/12,45:8/16/12
+line_5_target=55 distinct_cover=0 distinct_states=69833 completion_states=158955 banks=1:68/76/75,2:48/58/53,3:10/14/12,4:12/18/15,5:12/20/16,44:12/16/14,45:16/24/20
+moving_banks=1:72/76/75,2:52/62/57,3:14/26/20,4:12/18/15,5:18/26/22,44:12/16/14,45:16/24/20
+d1_quotient_bank=9..82_without_22,69
+d1_sharp_cells=8..82
+repeatable_steps=1,2,3,4,5,44,45
+parent_mass_52_over_91_surviving_steps=1,2
+parent_mass_65_over_91_surviving_steps=1
+parent_mass_78_over_91_surviving_steps=NONE
+parent_mass_52_over_91_signed_guard_ratio_classes=1,45
+parent_mass_65_over_91_signed_guard_ratio_classes=1
+sharp_single_pair_no_go=75/91
+ALL CHECKS PASSED
