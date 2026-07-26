@@ -142,6 +142,22 @@ unconditionally. The only remaining open piece is that no rigid
 class lies outside the tower grammar (verified `n <= 10`, `n = 11`
 in flight).
 
+## 5a. OEIS identification (VERIFIED 20 terms)
+
+`pal13(n)` matches **A226916** (number of (17,11)-reverse multiples
+with n digits) as `rigid-SC(n) = A226916(n+8)` (offset read from the
+listed terms; 20 consecutive terms
+`2,1,2,2,3,3,5,4,7,6,10,9,15,13,22,19,32,28,47,41` agree). The
+mechanism is not coincidence: Deutsch's comment on A226916 gives the
+Hoggatt-Bicknell generating function `(1+F(x))/(1-F(x^2))` for
+palindromic compositions and identifies A226916 with palindromic
+compositions into parts `>= 3`; compositions into parts `{1,3}` and
+into parts `>= 3` both satisfy the Narayana recurrence
+`x_n = x_{n-1} + x_{n-3}`, so their palindromic counts coincide up
+to shift. Tournament rigid classes = Sloane reverse multiples,
+eight digits apart -- a candidate cross-reference for the OEIS
+submission pipeline (formal b-file check pending).
+
 ## 5b. Still open
 
 - No rigid-SC class outside the tower grammar, all n.
