@@ -277,6 +277,7 @@ for z in range(1, SUMMAND_LIMIT + 1):
 
 # Exact period-two lattice count for the initial-segment filtration.
 summand_total = 0
+summand_counts = []
 for z in range(1, SUMMAND_LIMIT + 1):
     direct_count = sum(1 for a in range(1, z) if a < z - a)
     formula_count = (z - 1) // 2
@@ -289,6 +290,26 @@ for z in range(1, SUMMAND_LIMIT + 1):
     require(
         summand_total == ((z - 1) * (z - 1)) // 4,
         f"cumulative summand count failed at {z}",
+    )
+    summand_counts.append(direct_count)
+
+for prior_size in range(1, SUMMAND_LIMIT):
+    first_difference = (
+        summand_counts[prior_size] - summand_counts[prior_size - 1]
+    )
+    require(
+        first_difference == (1 + (-1) ** prior_size) // 2,
+        f"first summand difference failed at {prior_size}",
+    )
+for prior_size in range(1, SUMMAND_LIMIT - 1):
+    second_difference = (
+        summand_counts[prior_size + 1]
+        - 2 * summand_counts[prior_size]
+        + summand_counts[prior_size - 1]
+    )
+    require(
+        second_difference == (-1) ** (prior_size + 1),
+        f"second summand difference failed at {prior_size}",
     )
 
 # Once z>=13, deleting the missing dependency module {1,4,6} deletes
@@ -532,6 +553,7 @@ print(
     "r(z)=floor((z-1)/2)=(2z-3-(-1)^z)/4"
 )
 print("summand_cumulative=R(N)=floor((N-1)^2/4)")
+print("summand_differences=Delta_r(N)=(1+(-1)^N)/2;Delta2=(-1)^(N+1)")
 print("restricted_summand_fibre_for_z_ge_13=r(z)-3")
 print(
     "swap_fixed_diagonals="

@@ -2,15 +2,12 @@
 id: THM-2422
 title: "Swap-fixed operation fibres, dyadic summand closure, and twin-center ancestry"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
-  The commutative addition and multiplication fibres have exact diagonal
-  corrections supported, respectively, on even targets and perfect squares.
-  Distinct-summand closure from {2,3} is N minus {1,4,6}; its synchronous
-  stages have one last transient hole and then the exact frontier
-  M_(t+1)=2M_t-1. The proposed immediate A014574 recurrence fails first after
-  startup at 348=312+36, but every normalized twin center k>=3 checked through
-  center 100,000,000 has two distinct earlier twin-center parents. That last
-  statement is FINITE-EXACT only; its all-n extension remains OPEN.
+  PROVED + FINITE-EXACT; INDEPENDENTLY HOSTILE-AUDITED. Equations (4)--(18),
+  the synchronous law (19)--(26), the local A014574 recurrence refutation
+  (31)--(32), and the residue laws (38)--(43) are PROVED. Every normalized
+  twin center k>=3 through center 100,000,000 has two distinct earlier
+  twin-center parents; that census (36) is FINITE-EXACT only, and its all-n
+  extension (37) remains OPEN.
 source: codex-2026-07-26-operation-fibre-ancestry
 depends_on:
   - THM-361-product-sum-defect-normal-form
@@ -22,14 +19,14 @@ related:
 external: "OEIS A014574, https://oeis.org/A014574"
 script: 04-computation/twin_center_additive_ancestry_thm2422.py
 output: 05-knowledge/results/twin_center_additive_ancestry_thm2422.out
-script_sha256: f8de71d40d646494864dcf178732f199ab4782c88efadb6bde71b37e935c833d
-output_sha256: 153af3af5517d78f1532d4d5c8b458fbd03cdd0f198df2cc8612d12a3420cb8f
+script_sha256: da782a1fa3a4e9dc43ac5af79ed869f8807cfbc750daa9167c264d7ade21e734
+output_sha256: bb6195c62abb55d1d1be706f9d5576b8e7e3b055fb8456ef6fea72b3eff185ca
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2422 -- operation fibres, summand closure, and twin-center ancestry
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED + FINITE-EXACT; INDEPENDENTLY HOSTILE-AUDITED.**
 
 This theorem separates three objects that had repeatedly been blended:
 
@@ -44,6 +41,8 @@ see parity, a missing parent, or the difference between a Fibonacci spine and
 the whole closure. Those structures live in the labelled fibre.
 
 ## 1. The swap-fixed sidecar
+
+Write `N={1,2,3,...}`.
 
 For `z>=1`, define the weak and strict unordered additive fibres
 
@@ -120,7 +119,8 @@ For `z=2m`, the strict additive first parent is
 precisely when `z` is a square, proving (5). Removing `{1,z}` gives (7),
 and (8) is the definition of multiplicative atomicity.
 
-Put `r(z)=|A_z^<|`. Summing (4) gives
+Put `r(z)=|A_z^<|` and let `Delta f(N)=f(N+1)-f(N)` be the
+forward difference. For every `N>=1`, summing (4) gives
 
 ```text
 sum_(z<=N) r(z) = floor((N-1)^2/4),                           (9)
@@ -136,6 +136,7 @@ Equivalently,
 sum_(z>=1) r(z)X^z = X^3/((1-X)(1-X^2)).                     (12)
 ```
 
+as a formal power-series identity (and analytically for `|X|<1`).
 This is the precise sense in which the growing summand fibre is alternating:
 it is a period-two boundary quasipolynomial. The infinite simple graph itself
 does not alternate.
@@ -185,6 +186,7 @@ when it is absent and `h(z)=0` when it is present. Then
 h(z) = AND_(a<b, a+b=z) (h(a) OR h(b)).                       (17a)
 ```
 
+The empty conjunction is true.
 A target is missing exactly when the missing set hits every labelled parent
 edge. With `1` absent and `2,3` forced present, the sole strict edge
 `1+3=4` forces `h(4)=1`; the two edges `1+5=6` and `2+4=6` then force
@@ -240,8 +242,10 @@ S_3={2,3,5,7,8,9,10,11,12,13,15},                            (20)
 S_4={2,3,5} union [7,28].                                    (21)
 ```
 
-Thus `14` is the last transient hole. For example, the new upper interval in
-`S_4` has the witnesses
+Thus `14` is the final internal gap below the current frontier: `S_4` and
+every later `S_t` are gap-free on `[7,M_t]`, although integers above `M_t`
+have not yet been generated. For example, the new upper interval in `S_4`
+has the witnesses
 
 ```text
 14=3+11, 16=3+13, 17=2+15, 18=5+13, 19=7+12,
@@ -284,14 +288,16 @@ The Fibonacci chain
 ```
 
 is a lawful selected ancestry path in (19), but it is not the forced
-backbone or the full frontier. Already the Fibonacci target `13` has three
-live parent pairs,
+backbone or the full frontier. In the eventual closure fibre, the Fibonacci
+target `13` has three live parent pairs,
 
 ```text
 13=2+11=3+10=5+8,                                           (28)
 ```
 
 and its growth rate `phi` differs from the dyadic frontier (26).
+At the birth of `13` in `S_3`, only `5+8` is available; synchronous
+nonuniqueness already occurs there at `10=2+8=3+7`.
 
 ## 4. What the A014574 recurrence actually says
 
@@ -444,8 +450,9 @@ The ordered parent-channel counts from `{0,2,3}^2` into target residues
 3,1,2,2,1.                                                   (43)
 ```
 
-Thus a target already known to lie in `K` avoids both one-channel residue
-classes, whereas the unrestricted `K+K` problem in HYP-1994 must cover them.
+Thus every `k>1` already known to lie in `K`—in particular every target in
+(36)—avoids both one-channel residue classes, whereas the unrestricted
+`K+K` problem in HYP-1994 must cover them.
 Consistently, ten of the eleven currently recorded HYP-1994 holes are
 `1 mod 5`. This explains a real difference between the two problems, but
 does not supply the missing global lower bound.
@@ -501,7 +508,8 @@ The companion:
 - checks every A014574 center and canonical parent in (36);
 - reproduces all `440,309` canonical pairs by an opposite traversal from the
   latest possible second parent backward;
-- records the complete repair-depth histogram;
+- records depths `0` through `10`, their aggregated tail, and the exact
+  maximum and maximizing targets;
 - verifies (4)--(11), (14), and (18) through target `10,000`;
 - independently constructs `S_0,...,S_10` and checks (20)--(26);
 - verifies the additive and multiplicative diagonal formulas, with `9` as

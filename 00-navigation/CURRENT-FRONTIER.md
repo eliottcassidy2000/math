@@ -342,24 +342,22 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
 - [THM-2010](../01-canon/theorems/THM-2010-new-tournament-invariant-sequences.md)
   records four-term candidates and a no-match search. That is not proof of
   sequence novelty.
-- **EXACT identities / heuristic bridge:** corrected HYP-8820 places caterer
-  and cake as Pascal-prefix sums, Moser and bagel as fixed binomial row
-  functionals, and Fibonacci as a shallow diagonal. Algebraically,
-  for `n>=1`, `bagel(n)=cake(n+1)-2`, hence
-  `bagel(n)-cake(n)=T_n-1`. Klein-S313's
-  full-rank gap diagonals exactly realize the g-bonacci kernels; finite-rank
-  shadows eventually differ. MISTAKE-222 blocks the stronger claim that a
-  shared array or matching `-1` identifies the torus and shadow boundaries or
-  transfers an LRC/JC predicate. The live bridge test is an explicit common
-  boundary-cell/Euler-characteristic valuation, not another prefix match.
+- [THM-2412](../01-canon/theorems/THM-2412-discrete-newton-exponential-and-central-binomial-split.md)
+  makes the Maclaurin/Newton analogy exact; [THM-2413](../01-canon/theorems/THM-2413-prime-index-affine-drift-and-twin-center-weld.md)
+  identifies A014574 as prime-index plateaux and fixed-gap multiplicative atoms.
+  [THM-2422](../01-canon/theorems/THM-2422-operation-fibres-summand-closure-and-twin-center-ancestry.md)
+  retains labelled fibres: parity/square swap walls; closure
+  `N\{1,4,6}` with dyadic frontier; local A014574 recurrence refuted at term
+  `21`; and distinct ancestry FINITE-EXACT through center `10^8`, ALL-n OPEN.
+- **EXACT identities / heuristic bridge:** corrected HYP-8820 puts caterer,
+  cake, Moser, bagel, and Fibonacci in one Pascal array and proves
+  `bagel(n)-cake(n)=T_n-1`; Klein-S313 realizes full-rank g-bonacci kernels.
+  MISTAKE-222 blocks transferring an LRC/JC predicate from these shadows; the
+  live test needs a common boundary-cell/Euler-characteristic valuation.
 - **EXACT arrangement shadow / blocked topology transfer:** corrected HYP-8825
-  identifies the Vandermonde as the braid-arrangement defining polynomial,
-  its real chambers with labelled transitive tournaments, its leading
-  coalescence product, and the gap recurrence with a companion determinant.
-  MISTAKE-223 blocks the jumps from these facts to general NC2
-  noncancellation, hyper-Bessel factorization, or one bagel/shadow Euler
-  characteristic. THM-2023 already proves the `Phi_(p,q)` zero theorem by a
-  different route.
+  connects Vandermonde, braid chambers/transitive tournaments, and a companion
+  determinant. MISTAKE-223 blocks NC2, hyper-Bessel, or Euler-characteristic
+  transfers; THM-2023 proves the `Phi_(p,q)` zero theorem independently.
 
 ### Live work
 Classify profiles under support operations; study analytic continuation and automatic/Mahler structure; track collision taxes; and feed support identities into tournament laws and LRC residue packets.

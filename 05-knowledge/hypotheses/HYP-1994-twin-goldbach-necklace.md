@@ -33,6 +33,32 @@ no additional representability status. Hence, within that verified scope:
 
   **even n>8 is a sum of two twin primes  ⇔  round(n/6) ∈ K+K.**
 
+**Internal-necklace ancestry (THM-2422).** The tempting local law
+`k_i-k_(i-1) in K` is false: its first post-startup failure is
+`58=52+6` with `6 notin K`, i.e. A014574 term `348=312+36`. The stronger
+distinct-parent fibre nevertheless satisfies
+
+```text
+every k in K, 3<=k<=16,666,598, has k=a+b with a<b in K
+```
+
+by a FINITE-EXACT, independently reproduced census through center
+`100,000,000` (`440,309` targets). The all-`k` extension is OPEN and is
+strictly narrower than the present whole-integer `K+K` conjecture.
+
+There is a real local explanation for the difference. Apart from the
+prime-equals-five startup `k=1`, one has
+
+```text
+K mod 5 subset {0,2,3}.
+```
+
+The ordered parent-channel counts from `{0,2,3}^2` into residues
+`0,1,2,3,4` are `3,1,2,2,1`. Thus an internal `K` target avoids the two
+one-channel residue classes, whereas whole-integer `K+K` must cover them;
+ten of the eleven recorded holes below are `1 mod 5`. This is an exact local
+thinning mechanism, not a proof that no further holes exist.
+
 The 11 exception-triples ⇔ the 11 integers not in K+K:
 m = 16, 67, 86, 131, 151, 186, 191, 211, 226, 541, **701** (×6 → 96,402,516,
 786,906,1116,1146,1266,1356,3246,4206). The triples come in threes purely as the

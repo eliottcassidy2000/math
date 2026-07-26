@@ -19,6 +19,7 @@ reverse_parent_scan=matched:440309 max_depth:123
 summand_closure_from_2_3=[1,10000]_minus_1_4_6
 summand_fibre=r(z)=floor((z-1)/2)=(2z-3-(-1)^z)/4
 summand_cumulative=R(N)=floor((N-1)^2/4)
+summand_differences=Delta_r(N)=(1+(-1)^N)/2;Delta2=(-1)^(N+1)
 restricted_summand_fibre_for_z_ge_13=r(z)-3
 swap_fixed_diagonals=addition:even_targets multiplication:perfect_squares
 multiplicative_atoms=prime_iff_tau(z)-2=0
