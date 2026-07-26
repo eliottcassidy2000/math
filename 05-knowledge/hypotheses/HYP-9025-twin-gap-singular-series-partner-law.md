@@ -1,9 +1,15 @@
 ---
 id: HYP-9025
 title: "Twin-gap singular-series partner law"
-status: OPEN (quantitative empirical law, verified shape at centers <= 10^8)
+status: >
+  PARTIALLY VERIFIED (THM-2447, same day: the local factor law is
+  PROVED exactly (c_p in {2,3,4}); prediction 1's cumulative window
+  form fits at R^2 >= 0.988 with window-decaying lambda_j; the
+  per-prime harmonic amplitudes are recovered within 2.4% after
+  availability detrending). Predictions 2 and 3 remain OPEN.
 source: kind-pasteur-2026-07-26-S131
 related:
+  - THM-2447-twin-gap-local-prime-harmonics-and-detrended-spectrum
   - THM-2443-twin-rank-parent-parity-margins-and-boundary-crossing-bridge
   - THM-2422-operation-fibres-summand-closure-and-twin-center-ancestry
   - HYP-1994-twin-goldbach-necklace

@@ -1,0 +1,27 @@
+PART1 local factor lemma: 8532 exhaustive (p,g) checks, p in [5,199], g in [1,2p+2]: PASS
+census: |K| = 440311, max k = 16666598
+
+PART2 harmonic ratios (empirical vs exact, availability-detrended):
+p  class    naive     detrended  exact      rel.err
+  5  c_p=2   2.8115    3.0244    3.0000   0.814% PASS
+  5  c_p=3   2.0049    2.0213    2.0000   1.064% PASS
+  7  c_p=2   1.5390    1.6604    1.6667   0.377% PASS
+  7  c_p=3   1.3470    1.3356    1.3333   0.167% PASS
+ 11  c_p=2   1.2321    1.3090    1.2857   1.810% PASS
+ 11  c_p=3   1.1511    1.1489    1.1429   0.526% PASS
+ 13  c_p=2   1.0530    1.2024    1.2222   1.621% PASS
+ 13  c_p=3   1.1188    1.0982    1.1111   1.159% PASS
+ 17  c_p=2   0.9185    1.1576    1.1538   0.322% PASS
+ 17  c_p=3   1.1167    1.0967    1.0769   1.833% PASS
+ 19  c_p=2   0.8693    1.1063    1.1333   2.387% PASS
+ 19  c_p=3   1.0527    1.0735    1.0667   0.643% PASS
+hostile control (wrong harmonic rejected at every p): PASS
+
+PART3 window fit: N_j(g)/w(g) ~ A_j exp(-lambda_j W(g))
+window          lambda_j     R^2      worst_rel_resid  n_gaps
+[2^20,2^21)    0.012714   0.9885       0.190       69 PASS
+[2^21,2^22)    0.012009   0.9940       0.176       92 PASS
+[2^22,2^23)    0.010972   0.9963       0.142       112 PASS
+[2^23,2^24)    0.010114   0.9963       0.276       120 PASS
+
+ALL CHECKS PASSED
