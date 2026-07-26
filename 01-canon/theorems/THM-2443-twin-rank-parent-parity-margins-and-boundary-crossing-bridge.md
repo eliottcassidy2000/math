@@ -69,8 +69,8 @@ law `r(z) = floor((z-1)/2)` (whose period-two boundary behaviour is
 the owner's "alternating object"): after thinning from `N` to `K`,
 the alternation survives exactly as the parity bit (1) -- the
 in-degree parity of the twin-rank summand graph is the indicator of
-half-membership. Verified with zero violations on all `440,309`
-census targets (output line 6).
+half-membership. Verified with zero violations on all `440,310`
+ranks `k >= 2` of the census universe (output line 6).
 
 Corollary (raw units, THM-2433 companion): center `12` is the unique
 center whose only representation is the doubled `6+6` (`R(2)=1`,

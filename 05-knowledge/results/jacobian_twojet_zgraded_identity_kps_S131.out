@@ -1,0 +1,10 @@
+identity exact [generic deg 1, 27 symbols]: PASS
+identity exact [generic deg 2, 54 symbols]: PASS
+identity exact [THM-1310 embed]: PASS
+canon control: D1 = -6x^2(xy+1) + 6x^2(xy+1) = 0, D0 = -2: PASS
+identity exact [hostile xy^3]: PASS
+hostile control: failure localized to D1'/D0', exact forms: PASS
+Euler reductions: E5 vacuous, E4 = -2[ax,ay,b], E3 = (4/3)[bx,by,a] - 4[ax,ay,g], cone identity: PASS
+tame witness F=(x+z^2,y,z): graded-consistent, D0=1, field degree 1: PASS
+d=3 ruling: B2^3 + 27 B1^2 B3 = 0: PASS
+ALL CHECKS PASSED
