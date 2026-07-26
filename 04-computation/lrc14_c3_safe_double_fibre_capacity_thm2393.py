@@ -297,7 +297,7 @@ def fmt_hist(hist: dict[int, F]) -> str:
 
 
 print("theorem=THM-2393")
-print("status=PROVED-CANDIDATE+VERIFIED-EXACT; independent-audit=PENDING")
+print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED")
 print(f"compatible_oriented_types={len(TYPES)}")
 print(
     "whole_union_masses="
@@ -323,8 +323,8 @@ print(
 print(f"M2_filter={mod49}; M3_filter={mod343}")
 print(f"M2_4:3_clean_floor={seven_floors[(4,3)]}")
 print(
-    f"uniform_noncommon_clean>{global_clean_floor};"
-    f" top_cell>{top_cell_floor}; tensor_cell>{tensor_cell_floor}"
+    f"uniform_noncommon_clean>={global_clean_floor};"
+    f" top_cell>={top_cell_floor}; tensor_cell>={tensor_cell_floor}"
 )
 print("final_no_clean_residual=M1;(a,b)=(1,1);chain=(1,13,13,169)")
 print("common_core_seven_hist=" + fmt_hist(observed_seven[(1, 1)]))

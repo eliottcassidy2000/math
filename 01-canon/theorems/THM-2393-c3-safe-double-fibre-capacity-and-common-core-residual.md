@@ -2,7 +2,7 @@
 id: THM-2393
 title: "C3-safe double-fibre capacity and the sole common-core residual"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. In
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In
   THM-2392's ten oriented middle-depth-two cage types, delete the
   quotient high blocker as well as q_* and c_3. The resulting high-safe
   base has exact mass 396/637. Exact seven-root empty-fibre counts force
@@ -11,9 +11,9 @@ status: >
   it in the ninth. Combined with THM-2391, every no-clean survivor has
   M=1 and the sole orientation (a,b)=(1,1), equivalently
   (C_1,C_2,c_1,c_2)=h(1,13,13,169). All other packets have clean-hole
-  mass greater than 1/26754, hence a fixed q_*-labelled charged cell
-  greater than 1/1391208 and a same-parent C_7 x C_13 cell greater than
-  1/9042852. This is a structural reduction, not a row exclusion,
+  mass at least 1/26754, hence a fixed q_*-labelled charged cell at least
+  1/1391208 and a same-parent C_7 x C_13 cell at least 1/9042852. This is
+  a structural reduction, not a row exclusion,
   ledger decrement, target landing, or proof of LRC(14).
 source: codex-2026-07-26-double-fibre-capacity
 depends_on:
@@ -26,14 +26,14 @@ related:
   - THM-2372-hard-septimal-signed-stalk-and-toothpick-divisibility
 script: 04-computation/lrc14_c3_safe_double_fibre_capacity_thm2393.py
 output: 05-knowledge/results/lrc14_c3_safe_double_fibre_capacity_thm2393.out
-script_sha256: 8d61b7798328d9eda8db44826023cfeb00610bb91574d58a068d36650283e590
-output_sha256: b737b6b50577fc119ef8970aebbf8537b92e7ee1b3aa39b624890a9b65168224
+script_sha256: 516d6f5d7a839be77d8b3f9dd097e78ee81140b37ab7cc2d2f8021f599dba318
+output_sha256: 74c473f73d67db4fdf702142e072ebac466764085f4b4bbfeb490cceb8564bb6
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2393 -- C3-safe double-fibre capacity
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2392 reduces the only unpriced middle-depth-two cage to ten oriented
 ratios. THM-2391 independently says that only one of those ratios can
@@ -361,14 +361,14 @@ D_h, D_(13h), D_(169h).                              (33)
 Every packet outside (31) has, by THM-2392 and Sections 3--4,
 
 ```text
-delta>1/26754.                                       (34)
+delta>=1/26754.                                      (34)
 ```
 
 THM-2392's distinguished-top deletion therefore yields a fixed
 `q_*`-labelled singleton/adjacent charged cell of mass
 
 ```text
->1/(52*26754)
+>=1/(52*26754)
  =1/1391208,                                         (35)
 ```
 
@@ -376,7 +376,7 @@ and its same-parent transverse tensor yields a fixed
 `F_7 x F_13` cell of mass
 
 ```text
->1/(338*26754)
+>=1/(338*26754)
  =1/9042852.                                         (36)
 ```
 

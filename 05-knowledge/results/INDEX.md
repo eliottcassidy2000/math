@@ -1832,7 +1832,7 @@ all `8,100` occupancy subsets of size at most ten, the full-fibre jet
 transcripts agree and end in `PASS`.
 
 ### lrc14_c3_safe_double_fibre_capacity_thm2393.out
-Exact THM-2393 candidate audit. It reconstructs the ten compatible low-cage
+Exact THM-2393 proved and independently hostile-audited replay. It reconstructs the ten compatible low-cage
 unions, their complete seven-root occupancy laws, the exact `396/637`
 high-safe mass, and the thirteen-root `0/10/12` refinement. Nine orientations
 force clean holes; the only no-clean residual is the adjacent-layer common-core

@@ -1,5 +1,5 @@
 theorem=THM-2393
-status=PROVED-CANDIDATE+VERIFIED-EXACT; independent-audit=PENDING
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED
 compatible_oriented_types=10
 whole_union_masses=1:1=193/1183;1:2=114/1183;2:1=239/2366;1:3=263/3549;3:1=95/1183;4:1=331/4732;2:3=43/546;3:2=95/1183;3:4=491/7098;4:3=331/4732
 high_pair_safe=66/91; full_high_safe=396/637
@@ -11,7 +11,7 @@ thirteen_grid_danger=1:1/7,2:6/7
 second_fibre_event=136/1183; clean_floor_2:1=136/8281
 M2_filter=((4, 3),); M3_filter=()
 M2_4:3_clean_floor=1424/57967
-uniform_noncommon_clean>1/26754; top_cell>1/1391208; tensor_cell>1/9042852
+uniform_noncommon_clean>=1/26754; top_cell>=1/1391208; tensor_cell>=1/9042852
 final_no_clean_residual=M1;(a,b)=(1,1);chain=(1,13,13,169)
 common_core_seven_hist=1:145/169,2:24/169
 boundary_word=2,1,1,1,1,1,1

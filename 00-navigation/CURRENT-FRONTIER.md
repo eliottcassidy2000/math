@@ -172,7 +172,17 @@ exact and finite; it does not prove that every surviving interval is empty.
 THM-2168--2257 leave `165` rows; THM-2295--2349 supply packets and `91`-unit edges.
 THM-2350--2367 give LRC banks (THM-2356 kernel `28,393` versus `169`; THM-2363 dominates); THM-2368--2377 expose hostiles and force the `98`-toothpick/repeated-layer carrier.
 THM-2378 closes `W=k=1`; THM-2381/2382 close `(1,1)`/`(5,2,7)`; THM-2385 closes `(2,0)`, leaving only `k=2,(1,0)`.
-THM-2388 locates `36/343` excess/cage, not off-cage mass. THM-2390 forces lower weight seven or eight; THM-2391 forces primitive depth zero and removes weight seven, leaving one seven-address word with one double. It is binary at `M=1`; for `M>=2` its slopes are `+/-1,+/-2`. Owner-typed restoration, a dual dipole, and endpoint reference remain open. Ledger: `165`.
+THM-2388 locates `36/343` excess/cage, not off-cage mass. THM-2390 forces
+lower weight seven or eight; THM-2391 forces primitive depth zero and removes
+weight seven, leaving one seven-address word with one double. THM-2392 prices
+all but ten compatible middle-depth cage orientations and retains a
+same-parent `C_7 x C_13` charged tensor. THM-2393's exact double-fibre count
+eliminates nine of those orientations and every `M>=2` case. The sole
+no-clean residual is now the literal `M=1` common-core chain
+`(C_1,C_2,c_1,c_2)=h(1,13,13,169)`, where every seven-root fibre has one or
+two low-cage addresses. The missing sidecar is an owner-typed transition for
+the mandatory middle `D_(13h)` address, not another unlabelled mass bound.
+Ledger: `165`.
 
 ### Independent routes that remain live
 

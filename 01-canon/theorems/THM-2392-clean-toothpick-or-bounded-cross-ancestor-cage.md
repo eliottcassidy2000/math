@@ -2,7 +2,7 @@
 id: THM-2392
 title: "Clean toothpick or bounded cross-ancestor cage"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. Assuming
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Assuming
   THM-2388's last-lane hypotheses and exact 36/343 hole/excess ledger, let
   delta be the mass of unit holes which are outside the quotient-blocker
   union. Every such parent has exactly one double-covered inverse root,
@@ -48,7 +48,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2392 -- a clean toothpick or a bounded blocker cage
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2388 finds exact signed mass in the final septimal
 `k=2,(t,b)=(1,0)` lane, but it does not put that mass outside the
