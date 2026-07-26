@@ -10,9 +10,12 @@ status: >
   coordinate-line energies resolve the two target directions.
   Singleton energies and a full thirteen-phase pair-twist recover the
   product exactly, while one ordinary union and one nontrivial
-  quadrature already recover its complex phase. One real union alone
-  is sharply insufficient. The result is coefficient-theoretic unless
-  an endpoint-matched physical pair-twist service is supplied. No
+  quadrature already recover its complex phase. On an affine target
+  line q_1=b!=0, two t-slices of the ordinary-translation bank (for
+  all s) provide that quadrature and recover the charged product
+  without an artificial phase twist. The self-opposite line b=0 retains exactly the I+J
+  ambiguity. The result is coefficient-theoretic unless the required
+  endpoint-matched translations or pair twist are physically supplied. No
   scalar-row exclusion, ledger decrement, or LRC(14) consequence is
   asserted.
 source: codex-2026-07-25-cross-word-charged-correlation
@@ -27,8 +30,8 @@ related:
   - THM-2375-gaussian-angular-complete-line-charge-tomography
 script: 04-computation/lrc14_cross_word_charged_correlation_thm2380.py
 output: 05-knowledge/results/lrc14_cross_word_charged_correlation_thm2380.out
-script_sha256: da0e3b91be459fe65606bf5e728b25cc949741b90148590523b0f943b2986c23
-output_sha256: 7a66fde3abbc9dfb7920185c7221a22a43d8ff77a9f47c6e5fad7c55ebc085f9
+script_sha256: 95ce85f9a4c9f71bb7ad82704ec375256c72d22129c0ebe1eaccd06b8bc89483
+output_sha256: 74c4088a82d0adcb726246cfd70c358088bfcb0a91e069cd45ea1a8f6c8da532
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -267,6 +270,114 @@ but their Gram phases are opposite. This is the same missing phase
 that prevents squared Walsh or scalar angular spectra from identifying
 a charged edge.
 
+## 5a. Ordinary affine translations supply quadrature off the zero line
+
+There is a sharper repair when the charged product is supported on a
+known affine target line. Write target coordinates as
+
+```text
+q=(b,r),                    e_1=(1,0), e_2=(0,1),
+
+z(b,r)=d(b,r)conj(w(b,r)).
+```
+
+Use only ordinary relative translations, with no scalar phase twist:
+
+```text
+U(s,t)
+ =1/N sum_(ell in G)|D(ell+s e_2)+W(ell+t e_1)|^2
+  -||D||_2^2-||W||_2^2.                              (21a)
+```
+
+The cross term and (7) give
+
+```text
+U(s,t)
+ =R(s e_2-t e_1)+conj(R(s e_2-t e_1)).               (21b)
+```
+
+Taking the normalized two-variable transform yields the exact
+symmetrized projector
+
+```text
+1/N sum_(s,t in F_13)
+ U(s,t) zeta^(-sr+tb)
+
+ =z(b,r)+conj(z(-b,-r)).                              (21c)
+```
+
+Thus real translated-union intensities lose only reflection across the
+origin in target space. Suppose now that
+
+```text
+supp(w) subset {(b_0,r):r in F_13},                  (21d)
+```
+
+where `b_0!=0`. Since `13` is odd, the reflected line `-b_0` is
+different from `b_0`, so (21c) recovers `z(b_0,r)` exactly.
+
+In fact the complete `t`-bank is unnecessary. Put
+
+```text
+A_s=sum_r z(b_0,r)zeta^(sr).
+```
+
+The two ordinary relative shifts `t=0` and `t=b_0^(-1)` give
+
+```text
+U(s,0)=A_s+conj(A_s),
+
+U(s,b_0^(-1))=zeta^(-1)A_s+zeta conj(A_s),           (21e)
+```
+
+and hence
+
+```text
+(zeta^(-1)-zeta)A_s
+ =U(s,b_0^(-1))-zeta U(s,0).                         (21f)
+```
+
+The coefficient on the left is nonzero, and inverse Fourier transform
+in `s` recovers every `z(b_0,r)`. Ordinary translation has supplied the
+second quadrature because the nonzero affine charge rotates the common
+line by a known phase.
+
+For arbitrary complex coefficient currents, the hypothesis `b_0!=0`
+is sharp. On the zero line, (21c) is the operator
+
+```text
+I+J,                 (Jz)(0,r)=conj(z(0,-r)).        (21g)
+```
+
+It has a nontrivial kernel. For example, take
+
+```text
+w(0,r_0)=w(0,-r_0)=1,
+
+d(0,r_0)=d(0,-r_0)=i,                 r_0!=0.         (21h)
+```
+
+Then the charged energy is positive, but every `U(s,t)` in (21a)
+vanishes. This is a coefficient-level hostile and deliberately violates
+Hermitian symmetry. If both currents come from real tables, then
+
+```text
+d(-q)=conj(d(q)),              w(-q)=conj(w(q)),
+```
+
+so `z(-q)=conj(z(q))`, hence `Jz=z` and (21c) returns `2z` even on
+`b=0`. In that Hermitian setting, support on one nonzero line `b_0`
+also forces support on its reflected line `-b_0`; the single-line
+hypothesis (21d) is therefore a complex coefficient grouping, not the
+support of a full real table.
+
+The promoted first-collision null-parent control lies on the same
+`b=0` line but in the opposite eigenspace: on its twelve nonzero target
+points one has `d=-w`, and the word is real-even, so (21c) returns
+`-2|w|^2` there rather than zero. Its residual is therefore not
+quadrature but canonical owner typing and restoration of the common
+terminal endpoint.
+
 ## 6. Sharp disjoint-support hostile
 
 Fix `q_0!=0` and take
@@ -328,6 +439,12 @@ A coefficient-derived quadratic functional is enough for the algebra,
 but calling it a physical LRC measurement requires an independent
 realization. No such realization is asserted here.
 
+Section 5a lowers that service on a known nonzero affine target line:
+one common endpoint gauge and the two lawful `t`-slices in (21e), each
+for all `s`, suffice. It does not construct that translation bank inside
+the terminal owner word, and it does not repair the self-opposite `b=0`
+line without an additional symmetry or reference.
+
 ## 8. Relation to nearby tomography
 
 - THM-2355 reconstructs phases between labelled components from
@@ -379,6 +496,9 @@ The dependency-free exact companion checks:
   controls, both coordinate-line energies, and the `(A,B,C)` recovery
   in (12);
 - the exact quadratic-extension reconstruction (20);
+- four raw frequency-side affine-union controls, all `169` symmetrized
+  projectors in (21c), the two-shift determinant (21f), and both
+  eigenspaces of the zero-line operator (21g);
 - the ordinary-union phase ambiguity (21); and
 - both disjoint-support hostiles (22)--(24), including the example in
   which both currents have nonzero-target energy.

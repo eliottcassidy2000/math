@@ -197,6 +197,29 @@ def cycloi_conjugate_i(value: CycloI) -> CycloI:
     return (value[0], cyclo_scale(value[1], -1))
 
 
+def cycloi_conjugate(value: CycloI) -> CycloI:
+    """Apply complex conjugation to both zeta_13 and i."""
+    return (
+        cyclo_conjugate(value[0]),
+        cyclo_scale(cyclo_conjugate(value[1]), -1),
+    )
+
+
+def cycloi_phase(value: CycloI, exponent: int) -> CycloI:
+    """Multiply a Q(zeta_13,i) value by zeta_13**exponent."""
+    return (
+        cyclo_phase(value[0], exponent),
+        cyclo_phase(value[1], exponent),
+    )
+
+
+def cycloi_sum(values: list[CycloI] | tuple[CycloI, ...]) -> CycloI:
+    total = cycloi_zero()
+    for value in values:
+        total = cycloi_add(total, value)
+    return total
+
+
 def dot(left: Point, right: Point) -> int:
     return (left[0] * right[0] + left[1] * right[1]) % P
 
@@ -710,6 +733,232 @@ def main() -> None:
         "one-quadrature reconstruction identity changed",
     )
 
+    # Ordinary affine translations recover the charged product on a
+    # nonzero target line.  Here b=3 and z has three Gaussian-rational
+    # entries.  The real translated-union bank is
+    #
+    # U(s,t)=A_s*zeta^(-tb)+conjugate(A_s*zeta^(-tb)).
+    #
+    # Its two-variable DFT is z(b,r)+conjugate(z(-b,-r)).
+    affine_charge = 3
+
+    # Four raw frequency-side controls independently check the relative
+    # shift sign in U(s,t).  This real fixture has z=d*conjugate(w)
+    # supported on the same affine line b=3.
+    affine_real_deletion = {target: ZERO for target in group}
+    affine_real_retained = {target: ZERO for target in group}
+    for residue, value in (
+        (0, Fraction(1)),
+        (4, Fraction(-3)),
+        (9, Fraction(2)),
+    ):
+        affine_real_deletion[(affine_charge, residue)] = value
+        affine_real_retained[(affine_charge, residue)] = ONE
+    affine_real_dft = fourier_transform(group, affine_real_deletion)
+    affine_real_wft = fourier_transform(group, affine_real_retained)
+    affine_real_norms = sum(
+        value * value
+        for value in affine_real_deletion.values()
+    ) + sum(
+        value * value
+        for value in affine_real_retained.values()
+    )
+    affine_raw_controls = 0
+    for shift_s, shift_t in ((0, 0), (1, 0), (0, 1), (4, 7)):
+        raw_energy = cyclo_zero()
+        for frequency in group:
+            shifted_d = affine_real_dft[
+                add_group(frequency, (0, shift_s))
+            ]
+            shifted_w = affine_real_wft[
+                add_group(frequency, (shift_t, 0))
+            ]
+            raw_energy = cyclo_add(
+                raw_energy,
+                cyclo_norm_squared(cyclo_add(shifted_d, shifted_w)),
+            )
+        raw_union = cyclo_subtract(
+            cyclo_scale(raw_energy, Fraction(1, N)),
+            cyclo_rational(affine_real_norms),
+        )
+        line_value = cyclo_zero()
+        for residue in range(P):
+            line_value = cyclo_add(
+                line_value,
+                cyclo_scale(
+                    root(shift_s * residue),
+                    affine_real_deletion[(affine_charge, residue)]
+                    * affine_real_retained[(affine_charge, residue)],
+                ),
+            )
+        oriented = cyclo_phase(
+            line_value,
+            -shift_t * affine_charge,
+        )
+        require(
+            raw_union
+            == cyclo_add(oriented, cyclo_conjugate(oriented)),
+            "raw affine translated-union sign or normalization changed",
+        )
+        affine_raw_controls += 1
+
+    affine_values = {
+        target: cycloi_zero()
+        for target in group
+    }
+    affine_values[(affine_charge, 0)] = cycloi_gaussian(
+        (Fraction(1), Fraction(2))
+    )
+    affine_values[(affine_charge, 4)] = cycloi_gaussian(
+        (Fraction(-3), Fraction(1))
+    )
+    affine_values[(affine_charge, 9)] = cycloi_gaussian(
+        (Fraction(2), Fraction(-5))
+    )
+
+    affine_line_transform: dict[int, CycloI] = {}
+    affine_unions: dict[tuple[int, int], CycloI] = {}
+    for shift_s in range(P):
+        line_value = cycloi_zero()
+        for residue in range(P):
+            line_value = cycloi_add(
+                line_value,
+                cycloi_phase(
+                    affine_values[(affine_charge, residue)],
+                    shift_s * residue,
+                ),
+            )
+        affine_line_transform[shift_s] = line_value
+        for shift_t in range(P):
+            oriented = cycloi_phase(
+                line_value,
+                -shift_t * affine_charge,
+            )
+            affine_unions[(shift_s, shift_t)] = cycloi_add(
+                oriented,
+                cycloi_conjugate(oriented),
+            )
+
+    affine_projector_checks = 0
+    for target_charge, target_residue in group:
+        raw = cycloi_zero()
+        for shift_s in range(P):
+            for shift_t in range(P):
+                raw = cycloi_add(
+                    raw,
+                    cycloi_phase(
+                        affine_unions[(shift_s, shift_t)],
+                        -shift_s * target_residue
+                        + shift_t * target_charge,
+                    ),
+                )
+        recovered = cycloi_scale(raw, Fraction(1, N))
+        reflected = cycloi_conjugate(
+            affine_values[
+                ((-target_charge) % P, (-target_residue) % P)
+            ]
+        )
+        require(
+            recovered
+            == cycloi_add(
+                affine_values[(target_charge, target_residue)],
+                reflected,
+            ),
+            "affine symmetrized target projector changed",
+        )
+        affine_projector_checks += 1
+
+    # Only t=0 and t=b^-1 are needed on a nonzero line.  Cross-multiply
+    # the 2x2 inversion to avoid any numerical division by zeta^-1-zeta,
+    # then invert the remaining one-dimensional DFT.
+    inverse_charge = pow(affine_charge, -1, P)
+    determinant = cyclo_subtract(root(-1), root(1))
+    require(
+        inverse_charge == 9 and determinant != cyclo_zero(),
+        "affine two-shift determinant fixture changed",
+    )
+    scaled_line_transform: dict[int, CycloI] = {}
+    two_shift_checks = 0
+    for shift_s in range(P):
+        left = cycloi_multiply(
+            cycloi_embed(determinant),
+            affine_line_transform[shift_s],
+        )
+        right = cycloi_subtract(
+            affine_unions[(shift_s, inverse_charge)],
+            cycloi_phase(affine_unions[(shift_s, 0)], 1),
+        )
+        require(
+            left == right,
+            "two ordinary shifts stopped determining the affine line",
+        )
+        scaled_line_transform[shift_s] = right
+        two_shift_checks += 1
+
+    affine_line_inverse_checks = 0
+    for residue in range(P):
+        raw = cycloi_zero()
+        for shift_s in range(P):
+            raw = cycloi_add(
+                raw,
+                cycloi_phase(
+                    scaled_line_transform[shift_s],
+                    -shift_s * residue,
+                ),
+            )
+        require(
+            cycloi_scale(raw, Fraction(1, P))
+            == cycloi_multiply(
+                cycloi_embed(determinant),
+                affine_values[(affine_charge, residue)],
+            ),
+            "affine line inverse DFT changed",
+        )
+        affine_line_inverse_checks += 1
+
+    # The zero line is exactly I+J.  A J-odd pair is invisible to every
+    # ordinary affine union, whereas a real-even J-even pair is doubled.
+    zero_hostile = {
+        target: cycloi_zero()
+        for target in group
+    }
+    zero_hostile[(0, 2)] = cycloi_gaussian((ZERO, ONE))
+    zero_hostile[(0, -2 % P)] = cycloi_gaussian((ZERO, ONE))
+    zero_hostile_unions = []
+    for shift_s in range(P):
+        line_value = cycloi_sum(
+            [
+                cycloi_phase(
+                    zero_hostile[(0, residue)],
+                    shift_s * residue,
+                )
+                for residue in range(P)
+            ]
+        )
+        zero_hostile_unions.append(
+            cycloi_add(line_value, cycloi_conjugate(line_value))
+        )
+    require(
+        all(value == cycloi_zero() for value in zero_hostile_unions),
+        "zero-line I+J kernel hostile stopped being dark",
+    )
+
+    zero_even = {
+        target: cycloi_zero()
+        for target in group
+    }
+    zero_even[(0, 2)] = cycloi_gaussian((-ONE, ZERO))
+    zero_even[(0, -2 % P)] = cycloi_gaussian((-ONE, ZERO))
+    for residue in (2, -2 % P):
+        symmetrized = cycloi_add(
+            zero_even[(0, residue)],
+            cycloi_conjugate(zero_even[(0, -residue % P)]),
+        )
+        require(
+            symmetrized == cycloi_gaussian((Fraction(-2), ZERO)),
+            "zero-line J-even positive control changed",
+        )
+
     # Hostile 1: deletion and retained target energies can both survive while
     # their charged overlap is identically zero.
     hostile_deletion = {target: ZERO for target in group}
@@ -871,6 +1120,15 @@ def main() -> None:
         f"E10={energy_10} E01={energy_01} E11={energy_11}"
     )
     print("one-quadrature reconstruction determinant: nonzero")
+    print(
+        "affine raw/projectors/two-shift/line inverse: "
+        f"{affine_raw_controls}/{affine_projector_checks}/{two_shift_checks}/"
+        f"{affine_line_inverse_checks}"
+    )
+    print(
+        "zero-line I+J boundary: "
+        "J-odd dark, J-even doubled"
+    )
     print(
         "disjoint-support hostile: "
         f"deletion={hostile_deletion_energy} "
