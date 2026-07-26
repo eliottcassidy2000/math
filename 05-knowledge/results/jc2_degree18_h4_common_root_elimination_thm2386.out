@@ -1,0 +1,13 @@
+THM-2386 degree-18 H4 common-root elimination exact companion
+incidence determinant: 111598077326956416
+incidence family: C,D,W are the stated rational functions of B
+specialized orders: ord_1(P)=1, ord_1(Q)=2 when 27B+7!=0
+R9 normalization: degree=9, content=343, leading coefficient=73060029
+discriminant factors (degree, exponent): 1^6,1^3,1^3,2^3,13^1
+subresultant gcd-degree atlas: 2,1,1,1,1
+rational gcds: (y-1)^2; y; y+1
+coefficient equation signatures (terms,total-degree): 16/4,20/5,23/5,25/5,17/5,13/5
+computing independent exact coefficient-comparison basis...
+coefficient-comparison Groebner basis: [1]
+maximum specialized gcd degree: 2 < 3
+conclusion: the Q-multiple residual has no H3*S3^2 factorization
