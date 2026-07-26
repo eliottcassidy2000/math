@@ -1,6 +1,7 @@
 THM-2419 AFFINE SIDEBAND HOMOGENIZATION EXACT AUDIT
-primitive-row/modulus quotient cases=160
-finite kernel fibres lifted=1568
+primitive-row/modulus quotient cases=320
+finite kernel fibres lifted=3136
+nonprimitive w=(2,2),X=2 shell/kernel hostile: PASS
 |K_M|=M^(n-1) for n=2 controls: PASS
 Lambda_X/(M Lambda) -> K_M bijection: PASS
 observer (w,X),(a,-1) all-unit mod13: PASS
@@ -10,7 +11,9 @@ minimal Bezout hostile relations=(-12,12),(1,-1)
 section difference=13*(1,-1): PASS
 self-difference mod13=0 / reference difference=(1,12): PASS
 finite K_26 fibre masses=(2,-1), total=1
+ambient/quotient Fourier normalization pairs=25
 13|X preserves q in K_13: PASS
+K_182 -> K_91 -> K_13 reduction: PASS
 CRT branches 91|X versus 13|X,7 does not divide X: PASS
 artificial observer does not transport physical amplitude
 THM-2419 exact companion PASS

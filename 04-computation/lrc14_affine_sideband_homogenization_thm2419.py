@@ -72,23 +72,45 @@ def main():
                 len(kernel) == modulus,
                 f"kernel size failed for w={w}, M={modulus}",
             )
-            seen = set()
-            for residue in kernel:
-                quotient = dot(residue, w) // modulus
-                address = tuple(
-                    residue[index]
-                    + modulus * (1 - quotient) * section[index]
-                    for index in range(2)
-                )
-                require(dot(address, w) == modulus, "shell lift failed")
+            for sign in (-1, 1):
+                seen = set()
+                for residue in kernel:
+                    quotient = dot(residue, w) // modulus
+                    address = tuple(
+                        residue[index]
+                        + modulus * (sign - quotient) * section[index]
+                        for index in range(2)
+                    )
+                    require(
+                        dot(address, w) == sign * modulus,
+                        "signed shell lift failed",
+                    )
+                    require(
+                        tuple(value % modulus for value in address) == residue,
+                        "shell residue changed",
+                    )
+                    seen.add(residue)
+                    lifted_fibres += 1
                 require(
-                    tuple(value % modulus for value in address) == residue,
-                    "shell residue changed",
+                    len(seen) == len(kernel),
+                    "finite torsor map not bijective",
                 )
-                seen.add(residue)
-                lifted_fibres += 1
-            require(len(seen) == len(kernel), "finite torsor map not bijective")
-            quotient_cases += 1
+                quotient_cases += 1
+
+    # Primitivity is essential: the nonprimitive row has a larger modular
+    # kernel than the actual shell image.
+    nonprimitive_kernel = kernel_mod((2, 2), 2)
+    nonprimitive_shell_image = {
+        (left % 2, right % 2)
+        for left in range(-2, 3)
+        for right in range(-2, 3)
+        if 2 * left + 2 * right == 2
+    }
+    require(len(nonprimitive_kernel) == 4, "nonprimitive kernel control failed")
+    require(
+        nonprimitive_shell_image == {(0, 1), (1, 0)},
+        "nonprimitive shell image control failed",
+    )
 
     # Minimal Bezout-section hostile.
     w = (1, 1)
@@ -177,13 +199,99 @@ def main():
         "finite fibre changed mod-13 residue",
     )
 
+    # Finite Fourier normalization. Summing all ambient twists uses M^(-n);
+    # quotienting by <w> leaves M^(n-1) characters and uses M^(1-n).
+    fourier_pairs = 0
+    modulus = 5
+    kernel = kernel_mod(w, modulus)
+    quotient_representatives = tuple((value, 0) for value in range(modulus))
+    for source in kernel:
+        for target in kernel:
+            difference = tuple(
+                (source[index] - target[index]) % modulus
+                for index in range(2)
+            )
+            quotient_histogram = [0] * modulus
+            for representative in quotient_representatives:
+                exponent = dot(representative, difference) % modulus
+                quotient_histogram[exponent] += 1
+            quotient_reduced = tuple(
+                quotient_histogram[index] - quotient_histogram[-1]
+                for index in range(modulus - 1)
+            )
+
+            ambient_histogram = [0] * modulus
+            for representative in product(range(modulus), repeat=2):
+                exponent = dot(representative, difference) % modulus
+                ambient_histogram[exponent] += 1
+            require(
+                ambient_histogram
+                == [modulus * value for value in quotient_histogram],
+                "ambient twists are not M-fold quotient characters",
+            )
+            ambient_reduced = tuple(
+                ambient_histogram[index] - ambient_histogram[-1]
+                for index in range(modulus - 1)
+            )
+            require(
+                (not any(quotient_reduced))
+                == (not any(ambient_reduced))
+                == (source != target),
+                "exact character orthogonality failed",
+            )
+            if source == target:
+                require(
+                    quotient_histogram[0] == modulus
+                    and ambient_histogram[0] == modulus**2
+                    and quotient_histogram[0] * modulus
+                    == ambient_histogram[0],
+                    "Fourier delta normalizations failed",
+                )
+            else:
+                require(
+                    quotient_histogram == [1] * modulus
+                    and ambient_histogram == [modulus] * modulus,
+                    "off-diagonal Fourier histograms failed",
+                )
+            require(
+                (
+                    quotient_histogram[0] // modulus
+                    if source == target
+                    else 0
+                )
+                == int(source == target),
+                "M^(1-n) quotient normalization failed",
+            )
+            fourier_pairs += 1
+    require(
+        len(kernel) == modulus,
+        "quotient character count is not M^(n-1)",
+    )
+
     # CRT split controls.
+    kernel_182 = kernel_mod(w, 182)
+    kernel_91 = set(kernel_mod(w, 91))
+    require(
+        all(
+            tuple(value % 91 for value in residue) in kernel_91
+            for residue in kernel_182
+        ),
+        "K_182 -> K_91 reduction failed",
+    )
+    require(
+        all(
+            dot(tuple(value % 13 for value in residue), w) % 13 == 0
+            for residue in kernel_182
+        ),
+        "K_182 -> K_13 reduction failed",
+    )
     require(91 % 13 == 0 and 91 % 7 == 0, "91 branch failed")
-    require(13 % 13 == 0 and 13 % 7 != 0, "13-only branch failed")
+    require(26 % 13 == 0 and 26 % 7 != 0, "13-only branch failed")
 
     print("THM-2419 AFFINE SIDEBAND HOMOGENIZATION EXACT AUDIT")
     print(f"primitive-row/modulus quotient cases={quotient_cases}")
     print(f"finite kernel fibres lifted={lifted_fibres}")
+    print("nonprimitive w=(2,2),X=2 shell/kernel hostile: PASS")
     print("|K_M|=M^(n-1) for n=2 controls: PASS")
     print("Lambda_X/(M Lambda) -> K_M bijection: PASS")
     print("observer (w,X),(a,-1) all-unit mod13: PASS")
@@ -193,7 +301,9 @@ def main():
     print("section difference=13*(1,-1): PASS")
     print("self-difference mod13=0 / reference difference=(1,12): PASS")
     print("finite K_26 fibre masses=(2,-1), total=1")
+    print(f"ambient/quotient Fourier normalization pairs={fourier_pairs}")
     print("13|X preserves q in K_13: PASS")
+    print("K_182 -> K_91 -> K_13 reduction: PASS")
     print("CRT branches 91|X versus 13|X,7 does not divide X: PASS")
     print("artificial observer does not transport physical amplitude")
     print("THM-2419 exact companion PASS")

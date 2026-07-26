@@ -1966,15 +1966,27 @@ the six singular values `13^-k`, the flat and one-cylinder terminal
 boundaries, and the real/even BV-two source rank-one hostile with mass at
 least `7/13`. Normal and optimized runs agree and end in `PASS`; no
 canonical source--terminal correlation or LRC(14) closure is asserted.
+Exact companion for **THM-2418, proved/audited base theorem with a
+verified-exact fixed-source/tail-classifier amendment under independent
+audit**. It checks `18,040` affine word transports, all `402,233`
+base-thirteen digit words through depth five, the exact seven-state carry
+kernel through depth eight, and `6,048` rational charged terminal
+profiles. It verifies the fixed even BV-two `[3/13,10/13)` rank-one
+source at every tested clock, `20` universal odd `(B,p)` blocks, all
+`8,192` Boolean depth-one source profiles, `108` cylinder-tail formulas,
+and `144` rational finite-step scale-period controls. Normal and
+optimized runs agree and end in `PASS`; no canonical source--terminal
+correlation or LRC(14) closure is asserted.
 ### lrc14_affine_sideband_homogenization_thm2419.out
 
 Exact companion for **THM-2419, PROVED + VERIFIED-EXACT +
-INDEPENDENTLY HOSTILE-AUDITED**. It exhausts `160` primitive-row/modulus
-controls and `1,568` finite kernel-fibre lifts for the canonical
+INDEPENDENTLY HOSTILE-AUDITED**. It exhausts `320` signed
+primitive-row/modulus controls and `3,136` finite kernel-fibre lifts for the canonical
 `Lambda_X/(|X| Lambda) ~= ker(w mod |X|)` torsor, checks the ordinary
 and valuation-normalized artificial observers, and verifies the minimal
-Bezout-section hostile. It also distinguishes neutral same-residue
-self-differences from a charged same-shell residue-zero reference and
-checks the `91|X` versus `13|X, 7 does not divide X` CRT split. Normal
+nonprimitive and Bezout-section hostiles. It also checks the exact
+ambient/quotient Fourier normalization, distinguishes neutral
+same-residue self-differences from an address-level charged reference,
+and directly tests `K_182 -> K_91 -> K_13`. Normal
 and optimized runs agree and end in `PASS`; no physical observer,
-reference packet, terminal transport, or LRC row exclusion is claimed.
+cross-packet amplitude, terminal transport, or LRC row exclusion is claimed.

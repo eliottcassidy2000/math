@@ -2,18 +2,24 @@
 id: THM-2418
 title: "Alternating base-thirteen septimal carry matrix and rank-one boundary"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED THROUGH THE
+  BASE CARRY THEOREM; VERIFIED-EXACT FIXED-SOURCE/TAIL-CLASSIFIER
+  AMENDMENT UNDER INDEPENDENT AUDIT. For
   R=13^k, the physical-to-terminal seven-root map is the affine
   permutation l=floor(Ry)+(-1)^k r modulo seven, and the carry is the
   alternating sum of the first k base-thirteen digits. Haar averaging
   gives an explicit seven-state kernel K_k=P^k of rank seven; its six
   charged singular values are exactly 1/R. A terminal-only rational
   cylinder profile is nonflat exactly when all six nonzero septimal
-  colours survives, with attenuation 1/R. This does not close the real
+  colours survive, with attenuation 1/R. This does not close the real
   word problem: a flat centred-comb terminal word is exact, a
-  one-cylinder word makes the terminal matrix rank one, and for every k
-  an even centred BV-two source set of mass at least 7/13 makes the
-  complete source-weighted carry matrix rank one. No canonical
+  one-cylinder word makes the terminal matrix rank one, and the single
+  fixed real/even BV-two source interval [3/13,10/13) of mass 7/13
+  makes the complete source-weighted carry matrix rank one for every
+  clock k>=1. More generally, one rational depth-K carry histogram
+  classifies all deeper clocks as all-six-colour or flat, and an
+  arbitrary rational finite-step source has an exact finite
+  scale-periodic charged classifier. No canonical
   THM-2305 source correlation, all-91-unit address, row exclusion, or
   LRC(14) conclusion is proved.
 source: codex-2026-07-26-septimal-digit-cocycle
@@ -24,14 +30,16 @@ related:
   - THM-2414-thirteen-skew-septimal-word-transport-and-local-stopping-atlas
 script: 04-computation/lrc14_septimal_carry_matrix_thm2418.py
 output: 05-knowledge/results/lrc14_septimal_carry_matrix_thm2418.out
-script_sha256: 697e6f6e5de8536efa563f1ff123bcaedea0da9914108efe57ff6bb6f2a59096
-output_sha256: d9daa1a359426a3ddd697c05d5d2d0d408af707aaee93f02f61c30d928281193
+script_sha256: 9c4969c22b72232b498d607c05a78cb5910f33c9f63ac083d78a790b1857cfa1
+output_sha256: 11ad8203ce0cf431d6eb47b8dbb8b32b4bd54e06ea8e9cf803371892ef4fbf15
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2418 -- the septimal word phase is an alternating digit carry
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED through the
+base carry theorem; verified-exact fixed-source/tail-classifier
+amendment under independent audit.**
 
 THM-2409 isolates the real-word obstruction: modulo thirteen the
 transported word is neutral, while modulo seven the same coordinate
@@ -56,8 +64,8 @@ THM-2414. Its application boundary is the main result.
 
 ## 1. The exact affine carry cocycle
 
-For a seven-unit integer `A`, width `a in {1,2}`, and canonical phase
-`y in [0,1)`, put
+For a seven-unit integer `A`, width `a in {1,2}`, and a circle point
+represented by `0<=y<1`, put
 
 ```text
 W_(A,a)(y)
@@ -282,9 +290,9 @@ q nonconstant
   iff Mhat(e)!=0 for every e in F_7^*.                         (28)
 ```
 
-This is the exact positive survivor. For example, any positive **rational
-terminal-cylinder profile** missing one complete seventh-cylinder fires all
-six terminal-only carry colours.
+This is the exact positive survivor. For example, any positive terminal
+word missing one complete seventh-cylinder fires all six terminal-only
+carry colours.
 
 ## 4. Two sharp terminal boundaries
 
@@ -336,75 +344,205 @@ the unnormalized row masses are
 Thus full raw carry rank does not prevent a terminal word from reducing
 the filtered transfer to rank one.
 
-## 5. A real, even, large-mass source rank-one hostile
+## 5. One fixed real, even, large-mass source kills every clock
 
 Terminal conditioning is not the main obstruction. The actual THM-2305
 current also contains a source-owner weight before the terminal word.
 Carry state alone cannot control that weight.
 
-For every `k`, define a rational prefix-cylinder set `S_k` as follows.
-
-If `k` is even, then `R=1 mod 14`. Remove the reflection-fixed central
-prefix cylinder:
+The obstruction is universal.  Let `B>p` be coprime positive integers
+and put `R=B^k`.  For an integer `0<=A<A+p<=B`, the fixed first-level interval
 
 ```text
-S_k
- =T minus [(R-1)/(2R),(R+1)/(2R)).                            (34)
+G_(B,p,A)=[A/B,(A+p)/B)                                    (34)
 ```
 
-If `k` is odd, then `R=13 mod 14`. Remove the first and last three
-prefix cylinders:
+is, at every depth `k>=1`, exactly the union of the `pB^(k-1)`
+consecutive prefix cells
 
 ```text
-S_k=[3/R,1-3/R).                                              (35)
+n=A B^(k-1),...,(A+p)B^(k-1)-1.                            (35)
 ```
 
-In both cases `1_(S_k)` is real and even almost everywhere (the half-open
-endpoint convention is immaterial), has exactly two circular jumps, and
+Every residue modulo `p` occurs `B^(k-1)` times, so every entry of the
+source-weighted `p`-state carry kernel is `1/B`:
 
 ```text
-mu(S_k)
- =
-  1-1/R,                         k even,
-
-  1-6/R,                         k odd,
-
-mu(S_k)>=7/13.                                               (36)
+K_(B,p,A)=(1/B)J_p.                                        (36)
 ```
 
-Among the retained prefix indices, every carry residue occurs exactly
-`h=floor(R/7)` times. Therefore the source-weighted transfer is
+When `B,p` are odd, choosing `A=(B-p)/2` makes the interval inversion
+invariant up to endpoints, BV-two, and of mass `p/B`.
+
+Specialize now to `(B,p,A)=(13,7,3)`.  The single fixed circular
+interval
 
 ```text
-K_(S_k)=(h/R)J.                                               (37)
+G=[3/13,10/13)                                              (37)
 ```
 
-It has rank one and annihilates the whole six-dimensional charged
-subspace. With an arbitrary positive-mass terminal profile,
+Up to endpoints, `G=-G`, so `1_G` is real and even.  It has exactly two
+circular jumps and
 
 ```text
-T_(S_k,Q)=(h/R)J diag(q),                                    (38)
+mu(G)=7/13.                                                 (38)
+```
+
+At depth `R=13^k`, the disintegration (10) sees `G` as the union of the
+prefix cells
+
+```text
+n=3*13^(k-1),...,10*13^(k-1)-1.                            (39)
+```
+
+This is one block of `7*13^(k-1)` consecutive integers.  Every class
+modulo seven therefore occurs exactly `13^(k-1)` times, independently
+of `z`.  The source-weighted carry kernel is
+
+```text
+K_G=(1/13)J                                                (40)
+```
+
+for **every** `k>=1`.  It has rank one and annihilates the entire
+six-dimensional charged subspace.  With an arbitrary terminal profile,
+
+```text
+T_(G,Q)=(1/13)J diag(q),                                   (41)
 ```
 
 still has rank one; every normalized source row is identical.
 
-This hostile is stronger than a small exceptional cylinder. Its mass is
-uniformly positive, its circular variation is exactly two, and it is
-centred/even. It also explains why a BV or Perron approximation does not
-repair the carry colour. The unweighted signal in (19) is `1/R`, while
-deleting only one or six prefix cylinders--mass `O(1/R)`--kills that
-signal exactly. Signal and admissible BV error live at the same scale.
+The mechanism has a complete rational family.  If
 
-The sets `S_k` depend on the selected clock. They are formal rational
-source-prefix hostiles, not asserted to be canonical exclusive-owner
-sets.
+```text
+G_(A,s,t)=[A/13^s,(A+7t)/13^s),
+             0<=A<A+7t<=13^s,                               (42)
+```
 
-## 6. Canonical scope and the missing sidecar
+then for every `k>=s` its prefix block has length
+`7t*13^(k-s)`.  Hence every carry class occurs
+`t*13^(k-s)` times and
+
+```text
+K_(G_(A,s,t))=(t/13^s)J.                                   (43)
+```
+
+The special choice `(A,s,t)=(3,1,1)` is simultaneously fixed across
+all clocks, even, BV-two, and of mass `7/13`.  Thus positivity,
+evenness, bounded variation, large mass, and consistency of the source
+set across all clocks still do not repair the charged carry colour.
+Only a source--terminal correlation excluding equal carry counts can do
+so.  The interval (34) is a formal rational source hostile, not asserted
+to be a canonical exclusive-owner set.
+
+## 6. One cylinder histogram classifies every deeper clock
+
+Let a fixed rational source `G` be constant with rational values `g_m`
+on the depth-`K` base-thirteen cells
+
+```text
+[m/13^K,(m+1)/13^K),             0<=m<13^K.                 (44)
+```
+
+Define its seven carry-bin sums
+
+```text
+b_r=sum_(m=r mod7) g_m,                    r in F_7.          (45)
+```
+
+For `k=K+d` and `e in F_7^*`, put
+
+```text
+C_(k,e)
+ =integral_T G(y) zeta_7^(e floor(13^k y))dy.                (46)
+```
+
+Disintegrating each cell in (44) into `13^d` descendants gives
+
+```text
+C_(K+d,e)
+ =13^(-(K+d)) theta_(d,e)
+   sum_m g_m zeta_7^(e(-1)^d m),                             (47)
+
+theta_(d,e)
+ =1,                              d even,
+
+ =-zeta_7^(-e),                   d odd.                     (48)
+```
+
+Indeed the descendant digit sum is
+
+```text
+sum_(n=0)^(13^d-1) zeta_7^(e n)
+ =1                         for d even,
+
+ =-zeta_7^(-e)              for d odd.                       (49)
+```
+
+Because the `b_r` are rational, irreducibility of `Phi_7` gives the
+exact tail dichotomy:
+
+```text
+b_0=...=b_6
+ iff C_(k,e)=0 for every e!=0 and every k>=K;
+
+b nonconstant
+ iff C_(k,e)!=0 for every e!=0 and every k>=K.               (50)
+```
+
+Thus one finite depth-`K` histogram completely classifies the infinite
+clock tail.  The fixed hostile (37) has `K=1` and `b_r=1` for all `r`.
+Conversely, any nonuniform rational histogram is a positive all-six
+source-colour certificate at every later clock.  This is a source-only
+statement; it still must be aligned with the terminal word/current.
+
+## 7. Every rational finite-step source has a finite scale classifier
+
+The cylinder hypothesis also has an exact finite extension.  Let `G`
+be a rational finite-step function whose endpoints have common
+denominator
+
+```text
+D=13^K D_0,                 gcd(D_0,13)=1.                   (51)
+```
+
+For `k=K+d`, refine to the grid of denominator `13^k D_0`.
+The sequence
+
+```text
+j -> zeta_7^(e floor(j/D_0))                                (52)
+```
+
+has period `7D_0` and zero sum over one period.  Therefore the
+scaled charged coefficient
+
+```text
+13^k C_(k,e)                                                 (53)
+```
+
+depends only on
+
+```text
+13^d mod 7D_0.                                               (54)
+```
+
+It is consequently periodic in `d` with period dividing
+`ord_(7D_0)(13)`.  Equivalently, after removing the uniform mean from
+the seven carry masses, the scaled deviation vector is periodic.
+
+At each fixed depth the seven masses are rational, so one vanished
+charged colour again forces the mass vector to be uniform and hence
+all six colours to vanish.  A finite exact scan of one period therefore
+classifies every deeper clock of any fixed rational finite-step source.
+Unlike (50), different period classes may alternate between flat and
+all-six survival.
+
+## 8. Canonical scope and the missing sidecar
 
 For a THM-2305 terminal stratum `Q_(j,sigma)`, positivity proves only
 
 ```text
-sum_l q_l>0.                                                   (39)
+sum_l q_l>0.                                                   (55)
 ```
 
 It does not prove that its seven cylinder masses are nonconstant.
@@ -415,7 +553,7 @@ positive-mass global terminal-cylinder profile.
 More importantly, the genuine THM-2305 current contains `G_j` or `E_j`.
 That source weight depends on the full prefix `n`, tail `z`, and root
 label `r`; it need not factor through (22). The rank-one construction
-(34)--(38) proves that positivity, evenness, bounded variation, and
+(34)--(43) proves that positivity, evenness, bounded variation, and
 large mass do not replace the missing source--terminal correlation.
 
 THM-2409 proves an all-colour theorem for `Q=1` because its source
@@ -436,7 +574,7 @@ No canonical source current is completed, no all-`91`-unit relation
 address is produced, no row is excluded, the ledger remains `165`, and
 LRC(14) remains open.
 
-## 7. Exact companion
+## 9. Exact companion
 
 The dependency-free exact companion:
 
@@ -446,8 +584,12 @@ The dependency-free exact companion:
   identity through depth eight;
 - exhausts all `127` nonempty Boolean terminal-cylinder supports;
 - checks the flat and one-cylinder terminal hostiles; and
-- verifies the even centred rank-one source constructions, exact carry
-  counts, variation, and mass floor through depth eight.
+- verifies the fixed even rank-one source through depth eight and the
+  universal odd `(B,p)` block law;
+- exhausts all `8,192` Boolean depth-one source profiles and checks the
+  fixed-cylinder tail formula; and
+- checks the eventual finite scale-periodicity on rational endpoint
+  denominators coprime to thirteen.
 
 Run:
 
@@ -465,11 +607,10 @@ Both transcripts must byte-match, after LF normalization,
 Every truth-bearing finite check raises explicitly, so optimized mode
 executes the same audit.
 
-## 8. Independent hostile audit
+## 10. Independent hostile audit
 
-An independent derivation reconstructed the carry kernel directly from
-residue counts. With `A(r,l)=1_(r+l=6 mod 7)` and
-`Pi=J/7`, it obtained
+The promoted base theorem was independently reconstructed from residue
+counts.  With `A(r,l)=1_(r+l=6 mod7)` and `Pi=J/7`, the audit obtained
 
 ```text
 P=(2J-A)/13,
@@ -478,16 +619,15 @@ K_(2m+1)=Pi-13^(-(2m+1))(A-Pi),
 K_k K_k^T=Pi+13^(-2k)(I-Pi).
 ```
 
-Thus the rank-seven and charged-singular-value claims are independent of
-the companion implementation. The audit separately reconstructed both
-rank-one deletions: at even depth it removes the unique excess residue
-zero, and at odd depth it removes one copy of residues `0,...,5`, leaving
-exactly `floor(R/7)` copies of every residue. Direct reconstruction through
-depth ten passed.
+It also reproduced the flat terminal and one-cylinder hostiles, the
+rational all-or-flat gate, and the corrected domain `y in [0,1)`.
+Normal and optimized transcripts and the then-current hashes passed.
 
-The affine law was checked on the corrected canonical domain `y in [0,1)`.
-Normal and optimized companion transcripts byte-match the stored output and
-the frontmatter hashes. The audit also reproduced the flat `D_7` hostile,
-the one-cylinder `D_2 intersection D_1^c` hostile, and the necessity of
-rationality in the terminal all-colour statement. It infers no canonical
-source current, row exclusion, or LRC(14) consequence.
+A second hostile audit independently verified the fixed source
+`G=[3/13,10/13)` at every depth: its prefix block is inversion-invariant
+and contains each carry residue `13^(k-1)` times, so
+`K_G=(1/13)J`, with mass `7/13` and variation two.  It also checked the
+aligned interval family (42).  The new infinite-tail classifiers in
+Sections 6--7 and their expanded exact companion remain under a fresh
+independent audit; no conclusion in those sections is used by the
+promoted base theorem.

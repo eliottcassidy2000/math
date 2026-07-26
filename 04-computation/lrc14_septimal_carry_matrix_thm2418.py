@@ -95,8 +95,8 @@ def matrix_rank(matrix):
     return pivot_row
 
 
-def residue_count(length, residue):
-    quotient, remainder = divmod(length, P)
+def residue_count(length, residue, modulus=P):
+    quotient, remainder = divmod(length, modulus)
     return quotient + int(residue < remainder)
 
 
@@ -126,6 +126,33 @@ def jump_count(values):
         values[index] != values[index - 1]
         for index in range(len(values))
     )
+
+
+def multiplicative_order(base, modulus):
+    require(modulus > 1, "order modulus must exceed one")
+    value = 1
+    for exponent in range(1, modulus + 1):
+        value = value * base % modulus
+        if value == 1:
+            return exponent
+    raise RuntimeError("multiplicative order not found")
+
+
+def quotient_phase_prefix(limit, denominator_tail):
+    """Counts floor(j/D0) modulo seven for 0<=j<limit."""
+
+    period = P * denominator_tail
+    cycles, remainder = divmod(limit, period)
+    histogram = [cycles * denominator_tail] * P
+    for index in range(remainder):
+        histogram[(index // denominator_tail) % P] += 1
+    return histogram
+
+
+def quotient_phase_interval(start, stop, denominator_tail):
+    left = quotient_phase_prefix(start, denominator_tail)
+    right = quotient_phase_prefix(stop, denominator_tail)
+    return [right[index] - left[index] for index in range(P)]
 
 
 def main():
@@ -325,52 +352,179 @@ def main():
         "one-cylinder terminal matrix did not have rank one",
     )
 
-    even_source_checks = 0
-    minimum_mass = Fraction(1)
+    fixed_source_checks = 0
     for depth in range(1, 9):
         dilation = 13**depth
-        quotient = dilation // P
-        if depth % 2 == 0:
-            removed = {(dilation - 1) // 2}
-            require(
-                (dilation - 1) // 2 % P == 0,
-                "even-depth central cylinder has wrong carry",
-            )
-        else:
-            removed = {0, 1, 2, dilation - 3, dilation - 2, dilation - 1}
-            require(
-                {index % P for index in removed} == set(range(6)),
-                "odd-depth boundary cylinders have wrong carries",
-            )
+        unit = 13 ** (depth - 1)
+        lower = 3 * unit
+        upper = 10 * unit
         require(
-            {dilation - 1 - index for index in removed} == removed,
-            "source cylinder deletion is not reflection invariant",
+            lower + upper == dilation,
+            "fixed source block is not reflection invariant",
         )
         counts = [
-            residue_count(dilation, residue)
-            - sum(index % P == residue for index in removed)
+            residue_count(upper, residue) - residue_count(lower, residue)
             for residue in range(P)
         ]
         require(
-            counts == [quotient] * P,
-            "even centred source did not equalize carries",
+            counts == [unit] * P,
+            "fixed source did not equalize carries",
         )
-        mass = Fraction(dilation - len(removed), dilation)
-        minimum_mass = min(minimum_mass, mass)
-        require(mass >= Fraction(7, 13), "source mass floor failed")
-
+        require(
+            Fraction(upper - lower, dilation) == Fraction(7, 13),
+            "fixed source mass failed",
+        )
         source_kernel = [
-            [Fraction(quotient, dilation) for _ in range(P)]
+            [Fraction(unit, dilation) for _ in range(P)]
             for _ in range(P)
         ]
         require(matrix_rank(source_kernel) == 1, "source kernel rank failed")
         require(
-            0 < len(removed) < dilation and jump_count((0, 1, 0)) == 2,
-            "centred source variation control failed",
+            Fraction(unit, dilation) == Fraction(1, 13),
+            "fixed source kernel normalization failed",
         )
-        even_source_checks += 1
+        require(
+            jump_count(tuple(int(3 <= cell < 10) for cell in range(13)))
+            == 2,
+            "fixed source BV-two control failed",
+        )
+        fixed_source_checks += 1
 
-    require(minimum_mass == Fraction(7, 13), "sharp source mass mismatch")
+    universal_block_checks = 0
+    for base, prime in ((5, 3), (7, 5), (11, 3), (13, 7), (17, 5)):
+        anchor = (base - prime) // 2
+        for depth in range(1, 5):
+            dilation = base**depth
+            unit = base ** (depth - 1)
+            lower = anchor * unit
+            upper = (anchor + prime) * unit
+            counts = [
+                residue_count(upper, residue, prime)
+                - residue_count(lower, residue, prime)
+                for residue in range(prime)
+            ]
+            require(
+                counts == [unit] * prime,
+                f"universal carry block failed at B={base}, p={prime}, k={depth}",
+            )
+            require(
+                lower + upper == dilation,
+                f"universal centred block failed at B={base}, p={prime}, k={depth}",
+            )
+            require(
+                Fraction(upper - lower, dilation) == Fraction(prime, base),
+                "universal block mass failed",
+            )
+            universal_block_checks += 1
+
+    cylinder_profiles = 0
+    uniform_cylinder_profiles = 0
+    for mask in range(1 << 13):
+        values = [(mask >> cell) & 1 for cell in range(13)]
+        histogram = [
+            sum(values[cell] for cell in range(13) if cell % P == residue)
+            for residue in range(P)
+        ]
+        uniform = len(set(histogram)) == 1
+        uniform_cylinder_profiles += int(uniform)
+        for character in range(1, P):
+            reduced = cyclotomic_reduce(
+                value_fourier_vector(histogram, character)
+            )
+            require(
+                (not any(reduced)) == uniform,
+                "rational cylinder all-or-flat classification failed",
+            )
+        cylinder_profiles += 1
+
+    tail_formula_checks = 0
+    tail_controls = (
+        [int(3 <= cell < 10) for cell in range(13)],
+        [int(cell in (0, 1, 4, 9)) for cell in range(13)],
+        [Fraction((cell * cell + 3) % 11, 11) for cell in range(13)],
+    )
+    for values in tail_controls:
+        for extra_depth in range(6):
+            tail_length = 13**extra_depth
+            for character in range(1, P):
+                direct = [Fraction(0)] * P
+                for cell, value in enumerate(values):
+                    for residue in range(P):
+                        count = residue_count(tail_length, residue)
+                        exponent = (
+                            character * (tail_length * cell + residue)
+                        ) % P
+                        direct[exponent] += value * count
+
+                predicted = [Fraction(0)] * P
+                if extra_depth % 2 == 0:
+                    for cell, value in enumerate(values):
+                        predicted[(character * cell) % P] += value
+                else:
+                    for cell, value in enumerate(values):
+                        predicted[(-character * (cell + 1)) % P] -= value
+                require(
+                    cyclotomic_reduce(direct)
+                    == cyclotomic_reduce(predicted),
+                    "fixed-cylinder tail Fourier formula failed",
+                )
+                tail_formula_checks += 1
+
+    rational_period_checks = 0
+    rational_controls = (
+        (0, 2, (Fraction(1), Fraction(0))),
+        (0, 5, tuple(Fraction((3 * cell + 1) % 7, 7) for cell in range(5))),
+        (
+            1,
+            2,
+            tuple(Fraction((cell * cell + 2) % 5, 5) for cell in range(26)),
+        ),
+        (
+            1,
+            5,
+            tuple(Fraction((2 * cell + 3) % 11, 11) for cell in range(65)),
+        ),
+    )
+    for base_depth, denominator_tail, values in rational_controls:
+        require(
+            len(values) == 13**base_depth * denominator_tail,
+            "rational control denominator mismatch",
+        )
+        period = multiplicative_order(13, P * denominator_tail)
+        period_bank = {}
+        for extra_depth in range(2 * period):
+            descendants = 13**extra_depth
+            masses = [Fraction(0)] * P
+            for cell, value in enumerate(values):
+                histogram = quotient_phase_interval(
+                    cell * descendants,
+                    (cell + 1) * descendants,
+                    denominator_tail,
+                )
+                for residue, count in enumerate(histogram):
+                    masses[residue] += value * count / denominator_tail
+
+            uniform = len(set(masses)) == 1
+            charged = []
+            for character in range(1, P):
+                vector = value_fourier_vector(masses, character)
+                reduced = cyclotomic_reduce(vector)
+                charged.append(reduced)
+                require(
+                    (not any(reduced)) == uniform,
+                    "rational-step one-colour/all-flat gate failed",
+                )
+                rational_period_checks += 1
+
+            key = extra_depth % period
+            signature = tuple(charged)
+            if key in period_bank:
+                require(
+                    signature == period_bank[key],
+                    "rational-step charged scale periodicity failed",
+                )
+            else:
+                period_bank[key] = signature
 
     print("THM-2418 SEPTIMAL CARRY MATRIX -- exact audit")
     print(f"rational affine word cocycle checks={cocycle_checks}")
@@ -385,9 +539,17 @@ def main():
     print("terminal nonconstant iff every rational charged colour survives: PASS")
     print("flat D_7 terminal profile=(1/7)^7: PASS")
     print("one-cylinder terminal profile=(1/2)e_3 / rank=1: PASS")
-    print(f"even centred source depths checked={even_source_checks}")
-    print("even centred source variation=2 / minimum mass=7/13")
-    print("equal-carry source kernel rank=1: PASS")
+    print(f"fixed [3/13,10/13) source depths checked={fixed_source_checks}")
+    print("fixed source variation=2 / mass=7/13 / kernel=(1/13)J")
+    print(f"universal odd (B,p) equal-carry blocks checked={universal_block_checks}")
+    print(
+        "depth-one Boolean cylinder profiles="
+        f"{cylinder_profiles} (flat tails={uniform_cylinder_profiles})"
+    )
+    print(f"fixed-cylinder tail Fourier formulas checked={tail_formula_checks}")
+    print("one histogram classifies all deeper clocks: PASS")
+    print(f"rational finite-step scale-period checks={rational_period_checks}")
+    print("one ord_(7D0)(13) period classifies every rational tail: PASS")
     print("canonical source-terminal correlation remains OPEN")
     print("THM-2418 exact companion PASS")
 

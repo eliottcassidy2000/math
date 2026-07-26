@@ -15,7 +15,8 @@ status: >
   section contracts to an all-unit mod-13 physical relation, but changes
   exact labels by XLambda and need not preserve current amplitude.
   Self-differences lose charge; a same-X residue-zero reference is the
-  sharp sufficient sidecar. No physical observer, terminal transport,
+  sharp sufficient sidecar at address level, while a nonzero labelled
+  cross-packet coefficient is still required. No physical observer, terminal transport,
   row exclusion, or LRC(14) conclusion is claimed.
 source: codex-2026-07-26-affine-sideband-homogenization
 depends_on:
@@ -30,8 +31,8 @@ related:
   - THM-2418-alternating-base-thirteen-septimal-carry-matrix-and-rank-one-boundary
 script: 04-computation/lrc14_affine_sideband_homogenization_thm2419.py
 output: 05-knowledge/results/lrc14_affine_sideband_homogenization_thm2419.out
-script_sha256: 7928b82df194f8ce2508017205f431860091f63170867ffd5f705884b251f8a0
-output_sha256: beba29d94110c4750fd7ae792c0f835fbf7c677ff595a04a9987f3dc68d2b5be
+script_sha256: 33ef0322465d9c3d168a59aac8d7da1627c4c640c1dcd29ba884374f53596ef9
+output_sha256: 9902733862933ad3363ec1974c6d148f9994be8338a45651f814962ad51d8147
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -112,6 +113,11 @@ independently of the temporary choice (5).  In particular
 |K_M|=M^(n-1).                                            (8)
 ```
 
+Primitivity is load-bearing.  For `w=(2,2)` and `X=M=2`, the shell
+residues satisfy `u_1+u_2=1 mod2`, while the naively defined
+`ker(w mod2)` is all of `(Z/2Z)^2`.  Thus (4) is not surjective without
+the Bezout hypothesis.
+
 ## 2. Abel mass survives finite pushforward
 
 At Abel radius `0<rho<1`, let
@@ -128,7 +134,28 @@ C_rho(u)
 ```
 
 Because `K_M` is finite, (10) is equivalently recovered by finite Fourier
-inversion from the character twists of `S_rho`.  Suppose the boundary
+inversion from the character twists of `S_rho`.  More precisely, the
+distinct characters are represented by
+
+```text
+A_M=(Z/MZ)^n/<w>,
+
+H_rho([ell])=sum_(a in Lambda_X)c_rho(a)
+             exp(2pi i ell.a/M),                             (10a)
+
+C_rho(u)
+ =M^(1-n) sum_([ell] in A_M)
+   exp(-2pi i ell.u/M) H_rho([ell]).                         (10b)
+```
+
+This is well-defined on `[ell]`: replacing `ell` by `ell+t w`
+multiplies every shell term by
+`exp(2pi i tX/M)=1`.
+Primitivity makes `<w>` have order `M`.  If one instead sums over all
+`M^n` ambient twists, every character is repeated `M` times and the
+normalizing factor in (10b) is `M^(-n)`.
+
+Suppose the boundary
 limits `C(u)=lim_(rho->1-)C_rho(u)` exist and
 
 ```text
@@ -151,8 +178,13 @@ many twists, and finite Fourier inversion then supplies the individual
 limits assumed above.  Absolute convergence at a fixed `rho<1` alone
 would not imply those boundary limits in an arbitrary series.
 
-For THM-2416, `M` is divisible by thirteen and every atomic address in
-the selected sideband has one residue
+For the THM-2416 application, the selected speed row must be primitive.
+This holds only after a lawful common-gcd normalization; a nonprimitive
+address presentation must first be normalized and its sideband shell
+rederived.  In the THM-2410 packet the unit speed columns make that
+common gcd a thirteen-unit, so division preserves `13|X`.  Under that
+typing, `M` is divisible by thirteen and every
+atomic address in the selected sideband has one residue
 
 ```text
 a=q mod 13,                 q in (F_13^*)^n.             (13)
@@ -201,7 +233,7 @@ widehat w=(w,13^d),          widehat a=(a,-Y_d),
 widehat a.widehat w=0,       widehat a mod13=(q,-Y_d).      (18)
 ```
 
-Among pure powers `13^e` used as the extra speed, `e=d` is the unique
+Among pure powers `13^e`, `e>=0`, used as the extra speed, `e=d` is the unique
 choice for which the compensating coefficient `-X/13^e` is both integral
 and a unit modulo thirteen: `e<d` leaves a zero residue and `e>d` is not
 integral.
@@ -286,10 +318,13 @@ Then
 a-b in Lambda,         a-b=q mod13.                          (27)
 ```
 
-Thus a same-shell residue-zero reference is sufficient to contract the
-affine current while retaining its full mod-thirteen charge.  Equations
-(25)--(27) are sharp: without labelled cross-packet phase, a difference
-inside one residue class is necessarily neutral.
+Thus a same-shell residue-zero reference is sufficient at **address
+level** to contract the affine shell while retaining its full
+mod-thirteen charge.  To transport a nonzero current, one additionally
+needs a nonzero labelled cross-packet coefficient and its phase for the
+chosen pair `(a,b)`.  Existence of `b` alone supplies neither.
+Equations (25)--(27) are sharp: without labelled cross-packet phase, a
+difference inside one residue class is necessarily neutral.
 
 This source--reference composition is formally analogous to the
 operation-cospan witness composition in THM-2413: the hidden
@@ -311,7 +346,8 @@ valuation-normalized unit `Y_d=X/13^d` in (17) when `d>1`.
   no physical Boolean factor realizes that observer.
 
 This is the same carry-scale boundary represented by the rank-one
-projector plus charged leakage in candidate THM-2418.  That reflection
+projector plus charged leakage in the proved base theorem of THM-2418.
+That reflection
 analogy, and the fixed-layer/signed-leakage analogy with THM-2412, are
 cross-frontier explanations only; none of these related theorems is
 used in the proof.
@@ -324,7 +360,7 @@ This theorem proves:
 - finite Abel pushforward and a surviving charged kernel fibre;
 - two all-unit mod-thirteen observer homogenizations;
 - exact but section-dependent physical contraction;
-- neutral self-differences and the sufficient residue-zero reference
+- neutral self-differences and the address-level residue-zero reference
   sidecar; and
 - the `7|Y_1` CRT split.
 
@@ -342,14 +378,16 @@ The scalar ledger remains `165`.
 
 The dependency-free companion:
 
-- exhausts small primitive two-coordinate rows and verifies the bijection
-  `Lambda_X/(M Lambda) ~= K_M`;
+- exhausts small primitive two-coordinate rows for both signs of `X`
+  and verifies the bijection `Lambda_X/(M Lambda) ~= K_M`;
+- checks the nonprimitive `(2,2),X=2` failure and the exact ambient
+  versus quotient Fourier normalizations;
 - checks both homogenizations and uniqueness of the valuation-normalized
   pure-power observer;
 - verifies the hostile (23), section ambiguity (21), neutral
   self-difference, and charged reference difference;
 - checks finite pushforward mass and the exact kernel size; and
-- audits both branches of the mod-seven split.
+- directly audits `K_182 -> K_91 -> K_13` and the thirteen-only branch.
 
 Run:
 

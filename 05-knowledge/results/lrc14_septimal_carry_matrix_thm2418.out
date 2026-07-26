@@ -11,8 +11,13 @@ terminal charged-colour checks=6048
 terminal nonconstant iff every rational charged colour survives: PASS
 flat D_7 terminal profile=(1/7)^7: PASS
 one-cylinder terminal profile=(1/2)e_3 / rank=1: PASS
-even centred source depths checked=8
-even centred source variation=2 / minimum mass=7/13
-equal-carry source kernel rank=1: PASS
+fixed [3/13,10/13) source depths checked=8
+fixed source variation=2 / mass=7/13 / kernel=(1/13)J
+universal odd (B,p) equal-carry blocks checked=20
+depth-one Boolean cylinder profiles=8192 (flat tails=65)
+fixed-cylinder tail Fourier formulas checked=108
+one histogram classifies all deeper clocks: PASS
+rational finite-step scale-period checks=144
+one ord_(7D0)(13) period classifies every rational tail: PASS
 canonical source-terminal correlation remains OPEN
 THM-2418 exact companion PASS
