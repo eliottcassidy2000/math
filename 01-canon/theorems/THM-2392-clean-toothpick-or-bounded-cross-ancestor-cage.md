@@ -1,5 +1,5 @@
 ---
-id: THM-2391
+id: THM-2392
 title: "Clean toothpick or bounded cross-ancestor cage"
 status: >
   RESERVED / UNPROVED EMPTY STUB. Intended namespace for the post-THM-2388
@@ -18,7 +18,7 @@ related:
   - THM-2390-septimal-layer-kraft-peeling-and-heavy-word-reduction
 ---
 
-# THM-2391 -- clean toothpick or bounded cross-ancestor cage
+# THM-2392 -- clean toothpick or bounded cross-ancestor cage
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
