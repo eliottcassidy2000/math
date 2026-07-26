@@ -170,15 +170,8 @@ is the proved carrier that reduces each fixed bad-denominator/owner fiber to
 labelled primitive packets and one coprime interval. It makes the terminal
 exact and finite; it does not prove that every surviving interval is empty.
 
-THM-2168--2257 leave `165` first-depth-one rows. THM-2295/2298 force ranks five/six; THM-2287/2301/2307 give relation/address packets; THM-2296/2305 retain owner edges/forks; and THM-2299/2303 isolate the missing component phase.
-THM-2323/2326/2327 mark a `91`-unit deepest edge on positive strict words. THM-2349 reaches the same current obstruction on all `165` rows after finite row-dependent delay, including every strict resonance arm.
-THM-2325/2331 populate every nonzero target address termwise; THM-2333 permits zero-only aggregation. THM-2334/2337 retain the full word and a surjective but gauge-dependent first jet.
-THM-2340 gives target ANOVA; THM-2343/2344 identify zero-only landing with a shifted endpoint convolution inverse. Same-axis word content can preserve that boundary.
-THM-2350 identifies the two lawful target characters as balanced target--graft dipoles and makes nonzero target energy exactly a magnetic Dirichlet defect on the `13 x 13` twist torus; the reformulation is uniform on all `165` rows but does not force a defect.
-THM-2355 reconstructs component phase from singleton energies plus lawful pair twists; whole-target energy retains only autocorrelation.
-THM-2356 gives exact planar graph-chirp tomography, but refined graph activity need not survive the coarse row sum: its coarse zero-only kernel has dimension `28,393`, while `delta_0(q)B(z)` is only the `169`-dimensional refined-zero subspace. THM-2363's derived coefficient-level detector dominates every fixed-word coarse energy by `1/169`; the converse implication is false, and no lawful physical realization is known.
-THM-2354 proves a nonzero deep factor-colour current; audited THM-2364 forces a fully mixed deep/blocker-probe colour, with the literal word collapsed inside its indicator. Neither retains the target/address or terminal endpoint phase.
-THM-2358 gives the exact real sign cone and a centered-indicator hostile. Next glue cross-graph phases/depolarize the jet, or localize canonical root-twist magnetic service at the marked heights through the shared endpoint kernel, then retain `91`-unit visibility. The ledger remains `165`.
+THM-2168--2257 leave `165` rows; THM-2295--2349 supply packets and `91`-unit edges.
+THM-2350 gives dipoles; THM-2354--2365 give colour/H-drift. THM-2356's zero-only kernel has dimension `28,393` versus `169`; THM-2363 dominates. Candidates THM-2366/2367 isolate inverse covariance, sub-`13` budgets, and septimal graft transport. Ledger: `165`.
 
 ### Independent routes that remain live
 
@@ -414,11 +407,10 @@ Classify profiles under support operations; study analytic continuation and auto
   exactly two-sparse locus to `31` ratios; THM-2314/2316/2320/2324/2328
   close all `31`. THM-2332 leaves Mordell square classes of degrees
   `0,2,4`, and THM-2335 eliminates degree `0`. THM-2345/2347 close
-  `126D=25B^2` and `20BC+21W=0`; THM-2359 is a verified-exact candidate
-  closing `504D=115B^2`, pending audit. THM-2357 moves every residual
-  `H_2` three-cycle to `y=1`, reduces to `R_10=H_2S_4^2`, and exposes
-  the exact pivot `-10260B+1771s_2-1771`. Its localized main and pivot
-  lanes, `K=0`, and `C=0` remain, as does the `H_4` stratum. Split/even descent
+  `126D=25B^2` and `20BC+21W=0`; audited THM-2359 closes
+  `504D=115B^2`. THM-2357 gives `R_10=H_2S_4^2` and its exact pivot;
+  THM-2360 gives conditional Laurent-UFD cube descent off a genuine
+  resultant wall. Main/pivot, `K=0`, `C=0`, and `H_4` remain. Split/even descent
   and other short edges remain; THM-2206
   blocks field-valued `C_2` Hasse repair. Integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
