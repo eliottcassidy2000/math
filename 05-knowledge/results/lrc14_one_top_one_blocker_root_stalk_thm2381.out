@@ -1,0 +1,12 @@
+THM-2381 one-top-one-blocker septimal root-stalk closure
+thirteen-root generic phases: 337
+ordinary root-word sizes: [1, 2]
+guard root-word sizes: [3, 4]
+seven-bin lower-factor counts checked: 5040
+mixed-depth fibres checked: 4320
+mixed counts: low=N/7, top=N/7, intersection=N/49
+anti-shield floor: 36/343
+independent D_1 \\ (D_7 union D_49) wall-cell measure: 36/343
+closed septimal alternative: k=2, (t,b)=(1,1)
+remaining k=2 alternatives: (1,0), (2,0), (5,2)
+ledger=165; LRC(14) remains open

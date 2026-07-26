@@ -169,11 +169,11 @@ is the open finite-state/Farey program for this obligation.
 is the proved carrier that reduces each fixed bad-denominator/owner fiber to
 labelled primitive packets and one coprime interval. It makes the terminal
 exact and finite; it does not prove that every surviving interval is empty.
-
 THM-2168--2257 leave `165` rows; THM-2295--2349 supply packets and `91`-unit edges.
 THM-2350--2365 give dipole/colour/drift banks; THM-2356's zero-only kernel has dimension `28,393` versus `169`, and THM-2363 dominates. Audited THM-2366/2367 isolate inverse covariance, sub-`13` budgets, and septimal graft transport.
-THM-2368/2369 expose integrated-drift and balanced-slope hostiles; THM-2370's clone rules out higher mixed-energy repair. THM-2372/2377 force a `98`-fold toothpick and locate the first possible carrier at a repeated septimal layer with Bockstein carry. Hostile-audited THM-2378 empties hard `W=k=1` via the `3/4` versus `1/2` support clash and a transverse `5/49` gap.
-THM-2379 forces a `91`-unit factor-repair colour but exact empty-blocker chambers prevent owner typing; THM-2380 makes same-nonzero-target word/deletion overlap the exact charged gate, with one physical quadrature still missing. The live objects are the rooted phase/event word on `k=2` (notably `W=7`) and a genuinely dual covector in `L^perp/<w>`: a pure primal class in `K/L` is not a co-shift. No thirteen-adic row is removed; the ledger remains `165`.
+THM-2368/2369 expose integrated-drift and balanced-slope hostiles; THM-2370's clone rules out higher mixed-energy repair. THM-2372/2377 force a `98`-fold toothpick and locate the first possible carrier at a repeated septimal layer with Bockstein carry.
+Hostile-audited THM-2378 empties hard `W=k=1` via the `3/4` versus `1/2` support clash and a transverse `5/49` gap. THM-2381 proves the same pointwise squeeze after an exact seven-bin lower partition in `k=2,(t,b)=(1,1)`; its mixed-depth anti-shield mass is exactly `36/343`.
+THM-2379 forces a `91`-unit factor-repair colour but empty-blocker chambers prevent owner typing; THM-2380 makes same-nonzero-target word/deletion overlap the exact charged gate, with one physical quadrature missing. The live objects are the rooted phase/event word on `(1,0),(2,0),(5,2)` and a genuinely dual covector in `L^perp/<w>`; no row is removed and the ledger remains `165`.
 
 ### Independent routes that remain live
 
