@@ -23,6 +23,7 @@ related:
   - THM-2247-nonsplit-terminal-quartic-degree-fourteen-closure
   - THM-2406-degree-eighteen-H4-weighted-pole-deep-wall-collapse
   - THM-2423-degree-twenty-two-W-axis-genus-two-and-origin-cusp-closure
+  - THM-2428-degree-twenty-two-B-axis-trigonal-ramification-closure
 script: 04-computation/jc2_degree22_cde_axis_hyperelliptic_thm2425.py
 output: 05-knowledge/results/jc2_degree22_cde_axis_hyperelliptic_thm2425.out
 script_sha256: 12d3e8a98ffa8498a92715bf72d087f2be54758e1d83ee85d43155e466f70d63
@@ -290,8 +291,8 @@ finishes all three axes in (1).
 
 This theorem closes exactly the `C`, `D`, and `E` one-sparse axes in the
 open first-flux chart. Together with THM-2423, four of its five weighted
-coordinate axes are empty. The `B`-axis remains: its analogous equation is
-cubic in `p_B=B/y^2`, with discriminant
+coordinate axes are empty. At the time of this proof the `B`-axis remained:
+its analogous equation is cubic in `p_B=B/y^2`, with discriminant
 
 ```text
 constant
@@ -300,10 +301,12 @@ constant
 ```
 
 where `K_9` is squarefree of degree nine. This is a trigonal, not
-hyperelliptic, normalization problem and requires a separate infinity and
-ramification audit. Mixed coefficient strata, branches outside the inherited
-reduction, split/even short edges, and integral order raising also remain
-open. Nothing here proves degree twenty two, `JC(2)`, or `DC(2)`.
+hyperelliptic, normalization problem. Candidate THM-2428 subsequently uses
+its nine simple finite branch places and Riemann--Hurwitz to close that last
+axis without locating every infinity place. Mixed coefficient strata,
+branches outside the inherited reduction, split/even short edges, and
+integral order raising remain open. Nothing here proves degree twenty two,
+`JC(2)`, or `DC(2)`.
 
 The useful cross-thread operation is again quotient plus retained sidecar:
 the weighted quotient preserves the full first-flux reconstruction

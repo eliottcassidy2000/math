@@ -407,7 +407,7 @@ Classify profiles under support operations; study analytic continuation and auto
   root-free charts on `H_4`; THM-2386 removes common roots; hostile-audited
   THM-2389 gives its pole-jet system. Independently hostile-audited THM-2406
   forces that system onto the closed wall and finishes the inherited reduced degree-eighteen branch. Hostile-audited THM-2411
-  empties `A=0` in the inherited genuine nonsplit polynomial exact-square-prefix degree-22 branch; candidate THM-2423 empties the full `W`-axis in `A!=0` by a genus-two/cusp split, and candidate THM-2425 empties the `C,D,E` axes by genera `2,1,1`. The trigonal `B`-axis and mixed strata remain open. Split/even
+  empties `A=0` in the inherited genuine nonsplit polynomial exact-square-prefix degree-22 branch; candidates THM-2423/2425 empty the `W,C,D,E` axes in `A!=0`, and candidate THM-2428 empties the trigonal `B`-axis by nine simple branch places and Riemann--Hurwitz. All one-sparse axes are closed; mixed strata remain open. Split/even
   short edges and integral `2`-adic order raising remain; THM-2206 blocks field-valued `C_2` Hasse repair. `JC(2)` and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”

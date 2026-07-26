@@ -1,0 +1,12 @@
+THM-2428 degree-22 B-axis exact referee
+weighted_flux_reduction=PASS
+resultant_degree_in_p=3
+mod13_specialization=4p^3+9p^2+4p+1,roots=none
+absolute_irreducibility_certificate=PASS
+discriminant=square_wall_factor*degree_9_squarefree_branch
+finite_simple_ramification_count=9
+riemann_hurwitz_genus_lower_bound=3
+branch_polynomial_sha256=4a7fa17b5f29645edbe50a39fa56d10e39f7a605c709ba0064c4c5af91c0758c
+wall_identity=81*(131769v^2-20570v+189)^2/7
+y_zero_hostile_control=PASS
+all_exact_checks=PASS
