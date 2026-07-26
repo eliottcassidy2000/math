@@ -1,0 +1,17 @@
+THM-2359 exact perfect-quartic-wall referee
+wall factorization: P=5*(27+7*y^2)^2
+quadratic split: F=(7Q+10*sqrt(-5)*L^3)*(7Q-10*sqrt(-5)*L^3)
+common-root resultant: 3720786376356*(333396*C^2+1000188*C*W+750141*W^2+1024)
+subresultant degrees: 12,11,10,9,8,7,6,5,4,3,2,1,0
+C=0 edge signatures/gcd degree: (14,8),(13,7) / 0
+ratio chart: X=C^2, Z=W/C, U=8748*X+175, V=735*Z+682
+shifted generator signatures: [(21,151,11,14),(18,109,9,12),(27,219,12,18)]
+Groebner basis degrees: 4,3,3,3
+nilpotence certificate: U^5 and V^5 have zero remainder
+unique orbit: C^2=-175/8748, W/C=-682/735
+exceptional factorization: F=73060029*(y+3*r/7)^6*R6, r^2=-21
+residual sextic discriminant: 1242517308060047668936704000000000000/8551083049093133387426609
+residual value at repeated root: -1093500/343
+exceptional squarefree degree: 6
+off-orbit hostile gcd degrees: (0, 0)
+VERDICT: the perfect-quartic wall has no square class of degree <=4

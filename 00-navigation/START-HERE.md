@@ -60,13 +60,13 @@ Then read the relevant frontier section, the active guardrails, and the exact th
 11. **A reciprocal integer sequence has two profiles.** THM-2000/2005 separate
     support from multiplicity; THM-2352 makes q-adic support abscissa zero but
     indexed plateaux realize every threshold, while finite conditioning loses termination.
-12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300
-    is the exact new counterexample. THM-2063/2071 close linear/quadratic source
-    fibers; THM-2084/2118/2102 close cubics. THM-2158/2180 reduce the twice-odd
-    nonmonic quartic to `V|(4gamma-(beta/V)^2)`; THM-2202 removes every
-    twice-odd finite pole. THM-2214 closes nonsplit terminal degrees `2,6,10`;
-    THM-2217 forces the odd train; THM-2247 closes degree `14`; THM-2262 reduces degree `18` to a singular trigonal discriminant, THM-2297 closes all one-sparse strata and the `B=D=0` plane, THM-2311 reduces the exactly two-sparse residue to `31` weighted ratios, and THM-2314 closes the full six-point `B`--`D` bank by normalization genera `4`, `1`, and uniformly `2`, leaving `25`. Split/even descent, the remaining multi-parameter locus, other short edges, integral
-    `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
+12. **JC is false from dimension three; JC(2) and DC(2) remain open.** THM-1300 is the exact new counterexample. THM-2063/2071 close linear/quadratic source fibers; THM-2084/2118/2102 close cubics; THM-2202 removes every twice-odd finite pole.
+    THM-2214 closes nonsplit terminal degrees `2,6,10`, THM-2217 forces the odd train, and THM-2247 closes degree `14`.
+    At degree `18`, THM-2297 closes one-sparse strata plus `B=D=0`;
+    THM-2314/2316/2320/2324/2328 close all `31` exactly two-sparse ratios.
+    THM-2332 leaves squarefree branch degree `0`, `2`, or `4`; THM-2335 eliminates `0`; THM-2345/2347 close two divisors.
+    THM-2359 is a verified-exact candidate closing the perfect-quartic divisor, pending audit.
+    Off-wall `H_2/H_4`, split/even descent, other short edges, integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
 13. **Complete period-14 coordinates can still be globally blind.** THM-2043
     proves parity-Hasse completeness for reduced period-14 functions. The
     audited Goddyn--Wong family in THM-2058 preserves the packet, every fixed

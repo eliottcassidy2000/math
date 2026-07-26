@@ -409,14 +409,14 @@ Classify profiles under support operations; study analytic continuation and auto
   cover and leaves an explicit degree-twelve branch locus; THM-2297 removes
   target translation, yields a weighted `(2,3,4,5)` cone, and closes every
   one-sparse stratum plus the `B=D=0` plane by genus. THM-2311 reduces the
-  exactly two-sparse locus to `31` ratios; THM-2314 and THM-2316 close the
-  `B`--`D` and `C`--`D` banks. THM-2332 then leaves Mordell square classes
-  of degrees `0,2,4`; THM-2345 closes `126D=25B^2`, and THM-2347 proves
-  the whole double-zero wall `20BC+21W=0` saturates to it. THM-2357 moves
-  every residual `H_2` three-cycle to `y=1`, reduces to
-  `R_10=H_2S_4^2`, and exposes the exact `C`-linear pivot
-  `-10260B+1771s_2-1771`. Its localized main lane, pivot lane, `K=0`,
-  and `C=0` remain, as does the off-wall `H_4` stratum. Split/even descent
+  exactly two-sparse locus to `31` ratios; THM-2314/2316/2320/2324/2328
+  close all `31`. THM-2332 leaves Mordell square classes of degrees
+  `0,2,4`, and THM-2335 eliminates degree `0`. THM-2345/2347 close
+  `126D=25B^2` and `20BC+21W=0`; THM-2359 is a verified-exact candidate
+  closing `504D=115B^2`, pending audit. THM-2357 moves every residual
+  `H_2` three-cycle to `y=1`, reduces to `R_10=H_2S_4^2`, and exposes
+  the exact pivot `-10260B+1771s_2-1771`. Its localized main and pivot
+  lanes, `K=0`, and `C=0` remain, as does the `H_4` stratum. Split/even descent
   and other short edges remain; THM-2206
   blocks field-valued `C_2` Hasse repair. Integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
