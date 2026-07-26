@@ -1,11 +1,12 @@
 theorem=THM-2394
-status=PROVED-CANDIDATE+VERIFIED-EXACT; independent-audit=PENDING
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED
 abstract_survivors=385; type_counts={'I': 49, 'II': 294, 'III': 42}
 K_words=7 complements of one labelled root; collisions=0
 address_hist=a_equals_c_only:24/169,all_equal:1/169,all_other:132/169,b_equals_c_only:12/169
 A=C!=B=24/169; B=C=1/13
 high_safe_mass=396/637
 middle_hole_mass>=3972/8281; fixed_hole>=3972/57967
+physical_Rplus_middle_owner>=3972/57967; image_in_D_h>=3972/57967
 type_II_mass>=3335/8281; fixed_ordered_pair>=3335/347802
 fixed_colour_amplitude>=3335/2434614; charged_product>=3335/17042298
 nonzero_colour_energy_sum=6/49; fourth_sum=6/2401

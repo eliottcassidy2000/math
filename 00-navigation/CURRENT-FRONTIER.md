@@ -169,20 +169,10 @@ is the open finite-state/Farey program for this obligation.
 is the proved carrier that reduces each fixed bad-denominator/owner fiber to
 labelled primitive packets and one coprime interval. It makes the terminal
 exact and finite; it does not prove that every surviving interval is empty.
-THM-2168--2257 leave `165` rows; THM-2295--2349 supply packets and `91`-unit edges.
-THM-2350--2367 give LRC banks (THM-2356 kernel `28,393` versus `169`; THM-2363 dominates); THM-2368--2377 expose hostiles and force the `98`-toothpick/repeated-layer carrier.
-THM-2378 closes `W=k=1`; THM-2381/2382 close `(1,1)`/`(5,2,7)`; THM-2385 closes `(2,0)`, leaving only `k=2,(1,0)`.
-THM-2388 locates `36/343` excess/cage, not off-cage mass. THM-2390 forces
-lower weight seven or eight; THM-2391 forces primitive depth zero and removes
-weight seven, leaving one seven-address word with one double. THM-2392 prices
-all but ten compatible middle-depth cage orientations and retains a
-same-parent `C_7 x C_13` charged tensor. THM-2393's exact double-fibre count
-eliminates nine of those orientations and every `M>=2` case. The sole
-no-clean residual is now the literal `M=1` common-core chain
-`(C_1,C_2,c_1,c_2)=h(1,13,13,169)`, where every seven-root fibre has one or
-two low-cage addresses. The missing sidecar is an owner-typed transition for
-the mandatory middle `D_(13h)` address, not another unlabelled mass bound.
-Ledger: `165`.
+THM-2168--2257 leave `165` rows; THM-2295--2377 supply the relation/edge/bank/toothpick carriers (THM-2356 kernel `28,393`, THM-2363 dominant, THM-2368 root routing), and THM-2378/2381/2382/2385 leave only `k=2,(t,b)=(1,0)`.
+THM-2388--2391 reduce it to a primitive weight-eight seven-address word; THM-2392/2393 reduce every no-clean packet to the literal `M=1` chain
+`(C_1,C_2,c_1,c_2)=h(1,13,13,169)`. THM-2394 makes its high-safe fibres exact six-address transversals, forces a fixed-phase middle-hole/deep-double
+dipole on mass `>=3335/8281`, and transports positive middle-owner mass `>=3972/57967` into `D_h`. Its successor law needs `floor(13y) mod 7`; the remaining sidecar is hole-status transport, not another unlabelled mass bound or carry-free binary Markov chain. Ledger: `165`.
 
 ### Independent routes that remain live
 

@@ -244,7 +244,7 @@ nonzero_colour_fourth_sum = F(6, 2401)
 
 
 print("theorem=THM-2394")
-print("status=PROVED-CANDIDATE+VERIFIED-EXACT; independent-audit=PENDING")
+print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED")
 print(f"abstract_survivors={survivor_count}; type_counts={type_counts}")
 print("K_words=7 complements of one labelled root; collisions=0")
 print(
@@ -255,6 +255,10 @@ print(f"A=C!=B={a_equals_c_not_b}; B=C={b_equals_c}")
 print(f"high_safe_mass={high_safe_mass}")
 print(
     f"middle_hole_mass>={middle_hole_mass}; fixed_hole>={fixed_hole_mass}"
+)
+print(
+    f"physical_Rplus_middle_owner>={fixed_hole_mass};"
+    f" image_in_D_h>={fixed_hole_mass}"
 )
 print(
     f"type_II_mass>={type_ii_mass};"

@@ -2,7 +2,7 @@
 id: THM-2394
 title: "Common-core six-address transversal and labelled-hole trichotomy"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. Assume
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Assume
   THM-2393's sole no-clean residual M=1 and
   (C_1,C_2,c_1,c_2)=h(1,13,13,169). On every generic fibre where
   q_*,C_3,c_3 are safe, the guard and four lower q words form an exact
@@ -13,7 +13,10 @@ status: >
   and the generic type with hole B and distinct double root C has mass
   at least 3335/8281. Hence one fixed ordered hole/double pair has mass
   at least 3335/347802 and carries every nonzero septimal colour with
-  exact charged phase. The address transition is carry-corrected:
+  exact charged phase. The middle holes lift to a physical set
+  A subset {R=1} intersection D_(13h) of mass at least 3972/57967,
+  whose image under multiplication by thirteen lies in D_h and has no
+  smaller mass. The address transition is carry-corrected:
   b(y)=kappa_13(y)-a({13y}) and
   c(y)=a({169y})-kappa_169(y)=kappa_13(y)-b({13y})
   modulo seven. The carry-free rule is false already at y=1/10. This is
@@ -30,14 +33,14 @@ related:
   - THM-2362-target-shift-successor-role-jet-and-inverse-root-sheet-anchor
 script: 04-computation/lrc14_common_core_transversal_thm2394.py
 output: 05-knowledge/results/lrc14_common_core_transversal_thm2394.out
-script_sha256: 74f75a65f88c0b604bbbacf34f906bdf883a3eb80e1f271ca3e918e4bb767cf6
-output_sha256: 90da48855d57c5f3cecc6cf94bd16acbb6f27d54b4120242d29e7d7a944e5d3f
+script_sha256: 5c58257d3d912913c22596aaaefd4ce6b31854e709fdd904faeb228bed1a35d7
+output_sha256: 7ea8e5001841432fce8bf792285fa9aa6db1751cd22892eb381b8c1a5f1036b3
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2394 -- the common-core fibre is a labelled dipole
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2393 leaves one exact boundary:
 
@@ -63,16 +66,24 @@ Retain THM-2393's notation
 ```text
 K=1_(E_H)+sum_(q_i != q_*) 1_(D_(q_i)),
 
-X_0
+X_0^pt
  =D_(q_*)^c intersection D_(C_3)^c intersection D_(c_3)^c.
                                                                (2)
 ```
 
-Here `K` contains the guard word and the four lower ordinary words; the
-top word is absent on `X_0`. Equation (11) of THM-2393 gives
+For the seven-root base put
 
 ```text
-mu(X_0)=396/637.                                      (3)
+Y_0
+ =D_(q_*/7)^c intersection D_(C_3/7)^c
+    intersection D_(c_3/7)^c.
+```
+
+Then `X_0^pt=T_7^(-1)(Y_0)`, with `T_7(x)=7x`. Equation (12c) of
+THM-2393 gives
+
+```text
+mu(Y_0)=mu(X_0^pt)=396/637.                           (3)
 ```
 
 Disintegrate over
@@ -81,8 +92,9 @@ Disintegrate over
 x_r=(y+r)/7,                         r in F_7.         (4)
 ```
 
-Every high condition in `X_0` is constant on (4). Away from the
-finitely many strict endpoints, put
+For `y in Y_0`, every root in (4) lies in `X_0^pt`. Thus the top word
+and both high blockers are safe on the full fibre. Away from the finitely
+many strict endpoints, put
 
 ```text
 k_r=K(x_r).                                           (5)
@@ -109,8 +121,8 @@ quotient blocker C_2=13h,
 actual blocker c_1=13h.                              (8)
 ```
 
-Assume the no-clean alternative `delta=0`. On almost every fibre in
-`X_0`, the scalar cover, the THM-2388 collision cage, and the definition
+Assume the no-clean alternative `delta=0`. On almost every fibre over
+`Y_0`, the scalar cover, the THM-2388 collision cage, and the definition
 of a clean hole give respectively
 
 ```text
@@ -228,7 +240,7 @@ mu_y{b=c}
  =1/13.                                              (16)
 ```
 
-Case III is contained in (15). Hence on a subset of `X_0` of mass at
+Case III is contained in (15). Hence on a subset of `Y_0` of mass at
 least
 
 ```text
@@ -251,6 +263,46 @@ address occurs on mass at least
 3972/(7*8281)=3972/57967.                            (19)
 ```
 
+There is also a canonical physical owner transition. Let `E_mid` be the
+base set in `Y_0` on which the hole is `B`, and select its unique hole
+root:
+
+```text
+A_mid={ (y+b(y))/7 : y in E_mid }.                   (19a)
+```
+
+Root disintegration and (17) give
+
+```text
+mu(A_mid)=mu(E_mid)/7>=3972/57967.                   (19b)
+```
+
+At a `K`-hole the guard is safe and all five ordinary danger words,
+including `q_*`, vanish. Therefore, for
+
+```text
+R=1_(C_H)-sum_(i=1)^5 1_(D_(q_i)),
+```
+
+one has
+
+```text
+A_mid subset {R=1} intersection D_(13h).             (19c)
+```
+
+Writing `T(x)=13x`, the owner label transports literally:
+
+```text
+T(A_mid) subset D_h,
+
+mu(T(A_mid))>=mu(A_mid)>=3972/57967.                 (19d)
+```
+
+The measure inequality follows because
+`A_mid subset T^(-1)(T(A_mid))` and multiplication by thirteen
+preserves Haar measure. Equation (19d) transports the owner, not the
+hole status: `T(A_mid)` need not lie in `{R=1}`.
+
 There are `7*6=42` ordered distinct pairs `(b,c)`. Thus one fixed
 type-II hole/double pair occurs on a base cell `Y_(b,c)` with
 
@@ -260,7 +312,7 @@ rho:=mu(Y_(b,c))
  =3335/347802.                                       (20)
 ```
 
-No independence of `X_0` from the address events is used in
+No independence of `Y_0` from the address events is used in
 (17)--(20); only subtraction of their exact global masses is used.
 
 ## 4. Exact septimal dipole and phase
@@ -382,9 +434,10 @@ counterfactual no-clean branch. It does **not** yet supply:
   eigenline; or
 - the `169`-image inclusion required by THM-2257.
 
-The sharp next test is a carry-labelled successor coupling: prove that a
-positive portion of (20) retains its owner type after `T`, or construct a
-lawful hostile showing that all of it can escape. THM-2362's
+Equation (19d) already preserves the middle owner through one physical
+step. The sharp next test is a carry-labelled successor coupling: prove
+that a positive portion of (20) retains its **hole status** after `T`, or
+construct a lawful hostile showing that all of it can escape. THM-2362's
 successor-role jet is the closest proved mechanism, but its target-shift
 observable has not yet been identified with (22).
 

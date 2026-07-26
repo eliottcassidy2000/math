@@ -175,6 +175,32 @@ Disintegrate Haar measure over
 x_r=(y+r)/7,                         r in F_7.                 (12)
 ```
 
+The base variable in (12) must use the divided high coefficients. Put
+
+```text
+Y_0
+ =D_(q_*/7)^c intersection D_(c_3/7)^c
+    intersection D_(C_3/7)^c.                                (12a)
+```
+
+All three coefficients in (8) are divisible by seven, and
+
+```text
+X_0=T_7^(-1)(Y_0),                       T_7(x)=7x.             (12b)
+```
+
+Consequently Haar invariance gives
+
+```text
+mu(Y_0)=mu(X_0)=396/637,                                  (12c)
+```
+
+and `y in Y_0` means that **every** root `x_r` in (12) is safe
+for `q_*,c_3,C_3`. This base/point distinction is load-bearing; writing
+`y in X_0` here would compare the wrong physical points. MISTAKE-264
+records the post-promotion typing repair; no numerical or logical
+consequence changed.
+
 For a low-cage set `U`, write
 
 ```text
@@ -190,13 +216,13 @@ integral N_U(y)dy=7mu(U).                                    (14)
 More importantly, if
 
 ```text
-y in X_0                  and                 N_U(y)=0,        (15)
+y in Y_0                  and                 N_U(y)=0,        (15)
 ```
 
 then at least one of the seven roots belongs to `S`.
 
-Indeed, every condition in `X_0` is invariant on (12). At the seven
-roots, the guard word has size two and the four lower `q` words have
+Indeed, (12a) makes all three high conditions safe at every root in
+(12). At the seven roots, the guard word has size two and the four lower `q` words have
 size one each. Their total incidence is six, so some root has `K=0`.
 The scalar cover puts that root in `D_(c_1) union D_(c_2)`. Since
 `N_U=0`, it is outside `D_(C_1) union D_(C_2)`; since `C_3` is safe,
@@ -209,7 +235,7 @@ p_0(a,b)=mu{y:N_(U_(a,b))(y)=0}.                    (16)
 ```
 
 Counting clean roots and using only
-`mu(X_0 intersection {N_U=0})>=mu(X_0)+p_0-1` gives
+`mu(Y_0 intersection {N_U=0})>=mu(Y_0)+p_0-1` gives
 
 ```text
 delta

@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-264 (2026-07-25, THM-2393 base/root typing audit) -- an undivided high-safe point event was used as a seven-root base event
+
+- **What was written:** THM-2393 Section 3 disintegrated
+  `x_r=(y+r)/7` and then wrote `y in X_0`, where
+  `X_0=D_(q_*)^c intersection D_(C_3)^c intersection D_(c_3)^c`.
+  It said those three high conditions were consequently safe at every
+  root `x_r`.
+- **First failed implication:** for a speed `v` divisible by seven,
+  `x_r in D_v` is equivalent to `y in D_(v/7)`, not to
+  `y in D_v`. Invariance among the seven roots does not identify the
+  base point with any root. This is the same base-versus-root typing
+  hazard isolated in THM-2382.
+- **Repair:** define the base event
+  `Y_0=D_(q_*/7)^c intersection D_(C_3/7)^c intersection
+  D_(c_3/7)^c`. Then `X_0=T_7^(-1)(Y_0)`, so Haar invariance preserves
+  the exact mass `396/637`, and `y in Y_0` gives high safety at every
+  root. All THM-2393 inequalities and the THM-2394 transversal proof
+  are unchanged after this typing repair.
+- **Rule:** after a root disintegration, divide every coefficient by
+  the root degree when defining the base event. Fibre invariance says
+  the root values agree; it does not say that they equal the undivided
+  value at the base coordinate.
+
 ## MISTAKE-263 (2026-07-25, owner-pivot repair audit) -- a pure primal relation class was treated as its target covector
 
 - **What was assumed:** for the THM-2309 owner pivot, the balanced
