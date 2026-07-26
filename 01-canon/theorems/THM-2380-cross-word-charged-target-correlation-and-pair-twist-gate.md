@@ -343,6 +343,16 @@ realization. No such realization is asserted here.
 - THM-2374's squared Boolean Dirichlet spectrum and THM-2375's
   isotypic norms are Hermitian magnitude data. The pairs in (21) show
   why neither supplies (8).
+- The independently audited finite-exact
+  [`first-collision null-parent positive control`](../../07-reflections/lrc14-first-collision-null-parent-polarization-positive-control-codex-20260725.md)
+  gives a complementary boundary. On THM-2377's reduced common-endpoint
+  slice the parent is target-null, so `Ahat(q)=-What(q)` for every
+  nonzero target and the real Gram product is already `-|What(q)|^2`;
+  all twelve target and `144` deep/target colours survive. Thus
+  disjoint support is not the immediate reduced-slice obstruction.
+  Canonical owner typing and common-endpoint restoration to the
+  terminal word remain open, so this is a positive control rather than
+  a physical realization of (13).
 
 No scalar row is excluded. The ledger remains `165`, and LRC(14)
 remains open.

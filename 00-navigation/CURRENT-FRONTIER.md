@@ -170,11 +170,9 @@ is the proved carrier that reduces each fixed bad-denominator/owner fiber to
 labelled primitive packets and one coprime interval. It makes the terminal
 exact and finite; it does not prove that every surviving interval is empty.
 THM-2168--2257 leave `165` rows; THM-2295--2349 supply packets and `91`-unit edges.
-THM-2350--2365 give dipole/colour/drift banks (THM-2356 kernel `28,393` versus `169`; THM-2363 dominates); THM-2366/2367 isolate inverse covariance, sub-`13` budgets, and septimal graft transport.
-THM-2368/2369 expose drift/slope hostiles; THM-2370's clone kills mixed-energy repair. THM-2372/2377 force a `98`-fold toothpick and put the first carrier at a repeated septimal layer with Bockstein carry.
-THM-2378 closes `W=k=1` via `3/4` versus `1/2` and `5/49`; THM-2381 closes `k=2,(t,b)=(1,1)` by a seven-bin partition and exact `36/343` anti-shield.
-THM-2382 closes saturated `k=2,(5,2,7)` by `13>10`. THM-2385 closes `(2,0)` by exact two-comb containment plus unequal/equal-depth obstructions.
-Thus only `k=2,(t,b)=(1,0)` remains in the septimal atlas. THM-2379/2380/2384 leave a true owner-typed dual dipole, endpoint-matched reference, and the located `36/343` multiplicity-excess word open. No whole thirteen-adic row is removed; the ledger remains `165`.
+THM-2350--2367 give LRC banks (THM-2356 kernel `28,393` versus `169`; THM-2363 dominates); THM-2368--2377 expose hostiles and force the `98`-toothpick/repeated-layer carrier.
+THM-2378 closes `W=k=1`; THM-2381/2382 close `(1,1)`/`(5,2,7)`; THM-2385 closes `(2,0)`, leaving only `k=2,(1,0)`.
+THM-2388 is a CANDIDATE locating `36/343` excess and its blocker cage, not positive off-cage mass. The audited first-collision control gives reduced overlap/phase; THM-2379/2380/2384 still leave owner-typed terminal restoration, a true dual dipole, and endpoint reference. The ledger remains `165`.
 
 ### Independent routes that remain live
 
@@ -259,8 +257,10 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   proves the boundary hyper-Bessel function is Laguerre–Pólya; it is now a
   refinement rather than the missing NC2 step.
 - THM-2375 recovers labelled charge norms from complete Hermitian angular
-  differences; the `Z`/`conjugate(Z)` hostile proves scalar moments do not
-  supply this richer bank, so it is a diagnostic rather than a new NC2 route.
+  differences. The audited complete-orbit face diagnostic recovers
+  `|CT(f^m)|^2` after multiplication under the sharp zero-residue bound,
+  while its phase and Laguerre/Newton hostiles show why unpolarized one-body
+  norms cannot replace THM-2022's multiplicative selector.
 - MISTAKE-211/212/214/215 bar four recurring overclaims: scalar moments do not
   separate atoms; a tournament source is sufficient, not iff; Vandermonde node
   repetition is not tournament score repetition; and no global

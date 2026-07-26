@@ -4,10 +4,10 @@
 
 ## Demodulate, then average a complete subgroup
 
-**Trigger / action:** when a finite unitary action grades the target by labelled characters and exact support energy is needed, demodulate by the desired character and average the squared finite difference over the whole lawful subgroup; on Boolean cubes, also Mobius-invert complementary-subcube energies.
-**Mechanism:** character orthogonality gives an exact `0/2` multiplier, so complete-line energies recover isotypic norms, support masks, and nonnegative mixed-interaction defects.
-**Counterindication:** the subgroup, labels, Hermitian differences, and unitarity are load-bearing. Balanced scalar moments, unlabelled energy multisets, partial colour faces, or pointwise modes followed by phase-cancelling integration do not supply the bank or a charged selector.
-**Evidence:** THM-2369 (two LRC target lines and charged-edge boundary), THM-2374 (binary knot-allocation subcubes and Walsh support), and THM-2375 (finite-unitary/Gaussian angular tomography and scalar-moment no-go).
+**Trigger / action:** when a finite unitary action grades the target by labelled characters and exact support energy is needed, demodulate by the desired character and average the squared finite difference over the whole lawful subgroup; on Boolean cubes, also Mobius-invert complementary-subcube energies, and for nonlinear seeds multiply before demodulating.
+**Mechanism:** character orthogonality gives an exact `0/2` multiplier, so complete-line energies recover isotypic norms, support masks, and nonnegative mixed-interaction defects; with an exponent-range certificate the trivial residue of a powered Laurent polynomial is exactly its constant-term square.
+**Counterindication:** the subgroup, labels, Hermitian differences, unitarity, and alias range are load-bearing. Balanced scalar moments, unlabelled or one-body magnitude banks, partial colour faces, or pointwise modes followed by phase-cancelling integration do not supply powered cross phases or a charged selector.
+**Evidence:** THM-2369 (LRC target lines), THM-2374/2383 (Boolean Walsh/Gram tomography), THM-2375 (finite-unitary Gaussian tomography), and the audited `gmc2-lowest-face-complete-orbit-certificate-and-radial-boundary` reflection (multiply-first constant-term diagnostic and radial no-go).
 
 ## Separate symmetry descent from regularity debt
 
