@@ -169,6 +169,7 @@ THM-2168--2257 leave `165` rows. THM-2295--2377 give relation/edge/bank/toothpic
 THM-2388--2397 reduce no-clean to `M=1` (`delta>=66/4459` there, `>=1/26754` universally); each literal role retains `12` target colours at large `13^k` clocks with typed deletion support.
 THM-2405 leaves seven no-clean `M=1` ratios; THM-2415 caps every packet at `M<=2`, and THM-2417's fourteen strict relaxed-orbit duals exclude the entire `M=2` lane. Thus every last-lane survivor has `M=1`, uniformly, without a row decrement.
 THM-2407/2409 route colours to `gcd(m,91)=1` triangles. THM-2410/2416 give a bounded `13Z` affine shell; THM-2419 retains its charged kernel fibre and identifies a same-shell residue-zero reference as the exact sidecar. THM-2418 identifies the septimal word phase as an alternating base-thirteen carry, but its even BV-two rank-one source hostile shows that a canonical source--terminal correlation/reference is still missing. Ledger: `165`.
+Reserved only: THM-2420 will test same-shell charged/reference composition; it is not proved.
 
 ### Independent routes that remain live
 
