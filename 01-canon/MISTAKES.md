@@ -9,6 +9,38 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-273 (2026-07-26, proposed THM-2434 endpoint cage) -- an almost-everywhere exact tiling does not cover its open handoff seams
+
+- **What was proposed:** in a `b=0,t=5` THM-2427 residual, THM-2430 makes
+  the six top words an exact one-fold common-root tiling.  It was then
+  proposed that every top-word endpoint must lie in a blocker: otherwise
+  another open top word covering the endpoint would overlap the exiting word
+  on one side.  Endpoint counting would have implied
+  `sum_j gcd(u,c_j)>=2u/3` for every top speed.
+- **First failed implication:** the root tiling is an almost-everywhere
+  identity.  An exiting open top tooth and an entering open top tooth may
+  abut at one common endpoint.  Neither contains that point, while the
+  punctured neighborhood is exactly one-fold.  Thus there need not be
+  "another word covering the endpoint."  The local hostile is the handoff at
+  `x=1/14` from guard speed `H=2` to ordinary speed `q=27`; both words miss
+  the common point and all other displayed masks can be absent nearby.
+- **Strongest survivor:** away from the high-blocker danger union, every top
+  endpoint is either high-blocker-caught or paired with exactly one
+  opposite-signed top endpoint.  For an ordinary or guard speed `u` and a
+  blocker `c`, with `g=gcd(u,c)` and `A=u/g`, each endpoint-sign branch has
+  at most `g ceil(A/7)` blocker hits.  The top-to-top handoff instead obeys
+  the exact seam divisibility law of THM-1156.  A valid invoice must retain
+  both signed event types.
+- **Repair:** THM-2434 remains a superseded unproved stub.  THM-2431 closes
+  the intended `b=0,t=5` branch by a parent-mass rounding argument which does
+  not require pointwise endpoint coverage.  Any future endpoint theorem must
+  use the signed handoff/blocker event current, or explicitly add a literal
+  pointwise cover with the correct closed-guard convention.
+- **Rule:** an a.e. partition of open interval masks controls punctured
+  chambers, not common endpoints.  Before converting a tiling into an
+  endpoint cage, state which mask contains the seam point and audit the
+  strict/closed convention.
+
 ## MISTAKE-272 (2026-07-26, THM-2411 fixed-coefficient projection) -- eliminating `E` turned a constant-field coefficient into a moving function
 
 - **What was done:** the first degree-twenty-two pole-divisor reduction solved
