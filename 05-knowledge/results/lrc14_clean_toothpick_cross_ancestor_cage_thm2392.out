@@ -1,0 +1,15 @@
+THM-2392 CLEAN TOOTHPICK / CROSS-ANCESTOR CAGE -- exact companion
+same-line overlap rho(C,13C): 1/91
+different-nu7 exact law: 48 residue cells, rho=1/49
+root words: 15 double pairs (5 guard, 10 ordinary), 648648000 complete words
+deterministic charged cells: owner/pair/edge=390, exact-word/pair/edge=585
+adjacent two-root DFT sums: normalized (22/169, 62/28561); raw (22, 62)
+general dichotomy: delta<6/4459 -> ab<=1/[2(6/4459-delta)]
+theta=3/4459: cell>=1/579670 or ab<=743; delta=0: rho>=94/4459 and ab<=371
+repeated-first: cage<=401/3822, delta>=1/26754, charged cell>=1/10434060
+strict scan: 135/150 uniformly clean; worst middle depth b=4 (15 tied c-values)
+strict uniform floors: delta>=6042/9796423, charged cell>=1007/636767495
+b=2 with different low nu7: delta>=36/57967, charged cell>=6/3767855
+same-(nu13,nu7) b=2 zero-clean bank: 124 unordered ratios; ab<=345, min<=11, max<=197
+bank witnesses: max product (3,115); max coordinate (1,197)
+VERDICT: 15 repeated + 135 strict profiles force a positive toothpick; the last 15 reduce to the explicit b=2 ratio bank

@@ -11,14 +11,18 @@ status: >
   word whose normalized nonzero target spectrum is everywhere nonzero,
   with exact square/fourth-power sums 22/169 and 62/28561. A labelled-owner,
   pair, and translate cell has mass at least delta/390. Conversely, the
-  blocker cage has mass at least 36/343-delta. Its two same-line pieces have
-  exact mass 1/91, so a cross-ancestor pair has an explicit excess overlap;
-  if delta<6/4459 its reduced product is at most
-  1/(6/4459-delta). In every repeated-first profile (1,1,c), 5<=c<=19,
-  THM-2263 bounds the whole cage by 17981/171366 and therefore forces
-  delta>=1693/58778538 and a fixed charged cell of mass at least
-  1693/22923629820. This is a coefficient-level root word, not a canonical
-  expiration target, branch exclusion, row decrement, or proof of LRC(14).
+  blocker cage has mass at least 36/343-delta. Different 7-adic valuations
+  force exact danger overlap 1/49; the last-lane hypotheses apply this to
+  both high cross-ancestor pieces. Thus if delta<6/4459, one of the two
+  remaining low cross pairs has reduced product at most
+  1/[2(6/4459-delta)]. Every repeated-first profile forces
+  delta>=1/26754. Among the 150 strict profiles, all 135 rows with b>=3
+  force delta>=6042/9796423 and a fixed charged cell of mass at least
+  1007/636767495. The fifteen b=2 rows either have positive clean mass or
+  their one unresolved reduced cross pair lies in an explicit 124-ratio
+  bank with product at most 345. This is a coefficient-level root word,
+  not a canonical expiration target, branch exclusion, row decrement, or
+  proof of LRC(14).
 source: codex-2026-07-26-clean-toothpick-cross-ancestor-cage
 depends_on:
   - THM-1166-seven-wall-fano-gcd-discrepancy
@@ -30,8 +34,8 @@ related:
   - THM-2390-septimal-layer-kraft-peeling-and-heavy-word-reduction
 script: 04-computation/lrc14_clean_toothpick_cross_ancestor_cage_thm2392.py
 output: 05-knowledge/results/lrc14_clean_toothpick_cross_ancestor_cage_thm2392.out
-script_sha256: PENDING
-output_sha256: PENDING
+script_sha256: 1cb8732b49d8b5541db41dd0d5dd5926b6bdc96298626b04d42d59eb4892d24f
+output_sha256: 2b325668958a7329b96c9916ed91d5818fb6836fef7462d4f3fca01d119fb170
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -53,8 +57,9 @@ small clean-hole mass
   -> a bounded cross-ancestor reduced ratio.                         (1)
 ```
 
-The repeated-first thirteen-adic profiles fall strictly on the first side.
-The strict profiles retain the quantitative alternative.
+The repeated-first profiles and all `135` strict profiles with middle depth
+at least three fall quantitatively on the first side.  The last `15`
+middle-depth-two profiles retain a finite exact cross-ancestor bank.
 
 ## 1. The clean-hole/cage split
 
@@ -293,14 +298,40 @@ coordinate, the central tooth of `D_13` has length `1/91` inside `D_1`;
 the two neighboring teeth meet the endpoints `+/-1/14` only, and every
 other tooth is disjoint.
 
-Subtract (24) from (8) and use the union bound on the four cross pairs
-`(i,j)` with `j!=i`.  Some cross pair satisfies
+There is a second exact overlap identity which is easy to miss.
+If two positive speeds have different `7`-adic valuations, then
+
+```text
+rho(a,b)=1/49.                                        (24a)
+```
+
+To prove it, divide by the gcd.  Exactly one reduced coefficient is
+divisible by seven.  That coefficient is congruent to its negative modulo
+fourteen, so the two folded endpoint arguments in THM-1166 have the same
+value.  The correction to `1/49` is therefore zero.
+
+THM-2388's last-lane condition (26) says
+
+```text
+nu_7(c_i)<M<nu_7(c_3)=nu_7(C_3),       i=1,2,
+```
+
+because division by thirteen does not change a `7`-adic valuation.
+Consequently
+
+```text
+rho(c_1,C_3)=rho(c_2,C_3)=1/49.                       (24b)
+```
+
+Subtract (24) and (24b) from (8).  Only the two low cross pairs
+`(c_1,C_2)` and `(c_2,C_1)` remain.  The union bound shows that one of
+them satisfies
 
 ```text
 rho(c_i,C_j)
- >=(36/343-delta-2/91)/4
+ >=(36/343-delta-2/91-2/49)/2
 
- =1/49+3/8918-delta/4.                                (25)
+ =1/49+3/4459-delta/2.                                (25)
 ```
 
 Whenever
@@ -320,7 +351,7 @@ rho(a,b)
 Equations (25)--(27) imply the finite product bound
 
 ```text
-ab<=1/(6/4459-delta).                                 (28)
+ab<=1/[2(6/4459-delta)].                              (28)
 ```
 
 Equivalently, for every parameter
@@ -336,10 +367,10 @@ delta>=theta:
   a fixed labelled charged cell has mass at least theta/390;
 
 delta<theta:
-  some cross pair has
-    rho>1/49+3/8918-theta/4
+  one of the two low cross pairs has
+    rho>1/49+3/4459-theta/2
   and
-    ab<(6/4459-theta)^(-1).                           (30)
+    ab<[2(6/4459-theta)]^(-1).                        (30)
 ```
 
 For example `theta=3/4459` gives
@@ -349,20 +380,20 @@ charged-cell mass>=1/579670,
 
 or
 
-cross reduced product ab<=1486.                       (31)
+low-cross reduced product ab<=743.                    (31)
 ```
 
 At the extreme `delta=0`, equation (25) gives
 
 ```text
-rho(c_i,C_j)>=185/8918=1/49+3/8918,
+rho(c_i,C_j)>=94/4459=1/49+3/4459,
 
-ab<=743.                                              (32)
+ab<=371.                                              (32)
 ```
 
 The linear trade (25) is the exact output of the cage mass, the two
-same-line identities, and the four-pair union bound.  No independence of
-the six intersections is assumed.
+same-line identities, the two `7`-valuation identities, and the remaining
+two-pair union bound.  No independence of the six intersections is assumed.
 
 ## 5. Repeated-first profiles force the charged branch
 
@@ -389,25 +420,14 @@ THM-2263 gives the following sharp pair caps.
 1. The same-line pairs in (24) equal `1/91`.
 2. The two shallow cross pairs `(c_1,C_2),(c_2,C_1)` have gap one and
    mass at most `23/1092`.
-3. The two high cross pairs `(c_i,C_3)` have gap
-
-   ```text
-   d=(c-1)-1=c-2 in {3,...,17}.
-   ```
-
-   The largest THM-2263 upper endpoint on this range occurs at the even
-   gap `d=4` and is
-
-   ```text
-   1/49+6/(49*13^4)=583/28561.                        (35)
-   ```
+3. The two high cross pairs `(c_i,C_3)` equal `1/49` by (24b).
 
 Therefore the whole cage obeys
 
 ```text
 mu(Gamma)
- <=2/91+2*(23/1092)+2*(583/28561)
- =17981/171366.                                       (36)
+ <=2/91+2*(23/1092)+2/49
+ =401/3822.                                           (36)
 ```
 
 Combining (5)--(8) and (36) gives the unconditional clean-hole floor
@@ -415,15 +435,15 @@ within the THM-2388 candidate:
 
 ```text
 delta
- >=36/343-17981/171366
- =1693/58778538
+ >=36/343-401/3822
+ =1/26754
  >0.                                                   (37)
 ```
 
 The labelled-owner charged cell from (17) consequently satisfies
 
 ```text
-rho>=1693/22923629820.                                (38)
+rho>=1/10434060.                                      (38)
 ```
 
 On that one fixed cell, every nonzero target colour has the coefficient
@@ -431,26 +451,151 @@ and energy floors
 
 ```text
 |integral_Y a_k|
- >=(1693/149003593830)sin(pi/26),
+ >=sin(pi/26)/67821390,
 
 integral_Y |a_k|^2
- >=(1693/968523359895)sin^2(pi/26),                   (39)
+ >=sin^2(pi/26)/440839035,                            (39)
 ```
 
 while the exact summed floors are
 
 ```text
 sum_(k!=0)integral_Y |a_k|^2
- >=18623/1937046719790,
+ >=11/881678070,
 
 sum_(k!=0)integral_Y |a_k|^4
- >=52483/327360895644510.                             (40)
+ >=31/149003593830.                                   (40)
 ```
 
 Thus every repeated-first last-lane packet has a positive literal
 two-root charged word.  This is not merely the formal alternative (30).
 
-## 6. What this still does not prove
+## 6. The strict-profile cage collapses except at middle depth two
+
+Now let
+
+```text
+(lambda_1,lambda_2,lambda_3)=(1,b,c),
+
+2<=b<c,                         5<=c<=19.             (40a)
+```
+
+There are `150` such profiles.  For a positive thirteen-adic gap define
+the sharp THM-2263 upper cap
+
+```text
+u(d)=
+  1/49+6/(49*13^d),             d even,
+  1/49+5/(588*13^d),            d odd.                (40b)
+```
+
+If `b>=3`, the two low cross pairs have positive gaps `b` and `b-2`.
+Equations (24), (24b), and (40b) give
+
+```text
+mu(Gamma)
+ <=U_b:=2/91+u(b)+u(b-2)+2/49.                        (40c)
+```
+
+Within each parity, the correction in `U_b` decreases strictly with `b`.
+The odd maximum is at `b=3`, the even maximum at `b=4`, and
+
+```text
+6/49(13^(-4)+13^(-2))
+ -5/588(13^(-3)+13^(-1))
+ =85/1199562>0.                                       (40d)
+```
+
+Thus the unique worst middle depth is `b=4`—all admissible `c` at that
+middle depth tie—and
+
+```text
+U_b<=U_4=146022/1399489.
+```
+
+Consequently all `135` strict profiles with `b>=3` satisfy
+
+```text
+delta
+ >=36/343-U_4
+ =6042/9796423,                                       (40e)
+
+rho(labelled charged cell)
+ >=(6042/9796423)/390
+ =1007/636767495.                                     (40f)
+```
+
+The `15` remaining strict profiles have `b=2`.  Their unresolved low
+cross pair is `(c_1,C_2)`, whose thirteen-adic gap is zero.  If
+
+```text
+nu_7(c_1)!=nu_7(C_2)=nu_7(c_2),                       (40g)
+```
+
+then (24a) makes that overlap exactly `1/49`.  The other low cross pair
+has gap two and cap `25/1183`, so
+
+```text
+mu(Gamma)<=864/8281,
+
+delta>=36/57967,
+
+rho(labelled charged cell)>=6/3767855.                (40h)
+```
+
+It remains to record the exact boundary when the two valuations in (40g)
+are equal.  Divide the unresolved pair by its gcd and write it, up to
+interchange, as
+
+```text
+(C_2,c_1)=g(a,b),
+
+a<=b, gcd(a,b)=1, gcd(ab,91)=1.                       (40i)
+```
+
+The other five cage pieces have total upper bound
+
+```text
+2/91+25/1183+2/49=695/8281.                           (40j)
+```
+
+Therefore the extreme no-clean-hole case `delta=0` forces
+
+```text
+rho(a,b)>=36/343-695/8281
+          =1219/57967,
+
+Delta(a,b)/(ab)>=144/1183.                            (40k)
+```
+
+The coarse THM-1166 endpoint bound first gives `ab<=402`.  Exact
+enumeration of the finite universe
+
+```text
+a<=b, gcd(a,b)=1, gcd(ab,91)=1, ab<=402,
+
+[F((a+b) mod 14)-F((b-a) mod 14)]/(ab)>=144/1183     (40l)
+```
+
+leaves exactly `124` unordered pairs.  Across this bank
+
+```text
+ab<=345,                 min(a,b)<=11,
+
+max(a,b)<=197.                                        (40m)
+```
+
+The product maximum occurs at `(3,115)` and the coordinate maximum at
+`(1,197)`.  Thus each middle-depth-two profile either has positive
+clean-hole mass, or its one unresolved cross ancestor lies in this
+explicit finite bank.  If its low blockers have different `7`-adic
+valuations, the stronger uniform positive alternative (40h) applies.
+
+Together, (37) and (40e) give an unconditional positive toothpick cell in
+`150` of the `165` profile rows: the `15` repeated-first rows and `135`
+strict rows with `b>=3`.
+
+## 7. What this still does not prove
 
 The new word is exact but its type is limited.
 
@@ -464,8 +609,8 @@ The new word is exact but its type is limited.
 - THM-2390 forces a separate labelled seven-root partition or one-double
   word.  It supplies no positive intersection with `S` and no alignment of
   its septimal root with the thirteen-root toothpick.
-- For strict profiles, (30) is a finite reduced-ratio alternative, not an
-  exclusion of either branch.
+- For the last middle-depth-two profiles, (40l) is a finite reduced-ratio
+  bank, not an exclusion of either branch.
 
 The first implication which fails in the unqualified THM-2388 finish is
 
@@ -475,17 +620,19 @@ mu(Z intersection X)>=36/343
 mu((Z intersection X) minus B)>0.                     (41)
 ```
 
-Section 5 repairs (41) only for the repeated-first profiles.  Even there,
+Sections 5--6 repair (41) uniformly for `150` profile rows.  Even there,
 positive coefficient-level target spectrum is not yet canonical target
 landing.  No thirteen-adic row is removed, the scalar ledger remains
 `165`, and LRC(14) remains open.
 
-## 7. Exact companion
+## 8. Exact companion
 
 The dependency-free companion:
 
-- verifies every rational identity in (25)--(40);
+- verifies every rational identity in (25)--(40m);
 - checks the exact same-line `1/91` interval geometry;
+- exhausts the modulo-fourteen proof of the different-`7`-valuation
+  `1/49` law;
 - enumerates all fifteen double-pair types and confirms that an ordinary
   label outside the pair always exists;
 - verifies the two root-count profiles in (13), the complete-word count
@@ -494,8 +641,11 @@ The dependency-free companion:
   sums on all thirteen adjacent edges;
 - verifies the full one-parameter product trade and the
   `theta=3/4459`, `delta=0` specializations; and
-- reconstructs the THM-2263 repeated-first cage cap and positive margin,
-  including the odd-gap-three versus even-gap-four boundary.
+- reconstructs the repeated-first and all `150` strict cage caps, checks
+  that precisely the `135` rows with `b>=3` pass uniformly, and identifies
+  the `b=4` tie family; and
+- independently enumerates the `124` middle-depth-two residual ratios and
+  checks the sharp product/coordinate witnesses in (40m).
 
 Run
 
