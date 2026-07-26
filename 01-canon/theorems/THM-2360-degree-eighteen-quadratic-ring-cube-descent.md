@@ -2,7 +2,7 @@
 id: THM-2360
 title: "Conditional degree-eighteen quadratic-ring cube descent"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. Let the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Let the
   THM-2357 mixed residual satisfy
   (x^2-1)S_4^2=4(x-x_0)p_3^3+49q_5^2, with
   x_0^2!=1, Res(p_3,q_5)!=0, and q_5(x_0)!=0. In the Laurent UFD
@@ -31,7 +31,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2360 -- the conditional quadratic-ring cube descent
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2357 turns the mixed degree-eighteen branch into
 
@@ -439,4 +439,8 @@ pair allocation, linear/cube overlap, repeated-root allocation, and the
 exact nonmaximal `H_2` hostile with its `x^6` index square. No executable
 check uses Python `assert`.
 
-Independent audit is pending. QED.
+Independent hostile audit checked the affine normalization and all scalar
+rescalings, Laurent-UFD coprimality, endpoint degrees, reciprocal-pair
+allocation including repeated and overlapping roots, the exact `H_2`
+nonmaximal-order hostile, normal and optimized transcripts, stored output,
+LF hashes, and documentation routing. QED.
