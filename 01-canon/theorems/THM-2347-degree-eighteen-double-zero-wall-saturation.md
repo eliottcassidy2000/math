@@ -282,7 +282,6 @@ in (23).  A generic deep point has gcd degree five, while two off-deep
 hostile controls have gcd degree zero.  No executable check uses Python
 `assert`.
 
-<<<<<<< HEAD
 ## 6. Independent hostile audit
 
 An independent pass checked the weighted `B=1` normalization and the
@@ -302,9 +301,7 @@ subresultant profile, exact factor orders, three-element grevlex basis,
 terminal `J^2`, and deep/off-deep gcd controls. The frontmatter LF hashes
 were also reproduced.
 
-QED.
-=======
-The independent hostile audit rebuilt the wall, the complete
+A further hostile pass rebuilt the wall, the complete
 subresultant profile, and the three exact factor orders from scratch.
 It then used graded lexicographic order rather than the published
 grevlex path and recovered the same three-element basis, including
@@ -312,4 +309,3 @@ grevlex path and recovered the same three-element basis, including
 weighted normalization, both sparse boundary charts, dependency
 noncircularity, both execution modes, both hashes, and the documentation
 gate. QED.
->>>>>>> 4b1e14602 (jacobian: promote audited double-zero wall saturation)
