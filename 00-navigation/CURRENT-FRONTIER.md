@@ -391,7 +391,7 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-2351 proves the canonical self-target ANOVA is exactly an affine reparameterization of the directional catalysis--bypass ledger; its optimum and skew pair sector add no information. Positive catalysis and the stable diagonal remain open.
 - **Unsplittable cost flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture: a planar acyclic instance has fractional cost `58` but capacity-good integral cost at least `60`. Its carrier is the `K_3` stable-set facet; the planar `2d_max` theorem remains intact.
 - **Jacobian/Dixmier:** THM-1300/1315 verify and analyze the three-dimensional Keller collision, but provenance is unsettled (MISTAKE-205) and it does not decide
-  `DC(2)`; THM-2230 computes the planar response fiber, THM-2240 proves the grade-six Weyl response is not a continuation state, THM-2241 gives the exact monic test `D_P^(d+1)(x)=0` plus its resultant curve, and THM-2262/2297 reduce nonsplit degree eighteen to a four-invariant singular trigonal cone and close every one-sparse stratum. THM-2311/2314 reduce exactly two-sparse survivors to `25` ratios after closing the full `B`--`D` bank.
+  `DC(2)`; THM-2230 computes the planar response fiber, THM-2240 proves the grade-six Weyl response is not a continuation state, and THM-2241 gives the exact monic test `D_P^(d+1)(x)=0` plus its resultant curve. THM-2262/2297 reduce nonsplit degree eighteen to a four-invariant singular trigonal cone; THM-2314/2316 close both two-sparse banks, while THM-2345/2347 close the common-root and double-zero walls.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibers:** THM-2063/2071 close affine/quadratic pencil members;
   THM-2084/2110/2118 close cubics; THM-2102/2113 close power-free top faces;
@@ -411,8 +411,12 @@ Classify profiles under support operations; study analytic continuation and auto
   cover and leaves an explicit degree-twelve branch locus; THM-2297 removes
   target translation, yields a weighted `(2,3,4,5)` cone, and closes every
   one-sparse stratum plus the `B=D=0` plane by genus. THM-2311 reduces the
-  exactly two-sparse locus to `31` ratios; THM-2314 closes the full six-point
-  `B`--`D` bank by genera `4`, `1`, and uniformly `2`, leaving `25`. Split/even descent and other short edges remain; THM-2206
+  exactly two-sparse locus to `31` ratios; THM-2314 and THM-2316 close the
+  `B`--`D` and `C`--`D` banks. THM-2332 then leaves Mordell square classes
+  of degrees `0,2,4`; THM-2345 closes `126D=25B^2`, and THM-2347 proves
+  the whole double-zero wall `20BC+21W=0` saturates to it. The off-wall
+  `H_2/H_4` strata and other parameter walls remain. Split/even descent
+  and other short edges remain; THM-2206
   blocks field-valued `C_2` Hasse repair. Integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”

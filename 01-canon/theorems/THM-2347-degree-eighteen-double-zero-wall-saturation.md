@@ -2,7 +2,7 @@
 id: THM-2347
 title: "Degree-eighteen double-zero wall saturation"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. On the
   degree-eighteen wall 20BC+21W=0, every point whose structured Mordell
   polynomial has square-class degree at most four either lies in an
   already-closed two-sparse plane or satisfies 126D=25B^2. In the
@@ -31,7 +31,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2347 -- the double-zero wall saturates to the common-root wall
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2332 reduces every remaining degree-eighteen Keller trajectory to
 
@@ -282,4 +282,23 @@ in (23).  A generic deep point has gcd degree five, while two off-deep
 hostile controls have gcd degree zero.  No executable check uses Python
 `assert`.
 
-Independent audit is pending. QED.
+## 6. Independent hostile audit
+
+An independent pass checked the weighted `B=1` normalization and the
+`B=0`/`C=0` handoff to the proved two-sparse closures. It rederived that
+`F=HS^2` with `deg H<=4` forces `deg gcd(F,F')>=4`, including higher
+root collisions, and verified that the constant nonzero leading
+coefficients of `F,F'` remove every subresultant specialization
+degree-drop exception. It then checked that the three selected
+subresultant coefficients are used only after the valid `C*J!=0` factor
+stripping, so `J^2` in the stripped ideal forces the contradiction exactly
+in the stated chart.
+
+The full exact referee was replayed independently under ordinary and
+optimized Python. Both several-minute computations are byte-identical to
+the stored transcript after LF normalization and reproduce the complete
+subresultant profile, exact factor orders, three-element grevlex basis,
+terminal `J^2`, and deep/off-deep gcd controls. The frontmatter LF hashes
+were also reproduced.
+
+QED.
