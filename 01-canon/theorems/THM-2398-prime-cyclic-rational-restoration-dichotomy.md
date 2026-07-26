@@ -2,7 +2,7 @@
 id: THM-2398
 title: "Prime-cyclic rational restoration dichotomy"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. A
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. A
   nonzero nonnegative rational translation-covariant operator on C_p,
   p prime, is either a scalar multiple of uniform rank-one averaging or is invertible
   on every character. A common nonflat kernel applied to two currents
@@ -26,14 +26,14 @@ related:
   - THM-2397-clean-root-same-parent-charged-role-partition
 script: 04-computation/lrc14_prime_cyclic_rational_restoration_thm2398.py
 output: 05-knowledge/results/lrc14_prime_cyclic_rational_restoration_thm2398.out
-script_sha256: e2057ec13d6468685de21b0af9dec540a1dea0412523359b7e7fe73a592eab90
+script_sha256: 4f3b11f95e616685f22c90415abd2b987f1dced9f4daacf4892042b1cf66995c
 output_sha256: 919ef7aeb97650fd08cf360ddee8c1c4c559d453144980d13d42a03ef433f3c4
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2398 -- prime-cyclic rational restoration dichotomy
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The terminal-transport obstruction after a charged root carrier can be
 phrased as a question about a translation-covariant restoration operator.
@@ -599,9 +599,9 @@ finite-pattern coefficient in (37) remains a clean-parent joint current,
 not a canonical terminal word or scalar-frequency atom. No scalar profile
 is excluded. The ledger remains `165`, and LRC(14) remains open.
 
-## 8. Exact companion
+## 8. Exact companion and analytic controls
 
-The dependency-free exact companion:
+The dependency-free companion:
 
 - exhausts coefficient alphabets `{0,1,2}` at primes `3,5,7` and all
   `8,192` Boolean kernels at prime `13`, finding charged zeros exactly
@@ -609,11 +609,14 @@ The dependency-free exact companion:
 - exhausts all `1,932` nonempty disjoint two-packet assignments on
   `C_7`;
 - checks all `121` singleton/adjacent versus disjoint-two-root patterns
-  used in (33)--(37);
+  used in (33)--(37), with exact cyclotomic nonvanishing and a secondary
+  floating replay of the analytically proved strict magnitude floor;
 - evaluates five exact `12 x 12` cyclotomic multiplication determinants
-  and checks the gcd, variance, Parseval, and paired norm floors in
-  (15)--(17c);
-- verifies the separate-spectrum and flat-restoration terminal hostiles;
+  and checks exact gcd divisibility and exact cyclotomic Parseval; the
+  analytically proved paired magnitude floors receive a secondary floating
+  replay;
+- verifies all twelve modes in the separate-spectrum hostile and the exact
+  flat-restoration terminal hostile;
 - verifies the composite anchored hostile and numerically replays the
   explicitly analytic strict-positive hostiles, including (45a); and
 - checks every reduced fraction in (37)--(39).
@@ -633,3 +636,24 @@ Both transcripts must byte-match, after LF normalization,
 
 All finite truth-bearing assertions use explicit raising checks, so optimized
 mode executes the same audit.
+
+## 9. Independent audit
+
+Two independent hostile passes accepted the theorem and its LRC scope.
+They separately checked:
+
+- the prime-cyclotomic rigidity, norm/gcd/variance bounds, common-kernel
+  phase identity, and cross-correlation normalization;
+- the fixed-mask all-colour corollary and every fraction in (37)--(39);
+- all sharp hostiles and the explicit non-closure boundary (47);
+- the exact prime sweeps, all `1,932` disjoint `C_7` assignments, all
+  `121` fixed-pattern classes, and five independent cyclotomic
+  resultants; and
+- normal, optimized, and stored transcript equality.
+
+The immutable LF hashes at promotion are
+
+```text
+script  4f3b11f95e616685f22c90415abd2b987f1dced9f4daacf4892042b1cf66995c
+output  919ef7aeb97650fd08cf360ddee8c1c4c559d453144980d13d42a03ef433f3c4
+```

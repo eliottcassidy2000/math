@@ -212,11 +212,19 @@ def norm_controls() -> tuple[int, int]:
         )
         zeta = cmath.exp(2j * math.pi / 13)
         squared_sum = 0.0
+        exact_squared_sum = [0] * 12
         for k in range(1, 13):
             value = sum(
                 coefficients[s] * zeta ** (k * s) for s in range(13)
             )
             squared_sum += abs(value) ** 2
+            value_vector = cyclotomic_vector(coefficients, k)
+            conjugate_vector = cyclotomic_vector(coefficients, -k)
+            squared_vector = multiply_cyclotomic_vectors(
+                value_vector, conjugate_vector, 13
+            )
+            for coordinate, entry in enumerate(squared_vector):
+                exact_squared_sum[coordinate] += entry
             require(
                 abs(value) + 1e-12 >= coefficient_gcd**6 / total**5,
                 "paired cyclotomic norm floor failed",
@@ -229,6 +237,10 @@ def norm_controls() -> tuple[int, int]:
         require(
             abs(squared_sum - variance) < 1e-8,
             "nonzero-character Parseval variance failed",
+        )
+        require(
+            tuple(exact_squared_sum) == (variance,) + (0,) * 11,
+            "exact cyclotomic Parseval variance failed",
         )
     require(minimum_abs_norm is not None, "no norm controls")
     return len(samples), minimum_abs_norm
@@ -310,14 +322,15 @@ def terminal_alignment_hostiles() -> tuple[int, int]:
 
     left_aggregate = tuple(Fraction(int(r == 0), 2) for r in range(p))
     right_aggregate = tuple(Fraction(int(r == 1), 2) for r in range(p))
-    require(
-        not vanishes(tuple(int(2 * x) for x in left_aggregate), 1),
-        "left aggregate spectrum vanished",
-    )
-    require(
-        not vanishes(tuple(int(2 * x) for x in right_aggregate), 1),
-        "right aggregate spectrum vanished",
-    )
+    for k in range(1, p):
+        require(
+            not vanishes(tuple(int(2 * x) for x in left_aggregate), k),
+            "left aggregate spectrum vanished",
+        )
+        require(
+            not vanishes(tuple(int(2 * x) for x in right_aggregate), k),
+            "right aggregate spectrum vanished",
+        )
 
     # Both packets coexist on every fibre, but without a pinned anchor the
     # rotating singleton bank gives the exactly uniform correlation.
