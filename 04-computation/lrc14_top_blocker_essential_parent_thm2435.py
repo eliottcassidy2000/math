@@ -163,6 +163,18 @@ marker_histogram: Counter[int] = Counter()
 size_histogram: Counter[int] = Counter()
 equivariance_checks = 0
 formal_cyclotomic_checks = 0
+source_idempotent = 13 * pow(13, -1, 7)  # 78 mod 91
+target_idempotent = 7 * pow(7, -1, 13)  # 14 mod 91
+require(source_idempotent == 78, "wrong C7 CRT idempotent")
+require(target_idempotent == 14, "wrong C13 CRT idempotent")
+require(
+    source_idempotent % 7 == 1 and source_idempotent % 13 == 0,
+    "bad source CRT residues",
+)
+require(
+    target_idempotent % 7 == 0 and target_idempotent % 13 == 1,
+    "bad target CRT residues",
+)
 
 for mask in range(1, (1 << 13) - 1):
     mask_count += 1
@@ -188,7 +200,10 @@ for mask in range(1, (1 << 13) - 1):
     # nonzero target character, reduction modulo Phi_13 is zero iff
     # all thirteen 0/1 coefficients are equal. Nonempty proper masks
     # therefore survive every target character.
-    for target_character in range(13):
+    for character in range(91):
+        source_character = (6 * character) % 7
+        target_character = (2 * character) % 13
+        require(0 <= source_character < 7, "bad restricted source character")
         if target_character == 0:
             require(mask.bit_count() > 0, "zero trivial-character sum")
         else:
@@ -198,7 +213,7 @@ for mask in range(1, (1 << 13) - 1):
                     permuted[(target_character * r) % 13] = 1
             reduced = tuple(permuted[r] - permuted[12] for r in range(12))
             require(any(value != 0 for value in reduced), "cyclotomic sum vanished")
-        formal_cyclotomic_checks += 7
+        formal_cyclotomic_checks += 1
 
 require(mask_count == 8190, "wrong nonconstant C13 mask count")
 require(len(translation_orbits) == 630, "wrong C13 mask orbit count")
@@ -223,11 +238,14 @@ require(
 # set of mass p gives p/91^2 = (p/91)/91.
 for source_root in range(7):
     for target_root in range(13):
+        crt_root = (
+            source_idempotent * source_root
+            + target_idempotent * target_root
+        ) % 91
+        require(crt_root % 7 == source_root, "bad CRT source root")
+        require(crt_root % 13 == target_root, "bad CRT target root")
         for character in range(91):
-            exponent = (
-                -character
-                * ((13 * source_root * pow(13, -1, 7) + 7 * target_root * pow(7, -1, 13)) % 91)
-            ) % 91
+            exponent = (-character * crt_root) % 91
             require(0 <= exponent < 91, "bad formal C91 exponent")
             require(Fraction(1, 91) ** 2 == Fraction(1, 8281), "bad C91 norm")
 
@@ -236,14 +254,25 @@ for source_root in range(7):
 ancestry_controls = 0
 for depth in range(1, 7):
     dilation = 7**depth
-    modulus = 91 * dilation
-    for character in range(modulus):
-        expected_survival = character % dilation == 0
-        # Sum over the d ancestors is a geometric sum. Its exponent
-        # step is character/d modulo d after the standard CRT index.
-        arithmetic_survival = character % dilation == 0
+    # The geometric sum depends only on the character modulo d; each
+    # residue has exactly 91 representatives modulo 91d.
+    for step in range(dilation):
+        expected_survival = step == 0
+        # The d ancestor phases form a geometric sum with step
+        # character modulo d. Its order is d/gcd(character,d); the
+        # sum is d precisely at order one and zero otherwise.
+        common = gcd(step, dilation)
+        order = dilation // common
+        require(common * order == dilation, "bad geometric order")
+        arithmetic_survival = order == 1
         require(expected_survival == arithmetic_survival, "bad ancestry annihilator")
-        ancestry_controls += 1
+        amplitude_numerator = dilation if arithmetic_survival else 0
+        require(
+            Fraction(amplitude_numerator, 91 * dilation)
+            == (Fraction(1, 91) if expected_survival else 0),
+            "bad normalized ancestry amplitude",
+        )
+        ancestry_controls += 91
     require(
         all(gcd((dilation * residue) % 91, 91) == 7 for residue in range(1, 91) if gcd(residue, 91) == 1),
         "positive-depth unit quotient residue stayed a physical unit",

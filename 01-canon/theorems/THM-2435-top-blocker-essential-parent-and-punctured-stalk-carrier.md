@@ -2,8 +2,8 @@
 id: THM-2435
 title: "Top-blocker essential parent and equivariant quotient-root section"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; UNDER INDEPENDENT
-  HOSTILE AUDIT. In each of the three surviving deep-c_3 shapes, the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In each
+  of the three surviving deep-c_3 shapes, the
   common-91 quotient stalk has parent mass at least (4+k)/7, where k
   is the number of low quotient blockers. THM-2431 caps the six-unit
   exact-tiling locus at 3/7, so actual exact-depth top blockers fill
@@ -34,7 +34,7 @@ related:
   - THM-2255-valuation-separated-pair-cap-and-exclusive-owner-mass
   - THM-2305-canonical-blocker-word-handoff-hypergraph
   - THM-2398-prime-cyclic-rational-restoration-dichotomy
-  - THM-2409-unfiltered-septimal-source-orbit-and-real-word-obstruction
+  - THM-2409-unfiltered-septimal-source-completion-and-word-phase-boundary
   - THM-2419-valuation-normalized-homogenization-of-affine-sideband-shells
   - THM-2436-punctured-ninety-one-stalk-repeated-step-spectrum
   - MISTAKE-273
@@ -45,7 +45,7 @@ output:
   - 05-knowledge/results/lrc14_top_blocker_essential_parent_thm2435.out
   - 05-knowledge/results/lrc14_top_blocker_essential_carrier_thm2435.out
 script_sha256:
-  - 6ae536f85fb7c53b7cd8da86e993bd582a94cb28080258737b7299c939fced69
+  - cdc85d8492cac4ade65fbd8e300a50fa841b967eb2e608fd2ad138e933abd8fb
   - 2b7c03f102fa53bc42ba44dc73194731bdd40c3a1eec42da9cfb4b56529c83cd
 output_sha256:
   - 5be089f3a1068518263bf4254ac1db9a1d8e2f9a0655b56a115a130e99907e62
@@ -55,8 +55,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2435 -- essential top blockers carry a flat quotient-root section
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; UNDER INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The three shapes left by THM-2431 and THM-2432 have one common
 mechanism:
@@ -316,6 +315,17 @@ sigma(S+t)=sigma(S)+t.                                          (22)
 Pair `sigma(S_j(Y))` with the unique blocker source sheet in the CRT
 coordinates (17). This selects one quotient root on every parent in
 `P_j`. Call the resulting quotient packet `G^q`.
+
+More explicitly, if the source sheet is `s_j(Y)` and the marked target
+root is `r_j(Y)=sigma(S_j(Y))`, use the CRT address
+
+```text
+sigma_91(Y)=78s_j(Y)+14r_j(Y) mod 91.                            (22a)
+```
+
+Here `78` is `1 mod 7,0 mod 13`, while `14` is
+`0 mod 7,1 mod 13`. Thus a character `m mod 91` restricts to source
+character `6m mod 7` and target character `2m mod 13`.
 
 The construction is rational finite-step: away from finitely many
 rational endpoints, all 91 root truth values are locally constant.
@@ -603,7 +613,16 @@ byte-for-byte, respectively.
 
 ## 10. Independent audit
 
-Independent audits have accepted the sharpened parent image, the
-fixed-label measure invoices, the lexicographic selector, and the
-quotient/physical ancestry distinction. Final replay and immutable
-hash audit are pending. QED conditional on that final audit.
+Independent hostile audits reconstructed and accepted:
+
+- the exact parent-image identity and all three measure invoices;
+- the direct-packet `Phi_13` proof in all `745290` character cases;
+- the CRT address `78s+14r`, lexicographic selector, and flat-energy
+  normalization;
+- the geometric-order proof of the positive-depth ancestry
+  annihilator; and
+- every owner, endpoint, probe-algebra, and physical/quotient scope
+  boundary above.
+
+Normal and optimized runs byte-match the stored transcript, and the
+LF hashes match the frontmatter. QED.
