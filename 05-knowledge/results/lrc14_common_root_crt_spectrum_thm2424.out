@@ -3,7 +3,7 @@ crt_character_cases=444900
 crt_profile_factorizations=15888
 polyphase_packets=178
 lrc_owner_status_unit_cases=13104
-adjacent_min_scaled=0.058116365147856786
+adjacent_min_scaled=4*sin(pi/26)^2>4/169
 owner_cell_rho>=1/9042852
 each_unit_class_energy>1/3163842975657
 singleton_total_unit_energy>=6/6240321451

@@ -13,9 +13,12 @@ status: >
   nonnegative rational two-dilation packet whose global spectrum meets
   every residue class coprime to 91, with explicit uniform and total
   energy floors; any fixed positive rational terminal word may be
-  retained at all sufficiently large clocks. This is a derived physical
-  packet, not the canonical fully masked owner endpoint, a relation
-  current, a row exclusion, or a proof of LRC(14).
+  retained at all sufficiently large clocks. THM-2426 now proves that
+  the primitive final-lane hypotheses supporting this specialization
+  are inconsistent, so it is a counterfactual reusable carrier pending
+  a transplant to a live residual. This is a derived physical packet,
+  not the canonical fully masked owner endpoint, a relation current, a
+  row exclusion, or a proof of LRC(14).
 source: codex-2026-07-26-common-root-crt-spectrum
 depends_on:
   - THM-2392-clean-toothpick-or-bounded-cross-ancestor-cage
@@ -28,10 +31,12 @@ related:
   - THM-2408-endpoint-prony-resultant-clock-separation-and-shared-node-boundary
   - THM-2418-alternating-base-thirteen-septimal-carry-matrix-and-rank-one-boundary
   - THM-2419-valuation-normalized-homogenization-of-affine-sideband-shells
+  - THM-2426-compositional-thirteen-root-final-septimal-lane-exclusion
+  - THM-2427-guard-top-thirteen-root-capacity-and-residual-types
 script: 04-computation/lrc14_common_root_crt_spectrum_thm2424.py
 output: 05-knowledge/results/lrc14_common_root_crt_spectrum_thm2424.out
-script_sha256: 2659cfe324ea2a69e802b343c303c441ac86821854e3a795818f2af7ace630b5
-output_sha256: ce61513d3b6f4af6c98bfd11cb9673d345cbfc19b25e571de4b2cab7cdede8be
+script_sha256: a5d4aa11d0f4c8d12f500d78e0b23603ff4adc8867fcd1ffeed09215d83e3145
+output_sha256: 67533d15f80cd512941856bbd5f6e8d4ca3c48bf213570ca140c09e9510a39e9
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -220,6 +225,14 @@ frequency, not a relation-current address.
 
 ## 4. The LRC clean-root packet
 
+**POST-THM-2426 SCOPE.** The construction in Sections 4--6 is a valid
+conditional consequence of the THM-2392/2396/2397 primitive final-lane
+hypotheses. THM-2426 now proves that complete lane empty. The formulas
+remain a reusable common-root carrier and hostile control, but do not
+describe a live LRC continuation unless a separate transplant theorem
+reconstructs the same parent cell in one of THM-2427's guard-top shapes
+or on the `c_3<=M` side.
+
 Use THM-2392's notation on the final LRC septimal lane. Let
 
 ```text
@@ -364,9 +377,11 @@ sum_(gcd(n,91)=1)|Fhat_*(n)|^2
  >=6/6240321451.                                      (30)
 ```
 
-Thus every final-lane row carries one owner-resolved, top-labelled,
-nonnegative rational physical packet with a nonzero Fourier lift in
-every residue class coprime to `91`.
+Thus every formal packet satisfying the inherited final-lane hypotheses
+would carry one owner-resolved, top-labelled, nonnegative rational
+physical packet with a nonzero Fourier lift in every residue class
+coprime to `91`. Post-THM-2426, this is a counterfactual carrier rather
+than a live scalar row.
 
 ## 6. A delayed terminal word can be retained
 
@@ -451,6 +466,11 @@ Canon has not identified this two-dilation packet with:
 - the same-shell residue-zero reference required by THM-2419.
 
 A physical unit frequency is not automatically a relation current.
+Moreover, THM-2426 empties the primitive final lane on which the
+THM-2396/2397 specialization was built. The live transplant question is
+whether one of THM-2427's seven guard-top regimes, or the `c_3<=M`
+noncirculant-graft side, supplies an analogous fixed coprime parent
+selector.
 No row is excluded, the ledger remains `165`, and LRC(14) remains open.
 
 ## 8. Exact companion
@@ -460,10 +480,12 @@ The dependency-free companion:
 - exhausts the CRT character map for all coprime `2<=p,q<=13`;
 - checks the common-root factorization on thousands of integer profile
   pairs;
-- verifies the exact finite polyphase identity on rational Fourier
-  packets;
+- verifies root orthogonality by exact integer reduction modulo the
+  relevant cyclotomic polynomial and then checks the finite polyphase
+  identity on rational Fourier packets;
 - exhausts all `7*13*2*72=13,104` owner-address/status/unit-character
-  cases in the LRC specialization;
+  cases in the LRC specialization by exact group-ring and cyclotomic
+  reductions;
 - checks the singleton/adjacent class energies, total unit energies,
   universal rational floors, and the strict chord bound;
 - verifies centered endpoint-Prony controls; and

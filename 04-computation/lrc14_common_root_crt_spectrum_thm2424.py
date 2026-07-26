@@ -8,8 +8,6 @@ unit-character bank, the rational constants, and sharp boundary models.
 
 from __future__ import annotations
 
-import cmath
-import math
 from fractions import Fraction
 from math import gcd
 
@@ -23,6 +21,65 @@ def add_term(poly: dict[int, Fraction], exponent: int, value: Fraction) -> None:
     poly[exponent] = poly.get(exponent, Fraction(0)) + value
     if poly[exponent] == 0:
         del poly[exponent]
+
+
+def trim(poly: list[int]) -> list[int]:
+    while poly and poly[-1] == 0:
+        poly.pop()
+    return poly
+
+
+def divide_monic_exact(dividend: list[int], divisor: list[int]) -> list[int]:
+    dividend = trim(dividend[:])
+    divisor = trim(divisor[:])
+    require(divisor and divisor[-1] == 1, "nonmonic polynomial divisor")
+    if len(dividend) < len(divisor):
+        require(not dividend, "inexact polynomial division")
+        return []
+    quotient = [0] * (len(dividend) - len(divisor) + 1)
+    while dividend and len(dividend) >= len(divisor):
+        shift = len(dividend) - len(divisor)
+        coefficient = dividend[-1]
+        quotient[shift] = coefficient
+        for j, value in enumerate(divisor):
+            dividend[shift + j] -= coefficient * value
+        trim(dividend)
+    require(not dividend, "inexact polynomial division")
+    return trim(quotient)
+
+
+_cyclotomic_cache: dict[int, list[int]] = {1: [-1, 1]}
+
+
+def cyclotomic(n: int) -> list[int]:
+    if n in _cyclotomic_cache:
+        return _cyclotomic_cache[n][:]
+    polynomial = [-1] + [0] * (n - 1) + [1]
+    proper_divisors = [d for d in range(1, n) if n % d == 0]
+    for divisor in proper_divisors:
+        polynomial = divide_monic_exact(polynomial, cyclotomic(divisor))
+    _cyclotomic_cache[n] = polynomial
+    return polynomial[:]
+
+
+def remainder_monic(poly: list[int], divisor: list[int]) -> list[int]:
+    poly = trim(poly[:])
+    divisor = trim(divisor[:])
+    require(divisor and divisor[-1] == 1, "nonmonic remainder divisor")
+    while poly and len(poly) >= len(divisor):
+        shift = len(poly) - len(divisor)
+        coefficient = poly[-1]
+        for j, value in enumerate(divisor):
+            poly[shift + j] -= coefficient * value
+        trim(poly)
+    return poly
+
+
+def root_sum_remainder(modulus: int, exponent: int) -> list[int]:
+    coefficients = [0] * modulus
+    for t in range(modulus):
+        coefficients[(exponent * t) % modulus] += 1
+    return remainder_monic(coefficients, cyclotomic(modulus))
 
 
 def crt_character_checks() -> tuple[int, int]:
@@ -85,17 +142,16 @@ def polyphase_checks() -> int:
 
             direct_selected: dict[int, Fraction] = {}
             for n, a in fourier.items():
-                root_sum = sum(
-                    1 if (n - m) * t % modulus == 0 else 0
-                    for t in range(modulus)
+                root_remainder = root_sum_remainder(modulus, n - m)
+                expected_remainder = (
+                    [modulus] if (n - m) % modulus == 0 else []
                 )
-                # The preceding count is not the complex root sum.  Exact
-                # orthogonality says it is modulus precisely on the selected
-                # congruence and zero otherwise.
-                selector = Fraction(1 if (n - m) % modulus == 0 else 0)
                 require(
-                    (root_sum == modulus) == ((n - m) % modulus == 0),
-                    "integer selector control failure",
+                    root_remainder == expected_remainder,
+                    "exact cyclotomic root-orthogonality failure",
+                )
+                selector = Fraction(
+                    root_remainder[0] if root_remainder else 0, modulus
                 )
                 if selector:
                     direct_selected[n] = a * selector
@@ -108,7 +164,7 @@ def polyphase_checks() -> int:
     return cases
 
 
-def lrc_unit_bank_checks() -> tuple[int, float]:
+def lrc_unit_bank_checks() -> int:
     p = 7
     q = 13
     modulus = 91
@@ -119,7 +175,7 @@ def lrc_unit_bank_checks() -> tuple[int, float]:
     unit_residues = [m for m in range(modulus) if gcd(m, modulus) == 1]
     require(len(unit_residues) == 72, "phi(91) failure")
     cases = 0
-    adjacent_min_scaled = float("inf")
+    phi_13 = cyclotomic(13)
 
     for d in range(7):
         for r0 in range(13):
@@ -130,42 +186,45 @@ def lrc_unit_bank_checks() -> tuple[int, float]:
                     k = (m * beta) % q
                     require(ell != 0 and k != 0, "unit character lost a prime colour")
 
-                    left = 0j
+                    left: dict[int, Fraction] = {}
+                    right: dict[int, Fraction] = {}
                     for t in range(modulus):
                         j_value = 1 if t % 7 == d else 0
                         a_value = 1 if t % 13 in support else 0
-                        left += (
-                            j_value
-                            * a_value
-                            * cmath.exp(-2j * math.pi * m * t / modulus)
-                        )
-                    left /= modulus
+                        if j_value and a_value:
+                            add_term(
+                                left,
+                                (-m * t) % modulus,
+                                Fraction(1, modulus),
+                            )
+                    for s in range(7):
+                        if s != d:
+                            continue
+                        for r in support:
+                            exponent = (-ell * s * 13 - k * r * 7) % modulus
+                            add_term(
+                                right,
+                                exponent,
+                                Fraction(1, modulus),
+                            )
+                    require(left == right, "exact LRC group-ring DFT failure")
 
-                    jhat = cmath.exp(-2j * math.pi * ell * d / 7) / 7
-                    ahat = sum(
-                        cmath.exp(-2j * math.pi * k * r / 13)
-                        for r in support
-                    ) / 13
-                    require(abs(left - jhat * ahat) < 2e-13, "LRC CRT DFT failure")
-
-                    scaled = abs(left) ** 2 * modulus * modulus
                     if adjacent:
-                        adjacent_min_scaled = min(adjacent_min_scaled, scaled)
+                        gap = (k * ((r0 + 1) - r0)) % 13
+                        require(gap != 0, "adjacent unit character collapsed")
+                        adjacent_polynomial = [0] * (gap + 1)
+                        adjacent_polynomial[0] = 1
+                        adjacent_polynomial[gap] = 1
                         require(
-                            scaled > Fraction(4, 169),
-                            "strict adjacent chord floor failure",
+                            remainder_monic(adjacent_polynomial, phi_13),
+                            "adjacent cyclotomic coefficient vanished",
                         )
                     else:
-                        require(abs(scaled - 1.0) < 2e-12, "singleton energy failure")
+                        require(len(support) == 1, "singleton support failure")
                     cases += 1
 
-    expected_min = 4 * math.sin(math.pi / 26) ** 2
-    require(
-        abs(adjacent_min_scaled - expected_min) < 3e-12,
-        "adjacent minimum formula failure",
-    )
     require(cases == 7 * 13 * 2 * 72, "LRC bank coverage failure")
-    return cases, adjacent_min_scaled
+    return cases
 
 
 def constant_checks() -> dict[str, Fraction]:
@@ -238,7 +297,7 @@ def prony_sharp_controls() -> int:
 def main() -> None:
     map_cases, profile_cases = crt_character_checks()
     polyphase_cases = polyphase_checks()
-    lrc_cases, adjacent_min = lrc_unit_bank_checks()
+    lrc_cases = lrc_unit_bank_checks()
     constants = constant_checks()
     noncoprime_hostile_check()
     prony_controls = prony_sharp_controls()
@@ -248,7 +307,7 @@ def main() -> None:
     print(f"crt_profile_factorizations={profile_cases}")
     print(f"polyphase_packets={polyphase_cases}")
     print(f"lrc_owner_status_unit_cases={lrc_cases}")
-    print(f"adjacent_min_scaled={adjacent_min:.18f}")
+    print("adjacent_min_scaled=4*sin(pi/26)^2>4/169")
     print(f"owner_cell_rho>={constants['rho']}")
     print(f"each_unit_class_energy>{constants['per_class']}")
     print(f"singleton_total_unit_energy>={constants['singleton_total']}")
