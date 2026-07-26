@@ -147,6 +147,28 @@ This sidecar preserves detailed records routed compactly from
 - **Does not prove:** any knot, tournament, or LRC statement. Exact algebraic
   span does not retain LRC phase owner, scale, or analytic uniformity.
 
+## Kominers--Mrazovic--Pomerance--Sole -- *Lines in the Prime Number Graph*
+
+- **Primary / freshness:** Scott Duke Kominers, Rudi Mrazovic, Carl Pomerance,
+  and Patrick Sole,
+  [author PDF, dated 2026-06-01](https://math.dartmouth.edu/~carlp/lineprime060126.pdf).
+  **PREPRINT / primary author copy; PDF checked 2026-07-26.**
+- **Imported role:** for prime points `(n,p_n)`, defines `L(n)` as the minimum
+  number of affine lines covering the first `n` points and calls `p_n`
+  awkward when `L(n)>L(n-1)`. Theorem 4 proves that `L(n)` counts awkward
+  primes through `p_n` and that their reciprocal sum converges. Corollary 1
+  gives `L(n)=o(n)`; Theorems 2--3 give stronger quantitative coverage bounds
+  in terms of a prime-number-theorem remainder `R(n)`. The proof's Farey
+  dissection is a genuine affine-cover mechanism, not merely a numerical
+  analogy.
+- **Repo consumer:**
+  [THM-2413, prime-index affine drift and twin-center weld](../../01-canon/theorems/THM-2413-prime-index-affine-drift-and-twin-center-weld.md).
+- **Does not prove:** that twin-prime slope-two edges occur in any optimal
+  cover, that an A014574 center corresponds to a plateau of `L(n)`, the twin
+  prime conjecture, or the conjectured sharper `L(n)=O(n/log n)`. The
+  fixed-slope identity `p_(k+1)-2(k+1)=p_k-2k` iff the adjacent prime gap is
+  two is the elementary repo-derived weld in THM-2413.
+
 ## Krenn--Gu--Soltesz -- inherited vertex coloring of perfect matchings
 
 - **Primary / freshness:** [*Questions on the structure of perfect matchings
