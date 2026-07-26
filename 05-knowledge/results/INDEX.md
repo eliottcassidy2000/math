@@ -1960,3 +1960,15 @@ the six singular values `13^-k`, the flat and one-cylinder terminal
 boundaries, and the real/even BV-two source rank-one hostile with mass at
 least `7/13`. Normal and optimized runs agree and end in `PASS`; no
 canonical source--terminal correlation or LRC(14) closure is asserted.
+### lrc14_affine_sideband_homogenization_thm2419.out
+
+Exact companion for **THM-2419, PROVED CANDIDATE + VERIFIED-EXACT;
+INDEPENDENT AUDIT PENDING**. It exhausts `160` primitive-row/modulus
+controls and `1,568` finite kernel-fibre lifts for the canonical
+`Lambda_X/(|X| Lambda) ~= ker(w mod |X|)` torsor, checks the ordinary
+and valuation-normalized artificial observers, and verifies the minimal
+Bezout-section hostile. It also distinguishes neutral same-residue
+self-differences from a charged same-shell residue-zero reference and
+checks the `91|X` versus `13|X, 7 does not divide X` CRT split. Normal
+and optimized runs agree and end in `PASS`; no physical observer,
+reference packet, terminal transport, or LRC row exclusion is claimed.
