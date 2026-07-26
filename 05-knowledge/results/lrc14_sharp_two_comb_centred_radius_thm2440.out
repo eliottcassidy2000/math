@@ -1,0 +1,18 @@
+THM-2440 exact companion
+center_orders_checked=1000
+proper_order_pairs_checked=998001
+reduced_pairs_checked=7260
+sharp_radius=15/182
+sharp_reduced_pairs=1,13
+second_radius_through_120=29/378
+second_pairs_through_120=1,27
+bounded_triple_checks=856800
+target_radius=8/91
+target_covers=0
+sharp_scaled_triples=9
+sharp_scaled_n=1,2,3,4,5,6,7,8,9
+hostile_seam=5/14
+hostile_seam_owners=left:3,right:11,point:none
+sharp_internal_seam=1/14
+strict_beyond_point=31/364
+ALL CHECKS PASSED
