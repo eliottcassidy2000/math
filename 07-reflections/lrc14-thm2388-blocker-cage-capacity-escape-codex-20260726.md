@@ -17,7 +17,7 @@ off-blocker toothpick set. A blocker-cage capacity estimate nevertheless
 forces the following exact alternative on all `165` profiles:
 
 ```text
-one of ten oriented cross-ancestor ratios,
+one of ten oriented cross-ancestor ratios at binary depth M=1,
 
 or
 
@@ -458,6 +458,9 @@ or
 off-cage toothpick mass at least 1/26754.            (28)
 ```
 
+The next subsection uses THM-2391 to eliminate this bank for `M>=2`,
+so the first alternative ultimately survives only at `M=1`.
+
 The least-used sidecar now becomes completely explicit. Apply THM-2377's
 balanced Bockstein descent to the two same-layer originals:
 
@@ -483,6 +486,119 @@ Thus the abstract carry has collapsed to `d in {1,2,4,5,6,7}`: two
 types descend exactly to `C_2`, and two climb one septimal digit. This
 does not itself empty a type. It is the cheapest exact interface to
 THM-2390's labelled `W=7/8` heavy words.
+
+### 5.1 The top comb closes the sole `M=2` cage
+
+THM-2391 adds a depth filter to the ten types. For `M>=2`, its two
+low-blocker progressions have a common absolute step. Since
+
+```text
+C_2/C_1=13a/b,
+```
+
+the oriented address must obey
+
+```text
+13a=+/-b mod 7^M.                                   (29)
+```
+
+At modulus `49`, only `(a,b)=(4,3)` survives the ten-row table. At
+modulus `343`, none survives. Thus `M>=3` is already empty, while `M=2`
+has the exact low union
+
+```text
+U
+ =(D_3 union D_52)
+   intersection (D_39 union D_676),
+
+mu(U)=331/4732.                                     (30)
+```
+
+The top-comb exclusion in `X` removes more mass than the union-bound
+slack in (30). Write the common low scale and the top speed, after
+dividing their gcd, as coprime integers `p,n`. The live typing gives
+
+```text
+7 does not divide p,       49 divides n,
+
+13 does not divide pn.                              (31)
+```
+
+Put `F=1_U`. Its exact endpoint grid has `139` linear pieces, with the
+first and last joined through the circle endpoint. Hence `U` has `138`
+circular components and
+
+```text
+Var(F)=276.
+```
+
+For the centered danger interval `d=1_D`, normalized Fourier
+coefficients obey
+
+```text
+|Fhat(k)|<=138/(pi |k|),
+
+|dhat(l)|<=1/(pi |l|).                              (32)
+```
+
+Since `gcd(p,n)=1`, the common Fourier frequencies are
+`(k,l)=(nt,-pt)`. Therefore
+
+```text
+|mu(U_p intersection D_n)-mu(U)/7|
+ <=sum_(t!=0) 138/(pi n|t|) * 1/(pi p|t|)
+ =46/(np).                                         (33)
+```
+
+The low union plus the two high septimally separated cage pieces
+exceeds the hole floor by only
+
+```text
+331/4732+2/49-36/343
+ =1347/231868.                                      (34)
+```
+
+Meanwhile
+
+```text
+mu(U)/7-1347/231868
+ =485/115934.                                       (35)
+```
+
+Thus (33) closes every `np>=10996`; at the first tail integer its exact
+reserve is `12/159351283`.
+
+It remains only the finite core. Write `n=49m`. Then `np<10996` implies
+`pm<=224`. An exact interval audit of all `753` coprime primitive pairs
+subject to (31), deliberately including higher-seven-depth controls,
+has the unique minimum
+
+```text
+mu(U_p intersection D_n)
+ >=1849/231868,
+
+equality only at (p,n)=(1,49).                       (36)
+```
+
+The actual cage is contained in
+
+```text
+(U_p intersection D_n^c)
+ union the two high cross pieces.
+```
+
+Equations (34)--(36) consequently give the uniform clean-hole floor
+
+```text
+delta>=1849/231868-1347/231868
+      =251/115934>0.                                (37)
+```
+
+This closes the sole `M=2` address. Its top-labelled `/52` cell has
+mass at least `251/6028568`, and its owner-resolved `/338` tensor cell
+has mass at least `251/39185692`. The only cage boundary left by this
+entire argument is therefore the ten oriented table at binary depth
+`M=1`.
 
 ## 6. Canonical top-labelled charge and a same-parent bi-root tensor
 
@@ -621,7 +737,7 @@ THM-2388 hole mass and cage inclusion
  + THM-2263 gap-sensitive pair caps
  + THM-1166 septimal folded cancellation
  + exact low-union geometry
- -> ten oriented cross-ancestor types
+ -> ten oriented cross-ancestor types at M=1
     or clean-hole mass at least 1/26754
  -> canonical q_* deletion charge
  -> THM-2391 owner-resolved C_7 x C_13 tensor.        (37)
@@ -660,6 +776,8 @@ the thirteen-adic `132/165` first pass, the live septimal `150/165`
 split, the exact residual lane, its `124` pairwise bank, its `52`
 coupled bank, and the final ten-orientation exact-union bank, the three
 thirteen-adic pair-sum hostiles outside the live septimal typing, the
+THM-2391 depth filter, `138`-component whole-union BV tail, and all
+`753` primitive top-comb pairs closing the sole `M=2` address, the
 fallback `/390`, canonical top-labelled `/52`, and owner-resolved
 bi-root `/338` cell invoices, and all singleton/two-root energy
 constants.
@@ -667,8 +785,8 @@ constants.
 LF-normalized SHA256:
 
 ```text
-script 3b6b6488af79131b291a5ea83671b15e27b938d54709d71ae0125c16ff4f0788
-output 68cbe104e728bb675b377a5be0600f593096189a0b7cd3e07377c56ac915c4f7
+script 5eb069ff9a2f1df2c572251999b58150af7f08aa62915ceb653acf673c3838f3
+output 3b3cb4c418d81c596ac2cfce798200a69d818b6e37842551ebb945abc3dede7e
 ```
 
 Independent audit is pending.

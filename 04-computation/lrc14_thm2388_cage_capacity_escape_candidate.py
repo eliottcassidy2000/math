@@ -7,7 +7,7 @@ inclusions and THM-2263's pair caps.
 """
 
 from fractions import Fraction
-from math import gcd
+from math import gcd, lcm
 
 
 def require(condition, message):
@@ -475,6 +475,36 @@ def union_intersection_length(first, second):
     return total
 
 
+def intersection_intervals(first, second):
+    """Return the merged half-open intervals in the intersection."""
+    first_index = 0
+    second_index = 0
+    result = []
+    while first_index < len(first) and second_index < len(second):
+        left = max(first[first_index][0], second[second_index][0])
+        right = min(first[first_index][1], second[second_index][1])
+        if left < right:
+            result.append((left, right))
+        if first[first_index][1] <= second[second_index][1]:
+            first_index += 1
+        else:
+            second_index += 1
+    return merged_intervals(result)
+
+
+def scaled_low_cage_intervals(scale, modulus):
+    """Intervals of U_(4,3)(scale*x) on one compatible grid."""
+    quotient_union = merged_intervals(
+        danger_intervals(3 * scale, modulus)
+        + danger_intervals(52 * scale, modulus)
+    )
+    original_union = merged_intervals(
+        danger_intervals(39 * scale, modulus)
+        + danger_intervals(676 * scale, modulus)
+    )
+    return intersection_intervals(quotient_union, original_union)
+
+
 def low_cage_union(reduced_c2, reduced_c1):
     """Measure of (D_C1 union D_C2) intersect (D_c1 union D_c2)."""
     modulus = 14 * 169 * reduced_c2 * reduced_c1
@@ -659,6 +689,175 @@ require(
     "Bockstein descendant bank changed",
 )
 
+# At septimal depth M>=2, THM-2391 makes the two low-blocker steps
+# have one common absolute value. Since C_2/C_1=13a/b, the ten-bank
+# address must satisfy 13a=+/-b modulo 7^M. Only (4,3) survives
+# modulo 49, and no address survives modulo 343.
+def thm2391_address_survivors(modulus):
+    return tuple(
+        (reduced_c2, reduced_c1)
+        for reduced_c2, reduced_c1 in oriented_low_cage_bank
+        if (
+            (13 * reduced_c2 - reduced_c1) % modulus == 0
+            or (13 * reduced_c2 + reduced_c1) % modulus == 0
+        )
+    )
+
+
+M2_ADDRESS_BANK = thm2391_address_survivors(49)
+M3_ADDRESS_BANK = thm2391_address_survivors(343)
+require(M2_ADDRESS_BANK == ((4, 3),), "M=2 address bank changed")
+require(M3_ADDRESS_BANK == (), "M>=3 address bank changed")
+
+# THM-2391 reduces the M=2 no-clean bank to the sole orientation
+# (C_2:c_1)=(4:3). Write its common low scale and top speed, after
+# dividing their gcd, as coprime p,n. Then p is a 7*13-unit, while n
+# is divisible by 49 and is a 13-unit. The compatible low union is
+#
+#   U_p=(D_(3p) union D_(52p))
+#       intersection (D_(39p) union D_(676p)).
+#
+# Excluding the top comb removes U_p intersection D_n. The unexcluded
+# low union plus the two high cross pieces exceeds the hole floor by
+# only 1347/231868, so any larger top intersection forces a clean hole.
+M2_LOW_UNION = expected_oriented_low_cage_bank[(4, 3)]
+M2_CAGE_EXCESS = (
+    M2_LOW_UNION + 2 * SEPTIMALLY_SEPARATED - HOLE_MASS
+)
+require(M2_LOW_UNION == Fraction(331, 4732), "M=2 low union changed")
+require(
+    M2_CAGE_EXCESS == Fraction(1347, 231868),
+    "M=2 cage excess changed",
+)
+
+# On the base endpoint grid, the linear interval list has 139 pieces;
+# its first and last pieces join through the circle endpoint. Thus the
+# whole union has 138 circular components and total variation 276.
+M2_BASE_MODULUS = 14 * 2028
+m2_base_intervals = scaled_low_cage_intervals(1, M2_BASE_MODULUS)
+require(len(m2_base_intervals) == 139, "M=2 linear interval count changed")
+require(
+    m2_base_intervals[0][0] == 0
+    and m2_base_intervals[-1][1] == M2_BASE_MODULUS,
+    "M=2 circular boundary component changed",
+)
+M2_CIRCULAR_COMPONENTS = len(m2_base_intervals) - 1
+M2_VARIATION = 2 * M2_CIRCULAR_COMPONENTS
+require(M2_CIRCULAR_COMPONENTS == 138, "M=2 component count changed")
+require(M2_VARIATION == 276, "M=2 variation changed")
+require(
+    Fraction(
+        sum(right - left for left, right in m2_base_intervals),
+        M2_BASE_MODULUS,
+    )
+    == M2_LOW_UNION,
+    "M=2 base interval mass changed",
+)
+
+# Fourier gives
+#
+# |mu(U_p intersect D_n)-mu(U)/7|
+#  <= sum_(t!=0) [138/(pi*n*|t|)] [1/(pi*p*|t|)]
+#  =46/(np).
+#
+# The equilibrium share beats the cage excess by 485/115934.
+M2_EQUILIBRIUM_RESERVE = M2_LOW_UNION / 7 - M2_CAGE_EXCESS
+require(
+    M2_EQUILIBRIUM_RESERVE == Fraction(485, 115934),
+    "M=2 equilibrium reserve changed",
+)
+M2_TAIL_START = 10996
+require(
+    M2_EQUILIBRIUM_RESERVE
+    - Fraction(46, M2_TAIL_START)
+    == Fraction(12, 159351283),
+    "M=2 BV tail reserve changed",
+)
+require(
+    M2_EQUILIBRIUM_RESERVE
+    - Fraction(46, M2_TAIL_START - 1)
+    < 0,
+    "M=2 BV cutoff is no longer first",
+)
+
+
+def scaled_m2_base_intervals(reduced_low_scale, modulus):
+    """Lift the already merged base union through x -> p*x."""
+    denominator = M2_BASE_MODULUS * reduced_low_scale
+    require(modulus % denominator == 0, "M=2 lifted grid changed")
+    factor = modulus // denominator
+    return tuple(
+        (
+            (sheet * M2_BASE_MODULUS + left) * factor,
+            (sheet * M2_BASE_MODULUS + right) * factor,
+        )
+        for sheet in range(reduced_low_scale)
+        for left, right in m2_base_intervals
+    )
+
+
+def m2_top_intersection(reduced_low_scale, reduced_top_speed):
+    """Exact mu(U_p intersection D_n) for one coprime primitive pair."""
+    modulus = 14 * lcm(
+        2028 * reduced_low_scale,
+        reduced_top_speed,
+    )
+    low_union = scaled_m2_base_intervals(reduced_low_scale, modulus)
+    top_comb = danger_intervals(reduced_top_speed, modulus)
+    return Fraction(
+        union_intersection_length(low_union, top_comb),
+        modulus,
+    )
+
+
+# Since n=49m, the BV-open core np<10996 is pm<=224. Exhaust the exact
+# primitive universe, including the stronger higher-seven-depth controls.
+m2_finite_rows = []
+for reduced_low_scale in range(1, 225):
+    if reduced_low_scale % 7 == 0 or reduced_low_scale % 13 == 0:
+        continue
+    for top_multiplier in range(
+        1,
+        224 // reduced_low_scale + 1,
+    ):
+        reduced_top_speed = 49 * top_multiplier
+        if reduced_top_speed % 13 == 0:
+            continue
+        if gcd(reduced_low_scale, reduced_top_speed) != 1:
+            continue
+        m2_finite_rows.append(
+            (
+                m2_top_intersection(
+                    reduced_low_scale,
+                    reduced_top_speed,
+                ),
+                reduced_low_scale,
+                reduced_top_speed,
+            )
+        )
+
+require(len(m2_finite_rows) == 753, "M=2 finite pair count changed")
+M2_TOP_INTERSECTION, m2_min_p, m2_min_n = min(m2_finite_rows)
+require(
+    (M2_TOP_INTERSECTION, m2_min_p, m2_min_n)
+    == (Fraction(1849, 231868), 1, 49),
+    "M=2 exact top-intersection minimum changed",
+)
+require(
+    {
+        (reduced_low_scale, reduced_top_speed)
+        for value, reduced_low_scale, reduced_top_speed in m2_finite_rows
+        if value == M2_TOP_INTERSECTION
+    }
+    == {(1, 49)},
+    "M=2 minimum is no longer unique",
+)
+M2_CLEAN_MARGIN = M2_TOP_INTERSECTION - M2_CAGE_EXCESS
+require(
+    M2_CLEAN_MARGIN == Fraction(251, 115934),
+    "M=2 clean-hole margin changed",
+)
+
 LIVE_ESCAPED_PROFILE_COUNT = len(repeated_rows) + len(live_strict_rows)
 require(LIVE_ESCAPED_PROFILE_COUNT == 150, "live escaped profile count changed")
 LIVE_UNIFORM_MARGIN = min(LIVE_REPEATED_MARGIN, live_strict_margin)
@@ -803,6 +1002,17 @@ print(
         for pair, (rho, descendant) in bockstein_descendants.items()
     )
 )
+print(f"m2_address_bank: {M2_ADDRESS_BANK}")
+print(f"m3_address_bank: {M3_ADDRESS_BANK}")
+print(f"m2_low_union: {M2_LOW_UNION}")
+print(f"m2_cage_excess: {M2_CAGE_EXCESS}")
+print(f"m2_circular_components: {M2_CIRCULAR_COMPONENTS}")
+print(f"m2_whole_union_variation: {M2_VARIATION}")
+print(f"m2_bv_tail_start: {M2_TAIL_START}")
+print(f"m2_bv_tail_reserve: {Fraction(12, 159351283)}")
+print(f"m2_finite_primitive_pairs: {len(m2_finite_rows)}")
+print(f"m2_min_top_intersection: {M2_TOP_INTERSECTION}@1:49")
+print(f"m2_uniform_clean_margin: {M2_CLEAN_MARGIN}")
 print(f"fallback_pattern_count: {FALLBACK_PATTERN_COUNT}")
 print(f"fallback_two_root_cell_mass: {FALLBACK_CELL_MASS}")
 print(f"top_labelled_pattern_count: {TOP_PATTERN_COUNT}")

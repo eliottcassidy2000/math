@@ -39,6 +39,17 @@ tail_nonbank_off_cage_margin: 934/4231591
 b2_nonbank_uniform_off_cage_margin: 934/4231591
 all_nonexceptional_uniform_off_cage_margin: 1/26754
 oriented_bockstein_descendants: (1, 1):rho=-1,d=2,(1, 2):rho=3,d=1,(2, 1):rho=-2,d=4,(1, 3):rho=2,d=1,(3, 1):rho=-3,d=6,(4, 1):rho=3,d=7,(2, 3):rho=-3,d=5,(3, 2):rho=2,d=5,(3, 4):rho=1,d=5,(4, 3):rho=1,d=7
+m2_address_bank: ((4, 3),)
+m3_address_bank: ()
+m2_low_union: 331/4732
+m2_cage_excess: 1347/231868
+m2_circular_components: 138
+m2_whole_union_variation: 276
+m2_bv_tail_start: 10996
+m2_bv_tail_reserve: 12/159351283
+m2_finite_primitive_pairs: 753
+m2_min_top_intersection: 1849/231868@1:49
+m2_uniform_clean_margin: 251/115934
 fallback_pattern_count: 390
 fallback_two_root_cell_mass: 1/10434060
 top_labelled_pattern_count: 52
