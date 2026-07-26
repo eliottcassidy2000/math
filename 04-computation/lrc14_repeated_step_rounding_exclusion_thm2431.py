@@ -263,8 +263,8 @@ require(
 
 
 # Exact finite controls for the nearest-integer sum and difference
-# defects. Half-integer ties are skipped because the theorem removes
-# endpoint-null phases.
+# defects, including the deterministic half-integer convention. The
+# physical theorem separately removes root-mask endpoint phases.
 observed_sum_errors: set[int] = set()
 observed_difference_errors: set[int] = set()
 for denominator in range(3, 32):
