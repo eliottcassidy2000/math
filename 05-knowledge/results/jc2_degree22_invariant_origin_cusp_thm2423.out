@@ -1,0 +1,12 @@
+THM-2423 degree-22 invariant-origin exact referee
+laurent_recurrence_vs_multinomial=PASS
+origin_resultant_constant=-595244496
+origin_quintic_degree=5
+open_wall_value=-44800
+zeta_zero_values=(-6144,51200/81)
+third_curve_factor=-56(121v-3)(363v-1)(5314683v^3-307461v^2+22869v-203)/(363(121v-7)^2)
+third_quintic_gcd_degree=0
+sidecar_curve_factor=14(1771561v^3-73205v^2+4235v-23)/(14641(121v-7))
+sidecar_quintic_gcd_degree=0
+origin_quintic_sha256=2fe539d410c5deb7f3ef0e5ecc798b1bad11d0d5215b2b63a1b2aeb704f89335
+all_exact_checks=PASS
