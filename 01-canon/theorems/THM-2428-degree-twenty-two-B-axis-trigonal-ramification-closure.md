@@ -237,7 +237,7 @@ again contradicting `T!=0`. This proves (1).
 
 Together, THM-2423, THM-2425, and this theorem empty all five one-sparse
 weighted axes `B,C,D,E,W` in the complementary `mathcal A!=0`
-degree-twenty-two chart. Candidate THM-2429 subsequently closes the first
+degree-twenty-two chart. Hostile-audited THM-2429 subsequently closes the first
 support-two plane `C,W`; the other mixed parameter strata remain open. The
 next exact target is therefore another support-two plane: retain first-flux
 reconstruction, compute the discriminant divisor over the weighted parameter

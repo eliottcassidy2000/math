@@ -2,7 +2,7 @@
 id: THM-2429
 title: "Degree-twenty-two C-W plane hyperelliptic family closure"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   In the open first-flux chart of the genuine nonsplit polynomial
   exact-square-prefix degree-twenty-two branch, the complete coefficient
   plane B=D=E=0 is empty. For C=0 this is THM-2423. For C!=0, the sole
@@ -31,7 +31,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2429 -- the degree-twenty-two C-W plane is empty
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The hostile-audited THM-2425 closes the `C`-axis, and candidate THM-2423
 closes the `W`-axis. The axes are actually boundary fibres of one uniformly
@@ -156,6 +156,16 @@ On (9), the completed-square identity gives
 r^2=H_lambda(v).                                        (14)
 ```
 
+At the excluded wall,
+
+```text
+H_lambda(7/121)=-44800(231lambda+170).
+```
+
+The sole wall-root ratio is `lambda=-170/231`; there the root is simple,
+with `partial_v H=-325248000`, and the parameter discriminant below is
+nonzero. Thus deleting the wall point loses neither a component nor genus.
+
 The only question is whether a special ratio can lower the normalization
 to genus zero.
 
@@ -250,6 +260,17 @@ H_lambda=(v-alpha)^2 G_3(v)
 with `G_3` squarefree and `G_3(alpha)!=0`. Dividing `r` by `v-alpha`
 normalizes (14) to `rho^2=G_3(v)`, a genus-one curve.
 
+Equivalently, an exact subresultant audit gives degrees
+
+```text
+5,4,3,2,1,0
+```
+
+for `H_lambda,partial_v H_lambda`; both coefficients of the degree-one
+subresultant are coprime to `P_7`. At every septic root the resultant
+vanishes while that linear subresultant survives, so the gcd has degree
+exactly one. This directly excludes a triple root or two double roots.
+
 Thus every value of the weighted ratio has normalization genus at least one.
 
 ## 4. Constant map and the y=0 boundary
@@ -319,3 +340,33 @@ and remain active under optimized Python.
 
 Normal, optimized, and stored transcripts byte-match after LF
 normalization. The declared hashes are over the working-tree bytes.
+
+## 7. Independent hostile audit
+
+An independent audit reran the normal and optimized companions, compared
+both with the stored transcript, and verified the declared hashes. Direct
+first-flux substitution gave
+
+```text
+f_2(zeta=-4K/[1331 mathcal A])
+ =16R_lambda/[9(121v-7)^2],
+```
+
+independently reproducing the resultant multiplier. It rederived the
+quadratic discriminant, the parameter resultant
+`Disc_v(H_lambda)`, its linear-times-squarefree-septic factorization, and
+both exceptional-ratio separations.
+
+The auditor attacked exhaustiveness rather than sampling fibres. It found
+the unique leading-coefficient zero `99lambda+50=0`; independently checked
+the squarefree quartic (18) and the separated squarefree cubic (19); and
+computed the subresultant degrees and coefficient gcds recorded in Section
+3.4. Thus every septic root has gcd degree exactly one, excluding hidden
+triple-root and two-double-root fibres. It also checked the sole wall-root
+ratio `-170/231`: the root is simple, the parameter discriminant is
+nonzero, and deleting the excluded point does not change genus.
+
+Finally, the audit rechecked the vertical coefficient gcd, constant-map
+closure, the exact `y=0` equation, and the now hostile-audited THM-2423
+dependency for `C=0`. No algebraic, fibre-classification, quotient, wall,
+deck, scope, or reproducibility defect remains. **QED.**

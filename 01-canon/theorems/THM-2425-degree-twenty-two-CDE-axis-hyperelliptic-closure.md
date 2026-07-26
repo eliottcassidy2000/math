@@ -301,7 +301,7 @@ constant
 ```
 
 where `K_9` is squarefree of degree nine. This is a trigonal, not
-hyperelliptic, normalization problem. Candidate THM-2428 subsequently uses
+hyperelliptic, normalization problem. Hostile-audited THM-2428 subsequently uses
 its nine simple finite branch places and Riemann--Hurwitz to close that last
 axis without locating every infinity place. Mixed coefficient strata,
 branches outside the inherited reduction, split/even short edges, and

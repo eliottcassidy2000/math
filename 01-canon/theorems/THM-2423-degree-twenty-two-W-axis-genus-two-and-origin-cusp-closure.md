@@ -286,15 +286,17 @@ Thus the flux quotient leaves exactly one eleventh-power monomial cusp.
 
 ## 5. The full polynomial sidecar kills the cusp
 
-At the invariant origin, the normalized mate is the single Faber seed
-`E_22`. Write
+At the invariant origin, the normalized full mate is the single Faber seed
+`Q=E_22`. Write
 
 ```text
 P=H_0^2+mathcal L
 ```
 
-for the polynomial approximate root and its polynomial remainder. The full
-degree-twenty-two sidecar of THM-2411 is now
+for the polynomial approximate root and its polynomial remainder.
+Specializing THM-2411(40) at `B=C=D=E=0` gives
+`Q-mathcal R_6=S_6 in C[x,z]`. Since `Q=E_22`, this is the following
+genuine full-mate identity:
 
 ```text
 E_22-mathcal R_6(P,H_0)
@@ -413,13 +415,27 @@ the proof above rather than delegated computer conclusions.
 
 ## 8. Independent hostile audit
 
-An independent audit reconstructed both branches of the fixed `W`-axis.
-For `W!=0` it checked that `r=c_W(121v-7)/y^3` lies in `C(x)`, that the
-degree-five `L_5` is squarefree, and that Riemann--Hurwitz forces the
-genus-two trajectory to be constant. For `W=0` it verified the lossless
-divisor parametrization `y=h^2`, `T=t_0h^3`, the nonzero third-flux
-coefficient, the rational-primitive dichotomy, and the unique
-`-11 ell` pole in the full polynomial sidecar. It also checked the
-dependency graph, exact hashes, and normal/optimized byte match. No claim
-beyond the `B=C=D=E=0` axis of the inherited `mathcal A!=0` chart was
-used or promoted.
+An independent audit reran the companion normally and with `-O`,
+byte-compared both transcripts with the stored output, and verified the
+declared hashes. It separately expanded the entire polynomial part `E_22`,
+not only Laurent coefficients `23`--`25`, and recovered the full sidecar.
+
+For `W!=0`, the audit independently reconstructed (11)--(16), including
+the exact constant rescaling of `r`, the discriminant factorization, and
+all excluded-wall and `zeta=0` controls. It checked that constant `v`
+forces all deck-fixed coordinates, then `q`, into the constant field.
+
+For `W=0`, it rederived the coprime-divisor parametrization (18), the
+nonzero third-flux coefficient, and the exhaustive rational-primitive
+classification through the cusp (26). It then attacked the lawful
+polynomiality statement directly: THM-2411(40) specializes to the full-mate
+identity (27), its `mathcal L`-free coefficient is coprime to `L_5`, and
+the valuations are exactly
+
+```text
+-11ell;       at least -9ell,-7ell,-5ell,-3ell
+```
+
+for zero through four copies of `mathcal L`. The unique pole cannot cancel.
+No mathematical, sidecar, deck, boundary, scope, or reproducibility defect
+remains. **QED.**
