@@ -157,7 +157,7 @@ for depth in range(5, 20):
             grade_rows += 1
 
 print("theorem=THM-2349")
-print("status=PROVED+VERIFIED-EXACT-CANDIDATE-UNDER-INDEPENDENT-AUDIT")
+print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED")
 print("repeated_profiles=15")
 print(f"shallow_target_floor={SHALLOW_TARGET_FLOOR}")
 print(f"twin_fork_uniform_floor={TWIN_FORK_FLOOR}")

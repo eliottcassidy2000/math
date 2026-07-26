@@ -2,7 +2,7 @@
 id: THM-2349
 title: "Repeated-first delayed shallow restart and the empty twin-fork branch"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. On every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. On every
   repeated-first scalar row (1,1,c), 5<=c<=19, each of the two depth-one
   shallow exclusive-owner sets has positive measure. For either shallow
   owner, a finite coefficient-dependent delay produces a positive literal
@@ -32,14 +32,14 @@ related:
   - THM-2344-correlation-inverse-rigidity-and-aligned-tooth-twist-hostile
 script: 04-computation/lrc14_repeated_first_twin_fork_thm2349.py
 output: 05-knowledge/results/lrc14_repeated_first_twin_fork_thm2349.out
-script_sha256: ffbbf92ecdafaa9ffbc428a45c7103743462f31f92862ea75277e2ee4f1da77d
-output_sha256: dd7d97bfbf99040e9af0a7505fe5fb05b6b3244248fe66c21b911f738cca359d
+script_sha256: 0ba7dc208663095f5901e9bd18acae54d53b5a7d3f935fd0d8419e577605543f
+output_sha256: 8fb822744c7d2f00ed1ed588b9a9be916b82552e59e219893c7c1a25906cd092
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2349 -- repeated rows restart at a delayed shallow word
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 The `15` repeated-first rows were outside THM-2327 for a historical rather
 than structural reason: the strict-row route supplied a shallow owner and a
@@ -502,3 +502,17 @@ Both transcripts must match
 ```
 
 byte-for-byte after LF normalization.
+
+## 7. Independent hostile audit
+
+An independent referee rederived the two shallow-owner positivity argument
+from THM-2138, checked the THM-2234 floor and BV transfer normalization,
+and verified that the delayed THM-2305 partition produces a positive literal
+word for either shallow owner.  The same pass checked the Perron support and
+jump transport, primitivity of `K_0,K_0+D` modulo `13D`, the complete
+two-colour triangle, the multiplier bound, and every downstream hypothesis
+used from THM-2331, THM-2334, THM-2343, and THM-2344.  It found no conflict
+with the fixed-time guardrail in THM-2291 or the corrected `150+15` split in
+MISTAKE-251.  Normal, optimized, and stored exact transcripts agree
+byte-for-byte after LF normalization, and the script/output hashes in the
+frontmatter were independently reproduced.

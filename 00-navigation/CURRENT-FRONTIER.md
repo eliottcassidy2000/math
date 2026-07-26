@@ -170,13 +170,14 @@ is the proved carrier that reduces each fixed bad-denominator/owner fiber to
 labelled primitive packets and one coprime interval. It makes the terminal
 exact and finite; it does not prove that every surviving interval is empty.
 
-THM-2168--2257 leave exactly `165` first-depth-one rows (`150` strict, `15` repeated-first); THM-2234/2255/2263 give sharp private-mass/expiration floors. THM-2295/2298 force scalar ranks five/six by `196/526`; THM-2287/2301/2307 supply anchored rank six, address banks, and the rank-eight dual-word threshold.
-THM-2296/2305 retain prescribed pure edges/forks; THM-2299 kills pair phase and THM-2303 names the missing terminal-component current. THM-2323/2326/2327 force a marked `91`-unit deepest edge on every positive strict shallow-owner word stratum, not the repeated/resonance rows.
+THM-2168--2257 leave `165` first-depth-one rows (`150+15`); THM-2234/2255/2263 give private-mass floors, THM-2295/2298 force ranks five/six, and THM-2287/2301/2307 give relation/address packets.
+THM-2296/2305 retain pure edges/forks; THM-2299 kills pair phase and THM-2303 names the missing component current.
+THM-2323/2326/2327 mark a `91`-unit deepest edge on each positive strict shallow word. THM-2349 proves both repeated-row shallow owners positive and obtains the same edge after a finite row-dependent delay. All `165` rows now reach one current obstruction; repeated rows lose only a uniform clock/height invoice.
 THM-2321/2329 type root/target gain; THM-2325/2331 put every nonzero target address into the Abel expansion, while THM-2333 permits zero-only aggregation.
-[THM-2334](../01-canon/theorems/THM-2334-relation-residue-current-and-character-twist-pushforward.md) retains the full word and turns target landing into a `169`-twist DFT. [THM-2337](../01-canon/theorems/THM-2337-expiration-word-residue-invisibility-and-first-bockstein-sidecar.md) recovers a surjective but gauge-dependent first jet and an exact masked energy.
-[THM-2340](../01-canon/theorems/THM-2340-owner-word-anova-target-landing.md) identifies word main effects/interactions; [THM-2343](../01-canon/theorems/THM-2343-deep-comb-affine-target-catalyst.md) makes deepest phase a nonzero pure-axis translation and zero-only landing one inverse-character line.
-[THM-2344](../01-canon/theorems/THM-2344-correlation-inverse-rigidity-and-aligned-tooth-twist-hostile.md) makes that line a shifted convolution inverse. Zero/real/covariance tests break it; aligned and arbitrary same-axis words attain it, while a typed `334825`-lift bank has both signs.
-Force two translated coordinates or cross-axis mixing, then retain `91`-unit visibility and THM-2303 phase; otherwise attack the `15` repeated rows. The ledger remains `165`.
+THM-2334 retains the full word and turns target landing into a `169`-twist DFT; THM-2337 recovers a surjective but gauge-dependent first jet and masked energy.
+THM-2340 identifies word main effects/interactions; THM-2343 makes deepest phase a nonzero pure-axis translation and zero-only landing one inverse-character line.
+THM-2344 makes that line a shifted convolution inverse. Zero/real/covariance tests break it; arbitrary same-axis words attain it, while a typed `334825`-lift bank has both signs.
+Force coefficient-sensitive target-residue dispersion or lawful cross-axis mixing, then retain `91`-unit visibility and THM-2303 phase. Mere multiplicity, a nonconstant transported word, or an additional active axis is not by itself a certificate. The ledger remains `165`.
 
 ### Independent routes that remain live
 
