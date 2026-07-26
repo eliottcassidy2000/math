@@ -141,114 +141,51 @@ transitivity into composition through an explicit intermediate witness.
 
 ## Existence is a maximum or tail question, not automatically a mean question
 
-**Trigger:** proving a witness exists, excluding a covering configuration, or
-studying a near-extremal family.
-**Action:** identify the actual max/tail event before applying averaging or
-moments; test whether a saturated exceptional rung is invisible to the mean.
-**Mechanism:** averaging integrates across precisely the rare structured event
-that may carry extremality.
-**Counterindication:** means remain useful when a separate inequality converts
-them to the needed tail with correct equality cases.
-**Evidence:** strategy families 1, 2, and 5 and the five-axis triage in §2–3 of
-[`lrc14-history-synthesis-patterns-and-reframings-opus-S399.md`](../07-reflections/lrc14-history-synthesis-patterns-and-reframings-opus-S399.md);
-MISTAKE-129 and MISTAKE-171.
+**Trigger / action:** for existence, covering, or near-extremality, identify the actual max/tail event before averaging and test whether a saturated exceptional rung is mean-invisible.
+**Mechanism / counterindication:** means erase rare structure unless a separate sharp inequality recovers the required tail.
+**Evidence:** S399 strategy families 1, 2, and 5; MISTAKE-129/171.
 
 ## Respect symmetries by searching orbit representatives
 
-**Trigger:** a target is invariant under dilation, translation, relabeling,
-complement, or reflection.
-**Action:** normalize first and search representatives of the relevant group
-action; separately test covariance of every auxiliary predicate.
-**Mechanism:** a coordinate slice can intersect an extremal orbit once and make
-the rest appear absent; a canonical label can make a non-invariant look stable.
-**Counterindication:** normalization is unsafe when an auxiliary hypothesis is
-not invariant; rederive it after normalization.
-**Evidence:** MISTAKE-156, MISTAKE-160, MISTAKE-170, and MISTAKE-208; the
-LRC dilation warning in §3 of the S399 history synthesis.
+**Trigger / action:** for a dilation-, translation-, relabeling-, complement-, or reflection-invariant target, normalize to orbit representatives and separately recheck every auxiliary predicate.
+**Mechanism / counterindication:** a slice can meet an extremal orbit once, while a noncovariant hypothesis or canonical label makes normalization unsafe.
+**Evidence:** MISTAKE-156/160/170/208 and the S399 dilation warning.
 
 ## Attack a proposed bound before extending it
 
-**Trigger:** sampled maxima keep increasing, a boundary case is sharp, or a
-finite certificate is proposed as uniform.
-**Action:** spend a short hostile pass constructing a family that worsens the
-quantity indefinitely; inspect CRT/lcm, dilation, recursion, and degeneration.
-**Mechanism:** an easy construction often exposes the missing quantifier faster
-than a larger search.
-**Counterindication:** after construction attacks fail for a structural reason,
-the reason itself becomes proof data.
-**Evidence:** MISTAKE-157’s one-line lcm counterfamily, the fixed-certificate
-axis in §3 of the S399 history synthesis, and the rung-ladder analysis cited
-there.
+**Trigger / action:** when maxima grow, a boundary is sharp, or a finite certificate is called uniform, first attack it by CRT/lcm, dilation, recursion, and degeneration families.
+**Mechanism / counterindication:** a cheap construction exposes missing quantifiers; if all such attacks fail structurally, that reason becomes proof data.
+**Evidence:** MISTAKE-157 and S399’s fixed-certificate/rung-ladder analysis.
 
 ## Test structured adversaries, not only random samples
 
-**Trigger:** empirical minima, asymptotic domination, or negative searches.
-**Action:** include known extremals, dilated or near-dilated APs, planted
-resonances, subgroup/coset families, boundary parameters, and constructions
-designed to trigger every escape clause.
-**Mechanism:** extremals often occupy thin algebraic strata invisible to random
-sampling and local descent.
-**Counterindication:** random sampling is still useful for discovering generic
-behavior when clearly separated from uniform claims.
-**Evidence:** MISTAKE-101/102, MISTAKE-160, MISTAKE-162, MISTAKE-175, and
-MISTAKE-194.
+**Trigger / action:** supplement empirical minima or negative searches with extremals, dilated APs, planted resonances, subgroup/coset families, boundaries, and every escape-clause construction.
+**Mechanism / counterindication:** thin algebraic extremals evade random sampling, which remains useful only for explicitly generic claims.
+**Evidence:** MISTAKE-101/102/160/162/175/194.
 
 ## Verify the consequence, not the model’s own assumptions
 
-**Trigger:** a computation supports a derived bound, asymptotic ladder, or
-analytic consequence.
-**Action:** feed the program data from the original geometry/definition and
-print the object asserted in the conclusion. Label ansatz-fed tests as
-arithmetic checks only.
-**Mechanism:** a model can verify its own algebra perfectly while its premise or
-translation to the theorem is false.
-**Counterindication:** synthetic tests are appropriate for unit-testing an
-implementation, not validating the mathematical model.
-**Evidence:** MISTAKE-204 and MISTAKE-207 in
-[`MISTAKES.md`](../01-canon/MISTAKES.md).
+**Trigger / action:** when computation supports a derived consequence, feed it original geometric data and print the claimed target; label ansatz-fed runs as arithmetic tests.
+**Mechanism / counterindication:** a model can verify its own algebra while its premise is false; synthetic data tests code, not the mathematical translation.
+**Evidence:** MISTAKE-204/207.
 
 ## Use redundant paths as detectors
 
-**Trigger:** a computation is exhaustive, uses pruning/canonicalization, or
-supports a load-bearing theorem.
-**Action:** rerun with a different pruning configuration, labeling, code path,
-optimization mode, or independent formula; include positive controls.
-**Mechanism:** small disagreements reveal unsound pruning, hidden labels, and
-non-invariants even when the final headline happens to survive.
-**Counterindication:** redundancy should target the load-bearing logic rather
-than duplicate every inexpensive arithmetic step.
-**Evidence:** MISTAKE-194’s pruning discrepancy, MISTAKE-208’s
-canonical-vs-random-label detector, and MISTAKE-191’s source/output mismatch.
+**Trigger / action:** for exhaustive, pruned, canonicalized, or load-bearing computation, rerun a distinct configuration, labeling, code path, optimization mode, or formula with positive controls.
+**Mechanism / counterindication:** disagreements expose unsound pruning and hidden labels; duplicate load-bearing logic, not every cheap arithmetic step.
+**Evidence:** MISTAKE-191/194/208.
 
 ## Exactify before interpreting a decimal
 
-**Trigger:** a polytope, affine-cell measure, recurrence, or repeated numerical
-constant appears.
-**Action:** add the defining constraints, change coordinates, factor, telescope,
-or use exact rational/symbolic arithmetic before naming the phenomenon.
-**Mechanism:** exactification reveals shape and mechanism; sampling supplies
-only a fragile value.
-**Counterindication:** numerics remain valuable scouts when accompanied by an
-error model and no arithmetic claim.
-**Evidence:** MISTAKE-176’s six-simplex correction and the “exactification
-bounty” in §8 of
-[`lrc14-history-synthesis-patterns-and-reframings-opus-S399.md`](../07-reflections/lrc14-history-synthesis-patterns-and-reframings-opus-S399.md).
+**Trigger / action:** when a polytope, cell measure, recurrence, or repeated decimal appears, expose constraints and use coordinate changes, factoring, telescoping, or exact arithmetic before interpretation.
+**Mechanism / counterindication:** exactification reveals shape; numerics remain scouts only with an error model and no arithmetic claim.
+**Evidence:** MISTAKE-176 and S399’s exactification bounty.
 
 ## A failed certificate is not a failed theorem
 
-**Trigger:** a sufficient dominance order, invariant, sieve, or projection stops
-working.
-**Action:** state exactly where the certificate ends; search for phase,
-confluence, recurrence, or another sidecar before inferring failure of the
-target.
-**Mechanism:** certificate failure identifies information loss, not the target’s
-truth value.
-**Counterindication:** an explicit counterexample to the target itself remains
-decisive.
-**Evidence:** MISTAKE-212’s transitivity/source certificate, the proportional-
-NC2 MISTAKE-213 entry separating “not eventually zero” from “finitely many
-zeros,” and the “frames describe, do not prove” phase in the S399 history
-synthesis.
+**Trigger / action:** when a sufficient order, invariant, sieve, or projection fails, mark its exact boundary and seek phase, confluence, recurrence, or another sidecar before judging the target.
+**Mechanism / counterindication:** certificate failure diagnoses information loss; only a counterexample to the target is decisive.
+**Evidence:** MISTAKE-212/213 and S399’s “frames describe, do not prove” phase.
 
 ## Formal verification needs a semantic witness
 
