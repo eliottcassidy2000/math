@@ -2,8 +2,8 @@
 id: THM-2396
 title: "Common-core forty-nine-orbit word incompatibility"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Assume
-  THM-2393's sole no-clean residual M=1 and
+  PROVED + VERIFIED-EXACT + TWICE INDEPENDENTLY HOSTILE-AUDITED. Assume
+  THM-2393's residual speed/valuation hypotheses M=1 and
   (C_1,C_2,c_1,c_2)=h(1,13,13,169). Bundle the seven
   THM-2394 root fibres into one generic Z/49Z orbit on which C_3 and
   c_3 are safe. THM-2391 controls the unique q_*-danger bin; THM-2394
@@ -13,13 +13,16 @@ status: >
   packings and rejects all of them: 14,386 B/packing cases have a
   forbidden nonzero hole, while the last 20 require D_(169h) to agree
   with D_h on four or five bins although any translate agrees on at
-  most two. Thus the zero-clean common-core branch is empty and every
-  remaining packet has positive clean-hole mass. No uniform mass floor,
-  row exclusion, ledger decrement, target landing, or proof of LRC(14)
-  is claimed.
+  most two. Localizing the contrapositive shows that every high-safe
+  orbit contains a clean root, so delta>=66/4459. Together with
+  THM-2393 this gives the universal last-lane floor delta>=1/26754.
+  The common-core charged-cell and transverse-tensor floors are
+  33/115934 and 33/753571. No row exclusion, ledger decrement, target
+  landing, or proof of LRC(14) is claimed.
 source: codex-2026-07-26-common-core-forty-nine-orbit
 depends_on:
   - THM-2391-blocker-caged-septimal-single-layer-address-reduction
+  - THM-2392-clean-toothpick-or-bounded-cross-ancestor-cage
   - THM-2393-c3-safe-double-fibre-capacity-and-common-core-residual
   - THM-2394-common-core-six-address-transversal-and-labelled-hole-trichotomy
 related:
@@ -28,37 +31,51 @@ related:
   - THM-2395-common-core-successor-shell-and-forced-hole-escape-tax
 script: 04-computation/lrc14_common_core_forty_nine_orbit_thm2396.py
 output: 05-knowledge/results/lrc14_common_core_forty_nine_orbit_thm2396.out
-script_sha256: 8a73dc2f5def873b8042149fb84d88dae8c6d0ee5e62e38be5c9f6b95f0d5112
-output_sha256: 847d1f1c2132428bd24ce90efdc24f4ead5c55d9f2a86e94da3e4823ca68f08f
+script_sha256: 927f6bb05dab4100415441392e3072b370c3a4837cfa35f5a76f576d2e0f8f85
+output_sha256: c84eef5e9712edd12ec7e3fcbc4a01cefab28d2c82402a2079339dd922c6b7c0
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2396 -- common-core forty-nine-orbit word incompatibility
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED + VERIFIED-EXACT + TWICE INDEPENDENTLY HOSTILE-AUDITED.**
 
-THM-2393 reduces every packet with no clean hole to one literal
-common-core chain. THM-2394 then turns each high-safe seven-root fibre
-into a six-address transversal. The missing move is not another
-one-fibre estimate: the unique top `q_*` word couples seven such fibres
-inside one orbit of length forty-nine.
+THM-2393 leaves one literal common-core chain as the only packet not
+already assigned its universal clean-hole floor. THM-2394 turns every
+clean-free high-safe seven-root fibre into a six-address transversal.
+The missing move is not another one-fibre estimate: the unique top
+`q_*` word couples seven such fibres inside one orbit of length
+forty-nine.
 
-Keeping that whole orbit gives a finite contradiction. The proof
-deliberately enlarges the physical universe by letting all non-normalized
-word translates vary independently. The enlarged universe is still empty.
-Consequently the shared physical phase cannot be the reason for the
-contradiction.
+Keeping that whole orbit gives a quantitative hitting theorem, not just
+a contradiction at zero mass. The proof deliberately enlarges the
+physical universe by letting all non-normalized word translates vary
+independently. The enlarged universe is still empty. Consequently every
+generic high-safe physical orbit contains a clean root.
 
 ## 1. The generic forty-nine-root orbit
 
-Retain THM-2393/2394's zero-clean boundary
+Retain THM-2393/2394's residual speed and valuation data
 
 ```text
 M=1,
 
 (C_1,C_2,c_1,c_2)=h(1,13,13,169),
 
-gcd(h,91)=1,                    delta=0.              (1)
+gcd(h,91)=1.                                           (1)
+```
+
+Global clean-set emptiness is **not** assumed. Use the actual clean set
+and its arbitrary mass:
+
+```text
+K=1_(E_H)+sum_(q_i!=q_*) 1_(D_(q_i)),
+
+S={K=0} intersection D_(q_*)^c intersection D_(c_3)^c
+    intersection
+    (D_(C_1) union D_(C_2) union D_(C_3))^c,
+
+delta=mu(S)>=0.                                        (1a)
 ```
 
 Write
@@ -102,13 +119,19 @@ y_r=(z+r)/7.
 
 They lie in THM-2394's corrected divided-base set `Y_0`: `q_*/7=u` is
 safe there, while `C_3/7` and `c_3/7` are safe because (3) is constant
-on the seven base roots. Therefore:
+on the seven base roots. Fix such a generic `z` and suppose, temporarily,
+that its forty-nine roots contain no point of `S`. Then:
 
 - on the top bin (5), THM-2391 says that `D_h,D_(13h)` partition the
   two guard addresses and all four lower `q` addresses lie inside that
   guard pair;
-- on every other bin, THM-2394 says that the guard and four lower `q`
-  addresses are six distinct points, with unique hole
+- on every other bin, the proof of THM-2394 applies **locally**. Its
+  scalar-cover inequality (9a) and collision-cage implication (9b) are
+  pointwise. If (9c) failed at a `K`-hole, the safety of
+  `q_*,c_3,C_3` on this bin and the absence of both `A,B` would make
+  that root a point of `S`, contrary to the temporary assumption.
+  Hence the guard and four lower `q` addresses are six distinct points,
+  with unique hole
 
   ```text
   d=B,              or              d=A=C,            (6)
@@ -117,9 +140,10 @@ on the seven base roots. Therefore:
   where `A,B,C` are the addresses of
   `D_h,D_(13h),D_(169h)`.
 
-The word constraints in (5)--(6) hold simultaneously on the same
-forty-nine physical points. This simultaneity is the information lost by
-one-fibre capacity and successor calculations.
+Thus an `S`-free high-safe orbit satisfies the word constraints
+(5)--(6) simultaneously on the same forty-nine physical points. This
+simultaneity is the information lost by one-fibre capacity and successor
+calculations.
 
 ## 2. A relaxed exact word universe
 
@@ -268,26 +292,66 @@ so no cyclic block of seven residues contains more than two of these
 values. This independently proves the sharp cap (15), rather than
 inferring it from the zero-survivor count.
 
-## 4. Consequence and exact boundary
+## 4. Orbitwise localization and a uniform floor
 
-Sections 1--3 show that the assumptions in (1) cannot coexist. By
-THM-2393, this was the only possible packet with
-
-```text
-delta=0.
-```
-
-Therefore every remaining scalar packet in the last septimal lane has
+Let
 
 ```text
-delta>0.                                             (17)
+H_0=D_V^c intersection D_(13V)^c,
+
+N_S(z)=sum_(j in Z/49Z) 1_S((z+j)/49).              (17)
 ```
 
-THM-2392 then supplies a literal `q_*`-labelled charged word and a
-same-parent `F_7 x F_13` tensor for each individual packet. The present
-finite obstruction supplies no coefficient-independent lower bound for
-`delta`: physical chamber widths can shrink with the coefficients, and
-the relaxed word proof records only emptiness at equality.
+Sections 1--3 prove the orbitwise contrapositive
+
+```text
+N_S(z)>=1                         for almost every z in H_0.  (18)
+```
+
+Indeed, `N_S(z)=0` supplies precisely the temporary local hypothesis
+used in Section 1 and would embed that physical orbit into the empty
+relaxed universe. Endpoint sets and pullbacks of the pointwise null
+exceptions remain null.
+
+The forty-nine-root disintegration is exact:
+
+```text
+integral_T N_S(z) dz=49mu(S)=49delta.                (19)
+```
+
+Combining (3), (18), and (19) yields
+
+```text
+delta>=66/(91*49)
+     =66/4459
+     =396/26754.                                    (20)
+```
+
+This is coefficient-independent. THM-2392 therefore gives, within the
+common-core packet, the explicit descendant floors
+
+```text
+fixed q_*-labelled charged cell:
+  delta/52>=33/115934;
+
+complete low-blocker charged cell:
+  delta/78>=11/57967;
+
+same-parent owner-resolved F_7 x F_13 tensor:
+  delta/338>=33/753571.                              (21)
+```
+
+THM-2393 already proves `delta>=1/26754` outside the common-core chain.
+Together with (20), every packet in the last septimal lane now obeys
+
+```text
+delta>=1/26754.                                     (22)
+```
+
+THM-2395's actual `delta=0` common-core branch is therefore superseded
+as a live closure obligation. Its factor-free successor-role jet remains
+a valid reusable counterfactual sidecar: the present theorem does not
+identify any clean carrier with that role jet or with a terminal target.
 
 This theorem does **not**:
 
@@ -297,10 +361,11 @@ This theorem does **not**:
 - decrement the `165`-row ledger; or
 - prove LRC(14).
 
-The next sharp target is no longer a common-core zero-clean automaton. It
-is a coefficient-dependent positive-clean landing theorem: preserve the
-owner-resolved `F_7 x F_13` word from THM-2392 through the terminal
-endpoint filtration without replacing its phase by unlabelled energy.
+The next sharp target is no longer a common-core zero-clean automaton or
+a coefficient-dependent positivity argument. It is a uniform
+positive-clean landing theorem: preserve the owner-resolved
+`F_7 x F_13` word from THM-2392 through the terminal endpoint filtration
+without replacing its phase by unlabelled energy.
 
 ## 5. Exact companion
 
@@ -312,9 +377,11 @@ The dependency-free companion:
 - verifies the full ledgers (14)--(16);
 - checks all `980` final `C`-word tests directly;
 - independently reconstructs the thirteen zero masks and the sharp
-  two-row agreement cap (15); and
+  two-row agreement cap (15);
 - retains the `2058` packing and twenty capacity-boundary positive
-  controls.
+  controls;
+- checks the exact disintegration floor (20), all three descendant
+  cell floors (21), and the universal minimum (22).
 
 Run
 

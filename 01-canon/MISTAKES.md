@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-265 (2026-07-26, THM-2396 orbit-localization audit) -- an empty finite orbit universe was used only at global zero mass
+
+- **What was written:** the first promoted THM-2396 used the empty
+  relaxed `Z/49Z` word universe only to contradict `delta=0`. It then
+  said that coefficient-dependent chamber widths prevented any uniform
+  lower bound for the clean-hole mass.
+- **First failed implication:** the THM-2394 trichotomy does not require
+  global clean-set emptiness. On one fixed high-safe forty-nine-root
+  orbit, absence of a clean root supplies (9c) on each of its six
+  `q_*`-safe seven-root rows; (9a), (9b), and the THM-2391 top-row
+  partition remain pointwise. Thus an individually clean-free orbit
+  already embeds into the same empty finite universe.
+- **Repair:** for
+  `H_0=D_V^c intersection D_(13V)^c`, every generic `z in H_0` has at
+  least one clean root among `(z+j)/49`. Since `mu(H_0)=66/91` and
+  `integral sum_j 1_S((z+j)/49) dz=49mu(S)`, one gets the uniform
+  common-core floor `delta>=66/4459`. Combined with THM-2393, the whole
+  last septimal lane has `delta>=1/26754`.
+- **Rule:** whenever a finite-orbit contradiction is proved from
+  pointwise local constraints, test the orbitwise contrapositive before
+  recording only qualitative nonemptiness. Root disintegration can turn
+  one forced witness per base orbit into an exact uniform mass floor.
+
 ## MISTAKE-264 (2026-07-25, THM-2393 base/root typing audit) -- an undivided high-safe point event was used as a seven-root base event
 
 - **What was written:** THM-2393 Section 3 disintegrated

@@ -1,5 +1,5 @@
 theorem=THM-2396
-status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED
+status=PROVED+VERIFIED-EXACT+TWICE-INDEPENDENTLY-HOSTILE-AUDITED
 modulus=49; bins=7; addresses_per_bin=7
 ordinary_words=1029; guard_words=1029; B_translates=49; C_translates=49
 relevant_guard_top_pairs=2058
@@ -10,6 +10,9 @@ nonzero_hole_rejections=14386; C_capacity_boundaries=20
 required_C_rows=4:18,5:2
 C_zero_masks=13; max_A_C_agreement=2; C_word_tests=980
 relaxed_49_orbit_survivors=0
-consequence=delta_zero_common_core_branch_empty
+high_safe_base=66/91; common_core_delta>=66/4459
+charged_cell>=33/115934; complete_low_cell>=11/57967; transverse_tensor>=33/753571
+universal_last_lane_delta>=1/26754
+consequence=every_high_safe_49_orbit_contains_a_clean_root
 row_decrement=0; ledger=165; LRC(14)=OPEN
 all_checks=PASS

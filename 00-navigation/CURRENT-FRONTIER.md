@@ -170,9 +170,9 @@ is the proved carrier that reduces each fixed bad-denominator/owner fiber to
 labelled primitive packets and one coprime interval. It makes the terminal
 exact and finite; it does not prove that every surviving interval is empty.
 THM-2168--2257 leave `165` rows; THM-2295--2377 supply the relation/edge/bank/toothpick carriers (THM-2356 kernel `28,393`, THM-2363 dominant, THM-2368 root routing), and THM-2378/2381/2382/2385 leave only `k=2,(t,b)=(1,0)`.
-THM-2388--2391 reduce it to a primitive weight-eight seven-address word; THM-2392/2393 reduce every no-clean packet to the literal `M=1` chain
-`(C_1,C_2,c_1,c_2)=h(1,13,13,169)`. THM-2394 makes its high-safe fibres exact six-address transversals, forces a fixed-phase middle-hole/deep-double
-dipole on mass `>=3335/8281`, and transports positive middle-owner mass `>=3972/57967` into `D_h`. Its successor law needs `floor(13y) mod 7`; the remaining sidecar is hole-status transport, not another unlabelled mass bound or carry-free binary Markov chain. Ledger: `165`.
+THM-2388--2393 reduce the last lane to a possible `M=1` common-core chain. THM-2396's empty relaxed `Z/49Z` word localizes orbitwise to
+`delta>=66/4459` on that chain, hence `delta>=1/26754` universally and an owner-resolved `F_7 x F_13` cell everywhere. THM-2395 is retained only as
+a role-jet sidecar. The debt is uniform terminal target/endpoint landing, not positivity or hole transport. Ledger: `165`.
 
 ### Independent routes that remain live
 

@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """Exact companion for THM-2396.
 
-The script exhausts a relaxation of every generic 49-root orbit in the
-THM-2393 common-core no-clean branch.  All words are finite subsets of
-Z/49Z.  Translates which share one physical orbit are deliberately allowed
-to vary independently, so emptiness of this larger universe is a valid
-obstruction to the physical branch.
+The script exhausts a relaxation of every generic clean-free 49-root orbit
+in the THM-2393 common-core packet. All words are finite subsets of Z/49Z.
+Translates which share one physical orbit are deliberately allowed to vary
+independently, so emptiness of this larger universe forces at least one
+clean root per high-safe physical orbit. The exact rational tail records
+the resulting mass and THM-2392 descendant floors.
 """
 
 from collections import Counter, defaultdict
+from fractions import Fraction
 from itertools import combinations
 from math import gcd
 
@@ -274,9 +276,41 @@ require(
 )
 require(survivors == 0, "relaxed 49-orbit survivor")
 
+# Orbitwise localization: every base in the high-safe set contributes at
+# least one clean root.  The exact search proves the local implication;
+# these rational checks retain the disintegration invoice and all
+# THM-2392 descendant floors.
+high_safe_base = Fraction(66, 91)
+common_core_clean_floor = high_safe_base / 49
+charged_cell_floor = common_core_clean_floor / 52
+complete_low_cell_floor = common_core_clean_floor / 78
+transverse_tensor_floor = common_core_clean_floor / 338
+universal_last_lane_floor = Fraction(1, 26754)
+
+require(
+    common_core_clean_floor == Fraction(66, 4459),
+    "common-core clean floor",
+)
+require(
+    common_core_clean_floor == 396 * universal_last_lane_floor,
+    "comparison with universal last-lane floor",
+)
+require(
+    charged_cell_floor == Fraction(33, 115934),
+    "charged-cell descendant floor",
+)
+require(
+    complete_low_cell_floor == Fraction(11, 57967),
+    "complete-low-cell descendant floor",
+)
+require(
+    transverse_tensor_floor == Fraction(33, 753571),
+    "transverse-tensor descendant floor",
+)
+
 
 print("theorem=THM-2396")
-print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED")
+print("status=PROVED+VERIFIED-EXACT+TWICE-INDEPENDENTLY-HOSTILE-AUDITED")
 print("modulus=49; bins=7; addresses_per_bin=7")
 print(
     f"ordinary_words={len(ordinary_bank)};"
@@ -316,6 +350,16 @@ print(
     f" C_word_tests={c_word_tests}"
 )
 print("relaxed_49_orbit_survivors=0")
-print("consequence=delta_zero_common_core_branch_empty")
+print(
+    f"high_safe_base={high_safe_base};"
+    f" common_core_delta>={common_core_clean_floor}"
+)
+print(
+    f"charged_cell>={charged_cell_floor};"
+    f" complete_low_cell>={complete_low_cell_floor};"
+    f" transverse_tensor>={transverse_tensor_floor}"
+)
+print(f"universal_last_lane_delta>={universal_last_lane_floor}")
+print("consequence=every_high_safe_49_orbit_contains_a_clean_root")
 print("row_decrement=0; ledger=165; LRC(14)=OPEN")
 print("all_checks=PASS")

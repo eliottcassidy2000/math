@@ -21,7 +21,11 @@ status: >
   pair gives an F_7^* x F_13^* role-jet tensor. A strict physical
   type-II/type-III two-cycle shows that local carry-labelled covariance
   remains possible. This is a positive successor-role jet, not a row
-  exclusion, ledger decrement, or proof of LRC(14).
+  exclusion, ledger decrement, or proof of LRC(14). THM-2396 later
+  proves that the actual no-clean common-core branch is empty with a
+  uniform clean-hole floor. Thus this theorem is superseded only as a
+  live closure obligation and remains valid as a counterfactual
+  factor-free role-jet sidecar.
 source: codex-2026-07-26-common-core-successor-shell
 depends_on:
   - THM-2362-thirteen-shift-successor-statistic-and-role-jet-floor
@@ -30,6 +34,7 @@ related:
   - THM-2232-same-core-signed-eigen-markov-dual-exclusion
   - THM-2257-depth-three-common-core-169-image-sieve-exclusion
   - THM-2391-blocker-caged-septimal-single-layer-address-reduction
+  - THM-2396-common-core-forty-nine-orbit-word-incompatibility
 script: 04-computation/lrc14_common_core_successor_escape_thm2395.py
 output: 05-knowledge/results/lrc14_common_core_successor_escape_thm2395.out
 script_sha256: dc14ac62d45c5d947de6dbb62a345d6b522df473323dad1f2f31c73623a4b133
@@ -40,6 +45,11 @@ hash_basis: working-tree bytes (LF)
 # THM-2395 -- a forced successor-role escape
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+
+**POST-THM-2396 SCOPE.** The actual `delta=0` common-core branch is now
+empty, so this theorem is superseded as a live branch-closing route. Its
+factor-free selector, shell lemma, and role-jet implication remain valid
+counterfactual tools and are not retracted.
 
 THM-2394 turns the last no-clean common-core boundary into three labelled
 seven-root states. This theorem follows those states through the actual
