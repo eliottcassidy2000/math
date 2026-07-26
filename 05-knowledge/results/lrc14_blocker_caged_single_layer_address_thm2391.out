@@ -1,5 +1,5 @@
 theorem=THM-2391
-status=PROVED+VERIFIED-EXACT-CANDIDATE
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED
 lifted_word_cases=210168
 least_period_checks=411600
 period_containment_pairs=28812

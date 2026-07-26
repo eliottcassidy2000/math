@@ -3,9 +3,10 @@
 
 Checks the cyclic period/containment and slope-classification lemmas behind
 the blocker-caged single-layer reduction.  It also reconstructs a genuine
-positive local chamber carrying both blocker partition types' obstruction:
-clean quotient-blocker partition, four distinct lower q labels, and the
-canonical repeated-first thirteen-adic roles.  No global cover is claimed.
+positive local chamber carrying a clean quotient-blocker partition, four
+distinct lower q labels, and the canonical repeated-first thirteen-adic
+roles.  The parity partition is checked separately as an abstract exact
+positive control.  No global cover is claimed.
 """
 
 from fractions import Fraction as F
@@ -354,7 +355,7 @@ require(positive_margin is not None and positive_margin > 0, "hostile margin")
 
 
 print("theorem=THM-2391")
-print("status=PROVED+VERIFIED-EXACT-CANDIDATE")
+print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED")
 print(f"lifted_word_cases={lifted_word_cases}")
 print(f"least_period_checks={least_period_checks}")
 print(f"period_containment_pairs={period_containment_pairs}")

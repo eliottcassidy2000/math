@@ -2,7 +2,7 @@
 id: THM-2391
 title: "Blocker-caged septimal single-layer address reduction"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. In the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the
   last k=2,(t,b)=(1,0) septimal lane, THM-2388's collision cage forces,
   on every generic C_3-safe top-q fibre, the two divided low-blocker
   words to partition the guard word exactly and disjointly, while all
@@ -28,20 +28,21 @@ related:
   - THM-2390-septimal-layer-kraft-peeling-and-heavy-word-reduction
 script: 04-computation/lrc14_blocker_caged_single_layer_address_thm2391.py
 output: 05-knowledge/results/lrc14_blocker_caged_single_layer_address_thm2391.out
-script_sha256: 8b39faf0114f995c1aba45baa80d901f146d8c90783d5e4a710f27fc64925512
-output_sha256: fb27e0f6d543c37584357d2900dbfb353c6eab88053fcc64befdbd987570a08c
+script_sha256: 0cc1c729b57f8c64c6d29afa92e81f09689f408268f2adf612dfd4b5ce5718cf
+output_sha256: 633dd80103449b344ff3304765ab7fa4bfe17da9d6ba1f4afc2c434dca311f64
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2391 -- blocker-caged septimal single-layer address reduction
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2390 proves that the only remaining septimal lane has a lower layer
 of weight seven or eight.  THM-2388 supplies a different object: every
 collision of two unit masks must land in one of three **divided**
-blockers.  Combining them does more than count weight.  It puts all eight
-lower units into one layer and leaves a labelled finite address cage:
+blockers.  Combining them does more than count weight.  It puts the
+entire lower weight eight into one layer and leaves a labelled finite
+address cage:
 
 ```text
 two divided blockers partition the two-address guard word;
@@ -228,6 +229,10 @@ Since `c_j=13C_j`,
 nu_7(c_1)=nu_7(c_2)=a.                              (16)
 ```
 
+Before primitive normalization, the finite address word is naturally
+the quotient of `Q` by its `7^a` repeated copies and has effective
+modulus `7^(M-a)`.
+
 If `a>0`, then every coefficient in the nine-factor scalar row is
 divisible by seven: the seven labels in (15)--(16) have depth `a`, while
 `q_*` and `c_3` have still larger depth.  Primitivity therefore forces
@@ -262,7 +267,13 @@ word is
 I={0,1,...,2k-1} subset Z/mZ.                       (18)
 ```
 
-An ordinary lower word of speed `v` becomes a `k`-term arithmetic
+For
+
+```text
+v in {q_i:q_i!=q_*} union {C_1,C_2},
+```
+
+the corresponding ordinary lower word becomes a `k`-term arithmetic
 progression with unit step
 
 ```text
@@ -294,7 +305,9 @@ If two such progressions partition `I`, there are only two set-types.
 A step of absolute value two fills one parity class, forcing the other
 word to fill the other parity class.  A step of absolute value one is a
 contiguous `k`-block; its complement is another allowed progression
-only when the two blocks are the two end halves.  Thus (11) is either
+only when the two blocks are the two end halves.  Indeed, an interior
+contiguous block leaves adjacent residues in its complement, so that
+complement cannot be a parity class.  Thus (11) is either
 
 ```text
 contiguous type:
@@ -304,7 +317,12 @@ parity type:
   {0,2,...,2k-2} disjoint_union {1,3,...,2k-1}.     (21)
 ```
 
-In ratio notation every lower ordinary label satisfies
+The two orientations are independent at support level: contiguous type
+only says each blocker has step `+/-1`, while parity type only says each
+has step `+/-2`.
+
+In ratio notation every label `v` in the displayed six-label set
+satisfies
 
 ```text
 v/H in {+1,-1,+1/2,-1/2} mod 7^M.                  (22)
@@ -361,11 +379,11 @@ width-two guard at speed `13H`.  The congruence
 13=-1+2*7                                           (27)
 ```
 
-shows why the adjacent binary address reverses while the next septimal
-digit carries a nontrivial translation.  Any recursive or tournament
-encoding must retain the blocker label, the chosen guard address, and
-this carry; quotienting to a two-colouring loses the preserved
-predicate.
+records the first reversal-plus-carry in the septimal expansion.  By
+itself it does not prove a same-fibre address reversal or translation.
+Any recursive or tournament encoding must retain the blocker label, the
+chosen guard address, and this carry; quotienting to a two-colouring
+loses the preserved predicate.
 
 ## 6. Sharpness and residual
 
