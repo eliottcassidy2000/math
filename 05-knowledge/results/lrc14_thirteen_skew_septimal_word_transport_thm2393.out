@@ -1,0 +1,22 @@
+theorem=THM-2393
+status=PROVED+VERIFIED-EXACT-CANDIDATE-UNDER-INDEPENDENT-AUDIT
+word_reflection_cases=207854
+capacity_scales=64
+labelled_root_splits=42
+valuation_profiles=216
+valuation_survivors=6
+common_valuation=nu7(H)=nu7(C1)=nu7(C2)
+heavy_words=W7:4-labelled-roles,W8:1-labelled-role
+W8_endpoint_clearance=840
+W8_terminal_multiplicity=2,1,1,1,1,1,1
+W8_base_signs=q(13,-169);high(4801,4801)
+W7_endpoint_clearance=161
+W7_terminal_multiplicity=1,1,1,1,1,1,1
+W7_base_signs=q(69,-897);high(2925,2925);off(223,881)
+W7_full_bin_failures=partition:6,11,18,29,36,48;containment:13,20,27,34,41
+W7_full_bin_status=EXCLUDED-BY-THM-2391
+triple_shield_B_count=36
+triple_shield_boundary=B48-escape,B91-touch,B92-penetration
+triple_shield_is_not_XOR=PASS
+branch_excluded=0; ledger=165; LRC(14)=OPEN
+all_checks=PASS
