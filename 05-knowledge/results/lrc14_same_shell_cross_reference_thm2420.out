@@ -1,0 +1,15 @@
+THM-2420 SAME-SHELL CROSS-REFERENCE -- exact audit
+primitive kernel reduction fibres checked=676
+finite correlation packets checked=4
+exact group-ring Fourier products checked=256
+sharp max/energy equality controls=4
+support / total / max / energy identities: PASS
+finite exact-address differences=17, pushed fibres=13
+coefficient-l1 / mod-M pushforward / aggregate amplitude: PASS
+26-cell phase counts=(2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2)
+mode-2 multiplier counts=(13, 0, 0, 0, 0, 0, 13, 0, 0, 0, 0, 0, 0)
+Fhat(0)=0 and cyclotomic numerator at X=26 is nonzero: PASS
+complete zero-reference numerators=(1728, -144, -144, -144, -144, -144, -144, -144, -144, -144, -144, -144, -144)
+all 13 zero sectors and self-Gram are sideband-constant: PASS
+canonical same-shell physical reference remains OPEN
+THM-2420 exact companion PASS

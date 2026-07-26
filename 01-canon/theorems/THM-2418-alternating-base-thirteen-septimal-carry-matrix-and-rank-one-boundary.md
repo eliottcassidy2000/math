@@ -2,9 +2,7 @@
 id: THM-2418
 title: "Alternating base-thirteen septimal carry matrix and rank-one boundary"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED THROUGH THE
-  BASE CARRY THEOREM; VERIFIED-EXACT FIXED-SOURCE/TAIL-CLASSIFIER
-  AMENDMENT UNDER INDEPENDENT AUDIT. For
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For
   R=13^k, the physical-to-terminal seven-root map is the affine
   permutation l=floor(Ry)+(-1)^k r modulo seven, and the carry is the
   alternating sum of the first k base-thirteen digits. Haar averaging
@@ -37,9 +35,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2418 -- the septimal word phase is an alternating digit carry
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED through the
-base carry theorem; verified-exact fixed-source/tail-classifier
-amendment under independent audit.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2409 isolates the real-word obstruction: modulo thirteen the
 transported word is neutral, while modulo seven the same coordinate
@@ -414,7 +410,8 @@ has rank at most one, and has rank one exactly when `q` is not the zero
 profile.  Whenever a row has positive mass, every normalized source row
 is identical.
 
-The mechanism has a complete rational family.  If
+The mechanism has a complete rational family.  If `A,s,t` are integers
+with `s>=0` and `t>=1`, and
 
 ```text
 G_(A,s,t)=[A/13^s,(A+7t)/13^s),
@@ -712,8 +709,9 @@ The dependency-free exact companion:
   identity through depth eight;
 - exhausts all `127` nonempty Boolean terminal-cylinder supports;
 - checks the flat and one-cylinder terminal hostiles; and
-- verifies the fixed even rank-one source through depth eight and the
-  universal odd `(B,p)` block law;
+- verifies the fixed even rank-one source through depth eight and
+  spot-checks five centred odd `(B,p)` instances of the universal
+  analytic block law through four depths;
 - verifies the fixed one-sheet `D_2` source through depths two to seven;
 - exhausts all `8,192` Boolean depth-one source profiles and checks the
   fixed-cylinder tail formula; and
@@ -760,7 +758,13 @@ A second hostile audit independently verified the fixed source
 `G=[3/13,10/13)` at every depth: its prefix block is inversion-invariant
 and contains each carry residue `13^(k-1)` times, so
 `K_G=(1/13)J`, with mass `7/13` and variation two.  It also checked the
-aligned interval family (42).  The new infinite-tail classifiers in
-Sections 6--7 and their expanded exact companion remain under a fresh
-independent audit; no conclusion in those sections is used by the
-promoted base theorem.
+nonwrapping aligned interval family (42), the one-sheet `D_2` hostile,
+and the partial-overlap/wrapping boundaries.
+
+A separate audit reconstructed the fixed-cylinder and weighted
+source--terminal formulas in Sections 6--7, including endpoint typing,
+the fact that `Q` does not enlarge the scale period, the rational
+all-or-flat implication, and the centred-defect rather than raw-mass
+periodicity.  Final normal and optimized executions byte-match the
+stored twenty-eight-line transcript; the LF hashes in the frontmatter
+were independently reproduced.
