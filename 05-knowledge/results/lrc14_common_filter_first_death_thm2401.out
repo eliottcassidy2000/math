@@ -1,0 +1,9 @@
+== THM-2401 exact common-filter / first-death audit ==
+small exhaustive: assignments=180 layers=5760 positive_losses=5190
+p=13 disjoint singleton/adjacent x two-root packets: 1573
+sharp labelled-root masses: [(('A', 0), Fraction(1, 4)), (('A', 1), Fraction(1, 4)), (('F', 2), Fraction(1, 4)), (('F', 3), Fraction(1, 4))]
+sharp displacement: classes=12 each=1/12 colour=1/2028
+constants: root=1/4 displacement_colour=1/2028 ordinary=11/97344 guard=1/10816 ordinary_status=11/389376 guard_status=1/43264 blocker_word=1/16 unfixed_owner=1/48
+first-death no-M0-floor controls: N=2:(1,1/2,0) N=3:(1,1/3,0) N=17:(1,1/17,0) N=101:(1,1/101,0)
+hostiles: separate_sum=0 flat_sum=13 flat_classes=1
+PASS
