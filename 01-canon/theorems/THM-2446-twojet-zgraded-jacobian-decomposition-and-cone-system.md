@@ -170,27 +170,52 @@ stratify away the tame locus (alpha-conic nondegeneracy plus
 non-planar `w`-curve, or a field-degree-4 certificate) and report
 detection floors accordingly.
 
-## 5. Open layer (labelled, unproved)
+## 5. Open layer (labelled; P2 now REFUTED)
 
 Recorded as predictions only: (P1) a swallowtail master identity
 `mu(P) L_4 = disc(z^4 + P~ z^2 + Q~ z + R~)` generalizing
 `108 a^2 L = (12a-b^2)^3 + E^2`, with Jelonek set `{L_4 = 0}` the
 swallowtail hypersurface ("A_3 at both ends"); (P3) the `S_4 > V_4`
-tower matches resolvent-cubic /
-fold-double-cover layers; (P4) a Veronese-projection generative
-ansatz for the staircase.
+tower matches resolvent-cubic / fold-double-cover layers; (P4) a
+Veronese-projection generative ansatz for the staircase.
 
 The former prediction (P2), that `D5=D4=0` plus the alpha-part of
-`D3` forces `[w_x,w_y,w]=0`, is **REFUTED** by THM-2451.  The entire
-separated-ruling family
+`D3` forces `[w_x,w_y,w]=0`, is **REFUTED twice over, concurrently**
+(codex THM-2451 and kind-pasteur S131b, same day, independent code
+paths). THM-2451's separated-ruling family
 
 ```text
 A=a+xn,            B=b+yn,            C=0
 ```
 
-has `D5=...=D0=0` but
-`[w_x,w_y,w]=[a,b,n]^2`.  A repaired conic-direction version remains
-open; the line-direction kernel must be excluded explicitly.
+has `D5=...=D0=0` but `[w_x,w_y,w]=[a,b,n]^2`. The S131b companions
+`04-computation/jacobian_twojet_p2_refutation_core_kps_S131b.py` and
+`..._conic_kps_S131b.py` (outputs in 05-knowledge/results, sha256 LF
+`2c18ec3a...`/`415b5833...` and `615d7b62...`/`85a86847...`) extend
+the refutation to every stratum and settle THM-2451's stated
+residual ("a repaired conic-direction version remains open"):
+
+- universal bracket lemma, identically in first jets:
+  `[w_x,w_y,w] = [A,B,A_x][A,B,B_y] - [A,B,A_y][A,B,B_x]`
+  (THM-2451's `[a,b,n]^2` is its evaluation on the ruling family);
+- no identity `E = P D5 + Q D4 + R S3` exists with ANY polynomial
+  multipliers (explicit first-jet point with all constraints zero
+  and `E = 1` -- non-membership even in the radical);
+- line-cap counterexample `A = (x,1,0), B = (y,0,1)` extends to a
+  full tame KELLER map `F = (xz^2+yz+xy-x^3+x, z^2+3x^2-2y, x+z)`
+  with `det J = -2` and explicit polynomial inverse: even the whole
+  graded system does not force the w-cone;
+- **the conic-direction version is also refuted**: the nondegenerate
+  conic cap `A = (x^2, xy, y^2)`,
+  `B = (-2x^3, x^2-2x^2y, x+2xy-2xy^2)` has `D5 = D4 = S3 = 0` and
+  `E = -x^8`;
+- P2 survives exactly on the point-cap stratum (`E = 0` for rank-1
+  `A`, arbitrary `B`) and for `A, B` valued in a common plane.
+
+Reading: the plane map `w = A x B` genuinely can carry dominant
+(A_3-capable) geometry on Keller solutions -- the flag layer is
+richer than the d=3 analogy suggested, which is favorable for (P1)
+and removes a false constraint from any seed hunt.
 
 ## 6. Scope
 

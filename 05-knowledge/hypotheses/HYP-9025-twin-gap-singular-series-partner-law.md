@@ -6,7 +6,14 @@ status: >
   PROVED exactly (c_p in {2,3,4}); prediction 1's cumulative window
   form fits at R^2 >= 0.988 with window-decaying lambda_j; the
   per-prime harmonic amplitudes are recovered within 2.4% after
-  availability detrending). Predictions 2 and 3 remain OPEN.
+  availability detrending). Prediction 3 is REFUTED AS STATED and
+  repaired (twin_repair_depth_harmonics_kps_S131b: repair depth is
+  NOT geometric -- P(0) = 0.42 vs 0.25, tail 130 events > 60 vs
+  expectation 0.01; the exact mod-5 dead-channel law (differences
+  = 4 mod 5, or = 1 mod 5 with d > 1, never hit -- 0 exceptions in
+  the census) plus declining live-lag rates 0.54 -> 0.22 make the
+  honest model a residue-environment mixture). Prediction 2 remains
+  OPEN.
 source: kind-pasteur-2026-07-26-S131
 related:
   - THM-2447-twin-gap-local-prime-harmonics-and-detrended-spectrum

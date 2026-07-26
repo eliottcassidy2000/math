@@ -1,0 +1,24 @@
+universe: |K| = 440311, centers <= 100000000
+K \ {1} in {0,2,3} mod 5 (first 20k checked): PASS
+mod-5 dead-difference law: 0 hits on dead lags: PASS
+THM-2422 head histogram 185643/67517/41034 reproduced: PASS
+
+marginal vs geometric (REFUTATION of pred. 3 as stated):
+  mean depth 2.992; mean-matched geometric q = 0.2505
+  P(0): observed 0.4216 vs geometric 0.2505
+  P(depth>60): observed count 130 vs geometric expectation 1.01e-02
+
+conditional live-lag hit rate by L (stationarity of the repaired law):
+  L   live_trials   hits    rate
+   0      343154   185643  0.5410
+   1      193366    67517  0.3492
+   2      140770    41034  0.2915
+   3      108955    29327  0.2692
+   4       86191    22015  0.2554
+   5       69497    17082  0.2458
+   6       56680    13501  0.2382
+   7       46456    10856  0.2337
+   8       38450     8671  0.2255
+   9       31919     7082  0.2219
+
+ALL CHECKS PASSED

@@ -1,0 +1,25 @@
+STEP 1 (A = nu, arbitrary B):
+  D4 = 2*(3n - theta n),  n = N.B,  N = (y^2, -2xy, x^2)
+  E  = n * [nu, B, theta B]
+  => D4 == 0 iff n homogeneous cubic; homogeneous B => E = 0.
+STEP 2: deg<=3 box: D4==0 solution space has dim 16, matched by
+        B = B1(free linear) + tangential quadratic + tangential cubic;
+        the constant part B^(0) is forced to 0.
+        on this family: E = n * [nu, B1, B2 + 2*B3],  n = N.B1.
+STEP 3: weaker form on the stratum: B = (2x^2, xy, x):
+        D4 = 0,  S3 = 2*x**2*(x + 2*y**2)  (not imposed),  E = x**7*y != 0
+        => D5 = D4 = 0 alone does NOT force E = 0 here either.
+STEP 4: CONIC-STRATUM COUNTEREXAMPLE (one-parameter family):
+        A = [x**2, x*y, y**2]
+        B = [-2*s**2*x**3, -2*s**2*x**2*y + s*x**2, -2*s**2*x*y**2 + 2*s*x*y + x]
+        D5/2 = 0, D4 = 0 , S3 = 0  identically;  E = -s*x**8
+        w = A x B = [x**2*y*(s*y + 1), -x**3*(2*s*y + 1), s*x**4]
+        s = 1 witness: B = [-2*x**3, -2*x**2*y + x**2, -2*x*y**2 + 2*x*y + x] ;  E = -x**8
+        => P2 REFUTED on the nondegenerate conic-cap stratum.
+        gauge note: B = [(0,0,x) + s*x*nu_q] + 2*phi*A, phi = -s^2*x;
+        w and E are invariant under B -> B + 2*phi*A.
+STEP 5a: S3(B1) == 0 identically for EVERY linear B1 (no condition).
+STEP 5b: on the slice B3 = 0, S3 == 0 forces B2 = 2*t*nu (gauge
+         shift), hence E = 0: the counterexample NEEDS the cubic
+         tangential tail B3 to unlock a non-gauge B2.
+ALL CHECKS PASSED

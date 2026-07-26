@@ -153,6 +153,15 @@ rigid; no nonrigid class appears; no `27` class at n = 10. Data now:
 `rigid-SC(n) = 2, 1, 2, 2, 3, 3, 5, 4` and
 `nonrigid(n) = 0, 0, 1, 0, 1, 0, 1, 0` for n = 3..10.
 
+## 6b. Same-session continuation
+
+THM-2450 answers the first open question through n = 10: the rigid
+stratum is exactly the cyclic-ternary tower grammar
+`T ::= 1 | stack | C3[.,.,.]` (counts and H-multisets match the
+census at all eight points; stack multiplicativity proved; Paley
+`T_5` confirmed outside the grammar). The all-n identification and
+the tower count closed form remain open there.
+
 ## 7. Reproduction
 
 ```bash
