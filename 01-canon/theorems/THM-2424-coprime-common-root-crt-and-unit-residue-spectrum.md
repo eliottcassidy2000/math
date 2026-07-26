@@ -507,7 +507,8 @@ Both transcripts must byte-match, after LF normalization,
 ```
 
 Every truth-bearing check raises explicitly, so optimized mode executes
-the same audit.
+the same audit. The transcript records the exact chord formula
+`4*sin(pi/26)^2`, not a platform-dependent `libm` decimal.
 
 ## 9. Independent audit
 

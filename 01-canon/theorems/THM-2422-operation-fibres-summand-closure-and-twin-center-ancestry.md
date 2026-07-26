@@ -2,7 +2,7 @@
 id: THM-2422
 title: "Swap-fixed operation fibres, dyadic summand closure, and twin-center ancestry"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The commutative addition and multiplication fibres have exact diagonal
   corrections supported, respectively, on even targets and perfect squares.
   Distinct-summand closure from {2,3} is N minus {1,4,6}; its synchronous
@@ -29,8 +29,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2422 -- operation fibres, summand closure, and twin-center ancestry
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 This theorem separates three objects that had repeatedly been blended:
 
@@ -512,3 +511,25 @@ The companion:
 Every truth-bearing check uses explicit exceptions and runs identically
 under optimized Python. The all-n elementary statements are proved above;
 the script supplies the separately labelled finite-exact scope (36).
+
+## 8. Independent hostile audit
+
+An independent implementation rebuilt the A014574 centre set and distinct
+parent fibres without importing the companion's ancestry routine. It found
+exactly `440,312` centres through `100,000,000`, hence `440,311` normalized
+values in `K`, and checked all `440,309` targets `k>=3`. Every target had a
+distinct earlier-parent representation; the final centre was `99,999,588`.
+It also independently located the first post-startup failure of the local
+predecessor rule at
+
+```text
+348=312+36,
+```
+
+and verified that the repaired parent fibre is nonempty there. Normal,
+optimized, and stored transcripts byte-match, and both recorded SHA-256
+hashes match the theorem header.
+
+The audit does **not** promote (37): distinct-parent ancestry beyond centre
+`100,000,000` remains open. This finite/all-n boundary is part of the
+audited statement.

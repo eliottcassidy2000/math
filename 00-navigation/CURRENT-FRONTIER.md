@@ -330,8 +330,8 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
 
 ### Established landmarks
 
-- Ordinary and centered polygonal supports have digamma clocks; square and
-  centered-octagonal confluences lead to trigamma forms.
+- Hostile-audited [THM-2422](../01-canon/theorems/THM-2422-operation-fibres-summand-closure-and-twin-center-ancestry.md) separates operation shadows from labelled fibres: strict closure from `{2,3}` is `N\{1,4,6}`, and synchronous growth is `M_t=27*2^(t-4)+1`.
+  Every twin centre through `10^8` has distinct earlier parents (FINITE-EXACT; all-centre extension OPEN). Polygonal supports have digamma/trigamma clocks.
 - The maximum-cyclic-triangle support mass is exactly
   `75/4 - 24*log(2)`.
 - The condensation-hazard support is `{5,6,...}` with profile
@@ -407,7 +407,7 @@ Classify profiles under support operations; study analytic continuation and auto
   root-free charts on `H_4`; THM-2386 removes common roots; hostile-audited
   THM-2389 gives its pole-jet system. Independently hostile-audited THM-2406
   forces that system onto the closed wall and finishes the inherited reduced degree-eighteen branch. Hostile-audited THM-2411
-  empties `A=0` in the inherited genuine nonsplit polynomial exact-square-prefix degree-22 branch; candidate THM-2423 empties `W`, while hostile-audited THM-2425/2428 empty the `C,D,E,B` axes in `A!=0`. Candidate THM-2429 closes the first support-two plane `C,W` by a complete genus-two/genus-one fibre classifier. The other mixed strata remain open. Split/even
+  empties `A=0` in the inherited genuine nonsplit polynomial exact-square-prefix degree-22 branch; hostile-audited THM-2423/2425/2428 empty all five one-sparse axes in `A!=0`. Candidate THM-2429 closes the first support-two plane `C,W` by a complete genus-two/genus-one fibre classifier; the other mixed strata remain open. Split/even
   short edges and integral `2`-adic order raising remain; THM-2206 blocks field-valued `C_2` Hasse repair. `JC(2)` and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”

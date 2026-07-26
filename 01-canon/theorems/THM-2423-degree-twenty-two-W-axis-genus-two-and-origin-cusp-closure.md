@@ -2,7 +2,7 @@
 id: THM-2423
 title: "Degree-twenty-two W-axis genus-two and invariant-origin cusp closure"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   In the open first-flux chart of the genuine nonsplit polynomial
   exact-square-prefix degree-twenty-two branch, the full coefficient axis
   B=C=D=E=0 is empty. For W!=0 the two fluxes give a squarefree genus-two
@@ -32,7 +32,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2423 -- the degree-twenty-two W-axis is empty
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2411 empties the divisor on which the first Faber flux loses its
 `Z=T^2` coefficient. This theorem begins the complementary chart. Its exact
@@ -410,3 +410,16 @@ use explicit exceptions and remain active under optimized Python.
 The computation verifies the exact algebra. The constant-field,
 coprime-divisor, rational-primitive, deck, and pole-valuation arguments are
 the proof above rather than delegated computer conclusions.
+
+## 8. Independent hostile audit
+
+An independent audit reconstructed both branches of the fixed `W`-axis.
+For `W!=0` it checked that `r=c_W(121v-7)/y^3` lies in `C(x)`, that the
+degree-five `L_5` is squarefree, and that Riemann--Hurwitz forces the
+genus-two trajectory to be constant. For `W=0` it verified the lossless
+divisor parametrization `y=h^2`, `T=t_0h^3`, the nonzero third-flux
+coefficient, the rational-primitive dichotomy, and the unique
+`-11 ell` pole in the full polynomial sidecar. It also checked the
+dependency graph, exact hashes, and normal/optimized byte match. No claim
+beyond the `B=C=D=E=0` axis of the inherited `mathcal A!=0` chart was
+used or promoted.
