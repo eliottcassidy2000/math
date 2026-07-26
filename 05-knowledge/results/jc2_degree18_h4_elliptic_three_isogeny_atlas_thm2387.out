@@ -1,0 +1,17 @@
+THM-2387 degree-18 H4 elliptic three-isogeny atlas exact companion
+Cardano norm: (7Q+St)(7Q-St)=-4P^3
+Cardano reconstruction: v=(2/1701)(z-4P/z)
+divisor ledger: four selected P-lifts, two double infinities, degree 0
+Tate discriminant: b^3(a^3-27b)
+Velu quotient discriminant: b(a^3-27b)^3
+Lattes x-map: (x^3+abx+b^2)/x^2
+j_X=lambda(lambda-24)^3/(lambda-27)
+j_E=lambda(lambda+216)^3/(lambda-27)^3
+binary-quartic convention: 27 Disc(H)=4I^3-J^2
+sector polynomial: degree 4; lambda=27 excluded when H is smooth
+sector counts: 8 oriented points; 4 projective lines
+Weil tournament edges: 0>infinity,1>infinity,-1>infinity,0>1,-1>0,1>-1
+Weil tournament score multiset: 0,2,2,2
+gauge: generator negation switches one star; zeta inversion reverses all
+controls: y^4-1 smooth with j=1728; (y^2-1)^2 rejected as singular
+conclusion: exact isogeny atlas, not an H4 obstruction
