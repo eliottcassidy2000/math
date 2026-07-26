@@ -1,0 +1,35 @@
+========================================================================
+PART 1 : d=3 control (THM-1310 fiber cubic)
+========================================================================
+[PASS] Res_s(C1,C2) == a * x^3 * N(x)
+[PASS] disc_x(N) == -4 * Q^2 * L
+   disc_x(N) = -4*(27*a*g**2 - 9*b*g + 8)**2*(27*a**2*g**2 - 18*a*b*g + 16*a + b**3*g - b**2)
+[PASS] (4-3bg)^3 + 27 g^2 L == Q^2
+[PASS] 108 a^2 L == (12a - b^2)^3 + E^2
+[PASS] L is not a factor of Q (L appears to FIRST power in disc)
+
+========================================================================
+PART 2 : tame d=4 control (P2-refutation Keller map, THM-2446 S5)
+========================================================================
+   det J = -2
+[PASS] det J == -2 (constant, Keller)
+   inverse: x = a + b*g/2 - g**3/2
+            y = 2*a**2 + 2*a*b*g - 2*a*g**3 - a*g + b**2*g**2/2 - b*g**4 - b*g**2/2 - b/2 + g**6/2 + g**4/2 + g**2/2
+            z = -a - b*g/2 + g**3/2 + g
+[PASS] F1(G) == a
+[PASS] F2(G) == b
+[PASS] F3(G) == g
+[PASS] G1(F) == x  (x in C[F1,F2,F3])
+[PASS] G2(F) == y  (y in C[F1,F2,F3])
+[PASS] G3(F) == z  (z in C[F1,F2,F3])
+   after y-elimination:  P(x,z) = -a - b*x/2 - b*z/2 + x**3/2 + 3*x**2*z/2 + 3*x*z**2/2 + x + z**3/2
+      deg_z P = 3  deg_x P = 3
+   x-eliminant: -a - b*g/2 + g**3/2 + x   deg_x = 1
+   z-eliminant: -a - b*g/2 + g**3/2 + g - z   deg_z = 1
+[PASS] x-eliminant is LINEAR in x (deg 1, field degree 1)
+[PASS] z-eliminant is LINEAR in z (deg 1, field degree 1)
+[PASS] x-eliminant == x - GX (monic linear, unique fiber point)
+[PASS] Res_z agrees with substitution eliminant (up to sign)
+[PASS] monic deg-1 integral equation for x over C[F]
+
+ALL CHECKS PASSED

@@ -1,0 +1,101 @@
+==============================================================================
+PART 1: depressed quartic disc, resolvent cubic, exact disc equality
+==============================================================================
+disc_z(z^4+p z^2+q z+r) = 16*p**4*r - 4*p**3*q**2 - 128*p**2*r**2 + 144*p*q**2*r - 27*q**4 + 256*r**3
+[PASS] disc quartic == 16p^4 r -4p^3 q^2 -128 p^2 r^2 +144 p q^2 r -27 q^4 +256 r^3
+[PASS] disc(f) == disc(g1)  [g1 = y^3-2py^2+(p^2-4r)y+q^2]
+[PASS] disc(f) == disc(g2)  [g2 = y^3+2py^2+(p^2-4r)y-q^2]
+[PASS] g2 has roots (z1+z2)^2,(z1+z3)^2,(z1+z4)^2
+[PASS] g1 has roots (zi+zj)(zk+zl) = -(zi+zj)^2
+[PASS] (z1+z2)^2-(z1+z3)^2 == (z1-z4)(z2-z3)  [e1=0]
+[PASS] disc(f) == prod_{i<j}(zi-zj)^2
+[PASS] general monic quartic: disc(F) == disc(resolvent R)
+[PASS] R2 has roots z1z2+z3z4 etc.
+[PASS] disc(f) == disc(R2)
+[PASS] 27*disc(f) == 4*I^3 - J^2, I=p^2+12r, J=2p^3+27q^2-72pr
+[PASS] g2(w-2p/3) == w^3 - (I/3) w - J/27
+[PASS] g1(w+2p/3) == w^3 - (I/3) w + J/27
+[PASS] Delta quasi-homog deg 12 for wt(p,q,r)=(2,3,4)
+[PASS] I quasi-homog deg 4
+[PASS] J quasi-homog deg 6
+
+==============================================================================
+PART 2: swallowtail {disc=0} in (p,q,r): strata, parametrizations, equations
+==============================================================================
+(z-s)^3(z+3s) = -3*s**4 + 8*s**3*z - 6*s**2*z**2 + z**4
+[PASS] edge coefficients (p,q,r)=(-6s^2, 8s^3, -3s^4)
+[PASS] Delta == 0 on edge
+[PASS] d Delta/dp == 0 on edge
+[PASS] d Delta/dq == 0 on edge
+[PASS] d Delta/dr == 0 on edge
+[PASS] I == 0 on edge
+[PASS] J == 0 on edge
+[PASS] 8p^3+27q^2 == 0 on edge
+[PASS] 8p^3+27q^2 == J + 6 p I  (so ideal (I,J) = (I, 8p^3+27q^2))
+edge elimination ideal generators (lex, s eliminated):
+    p**2 + 12*r
+    3*p*q**2 + 128*r**2
+    32*p*r - 9*q**2
+    27*q**4 + 4096*r**3
+[PASS] every elimination gen lies in ideal (I, 8p^3+27q^2)
+[PASS] I and 8p^3+27q^2 lie in the elimination ideal
+[PASS] (z^2-a)^2 == z^4 -2a z^2 + a^2  [(p,q,r)=(-2a,0,a^2)]
+[PASS] Delta == 0 on node curve
+[PASS] d Delta/dp == 0 on node curve
+[PASS] d Delta/dq == 0 on node curve
+[PASS] d Delta/dr == 0 on node curve
+[PASS] node equations: q==0 holds trivially; p^2-4r on param
+(z-c)^4 = c**4 - 4*c**3*z + 6*c**2*z**2 - 4*c*z**3 + z**4    depressed (z^3 coeff -4c = 0) forces c=0 -> f=z^4, (p,q,r)=(0,0,0)
+gcd((z^2+a)^2, d/dz) = a + z**2  -> degree 2 with distinct roots +/-sqrt(-a) for a!=0: A1A1, not A3
+[PASS] (z^2+a)^2 lies on node curve: q=0, p^2-4r with p=2a,q=0,r=a^2
+[PASS] (I)*(q) in radical of Jacobian ideal (Delta,grad Delta)
+[PASS] (I)*(p^2-4r) in radical of Jacobian ideal (Delta,grad Delta)
+[PASS] (8p^3+27q^2)*(q) in radical of Jacobian ideal (Delta,grad Delta)
+[PASS] (8p^3+27q^2)*(p^2-4r) in radical of Jacobian ideal (Delta,grad Delta)
+[PASS] edge point P0=(-6,8,-3): order-0 term
+[PASS] edge point P0: order-1 term
+edge point P0: order-2 term (quadratic form in direction) = -6912*(a1 + a2 + a3)**2
+[PASS] edge tangent (-1,2,-1) in kernel of 2-jet
+factor_list of 2-jet: (-6912, [(a1 + a2 + a3, 2)])
+[PASS] node point P1=(-2,0,1): order-0 term
+[PASS] node point P1: order-1 term
+node point P1: order-2 term = 256*(a1 - a2 + a3)*(a1 + a2 + a3)
+origin: mult(Delta) = 3 , tangent cone = 256*r**3
+[PASS] Delta|_{q=0} == 16 r (p^2-4r)^2
+
+==============================================================================
+PART 3: quadrisection modulus vs trisection
+==============================================================================
+[PASS] 8T^4-8T^2+1 == ChebyshevT_4(T)
+[PASS] cos(4 theta) == 8cos^4-8cos^2+1
+disc_T(8T^4-8T^2+1-m) = -131072*(m - 1)*(m + 1)**2
+[PASS] disc_T(8T^4-8T^2+1-m) == 2^17 (1-m)(1+m)^2
+disc_T(4T^3-3T-m) = -432*(m - 1)*(m + 1)
+[PASS] disc_T(4T^3-3T-m) == -432(m^2-1)
+disc_T(T^3-3T-2m)  [T=2cos theta norm] = -108*(m - 1)*(m + 1)
+[PASS] disc_T(T^3-3T-2m) == -108(m^2-1)
+disc_T(T^4-4T^2+2-2m) [T=2cos theta norm] = -2048*(m - 1)*(m + 1)**2
+[PASS] disc_T(T^4-4T^2+2-2m) == 2^11 (1-m)(1+m)^2
+[PASS] T=2cos norm: (2T'^... ) chebyshev shift: (T^4-4T^2+2).subs(T,2x)==2*Cheb4(x)
+fiber at m=+1: 8*T**2*(T - 1)*(T + 1)
+fiber at m=-1: 2*(2*T**2 - 1)**2
+d=3 fiber at m=+1: (T - 1)*(2*T + 1)**2
+d=3 fiber at m=-1: (T + 1)*(2*T - 1)**2
+disc_u(8u^2-8u+1-m) = 32*(m + 1)
+[PASS] inner cover disc == 32(1+m)
+[PASS] Delta on Chebyshev path == (1-m)(1+m)^2/2
+[PASS] scaling law: disc(8*monic) = 8^6 * disc(monic)
+cusp-edge test on path: 8p^3+27q^2 = -8  (never 0 -> path avoids A2 edge)
+A3 test on path: p = -1  != 0 -> path never hits swallowtail vertex
+node-curve crossing: q=0 always; p^2-4r = m/2 + 1/2  -> vanishes only at m=-1
+A1-sheet crossing: r = 1/8 - m/8  -> vanishes only at m=+1
+grad Delta at (-1,0,0) = [0, 0, 16]  (nonzero -> smooth A1 sheet, transversal crossing)
+
+==============================================================================
+PART 4: exact mod-squares statement
+==============================================================================
+g2(4w)/64 = p**2*w/16 + p*w**2/2 - q**2/64 - r*w/4 + w**3
+[PASS] disc(g2(4w)/64) * 4^6 == disc(g2)  [square factor (4^3)^2]
+[PASS] disc(g2(lam y)/lam^3) * lam^6 == disc(g2)
+
+FAILED CHECKS: NONE

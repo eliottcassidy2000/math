@@ -1,0 +1,29 @@
+--- MAP III: D4 vs C4 vs V4 (biquadratic z^4 + p z^2 + r, p=-v/u, r=w/u) ---
+r = w/u nonsquare over C(u,v,w): True
+r(p^2-4r) = (-4*u*w**2 + v**2*w)/u**3  nonsquare over C(u,v,w): True
+=> quartic irreducible (linear in w) + r nonsquare + r(p^2-4r) nonsquare => Gal = D4
+
+--- MAP II: resolvent cubic irreducibility over C (linear-in-w gcd certificate) ---
+Rcl = A + w*B;  B = 4*T*u**2 + 8*u*v + 1
+gcd(A, B) = 1  => resolvent irreducible over C(u,v,w): True
+
+--- MAP II: branch locus certificate ---
+det J = -4*x*y*z - 2*x*z**2 + y
+critical surface: y = -2*x*z**2/(4*x*z - 1)  (covers all of {detJ=0}: 1-4xz=0 forces detJ=-z/2 != 0)
+Delta(F(critical point)) simplifies to: 0
+u(F) on critical surface = x (not identically 0), w(F) = -2*x*z**3*(2*x*z - 1)/(4*x*z - 1)**2 (not identically 0) => u, w from elimination are extraneous; branch = V(Delta)
+Delta irreducible over QQ: True
+critical set is the irreducible rational graph y=2xz^2/(1-4xz) => image closure irreducible
+
+--- MAP I: branch locus over C ---
+ x = I * z  ->  F = [y - 2*z**2, I*z**2, y]   eliminates to u - w - 2i v = 0 check: 2*z**2*(-1 - I)
+ x = -I * z  ->  F = [y - 2*z**2, -I*z**2, y]   eliminates to u - w + 2i v = 0 check: 2*z**2*(-1 - I)
+=> branch locus = {(u-w)^2 + 4v^2 = 0}  (the pair of conjugate planes u-w=±2iv)
+fiber over (5,0,1) (on {v=0}, off branch):
+[{x: -2, y: 1, z: 0}, {x: 0, y: 1, z: -2*I}, {x: 0, y: 1, z: 2*I}, {x: 2, y: 1, z: 0}]
+detJ at those points: [-8, 8, 8, -8]
+=> 4 distinct unramified points though disc_z(5,0,1)=0: v^2 factor = z-primitive-element defect, NOT branch
+
+--- swallowtail-normalized master identities (L = u = Jelonek polynomial) ---
+Map III: u^5 * disc(monic quartic) = 16*w*(4*u*w - v**2)**2
+Map II : u^9 * disc(monic quartic) = True (equals Delta)

@@ -179,6 +179,18 @@ swallowtail hypersurface ("A_3 at both ends"); (P3) the `S_4 > V_4`
 tower matches resolvent-cubic / fold-double-cover layers; (P4) a
 Veronese-projection generative ansatz for the staircase.
 
+**(P1) update (S132):** the classical layer is now PROVED as
+THM-2455 (`27 Delta_4 = 4I^3 - J^2`; exact resolvent-disc equality,
+unit 1; ideal-exact swallowtail strata), which also RETIRES the
+"A_3 at both ends" slogan (the quadrisection pencil provably avoids
+the cuspidal edge; endpoints A1 and Z/2-symmetric A1A1) and the
+naive `unit x square x Jelonek` disc shape (`mu` is a non-unit on
+explicit degree-4 2-jet maps). The corrected hunt target is
+HYP-9027's odd-exponent Jelonek law, with blocking hypothesis G1:
+no field-degree-4 2-jet KELLER map is known (known 2-jet Keller
+examples have field degree 1), so the Keller-restricted (P1) has an
+empty verified domain until G1 is settled.
+
 The former prediction (P2), that `D5=D4=0` plus the alpha-part of
 `D3` forces `[w_x,w_y,w]=0`, is **REFUTED twice over, concurrently**
 (codex THM-2451 and kind-pasteur S131b, same day, independent code
