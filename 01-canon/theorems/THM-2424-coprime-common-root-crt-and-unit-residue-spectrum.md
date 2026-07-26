@@ -208,12 +208,14 @@ positive-measure parent set, some genuine physical frequency in the
 class `m mod N` survives. If `m` is a unit modulo `N`, every such lift
 is coprime to `N`.
 
-There is also a bounded lift for rational step packets. Suppose `F` is
-a finite step function and, in the progression `m+Nn`, its oriented
-jumps group into `L_m` nonzero endpoint nodes. Integration by parts
-gives a nonzero exponential sequence with at most `L_m` nodes. A
-Vandermonde sequence cannot vanish on `L_m` consecutive indices.
-Choosing the centered block therefore gives some surviving lift with
+There is also a bounded lift for rational step packets in every
+nonzero residue class `m mod N` carrying positive energy in (15).
+Suppose `F` is a finite step function and, in the progression `m+Nn`,
+its oriented jumps group into `L_m` nonzero endpoint nodes. Integration
+by parts gives a nonzero exponential sequence with at most `L_m`
+nodes. A Vandermonde sequence cannot vanish on `L_m` consecutive
+indices. Choosing the centered block therefore gives some surviving
+lift with
 
 ```text
 0<|n_physical|
