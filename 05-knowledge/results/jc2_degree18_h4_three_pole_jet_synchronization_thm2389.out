@@ -1,0 +1,15 @@
+theorem=THM-2389
+status=PROOF-CANDIDATE+VERIFIED-EXACT+AWAITING-INDEPENDENT-AUDIT
+clean_cubic=w^3+12P*w+56Q
+slope_polynomial=alpha^3+2940alpha+30184
+slope_discriminant=-126247730112
+pole_coefficients_checked=0,1,2,3,4,5,6
+parameter_reconstructions=B,C,D,W
+formal_branch_packets=5
+hermite_kernel_packets=3
+hermite_kernel=span(d^2)
+degree18_divisibility_packets=3
+degree18_jet_kernel=span(d^6)
+terminal_lock=sixth-order-scalar
+h4_status=OPEN
+all_checks=PASS

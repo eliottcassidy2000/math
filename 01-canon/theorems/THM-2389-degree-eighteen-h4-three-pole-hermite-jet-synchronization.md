@@ -28,6 +28,10 @@ script: 04-computation/jc2_degree18_h4_three_pole_jets_thm2389.py
 output: 05-knowledge/results/jc2_degree18_h4_three_pole_jets_thm2389.out
 script_sha256: fe462d935d743a81606eb7edfdca27bea5f9b0e50f8e9378b6667a6e81b04694
 output_sha256: 225723bd7b8c6ad5e0f19832eb8e2958798654e4c4966f43cbd7f3e2273d4051
+secondary_script: 04-computation/jc2_degree18_h4_three_pole_jet_synchronization_thm2389.py
+secondary_output: 05-knowledge/results/jc2_degree18_h4_three_pole_jet_synchronization_thm2389.out
+secondary_script_sha256: abc8a0f9ce1095230e25f24d1bbb1974a85868c87a2244f57914ed6d51a363ad
+secondary_output_sha256: 821fc5e5c24512f6bb7edf79cbe9283d3326b007af63139b799fc0d71310766c
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -485,7 +489,79 @@ not prove that the nine equations in (31) are empty, restore the Keller
 one-form or flux sidecars, close degree eighteen, or prove `JC(2)` or
 `DC(2)`.
 
-## 7. Exact companion
+## 7. Coordinate-free binary-form restatement
+
+The normalization `0,1,infinity` is computationally economical, but the
+mechanism does not depend on it. Put
+
+```text
+w=(1701/2)v.
+```
+
+Then the depressed equation is
+
+```text
+w^3+12P(y)w+56Q(y)=0.                              (32)
+```
+
+On an arbitrary coordinate `(X:Z)` of the rational normalization write
+
+```text
+y=n/d,                   w=r/d^2,                  (33)
+```
+
+with coprime binary cubics `n,d`, squarefree `d`, and a binary sextic
+`r`. The three roots of `d` are the three labelled infinity poles.
+Their rescaled slopes
+
+```text
+alpha_i=(1701/2)s_i
+```
+
+are the distinct roots of
+
+```text
+alpha^3+2940alpha+30184=0,
+
+Disc=-126247730112.                                (34)
+```
+
+Near a pole use the intrinsic germs
+
+```text
+x=d/n=1/y,                 a=r/n^2=w/y^2.
+```
+
+Equation (32), after multiplication by `x^6`, has no linear `x` term.
+Thus
+
+```text
+a(0)=alpha_i,                 a'(0)=0.              (35)
+```
+
+For a fixed pole labelling, the six confluent conditions (35) put `r`
+on one affine line. Indeed, the difference of two solutions has a
+double zero at every root of squarefree `d`, hence is exactly
+
+```text
+r-r_tilde=tau d^2.                                 (36)
+```
+
+Likewise, after the order-two through order-five reconstructions agree,
+the homogenized degree-eighteen residual has order at least six at all
+three roots of `d`. It is therefore exactly
+
+```text
+lambda d^6.                                        (37)
+```
+
+The single sixth-order lock kills `lambda`. Equations (36)--(37) are
+the coordinate-free content of the two kernel statements
+`span(B_2^2)` and `span(B_2^6)` above. They also identify precisely what
+the `S_3` quotient forgets: the bijection between the three poles and
+the three roots of (34), not any intrinsic tournament orientation.
+
+## 8. Exact companions
 
 The dependency-free exact companion:
 
@@ -516,3 +592,22 @@ Both transcripts must match
 byte-for-byte after LF normalization. Every executable check raises
 explicitly under optimized Python. Independent audit and hash attachment
 are pending before status promotion.
+
+The secondary coordinate-free companion independently verifies
+(32)--(37), derives the triangular reconstruction formulas after the
+integer rescaling, checks `span(d^2)` and `span(d^6)` on exact confluent
+packets, and reconstructs formal branches in
+`Q[alpha]/(alpha^3+2940alpha+30184)`. Run
+
+```bash
+python3 04-computation/jc2_degree18_h4_three_pole_jet_synchronization_thm2389.py
+python3 -O 04-computation/jc2_degree18_h4_three_pole_jet_synchronization_thm2389.py
+```
+
+Both transcripts must byte-match
+
+```text
+05-knowledge/results/jc2_degree18_h4_three_pole_jet_synchronization_thm2389.out
+```
+
+after LF normalization.
