@@ -119,6 +119,27 @@ def main():
     require(not source_flat(basis_profile), "K-valued control is flat")
     require(source_charged_all(basis_profile), "K-valued control lost a colour")
 
+    # The deletion-branch anchor: z_0=0 and sum z_ell=u!=0.  Equality in
+    # the sharp Cauchy bound occurs at z_1=...=z_6=u/6.
+    anchored = (k13_rational(0),) + (k13_rational(Fraction(1, 6)),) * 6
+    require(source_charged_all(anchored), "anchored profile lost a source colour")
+    anchored_energy = (
+        Fraction(1, P7) * 6 * Fraction(1, 36) - Fraction(1, 49)
+    )
+    require(anchored_energy == Fraction(1, 294), "anchored energy mismatch")
+    target_floor = Fraction(27, 28561)
+    mixed_floor = target_floor / 294
+    require(
+        mixed_floor == Fraction(9, 2798978),
+        "mixed source/target floor mismatch",
+    )
+    require(
+        mixed_floor / 72 == Fraction(1, 4732 * 4732),
+        "joint maximum-mode denominator mismatch",
+    )
+    eligible_full_floor = mixed_floor / (169 * 12 * 13)
+    require(eligible_full_floor > 0, "eligible full-table floor vanished")
+
     # Rational finite-table hostile: target is charged, source phase is flat.
     target = (Fraction(1),) + (Fraction(2),) * 12
     flat_source_rows = tuple(
@@ -131,6 +152,20 @@ def main():
         )
         require(source_flat(profile), f"source hostile nonflat at s={s}")
     require(target_energy(target) == Fraction(12, 169), "target energy mismatch")
+
+    # A stronger flat-source hostile retaining H(t,s,t)=0 and all nonzero
+    # deep colours.  H is supported on r=t+1, so the diagonal is empty.
+    diagonal_target = tuple(
+        Fraction(0) if s == 0 else Fraction(6, 7) for s in range(P13)
+    )
+    require(
+        target_charged_all(diagonal_target),
+        "diagonal hostile lost a target colour",
+    )
+    for s in range(P13):
+        for t in range(P13):
+            r = (t + 1) % P13
+            require(r != t, f"diagonal hostile hit r=t at {t}")
 
     # Smooth one-circle hostile.  For eps=delta=1/2, A_s B has Fourier
     # support {-2,-1,0,1,2}; d(Nx-ell/7) has support N*Z.  N>=3 leaves
@@ -178,7 +213,11 @@ def main():
     print("C7 all-or-flat over symbolic Q(zeta13)=PASS")
     print("seven shifted dangers partition one a.e.=PASS")
     print("K-valued nonflat control fires all six source colours=PASS")
+    print("anchored z0=0 sharp source energy=1/294")
+    print("joint mixed floor=9/2798978")
+    print("some joint mode floor denominator=4732")
     print("finite flat-source/nonflat-target hostile target energy=12/169")
+    print("flat-source diagonal-zero all-target/deep hostile=PASS")
     print("smooth hostile eps=delta=1/2, N>=3")
     print("smooth hostile source profile independent of ell=PASS")
     print("smooth hostile target b=+/-1 amplitude=1/112")

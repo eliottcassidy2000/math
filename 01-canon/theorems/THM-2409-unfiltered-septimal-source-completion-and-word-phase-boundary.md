@@ -5,14 +5,17 @@ status: >
   PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. In the
   source-deletion branch of THM-2407 with terminal word Q=1, translating
   the missing source danger through C_7 partitions the source-deleted
-  packet exactly. For any fixed nonzero C_13 target/deep coefficient,
-  the seven inserted-source coefficients lie in Q(zeta_13), sum to the
-  original coefficient, and are either flat or have every six nonzero
-  septimal Fourier colours. This follows because Phi_7 is irreducible
-  over Q(zeta_13). In the nonflat branch each joint colour supplies a
-  source residue nonzero mod 7; in the flat branch only source residue
-  zero survives. Flatness is sharp even for a nonflat target current and
-  strictly positive even base factors. With a genuine delayed word,
+  packet exactly. For every nonzero target colour b, the seven
+  inserted-source target coefficients lie in Q(zeta_13), sum to the
+  nonzero deletion coefficient, and have anchored value zero at the
+  original owner phase. Since Phi_7 is irreducible over Q(zeta_13),
+  every six nonzero septimal source colours therefore survives jointly
+  with every b. Source-colour-retained diagonal cancellation then
+  produces a nonzero deep colour and an exact source-residue-refined
+  fixed-frequency triangle with gcd(m,91)=1. The joint mixed energy is
+  at least 9 rho^2/2798978. Without the anchored owner zero, flatness is
+  sharp even for a nonflat target current and strictly positive even
+  base factors. With a genuine delayed word,
   R=13^k is a unit mod 7, so the word's source factor must be shifted
   too; then the danger partition no longer reconstructs the fixed-word
   deletion current. No terminal-word repair, all-91-unit address, row
@@ -28,8 +31,8 @@ related:
   - THM-2410-full-coordinate-projector-local-gram-and-integrated-phase-boundary
 script: 04-computation/lrc14_unfiltered_septimal_source_completion_thm2409.py
 output: 05-knowledge/results/lrc14_unfiltered_septimal_source_completion_thm2409.out
-script_sha256: 6af42ee995bf31d5cd3d71ea85eb0ec7fa252eccd4081840485c406844f6c380
-output_sha256: 93f7c06f0bc30dbbf3be25cfda86f90a2639c711f6a3f15aae2b23d34b50215f
+script_sha256: 0f93055b47514761a7d514b45b863e4f9042d7b5cff4bfd6bfdcb2b71ffdc46e
+output_sha256: 6c6a575450f2d0139429fc1161c98758732dda9fbd191a6a3a56c5d4885c442d
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -39,9 +42,9 @@ hash_basis: working-tree bytes (LF)
 
 THM-2407 leaves one sharply typed alternative. Either the genuine
 positive source owner carries all target colours, or the packet with the
-stationary source factor deleted does. In the second branch one may try
-to restore the missing source coordinate by translating its danger
-factor through seven phases.
+stationary source factor deleted does. In the second branch, translating
+the missing danger through seven phases restores a genuine nonzero
+septimal source residue.
 
 With no terminal word this operation is exact. The seven translated
 dangers partition one, so their joint currents sum to the
@@ -49,14 +52,14 @@ source-deletion current. Cyclotomic disjointness then gives a complete
 alternative:
 
 ```text
-source phase nonflat
-  -> all six nonzero septimal source colours survive;
-
-source phase flat
-  -> only septimal source residue zero survives.             (1)
+every b!=0 and every kappa!=0
+  -> a joint source/target coefficient survives
+  -> some nonzero deep colour and exact 91-unit deep leg.     (1)
 ```
 
-The flat branch is real. A delayed word does not remove it for free:
+The anchored zero of the original owner phase is load-bearing. Without
+it, a flat source profile is real. A delayed word does not preserve the
+positive argument for free:
 the word is target-neutral modulo thirteen but active modulo seven, so
 a lawful full source twist must move the word factor too and loses the
 partition identity.
@@ -70,6 +73,15 @@ word
 Q=1.
 ```
 
+Put
+
+```text
+rho=delta=mu(S)>0,
+```
+
+where `S` is the clean set used by THM-2403. For `Q=1`, this is exactly
+the overlap parameter in THM-2407.
+
 Let `U_(s,t)` be its source-deleted present packet and retain the same
 deep probe
 
@@ -77,11 +89,11 @@ deep probe
 Delta_r(x)=d(c_3x-r/13).                             (2)
 ```
 
-THM-2407 supplies, for each prescribed first-target colour `b!=0`,
-some `alpha!=0` and `tau` such that
+Write the target marginal of `U` as `u_s`. In the deletion branch,
+THM-2407 proves, for every `b!=0`,
 
 ```text
-B_U(alpha,b,tau)!=0.                                (3)
+uhat(b)=(1/13)sum_s u_s zeta_13^(bs)!=0.            (3)
 ```
 
 For the omitted source label `j`, put
@@ -105,27 +117,34 @@ product is again `d_(j,ell)`. Define
 
 ```text
 H_ell(r,s,t)
- =integral_T U_(s,t)(x)d_(j,ell)(x)Delta_r(x) dx,  (6)
+ =integral_T U_(s,t)(x)d_(j,ell)(x)Delta_r(x) dx,   (6)
 
-C_ell
- =1/13^3 sum_(r,s,t)
-    H_ell(r,s,t)zeta_13^(alpha r+b s+tau t).        (7)
+z_ell(b)
+ =1/13 sum_s sum_r H_ell(r,s,0)zeta_13^(bs).        (7)
 ```
 
-Equations (5)--(7) give the exact coefficient identity
+Equations (5)--(7) give
 
 ```text
-sum_ell C_ell=B_U(alpha,b,tau)!=0.                  (8)
+sum_ell z_ell(b)=uhat(b)!=0.                        (8)
+```
+
+At `ell=0`, the inserted factor is the original positive source-owner
+danger. The defining branch of THM-2407 says that this owner's target
+marginal is flat. Hence
+
+```text
+z_0(b)=0                    for every b!=0.         (9)
 ```
 
 All interval breakpoints in (6) are rational. Therefore every table
-entry is rational and
+entry is rational and, for fixed `b`,
 
 ```text
-C_ell in K:=Q(zeta_13).                             (9)
+z_ell(b) in K:=Q(zeta_13).                         (10)
 ```
 
-No Poisson idempotence is used: (5)--(8) are indicator-boundary
+No Poisson idempotence is used: (5)--(10) are indicator-boundary
 identities, after which the existing Abel boundary theorem applies.
 
 ## 2. Why `Phi_7` remains irreducible
@@ -143,64 +162,132 @@ intersection would have to ramify in both fields, hence divide both
 Consequently
 
 ```text
-[K(zeta_7):K]=6,                                   (10)
+[K(zeta_7):K]=6,                                   (11)
 ```
 
 and `Phi_7=1+X+...+X^6` is irreducible over `K`.
 
-Define the normalized septimal transform
+For each fixed `b!=0`, define the normalized joint source/target
+transform
 
 ```text
-Ctilde(e)=(1/7)sum_(ell in F_7)C_ell zeta_7^(e ell).
-                                                               (11)
+Z(kappa,b)
+ =(1/7)sum_(ell in F_7)z_ell(b)zeta_7^(kappa ell). (12)
 ```
 
-If `Ctilde(e)=0` for one `e!=0`, then the degree-at-most-six
+If `Z(kappa,b)=0` for one `kappa!=0`, then the degree-at-most-six
 polynomial
 
 ```text
-P(X)=sum_(ell=0)^6 C_ell X^ell
+P_b(X)=sum_(ell=0)^6 z_ell(b)X^ell
 ```
 
 is divisible by `Phi_7` over `K`. Hence all seven coefficients are
-equal. The converse is immediate. Thus:
+equal. Equation (9) would make them all zero, contradicting (8).
+Therefore
 
 ```text
-(C_ell) nonflat
-  iff Ctilde(e)!=0 for every e!=0;                 (12)
-
-(C_ell) flat
-  iff Ctilde(e)=0 for every e!=0.                  (13)
+Z(kappa,b)!=0
+  for every kappa!=0 and every b!=0.               (13)
 ```
 
-Equation (8) also gives
+The trivial source colour also survives:
 
 ```text
-Ctilde(0)=B_U(alpha,b,tau)/7!=0.                   (14)
+Z(0,b)=uhat(b)/7!=0.                               (14)
 ```
 
-This proves the alternative (1) globally, not colour by colour.
+This proves (1). The conclusion holds separately for every prescribed
+target colour, while one global anchored-zero argument handles all six
+source colours.
+
+There is also an exact energy floor. Parseval gives
+
+```text
+sum_kappa |Z(kappa,b)|^2
+ =(1/7)sum_ell |z_ell(b)|^2.
+```
+
+Under `z_0=0` and `sum_ell z_ell=uhat(b)`, Cauchy is sharp at
+`z_1=...=z_6=uhat(b)/6`. Removing the trivial source colour yields
+
+```text
+sum_(kappa!=0)|Z(kappa,b)|^2
+ >=|uhat(b)|^2/294.                                (15)
+```
+
+Let
+
+```text
+D_mix=sum_(b!=0,kappa!=0)|Z(kappa,b)|^2.
+```
+
+THM-2407's deletion-branch target-energy floor now gives
+
+```text
+D_mix>=9rho^2/2798978,                             (16)
+
+max_(b!=0,kappa!=0)|Z(kappa,b)|>=rho/4732.         (17)
+```
 
 ## 3. Exact relation-address meaning
 
-The variable `ell` is the lawful coordinate translation of the source
-present and bare factors in THM-2334. Therefore a nonzero joint
-coefficient
+Retain the source character in the full table:
 
 ```text
-Ctilde(e),            e!=0 mod 7,                  (15)
+B(kappa,alpha,b,tau)
+ =1/(7*13^3) sum_(ell,r,s,t)
+    H_ell(r,s,t)
+    zeta_7^(kappa ell)
+    zeta_13^(alpha r+b s+tau t),                   (18)
+
+J(kappa,alpha,b)=sum_tau B(kappa,alpha,b,tau).     (19)
 ```
 
-selects source relation residue `e` modulo seven. Expanding the fixed
-target/deep coefficient as in THM-2365 supplies an exact frequency
-triangle with:
+Equations (7), (12), and (19) give
+
+```text
+J(kappa,0,b)=Z(kappa,b)/13!=0.                     (20)
+```
+
+Every `H_ell` retains the moving deepest-safe factor, so
+`H_ell(t,s,t)=0`. At `t=r=0`, source-Fourier-retained diagonal
+cancellation gives
+
+```text
+sum_alpha J(kappa,alpha,b)=0.                      (21)
+```
+
+Thus, for every `kappa!=0,b!=0`, some `alpha!=0` and `tau` satisfy
+
+```text
+B(kappa,alpha,b,tau)!=0.                           (22)
+```
+
+The variable `ell` is the lawful coordinate translation of the source
+present and bare factors in THM-2334. Hence (22) selects source relation
+residue `kappa` modulo seven. The absolutely convergent expansion gives
+a **source-residue-refined fixed-`(N,m)` coefficient** with:
 
 ```text
 first-target colour b!=0 mod 13,
 
-source residue e!=0 mod 7,
+source residue kappa!=0 mod 7,
 
-deep multiplier gcd(m,91)=1.                       (16)
+deep multiplier gcd(m,91)=1.                       (23)
+```
+
+Here `m=alpha mod 13`, and the centered deep coefficient kills every
+nonzero `7|m`. The corresponding unrefined fixed-`(N,m)` coefficient may
+cancel after source residues are summed; (22) retains the residue.
+
+Quantitatively, Cauchy first distributes each `J(0)` cancellation over
+the twelve nonzero `alpha`, and then each `J` over thirteen `tau`.
+Therefore the eligible full-table energy satisfies
+
+```text
+sum_(kappa,b,alpha!=0,tau)|B|^2
+ >=D_mix/(169*12*13).                              (24)
 ```
 
 This does not say that the source coordinate is nonzero modulo
@@ -208,18 +295,12 @@ thirteen, nor that every other relation coordinate is a unit modulo
 seven. It is a septimal source completion of one unfiltered aggregate,
 not an all-`91`-unit relation address.
 
-In the flat branch every inserted-source coefficient equals
+## 4. The anchored zero is load-bearing
 
-```text
-C_ell=B_U(alpha,b,tau)/7,                           (17)
-```
-
-and the whole nonzero source spectrum vanishes. The unfiltered target
-triangle remains alive only on source residue zero.
-
-## 4. Two sharp flat-source hostiles
-
-Flatness cannot be removed from (1) by nonnegativity.
+The positive conclusion uses both parts of the deletion branch:
+`z_0(b)=0` and `sum_ell z_ell(b)!=0`. If the anchored owner zero is
+discarded, flatness remains possible despite nonnegativity, target
+charge, and even diagonal-zero structure.
 
 ### 4.1 Exact rational finite table
 
@@ -238,12 +319,24 @@ It has all twelve nonzero target colours and exact charged energy
 Put
 
 ```text
-C_ell(s)=h_s/7              for every ell.          (18)
+C_ell(s)=h_s/7              for every ell.          (25)
 ```
 
 Then the source profile is perfectly flat for every target cell, while
-the target current is nonflat. This is an exact nonnegative rational
-finite-projector hostile.
+the target current is nonflat. Here `C_0` has the same nonzero target
+charge, so the anchored-zero hypothesis fails exactly.
+
+One may also retain the deep diagonal. Put
+
+```text
+M_(ell,s)=(6/7)1_(s!=0),
+
+H_ell(r,s,t)=M_(ell,s)1_(r=t+1).
+```
+
+This nonnegative rational table is source-flat, diagonal-zero, and
+fires every `b!=0` together with every nonzero deep `alpha` at
+`tau=-alpha`. Thus diagonal cancellation alone does not replace (9).
 
 ### 4.2 Positive even one-circle control
 
@@ -254,11 +347,11 @@ epsilon=delta=1/2,
 
 A_s(x)=1+epsilon cos(2pi x-2pi s/13),
 
-G(x)=1+delta cos(2pi x),                             (19)
+G(x)=1+delta cos(2pi x),                            (26)
 ```
 
 and use the source danger `d(Nx-ell/7)` with any integer `N>=3`.
-The base functions in (19) are strictly positive, and their unshifted
+The base functions in (26) are strictly positive, and their unshifted
 forms are real and even.
 
 The Fourier support of `A_sG` lies in
@@ -272,17 +365,17 @@ meets. Exact integration gives
 
 ```text
 integral_T A_s(x)G(x)d(Nx-ell/7)dx
- =1/7 (1+1/8 cos(2pi s/13)),                        (20)
+ =1/7 (1+1/8 cos(2pi s/13)),                       (27)
 ```
 
 independently of `ell`. Its target modes `b=+1,-1` have amplitude
 
 ```text
-1/112.                                              (21)
+1/112.                                             (28)
 ```
 
 Thus even a strictly positive one-circle target current can be
-septimally flat.
+septimally flat when its original source phase is not pinned to zero.
 
 ## 5. Why a real terminal word breaks the partition
 
@@ -296,7 +389,7 @@ Modulo thirteen, `R` is zero and the word is target-neutral. Modulo
 seven,
 
 ```text
-R=(-1)^k mod 7,                                     (22)
+R=(-1)^k mod 7,                                    (29)
 ```
 
 so its source factor is active.
@@ -306,7 +399,7 @@ A full source-coordinate twist of the THM-2334 current must translate:
 ```text
 the left present source factor,
 the bare right source factor,
-and the transported-word source factor              (23)
+and the transported-word source factor             (30)
 ```
 
 with the latter moving by `R ell/7`. If the word is held fixed, (5)
@@ -316,10 +409,10 @@ coordinate. If the word is shifted lawfully, its factor becomes
 `Q_ell` and only
 
 ```text
-sum_ell d_(j,ell)Q_ell                              (24)
+sum_ell d_(j,ell)Q_ell                             (31)
 ```
 
-appears. There is no identity equating (24) with the fixed-word
+appears. There is no identity equating (31) with the fixed-word
 source-deletion packet.
 
 The failure is already exact on `C_7`. Let
@@ -337,7 +430,7 @@ sum_ell D_ell W_0=W_0.
 For the lawfully co-shifted words `W_ell=1-D_ell`,
 
 ```text
-sum_ell D_ell W_ell=0.                              (25)
+sum_ell D_ell W_ell=0.                             (32)
 ```
 
 Thus the active word can destroy the partition completely.
@@ -348,17 +441,18 @@ On the THM-2407 deletion branch:
 
 ```text
 Q=1:
-  every nonzero target/deep triangle is either
-  source-flat or carries all six nonzero C_7 source colours;
+  every b!=0 and kappa!=0 has a joint source/target mode,
+  and diagonal cancellation lands a nonzero deep colour;
 
 Q a real delayed word:
   the complete source twist is a coupled present/word convolution,
-  not the unfiltered partition.                    (26)
+  not the unfiltered partition.                    (33)
 ```
 
-The next useful sidecar must therefore prove nonflatness from physical
-endpoint geometry, or control the mod-seven coupled word convolution in
-one common phase gauge. A lone source danger probe is insufficient.
+The next useful sidecar must control the mod-seven coupled word
+convolution in one common phase gauge. A lone source danger probe is
+decisive for `Q=1` but is not a full-current source twist once the word
+is active.
 
 No terminal word is restored, no all-`91`-unit address is produced, no
 scalar row is excluded, the ledger remains `165`, and LRC(14) remains
@@ -373,8 +467,10 @@ only. It:
 - exhausts all `2^7=128` Boolean source profiles;
 - verifies the all-or-flat reduction over a symbolic
   `Q(zeta_13)` coefficient basis;
-- checks the rational finite-table and smooth low-frequency flat
-  hostiles; and
+- verifies the sharp anchored-source energy `1/294`, the mixed floor
+  `9/2798978`, and the `4732` max-mode denominator;
+- checks the rational finite-table, diagonal-zero, and smooth
+  low-frequency flat hostiles; and
 - verifies the fixed-word partition and its complete failure under the
   coupled active-word shift.
 
