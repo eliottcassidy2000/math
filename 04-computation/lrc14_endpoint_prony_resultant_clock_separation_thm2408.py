@@ -326,7 +326,7 @@ def main():
     print(f"centered_m13_length5_bound: {centered_bound}")
     print(f"thm2403_one_branch_energy: {thm2403_energy}*rho_R^2")
     print(
-        "thm2403_one_branch_amplitude: "
+        "thm2403_one_branch_transform_amplitude: "
         f"1/{thm2403_amplitude_denominator}*rho_R"
     )
 

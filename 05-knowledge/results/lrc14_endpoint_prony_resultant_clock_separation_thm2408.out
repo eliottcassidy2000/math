@@ -13,4 +13,4 @@ positive_hostile_energy: 3/28561
 endpoint_hostile_nonzero_residues: 12
 centered_m13_length5_bound: 38
 thm2403_one_branch_energy: 9/1003976272*rho_R^2
-thm2403_one_branch_amplitude: 1/456976*rho_R
+thm2403_one_branch_transform_amplitude: 1/456976*rho_R

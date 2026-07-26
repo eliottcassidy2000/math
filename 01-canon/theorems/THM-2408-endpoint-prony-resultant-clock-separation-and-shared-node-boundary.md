@@ -34,8 +34,8 @@ related:
   - THM-2398-prime-cyclic-rational-restoration-dichotomy
 script: 04-computation/lrc14_endpoint_prony_resultant_clock_separation_thm2408.py
 output: 05-knowledge/results/lrc14_endpoint_prony_resultant_clock_separation_thm2408.out
-script_sha256: ac636963c90cbb96cae2bb96cfe3defb4928063880c49bffa32038139a14ba5d
-output_sha256: 06deea46f0f7beeb169993a89a22897b5b72f85780fc3f9c3ac8a9239997be18
+script_sha256: 20fe75c8c383880d99714806125b57db9dd1c37a39a570168e2e34f596f0d9c4
+output_sha256: 342db54089f49f26e6a53358d8c4c46b1274bc3f22f52229e0ce8b19dfe81677
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -139,12 +139,18 @@ Therefore one of them obeys
  >=9 rho_R^2/1003976272.                             (10)
 ```
 
-Likewise THM-2403's coefficient floor (44c) and (5) give some eligible
-fixed triangle in one of the two branches with magnitude at least
+Likewise THM-2403's finite-colour coefficient floor (44c) and (5) give
+some eligible target/deep transform coefficient in one of the two
+branches with magnitude at least
 
 ```text
 rho_R/456976.                                        (11)
 ```
+
+The nonzero coefficient in (11) has an exact `m`-then-`X` triangle
+descendant in the selected branch.  No magnitude floor for that exact
+triangle is claimed: THM-2403 (44c) is a floor only before this absolutely
+convergent expansion.
 
 Thus (10)--(11) are unconditional quantitative alternatives for the
 THM-2407 packets. The bank selected by these norm bounds need not be the
@@ -540,9 +546,9 @@ separation hypothesis needed only for the bounded-lift conclusion:
    and endpoint orientation;
 2. `o` is the preselected positive owner in that same orientation;
 3. `u=o+h_+` before Poisson--Abel collapse and Fourier grouping; and
-4. **additional hypothesis:** the terminal operation supplies one endpoint
-   node of `h_+` transverse
-   to the owner node polynomial.
+4. **additional hypothesis:** in the chosen Fourier residue progression,
+   the terminal operation supplies one effective endpoint-Prony node of
+   `h_+` transverse to the owner node polynomial.
 
 THM-2407 proves 1--3 before finite target/deep projection, so Section 1
 already gives the nonzero charged branch and the floors (10)--(11).
@@ -572,7 +578,8 @@ The dependency-free companion:
 - verifies nonzero and zero resultants by exact rational arithmetic;
 - constructs the sharp `L-1`-zero Lagrange sequence;
 - checks the `C_13` strictly-positive rational cancellation hostile; and
-- checks the centered frequency bound.
+- checks the representative `m=13`, length-five centered arithmetic used
+  to illustrate the general proved frequency bound.
 
 Run
 
