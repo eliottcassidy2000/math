@@ -65,5 +65,10 @@ top_cell_nonzero_target_energy_floor: 1/27257724097968
 top_cell_nonzero_target_fourth_floor: 1/8915802276011345031140748288
 tensor_nonzero_target_energy_floor: 1/8061471901974036
 tensor_nonzero_target_fourth_floor: 1/5458935655010618045250183922860864
+common_core_high_safe_base: 396/637
+common_core_one_address_base: 145/169
+common_core_forced_middle_base: 3972/8281
+common_core_forced_middle_root: 3972/57967
+common_core_address_transport: D_13h_to_D_h
 terminal_owner_current_transport: OPEN
 all_checks: PASS

@@ -1,6 +1,6 @@
 # LRC14 THM-2388 blocker-cage capacity escape
 
-**Status:** FINITE-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.
+**Status:** FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
 
 THM-2388,
 `THM-2388-thirteen-root-multiplicity-reflection-and-blocker-caged-toothpick-law`,
@@ -10,6 +10,9 @@ is proved, exact, and independently hostile-audited. THM-1166,
 are proved and independently audited. The same-parent tensor refinement
 also uses proved and audited THM-2391,
 `THM-2391-blocker-caged-septimal-single-layer-address-reduction`.
+During this audit, THM-2392 promoted the compatible cage and THM-2393,
+`THM-2393-c3-safe-double-fibre-capacity-and-common-core-residual`,
+independently collapsed its ten types to one common-core chain.
 
 The result repairs an initially false inference. THM-2388's exact
 `36/343` is an integrated multiplicity excess, not the measure of the
@@ -17,7 +20,8 @@ off-blocker toothpick set. A blocker-cage capacity estimate nevertheless
 forces the following exact alternative on all `165` profiles:
 
 ```text
-one of ten oriented cross-ancestor ratios at binary depth M=1,
+the binary common-core chain
+(C_1,C_2,c_1,c_2)=h(1,13,13,169),
 
 or
 
@@ -28,7 +32,8 @@ and an owner-resolved C_7 x C_13 cell of mass at least 1/9042852.
 
 Thirteen-adic pair caps alone first settle `132/165`; live septimal
 typing sharpens this to `150/165`; coupling the last ancestor ratio and
-computing its exact four-event union leaves the ten finite types.
+computing its exact four-event union leaves ten finite types. THM-2393's
+orthogonal double-fibre count then leaves only the displayed chain.
 
 ## 1. The cage and the exact missing mass
 
@@ -565,8 +570,9 @@ mu(U)/7-1347/231868
  =485/115934.                                       (35)
 ```
 
-Thus (33) closes every `np>=10996`; at the first tail integer its exact
-reserve is `12/159351283`.
+Thus (33) closes every `np>=10996`; at the integer threshold its exact
+reserve is `12/159351283`. Because `49|n`, the first admissible
+multiple-of-49 tail value is `11025`.
 
 It remains only the finite core. Write `n=49m`. Then `np<10996` implies
 `pm<=224`. An exact interval audit of all `753` coprime primitive pairs
@@ -738,6 +744,8 @@ THM-2388 hole mass and cage inclusion
  + THM-1166 septimal folded cancellation
  + exact low-union geometry
  -> ten oriented cross-ancestor types at M=1
+ -> THM-2393 double-fibre reduction
+ -> one common-core chain
     or clean-hole mass at least 1/26754
  -> canonical q_* deletion charge
  -> THM-2391 owner-resolved C_7 x C_13 tensor.        (37)
@@ -747,13 +755,86 @@ On the charged side it preserves the distinguished top label, exact
 low-owner word, septimal double address, root support/status, and all
 twelve nonzero target colours. It discards the later terminal-word
 endpoint and does not identify the tensor with one canonical THM-2305
-current or fixed `(m,X)` triangle. The ten cage types retain only their
-oriented ratio and Bockstein descendant. A target-shift-covariant base
-filtration is still required on both sides.
+current or fixed `(m,X)` triangle. The sole cage chain retains its exact
+middle address but not the transported hole status. A
+target-shift-covariant base filtration is still required on both sides.
+
+## 8. The common-core middle address carries positive hole mass
+
+THM-2393 identifies the final no-clean boundary as
+
+```text
+M=1,
+
+(C_1,C_2,c_1,c_2)=h(1,13,13,169),
+
+U=D_(13h) union (D_h intersection D_(169h)).         (38)
+```
+
+Its high-safe seven-root base has exact mass
+
+```text
+396/637,
+```
+
+and its one-address low-union base has mass
+
+```text
+mu{N_U=1}=145/169.
+```
+
+Their intersection therefore has mass at least
+
+```text
+396/637+145/169-1
+ =3972/8281.                                        (39)
+```
+
+On each such base, `q_*`, `c_3`, and `C_3` are safe on all seven roots.
+The lower unit load consists of a two-root guard and four singleton
+ordinary words, hence has total incidence six. It must have at least one
+`K`-hole. Under the no-clean hypothesis every hole lies in `U`; because
+`N_U=1`, there is exactly one hole, and the other six roots have unit
+multiplicity exactly one.
+
+The unique `U`-address is necessarily the mandatory middle root
+`D_(13h)`. It may also carry the optional `D_h intersection D_(169h)`
+flank role, but it always has the cross-role labels
+
+```text
+quotient C_2=13h,
+
+actual c_1=13h.                                     (40)
+```
+
+Root disintegration divides (39) by seven. Thus the common-core boundary
+contains a measurable forced-hole set
+
+```text
+A subset {R=1} intersection D_(13h),
+
+mu(A)>=3972/57967.                                  (41)
+```
+
+Multiplication by thirteen gives the exact labelled address transition
+
+```text
+T(A) subset D_h,
+
+mu(T(A))>=mu(A).                                    (42)
+```
+
+This is a positive, owner-typed `c_1/C_2 -> C_1` middle-address
+transition. What remains missing is preservation or controlled
+polarization of the **hole status** after `T`; (42) alone does not say
+whether `R(Tx)` is positive, negative, or neutral. This is now the
+cheapest interface to THM-2232's signed Markov eigenline and THM-2257's
+`169`-image sieve.
 
 No scalar row is excluded. The ledger remains `165`, and LRC(14)
-remains open. This note must not be cited as a proved dependency until
-the present implication is independently audited and promoted.
+remains open. This independently audited reflection is a quantitative
+sidecar to proved THM-2392 and THM-2393, not itself a theorem-ID
+dependency.
 
 ## Exact reproduction
 
@@ -780,13 +861,21 @@ THM-2391 depth filter, `138`-component whole-union BV tail, and all
 `753` primitive top-comb pairs closing the sole `M=2` address, the
 fallback `/390`, canonical top-labelled `/52`, and owner-resolved
 bi-root `/338` cell invoices, and all singleton/two-root energy
-constants.
+constants. It also checks the post-THM-2393 common-core intersection and
+the `3972/57967` forced middle-hole floor.
+
+As an independent post-rebase control, the promoted THM-2392 and THM-2393
+companions each pass normal and optimized execution against their stored
+transcripts.
 
 LF-normalized SHA256:
 
 ```text
-script 5eb069ff9a2f1df2c572251999b58150af7f08aa62915ceb653acf673c3838f3
-output 3b3cb4c418d81c596ac2cfce798200a69d818b6e37842551ebb945abc3dede7e
+script 95b1dfdd7ded59bd51b6fc4ea9d08627fc01b2e8abecea8fffd52eab8621b67b
+output e1a5d4857d4861ba2dbb34a8b9f6425b7bc3c12e91ee30144676a9fd690e324f
 ```
 
-Independent audit is pending.
+Independent hostile audit accepted the cage inclusion, six-pair and
+septimal ledgers, oriented low union, M2 whole-union BV closure, all
+`753` primitive finite pairs, `/52` and `/338` cell typing, and the
+post-THM-2393 forced-middle transition. No load-bearing defect remains.

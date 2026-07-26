@@ -931,6 +931,26 @@ TENSOR_FOURTH_FLOOR = (
     TENSOR_CELL_MASS ** 4 * SINGLETON_FOURTH / (7 ** 3)
 )
 
+# After promoted THM-2393, the only no-clean boundary is the M=1
+# common-core chain. Its high-safe base has mass 396/637, while the
+# one-address low-union base has mass 145/169. On their intersection,
+# total lower-unit incidence six forces the unique U-address to be the
+# sole K-hole. Root disintegration divides its base mass by seven.
+COMMON_CORE_HIGH_SAFE = Fraction(396, 637)
+COMMON_CORE_ONE_ADDRESS = Fraction(145, 169)
+COMMON_CORE_FORCED_BASE = (
+    COMMON_CORE_HIGH_SAFE + COMMON_CORE_ONE_ADDRESS - 1
+)
+COMMON_CORE_FORCED_ROOT = COMMON_CORE_FORCED_BASE / 7
+require(
+    COMMON_CORE_FORCED_BASE == Fraction(3972, 8281),
+    "common-core forced base mass changed",
+)
+require(
+    COMMON_CORE_FORCED_ROOT == Fraction(3972, 57967),
+    "common-core forced root mass changed",
+)
+
 print("LRC14 THM-2388 blocker-cage capacity escape -- exact candidate")
 print("dependency_status: THM-2388_PROVED_AUDITED")
 print(f"hole_mass_floor: {HOLE_MASS}")
@@ -1028,5 +1048,10 @@ print(f"top_cell_nonzero_target_energy_floor: {TOP_CELL_ENERGY_FLOOR}")
 print(f"top_cell_nonzero_target_fourth_floor: {TOP_CELL_FOURTH_FLOOR}")
 print(f"tensor_nonzero_target_energy_floor: {TENSOR_ENERGY_FLOOR}")
 print(f"tensor_nonzero_target_fourth_floor: {TENSOR_FOURTH_FLOOR}")
+print(f"common_core_high_safe_base: {COMMON_CORE_HIGH_SAFE}")
+print(f"common_core_one_address_base: {COMMON_CORE_ONE_ADDRESS}")
+print(f"common_core_forced_middle_base: {COMMON_CORE_FORCED_BASE}")
+print(f"common_core_forced_middle_root: {COMMON_CORE_FORCED_ROOT}")
+print("common_core_address_transport: D_13h_to_D_h")
 print("terminal_owner_current_transport: OPEN")
 print("all_checks: PASS")
