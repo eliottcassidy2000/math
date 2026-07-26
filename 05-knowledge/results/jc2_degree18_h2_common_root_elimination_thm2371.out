@@ -1,0 +1,18 @@
+THM-2371 degree-18 H2 common-root elimination exact companion
+gauge: unique three-cycle at y=1
+degrees/lc: p3=(3,245), q5=(5,539), R10=(10,73060029)
+resultant components: (54B+7)*(1215B+91)*Psi(B,C); Psi irreducible over Q
+Psi discriminant in C: -4821232752*(54B+7)^3*(513B-91)^2
+K=0 quotient: R10=343*(y-1)*T9, T9(1)=32000*(27B+7)^3
+K=0 generic obstruction: degrees (15,15), resultant mod 11=6
+K=0 exceptional B=-7/27: gcd degree 3; sextic resultant mod 7=2
+antipodal quotient: R10=(2401/729)*(y+1)^2*E8
+antipodal X=C^2 obstruction: degrees (5,4), resultant mod 17=5
+generic component: B=-7*(a^2+1)/54, C=7*(19a^4+19a^3+64a^2+19a+19)/(26244*(a+1))
+generic quotient: (a+1)^2*R10=7^6*(y-a)^2*U8, lc(U8)=621*(a+1)^2
+generic raw factor orders: y2 -> a^2*(a+1)^12; y1 -> a^3*(a+1)^13
+generic z=a+a^-1 obstruction: degrees (18,17), resultant mod 11=9
+hostile wall gcd degrees: (0, 1, 1)
+VERDICT: Res(p3,q5)!=0 and q5(1)!=0 on every H2 point
+THM-2360 cube descent is unconditional on the H2 stratum
+OPEN: the coprime linear-times-cube coefficient locus and H4
