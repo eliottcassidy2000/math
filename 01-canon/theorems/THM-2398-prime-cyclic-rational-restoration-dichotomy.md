@@ -435,10 +435,13 @@ If the last cell also carries a fixed septimal coefficient of modulus
 132/1958569461121.                                 (39)
 ```
 
-This application does not use THM-2397. It retains one actual named
-lower role on all twelve root colours. The current THM-2397 proof
-candidate gives complementary signed and aggregate information through
-derived least-role selectors; it is related rather than a dependency.
+This application does not use THM-2397 and independently recovers its
+fixed-role `13`-translate carrier. THM-2397 additionally treats all five
+literal roles without refinement, proves signed and aggregate floors,
+and proves heredity under root-constant filters and sufficiently delayed
+`13^k` words. The present theorem instead supplies the general
+prime-kernel dichotomy, norm floors, and sharp hostile boundaries; the
+two theorems are related rather than dependencies.
 The coefficients in (37)--(39) are fibrewise joint mixed coefficients.
 A product of separately integrated aggregate currents would contain one
 additional factor of `mu(Z)`.
