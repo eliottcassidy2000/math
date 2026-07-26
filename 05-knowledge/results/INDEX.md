@@ -2049,3 +2049,19 @@ pointwise ancestry energy `Gamma=2`, proving that the nonlinear
 translation-Gram detector retains chamberwise charge lost by the linear
 fixed-pair histogram. No explicit global scalar-cover `E_j,Q_(j,sigma)`
 packet is available for the decisive run; no row is excluded.
+
+### lrc14_delayed_word_source_completion_thm2442.out
+
+Exact companion for **THM-2442, PROVED + VERIFIED-EXACT +
+INDEPENDENTLY HOSTILE-AUDITED**. It exhausts the reflection-paired
+source-phase visibility gate, `791` bounded seven-word mass vectors,
+the scalar and two-coordinate `Phi_7` kernels, and every possible single
+missing word phase. The theorem restores any fixed positive canonical
+terminal word to THM-2409's source-deletion current at every sufficiently
+large row-dependent clock, retaining a nonzero source residue modulo
+seven, every nonzero first-target colour modulo thirteen, and a deep
+multiplier coprime to `91`. Its mixing error has an exact finite-class
+`C/R` form. Normal and optimized runs byte-match and end in `PASS`.
+This closes only the source-deletion half of delayed-word completion,
+not owner-conditioned graft survival, an all-coordinate `91`-unit
+address, a scalar-row decrement, or LRC(14).

@@ -1,0 +1,10 @@
+THM-2442 exact finite companion
+reflection_closed_nonempty_phase_sets=7
+reflection_visibility_checks=49
+bounded_mass_vectors_tau_1_to_5=791
+unique_nonflat_without_reflection_hostile=PASS
+phi7_scalar_kernel=3
+phi7_two_coordinate_kernel=4
+positive_missing_phase_controls=7
+clock_parity_permutation=PASS
+all_exact_checks=PASS
