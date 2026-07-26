@@ -31,7 +31,7 @@ related:
   - THM-2414-thirteen-skew-septimal-word-transport-and-local-stopping-atlas
 script: 04-computation/lrc14_final_lane_compositional_root_exclusion_thm2420.py
 output: 05-knowledge/results/lrc14_final_lane_compositional_root_exclusion_thm2420.out
-script_sha256: 6cbef6213be66a752af9950b141af34d6d2d55036b8940998426d0f1a42a9458
+script_sha256: 3c756428b655c7edc9bdeb1b33f62e93dee2bcd740a1054f63a83f6b0fdf72ea
 output_sha256: 2e2e576e1ff8a485e1bbe4dfae228c8e73dfda670a5353ee107feb1759ee1186
 hash_basis: working-tree bytes (LF)
 cite_by_filename: true

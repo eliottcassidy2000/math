@@ -25,6 +25,7 @@ related:
   - THM-2405-two-level-septimal-sheet-independence-and-middle-depth-two-cage-elimination
   - THM-2414-thirteen-skew-septimal-word-transport-and-local-stopping-atlas
   - THM-2415-last-lane-septimal-depth-two-cap
+  - THM-2420-compositional-thirteen-root-final-septimal-lane-exclusion
   - MISTAKE-264
 script: 04-computation/lrc14_middle_depth_two_relaxed_orbit_dual_thm2417.py
 output: 05-knowledge/results/lrc14_middle_depth_two_relaxed_orbit_dual_thm2417.out
@@ -400,6 +401,12 @@ The exact verifier retains the following boundaries.
    so the two results have compatible sharp boundaries.
 
 ## 8. Consequence and remaining frontier
+
+**Current-frontier postscript.** Equation (28) was the sharp consequence
+of THM-2417 at promotion time. THM-2420 subsequently excludes this
+remaining `M=1` alternative and empties the final septimal lane. The
+paragraphs below record THM-2417's standalone boundary, not the current
+open frontier.
 
 THM-2415 proves uniformly, including positive-clean packets, that every
 survivor has

@@ -429,8 +429,7 @@ def main():
             "fixed source kernel normalization failed",
         )
         require(
-            jump_count(tuple(int(3 <= cell < 10) for cell in range(13)))
-            == 2,
+            subset_jump_count(13, set(range(3, 10))) == 2,
             "fixed source BV-two control failed",
         )
         fixed_source_checks += 1
@@ -449,8 +448,7 @@ def main():
         "D2 source left its one predecessor sheet",
     )
     require(
-        jump_count(tuple(int(81 <= cell < 88) for cell in range(169)))
-        == 2,
+        subset_jump_count(169, set(range(81, 88))) == 2,
         "D2 source variation failed",
     )
     for depth in range(2, 8):

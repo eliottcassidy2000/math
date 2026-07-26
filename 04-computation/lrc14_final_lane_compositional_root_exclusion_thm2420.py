@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Exact companion for THM-2420.
 
-Checks the two composed 7/13-root disintegrations which exclude depths
-M=2 and M=1 in the primitive final septimal lane.  It also checks the
-uniform narrow-comb/phase half-overlap lemma and a hostile showing that
-the inherited 13-unit hypothesis on H is load-bearing.
+Checks finite exact controls for the two composed 7/13-root
+disintegrations used to exclude depths M=2 and M=1 in the primitive
+final septimal lane.  It also checks typed narrow-comb/phase
+half-overlap controls and a hostile showing that the inherited 13-unit
+hypothesis on H is load-bearing.  The analytic proof, rather than this
+finite companion, supplies the universal quantifiers.
 
 Only standard-library integer and Fraction arithmetic is used.
 """
