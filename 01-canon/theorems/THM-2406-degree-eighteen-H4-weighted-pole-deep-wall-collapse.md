@@ -29,8 +29,8 @@ related:
   - THM-2387-degree-eighteen-h4-elliptic-three-isogeny-atlas
 script: 04-computation/jc2_degree18_h4_weighted_pole_wall_thm2406.py
 output: 05-knowledge/results/jc2_degree18_h4_weighted_pole_wall_thm2406.out
-script_sha256: fe5121f5dc34afaaa730985941d1029acb8d4f2d515743b6e7e90c391d646080
-output_sha256: 575e53c0639ad3a9f9e075fc31ec5a330dc8492e677a6a165dbafef1be706df8
+script_sha256: 4f527ba8b810b7b8039008207dafded9a837f8584ea1c7104a8176690a0d0126
+output_sha256: ec7dbb0955f302a1388aec8a9c5b162173b70c623f0ad72f6fb186fd4c94e193
 hash_basis: working-tree bytes (LF)
 ---
 
