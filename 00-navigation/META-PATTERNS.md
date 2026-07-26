@@ -2,6 +2,13 @@
 
 **Status:** CURRENT. **Role/Use:** compact defaults from repeated successes and failures; scan triggers and evidence. Each card states applicability, action, mechanism, and counterindication; new cards require distinct-thread evidence or a severe repaired failure.
 
+## Demodulate, then average a complete subgroup
+
+**Trigger / action:** when a finite unitary action grades the target by labelled characters and exact support energy is needed, demodulate by the desired character and average the squared finite difference over the whole lawful subgroup; on Boolean cubes, also Mobius-invert complementary-subcube energies.
+**Mechanism:** character orthogonality gives an exact `0/2` multiplier, so complete-line energies recover isotypic norms, support masks, and nonnegative mixed-interaction defects.
+**Counterindication:** the subgroup, labels, Hermitian differences, and unitarity are load-bearing. Balanced scalar moments, unlabelled energy multisets, partial colour faces, or pointwise modes followed by phase-cancelling integration do not supply the bank or a charged selector.
+**Evidence:** THM-2369 (two LRC target lines and charged-edge boundary), THM-2374 (binary knot-allocation subcubes and Walsh support), and THM-2375 (finite-unitary/Gaussian angular tomography and scalar-moment no-go).
+
 ## Separate symmetry descent from regularity debt
 
 **Trigger:** a deck, residue, phase, or quotient proves descent/repetition, while the target asks for integrality, zero-safety, or an exact inequality.
@@ -46,9 +53,7 @@
 **Action:** ask whether the optimized quantity is the actual object; replace a mean by a maximum, an intrinsic shadow by a marked/observer object, or a scalar by its profile.
 **Mechanism:** no stronger bound repairs an information-losing object.
 **Counterindication:** retain valid local estimates as components after the reframe.
-**Evidence:** the `L -> M` and observer-lens reframes in §1 of
-[`lrc14-history-synthesis-patterns-and-reframings-opus-S399.md`](../07-reflections/lrc14-history-synthesis-patterns-and-reframings-opus-S399.md),
-and the support-profile correction in MISTAKE-209.
+**Evidence:** the `L -> M` and observer-lens reframes in §1 of [`lrc14-history-synthesis-patterns-and-reframings-opus-S399.md`](../07-reflections/lrc14-history-synthesis-patterns-and-reframings-opus-S399.md), and the support-profile correction in MISTAKE-209.
 
 ## Type every analogy and every implication
 
@@ -72,9 +77,7 @@ and the support-profile correction in MISTAKE-209.
 **Action:** distinguish the bare arrangement, ordinary/thickened complements, and selected inequality cells; record wall owner, sign, selected side, height, and deletion unit.
 **Mechanism:** intersection posets and complement cohomology forget the feasible side and extremal top cell.
 **Counterindication:** ordinary arrangement invariants suffice when the target is invariant under all forgotten labels and sides.
-**Evidence:** MISTAKE-224's repair of the Fourier-lattice/toric-complement
-conflation and the exact phase-height recovery of
-[THM-1002's pair-sum ruler](../01-canon/theorems/THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case.md).
+**Evidence:** MISTAKE-224's repair of the Fourier-lattice/toric-complement conflation and the exact phase-height recovery of [THM-1002's pair-sum ruler](../01-canon/theorems/THM-1002-pair-sum-denominator-bound-and-the-bounded-gap-case.md).
 
 ## Find the hidden second coordinate in a nearly true theorem
 

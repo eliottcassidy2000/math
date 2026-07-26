@@ -172,8 +172,8 @@ exact and finite; it does not prove that every surviving interval is empty.
 
 THM-2168--2257 leave `165` rows; THM-2295--2349 supply packets and `91`-unit edges.
 THM-2350 gives dipoles; THM-2354--2365 give colour/H-drift. THM-2356's zero-only kernel has dimension `28,393` versus `169`; THM-2363 dominates. Audited THM-2366 isolates inverse covariance and sub-`13` budgets; THM-2367 gives exact septimal graft transport.
-Audited THM-2368 gives all `169` root-fibre target modes but an orbit hostile with zero integrated drift; THM-2369 makes balanced observables slope-blind. Hostile-audited THM-2378 then uses the missing rooted phase to empty hard `W=k=1`: a constant low-blocker word would force guard support `3/4` inside top-unit support `1/2`, while a transverse seven-adic fibre gives uncovered mass at least `5/49`.
-The live object is therefore the finite rooted cyclotomic phase/event word through blocker multiplication and chamber integration, now applied to the remaining `k=2` alternatives (especially saturated `W=7`), not another support-only or tournament shadow. Emptying this septimal sublane removes no thirteen-adic row; the ledger remains `165`.
+Audited THM-2368 gives all `169` root-fibre target modes but an orbit hostile with zero integrated drift; THM-2369 makes balanced observables slope-blind. THM-2370 conserves deletion drift and kills nonzero-circulant empty residuals, while its clone rules out higher mixed-energy repair. THM-2372 forces a `98`-fold toothpick; audited THM-2377 identifies the first possible carrier as a repeated septimal layer with a Bockstein carry. Hostile-audited THM-2378 then uses rooted phase to empty hard `W=k=1`: a constant low-blocker word would force guard support `3/4` inside top-unit support `1/2`, while a transverse seven-adic fibre leaves mass at least `5/49`.
+The live object is the finite rooted cyclotomic phase/event word plus a canonical charged owner reference, now applied to the remaining `k=2` alternatives (especially saturated `W=7`), not another support-only, mixed-energy, or tournament shadow. Emptying the septimal sublane removes no thirteen-adic row; the ledger remains `165`.
 
 ### Independent routes that remain live
 
@@ -257,6 +257,9 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 - [THM-2023](../01-canon/theorems/THM-2023-gmc2-hyperbessel-boundary-laguerre-polya.md)
   proves the boundary hyper-Bessel function is Laguerre–Pólya; it is now a
   refinement rather than the missing NC2 step.
+- THM-2375 recovers labelled charge norms from complete Hermitian angular
+  differences; the `Z`/`conjugate(Z)` hostile proves scalar moments do not
+  supply this richer bank, so it is a diagnostic rather than a new NC2 route.
 - MISTAKE-211/212/214/215 bar four recurring overclaims: scalar moments do not
   separate atoms; a tournament source is sufficient, not iff; Vandermonde node
   repetition is not tournament score repetition; and no global
@@ -383,6 +386,7 @@ Classify profiles under support operations; study analytic continuation and auto
   [THM-2339](../01-canon/theorems/THM-2339-prime-owner-deletion-and-target-allocation-hypergraph.md) makes composite lifts finite prime-token allocations with a coloured Möbius hypergraph and exact fixed-owner deletion.
   THM-2346 gives unique global ANOVA tensors and score-table gauge; pair couplings are symmetric cohabitation energies, not orientations.
   [THM-2348](../01-canon/theorems/THM-2348-prime-type-rectangularity-and-target-token-conditioning.md) equates robust prime-type factorization with mixed-tensor/rectangle vanishing, gives exact token conditioning, and makes the two-prime correction a bounded continuation of `-sigma`.
+  THM-2374 turns every two-block mixed tensor norm into a nonnegative complete-subcube Dirichlet defect and inverts the squared Walsh-support bank; signs, owners, and knot realization are deliberately lost.
   THM-2351 proves the canonical self-target ANOVA is exactly an affine reparameterization of the directional catalysis--bypass ledger; its optimum and skew pair sector add no information. Positive catalysis and the stable diagonal remain open.
 - **Unsplittable cost flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture: a planar acyclic instance has fractional cost `58` but capacity-good integral cost at least `60`. Its carrier is the `K_3` stable-set facet; the planar `2d_max` theorem remains intact.
 - **Jacobian/Dixmier:** THM-1300/1315 verify and analyze the three-dimensional Keller collision, but provenance is unsettled (MISTAKE-205) and it does not decide
@@ -414,7 +418,9 @@ Classify profiles under support operations; study analytic continuation and auto
   audited THM-2371 eliminates every common-root and singular-order
   component, making THM-2360's linear-times-cube descent unconditional
   on `H_2`; hostile-audited THM-2376 eliminates that coprime cube locus
-  and closes the full degree-eighteen `H_2S_5^2` stratum. `H_4` remains. Split/even descent
+  and closes the full degree-eighteen `H_2S_5^2` stratum. Candidate
+  THM-2373 supplies root-free `B=C`, `C=D`, `D=W` charts for the
+  remaining `H_4` lane. Split/even descent
   and other short edges remain; THM-2206
   blocks field-valued `C_2` Hasse repair. Integral `2`-adic order raising, `JC(2)`, and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
