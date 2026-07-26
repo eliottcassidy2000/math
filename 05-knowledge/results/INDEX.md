@@ -1991,3 +1991,19 @@ same-residue self-differences from an address-level charged reference,
 and directly tests `K_182 -> K_91 -> K_13`. Normal
 and optimized runs agree and end in `PASS`; no physical observer,
 cross-packet amplitude, terminal transport, or LRC row exclusion is claimed.
+
+### lrc14_septimal_ancestry_endpoint_events_thm2421.out
+
+Exact companion for **THM-2421, PROVED + VERIFIED-EXACT +
+HOSTILE-AUDITED; INDEPENDENT AUDIT PENDING**. It compares a
+definition-level endpoint/branch census, exact integer-range ancestry
+counts, and a signed endpoint-event sweep on `192` rational source/target
+fixtures and `2,062` chambers. It verifies the THM-2418 rank-one hostile
+through `R=13^8=815730721` without enumerating the branches, a mixed-sign
+coincident event, circle-cut controls, the positive one-cylinder and
+divisible-total boundaries, and exact restriction to `D_7`. A balanced
+`R=13` source has flat integrated carry masses `(1/2,...,1/2)` but
+pointwise ancestry energy `Gamma=2`, proving that the nonlinear
+translation-Gram detector retains chamberwise charge lost by the linear
+fixed-pair histogram. No explicit global scalar-cover `E_j,Q_(j,sigma)`
+packet is available for the decisive run; no row is excluded.
