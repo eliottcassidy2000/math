@@ -1,5 +1,5 @@
 ---
-id: THM-2400
+id: THM-2401
 title: "Common-filter endpoint or first-death certificate"
 status: >
   RESERVED / UNPROVED EMPTY STUB. Namespace reserved for a proposed
@@ -13,7 +13,7 @@ depends_on: []
 related: []
 ---
 
-# THM-2400 -- common-filter endpoint or first-death certificate
+# THM-2401 -- common-filter endpoint or first-death certificate
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
