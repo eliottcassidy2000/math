@@ -104,8 +104,13 @@ match. Predictions: `pure-blue(12) = 6`, `13 -> 13`, `14 -> 9`,
   (n = 12, predicted all-rigid count 6, first 81-class) tests the
   even line cheaply.
 - Classification of pure-blue strong tournaments: why exactly the
-  rotational T5 and not T7/T11 -- suspected link to the THM-643 C1
-  3-power cap via |Aut| = 5 odd and H/|Aut| = 3.
+  rotational T5 and not T7/T11. Data note (same session):
+  `(H, |Aut|, tc)` for the rotational family is `(3,3,1)`, `(15,5,3)`,
+  `(189,21,9)` at `p = 3,5,7` -- i.e. `tc(T_p) = 3^{(p-3)/2}` on the
+  data so far, the 3-power grammar again. T5 is the unique case
+  where the whole `3^{(p-3)/2}`-tiling fibre stays grid-symmetric;
+  at `p = 7` at most an odd proper subset of the 9 tilings is blue.
+  Suspected mechanism: THM-643 C1's `H_sym` 3-power cap.
 - The arc THM-4997 -> 2444 -> 2453 -> 2454 is a candidate
   META-PATTERNS case study: two refutations, each at the first
   untested point, each converting a numerological formula into a
