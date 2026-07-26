@@ -174,7 +174,7 @@ THM-2350--2365 give dipole/colour/drift banks (THM-2356 kernel `28,393` versus `
 THM-2368/2369 expose drift/slope hostiles; THM-2370's clone kills mixed-energy repair. THM-2372/2377 force a `98`-fold toothpick and put the first carrier at a repeated septimal layer with Bockstein carry.
 THM-2378 closes `W=k=1` via `3/4` versus `1/2` and `5/49`. THM-2381 closes `k=2,(t,b)=(1,1)` by a seven-bin partition; its anti-shield mass is `36/343`.
 THM-2382 closes `k=2,(t,b,W)=(5,2,7)` by demand `13` versus capacity `10`. THM-2379's repair colour lacks owner typing; THM-2380's charged gate still needs a physical quadrature.
-Live: rooted phase/event on `(1,0),(2,0)` plus a dual covector in `L^perp/<w>`; a primal class in `K/L` is not a co-shift. THM-2385 is only RESERVED for `(2,0)`. The ledger remains `165`.
+THM-2384 separates primal `K/L` from dual `L^perp/<w>`; its positive remnant is only a duplicate probe. Live: rooted phase/event on `(1,0),(2,0)` plus a true dual dipole and endpoint-matched reference. THM-2385 is only RESERVED for `(2,0)`. The ledger remains `165`.
 
 ### Independent routes that remain live
 
@@ -379,7 +379,7 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
 Classify profiles under support operations; study analytic continuation and automatic/Mahler structure; track collision taxes; and feed support identities into tournament laws and LRC residue packets.
 ## Other active portfolio
 
-- **Knots / operation-ready relations:** [THM-2176](../01-canon/theorems/THM-2176-gordian-continuation-profile-and-interaction-cocycle.md) gives the continuation kernel; [THM-2191](../01-canon/theorems/THM-2191-catalytic-localization-of-the-gordian-metric.md) gives catalytic localization and stable group length. THM-2220 gives fixed-context slopes; THM-2242 makes the kernel embedding isometric and identifies its atoms.
+- **Knots / operation-ready relations:** THM-2176 gives the continuation kernel; THM-2191 gives catalytic localization and stable group length; [THM-2281](../01-canon/theorems/THM-2281-common-optimal-context-for-finite-catalytic-families.md) puts every finite localized metric packet isometrically in one ordinary translated slice. THM-2220 gives fixed-context slopes; THM-2242 makes the kernel embedding isometric and identifies its atoms.
   THM-2292 confines the Brittenham--Hermiller `T(2,7)`/mirror plane to two same-sign chambers. THM-2308 proves `u((#^P K)#(#^Q mirror(K)))>=P+Q`, puts the stable diagonal in `[2,5]`, and reduces the chambers to one concave profile between sharp abstract norm envelopes.
   THM-2317 identifies factor forgetting as an exact metric quotient. [THM-2330](../01-canon/theorems/THM-2330-partition-lattice-gordian-lift-spectrum.md) inserts every intermediate factor partition and target: lift costs decrease under coarsening, merge drops form an exact coboundary, disjoint packets min-plus convolve, and the stable spectrum exists; its unknot slice is exactly THM-2248's partition transform.
   [THM-2336](../01-canon/theorems/THM-2336-prime-target-gordian-owner-diagram-and-bypass-split.md) makes prime-target fibres weighted owner diagrams and splits two-prime translation from bypass.
