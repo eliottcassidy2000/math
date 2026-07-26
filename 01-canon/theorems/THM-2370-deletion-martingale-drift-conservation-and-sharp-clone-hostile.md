@@ -15,8 +15,12 @@ status: >
   deletion supports and individual mass 1-1/(91n): cloning the exact
   90/91 THM-2367 circulant-restoration mask gives equality. The landed
   target belongs to the deleted packet, not automatically to the
-  canonical full-owner word; target-shift-covariant scalar-cover routing
-  remains open. No scalar-row exclusion, ledger decrement, or LRC(14)
+  canonical full-owner word. A complementary sharp anchored-slice lemma
+  shows that a shifted all-safe residual which vanishes on its original
+  scalar-cover slice is either identically zero or has drift at least
+  1/169 of its squared norm; thus a nonzero circulant ghost residual is
+  impossible. Guard/unit failure routing and canonical current transfer
+  remain open. No scalar-row exclusion, ledger decrement, or LRC(14)
   consequence follows.
 source: codex-2026-07-25-deletion-martingale-drift
 depends_on:
@@ -26,8 +30,8 @@ related:
   - THM-2367-septimal-root-averaging-graft-and-cover-alignment
 script: 04-computation/lrc14_deletion_martingale_drift_thm2370.py
 output: 05-knowledge/results/lrc14_deletion_martingale_drift_thm2370.out
-script_sha256: 8fcd1c92e904008f7c04f97ae59b52c5c478f8e6e76ad5b699e5d81fb58b200b
-output_sha256: 6a504daf2b2ff2071428cd3eb31cdc049f455d9e4b2f23ae9ef685f00657defc
+script_sha256: a48396b0f979d7da646de93f7a1b1a94ce5a6a56a4ca492f9dab239d22052885
+output_sha256: 9db6ea0e5cabeb51ce1d3cd734001753ed1d625dde3d48219508938fe82b4436
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -139,7 +143,7 @@ QH_n=0,
 QL_1=...=QL_n=QH_0/n.                              (10)
 ```
 
-Section 4 realizes (10) with nested Boolean interval masks.
+Section 5 realizes (10) with nested Boolean interval masks.
 
 ## 2. A lawful deletion lands its own target
 
@@ -222,7 +226,112 @@ q=(b,a+h)!=0.                                      (16)
 Equation (16) does not say that the same triangle survives after the
 deleted factor is restored.
 
-## 3. The exact Boolean cancellation seed
+## 3. A zero base slice cannot support a hidden circulant ghost
+
+There is one especially useful deletion boundary on which much more can
+be said. Let `Z:F_13^3->C` be any table satisfying
+
+```text
+Z(r,0,0)=0                         for every r.     (16a)
+```
+
+It need not be nonnegative for the Hilbert-space statement. Then
+
+```text
+D(Z)>=||Z||_2^2/13^2.                              (16b)
+```
+
+### Proof
+
+Put `G=PZ`, so `G(r,s,t)=g(r-t)` for some `g`. Let `A` be the orthogonal
+projection which zeros the thirteen-cell slice
+
+```text
+S={(r,0,0):r in F_13}.
+```
+
+Every difference class meets `S` once and has `13^2` cells. Consequently
+
+```text
+||AG||_2^2=(1-13^(-2))||G||_2^2.                  (16c)
+```
+
+Since `Z=AZ` and `G=PZ`,
+
+```text
+||G||_2^2
+ =<Z,G>
+ =<Z,AG>
+ <=||Z||_2||AG||_2.
+```
+
+Thus
+
+```text
+||G||_2^2
+ <=(1-13^(-2))||Z||_2^2.
+```
+
+Orthogonality of `P` now gives
+
+```text
+D(Z)
+ =||Z||_2^2-||G||_2^2
+ >=13^(-2)||Z||_2^2,
+```
+
+which proves (16b).
+
+The constant is sharp. Choose any nonzero profile `g>=0` with `g(0)=0`,
+put
+
+```text
+C(r,s,t)=g(r-t),
+
+Z=AC.                                               (16d)
+```
+
+Then `Z` is nonnegative, has the THM-2365 diagonal zero, and
+
+```text
+PZ=(1-13^(-2))C,
+
+D(Z)=||Z||_2^2/13^2.                               (16e)
+```
+
+Combining (16b) with THM-2365 gives, for a lawful physical `Z`,
+
+```text
+sum_(
+  a!=0,
+  (b,a+h)!=(0,0)
+ )|B_Z(a,b,h)|^2
+ >=||Z||_2^2/13^3.                                 (16f)
+```
+
+Thus every nonzero lawful anchored-zero packet lands its own nonzero
+target and an exact `91`-unit deep triangle.
+
+This applies directly to the all-safe shifted residual. Partition a
+lawfully shifted present packet by its complete blocker word, retaining
+the deepest safe factor which supplies the diagonal zero. The original
+scalar cover makes the empty-word table satisfy (16a). Therefore:
+
+```text
+empty word stays absent on every target shift;
+
+or
+
+the reappearing empty word has target drift
+  at least ||Z||_2^2/169.                           (16g)
+```
+
+There is no third possibility in which a positive shifted all-safe ghost
+is nonzero and circulant. This disposes of that residual as a possible
+sink for invisible drift. Its landed current is still a derived empty-word
+current, not a canonical positive owner word.
+
+## 4. The exact Boolean cancellation seed
 
 The sharpness construction begins with the exact THM-2367 interval
 hostile, reproduced independently here.
@@ -298,15 +407,15 @@ The grid in (17) resolves every strict comb boundary, so the midpoint
 count is an exact rational-interval computation, not a sampling
 approximation.
 
-## 4. Clone every physical cell: equality for all n
+## 5. Clone every physical cell: equality for all n
 
-Fix any positive integer `n`. Subdivide every grid cell in Section 3
+Fix any positive integer `n`. Subdivide every grid cell in Section 4
 into `n` equal clone subcells. For `j=1,...,n`, let `U_j` be the union
 of the `j`-th clone subcell inside each of the `182` excluded cells, and
 put
 
 ```text
-M_j=1_(T circle minus U_j).                         (24)
+M_j=1-1_(U_j).                                      (24)
 ```
 
 The masks are Boolean, rational-interval, target-independent, commuting,
@@ -366,7 +475,7 @@ Unequal clone widths make both inequalities strict. Omitting the last
 clone leaves exactly `D(T)/n^2` terminal drift. These are exact hostile
 controls in the companion.
 
-## 5. What the martingale does and does not decompose
+## 6. What the martingale does and does not decompose
 
 At the overlap-table and finite-transform levels, (5) is an exact linear
 decomposition. There is also a useful fixed-frequency form. Keep the same
@@ -412,20 +521,24 @@ For the usual factor order:
 Ordering therefore changes the physical meaning of the landed layer even
 though (8)--(9) are order-independent.
 
-## 6. The precise next bridge
+The shifted all-safe residual in the preceding paragraph no longer needs
+to be declared circulant: Section 3 shows that if it reappears, it already
+lands a target.
+
+## 7. The precise next bridge
 
 The exact missing service is one of:
 
 1. a target-shift-covariant deletion/owner-cover identity;
-2. a proof that every guard/unit failure and every shifted all-safe
-   residual is circulant, forcing drift into a blocker word; or
+2. a proof that every guard/unit failure packet is circulant or transfers
+   to a marked blocker word; or
 3. a same-clock phase mechanism transferring the deleted-packet triangle
    into the canonical full-owner current.
 
 Without such a service, the theorem does not exclude a scalar row. The
 ledger remains `165`, and LRC(14) remains open.
 
-## 7. Exact companion
+## 8. Exact companion
 
 The dependency-free companion uses only integer bitsets and `Fraction`
 arithmetic to:
@@ -437,8 +550,11 @@ arithmetic to:
 - compute the orthogonal projection and the three drift energies in
   (23);
 - verify (27)--(31) for `n=1,2,3,5,7,13`;
-- check every individual clone-mask mass;
-- verify unequal-clone strictness and the omitted-final-mask hostile; and
+- check the common clone-mask mass at each tested depth;
+- verify one unequal-clone strictness control and the omitted-final-mask
+  hostile;
+- enumerate the sharp anchored-zero example (16d)--(16e) over all `2,197`
+  cells; and
 - check the exact `2016` and `26208` coefficient counts in (13)--(14).
 
 Run

@@ -289,6 +289,68 @@ def main() -> None:
             "omitted-final-mask control changed",
         )
 
+    # Sharp principal angle for a table whose whole base slice vanishes.
+    def anchored_value(root: int, target: int, endpoint: int) -> Fraction:
+        if target == 0 and endpoint == 0:
+            return ZERO
+        return Fraction(root != endpoint)
+
+    anchored_norm = (
+        sum(
+            anchored_value(root, target, endpoint) ** 2
+            for root in range(P)
+            for target in range(P)
+            for endpoint in range(P)
+        )
+        / P**3
+    )
+    anchored_projection: dict[tuple[int, int, int], Fraction] = {}
+    for root in range(P):
+        for target in range(P):
+            for endpoint in range(P):
+                anchored_projection[(root, target, endpoint)] = (
+                    sum(
+                        anchored_value(
+                            (root + diagonal_shift) % P,
+                            (target + first_shift) % P,
+                            (endpoint + diagonal_shift) % P,
+                        )
+                        for first_shift in range(P)
+                        for diagonal_shift in range(P)
+                    )
+                    / P**2
+                )
+    anchored_drift = (
+        sum(
+            (
+                anchored_value(root, target, endpoint)
+                - anchored_projection[(root, target, endpoint)]
+            )
+            ** 2
+            for root in range(P)
+            for target in range(P)
+            for endpoint in range(P)
+        )
+        / P**3
+    )
+    anchored_scale = Fraction(P * P - 1, P * P)
+    require(
+        all(
+            anchored_projection[(root, target, endpoint)]
+            == anchored_scale * Fraction(root != endpoint)
+            for root in range(P)
+            for target in range(P)
+            for endpoint in range(P)
+        ),
+        "anchored-zero projection changed",
+    )
+    require(
+        anchored_norm == Fraction(2016, 2197)
+        and anchored_drift == Fraction(2016, 371293)
+        and anchored_drift == anchored_norm / P**2,
+        "sharp anchored-zero drift ratio changed",
+    )
+
     eligible_colours = (P - 1) * (P * P - 1)
     require(
         eligible_colours == 2016
@@ -320,6 +382,11 @@ def main() -> None:
             f"n={depth}: mask_mass={Fraction(91*depth-1,91*depth)}; "
             f"one_layer={layer_drift}; sum={depth*layer_drift}"
         )
+    print(
+        "anchored-zero: "
+        f"norm={anchored_norm}; drift={anchored_drift}; "
+        f"ratio={anchored_drift/anchored_norm}"
+    )
     print(f"eligible deep-target coefficients: {eligible_colours}")
     print("VERDICT: n^-2 maximum and n^-1 summed deletion floors are sharp")
 
