@@ -370,8 +370,13 @@ def radon_factorization_atlas() -> tuple[int, int, Fraction, Fraction, Fraction]
             full_mode_checks += 1
         energies = directional_energies(table)
         require(
-            all(energy >= Fraction(2, P**2) for energy in energies),
-            "integer Dirichlet gap failed",
+            energies[0] >= Fraction(2, P**2)
+            and energies[1] >= Fraction(2, P**2),
+            "integer axis Dirichlet gap failed",
+        )
+        require(
+            energies[2] >= Fraction(4, P**2),
+            "integer mixed Dirichlet gap failed",
         )
         if minimum_energies is None:
             minimum_energies = energies
@@ -451,7 +456,10 @@ def abstract_circulant_hostile() -> tuple[int, Fraction, Fraction, int, int]:
         radon_orbit_profile.append(Fraction(mass, P**3))
     require(radon_orbit_profile[0] == 0, "Radon orbit lost diagonal zero")
     positive_offsets = sum(value > 0 for value in radon_orbit_profile[1:])
-    require(positive_offsets > 0, "Radon orbit hostile became empty")
+    require(
+        positive_offsets == P - 1,
+        "Radon orbit hostile lost an off-diagonal value",
+    )
     for r, t, v_shift in product(range(P), repeat=3):
         before = radon_orbit_profile[(r - t) % P]
         after = radon_orbit_profile[
@@ -497,7 +505,7 @@ def main() -> None:
     ) = abstract_circulant_hostile()
 
     print("theorem=THM-2368")
-    print("status=PROVED+VERIFIED-EXACT+CANDIDATE-UNDER-INDEPENDENT-AUDIT")
+    print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED")
     print("root_group=C_13")
     print(f"nonempty_proper_boolean_words={boolean_words}")
     print(f"prime_cyclotomic_nonzero_character_checks={cyclotomic_checks}")
@@ -510,7 +518,8 @@ def main() -> None:
     print(f"radon_factorization_checks_mod_53={factorization_checks}")
     print(f"radon_full_mode_control_checks_mod_53={full_mode_checks}")
     print("radon_pointwise_target_modes=169/169")
-    print(f"integer_dirichlet_gap=2/{P**2}")
+    print(f"integer_axis_dirichlet_gap=2/{P**2}")
+    print(f"integer_mixed_dirichlet_gap=4/{P**2}")
     print(f"control_horizontal_energy_min={horizontal_energy}")
     print(f"control_vertical_energy_min={vertical_energy}")
     print(f"control_mixed_energy_min={mixed_energy}")

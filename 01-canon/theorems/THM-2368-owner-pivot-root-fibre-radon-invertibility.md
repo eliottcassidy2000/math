@@ -2,7 +2,7 @@
 id: THM-2368
 title: "Owner-pivot root-fibre Radon invertibility"
 status: >
-  PROVED + VERIFIED-EXACT; CANDIDATE UNDER INDEPENDENT AUDIT. On every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. On every
   canonical first-depth-one owner row, choose the two owner-pivot grafts
   among the ordinary thirteen-units. On almost every thirteen-root fibre,
   the two graft words and the residual guard/three-unit branch word are
@@ -11,7 +11,8 @@ status: >
   is a unit of Q[C_13], and the exact two-axis cyclic-correlation transform
   factors into three nonzero cyclotomic factors. Thus all 169 target
   Fourier modes of the root-fibre Radon table are nonzero, with integer
-  directional, transverse, and mixed Dirichlet gaps at least 2/169.
+  directional and transverse Dirichlet gaps at least 2/169 and mixed
+  Dirichlet gap at least 4/169.
   This pointwise theorem does not force THM-2365 bare H-drift: an exact
   C_13^2 nonnegative hostile has all 169 pointwise modes but integrates to
   H(r,s,t)=(12/169)1_(r!=t), hence zero drift. The missing coordinate is
@@ -28,14 +29,14 @@ related:
   - THM-2218-labelled-guard-hole-fourier-and-signed-lift-energy
 script: 04-computation/lrc14_owner_pivot_root_fibre_radon_thm2368.py
 output: 05-knowledge/results/lrc14_owner_pivot_root_fibre_radon_thm2368.out
-script_sha256: 8cdefa02bf1c11d9afb967195b1edc54ec3762db326748c728c98f7054dbdcb5
-output_sha256: 479d52cb3884eb548a8c41c0ed752e3b87fc7bc318233c694773032f7db4afc6
+script_sha256: 7f3d73fb7082c7fe9312719200801737c7b1f57816a229ebb7d2bb9d22a99261
+output_sha256: 0d0a5cd7a3ff8bc4e50f4bd40289ec9fdd9f14a51e8dfff65d3a3ce406c6c117
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2368 -- every canonical root-fibre target mode survives
 
-**PROVED + VERIFIED-EXACT; CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 The owner-pivot target action has two balanced dipole axes. At the
 thirteen-root scale, each axis is a cyclic translate of a one- or two-hole
@@ -222,14 +223,20 @@ empty or full. This is a contradiction. Every conjugate `f(zeta^lambda)`,
 invertible.
 
 This proves, in particular, that `A_y,C_y,P_y` are units for almost every
-`y`. It also gives the exact four canonical one/two-hole kernels. Up to a
+`y`. Put
+
+```text
+S=sum_(r=0)^12 delta_r.
+```
+
+It also gives the exact four canonical one/two-hole kernels. Up to a
 cyclic rotation and a group automorphism, they are
 
 ```text
 delta_0,
 delta_0+delta_1,
-1-delta_0,
-1-delta_0-delta_1.                                  (17)
+S-delta_0,
+S-delta_0-delta_1.                                  (17)
 ```
 
 Their absolute convolution determinants are respectively
@@ -238,7 +245,7 @@ Their absolute convolution determinants are respectively
 1, 2, 12, 11.                                       (18)
 ```
 
-Writing `S=sum_(r=0)^12 delta_r` and
+Writing
 
 ```text
 V=1/2(delta_0-delta_1+delta_2-...+delta_12),
@@ -353,8 +360,11 @@ Delta_s Delta_t N                                  (25)
 
 is identically zero. Each is integer-valued and has total sum zero on the
 torus. A nonzero integer array of total sum zero has at least two nonzero
-entries, each of squared magnitude at least one. Hence, pointwise in every
-regular root fibre,
+entries, each of squared magnitude at least one. The mixed difference has
+the stronger property that every row and every column sums to zero. One
+nonzero entry therefore forces another in its row and compensating entries
+in both occupied columns, hence at least four nonzero entries. Thus,
+pointwise in every regular root fibre,
 
 ```text
 sum_(s,t)|Q_(s+1,t)-Q_(s,t)|^2>=2/169,
@@ -363,7 +373,7 @@ sum_(s,t)|Q_(s,t+1)-Q_(s,t)|^2>=2/169,
 
 sum_(s,t)|
  Q_(s+1,t+1)-Q_(s+1,t)-Q_(s,t+1)+Q_(s,t)
-|^2>=2/169.                                        (26)
+|^2>=4/169.                                        (26)
 ```
 
 The one-axis table in (23) similarly obeys
@@ -372,9 +382,11 @@ The one-axis table in (23) similarly obeys
 sum_s|Q_(s+1)-Q_s|^2>=2/169.                        (27)
 ```
 
-The constant is the sharp lattice gap for a denominator-thirteen cyclic
-array. No positive lower bound for an **integrated cyclotomic mode** follows
-from (26): phases from different `y`-chambers may cancel exactly.
+The one-axis constant in (27) is the sharp lattice gap for a
+denominator-thirteen cyclic array; the mixed constant is the corresponding
+sharp zero-row/zero-column integer-array gap. No positive lower bound for
+an **integrated cyclotomic mode** follows from (26): phases from different
+`y`-chambers may cancel exactly.
 
 ## 6. Exact map to THM-2365's bare tensor
 
@@ -409,7 +421,7 @@ masks is convolution in target Fourier space, and integration in `y`
 then sums cyclotomic numbers with changing phases. Neither operation
 preserves coordinatewise nonvanishing.
 
-## 7. A minimal exact circulant hostile
+## 7. An exact circulant hostile
 
 The logical boundary is realized by a two-coordinate finite probability
 space, not only by a signed formal array. Let
@@ -439,7 +451,8 @@ the product of two transforms of translates of `g_0`. Since
 
 ```text
 g_0^(0)=12/13,
-g_0^(lambda)=-zeta^(lambda rho)/13,  lambda!=0,
+widehat(g_0(u+dot))(lambda)
+ =-zeta^(lambda u)/13,              lambda!=0,
 ```
 
 all `169` pointwise modes are nonzero.
@@ -652,4 +665,21 @@ Both transcripts must match
 ```
 
 byte-for-byte after LF normalization. Every executable check raises
-explicitly under optimized Python. QED.
+explicitly under optimized Python.
+
+## 11. Independent audit
+
+An independent proof and exact-computation audit checked the canonical
+owner/graft typing on all `165` rows, the support bounds, the
+prime-cyclotomic unit proof, the four determinants and inverses, and every
+DFT sign and normalization in (21). It independently verified all `169`
+mode survivals, the axis and mixed Dirichlet gaps, the exact map (29) to
+THM-2365, and both circulant hostiles with their stated non-realization
+boundary. The audit also forced the group-ring distinction between the
+multiplicative identity `delta_0` and the all-ones word `S`, removed an
+undefined translate phase, and strengthened the executable orbit hostile
+from one positive offset to all twelve. Ordinary and optimized executions
+are byte-identical to the stored transcript, and the source/output hashes
+match the metadata.
+
+QED.

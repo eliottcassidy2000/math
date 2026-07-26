@@ -1,5 +1,5 @@
 theorem=THM-2368
-status=PROVED+VERIFIED-EXACT+CANDIDATE-UNDER-INDEPENDENT-AUDIT
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED
 root_group=C_13
 nonempty_proper_boolean_words=8190
 prime_cyclotomic_nonzero_character_checks=98280
@@ -12,7 +12,8 @@ residual_branch_support_interval=[3,10]
 radon_factorization_checks_mod_53=338
 radon_full_mode_control_checks_mod_53=338
 radon_pointwise_target_modes=169/169
-integer_dirichlet_gap=2/169
+integer_axis_dirichlet_gap=2/169
+integer_mixed_dirichlet_gap=4/169
 control_horizontal_energy_min=66/169
 control_vertical_energy_min=72/169
 control_mixed_energy_min=12/169
