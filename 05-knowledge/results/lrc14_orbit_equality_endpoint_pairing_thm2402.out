@@ -1,0 +1,32 @@
+THM-2402 ORBIT EQUALITY AND ENDPOINT-PAIRING AUDIT
+
+NONCONSTANT ONE-SHEET SECTION (q=5)
+  mu(E)=1/10, q*mu(E)=mu(H)=1/2
+  D(E)=0:+1, 1/20:-1, 1/4:+1, 3/10:-1
+  (T_q)_*D(E)=D(H)=0:+1, 1/2:-1
+  interior switch z=1/4 pairs exit x=1/20 with entry x=1/4
+
+SHARP EXCESS-SUPPORT BOUNDS
+  one extra sheet: X=1/8, mu(B_2)=1/8=X
+  all five sheets: X=1/2, mu(B_2)=1/8=X/(q-1)
+  strict-example D(N_E-1_H)=1/8:+1, 1/4:-1
+
+COMMON-CORE q=49 SPECIALIZATION
+  mu(H_0)=1-2/7+1/91=66/91
+  equality floor delta=mu(H_0)/49=66/4459
+  strict surplus X=49*delta-66/91 obeys X/48 <= mu(B_2) <= X
+
+SEPTIMAL ENDPOINT CONGRUENCE
+  finite positive-control endpoint pairs tested=705600
+  common T_49 image pairs=13040
+  both speeds seven-units=6040
+  primitive unit-speed failures=0
+  sharp hostile: v=7,w=1,x=97/98,y=13/14,49(x-y)=3
+
+SCOPE
+  measurable equality does not require BV or rational endpoints
+  signed endpoint pairing requires a finite-interval/BV boundary
+  THM-2399 is pointwise one-orbit sharpness, not global equality
+  primitive paired-event existence and canonical target typing remain open
+
+PASS
