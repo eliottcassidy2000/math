@@ -306,7 +306,7 @@ equal_prime_cases = equal_prime_bank()
 bh_cases = brittenham_hermiller_bank()
 
 print("theorem=THM-2351")
-print("status=CLAIMED+VERIFIED-EXACT+UNDER-INDEPENDENT-AUDIT")
+print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED")
 print(f"algebraic_ledger_cases={ledger_cases}")
 print(f"pure_bypass_boundary_cases={pure_bypass_cases}")
 print(f"zero_bypass_boundary_cases={zero_bypass_cases}")

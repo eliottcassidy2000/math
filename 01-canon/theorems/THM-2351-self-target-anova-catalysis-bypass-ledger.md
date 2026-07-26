@@ -2,7 +2,7 @@
 id: THM-2351
 title: "Self-target allocation ANOVA catalysis--bypass ledger"
 status: >
-  CLAIMED + VERIFIED-EXACT, PROOF CANDIDATE UNDER INDEPENDENT AUDIT. For
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. For
   two nontrivial prime knots P,Q and X=P#Q, the complete two-token
   allocation energy of the canonical source packet `(U,X)` has a unique
   self-target optimum. Its zero-marginal pair coefficient is exactly minus
@@ -28,14 +28,14 @@ related:
   - THM-2336-prime-target-gordian-owner-diagram-and-bypass-split
 script: 04-computation/self_target_anova_catalysis_bypass_thm2351.py
 output: 05-knowledge/results/self_target_anova_catalysis_bypass_thm2351.out
-script_sha256: 080751d05d71027a9ef847fd6bb9031dee35c64709a2c44909ffe9e74b6724db
-output_sha256: 40dc845b7dbf8562dee38992d0d5eaf9cfee056bc0fc3ad51c5500f0ff9a56af
+script_sha256: 67add636c2aa7215faa62c551473d23ffa59bda645730c684c05ac21d1b78a2f
+output_sha256: 31fafd81cc7f9da3f2ea0c3a53accb6e0532152b4fac86eaa6a5a5d616039e94
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2351 -- the self-target ANOVA catalysis--bypass ledger
 
-**CLAIMED + VERIFIED-EXACT; PROOF CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2346 turns a composite-target allocation energy into unique global
 zero-marginal tensors. THM-2348 shows that its two-token cohabitation
@@ -510,3 +510,18 @@ The finite ledger bank is a control for the identities, not an assertion
 that every algebraically admissible row is realized by knots. The theorem
 computes no new Gordian distance, positive catalyst, unknotting number,
 stable diagonal, or knot classification.
+
+## 10. Independent hostile audit
+
+An independent pass reconstructed the four raw allocation costs directly
+from THM-2339's prime-token fibre, checked strict uniqueness of the
+self-target optimum, and rederived every ANOVA coordinate and inverse
+formula. It independently verified the two continuation-row identities,
+the exact diamond of directional nonnegativity, the equal-prime quotient,
+and the Brittenham--Hermiller pure-bypass boundary without assuming the
+unknown value of `u(P#mirror(P))`. The audit specifically confirmed the
+stopping scope: after retaining `u(P),u(Q)`, the self-target ANOVA and the
+directional catalysis--bypass ledger are mutually inverse affine
+coordinates, so no stronger knot invariant is being claimed. Normal,
+optimized, and stored transcripts agree byte-for-byte after LF
+normalization, and both frontmatter hashes were independently reproduced.

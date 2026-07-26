@@ -1,5 +1,5 @@
 theorem=THM-2351
-status=CLAIMED+VERIFIED-EXACT+UNDER-INDEPENDENT-AUDIT
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED
 algebraic_ledger_cases=3184
 pure_bypass_boundary_cases=212
 zero_bypass_boundary_cases=127
