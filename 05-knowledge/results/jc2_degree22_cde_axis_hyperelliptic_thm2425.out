@@ -1,0 +1,9 @@
+THM-2425 degree-22 C/D/E-axis exact referee
+weighted_flux_reductions=PASS
+C_axis=residual_degree_5,genus_2,squarefree=PASS,sha256=006172e06f7fed27f980fd11187db30d9ae4cada099a469f7ecca4533f032aed
+D_axis=residual_degree_4,genus_1,squarefree=PASS,sha256=16696bbc9c430facbe0fb45a426e0083aa003990ab67ba314debc882134e28a2
+E_axis=residual_degree_3,genus_1,squarefree=PASS,sha256=81ac4e2125615461fe5e8e4d16fcf9ab863106d11630fba1d032ea3e34446bc4
+quadratic_coefficient_gcds=1
+excluded_wall_controls=PASS
+y_zero_hostile_controls=PASS
+all_exact_checks=PASS
