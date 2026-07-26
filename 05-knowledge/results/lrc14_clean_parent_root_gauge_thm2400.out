@@ -1,0 +1,15 @@
+theorem=THM-2400
+status=PROVED-CANDIDATE+VERIFIED-EXACT; INDEPENDENT-AUDIT-PENDING
+disjoint_mask_pairs=37323; common_root_translate_checks=485199
+common_root_gauge=POINTWISE-INVARIANT-IN-JOINT-CHARGED-PRODUCT
+every_actual_role_all_12_colours=YES
+signed_floor_lower_q=delta/1014; signed_floor_guard=delta/507; bank_floor=delta/845
+universal_each=1/27128556; universal_bank=1/22607130; common_each=11/753571; common_bank=66/3767855
+owner_categories=13; universal_owner_mass=1/347802; common_owner_mass=66/57967
+universal_owner_each=1/352671228; universal_owner_joint=1/2468698596; universal_owner_bank_joint=1/2057248830
+common_owner_each=11/9796423; common_owner_joint=11/68574961; common_owner_bank_joint=66/342874805
+two_factor_slope_cases=24336; common_slope_cases=1872; labelled_descent=COMMON-SLOPE-IFF
+unequal_slope_hostile_shifts=0,12,1; sizes=1,0,2
+relative_shift_bank=LIVE; common_coshift_diagonal=IDENTICALLY-ZERO
+lawful_target_current=OPEN; row_decrement=0; ledger=165
+all_checks=PASS
