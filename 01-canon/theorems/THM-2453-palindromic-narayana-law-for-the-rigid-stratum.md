@@ -140,8 +140,12 @@ With stack multiplicativity this proves, for **all** `n`: the rigid
 self-converse TOWERS are exactly the palindromic `{1, C3}` stacks,
 i.e. the Narayana palindrome law (1) is exact within the grammar
 unconditionally. The only remaining open piece is that no rigid
-class lies outside the tower grammar (verified `n <= 10`, `n = 11`
-in flight).
+class lies outside the tower grammar -- now verified through
+`n = 12`: the n = 11 census (THM-2454) gives exactly 7 rigid
+classes `[1,3,9,9,9,27,27] = pal13(11)`, and the n = 12 pruned
+census gives exactly 6 all-rigid `[1,9,9,9,9,81] = pal13(12)`,
+both matching (1) in count and multiset. Both same-session
+predictions of this theorem are CONFIRMED.
 
 ## 5a. OEIS identification (VERIFIED 20 terms)
 
