@@ -9,10 +9,11 @@ status: >
   (rigid-SC(n) EQUALS pal13(n) with matching H-multisets for every
   n = 3..10 against the THM-2444 exhaustive census; strong towers
   C3[C3,1,1] and C3[C3,C3,C3] verified nonrigid, tc = 5 and > 1).
-  Predictions locked before the 2^25 census: rigid-SC(11) = 7 with
-  H-multiset [1,3,9,9,9,27,27] (hence pure-blue(11) = 8 under the
-  THM-2444 repaired law), and rigid-SC(12) = 6 with
-  [1,9,9,9,9,81]. Within the tower grammar the converse is PROVED
+  Prediction CONFIRMED same session: the 2^25 census gives exactly
+  7 rigid classes at n = 11 with H-multiset [1,3,9,9,9,27,27]
+  (THM-2454; the naive pure-blue(11) = 8 guess failed because the
+  nonrigid stratum has its own law -- see THM-2454's center law).
+  rigid-SC(12) = 6 with [1,9,9,9,9,81] remains predicted. Within the tower grammar the converse is PROVED
   for all n (run-transfer expansion: C3[A,B,C] is rigid iff it is
   C3 itself); only 'no rigid class outside the grammar' remains
   OPEN beyond n = 10.

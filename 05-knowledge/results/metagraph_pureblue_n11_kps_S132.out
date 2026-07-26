@@ -1,0 +1,11 @@
+n=11: blue cube 2^25; classes touched=279968; PURE-BLUE=9
+    pure-blue class: H=1 |Aut|=1 tc=1
+    pure-blue class: H=3 |Aut|=3 tc=1
+    pure-blue class: H=9 |Aut|=9 tc=1
+    pure-blue class: H=9 |Aut|=9 tc=1
+    pure-blue class: H=9 |Aut|=9 tc=1
+    pure-blue class: H=15 |Aut|=5 tc=3
+    pure-blue class: H=27 |Aut|=27 tc=1
+    pure-blue class: H=27 |Aut|=27 tc=1
+    pure-blue class: H=135 |Aut|=45 tc=3
+ALL CHECKS PASSED

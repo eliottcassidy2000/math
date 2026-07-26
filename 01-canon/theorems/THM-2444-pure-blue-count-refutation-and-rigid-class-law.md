@@ -153,6 +153,14 @@ rigid; no nonrigid class appears; no `27` class at n = 10. Data now:
 `rigid-SC(n) = 2, 1, 2, 2, 3, 3, 5, 4` and
 `nonrigid(n) = 0, 0, 1, 0, 1, 0, 1, 0` for n = 3..10.
 
+## 6c. Superseding law (S132)
+
+THM-2453/THM-2454 complete this arc: the rigid stratum is the
+palindromic Narayana law (confirmed at n = 11), and the repaired
+form (3) is REFUTED at n = 11 (two nonrigid classes, not one); the
+complete law is THM-2454's three-letter alphabet with the center
+law. Use THM-2454, not (3), going forward.
+
 ## 6b. Same-session continuation
 
 THM-2450 answers the first open question through n = 10: the rigid

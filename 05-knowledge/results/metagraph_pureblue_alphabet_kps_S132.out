@@ -1,0 +1,6 @@
+closed form matches all nine censuses n=3..11: [2, 1, 3, 2, 4, 3, 6, 4, 9]
+predictions: n=12..16 -> [6, 13, 9, 19, 13]
+n=11 nonrigid identification: (1,1,1,T5,1,1,1) -> (15,5,3); (C3,T5,C3) -> (3*15*3, 3*5*3, 3) = (135,45,3)
+blue-mult(stack(T5,T5)) = 3
+tc(stack(T5,T5)) = (15*15)/(5*5) = 9; blue-mult 3 < 9 => MIXED: PASS
+ALL CHECKS PASSED
