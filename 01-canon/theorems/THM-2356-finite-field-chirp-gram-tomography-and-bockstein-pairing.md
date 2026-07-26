@@ -1,6 +1,6 @@
 ---
 id: THM-2356
-title: "Finite-field chirp Gram tomography and the Bockstein pairing debt"
+title: "Finite-field chirp Gram tomography and Bockstein planar graph slices"
 status: >
   PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. For equal
   finite abelian groups G,A and a planar map phi:G->A, the complete
@@ -12,27 +12,30 @@ status: >
   intensity and retain only autocorrelation. Chirp intensities alone
   cannot locate a singleton and have an exact unequal-magnitude
   two-support swap ambiguity; singleton energies are a sharp uniform
-  sidecar. For the LRC target and first Bockstein spaces, both of order
-  169, the theorem identifies a coefficient-respecting planar
-  target--jet coupling as a sufficient global alternative to pair probes.
-  Current canon supplies neither that coupling nor the aligned singleton
-  ledger, so no target landing, scalar-row exclusion, or LRC(14) closure
-  is proved.
+  sidecar. The LRC target and first Bockstein spaces both have order 169.
+  Their canonical joint Abel array partitions into the 169 planar graphs
+  beta=q^2/2+c; on each graph the existing linear target--jet characters
+  are quadratic chirps up to a scalar phase. At least one graph signal
+  survives. Any graph with target support at least two therefore forces a
+  nonzero target through its recovered off-diagonal Gram entry. The exact
+  remaining boundary is one-sparse planar graph signals and their missing
+  singleton locations, not construction of the chirp service itself. No
+  scalar-row exclusion or LRC(14) closure is proved.
 source: codex-2026-07-25-finite-field-chirp-tomography
-depends_on: []
+depends_on:
+  - THM-2337-expiration-word-residue-invisibility-and-first-bockstein-sidecar
 related:
   - THM-2303-terminal-component-phase-current-and-defect-rank
-  - THM-2337-expiration-word-residue-invisibility-and-first-bockstein-sidecar
   - THM-2344-correlation-inverse-rigidity-and-aligned-tooth-twist-hostile
   - THM-2355-component-deletion-gram-and-twist-energy-phase-transport
 script: 04-computation/finite_field_chirp_gram_tomography_thm2356.py
 output: 05-knowledge/results/finite_field_chirp_gram_tomography_thm2356.out
-script_sha256: 9af9deda870754d520a9b040568bc4903c31562bbe351622087a150cc384f8b1
-output_sha256: af261b877df50dae6f9fd22a2d16da0dffaed646eb37e4c6aa86b54329790145
+script_sha256: fd6f4290474d848e0f128fb83910a33c09b4e6691c6bb99112462d4474b35585
+output_sha256: 10e1afcc239d0a0e93a21b3498107555efe1eb4eccc553dcc5a0678a2423fc9c
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2356 -- finite-field chirp Gram tomography
+# THM-2356 -- finite-field chirp Gram tomography and planar graph slices
 
 **PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
 
@@ -290,72 +293,126 @@ groups may be identified with
 K=F_169.                                            (22)
 ```
 
-Let `Z(q)` denote the current grouped by target residue. Existing target
-characters provide the ordinary Fourier amplitudes
+Let
 
 ```text
-sum_q Z(q)psi(bq).                                  (23)
+A(q,z),                    (q,z) in G x B,           (23)
 ```
 
-Their energies recover only the autocorrelation in THM-2355. Independent
-linear characters of the Bockstein jet do not change this conclusion:
-Section 3 shows that a linear response bank can only relabel (23).
+be THM-2337's full-semantic joint target/first-jet Abel array. Every joint
+limit exists and the array is not identically zero.
 
-The sufficient nonlinear service is now completely explicit:
+For each `c in K`, define its planar graph signal
 
 ```text
-for every a,b in F_169, retain the lawful semantic amplitude
-
-sum_q Z(q)psi(bq+a q^2/2),                          (24)
-
-together with the labelled singleton target energies |Z(q)|^2.         (25)
+Z_c(q)=A(q,q^2/2+c).                                (24)
 ```
 
-Equations (15) and (25) reconstruct the whole target Gram matrix and hence
-the target current up to common phase. In particular they eliminate the
-real full-support perfect-autocorrelation hostile of THM-2355.
-
-There is an equivalent target--jet formulation. A coefficient-respecting
-planar section
+The `169` graphs in (24) are pairwise disjoint and partition `K x K`:
+every `(q,z)` lies on the unique graph
 
 ```text
-q -> beta(q)=q^2/2 in B                             (26)
+c=z-q^2/2.                                         (25)
 ```
 
-would let the linear jet character `a` produce precisely the chirp in
-(24). More generally any weight-preserving coupling whose derivative in
-`q` is a permutation supplies the planar hypothesis of Section 1.
+Consequently
 
-THM-2337 proves only that every target and every first-jet value is
-termwise occupied. Its exact address gauge changes the jet while fixing
-the address and is not weight preserving. Surjective occupancy therefore
-does not supply the coefficient identity (26), a semantic restriction to
-its graph, or the amplitudes (24). Nor does current canon align the
-component singleton energies of THM-2303 with the labelled target energies
-in (25).
+```text
+A is not zero
+ => Z_c is not zero for at least one c.             (26)
+```
+
+This is a coefficient-respecting partition of the already existing joint
+array, not a gauge choice or a termwise occupancy assertion.
+
+Restrict a joint linear target--jet character to one graph. Its amplitude
+is
+
+```text
+sum_q A(q,q^2/2+c) psi(bq+a(q^2/2+c))
+
+ =psi(ac) sum_q Z_c(q)psi(bq+a q^2/2).              (27)
+```
+
+The leading factor has modulus one. Thus the existing linear characters,
+after retaining the graph label, give exactly the full chirped intensity
+table of Section 2 for `Z_c`.
+
+This corrects a tempting false dichotomy. Without graph restriction,
+independent linear target and jet characters recover only the
+autocorrelation of the joint array. On a retained graph the same linear
+characters become nonlinear in `q`, because the graph itself is
+quadratic.
+
+Formula (15) now has a direct LRC consequence. If some surviving graph
+signal has two distinct supported targets `q_0,q_1`, then
+
+```text
+Z_c(q_0)conjugate(Z_c(q_1))!=0                     (28)
+```
+
+is one of the reconstructed off-diagonal Gram entries. Two distinct
+targets cannot both be zero, so some nonzero full target survives.
+Equivalently,
+
+```text
+no nonzero target survives
+ => every Z_c is supported in {0}.                  (29)
+```
+
+More generally, if the chirp table has any nonzero off-diagonal Gram
+entry, target landing follows without a singleton-energy sidecar.
+
+The residual case is sharp. A graph signal supported at one point has
+constant chirp intensities, independent of that point, by (18). Thus the
+chirp table cannot distinguish
+
+```text
+support(Z_c)={0}
+```
+
+from a singleton at a nonzero target. Labelled singleton graph energies
+
+```text
+|Z_c(q)|^2                                          (30)
+```
+
+would locate it and complete the reconstruction, but current canon does
+not align THM-2303's component magnitudes with (30).
 
 The new loss ledger is
 
 ```text
-ordinary target twists
-  -> target autocorrelation only;
+unrestricted linear target x jet twists
+  -> joint autocorrelation only;
 
-independent linear target x jet twists
-  -> relabelled joint autocorrelations only;
+retain the planar graph label c=z-q^2/2
+  -> lawful quadratic chirps on every graph;
 
-coefficient-respecting planar target--jet coupling
-  -> every off-diagonal target Gram entry;
+some graph has support at least two
+  -> reconstructed off-diagonal Gram entry
+  -> nonzero target;
 
-planar coupling + labelled target singleton energies
-  -> complete target current up to common phase.                    (27)
+every graph is one-sparse
+  -> chirp intensities lose its singleton location;
+
+planar graph chirps + labelled graph singleton energies
+  -> complete graph currents up to phase.                          (31)
 ```
 
-Thus THM-2356 gives a precise global alternative to THM-2355's lawful
-pair-twist tree. The next canonical LRC task is no longer “find more
-characters.” It is to construct the nonlinear planar coupling (26), or to
-prove that the actual interval weights confine the target current to a
-phase cone. No such construction is claimed here; the ledger remains
-`165` and LRC(14) remains open.
+Thus THM-2356 supplies a canonical global alternative to THM-2355's
+lawful pair-twist tree, not merely a proposed one. It reduces the LRC
+phase/target problem to the **planar graph singleton boundary**:
+
+```text
+force one graph to contain two surviving target coefficients,
+or locate a surviving singleton away from q=0.                      (32)
+```
+
+THM-2337's termwise occupancy of every `(q,z)` does not settle (32),
+because the Abel sums may cancel separately in every joint fibre. No
+scalar profile is excluded; the ledger remains `165` and LRC(14) remains
+open.
 
 ## 5. Exact companion
 
@@ -368,6 +425,8 @@ F_169=F_13[theta]/(theta^2-2)
 and represents all cyclotomic values exactly in `Q(i,zeta_13)`. It:
 
 - exhausts all `168` nonzero derivatives of `x^2/2` on `F_169`;
+- exhausts the `169` disjoint planar graph translates partitioning all
+  `28,561` target--jet pairs;
 - constructs the complete `28,561`-entry chirped intensity table for a
   five-site Gaussian-integer signal;
 - performs the literal double inversion on every ordered supported pair

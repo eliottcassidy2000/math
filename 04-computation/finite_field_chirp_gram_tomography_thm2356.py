@@ -167,6 +167,25 @@ def main() -> None:
         planar_derivatives += 1
     require(planar_derivatives == Q - 1, "wrong planar derivative count")
 
+    # The LRC target x first-jet space has the same abstract form K x K.
+    # The translates z=phi(q)+c partition it into q planar graphs.
+    graph_pairs: set[tuple[Field, Field]] = set()
+    for c in elements:
+        graph = {
+            (qvalue, fadd(phi(qvalue), c))
+            for qvalue in elements
+        }
+        require(len(graph) == Q, f"planar graph changed size at c={c}")
+        require(
+            graph_pairs.isdisjoint(graph),
+            f"planar graph translates collided at c={c}",
+        )
+        graph_pairs.update(graph)
+    require(
+        len(graph_pairs) == Q * Q,
+        "planar graph translates stopped partitioning K x K",
+    )
+
     # A five-site Gaussian-integer signal.  Direct expansion of every one of
     # the 169^2 chirped intensities remains exact in Q(i,zeta_13).
     signal: dict[Field, Gaussian] = {
@@ -295,6 +314,7 @@ def main() -> None:
     print("field: F_13[theta]/(theta^2-2), q=169, trace(u+v theta)=2u")
     print("planar map: phi(x)=x^2/2")
     print(f"exhaustive nonzero planar derivatives: {planar_derivatives}")
+    print("planar graph partition: 169 slices x 169 points = 28561")
     print(f"chirped intensity table: {len(intensities)}")
     print(f"exact off-diagonal inversion controls: {len(controls)}")
     print(f"linear-mask relabelling checks: {linear_relabels}")

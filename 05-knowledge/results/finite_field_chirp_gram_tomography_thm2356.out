@@ -2,6 +2,7 @@ THM-2356 exact finite-field chirp tomography referee
 field: F_13[theta]/(theta^2-2), q=169, trace(u+v theta)=2u
 planar map: phi(x)=x^2/2
 exhaustive nonzero planar derivatives: 168
+planar graph partition: 169 slices x 169 points = 28561
 chirped intensity table: 28561
 exact off-diagonal inversion controls: 25
 linear-mask relabelling checks: 28561
