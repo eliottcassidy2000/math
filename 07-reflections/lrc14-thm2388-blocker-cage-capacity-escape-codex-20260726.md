@@ -13,6 +13,11 @@ also uses proved and audited THM-2391,
 During this audit, THM-2392 promoted the compatible cage and THM-2393,
 `THM-2393-c3-safe-double-fibre-capacity-and-common-core-residual`,
 independently collapsed its ten types to one common-core chain.
+THM-2394,
+`THM-2394-common-core-six-address-transversal-and-labelled-hole-trichotomy`,
+then canonized the labelled dipole and carry-corrected successor law.
+Section 8 below is an independent audit and alternate derivation of its
+forced-middle transport, not a second theorem dependency.
 
 The result repairs an initially false inference. THM-2388's exact
 `36/343` is an integrated multiplicity excess, not the measure of the
@@ -759,7 +764,7 @@ current or fixed `(m,X)` triangle. The sole cage chain retains its exact
 middle address but not the transported hole status. A
 target-shift-covariant base filtration is still required on both sides.
 
-## 8. The common-core middle address carries positive hole mass
+## 8. Independent reconciliation with the common-core dipole
 
 THM-2393 identifies the final no-clean boundary as
 
@@ -831,9 +836,15 @@ whether `R(Tx)` is positive, negative, or neutral. This is now the
 cheapest interface to THM-2232's signed Markov eigenline and THM-2257's
 `169`-image sieve.
 
+THM-2394 strengthens the same carrier to a fixed ordered hole/double
+pair and supplies the compulsory carry coordinate
+`floor(13y) mod 7`. The present derivation agrees with that theorem:
+address transport is canonical, while charged hole status after the
+noninvertible map is not.
+
 No scalar row is excluded. The ledger remains `165`, and LRC(14)
 remains open. This independently audited reflection is a quantitative
-sidecar to proved THM-2392 and THM-2393, not itself a theorem-ID
+sidecar to proved THM-2392--2394, not itself a theorem-ID
 dependency.
 
 ## Exact reproduction
@@ -864,9 +875,9 @@ bi-root `/338` cell invoices, and all singleton/two-root energy
 constants. It also checks the post-THM-2393 common-core intersection and
 the `3972/57967` forced middle-hole floor.
 
-As an independent post-rebase control, the promoted THM-2392 and THM-2393
-companions each pass normal and optimized execution against their stored
-transcripts.
+As independent post-rebase controls, the promoted THM-2392, THM-2393,
+and THM-2394 companions each pass normal and optimized execution against
+their stored transcripts.
 
 LF-normalized SHA256:
 
