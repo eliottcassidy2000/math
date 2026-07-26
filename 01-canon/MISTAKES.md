@@ -9,6 +9,36 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-260 (2026-07-25, post-promotion hostile audit of THM-2362) -- an unordered inverse-root count was promoted to a nonzero-mode sum without fixing the anchor sheet
+
+- **What happened:** THM-2362 correctly separated the target-factor shift
+  `d(y+s/13)` from the inverse-root collection `d((y+s)/13)`, but Section
+  4 then claimed inverse-root nonzero-mode sums `12rho/13` on danger
+  support and `2rho/13` on complement support. The companion checked only
+  the arithmetic tautologies `rho-rho/13` and `rho-11rho/13`; it never
+  checked the actual `s=0` root sheet.
+- **First failed implication:** the count
+  `sum_s d((y+s)/13)=2-d(y)` determines only the zero-character average.
+  Fourier inversion gives `sum_(k!=0) Rtilde(k)=R_0-Rtilde(0)`, and
+  `R_0=int w(y)d(y/13)dy` depends on a chosen lift/section which the
+  unordered count does not contain. Minimal hostiles are `y=99/100`,
+  where danger count is one but the chosen anchor is zero and the
+  nonzero-mode sum is `-1/13`, and `y=1/2`, where complement count is
+  eleven but the anchor is zero and the sum is `-11/13`.
+- **Strongest survivor:** THM-2362's target-shift identities, successor
+  statistic, all danger/complement mode floors in Sections 2--3,
+  pure-word redundancy, and fork boundary are unchanged. THM-2364 uses
+  only those target-shift identities and is unaffected.
+- **Repair:** Section 4 now retains only the almost-everywhere
+  inverse-root count and zero-character average, names the missing
+  measurable section/anchor hypothesis, and records both negative
+  hostiles. The exact companion now checks the actual anchor entries.
+- **Rule:** a multiset or unordered fibre count determines the zero
+  character only. Before inferring nonzero Fourier sums, explicitly
+  identify the inversion anchor (`s=0`), prove that it is canonical or
+  supply a section, and make the executable measure that anchor rather
+  than a rearranged arithmetic consequence.
+
 ## MISTAKE-259 (2026-07-25, concurrent namespace and rebase audit) -- THM-2356 crossed and a second conflict block escaped inspection
 
 - **What happened:** a session fetched and verified that `THM-2356` was

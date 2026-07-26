@@ -2,15 +2,16 @@
 id: THM-2362
 title: "Thirteen-shift successor statistic and role-jet floor"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For the
-  centered danger d=1_(||x||<1/14), target-coordinate shifts obey
+  PROVED + VERIFIED-EXACT + CORRECTED AFTER INDEPENDENT HOSTILE AUDIT.
+  For the centered danger d=1_(||x||<1/14), target-coordinate shifts obey
   sum_s d(y+s/13)=2-d(13y), not 2-d(y). Thus every nonnegative weight
   supported in d has a nontrivial shifted-danger Fourier mode with real
   part at least 11rho/156 and nonzero-mode energy at least
   121rho^2/2028; a weight supported in the complement has corresponding
   floors rho/156 and rho^2/2028. The exact extra coordinate is the
   successor overlap rho_+=int w(y)d(13y). Inverse-root probes
-  d((y+s)/13) instead use d(y) and have different constants. On a pure
+  d((y+s)/13) instead have an unordered count controlled by d(y), while
+  their nonzero-mode sum also needs a chosen sheet anchor. On a pure
   THM-2305 word the named danger factor is redundant by the scalar cover,
   so its actual first-jet role has the danger floor. Fork dangers and
   complement roles are not redundant. This proves a positive role-mass
@@ -26,14 +27,14 @@ related:
   - THM-2364-anchored-corner-forces-mixed-deep-blocker-colour
 script: 04-computation/thirteen_shift_successor_role_jet_thm2362.py
 output: 05-knowledge/results/thirteen_shift_successor_role_jet_thm2362.out
-script_sha256: 7682f49a5c613c871308890f94edbb2352857a60c7756f805a4a7b948718d894
-output_sha256: 921f39179da64db390f22e7eecfbbb36ee1228ea2737e128a98329d22bbb22d8
+script_sha256: a7309b8ec09556f5dac1e0a6eb1afdf45fb01a76395adb06d69c8396c6dbc81c
+output_sha256: 5856d80d6ddf2cf5b1383380ff54f3e64ec5d3d83d3047a953abeba61953b8d6
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2362 -- a target shift sees the successor bit
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED + VERIFIED-EXACT + CORRECTED AFTER INDEPENDENT HOSTILE AUDIT.**
 
 The thirteen-root count has two similar-looking but inequivalent forms.
 The distinction is a scale:
@@ -142,8 +143,9 @@ sum_(k!=0)|Mtilde(k)|^2
 ```
 
 Every nonzero character is primitive because thirteen is prime. Equality
-in the last bounds requires `rho_+=0` and a flat common phase among all
-twelve nonzero modes; these are sharp algebraic boundaries.
+in the last bounds requires `rho_+=0` and all twelve nonzero modes to be
+equal as complex numbers. Since their sum is positive real, their common
+value is positive real. These are the sharp algebraic boundaries.
 
 ## 3. A complement role has its own floor
 
@@ -180,9 +182,11 @@ sum_(k!=0)|Ntilde(k)|^2
  >=rho^2/2028.                                     (14)
 ```
 
-Here the uniform boundary occurs at `rho_+=rho`. Thus a current-scale
-danger or complement role always moves under its genuine `s/13` factor
-translation, but its exact response remembers the successor bit.
+Here the uniform boundary occurs at `rho_+=rho`; simultaneous equality in
+the Cauchy floor also requires all twelve nonzero modes to be the same
+positive real number. Thus a current-scale danger or complement role
+always moves under its genuine `s/13` factor translation, but its exact
+response remembers the successor bit.
 
 ## 4. Why the inverse-root constants do not transfer
 
@@ -192,7 +196,7 @@ For the different probe
 d_s^root(y)=d((y+s)/13),
 ```
 
-the pointwise laws are
+the almost-everywhere pointwise laws are
 
 ```text
 sum_s d_s^root(y)=2-d(y),
@@ -200,10 +204,72 @@ sum_s d_s^root(y)=2-d(y),
 sum_s (1-d_s^root(y))=11+d(y).                     (15)
 ```
 
-Consequently a weight supported in `D` has inverse-root danger average
-`rho/13` and nonzero-mode sum `12rho/13`; a weight supported in `D^c`
-has inverse-root complement average `11rho/13` and nonzero-mode sum
-`2rho/13`. These older constants are correct for (15), but not for (3).
+The strict-open endpoints are a finite null exception. Formula (15)
+determines the zero-character average, but not the sum of the nonzero
+characters. Choose a measurable real lift `ytilde` of the circle
+coordinate and put
+
+```text
+rho_D=int w(y)d(y)dy,
+
+R_s=int w(y)d((ytilde+s)/13)dy,
+
+A=R_0.
+```
+
+Then
+
+```text
+Rtilde(0)
+ =(2rho-rho_D)/13,
+
+sum_(k!=0)Rtilde(k)
+ =A-(2rho-rho_D)/13.                               (15a)
+```
+
+For the complementary root profile
+
+```text
+C_s=int w(y)(1-d((ytilde+s)/13))dy,
+```
+
+the exact formula is
+
+```text
+sum_(k!=0)Ctilde(k)
+ =(2rho-rho_D)/13-A.                               (15b)
+```
+
+The current support mass `rho_D` does not determine the chosen
+root-sheet anchor `A`. Under the centered lift, `s=0` is a danger anchor
+on `D` but a zero complement anchor on `D^c`; `s=6` is a universal
+complement-safe anchor, at the cost of rephasing the Fourier inversion.
+
+With the standard `[0,1)` lift, two exact pointwise profiles expose the
+missing coordinate:
+
+```text
+y=99/100:
+  d(y)=1,
+  sum_s d((y+s)/13)=1,
+  d(y/13)=0,
+  sum_(k!=0)Rtilde(k)=-1/13
+  for unit point mass;                              (15c)
+
+y=1/2:
+  g(y)=1,
+  sum_s g((y+s)/13)=11,
+  g(y/13)=0,
+  sum_(k!=0)Ctilde(k)=-11/13
+  for unit point mass.                              (15d)
+```
+
+Each profile is constant on a sufficiently small open interval, so
+positive integrable weights give the same scaled hostile. Reindexing the
+root sheets changes which entry is called `s=0`; only the unordered count
+and zero-character average in (15) are intrinsic. An inverse-root
+nonzero-mode theorem therefore needs a separately specified measurable
+section and an anchor hypothesis.
 
 The separation already appears at
 
@@ -298,7 +364,8 @@ The dependency-free companion uses `Fraction` arithmetic to:
 - check the rational scale hostile (16);
 - sweep fourteen exact values of `rho_+/rho` through every identity and
   lower bound in (7)--(14);
-- verify the distinct inverse-root constants; and
+- verify the inverse-root zero-character counts and the two
+  lift-dependent negative nonzero-mode hostiles (15c)--(15d); and
 - exhaust the seven nonempty blocker truth assignments, proving pure
   danger redundancy and fork/complement nonredundancy.
 
@@ -318,8 +385,12 @@ Both transcripts must match
 byte-for-byte after LF normalization. Every executable check raises
 explicitly under optimized Python.
 
-Independent hostile audit checked the target-shift and inverse-root
-operations separately, every DFT normalization and constant, successor
-typing, pure-word redundancy, fork/complement failure boundaries, normal
-and optimized transcripts, stored output, LF hashes, and documentation
-routing. QED.
+The first independent audit correctly checked the target-shift theorem
+but inferred inverse-root nonzero-mode sums from the unordered count
+without checking the chosen `s=0` sheet. A second hostile audit supplied
+(15c)--(15d). The repaired theorem retains only the a.e. inverse-root
+counts and explicitly records the missing section/anchor coordinate.
+The target-shift identities (3), successor formulas (7)--(14), pure-word
+typing, fork boundary, and THM-2364 remain unchanged. Repaired normal and
+optimized transcripts, stored output, LF hashes, and documentation routing
+are checked below. QED.

@@ -3,6 +3,7 @@ target/inverse open cells checked: 26/26
 target counts: sum d(y+s/13)=2-d(13y); sum g=11+d(13y)
 inverse-root counts: sum d((y+s)/13)=2-d(y); sum g=11+d(y)
 scale hostile y=1/100: target count 2, inverse-root count 1
+inverse-root lift hostiles: danger -1/13; complement -11/13
 uniform role floors: danger Re>=11rho/156, energy>=121rho^2/2028
 uniform role floors: complement Re>=rho/156, energy>=rho^2/2028
 blocker truth table: pure danger redundant; fork/complement not

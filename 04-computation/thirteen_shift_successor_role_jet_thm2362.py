@@ -139,15 +139,35 @@ def main() -> None:
             "complement energy floor failed",
         )
 
-    # The inverse-root probe has the older constants, but it is a
-    # different operation.
+    # Inverse-root counts determine only the zero character.  A chosen
+    # sheet anchor is extra lift data, and the nonzero-mode sum can have
+    # the opposite sign from the formerly claimed constants.
+    danger_lift = Fraction(99, 100)
+    danger_root_values = [
+        inverse_root_danger(danger_lift, shift) for shift in range(P)
+    ]
     require(
-        rho - rho / P == Fraction(12, 13) * rho,
-        "inverse-root danger constant changed",
+        danger(danger_lift) == 1
+        and sum(danger_root_values) == 1
+        and danger_root_values[0] == 0
+        and Fraction(danger_root_values[0], 1)
+        - Fraction(sum(danger_root_values), P)
+        == Fraction(-1, 13),
+        "inverse-root danger lift hostile changed",
     )
+
+    complement_lift = Fraction(1, 2)
+    complement_root_values = [
+        1 - inverse_root_danger(complement_lift, shift) for shift in range(P)
+    ]
     require(
-        rho - Fraction(11, 13) * rho == Fraction(2, 13) * rho,
-        "inverse-root complement constant changed",
+        danger(complement_lift) == 0
+        and sum(complement_root_values) == 11
+        and complement_root_values[0] == 0
+        and Fraction(complement_root_values[0], 1)
+        - Fraction(sum(complement_root_values), P)
+        == Fraction(-11, 13),
+        "inverse-root complement lift hostile changed",
     )
 
     # Scalar-cover truth table.  Exclude (0,0,0): at least one blocker is
@@ -186,6 +206,7 @@ def main() -> None:
     print("target counts: sum d(y+s/13)=2-d(13y); sum g=11+d(13y)")
     print("inverse-root counts: sum d((y+s)/13)=2-d(y); sum g=11+d(y)")
     print("scale hostile y=1/100: target count 2, inverse-root count 1")
+    print("inverse-root lift hostiles: danger -1/13; complement -11/13")
     print(
         "uniform role floors: danger Re>=11rho/156, "
         "energy>=121rho^2/2028"
