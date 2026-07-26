@@ -2,7 +2,7 @@
 id: THM-2370
 title: "Deletion-martingale drift conservation and the sharp clone hostile"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. For any
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. For any
   nested sequence of nonnegative THM-2365 tables, the noncirculant
   component lost between the first and last tables is the sum of the
   projected deletion layers. If delta is the positive difference of
@@ -10,10 +10,11 @@ status: >
   and the sum of all layer energies is at least delta^2/n. A lawful
   physical deletion layer therefore lands its own nonzero target, with
   a finite-colour amplitude floor delta/(n sqrt(26208)) and an exact
-  91-unit deep multiplier. Both constants are sharp even for commuting
-  nested Boolean rational-interval masks with disjoint physical
-  deletion supports and individual mass 1-1/(91n): cloning the exact
-  90/91 THM-2367 circulant-restoration mask gives equality. The landed
+  91-unit deep multiplier. The n^-2 and n^-1 Hilbert constants are sharp
+  even for commuting Boolean rational-interval masks whose cumulative
+  products are nested, with disjoint physical deletion supports and
+  individual mass 1-1/(91n): cloning the exact 90/91 THM-2367
+  circulant-restoration mask gives equality. The landed
   target belongs to the deleted packet, not automatically to the
   canonical full-owner word. A complementary sharp anchored-slice lemma
   shows that a shifted all-safe residual which vanishes on its original
@@ -37,7 +38,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2370 -- drift cannot disappear without entering a deletion layer
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2367 gives both a locally drifting lawful graft and a large Boolean
 mask which makes the final overlap tensor exactly circulant. The natural
@@ -143,7 +144,8 @@ QH_n=0,
 QL_1=...=QL_n=QH_0/n.                              (10)
 ```
 
-Section 5 realizes (10) with nested Boolean interval masks.
+Section 5 realizes (10) with Boolean interval masks whose cumulative
+products are nested.
 
 ## 2. A lawful deletion lands its own target
 
@@ -175,8 +177,10 @@ L_j(r,s,t)
 
 If (12) retains the same target quotient, diagonal zero, and
 Poisson--Abel typing as THM-2365, that theorem applies to `L_j`
-itself. Write `B_j(a,b,h)` for its normalized finite transform. For the
-layer selected by (8),
+itself. In particular, deleting the deepest safe factor which enforces
+the diagonal zero is outside this clause unless another retained factor
+restores that zero. Write `B_j(a,b,h)` for the normalized finite transform
+of a lawful layer. For the layer selected by (8),
 
 ```text
 sum_(
@@ -482,7 +486,10 @@ decomposition. There is also a useful fixed-frequency form. Keep the same
 bare right endpoint from the isolated packet `H_0`; the retained left
 packet and all deletion left packets partition the original left packet.
 With that common right endpoint, every fixed `(X,m)` marked current
-decomposes linearly.
+decomposes linearly at the indicator boundary. Equivalently, one may first
+partition and then Poisson-smooth each whole layer. Separately smoothing
+the Boolean factors at finite radius does not preserve their pointwise
+partition identity.
 
 This does **not** make a deletion current a subcurrent of the canonical
 full-owner current. The latter uses the fully masked bare endpoint.
@@ -573,4 +580,11 @@ Both transcripts must match
 byte-for-byte after LF normalization. Every executable check raises
 explicitly under optimized Python.
 
-Independent audit is pending. QED.
+Independent audits rederived the Hilbert projection inequalities and both
+equality conditions; the `1/13`, `2016`, and `26208` target ledger; the
+anchored-slice principal angle and its nonnegative diagonal-zero equality
+case; the lawful deletion/current typing and common-right-endpoint boundary;
+and the complete Boolean clone construction. A separate implementation
+reconstructed all rational cells and every displayed drift value. Normal
+and optimized transcripts, stored output, LF-normalized Git hashes, and
+documentation routing pass. QED.
