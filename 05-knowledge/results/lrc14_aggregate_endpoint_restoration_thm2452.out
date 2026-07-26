@@ -1,0 +1,20 @@
+THM-2452 exact companion
+complete_masks=128
+lex_cell_counts=4,64,32,16,8,4
+extensions_by_cell=1,16,8,4,2,1
+ordered_mask_pairs=16384
+diagonal_mask_pairs=128
+offdiagonal_mask_pairs=16256
+drift_denominator=16384
+eligible_projection_denominator=13
+eligible_colours=2016
+eligible_energy_denominator=212992
+amplitude_square_denominator=429391872
+word_restoration_factor=mu(Q)^2/4
+word_drift_denominator=65536
+word_eligible_energy_denominator=851968
+word_amplitude_square_denominator=1717567488
+crt_91_unit_check=PASS
+fixed_X_nonzero_terms=4
+full_X_offdiagonal_sum=0
+ALL CHECKS PASSED
