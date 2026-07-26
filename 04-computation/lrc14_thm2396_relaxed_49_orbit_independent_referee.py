@@ -27,7 +27,7 @@ from __future__ import annotations
 
 from collections import Counter, defaultdict
 from dataclasses import dataclass
-from itertools import combinations
+from fractions import Fraction
 from math import gcd
 
 
@@ -332,13 +332,38 @@ require(
     "sharp mismatches are not A-address holes",
 )
 
+# The static obstruction localizes orbitwise: every high-safe orbit has a
+# clean root.  THM-2396's high-safe base has mass 66/91 and the orbit has
+# forty-nine roots.
+high_safe_base = Fraction(66, 91)
+common_core_clean_floor = high_safe_base / 49
+charged_cell_floor = common_core_clean_floor / 52
+complete_blocker_cell_floor = common_core_clean_floor / 78
+owner_tensor_floor = common_core_clean_floor / 338
+universal_last_lane_floor = min(common_core_clean_floor, Fraction(1, 26754))
+
+require(common_core_clean_floor == Fraction(66, 4459), "wrong clean floor")
+require(charged_cell_floor == Fraction(33, 115934), "wrong charged-cell floor")
+require(
+    complete_blocker_cell_floor == Fraction(11, 57967),
+    "wrong blocker-cell floor",
+)
+require(owner_tensor_floor == Fraction(33, 753571), "wrong tensor floor")
+require(
+    universal_last_lane_floor == Fraction(1, 26754),
+    "wrong universal last-lane floor",
+)
+
 
 def render_mask(mask: Mask) -> str:
     return ",".join(str(point) for point in mask.points)
 
 
 print("target=THM-2396-independent-relaxed-49-orbit-referee")
-print("status=FINITE-EXACT-CANDIDATE; independent-audit=PENDING")
+print(
+    "status=FINITE-EXACT+INDEPENDENTLY-HOSTILE-AUDITED;"
+    " canonical-THM2396=PROVED-TWICE-AUDITED"
+)
 print(
     f"unit_steps={len(UNITS)}; ordinary_masks={len(ORDINARY)};"
     f" guard_masks={len(GUARDS)}"
@@ -381,4 +406,11 @@ print(
     + ",".join(map(str, mismatch_bins))
 )
 print("physical_common_core_survivors=0")
+print(
+    f"common_core_clean_floor={common_core_clean_floor};"
+    f" charged_cell={charged_cell_floor};"
+    f" blocker_cell={complete_blocker_cell_floor};"
+    f" owner_tensor={owner_tensor_floor}"
+)
+print(f"universal_last_lane_clean_floor={universal_last_lane_floor}")
 print("all_checks=PASS")

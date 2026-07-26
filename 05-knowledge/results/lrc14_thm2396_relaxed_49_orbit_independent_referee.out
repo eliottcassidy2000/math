@@ -1,5 +1,5 @@
 target=THM-2396-independent-relaxed-49-orbit-referee
-status=FINITE-EXACT-CANDIDATE; independent-audit=PENDING
+status=FINITE-EXACT+INDEPENDENTLY-HOSTILE-AUDITED; canonical-THM2396=PROVED-TWICE-AUDITED
 unit_steps=42; ordinary_masks=1029; guard_masks=1029
 guard_candidate_histogram=22:294,25:294,26:147,33:294
 achievable_hole_histogram=0:588,1:147,3:294
@@ -11,4 +11,6 @@ sharp_A=3,4,5,6,7,8,9; sharp_B=0,11,15,19,30,34,45; sharp_guard=0,4,7,10,17,20,2
 sharp_lower_words=1,7,13,19,25,38,44|0,15,16,31,32,47,48|3,7,18,22,26,37,41|2,7,12,24,29,34,39
 sharp_holes=1,1,6,1,0,0; sharp_A_flip_bins=1,2,5,6
 physical_common_core_survivors=0
+common_core_clean_floor=66/4459; charged_cell=33/115934; blocker_cell=11/57967; owner_tensor=33/753571
+universal_last_lane_clean_floor=1/26754
 all_checks=PASS

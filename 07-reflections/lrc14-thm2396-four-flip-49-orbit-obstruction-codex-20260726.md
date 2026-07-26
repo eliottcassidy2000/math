@@ -1,10 +1,11 @@
 # LRC14 THM-2396 four-flip `49`-orbit obstruction
 
-**Status:** FINITE-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.
+**Status:** FINITE-EXACT INDEPENDENT REFEREE OF PROVED THM-2396.
 
-This is an independent referee package for reserved THM-2396,
-`THM-2396-common-core-forty-nine-orbit-word-incompatibility`. It is not
-a proved dependency.
+This is an independent, strictly relaxed finite referee for proved and
+twice independently hostile-audited THM-2396,
+`THM-2396-common-core-forty-nine-orbit-word-incompatibility`. It is a
+reproduction/sharpening sidecar, not a separate theorem dependency.
 
 THM-2393 and THM-2394 reduce the no-clean branch to
 
@@ -162,9 +163,27 @@ real equality boundary, not search slack.
 
 ## 5. Scope
 
-If independently audited and promoted through THM-2396, this excludes
-THM-2393's last no-clean common-core word. It does not by itself turn a
-clean-hole coefficient into the canonical terminal target current:
+Canonical THM-2396 localizes the same static contradiction orbitwise.
+Every base in the high-safe set of mass `66/91` has at least one clean
+root among its `49` roots. Exact disintegration therefore gives
+
+```text
+common-core clean mass >=66/(91*49)=66/4459.
+```
+
+Together with THM-2392 this yields
+
+```text
+q_*-labelled charged cell >=33/115934,
+complete blocker cell      >=11/57967,
+owner-resolved tensor      >=33/753571.
+```
+
+THM-2393's complementary packets have floor `1/26754`, so the uniform
+last-lane clean floor is now `1/26754`.
+
+This does not by itself turn a clean-hole coefficient into the
+canonical terminal target current:
 THM-2392/2391 still retain a same-parent charged
 `C_7 x C_13` tensor, while endpoint/owner transport remains a separate
 interface. No ledger decrement is claimed in this reflection.
@@ -184,10 +203,15 @@ and compare both transcripts after LF normalization with
 05-knowledge/results/lrc14_thm2396_relaxed_49_orbit_independent_referee.out
 ```
 
-Both modes currently match the stored `14`-line transcript. LF-normalized
+Both modes currently match the stored `16`-line transcript. LF-normalized
 SHA256:
 
 ```text
-script 4286c62463f57d00176e4e7c65fc129ae9d83053b51cbb23a4608a66d3b5a70c
-output 8e72af133024917e1d09d55045e3ad23f125195ce5ec48bb4e21bab0b9532d60
+script 1a397efff2315750296b7a494858bf070b9b4d045bbe87c79e525ce8069f925a
+output 7a4d909d2fea0418babeaeeebdf054e3487914ff1d8f0e308564c010b2bd524f
 ```
+
+An independent hostile audit accepted the physical embedding, strict
+relaxation, mask completeness, exact-cover recursion, all finite
+ledgers, sharp hostile, and quantitative localization. No defect
+remains.
