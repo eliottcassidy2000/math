@@ -12,8 +12,10 @@ status: >
   Predictions locked before the 2^25 census: rigid-SC(11) = 7 with
   H-multiset [1,3,9,9,9,27,27] (hence pure-blue(11) = 8 under the
   THM-2444 repaired law), and rigid-SC(12) = 6 with
-  [1,9,9,9,9,81]. The all-n converse (no rigid class outside the
-  palindromic stacks) remains OPEN.
+  [1,9,9,9,9,81]. Within the tower grammar the converse is PROVED
+  for all n (run-transfer expansion: C3[A,B,C] is rigid iff it is
+  C3 itself); only 'no rigid class outside the grammar' remains
+  OPEN beyond n = 10.
 source: kind-pasteur-2026-07-26-S132
 depends_on:
   - THM-2450-rigid-self-converse-classes-are-cyclic-ternary-towers
@@ -102,14 +104,47 @@ size `{1, 3}` for the tournaments' minimal symmetric atoms (the
 singleton and the 3-cycle -- there is no size-2 tournament atom,
 which is exactly why the metagraph rung is `d = 3`).
 
-## 5. Open
+## 5. The within-grammar converse (PROVED, same session)
 
-- The all-n converse: no rigid-SC class outside the palindromic
-  stacks (equivalently: no strong tower of size > 3 is rigid, and
-  no non-tower class is rigid). The first half looks provable from
-  the run-transfer structure of `H(C3[A,B,C])` (the ordered-path-
-  system expansion makes `H` strictly exceed `3 |Aut A||Aut B|
-  |Aut C|` once any block exceeds a point -- not yet written down).
+**Lemma (run transfer).** In `C3[A,B,C]` the only inter-block arcs
+are the complete one-way blocks `A -> B -> C -> A`, so the block
+sequence of any Hamiltonian path is a contiguous walk following the
+3-cycle; the path decomposes each block into an ordered system of
+vertex-disjoint covering paths, one per visit. Hence
+
+```text
+H(C3[A,B,C]) = sum over cyclic-following walks  prod_X p_X(r_X)  (2)
+```
+
+where `p_X(r)` counts ordered `r`-part path systems of `X`
+(`p_X(1) = H(X)`). Control: (2) gives `9 + 6 = 15` for
+`C3[C3,1,1]`, matching the exhaustive count.
+
+**Proposition.** `C3[A,B,C]` is rigid iff `A = B = C = ` a single
+vertex (i.e. it is `C3` itself).
+
+*Proof.* The three `(1,1,1)`-walks alone give
+`H >= 3 H_A H_B H_C >= 3 |Aut A||Aut B||Aut C|` (using `H >= |Aut|`
+for every tournament, LEM-003's `tc >= 1`). If `A, B, C` are not
+all isomorphic, `|Aut| = |Aut A||Aut B||Aut C|`, so `tc >= 3`. If
+all three are isomorphic, `|Aut| = 3 |Aut A|^3`, so the
+`(1,1,1)`-term already forces `tc >= (H_A/|Aut A|)^3 >= 1` with
+equality demanding `A` rigid AND every other walk pattern empty;
+but if `|A| > 1` the pattern `(2,1,1)` contributes
+`p_A(2) H_B H_C > 0` (cutting any Hamiltonian path of `A` gives an
+ordered 2-part system), a strict surplus. Hence rigidity forces
+`|A| = |B| = |C| = 1`. QED
+
+With stack multiplicativity this proves, for **all** `n`: the rigid
+self-converse TOWERS are exactly the palindromic `{1, C3}` stacks,
+i.e. the Narayana palindrome law (1) is exact within the grammar
+unconditionally. The only remaining open piece is that no rigid
+class lies outside the tower grammar (verified `n <= 10`, `n = 11`
+in flight).
+
+## 5b. Still open
+
+- No rigid-SC class outside the tower grammar, all n.
 - Whether the nonrigid pure-blue `(15,5,3)`-type class admits a
   matching closed law at all odd n (THM-2444 SS4).
 
