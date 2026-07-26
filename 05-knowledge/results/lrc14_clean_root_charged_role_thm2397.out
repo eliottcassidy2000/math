@@ -1,10 +1,15 @@
 theorem=THM-2397
-status=PROVED-CANDIDATE+VERIFIED-EXACT; independent-audit=PENDING
-local_activity_states=63; exclusive_qstar=1; assigned_W=62
-singleton_energy=12/169; adjacent_energy=22/169; role_colour_pairs=60
-every_nonzero_colour_has_lower_role=YES; one_role_colours>=4
-universal_rho=1/1391208; fibrewise>=1/1175570760; aggregate>=1/1635463445878080
-common_rho=33/115934; fibrewise>=33/97964230; aggregate>=1089/11357385040820
-owner_rho=33/753571; fibrewise>=33/636767495; aggregate>=1089/479849517974645; septimal_tensor>=1089/3358946625822515
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED
+actual_roles=5; role_counts=4,2,2,2,2; role_colour_pairs=60
+raw_signed_sum_singleton=-12/169; raw_signed_sum_adjacent=-24/169
+exclusive_q_star_word=LITERAL_SINGLE_FACTOR_DELETION_SUPPORT
+every_actual_role_has_negative_Hermitian_pair=YES
+rational_cross_correlation_masks=37323; every_actual_role_all_12_colours=YES
+fixed_lower_q_two_root_translates=13
+nonnegative_root_constant_parent_filtering=HEREDITARY
+R=13^k_delayed_word_survival=EVENTUAL; BV_constant=1/12
+universal_rho=1/1391208; each_fibre>=1/1410684912; some_fibre>=1/1175570760; all_colour_refined>1/129136447986
+common_rho=33/115934; each_fibre>=11/39185692; some_fibre>=33/97964230; all_colour_refined>66/21522741331
+owner_rho=33/753571; joint_tensor>=33/4457372465; all_colour_refined>132/279795637303; all_colour_joint>132/1958569461121
 row_decrement=0; ledger=165; LRC(14)=OPEN
 all_checks=PASS

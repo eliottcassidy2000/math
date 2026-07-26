@@ -1870,3 +1870,21 @@ most two. Orbitwise localization gives the common-core floor
 `delta>=66/4459`, descendants `33/115934`, `11/57967`, `33/753571`,
 and the universal last-lane floor `1/26754`. Normal and optimized
 transcripts agree and end in `PASS`; no row exclusion is asserted.
+
+### lrc14_clean_root_charged_role_thm2397.out
+Exact THM-2397 proved and independently hostile-audited replay. On a fixed
+clean-root cell it verifies the raw-role Parseval identities for the guard
+and four lower `q` roles, the signed bank totals `-12rho/169` and
+`-24rho/169`, and the uniform `rho/1014` per-role and `rho/845` best-role
+floors. It exhausts `37,323` rational disjoint mask pairs and proves every
+literal actual role survives all twelve root-target colours; a `13`-translate
+refinement gives one fixed lower-`q` role a simultaneous explicit floor. It
+also records heredity under every nonnegative root-constant parent filter,
+and a `1/12` BV estimate forces a positive survivor through every
+sufficiently large `R=13^k` delayed word. The exclusive mask is exactly
+literal single-factor deletion support at the common unshifted indicator
+boundary. The replay distinguishes the joint `j_l G_i(k)` coefficient from
+the external product and retains the adjacent-sign hostile. Normal and
+optimized transcripts agree and end in `PASS`; target-shift-covariant
+current realization, canonical right-endpoint transport, and the `165`-row
+ledger remain open.
