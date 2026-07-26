@@ -68,6 +68,14 @@ def gmul_conj(x: Gaussian, y: Gaussian) -> Gaussian:
     return (x[0] * y[0] + x[1] * y[1], x[1] * y[0] - x[0] * y[1])
 
 
+def gadd(x: Gaussian, y: Gaussian) -> Gaussian:
+    return (x[0] + y[0], x[1] + y[1])
+
+
+def gneg(x: Gaussian) -> Gaussian:
+    return (-x[0], -x[1])
+
+
 @dataclass(frozen=True)
 class CyclotomicGaussian:
     """Element of Q(i,zeta_13), stored in the cyclic group-ring basis."""
@@ -124,6 +132,79 @@ def expected_scalar(value: Gaussian, scale: int) -> CyclotomicGaussian:
     real[0] = scale * value[0]
     imag[0] = scale * value[1]
     return CyclotomicGaussian(tuple(real), tuple(imag))
+
+
+def signal_intensity(
+    signal: dict[Field, Gaussian],
+    a: Field,
+    b: Field,
+) -> CyclotomicGaussian:
+    terms: list[tuple[int, Gaussian]] = []
+    for x, zx in signal.items():
+        for y, zy in signal.items():
+            exponent = trace(
+                fadd(
+                    fmul(b, fsub(x, y)),
+                    fmul(a, fsub(phi(x), phi(y))),
+                )
+            )
+            terms.append((exponent, gmul_conj(zx, zy)))
+    return ring_from_terms(terms)
+
+
+def signal_transform(
+    signal: dict[Field, Gaussian],
+    b: Field,
+) -> CyclotomicGaussian:
+    return ring_from_terms(
+        [(trace(fmul(b, x)), value) for x, value in signal.items()]
+    )
+
+
+def joint_transform(
+    joint: dict[tuple[Field, Field], Gaussian],
+    eta: Field,
+    b: Field,
+) -> CyclotomicGaussian:
+    return ring_from_terms(
+        [
+            (
+                trace(fadd(fmul(eta, zvalue), fmul(b, qvalue))),
+                value,
+            )
+            for (qvalue, zvalue), value in joint.items()
+        ]
+    )
+
+
+def coarse_sum(
+    graph_signals: dict[Field, dict[Field, Gaussian]],
+) -> dict[Field, Gaussian]:
+    result: dict[Field, Gaussian] = {}
+    for signal in graph_signals.values():
+        for qvalue, value in signal.items():
+            result[qvalue] = gadd(result.get(qvalue, (0, 0)), value)
+    return {
+        qvalue: value
+        for qvalue, value in result.items()
+        if value != (0, 0)
+    }
+
+
+def signal_total(signal: dict[Field, Gaussian]) -> Gaussian:
+    total = (0, 0)
+    for value in signal.values():
+        total = gadd(total, value)
+    return total
+
+
+def singleton_ledger(
+    signal: dict[Field, Gaussian],
+) -> dict[Field, int]:
+    return {
+        location: gmul_conj(value, value)[0]
+        for location, value in signal.items()
+    }
 
 
 def main() -> None:
@@ -311,7 +392,7 @@ def main() -> None:
                 "the two-site magnitude-swap hostile changed",
             )
 
-    # The exact one-sparse no-landing locus is the vertical tensor
+    # The exact refined-zero locus is the vertical tensor
     # delta_0(q) B(z).  Tensor the THM-2333 full-support convolution
     # inverse with a deterministic nowhere-zero jet profile.  Every joint
     # fibre then contains 169 nonzero atomic terms, every planar graph
@@ -409,6 +490,116 @@ def main() -> None:
             )
             footprint_support += indicator_delta
     require(footprint_support == 1, "wrong target footprint support")
+    # Refined-to-coarse hostile.  One planar graph has two target points,
+    # including a nonzero target, but a singleton on a second graph cancels
+    # that target in the coarser sum over the jet coordinate.
+    target_a = (1, 0)
+    graph_c = (0, 1)
+    minimal_graphs = {
+        zero: {zero: (1, 0), target_a: (1, 0)},
+        graph_c: {target_a: (-1, 0)},
+    }
+    minimal_joint = {
+        (zero, zero): (1, 0),
+        (target_a, phi(target_a)): (1, 0),
+        (target_a, fadd(phi(target_a), graph_c)): (-1, 0),
+    }
+    minimal_coarse = coarse_sum(minimal_graphs)
+    require(
+        minimal_coarse == {zero: (1, 0)},
+        "the three-atom refined/coarse hostile stopped cancelling",
+    )
+    require(
+        gmul_conj(
+            minimal_graphs[zero][target_a],
+            minimal_graphs[zero][zero],
+        )
+        == (1, 0),
+        "the two-supported graph lost its off-diagonal Gram entry",
+    )
+    require(
+        all(
+            signal_transform(minimal_coarse, b).canonical()
+            == expected_scalar((1, 0), 1).canonical()
+            for b in elements
+        ),
+        "the coarse target twists of the minimal hostile were not constant",
+    )
+    separating_eta = (0, 1)
+    require(
+        trace(fmul(separating_eta, graph_c)) != 0,
+        "the chosen jet character did not separate the hostile graph labels",
+    )
+    require(
+        all(
+            joint_transform(minimal_joint, zero, b).canonical()
+            == expected_scalar((1, 0), 1).canonical()
+            for b in elements
+        ),
+        "the trivial jet polarizer did not reproduce the coarse hostile",
+    )
+    require(
+        joint_transform(minimal_joint, separating_eta, zero).canonical()
+        != joint_transform(minimal_joint, separating_eta, one).canonical(),
+        "the separating jet polarizer had no target-edge defect",
+    )
+
+    # Independent graph phases are not glued by graphwise intensities or
+    # singleton energies.  These two families differ only by the global sign
+    # on graph c.  They have the same graph data and the same total current,
+    # but one coarse target is delta_0 and the other is 3 delta_0-2 delta_a.
+    graph_d = (1, 1)
+    base_graph = {zero: (1, 0), target_a: (-1, 0)}
+    cancel_graphs = {
+        zero: base_graph,
+        graph_c: {
+            location: gneg(value)
+            for location, value in base_graph.items()
+        },
+        graph_d: {zero: (1, 0)},
+    }
+    escape_graphs = {
+        zero: base_graph,
+        graph_c: dict(base_graph),
+        graph_d: {zero: (1, 0)},
+    }
+    phase_gauge_checks = 0
+    for a in elements:
+        for b in elements:
+            require(
+                signal_intensity(cancel_graphs[graph_c], a, b).canonical()
+                == signal_intensity(escape_graphs[graph_c], a, b).canonical(),
+                "a global graph sign changed its chirp intensity",
+            )
+            phase_gauge_checks += 1
+    require(
+        all(
+            singleton_ledger(cancel_graphs[label])
+            == singleton_ledger(escape_graphs[label])
+            for label in (zero, graph_c, graph_d)
+        ),
+        "the graph-phase pair changed a singleton ledger",
+    )
+    cancel_coarse = coarse_sum(cancel_graphs)
+    escape_coarse = coarse_sum(escape_graphs)
+    require(
+        cancel_coarse == {zero: (1, 0)},
+        "the same-data cancel family lost its zero-only coarse target",
+    )
+    require(
+        escape_coarse == {zero: (3, 0), target_a: (-2, 0)},
+        "the same-data escape family changed its coarse target",
+    )
+    require(
+        signal_total(cancel_coarse) == (1, 0)
+        and signal_total(escape_coarse) == (1, 0),
+        "the same-data pair stopped having the same total current",
+    )
+    require(
+        signal_transform(escape_coarse, zero).canonical()
+        != signal_transform(escape_coarse, one).canonical(),
+        "the escape family lost its nonconstant coarse target response",
+    )
 
     print("THM-2356 exact finite-field chirp tomography referee")
     print("field: F_13[theta]/(theta^2-2), q=169, trace(u+v theta)=2u")
@@ -427,9 +618,15 @@ def main() -> None:
         "uncertainty/footprint extremizer: supports 169 x 169; "
         "target grid support 1"
     )
+    print("refined/coarse hostile: 3 atoms, one support-2 graph, coarse C=delta_0")
+    print("jet polarizer: trivial target edge zero; separating-jet edge nonzero")
     print(
-        "VERDICT: chirps recover every off-diagonal Gram entry; "
-        "the exact residual is a vertical singleton tensor"
+        "independent graph-phase checks: "
+        f"{phase_gauge_checks}; same graph data and total, coarse energy 0 vs >0"
+    )
+    print(
+        "VERDICT: chirps recover within-graph Gram data; "
+        "coarse target needs cross-graph phase gluing"
     )
 
 

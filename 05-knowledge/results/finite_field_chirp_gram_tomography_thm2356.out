@@ -9,4 +9,7 @@ linear-mask relabelling checks: 28561
 sharp hostiles: 169 invisible singleton locations; two-site 2<->3 swap
 vertical tensor hostile: 28561 termwise-full joint fibres; 169 one-sparse zero-target graphs
 uncertainty/footprint extremizer: supports 169 x 169; target grid support 1
-VERDICT: chirps recover every off-diagonal Gram entry; the exact residual is a vertical singleton tensor
+refined/coarse hostile: 3 atoms, one support-2 graph, coarse C=delta_0
+jet polarizer: trivial target edge zero; separating-jet edge nonzero
+independent graph-phase checks: 28561; same graph data and total, coarse energy 0 vs >0
+VERDICT: chirps recover within-graph Gram data; coarse target needs cross-graph phase gluing

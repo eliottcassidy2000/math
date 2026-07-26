@@ -39,6 +39,55 @@ Format per entry:
   supply a section, and make the executable measure that anchor rather
   than a rearranged arithmetic consequence.
 
+## MISTAKE-261 (2026-07-25, planar-graph tomography audit) -- a refined joint target was conflated with the coarse THM-2334 target
+
+- **What was written:** the first THM-2356 candidate correctly proved that
+  planar chirp intensities reconstruct every off-diagonal Gram entry inside
+  a retained graph
+  `Z_c(q)=A(q,q^2/2+c)`. It then claimed that a graph supported at two
+  targets forces a nonzero THM-2334 target fibre and called the remaining
+  obstruction only the one-sparse graph-location boundary. Commit
+  `e0839fe1e` strengthened this to a vertical-tensor classification, and
+  `59c933aae` promoted it after an independent audit; both retained the
+  same refined-to-coarse category error. The audit's planar-tomography and
+  refined-support checks remain valid, but its coarse interpretation is
+  retracted.
+- **First failure:** a nonzero refined coefficient `A(q,z)` with `q!=0`
+  does not imply that the coarser target coefficient
+  `C(q)=sum_z A(q,z)=sum_c Z_c(q)` is nonzero. The first forgotten
+  operation is summation over graph/jet labels, and distinct graph
+  coefficients at the same target can cancel. Over `F_169`, the three
+  entries
+  `A(0,0)=1`, `A(a,a^2/2)=1`,
+  `A(a,a^2/2+c)=-1` for `a,c!=0` give a two-supported graph with a
+  nonzero off-diagonal Gram entry but `C=delta_0`. More strongly, changing
+  one whole graph by a global sign preserves every graph chirp intensity
+  and labelled singleton energy. The two-graph pairs
+  `(delta_a,delta_0-delta_a)` and
+  `(delta_a,-delta_0+delta_a)` also preserve the total scalar current while
+  changing the coarse target Dirichlet energy from zero to positive.
+  More structurally, the exact coarse zero-only space has dimension
+  `169+168^2=28,393`; vertical tensors occupy only `169` dimensions.
+- **Repair:** THM-2356 now retains its planar tomography theorem and the
+  valid conclusion that support two forces a nonzero **joint** target/jet
+  fibre with nonzero target coordinate. It explicitly records one
+  independent `U(1)` phase per active graph, the exact row-sum kernel, the
+  missing cross-graph terms in the coarse Dirichlet energy, both exact
+  hostiles, and the repaired residual. Averaging target Dirichlet energy over first-jet characters
+  does recover a positive edge defect whenever some refined `q!=0` fibre
+  survives, but only for an exact factor-coloured THM-2337 probe; a
+  nontrivial jet character is not the original THM-2334 coarse current,
+  and the defect need not occur for the trivial jet character. Reaching
+  that current therefore still requires cross-graph phase transport, jet
+  depolarization, a target-preserving physical realization, a target row
+  supported on one graph, a familywise cone, or another
+  coefficient-sensitive sidecar. A second hostile audit accepted this
+  repaired statement.
+- **Rule:** whenever a nonlinear decomposition refines a target quotient,
+  write the map back to the original target and test its fibrewise sum.
+  Complete reconstruction inside every refined fibre does not compare
+  phases between fibres.
+
 ## MISTAKE-259 (2026-07-25, concurrent namespace and rebase audit) -- THM-2356 crossed and a second conflict block escaped inspection
 
 - **What happened:** a session fetched and verified that `THM-2356` was
