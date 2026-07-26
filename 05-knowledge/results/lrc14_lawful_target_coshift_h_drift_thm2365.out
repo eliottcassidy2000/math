@@ -1,0 +1,17 @@
+theorem=THM-2365
+status=PROVED-CANDIDATE-UNDER-INDEPENDENT-AUDIT
+target_shift_cells=2197
+target_action_orbits=13
+cells_per_orbit=169
+diagonal_plane_cells=169
+circulant_hostile_drift=0
+noncirculant_control_drift=168/371293
+finite_difference_identity=PASS
+nonzero_target_line_controls=168
+sharp_unit_deep_energy_ratio=1/13
+rational_cyclotomic_checks=768
+circulant_inverse_line_nonzero_colours=12
+bv_covariance_constant=1/12
+scalar_rows_excluded=0
+lrc14_status=OPEN
+all_checks=PASS
