@@ -1,0 +1,12 @@
+THM-2460 SEMANTIC-WORD COPY -- exact finite audit
+fixed word: 128 matched local atoms, zero extra loss
+unsplit return: 384 atoms, D/147456, eligible D/1916928, coefficient^2 D/3864526848
+adaptive three-word extension counts: 3 48 24 12 6 3
+root-constant future-word checks: 78
+word-block graph: 49152 within-block pairs, 98304 forced cross-word zeros, edge floors 1/16384 fixed and 1/49152 global
+target-neutral/septimally-active harmonic checks: 48
+second word harmonic: 4 nonzero allocations per C4 output (noncanonical)
+split-base hostile: selected drift word 0, all co-support word 1
+constant-word tensor leaves the uniform-offset hostile unchanged
+fixed prescribed clock and later delayed clock remain distinct labels
+all exact checks passed
