@@ -11,6 +11,7 @@ Q(i,zeta_13); no floating point or Python ``assert`` is used.
 from __future__ import annotations
 
 from dataclasses import dataclass
+from fractions import Fraction
 
 
 P = 13
@@ -310,6 +311,105 @@ def main() -> None:
                 "the two-site magnitude-swap hostile changed",
             )
 
+    # The exact one-sparse no-landing locus is the vertical tensor
+    # delta_0(q) B(z).  Tensor the THM-2333 full-support convolution
+    # inverse with a deterministic nowhere-zero jet profile.  Every joint
+    # fibre then contains 169 nonzero atomic terms, every planar graph
+    # survives, and every surviving target is nevertheless q=0.
+    p_shift = (3, 4)
+
+    def endpoint_u(x: Field) -> Fraction:
+        return Fraction(2 if x == zero else 1)
+
+    def endpoint_v(x: Field) -> Fraction:
+        return Fraction(Q if x == p_shift else -1, Q + 1)
+
+    target_hostile: dict[Field, Fraction] = {}
+    for qvalue in elements:
+        terms = [
+            endpoint_u(u)
+            * endpoint_v(fadd(fsub(u, qvalue), p_shift))
+            for u in elements
+        ]
+        require(
+            all(term != 0 for term in terms),
+            f"vertical-tensor hostile lost an atomic term at q={qvalue}",
+        )
+        target_hostile[qvalue] = sum(terms, Fraction(0))
+        require(
+            target_hostile[qvalue]
+            == (Fraction(1) if qvalue == zero else Fraction(0)),
+            f"target convolution inverse failed at q={qvalue}",
+        )
+
+    def jet_profile(zvalue: Field) -> Fraction:
+        return Fraction(1 + zvalue[0] + P * zvalue[1])
+
+    require(
+        all(jet_profile(zvalue) != 0 for zvalue in elements),
+        "deterministic jet profile stopped being full support",
+    )
+    graph_singletons = 0
+    for c in elements:
+        for qvalue in elements:
+            joint_value = (
+                target_hostile[qvalue]
+                * jet_profile(fadd(phi(qvalue), c))
+            )
+            expected_joint = (
+                jet_profile(c) if qvalue == zero else Fraction(0)
+            )
+            require(
+                joint_value == expected_joint,
+                f"vertical graph restriction failed at c={c}, q={qvalue}",
+            )
+        graph_singletons += 1
+    require(graph_singletons == Q, "wrong vertical singleton graph count")
+
+    # B=1 saturates support uncertainty on K x K: delta_0(q) has all
+    # 169 target-character frequencies, while 1_K(z) has only the
+    # trivial jet-character frequency.  Check the latter character sum
+    # exactly in Q(zeta_13).
+    jet_fourier_support = 0
+    for d in elements:
+        character_sum = ring_from_terms(
+            [(trace(fmul(d, zvalue)), (1, 0)) for zvalue in elements]
+        )
+        expected_character_sum = expected_scalar(
+            (1, 0),
+            Q if d == zero else 0,
+        )
+        require(
+            character_sum.canonical()
+            == expected_character_sum.canonical(),
+            f"jet character orthogonality failed at d={d}",
+        )
+        if d == zero:
+            jet_fourier_support += 1
+    joint_spatial_support = Q
+    joint_fourier_support = Q * jet_fourier_support
+    require(
+        joint_spatial_support * joint_fourier_support == Q * Q,
+        "vertical tensor stopped saturating support uncertainty",
+    )
+
+    # The same target delta is the sharp separate-degree footprint
+    # extremizer on the 13 x 13 target grid.
+    footprint_support = 0
+    for x0_value in range(P):
+        for x1_value in range(P):
+            polynomial_delta = (
+                (1 - pow(x0_value, P - 1, P))
+                * (1 - pow(x1_value, P - 1, P))
+            ) % P
+            indicator_delta = int(x0_value == 0 and x1_value == 0)
+            require(
+                polynomial_delta == indicator_delta,
+                "finite-field delta footprint identity failed",
+            )
+            footprint_support += indicator_delta
+    require(footprint_support == 1, "wrong target footprint support")
+
     print("THM-2356 exact finite-field chirp tomography referee")
     print("field: F_13[theta]/(theta^2-2), q=169, trace(u+v theta)=2u")
     print("planar map: phi(x)=x^2/2")
@@ -319,7 +419,18 @@ def main() -> None:
     print(f"exact off-diagonal inversion controls: {len(controls)}")
     print(f"linear-mask relabelling checks: {linear_relabels}")
     print("sharp hostiles: 169 invisible singleton locations; two-site 2<->3 swap")
-    print("VERDICT: chirps recover every off-diagonal Gram entry; singletons supply the diagonal")
+    print(
+        "vertical tensor hostile: 28561 termwise-full joint fibres; "
+        "169 one-sparse zero-target graphs"
+    )
+    print(
+        "uncertainty/footprint extremizer: supports 169 x 169; "
+        "target grid support 1"
+    )
+    print(
+        "VERDICT: chirps recover every off-diagonal Gram entry; "
+        "the exact residual is a vertical singleton tensor"
+    )
 
 
 if __name__ == "__main__":

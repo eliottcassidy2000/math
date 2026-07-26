@@ -7,4 +7,6 @@ chirped intensity table: 28561
 exact off-diagonal inversion controls: 25
 linear-mask relabelling checks: 28561
 sharp hostiles: 169 invisible singleton locations; two-site 2<->3 swap
-VERDICT: chirps recover every off-diagonal Gram entry; singletons supply the diagonal
+vertical tensor hostile: 28561 termwise-full joint fibres; 169 one-sparse zero-target graphs
+uncertainty/footprint extremizer: supports 169 x 169; target grid support 1
+VERDICT: chirps recover every off-diagonal Gram entry; the exact residual is a vertical singleton tensor

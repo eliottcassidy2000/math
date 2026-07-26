@@ -18,20 +18,27 @@ status: >
   are quadratic chirps up to a scalar phase. At least one graph signal
   survives. Any graph with target support at least two therefore forces a
   nonzero target through its recovered off-diagonal Gram entry. The exact
-  remaining boundary is one-sparse planar graph signals and their missing
-  singleton locations, not construction of the chirp service itself. No
-  scalar-row exclusion or LRC(14) closure is proved.
+  no-landing locus inside the one-sparse boundary is the vertical tensor
+  A(q,z)=delta_0(q)B(z). A factorized full-support hostile can occupy all
+  28,561 joint fibres termwise and make all 169 planar graphs survive
+  while every graph is a singleton at q=0; it simultaneously saturates
+  finite-group uncertainty and the separate-degree footprint bound. The
+  missing observable is a graph-channel phase ratio or equivalent
+  target--jet coefficient coupling, not construction of the chirp service
+  itself. No scalar-row exclusion or LRC(14) closure is proved.
 source: codex-2026-07-25-finite-field-chirp-tomography
 depends_on:
   - THM-2337-expiration-word-residue-invisibility-and-first-bockstein-sidecar
 related:
+  - THM-2285-centered-grid-footprint-and-generic-keller-lines
   - THM-2303-terminal-component-phase-current-and-defect-rank
+  - THM-2333-abel-target-fibre-sum-landing-and-zero-fibre-boundary
   - THM-2344-correlation-inverse-rigidity-and-aligned-tooth-twist-hostile
   - THM-2355-component-deletion-gram-and-twist-energy-phase-transport
 script: 04-computation/finite_field_chirp_gram_tomography_thm2356.py
 output: 05-knowledge/results/finite_field_chirp_gram_tomography_thm2356.out
-script_sha256: fd6f4290474d848e0f128fb83910a33c09b4e6691c6bb99112462d4474b35585
-output_sha256: 10e1afcc239d0a0e93a21b3498107555efe1eb4eccc553dcc5a0678a2423fc9c
+script_sha256: f83cfbbafd56ecd8ae82554a80b30e588c3fdf005f3d5af94ff47e1ed0770949
+output_sha256: 22f6cc95cde44f7dc7d65b31dfe9eb7979cefc6467cece28eb2af16ae39f146e
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -414,7 +421,250 @@ because the Abel sums may cancel separately in every joint fibre. No
 scalar profile is excluded; the ledger remains `165` and LRC(14) remains
 open.
 
-## 5. Exact companion
+## 5. The singleton boundary is exactly a vertical tensor
+
+The one-sparse boundary has a complete classification. If every graph
+signal is at most one-sparse, write uniquely
+
+```text
+Z_c=0,
+
+or
+
+Z_c=a_c delta_(r_c),       a_c!=0, r_c in K.        (33)
+```
+
+If some nonzero graph has `r_c!=0`, then
+
+```text
+A(r_c,r_c^2/2+c)=a_c!=0                            (34)
+```
+
+is already a surviving nonzero target. If no such graph exists, every
+nonzero graph has `r_c=0`, and necessarily
+
+```text
+A(q,z)=delta_0(q)B(z),       B(c):=a_c,             (35)
+```
+
+where `a_c=0` on a zero graph. Conversely, every array of the form (35)
+has
+
+```text
+Z_c(q)=A(q,q^2/2+c)=B(c)delta_0(q).                 (36)
+```
+
+Thus the exact no-landing locus inside the one-sparse boundary is the
+vertical tensor ideal
+
+```text
+delta_0 tensor B.                                  (37)
+```
+
+It is not an unclassified family of missing singleton positions.
+
+### 5.1 A factorized, termwise-full hostile
+
+The vertical tensor boundary is maximally robust at the abstract
+group-algebra level. Let `G` be any finite abelian group of order `N`,
+fix `p in G`, and use THM-2333's rational endpoint weights
+
+```text
+U=delta_0+1_G,
+
+V_0=delta_0-(1/(N+1))1_G,
+
+V(x)=V_0(x-p).                                      (38)
+```
+
+Thus
+
+```text
+U(0)=2,             U(x)=1                  (x!=0),
+
+V(p)=N/(N+1),       V(x)=-1/(N+1)           (x!=p). (39)
+```
+
+Both weights are nowhere zero. Put
+
+```text
+H(q)=sum_(u in G)U(u)V(u+p-q).                      (40)
+```
+
+Every sum contains exactly `N` nonzero products. At `q=0`, its numerator
+over `N+1` is
+
+```text
+2N-(N-1)=N+1,
+```
+
+whereas at `q!=0` it is
+
+```text
+-2+N-(N-2)=0.
+```
+
+Therefore
+
+```text
+H(q)=delta_0(q).                                    (41)
+```
+
+Equivalently, `V_0` is the correlation inverse of `U`.
+
+Now let `B:K->C` be arbitrary and define the atomic joint terms
+
+```text
+T_B(u;q,z)=U(u)V(u+p-q)B(z)
+```
+
+and their aggregate
+
+```text
+A_B(q,z)
+ =sum_u T_B(u;q,z)
+ =H(q)B(z)
+ =delta_0(q)B(z).                                  (42)
+```
+
+If `B(z)!=0`, the coefficient at `(q,z)` has exactly `N` nonzero atomic
+endpoint pairs. If `B` has full support and `N=169`, all
+
+```text
+N^2=28,561
+```
+
+joint fibres are termwise occupied, for
+
+```text
+N^3=4,826,809
+```
+
+nonzero atomic incidences. Nevertheless only the `N` coefficients
+`(0,z)` survive aggregation. Every planar restriction is
+
+```text
+Z_c(q)=B(c)delta_0(q).                              (43)
+```
+
+A full-support `B` therefore makes all `169` graphs nonzero and
+one-sparse at target zero.
+
+This hostile also defeats two apparently stronger support arguments.
+Take `B=1_K`. Its joint character transform is
+
+```text
+A_B^(xi,eta)
+ =sum_(q,z)delta_0(q)xi(q)eta(z)
+ =sum_z eta(z).                                    (44)
+```
+
+Its spatial and Fourier supports both have size `N`, so
+
+```text
+|support A_B| |support A_B^|
+ =N^2
+ =|K x K|.                                         (45)
+```
+
+It saturates the finite-group support uncertainty inequality. In target
+coordinates `q=(x,y) in F_13^2`,
+
+```text
+delta_0(q)=(1-x^12)(1-y^12).                       (46)
+```
+
+As a polynomial on the two target and two jet coordinates, (46) has
+separate degrees `(12,12,0,0)` and exactly
+
+```text
+1*1*13*13=169
+```
+
+nonzero grid values. It is the sharp THM-2285 footprint with surplus
+vector `(1,1,13,13)`.
+
+Finally, the graph-chirp amplitude of (42) is
+
+```text
+M_c(a,b)
+ =sum_q A_B(q,q^2/2+c)psi(bq+a(q^2/2+c))
+
+ =B(c)psi(ac),                                     (47)
+```
+
+so
+
+```text
+|M_c(a,b)|^2=|B(c)|^2.                             (48)
+```
+
+For `B=1`, all `169^3` labelled graph-chirp intensities are one. Complete
+termwise occupancy, full jet support, uncertainty equality, a sharp
+polynomial footprint, and the complete intensity bank still do not
+locate a singleton away from zero.
+
+The scope is exact. Equations (38)--(48) form an abstract rational/complex
+group-algebra hostile. They do not assert that THM-2337's canonical
+interval coefficients realize `U,V,B`, or that a scalar LRC row realizes
+this array. The signed endpoint weights, actual word factor, Abel-limit
+compatibility, and terminal-component phase remain extra canonical
+structure. The hostile rules out any proof using only the listed abstract
+inputs, including any sidecar depending solely on `z`: arbitrary jet-only
+data can be absorbed into `B`.
+
+### 5.2 The exact missing graph-channel observable
+
+There is a positive phase-sensitive test which detects target landing
+without a sparsity assumption. For a graph signal put
+
+```text
+F_c(b)=sum_q Z_c(q)psi(bq),
+
+S_c=F_c(0).
+```
+
+Normalized Parseval gives
+
+```text
+D_c
+ :=1/N sum_b |F_c(b)-S_c|^2
+
+ =sum_(q!=0)|Z_c(q)|^2
+  +|sum_(q!=0)Z_c(q)|^2.                           (49)
+```
+
+Hence
+
+```text
+sum_c D_c>0
+ iff some nonzero target survives.                 (50)
+```
+
+Under (33), `D_c=0` for `r_c=0` and
+
+```text
+D_c=2|a_c|^2
+```
+
+for `r_c!=0`. Two dual-basis phase ratios
+
+```text
+F_c(b)/F_c(0)=psi(b r_c)                            (51)
+```
+
+locate a one-sparse target exactly. Intensities erase these ratios. The
+minimal missing quadratic observable is
+
+```text
+F_c(b)conjugate(F_c(0)),                            (52)
+```
+
+which THM-2355 would recover from a lawful graph-channel pair twist.
+Current canon does not supply that canonical pair probe. Thus (49)--(52)
+are a precise sidecar specification, not a target-landing theorem.
+
+## 6. Exact companion
 
 The dependency-free companion works in
 
@@ -432,8 +682,10 @@ and represents all cyclotomic values exactly in `Q(i,zeta_13)`. It:
 - performs the literal double inversion on every ordered supported pair
   and five zero controls;
 - checks all `28,561` linear-mask relabellings; and
-- verifies the `169` invisible singleton locations and the two-site
-  unequal-magnitude swap.
+- verifies the `169` invisible singleton locations, the two-site
+  unequal-magnitude swap, the factorized vertical tensor with all
+  `28,561` joint fibres termwise occupied, uncertainty equality, and the
+  sharp finite-field footprint.
 
 Reproduce with
 
