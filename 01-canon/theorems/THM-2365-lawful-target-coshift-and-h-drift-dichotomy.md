@@ -2,7 +2,7 @@
 id: THM-2365
 title: "Lawful target co-shift and H-drift dichotomy"
 status: >
-  PROVED CANDIDATE UNDER INDEPENDENT AUDIT. The full lawful
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. The full lawful
   endpoint/deep thirteen-shift tensor H(r,s,t) is nonnegative and
   vanishes on the diagonal plane r=t. Its finite transform B(a,b,h)
   has target vector (b,a+h), every target-vector line sums to zero,
@@ -31,14 +31,14 @@ related:
   - THM-2364-anchored-corner-forces-mixed-deep-blocker-colour
 script: 04-computation/lrc14_lawful_target_coshift_h_drift_thm2365.py
 output: 05-knowledge/results/lrc14_lawful_target_coshift_h_drift_thm2365.out
-script_sha256: b71508ac71cffc427c8f01722309bd49a3d9a3dca7aa66468fab31b6d83fb425
-output_sha256: 9df085bbf9493278f4de45d4ee8c09c2d1732c9258b91646465f3c927624fda4
+script_sha256: ecf7129b7b6289ad6290b437f453c983ecc9cde253f925e1521477d2ecdfd158
+output_sha256: 8d110c3233659f0887b30cc379c00373cb0ab8be349fd190df30e7b342a5446d
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2365 -- H-drift is exactly departure from the inverse line
 
-**PROVED CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2354 gives a positive factor-coloured deep current but forgets the
 endpoint phases needed by the target quotient. Restoring those phases
@@ -70,16 +70,20 @@ K_p=L_p direct_sum <e_a,e_c>,
 K_p/L_p isomorphic to F_p^2,                         (2)
 ```
 
-where `a` is the other target blocker. Choose quotient-dual lifts
+where `a` is the other target blocker. Let `eta_bar,ell_bar` be the
+basis of `(K_p/L_p)^*` dual to the ordered quotient basis
 
 ```text
-eta,ell in L_p^perp/<w>
+(e_a+L_p,e_c+L_p).
 ```
 
-normalized by
+Choose integer representatives `eta,ell` whose reductions lie in
+`L_p^perp` and represent these classes modulo `<w>`. Thus, modulo `p`,
 
 ```text
-eta_c=0,                    ell_c=1.                 (3)
+eta_a=1,       eta_c=0,
+
+ell_a=0,       ell_c=1.                              (3)
 ```
 
 The two target coordinates of a relation `r` are
@@ -623,4 +627,16 @@ Both transcripts must match
 byte-for-byte after LF normalization. Every executable check raises
 explicitly under optimized Python.
 
-Independent audit is pending. QED.
+## 10. Independent audit
+
+An independent audit rederived the target-dual typing, Fourier signs,
+diagonal line sum, target-action projection, and sharp `1/13` energy
+bound. It separately checked the iterated absolute-convergence argument
+in (20)--(21a), the `91`-unit extraction, rational cyclotomic rigidity,
+the BV constant `1/(12R)`, and the fixed-word all-row application. The
+ordinary and optimized companion runs match the stored transcript
+byte-for-byte, and both declared hashes match the working-tree files.
+
+The audit also confirmed the load-bearing scope distinction: (21a) has
+absolute `m`-then-`X` meaning, but the uncollapsed double series is not
+claimed absolutely convergent. QED.

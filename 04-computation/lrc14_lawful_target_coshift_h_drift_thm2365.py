@@ -260,7 +260,7 @@ bv_constant = Fraction(1, 4) * Fraction(1, 3)
 require(bv_constant == Fraction(1, 12), "BV covariance constant changed")
 
 print("theorem=THM-2365")
-print("status=PROVED-CANDIDATE-UNDER-INDEPENDENT-AUDIT")
+print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED")
 print(f"target_shift_cells={CELLS}")
 print(f"target_action_orbits={P}")
 print(f"cells_per_orbit={P * P}")

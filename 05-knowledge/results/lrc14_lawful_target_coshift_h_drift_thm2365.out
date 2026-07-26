@@ -1,5 +1,5 @@
 theorem=THM-2365
-status=PROVED-CANDIDATE-UNDER-INDEPENDENT-AUDIT
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED
 target_shift_cells=2197
 target_action_orbits=13
 cells_per_orbit=169
