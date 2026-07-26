@@ -1,0 +1,23 @@
+THM-2376 degree-18 H2 coprime cube-locus exact companion
+p3/q5 degrees and leading coefficients: (3,245), (5,539)
+quadratic cover: h=z^2-Delta; Delta=R*(a+2-R)
+selected lift: Norm(ell)=-2*R*Delta*(y-1)
+normalized cube: u=z^2+m*z+n+(-z+w)*t; k=m+w
+norm pivots: lambda=2*k/245; n and B solved; k!=0
+trace pivot: c=3773/(2*(k^3-R*Delta)); denominator nonzero
+factor split: (k^3+R*Delta)*(R+4*a-3*k+6*m-4)=0
+norm scale kills first factor by 4*245^3+3773^2=73060029
+ratio scale: 125*delta^2-371*delta*x^3+125*x^6=0
+R pivot: A=(delta^2+5*delta*x+5*delta+x)*(delta*x+2*delta+2*x+1)
+R constant: B0=-2*(delta+3*x+2)*(2*delta*x+3*delta+x)
+pivot resultant: x*(x+1)^8; hostile scale value: 621
+main raw signatures: (12,7,9,52), (23,16,13,192), (20,13,13,146)
+main remainder signatures: (24,1,24,38), (53,1,53,92), (44,1,44,74)
+ratio orders: 3,5,5; every stripped remainder is delta-linear
+final determinant x-orders: 12,12
+final obstruction degrees: 62,53; gcd over Q: 1
+mod 17 degree-preserving resultant: custom=11, library=11
+hostile prime 11: degrees 61,52; spurious gcd degree 11
+saturation inventory: R!=0, Delta!=0, k!=0, k^3-R*Delta!=0; A=0 audited
+VERDICT: the degree-18 H2 coprime cube locus is empty
+SCOPE: H4, degree eighteen as a whole, JC(2), and DC(2) remain open
