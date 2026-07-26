@@ -66,7 +66,11 @@ the structure, and their CONTRAST is the content.
    from the entropic `log2 k` floor.
 
 Cheapest decisive tests: (i) fit `depth_bal - log2 k` against
-`log log k` on the census (one regression); (ii) prove
+`log log k` on the census -- **DONE same session**: the window
+excesses are `3.40, 3.54, 3.62, 3.64, 3.67, 3.65, 3.66, 3.66`
+across `2^8..2^24`: a plateau at `~3.66`, NOT `log log` growth
+(which would add ~0.9 over this range). The census favours the
+sharp form `depth_bal(k) = log2 k + O(1)`, constant `~3.7`; (ii) prove
 unconditionally that ANY additive-2-basis-with-density-`1/log^2`
 sequence admits a balanced tree of depth `<= log2 k + O(width of the
 needed window)`, reducing prediction 1 to a covering statement;
