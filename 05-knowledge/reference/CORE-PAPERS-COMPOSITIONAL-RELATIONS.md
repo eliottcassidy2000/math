@@ -164,10 +164,26 @@ This sidecar preserves detailed records routed compactly from
 - **Repo consumer:**
   [THM-2413, prime-index affine drift and twin-center weld](../../01-canon/theorems/THM-2413-prime-index-affine-drift-and-twin-center-weld.md).
 - **Does not prove:** that twin-prime slope-two edges occur in any optimal
-  cover, that an A014574 center corresponds to a plateau of `L(n)`, the twin
-  prime conjecture, or the conjectured sharper `L(n)=O(n/log n)`. The
+  cover, that A014574 centers are equivalent to or imply plateaux of `L(n)`,
+  the twin prime conjecture, or an optimal asymptotic order for `L(n)`. The
   fixed-slope identity `p_(k+1)-2(k+1)=p_k-2k` iff the adjacent prime gap is
   two is the elementary repo-derived weld in THM-2413.
+
+## Brun -- convergence of the twin-prime reciprocal series
+
+- **Primary / freshness:** Viggo Brun, *La série
+  1/5 + 1/7 + 1/11 + 1/13 + ... où les dénominateurs sont «nombres premiers
+  jumeaux» est convergente ou finie*, *Bulletin des Sciences
+  Mathématiques* (2) **43** (1919), 100--104 and 124--128;
+  [authoritative reference record](https://encyclopediaofmath.org/wiki/Brun_theorem).
+  **PUBLISHED / stable; bibliography and theorem scope checked 2026-07-26.**
+- **Imported role:** the sum of the reciprocals of the members of twin-prime
+  pairs converges. THM-2413 combines this cited input with an exact midpoint
+  partial-fraction identity to prove convergence of the reciprocal support of
+  A014574.
+- **Does not prove:** that there are infinitely many twin primes, any value or
+  optimal error bound for their counting function, or the A014574 midpoint
+  identity itself.
 
 ## Krenn--Gu--Soltesz -- inherited vertex coloring of perfect matchings
 

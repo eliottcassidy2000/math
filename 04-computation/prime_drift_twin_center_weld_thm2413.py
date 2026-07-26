@@ -229,6 +229,22 @@ def main():
         )
         assert twin == diamond_gap_two
 
+    # Discriminant four only recovers neighboring integers; it does not
+    # retain the primality/Boolean-diamond sidecar.
+    hostile_m = 8
+    hostile_s = 2 * hostile_m
+    hostile_p = hostile_m * hostile_m - 1
+    assert hostile_s * hostile_s - 4 * hostile_p == 4
+    assert not (
+        is_prime(hostile_m - 1) and is_prime(hostile_m + 1)
+    )
+    assert divisors(hostile_p) != [
+        1,
+        hostile_m - 1,
+        hostile_m + 1,
+        hostile_p,
+    ]
+
     # Exact A373813 prefix from the prime-index point hypergraph.
     line_prefix = []
     for n in range(1, 17):
@@ -260,6 +276,7 @@ def main():
     print("A014574-first=" + ",".join(map(str, twin_centers[:12])))
     print(f"prime-drift-adjacencies-checked={checked_drift}")
     print("twin-drift-law=d_(k+1)=d_k iff prime-gap=2")
+    print("hostile-discriminant-four=m=8 has roots 7,9 but is not twin")
     print(
         "reciprocal-midpoint-identity="
         "sum(1/m)=1/2 sum(1/(m-1)+1/(m+1))-sum(1/(m(m^2-1)))"

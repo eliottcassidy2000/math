@@ -2,8 +2,8 @@
 id: THM-2413
 title: "Prime-index affine drift and twin-center summand--multiplicand weld"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE; AWAITING INDEPENDENT HOSTILE
-  AUDIT. Operation cospan transitivity is witness composition. After
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Operation
+  cospan transitivity is witness composition. After
   deleting equal-parent fibers, the additive and multiplicative local
   transitivity-defect counts at x are respectively x-1 and tau(x)-2;
   hence primes are exactly the positive x>=2 with no multiplicative
@@ -11,11 +11,13 @@ status: >
   finite-support coordinatewise addition, while ordinary addition has
   exact equal-valuation carry walls. A014574 is equivalently the set
   of centers m whose neighbors form a Boolean divisor diamond for
-  m^2-1, or whose sum/product discriminant is four. It is also the set
-  of adjacent plateaux of the fixed slope-two prime drift p_k-2k.
-  This local plateau is not a plateau of A373813 and says nothing
-  about slopes in an optimal line cover. Brun convergence and the
-  2026 prime-line asymptotics are CITED, not reproved.
+  m^2-1. Every neighboring pair lies on the sum/product
+  discriminant-four locus, but that locus alone forgets primality. The
+  sequence records the midpoint values attached to adjacent plateaux
+  of the fixed slope-two prime drift p_k-2k. Such a local plateau is
+  not equivalent to and does not imply a plateau of A373813, and says
+  nothing about slopes in an optimal line cover. Brun convergence and
+  the 2026 prime-line asymptotics are CITED, not reproved.
 source: codex-2026-07-26-prime-index-drift
 depends_on:
   - THM-362-natural-operation-graph-shadows
@@ -25,21 +27,21 @@ related:
   - THM-2412-delta-exponential-and-central-newton-layer-split
   - HYP-3003-summand-multiplicand-farey-basis-merge
 external: >
-  OEIS A014574 and A373813; Kominers--Mrazovic--Pomerance--Sole,
-  "Lines in the Prime Number Graph" (2026); Rybin--Zhang--Luo,
-  "XX^t Can Be Faster", arXiv:2505.09814v2.
+  OEIS A014574 and A373813; Viggo Brun, twin-prime reciprocal-series
+  theorem (1919); Kominers--Mrazovic--Pomerance--Sole, "Lines in the
+  Prime Number Graph" (2026); Rybin--Zhang--Luo, "XX^t Can Be Faster",
+  arXiv:2505.09814v2.
 script: 04-computation/prime_drift_twin_center_weld_thm2413.py
 output: 05-knowledge/results/prime_drift_twin_center_weld_thm2413.out
-script_sha256: 13330b8db5c13b3a789278997f3edfe64a00d60cccae68d9055fdf538482f2ab
-output_sha256: 674c3e67a9578b2353a4bd4d2e953a50804cdeac0328d146fe0cd2eb85590254
+script_sha256: 35d0a623b87ae5f0fa5e651c7c956b2c9343b5e8f14862dd535c8aa3911edc48
+output_sha256: bc612c8b6419f3752744d318d1880378230c39abdade7f29497ca606dab72287
 hash_basis: working-tree bytes (LF)
 cite_by_filename: true
 ---
 
 # THM-2413 -- prime drift and the twin-center operation weld
 
-**PROVED + VERIFIED-EXACT CANDIDATE; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The arrows
 
@@ -269,25 +271,29 @@ This is A014574. For `m>=4`, the following are equivalent:
    `{1,m-1,m+1,m^2-1}`;
 3. the divisor interval of `m^2-1` is a Boolean diamond whose two
    middle elements differ by two and sum to `2m`;
-4. the unordered pair recovered from
-
-   ```text
-   S=2m,  P=m^2-1                                                   (23)
-   ```
-
-   has discriminant
-
-   ```text
-   S^2-4P=4.                                                        (24)
-   ```
 
 Indeed, (1) factors `m^2-1` as the product of the two distinct primes
-`m-1,m+1`, proving (2)--(4). Conversely, (2) directly makes those two
-neighbors prime. For (3), a positive integer with four divisors is
-either a product of two distinct primes or a prime cube. The
-prime-cube middle gap can equal two only for
-`1,2,4,8`, whose midpoint is `m=3`; the condition `m>=4` excludes this
-unique hostile.
+`m-1,m+1`, giving (2), and (2) and (3) are the same four-element
+divisor-poset statement. Conversely, (2) directly makes the two
+neighbors prime.
+
+There is a larger ambient sum--product locus. For every integer `m`,
+not only a twin center, put
+
+```text
+(S,P)=(2m,m^2-1).                                                  (23)
+```
+
+Then
+
+```text
+S^2-4P=4,                                                          (24)
+```
+
+and the roots of `Z^2-SZ+P` are `m-1,m+1`. Thus a twin center is a
+discriminant-four point whose recovered roots additionally carry the
+prime/Boolean-diamond sidecar. Discriminant four alone is insufficient:
+`m=8` gives roots `7,9` and product `63`, but is not in A014574.
 
 The same pair lands in both operation cospans:
 
@@ -467,7 +473,8 @@ The standard-library integer/Fraction companion checks:
 - both unit conventions for the operation shadows through `80`;
 - all diagonal-defect counts through `80`;
 - `2500` valuation-vector products;
-- the first twelve twin centers and every weld equivalence;
+- the first twelve twin centers, every diamond equivalence, and the
+  discriminant-four non-twin hostile `m=8`;
 - the fixed-slope drift identity on the first forty primes;
 - the reciprocal identity exactly;
 - the discriminant/diamond converse through midpoint `499`; and

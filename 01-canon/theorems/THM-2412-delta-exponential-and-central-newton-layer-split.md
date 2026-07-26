@@ -2,8 +2,8 @@
 id: THM-2412
 title: "Delta exponential and central Gregory--Newton layer split"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE; AWAITING INDEPENDENT HOSTILE
-  AUDIT. The scaled falling-factorial umbral map U_h(x^k)=
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. The scaled
+  falling-factorial umbral map U_h(x^k)=
   x(x-h)...(x-(k-1)h) exactly intertwines the continuous derivative
   with the forward difference quotient. Its unit-eigenvalue lattice
   solution is (1+h)^(x/h), so h=1 gives 2^N while the fixed-endpoint
@@ -14,7 +14,7 @@ status: >
   signed one-step leakage. For tournaments the exponent is the number
   C(v,2) of independent arc slots, not the number of vertices and not a
   causal source of the base two. No nonintegral Newton-series
-  convergence claim or plus-minus quadratic-form limit is made.
+  extension is used, and no plus-minus quadratic-form limit is claimed.
 source: codex-2026-07-26-delta-exponential
 depends_on: []
 related:
@@ -36,8 +36,7 @@ cite_by_filename: true
 
 # THM-2412 -- delta exponentials and the central Newton split
 
-**PROVED + VERIFIED-EXACT CANDIDATE; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The Maclaurin and Gregory--Newton expansions are not merely analogous
 lists of coefficients. They are the same lowering-operator calculus in
@@ -84,7 +83,8 @@ Direct cancellation gives
 D_h x^(falling k,h)=k x^(falling k-1,h).                             (5)
 ```
 
-One proof factors the numerator:
+For `k>=1`, one proof factors the numerator (with the remaining product
+empty when `k=1`):
 
 ```text
 (x+h)^(falling k,h)-x^(falling k,h)
@@ -156,7 +156,8 @@ q^N=sum_(k=0)^N (q-1)^k N^(falling k)/k!.                           (14)
 So base two is not forced by discreteness alone. It is
 `1+h lambda` at unit step and unit eigenvalue.
 
-For fixed continuous endpoint `X`, take `h=X/N` in (11)--(12). Then
+For fixed `X,lambda in C` with `X!=0`, take `h=X/N` and let the positive
+integer `N` tend to infinity in (11)--(12). Then
 
 ```text
 (1+lambda X/N)^N
@@ -168,22 +169,24 @@ For fixed continuous endpoint `X`, take `h=X/N` in (11)--(12). Then
 For each fixed `k`, the scaled falling factorial in (15) tends to
 `X^k`, and the left side is the standard exponential limit. Equation
 (15) is the exact discrete/continuous bridge: the operator, basis, and
-eigenfunction converge together.
+eigenfunction converge together. The case `X=0` is the separate
+constant identity `1=e^0`.
 
 ## 3. Bernoulli's triangle and the two central sequences
 
 Define the Bernoulli-triangle entry
 
 ```text
-B(r,s)=sum_(k=0)^s C(r,k),              0<=s<=r.                     (16)
+B(r,s)=sum_(k=0)^s C(r,k),              0<=s<=r,
+B(r,-1)=0.                                                           (16)
 ```
 
 This is the partial-sum triangle of binomial coefficients, not the
 Bernoulli-number sequence. Its bulk rule and terminal boundary are
 
 ```text
-B(r,s)=B(r-1,s)+B(r-1,s-1),             s<r,
-B(r,r)=2^r=2B(r-1,r-1).                                             (17)
+B(r,s)=B(r-1,s)+B(r-1,s-1),             0<=s<r,
+B(r,r)=2^r=2B(r-1,r-1),                 r>=1.                        (17)
 ```
 
 For `n>=0`, put
@@ -225,7 +228,8 @@ M_n counts |S|<n,
 C(2n,n) counts the balanced equator.                                 (22)
 ```
 
-The ordinary generating functions are
+The ordinary generating functions, as formal power series (and
+analytically for `|z|<1/4`), are
 
 ```text
 sum_(n>=0) P_n z^n
@@ -268,8 +272,11 @@ sign. This is the exact mechanism behind the empirical recurrences
 5=4*1+1,       22=4*5+2,       93=4*22+5,       386=4*93+14.         (27)
 ```
 
-The "irregularity" is therefore localized: it is the mass of paths
-that touch the central reflection wall, counted by Catalan numbers.
+The "irregularity" is therefore localized: `Cat_(n-1)` is exactly the
+signed difference between fourfold growth of the old half-space and
+the new central boundary. Catalan numbers separately count the
+standard one-sided Dyck/ballot paths; no identification with all paths
+touching this particular Boolean boundary is needed here.
 
 ## 5. Tournament arc slots and the source of the two
 
@@ -339,11 +346,12 @@ They do not license the unqualified identity
 sum_(k>=0) x^(falling k)/k!=2^x                                    (34)
 ```
 
-for arbitrary complex `x`. The generalized binomial series is ordinary
-inside `|z|<1`; at `z=1`, nonintegral convergence needs its own
-conditions (absolute for `Re(x)>0`, conditional down to
-`Re(x)>-1`) or an explicitly declared Abel value. None of those
-extensions is used here.
+for arbitrary complex `x`. The generalized series
+`sum_k binom(x,k)z^k` is ordinary inside `|z|<1`. At `z=1`, a
+nonintegral `x` gives absolute convergence for `Re(x)>0` and
+conditional convergence for `-1<Re(x)<=0`; outside that range one
+needs a separately declared summation convention such as an Abel
+value. None of these nonterminating extensions is used here.
 
 Likewise, (31)--(33) are an exact representation of the open
 plus-minus quadratic-form problem, not evidence for its asymptotic
