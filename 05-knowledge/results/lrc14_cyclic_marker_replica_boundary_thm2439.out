@@ -1,0 +1,21 @@
+THM-2439 exact companion
+restricted_mask_checks=8099
+restricted_marker_degree=10
+restricted_nonzero_coefficients=2753
+degree_ten_witnesses=3,0
+universal_mask_checks=8192
+universal_marker_degree=12
+universal_nonzero_coefficients=2816
+nonzero_coefficients_by_degree=1,6,34,119,284,493,634,594,401,187,54,9
+marker_truths_by_size=1,6,22,55,99,132,132,99,55,22,6,1
+degree_twelve_witnesses=-10,2
+marker_equivariance_checks=106470
+homometric_A_word=1101000001000
+homometric_B_word=1100101000000
+affine_equivalences=7,7;8,7;11,7
+homometric_autocorrelation=4,1x12
+translation_gram=0,6x12
+normalized_fourier_powers=16/169,3/169x12
+first_nondihedral_homometric_support=4
+size_four_ambiguous_signatures=1
+ALL CHECKS PASSED
