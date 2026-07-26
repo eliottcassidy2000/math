@@ -1,0 +1,16 @@
+THM2459 FOUR-ATOM DRIFT/SERVICE AUDIT
+hilbert_identity_cases=127
+sharp_nonnegative_realizations=127
+N=128 directed_entries=16384
+drift_linear_denominator=251
+drift_energy_denominator=63001
+root_mass_denominator=16384
+root_max_denominator=33226752
+root_energy_denominator=92001420705792
+four_atom_service_unions=2
+four_atom_working_unions=1 min_size=4
+two_atom_working_unions=0
+observer_cells=2 observer_service=2 observer_drift_norm2=18
+four_atom_hostile=PASS
+aggregate_sidecar_hostile=PASS
+optimized_require_path=PASS
