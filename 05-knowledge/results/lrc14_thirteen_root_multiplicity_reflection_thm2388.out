@@ -2,6 +2,7 @@ theorem=THM-2388
 status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED
 root_identity_cases=74814
 composite_transfer_cases=1685
+omitted_top_split_cases=1685
 fourier_residue_cases=2002
 off_cage_composition_counts=13,1,0,0,0,0,0
 toothpick_mass_ratio=1/13

@@ -30,8 +30,8 @@ related:
   - THM-2385-two-top-septimal-blocker-collision-reduction
 script: 04-computation/lrc14_thirteen_root_multiplicity_reflection_thm2388.py
 output: 05-knowledge/results/lrc14_thirteen_root_multiplicity_reflection_thm2388.out
-script_sha256: 68ca5451f1374d4dcfcd1998275dff3a146e97d1f575c405b926fd8a38d89401
-output_sha256: 15d68bdd541d9bc1ece7dd2614a869a08dec1a82eedcad4dbd2ca96557f4edb6
+script_sha256: 82f66c71d9cf941fcfa36f80ea1fae94c2171625942c100c8be8fe0ca5ee329e
+output_sha256: c5c58af72968bcc7e1e2b65d36b2d68a1568aaa0534c7d8fcebd90958148661d
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -418,8 +418,17 @@ recursion.
 
 ## 5. The thirteen-root form of the remaining excess
 
-Write `c_j=13C_j`. Fix a generic quotient phase `y` at which `C_3` is
-safe, and put
+Write `c_j=13C_j` and define the rooted current globally by
+
+```text
+R_13=P R,
+
+R_13(y)=sum_(T x=y)R(x).                            (32)
+```
+
+It vanishes when `y in D_(C_3)`, because then `c_3` is dangerous on
+all thirteen inverse roots and `R` vanishes there. Now fix a generic
+quotient phase `y` at which `C_3` is safe, and put
 
 ```text
 x_h=(y+h)/13,                         h in F_13,
@@ -430,7 +439,7 @@ Q(y)={h:x_h in D_(q_*)},              q=|Q(y)| in {1,2},
 
 U_h
  =1_(E_H)(x_h)
-  +sum_(q_i!=q_*)1_(D_(q_i))(x_h).                   (32)
+  +sum_(q_i!=q_*)1_(D_(q_i))(x_h).                  (32a)
 ```
 
 On every root outside `Q(y)`, both absorbers in `mathcal A` are absent,
@@ -440,11 +449,10 @@ so
 R(x_h)=U_h+alpha+beta-1.
 ```
 
-Therefore the exact rooted excess is
+Therefore, on `D_(C_3)^c`, the exact rooted excess is
 
 ```text
-R_13(y)
- :=sum_(h notin Q(y))R(x_h)
+R_13(y)=sum_(h notin Q(y))R(x_h)
 
  =(13-q)(alpha+beta-1)
    +sum_(h notin Q(y))U_h
@@ -560,8 +568,9 @@ root chosen in (21) and the sign balance (25). Any tournament/Fano
 refinement must retain those sidecars; a cosmetic three-colouring is not an
 equivalence.
 
-This theorem does not close (1). THM-2385 separately closes the two-top
-collision branch. No thirteen-adic row is removed here, the ledger
+This theorem does not close (1). THM-2385 independently closes the
+two-top collision branch, leaving the present `(1,0)` lane as the sole
+septimal alternative. No thirteen-adic row is removed here, the ledger
 remains `165`, and LRC(14) remains open.
 
 ## 7. Exact companion
@@ -599,3 +608,14 @@ Both transcripts must byte-match
 
 after LF normalization. Every executable check raises explicitly under
 optimized Python.
+
+## 8. Independent audit
+
+An independent read-only audit reconstructed the inherited
+`P F=-F` sign and its Fourier factor `13`, all identities
+(31a)--(31e), every directed cage in (17), (18), (31f), and (35e), and
+the `36/343`, `72/343`, and `468/343` normalizations. It also rebuilt
+the hostile masks and found an exact global hole with positive endpoint
+margins, confirming that the local hostile is not a scalar cover.
+Normal, optimized, and stored transcripts agree, and no executable
+assertion disappears under optimization. QED.

@@ -104,6 +104,7 @@ unit_banks = (
     (27, (28, 29, 30, 31, 32)),
 )
 transfer_cases = 0
+q_split_cases = 0
 for H, qs in unit_banks:
     require(H % 13 and all(q % 13 for q in qs), "bank has a 13-nonunit")
     for y_num in range(phase_den):
@@ -116,7 +117,27 @@ for H, qs in unit_banks:
             K_roots - 13 == -(K_base - 1),
             "centered transfer eigenline",
         )
+        denominator = 13 * phase_den
+        outside_sum = 0
+        omitted_top_overlap = 0
+        for h in range(13):
+            numerator = y_num + h * phase_den
+            q_star_bit = int(danger_rat(qs[0] * numerator, denominator, 1))
+            K_root = int(danger_rat(H * numerator, denominator, 2))
+            K_root += sum(
+                danger_rat(q * numerator, denominator, 1) for q in qs
+            )
+            U_root = K_root - q_star_bit
+            if q_star_bit:
+                omitted_top_overlap += U_root
+            else:
+                outside_sum += K_root - 1
+        require(
+            outside_sum == -(K_base - 1) - omitted_top_overlap,
+            "omitted-top q-star split identity",
+        )
         transfer_cases += 1
+        q_split_cases += 1
 
 
 # Fourier scaling is the same exact mod-14 sign flip.
@@ -326,6 +347,7 @@ print("theorem=THM-2388")
 print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED")
 print(f"root_identity_cases={root_identity_cases}")
 print(f"composite_transfer_cases={transfer_cases}")
+print(f"omitted_top_split_cases={q_split_cases}")
 print(f"fourier_residue_cases={fourier_residue_cases}")
 print(f"off_cage_composition_counts={','.join(map(str, off_cage_counts))}")
 print("toothpick_mass_ratio=1/13")
