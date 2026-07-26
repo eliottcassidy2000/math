@@ -1,0 +1,11 @@
+THM-2390 SEPTIMAL LAYER KRAFT PEELING -- exact companion
+seven-root open-arc counts (aligned,generic): a=1:(0, 1), a=2:(1, 2), a=3:(2, 3), a=4:(3, 4), a=5:(4, 5), a=6:(5, 6)
+one-peel safe capacities W=0..6: 0->7 (1), 1->6 (6/7), 2->5 (5/7), 3->4 (4/7), 4->3 (3/7), 5->2 (2/7), 6->1 (1/7)
+lower-weight-8 partitions checked: 20
+lower product minimum: 5/49 uniquely at (6, 2)
+two singleton higher layers times lower minimum: 180/2401
+heavy labelled role choices: W=7 -> 6; W=8 -> 1
+W=7 abstract labelled words: 352947; full covers: 2520
+W=8 abstract labelled words: 2470629; full covers: 68040
+terminal profiles: W=7 -> 1^7; W=8 -> 2,1^6
+VERDICT: no-heavy-layer gives floor 180/2401; every survivor has W=7 or W=8

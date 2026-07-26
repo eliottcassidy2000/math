@@ -173,7 +173,7 @@ THM-2168--2257 leave `165` rows; THM-2295--2349 supply packets and `91`-unit edg
 THM-2350--2365 give dipole/colour/drift banks (THM-2356 kernel `28,393` versus `169`; THM-2363 dominates); THM-2366/2367 isolate inverse covariance, sub-`13` budgets, and septimal graft transport.
 THM-2368/2369 expose drift/slope hostiles; THM-2370's clone kills mixed-energy repair. THM-2372/2377 force a `98`-fold toothpick and put the first carrier at a repeated septimal layer with Bockstein carry.
 THM-2378 closes `W=k=1` via `3/4` versus `1/2` and `5/49`; THM-2381 closes `k=2,(t,b)=(1,1)` by a seven-bin partition and exact `36/343` anti-shield.
-THM-2382 closes saturated `k=2,(5,2,7)` by root demand `13` versus capacity `10`. THM-2385 closes `(2,0)`: exactness forces `D_C1 intersect D_C2` under `D_C3`, while unequal-depth fibres and the equal-depth joint-comb lemma both forbid it.
+THM-2382 closes saturated `k=2,(5,2,7)` by `13>10`. THM-2385 closes `(2,0)` by exact two-comb containment plus unequal/equal-depth obstructions.
 Thus only `k=2,(t,b)=(1,0)` remains in the septimal atlas. THM-2379/2380/2384 leave a true owner-typed dual dipole, endpoint-matched reference, and the located `36/343` multiplicity-excess word open. No whole thirteen-adic row is removed; the ledger remains `165`.
 
 ### Independent routes that remain live
