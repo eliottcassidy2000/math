@@ -108,6 +108,40 @@ reading (S131b reflection): the rigid stratum is owned by the
   class at odd n) and test against a future blue-cube run at
   `2^25`.
 
+## 4b. Same-session addendum: the closure counts have a closed form
+
+The grammar closure counts satisfy the exact functional equation
+
+```text
+G(x) = S(x) + S(x) G(x),
+S(x) = x + ( G(x)^3 + 2 G(x^3) ) / 3,                        (FE)
+```
+
+where `S` counts the strongly connected towers (single vertex or a
+`C3`-necklace of three towers, Burnside over the block rotation) and
+`G = S/(1-S)` strings strong parts into stacks. Iterating (FE)
+reproduces the independently iso-deduplicated census EXACTLY through
+`n = 10` (`1,1,2,4,9,24,65,182,528,1558`) and extends it:
+`g(11) = 4,674`, `g(12) = 14,225`.
+
+Why (FE) is the right count and not an over- or under-count: the
+strong-component chain of a tournament is canonical, and a strongly
+connected tower's block partition is a modular partition with prime
+quotient `C3`; by the classical uniqueness of modular decomposition
+(Gallai-type theory for tournaments -- CITED-classical, to be
+anchored in CORE-PAPERS before promotion) the tower parse tree is
+unique up to the `C3` rotation already quotiented by Burnside. The
+exact census agreement through `n = 10` is the in-repo verification
+of that argument. Towers are exactly the tournaments totally
+decomposable by chains and `C3` -- the tournament analogue of
+cographs. OEIS status of `1,1,2,4,9,24,65,182,528,1558`:
+lookup rate-limited this session, novelty UNVERIFIED.
+
+Rigid-tower prediction at `n = 11`: count `7`, H-multiset
+`[1,3,9,9,9,27,27]` (pre-registered in
+`05-knowledge/results/metagraph_rigid_towers_n11_prediction_kps_S132.out`
+before the `2^25` census run).
+
 ## 5. Reproduction
 
 ```bash
