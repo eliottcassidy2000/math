@@ -1,0 +1,20 @@
+faber_flux_bank=PASS degrees=2,6,10,14,18,22
+independent_multinomial_bank=PASS degrees=2,6,10,14,18,22
+target_translation=PASS c=2*alpha/11
+normalized_B=-(9*alpha**2 - 22*beta)/22
+normalized_C=(21*alpha**3 - 77*alpha*beta + 121*gamma)/121
+normalized_D=-(315*alpha**4 - 1540*alpha**2*beta + 4840*alpha*gamma - 10648*delta)/10648
+normalized_E=(63*alpha**5 - 385*alpha**3*beta + 1815*alpha**2*gamma - 7986*alpha*delta + 29282*epsilon)/29282
+normalized_W=(644204*Psi0 + 105*alpha**6 - 770*alpha**4*beta + 4840*alpha**3*gamma - 31944*alpha**2*delta + 234256*alpha*epsilon)/644204
+normalized_fluxes=N1/(-7496192),N2/1319329792
+A0_u=7*(88*B + 9*y**2)/1089
+A0_E=(-71148*B**2*y + 745360*B*C + 5082*B*y**3 + 43560*C*y**2 + 287496*D*y + 945*y**5)/2108304
+F2_associate=1/243
+F2_discriminant_scalar=63478233612288
+sextic_sha256=cd38217b285a7f81521b688ec23f198e9150c2130235c0d90f1a8fbd382c22b8
+perfect_square_iff=BC=0,D=22141*B^2/79200,W=-(2080981*B^3+13186800*C^2)/41164200
+H2_control=B=C=0,D=-175/10648,W=-175/161051,R6=42525*(y^2-2)*(y^2+1)^2
+generic_control=(B,C,D,W)=(1,1,1,1),squarefree_degree=6
+degree22_whole_polynomial_sidecar=PASS
+genus_zero_squareclass_reduction=MATHEMATICAL_PROOF_REQUIRED
+status=THM2411_DEGREE22_A0_SQUARECLASS_EXACT_REFEREE

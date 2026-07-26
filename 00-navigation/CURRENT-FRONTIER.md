@@ -419,9 +419,9 @@ Classify profiles under support operations; study analytic continuation and auto
   and closes the full degree-eighteen `H_2S_5^2` stratum. THM-2373 gives
   root-free charts on `H_4`; THM-2386 removes common roots; hostile-audited
   THM-2389 gives its pole-jet system. Audit-pending CANDIDATE THM-2406
-  forces that system onto the closed wall and would finish degree eighteen.
-  Split/even short edges and integral `2`-adic order raising remain; THM-2206
-  blocks field-valued `C_2` Hasse repair. `JC(2)` and `DC(2)` remain open.
+  forces that system onto the closed wall and would finish degree eighteen. CANDIDATE THM-2411 reduces
+  degree-22 `A=0` to explicit `H_0S_3^2`/`H_2S_2^2`; both and the complement remain open. Split/even
+  short edges and integral `2`-adic order raising remain; THM-2206 blocks field-valued `C_2` Hasse repair. `JC(2)` and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
