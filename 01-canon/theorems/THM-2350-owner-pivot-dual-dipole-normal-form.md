@@ -2,7 +2,7 @@
 id: THM-2350
 title: "Owner-pivot dual dipoles and magnetic target Dirichlet energy"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. For every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. For every
   explicit owner-aligned pivot packet of THM-2309, the two target
   characters have unique omitted-unit gauge representatives
   e_a-e_(k_a) and e_b-e_(k_b). Equivalently the target quotient map is
@@ -10,8 +10,9 @@ status: >
   disjoint balanced target-unit dipoles, and an atomic marked relation
   lands by the difference of its left and right dipole residues plus the
   deepest-comb translation; transported-word modes vanish from this
-  formula. The inverse-character boundary of THM-2343/2344 is the unique
-  covariantly constant section of a magnetic C_13 square C_13
+  formula. The inverse-character boundary of THM-2343/2344 is the
+  one-dimensional space of covariantly constant sections of a magnetic
+  C_13 square C_13
   connection. Its exact magnetic Dirichlet energy equals the ordinary
   Dirichlet energy of the full current H and a Laplacian-weighted
   nonzero-target energy. A single nonzero dipole edge defect therefore
@@ -24,6 +25,7 @@ depends_on:
   - THM-2334-relation-residue-current-and-character-twist-pushforward
   - THM-2343-deep-comb-affine-target-catalyst
   - THM-2344-correlation-inverse-rigidity-and-aligned-tooth-twist-hostile
+  - THM-2349-first-depth-one-delayed-shallow-restart
 related:
   - THM-2307-dual-rank-six-reconstruction-spectrum-and-selector-no-go
   - THM-2337-expiration-word-residue-invisibility-and-first-bockstein-sidecar
@@ -37,7 +39,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2350 -- the target plane is a pair of balanced dipoles
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2344 proves that an arbitrary transported word on one aligned active
 axis can preserve the bad inverse character.  The actual owner-pivot
@@ -414,9 +416,10 @@ are the two owner-pivot dipoles, its preserved predicate is target
 nonconstancy, and its lost data under a tournament shadow would include
 translation, phase, amplitude, and word-support masks.
 
-No edge in (29) is proved nonzero.  The exact ledger remains `165`; the
-repeated-first/resonance rows remain outside the strict-row input; and
-LRC(14) remains open.
+No edge in (29) is proved nonzero.  THM-2349 supplies the delayed marked
+current on all `165` rows, including repeated-first and strict-resonance
+arms, so this magnetic reformulation is now uniform on the whole ledger.
+It excludes no row, and LRC(14) remains open.
 
 ## 8. Exact companion
 
@@ -445,3 +448,16 @@ Both transcripts must match
 ```
 
 byte-for-byte after LF normalization.
+
+## 9. Independent audit
+
+An independent proof and exact-computation audit checked the six-row
+owner-pivot rank calculation, the quotient/gauge typing, the two balanced
+dipole representatives, and the atomic residue formula.  It separately
+verified the magnetic gauge transformation, incidence rank `168`, the
+one-dimensional covariantly constant space, the spectral weights and
+both inequalities in (28).  Ordinary and optimized executions are
+byte-identical to the stored transcript, and the source/output hashes
+match the metadata.
+
+QED.
