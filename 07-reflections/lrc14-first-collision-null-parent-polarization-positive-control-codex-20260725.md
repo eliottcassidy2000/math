@@ -1,6 +1,6 @@
 # LRC14 first-collision null-parent polarization positive control
 
-**Status:** FINITE-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.
+**Status:** FINITE-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
 
 This note records a sharp positive control at the first repeated septimal
 layer. It is not a scalar-row exclusion and is not proved canon. Its purpose
@@ -166,13 +166,16 @@ because the parent is constant. The centered THM-441
 correlation-adjoint identity becomes
 
 ```text
-R^circ=-W^circ star W^circ,
+R^circ=-(1/169) W^circ star W^circ,
 
 Rhat(q)=-|what(q)|^2.                               (8)
 ```
 
-The null parent is an absolute charged reference at this prefix, so no
-extra phase quadrature is needed there.
+At this common-endpoint prefix, the target-null parent canonically fixes
+the two children's relative sign, so no extra phase quadrature is needed
+there. This is not an absolute terminal phase reference and does not
+physically realize THM-2380's endpoint-matched pair twist after later
+factors are restored.
 
 ## Exact correlation and energy
 
@@ -260,7 +263,10 @@ The same strict anti-alignment therefore holds for all
 ```
 
 nonzero deep-colour/target pairs. This is still a finite colour response,
-not one exact `(m,X)` marked triangle passing through both packets.
+not one exact `(m,X)` marked triangle passing through both packets. These
+are actual finite Fourier coefficients of the reduced physical tensor,
+but the bank is derived from THM-2377's rank-one factorization; it is not
+an independently realized owner-typed or terminal-word bank.
 
 ## The first failed implication and the surviving target
 
@@ -283,13 +289,15 @@ on the immediate first-collision prefix:
   target support overlap and phase alignment are exact;
 
 to reach the canonical terminal word:
-  a target-shift-covariant restoration filtration is still required. (17)
+  a canonical, owner-typed, tie-oriented, common-endpoint restoration
+  filtration is still required, with target-shift covariance.         (17)
 ```
 
 The cheapest next theorem should show that the common-right prefix is a
 canonical terminal-word filtration stage, or that every later restoration
 adds only target-null current. Another static Gram identity does not address
-that transport.
+that transport. This is the first missing transport sidecar on this route,
+not a claim that it is the unique or universally minimal sidecar.
 
 No scalar row is excluded. The LRC(14) ledger remains `165`.
 
@@ -309,12 +317,16 @@ and compare both transcripts, after LF normalization, with
 ```
 
 The exact companion independently recounts the strict interval cells,
-checks `B=A+W`, reconstructs (4)--(13), and verifies the `144`-colour
-scope. LF SHA-256:
+checks `B=A+W`, reconstructs (4)--(13), derives the twelve exact
+cyclotomic deep transforms, and checks all `144` nonzero
+deep-colour/target products. LF SHA-256:
 
 ```text
-script  2e5d3e4953b3c2655a91e92a3bcd53438c39f0b7df691dc1a63a9117ec79c36f
-output  7a600f96e13ce6290a81da9a3dcfaa3b60441021fbcac122da6b1af674d07e05
+script  998c4a06314678c51dad66f03bf8cabd52297c1db20b4da207e75199ffd44b02
+output  faa0a21d2ff62b2eb84e694c5a52cb7c9c88f894028453e5cce85482e87a1eac
 ```
 
-Independent audit is pending.
+Two independent hostile audits accepted the exact interval recount,
+normal/optimized/stored replay, every displayed fraction, the repaired
+THM-441 normalization in (8), all twelve cyclotomic deep transforms, all
+`144` deep/target products, and the common-endpoint transport boundary.

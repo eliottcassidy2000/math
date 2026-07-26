@@ -80,6 +80,31 @@ require(tuple(a_counts) == tuple(28 * value for value in M),
 require(tuple(b_counts[i] - w_counts[i] for i in range(13))
         == tuple(a_counts), "B=A+W failed")
 
+
+def cyclotomic_reduce(coefficients):
+    """Reduce a degree-at-most-12 polynomial modulo Phi_13."""
+    require(len(coefficients) == 13, "cyclotomic coefficient length changed")
+    top = coefficients[12]
+    return tuple(coefficients[index] - top for index in range(12))
+
+
+def cyclotomic_fourier(profile, character):
+    """Exact polynomial for sum_k profile[k] zeta^(character*k)."""
+    coefficients = [Fraction(0) for _ in range(13)]
+    for index, value in enumerate(profile):
+        coefficients[(character * index) % 13] += Fraction(value)
+    return cyclotomic_reduce(coefficients)
+
+
+def sparse_cyclotomic(constant, symmetric_coefficient, character):
+    """Reduce constant+c(zeta^character+zeta^-character) modulo Phi_13."""
+    coefficients = [Fraction(0) for _ in range(13)]
+    coefficients[0] = Fraction(constant)
+    coefficients[character % 13] += Fraction(symmetric_coefficient)
+    coefficients[-character % 13] += Fraction(symmetric_coefficient)
+    return cyclotomic_reduce(coefficients)
+
+
 # Nonzero target Fourier polynomials.  Since
 # N=71*1_G+7*delta_0+3*(delta_1+delta_-1), every q!=0 has
 # Nhat(q)=7+3(zeta^q+zeta^-q), whose real value is >=1.
@@ -138,13 +163,52 @@ require(cayley_energy
         == Fraction(5982, 10331448031704891637),
         "complete Cayley energy changed")
 
-# Deep demodulation multiplies both child target profiles by the same
-# C_a.  C_0=144/91; for a!=0,
-# C_a=-(13+12*cos(2*pi*a/13))/91, which is strictly negative because
-# 13-12>0.  Therefore all 12*12 nonzero deep/target pairs anti-align.
-c_zero = Fraction(144, 91)
-require(c_zero > 0 and 13 - 12 > 0, "deep-colour factor changed")
-strict_deep_target_pairs = 12 * 12
+# Reconstruct the THM-2377 deep profile j(k), derive its exact
+# cyclotomic transform, and check every nonzero deep/target product.
+# For a!=0,
+#
+#   C_a=-(13+6(zeta^a+zeta^-a))/91
+#      =-(13+12*cos(2*pi*a/13))/91 < 0,
+#
+# while Nhat_b=7+3(zeta^b+zeta^-b)>=1 and Mhat_b=-Nhat_b.
+deep_profile = (
+    Fraction(0),
+    Fraction(1, 13),
+    *(Fraction(1, 7) for _ in range(10)),
+    Fraction(1, 13),
+)
+c_zero = sum(deep_profile)
+require(c_zero == Fraction(144, 91), "deep zero-colour factor changed")
+
+deep_cyclotomic_controls = 0
+strict_deep_target_pairs = 0
+for deep_character in range(1, 13):
+    deep_transform = cyclotomic_fourier(deep_profile, deep_character)
+    expected_deep = sparse_cyclotomic(
+        Fraction(-13, 91),
+        Fraction(-6, 91),
+        deep_character,
+    )
+    require(deep_transform == expected_deep,
+            "deep cyclotomic transform changed")
+    # cos(theta)>=-1 gives C_a<=-1/91<0.
+    require(Fraction(-(13 - 12), 91) < 0,
+            "deep-colour strict sign bound failed")
+    deep_cyclotomic_controls += 1
+
+    for target_character in range(1, 13):
+        target_transform = cyclotomic_fourier(N, target_character)
+        expected_target = sparse_cyclotomic(7, 3, target_character)
+        deletion_transform = cyclotomic_fourier(M, target_character)
+        require(target_transform == expected_target,
+                "retained target cyclotomic transform changed")
+        require(deletion_transform
+                == tuple(-value for value in target_transform),
+                "null-parent target sign changed")
+        # cos(theta)>=-1 gives Nhat_b>=1>0, so the two child products
+        # with the common negative deep factor have opposite signs.
+        require(7 - 6 > 0, "target strict sign bound failed")
+        strict_deep_target_pairs += 1
 
 print("LRC14 first-collision null-parent positive control")
 print(f"endpoint_grid: {GRID}")
@@ -153,6 +217,7 @@ print("retained_line_counts: " + ",".join(str(value) for value in w_counts))
 print("deletion_line_counts: " + ",".join(str(value) for value in a_counts))
 print("cross_correlation_numerators: " + ",".join(str(value) for value in K))
 print(f"strict_nonzero_target_colours: {strict_target_colours}")
+print(f"deep_cyclotomic_controls: {deep_cyclotomic_controls}")
 print(f"strict_nonzero_deep_target_pairs: {strict_deep_target_pairs}")
 print(f"signed_nonzero_target_gram_mass: {signed_gram_mass}")
 print(f"absolute_nonzero_target_gram_mass: {absolute_gram_mass}")
