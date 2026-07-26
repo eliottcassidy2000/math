@@ -8,7 +8,8 @@ full_configurations=23166 full_gated_cases=1830114 full_unique_mass_vectors=772
 full_size_counts=1:10296,2:12870
 full_gap_table=c1:z0:11,c1:z1:10,c1:z2:9,c2:z0:22,c2:z1:20,c2:z2:18
 full_gap_nine_masses=0,0,0,0,1,1,1,1,1,1,1,1,1
+target_owner_hostile_masses=0,1,0,1,1,1,1,1,1,1,1,1,1 danger_shifts=2
 target_phase_checks=2197 selected=169
 deep_target_transform_checks=39 target_typing_cases=2197
-floors=universal_endpoint_energy:3/9085908032656,universal_endpoint_max:1/6028568,universal_deep_energy:3/2271477008164,universal_deep_max:1/3014284,common_core_endpoint_energy:29403/567869252041,common_core_endpoint_max:99/1507142,common_core_deep_energy:117612/567869252041,common_core_deep_max:99/753571
+floors=relative_eligible_B_energy:9/250994068,relative_eligible_B_max:1/228488,universal_endpoint_energy:3/9085908032656,universal_endpoint_max:1/6028568,universal_deep_energy:3/2271477008164,universal_deep_max:1/3014284,common_core_endpoint_energy:29403/567869252041,common_core_endpoint_max:99/1507142,common_core_deep_energy:117612/567869252041,common_core_deep_max:99/753571
 ALL CHECKS PASS

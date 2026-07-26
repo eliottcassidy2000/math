@@ -296,6 +296,35 @@ def sharp_fully_masked_control():
     return masses
 
 
+def target_owner_complement_hostile():
+    core = frozenset((0, 1, 2))
+    q_star = frozenset((0, 1))
+    word = frozenset((0, 2))
+    charged = core - q_star
+    masses = tuple(
+        len(charged - translated(word, shift))
+        for shift in range(P)
+    )
+    require(
+        masses == (0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+        "wrong target-owner hostile mass vector",
+    )
+    z = Fraction(2, 13)
+    danger_shifts = tuple(
+        shift
+        for shift in range(P)
+        if circle_norm(z - Fraction(shift, P)) < Fraction(1, 14)
+    )
+    require(danger_shifts == (2,), "wrong singleton danger gate")
+    danger_packet = tuple(
+        mass if shift in danger_shifts else 0
+        for shift, mass in enumerate(masses)
+    )
+    require(not any(danger_packet), "target-owner complement survived")
+    require(sum(masses) == 11, "all-safe hostile bank lost mass")
+    return masses, danger_shifts
+
+
 def target_phase_projector():
     # With eta=e_a-e_i, the lawful action shifts the a-factor by -s/13
     # and the i-factor by +s/13.  Multiplying by zeta^(b s) selects
@@ -404,6 +433,8 @@ def exact_floors():
     universal_mass = Fraction(1, 26754)
     common_core_mass = Fraction(66, 4459)
     floors = {
+        "relative_eligible_B_energy": Fraction(9, 250994068),
+        "relative_eligible_B_max": Fraction(1, 228488),
         "universal_endpoint_energy": 27 * universal_mass**2 / 114244,
         "universal_endpoint_max": 3 * universal_mass / 676,
         "universal_deep_energy": 27 * universal_mass**2 / 28561,
@@ -413,6 +444,16 @@ def exact_floors():
         "common_core_deep_energy": 27 * common_core_mass**2 / 28561,
         "common_core_deep_max": 3 * common_core_mass / 338,
     }
+    require(
+        Fraction(27, 28561) / (13**2 * 12 * 13)
+        == floors["relative_eligible_B_energy"],
+        "wrong eligible full-B energy factor",
+    )
+    require(
+        12 * 12 * 13 * floors["relative_eligible_B_max"] ** 2
+        == floors["relative_eligible_B_energy"],
+        "wrong eligible full-B maximum factor",
+    )
     require(
         floors["universal_endpoint_energy"] == Fraction(3, 9085908032656),
         "wrong universal endpoint energy floor",
@@ -467,6 +508,9 @@ def main() -> None:
     ) = exhaustive_fully_masked_lemma()
     sharp_masses, danger_shifts = sharp_gap_one_control()
     sharp_full_masses = sharp_fully_masked_control()
+    owner_hostile_masses, owner_hostile_shifts = (
+        target_owner_complement_hostile()
+    )
     projector_checks, projector_live = target_phase_projector()
     transform_checks, transform_targets = deep_target_transform_control()
     floors = exact_floors()
@@ -520,6 +564,12 @@ def main() -> None:
     )
     print(
         "full_gap_nine_masses=" + ",".join(map(str, sharp_full_masses))
+    )
+    print(
+        "target_owner_hostile_masses="
+        + ",".join(map(str, owner_hostile_masses))
+        + " danger_shifts="
+        + ",".join(map(str, owner_hostile_shifts))
     )
     print(
         f"target_phase_checks={projector_checks} "

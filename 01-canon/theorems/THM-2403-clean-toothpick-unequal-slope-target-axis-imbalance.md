@@ -2,8 +2,8 @@
 id: THM-2403
 title: "Clean toothpicks force a global fully-all-safe unequal-slope target current"
 status: >
-  REPAIRED PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT REAUDIT
-  PENDING. In the standard owner-pivot packet, omit q_* from the pivot
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the
+  standard owner-pivot packet, omit q_* from the pivot
   and choose two distinct ordinary helpers. The resulting lawful target
   dipoles move one ordinary unit factor with each target blocker. The
   global packet retaining all six unit-safe and all three blocker-safe
@@ -34,15 +34,14 @@ related:
   - THM-2401-common-filter-endpoint-or-first-death-certificate
 script: 04-computation/lrc14_clean_target_axis_imbalance_thm2403.py
 output: 05-knowledge/results/lrc14_clean_target_axis_imbalance_thm2403.out
-script_sha256: 083b51185d5b04c9c5561b37158248c1efe575c2d96045e47402842da407d376
-output_sha256: 39970491339e89ac95f931e14ab8e05d6c5ba6b16e842d2b9ffd102872cfb150
+script_sha256: 4360b869e59ba67c1e08a1ea77da3a8f172a3b6e1345ce8572455e03aa79a408
+output_sha256: 906ebf9beadf6faa36e252519ebafab2e743a63eb419dac6d99366fefe7deb57
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2403 -- a clean toothpick fires a global fully-all-safe target current
 
-**REPAIRED PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT REAUDIT
-PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2397 identifies the exclusive `q_*` root word as literal
 single-factor deletion support at one common bare endpoint. THM-2400
@@ -557,6 +556,32 @@ gcd(m,91)=1.                                        (44)
 Equations (31), (40), and (43)--(44) hold separately for every
 `b in F_13^*`.
 
+There is also a uniform aggregate floor on the eligible full transform.
+Equations (38)--(39) and Cauchy--Schwarz give
+
+```text
+sum_(b!=0,a!=0)|J(a,b)|^2
+ >=1/(12*169) sum_(b!=0)|Mhat(b)|^2.                (44a)
+```
+
+Using `J(a,b)=sum_h B_+(a,b,h)` once more,
+
+```text
+sum_(b!=0,a!=0,h)|B_+(a,b,h)|^2
+ >=9rho_R^2/250994068.                              (44b)
+```
+
+There are `12*12*13=1872` displayed coefficients, and the product in
+(44b) is an exact square after this division. Hence some eligible full
+coefficient satisfies
+
+```text
+|B_+(a,b,h)|>=rho_R/228488.                         (44c)
+```
+
+This is an aggregate maximum. No magnitude floor is claimed for the
+exact triangle attached to each individually prescribed `b`.
+
 ## 7. The repaired localization and exact scope
 
 The first THM-2403 candidate integrated the finite deletion gap over a
@@ -589,11 +614,34 @@ The conclusion has exact scope:
   and its own `91`-unit deep multiplier;
 - the untwisted all-safe packet is identically zero, so this is not the
   preselected positive shallow-owner rectangle;
+- on the clean parent, the selected source blocker is safe and its
+  coordinate is fixed by both target dipoles. Its danger factor
+  therefore remains identically zero throughout this orbit, so the
+  positive source-owner rectangle cannot be recovered by relabelling;
 - the nonzero target residues may cancel after the target address is
   forgotten, exactly as THM-2365's target-line identity requires;
 - no all-coordinate `91`-unit relation address, preselected marked
   triangle, owner phase, or canonical positive-owner endpoint is
   identified.
+
+Even complementing the moving **target** blocker is not a hidden owner
+repair. Take
+
+```text
+Q_*={0,1},      Q_i={0,2},      B={0,1,2},          (46)
+```
+
+and complete the clean cover by
+
+```text
+H={3,4,5,6},   Q_2={7,8},   Q_3={9,10},   Q_4={11,12}.
+```
+
+With `alpha=1`, the restored support has size zero at shifts `0,2` and
+size one at every other shift. At blocker phase `z=2/13`, the strict
+danger gate is the singleton `{2}`, exactly where the restored support
+is empty. Thus the target-blocker danger complement can vanish on the
+entire bank. The stationary source-owner obstruction is stronger still.
 
 Thus the unequal-slope branch is no longer an analytic hostile, and the
 fully-all-safe present packet has an exact target-current realization.
@@ -615,7 +663,7 @@ The dependency-free exact companion:
 - obtains the sharp full-mask table `11,10,9` and `22,20,18`;
 - verifies the physical gap-nine control (12)--(14);
 - checks the prime-cyclotomic reduction, anchored variance arithmetic,
-  and all fractions in (34)--(35);
+  and all fractions in (34)--(35) and (44b)--(44c);
 - verifies all `2,197` first-target phase-projector cases; and
 - checks the finite transform normalizations in (37)--(41).
 
@@ -634,3 +682,13 @@ Both transcripts must byte-match, after LF normalization,
 
 Every truth-bearing finite check raises explicitly, so optimized mode
 executes the same audit.
+
+## 9. Independent hostile audit
+
+An independent audit reconstructed the global packet typing, clean
+full-mask bound, target duals, root Jacobian, deep-successor count,
+rational all-colour step, `J/B` normalizations, and exact `m,X`
+extraction. It also checked both Cauchy--Schwarz sharpenings and the
+target-owner-complement hostile (46). Normal and optimized runs
+byte-match the 15-line stored transcript after LF normalization; the
+recorded hashes and the full documentation gate pass.
