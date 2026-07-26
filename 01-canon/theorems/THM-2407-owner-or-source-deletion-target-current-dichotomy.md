@@ -2,7 +2,7 @@
 id: THM-2407
 title: "Owner-or-source-deletion target-current dichotomy"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   In the repaired THM-2403 owner pivot, the shallow source factor is
   stationary under both target shifts. The packet U with that one
   factor omitted decomposes target-equivariantly as O+H_+, where O is
@@ -39,7 +39,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2407 -- every target colour lands either in the owner or in its source deletion
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2403 supplies a lawful fully-all-safe present current with every
 nonzero first-target colour. That current is not the selected positive
@@ -117,17 +117,49 @@ U_(s,t)=O_(s,t)+P^+_(s,t)       for every s,t.      (6)
 Because of (3), (6) commutes with the actual target action. No clean-set
 projector or frozen moving factor has been inserted.
 
-Choose a positive rational THM-2305 terminal word belonging to the
-source `j`, transported by a sufficiently large clock
+The clock and word can be chosen once, rather than selecting a new word
+after the clock. The three THM-2305 terminal strata partition `R_j`, and
+THM-2234 gives `mu(R_j)>=eta`. Fix one stratum
+
+```text
+Q=Q_(j,sigma),             q=mu(Q)>=eta/3>0.       (7a)
+```
+
+Write
+
+```text
+e_j=mu(E_j)>0
+```
+
+and let `S_0` be the sum of the nine scalar speeds, so that
+`Var(1_(E_j))<=2S_0`. THM-2349's Perron estimate gives
+
+```text
+mu(E_j intersection T^(-k)Q)
+ =integral_Q P^k1_(E_j)
+ >=q(e_j-2S_0/13^k)>0                             (7b)
+```
+
+for every sufficiently large `k`. Independently, if `S` is the clean
+set of THM-2396 with `delta=mu(S)>0`, THM-2397's two-BV estimate gives
+
+```text
+rho_k
+ =integral_S Q(13^(k-1)y)dy
+ >=delta q-Var(1_S)Var(1_Q)/(12*13^(k-1))
+ >0                                                (7c)
+```
+
+for every sufficiently large `k`. Choose one `k` beyond both thresholds
+and transport the fixed word by
 
 ```text
 Q(Rx),                    R=13^k.                   (7)
 ```
 
-THM-2349 makes the untwisted owner overlap positive. Increasing the
-clock if necessary, the THM-2397 two-BV estimate also gives the positive
-clean overlap `rho_R` used by THM-2403. Since `13|R`, the word is
-target-neutral.
+Equations (7b)--(7c) make both the untwisted source-owner overlap and the
+THM-2403 clean overlap positive for this same word and clock. Since
+`13|R`, the word is target-neutral.
 
 For `X` equal to `O,U`, or `P^+`, define
 
@@ -465,3 +497,22 @@ Both commands must reproduce
 ```
 
 with the LF hashes in the frontmatter.
+
+## 8. Independent audit
+
+An independent hostile audit accepted:
+
+- stationarity of the source factor and the entrywise indicator split;
+- the fixed-word/common-clock Perron and two-BV choice;
+- all three diagonal zeros and the normalized `J(0,b)` identity;
+- the global rational all-or-flat branch, including the extra `1/13`
+  in the owner norm floor;
+- replacement of the missing source factor by the legitimate constant
+  factor `1`, whose Fourier sequence is `delta_0`;
+- the absolute `m`-then-`N` extraction and `gcd(m,91)=1`;
+- the indicator-boundary/Abel scope and the exact loss of the source
+  address in the deletion branch; and
+- the limited no-reference use of THM-2370.
+
+The auditor independently replayed normal and optimized execution against
+the stored transcript and verified both LF hashes.

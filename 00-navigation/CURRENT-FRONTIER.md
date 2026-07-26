@@ -172,7 +172,7 @@ exact and finite; it does not prove that every surviving interval is empty.
 THM-2168--2257 leave `165` rows; THM-2295--2377 supply the relation/edge/bank/toothpick carriers (THM-2356 kernel `28,393`, THM-2363 dominant, THM-2368 root routing), and THM-2378/2381/2382/2385 leave only `k=2,(t,b)=(1,0)`.
 THM-2388--2393 reduce the last lane to a possible `M=1` common-core chain. THM-2396's empty relaxed `Z/49Z` word localizes orbitwise to
 `delta>=66/4459` there and `delta>=1/26754` universally. THM-2397 gives every literal role all twelve target colours, survives large `13^k` clocks, and types literal deletion support.
-THM-2400 forces unequal slopes; THM-2403 gives an all-safe target current, not owner alignment. THM-2399/2402 type one-sheet equality by `q_*`. Open: switch existence and an all-coordinate unit address. Ledger: `165`.
+THM-2400/2403 give unequal slopes and the all-safe current; THM-2407 routes its `12` colours/`91`-unit deep triangles to either the owner or source deletion, whose source harmonic is lost. Open: repair it and get an all-coordinate address. Ledger: `165`.
 
 ### Independent routes that remain live
 
