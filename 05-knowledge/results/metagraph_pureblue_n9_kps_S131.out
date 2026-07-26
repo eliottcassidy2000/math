@@ -1,0 +1,24 @@
+n=5: blue cube 2^4; classes touched=8; PURE-BLUE=3 predicted=3 match=True
+    pure-blue class: H=1 |Aut|=1 tc=1
+    pure-blue class: H=3 |Aut|=3 tc=1
+    pure-blue class: H=15 |Aut|=5 tc=3
+n=6: blue cube 2^6; classes touched=12; PURE-BLUE=2 predicted=2 match=True
+    pure-blue class: H=1 |Aut|=1 tc=1
+    pure-blue class: H=9 |Aut|=9 tc=1
+n=7: blue cube 2^9; classes touched=88; PURE-BLUE=4 predicted=4 match=True
+    pure-blue class: H=1 |Aut|=1 tc=1
+    pure-blue class: H=3 |Aut|=3 tc=1
+    pure-blue class: H=9 |Aut|=9 tc=1
+    pure-blue class: H=15 |Aut|=5 tc=3
+n=8: blue cube 2^12; classes touched=176; PURE-BLUE=3 predicted=3 match=True
+    pure-blue class: H=1 |Aut|=1 tc=1
+    pure-blue class: H=9 |Aut|=9 tc=1
+    pure-blue class: H=9 |Aut|=9 tc=1
+n=9: blue cube 2^16; classes touched=2752; PURE-BLUE=6 predicted=5 match=False
+    pure-blue class: H=1 |Aut|=1 tc=1
+    pure-blue class: H=3 |Aut|=3 tc=1
+    pure-blue class: H=9 |Aut|=9 tc=1
+    pure-blue class: H=9 |Aut|=9 tc=1
+    pure-blue class: H=15 |Aut|=5 tc=3
+    pure-blue class: H=27 |Aut|=27 tc=1
+ALL CONTROLS PASSED
