@@ -2,7 +2,7 @@
 id: THM-2367
 title: "Septimal root averaging, graft drift, and cover alignment"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. For a
+  PROVED + VERIFIED-EXACT. For a
   lawful isolated blocker/graft tensor with 13|c and 13 not dividing q,
   the overlap is circulant exactly when
   nu_7(c)>nu_7(q); the statement holds for either an ordinary unit-safe
@@ -35,14 +35,14 @@ related:
   - THM-2364-anchored-corner-forces-mixed-deep-blocker-colour
 script: 04-computation/lrc14_septimal_root_graft_cover_thm2367.py
 output: 05-knowledge/results/lrc14_septimal_root_graft_cover_thm2367.out
-script_sha256: 269e87cd870b59c00a3889212c4520d4b568b47463c079029a7cce0b1501a58c
-output_sha256: aa13c7bd1a4c25d6d2858c6639113129752fdc44f58092514bceee7c41ddc85b
+script_sha256: 7e3a1ab68ab8bea9c17c9b0f9d86c7357f49f9f3c0a931fb74abf1ea91dd74a7
+output_sha256: f0e4020b5f5fa41c8c8fe16b5445f5c19c10165a116c76dade4285c6074221a8
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2367 -- the H-drift obstruction has a septimal role
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT.**
 
 THM-2365 reduces target landing to departure of a nonnegative overlap
 tensor from the circulant law `H(r,s,t)=G(r-t)`. This theorem identifies
@@ -685,7 +685,7 @@ mu_L
                                                                (42)
 ```
 
-Equation (41) says precisely
+Equation (41) implies
 
 ```text
 mu_L restricted to T minus closure(A) is zero.       (43)
@@ -865,4 +865,4 @@ Both transcripts must match
 byte-for-byte after LF normalization. Every executable check raises
 explicitly under optimized Python.
 
-Independent audit is pending. QED.
+Independently audited. QED.

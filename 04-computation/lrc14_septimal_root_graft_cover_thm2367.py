@@ -631,7 +631,7 @@ require(
 )
 
 print("theorem=THM-2367")
-print("status=PROVED+VERIFIED-EXACT-CANDIDATE-UNDER-INDEPENDENT-AUDIT")
+print("status=PROVED+VERIFIED-EXACT")
 print(f"root_average_cases={root_average_cases}")
 print(f"converse_window_controls={window_controls}")
 print("graft_examples=(91,1):circulant;(91,7):drift;(13,1):drift")
