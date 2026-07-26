@@ -1,0 +1,14 @@
+target=THM-2396-independent-relaxed-49-orbit-referee
+status=FINITE-EXACT-CANDIDATE; independent-audit=PENDING
+unit_steps=42; ordinary_masks=1029; guard_masks=1029
+guard_candidate_histogram=22:294,25:294,26:147,33:294
+achievable_hole_histogram=0:588,1:147,3:294
+guard_affine_Q_orbits=4; orbit_profile=294x0:2,294x3:1,147x1:1
+total_achievable_hole_words=1029; top_compatible_scans=100842
+minimum_A_for_B_hole_flips=4; survivors_with_at_most_3=0
+A_C_equality_histogram=0:490,1:1421,2:490; physical_max=2
+sharp_A=3,4,5,6,7,8,9; sharp_B=0,11,15,19,30,34,45; sharp_guard=0,4,7,10,17,20,23,27,30,33,36,40,43,46
+sharp_lower_words=1,7,13,19,25,38,44|0,15,16,31,32,47,48|3,7,18,22,26,37,41|2,7,12,24,29,34,39
+sharp_holes=1,1,6,1,0,0; sharp_A_flip_bins=1,2,5,6
+physical_common_core_survivors=0
+all_checks=PASS
