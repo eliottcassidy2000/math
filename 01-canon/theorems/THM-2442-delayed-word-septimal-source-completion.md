@@ -29,11 +29,11 @@ depends_on:
   - THM-2398-prime-cyclic-rational-restoration-dichotomy
   - THM-2407-owner-or-source-deletion-target-current-dichotomy
   - THM-2409-unfiltered-septimal-source-completion-and-word-phase-boundary
+  - THM-2445-twenty-four-cell-graft-owner-conditioning
 related:
   - THM-2418-alternating-base-thirteen-septimal-carry-matrix-and-rank-one-boundary
   - THM-2421-all-clock-septimal-ancestry-endpoint-event-detector
   - THM-2441-septimal-ancestry-event-period-collapse
-  - THM-2445-twenty-four-cell-graft-owner-conditioning
   - THM-2448-right-endpoint-cospan-transition-atlas
 script: 04-computation/lrc14_delayed_word_source_completion_thm2442.py
 output: 05-knowledge/results/lrc14_delayed_word_source_completion_thm2442.out

@@ -366,8 +366,9 @@ In the surviving branch of THM-2426/THM-2436,
 nu_7(c_3)<=M,
 ```
 
-an ordinary `q_*` of depth `M` makes `(c_3,q_*)` an isolated
-noncirculant target graft by THM-2367. THM-2365 says that a positive bare
+choose any maximum-depth guard/unit label `q_*`; THM-2367 makes
+`(c_3,q_*)` an isolated noncirculant target graft using its ordinary-safe
+or guard-safe form as appropriate. THM-2365 says that a positive bare
 owner drift survives sufficiently delayed words, but the missing
 statement is owner-conditioned no-cancellation on the actual exclusive
 source and terminal word.

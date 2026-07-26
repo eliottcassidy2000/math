@@ -1,4 +1,4 @@
-THM-2448 finite-hole relative-atom exact audit
+THM-2452 finite-hole relative-atom exact audit
 valuation-box weak/strict comparisons: 2043904
 prime-ray and M^3/M^4 tail checks: 5370000
 exact rational ray-prefix checks: 179

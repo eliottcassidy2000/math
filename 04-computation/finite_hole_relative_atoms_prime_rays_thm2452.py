@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Exact companion for THM-2448.
+"""Exact companion for THM-2452.
 
-The proof in THM-2448 is uniform.  This dependency-free companion supplies
+The proof in THM-2452 is uniform.  This dependency-free companion supplies
 independent finite audits of its valuation-box criterion, prime-ray tails,
 additive analogue, induced-cover criterion, and twin-centre specialization.
 All correctness checks use ``require`` so ``python3`` and ``python3 -O`` run
@@ -573,7 +573,7 @@ def main():
         ("startup twin-centre classification", artificial_twin_centres),
     )
 
-    print("THM-2448 finite-hole relative-atom exact audit")
+    print("THM-2452 finite-hole relative-atom exact audit")
     print(f"valuation-box weak/strict comparisons: {valuation_checks}")
     print(f"prime-ray and M^3/M^4 tail checks: {tail_checks}")
     print(f"exact rational ray-prefix checks: {rational_prefix_checks}")

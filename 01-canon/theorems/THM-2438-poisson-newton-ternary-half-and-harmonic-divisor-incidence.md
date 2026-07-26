@@ -23,7 +23,7 @@ depends_on:
   - THM-2433-operation-fibre-deletion-incidence-and-startup-scar
 related:
   - THM-2422-operation-fibres-summand-closure-and-twin-center-ancestry
-  - THM-2449-switching-fourth-moment-signed-c4-and-gram-energy
+  - THM-2453-switching-fourth-moment-signed-c4-and-gram-energy
 script: 04-computation/poisson_newton_harmonic_incidence_thm2438.py
 output: 05-knowledge/results/poisson_newton_harmonic_incidence_thm2438.out
 script_sha256: f45b8011dbe7e37a0ebf37483d5d5889659258cc3405af57fce6d932af2fca48
@@ -530,7 +530,7 @@ different object.
    multiplicative fibres are not conjugate by the Stirling transform.
 7. The min--max switching energy of THM-2412 retains cycle-product
    obstructions not present in the one-dimensional ternary walk count;
-   THM-2449 identifies its first nonconstant even-moment relaxation with
+   THM-2453 identifies its first nonconstant even-moment relaxation with
    signed-four-cycle, equivalently Gram, energy.
 
 ## 9. Exact companion
