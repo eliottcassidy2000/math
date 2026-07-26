@@ -1838,3 +1838,12 @@ high-safe mass, and the thirteen-root `0/10/12` refinement. Nine orientations
 force clean holes; the only no-clean residual is the adjacent-layer common-core
 chain `(C1,C2,c1,c2)=h(1,13,13,169)`. Normal and optimized transcripts agree
 and end in `PASS`; no row exclusion or LRC(14) closure is asserted.
+
+### lrc14_common_core_transversal_thm2394.out
+Exact THM-2394 candidate replay. It exhausts `316,932` abstract seven-root
+states, proves that all `385` survivors are one-hole six-address
+transversals, reconstructs the physical `1,24,12,132` address histogram,
+and verifies the `3335/8281` labelled hole/double carrier. It also checks
+the carry-corrected multiplication-by-thirteen address law and the
+`y=1/10` carry-free hostile. Normal and optimized transcripts agree and
+end in `PASS`; the candidate removes no row.
