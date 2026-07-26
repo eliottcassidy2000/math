@@ -1,0 +1,16 @@
+theorem=THM-2377
+status=PROVED+VERIFIED-EXACT-CANDIDATE-UNDER-INDEPENDENT-AUDIT
+spectral_cases=3
+spectral_tuple_controls=402051
+distinct_profiles=4
+distinct_profile_sha256=1d117f483f05c668b86deeae3ab2282b7741046951d4796dd0a9a1d298364508
+chi7_transfer_controls=216
+carry_equation_controls=588
+carry_nonzero_targets=468
+balanced_descendant_controls=7396
+same_layer_tensor_controls=169
+same_layer_line_counts=2184,2072,1988,1988,1988,1988,1988,1988,1988,1988,1988,1988,2072
+same_layer_nonzero_target_colours=12
+scalar_rows_excluded=0
+lrc14_status=OPEN
+all_checks=PASS
