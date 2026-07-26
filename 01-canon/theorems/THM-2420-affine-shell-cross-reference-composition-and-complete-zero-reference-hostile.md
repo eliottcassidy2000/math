@@ -2,8 +2,8 @@
 id: THM-2420
 title: "Affine-shell cross-reference composition and complete zero-reference hostile"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT. On one nonzero affine shell, a charged coefficient
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. On one
+  nonzero affine shell, a charged coefficient
   packet and a residue-zero reference packet compose by oriented
   correlation into a homogeneous charged relation packet. The total,
   support, Fourier product, sharp max, and sharp energy bounds are
@@ -33,8 +33,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2420 -- a same-shell reference is sufficient, but no reference is free
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2416 produces a nonzero affine sideband and THM-2419 identifies its
 canonical finite torsor.  Homogenizing it inside the physical lattice
@@ -369,3 +368,15 @@ and compare both transcripts, after LF normalization, with
 ```text
 05-knowledge/results/lrc14_same_shell_cross_reference_thm2420.out
 ```
+
+## 6. Independent hostile audits
+
+Two independent audits accepted the theorem for promotion.  The proof
+audit rederived the shell-fibre size, oriented correlation, Fourier
+product, sharp inequalities, Abel pushforward, every zero-reference
+sector, the nonzero sideband, and three-coordinate minimality.  The
+exact audit independently replayed normal and optimized modes against
+the stored transcript, checked all `676` shell fibres and `256`
+ambient-character samples, verified strict hostile variants, and
+confirmed the repaired twenty-six-cell self-Gram derivation.  The
+audited LF hashes are the frontmatter hashes above.
