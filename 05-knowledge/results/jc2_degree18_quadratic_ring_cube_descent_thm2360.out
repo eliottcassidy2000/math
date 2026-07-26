@@ -8,6 +8,7 @@ X0=(s^2-2*x0*s+1)/2; P6=s^3*p(x) is reciprocal
 generic allocation norm ratio: 432000
 linear/cube overlap multiplicity: 4; norm ratio: 27648
 repeated-p-root norm ratio: 93312
-hostile nonmaximal gcd: (x-2)^2
-hostile discriminant multiplier: (x-2)^6
+hostile coprime H2 resultant: 5120/7
+hostile nonmaximal H2 gcd: x^2
+hostile H2 discriminant index multiplier: x^6
 VERDICT: cube descent is exact conditional on Res(p,q)!=0 and q(x0)!=0

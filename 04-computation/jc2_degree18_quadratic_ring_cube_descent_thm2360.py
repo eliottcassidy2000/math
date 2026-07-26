@@ -161,29 +161,64 @@ def main() -> None:
         "repeated-root allocation control changed",
     )
 
-    # Hostile control: changing to a nonmaximal generator preserves the
-    # function field while introducing a common p,q factor and an index square.
-    beta = sp.Integer(2)
-    p0 = x + 1
-    q0 = x**2 + 1
-    p_nonmaximal = sp.expand((x - beta) ** 2 * p0)
-    q_nonmaximal = sp.expand((x - beta) ** 3 * q0)
-    discriminant0 = sp.expand(-4 * p0**3 - 27 * q0**2)
-    discriminant_nonmaximal = sp.expand(
-        -4 * p_nonmaximal**3 - 27 * q_nonmaximal**2
+    # Exact H2 hostile.  The base Laurent allocation
+    # B=(s-2)(s-3)^3 gives a coprime polynomial-order model.  Passing to
+    # the nonmaximal generator v=x*w inserts an x^6 index square while
+    # preserving the squarefree branch factor x^2-1.
+    hostile_x0 = sp.Rational(5, 4)
+    hostile_p1 = 10 - 6 * x
+    hostile_q2 = (110 * x**2 - 92 * x - 10) / 7
+    hostile_s1 = 70 - 106 * x
+    require(
+        sp.expand(
+            (x**2 - 1) * hostile_s1**2
+            - 4 * (x - hostile_x0) * hostile_p1**3
+            - 49 * hostile_q2**2
+        )
+        == 0,
+        "coprime H2 hostile base identity changed",
     )
-    hostile_gcd = sp.gcd(
-        sp.Poly(p_nonmaximal, x),
-        sp.Poly(q_nonmaximal, x),
+    hostile_base_resultant = sp.factor(
+        sp.resultant(hostile_p1, hostile_q2, x)
     )
     require(
-        sp.expand(hostile_gcd.as_expr() - (x - beta) ** 2) == 0
-        and sp.expand(
-            discriminant_nonmaximal - (x - beta) ** 6 * discriminant0
+        hostile_base_resultant == sp.Rational(5120, 7)
+        and hostile_q2.subs(x, hostile_x0) == sp.Rational(375, 56),
+        "coprime H2 hostile base invariants changed",
+    )
+
+    hostile_p3 = sp.expand(x**2 * hostile_p1)
+    hostile_q5 = sp.expand(x**3 * hostile_q2)
+    hostile_s4 = sp.expand(x**3 * hostile_s1)
+    hostile_gcd = sp.gcd(sp.Poly(hostile_p3, x), sp.Poly(hostile_q5, x))
+    require(
+        sp.expand(
+            (x**2 - 1) * hostile_s4**2
+            - 4 * (x - hostile_x0) * hostile_p3**3
+            - 49 * hostile_q5**2
         )
         == 0
-        and q_nonmaximal.subs(x, 0) != 0,
-        "nonmaximal-generator hostile control changed",
+        and hostile_gcd.as_expr() == x**2
+        and hostile_p3.subs(x, hostile_x0) == sp.Rational(125, 32)
+        and hostile_q5.subs(x, hostile_x0) == sp.Rational(46875, 3584),
+        "nonmaximal H2 hostile identity changed",
+    )
+    hostile_full_p = sp.expand((x - hostile_x0) * hostile_p3)
+    hostile_full_q = sp.expand((x - hostile_x0) * hostile_q5)
+    hostile_discriminant = sp.factor(
+        4 * hostile_full_p**3 + 49 * hostile_full_q**2
+    )
+    hostile_expected = sp.factor(
+        x**6
+        * (x - 1)
+        * (x + 1)
+        * (4 * x - 5) ** 2
+        * (53 * x - 35) ** 2
+        / 4
+    )
+    require(
+        hostile_discriminant == hostile_expected,
+        "H2 hostile discriminant/index-square factorization changed",
     )
 
     print("THM-2360 conditional Laurent-UFD cube descent exact companion")
@@ -196,8 +231,9 @@ def main() -> None:
     print(f"generic allocation norm ratio: {template_ratio}")
     print(f"linear/cube overlap multiplicity: 4; norm ratio: {overlap_ratio}")
     print(f"repeated-p-root norm ratio: {repeated_ratio}")
-    print("hostile nonmaximal gcd: (x-2)^2")
-    print("hostile discriminant multiplier: (x-2)^6")
+    print(f"hostile coprime H2 resultant: {hostile_base_resultant}")
+    print("hostile nonmaximal H2 gcd: x^2")
+    print("hostile H2 discriminant index multiplier: x^6")
     print("VERDICT: cube descent is exact conditional on Res(p,q)!=0 and q(x0)!=0")
 
 

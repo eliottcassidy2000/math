@@ -11,9 +11,10 @@ status: >
   nonzero constant, and necessarily factors
   B=c(s-r_0)U_3(s)^3, where r_0 is one root above x_0 and U_3 has
   degree three. Repeated roots of p_3 and overlap p_3(x_0)=0 are
-  allowed. A nonmaximal-generator hostile proves that THM-2357's branch
-  signature alone does not supply Res(p_3,q_5)!=0. This is conditional
-  structure, not an H_2 closure or a proof of JC(2).
+  allowed. An exact nonmaximal-generator H_2 hostile proves that
+  THM-2357's branch signature together with q_5(x_0)!=0 still does not
+  supply Res(p_3,q_5)!=0. This is conditional structure, not an H_2
+  closure or a proof of JC(2).
 source: codex-2026-07-25-degree-eighteen-quadratic-ring-cube
 depends_on:
   - THM-2332-degree-eighteen-genus-zero-square-class-and-dessin-trap
@@ -23,8 +24,8 @@ related:
   - THM-2347-degree-eighteen-double-zero-wall-saturation
 script: 04-computation/jc2_degree18_quadratic_ring_cube_descent_thm2360.py
 output: 05-knowledge/results/jc2_degree18_quadratic_ring_cube_descent_thm2360.out
-script_sha256: f8756d29aa01b2951d6f471d50dbe19854c2c63a3ed2fd98d81879440da7071d
-output_sha256: 6c1a05360651154c35b9f93d84af5005f1e0c9ea0e47e7b18e397778c378b87f
+script_sha256: 143c06b004e86bc8c4a9b1858a0eee984ad5afabe65faa32df4708a46e3671b6
+output_sha256: be3f984a432f87ed7086682b22b186ac02602ed04f427eec898fc1b66cf876d0
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -58,9 +59,39 @@ Neither hypothesis is removed here.
 
 ## 1. Normalize the quadratic ring
 
-Over `C`, an affine change of `x` sends the two distinct roots of `H_2` to
-`-1,+1`.  Absorb the remaining nonzero scalar into `S_4`.  Equation (1)
-becomes
+Over `C`, an affine change
+
+```text
+y=mu x+nu
+```
+
+sends the two distinct roots of `H_2` to `-1,+1`. Write
+
+```text
+H_2(y)=kappa(x^2-1),
+
+y-y_0=mu(x-x_0),
+```
+
+and put tildes on the pulled-back polynomials. The transformed identity is
+
+```text
+kappa(x^2-1) Stilde^2
+ =4mu(x-x_0) ptilde^3+49qtilde^2.
+```
+
+Choose square and cube roots in `C` and set
+
+```text
+S'=sqrt(kappa) Stilde,
+
+p'=cuberoot(mu) ptilde,
+
+q'=qtilde.
+```
+
+These nonzero rescalings preserve degrees, resultant nonvanishing, and
+`q(x_0)!=0`. Dropping primes, equation (1) becomes
 
 ```text
 (x^2-1)S^2=4(x-x_0)p^3+49q^2,                    (3)
@@ -275,57 +306,94 @@ There is no branch-at-infinity exception: exact degrees of `p,q,S` and
 the nonzero endpoint product (17) give both degree ten and a nonzero
 constant before the root allocation.
 
-## 5. Why THM-2357 does not supply the resultant
+## 5. Why the H2 signature does not supply the resultant
 
 The field branch signature controls the normalization, not the chosen
-polynomial order.  Start with
+polynomial order. The following hostile lies on the exact `H_2` identity,
+not merely on a generic quartic-discriminant branch. Put
 
 ```text
-w^3+p_0(x)w+q_0(x)=0
+x_0=5/4,
+
+p_1=10-6x,
+
+q_2=(110x^2-92x-10)/7,
+
+S_1=70-106x.                                        (27)
 ```
 
-and choose `beta`.  The nonmaximal generator
+Direct expansion gives
 
 ```text
-v=(x-beta)w
+(x^2-1)S_1^2
+ =4(x-x_0)p_1^3+49q_2^2,                           (28)
+
+Res(p_1,q_2)=5120/7,
+
+q_2(x_0)=375/56.                                   (29)
 ```
 
-satisfies
+This coprime model is the reverse Laurent construction from
 
 ```text
-v^3+(x-beta)^2p_0(x)v+(x-beta)^3q_0(x)=0.          (27)
+B=(s-2)(s-3)^3.
 ```
 
-The function field and normalized cover are unchanged, but the new
-depressed coefficients have a common root.  Moreover their polynomial
-discriminant is
+Now pass to the nonmaximal generator `v=xw`. At the coefficient level,
+put
 
 ```text
-(x-beta)^6[-4p_0^3-27q_0^2],                       (28)
+p_3=x^2p_1,
+
+q_5=x^3q_2,
+
+S_4=x^3S_1.                                        (30)
 ```
 
-so the defect is exactly an index square invisible to the field branch
-signature.
-
-The companion uses
+Then
 
 ```text
-beta=2,             p_0=x+1,             q_0=x^2+1
+(x^2-1)S_4^2
+ =4(x-x_0)p_3^3+49q_5^2,
+
+deg(p_3,q_5,S_4)=(3,5,4),
+
+gcd(p_3,q_5)=x^2,                                  (31)
+
+p_3(x_0)=125/32,
+
+q_5(x_0)=46875/3584!=0,
+
+x_0^2!=1.                                          (32)
 ```
 
-and verifies
+For the full depressed coefficients
 
 ```text
-gcd((x-2)^2p_0,(x-2)^3q_0)=(x-2)^2,
+P=(x-x_0)p_3,
 
-q(0)!=0.                                            (29)
+Q=(x-x_0)q_5,
 ```
 
-Thus even the additional condition `q(x_0)!=0` does not recover
-coprimality.  A degree-eighteen proof of
+the discriminant-side factorization is exactly
 
 ```text
-Res(p_3,q_5)!=0                                    (30)
+4P^3+49Q^2
+ =x^6(x-1)(x+1)(4x-5)^2(53x-35)^2/4.              (33)
+```
+
+Thus the squarefree field branch factor is genuinely
+
+```text
+H_2=x^2-1,
+```
+
+while `x^6` is the nonmaximal index square. The hostile proves that the
+`H_2` branch signature and `q_5(x_0)!=0` together do not imply
+coprimality. A degree-eighteen proof of
+
+```text
+Res(p_3,q_5)!=0                                    (34)
 ```
 
 or an exact stripping theorem for the common index factor is a genuine
@@ -337,14 +405,14 @@ Under (2), the `H_2S_4^2` coefficient problem is no longer an arbitrary
 six-equation factorization.  It has the rigid Laurent form
 
 ```text
-s^5(7q_5+S_4t)=c_0(s-r_0)U_3^3.                  (31)
+s^5(7q_5+S_4t)=c_0(s-r_0)U_3^3.                  (35)
 ```
 
 This replaces the square-class constraint by a linear-times-cube
 coefficient comparison of degree ten.  It is a promising consumer of
 THM-2357's moving-root and pivot coordinates.
 
-However, THM-2357 does not currently prove (30), and its `K=0` boundary
+However, THM-2357 does not currently prove (34), and its `K=0` boundary
 does not satisfy the second hypothesis in (2).  Therefore this theorem
 does not close either THM-2357 lane, the `H_2` stratum, the `H_4` stratum,
 or any degree-eighteen Keller branch.  It proves neither `JC(2)` nor
@@ -368,7 +436,7 @@ Both transcripts are byte-identical to
 The companion verifies the Laurent parametrization, conjugation, formal
 norm, endpoint coefficients, leading relation, reciprocal sextic, generic
 pair allocation, linear/cube overlap, repeated-root allocation, and the
-nonmaximal-generator hostile discriminant multiplier.  No executable
+exact nonmaximal `H_2` hostile with its `x^6` index square. No executable
 check uses Python `assert`.
 
 Independent audit is pending. QED.
