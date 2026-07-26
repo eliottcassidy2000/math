@@ -1,0 +1,17 @@
+THM-2437 degree-22 D-W plane exact referee
+weighted_flux_reduction=PASS
+quartic_degree_in_p=4,constant_term=-7*L5
+irreducibility_inputs=L5_squarefree_deg5,p3_deg2,p2_deg3
+discriminant=wall^4*L5*K9(lambda)
+K9_complete_exceptional_divisor=lambda*(231lambda+128)*S6*S7
+joint_and_wall_divisor=Q5*(385lambda+512)
+lambda_zero=existing_D_axis,K9=2^14*H_D^2
+degree_drop=squarefree_octic
+S6_S7=one_double_plus_seven_simple_K9_roots
+Q5=one_common_simple_L5_K9_root
+simple_finite_branch_counts=14,13,12,12,13
+uniform_simple_finite_branch_floor=12,genus_lower_bound=3
+y_zero_hostile_control=PASS
+quartic_sha256=9cb2f3f6780a745debf807eebec9dbcedb4aa95dc98277540c2c7837d879053f
+K9_sha256=60a764261cc9082fed037e645d2a50edeaaac19a1aa285ad0acb315e3c613344
+all_exact_checks=PASS
