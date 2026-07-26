@@ -83,6 +83,7 @@ def exhaustive_small_identity():
             positive_losses += int(delta > 0)
     check(assignments == 180, "small assignment count")
     check(layers == 5760, "small layer count")
+    check(positive_losses == 5190, "small positive-loss count")
     return assignments, layers, positive_losses
 
 

@@ -30,7 +30,7 @@ related:
   - THM-2397-clean-root-same-parent-charged-role-partition
 script: 04-computation/lrc14_common_filter_first_death_thm2401.py
 output: 05-knowledge/results/lrc14_common_filter_first_death_thm2401.out
-script_sha256: ecfee9ac955fb77cc70759de9809c574fee2500c348d10004ee4f861d3a88e27
+script_sha256: ba5c24d2ec64150bb486e5d691bb0500f19f468145b65e594f6c3ee6aca6acd5
 output_sha256: 3be5cdc5f0418eb1d0b231c5f6ac9ed5b9318492db13827cae47d1ca01e30e2b
 hash_basis: working-tree bytes (LF)
 ---
