@@ -159,11 +159,9 @@ THM-2168--2397 leave `165` rows while supplying relation/edge/toothpick/colour c
 THM-2430--2435 reduce `nu_7(c_3)>M` to three typed punctured-stalk shapes.
 Hostile-audited THM-2436 classifies the complete punctured one-/two-blocker stalk and uses fixed-spectrum physical repeated-pair banks to empty all three remaining types. Thus the whole deep-`c_3` branch is empty, while `nu_7(c_3)<=M` retains an isolated noncirculant top graft. No scalar row is removed.
 THM-2441 makes every fixed rational delayed-clock audit finite modulo `7D_0`, preserving the centred signed event word and target-restricted nonflatness.
-THM-2445 splits the surviving branch into `24` positive partial-endpoint cells: `23` are repair/blocker-labelled; the ghost has source-owner drift or all-six-source completion. THM-2442 restores its delayed word. THM-2448 expands any fixed marked current through the omitted right factors into at most `69` cospan pieces (`12` for the ghost), preserving its selectors and leaving either a complete matching local mask or one fixed-order factor mismatch.
-THM-2449 classifies every rational lawful anchored `C_7 x C_13` continuation: one rectangle defect forces all `72` mixed source-target colours, while total failure is exactly one delta row plus six identical replicas.
-On each finite clock class the rectangle is `m+c/R`, so persistent failure is equivalent to two finite additive tests. THM-2448's complex cospan pieces are not individually such tables; constructing a same-root physicalization or lawful repair recombination that preserves the anchor remains open.
-THM-2418--2421 remain reusable carry/reference sidecars requiring a transplant.
-Next: align a generic typed cell with its semantic terminal word/repair label, then physicalize THM-2448's matched cospan as positive same-root service or turn its transition into a lawful repair current. Ledger: `165`.
+THM-2445/2442 give `24` positive partial-endpoint cells and restore the ghost word; THM-2448 is the sharp fixed-`X` atlas. THM-2452 closes the aggregate endpoint debt: one of `128` complete co-shifted Boolean masks copies to the bare leg, all transitions vanish after the full-`X` sum, and a fresh exact `X` and `91`-unit `m` survive. Floors are `D_0/16384` and `D_0/212992`; adaptive extension counts are `(1,16,8,4,2,1)`.
+THM-2449 reduces persistent anchored failure to two finite additive tests, with delta-plus-six-replicas as the exact hostile. THM-2418--2421 remain carry/reference sidecars.
+Next: identify the matched literal atom with its semantic THM-2305 owner/repair word and canonical THM-2401 root orientation, or build the lawful intertwiner. Ledger: `165`.
 
 ### Independent routes that remain live
 

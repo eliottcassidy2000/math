@@ -31,6 +31,7 @@ related:
   - THM-2401-common-filter-endpoint-or-first-death-certificate
   - THM-2408-endpoint-prony-resultant-clock-separation
   - THM-2419-affine-relation-shell-pushforward-and-observer-homogenization
+  - THM-2452-indicator-idempotent-aggregate-endpoint-restoration
 script: 04-computation/lrc14_right_endpoint_cospan_transition_thm2448.py
 output: 05-knowledge/results/lrc14_right_endpoint_cospan_transition_thm2448.out
 script_sha256: 70b30775ca333424fe05265cb6686b27d2fd1ae5a3fa4afd2d6bc749a207ec13
@@ -367,6 +368,14 @@ the generic typed cells and then either:
 THM-2383, THM-2401, THM-2408, and THM-2419 describe four versions of
 that missing sidecar. None follows merely from the atlas. No scalar
 profile is removed and LRC(14) remains open.
+
+Subsequent THM-2452 resolves the aggregate endpoint problem by
+changing the order of selection: complete the Boolean mask first,
+copy it by idempotence, sum over the old `X`, and then reselect a
+fresh exact `X` and `91`-unit `m`. Thus (19) remains sharp when the
+original fixed `X,m` must be retained, but its transition branch is
+no longer an obstruction after that address is deliberately
+released. Semantic owner/repair/root identification remains open.
 
 ## 6. Exact companion
 

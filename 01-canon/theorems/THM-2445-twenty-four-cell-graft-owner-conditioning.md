@@ -34,6 +34,7 @@ related:
   - THM-2426-compositional-thirteen-root-final-septimal-lane-exclusion
   - THM-2442-delayed-word-septimal-source-completion
   - THM-2448-right-endpoint-cospan-transition-atlas
+  - THM-2452-indicator-idempotent-aggregate-endpoint-restoration
 script: 04-computation/lrc14_twenty_four_cell_graft_conditioning_thm2445.py
 output: 05-knowledge/results/lrc14_twenty_four_cell_graft_conditioning_thm2445.out
 script_sha256: fe989a84df2141bf0ebd4a7635a731900531091bdbc3eefcb9e6c3e7d008d1d6
@@ -416,6 +417,13 @@ statuses are local until the source, expiration, root, and clock data
 are fixed. Restoring the fully masked endpoint can add cross-layer
 terms not present at the partial bare endpoint. No scalar row is
 removed, and LRC(14) remains open.
+
+Subsequent THM-2452 closes this aggregate missing-factor debt: refine
+the present layer to a complete Boolean atom, copy the same co-shifted
+atom to the bare endpoint by idempotence, and only then select a fresh
+exact `X` and `91`-unit `m`. What remains open is the semantic
+owner/repair/root interpretation of that complete literal atom, not
+cross-layer cancellation itself.
 
 Reducing the clock modulo seven does not repair this. At `R=13`,
 `y=1/7` gives a unique present source root but

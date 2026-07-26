@@ -32,6 +32,7 @@ related:
   - THM-2401-common-filter-endpoint-or-first-death-certificate
   - THM-2408-endpoint-prony-resultant-clock-separation-and-shared-node-boundary
   - THM-2419-affine-relation-shell-pushforward-and-observer-homogenization
+  - THM-2449-coprime-owner-anova-and-delta-replica-boundary
 script: 04-computation/lrc14_aggregate_endpoint_restoration_thm2452.py
 output: 05-knowledge/results/lrc14_aggregate_endpoint_restoration_thm2452.out
 script_sha256: 680f68e07d8228c7bc07ebc3ffc6c2a5dba8817c3206dbd4b4f1c7672f8cbf4e
