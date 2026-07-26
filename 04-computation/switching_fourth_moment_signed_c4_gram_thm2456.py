@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact referee for THM-2453.
+"""Exact referee for THM-2456.
 
 Checks the Rademacher second/fourth moments of a signed complete-graph
 quadratic form, the signed-C4 expansion, the symmetric Gram-energy
@@ -174,7 +174,7 @@ for n in range(6, 10):
         switch_checks += audit_one(n, signs)
         large_controls += 1
 
-print("THM-2453 exact switching-moment referee")
+print("THM-2456 exact switching-moment referee")
 print(f"exhaustive_signed_matrices={exhaustive_matrices}")
 print(f"larger_deterministic_controls={large_controls}")
 print(f"rademacher_switch_evaluations={switch_checks}")

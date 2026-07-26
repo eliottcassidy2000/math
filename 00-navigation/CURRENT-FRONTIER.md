@@ -159,8 +159,7 @@ THM-2168--2397 leave `165` rows while supplying relation/edge/toothpick/colour c
 THM-2430--2435 reduce `nu_7(c_3)>M` to three typed punctured-stalk shapes.
 Hostile-audited THM-2436 classifies the complete punctured one-/two-blocker stalk and uses fixed-spectrum physical repeated-pair banks to empty all three remaining types. Thus the whole deep-`c_3` branch is empty, while `nu_7(c_3)<=M` retains an isolated noncirculant top graft. No scalar row is removed.
 Its exact atlas has `2,629` one-source and `38,750` distinct-two-source assignments; fixed-spectrum sharp cell caps `75`, `57`, and `67` contradict the typed parent floors `78`, `65`, and `78` over `91`.
-THM-2440 forces two covering combs to inherit pullback frequency `n`. Its sharp closed/open-a.e. radius is `15/182` at `{n,13n}`, while literal-open is `15/196` at `{n,14n}`; the old strict `{1,13}` form misses `x=1/14` (MISTAKE-274). This is a reusable sidecar, not a graft closure.
-THM-2441 makes every fixed rational delayed-clock audit finite modulo `7D_0`, preserving the centred signed event word and target-restricted nonflatness.
+THM-2440 forces two covering combs to inherit pullback frequency `n`. Its sharp closed/open-a.e. radius is `15/182` at `{n,13n}`, while literal-open is `15/196` at `{n,14n}`; the old strict `{1,13}` form misses `x=1/14` (MISTAKE-274). This is a reusable sidecar, not a graft closure. THM-2441 makes every fixed rational delayed-clock audit finite modulo `7D_0`, preserving the centred signed event word and target-restricted nonflatness.
 THM-2445/2442 give `24` positive partial-endpoint cells and restore the ghost word; THM-2448 is the sharp fixed-`X` atlas. THM-2452 closes the aggregate endpoint debt: one of `128` complete co-shifted Boolean masks copies to the bare leg, all transitions vanish after the full-`X` sum, and a fresh exact `X` and `91`-unit `m` survive. Floors are `D_0/16384` and `D_0/212992`; adaptive extension counts are `(1,16,8,4,2,1)`.
 THM-2449 reduces persistent anchored failure to two finite additive tests, with delta-plus-six-replicas as the exact hostile. THM-2418--2421 remain carry/reference sidecars.
 Next: identify the matched literal atom with its semantic THM-2305 owner/repair word and canonical THM-2401 root orientation, or build the lawful intertwiner. Ledger: `165`.
@@ -290,7 +289,7 @@ design without pretending a preserver supplies the seed.
 - THM-1965 stops at `n<=6`; THM-1966 adds a signed-Rédei coordinate at `n=7`.
 - THM-2013/2016 bound cyclic temperature/reducibility; `H` remains empirical.
 - THM-2290 makes the endpoint-colour-selected matching kernel hafnian-complete and limits universal Pfaffian tournament gauges to orders two and four.
-  THM-2294 reconstructs an anchored contraction from its Plucker edge field: real antisymmetric signs can orient, while symmetric character data are colours. THM-2453 makes the first nonconstant even moment of a symmetric sign switching problem exactly signed-`C4`/Gram energy, whereas a skew tournament matrix has identically zero quadratic form. These swap-parity boundaries do not license tournamentizing matching or handoff fibres.
+  THM-2294 reconstructs an anchored contraction from its Plucker edge field: real antisymmetric signs can orient, while symmetric character data are colours. THM-2456 makes the first nonconstant even moment of a symmetric sign switching problem exactly signed-`C4`/Gram energy, whereas a skew tournament matrix has identically zero quadratic form. These swap-parity boundaries do not license tournamentizing matching or handoff fibres.
 
 ### Live work and limits
 
@@ -343,7 +342,7 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
   coefficients are central trinomials, the two Pascal halves become ternary
   walks, and reciprocal support is limiting mean divisor incidence/fibre scar.
   Abel--Dini/Bertrand is the boundary; Cauchy and Dirichlet convolution differ.
-- Hostile-audited [THM-2452](../01-canon/theorems/THM-2452-finite-hole-relative-atoms-prime-rays-and-cover-bounds.md) classifies finite multiplicative hole modules. Prime-free holes have finitely
+- Hostile-audited [THM-2455](../01-canon/theorems/THM-2455-finite-hole-relative-atoms-prime-rays-and-cover-bounds.md) classifies finite multiplicative hole modules. Prime-free holes have finitely
   many artificial atoms at most `max h*spf(h)`; a prime hole creates
   disjoint cage rays `m*q` with sharp `M^3/M^4` finite remainders. Additive
   atoms stop at `2L+1/2L+2`, induced composite covers obey a sharp `M^2` law,

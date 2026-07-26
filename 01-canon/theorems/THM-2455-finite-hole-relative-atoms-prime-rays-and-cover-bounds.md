@@ -1,5 +1,5 @@
 ---
-id: THM-2452
+id: THM-2455
 title: "Finite-hole relative atoms, prime rays, and cover bounds"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. For every
@@ -23,14 +23,14 @@ related:
   - THM-362-natural-operation-graph-shadows
   - THM-2413-prime-index-affine-drift-and-twin-center-weld
   - THM-2438-poisson-newton-ternary-half-and-harmonic-divisor-incidence
-script: 04-computation/finite_hole_relative_atoms_prime_rays_thm2452.py
-output: 05-knowledge/results/finite_hole_relative_atoms_prime_rays_thm2452.out
-script_sha256: 650af6820eb730044d8d473e198a472967cdbafa9b4c0d0521ca8093105c8f5e
-output_sha256: 68a6dfd89c5e664c7d1bc7ae4cd1dbe39712678abc0fce41ff0780209789ab53
+script: 04-computation/finite_hole_relative_atoms_prime_rays_thm2455.py
+output: 05-knowledge/results/finite_hole_relative_atoms_prime_rays_thm2455.out
+script_sha256: 2f8a886b0900e7ffdbed46c749bdafd583c5ba68bfd1d89aa0fa8b0997c413e1
+output_sha256: 78d78940601e91ed5ebb7a0bbbed7319f0ab242fe76dee0996956cf5f5733645
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2452 -- finite holes create prime rays, not arbitrary multiplicative noise
+# THM-2455 -- finite holes create prime rays, not arbitrary multiplicative noise
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
@@ -457,8 +457,8 @@ H={8,12}, z=24:
 Run
 
 ```bash
-python3 04-computation/finite_hole_relative_atoms_prime_rays_thm2452.py
-python3 -O 04-computation/finite_hole_relative_atoms_prime_rays_thm2452.py
+python3 04-computation/finite_hole_relative_atoms_prime_rays_thm2455.py
+python3 -O 04-computation/finite_hole_relative_atoms_prime_rays_thm2455.py
 ```
 
 The dependency-free verifier:
