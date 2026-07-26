@@ -2,7 +2,7 @@
 id: THM-2377
 title: "Septimal valuation-collision and Bockstein carry gate"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. A carrier
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. A carrier
   made from finitely many fixed radius-1/14 danger/safe or radius-1/7
   guard-safe factors, one higher septimal graft, and one still higher
   target tooth is exactly circulant whenever the fixed-factor speeds
@@ -24,14 +24,14 @@ related:
   - THM-2369-complete-line-target-dirichlet-and-balanced-observable-no-go
 script: 04-computation/lrc14_septimal_collision_carry_thm2377.py
 output: 05-knowledge/results/lrc14_septimal_collision_carry_thm2377.out
-script_sha256: 92ab72ce9fa0c3e5cfb135d5dfa7b30924339423bfe3b3a4e11301dab6c23ea6
-output_sha256: 75ddc06b25f773e00e898fc433004da64f9c5e92f386fc30b2c13437b3a7b3f1
+script_sha256: 218d9ee3ea9d272c69138adc5a14286116723c898080e2962630e7e54ca770db
+output_sha256: dbca28f693bb3d479869de84a9b3c8ba79bbfa5fcc59be86842d165be9d30f5d
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2377 -- septimal valuation-collision and Bockstein carry gate
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2372 shows that the scalar cover forces a `98`-nested
 low/high-blocker pair, yet the associated minimal lawful carrier is
@@ -186,10 +186,11 @@ factor survives. Passing to the `L^1` limit gives (9); Haar invariance
 under `x -> dx` gives (10). No infinite Fourier product is rearranged.
 QED.
 
-The contrapositive is the valuation-collision gate:
+Retaining the strict hierarchy (7), the contrapositive is the
+valuation-collision gate:
 
-> If a tensor of the form (8) is noncirculant, then at least two fixed
-> lower speeds `v_i,v_j` have
+> Under (7), if a tensor of the form (8) is noncirculant, then at least
+> two fixed lower speeds `v_i,v_j` have
 >
 > ```text
 > nu_7(v_i)=nu_7(v_j).                               (13)
@@ -255,9 +256,12 @@ zero-drift branch. What matters is collision of valuation layers.
 
 ## 4. The first repeated layer has a `chi_7` law
 
-Consider any contributing tuple before the distinct-layer hypothesis is
-imposed. Let `e` be the minimum valuation among its active lower terms.
-The ultrametric inequality forces that minimum to occur at least twice.
+Retain the hierarchy that every fixed lower speed lies strictly below
+`q`, which lies strictly below `d`. Consider a nonconstant spectral
+monomial capable of contributing to noncirculant dependence and having
+at least one active lower term. Let `e` be the minimum valuation among
+its active lower terms. The ultrametric inequality forces that minimum
+to occur at least twice.
 
 Suppose exactly two terms attain it, at speeds
 
@@ -410,6 +414,13 @@ Thus the faithful collision vertex is
 
 not a bare edge in a tournament.
 
+The typing in (28) is load-bearing. `beta` belongs to the labelled
+factor pair and the selected Fourier indices `(a,b)`. It is not claimed
+to be invariant under an arbitrary decomposition change or under the
+full relation-address gauge. Only the total equation (22) is
+gauge-independent. This avoids the noncanonical address-digit split
+recorded in the earlier Bockstein guardrail.
+
 There is also a canonical recursive descendant. Choose the unique
 balanced
 
@@ -434,9 +445,10 @@ h_1=(S-rho C)/7,
 |h_1|<=(S+3C)/7.                                  (29)
 ```
 
-Iteration of (29), with the successive carries retained, is a signed
-`7`-adic Euclidean/toothpick ladder. It is a much smaller state space
-than the original integer speeds.
+Equation (29), with its carry retained, suggests a signed `7`-adic
+Euclidean/toothpick ladder. A genuine iteration still needs a rule
+selecting the next labelled collision pair; that rule is not asserted
+here.
 
 ## 6. Consequence for the hard scalar lane and deletion order
 
@@ -446,22 +458,31 @@ In THM-2372's hard lane,
 nu_7(c_*)<M=nu_7(q_*)<nu_7(d)
 ```
 
-for the forced nested high blocker `d`. Apply (13) to whatever fixed
-guard/unit/blocker factors are retained in the carrier:
+for the forced nested high blocker `d`. Consider a subcarrier whose
+target-neutral fixed factors are chosen from
+
+```text
+{H, q_i with q_i!=q_*, c_*}
+```
+
+and hence all have valuation below `M`. The other high blocker is not
+covered by this reduction. Applying (13) gives, within this model:
 
 ```text
 high-target drift
  -> two retained lower factors share a septimal valuation.          (30)
 ```
 
-Accordingly one may order target-neutral fixed-factor insertions by
-valuation class. Every prefix containing at most one representative of
-each class is exactly circulant by Section 2. Within such an order, the
-first THM-2370 deletion layer capable of carrying drift is the insertion
-of a second fixed factor into an already occupied class. Unique-layer
-fixed factors before that point are provably drift-neutral scalar
-spectators. Lawfully co-shifted factors outside the model (8) require
-their own gauge audit.
+Accordingly one may order these target-neutral fixed-factor insertions
+by valuation class. Every prefix containing at most one representative
+of each class is exactly circulant by Section 2. If, in addition, the
+insertions are lawful THM-2370 layers retaining its target quotient and
+diagonal zero, the first deletion layer capable of carrying drift is
+the insertion of a second fixed factor into an already occupied class.
+Unique-layer fixed factors before that point are provably drift-neutral
+scalar spectators. The omitted high blocker, lawfully co-shifted
+factors, and insertions which lose diagonal zero require separate
+audits.
 
 This does not say that every repeated layer drifts. Even the canonical
 pair (29) must climb through (25), survive its interval coefficients and
@@ -504,4 +525,4 @@ Both transcripts must match
 byte-for-byte after LF normalization. Every executable check raises
 explicitly under optimized Python.
 
-Independent audit is pending. QED.
+Independently audited. QED.

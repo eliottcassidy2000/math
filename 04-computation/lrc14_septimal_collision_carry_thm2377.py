@@ -333,7 +333,7 @@ require(7 - 6 > 0, "target-colour positivity lower bound failed")
 
 
 print("theorem=THM-2377")
-print("status=PROVED+VERIFIED-EXACT-CANDIDATE-UNDER-INDEPENDENT-AUDIT")
+print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED")
 print(f"spectral_cases={len(spectral_cases)}")
 print(f"spectral_tuple_controls={spectral_tuple_controls}")
 print(f"distinct_profiles={len(distinct_profiles)}")

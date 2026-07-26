@@ -1,5 +1,5 @@
 theorem=THM-2377
-status=PROVED+VERIFIED-EXACT-CANDIDATE-UNDER-INDEPENDENT-AUDIT
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-AUDITED
 spectral_cases=3
 spectral_tuple_controls=402051
 distinct_profiles=4
