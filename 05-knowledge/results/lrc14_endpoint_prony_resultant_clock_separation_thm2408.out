@@ -1,0 +1,16 @@
+hilbert_gaussian_cases: 625
+branch_energy_constant: 1/4
+branch_sum_constant: 1/2
+branch_equality: O=-H/2,U=H/2
+prony_bank_pairs: 15625
+prony_nonzero_residual_pairs: 15500
+prony_transverse_pairs: 6364
+resultant_subset_pairs: 64
+sharp_four_node_sequence: 0,0,0,1
+positive_hostile_H_mode: 1/338
+positive_hostile_O_mode: -1/338
+positive_hostile_energy: 3/28561
+endpoint_hostile_nonzero_residues: 12
+centered_m13_length5_bound: 38
+thm2403_one_branch_energy: 9/1003976272*rho_R^2
+thm2403_one_branch_amplitude: 1/456976*rho_R
