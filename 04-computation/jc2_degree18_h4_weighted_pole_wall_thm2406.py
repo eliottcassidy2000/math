@@ -438,7 +438,10 @@ def main() -> None:
         omitted.append((name, remainder == 0))
     print(
         "omitted synchronization normal forms:",
-        " ".join(f"{name}={int(vanishes)}" for name, vanishes in omitted),
+        " ".join(
+            f"{name}_vanishes={int(vanishes)}"
+            for name, vanishes in omitted
+        ),
     )
 
     def coefficient_mod_prime(value, prime, epsilon_residue):

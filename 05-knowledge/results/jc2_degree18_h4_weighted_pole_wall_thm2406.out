@@ -27,7 +27,7 @@ triangular quotient over K:
   y+(-(-253 + 793*epsilon**3 + 775*epsilon + 100*epsilon**5)/253)*x+(-3*(-253 + 793*epsilon**3 + 775*epsilon + 100*epsilon**5)/506)=0
 normal form 126D-25B^2: 0
 normal form 20BC+21W: 0
-omitted synchronization normal forms: C_infinity=1 D_infinity=1 W_one=1 W_infinity=1
+omitted synchronization normal forms: C_infinity_vanishes=1 D_infinity_vanishes=1 W_one_vanishes=1 W_infinity_vanishes=1
 finite-place control p=59 epsilon=1 slopes=(34, 4, 21) q-roots=[14, 27]
 finite-place control p=101 epsilon=96 slopes=(60, 67, 75) q-roots=[]
 sharp lock hostile p=59 (x,y,z),J,lock: ((58, 34, 47), 22, 2)

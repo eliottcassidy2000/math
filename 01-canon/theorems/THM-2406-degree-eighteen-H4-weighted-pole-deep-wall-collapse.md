@@ -29,8 +29,8 @@ related:
   - THM-2387-degree-eighteen-h4-elliptic-three-isogeny-atlas
 script: 04-computation/jc2_degree18_h4_weighted_pole_wall_thm2406.py
 output: 05-knowledge/results/jc2_degree18_h4_weighted_pole_wall_thm2406.out
-script_sha256: 97102aff57918ebd14b1317ab2d828c6494f8f70966144acea603c7164469038
-output_sha256: 74006cc394dfe8397cb72644152a56db21a5427316ed5c7320cc6dd597b338e9
+script_sha256: fe5121f5dc34afaaa730985941d1029acb8d4f2d515743b6e7e90c391d646080
+output_sha256: 575e53c0639ad3a9f9e075fc31ec5a330dc8492e677a6a165dbafef1be706df8
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -383,6 +383,8 @@ matching equations alone do not force the wall. The finite-place
 checks are controls for the characteristic-zero computation, not its
 logical basis.
 
+## 8. Independent audit
+
 The independent hostile audit reconstructed the full degree-six slope
 field, checked the `a_0=1` weighted normalization and the exact
 `a_3 A_3(1)` localization, and verified every reconstruction pivot and
@@ -393,3 +395,8 @@ the four omitted synchronization equations. Both execution modes and
 declared hashes match. Finally, it checked both handoffs: the wall
 contradicts THM-2386 directly and lies in THM-2345's complete closed
 wall. No mathematical defect was found.
+
+The transcript labels explicitly report Boolean vanishing checks as
+`*_vanishes=1`; they are not polynomial values.  Normal and optimized
+execution reproduce the stored transcript byte-for-byte, and the LF
+hashes in the frontmatter were independently verified.
