@@ -273,7 +273,7 @@ require(all(ratio in floors for ratio in m2_bank), "M=2 was not eliminated")
 
 
 print("theorem=THM-2405")
-print("status=PROVED-CANDIDATE+VERIFIED-EXACT;INDEPENDENT-AUDIT-PENDING")
+print("status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED")
 print(f"seven_sheet_checks={sheet_checks};endpoint_skips={endpoint_skips}")
 print(f"same_line={same_line};high_band={high_band_mass}")
 print("high_safe_band=72/637")

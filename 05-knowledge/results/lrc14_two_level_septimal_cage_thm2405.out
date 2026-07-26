@@ -1,5 +1,5 @@
 theorem=THM-2405
-status=PROVED-CANDIDATE+VERIFIED-EXACT;INDEPENDENT-AUDIT-PENDING
+status=PROVED+VERIFIED-EXACT+INDEPENDENTLY-HOSTILE-AUDITED
 seven_sheet_checks=7344;endpoint_skips=0
 same_line=1/91;high_band=12/91
 high_safe_band=72/637

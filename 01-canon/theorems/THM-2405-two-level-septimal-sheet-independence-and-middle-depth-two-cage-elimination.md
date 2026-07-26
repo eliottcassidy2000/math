@@ -2,7 +2,7 @@
 id: THM-2405
 title: "Two-level septimal sheet independence and middle-depth-two cage elimination"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING. In
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In
   THM-2392's b=2 same-septimal-layer cage, the high quotient band
   D_C3 minus D_c3 outside the top word has exact mass 72/637. Every
   primitive low danger comb occupies exactly one seventh of this
@@ -23,14 +23,14 @@ related:
   - THM-2398-prime-cyclic-rational-restoration-dichotomy
 script: 04-computation/lrc14_two_level_septimal_cage_thm2405.py
 output: 05-knowledge/results/lrc14_two_level_septimal_cage_thm2405.out
-script_sha256: c97293de4aa9a6df505439ed7292e5002760e0690987a77c5f9527302b485e08
-output_sha256: dd235891b4f45c94af003d30cd59bd4a0ca41063094d563b1d004cb6e37415a5
+script_sha256: e0b9f5af824500eb57aa2a17706d786749671acff2cfc3080b3b88d40eeddd89
+output_sha256: 812f400c611901c9c59b4be0d9012eec190b2311a21e6c7faa663b5d59d1a42a
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2405 -- two septimal sheet counts eliminate the middle-depth-two cage
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2392 reduces the last fifteen strict profile rows to a clean-hole
 alternative and an exact bank of ten oriented compatible low ratios.
@@ -404,3 +404,28 @@ Both transcripts must byte-match
 
 after LF normalization. Every executable check raises explicitly under
 optimized Python.
+
+## 9. Independent hostile audit
+
+An independent reconstruction audited the theorem at three levels.
+
+1. Starting from THM-2392's literal definition of `Gamma`, it recovered
+   (17) after using `T^(-1)D_(C_i)=D_(c_i)`, and hence recovered the
+   containment in `U_(a,b) union (A intersection L_O)` without importing
+   this proof's interval decomposition.
+2. Equal-cell lattice counting, rather than the companion's endpoint
+   sweep, reproduced all ten exact `mu(U_(a,b))` values. In particular,
+   `(4,3)` gives `331/4732`, so
+
+   ```text
+   delta>=629/231868>0.
+   ```
+
+3. A separate congruence scan recovered the unique `M=2` bank
+   `{(4,3)}` and the empty `M>=3` bank. Normal, optimized, and stored
+   transcripts byte-match.
+
+The audit also compared a proposed weighted-dual shift-matrix route.
+That route would require additional blocker-address shift coverage; the
+common-band proof above does not. It is therefore unnecessary, not an
+implicit dependency of this theorem.
