@@ -27,6 +27,7 @@ status: >
 source: codex-2026-07-26-top-blocker-essential-parent
 depends_on:
   - THM-2427-guard-top-thirteen-root-capacity-and-residual-types
+  - THM-2430-guard-top-common-ninety-one-root-tiling-spectrum
   - THM-2431-repeated-step-rounding-exclusion-of-guard-top-zero-blocker-types
   - THM-2432-guard-top-pair-cage-and-low-blocker-residual-exclusion
   - THM-2424-coprime-common-root-crt-and-unit-residue-spectrum
@@ -47,11 +48,11 @@ output:
   - 05-knowledge/results/lrc14_top_blocker_essential_carrier_thm2435.out
   - 05-knowledge/results/lrc14_top_blocker_essential_independent_referee_thm2435.out
 script_sha256:
-  - cdc85d8492cac4ade65fbd8e300a50fa841b967eb2e608fd2ad138e933abd8fb
+  - a69d8d146fd1a20185eed8b67cf4cf4edda4091fe6f18873b8519b8ddc77f76a
   - 2b7c03f102fa53bc42ba44dc73194731bdd40c3a1eec42da9cfb4b56529c83cd
   - 703f6846a9106d9b9d16abbceca8a7c4918a97e5322fccb11968a2440d297321
 output_sha256:
-  - 5be089f3a1068518263bf4254ac1db9a1d8e2f9a0655b56a115a130e99907e62
+  - 754c49f6338451b9127b3eb6b85f1b7ea74f210a1c689818433f6d2a3afa6908
   - 6a02977e4d1ccf5489d6e463e940e507e7ced84013742ab546bf8e6e8703a585
   - 4eeba272a3dd686ab2e017191a03d999a176d32d43d2bcff66d0e5bd514b728e
 hash_basis: working-tree bytes (LF)
@@ -116,7 +117,7 @@ All identities below are almost everywhere. Endpoints and the finite
 family of inherited exceptional pullbacks are removed once and for
 all.
 
-## 2. The sharpened parent image
+## 2. The sharpened parent image and retained puncture
 
 Write `c_j=13C_j` and put
 
@@ -148,6 +149,31 @@ mu(P)>=1-(3-k)/7=(4+k)/7.                                      (8)
 ```
 
 This is the first gain over the older `4/7` invoice.
+
+The same fibre argument retains a puncture before projection.  For
+every generic `Y in P`, choose any safe preimage
+
+```text
+y=(Y+a)/N in A.                                                (8a)
+```
+
+In the composed common-root coordinate, its `r=0` thirteen-root
+section has indices
+
+```text
+Q_y={a+Nh mod 91:h in F_13}.                                  (8b)
+```
+
+This is one thirteen-site coset modulo seven, and every physical
+blocker is safe on it because
+
+```text
+1_(D_(c_j))((y+h)/13)=1_(D_(C_j))(y)=0.                        (8c)
+```
+
+The quotient image `P` forgets which safe preimage, and hence which
+puncture coset, was chosen.  No measurable choice of `Q_y` is used
+in the spectral section below.
 
 ## 3. The quotient stalk and its forced gaps
 
@@ -590,6 +616,9 @@ python3 -O 04-computation/lrc14_top_blocker_essential_independent_referee_thm243
 
 The three dependency-free companions:
 
+- independently reconstruct the `62` normalized exact tilings, their
+  repeatable unsigned steps `1,2,3,4,5,44,45`, and sharp phase-bank
+  sizes `39,35,6,9,12,10,8`;
 - exhausts all `352947` labelled seven-bin unit profiles;
 - verifies the three sharpened `(k,b)` measure invoices;
 - exhausts all `8190` nonconstant `C_13` masks, `630` translation
@@ -605,8 +634,10 @@ The three dependency-free companions:
   histogram `4:28, 6:14`;
 - verifies the sharpened `2/7`, `2/637`, `3/1274`, `1/637`, and
   `8/7` carrier invoices and the exact `91`-branch Jacobian; and
-- checks explicit one-/two-source punctured repairs while retaining
-  THM-2427's local exact tiling as a zero-essential hostile.
+- checks explicit one-/two-source punctured repairs, including a
+  one-hole hostile repaired by a blocker disjoint from a retained
+  thirteen-site puncture, while retaining THM-2427's local exact
+  tiling as a zero-essential hostile; and
 - independently reconstructs the low/high quotient image criterion,
   the three typed invoices, all `630` nontrivial `C_13` necklace
   orbits, the sharp row-energy floor, the mixed-mode ANOVA boundary,
@@ -627,6 +658,8 @@ byte-for-byte, respectively.
 Independent hostile audits reconstructed and accepted:
 
 - the exact parent-image identity and all three measure invoices;
+- the safe-preimage puncture (8a)--(8c), including the information
+  lost on projection;
 - the direct-packet `Phi_13` proof in all `745290` character cases;
 - the CRT address `78s+14r`, lexicographic selector, and flat-energy
   normalization;
@@ -643,6 +676,9 @@ on generic `7^(M+1)` fibres rather than importing the primary
 companions. It separately reconstructs the three typed mass invoices,
 the `C_13` cyclotomic/necklace selector, the sharp integral row-defect
 energy, the two-way ANOVA boundary, and the positive-depth annihilator.
+The expanded primary companion independently rebuilds the `62`
+normalized tilings and their `39/91` phase boundary and retains an
+explicit one-hole punctured hostile.
 Normal and optimized transcripts of all three companions match their
 stored outputs byte-for-byte. The quotient/physical distinction and
 every displayed constant survive the hostile replay. QED.

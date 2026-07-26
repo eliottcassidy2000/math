@@ -1,285 +1,400 @@
 ---
 id: THM-2440
-title: "Sharp two-comb centred-window radius"
+title: "Sharp two-comb centred-window radii"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. If two
-  radius-1/14 integer danger combs cover
-  almost every point of {||ny||<rho} for rho>1/14, then both speeds
-  are multiples of n and rho<=15/182. Equality is possible only for
-  the scaled pair {n,13n}, which covers the open window almost
-  everywhere but misses its two internal seam points. Thus no two
-  combs cover {||ny||<8/91}. This is a standalone sharp geometry
-  theorem and does not remove a new LRC(14) row.
+  radius-1/14 integer danger combs cover a pullback window
+  {||ny||<rho} with rho>1/14, then both speeds are multiples of n.
+  For almost-everywhere coverage rho<=15/182, with equality exactly
+  for {n,13n}. For literal pointwise coverage rho<=15/196, with
+  equality exactly for {n,14n}. Equivalently, after gcd
+  normalization, the open almost-everywhere radius equals the closed
+  radius and is at most 15/182 at {1,13}, while the literal connected
+  radius of the open union is at most 15/196 at {1,14}.
+  Thus the formerly reserved strict 15/182 statement is false:
+  {1,13} misses the handoff x=1/14 in both open combs and has literal
+  radius only 1/14.  The theorem can obstruct an a.e. two-comb cover
+  of a normalized radius-16/182 window, but it does not itself
+  produce such a cover, remove a scalar row, close the noncirculant
+  graft, or prove LRC(14).
 source: codex-2026-07-26-two-comb-centred-radius
 depends_on: []
 related:
   - THM-1094-exact-two-comb-component-theorem
   - THM-1147-exact-two-comb-gap-law
-  - THM-2434-endpoint-cage-gcd-invoice-for-guard-top-tilings
-  - THM-2436-punctured-ninety-one-stalk-mixed-mode-and-repeated-step-closure
-script: 04-computation/lrc14_sharp_two_comb_centred_radius_thm2440.py
-output: 05-knowledge/results/lrc14_sharp_two_comb_centred_radius_thm2440.out
-script_sha256: ff6045d45842d2daa5ffb7c97481be7b93495bb303e33b0cc377167c2d5f54fb
-output_sha256: 774b94744cc4260be6295ac623d59eda7fdf682c70fcf3428f4997705049085f
+  - THM-2436-punctured-ninety-one-stalk-repeated-step-spectrum
+  - MISTAKE-273
+  - MISTAKE-274
+script:
+  - 04-computation/lrc14_sharp_two_comb_centred_radius_thm2440.py
+  - 04-computation/lrc14_sharp_two_comb_strict_radius_referee_thm2440.py
+output:
+  - 05-knowledge/results/lrc14_sharp_two_comb_centred_radius_thm2440.out
+  - 05-knowledge/results/lrc14_sharp_two_comb_strict_radius_referee_thm2440.out
+script_sha256:
+  - ff6045d45842d2daa5ffb7c97481be7b93495bb303e33b0cc377167c2d5f54fb
+  - aa6a27fd5e9bb67cc9c63142b0531ee0d2ef6551ac8ec4ce5d5ac2923fab9bea
+output_sha256:
+  - 774b94744cc4260be6295ac623d59eda7fdf682c70fcf3428f4997705049085f
+  - 06de603f79561ac7c4be1eb8387a0254e3dc5571dc03792840821f34b83ca454
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2440 -- the seam-safe two-comb radius is `15/182`
+# THM-2440 -- the two sharp centred radii are different
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
-For a positive integer `u`, write
+For a positive integer `m`, put
 
 ```text
-D_u={y in R/Z: ||uy||<1/14}.                              (1)
+D_m^o  = {x in R : ||mx|| <  1/14},
+D_m^cl = {x in R : ||mx|| <= 1/14}.                         (1)
 ```
 
-The open endpoint convention is load-bearing. Two teeth may meet at
-a point which neither danger set contains, so ordinary connected
-components of `D_A union D_B` do not describe almost-everywhere
-coverage. The theorem below permits those seams exactly.
-
-## 1. The sharp theorem
-
-Let `n,A,B` be positive integers and let `rho>1/14`. If
+For positive speeds `a,b`, define
 
 ```text
-{y:||ny||<rho} subset_ae D_A union D_B,                  (2)
+r_o(a,b)  = sup{R : (-R,R) is contained in D_a^o union D_b^o},
+r_cl(a,b) = sup{R : [-R,R] is contained in D_a^cl union D_b^cl},
+r_ae(a,b) = sup{R : (-R,R) is covered a.e. by D_a^o union D_b^o}.
+                                                                    (2)
 ```
 
-then
+Let
 
 ```text
-n|A,                         n|B,                        (3)
-
-rho<=15/182.                                             (4)
+g=gcd(a,b),        p=a/g,        q=b/g,        p<=q.          (3)
 ```
 
-If equality holds in (4), then, up to exchanging `A,B`,
+The normalized radii are `rho_*=g r_*(a,b)`.  Equivalently, after the
+pullback coordinate `y=gx`, they are the radii of the coprime pair
+`{p,q}`.
+
+## Theorem
+
+For every positive pair,
 
 ```text
-(A,B)=(n,13n).                                           (5)
+rho_ae = rho_cl <= 15/182,                                   (4)
 ```
 
-Conversely, the pair in (5) covers
+and equality holds exactly when
 
 ```text
-{y:||ny||<15/182}
+{p,q}={1,13},        equivalently {a,b}={g,13g}.              (5)
 ```
 
-almost everywhere. Its only misses inside each pulled-back component
-are the two seams corresponding to `ny=+-13/182` (hence `2n`
-points on the original circle).
-
-In particular,
+For the literal open union,
 
 ```text
-{y:||ny||<8/91} not subset_ae D_A union D_B              (6)
+rho_o <= 15/196,                                             (6)
 ```
 
-for every two positive integer speeds `A,B`, since
-`8/91=16/182>15/182`.
-
-## 2. Centre masks force the common pullback
-
-Every centre `j/n` of the left side of (2) belongs to
+and equality holds exactly when
 
 ```text
-closed(D_A) union closed(D_B).                            (7)
+{p,q}={1,14},        equivalently {a,b}={g,14g}.              (7)
 ```
 
-Indeed, otherwise a neighborhood of that centre would have positive
-uncovered measure.
+In unnormalized coordinates, the equality radii are respectively
+`15/(182g)` and `15/(196g)`.
 
-For one speed `u`, put
+There is a stronger pullback form.  Let `n,A,B` be positive integers,
+let `rho>1/14`, and write
 
 ```text
-d=gcd(u,n),                     N=n/d.                    (8)
+W_n(rho)={y in R/Z: ||ny||<rho}.                            (8)
 ```
 
-The values `uj/n` run through the `N`th roots, each with multiplicity
-`d`. Hence the exact number of centres in `closed(D_u)` is
+Then
 
 ```text
-d(2 floor(N/14)+1).                                      (9)
+W_n(rho) subset_ae D_A^o union D_B^o
+  -> n|A, n|B, rho<=15/182,                                (9)
+
+W_n(rho) subset D_A^o union D_B^o
+  -> n|A, n|B, rho<=15/196.                               (10)
 ```
 
-If `N>=3`, this is at most `n/3`. If `N=2`, it is `n/2`;
-the hit set is the unique index-two subgroup of `Z/nZ`. Therefore two
-proper masks cannot cover all `n` centres:
+Equality in (9) occurs exactly for `{A,B}={n,13n}` and equality in
+(10) exactly for `{A,B}={n,14n}`.  Both equality pairs really cover:
+the first almost everywhere and the second pointwise.
 
-- two masks with `N>=3` cover at most `2n/3`;
-- one `N=2` mask and one `N>=3` mask cover at most `5n/6`;
-- two `N=2` masks coincide and cover only `n/2`.
+## 1. A covered pullback forces the common divisor
 
-Thus at least one of `A,B` is divisible by `n`. Say
+Every centre `j/n` of `W_n(rho)` belongs to
 
 ```text
-A=an.                                                     (10)
+D_A^cl union D_B^cl.                                      (11)
 ```
 
-Coverage itself forces the other divisibility. First, (2) and the
-measure bound `mu(D_A union D_B)<=2/7` give `rho<=1/7`.
-For
+Otherwise an open neighborhood of that centre would have positive
+uncovered measure.  For one speed `u`, put
 
 ```text
-1/(14a)<t<min(rho,13/(14a)),                              (11)
+d=gcd(u,n),                  N=n/d.                        (12)
 ```
 
-the `n` points
+As `j` runs modulo `n`, the values `uj/n` run through the `N`th roots,
+each `d` times.  Hence the exact number of centres in `D_u^cl` is
 
 ```text
-y_j=(j+t)/n,                     j in Z/nZ,                (12)
+d(2 floor(N/14)+1).                                       (13)
 ```
 
-all lie in the window and all avoid `D_A`. If `n` did not divide
-`B`, the values `B y_j` would contain `N>=2` equally spaced circle
-points. They cannot all lie in the single arc `||x||<1/14`.
-Consequently at least one `y_j` avoids `D_B` for every `t` in the
-positive-length interval (11). Integrating over `t` and pigeonholing
-the finite labels `j` produces a positive-measure violation of (2).
-Therefore `n|B`, proving (3).
-
-This argument uses open intervals only away from finitely many
-endpoints. It does not turn almost-everywhere coverage into literal
-endpoint coverage.
-
-## 3. The reduced seam chain
-
-Write
+If `N>=3`, (13) is at most `n/3`.  If `N=2`, it is `n/2`, and
+the hit set is the unique index-two subgroup of the cyclic centre
+set.  Two proper masks cannot cover all `n` centres: their cardinality
+bound is at most `2n/3`, at most `5n/6`, or exactly the same `n/2`
+subgroup according as zero, one, or two masks have `N=2`.  Therefore
+at least one speed is divisible by `n`; exchange labels and write
 
 ```text
-A=an,                         B=bn
+A=an.                                                      (14)
 ```
 
-and exchange the two speeds so that `a<=b`. Pullback by `y -> ny`
-preserves Haar measure, so (2) becomes
+Almost-everywhere coverage and the union-measure bound first give
+`rho<=1/7`.  For every `t` in the nonempty interval
 
 ```text
-{x:||x||<rho} subset_ae D_a union D_b.                   (13)
+1/(14a)<t<min(rho,13/(14a)),                               (15)
 ```
 
-The positive central tooth of `D_a` ends at
+all `n` points
 
 ```text
-r_a=1/(14a),                                               (14)
+y_j=(j+t)/n,                   j in Z/nZ,                  (16)
 ```
 
-and its next positive tooth begins at `13/(14a)`.
-The central tooth of `D_b` is contained in the central tooth of
-`D_a`.
-
-If `b<13a`, the first noncentral `D_b` tooth begins at
-`13/(14b)>r_a`. There is a positive gap, so (13) cannot pass
-`r_a` even almost everywhere:
+lie in `W_n(rho)` and avoid `D_A^o`.  If `n` did not divide `B`, the
+values `B y_j` would contain a full coset of `N>=2` equally spaced
+circle points.  Such a coset cannot lie in the single arc
+`||x||<1/14`.  Thus for every `t` in (15), at least one label `j`
+also avoids `D_B^o`.  The finite union over labels covers the
+positive-length `t`-interval, so some fixed label fails on a set of
+positive measure, contradicting (9).  Hence
 
 ```text
-rho<=1/(14a).                                             (15)
+n|A,                         n|B.                          (17)
 ```
 
-If `b>=13a`, any `D_b` tooth which touches or overlaps the central
-`D_a` tooth has length `1/(7b)` and therefore ends no later than
+Literal coverage implies a.e. coverage, so the same divisibility
+conclusion applies to (10).  Pullback by `x=ny` now reduces both
+statements exactly to the normalized pair problem below.
+
+## 2. Why the a.e. and closed radii agree
+
+On every bounded interval, the difference between
+`D_a^cl union D_b^cl` and `D_a^o union D_b^o` is a finite set of tooth
+endpoints.  Closed coverage therefore implies open coverage almost
+everywhere.
+
+Conversely, if a point in an open centred window lies outside the
+closed union, an open neighborhood of that point lies outside it as
+well.  That neighborhood has positive measure, contradicting a.e.
+coverage by the open union.  Shrinking the window away from its two
+outer endpoints gives
 
 ```text
-r_a+1/(7b).                                               (16)
+r_ae(a,b)=r_cl(a,b).                                        (18)
 ```
 
-The next `D_b` tooth is separated by a positive gap, while (16) is
-strictly before the next `D_a` tooth. Thus no alternating tooth chain
-can extend farther, and
+This equality is only an equality of suprema.  It does **not** say that
+the open union contains its internal handoff points.
+
+## 3. The fragmentation bound
+
+For every real interval `I` of length `L`,
 
 ```text
-rho<=1/(14a)+1/(7b)
-    <=1/(14a)+1/(91a)
-     =15/(182a)
-    <=15/182.                                             (17)
+|I intersect D_m^o| <= L/7 + 6/(49m).                       (19)
 ```
 
-Equality throughout (17) forces `a=1,b=13`. For this pair,
+Indeed, scale `I` by `m` and write `mL=k+s`, where `k` is an integer
+and `0<=s<1`.  The `k` full unit periods contribute `k/7`.  The
+remaining interval meets the circle danger arc, of length `1/7`, in
+at most `min(s,1/7)`.  Its excess above the mean `s/7` is at most
 
 ```text
-D_1 covers             |x|<13/182,
-
-D_13 covers            13/182<|x|<15/182                 (18)
+max_(0<=s<=1) (min(s,1/7)-s/7)=6/49.                        (20)
 ```
 
-near zero. The points `x=+-13/182` are the two open seams.
-This proves the converse, the equality statement, and (6).
+Division by `m` proves (19).  This is the sharp discrepancy estimate
+also used in THM-1094, but its proof here is self-contained.
 
-## 4. Exact companion and controls
-
-Run
+Suppose `[0,R]` is covered a.e. by `D_p^o union D_q^o`.  Subadditivity
+and (19) give
 
 ```text
-python 04-computation/lrc14_sharp_two_comb_centred_radius_thm2440.py
-python -O 04-computation/lrc14_sharp_two_comb_centred_radius_thm2440.py
+R <= 2R/7 + 6/(49p) + 6/(49q),
+
+1/p+1/q >= 35R/6.                                          (21)
 ```
 
-The dependency-free `Fraction` companion:
+We use (21) only to leave a few elementary boundary branches; no
+bounded search supplies an infinite quantifier.
 
-- checks the exact centre count (9) and every proper-mask inequality
-  through denominator `1000`;
-- constructs the actual almost-everywhere centred radius of
-  `D_a union D_b` by merging exact tooth intervals, with touching
-  endpoints deliberately treated as seams;
-- checks all `1<=a<=b<=120`, finding the unique maximum
-  `15/182` at `(1,13)`;
-- applies the proved centre/divisibility gate and then the independent
-  exact tooth merge to all `856,800` triples
-  `1<=A<B,n<=120`, finding no cover of the target radius `8/91`;
-- finds exactly the nine bounded equality triples
-  `(A,B)=(n,13n)`, `1<=n<=9`; and
-- retains THM-2434's hostile seam
-  `D_3,D_11` at `5/14`: the endpoint is missed although its two
-  punctured sides have different covering owners.
+## 4. Sharp closed/a.e. radius
 
-Normal and optimized transcripts must reproduce
+Set
 
 ```text
-05-knowledge/results/lrc14_sharp_two_comb_centred_radius_thm2440.out
+R_ae=15/182,       (35/6)R_ae=175/364.                      (22)
 ```
 
-byte-for-byte.
+Assume `rho_ae>=R_ae`.  Since `p<=q` and `(p,q)=1`, (21) gives:
 
-## 5. Scope
+- `p>=5` is impossible because `1/p+1/q<=2/5`;
+- `p=4` is impossible because `q>=5` and
+  `1/4+1/5<175/364`;
+- for `p=3`, every `q>=7` is impossible because
+  `1/3+1/7<175/364`.
 
-THM-2440 is a standalone sharp one-dimensional geometry theorem. It
-repairs the tempting but false inference that an almost-everywhere
-open cover catches every endpoint: only closed centre masks are used,
-and the equality example itself has two missed seams.
+The remaining `p=3` pairs are `{3,4}` and `{3,5}`.  Their centred
+closed component ends at the central `3`-tooth endpoint `1/42`, well
+before `R_ae`.
 
-The `8/91` corollary would close the proposed exceptional step-one
-two-blocker route, but hostile-audited THM-2436 already empties the
-entire deep-`c_3` branch by a stronger punctured-stalk atlas. Thus
-THM-2440 supplies a reusable sharp sidecar and an equality
-classification; it does not remove another valuation shape or scalar
-row, prove owner-conditioned survival in the live `c_3<=M` graft, or
-prove LRC(14).
-
-## 6. Independent hostile audits
-
-Two independent audits reconstructed the centre-mask count, the
-generic-fibre divisibility step, the seam-chain bound, and the equality
-classification. One audit checked the reduced geometry independently
-through `a<=30,b<=100`. The other wrote a separate full-circle exact
-merge, including wraparound gluing, and reproduced:
+For `p=2`, its central tooth ends at `1/28` and its next positive
+tooth starts at `13/28>R_ae`.  Hence the whole interval
 
 ```text
-all 856,800 bounded triples,
-the unique reduced extremizer (1,13),
-the nine scaled equality triples,
-and zero covers at radius 8/91.                               (19)
+J=(1/28,R_ae),        |J|=17/364.                           (23)
 ```
 
-That second audit first found and discarded a truncated negative-tooth
-enumerator before reporting (19); the repaired circle merge also
-matched the exact origin-radius formula on every
-`1<=a<=b<=120`. Both audits explicitly checked that closure is used
-only for the finite centre mask and that equality is almost
-everywhere, not pointwise.
+would have to lie, up to endpoints, in one `q`-tooth.  Distinct
+`q`-teeth have positive gaps, so a connected interval covered a.e.
+by `D_q` cannot cross between them.  A tooth has length `1/(7q)`;
+thus (23) forces `q<=3`.  The only coprime possibility `q=3` has
+central endpoint `1/42<1/28` and next positive tooth starting at
+`13/42>R_ae`, so it fails.
 
-Normal and optimized companion transcripts match the stored output
-after LF normalization, and the declared hashes match the working-tree
-bytes.
+It remains to take `p=1`.  The central `1`-tooth ends at `1/14`, so
 
-QED.
+```text
+J=(1/14,R_ae),         |J|=1/91                             (24)
+```
+
+must lie in one `q`-tooth.  Hence `q<=13`.  For `q<=12`, the first
+positive tooth begins at
+
+```text
+13/(14q)>1/14,                                             (25)
+```
+
+leaving a gap immediately after the central tooth.  For `q=13`, its
+first positive closed tooth is exactly
+
+```text
+[13/(14*13),15/(14*13)]=[1/14,15/182].                     (26)
+```
+
+Together with the central `1`-tooth, (26) covers `[0,R_ae]` in the
+closed convention and covers it a.e. in the open convention.  The
+open gap immediately to the right of `15/182` forbids any extension.
+Reflection supplies the negative half.  This proves (4)--(5).
+
+## 5. Sharp literal-open radius
+
+Set
+
+```text
+R_o=15/196,        (35/6)R_o=175/392.                       (27)
+```
+
+If `rho_o>=R_o`, the open window is also covered a.e., so (21)
+applies.  It leaves only:
+
+```text
+p=4: q=5,
+p=3: q in {4,5,7,8},
+p in {1,2}.                                                 (28)
+```
+
+The pair `{4,5}` stops at `1/56`, and every displayed `p=3` pair stops
+at `1/42`: none of their first noncentral teeth begins before `R_o`.
+
+For `p=2`, the interval after its central tooth has length
+
+```text
+R_o-1/28=2/49.                                              (29)
+```
+
+One `q`-tooth can cover (29) only when `q<=3`; the sole coprime
+candidate `{2,3}` stops at `1/28`.
+
+For `p=1`, the required tail has length
+
+```text
+R_o-1/14=1/196,                                             (30)
+```
+
+so one-tooth coverage forces `q<=28`.  Unlike the a.e. problem, the
+internal point `x=1/14` must itself be covered.  The `1`-comb misses
+it, while
+
+```text
+x=1/14 lies in D_q^o
+  iff ||q/14||<1/14
+  iff 14 divides q.                                         (31)
+```
+
+The only possibilities up to `28` are `q=14,28`.  For `q=14`, the
+first positive tooth is
+
+```text
+(13/196,15/196).                                            (32)
+```
+
+It strictly overlaps the central `1`-tooth and gives literal coverage
+of `(-R_o,R_o)`.  For `q=28`, the tooth crossing the seam ends at
+
+```text
+29/392 < 30/392=15/196.                                    (33)
+```
+
+so it fails.  The gap immediately after (32) prevents extension.
+This proves (6)--(7).
+
+## 6. The reserved statement and the LRC scope
+
+The formerly reserved claim combined the first numerical constant
+with the second endpoint convention.  Its minimal witness is the
+claimed extremizer itself:
+
+```text
+{p,q}={1,13},       x=1/14,
+||x||=||13x||=1/14.                                        (34)
+```
+
+Both strict combs miss (34), so their literal connected radius is only
+`1/14`, not `15/182`.  MISTAKE-274 records the correction lineage.
+
+The valid a.e./closed theorem does show that two normalized combs
+cannot cover a centred window of radius `16/182`, because
+
+```text
+16/182 > 15/182.                                           (35)
+```
+
+Using (35) in LRC(14) still requires a lawful reduction that produces
+an a.e. two-comb cover of that entire normalized pullback window while
+retaining its labels and scale.  THM-2440 does not supply that
+reduction, does not decrement any of the `165` scalar rows, and does
+not close the surviving `c_3<=M` noncirculant-graft branch.
+
+## 7. Exact referee
+
+The dependency-free `Fraction` referee:
+
+1. reconstructs closed and literal-open centred components directly
+   from tooth endpoints;
+2. verifies every arithmetic branch in Sections 3--5;
+3. reproduces the strict seam witness (34);
+4. scans all `9,276` coprime pairs with
+   `1<=p<=40` and `p<=q<=400`, finding unique maxima `{1,13}` and
+   `{1,14}` in the two conventions; and
+5. checks the scaled equality families through `g=50`.
+
+Normal and optimized Python runs execute the same explicit checks and
+byte-match the stored output.  The finite scan is a hostile control;
+the proof of the universal statement is Sections 1--5.

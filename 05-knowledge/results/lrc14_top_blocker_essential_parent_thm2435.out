@@ -1,4 +1,7 @@
 THM-2435 exact companion
+normalized_tilings=62
+repeatable_steps=1,2,3,4,5,44,45
+phase_cell_sizes=1:39,2:35,3:6,4:9,5:12,44:10,45:8
 labelled_six_unit_profiles=352947
 unit_gap_histogram=0:2520,1:50400,2:157500,3:119700,4:22155,5:672
 one_blocker_cover_profiles=68040
@@ -15,4 +18,5 @@ marker_equivariance_checks=106470
 formal_c91_character_checks=745290
 positive_depth_ancestry_controls=12490296
 positive_depth_physical_residue_gcd=7
+one_hole_punctured_hostile=missing_78_repaired_PASS
 ALL CHECKS PASSED

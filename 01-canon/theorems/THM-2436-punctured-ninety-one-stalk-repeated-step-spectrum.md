@@ -33,10 +33,18 @@ related:
   - THM-2421-all-clock-septimal-ancestry-endpoint-event-detector
   - THM-2424-coprime-common-root-crt-and-unit-residue-spectrum
   - THM-2439-cyclic-marker-replica-degree-and-homometric-gram-boundary
-script: 04-computation/lrc14_punctured_91_stalk_mixed_mode_thm2436.cpp
-output: 05-knowledge/results/lrc14_punctured_91_stalk_mixed_mode_thm2436.out
-script_sha256: 4992f1ab58f07a3699f6c04f877f387cd48e8e4206750645d536eb11edbf1fd7
-output_sha256: c2659364e9d312a670f2606cde8eeb8f9ef5d82c062cfb44837970047f717f8b
+script:
+  - 04-computation/lrc14_punctured_91_stalk_mixed_mode_thm2436.cpp
+  - 04-computation/lrc14_punctured_91_fixed_spectrum_referee_thm2436.py
+output:
+  - 05-knowledge/results/lrc14_punctured_91_stalk_mixed_mode_thm2436.out
+  - 05-knowledge/results/lrc14_punctured_91_fixed_spectrum_referee_thm2436.out
+script_sha256:
+  - 4992f1ab58f07a3699f6c04f877f387cd48e8e4206750645d536eb11edbf1fd7
+  - b4f9550249dac0ab53d8d1992440731b7ca4dfac5687d90bf65ad877f8c1e8fe
+output_sha256:
+  - c2659364e9d312a670f2606cde8eeb8f9ef5d82c062cfb44837970047f717f8b
+  - bba34d1c67d68b992bf274a22c0e92f29b1c80c58ce15d9a7ca631b0cceff584
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -775,6 +783,35 @@ speed relation has fixed nonzero integer lift `n`; multiplication by
 spectrum in the two exceptional step-one arguments is consequently
 lawful, and their `57/91` and `67/91` caps apply to the whole parent,
 not to a parentwise-selected subcell.
+
+The dependency-free Python referee independently reconstructs the
+load-bearing conditioned banks without importing the C++ atlas or a
+stored solution. It represents a step-one AP13 as a cyclic interval of
+radius six, indexes every other AP by its centre, and uses a separate
+canonical dynamic-pivot owner recursion. It reproduces the full
+one-source exceptional table
+
+```text
+(1,1,1,1,1):   144 assignments, 40 differences, 46 cells,
+(1,1,1,1,30):  106 assignments, 36 differences, 41 cells,
+(1,1,1,1,45):  262 assignments, 48 differences, 57 cells.
+```
+
+On all `28` coincident/distinct two-label source multisets it also
+reconstructs the five critical spectra with at least four step-one
+labels. In particular the extremal `(1,1,1,1,45)` row has exactly
+`4,314` assignments, `62` directed centre differences, and `67` sharp
+cells. Normal and `-O` runs both byte-match
+
+```text
+05-knowledge/results/lrc14_punctured_91_fixed_spectrum_referee_thm2436.out
+```
+
+with output SHA-256
+
+```text
+bba34d1c67d68b992bf274a22c0e92f29b1c80c58ce15d9a7ca631b0cceff584.
+```
 
 Finally, the audit traced the residual list through hostile-audited
 THM-2426, THM-2427, THM-2431, and THM-2432 and the parent floors through

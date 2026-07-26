@@ -158,6 +158,8 @@ Discharge each cell by a THM-2057 clock phase, THM-2059/HYP-2108 endpoint packet
 THM-2168--2397 leave `165` rows while supplying relation/edge/toothpick/colour carriers (THM-2356 kernel `28,393`; THM-2363/THM-2368). THM-2405/2415 reduce the final lane to `M<=2`; THM-2417 excludes `M=2`, and THM-2426's transverse root proof empties it.
 THM-2430--2435 reduce `nu_7(c_3)>M` to three typed punctured-stalk shapes.
 Hostile-audited THM-2436 classifies the complete punctured one-/two-blocker stalk and uses fixed-spectrum physical repeated-pair banks to empty all three remaining types. Thus the whole deep-`c_3` branch is empty, while `nu_7(c_3)<=M` retains an isolated noncirculant top graft. No scalar row is removed.
+Its exact atlas has `2,629` one-source and `38,750` distinct-two-source assignments; fixed-spectrum sharp cell caps `75`, `57`, and `67` contradict the typed parent floors `78`, `65`, and `78` over `91`.
+THM-2440 forces two covering combs to inherit pullback frequency `n`. Its sharp closed/open-a.e. radius is `15/182` at `{n,13n}`, while literal-open is `15/196` at `{n,14n}`; the old strict `{1,13}` form misses `x=1/14` (MISTAKE-274). This is a reusable sidecar, not a graft closure.
 THM-2441 makes every fixed rational delayed-clock audit finite modulo `7D_0`, preserving the centred signed event word and target-restricted nonflatness.
 THM-2445/2442 give `24` positive partial-endpoint cells and restore the ghost word; THM-2448 is the sharp fixed-`X` atlas. THM-2452 closes the aggregate endpoint debt: one of `128` complete co-shifted Boolean masks copies to the bare leg, all transitions vanish after the full-`X` sum, and a fresh exact `X` and `91`-unit `m` survive. Floors are `D_0/16384` and `D_0/212992`; adaptive extension counts are `(1,16,8,4,2,1)`.
 THM-2449 reduces persistent anchored failure to two finite additive tests, with delta-plus-six-replicas as the exact hostile. THM-2418--2421 remain carry/reference sidecars.
@@ -336,6 +338,16 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
 - Hostile-audited [THM-2422](../01-canon/theorems/THM-2422-operation-fibres-summand-closure-and-twin-center-ancestry.md) separates operation shadows from labelled fibres: strict closure from `{2,3}` is `N\{1,4,6}`, and synchronous growth is `M_t=27*2^(t-4)+1`.
   Every twin centre through `10^8` has distinct earlier parents (FINITE-EXACT; all-centre extension OPEN). Polygonal supports have digamma/trigamma clocks.
 - Hostile-audited [THM-2433](../01-canon/theorems/THM-2433-operation-fibre-deletion-incidence-and-startup-scar.md) gives the finite-hole Burnside calculus. The additive scar stabilizes at three lost pairs, while multiplication propagates along `4N` and `6N`; internal transitive closures, four exceptional divisibility covers, and the unique artificial twin-centre atom `12` are exact. Chain difference and divisor Möbius inversion are analogues, not a Stirling identification.
+- Hostile-audited [THM-2438](../01-canon/theorems/THM-2438-poisson-newton-ternary-half-and-harmonic-divisor-incidence.md)
+  gives the exact Poisson--Newton EGF conjugacy. Central-binomial Newton
+  coefficients are central trinomials, the two Pascal halves become ternary
+  walks, and reciprocal support is limiting mean divisor incidence/fibre scar.
+  Abel--Dini/Bertrand is the boundary; Cauchy and Dirichlet convolution differ.
+- Hostile-audited [THM-2448](../01-canon/theorems/THM-2448-finite-hole-relative-atoms-prime-rays-and-cover-bounds.md) classifies finite multiplicative hole modules. Prime-free holes have finitely
+  many artificial atoms below `max h*spf(h)`; a prime hole creates
+  disjoint cage rays `m*q` with sharp `M^3/M^4` finite remainders. Additive
+  atoms stop at `2L+1/2L+2`, induced composite covers obey a sharp `M^2` law,
+  and artificial twin centres require both `c/2,c/3` in the prime-free holes.
 - The maximum-cyclic-triangle support mass is exactly
   `75/4 - 24*log(2)`.
 - The condensation-hazard support is `{5,6,...}` with profile

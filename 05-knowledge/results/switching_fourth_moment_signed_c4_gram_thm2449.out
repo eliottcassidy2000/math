@@ -1,0 +1,10 @@
+THM-2449 exact switching-moment referee
+exhaustive_signed_matrices=1098
+larger_deterministic_controls=32
+rademacher_switch_evaluations=41544
+second_moment=m_PASS
+fourth_moment=3m^2-2m+24_signed_C4_PASS
+gram_energy=base+8_signed_C4_PASS
+switching_invariance_and_parity_floor=PASS
+skew_tournament_quadratic_hostile=PASS
+ALL CHECKS PASSED

@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """Exact companion for THM-2435.
 
-The finite audit checks the seven-bin gap bank, the sharpened
-parent/label invoices, the equivariant one-root selector on C_13, its
-flat C_91 polyphase spectrum, and the positive-depth ancestry kernel.
+The finite audit independently reconstructs the corrected exact-tiling
+phase cap, checks the seven-bin gap bank and sharpened parent invoices,
+constructs the equivariant one-root selector on C_13, verifies its flat
+C_91 quotient spectrum, and checks the positive-depth ancestry kernel.
 All truth-bearing checks use explicit exceptions and survive ``-O``.
 """
 
 from __future__ import annotations
 
-from collections import Counter
+from collections import Counter, defaultdict
 from fractions import Fraction
 from itertools import combinations, product
 from math import comb, gcd
@@ -21,7 +22,124 @@ def require(condition: bool, message: str) -> None:
 
 
 # ---------------------------------------------------------------------------
-# 1. The coarse seven-bin word bank.
+# 1. Independent reconstruction of the corrected exact-tiling cap.
+# ---------------------------------------------------------------------------
+
+L = 91
+FULL = (1 << L) - 1
+GUARD = sum(1 << site for site in range(26))
+COMPLEMENT = FULL ^ GUARD
+
+
+def progression(start: int, step: int, length: int = 13) -> int:
+    mask = 0
+    for offset in range(length):
+        mask |= 1 << ((start + offset * step) % L)
+    return mask
+
+
+def sites(mask: int) -> tuple[int, ...]:
+    return tuple(site for site in range(L) if (mask >> site) & 1)
+
+
+representations: dict[int, list[tuple[int, int]]] = {}
+for step in range(1, L):
+    if gcd(step, L) != 1:
+        continue
+    for start in range(L):
+        mask = progression(start, step)
+        representations.setdefault(mask, []).append((start, step))
+
+require(len(representations) == 3276, "wrong progression universe")
+
+canonical: dict[int, tuple[int, int]] = {}
+for mask, reps in representations.items():
+    forward = sorted(rep for rep in reps if rep[1] <= L // 2)
+    require(len(reps) == 2 and len(forward) == 1, "bad AP orientation")
+    canonical[mask] = forward[0]
+
+eligible = sorted(mask for mask in representations if mask & GUARD == 0)
+require(len(eligible) == 182, "wrong eligible progression bank")
+
+by_site: dict[int, list[int]] = {site: [] for site in sites(COMPLEMENT)}
+for mask in eligible:
+    for site in sites(mask):
+        by_site[site].append(mask)
+
+
+def fixed_leftmost_covers() -> set[frozenset[int]]:
+    """Enumerate exact covers with a deterministic pivot, not index pruning."""
+
+    answers: set[frozenset[int]] = set()
+
+    def visit(remainder: int, chosen: tuple[int, ...]) -> None:
+        if remainder == 0:
+            require(len(chosen) == 5, "complete cover has wrong size")
+            answers.add(frozenset(chosen))
+            return
+        require(len(chosen) < 5, "five blocks left a nonempty remainder")
+        pivot_bit = remainder & -remainder
+        pivot = pivot_bit.bit_length() - 1
+        for candidate in by_site[pivot]:
+            if candidate & remainder == candidate:
+                visit(remainder ^ candidate, chosen + (candidate,))
+
+    visit(COMPLEMENT, ())
+    return answers
+
+
+tilings = fixed_leftmost_covers()
+require(len(tilings) == 62, "wrong normalized exact-tiling count")
+
+centre_differences: dict[int, set[int]] = defaultdict(set)
+for tiling in tilings:
+    centres_by_step: dict[int, list[int]] = defaultdict(list)
+    for mask in tiling:
+        start, step = canonical[mask]
+        centres_by_step[step].append((start + 6 * step) % L)
+    require(
+        any(len(centres) >= 2 for centres in centres_by_step.values()),
+        "exact tiling without a repeated unsigned step",
+    )
+    for step, centres in centres_by_step.items():
+        for first in centres:
+            for second in centres:
+                if first != second:
+                    centre_differences[step].add((first - second) % L)
+
+repeatable_steps = sorted(centre_differences)
+require(
+    repeatable_steps == [1, 2, 3, 4, 5, 44, 45],
+    "wrong repeatable-step set",
+)
+
+phase_cells: dict[int, set[int]] = {}
+for step, differences in centre_differences.items():
+    inverse = pow(step, -1, L)
+    normalized = {(inverse * difference) % L for difference in differences}
+    phase_cells[step] = normalized | {
+        (residue - 1) % L for residue in normalized
+    }
+
+expected_phase_sizes = {
+    1: 39,
+    2: 35,
+    3: 6,
+    4: 9,
+    5: 12,
+    44: 10,
+    45: 8,
+}
+require(
+    {step: len(cells) for step, cells in phase_cells.items()}
+    == expected_phase_sizes,
+    "wrong repeated-step phase banks",
+)
+require(max(map(len, phase_cells.values())) == 39, "wrong exact-locus cap")
+
+
+# ---------------------------------------------------------------------------
+# 2. The coarse seven-bin word bank.
 # ---------------------------------------------------------------------------
 
 unit_profiles = 0
@@ -71,7 +189,7 @@ require(b2_essential_profiles == 970200, "wrong two-blocker essential count")
 
 
 # ---------------------------------------------------------------------------
-# 2. Sharpened parent, label, and marked-root invoices.
+# 3. Sharpened parent, label, and marked-root invoices.
 # ---------------------------------------------------------------------------
 
 # A shape is (name, k low quotient blockers, b exact-depth top labels).
@@ -129,7 +247,7 @@ require(
 
 
 # ---------------------------------------------------------------------------
-# 3. Translation-equivariant lexicographic marker on C_13.
+# 4. Translation-equivariant lexicographic marker on C_13.
 # ---------------------------------------------------------------------------
 
 def bits(mask: int) -> tuple[int, ...]:
@@ -230,7 +348,7 @@ require(
 
 
 # ---------------------------------------------------------------------------
-# 4. Exact flat C91 section and positive-depth ancestry kernel.
+# 5. Exact flat C91 section and positive-depth ancestry kernel.
 # ---------------------------------------------------------------------------
 
 # One selected CRT root has normalized coefficient 1/91 in every
@@ -279,7 +397,49 @@ for depth in range(1, 7):
     )
 
 
+# ---------------------------------------------------------------------------
+# 6. Exact one-hole punctured hostile.
+# ---------------------------------------------------------------------------
+
+hostile_guard = set(range(26))
+hostile_ordinary = [
+    set(range(26, 39)),
+    set(range(39, 52)),
+    set(range(52, 65)),
+    set(range(65, 78)),
+    set(range(79, 91)) | {0},
+]
+hostile_six = hostile_guard | set().union(*hostile_ordinary)
+hostile_missing = set(range(L)) - hostile_six
+hostile_blocker = {site for site in range(L) if site % 7 == 1}
+hostile_puncture = {site for site in range(L) if site % 7 == 2}
+
+require(
+    len(hostile_guard) + sum(map(len, hostile_ordinary)) == L,
+    "hostile incidence changed",
+)
+require(hostile_missing == {78}, "hostile is not a one-hole word")
+require(78 in hostile_blocker, "blocker does not repair hostile hole")
+require(
+    hostile_six | hostile_blocker == set(range(L)),
+    "punctured hostile does not cover",
+)
+require(
+    hostile_blocker.isdisjoint(hostile_puncture)
+    and len(hostile_blocker) == len(hostile_puncture) == 13,
+    "hostile puncture is not a disjoint thirteen-coset",
+)
+
+
 print("THM-2435 exact companion")
+print(f"normalized_tilings={len(tilings)}")
+print("repeatable_steps=" + ",".join(map(str, repeatable_steps)))
+print(
+    "phase_cell_sizes="
+    + ",".join(
+        f"{step}:{len(phase_cells[step])}" for step in repeatable_steps
+    )
+)
 print(f"labelled_six_unit_profiles={unit_profiles}")
 print(
     "unit_gap_histogram="
@@ -302,4 +462,5 @@ print(f"marker_equivariance_checks={equivariance_checks}")
 print(f"formal_c91_character_checks={formal_cyclotomic_checks}")
 print(f"positive_depth_ancestry_controls={ancestry_controls}")
 print("positive_depth_physical_residue_gcd=7")
+print("one_hole_punctured_hostile=missing_78_repaired_PASS")
 print("ALL CHECKS PASSED")

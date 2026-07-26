@@ -9,6 +9,33 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-274 (2026-07-26, reserved THM-2440 strict two-comb radius) -- a closed/a.e. handoff radius was assigned to the literal open component
+
+- **What was proposed:** two radius-`1/14` integer danger combs were said to
+  cover a centred pullback window of radius at most `15/182`, with equality
+  for `{n,13n}`, using the literal strict-open convention needed for a
+  pointwise component.
+- **Minimal witness and first failed implication:** after gcd normalization,
+  take `{1,13}` and the handoff `x=1/14`.  Then
+  `||x||=||13x||=1/14`, so both strict combs miss the point.  Their open union
+  covers the window only almost everywhere and its literal centred component
+  stops at `1/14`.  Passing from an a.e. union identity to a connected open
+  cover silently filled the internal seam.
+- **Strongest survivor:** the normalized closed radius, equivalently the open
+  almost-everywhere radius, is sharply `15/182`, with equality only for
+  `{1,13}`.  The literal open connected radius has the different sharp value
+  `15/196`, with equality only for `{1,14}`; its first positive tooth strictly
+  overlaps the central `1`-tooth.
+- **Repair:** THM-2440 proves both statements separately and supplies a
+  dependency-free exact referee.  The valid a.e. theorem can support a
+  `16/182>15/182` window contradiction only after a lawful argument produces
+  coverage of that whole normalized window.  It does not by itself decrement
+  a scalar row or close the surviving noncirculant graft.
+- **Rule:** for every interval-comb handoff, record three radii separately:
+  closed, open almost everywhere, and literal open connected.  Audit every
+  equality extremizer at its internal tooth endpoints before transferring a
+  component bound.
+
 ## MISTAKE-273 (2026-07-26, proposed THM-2434 endpoint cage) -- an almost-everywhere exact tiling does not cover its open handoff seams
 
 - **What was proposed:** in a `b=0,t=5` THM-2427 residual, THM-2430 makes

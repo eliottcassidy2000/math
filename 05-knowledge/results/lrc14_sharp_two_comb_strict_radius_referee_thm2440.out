@@ -1,0 +1,12 @@
+THM-2440 independent strict/closed two-comb referee
+fragmentation thresholds: closed/ae=25/52 strict=25/56
+reserved strict witness: x=1/14, dist(x,Z)=1/14, dist(13x,Z)=1/14
+sharp normalized radii: closed/ae {1,13}=15/182; strict {1,14}=15/196
+cross-convention controls: strict {1,13}=1/14; closed {1,14}=15/196
+finite branch controls: p2_ae_tail=17/364, p1_ae_tail=1/91, p2_strict_tail=2/49, p1_strict_tail=1/196
+strict seam bridgers q<=28: [14, 28]
+redundant coprime scan rows: closed=9276 strict=9276
+top closed rows: {1,13}:15/182, {1,27}:29/378, {1,14}:15/196, {1,41}:43/574, {1,55}:57/770
+top strict rows: {1,14}:15/196, {1,28}:29/392, {1,42}:43/588, {1,56}:57/784, {1,70}:71/980
+scaled equality controls: n=1..50 PASS
+RESULT: PASS

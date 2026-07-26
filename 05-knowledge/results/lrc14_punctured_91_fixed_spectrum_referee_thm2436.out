@@ -1,0 +1,21 @@
+THM-2436 independent fixed-spectrum referee
+method=centred-interval-canonical-dynamic-pivot
+step_one_supports=91
+one_source_configurations=7
+two_label_source_multisets=28
+ONE_SOURCE_EXCEPTIONAL
+spectrum assignments centre_differences sharp_cells nodes
+1,1,1,1,1 144 40 46 13917
+1,1,1,1,30 106 36 41 53144
+1,1,1,1,45 262 48 57 73762
+TWO_LABEL_CRITICAL
+spectrum assignments centre_differences sharp_cells nodes
+1,1,1,1,1 2681 60 66 279242
+1,1,1,1,15 85 30 35 1077258
+1,1,1,1,18 13 26 38 1058382
+1,1,1,1,30 1611 54 59 1238978
+1,1,1,1,45 4314 62 67 1534429
+one_source_max_sharp=57<65
+two_label_critical_max_sharp=67<78
+critical_extremum_spectrum=1,1,1,1,45
+ALL CHECKS PASSED
