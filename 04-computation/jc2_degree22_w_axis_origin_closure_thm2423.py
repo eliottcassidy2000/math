@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
-"""Exact referee for the degree-22 invariant-origin cusp obstruction.
+"""Exact referee for the degree-22 W-axis and invariant-origin obstruction.
 
 This companion works in the target-translated degree-22 quartic Faber chart
 of THM-2411, but reconstructs the degree-22 Laurent observables directly.
-At the invariant coefficient origin B=C=D=E=W=0 it verifies:
+On the coefficient axis B=C=D=E=0 it verifies:
 
-* the first two fluxes reduce, after u=v*y^2 and Z=zeta*y^3, to two
-  equations whose resultant is a nonzero quintic L_5(v);
+* the first flux reconstructs zeta=Z/y^3 rationally from v=u/y^2;
+* for W!=0 the second flux is the squarefree genus-two curve
+  r^2=L_5(v);
+* at W=0 the first two fluxes instead make v a root of L_5;
 * on the open first-flux chart, zeta is the displayed rational function of
   v and is nonzero at every root of L_5;
 * the third flux has a nonzero h^11 coefficient at every root of L_5; and
@@ -106,7 +108,7 @@ def polynomial_hash(expression: sp.Expr, *generators: sp.Symbol) -> str:
 def main() -> None:
     d, q, s, t = sp.symbols("d q s T")
     y, u, z = sp.symbols("y u Z")
-    v, zeta = sp.symbols("v zeta")
+    v, zeta, wpar = sp.symbols("v zeta W")
     lvar = sp.symbols("L")
 
     p = 2 * d
@@ -276,6 +278,35 @@ def main() -> None:
         "second origin equation after zeta reconstruction is wrong",
     )
 
+    # The nonzero W-axis is a squarefree genus-two hyperelliptic curve.
+    n2_w = n2 - 1319329792 * wpar
+    require(
+        sp.factor(
+            sp.together(
+                n2_w.subs(
+                    {
+                        u: v * y**2,
+                        z: k * y**3,
+                    }
+                )
+                + 112 * y**6 * l5 / (121 * v - 7) ** 2
+                + 1319329792 * wpar
+            )
+        )
+        == 0,
+        "W-axis hyperelliptic reduction mismatch",
+    )
+    l5_discriminant = sp.discriminant(l5, v)
+    require(
+        l5_discriminant
+        == -499422782980684243112624396456803372064495484694167552000000000000,
+        "origin quintic discriminant mismatch",
+    )
+    require(
+        sp.gcd(sp.Poly(l5, v), sp.Poly(sp.diff(l5, v), v)).degree() == 0,
+        "origin quintic is not squarefree",
+    )
+
     third_on_curve = sp.factor(sp.together(h3.subs(zeta, k)))
     third_expected = sp.factor(
         -56
@@ -354,12 +385,14 @@ def main() -> None:
         "sidecar coefficient vanishes at an origin quintic root",
     )
 
-    print("THM-2423 degree-22 invariant-origin exact referee")
+    print("THM-2423 degree-22 W-axis/origin exact referee")
     print("laurent_recurrence_vs_multinomial=PASS")
     print(f"origin_resultant_constant={resultant_constant}")
     print(f"origin_quintic_degree={sp.degree(l5, v)}")
     print("open_wall_value=-44800")
     print("zeta_zero_values=(-6144,51200/81)")
+    print("W_axis_curve=r^2=L5(v),genus=2")
+    print("L5_discriminant=-2^38*3^4*5^12*7*11^40*29")
     print(
         "third_curve_factor="
         "-56(121v-3)(363v-1)"

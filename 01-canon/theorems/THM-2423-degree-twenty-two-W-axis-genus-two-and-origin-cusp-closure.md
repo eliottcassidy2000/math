@@ -1,18 +1,18 @@
 ---
 id: THM-2423
-title: "Degree-twenty-two invariant-origin eleventh-power cusp closure"
+title: "Degree-twenty-two W-axis genus-two and invariant-origin cusp closure"
 status: >
   PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
   In the open first-flux chart of the genuine nonsplit polynomial
-  exact-square-prefix degree-twenty-two branch, the invariant coefficient
-  origin B=C=D=E=W=0 is empty. The first two fluxes make
-  v=u/y^2 a root of one fixed quintic and reconstruct the nonzero constant
+  exact-square-prefix degree-twenty-two branch, the full coefficient axis
+  B=C=D=E=0 is empty. For W!=0 the two fluxes give a squarefree genus-two
+  curve r^2=L_5(v), so a rational trajectory is constant. At W=0 they
+  instead make v=u/y^2 a root of L_5 and reconstruct nonzero constant
   zeta=Z/y^3. Hence y=h^2 and T=t_0 h^3. The third flux is a nonzero
-  multiple of h^11, so the Keller one-form leaves only an eleventh-power
-  monomial cusp. The full polynomial Faber sidecar has a unique nonzero
-  h^11 pole there and rules it out. This removes one weighted stratum of
-  the A!=0 chart; it does not close degree twenty two, JC(2), or DC(2).
-source: klein-2026-07-26-degree-twenty-two-origin-cusp
+  h^11; the Keller one-form leaves an eleventh-power monomial cusp, and
+  the full polynomial Faber sidecar has a unique nonzero h^11 pole.
+  This closes the W-axis, not degree twenty two, JC(2), or DC(2).
+source: klein-2026-07-26-degree-twenty-two-w-axis-origin-cusp
 depends_on:
   - THM-2129-quartic-faber-three-coefficient-boundary-classification
   - THM-2214-nonsplit-terminal-quartic-spectral-curve-closure-through-degree-ten
@@ -23,14 +23,14 @@ related:
   - THM-2262-degree-eighteen-trigonal-spectral-discriminant-reduction
   - THM-2297-degree-eighteen-target-translation-normal-form
   - THM-2406-degree-eighteen-H4-weighted-pole-deep-wall-collapse
-script: 04-computation/jc2_degree22_invariant_origin_cusp_thm2423.py
-output: 05-knowledge/results/jc2_degree22_invariant_origin_cusp_thm2423.out
-script_sha256: 16b1223a60e8d4e7e418b11c9dd7f6e34a777cc9c58ea3c31d8b67c22e808ff7
-output_sha256: 418cb934de555014d6c5f94356bc23a60bded32e66cd154527bcec6ced100d77
+script: 04-computation/jc2_degree22_w_axis_origin_closure_thm2423.py
+output: 05-knowledge/results/jc2_degree22_w_axis_origin_closure_thm2423.out
+script_sha256: c00b75c1f6d039520b23713e5ba5a1c20861cfb94dd0c394ea8f88fe1bfbb583
+output_sha256: 56618ccf4ec737feca3a67c9d4476f7c122a9e045bb9cac83df66dc4678659b2
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2423 -- the degree-twenty-two invariant origin is empty
+# THM-2423 -- the degree-twenty-two W-axis is empty
 
 **PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
 
@@ -41,7 +41,7 @@ conclusion is
 ```text
 genuine degree-22 trajectory,
 mathcal A!=0,
-B=C=D=E=W=0
+B=C=D=E=0
     => contradiction.                                           (1)
 ```
 
@@ -79,7 +79,7 @@ N_2=0,                                                     (4)
 with the exact polynomials in THM-2411, equations (12)--(16). Work on
 
 ```text
-mathcal A!=0,             B=C=D=E=W=0.                     (5)
+mathcal A!=0,             B=C=D=E=0.                       (5)
 ```
 
 If `y=0`, then `mathcal A=-1089u!=0`, while (4) gives
@@ -101,22 +101,39 @@ Then
 mathcal A=9y^2(7-121v),
 ```
 
-so the open chart also gives `121v-7!=0`. Dividing (4) by their nonzero
-weighted powers of `y` gives
+so the open chart also gives `121v-7!=0`. Dividing the first equation in
+(4) by its nonzero weighted power of `y` gives
 
 ```text
 f_1
- =-1229844v^2+483153v zeta+33880v-27951zeta-84=0,            (8)
-
-f_2
- =-396829664v^3+49193760v^2-54113136v zeta-406560v
-   +5314683zeta^2+745360zeta+224=0.                          (9)
+ =-1229844v^2+483153v zeta+33880v-27951zeta-84=0.            (8)
 ```
 
-Their exact resultant is
+Write
 
 ```text
-Res_zeta(f_1,f_2)=-595244496 L_5(v),                         (10)
+f_2
+ =-396829664v^3+49193760v^2-54113136v zeta-406560v
+   +5314683zeta^2+745360zeta+224.                            (9)
+```
+
+The second equation in (4), with its constant value retained, is
+
+```text
+3y^6f_2-1319329792W=0.                                     (10)
+```
+
+Equation (8) reconstructs
+
+```text
+zeta
+ =28(121v-3)(363v-1)/[3993(121v-7)].                       (11)
+```
+
+Substitution into (9) gives
+
+```text
+f_2=-112L_5(v)/[3(121v-7)^2],                              (12)
 ```
 
 where
@@ -124,36 +141,61 @@ where
 ```text
 L_5
  =155624547606v^5+3215383215v^4-1700698560v^3
-   +58124770v^2-855470v+2583.                                (11)
+   +58124770v^2-855470v+2583.                               (13)
 ```
 
-Therefore `v` is algebraic over the algebraically closed constant field
-`C`. Since `v in C(x)`, it follows that
-
-```text
-v in C.                                                       (12)
-```
-
-Equation (8) reconstructs
-
-```text
-zeta
- =28(121v-3)(363v-1)/[3993(121v-7)].                         (13)
-```
+Equivalently,
+`Res_zeta(f_1,f_2)=-595244496L_5(v)`.
 
 There is no excluded root hidden here:
 
 ```text
 L_5(7/121)=-44800,
 L_5(3/121)=-6144,
-L_5(1/363)=51200/81.                                         (14)
+L_5(1/363)=51200/81.                                        (14)
 ```
 
-Thus `zeta in C*`.
+## 2. The nonzero W-axis is a genus-two curve
 
-## 2. The weighted curve is one eleventh-power cusp
+Equations (10)--(12) give
 
-Choose `t_0 in C*` with `t_0^2=zeta`. From
+```text
+-112y^6 L_5(v)/(121v-7)^2-1319329792W=0.              (15)
+```
+
+For `W!=0`, choose `c_W in C*` with
+
+```text
+c_W^2=-1319329792W/112
+```
+
+and put `r=c_W(121v-7)/y^3`. Equation (15) is exactly the
+hyperelliptic curve
+
+```text
+r^2=L_5(v)                                             (16)
+```
+
+Its exact discriminant is
+
+```text
+Disc(L_5)=-2^38 3^4 5^12 7 11^40 29 !=0.              (17)
+```
+
+Thus the smooth projective model of (16) has genus two. A nonconstant
+rational trajectory would give a nonconstant morphism from `P^1` to this
+curve, impossible by Riemann--Hurwitz. Hence `v` is constant. Equation (15)
+then makes `y` constant, after which `u,Z,T,q` are constant and the genuine
+deck is contradicted.
+
+It remains only to treat the endpoint `W=0`. Here (15) becomes
+`L_5(v)=0`. Therefore `v` is algebraic over the algebraically closed
+constant field `C`. Since `v in C(x)`, it follows that `v in C`. Equations
+(11) and (14) then give `zeta in C*`.
+
+## 3. The invariant origin is one eleventh-power cusp
+
+At `W=0`, choose `t_0 in C*` with `t_0^2=zeta`. From
 
 ```text
 T^2=zeta y^3
@@ -164,7 +206,7 @@ gives one `h in C(x)^*` such that, after absorbing a constant,
 
 ```text
 y=h^2,                    T=t_0h^3,
-u=vh^4,                   d=(v/t_0)h.                       (15)
+u=vh^4,                   d=(v/t_0)h.                       (18)
 ```
 
 This is a lossless parametrization, not a root choice in a larger
@@ -174,7 +216,7 @@ Let `F=R_Q/q` be the third Faber flux. A direct degree-twenty-two Laurent
 calculation gives
 
 ```text
-F=3y^7 H(v,zeta)/(14992384T),                              (16)
+F=3y^7 H(v,zeta)/(14992384T),                              (19)
 ```
 
 where
@@ -182,40 +224,40 @@ where
 ```text
 H(v,zeta)
  =-43923zeta^2-1449459zeta v^2+139755zeta v-770zeta
-   +1229844v^3-33880v^2+84v.                               (17)
+   +1229844v^3-33880v^2+84v.                               (20)
 ```
 
-On (13),
+On (11),
 
 ```text
 H(v,zeta)
  =-56(121v-3)(363v-1)
     (5314683v^3-307461v^2+22869v-203)
-   /[363(121v-7)^2].                                      (18)
+   /[363(121v-7)^2].                                      (21)
 ```
 
-The gcd of `L_5` and the numerator in (18) is one. Hence (14) and (18)
+The gcd of `L_5` and the numerator in (21) is one. Hence (14) and (21)
 show that the coefficient is nonzero at every possible `v`. Equations
-(15)--(16) become
+(18)--(19) become
 
 ```text
-F=f_0h^11,                     f_0 in C*.                    (19)
+F=f_0h^11,                     f_0 in C*.                    (22)
 ```
 
-## 3. The Keller one-form leaves only a monomial cusp
+## 4. The Keller one-form leaves only a monomial cusp
 
 Write `A_src` for the polynomial in the exact-square-prefix
 factorization, to distinguish it from the flux coefficient `mathcal A`.
 The inherited Keller one-form is
 
 ```text
-A_src(2T F'+F T')=2kappa T,       kappa in C*.               (20)
+A_src(2T F'+F T')=2kappa T,       kappa in C*.               (23)
 ```
 
-Substituting (15) and (19), then cancelling the nonzero `T`, gives
+Substituting (18) and (22), then cancelling the nonzero `T`, gives
 
 ```text
-A_src(h^11)' in C*.                                      (21)
+A_src(h^11)' in C*.                                      (24)
 ```
 
 The rational-primitive lemma of THM-2214 now has only two cases.
@@ -228,7 +270,7 @@ Otherwise, after translating `X=x-xi`,
 ```text
 A_src=a_0X^m,              m>=2,
 
-h^11=c_0+c_1X^(1-m),       c_1!=0.                        (22)
+h^11=c_0+c_1X^(1-m),       c_1!=0.                        (25)
 ```
 
 If `c_0!=0`, the nonzero finite roots of
@@ -237,12 +279,12 @@ Consequently, for some integer `ell>=1`,
 
 ```text
 c_0=0,               m=11ell+1,
-h=h_0X^-ell.                                               (23)
+h=h_0X^-ell.                                               (26)
 ```
 
 Thus the flux quotient leaves exactly one eleventh-power monomial cusp.
 
-## 4. The full polynomial sidecar kills the cusp
+## 5. The full polynomial sidecar kills the cusp
 
 At the invariant origin, the normalized mate is the single Faber seed
 `E_22`. Write
@@ -261,13 +303,13 @@ E_22-mathcal R_6(P,H_0)
       +42mathcal L^2s^2-mathcal L T^2
       +56mathcal L Tds-56mathcal Ls^3
       +14T^2d^2+6T^2s-140Tds^2+70s^4
-   ] in C[x,z].                                            (24)
+   ] in C[x,z].                                            (27)
 ```
 
 The part independent of `mathcal L` is
 
 ```text
-33T y^4 J(v,zeta)/2048,                                  (25)
+33T y^4 J(v,zeta)/2048,                                  (28)
 ```
 
 where
@@ -277,44 +319,44 @@ J(v,zeta)
  =14v^2+(6/11)zeta-(140/121)v+70/14641.
 ```
 
-On (13),
+On (11),
 
 ```text
 J(v,zeta)
  =14(1771561v^3-73205v^2+4235v-23)
-    /[14641(121v-7)].                                     (26)
+    /[14641(121v-7)].                                     (29)
 ```
 
-The gcd of `L_5` and the numerator in (26) is one. Thus (25) has a
-nonzero coefficient and, on (23), exact valuation
+The gcd of `L_5` and the numerator in (29) is one. Thus (28) has a
+nonzero coefficient and, on (26), exact valuation
 
 ```text
--11ell.                                                    (27)
+-11ell.                                                    (30)
 ```
 
-Because `mathcal L` is polynomial, the terms of (24) containing,
+Because `mathcal L` is polynomial, the terms of (27) containing,
 respectively, one, two, three, or four copies of `mathcal L` have valuation
 at least
 
 ```text
 -9ell,             -7ell,             -5ell,             -3ell.
-                                                                    (28)
+                                                                    (31)
 ```
 
-Hence the pole (27) is unique and cannot cancel. This contradicts the
-polynomiality in (24). The monomial cusp is empty.
+Hence the pole (30) is unique and cannot cancel. This contradicts the
+polynomiality in (27). The monomial cusp is empty.
 
-If `y` had been constant instead, (12)--(13) would make `u,Z,T`, and then
+If `y` had been constant instead, (11)--(14) would make `u,Z,T`, and then
 `q`, constant. The genuine deck fixes the constant field but sends
 `q` to `-q`, contradicting `q!=0`. This covers both cases and proves (1).
 
-## 5. Scope, connection ledger, and next obstruction
+## 6. Scope, connection ledger, and next obstruction
 
-The theorem removes exactly the invariant weighted origin from the
-complementary `mathcal A!=0` degree-twenty-two chart. It does not remove a
-one-sparse axis, classify the remaining weighted coefficient cone, or treat
-split/even and integral order-raising branches. It proves neither `JC(2)`
-nor `DC(2)`.
+The theorem removes the complete `W`-axis, including its invariant-origin
+endpoint, from the complementary `mathcal A!=0` degree-twenty-two chart. It
+does not remove any of the four coefficient axes `B,C,D,E`, classify the
+remaining weighted coefficient cone, or treat split/even and integral
+order-raising branches. It proves neither `JC(2)` nor `DC(2)`.
 
 The lawful cross-thread transfer is methodological:
 
@@ -333,10 +375,10 @@ destroyed information in the scalar quotient:
   the polynomial approximate-root remainder;
 
 restoring sidecar:
-  equation (24);
+  equation (27);
 
 hostile boundary:
-  the flux equations really do leave the cusp (23), so the sidecar is
+  the flux equations really do leave the cusp (26), so the sidecar is
   necessary rather than decorative.
 ```
 
@@ -345,23 +387,24 @@ identified with a Keller trajectory. Their reusable lesson is only that a
 quotient must retain the coordinate consumed by the next operation.
 
 The next degree-twenty-two target is consequently precise: classify the
-nonzero weighted parameter strata in `mathcal A!=0`, starting with the five
-one-sparse axes, and retain the third flux and full-mate sidecar before
-projecting to any spectral square class.
+nonzero weighted parameter strata in `mathcal A!=0`, starting with the four
+remaining coefficient axes, and retain the third flux and full-mate sidecar
+before projecting to any spectral square class.
 
-## 6. Exact verification
+## 7. Exact verification
 
 Run
 
 ```bash
-python3 04-computation/jc2_degree22_invariant_origin_cusp_thm2423.py
-python3 -O 04-computation/jc2_degree22_invariant_origin_cusp_thm2423.py
+python3 04-computation/jc2_degree22_w_axis_origin_closure_thm2423.py
+python3 -O 04-computation/jc2_degree22_w_axis_origin_closure_thm2423.py
 ```
 
 The companion independently reconstructs the three degree-twenty-two
 Laurent observables by recurrence and finite multinomial expansion. It
-verifies (8)--(18), the nonzero wall and zero-factor controls (14), both gcd
-certificates, and the complete sidecar (24)--(26). All truth-bearing checks
+verifies (8)--(21), the nonzero wall and zero-factor controls (14), the
+squarefree genus-two reduction, both gcd certificates, and the complete
+sidecar (27)--(29). All truth-bearing checks
 use explicit exceptions and remain active under optimized Python.
 
 The computation verifies the exact algebra. The constant-field,
