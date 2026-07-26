@@ -2,7 +2,7 @@
 id: THM-2387
 title: "Degree-eighteen H4 elliptic three-isogeny atlas"
 status: >
-  PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT. Every
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. Every
   genuine coprime H_4 survivor has a smooth elliptic quadratic
   resolvent E:t^2=H_4 and a connected unramified Cardano three-cover
   X->E. The divisor of A=7Q+S_4t is three times a degree-zero divisor
@@ -31,7 +31,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2387 -- the H4 survivor is an elliptic three-isogeny sector
 
-**PROVED + VERIFIED-EXACT CANDIDATE UNDER INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 Retain THM-2332's structured covariants
 
@@ -141,9 +141,15 @@ discriminant resolvent.
 
 ## 2. The Cardano divisor is nonzero three-torsion
 
-Let `alpha` be a root of `P` of multiplicity `m`. Coprimality in (2)
-gives `Q(alpha)!=0`. Hence the two points of `E` above `alpha` are
-distinct, and
+Let `alpha` be a root of `P` of multiplicity `m`. Coprimality gives
+`Q(alpha)!=0`. Evaluating `F=H4*S4^2` at `alpha` gives
+
+```text
+H4(alpha)S4(alpha)^2=49Q(alpha)^2!=0.
+```
+
+Hence `alpha` is not a branch point of `E->P^1_y`, the two points of
+`E` above it are distinct, and
 
 ```text
 A+Abar=14Q
@@ -190,14 +196,36 @@ Galois closure remains connected. Therefore
 T_epsilon in Pic^0(E)[3] minus {0}.                (13)
 ```
 
-Since every valuation of `A` is divisible by three, (6) is unramified.
-Connectedness makes it an etale isogeny
+Since every valuation of `A` is divisible by three, the normalization
+map
 
 ```text
-pi:X -> E,                         deg(pi)=3.        (14)
+pi:X -> E,                         deg(pi)=3,        (14)
 ```
 
-Riemann--Hurwitz gives `g(X)=1`.
+is a connected finite etale cover. Riemann--Hurwitz gives `g(X)=1`.
+Moreover
+
+```text
+div_X(z)=pi^*D_epsilon,
+```
+
+so `O_E(D_epsilon)` lies in the kernel of
+
+```text
+pi^*:Pic^0(E) -> Pic^0(X).
+```
+
+This pullback is the dual degree-three isogeny. Because `T_epsilon` is
+nonzero,
+
+```text
+ker(pi^*)=<T_epsilon>.
+```
+
+After choosing an origin on `E` and a point above it as origin on `X`,
+the cover `pi` becomes an isogeny `X->E`, and the displayed pullback
+identifies with its dual isogeny `E->X`.
 
 The complementary lift selection `bar(epsilon)` is selected by
 `Abar`. The divisor of `P` on `E` is
@@ -268,10 +296,8 @@ lands in that torsion, not the existence of torsion itself.
 
 ## 4. Tate normal form and the incoming isogeny
 
-The subgroup `<T_epsilon>` is the kernel of the dual isogeny `E->X`.
-Equivalently, (14) is an incoming cyclic isogeny to `E`. To parameterize
-it, choose a generator `T_X` of `ker(pi)` on the source. After choosing
-origins and coordinates, the pointed source has Tate normal form
+Thus (14) is incoming to `E`. Choose a generator `T_X` of `ker(pi)`.
+In pointed coordinates the source has Tate normal form
 
 ```text
 X:
@@ -289,10 +315,15 @@ three, so `T_X` has exact order three. The discriminant is
 Delta_X=b^3(a^3-27b).                              (20)
 ```
 
-The distinction between `T_epsilon` on the target and `T_X` on the
-source is duality data. Identifying their orientations requires a deck
-character, equivalently a choice of primitive cube root of unity; it is
-not a canonical equality of points.
+Here `T_epsilon` lies in the target dual kernel and `T_X` lies in the
+source kernel. Their orientations are related by the perfect pairing
+
+```text
+ker(pi) x ker(pi^*) -> mu_3.
+```
+
+Identifying generators requires a deck character, equivalently a choice
+of primitive cube root of unity. They are not canonically equal points.
 
 Velu's quotient by `<T_X>` is
 
@@ -387,8 +418,21 @@ The four roots counted with modular multiplicity are the four
 unoriented incoming three-isogeny sectors. At elliptic curves with extra
 automorphisms, distinct subgroups may give the same `lambda` value, so
 (27) is not a claim that all four roots are simple or canonically
-labeled. Choosing a generator over each projective line restores the
-eight oriented sectors in (18).
+labeled. More precisely, for `j(E)=0`, (27) is proportional to
+
+```text
+lambda(lambda+216)^3,
+```
+
+giving multiplicities `1+3`; for `j(E)=1728`, it is proportional to
+
+```text
+(lambda^2-540lambda-5832)^2,
+```
+
+giving multiplicities `2+2`. These are exactly the coarse-moduli
+collisions caused by extra automorphisms. Replacing each projective line
+by its two nonzero generators gives the eight oriented points in (18).
 
 Equation (27) is automatic rather than obstructive over `C`: every
 elliptic curve has the four lines in (18), and every degree-four
@@ -411,10 +455,12 @@ Matching only `j(E)` in (27) forgets every item after the first.
 ## 6. Weil-pairing tournament and its loss boundary
 
 There is an intrinsic binary relation here, but only after retaining its
-gauge. The vertices are the four lines
+gauge. Work canonically with `J=Pic^0(E)`. Its four cyclic order-three
+subgroups are the projective lines of `J[3]`; after choosing an origin on
+`E`, one may identify `J[3]` with `E[3]`:
 
 ```text
-L in P^1(F3)=projective lines of E[3].              (30)
+L in P^1(F3)=projective lines of J[3].              (30)
 ```
 
 Choose a generator `t_L` of each line and a primitive cube root
@@ -447,8 +493,9 @@ with determinant as symplectic form, one tournament is
 ```
 
 It is a directed triangle feeding a sink, with score multiset
-`{0,2,2,2}`. Only its switching class, up to global converse and
-relabeling, is intrinsic.
+`{0,2,2,2}`. The intrinsic datum is its vertex-switching class, modulo
+the global converse from `zeta -> zeta^(-1)` and the
+`PGL_2(F3) ~= S_4` relabeling of the four lines.
 
 The exact preservation/loss sidecar is:
 
@@ -469,6 +516,8 @@ preserved:
   projective sector incidence and alternating-pairing switching class;
 
 lost:
+  the distinguished Cardano line <T_epsilon> and the matching between
+    lines and lambda-roots,
   oriented point T versus -T,
   the primitive root zeta,
   lambda and j,
@@ -489,7 +538,8 @@ Every genuine coprime H4 survivor therefore supplies:
 ```text
 a smooth elliptic resolvent E;
 
-a connected etale three-isogeny X->E;
+a connected finite etale degree-three cover X->E, hence an isogeny
+  after choosing origins;
 
 a nonzero Cardano class in Pic^0(E)[3];
 
@@ -521,4 +571,11 @@ eight nonzero vectors and four projective lines over `F3`, every edge in
 (32), and the switching action of all four generator negations. The
 divisor, connectedness, etaleness, dual-isogeny interpretation, and
 atlas scope are the mathematical proof above, not computer assumptions.
-QED.
+
+An independent read-only audit reconstructed the finite-root and
+infinity divisor valuations, Kummer connectedness, the Picard-pullback
+dual isogeny, the full Velu quotient, both source/target `j`-maps, the
+exceptional modular fibres, and all eight switching representatives. It
+also reproduced both declared hashes and the normal, optimized, and
+stored transcripts. No counterexample or remaining type defect was
+found. QED.
