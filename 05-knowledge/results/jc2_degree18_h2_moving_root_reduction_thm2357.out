@@ -1,0 +1,16 @@
+THM-2357 degree-18 H2 moving-root exact companion
+gauge: unique smooth e=3 branch moved to y=1
+incidence: P(1)=Q(1)=0 and Q'(1)=14*K
+smoothness factor K: 2835*B + 26244*C + 245
+residual: R10=(4P^3+49Q^2)/(y-1)^2
+subresultant target: all coefficients of Sres_0,...,Sres_3
+terminal coefficient count: 10
+terminal signatures: [(37, 37, 19, 479), (32, 32, 20, 392), (32, 32, 20, 392), (27, 27, 18, 271), (27, 27, 18, 271), (27, 27, 16, 268), (21, 21, 14, 169), (21, 21, 14, 169), (20, 20, 14, 168), (21, 21, 12, 166)]
+stripped factor order columns: (C,K,54B+7,13122C+1215B+91)
+stripped factor orders: [(0, 0, 3, 0), (0, 0, 0, 0), (0, 0, 3, 0), (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 3, 0), (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 3, 0)]
+stripped signatures: [(34, 34, 19, 419), (32, 32, 20, 392), (29, 29, 20, 329), (27, 27, 18, 271), (27, 27, 18, 271), (24, 24, 16, 217), (21, 21, 14, 169), (21, 21, 14, 169), (20, 20, 14, 168), (18, 18, 12, 127)]
+ranked coefficient indices/signatures: [(9, (18, 18, 12, 127)), (8, (20, 20, 14, 168)), (6, (21, 21, 14, 169)), (7, (21, 21, 14, 169)), (5, (24, 24, 16, 217)), (3, (27, 27, 18, 271)), (4, (27, 27, 18, 271)), (2, (29, 29, 20, 329)), (1, (32, 32, 20, 392)), (0, (34, 34, 19, 419))]
+localization: C*K*(54B+7)*(13122C+1215B+91)
+generic hostile gcd degrees: (0, 0, 0)
+K=0 hostile gcd degree: 0
+profile build completed exactly

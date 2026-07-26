@@ -1,0 +1,15 @@
+THM-2357 degree-18 H2 factorization-pivot exact companion
+gauge: smooth e=3 branch at y=1
+smoothness factor: 2835*B + 26244*C + 245
+top-down solved variables: h1,h0,s1,s0
+residual equation signatures: [(5, 2, 1, 5, 2, 22), (6, 3, 2, 6, 3, 37), (7, 3, 2, 7, 3, 43), (8, 4, 2, 8, 4, 76), (9, 4, 2, 9, 4, 105), (10, 5, 2, 10, 5, 126)]
+localization factors: C*K*(54B+7)*(13122C+1215B+91)*Disc(H2)
+factorization build completed exactly
+C-leading factor signatures/exponents: [((1, 1, 0, 1, 3), 1)]
+C-leading content: 52488
+C-leading wall: -10260*B+1771*s2-1771=0; on it the first residual constant has factor signatures/exponents=[((5, 5, 2, 12), 1)], content=1127
+C-leading-wall residual polynomial: -2057235*s2**2*s3 + 1925100*s2**2 - 873126*s2*s3**3 - 1345086*s2*s3**2 + 9986439*s2*s3 - 6914007*s2 + 672543*s3**5 - 4035258*s3**4 + 9167823*s3**3 - 5380344*s3**2 - 6161748*s3 + 5195399
+C-eliminated signatures: [(10, 5, 10, 5, 91), (10, 5, 10, 5, 111), (11, 6, 10, 6, 135), (13, 6, 13, 6, 168), (14, 7, 14, 7, 204)]
+reduced factor 0: content=1, factor signatures/exponents=[((10, 5, 10, 5, 91), 1)], factorization exact
+reduced factor 1: content=1, factor signatures/exponents=[((10, 5, 10, 5, 111), 1)], factorization exact
+distinct reduced denominators: ['27*(-10260*B + 1771*s2 - 1771)**2', '162*(-10260*B + 1771*s2 - 1771)**2']

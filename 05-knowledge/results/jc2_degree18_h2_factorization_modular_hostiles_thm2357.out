@@ -1,0 +1,12 @@
+THM-2357 degree-18 H2 factorization-pivot exact companion
+gauge: smooth e=3 branch at y=1
+smoothness factor: 2835*B + 26244*C + 245
+top-down solved variables: h1,h0,s1,s0
+residual equation signatures: [(5, 2, 1, 5, 2, 22), (6, 3, 2, 6, 3, 37), (7, 3, 2, 7, 3, 43), (8, 4, 2, 8, 4, 76), (9, 4, 2, 9, 4, 105), (10, 5, 2, 10, 5, 126)]
+localization factors: C*K*(54B+7)*(13122C+1215B+91)*Disc(H2)
+factorization build completed exactly
+bruteforce mod 11: raw=0, localized=0, samples=[]
+bruteforce mod 13: raw=0, localized=0, samples=[]
+bruteforce mod 17: raw=0, localized=0, samples=[]
+bruteforce mod 19: raw=1, localized=0, samples=[]
+bruteforce mod 29: raw=0, localized=0, samples=[]
