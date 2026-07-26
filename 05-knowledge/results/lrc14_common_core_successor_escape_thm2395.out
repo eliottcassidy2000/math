@@ -1,0 +1,12 @@
+theorem=THM-2395
+status=PROVED-CANDIDATE+VERIFIED-EXACT; independent-audit=PENDING
+shell_mass=12/91; mixed_overlap>=5/637; union<=163/637
+type_II_retained>=1216/8281; type_III_capacity<=24/169
+forced_escape_base>=40/8281; physical_R_1_to_0>=40/57967; fixed_role>=8/57967
+covariant_automaton=I->I,II;II->III;III->I,II
+role_sum>=440/753571; one_mode>=110/2260713; energy>=48400/1703607756123
+fixed_pair_base>=20/173901; physical>=20/1217307; mode>=55/47474973
+F7xF13_tensor>=55/332324811; charged_tensor>=55/2326273677
+two_cycle=(1/24,typeIII,outer-owner)<->(13/24,typeII,middle-owner); strict_open=YES
+row_decrement=0; ledger=165; LRC(14)=OPEN
+all_checks=PASS

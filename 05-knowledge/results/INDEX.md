@@ -1848,3 +1848,12 @@ the positive physical middle-owner transition, the carry-corrected
 multiplication-by-thirteen address law, and the `y=1/10` carry-free
 hostile. Normal and optimized transcripts agree and end in `PASS`; the
 theorem removes no row.
+
+### lrc14_common_core_successor_escape_thm2395.out
+Exact THM-2395 candidate replay. It verifies the mixed-septimal successor
+shell floor `5/637`, the carry-labelled automaton
+`I->{I,II}, II->III, III->{I,II}`, and the forced base/physical escape
+floors `40/8281` and `40/57967`. It checks the resulting zero-drift
+actual-`c1` role-jet constants, the fixed `F7* x F13*` tensor, and a
+strict physical type-II/type-III two-cycle. Normal and optimized
+transcripts agree and end in `PASS`; no row exclusion is asserted.
