@@ -1,5 +1,17 @@
 # Script Results Index
 
+- `lrc14_k14_degree_reconstruction_thm2514_referee.cpp` -> matching `.out`
+  [THM-2514 PROVED + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED].  The
+  critical `13 x 7` affine-cut chart is `E(K_14)`: thirteen perfect-matching
+  rows and one hub star plus six Hamilton-cycle columns.  Ordinary weighted
+  degrees from any six cut phases have exact rank `78` and reconstruct every
+  row-zero defect; the spoke-corrected multiplier is nonzero on all `72`
+  nontrivial cut/root pairs, while `Omega` recovers the six horizontal-zero
+  modes.  The referee checks all `504` six-phase banks, `183,456` affine
+  covariance rows, `404,352` Fourier identities, and the exact
+  rank-`24`/kernel-`54` two-marginal boundary.  O2/O3/stored transcripts
+  byte-match; hashes are `034b5c30...2056` / `2197609b...6d10`.  The chart
+  is signed static root data, not runner-labelled owner/time/deep ancestry.
 - `lrc14_truncated_radon_tight_frame_thm2510.py` -> matching `.out`
   [THM-2510 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  On the
   row-zero `13 x 7` strip, the full nonzero-slope bank satisfies

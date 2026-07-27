@@ -1,0 +1,15 @@
+THM-2514 CYCLIC K14 ORDINARY-DEGREE RECONSTRUCTION REFEREE
+field=F_547;primitive_root=2;zeta13=475;xi7=81
+chart_bijections=504;matching_rows=6552;column_type_checks=3528
+carrier=E(K14)=91;rows=13_perfect_matchings;columns=K1,13_plus_6_C13;oriented_connection=tau*{1,3,5,7,9,11}
+affine_generator_covariance_rows=183456
+degree_formula_rows=550368;seven_phase_sum_zero_rows=78624
+single_phase_rank=13..13;six_phase_banks=504;six_phase_rank=78..78;domain_dim=78
+multiplier_checks=84;primitive_L_nonzero=72;beta0_L_zero=12
+finite_fourier_factorization_checks=404352;Omega_alpha0_recovery_checks=33696
+antipodal_marginal_rank=24..24;kernel_dim=54;integral_hostiles=12;hostile_L1=168
+six_converse_invariant_pair_sums_rank=72;vertical_kernel_dim=6
+general_p_le_31_boundary_rows=138;critical_Sym2_bijections=10;injective_iff_q<=(p+1)/2;min_full_good_pairs=max(0,(p-2q+3)/2)
+sharp_carry_boundary=star_degree_(13,1^13)_vs_cycle_degree_(2^13,0);no_vertex_automorphism
+NONCLAIMS=signed_static_root_chart_not_runner_labels_not_owner_time_deep_ancestry;no_live_row_exclusion
+ALL EXACT CHECKS PASSED
