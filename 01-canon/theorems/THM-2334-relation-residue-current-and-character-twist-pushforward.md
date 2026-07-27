@@ -17,9 +17,11 @@ status: >
   neutral modulo 13 but active modulo 7, so the all-91-unit target mask is
   a genuinely coupled CRT projector. A strictly positive two-factor
   hostile has nonzero full current and six nonzero terms in one exact
-  address orbit whose sum is zero. No nonzero target gain, all-unit
-  aggregate, visible address, terminal phase, scalar-row exclusion, or
-  LRC(14) closure is claimed.
+  address orbit whose sum is zero. FINITE-EXACT + independently audited:
+  one canon-recorded typed non-cover word has positive coarse nonzero-target
+  variance. No covering-row nonzero target gain, all-unit aggregate, visible
+  address, terminal phase, scalar-row exclusion, or LRC(14) closure is
+  claimed.
 source: codex-2026-07-25-relation-residue-pushforward
 depends_on:
   - THM-2302-same-label-expiration-dichotomy-and-pure-terminal-shell-no-go
@@ -765,6 +767,11 @@ still open on every hypothetical covering row:
 The positive control is reproduced by
 `lrc14_169_twist_variance_opus_20260726.py`.  Its full bank is certified
 under one exact cyclotomic embedding and its first witness under a second.
+The independent deterministic
+`lrc14_169_twist_two_twist_referee_thm2334.py` reconstructs the quotient,
+Boolean intervals, delayed word intersection, and the two endpoint
+coefficients from scratch, and proves `H(-e_(q_2)+e_(c_3))!=H(0)` under both
+embeddings.  Normal and optimized runs byte-match its stored transcript.
 It proves neither pairwise distinctness nor positivity of the complex twists,
 and it concerns the unrestricted mod-thirteen aggregate `A(q)`, not the
 all-`91`-unit aggregate `B(q)`.
