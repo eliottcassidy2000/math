@@ -78,7 +78,7 @@ def enumerate_clean_cover_records():
     """
 
     records = []
-    distinct = set()
+    distinct = {}
     overlap_records = 0
     disjoint_records = 0
     for guard_step in range(1, 7):
@@ -105,12 +105,15 @@ def enumerate_clean_cover_records():
                     )
                     require(all(len(pair) == 2 for pair in pairs), "degenerate pair")
                     records.append((guard_step, guard, pairs))
-                    distinct.add(cover_key(guard, pairs))
+                    distinct.setdefault(
+                        cover_key(guard, pairs),
+                        (guard_step, guard, pairs),
+                    )
                     if base_overlap:
                         overlap_records += 1
                     else:
                         disjoint_records += 1
-    return records, distinct, overlap_records, disjoint_records
+    return records, tuple(distinct.values()), overlap_records, disjoint_records
 
 
 def atom_support(qstar, remaining_roles, bits):
@@ -174,6 +177,27 @@ def build_signature_atlases(records):
         two_atom_checks,
         high_atom_checks,
     )
+
+
+def ordinary_one_danger_size_census(distinct_records):
+    """Count labelled ordinary-danger atoms on canonical mask families."""
+
+    census = {1: 0, 2: 0}
+    for _, guard, pairs in distinct_records:
+        for q_index, qstar in enumerate(pairs):
+            ordinary_indices = tuple(i for i in range(4) if i != q_index)
+            ordinary_roles = tuple(pairs[i] for i in ordinary_indices)
+            remaining_roles = (guard,) + ordinary_roles
+            for local_index in range(3):
+                bits = [0, 0, 0, 0]
+                bits[local_index + 1] = 1
+                support = atom_support(qstar, remaining_roles, tuple(bits))
+                require(
+                    len(support) in (1, 2),
+                    "ordinary one-danger support is not one or two roots",
+                )
+                census[len(support)] += 1
+    return census
 
 
 def rational_span_certificate(supports):
@@ -306,10 +330,10 @@ def verify_explicit_atlas(guard_atlas):
         require(set().union(*masks) == set(ROOTS), "atlas row is not a cover")
         require(
             all(
-                role.isdisjoint(guard)
+                role.isdisjoint(GATE | guard)
                 for role in (qstar, ordinary_a, ordinary_b, ordinary_c)
             ),
-            "guard-danger row has a low role in the guard",
+            "guard-danger row has a low role in the gate/guard base",
         )
         require(
             tuple(
@@ -555,9 +579,14 @@ def bounded_phase_orbit_probe():
 
 
 def main():
-    records, distinct, overlap_records, disjoint_records = enumerate_clean_cover_records()
+    (
+        records,
+        distinct_records,
+        overlap_records,
+        disjoint_records,
+    ) = enumerate_clean_cover_records()
     require(len(records) == 18900, "wrong clean-cover traversal census")
-    require(len(distinct) == 15120, "wrong distinct clean-cover census")
+    require(len(distinct_records) == 15120, "wrong distinct clean-cover census")
     require(overlap_records == 3780, "wrong gate/guard-overlap traversal count")
     require(disjoint_records == 15120, "wrong pair/pair-overlap traversal count")
 
@@ -584,6 +613,11 @@ def main():
     )
     require(ordinary_duals == 4430, "missing ordinary exact dual")
     require(guard_span_feasible == 215, "wrong guard span-feasible census")
+    ordinary_sizes = ordinary_one_danger_size_census(distinct_records)
+    require(
+        ordinary_sizes == {1: 68040, 2: 113400},
+        "wrong ordinary one-danger size census",
+    )
 
     signature, incidence, determinant, solution = verify_explicit_atlas(guard_atlas)
     shared_support, word, table = verify_replica_table()
@@ -593,7 +627,7 @@ def main():
 
     print("THM-2458 CLEAN-ROOT GUARD-DANGER AUDIT")
     print(f"cover_traversal_records={len(records)}")
-    print(f"distinct_clean_mask_families={len(distinct)}")
+    print(f"distinct_clean_mask_families={len(distinct_records)}")
     print(
         "traversal_split="
         f"gate_guard_double:{overlap_records},pair_pair_double:{disjoint_records}"
@@ -606,6 +640,10 @@ def main():
         "ordinary_danger="
         f"signatures:{len(ordinary_atlas)},exact_duals:{ordinary_duals},"
         f"span_feasible:0,max_family:{max(map(len, ordinary_atlas.values()))}"
+    )
+    print(
+        "ordinary_one_danger_sizes="
+        f"1:{ordinary_sizes[1]},2:{ordinary_sizes[2]}"
     )
     print(
         "guard_danger="

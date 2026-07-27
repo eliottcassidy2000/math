@@ -4,6 +4,7 @@ distinct_clean_mask_families=15120
 traversal_split=gate_guard_double:3780,pair_pair_double:15120
 support_checks=zero:75600,two:453600,three_or_four:378000;max_size=4
 ordinary_danger=signatures:4430,exact_duals:4430,span_feasible:0,max_family:21
+ordinary_one_danger_sizes=1:68040,2:113400
 guard_danger=signatures:1949,span_feasible:215,max_family:13
 hostile_signature=(2, 5, 1, 3, 5)
 atlas_rows=13;root_incidence=(4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4)
