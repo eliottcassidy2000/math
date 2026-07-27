@@ -2,7 +2,7 @@
 id: THM-2514
 title: "Cyclic K14 factor chart and six-phase ordinary-degree reconstruction"
 status: >
-  PROVED + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.  At the critical
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  At the critical
   dimensions 13 x 7, the ordered representative cut is a transversal of
   the nonzero antipodal classes of F_13.  Resolving its thirteen diagonal
   pairs through one marked vertex Omega identifies every affine-cut chart
@@ -23,6 +23,7 @@ status: >
   owner/time/deep ancestry, and it excludes no live row or LRC(14) case.
 source: codex-2026-07-27-k14-degree-reconstruction
 depends_on:
+  - THM-2507-truncated-radon-toothpick-tomography-and-nonaffine-root-boundary
   - THM-2508-affine-cut-bundle-covariance-and-carry-permutation
   - THM-2509-antipodal-radon-cospan-and-lossless-septimal-chart
 related:
@@ -40,7 +41,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2514 -- the septimal strip is a cyclic `K_14` factor chart
 
-**PROVED + VERIFIED-EXACT.  Independent audit requested.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2509 keeps the joint two-leg Radon chart because its two marginals lose
 `54` dimensions.  At `13 x 7`, the joint chart has a more intrinsic
@@ -375,10 +376,19 @@ d(h,r)=b(r),                 sum_r b(r)=0.                     (38)
 ```
 
 Indeed, on every nonzero horizontal frequency they evaluate the even
-Laurent polynomial `P(z)+P(z^(-1))` on all six inversion classes; together
-with its forced value zero at `z=1`, those evaluations determine `P`.
-Horizontal frequency zero is precisely (38).  Resolving the diagonal through
-`Omega` and translating the cut is what restores those last six modes.
+Laurent polynomial `P(z)+P(z^(-1))` on all six inversion classes.  If all
+six values vanish, then
+
+```text
+z^6(P(z)+P(z^(-1)))
+```
+
+vanishes at all twelve nontrivial thirteenth roots.  It also vanishes at
+`z=1` because `P(1)=0`, so this degree-at-most-twelve polynomial is zero
+(equivalently, it is `c Phi_13` with `c=0`).  Laurent-coefficient comparison
+forces `P=0`.  Horizontal frequency zero is precisely (38).  Resolving the
+diagonal through `Omega` and translating the cut restores those last six
+modes.
 
 In particular, if a row-zero array also has zero column sums, as does a
 doubly centred ANOVA interaction, then (38) intersects it trivially and the
@@ -513,8 +523,23 @@ THM-2507 gives at least `p-q+1` good nonzero slopes.  Among the
 max(0,(p-2q+3)/2)                                             (52)
 ```
 
-completely good pairs.  The bound is sharp in its abstract trace class:
-choose the `q-2` bad slopes to meet as many antipodal pairs as possible.
+completely good pairs.  The bound is sharp in its abstract trace class.
+Choose a set `B` of `q-2` bad slopes meeting as many antipodal pairs as
+possible and form
+
+```text
+P_B(X)=(X-1) product_(b in B)(X-zeta_p^b).
+```
+
+Writing `P_B=sum_r D_rX^r`, the THM-2507 trace array
+
+```text
+d(h,r)=Tr_(Q(zeta_p)/Q)(D_r zeta_p^h)
+```
+
+is integral and row-zero, and its Radon output vanishes exactly at slope
+zero and at the chosen slopes `B`.  Thus it realizes the extremal bad-pair
+mask, not merely its combinatorial count.
 Thus the threshold for a forced complete pair is
 
 ```text
@@ -603,7 +628,10 @@ byte-for-byte.  The dependency-free referee checks:
 - the injectivity and sharp good-pair boundaries through every odd prime
   `p<=31`.
 
-The prime `547` contains primitive seventh and thirteenth roots, so a
-nonzero reduced multiplier is also an exact characteristic-zero
-nonvanishing certificate.  Normal and optimized transcripts and the source
+The integer `547` is prime (trial division through `23` suffices), and
+`547-1=2*3*7*13`.  The referee explicitly finds an element whose powers at
+the four prime cofactor exponents are nontrivial, hence the field contains
+primitive seventh and thirteenth roots.  A nonzero reduced multiplier is
+also an exact characteristic-zero nonvanishing certificate.  Normal and
+optimized transcripts and the source
 and output hashes agree with the frontmatter. **QED.**

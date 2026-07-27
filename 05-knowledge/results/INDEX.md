@@ -1,7 +1,7 @@
 # Script Results Index
 
 - `lrc14_k14_degree_reconstruction_thm2514_referee.cpp` -> matching `.out`
-  [THM-2514 PROVED + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED].  The
+  [THM-2514 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The
   critical `13 x 7` affine-cut chart is `E(K_14)`: thirteen perfect-matching
   rows and one hub star plus six Hamilton-cycle columns.  Ordinary weighted
   degrees from any six cut phases have exact rank `78` and reconstruct every
