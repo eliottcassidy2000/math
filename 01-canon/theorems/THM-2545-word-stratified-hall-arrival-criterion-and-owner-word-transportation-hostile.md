@@ -51,9 +51,9 @@ The current canon proves neither (2) nor a restrictive support graph.  In
 fact a two-by-two aligned/swap pair, independently in every terminal-word
 stratum, preserves all one-point data currently connected to (1) and changes
 the hit from full mass to zero.  This remains true after tensoring with the
-new 42-cut ancestry pairing: its nonzero coefficient contraction lives on
-typed-different sheets and is not yet an integral of a positive product on
-one actual ancestry.
+42-cut external coefficient control: its nonzero contraction uses an untyped
+numerical label alignment and is not an integral of a product on one actual
+ancestry (THM-2547 / MISTAKE-281).
 
 ## 1. The typed joint object
 
@@ -333,7 +333,7 @@ This is an exact hostile to an inference from the **recorded interface data**,
 not a claim that either table is already realized by a live scalar-cover row.
 It identifies the missing coordinate without inventing a physical example.
 
-## 6. The 42-cut ancestry pairing is a positive control, not the diagonal
+## 6. The 42-cut external contraction is a control, not the diagonal
 
 The exact artifact
 
@@ -343,7 +343,8 @@ The exact artifact
                                                                     (24)
 ```
 
-is `FINITE-EXACT`.  It computes `432/432` nonzero lawful placements of
+is `FINITE-EXACT EXTERNAL CONTROL`.  For one displayed pair of unrelated
+coefficient arrays, it computes `432/432` nonzero placements of
 
 ```text
 P_(tau,a)(beta)
@@ -351,12 +352,14 @@ P_(tau,a)(beta)
                          Psi_(tau,a)(alpha,beta),             (25)
 ```
 
-retains target charge and a positive one-entry owner loop, and verifies both
-the root-kappa and cut-torsor collapses are zero.  This is major positive
-structure.  Its own type audit, however, says that the temporal-collision
-root `u` and static quotient-stalk row `h` are different sheets.  The licensed
-map is the character-label alignment `k=alpha`; the septimal cut torsor is not
-transported to the stalk.
+and verifies both the root-kappa and cut-torsor collapses are zero.  A
+target-neutral graft margin and a positive one-entry owner-loop margin are
+checked separately; neither label occurs in (25), so no joint retention is
+proved.  Its type audit says that the temporal-collision root `u` and static
+quotient-stalk row `h` are different sheets.  THM-2478 licenses a future
+collision/fixed-old-component label equality, not the static-cut/collision
+alignment used in (25); the septimal cut torsor is not transported to the
+stalk.
 
 Accordingly, (25) is a nonzero algebraic contraction in
 `Q(zeta_91)`.  It is not yet an identity of the form
@@ -370,18 +373,19 @@ coefficientwise while their geometric variables remain on different sheets.
 The vanishing of both invariant torsor collapses makes this distinction
 visible: forgetting either sidecar destroys the pairing.
 
-The hostile (20) can be tensored, word by word, with the entire finite object
-in (24).  Keep its cut coefficient, stalk root, owner atom, graft delay,
-target covector, and both torsor phases fixed, and attach the later semantic
-root by the aligned or swapped table.  The word totals, selected-head and
-granted later-target-root marginals, all `432` nonzero coefficient slots,
-owner loop, target charge, and both zero torsor collapses remain unchanged;
-(23) still changes from full to zero.  The exact companion verifies this
-independent-tensor control.
+The hostile (20) can be tensored, word by word, with the stipulated finite
+inputs in (24).  Keep the external cut/root coefficient arrays and the
+separately stipulated owner, graft, target, and torsor margins fixed, and
+attach the later semantic root by the aligned or swapped table.  The word
+totals, selected-head and granted later-target-root marginals, all `432`
+nonzero coefficient slots, separate owner/target margins, and both zero
+torsor collapses remain unchanged; (23) still changes from full to zero.  The
+exact companion verifies this independent-tensor control, not joint physical
+retention.
 
-Thus the 42-cut result does not fail.  It lands exactly one categorical level
-before (1): coefficient ancestry has been aligned, while event ancestry has
-not yet been diagonally supported.
+Thus the 42-cut finite calculation does not fail.  Its coefficient labels are
+aligned externally, while neither coefficient ancestry nor event ancestry has
+yet been jointly realized on the diagonal required by (1).
 
 ## 7. The extra ancestry condition which defeats every swap
 

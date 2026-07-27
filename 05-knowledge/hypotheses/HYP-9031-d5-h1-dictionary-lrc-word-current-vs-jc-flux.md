@@ -147,6 +147,16 @@ half, exactly as prediction 1 framed it. The dictionary's "one degree
 up" slot is where both sides' open problems now live: JC's higher mixed
 strata vs LRC's semantic-arrival identification.
 
+**Hostile correction (THM-2547 / MISTAKE-281).**  The later `432/432`
+cut/root pairing does **not** discharge this semantic 2-cell.  It multiplies
+a synthetic THM-2471 companion control by THM-2506's high-branch defect only
+after an untyped numerical character-label alignment; no common ancestry
+base or physical endpoint/current is present.  The Boolean `C=delta_2`
+hostile has full support in both factors but exact cross-colour cancellation.
+Thus the convergence statement above remains deliberately one degree short:
+the missing incidence map must be built atomwise on each live row before
+marginalization and integration.
+
 ## Hostile controls
 
 - MSG-2152's sharp signed-step boundary (spectral): disjointness +

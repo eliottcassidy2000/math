@@ -1,25 +1,30 @@
-LRC14 CUT-BUNDLE x FIRST-COLLISION ANCESTRY PAIRING -- EXACT COMPANION
-test: THM-2507 Sec.7 highest-leverage next test; pairing named in THM-2508 Sec.6
-objects: THM-2471 Boolean ancestry stalk + THM-2478 forward graft x THM-2508 cut bundle on the THM-2506 canonical defect
-[P1] stalk: service=169*I_r with I_r=24/4225; service=24/25; C(0)=0; colours_nonzero=12/12; signed_ledger=sum_(k!=0)J(k)=-I_r=PASS
-[P1] energy_floor J>=I^2/12: 1296/17850625>=48/17850625: PASS; arrival_matrix_support=39; source_matrix=owner loop only, M_OO=24/25=169*I_r
-[P1] deep sidecar: d=13, C_deep=2*13^5, d_0=1 (a mod d_0 trivially retained on the forward leg)
+LRC14 CUT-BUNDLE x ROOT-CORRELATION PAIRING -- HOSTILE-AUDITED EXACT CONTROL
+status: FINITE-EXACT EXTERNAL CONTROL; not a physical/common-ancestry current
+objects: synthetic weighted control from THM-2471's companion EXTERNALLY multiplied by THM-2508's cut bundle on THM-2506's high-branch defect
+[P1] synthetic root control: service=169*I_r with I_r=24/4225; service=24/25; C(0)=0; colours_nonzero=12/12; signed_ledger=sum_(k!=0)J(k)=-I_r=PASS
+[P1] energy_floor J>=I^2/12: 1296/17850625>=48/17850625: PASS; arrival_matrix_support=39; separate source-margin owner loop M_OO=24/25=169*I_r
+[P1] separate deep margin: d=13, C_deep=2*13^5, d_0=1; neither owner nor deep labels occur in the P4 product
 [P2] cut bank on THM-2506 canonical defect: primitive_modes=5184 nonzero+factorized (eq (14)-(16)): PASS  [positive control]
-[P2] hostile controls: beta=0 vanishings=864/864 PASS; invariant linear readouts sum_v R=0: 504/504 PASS; K_(0,beta)=0 target-root auto-exclusion: PASS
+[P2] hostile controls: beta=0 vanishings=864/864 PASS; invariant linear readouts sum_v R=0: 504/504 PASS; K_(0,beta)=0 trivial-Fourier-character exclusion: PASS
 [P3] typed sheets: stalk root u (temporal collision fibre) and cut-bundle h (static quotient-stalk row, THM-2506 (28)) are DIFFERENT typed sheets (THM-2506 Sec.6; THM-2508 Sec.6 scope)
-[P3] licensed identification: THM-2478 (21a)-(21b) finite character-label alignment k=alpha ONLY; no septimal identification exists: stalk sheet moduli (13,13) are 13-primary, graft orbit 13^L mod 7=[1, 6] (parity subgroup, not F_7^*); cut phase rides the static leg, parity-pinned
+[P3] NO LICENSED CUT/COLLISION BRIDGE: THM-2478 (21a)-(21b) aligns a fixed old target-component label with a future collision label only; it does not type static cut alpha as temporal collision k.  The P4 alpha-alignment is external.  No septimal identification exists: stalk sheet moduli (13,13) are 13-primary, graft orbit 13^L mod 7=[1, 6] (parity subgroup, not F_7^*); cut phase rides the static leg, parity-pinned
 [P4] pairing[dual]: nonzero 432/432 over (tau,a,beta) in F_13^* x F_7^* x F_7^*; per cut character: beta=1:72/72,beta=2:72/72,beta=3:72/72,beta=4:72/72,beta=5:72/72,beta=6:72/72
 [P4] pairing[dual] witness (tau,a,beta)=(1,1,1): 100*P={z91^39:312,z91^52:-312}; nonzero_coeffs=2/72
 [P4] pairing[untwisted]: nonzero 432/432 over (tau,a,beta) in F_13^* x F_7^* x F_7^*; per cut character: beta=1:72/72,beta=2:72/72,beta=3:72/72,beta=4:72/72,beta=5:72/72,beta=6:72/72
 [P4] pairing[untwisted] witness (tau,a,beta)=(1,1,1): 100*P={z91^0:-624,z91^13:-312,z91^26:-624,z91^52:-312,z91^65:-312}; nonzero_coeffs=5/72
-[P4] no lawful (beta!=0) placement vanishes; beta=0 pairing=0 PASS; excluded target root contributes exactly 0 PASS; all twelve diagonal colour components nonzero PASS
-[P5] forward graft (K=1): twelve colours nonzero at L=2 and L=3; BV error L=2:2319/274625 > L=3:803/3570125 (decreasing) PASS
-[P5] full-stalk target neutrality at L=K+1 (multipliers 13^L,13^(L-K)) PASS; sharp failure at L=K PASS; grafted owner loop single entry M_OO=72/325>0 PASS
+[P4] displayed external control: no beta!=0 placement vanishes; beta=0 pairing=0 PASS; trivial alpha=0 character contributes 0 (this is NOT the physical coordinate statement C(0)=0); all twelve diagonal colour components nonzero PASS
+[P4-hostile] Boolean C=delta_2: same-root disjoint, positive service, C(0)=0, root colours nonzero 12/12; canonical defect primitive modes nonzero 5184/5184
+[P4-hostile] nevertheless external zeros dual=108/432, untwisted=108/432; dual tau=4 gives 36/36 zeros, first=(4, 1, 1); mechanism R_(4,a,c)(2)=0 for 42/42 teeth.  Full factor support != nonzero alpha-sum.
+[P4-hostile] exact zero-tau classes: dual={4: 36, 6: 36, 12: 36}; untwisted={1: 36, 3: 36, 7: 36}
+[P4-independent] direct finite-field Radon/DFT path (p=547:864/864,p=911:864/864,p=1093:864/864,p=2003:864/864,p=2549:864/864); aggregate beta!=0 nonzero=4320/4320; beta=0 zeros=720/720 PASS
+[P5] SEPARATE synthetic grid graft (K=1): twelve colours nonzero at L=2 and L=3; BV error L=2:2319/274625 > L=3:803/3570125 (decreasing) PASS
+[P5] full-stalk target neutrality at L=K+1 (multipliers 13^L,13^(L-K)) PASS; sharp failure at L=K PASS; separate grafted owner margin M_OO=72/325>0 PASS; these checks do not license or enrich the P4 external product
 [P6] kappa/carry audit: covariance (19) under all 91 CRT translations + one full gauge PASS; pairing moves under kappa (12/12 nonzero carries change it); exact kappa-dressing identity PASS
-[P6] invariant collapses: sum over H-torsor (kappa) = 0 PASS; sum over C-torsor (cut) = 0 PASS -- the invariant readout is dead (THM-2508 (20)-(21) at the paired level); only the equivariant pairing with the kappa/cut sidecars retained survives
-[P7] rebase boundary: forward graft keeps the old deep probe at x (sheet-free; d_0=1); rebasing at L=6>lambda=5 breaks the ancestry residue a mod 13 (root-uniform danger/safe hostile) -- the pairing therefore uses the forward graft only
-conventions: C1 canon-realized stalk instance; C2 ledger-anchored colour normalization J=Chat/169; C3 dual leg Chat(-alpha) (conjugate colour), untwisted variant reported; C4 scalar rational old current on the grid (Hilbert-valued lemma, coefficientwise)
-VERDICT: POSITIVE.  Every cut character beta!=0 pairs the 42-cut bank nonzero against the stalk's signed root-colour data on the licensed character-label alignment; target charge is retained (alpha=0 target root auto-excluded by K_(0,beta)=0, signed dual leg, forward-graft target neutrality at L>=K+1) and owner type is retained (source-refined owner loop survives the graft).
-SCOPE: the paired current exists as equivariant data only -- the kappa absolute phase and the cut label are retained sidecars (both torsor collapses vanish); the cut torsor's F_7^* action is not transported (parity subgroup only); no rebase past the deep valuation; no scalar row excluded; LRC(14) open.
-secondary: untwisted-alignment variant nonzero 432/432
-ALL EXACT CHECKS PASSED
+[P6] invariant collapses: sum over H-torsor (kappa) = 0 PASS; sum over C-torsor (cut) = 0 PASS -- the invariant readout is dead (THM-2508 (20)-(21) at the paired level); only the external equivariant pairing survives; no physical sidecar-retention conclusion follows
+[P7] rebase boundary: forward graft keeps the old deep probe at x (sheet-free; d_0=1); rebasing at L=6>lambda=5 breaks the ancestry residue a mod 13 (root-uniform danger/safe hostile) -- this is a separate graft control, not ancestry for P4
+conventions: C1 synthetic weighted control (not a realized row); C2 ledger-anchored J=Chat/169; C3 untyped external alpha alignment, dual and untwisted variants; C4 separate scalar grid graft
+VERDICT: FINITE-EXACT EXTERNAL CONTROL.  The displayed unrelated coefficient arrays have dual and untwisted pairing nonzero 432/432 in Q(zeta_91), with five-prime independent agreement.
+NON-UNIVERSALITY: C=delta_2 has full nontrivial root-colour support and the defect has full primitive support, but 108/432 pairings vanish in each convention.  Multiplying unrelated nonzero coefficients and then summing does not produce a current.
+NO CONSEQUENCE: no common ancestry cospan, physical current, target charge, owner retention, typed cut/collision bridge, live-row transplant, or LRC(14) branch exclusion has been proved.
+BRANCH-TRANSPLANT QUANTIFIER: for every live low-septimal row R in the 165-row bank, construct one positive-measure Boolean base Omega_R carrying collision, owner, word, deep and cut data from the SAME atoms, plus a lawful typed intertwiner; then choose a row-dependent but omega-independent (tau_R,a_R,beta_R) and prove integral_{Omega_R} sum_{alpha!=0} Gamma_R(omega,-alpha) Psi_{d_R(omega),tau_R,a_R}(alpha,beta_R) dmu != 0.  The product must be formed before marginalization/DFT/integration; pointwise factor support is insufficient because alpha and omega can cancel.
+ALL EXACT CHECKS PASSED; exact_require_checks=307307

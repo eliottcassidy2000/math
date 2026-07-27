@@ -1,91 +1,66 @@
 #!/usr/bin/env python3
-"""Exact instantiation of the THM-2508 Section 6 bilinear pairing on the
-THM-2471 canonical first-collision Boolean ancestry stalk with the THM-2478
-forward future-owner graft.
+"""Hostile-audited exact EXTERNAL CONTROL for the THM-2508 Section 6
+bilinear pairing.
 
-This executes THM-2507 Section 7's designated highest-leverage next test:
-whether the 42-cut toothpick partition (THM-2508 cut bundle R_{tau,a,c},
-eq (3); 6*7=42 cuts, 12*42=504 nonzero-slope components, 13 outputs each)
-can be placed on the same Boolean ancestry cospan as THM-2471/2478 without
-losing target charge or owner type.
+This file was first promoted as a physical pairing on one THM-2471/2478
+Boolean ancestry cospan.  That interpretation is false.  Its two inputs are
+independently constructed data:
+
+* a synthetic weighted root-correlation control copied from THM-2471's exact
+  companion (not an exhibited physical row of THM-2471); and
+* THM-2506's canonical two-row defect, which belongs to the already-empty
+  high-septimal branch.
+
+There is no common base point, atom product, owner label, or physical morphism
+joining them.  THM-2478 (21a)-(21b) licenses equality of a printed future
+collision-colour label with a fixed old target-component label.  It does NOT
+identify that temporal character with THM-2506's static cut-row character.
+Thus the summation label ``alpha`` below is an external algebraic alignment,
+not a typed-sheet bridge.
 
 All arithmetic is exact: integers, Fractions, and reduction modulo Phi_91
-(resp. Phi_13) in Z[zeta_91].  Embeddings: zeta_13 = zeta_91^7,
-xi_7 = zeta_91^13.  Q(zeta_91) is a field (Phi_91 irreducible), so a
-reduced vector is zero iff the element is zero.
+(resp. Phi_13) in Z[zeta_91].  Embeddings: zeta_13 = zeta_91^7 and
+xi_7 = zeta_91^13.  Q(zeta_91) is a field, so a reduced vector is zero iff
+the cyclotomic element is zero.
 
-Equation numbers refer to the named theorem files:
-
-PART 1  THM-2471 stalk: the realized finite Boolean ancestry stalk
-        (Sec. 4, eq (28)-(32)); service exactly 169*I_r (eq (7)); all
-        twelve nonzero root colours (eq (9)); signed ledger
-        sum_{k!=0} J(k) = -I_r and J(0)=I_r (eq (10)); energy floor
-        (eq (11)); source-refined owner loop M_{O,O}=169*I_r
-        (eq (36)-(37)) versus the rich arrival matrix; deep-root sidecar
-        d_0 (eq (44)-(47)).
-PART 2  THM-2508 cut bank on the canonical THM-2506 two-row defect
-        (THM-2506 eq (23)-(25)): positive control = the full 5,184-mode
-        nonvanishing + factorization Psi = K * dtilde (THM-2508
-        eq (13)-(16)); hostile controls = the 864 zero-cut-character
-        vanishings (eq (20)) and the 504 invariant linear readouts
-        (eq (21)).
-PART 3  Typed-sheet audit: the stalk root index u (temporal collision
-        fibre) and the cut bundle's h (static quotient-stalk row,
-        THM-2506 eq (28)) are DIFFERENT typed sheets (THM-2506 Sec. 6;
-        THM-2508 Sec. 6 scope list).  Licensed identifications: only the
-        THM-2478 (21a)-(21b) finite character-label alignment k=alpha.
-        Septimal: the stalk carries no F_7 sheet (d, R are 13-primary)
-        and the graft multiplier 13^L reaches only {+1,-1} mod 7
-        (THM-2478 Sec. 2 parity clause), so the cut torsor is NOT
-        transported; the cut phase stays on the static leg with parity
-        pinned (even L => B=+1).
-PART 4  The pairing.  For the licensed alignment k=alpha define, in
-        Q(zeta_91),
+PART 1  Synthetic THM-2471 companion control: service 169*I_r, twelve
+        nonzero root colours, signed ledger, energy floor, and separately
+        calculated owner/deep margins.
+PART 2  THM-2508 cut bank on THM-2506's canonical two-row defect: all 5,184
+        primitive modes nonzero and factorized; 864 zero-cut-character and
+        504 invariant-readout hostile controls.
+PART 3  Typed-sheet obstruction: temporal root u and static cut row h are
+        different sheets.  The cut torsor is not transported by the graft.
+PART 4  External pairing
           P_{tau,a}(beta) = sum_{alpha in F_13^*}
-                            Chat(-alpha) * Psi_{tau,a}(alpha,beta)
-        (dual leg Chat(-alpha) = conjugate stalk colour; the untwisted
-        variant with Chat(+alpha) is also computed).  beta=0 pairing
-        must vanish (THM-2508 eq (20)); the alpha=0 (target-root) term
-        is auto-excluded: K_{0,beta}=0 for beta!=0 and sum_v R=0, so
-        the excluded target root contributes exactly zero -- matching
-        the stalk's C(0)=0 target-root exclusion.
-PART 5  THM-2478 forward graft at the first lawful delay L=K+1: all
-        twelve diagonal colour components nonzero on an exact finite
-        grid with decreasing BV error; full-stalk target neutrality
-        (eq (19a)) at L=K+1 and its sharp failure at L=K; owner-loop
-        (owner-type) retention under the graft.
-PART 6  kappa/carry audit: THM-2508 covariance (19) verified under all
-        pure CRT translations and one full gauge; the pairing is NOT
-        gauge-invariant -- it transforms by the per-colour kappa phase
-        zeta^{-alpha H} (13-side) and the global cut phase xi^{beta a C}
-        (7-side); the exact kappa-dressing identity holds, and BOTH
-        torsor collapses (average over H in F_13, average over C in
-        F_7) vanish identically: the invariant readout is dead
-        (THM-2508 eq (20)-(21) at the paired level) while the
-        equivariant pairing survives.
-PART 7  Rebase boundary replay (THM-2478 eq (23)-(26)): the forward
-        graft keeps the old deep probe at x (sheet-free; for the
-        realized stalk d_0=1 so a mod d_0 is trivially retained), while
-        rebasing at L > lambda breaks the ancestry residue a mod
-        13^{L-lambda} (root-uniform danger/safe hostile).
+                            Chat(-alpha) Psi_{tau,a}(alpha,beta).
+        The displayed controls give 432/432 nonzero placements in both leg
+        conventions.  K_{0,beta}=0 excludes the trivial Fourier character
+        alpha=0; it says nothing about the physical coordinate value C(0).
+        A Boolean hostile C=delta_2 has full nontrivial root-colour support,
+        while the defect has full primitive-mode support, yet 108/432
+        pairings vanish in each convention (36/36 at dual tau=4).  Full
+        factor support therefore does not prevent cross-alpha cancellation.
+        A separate direct evaluator checks the displayed 432/432 result at
+        five split primes in addition to the Q(zeta_91) proof.
+PART 5  Separate finite-grid graft, target-neutrality, and owner-loop controls.
+        These margins are not factors of the PART 4 external product.
+PART 6  Exact covariance, kappa dressing, and both torsor collapses for the
+        external product.  This is equivariant algebraic data, not a physical
+        current.
+PART 7  Separate forward-graft/rebase boundary replay.
 
-Conventions adopted where the files leave a choice (logged in output):
- C1  Stalk instance: THM-2471 Sec. 4 specifies the stalk structurally;
-     the canon-realized numeric instance is its exact companion's
-     weighted control stalk (4 strata, 5 Boolean sheets, 7 atoms),
-     reconstructed here verbatim.
- C2  Colour normalization: THM-2471 eq (8)+(13) give J(k) =
-     Chat_unnorm(k)/169; eq (15) states Chat = 13 J under the file's
-     normalized-correlation convention.  The ledger eq (10)
-     (J(0)=I_r, sum_{k!=0} J(k) = -I_r) is taken as the anchor; the
-     pairing uses the unnormalized Chat (a fixed positive rational
-     multiple of J -- nonvanishing statements are unaffected).
- C3  Dual-leg convention: bilinear pairing against Chat(-alpha)
-     (= conjugate colour for real packets, THM-2471 after eq (13));
-     the untwisted Chat(+alpha) variant is reported alongside.
- C4  The finite-grid graft uses a scalar rational old current
-     (THM-2478 Sec. 1 lemma is Hilbert-valued BV, applied
-     coefficientwise); the cyclotomic pairing itself is PART 4, exact.
+Conventions:
+ C1  The numeric root object is THM-2471's companion
+     ``weighted_root_control`` reconstructed verbatim: a synthetic exact
+     positive control, not a canon-realized physical row.
+ C2  The ledger anchors J=Chat_unnorm/169; fixed nonzero scaling does not
+     affect nonvanishing.
+ C3  Cut alpha is numerically aligned with the root-control colour alpha.
+     No theorem identifies their typed sheets.  Both Chat(-alpha) (dual) and
+     Chat(+alpha) (untwisted) are reported.
+ C4  The separate finite-grid graft uses a scalar rational old current; it
+     does not turn PART 4 into a physical product.
 """
 
 from fractions import Fraction as F
@@ -93,9 +68,12 @@ from fractions import Fraction as F
 P13 = 13
 P7 = 7
 N91 = 91
+CHECKS = 0
 
 
 def require(condition, message):
+    global CHECKS
+    CHECKS += 1
     if not condition:
         raise RuntimeError(message)
 
@@ -186,9 +164,12 @@ def phi13_reduce(values, colour):
 # ------------------------------------------------- PART 1: the THM-2471 stalk
 
 def build_stalk():
-    """THM-2471 Sec. 4 finite Boolean ancestry stalk (canon-realized
-    instance, reconstructed verbatim from the theorem's exact companion):
-    4 base strata, root u in F_13, 5 Boolean sheets, 7 atom labels."""
+    """Synthetic weighted control from THM-2471's exact companion.
+
+    Its 4 strata, root u in F_13, 5 Boolean sheets, and 7 atom labels verify
+    the displayed stalk identities, but no theorem identifies this numeric
+    object with a physical THM-2471 row.
+    """
     strata, sheets, atoms = 4, 5, 7
     fa = [[[0] * sheets for _ in range(P13)] for _ in range(strata)]
     ea = [[[0] * sheets for _ in range(P13)] for _ in range(strata)]
@@ -222,7 +203,7 @@ def build_stalk():
                    for s in range(P13)]
     service = sum(correlation)
     collision = service / (P13 * P13)   # I_r; service = 169*I_r (eq (7))
-    require(correlation[0] == 0, "C(0)=0 target-root exclusion (eq (14))")
+    require(correlation[0] == 0, "C(0)=0 same-root disjointness coordinate (eq (14))")
     require(service > 0, "positive service M=169*I_r (eq (7))")
     require(service == sum((sum(u_w[y]) * sum(v_w[y]) for y in range(strata)),
                            F(0)) / strata, "service identity (eq (6)-(7))")
@@ -398,9 +379,9 @@ def cut_bank_controls(defect):
                 invariant_checks += 1
     require(invariant_checks == 504, "component census")
 
-    # Target-root auto-exclusion: K_{0,beta}=0 for beta!=0, so the
-    # alpha=0 mode (the stalk's excluded target root J(0)=+I_r) never
-    # enters a beta!=0 pairing.
+    # Trivial-character exclusion: K_{0,beta}=0 for beta!=0, so the alpha=0
+    # Fourier mode never enters a beta!=0 pairing.  This is a statement about
+    # a character index, not the separate physical coordinate value C(0).
     for beta in range(1, P7):
         require(dict_to_reduced(kernel_dict(0, beta)) == ZERO72,
                 "K_{0,beta} must vanish for beta!=0")
@@ -483,12 +464,13 @@ def pairing_census(stalk, defect, kd_cache):
                 pairing_raw(stalk, defect, tau, a, 0, -1)) == ZERO72,
                 "beta=0 pairing must vanish")
 
-    # alpha=0 exclusion at the paired level: adding the target-root term
-    # Chat(0)*Psi(0,beta) changes nothing (it is exactly zero).
+    # alpha=0 exclusion at the paired level: adding the trivial-character
+    # term Chat(0)*Psi(0,beta) changes nothing.  Do not identify this index
+    # with the physical coordinate condition C(0)=0.
     for beta in range(1, P7):
         extra = dmul(chat_scaled_dict(stalk, 0), psi_dict(defect, 1, 1, 0, beta))
         require(dict_to_reduced(extra) == ZERO72,
-                "excluded target root must contribute exactly zero")
+                "trivial Fourier character must contribute exactly zero")
 
     # Consistency: factorized pairing equals direct-Psi pairing at witness.
     direct = {}
@@ -501,14 +483,204 @@ def pairing_census(stalk, defect, kd_cache):
             dict_to_reduced(pairing_raw(stalk, defect, 1, 1, 1, -1, kd_cache)),
             "direct/factorized pairing consistency")
 
-    # Diagonal components: each single-colour term Chat(-alpha)Psi(alpha,beta)
-    # is a product of nonzero field elements, hence nonzero (THM-2478 (21):
-    # every future collision colour carries the old component).
+    # Diagonal factors are individually nonzero in this external alignment.
+    # The delta_2 hostile below shows that their sum can nevertheless cancel;
+    # THM-2478 (21) does not type the cut character as a collision character.
     for alpha in range(1, P13):
         term = dict_to_reduced(dmul(chat_scaled_dict(stalk, (-alpha) % P13),
                                     kd_cache[(alpha, 1, 1, 1)]))
         require(term != ZERO72, "diagonal colour component vanished")
     return results, zero_pairs
+
+
+def delta2_hostile(defect):
+    """Boolean full-support factors whose external alpha-sum cancels.
+
+    Take one predecessor packet at root 0 and one disjoint arrival packet at
+    root 2.  Its correlation is C=delta_2, so every nontrivial root Fourier
+    colour is a monomial and hence nonzero.  For the dual convention,
+
+      sum_{alpha != 0} zeta_13^(2 alpha) Psi(alpha,beta)
+        = 13 sum_c R_{tau,a,c}(2) xi_7^(-beta c),
+
+    because every R component has total sum zero.  At tau=4 every one of the
+    42 values R_{4,a,c}(2) is zero, so all 36 (a,beta) placements vanish.
+    """
+    arrival = [F(0)] * P13
+    predecessor = [F(0)] * P13
+    arrival[2] = F(1)
+    predecessor[0] = F(1)
+    require(all(arrival[r] * predecessor[r] == 0 for r in range(P13)),
+            "delta_2 packets must be same-root disjoint")
+    correlation = [sum(arrival[(r + shift) % P13] * predecessor[r]
+                       for r in range(P13)) for shift in range(P13)]
+    require(correlation == [F(int(s == 2)) for s in range(P13)],
+            "Boolean packets must give C=delta_2")
+    require(correlation[0] == 0 and sum(correlation) > 0,
+            "delta_2 must have C(0)=0 and positive service")
+    for alpha in range(1, P13):
+        require(any(phi13_reduce(correlation, alpha)),
+                f"delta_2 root colour vanished at alpha={alpha}")
+
+    hostile_stalk = {"correlation": correlation}
+    zeros = {}
+    zero_sets = {}
+    for twist, label in ((-1, "dual"), (1, "untwisted")):
+        placements = []
+        for tau in range(1, P13):
+            for a in range(1, P7):
+                for beta in range(1, P7):
+                    value = dict_to_reduced(
+                        pairing_raw(hostile_stalk, defect, tau, a, beta, twist))
+                    if value == ZERO72:
+                        placements.append((tau, a, beta))
+        zeros[label] = len(placements)
+        zero_sets[label] = placements
+        require(len(placements) == 108,
+                f"delta_2 {label} exact zero census changed")
+
+    zero_tau = {}
+    for label, placements in zero_sets.items():
+        zero_tau[label] = {
+            tau: sum(t == tau for t, _a, _beta in placements)
+            for tau in range(1, P13)
+            if any(t == tau for t, _a, _beta in placements)
+        }
+    require(zero_tau["dual"] == {4: 36, 6: 36, 12: 36},
+            "delta_2 dual zero-tau classification changed")
+    require(zero_tau["untwisted"] == {1: 36, 3: 36, 7: 36},
+            "delta_2 untwisted zero-tau classification changed")
+
+    tau4 = [(tau, a, beta) for tau, a, beta in zero_sets["dual"] if tau == 4]
+    require(len(tau4) == 36, "delta_2 dual tau=4 must vanish for all a,beta")
+    radon_teeth = 0
+    for a in range(1, P7):
+        for c in range(P7):
+            require(radon(defect, 4, a, c)[2] == 0,
+                    f"delta_2 cancellation mechanism failed at a={a},c={c}")
+            radon_teeth += 1
+    require(radon_teeth == 42, "delta_2 Radon-tooth census")
+    return zeros, zero_tau, tau4[0], radon_teeth
+
+
+def prime_factors(number):
+    factors = []
+    candidate = 2
+    while candidate * candidate <= number:
+        if number % candidate == 0:
+            factors.append(candidate)
+            while number % candidate == 0:
+                number //= candidate
+        candidate += 1
+    if number > 1:
+        factors.append(number)
+    return factors
+
+
+def is_prime(number):
+    if number < 2:
+        return False
+    divisor = 2
+    while divisor * divisor <= number:
+        if number % divisor == 0:
+            return False
+        divisor += 1
+    return True
+
+
+def primitive_root(prime):
+    factors = prime_factors(prime - 1)
+    for candidate in range(2, prime):
+        if all(pow(candidate, (prime - 1) // q, prime) != 1 for q in factors):
+            return candidate
+    raise RuntimeError(f"no primitive root modulo {prime}")
+
+
+def independent_five_prime_audit(stalk, defect):
+    """Independent direct Radon/DFT evaluation at five p=1 (mod 91).
+
+    This path does not use Phi_91 reduction, psi_dict, dtilde_dict,
+    kernel_dict, pairing_raw, or kd_cache.  It is only an independent check;
+    exact nonvanishing is supplied by the Q(zeta_91) computation above.
+    """
+    primes = (547, 911, 1093, 2003, 2549)
+    direct_radon = {}
+    for tau in range(1, P13):
+        for a in range(1, P7):
+            for c in range(P7):
+                direct_radon[(tau, a, c)] = tuple(
+                    sum(defect[(v - tau * ((a * r + c) % P7)) % P13][r]
+                        for r in range(P7))
+                    for v in range(P13))
+
+    total_nonzero = 0
+    total_beta0_zero = 0
+    per_prime = {}
+    for prime in primes:
+        require(is_prime(prime) and (prime - 1) % N91 == 0,
+                f"invalid split prime {prime}")
+        generator = primitive_root(prime)
+        root91 = pow(generator, (prime - 1) // N91, prime)
+        require(pow(root91, N91, prime) == 1 and
+                pow(root91, N91 // P7, prime) != 1 and
+                pow(root91, N91 // P13, prime) != 1,
+                f"root does not have exact order 91 modulo {prime}")
+        root13 = pow(root91, P7, prime)
+        root7 = pow(root91, P13, prime)
+
+        correlation100 = []
+        for value in stalk["correlation"]:
+            scaled = value * 100
+            require(scaled.denominator == 1, "five-prime correlation scaling")
+            correlation100.append(int(scaled) % prime)
+        chat = {}
+        for colour in range(P13):
+            chat[colour] = sum(
+                correlation100[s] * pow(root13, (-colour * s) % P13, prime)
+                for s in range(P13)) % prime
+
+        psi = {}
+        for tau in range(1, P13):
+            for a in range(1, P7):
+                for alpha in range(1, P13):
+                    for beta in range(P7):
+                        value = 0
+                        for c in range(P7):
+                            cut_phase = pow(root7, (-beta * c) % P7, prime)
+                            row = direct_radon[(tau, a, c)]
+                            value += cut_phase * sum(
+                                row[v] * pow(root13, (-alpha * v) % P13, prime)
+                                for v in range(P13))
+                        psi[(tau, a, alpha, beta)] = value % prime
+
+        prime_nonzero = 0
+        prime_beta0_zero = 0
+        for twist in (-1, 1):
+            for tau in range(1, P13):
+                for a in range(1, P7):
+                    for beta in range(1, P7):
+                        value = sum(
+                            chat[(twist * alpha) % P13] *
+                            psi[(tau, a, alpha, beta)]
+                            for alpha in range(1, P13)) % prime
+                        require(value != 0,
+                                f"five-prime external pairing zero mod {prime} at "
+                                f"{twist,tau,a,beta}")
+                        prime_nonzero += 1
+                    value0 = sum(
+                        chat[(twist * alpha) % P13] * psi[(tau, a, alpha, 0)]
+                        for alpha in range(1, P13)) % prime
+                    require(value0 == 0,
+                            f"five-prime beta=0 hostile failed mod {prime}")
+                    prime_beta0_zero += 1
+        require(prime_nonzero == 864 and prime_beta0_zero == 144,
+                f"five-prime census failed mod {prime}")
+        per_prime[prime] = (prime_nonzero, prime_beta0_zero)
+        total_nonzero += prime_nonzero
+        total_beta0_zero += prime_beta0_zero
+    require(total_nonzero == 4320 and total_beta0_zero == 720,
+            "five-prime aggregate census")
+    return primes, per_prime, total_nonzero, total_beta0_zero
 
 
 # --------------------------------------------- PART 5: forward graft, exact grid
@@ -711,21 +883,21 @@ def fmt72(vec, limit=8):
 
 
 def main():
-    print("LRC14 CUT-BUNDLE x FIRST-COLLISION ANCESTRY PAIRING -- EXACT COMPANION")
-    print("test: THM-2507 Sec.7 highest-leverage next test; pairing named in THM-2508 Sec.6")
-    print("objects: THM-2471 Boolean ancestry stalk + THM-2478 forward graft"
-          " x THM-2508 cut bundle on the THM-2506 canonical defect")
+    print("LRC14 CUT-BUNDLE x ROOT-CORRELATION PAIRING -- HOSTILE-AUDITED EXACT CONTROL")
+    print("status: FINITE-EXACT EXTERNAL CONTROL; not a physical/common-ancestry current")
+    print("objects: synthetic weighted control from THM-2471's companion EXTERNALLY"
+          " multiplied by THM-2508's cut bundle on THM-2506's high-branch defect")
 
     stalk = build_stalk()
-    print("[P1] stalk: service=169*I_r with I_r="
+    print("[P1] synthetic root control: service=169*I_r with I_r="
           f"{stalk['collision']}; service={stalk['service']}; C(0)=0; "
           f"colours_nonzero=12/12; signed_ledger=sum_(k!=0)J(k)=-I_r=PASS")
     print(f"[P1] energy_floor J>=I^2/12: {stalk['j_energy']}>="
           f"{stalk['collision'] ** 2 / 12}: PASS; "
           f"arrival_matrix_support={stalk['arrival_support']}; "
-          f"source_matrix=owner loop only, M_OO={stalk['owner_loop']}=169*I_r")
-    print(f"[P1] deep sidecar: d={stalk['d_norm']}, C_deep=2*13^5, d_0="
-          f"{stalk['d0']} (a mod d_0 trivially retained on the forward leg)")
+          f"separate source-margin owner loop M_OO={stalk['owner_loop']}=169*I_r")
+    print(f"[P1] separate deep margin: d={stalk['d_norm']}, C_deep=2*13^5, d_0="
+          f"{stalk['d0']}; neither owner nor deep labels occur in the P4 product")
 
     defect = canonical_defect()
     kd_cache, modes, zeros, invariants = cut_bank_controls(defect)
@@ -733,14 +905,16 @@ def main():
           " nonzero+factorized (eq (14)-(16)): PASS  [positive control]")
     print(f"[P2] hostile controls: beta=0 vanishings={zeros}/864 PASS; "
           f"invariant linear readouts sum_v R=0: {invariants}/504 PASS; "
-          "K_(0,beta)=0 target-root auto-exclusion: PASS")
+          "K_(0,beta)=0 trivial-Fourier-character exclusion: PASS")
 
     orbit = typed_sheet_audit(stalk)
     print("[P3] typed sheets: stalk root u (temporal collision fibre) and cut-"
           "bundle h (static quotient-stalk row, THM-2506 (28)) are DIFFERENT"
           " typed sheets (THM-2506 Sec.6; THM-2508 Sec.6 scope)")
-    print("[P3] licensed identification: THM-2478 (21a)-(21b) finite character-"
-          "label alignment k=alpha ONLY; no septimal identification exists:"
+    print("[P3] NO LICENSED CUT/COLLISION BRIDGE: THM-2478 (21a)-(21b) aligns a"
+          " fixed old target-component label with a future collision label only;"
+          " it does not type static cut alpha as temporal collision k.  The P4"
+          " alpha-alignment is external.  No septimal identification exists:"
           f" stalk sheet moduli (13,13) are 13-primary, graft orbit 13^L mod 7={orbit}"
           " (parity subgroup, not F_7^*); cut phase rides the static leg, parity-pinned")
 
@@ -757,18 +931,40 @@ def main():
     if zero_pairs:
         print(f"[P4] EXACT ZERO PLACEMENTS: {zero_pairs}")
     else:
-        print("[P4] no lawful (beta!=0) placement vanishes; beta=0 pairing=0 PASS;"
-              " excluded target root contributes exactly 0 PASS;"
+        print("[P4] displayed external control: no beta!=0 placement vanishes;"
+              " beta=0 pairing=0 PASS; trivial alpha=0 character contributes 0"
+              " (this is NOT the physical coordinate statement C(0)=0);"
               " all twelve diagonal colour components nonzero PASS")
+
+    hostile_zeros, hostile_tau, hostile_first, hostile_teeth = delta2_hostile(defect)
+    print("[P4-hostile] Boolean C=delta_2: same-root disjoint, positive service,"
+          " C(0)=0, root colours nonzero 12/12; canonical defect primitive modes"
+          " nonzero 5184/5184")
+    print(f"[P4-hostile] nevertheless external zeros dual={hostile_zeros['dual']}/432,"
+          f" untwisted={hostile_zeros['untwisted']}/432; dual tau=4 gives 36/36"
+          f" zeros, first={hostile_first}; mechanism R_(4,a,c)(2)=0 for"
+          f" {hostile_teeth}/42 teeth.  Full factor support != nonzero alpha-sum.")
+    print(f"[P4-hostile] exact zero-tau classes: dual={hostile_tau['dual']};"
+          f" untwisted={hostile_tau['untwisted']}")
+
+    primes, prime_census, prime_nonzero, prime_beta0 = \
+        independent_five_prime_audit(stalk, defect)
+    prime_line = ",".join(
+        f"p={p}:{prime_census[p][0]}/864" for p in primes)
+    print(f"[P4-independent] direct finite-field Radon/DFT path ({prime_line});"
+          f" aggregate beta!=0 nonzero={prime_nonzero}/4320;"
+          f" beta=0 zeros={prime_beta0}/720 PASS")
 
     errors = graft_colour_grid(stalk)
     graft_neutrality(stalk)
     grafted = graft_owner_loop(stalk)
-    print(f"[P5] forward graft (K=1): twelve colours nonzero at L=2 and L=3;"
+    print(f"[P5] SEPARATE synthetic grid graft (K=1): twelve colours nonzero"
+          " at L=2 and L=3;"
           f" BV error L=2:{errors[2]} > L=3:{errors[3]} (decreasing) PASS")
     print("[P5] full-stalk target neutrality at L=K+1 (multipliers 13^L,13^(L-K))"
           " PASS; sharp failure at L=K PASS;"
-          f" grafted owner loop single entry M_OO={grafted}>0 PASS")
+          f" separate grafted owner margin M_OO={grafted}>0 PASS; these checks"
+          " do not license or enrich the P4 external product")
 
     changed = kappa_audit(stalk, defect, kd_cache)
     print(f"[P6] kappa/carry audit: covariance (19) under all 91 CRT translations"
@@ -776,39 +972,46 @@ def main():
           f" ({changed}/12 nonzero carries change it); exact kappa-dressing identity PASS")
     print("[P6] invariant collapses: sum over H-torsor (kappa) = 0 PASS;"
           " sum over C-torsor (cut) = 0 PASS -- the invariant readout is dead"
-          " (THM-2508 (20)-(21) at the paired level); only the equivariant"
-          " pairing with the kappa/cut sidecars retained survives")
+          " (THM-2508 (20)-(21) at the paired level); only the external"
+          " equivariant pairing survives; no physical sidecar-retention"
+          " conclusion follows")
 
     lost_modulus = rebase_boundary()
     print("[P7] rebase boundary: forward graft keeps the old deep probe at x"
           " (sheet-free; d_0=1); rebasing at L=6>lambda=5 breaks the ancestry"
           f" residue a mod {lost_modulus} (root-uniform danger/safe hostile) --"
-          " the pairing therefore uses the forward graft only")
+          " this is a separate graft control, not ancestry for P4")
 
-    print("conventions: C1 canon-realized stalk instance; C2 ledger-anchored"
-          " colour normalization J=Chat/169; C3 dual leg Chat(-alpha)"
-          " (conjugate colour), untwisted variant reported; C4 scalar rational"
-          " old current on the grid (Hilbert-valued lemma, coefficientwise)")
+    print("conventions: C1 synthetic weighted control (not a realized row);"
+          " C2 ledger-anchored J=Chat/169; C3 untyped external alpha alignment,"
+          " dual and untwisted variants; C4 separate scalar grid graft")
 
     dual_nonzero = results["dual"][0]
     untw_nonzero = results["untwisted"][0]
-    if dual_nonzero == 432 and not zero_pairs:
-        print("VERDICT: POSITIVE.  Every cut character beta!=0 pairs the 42-cut"
-              " bank nonzero against the stalk's signed root-colour data on the"
-              " licensed character-label alignment; target charge is retained"
-              " (alpha=0 target root auto-excluded by K_(0,beta)=0, signed dual"
-              " leg, forward-graft target neutrality at L>=K+1) and owner type"
-              " is retained (source-refined owner loop survives the graft).")
-        print("SCOPE: the paired current exists as equivariant data only -- the"
-              " kappa absolute phase and the cut label are retained sidecars"
-              " (both torsor collapses vanish); the cut torsor's F_7^* action"
-              " is not transported (parity subgroup only); no rebase past the"
-              " deep valuation; no scalar row excluded; LRC(14) open.")
-        print(f"secondary: untwisted-alignment variant nonzero {untw_nonzero}/432")
+    if dual_nonzero == 432 and untw_nonzero == 432 and not zero_pairs:
+        print("VERDICT: FINITE-EXACT EXTERNAL CONTROL.  The displayed unrelated"
+              " coefficient arrays have dual and untwisted pairing nonzero"
+              " 432/432 in Q(zeta_91), with five-prime independent agreement.")
+        print("NON-UNIVERSALITY: C=delta_2 has full nontrivial root-colour support"
+              " and the defect has full primitive support, but 108/432 pairings"
+              " vanish in each convention.  Multiplying unrelated nonzero"
+              " coefficients and then summing does not produce a current.")
+        print("NO CONSEQUENCE: no common ancestry cospan, physical current, target"
+              " charge, owner retention, typed cut/collision bridge, live-row"
+              " transplant, or LRC(14) branch exclusion has been proved.")
+        print("BRANCH-TRANSPLANT QUANTIFIER: for every live low-septimal row R in"
+              " the 165-row bank, construct one positive-measure Boolean base"
+              " Omega_R carrying collision, owner, word, deep and cut data from"
+              " the SAME atoms, plus a lawful typed intertwiner; then choose a"
+              " row-dependent but omega-independent (tau_R,a_R,beta_R) and prove"
+              " integral_{Omega_R} sum_{alpha!=0} Gamma_R(omega,-alpha)"
+              " Psi_{d_R(omega),tau_R,a_R}(alpha,beta_R) dmu != 0.  The product"
+              " must be formed before marginalization/DFT/integration; pointwise"
+              " factor support is insufficient because alpha and omega can cancel.")
     else:
         print("VERDICT: NEGATIVE/PARTIAL -- exact zero placements listed above;"
               " see zero set for the breaking sidecar.")
-    print("ALL EXACT CHECKS PASSED")
+    print(f"ALL EXACT CHECKS PASSED; exact_require_checks={CHECKS}")
 
 
 if __name__ == "__main__":

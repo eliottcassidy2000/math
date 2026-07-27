@@ -9,6 +9,48 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-281 (2026-07-27, THM-2547 cut/root pairing) -- a product of unrelated Fourier controls was promoted as a physical current
+
+- **What was claimed:** THM-2547 multiplied the synthetic weighted
+  root-correlation control from THM-2471's companion by THM-2506's canonical
+  two-row high-septimal defect, found all `432/432` external pairings nonzero,
+  and called the result the first physical cut-character current on one
+  owner-retaining ancestry cospan. It treated THM-2478's printed `k=alpha`
+  label equality as a typed bridge and read `K_{0,beta}=0` as target-root
+  exclusion.
+- **First failed implications:** the two inputs have no exhibited common
+  Boolean base, atomwise product, or physical morphism. THM-2478 (21a)-(21b)
+  aligns a future collision colour with one fixed old target-component label;
+  it does not identify that temporal sheet with the static cut-row character.
+  Moreover, `alpha=0` is the trivial Fourier character, whereas `C(0)` is a
+  physical root-coordinate value. Owner and deep margins were calculated
+  separately and never occurred in the pairing.
+- **Minimal hostile mechanism:** one predecessor packet at root `0` and one
+  disjoint arrival packet at root `2` give the Boolean correlation
+  `C=delta_2`. All twelve nontrivial root colours are nonzero, and the same
+  defect has all `5,184` primitive modes nonzero, but the external dual sum
+  vanishes in `108/432` placements (in particular all 36 `(a,beta)` at
+  `tau=4`). Here `R_{4,a,c}(2)=0` for all 42 `(a,c)`, so character
+  orthogonality forces the whole alpha-sum to zero. Nonzero factors do not
+  prevent cross-alpha cancellation.
+- **Strongest survivor and repair:** for the specifically displayed synthetic
+  `C=(6/25)(delta_3+delta_6+delta_10+delta_12)` and canonical `d`, both dual
+  and untwisted external pairings really are nonzero `432/432` in
+  `Q(zeta_91)`. A separate direct implementation agrees at the five split
+  primes `547,911,1093,2003,2549`; covariance and both torsor collapses also
+  survive as facts about this external array. THM-2547 is downgraded to
+  `FINITE-EXACT EXTERNAL CONTROL + REFUTED PHYSICAL INTERPRETATION` and gains
+  the exact `delta_2` non-universality theorem. No physical current, target or
+  owner retention, typed bridge, live-row transplant, or LRC(14) exclusion
+  follows.
+- **Rule / missing quantifier:** multiply cut and collision data on one common
+  ancestry base before marginalization, DFT, and integration. A live-branch
+  theorem must quantify over every one of the 165 rows, construct same-atom
+  owner/word/deep/cut data and a lawful typed intertwiner, choose a
+  row-dependent but ancestry-point-independent cut probe, and prove the
+  resulting integrated sum nonzero. Full support alone is never a
+  noncancellation theorem.
+
 ## MISTAKE-280 (2026-07-27, THM-2545 ID collision) -- a theorem ID was claimed without re-pulling at write time
 
 - What was done: opus canonized "positive cut-character ancestry pairing"
