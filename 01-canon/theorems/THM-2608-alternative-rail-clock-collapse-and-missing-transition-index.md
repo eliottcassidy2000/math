@@ -338,7 +338,69 @@ supplies `iota`.  Without the adjacent-clock clause, (23) gives a false
 positive; without the next-target index, the thirteen maps (14) remain an
 unresolved reference torsor.  These are independent obstructions.
 
-## 7. Verification and exact scope
+## 7. What THM-2599/2604 contribute -- and why it is not yet `q'`
+
+The new physical-root theorems reach exactly the boundary of (29).
+THM-2604 gives, on every scalar-cover row, a later target-active occurrence
+in the same physical root `h` as a canonical selected head.  Its translated
+corollary is deliberately stronger in the shift variable: for the selected
+big role, every pair
+
+```text
+(physical root h, target translate s) in F_13^2             (31)
+```
+
+has a positive later one-factor realization.  Thus the root label does not
+determine a target-shift label.  Before further conditioning, the exact
+root/shift incidence is complete rather than the graph of a map.
+
+THM-2599 adds the actual oppositely shifted blocker.  On a selected positive
+wall chamber inside root `h`, it retains a nonempty proper profile
+
+```text
+S_h={s: target-danger/blocker-safe at shift s},
+1<=|S_h|<=4.                                                (32)
+```
+
+It also embeds every finite ordered **physical-root** word in one orbit.
+These are genuine advances toward (29), but their labels remain distinct:
+
+```text
+h:       physical inverse-root digit;
+s:       coordinate-translation state;
+q':      THM-2585 inverse target-Fourier section, s_5=-q',
+         in one fixed target direction and endpoint gauge.  (33)
+```
+
+If a positive Boolean ancestry sheet underneath one entry of (2) is fixed,
+the rational cross-mixing argument can append a later THM-2599 chamber in
+the same physical root `r`.  This yields a legitimate *candidate-shaped*
+three-index incidence
+
+```text
+(q,r,s) on one extended orbit.                              (34)
+```
+
+What is not proved is that the later `s` in (34) is the next THM-2585
+section `-q'` in the same target direction/gauge, that its owner clock is
+`ell+1`, or that seven such extensions share the intermediate endpoint
+rather than merely the physical digit.  Choosing one `s in S_h` is again a
+vertex selector; retaining all of `S_h` gives an incidence relation, not an
+ordered endpoint correspondence.
+
+Therefore THM-2599/2604 identify the cheapest plausible source of the third
+index in (29), but do not yet type it as `q'_in`.  The minimal remaining
+sidecar is a target-gauge/clock intertwiner proving
+
+```text
+s=-q' in the THM-2585 action and ell_later=ell+1             (35)
+```
+
+on the same extended ancestry carrier.  Once (35) is available, their
+rootwise positivity can populate `L_ell(q,r,q')`; without it, the complete
+relation (31) is a sharp no-selection hostile.
+
+## 8. Verification and exact scope
 
 Run
 
