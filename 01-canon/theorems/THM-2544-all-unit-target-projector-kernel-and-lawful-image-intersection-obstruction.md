@@ -13,14 +13,15 @@ status: >
   switches, including the designated 168 nonzero-target switches.  A
   169-term current supported on the zero-septimal CRT section has full
   unrestricted target support and identically zero all-unit target
-  aggregate.  Consequently even the exact value of A does not determine B
-  on the arbitrary current space.  For actual THM-2334 currents, Uc=A and
-  Jc=B exactly, so all remaining force must come from the constrained lawful
-  Abel-current image: the strong uniform condition is avoidance of the
-  nonzero-target kernel, while the rowwise existential condition has a
-  different quantifier.  No hostile vector is proved lawful, no covering row
-  is exhibited or excluded, no same-ancestry arrival field is constructed,
-  and LRC(14) remains open.
+  aggregate.  Even on the coordinatewise nonnegative cone the exact joint
+  image is 0<=B(q)<=A(q), target by target.  Consequently neither the exact
+  value of A nor positivity determines B on the arbitrary current space.  For
+  actual THM-2334 currents, Uc=A and Jc=B exactly, so all remaining force must
+  come from the constrained lawful Abel-current image: the strong uniform
+  condition is avoidance of the nonzero-target kernel, while the rowwise
+  existential condition has a different quantifier.  No hostile vector is
+  proved lawful, no covering row is exhibited or excluded, no same-ancestry
+  arrival field is constructed, and LRC(14) remains open.
 source: codex-2026-07-27-all-unit-target-kernel
 depends_on:
   - THM-2309-owner-aligned-pivot-packets-and-visible-height-separation
@@ -281,6 +282,37 @@ This is stronger than failure of a support implication.  Even after the
 ambient affine fibre.  In particular no function of `A` alone, linear or
 nonlinear, determines `B` on arbitrary residue currents.
 
+### The exact positive-cone image
+
+There is no hidden rescue from coordinatewise positivity.  Take `F=R` and
+write
+
+```text
+V_+={c in V:c(y)>=0 for every y}.                            (23a)
+```
+
+Because the sum defining `Jc(q)` is a subsum of the one defining `Uc(q)`,
+every `c in V_+` satisfies
+
+```text
+0<=Jc(q)<=Uc(q)                    for every q.               (23b)
+```
+
+Conversely, if real vectors `a,b` satisfy `0<=b(q)<=a(q)` target by target,
+then (21) has coefficient `a(q)-b(q)` at `v_q` and coefficient `b(q)` at
+`u_q`, hence belongs to `V_+`.  Therefore
+
+```text
+(U,J)(V_+)
+ ={(a,b):0<=b(q)<=a(q) for every q in G}.                     (23c)
+```
+
+In particular positive full-support `A` still permits `B=0`; (23) is already
+a nonnegative witness.  A positive-current strategy would need a genuinely
+lawful lower bound on unit mass or a support restriction excluding the
+nonunit section.  THM-2334's actual residue current is complex, so no
+coordinatewise positivity assumption is being made here.
+
 ## 5. Identification with THM-2334's analytic current
 
 For `rho<1`, let
@@ -399,11 +431,12 @@ by its particular analytic current, not through the value or support of `A`.
 
 THM-2545
 [`THM-2545-word-stratified-hall-arrival-criterion-and-owner-word-transportation-hostile.md`]
-has now given the complementary event-level diagnosis: the same cut data can
-be tensored with aligned and swapped two-root couplings while preserving every
-recorded marginal and changing the physical diagonal hit from full mass to
-zero.  The projector calculation here is the residue-current analogue of that
-transportation hostile.
+has now given the complementary abstract event-level diagnosis: after a later
+root marginal is separately granted, aligned and swapped two-root couplings
+leave the stipulated finite coefficient and marginal inputs unchanged while
+changing the abstract diagonal hit from full mass to zero.  This is not a
+physical-retention theorem.  The projector calculation here is the
+residue-current analogue of that transportation hostile.
 
 The exact artifact
 
@@ -411,12 +444,31 @@ The exact artifact
 04-computation/lrc14_cut_bundle_ancestry_pairing_opus_20260727.py
 ```
 
-finds `432/432` nonzero equivariant cut/stalk pairings and retains target
-charge and owner type.  Its own scope also proves that both the kappa-torsor
-and cut-torsor invariant averages vanish; the surviving object retains those
-labels as sidecars.  It is not the all-unit address projector (5), and no
-typed map from its equivariant coefficient space to `V=C^(K_91)` has been
-constructed.
+has a useful but narrower positive control: the displayed synthetic vector
+
+```text
+C=(6/25)(delta_3+delta_6+delta_10+delta_12)                  (34a)
+```
+
+gives `432/432` nonzero external coefficient pairings.  This is not a
+physical stalk-current theorem.  In
+
+```text
+P_(tau,a)(beta)=sum_(alpha!=0) Chat(+/- alpha)
+                                      Psi_(tau,a)(alpha,beta),       (34b)
+```
+
+the owner, target, and deep labels do not occur.  Their loop and neutrality
+checks are separately computed margins, not consequences of `P` and not a
+proof that one physical current retains them jointly.  Moreover the hostile
+`C=delta_2` has all `12` nontrivial root colours and the cut bank has all
+`5,184` modes, yet the dual pairing vanishes for all `36` pairs `(a,beta)` at
+each of `tau=4,6,12`, hence in `108/432` slots.  Thus separate full supports
+do not force the contraction either.
+
+The artifact also verifies that both invariant torsor averages vanish.  It is
+not the all-unit address projector (5), and no typed map from its external
+coefficient space to `V=C^(K_91)` has been constructed.
 
 Therefore it presently imposes no restriction on the exact ambient fact
 
@@ -425,12 +477,13 @@ J(ker U)=C^G.                                       (35)
 ```
 
 To affect (31)--(34), it needs a branch-transplant/intertwining map `T` whose
-image contains the relevant lawful currents and for which the cut/stalk
-nonvanishing controls `J_*T`.  Averaging away its two torsor sidecars cannot
-be that map, because those invariant readouts are exactly zero.  THM-2545's
-exact tensor hostile confirms that retaining the current recorded data does
-not repair this loss.  The 42-cut result is promising input to a lawful-image
-description, but it does not repair `A -> B` by itself.
+image contains the relevant lawful currents and for which the external
+coefficient pairing controls `J_*T`.  Averaging away its two torsor sidecars
+cannot be that map, because those invariant readouts are exactly zero.
+THM-2545's abstract tensor hostile confirms that even stipulating the separate
+margins does not force a physical diagonal.  The 42-cut algebra is promising
+input to a lawful-image description, but it does not repair `A -> B` by
+itself.
 
 The same semantic guard applies to the later-arrival program: a nonzero
 all-unit relation-address aggregate is still not a genuine later Boolean
