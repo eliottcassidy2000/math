@@ -1,7 +1,7 @@
 # Script Results Index
 
 - `lrc14_target_active_self_return_thm2565.py` -> matching `.out`
-  [THM-2565 PROVED + VERIFIED-EXACT].  Resolve any positive THM-2559
+  [THM-2565 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Resolve any positive THM-2559
   target-informed head field by its physical first base-thirteen digit and
   reuse the same field after a long iterate.  Exact BV mixing makes the
   diagonal tend to `P=sum_h p_h^2>=rho^2/13`, and gives the explicit eventual

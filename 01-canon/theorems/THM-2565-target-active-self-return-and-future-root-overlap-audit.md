@@ -2,7 +2,7 @@
 id: THM-2565
 title: "Target-active self-return and future-root overlap"
 status: >
-  PROVED + VERIFIED-EXACT.  On every one of the 165 live rows, resolve a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  On every one of the 165 live rows, resolve a
   positive THM-2559 target-informed head packet by its physical first
   base-thirteen digit and reuse that same resolved Boolean field after a
   sufficiently long forward iterate.  Exact BV mixing then gives an actual
@@ -37,7 +37,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2565 -- a target-active head eventually returns to its own root
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2555 isolates two missing inputs in the old arrival construction: a
 genuinely later target-active Boolean field and overlap of its root marginal
@@ -341,5 +341,12 @@ first-role truth table, the three-digit offset-one hostile and its delay-two
 return, and the finite-delay covariance threshold algebra.  The all-row
 conclusion is the proved BV argument above, not an extrapolation from those
 finite controls.
+
+The independent root audit rederived the physical old/future digit identity,
+BV self-correlation bound, Cauchy floor, common-delay argument, and `k_a`-first
+typing.  A separate common-endpoint audit confirmed that the construction is
+a literal instance of THM-2545's abstract known-table criterion for the
+changed selector, while agreeing that the word remains source-side provenance
+and that no canonical equation (56) or target-current consequence follows.
 
 **QED.**
