@@ -1,0 +1,25 @@
+== THM-2561: physical blind-necklace interval ==
+  coefficients H;q=183;95,93,114,198,304
+  residues_mod_13=1,4,2,10,3,5
+  base_interval=(13/1281,29/2772)
+  base_interval_mass=53/169092
+  one_root_branch_mass=53/2198196
+  exact_role_walls_enumerated=1974
+  guard_H_failure=10,11,12
+  target_k_a_failure=3
+  deep_q_star_k_b_failure=6
+  neutral_u_1_failure=5,9
+  neutral_u_2_failure=8
+  neutral_u_3_failure=2,7
+  A_0=0,1,4
+  blocker_profile=1,2,5 coefficients=13,169,371293
+  exclusive_owner_base_interval=(4117/399854,4129/399854)
+  exclusive_owner_base_mass=6/199927
+  exclusive_owner_one_root_branch_mass=6/2599051
+  blocker_word_on_owner_interval=danger,safe,safe
+  k_a_root=3 isolated=YES q_star_safe=YES
+  selected_heads_tau_1_to_12=2,2,7,8,9,7,7,9,9,11,2,12
+  selected_head_image=2,7,8,9,11,12
+  target_root_3_seen_by_any_lex_selector=NO
+  target_informed_chord=0->3 slope=3 gradient=-1
+all exact checks=PASS
