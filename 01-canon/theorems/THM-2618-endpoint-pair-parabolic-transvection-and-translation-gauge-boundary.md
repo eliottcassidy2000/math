@@ -1,5 +1,5 @@
 ---
-id: THM-2617
+id: THM-2618
 title: "Endpoint-pair parabolic transvection and translation-gauge boundary"
 status: >
   RESERVED / PROVISIONAL PROOF CANDIDATE; INDEPENDENT HOSTILE AUDIT IN
@@ -30,14 +30,14 @@ related:
   - THM-2603-hurwitz-projective-root-owner-atlas-and-nonabelian-seven-edge-trivialization
   - THM-2606-affine-v4-parity-channels-partial-cubes-and-feuerbach-origin
   - THM-2610-chronological-paired-slice-marked-triangle-graft-and-action-axis-boundary
-script: 04-computation/lrc14_endpoint_pair_parabolic_transvection_thm2617.py
-output: 05-knowledge/results/lrc14_endpoint_pair_parabolic_transvection_thm2617.out
+script: 04-computation/lrc14_endpoint_pair_parabolic_transvection_thm2618.py
+output: 05-knowledge/results/lrc14_endpoint_pair_parabolic_transvection_thm2618.out
 script_sha256: 04c8f2f7bb05e05a0ea0b179a72ca93b0994b6d041c0e960ce3e385d61f3937f
 output_sha256: 21114b0dfafda1cd3d6ebc3a32302d247ab5102882bced223f3737afc416e266
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2617 -- the target difference hides a parabolic endpoint transition
+# THM-2618 -- the target difference hides a parabolic endpoint transition
 
 **RESERVED / PROVISIONAL PROOF CANDIDATE; INDEPENDENT HOSTILE AUDIT IN
 FLIGHT.**  Nothing in this file is available as a proved dependency until an
@@ -451,14 +451,14 @@ affine-origin sidecar of THM-2606, but over `F_13^2` rather than `V4=F_2^2`.
 Run
 
 ```bash
-python3 04-computation/lrc14_endpoint_pair_parabolic_transvection_thm2617.py
-python3 -O 04-computation/lrc14_endpoint_pair_parabolic_transvection_thm2617.py
+python3 04-computation/lrc14_endpoint_pair_parabolic_transvection_thm2618.py
+python3 -O 04-computation/lrc14_endpoint_pair_parabolic_transvection_thm2618.py
 ```
 
 Both executions byte-match
 
 ```text
-05-knowledge/results/lrc14_endpoint_pair_parabolic_transvection_thm2617.out.
+05-knowledge/results/lrc14_endpoint_pair_parabolic_transvection_thm2618.out.
 ```
 
 The dependency-free companion enumerates all `28,561` endpoint matrices and
