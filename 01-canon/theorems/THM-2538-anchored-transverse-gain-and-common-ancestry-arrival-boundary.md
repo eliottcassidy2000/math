@@ -2,7 +2,8 @@
 id: THM-2538
 title: "Anchored transverse gain and common-ancestry arrival boundary"
 status: >
-  PROVED + VERIFIED-EXACT.  Extending the THM-2533 mixed table through its
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY SPLIT-AUDITED.  Extending the
+  THM-2533 mixed table through its
   lawful deep-target coordinate lifts each of the three selected gains to
   one full deep-target character at the same ordinary frequency.  Moving
   the deep target by c*tau together with root translation by tau preserves
@@ -807,5 +808,11 @@ exact Hall transportation problems, all six three-state permutation
 couplings, the even/odd three-field parity hostile, and the rank-`23`
 marginal map with its `121` mixed-Haar kernel.  In total it performs
 `7,140,902` exact checks.
+
+An independent split audit checked Sections 1--4 (lawful atoms, anchor
+covariance, positive packing, `216` incidences, and the `c=1` hostile) and
+Sections 5--8 (same-horizon annihilation, cross-Kakeya reconstruction,
+transportation kernel, Hall bounds, and all stated non-consequences).  Both
+halves passed without correction.
 
 **QED.**

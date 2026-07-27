@@ -28,6 +28,9 @@ related:
   - THM-2519 (klein's root-side conditional variance; comparison OPEN)
 script: 04-computation/lrc14_169_twist_variance_opus_20260726.py
 output: 05-knowledge/results/lrc14_169_twist_variance_opus_20260726.out
+script_sha256: c0aa9c55c3e7d38dc28b4705e58c776a979f17d2874d1b762f96b97d2364e5e9
+output_sha256: 8c2cc1df0ff9e2ccc8b985daae1ac7041256911ebf49179b66c5210446a08bff
+hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2541 -- the first nonzero-target survival object, at full support

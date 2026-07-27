@@ -26,6 +26,22 @@
   are `3f655868...6af4` / `28037c20...c9d` and
   `4ead051b...80b` / `e8c98cd7...125`.  The transverse sum need not retain
   the deep anchor, and no semantic arrival or owner loop follows.
+- `lrc14_seven_chart_cech_holonomy_thm2542.py` -> matching `.out`
+  [THM-2542 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  The
+  seven clock charts carry nonzero Cech class `7a in F_13`; its minimal
+  trivializing cover has degree `13`, and the root-clock mapping torus is one
+  connected `91`-cycle.  An equal-mass hostile retains every primitive mixed
+  mode and the same holonomy while having no target-active vertical edge.
+  Thus this is an intrinsic spatial local system, not semantic arrival or a
+  physical `91`-unit current.  Hashes are `97aac5f1...347` /
+  `fdc49019...666`.
+- `lrc14_169_twist_variance_opus_20260726.py` -> matching `.out` [THM-2541
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY REFEREED three ways].  Exact inverse
+  DFT on the canonical typed THM-2309 row gives positive target variance and
+  all `169` unrestricted target aggregates `A(q)` nonzero.  This typed row is
+  not asserted to be a scalar cover, and `A(q)` is not the all-`91`-unit
+  projector `B(q)`; no row is removed.  Hashes are `c0aa9c55...5e9` /
+  `8c2cc1df...bff`.
 - `lrc14_weighted_live_event_kakeya_flux_thm2540.py` -> matching `.out`,
   with companion `lrc14_transverse_gain_boundary_refinement_thm2540.py` ->
   matching `.out` [THM-2540 PROVED + VERIFIED-EXACT].  An external
@@ -37,9 +53,11 @@
   `26J(W_R)-1` Prony bound, and give a `12 x 12` indexed carrier family (not
   distinct or joint edges).  The conditional product-torus companion packs
   the three old gain orbits into one nonnegative atomwise-boundary sum without
-  preserving the anchor or supplying one Boolean atom.  The referees make
-  `2,721,357` and `5,412,159` checks; hashes are
-  `45dc32a4...dc3` / `82f21452...4db` and
+  preserving the anchor or supplying one Boolean atom.  For arbitrary weights,
+  the reverse boundary and transported head are distinct; symmetrization gives
+  the energy and the exact density-gradient error.  The referees make
+  `3,802,708` and `5,412,159` checks; hashes are
+  `02d604fa...9ea` / `3ffa06dc...5b4` and
   `864ee2eb...bbb` / `7ea5b301...7a5`.
 - `lrc14_diagonal_cubic_owner_clock_boundary_thm2539.py` -> matching `.out`
   [THM-2539 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Conditional on
@@ -51,6 +69,17 @@
   incidences and retained terminal/deep endpoints.  A zero-phase branch and a
   two-atom hostile forbid a universal fixed orientation or canonical selected
   packet.  Updated hashes are `5ec56c19...e50` / `2cd425b6...62e`.
+- `lrc14_anchored_transverse_arrival_boundary_thm2538.py` -> matching `.out`
+  [THM-2538 PROVED + VERIFIED-EXACT, independently split-audited].  A lawful
+  target co-shift preserves the excluded-root anchor while retaining three
+  mixed gains and all `216` Galois incidences.  Same-horizon empty heads cannot
+  be arrivals.  If a genuinely later Boolean target field is supplied on the
+  same ancestry base, cross-Kakeya products recover the full source-arrival
+  coupling exactly; separate endpoint banks lose an `(m-1)(n-1)` mixed-Haar
+  transportation kernel.  The all-slope identity shows that positive
+  target-active alignment, not slope choice, is the remaining issue.  The
+  referee makes `7,140,902` checks; hashes are `2f9d0afa...b55` /
+  `12dc0aea...fd`.
 - `lrc14_cayley_wall_scalarization_thm2537.py` -> matching `.out` [THM-2537
   PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The signless endpoint sum
   of the actual Cayley current is the ordinary gradient, so every canonical
