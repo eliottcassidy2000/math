@@ -8,7 +8,8 @@ The all-slope Boolean boundary transform on ``C_13`` is
 This script exhausts all 8,190 nonconstant Boolean masks and all twelve
 nonzero slopes.  It checks the matched cyclic-Hilbert/Cayley flux, the
 Crofton and positive-reconstruction identities, the disjoint translated
-tail/head packets, sharp Boolean coercivity, and primitive-root colour
+tail/head packets, sharp Boolean coercivity, the support-specific 1/10
+mass floor and its unit-guard sharp model, and primitive-root colour
 saturation.  It then audits the lossless linear equivalence between the
 full directed boundary bank and a target-anchored Boolean Gram matrix,
 including the deep-path gamma/beta specializations and the exact-gradient
@@ -133,6 +134,8 @@ def audit_all_boolean_masks():
     reconstruction_coordinates = 0
     gradient_point_cases = 0
     sharp_cases = 0
+    guard_floor_cases = 0
+    guard_floor_sharp_cases = 0
     flux_histogram = Counter()
     distinct_tail_masks = set()
 
@@ -186,6 +189,13 @@ def audit_all_boolean_masks():
                 require(mass in (6, 7) and flux == 1, "sharp consecutive-block boundary")
                 sharp_cases += 1
 
+            if mass <= 10:
+                require(10 * flux >= mass, "mass-at-most-ten 1/10 boundary floor")
+                guard_floor_cases += 1
+                if 10 * flux == mass:
+                    require(mass == 10 and flux == 1, "sharp 1/10 one-run boundary")
+                    guard_floor_sharp_cases += 1
+
             for r, value in enumerate(tails):
                 outgoing_degree[r] += value
             crofton += flux
@@ -234,6 +244,24 @@ def audit_all_boolean_masks():
     require(mask_slope_cases == (ALL - 1) * (P - 1), "all mask/slope cases")
     require(root_mode_cases == len(distinct_tail_masks) * (P - 1), "all distinct tail modes")
     require(sharp_cases == 2 * P * (P - 1), "all sharp 6/7 consecutive blocks")
+    eligible_guard_masks = sum(
+        1 for mask in range(1, ALL) if mask.bit_count() <= 10
+    )
+    require(
+        guard_floor_cases == eligible_guard_masks * (P - 1),
+        "all mass-at-most-ten mask/slope cases",
+    )
+    require(
+        guard_floor_sharp_cases == P * (P - 1),
+        "all sharp mass-ten one-run cases",
+    )
+
+    # THM-2525's H=1 sharp carrier has occupied roots 2,...,11.  It is one
+    # run precisely in the two natural orientations tau=+/-1.
+    guard_model = tuple(int(2 <= residue <= 11) for residue in range(P))
+    guard_model_fluxes = tuple(sum(tail(guard_model, tau)) for tau in range(1, P))
+    for tau, flux in enumerate(guard_model_fluxes, start=1):
+        require((flux == 1) == (tau in (1, P - 1)), "sharp unit-guard slope boundary")
     require(sum(flux_histogram.values()) == mask_slope_cases, "flux histogram total")
     return {
         "mask_slope_cases": mask_slope_cases,
@@ -244,6 +272,9 @@ def audit_all_boolean_masks():
         "reconstruction_coordinates": reconstruction_coordinates,
         "gradient_point_cases": gradient_point_cases,
         "sharp_cases": sharp_cases,
+        "guard_floor_cases": guard_floor_cases,
+        "guard_floor_sharp_cases": guard_floor_sharp_cases,
+        "guard_model_fluxes": guard_model_fluxes,
         "flux_histogram": tuple(sorted(flux_histogram.items())),
         "distinct_tail_masks": len(distinct_tail_masks),
     }
@@ -459,6 +490,9 @@ def main():
     print(f"reconstruction_coordinates={boolean['reconstruction_coordinates']}")
     print(f"point_gradient_cases={boolean['gradient_point_cases']}")
     print(f"sharp_13_over_42_cases={boolean['sharp_cases']}")
+    print(f"guard_1_over_10_cases={boolean['guard_floor_cases']}")
+    print(f"guard_1_over_10_sharp_cases={boolean['guard_floor_sharp_cases']}")
+    print(f"unit_guard_model_fluxes={boolean['guard_model_fluxes']}")
     print(f"flux_histogram={boolean['flux_histogram']}")
     print(f"anchored_masks={gram['anchored_masks']}")
     print(f"anchored_point_entries={gram['point_entries']}")

@@ -20,8 +20,8 @@ status: >
   three already-proved THM-2533 gain seeds into one nonnegative rational sum
   of atomwise exclusive transverse boundaries retaining the same three
   72-element Galois orbits.  It does not add a fourth gain, preserve the
-  deep anchor, select one common Boolean atom, or prove semantic arrival,
-  row exclusion, or LRC(14).
+  deep anchor, select one common Boolean atom or ordinary-frequency gauge,
+  or prove semantic arrival, row exclusion, or LRC(14).
 source: codex-2026-07-27-weighted-live-event-kakeya-flux
 depends_on:
   - THM-2349-first-depth-one-delayed-shallow-restart
@@ -39,8 +39,8 @@ script: 04-computation/lrc14_weighted_live_event_kakeya_flux_thm2540.py
 output: 05-knowledge/results/lrc14_weighted_live_event_kakeya_flux_thm2540.out
 independent_script: 04-computation/lrc14_transverse_gain_boundary_refinement_thm2540.py
 independent_output: 05-knowledge/results/lrc14_transverse_gain_boundary_refinement_thm2540.out
-script_sha256: 645aad2327572918c6ba1983575aa1cfa36a98965f6a5f99541b9b22b95bc76c
-output_sha256: 12e551146d187802b821bd35094cd999db00ed703bc7f2b6a17e2ae8d953dba5
+script_sha256: 45dc32a4512efaa787f73b03d7c5474b8a8b8e262abe3e82fe18070228651dc3
+output_sha256: 82f21452e4caf201b30f92252d5a031f7605ca37a0e85543e942136a156564db
 independent_script_sha256: 864ee2eb212b2af715d7e5bf270a3b040db422963539717f98c857ae0f68cbbb
 independent_output_sha256: 7ea5b301804b3b2e0e59a050a7c33316462ce3578616dfb3c2e8ec88295707a5
 hash_basis: working-tree bytes (LF)
@@ -147,15 +147,16 @@ two oriented endpoint masses need not match, and (8) can fail.
 
 ### Density is not amplitude
 
-The placement of the weight is load-bearing.  If `g` is root-invariant and
-one inserts it as an amplitude `q=ge`, linearity instead gives
+The placement of the weight is load-bearing.  In the usual complex inner
+product, if `g` is a complex root-invariant amplitude and `q=ge`, linearity
+instead gives
 
 ```text
 <C_tau q,P_tau q>
  =integral_T |g|^2 K_tau(e).                               (10)
 ```
 
-For real nonnegative `g`, the weight is `g^2`, not `g`.  Moreover
+For real nonnegative `g`, this is `g^2`, not `g`.  Moreover
 `q(1-P_tau q)=ge(1-gP_tau e)` is not the Boolean boundary in (1) unless
 `g` is Boolean.  Thus (9) has exactly two safe readings used below:
 
@@ -439,8 +440,8 @@ Thus the characteristic direction for gain `lambda=a/b` is
 h=lambda tau.                                               (42)
 ```
 
-The tangent difference vanishes at that selected mode; every transverse
-choice preserves it under `P_(tau,h)-I`.
+The tangent difference vanishes at that selected mode; for every transverse
+choice the difference under `P_(tau,h)-I` is nonzero on that seed.
 
 Use the three distinct gains `lambda_i=a_i/b_0` already proved in
 THM-2533, together with their selected nonzero positive-frequency seeds.
@@ -553,12 +554,14 @@ python3 04-computation/lrc14_transverse_gain_boundary_refinement_thm2540.py
 python3 -O 04-computation/lrc14_transverse_gain_boundary_refinement_thm2540.py
 ```
 
-The first dependency-free referee performs `2,623,999` exact checks.  It
+The first dependency-free referee performs `2,721,357` exact checks.  It
 exhausts every nonconstant Boolean root mask and every displacement, checks
-the Cayley flux, run-boundary coercivity and its `312` equality cases,
-primitive boundary colours, target-anchor regression controls, and the
-deep consumer formula (37).  The canonical Crofton/Gram checks are retained
-only as regression controls; they are not counted as new THM-2540 claims.
+the Cayley flux, run-boundary coercivity and its `312` equality cases, the
+`1/10` floor on all `97,188` mass-at-most-ten mask--slope cases and its
+`156` combinatorial equality cases, the sharp guard model, primitive
+boundary colours, target-anchor regression controls, and the deep consumer
+formula (37).  The canonical Crofton/Gram checks are retained only as
+regression controls; they are not counted as new THM-2540 claims.
 
 The independent product-torus referee performs `5,412,159` exact checks.  It
 checks the complete characteristic multiplier, all `220` gain triples and
