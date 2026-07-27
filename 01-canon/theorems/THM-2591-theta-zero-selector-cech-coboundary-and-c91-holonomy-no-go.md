@@ -189,9 +189,10 @@ Summing (15) yields the necessary invoice
 sum_ell c_ell=-7a.                                          (16)
 ```
 
-This condition is gauge invariant.  In particular, another chartwise
-factor, common multiplier, selected root, or vertex sidecar changes `c` only
-by a coboundary and cannot alter its sum.  Equation (16) is the cheapest
+This condition is gauge invariant.  In particular, another selected root or
+sidecar used only to change chart origins changes `c` only by a coboundary
+and cannot alter its sum.  Merely multiplying by a common vertex-local factor
+does not by itself supply a transition class.  Equation (16) is the cheapest
 decisive test for the next proposed bridge:
 
 ```text
