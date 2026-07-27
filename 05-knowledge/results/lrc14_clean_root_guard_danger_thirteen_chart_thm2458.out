@@ -1,0 +1,29 @@
+THM-2458 CLEAN-ROOT GUARD-DANGER AUDIT
+cover_traversal_records=18900
+distinct_clean_mask_families=15120
+traversal_split=gate_guard_double:3780,pair_pair_double:15120
+support_checks=zero:75600,two:453600,three_or_four:378000;max_size=4
+ordinary_danger=signatures:4430,exact_duals:4430,span_feasible:0,max_family:21
+guard_danger=signatures:1949,span_feasible:215,max_family:13
+hostile_signature=(2, 5, 1, 3, 5)
+atlas_rows=13;root_incidence=(4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4)
+guard_circulant_det=4;unique_alpha=1/4
+shared_support=(3, 6, 8, 11)
+overlap_word=(0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0);word_sum=8
+replica_anchor=(2, 0, 0, 0, 0, 0, 0)
+fixed_residues=(1,7,8,1,9,8);inverse_steps=(1,2,5,1,3,5)
+phase_code_00=((0, 12), (2, 1), (12, 11), (6, 5), (12, 11), (8, 7))
+phase_code_01=((0, 12), (12, 11), (4, 3), (4, 3), (7, 6), (9, 8))
+phase_code_02=((0, 12), (5, 4), (9, 8), (3, 2), (11, 10), (2, 1))
+phase_code_03=((0, 12), (12, 11), (1, 0), (3, 2), (11, 10), (9, 8))
+phase_code_04=((0, 12), (8, 7), (6, 5), (6, 5), (8, 7), (3, 2))
+phase_code_05=((0, 12), (10, 9), (11, 10), (10, 9), (10, 9), (3, 2))
+phase_code_06=((0, 12), (12, 11), (3, 2), (4, 3), (8, 7), (9, 8))
+phase_code_07=((0, 12), (9, 8), (8, 7), (11, 10), (8, 7), (4, 3))
+phase_code_08=((0, 12), (12, 11), (0, 12), (7, 6), (10, 9), (3, 2))
+phase_code_09=((0, 12), (9, 8), (5, 4), (10, 9), (8, 7), (9, 8))
+phase_code_10=((0, 12), (2, 1), (10, 9), (9, 8), (12, 11), (2, 1))
+phase_code_11=((0, 12), (12, 11), (2, 1), (7, 6), (10, 9), (12, 11))
+phase_code_12=((0, 12), (9, 8), (7, 6), (7, 6), (8, 7), (3, 2))
+bounded_orbit_probe=lift_tuples:324,realized_row_pairs:0,max_rows_per_tuple:0
+PASS
