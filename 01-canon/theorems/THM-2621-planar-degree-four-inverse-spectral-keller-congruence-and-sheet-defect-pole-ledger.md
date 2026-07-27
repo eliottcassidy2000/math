@@ -2,7 +2,8 @@
 id: THM-2621
 title: "Planar degree-four inverse-spectral Keller congruence and sheet-defect pole ledger"
 status: >
-  PROVED + VERIFIED-SYMBOLIC + INDEPENDENTLY HOSTILE-AUDITED.  A hypothetical
+  PROVED + VERIFIED-SYMBOLIC + INDEPENDENTLY HOSTILE-AUDITED AFTER
+  MISTAKE-301 SCOPE REPAIR.  A hypothetical
   planar Keller map of generic field degree four admits generic determinant-one
   source coordinates in which P is monic in y and x is primitive over
   K=C(P,Q).  If f is the monic inverse minimal quartic of x and y=b(x), then
@@ -11,9 +12,13 @@ status: >
   equations are explicit.  The resultant is R=c f, and on every prime
   Jelonek component D|c the coefficient indexed by the generic surviving
   fibre cardinality has full pole order nu_D(c).  Formal quartic depression
-  is not symplectic without a dh wedge dy correction.  The trace-Liouville
-  form Tr(x dy)-4 kappa^(-1)u dv is closed and coordinate-invariant modulo
-  exact rational forms.  An exact punctured C4 hostile satisfies the entire
+  is not symplectic without a dh wedge dy correction.  After MISTAKE-301's
+  scope repair, the trace-Liouville form
+  Tr(x dy)-4 kappa^(-1)u dv is not merely closed: every genuine polynomial
+  Keller realization makes it rationally exact, so all of its divisor
+  residues vanish.  Its companion-coordinate formula gives an explicit
+  residue-cancellation gate absent from the quartic PDE alone.  An exact
+  punctured C4 hostile satisfies the entire
   PDE with c=1 but has primitive-coordinate discriminant and b-denominator
   divisors, proving that the PDE alone does not encode affine polynomial
   realization.  This reduces but does not solve the D4/A4/S4 planar degree-four
@@ -26,6 +31,7 @@ related:
   - THM-2546-integral-coordinate-dichotomy-and-parity-lens-scope
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
   - THM-2612-d4-deck-pole-tax-and-depressed-resolvent-gcd-gate
+  - MISTAKE-301
 script: 04-computation/jacobian_planar_degree4_inverse_spectral_thm2621.py
 output: 05-knowledge/results/jacobian_planar_degree4_inverse_spectral_thm2621.out
 script_sha256: e9a91b1d21ae4ac28dd941e180603d90a230b4b6f154544a39ad0be1d332438b
@@ -35,7 +41,8 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2621 -- a degree-four Keller map is a marked inverse quartic with boundary poles
 
-**PROVED + VERIFIED-SYMBOLIC + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED + VERIFIED-SYMBOLIC + INDEPENDENTLY HOSTILE-AUDITED AFTER
+MISTAKE-301 SCOPE REPAIR.**
 
 The planar field-degree-four branch is open.  THM-2465 reduces every affine
 point-cap instance to it, while THM-2598 leaves geometric monodromy
@@ -346,7 +353,7 @@ source omits `Y=0`, and the base is not simply connected.  It is not a Keller
 counterexample on `A^2` and does not contradict Campbell's exclusion of
 polynomial `C_4` monodromy.
 
-## 6. The trace--Liouville boundary class
+## 6. The trace--Liouville class vanishes for polynomial realizations
 
 Let the trace run over the four inverse sheets and define the rational
 one-form
@@ -368,11 +375,93 @@ Consequently
 omega_F=alpha-4 kappa^(-1)u dv                           (31)
 ```
 
-is closed.  Closed rational one-forms need not be exact; their divisor
-residues are genuine boundary data.
+is closed.  For an abstract rational pair `(f,b)` this is all that follows
+from the coefficientwise PDE.  A genuine polynomial Keller realization has
+strictly more structure.
 
-The class of `omega_F` modulo exact rational forms is invariant under affine
-determinant-one source and target coordinate changes.  For the linear source
+On the polynomial source put
+
+```text
+theta=x dy-kappa^(-1)u dv.                              (31a)
+```
+
+It is a polynomial one-form and
+
+```text
+d theta=dx wedge dy-kappa^(-1)du wedge dv=0.             (31b)
+```
+
+The algebraic Poincare lemma on `A^2_C` gives a polynomial `H in C[x,y]`
+with `theta=dH`.  Taking the degree-four field trace commutes with exterior
+differentiation and gives the exact identity
+
+```text
+omega_F=Tr_(L/K)(theta)=d Tr_(L/K)(H).                    (31c)
+```
+
+Thus every genuine polynomial realization satisfies
+
+```text
+[omega_F]=0 in Omega^1_K/dK,
+
+Res_D(omega_F)=0                         for every prime D. (31d)
+```
+
+The first promoted version allowed this class to be nonzero for a polynomial
+`D_4,A_4`, or `S_4` map.  MISTAKE-301 records the repaired implication: a
+nonzero class belongs only to an abstract inverse-spectral PDE solution and
+is an obstruction to, rather than a possible invariant of, polynomial
+realization.
+
+### 6.1 Explicit coefficient residue gate
+
+Let
+
+```text
+p_m=Tr_(L/K)(x^m).
+```
+
+Newton's identities give
+
+```text
+p_1=-a_3,
+p_2=a_3^2-2a_2,
+p_3=-a_3^3+3a_3a_2-3a_1,
+p_4=a_3^4-4a_3^2a_2+2a_2^2+4a_3a_1-4a_0.                (31e)
+```
+
+Since `y=sum_(j=0)^3 b_j x^j`, direct differentiation on the four sheets
+gives
+
+```text
+alpha
+ =sum_(j=0)^3 [p_(j+1) db_j
+               +j/(j+1)b_j dp_(j+1)],
+
+d alpha=sum_(j=0)^3 1/(j+1) dp_(j+1) wedge db_j
+       =4 kappa^(-1)du wedge dv.                          (31f)
+```
+
+Modulo exact rational forms,
+
+```text
+alpha == -sum_(j=0)^3 b_j/(j+1) dp_(j+1).                (31g)
+```
+
+Because `u dv` is regular at every affine base prime, (31c)--(31g) impose
+the explicit cancellation law
+
+```text
+Res_D sum_(j=0)^3 b_j/(j+1) dp_(j+1)=0
+                                      for every prime D. (31h)
+```
+
+At a Jelonek component, (31h) must coexist with the full coefficient pole in
+(19).  It is a new marked-companion constraint, not a consequence of the
+cubic resolvent or of the pole order alone.
+
+The exact zero class is invariant under affine determinant-one source and
+target coordinate changes.  For the linear source
 part
 
 ```text
@@ -387,8 +476,8 @@ x' dy'-x dy
 ```
 
 The target Liouville term obeys the same identity, and translations add only
-exact linear differentials.  Thus (31) is the trace--Liouville defect of the
-multivalued inverse, independent of the chosen affine symplectic frame.
+exact linear differentials.  Thus the realization gate (31c)--(31h) is
+independent of the chosen affine symplectic frame.
 
 For the hostile (22), direct trace gives
 
@@ -400,9 +489,10 @@ d alpha=-4du wedge dv=4 kappa^(-1)du wedge dv,
 omega_F=4d(uv).                                          (33)
 ```
 
-Its trace--Liouville class is zero.  A hypothetical `D_4,A_4`, or `S_4`
-Keller map need not have zero class; residues of (31) along `c=0` are a new
-boundary-ownership coordinate not retained by the cubic resolvent.
+Its trace--Liouville class is zero, as every genuine polynomial realization
+must be.  This hostile still separates discriminant and reconstruction poles;
+it does not test the new residue obstruction because its class already
+vanishes.
 
 ## 7. Resolvent interface and exact residual
 
@@ -412,11 +502,11 @@ quotients by `V_4`.  It forgets
 ```text
 the attached values y_i=b(x_i),
 the coefficientwise symplectic congruence (9),
-the trace--Liouville class (31),
+the trace--Liouville exactness and coefficient residue gate (31c)--(31h),
 and which normalization branches remain in the affine source.             (34)
 ```
 
-Thus `(b,(9),(31))` is the missing marked-origin sidecar for transferring any
+Thus `(b,(9),(31c)--(31h))` is the missing marked-origin sidecar for transferring any
 grade-three resolvent anatomy back to a quartic Keller map.  In the `D_4`
 lane, it must coexist with THM-2612's birational deck-involution pole and the
 present/omitted boundary ownership of THM-2598.  These are compatible
@@ -424,6 +514,7 @@ invoices, not yet a contradiction.
 
 The degree-four planar frontier is now the following typed classification
 problem: classify rational pairs `(f,b)` satisfying (9), the pole law (19),
+the exactness/residue gate (31c)--(31h),
 monodromy `D_4,A_4`, or `S_4`, and extension of their total space to `A^2`
 with `u,v in C[x,y]`.  This is strictly smaller than an unrestricted planar
 coefficient search, but no lane is excluded here.
@@ -456,7 +547,8 @@ checked the generic-coordinate and quasi-finite specialization arguments,
 verified the `C_4` model and trace signs independently, and enforced the three
 separate boundary ledgers in (21).
 
-No polynomial degree-four Keller map, monodromy lane exclusion, exact residue
-of `omega_F`, JC(2), DC(2), or GMC-to-JC interface follows.
+No polynomial degree-four Keller map, monodromy lane exclusion, local
+mechanism forcing the cancellations in (31h), JC(2), DC(2), or GMC-to-JC
+interface follows.
 
 QED.
