@@ -1,0 +1,78 @@
+==============================================================================
+[1] Global finite birational parametrization by A^2_(c,lambda)
+==============================================================================
+  a=lambda^2(3-c lambda)/27
+  b=lambda(4-c lambda)/3
+  elimination kernel = (L)  [PASS]
+  lambda^2-3b lambda+27a=0: normalization is finite.  [PASS]
+  (3bc-4)lambda=27ac-3b: fraction fields agree.  [PASS]
+  Hence QQ[c,lambda] is the integral closure of QQ[a,b,c]/(L).
+
+==============================================================================
+[2] On c!=0 the surface is exactly a cusp cylinder
+==============================================================================
+  theta=2-c lambda, T=theta^2, S=theta^3.  [PASS]
+  lambda=(3(b-9ac)+3b(2-theta))/4, so B=A[theta] globally.  [PASS]
+  Since theta^2,theta^3 lie in A, normalization is subintegral.
+  A[c^-1] = QQ[c,c^-1,theta^2,theta^3].
+  normalization = QQ[c,c^-1,theta], a literal G_m x cusp cylinder.
+  inverse formulas:
+    b=(4-theta^2)/(3c)
+    a=(theta^3-3theta^2+4)/(27c^2)
+     =(theta-2)^2(theta+1)/(27c^2).  [PASS]
+
+==============================================================================
+[3] Exact conductor and its support
+==============================================================================
+  normalized conductor = T*QQ[c,lambda]=(2-c lambda)^2.
+  T lambda=3(b-9ac), and S=2T-3c(b-9ac).  [PASS]
+  contracted conductor in A is
+    (T,b-9ac)=(T,S).
+  Its support is T=0, b-9ac=0, namely
+    E={(4/(27t^2),4/(3t),t): t!=0}.
+  exact support quotient basis: [12a-b^2,3bc-4],
+    so A/(T,b-9ac)=QQ[c,c^-1] and B/A is one copy of E.  [PASS]
+  On c!=0 this is the cusp conductor (theta^2,theta^3).
+
+==============================================================================
+[4] Singular locus equals the conductor support
+==============================================================================
+  L_a=2S; on L=L_a=0, S^2-T^3=27c^2L forces T=0.
+  Then L_b=2(b-9ac), so every singular point lies on E.
+  Conversely E kills L and all three partial derivatives.  [PASS]
+  exact Jacobian-ideal Groebner basis:
+    [16*a - b**3*c, (3*b*c - 4)**2]
+  Its reduced support is E; the squared T records the cusp thickness.
+
+==============================================================================
+[5] The c=0 boundary is smooth and normalization is an isomorphism
+==============================================================================
+  V(L,c)=V(16a-b^2), a smooth parabola (L_a=16).
+  normalization boundary: (a,b,c)=(lambda^2/9,4lambda/3,0),
+  inverse lambda=3b/4.  Thus the normalization is an isomorphism there.
+  theta=2 on the whole boundary; lambda is the first-order coordinate
+  discarded when Phi_c collapses that parabola to (S,T)=(8,4).
+
+==============================================================================
+[6] Exact normalized finite-survivor section
+==============================================================================
+  q=b^2-12a=theta^2(theta-2)^2/(9c^2).  [PASS]
+  for c theta !=0, the unique finite survivor is
+    x=2c/theta^2
+    y=(2-theta)(3theta+2)/(6c)
+    z=-theta^2(theta-2)^2(theta^2+4theta+2)/(8c^2)
+  direct substitution into F gives (a(theta,c),b(theta,c),c).  [PASS]
+  at c=0 the polynomial boundary survivor is
+    (x,y,z)=(0,4lambda/3,-7lambda^2), also checked directly.  [PASS]
+
+==============================================================================
+[7] Three structural theta sections
+==============================================================================
+  theta=0: E, the conductor/singular curve; F-fibre empty.
+  theta=2: target c-axis (0,0,c), survivor (c/2,0,0).
+  theta=-1: target (0,1/c,c), survivor
+            (2c,-1/(2c),9/(8c^2)).
+  The factor a=(theta-2)^2(theta+1)/(27c^2) makes the two a=0
+  components and their double/simple multiplicities explicit.
+
+ALL EXACT THM-2570 NORMALIZATION CHECKS PASSED

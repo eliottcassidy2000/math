@@ -2,14 +2,15 @@
 id: THM-2566
 title: "Two-chart saturated cusp atlas and parasitic-plane ledger for the sporadic Keller map"
 status: >
-  PROVED over C (indeed all polynomial identities and ideal calculations are
-  over Q).  The two raw cusp pullbacks, their divisor multiplicities and
-  saturations, the punctured two-chart cover, both hostile controls, both
-  origin images, and both cusp-point fibres are exact.  The generic fibre
-  interpretation is inherited separately from THM-2473/2546.  This concerns
-  only the fixed sporadic three-variable Keller map and proves nothing about
-  JC(2) or a general Keller-monoid tower.
+  PROVED + INDEPENDENTLY AUDITED over C (indeed all polynomial identities and
+  ideal calculations are over Q).  The two raw cusp pullbacks, their divisor
+  multiplicities and saturations, the punctured two-chart cover, both hostile
+  controls, both origin images, and both cusp-point fibres are exact.  The
+  generic fibre interpretation is inherited separately from THM-2473/2546.
+  This concerns only the fixed sporadic three-variable Keller map and proves
+  nothing about JC(2) or a general Keller-monoid tower.
 source: codex-2026-07-27
+audit: root-2026-07-27 (independent algebra and normal/-O/stored/hash/docs replay)
 depends_on:
   - THM-1335-trisection-modulus-master-identities-trace-polynomiality
   - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy

@@ -2,11 +2,12 @@
 id: HYP-9033
 title: "The discriminant tower: Jelonek divisors as classification data for the Keller monoid, and the genus axis of collapse vs rigidity"
 status: >
-  OPEN synthesis with one PROVED identity (the corrected saturated cuspidal
-  law 27 c^2 L = S^2 - T^3, exact; MISTAKE-287), several VERIFIED
-  inputs (THM-2473/2546 and referee), five falsifiable predictions
-  (P1-P2 under computation in flight), and a typed dictionary entry
-  for HYP-9031.  Nothing here is a JC(2) or classification claim.
+  OPEN synthesis with a PROVED fixed-map core: the corrected saturated
+  cuspidal law 27 c^2 L = S^2 - T^3 (MISTAKE-287) and THM-2570's global
+  normalization/conductor theorem.  It retains several VERIFIED inputs
+  (THM-2473/2546 and referee), five falsifiable predictions (P1-P2 under
+  computation in flight), and a typed dictionary entry for HYP-9031.
+  Nothing here is a JC(2) or classification claim.
 source: opus-2026-07-28 (from the uniform disc law found by the
   THM-2546 referee run: disc = -4 (square)^2 L for all three
   coordinate cubics of the sporadic Keller map)
@@ -17,6 +18,7 @@ related:
   - HYP-9031 (the D5 dictionary -- gains the genus axis)
   - THM-2465 (W1/W2 members; the -(det J)^2 law test target)
   - THM-2566 (two-chart saturated cusp atlas and parasitic-plane ledger)
+  - THM-2570 (global normalization, conductor, and cusp-cylinder structure)
 ---
 
 # HYP-9033 -- the discriminant tower and the genus axis
@@ -118,6 +120,15 @@ where the discriminant-side geometry has no rational walk.
 > closures manufacture genus >= 2; LRC(14)'s spectral side has no
 > curve at all (Diophantine rigidity) -- the three frontiers sit at
 > genus 0 / genus >= 2 / no-geometry on one axis.
+
+For this fixed map, THM-2570 now makes the genus-0 statement exact rather
+than metaphorical: on `c!=0` the whole Jelonek component has coordinate ring
+`Q[c,c^-1,theta^2,theta^3]`, its normalization is
+`Q[c,c^-1,theta]`, and the missing exponent `theta^1` is precisely the
+conductor defect supported on the empty-fibre curve.  The global normalizing
+coordinate `lambda=(2-theta)/c` continues through the smooth `c=0` boundary.
+This verifies the proposed axis for the sporadic map only; it does not prove
+that genus controls a general Keller map or any remaining planar stratum.
 
 Prediction P5: remaining JC(2)-adjacent closures (higher mixed strata)
 will continue to run through genus >= 2 of restored discriminant-side

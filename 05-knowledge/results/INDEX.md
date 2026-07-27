@@ -38,8 +38,19 @@
   exclusion remain open.  The referee includes a sharp delay-one offset
   hostile which returns with mass `1/169` at delay two.  Hashes are
   `4e11fc2c...f27` / `865a3651...bf5`.
+- `keller_jelonek_normalization_thm2570.py` -> matching `.out`
+  [THM-2570 PROVED + VERIFIED-EXACT].  The sporadic Jelonek surface has global
+  subintegral normalization `A^2_(c,lambda)`, with defect `B/A=Q[c,c^-1]`;
+  on `c!=0` it is literally the cusp cylinder
+  `Q[c,c^-1,theta^2,theta^3]` inside `Q[c,c^-1,theta]`.  Its exact conductor
+  is `(T,b-9ac)=(T,S)`, supported on the singular omitted curve `E`; the
+  `c=0` boundary is a smooth parabola where normalization is already an
+  isomorphism.  A rational normalized survivor section separates the empty
+  `theta=0`, doubled `theta=2`, and simple `theta=-1` strata.  Hashes are
+  `be7374e1...e8d` / `7e71c67c...e82`.
 - `keller_two_cusp_atlas_thm2566.py` -> matching `.out`
-  [THM-2566 PROVED + VERIFIED-EXACT; MISTAKE-287].  The two polynomial maps
+  [THM-2566 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; MISTAKE-287].
+  The two polynomial maps
   from the sporadic Keller target to `S^2=T^3` have raw pullback divisors
   `2V(c)+V(L)` and `2V(a)+V(L)`, not `V(L)`: exact Groebner eliminations give
   both saturated ideals equal to `(L)`.  Their honest charts cover
