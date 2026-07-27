@@ -1,0 +1,9 @@
+THM-2508 affine-cut bundle independent exact referee: PASS
+field=F_547; generator=2; ord(zeta)=13; ord(xi)=7
+operator_factorization_coefficients=471744
+nonzero_geometric_kernels=5184
+hostile_primitive_colours=72; nonzero_cut_coefficients=5184
+zero_cut_character_checks=864; all_zero=PASS
+raw_translation_covariance_components=596232
+mixed cut character is necessary; pure F_13 descent remains zero
+ALL EXACT CHECKS PASSED
