@@ -170,6 +170,15 @@ def geometry_controls():
         unshifted = (P * divisor * P**delay * x) % 1
         require(shifted == unshifted, "target neutrality")
 
+    # Full THM-2471 stalk: with terminal clock K=1 and collision delay L=2,
+    # the X,Y legs have multiplier 13^L and the ancestry Z leg has the
+    # smallest multiplier 13^(L-K).  Every atomic leg is target-neutral.
+    clock = 1
+    for multiplier in (P**delay, P ** (delay - clock), P**delay):
+        for theta in range(P):
+            require(F(multiplier * theta, P).denominator == 1,
+                    "full stalk target neutrality")
+
     # Rebase boundary for C=2*13^5.  At L=4 the deep probe is sheet-free;
     # at L=6 the sheets a=0 and a=7 have phases 0 and 1/13.
     deep = 2 * P**5

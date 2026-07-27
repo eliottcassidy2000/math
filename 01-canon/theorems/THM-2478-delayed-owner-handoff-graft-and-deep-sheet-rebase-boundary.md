@@ -37,7 +37,7 @@ related:
   - THM-2474-squarefree-first-collision-primitive-character-saturation
 script: 04-computation/lrc14_delayed_owner_handoff_graft_thm2478.py
 output: 05-knowledge/results/lrc14_delayed_owner_handoff_graft_thm2478.out
-script_sha256: 964399aa047a692c55a3f2f604ea8efbdbf0029e2acb58b47fddd201343cba79
+script_sha256: a611026c7920247b8c5949b38fd1906664d735972b23ff1f330c942f49ec2228
 output_sha256: b722d88df0c819ee066949e039ce8cce03d7fae4211cac80f5eed12e7fb17889
 hash_basis: working-tree bytes (LF)
 ---
@@ -289,8 +289,9 @@ J(k):=integral_T g_k!=0             for every k!=0. (16)
 ```
 
 Let `d` be THM-2471's owner-normalization/penultimate-collision multiplier,
-so its physical collision base is `13d x`.  For the old root-base drift
-`b(y)` from (3), define
+let `R=13^K` be that packet's fixed terminal clock, and choose `L>=K+1`.
+Its physical collision base is `13d x`.  For the old root-base drift `b(y)`
+from (3), define
 
 ```text
 q_(k,L)
@@ -310,6 +311,29 @@ old target co-shift:
 ```text
 13d13^L(theta/13)=d13^Ltheta in Z.                  (19)
 ```
+
+The base calculation alone is not enough; the complete Boolean stalk must
+also be target-neutral.  Substitute the delayed collision base
+
+```text
+y_col=13d13^Lx
+```
+
+into THM-2471's stalk coordinates.  Up to sheet constants, their leading
+old-time terms are
+
+```text
+X_(u,a)=13^Lx+sheet,              current/word leg,
+
+Z_(u,a,b)=13^(L-K)x+sheet,        owner ancestry leg,
+
+Y_(v,e)=13^Lx+sheet.              bare source leg            (19a)
+```
+
+The smallest multiplier is `13^(L-K)`, which is divisible by thirteen
+because `L>=K+1`.  Hence every old `/13` target co-shift becomes an integer
+in every atomic factor of the stalk.  The whole Boolean fibre product, not
+only its collision base, is target-neutral.
 
 For complex BV functions the same Fourier covariance proof gives
 
@@ -361,8 +385,9 @@ in (18); only their finite character labels have been aligned.
 The direct graft of Section 3 and the collision graft here have different
 semantic strengths.  Section 3 puts the literal old orbit point `T^Lx` in
 `E_j`.  Section 4 attaches a canonical future collision ancestry stalk whose
-base is (18); it does not assert that `T^Lx` is its distinguished source
-sheet.
+base is (18).  Its word-current branches occur at old time `L` and their
+owner-ancestry branches at old time `L-K`, but the averaging does not assert
+that the literal orbit point `T^Lx` is a distinguished source sheet.
 
 ## 5. Sharp rebase boundary: the past deep probe becomes a sheet weight
 
