@@ -1,0 +1,28 @@
+== refined pair spectrum -> coarse target line sum ==
+  exact basis identities: 2197
+  refined/coarse/kernel dimensions: 169/13/156
+  diagonal zero annihilates every coarse target line
+
+== complementary relative-twist hostile ==
+  exact two-dimensional coefficients: 169
+  Ahat(0,0)=12/13; Ahat(a,-a)=-1/13 for a!=0
+  A(0,t)=1_(t!=0) fires all twelve one-sided colours
+  diagonal-shift drift: 0; coarse target: identically 0
+
+== positive refined drift still has zero coarse pushforward ==
+  refined drift: 7896/2197
+  normalized-row variance: 1316/28561
+  every coarse target line still vanishes by the diagonal-zero identity
+
+== fixed-frequency leakage and full-frequency cancellation ==
+  four fixed-X numerators /16: (3, -1, -1, -1)
+  all four terms survive; their full-X sum is exactly zero
+
+== anchored duplicate-pair positive boundary ==
+  anchored profile pairs (ordinary/guard): 69/161
+  minimum positive row capacities: 9 ordinary, 7 guard
+  phase identities checked: 230
+  auxiliary phase-rotated floors: 3/676 rho / 7/2028 rho
+  scope: shifted duplicate probes over a fixed old head, not a lawful left endpoint orbit
+
+THM-2568 exact referee: PASS
