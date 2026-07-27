@@ -10,9 +10,11 @@ status: >
   failures are exactly 202 middle-layer necklaces of weights 3--7.  On a
   live depth-one owner fibre the selector mask is the six-role safe mask
   A_0, not the one/two-root mask seen only after Perron rebasing.  Whenever
-  its all-empty-visible stratum has positive mass, some slope therefore
-  places the selected head on the unique target-active guard/unit failure
-  k_a.
+  its all-empty-visible stratum has positive mass, some algebraic slope
+  therefore places the selected head on the literal old target-active
+  guard/unit failure k_a.  Cofailures, possible failure of q_*=k_b, and a
+  slope different from the physical guard slope prevent this from being a
+  canonical first-failure or repair-current packet.
   A three-root control hides a singleton target-active failure from every
   slope, so the remaining 202 necklaces cannot be removed by all-slope
   selection or capacity alone.  The forced hit is at the old predecessor
@@ -190,11 +192,14 @@ sampled extrapolation.
 ## 4. What a visible stratum forces on a live owner fibre
 
 Choose the THM-2350/2461 pivot with `q_*=k_b`.  Among the five remaining
-guard/unit first-failure roles, `k_a` is the unique target-active role.  Its
-coefficient is a thirteen-unit.  On every direct fibre (3), its failure set
+guard/unit roles, `k_a` is the unique target-active role.  Its coefficient
+is a thirteen-unit.  On every direct fibre (3), define its **literal role
+failure set**, away from the finite wall endpoints, by
 
 ```text
-T_a(z)={r:iota_r(z) in D_(k_a)}                             (11)
+T_a(z)=
+ {r:iota_r(z) in D_(k_a)},                    k_a ordinary;
+ {r:iota_r(z) notin C_H},                    k_a the guard. (11)
 ```
 
 has one or two roots when `k_a` is ordinary and three or four when it is the
@@ -212,9 +217,12 @@ with
 t_tau(e(z)) in T_a(z).                                     (13)
 ```
 
-Thus the selected empty head at that slope carries the old target-active
-unit failure `k_a`.  This conclusion is pointwise and needs no Fourier
-nonvanishing argument.
+Thus the selected empty head at that slope carries the literal old
+target-active role failure `k_a`.  This conclusion is pointwise and needs no
+Fourier nonvanishing argument.  It does not say that `k_a` is the canonical
+THM-2445 first-failure label: a neutral role or `q_*=k_b` may fail on the
+same head.  One may make `k_a` first in the five-role lexicographic order,
+but a canonical cell also has to retain the stipulated `q_*`-safe factor.
 
 There is also a positive-measure form.  Let `g(z)` be any common nonnegative
 root-invariant owner/word weight used by THM-2537, and let `B_good` be the
@@ -228,9 +236,11 @@ sum_(tau!=0) integral_(B_good)
  >=integral_(B_good)g(z)dz.                                (14)
 ```
 
-If the right side is positive, at least one fixed slope has a positive
-old-target-active selected-head packet.  This closes the purely local
-“which one of the five failure roles?” question on the visible stratum.
+If the right side is positive, at least one fixed algebraic slope has a
+positive old-target-active selected-head packet.  That slope is selected
+after integration and need not be the physical guard slope `tau_H`; (14)
+therefore proves an all-slope old-head hit, not the fixed-slope polarized
+repair-current packet.
 
 The four neutral roles give a compatible capacity check.  An ordinary unit
 failure occupies at most two predecessor roots; the guard failure occupies
@@ -286,7 +296,8 @@ The local role-forcing problem has split into two finite/semantic pieces.
 
 1. Prove positive selected mass on one of the 428 visible necklaces, or use
    the physical six-comb incidence constraints to eliminate the 202 blind
-   necklaces.
+   necklaces; then retain `q_*` safety and the required physical slope if a
+   canonical first-failure/repair packet is needed.
 2. On the resulting positive `k_a` packet, place that role genuinely later
    while retaining its ancestry sheet and carry, and prove that its semantic
    later root is the THM-2549 old-sheet root (or construct the future-scale
