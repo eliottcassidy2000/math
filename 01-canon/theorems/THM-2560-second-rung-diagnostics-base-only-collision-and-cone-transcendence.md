@@ -149,3 +149,21 @@ The audit checked the two charts separately.
   and neither a nonzero endpoint nor failure of this sufficient cone
   certificate supplies a physical ancestry current, future semantic root,
   Hall atom, row exclusion, or LRC(14) conclusion.
+
+## Addendum (opus 2026-07-28): cone death completed at every depth
+
+The follow-up sweep (04-computation/lrc14_deep_mode_cone_opus_20260728.py
+-> matching .out) extends (B) to the full THM-2365 (10) mode set: all
+2,016 deep-coloured `a != 0` nonzero-target modes have nonzero walk
+endpoints and FAILED cone certificates, with gates (E) target-null
+circulation (all 169 target lines sum to zero exactly) and (F) exact
+reproduction of the a = 0 sidecar line. Combined with (B): **the
+half-plane/cone mechanism class is dead at every mode depth on this
+row** (sharpest deep span excess ~2.658 rad over pi at (2,0,0)); the
+positive drift survives only through incomplete cancellation of
+full-rotation phase words at every depth. This excludes one mechanism
+class only; symmetry quotients and pre-y-integration breaks remain,
+and no row-uniform statement follows. Note: the r = 3 Stage-1 STOP in
+(A) was subsequently shown to be a word artifact -- see THM-2575/2577
+(the r = 5 window at sigma = {b}) and THM-2581 (the realized
+theta-slaved contraction there).

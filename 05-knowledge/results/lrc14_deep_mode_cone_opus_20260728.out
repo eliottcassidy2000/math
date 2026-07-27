@@ -25,16 +25,16 @@ machine=opus  date=2026-07-28
     f7 rooted units 40/53/66: 318 generated breakpoints
     distinct breakpoints = chambers: 1489966 (anchor PASS)
     contributing chambers in supp d(y) = (13/14, 15/14): 212845 (anchor PASS)
-    [     0.9s] partition done
+    [     3.6s] partition done
 
 [3] exact 1-D sweep (sidecar machinery, re-run; states indexed)
     chambers walked: 212845; rooted snapshots: 19; states (rooted,ga,dc): 10998 (anchors PASS)
-    [     2.1s] sweep done
+    [     7.6s] sweep done
 
 [4] rooted N tables, state arrays, per-character V tables
     rooted words proper, |supp P| in [3,10]: PASS (19 snapshots)
     state arrays built; Vall (169 characters x 13 zeta-classes per state) assembled
-    [     5.0s] state processing done
+    [    18.1s] state processing done
 
 [5] GATES (A)+(B)+(C) (sidecar gates, re-run verbatim)
     E_1 measure anchor 1882176/28589561: PASS
@@ -42,8 +42,125 @@ machine=opus  date=2026-07-28
     (A) chamber reconstruction == independent 13^3 table (x13 scale), all 2197 cells: PASS
     (B) row sums == byte-stored S_E numerators: PASS
     (C) diagonal-plane zero H_E(t,s,t)=0 (all 169): PASS
-    [    42.3s] gates done
+    [   167.8s] gates done
 
 [6] per-a-line walks, endpoints, exact cone decisions, events
     aggregation (logged, identical to sidecar stage 2): contributions merged by primitive direction
     in Z[zeta_13] (positive-rational-multiple classes)
+    a= 0: nonzero-target modes=168, endpoints nonzero=168/168, classes {'<pi': 0, '=pi-cert': 0, '=pi-fail': 0, '>pi': 168, 'empty': 0},
+          dirs min=5740 max=10322 mean=9102.9; routes {'cert3': 148, 'full': 20, 'trivial': 0}
+          DESCRIPTIVE float spans: min=6.039749408 rad at (lam,mu)=(0,6), max=6.278655273 rad; min excess over pi = 2.898156755
+          zero-target mode (lam,mu)=(0,0): class=<pi dirs=1 endpoint_nonzero=True (NOT a drift mode; flagged only)
+          first cancelling event, mode (a,lam,mu)=(0,0,1): direction #4, chamber y=9653643/10396204
+          (grid 276563549922660/T_DEN), class at event = >pi, direction (-6, 0, 0, 0, -1, -2, -2, -2, -2, -2, -1, 0, 0)
+          [   313.3s] line a=0 done ( 145.5s)
+    a= 1: nonzero-target modes=168, endpoints nonzero=168/168, classes {'<pi': 0, '=pi-cert': 0, '=pi-fail': 0, '>pi': 168, 'empty': 0},
+          dirs min=26 max=10322 mean=9587.8; routes {'cert3': 127, 'full': 41, 'trivial': 0}
+          DESCRIPTIVE float spans: min=6.041524334 rad at (lam,mu)=(0,0), max=6.279090044 rad; min excess over pi = 2.899931680
+          zero-target mode (lam,mu)=(0,1): class=>pi dirs=4024 endpoint_nonzero=True (NOT a drift mode; flagged only)
+          first cancelling event, mode (a,lam,mu)=(1,0,0): direction #15, chamber y=9653715/10396204
+          (grid 276565612623300/T_DEN), class at event = >pi, direction (0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0)
+          [   697.9s] line a=1 done ( 384.6s)
+    a= 2: nonzero-target modes=168, endpoints nonzero=168/168, classes {'<pi': 0, '=pi-cert': 0, '=pi-fail': 0, '>pi': 168, 'empty': 0},
+          dirs min=26 max=10322 mean=9587.8; routes {'cert3': 116, 'full': 52, 'trivial': 0}
+          DESCRIPTIVE float spans: min=5.799863360 rad at (lam,mu)=(0,0), max=6.278581268 rad; min excess over pi = 2.658270707
+          zero-target mode (lam,mu)=(0,2): class=<pi dirs=4024 endpoint_nonzero=True (NOT a drift mode; flagged only)
+          first cancelling event, mode (a,lam,mu)=(2,0,0): direction #8, chamber y=9653671/10396204
+          (grid 276564352084020/T_DEN), class at event = >pi, direction (0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0)
+          [  1071.7s] line a=2 done ( 373.5s)
+    a= 3: nonzero-target modes=168, endpoints nonzero=168/168, classes {'<pi': 0, '=pi-cert': 0, '=pi-fail': 0, '>pi': 168, 'empty': 0},
+          dirs min=26 max=10322 mean=9587.8; routes {'cert3': 118, 'full': 50, 'trivial': 0}
+          DESCRIPTIVE float spans: min=6.041524334 rad at (lam,mu)=(0,0), max=6.278909974 rad; min excess over pi = 2.899931680
+          zero-target mode (lam,mu)=(0,3): class=<pi dirs=4024 endpoint_nonzero=True (NOT a drift mode; flagged only)
+          first cancelling event, mode (a,lam,mu)=(3,0,0): direction #6, chamber y=742589/799708
+          (grid 276563951003340/T_DEN), class at event = >pi, direction (0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+          [  1368.8s] line a=3 done ( 297.0s)
+    a= 4: nonzero-target modes=168, endpoints nonzero=168/168, classes {'<pi': 0, '=pi-cert': 0, '=pi-fail': 0, '>pi': 168, 'empty': 0},
+          dirs min=26 max=10322 mean=9587.8; routes {'cert3': 109, 'full': 59, 'trivial': 0}
+          DESCRIPTIVE float spans: min=5.799863360 rad at (lam,mu)=(0,0), max=6.278856453 rad; min excess over pi = 2.658270707
+          zero-target mode (lam,mu)=(0,4): class=<pi dirs=4024 endpoint_nonzero=True (NOT a drift mode; flagged only)
+          first cancelling event, mode (a,lam,mu)=(4,0,0): direction #5, chamber y=9653645/10396204
+          (grid 276563607219900/T_DEN), class at event = >pi, direction (1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0)
+          [  1783.6s] line a=4 done ( 414.8s)
+    a= 5: nonzero-target modes=168, endpoints nonzero=168/168, classes {'<pi': 0, '=pi-cert': 0, '=pi-fail': 0, '>pi': 168, 'empty': 0},
+          dirs min=26 max=10322 mean=9587.8; routes {'cert3': 120, 'full': 48, 'trivial': 0}
+          DESCRIPTIVE float spans: min=6.041524334 rad at (lam,mu)=(0,0), max=6.278843536 rad; min excess over pi = 2.899931680
+          zero-target mode (lam,mu)=(0,5): class=<pi dirs=4024 endpoint_nonzero=True (NOT a drift mode; flagged only)
+          first cancelling event, mode (a,lam,mu)=(5,0,0): direction #4, chamber y=9653643/10396204
+          (grid 276563549922660/T_DEN), class at event = >pi, direction (1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+          [  2051.9s] line a=5 done ( 268.3s)
+    a= 6: nonzero-target modes=168, endpoints nonzero=168/168, classes {'<pi': 0, '=pi-cert': 0, '=pi-fail': 0, '>pi': 168, 'empty': 0},
+          dirs min=26 max=10322 mean=9587.8; routes {'cert3': 108, 'full': 60, 'trivial': 0}
+          DESCRIPTIVE float spans: min=5.799863360 rad at (lam,mu)=(0,0), max=6.278823277 rad; min excess over pi = 2.658270707
+          zero-target mode (lam,mu)=(0,6): class=<pi dirs=4024 endpoint_nonzero=True (NOT a drift mode; flagged only)
+          first cancelling event, mode (a,lam,mu)=(6,0,0): direction #4, chamber y=9653643/10396204
+          (grid 276563549922660/T_DEN), class at event = >pi, direction (1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+          [  2309.1s] line a=6 done ( 257.1s)
+    a= 7: nonzero-target modes=168, endpoints nonzero=168/168, classes {'<pi': 0, '=pi-cert': 0, '=pi-fail': 0, '>pi': 168, 'empty': 0},
+          dirs min=26 max=10322 mean=9587.8; routes {'cert3': 108, 'full': 60, 'trivial': 0}
+          DESCRIPTIVE float spans: min=5.799863360 rad at (lam,mu)=(0,0), max=6.278823277 rad; min excess over pi = 2.658270707
+          zero-target mode (lam,mu)=(0,7): class=<pi dirs=4024 endpoint_nonzero=True (NOT a drift mode; flagged only)
+          first cancelling event, mode (a,lam,mu)=(7,0,0): direction #4, chamber y=9653643/10396204
+          (grid 276563549922660/T_DEN), class at event = >pi, direction (1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+          [  2567.4s] line a=7 done ( 258.2s)
+    a= 8: nonzero-target modes=168, endpoints nonzero=168/168, classes {'<pi': 0, '=pi-cert': 0, '=pi-fail': 0, '>pi': 168, 'empty': 0},
+          dirs min=26 max=10322 mean=9587.8; routes {'cert3': 120, 'full': 48, 'trivial': 0}
+          DESCRIPTIVE float spans: min=6.041524334 rad at (lam,mu)=(0,0), max=6.278843536 rad; min excess over pi = 2.899931680
+          zero-target mode (lam,mu)=(0,8): class=<pi dirs=4024 endpoint_nonzero=True (NOT a drift mode; flagged only)
+          first cancelling event, mode (a,lam,mu)=(8,0,0): direction #4, chamber y=9653643/10396204
+          (grid 276563549922660/T_DEN), class at event = >pi, direction (1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+          [  2815.0s] line a=8 done ( 247.5s)
+    a= 9: nonzero-target modes=168, endpoints nonzero=168/168, classes {'<pi': 0, '=pi-cert': 0, '=pi-fail': 0, '>pi': 168, 'empty': 0},
+          dirs min=26 max=10322 mean=9587.8; routes {'cert3': 109, 'full': 59, 'trivial': 0}
+          DESCRIPTIVE float spans: min=5.799863360 rad at (lam,mu)=(0,0), max=6.278856453 rad; min excess over pi = 2.658270707
+          zero-target mode (lam,mu)=(0,9): class=<pi dirs=4024 endpoint_nonzero=True (NOT a drift mode; flagged only)
+          first cancelling event, mode (a,lam,mu)=(9,0,0): direction #5, chamber y=9653645/10396204
+          (grid 276563607219900/T_DEN), class at event = >pi, direction (1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0)
+          [  3176.4s] line a=9 done ( 361.4s)
+    a=10: nonzero-target modes=168, endpoints nonzero=168/168, classes {'<pi': 0, '=pi-cert': 0, '=pi-fail': 0, '>pi': 168, 'empty': 0},
+          dirs min=26 max=10322 mean=9587.8; routes {'cert3': 118, 'full': 50, 'trivial': 0}
+          DESCRIPTIVE float spans: min=6.041524334 rad at (lam,mu)=(0,0), max=6.278909974 rad; min excess over pi = 2.899931680
+          zero-target mode (lam,mu)=(0,10): class=<pi dirs=4024 endpoint_nonzero=True (NOT a drift mode; flagged only)
+          first cancelling event, mode (a,lam,mu)=(10,0,0): direction #6, chamber y=742589/799708
+          (grid 276563951003340/T_DEN), class at event = >pi, direction (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0)
+          [  3429.5s] line a=10 done ( 253.0s)
+    a=11: nonzero-target modes=168, endpoints nonzero=168/168, classes {'<pi': 0, '=pi-cert': 0, '=pi-fail': 0, '>pi': 168, 'empty': 0},
+          dirs min=26 max=10322 mean=9587.8; routes {'cert3': 116, 'full': 52, 'trivial': 0}
+          DESCRIPTIVE float spans: min=5.799863360 rad at (lam,mu)=(0,0), max=6.278581268 rad; min excess over pi = 2.658270707
+          zero-target mode (lam,mu)=(0,11): class=<pi dirs=4024 endpoint_nonzero=True (NOT a drift mode; flagged only)
+          first cancelling event, mode (a,lam,mu)=(11,0,0): direction #8, chamber y=9653671/10396204
+          (grid 276564352084020/T_DEN), class at event = >pi, direction (0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0)
+          [  3653.9s] line a=11 done ( 224.4s)
+    a=12: nonzero-target modes=168, endpoints nonzero=168/168, classes {'<pi': 0, '=pi-cert': 0, '=pi-fail': 0, '>pi': 168, 'empty': 0},
+          dirs min=26 max=10322 mean=9587.8; routes {'cert3': 127, 'full': 41, 'trivial': 0}
+          DESCRIPTIVE float spans: min=6.041524334 rad at (lam,mu)=(0,0), max=6.279090044 rad; min excess over pi = 2.899931680
+          zero-target mode (lam,mu)=(0,12): class=>pi dirs=4024 endpoint_nonzero=True (NOT a drift mode; flagged only)
+          first cancelling event, mode (a,lam,mu)=(12,0,0): direction #15, chamber y=9653715/10396204
+          (grid 276565612623300/T_DEN), class at event = >pi, direction (0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0)
+          [  3784.4s] line a=12 done ( 130.5s)
+
+[7] GATE (E): THM-2365 (14) target-null circulation, all 169 target lines
+    sum_a endpoint(a,-b,(a-q2)) = 0 in Z[zeta_13] for ALL 169 targets (b,q2): PASS
+
+[8] GATE (F): a = 0 line reproduces the stored sidecar artifact
+    endpoints 168/168 nonzero, classes 168x '>pi', dirs min=5740 max=10322 mean=9102.9: PASS
+    first event (0,1) at grid 276563549922660/T_DEN with direction (-6,0,0,0,-1,-2,-2,-2,-2,-2,-1,0,0): PASS
+
+[9] DECISION (the 2016 deep-coloured a != 0 nonzero-target modes)
+    endpoints nonzero: 2016 / 2016 deep-coloured nonzero-target modes
+    PHASE-CONE CERTIFICATE FAILS for ALL 2016 deep-coloured a != 0 nonzero-target modes.
+    Combined with the sidecar's a = 0 negative (168/168 fail, gate F) the cone mechanism is DEAD at
+    EVERY mode depth on this row: all 2184 nonzero-target modes of THM-2365 (10) have phase spans
+    exceeding (or exactly filling) a half turn; the certified positive drift D_(H_E) > 0 (THM-2550)
+    survives only through incomplete cancellation of full-rotation phase words at every depth.
+    sharpest deep mode (DESCRIPTIVE float): (a,lam,mu)=(2,0,0) with span excess 2.658270707 rad over pi
+
+[10] scope (MISTAKE-281/283 guardrails, unchanged)
+    * The row is the canonical TYPED row THM-2309 (25): typed, NOT an asserted scalar cover.
+    * No physical current is claimed; no scalar row is excluded; the scalar ledger stays 165;
+      LRC(14) and JC(2) remain OPEN.  Full support is never read as noncancellation.
+    * A failed cone at every depth excludes ONE mechanism class (half-plane/cone certificates on
+      THM-2365 (10) modes of the bare tensor); it does NOT bound the drift, exclude other mechanisms
+      (symmetry quotients, pre-y-integration breaks), or license any row-uniform statement.
+
+[  3784.5s] all checks passed
