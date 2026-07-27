@@ -458,12 +458,14 @@ All decisions are exact and every check raises under optimized Python.
 Normal and optimized executions byte-match the stored transcript after LF
 normalization.
 
-An independent hostile audit reran normal and optimized executions, matched
-both byte-for-byte to the stored transcript, rederived the selector histogram
-from the admissible-set product, checked the cochain sign against THM-2542,
-and checked the endpoint and empty-digit typing against THM-2600.  It also
-verified that the CRT residues `78,85` are conditional coordinates rather
-than a supplied physical intertwiner.  No numerical or theorem-scope defect
-remains after that wording repair.
+Two independent hostile audits reran normal and optimized executions, matched
+both byte-for-byte to the stored transcript, rederived the selector polytope,
+marker histogram, gauge torsors, physical digit obstruction, and
+chronological two-antecedent boundary, checked the cochain sign against
+THM-2542, and checked the endpoint and empty-digit typing against THM-2600.
+They also verified that the complete `C_91` mapping-cylinder normal form is
+exact only after the stated grant: the residues `78,85` are conditional
+coordinates rather than a supplied physical intertwiner.  No numerical or
+theorem-scope defect remains after that wording repair.
 
 QED.

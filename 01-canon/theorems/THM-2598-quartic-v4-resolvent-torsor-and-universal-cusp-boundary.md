@@ -335,6 +335,18 @@ Consequently `M_2` is not a subfield of `K_4` and is **not** the quadratic
 intermediate `E_2` inside `K_4`.  The matching quadratic and the generic
 deck quotient `N_D4(H)/H=C2` are also different constructions.
 
+The distinction occurs in the smallest exact field-theory hostile:
+
+```text
+f(T)=T^4-2,                    S(W)=W(W^2+8).                (26b)
+```
+
+The quartic has transitive Galois group `D4`; its root field
+`Q(2^(1/4))` contains the proper intermediate `Q(sqrt(2))`, whereas the
+nontrivial matching factor gives `Q(sqrt(-2))`.  This is not a Keller
+example.  It proves that the root-field intermediate and matching quadratic
+cannot be identified from their shared degree or `C2` label.
+
 The three functions in (3) combine four conjugate sheets; they are not
 functions on one quartic source sheet.  `V_4` acts only after passage to `L`.
 

@@ -2,7 +2,7 @@
 id: THM-2608
 title: "Alternative-rail future-clock marginal, lawful-clock collapse, and the missing transition index"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Replacing THM-2592's priority selector by the root-six theta-zero rail
   whenever available makes 1,012 of 1,092 target sections positive on 79 of
   84 rails.  After the future owner clock is marginalized, every displacement
@@ -35,7 +35,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2608 -- the alternative rail fills the marginal and misses the clock
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2592 found a positive common-`x` attachment only on three fallback
 theta-zero rails.  Its final audit also located a sharp boundary: the other
@@ -459,4 +459,4 @@ semantic old head, preserve one named Perron ancestry sheet through seven
 edges, recover a relation current, apply to the other 164 rows, exclude a
 scalar profile, or prove LRC(14).  The ledger remains `165`.
 
-QED (candidate; independent hostile audit pending).
+QED.

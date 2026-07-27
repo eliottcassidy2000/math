@@ -9,7 +9,8 @@ status: >
   the A4/S4 branches there are no proper intermediate fields (A3 max
   in A4, S3 max in S4), while the corrected live D4 branch has a
   root-field quadratic intermediate distinct from its auxiliary matching
-  quadratic; every quadratic Keller map is injective, so any G1
+  quadratic but still forces at least one of x,y to generate the quartic
+  root field; every quadratic Keller map is injective, so any G1
   witness has total degree >= 3) + PROVED (stratum exclusions,
   QQ-exact Groebner with cross-prime adversarial re-derivation:
   point-cap b == 0 face empty; line-cap doubly-degenerate face
@@ -100,7 +101,24 @@ no proper intermediate field (`S3` maximal in `S4`, `A3` in `A4`).
 On the corrected live `D4` branch the point stabilizer `C2` lies in an
 order-four subgroup, so a quadratic intermediate layer exists and the
 matching resolvent factors `1+2`; THM-2598 proves that its auxiliary
-matching quadratic is distinct from that root-field intermediate.  Every quadratic Keller map is
+matching quadratic is distinct from that root-field intermediate.  A quartic
+`D4` root field has only one proper intermediate field.  Since (U2) gives
+`K_4=K(x,y)`, if neither coordinate generated `K_4`, then both `K(x)` and
+`K(y)` would lie in that same quadratic intermediate, forcing
+`K(x,y)` to lie there as well.  Hence at least one of `x,y` is a primitive
+quartic coordinate in the `D4` lane too; the old no-intermediate-field proof
+was false, but its useful coordinate conclusion survives by uniqueness.
+
+The elementary quartic
+
+```text
+T^4-2,                    resolvent W(W^2+8)                 (U4)
+```
+
+is the sharp field-theory hostile: `Q(2^(1/4))` contains `Q(sqrt(2))`, while
+the nontrivial resolvent factor gives the different quadratic
+`Q(sqrt(-2))`.  It is not a Keller example; it proves that the two visible
+quadratic sidecars cannot be identified formally.  Every quadratic Keller map is
 injective (midpoint argument), so **any G1 witness has total degree
 at least 3**; the staircase boxes have even BKK ceilings
 `(d+2)^3 - d^3 = 8, 26, 56, 98` with the excess over the realized

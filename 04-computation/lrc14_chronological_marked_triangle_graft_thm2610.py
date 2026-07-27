@@ -13,6 +13,11 @@ from itertools import combinations
 P = 13
 
 
+def require(condition: bool, message: str) -> None:
+    if not condition:
+        raise RuntimeError(message)
+
+
 def frac(x: Fraction) -> Fraction:
     return x - (x.numerator // x.denominator)
 
@@ -34,7 +39,8 @@ def proper_profile_checks() -> tuple[int, int]:
                     coeff[(k * s) % P] += 1
                 # A degree-at-most-12 integer polynomial is zero at zeta_13
                 # exactly when its coefficient vector is constant.
-                assert len(set(coeff)) > 1
+                require(len(set(coeff)) > 1,
+                        "a proper profile lost a primitive character")
                 characters += 1
     return profiles, characters
 
@@ -62,13 +68,15 @@ def koopman_graph_orthogonality() -> int:
                 if ((P * x - y) * n) % modulus == 0
             )
             if selected:
-                assert roots == modulus
+                require(roots == modulus,
+                        "selected Koopman exponent lost orthogonality")
             else:
                 # This count is not the complex root sum.  Verify the
                 # geometric-series cancellation algebraically instead:
                 d = (P * x - y) % modulus
                 order = modulus // __import__("math").gcd(d, modulus)
-                assert order > 1 and modulus % order == 0
+                require(order > 1 and modulus % order == 0,
+                        "nonselected Koopman exponent failed to cancel")
             checks += 1
     return checks
 
@@ -78,12 +86,13 @@ def deck_and_carry_checks() -> tuple[int, int]:
     carry_checks = 0
     for L in range(1, 9):
         for q in range(P):
-            assert frac(Fraction(P**L * q, P)) == 0
+            require(frac(Fraction(P**L * q, P)) == 0,
+                    "positive time failed to erase the root deck")
             root_checks += 1
         for m in range(91):
             lhs = frac(Fraction(P**L * m, 91))
             rhs = frac(Fraction(P ** (L - 1) * m, 7))
-            assert lhs == rhs
+            require(lhs == rhs, "C91 carry did not rebase to C7")
             carry_checks += 1
     return root_checks, carry_checks
 
@@ -101,8 +110,8 @@ def temporal_boolean_hostile() -> tuple[int, int]:
         mask[x] * (1 - mask[(P * x) % modulus])
         for x in range(modulus)
     )
-    assert same == 0
-    assert later > 0
+    require(same == 0, "same-time complements were not orthogonal")
+    require(later > 0, "chronological complement hostile disappeared")
     return same, later
 
 

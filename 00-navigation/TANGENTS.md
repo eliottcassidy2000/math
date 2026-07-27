@@ -5,6 +5,13 @@
 > [`START-HERE.md`](START-HERE.md), then apply the connection contract in
 > [`RESEARCH-PROTOCOL.md`](RESEARCH-PROTOCOL.md) before promoting one.
 
+> **T1549 correction (MISTAKE-297, 2026-07-28).** The historical
+> self-normalizing-stabilizer rule below is not proved: deck transformations
+> are free only over the complement of the Jelonek divisor and need not
+> extend freely across it. Campbell still excludes degree two and regular
+> `C4/V4` degree-four monodromy. The honest wild degree-four list is
+> `D4/A4/S4`, with `D4` retaining a quadratic intermediate.
+
 **T1555** [kind-pasteur-2026-07-20-S128c104] #problem-atlas #post-jc #priorities #under-radar #HYP-8185. THE PROBLEM ATLAS (00-navigation/PROBLEM-ATLAS-2026-07-20.md): 12 problem areas, honest novel-results ledgers, five-session priority queue (JC_2 both-ends; 2-jet d=4; Zhao explicit fall-line; DC_1 atom; {7,21}+OEIS+unit-distance). Discoveries during compilation: unit distance has FORGOTTEN canon (THM-408/412); Poisson has the s604/605 coimage atlas; the A_5 triangle of threads (Kakeya x Keller quintic x Pisano) unbraided; {7,21} is now a three-thread crossroads. Maintain the atlas: update blocks as results land. -> HYP-8185, T1549, T1554.
 
 **T1554** [kind-pasteur-2026-07-20-S128c103] #shear-catalog #proth #faulhaber #dichotomy #oeis-new #HYP-8170. THE SHEAR CATALOG: 7 T-continuation families x shears 0-3 x sums/alt/products. PROTH THEOREMS: GF exact => spectrum 2^(1/s) (sqrt2 at s=2 = hypotenuse constant); Pascal phi-ladder dominates; R_0(m) = m*2^(m+1)+1 self-similar; shear-1 = 2x Mersenne. EXPONENT-COEFFICIENT DICHOTOMY: exponential shearing iff parameter in exponent. c102 loop closed: Rosetta = Faulhaber shear-1; deviations tune residual to A045648 exactly. FOUR OEIS-NEW sequences (Proth s=2 sums/products, pure Faulhaber diagonals, Faulhaber s=3); A073617 validation; klein-D false-positive corrected (window lesson). Opens: Faulhaber shear constant (Lambert-W?); OEIS submissions (klein pipeline); shear products theory (fibonomial analog for Proth); the s -> infinity limits. -> HYP-8170, HYP-8165, T1532, T1553.
