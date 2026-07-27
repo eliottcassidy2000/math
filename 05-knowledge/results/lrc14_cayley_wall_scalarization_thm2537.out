@@ -1,0 +1,13 @@
+THM-2537 exact referee
+q=13 slopes=12 nonconstant_masks=8190 slope_mask_states=98280
+cayley_endpoint_identity=PASS green_dual=PASS denominator=13_sharp_on_augmentation
+global_boundary=Bminus-Bplus=(P-I)e=(I+P)Ce
+crofton_energy=PASS equal_boundary_masses=PASS
+deep_comb=(P-I)H=Pgamma_plus-gamma_minus=(I+P)C(H): PASS
+positive_mask_states=98280 positive_threshold_layers=2236416
+psi_sum=threshold_sum=selected_scalar_sum=2236416
+affine_generator_reflection_checks=294840
+fixed_unselected_edge_zero_states=49128
+tau1_selected_endpoint_pair_census=[((-6, 5), 13), ((-5, 4), 91), ((-4, 3), 338), ((-3, 2), 871), ((-2, 1), 1534), ((-1, 0), 1976), ((0, -1), 1755), ((1, -2), 1066), ((2, -3), 442), ((3, -4), 91), ((4, -5), 13)]
+hostiles=untwisted_average_zero,source_only_zero,head_only_zero,fixed_edge_zero: PASS
+THM-2537 PASS
