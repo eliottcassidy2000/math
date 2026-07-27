@@ -198,6 +198,40 @@ def main() -> None:
         check(field_vector_denominator(primitive) == 1)
         pairwise_fillings += 1
 
+    # The unnormalized target Fourier numerators fill.  Division by 13 is
+    # not an integral-lattice operation and can restore the absolute class.
+    singleton_fourier_fillings = 0
+    normalized_restorations = 0
+    for q in range(P):
+        numerator = []
+        for m in range(P):
+            value = (Fraction(0),) * DIM
+            for target in range(P):
+                value = field_add(
+                    value,
+                    field_mul(zeta_power(q * target), target_profiles[target][m]),
+                )
+            numerator.append(value)
+        check(not any(field_mod13(field_vector_beta(numerator))))
+        check(
+            field_vector_denominator(apply_scalar_matrix_to_field(b, numerator))
+            == 1
+        )
+        singleton_fourier_fillings += 1
+        if q == P - 1:
+            expected = [field_scale(P, value) for value in target_profiles[0]]
+            check(numerator == expected)
+            normalized = [field_scale(Fraction(1, P), value) for value in numerator]
+            check(normalized == target_profiles[0])
+            check(field_mod13(field_vector_beta(normalized)) == omega_mod)
+            check(
+                field_vector_denominator(apply_scalar_matrix_to_field(b, normalized))
+                == P
+            )
+            normalized_restorations += 1
+        else:
+            check(not any(coefficient for value in numerator for coefficient in value))
+
     # Closed canonical carry class.  Y is a septimal unit; every target has
     # the same Omega factor.  Integer combinations depend only on the total
     # coefficient modulo 13, and every full target Fourier bank is fillable.
@@ -255,8 +289,12 @@ def main() -> None:
     print(f"circulant functorial controls {functorial_controls}")
     print(f"singleton target profiles {len(target_profiles)}, pairwise fillings {pairwise_fillings}")
     print(f"canonical target classes {canonical_classes}, pairwise class fillings {target_pair_classes}")
-    print(f"canonical target Fourier fillings {target_fourier_fillings}")
-    print("punctured orbit preserves, full orbit and extra13 kill")
+    print(f"canonical unnormalized target Fourier fillings {target_fourier_fillings}")
+    print(
+        "singleton unnormalized Fourier fillings "
+        f"{singleton_fourier_fillings}, normalized restorations {normalized_restorations}"
+    )
+    print("punctured orbit negates, full orbit and extra13 kill")
     print(f"explicit checks {checks}")
 
 

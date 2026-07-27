@@ -5,15 +5,18 @@ status: >
   PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
   On the integral 13-colour augmentation lattice, every circulant filter
   acts on THM-2571's Cayley cokernel only through the sum of its coefficients
-  modulo 13.  Translations and the punctured twelve-shift orbit preserve the
-  class, while every shift difference, the full thirteen-shift orbit, and
-  one extra global factor 13 kill it.  For each nonzero owner colour, the
+  modulo 13.  Translations fix the class and the punctured twelve-shift orbit
+  negates it (hence preserves nontriviality), while every shift difference,
+  the full thirteen-shift orbit, and one extra global factor 13 kill it.  For
+  each nonzero owner colour, the
   thirteen canonical target-colour carry profiles are one constant nonzero
   cokernel coset: every pairwise target difference, every integral
-  target-augmentation-zero combination, and every full target Fourier
-  contraction has an integral Cayley primitive although each absolute
-  profile is obstructed.  This proves that an absolute charged reference,
-  not another difference or target DFT, is the missing sidecar.  The result
+  target-augmentation-zero combination, and every unnormalized full target
+  Fourier numerator has an integral Cayley primitive although each absolute
+  profile is obstructed.  Division by 13 is outside this integral functor:
+  after global primitive reduction, a normalized DFT can restore the class.
+  This proves that integral relative data lacks an absolute reference while
+  leaving the normalized Abel-normal route genuinely open.  The result
   is integral coefficient algebra; it supplies no positive filling,
   semantic endpoint, scalar-row exclusion, or LRC(14) conclusion.
 source: root-holotopy-2026-07-28-socle-flat-torsor
@@ -27,8 +30,8 @@ related:
   - THM-2574-oriented-tooth-component-holonomy-and-fixed-frequency-descent
 script: 04-computation/lrc14_socle_flat_target_torsor_thm2579.py
 output: 05-knowledge/results/lrc14_socle_flat_target_torsor_thm2579.out
-script_sha256: e5de84ed04e63efe827f0a1b13efce4083c7588d69989d476dfd8841c2badbe2
-output_sha256: 930a68f81dd286bc5ec12de4aa5b69fdd6c4c2f30a307b76c45d9c6d2fb0d5d7
+script_sha256: 441668b04bccc91755dfaf7fd41bc34ec0e5b11a6236721950a00cb4b0352ab2
+output_sha256: 62e712af05599432512aedd9e5217f02f2b04369b0dc568285b6f8590587e111
 hash_basis: LF-normalized bytes
 ---
 
@@ -47,7 +50,7 @@ The exact shape is
 ```text
 thirteen absolute target profiles:       one nonzero cokernel coset;
 
-every target difference/DFT:             an integral Cayley boundary.
+every target difference/integral DFT numerator:  a Cayley boundary.
                                                                     (1)
 ```
 
@@ -197,9 +200,9 @@ For coefficients in the full cyclotomic ring, zero target augmentation is
 still sufficient; additional annihilation can occur because `Omega` is a
 socle element, not a unit.
 
-## 3. Every full target Fourier contraction fills
+## 3. Unnormalized Fourier numerators fill; normalization can restore
 
-For `q in F_13`, form the second-level target contraction
+For `q in F_13`, form the **unnormalized integral numerator**
 
 ```text
 d^(kappa,q)=sum_(b in F_13)
@@ -217,13 +220,17 @@ d^(kappa,q)=C_tau B_tau d^(kappa,q),
 B_tau d^(kappa,q) in Lambda_M.                             (19)
 ```
 
-All `6*13=78` full target Fourier contractions are therefore integrally
-fillable.  This does not say they vanish as coefficient vectors; it says
-their common absolute torsion has cancelled.
+All `6*13=78` unnormalized target Fourier numerators are therefore
+integrally fillable.  This does not say they vanish as coefficient vectors;
+it says their common absolute torsion has cancelled.
 
-Equation (19) is the sharp no-go for trying to select the THM-2571 class by
-another target DFT.  The target label `b!=0` remains useful external typing,
-but the Bockstein itself cannot recover it from the complete bank.
+The adjective **unnormalized** is load-bearing.  A standard target DFT uses
+`d^(kappa,q)/13`.  Division by `13` is not an endomorphism of `Lambda_M`.
+If the numerator has global coefficient content `13`, primitive reduction
+can divide that content and restore a nonzero Bockstein.  If it does not,
+the rational normalized coefficient retains numerator (18) over denominator
+`13`, and its primitive integral class remains zero.  Thus (19) gives a
+content-sensitive normalization boundary, not a no-go for normalized DFTs.
 
 ## 4. Singleton model and sharpness
 
@@ -251,6 +258,20 @@ a^(b)-a^(b')
 contains the missing factor `zeta_13-1`, so its sawtooth primitive is
 integral.  The companion verifies all thirteen absolute denominators and
 all `78` pairwise primitives directly.
+
+The same model sharply realizes the normalization boundary.  Its
+unnormalized target Fourier numerator is
+
+```text
+sum_b zeta_13^(qb)a^(b)
+ =0,                         q!=-1,
+ =13a^(0),                   q=-1.                          (22a)
+```
+
+Every numerator in (22a) fills integrally.  But the normalized `q=-1`
+coefficient is exactly `a^(0)` again, with Bockstein `Omega` and primitive
+denominator `13`.  Hence a normalized DFT can recover precisely the absolute
+class that its integral numerator killed.
 
 Three boundaries are sharp:
 
@@ -287,15 +308,16 @@ The first identity makes the obstruction universal across target colour;
 the second makes every target difference forget it.  Universality and
 target blindness are the same algebraic fact.
 
-This clarifies the relation to THM-2573.  Its logarithmic Abel normal is a
-new additive boundary observable, and a lawful target DFT may detect that
-its jump-pair measure moves.  But retaining only nonzero target characters
-is still relative data: their coefficient weights have target augmentation
-zero.  On the constant coset (13), such operations land in the integrally
-fillable sector.  To transport the absolute THM-2571 class, one must retain
-one charged reference profile or an equivalent oriented endpoint/component
-trivialization before taking differences.  THM-2574 reserves one possible
-component-holonomy source, but no such physical identification is used here.
+This clarifies, without closing, the relation to THM-2573.  Its logarithmic
+Abel normal uses the normalized target DFT
+`13^(-1)sum_s`, not merely its integral numerator.  Equation (22a) proves
+that this normalization can restore a killed 13-primary class.  Therefore
+THM-2579 gives no no-go for the Abel normal.  A composition would have to
+show that the lawful whole-layer normal has global 13-content in its
+unnormalized numerator and then perform primitive reduction on the **same**
+physical carrier.  Current canon supplies neither fact.  An absolute charged
+reference or equivalent oriented component trivialization remains another
+possible route; THM-2574 reserves such a source but is not used here.
 
 THM-2572's positive energy does not replace this reference.  Energy can
 survive after the linear Bockstein cancels, and it is invariant under phase
@@ -330,15 +352,18 @@ byte-for-byte.  The dependency-free exact referee checks:
   differences, the full/punctured orbit sums, and the Cayley derivative;
 - all thirteen singleton absolute profiles and their `78` pairwise integral
   fillings;
-- the closed septimal inverse for `Y`, all `78` canonical absolute classes,
-  all `468` pairwise class differences, and all `78` target Fourier
-  contractions;
+- THM-2571's closed `Omega*Y` factorization and its `78` absolute-class,
+  `468` pair-difference, and `78` unnormalized-Fourier consequences (the
+  raw canonical carrier is not reconstructed a second time);
+- all thirteen singleton Fourier numerators and the exact normalized
+  `q=-1` restoration hostile;
 - the punctured/full-orbit boundary and the extra-factor-13 hostile.
 
-There are `1414630` explicit checks, none implemented with `assert`.
+There are `1414840` explicit checks, none implemented with `assert`.
 
 The theorem proves an integral target-torsor law and identifies the exact
-loss in passing from absolute profiles to differences.  It does not
+loss in passing from absolute profiles to differences, together with the
+sharp normalized-DFT escape.  It does not
 construct a positive Cayley primitive, identify the abstract target index
 with a semantic THM-2305 endpoint, make the logarithmic normal lawful on the
 same carrier, supply an owner/root reference, exclude a scalar row, or prove
