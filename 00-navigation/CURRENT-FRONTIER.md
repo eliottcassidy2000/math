@@ -129,6 +129,23 @@ It is not a scalar-cover row and does not construct the selected-head/later-
 target ancestry map; its highest-value use is as a nondegenerate test input
 for the THM-2548 gain automaton or THM-2549 sheet-retaining bridge.
 
+THM-2555 classifies that sheet bridge: the old charged digit plus physical
+carry recovers the old head, while the future digit plus its new carry
+recovers a later root; an invariant gauge and a positive offset-one cylinder
+separate them sharply. THM-2557 gives the smallest exact THM-2550(B)/2548
+composition. On the rank-72 doubly centered lattice, transfer is injective
+with Smith form `1^66 direct-sum 13^6` and image the kernel of six mod-13
+first moments. The typed signal survives every nonzero horizontal slope but
+is signed, outside the Hall cone, and supplies no actual `(head,later-root)`
+graph.
+
+THM-2558 shows the all-slope selector hits the unique old target-active role
+on any positive one of `428/630` visible root necklaces; `202` sharp blind
+middle-layer necklaces remain. The next target is to exclude those masks by
+physical six-comb constraints or carry that specific role genuinely later
+with its sheet, carry, word, and common root gauge intact. More horizontal
+nonvanishing addresses neither obligation.
+
 THM-2502/2503/2504 show tournaments and sidecar-free holonomy are not target
 currents. THM-2458's hostile is physically realized by THM-2462. THM-2464
 proves: `lambda=1` clean charts force the linked blocker safe, `lambda=2` is
