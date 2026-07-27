@@ -1,0 +1,33 @@
+======================================================================
+CHECK 1: BCW degree-reduction elementary step (Prop 3.1)
+======================================================================
+start F : deg 4  detJ = (1)
+  detJ(H) = (1)   detJ(G) = (1)
+F' = G o F o H :
+   F'_0 = (1)*x0^1 + (-1)*x1^2*x2^1 + (-1)*x1^2*x3^1 + (-1)*x2^1*x3^1
+   deg(F') = 3  (was 4)
+   detJ(F') = (1)  (must be 1, GLOBALLY)
+
+======================================================================
+CHECK 2: BCW doubling (make J nilpotent) + T-homogenization (Sec 4)
+======================================================================
+--- triangular mixed cubic: n=4 ---
+  F = ['(1)*x0^1 + (1)*x1^1*x2^1*x3^1 + (1)*x1^1*x2^1', '(1)*x1^1 + (1)*x2^1*x3^1', '(1)*x2^1', '(1)*x3^1']
+  detJ(F) = (1)  | J(nonlinear) nilpotent?  3
+  doubled: detJ(X+N) = (1)  (== detJ(F)?  True )
+           J(N) nilpotent index = 5
+  homogenized L in 9 vars; nonlinear-part degrees: [3, 3, 3, 3, 3]
+           detJ(L) = (1)
+           H_c cubic-homogeneous & J(H_c) nilpotent index = 5
+  (no small non-nilpotent example found in search grid)
+
+======================================================================
+CHECK 3: Gorni-Zampieri pairing determinant identity (Prop 6.2.7)
+======================================================================
+G=(AX)^{*3}, A=[[1,-1],[1,-1]] (A^2=0), N=2 : ['(1)*x0^3 + (-3)*x0^2*x1^1 + (3)*x0^1*x1^2 + (-1)*x1^3', '(1)*x0^3 + (-3)*x0^2*x1^1 + (3)*x0^1*x1^2 + (-1)*x1^3']
+  detJ_X(X+G) = (1) (=1 => Keller)
+F=T G(T^{-1}X): ['0', '(1)*x0^3']
+H (n=1)      : 0
+  detJ(x+H) = (1)  (equals detJ_X(X+G) above => Keller preserved)
+
+ALL CHECKS: each shear preserves detJ as a POLYNOMIAL IDENTITY (all x), not on a section.
