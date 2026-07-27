@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `lrc14_unshifted_root_accessibility_thm2595.py` -> matching `.out`
+  [THM-2595 PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
+  PENDING].  Unshifted danger reaches all thirteen physical root cells
+  exactly from speed `12` for ordinary roles and `10` for the guard.  The
+  scalar-cover image law `T(A_0)` inside three blocker danger sets forces
+  `mu(T(A_0))<=3/7`; exact small-role, forced-ordinary, and guard cyclic-arc
+  censuses give incompatible floors `171/245`, `43/77`, and `1791/2695`.
+  Hence every scalar row admits a pivot-eligible all-root target-active role,
+  uniformly for every target translate.  Exact interval cross-mixing then
+  gives a genuinely later same-root first-failure occurrence on every
+  positive canonical THM-2537 head layer, a delayed analogue of equation
+  (56).  Future word/full-`X`, paired blocker
+  co-shift, left residue, and row exclusion remain open.  Hashes are
+  `e2630a86...0d7e` / `93cc7845...0541`.
 - `lrc14_depth_five_arrival_future_diagonal_thm2586.py` -> matching `.out`
   [THM-2586 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  In every one
   of the `12*7=84` nonzero-displacement/owner cells, one of the theta-zero
