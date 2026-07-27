@@ -18,10 +18,10 @@ status: >
   value of A nor positivity determines B on the arbitrary current space.  For
   actual THM-2334 currents, Uc=A and Jc=B exactly, so all remaining force must
   come from the constrained lawful Abel-current image: the strong uniform
-  condition is avoidance of the nonzero-target kernel, while the rowwise
-  existential condition has a different quantifier.  No hostile vector is
-  proved lawful, no covering row is exhibited or excluded, no same-ancestry
-  arrival field is constructed, and LRC(14) remains open.
+  condition is avoidance of the fibrewise nonzero-target kernel locus, while
+  the rowwise existential condition has a different quantifier.  No hostile
+  vector is proved lawful, no covering row is exhibited or excluded, no
+  same-ancestry arrival field is constructed, and LRC(14) remains open.
 source: codex-2026-07-27-all-unit-target-kernel
 depends_on:
   - THM-2309-owner-aligned-pivot-packets-and-visible-height-separation
@@ -34,6 +34,7 @@ related:
   - THM-2540-weighted-live-event-kakeya-flux-and-transverse-gain-boundary-refinement
   - THM-2541-canonical-typed-row-full-target-plane-support
   - THM-2545-word-stratified-hall-arrival-criterion-and-owner-word-transportation-hostile
+  - THM-2547-positive-cut-character-ancestry-pairing
 script: 04-computation/lrc14_all_unit_target_projector_kernel_thm2544.py
 output: 05-knowledge/results/lrc14_all_unit_target_projector_kernel_thm2544.out
 script_sha256: 36bb8ff1a2901add0cea3e2e46d63c66615eed223869704fad38688f563012fb
@@ -355,33 +356,42 @@ counterexamples to a lawful-current theorem.
 
 ## 6. The lawful-image intersection is the live object
 
-For a hypothetical covering row `w` among THM-2349's `165` rows, let
+Write `Cov` for the hypothetical, possibly empty set of covering rows among
+THM-2349's `165` candidates.  For `w in Cov`, let
 
 ```text
-L_law(w) subset C^(K_91)                            (28)
+V_w=C^(K_91(w)),
+
+L_law(w) subset V_w,
+
+J_(*,w)=pr_(G_w minus {0}) o J_w.                  (28)
 ```
 
 be the set of all boundary vectors (24) obtained from THM-2349-licensed
 choices of delayed owner, literal word, marked unit triangle, and endpoint
-data.  Let
+data.  The relation group `K_91(w)`, owner packet, quotient `G_w`, and
+projector all vary with `w`; they must not be silently identified.  Form the
+disjoint total space and its fibrewise kernel locus
 
 ```text
-L_cov=union_(hypothetical covering rows w)L_law(w),
+V_cov=disjoint_union_(w in Cov) ({w} x V_w),
 
-J_* = pr_(G minus {0}) o J.                         (29)
+L_cov=disjoint_union_(w in Cov) ({w} x L_law(w)),
+
+K_*=disjoint_union_(w in Cov) ({w} x ker J_(*,w)).  (29)
 ```
 
 For one licensed datum, THM-2334 (49) is exactly
 
 ```text
-c notin ker J_*.                                    (30)
+c notin ker J_(*,w).                                (30)
 ```
 
 Consequently the strong statement that **every** licensed covering-row
 current survives is exactly the image-avoidance condition
 
 ```text
-L_cov intersection ker J_* = empty.                (31)
+L_cov intersection K_* = empty.                    (31)
 ```
 
 If one is free to choose favourable delayed data separately for each row,
@@ -389,14 +399,14 @@ the correct weaker quantifier is instead
 
 ```text
 for every hypothetical covering row w,
-    L_law(w) is not a subset of ker J_*.             (32)
+    L_law(w) is not a subset of ker J_(*,w).         (32)
 ```
 
 For a proposed canonical selection `s(w) in L_law(w)`, uniform survival is
-the corresponding intersection statement
+the corresponding graph-avoidance statement
 
 ```text
-s(Cov) intersection ker J_* = empty.                (33)
+{(w,s(w)):w in Cov} intersection K_* = empty.       (33)
 ```
 
 These distinctions matter.  One lawful kernel hit would refute (31), but
@@ -409,7 +419,8 @@ This reframes the current frontier as a restriction problem:
 
 ```text
 describe equations, inequalities, recurrences, or equivariant sidecars
-cutting out L_law inside C^(K_91), then test their transversality to ker J_*.
+cutting out each L_law(w) inside V_w, then test its transversality to
+ker J_(*,w), uniformly over the row bundle.
                                                                   (34)
 ```
 
