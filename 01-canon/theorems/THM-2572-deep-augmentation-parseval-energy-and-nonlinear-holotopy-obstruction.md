@@ -2,7 +2,7 @@
 id: THM-2572
 title: "Deep-augmentation Parseval energy and nonlinear holotopy obstruction"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED (two ways).
   A lawful diagonal-zero C_13^3 table of mass rho has deep target-zero
   anchor energy at least rho^2/(12*13^6), sharply.  The six displayed
   THM-2562 duty replicas form a rank-one Gram packet of energy at least
@@ -20,15 +20,14 @@ related:
   - THM-2563-paired-dipole-deep-target-corner-and-partial-bare-boundary
 script: 04-computation/lrc14_deep_augmentation_energy_thm2572.py
 output: 05-knowledge/results/lrc14_deep_augmentation_energy_thm2572.out
-script_sha256: 99a6665c86f1f93ac34cc6df86e988805fd20897c20d9284bc79597ab8a8bc9d
-output_sha256: 004529d3ff7e87890033e3ec9489975579c99913f0f62c84cf280f5c8610de87
+script_sha256: 3503cd6369390a0ba83e7a40319a34df1ca56f69f411b30b69f3216ec23f9348
+output_sha256: 902266e46fb8040b9f27dc904973d2daba0fc940b50ecb57c141e783dde76853
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2572 -- the cancelled coloured cycle has positive Gram energy
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
-PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED (two ways).**
 
 THM-2567 finds a genuine linear cancellation: every nonzero deep colour has
 a rigid duty face, but the sum over all thirteen colours is zero.  Squaring
@@ -313,6 +312,16 @@ global factor in (18), the two THM-2563 floors, and the
 strict triangle geometry behind the prescribed-colour infimum.  It executes
 `1,647,551` explicit integer/Fraction assertions under both normal and
 optimized Python.
+
+Two independent hostile audits rederived the Parseval/completed-square
+identity, equality ray, rank-one Gram factorization, all gain constants, the
+common-colour quantifier, the `25/24` full/display control, both THM-2563
+floors, and the rational prescribed-colour hostile with all three zero planes.
+Both confirmed the coefficient-versus-physical scope.  After the
+MISTAKE-288 namespace repair, two immutable passes verified the unique
+`THM-2572` ID, coherent artifact rename, narrowed census-evidence wording,
+normal/optimized/stored replay, documentation checks, and the LF Git-blob
+hashes in the frontmatter.
 
 This theorem upgrades an exact linear cancellation to a sharp positive
 coefficient-level energy and a common quantitative colour.  It does not
