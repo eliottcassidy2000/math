@@ -91,8 +91,8 @@
 - `keller_composite_jelonek_thm2576.py` -> matching `.out`
   [THM-2576 PROVED + VERIFIED-EXACT + INDEPENDENTLY COMPUTATION-AUDITED].
   The inverse conic subresultant reduces
-  `F(V(L))` to `Res_X(E,Q)=-a^8c^18S^8H`; saturation removes the three chart
-  artifacts.  The residual `H` is irreducible, has multidegree `(14,21,12)`,
+  `F(V(L))` to `Res_X(E,Q)=+a^8c^18S^8H`; standard-convention saturation
+  removes the three chart artifacts.  The residual `H` is irreducible, has multidegree `(14,21,12)`,
   total degree `25`, and `361` terms; the normalized image has rank two and
   closure `V(H)`.  The general escape-sequence composition law then gives
   `S_(F o F)=V(LH)`, exactly two irreducible components.  Discriminant

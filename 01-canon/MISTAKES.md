@@ -9,6 +9,30 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-290 (2026-07-28, THM-2576 resultant convention) -- a PRS degree reorder lost the odd-by-odd resultant swap sign
+
+- **What was written:** THM-2576 equation (14) displayed the standard
+  resultant as `Res_X(E,Q)=-a^8 c^18 S^8 H`, with `deg_X(E)=3` and
+  `deg_X(Q)=15`.
+- **First failed implication:** the computation called SymPy's PRS
+  `resultant(E,Q,X)` with the lower-degree polynomial first.  That routine
+  reordered the inputs but did not restore the factor
+  `(-1)^(3*15)=-1`.  At the exact target `(a,b,c)=(1,1,1)`, the PRS value is
+  `-198662708168284531608320`, while the standard `18 x 18` Sylvester
+  determinant and root-product resultant are
+  `+198662708168284531608320`.
+- **Strongest survivor:** the primitive polynomial `H`, its coefficient
+  ledger, irreducibility, image hypersurface `V(H)`, and
+  `S_(F o F)=V(LH)` are unchanged: multiplying a defining equation by `-1`
+  never changed the ideal or zero set.  The independently derived norm law
+  `prod_(q in F^-1(t)) L(q)=H(t)/(64L(t))` has the positive sign and remains
+  correct.
+- **Repair:** compute the higher-degree-first PRS value and restore
+  `Res(E,Q)=(-1)^45 Res(Q,E)` explicitly.  In the standard convention the
+  exact identity is `Res_X(E,Q)=+a^8 c^18 S^8 H`.  Whenever resultant input
+  degrees are reordered, audit both the swap parity and one Sylvester or
+  root-product control before using constants or square classes.
+
 ## MISTAKE-289 (2026-07-28, recurrent concurrent THM-2570 collision) -- a later theorem reused an ID after the earlier collision repair
 
 - **What was done:** the LRC word-depth/owner-clock theorem was committed as

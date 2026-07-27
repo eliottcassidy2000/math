@@ -24,8 +24,8 @@ related:
   - MISTAKE-287 (raw pullbacks and resultants require coefficient sidecars)
 script: 04-computation/keller_composite_jelonek_thm2576.py
 output: 05-knowledge/results/keller_composite_jelonek_thm2576.out
-script_sha256: 8de7ebee702d641eb25b15159c48ba312db3e6972bf23f5bb7cd307d175a9727
-output_sha256: b12cd9a780bb3baad72dd08be4dfa019f28f6f6bf221ac218a3f29dba4158577
+script_sha256: 0d6d2f901e721365c8628a5d8c54b9ab69637c29f1f20a744bf315aea814d494
+output_sha256: 8f983501eab84e32059bcc35627802a52b978cd8590cdf37a46c9259479da7fa
 ---
 
 # THM-2576 -- the sporadic square has exactly two Jelonek components
@@ -165,9 +165,15 @@ It has `X`-degree `15` and `398` terms.  Finally define `H in Q[a,b,c]`
 by the exact factorization
 
 ```text
-Res_X(E,Q) = -a^8 c^18 S^8 H,
+Res_X(E,Q) = +a^8 c^18 S^8 H,
 S=27ac^2-9bc+8.                                    (14)
 ```
+
+Here `Res` uses the standard Sylvester/root-product convention.  The first
+version of (14) displayed a minus sign because SymPy's PRS routine reordered
+the degree-`3` and degree-`15` inputs without restoring their odd-by-odd swap
+sign; MISTAKE-290 records the exact correction.  The polynomial `H` and every
+zero-set consequence below are unchanged.
 
 The quotient in (14) is polynomial.  Exact factorization over `Q` proves
 that `H` is primitive and irreducible, with

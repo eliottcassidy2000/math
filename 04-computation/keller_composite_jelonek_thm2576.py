@@ -105,8 +105,16 @@ print("=" * 78)
 print("[3] Saturated resultant and the irreducible image divisor H")
 print("=" * 78)
 
-raw_resultant = sp.resultant(E, Q, X)
-H_fraction = sp.cancel(-raw_resultant / (a**8 * c**18 * S**8))
+# SymPy's PRS implementation normalizes the polynomial order when the first
+# degree is smaller, but does not restore the odd*odd swap sign.  Here
+# deg(E)=3<15=deg(Q), so ``resultant(E,Q)`` has the sign of Res(Q,E), not the
+# standard Sylvester/root-product Res(E,Q).  Compute the higher-degree-first
+# value and restore Res(E,Q)=(-1)^(3*15) Res(Q,E) explicitly.
+prs_low_first = sp.resultant(E, Q, X)
+raw_resultant = -sp.resultant(Q, E, X)
+require(sp.expand(raw_resultant + prs_low_first) == 0,
+        "PRS/Sylvester resultant sign correction changed")
+H_fraction = sp.cancel(raw_resultant / (a**8 * c**18 * S**8))
 H_num, H_den = H_fraction.as_numer_denom()
 require(H_den == 1, "artifact quotient is not polynomial")
 H = sp.expand(H_num)
@@ -133,7 +141,7 @@ require(
     "H coefficient ledger changed",
 )
 
-print("  Res_X(E,Q)=-a^8 c^18 S^8 H.  [PASS]")
+print("  Res_X(E,Q)=+a^8 c^18 S^8 H (standard Sylvester convention).  [PASS]")
 print("  a, c, S are inverse-chart artifacts, removed before geometry.")
 print("  H is primitive and irreducible over QQ; gcd(H,L)=1.  [PASS]")
 print("  multidegree(H)=(14,21,12), total degree=25, terms=361.")
