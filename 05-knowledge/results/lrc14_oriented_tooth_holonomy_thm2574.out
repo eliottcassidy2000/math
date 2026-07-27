@@ -1,0 +1,47 @@
+== THM-2574: oriented tooth holonomy and fixed-X descent ==
+
+== lifted component Fourier formula and monodromy ==
+  exact component/monodromy phase checks: 842270
+  physical component-label closure checks: 842270
+  I_(n,s+13)=I_(n-1,s) and n is read modulo k
+
+== component characters select a physical residue ==
+  component-character residue checks: 172975
+  descended C13 connection checks: 66950
+  plus-sign DFT character checks: 66950
+  integer-lift gauge checks: 5150
+  G_(r,s) has phase zeta^(((X-r)/k)s) on X congruent to r
+
+== paired endpoint colour is the Euclidean carry ==
+  fixed-frequency paired phase checks: 518925
+  exact two-class carry censuses: 5150
+  q=(r+M-t)/k=floor(M/k) or floor(M/k)+1
+
+== LRC 13-adic resonance boundary ==
+  resonant k|M cases (all q=0): 309
+  nonresonant k-not-dividing-M cases: 5364
+  nonzero carry classes across nonresonant cases: 10012
+  for 13|M and gcd(k,13)=1, standard carry is all-zero iff k|M
+
+== danger/safe sinc-zero avoidance ==
+  exact (k,M,L,r) packets checked: 174250
+  minimum nonzero choices among n mod 7: 5
+  packets attaining the sharp union-bound value five: 55
+
+== tooth-weighted Abel-normal bridge ==
+  connected tooth-weight/target phase checks: 253760
+  pure-gate support/cosine checks: 20080
+  M=r+hk: the connected r-tooth normal lands at plus-DFT colour q=h
+  uniform tooth weights retain only r=0, equivalently k divides M
+
+== nonresonant coloured fixed-X controls ==
+  LRC-shaped nonresonant controls: 7180
+  certified nonzero interval amplitudes: 14360
+  every tested off-resonance packet has a nonzero q and nonzero fixed-X amplitude
+
+== trivial-character/full-comb boundary ==
+  trivial component-character checks: 30400
+  forgetting component labels keeps r=0 and restores the full k-tooth comb
+
+scope: exact complex oriented local system; no positive Boolean carrier or live-row current
+all exact checks passed
