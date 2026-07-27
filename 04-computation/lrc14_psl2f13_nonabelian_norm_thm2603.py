@@ -87,6 +87,13 @@ def G(t):
     return mat(0, 1, -1, t)
 
 
+W = mat(0, -1, 1, 0)
+
+
+def bruhat(r, s):
+    return mul(mul(U(r), W), U(s))
+
+
 def trace(A):
     return (A[0] + A[3]) % P
 
@@ -171,6 +178,12 @@ def fixed_point(A):
     fixed = [x for x in range(P + 1) if act(A, x) == x]
     require(len(fixed) == 1, "expected a unique projective fixed point")
     return fixed[0]
+
+
+def cyclotomic_sum_is_zero(exponent_counts):
+    """Test sum_e c_e zeta_13^e=0 over Q using Phi_13."""
+    require(len(exponent_counts) == P, "wrong cyclotomic coefficient vector")
+    return len(set(exponent_counts)) == 1
 
 
 def central_norm_data(t, a, reverse=False):
@@ -338,6 +351,51 @@ def main():
                     "central norm success atlas mismatch")
     require(all_successful_a == set(range(1, P)), "trace atlas misses a target root")
 
+    # The 13 x 13 rank-one Bruhat square is the exact algebraic analogue of
+    # an independent source/future action carrier.  The group right coordinate
+    # s_B has the opposite sign from THM-2615's future coordinate s=-s_B.
+    # Thus using exponent -lambda*r-nu*s_B below is exactly the typed transform
+    # -lambda*r+nu*s.  The order-seven wall depends only on r+s_B=r-s, so its
+    # support lies on lambda=nu and contributes only q=lambda-nu=0.
+    bruhat_square = {(r, s): psl(bruhat(r, s))
+                     for r in range(P) for s in range(P)}
+    require(len(set(bruhat_square.values())) == P * P,
+            "Bruhat coordinate square is not injective")
+    order7_wall = set()
+    for r in range(P):
+        for s in range(P):
+            B = bruhat(r, s)
+            require(B == mat(r, r * s - 1, 1, s), "Bruhat formula failed")
+            require(mul(mul(U(4), B), U(9)) == bruhat(r + 4, s + 9),
+                    "independent left/right translation failed")
+            on_wall = projective_order(B) == 7
+            require(on_wall == ((r + s) % P in traces7_expected),
+                    "Bruhat trace wall mismatch")
+            if on_wall:
+                order7_wall.add((r, s))
+    require(len(order7_wall) == 78, "wrong Bruhat order-seven wall size")
+    for t in (3, 5, 6):
+        require(psl(G(t)) == psl(bruhat(0, -t)), "g Bruhat coordinate mismatch")
+        for a in range(P):
+            require(psl(mul(U(a), G(t))) == psl(bruhat(a, -t)),
+                    "forward moving matrix Bruhat mismatch")
+            require(psl(mul(inv(G(t)), U(a))) == psl(bruhat(t, a)),
+                    "reverse moving matrix Bruhat mismatch")
+
+    bruhat_fourier_support = set()
+    for lam in range(P):
+        for nu in range(P):
+            counts = [0] * P
+            for r, s in order7_wall:
+                counts[(-lam * r - nu * s) % P] += 1
+            if not cyclotomic_sum_is_zero(counts):
+                bruhat_fourier_support.add((lam, nu))
+    expected_fourier_support = {(c, c) for c in range(P)}
+    require(bruhat_fourier_support == expected_fourier_support,
+            "Bruhat wall Fourier support is not the diagonal")
+    require({(lam - nu) % P for lam, nu in bruhat_fourier_support} == {0},
+            "Bruhat wall creates a primitive target-difference mode")
+
     # Lawful adjacent chart transport.  Q_k=P1\{g^k infinity}; V_k acts as
     # the target C13 translation in chart k.  The complete set of equivariant
     # chart maps is T_k(c)=V_(k+1)^c g=g V_k^c.
@@ -407,6 +465,8 @@ def main():
     print(f"successful_norms={len(leakage_rows)} leak_count_hist={sorted(leak_hist.items())}")
     print(f"affine_avoid_count_hist={sorted(avoid_hist.items())}")
     print("twisted_return_full_P1={infinity}; twisted_return_target_F13=empty")
+    print("bruhat_square=169 order7_wall=78 Fourier_support=lambda=nu only")
+    print("bruhat_target_difference_support={0}")
     print("lawful_natural_chart_holonomy=U^(7a), not identity")
     print(f"equivariant_connection_choices_per_total_holonomy={P ** 6}")
     print("cancellation_condition=sum(c_k)=-7a mod 13")

@@ -18,6 +18,10 @@ status: >
   intertwiner restores the original holonomy U^(7a).  All equivariant
   intertwiners form a C13 torsor, and cancellation occurs exactly after an
   externally supplied connection sum c_0+...+c_6=-7a, with 13^6 choices.
+  The rank-one Bruhat cell gives an exact 13 by 13 independent-action
+  square, but after the future coordinate is given the lawful opposite sign,
+  its order-seven trace wall has Fourier support only on lambda=nu and hence
+  only target difference zero.
   No nontrivial 2x2 real nonnegative projective representation can carry
   the order-seven clock or order-thirteen target deck.  Thus the construction
   is an exact model of the missing principal-C13 bibundle sidecar, not a
@@ -28,14 +32,16 @@ depends_on:
   - THM-2611-principal-c13-bibundle-lift-torsor-and-holonomy-section-obstruction
 related:
   - THM-2605-inverse-root-dipole-connection-and-mixed-square-invoice
+  - THM-2613-canonical-root-diagonal-opposite-shift-section
+  - THM-2615-physical-diagonal-toric-kernel-and-dipole-radon-invoice
   - THM-2607-constant-six-rail-boundary-holonomy-invoice
   - THM-2608-alternative-rail-clock-collapse-and-missing-transition-index
   - THM-2609-external-target-section-itinerary-saturation-and-root-state-no-go
   - THM-2610-chronological-paired-slice-marked-triangle-graft-and-action-axis-boundary
 script: 04-computation/lrc14_psl2f13_nonabelian_norm_thm2603.py
 output: 05-knowledge/results/lrc14_psl2f13_nonabelian_norm_thm2603.out
-script_sha256: 553f301abcd8f2046a11769a6e0d0768a176af2887a74c8f2bed3add42b169d3
-output_sha256: aa2086a9410403090d02ef511af0d21476f541f01aae724f670bc20627871dae
+script_sha256: 052676b89b86a051bfad631293c5a37fb7ecd49d7282208740115038879c0b16
+output_sha256: e93cab32aaff2c7c9c7472dd621e04463fc254a0ae154216ced6948fdf01057c
 hash_basis: LF-normalized bytes
 ---
 
@@ -334,7 +340,88 @@ coalesced into a fourteen-state space.  Restoring the next-target index and
 its equivariance either gives the natural uncancelled holonomy (24), or asks
 for exactly the external sidecar (25) that LRC still lacks.
 
-## 5. A `2 x 2` nonnegative/projective kernel cannot evade the boundary
+## 5. The Bruhat cell is the right square and the wrong target mode
+
+There is one positive structural connection which survives the no-go.
+Let
+
+```text
+W=[[0,-1],[1,0]],
+
+B(r,s_B)=U^r W U^s_B
+        =[[r,r s_B-1],[1,s_B]].                         (25a)
+```
+
+The `169` matrices (25a) are distinct in `PSL_2(F_13)`, and
+
+```text
+U^x B(r,s_B) U^y=B(r+x,s_B+y).                          (25b)
+```
+
+Thus the rank-one Bruhat cell is an exact algebraic `13 x 13` carrier with
+independent left and right `C_13` actions.  It is the group-theoretic
+counterpart of the independent dipole square typed by candidate THM-2615.
+
+The sign of the future axis is load-bearing.  THM-2615 uses an opposite
+future shift, so set
+
+```text
+s=-s_B.
+```
+
+Then left multiplication translates `r` positively, right multiplication
+translates `s` negatively, as required.  In these typed coordinates the
+order-seven wall is
+
+```text
+R(r,s)=1_(B(r,-s) has projective order seven)
+      =1_(r-s in +/-{3,5,6}).                            (25c)
+```
+
+The two moving matrices are precisely slices of this square:
+
+```text
+U^a g_t       = B(a,-t)       projectively,  so (r,s)=(a,t),
+g_t^(-1)U^a  = B(t,a),                         (r,s)=(t,-a).
+                                                               (25d)
+```
+
+Their trace tests `a-t` and `t+a`, respectively.  Hence the six sets in
+Section 1 are the intersections of two families of coordinate lines with
+one `78`-point Bruhat trace wall.
+
+This exact square still carries no primitive target residue.  With
+THM-2615's transform convention, put
+
+```text
+Rhat(lambda,nu)
+ =1/169 sum_(r,s) R(r,s) zeta^(-lambda r+nu s).           (25e)
+```
+
+Writing `u=r-s`, the sum over `r` vanishes unless `lambda=nu`.  On that
+diagonal,
+
+```text
+Rhat(c,c)=1/13 sum_(u in +/-{3,5,6}) zeta^(-cu) !=0.      (25f)
+```
+
+The final inequality holds for every `c`: a nonempty proper `0/1`
+polynomial of degree below thirteen cannot vanish at a primitive thirteenth
+root.  Therefore
+
+```text
+support(Rhat)={(c,c):c in F_13},
+{lambda-nu:(lambda,nu) in support(Rhat)}={0}.             (25g)
+```
+
+THM-2615's target Radon coordinate is `q=lambda-nu`.  The full PSL
+order-seven wall is consequently concentrated in the target-zero channel.
+The Bruhat cell supplies the correct two-axis *ambient carrier*, but the
+trace norm populates exactly the wrong Fourier line.  A useful future bridge
+would need a physical response on this square which is not merely a function
+of `r-s`.
+
+## 6. A `2 x 2` nonnegative/projective kernel cannot evade the boundary
 
 The matrices in (2) are matrices over `F_13`; reading their residues as
 nonnegative real entries does not preserve multiplication or projective
@@ -369,7 +456,7 @@ different categories.  The first faithful nonnegative functor is the
 fourteen-dimensional permutation action, and Section 3 gives its exact
 hostile consequence.
 
-## 6. Binary-relation and tournament ledger
+## 7. Binary-relation and tournament ledger
 
 The faithful vertices here are the fourteen projective states, with seven
 clock-coloured deterministic arrows
@@ -412,7 +499,7 @@ time erases the old deck.  Proved THM-2611 classifies the missing bibundle
 abstractly.  The present model shows that PSL noncommutativity does not build
 that physical bibundle: it changes the `C_13` deck instead.
 
-## 7. Exact companion and scope
+## 8. Exact companion and scope
 
 Run
 
@@ -432,7 +519,10 @@ The companion uses only exact arithmetic.  It:
    cemetery-only versus target-empty twisted return;
 7. checks every one of the `13*7*3` equivariant maps (19), the natural
    holonomy (24), and representative full connection laws (23); and
-8. verifies that every total connection holonomy has exactly `13^6` lifts.
+8. verifies that every total connection holonomy has exactly `13^6` lifts;
+   and
+9. reconstructs the `169` Bruhat coordinates, the `78`-point order-seven
+   wall, and its exact target-zero Fourier support (25g).
 
 Normal and optimized executions byte-match the stored transcript after LF
 normalization.  No floating point, random sampling, or inferred LRC carrier

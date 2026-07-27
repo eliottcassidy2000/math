@@ -12,6 +12,8 @@ central_norm[6,-]=[1, 2, 4, 10, 12]
 successful_norms=30 leak_count_hist=[(3, 4), (4, 10), (5, 16)]
 affine_avoid_count_hist=[(8, 16), (9, 10), (10, 4)]
 twisted_return_full_P1={infinity}; twisted_return_target_F13=empty
+bruhat_square=169 order7_wall=78 Fourier_support=lambda=nu only
+bruhat_target_difference_support={0}
 lawful_natural_chart_holonomy=U^(7a), not identity
 equivariant_connection_choices_per_total_holonomy=4826809
 cancellation_condition=sum(c_k)=-7a mod 13
