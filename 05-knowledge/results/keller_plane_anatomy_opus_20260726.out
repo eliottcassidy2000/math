@@ -1,0 +1,88 @@
+==============================================================================
+(A) the two divisibilities
+==============================================================================
+  [PASS] F1 = u*(u^2 z + y^2(4+3xy))
+  [PASS] F3 = x*(2 - 3xy - x^2 z)
+
+==============================================================================
+(B) birational contractions onto the two planes
+==============================================================================
+  F(-1/s, s, z) = (0, -2*s, (-5*s**2 + z)/s**3)
+  [PASS] u=0 sheet lands in {a=0}
+  inverse: s = -b/2, z = b0**2*(-b0*c0 + 10)/8  -- BIRATIONAL onto {a=0}
+  F(0, y, z) = (4*y**2 + z, y, 0)
+  [PASS] x=0 sheet lands in {c=0}
+  inverse: y = b, z = a - 4b^2  -- BIRATIONAL onto {c=0}
+
+==============================================================================
+(C) residual 2:1 covers over each plane (the exact 1+2 splitting)
+==============================================================================
+  [PASS] fiber over (0,b,c): H1/u^3 = y - b
+  residual eliminant over (0,b,c):  degree in x = 2
+    Q(x; b,c) = -b**2*c*x**2 - 2*b*c*x + b*x**2 - c + 2*x
+    leading coeff: -b*(b*c - 1)
+    disc_x Q = -4*(b*c - 1)
+  => generic fiber over {a=0} = 1 (u=0 sheet) + deg(Q) residual sheets
+  gcd(H1,H2) over (a,b,0): 1
+  eliminant over (a,b,0): degree 8 factor degrees: [(0, 1), (1, 6), (2, 1)]
+    nontrivial factor (mult 1): 16*a*x**2 - b**2*x**2 + 4
+      leading coeff: 16*a - b**2
+      disc_x: -16*(16*a - b**2)
+
+==============================================================================
+(D) count-drop loci (the Jelonek/escape tower, exact)
+==============================================================================
+  Q(x; 0, c) = -c + 2*x  degree: 1
+  => on the z-axis {a=b=0}: residual degree drops AND u=0 sheet empties
+     (u=0 inverse needs b != 0): fiber count = 1 exactly: drop 3 -> 1.
+  fiber over (0,1,1): 1 + 0 = 1 (residual disc = 0)
+  fiber over (0,2,-3): 1 + 2 = 3 (residual disc = 28)
+  fiber over (0,-1,5): 1 + 2 = 3 (residual disc = 24)
+
+==============================================================================
+(E) axis dynamics and v* as generic plane splitting
+==============================================================================
+  F(t,0,0) = (0, 0, 2*t)
+  F(0,0,w) = (w, 0, 0)
+  => F^2|x-axis = doubling t -> 2t; the axes {b=c=0} and {a=b=0} form a
+     2-cycle of lines with multiplier 2 (the 'torus doubling' literally).
+  fiber eliminant over (a,0,0): factors: [(a, 1), (x, 6), (4*a*x**2 + 1, 1)]
+  at a=-1/4 the nontrivial factor must give x=+-1 (the P+- pair):
+    factor at a=-1/4: -1/4
+    factor at a=-1/4: -(x - 1)*(x + 1)
+
+==============================================================================
+(F) Mon(F) = S3, PROVED by specialization at P-
+==============================================================================
+  rational roots of 21119x^3-404x-208: NONE => irreducible
+  disc = -515429008338944  square? False
+  => Galois(specialization) = S3 <= Mon(F) <= S3  => Mon(F) = S3.  PROVED
+  (spec. point P- = (-1,3/2,13/2) is a regular rational value; fiber exact)
+
+==============================================================================
+(G) the two depth-2 cubic fields are non-isomorphic
+==============================================================================
+  disc(P+) = -524271993819136  disc(P-) = -515429008338944
+  disc ratio a square? False
+  => quadratic resolvent fields differ
+  => Gal(compositum) = S3 x S3 (order 36) inside the block kernel of
+     Mon(F o F): exact lower bound supporting the full-wreath census.
+  primality: 21119 = {7: 2, 431: 1} ; 20929 = {20929: 1}
+
+==============================================================================
+(H) core-cubic strata witnesses (see keller_core_cubic_opus_20260726.py:
+    core x-eliminant = L x^3 + (4-3bc) x - 2c, L = 27a^2c^2-18abc+16a+b^3c-b^2,
+    x^2-coefficient IDENTICALLY ZERO => fiber x-coords always sum to 0)
+==============================================================================
+  L is irreducible: True
+  restrictions: L|a=0 = b**2*(b*c - 1) ; L|c=0 = 16*a - b**2
+  generic S_F point (2/27,1,1): drop 3->1 (pair fold-escape): eliminant factors [(x - 2, 1), (x, 6)]
+  disc-square surface (1/27,1,1): x-projection collision, fiber FULL: eliminant factors [(x + 6, 1), (x - 3, 2), (x, 6)]
+  total-escape curve (4/27,4/3,1): fiber EMPTY -- F NOT surjective: eliminant factors [(x, 6)]
+  omitted rational curve: t |-> (4/(27 t^2), 4/(3t), t)  (all three roots escape)
+
+  the rational collision family (fiber over (-1/(4m^2),0,0)):
+    m=1: [(0, 0, -1/4), (1, -3/2, 13/2), (-1, 3/2, 13/2)]
+    m=2: [(0, 0, -1/16), (2, -3/4, 13/8), (-2, 3/4, 13/8)]
+    m=3: [(0, 0, -1/36), (3, -1/2, 13/18), (-3, 1/2, 13/18)]
+    => (0,0,-1/(4m^2)) + (+-m, -+3/(2m), 13/(2m^2)); m=1 is THM-1300's collision

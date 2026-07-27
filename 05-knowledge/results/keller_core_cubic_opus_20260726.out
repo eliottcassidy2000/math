@@ -1,0 +1,14 @@
+deg_y H1 = 2  deg_y H2 = 3
+computing Res_y(H1,H2) over QQ[a,b,c,x] ...
+total eliminant degree in x: 9
+factor structure:
+  deg_x=0 mult=1 has-params=True  factor=a
+  deg_x=1 mult=6 has-params=False  factor=x
+  deg_x=3 mult=1 has-params=True
+
+CORE eliminant degree: 3
+leading coeff L(a,b,c) = 27*a**2*c**2 - 18*a*b*c + 16*a + b**3*c - b**2
+L on {a=0}: b**2*(b*c - 1)
+L on {c=0}: 16*a - b**2
+disc D(a,b,c) = -4*(27*a*c**2 - 9*b*c + 8)**2*(27*a**2*c**2 - 18*a*b*c + 16*a + b**3*c - b**2)
+constant coeff = -2*c

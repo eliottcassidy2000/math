@@ -1,0 +1,85 @@
+==============================================================================
+[1] structure: det J, z-linearity, sign-diagonal equivariance group
+==============================================================================
+det J_F = -2  (expect -2; F is etale everywhere)
+z-linear: F = A(x,y) z + B(x,y),  A = ((x*y + 1)**3, 3*x*(x*y + 1)**2, -x**3)  -- CONFIRMED
+equivariances F(D p) = D' F(p):
+   D=diag(1, 1, 1)  ->  D'=diag(1, 1, 1)
+   D=diag(-1, -1, 1)  ->  D'=diag(1, -1, -1)
+NOTE: sigma=diag(-1,-1,1) on the SOURCE pairs with tau=diag(1,-1,-1) on the
+TARGET; sigma != tau, so the tower symmetry TWISTS.  A depth-2 symmetry needs
+rho with F o rho = sigma o F; no sign-diagonal rho exists (list above), so no
+sign-diagonal involution acts on the F o F fiber over v*: the naive 'sigma-
+equivariant 1+2 iterate tree' prediction FAILS in its strong form.
+
+==============================================================================
+[2] exact level-1 fiber over v* = (-1/4, 0, 0)
+==============================================================================
+  eliminant_x degree 8 factors: [(x - 1, 1), (x + 1, 1), (x, 6)]
+   point: (-1, 3/2, 13/2)
+   point: (0, 0, -1/4)
+   point: (1, -3/2, 13/2)
+  => 3 rational points; sigma-orbit structure: {x=0} fixed + {x=+-1} swapped = 1 + 2  -- the collision anatomy
+
+==============================================================================
+[3] exact level-2 fiber FIELD census (the depth-2 ternary tree over Q)
+==============================================================================
+  fiber over (-1,3/2,13/2): eliminant_x deg 9
+    factor deg 1 mult 6: x  (rational root)
+    factor deg 3 mult 1: 21119*x**3 - 404*x - 208  disc=-515429008338944  square? False
+    numeric genuine fiber count: 3  (x-coords ~ [(0.2439-0j), (-0.122+0.1597j), (-0.122-0.1597j)])
+    [common factor cancelled: x*y + 1]
+  fiber over (0,0,-1/4): eliminant_x deg 1
+    factor deg 1 mult 1: 8*x + 1  (rational root)
+    numeric genuine fiber count: 1  (x-coords ~ [(-0.125+0j)])
+  fiber over (1,-3/2,13/2): eliminant_x deg 9
+    factor deg 1 mult 6: x  (rational root)
+    factor deg 3 mult 1: 20929*x**3 + 532*x - 208  disc=-524271993819136  square? False
+    numeric genuine fiber count: 3  (x-coords ~ [(-0.0881+0.2206j), (-0.0881-0.2206j), (0.1761+0j)])
+  depth-2 numeric total: 7  (generic deg FoF = 9; shortfall = Jelonek escape at depth 2)
+  20929 = {20929: 1}
+
+==============================================================================
+[4]+[5] mod-p census: tower targets + Chebotarev joint (n1,n2)
+==============================================================================
+ model = FULL wreath S3 wr S3, independent uniform fiber classes:
+   P(n1=3)=1/6, P(n1=1)=1/2, P(n1=0)=1/3;  n2|n1=k ~ sum of k iid X,
+   X in {3,1,0} w.p. {1/6,1/2,1/3}.  O(1/p) deviations expected (Jelonek
+   strata); O(1) deviations would mean a PROPER monodromy subgroup.
+
+     p  n1=2/>3 (Jelonek)  n1@v* n2@v*  n1@P0 n1@P+ n1@P-
+    61          0 (/p^2=0.00)      3     5      1     1     3
+    67          0 (/p^2=0.00)      3     3      1     1     1
+    71          0 (/p^2=0.00)      3     2      1     0     1
+    73          0 (/p^2=0.00)      3     3      1     1     1
+    79          0 (/p^2=0.00)      3     3      1     1     1
+    83          0 (/p^2=0.00)      3     2      1     0     1
+    89          0 (/p^2=0.00)      3     3      1     1     1
+    97          0 (/p^2=0.00)      3     2      1     1     0
+   101          0 (/p^2=0.00)      3     2      1     0     1
+   103          0 (/p^2=0.00)      3     5      1     3     1
+
+  aggregate joint (n1, n2) over 10 primes, 6080168 targets:
+     (n1,n2)     observed   wreath-model  obs/model
+      (0, 0)     0.329593       0.333333     0.9888
+      (1, 0)     0.166700       0.166667     1.0002
+      (1, 1)     0.255485       0.250000     1.0219
+      (1, 3)     0.083425       0.083333     1.0011
+      (3, 0)     0.005878       0.006173     0.9523
+      (3, 1)     0.027217       0.027778     0.9798
+      (3, 2)     0.041602       0.041667     0.9984
+      (3, 3)     0.030187       0.030093     1.0031
+      (3, 4)     0.027141       0.027778     0.9771
+      (3, 5)     0.020863       0.020833     1.0014
+      (3, 6)     0.004393       0.004630     0.9490
+      (3, 7)     0.006808       0.006944     0.9803
+      (3, 9)     0.000707       0.000772     0.9166
+  model cells never observed: none
+
+  VERDICTS (see .out):
+   * n1 marginal ~ (1/3,1/2,1/6) => monodromy of F = FULL S3 (C3 refuted).
+   * (3, n2) row ~ independent-cube model => monodromy of FoF = FULL wreath
+     S3 wr S3 (order 1296): imprimitive but with maximal kernel.  A NEW atom
+     would need PRIMITIVE degree-9 monodromy; the tower is maximally NON-atom.
+   * off-model cells (n1=2 etc.) = Jelonek strata, measure ~ 1/p (fiber drop
+     by escape, the etale-Keller analogue of a branch locus).
