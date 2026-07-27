@@ -25,6 +25,7 @@ THM-2598 QUARTIC V4 RESOLVENT AUDIT
 [PASS] double-transposition family quartic discriminant
 [PASS] double-transposition family resolvent discriminant
 [PASS] t=0 resolvent is one simple plus one double root
+[PASS] normalized double-transposition chart has separable residual quadratic
 [PASS] S4 witness has Frobenius type 4 mod 2
 [PASS] S4 witness has Frobenius type 1+3 mod 3
 [PASS] four-cycle control resolvent

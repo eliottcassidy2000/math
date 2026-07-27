@@ -18,9 +18,10 @@ status: >
 source: codex-2026-07-27-quartic-resolvent-transfer
 depends_on:
   - THM-2455-quartic-swallowtail-scaffold-and-endpoint-corrections
-related:
   - THM-2465-g1-exclusion-package-for-degree-four-twojet-keller
   - THM-1330-keller-monoid-exact-picture-inverse-jelonek-cusp-rule
+related:
+  - THM-2595-modular-v4-affine-lift-dichotomy-and-six-vertex-tournament-no-go
   - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy
   - THM-2546-integral-coordinate-dichotomy-and-parity-lens-scope
   - THM-2596-modular-free-factor-farey-gram-owner-cocycle
@@ -28,8 +29,8 @@ related:
   - HYP-9027-twojet-disc-jelonek-odd-exponent-law
 script: 04-computation/jacobian_quartic_v4_resolvent_thm2598.py
 output: 05-knowledge/results/jacobian_quartic_v4_resolvent_thm2598.out
-script_sha256: a93a0ffa19df501a46edd37531d63bdb6ff2d506c98d8b5cd13a470b6483ca18
-output_sha256: ca7b9a9bdd21b99001eb3188b2e4fe3bde0d5b7c542ac483ca5a76d4dcbe94ad
+script_sha256: c198b1b969f3284b259771bfdd612ceb019add3d7fa9c7ea5bfe1375492499b0
+output_sha256: 1c1a899eca2062f8fc29066e410679544e9f306823f45e27bdf518381c841a3a
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -312,8 +313,17 @@ swap and the two near `-1` swap: inertia is `(12)(34)`.  Yet
 R_{s,0}=(W+2)^2(W-2),                                         (29)
 ```
 
-and the normalized cubic extension is unramified.  Its apparent double root
-is precisely the one-unit nonmaximal-order tax in (27).
+The normalization is visible without appealing only to the inertia table.
+Put `W=-2+tY`.  Exact division gives
+
+```text
+R_{s,t}(-2+tY)=t^2[tY^3-4Y^2+4sY-1].                         (29a)
+```
+
+At `t=0` the residual quadratic `4Y^2-4sY+1` has discriminant
+`16(s^2-1)`, so it is separable when `s^2 != 1`.  The normalized cubic
+extension is therefore unramified there.  The raw double root in (29) is
+precisely the one-unit nonmaximal-order tax in (27).
 
 Two minimal controls are
 
@@ -376,11 +386,20 @@ discriminant identity cannot constrain G1.
 
 ## 7. The exact `2,3,4` interpretation (scoped analogy)
 
-The four even sign triples in (12) form `V_4`; its three nonidentity elements
-are the three perfect matchings of four labels, and
+After one reconstruction section is chosen, the even sign-flip group `V_4`
+acts simply transitively on the four sections in (12).  Thus the sections
+form an **affine** `V_4` torsor: they have no distinguished zero until a
+quartic sheet/origin is supplied.  Its three nonidentity translations are
+the three perfect matchings of four labels, and
 
 ```text
 Aut(V_4)=GL_2(F_2)=S_3.                                       (33)
+```
+
+After choosing an origin this is the standard affine decomposition
+
+```text
+S_4 = AGL_2(F_2) = V_4 semidirect GL_2(F_2).                  (33a)
 ```
 
 This is the exact algebraic reason that a four-sheet binary sign torsor has a

@@ -150,6 +150,9 @@ zero("double-transposition family quartic discriminant", sp.discriminant(fst, T)
 zero("double-transposition family resolvent discriminant", sp.discriminant(Rst, W) - Dst)
 zero("t=0 resolvent is one simple plus one double root",
      Rst.subs(t, 0) - (W + 2)**2*(W - 2))
+zero("normalized double-transposition chart has separable residual quadratic",
+     sp.expand(Rst.subs(W, -2 + t*Z)/t**2)
+     - (t*Z**3 - 4*Z**2 + 4*s*Z - 1))
 
 special = sp.Poly(fst.subs({s: 2, t: 1}), T)
 degrees_mod2 = sorted(poly.degree() for poly, exponent in sp.factor_list(special, modulus=2)[1]
