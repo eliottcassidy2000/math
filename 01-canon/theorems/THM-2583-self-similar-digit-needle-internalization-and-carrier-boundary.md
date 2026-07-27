@@ -3,14 +3,14 @@ id: THM-2583
 title: "Self-similar digit-needle internalization and carrier boundary"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let U be any
-  positive rational Boolean step
-  carrier on the physical circle which is neutral for a new F_13 endpoint
-  action.  For every positive k, L in {1,2}, and every sufficiently large
-  N, the future gate d_L(k T^N x+s/13), T(x)=13x mod 1, has a labelled
-  boundary x_N in the interior of U.  One can choose it so that the old
-  digit floor(13x_N) equals the immediate future digit
-  floor(13T^N x_N).  A sufficiently deep physical base-thirteen cylinder
-  H_N containing x_N lies inside U, fixes that root equality on the whole
+  positive rational Boolean step carrier on the physical circle which is
+  neutral for a new F_13 endpoint
+  action.  Fix any old digit v whose cell contains an interval of U and any
+  prescribed future digit h.  For every positive k, L in {1,2}, and every
+  sufficiently large N, the future gate d_L(k T^N x+s/13), T(x)=13x mod 1,
+  has a labelled boundary x_N in that interval with old/future digit pair
+  (v,h).  A sufficiently deep physical base-thirteen cylinder H_N containing
+  x_N lies inside U, fixes that prescribed pair on the whole
   cylinder, and meets the complete 26*13^N*k target/tooth boundary atlas
   only at x_N.  Thus H_N internalizes THM-2578's absolute boundary needle:
   the lawful positive danger/safe layers have one target-delta handoff and
@@ -18,8 +18,9 @@ status: >
   live row the same geometry can place such a cylinder inside THM-2559's
   source carrier and a nonzero translated c_3 probe, giving exact base
   incidence with the owner source, terminal source word, late owner block,
-  and equal old/future physical root.  But that source carrier contains an
-  unshifted k_a safety factor and is not neutral.  Its facts do not transport
+  and an arbitrarily prescribed future root over one live old root.  But that
+  source carrier contains an unshifted k_a safety factor and is not neutral.
+  Its facts do not transport
   with the shifted cylinder orbit; combining them with the nonzero colours
   would repeat MISTAKE-266.  Thus the live cylinder is an absolute-reference
   candidate with base provenance only.  No covariant packet comparison,
@@ -37,8 +38,8 @@ related:
   - THM-2581-b-word-depth-five-owner-clock-host-and-reflection-breaking
 script: 04-computation/lrc14_self_similar_digit_needle_thm2583.py
 output: 05-knowledge/results/lrc14_self_similar_digit_needle_thm2583.out
-script_sha256: a68bf5e2d77c9b376c124fd83b1675d5deaa3c0143bd41c4f01ba931f7988de9
-output_sha256: eb882d1552679ca811a3d19b4dcfd258305fdc35d340e4315cfc14b5e97cc39d
+script_sha256: 2bf68bd870634f7c2a04ade6a4aa0d75afa9d88d273be4d0eb7eff2c916d2d95
+output_sha256: 60569d933cb8afe3f3d5fde0d9eeaf67cdc1bdca9e911226c63e78e1d83bca13
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -59,8 +60,9 @@ leaving the carrier:
 
 ```text
 positive neutral rational carrier U
+  + one live old digit v and any prescribed future digit h
   + future tooth grid at speed 13^N k
-  -> equal-root boundary point in int(U)
+  -> (v,h)-boundary point in int(U)
   -> base-13 cylinder H_N inside U with one boundary trace
   -> absolute all-colour Abel-normal reference.              (1)
 ```
@@ -129,7 +131,7 @@ epsilon L/14-s/13=(13 epsilon L-14s)/182                 (7)
 
 retains a factor `7` after reduction.
 
-## 2. Every positive rational carrier is pierced on an equal-root branch
+## 2. Every carrier is pierced at every prescribed future root
 
 Let
 
@@ -138,15 +140,16 @@ U:T->{0,1}                                                 (8)
 ```
 
 be a rational step function of positive integral, fixed independently of
-the new target label `s`.  Some digit `h` and some open rational interval
+the new target label `s`.  Some old digit `v` and some open rational interval
 
 ```text
-J subset {U=1} intersection I_h,
+J subset {U=1} intersection I_v,
 
 length(J)=lambda>0                                        (9)
 ```
 
-exist.  By Section 1, choose once and for all one labelled base boundary
+exist.  Now prescribe any future digit `h in F_13`.  By Section 1, choose
+once and for all one labelled base boundary
 
 ```text
 y=y_(j_0,epsilon_0,s_0) in I_h.                           (10)
@@ -165,11 +168,11 @@ x_r=(r+y)/13^N,             r=0,...,13^N-1               (12)
 ```
 
 has mesh `13^(-N)`, so one of its points lies strictly inside `J`.  Call it
-`x_N`.  Since `J subset I_h`, and since `T^N x_N=y`, it satisfies the exact
-old/future root diagonal
+`x_N`.  Since `J subset I_v`, and since `T^N x_N=y`, it satisfies the exact
+prescribed old/future root pair
 
 ```text
-floor(13x_N)=h=floor(13T^N x_N).                          (13)
+floor(13x_N)=v,             floor(13T^N x_N)=h.             (13)
 ```
 
 Moreover (10) makes `x_N` a boundary of
@@ -194,7 +197,7 @@ THM-2578 says the complete `26K_N` boundary atlas of (14) is pairwise
 separated.  The chosen `x_N` is in the interiors of all three sets
 
 ```text
-{U=1},                  I_h,
+{U=1},                  I_v,
                   (T^N)^(-1)(I_h),                         (16)
 ```
 
@@ -215,7 +218,7 @@ obeys, modulo its null endpoints,
 ```text
 C_N subset {U=1},
 
-floor(13x)=floor(13T^N x)=h             for every x in C_N,
+floor(13x)=v,       floor(13T^N x)=h     for every x in C_N,
 
 C_N intersection Boundary(P_s^(N):s in F_13)={x_N}.       (18)
 ```
@@ -256,8 +259,15 @@ Nhat(q;M)
 The target profile in (20) has nonzero augmentation.  It is an absolute
 charged reference of the kind required by THM-2579, not a target difference.
 Unlike THM-2578's ambient interval, however, this reference is now an actual
-subatom of the prescribed neutral carrier `U` and fixes the old/future
-physical root on its whole support.
+subatom of the prescribed neutral carrier `U` and fixes an arbitrarily
+prescribed future root over the chosen live old digit on its whole support.
+
+The freedom in `h` is also a sharp warning.  On the purely geometric data,
+the temporal digit compatibility graph is complete from every old digit cell
+where `U` has interior to all thirteen future digits.  The diagonal `h=v` is
+available, but is not forced or distinguished.  Thus this needle supplies a
+chosen joint cell; without a semantic selector or a restrictive ancestry
+sidecar it supplies no Hall deficiency.
 
 ## 5. Uniform live-row base incidence, not transported semantics
 
@@ -297,7 +307,9 @@ U=W d_1(c_3x-r_0/13)                                  (25)
 
 positive.  Since `W d_1(c_3x)=0`, necessarily `r_0!=0`.  The geometric
 argument of Sections 1--3 applies to this positive rational `U` without any
-neutrality assumption: it produces a plain physical digit cylinder
+neutrality assumption.  Choose one old digit `v` on which `U` has interior
+and prescribe any desired future digit `h`; it produces a plain physical
+digit cylinder
 
 ```text
 H_N subset W d_1(c_3x-r_0/13).                            (26)
@@ -321,7 +333,7 @@ literal later `k_a` gate.  The geometric base ledger is
 ```text
 source owner + source word + late owner block
   + nonzero translated deepest probe
-  + equal old/future physical root
+  + one live old physical root and an arbitrarily prescribed future root
   + one later target-labelled boundary.                    (28)
 ```
 
@@ -367,20 +379,22 @@ cylinder.
 
 The present `H_N` is the opposite side of the bridge: a full physical
 base-thirteen atom, fixed in the auxiliary future endpoint orbit and chosen
-with exact base incidence inside the source word/owner carrier.  That base
-incidence is not a transported word/owner label, and `H_N` is not yet on
-THM-2581's collision `y`-fibre.  The precise missing map is therefore a
-temporal intertwiner which carries the collision `y,theta` chart to the later
-physical digit-cylinder/endpoint chart while transporting, rather than
-freezing, the word, owner clock, and deep sidecars.
+with exact base incidence inside the source word/owner carrier.  Its complete
+old/future digit-pair freedom shows that bare tooth geometry cannot choose the
+semantic diagonal.  The base incidence is not a transported word/owner label,
+and `H_N` is not yet on THM-2581's collision `y`-fibre.  The precise missing
+map is therefore a temporal intertwiner which carries the collision
+`y,theta` chart to the later physical digit-cylinder/endpoint chart while
+transporting, rather than freezing, the word, owner clock, and deep sidecars.
 
 ## 7. Exact stopping boundary
 
 The theorem internalizes the ambient absolute reference on every genuinely
 neutral carrier.  On THM-2559 it proves only that the same geometric cylinder
 can be chosen with the desired source word/owner/deep **base provenance** and
-a future root equal to the old digit.  It does not transport that provenance
-to the nonzero target normal or identify the cylinder with THM-2559's
+any prescribed future root over one live old digit.  It does not transport
+that provenance to the nonzero target normal or identify the cylinder with
+THM-2559's
 target-informed **head**.  The source gate, head selector, and slope stratum
 are target-active data; freezing any of them would repeat MISTAKE-266.
 
@@ -410,9 +424,9 @@ The dependency-free exact referee checks:
 - `1,045,200` base boundary points in `800` fixed-sign grids, their exact
   uniform spacing, their `10,400` root-cell counts, and the persistent
   septimal denominator obstruction;
-- `40` equal-root carrier piercings, `1,845,480` complete-atlas cylinder
-  traces, and exact old/future digit equality, with isolating digit depth at
-  most five in the controls; and
+- `40` prescribed-pair carrier piercings (diagonal and hostile off-diagonal
+  controls), `1,845,480` complete-atlas cylinder traces, and exact old/future
+  digit pairs, with isolating digit depth at most five in the controls; and
 - `997` rational translated-deep-probe controls exercising both exact cover
   multiplicities.
 
@@ -421,7 +435,7 @@ live-row base-incidence statements are symbolic proofs above, not finite
 extrapolations.
 
 The independent hostile audit rederived the fixed-sign grid bijection and
-the modulo-seven wall obstruction, checked the all-large-`N` equal-root
+the modulo-seven wall obstruction, checked the all-large-`N` prescribed-pair
 piercing and cylinder-isolation quantifiers, and verified the delta handoff
 and translated-probe cover.  It also replayed the normal, optimized,
 stored-output, hash, and compilation checks.  In particular it confirmed the

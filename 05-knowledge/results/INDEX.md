@@ -24,8 +24,10 @@
   positive rational carrier
   already proved neutral under the whole endpoint action contains, at every
   sufficiently late `13^N k` tooth scale, a physical base-13 cylinder which
-  fixes an old/future equal root and isolates one target-labelled boundary.
-  Its positive Abel handoff is an absolute target delta.  The same cylinder
+  fixes any prescribed future root over one live old digit and isolates one
+  target-labelled boundary.  Thus its raw temporal digit graph is complete
+  bipartite, not intrinsically diagonal.  Its positive Abel handoff is an
+  absolute target delta.  The same cylinder
   can be nested geometrically inside THM-2559's source/word/deep packet on
   every live row, but that is base provenance only: the packet contains an
   unshifted moving factor, so its semantics cannot be combined with the
@@ -41,6 +43,7 @@
   every nonzero collision colour.  This is not yet the THM-2365 target
   co-shift or THM-2545 later root.  Hashes are `99cbb46c...849d` /
   `69e2c32d...90a5`.
+  `2bf68bd8...2d95` / `60569d93...ca13`.
 - `lrc14_oriented_tooth_holonomy_thm2574.py` -> matching `.out`
   [THM-2574 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The `k`
   physical components of a pulled-back interval have monodromy under the

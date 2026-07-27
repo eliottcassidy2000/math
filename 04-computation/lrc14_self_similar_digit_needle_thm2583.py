@@ -2,9 +2,10 @@
 """Dependency-free exact referee for THM-2583.
 
 Checks the uniform-grid description of the 13-target tooth boundaries,
-old/future equal-root piercing by sufficiently deep base-13 preimages,
-digit-cylinder isolation inside a prescribed rational carrier interval, and
-the translated deepest-probe cover.  All geometry uses Fraction arithmetic.
+arbitrarily prescribed old/future root-pair piercing by sufficiently deep
+base-13 preimages, digit-cylinder isolation inside a prescribed rational
+carrier interval, and the translated deepest-probe cover.  All geometry uses
+Fraction arithmetic.
 """
 
 from fractions import Fraction
@@ -82,7 +83,7 @@ print("  each sign is a shifted uniform 13k-grid with k points per root digit")
 print("  every boundary denominator retains a factor 7")
 
 
-print("\n== equal-root carrier piercing and digit-cylinder isolation ==")
+print("\n== prescribed-root-pair carrier piercing and digit-cylinder isolation ==")
 piercing_cases = 0
 atlas_trace_checks = 0
 root_checks = 0
@@ -90,6 +91,11 @@ maximum_cylinder_depth = 0
 for speed in range(1, 21):
     for ell in (1, 2):
         old_root = (7 * speed + 3 * ell) % P
+        # Alternate diagonal and genuinely off-diagonal hostile controls.
+        future_root = (
+            old_root if speed % 2
+            else (old_root + 1 + (speed % 12)) % P
+        )
 
         # A hostile-looking small carrier interval strictly inside I_h.
         carrier_left = Fraction(old_root, P) + Fraction(1, 52)
@@ -97,17 +103,18 @@ for speed in range(1, 21):
         require(carrier_right < Fraction(old_root + 1, P),
                 "test carrier escaped its old-root digit")
 
-        # Choose one base boundary whose immediate future digit is h.
+        # Choose one base boundary in the independently prescribed future
+        # digit.  It need not equal the carrier's old digit.
         candidates = []
         for target in range(P):
             for tooth in range(speed):
                 for epsilon in (-1, 1):
                     y = boundary(speed, ell, tooth, epsilon, target)
-                    if int(P * y) == old_root:
+                    if int(P * y) == future_root:
                         candidates.append((y, tooth, epsilon, target))
         require(candidates, "no base boundary in the prescribed future digit")
         y, _, _, target0 = candidates[(speed + ell) % len(candidates)]
-        require(int(P * y) == old_root,
+        require(int(P * y) == future_root,
                 "chosen future boundary has the wrong root")
 
         # The interval has length 1/52, so N=2 is already beyond the
@@ -126,8 +133,8 @@ for speed in range(1, 21):
                 "selected preimage is not inside the carrier")
         require(int(P * x0) == old_root,
                 "old physical root changed")
-        require((scale * x0) % 1 == y and int(P * y) == old_root,
-                "old/future root diagonal failed")
+        require((scale * x0) % 1 == y and int(P * y) == future_root,
+                "prescribed old/future root pair failed")
 
         high_speed = scale * speed
         atlas = {}
@@ -155,8 +162,8 @@ for speed in range(1, 21):
                 continue
             future_left = scale * left - branch_index
             future_right = scale * right - branch_index
-            if not (Fraction(old_root, P) < future_left < y
-                    < future_right < Fraction(old_root + 1, P)):
+            if not (Fraction(future_root, P) < future_left < y
+                    < future_right < Fraction(future_root + 1, P)):
                 continue
             traces = [point for point in atlas if left < point < right]
             if traces == [x0]:
@@ -182,7 +189,7 @@ for speed in range(1, 21):
 
 print(f"  exact carrier-piercing cases: {piercing_cases}")
 print(f"  complete-atlas cylinder traces: {atlas_trace_checks}")
-print(f"  old/future equal-root checks: {root_checks}")
+print(f"  prescribed old/future root checks: {root_checks}")
 print(f"  maximum selected digit depth: {maximum_cylinder_depth}")
 print("  one physical digit cylinder lies in the carrier and isolates one target boundary")
 
@@ -213,7 +220,8 @@ print("  every point lies in one or two of the thirteen translated deep probes")
 print("\nabstract consequence:")
 print("  positive rational neutral carrier U + sufficiently late 13^N k gate")
 print("    -> internal base-13 cylinder H <= U with one absolute boundary trace")
-print("    -> fixed old/future root and every target Abel character nonzero")
+print("    -> any prescribed future root over one live old root")
+print("    -> one boundary delta and every target Abel character nonzero")
 print("  inside THM-2559 W: owner/word/deep base incidence only; shifted transport unproved")
 print("\nscope: nonneutral live provenance cannot be combined with shifted colours")
 print("target-informed selector covariance and paired endpoint action remain open")

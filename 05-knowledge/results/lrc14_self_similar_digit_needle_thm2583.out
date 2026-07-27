@@ -7,10 +7,10 @@
   each sign is a shifted uniform 13k-grid with k points per root digit
   every boundary denominator retains a factor 7
 
-== equal-root carrier piercing and digit-cylinder isolation ==
+== prescribed-root-pair carrier piercing and digit-cylinder isolation ==
   exact carrier-piercing cases: 40
   complete-atlas cylinder traces: 1845480
-  old/future equal-root checks: 80
+  prescribed old/future root checks: 80
   maximum selected digit depth: 5
   one physical digit cylinder lies in the carrier and isolates one target boundary
 
@@ -22,7 +22,8 @@
 abstract consequence:
   positive rational neutral carrier U + sufficiently late 13^N k gate
     -> internal base-13 cylinder H <= U with one absolute boundary trace
-    -> fixed old/future root and every target Abel character nonzero
+    -> any prescribed future root over one live old root
+    -> one boundary delta and every target Abel character nonzero
   inside THM-2559 W: owner/word/deep base incidence only; shifted transport unproved
 
 scope: nonneutral live provenance cannot be combined with shifted colours
