@@ -2,7 +2,7 @@
 id: THM-2610
 title: "Chronological paired-slice marked-triangle graft and action-axis boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   A fixed THM-2349/2537 marked source coefficient can be multiplied, before
   the finite shift transform, by one sufficiently late same-root THM-2599
   target-danger/blocker-safe chamber.  One common delay retains the exact
@@ -34,7 +34,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2610 -- a marked source triangle survives every later paired colour
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2599 puts the THM-2537 selected source and a later opposite-shift
 target-danger/blocker-safe event on one literal orbit.  Its scalar overlap
