@@ -1,0 +1,12 @@
+THM-2513 anchored moment-spectrum exact companion: PASS
+binary_replica_profiles=4096; nonflat_second_moment=4095; flat_boundary=1
+Hadamard_square_rectangle=2*anchor*w_s; quantitative_checks=4096
+delayed_self_join_checks=273; nonzero_interaction_delays=3; parity_subsequences=both
+sharp_route_hostiles=first_zero_second_nonzero,first_nonzero_second_zero
+ternary_tag_modes=144; tagged_cut_modes=10368; basis_controls=96; binary_delta_hostile=cancels
+single_target_parabola_secant_checks=60000; all_six_sources=nonzero
+deterministic_anchored_controls=10000; route_histogram={(True, True): 10000, (True, False): 0, (False, True): 0}
+pair_space_product=1/4; one_copy_weighted_mass=1/4; typed_probe_overlaps=1/2,0
+first-or-second mixed spectrum is unconditional under anchor+nonflatness
+second moment has weighted same-time and delayed Boolean one-circle lifts; not a same-time typed event
+ALL EXACT CHECKS PASSED

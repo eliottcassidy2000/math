@@ -12,6 +12,28 @@
   rank-`24`/kernel-`54` two-marginal boundary.  O2/O3/stored transcripts
   byte-match; hashes are `034b5c30...2056` / `2197609b...6d10`.  The chart
   is signed static root data, not runner-labelled owner/time/deep ancestry.
+- `lrc14_anchored_moment_spectrum_thm2513.py` -> matching `.out`
+  [THM-2513 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Every
+  rational `7 x 13` table with positive delta anchor and nonflat owner row
+  has all `72` mixed colours in its first moment or its entrywise square;
+  the replica-square rectangles are exactly `2aw_s`, with interaction
+  energy `(24a^2/7)sum_s(w_s-wbar)^2`.  The fixed two-channel bundle is
+  branch-free; a ternary cyclotomic tag gives all `144` table modes and
+  `10,368` tagged cut modes, while an anchored delta is the sharp raw binary
+  tag hostile.  For lawful BV densities, delayed same-circle self-joinings
+  converge to the square at `O(13^-L)` and eventually retain the anchor,
+  all mixed colours, Boolean-before-summing provenance, and the old deep
+  diagonal lift.  Same-time owner/arrival typing remains open.  The referee
+  checks `4,096` replica profiles, `273` delayed-joining entries, both sharp
+  moment routes, and exact scope hostiles; hashes are
+  `6328c92f...f3928` / `1dcdbe29...d7313`.
+- `lrc14_lawful_interaction_cut_transplant_thm2512_referee.py` -> matching
+  `.out` [THM-2512 INDEPENDENT EXACT REFEREE].  A separate implementation
+  checks `6,552` ANOVA/rectangle basis rows, all `72` character signs,
+  `5,184` cut factorizations and replica zeros, `91` deep disintegrations,
+  `1,183` raw Boolean products, all twelve future colours, and the
+  phase-`0/1/13` rebase hostile.  Normal/optimized/stored transcripts
+  byte-match; hashes are `0681ed51...0804` / `0cad8311...bff8`.
 - `lrc14_truncated_radon_tight_frame_thm2510.py` -> matching `.out`
   [THM-2510 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  On the
   row-zero `13 x 7` strip, the full nonzero-slope bank satisfies
