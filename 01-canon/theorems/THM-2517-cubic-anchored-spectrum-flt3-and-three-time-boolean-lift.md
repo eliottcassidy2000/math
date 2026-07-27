@@ -18,8 +18,11 @@ status: >
   direct covariant null-row detector or, in the full-support branch, a
   genuinely source-neutral common Boolean gate via the cyclic K_(7,7)
   one-factorization.  Every norm-gate cell contains the actual phase-zero
-  owner once.  Its owner epoch is a seven-point torsor, not one fixed clock,
-  so owner-loop emission, row exclusion, and LRC(14) remain open.
+  owner once.  The equivariant diagonal cell c=ell also gates row ell with
+  limit P A_(ell,s)^3 and places that owner at slot d=-ell.  This is a
+  gauge-safe visible row-to-clock scheduler, but not one common clock or a
+  transported future ancestry sheet, so owner-loop emission, row exclusion,
+  and LRC(14) remain open.
 source: codex-2026-07-27-anchored-cubic-spectrum
 depends_on:
   - THM-2449-coprime-owner-anova-and-delta-replica-boundary
@@ -37,8 +40,8 @@ script: 04-computation/lrc14_anchored_cubic_spectrum_thm2517.py
 output: 05-knowledge/results/lrc14_anchored_cubic_spectrum_thm2517.out
 lean: 04-computation/lean/TournamentH7/TournamentH7/LRCAnchoredCube.lean
 lean_root: 04-computation/lean/TournamentH7/TournamentH7.lean
-script_sha256: c994979188df7812937787edc8aabc1f9735f48801df4e860bdabf89b1fdb5d7
-output_sha256: ceab24add134f3048f32c16a634007dc9fa3e2ed10bac2b2c3c73a1b53222826
+script_sha256: 7eb9cab2e707cf5d53b1276d36a08b35a4ff4129448bb53d2d47ffa2827b444c
+output_sha256: a2303964643b2b4d589e5342e26ce9c2378bb20b949ac46044d12b049accef91
 lean_sha256: 904c8e3153599be1fbf750ab6534638a75ce0f91b40848956624bcaba619fec0
 hash_basis: working-tree bytes (LF)
 ---
@@ -584,6 +587,39 @@ through the `L^1` approximations proves both (O8) and (O9), uniformly over
 the finite phase/row/target bank.  This also records why separated epochs,
 not a same-time product, are load-bearing.
 
+There is a second, sharper use of the same Latin chart.  Write the three
+response integrand as
+
+```text
+R^L_(ell,s)(x)=F_(ell,s)(x)F_(ell,s)(Nx)F_(ell,s)(N^2x)
+```
+
+and gate row `ell` by its **diagonal** assignment cell:
+
+```text
+K^(L,diag)_(ell,s)
+ =integral_T R^L_(ell,s)(x)P^L_ell(x) dx
+ ->P A_(ell,s)^3.                                           (O9c)
+```
+
+This is gauge-safe.  In the convention where source translation by
+`a in F_7` sends the printed row `ell` to `ell+a` and the lawful future
+bank `G_gamma` to `G_(gamma+a)`, equation (O6) gives
+
+```text
+a . P_c^L=P_(c+a)^L,
+
+a . (R^L_(ell,s)P_ell^L)
+    =R^L_(ell+a,s)P_(ell+a)^L.                              (O9d)
+```
+
+The simultaneous opposite-sign pullback convention gives the same
+invariant diagonal graph.  Thus `c=ell` is an equivariant map between the
+**visible row and cell torsors**.  It keeps the cubic anchor and eventually
+all `72`/`5,184` modes without the factor seven in (O9), while row `ell`
+contains its literal phase-zero future owner at the deterministic slot
+`d=-ell`.
+
 Equations (9), (19), and rational Galois propagation now give all primitive
 table and cut modes at every sufficiently large even `L`.  Fully root-refine
 all three response sums as in (36): the first carries the old `(r,t)` chart
@@ -615,16 +651,27 @@ d=-c.                                                         (O11)
 Thus `U^L` guarantees an honest phase-zero future owner, not merely some
 shifted owner.  But its epoch is the free `C_7` torsor coordinate `c`.
 Summing all `c` restores source neutrality and forgets the clock; fixing one
-`c` fixes the clock and breaks source neutrality.
+**global** `c` fixes the clock and breaks source neutrality.  The diagonal
+construction (O9c) avoids that gauge break precisely by letting the cell,
+and hence the owner slot, vary covariantly with the response row.
 
 This seven-slot cost is minimal at this interface.  If a seed conjunction
 uses a phase set `S subset F_7` and every source translate `S+a` must contain
 phase zero, then `-a in S` for every `a`, hence `S=F_7`.  Mutually exclusive
 phases cannot share an epoch, so at least seven future slots are necessary.
 A source-neutral deterministic choice of one common owner slot would be a
-fixed point of the free `C_7` assignment torsor and is impossible.  Repairing
-it requires exactly the missing anti-diagonal ancestry cocycle/sheet, not
-another colour census.
+fixed point of the free `C_7` assignment torsor and is impossible.  Indeed,
+at any fixed slot `d_0`, the Latin phase-zero condition `ell+d_0=0` holds for
+exactly one row.  The anti-diagonal `d=-ell` is therefore the unique visible
+owner-slot graph for the chosen diagonal `c=ell`, not a hidden common clock.
+
+This distinction is sharp.  The diagonal is a clock-covariant scheduler but
+does not prove that the old printed label `ell` is the future inverse-ancestry
+sheet.  Two natural-extension refinements may have identical visible
+`G_gamma`, `P_c^L`, and diagonal tables while permuting the hidden future
+ancestry labels.  Nor do the seven rowwise owner events occur at one common
+epoch.  Promoting (O9c) to owner-loop emission still requires the missing
+ancestry/source-arrival sidecar, not another colour census.
 
 The zero-or-norm law is therefore sharp:
 
@@ -632,16 +679,20 @@ The zero-or-norm law is therefore sharp:
 some q_gamma=0  -> the null covariant row creates a rectangle;
 
 all q_gamma>0   -> the cyclic norm product gives one neutral Boolean gate.
+                     Its diagonal cells also give one covariant row-to-clock
+                     Boolean scheduler with limit P A^(o 3).
                                                                   (O12)
 ```
 
 What remains is branch-specific.  In the zero branch, row zero already has
 an actual phase-zero owner at one fixed common epoch, but no
 emission/source-arrival intertwiner.  In the full-support norm branch, the
-actual owner lies at a free `C_7`-torsor epoch and needs either a gauge-safe
-section or a clock-covariant intertwiner.  Moment cancellation, source
-covariance, Booleanity, owner presence, and deep-sheet survival are no longer
-the missing coordinates.
+actual owner lies at a free `C_7`-torsor epoch.  Equation (O9c) supplies the
+visible clock-covariant row scheduler; what is still missing is its promotion
+to a transported future ancestry/emission relation, or an argument that the
+row-dependent clocks already suffice for owner-loop drift.  Moment
+cancellation, source covariance, Booleanity, owner presence, and deep-sheet
+survival are no longer the missing coordinates.
 
 ## 9. Why same-time tournament stars cannot replace the delays
 
@@ -714,7 +765,10 @@ The exact companion:
   entries at both septimal parities; and
 - reproduces the one-hot `42`-empty-edge / raw `-1/7` marked-star gauge
   hostile, the `7 x 7` Latin scheduler, its unique invariant phase set, and
-  all `64` zero-or-norm mean profiles.
+  all `64` zero-or-norm mean profiles; and
+- checks the Latin diagonal's exact source equivariance, common rowwise
+  product mean, phase-zero slot `d=-ell`, and the fixed-clock one-hot hostile
+  with exactly one owner row at every slot.
 
 The Lean module imports Mathlib's proved
 `fermatLastTheoremThree : FermatLastTheoremFor 3`, transports it to `Q` via
@@ -738,14 +792,15 @@ Independent audits rederived the FLT equality boundary, the Pythagorean
 degree-two classification, every BV constant in (32), (38), and (42), the
 old deep-diagonal inheritance, even-parity source gauge, the fixed-`G`
 source-neutrality defect, the zero-or-norm Latin scheduler and its minimality,
-and the one-hot equivariance no-go.  No live scalar row is removed.  LRC(14)
-remains open, now at the sharply typed question:
+the gauge-safe diagonal row scheduler, and the fixed-clock one-hot no-go.  No
+live scalar row is removed.  LRC(14) remains open, now at the sharply typed
+question:
 
 ```text
 zero branch: intertwine its fixed owner clock with emission/source-arrival;
 
-full-support branch: either select one clock from the neutral C_7 torsor
-without breaking gauge, or build a clock-covariant intertwiner;
+full-support branch: promote its visible row-to-clock diagonal to a typed
+future ancestry/emission map, or prove its rowwise clocks suffice for drift;
 
 otherwise prove the live rows forbid the corresponding structure.           (48)
 ```
