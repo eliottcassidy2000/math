@@ -206,6 +206,12 @@ A nonzero equivariant step on the regular owner-clock torsor has the form
 ell' = ell+d,                  d in F_7^*.                (18)
 ```
 
+Here `equivariant` is relative to the fixed `+1` generator on both retained
+clock torsors.  A semilinear relabelling `ell' = kappa ell+c` with
+`kappa!=1` is a different, presently untyped intertwiner: it does not iterate
+as the fixed seven-clock successor, and the theorem does not claim to exclude
+it.
+
 Traverse its clock cycle in the order
 
 ```text
