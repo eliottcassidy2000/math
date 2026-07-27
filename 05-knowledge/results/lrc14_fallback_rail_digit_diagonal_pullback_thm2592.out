@@ -1,0 +1,33 @@
+joint rail progress 7/84
+joint rail progress 14/84
+joint rail progress 21/84
+joint rail progress 28/84
+joint rail progress 35/84
+joint rail progress 42/84
+joint rail progress 49/84
+joint rail progress 56/84
+joint rail progress 63/84
+joint rail progress 70/84
+joint rail progress 77/84
+joint rail progress 84/84
+== exact THM-2584/2586 x THM-2585 joint pullback probe ==
+common row/grid: (1, 14, 27, 40, 53, 66, 13, 2197, 742586) / 297836897838480
+common coordinate: route-two x; old v=floor(13x), future floor(13{13^6x})=v
+exact word-digit gate: all seven Q_a owner phases have digit-0 mass 0 and digit-6 mass >0
+selected theta-zero rails: 84, min rail numerator 45146250110723065143840
+positive rail x target-slice pairs: 39/1092
+zero pair count: 1053
+positive pair labels: s4=7, ell4 in {4,5,6}, (v,t)=(6,12), all 13 q
+positive pair total numerator range: 163706661702634491201720960..315647624785807202076027840
+positive joint (rail,q,ell5,r) entries: 1404/91728
+positive-pair support histogram: 24:7,36:25,48:7
+pre-route numerator global gcd: 25465440; v13=1
+actual raw global content (including route-two 13): 331050720
+primitive common denominator: 202345849311155871624914247/2
+primitive joint digest: 1286b1f2baa1f05299d93a1074db19afc3f99eb3d44500fd1de39c97c62c300c
+unit slice polynomials: 37/1092
+Bockstein owner profiles nonzero: 228/6552
+Bockstein-nonzero positive slices: 38/39; owner profiles 228/234
+positive slices with zero Bockstein: [((7, 6, 6, 12), 10, (0, 0, 0, 0, 0, 0, 0))]
+unit positive slices: 37/39; nonunit nonzero exception: [((7, 4, 6, 12), 11, (9, 11, 0, 10, 0, 0, 0))]
+independent exact route controls: comb 3, weighted sweep zero/positive 0/8
