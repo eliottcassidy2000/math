@@ -2,7 +2,7 @@
 id: THM-2574
 title: "Oriented tooth-component holonomy and fixed-frequency descent"
 status: >
-  PROVED + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.  A pulled-back proper interval under
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  A pulled-back proper interval under
   x -> kx+s/13 has k physical teeth whose labels acquire the monodromy
   n -> n-1 after one lift s -> s+13.  The rth component character selects
   exactly the physical frequencies X congruent to r modulo k.  Multiplying
@@ -41,7 +41,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2574 -- orient one physical tooth before summing frequency
 
-**PROVED + VERIFIED-EXACT; INDEPENDENT AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2568 shows that the completed danger-to-safe endpoint vanishes after
 the full physical-frequency sum.  THM-2573 extracts a possible singular
@@ -597,5 +597,14 @@ divisibility only.  It checks:
 The universal formulas and all quantifiers are proved symbolically above;
 the finite census is a hostile sign, gauge, zero-set, and boundary audit, not
 a replacement for those proofs.
+
+The independent common-endpoint audit rederived the cover-to-circle
+component formula across wrapping arcs, physical-residue orthogonality,
+monodromy and connection signs, the conjugated-pair carry, the live
+resonance equivalence, and the five-of-seven sinc escape.  It separately
+checked the covariance and sign in (44), the pure-gate normal and live
+zero-colour conclusion, the relative-lift gauge hostile, and the complex
+rather than Boolean scope.  Normal and optimized runs, stored output,
+byte hashes, and bytecode compilation all passed; no defect was found.
 
 **QED.**

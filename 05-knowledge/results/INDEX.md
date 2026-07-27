@@ -1,5 +1,20 @@
 # Script Results Index
 
+- `lrc14_oriented_tooth_holonomy_thm2574.py` -> matching `.out`
+  [THM-2574 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The `k`
+  physical components of a pulled-back interval have monodromy under the
+  thirteen target lifts.  A component character selects `X mod k`; its
+  compensating connection descends to `C_13`, and a left/right fixed-`X`
+  pair lands in the exact Euclidean carry colour `(r+M-t)/k`.  For `13|M`
+  and a `13`-unit `k`, all carries vanish exactly when `k|M`; off resonance
+  a nonzero-colour danger/safe amplitude survives at least five of seven
+  frequency lifts.  The same local system diagonalizes THM-2573's
+  total-layer boundary-tooth weights.  The uniform bare gate normal cancels
+  off resonance and is target-trivial on live resonance, so the precise
+  missing input is a nonzero `(M mod k)` tooth coefficient of the actual
+  covariant handoff measure.  The connection is complex and gauge-chosen,
+  not yet a Boolean THM-2334 carrier.  Hashes are
+  `7f020a329...d6a2` / `6c3f024d1...5dbc`.
 - `lrc14_logarithmic_abel_normal_thm2573.py` -> matching `.out`
   [THM-2573 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For disjoint
   finite step endpoint layers, one-sided whole-layer Abel smoothing has the

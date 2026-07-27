@@ -122,19 +122,31 @@ performs the positive composition before that loss: conditioning THM-2563 on
 the stationary return gives one common-ancestry partial-bare packet with mass
 at least `63rho^2/26` and coefficient floor `7rho^2/913952`.  But the root
 identity `h=b` remains a multiplicative spectator and the full-`X`
-annihilation holds root-stratumwise.  THM-2562 computes
+annihilation holds root-stratumwise.  THM-2573 computes the first singular
+escape exactly: the logarithmically renormalized Abel normal is the Fourier
+moment of the positive total-layer handoff measure, but the allowed deep bank
+has an alternating-grid blind kernel and the frozen selector is not a lawful
+whole-layer orbit.  THM-2574 diagonalizes the missing physical tooth label; its connected component character selects `X mod k`, and a left/right
+fixed-frequency pair lands in the Euclidean-carry target colour
+`(r+M-t)/k`.  For `13|M` and a `13`-unit `k`, off resonance `k not|M` has a
+nonzero-colour/nonzero-amplitude component control; on resonance every carry
+is zero.  The pure Boolean danger/safe gate is sharper still: its uniform
+tooth weights make the Abel normal vanish off resonance and target-trivial on resonance.  Thus the exact live normal coordinate is the `(M mod k)` Fourier
+coefficient of the **actual covariant total-layer tooth weights**, not the
+bare gate or an unconnected complex component.  THM-2562 computes
 duty ranks `50/70/72/74` and forces six replicas from a nonzero anchor.
 THM-2567 shows every nonzero deep colour has that rigid face while their deep
 augmentation cancels exactly: the missing datum is a common coloured carrier,
 not more Fourier support.
 
-Next: stop before the annihilating full-`X` sum.  Construct a covariant old
-head retaining one lawful fixed physical frequency, a physical nonconstant
-normal/jet weight, or an oriented reference; then place that relative
-sidecar on THM-2569's common packet and transport its word, owner, and carry
-to the canonical selector/current chart.  Test the six-replica law there and
-apply THM-2545.  Fixed-frequency/normal transport, selector/current identity,
-and vertical semantic gluing remain.
+Next: construct a covariant whole-layer orbit of the old selector/future
+packet and prove that its total-layer handoff weights have a nonzero tooth
+mode at the residue selected by an allowed deep offset.  Equivalently, retain
+THM-2574's connected fixed-`X` mode after all word/owner/deep convolutions;
+the connection must be physically supplied rather than gauge-declared.  Then
+place that relative sidecar on THM-2569's common packet, transport its word,
+owner, and carry to the canonical selector/current chart, test the
+six-replica law, and apply THM-2545.  Selector/current identity and vertical semantic gluing remain.
 More untyped nonvanishing is not progress.  No row is removed. Ledger: `165`.
 
 ### Independent routes that remain live
