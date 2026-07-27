@@ -14,7 +14,9 @@ saturation.  It then audits the lossless linear equivalence between the
 full directed boundary bank and a target-anchored Boolean Gram matrix,
 including the deep-path gamma/beta specializations and the exact-gradient
 (zero-curl) obstruction to reading the raw boundary imbalance as a cyclic
-tournament.
+tournament.  A separate exhaustive pass checks the covariant arbitrary-
+weight repair on constant and hostile noninvariant densities, including the
+distinction between the transported head and the reverse-oriented boundary.
 
 Only integer arithmetic is used.  Primitive thirteenth-root evaluations
 are represented exactly in the basis ``1,zeta,...,zeta^11``, using
@@ -365,6 +367,121 @@ def audit_anchored_gram_boundary_equivalence():
     }
 
 
+def audit_arbitrary_weight_covariance():
+    """Audit symmetrized energy, weight gradient, and head transport.
+
+    The three weight profiles contain one invariant control and two
+    noninvariant hostiles.  Every Boolean mask, including both constants,
+    and every nonzero displacement is checked.
+    """
+
+    weight_profiles = (
+        ("constant", (3,) * P),
+        ("delta_zero", tuple(int(residue == 0) for residue in range(P))),
+        ("affine_chart", tuple(residue + 1 for residue in range(P))),
+    )
+    mask_slope_cases = 0
+    weight_cases = 0
+    noninvariant_energy_mismatches = 0
+    head_reverse_mismatch_cases = 0
+
+    for mask in range(ALL + 1):
+        values = vector(mask)
+        for tau in range(1, P):
+            tails = tail(values, tau)
+            heads = head(values, tau)
+            shifted_values = shift(values, tau)
+            reverse = tuple(
+                shifted_values[residue] * (1 - values[residue])
+                for residue in range(P)
+            )
+
+            require(
+                all(
+                    tails[residue] + reverse[residue]
+                    == (shifted_values[residue] - values[residue]) ** 2
+                    for residue in range(P)
+                ),
+                "tail plus reverse boundary is translation energy",
+            )
+            require(
+                all(
+                    tails[residue] - reverse[residue]
+                    == values[residue] - shifted_values[residue]
+                    for residue in range(P)
+                ),
+                "tail minus reverse boundary is translation gradient",
+            )
+            if heads != reverse:
+                head_reverse_mismatch_cases += 1
+
+            for name, weight in weight_profiles:
+                boundary = sum(
+                    weight[residue] * tails[residue]
+                    for residue in range(P)
+                )
+                reverse_boundary = sum(
+                    weight[residue] * reverse[residue]
+                    for residue in range(P)
+                )
+                twice_energy = sum(
+                    weight[residue]
+                    * (shifted_values[residue] - values[residue]) ** 2
+                    for residue in range(P)
+                )
+                weight_gradient = sum(
+                    (weight[residue] - weight[(residue - tau) % P])
+                    * values[residue]
+                    for residue in range(P)
+                )
+                transported_weight = shift(weight, -tau)
+                transported_head_mass = sum(
+                    transported_weight[residue] * heads[residue]
+                    for residue in range(P)
+                )
+
+                require(
+                    boundary + reverse_boundary == twice_energy,
+                    f"symmetrized energy for {name} weight",
+                )
+                require(
+                    boundary - reverse_boundary == weight_gradient,
+                    f"discrete weight-gradient error for {name} weight",
+                )
+                require(
+                    boundary == transported_head_mass,
+                    f"endpoint-transported density for {name} weight",
+                )
+                if 2 * boundary != twice_energy:
+                    noninvariant_energy_mismatches += 1
+                weight_cases += 1
+
+            mask_slope_cases += 1
+
+    require(mask_slope_cases == (ALL + 1) * (P - 1), "all weighted mask/slope cases")
+    require(weight_cases == 3 * mask_slope_cases, "all hostile weight cases")
+    require(noninvariant_energy_mismatches > 0, "noninvariant boundary/energy hostile")
+    require(head_reverse_mismatch_cases > 0, "head differs from reverse boundary")
+
+    singleton = vector(1)
+    singleton_head = head(singleton, 1)
+    singleton_reverse = tuple(
+        shift(singleton, 1)[residue] * (1 - singleton[residue])
+        for residue in range(P)
+    )
+    require(singleton_head[1] == 1, "singleton transported head is root plus one")
+    require(singleton_reverse[P - 1] == 1, "singleton reverse boundary is root minus one")
+    require(singleton_head != singleton_reverse, "explicit head/reverse hostile")
+
+    return {
+        "mask_slope_cases": mask_slope_cases,
+        "weight_profiles": len(weight_profiles),
+        "weight_cases": weight_cases,
+        "noninvariant_energy_mismatches": noninvariant_energy_mismatches,
+        "head_reverse_mismatch_cases": head_reverse_mismatch_cases,
+    }
+
+
 def audit_deep_path_specialization():
     masks = deep_path_masks()
     require(len(masks) == 23, "deep path has twelve singleton and eleven pair rays")
@@ -475,6 +592,7 @@ def audit_deep_path_specialization():
 
 def main():
     boolean = audit_all_boolean_masks()
+    weighted = audit_arbitrary_weight_covariance()
     gram = audit_anchored_gram_boundary_equivalence()
     deep = audit_deep_path_specialization()
 
@@ -494,6 +612,11 @@ def main():
     print(f"guard_1_over_10_sharp_cases={boolean['guard_floor_sharp_cases']}")
     print(f"unit_guard_model_fluxes={boolean['guard_model_fluxes']}")
     print(f"flux_histogram={boolean['flux_histogram']}")
+    print(f"arbitrary_weight_mask_slope_cases={weighted['mask_slope_cases']}")
+    print(f"arbitrary_weight_profiles={weighted['weight_profiles']}")
+    print(f"arbitrary_weight_cases={weighted['weight_cases']}")
+    print(f"noninvariant_boundary_energy_mismatches={weighted['noninvariant_energy_mismatches']}")
+    print(f"head_reverse_mismatch_cases={weighted['head_reverse_mismatch_cases']}")
     print(f"anchored_masks={gram['anchored_masks']}")
     print(f"anchored_point_entries={gram['point_entries']}")
     print(f"anchored_inverse_entries={gram['inverse_entries']}")

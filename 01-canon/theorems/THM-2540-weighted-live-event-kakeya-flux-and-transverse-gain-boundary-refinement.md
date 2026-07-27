@@ -6,10 +6,15 @@ status: >
   under the thirteen root translations, the Cayley pairing of a Boolean
   root event is exactly its positively oriented boundary mass and half its
   translation energy.  The density is external: inserting a non-Boolean
-  amplitude g inside the event produces |g|^2, not g.  Each algebraic root
-  displacement has the sharp run-boundary floor 13/42 against centred
-  fibre energy; on the unit-guard carrier it has the stronger sharp 1/10
-  boundary-to-event mass floor.  On every one of the 165 live THM-2349
+  amplitude g inside the event produces |g|^2, not g.  For an arbitrary
+  noninvariant density, the two boundary orientations average exactly to
+  the weighted translation energy, their imbalance is the exact discrete
+  weight gradient, and transporting the density to the translated head
+  preserves the oriented boundary mass.  This covariant repair does not
+  restore the weighted Cayley skew pairing.  Each algebraic root displacement
+  has the sharp run-boundary floor 13/42 against centred fibre energy; on
+  the unit-guard carrier it has the stronger sharp 1/10 boundary-to-event
+  mass floor.  On every one of the 165 live THM-2349
   rows, every one of the twelve boundary events literally retains the
   terminal word and common delayed Boolean owner, has a positive-frequency
   grouped-jump Prony lift bounded by 26J(W_R)-1, and re-enters the carrier
@@ -39,8 +44,8 @@ script: 04-computation/lrc14_weighted_live_event_kakeya_flux_thm2540.py
 output: 05-knowledge/results/lrc14_weighted_live_event_kakeya_flux_thm2540.out
 independent_script: 04-computation/lrc14_transverse_gain_boundary_refinement_thm2540.py
 independent_output: 05-knowledge/results/lrc14_transverse_gain_boundary_refinement_thm2540.out
-script_sha256: 45dc32a4512efaa787f73b03d7c5474b8a8b8e262abe3e82fe18070228651dc3
-output_sha256: 82f21452e4caf201b30f92252d5a031f7605ca37a0e85543e942136a156564db
+script_sha256: 02d604faca72182188646eee13d94a967ff3764917386dd0561eceea138b39ea
+output_sha256: 3ffa06dced5353c70072e3242107a988d31bd6a7015c820dce99567f6c9575b4
 independent_script_sha256: 864ee2eb212b2af715d7e5bf270a3b040db422963539717f98c857ae0f68cbbb
 independent_output_sha256: 7ea5b301804b3b2e0e59a050a7c33316462ce3578616dfb3c2e8ec88295707a5
 hash_basis: working-tree bytes (LF)
@@ -165,6 +170,76 @@ For real nonnegative `g`, this is `g^2`, not `g`.  Moreover
    remains Boolean.
 
 No form of (9) is applied to THM-2533's complex mixed character channel.
+
+### Arbitrary weights have an exact covariant endpoint repair
+
+Root invariance is necessary for the Cayley pairing (9), but the failure for
+an arbitrary density is not unstructured.  Let `w>=0` now be any integrable
+density; no translation invariance is assumed.  Besides the tail `K_tau`,
+define the reverse-oriented boundary at the matched pair, pulled back to
+the same `r`-edge chart, by
+
+```text
+K^rev_tau
+ :=P_tau K_(-tau)(e)
+ =(P_tau e)(1-e),                                           (10a)
+```
+
+and put
+
+```text
+B_w=integral w K_tau,             R_w=integral w K^rev_tau. (10b)
+```
+
+Pointwise Boolean algebra gives
+
+```text
+K_tau+K^rev_tau=(P_tau e-e)^2,
+K_tau-K^rev_tau=e-P_tau e.                                 (10c)
+```
+
+Therefore
+
+```text
+1/2||P_tau e-e||_w^2=(B_w+R_w)/2,                           (10d)
+
+B_w-R_w
+ =integral w(e-P_tau e)
+ =integral (w-P_(-tau)w)e.                                 (10e)
+```
+
+Equivalently, the oriented tail mass is the symmetrized energy plus one
+half of the exact discrete weight-gradient error.  This identifies the
+entire boundary-versus-energy obstruction caused by a root-visible or
+target-dependent density.
+
+There is a second, covariant identity.  The translated **head packet** of
+the original oriented boundary is
+
+```text
+H_tau=P_(-tau)K_tau=(P_(-tau)e)(1-e).
+```
+
+Transporting the density with that endpoint gives
+
+```text
+integral w K_tau=integral (P_(-tau)w)H_tau.                 (10f)
+```
+
+The convention is exact: a tail at `x` moves to the head at `x+tau/13`,
+where its transported density is `(P_(-tau)w)(x+tau/13)=w(x)`.
+
+The head `H_tau` and reverse boundary `K^rev_tau` are different objects.
+The first carries the original arrow's positive tail packet to its empty
+head; the second tests the opposite arrow on the same unordered pair.  For
+`e=1_{0}` and `tau=1`, `H_tau` is supported at root `1`, whereas
+`K^rev_tau` is supported at root `-1`.  Confusing them reverses the shift in
+(10f).
+
+Equations (10d)--(10f) transport a target-dependent sidecar without
+declaring it invariant.  They do **not** make `P_tau` unitary in `L^2(w)` or
+make `C_tau` weighted-skew-adjoint.  Consequently they do not restore
+`<C_tau e,P_tau e>_w=B_w`; that pairing has additional commutator terms.
 
 ## 2. Two sharp directional floors
 
@@ -521,6 +596,8 @@ The new statements remove four narrow invoices:
 
 ```text
 external density:     exact positive Cayley flux, with weight type fixed;
+arbitrary density:    symmetrized energy, exact gradient error, and
+                      endpoint-transported sidecar;
 guard carrier:        sharp 1/10 boundary/event mass floor;
 165 live rows:        per-boundary Prony and indexed carrier certificates;
 three mixed gains:    one nonnegative transverse boundary packing.      (50)
@@ -554,14 +631,18 @@ python3 04-computation/lrc14_transverse_gain_boundary_refinement_thm2540.py
 python3 -O 04-computation/lrc14_transverse_gain_boundary_refinement_thm2540.py
 ```
 
-The first dependency-free referee performs `2,721,357` exact checks.  It
+The first dependency-free referee performs `3,802,708` exact checks.  It
 exhausts every nonconstant Boolean root mask and every displacement, checks
 the Cayley flux, run-boundary coercivity and its `312` equality cases, the
 `1/10` floor on all `97,188` mass-at-most-ten mask--slope cases and its
 `156` combinatorial equality cases, the sharp guard model, primitive
-boundary colours, target-anchor regression controls, and the deep consumer
-formula (37).  The canonical Crofton/Gram checks are retained only as
-regression controls; they are not counted as new THM-2540 claims.
+boundary colours, and—on all `98,304` mask--slope cases—one invariant and
+two hostile noninvariant weight profiles.  The latter pass checks the
+symmetrized energy, weight-gradient, endpoint-transport identities, and an
+explicit head/reverse hostile.  It also retains target-anchor regression
+controls and the deep consumer formula (37).  The canonical Crofton/Gram
+checks are retained only as regression controls; they are not counted as
+new THM-2540 claims.
 
 The independent product-torus referee performs `5,412,159` exact checks.  It
 checks the complete characteristic multiplier, all `220` gain triples and
