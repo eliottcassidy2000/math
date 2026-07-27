@@ -12,16 +12,17 @@ status: >
   move.  Equal endpoint defects do not determine the mediant: two acute
   unimodular flanks with endpoint values (-90,-89) have child defects -177
   and +1.  The active integral lift of the projective order-three generator
-  can likewise turn a safe vector into a bad one, so LRC safety is not a
-  modular invariant.  The three Berggren
+  can likewise change a nonnegative defect into a negative one, so the
+  THM-2056 Euclidean defect certificate is not invariant under active
+  modular motion.  The three Berggren
   branches form a disjoint PGL_2(Z) reduction cross-section of (0,1), not
   a C_3 action; their triple matrices are identity mod 2 and not order
   three.  This repairs the binary/ternary "one object" analogy without
   proving LRC(14) or identifying a V_4 torsor.
 source: codex-2026-07-27-modular-transfer
-depends_on: []
-related:
+depends_on:
   - THM-2056-kelvin-polar-farey-defect-certificate
+related:
   - THM-2467-bicycle-spaces-of-the-star-flip-split
   - THM-2595-modular-v4-affine-lift-dichotomy-and-six-vertex-tournament-no-go
   - THM-2597-six-vertex-bicycle-modular-abelianization-cycle
@@ -140,9 +141,10 @@ R: G -> [a+2b+c, b+c;      b+c, c      ], ell -> (r+s,s). (10)
 ```
 
 On a fixed signed hull-owner cone of THM-2056, `F_w>=0` is precisely its
-determinant certificate.  Equation (7) is therefore the exact finite state
-on which a modular/Farey dynamic program may run.  The scalar endpoint
-defects are only two evaluations of this quadratic polynomial.
+determinant certificate.  Equation (7) is therefore the exact
+finite-dimensional state on which a modular/Farey dynamic program may run.
+The scalar endpoint defects are only two evaluations of this quadratic
+polynomial.
 
 The mediant law isolates the missing coordinate:
 
@@ -162,7 +164,8 @@ Take `w=(1,0)` and compare the two acute unimodular flanks
 (u,v_1)=((1,0),(90,1)).                                   (12)
 ```
 
-They have identical endpoint data, even before safe/bad scalarization:
+They have identical endpoint data, even before defect-gate pass/fail
+scalarization:
 
 ```text
 F_w(u)=-90,             F_w(v_0)=F_w(v_1)=-89.             (13)
@@ -178,7 +181,7 @@ F_w(u+v_1)=F_w(91,1)=1.                                  (14)
 Consequently none of the following determines the Farey child:
 
 ```text
-the two endpoint safe/bad bits (a four-state V4 toggle set);
+the two endpoint defect-gate bits (a four-state V4 toggle set);
 the two exact endpoint defect values;
 the abstract edge/path joining the endpoints;
 any partial-cube or graceful label of that abstract carrier.              (15)
@@ -206,11 +209,13 @@ But the Euclidean norm is not:
 F_w(d)=2025,                 F_(w')(d')=-4140.             (18)
 ```
 
-Thus this integral lift of the projective order-three generator can take a
-certified vector to an uncertified one.  The matrix itself has order six in
-`GL_2(Z)` because `C^3=-I`; the point is the failure already on one lawful
-lift of the modular `C_3` class.  Passive basis covariance (8) is lawful;
-active invariance without the transformed Gram metric is false.
+Thus this integral lift of the projective order-three generator can change
+the sign of the displayed Euclidean defect.  The matrix itself has order
+six in `GL_2(Z)` because `C^3=-I`; the point is the failure already on one
+lawful lift of the modular `C_3` class.  Passive basis covariance (8) is
+lawful; active invariance of the THM-2056 defect certificate without the
+transformed Gram metric is false.  No actual LRC row or full LRC-safe
+predicate is transported by this hostile.
 
 ## 4. The ternary Pythagorean tree is a reduction cross-section
 
@@ -330,11 +335,14 @@ The useful connection is now precise.
 | mod-two or endpoint quotient | finite label | reduction/scalarization | its stated residue or bits | Gram cross term, action, phase, owner word |
 
 The cheapest next LRC test is consequently not another tree isomorphism.
-It is a finite automaton whose state includes `(G,ell)` and whose accepting
-predicate is THM-2056's owner-cone gate, followed by the independent
-phase/owner sidecars already named there.  This candidate proves neither
-that such an automaton closes LRC(14) nor that every useful move stays in a
-single owner cone.
+It is an exact basis recursion whose state includes `(G,ell)` and whose
+accepting predicate is THM-2056's owner-cone gate, followed by the
+independent phase/owner sidecars already named there.  The entries of
+`(G,ell)` are unbounded, so this is not a finite automaton without a height
+or residual truncation; THM-2056's finite uncertified residual is the
+natural finite table to test.  This candidate proves neither that such a
+truncation closes LRC(14) nor that every useful move stays in one owner
+cone.
 
 ## 7. Exact reproduction
 

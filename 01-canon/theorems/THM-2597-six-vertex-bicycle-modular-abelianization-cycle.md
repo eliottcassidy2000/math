@@ -230,8 +230,8 @@ the smaller endpoints of the two `n=6` blue self-loop lines as
 19, 150.                                                   (18)
 ```
 
-So `{150,873}` is exactly one of the two first blue self-loops anticipated
-in THM-2467.  For the tournament at mask `873`,
+So `{150,873}` is exactly one of the two `n=6` blue self-loop lines.  For
+the tournament at mask `873`,
 
 ```text
 score vector=(2,3,2,3,2,3),
@@ -283,7 +283,7 @@ THM-2587 has six live wall pieces indexed by
 theta in C2  times  {low,middle,high},                     (23)
 ```
 
-with each `theta` rail carrying exact masses `48,154,48`.  Its three-state
+with each `theta` rail carrying exact census counts `48,154,48`.  Its three-state
 factor is an ordered interval/reflection wall, not a cyclic `C_3` action.
 Therefore the shared cardinality six does not identify the LRC selector
 wall with the bicycle `C_6` or with the `S_3` matching completion.
