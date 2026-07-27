@@ -1,5 +1,17 @@
 # Script Results Index
 
+- `lrc14_stationary_diagonal_paired_corner_thm2569.py` -> matching `.out`
+  [THM-2569 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Conditioning
+  THM-2563 on THM-2565's stationary same-root return gives one common-ancestry
+  partial-bare packet with mass at least `63rho^2/26`, normalized
+  primitive-deep/moving-dipole floor `7rho^2/913952` (or
+  `9rho^2/913952` when both roles are ordinary), and marginal floors
+  `7rho^2/70304` or `9rho^2/70304`.  The future root diagonal is only a
+  multiplicative spectator: full-`X` endpoint completion still annihilates
+  every coarse target character separately in every root stratum.  The
+  referee checks `212,992` weighted Boolean cells, `2,197` line-sum
+  orthogonality identities, and the perfect-Hall-diagonal tensor hostile.
+  Hashes are `ea3f5e41...5581` / `bb80f789...7a26`.
 - `lrc14_full_x_transition_annihilation_thm2568.py` -> matching `.out`
   [THM-2568 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  A complete
   danger-to-safe endpoint transition on one common target twist has zero

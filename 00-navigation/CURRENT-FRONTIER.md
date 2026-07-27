@@ -114,17 +114,27 @@ all `165` rows a positive old-head deep/repair coefficient.  THM-2563 adds two
 moving dipoles and deep colour on a positive partial-bare `13^3` table; the
 fixed head is still not co-shifted.  THM-2565 gives a cemetery-free same-root
 future return with eventual floor `rho^2/26`, but for a changed
-target-informed selector rather than inherited head word.  THM-2562 computes
+target-informed selector rather than inherited head word.  THM-2568 proves
+that completing the old-danger/moving-safe endpoint and summing all physical
+frequencies annihilates every coarse target character; the independently
+twisted pair spectrum has a `156`-dimensional line-sum kernel.  THM-2569
+performs the positive composition before that loss: conditioning THM-2563 on
+the stationary return gives one common-ancestry partial-bare packet with mass
+at least `63rho^2/26` and coefficient floor `7rho^2/913952`.  But the root
+identity `h=b` remains a multiplicative spectator and the full-`X`
+annihilation holds root-stratumwise.  THM-2562 computes
 duty ranks `50/70/72/74` and forces six replicas from a nonzero anchor.
 THM-2567 shows every nonzero deep colour has that rigid face while their deep
 augmentation cancels exactly: the missing datum is a common coloured carrier,
 not more Fourier support.
 
-Next: compose THM-2565's stationary diagonal with THM-2563's charged endpoint
-on one carrier (THM-2569 is reserved for that audit), then transport its
-difference character, word, owner, and carry to the canonical selector/current
-chart.  Test the six-replica law there and apply THM-2545.  Left-right target
-completion, selector/current identity, and vertical semantic gluing remain.
+Next: stop before the annihilating full-`X` sum.  Construct a covariant old
+head retaining one lawful fixed physical frequency, a physical nonconstant
+normal/jet weight, or an oriented reference; then place that relative
+sidecar on THM-2569's common packet and transport its word, owner, and carry
+to the canonical selector/current chart.  Test the six-replica law there and
+apply THM-2545.  Fixed-frequency/normal transport, selector/current identity,
+and vertical semantic gluing remain.
 More untyped nonvanishing is not progress.  No row is removed. Ledger: `165`.
 
 ### Independent routes that remain live
