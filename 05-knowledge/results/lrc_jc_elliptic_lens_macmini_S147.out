@@ -1,0 +1,10 @@
+(1) Weierstrass data of the trisection pencil y^2 = T^3 + pT + q:
+    -4p^3 - 27q^2 = -11664*a**2*(27*a**2*c**2 - 18*a*b*c + 16*a + b**3*c - b**2)
+    => K = 0 <=> singular elliptic fiber (the Jelonek set IS the
+       elliptic-discriminant locus). VERIFIED (scalar -2^4 3^6 a^2).
+(2) on E = {(4/(27t^2), 4/(3t), t)}:  p = 0    q = 0
+    => E IS THE CUSPIDAL STRATUM p = q = 0 of the pencil.
+    converse solve p=q=0 for (a,c): [{a: b**2/12, c: 4/(3*b)}]  (b free => the curve, param by b ~ 4/(3t))
+(3) j(a,b,c) = 1728*4p^3/(4p^3+27q^2) = 16*(12*a - b**2)**3/(a**2*(27*a**2*c**2 - 18*a*b*c + 16*a + b**3*c - b**2))
+    THE COUNT MAP = KODAIRA STRATIFICATION: fiber 3 <=> smooth (K != 0),
+    fiber 1 <=> nodal (K = 0, j = oo, off E), fiber 0 <=> CUSP (E).
