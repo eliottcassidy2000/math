@@ -1,0 +1,9 @@
+THM-2478 exact companion: PASS
+direct_handoff_mean=3/13; old_drift=2/5; old_service=7/5
+direct_gate_variation=20; BV_constant=30/169
+direct_retention=L1:q=9/65:M=8/65,L2:q=103/845:M=254/845,L3:q=1036/10985:M=3539/10985,L4:q=13224/142805:M=46133/142805
+future_collision_colours=12; first_mean=[-1/845,-1/845,-1/845,-1/845,-1/845,-1/845,-1/845,-1/845,0,0,0,0]
+first_colour_old_drift_landing=[-883/1856465,-883/1856465,-883/1856465,-883/1856465,-883/1856465,-883/1856465,-883/1856465,-883/1856465,-4/1856465,-8/1856465,-6/1856465,-3/1856465]
+deep_rebase_descended_phase=11/31; lost_phases=(0,1/13); lost_modulus=13
+H_interface_owner_drift=0; aggregate_drift=21/742586
+old root/deep table retained; future owner/collision roots remain typed at a different scale
