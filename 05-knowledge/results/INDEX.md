@@ -2231,3 +2231,19 @@ defect matrices.  Every nonflat atlas defect has exactly `11` or `12`
 surviving slopes; `14,711` distinct defects lose only the forced slope zero,
 and `241` lose exactly one additional slope.  The stored sharp witness loses
 slope one.  `-O2` and `-O3` runs byte-match the stored `PASS` transcript.
+
+### lrc14_affine_cut_bundle_probe.out
+
+Independent exact follow-on to the **THM-2507 truncated-Radon audit**.  The
+full `42`-cut, `504`-nonzero-slope bundle is equivariant under
+`AGL_1(F_13) x AGL_1(F_7)`: `25,041,744` source-index identities verify the
+exact component map, and `26,364` cyclotomic basis checks verify its Fourier
+phase law.  The universal pointwise invoice is `42*7=294` good components out
+of `504`, with no cut-selection loss.  The `kappa=2` hostile becomes the pure
+component permutation `(tau,a,c)=(1,1,0)->(1,1,2)` plus `v->v-2`.
+The affine gauge action is regular on all `6,552` nonzero evaluation indices,
+so every invariant linear scalar is the uniform sum; its coefficient on each
+source is `504`, and it vanishes on every row-zero defect.  The first obvious
+invariant is quadratic energy, verified as `1,932` before and after the hostile,
+but it discards phase and supplies no endpoint/owner/deep current.  Normal and
+optimized runs byte-match the stored transcript.
