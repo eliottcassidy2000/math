@@ -1,5 +1,27 @@
 # Script Results Index
 
+- `lrc14_target_informed_chord_old_repair_thm2559.py` -> matching `.out`
+  [THM-2559 PROVED + VERIFIED-EXACT].  On all `165` live owner rows, the
+  already named target-active `k_a` failure mask is nonempty and disjoint from
+  the occupied direct-fibre mask.  Lexicographic markers in the two masks and
+  finite slope stratification give a positive old occupied-to-failure chord;
+  the Cayley endpoint sum is pointwise minus the owner weight.  Root-constant
+  blocker typing then feeds THM-2379 and forces a positive deep-by-`k_a`
+  complement-repair coefficient with relative floor `11/24336` (ordinary) or
+  `1/2704` (guard).  The referee checks all `1,577,940` ordered disjoint
+  nonempty mask pairs, all signs, the `165` valuation profiles, exact tooth
+  counts, and the blind-mask bypass.  The paired blocker is not co-shifted and
+  the head is not a later semantic root.  Hashes are `39a9b612...cd` /
+  `23124d9a...b71`.
+- `lrc14_physical_blind_necklace_hostile_thm2561.py` -> matching `.out`
+  [THM-2561 PROVED + VERIFIED-EXACT].  A primitive guard/five-unit bank
+  realizes `A_0={0,1,4}` on an interval of mass `53/169092`; blockers with
+  profile `(1,2,5)` retain it as a positive exclusive-owner fibre on mass
+  `6/199927`.  Root `3` is an isolated `k_a` failure with `q_*=k_b` and all
+  neutral roles safe, but all twelve lexicographic heads miss it.  The
+  target-informed chord `0 -> 3` sees it with Cayley gradient `-1`.  This is a
+  local physical hostile, not a global cover row.  Hashes are
+  `1a5975d5...632` / `cb23ef65...cf8`.
 - `lrc14_ancestry_realization_stage_opus_20260727.py` + `lrc14_phase_cone_sidecar_opus_20260727.py` -> matching `.out`s [THM-2560 PROVED CANDIDATE + VERIFIED-EXACT; audit requested]. Second-rung diagnostics on the canonical typed row, both mechanism NEGATIVES with exact redirects: (A) collision index r = 3 (I_1 = I_2 = 0 exact, I_3 = 9926558757352/109707098520974955, triple-verified) -- collision depth 13^3 = c_2 (new coincidence r = nu13(c_2)); deep phase BASE-ONLY (h = 338, 13|h), so the u-slaved THM-2512 bridge is not instantiable; redirect: base-only pairing or r = 5 windows on other strata. (B) THM-2368 (37) sidecar built exactly (1,489,966 chambers, gated by full 13^3-table reconstruction); all 168 walk endpoints nonzero, but the phase-cone certificate FAILS for all 168 characters (spans > half turn; 5,740-10,322 direction classes each): the certified positive drift is cone-transcendent; first cancelling event pinned at character (0,1), y = 9653643/10396204 (2.4e-6 from the owner-window edge), escape direction (-6,0,0,0,-1,-2,-2,-2,-2,-2,-1,0,0). Uniform (38) argument must use a != 0 mode lines, symmetry quotients, or pre-integration word-breaking. MISTAKE-281 discipline obeyed throughout.
 - `lrc14_doubly_centered_transfer_hall_boundary_thm2557.py` -> matching
   `.out` [THM-2557 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED

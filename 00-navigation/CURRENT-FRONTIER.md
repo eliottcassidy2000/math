@@ -1,6 +1,6 @@
 # Current Mathematical Frontier
 
-**Rolling state — refreshed 2026-07-26.** This supersedes dated snapshots; linked theorems are proof sources, while this file records composition and residuals.
+**Rolling state — refreshed 2026-07-27.** This supersedes dated snapshots; linked theorems are proof sources, while this file records composition and residuals.
 Status: **PROVED** in-repo proof; **CITED** scoped import; **FINITE-EXACT** exhaustive stated universe; **VERIFIED** reproducible evidence; **CONDITIONAL**, **OPEN**, **REFUTED**, and **SUPERSEDED** are literal.
 
 ## LRC(14)
@@ -115,16 +115,27 @@ THM-2557 transfers the nonzero THM-2550(B) interaction injectively on the
 rank-72 doubly centred lattice (`SNF 1^66 + 13^6`), but the current is signed
 and outside the Hall cone.  THM-2558 forces the old target-active role on
 `428/630` visible root necklaces; `202` middle-layer necklaces are sharp
-blind controls.  THM-2550 itself is a typed non-cover control and its drift
-and large-clock interaction are different packets.
+blind controls.  THM-2561 realizes the canonical blind mask `{0,1,4}` on a
+positive physical exclusive-owner interval with an isolated `k_a` failure,
+`q_*=k_b` safe, and no neutral cofailure, so local six-comb geometry cannot
+eliminate that layer.  THM-2559 instead bypasses every blind mask: use the
+already named literal `k_a`-failure mask to select an occupied-to-failure
+chord, stratify its nonzero slope, and apply the Cayley endpoint identity.
+This works on all `165` rows and forces a positive old-predecessor
+deep-by-`k_a` complement-repair coefficient, with exact relative floor
+`11/24336` for an ordinary role and `1/2704` for the guard.  The paired
+blocker remains a static safe sidecar, not an oppositely co-shifted target
+dipole.  THM-2550 itself is a typed non-cover control and its drift and
+large-clock interaction are different packets.
 
-Next: eliminate the `202` masks using physical six-comb constraints, or
-retain the forced role through the sheet/carry/word on one common root gauge;
-then construct the directed chart x semantic x ancestry 2-cell and apply
-THM-2545.  Service, mixing, chronology, old-sheet alignment, and horizontal
-transport are closed; future-root identification and vertical semantic
-gluing are not.  More untyped nonvanishing is not progress.  No row is removed.
-Ledger: `165`.
+Next: physicalize the full paired target dipole on the THM-2559 packet, then
+retain that target-active action through sheet/carry/word on one common root
+gauge and construct the directed chart x semantic x ancestry 2-cell for
+THM-2545.  Service, mixing, chronology, old-sheet alignment, target-informed
+old-head selection, old factor repair, and horizontal transport are closed;
+paired target co-shift, future-root identification, and vertical semantic
+gluing are not.  More untyped nonvanishing is not progress.  No row is
+removed. Ledger: `165`.
 
 ### Independent routes that remain live
 

@@ -285,8 +285,8 @@ THM-2537 Cayley identity gives pointwise
 After multiplication by any nonnegative root-invariant owner weight, the
 negative two-endpoint sum again scalarizes its positive mass.  Hence a
 target-informed chord selector can bypass this blind necklace locally.
-The universal measurable version is the separate target of the reserved
-THM-2559; it is not used as a dependency here.
+THM-2559 proves the universal measurable version on all `165` rows; it is a
+subsequent related theorem, not a dependency here.
 
 Equation (21) remains entirely at the old predecessor horizon.  It neither
 places `k_a` genuinely later nor identifies its old ancestry root with a
