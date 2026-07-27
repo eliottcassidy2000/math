@@ -1,0 +1,12 @@
+THM-2526 affine skew-orientation boundary: PASS
+affine_pair_orbits=13,156; cyclic_halfsets=64; reflection_fixed=0
+origin_skew_rank=6; support=24; nonzero_translation_failures=12; centre_average=0
+oriented_slope_rank=12; determinant=13; cayley_identity=(I+T_tau)H_tau=T_tau-I
+oriented_slope_first_row=0,1,-1,1,-1,1,-1,1,-1,1,-1,1,-1
+A_tau(D5+D5*)=skew_rank_6; A_tau(D5-D5*)=symmetric_rank_6
+commuting_energy_checks=144; mixed_skew_commutator_rank=12; all_Reynolds_averages=0
+Fano_oriented_first_row=0,-1,3,-5,7,-7,5,-5,7,-7,5,-3,1
+Paley_oriented_first_row=0,-1,3,-5,5,-3,3,-3,3,-5,5,-3,1
+skew_diagonal_checks=9; nonzero_ordered_cross_controls=8
+live_guard_gauges=12; Boolean_profiles=8190; odd_primitive_modes=98280; antipodal_sign_pairs=8190
+full_AGL_invariant_skew_dimension=0; live sheet orientation retained; Boolean owner emission not inferred

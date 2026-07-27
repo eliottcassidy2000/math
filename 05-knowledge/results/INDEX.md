@@ -1,5 +1,29 @@
 # Script Results Index
 
+- `lrc14_affine_skew_orientation_boundary_thm2526.py` -> matching `.out`
+  [THM-2526 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The full
+  `AGL(1,F_13)`-invariant skew sector is zero, but two covariant survivors
+  expose the lost gauges: the rank-six origin operator `D_5-D_5^*` and the
+  rank-twelve cyclic tournament operator `H_tau`, with
+  `(I+T_tau)H_tau=T_tau-I`.  THM-2198's retained physical sheet `s=-Hk`
+  lawfully selects `tau_H=(-H)^(-1)` on the live carrier.  Hence every one
+  of the `165` live depth-one events has a lossless reflection-odd bank
+  `H_tau R_tau=13A_tau H_tau b`, with all twelve primitive modes and a
+  strict antipodal sign pair.  Normal/optimized/stored transcripts match;
+  hashes are `32767857...3c9d` / `e48b6861...cd5c`.  The remaining seam is
+  Boolean owner/source factorization and late-owner coupling, not root
+  orientation.
+- `lrc14_unit_guard_cross_cospan_thm2525.py` -> matching `.out` [THM-2525
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Every nonzero Boolean
+  response supported in the live unit guard satisfies the sharp relative
+  drift floor `D_0>=(3/13)mu(F)`.  Every translated Hamilton bank has
+  `max|R_tau|>=(845/364)mu(F)`, and the sharp guard-aligned constant is
+  `1014/305`, with exact dual and rational primal certificates.  The obvious
+  word-bearing/bare-owner cross-cospan nevertheless collapses pointwise to
+  self-correlation because the delayed word is root-constant.  The referee
+  exhausts `8,099` ten-point profiles and `5,434` three-zero-run profiles;
+  hashes are `975e97e8...9f24` / `f5ba3ff8...e0c1`.  No Boolean orientation,
+  owner-loop current, row exclusion, or LRC(14) proof follows.
 - `lrc14_translated_chi7_polarization_thm2524.py` -> matching `.out`
   [THM-2524 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For the
   centred THM-2519 collision

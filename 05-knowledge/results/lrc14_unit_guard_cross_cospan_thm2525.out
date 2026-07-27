@@ -1,0 +1,25 @@
+THM-2525 unit-guard collision/cross-cospan referee: PASS
+guard_phase_boundaries=26
+guard_generic_fibre_counts=9:13,10:13
+carrier_profiles=8099
+floor_equalities=286
+cross_collapse_checks=105287
+cyclotomic_nonconstant_checks=8099
+inverse_numerator_row=0,85,15,-15,-5,-85,5,5,-85,-5,-15,15,85
+inverse_numerator_row_l1=420
+all_slope_inverse_bound=max_abs_R>=845/364*mass
+three_zero_run_profiles=5434
+sharp_dual=9R0+368R1-340R4-198R5>=234*m
+sharp_dual_l1=915
+sharp_dual_equalities=78
+guard_aligned_sharp_bound=max_abs_R>=1014/305*mass
+sharp_primal_masks=0x25b:52/305,0x2db:39/305,0x3ff:338/305
+sharp_primal_mass=13
+sharp_primal_weight_sum=429/305
+sharp_primal_probability_mass=3965/429; sharp_primal_rho=305/429
+sharp_primal_probability_max_abs_R=1014/429
+sharp_primal_bank=1014/305,1014/305,-338/305,104/305,-1014/305,-1014/305,741/305,741/305,-1014/305,-1014/305,104/305,-338/305,1014/305
+shallow_guard_sharp_mass=10/91
+shallow_guard_sharp_drift=30/1183
+word_bare_cross_profile=self_profile; odd_component=0
+scalar_rows_excluded=0; lrc14_status=OPEN
