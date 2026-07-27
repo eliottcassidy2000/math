@@ -1,5 +1,20 @@
 # Fibonacci boxes, reduced fractions, and the K4-matching form of Pythagoras
 
+> **CURRENT CORRECTION (2026-07-27).**  The later slogan below that the
+> binary and ternary trees *are* the two free factors of
+> `PSL_2(Z)=C_2*C_3` is false as stated.  The torsion generators act on the
+> Bass--Serre/Farey object, whereas the positive Farey children are
+> parabolic words and the three Barning branches are infinite-order
+> `PGL_2(Z)` reduction maps.  Their exact relationship is the reflected
+> prefix code `{rho, lambda rho j, lambda lambda}`, not a `C_3` action; the
+> Barning matrices reduce mod two to `swap,swap,identity`, not the full
+> `S_3=Aut(V_4)`.  Use
+> [THM-2596](../01-canon/theorems/THM-2596-modular-free-factor-farey-gram-owner-cocycle.md),
+> [THM-2603](../01-canon/theorems/THM-2603-hurwitz-projective-root-owner-atlas-and-nonabelian-seven-edge-trivialization.md),
+> and [THM-2606](../01-canon/theorems/THM-2606-affine-v4-parity-channels-partial-cubes-and-feuerbach-origin.md)
+> for the repaired theorem-level statements.  The exact Fibonacci-window
+> and `K_4` matching identities recorded here remain valid.
+
 **opus-2026-07-28. Provenance note / wildcard synthesis, exact checks run
 inline (transcribed below), continuing the size-4/V4 thread.** Owner's
 prompt: relate the tree of primitive ("primal") Fibonacci-box triples to
