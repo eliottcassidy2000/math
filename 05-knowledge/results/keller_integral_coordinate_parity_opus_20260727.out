@@ -1,40 +1,87 @@
 ==============================================================================
-[1] y-eliminant (symbolic): constant lead => y INTEGRAL; Tr(y) != 0
+[1] Global r-coordinate identities and the sign convention
 ==============================================================================
-  y-core cubic: 27*a**2*c - 18*a*b + 18*a*y + b**3 - 3*b*y**2 + 2*y**3
-  lead = 2  (CONSTANT => y integral over Q[a,b,c])
-  next = -3*b  => Tr(y) = 3*b / 2
-  [PASS] y integral; depressed law FAILS in the y-gauge (Tr(y) = 3b/2)
+  P_r(r) = 27*a**2*c - 18*a*r + 3*b*r**2 - 2*r**3
+  D_r(r) = 3*a - b*r + r**2
+  P_r'(r) = -6 D_r(r)  [PASS; the sign is negative]
+  on every fibre: P_r(r)=0 and x D_r(r)=r  [PASS]
+  disc_r(P_r) = -2916*a**2*(27*a**2*c**2 - 18*a*b*c + 16*a + b**3*c - b**2)
+  Tr(r)=3b/2 and Tr(y)=3b/2, whereas Tr(x)=0 (depressed x-core).
+  Thus a=0 is a coordinate-collision component independent of L=0.
 
 ==============================================================================
-[2] z-eliminant cores at integer targets: 2-adic-unit leads (z integral,
-    VERIFIED; exact symbolic lead left OPEN -- resultant too heavy)
+[2] Global constant-lead z-cubic: z is integral (PROVED)
 ==============================================================================
-  (-2,9,8): z-cubic lead=4  Tr(z)=-13119/4
-  (9,-7,-9): z-cubic lead=8  Tr(z)=-1960953/8
-  (6,-1,8): z-cubic lead=4  Tr(z)=-379719/4
-  (-2,-3,6): z-cubic lead=2  Tr(z)=-10137/2
-  (8,8,6): z-cubic lead=1  Tr(z)=-77640
-  leads [1, 2, 4, 8]: all powers of 2: True
-  [VERIFIED] z-values have 2-adic-bounded denominators: z integral
+  Q_z(W) = 8 W^3 + A_z W^2 + 6 L B_z W + L C_z
+  A_z = 324*a**2*c**2 - 216*a*b*c + 408*a - 15*b**3*c + 6*b**2
+  B_z = 27*a**2*c**2 - 18*a*b*c + 52*a + b**3*c + 14*b**2
+  C_z = 729*a**4*c**4 - 972*a**3*b*c**3 + 2322*a**3*c**2 + 54*a**2*b**3*c**3 + 270*a**2*b**2*c**2 - 3735*a**2*b*c - 338*a**2 - 36*a*b**4*c**2 + 122*a*b**3*c + 1372*a*b**2 + b**6*c**2 - 2*b**5*c - 80*b**4
+  Q_z(F(x,y,z); z) = 0 identically  [PASS]
+  lead(Q_z)=8 is constant, hence z is integral over QQ[a,b,c].
+  A_z - 12L = 9(b^2 p - 2q)  [PASS]
+  Therefore on L=0: Q_z(W)=W^2(8W+A_z).
 
 ==============================================================================
-[3] monogenic escape: x is the unique non-integral coordinate
+[3] Exact L=0 factorization in r and the escaping double shadow
 ==============================================================================
-  x-eliminant lead = L(a,b,c) = 27a^2c^2-18abc+16a+b^3c-b^2 (THM-2473,
-  nonconstant, irreducible) vs y lead 2 and z leads 2-adic units.
-  => every escaping fiber point has |x| -> infinity with y, z bounded;
-     the even escape parity of THM-2473(3) governs the whole boundary.
+  r0 = 3*a*(-9*a*c + b)/(-12*a + b**2)
+  r1 = (108*a**2*c - 48*a*b + 3*b**3)/(-24*a + 2*b**2)
+  modulo L, with q != 0: P_r=-2(r-r0)^2(r-r1)  [PASS]
+  q^2 D_r(r0)=27a^2 L, so D_r(r0)=0 on L  [PASS]
+  For a != 0, x D_r=r excludes r0 from the affine fibre:
+  the double r-root is the shadow of two x-sheets at infinity.
 
 ==============================================================================
-[4] pointwise parity rigidity (conjugation pairing; sample witness)
+[4] The finite survivor is a global rational section modulo L
 ==============================================================================
-  Lemma: real etale polynomial map, value v with FULL complex fiber
-  (#fiber = d): conjugation is a fixed-point-free-on-nonreal involution
-  of the fiber, so #real = d (mod 2).  For d even: #real EVEN at every
-  full-fiber value -- no pointwise odd witness can exist.  HYP-9030
-  test (ii) is therefore vacuous as stated; released and redirected.
-  sample fiber over (-3,7/2,-4): disc(y-cubic) = -311763603456 => 1 real
-  d = 3 odd, #real = 1 odd: congruence holds  [PASS]
+  (x_s,y_s,z_s) =
+    (2*c/(-3*b*c + 4), b - 3*c*(-12*a + b**2)/(-6*b*c + 8), -27*a - 9*b**2*(-3*b*c + 4)/8 + 9*b**2/4)
+  p q (r_s-r1)=6bL and p^2(D_r(r_s)-3q/4)=12L  [PASS]
+  global identities:
+    (3bc-4)^3(F1(x_s,y_s,z_s)-a)=4(54ac^2-27bc+28)L
+    (3bc-4)^2(F2(x_s,y_s,z_s)-b)=-36cL
+    F3(x_s,y_s,z_s)-c=0
+  Hence this is an affine fibre point at every L=0, p!=0 target.
+  On L, z_s=-A_z/8; the double W=0 roots are the two escape shadows.
 
-all checks passed
+==============================================================================
+[5] Exceptional-locus audit
+==============================================================================
+  p=0: L=q^2/(3b^2), so L=p=0 is
+    (a,b,c)=(4/(27t^2),4/(3t),t), t!=0.
+    The x-core is the nonzero constant -2c: the fibre is empty.
+  q=0: L=b^2 p^2/48, hence the L-slice splits into
+    b=0 (the z-axis, one point (c/2,0,0)) or p=0 (empty).
+    P_r is triple on both pieces; a triple coordinate root is not
+    a three-point affine fibre.
+  a=0: P_r=r^2(3b-2r), while L=b^2(bc-1).
+    Off L, r=0 is two finite points with the same y=b.
+    On bc=1, b!=0, those two sheets escape and the sole point is
+    (2/b,-b/2,9b^2/8).
+  A_z=0 on L (so Q_z=8W^3) consists of the z-axis, the omitted
+    curve, and two curves 9(bc)^2+12bc-28=0 (b p != 0).
+    On the last two curves one finite point has z_s=0 and the other
+    two W=0 roots are escape shadows: again, not three fibre points.
+  generic control (2/27,1,1):
+    survivor (2,5/6,-7/8);
+    P_r=-2(r-2/3)^2(r-1/6), Q_z=W^2(8W+7).  [PASS]
+  c=0 boundary control: a=b^2/16 gives (0,b,-63b^2/16). [PASS]
+
+==============================================================================
+[6] Why the double (r,z) root is at infinity
+==============================================================================
+  The x-core is E=Lx^3+px-2c.  At generic L=0,p!=0 two roots
+  satisfy x ~ +/-sqrt(-p/L), whereas y stays bounded by P_r.
+  From F3=c, z=2/x^2-3y/x-c/x^3 -> 0.
+  Thus (r,z)->(r0,0) records two compactified sheets, not two
+  finite affine points.  Only (r1,-A_z/8) is the survivor.
+
+==============================================================================
+[7] Pointwise parity rigidity (logical consequence, unchanged)
+==============================================================================
+  For a real etale polynomial map, conjugation pairs every nonreal
+  point of a full complex fibre.  Hence #real = complex degree (mod 2).
+  An even-degree wild map cannot have an odd-real-count FULL fibre;
+  HYP-9030 test (ii) remains released as stated.
+
+all exact checks passed
