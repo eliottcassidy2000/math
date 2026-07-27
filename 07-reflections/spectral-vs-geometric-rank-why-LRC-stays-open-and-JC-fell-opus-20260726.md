@@ -39,6 +39,16 @@ motif**, and it genuinely needs **3 branches ⟹ geometric rank 3**. It provably
 (boxeph-S144 (B)), so **JC₂ (the floor) survives** while JC₃ fell: exactly "the nullcone collapses once
 the rank is high enough to hold a collision," with the floor rescued because rank-3 can't fit in dim 2.
 
+**A SECOND geometric example confirms the pattern: GMC. ✓ verified this session.** GMC (Gaussian
+moment, Derksen–van den Essen–Zhao) is *proved* at `n=1`, open at `n=2/3`, and **false at `n=4`**
+(THM-1480). I re-verified the rank-4 counterexample `P=(1+W)(W̄−|Z|²)`, `Q=W`: `E[P^m]=0` and
+`E[WP^m]=m!` for `m=1..7` (`gmc4_verify_opus`, via the Wick rules `E[W^a W̄^b]=a!δ_{ab}`,
+`E[|Z|^{2k}]=k!`). And the **descent to `n=3` is structurally blocked** exactly as the frame predicts:
+replacing `|Z|²` by a real square `X²` sends `k! ↦ (2k−1)!!`, and the collapsing sum becomes
+`0,1,0,9,0,225` — it does **not** vanish, so the collision cannot descend and the floor (`n≤3`)
+survives. So **both geometric threads collapse at a finite rank where a collision fits (JC at 3, GMC
+at 4) with a structurally-blocked descent to a surviving floor** — two verified instances of one law.
+
 **LRC = SPECTRAL rank (stays rigid; the collision is Diophantine).** CURRENT-FRONTIER.md's rank-11
 residual is literally mod `91 = 7·13` (relations of height `91^6`, the Kelvin cone `(1/91)R⁻¹Kᵒ`), and
 kps-S131b's crux object is a **mixed unit character mod 91, nontrivial on both `F_7` and `F_13`** — a
