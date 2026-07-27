@@ -1,0 +1,28 @@
+[PASS] D3 is the z^3 coefficient of the point-cap Jacobian
+[PASS] D3=-B1^4*Jac(f/B1^2,B2/B1) on B1!=0
+[PASS] rank-two normal form has D3=aa*x+bb*y+2*cc
+[PASS] rank-two D3 vanishes only for f=0
+[PASS] rank-one law D3=delta*(v*f_x-u*f_y)
+[PASS] every affine f=m*ell+n satisfies the rank-one varying-direction law
+[PASS] Sym^2 basis determinant is delta^3
+[PASS] target quadratic shear has the displayed polynomial inverse
+[PASS] target shear changes the z^2 coefficient by f-Q(B1,B2)
+[PASS] normalized (1,x,a) z-affine determinant identity
+[PASS] normalized top coefficient forces a_y=0
+[PASS] integrated normalized determinant is -h_y*(a''*h+b')
+[PASS] normalized varying-direction family has determinant -d*gamma
+[PASS] normalized varying-direction family has the displayed polynomial inverse
+[PASS] rank-zero constant-direction determinant is the planar response pencil
+[PASS] rank-zero nonconstant-cap family has determinant d*r
+[PASS] rank-zero nonconstant-cap family has the displayed polynomial inverse
+[PASS] constant-cap suspension control is Keller
+[PASS] constant-cap target shears recover the planar suspension
+[PASS] rank-one scale determinant coefficient ledger
+[PASS] f_y!=0 scale PDE conjugates to positive Euler weights (1,2)
+[PASS] f_y=0 scale ledger factors through C2'(x)
+[PASS] rank-one scale equations integrate to the x-divisibility obstruction
+[PASS] constant-direction survivor (z,y,x+y*z^2) is Keller
+[PASS] survivor has point-cap A=(0,0,y) and constant b=(1,0)
+[PASS] no homogeneous quadratic Q(B1,B2) equals the survivor coefficient y
+[PASS] constant-direction survivor is degree one, with explicit inverse
+FAILED CHECKS: NONE

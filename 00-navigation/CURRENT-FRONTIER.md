@@ -383,6 +383,7 @@ Classify profiles under support operations; study analytic continuation and auto
   `S_(F o F)=V(LH)` with `L,H` distinct irreducibles.  Composite
   discriminant parity is exact on three slices (`H` odd, `L` even) but remains
   outside global canon; all higher component counts remain open.
+  For G1, THM-2598/MISTAKE-296 correct the live list to `D4,A4,S4`; a `D4` survivor needs an antipodal unramified missing/included divisor pair. THM-2465 now classifies the whole affine point-cap face: every map is an automorphism or exactly a suspended planar Keller pair, while the rank-one scale-varying face is empty. Thus point-cap degree four is precisely planar degree four; general `z`-affine and other strata remain. G1 is open.
   At degree eighteen, THM-2314/2316 close sparse supports,
   THM-2371/2376 close `H_2`, and audited THM-2406 forces THM-2389's `H_4`
   pole system onto the closed common-root wall. The inherited nonsplit

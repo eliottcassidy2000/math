@@ -1,0 +1,50 @@
+THM-2598 QUARTIC V4 RESOLVENT AUDIT
+[PASS] general integral resolvent has identical discriminant
+[PASS] resolvent depression is Z^3-I Z/3-J/27
+[PASS] universal cusp identity 27 Disc=4I^3-J^2
+[PASS] resolvent roots are the three complementary pair products
+[PASS] pairing difference factors into two quartic differences
+[PASS] homogeneous squared-pairing resolvent has quartic discriminant
+[PASS] leading drop is U(U+p)^2
+[PASS] exact leading-factor discriminant expansion
+[PASS] f+ and f- have the same squared-pairing resolvent
+[PASS] f+ root factorization
+[PASS] f- is the marked reversal f+(-T)
+[PASS] sign triple has fixed squares and product -q
+[PASS] sign triple has fixed squares and product -q
+[PASS] sign triple has fixed squares and product -q
+[PASS] sign triple has fixed squares and product -q
+[PASS] four reconstruction sections are exactly the V4 relabellings
+[PASS] first biquadratic quotient algebra is split
+[PASS] second biquadratic quotient algebra is split
+[PASS] transitive branch C4: image/orbits/stabilizer/deck
+[PASS] transitive branch V4: image/orbits/stabilizer/deck
+[PASS] transitive branch D4: image/orbits/stabilizer/deck
+[PASS] transitive branch A4: image/orbits/stabilizer/deck
+[PASS] transitive branch S4: image/orbits/stabilizer/deck
+[PASS] all 30 S4 subgroups give exactly five transitive conjugacy types
+[PASS] matching kernel is exactly V4 and every S3 label has four lifts
+[PASS] D4 generic deck C2 needs polynomial extension
+[PASS] D4 matching quadratic is not the root-field quadratic intermediate
+[PASS] D4 rational matching is the canonical square's antipodal matching
+[PASS] D4 generic deck C2 is the central antipodal half-turn
+[PASS] A4 quartic and matching fields are incomparable
+[PASS] S4 quartic and matching fields are incomparable
+[PASS] inertia ledger identity: (d4,d3,index tax)
+[PASS] inertia ledger transposition: (d4,d3,index tax)
+[PASS] inertia ledger double_transposition: (d4,d3,index tax)
+[PASS] inertia ledger three_cycle: (d4,d3,index tax)
+[PASS] inertia ledger four_cycle: (d4,d3,index tax)
+[PASS] double-transposition family quartic discriminant
+[PASS] double-transposition family resolvent discriminant
+[PASS] t=0 resolvent is one simple plus one double root
+[PASS] normalized double-transposition chart has separable residual quadratic
+[PASS] S4 witness has Frobenius type 4 mod 2
+[PASS] S4 witness has Frobenius type 1+3 mod 3
+[PASS] four-cycle control resolvent
+[PASS] four-cycle control discriminant
+[PASS] three-cycle control discriminant
+[PASS] three-cycle resolvent discriminant
+[PASS] finite cusp control has common discriminant
+[PASS] finite cusp equation
+FAILED CHECKS: NONE

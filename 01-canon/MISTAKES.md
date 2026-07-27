@@ -9,6 +9,45 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-296 (2026-07-27, THM-1375 / degree-four Keller monodromy) -- a generic deck involution was treated as a polynomial automorphism of affine space
+
+- **What was claimed:** THM-1375 §1 promoted a “Smith selection rule” to an
+  unconditional Keller theorem: the monodromy point stabilizer `H` must be
+  self-normalizing.  Since a transitive `D4 <= S4` has
+  `N_D4(H)/H = C2`, the theorem deleted `D4` and left only `A4,S4` at
+  degree four.  THM-2465 inherited that list and stated that every degree-four
+  branch had no proper intermediate field.
+- **First failed implication:** `N_G(H)/H` acts by deck transformations of the
+  generic finite-etale cover over the complement of the Jelonek set.  A deck
+  transformation there need not extend across the missing divisor to a
+  polynomial automorphism of affine space.  THM-1365's fixed-point argument
+  explicitly assumes such a **polynomial deck group**; its general
+  “Deck-Poverty” / self-normalizing statement is labelled a conjecture.
+  Smith fixed-point theory on affine space cannot be applied before the
+  extension is proved.
+- **Minimal structural witness:** in the `D4` action on four points,
+  `|H|=2`, `|N_D4(H)/H|=2`, and the matching resolvent has orbit type
+  `1+2`.  Thus there is a generic deck involution and a quadratic
+  intermediate layer, but neither supplies a polynomial involution of the
+  source.  Moreover the matching quadratic `L^(G intersect V4)` is distinct
+  from the root-field intermediate `L^N_G(H)`; conflating those auxiliary
+  correspondences would be a second lost-origin error.  This is precisely
+  the branch the invalid implication erased.
+- **Strongest survivor / repair:** THM-1365's polynomial-deck theorem is
+  unchanged.  The cited Campbell Galois criterion still excludes the regular
+  groups `C4,V4`; the currently proved live non-Galois degree-four list is
+  `D4,A4,S4`.  THM-1375's degree-three Campbell/discriminant result and its
+  tournament reading are unaffected.  THM-2598 proves the complete
+  `S4 -> S3` matching quotient, inertia/index loss table, and typed transfer
+  boundary; THM-1375 and THM-2465 now carry explicit correction banners and
+  branch-conditional statements.  The repaired extension question is exact:
+  the generic involution extends over the finite Zariski-main normalization,
+  and is polynomial precisely when it preserves the open affine source.
+  Since normalization ramification is invariant and codimension-two map
+  defects extend on the normal affine source, any surviving `D4` map needs
+  an unramified missing boundary divisor exchanged with an included divisor
+  over the same target component.
+
 ## MISTAKE-295 (2026-07-28, THM-2594 hostile control) -- constant-column erasure was mislabeled as fixed-root slaving
 
 - **What was claimed:** because replacing every deep column by the same
