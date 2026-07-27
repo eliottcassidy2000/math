@@ -1,0 +1,14 @@
+THM-2517 anchored cubic spectrum exact companion: PASS
+integer_FLT3_controls=7500; rational_denominator_controls=6734
+single_target_cube_rectangles=60000; all_six_nonowner_sources=nonzero
+least_universal_single_power=3; degree1=replica; degree2=3-4-5
+Pythagorean_square_zero_controls=78; first_rectangle_sign=negative
+signed_cube_hostile=(anchor,owner,replica)=(1,0,-1); nonnegativity=sharp
+triple_arc_BV_controls=58; delayed_table_entries=182; nonzero_interaction_delays=2
+cube_mixed_modes=72; primitive_cut_modes=5184; raw_cut_floor=294
+weighted_deep_lift=A^2*H; delayed_lift=three_epoch_Boolean_stalk
+one_hot_distinct_edges=42_zero; marked_star_raw_Fourier=-1/7
+Latin_owner_scheduler=7x7; disjoint_cells=7; minimal_invariant_phase_sets=1
+future_phase_means_zero_or_norm=63,1; full_norm_gate_mean=1/7^6; owner_clock_torsor=7
+Lean kernel=TournamentH7.LRCAnchoredCube; Mathlib FLT(3)
+ALL EXACT CHECKS PASSED

@@ -1,5 +1,23 @@
 # Script Results Index
 
+- `lrc14_anchored_cubic_spectrum_thm2517.py` -> matching `.out`, with Lean
+  kernel `TournamentH7/LRCAnchoredCube.lean` [THM-2517 PROVED +
+  VERIFIED-EXACT + LEAN-VERIFIED ARITHMETIC KERNEL + INDEPENDENTLY AUDITED].
+  The entrywise cube of every nonnegative rational positive-delta anchored
+  table with nonflat owner row has all `72` mixed and `5,184` cut modes; one
+  target column gives six nonzero cubic rectangles by Mathlib's FLT(3).
+  Degrees one/two fail sharply on replica/Pythagorean loci.  Weighted and
+  delayed Boolean lifts retain the old deep sheet.  A zero-or-norm dichotomy
+  for the seven lawful future handoff phases yields either a null-row
+  rectangle or one source-neutral Boolean gate built from the cyclic
+  `K_(7,7)` scheduler; every cell contains the actual phase-zero owner once.
+  The full-support gate's epoch remains a `C_7` torsor; the zero branch has a
+  fixed owner clock, but neither branch yet has the required owner loop.  The
+  companion checks `7,500` integer, `6,734` rational-height, `60,000` local,
+  `58` triple-BV, `182` delayed-table, `78` Pythagorean, and all `64`
+  zero-or-norm profiles, plus exact gauge/minimality hostiles.  Hashes are
+  `c9949791...b5d7` / `ceab24ad...2826` / `904c8e31...fec0`
+  (script/output/Lean).
 - `lrc14_k14_degree_reconstruction_thm2514_referee.cpp` -> matching `.out`
   [THM-2514 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The
   critical `13 x 7` affine-cut chart is `E(K_14)`: thirteen perfect-matching

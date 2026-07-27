@@ -122,6 +122,8 @@
     · TournamentH7.LRCHardOrbitCurrentJoin — HYP-3479 finite ledger joining
                                       hard mirror-orbit debt to
                                       boundary-current dispatch.
+    · TournamentH7.LRCAnchoredCube — FLT(3) kernel for the universal
+                                      anchored cubic mixed-spectrum detector.
     · TournamentH7.LRCSingletonCurrentLedger — HYP-3480 finite ledger for
                                       zero-edge singleton-current dispatch.
     · TournamentH7.LRCPrivateLabelFirewall — HYP-3490 finite ledger for
@@ -719,6 +721,7 @@ import TournamentH7.LRCCenteredTailReturnOrTerminal  -- codex-S82 / THM-1274: pr
 import TournamentH7.LRCTerminalEndpointTransferGcdTax  -- codex-S82 / THM-1283: the terminal endpoint exports a proper exterior carrier-owner seam; survivor subtraction yields exact centered-error/residue and gcd taxes, including the sharp-row exclusion. No sorry/native_decide
 import TournamentH7.LRCAPCentering  -- boxeph-S118 / THM-1171 companion: kernel-pure centered-band arithmetic for the twelve-term AP witness. Together with the elementary modular inverse/common-phase proof, closes AP-internal tight rigidity; AP extraction from an arbitrary tight twelve-set remains open. Standard axiom trio
 import TournamentH7.LRCMod23Spread
+import TournamentH7.LRCAnchoredCube  -- THM-2517: nonnegative rational anchored cubic rectangles cannot vanish by FLT(3); kernel-pure Mathlib dependency
 
 import TournamentH7.GMC2HermiteNoCommonRoot  -- kind-pasteur-S128c120..c122 / THM-1585 (domination false) + THM-1660 (orthogonality closure) + THM-1620 (Pochhammer bridge: toral=Legendre, radial=Hermite) + THM-1670 (order = D, so ThreeTerm descent is (M,N)=(1,1) only). ThreeTerm.no_common_root: any monic 3-term recurrence with b n != 0 has no common root; replaces klein-S351's false Gamma-domination. Hermite/truncated-exp instances. No sorry/native_decide
 import TournamentH7.GMC2MomentBasics
