@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `lrc14_fixed_head_affine_paired_path_referee.py` -> matching `.out`
+  [PROVED LEMMA CANDIDATE + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED; not yet canon].  For a canonical
+  target `k`, blocker `13b`, inverse root `r`, and shift `q`, retain the
+  affine phase `v=kr+q`.  Exact tooth/gap inequalities reduce every null
+  paired cell to 2,704 cases, whose two-route census has only 28 bad
+  `(v,q)` pairs, all at `b=1` and `15<=k<=23`; every bad phase domain has
+  size at most four.  Hence at least nine fixed phases support every root
+  simultaneously, giving coherent positive cylinder support for every
+  finite root word.  The connection
+  `tau_Delta(r,q)=(r+Delta,q-kDelta)` realizes the algebraic correction
+  `q_j=q_0-j alpha` when `Delta=k^(-1)alpha`, but does not identify the
+  physical labels with the THM-2542 chart clock or produce an endpoint
+  current.  Hashes are `29be125d...2a02` / `3ae8a955...7cf1`.
 - `lrc14_unshifted_root_accessibility_thm2604.py` -> matching `.out`
   [THM-2604 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   Unshifted danger reaches all thirteen physical root cells exactly from

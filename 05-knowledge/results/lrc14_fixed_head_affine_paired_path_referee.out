@@ -1,0 +1,25 @@
+== fixed-head affine paired-path referee ==
+small-threshold max-component floors (guard): {10: '3/35', 11: '6/77', 12: '13/84'}
+small-threshold max-component floors (ordinary): {12: '13/168', 14: '13/98'}
+analytic reduction: guard -> b=1,k=10..12; ordinary -> b=1,k in {12,14,15..25} PASS
+two-route reduced census: 2704 exact (L,k,b,v,q) cells PASS
+complete bad graph: 28 pairs on 9 speed rows
+  k=15: 5->7, 6->6
+  k=16: 2->9, 3->8, 7->5, 8->4
+  k=17: 1->9, 4->7, 5->6, 8->4
+  k=18: 2->8, 3->7, 5->6, 6->5
+  k=19: 1->8, 3->7, 4->6, 6->5
+  k=20: 1->8, 2->7, 4->6, 5->5
+  k=21: 2->7, 3->6
+  k=22: 1->7, 3->6
+  k=23: 1->7, 2->6
+extended interval control: 1774500 cells, no extra bad pair PASS
+eight-stop affine good-start histogram: {9: 86, 10: 268, 11: 584, 12: 372, 13: 94}
+sharp minimum: 9 good starts
+  control (k,r0,delta)=(16,0,8): q0=[0,1,4,5,6,9,10,11,12]
+  number of minimum rows: 86
+all finite paths: at least 13-max_v_domain=9 starts, because phases outside the bad graph domain have no bad blocker label
+sign audit: r_j=r_0-j*delta, q_j=v-k*r_j=q_0+k*j*delta PASS
+twisted-return specialization: delta=-k^(-1)*alpha gives q_j=q_0-j*alpha PASS
+SCOPE: physical paired-cell positivity and ordered root/shift paths;
+no THM-2542 chart-clock identification, relation residue, endpoint current, row exclusion, or LRC(14).
