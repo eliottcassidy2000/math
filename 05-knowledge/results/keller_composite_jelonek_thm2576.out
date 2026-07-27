@@ -1,0 +1,33 @@
+==============================================================================
+[1] Inverse conic pair and its degree-one subresultant
+==============================================================================
+  Sres_1(C1,C2;s)=D(X)s+N(X).  [PASS]
+  Res_s(C1,C2)=a X^3[L X^3+(4-3bc)X-2c].  [PASS]
+  Thus generically s=-N/D on the inverse X-sheet.
+
+==============================================================================
+[2] Pull the source Jelonek equation into the inverse X-sheet
+==============================================================================
+  X^6 L_source=P(X,s), with deg_s(P)=4 and 10 terms.  [PASS]
+  Q(X)=D^4 P(X,-N/D) has X-degree 15 and 398 terms.  [PASS]
+
+==============================================================================
+[3] Saturated resultant and the irreducible image divisor H
+==============================================================================
+  Res_X(E,Q)=-a^8 c^18 S^8 H.  [PASS]
+  a, c, S are inverse-chart artifacts, removed before geometry.
+  H is primitive and irreducible over QQ; gcd(H,L)=1.  [PASS]
+  multidegree(H)=(14,21,12), total degree=25, terms=361.
+  H coefficient-ledger SHA-256:
+    b146c11f33e895c08f72303d282e2668d955e0a58d9268a1b445d4d5202016c2
+
+==============================================================================
+[4] Independent normalized-image controls
+==============================================================================
+  H(F(nu(tau,lambda)))=0 on 25 exact hostile samples.  [PASS]
+  (tau,lambda)=(1,1) lies in the honest X*u*a*c*S*D chart.  [PASS]
+  rank d(F o nu)=2 at (tau,lambda)=(1,0); minor=4/3.  [PASS]
+  image hostile (1,0,0): H=0 but L=16, so H != L.  [PASS]
+  off-image control (-2, -2, -2): H=-5581814659976851456 !=0.  [PASS]
+
+ALL EXACT THM-2576 COMPOSITE JELONEK CHECKS PASSED

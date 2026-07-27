@@ -370,8 +370,11 @@ Classify profiles under support operations; study analytic continuation and auto
   on `a!=0`.  THM-2570 then normalizes the whole Jelonek surface by an affine
   plane: on `c!=0` it is literally a cusp cylinder, and its exact conductor,
   reduced singular locus, and omitted-fibre support are the same curve `E`;
-  the `c=0` boundary is smooth.  At degree eighteen, THM-2314/2316 close
-  sparse supports,
+  the `c=0` boundary is smooth.  THM-2576 proves the general set-level
+  nonproperness composition law and computes the square's second component:
+  `S_(F o F)=V(LH)` with `L,H` distinct irreducibles.  Composite
+  discriminant multiplicities and all higher component counts remain open.
+  At degree eighteen, THM-2314/2316 close sparse supports,
   THM-2371/2376 close `H_2`, and audited THM-2406 forces THM-2389's `H_4`
   pole system onto the closed common-root wall. The inherited nonsplit
   exact-square-prefix reduced degree-eighteen branch is closed; `JC(2)`,

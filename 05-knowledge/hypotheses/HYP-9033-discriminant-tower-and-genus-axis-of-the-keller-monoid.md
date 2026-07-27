@@ -4,10 +4,11 @@ title: "The discriminant tower: Jelonek divisors as classification data for the 
 status: >
   OPEN synthesis with a PROVED fixed-map core: the corrected saturated
   cuspidal law 27 c^2 L = S^2 - T^3 (MISTAKE-287) and THM-2570's global
-  normalization/conductor theorem.  It retains several VERIFIED inputs
-  (THM-2473/2546 and referee), five falsifiable predictions (P1-P2 under
-  computation in flight), and a typed dictionary entry for HYP-9031.
-  Nothing here is a JC(2) or classification claim.
+  normalization/conductor theorem.  THM-2576 proves the set-level composition
+  law and the two irreducible components of S_(F o F); its discriminant
+  multiplicities remain open.  The synthesis retains several VERIFIED inputs,
+  four wider predictions, and a typed dictionary entry for HYP-9031.  Nothing
+  here is a JC(2) or classification claim.
 source: opus-2026-07-28 (from the uniform disc law found by the
   THM-2546 referee run: disc = -4 (square)^2 L for all three
   coordinate cubics of the sporadic Keller map)
@@ -19,6 +20,7 @@ related:
   - THM-2465 (W1/W2 members; the -(det J)^2 law test target)
   - THM-2566 (two-chart saturated cusp atlas and parasitic-plane ledger)
   - THM-2570 (global normalization, conductor, and cusp-cylinder structure)
+  - THM-2576 (image divisor and two-component nonproperness law for F o F)
 ---
 
 # HYP-9033 -- the discriminant tower and the genus axis
@@ -69,16 +71,30 @@ Chebyshev point. The uniform coordinate law (THM-2546 + referee):
 `-4 = -(det J)^2` and integral-coordinate leads `{2, 8} = {|det J|,
 |det J|^3}` -- the whole eliminant package is `det J`-graded.
 
-## 2. The discriminant tower [prediction P1, computation in flight]
+## 2. The discriminant tower [set law and grade two PROVED; multiplicities OPEN]
 
-For a composite `G = F_out o F_in`: `S_G = S_(F_out) u F_out(S_(F_in))`.
-Prediction: the odd part of `disc` of `G`'s escape-coordinate eliminant
-factors as the product of the tower's Jelonek factors
-(`L * L_2` for `F o F`, with `L_2` cutting `F(Z(L))`), each to odd
-multiplicity, times projection-collision squares; and the composite's
-integral-coordinate leads are powers of `det J_G = 4`. **The monoid
-grading of HYP-9030 is mirrored by a divisor tower: each composition
-appends one Jelonek factor.**
+THM-2576 proves for dominant polynomial maps, directly from escape sequences,
+
+```text
+S_(F_out o F_in)=S_(F_out) union F_out(S_(F_in)).
+```
+
+For the fixed sporadic map it computes the irreducible degree-25 polynomial
+`H` cutting `closure(F(V(L)))` and proves
+
+```text
+S_(F o F)=V(LH),
+```
+
+with exactly the two distinct irreducible components `V(L)` and `V(H)`.
+The raw inverse-coordinate resultant is `-a^8 c^18 S^8 H`; the first three
+factors are chart artifacts and say nothing about composite multiplicity.
+
+The remaining P1 prediction is that the odd part of the composite
+escape-coordinate discriminant is `L*H` times a square, and that its integral
+coordinate leads are powers of `det J_(F o F)=4`.  At higher grades the exact
+set law gives the image tower, but distinctness and irreducibility of its
+successive closures remain open.
 
 ## 3. Two crevasse invariants for atomhood
 
@@ -137,8 +153,8 @@ place to HUNT for a JC(2) counterexample instead.
 
 ## 5. Predictions ledger
 
-- P1 (in flight): `S_(F o F) = Z(L) u Z(L_2)` and the disc odd part is
-  `L * L_2` on slices.
+- P1 (set part proved at grade two): `S_(F o F)=V(LH)` with two irreducible
+  components (THM-2576).  The disc odd part `L*H` times a square remains open.
 - P2 (in flight): W1 obeys `disc = -(det J)^2 (square)^2 L_W1` with
   `L_W1 = L o T1^(-1)`; leads `{|det J|, |det J|^3}` after suitable
   normalization; W2 likewise in its own normal form if explicit.
@@ -173,8 +189,9 @@ with L_3 the norm-transfer of L_2?).
 ## Loss ledger
 
 The saturated cuspidal law is proved for the sporadic `F` only; the raw
-pullback has the extra affine plane `c=0` described in (C).  The tower and
-`-(det J)^2` laws are predictions under test; "generic component
-count" needs a precise genericity notion before any classification
-claim; none of this closes JC(2), classifies the monoid, or excludes
-G1 -- it supplies invariants and a hunting map.
+pullback has the extra affine plane `c=0` described in (C).  The set-level
+composition law is general and the two grade-two components are proved, but
+the discriminant multiplicities, `-(det J)^2` law, and higher component count
+remain predictions.  "Generic component count" needs a precise genericity
+notion before any classification claim; none of this closes JC(2), classifies
+the monoid, or excludes G1 -- it supplies invariants and a hunting map.

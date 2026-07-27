@@ -62,6 +62,15 @@
   isomorphism.  A rational normalized survivor section separates the empty
   `theta=0`, doubled `theta=2`, and simple `theta=-1` strata.  Hashes are
   `be7374e1...e8d` / `7e71c67c...e82`.
+- `keller_composite_jelonek_thm2576.py` -> matching `.out`
+  [THM-2576 PROVED + VERIFIED-EXACT].  The inverse conic subresultant reduces
+  `F(V(L))` to `Res_X(E,Q)=-a^8c^18S^8H`; saturation removes the three chart
+  artifacts.  The residual `H` is irreducible, has multidegree `(14,21,12)`,
+  total degree `25`, and `361` terms; the normalized image has rank two and
+  closure `V(H)`.  The general escape-sequence composition law then gives
+  `S_(F o F)=V(LH)`, exactly two irreducible components.  Discriminant
+  multiplicities remain open.  Hashes are `8de7ebee...727` /
+  `b12cd9a7...577`.
 - `keller_two_cusp_atlas_thm2566.py` -> matching `.out`
   [THM-2566 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; MISTAKE-287].
   The two polynomial maps
