@@ -1,0 +1,12 @@
+THM-2570 deep-augmentation Parseval energy
+ternary profiles 531440, equality profiles 2
+Boolean profiles with all 12 anchors 4095
+diagonal-free singleton controls 2028
+sharp hostile mass 1872
+sharp anchor energy 1728/28561
+duty classes 229692^24, 440232^12, 440244^132
+global duty-energy factor 14587701710688/4826809
+THM-2563 guard anchor floor 1323/19307236 rho_0^2
+THM-2563 ordinary anchor floor 2187/19307236 rho_0^2
+single-colour infimum triangle gaps (4, 4, 5)
+explicit checks 1647551

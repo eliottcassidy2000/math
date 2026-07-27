@@ -2,8 +2,8 @@
 id: THM-2564
 title: "Six-tooth doubly centered tomography and the section-holonomy boundary"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED after the
-  section-shear repair.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED (two post-repair
+  passes).
   On the rational doubly centered C_7-by-F_13 interaction space, the
   toothpush maps in any prescribed six nonzero slopes form an isomorphism
   onto six zero-sum root profiles. Every nonzero interaction survives in at
@@ -34,8 +34,8 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2564 -- six teeth reconstruct the signed interaction
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED after the
-section-shear repair.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED (two
+post-repair passes).**
 
 THM-2507 proves truncated Radon tomography on a row-zero strip, modulo a
 vertical kernel.  THM-2557 places the live typed interaction in the smaller
@@ -450,16 +450,17 @@ trace hostiles and all their good root colours, checks all `169` ambient
 ordered-set shear identities, exhibits their second-margin hostile, and
 verifies the nonconstant seam carry.
 
-An immutable post-repair hostile audit accepted the theorem.  It independently
-rederived the general Fourier/Vandermonde rank, determinant and Smith invoice,
-literal trace hostile, rational Galois saturation, and the signed six-replica
-no-go.  It specifically checked the repaired section typing:
+Two immutable post-repair hostile audits accepted the theorem.  Both
+independently rederived the general Fourier/Vandermonde rank, determinant and
+Smith invoice, literal trace hostile, rational Galois saturation, and the
+signed six-replica no-go.  Both specifically checked the repaired section typing:
 the shears satisfy the ambient identity (26) but generally leave `V_00`, the
 rectangle in (26a) has exactly the displayed nonzero margin, actual six-bank
 changes are the abstract maps (26b), and cyclic row rotation retains the
 nonconstant seam term `-7 tau q_c(k)`.  Normal, optimized, and stored output
 agree byte-for-byte after LF normalization, with `388,421` explicit checks;
-the audit reproduced the frontmatter hashes.
+both audits reproduced the frontmatter hashes.  The second also exhausted all
+banks for the independent small-prime controls `p=3,5,7`.
 
 The theorem reconstructs the whole rational interaction, determines its
 integral index, and identifies the exact chart holonomy.  It does not make a
