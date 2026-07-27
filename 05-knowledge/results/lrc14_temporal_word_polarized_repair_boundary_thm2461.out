@@ -1,0 +1,22 @@
+THM2461 TEMPORAL-WORD / POLARIZED-REPAIR REFEREE
+hostile_speeds=(1, 4, 2, 3, 6, 10, 13, 2197, 742586)
+hostile_profile=(1, 3, 5)
+source_distance_vectors=((862, 996, 498, 364, 728, 268, 96, 670, 184), (863, 992, 496, 367, 734, 258, 109, 645, 254), (865, 984, 492, 373, 746, 238, 135, 595, 1092))
+terminal_residues=(1248, 1417, 1755)
+terminal_distance_vectors=((974, 548, 274, 700, 822, 852, 670, 92, 12), (805, 998, 612, 193, 386, 838, 645, 127, 708), (467, 354, 934, 821, 580, 226, 595, 565, 122))
+complete_source_mask=(0, 0, 0, 0, 0, 1, 0)
+common_base13_address=(5, 0)
+terminal_words=(('c2', 'c3'), ('c2',), ('c3',))
+strict_margins=(Fraction(177, 15554), Fraction(111, 7777), Fraction(83, 7777))
+deep_probe_root_sets=((11, 12), (1, 2), (6, 7))
+local_not_global_cover=159/1111:(318, 950, 636, 954, 314, 958, 310, 938, 702)
+translated_cell_counts={1: 28, 2: 28}
+minimum_offdiagonal_safe_counts={1: 11, 2: 9}
+finite_temporal_idempotence_survivors=2
+temporal_coupling=mass:1,row_support:3,largest_word:1/3
+target_active_units=('k_a', 'k_b')
+five_first_failure_roles=('k_a', 'u_0', 'u_1', 'u_2', 'u_3')
+target_active_first_failures=('k_a',)
+repair_pullback=covectors:168,line_modes:13
+fraction_only_truth_checks=PASS
+ALL_CHECKS_PASSED
