@@ -1,0 +1,26 @@
+== paired translated-tooth capacities ==
+  ordinary paired safe capacity: 9
+  guard paired safe capacity: 7
+  at-most-one-guard product floor: 63 (ordinary/ordinary: 81)
+  full 13^3 coefficient floors: 7/35152 or 9/35152
+  marginalized coefficient floors: 7/2704 or 9/2704
+
+== double-zero finite-character corner ==
+  admissible delta-basis cells: 1728
+  nontrivial control total/corner numerator: 10371
+  sum_(A,B!=0) Rhat(A,B,0) = total/13^3 exactly
+
+== missing-left-residue hostile ==
+  K(s)=1_(s!=0) has nonzero one-sided characters
+  assigning equal left/right residues makes every target difference zero
+
+== THM-2561 exact physical interval control ==
+  old-head mass: 6/2599051
+  strict walls / open chambers: 22 / 23
+  positive table cells: 1330
+  minimum (deep,s-pair,t-pair) capacities: (1, 10, 10)
+  total table mass: 2110/4826809 = (7385/39) rho
+  largest cell: 1/2599051 = (1/6) rho
+  r=0 plane, s=0 plane, and r=t diagonal are exactly zero
+
+all exact checks passed
