@@ -309,12 +309,40 @@ Three losses are sharp.
    Multiplying the two densities in (17) is a two-point cospan observable,
    not a one-point Boolean current.
 
+The exact obstruction behind the last point is elementary.  Translation by
+`t` preserves the phase bank
+
+```text
+{d(cx-r/p):r in C_p}                                         (26)
+```
+
+as a label permutation if and only if
+
+```text
+pct in Z.                                                     (27)
+```
+
+For reduced `t=k/13^L`, condition (27) is
+
+```text
+p=7:        L<=nu_13(c),
+p=13:       L<=nu_13(c)+1.                                   (28)
+```
+
+In particular, a retained septimal factor with `13`-unit speed admits no
+nontrivial bank-lawful base-`13` shift.  A delayed word `Q(13^K x)` is
+literally unchanged only when `L<=K`.  The continuity argument supplies
+arbitrarily fine nonzero shifts, but it does not force a witness on either
+bounded lawful grid in (28).  This is the cheapest precise transport test,
+not a hidden consequence of rationality.
+
 The theorem therefore disintegrates pair space into a finite
 translation-marked local system and restores the full primitive cut spectrum
 on one fibre.  An independent audit rederived the double-counting
 normalization, the Galois and cut-transform signs, the `5,184` count, and the
 `C_4` hostile, and checked the exact distinction between common-grid and
-base-`13` shift selection.  The next
+base-`13` shift selection together with the phase-bank criterion (27)--(28).
+The next
 physical question is whether its retained difference can be identified with
 an existing collision/ancestry edge while preserving a positive owner mark.
 It does not supply that identification, remove any of the `165` live rows,
