@@ -18,6 +18,20 @@
   zero-or-norm profiles, plus exact gauge/minimality hostiles.  Hashes are
   `c9949791...b5d7` / `ceab24ad...2826` / `904c8e31...fec0`
   (script/output/Lean).
+- `lrc14_rational_jump_crt_owner_forcing_thm2520.py` -> matching `.out`
+  [THM-2520 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  After the
+  Perron depth passes the full `13`-primary endpoint grid, one last-digit
+  ladder vanishes iff all twelve vanish iff the response is exactly
+  constant.  The equality branch is the zero locus of the endpoint jump
+  current aggregated modulo the prime-to-`13` grid.  Off that branch an
+  explicit `20/3` BV invoice makes one sufficiently delayed positive
+  owner--word factor see all twelve colours simultaneously.  The exact
+  referee checks `144` rational-grid cases, `540` direct Perron cells,
+  `1,728` CRT coverage rows, all variation contractions, and the pure-`13`
+  hostile/prime-to-`13` positive controls.  Normal/optimized/stored
+  transcripts byte-match; hashes are `059718af...acab1` /
+  `dbaab5fc...12d2`.  Mixed ANOVA drift, old-sheet rebase, orientation, and
+  live-row exclusion remain open.
 - `lrc14_k14_degree_reconstruction_thm2514_referee.cpp` -> matching `.out`
   [THM-2514 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The
   critical `13 x 7` affine-cut chart is `E(K_14)`: thirteen perfect-matching
