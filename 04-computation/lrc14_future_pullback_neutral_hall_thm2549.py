@@ -85,8 +85,8 @@ def future_translation_referee():
     return root_checks, target_checks, sheet_checks, future_action_checks
 
 
-def ancestry_digit_diagonalizer_referee():
-    diagonalizer_checks = 0
+def ancestry_digit_chart_referee():
+    ancestry_root_checks = 0
     digit_covariance_checks = 0
     base_points = (Fraction(1, 101), Fraction(17, 101), Fraction(99, 101))
 
@@ -107,7 +107,7 @@ def ancestry_digit_diagonalizer_referee():
                     recovered = inverse_weight * (top_digit - carry) % P
                     require(recovered == head,
                             "unit-role ancestry digit failed to recover head")
-                    diagonalizer_checks += 1
+                    ancestry_root_checks += 1
 
                     for theta in range(P):
                         shifted = fractional_part(y - Fraction(theta, P))
@@ -131,7 +131,7 @@ def ancestry_digit_diagonalizer_referee():
     require(len(nonunit_digits) == 1,
             "13-divisible role unexpectedly retained the predecessor root")
 
-    return diagonalizer_checks, digit_covariance_checks
+    return ancestry_root_checks, digit_covariance_checks
 
 
 def in_intervals(x, intervals):
@@ -241,7 +241,7 @@ def hall_cemetery_referee():
 
 def main():
     root, target, sheet, future = future_translation_referee()
-    diagonalizer, digit_covariance = ancestry_digit_diagonalizer_referee()
+    ancestry_root, digit_covariance = ancestry_digit_chart_referee()
     head, handoff, limit, values = exact_mixing_control()
     margins, subsets, full_subsets = hall_cemetery_referee()
 
@@ -250,7 +250,7 @@ def main():
     print(f"ancestry_sheet_transport_checks={sheet}")
     print(f"future_scale_target_action_checks={future}")
     print("level_zero_root_visible_and_target_active_control=PASS")
-    print(f"unit_role_sheet_diagonalizer_checks={diagonalizer}")
+    print(f"unit_role_old_action_ancestry_root_checks={ancestry_root}")
     print(f"top_digit_target_covariance_checks={digit_covariance}")
     print("13_divisible_role_root_erasure_control=PASS")
     print(f"mixing_head_mass={head} handoff_mass={handoff} limit={limit}")

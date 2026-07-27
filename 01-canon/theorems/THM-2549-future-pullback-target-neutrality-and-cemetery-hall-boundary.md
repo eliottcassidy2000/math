@@ -14,11 +14,12 @@ status: >
   The resulting proved-field Hall table is cemetery-only, satisfies every
   Hall inequality, and has zero diagonal.  This is not the physical arrival
   table: an as-yet-unconstructed target-active field outside the future
-  algebra may coexist on the same atoms.  Conditionally, the top ancestry
-  digit and carry of a specified target-active unit role give an exact affine
-  diagonalizer, so its Hall cut collapses pointwise.  The canon has not yet
-  supplied that role on the selected packet.  No lawful scalar-cover hostile,
-  row exclusion, or LRC(14) conclusion follows.
+  algebra may coexist on the same atoms.  The top ancestry digit and carry of
+  a unit role give an exact affine old-action ancestry-root chart.  Its Hall
+  cut collapses only under the additional semantic hypothesis that the later
+  root map is this chart, or is connected to it by a proved intertwiner.  The
+  canon has supplied neither identification on the selected packet.  No lawful
+  scalar-cover hostile, row exclusion, or LRC(14) conclusion follows.
 source: codex-2026-07-27-future-pullback-neutrality
 depends_on:
   - THM-2349-first-depth-one-delayed-shallow-restart
@@ -36,10 +37,12 @@ related:
   - THM-2543-augmentation-norm-relative-phase-local-system-dichotomy
   - THM-2548-seven-step-c91-transfer-and-full-norm-separation
   - THM-2550-canonical-typed-row-double-nondegeneracy
+  - THM-2554-translation-quotient-root-displacement-and-endpoint-swap-parity
+  - THM-2555-natural-extension-sheet-charge-and-future-digit-boundary
 script: 04-computation/lrc14_future_pullback_neutral_hall_thm2549.py
 output: 05-knowledge/results/lrc14_future_pullback_neutral_hall_thm2549.out
-script_sha256: 5786847a79b33432e0acb0b86288df1fc3983e25f763ea9ad4d7774abb4fdb4f
-output_sha256: 73bcdb9224317e93cb252c4492339579a06d180168c59adfbf48acb5029d7efe
+script_sha256: 26db7d13e5abc27a95d93a13cdbccadd7b90250eea7a0eb0b83df31882790a9c
+output_sha256: ceb5b8c4e0cfe0905f1002da91fcc05073252f44ab6d13bc6ff56d9b95cba187
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -228,7 +231,7 @@ carry target charge in either of two honest ways:
 Calling the future base “the later target” without one of these sidecars
 forgets exactly the coordinate on which the charge acts.
 
-### The unit-role sheet diagonalizer
+### The unit-role old-action ancestry chart
 
 For a specified unit role, retaining the sheet does more than restore some
 target variation: it gives an exact common-root chart.  Let `w in Z` with
@@ -245,42 +248,59 @@ The top sheet digit is target-covariant:
 d_L({y-theta/13})=d_L(y)-theta                 mod 13.       (15b)
 ```
 
-Now use the selected-head predecessor chart `x=(z+h)/13`.  Directly,
+Now use the selected-head predecessor chart `x=(u+h)/13`, with this `u`
+distinct from the future base `z=T^L y` in (12).  Directly,
 
 ```text
 d_L({wx})
- =w h+floor(wz)                                  mod 13.    (15c)
+ =w h+floor(wu)                                  mod 13.    (15c)
 ```
 
 Indeed, reducing `floor(13{wx})` modulo thirteen removes the multiple of
 thirteen introduced by the outer fractional part, while
-`floor(w(z+h))=wh+floor(wz)`.  Therefore the carry-corrected sheet root
+`floor(w(u+h))=wh+floor(wu)`.  Therefore the carry-corrected sheet root
 
 ```text
-b_w(z,x)
- =w^(-1)(d_L({wx})-floor(wz))                    mod 13     (15d)
+b_w(u,x)
+ =w^(-1)(d_L({wx})-floor(wu))                    mod 13     (15d)
 ```
 
 obeys the pointwise identity
 
 ```text
-b_w(z,x)=h.                                                  (15e)
+b_w(u,x)=h.                                                  (15e)
 ```
 
-This is the exact sidecar which the future-base quotient discards.  If a
-**genuinely later, semantically target-active unit role `w`** is placed on
-the selected-head common base and its depth-`L` sheet plus the carry
-`floor(wz)` are retained, then (15d) is an equivariant later-root chart and
-its THM-2545 compatibility graph is diagonal.  Every positive atom of that
-role is already a same-root hit; the second Hall cut collapses.
+Under the old action `y->y-theta/13`, the selected-head variables `u,h` are
+held fixed and (15b) gives the typed covariance
+
+```text
+b_w -> b_w-w^(-1)theta                         mod 13.       (15f)
+```
+
+Thus `b_w` is an exact **old-action ancestry root**.  It is the sidecar which
+the future-base quotient discards.  It is not automatically the future
+immediate root `floor(13T^L y)`: that coordinate lies outside the depth-`L`
+sheet and is neutral under the old action.
+
+There is nevertheless a sharp conditional Hall consequence.  Suppose a
+genuinely later, semantically target-active unit role `w` is placed on the
+selected-head common base, its depth-`L` sheet and carry `floor(wu)` are
+retained, **and** THM-2545's later root map is certified to be `b_w`, or a
+proved semantic intertwiner identifies it with `b_w` in the common root
+torsor.  Then (15e) makes the compatibility graph diagonal.  Every positive
+atom is a same-root hit and the second Hall cut collapses.  Merely placing an
+active unit role later does not establish that identification.
 
 Four qualifications are sharp.  The future base without `a_L` is neutral by
-(5).  The raw digit without `floor(wz)` is misaligned by a base-dependent
-carry.  If `13|w`, no inverse in (15d) exists; at `w=13`, `{wx}=z` is
-independent of `h`, so the head root is completely erased.  Finally, attaching
-the digit to a neutral owner or word does not make that role semantically
-target-active.  Equation (15e) solves root alignment **after** the active role
-and common ancestry have been supplied; it does not supply either one.
+(5).  The raw digit without `floor(wu)` is misaligned by a base-dependent
+carry.  If `13|w`, no inverse in (15d) exists; at `w=13`, `{wx}=u` is
+independent of `h`, so the head root is completely erased.  Finally,
+attaching the digit to a neutral owner
+or word does not make that role semantically target-active, and attaching it
+to an active role does not identify ancestry root with future immediate root.
+Equation (15e) solves the algebraic old-sheet alignment; semantic
+cross-horizon identification remains a separate theorem.
 
 ## 4. Positive same-base chronology on every live row
 
@@ -422,7 +442,7 @@ graph, and create a diagonal.  The graph in (26) is not a claim about those
 unknown physical edges.  Therefore (24) is neither a counterexample to scalar
 cover nor evidence that THM-2537's physical `A_tar` vanishes.
 
-## 6. Inheritance audit through THM-2550
+## 6. Inheritance audit through THM-2554
 
 The claim “currently constructed” has the following exact scope.  Each row
 states what the named theorem places after the selected or charged old packet,
@@ -437,12 +457,13 @@ and which coordinate is still absent.
 | THM-2478, `THM-2478-delayed-owner-handoff-graft-and-deep-sheet-rebase-boundary.md` | Whole future handoff and delayed collision stalk | Every future leaf is neutral; rebasing exposes the essential ancestry sheet (13) |
 | THM-2522, `THM-2522-intrinsic-collision-depth-toothpick-descent-and-late-owner-decoupling.md` | Uniform first collision `L=1`, all colours, and arbitrarily late owner | Collision energy is antipodally even; late owner is a common neutral factor |
 | THM-2537, `THM-2537-cayley-wall-scalarization-and-positive-selector-intertwiner.md` | Positive selected source/head packets and late owner | Head is same-horizon empty predecessor; it does not inherit the old word or become arrival |
-| THM-2538, `THM-2538-anchored-transverse-gain-and-common-ancestry-arrival-boundary.md` | None | `RESERVED / UNPROVED EMPTY STUB`; it contributes no proved field |
+| THM-2538, `THM-2538-anchored-transverse-gain-and-common-ancestry-arrival-boundary.md` | Exact cross-Kakeya reconstruction conditional on a genuine later Boolean root field on one common ancestry base | Current live carrier still lacks positive same-ancestry support and chronological typing for that formal field |
 | THM-2539, `THM-2539-diagonal-cubic-owner-clock-boundary-current.md` | Boolean atom systems with a signed horizontal mixed current | Future factors are root-invariant; signed target characters do not form one positive semantic event |
 | THM-2540, `THM-2540-weighted-live-event-kakeya-flux-and-transverse-gain-boundary-refinement.md` | Positive spatial boundary events on all live rows | The empty head is at the same horizon, explicitly not a later arrival |
 | THM-2543, `THM-2543-augmentation-norm-relative-phase-local-system-dichotomy.md` | Branch-free labelled horizontal boundary local system | No vertical semantic/ancestry arrow and no literal phase-zero selection in the augmentation lane |
 | THM-2548, `THM-2548-seven-step-c91-transfer-and-full-norm-separation.md` | Root-charged horizontal `C_91` partial transfer and 1,296 signed cut coefficients | Transfer has vertical degree zero; its directed transition automaton is conditional and unconstructed |
 | THM-2550, `THM-2550-canonical-typed-row-double-nondegeneracy.md` | `PROVED CANDIDATE`: positive old owner-loop drift and a non-replica signed table on one canonical typed row | Not a scalar-cover row, selected-head field, categorical later root map, or ancestry/Boolean realization |
+| THM-2554, `THM-2554-translation-quotient-root-displacement-and-endpoint-swap-parity.md` | Exact translation quotient `d=b-h` and a sharp conditional swap/oddness arrival criterion | Requires a cemetery-free genuine later field, common root torsor, chronological endpoint swap, and odd primitive quotient weight; none is supplied live |
 
 THM-2517, THM-2527, and THM-2533 are intermediate future-owner/phase
 constructions in the same chain.  Their positive later factors occur through
@@ -479,6 +500,7 @@ The most economical next target is now explicit:
 ```text
 force the unique target-active unit role k_a on positive selected-head mass
   + retain its top ancestry digit and carry on that same atom
+  + identify its semantic later root with the ancestry root (15d)
   -> equation (15e) gives the Hall diagonal pointwise.                 (29)
 ```
 
@@ -486,16 +508,22 @@ Absent that direct route, the next target should be one of the following
 pieces of new structure.
 
 1. A positive common-ancestry field retaining the sheet `a` in (12)--(13),
-   together with the unit-role projection (15d), or its nonunit replacement.
+   together with the unit-role projection (15d) and a semantic intertwiner
+   to the future immediate root, or a direct proof that this is its root map.
 2. A new-scale action (14) plus a lawful intertwiner from the selected-head
    root to that future action.
 3. THM-2548's directed gain automaton built on the actual `165` packets, with
    a neutral-gain deficit forcing a target-active edge, followed either by
-   the sheet diagonalizer or by a separate THM-2545 Hall deficit.
+   the ancestry-root chart plus its semantic intertwiner, or by a separate
+   THM-2545 Hall deficit.
 
 Any of these would create information absent from `A_+`.  A further delayed
 owner, word, collision colour, Fourier mode, or horizontal transfer without
 that information will reproduce the cemetery table (24).
+
+THM-2555 is reserved for the full classification of these old-action sheet
+roots versus genuinely future digits.  Its reservation proves nothing; the
+proved input supplied here is only (15a)--(15f) and the sharp nonunit boundary.
 
 ## 8. Exact referee
 
@@ -516,7 +544,7 @@ byte-for-byte.  The dependency-free referee checks representative levels
 `1,...,7`, weights `-18,...,18`, and every old root; the old-target and
 future-scale action identities; ancestry-sheet transport; and the sharp
 depth-zero root-mask control.  It also checks `7,956` unit-role instances of
-the sheet diagonalizer, `103,428` top-digit covariance instances, and the
+the old-action ancestry-root chart, `103,428` top-digit covariance instances, and the
 sharp `13`-divisible root-erasure control.  Separately it checks an exact
 rational BV mixing example at five scales and exhausts `1,703` cemetery margin
 tables, `77,940` small Hall subsets, and `24,576` full-`F_13` Hall subsets.
