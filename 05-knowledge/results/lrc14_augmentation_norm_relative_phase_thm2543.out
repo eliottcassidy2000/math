@@ -1,0 +1,15 @@
+THM-2543 exact referee
+field=F_547 primitive_generator=2 zeta7=81 zeta13=475
+cubic_mixed_modes=72
+phase_profiles=1458 nonconstant=1456 character_checks=8748
+relative_diagonal_nonzero=104832 flat_diagonal_zero=144
+direct_tensor_factorisations=4608
+diagonal_gauge_covariance_checks=1512
+fixed_owner_slice_modes=72 noncovariant_control=PASS
+guard_vandermonde_minors=4901
+one_hot_norm_zero=PASS seed_active_roots=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] slopes=(1, 2, 3)
+relative_positive_boundary_incidences=216
+covariant_endpoint_transport_checks=96
+flat_augmentation_zero_norm_positive=PASS
+semantic_arrival_flags=0
+THM-2543 PASS
