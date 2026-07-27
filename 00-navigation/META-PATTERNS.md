@@ -22,7 +22,7 @@
 **Action:** retain the finite label and define an effective defect--pole divisor, signed endpoint current, continuation profile, or magnitude coordinate--with an exact transformation and vanishing gate.
 **Mechanism:** invariance identifies a fiber but does not make the target fiber-constant; the defect records erased scale or valuation.
 **Counterindication:** skip the sidecar when target constancy is proved or the defect has no exact zero/positivity implication.
-**Evidence:** THM-2158 (deck versus pole divisor), THM-2174 (residue versus `C_r/W`), and THM-2176 (unknotting scalar versus continuation profile).
+**Evidence:** THM-2158 (deck versus pole divisor), THM-2174 (residue versus `C_r/W`), THM-2176 (unknotting scalar versus continuation profile), audited THM-2612 (a `D4` deck involution must pay a Jelonek pole), and audited THM-2615/THM-2573 (physical-diagonal/full-`X` collapse versus an independent endpoint axis or singular boundary normal).
 
 ## Localize a metric by common contexts before hunting catalysts
 
@@ -98,7 +98,7 @@
 **Trigger / action:** when a diagonal moment or total count is said to encode a multigraded target, expose the omitted grading or add an observer; test translates preserving the diagonal but changing the target.
 **Mechanism:** diagonalization fixes a hidden conservation law: `CT[P^m Pbar^m]` sees augmentation zero, while mixed `CT[P^r Pbar^s]` restores grade `r-s`.
 **Counterindication:** the diagonal suffices only when the target is proved invariant under the discarded grade.
-**Evidence:** MISTAKE-226/209 and THM-2352's q-adic plateau spectrum.
+**Evidence:** MISTAKE-226/209, THM-2352's q-adic plateau spectrum, and audited THM-2615's present/bare-endpoint Radon square. Provisional THM-2620 is a current test case, not yet evidence: its target difference discards a determinant/endpoint-origin coordinate and awaits final audit.
 
 ## A local factorization transfers only through a stated functor
 
