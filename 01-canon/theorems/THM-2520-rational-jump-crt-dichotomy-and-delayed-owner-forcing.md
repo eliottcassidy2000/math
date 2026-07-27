@@ -12,7 +12,10 @@ status: >
   owner--word event, delayed sufficiently far beyond the collision, then
   gives all twelve weighted collision colours simultaneously; an explicit
   endpoint/variation bound supplies one common delay.  A pure-13 interval
-  is a sharp zero-drift hostile.  The theorem does not orient antipodal
+  is a sharp zero-drift hostile.  For lattice-valued responses, the zero
+  branch is an exact constant-multiplicity inverse-fibre multisection; a
+  prime-to-13 denominator in the mean rules it out immediately.  The theorem
+  does not orient antipodal
   cospans, rebase old source/deep sheets, prove nonzero mixed ANOVA drift on
   a live response table, exclude a scalar row, or prove LRC(14).
 source: codex-2026-07-27-rational-jump-crt-dichotomy
@@ -25,8 +28,8 @@ related:
   - THM-2518-perron-inverse-branch-owner-word-cospan-recovery
 script: 04-computation/lrc14_rational_jump_crt_owner_forcing_thm2520.py
 output: 05-knowledge/results/lrc14_rational_jump_crt_owner_forcing_thm2520.out
-script_sha256: 059718af2c3c87ed0979136467d21264a01bb50339839c16190f38cf364acab1
-output_sha256: dbaab5fce77bf471a7dc5967dbf25e76e8568bea2ef31836bf4366d357fc12d2
+script_sha256: 3f1deeb09402a559f7ea29de59d024a134691f27e0ee38b08ec1be6890f83ab9
+output_sha256: 347722718137ec5e54c065807d59a13d65b3ce9fe177e5c2bfc47645fe20db06
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -48,8 +51,9 @@ if it does not vanish globally, can the future owner be made to see it?   (1)
 For rational step data both questions have exact answers.  Strip the
 `13`-primary part from one common endpoint denominator and add the jumps in
 each remaining residue class.  That finite vector is zero exactly on the
-future-factor branch.  Otherwise CRT forces every last digit, and one more
-owner delay supplies their common positive weight.
+future-factor branch **after this Perron projection**; the original response
+can still vary in the Perron kernel.  Otherwise CRT forces every last digit,
+and one more owner delay supplies their common positive weight.
 
 ## 1. Endpoint grid, jumps, and Perron ladders
 
@@ -172,6 +176,37 @@ The reverse implications are included in this cycle.  This proves (7)--(8).
 The depth condition `m>=K` is load-bearing.  Before the Perron depth has
 passed the full `13`-primary endpoint grid, the residue reduction in (11)
 does not exist and a pure-`13` future factor can remain nonconstant.
+
+### Constant branch as an inverse-fibre multisection
+
+There is a cheaper necessary condition when the response is lattice-valued.
+Suppose, for some `lambda>0`,
+
+```text
+F(x) in lambda Z                         almost everywhere.   (14a)
+```
+
+On the constant branch, multiply `P_MF=A` by `M`:
+
+```text
+M A/lambda
+ =sum_(r=0)^(M-1) F((y+r)/M)/lambda
+ in Z.                                                       (14b)
+```
+
+Thus every inverse fibre has the same integer lattice weight; for a
+nonnegative integer-valued response this is literally a constant
+multiplicity.  Moreover
+
+```text
+A in (lambda/M)Z.                                            (14c)
+```
+
+For an integer-valued response and `A=p/q` in lowest terms, the constant
+branch forces `q|M`.  Since `M` is a power of thirteen, any prime factor of
+`q` other than `13` proves `C!=0` immediately.  So does a `13`-primary
+denominator deeper than `M`.  This condition is necessary, not sufficient:
+a mean in `M^(-1)Z` does not by itself make the fibre counts constant.
 
 ## 3. An endpoint-explicit energy floor
 
@@ -441,6 +476,17 @@ installs a sufficiently delayed common future owner--word factor and forces
 all twelve collision colours on that scalar response.  When `C=0`, the
 Perron response is exactly constant and no such delay can create drift.
 
+For the lawful densities
+
+```text
+F_j=sum_r h_(j,r),
+```
+
+each summand is Boolean, so `F_j` is integer-valued.  Before enumerating any
+jumps, reduce the mean `A_j`: a prime-to-`13` denominator already excludes
+the constant branch by (14b)--(14c).  Only the remaining pure-`13`
+denominator cases need the sparse endpoint-current test (40).
+
 This reduces the analytic support problem to a finite endpoint-current
 test.  It does not finish the table semantics:
 
@@ -473,7 +519,8 @@ Both runs reproduce the stored transcript byte-for-byte.  The
 dependency-free `Fraction` referee checks the cyclic jump aggregation,
 direct Perron evaluation on rational grids, CRT coverage of every last
 digit, variation contraction, the constant/charged dichotomy, the two sharp
-controls, and exact finite conditional-variance identities.
+controls, three integer/lattice fibre invoices, and exact finite
+conditional-variance identities.
 
 An independent line audit rederived (10)--(14), including the CRT
 representative range, the finite-DFT energy floor (19), Perron variation

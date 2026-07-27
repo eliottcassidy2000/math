@@ -9,5 +9,6 @@ pure-13 hostile B_u unique, drift: [Fraction(1, 169)] 0
 prime-to-13 control C: [Fraction(1, 1), Fraction(-1, 1)]
 prime-to-13 control B_u: [Fraction(1, 2), Fraction(11, 26), Fraction(9, 26), Fraction(7, 26), Fraction(5, 26), Fraction(3, 26), Fraction(1, 26), Fraction(1, 26), Fraction(3, 26), Fraction(5, 26), Fraction(7, 26), Fraction(9, 26), Fraction(11, 26)]
 prime-to-13 conditional variance/drift: 42/169
+integer/lattice inverse-fibre checks: 3
 endpoint-safe delay constant: 20/3 (using pi^2 < 10)
 VERDICT: aggregated non-13 jumps exactly decide the Perron constant branch; off it, CRT supplies every last digit and one common delayed owner can force all colours

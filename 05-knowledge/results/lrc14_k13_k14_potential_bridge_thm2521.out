@@ -1,0 +1,8 @@
+THM-2521 exact K13--K14 potential-module referee
+factor_space: edges=91 matching_rank=13 balanced_dim=78 degree_rank=13 degree_kernel=65
+potential_modules: full_dim=13 physical_dim=12 degree_scalar=12 edge_gram_scalar=12
+chart_audit: charts=504 basis_charts=6048 aligned_radon_entries=78624 mixed_mode_identities=435456
+spectral_audit: field=F_547 generator=2 zeta13=475 xi7=81 cut_modes=5184
+energy_audit: bilinear_checks=1728 six_cycle_scalar=13 full_K14_gradient_scalar=14
+sharp_delta_control: star=12/13 cycles=(Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1)) additive_modes=-2/13 chi7_contrast=0
+VERIFIED: positive rational predecessor drift enters the 12-dimensional degree-visible K14 potential module; orientation and Boolean owner charge do not follow.

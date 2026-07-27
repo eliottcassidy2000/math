@@ -163,6 +163,7 @@ def run_controls():
     hostile_h = direct_perron_cells(hostile_values, 1, 1)
     require(hostile_c == [Q(0)], "pure-13 hostile current changed")
     require(hostile_h == [Q(1, 13)], "pure-13 hostile Perron mean changed")
+    require((13 * hostile_h[0]).denominator == 1, "integer fibre multiplicity failed")
 
     hostile_b = collision_vector([Q(1, 13)])
     hostile_drift = hostile_b[0] - sum(hostile_b) / 13
@@ -178,13 +179,31 @@ def run_controls():
     require(positive_drift == positive_variance, "conditional variance identity failed")
     require(positive_drift > 0, "positive control drift vanished")
     require(len(set(positive_b)) > 1, "positive control collision vector is constant")
+    positive_mean = sum(positive_values) / len(positive_values)
+    require(positive_mean.denominator != 1, "denominator hostile unexpectedly integral")
 
-    return hostile_c, hostile_h, hostile_b, positive_c, positive_b, positive_drift
+    # General lambda*Z multisection check on a pure-13 grid.
+    lattice = Q(1, 3)
+    lattice_values = [lattice * ((2 * j + 1) % 5) for j in range(13)]
+    _, lattice_c = aggregate_jumps(lattice_values, 1, 1)
+    lattice_h = direct_perron_cells(lattice_values, 1, 1)[0]
+    require(lattice_c == [Q(0)], "lattice pure-13 current changed")
+    require((13 * lattice_h / lattice).denominator == 1, "lambda-lattice invoice failed")
+
+    return hostile_c, hostile_h, hostile_b, positive_c, positive_b, positive_drift, 3
 
 
 def main():
     stats = run_grid_referee()
-    hostile_c, hostile_h, hostile_b, positive_c, positive_b, positive_drift = run_controls()
+    (
+        hostile_c,
+        hostile_h,
+        hostile_b,
+        positive_c,
+        positive_b,
+        positive_drift,
+        lattice_checks,
+    ) = run_controls()
 
     print("THM-2520 rational-jump CRT / delayed-owner exact referee")
     print("grid cases:", stats[0])
@@ -197,6 +216,7 @@ def main():
     print("prime-to-13 control C:", positive_c)
     print("prime-to-13 control B_u:", positive_b)
     print("prime-to-13 conditional variance/drift:", positive_drift)
+    print("integer/lattice inverse-fibre checks:", lattice_checks)
     print("endpoint-safe delay constant: 20/3 (using pi^2 < 10)")
     print(
         "VERDICT: aggregated non-13 jumps exactly decide the Perron constant branch; "

@@ -1,5 +1,22 @@
 # Script Results Index
 
+- `lrc14_k13_k14_potential_bridge_thm2521.py` -> matching `.out`
+  [THM-2521 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The centred
+  thirteen-predecessor profile embeds into the twelve-dimensional
+  signless-potential submodule of THM-2514's factor-balanced `K_14` edge
+  chart.  Ordinary degree is exactly `12p`; edge and degree norms are
+  `156D_13` and `1872D_13`.  One aligned Radon marginal is injective on this
+  submodule.  Rational nonuniform fibres give all `72` direct mixed modes
+  and all `5,184` cut modes as Hilbert-valued functions.  The star plus six
+  Hamilton-cycle energies total `182D_13` and fire all six additive
+  septimal characters, while a centred delta keeps the multiplicative
+  `chi_7` contrast zero.  The referee checks factor-space ranks
+  `13/78/13/65`, all `504` charts, `78,624` aligned-Radon entries,
+  `435,456` mixed identities, `5,184` cut modes, and `1,728` cycle-form
+  identities.  Normal/optimized/stored transcripts byte-match; hashes are
+  `41b6f8b0...aefc` / `e41bdc28...16a9`.  The bridge is signed,
+  pointwise/Hilbert-valued, and gauge-chosen; it supplies no Boolean owner
+  charge or row exclusion.
 - `lrc14_anchored_cubic_spectrum_thm2517.py` -> matching `.out`, with Lean
   kernel `TournamentH7/LRCAnchoredCube.lean` [THM-2517 PROVED +
   VERIFIED-EXACT + LEAN-VERIFIED ARITHMETIC KERNEL + INDEPENDENTLY AUDITED].
@@ -28,10 +45,23 @@
   owner--word factor see all twelve colours simultaneously.  The exact
   referee checks `144` rational-grid cases, `540` direct Perron cells,
   `1,728` CRT coverage rows, all variation contractions, and the pure-`13`
-  hostile/prime-to-`13` positive controls.  Normal/optimized/stored
-  transcripts byte-match; hashes are `059718af...acab1` /
-  `dbaab5fc...12d2`.  Mixed ANOVA drift, old-sheet rebase, orientation, and
+  hostile/prime-to-`13` positive controls plus three lattice-fibre invoices.
+  Normal/optimized/stored
+  transcripts byte-match; hashes are `3f1deeb0...3ab9` /
+  `34772271...db06`.  Mixed ANOVA drift, old-sheet rebase, orientation, and
   live-row exclusion remain open.
+- `lrc14_typed_owner_endpoint_current_thm2520_probe.py` -> matching `.out`
+  [FINITE-EXACT TYPED-ROW POSITIVE CONTROL].  Reusing the canonical
+  THM-2309/2334/2349 interval constructor without running its twist bank, a
+  sparse endpoint sweep proves nonzero THM-2520 jump current for all three
+  delayed owner words, both before and after the old deep sum.  The six
+  support/`L1` pairs are `14/376112`, `14/694328`, `22/3867136`,
+  `22/7412064`, `4/347100`, and `4/665252`.  The inverse-fibre denominator
+  screen settles five cases; the deep `Qab` mean is pure `13`-primary but
+  retains the exact four-residue hostile boundary.  Normal/optimized/stored
+  transcripts byte-match; hashes are `02d247bb...3ec1` /
+  `e14f767c...05a4`.  The numerical row is canonically typed but is not
+  asserted to be a scalar-cover row, so this certifies no row exclusion.
 - `lrc14_k14_degree_reconstruction_thm2514_referee.cpp` -> matching `.out`
   [THM-2514 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The
   critical `13 x 7` affine-cut chart is `E(K_14)`: thirteen perfect-matching

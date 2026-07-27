@@ -1,0 +1,44 @@
+THM-2520 canonical typed-owner endpoint-current probe
+engine=lrc14_169_twist_variance_opus_20260726.py
+row=(H,q1..q5,c1,c2,c3)=(1, 14, 27, 40, 53, 66, 13, 2197, 742586)
+owner=c1=13; word_clock=169; c3=742586
+T_DEN=297836897838480
+D=50334435734703120=13^8*61704720
+deep_endpoint_alignment: 26/26 residues map to the c3 word boundary
+
+Qa: components=188056
+  pre-deep: mean=21376087/17907461390 denominator=13^6*3710 lattice_screen=CERTIFIES_C_NONZERO C_support=14 C_L1=376112
+  deep-summed: mean=254882231/116398499035 denominator=13^7*1855 lattice_screen=CERTIFIES_C_NONZERO C_support=14 C_L1=694328
+Qb: components=1933568
+  pre-deep: mean=35505957232/16132831966251 denominator=13^7*257103 lattice_screen=CERTIFIES_C_NONZERO C_support=22 C_L1=3867136
+  deep-summed: mean=68054577200/16132831966251 denominator=13^7*257103 lattice_screen=CERTIFIES_C_NONZERO C_support=22 C_L1=7412064
+Qab: components=173550
+  pre-deep: mean=6675/33787663 denominator=13^6*7 lattice_screen=CERTIFIES_C_NONZERO C_support=4 C_L1=347100
+  deep-summed: mean=23759/62748517 denominator=13^7*1 lattice_screen=INCONCLUSIVE C_support=4 C_L1=665252
+
+Qa sparse endpoint current: residue=r/D0 pre_jump deep_jump
+  1/28 -86808 -159142
+  41/742 -16 -16
+  1/14 +7220 +14440
+  41/560 -16 -32
+  127/560 +16 +32
+  237/742 -17 -34
+  13/28 +93963 +173468
+  15/28 -93963 -173468
+  505/742 +17 +34
+  433/560 -16 -32
+  519/560 +16 +32
+  13/14 -7220 -14440
+  701/742 +16 +16
+  27/28 +86808 +159142
+
+Qab sparse endpoint current: residue=r/D0 pre_jump deep_jump
+  1/28 +86808 +159142
+  13/28 -86742 -173484
+  15/28 +86742 +173484
+  27/28 -86808 -159142
+
+pure-13 hostile: mean=1/13 C_support=0 P_13F=1/13 lattice_screen=INCONCLUSIVE
+prime-to-13 positive: mean=1/2 C=[(0, 1), (1, -1)] lattice_screen=CERTIFIES_C_NONZERO
+scope=TYPED_CANONICAL_ROW_POSITIVE_CONTROL; SCALAR_COVER_IDENTIFICATION_OPEN; ROW_EXCLUSION=0; LRC14_OPEN
+VERIFIED: all three canonical word strata have nonzero pre-deep and deep-summed prime-to-13 endpoint current; the denominator screen settles five of six cases and the Qab deep four-support current is the sharp endpoint-only survivor.
