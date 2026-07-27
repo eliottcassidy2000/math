@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""THM-2570 referee — the fold cascade (mac-mini-2026-07-27-S148).
+"""THM-2588 referee (renumbered from THM-2570; Jelonek collision) — the fold cascade (mac-mini-2026-07-27-S148).
 
 LEMMA 1 (fold identity): for V with max h and w = max(V∖{h}), at the fold
 modulus q = h + w: dist_q(h·j) = dist_q(w·j) for every j (h ≡ −w mod q).

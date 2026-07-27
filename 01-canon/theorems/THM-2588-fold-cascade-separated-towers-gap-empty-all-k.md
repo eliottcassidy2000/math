@@ -1,15 +1,15 @@
 ---
-id: THM-2570
+id: THM-2588
 title: THE FOLD CASCADE — snap-folding at pair-sum moduli closes every SEPARATED multi-scale family at every far-count k (the apex-7 wall broken in the separated regime); T-B (v_max < 134·v₍₂₎ for gap families) is its k = 1 instance, now independently proved; T-A (the classical cores gap-empty at all heights) carries two independent routes
 status: PROVED (three-line lemmas + settled LRC(≤13) floors; referee exact — fold identity 600/600, snap inequality vs exact M, certificates at heights to 10^25, per-k constants table, T-A corners 5/5). Scope: the SEPARATED regime (every descent ratio ≥ R_k); the clustered residual stands and is precisely the S147 adversarial pointer.
 source: mac-mini-2026-07-27-S148 (owner: work the T-A/T-B promotions and the plateau-past-7 extension); T-B/T-A first derived by the S147 adversarial agent (ledger secured at 07-reflections/adversarial-lane-verdict-...-agent-S147.md); this file supplies the independent proofs and the cascade generalization
 depends_on: [LRC(≤13) settled (owner policy), THM-1290 (h ≤ 64 exhaustion, for T-A), HYP-8005 (one-far closure, T-A route 1)]
 related: [THM-2052 (the box), HYP-9065 (the six-brief map), THM-735 (the level-0 multi-peel), HYP-8115(d) (the clustered-tower pointer)]
-script: 04-computation/lrc14_fold_cascade_thm2570_macmini_S148.py
-output: 05-knowledge/results/lrc14_fold_cascade_thm2570_macmini_S148.out
+script: 04-computation/lrc14_fold_cascade_thm2588_macmini_S148.py
+output: 05-knowledge/results/lrc14_fold_cascade_thm2588_macmini_S148.out
 ---
 
-# THM-2570 — the fold cascade
+# THM-2588 — the fold cascade (renumbered from THM-2570 after collision with the earlier-pushed Jelonek cusp-cylinder THM-2570; first-pusher precedence)
 
 ## Lemma 1 (fold identity)
 For any family V with maximum h and second element w = max(V∖{h}), at the fold modulus
