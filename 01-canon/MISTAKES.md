@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-275 (2026-07-27, concurrent THM-2479 reservation collision) -- a pushed reservation did not keep the theorem ID unique
+
+- **What happened:** the degree-twenty-two `B,C` plane closure reserved and
+  pushed `THM-2479` in commit `7b15601fb81`.  Before its proof was promoted,
+  a concurrent session canonized the unrelated two-colour trichotomy under
+  the same YAML ID in commit `9942471dbe3`.  The two filenames differed, so
+  Git rebased cleanly while the theorem namespace became ambiguous.
+- **Why it was wrong:** a reservation is coordination evidence, not a lock.
+  Checking the filename, YAML ID, indexes, and remote history only at initial
+  reservation does not protect against a later concurrent reuse.  Any final
+  citation to bare `THM-2479` would have had two possible targets.
+- **Repair:** the `B,C` reservation and exact companion were renamed to the
+  freshly rechecked free namespace
+  `THM-2480-degree-twenty-two-BC-plane-hensel-ramification-closure` before any
+  proved promotion.  `THM-2479` now refers only to the canonized two-colour
+  trichotomy.  The `B,C` mathematics and exact output were unaffected; only
+  the namespace changed.
+- **Rule:** immediately before every status promotion, fetch and recheck the
+  candidate number across filenames, YAML IDs, navigation, and remote history,
+  even when the same session already pushed a reservation.  Cite theorem ID
+  plus slug so a transient duplicate is detectable rather than silently
+  resolved by context.
+
 ## MISTAKE-274 (2026-07-26, reserved THM-2440 strict two-comb radius) -- a closed/a.e. handoff radius was assigned to the literal open component
 
 - **What was proposed:** two radius-`1/14` integer danger combs were said to

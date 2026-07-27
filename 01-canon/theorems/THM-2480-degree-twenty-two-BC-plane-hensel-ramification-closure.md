@@ -1,11 +1,11 @@
 ---
-id: THM-2479
+id: THM-2480
 title: "Degree-twenty-two B-C plane Hensel-ramification closure"
 status: RESERVED / UNPROVED EMPTY STUB
 source: codex-2026-07-27-degree-twenty-two-BC-hensel-ramification
 ---
 
-# THM-2479 -- degree-twenty-two B-C plane Hensel-ramification closure
+# THM-2480 -- degree-twenty-two B-C plane Hensel-ramification closure
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
