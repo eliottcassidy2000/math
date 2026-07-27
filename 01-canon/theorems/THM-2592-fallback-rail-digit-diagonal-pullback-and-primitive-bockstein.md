@@ -116,6 +116,29 @@ J_(s4,ell4,q;ell5,r)
 where `(v,t)` is the selected cell above and `1_(ell4,v,t)` denotes all
 three restrictions in (5).
 
+Although `U,V` are Perron averages, (9) is still a finite Boolean
+fibre-product bank.  With THM-2586's preimages
+
+```text
+X_a=(x+a)/d,
+Z_(a,beta)=(X_a+beta)/169,
+Y_e=({x-s4/13}+e)/d,
+```
+
+its exact expansion is
+
+```text
+J=13/(169d^2) sum_(a,beta,e)
+    mu(S_(a,beta,e) intersection
+       F_(ell5,-q) intersection Delta_r intersection
+       {Q^+_(ell5,v)(Rx)=1}).                          (9a)
+```
+
+Here `S_(a,beta,e)` is THM-2586's literal Boolean ancestry sheet with the
+three root/owner indicators already inserted.  Thus positivity of any entry
+of (9) really supplies a positive Boolean pullback sheet; no probabilistic
+coupling is being chosen after the fact.
+
 Equation (9) is the required common carrier.  It is formed **before** the
 THM-2584 rail marginal and before the THM-2585 target/deep transforms.
 Moreover the two occurrences of `v` give the exact time identity
