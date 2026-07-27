@@ -9,6 +9,32 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-301 (2026-07-28, THM-2621 trace--Liouville scope) -- a closed rational class was allowed to be nonzero after forgetting its polynomial source primitive
+
+- **What was assumed:** the first promoted form of THM-2621 correctly proved
+  that
+  `omega_F=Tr(x dy)-4 kappa^(-1)u dv` is a closed rational one-form, but then
+  said that a genuine polynomial `D4`, `A4`, or `S4` Keller map might have a
+  nonzero class or nonzero divisor residues.
+- **First failed implication:** on the actual polynomial source one already
+  has the polynomial one-form
+  `theta=x dy-kappa^(-1)u dv`.  The Keller equation gives `d theta=0`, and the
+  algebraic Poincare lemma on `A2` gives `theta=dH` for a polynomial `H`.
+  Taking the degree-four field trace therefore gives
+  `omega_F=d Tr(H)`.  It is rationally exact, so every divisor residue is
+  zero.  Treating the inverse coefficients as an abstract rational PDE pair
+  had silently discarded this polynomial primitive.
+- **Strongest survivor / repair:** the quartic congruence, coefficient
+  equations, sheet-defect pole ledger, depression warning, and punctured
+  `C4` hostile all survive.  The trace--Liouville expression becomes a
+  stronger **realization obstruction**: an abstract pair `(f,b)` can satisfy
+  the Keller PDE, but a polynomial planar Keller realization must also have
+  zero trace--Liouville class and zero residue at every prime.  In power-sum
+  coordinates this is the explicit residue cancellation recorded in the
+  repaired THM-2621.  A quotient-side closed form must always be pulled back
+  to the claimed affine source before being promoted to an independent
+  boundary invariant.
+
 ## MISTAKE-300 (2026-07-28, THM-2618 candidate scope) -- the canonical selected source was conflated with a distinct target-informed head
 
 - **What was assumed:** the first candidate form of THM-2618 proved a lawful
