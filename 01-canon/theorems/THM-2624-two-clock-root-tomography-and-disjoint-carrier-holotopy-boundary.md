@@ -22,6 +22,7 @@ source: wild-holotopy-mining-2026-07-28-two-clock-tomography
 depends_on:
   - THM-2614-punctured-target-root-cosupport-and-principal-deck-no-go
 related:
+  - THM-356-endpoint-transfer-witness-criterion
   - THM-2356-finite-field-chirp-gram-tomography-and-bockstein-pairing
   - THM-2616-cross-time-target-future-diagonal-and-principal-action-no-go
   - THM-2622-affine-torsor-holonomy-fixed-section-spectrum-and-v4-c13-dictionary
@@ -199,13 +200,32 @@ it exactly.
 
 ## 4. The inverse is necessarily signed
 
-Equation (3) makes the first obstruction immediate.  A nonzero nonnegative
-linear combination of available rows is strictly positive in all twelve root
-coordinates.  It cannot equal a coordinate row of `I_12`, which has eleven
-zeros.  Therefore
+There is a useful abstract criterion behind the computation.  If
+`A in R_(>=0)^(m x n)`, then
 
 ```text
-no stack of the available W_c has a nonnegative left inverse.              (17)
+there exists L>=0 with LA=I_n
+
+iff for every column j there is a row k_j with
+    A_(k_j,j)>0 and A_(k_j,i)=0 for every i!=j.             (17)
+```
+
+Indeed, if `L>=0` and `LA=I`, every off-diagonal zero forces every row used
+by the `j`-th row of `L` to vanish on all columns except `j`; the diagonal
+one forces at least one such private row to be positive at `j`.  Conversely,
+one normalized private row per column gives a nonnegative left inverse.
+
+This is the ordered-real analogue of THM-356's private-child witness
+criterion.  Full rank permits cancellation; a positive inverse requires
+private measurements.
+
+Equation (3) violates (17) maximally.  Every available row is positive in all
+twelve root coordinates, so no root column has a private row.  Equivalently,
+a nonzero nonnegative row combination is strictly positive in all twelve
+coordinates and cannot equal a coordinate row of `I_12`.  Therefore
+
+```text
+no stack of the available W_c has a nonnegative left inverse.              (18)
 ```
 
 In particular every left inverse in (16) uses cancellation.  It is not a
@@ -224,25 +244,25 @@ physical base.  The direct sum in (8) therefore has no common physical overlap
 on which to compare two root origins.  It proves injectivity of the formal map
 
 ```text
-x |-> (W_(s,ell)x, W_(s,ell')x)                            (18)
+x |-> (W_(s,ell)x, W_(s,ell')x)                            (19)
 ```
 
 for one vector `x` *assumed beforehand* to be common.  It does not prove that
 the two physical strata carry the same `x`, nor provide a transition map that
 could make them so.
 
-In Cech language, the detection presheaf is separated after two charts, but
-the physical atlas has no supplied overlap isomorphism and hence no descent
-datum.  Empty intersections make compatibility vacuous; they do not identify
-fibres.  In THM-2622's affine-holonomy language, (16) recovers coordinates
-after a frame has been imposed, while the affine translation/cocycle between
-frames remains absent.
+In a Cech-style analogy, the response family is jointly separating after two
+charts, but no physical presheaf or overlap isomorphism has been supplied and
+hence no descent datum follows.  Empty intersections make compatibility
+vacuous; they do not identify fibres.  In THM-2622's affine-holonomy language,
+(16) recovers coordinates after a frame has been imposed, while the affine
+translation/cocycle between frames remains absent.
 
 This is the promised holotopy distinction:
 
 ```text
 two-chart coefficient tomography:  PROVED, exact, signed;
-common-carrier root transport:      NOT SUPPLIED.          (19)
+common-carrier root transport:      NOT SUPPLIED.          (20)
 ```
 
 This is the linear root analogue of THM-2356 and MISTAKE-261.  There, planar
@@ -263,7 +283,7 @@ It does not change the conclusion above.
 First, the wall bit refines a fixed `(s,ell_4)` stratum; it creates no overlap
 between different `ell_4` strata in (8).  Second, every nonzero fixed
 `(rail,q,ell_5,h=q)` row in either labelled sector still has full support on
-all `r=1,...,12`.  Hence the nonnegative-left-inverse obstruction (17)
+all `r=1,...,12`.  Hence the nonnegative-left-inverse obstruction (18)
 survives sectorwise.  Third, raw Boolean tensors add across the cospan, but
 the predicate "the seven-clock Bockstein is a unit" is nonlinear.  A union of
 unit-support atlases is not the unit atlas of the summed parent tensor.
