@@ -1,0 +1,27 @@
+== (a)+(b) four-sector exactness + dihedral parity ==
+  AP             z = (11, 1, 1, 0)  N_B direct 163 = formula 163  OK;  N_B mod 2 = 1 (forced 1)
+  GW             z = (11, 1, 1, 0)  N_B direct 163 = formula 163  OK;  N_B mod 2 = 1 (forced 1)
+  deep well      z = (11, 1, 0, 1)  N_B direct 241 = formula 241  OK;  N_B mod 2 = 1 (forced 1)
+  {1..11,13,36}  z = (11, 1, 1, 0)  N_B direct 163 = formula 163  OK;  N_B mod 2 = 1 (forced 1)
+  loose {2..14}  z = (10, 2, 1, 0)  N_B direct 157 = formula 157  OK;  N_B mod 2 = 1 (forced 1)
+  => N_B = 13z1 + 7z7 + 13z13 + 91z91 EXACT; odd for every family.
+
+== (c) the Gram bridge at pair level ==
+  AP             N2 direct 190 = sector/Gram formula 190  OK;  N2 mod 2 = 0 (forced 0)
+  GW             N2 direct 178 = sector/Gram formula 178  OK;  N2 mod 2 = 0 (forced 0)
+  deep well      N2 direct 328 = sector/Gram formula 328  OK;  N2 mod 2 = 0 (forced 0)
+  {1..11,13,36}  N2 direct 176 = sector/Gram formula 176  OK;  N2 mod 2 = 0 (forced 0)
+  loose {2..14}  N2 direct 180 = sector/Gram formula 180  OK;  N2 mod 2 = 0 (forced 0)
+  => unit-unit pairs contribute EXACTLY the chirp-Gram entries
+     |B ∩ rB| (THM-2356's object); duty pairs are the rigid part;
+     pair-level mod-2 is degenerate (Smith verdict confirmed):
+     the 7/13 rotations, not the mirror, carry pair localization.
+
+== mod 7 / mod 13 pair congruences (the localization content) ==
+  AP             N2 = 190: mod 7 = 1, mod 13 = 8
+  GW             N2 = 178: mod 7 = 3, mod 13 = 9
+  deep well      N2 = 328: mod 7 = 6, mod 13 = 3
+  {1..11,13,36}  N2 = 176: mod 7 = 1, mod 13 = 7
+  loose {2..14}  N2 = 180: mod 7 = 5, mod 13 = 11
+  (unit-sector Gram sums collapse mod 7/13 onto duty-involving
+   pairs: the quantitative face of THM-2544's rank-0 boundary.)
