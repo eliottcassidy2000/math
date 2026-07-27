@@ -2,7 +2,7 @@
 id: THM-2616
 title: "Cross-time target/future diagonal and principal-action no-go"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Enlarge THM-2600's complete constant-six carrier by retaining every
   delayed physical future digit h before imposing the numerical diagonal
   q=h with the present absolute target section q.  Across all 2,299,752
@@ -21,6 +21,7 @@ status: >
   adjacent transition, row exclusion, or proof of LRC(14).
 source: carry-transition-cell-2026-07-28-cross-time-diagonal
 depends_on:
+  - THM-2585-saturated-normalized-target-projector-and-bockstein-noncommutation
   - THM-2592-fallback-rail-digit-diagonal-pullback-and-primitive-bockstein
   - THM-2600-constant-six-middle-rail-common-x-atlas-and-uniform-bockstein-section
   - THM-2613-canonical-root-diagonal-opposite-shift-section
@@ -38,7 +39,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2616 -- a cross-time diagonal exists, but it is not a deck action
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2609 shows that THM-2600's absolute target-section labels already have
 every additive difference, but its physical arrival and delayed future digit
@@ -345,10 +346,32 @@ translation stabilizers.  Every logical check is an explicit optimized-mode
 guard.  Normal and optimized executions byte-match the stored transcript
 after LF normalization.
 
+An independent hostile audit replayed both executions, byte-matched the
+stored transcript, and recomputed both declared LF hashes.  A second exact
+evaluator replaced the optimized shared-endpoint digit vector by thirteen
+separate scalar prefix sweeps on every fine fibre, checked each digit
+partition against the whole delayed word, and recovered independently
+
+```text
+full positive census and global content:       649,968 and 26;
+diagonal positive census and diagonal content:  49,872 and 26;
+positive pairs and unit slices:                   1,703 and 1,483. (24)
+```
+
+It tested unitness by polynomial Euclid against `Phi_7` rather than by the
+companion's multiplication determinant, and recovered all four section-set
+patterns, the eight common sections, all differences, and every trivial
+stabilizer.  The audit separately checked the sign composition: for
+`k=14=1 mod 13`, THM-2613 gives the future-local slot `s=-h`, while THM-2585's
+section `q'` selects `s=-q'`, hence `q'=h`.  This remains only the framed
+cross-time label correspondence already scoped in Sections 5--6.  The
+principal-action no-go is for the fixed translation-labelled digit carrier;
+it does not exclude an enlarged carrier with a new physical action.
+
 The theorem is confined to THM-2600's one canonical typed row and to the
 enlarged carrier (2).  It does not claim that an aggregate unit Bockstein
 charges one hidden sheet, that a constant support section has common owner or
 root provenance, or that a different delayed word cannot supply the missing
 digits.  No scalar row is excluded and LRC(14) remains open.
 
-QED (candidate; independent hostile audit pending).
+QED.
