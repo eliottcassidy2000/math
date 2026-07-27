@@ -148,7 +148,7 @@ def main() -> None:
     single_cycles = 0
     additive_edges = 0
     multiplicative_edges = 0
-    base_monodromies = 0
+    base_transports = 0
     partial_residuals = 0
 
     for delta in range(1, P):
@@ -188,7 +188,7 @@ def main() -> None:
                 expected_trivial = turns == P
                 check((additive_holonomy == 0) == expected_trivial)
                 check((multiplicative_holonomy == ONE) == expected_trivial)
-                base_monodromies += 1
+                base_transports += 1
 
         # If only t of seven edge corrections -delta are supplied, a proper
         # subset cannot kill the old-head cyclic sum because 7<13.
@@ -207,7 +207,10 @@ def main() -> None:
     print("slice_units=13 slice_factors_distinct=13")
     print(f"mapping_tori={single_cycles} single_cycle_size=91")
     print(f"additive_gauge_edges={additive_edges} multiplicative_gauge_edges={multiplicative_edges}")
-    print(f"base_loop_monodromy_checks={base_monodromies} exact_order=13")
+    print(
+        f"base_loop_transport_checks={base_transports} "
+        "additive_order=13 multiplicative_min_return_period=13"
+    )
     print(f"partial_edge_residual_checks={partial_residuals} three_edge_residual=4*delta_nonzero")
     print("charged_cover_vertices=546 support_histogram=48:56,60:224,72:266")
     print("physical_common_carrier=NOT_CONSTRUCTED")

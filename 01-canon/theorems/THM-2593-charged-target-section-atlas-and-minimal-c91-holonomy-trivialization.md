@@ -2,15 +2,15 @@
 id: THM-2593
 title: "Charged target-section atlas and minimal C91 holonomy trivialization"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED (two audits).
   After any chosen affine identification of THM-2542's root-deck sheet with
   THM-2585's target-shift index, the thirteen everywhere-unit Bockstein
   factors form a faithful multiplicative local system on the same C91
   mapping torus.  The additive gauge h=-q kills the pulled-back THM-2542
   root-deck
   transition, while the multiplicative gauge Y_q^-1 kills the exact unit
-  transport Y_(q+a)Y_q^-1.  Both seven-edge deck-return transformations have
-  exact order 13,
+  transport Y_(q+a)Y_q^-1.  The additive seven-edge deck displacement has
+  order 13, and the multiplicative skew cocycle has least return period 13,
   so degree 13 is their common minimal cyclic trivializing cover.  All 546
   pulled-back owner/clock/sheet Bockstein coefficient profiles survive.  A
   correction -a on t edges of one
@@ -29,14 +29,14 @@ related:
   - THM-2592-fallback-rail-digit-diagonal-pullback-and-primitive-bockstein
 script: 04-computation/lrc14_charged_target_atlas_c91_holonomy_thm2593.py
 output: 05-knowledge/results/lrc14_charged_target_atlas_c91_holonomy_thm2593.out
-script_sha256: ae6b0f81c08663497c33727cefd5aacd05f583dc005d0d92777a8b4d5e5aecce
-output_sha256: 861325a6cf4c70e3d2ea31bee902a04dfb35d91ff5ed0eb93e5bdca76288029d
+script_sha256: 5e516aa3e3ddef475589db05fc43fd0c9d1047c2c0ca231f3172ad0508fdd11b
+output_sha256: 541f0272737299cea546b3937b18b56e145ead944cccca4bae5ff8ddfca8bcc3
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2593 -- charged target sections on the minimal C91 cover
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED (two audits).**
 
 THM-2542 finds a nonzero additive root-deck local system over the seven
 owner-clock charts.  THM-2585 finds thirteen translation-permuted target
@@ -141,14 +141,24 @@ unitness alone.  Define the edge unit
 u_(q,a)=Y_(q+a)Y_q^-1 in R_7^*.                            (9)
 ```
 
-Multiplication by (9) transports the Bockstein factor at one vertex to the
-factor at its successor:
+For owner colour `kappa`, let
 
 ```text
-u_(q,a)Y_q=Y_(q+a).                                       (10)
+sigma_kappa:R_7->R_7,              z |-> z^kappa,
+
+u^(kappa)_(q,a)=sigma_kappa(u_(q,a)).                       (9a)
 ```
 
-The vertex gauge `v_q=Y_q^-1` trivializes this transport:
+Multiplication by (9a) transports the actual owner-coloured Bockstein factor
+at one vertex to the factor at its successor:
+
+```text
+u^(kappa)_(q,a) beta(D^(kappa,q))
+ =beta(D^(kappa,q+a)).                                    (10)
+```
+
+At the universal `R_7` level, the vertex gauge `v_q=Y_q^-1` trivializes this
+transport:
 
 ```text
 v_(q+a) u_(q,a) v_q^-1
@@ -165,9 +175,10 @@ U_n(q)=Y_(q+7na)Y_q^-1.                                   (12)
 
 Because the thirteen `Y_q` are distinct, `U_n(q)=1` exactly when `13|n`.
 For `n<13`, (12) transports between distinct vertices of the cover; it is not
-a closed loop upstairs.  Hence the deck-return transformations (8) and (12)
-have exact order thirteen, and only the ninety-one-edge path closes on
-`C_91`.  The degree-thirteen cover is not merely sufficient for both local
+a closed loop upstairs, nor is `U_n(q)` the `n`th power of one fixed unit.
+Thus (8) has additive order thirteen, while the skew multiplicative cocycle
+(12) has least return period thirteen.  Only the ninety-one-edge path closes
+on `C_91`.  The degree-thirteen cover is not merely sufficient for both local
 systems: it is their common minimal cyclic trivializing cover.
 
 This is the useful holotopy match:
@@ -221,11 +232,14 @@ For `0<=t<=7`, `a!=0`, and characteristic thirteen,
 (7-t)a=0  iff  t=7.                                        (17)
 ```
 
-In particular, even a three-edge attaching carrier leaves residual holonomy
-`4a!=0`.  This does not say that every future correction must be edgewise
-`0` or `-a`; a genuinely mixed 2-cell may distribute other corrections whose
-total is `-7a`.  Equation (17) is the sharp statement for the natural
-section-by-section cancellation supplied by (7).
+In particular, literal corrections `-a` on only three of those base edges
+leave residual holonomy `4a!=0`.  This says nothing about an arbitrary
+three-cell or attaching carrier: positive cells are vertex data until a
+lawful boundary map turns them into edge cochains.  Nor does it say that
+every future correction must be edgewise `0` or `-a`; a genuinely mixed
+2-cell may distribute other corrections whose total is `-7a`.  Equation
+(17) is the sharp statement for the natural section-by-section cancellation
+supplied by (7).
 
 The same boundary explains why a positive carrier over a proper clock arc is
 important but not yet a cycle-level closure.  Local gauges always exist on a
@@ -239,8 +253,8 @@ Three pieces are load-bearing.
    carrier.  THM-2585's same-cokernel hostile shows that arbitrary independent
    representatives do not admit normalized integral sections.
 2. **Unit factors.**  Without unitness, the ratios in (9) need not exist.
-   Without pairwise distinctness, their seven-edge deck-return transformation
-   need not have order thirteen.  A constant unit atlas is the sharp
+   Without pairwise distinctness, their skew seven-edge transport need not
+   have least return period thirteen.  A constant unit atlas is the sharp
    collapsed control.
 3. **A physical torsor identification.**  The equality of two alphabet sizes
    does not identify THM-2542's root deck with THM-2585's target-shift
@@ -254,9 +268,10 @@ transverse kernel.  A physical use therefore still needs a common-ancestry
 mixed square whose root and target labels obey (3)--(5), or a positive
 semantic path living directly on the twisted `C_91` carrier.
 
-The nearby selector and pullback candidates THM-2591 and THM-2592 address two
-different parts of that debt.  They are related evidence, not dependencies
-of this candidate, and no conclusion here relies on their promotion.
+The nearby selector candidate THM-2591 and promoted physical pullback
+THM-2592 address two different parts of that debt.  They are related evidence,
+not dependencies of this candidate, and no conclusion here relies on
+THM-2591's promotion or on retyping THM-2592's positive cells as edges.
 
 ## 7. Exact companion
 
@@ -275,10 +290,19 @@ normalization.  The dependency-free checker works in
 - all `78` owner/sheet charges and the lifted support histogram (15);
 - all twelve nonzero mapping-torus steps and all `91` vertices per step;
 - `1,092` additive and `1,092` multiplicative gauge identities;
-- all `2,028` based seven-loop deck-transport/order checks; and
+- all `2,028` based seven-loop additive-order and cocycle-return checks; and
 - all `96` proper-edge residual checks, including the three-edge `4a` wall.
 
 There are `7,716` explicit checks; none is implemented with `assert`.
+
+Two independent hostile audits rederived the additive gauge, the
+owner-automorphism unit transport, the telescoping skew cocycle, its least
+return period, the `546`-profile support census, and the literal-edge residual
+invoice.  They required the cover-versus-base and vertex-versus-edge scope
+repairs now stated above.  Normal, optimized, and stored transcripts agree.
+On Windows the raw CRLF hashes are `1ba43358...f376` and
+`1a0bcd72...c3d4`; after the declared LF normalization they are exactly the
+full frontmatter hashes.
 
 ## 8. Stopping boundary
 
@@ -296,4 +320,4 @@ also retains semantic owner/arrival meaning.  The selected `q` is still a
 target-shift position, not a nonzero target character or relation address;
 `Y_q` is a Bockstein coefficient factor, not a nonnegative endpoint.  No
 all-165 statement, scalar-cover contradiction, row decrement, or proof of
-LRC(14) follows. **QED (candidate pending independent audit).**
+LRC(14) follows. **QED.**

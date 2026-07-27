@@ -2,7 +2,7 @@ THM-2593 charged target-section atlas / C91 holonomy exact companion
 slice_units=13 slice_factors_distinct=13
 mapping_tori=12 single_cycle_size=91
 additive_gauge_edges=1092 multiplicative_gauge_edges=1092
-base_loop_monodromy_checks=2028 exact_order=13
+base_loop_transport_checks=2028 additive_order=13 multiplicative_min_return_period=13
 partial_edge_residual_checks=96 three_edge_residual=4*delta_nonzero
 charged_cover_vertices=546 support_histogram=48:56,60:224,72:266
 physical_common_carrier=NOT_CONSTRUCTED
