@@ -116,6 +116,29 @@ survivors in 89 classes. The complete law now stands at TEN census
 points, with both pre-registered predictions (n = 11 rigid
 inventory; n = 12 full inventory) confirmed.
 
+## 3c. n = 13 confirmation (S134): the atom test passes
+
+The threaded pruned engine
+(`04-computation/metagraph_pureblue_n13_threaded_kps_S134.cpp`, sha
+`149e60b8...`; output sha `94fcdfe4...`; n = 11, 12 controls exact;
+2^36 cube -> 21 raw survivors in 15 classes) delivers
+
+```text
+pure-blue(13) = 13:
+rigid   (10): [1, 3, 9, 9, 9, 9, 27, 27, 27, 81] = pal13(13)
+nonrigid (3): (15,5,3) + 2 x (135,45,3)
+            = T5-centered palindromes with {1,3} halves of sum 4  (4)
+```
+
+-- the pre-registered inventory (`..._n13_prediction_kps_S134.out`,
+committed before the run) confirmed CLASS FOR CLASS. The law (2)
+now stands at ELEVEN exhaustive census points (n = 3..13) with
+three consecutive pre-registered predictions confirmed exactly
+(n = 11 rigid; n = 12 full; n = 13 full), and **no pure-blue strong
+atom beyond {1, C3, T5} exists through size 13** -- the first
+genuinely open odd window for a new atom is n = 15 (as a size-15
+strong atom) or any odd n via larger centers.
+
 ## 4. Open
 
 - Completeness of the atom alphabet: does any new pure-blue strong
