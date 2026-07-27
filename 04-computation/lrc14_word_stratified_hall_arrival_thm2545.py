@@ -151,6 +151,32 @@ def complete_off_diagonal_referee(max_size, max_total):
     return checks, normalized_checks
 
 
+def complete_off_diagonal_cemetery_referee(max_size, max_total):
+    """Check the same formula when the right side has a cemetery column."""
+    checks = 0
+    for size in range(2, max_size + 1):
+        cemetery = size
+        allowed = {
+            (i, j)
+            for i in range(size)
+            for j in range(size + 1)
+            if j == cemetery or i != j
+        }
+        for total in range(1, max_total + 1):
+            for left in compositions(total, size):
+                for right in compositions(total, size + 1):
+                    minimum_diagonal = total - maximum_transport(
+                        left, right, allowed
+                    )
+                    overload = max(
+                        [0] + [left[i] + right[i] - total for i in range(size)]
+                    )
+                    require(minimum_diagonal == overload,
+                            f"cemetery formula mismatch {left=} {right=}")
+                    checks += 1
+    return checks
+
+
 def margins(cells):
     left = [Fraction(0) for _ in range(ROOTS)]
     right = [Fraction(0) for _ in range(ROOTS)]
@@ -294,6 +320,7 @@ def main():
     square3 = exhaustive_hall_referee(3, 3, 4)
     cemetery = exhaustive_hall_referee(2, 3, 4)
     complete, normalized = complete_off_diagonal_referee(5, 6)
+    complete_cemetery = complete_off_diagonal_cemetery_referee(4, 5)
     aligned, swapped, word_masses, colours = word_hostile_referee()
     cuts, modes, root_collapses, cut_collapses = cut42_control_referee(
         aligned, swapped, word_masses
@@ -303,6 +330,7 @@ def main():
     print(f"hall_flow_exhaustive_3x3={square3}")
     print(f"hall_flow_rectangular_2x3_with_cemetery={cemetery}")
     print(f"complete_off_diagonal_formula_checks={complete}")
+    print(f"complete_off_diagonal_cemetery_formula_checks={complete_cemetery}")
     print(f"normalized_formula_checks={normalized}")
     print("word_hostile=three_positive_strata margins_equal=1 "
           "aligned_hit=full swapped_hit=0")

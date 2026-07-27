@@ -2,6 +2,7 @@ hall_flow_exhaustive_2x2=1440
 hall_flow_exhaustive_3x3=189440
 hall_flow_rectangular_2x3_with_cemetery=8896
 complete_off_diagonal_formula_checks=80018
+complete_off_diagonal_cemetery_formula_checks=12614
 normalized_formula_checks=80018
 word_hostile=three_positive_strata margins_equal=1 aligned_hit=full swapped_hit=0
 two_root_F13_nontrivial_colour_checks=12/12

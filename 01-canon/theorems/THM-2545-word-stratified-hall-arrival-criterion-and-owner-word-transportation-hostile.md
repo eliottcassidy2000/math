@@ -5,10 +5,10 @@ status: >
   PROVED + VERIFIED-EXACT.  The theorem is an abstract finite weighted
   transportation result and an exact hostile at the current THM-2461/2537
   semantic interface.  It proves that the recorded owner-word, selected-head,
-  target-root, character, and one-point marginal data do not force the
-  positive target hit in THM-2537 equation (56).  It does not assert that the
-  hostile is a physical scalar-cover row, construct a later target-active
-  field, exclude a row, or prove LRC(14).
+  and character data, even supplemented by fixed later target-root marginals,
+  do not force the positive target hit in THM-2537 equation (56).  It does not
+  assert that the hostile is a physical scalar-cover row, construct a later
+  target-active field, exclude a row, or prove LRC(14).
 source: codex-2026-07-27-word-stratified-arrival-hall
 depends_on:
   - THM-2461-temporal-blocker-word-cocycle-and-diagonal-polarized-repair-boundary
@@ -20,8 +20,8 @@ related:
   - THM-2542-seven-chart-cech-holonomy-and-c91-arrival-obstruction
 script: 04-computation/lrc14_word_stratified_hall_arrival_thm2545.py
 output: 05-knowledge/results/lrc14_word_stratified_hall_arrival_thm2545.out
-script_sha256: 4cc1192afe646bba1eebada87a57ed04b586951b16720a3bc8328f20cdedb6aa
-output_sha256: 327179e3fb578d9aaa2f489263e887a85c30a546ff7234f13f022f0b2f2c2b1f
+script_sha256: 80799fea9575e055682f2df60d3b3ffc9e1724703fe261b0c379ebf87f4fa1ab
+output_sha256: c0adf0ef75e458486bb1750f0bd45f209cc66c939b715f012ce3c1da3cf330e4
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -57,8 +57,9 @@ one actual ancestry.
 
 ## 1. The typed joint object
 
-Let `R` be a finite root set and add a cemetery symbol `partial`.  Work on a
-finite measure space `(Omega,nu)`, where in the THM-2537 application
+Let `R` be a finite root set and add a cemetery symbol `partial`.  Work on the
+selected nonconstant packet as a finite measure space `(Omega,nu)`, where in
+the THM-2537 application
 
 ```text
 d nu(z)=g(z) Psi_tau(e(z)) dz.                                (3)
@@ -270,7 +271,7 @@ Thus the live canon currently supplies neither:
 
 - the later categorical root map `b` in (4);
 - the joint cells `C^sigma_(t,s)` in (5);
-- a compatibility graph smaller than (14); nor
+- a root compatibility graph together with a Hall-deficient subset; nor
 - a word-stratified overload (2).
 
 Even granting the first item, granting word inheritance at the later stage,
@@ -373,10 +374,10 @@ The hostile (20) can be tensored, word by word, with the entire finite object
 in (24).  Keep its cut coefficient, stalk root, owner atom, graft delay,
 target covector, and both torsor phases fixed, and attach the later semantic
 root by the aligned or swapped table.  The word totals, selected-head and
-target-root marginals, all `432` nonzero coefficient slots, owner loop, target
-charge, and both zero torsor collapses remain unchanged; (23) still changes
-from full to zero.  The exact companion verifies this independent-tensor
-control.
+granted later-target-root marginals, all `432` nonzero coefficient slots,
+owner loop, target charge, and both zero torsor collapses remain unchanged;
+(23) still changes from full to zero.  The exact companion verifies this
+independent-tensor control.
 
 Thus the 42-cut result does not fail.  It lands exactly one categorical level
 before (1): coefficient ancestry has been aligned, while event ancestry has
@@ -424,7 +425,8 @@ Both executions reproduce
 The referee independently compares weighted Hall inequalities with integer
 max flow on every support graph in `189440` three-by-three cases, `1440`
 two-by-two cases, and `8896` two-by-three cases with a cemetery column.  It
-checks (16)--(18) in `80018` complete-off-diagonal margin pairs, realizes all
-three owner-word hostiles, verifies their twelve nontrivial root colours and
-two-root minimality, and checks the `42`-cut/`432`-slot typed-sidecar tensor
-control together with both exact character collapses.
+checks (16)--(18) in `80018` complete-off-diagonal margin pairs and the
+cemetery extension in another `12614` pairs, realizes all three owner-word
+hostiles, verifies their twelve nontrivial root colours and two-root
+minimality, and checks the `42`-cut/`432`-slot typed-sidecar tensor control
+together with both exact character collapses.
