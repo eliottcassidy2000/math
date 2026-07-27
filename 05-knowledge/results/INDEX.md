@@ -2181,3 +2181,19 @@ factorization.  It checks the upgraded fixed-mode locus floors `2/7,3/7`,
 the unit-mask collision convolution on every primitive colour, and all `2,366`
 affine pushforwards to `Z/13` and `Z/169`; every pushforward is zero.  Normal
 and optimized runs byte-match the stored `PASS` transcript.
+
+### lrc14_truncated_radon_escape_probe.out
+
+Independent exact referee for the **THM-2507 truncated-Radon candidate**; this
+artifact does not itself promote a reserved theorem.  On the `78`-dimensional
+row-zero space it obtains rank `72` and the exact six-dimensional
+`h`-independent kernel.  All `924` choices of six nonzero slopes have rank
+`72` modulo `101`, hence rank `72` over `Q` because the explicit kernel gives
+the matching upper bound.  An integral `L1=56` hostile realizes exactly five
+bad and seven good nonzero slopes for every `C_13` colour, showing the abstract
+count is sharp but not claiming realization in the `L1<=18` THM-2436 atlas.
+The THM-2506 two-row control has all twelve slopes good and absolute colour
+norms from `13` to `35,503`.  Finally, a `kappa=2`, `tau=1` CRT-translation
+hostile proves that the ordered-representative wrap cannot be replaced by a
+global cyclic output translation.  Normal and optimized runs byte-match the
+stored transcript.

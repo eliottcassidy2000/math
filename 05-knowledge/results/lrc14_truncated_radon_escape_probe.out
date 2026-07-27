@@ -1,0 +1,14 @@
+row-zero domain dimension: 78
+all-nonzero-slope ranks mod 101,103: 72 72
+kernel dimension: 6 (the h-independent zero-sum columns)
+all 924 six-nonzero-slope banks have exact rational rank: 72
+sharp integral witness L1: 56
+sharp bad nonzero slopes for every alpha: 1 2 3 4 5
+sharp good nonzero slopes for every alpha: 7
+THM-2506 two-row hostile L1 / good slopes: 4 12
+THM-2506 hostile absolute C13 norm range: 13 35503
+CRT-translation carry witness kappa/tau: 2 1
+before: 0 0 0 -1 0 0 1 0 0 0 0 0 0
+after:  0 0 1 1 0 0 0 -1 0 -1 0 0 0
+after is not a cyclic translate of before: PASS
+ALL EXACT CHECKS PASSED
