@@ -2,20 +2,22 @@
 id: THM-2607
 title: "Constant-six rail-boundary holonomy invoice"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On THM-2600's literal common-x q=0 carrier, 138 of the 162 positive
   constant-six middle rails have unit primitive Bockstein.  Their complete
   seven-clock choice polytope has 900 selectors; 891 have nonzero oriented
   rail boundary.  If n is the number of theta-one rails, the retained
-  physical endpoints give c=w-v=7 on those n edges and zero otherwise, so
-  the cyclic correction is 7n and exactly cancels THM-2542's constant-a
-  class when a=-n mod 13.  The forward orientation realizes every marker
+  physical endpoints give c=w-v=7 on those n edges and zero otherwise.
+  After granting the stated rail-root/deck-root identification, the cyclic
+  correction is 7n and exactly cancels THM-2542's constant-a class when
+  a=-n mod 13.  The forward orientation realizes every marker
   a=6,...,12 on 57 displacement/marker/count lanes; the published THM-2600
   selector has sums 10 at s=6,11 and 7 at s=8, matching a=6,6,12.
   Each matched combined cochain is exact and has exactly thirteen vertex
-  gauges.  Equivalently, the two rail edges are the C91 lifts 78 and 85
-  of one C7 clock edge; the combined lifted loop closes exactly on the
-  same marker lanes.  This is an abstract root/rail local-system intertwiner only:
+  gauges.  In the corresponding conditional CRT normal form, the two rail
+  endpoint corrections are represented by the C91 lifts 78 and 85 of one
+  C7 clock edge; the combined lifted loop closes exactly on the same marker
+  lanes.  This is an abstract root/rail local-system intertwiner only:
   the natural chart rotation x->x+m/91 moves future digit six into the
   pairs {4,5},{2,3},{0,1},{11,12},{9,10},{7,8}, giving zero adjacent-chart
   overlap with the entire depth-five arrival/future toothpick.  Chronological
@@ -43,7 +45,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2607 -- constant-six rail-boundary holonomy invoice
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2602 shows that a root chosen separately at every chart contributes
 only a telescoping vertex coboundary.  THM-2600 contains a different object:
@@ -125,6 +127,11 @@ Thus the fixed `q=0` carrier has
 891 selectors with n>0,
 57 distinct (s,marker,n) count-level lanes.                (7)
 ```
+
+Here a selector is one admissible edge choice in each clock chart, i.e. one
+element of the Cartesian product of the seven admissible sets in the table.
+The count does not assert that the seven positive rail cells have a common
+point, nor that their masses multiply or admit a uniform lower bound.
 
 For any one selector, (4) gives the cyclic correction
 
@@ -237,10 +244,11 @@ necessary sum invoice: after granting the root/rail identification and the
 orientation (3), the tensor product of the constant-`a` root local system
 with the selected rail local system is abstractly trivial.
 
-### 4.1 The `C_91` mapping-cylinder normal form
+### 4.1 The conditional `C_91` mapping-cylinder normal form
 
-The same calculation has a canonical lifted-loop form.  Use the exact
-sequence
+Once the rail-root/deck-root identification and the positive chart-clock
+orientation have been granted, the same calculation has a canonical
+lifted-loop form.  Use the exact sequence
 
 ```text
 0 -> F_13 --iota--> Z/91Z --pi--> F_7 -> 0,
@@ -249,8 +257,8 @@ iota(r)=14r mod 91,                 pi(z)=z mod 7.           (20a)
 ```
 
 Thus `iota(F_13)` is exactly the kernel of the clock projection `pi`.
-The unique lift of one positively oriented clock edge whose kernel/root
-correction is `c` is
+In these conditional CRT coordinates, the unique lift of one positively
+oriented clock edge whose kernel/root correction is `c` is
 
 ```text
 delta(c)=78+iota(c) mod 91,
@@ -258,7 +266,8 @@ delta(c)=78+iota(c) mod 91,
 pi(delta(c))=1,                    delta(c)=c mod 13.        (20b)
 ```
 
-The two physical constant-six rails are therefore
+The two physical constant-six endpoint corrections are therefore represented
+in this conditional normal form by
 
 ```text
 theta-zero: delta(0)=78,
@@ -449,4 +458,12 @@ All decisions are exact and every check raises under optimized Python.
 Normal and optimized executions byte-match the stored transcript after LF
 normalization.
 
-QED (candidate; independent audit pending).
+An independent hostile audit reran normal and optimized executions, matched
+both byte-for-byte to the stored transcript, rederived the selector histogram
+from the admissible-set product, checked the cochain sign against THM-2542,
+and checked the endpoint and empty-digit typing against THM-2600.  It also
+verified that the CRT residues `78,85` are conditional coordinates rather
+than a supplied physical intertwiner.  No numerical or theorem-scope defect
+remains after that wording repair.
+
+QED.

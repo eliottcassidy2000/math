@@ -13,7 +13,10 @@ status: >
   origin, the unique connected GL-invariant partial cube is K1,3.  The six
   unordered pairs carry the octahedral incident/disjoint association
   scheme and no S4-invariant tournament; their four opposition-compatible
-  C6 partial cubes are themselves equivalent to choosing an origin.
+  C6 partial-cube subgraphs on the labelled edge set are themselves
+  equivalent to choosing an origin.  Identifying an external labelled C6
+  with that carrier has, in addition, a D12 coordinate gauge: there are
+  4*12=48 opposition-preserving identifications in all.
   Feuerbach tangency supplies precisely such an origin on the in/excircle
   sign labels, while four-body Jacobi squares realize the three resolvent
   channels.  These are exact label/kinematic correspondences, not N-body,
@@ -177,8 +180,10 @@ grading, or any physical supersymmetry.
 
 ## 4. Quartic resolvent channels are exactly the three diagonals
 
-On the separable depressed open of THM-2598, the four reconstruction
-sections form an affine `V4` torsor `X`.  Its three nonidentity translations
+On the separable depressed `q != 0` open of THM-2598, the four reconstruction
+sections form an affine `V4` torsor `X`.  At `q=0` the reconstruction fibre
+degenerates and this torsor statement is unavailable.  Its three
+nonidentity translations
 are
 
 ```text
@@ -244,9 +249,23 @@ first half; there are
 ```
 
 unoriented cycles.  The four graphs in (17) are precisely the `C_o`, and
-`o -> C_o` is `S4`-equivariant.  Thus identifying an abstract six-vertex
-bicycle/partial cube with the six-edge quartic carrier spends exactly one
+`o -> C_o` is `S4`-equivariant.  Thus choosing an opposition-compatible
+`C6` **subgraph on the already labelled set `E`** spends exactly one
 quartic-origin choice.
+
+An identification with an external abstract labelled hexagon is a larger
+datum.  For each selected image graph `C_o`, there are `|Aut(C6)|=12`
+graph isomorphisms onto it, the dihedral coordinate gauge `D12`.
+Equivalently, an opposition-preserving bijection from the external six
+vertices to `E` may be chosen in
+
+```text
+3! * 2^3 = 48 = 4 * 12                                      (17a)
+```
+
+ways: four possible image subgraphs/origins and twelve dihedral coordinates
+over each one.  Hence an origin canonically selects the subgraph, not a
+labelled parametrization of its cycle.
 
 This boundary is also invisible to gracefulness.  `C6` is not graceful:
 modulo two, the sum of its required edge differences would be
@@ -323,11 +342,14 @@ Z=s_3*2=x_1-x_2-x_3+x_4                              (24)
 satisfy
 
 ```text
+X^2=4u_1,  Y^2=4u_2,  Z^2=4u_3,
 X^2+Y^2+Z^2=4 sum_i x_i^2,       u_1+u_2+u_3=sum_i x_i^2.     (25)
 ```
 
-The three double transpositions in (13) act on `(X,Y,Z)` by the three
-even sign flips, so their squares descend to the `S3` channel permutation.
+Thus `(X,Y,Z)` are scaled signed coordinates, whereas the literal resolvent
+roots are `(X^2,Y^2,Z^2)/4=(u_1,u_2,u_3)`.  The three double transpositions
+in (13) act on `(X,Y,Z)` by the three even sign flips, so the coordinate
+squares descend to the `S3` channel permutation.
 This is exactly the cubic resolvent, not merely a cluster-count analogy.
 
 On the real chamber `x_1<x_2<x_3<x_4`, write the positive consecutive gaps
@@ -367,7 +389,8 @@ But every promoted structure spends a sidecar:
 |---|---|---|
 | one `C4` parity face | one resolvent channel/covector | absolute even class, section |
 | invariant `K1,3` | one origin/section | preferred channel |
-| one edge-state `C6` | one origin | tournament orientation |
+| one `C6` subgraph on labelled `E` | one origin | cycle coordinates, tournament orientation |
+| external labelled `C6` identification | one origin plus one `D12` gauge | tournament orientation |
 | a six-vertex tournament | non-invariant ordered gauge | affine symmetry |
 
 Therefore neither the modular finite quotient, Feuerbach labels, a graceful
