@@ -1,0 +1,37 @@
+== THM-2557: the doubly centered transfer lattice ==
+  V_00 rank: (7-1)(13-1) = 72
+  basis: 72 integral row/column rectangles
+  all 12 nonzero slopes preserve both zero margins
+  ranks mod 13: 66 in all 12 cases
+  ranks mod 2:  72 in all 12 cases
+
+== exact determinant, moment quotient, and Smith form ==
+  |det(D_a on V_00)|: 4826809 = 13^6 for all 12 slopes
+  mu_k(g)=sum_r r*g(k,r) mod 13; sum_k mu_k=0
+  mu is onto the 6-dimensional zero-sum moment space
+  every transferred rectangle has mu=0
+  equal indices give im(D_a)=ker(mu)
+  Smith form: 1^66 direct-sum 13^6
+
+== signed-current / nonnegative-coupling cone boundary ==
+  explicit nonzero signed transfers: 12/12
+  each has zero row and column margins and both signs
+  any nonnegative table with either zero-margin family is identically zero
+  THM-2550(B) nonzero d_M,d_C witnesses: byte-anchored
+  consequence: every D_a d_M and D_a d_C survives, but remains signed
+  THM-2550(A) drift is a different k=2 packet and is not composed here
+
+== exact THM-2545 Hall controls (one word stratum) ==
+  cemetery zero-arrival checks: 8192/8192
+  offset b=h+1 zero-arrival checks: 8192/8192
+  diagonal-only support: singleton Hall deficit detected
+  neither zero-arrival control is supplied by a signed transfer current
+
+== typed-coordinate verdict ==
+  transfer coordinates: owner/source clock ell and response co-shift s
+  Hall coordinates: selected-head root h and genuinely later active root b
+  no lawful map (ell,s)->(h,b) is assumed or tested
+  missing atom coordinate: common-base future root b, equivalently d=b-h
+  future immediate digit e_1 plus its carry/intertwiner is still required
+
+all checks passed
