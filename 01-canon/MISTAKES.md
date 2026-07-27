@@ -9,6 +9,25 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-298 (2026-07-28, concurrent THM-2611 reservation) -- a local reservation broadcast was mistaken for a shared proof-graph reservation
+
+- **What happened:** the endpoint-pair parabolic-transvection theorem reserved
+  `THM-2611` after a fresh `origin/main` and all-remote-ref scan, and broadcast
+  that choice.  Its empty stub was committed locally but could not yet be
+  pushed while stronger concurrent theorem edits were being integrated.
+  Before the next fetch, `origin/main` assigned `THM-2611` to the distinct
+  principal-deck holotopy theorem.
+- **First failed implication:** a local commit plus coordination broadcast is
+  not a proof-graph reservation.  Only a pushed, current shared stub occupies
+  the namespace; an earlier clean scan says nothing about assignments made
+  before the local branch rejoins `origin/main`.
+- **Repair:** the principal-deck theorem retains `THM-2611`.  The unpublished
+  endpoint theorem, script, and output are coherently moved to the freshly
+  all-ref-checked `THM-2615` namespace before promotion.  Mathematics is
+  unchanged.  Future sessions that cannot push a reservation immediately
+  must treat its ID as provisional and repeat the full remote/YAML/history
+  scan immediately before integration.
+
 ## MISTAKE-297 (2026-07-27, THM-1375 / degree-four Keller monodromy) -- a generic deck involution was treated as a polynomial automorphism of affine space
 
 - **What was claimed:** THM-1375 §1 promoted a “Smith selection rule” to an

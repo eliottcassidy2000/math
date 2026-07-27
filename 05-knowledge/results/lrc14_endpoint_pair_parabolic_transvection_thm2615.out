@@ -1,0 +1,15 @@
+== endpoint-pair parabolic transvection ==
+field: F_13
+projective line: 14 = 13 affine points + 1 fixed boundary
+endpoint matrix census: {'q_zero': 169, 'q_nonzero_delta_zero': 2184, 'q_nonzero_delta_nonzero': 26208}
+common-translation determinant histogram: {0: 13, 1: 13, 2: 13, 3: 13, 4: 13, 5: 13, 6: 13, 7: 13, 8: 13, 9: 13, 10: 13, 11: 13, 12: 13}
+difference DFT: 169 diagonal characters inside 28561 joint endpoint characters
+same-q hostile: all 169 diagonal characters agree; one off-diagonal character separates Delta=0 from Delta=1
+fixed (q,Delta) fibre size: 13
+nondegenerate endpoint edges: 26208
+distinct nontrivial transvections: 168 = 14 fixed points x 12 powers
+parameter multiplicity per transvection: 12
+V4 endpoint symmetries: row reversal, target swap, double swap PASS
+chronology: fixed q,Delta projective gluing equals vector gluing
+parabolic hostile: seven steps nonclosing; thirteen steps closing
+exact assertions passed: 605997
