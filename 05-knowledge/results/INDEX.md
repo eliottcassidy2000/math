@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `lrc14_antipodal_radon_cospan_thm2509.py` -> matching `.out`
+  [THM-2509 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED;
+  FINITE-EXACT ATLAS SHARPENING].  At least seven good toothpick slopes force
+  a complete antipodal pair.  Its two-leg chart is an injective relabelling
+  of all `91` defect entries, its marginals are `R_tau` and `R_-tau`, and CRT
+  carry is retained as a strip permutation.  A fixed pair survives on at
+  least `1/6` of the essential locus; the complete THM-2436 atlas gives
+  `5/6`, hence parent-locus floors `5/21` and `5/14`.  The companion checks
+  all `792` seven-slope sets, `1,092` chart rows and `99,372` conjugacy rows;
+  normal/optimized/stored transcripts byte-match.  Hashes are
+  `58cb8f24...eeb0` / `7f31f6cd...89ed`.  The bounds are pointwise, the chart
+  belongs to an already-empty high-septimal branch, and no live physical
+  owner/target/deep current follows.
 - `lrc14_affine_cut_bundle_covariance_thm2508_referee.py` -> matching `.out`
   [THM-2508 PROVED + INDEPENDENT EXACT REFEREE].  On the full affine-cut
   bank it verifies coefficientwise
