@@ -9,6 +9,37 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-294 (2026-07-28, concurrent theorem reservation) -- the audited theta contraction collided a third time at THM-2590
+
+- **What happened:** after the second namespace repair, the theta contraction
+  was provisionally moved to `THM-2590` on the session branch.  While its
+  stalk semantics were being audited, `origin/main` independently assigned
+  `THM-2590` through `THM-2593` to four earlier-pushed results.
+- **Repair:** a fresh remote scan found `THM-2594` free, so the contraction is
+  now `THM-2594-realized-theta-slaved-contraction-at-the-r5-window.md`.
+  The earlier numbers retain their first-pushed meanings.  This third repair
+  is also why current citations use ID plus slug rather than ID alone.
+
+## MISTAKE-293 (2026-07-28, THM-2594 stalk typing) -- one ancestry fibre was described as one circle point, and an exact return exponent as an eventual lawful clock
+
+- **What was written:** the first theta-slaved contraction draft said that
+  all THM-2449 response factors were evaluated at the same stalk point and
+  called `k=6` the smallest lawful clock in its congruence class.
+- **Why it was wrong:** in the exact Boolean expansion, the owner cell is
+  evaluated at the collision-chart node `w_u`, the deep and delayed-word
+  factors at its descendant `X_(u,a)`, and the source factor at the linked
+  node `Y_(q,e')`.  They share one base `y` and one finite ancestry fibre,
+  but not one circle point.  Also, THM-2449 only licenses its eventual clock
+  law for `k>=k_0`; the residue calculation `k=6 mod 16380` does not prove
+  `6>=k_0`.
+- **Strongest survivor / repair:** the `k=6` table and its nonzero
+  cyclotomic contraction are computed directly and exactly, so they need no
+  eventual-overlap inference.  Sheet-independence lets every linked-node
+  factor be pulled through the finite Boolean ancestry sum, proving a genuine
+  same-fibre product before marginalization.  THM-2594 is therefore an exact
+  auxiliary multilevel-stalk contraction, not THM-2449's one-point lawful
+  response table and not a physical target current.
+
 ## MISTAKE-292 (2026-07-28, concurrent theorem reservation) -- the first repair of the theta-slaved contraction collided again at THM-2588
 
 - **What happened:** MISTAKE-291 repaired the theta-slaved contraction's
@@ -20,12 +51,13 @@ Format per entry:
 - **Why it was wrong:** checking the local tree before a concurrent repair was
   not enough.  A theorem-ID repair must be rebased onto the current shared
   namespace before its replacement ID is treated as canonical.
-- **Repair:** after fetching and rebasing onto the live shared surface, the
-  theta-slaved contraction is renamed `THM-2590` in
-  `THM-2590-realized-theta-slaved-contraction-at-the-r5-window.md`.
+- **Repair (superseded by MISTAKE-294):** after fetching and rebasing onto the
+  then-live shared surface, the theta-slaved contraction was renamed
+  `THM-2590`; a third concurrent collision required the final `THM-2594`
+  name.
   `THM-2588` remains the fold-cascade theorem and `THM-2589` remains reserved
   by HYP-9075.  Historical messages and the intermediate MISTAKE-291 wording
-  remain provenance; current references use `THM-2590`.
+  remain provenance; current references use `THM-2594`.
 
 ## MISTAKE-291 (2026-07-28, concurrent theorem reservation) -- the realized theta-slaved contraction reused live ID THM-2581
 
@@ -38,10 +70,12 @@ Format per entry:
   sharing its ID makes dependencies and status searches ambiguous even though
   the filenames differ.
 - **Repair (superseded by MISTAKE-292):** the first repair renamed the later
-  candidate `THM-2588`; a second concurrent collision required the final
-  `THM-2590` name.  Historical broadcast messages retain their original text
+  candidate `THM-2588`; a second concurrent collision required the
+  intermediate `THM-2590` name, followed by the final `THM-2594` repair in
+  MISTAKE-294.
+  Historical broadcast messages retain their original text
   as provenance only.  The original `THM-2581` remains the canonical
-  owner-clock host, while `THM-2590` remains a separately audited candidate
+  owner-clock host, while `THM-2594` remains a separately audited candidate
   contraction.
 
 ## MISTAKE-290 (2026-07-28, THM-2576 resultant convention) -- a PRS degree reorder lost the odd-by-odd resultant swap sign

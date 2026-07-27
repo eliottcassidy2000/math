@@ -12,9 +12,9 @@ machine=opus  script-date=2026-07-28  run-date=2026-07-27
     => unique affine invariant theta = t - 2u (THM-2471 (46)-(47)),
        u = CURRENT-branch collision root (the branch of (45))
     stalk sheets (THM-2471 (28)): w_u=(y+u)/13, X_(u,a)=(w_u+a)/d
-    response-side THM-2449 (14)-(16) Boolean factors AT THE SAME
-    STALK POINT (exact index arithmetic, proved by 2-line integer
-    identities and re-verified in [2],[3]):
+    THM-2449-shaped Boolean factors on LINKED NODES OF ONE FINITE
+    ANCESTRY STALK (not one circle point; MISTAKE-293): exact
+    identities re-verified in [2],[3]
       owner clock d(13x - ell/7) at x=w_u: 13w_u = y+u == y (mod 1)
         => cell_ell(y) = 1_(||y - ell/7|| < 1/14)   [root-blind]
       deep probe d(c_3 x - t/13) at x=X_(u,a):
@@ -25,11 +25,11 @@ machine=opus  script-date=2026-07-28  run-date=2026-07-27
            law: sum_theta DEEP_theta = 2 - d(2y mod 1)  a.e.
            (per root u exactly t in {2u,2u+1,2u+2} mod 13 can fire)
       word factor Q^eps_ell(R x) at x=X_(u,a), response clock R=13^k:
-        CLOCK LICENSE (sigma-independent THM-2449 (25)-(31) class
-        arithmetic, = the replica companion k=6 class logic):
+        CLOCK ARITHMETIC (THM-2449 (25)-(31) uses this class only
+        eventually; no assertion that k=6 exceeds its k_0):
         T_DEN = 13^6 * D0, D0 = 61704720, ord_D0(13) = 16380;
-        class k == 6 (mod 16380), k >= 6; smallest lawful clock
-        k = 6, eps = 13^6 mod 7 = +1
+        class k == 6 (mod 16380); smallest exact sheet-return
+        exponent k = 6, evaluated directly; eps=+1
         at k=6: R X_(u,a) = 13(w_u+a) = y + u + 13a == y (mod 1)
         (sheet-exact AND root-blind; unique such clock), so
         Q^(+1)_ell(R X) = QW_ell(y) = T_b(y)(1 - d(13y - ell/7)),
@@ -81,38 +81,38 @@ machine=opus  script-date=2026-07-28  run-date=2026-07-27
     verified against direct ||.|| Fraction tests: PASS
 
 [4] exact profiles f, U, V and their anchors
-    [    11.7s] f = 1_Q P^2 1_E: 120234 weighted pieces;
+    [     4.5s] f = 1_Q P^2 1_E: 120234 weighted pieces;
     int f = 35505957232/16132831966251 == census rho^(2)({b}): PASS
-    [    12.3s] U = P_(13^5) f: 24 pieces (num/den 62748517);
+    [     4.7s] U = P_(13^5) f: 24 pieces (num/den 62748517);
     V = P_(13^5) e: 15 pieces (num/den 371293);
     int U == int f and int V == mu(E_1) (P_m preserves integrals): PASS
     U*V == 0 IDENTICALLY as a profile (first-collision disjointness,
     THM-2471 (26)): PASS
-    [    12.3s] 13 chart windows extracted for U and V
+    [     4.7s] 13 chart windows extracted for U and V
 
 [5] THE ONE TABLE: 169 pair profiles x 46 refiner integrals (exact)
     entry denominators: DENC = 169 * 13^10 * T_DEN = 6939029398456584394954868880
     DENC factored: 2^4 * 3^3 * 5 * 7^2 * 11 * 13^18 * 53
-    [    21.7s] current root u= 0: 13 pairs done (gates PASS)
-    [    27.3s] current root u= 1: 13 pairs done (gates PASS)
-    [    32.1s] current root u= 2: 13 pairs done (gates PASS)
-    [    38.7s] current root u= 3: 13 pairs done (gates PASS)
-    [    42.5s] current root u= 4: 13 pairs done (gates PASS)
-    [    45.6s] current root u= 5: 13 pairs done (gates PASS)
-    [    49.5s] current root u= 6: 13 pairs done (gates PASS)
-    [    52.2s] current root u= 7: 13 pairs done (gates PASS)
-    [    55.8s] current root u= 8: 13 pairs done (gates PASS)
-    [    60.3s] current root u= 9: 13 pairs done (gates PASS)
-    [    64.3s] current root u=10: 13 pairs done (gates PASS)
-    [    68.7s] current root u=11: 13 pairs done (gates PASS)
-    [    75.2s] current root u=12: 13 pairs done (gates PASS)
+    [     6.7s] current root u= 0: 13 pairs done (gates PASS)
+    [     8.3s] current root u= 1: 13 pairs done (gates PASS)
+    [    10.0s] current root u= 2: 13 pairs done (gates PASS)
+    [    12.0s] current root u= 3: 13 pairs done (gates PASS)
+    [    13.5s] current root u= 4: 13 pairs done (gates PASS)
+    [    15.1s] current root u= 5: 13 pairs done (gates PASS)
+    [    17.4s] current root u= 6: 13 pairs done (gates PASS)
+    [    19.0s] current root u= 7: 13 pairs done (gates PASS)
+    [    20.6s] current root u= 8: 13 pairs done (gates PASS)
+    [    22.1s] current root u= 9: 13 pairs done (gates PASS)
+    [    23.7s] current root u=10: 13 pairs done (gates PASS)
+    [    25.3s] current root u=11: 13 pairs done (gates PASS)
+    [    27.7s] current root u=12: 13 pairs done (gates PASS)
     per-pair gates (cell partition, deep root-count law, refined
     deep law) all PASS at all 169 pairs; diagonal pairs vanish
     IDENTICALLY (zero-sum law (g2)): PASS
     total service sum_(u,q) int A F = 169*I_5 = 48602521488933856/1996669193081744181: PASS
 
 [6] route-2 independent aggregate (folded service profiles)
-    [    76.0s] a = fold_13 U (24 pieces), b = fold_13 V (16 pieces);
+    [    27.8s] a = fold_13 U (24 pieces), b = fold_13 V (16 pieces);
     EVERY aggregate refiner integral recomputed from the a*b
     profile (different pairing geometry) == pairwise sums: PASS
 
@@ -225,12 +225,17 @@ machine=opus  script-date=2026-07-28  run-date=2026-07-27
     * THM-2512 (15) factorization identity at 4 quadruples: PASS
     * route-2 aggregate equality (46 integrals): PASS  ([6])
 
-[13] scope and verdict (MISTAKE-281/283/286/287 typing)
+[13] scope and verdict (MISTAKE-281/283/286/287/293 typing)
     * TYPED row THM-2309 (25); NOT an asserted scalar cover.
     * Every pairing in this run sits INSIDE one integral over one
       common base point before any marginalization or DFT
       (MISTAKE-281); fibre labels (u,s,ell,theta) are carried, and
       all centring terms are marginals of the one table.
+    * The owner cell lives at w_u, the deep/word factors at X_(u,a),
+      and the source at Y_(q,e').  These are linked nodes of one
+      finite Boolean stalk, NOT one circle point and NOT THM-2449's
+      one-variable H^R table (MISTAKE-293).  k=6 is direct-exact;
+      no claim that it exceeds THM-2449's eventual k_0.
     * The theta = t - 2u map is THM-2471 (44)-(47)'s deep-root
       sidecar invariant at the r = 5 window -- THM-2471's candidate
       realization, NOT 'THM-2512's bridge' (MISTAKE-286): THM-2512
@@ -247,4 +252,4 @@ machine=opus  script-date=2026-07-28  run-date=2026-07-27
     applied to this rational array).  It is NOT a THM-2512
     bridge theorem and NOT a physical current.
 
-[    76.0s] all checks passed
+[    27.9s] all checks passed

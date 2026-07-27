@@ -29,9 +29,9 @@ OBJECT (all conventions logged; files override summaries):
     Stalk sheets (THM-2471 (28)):  w_u = (y+u)/13,  X_{u,a} = (w_u+a)/d,
     a in Z/dZ (current branch, carrying 1_Q and the packet ancestry).
 
-RESPONSE-SIDE REFINEMENT (THM-2449 (14)-(16) Boolean factors, evaluated AT
-THE SAME STALK POINT -- inside the one y-integral, never at a separately
-integrated present point; MISTAKE-281 discipline):
+RESPONSE-SIDE REFINEMENT (THM-2449 (14)-(16)-shaped Boolean factors on
+LINKED NODES OF ONE FINITE ANCESTRY STALK -- inside one y-integral, never
+as separately integrated controls; MISTAKE-281/293 discipline):
   * owner-clock factor d_{1,ell}(x) = d(13 x - ell/7) at the chart point
     w_u:   13 w_u = y + u  ==>  d(y - ell/7).  ROOT-BLIND at the stalk
     (u drops out as an integer): the owner clock reads the base exactly.
@@ -48,14 +48,14 @@ integrated present point; MISTAKE-281 discipline):
     the sidecar):  sum_theta DEEP_theta = 2 - d(2y mod 1)  pointwise a.e.
     Per fixed root u, exactly the deep labels t == 2u, 2u+1, 2u+2 (mod 13)
     can fire: the slaving transports the deep support with the root.
-  * word factor Q^eps_ell(R x) at response clock R = 13^k (THM-2449 (15);
-    the THM-2409 skew-diagonal is mandatory).  CLOCK LICENSE for sigma={b}:
-    the exact THM-2449 (25)-(31) clock law lives on classes
-    k == K13 (mod ord_{D0}(13)), k >= K13, with T_DEN = 13^K13 D0, K13 = 6
-    -- the same k = 6 class logic as the audited replica companion
-    (04-computation/lrc14_replica_dichotomy_typed_row_opus_20260727.py);
-    the class arithmetic is word-independent, so it applies verbatim at
-    sigma = {b}.  Smallest lawful clock in the class: k = 6,
+  * word factor Q^eps_ell(R x) at response exponent R = 13^k
+    (THM-2449 (15); the THM-2409 skew-diagonal is mandatory).  CLOCK
+    ARITHMETIC for sigma={b}:
+    the THM-2449 (25)-(31) eventual clock law uses classes
+    k == K13 (mod ord_{D0}(13)) beyond an unspecified k_0, with
+    T_DEN = 13^K13 D0 and K13 = 6.  The class arithmetic is word-independent,
+    but does NOT prove 6 >= k_0.  Here k = 6 is instead evaluated directly
+    and exactly.  It is the smallest sheet-return exponent in the class,
     eps = 13^6 mod 7 = +1.  At k = 6 the word factor is SHEET-EXACT on the
     current branch:  R X_{u,a} = 13(w_u + a) = y + u + 13a == y (mod 1),
     for every sheet a and root u; k = 6 is the unique clock with this
@@ -228,7 +228,7 @@ while x0 != 1:
     x0 = x0 * 13 % D0
     ORD += 1
     require(ORD < 10**7, "order search overflow")
-KRESP = 6                            # smallest lawful clock in the class
+KRESP = 6                            # smallest exact sheet-return exponent
 EPS = pow(13, KRESP, 7)
 require(EPS == 1, "eps = 13^6 mod 7 = +1")
 
@@ -951,9 +951,9 @@ def main():
     log("    => unique affine invariant theta = t - 2u (THM-2471 (46)-(47)),")
     log("       u = CURRENT-branch collision root (the branch of (45))")
     log("    stalk sheets (THM-2471 (28)): w_u=(y+u)/13, X_(u,a)=(w_u+a)/d")
-    log("    response-side THM-2449 (14)-(16) Boolean factors AT THE SAME")
-    log("    STALK POINT (exact index arithmetic, proved by 2-line integer")
-    log("    identities and re-verified in [2],[3]):")
+    log("    THM-2449-shaped Boolean factors on LINKED NODES OF ONE FINITE")
+    log("    ANCESTRY STALK (not one circle point; MISTAKE-293): exact")
+    log("    identities re-verified in [2],[3]")
     log("      owner clock d(13x - ell/7) at x=w_u: 13w_u = y+u == y (mod 1)")
     log("        => cell_ell(y) = 1_(||y - ell/7|| < 1/14)   [root-blind]")
     log("      deep probe d(c_3 x - t/13) at x=X_(u,a):")
@@ -965,11 +965,11 @@ def main():
     log("           (per root u exactly t in {2u,2u+1,2u+2} mod 13 can fire)")
     log("      word factor Q^eps_ell(R x) at x=X_(u,a), response clock"
         " R=13^k:")
-    log(f"        CLOCK LICENSE (sigma-independent THM-2449 (25)-(31) class")
-    log(f"        arithmetic, = the replica companion k=6 class logic):")
+    log(f"        CLOCK ARITHMETIC (THM-2449 (25)-(31) uses this class only")
+    log(f"        eventually; no assertion that k=6 exceeds its k_0):")
     log(f"        T_DEN = 13^6 * D0, D0 = {D0}, ord_D0(13) = {ORD};")
-    log(f"        class k == 6 (mod {ORD}), k >= 6; smallest lawful clock")
-    log(f"        k = {KRESP}, eps = 13^6 mod 7 = +{EPS}")
+    log(f"        class k == 6 (mod {ORD}); smallest exact sheet-return")
+    log(f"        exponent k = {KRESP}, evaluated directly; eps=+{EPS}")
     log("        at k=6: R X_(u,a) = 13(w_u+a) = y + u + 13a == y (mod 1)")
     log("        (sheet-exact AND root-blind; unique such clock), so")
     log("        Q^(+1)_ell(R X) = QW_ell(y) = T_b(y)(1 - d(13y - ell/7)),")
@@ -1428,12 +1428,17 @@ def stage2(state):
     log("    * route-2 aggregate equality (46 integrals): PASS  ([6])")
     log("")
 
-    log("[13] scope and verdict (MISTAKE-281/283/286/287 typing)")
+    log("[13] scope and verdict (MISTAKE-281/283/286/287/293 typing)")
     log("    * TYPED row THM-2309 (25); NOT an asserted scalar cover.")
     log("    * Every pairing in this run sits INSIDE one integral over one")
     log("      common base point before any marginalization or DFT")
     log("      (MISTAKE-281); fibre labels (u,s,ell,theta) are carried, and")
     log("      all centring terms are marginals of the one table.")
+    log("    * The owner cell lives at w_u, the deep/word factors at X_(u,a),")
+    log("      and the source at Y_(q,e').  These are linked nodes of one")
+    log("      finite Boolean stalk, NOT one circle point and NOT THM-2449's")
+    log("      one-variable H^R table (MISTAKE-293).  k=6 is direct-exact;")
+    log("      no claim that it exceeds THM-2449's eventual k_0.")
     log("    * The theta = t - 2u map is THM-2471 (44)-(47)'s deep-root")
     log("      sidecar invariant at the r = 5 window -- THM-2471's candidate")
     log("      realization, NOT 'THM-2512's bridge' (MISTAKE-286): THM-2512")
