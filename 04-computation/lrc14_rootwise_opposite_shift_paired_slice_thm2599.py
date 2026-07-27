@@ -258,6 +258,42 @@ print(f"  non-LRC unequal-slope root controls: {control_cases}")
 print("  the ordinary mechanism uses k!=a; 13-adic typing guarantees it")
 
 
+print("\n== sharp ordinary pointwise hostile ==")
+hostile_target = 14
+hostile_blocker = 2197
+hostile_y = Fraction(733, 737)
+target_profile = tuple(
+    shift
+    for shift in range(P)
+    if danger(hostile_target * hostile_y + Fraction(shift, P), 1)
+)
+blocker_profile = tuple(
+    shift
+    for shift in range(P)
+    if danger(hostile_blocker * hostile_y - Fraction(shift, P), 1)
+)
+paired_profile = tuple(
+    shift for shift in target_profile if shift not in blocker_profile
+)
+require(target_profile == (1,), "hostile target profile changed")
+require(blocker_profile == (1,), "hostile blocker profile changed")
+require(not paired_profile, "ordinary pointwise hostile acquired a repair")
+hostile_root = floor_q(P * hostile_y)
+require(hostile_root == 12, "hostile physical root changed")
+require(
+    any(
+        profile
+        for _, _, profile in paired_chambers(
+            hostile_target, hostile_blocker, 1, hostile_root
+        )
+    ),
+    "hostile root lost the theorem's positive chamber",
+)
+print(f"  (k,a,y,h)=({hostile_target},{hostile_blocker},{hostile_y},{hostile_root})")
+print(f"  target danger shifts = blocker danger shifts = {target_profile}")
+print("  all paired slices vanish at y, but another chamber survives in I_12")
+
+
 print("\n== toothpick full-shift cylinder control ==")
 sample_target = 12
 sample_blocker = 13

@@ -23,6 +23,11 @@
   non-LRC unequal-slope root controls: 52
   the ordinary mechanism uses k!=a; 13-adic typing guarantees it
 
+== sharp ordinary pointwise hostile ==
+  (k,a,y,h)=(14,2197,733/737,12)
+  target danger shifts = blocker danger shifts = (1,)
+  all paired slices vanish at y, but another chamber survives in I_12
+
 == toothpick full-shift cylinder control ==
   control (k,a,L)=(12,13,1); common cylinder depth: 3
   paired profile sizes by root: (1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2)

@@ -39,8 +39,8 @@ related:
   - THM-2602-commutative-vertex-insertion-and-ordered-transition-curvature-no-go
 script: 04-computation/lrc14_rootwise_opposite_shift_paired_slice_thm2599.py
 output: 05-knowledge/results/lrc14_rootwise_opposite_shift_paired_slice_thm2599.out
-script_sha256: 782d501b09db1cfad212bbbebc5f025e2ac5a27d845a151d52f241402a53b5ec
-output_sha256: 0d63c1cbd3f4af6fa0874df9d2f27fbaa4cac59c093ccd3f03665b6c2087c23d
+script_sha256: 77b6dd9fb8f21329e3510b1511b10bb3e6b9d7a555226850681a024fcc70d014
+output_sha256: 314eb5b9221d5d237e655ab28bcda85bf33bd1f2ca800af0e2acc0bf1059fd22
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -254,6 +254,33 @@ For the canonical application, however,
 ```
 
 so equality cannot occur.
+
+The root-cell quantifier is sharp: unlike (8), the ordinary result is not
+pointwise in `y`.  Take
+
+```text
+k=14,                 a=2197,                 y=733/737.   (19a)
+```
+
+Then
+
+```text
+-ky=ay=56/737 mod 1.
+```
+
+The exact target- and blocker-danger shift profiles are both the singleton
+`{1}`.  Indeed the active displacement is `9/9581<1/14`, while the two
+adjacent displacements are `56/737>1/14` and `746/9581>1/14`.  Hence
+
+```text
+P_s(y)=0                         for every s in F_13.       (19b)
+```
+
+All displayed inequalities are strict, so the same failure holds on an
+open neighbourhood.  This point lies in `I_12`, and another open chamber of
+`I_12` has a nonempty paired profile by the theorem.  Thus the wall-degree
+argument genuinely finds a different point in the same root; it cannot be
+replaced by a universal pointwise deck-covariance claim.
 
 ## 5. A uniform rational-grid chamber floor
 
