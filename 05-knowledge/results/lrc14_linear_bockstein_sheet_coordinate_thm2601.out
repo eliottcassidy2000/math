@@ -1,0 +1,11 @@
+== exact THM-2601 linear Bockstein sheet-coordinate probe ==
+lambda power-basis row: (1, 11, 8, 1, 0, 1)
+lambda(Y_q), q=0..12: (9, 3, 10, 1, 8, 0, 7, 2, 12, 11, 4, 6, 5)
+inverse q=P(t) coefficients low-to-high: (5, 4, 3, 0, 7, 8, 12, 6, 11, 6, 0, 6, 0) degree 11
+successor t(q)->t(q+1) values: (7, 8, 12, 10, 6, 9, 5, 2, 0, 3, 1, 4, 11)
+successor polynomial coefficients low-to-high: (7, 4, 0, 1, 6, 4, 6, 1, 7, 6, 3, 2, 0) degree 11
+successor orbit: one 13-cycle; affine scalar realizations: 0/169
+owner-conjugate lambda rows: ((1, 11, 8, 1, 0, 1), (1, 0, 11, 1, 8, 4), (1, 1, 1, 11, 4, 0), (1, 8, 0, 4, 11, 1), (1, 1, 4, 8, 1, 11), (1, 4, 1, 0, 1, 8))
+affine-covariant linear system: rank 8 certificate rows (0, 1, 2, 3, 4, 5, 6, 7) det 4
+CRT component fibres: {3: ((0,), (1,), (2,), (3,), (4,), (5,), (6,), (7,), (8,), (9,), (10,), (11,), (12,)), 5: ((0,), (1,), (2,), (3,), (4,), (5,), (6,), (7,), (8,), (9,), (10,), (11,), (12,)), 6: ((0,), (1, 9), (2,), (3,), (4, 12), (5,), (6,), (7,), (8,), (10,), (11,))}
+exact checks: separator/inverse/successor/owner/affine/CRT PASS
