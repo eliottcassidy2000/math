@@ -76,8 +76,11 @@ a structural asymmetry ("no room for a collision; only Diophantine rigidity rema
 in-session (S143): the fiber-count STRATIFICATION (3/2/1 on exactly those strata) is NOT yet
 referee-solid — a fast fiber-cubic counter proved UNSOUND at degenerate strata (it undercounts
 (0,1,0): the 0/0 branch of the y-parametrization resolves to a genuine point; S131's Gröbner
-count of 3 stands), so the LEDGER BALANCE below is a hand-derivation pending a corrected exact
-count map; the disc-cube, χ(K) = 1, and χ(Σ) = 1 computations are solid.** Computed tonight
+count of 3 stands), so RESOLVED NEXT SESSION (S144): opus's THM-2473 supplies the corrected count map — the spectrum
+is 3/1/0 (never 2), F is NOT surjective (it omits the rational curve E = {K=0, 3bc=4} ≅ ℂ*,
+χ(E) = 0 — verified empty-fiber at (4/27,4/3,1)), and the ledger balances as
+1 = 3·0 + 1·(1−0) + 0. The disc-cube and χ(K) = 1 stand; Σ was the wrong deep stratum;
+MISTAKE-282 logged on THM-1315's §4.** Computed tonight
 (frozen out): the Jelonek quartic K is quadratic in c with **disc_c(K) = (b² − 12a)³ — a
 perfect cube**; K is a double cover of the plane branched on a parabola, degenerating over
 a = 0, and **χ(K) = 1 exactly**. The deep stratum Σ (1-point fibers) is the line {a=b=0} plus

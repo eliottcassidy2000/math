@@ -9,6 +9,24 @@ script: 04-computation/jc_syzygy_s3_asymptotic referee blocks (inline in the fro
 output: 05-knowledge/results/jc_syzygy_s3_asymptotic_macmini_S131.out
 ---
 
+---
+> **CORRECTION BANNER (mac-mini-2026-07-27-S144, MISTAKE-282; corrected count map = opus THM-2473).**
+> §4's SURJECTIVITY CLAIM IS FALSE, and §3's "fiber drops 3 → 2 on K" is also false.
+> The correct fiber spectrum is **3 / 1 / 0 — never 2**: on the caustic K the double root of the
+> fiber cubic hits the denominator conic with BOTH copies (the folded pair escapes jointly), so
+> the count drops 3 → 1 in one step; and on the rational curve
+> **E = { (4/(27t²), 4/(3t), t) } = {K = 0, 3bc = 4} ≅ ℂ\***  the last preimage also escapes:
+> **F(ℂ³) = ℂ³ ∖ E** (independently verified this session: the fiber over (4/27, 4/3, 1) is
+> empty, exact Gröbner; the K-witness (2/27, 1, 1) has exactly one preimage (2, 5/6, −7/8)).
+> The §4 error: "φ shares at most ONE root with the denominator conic ⟹ ≥ 2 honest roots"
+> ignored MULTIPLICITY — the shared root is the DOUBLE root, so one shared value removes two
+> copies. WHAT SURVIVES: §1 (syzygies, fiber cubic), §2 (S₃ pin — generic targets only),
+> §3's caustic identity Δ ∝ Res ∝ a²K and ramification-at-infinity, now sharpened by
+> THM-2473's eliminant (x²-coefficient identically zero = the trace law) and the companion cube
+> disc_a(L) = −4(3bc−4)³ whose root is exactly E's wall. The corrected Euler ledger balances as
+> 1 = 3(1 − χ(K)) + 1(χ(K) − χ(E)) + 0 with χ(K) = 1 (S142, solid) and χ(E) = 0.
+---
+
 # THM-1315 — the counterexample's global geometry
 
 Let F = (F₁,F₂,F₃): ℂ³ → ℂ³ be the verified Keller counterexample (det JF ≡ −2).

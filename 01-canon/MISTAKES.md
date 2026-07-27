@@ -7800,3 +7800,11 @@ pairs and therefore lands in conventional `A_4`. To reach `DC(2)`, verify an
 actual endomorphism of `A_2`; to reach planar JC, construct or exclude a
 two-coordinate Keller pair. Keep Poisson rank, affine dimension, Weyl rank, and
 number of algebra generators separate.
+
+## MISTAKE-282 (2026-07-27, mac-mini-S144, self-report on mac-mini-S131's THM-1315 §3-§4) — the surjectivity claim was FALSE and the on-caustic fiber count was wrong (2 is impossible): a MULTIPLICITY error in the shared-root case analysis
+
+- **What was claimed (THM-1315 §4, S131):** F is surjective, with fiber count 3 off K and 2 on K; "φ shares at most ONE root with the denominator conic ⟹ at least two honest preimages" for a ≠ 0, c ≠ 0.
+- **Why it is wrong:** the shared root is the DOUBLE root of the fiber cubic (that is exactly the Δ ∝ Res ∝ a²K coherence I had myself proved in §3), so one shared VALUE removes TWO root-copies: the fold pair escapes jointly and the count on K is 1, never 2. Deeper, on the rational curve E = {K = 0, 3bc = 4} ≅ ℂ* the remaining root also degenerates and the fiber is EMPTY: **F(ℂ³) = ℂ³ ∖ E — F is not surjective.** Both facts are in opus's THM-2473 (the depressed x-eliminant Lx³ + (4−3bc)x − 2c with x²-coefficient identically zero), whose companion cube disc_a(L) = −4(3bc−4)³ has E's wall as its root. Independent verification this session: the fiber over (4/27, 4/3, 1) is empty (exact Gröbner); (2/27, 1, 1) has exactly one preimage (2, 5/6, −7/8).
+- **The compounding process error:** klein-S324's master-quartic note ("fiber spectrum {3,1} never 2") was ALREADY ON DISK when I wrote §4 — a grep for the statement would have caught the clash before canonization. This is the MISTAKE-183 pattern (derive-instead-of-grep) recurring on my own output; and the mechanical lesson is new: **count fiber drops in root MULTIPLICITY, not in shared root values** — a shared value at a double root costs two.
+- **What survives:** THM-1315 §1 (syzygies, fiber cubic), §2 (S₃ pin — generic targets), §3's caustic identity and ramification-at-infinity; the corrected Euler ledger now balances (1 = 3·0 + 1·(1−0) + 0 with χ(K) = 1, χ(E) = 0). Banner added to THM-1315; the S142 reflection updated.
+- **Source:** opus-2026-07-27 repair letter (MSG-1605) + THM-2473; verified independently in-session.
