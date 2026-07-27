@@ -9,22 +9,33 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
-## MISTAKE-287 (2026-07-27, HYP-9033 cuspidal pullback) -- a square coefficient factor was discarded in a global zero-set claim
+## MISTAKE-287 (2026-07-27, HYP-9033/HYP-9065 cusp and elliptic pullbacks) -- square coefficient factors were discarded in global zero-set claims
 
 - **What was claimed:** from the exact identity
   `S^2-T^3=27c^2L`, HYP-9033 said that the Jelonek hypersurface
   `V(L)` was the full inverse image of the cusp `S^2=T^3` under
-  `(a,b,c) |-> (S,T)`.
+  `(a,b,c) |-> (S,T)`.  HYP-9065 then made the parallel inference from
+  `-4p^3-27q^2=-2^4 3^6 a^2L`: it identified the global singular-
+  Weierstrass locus with `V(L)`, identified `p=q=0` only with the omitted
+  curve, and promoted the resulting `3/1/0 = smooth/nodal/cuspidal` count
+  dictionary globally.
 - **First failed implication:** multiplication by `c^2` is invertible only on
   the chart `c!=0`.  Globally the scheme-theoretic inverse image is
   `V(c^2L)`, its effective divisor is `2V(c)+V(L)`, and its underlying set is
   `V(c) union V(L)`.  The affine target `(a,b,c)=(1,0,0)` is the minimal clean
   hostile: it maps to the smooth cusp point `(S,T)=(8,4)` while `L=16`.
+  Likewise the Weierstrass degeneration set is `V(a) union V(L)`.  More
+  sharply, `V(p,q)=V(a,b) union E`: every target `(0,0,c)` gives a cuspidal
+  Weierstrass cubic but THM-2546 gives one affine `F`-preimage `(c/2,0,0)`,
+  not zero.  Hence the global count dictionary also fails.
 - **Strongest survivor:** after localization at `c`, or equivalently saturation
   by `c`, the claimed identification is exact.  The cusp-point fibre
   `(S,T)=(0,0)` is still exactly the omitted rational curve because `T=0`
   forces `bc=4/3` and hence `c!=0`.  The plane `c=0` is an honest affine target
   plane with an explicit finite section, not a compactification boundary.
+  On `a!=0`, the elliptic statements are repaired exactly: degeneration is
+  equivalent to `L=0`, `p=q=0` is equivalent to `E`, and the `3/1/0`
+  fibre-count dictionary does match smooth/nodal/cuspidal type.
 - **Repair:** THM-2566 records the saturated `c`-chart together with the
   companion `a`-chart from THM-1335, their parasitic planes, the punctured
   two-chart cover, and the exceptional origin.  Never pass from

@@ -1,0 +1,60 @@
+==============================================================================
+[1] The two cusp identities and their exact coefficient planes
+==============================================================================
+  S_c^2-T_c^3 = 27*c**2*(27*a**2*c**2 - 18*a*b*c + 16*a + b**3*c - b**2)
+  S_a^2-T_a^3 = 108*a**2*(27*a**2*c**2 - 18*a*b*c + 16*a + b**3*c - b**2)
+  -4p^3-27q^2 = -11664*a**2*(27*a**2*c**2 - 18*a*b*c + 16*a + b**3*c - b**2)
+  raw divisors: 2V(c)+V(L) and 2V(a)+V(L)  [PASS]
+  raw sets:     V(c) union V(L), V(a) union V(L)  [PASS]
+
+==============================================================================
+[2] Groebner elimination certifies both saturated pullbacks
+==============================================================================
+  ((S_c^2-T_c^3):c^infinity) = (L)  [PASS]
+  ((S_a^2-T_a^3):a^infinity) = (L)  [PASS]
+  Hence each chart recovers the whole irreducible Jelonek closure after
+  saturation, and it is a literal pullback on D(c) or D(a), respectively.
+
+==============================================================================
+[3] Parasitic planes and hostile points
+==============================================================================
+  c=0 maps constantly to (S_c,T_c)=(8,4), a smooth cusp point.
+  hostile (1,0,0): L=16 but Phi_c=(8,4).  [PASS]
+  a=0 maps to (S_a,T_a)=(b^3,b^2), the normalized cusp trace.
+  hostile (0,1,2): L=1 but Phi_a=(1,1).  [PASS]
+  double hostile (0,1,0): L=-1 but BOTH raw cusp equations vanish.
+  Therefore intersecting raw pullbacks still leaves V(a,c); saturation
+  or localization is essential.  [PASS]
+
+==============================================================================
+[4] The coefficient planes are affine targets, not boundary charts
+==============================================================================
+  F(0,b,a-4b^2)=(a,b,0) identically.  [PASS]
+  Thus c=0 is an ordinary affine target plane.  THM-2473 supplies the
+  generic 1+2 fibre there; away from L=16a-b^2 it has all 3 points.
+
+==============================================================================
+[5] Punctured two-chart cover and the exceptional origin
+==============================================================================
+  L|_(a=c=0)=-b^2.  Therefore a point of V(L) with a=c=0 is the origin.
+  V(L) minus {0} is covered by the honest cusp charts D(a) and D(c).
+  Phi_c(0)=(8,4) (smooth); Phi_a(0)=(0,0) (the cusp).  [PASS]
+  Exact atlas:
+    V(L) = {0} union (D(c) intersect Phi_c^-1(C))
+                 union (D(a) intersect Phi_a^-1(C)).
+
+==============================================================================
+[6] The c-chart cusp-point fibre is exactly the omitted curve
+==============================================================================
+  (S_c,T_c)=(0,0) iff bc=4/3 and ac^2=4/27.
+  Hence Phi_c^-1(cusp)={(4/(27t^2),4/(3t),t): t!=0}.
+  By THM-2546 this is exactly the empty-fibre curve.  [PASS]
+
+==============================================================================
+[7] The a-chart cusp point retains its own parasitic axis
+==============================================================================
+  modulo T_a=0: 8S_a=b^3(3bc-4).  [PASS]
+  Thus Phi_a^-1(cusp point) is the z-axis {a=b=0} union the omitted
+  curve E.  On D(a), only E remains; at the origin Phi_a hits the cusp.
+
+ALL EXACT THM-2566 CUSP-ATLAS CHECKS PASSED

@@ -369,7 +369,17 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-2374 inverts the squared complete-subcube Walsh bank; THM-2383 recovers complex coefficients exactly from labelled spanning references. Physical references, owners, and knot realization remain open.
   THM-2351 proves the canonical self-target ANOVA is exactly an affine reparameterization of the directional catalysis--bypass ledger; its optimum and skew pair sector add no information. Positive catalysis and the stable diagonal remain open.
 - **Unsplittable cost flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture: a planar acyclic instance has fractional cost `58` but capacity-good integral cost at least `60`. Its carrier is the `K_3` stable-set facet; the planar `2d_max` theorem remains intact.
-- **Jacobian/Dixmier:** THM-1300/1315's three-dimensional collision has unsettled provenance (MISTAKE-205); `DC(2)` remains open. At degree eighteen, THM-2314/2316 close sparse supports, THM-2371/2376 close `H_2`, and audited THM-2406 forces THM-2389's `H_4` pole system onto the closed common-root wall. The inherited nonsplit exact-square-prefix reduced degree-eighteen branch is closed; `JC(2)`, `DC(2)`, and branches outside THM-2262 remain open.
+- **Jacobian/Dixmier:** THM-1300/1315's three-dimensional collision has
+  unsettled provenance (MISTAKE-205); `DC(2)` remains open.  For that fixed
+  sporadic map, THM-2473/2546 prove the exact Jelonek and omitted-fibre laws,
+  while THM-2566/MISTAKE-287 show that its cusp and Weierstrass descriptions
+  are **saturated** pullbacks: the raw discriminant loci also contain
+  coefficient-zero planes, and the `3/1/0`--Kodaira dictionary is exact only
+  on `a!=0`.  At degree eighteen, THM-2314/2316 close sparse supports,
+  THM-2371/2376 close `H_2`, and audited THM-2406 forces THM-2389's `H_4`
+  pole system onto the closed common-root wall. The inherited nonsplit
+  exact-square-prefix reduced degree-eighteen branch is closed; `JC(2)`,
+  `DC(2)`, and branches outside THM-2262 remain open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibers:** THM-2063/2071 close affine/quadratic pencil members;
   THM-2084/2110/2118 close cubics; THM-2102/2113 close power-free top faces;

@@ -1,3 +1,9 @@
+CORRECTION (MISTAKE-287 / THM-2566): this transcript's three global
+interpretations discard the factor a^2 and the component V(a,b).  The exact
+identity survives, but the singular-pencil set is V(a) union V(K), and
+V(p,q)=V(a,b) union E.  The printed 3/1/0 dictionary is exact only on D(a).
+The original output is preserved below for error provenance.
+
 (1) Weierstrass data of the trisection pencil y^2 = T^3 + pT + q:
     -4p^3 - 27q^2 = -11664*a**2*(27*a**2*c**2 - 18*a*b*c + 16*a + b**3*c - b**2)
     => K = 0 <=> singular elliptic fiber (the Jelonek set IS the

@@ -13,6 +13,17 @@
   exclusion remain open.  The referee includes a sharp delay-one offset
   hostile which returns with mass `1/169` at delay two.  Hashes are
   `4e11fc2c...f27` / `865a3651...bf5`.
+- `keller_two_cusp_atlas_thm2566.py` -> matching `.out`
+  [THM-2566 PROVED + VERIFIED-EXACT; MISTAKE-287].  The two polynomial maps
+  from the sporadic Keller target to `S^2=T^3` have raw pullback divisors
+  `2V(c)+V(L)` and `2V(a)+V(L)`, not `V(L)`: exact Groebner eliminations give
+  both saturated ideals equal to `(L)`.  Their honest charts cover
+  `V(L)\{0}`; the origin maps to a smooth cusp point in the `c`-chart and the
+  cusp in the `a`-chart.  Hostiles `(1,0,0)`, `(0,1,2)`, and the double hostile
+  `(0,1,0)` expose both parasitic planes.  The `c`-chart cusp-point fibre is
+  exactly the omitted curve, while the `a`-chart also contains the target
+  `c`-axis.  Hence the Weierstrass `3/1/0`--Kodaira dictionary is exact on
+  `D(a)`, not globally.  Hashes are `6758420f...f6e9` / `39b229cc...f5c5`.
 - `lrc14_paired_dipole_deep_corner_thm2563.py` -> matching `.out`
   [THM-2563 PROVED + VERIFIED-EXACT].  Every THM-2559 old head supports a
   nonnegative `13^3` partial-bare table containing a translated deepest probe
