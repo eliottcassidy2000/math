@@ -40,8 +40,8 @@ related:
   - THM-2610-chronological-paired-slice-marked-triangle-graft-and-action-axis-boundary
 script: 04-computation/lrc14_psl2f13_nonabelian_norm_thm2603.py
 output: 05-knowledge/results/lrc14_psl2f13_nonabelian_norm_thm2603.out
-script_sha256: 052676b89b86a051bfad631293c5a37fb7ecd49d7282208740115038879c0b16
-output_sha256: e93cab32aaff2c7c9c7472dd621e04463fc254a0ae154216ced6948fdf01057c
+script_sha256: 880e27889a61ec9cc55ba54bd372a353e5df8a8b9d7751ba652b57da4d0c6e2a
+output_sha256: 378602547938bdbccc12b7b0a9630bb2d5845a6121c317c444b22f33aa9686f3
 hash_basis: LF-normalized bytes
 ---
 
@@ -239,6 +239,11 @@ avoid it.  The restricted product is the partial identity on those avoiding
 residues.  Since `7a!=0`, its product with `U^(7a)` still has empty diagonal.
 Thus the cheapest decisive test already fails on every success in (9).
 
+This cannot be evaded by representing only the successful factors and
+forgetting `g_t`: for every one of the thirty successful triples, the seven
+matrices `A_0(a),...,A_6(a)` themselves generate all `1,092` elements of
+`PSL_2(F_13)`.
+
 ### 3.1 Fourteen states are not an accidental choice
 
 The natural action is the minimal faithful permutation action that can still
@@ -263,6 +268,15 @@ and the thirteen conjugates of `H` gives
 for an integer `f`, hence `m=12f`, a contradiction.  Therefore no faithful
 thirteen-state permutation kernel exists.  The fourteenth point in (14) is
 forced, and (17) shows exactly how it corrupts the LRC return test.
+
+The same minimum holds for projective nonnegative **group** representations,
+not only permutation matrices.  A nonnegative representative of a group
+element has a nonnegative inverse representative, so it is monomial.
+Projecting monomial matrices to their coordinate permutations gives a group
+action.  Since `PSL_2(F_13)` is nonabelian simple, that action is either
+faithful or the whole image is diagonal; the latter is projectively trivial
+because the group has trivial abelianization.  A nontrivial nonnegative
+projective realization therefore again needs at least fourteen coordinates.
 
 ## 4. Lawful adjacent target charts restore the old holonomy
 
