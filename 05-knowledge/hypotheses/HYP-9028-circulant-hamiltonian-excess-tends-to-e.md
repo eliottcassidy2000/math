@@ -32,9 +32,27 @@ H    189    95095   1172695746915
 exc  2.400  2.4395  2.5272
 ```
 
+Same-session extension (04-computation/ham_excess_ext_kps_S134.cpp,
+output ham_excess_ext_kps_S134.out):
+
+```text
+R_19  H=1184212824763       exc 2.551967
+R_21  H=125547534942879     exc 2.576702
+R_23  H=16011537490557279   exc 2.597757
+QR_23 H=15760206976379349   exc 2.556980   (tc = 62,293,308,207,033)
+```
+
+Consecutive rotational differences `0.0297, 0.0247, 0.0211` shrink
+geometrically (~0.85 ratio), extrapolating the limit to `~2.72`.
+The `e(1 - alpha/n)` fit gives `alpha = 1.226, 1.163, 1.094, 1.020`
+at `n = 17, 19, 21, 23` -- drifting toward 1.
+
 **Conjecture.** For both families (and plausibly for every
-quasirandom regular tournament family), `exc -> e`, with
-`exc(n) = e (1 - alpha/n + o(1/n))`, fitted `alpha ~ 1.2 - 1.3`.
+quasirandom regular tournament family), `exc -> e`; sharpened by
+the extension data to `exc(n) = e (1 - (1 + o(1))/n)` -- the fitted
+`alpha` passes through `~1.02` at `n = 23` and is still falling, so
+`alpha = 1` exactly is the natural target (a second-order term of
+the permanent-style regularity correction).
 
 Mechanism sketches:
 
