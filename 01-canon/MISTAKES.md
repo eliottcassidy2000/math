@@ -9,6 +9,24 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-292 (2026-07-28, concurrent theorem reservation) -- the first repair of the theta-slaved contraction collided again at THM-2588
+
+- **What happened:** MISTAKE-291 repaired the theta-slaved contraction's
+  original duplicate `THM-2581` by moving it to `THM-2588` on a session
+  branch.  Before that branch reached `origin/main`, another live session
+  assigned `THM-2588` to
+  `THM-2588-fold-cascade-separated-towers-gap-empty-all-k.md`; the shared
+  hypothesis index also explicitly reserved `THM-2589`.
+- **Why it was wrong:** checking the local tree before a concurrent repair was
+  not enough.  A theorem-ID repair must be rebased onto the current shared
+  namespace before its replacement ID is treated as canonical.
+- **Repair:** after fetching and rebasing onto the live shared surface, the
+  theta-slaved contraction is renamed `THM-2590` in
+  `THM-2590-realized-theta-slaved-contraction-at-the-r5-window.md`.
+  `THM-2588` remains the fold-cascade theorem and `THM-2589` remains reserved
+  by HYP-9075.  Historical messages and the intermediate MISTAKE-291 wording
+  remain provenance; current references use `THM-2590`.
+
 ## MISTAKE-291 (2026-07-28, concurrent theorem reservation) -- the realized theta-slaved contraction reused live ID THM-2581
 
 - **What happened:** the candidate theorem for the realized depth-five
@@ -19,11 +37,12 @@ Format per entry:
   analogies.  The new contraction depends on the existing depth-five host;
   sharing its ID makes dependencies and status searches ambiguous even though
   the filenames differ.
-- **Repair:** the later candidate is renamed `THM-2588` in
-  `THM-2588-realized-theta-slaved-contraction-at-the-r5-window.md`.  Historical
-  broadcast messages retain their original text as provenance only.  The
-  original `THM-2581` remains the canonical owner-clock host, while
-  `THM-2588` remains a separately audited candidate contraction.
+- **Repair (superseded by MISTAKE-292):** the first repair renamed the later
+  candidate `THM-2588`; a second concurrent collision required the final
+  `THM-2590` name.  Historical broadcast messages retain their original text
+  as provenance only.  The original `THM-2581` remains the canonical
+  owner-clock host, while `THM-2590` remains a separately audited candidate
+  contraction.
 
 ## MISTAKE-290 (2026-07-28, THM-2576 resultant convention) -- a PRS degree reorder lost the odd-by-odd resultant swap sign
 

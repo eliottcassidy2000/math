@@ -165,5 +165,5 @@ full-rotation phase words at every depth. This excludes one mechanism
 class only; symmetry quotients and pre-y-integration breaks remain,
 and no row-uniform statement follows. Note: the r = 3 Stage-1 STOP in
 (A) was subsequently shown to be a word artifact -- see THM-2575/2577
-(the r = 5 window at sigma = {b}) and THM-2581 (the realized
+(the r = 5 window at sigma = {b}) and THM-2590 (the realized
 theta-slaved contraction there).
