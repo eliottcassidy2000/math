@@ -1,0 +1,18 @@
+THM-2463 independent hostile referee
+flux_specialization=RECONSTRUCTED_FROM_THM-2411
+elimination=closed_linear_quadratic_resultant
+generic_newton_hull=[(0, 0), (4, 0), (4, 1), (0, 5)]
+exceptional_newton_hull=[(0, 0), (3, 0), (4, 1), (0, 5)]
+generic_factor_inventory_vertical_linear_quadratic=(1, 2, 1)
+exceptional_factor_inventory_vertical_linear_quadratic=(0, 2, 1)
+lambda_49_over_33_factor_shapes=COMPLETE
+linear_factor_unit_ideals=2
+quadratic_factor_unit_ideals=5
+denominator_exceptions=lambda_0_excluded,lambda_196_over_891_audited,h_0_impossible
+p_zero_smooth_simple_points=5
+square_lift_connected=YES
+square_lift_minimum_branch_points=6
+square_lift_minimum_genus=2
+physical_square_coordinate=Y=y/sqrt(B)
+y_zero_boundary=Z_zero_on_open_first_flux
+ALL INDEPENDENT CHECKS PASSED

@@ -2,7 +2,8 @@
 id: THM-2463
 title: "Degree-twenty-two B-D plane square-lift closure"
 status: >
-  PROVED + VERIFIED-EXACT. In the open first-flux chart of the genuine
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the open
+  first-flux chart of the genuine
   nonsplit polynomial exact-square-prefix degree-twenty-two branch, the
   complete coefficient plane C=E=W=0 is empty. For B,D nonzero, the
   ratios p=B/y^2, v=u/y^2, and lambda=D/B^2 give an absolutely
@@ -27,12 +28,16 @@ script: 04-computation/jc2_degree22_bd_plane_square_lift_thm2463.py
 output: 05-knowledge/results/jc2_degree22_bd_plane_square_lift_thm2463.out
 script_sha256: 923454338d35f6b3191b33d2f3c4e20c88083a9325ab46de9d31bbbd919ce08a
 output_sha256: ea3c9447c105c71457b033e0f5ae04596214b03d2993ed6023f995953e0b8488
+independent_script: 04-computation/jc2_degree22_bd_plane_independent_referee_thm2463.py
+independent_output: 05-knowledge/results/jc2_degree22_bd_plane_independent_referee_thm2463.out
+independent_script_sha256: a2e4d351bab7c34193fc06b0346512cbd06a368133156929fcd6702fad740db5
+independent_output_sha256: ec0b6583f51614f58398bd7cad430f11995f921a0bfb020d0df382ff9582c5ae
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2463 -- the degree-twenty-two B-D plane is empty
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The earlier `C,W` and `D,W` planes were closed by classifying every
 exceptional member of a positive-genus family. The `B,D` plane initially
@@ -482,7 +487,82 @@ restore the square class Y^2=1/p
 A difficult discriminant family can therefore become easy after
 restoring the coordinate that made the quotient physical.
 
-## 7. Exact companion
+## 7. Independent hostile audit
+
+The audit first reconstructed (6)--(7) directly from THM-2411's original
+fluxes before eliminating `zeta` by the closed formula
+
+```text
+Res_z(a z+b,A z^2+B z+C)=A b^2-a B b+a^2 C.
+```
+
+This independently recovers the content and all `28` terms of (11). It then
+enumerates every balanced allocation of primitive edge lengths, rather than
+assuming the factor shapes from a polygon label. For the generic polygon the
+allocations are exactly
+
+```text
+(a,b,a,a+b),                 0<=a<=4, b in {0,1},
+```
+
+and for the exceptional `lambda=49/33` polygon they are exactly
+
+```text
+(a,b,a+b,a+2b),              0<=a<=3, b in {0,1}.
+```
+
+After the one generic vertical split is removed by the coefficient gcd, each
+proper decomposition in both lists either has one of the two linear factors
+in Section 3.2 or is the unique `2+2` split containing the triangular factor
+(19). Thus the exceptional polygon creates no untested factor shape.
+
+The referee rebuilt all seven exact coefficient ideals from this independently
+derived eliminant. A unit ideal is a polynomial identity over `Q`, so it
+excludes solutions over every algebraically closed characteristic-zero
+constant field, not merely rational parameter values. The denominator ledger
+is complete:
+
+- `lambda=0` is outside (3);
+- the type-II generic solve has denominator
+  `lambda(891lambda-196)^2`, and `lambda=196/891` has its own unit-ideal
+  calculation;
+- type III has only the denominator locus `h=0`, while
+  `384lambda h^2-280h+231=0` has value `231` there; the separate value
+  `h=231/280` gives `lambda=0` and is outside (3) (the exact unit-ideal
+  computation in fact excludes the broader cleared system as well).
+
+In particular `lambda=49/33` is nonzero, differs from `196/891`, and is
+covered both by its exact Newton inventory and by the same factor ideals.
+
+The geometric step was audited on the normalization rather than on the plane
+model. At each of the five distinct roots of `L_5`, (30) is nonzero, so `p`
+has valuation exactly one. Hence `1/p` has five odd valuations, is not a
+square, and gives a connected double cover. Ramification occurs at all five;
+the parity of a principal divisor makes the total number of odd valuations
+even, hence at least six. Formula (34) then gives genus at least two without
+assuming any genus floor for `C_lambda`.
+
+Finally, the physical lift is exactly `Y=y/sqrt(B)`, so no artificial square
+class was added. Constancy on the lift makes `y,u` constant; the open wall
+reconstructs `zeta`, then `Z=T^2`, `T=q^2`, and `q` are constant, contradicting
+the genuine deck. If `y` is the zero rational function, (37), the open wall,
+and `T!=0` give the contradiction directly. This also distinguishes harmless
+pointwise zeros of a nonzero rational function `y`, for which division in
+`C(x)` is valid, from the separately audited identically-zero boundary.
+
+Run the independent path with
+
+```bash
+python3 04-computation/jc2_degree22_bd_plane_independent_referee_thm2463.py
+python3 -O 04-computation/jc2_degree22_bd_plane_independent_referee_thm2463.py
+```
+
+Its normal, optimized, and stored transcripts are byte-identical, and the
+independent hashes are recorded in the frontmatter. No factor-shape,
+exceptional-parameter, denominator, normalization, branch-parity, boundary,
+constant-field, scope, or reproducibility defect remains.
+
+## 8. Exact companion
 
 Run
 
