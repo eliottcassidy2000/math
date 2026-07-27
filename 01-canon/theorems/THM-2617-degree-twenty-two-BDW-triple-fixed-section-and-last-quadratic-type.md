@@ -1,12 +1,12 @@
 ---
-id: THM-2616
+id: THM-2617
 title: "Degree-twenty-two B-D-W triple fixed section and last quadratic type"
 status: RESERVED / UNPROVED EMPTY STUB
 source: klein-2026-07-28-degree22-bdw-triple
 depends_on: []
 ---
 
-# THM-2616 -- reserved degree-twenty-two mixed-support reduction
+# THM-2617 -- reserved degree-twenty-two mixed-support reduction
 
 **RESERVED / UNPROVED EMPTY STUB.**
 

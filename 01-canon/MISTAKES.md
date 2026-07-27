@@ -9,6 +9,24 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-299 (2026-07-28, THM-2603 proof-graph overwrite) -- a new theorem reused an already proved canonical ID
+
+- **What happened:** a concurrent PSL2(F13) transition audit replaced the
+  proved and independently audited THM-2603 Hurwitz root-owner atlas, together
+  with its exact companion, under the same theorem ID.  The incoming result is
+  mathematically distinct: it studies retained-target normalizers, natural
+  chart holonomy, and a Bruhat-square target-zero wall.
+- **First failed implication:** thematic continuity and reuse of the same
+  matrices do not make two theorem statements the same proof-graph node.  A
+  later, stronger-looking obstruction cannot silently discard the earlier
+  proved projective atlas, its normalized root-scale guardrail, or its exact
+  reproducibility paths.
+- **Repair:** the proved Hurwitz/root-owner atlas and its original companion
+  remain `THM-2603`.  The incoming PSL2(F13) retained-target theorem, script,
+  and output are preserved under the freshly all-ref-checked `THM-2619`
+  namespace, still at candidate status.  Cross-links may be added after audit;
+  neither result is treated as a replacement for the other.
+
 ## MISTAKE-298 (2026-07-28, concurrent THM-2611/2615/2617 reservations) -- a local reservation broadcast was mistaken for a shared proof-graph reservation
 
 - **What happened:** the endpoint-pair parabolic-transvection theorem reserved

@@ -256,6 +256,11 @@ mu{z:P_(r,q_v(r))(z)=1}>0                                (22)
 
 simultaneously on all thirteen roots.
 
+This is a **cellwise positive-measure** statement: the positive `z`-chamber
+may depend on the root.  It does not say that every fixed base point `z`
+admits a repairing shift.  Pointwise all-thirteen-shifts failures can have
+positive measure without making any fixed `(r,q)` cell null.
+
 Choose one positive open chamber for each root, map it through `iota_r`, and
 choose a common-depth base-13 cylinder `D_r` inside it.  For
 `T(x)=13x mod 1`, every finite root word `(r_0,...,r_m)` and every block

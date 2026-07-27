@@ -197,6 +197,11 @@ complete because
 THM-2605 first reduces the infinite speed/blocker family analytically by its
 opposing full-tooth and full-safe-gap inequalities.
 
+As in THM-2605, this is cellwise positive measure, not pointwise repair of
+every `z`.  A positive-measure set of base points may fail for all thirteen
+shifts while the canonical section still contains a positive chamber in every
+root.
+
 ## 4. Equivariance and every finite root word
 
 For every `Delta in F_13`,
@@ -250,7 +255,7 @@ chooses one fixed-generator equivariant identification between
 ```text
 physical inverse-root digit r
      and
-local THM-2599 paired-shift state qbar.                   (15)
+local THM-2599 paired-shift state qbar.                   (22)
 ```
 
 This is genuine progress beyond an abstract thirteen-choice torsor in the
@@ -263,13 +268,13 @@ local paired-shift q       -/-> THM-2585 next section q',
 
 physical root r            -/-> adjacent THM-2542 chart root,
 
-future local character     -/-> old THM-2334 relation residue.  (22)
+future local character     -/-> old THM-2334 relation residue.  (23)
 ```
 
 THM-2608 requires the first arrow together with the adjacent clock; THM-2610
 shows positive chronology erases the old `C_13` deck before the third arrow
-can be read off.  THM-2611 names a principal ancestry bibundle as the proposed
-repair, but is not used as a dependency here.
+can be read off.  THM-2611 proves the abstract principal-bibundle lift and
+holonomy invoice, but no physical instance is used as a dependency here.
 The section (4) supplies none of those missing types merely by sharing the
 alphabet `F_13`.
 
