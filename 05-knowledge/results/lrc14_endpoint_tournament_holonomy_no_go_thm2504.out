@@ -1,0 +1,13 @@
+THM-2504 ENDPOINT TOURNAMENT-HOLONOMY NO-GO AUDIT
+mask_pairs=8128;translation_swaps=8128;equal_weight_ties=1652
+parity_oriented=4096;parity_ties=4032
+first_failure_layers=4,64,32,16,8,4;layer_ties=2672;cell_ties=620
+lex_reversal_support=0;lex_cycle_support=0
+tile128=edges:8001,laplacian_rank:127,bicycle_dim:0,parity_cut_support:4011,cycle_support:0
+cosupport_uniform_asymmetry_ties=8128;sparse_loop_offdiagonal=0
+root13=edges:66,laplacian_rank:12,bicycle_dim:0,cyclic_support:21,cut_support:38,cycle_support:35
+root13_global_converse_fixed_path=cut_support:30,cycle_support:39;triangle_0_2_7=1
+root13_inversion_transported_path=cut_support:38,cycle_support:35
+quadratic_residue_negation_symmetry=PASS
+guard_autocorrelation=4,0,1,2,0,3,0,0,3,0,2,1,0;symmetric=PASS
+all_checks=PASS
