@@ -1,0 +1,10 @@
+THM-2512 lawful interaction/cut transplant independent exact referee: PASS
+field=F_547; generator=2; ord(zeta)=13; ord(xi)=7
+anova_rectangle_basis_checks=6552
+mixed_dft_sign_checks=72
+primitive_cut_factorizations=5184; replica_zero_checks=5184
+replica_interaction=ZERO; one_rectangle_defect=ALL_5184_PRIMITIVE_CUTS_NONZERO
+old_root_disintegration_components=1183; recovery_checks=91
+raw_future_product_checks=1183; boolean_before_dft_future_colours=12; selected_functional_retained=PASS
+rebase_hostile_phases=0,1/13; danger_truth=1,0
+ALL EXACT CHECKS PASSED
