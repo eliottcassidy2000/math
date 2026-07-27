@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `lrc14_full_x_transition_annihilation_thm2568.py` -> matching `.out`
+  [THM-2568 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  A complete
+  danger-to-safe endpoint transition on one common target twist has zero
+  full-`X` current in every coarse target character: Parseval recombines it
+  to `P_s(1-P_s)=0`.  Independent endpoint twists produce a `169`-dimensional
+  refined pair spectrum, but its pushforward is the `a+b=q` line sum and all
+  thirteen lines vanish; the forgotten-fibre kernel has dimension `156`.
+  Diagonal-shift drift and all twelve one-sided colours can therefore coexist
+  with zero coarse target.  A quantitative duplicate-probe colour has floors
+  `9rho/2028` ordinary and `7rho/2028` guard, but freezes the target-informed
+  selector and is not a lawful endpoint orbit.  The surviving problem is
+  fixed-`X`, normal/jet, or oriented-reference transport.  Hashes are
+  `3d29abe7...9cb1` / `82e667b07...54a`.
 - `lrc14_target_active_self_return_thm2565.py` -> matching `.out`
   [THM-2565 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Resolve any positive THM-2559
   target-informed head field by its physical first base-thirteen digit and

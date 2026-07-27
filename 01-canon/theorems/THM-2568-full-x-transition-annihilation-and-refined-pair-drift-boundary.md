@@ -2,7 +2,7 @@
 id: THM-2568
 title: "Full-X transition annihilation and the refined-pair drift boundary"
 status: >
-  PROVED + VERIFIED-EXACT.  A Boolean danger-to-safe endpoint transition
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  A Boolean danger-to-safe endpoint transition
   completed on one common lawful target twist has zero full-X current in
   every target character: endpoint Parseval recombines it to the pointwise
   product P_s(1-P_s)=0.  With independent left/right twists, the refined
@@ -38,7 +38,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2568 -- the full-X transition is exactly in the coarse-target kernel
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2563 inserts both paired blocker--graft dipoles on its moving endpoint,
 but its old dangerous head is fixed.  The tempting completion is to co-shift
@@ -454,4 +454,14 @@ The exact companion checks:
 
 The endpoint Parseval argument, absolute convergence, THM-2334 line-sum
 typing, and MISTAKE-266 boundary are symbolic proofs above, not finite
-extrapolations. **QED.**
+extrapolations.
+
+The independent root audit rederived the endpoint Parseval/all-`X` law, the
+`a+b=q` refined-to-coarse line sum and its `156`-dimensional kernel, the
+diagonal-shift projection, the complement hostile spectrum, and the anchored
+duplicate-probe floor.  It also independently located the first invalid
+implication at the frozen target-informed selector and confirmed that the
+MISTAKE-266 rejection, rather than any coarse-current conclusion, is the
+correct typed boundary.
+
+**QED.**
