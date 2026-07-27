@@ -42,6 +42,20 @@ related:
 > containing `b`.  The existing host is on the distinct `{a}`, `r=3`
 > packet, so the u-slaved THM-2512 bridge is a live **next construction**,
 > not yet a proved contraction on one common word fibre.
+>
+> **THIRD RESOLUTION (2026-07-28, THM-2581 CANDIDATE):** that word-fibre
+> mismatch is removed at the verified-exact candidate level.  Rebuilding the
+> common-base array directly on the lawful `{b}`, `K=2`, `r=5` packet gives a
+> centred owner-clock host satisfying (T1)--(T3), nonzero in all `91` cells,
+> of maximal centred rank `6`, with all `1,638` cyclotomic `2 x 2` minors
+> nonzero.  Its central reflection difference is a nonzero odd root profile
+> with all twelve nontrivial colours; the separate `{a}`, `r=3` replay has
+> that profile identically zero and exactly `90` zero minors.  Moreover the
+> affine deep-root sidecar is literally `theta=t-2u=floor(2y)`, an endogenous
+> half-circle label.  Independent hostile audit is still pending.  The next
+> construction is now the **joint theta/deep-root contraction** on this same
+> positive tensor, not another host: target activity, temporal endpoint
+> identity, and scalar-row exclusion remain open.
 
 ## 1. Why the packet cannot be re-run (PROVED anatomy)
 
