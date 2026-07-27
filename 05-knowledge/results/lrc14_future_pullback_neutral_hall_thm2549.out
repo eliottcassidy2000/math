@@ -1,0 +1,12 @@
+future_root_constancy_checks=3367
+old_target_neutrality_checks=91
+ancestry_sheet_transport_checks=1183
+future_scale_target_action_checks=91
+level_zero_root_visible_and_target_active_control=PASS
+mixing_head_mass=7/17 handoff_mass=10/19 limit=70/323
+mixing_levels_1_to_5=892/4199,696/3211,153821/709631,117606/542659,25990492/119927639
+cemetery_margin_tables=1703
+cemetery_hall_subset_checks=77940
+F13_cemetery_hall_subset_checks=24576
+future_pullback_hall_diagonal=0
+all_exact_checks=PASS
