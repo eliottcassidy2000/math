@@ -1,0 +1,24 @@
+THM-2538 anchored transverse arrival exact referee
+status=PROVED-EXACT-ALGEBRA-AND-HOSTILES
+field=547 generator=2 zeta13=475 xi7=81
+anchor_covariance_checks=28561
+multiplier_checks=4826809
+transverse_pattern_checks=2197 minimum_nonzero_transverse=9
+packing_pattern_checks=125 candidates=1,2,3,4
+galois_orbit_checks=3 total_gain_incidences=216
+hostile_atom_checks=46137 section_transverse_checks=39
+hostile_kernel_checks=72
+hostile_gain_checks=216 hostile_cell_gram_checks=169
+self_arrival_checks=1277952 anchored_reconstruction_checks=638976
+crofton_coordinate_checks=106496
+all_slope_hitting_checks=106496 selected_head_kakeya_checks=2184 positive_hit_layer_checks=5148
+cross_kakeya_checks=288 haar_switch=(2,-2)
+frechet_cases=284 hall_transport_checks=5778
+triple_parity_checks=8 triple_incidence_counts=(0,1)
+permutation_coupling_checks=6 loop_counts=[0, 1, 3]
+marginal_rank=23 transport_kernel_dimension=121 haar_basis_checks=121
+same_horizon_empty_head=ANNIHILATES
+later_same_base_cross_kakeya=RECOVERS_COUPLING
+semantic_arrival_field_in_live_LRC=NOT_SUPPLIED
+checks=7140902
+all_checks=PASS
