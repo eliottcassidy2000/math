@@ -8,9 +8,12 @@ independent of the THM-2436 atlas engine and edits no theorem prose.
 
 from __future__ import annotations
 
+from itertools import product
+
 
 P = 13
 Q = 7
+N = P * Q
 ZERO = (0,) * 12
 
 
@@ -56,6 +59,159 @@ def dft(vector: list[int], alpha: int) -> tuple[int, ...]:
                 tuple(coefficient * a for a in zeta_pow(-alpha * v)),
             )
     return answer
+
+
+def divisors(integer: int) -> list[int]:
+    return [candidate for candidate in range(1, integer + 1) if integer % candidate == 0]
+
+
+def poly_div_exact(numerator: list[int], denominator: list[int]) -> list[int]:
+    remainder = numerator[:]
+    quotient = [0] * (len(numerator) - len(denominator) + 1)
+    while len(remainder) >= len(denominator):
+        coefficient = remainder[-1]
+        shift = len(remainder) - len(denominator)
+        quotient[shift] = coefficient
+        for index, value in enumerate(denominator):
+            remainder[index + shift] -= coefficient * value
+        while remainder and remainder[-1] == 0:
+            remainder.pop()
+    require(not remainder, "cyclotomic division was not exact")
+    return quotient
+
+
+def cyclotomic(integer: int, cache: dict[int, list[int]]) -> list[int]:
+    if integer in cache:
+        return cache[integer]
+    polynomial = [-1] + [0] * (integer - 1) + [1]
+    for divisor in divisors(integer)[:-1]:
+        polynomial = poly_div_exact(polynomial, cyclotomic(divisor, cache))
+    cache[integer] = polynomial
+    return polynomial
+
+
+PHI91 = cyclotomic(N, {1: [-1, 1]})
+DEGREE91 = len(PHI91) - 1
+
+
+def clean(polynomial: dict[int, int]) -> dict[int, int]:
+    return {exponent % N: value for exponent, value in polynomial.items() if value}
+
+
+def cyclic_from_exponents(exponents: list[int]) -> dict[int, int]:
+    answer: dict[int, int] = {}
+    for exponent in exponents:
+        exponent %= N
+        answer[exponent] = answer.get(exponent, 0) + 1
+    return clean(answer)
+
+
+def cyclic_multiply(
+    left: dict[int, int], right: dict[int, int]
+) -> dict[int, int]:
+    answer: dict[int, int] = {}
+    for left_exponent, left_value in left.items():
+        for right_exponent, right_value in right.items():
+            exponent = (left_exponent + right_exponent) % N
+            answer[exponent] = answer.get(exponent, 0) + left_value * right_value
+    return clean(answer)
+
+
+def cyclic_shift(polynomial: dict[int, int], exponent: int) -> dict[int, int]:
+    return clean({(key + exponent) % N: value for key, value in polynomial.items()})
+
+
+def cyclotomic_remainder(polynomial: dict[int, int]) -> tuple[int, ...]:
+    coefficients = [0] * N
+    for exponent, value in polynomial.items():
+        coefficients[exponent % N] += value
+    for exponent in range(N - 1, DEGREE91 - 1, -1):
+        leading = coefficients[exponent]
+        if leading:
+            shift = exponent - DEGREE91
+            for index, value in enumerate(PHI91):
+                coefficients[index + shift] -= leading * value
+    require(not any(coefficients[DEGREE91:]), "Phi91 reduction failed")
+    return tuple(coefficients[:DEGREE91])
+
+
+def kernel91(alpha_tau: int, beta: int) -> dict[int, int]:
+    return cyclic_from_exponents(
+        [(-7 * alpha_tau * s - 13 * beta * s) % N for s in range(Q)]
+    )
+
+
+def mixed91(
+    defect: list[list[int]], alpha: int, beta: int
+) -> dict[int, int]:
+    answer: dict[int, int] = {}
+    for h, r in product(range(P), range(Q)):
+        coefficient = defect[h][r]
+        if coefficient:
+            exponent = (-7 * alpha * h - 13 * beta * r) % N
+            answer[exponent] = answer.get(exponent, 0) + coefficient
+    return clean(answer)
+
+
+def cut_phase91(
+    defect: list[list[int]], tau: int, a: int, alpha: int, beta: int
+) -> dict[int, int]:
+    """The c-DFT of the v-DFT, embedded through zeta13=w^7, xi7=w^13."""
+    answer: dict[int, int] = {}
+    for c, h, r in product(range(Q), range(P), range(Q)):
+        coefficient = defect[h][r]
+        if coefficient:
+            s = (a * r + c) % Q
+            exponent = (-7 * alpha * (h + tau * s) - 13 * beta * c) % N
+            answer[exponent] = answer.get(exponent, 0) + coefficient
+    return clean(answer)
+
+
+def check_cut_phase_intertwiner(defect: list[list[int]]) -> tuple[int, int, int]:
+    coefficient_rows = 0
+    nonzero_values = 0
+    zero_character_checks = 0
+    for alpha, beta, tau, a in product(
+        range(1, P), range(1, Q), range(1, P), range(1, Q)
+    ):
+        K = kernel91(alpha * tau, beta)
+        lambda_exponent = (-7 * alpha * tau - 13 * beta) % N
+        require(lambda_exponent != 0, "geometric ratio became one")
+        require((7 * lambda_exponent) % N != 0, "geometric ratio has seventh power one")
+        require(any(cyclotomic_remainder(K)), "geometric kernel vanished")
+
+        for h, r in product(range(P), range(Q)):
+            direct = sorted(
+                (
+                    -7 * alpha * (h + tau * ((a * r + c) % Q))
+                    - 13 * beta * c
+                )
+                % N
+                for c in range(Q)
+            )
+            expected = sorted(
+                (
+                    -7 * alpha * tau * s
+                    - 13 * beta * s
+                    - 7 * alpha * h
+                    + 13 * beta * a * r
+                )
+                % N
+                for s in range(Q)
+            )
+            require(direct == expected, "cut-phase coefficient sign failed")
+            coefficient_rows += 1
+
+        direct_value = cut_phase91(defect, tau, a, alpha, beta)
+        expected_value = cyclic_multiply(K, mixed91(defect, alpha, -beta * a))
+        require(direct_value == expected_value, "cut-phase factorization failed")
+        require(any(cyclotomic_remainder(direct_value)), "cut-phase value vanished")
+        nonzero_values += 1
+
+    for alpha, tau, a in product(range(1, P), range(1, P), range(1, Q)):
+        require(not cut_phase91(defect, tau, a, alpha, 0), "zero cut character survived")
+        zero_character_checks += 1
+    return coefficient_rows, nonzero_values, zero_character_checks
 
 
 def affine_cut(
@@ -227,6 +383,16 @@ def main() -> None:
     print("exact DFT basis phase identities:", phase_checks)
 
     defect = two_row_defect()
+    factor_rows, cut_values, zero_cut_values = check_cut_phase_intertwiner(defect)
+    require(factor_rows == 471_744, "factorization universe drifted")
+    require(cut_values == 5_184, "cut-phase value universe drifted")
+    require(zero_cut_values == 864, "zero-character universe drifted")
+    print("exact cut-phase factorization coefficient rows:", factor_rows)
+    print(
+        "nonzero mixed cut-phase values / zero-character checks:",
+        cut_values,
+        zero_cut_values,
+    )
     component_counts = []
     for a in range(1, Q):
         for c in range(Q):
@@ -263,6 +429,19 @@ def main() -> None:
     )
     print("kappa=2,tau=1: cut (1,0) maps to cut (1,2) plus v -> v-2: PASS")
     print("single-cut output was not any translate of the old cut (1,0): PASS")
+    cut_phase_covariance = 0
+    for alpha, beta, tau, a in product(
+        range(1, P), range(1, Q), range(1, P), range(1, Q)
+    ):
+        left_phase = cut_phase91(moved, tau, a, alpha, beta)
+        right_phase = cyclic_shift(
+            cut_phase91(defect, tau, a, alpha, beta),
+            -7 * alpha * 2 + 13 * beta * a * 2,
+        )
+        require(left_phase == right_phase, "mixed cut-phase covariance failed")
+        cut_phase_covariance += 1
+    require(cut_phase_covariance == 5_184, "mixed covariance universe drifted")
+    print("kappa=2 mixed cut-phase covariance values:", cut_phase_covariance)
     moved_bank = [
         value
         for tau in range(1, P)

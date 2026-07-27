@@ -6,10 +6,13 @@ uniform invariant linear-collapse coefficient per source: 504
 exact source-index identities: 25041744
 all 504 nonzero components permute; all 42 tau=0 components stay zero-type
 exact DFT basis phase identities: 26364
+exact cut-phase factorization coefficient rows: 471744
+nonzero mixed cut-phase values / zero-character checks: 5184 864
 THM-2506 two-row control good components: 504 / 504
 uniform invariant linear collapse on row-zero control: 0
 kappa=2,tau=1: cut (1,0) maps to cut (1,2) plus v -> v-2: PASS
 single-cut output was not any translate of the old cut (1,0): PASS
+kappa=2 mixed cut-phase covariance values: 5184
 quadratic bank energy before / after kappa=2: 1932 1932
 quadratic energy is invariant but phase-forgetting: VERIFIED BOUNDARY
 ALL EXACT CHECKS PASSED

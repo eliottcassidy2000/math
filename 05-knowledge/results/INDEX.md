@@ -2234,12 +2234,18 @@ slope one.  `-O2` and `-O3` runs byte-match the stored `PASS` transcript.
 
 ### lrc14_affine_cut_bundle_probe.out
 
-Independent exact follow-on to the **THM-2507 truncated-Radon audit**.  The
+Independent exact referee for the **THM-2508 affine-cut-bundle candidate**,
+following the THM-2507 truncated-Radon audit; this artifact does not itself
+promote a reserved theorem.  The
 full `42`-cut, `504`-nonzero-slope bundle is equivariant under
 `AGL_1(F_13) x AGL_1(F_7)`: `25,041,744` source-index identities verify the
 exact component map, and `26,364` cyclotomic basis checks verify its Fourier
-phase law.  The universal pointwise invoice is `42*7=294` good components out
-of `504`, with no cut-selection loss.  The `kappa=2` hostile becomes the pure
+phase law.  An exact `Z[C_91]/(Phi_91)` calculation verifies `471,744`
+coefficient rows of the mixed cut-phase factorization and all `5,184` values
+`Psi=K*dtilde(alpha,-beta*a)` are nonzero; all `864` zero-cut-character
+controls vanish.  The universal pointwise invoice is `42*7=294` good
+components out of `504`, with no cut-selection loss.  The `kappa=2` hostile
+becomes the pure
 component permutation `(tau,a,c)=(1,1,0)->(1,1,2)` plus `v->v-2`.
 The affine gauge action is regular on all `6,552` nonzero evaluation indices,
 so every invariant linear scalar is the uniform sum; its coefficient on each
