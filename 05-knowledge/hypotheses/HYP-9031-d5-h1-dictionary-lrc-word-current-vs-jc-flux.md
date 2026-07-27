@@ -126,6 +126,27 @@ and is now the live prediction.
    `rho` with `F o rho = sigma o F`). Both sides force the same sidecar
    type: a chosen representative of an orientation 2-torsor per level.
 
+## 2026-07-27 convergence: the LRC cocycle is now CONSTRUCTED
+
+Independently of this file, the overnight fleet built exactly the
+dictionary's LRC column: THM-2542 (codex) computes a **nonzero Cech
+1-class on the seven transported selector/scheduler charts** (the C91
+mapping torus of the root-deck local system; audit in flight), and
+[root-frontier-cont16]'s C91 ledger proves the representation-theoretic
+no-go `Hom_G(Q(zeta_91), Q(zeta_13)) = 0` -- no equivariant map
+produces a pure 13-root dipole from the primitive conductor-91 defect.
+Both slot directly into the dictionary: the constructed Cech class is
+the spectral `rho_LRC` made explicit (chart cover replacing the
+abstract cycle), and the Hom-vanishing is the coefficient-mismatch row
+sharpened to a theorem (the `7 (x) 13` tensor admits no equivariant
+collapse to its 13-line -- THM-2506/2508's cut/F_7-character necessity
+is the same fact in transform coordinates). The named residual on the
+LRC side is now the **semantic 2-cell** (identify the abstract mapping
+torus with a physical endpoint/current) -- i.e. the `H^2`/incidence
+half, exactly as prediction 1 framed it. The dictionary's "one degree
+up" slot is where both sides' open problems now live: JC's higher mixed
+strata vs LRC's semantic-arrival identification.
+
 ## Hostile controls
 
 - MSG-2152's sharp signed-step boundary (spectral): disjointness +
