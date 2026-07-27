@@ -1,0 +1,15 @@
+THM-2607 exact constant-six rail-boundary controls
+q0_unit_edges=138/162 global_content_divisibility_checks=4752
+q0_attainable_theta_one_counts=((0, 1, 2, 3, 4, 5, 6, 7), (0,), (0, 1, 2, 3, 4, 5, 6, 7), (0, 1, 2, 3, 4, 5, 6, 7), (0, 1, 2, 3, 4, 5, 6), (7,), (0,), (1, 2, 3, 4, 5, 6, 7), (0, 1, 2, 3, 4, 5, 6, 7), (0, 1, 2, 3, 4, 5, 6, 7), (7,), (0, 1, 2, 3, 4, 5, 6, 7))
+q0_selector_polytope=900 nontrivial_invoices=891 count_level_lanes=57
+forward_marker_selector_hist=(0, 0, 0, 0, 0, 9, 49, 147, 245, 245, 147, 49)
+theta_one_counts=(0, 0, 0, 0, 0, 7, 0, 1, 0, 0, 7, 0)
+correction_sums=(0, 0, 0, 0, 0, 10, 0, 7, 0, 0, 10, 0)
+forward_invoice_matches=[(6, 6), (8, 12), (11, 6)]
+reverse_orientation_matches=[(6, 7), (8, 1), (11, 7)]
+forward_gauges_checked=39 gauges_per_lane=13
+all_selector_gauges_checked=11583
+s8_combined_transition=(12, 12, 6, 12, 12, 12, 12) sum=0
+natural_rotation_digit_pairs={1: (4, 5), 2: (2, 3), 3: (0, 1), 4: (11, 12), 5: (9, 10), 6: (7, 8)}
+koopman_root_deck_images=(0, 0, 0, 0, 0, 0, 0) c91_generator_images=(1, 6, 1, 6, 1, 6, 1)
+verdict=PASS: physical rail cochain pays seven forward marker classes abstractly; natural C91/chart-time transport fails
