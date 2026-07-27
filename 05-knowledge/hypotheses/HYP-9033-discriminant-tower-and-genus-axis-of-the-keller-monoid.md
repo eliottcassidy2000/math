@@ -6,9 +6,11 @@ status: >
   cuspidal law 27 c^2 L = S^2 - T^3 (MISTAKE-287) and THM-2570's global
   normalization/conductor theorem.  THM-2576 proves the set-level composition
   law and the two irreducible components of S_(F o F); its discriminant
-  multiplicities remain open.  The synthesis retains several VERIFIED inputs,
-  four wider predictions, and a typed dictionary entry for HYP-9031.  Nothing
-  here is a JC(2) or classification claim.
+  multiplicities remain outside canon.  A second exact route reproduces its
+  image polynomial coefficient-for-coefficient and verifies a norm law; three
+  exact discriminant slices refute the former `L*H` odd-part prediction and
+  support odd part `H` alone.  The global discriminant claim remains under
+  audit.  Nothing here is a JC(2) or classification claim.
 source: opus-2026-07-28 (from the uniform disc law found by the
   THM-2546 referee run: disc = -4 (square)^2 L for all three
   coordinate cubics of the sporadic Keller map)
@@ -90,11 +92,27 @@ with exactly the two distinct irreducible components `V(L)` and `V(H)`.
 The raw inverse-coordinate resultant is `-a^8 c^18 S^8 H`; the first three
 factors are chart artifacts and say nothing about composite multiplicity.
 
-The remaining P1 prediction is that the odd part of the composite
-escape-coordinate discriminant is `L*H` times a square, and that its integral
-coordinate leads are powers of `det J_(F o F)=4`.  At higher grades the exact
-set law gives the image tower, but distinctness and irreducibility of its
-successive closures remain open.
+The concurrent exact inverse-section computation
+`keller_disc_tower_opus_20260728.py` independently reconstructs the same `H`
+(identical 361-term coefficient-ledger hash) and verifies the function-field
+norm identity
+
+```text
+product_(q in F^-1(t)) L(q) = H(t)/(64L(t)).
+```
+
+On three exact rational `(b,c)` slices, the degree-nine escape-coordinate
+discriminant contains `H` to odd multiplicity one and `L` to even multiplicity
+eight.  Thus the former prediction “odd part `L*H`” is **REFUTED on all three
+slices**.  The surviving global candidate is odd part `H` alone: a standard
+product-discriminant square-class argument is recorded in the companion, but
+has not yet been promoted to audited canon.  Likewise the former “powers of
+`det J_(F o F)=4`” lead prediction is refuted for this normalization; the
+observed canonical integral leads are `8` and `512`, obtained by cubing the
+atom-level leads.
+
+At higher grades the exact set law gives the image tower, but distinctness and
+irreducibility of its successive closures remain open.
 
 ## 3. Two crevasse invariants for atomhood
 
@@ -154,37 +172,30 @@ place to HUNT for a JC(2) counterexample instead.
 ## 5. Predictions ledger
 
 - P1 (set part proved at grade two): `S_(F o F)=V(LH)` with two irreducible
-  components (THM-2576).  The disc odd part `L*H` times a square remains open.
-- P2 (in flight): W1 obeys `disc = -(det J)^2 (square)^2 L_W1` with
-  `L_W1 = L o T1^(-1)`; leads `{|det J|, |det J|^3}` after suitable
-  normalization; W2 likewise in its own normal form if explicit.
+  components (THM-2576).  Odd part `L*H` is REFUTED on three exact slices;
+  odd part `H` alone is VERIFIED on those slices and globally CONDITIONAL on
+  the recorded square-class audit.
+- P2 (VERIFIED-EXACT for the two fixed tame members): W1 and W2 obey
+  `disc=-(det J)^2(square)^2L_W`, with `L_W=L o T^(-1)`.  A general
+  gauge-covariance theorem remains open.
 - P3: any new atom candidate must simultaneously break monodromy
   imprimitivity AND Jelonek reducibility expectations.
 - P4: component count of the Jelonek divisor = the grade exponent `k`,
   generically.
 - P5: the genus axis governs the remaining JC(2) strata.
 
-## Scorecard (same session, keller_disc_tower_opus_20260728)
+## Concurrent scorecard (typed after audit)
 
-P1 RESOLVED, half-refuted by a BETTER law: L_2 = equation of F(Z(L))
-computed and PROVED (irreducible, degree 25, degrees (14,21,12), 361
-terms); S_(F o F) = Z(L) u Z(L_2) CONFIRMED with exact fiber-drop
-witnesses (9/7/3/0). But the disc odd part at level 2 is L_2 ALONE --
-L appears to EVEN multiplicity 8: the middle level's -L class cancels
-against the norm law prod_(fiber) L = L_2/(64 L) (a conductor-
-discriminant mechanism). Corrected tower law: **odd part of disc at
-level k = L_k alone; the level-k escape-coordinate lead IS L_k (up to
-64L normalization); the depressed (trace-zero) structure persists at
-depth 2** (xi^8 coefficient identically zero -- induction candidate
-for all F^k). P2 CONFIRMED on BOTH tame conjugates W1 AND W2:
-disc = -4 (square)^2 L_W with L_W = L o T^(-1) (full target
-covariance) and lead pattern {L_W, -|det J|, |det J|^3} -- the law is
-a gauge-covariant of the ATOM. The composite-lead prediction is
-REFUTED as posed and replaced: integral-coordinate leads iterate by
-CUBING (8 -> 512 = 2^9; lead_(k+1) = lead_k^3), tied to |det J_F| = 2
-per-atom, not to det of the composite. P4 consistent (2 components at
-grade 9). Next: level 3 (is the degree-27 disc odd part L_3 alone,
-with L_3 the norm-transfer of L_2?).
+The set law and image equation are now canonized in THM-2576 and independently
+audited coefficient-by-coefficient.  The exact norm identity above is
+VERIFIED-EXACT but not yet a canon dependency.  Composite discriminant parity
+is FINITE-EXACT on three slices and has a named global square-class proof
+candidate; it is not yet an all-target polynomial factorization theorem.
+Trace-zero persistence at depth two and the `8 -> 512` cubing pattern are
+VERIFIED for the fixed construction only.  The W1/W2 identities are exact for
+those two tame conjugates, not a classification theorem.  P4 is consistent at
+grade nine.  The next decisive tests are a second global derivation of the
+square-class step and level three distinctness of `closure(F^2(V(L)))`.
 
 ## Loss ledger
 
@@ -192,6 +203,7 @@ The saturated cuspidal law is proved for the sporadic `F` only; the raw
 pullback has the extra affine plane `c=0` described in (C).  The set-level
 composition law is general and the two grade-two components are proved, but
 the discriminant multiplicities, `-(det J)^2` law, and higher component count
-remain predictions.  "Generic component count" needs a precise genericity
-notion before any classification claim; none of this closes JC(2), classifies
-the monoid, or excludes G1 -- it supplies invariants and a hunting map.
+remain outside proved general canon.  "Generic component count" needs a
+precise genericity notion before any classification claim; none of this closes
+JC(2), classifies the monoid, or excludes G1 -- it supplies invariants and a
+hunting map.

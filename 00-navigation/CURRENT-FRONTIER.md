@@ -373,7 +373,8 @@ Classify profiles under support operations; study analytic continuation and auto
   the `c=0` boundary is smooth.  THM-2576 proves the general set-level
   nonproperness composition law and computes the square's second component:
   `S_(F o F)=V(LH)` with `L,H` distinct irreducibles.  Composite
-  discriminant multiplicities and all higher component counts remain open.
+  discriminant parity is exact on three slices (`H` odd, `L` even) but remains
+  outside global canon; all higher component counts remain open.
   At degree eighteen, THM-2314/2316 close sparse supports,
   THM-2371/2376 close `H_2`, and audited THM-2406 forces THM-2389's `H_4`
   pole system onto the closed common-root wall. The inherited nonsplit

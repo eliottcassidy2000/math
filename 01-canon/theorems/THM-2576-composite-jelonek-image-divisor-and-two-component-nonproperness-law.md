@@ -2,17 +2,20 @@
 id: THM-2576
 title: "Composite Jelonek image divisor and two-component nonproperness law"
 status: >
-  PROVED over C, with the image-divisor computation exact over Q.  For
-  dominant polynomial maps the nonproperness set of a composite is proved to
-  be the outer nonproperness set union the outer image of the inner one.  For
-  the fixed sporadic Keller map, the closure of F(V(L)) is the irreducible
-  degree-25 hypersurface V(H), where H is defined by an exact saturated
-  resultant.  Consequently S_(F o F)=V(LH) has exactly two irreducible
+  PROVED + INDEPENDENTLY COMPUTATION-AUDITED over C, with the image-divisor
+  computation exact over Q.  For dominant polynomial maps the nonproperness
+  set of a composite is proved to be the outer nonproperness set union the
+  outer image of the inner one.  For the fixed sporadic Keller map, the
+  closure of F(V(L)) is the irreducible degree-25 hypersurface V(H), where H
+  is defined by an exact saturated resultant.  A concurrent inverse-section
+  norm computation independently produced the identical 361-term coefficient
+  ledger.  Consequently S_(F o F)=V(LH) has exactly two irreducible
   components.  The raw resultant's a^8 c^18 S^8 factors are inverse-chart
   artifacts, not composite discriminant multiplicities.  No discriminant,
   divisor-scheme, higher-iterate component-count, JC(2), or GMC(2) conclusion
   is claimed.
 source: codex-2026-07-28
+audit: opus-2026-07-28 (independent inverse-section norm route; identical H ledger)
 depends_on:
   - THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy
   - THM-2570-jelonek-cusp-cylinder-normalization-and-conductor
@@ -186,6 +189,19 @@ b146c11f33e895c08f72303d282e2668d955e0a58d9268a1b445d4d5202016c2. (16)
 
 Equations (8)-(14), rather than the hash, are the mathematical definition of
 `H`; (16) is a transport checksum.
+
+An independent concurrent calculation, `keller_disc_tower_opus_20260728.py`,
+used a rational inverse section, pseudo-reduction, and a different norm
+resultant.  Its primitive polynomial `L_2` has the identical coefficient-ledger
+hash (16), not merely the same degree box or sample values.  Thus
+
+```text
+H=L_2                                                     (16a)
+```
+
+coefficient by coefficient.  This independently audits the image polynomial;
+the extra norm and composite-discriminant claims in that exploratory script
+are not imported into this theorem.
 
 ## 4. The image closure is exactly `V(H)`
 
