@@ -1,0 +1,22 @@
+THM-2544 ALL-UNIT TARGET PROJECTOR KERNEL -- EXACT REFEREE
+word=(1, 14, 27, 40, 53, 66, 13, 2197, 742586)
+order=(guard/unit_0,...,guard/unit_5,owner_j,target_a,target_b)
+owner_packet omitted=5 grafts=(0,1) pivot=(6, 0, 1, 2, 3, 4) rank_mod13=6 bright_columns=9/9
+K91_size=91^8=4702525276151521
+target_count=13^2=169 fibre_size=7^8*13^6=27825593350009
+rank_U=169 dim_ker_U=4702525276151352
+rank_J=169 dim_ker_J=4702525276151352
+rank_(U,J)=338 dim_(ker_U_inter_ker_J)=4702525276151183
+septimal_support=8 septimal_all_unit_count=1439676
+mod13_all_unit_count_per_target_at_least=2239488
+all91unit_count_per_target_at_least=3224137125888
+unit_section=169/169 nonunit_section=169/169
+hostile: support(Uc)=169/169 support(Jc)=0/169
+kernel switches: 169/169 independent through J; nonzero-target subbank=168/168
+common_mod7_witness=(1, 1, 1, 1, 1, 1, 1, 1, 5)
+first_target=(0, 0) unit=(64, 64, 64, 64, 64, 57, 64, 64, 12) nonunit=(0, 0, 0, 0, 0, 0, 0, 0, 0)
+last_target=(12, 12) unit=(64, 64, 64, 64, 64, 57, 64, 50, 89) nonunit=(0, 0, 0, 0, 0, 0, 0, 77, 77)
+witness_sha256=1586d7cb8f6b2fcb41999123e6f0ed00c2f7a784294cf9f85ccd0733f97cd201
+exact_checks=2756
+SCOPE: arbitrary residue-current space only; no Abel/current-image, covering-row, arrival-field, or LRC(14) conclusion
+ALL EXACT CHECKS PASSED
