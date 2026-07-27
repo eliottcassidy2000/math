@@ -1,0 +1,20 @@
+== THM-2582: odd-block discriminant tower ==
+
+== parity controls for conjugate blocks ==
+  degree 3: Disc(Norm f)/(Disc(g)^3 Norm Disc(f)) = (t + 2)^2
+  degree 2: Disc(Norm f)/(Disc(g)^2 Norm Disc(f)) = (t + 2)^2
+  block-swap sign = (-1)^m; odd blocks are alternating, even blocks symmetric
+
+== corrected inverse-chart norm identity ==
+  Res_X(E,D)=a^2 c^3 S^2
+  prod_(q in F^-1(t)) L(q)=H/(64 L)
+  (1,1,1): PRS=-198662708168284531608320, standard Sylvester=198662708168284531608320
+  H/(64L)=190265288239/320
+  (1,1,1) composite x-core: degree 9, squarefree, lead=-H
+
+== level-two square-class ledger ==
+  [-L] * [-H/L] = [H]
+  odd irreducible part of the degree-nine x-discriminant: H alone
+
+scope: field square class/parity only; no higher-level or JC(2) conclusion
+all exact checks passed
