@@ -2,7 +2,8 @@
 id: THM-2583
 title: "Self-similar digit-needle internalization and carrier boundary"
 status: >
-  PROVED + VERIFIED-EXACT.  Let U be any positive rational Boolean step
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let U be any
+  positive rational Boolean step
   carrier on the physical circle which is neutral for a new F_13 endpoint
   action.  For every positive k, L in {1,2}, and every sufficiently large
   N, the future gate d_L(k T^N x+s/13), T(x)=13x mod 1, has a labelled
@@ -43,7 +44,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2583 -- a later tooth grid internalizes the boundary needle
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2578 constructs a fixed rational interval which isolates one boundary
 of a target-translated danger/safe gate.  Its remaining defect is that the
@@ -417,4 +418,14 @@ The dependency-free exact referee checks:
 
 The arbitrary-carrier, all-sufficiently-large-`N`, cylinder-shrinking, and
 live-row base-incidence statements are symbolic proofs above, not finite
-extrapolations. **QED.**
+extrapolations.
+
+The independent hostile audit rederived the fixed-sign grid bijection and
+the modulo-seven wall obstruction, checked the all-large-`N` equal-root
+piercing and cylinder-isolation quantifiers, and verified the delta handoff
+and translated-probe cover.  It also replayed the normal, optimized,
+stored-output, hash, and compilation checks.  In particular it confirmed the
+scope boundary: (26) retains base incidence only, and transporting its live
+semantics would repeat MISTAKE-266.  No mathematical or code defect was found.
+
+**QED.**

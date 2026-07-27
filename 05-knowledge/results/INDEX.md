@@ -10,8 +10,18 @@
   root `floor(13T^(N+5)X)=v`.  This is a current-arrival/rescaled-deep/later
   root diagonal, not a selected old head, co-shift, old-action current, or
   row exclusion.  Hashes are `5bd3e395...bf6a0` / `0e01ded4...09b0`.
+- `keller_odd_block_discriminant_square_class_thm2582.py` -> matching `.out`
+  [THM-2582 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  For a
+  separable norm-product of degree-`m` conjugate blocks, the discriminant
+  square class is the norm of the block discriminant times the index
+  discriminant to parity `m`.  For the fixed sporadic Keller map,
+  `Norm(L)=H/(64L)` and the degree-nine eliminant has square class `[H]`:
+  `H` is its sole odd irreducible divisor and `L` has even valuation.  This
+  proves divisor parity, not exact multiplicities or a higher-iterate law.
+  Hashes are `afcf930e...0a9c` / `d9a2b77f...1ff4`.
 - `lrc14_self_similar_digit_needle_thm2583.py` -> matching `.out`
-  [THM-2583 PROVED + VERIFIED-EXACT].  Every positive rational carrier
+  [THM-2583 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  Every
+  positive rational carrier
   already proved neutral under the whole endpoint action contains, at every
   sufficiently late `13^N k` tooth scale, a physical base-13 cylinder which
   fixes an old/future equal root and isolates one target-labelled boundary.

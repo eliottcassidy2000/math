@@ -2,7 +2,7 @@
 id: THM-2582
 title: "Odd-block discriminant tower and composite Jelonek square class"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For a separable finite index algebra, the discriminant square class of a
   norm-product of degree-m conjugate polynomial blocks is the norm of the
   block discriminant times the index discriminant to the power m.  The
@@ -29,7 +29,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2582 -- odd blocks carry the outer discriminant class
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The three exact slices in HYP-9033 showed that the old Jelonek factor `L`
 occurs to even order in the degree-nine composite discriminant, while the new
@@ -326,6 +326,14 @@ The companion checks:
 - MISTAKE-290's exact PRS/Sylvester sign hostile at `(1,1,1)`;
 - a squarefree degree-nine composite core at that target; and
 - the final square-class cancellation (25).
+
+The independent hostile audit rederived the nonmonic root-product factors,
+the odd-block swap sign, the norm exponents and the generic
+separability/pairwise-coprimality control.  It also checked the standard
+Sylvester sign independently, replayed the denominator-clearing valuation
+argument in (26), and reproduced the normal, optimized, stored-output, hash,
+compilation, and documentation checks.  No mathematical or code defect was
+found.
 
 The result concerns the discriminant divisor parity of one coordinate
 eliminant for one fixed three-dimensional Keller map.  It gives no exact
