@@ -2489,3 +2489,5 @@ source is `504`, and it vanishes on every row-zero defect.  The first obvious
 invariant is quadratic energy, verified as `1,932` before and after the hostile,
 but it discards phase and supplies no endpoint/owner/deep current.  Normal and
 optimized runs byte-match the stored transcript.
+| `lrc14_rank12_box_anatomy_macmini_S143.out` | [STORED; HYP-9045 BOX ANATOMY] | Pair-relation saturation (all-small families have full rank-12 sparse codes: AP/GW/DW + 50/50 random) + total mod-p invisibility (support-3 zero-trick; rank 12 at p=7,13 despite zero coordinates): the rank-12 box = the all-small height box, invisible to CRT, purely archimedean. | mac-mini-S143 |
+| `jc_chi_ledger_macmini_S142.out` | [STORED; HYP-9040(3) PARTIAL] | disc_c(K) = (b²−12a)³ perfect cube; χ(K) = 1; χ(Σ) = 1 (solid). Fiber-count stratification NOT solid: the fast counter is unsound at degenerate strata (undercounts (0,1,0) vs S131 Gröbner) — ledger balance pending a corrected exact count map. | mac-mini-S142/143 |

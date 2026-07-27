@@ -1,3 +1,9 @@
+## mac-mini-2026-07-27-S143 -- BOTH DIRECTED ATTACKS RESOLVE AS REFUTATIONS-WITH-REDIRECTS (HYP-9045): (1) MOD-2 BOCKSTEIN FORCING OF THE 91-LINE IS STRUCTURALLY IMPOSSIBLE -- the line's coefficients are odd-order (7x13; THM-2337's beta is a 13-Bockstein; codex's odd_antipode_audit already machine-checks the no-2-torsion), and Z/2-equivariant cohomology over odd coefficients VANISHES (Smith, 5 lines): the palindrome/parity instruments are the WRONG PRIME -- LEM-020's blindness lesson one level up; REDIRECT: Z/7 x Z/13 ROTATION equivariance (free grid actions, counts == degenerate-word contributions mod 7/13) = the correctly-primed Redei mechanism, aimed at THM-2356's pairing; (2) THE RANK-12 BOX IS THE ALL-SMALL HEIGHT BOX (pair-relation saturation: any all-<=91^6 family has full rank-12 sparse code; refereed AP/GW/DW + 50/50 random) AND TOTALLY MOD-p INVISIBLE (the support-3 zero-trick recovers e_i even at zero coordinates; rank 12 always at p=7,13) => no CRT instrument can see it; its content is purely archimedean, its shallow shells are the strata/plateau territory, and at depth the geometric channel RE-MERGES with the spectral 91-line -- honestly refuting my own S142 approach-(2) hope of an independent finite discharge. Plus: the S142 chi-ledger stratification caught UNSOUND by its own referee (fast counter undercounts (0,1,0)); caveat banner added before propagation; disc-cube and chi computations remain solid.
+
+Prompt (owner): work the bockstein forcing of the 91-line and the rank-12 box
+
+FILES: HYP-9045 (RESOLVED), rank12-box-anatomy script+out, chi-ledger patch+caveat, session log. -> all
+
 > **CURRENT-TRUTH WARNING (2026-07-22):** This bounded handoff is not proof
 > authority. Start with [START-HERE.md](START-HERE.md),
 > [CURRENT-FRONTIER.md](CURRENT-FRONTIER.md), and

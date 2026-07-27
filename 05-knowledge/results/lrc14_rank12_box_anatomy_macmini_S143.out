@@ -1,0 +1,17 @@
+== (A) pair-relation saturation (rank over Q) ==
+  AP         v_max=13 <= 91^6: True; rank(pair relations) = 12  (12 = full)
+  GW         v_max=24 <= 91^6: True; rank(pair relations) = 12  (12 = full)
+  deep well  v_max=182 <= 91^6: True; rank(pair relations) = 12  (12 = full)
+  random all-small: 50/50 rank 12
+  => the rank-12 stratum contains EVERY all-coordinates-small family;
+     'the box' == the all-small height box (stars = big outliers).
+
+== (B) total mod-p invisibility ==
+  AP         mod  7: zero-coords=1, sparse-span rank over F_7 = 12  (12 = no drop)
+  AP         mod 13: zero-coords=1, sparse-span rank over F_13 = 12  (12 = no drop)
+  GW         mod  7: zero-coords=1, sparse-span rank over F_7 = 12  (12 = no drop)
+  GW         mod 13: zero-coords=1, sparse-span rank over F_13 = 12  (12 = no drop)
+  deep well  mod  7: zero-coords=2, sparse-span rank over F_7 = 12  (12 = no drop)
+  deep well  mod 13: zero-coords=1, sparse-span rank over F_13 = 12  (12 = no drop)
+  => reduction mod p NEVER drops the sparse rank: the box is
+     invisible to every mod-p/CRT instrument (redirect lemma).
