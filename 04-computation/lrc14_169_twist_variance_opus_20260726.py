@@ -617,6 +617,28 @@ def main():
     log("    gauge checks: PASS")
     log("")
 
+    # -- [8b] trivial-intertwiner certificate (klein MSG-2173 reply) --------
+    log("[8b] TRIVIAL-INTERTWINER certificate: the predecessor-root F_13 action")
+    log("     y -> y + u/13 pushes forward to ell = u*(w mod 13) in <w> = identity")
+    log("     of the gauge quotient G^.  Verify gamma(u*w) = gamma(0) mod p1 for")
+    log("     ALL thirteen u -- so klein's THM-2519 root action is invisible to the")
+    log("     169-twist bank BY CONSTRUCTION (decisive incompatible convention).")
+    all_triv = True
+    for uu in range(13):
+        ell_u = tuple((uu * wmod[i]) % 13 for i in range(9))
+        E_iv = build_set(PAT_E, ell_u)
+        AX_mod, _, _ = x_sweep(E_iv, Q_iv, Q_starts, X, mods1, tabs1)
+        BYc_mod, _ = endpoint_sum(E_iv, -Y, mods1)
+        g_u = e13_ph_1[ell_u[8] % 13] * AX_mod[0] % P1 * BYc_mod[0] % P1
+        ok = (g_u - gam_p1[(0, 0)]) % P1 == 0
+        all_triv = all_triv and ok
+        if not ok:
+            log(f"     u={uu}: gamma(u*w) != gamma(0)  -- UNEXPECTED")
+    log(f"     gamma(u*w) = gamma(0) for all 13 diagonal twists: "
+        f"{'PASS' if all_triv else 'FAIL'}")
+    assert all_triv
+    log("")
+
     # -- decision -----------------------------------------------------------
     log("[9] DECISION: exact nonconstancy test of the 169-twist bank (THM-2334 (42)-(43))")
     g0 = gam_p1[(0, 0)]
