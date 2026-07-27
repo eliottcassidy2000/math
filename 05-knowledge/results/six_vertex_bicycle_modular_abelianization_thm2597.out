@@ -1,0 +1,10 @@
+unique nonzero bicycle: delta({1,4,5})=delta({2,3,6})=C6
+star words: star1+star4+star5 = star2+star3+star6
+partial cube: Q3 minus {010,101}; Theta classes have sizes 2,2,2
+matching boundary: C6 has 2 derangement matchings; + frozen matching gives K3,3 with 6
+two monochromatic edge colors realize the d=2,n=6 inherited-color construction
+support rotations: C2 swaps each Theta pair; C3 cycles the three classes; group C6
+tournament: tile mask 873/complement 150, scores (2,3)^3, H=45, Aut=C3
+blue self-loop smaller endpoints at n=6: [19, 150]
+graceful hostile: exhaustive 7P6 gives no C6 labeling; delete one edge and P6 is graceful
+ALL CHECKS PASSED

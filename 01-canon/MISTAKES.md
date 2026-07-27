@@ -9,7 +9,7 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
-## MISTAKE-296 (2026-07-27, THM-1375 / degree-four Keller monodromy) -- a generic deck involution was treated as a polynomial automorphism of affine space
+## MISTAKE-297 (2026-07-27, THM-1375 / degree-four Keller monodromy) -- a generic deck involution was treated as a polynomial automorphism of affine space
 
 - **What was claimed:** THM-1375 §1 promoted a “Smith selection rule” to an
   unconditional Keller theorem: the monodromy point stabilizer `H` must be
@@ -47,6 +47,25 @@ Format per entry:
   defects extend on the normal affine source, any surviving `D4` map needs
   an unramified missing boundary divisor exchanged with an included divisor
   over the same target component.
+
+## MISTAKE-296 (2026-07-28, concurrent theorem reservation) -- a later empty stub reused the live THM-2604 accessibility ID
+
+- **What happened:** the independently audited future-root accessibility
+  theorem was reserved and proved as
+  `THM-2604-unshifted-future-root-accessibility-and-selector-cross-mixing-boundary.md`
+  on a public session branch.  Before that branch was merged to `main`, a
+  later session reserved the distinct alternative-rail clock-collapse
+  candidate under the same numeric ID.  The filenames did not conflict, so
+  both YAML IDs briefly appeared on `main` after integration.
+- **Why it was wrong:** theorem IDs are proof-graph keys.  An empty reserved
+  stub cannot share the key of an earlier public, proved, audited theorem;
+  checking only `origin/main` misses concurrently published session branches.
+- **Repair:** the proved accessibility theorem retains `THM-2604` and its
+  full slug.  The later `RESERVED / UNPROVED EMPTY STUB` is moved without any
+  mathematical promotion to
+  `THM-2608-alternative-rail-clock-collapse-and-missing-transition-index.md`.
+  Future reservations must scan all remote refs immediately before commit;
+  current citations continue to use theorem ID plus slug.
 
 ## MISTAKE-295 (2026-07-28, THM-2594 hostile control) -- constant-column erasure was mislabeled as fixed-root slaving
 

@@ -2,7 +2,7 @@
 id: THM-2601
 title: "Linear Bockstein sheet coordinate and nonlinear target monodromy"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   One explicit F_13-linear functional of THM-2585's six-dimensional
   septimal Bockstein factor is a bijective coordinate on all thirteen target
   sections.  Its six owner-conjugate rows recover the same coordinate in
@@ -11,25 +11,27 @@ status: >
   A rank-eight affine system, certified by determinant 4, proves that no
   F_13-linear functional can make target translation affine.  Two CRT
   components separately distinguish all sheets, while the third has exactly
-  the collisions {1,9} and {4,12}.  This scalarizes the coefficient atlas but
-  does not identify it with a physical root deck, semantic endpoint, or
-  common-ancestry transition.
+  the collisions {1,9} and {4,12}.  The scalar is faithful only on singleton
+  sections: 631 nonempty Boolean aggregates have scalar value zero.  This
+  scalarizes the coefficient atlas but does not identify it with a physical
+  root deck, semantic endpoint, additive charge detector, or common-ancestry
+  transition.
 source: root-holotopy-2026-07-28-bockstein-sheet-coordinate
 depends_on:
   - THM-2585-saturated-normalized-target-projector-and-bockstein-noncommutation
+  - THM-2590-boolean-bockstein-and-theta-selector-incidence-spectrum
 related:
   - THM-2593-charged-target-section-atlas-and-minimal-c91-holonomy-trivialization
-  - THM-2590-boolean-bockstein-and-theta-selector-incidence-spectrum
 script: 04-computation/lrc14_linear_bockstein_sheet_coordinate_thm2601.py
 output: 05-knowledge/results/lrc14_linear_bockstein_sheet_coordinate_thm2601.out
-script_sha256: 99a993d03b649398c85c5698c1cd021322520ef0ceaa16485e4e5d5419a1c115
-output_sha256: 988e100c989a334f0534bc5c9059de400d0270905b40ed87d080ca3356c51f0f
+script_sha256: 0e33382721fe55845787584f60f11d518147f9c022c64e6357974aabc0f17302
+output_sha256: ae76f41a5bbb047bcb8cbda45833fef9518c075450ef19e9e171c4dd684fecd1
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2601 -- a scalar Bockstein coordinate for the target-sheet atlas
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2585 constructs thirteen pairwise distinct unit factors
 
@@ -256,6 +258,35 @@ sheet recovery.  THM-2585 gives all six nonzero owner Bocksteins; (15)
 uses the correctly conjugated functional on the full factor rather than
 silently identifying one quadratic component with the whole atlas.
 
+### 5.1 The scalar coordinate is not additive charge detection
+
+Faithfulness on the thirteen singleton atlas does not survive Boolean
+aggregation.  Since the singleton values (5) are exactly all elements of
+`F_13`, exhaustive subset summation gives
+
+```text
+#{S subseteq F_13 : sum_(q in S)t_q=0}=632,
+#{S subseteq F_13 : sum_(q in S)t_q=a}=630  for a!=0.       (24)
+```
+
+Thus `631` nonempty subsets have scalar value zero.  The smallest hostile is
+already
+
+```text
+S={5}:       lambda(Y_5)=0,       while Y_5 is a unit.      (25)
+```
+
+The count can also be read from character orthogonality:
+for every nontrivial additive character,
+`prod_(t in F_13)(1+chi(t))=2`, giving `(8192+24)/13=632`
+at zero and `(8192-2)/13=630` elsewhere.
+
+Consequently (4) is a lossless coordinate for a *chosen singleton section*,
+not a nonvanishing test for sums of sections.  THM-2590's full `R_7` class is
+still required for its theorem that every nonempty Boolean sum is nonzero.
+Every linear scalar separator has the same additive hostile, because its
+thirteen singleton values must again be all of `F_13`.
+
 ## 6. Map, loss, and next operation
 
 The exact connection is
@@ -268,7 +299,7 @@ preserved: target-section label, all six owner labels, C_13 orbit length;
 destroyed/not supplied:
            positivity, physical x-support, semantic root/endpoint,
            relation charge, and an ordered common-ancestry edge;
-action:    target translation becomes the nonlinear permutation S.       (24)
+action:    target translation becomes the nonlinear permutation S.       (26)
 ```
 
 Consequently this theorem improves THM-2593's coefficient atlas: the full
@@ -281,7 +312,7 @@ identification.
 The next physical object remains an ordered edge kernel
 
 ```text
-M_k(q,q')                                                  (25)
+M_k(q,q')                                                  (27)
 ```
 
 on one common ancestry carrier.  Vertex factors determine `q` through this
@@ -300,8 +331,9 @@ printed seven-row table and performs all arithmetic over `F_13`.  It checks:
 - the inverse and successor polynomials at all field elements;
 - all thirteen length-thirteen successor orbits and all `169` affine maps;
 - all `78` owner-conjugate identities (15);
-- rank eight and the determinant certificate (19); and
-- every fibre in all three CRT factors (23).
+- rank eight and the determinant certificate (19);
+- every fibre in all three CRT factors (23); and
+- all `8192` Boolean scalar sums and the exact histogram (24).
 
 Run
 
@@ -319,4 +351,16 @@ Both modes must byte-match
 after LF normalization.  Every check raises explicitly under optimized
 Python; no assertion disappears under `-O`.
 
-QED pending independent hostile audit.
+## 8. Independent hostile audit
+
+An independent audit reconstructed the separator by a distinct search,
+replayed the inverse and successor interpolation, checked all owner
+conjugates and the socle embedding, recomputed the rank-eight certificate
+and affine-order-thirteen classification, and independently reproduced the
+CRT fibres and the complete Boolean subset histogram.  It also verified the
+sharp hostile (25): `Y_5` is a nonzero CRT unit although its scalar value is
+zero.  Normal and optimized runs byte-match the stored transcript after LF
+normalization, with the declared hashes.  No mathematical or scope defect
+remains.
+
+QED.

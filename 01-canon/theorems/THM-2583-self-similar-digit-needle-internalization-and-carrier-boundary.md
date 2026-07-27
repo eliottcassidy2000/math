@@ -4,35 +4,31 @@ title: "Self-similar digit-needle internalization and carrier boundary"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let U be any
   positive rational Boolean step carrier on the physical circle which is
-  neutral for a new F_13 endpoint
-  action.  Fix any old digit v whose cell contains an interval of U and any
-  prescribed future digit h.  For every positive k, L in {1,2}, and every
-  sufficiently large N, the future gate d_L(k T^N x+s/13), T(x)=13x mod 1,
-  has a labelled boundary x_N in that interval with old/future digit pair
-  (v,h).  A sufficiently deep physical base-thirteen cylinder H_N containing
-  x_N lies inside U, fixes that prescribed pair on the whole
-  cylinder, and meets the complete 26*13^N*k target/tooth boundary atlas
-  only at x_N.  Thus H_N internalizes THM-2578's absolute boundary needle:
-  the lawful positive danger/safe layers have one target-delta handoff and
-  every target Abel character is nonzero at every physical offset.  On each
-  live row the same geometry can place such a cylinder inside THM-2559's
-  source carrier and a nonzero translated c_3 probe, giving exact base
-  incidence with the owner source, terminal source word, late owner block,
-  and an arbitrarily prescribed future root over one live old root.  But that
-  source carrier contains an unshifted k_a safety factor and is not neutral.
-  Its facts do not transport
-  with the shifted cylinder orbit; combining them with the nonzero colours
-  would repeat MISTAKE-266.  Thus the live cylinder is an absolute-reference
-  candidate with base provenance only.  No covariant packet comparison,
-  paired-blocker action, THM-2334 current, row exclusion, or LRC(14)
-  conclusion follows.
+  neutral for a new F_13 endpoint action.  Fix any old digit v whose cell
+  contains an interval of U and any prescribed future digit h.  For every
+  positive k, L in {1,2}, and every sufficiently large N, the future gate
+  d_L(k T^N x+s/13), T(x)=13x mod 1, has a labelled boundary x_N in that
+  interval with old/future digit pair (v,h).  A sufficiently deep physical
+  base-thirteen cylinder H_N containing x_N lies inside U, fixes that
+  prescribed pair on the whole cylinder, and meets the complete
+  26*13^N*k target/tooth boundary atlas only at x_N.  Thus H_N internalizes
+  THM-2578's absolute boundary needle: the lawful positive danger/safe
+  layers have one target-delta handoff and every target Abel character is
+  nonzero at every physical offset.  Applied to THM-2549's positive-depth
+  future owner-to-word field, it also retains a neutral later chronology.
+  Separately, on each live row the same geometry gives THM-2559 source-word,
+  owner, deep-probe, and arbitrary old/future-root base incidence.  That
+  source carrier contains an unshifted k_a safety factor and is not neutral;
+  transporting those facts with the shifted orbit would repeat MISTAKE-266.
+  No selected-head comparison, covariant packet comparison, paired-blocker
+  action, THM-2334 current, row exclusion, or LRC(14) conclusion follows.
 source: common-endpoint-seam-2026-07-28-self-similar-digit-needle
 depends_on:
   - THM-2461-temporal-blocker-word-cocycle-and-diagonal-polarized-repair-boundary
+  - THM-2549-future-pullback-target-neutrality-and-cemetery-hall-boundary
   - THM-2559-target-informed-chord-and-universal-old-repair-packet
   - THM-2578-target-neutral-boundary-needle-and-all-colour-abel-normal-carrier
 related:
-  - THM-2549-future-pullback-target-neutrality-and-cemetery-hall-boundary
   - THM-2565-target-active-self-return-and-future-root-overlap-audit
   - THM-2569-stationary-diagonal-conditioned-paired-corner-and-frozen-future-role-boundary
   - THM-2581-b-word-depth-five-owner-clock-host-and-reflection-breaking
@@ -269,7 +265,69 @@ available, but is not forced or distinguished.  Thus this needle supplies a
 chosen joint cell; without a semantic selector or a restrictive ancestry
 sidecar it supplies no Hall deficiency.
 
-## 5. Uniform live-row base incidence, not transported semantics
+## 5. Live-row applications: neutral chronology versus base provenance
+
+### 5.1 A lawful neutral owner-to-word carrier
+
+On every live row, THM-2549 supplies a positive rational owner-to-word
+handoff
+
+```text
+G_R(x)=1_(E_(j,R))(x)
+       1_(Q_(j,R,sigma_R))(T^(K_R)x),
+
+integral G_R>0.                                             (22a)
+```
+
+Fix any `L>=1` beyond the earlier chronology horizon and put
+
+```text
+U_R(x)=G_R(T^Lx).                                          (22b)
+```
+
+Pullback preserves its positive mass.  More importantly, every factor in
+`U_R` occurs at positive base-thirteen depth.  THM-2549's pointwise
+future-pullback neutrality theorem therefore proves that `U_R` is fixed by
+the old whole target co-shift; this is a proved type fact, not independence
+of notation.
+
+There are nevertheless two actions, and they must not be identified.  Label
+the newly adjoined time-`N` `k_a` occurrence as a separate endpoint copy and
+let `tau_new` move only that copy.  Then the exact action table is
+
+| action | moved occurrence | action on `U_R` | meaning of its colour |
+|---|---|---|---|
+| old `tau_old` | the old THM-2365 role coordinates | fixed pointwise by THM-2549 | old ancestry charge |
+| new `tau_new` | only the labelled time-`N` `k_a` gate | fixed because `U_R` has no factor at that occurrence | new endpoint-copy charge |
+| diagonal old/new action | both temporal copies | **unconstructed** | required comparison with the canonical current |
+
+In the labelled product algebra `tau_old` and `tau_new` commute because they
+act on distinct occurrences.  No common physical pullback or semantic
+intertwiner between them is claimed.  Thus the orbit below is lawful for the
+new endpoint copy, while its colour is not silently renamed the old
+THM-2365/THM-2334 target colour.
+
+Apply Sections 2--4 to `U_R`, with `k=k_a`, `L=L_a`, and choose the new delay
+`N` beyond `L+K_R` as well as the piercing threshold.  The resulting
+cylinder family lawfully retains on every target shift
+
+```text
+the later owner E_(j,R) at depth L,
+
+its literal terminal word sigma_R at depth L+K_R,
+
+one common old/future physical digit h,
+
+and the absolute all-colour boundary normal at depth N.     (22c)
+```
+
+Thus the boundary needle can be internalized on a genuine neutral live-row
+chronology/word carrier for all `165` rows.  It does not place THM-2537's
+selected old head in that cylinder, transport the old ancestry charge to the
+new action, or identify the physical digit `h` with a canonical semantic
+arrival root.  THM-2549's cemetery/Hall boundary is narrowed but not crossed.
+
+### 5.2 The richer THM-2559 source packet gives base provenance only
 
 On every one of the `165` live rows, retain THM-2559 notation
 
@@ -356,11 +414,10 @@ semantic current.  Doing so would repeat exactly MISTAKE-266.  To transport
 the provenance, one must co-shift the whole `W` packet or prove a comparison
 map from the fixed digit cylinder to a covariant packet orbit.
 
-By contrast, when `U` is separately proved fixed under the whole target
-action—for example an appropriately typed positive member of THM-2549's
-future-pullback algebra—Sections 3--4 genuinely retain its neutral facts.
-That conditional application does not attach the selected old head or the
-missing old target charge.
+Section 5.1 is the corresponding positive neutral control: its explicitly
+labelled new-copy action genuinely retains the later owner/word facts, but
+still does not attach the selected old head or identify the new colour with
+the missing old target charge.
 
 ## 6. Relation to the depth-five owner-clock needle
 
@@ -437,9 +494,12 @@ extrapolations.
 The independent hostile audit rederived the fixed-sign grid bijection and
 the modulo-seven wall obstruction, checked the all-large-`N` prescribed-pair
 piercing and cylinder-isolation quantifiers, and verified the delta handoff
-and translated-probe cover.  It also replayed the normal, optimized,
-stored-output, hash, and compilation checks.  In particular it confirmed the
-scope boundary: (26) retains base incidence only, and transporting its live
-semantics would repeat MISTAKE-266.  No mathematical or code defect was found.
+and translated-probe cover.  It also audited the two-action table in Section
+5.1: `tau_new` is lawful precisely because it acts on a separately labelled
+endpoint occurrence absent from `U_R`; old-action neutrality alone supplies
+no diagonal old/new action or semantic intertwiner.  In particular, (26)
+retains base incidence only, and transporting its live semantics would repeat
+MISTAKE-266.  Normal, optimized, stored-output, hash, and compilation checks
+all pass; no mathematical or code defect was found.
 
 **QED.**

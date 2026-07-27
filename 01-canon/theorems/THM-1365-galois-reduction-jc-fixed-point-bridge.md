@@ -1,6 +1,6 @@
 # THM-1365: The Galois Reduction — a Jacobian Conjecture that holds (polynomial-deck case), and the fixed-point bridge
 
-> **SCOPE PIN (THM-2598 / MISTAKE-296).**  “Polynomial-deck” is a
+> **SCOPE PIN (THM-2598 / MISTAKE-297).**  “Polynomial-deck” is a
 > load-bearing hypothesis, not a presentation choice.  For monodromy `G`
 > with point stabilizer `H`, the generic group `N_G(H)/H` acts on the
 > finite-etale cover over the complement of the Jelonek set, but its elements

@@ -38,7 +38,7 @@ related:
   - THM-2597-six-vertex-bicycle-modular-abelianization-cycle
   - THM-2606-affine-v4-parity-channels-partial-cubes-and-feuerbach-origin
   - HYP-9027-twojet-disc-jelonek-odd-exponent-law
-  - MISTAKE-296
+  - MISTAKE-297
 script: 04-computation/jacobian_quartic_v4_resolvent_thm2598.py
 output: 05-knowledge/results/jacobian_quartic_v4_resolvent_thm2598.out
 script_sha256: 62683c2ee2a1b4f123b155cc22ea9ae52da707c43c7af0b8de16e7dc2fd1f888
@@ -424,7 +424,7 @@ for `D4`.  The honest currently proved non-Galois list is therefore
 D4, A4, S4,                                                   (30a)
 ```
 
-not only `A4,S4` (MISTAKE-296).  This restores a quadratic intermediate to
+not only `A4,S4` (MISTAKE-297).  This restores a quadratic intermediate to
 the quartic root field and invalidates any unconditional “no intermediate
 field” statement outside the `A4/S4` primitive branches.
 

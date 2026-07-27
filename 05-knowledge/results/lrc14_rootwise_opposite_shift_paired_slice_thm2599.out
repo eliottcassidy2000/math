@@ -1,0 +1,38 @@
+== translated-tooth identity ==
+  ordinary translated danger count: 1 or 2
+  guard translated danger count: 3 or 4
+
+== labelled ordinary wall census ==
+  exact coefficient/root/sign cases: 2080
+  vector wall count on every root: 2*coefficient
+  no wall is a root endpoint or belongs to two shift components
+
+== prime Boolean-profile Fourier support ==
+  nonempty proper Boolean profiles: 8190
+  exact nonzero-frequency checks: 98280
+  every proper Boolean profile has all 12 primitive colours
+
+== complete opposite-shift root-cell bank ==
+  exact typed (target,blocker,root,level) cases: 1976
+  every ordinary root has a positive slice and obeys 1/(182ak)
+  every guard root is pointwise covered; some slice has mass >=1/169
+  finite-bank smallest largest ordinary slice: 353/35490 at (k,a,h,s)=(15, 13, 6, 1)
+  finite-bank smallest largest guard slice: 11/546 at (k,a,h,s)=(12, 39, 0, 3)
+
+== valuation-free unequal-slope controls ==
+  non-LRC unequal-slope root controls: 52
+  the ordinary mechanism uses k!=a; 13-adic typing guarantees it
+
+== sharp ordinary pointwise hostile ==
+  (k,a,y,h)=(14,2197,733/737,12)
+  target danger shifts = blocker danger shifts = (1,)
+  all paired slices vanish at y, but another chamber survives in I_12
+
+== toothpick full-shift cylinder control ==
+  control (k,a,L)=(12,13,1); common cylinder depth: 3
+  paired profile sizes by root: (1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2)
+  affine 8-word h_j=3-2j: (3, 1, 12, 10, 8, 6, 4, 2)
+  exact disjoint-block intersection mass: 1/542800770374370512771595361
+  concatenating the 13 codewords embeds the full one-sided 13-shift
+
+all exact checks passed

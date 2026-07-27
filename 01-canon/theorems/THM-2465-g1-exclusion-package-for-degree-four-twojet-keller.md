@@ -52,7 +52,7 @@ related:
   - THM-1340-engine-trichotomy-zaffine-keller
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
   - HYP-9027-twojet-disc-jelonek-odd-exponent-law
-  - MISTAKE-296
+  - MISTAKE-297
 script: 04-computation/jacobian_g1_stratum_exclusions_kps_S134.py
 output: 05-knowledge/results/jacobian_g1_stratum_exclusions_kps_S134.out
 point_cap_script: 04-computation/jacobian_g1_point_cap_affine_dichotomy_thm2465.py
@@ -79,7 +79,7 @@ conic-cap hunts, adversarial verification, synthesis); every
 load-bearing computational claim was independently re-derived over
 QQ and fresh primes by the adversarial pass, with zero refutations.
 
-> **MONODROMY CORRECTION (THM-2598 / MISTAKE-296).**  The original
+> **MONODROMY CORRECTION (THM-2598 / MISTAKE-297).**  The original
 > synthesis inherited THM-1375's unconditional self-normalizing rule and
 > silently removed `D4`.  THM-1365 proves only the polynomial-deck case.
 > The live degree-four list is `D4,A4,S4`; every no-intermediate-field and

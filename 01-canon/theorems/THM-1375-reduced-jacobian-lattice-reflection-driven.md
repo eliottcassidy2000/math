@@ -6,7 +6,7 @@ status: >
   non-injective (the three collision points still share an image), and untwisted
   (target weight vector = source weight vector = (1,-1,-2)).  My own hypothesis,
   killed before it was claimed.
-  (I) CORRECTED / PARTLY SUPERSEDED by THM-2598 and MISTAKE-296.  The
+  (I) CORRECTED / PARTLY SUPERSEDED by THM-2598 and MISTAKE-297.  The
   geometric-to-Galois chain and Campbell's Galois exclusion survive, but the
   claimed unconditional Smith self-normalizing rule does not: THM-1365 assumes
   that generic deck transformations extend polynomially.  D4 therefore remains
@@ -27,13 +27,13 @@ depends_on:
   - THM-1310    # fibre geometry: S_3 resolvent, cyclic 3-tournament, Jelonek quartic
   - THM-1330    # Keller monoid; the cusp selection rule
   - THM-127     # Paley D_2p: rotations are automorphisms, reflections anti-automorphisms
-related: [THM-1305, THM-1345, THM-2598, MISTAKE-196, MISTAKE-197, MISTAKE-296]
+related: [THM-1305, THM-1345, THM-2598, MISTAKE-196, MISTAKE-197, MISTAKE-297]
 script: 04-computation/reflection_driven_keller_kps_S128c105.py (+ .out), equivariant_reduced_jc_kps_S128c105.py
 ---
 
 # THM-1375 — the reduced-Jacobian lattice, and the reflection that drives every counterexample
 
-> **CORRECTION (THM-2598 / MISTAKE-296).**  The original §1 treated the
+> **CORRECTION (THM-2598 / MISTAKE-297).**  The original §1 treated the
 > generic deck group `N_G(H)/H` as a polynomial automorphism group of affine
 > space.  That extension across the Jelonek set is not automatic and is an
 > explicit hypothesis in THM-1365.  The unconditional self-normalizing rule,

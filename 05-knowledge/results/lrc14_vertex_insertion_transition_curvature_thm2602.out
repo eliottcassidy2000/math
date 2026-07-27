@@ -1,0 +1,8 @@
+THM-2602 exact vertex/transition curvature controls
+selector_bank=1312 marker_selector_checks=15744 last_choice_selectors=12
+diagonal_basis_commutators=169 fourier_conjugate_commutators=169 split_prime=547 root13=46
+four_atom_mixed_difference=1 insertion_commutator=0
+same_vertex_marginal_entries_checked=312 distinct_monodromies=12
+label_translation_prime=547 root91=10 primitive_edge_checks=864 seam_checks=864
+partial_fill_checks=96 diagonal_twisted_zeros=156 full_twisted_returns=156
+verdict=PASS: vertex calculus telescopes; ordered common-carrier transition is the minimal missing operation
