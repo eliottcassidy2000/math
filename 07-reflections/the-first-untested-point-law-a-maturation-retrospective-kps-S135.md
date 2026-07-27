@@ -124,6 +124,19 @@ straight hits).
   d=4 world, if it exists, lives under a DIFFERENT involution than
   sigma. That is a concrete hunting license, not a claim.
 
+## 4b. Same-session sharpening: the Berlekamp-Massey reading
+
+For linear-recurrence data the law is a theorem: BM guarantees an
+order-r recurrence is determined by exactly 2r terms (fib r=2 locks
+at 4, tri r=3 at 6; companion keller_degree_semigroup_kps_S135),
+so a k-point fit certifies linear complexity at most floor(k/2) and
+generically dies at the rank jump k+1. MISTAKE-198's "2r+2 terms" =
+the 2r guarantee + a test point + one spare. Verdict recorded:
+weak form (first-untested-point = rank-determination threshold)
+CONFIRMED; strong form (interpolation rank = nullcone rank) tested
+and RELEASED -- they coincide only on spectrum-sequences. The
+Keller-side continuation of this session is HYP-9030.
+
 ## 5. Stopping note
 
 The meta-law itself was tested against its own standard: it is not

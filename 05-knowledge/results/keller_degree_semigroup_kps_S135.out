@@ -1,0 +1,5 @@
+1. det J_F = -2; real triple collision at (-1/4,0,0): PASS
+2. branch anatomy (T-+1)(2T+-1)^2; -prod cos = -1/4 = -e_3: PASS
+3. det J_(F o F) = 4 at random rational points (chain rule): PASS
+4. BM thresholds: fib(r=2) L=2 by 4 terms; tri(r=3) L=3 by 6 (profile [(3, (2, 2)), (4, (2, 2)), (5, (2, 3)), (6, (2, 3))]): PASS
+ALL CHECKS PASSED
