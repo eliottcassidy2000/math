@@ -27,7 +27,7 @@ related:
   - THM-2608-alternative-rail-clock-collapse-and-missing-transition-index
 script: 04-computation/lrc14_chronological_marked_triangle_graft_thm2610.py
 output: 05-knowledge/results/lrc14_chronological_marked_triangle_graft_thm2610.out
-script_sha256: 9b8fb823f980a4c5e38038d3abd315cb247bd0cb937282c4acc5dafc4a88c208
+script_sha256: 07be5ffd964c541c01149d2f2a79832ac5c92a9685521bc51a2bd20ee87db91f
 output_sha256: af60cc9bf82ee581277e48c3494c03a22a45cca57dc79e8684031be1d37605ba
 hash_basis: LF-normalized bytes
 ---
@@ -46,9 +46,9 @@ does not retain the same physical frequency `X` or deep multiplier `m`.
 The two mechanisms can be made to meet before either of those losses.  Fix the
 old marked Fourier coefficient first.  Then use BV mixing on each of the
 thirteen nonnegative future-shift packets and only afterward take their finite
-Fourier transform.  The zero future frequency reproduces the old coefficient,
-and the remaining Koopman sidebands are too small to cancel it at a sufficiently
-late common clock.
+Fourier transform.  The zero temporal sideband is the old coefficient times
+the nonzero future mean, and the remaining Koopman sidebands are too small to
+cancel it at a sufficiently late common clock.
 
 This produces the first exact same-`(X,Y,m)` chronological paired-slice graft.
 It also exposes the remaining holotopy defect cleanly: source and future carry
@@ -308,16 +308,25 @@ future moving-shift character.  Downstream address embedding can place the old
 triangle in a relation-current expansion, but (20) is not yet their difference
 character.
 
-The reason is exact.  A lawful old target co-shift changes an atomic
-coordinate by `theta/13`.  In a factor evaluated at positive time,
+The reason is exact and factorwise.  For one old atomic coordinate
+`y_i={w_i x}`, a lawful target co-shift acts by
 
 ```text
-T^L(x+theta/13)=T^Lx+13^(L-1)theta=T^Lx.                  (25)
+y_i -> y_i+theta_i/13.
+```
+
+In a factor evaluated at positive time,
+
+```text
+T^L(y_i+theta_i/13)
+ =T^Ly_i+13^(L-1)theta_i
+ =T^Ly_i.                                                  (25)
 ```
 
 Thus the complete future stalk is neutral under the **old** target action.
-The parameter `s` in (12) is a separately installed future local action, and
-`beta` is its Fourier character.  There is no canonical physical map
+No common translation of the physical variable `x` is asserted.  The
+parameter `s` in (12) is a separately installed paired future local action,
+and `beta` is its Fourier character.  There is no canonical physical map
 
 ```text
 old relation residue  <-->  future shift character beta.  (26)
