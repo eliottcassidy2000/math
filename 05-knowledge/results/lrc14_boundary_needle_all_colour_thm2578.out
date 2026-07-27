@@ -1,0 +1,25 @@
+== THM-2578: target-neutral boundary needles ==
+
+== 7/13 boundary separation ==
+  exact (k,L) separation packets: 400
+  distinct labelled boundary points checked: 1045200
+  smallest exact gap in k<=200 census: 1/18200
+  symbolic cross-sign obstruction: +/-13L is nonzero modulo 7
+
+== rational Boolean trace interpolation ==
+  single-needle interpolation cases: 200
+  exact boundary trace checks: 262600
+  filter endpoint avoidance checks: 400
+  disjoint rational needles realize every Boolean boundary trace pattern
+
+== one needle forces every target character ==
+  nonzero all-q DFT coefficients checked: 2080
+  live 91-unit physical phases checked: 12800
+  exact coefficient: exp(2*pi*i*M*x0) zeta^(q*s0)/(26*pi^2)
+
+== one-sided packet hostile ==
+  exact H<=P truth-table cells: 3
+  a danger-supported stationary packet cannot itself be the transverse filter
+
+scope: external lawful Boolean boundary carrier; inheritance on THM-2569 remains open
+all exact checks passed

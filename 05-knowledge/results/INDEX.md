@@ -15,6 +15,17 @@
   covariant handoff measure.  The connection is complex and gauge-chosen,
   not yet a Boolean THM-2334 carrier.  Hashes are
   `7f020a329...d6a2` / `6c3f024d1...5dbc`.
+- `lrc14_boundary_needle_all_colour_thm2578.py` -> matching `.out`
+  [THM-2578 PROVED + VERIFIED-EXACT].  For every positive tooth speed and
+  both live gate widths, all target-labelled tooth boundaries are distinct;
+  the cross-sign obstruction is `+/-13L != 0 mod 7`.  Hence one fixed
+  target-neutral rational Boolean interval can isolate a single boundary
+  before target Fourier transform.  Its positive Abel handoff profile is an
+  absolute target delta, so all thirteen target characters and every live
+  physical offset are nonzero.  This supplies the ambient absolute-reference
+  type missing in THM-2579, but not its transport into the THM-2569 inherited
+  word/owner/root/deep packet.  Hashes are `0f9187a3...f2f3` /
+  `67bc4224...2efb`.
 - `lrc14_logarithmic_abel_normal_thm2573.py` -> matching `.out`
   [THM-2573 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For disjoint
   finite step endpoint layers, one-sided whole-layer Abel smoothing has the
