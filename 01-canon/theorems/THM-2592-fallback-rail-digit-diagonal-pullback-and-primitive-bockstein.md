@@ -2,7 +2,7 @@
 id: THM-2592
 title: "Fallback-rail digit-diagonal pullback and primitive Bockstein"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On the canonical typed row, the literal route-two pullback of the 84
   THM-2586 theta-zero rail cells against all thirteen normalized THM-2585
   target sections is positive in exactly 39 of 1092 cases: precisely the
@@ -31,7 +31,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2592 -- fallback-rail digit-diagonal pullback and primitive Bockstein
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. The common physical carrier
 
@@ -338,6 +338,13 @@ following separate checks.
    formula before the rail factor is inserted.
 6. Normal and optimized execution reproduce the stored transcript exactly.
 
+An independent hostile audit rederived the common-`x` and digit-time typing,
+the Boolean-sheet expansion behind the two Perron profiles, the single global
+content and its 13-adic valuations, the complete support census, and both
+exceptional Bockstein slices.  It also replayed normal and optimized modes
+against the stored transcript and recomputed both declared LF hashes.  No
+theorem defect remained.
+
 The positive support census, both contents, primitive scalar, primitive
 digest, support histogram, Bockstein census, and the two exceptional slices
 (26)--(28) are executable assertions rather than printed approximations.
@@ -374,4 +381,4 @@ The sharp next problem is therefore relative rather than marginal: either
 transport the three fallback attachments across the digit-zero hole (18),
 or prove that the hole represents a genuine semantic/clock obstruction.
 
-QED for the stated candidate.
+QED.
