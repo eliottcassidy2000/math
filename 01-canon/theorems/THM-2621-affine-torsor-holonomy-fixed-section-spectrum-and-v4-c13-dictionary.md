@@ -1,5 +1,5 @@
 ---
-id: THM-2618
+id: THM-2621
 title: "Affine-torsor holonomy fixed-section spectrum and V4/C13 dictionary"
 status: RESERVED / UNPROVED EMPTY STUB
 source: kind-pasteur-2026-07-28-affine-holotopy-spectrum
@@ -10,7 +10,7 @@ related:
   - THM-2612-d4-deck-pole-tax-and-depressed-resolvent-gcd-gate
 ---
 
-# THM-2618 -- reserved candidate
+# THM-2621 -- reserved candidate
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
