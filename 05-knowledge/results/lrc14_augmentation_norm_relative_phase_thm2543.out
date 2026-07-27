@@ -3,7 +3,8 @@ field=F_547 primitive_generator=2 zeta7=81 zeta13=475
 cubic_mixed_modes=72
 phase_profiles=1458 nonconstant=1456 character_checks=8748
 relative_diagonal_nonzero=104832 flat_diagonal_zero=144
-direct_tensor_factorisations=4608
+direct_normalized_tensor_factorisations=4608
+normalized_relative_quotient_checks=4608
 diagonal_gauge_covariance_checks=1512
 fixed_owner_slice_modes=72 noncovariant_control=PASS
 guard_vandermonde_minors=4901

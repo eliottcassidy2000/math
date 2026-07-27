@@ -5,8 +5,8 @@ status: >
   PROVED CANDIDATE + VERIFIED-EXACT; independent hostile audit pending.
   Every live THM-2517 response row has a branch-free horizontal boundary
   local system.  If the seven lawful future-phase means are nonconstant, a
-  four-time Boolean tensor has all 72 gauge-invariant relative-phase/target
-  characters and, after root refinement, 216 signed positive-boundary
+  four-time tensor with a literal Boolean atom refinement has all 72
+  gauge-invariant relative-phase/target characters and 216 signed positive-boundary
   incidences.  If the means are constant, THM-2539's cyclic norm supplies
   its 216 source/target/root incidences.  This removes the zero-phase versus
   full-support split only at the labelled horizontal level.  It does not
@@ -26,6 +26,9 @@ related:
   - THM-2542-seven-chart-cech-holonomy-and-c91-arrival-obstruction
 script: 04-computation/lrc14_augmentation_norm_relative_phase_thm2543.py
 output: 05-knowledge/results/lrc14_augmentation_norm_relative_phase_thm2543.out
+script_sha256: b7171af0af89c9e73ac7d5718478f61f3d55147ac6a7fb4d3cb7ba6d56f1a87a
+output_sha256: b309d7dd7caeae94014c374cf3cf79f7f55149abe668aeef595f06cb00e3bbd5
+hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2543 -- augmentation versus norm on the relative-phase local system
@@ -67,7 +70,7 @@ Fix one live THM-2449/2517 response row.  Use THM-2517's notation
 ```text
 F_(ell,s)(x),                    A_(ell,s)=integral F_(ell,s),
 
-G_gamma(x),                     q_gamma=integral G_gamma>=0,
+G_gamma(x) rational Boolean,    q_gamma=integral G_gamma in Q_(>=0),
 
 q_0>0,                  ell,gamma in F_7, s in F_13.         (3)
 ```
@@ -115,8 +118,9 @@ n_0+n_1N+n_2N^2+n_3N^3=0
 
 with all `|n_i|` below the bandwidth.  The largest-index term strictly
 dominates for sufficiently large `N`.  Telescoping the bounded-product error
-and passing through the `L^1` approximations proves (7).  Even `L` preserves
-the lawful septimal phase convention.
+and passing through the `L^1` approximations proves (7).  Since
+`13=-1 mod 7`, even `L` gives `13^(jL)=1 mod 7` for every integer `j`; all
+four epochs preserve the lawful septimal phase convention.
 
 Use normalized transforms
 
@@ -163,13 +167,14 @@ every nontrivial Fourier coefficient zero.  Therefore
 q nonconstant iff qhat(eta)!=0 for every eta in F_7^*.      (12)
 ```
 
-The lawful source action translates the two indices together:
+Use the lawful source-action convention
 
 ```text
-(ell,gamma)->(ell+a,gamma+a).                               (13)
+(a.K)_(ell,gamma,s)=K_(ell-a,gamma-a,s).                   (13)
 ```
 
-A character `(kappa,eta)` is invariant under (13) exactly when
+Its transform is multiplied by `zeta_7^(a(kappa+eta))`.  A character
+`(kappa,eta)` is invariant under (13) exactly when
 
 ```text
 kappa+eta=0.                                                (14)
@@ -395,8 +400,8 @@ integral w K_tau=integral (P_(-tau)w)H_tau.                 (31)
 ```
 
 Thus the lawful phase/word sidecar can be transported with the root edge
-without being falsely declared invariant.  Equation (31) gives an honest
-horizontal functor on the labelled root packet.  It does not restore the
+without being falsely declared invariant.  Equation (31) gives an exact
+covariant edge-transport law on the labelled root packet.  It does not restore the
 weighted Cayley skew pairing, turn the empty head into a later occupied
 event, or identify this row/phase torsor with THM-2542's scheduler/root C91
 mapping torus.
@@ -405,8 +410,10 @@ mapping torus.
 
 Three finite controls show why both lanes and the missing selector are real.
 
-1. `q=(1,0,0,0,0,0,0)` has every nontrivial `qhat(eta)` nonzero, so the
-   augmentation lane works, while the norm product is zero.
+1. The abstract rational phase-profile control `q=(1,0,0,0,0,0,0)` has every
+   nontrivial `qhat(eta)` nonzero, so the augmentation lane works, while the
+   norm product is zero.  It is not asserted to be a separately realized live
+   scalar-cover row.
 2. `q=(1,1,1,1,1,1,1)` kills every augmentation character exactly, while
    its cyclic norm is positive.
 3. The phase-zero slice of the first profile is nonzero, but translating the
@@ -455,7 +462,8 @@ Both executions byte-match
 The dependency-free exact referee works in `F_547`.  It checks all `72`
 cubic mixed modes; the all-or-flat lemma on `1,458` rational phase profiles;
 `104,832` nonconstant relative diagonals and `144` flat zeros; `4,608` direct
-tensor factorizations; `1,512` simultaneous-translation covariance cases;
+normalized tensor factorizations and `4,608` normalized quotient-table checks;
+`1,512` simultaneous-translation covariance cases;
 the fixed-owner slice and a noncovariant control; all `4,901` consecutive
 guard Vandermonde minors; a one-hot augmentation-positive/norm-zero bank with
 all `216` positive-boundary incidences; `96` noninvariant endpoint-transport

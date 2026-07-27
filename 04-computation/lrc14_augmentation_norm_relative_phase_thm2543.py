@@ -197,15 +197,33 @@ for q0 in (1, 2):
 
 # Direct tensor-factorisation on all q0=1 Boolean phase profiles.
 factorisation_checks = 0
+quotient_table_checks = 0
+inv7 = pow(ROWS, -1, FIELD)
+inv91 = pow(ROWS * ROOTS, -1, FIELD)
+inv637 = pow(ROWS * ROWS * ROOTS, -1, FIELD)
 for tail in product((0, 1), repeat=ROWS - 1):
     q = (1,) + tail
+    relative = [
+        [
+            sum(q[gamma] * cubic[(delta + gamma) % ROWS][s]
+                for gamma in range(ROWS)) * inv7 % FIELD
+            for s in range(ROOTS)
+        ]
+        for delta in range(ROWS)
+    ]
     for kappa in range(1, ROWS):
         eta = (-kappa) % ROWS
         for b in range(1, ROOTS):
-            direct = tensor_hat(cubic, q, kappa, eta, b)
-            factored = table_hat(cubic, kappa, b) * phase_hat(q, eta) % FIELD
+            direct = tensor_hat(cubic, q, kappa, eta, b) * inv637 % FIELD
+            factored = (
+                table_hat(cubic, kappa, b) * inv91
+                * phase_hat(q, eta) * inv7
+            ) % FIELD
             require(direct == factored, "tensor DFT did not factor")
+            quotient = table_hat(relative, kappa, b) * inv91 % FIELD
+            require(quotient == direct, "relative quotient DFT failed")
             factorisation_checks += 1
+            quotient_table_checks += 1
 
 
 # Simultaneous translation of the row and phase charts fixes eta=-kappa.
@@ -327,7 +345,8 @@ print(
     f"relative_diagonal_nonzero={diagonal_nonzero_checks} "
     f"flat_diagonal_zero={flat_diagonal_zero_checks}"
 )
-print(f"direct_tensor_factorisations={factorisation_checks}")
+print(f"direct_normalized_tensor_factorisations={factorisation_checks}")
+print(f"normalized_relative_quotient_checks={quotient_table_checks}")
 print(f"diagonal_gauge_covariance_checks={covariance_checks}")
 print(f"fixed_owner_slice_modes={fixed_owner_slice_checks} noncovariant_control=PASS")
 print(f"guard_vandermonde_minors={guard_vandermonde_checks}")
