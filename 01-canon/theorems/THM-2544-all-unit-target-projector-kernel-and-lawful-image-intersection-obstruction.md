@@ -32,6 +32,7 @@ related:
   - THM-2538-anchored-transverse-gain-and-common-ancestry-arrival-boundary
   - THM-2540-weighted-live-event-kakeya-flux-and-transverse-gain-boundary-refinement
   - THM-2541-canonical-typed-row-full-target-plane-support
+  - THM-2545-word-stratified-hall-arrival-criterion-and-owner-word-transportation-hostile
 script: 04-computation/lrc14_all_unit_target_projector_kernel_thm2544.py
 output: 05-knowledge/results/lrc14_all_unit_target_projector_kernel_thm2544.out
 script_sha256: 36bb8ff1a2901add0cea3e2e46d63c66615eed223869704fad38688f563012fb
@@ -395,6 +396,14 @@ by its particular analytic current, not through the value or support of `A`.
 
 ### The 42-cut ancestry pairing
 
+THM-2545
+[`THM-2545-word-stratified-hall-arrival-criterion-and-owner-word-transportation-hostile.md`]
+has now given the complementary event-level diagnosis: the same cut data can
+be tensored with aligned and swapped two-root couplings while preserving every
+recorded marginal and changing the physical diagonal hit from full mass to
+zero.  The projector calculation here is the residue-current analogue of that
+transportation hostile.
+
 The exact artifact
 
 ```text
@@ -417,9 +426,10 @@ J(ker U)=C^G.                                       (35)
 To affect (31)--(34), it needs a branch-transplant/intertwining map `T` whose
 image contains the relevant lawful currents and for which the cut/stalk
 nonvanishing controls `J_*T`.  Averaging away its two torsor sidecars cannot
-be that map, because those invariant readouts are exactly zero.  The 42-cut
-result is promising input to a lawful-image description, but it does not
-repair `A -> B` by itself.
+be that map, because those invariant readouts are exactly zero.  THM-2545's
+exact tensor hostile confirms that retaining the current recorded data does
+not repair this loss.  The 42-cut result is promising input to a lawful-image
+description, but it does not repair `A -> B` by itself.
 
 The same semantic guard applies to the later-arrival program: a nonzero
 all-unit relation-address aggregate is still not a genuine later Boolean
