@@ -1,5 +1,5 @@
 ---
-id: THM-2560
+id: THM-2562
 title: "Canonical duty-commutator line rank and zero-anchor rigidity"
 status: RESERVED / UNPROVED EMPTY STUB
 source: codex-2026-07-27-holotopy
@@ -9,7 +9,7 @@ related:
   - THM-2556-reynolds-duty-curvature-and-fibre-covariance-mixed-cell
 ---
 
-# THM-2560 -- canonical duty curvature on target lines
+# THM-2562 -- canonical duty curvature on target lines
 
 **RESERVED / UNPROVED EMPTY STUB.**
 

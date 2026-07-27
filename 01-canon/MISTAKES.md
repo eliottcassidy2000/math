@@ -9,6 +9,19 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-284 (2026-07-27, concurrent THM-2560 reservation collision) -- an empty reservation and a proved candidate shared one theorem ID
+
+- **What happened:** the empty canonical-duty-commutator reservation and the
+  independently developed second-rung diagnostics were both pushed with
+  frontmatter ID `THM-2560`.
+- **Why it was wrong:** theorem IDs are a shared namespace even when one file
+  is only a `RESERVED / UNPROVED EMPTY STUB`; status separation does not make a
+  duplicate identifier safe.
+- **Repair:** the already substantive diagnostics retain `THM-2560`; the empty
+  reservation is renamed `THM-2562` after a fresh fetch and repository-wide ID
+  check. Cite theorem ID plus slug, and recheck the remote namespace immediately
+  before every reservation push.
+
 ## MISTAKE-283 (2026-07-27, THM-2550 consequence scope) -- two exact nondegeneracy computations were treated as one common-root packet
 
 - **What was claimed:** after separately computing positive owner-loop drift
