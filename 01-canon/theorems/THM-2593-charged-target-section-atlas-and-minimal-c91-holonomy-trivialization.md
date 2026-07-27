@@ -6,12 +6,16 @@ status: >
   After any chosen affine identification of THM-2542's root-deck sheet with
   THM-2585's target-shift index, the thirteen everywhere-unit Bockstein
   factors form a faithful multiplicative local system on the same C91
-  mapping torus.  The additive gauge h=-q kills the pulled-back old-head
+  mapping torus.  The additive gauge h=-q kills the pulled-back THM-2542
+  root-deck
   transition, while the multiplicative gauge Y_q^-1 kills the exact unit
-  transport Y_(q+a)Y_q^-1.  Both seven-edge monodromies have exact order 13,
+  transport Y_(q+a)Y_q^-1.  Both seven-edge deck-return transformations have
+  exact order 13,
   so degree 13 is their common minimal cyclic trivializing cover.  All 546
-  owner/clock/sheet Bocksteins survive.  A correction on t of the seven base
-  edges leaves holonomy (7-t)a and cannot close unless t=7.  The affine
+  pulled-back owner/clock/sheet Bockstein coefficient profiles survive.  A
+  correction -a on t edges of one
+  fixed seven-edge lifted base-loop path leaves holonomy (7-t)a and cannot
+  close unless t=7.  The affine
   identification and a physical common carrier remain unconstructed; this
   is not a semantic arrival, row exclusion, or proof of LRC(14).
 source: root-holotopy-2026-07-28
@@ -45,7 +49,7 @@ The two systems are trivialized by the same sheet coordinate in two different
 senses:
 
 ```text
-old-head root transition:       a  + d(-q) = 0;
+THM-2542 root-deck transition:  a  + d(-q) = 0;
 Bockstein-factor transition:     Y_(q+a)Y_q^-1,
 normalized by:                  Y_(q+a)^-1 [.] Y_q = 1.     (1)
 ```
@@ -102,7 +106,7 @@ physical LRC packet.
 
 ## 2. Additive trivialization on the cover
 
-Pull the old-head transition back along (3) and put
+Pull the THM-2542 root-deck transition back along (3) and put
 
 ```text
 h(k,q)=-q.                                                  (6)
@@ -116,8 +120,8 @@ g_k+h(sigma(k,q))-h(k,q)
 ```
 
 Thus the root-deck local system is explicitly trivial on the `C_91` cover.
-After one seven-edge base loop, the sheet changes by `7a`; after `n` base
-loops its additive holonomy is
+After one lift of the seven-edge base loop, the sheet changes by `7a`; after
+`n` such lifted traversals its additive deck displacement is
 
 ```text
 7na in F_13.                                                (8)
@@ -152,16 +156,19 @@ v_(q+a) u_(q,a) v_q^-1
 ```
 
 Along any path the unit products telescope.  In particular, after `n`
-seven-edge base loops the multiplicative monodromy based at sheet `q` is
+traversals of the seven-edge base loop lifted from sheet `q`, the
+multiplicative deck transport is
 
 ```text
 U_n(q)=Y_(q+7na)Y_q^-1.                                   (12)
 ```
 
 Because the thirteen `Y_q` are distinct, `U_n(q)=1` exactly when `13|n`.
-Hence both (8) and (12) have exact order thirteen.  The degree-thirteen cover
-is not merely sufficient for both local systems: it is their common minimal
-cyclic trivializing cover.
+For `n<13`, (12) transports between distinct vertices of the cover; it is not
+a closed loop upstairs.  Hence the deck-return transformations (8) and (12)
+have exact order thirteen, and only the ninety-one-edge path closes on
+`C_91`.  The degree-thirteen cover is not merely sufficient for both local
+systems: it is their common minimal cyclic trivializing cover.
 
 This is the useful holotopy match:
 
@@ -181,7 +188,8 @@ the thirteen sections over the seven clock vertices therefore gives
 7*13*6=546                                                  (14)
 ```
 
-nonzero lifted Bockstein profiles.  The exact product-basis support histogram
+nonzero pulled-back Bockstein coefficient profiles.  The exact product-basis
+support histogram
 is the THM-2585 histogram repeated seven times:
 
 ```text
@@ -192,14 +200,16 @@ support 72: 266 profiles.                                  (15)
 
 Thus passing to the minimal holonomy-killing cover loses neither a sheet nor
 an owner colour.  What it loses is descent to one preferred base section:
-one seven-edge circuit advances through the faithful thirteen-element atlas.
+one traversal of the seven-edge base circuit advances to a different sheet
+of the faithful thirteen-element atlas.
 
-## 5. Every proper base-edge correction leaves residual holonomy
+## 5. Every proper edgewise correction on one lifted base circuit leaves a residue
 
-The double trivialization also gives a sharp coverage invoice.  Suppose a
-future mixed-square construction supplies the needed root correction `-a`
-on exactly `t` of the seven base chart edges and supplies zero correction on
-the others.  The corrected cyclic sum is
+The double trivialization also gives a sharp coverage invoice.  Fix one
+seven-edge base-loop path and one of its lifts, hence one common marker step
+`a` and sheet orbit.  Suppose a future mixed-square construction supplies the
+needed root correction `-a` on exactly `t` of those seven chart edges and
+supplies zero correction on the others.  The corrected cyclic sum is
 
 ```text
 7a-ta=(7-t)a.                                               (16)
@@ -229,8 +239,9 @@ Three pieces are load-bearing.
    carrier.  THM-2585's same-cokernel hostile shows that arbitrary independent
    representatives do not admit normalized integral sections.
 2. **Unit factors.**  Without unitness, the ratios in (9) need not exist.
-   Without pairwise distinctness, their seven-edge monodromy need not have
-   order thirteen.  A constant unit atlas is the sharp collapsed control.
+   Without pairwise distinctness, their seven-edge deck-return transformation
+   need not have order thirteen.  A constant unit atlas is the sharp
+   collapsed control.
 3. **A physical torsor identification.**  The equality of two alphabet sizes
    does not identify THM-2542's root deck with THM-2585's target-shift
    position.  This theorem grants an affine identification and proves what it
@@ -264,7 +275,7 @@ normalization.  The dependency-free checker works in
 - all `78` owner/sheet charges and the lifted support histogram (15);
 - all twelve nonzero mapping-torus steps and all `91` vertices per step;
 - `1,092` additive and `1,092` multiplicative gauge identities;
-- all `2,028` based seven-loop monodromy/order checks; and
+- all `2,028` based seven-loop deck-transport/order checks; and
 - all `96` proper-edge residual checks, including the three-edge `4a` wall.
 
 There are `7,716` explicit checks; none is implemented with `assert`.
