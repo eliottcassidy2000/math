@@ -1,3 +1,19 @@
+## opus-2026-07-26 -- CROSS-THREAD SYNTHESIS: spectral vs geometric rank (why LRC stays open, JC/GMC fell); + tested recurrences, honest releases
+
+Owner: work many tasks overnight; find patterns in how LRC & JC understanding matured; speculate wildly about recurrences; test extensively; pull/push often; pursue closure. (Synced from 581 commits behind first.)
+
+SYNTHESIS (unifies boxeph-S205 nullcone frame + kps-S131b prime-lines + the JC geometric arc): boxeph's "two nullcones diverge at higher rank" diverges along SPECTRAL rank (= # prime-lines jointly certified nonzero; arithmetic/Diophantine, RIGID -- LRC 7x13 mod 91, twin-gaps, tournaments) vs GEOMETRIC rank (= dimension/degree that holds a collision; algebraic, COLLAPSES with a surviving floor -- JC, GMC). rank-1 seed proved for all functionals (THM-1840); rank>=2 is the open no-cancellation (LRC) or the collision (JC/GMC).
+
+VERIFIED this session (grounding the frame): (a) Keller/JC map det J_F=-2 + triple collision at -1/4, collision = 1 fixed + 2 sigma-swapped branches (lambda->lambda^2) = geometric rank 3; (b) GMC(4) counterexample E[P^m]=0, E[WP^m]=m! (m=1..7), and the descent to n=3 structurally blocked (k! -> (2k-1)!! = 0,1,0,9,0,225) = geometric rank 4, floor survives. Two geometric examples, one law.
+
+D5 lurking pattern SHAPE-CONFIRMED: both live frontiers are H1-cocycle-nonvanishing on a branched cover -- LRC word-current 'cyclic zero-divisor' + first-Bockstein sidecar on primitive-91; JC flux/pole-descent on the trigonal cover. Same cohomological shape, different rank-type coefficients (mod-91 characters vs S3 monodromy). NOT a literal identity.
+
+Also: kps-S135 first-untested-point law = the 2r rank-determination bound (Berlekamp-Massey tested: Fib locks at 4, Trib at 6); AP = universal nullcone vertex but FUNCTIONAL-dependent (maximizes E3/additive-triples THM-730 & reach TAIL, not reach MEAN).
+
+RELEASED (charming, not load-bearing, per kps-S134 method): '-1/4 = LRC 3-runner floor' (root-of-unity value; actual floor 1/3); 'smoothness selects n=14' (n=15 higher); 'interpolation-rank == nullcone-rank' (coincide only on spectrum-sequences).
+
+Reflections: spectral-vs-geometric-rank-why-LRC-stays-open-and-JC-fell / the-first-untested-point-law-is-the-2r-rank-determination-bound (opus-20260726); 5 scripts (keller_verify_and_rank, gmc4_verify, interpolation_rank_law, spectral_smoothness_test, ap_universal_extremal). Fleet broadcast sent. Complements kps-S131b/S134/S135, boxeph-S205. No canon overridden; no proof asserted.
+
 > **CURRENT-TRUTH WARNING (2026-07-22):** This bounded handoff is not proof
 > authority. Start with [START-HERE.md](START-HERE.md),
 > [CURRENT-FRONTIER.md](CURRENT-FRONTIER.md), and
