@@ -2,9 +2,10 @@
 id: THM-2544
 title: "All-unit target projector kernel and lawful-image intersection obstruction"
 status: >
-  PROVED + VERIFIED-EXACT.  For every primitive nine-coordinate scalar
-  word of THM-2309 type, the unrestricted mod-thirteen target pushforward U
-  on the full mod-91 relation-residue space has rank 169 and kernel dimension
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  For every primitive
+  nine-coordinate scalar word of THM-2309 type, the unrestricted
+  mod-thirteen target pushforward U on the full mod-91 relation-residue
+  space has rank 169 and kernel dimension
   91^8-169.  The all-coordinate-91-unit pushforward J has rank zero at the
   sharp septimal-support-one boundary and rank 169 whenever at least two
   scalar coordinates are septimal units.  In the latter case the joint map
@@ -44,7 +45,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2544 -- the all-unit projector is transverse to the unrestricted one
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2541 proves that all `169` unrestricted target aggregates `A(q)` are
 nonzero on one canonical typed non-cover row.  THM-2334 carefully warns that
@@ -543,3 +544,21 @@ It does **not** prove that the hostile or any switch is a lawful Abel current,
 does not transfer the 42-cut sidecars into the all-unit projector, does not
 construct a same-ancestry later arrival, does not remove a scalar row, and
 does not prove LRC(14).
+
+## 10. Independent audit
+
+Two independent readers rederived the load-bearing claims.  The first checked
+the CRT sections, the rank-`338` split block, the sharp `s=1`/`s>=2`
+dichotomy, the numerical floors, and the lawful-image quantifiers.  In
+particular it verified that THM-2325's affine-arrangement proof extends to
+`q=0`, because translation changes only the hyperplane constants, not the
+nine nonzero normals or their rank-six span.
+
+The second independently checked `rank(U,J)=338`, the explicit zero-fibre
+unit witness, and the absolutely convergent regrouping `Uc_rho=A_rho`,
+`Jc_rho=B_rho`.  It found one genuine typing defect in the candidate:
+`K_91(w)`, `G_w`, and `J_(*,w)` vary with the scalar row, so the original
+plain union could not meet one fixed kernel.  Section 6 now uses the disjoint
+total space `V_cov` and fibrewise kernel locus `K_*`; both readers accepted
+the repair.  The normal and optimized companion transcripts and their hashes
+were then rechecked after the incoming truth repairs to THM-2545/2547.
