@@ -598,4 +598,16 @@ Every truth-bearing executable check uses `require`; there are no `assert`
 statements or floating-point truth tests.  Normal and optimized runs must
 reproduce the stored transcript byte for byte after LF normalization.
 
+The independent referee
+
+```text
+04-computation/lrc14_delayed_word_simultaneous_drift_service_thm2466.py
+```
+
+uses a separate exact interval-intersection implementation. It checks `60`
+word/function/frequency covariances, a simultaneous signed-drift/positive-
+service control, all three final invoices, and the small-clock and zero-mean
+hostiles. Normal, optimized, and stored transcripts agree. Its script/output
+hashes are `4f68d2be...b4d6497` / `3527b4c2...e2cf6`.
+
 QED.

@@ -1,0 +1,8 @@
+THM-2466 DELAYED-WORD DRIFT/SERVICE AUDIT
+covariance_checks=60;largest_error_to_bound=1/2
+word_density=1/3;word_variation=2
+control_totals=drift:1,service:4/3;thresholds:8,3/2
+frequency_13_retention=drift:5/13,service:6/13
+thm2459_worded_floors=alpha^2*D0/252004,alpha*M0/32768,root:alpha*M0/66453504
+small_clock_hostile=PASS;zero_mean_hostile=PASS
+all_checks=PASS
