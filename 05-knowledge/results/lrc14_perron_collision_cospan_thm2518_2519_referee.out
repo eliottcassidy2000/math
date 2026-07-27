@@ -1,0 +1,38 @@
+=== THM-2518 finite Perron/groupoid identities ===
+PASS mean branch = owner-gated first Perron moment: 58/169
+PASS Perron first moment: 58/169
+PASS needle d=0 = mean ancestry-sheet pair: 372/845
+PASS needle d=1 = mean ancestry-sheet pair: 199/845
+PASS needle d=17 = mean ancestry-sheet pair: 112/845
+PASS needle d=83 = mean ancestry-sheet pair: 16/65
+PASS needle d=168 = mean ancestry-sheet pair: 199/845
+PASS mean needles = owner-gated squared Perron moment: 28042/142805
+PASS antipodal needle symmetry: C[d] = C[-d] for all d
+PASS fixed last-digit average u=0: 472/2197
+PASS fixed last-digit average u=1: 2026/10985
+PASS fixed last-digit average u=2: 434/2197
+PASS fixed last-digit average u=3: 2266/10985
+PASS fixed last-digit average u=4: 153/845
+PASS fixed last-digit average u=5: 2292/10985
+PASS fixed last-digit average u=6: 2098/10985
+PASS fixed last-digit average u=7: 2098/10985
+PASS fixed last-digit average u=8: 2292/10985
+PASS fixed last-digit average u=9: 153/845
+PASS fixed last-digit average u=10: 2266/10985
+PASS fixed last-digit average u=11: 434/2197
+PASS fixed last-digit average u=12: 2026/10985
+PASS unit residues are exact depth-L first collisions
+=== THM-2519 last-digit conditional variance ===
+PASS u=0 correlation is predecessor square mass: 472/2197
+PASS mean-u correlation is future conditional square: 28042/142805
+PASS collision drift = conditional variance: 2638/142805
+PASS collision drift = K13 Dirichlet energy: 2638/142805
+PASS hostile control is positive: drift=2638/142805
+=== anchored old-owner / future-owner recurrence averaging ===
+PASS same-owner edge coset average: 356/2197
+PASS same-owner triangle coset average: 2481/28561
+=== sharp zero-drift future-measurable control ===
+PASS future-measurable hostile: all 169 needles equal 1/5
+=== summary ===
+p=13; L=2; N=169; grid=845; mean(F)=484/845; mean(G)=3/5
+all exact finite-tower identities passed
