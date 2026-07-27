@@ -2,8 +2,8 @@
 id: THM-2598
 title: "Quartic V4 resolvent torsor, universal cubic cusp, and the exact transfer boundary"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  The integral cubic resolvent of a general quartic has
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The integral
+  cubic resolvent of a general quartic has
   exactly the quartic polynomial discriminant; its depressed cubic and
   cube-minus-square cusp identity are universal invariant theory, not
   Keller constraints.  On the nondegenerate depressed open, reconstruction
@@ -36,8 +36,8 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2598 -- what the quartic resolvent remembers, and what it cannot carry
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**  All algebraic identities and finite permutation claims below
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  All algebraic
+identities and finite permutation claims below
 are reproduced by the exact companion.  The Galois/valuation assertions are
 proved here.  This theorem strengthens the classical layer of THM-2455; it
 does not promote the open G1 verdict of THM-2465.

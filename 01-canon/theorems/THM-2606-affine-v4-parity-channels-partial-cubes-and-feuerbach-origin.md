@@ -2,8 +2,8 @@
 id: THM-2606
 title: "Affine V4 parity channels, partial cubes, and the Feuerbach origin boundary"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  On an affine V4 torsor the three nonzero difference
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On an affine V4
+  torsor the three nonzero difference
   parities are exactly the three translation-invariant C4 partial cubes,
   the three omitted V4 directions, and the three 2+2 quartic-resolvent
   channels.  GL(2,F2)=S3 acts faithfully on this three-set: an order-three
@@ -36,8 +36,8 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2606 -- three binary faces on one affine four-state object
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**  The group/graph census and all displayed finite controls
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The group/graph
+census and all displayed finite controls
 are reproduced by the dependency-free exact companion.  The quartic
 application uses THM-2598, and the marked modular action uses THM-2595.
 The Feuerbach paragraph uses the classical tangency theorem only to identify
