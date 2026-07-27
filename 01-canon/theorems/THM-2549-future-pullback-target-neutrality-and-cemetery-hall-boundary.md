@@ -37,6 +37,9 @@ related:
   - THM-2543-augmentation-norm-relative-phase-local-system-dichotomy
   - THM-2548-seven-step-c91-transfer-and-full-norm-separation
   - THM-2550-canonical-typed-row-double-nondegeneracy
+  - THM-2551-horizontal-transfer-transverse-projector-bicomplex-boundary
+  - THM-2552-flat-common-base-gain-versus-unjoinable-wall-spectrum
+  - THM-2553-rotation-duty-localization-and-weighted-jet-phase-boundary
   - THM-2554-translation-quotient-root-displacement-and-endpoint-swap-parity
   - THM-2555-natural-extension-sheet-charge-and-future-digit-boundary
 script: 04-computation/lrc14_future_pullback_neutral_hall_thm2549.py
@@ -463,6 +466,9 @@ and which coordinate is still absent.
 | THM-2543, `THM-2543-augmentation-norm-relative-phase-local-system-dichotomy.md` | Branch-free labelled horizontal boundary local system | No vertical semantic/ancestry arrow and no literal phase-zero selection in the augmentation lane |
 | THM-2548, `THM-2548-seven-step-c91-transfer-and-full-norm-separation.md` | Root-charged horizontal `C_91` partial transfer and 1,296 signed cut coefficients | Transfer has vertical degree zero; its directed transition automaton is conditional and unconstructed |
 | THM-2550, `THM-2550-canonical-typed-row-double-nondegeneracy.md` | `PROVED CANDIDATE`: positive old owner-loop drift and a non-replica signed table on one canonical typed row | Not a scalar-cover row, selected-head field, categorical later root map, or ancestry/Boolean realization |
+| THM-2551, `THM-2551-horizontal-transfer-transverse-projector-bicomplex-boundary.md` | Integral horizontal-transfer/projector tensor intersection | Abstract product preserves the all-unit kernel; relation target, deck root, and semantic arrival root remain physically unidentified |
+| THM-2552, `THM-2552-flat-common-base-gain-versus-unjoinable-wall-spectrum.md` | `PROVED CANDIDATE`: the closest common-future deck gain is flat; independently composable walls have full gain | The coherent semantic face is irreducibly joint and no live seven-layer automaton is built |
+| THM-2553, `THM-2553-rotation-duty-localization-and-weighted-jet-phase-boundary.md` | `PROVED CANDIDATE`: exact scalar duty localization under rotation | Nontrivial charge lies in augmentation and weighted jet phase is uncontrolled; no masked landing |
 | THM-2554, `THM-2554-translation-quotient-root-displacement-and-endpoint-swap-parity.md` | Exact translation quotient `d=b-h` and a sharp conditional swap/oddness arrival criterion | Requires a cemetery-free genuine later field, common root torsor, chronological endpoint swap, and odd primitive quotient weight; none is supplied live |
 
 THM-2517, THM-2527, and THM-2533 are intermediate future-owner/phase

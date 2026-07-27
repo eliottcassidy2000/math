@@ -115,6 +115,13 @@ a scalar-cover hostile. THM-2547 is only a
 has `108/432` zero pairings in each convention; it retains no physical
 target/owner ancestry.
 
+THM-2551 proves that horizontal C91 transfer preserves the transverse
+all-unit projector kernel on the abstract product; THM-2552's candidate
+analysis finds the lawful common-future gain flat while freely composable
+positive walls lose their coherent face; THM-2553's candidate audit localizes
+unweighted rotation duty only in augmentation, not the weighted target jet.
+None supplies the semantic root intertwiner or common directed 2-cell.
+
 THM-2550 is a **PROVED CANDIDATE + VERIFIED-EXACT** positive control on one
 canonical typed row: both old owner-loop drift tensors are nonzero and its
 lawful response table is non-replica with all `5,184` primitive cut modes.
