@@ -2,7 +2,7 @@
 id: THM-2543
 title: "Augmentation--norm relative-phase local-system dichotomy"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; independent hostile audit pending.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Every live THM-2517 response row has a branch-free horizontal boundary
   local system.  If the seven lawful future-phase means are nonconstant, a
   four-time tensor with a literal Boolean atom refinement has all 72
@@ -469,4 +469,10 @@ guard Vandermonde minors; a one-hot augmentation-positive/norm-zero bank with
 all `216` positive-boundary incidences; `96` noninvariant endpoint-transport
 checks; the flat norm-positive hostile; and an empty semantic vertical bank.
 
-**QED (candidate; independent audit pending).**
+**QED.**
+
+The independent audit rederived the normalized quotient and `1/637`
+factorization, the source-action multiplier and invariant diagonal, the
+even-delay phase law, guard/Galois root spread, atomwise positive boundary
+typing, all `216` incidences, and the fixed-owner/transport scope.  Normal,
+optimized, and stored executions byte-match the recorded LF hashes.

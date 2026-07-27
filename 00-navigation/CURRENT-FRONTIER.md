@@ -86,17 +86,27 @@ THM-2440 gives the a.e./literal two-comb split `15/182` versus `15/196`; THM-244
 THM-2449/2456 classify the mixed-zero locus as an averaged root offset; THM-2457 turns supplied root service into an atom graph. THM-2459 retains drift and service in at most four atoms (`D_0/63001`, `M_0/16384`); THM-2460 copies an independently retained word.
 THM-2461 makes the word prescribed-time, separates owner/deep roots, and proves repair is off-diagonal with one target-active first-failure role. THM-2466 then retains both observables in any fixed positive sufficiently delayed word on a supplied owner-supported common root base, with floors `mu(Q)^2 D_0/252004` and `mu(Q)M_0/32768`.
 THM-2471/2474 saturate collision colours; THM-2478 adds a neutral future owner while rebasing loses the deep sheet. THM-2505 loses temporal copies and THM-2506's affine `13`-pushforwards vanish.
-THM-2507--2537 give paths/skew, owner-phase walls, clock/selector flow, and scalarization. THM-2539 gives `216` boundary incidences conditionally; zero phase kills its scheduler. Live: uniform semantic arrival and source/deep alignment.
+THM-2507--2537 give paths/skew, owner-phase walls, clock/selector flow, and
+scalarization. THM-2539 gives `216` boundary incidences on full phase support;
+THM-2543 removes that phase split at the labelled horizontal level via an
+augmentation-or-norm dichotomy. THM-2542 computes the nonzero root-chart class
+`7a`, its degree-13 trivialization and abstract C91 mapping torus; its exact
+hostile leaves every semantic vertical edge empty. THM-2540 transports an
+arbitrary nonnegative sidecar covariantly to the empty head, not to an arrival.
 THM-2502/2503/2504 show tournaments and sidecar-free holonomy are not target
 currents. THM-2458's hostile is physically realized
 by THM-2462. THM-2464 proves: `lambda=1` clean charts force the linked blocker
 safe, `lambda=2` is phase-before-speed universal, and fixed delays work iff the
-joint clock cell has interior. Next: intertwine the owner-collision stalk with
-the endpoint/deep current, prove owner-loop drift, or exclude a semantic joint
-cell. Service, coupling, and mixing are closed; scale/sheet transport is not.
+joint clock cell has interior. THM-2547 is a **PROVED CANDIDATE under audit**
+for a positive 42-cut ancestry pairing on the high-septimal stalk; transplant
+to the live 165 rows is explicit debt. Next: build a common root/atom selector
+between THM-2543's literal-owner chart and invariant relative quotient, or show
+that the target-neutral directed gain spectrum cannot pay THM-2542's `-7a`
+invoice. Service, mixing, and horizontal transport are closed; semantic
+source/deep alignment is not.
 THM-2479 gives each positive middle-owner word a word-marked `91`-unit edge;
 THM-2334's typed non-cover has every nontrivial twist differ from `H(0)`.
-Address/gain and terminal phase remain; no row is removed.
+Address/gain, terminal phase, and the directed semantic 2-cell remain; no row is removed.
 Ledger: `165`.
 
 ### Independent routes that remain live
