@@ -1,5 +1,15 @@
 # Script Results Index
 
+- `lrc14_depth_five_arrival_future_diagonal_thm2586.py` -> matching `.out`
+  [THM-2586 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  In every one
+  of the `12*7=84` nonzero-displacement/owner cells, one of the theta-zero
+  edges `(v,t)=(0,0),(6,12)` is positive; their exact three-cell zero sets
+  are disjoint.  A positive Perron branch is a literal Boolean ancestry
+  sheet with `w=7t=v` and `T^5X=x`.  At every sufficiently large common
+  delay it contains a positive later `k_a` danger occurrence with physical
+  root `floor(13T^(N+5)X)=v`.  This is a current-arrival/rescaled-deep/later
+  root diagonal, not a selected old head, co-shift, old-action current, or
+  row exclusion.  Hashes are `5bd3e395...bf6a0` / `0e01ded4...09b0`.
 - `lrc14_self_similar_digit_needle_thm2583.py` -> matching `.out`
   [THM-2583 PROVED + VERIFIED-EXACT].  Every positive rational carrier
   already proved neutral under the whole endpoint action contains, at every

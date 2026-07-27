@@ -128,12 +128,15 @@ lives on the distinct `{a}`, depth-3 packet, so the facts do not multiply.
 THM-2581 repairs that mismatch on the `{b}`, depth-5 fibre.  THM-2584 retains
 the roots: in `w=t/2` every owner cell has path `0--0--6--6--12`; all joint
 colours and every nonzero endogenous `theta=t-2v` collision survive.
+THM-2586 then disintegrates the two theta-zero rails into literal Boolean
+ancestry sheets on all `84` nonzero-displacement/owner cells and continues
+`v=w=7t` to a genuinely later `k_a` physical root at exact time `N+5`.
 
-Next: transport that rail/reference onto THM-2569's old-head/future packet
-and prove a map from its deep root to the lawful target co-shift or relation
-residue before the full-`X` annihilation.  The present typed-row tensor is
-spectrally saturated; more untyped nonvanishing is not progress.  No row is
-removed. Ledger: `165`.
+Next: attach THM-2537's selected old head, or THM-2569's old-head/future
+packet, to a THM-2586 arrival sheet before proving a lawful co-shift or
+relation-residue map.  The frozen sheet is not old-action covariant, and the
+present typed-row tensor is spectrally saturated; more untyped nonvanishing
+is not progress.  No row is removed. Ledger: `165`.
 
 ### Independent routes that remain live
 
