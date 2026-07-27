@@ -1,0 +1,12 @@
+== THM-2591: theta-zero selector versus C91 Cech holonomy ==
+admissible selector counts by s: {1: 128, 2: 128, 3: 128, 4: 128, 5: 128, 6: 16, 7: 16, 8: 128, 9: 128, 10: 128, 11: 128, 12: 128}
+total admissible selectors: 1312
+selector coboundary checks: 1312
+marker/selector holonomy checks: 15744
+mixed-cell boundary invoices: 15744
+dihedral clock-relabel checks: 220416
+base holonomies a -> 7a: {1: 7, 2: 1, 3: 8, 4: 2, 5: 9, 6: 3, 7: 10, 8: 4, 9: 11, 10: 5, 11: 12, 12: 6}
+minimal trivializing cover degrees: {1: 13, 2: 13, 3: 13, 4: 13, 5: 13, 6: 13, 7: 13, 8: 13, 9: 13, 10: 13, 11: 13, 12: 13}
+SCOPE: finite exact consequence of proved THM-2586 zero sets and
+THM-2542 transition law; no physical mixed 2-cell or row closure.
+ALL CHECKS PASSED
