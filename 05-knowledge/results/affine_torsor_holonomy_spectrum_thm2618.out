@@ -1,0 +1,10 @@
+THM-2618 exact affine-torsor holonomy controls
+C13_affine_maps=156 fixed_section_hist=[(0, 12), (1, 143), (13, 1)]
+C13_fixed_action_hist=[(0, 12), (13, 1)] generator_twisted_unique=143
+V4_GL_size=6 affine_size=24 fixed_section_hist=[(0, 9), (1, 8), (2, 6), (4, 1)]
+V4_cycle_type_hist=[((1, 1, 1, 1), 1), ((2, 1, 1), 6), ((2, 2), 3), ((3, 1), 8), ((4,), 6)]
+V4_linear_order_fixed_hist=[((1, 0), 3), ((1, 4), 1), ((2, 0), 6), ((2, 2), 6), ((3, 1), 8)]
+D4_subgroup_size=8 fixed_section_hist=[(0, 5), (2, 2), (4, 1)] cycle_hist=[((1, 1, 1, 1), 1), ((2, 1, 1), 2), ((2, 2), 3), ((4,), 2)]
+affine_gauge_conjugacy_checks=576 two_edge_cycle_checks=576
+verdict=PASS: cyclic sections are affine-holonomy fixed points; C13 and quartic V4 have the stated spectra
+SCOPE: abstract deck torsors and exact monodromy dictionary; no physical LRC connector, Keller exclusion, or Jacobian closure
