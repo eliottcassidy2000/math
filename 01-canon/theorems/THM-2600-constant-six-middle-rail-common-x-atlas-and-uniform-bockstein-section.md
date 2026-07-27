@@ -2,7 +2,7 @@
 id: THM-2600
 title: "Constant-six middle-rail common-x atlas and uniform primitive Bockstein section"
 status: >
-  PROVED + VERIFIED-EXACT; independent hostile audit requested.  On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the
   canonical typed row, the two arrival-root-six middle edges of THM-2584's
   depth-five toothpick have disjoint three-cell zero sets and together cover
   all 84 nonzero-displacement/owner-clock cells.  Pulling both edges against
@@ -36,7 +36,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2600 -- the middle vertex attaches every depth-five cell
 
-**PROVED + VERIFIED-EXACT; independent hostile audit requested.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2592's priority theta-zero selector attaches only three fallback cells.
 Its other `81` cells use arrival digit zero and are orthogonal to the entire
@@ -297,5 +297,14 @@ Bockstein and multiplication determinant, checks (12)--(18), freezes the
 positive and hostile controls, and records the primitive digests.  Its
 weighted delayed sweep is cross-checked against the original grouped sweep
 and its deep-comb restriction against an independent direct intersection.
+
+An independent hostile audit rederived both disjoint middle-edge zero sets,
+the `81+81` cover, the exact `15/69` selector split, the global content and
+all `84` unit tests.  It separately checked that `q=0` is an absolute target
+section, that `v=h=6` is physical on one common-`x` carrier, and that the
+deep diagonal is lost on exactly the fifteen `t=0` cells.  Normal and
+optimized executions byte-match the stored transcript after LF
+normalization, with the declared hashes.  No mathematical or scope defect
+remains.
 
 No row is removed and LRC(14) remains open. **QED.**

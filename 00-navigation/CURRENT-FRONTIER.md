@@ -100,50 +100,40 @@ a distinct root; invariant gauges and offset-one cylinders make the gap
 sharp.  THM-2547 remains only a **FINITE-EXACT EXTERNAL CONTROL** after
 MISTAKE-281, not physical target/owner ancestry.
 
-The holotopy audits explain the gap.  THM-2551--2553 show that transfer keeps
-the unit-projector kernel, common-future gain is a coboundary, and rotation
-duty sees augmentation rather than weighted jet phase.  THM-2556's first
-non-product square is `duty curvature + fibre covariance`: all `168` gains
-are live, but a nonunit section can cancel them exactly.
+The holotopy chain THM-2551--2587 isolates the lost coordinate.  Transfer
+preserves the unit-projector kernel, vertex gains are coboundaries, and the
+first non-product square is `duty curvature + fibre covariance`; full-`X`
+completion still kills every coarse target character.  THM-2571/2579 retain
+the primitive 13-primary carry and its target torsor.  THM-2581/2584 put the
+`{b}`, depth-five packet on one ancestry base: its root support is the path
+`0--0--6--6--12`, with every joint colour and nonzero endogenous
+`theta=t-2v` mode.  THM-2586 reaches a genuinely later physical root, while
+THM-2587 proves that neither `theta` nor the spectrally saturated danger/safe
+projections select the needed translated edge.
 
-THM-2557/2564 recover the rank-72 signed interaction from six teeth but make
-its carry noncanonical.  THM-2559 gives all `165` rows an old-head deep/repair
-coefficient; THM-2563 adds moving dipoles and THM-2565 a same-root return only
-for a changed selector.  THM-2568 proves full-`X` completion annihilates every
-coarse target character (twisted-pair kernel dimension `156`).  THM-2569
-conditions first, yielding mass `>=63rho^2/26`, yet `h=b` stays a spectator
-and annihilation is rootwise.  THM-2562/2567 force six rigid deep replicas
-whose augmentation cancels.
+THM-2590 gives the exact Boolean Bockstein selector spectrum, but THM-2591
+proves every chartwise root choice is a Cech coboundary and cannot cancel the
+nonzero seven-chart class.  THM-2592 realizes the fallback pullback on one
+physical `x`; its priority root-zero subbank is orthogonal to the whole
+delayed word.  THM-2600 repairs that narrow failure with two constant-six
+middle rails and a fixed `q=0` unit Bockstein
+section on all `84` cells, but still supplies vertices rather than edges.
 
-THM-2571 finds the primitive 13-primary carry; THM-2579 makes its target
-translates one torsor.  Differences and unnormalized numerators fill, while
-normalized division may restore the class.  THM-2573 identifies the Abel
-normal with a handoff moment but has a deep blind kernel.  THM-2574
-diagonalizes the tooth label; the pure Boolean gate stays normal-blind.  The
-live coordinate is a tooth mode of the **actual covariant layer weights**.
+THM-2593 trivializes the coefficient torsors on a minimal `C_91` cover, and
+THM-2594 has a nonzero common-base theta contraction; neither identifies a
+physical root output with the next target input.  THM-2601 compresses every
+singleton Bockstein section to one scalar, but target successor is an
+explicit nonlinear degree-11 cycle and `631` nonempty aggregates vanish.
+THM-2602 proves the resulting boundary: common-base gate insertions form a
+commutative diagonal vertex calculus, whereas curvature requires ordered
+nonnegative kernels `K_ell(q,q')` with a positive twisted return
+`diag(K_0...K_6 S_(7a))`.
 
-THM-2575 constructs a common-base owner-clock host; THM-2577 puts every
-positive return at depth `3` on `{a}` and depth `5` on `{b},{a,b}`.  The host
-lives on the distinct `{a}`, depth-3 packet, so the facts do not multiply.
-THM-2581 repairs that mismatch on the `{b}`, depth-5 fibre.  THM-2584 retains
-the roots: in `w=t/2` every owner cell has path `0--0--6--6--12`; all joint
-colours and every nonzero endogenous `theta=t-2v` collision survive.
-THM-2586 then disintegrates the two theta-zero rails into literal Boolean
-ancestry sheets on all `84` nonzero-displacement/owner cells and continues
-`v=w=7t` to a genuinely later `k_a` physical root at exact time `N+5`.
-THM-2587 computes the exact comparison with translated deep gates: the
-absolute digit sees a three-state, two-neighbour danger-incidence wall, and
-`theta` cannot select an incident danger edge.  Eleven constant offsets per
-rail are uniformly safe but are only gauges.  Both projected danger and safe
-tensors are already spectrally saturated.  What they permanently omit is the
-oppositely translated `k_b` factor and THM-2334's left relation residue.
-
-Next: attach THM-2537's selected old head, or THM-2569's old-head/future
-packet, to a THM-2586 arrival sheet, then insert the paired `k_b` translate
-and left endpoint residue on that same ancestry before full-`X` pushforward.
-The frozen sheet is not old-action covariant, and the present typed-row
-projection is spectrally saturated; more untyped nonvanishing is not
-progress.  No row is removed. Ledger: `165`.
+The sharp target is therefore an ordered common-ancestry transition, not
+more marginal Fourier support: retain the adjacent target index (or a lawful
+root-to-target transport), the adjacent clock, positivity, and semantic
+owner/repair data before marginalization.  THM-2605 reserves the inverse-root
+dipole attempt.  No row is removed. Ledger: `165`.
 
 ### Independent routes that remain live
 
