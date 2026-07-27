@@ -151,7 +151,7 @@ THM-2440 gives the a.e./literal two-comb split `15/182` versus `15/196`; THM-244
 THM-2449/2456 classify the mixed-zero locus as an averaged root offset; THM-2457 turns supplied root service into an atom graph. THM-2459 retains drift and service in at most four atoms (`D_0/63001`, `M_0/16384`); THM-2460 copies an independently retained word.
 THM-2461 makes the word prescribed-time, separates owner/deep roots, and proves repair is off-diagonal with one target-active first-failure role. THM-2466 then retains both observables in any fixed positive sufficiently delayed word on a supplied owner-supported common root base, with floors `mu(Q)^2 D_0/252004` and `mu(Q)M_0/32768`.
 THM-2471/2474 saturate collision colours; THM-2478 adds a neutral future owner while rebasing loses the deep sheet. THM-2505 loses temporal copies and THM-2506's affine `13`-pushforwards vanish.
-THM-2507--2514 close static Radon algebra, the live cut transplant, degree-two cancellation, and the lossless six-phase `K_14` chart. THM-2515 selects an exact correlation fibre. Neither added sheet is a typed owner/arrival fibre; owner-loop drift remains open.
+THM-2507--2514 close Radon algebra, live transplant, degree-two cancellation, and the six-phase `K_14` chart. THM-2515 selects a correlation fibre. Neither added sheet is typed owner/arrival; owner-loop drift remains open.
 THM-2502/2503/2504 show tournaments and sidecar-free holonomy are not target
 currents. THM-2458's hostile is physically realized
 by THM-2462. THM-2464 proves: `lambda=1` clean charts force the linked blocker
