@@ -322,4 +322,10 @@ and the gap cross-product in the corpus atlas.
 **Action:** before adoption, do exactly one of: (a) find the sub-lemma that upgrades it from number-prediction to structure-prediction (inventories, class lists, amplitudes), or (b) spend one session extending the data by one point with the explicit goal of killing it. Pre-register structural predictions in a committed `.out` before decisive runs.
 **Mechanism:** minimal interpolants are selected precisely for shortness, so they carry a large family of equally short competitors that agree on the fitted range and diverge at the first untested point; breaking there is the generic outcome conditional on the selection, not bad luck. Mechanism-backed conjectures have no such competitor family because the proved sub-lemma fixes the extension.
 **Counterindication:** a true local law can LOOK refuted if a decaying carrier is left in the comparison (THM-2447's naive class means were off 23% at p=19 until detrended); test laws only after removing the availability trend. Density/threshold statements (not closed forms) may survive many points before breaking (A014574's rule survived ~19).
-**Evidence:** 24 break instances and 6 survivor programs tabulated in [`the-first-untested-point-law-a-maturation-retrospective-kps-S135.md`](../07-reflections/the-first-untested-point-law-a-maturation-retrospective-kps-S135.md); the sharpest arcs are Leonardo/Busch (MISTAKE-055), HYP-4997 -> THM-2444 -> THM-2453 -> THM-2454 (two first-point refutations, then three pre-registered exact hits once mechanized), the mod-9 bicycle fit killed on extension inside THM-2467, and the survivor table (THM-2447's twelve amplitudes, THM-1286's eight two-directional gate confirmations, THM-790's logged n=8 inventory).
+**Evidence:** 24 break instances and 6 survivor programs are tabulated in
+[`the-first-untested-point-law-a-maturation-retrospective-kps-S135.md`](../07-reflections/the-first-untested-point-law-a-maturation-retrospective-kps-S135.md).
+The sharpest arcs are Leonardo/Busch (MISTAKE-055); HYP-4997 -> THM-2444 ->
+THM-2453 -> THM-2454 (two first-point refutations, then three pre-registered
+exact hits once mechanized); and the mod-9 bicycle fit killed inside THM-2467.
+The survivor table records THM-2447's twelve amplitudes, THM-1286's eight
+two-directional gate confirmations, and THM-790's logged `n=8` inventory.
