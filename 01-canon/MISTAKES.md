@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-277 (2026-07-27, concurrent THM-2510 reservation collision) -- remote uniqueness was not rechecked after the final rebase
+
+- **What happened:** the quadratic affine-cut energy theorem was checked
+  against the then-current remote namespace and found `THM-2510` free.  While
+  its exploratory computation was being developed, a concurrent session
+  reserved the unrelated truncated-Radon tight-frame theorem as `THM-2510`
+  in commit `dc69ebaa800`.  This session then rebased over that commit but did
+  not repeat the YAML-ID search before pushing its own energy reservation in
+  commit `dd9e4964336`, leaving two distinct theorem slugs with the same ID.
+- **Why it was wrong:** the earlier uniqueness check had expired, and a clean
+  rebase does not detect semantic collisions between different filenames.
+  The bounded reservation protocol requires checking filename, YAML ID,
+  indexes, and fresh remote history *after* the last fetch/rebase and
+  immediately before the reservation commit.
+- **Repair:** the quadratic energy reservation, companion, and all pending
+  citations were moved to the freshly rechecked free namespace
+  `THM-2511-affine-cut-quadratic-root-service-and-pair-space-boundary`.
+  `THM-2510` now names only the truncated-Radon tight-frame theorem.  No
+  proved mathematical statement depended on the transient duplicate.
+- **Rule:** after every rebase performed during an ID reservation, rerun the
+  remote filename and YAML-ID search before committing, even when an earlier
+  check in the same turn found the number free.
+
 ## MISTAKE-276 (2026-07-27, THM-2478 promotion audit) -- a factor-wise target action was written as one common physical translation
 
 - **What was written:** after proving the delayed owner graft target-neutral,

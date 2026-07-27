@@ -1,5 +1,5 @@
 ---
-id: THM-2510
+id: THM-2511
 title: "Affine-cut quadratic root service and the pair-space boundary"
 status: RESERVED / UNPROVED EMPTY STUB
 source: codex-2026-07-27-affine-cut-quadratic-energy
@@ -10,7 +10,7 @@ related:
   - THM-2508-affine-cut-bundle-covariance-and-carry-permutation
 ---
 
-# THM-2510 -- affine-cut quadratic root service
+# THM-2511 -- affine-cut quadratic root service
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
