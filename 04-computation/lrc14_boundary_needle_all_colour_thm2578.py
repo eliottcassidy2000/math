@@ -151,9 +151,11 @@ print(f"  live 91-unit physical phases checked: {live_frequency_checks}")
 print("  exact coefficient: exp(2*pi*i*M*x0) zeta^(q*s0)/(26*pi^2)")
 
 
-print("\n== one-sided packet hostile ==")
+print("\n== one-sided base-packet hostile ==")
 # If a proposed common filter H is contained in the danger gate P, then the
-# repaired layer H(1-P) is identically zero.  No boundary handoff survives.
+# repaired layer H(1-P) is identically zero at that base gate.  This says
+# nothing about translated gates; freezing a target-informed H there would
+# in any event be an auxiliary, non-covariant probe.
 truth_checks = 0
 for p_bit in (0, 1):
     for h_bit in (0, 1):
@@ -165,8 +167,23 @@ for p_bit in (0, 1):
         require(left == h_bit, "danger packet lost its left copy")
         truth_checks += 1
 print(f"  exact H<=P truth-table cells: {truth_checks}")
-print("  a danger-supported stationary packet cannot itself be the transverse filter")
+print("  a danger-supported packet has no base-gate handoff")
+
+# Sharp scope hostile: for k=L=1 and H=P_0, translated gate boundaries at
+# s=1 and s=12 lie at -/+1/182, strictly inside P_0.  Thus H has two-sided
+# trace one there and the translated total-layer handoff is nonzero.
+shifted_hostiles = (
+    tooth_boundary(1, 1, 0, 1, 1),
+    tooth_boundary(1, 1, 0, -1, 12),
+)
+require(shifted_hostiles == (Fraction(181, 182), Fraction(1, 182)),
+        "shifted base-packet hostile locations changed")
+for x in shifted_hostiles:
+    require(circle_distance(x, Fraction(0, 1)) < Fraction(1, 14),
+            "translated boundary left the interior of the base gate")
+print("  exact shifted hostile: k=L=1, H=P_0 crosses P_1 and P_12 at -/+1/182")
+print("  shifted handoffs are not excluded, but a frozen target-informed filter is unlawful")
 
 
-print("\nscope: external lawful Boolean boundary carrier; inheritance on THM-2569 remains open")
+print("\nscope: external lawful Boolean boundary carrier; neutral/covariant inheritance remains open")
 print("all exact checks passed")

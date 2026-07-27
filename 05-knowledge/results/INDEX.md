@@ -24,8 +24,8 @@
   absolute target delta, so all thirteen target characters and every live
   physical offset are nonzero.  This supplies the ambient absolute-reference
   type missing in THM-2579, but not its transport into the THM-2569 inherited
-  word/owner/root/deep packet.  Hashes are `0f9187a3...f2f3` /
-  `67bc4224...2efb`.
+  word/owner/root/deep packet.  Hashes are `4176bcce...f4c3` /
+  `03e37e26...33ab`.
 - `lrc14_logarithmic_abel_normal_thm2573.py` -> matching `.out`
   [THM-2573 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For disjoint
   finite step endpoint layers, one-sided whole-layer Abel smoothing has the

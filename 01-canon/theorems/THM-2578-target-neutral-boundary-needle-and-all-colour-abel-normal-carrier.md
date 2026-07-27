@@ -19,10 +19,13 @@ status: >
   live M=m c_3 after multiplying by the deepest coefficient because
   gcd(m,91)=1.  Unlike THM-2574's complex component connection, the carrier
   is a positive Boolean aggregate with no relative lift gauge.  It is still
-  external: the THM-2569 stationary packet is supported inside the old
-  danger gate, so used as a common filter it kills the safe layer rather
-  than crossing the boundary.  An inherited target-neutral transverse
-  filter retaining word, owner, future root, and deep mode remains open.
+  external: the THM-2569 stationary packet is supported inside the old base
+  danger gate, so at s=0 it kills the safe layer rather than crossing that
+  boundary.  Shifted handoffs may exist, but freezing this target-informed
+  packet as H is unlawful and makes their colours auxiliary.  An inherited
+  genuinely target-neutral transverse sidecar, or a fully covariant
+  whole-layer orbit, retaining word, owner, future root, and deep mode
+  remains open.
   No THM-2334 relation current, row exclusion, or LRC(14) conclusion follows.
 source: common-endpoint-seam-2026-07-28-boundary-needle
 depends_on:
@@ -34,8 +37,8 @@ related:
   - THM-2579-socle-flat-target-torsor-and-integral-difference-filling
 script: 04-computation/lrc14_boundary_needle_all_colour_thm2578.py
 output: 05-knowledge/results/lrc14_boundary_needle_all_colour_thm2578.out
-script_sha256: 0f9187a36d8661e46e175cd63c551b84c93b567cb3c45c4347f73d6a45b5f2f3
-output_sha256: 67bc42246cf789017a11d6260e0631b8cf57bdb98ec313cb01e8d95597fb2efb
+script_sha256: 4176bcce3c9492f9e32ec2b2135492b777f7b39b1d1216c1ef8871c4d160f4c3
+output_sha256: 03e37e266ea63a52ba55fe9eb1abcfa8b1a169fe5a04d6bcf88b193701ee33ab
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -295,7 +298,7 @@ root, paired-dipole, and deep-mode data.  Consequently the needle can serve
 as the missing reference only after that packet-level inheritance and
 comparison map are constructed.
 
-## 5. Why the current stationary packet is not the filter
+## 5. Why the current stationary packet is not yet a lawful filter
 
 On the THM-2569 common packet, the old target-informed weight satisfies
 
@@ -310,22 +313,36 @@ as the common filter in (9), then
 w_(N,h)(1-P_0)=0.                                          (22)
 ```
 
-It therefore kills the repaired layer at the base target shift instead of
-having positive two-sided trace across the gate boundary.  The total-layer
-jump convention of THM-2573 assigns no handoff merely because `P_0` and
-`1-P_0` meet underneath a filter that dies on one side.
+It therefore kills the repaired layer at the **base target shift** instead
+of having positive two-sided trace across that gate boundary.  The
+total-layer jump convention of THM-2573 assigns no base handoff merely
+because `P_0` and `1-P_0` meet underneath a filter that dies on one side.
+
+This does **not** prove that `w_(N,h)` has no handoff across `P_s` for
+`s!=0`.  A set contained in `P_0` can cross a translated gate; indeed the
+frozen duplicate-probe mechanism exploits exactly such shifted incidences.
+The sharp elementary hostile is `k=L=1`, `H=P_0`: the `P_1` and `P_12`
+boundaries at `-1/182` and `1/182` lie strictly inside `P_0`, so their
+total-layer handoffs are nonzero.
+But `w_(N,h)` contains target-informed old facts.  Holding it fixed while
+only `P_s` moves does not make it a target-neutral `H`; it violates the
+common-target action and any resulting shifted colour is auxiliary by
+MISTAKE-266.  Base one-sidedness and shifted unlawfulness are distinct
+obstructions.
 
 This is an exact obstruction, not a reason to freeze or discard the packet.
 The positive needle theorem changes the remaining obligation to:
 
-> Construct, from inherited live sidecars, a target-neutral rational Boolean
-> filter with positive two-sided trace at at least one `k_a` boundary and a
+> Either construct from inherited live sidecars a genuinely target-neutral
+> rational Boolean filter with positive two-sided trace at a `k_a` boundary,
+> or co-shift the target-informed packet and every active fact into a lawful
 > covariant whole-layer orbit, while retaining the THM-2569 word, owner,
 > stationary future root, paired dipoles, and an allowed deepest mode.
 
-The external `H` in Section 2 proves that such a filter exists in the ambient
-endpoint algebra.  It does not prove that the scalar-cover row supplies it,
-or that arbitrary multiplication by `H` preserves positive packet mass.
+The external `H` in Section 2 proves that the first kind of filter exists in
+the ambient endpoint algebra.  It does not prove that the scalar-cover row
+supplies it, that arbitrary multiplication by `H` preserves positive packet
+mass, or that the second covariant construction exists.
 
 ## 6. Exact consequence for the live seam
 
@@ -347,8 +364,10 @@ one fixed target-neutral boundary needle
 
 Thus neither Fourier cancellation, physical-frequency resonance, nor target
 character support is the remaining analytic problem.  The missing object is
-a **transverse inherited filter** on the common semantic packet.  No row is
-excluded; the ledger remains `165`, and LRC(14) remains open.
+a **lawfully inherited transverse reference** on the common semantic packet:
+neutral as a fixed sidecar, or target-active as part of a fully covariant
+orbit.  No row is excluded; the ledger remains `165`, and LRC(14) remains
+open.
 
 ## 7. Exact companion
 
@@ -374,7 +393,8 @@ The dependency-free exact referee checks:
 - `2,080` all-character target coefficients and `12,800` live `91`-unit
   physical phases; and
 - the exact three-cell truth table `H<=P => H(1-P)=0` for the one-sided
-  stationary-packet hostile.
+  base-gate hostile, together with the exact shifted `-/+1/182` hostile
+  showing that translated gates need not vanish.
 
 The all-`k` separation, arbitrary trace interpolation, handoff identity, and
 finite-DFT nonvanishing are symbolic proofs above, not finite extrapolations.

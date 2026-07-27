@@ -17,9 +17,11 @@
   live 91-unit physical phases checked: 12800
   exact coefficient: exp(2*pi*i*M*x0) zeta^(q*s0)/(26*pi^2)
 
-== one-sided packet hostile ==
+== one-sided base-packet hostile ==
   exact H<=P truth-table cells: 3
-  a danger-supported stationary packet cannot itself be the transverse filter
+  a danger-supported packet has no base-gate handoff
+  exact shifted hostile: k=L=1, H=P_0 crosses P_1 and P_12 at -/+1/182
+  shifted handoffs are not excluded, but a frozen target-informed filter is unlawful
 
-scope: external lawful Boolean boundary carrier; inheritance on THM-2569 remains open
+scope: external lawful Boolean boundary carrier; neutral/covariant inheritance remains open
 all exact checks passed
