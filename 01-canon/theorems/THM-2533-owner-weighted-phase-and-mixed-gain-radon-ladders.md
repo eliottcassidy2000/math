@@ -45,6 +45,7 @@ depends_on:
   - THM-2522-intrinsic-collision-depth-toothpick-descent-and-late-owner-decoupling
   - THM-2532-cyclic-tournament-cayley-algebra-and-chi7-even-quotient
 related:
+  - MISTAKE-279
   - THM-2286-endpoint-prony-lift-bank-and-sharp-owner-multiplier-landing
   - THM-2312-sparse-root-bispectrum-positive-word-current
   - THM-2323-primitive-fixed-colour-cross-correlation-and-same-gauge-word-alignment
@@ -727,8 +728,10 @@ E_(a_i)W_(kappa_0,b_0)=g_own K_(a_i)!=0.                     (60)
 ```
 
 Expanding (58) before the character sums shows that every scalar integral
-is rational.  Therefore, for independent units `v_7 mod 7` and
-`v_13 mod 13`, Galois covariance is
+lies in the real part of the relevant cyclotomic field.  It need not be
+rational: even two equal rational branch cells can contribute a factor
+`|1+zeta_13|^2`.  For independent units `v_7 mod 7` and `v_13 mod 13`,
+Galois covariance is nevertheless exact:
 
 ```text
 sigma_(v_7,v_13)Gamma(kappa,b,a)
@@ -736,9 +739,12 @@ sigma_(v_7,v_13)Gamma(kappa,b,a)
 ```
 
 Here the automorphism is not being asked to preserve an order on a
-cyclotomic field.  Each `Gamma` is independently an integral of a
-nonnegative function and is rational, so the automorphism fixes its value;
-covariance merely transports the equality of those rational values.
+cyclotomic field.  The positive seed in (58) is nonzero, so every Galois
+conjugate is nonzero.  The right side of (61) is independently an integral
+of an absolute square against the nonnegative owner and is therefore
+nonnegative in the distinguished real embedding.  It is consequently
+strictly positive.  Nonzero preservation plus independent nonnegativity,
+not rationality, is the load-bearing propagation step.
 
 The ratio `a/b` is fixed.  Equations (50), (58), and (61) prove
 
@@ -1225,9 +1231,9 @@ completion.  The last completion is explicitly a support-sharp hostile,
 not a lawful anchored THM-2449 table.
 
 An independent line audit rederived the projector and owner identities,
-the grouped-jump quantifiers, the lawful-clock placement, the Galois
-rationality step, and the sharp hostile boundary.  A second audit checked
-the phase-lifted predecessor normalization (68e)--(68g), all `216`
+the grouped-jump quantifiers, the lawful-clock placement, the repaired
+Galois nonzero/nonnegativity step, and the sharp hostile boundary.  A second
+audit checked the phase-lifted predecessor normalization (68e)--(68g), all `216`
 slope--channel incidences, the pointwise `72` and Hilbert-valued `5,184`
 mode consequences, and the zero-frequency boundary (68k)--(68k').  Normal
 and optimized transcripts byte-matched the stored output and recorded

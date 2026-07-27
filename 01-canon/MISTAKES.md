@@ -9,6 +9,32 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-279 (2026-07-27, THM-2533 Galois gain propagation) -- an absolute-square character integral was called rational
+
+- **What was written:** THM-2533 Section 6 said that expanding the owner-
+  weighted absolute-square energy `Gamma(kappa,b,a)` before its character
+  sums made every scalar integral rational, and used rationality to explain
+  the Galois propagation of three positive gain slices.
+- **Why it was wrong:** rational step-cell measures do not make the squared
+  modulus of a cyclotomic character sum rational.  Two equal rational branch
+  cells in target slots `0,1`, for example, contribute the nonrational real
+  cyclotomic factor `|1+zeta_13|^2=2+zeta_13+zeta_13^(-1)`.  The exact referee
+  checked the covariance and nonvanishing consequences, not this prose-only
+  rationality assertion.
+- **Strongest survivor and repair:** the `216` phase ladders and every later
+  consequence survive unchanged.  Galois covariance sends a positive seed
+  `Gamma` to the corresponding gain entry.  A field automorphism preserves
+  nonzero, while that image entry is independently an integral of an
+  absolute square against a nonnegative owner, hence is nonnegative in the
+  distinguished real embedding.  It is therefore strictly positive.  The
+  proof now uses nonzero preservation plus independent nonnegativity, never
+  order preservation or rationality.
+- **Rule:** a rational partition supporting a character sum does not make its
+  quadratic Fourier energy rational.  When propagating positivity by Galois,
+  separate the algebraic step (conjugates of nonzero elements stay nonzero)
+  from the analytic step (each conjugate has its own manifest absolute-square
+  realization and is nonnegative).
+
 ## MISTAKE-278 (2026-07-27, THM-2521 complex Hilbert norm proof) -- the real part was omitted from a complex cross term
 
 - **What was written:** THM-2521 equation (15) asserted
