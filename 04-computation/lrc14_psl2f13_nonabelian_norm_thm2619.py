@@ -262,6 +262,7 @@ def main():
 
     success_rows = {}
     leakage_rows = {}
+    successful_factor_generated_orders = set()
     all_successful_a = set()
     for t in (3, 5, 6):
         g = G(t)
@@ -306,6 +307,10 @@ def main():
                     continue
                 successes.append(a)
                 all_successful_a.add(a)
+                factor_generated_order = len(generated_group(factors))
+                successful_factor_generated_orders.add(factor_generated_order)
+                require(factor_generated_order == 1092,
+                        "successful factor bank generates a proper subgroup")
                 leaked, avoided = path_leakage(chronological)
                 require(3 <= len(leaked) <= 5, "unexpected infinity leakage")
 
@@ -350,6 +355,8 @@ def main():
             require(tuple(successes) == success_expected[(t, sign)],
                     "central norm success atlas mismatch")
     require(all_successful_a == set(range(1, P)), "trace atlas misses a target root")
+    require(successful_factor_generated_orders == {1092},
+            "successful factor-bank generated orders vary")
 
     # The 13 x 13 rank-one Bruhat square is the exact algebraic analogue of
     # an independent source/future action carrier.  The group right coordinate
@@ -463,6 +470,7 @@ def main():
     leak_hist = Counter(leak for leak, avoid in leakage_rows.values())
     avoid_hist = Counter(avoid for leak, avoid in leakage_rows.values())
     print(f"successful_norms={len(leakage_rows)} leak_count_hist={sorted(leak_hist.items())}")
+    print(f"successful_factor_bank_generated_orders={sorted(successful_factor_generated_orders)}")
     print(f"affine_avoid_count_hist={sorted(avoid_hist.items())}")
     print("twisted_return_full_P1={infinity}; twisted_return_target_F13=empty")
     print("bruhat_square=169 order7_wall=78 Fourier_support=lambda=nu only")

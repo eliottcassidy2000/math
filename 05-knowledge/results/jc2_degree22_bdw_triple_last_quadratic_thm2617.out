@@ -1,0 +1,18 @@
+THM-2617 exact companion
+stratum=B,D,W_nonzero;C=E=0
+invariants=lambda=D/B^2,mu=W/B^3
+resultant_content=2^4*11^6
+resultant_terms=34
+resultant_bidegree=(5,5)
+newton_polygon=full_triangle_degree_5
+fixed_section=-567*L5
+fixed_section_simple_points=5
+line_top_types=2;excluded=2
+quadratic_top_types=3;excluded=2;open=1
+open_quadratic_type=two_moving_cubic_roots
+open_type_top_next_determinant_factors=4
+conditional_square_lift_minimum_genus=2
+finite_hostile_parameters=324
+finite_hostile_reducible=0
+uniform_irreducibility=OPEN
+ALL CHECKS PASSED
