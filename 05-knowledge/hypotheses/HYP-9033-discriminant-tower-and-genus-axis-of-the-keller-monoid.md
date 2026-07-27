@@ -2,8 +2,8 @@
 id: HYP-9033
 title: "The discriminant tower: Jelonek divisors as classification data for the Keller monoid, and the genus axis of collapse vs rigidity"
 status: >
-  OPEN synthesis with one PROVED identity (the cuspidal law
-  27 c^2 L = S^2 - T^3, exact, this session), several VERIFIED
+  OPEN synthesis with one PROVED identity (the corrected saturated cuspidal
+  law 27 c^2 L = S^2 - T^3, exact; MISTAKE-287), several VERIFIED
   inputs (THM-2473/2546 and referee), five falsifiable predictions
   (P1-P2 under computation in flight), and a typed dictionary entry
   for HYP-9031.  Nothing here is a JC(2) or classification claim.
@@ -16,11 +16,12 @@ related:
   - THM-1330 (necessary monoid atlas -- gains an invariant here)
   - HYP-9031 (the D5 dictionary -- gains the genus axis)
   - THM-2465 (W1/W2 members; the -(det J)^2 law test target)
+  - THM-2566 (two-chart saturated cusp atlas and parasitic-plane ledger)
 ---
 
 # HYP-9033 -- the discriminant tower and the genus axis
 
-## 1. The cuspidal law [PROVED, exact]
+## 1. The saturated cuspidal law [PROVED, exact; corrected by MISTAKE-287]
 
 For the sporadic Keller map `F` (THM-1300/2473), with
 `T = 4 - 3bc`, `S = 27ac^2 - 9bc + 8`:
@@ -30,16 +31,34 @@ For the sporadic Keller map `F` (THM-1300/2473), with
 ```
 
 so the Jelonek quartic `L` is the ELLIPTIC DISCRIMINANT (difference of
-square and cube) of the trisection pencil `L x^3 + T x - 2c`, and the
-Jelonek set `Z(L)` is the pullback of the cuspidal cubic `S^2 = T^3`
-under the pencil map `(a,b,c) -> (S,T)`. The stratification matches
-THM-2473 exactly:
+square and cube) of the trisection pencil `L x^3 + T x - 2c`.  However,
+the **raw global pullback** of the cuspidal cubic under
+`Phi_c:(a,b,c) -> (S,T)` is
 
-- off `Z(L)`: full fibers (3) -- off the cusp curve;
+```text
+Phi_c^* V(S^2-T^3) = V(c^2L),
+underlying set       = V(c) union V(L),
+effective divisor    = 2V(c) + V(L).                (C)
+```
+
+Thus `Z(L)` is exactly the pullback only on `c!=0`; globally it is the
+`c`-saturated pullback.  The lost factor is geometrically real:
+`Phi_c` collapses the honest affine target plane `c=0` to the smooth cusp
+point `(8,4)`.  For example `(a,b,c)=(1,0,0)` maps to `(8,4)` but has
+`L=16`, so it is not on the Jelonek set.  This corrects the former global
+pullback sentence (MISTAKE-287); THM-2566 gives the exact two-chart atlas.
+
+On the localized chart `c!=0`, the stratification matches THM-2473 exactly:
+
+- off `Z(L)`: full fibers (3) -- off the cusp curve on this chart;
 - `Z(L) \ E`: drop to 1, survivor `x = 2c/T` = the LINEAR REMNANT of
   the degenerated pencil -- smooth points of the cusp curve;
 - the empty-fiber curve `E` (where `T = 0`, hence `S = 0`): the
   preimage of THE CUSP POINT `(S,T) = (0,0)` itself -- total escape.
+
+The last assertion is global, not merely localized: `T=S=0` forces
+`bc=4/3` and `a=4/(27c^2)`, so `c` is automatically nonzero and the
+cusp-point preimage is exactly `E`.
 
 The trisection anatomy `4T^3 - 3T -+ 1 = (T -+ 1)(2T +- 1)^2`
 (HYP-9030's branch identity) is this same cuspidal geometry at the
@@ -120,7 +139,8 @@ place to HUNT for a JC(2) counterexample instead.
 
 ## Loss ledger
 
-The cuspidal law is proved for the sporadic `F` only; the tower and
+The saturated cuspidal law is proved for the sporadic `F` only; the raw
+pullback has the extra affine plane `c=0` described in (C).  The tower and
 `-(det J)^2` laws are predictions under test; "generic component
 count" needs a precise genericity notion before any classification
 claim; none of this closes JC(2), classifies the monoid, or excludes

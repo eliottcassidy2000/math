@@ -9,6 +9,27 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-287 (2026-07-27, HYP-9033 cuspidal pullback) -- a square coefficient factor was discarded in a global zero-set claim
+
+- **What was claimed:** from the exact identity
+  `S^2-T^3=27c^2L`, HYP-9033 said that the Jelonek hypersurface
+  `V(L)` was the full inverse image of the cusp `S^2=T^3` under
+  `(a,b,c) |-> (S,T)`.
+- **First failed implication:** multiplication by `c^2` is invertible only on
+  the chart `c!=0`.  Globally the scheme-theoretic inverse image is
+  `V(c^2L)`, its effective divisor is `2V(c)+V(L)`, and its underlying set is
+  `V(c) union V(L)`.  The affine target `(a,b,c)=(1,0,0)` is the minimal clean
+  hostile: it maps to the smooth cusp point `(S,T)=(8,4)` while `L=16`.
+- **Strongest survivor:** after localization at `c`, or equivalently saturation
+  by `c`, the claimed identification is exact.  The cusp-point fibre
+  `(S,T)=(0,0)` is still exactly the omitted rational curve because `T=0`
+  forces `bc=4/3` and hence `c!=0`.  The plane `c=0` is an honest affine target
+  plane with an explicit finite section, not a compactification boundary.
+- **Repair:** THM-2566 records the saturated `c`-chart together with the
+  companion `a`-chart from THM-1335, their parasitic planes, the punctured
+  two-chart cover, and the exceptional origin.  Never pass from
+  `h^m f=0` to `f=0` globally without localizing at or saturating by `h`.
+
 ## MISTAKE-286 (2026-07-27, THM-2560 bridge typing) -- a specific `r=5` slaving ansatz was attributed to THM-2512's generic bridge test
 
 - **What was written:** THM-2560 called the proposed
