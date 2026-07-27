@@ -1,0 +1,26 @@
+THM-2531 exact referee
+p=13 mersenne_modulus=8191 prime=True order_of_2=13
+mixed_masks=8190 rotation_necklaces=630 cyclic_stabilizer_failures=0
+anchor_counts=630,630,630,630,630,630,630,630,630,630,630,630,630
+boundary_counts=630,630,630,630,630,630,630,630,630,630,630,630,630
+max_one_run_necklaces=1:40,2:172,3:178,4:114,5:62,6:32,7:16,8:8,9:4,10:2,11:1,12:1
+reflection_symmetric_masks=1638 reflection_necklaces=126
+dihedral_orbits=378 orientation_ties=126 complement_dihedral_ties=0
+fixed_mask_slope_reversal_same=0 fixed_mask_slope_reversal_converse=0
+sharp_masks=52 sharp_necklaces=4 selected_run=4
+sharp_canonical_words=1111000011000,1111000011100,1111000110000,1111001110000
+psi_range=1..98 psi_sum=186368 psi_square_sum=6456320
+boolean_layer_sum=186368 rational_owner_denominator=17 weighted_numerator_checksum=1510061
+path_positive_total=2155608 path_negative_total=1969240 difference=186368
+selector_classes=156 class_imbalance_min=2 class_imbalance_max=4750
+boundary_imbalance_each=14336
+homometric_correlation=(4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1) boundaries=(1, 2),(2, 3)
+deep_comb_masks=26 quadratic_marker_wall=PASS
+deep_slope_marker_tests=312
+epsilon_convention=tau_inverse_1..6:+1,tau_inverse_7..12:-1
+target_anchored_masks=23 plus_target={12},{11,12} minus_target={1},{1,2}
+thm2529_hostile_minus_boundary=(1,0)
+gram_marker_mass=276 gamma0=0 gram_linear_recovery=PASS all_root_colours=NONZERO_BY_PHI13
+translation_covariance_tests=106470 slope_covariance_tests=98280
+checks=1131871
+status=PASS
