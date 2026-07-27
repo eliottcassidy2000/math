@@ -679,8 +679,12 @@ def main():
         Iy = Fraction(acc, 169 * m * G)
         require(Iy == Ivals[s], f"y-side route mismatch at s={s}")
         log(f"        {elapsed()} s={s}: y-side I_{s} = {Iy} == engine: PASS")
-    log("    verification matrix complete: 3 independent routes agree with")
-    log("    the engine on every decided value.")
+    log("    verification matrix complete: support folds independently"
+        " confirm the full")
+    log("    zero/positive branch; correlation is exact at s=0,1 and the"
+        " y-side decomposition")
+    log("    is exact at s=2,3.  Every displayed engine value has an"
+        " alternate exact decomposition.")
     log("")
 
     log("[8] minimality premise and deep-root sidecar (THM-2471 (25)-(26),"

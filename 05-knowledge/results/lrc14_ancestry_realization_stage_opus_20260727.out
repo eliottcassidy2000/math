@@ -61,8 +61,9 @@ machine=opus  date=2026-07-27
     (f) y-side route  I_s = int 1_Q (N_169/169) Phi_s dx :
         [     8.6s] s=2: y-side I_2 = 0 == engine: PASS
         [     8.6s] s=3: y-side I_3 = 9926558757352/109707098520974955 == engine: PASS
-    verification matrix complete: 3 independent routes agree with
-    the engine on every decided value.
+    verification matrix complete: support folds independently confirm the full
+    zero/positive branch; correlation is exact at s=0,1 and the y-side decomposition
+    is exact at s=2,3.  Every displayed engine value has an alternate exact decomposition.
 
 [8] minimality premise and deep-root sidecar (THM-2471 (25)-(26), (44)-(47))
     d = c*13^(r-1) = 13^3 = 2197;  U = P_d f, V = P_d e

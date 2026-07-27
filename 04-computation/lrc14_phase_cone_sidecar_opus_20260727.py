@@ -71,15 +71,17 @@ CONVENTION LOG (every choice):
   * No floats in decisions: zero tests are algebraic (a vector in Z^13
     maps to 0 in Z[zeta_13] iff its coordinates are all equal); signs of
     provably-nonzero real cyclotomic values are decided by fixed-point
-    integer arithmetic at scale 10^140 with a dynamically verified
-    algebraic-integer norm separation bound |value| >= 1/(2 B^11),
-    B = sum |coeffs|.  Floats appear only in descriptive prints.
+    integer arithmetic at scale 10^140.  Exact rational alternating-series
+    intervals certify every stored sine/cosine value to error < 10^6 units.
+    Sign evaluation first replaces the input by its conjugate-difference or
+    conjugate-sum vector, so its rounding error is at most B*10^6 for the
+    same B used in the algebraic-integer norm bound |value| >= 1/B^11.
+    Floats appear only in descriptive prints.
 
 SCOPE (MISTAKE-281 / THM-2541 guardrail): the row is TYPED, not an asserted
-scalar cover; no physical current is claimed; no scalar row is excluded;
-no LRC(14) progress beyond what the cited theorems literally license;
-lawful intertwiners are constructed per the files; full support is never
-noncancellation.
+scalar cover; no physical current or lawful ancestry/semantic intertwiner is
+claimed; no scalar row is excluded; no LRC(14) progress beyond what the cited
+theorems literally license; full support is never noncancellation.
 
 Script: 04-computation/lrc14_phase_cone_sidecar_opus_20260727.py
 Output: 05-knowledge/results/lrc14_phase_cone_sidecar_opus_20260727.out
@@ -321,6 +323,128 @@ def build_trig():
 SIN13, COS13 = build_trig()
 
 
+CERT_SCALE = 10 ** (PREC + 20)
+CERT_UP = 10 ** 20
+
+
+def _ceildiv(a, b):
+    return -((-a) // b)
+
+
+def _atan_interval_fp(q, n_terms=128):
+    """Outward-rounded fixed-point enclosure of atan(1/q)."""
+    lo = hi = 0
+    for n in range(n_terms):
+        den = (2 * n + 1) * q ** (2 * n + 1)
+        tl = CERT_SCALE // den
+        th = _ceildiv(CERT_SCALE, den)
+        if n % 2 == 0:
+            lo += tl
+            hi += th
+        else:
+            lo -= th
+            hi -= tl
+    n = n_terms
+    den = (2 * n + 1) * q ** (2 * n + 1)
+    th = _ceildiv(CERT_SCALE, den)
+    # The alternating remainder has the sign of the next term and magnitude
+    # at most that term.  Widen only on that side.
+    if n % 2 == 0:
+        hi += th
+    else:
+        lo -= th
+    return lo, hi
+
+
+def _alt_series_interval_fp(x, sine, n_terms=72):
+    """Outward-rounded enclosure of sin/cos(x), with x fixed-point exact.
+
+    Here 0 <= x < pi/2.  By the chosen truncation the omitted alternating
+    tail is decreasing, so it lies between zero and the next signed term.
+    """
+    require(0 <= x < 2 * CERT_SCALE, "acute angle out of range")
+    den_scale = CERT_SCALE * CERT_SCALE
+    if sine:
+        tl = th = x
+    else:
+        tl = th = CERT_SCALE
+    lo = tl
+    hi = th
+    for n in range(1, n_terms):
+        den = (2 * n) * (2 * n + 1) if sine else (2 * n - 1) * (2 * n)
+        full_den = den_scale * den
+        tl = tl * x * x // full_den
+        th = _ceildiv(th * x * x, full_den)
+        if n % 2 == 0:
+            lo += tl
+            hi += th
+        else:
+            lo -= th
+            hi -= tl
+    n = n_terms
+    den = (2 * n) * (2 * n + 1) if sine else (2 * n - 1) * (2 * n)
+    full_den = den_scale * den
+    th = _ceildiv(th * x * x, full_den)
+    if n % 2 == 0:
+        hi += th
+    else:
+        lo -= th
+    return lo, hi
+
+
+def certify_trig_error():
+    """Rigorously certify the fixed trig table against exact intervals.
+
+    Machin's formula encloses pi.  Symmetry reduces every 13th-root angle to
+    an acute angle, where monotonicity plus alternating Taylor bounds gives a
+    rational interval.  The whole interval must lie within ERR_UNITS/SCALE
+    of the integer table entry; no numerical transcendental library enters.
+    """
+    a5_lo, a5_hi = _atan_interval_fp(5)
+    a239_lo, a239_hi = _atan_interval_fp(239)
+    pi_lo = 16 * a5_lo - 4 * a239_hi
+    pi_hi = 16 * a5_hi - 4 * a239_lo
+    require(pi_lo < pi_hi, "pi enclosure corrupt")
+    eps = ERR_UNITS * CERT_UP
+
+    for j in range(13):
+        if j == 0:
+            sin_iv = (0, 0)
+            cos_iv = (CERT_SCALE, CERT_SCALE)
+        else:
+            r = min(j, 13 - j)
+            if r <= 3:
+                alo = (2 * r * pi_lo) // 13
+                ahi = _ceildiv(2 * r * pi_hi, 13)
+                cos_sgn = 1
+            else:
+                k = 13 - 2 * r
+                alo = (k * pi_lo) // 13
+                ahi = _ceildiv(k * pi_hi, 13)
+                cos_sgn = -1
+            require(0 <= alo <= ahi and 2 * ahi < pi_lo,
+                    "acute-angle reduction failed")
+            sl, _ = _alt_series_interval_fp(alo, True)
+            _, su = _alt_series_interval_fp(ahi, True)
+            cl, _ = _alt_series_interval_fp(ahi, False)
+            _, cu = _alt_series_interval_fp(alo, False)
+            if j > 6:
+                sin_iv = (-su, -sl)
+            else:
+                sin_iv = (sl, su)
+            cos_iv = (cl, cu) if cos_sgn > 0 else (-cu, -cl)
+
+        sa = SIN13[j] * CERT_UP
+        ca = COS13[j] * CERT_UP
+        require(sa - eps <= sin_iv[0] <= sin_iv[1] <= sa + eps,
+                f"rigorous sine error certificate failed at j={j}")
+        require(ca - eps <= cos_iv[0] <= cos_iv[1] <= ca + eps,
+                f"rigorous cosine error certificate failed at j={j}")
+
+
+certify_trig_error()
+
+
 # --------------------------------------------------------------------------
 # Exact Z[zeta_13] helpers.  Elements are integer 13-vectors of exponent
 # coefficients; the evaluation kernel is spanned by the all-ones vector.
@@ -345,13 +469,15 @@ def elem_is_zero(u):
 
 
 def _checked_sign(val, B, what):
-    # val = fixed-point value; B = sum of |coeffs| of the (nonzero) real
-    # algebraic integer 2*value.  Norm separation: |2*value| >= 1/B^11,
-    # so |val| >= SCALE/(2*B^11).  Verify the dead zone is impossible,
-    # then verify we are outside it.
-    require(SCALE > 4 * (B + 1) ** 11 * ERR_UNITS,
+    # val approximates a nonzero real/imaginary algebraic integer alpha;
+    # B bounds every conjugate and the fixed-point rounding error by
+    # B*ERR_UNITS.  Norm(alpha) is a nonzero integer of degree at most 12,
+    # so |alpha| >= 1/B^11.  The exponent 12 below makes the separation
+    # dominate the B-weighted table error.
+    require(B > 0, f"{what}: zero coefficient bound")
+    require(SCALE > 4 * (B + 1) ** 12 * ERR_UNITS,
             f"{what}: precision insufficient for norm bound")
-    bound = B * ERR_UNITS + 13
+    bound = B * ERR_UNITS
     require(abs(val) > bound, f"{what}: fixed-point dead zone (impossible)")
     return 1 if val > 0 else -1
 
@@ -361,7 +487,9 @@ def im_sign(u):
     w = [u[j] - u[(-j) % 13] for j in range(13)]
     if elem_is_zero(w):
         return 0
-    val = sum(u[j] * SIN13[j] for j in range(13))
+    # Im(w)=2 Im(u), and using w makes the certified rounding error depend
+    # on exactly B=sum|w_j| rather than on an arbitrary kernel representative.
+    val = sum(w[j] * SIN13[j] for j in range(13))
     return _checked_sign(val, sum(abs(x) for x in w), "im_sign")
 
 
@@ -370,7 +498,8 @@ def re_sign(u):
     w = [u[j] + u[(-j) % 13] for j in range(13)]
     if elem_is_zero(w):
         return 0
-    val = sum(u[j] * COS13[j] for j in range(13))
+    # Re(w)=2 Re(u), with the same representative-safe error accounting.
+    val = sum(w[j] * COS13[j] for j in range(13))
     return _checked_sign(val, sum(abs(x) for x in w), "re_sign")
 
 
@@ -567,6 +696,8 @@ def main():
     log(f"    blocker scales A_j={AJ}, A_a={AA}, A_c={AC} (THM-2368 (8))")
     log("    gc[t] = 1 - dc[t]: c3 safe factor and probe share one word")
     log(f"    grids: T_DEN={T_DEN}, midpoints on D2=2*T_DEN")
+    log("    fixed cyclotomic sign table: exact rational interval error"
+        " certificate PASS")
     log("    walk per character (lam,mu)!=(0,0): the a=0 deep-colour modes"
         " 13*T_DEN*sum_{s,t} S_E zeta^(-lam s - mu t)")
     log("    (circulant tensors kill every such mode => nonzero endpoint"
@@ -949,13 +1080,15 @@ def main():
         log("    Combined with THM-2550's certified D_(H_E) > 0: the"
             " canonical bare drift is POSITIVE but NOT")
         log("    half-plane-explainable at the a=0 target-character level:"
-            " every nonzero mode survives only")
-        log("    through phase cancellation deeper than a cone.")
-        # first cancelling phase event for the first character with
-        # nonzero endpoint
+            " every nonzero mode has")
+        log("    non-semicircular direction support but a nonzero endpoint."
+            "  No winding claim is made.")
+        # First cone-breaking event for the first character with nonzero
+        # endpoint.  This tracks feasibility of the accumulated distinct
+        # direction set; it is not a chronological winding-number test.
         ci0 = next(i for i in range(168) if endpoint_nonzero[i])
         lam, mu = CHARS[ci0]
-        log(f"    first cancelling phase event (Sec 8), character"
+        log(f"    first cone-breaking phase event (Sec 8), character"
             f" (lam,mu)=({lam},{mu}):")
         seen = []
         seen_set = set()
@@ -976,10 +1109,12 @@ def main():
         else:
             x0, prim = event
             yfrac = Fraction(x0 % T_DEN, T_DEN)
+            edge_gap = abs(yfrac - Fraction(13, 14))
             log(f"      chamber left endpoint y = {yfrac} (grid"
                 f" {x0 % T_DEN}/T_DEN)")
-            log(f"      first direction leaving every open half-plane:"
-                f" {prim}")
+            log(f"      exact gap from owner-window edge 13/14 = {edge_gap}")
+            log(f"      first direction making the accumulated set fail the"
+                f" phase-cone certificate: {prim}")
     log("")
 
     # ------------------------------------------------------------------

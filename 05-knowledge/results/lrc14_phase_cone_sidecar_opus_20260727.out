@@ -7,6 +7,7 @@ machine=opus  date=2026-07-27
     blocker scales A_j=1, A_a=169, A_c=57122 (THM-2368 (8))
     gc[t] = 1 - dc[t]: c3 safe factor and probe share one word
     grids: T_DEN=297836897838480, midpoints on D2=2*T_DEN
+    fixed cyclotomic sign table: exact rational interval error certificate PASS
     walk per character (lam,mu)!=(0,0): the a=0 deep-colour modes 13*T_DEN*sum_{s,t} S_E zeta^(-lam s - mu t)
     (circulant tensors kill every such mode => nonzero endpoint certifies D_(H_E) > 0 via THM-2365 (17)-(18))
 
@@ -68,11 +69,12 @@ machine=opus  date=2026-07-27
 [8] DECISION
     PHASE-CONE CERTIFICATE FAILS for all 168 nonzero target characters.
     Combined with THM-2550's certified D_(H_E) > 0: the canonical bare drift is POSITIVE but NOT
-    half-plane-explainable at the a=0 target-character level: every nonzero mode survives only
-    through phase cancellation deeper than a cone.
-    first cancelling phase event (Sec 8), character (lam,mu)=(0,1):
+    half-plane-explainable at the a=0 target-character level: every nonzero mode has
+    non-semicircular direction support but a nonzero endpoint.  No winding claim is made.
+    first cone-breaking phase event (Sec 8), character (lam,mu)=(0,1):
       chamber left endpoint y = 9653643/10396204 (grid 276563549922660/T_DEN)
-      first direction leaving every open half-plane: (-6, 0, 0, 0, -1, -2, -2, -2, -2, -2, -1, 0, 0)
+      exact gap from owner-window edge 13/14 = 25/10396204
+      first direction making the accumulated set fail the phase-cone certificate: (-6, 0, 0, 0, -1, -2, -2, -2, -2, -2, -1, 0, 0)
 
 [9] scope (MISTAKE-281 / THM-2541 guardrails, unchanged)
     * The row is the canonical TYPED row THM-2309 (25): typed, NOT an asserted scalar cover.

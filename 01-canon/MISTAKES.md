@@ -9,6 +9,41 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-286 (2026-07-27, THM-2560 bridge typing) -- a specific `r=5` slaving ansatz was attributed to THM-2512's generic bridge test
+
+- **What was written:** THM-2560 called the proposed
+  `theta=t-2u` toothpick contraction “THM-2512 Section 5's `u`-slaved
+  bridge” and said the bridge required collision index `r=5`.
+- **Why it was wrong:** THM-2512 Section 5 asks generically whether a signed
+  toothpick contraction can be realized on one common Boolean
+  owner/deep-ancestry fibre.  It contains no collision index, `theta`, or
+  `r=5` hypothesis.  Those coordinates belong to THM-2471's deep-root sidecar
+  and to THM-2560's particular candidate realization.
+- **Repair:** the exact `r=3` computation proves only that this particular
+  `u`-slaved candidate is unavailable because the deep phase is base-only.
+  It does not refute THM-2512's bridge test, a base-only coupling, or another
+  common-ancestry realization.
+
+## MISTAKE-285 (2026-07-27, THM-2560 phase-cone verifier) -- a cyclotomic sign error bound used coefficients from a different representative
+
+- **What was done:** the phase-cone companion evaluated the original
+  `Z[zeta_13]` coefficient vector against a fixed sine/cosine table, but bounded
+  its rounding error by the `l1` norm of the conjugate-difference or
+  conjugate-sum vector used for the algebraic norm separation.  Those norms do
+  not control an arbitrary representative modulo `1+zeta+...+zeta^12=0`.
+- **First failed implication:** a small conjugate-sum/difference vector does not
+  bound the numerical error contributed by a large cyclotomic-kernel or
+  symmetry component of the unreduced input.  The original trigonometric
+  self-checks also tested consistency, not a rigorous approximation interval.
+- **Strongest survivor:** every zero test and all `168` phase-cone verdicts are
+  unchanged.  The repaired ordinary and optimized runs again give `168/168`
+  strict failures and the same first cone-breaking witness.
+- **Repair:** evaluate the conjugate-difference/sum vector itself, certify all
+  thirteen fixed sine/cosine values by outward-rounded rational intervals from
+  Machin plus alternating Taylor bounds, and use the matching `B` both for the
+  table-error budget and the degree-twelve algebraic norm separation.  This is
+  now enforced inside the exact companion before any angular comparison.
+
 ## MISTAKE-284 (2026-07-27, concurrent THM-2560 reservation collision) -- an empty reservation and a proved candidate shared one theorem ID
 
 - **What happened:** the empty canonical-duty-commutator reservation and the
