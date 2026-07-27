@@ -1,0 +1,15 @@
+THM-2466 DELAYED-WORD JOINT RETENTION -- exact finite audit
+word: mean=3/7, variation=6
+fixed densities: drift mean=9/10, variation=28; service mean=9/5, variation=26
+k=1: q_k=6/35, M_k=43/70, errors=(3/14,11/70)
+k=2: q_k=331/910, M_k=691/910, errors=(2/91,11/910)
+k=3: q_k=4549/11830, M_k=4556/5915, errors=(1/845,1/845)
+k=4: q_k=29646/76895, M_k=59314/76895, errors=(27/153790,1/15379)
+root-constant one-power-offset checks: 312
+fixed-clock hostile: zero at N=1; frozen-density recovery: 3/13 288/1183 3765/15379
+clock-dependent hostile: positive mean and zero hit at four clocks
+THM-2459/2457 invoice: D >= mu^2 D0/252004, M >= mu M0/32768, root energy denominator=368005682823168, root coefficient denominator=66453504
+clock gauge: target-neutral; septimal residues alternate 6,1 cofinally
+fixed delay is not prescribed first expiration
+common oriented root section remains a required sidecar
+all exact checks passed
