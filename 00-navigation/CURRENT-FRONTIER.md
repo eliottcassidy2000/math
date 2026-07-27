@@ -147,21 +147,16 @@ Its indispensable coordinates are primitive parameter, integral columns, transve
 Finite rank-twelve boxes and rank-eleven stars remain undecided (HYP-8871).
 Exactly `165` rows survive in `nu_7(c_3)<=M`; THM-2417/2426/2436 empty the
 complement (THM-2356 kernel `28,393`; THM-2363/THM-2368 remain typed sidecars).
-THM-2440 gives the a.e./literal two-comb split `15/182` versus `15/196`;
-THM-2441 makes rational delayed clocks finite. THM-2445/2442 give `24`
-word-restored cells, and THM-2452 copies one of `128` masks before reselecting
-fresh `X` and `91`-unit `m`. THM-2449/2456 classify the mixed-zero locus as an
-averaged root offset; THM-2457 turns supplied root service into an atom graph.
-THM-2459 retains drift and root service in at most four atoms
-(`D_0/63001`, `M_0/16384`); THM-2460 copies an independently retained word.
-THM-2461 makes the word prescribed-time, separates owner/deep roots, and proves
-repair is off-diagonal with only one target-active first-failure role.
+THM-2440 gives the a.e./literal two-comb split `15/182` versus `15/196`; THM-2441 makes rational delayed clocks finite. THM-2445/2442 give `24` word-restored cells, and THM-2452 copies one of `128` masks before reselecting fresh `X` and `91`-unit `m`.
+THM-2449/2456 classify the mixed-zero locus as an averaged root offset; THM-2457 turns supplied root service into an atom graph. THM-2459 retains drift and service in at most four atoms (`D_0/63001`, `M_0/16384`); THM-2460 copies an independently retained word.
+THM-2461 makes the word prescribed-time, separates owner/deep roots, and proves repair is off-diagonal with one target-active first-failure role. THM-2466 then retains both observables in any fixed positive sufficiently delayed word on a supplied owner-supported common root base, with floors `mu(Q)^2 D_0/252004` and `mu(Q)M_0/32768`.
 THM-2502 shows that coarse tournaments/Newton faces forget the top atom and
 dipole partner. THM-2458's exact thirteen-chart hostile is physically realized
 by THM-2462. THM-2464 proves: `lambda=1` clean charts force the linked blocker
 safe, `lambda=2` is phase-before-speed universal, and fixed delays work iff the
-joint clock cell has interior. Next: retain drift plus service in one delayed
-word on a canonical owner/root section, or force an incompatible joint cell.
+joint clock cell has interior. Next: construct the canonical owner-supported common
+root section and positive service, or force an incompatible semantic joint cell;
+delayed-word mixing itself is no longer missing.
 Ledger: `165`.
 
 ### Independent routes that remain live
