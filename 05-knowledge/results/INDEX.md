@@ -1,5 +1,16 @@
 # Script Results Index
 
+- `lrc14_self_similar_digit_needle_thm2583.py` -> matching `.out`
+  [THM-2583 PROVED + VERIFIED-EXACT].  Every positive rational carrier
+  already proved neutral under the whole endpoint action contains, at every
+  sufficiently late `13^N k` tooth scale, a physical base-13 cylinder which
+  fixes an old/future equal root and isolates one target-labelled boundary.
+  Its positive Abel handoff is an absolute target delta.  The same cylinder
+  can be nested geometrically inside THM-2559's source/word/deep packet on
+  every live row, but that is base provenance only: the packet contains an
+  unshifted moving factor, so its semantics cannot be combined with the
+  shifted colours absent covariance or a comparison map.  Hashes are
+  `a68bf5e2...8de9` / `eb882d15...c39d`.
 - `lrc14_oriented_tooth_holonomy_thm2574.py` -> matching `.out`
   [THM-2574 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The `k`
   physical components of a pulled-back interval have monodromy under the
