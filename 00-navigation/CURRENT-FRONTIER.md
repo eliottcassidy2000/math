@@ -125,17 +125,22 @@ This works on all `165` rows and forces a positive old-predecessor
 deep-by-`k_a` complement-repair coefficient, with exact relative floor
 `11/24336` for an ordinary role and `1/2704` for the guard.  The paired
 blocker remains a static safe sidecar, not an oppositely co-shifted target
-dipole.  THM-2550 itself is a typed non-cover control and its drift and
-large-clock interaction are different packets.
+dipole.  THM-2562 computes the canonical THM-2556 duty commutator exactly.
+Its ranks
+are `50/70/72/74`; because THM-2541 has `A(0)!=0`, every gain forces the same
+nonzero quotient scalar on six consecutive target fibres.  Full cancellation
+therefore requires an exact six-replica covariance residual.  Flat-arc
+nonnegative hostiles show why target support away from zero is insufficient.
+THM-2550 remains a typed non-cover and its two nondegeneracy arms are
+different packets.
 
-Next: physicalize the full paired target dipole on the THM-2559 packet, then
-retain that target-active action through sheet/carry/word on one common root
-gauge and construct the directed chart x semantic x ancestry 2-cell for
-THM-2545.  Service, mixing, chronology, old-sheet alignment, target-informed
-old-head selection, old factor repair, and horizontal transport are closed;
-paired target co-shift, future-root identification, and vertical semantic
-gluing are not.  More untyped nonvanishing is not progress.  No row is
-removed. Ledger: `165`.
+Next: physicalize the paired target dipole on THM-2559, then carry the named
+role through one actual transition while retaining old head, future root,
+word, owner, and carry vector.  On that common chart x semantic x ancestry
+carrier, test THM-2562's six-replica law and apply THM-2545.  Service, mixing,
+chronology, old repair, and horizontal transport are closed; paired target
+action, future-root identification, and vertical semantic gluing are not.
+More untyped nonvanishing is not progress.  No row is removed. Ledger: `165`.
 
 ### Independent routes that remain live
 

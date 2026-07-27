@@ -2,7 +2,7 @@
 id: THM-2562
 title: "Canonical duty-commutator line rank, zero-anchor rigidity, and six-replica covariance debt"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; independent hostile audit REQUESTED.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED (two ways).
   The canonical THM-2556 quotient-duty commutator has exact rational ranks
   50, 70, 72, or 74 according to four gain-slope classes.  Its only local
   rank defect is one cyclic puncture syzygy.  More decisively, every
@@ -24,6 +24,9 @@ related:
   - THM-2557-doubly-centered-transfer-moment-index-and-hall-cone-boundary
 script: 04-computation/lrc14_duty_commutator_line_rank_thm2562.py
 output: 05-knowledge/results/lrc14_duty_commutator_line_rank_thm2562.out
+script_sha256: a9982c337654ec94fa81814d8659f6373846a0a2a3cbc104a42e9d25c3d49834
+output_sha256: 7933d608f2cf534e43aaf40499515b0aed4addcdd4a0c0bcc22b0b2ea2755ab2
+hash_basis: LF-normalized bytes
 ---
 
 # THM-2562 -- the canonical duty square forces a six-replica cancellation
@@ -288,7 +291,8 @@ typed row is not a scalar cover, no row is removed, and LRC(14) remains open.
 
 The dependency-free companion enumerates all `2,184` affine gain-line
 blocks and computes their rational ranks independently from the puncture
-factorization.  It checks all 286 three-puncture incidence types, every
+factorization.  It checks all 286 three-puncture sets spanning the fourteen
+cyclic gap types, every
 exceptional slope and Schur boundary, the complete rank/nullity and flat-arc
 histograms, the kernel constraints and signed circuit, and all `1,008`
 uncontaminated anchor rows.  Run
@@ -306,3 +310,18 @@ Both transcripts must byte-match
 
 after LF normalization.  Every executable check raises explicitly under
 optimized Python.
+
+## 9. Independent hostile audits
+
+Two independent audits accepted the theorem.  One rederived the puncture
+factorization, all fourteen gap classes, the Schur scalar
+`-z(x-z)/x`, the complete rank table, the flat-arc cone, and the exact
+THM-2544/2541 Abel-current typing.  A second built the full `169 x 169`
+commutator matrices over an independent large finite field for every
+projective gain direction and reproduced every rational rank, nullity, and
+flat-column count.  Both checked the anchor sign, the positive six-replica
+invoice, and the rank-four circuit's opposite puncture signs.  Normal,
+optimized, and stored transcripts agree with `39,540` explicit checks; the
+audits reproduced the LF hashes above.  The final pass also verified the
+collision repair: THM-2560 remains the separate second-rung diagnostics
+theorem, while this theorem and both artifacts consistently use THM-2562.
