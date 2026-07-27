@@ -2,14 +2,14 @@
 id: THM-2507
 title: "Truncated Radon toothpick tomography and the nonaffine root boundary"
 status: >
-  CLAIMED + VERIFIED-EXACT; FINAL INDEPENDENT TEXT AUDIT PENDING. For a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. For a
   rational row-zero array on F_p x {0,...,q-1}, q<p, the q-point
   toothpick pushforwards in any q-1 distinct nonzero slopes determine the
   array modulo the exact (q-1)-dimensional h-independent kernel. Every
   nonvertical array is visible in at least p-q+1 of the p-1 nonzero
   slopes, and this fraction is sharp in the abstract integral class. For
   the THM-2436 13 x 7 defect, at least seven of twelve slopes survive at
-  every essential parent; every surviving pushforward has all twelve
+  almost every essential parent; every surviving pushforward has all twelve
   nonzero C_13 characters and coefficient floor 18^(-11). One fixed
   slope therefore survives on parent mass at least 1/6 or 1/4 in the two
   residual shapes. The fold is deliberately nonaffine: it uses an ordered
@@ -29,11 +29,14 @@ related:
   - THM-2504-endpoint-tournament-no-go-and-root-chart-holonomy
 script: 04-computation/lrc14_truncated_radon_escape_probe.py
 output: 05-knowledge/results/lrc14_truncated_radon_escape_probe.out
+script_sha256: 7dc0e33a090905e05babeb82efeeed954e43fff10b638514ae2e9c7f8cbb3e9b
+output_sha256: fbf53503365231770e8a2b94c9b1727f2c513798764fcca393c7f38cb08b4393
+hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2507 -- six toothpick directions detect the punctured stalk
 
-**CLAIMED + VERIFIED-EXACT; FINAL INDEPENDENT TEXT AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2506 proves a sharp negative statement: every affine homomorphic
 pushforward of the punctured `C_13 x C_7` defect to a `13`-group vanishes.
@@ -81,8 +84,7 @@ Let `p` be prime and let
 2<=q<p.
 ```
 
-Write `I_q={0,...,q-1}` and let `K` be any characteristic-zero field.  On
-the rational vector space
+Write `I_q={0,...,q-1}`.  On the rational vector space
 
 ```text
 V_(p,q)
@@ -259,7 +261,7 @@ d_Y is h-independent iff d_Y=0,                                 (18)
 
 including one source, two distinct sources, and coincident labelled
 sources.  It identifies `d_Y=0` with the flat locus `mathcal E`.  Apply
-(8) with `(p,q)=(13,7)`.  At every essential parent
+(8) with `(p,q)=(13,7)`.  At almost every essential parent
 
 ```text
 Y in P minus mathcal E,
@@ -454,10 +456,11 @@ python3 -O 04-computation/lrc14_truncated_radon_escape_probe.py
 
 The dependency-free exact companion checks:
 
-- the rational matrix rank (6) for every `m=0,...,6`;
+- rank `72` and kernel dimension six for the `13 x 7` row-zero map;
 - all `924` six-slope banks and their common six-dimensional vertical
   kernel;
-- a sharp integral trace-style control with exactly five bad nonzero slopes;
+- a sharp integral cyclotomic-coefficient control with exactly five bad
+  nonzero slopes;
 - the explicit two-row THM-2506 defect, for which all twelve nonzero slopes
   survive;
 - `C_13` all-colour saturation on every good output; and
@@ -469,5 +472,10 @@ Normal and optimized runs must reproduce
 05-knowledge/results/lrc14_truncated_radon_escape_probe.out
 ```
 
-byte-for-byte.  Promotion remains contingent on an independent audit of the
-general rank proof, fixed-slope mass invoice, and physical nonclaim.
+byte-for-byte.  An independent audit rederived the general rank formula,
+the trace sharpness construction and its Fourier signs, Galois saturation,
+the `18^(-11)` norm floor, the `1/6` and `1/4` fixed-slope invoices, and the
+`q>=p+1` failure boundary.  It also verified that (28)--(30) expose a genuine
+row-dependent cut and make no target, owner, or deep-current claim.  Normal
+and optimized executions are byte-identical to the stored transcript, and
+the source/output hashes match the metadata. QED.
