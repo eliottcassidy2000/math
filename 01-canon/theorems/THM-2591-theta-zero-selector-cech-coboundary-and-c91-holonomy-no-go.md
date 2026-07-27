@@ -2,7 +2,7 @@
 id: THM-2591
 title: "Theta-zero selector Cech coboundary and C91 holonomy no-go"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Every admissible choice of a positive THM-2586 theta-zero diagonal edge
   over the seven owner-clock cells is a vertex-valued root selector and hence
   changes a seven-chart transition law only by a Cech coboundary.  The exact
@@ -34,7 +34,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2591 -- a root selector cannot kill the seven-chart holonomy
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2586 puts a positive current-arrival/deep/later-root diagonal in every
 one of the `12*7` nonzero-displacement/owner-clock cells of one canonical
@@ -283,6 +283,11 @@ The stored transcript is
 05-knowledge/results/lrc14_theta_selector_cech_holonomy_thm2591.out.
 ```
 
-Independent hostile audit is still required before promotion.
+The independent hostile audit rederived the `1,312`-selector bank, the
+coboundary sign and telescoping law, dihedral invariance, the mixed-square
+invoice, and the degree-thirteen cover boundary.  Normal and optimized
+executions byte-match the stored transcript after LF normalization, and the
+declared hashes are exact.  It separately confirmed that the comparison
+grants rather than asserts the clock identification.  No defect was found.
 
-QED (candidate).
+QED.
