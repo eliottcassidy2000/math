@@ -2198,3 +2198,15 @@ norms from `13` to `35,503`.  Finally, a `kappa=2`, `tau=1` CRT-translation
 hostile proves that the ordered-representative wrap cannot be replaced by a
 global cyclic output translation.  Normal and optimized runs byte-match the
 stored transcript.
+### lrc14_truncated_radon_atlas_thm2507.out
+
+Finite-exact companion for the **THM-2507 truncated-Radon audit**.  It reuses
+the independently pre-existing exhaustive THM-2436 atlas engine, then derives
+the `13 x 7` defect matrix and every truncated-Radon zero-slope set without
+depending on the THM-2507 theorem implementation.  Over all `28` coincident or
+distinct source multisets, the complete universe has `41,379` cover
+assignments, `39,643` nonflat assignments, and `14,952` distinct nonflat
+defect matrices.  Every nonflat atlas defect has exactly `11` or `12`
+surviving slopes; `14,711` distinct defects lose only the forced slope zero,
+and `241` lose exactly one additional slope.  The stored sharp witness loses
+slope one.  `-O2` and `-O3` runs byte-match the stored `PASS` transcript.

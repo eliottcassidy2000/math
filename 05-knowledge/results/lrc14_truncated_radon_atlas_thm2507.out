@@ -1,0 +1,13 @@
+THM-2507 TRUNCATED-RADON COMPLETE THM-2436-ATLAS CENSUS
+universe=guard_[0,25]_plus_five_unit_AP13_supports_covering_with_blocker_columns;recursion_allows_repeats_but_none_survive;source_multisets=all_28_(s0<=s1)_in_F7
+coincident_source assignments=2629 flat=434 nonflat=2195 unique_nonflat_defects=831 survivor_range=11..12
+coincident_source_assignment_zero_masks {0}:2146 {0,1}:12 {0,2}:1 {0,4}:4 {0,6}:4 {0,7}:10 {0,8}:4 {0,9}:1 {0,10}:4 {0,11}:5 {0,12}:4
+coincident_source_unique_zero_masks {0}:805 {0,1}:8 {0,2}:1 {0,4}:1 {0,6}:2 {0,7}:3 {0,8}:3 {0,9}:1 {0,10}:4 {0,11}:2 {0,12}:1
+distinct_sources assignments=38750 flat=1302 nonflat=37448 unique_nonflat_defects=14952 survivor_range=11..12
+distinct_sources_assignment_zero_masks {0}:36664 {0,1}:100 {0,2}:27 {0,3}:16 {0,4}:73 {0,5}:51 {0,6}:89 {0,7}:96 {0,8}:45 {0,9}:41 {0,10}:81 {0,11}:66 {0,12}:99
+distinct_sources_unique_zero_masks {0}:14711 {0,1}:18 {0,2}:14 {0,3}:9 {0,4}:21 {0,5}:15 {0,6}:36 {0,7}:17 {0,8}:12 {0,9}:17 {0,10}:27 {0,11}:19 {0,12}:36
+all_sources assignments=41379 flat=1736 nonflat=39643 unique_nonflat_defects=14952 survivor_range=11..12
+all_sources_assignment_zero_masks {0}:38810 {0,1}:112 {0,2}:28 {0,3}:16 {0,4}:77 {0,5}:51 {0,6}:93 {0,7}:106 {0,8}:49 {0,9}:42 {0,10}:85 {0,11}:71 {0,12}:103
+all_sources_unique_zero_masks {0}:14711 {0,1}:18 {0,2}:14 {0,3}:9 {0,4}:21 {0,5}:15 {0,6}:36 {0,7}:17 {0,8}:12 {0,9}:17 {0,10}:27 {0,11}:19 {0,12}:36
+sharp_extra_zero_witness=d(0)=-e0+e1,d(12)=e1-e2;zero_slopes={0,1}
+ALL CHECKS PASSED
