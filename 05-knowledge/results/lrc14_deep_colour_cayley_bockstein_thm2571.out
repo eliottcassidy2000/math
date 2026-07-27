@@ -1,0 +1,13 @@
+THM-2571 deep-colour Cayley filling and Bockstein
+Cayley augmentation determinant 13, mod13 rank 11
+integral slice profiles 4095, fillable 315, obstructed 3780
+singleton primitive denominator 13
+physical displacement controls 2028
+rank-one plaquette controls 10098
+nonzero Galois-conjugacy profiles 4095
+uniform hostile beta 0, singleton hostile beta nonzero
+canonical carry cells 1092/1183, primitive denominator 110584755309142754640
+canonical carry Bockstein 78/78, precontraction 88/91
+canonical carry Y 0,6,5,1,12,8,7
+canonical carry digest a66ba96d31a33354468392b1dabc19865e6e925158efdab059fad9a98d4390f4
+explicit checks 100860
