@@ -1,0 +1,250 @@
+STAGE-2 THETA-SLAVED CONTRACTION at the r = 5 window (canonical typed row, sigma={b}, K=2)
+script=04-computation/lrc14_stage2_theta_contraction_opus_20260728.py
+machine=opus  script-date=2026-07-28  run-date=2026-07-27
+
+[1] object and logged conventions
+    row w=(1, 14, 27, 40, 53, 66, 13, 2197, 742586)   profile nu13(c1,c2,c3)=(1,3,5)
+    owner j=1 (c_1=13); word sigma={b}; packet clock K=2 (R_pkt=169)
+    e = 1_(E_1);  f = 1_(Q_1,{b}) P^2 1_(E_1)   (THM-2471 (23))
+    r = 5 (THM-2575/2577, all-clock law), d = 13^5 = 371293:
+    U = P_d f, V = P_d e;  A(y,u)=U((y+u)/13), F(y,q)=V((y+q)/13)
+    sidecar: delta=gcd(c_3,d)=371293, d_0=1, h=c_3/d=2, 13 does not divide h
+    => unique affine invariant theta = t - 2u (THM-2471 (46)-(47)),
+       u = CURRENT-branch collision root (the branch of (45))
+    stalk sheets (THM-2471 (28)): w_u=(y+u)/13, X_(u,a)=(w_u+a)/d
+    response-side THM-2449 (14)-(16) Boolean factors AT THE SAME
+    STALK POINT (exact index arithmetic, proved by 2-line integer
+    identities and re-verified in [2],[3]):
+      owner clock d(13x - ell/7) at x=w_u: 13w_u = y+u == y (mod 1)
+        => cell_ell(y) = 1_(||y - ell/7|| < 1/14)   [root-blind]
+      deep probe d(c_3 x - t/13) at x=X_(u,a):
+        c_3 X_(u,a) = 2(w_u+a) == 2(y+u)/13 (mod 1) [sheet-indep]
+        => Delta_t(X_(u,a)) = DEEP_theta(y), theta=(t-2u) mod 13,
+           DEEP_0=[0,13/28), DEEP_1=(1/28,27/28), DEEP_2=(15/28,1),
+           DEEP_theta = EMPTY for theta in 3..12;
+           law: sum_theta DEEP_theta = 2 - d(2y mod 1)  a.e.
+           (per root u exactly t in {2u,2u+1,2u+2} mod 13 can fire)
+      word factor Q^eps_ell(R x) at x=X_(u,a), response clock R=13^k:
+        CLOCK LICENSE (sigma-independent THM-2449 (25)-(31) class
+        arithmetic, = the replica companion k=6 class logic):
+        T_DEN = 13^6 * D0, D0 = 61704720, ord_D0(13) = 16380;
+        class k == 6 (mod 16380), k >= 6; smallest lawful clock
+        k = 6, eps = 13^6 mod 7 = +1
+        at k=6: R X_(u,a) = 13(w_u+a) = y + u + 13a == y (mod 1)
+        (sheet-exact AND root-blind; unique such clock), so
+        Q^(+1)_ell(R X) = QW_ell(y) = T_b(y)(1 - d(13y - ell/7)),
+        T_b = A_0 n D_c3 \ D_c2 (source-safe factor deleted,
+        THM-2449 (15); THM-2409 skew-diagonal mandatory)
+    THE ONE TABLE (one integral over the common base y per entry,
+    MISTAKE-281: paired BEFORE any marginalization/DFT):
+      N(u,q,ell,theta) = int_T A(y,u) F(y,q) cell_ell(y)
+                          DEEP_theta(y) QW_ell(y) dy
+      u = current root, q = source root, s = u - q (colour shift)
+    danger d(z)=1_(||z||<1/14); half-open [A,B) realizations on the
+    T_DEN = 182*lcm(w) = 297836897838480 grid (boundary differences are
+    null sets; step-function integrals unaffected); no floats in
+    any decision
+    DFT signs: J(k)-side zeta13^(-ks) (THM-2471 (8)); toothpick
+    R_(tau,a0,c)(v) = sum_ell d(v - tau*rep(a0*ell+c), ell),
+    Psi_(tau,a0)(alpha,beta) = sum_(c,v) R(v) z13^(-alpha v)
+    z7^(-beta c), rep: F_7 -> {0..6} (THM-2508/2512 (12)-(14));
+    OUTPUT INDEX v := theta (the slaved deep invariant)
+
+[2] machinery self-test (hostile toy model, stalk-level definitional)
+    toy pipeline (GT=1260, p=3, Rpkt=9, depth=27, deep speed 54,
+    cells mod 5, word set): all 135 table entries ==
+    definitional stalk-level brute force (45 nonzero): PASS
+    sheet-independence of the deep factor, base-exactness of the
+    word factor at R*X, root-blindness of the cell factor, and the
+    slaving theta = (t - 2u) mod 3 all verified LITERALLY on the
+    toy stalk sheets: PASS
+
+[3] exact interval sets, anchors, and refiner laws
+    E_1: intervals=57072  measure=1882176/28589561: PASS
+    Q_1,{b}: intervals=131762  measure=4839079319/190921088358: PASS (census anchors)
+    T_b (word, source-safe deleted): intervals=188634  measure=6927931007/190921088358
+    gate: T_b minus the D_c1 comb == Q_1,{b} interval-exact: PASS
+    owner-clock cells (at the stalk): 7 half-open cells of measure
+    1/7 tile the circle exactly (a.e.): PASS
+    slaved deep windows: DEEP_theta empty for theta in 3..12;
+    exact law sum_theta DEEP_theta = 2 - d(2y mod 1) verified
+    piecewise on every breakpoint interval: PASS
+    word factors QW_ell = T_b * (1 - d(13y - ell/7)): intervals=[131762, 170123, 165811, 164091, 164091, 165811, 170123]
+    refiner products GW=QW n cell, G=GW n DEEP, GCD2=GW n d2 built;
+    G interval counts per ell: [[0, 0, 0], [14895, 14895, 0], [32447, 32447, 0], [23047, 29178, 0], [0, 29178, 23047], [0, 32447, 32447], [0, 14895, 14895]]
+
+    production slaving spot-check (route (b)):
+    sampled 160 exact base points x 13 roots x 13 deep labels
+    x 4 sheets a in {0,1,12345,13^5-1}: 27040 slaving identities
+    Delta_t(X_(u,a)) == DEEP_((t-2u) mod 13)(y) verified exactly
+    (0 boundary hits skipped); cell and word skew windows
+    verified against direct ||.|| Fraction tests: PASS
+
+[4] exact profiles f, U, V and their anchors
+    [    11.7s] f = 1_Q P^2 1_E: 120234 weighted pieces;
+    int f = 35505957232/16132831966251 == census rho^(2)({b}): PASS
+    [    12.3s] U = P_(13^5) f: 24 pieces (num/den 62748517);
+    V = P_(13^5) e: 15 pieces (num/den 371293);
+    int U == int f and int V == mu(E_1) (P_m preserves integrals): PASS
+    U*V == 0 IDENTICALLY as a profile (first-collision disjointness,
+    THM-2471 (26)): PASS
+    [    12.3s] 13 chart windows extracted for U and V
+
+[5] THE ONE TABLE: 169 pair profiles x 46 refiner integrals (exact)
+    entry denominators: DENC = 169 * 13^10 * T_DEN = 6939029398456584394954868880
+    DENC factored: 2^4 * 3^3 * 5 * 7^2 * 11 * 13^18 * 53
+    [    21.7s] current root u= 0: 13 pairs done (gates PASS)
+    [    27.3s] current root u= 1: 13 pairs done (gates PASS)
+    [    32.1s] current root u= 2: 13 pairs done (gates PASS)
+    [    38.7s] current root u= 3: 13 pairs done (gates PASS)
+    [    42.5s] current root u= 4: 13 pairs done (gates PASS)
+    [    45.6s] current root u= 5: 13 pairs done (gates PASS)
+    [    49.5s] current root u= 6: 13 pairs done (gates PASS)
+    [    52.2s] current root u= 7: 13 pairs done (gates PASS)
+    [    55.8s] current root u= 8: 13 pairs done (gates PASS)
+    [    60.3s] current root u= 9: 13 pairs done (gates PASS)
+    [    64.3s] current root u=10: 13 pairs done (gates PASS)
+    [    68.7s] current root u=11: 13 pairs done (gates PASS)
+    [    75.2s] current root u=12: 13 pairs done (gates PASS)
+    per-pair gates (cell partition, deep root-count law, refined
+    deep law) all PASS at all 169 pairs; diagonal pairs vanish
+    IDENTICALLY (zero-sum law (g2)): PASS
+    total service sum_(u,q) int A F = 169*I_5 = 48602521488933856/1996669193081744181: PASS
+
+[6] route-2 independent aggregate (folded service profiles)
+    [    76.0s] a = fold_13 U (24 pieces), b = fold_13 V (16 pieces);
+    EVERY aggregate refiner integral recomputed from the a*b
+    profile (different pairing geometry) == pairwise sums: PASS
+
+[7] gate (g1): root-marginal colours of the r=5 stalk
+    J(0) = I_5 = 48602521488933856/337437093630814766589: PASS   (ANCHOR GATE)
+    C(0) = 0; sum_s C(s) = 169*I_5; J(k) != 0 for all 12 k != 0;
+    sum_k J(k) = 0; Hermitian J(13-k) = conj J(k)  (THM-2471
+    (9)-(10) at r=5): ALL PASS
+    C(s) exact numerators over DENC: [0, 15235188232848645591067200, 15257525591160297654870960, 15257331781731769764503040, 15257331781731769764503040, 15257569232557416167123760, 8189285112342662214313440, 8189285112342662214313440, 15257569232557416167123760, 15257331781731769764503040, 15257331781731769764503040, 15257525591160297654870960, 15235188232848645591067200]
+    J(k) canonical coords over DEN_J = 169*DENC = 1172695968339162762747372840720:
+      k= 0: [168908463464745122312762880, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      k= 1: [-15235188232848645591067200, 0, 22337358311652063803760, 22143548883124173435840, 22143548883124173435840, 22380999708770576056560, -7045903120505983376753760, -7045903120505983376753760, 22380999708770576056560, 22143548883124173435840, 22143548883124173435840, 22337358311652063803760]
+      k= 2: [-8189285112342662214313440, 0, 7045903120505983376753760, 7068284120214753952810320, 7068240478817635440557520, 7068046669389107550189600, 7068046669389107550189600, 7068046669389107550189600, 7068046669389107550189600, 7068240478817635440557520, 7068284120214753952810320, 7045903120505983376753760]
+      k= 3: [-15257331781731769764503040, 0, 237450825646402620720, -22143548883124173435840, 0, -7068046669389107550189600, 193809428527890367920, 193809428527890367920, -7068046669389107550189600, 0, -22143548883124173435840, 237450825646402620720]
+      k= 4: [-15257331781731769764503040, 0, -7068046669389107550189600, 0, -22143548883124173435840, 193809428527890367920, 237450825646402620720, 237450825646402620720, 193809428527890367920, -22143548883124173435840, 0, -7068046669389107550189600]
+      k= 5: [-15257569232557416167123760, 0, -237450825646402620720, -43641397118512252800, -7068284120214753952810320, -22380999708770576056560, -237450825646402620720, -237450825646402620720, -22380999708770576056560, -7068284120214753952810320, -43641397118512252800, -237450825646402620720]
+      k= 6: [-15257525591160297654870960, 0, -193809428527890367920, -7068240478817635440557520, 43641397118512252800, -193809428527890367920, -22337358311652063803760, -22337358311652063803760, -193809428527890367920, 43641397118512252800, -7068240478817635440557520, -193809428527890367920]
+      k= 7: [-15257525591160297654870960, 0, -193809428527890367920, -7068240478817635440557520, 43641397118512252800, -193809428527890367920, -22337358311652063803760, -22337358311652063803760, -193809428527890367920, 43641397118512252800, -7068240478817635440557520, -193809428527890367920]
+      k= 8: [-15257569232557416167123760, 0, -237450825646402620720, -43641397118512252800, -7068284120214753952810320, -22380999708770576056560, -237450825646402620720, -237450825646402620720, -22380999708770576056560, -7068284120214753952810320, -43641397118512252800, -237450825646402620720]
+      k= 9: [-15257331781731769764503040, 0, -7068046669389107550189600, 0, -22143548883124173435840, 193809428527890367920, 237450825646402620720, 237450825646402620720, 193809428527890367920, -22143548883124173435840, 0, -7068046669389107550189600]
+      k=10: [-15257331781731769764503040, 0, 237450825646402620720, -22143548883124173435840, 0, -7068046669389107550189600, 193809428527890367920, 193809428527890367920, -7068046669389107550189600, 0, -22143548883124173435840, 237450825646402620720]
+      k=11: [-8189285112342662214313440, 0, 7045903120505983376753760, 7068284120214753952810320, 7068240478817635440557520, 7068046669389107550189600, 7068046669389107550189600, 7068046669389107550189600, 7068046669389107550189600, 7068240478817635440557520, 7068284120214753952810320, 7045903120505983376753760]
+      k=12: [-15235188232848645591067200, 0, 22337358311652063803760, 22143548883124173435840, 22143548883124173435840, 22380999708770576056560, -7045903120505983376753760, -7045903120505983376753760, 22380999708770576056560, 22143548883124173435840, 22143548883124173435840, 22337358311652063803760]
+
+[8] the response array, fibrewise centring, and the aggregate interaction
+    Aresp[ell][theta] = sum_(u,q) N(u,q,ell,theta)  (Fubini inside
+    the ONE integral; equals int a b cell_ell DEEP_theta QW_ell dy
+    by route (g4)); columns theta = 3..12 are EXACT zeros (empty
+    windows).  Exact numerators over DENC:
+      ell=0: theta=0..2: [0, 0, 0]  | theta=3..12: all 0
+      ell=1: theta=0..2: [517560225695782743277440, 517560225695782743277440, 0]  | theta=3..12: all 0
+      ell=2: theta=0..2: [1127411971290917817523200, 1127411971290917817523200, 0]  | theta=3..12: all 0
+      ell=3: theta=0..2: [800809484922183356530560, 916940285010868678550640, 0]  | theta=3..12: all 0
+      ell=4: theta=0..2: [0, 916940285010868678550640, 800809484922183356530560]  | theta=3..12: all 0
+      ell=5: theta=0..2: [0, 1127411971290917817523200, 1127411971290917817523200]  | theta=3..12: all 0
+      ell=6: theta=0..2: [0, 517560225695782743277440, 517560225695782743277440]  | theta=3..12: all 0
+    fibrewise ANOVA (per (u,s) ancestry fibre): 34 of 169 fibres
+    carry nonzero interaction; per shift s: [0, 3, 3, 3, 3, 3, 2, 2, 3, 3, 3, 3, 3]
+    (s = 0 fibres vanish identically -- zero-sum law (g2))
+    linearity: sum of fibrewise interactions == centring of the
+    aggregate (all centring terms marginals of the ONE table): PASS
+    aggregate interaction numerators 91*I_(ell,theta) over DEN_I = 91*DENC:
+      ell=0: [-21779773537002584611940640, -56594336204123893909768320, -21779773537002584611940640, 10015388327812906313364960, 10015388327812906313364960, 10015388327812906313364960, 10015388327812906313364960, 10015388327812906313364960, 10015388327812906313364960, 10015388327812906313364960, 10015388327812906313364960, 10015388327812906313364960, 10015388327812906313364960]
+      ell=1: [18072363841572686620422240, -16742198825548622677405440, -29025616696743543017824800, 2769545168071947907480800, 2769545168071947907480800, 2769545168071947907480800, 2769545168071947907480800, 2769545168071947907480800, 2769545168071947907480800, 2769545168071947907480800, 2769545168071947907480800, 2769545168071947907480800, 2769545168071947907480800]
+      ell=2: [65030948252398087337345760, 30216385585276778039518080, -37563541135075434057265440, -5768379270259943131959840, -5768379270259943131959840, -5768379270259943131959840, -5768379270259943131959840, -5768379270259943131959840, -5768379270259943131959840, -5768379270259943131959840, -5768379270259943131959840, -5768379270259943131959840, -5768379270259943131959840]
+      ell=3: [39069641201384736586771920, 14822981342333791592771520, -33804021926533948857509040, -2008860061718457932203440, -2008860061718457932203440, -2008860061718457932203440, -2008860061718457932203440, -2008860061718457932203440, -2008860061718457932203440, -2008860061718457932203440, -2008860061718457932203440, -2008860061718457932203440, -2008860061718457932203440]
+      ell=4: [-33804021926533948857509040, 14822981342333791592771520, 39069641201384736586771920, -2008860061718457932203440, -2008860061718457932203440, -2008860061718457932203440, -2008860061718457932203440, -2008860061718457932203440, -2008860061718457932203440, -2008860061718457932203440, -2008860061718457932203440, -2008860061718457932203440, -2008860061718457932203440]
+      ell=5: [-37563541135075434057265440, 30216385585276778039518080, 65030948252398087337345760, -5768379270259943131959840, -5768379270259943131959840, -5768379270259943131959840, -5768379270259943131959840, -5768379270259943131959840, -5768379270259943131959840, -5768379270259943131959840, -5768379270259943131959840, -5768379270259943131959840, -5768379270259943131959840]
+      ell=6: [-29025616696743543017824800, -16742198825548622677405440, 18072363841572686620422240, 2769545168071947907480800, 2769545168071947907480800, 2769545168071947907480800, 2769545168071947907480800, 2769545168071947907480800, 2769545168071947907480800, 2769545168071947907480800, 2769545168071947907480800, 2769545168071947907480800, 2769545168071947907480800]
+    aggregate interaction nonzero: True
+
+[9] THE DECISIVE THETA-SLAVED TOOTHPICK CONTRACTION
+    fixed primitive quadruple (tau,a0,alpha,beta) = (1,1,1,1)
+    (first primitive quadruple in the fixed chart order; chosen
+    from the residue-chart conventions alone -- independent of
+    every ancestry point, row datum, and table value)
+    output index v = theta (the slaved deep invariant t - 2u):
+    S := Psi_(1,1)(1,1) = sum_(c,v,ell) d(v - rep(ell+c), ell)
+         z13^(-v) z7^(-c),   d(v,ell) = I_(ell,v)
+    S in Q(zeta_91), numerator reduced mod Phi_91 (deg 72 basis
+    1, x, ..., x^71; x = zeta_91, zeta13 = x^7, zeta7 = x^13),
+    over DEN_S = 91*DENC = 631451675259549179940893068080
+    DEN_S factored: 2^4 * 3^3 * 5 * 7^3 * 11 * 13^19 * 53
+    reduced numerator coefficients:
+      x^ 0..x^ 7: [173298778018162904653182000, 0, 0, -19152923451484471646502960, -110993017698314583512728320, -92026586579403157090783920, 76818806797871065588577280, 173298778018162904653182000]
+      x^ 8..x^15: [0, 72873663127918685444280960, 25775682589602455806033920, -81272191438759747562398080, -184053173158806314181567840, 194621075966876678485395120, 173298778018162904653182000, 0]
+      x^16..x^23: [-19152923451484471646502960, -55496508849157291756364160, -55496508849157291756364160, 10567902808070364303827280, 147523095428560448847148080, 173298778018162904653182000, 102594489387473521394611200, -66250903989800701284750000]
+      x^24..x^31: [-136768700287917039318762240, -239549682007963605937932000, 158090998236630813150975360, 147523095428560448847148080, 173298778018162904653182000, 72873663127918685444280960, -29720826259554835950330240, -81272191438759747562398080]
+      x^32..x^39: [-136955192620490084543320800, 55496508849157291756364160, 147523095428560448847148080, 220396758556479134291429040, -66250903989800701284750000, -81272191438759747562398080, -147523095428560448847148080, 72873663127918685444280960]
+      x^40..x^47: [55496508849157291756364160, 147523095428560448847148080, 220396758556479134291429040, -121747412838957993041114160, -136768700287917039318762240, -136955192620490084543320800, 0, 55496508849157291756364160]
+      x^48..x^55: [147523095428560448847148080, 199074460607765360459215920, -55496508849157291756364160, -173298778018162904653182000, 0, 0, 55496508849157291756364160, 92026586579403157090783920]
+      x^56..x^63: [51551365179204911612067840, -81272191438759747562398080, -117802269169005612896817840, 0, 0, 55496508849157291756364160, 147523095428560448847148080, 25775682589602455806033920]
+      x^64..x^71: [-228795286867320196409546160, 0, 0, 0, 0, 117802269169005612896817840, 117802269169005612896817840, -173298778018162904653182000]
+    ~ S = (-8.480484e-05) + (9.801485e-04) i   [display only]
+    DECISION: S != 0   (exact reduction mod Phi_91)
+    THM-2512 (15) identity Psi = K_(alpha tau,beta) * dtilde(alpha,-beta a0):
+    verified exactly in Z[x]/Phi_91: PASS  (positive control)
+    THM-2512 (19) consistency (rational table, primitive quadruple):
+    S != 0  <=>  interaction != 0:  both True: PASS
+    spot quadruple (2,3,5,4): nonzero=True, factorization PASS
+    spot quadruple (12,6,12,6): nonzero=True, factorization PASS
+    spot quadruple (7,2,3,1): nonzero=True, factorization PASS
+    => by THM-2512 (17)/(19) (rational table, coprime Galois
+       transitivity), ALL 5184 primitive cut coefficients of
+       this theta-slaved bundle are nonzero.
+
+[10] split-prime cross-checks (547, 911, 1093, 2003, 2549)
+    p=547: w(order 91)=64,  S mod p = 295  (NONZERO)
+    p=911: w(order 91)=113,  S mod p = 213  (NONZERO)
+    p=1093: w(order 91)=817,  S mod p = 380  (NONZERO)
+    p=2003: w(order 91)=522,  S mod p = 1405  (NONZERO)
+    p=2549: w(order 91)=266,  S mod p = 883  (NONZERO)
+    5/5 split primes certify S != 0 independently: PASS
+
+[11] hostile controls (both must vanish exactly)
+    H1 (beta = 0): Psi_(1,1)(1,0) = 0 exactly -- the row-zero law
+    THM-2512 (4) kills the untwisted cut phase: PASS (vanishes)
+    H2 (u-independent slaving): replacing the slaved column family
+    by its theta-average (deep label decoupled from the root, the
+    r<=4 base-only shape) kills the interaction AND the contraction
+    identically: PASS (vanishes)
+    => the nonzero signal (if any) is carried by the theta = t - 2u
+       coupling itself, not by the ell-structure alone.
+
+[12] positive controls (marginals reproducing known exact values)
+    * J(0) = I_5 (THM-2575/2577 anchor): PASS  ([7])
+    * sum_s C(s) = 169*I_5 (THM-2471 (14)): PASS  ([5],[7])
+    * int f = rho^(2)({b}) census anchor: PASS  ([4])
+    * mu(E_1), |E_1|, mu(Q_1,{b}), |Q_1,{b}| anchors: PASS  ([3])
+    * THM-2512 (15) factorization identity at 4 quadruples: PASS
+    * route-2 aggregate equality (46 integrals): PASS  ([6])
+
+[13] scope and verdict (MISTAKE-281/283/286/287 typing)
+    * TYPED row THM-2309 (25); NOT an asserted scalar cover.
+    * Every pairing in this run sits INSIDE one integral over one
+      common base point before any marginalization or DFT
+      (MISTAKE-281); fibre labels (u,s,ell,theta) are carried, and
+      all centring terms are marginals of the one table.
+    * The theta = t - 2u map is THM-2471 (44)-(47)'s deep-root
+      sidecar invariant at the r = 5 window -- THM-2471's candidate
+      realization, NOT 'THM-2512's bridge' (MISTAKE-286): THM-2512
+      Section 5 is generic and contains no r, theta, or clock.
+    * No physical current, no row exclusion, no LRC(14)/JC(2)
+      progress is claimed.  The live ledger remains 165.
+    VERDICT: S != 0 (exact).  This is the FIRST realized
+    theta-slaved toothpick contraction pairing that is nonzero
+    on a common ancestry base at the r = 5 window: a positive
+    instance of THM-2471's deep-root-sidecar candidate
+    realization on the canonical typed row at (j=1, sigma={b},
+    K=2, response clock k=6).  All 5184 primitive cut
+    coefficients of the slaved bundle fire (THM-2512 (17)/(19)
+    applied to this rational array).  It is NOT a THM-2512
+    bridge theorem and NOT a physical current.
+
+[    76.0s] all checks passed
