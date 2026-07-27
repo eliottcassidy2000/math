@@ -160,6 +160,15 @@ safe, `lambda=2` is phase-before-speed universal, and fixed delays work iff the
 joint clock cell has interior. Next: intertwine the owner-collision stalk with
 the endpoint/deep current, prove owner-loop drift, or exclude a semantic joint
 cell. Owner-collision service and delayed-word mixing are no longer missing.
+THM-2479 (double-audited canonization of MSG-2153, Lemma A countersign
+pending) gives every positive middle-owner word stratum an unconditional
+91-unit `c_3` edge with a word-marked endpoint, closing the factor-13
+incidence composition; the isolated residual of that thread is address/gain
+participation (THM-2321 (51), THM-2315 (30)) plus terminal phase. The
+THM-2334 (42) variance object is now DECIDED positive on the canonical typed
+row THM-2309 (25): all 168 nonzero twists differ from `H(0)` (exact
+cyclotomic certificate, independent referee requested; typed row, not a
+scalar cover; no row removed).
 Ledger: `165`.
 
 ### Independent routes that remain live
@@ -419,7 +428,7 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-2389 gives its pole-jet system. Independently hostile-audited THM-2406
   forces that system onto the closed wall and finishes the inherited reduced degree-eighteen branch. Hostile-audited THM-2411
   empties `A=0` in the inherited genuine nonsplit polynomial exact-square-prefix degree-22 branch; hostile-audited THM-2423/2425/2428 empty all five one-sparse axes in `A!=0`.
-  THM-2429/2437/2463/2468 close `C,W`, `D,W`, `B,D`, and `B,W`: complete fibre/ramification classifiers handle the first two, while uniform irreducibility plus the fixed squarefree `p=0` quintic forces genus on the latter two. Six support-two planes and higher mixed strata remain open. Split/even
+  THM-2429/2437/2463/2468 close `C,W`, `D,W`, `B,D`, and `B,W`: complete fibre/ramification classifiers handle the first two, while uniform irreducibility plus the fixed squarefree `p=0` quintic forces genus on the latter two (THM-2468 now has an independent exact referee). THM-2469/2470/2472 close `C,D`, `E,W`, `D,E` by coprime-weight root-ratio ramification, and THM-2475/2476 close `C,E`, `B,E` by Hensel-ramification: only the `B,C` support-two plane and higher mixed strata remain open. Split/even
   short edges and integral `2`-adic order raising remain; THM-2206 blocks field-valued `C_2` Hasse repair. THM-2446 opens the `z`-quadratic six-bracket architecture. THM-2451 and two independent extensions refute its proposed plane-map cone shortcut on the line and nondegenerate-conic strata, even for a tame Keller map; `w=A cross B` is a genuinely dominant flag layer. Automatic vanishing survives only on the point-cap/common-plane boundaries. `JC(2)` and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
