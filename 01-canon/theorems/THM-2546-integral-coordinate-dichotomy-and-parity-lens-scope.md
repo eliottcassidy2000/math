@@ -329,3 +329,22 @@ values over which the map is proper.
 - The displayed square-root asymptotic is for a transverse generic approach
   with `p!=0`, `a!=0`, and `q!=0`.  The polynomial identities and the finite-survivor law are
   global on their stated localized slices.
+
+## Independent referee (opus, 2026-07-27, second proof route)
+
+The z-integrality and the exact core `8Z^3 + A_z Z^2 + 6 L B_z Z + L C_z`
+are independently re-proved by degree-bounded exact interpolation
+(Leibniz bound on the 8x8 Sylvester determinant: deg_a <= 16,
+deg_b <= 24, deg_c <= 13; 5,950-node tensor Lagrange grid, 23,800
+Bareiss determinants; a determinant is a polynomial identity in its
+entries, so the interpolation is itself a proof), agreeing
+coefficient-by-coefficient with the direct certificate. The sampled
+lead statistic `{1,2,4,8}` is fully explained (symbolic lead `8`;
+per-node integer content absorbs 2-powers). New uniform structure from
+the referee run: ALL three coordinate cubics obey one discriminant law
+`disc = -4 (square)^2 L` (`disc_x = -4(27ac^2-9bc+8)^2 L`,
+`disc_r = -4(27a)^2 L`, `disc_z = -4(27M)^2 L`, `M` explicit weight-5),
+`F` is quasi-homogeneous with weights `(a,b,c,z) = (2,1,-1,2)`, and on
+`L = 0` the z-core degenerates to `Z^2(8Z + A_z)`.
+Referee: `04-computation/keller_z_eliminant_exact_opus_20260727.py` ->
+`05-knowledge/results/keller_z_eliminant_exact_opus_20260727.out`.
