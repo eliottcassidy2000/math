@@ -1,0 +1,19 @@
+THM-2468 exact companion
+resultant_content=2^4*11^6
+resultant_terms=24
+resultant_bidegree=(5,5)
+pencil=R_0-82458112*lambda*p^3*A^2
+top_factor=(56p-99v)^2*(256lambda*p^3-280p*v^2+231v^3)
+line_factor_unit_ideal=YES
+quadratic_top_types=3
+quadratic_type_I_unit_ideal=YES
+quadratic_type_II_forces_h=0
+quadratic_type_III_forces_h^4=0
+uniform_absolute_irreducibility=lambda_nonzero
+p_zero_section=-567*L5
+L5_degree=5
+L5_squarefree=YES
+square_lift_minimum_branch_points=6
+square_lift_minimum_genus=2
+y_zero_boundary=Z_zero_on_open_first_flux
+ALL CHECKS PASSED
