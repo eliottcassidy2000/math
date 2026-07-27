@@ -287,20 +287,36 @@ Three losses are sharp.
 1. **Orientation.**  Equation (11) identifies `t` and `-t`.  An
    autocorrelation fibre cannot by itself produce oriented owner-loop drift.
 2. **Anchor mismatch.**  Even if a separately marked anchor autocorrelation
-   is positive somewhere, the shift selected by (9) need not lie there.  On
-   `C_4`, let
+   is positive somewhere, the shift selected by (9) need not lie there.  This
+   remains true for equal rational cells in the actual translated-source
+   geometry.  Put `epsilon=1/49` and, on `T`, let
 
    ```text
-   H=(1,0,0,0),
-   U=(1,0,0,0),
-   V=(3/5,4/5,0,0).
+   A=[0,1/49),       B=[3/49,4/49),       C=[7/49,8/49),
+
+   H=1_A,            U=1_A+1_B,           V=1_C.
    ```
 
-   The marked autocorrelation of `H` is positive only at shift zero.  For the
-   linear functional `Lambda(C)=C(U)-C(V)`, the shift-zero value is zero,
-   while the values at shifts `1,2,3` are `-3/25,0,-3/25`; their average is
-   `-3/50=(mean U)^2-(mean V)^2!=0`.  Hence every signal-carrying shift misses
-   the marked anchor.
+   Here `A,B` lie in `[0,1/7)` and `C` lies in `[1/7,2/7)`; the intervals
+   `B,C` are translates and all three have mass `epsilon`.
+   Thus `mean U=2epsilon`, `mean V=mean H=epsilon`, while
+
+   ```text
+   D_t=C_U(t)-C_V(t)-C_H(t)
+   ```
+
+   is exactly the sum of the two cross-correlations between `A` and `B`.
+   Its nonzero locus lies in the neighborhoods `(2/49,4/49)` and their
+   negatives, whereas `C_H(t)>0` only for circular distance
+   `|t|<1/49`.  The loci are disjoint, yet
+
+   ```text
+   integral_T D_t dt
+    =(2epsilon)^2-epsilon^2-epsilon^2=2epsilon^2>0.
+   ```
+
+   Hence every signal-carrying shift misses the positive marked anchor even
+   in an equal-cell rational model.
 3. **Physical shift type.**  The rational difference `t=k/D` need not be a
    canonical `1/91` root, a THM-2471 first-collision translation, a lawful
    target/deep action, or a delay already present among the fourteen speeds.
@@ -340,7 +356,7 @@ The theorem therefore disintegrates pair space into a finite
 translation-marked local system and restores the full primitive cut spectrum
 on one fibre.  An independent audit rederived the double-counting
 normalization, the Galois and cut-transform signs, the `5,184` count, and the
-`C_4` hostile, and checked the exact distinction between common-grid and
+equal-cell anchor hostile, and checked the exact distinction between common-grid and
 base-`13` shift selection together with the phase-bank criterion (27)--(28).
 The next
 physical question is whether its retained difference can be identified with
