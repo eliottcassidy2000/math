@@ -1,0 +1,24 @@
+== THM-2569: stationary diagonal inside the paired corner ==
+
+== inherited positive floors ==
+  conditioned table mass per rho^2: 63/26
+  normalized full-table floors: 7/913952 / 9/913952
+  two-axis marginal floors: 7/70304 / 9/70304
+
+== common-twist Boolean annihilation ==
+  weighted Boolean gate checks: 212992
+  every stationary multiplier preserves P_s(1-P_s)=0
+
+== independent-twist to coarse-target line sum ==
+  exact character-orthogonality checks: 2197
+  positive shift-graph hostile mass 13; every coarse target line sum 0
+
+== Hall-root tensor is still a spectator ==
+  positive Hall diagonal root cells: 13
+  vanishing (Hall root, coarse target) pairs: 169
+  physical branch equality h=b does not supply the endpoint residue eta.u
+
+semantic scope: positive common support, but full-X coarse target still zero
+a fixed X, nonconstant normal/jet, or covariant relative sidecar remains needed
+
+all exact checks passed
