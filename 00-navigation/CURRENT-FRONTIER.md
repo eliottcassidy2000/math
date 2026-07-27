@@ -149,7 +149,18 @@ THM-2168--2397 leave `165` rows (THM-2356 kernel `28,393`; THM-2363/THM-2368). T
 THM-2440 separates the sharp a.e. two-comb radius `15/182` from literal-open `15/196` (MISTAKE-274). THM-2441 makes each rational delayed-clock audit finite modulo `7D_0`.
 THM-2445/2442 give `24` partial-endpoint cells and restore the ghost word; THM-2452 copies one of `128` complete masks to the bare leg, kills all transitions after full-`X` summation, and reselects a fresh exact `X` and `91`-unit `m`.
 THM-2449/2456 classify mixed-zero failure: one Boolean root chart is rigid, but chart averaging has exact uniform-offset `8/20/104` controls. THM-2457 makes common-root service a directed atom graph: an edge gives service after at most three atoms, with sharp floor `M_0/16384`, but no drift floor without root-image coupling.
-Next: exclude the physical uniform-offset mixtures or couple selected drift to a canonical semantic/root edge. Local bits alone do not determine the word: a live strict atom supports both pure and fork strata. Ledger: `165`.
+THM-2459 repairs the drift/service split: aggregate endpoint drift and a positive
+THM-2457 atom edge survive together in a Boolean union of at most four atoms,
+with floors `D_0/63001` and `M_0/16384`. THM-2502 explains the
+lower-information obstruction: the endpoint cube's lex tournament and lower
+Newton faces forget its carry/top atom, while lawful target characters are
+dipoles rather than singleton repair directions. THM-2460 is a proof-complete
+candidate for copying an already retained semantic word, but still awaits
+independent hostile audit.
+Next: exclude the physical THM-2456 uniform-offset mixtures, or couple the
+retained drift/service packet to a canonical same-word root image. Local bits
+alone do not determine the word: a live strict atom supports both pure and fork
+strata. Ledger: `165`.
 
 ### Independent routes that remain live
 

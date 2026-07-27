@@ -1,0 +1,13 @@
+THM-2502 endpoint Newton/carry boundary exact audit
+masks=128 pairs=8128 triples=341376
+first_difference_edges=4096,2048,1024,512,256,128,64
+successor_ruler_counts=1,2,4,8,16,32,64
+per_blocker_cell_extensions=1,16,8,4,2,1
+aggregate_first_failure_layers=4,64,32,16,8,4
+thm2445_cells=24
+newton_layer_sums=0,0,0,0,0,0,0,1
+dipole_support_2=24 dipole_support_4=144
+tail_counts=1,4,10,22,46,94
+fixed_left_piece_counts=24,69,45,33,27,24
+four_cell_kernel_dimension=3
+all_checks=PASS
