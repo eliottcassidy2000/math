@@ -1,0 +1,18 @@
+THM-2539 exact referee
+field=F_547 primitive_generator=2 zeta7=81 zeta13=475
+root_invariance_samples=12636 PASS; equation11=universal
+owner_slots=[0, 6, 5, 4, 3, 2, 1] source_clock_character_checks=42
+zero_phase_profiles_annihilated=127 full_support_profiles=1
+guard_vandermonde_minors=4901 sizes=1,2,3
+control_anchor=(1,0x6) nonanchor_values=(owner=3,replica=1)
+mixed_means_nonzero=72 simultaneous=PASS
+seed_active_roots=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] selected_slopes=(1, 2, 3)
+galois_uniform_boundary_incidences=216 expected=216
+atomwise_positive_boundary_checks=1164
+aggregate_boolean=False aggregate_max=2 labelled_atoms_boolean=True
+canonical_plus_zero_mixed_root_checks=936
+reflected_minus_zero_mixed_root_checks=936
+selector_mass_table=delta_plus_replicas mixed_means=0
+hostile_zero_basis=exact_integer_table_plus_single_root_support
+scope=full_support_O9c_only; THM-2540_reserved_unproved
+THM-2539 PASS
