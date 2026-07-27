@@ -1,0 +1,22 @@
+THM-2469 exact companion
+invariants=lambda=D^3/C^4,r=D/(C*y)
+resultant=255104784*lambda*P
+P_terms=19
+P_bidegree=(8,5)
+newton_polygon=conv{(0,0),(8,0),(6,2),(0,5)}
+line_factor_ideal_forces_lambda=0
+quadratic_factor_ideal_forces_lambda=0
+uniform_absolute_irreducibility=lambda_nonzero
+wall=31944*r^4+4840*r^3+105*lambda
+P_at_wall=256*wall^2
+disc_v(P)=constant*lambda^4*wall^2*K30
+K30_bidegree=(30,10)
+K30_terms=46
+disc_r(K30)=constant*lambda^290*A1*A2^2*A3^3*P10^3*Q10^2*R12
+exceptional_factor_degrees=1,1,1,2,10,10,12,4
+degree_drop_K_degree=29
+minimum_simple_K_roots=24
+minimum_usable_branch_values=20
+minimum_normalization_genus=6
+y_zero_boundary=constant_Z_then_constant_field_cubic_in_u
+ALL CHECKS PASSED
