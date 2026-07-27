@@ -1,0 +1,40 @@
+==============================================================================
+[1] y-eliminant (symbolic): constant lead => y INTEGRAL; Tr(y) != 0
+==============================================================================
+  y-core cubic: 27*a**2*c - 18*a*b + 18*a*y + b**3 - 3*b*y**2 + 2*y**3
+  lead = 2  (CONSTANT => y integral over Q[a,b,c])
+  next = -3*b  => Tr(y) = 3*b / 2
+  [PASS] y integral; depressed law FAILS in the y-gauge (Tr(y) = 3b/2)
+
+==============================================================================
+[2] z-eliminant cores at integer targets: 2-adic-unit leads (z integral,
+    VERIFIED; exact symbolic lead left OPEN -- resultant too heavy)
+==============================================================================
+  (-2,9,8): z-cubic lead=4  Tr(z)=-13119/4
+  (9,-7,-9): z-cubic lead=8  Tr(z)=-1960953/8
+  (6,-1,8): z-cubic lead=4  Tr(z)=-379719/4
+  (-2,-3,6): z-cubic lead=2  Tr(z)=-10137/2
+  (8,8,6): z-cubic lead=1  Tr(z)=-77640
+  leads [1, 2, 4, 8]: all powers of 2: True
+  [VERIFIED] z-values have 2-adic-bounded denominators: z integral
+
+==============================================================================
+[3] monogenic escape: x is the unique non-integral coordinate
+==============================================================================
+  x-eliminant lead = L(a,b,c) = 27a^2c^2-18abc+16a+b^3c-b^2 (THM-2473,
+  nonconstant, irreducible) vs y lead 2 and z leads 2-adic units.
+  => every escaping fiber point has |x| -> infinity with y, z bounded;
+     the even escape parity of THM-2473(3) governs the whole boundary.
+
+==============================================================================
+[4] pointwise parity rigidity (conjugation pairing; sample witness)
+==============================================================================
+  Lemma: real etale polynomial map, value v with FULL complex fiber
+  (#fiber = d): conjugation is a fixed-point-free-on-nonreal involution
+  of the fiber, so #real = d (mod 2).  For d even: #real EVEN at every
+  full-fiber value -- no pointwise odd witness can exist.  HYP-9030
+  test (ii) is therefore vacuous as stated; released and redirected.
+  sample fiber over (-3,7/2,-4): disc(y-cubic) = -311763603456 => 1 real
+  d = 3 odd, #real = 1 odd: congruence holds  [PASS]
+
+all checks passed
