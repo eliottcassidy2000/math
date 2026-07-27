@@ -753,10 +753,21 @@ THM-2334:
   one full-word target aggregate survives;
   nonzero-target survival is exactly the variance (42);
 
-still open:
+finite-exact positive control:
+  on the canon-recorded typed non-cover row THM-2309 (25), every one
+  of the 168 nontrivial twists differs from H(0), so (42) is positive;
+
+still open on every hypothetical covering row:
   prove that variance positive, or prove the all-unit projector (49)
   nonzero with visible height and terminal phase.                   (59)
 ```
+
+The positive control is reproduced by
+`lrc14_169_twist_variance_opus_20260726.py`.  Its full bank is certified
+under one exact cyclotomic embedding and its first witness under a second.
+It proves neither pairwise distinctness nor positivity of the complex twists,
+and it concerns the unrestricted mod-thirteen aggregate `A(q)`, not the
+all-`91`-unit aggregate `B(q)`.
 
 No scalar profile is excluded. The exact scalar ledger remains `165`,
 the repeated-first and alternative resonance branches remain outside the

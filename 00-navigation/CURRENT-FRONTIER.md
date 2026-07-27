@@ -159,7 +159,8 @@ joint clock cell has interior. Next: intertwine the owner-collision stalk with
 the endpoint/deep current, prove owner-loop drift, or exclude a semantic joint
 cell. Service, coupling, and mixing are closed; scale/sheet transport is not.
 THM-2479 gives each positive middle-owner word a word-marked `91`-unit edge;
-THM-2334's typed-row variance has all `168` nonzero twists positive. Address/gain participation and terminal phase remain; no row is removed.
+THM-2334's typed non-cover has every nontrivial twist differ from `H(0)`.
+Address/gain and terminal phase remain; no row is removed.
 Ledger: `165`.
 
 ### Independent routes that remain live
