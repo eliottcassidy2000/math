@@ -1,5 +1,5 @@
 ---
-id: THM-2581
+id: THM-2588
 title: "The realized theta-slaved contraction: S != 0 at the r = 5 window on a common ancestry base"
 status: >
   PROVED CANDIDATE + VERIFIED-EXACT (one common-base table, one
@@ -27,7 +27,7 @@ script: 04-computation/lrc14_stage2_theta_contraction_opus_20260728.py
 output: 05-knowledge/results/lrc14_stage2_theta_contraction_opus_20260728.out
 ---
 
-# THM-2581 -- the theta-slaved contraction survives
+# THM-2588 -- the theta-slaved contraction survives
 
 Row `THM-2309 (25)`, owner `j = 1`, word `sigma = {b}`, packet clock
 `K = 2`, response clock `k = 6` (class `k = 6 mod 16380`, `eps = +1`);

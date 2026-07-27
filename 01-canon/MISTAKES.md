@@ -9,6 +9,22 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-291 (2026-07-28, concurrent theorem reservation) -- the realized theta-slaved contraction reused live ID THM-2581
+
+- **What happened:** the candidate theorem for the realized depth-five
+  theta-slaved contraction was committed as a second `THM-2581`, after
+  `THM-2581-b-word-depth-five-owner-clock-host-and-reflection-breaking.md`
+  had already been proved, independently audited, and routed under that ID.
+- **Why it was wrong:** theorem IDs are namespace keys, not mathematical
+  analogies.  The new contraction depends on the existing depth-five host;
+  sharing its ID makes dependencies and status searches ambiguous even though
+  the filenames differ.
+- **Repair:** the later candidate is renamed `THM-2588` in
+  `THM-2588-realized-theta-slaved-contraction-at-the-r5-window.md`.  Historical
+  broadcast messages retain their original text as provenance only.  The
+  original `THM-2581` remains the canonical owner-clock host, while
+  `THM-2588` remains a separately audited candidate contraction.
+
 ## MISTAKE-290 (2026-07-28, THM-2576 resultant convention) -- a PRS degree reorder lost the odd-by-odd resultant swap sign
 
 - **What was written:** THM-2576 equation (14) displayed the standard
