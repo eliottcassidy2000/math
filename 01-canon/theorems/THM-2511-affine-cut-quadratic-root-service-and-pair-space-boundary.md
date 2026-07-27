@@ -28,7 +28,7 @@ related:
   - THM-2507-truncated-radon-toothpick-tomography-and-nonaffine-root-boundary
 script: 04-computation/lrc14_affine_cut_quadratic_root_service_thm2511.cpp
 output: 05-knowledge/results/lrc14_affine_cut_quadratic_root_service_thm2511.out
-script_sha256: cf5d6eb1976aa61a99667d5d403f45207c9952a0a6a9282e59767765045b3e0d
+script_sha256: d170b6cf54cc5a650734739e6ef4709d05c73ff0af00be17b4e7ba2e3796fbb1
 output_sha256: b6261657c874281919fd8cc8250d394eba7a2ce328060ddadf5009122a62cb45
 hash_basis: working-tree bytes (LF)
 ---

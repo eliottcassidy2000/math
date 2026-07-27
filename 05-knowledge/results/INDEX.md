@@ -29,7 +29,7 @@
   a fixed-label `8/9` essential-locus floor in a chosen measurable bundle
   trivialization, hence parent floors `16/63,8/21`, with coefficient floor
   `2268^-11`.  O2/O3/stored outputs byte-match; hashes
-  are `cf5d6eb1...b3e0d` / `b6261657...cb45`.  The observable is nonlinear
+  are `d170b6cf...6fbb1` / `b6261657...cb45`.  The observable is nonlinear
   signed pair-space data and loses sign, cut character, and owner orientation;
   no Boolean owner/deep current or live-row exclusion follows.
 - `lrc14_antipodal_radon_cospan_thm2509.py` -> matching `.out`
