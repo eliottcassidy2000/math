@@ -1,0 +1,85 @@
+THM-2368 Sec 8 phase/event sidecar + phase-cone certificate, bare tensor H_E, canonical typed row
+script=04-computation/lrc14_phase_cone_sidecar_opus_20260727.py
+machine=opus  date=2026-07-27
+
+[1] conventions (see module docstring; files override summaries)
+    w=(1, 14, 27, 40, 53, 66, 13, 2197, 742586), grafts k_a=q1=14, k_c=q2=27 (both = 1 mod 13)
+    blocker scales A_j=1, A_a=169, A_c=57122 (THM-2368 (8))
+    gc[t] = 1 - dc[t]: c3 safe factor and probe share one word
+    grids: T_DEN=297836897838480, midpoints on D2=2*T_DEN
+    walk per character (lam,mu)!=(0,0): the a=0 deep-colour modes 13*T_DEN*sum_{s,t} S_E zeta^(-lam s - mu t)
+    (circulant tensors kill every such mode => nonzero endpoint certifies D_(H_E) > 0 via THM-2365 (17)-(18))
+
+[2] chamber partition (THM-2368 (34))
+    f1 owner d(y): 2 generated breakpoints
+    f2 target-a blocker (13 shifts): 4394 generated breakpoints
+    f3 target-c blocker+probe (13 shifts, shared): 1485172 generated breakpoints
+    f4 rooted A_y: 28 generated breakpoints
+    f5 rooted C_y: 54 generated breakpoints
+    f6 rooted guard: 2 generated breakpoints
+    f7 rooted units 40/53/66: 318 generated breakpoints
+    generated (with multiplicity): 1489970
+    distinct breakpoints = chambers of the circle partition: 1489966
+    owner-blocker support supp d(y) = (13/14, 15/14) (wrapped); contributing chambers: 212845
+    [     0.6s] partition done
+
+[3] single exact 1-D sweep over the support (integer arithmetic)
+    chambers walked: 212845
+    distinct rooted snapshots (A,C,P): 19
+    distinct sidecar states (rooted, ga, dc): 10998
+    aggregation stage 1 (logged): chambers with identical (rooted,ga,dc) word data merged: 212845 -> 10998
+    [     1.5s] sweep done
+
+[4] rooted N tables and per-state constant chamber tables
+    all rooted words nonempty proper; |supp P| in [3,10] (THM-2368 (12)/(14)): PASS (19 snapshots)
+    per-state constant tables built; H reconstruction and 168 walks accumulated
+    [    10.2s] state processing done
+
+[5] GATE (MISTAKE-281 common-base discipline)
+    (A) independent recomputation of the full 13^3 bare table with the audited drift-companion
+        interval machinery (verbatim copy), all 169 twists:
+        E_1 measure anchor 1882176/28589561: PASS
+        (19b) successor identity at all 169 twists: PASS
+        [    45.2s] recomputation done
+    (A) chamber reconstruction == independent 13^3 table (x13 scale), all 2197 cells: PASS
+    (B) row sums == byte-stored S_E numerators (lrc14_owner_loop_drift_typed_row_opus_20260727.out): PASS
+    NOTE (ambiguity logged): the stored artifact holds the 169 successor numerators, not the
+    13^3 table; gate (A) supplies the full-table equality against an in-script independent
+    reconstruction by the audited machinery, strictly stronger than the stated gate.
+    diagonal-plane zero H_E(t,s,t)=0 (all 169): PASS
+
+[6] per-character endpoint cross-check (walks vs stored S_E DFT)
+    walk endpoints == 13 * DFT(stored S_E) as elements of Q(zeta_13), all 168 characters: PASS
+    characters with NONZERO endpoint (a=0 deep-colour mode alive): 168 / 168
+    [    47.3s] endpoint checks done
+
+[7] exact phase-cone decision per character (no floats in decisions)
+    aggregation stage 2 (logged): contributions merged by primitive direction in Z[zeta_13]
+    (positive-rational-multiple classes; includes every same-zeta-power merge)
+    distinct aggregated directions per character: min=5740 max=10322 mean=9102.9
+    span statistics over the 168 nonzero target characters:
+      span < half turn (cone holds):        0
+      span = half turn, certificate holds:  0
+      span = half turn, certificate fails:  0
+      span > half turn (cone fails):        168
+      no nonzero contributions:             0
+    [   467.3s] cone tests done
+
+[8] DECISION
+    PHASE-CONE CERTIFICATE FAILS for all 168 nonzero target characters.
+    Combined with THM-2550's certified D_(H_E) > 0: the canonical bare drift is POSITIVE but NOT
+    half-plane-explainable at the a=0 target-character level: every nonzero mode survives only
+    through phase cancellation deeper than a cone.
+    first cancelling phase event (Sec 8), character (lam,mu)=(0,1):
+      chamber left endpoint y = 9653643/10396204 (grid 276563549922660/T_DEN)
+      first direction leaving every open half-plane: (-6, 0, 0, 0, -1, -2, -2, -2, -2, -2, -1, 0, 0)
+
+[9] scope (MISTAKE-281 / THM-2541 guardrails, unchanged)
+    * The row is the canonical TYPED row THM-2309 (25): typed, NOT an asserted scalar cover.
+    * No physical current is claimed; no row is excluded; the scalar ledger stays 165;
+      LRC(14) remains OPEN.  Full support is never read as noncancellation.
+    * The certificate (when it holds) licenses exactly: this row's bare tensor is non-circulant
+      with a mechanism-level (half-plane) explanation of one (or more) surviving modes -- the
+      anchor named by THM-2368 (38); nothing more.
+
+[   467.3s] all checks passed
