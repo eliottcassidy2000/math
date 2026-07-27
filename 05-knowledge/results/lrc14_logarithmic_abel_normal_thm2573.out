@@ -1,0 +1,30 @@
+== THM-2573: logarithmic Abel normal jump pairing ==
+
+== exact Abel-kernel normalization ==
+  one-sided smoothing, two Fourier tails: 2 x (-1) = -2
+  logarithmic normal = -B_M/(2*pi^2)
+  equal-rho smoothing of both endpoints doubles this normal
+
+== complementary and separated-support controls ==
+  half/complement handoff atoms: 2 (mass 2)
+  separated positive intervals: no common jump, zero logarithmic normal
+
+== aggregate coincident-endpoint convention ==
+  naive factorwise atoms / lawful total-layer atoms: 2 / 1
+  strict/open point values do not enter one-sided aggregate jumps
+
+== moving complementary interval target character ==
+  moving handoff atoms checked: 26
+  DFT convention sum_s N_s zeta^(q s): unique colour q=12=-1
+  normalized active coefficient: (1+i)/(2*pi^2)
+
+== target-neutral and deep-unit-blind hostiles ==
+  fixed complement: positive normal mass 2, only target colour q=0
+  alternating-grid handoff atoms: 14
+  checked deep-unit-blind samples |m|<=1000: 1584
+  symbolic reason: 14|m implies 7|m, impossible for gcd(m,91)=1
+
+semantic scope: the normal survives only after singular Abel rescaling
+a frozen THM-2569 selector is not a lawful common-target orbit
+
+all exact checks passed
