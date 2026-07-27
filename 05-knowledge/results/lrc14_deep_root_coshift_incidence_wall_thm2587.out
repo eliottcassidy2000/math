@@ -1,0 +1,28 @@
+== THM-2587: deep-root/co-shift incidence wall ==
+row: (1, 14, 27, 40, 53, 66, 13, 2197, 742586)
+sigma={b}, K=2, r=5; deep coordinate C/d=2
+two exact routes agree on all 13^3x7 fine incidence cells: PASS
+common rational denominator: 6939029398456584394954868880
+positive (absolute root, translated danger label) edges: [(0, 0), (0, 1), (12, 0), (12, 12)]
+every one of the four edges is positive in every owner cell: PASS
+positive cells by theta x (low,middle,high): [[48, 154, 48], [48, 154, 48]]
+mass numerators by theta x wall state: [[3521363070989135547630000, 77416432857559091446263360, 3516435803824334162488080], [3516435803824334162488080, 77416432857559091446263360, 3521363070989135547630000]]
+pure-low selector tau=r: PASS; pure-high selector tau=r+1: PASS
+each theta fibre contains both controls: no equivariant tau(r,theta)
+middle wall has two edges; one overlap-edge bit is losslessly minimal
+positive (s,ell) cells by danger translate: [84, 77, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 77]
+positive (s,ell) cells by safe translate: [0, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84]
+danger translate masses: ['48602521488933856/1996669193081744181', '22276171154333332/1996669193081744181', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '22276171154333332/1996669193081744181']
+safe translate masses: ['0', '3994287715764/302938733588491', '48602521488933856/1996669193081744181', '48602521488933856/1996669193081744181', '48602521488933856/1996669193081744181', '48602521488933856/1996669193081744181', '48602521488933856/1996669193081744181', '48602521488933856/1996669193081744181', '48602521488933856/1996669193081744181', '48602521488933856/1996669193081744181', '48602521488933856/1996669193081744181', '48602521488933856/1996669193081744181', '3994287715764/302938733588491']
+danger joint Fourier: global/cell/centred = 169/1183/1183 nonzero
+safe joint Fourier: global/cell/centred = 169/1183/1183 nonzero
+finite-field independent cover (prime,new witnesses): [(79, 4974), (131, 96)]
+total transform buckets certified: 5070
+
+source: THM-2584 absolute root/displacement/owner tensor
+target: projected c3 danger/safe translate incidence
+preserved: one common positive b/r=5 ancestry and deep membership
+lost: within-cell wall if roots alone; always lost: paired graft k_b
+consequence: projected deep action is saturated, full target action remains open
+
+all exact checks passed
