@@ -1,0 +1,9 @@
+THM-2509 antipodal Radon cospan exact companion: PASS
+seven_slope_sets=792; complete_pair_histogram={1: 192, 2: 480, 3: 120}
+lossless_chart_rows=1092; crt_conjugacy_rows=99372
+fixed_atlas_pair_assignment_counts=1/12:39428,2/11:39544,3/10:39542,4/9:39524,5/8:39543,6/7:39444
+abstract_fixed_pair_fraction=1/6
+atlas_fixed_pair_fraction=5/6
+atlas_parent_mass_floors=k1:5/21,k2:5/14
+tau sign is only a leg-swap gauge; the unordered cospan is intrinsic
+ALL EXACT CHECKS PASSED
