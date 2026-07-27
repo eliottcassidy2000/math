@@ -1,0 +1,22 @@
+== THM-2567: deep-coloured duty-replica cycle ==
+  rational nonnegative hostile mass: 1872
+  exact zero loci: s=0 plane and r=t diagonal
+
+== physical target reindexing and inverse-character anchors ==
+  for every m!=0: p^3 A_m(0,0)=-156
+  for every m,b!=0: p^3 A_m(b,0)=13
+  all hostile support lies on the physical q2=0 line
+  target-null circulation sum_m A_m(q)=0: 169/169 PASS
+
+== canonical duty replicas and exact coloured cancellation ==
+  gain duty classes: 229692^24, 440232^12, 440244^132
+  every m!=0 and every gain has six identical nonzero replicas
+  sum_m K_g A_m=0 for all 168 gains and 169 targets
+
+== stronger zero-plane and singleton controls ==
+  r=0, s=0, and r=t hostile mass: 1728
+  all 12 inverse-character anchors survive
+  diagonal-free singleton controls: 2028
+
+explicit checks: 67233
+ALL EXACT CHECKS PASSED
