@@ -27,7 +27,7 @@ Format per entry:
   namespace, still at candidate status.  Cross-links may be added after audit;
   neither result is treated as a replacement for the other.
 
-## MISTAKE-298 (2026-07-28, concurrent THM-2611/2615/2617 reservations) -- a local reservation broadcast was mistaken for a shared proof-graph reservation
+## MISTAKE-298 (2026-07-28, concurrent THM-2611/2615/2617/2618 reservations) -- a local reservation broadcast was mistaken for a shared proof-graph reservation
 
 - **What happened:** the endpoint-pair parabolic-transvection theorem reserved
   `THM-2611` after a fresh `origin/main` and all-remote-ref scan, and broadcast
@@ -39,16 +39,20 @@ Format per entry:
   pushed, the shared branch assigned `THM-2615` to the physical diagonal
   toric-kernel theorem and `THM-2616` to a Keller reduction.  A third local
   move to `THM-2617` again lost a push race when the Keller reduction was
-  renumbered there and `THM-2616` was reused for the cross-time diagonal.
+  renumbered there and `THM-2616` was reused for the cross-time diagonal.  A
+  fourth move to `THM-2618` met two independently pushed stubs bearing that
+  same ID: the selected-source product-torus lift and the affine holotopy
+  spectrum.
 - **First failed implication:** a local commit plus coordination broadcast is
   not a proof-graph reservation.  Only a pushed, current shared stub occupies
   the namespace; an earlier clean scan says nothing about assignments made
   before the local branch rejoins `origin/main`.
 - **Repair:** the principal-deck and physical diagonal-kernel theorems retain
   `THM-2611` and `THM-2615`, respectively, while the two later incoming
-  theorems retain `THM-2616` and `THM-2617`.  The unpublished endpoint theorem,
+  theorems retain `THM-2616` and `THM-2617`; the shared `THM-2618` collision is
+  left visible for its authors to repair.  The unpublished endpoint theorem,
   script, and output are coherently moved to the freshly all-ref-checked
-  `THM-2618` namespace before promotion.  Mathematics is unchanged.  Future
+  `THM-2620` namespace before promotion.  Mathematics is unchanged.  Future
   sessions that cannot push a reservation immediately must treat its ID as
   provisional, repeat the full remote/YAML/history scan immediately before
   integration, and prefer an immediate small pushed reservation checkpoint

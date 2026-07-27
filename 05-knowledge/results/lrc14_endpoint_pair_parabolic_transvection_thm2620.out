@@ -1,4 +1,4 @@
-== THM-2618 endpoint-pair parabolic transvection ==
+== THM-2620 endpoint-pair parabolic transvection ==
 field: F_13
 projective line: 14 = 13 affine points + 1 fixed boundary
 endpoint matrix census: {'q_zero': 169, 'q_nonzero_delta_zero': 2184, 'q_nonzero_delta_nonzero': 26208}
