@@ -2,7 +2,7 @@
 id: THM-2585
 title: "Saturated normalized target projector and Bockstein noncommutation"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED (two ways).
   On the one fixed globally primitive THM-2571 digit-diagonal carrier, the
   normalized inverse target Fourier projector is coefficientwise integral:
   its numerator is exactly 13 times one literal target-shift slice.  Every
@@ -33,8 +33,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2585 -- saturation restores every target-shift section
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
-PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED (two ways).**
 
 THM-2571 proves that the thirteen target-colour cycles on its canonical
 primitive carrier have one target-flat nonzero Cayley-cokernel class.
@@ -380,6 +379,13 @@ checks:
   failure of integral normalization.
 
 There are `4603` explicit checks, none implemented with `assert`.
+
+Two independent immutable audits reconstructed the common-carrier section
+identity, all thirteen unit determinants, the `78/78` Bocksteins and support
+histogram, the translation action, and both sharp controls.  Each replayed
+normal and optimized executions against the stored transcript, matched the
+LF hashes above, and independently confirmed the THM-2550(B)-only scope and
+MISTAKE-283 boundary.  Documentation checks pass.
 
 ## 7. Stopping boundary
 
