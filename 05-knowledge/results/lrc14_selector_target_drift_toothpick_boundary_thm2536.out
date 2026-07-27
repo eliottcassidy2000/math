@@ -1,0 +1,16 @@
+THM-2536 exact selector/target/toothpick referee
+path_masks=23 start_terminal_recovery=PASS pair_divergence=PASS
+target_triangle_holonomy_controls=11
+target_line_cancellation=PASS star_mass_line_identity=PASS singleton_zero_target_hostile=PASS
+selector_H_incomparability_controls=3
+thm2367_full_packet_mu=2808/84035 selector_and_H_target_invariant=PASS
+atomwise_root_to_target_two_tooth_boundaries=12
+uniform_centered_lifts=12 anchored_star_boundary_lifts=12 direct_pair_divergence_lifts=12
+raw_positive_output=IMPOSSIBLE
+canonical_cells=169 positive=169
+canonical_distinct_masses=75
+canonical_overlap_min=34571233969272 max=98530949460528 denominator=50334435734703120
+canonical_base_mass=21376087/17907461390
+canonical_first_shift_mass=595072523707/483984958987530
+canonical_nonzero_target_mass_characters_mod79=168/168 root=8
+checks=7114727 all_passed=True

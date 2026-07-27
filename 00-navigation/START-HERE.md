@@ -118,7 +118,7 @@ Then read the relevant frontier section, the active guardrails, and the exact th
     THM-2337/2340 identify pure-word landing with main effects or interaction; THM-2343/2344 reduce zero-only failure to a shifted endpoint convolution inverse. THM-2344's strengthened hostile proves that an arbitrary nonconstant word on one aligned active axis still cannot break it.
     THM-2368 retains root modes but admits zero-drift hostiles. THM-2378/2381/2382/2385 empty hard `W=k=1` and every `k=2` septimal alternative except `(t,b)=(1,0)`; retain its multiplicity-excess word. THM-2379/2380/2384 leave owner-typed dual incidence open.
     MISTAKE-260 forbids extracting an anchored nonzero Fourier sum from an unordered inverse-root count. MISTAKE-261 corrects the separate quotient loss: THM-2356's planar graph tomography detects refined target--jet support, but coarse target landing is a row sum with a `28,393`-dimensional kernel. THM-2363's derived detector dominates coarse energy only in the forward direction and is not yet a lawful physical probe.
-    THM-2452--2528 give every live word sharp `L=1` drift and a positive pair-labelled Boolean odd path. THM-2529--2531 give a lossless deep-Gram skew and target-selector star. Live: scalar source--arrival transfer and the `C_7` clock.
+    THM-2452--2531 give live collision paths/skew/stars; THM-2532/2533 give owner-phase currents; THM-2535/2536 give clock/selector flow. Live: semantic arrival and inherited source/deep alignment.
 16. **Use the native operation carrier, not shared syntax.** THM-2176 exposes
     the knot continuation cocycle; THM-2191 gives its catalytic group length,
     commuting stable envelope, and abstract additive dual, and closes `9_10`.

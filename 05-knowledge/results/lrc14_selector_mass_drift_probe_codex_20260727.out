@@ -1,0 +1,14 @@
+LRC14 selector-mass / THM-2365 drift exact probe
+mesh=182 marker_tooth_cells=14 marker_tooth_mass=1/13
+deep_phase_counts=singleton_each:2,pair_each:12,safe:156
+selector_blind=(mass_energy,gamma_energy,H_energy)=0,0,1/4
+selector_false_positive=(mass_energy,gamma_energy,H_energy)=1/4,1/4,0
+mass_neutral_false_positive=(mass_energy,gamma_energy,H_energy)=0,1/2,0
+thm2367_peeling_constant=468/12005
+thm2367_selector_mu=2808/84035
+thm2367_selector_gamma=0,36/12005,36/12005,36/12005,36/12005,36/12005,36/12005,36/12005,36/12005,36/12005,36/12005,36/12005,36/84035
+thm2367_relative_H=0,36/12005,468/84035,468/84035,468/84035,468/84035,468/84035,468/84035,468/84035,468/84035,468/84035,468/84035,36/12005
+exact_reconstruction=H_j=gamma_j+beta_(j-1)
+minimal_missing_sidecar=run_length_two_mass_beta
+profile_only_uniform_test=IMPOSSIBLE-WITHOUT-SCALAR-COVER-SIDECAR
+status=PASS

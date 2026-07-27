@@ -4,9 +4,11 @@ title: "Boundary-tooth clock intertwiner, neutral collapse, and clock-holonomy d
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  The C_13 prime-necklace marker does not by
   itself select one of THM-2517's seven owner epochs: a pure septimal CRT
-  translation fixes every root-mask datum and moves the clock freely.  The
-  retained THM-2508 affine cut chart supplies exactly the missing C_7
-  coordinate.  If the selected wall is s->t=s+tau and the cut is (a,b),
+  translation fixes every root-mask datum and moves the clock freely.  This
+  remains true after THM-2517's gauge-safe visible row-to-clock diagonal;
+  that diagonal starts with a C_7 row label.  The retained THM-2508 affine
+  cut chart supplies the exact matching clock coordinate.  If the selected
+  wall is s->t=s+tau and the cut is (a,b),
   its tooth-one source is kappa=a^(-1)(1-b); at output t the cut contains
   the distinguished summand d(s,kappa), and kappa transforms by
   kappa->B kappa+C under source-chart transport.  Reindexing the whole cut
@@ -49,10 +51,13 @@ hash_basis: working-tree bytes (LF)
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
-THM-2517 leaves the phase-zero owner at a free seven-epoch torsor.  THM-2531
-now gives every nonconstant thirteen-root mask a canonical guard-directed
-occupied-to-empty wall.  Those facts do not compose directly: the marker
-lives over `C_13`, while the owner clock lives over `C_7`.
+THM-2517 places the phase-zero owner inside a free seven-epoch torsor and now
+also supplies the gauge-safe visible diagonal `c=ell`, with owner slot
+`d=-ell`.  That is an equivariant map from an already visible `C_7` row to a
+scheduler cell; it is not a function of `C_13` root data and does not yet
+identify THM-2508's cut coordinate.  THM-2531 gives every nonconstant
+thirteen-root mask a canonical guard-directed occupied-to-empty wall.  The
+two inputs therefore still do not compose directly.
 
 The full affine cut chart supplies the missing bridge, but with a sharp
 qualification:
@@ -65,8 +70,10 @@ uniform/source-neutral clock contraction  -> identically zero.             (1)
 correlated full-clock incidence lift       -> nonzero root dipole only.
 ```
 
-Thus the algebraic clock-covariant intertwiner exists.  What remains is to
-put it on the same positive ancestry object as the selector and late owner.
+Thus the algebraic clock-covariant intertwiner exists: it refines
+THM-2517's row scheduler by matching the cut intercept to its clock.  What
+remains is to put that cut charge on the same positive ancestry object as
+the selector and late owner.
 
 ## 1. The two torsors are independent before a cut is retained
 
@@ -106,9 +113,10 @@ P_kappa=product_(d in F_7) G_(kappa+d)(T^(D_d)x),
                                                    kappa in F_7.       (5)
 ```
 
-The phase table `gamma=kappa+d` is the cyclic Latin square.  In the fixed
-owner gauge, the actual phase-zero owner occurs in `P_kappa` at the unique
-slot
+The phase table `gamma=kappa+d` is the cyclic Latin square.  For visible row
+`ell=kappa`, these are precisely the diagonal cells of THM-2517 (O9c).  In
+the fixed owner gauge, the actual phase-zero owner occurs in `P_kappa` at
+the unique slot
 
 ```text
 d=-kappa.                                                       (6)
