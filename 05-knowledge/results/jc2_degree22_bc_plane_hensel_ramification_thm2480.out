@@ -1,0 +1,23 @@
+THM-2480 exact companion
+invariants=lambda=C^2/B^3,r=C/(B*y)
+resultant=28344976*P
+P_terms=32
+P_bidegree=(8,5)
+newton_polygon=conv{(0,0),(8,0),(8,1),(0,5)}
+small_minkowski_summands=two_line_shapes_plus_two_quadratic_shapes
+linear_factor_unit_ideal=YES
+quadratic_factor=fixed_L5_scaled_Hensel_order_three_unit_ideal
+uniform_absolute_irreducibility=lambda_nonzero
+wall=745360*r^5-71148*r^4+43560*lambda*r^3+5082*lambda*r^2+945*lambda^2
+P_at_wall=256*wall^2/(9*lambda)
+disc_v(P)=constant*lambda^7*wall^2*K30
+K30_bidegree=(30,13)
+K30_terms=87
+disc_r(K30)=constant*lambda^325*L1^2*L2^4*A5^3*R18*P20^2*Q20^3
+exceptional_factor_degrees=3,1,1,5,18,20,20,8
+degree_drop_fibres=three_squarefree_degree_29_wall_disjoint
+minimum_visible_simple_branches=19
+minimum_total_ramification=20
+minimum_normalization_genus=6
+y_zero_boundary=rational_Z_then_constant_field_quintic
+ALL CHECKS PASSED
