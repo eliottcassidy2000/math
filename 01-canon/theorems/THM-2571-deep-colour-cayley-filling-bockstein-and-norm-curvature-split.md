@@ -2,14 +2,15 @@
 id: THM-2571
 title: "Deep-colour Cayley filling, primitive carry Bockstein, and norm-curvature split"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED (two ways).
   Every THM-2567 deep-colour augmentation-zero family is an exact rational
   boundary for THM-2532's Cayley derivative.  On the integral augmentation
   lattice its sole obstruction is the cyclic first moment modulo 13.  A
   lawful mass-one singleton realizes the nonzero obstruction with sharp
-  denominator 13.  More decisively, the canonical K_11,9 carry tensor has,
-  after one global primitive clearing, nonzero Bockstein in all 78 nonzero
-  owner x target profiles.  The class factors as the 13-cyclotomic socle
+  denominator 13.  More decisively, the canonical old/future digit-diagonal
+  carry tensor has, after one global primitive clearing, nonzero Bockstein
+  in all 78 profiles with nonzero owner colour and arbitrary target colour.
+  The class factors as the 13-cyclotomic socle
   Omega times a unit Y in the septimal owner algebra.  It is target-flat,
   while the duty packet is plaquette-flat and can still have positive
   Galois norm.  These are exact coefficient/common-carrier statements, not
@@ -32,8 +33,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2571 -- the coloured cycle is rationally fillable but integrally charged
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
-PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED (two ways).**
 
 THM-2567 exhibits a complete deep-colour cycle: every nonzero colour is
 nonzero, but summing all thirteen colours gives zero.  THM-2532 supplies an
@@ -44,7 +44,7 @@ objects on the same colour module gives a sharper answer than either alone:
 deep augmentation-zero cycle
         -> rational sawtooth filling
         -> one integral first-moment obstruction modulo 13
-        -> a nonzero primitive class on the canonical K_11,9 carry tensor.
+        -> a nonzero primitive class on the canonical digit-diagonal tensor.
                                                                     (1)
 ```
 
@@ -232,11 +232,13 @@ epsilon=zeta_13-1.                                         (22)
 The sawtooth primitive of (19) has denominator exactly `13`.  This proves
 both nontriviality and sharpness of the denominator in (4).
 
-## 4. Canonical K_11,9 carry class
+## 4. Canonical old/future digit-diagonal carry class
 
-The abstract singleton shows that the obstruction can occur.  The exact
-old/future diagonal carrier underlying THM-2550(B) shows that it actually
-occurs on the canonical typed row.
+The abstract singleton shows that the obstruction can occur.  A direct exact
+old/future digit-diagonal reconstruction shows that it actually occurs on the
+canonical typed row.  THM-2550(B) is provenance for the row and word, not a
+proved dependency of this section; the tensor used here is defined and
+reconstructed independently below.
 
 Use the fixed denominator and clock
 
@@ -246,15 +248,46 @@ R=13^6=4826809,
 RT=1437601819018855810320.                                 (23)
 ```
 
-The companion reconstructs, by exact interval sweeps, the rational tensor
+Use the fixed row
+
+```text
+(H,q_1,...,q_5,c_1,c_2,c_3)
+ =(1,14,27,40,53,66,13,2197,742586).                       (23a)
+```
+
+Let `F_(ell,s)` be the exact present layer consisting of source danger
+`d(c_1x-ell/7)`, guard safety, all five unit safeties, the moving
+`q_1/c_2` safe dipole, and `c_3` safety.  Let
+`Delta_r=d(c_3x-r/13)`.  Let `Q_ell^+` be the exact delayed word
+`T_a(1-d(c_1x-ell/7))`, where `T_a` is guard safe, all five units safe,
+`c_2` dangerous, and `c_3` safe.  All danger windows are strict; changing
+their finitely many endpoints does not change the integrals.  Braces below
+denote fractional part.  Define the
+complete five-coordinate overlap and its old/future digit diagonal by
+
+```text
+C_(ell,s,r,h,b)
+ =integral_T F_(ell,s)(x) Delta_r(x) Q_ell^+(13^6 x)
+    1_(floor(13x)=h) 1_(floor(13 {13^6 x})=b) dx,
+
+X_(ell,s,r)=sum_(h in F_13) C_(ell,s,r,h,h).                (23b)
+```
+
+The companion constructs every factor in (23b) as an explicit union of
+half-open rational intervals on the denominator-`T` grid and evaluates the
+dilated overlap by an exact prefix identity.  Thus this section is a finite
+exact application even while the broader THM-2550 theorem remains at
+candidate status.
+
+The resulting rational tensor
 
 ```text
 X_(ell,s,r),       ell in F_7, s,r in F_13,                (24)
 ```
 
-formed by the THM-2550(B) old/future diagonal word, its seven source
-phases, thirteen target shifts, thirteen deep-root shifts, and thirteen
-base digits.  Exactly `1092=7*13*12` of its `1183` cells are positive:
+retains seven source phases, thirteen target shifts, thirteen deep-root
+shifts, and the common old/future digit.  Its complete `1183`-cell
+reconstruction has exactly `1092=7*13*12` positive cells:
 
 ```text
 X_(ell,s,r)>0 <=> r!=0.                                    (25)
@@ -408,7 +441,8 @@ prod_(m=1)^12 R_(m;(g,j))
 The product is rational by Galois conjugacy.  Thus local rank-two curvature
 is identically zero while the global Galois norm is positive.
 
-The Bockstein and this norm/THM-2572 energy are independent diagnostics.
+The Bockstein and this norm/THM-2572 energy are distinct diagnostics; the
+energy and norm do not determine `beta`.
 For the uniform off-diagonal hostile, after integral scaling,
 
 ```text
@@ -450,13 +484,25 @@ byte-for-byte.  The standard-library exact referee uses only integers and
 - the singleton denominator and `2028` physical displacement controls;
 - `10098` rank-one plaquette controls and `4095` nonzero rational Galois
   profiles;
-- the complete `1092`-cell canonical carry reconstruction, primitive gcd,
-  valuation range, denominator, and digest;
+- the complete `1183`-cell canonical carry reconstruction, its `1092`
+  positive cells, primitive gcd, valuation range, denominator, and digest;
 - the `88/91` precontraction census, the closed `Omega*Y` factorization,
   explicit inverse (34), all `78/78` owner-target classes, and their full
   product-basis support.
 
 There are `100860` explicit checks, none implemented with `assert`.
+
+Two independent immutable audits reconstructed the integral exact sequence,
+physical displacement formula, singleton denominator, rank-one/norm split,
+and the complete digit-diagonal carrier from the source interval module.
+Both separately recovered the raw content `13`, primitive denominator and
+digest, `Omega*Y` factorization, septimal inverse, `78/78` profile survival,
+`72/72` product-basis support, and the exact target-flat boundary.  The
+second audit required and then accepted the self-contained five-coordinate
+definition (23b), removal of an unsupported support-graph label, and the
+nonzero-owner/arbitrary-target wording.  Normal, optimized, and stored
+transcripts agree byte-for-byte; both audits reproduced the LF hashes above,
+and documentation checks pass.
 
 What is proved is an exact rational filling theorem, its complete integral
 cokernel, a sharp mass-one obstruction, and a nonzero primitive obstruction
