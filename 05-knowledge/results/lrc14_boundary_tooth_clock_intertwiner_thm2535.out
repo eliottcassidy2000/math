@@ -1,0 +1,12 @@
+THM-2535 boundary-tooth clock intertwiner exact referee
+field=547 generator=2 zeta13=475 xi7=81
+scheduler_cells=49 owner_slots=0,6,5,4,3,2,1 translation_checks=343 affine_transported_slot_checks=2058
+marker_owner_epoch_states=57330 pure_septimal_CRT_witness_K=13 root_shift=0 clock_shift=6
+boundary_tooth_checks=6552 charts_per_clock=6,6,6,6,6,6,6 deep_target_chord_checks=966
+source_chart_covariance_checks=12348 root_chart_covariance_checks=170352
+uniform_diagonal_basis_checks=73008 neutral_character=zero
+primitive_kernel_nonzero_checks=6048 direct_factorization_checks=48384
+hostile_mixed_modes=72 hostile_selected_tooth_zeros=42 hostile_clock_modes=5184
+hostile_anchored_table_entries=91 min=0 max=3 anova_interaction_checks=91 owner_row_nonconstant=yes
+selector_scheduler_incidence_cut_checks=7644 forgotten_table_zero_checks=7644 orbit_dipole_checks=1092
+PASS
