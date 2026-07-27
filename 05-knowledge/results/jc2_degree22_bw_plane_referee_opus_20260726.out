@@ -1,0 +1,26 @@
+THM-2468 independent hostile referee (opus, 2026-07-26)
+flux_source=THM-2411_eqs_12-16_transcribed_with_C_D_E_W
+weighted_homogeneity=N1_wt5_N2_wt6_checked
+quotient_fluxes=MATCH_THM-2468_eqs_5_6
+elimination=closed_linear_quadratic_resultant+sympy_cross_check
+resultant_content=2^4*11^6
+R_lambda=MATCH_24_term_quintic_eq_9_10
+pencil_identity=R0_minus_82458112_lambda_p3_A2_EXACT
+pencil_constant_check=1331^2*1319329792/(2^4*11^6)=82458112
+top_form_factorization=eq_12_EXACT
+newton_hull=full_5_simplex_at_lambda_1_and_17
+minkowski_summands=k_Delta_only_(k=0..5)
+line_ideal=UNIT
+conic_type_I_ideal=UNIT
+conic_type_II_ideal=CONTAINS_h_matches_eq_18=True
+conic_type_III_ideal=CONTAINS_h^3_matches_eq_20=True
+h_zero_excluded=cubic_constant_term_231
+p0_section=-567*L5_lambda_free
+L5_squarefree=YES_discriminant_nonzero
+p0_smooth_simple_places=5
+p0_point_at_infinity=NONE_v5_coeff_-88239118492602
+branch_floor=6
+genus_floor=2
+square_lift=physical_Y=y/sqrt(B)
+y0_boundary=1331*(616B-1089u)*Z
+ALL INDEPENDENT CHECKS PASSED

@@ -1,0 +1,73 @@
+========================================================================
+PART A -- exhaustive residue stress of the trichotomy (m1,m2) split
+========================================================================
+[PASS] A1: swept 444000 (m1,m2) pairs, 7 not|m1, 7|m2, 13 not|m2
+[PASS] A1: m1 = m2 (degenerate C=B) occurrences: 0
+[PASS] A1: pairs where NEITHER A-C nor C-B is a 91-unit edge: 0
+[PASS] A2: 53760 grade/root retention rows: nu13 preserved (=b) and root character preserved for every c3-translate
+A verdict: the residue split is airtight -- m1=m2 is impossible mod 7,
+and when 13|m1 the pivot difference m1-m2 is automatically a 91-unit;
+no translate can move grade or root character since nu13(c3)=c>b.
+
+========================================================================
+PART B -- coherent-fibre degeneracy stress (THM-2323 S7.2 fibre)
+========================================================================
+  a=7   d'=13    K_6xK_13: retained=78 edges=2340 bracket-checks=30420
+  a=7   d'=143   K_6xK_13: retained=78 edges=2340 bracket-checks=30420
+  a=14  d'=13    K_6xK_13: retained=78 edges=2340 bracket-checks=30420
+  a=7   d'=2431  K_6xK_13: retained=78 edges=2340 bracket-checks=30420
+  a=1   d'=91    K_7xK_13: retained=91 edges=3276 bracket-checks=42588
+  a=2   d'=91    K_7xK_13: retained=91 edges=3276 bracket-checks=42588
+[PASS] B1: all fibre configs: K_z distinct mod N, retained fibre full (78 or 91), graph has edges, every edge+offset bracket is a 91-unit
+B verdict: the adjacent pair can never be degenerate (adjacency needs
+both CRT coordinates to differ, so z0!=z1, and K_z are distinct mod N,
+so q_z0 != q_z1 and A != B); the fibre construction never uses (31),
+so it survives 7|a with multiplier m2 = a*(91-unit bracket).
+
+========================================================================
+PART C -- MSG-2152 boundary hostile, extended with a pair atom
+========================================================================
+[PASS] C1: H real integer-valued step function
+[PASS] C1: H vanishes identically on the 1/7 arc [0,1/7)
+[PASS] C1: jump positions live on the exact 1/364 lattice, 46 jumps
+[PASS] C1: cyclotomic reduction ready, deg Phi_364 = 144
+[PASS] C2: Hhat(n)=0 exactly for every n in [1,500] with 7 not|n, 13 not|n (spectrum in 7Z u 13Z)
+[PASS] C3: Hhat(91) != 0 (marked atom A=91, exact)
+[PASS] C3: Hhat(98) != 0 (pair atom B=98=A+7, m2=7: 7|m2, 13 not|m2, exact)
+[PASS] C4: every incident multiplier m with 7 not|m in [-260,260] is divisible by 13 (found 27, e.g. [-260, -234, -221, -208, -169, -156]...)
+[PASS] C5: a positive m1 with 7 not|m1 and Hhat(91+m1)!=0 exists (smallest: 26)
+[PASS] C6: for EVERY incident m1 (all 13-divisible), the pivot edge C-B = (m1-7)*c has gcd(m1-7,91)=1 -- failures: 0
+[PASS] C6: explicit unit edge inside the hostile itself: C=117, B=98, C-B=19, gcd(19,91)=1, Hhat(C)!=0, Hhat(B)!=0
+[PASS] C7: modulated-disjointness identity residual |sum| = 1.27e-06 < 1e-4 (truncation |m|<=40000)
+C verdict: the sharp MSG-2152 hostile CAN be extended to carry the
+(7|m2, 13 not|m2) pair atom while keeping spectrum in 7Z u 13Z and
+blocking every 7-unit incident multiplier into 13Z -- and precisely
+then the trichotomy pivot fires: every admissible m1 is 13-divisible,
+so C-B = (m1-m2)*c is automatically a 91-unit edge between two atoms
+of the hostile itself. The extension CANNOT break the composition;
+the blocking property and the pair are arithmetically incompatible
+with the absence of a unit edge.
+
+========================================================================
+PART D -- concrete 7|a canonical-shaped instance (c2,c3)=(91,169)
+========================================================================
+[PASS] D1: b=1 < c=2, g=13, a=7 (7|a), d'=13, gcd(a,d')=1, 13|d'
+[PASS] D1: gcd(a,91)=7 > 1, so THM-2323 (31) FAILS and (40) blocks any unit edge inside the c2-multiple lattice
+[PASS] D2: pair A=91, B=325416, B-A=m2*c3 with m2=1925 = a*bracket, bracket=275 unit mod 91, 7|m2, 13 not|m2
+[PASS] D2: A,B common-atom shape: nu13(A)=nu13(B)=1=b, shared root character 7 mod 13
+[PASS] D3: all 342 admissible m1 in [1,399], 7 not|m1: trichotomy delivers a grade/char-retentive 91-unit c3 edge with a word-marked endpoint
+D verdict: on the concrete 7|a instance the composition never fails;
+C = A + m1*c3 is the non-c2-multiple escape demanded by THM-2323 (40)
+exactly when 13|m1 forces the pivot (C is not divisible by d'=13 times
+the lattice step, i.e. C sits outside the c2-multiple affine coset).
+
+========================================================================
+FINAL VERDICT
+========================================================================
+REFUTATION FAILED on all attack modes: the MSG-2153 two-colour
+trichotomy SURVIVES, subject to statement repairs (scope = positive-
+return middle-owner word strata of the 150 strict rows; the 7|a branch
+needs the observation that THM-2323 S7.2's fibre construction is
+unconditional and only (39)'s unit conclusion uses (31); the unit edge
+has exactly ONE word-marked endpoint in the 7|a branch, not two).
+ALL CHECKS PASSED
