@@ -2149,6 +2149,17 @@ corner, and the explicit grade-three root-four `m=1` edge. Normal and
 optimized outputs byte-match and end in `PASS`. The theorem closes
 primitive-colour selection, not the temporal owner/deep intertwiner or a row.
 
+### lrc14_delayed_owner_handoff_graft_thm2478.out
+
+Exact companion for **THM-2478, PROVED + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED**. It verifies whole-handoff BV retention of old endpoint
+drift and root service, all twelve future collision-colour grafts on a
+Boolean-before-DFT stalk, full-stalk target neutrality, the sharp deep-sheet
+rebase obstruction, and an exact positive-aggregate/zero-owner-drift tensor
+hostile. Normal and optimized runs byte-match and reproduce the stored
+`PASS` transcript. The theorem aligns finite character labels across two
+scales; it does not identify roots, `X`, `m`, addresses, or exclude a row.
+
 ### lrc14_first_collision_abel_germ_thm2505.out
 
 Exact companion for **THM-2505, PROVED + VERIFIED-EXACT + INDEPENDENTLY

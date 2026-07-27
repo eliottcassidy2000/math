@@ -2,7 +2,7 @@
 id: THM-2478
 title: "Delayed owner-handoff graft and deep-sheet rebase boundary"
 status: >
-  CLAIMED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING. A fixed
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. A fixed
   positive owner-to-word block may be delayed and inserted into any
   already nonzero endpoint-drift/common-root-service packet. On the old
   oriented root base it is one Boolean root-constant, target-neutral
@@ -44,7 +44,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2478 -- delay the whole owner handoff, not only its terminal word
 
-**CLAIMED + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2466 delays one positive terminal word after fixing endpoint drift and
 root service.  Its semantic application assumed that both fixed packets were
@@ -451,8 +451,22 @@ The two phases are respectively
 
 Here take the probe root `r=0`; for general `r` the two displayed probe
 arguments differ by `1/13`.  At the strict `1/14` danger radius with `r=0`,
-the first is dangerous and the second is safe.  Hence no deep-root map
-depending only on `z` can replace (23).  A
+the first is dangerous and the second is safe.  Thus the probe on the
+natural-extension stalk is not measurable with respect to `sigma(z)`.  In
+particular there is no universal sheet-free factorization
+
+```text
+d_1(C(z+a)/13^L-r/13)=delta(z),
+```
+
+nor an identity
+
+```text
+P^L(B Delta_(C,r))(z)=delta(z)P^LB(z)
+```
+
+valid for every ancestry weight `B`.  Special weights may of course factor,
+and the transferred average in (23) is itself a function of `z`.  A universal
 future-owner rebase must retain the ancestry residue (25), exactly the kind
 of sheet coordinate isolated in THM-2471 Section 7.
 
@@ -644,11 +658,17 @@ The dependency-free `Fraction` companion:
 - tests the sheet-free and sheet-essential sides of (23)--(26); and
 - reproduces the exact `21/742586` aggregate-drift/owner-loop hostile.
 
-Both runs must reproduce
+Both runs reproduce
 
 ```text
 05-knowledge/results/lrc14_delayed_owner_handoff_graft_thm2478.out
 ```
 
-byte-for-byte.  Promotion to proved canon remains contingent on an independent
-hostile audit of the temporal orientation and collision-base normalization.
+byte-for-byte.  An independent hostile audit rederived the direct-graft BV
+lemma, full Boolean-stalk multiplier normalization, fixed-component all-colour
+argument, time/charge cocycle, natural-extension nonmeasurability boundary,
+and the exact `L^2(lambda)` representation obstruction.  It separately ran
+the companion normally and under `-O`, reproduced the stored transcript and
+both hashes, and accepted the explicit scope boundary that finite character
+labels align while the old/future root fibres, `X`, `m`, and relation address
+do not.

@@ -150,16 +150,14 @@ complement (THM-2356 kernel `28,393`; THM-2363/THM-2368 remain typed sidecars).
 THM-2440 gives the a.e./literal two-comb split `15/182` versus `15/196`; THM-2441 makes rational delayed clocks finite. THM-2445/2442 give `24` word-restored cells, and THM-2452 copies one of `128` masks before reselecting fresh `X` and `91`-unit `m`.
 THM-2449/2456 classify the mixed-zero locus as an averaged root offset; THM-2457 turns supplied root service into an atom graph. THM-2459 retains drift and service in at most four atoms (`D_0/63001`, `M_0/16384`); THM-2460 copies an independently retained word.
 THM-2461 makes the word prescribed-time, separates owner/deep roots, and proves repair is off-diagonal with one target-active first-failure role. THM-2466 then retains both observables in any fixed positive sufficiently delayed word on a supplied owner-supported common root base, with floors `mu(Q)^2 D_0/252004` and `mu(Q)M_0/32768`.
-THM-2471/2474 supply and saturate collision colours; THM-2505 encodes depth by
-an Abel zero. Fixed evaluations lose temporal/deep copies; THM-2506 saturates
-all 72 stalk modes but affine `13`-primary pushforwards vanish.
+THM-2471/2474 saturate collision colours; THM-2478 grafts a future owner and every future colour onto the old drift, but the new leg is neutral and rebasing loses the deep sheet. THM-2505 encodes depth by an Abel zero; fixed evaluations lose temporal/deep copies. THM-2506 saturates all 72 stalk modes but affine `13`-primary pushforwards vanish.
 THM-2502/2503/2504 show tournaments and sidecar-free holonomy are not target
 currents. THM-2458's hostile is physically realized
 by THM-2462. THM-2464 proves: `lambda=1` clean charts force the linked blocker
 safe, `lambda=2` is phase-before-speed universal, and fixed delays work iff the
 joint clock cell has interior. Next: intertwine the owner-collision stalk with
 the endpoint/deep current, prove owner-loop drift, or exclude a semantic joint
-cell. Owner-collision service and delayed-word mixing are no longer missing.
+cell. Owner-collision service, future semantic coupling, and delayed-word mixing are no longer missing; scale/sheet transport is.
 THM-2479 gives each positive middle-owner word a word-marked `91`-unit edge;
 THM-2334's typed-row variance has all `168` nonzero twists positive. Address/gain participation and terminal phase remain; no row is removed.
 Ledger: `165`.
