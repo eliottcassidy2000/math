@@ -1,0 +1,209 @@
+﻿
+==============================================================================
+SECTION 0 -- base certificates (symbolic identities in QQ[x,y,z])
+==============================================================================
+[PROVED] E_x(x; F(x,y,z)) == 0 identically              (x-core certificate)
+[PROVED] P_r(b-y; F(x,y,z)) == 0 identically            (r-core certificate)
+[PROVED] Q_z(z; F(x,y,z)) == 0 identically              (z-core certificate)
+[PROVED] disc_X E_x = -4 S^2 L
+[PROVED] disc_R P_r = -2916 a^2 L = -4 (27a)^2 L
+[PROVED] disc_W Q_z = -4 L M^2,  M/27 = sqrt((729*a**3*b**3*c**4 + 4374*a**3*b**2*c**3 + 8748*a**3*b*c**2 + 5832*a**3*c - 729*a**2*b**4*c**3 - 2754*a**2*b**3*c**2 - 2268*a**2*b**2*c + 648*a**2*b + 27*a*b**6*c**3 + 297*a*b**5*c**2 + 360*a*b**4*c - 268*a*b**3 - 9*b**7*c**2 - 28*b**6*c + 28*b**5)**2)
+         => all three coordinate cubics obey disc = -4 (square)^2 L  (level-1 law)
+[PROVED] det J_F = -2
+[PROVED] L irreducible over QQ
+
+==============================================================================
+SECTION 1 -- certified fiber section Y(x), Z(x) and the norm objects
+==============================================================================
+r(x) = 3*a*x*(9*a*c*x - b*x + 2)/(12*a*x**2 - b**2*x**2 + b*x + 2)
+[PROVED] F(x, Y(x), Z(x)) == (a,b,c) mod E_x(x): the generic middle fiber is
+         the graph w |-> (w, Y(w), Z(w)) over the roots of E_x (off x=0, Yden=0)
+[PROVED] L(x,Y,Z) = Mnum(x)/(x^4 Yden(x)^4),  deg_x Mnum = 13
+
+==============================================================================
+SECTION 2 -- TASK 1: the second-level Jelonek factor L_2 (exact)
+==============================================================================
+pseudo-reduction: L^11 * Mnum = Q*E + Rm,  deg_x Rm = 2
+N := Res_x(E, Rm) exact; 14719 terms  [t=60s]
+[PROVED] G := Res_x(E, Yden) = 8 a^2 S^2  (the level-1 disc square factor S
+         returns as the section-collision norm)
+exact factorization: N = L^22 * c^4 * G^4 * (kappa * L_2)
+kappa = 1/4   (so Res_x(E,Rm) = kappa L^22 c^4 G^4 L_2 exactly)
+L_2: primitive integer polynomial; total degree 25; degrees (a,b,c)=(14,21,12);
+     361 terms; lex-leading term 3^21 * a^14 * c^11
+[PROVED] L_2 irreducible over QQ:
+   content_a(L_2) = 1 (no a-free factor) and the exact slice L_2(a,5,7) keeps
+   full degree 14 and is QQ-irreducible; a factorization L_2 = G*H with
+   deg_a G, deg_a H >= 1 would slice nontrivially.  Over C: closure(F(Z(L)))
+   is irreducible and Q-defined, so its equation is a Q-rational irreducible
+   factor of L_2 = L_2 itself.
+forward points  s in Z(L) -> t=F(s):  [asserting L(s)=0 and L_2(t)=0]
+   s=(-1/4, 1, 20/27): L_2(F(s)) = 0
+   s=(2/3, 3, 1/3): L_2(F(s)) = 0
+   s=(-7/4, 2, 16/49): L_2(F(s)) = 0
+   s=(-2, 5, -3): L_2(F(s)) = 0
+   s=(-11/4, 4, 24/121): L_2(F(s)) = 0
+   s=(5/432, 1/2, 56/25): L_2(F(s)) = 0
+   family point s=(0,2,1/2) -> t=(33/2,2,0): L_2(t)=0, L(t)=260 != 0
+   family point s=(1,4,0) -> t=(1280,772,-10): L_2(t)=0, L(t)=-23184 != 0
+   3 generic off-points have L != 0 and L_2 != 0  [OK]
+[PROVED] closure(F(Z(L))) = Z(L_2):
+  (i)   wherever a generic fiber point lies on Z(L), the certified section makes
+        Mnum vanish at a root of E, so N(t)=0: F(Z(L))~ lies in
+        Z(N) = Z(L) u Z(c) u Z(a) u Z(S) u Z(L_2);
+  (ii)  F(Z(L))~ is irreducible of dim 2 (Z(L) irreducible; F finite-to-one by
+        the THM-2546 fiber law), hence inside ONE component;
+  (iii) at t = F(1,4,0) = (1280,772,-10): L,a,c,S all nonzero, L_2(t)=0;
+        so the component is Z(L_2), and dimensions force equality.
+NORM LAW [PROVED by root-product identities + the exact factorization of N]:
+     prod_{s in F^{-1}(t)} L(s)  =  L_2(t) / (64 L(t))                    (*)
+   (prod Mnum(w_i) = Res(E,Rm)/L^35;  prod w_i^4 = 16c^4/L^4;
+    prod Yden(w_i)^4 = G^4/L^8;  Res(E,Rm) = kappa L^22 c^4 G^4 L_2, kappa=1/4.)
+   50-digit numeric cross-check of (*) at t=(2, 5, 7)  [OK]
+   50-digit numeric cross-check of (*) at t=(1, 1, 1)  [OK]
+(L_2 pickled to 05-knowledge/results/keller_L2_polynomial_opus_20260728.pkl)
+
+==============================================================================
+SECTION 3 -- TASK 1b: S_{FoF} = Z(L) u Z(L_2)  (exact spot verification)
+==============================================================================
+Containment [standard: properness composes]:
+   S_{FoF} subseteq S_F u F(S_F) = Z(L) u Z(L_2)      (THM-2473 + Section 2).
+S_{FoF} is closed of pure codim 1 (Jelonek), so each component equals Z(L) or
+Z(L_2); membership is settled by one exact fiber-drop witness per component
+(etale + count < 9 => non-proper: the THM-2473 (3) argument).  Level-1 counts
+use the PROVED THM-2546 law: 3 off Z(L); 1 on Z(L), T!=0; 0 on L=T=0.
+   t1=(Fraction(-1, 4), Fraction(1, 1), Fraction(20, 27)) on Z(L)\Z(L_2): middle fiber = the survivor q_s=(Fraction(5, 6), Fraction(-3, 2), Fraction(7, 1)),
+      L(q_s)=25529/24 != 0  =>  #fiber(FoF)(t1) = 3 < 9      [DROP on Z(L)]
+   t2 on Z(L_2)\Z(L): t=(Fraction(1280, 1), Fraction(772, 1), Fraction(-10, 1)): r=1 middle points on Z(L) (T=0 among them: 0) => #fiber = 7
+      the on-L middle point is q=(1,4,0): L(q)=0, T(q)=4 => inner fiber 1;
+      7 = 3+3+1 exactly                                  [DROP on Z(L_2)]
+   t3 off both:       t=(Fraction(1, 1), Fraction(1, 1), Fraction(1, 1)): r=0 middle points on Z(L) (T=0 among them: 0) => #fiber = 9
+   t4=(Fraction(4, 27), Fraction(4, 3), Fraction(1, 1)) on {L=T=0}: level-1 fiber EMPTY => #fiber(FoF)=0 (omitted curve persists)
+[VERDICT Task 1] TOWER PREDICTION CONFIRMED:
+   S_{FoF} = Z(L) u Z(L_2), with exact drop pattern 3 / 7 / 9 / 0 at the four
+   witnesses.  L_2 is PROVED exact (irreducible, deg 25, box (14,21,12),
+   361 terms) and prod_fiber L = L_2/(64 L).
+
+==============================================================================
+SECTION 4 -- TASK 2: disc tower on the degree-9 x-eliminant of F o F
+==============================================================================
+Per-slice construction (exact over QQ):
+   E9(xi; a) = primitive_a,xi part of Res_w( E_x(w; a,b0,c0), Chat(xi,w) ),
+   Chat = (w^4 Yden^4) * E_x(xi; q(w)),  q(w) = (w, Y(w), Z(w)).
+Its 9 roots are the x-coordinates of the FoF fiber (product over the middle
+fiber of the inner x-cores).
+--- slice (b,c) = (5, 7) ---
+   deg_xi = 9; xi^8 coefficient == 0 (trace-zero depressed structure persists)
+   lead_xi(E9) = (-1) * L_2|slice   [x-lead IS the level-2 Jelonek factor]
+   multiplicity of L_2 in disc: 1 (ODD);  multiplicity of L: 8 (EVEN)
+   sqf(disc * L_2|slice): factor multiplicities [(2, 85), (8, 2)] -> ALL EVEN: True (const class 17179869184)
+   sqf(disc * L * L_2 |slice): the ONLY odd factor is L|slice (mult [9])
+--- slice (b,c) = (2, 3) ---
+   deg_xi = 9; xi^8 coefficient == 0 (trace-zero depressed structure persists)
+   lead_xi(E9) = (-1) * L_2|slice   [x-lead IS the level-2 Jelonek factor]
+   multiplicity of L_2 in disc: 1 (ODD);  multiplicity of L: 8 (EVEN)
+   sqf(disc * L_2|slice): factor multiplicities [(2, 85), (8, 2)] -> ALL EVEN: True (const class 274877906944)
+   sqf(disc * L * L_2 |slice): the ONLY odd factor is L|slice (mult [9])
+--- slice (b,c) = (-1, 2) ---
+   deg_xi = 9; xi^8 coefficient == 0 (trace-zero depressed structure persists)
+   lead_xi(E9) = (-1/4) * L_2|slice   [x-lead IS the level-2 Jelonek factor]
+   multiplicity of L_2 in disc: 1 (ODD);  multiplicity of L: 8 (EVEN)
+   sqf(disc * L_2|slice): factor multiplicities [(2, 85), (8, 2)] -> ALL EVEN: True (const class 1099511627776)
+   sqf(disc * L * L_2 |slice): the ONLY odd factor is L|slice (mult [9])
+[VERDICT Task 2] Prediction "odd part of disc = L * L_2 (each odd)" is
+HALF-REFUTED: on all three independent exact slices
+     disc_xi(E9) = c0 * (H * L^4)^2 * L_2
+so the odd part is L_2 ALONE; L enters to EVEN order 8.  Function-field
+mechanism (pieces proved above; disc(fg)=disc f disc g Res(f,g)^2):
+     prod_i disc(E_i) = (-4)^3 NS^2 * NL == -NL == -L_2/L      (mod squares, by (*))
+     [prod_{i<j} Res(E_i,E_j)]^2 == -L                          (mod squares: the
+         cross-resultant is antisymmetric in the middle roots, so its square
+         carries the middle-cubic discriminant class -4S^2L == -L)
+     product: (-L_2/L)(-L) = L_2  (mod squares).
+The middle level's -L class cancels against the norm's 1/L: a conductor-
+discriminant mechanism.  Level-k expectation (NOT asserted): odd part = L_k alone.
+
+==============================================================================
+SECTION 5 -- TASK 3: -(det J)^2 law and lead pattern for W1, W2
+==============================================================================
+[PROVED] det J_W1 = det J_W2 = -2
+[PROVED] <W1-(a,b,c)> = <F-(a,b,c-a^2)>:  W1_3-c = (F3-(c-a^2)) + (F1-a)(F1+a)
+[PROVED] <W2-(a,b,c)> = <F-(a-bc+c^3, b-c^2, c)>  (two generator identities;
+         third generator shared)  => W-fibers are tau-translates of F-fibers
+[PROVED] W1: tau o W1 = F; all three cores are tau-pullbacks
+   (r-core certificate uses the transformed anchor r = (b o tau) - y);
+   L_W1 = L o T^{-1}  (target covariance CONFIRMED);
+   disc_X E = -4 (S o tau)^2 L_W1;  disc_R P = -2916 (a o tau)^2 L_W1;
+   disc_W Q = -4 (M o tau)^2 L_W1          [the -(det J)^2 = -4 law, all cores]
+   leads {L_W1, -2, 8} = {L, -|detJ|, |detJ|^3}  [lead pattern CONFIRMED]
+[PROVED] W2: tau o W2 = F; all three cores are tau-pullbacks
+   (r-core certificate uses the transformed anchor r = (b o tau) - y);
+   L_W2 = L o T^{-1}  (target covariance CONFIRMED);
+   disc_X E = -4 (S o tau)^2 L_W2;  disc_R P = -2916 (a o tau)^2 L_W2;
+   disc_W Q = -4 (M o tau)^2 L_W2          [the -(det J)^2 = -4 law, all cores]
+   leads {L_W2, -2, 8} = {L, -|detJ|, |detJ|^3}  [lead pattern CONFIRMED]
+   W1: 3 random exact fiber points annihilated by the pulled-back x-core [OK]
+   W2: 3 random exact fiber points annihilated by the pulled-back x-core [OK]
+[VERDICT Task 3] PROVED for BOTH members (W2 is explicit in THM-2465):
+   disc = -4 (square)^2 * L_W for each of the three coordinate cores, with
+   L_W = L o T^{-1} (target covariance), and lead pattern {L_W, |detJ|, |detJ|^3}
+   = {L_W, 2, 8}, det J_W = -2 for both.
+
+==============================================================================
+SECTION 6 -- TASK 4: composite leads of the degree-9 F o F cores
+==============================================================================
+Canonical normalization: level-2 core of coordinate v = prod over the middle
+fiber of the level-1 core, coefficients in QQ(t).  Function-field lead
+IDENTITIES (immediate from the level-1 constant leads + the norm law (*)):
+   x: lead = prod_i L(q_i)      = L_2/(64 L)   [NONconstant: level-2 Jelonek]
+   y: lead = prod_i 2           = 8   = |det J_F|^3
+   z: lead = prod_i 8           = 512 = |det J_F|^9
+Below: primitive-integer normalizations at exact rational targets.
+target           coord  deg  primitive lead        factorization
+  (1, 1, 1)       x     9    951326441195        {5: 1, 13: 1, 3203: 1, 4569401: 1}
+  (1, 1, 1)       y     9    1600                {2: 6, 5: 2}
+  (1, 1, 1)       z     9    2097152000000       {2: 27, 5: 6}
+      x-lead / (L_2/(64L))(t) = 1600   (pure content: the x-lead IS L_2/(64L))
+  (2, 3, 1)       x     9    18170226347837      {369539: 1, 49169983: 1}
+  (2, 3, 1)       y     9    3200                {2: 7, 5: 2}
+  (2, 3, 1)       z     9    2097152000000       {2: 27, 5: 6}
+      x-lead / (L_2/(64L))(t) = 800   (pure content: the x-lead IS L_2/(64L))
+  (Fraction(1, 2), 1, 3)  x     9    1314179742367129401  {3: 4, 16224441263791721: 1}
+  (Fraction(1, 2), 1, 3)  y     9    716800              {2: 12, 5: 2, 7: 1}
+  (Fraction(1, 2), 1, 3)  z     9    49431509510018564096000000  {2: 63, 5: 6, 7: 3}
+      x-lead / (L_2/(64L))(t) = 45875200   (pure content: the x-lead IS L_2/(64L))
+  (3, -2, 2)      x     9    1916839481621917    {313: 1, 6871: 1, 891294979: 1}
+  (3, -2, 2)      y     9    2432                {2: 7, 19: 1}
+  (3, -2, 2)      z     9    7023616             {2: 10, 19: 3}
+      x-lead / (L_2/(64L))(t) = 19/16   (pure content: the x-lead IS L_2/(64L))
+observed integral-coordinate leads:  y: [1600, 3200, 716800, 2432]   z: [2097152000000, 2097152000000, 49431509510018564096000000, 7023616]
+[VERDICT Task 4] The integral coordinates y, z DO have constant canonical
+leads at level 2, but they are NOT powers of 4 = det J_{FoF}:
+   canonical y-lead = 8 = 2^3 = |det J_F|^3,  canonical z-lead = 512 = 2^9;
+i.e. powers of |det J_F| = 2, CUBED per tower level (lead_{k+1} = lead_k^3,
+the norm of a constant over the degree-3 middle fiber).  Primitive-integer
+leads at targets equal these up to small content (THM-2546 referee's lead-
+statistic mechanism; observed above).  The x-lead is NONconstant = L_2/(64 L):
+the level-2 Jelonek factor is the level-2 x-lead, echoing lead(E_x) = L.
+Prediction "powers of 4" REFUTED; corrected tower law recorded.
+
+==============================================================================
+SUMMARY
+==============================================================================
+(1) [PROVED ] L_2 exact: irreducible, total degree 25, degrees (a,b,c) =
+             (14,21,12), 361 integer terms, lead 3^21 a^14 c^11;
+             closure(F(Z(L))) = Z(L_2);  NORM LAW  prod_fiber L = L_2/(64 L);
+             S_{FoF} = Z(L) u Z(L_2) with exact drop witnesses 3 / 7 / 9 / 0.
+(2) [PROVED on 3 exact QQ-slices + function-field mechanism]
+             disc of the degree-9 x-core: odd part = L_2 ALONE;
+             disc = c0 (H L^4)^2 L_2;  the predicted L-factor cancels between
+             tower levels (conductor-discriminant mechanism).
+             Prediction "L*L_2 both odd": HALF-REFUTED (L is even).
+(3) [PROVED ] W1 and W2: all three coordinate cores obey disc = -4 (sq)^2 L_W,
+             L_W = L o T^{-1}; lead pattern {L_W, |detJ|, |detJ|^3}; detJ = -2.
+(4) [PROVED identities + exact observations] level-2 canonical leads:
+             x: L_2/(64L) (nonconstant);  y: 8 = 2^3;  z: 512 = 2^9;
+             powers of |det J_F| = 2 cubed per level, NOT powers of
+             det J_{FoF} = 4.
+SCOPE: fixed sporadic F, F o F, W1, W2 only; no JC/DC/G1/LRC claim.
+Total runtime 134 s.

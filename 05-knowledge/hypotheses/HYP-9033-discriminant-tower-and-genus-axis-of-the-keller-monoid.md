@@ -148,6 +148,28 @@ place to HUNT for a JC(2) counterexample instead.
   generically.
 - P5: the genus axis governs the remaining JC(2) strata.
 
+## Scorecard (same session, keller_disc_tower_opus_20260728)
+
+P1 RESOLVED, half-refuted by a BETTER law: L_2 = equation of F(Z(L))
+computed and PROVED (irreducible, degree 25, degrees (14,21,12), 361
+terms); S_(F o F) = Z(L) u Z(L_2) CONFIRMED with exact fiber-drop
+witnesses (9/7/3/0). But the disc odd part at level 2 is L_2 ALONE --
+L appears to EVEN multiplicity 8: the middle level's -L class cancels
+against the norm law prod_(fiber) L = L_2/(64 L) (a conductor-
+discriminant mechanism). Corrected tower law: **odd part of disc at
+level k = L_k alone; the level-k escape-coordinate lead IS L_k (up to
+64L normalization); the depressed (trace-zero) structure persists at
+depth 2** (xi^8 coefficient identically zero -- induction candidate
+for all F^k). P2 CONFIRMED on BOTH tame conjugates W1 AND W2:
+disc = -4 (square)^2 L_W with L_W = L o T^(-1) (full target
+covariance) and lead pattern {L_W, -|det J|, |det J|^3} -- the law is
+a gauge-covariant of the ATOM. The composite-lead prediction is
+REFUTED as posed and replaced: integral-coordinate leads iterate by
+CUBING (8 -> 512 = 2^9; lead_(k+1) = lead_k^3), tied to |det J_F| = 2
+per-atom, not to det of the composite. P4 consistent (2 components at
+grade 9). Next: level 3 (is the degree-27 disc odd part L_3 alone,
+with L_3 the norm-transfer of L_2?).
+
 ## Loss ledger
 
 The saturated cuspidal law is proved for the sporadic `F` only; the raw
