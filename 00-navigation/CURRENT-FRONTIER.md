@@ -82,84 +82,48 @@ Its indispensable coordinates are primitive parameter, integral columns, transve
 Finite rank-twelve boxes and rank-eleven stars remain undecided (HYP-8871).
 Exactly `165` rows survive in `nu_7(c_3)<=M`; THM-2417/2426/2436 empty the
 complement (THM-2356 kernel `28,393`; THM-2363/THM-2368 remain typed sidecars).
-THM-2440 gives the a.e./literal two-comb split `15/182` versus `15/196`; THM-2441 makes rational delayed clocks finite. THM-2445/2442 give `24` word-restored cells, and THM-2452 copies one of `128` masks before reselecting fresh `X` and `91`-unit `m`.
-THM-2449/2456 classify the mixed-zero locus as an averaged root offset; THM-2457 turns supplied root service into an atom graph. THM-2459 retains drift and service in at most four atoms (`D_0/63001`, `M_0/16384`); THM-2460 copies an independently retained word.
-THM-2461 makes the word prescribed-time, separates owner/deep roots, and proves repair is off-diagonal with one target-active first-failure role. THM-2466 then retains both observables in any fixed positive sufficiently delayed word on a supplied owner-supported common root base, with floors `mu(Q)^2 D_0/252004` and `mu(Q)M_0/32768`.
-THM-2471/2474 saturate collision colours; THM-2478 adds a neutral future owner while rebasing loses the deep sheet. THM-2505 loses temporal copies and THM-2506's affine `13`-pushforwards vanish.
-THM-2507--2537 give paths/skew, owner-phase walls, clock/selector flow, and
-scalarization. THM-2539 gives `216` boundary incidences on full phase support;
-THM-2543 removes that phase split at the labelled horizontal level via an
-augmentation-or-norm dichotomy. THM-2542 computes the nonzero root-chart class
-`7a`, its degree-13 trivialization and abstract C91 mapping torus; its exact
-hostile leaves every semantic vertical edge empty. THM-2540 transports an
-arbitrary nonnegative sidecar covariantly to the empty head, not to an arrival.
-THM-2545 gives the exact word-stratified Hall criterion after deleting the
-diagonal: separate root margins and even ubiquitous target activity do not
-force arrival. THM-2548 proves that the seven-step C91 transfer retains every
-root-charged horizontal mode, but has vertical semantic degree zero; its exact
-conditional architecture is a neutral-gain cut followed by the independent
-Hall cut. THM-2549 sharpens the current stopping boundary. On all `165` rows a
-positive selected empty head has a same-base strictly later literal
-owner-to-word intersection at one common delay, yet every currently proved
-positive later field on that base belongs to the positive-depth pullback
-algebra. That algebra is old-target-neutral and old-root-constant, cannot
-define an equivariant later root selector, and therefore induces only a
-cemetery Hall table with zero diagonal. The physical arrival field remains
-unknown. Conversely, for a specified target-active unit role, the retained
-top ancestry digit and its base-dependent carry recover the selected head
-as an old-action ancestry root. This collapses the Hall cut only after a
-semantic intertwiner identifies the genuine later-root map with that chart;
-the future immediate root is a distinct neutral coordinate. THM-2549 is not
-a scalar-cover hostile. THM-2547 is only a
-**FINITE-EXACT EXTERNAL CONTROL** after MISTAKE-281, and its `delta_2` hostile
-has `108/432` zero pairings in each convention; it retains no physical
-target/owner ancestry.
+THM-2440--2466 close the local comb, endpoint, complete-mask, drift/service,
+word-copy, and delayed-mixing debts on supplied common root bases.  THM-2461
+isolates one target-active first-failure role, while THM-2471--2539 add its
+collision colours, ancestry/clock carriers, scalar walls, and `216` boundary
+incidences.  These results retain strong observables but do not identify the
+later semantic root.
 
-THM-2551 proves that horizontal C91 transfer preserves the transverse
-all-unit projector kernel on the abstract product; THM-2552's candidate
-analysis finds the lawful common-future gain flat while freely composable
-positive walls lose their coherent face; THM-2553's candidate audit localizes
-unweighted rotation duty only in augmentation, not the weighted target jet.
-None supplies the semantic root intertwiner or common directed 2-cell.
+The exact stopping complex is now small.  THM-2545 gives the word-stratified
+Hall criterion; THM-2548 retains every root-charged horizontal C91 mode but
+has semantic vertical degree zero.  THM-2549 supplies positive same-base
+chronology on all `165` rows, yet its future pullback algebra is old-target
+neutral/root-constant and yields only the cemetery Hall table.  THM-2555
+classifies the omitted natural-extension sheet: top digit plus old carry
+recovers the old head, whereas the immediate future digit plus new carry is
+a distinct root; invariant gauges and offset-one cylinders make the gap
+sharp.  THM-2547 remains only a **FINITE-EXACT EXTERNAL CONTROL** after
+MISTAKE-281, not physical target/owner ancestry.
 
-THM-2550 is a **PROVED CANDIDATE + VERIFIED-EXACT** positive control on one
-canonical typed row: both old owner-loop drift tensors are nonzero and its
-lawful response table is non-replica with all `5,184` primitive cut modes.
-It is not a scalar-cover row and does not construct the selected-head/later-
-target ancestry map; its highest-value use is as a nondegenerate test input
-for the THM-2548 gain automaton or THM-2549 sheet-retaining bridge.
+The holotopy audits explain why horizontal success does not fill that gap.
+THM-2551 proves the abstract transfer preserves the all-unit projector
+kernel.  THM-2552 proves lawful common-future gain is a coboundary and that
+independently positive walls lose a genuinely three-edge coherent face.
+THM-2553 localizes unweighted rotation duty only in augmentation, not the
+weighted jet phase.  THM-2556 gives the first non-product square:
+`duty curvature + fibre covariance`; the canonical duty has all `168`
+nontrivial characters and `156` live modes per gain, but a nonunit section
+cancels it exactly.  Its exact covariance norm turns the open bridge into a
+quantitative near-fibre-uniformity test, not a proof.
 
-THM-2555 classifies that sheet bridge: the old charged digit plus physical
-carry recovers the old head, while the future digit plus its new carry
-recovers a later root; an invariant gauge and a positive offset-one cylinder
-separate them sharply. THM-2557 gives the smallest exact THM-2550(B)/2548
-composition. On the rank-72 doubly centered lattice, transfer is injective
-with Smith form `1^66 direct-sum 13^6` and image the kernel of six mod-13
-first moments. The typed signal survives every nonzero horizontal slope but
-is signed, outside the Hall cone, and supplies no actual `(head,later-root)`
-graph.
+THM-2557 transfers the nonzero THM-2550(B) interaction injectively on the
+rank-72 doubly centred lattice (`SNF 1^66 + 13^6`), but the current is signed
+and outside the Hall cone.  THM-2558 forces the old target-active role on
+`428/630` visible root necklaces; `202` middle-layer necklaces are sharp
+blind controls.  THM-2550 itself is a typed non-cover control and its drift
+and large-clock interaction are different packets.
 
-THM-2558 shows the all-slope selector hits the unique old target-active role
-on any positive one of `428/630` visible root necklaces; `202` sharp blind
-middle-layer necklaces remain. The next target is to exclude those masks by
-physical six-comb constraints or carry that specific role genuinely later
-with its sheet, carry, word, and common root gauge intact. More horizontal
-nonvanishing addresses neither obligation.
-
-THM-2502/2503/2504 show tournaments and sidecar-free holonomy are not target
-currents. THM-2458's hostile is physically realized by THM-2462. THM-2464
-proves: `lambda=1` clean charts force the linked blocker safe, `lambda=2` is
-phase-before-speed universal, and fixed delays work iff the joint clock cell
-has interior. Next: force THM-2461's unique target-active unit role `k_a` on
-positive selected-head mass, retain its top ancestry digit/carry, and prove
-the cross-horizon root intertwiner; or build THM-2548's directed gain
-automaton on the actual `165` packets and then use THM-2554's displacement
-ledger/Hall alternatives. Service, mixing, chronology, old-sheet alignment,
-and horizontal transport are closed; semantic vertical role forcing,
-future-root identification, and source/deep ancestry are not.
-THM-2479 gives each positive middle-owner word a word-marked `91`-unit edge;
-THM-2334's typed non-cover has every nontrivial twist differ from `H(0)`.
-Address/gain, terminal phase, and the directed semantic 2-cell remain; no row is removed.
+Next: eliminate the `202` masks using physical six-comb constraints, or
+retain the forced role through the sheet/carry/word on one common root gauge;
+then construct the directed chart x semantic x ancestry 2-cell and apply
+THM-2545.  Service, mixing, chronology, old-sheet alignment, and horizontal
+transport are closed; future-root identification and vertical semantic
+gluing are not.  More untyped nonvanishing is not progress.  No row is removed.
 Ledger: `165`.
 
 ### Independent routes that remain live
