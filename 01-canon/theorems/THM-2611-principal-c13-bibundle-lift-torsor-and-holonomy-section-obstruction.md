@@ -2,7 +2,7 @@
 id: THM-2611
 title: "Principal C13 bibundle lift torsor and holonomy section obstruction"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   A deterministic faithful lift of a quotient which has forgotten a free
   C13 orbit needs at least thirteen sidecar states, and equality makes the
   sidecar a C13 torsor.  Equivariant identifications of two fixed-action
@@ -34,7 +34,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2611 -- the missing chronological object is a principal `C_13` bibundle
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The number thirteen occurs three times at the current root-holotopy
 frontier.  THM-2607 has thirteen gauges after its rail correction kills the
@@ -321,4 +321,13 @@ check uses exact integer arithmetic and an explicit optimized-mode guard.
 Normal and optimized runs byte-match the stored transcript after LF
 normalization.
 
-QED (candidate; independent hostile audit pending).
+QED.
+
+The independent hostile audit rederived the finite deterministic
+equivariant minimum, including its equality case; checked that
+`Iso_K(P,Q)` is a bitorsor rather than a free `K x K`-set; separated the
+thirteen fixed-action maps from the 156 semilinear maps; and independently
+verified the cyclic holonomy criterion, the `C_91` formulas, every
+application boundary, both optimized and normal transcripts, and the
+declared LF-normalized hashes.  It found no physical-ancestry promotion
+hidden in the proof.
