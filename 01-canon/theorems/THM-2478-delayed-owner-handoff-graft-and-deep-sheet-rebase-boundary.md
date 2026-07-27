@@ -333,6 +333,31 @@ Only after that physical construction take the finite transform in `s` in
 (15).  Hence (21) says that one old nonzero target/deep drift survives in
 every future collision colour on one Boolean-before-DFT stalk.
 
+There is an exact character-label corollary.  THM-2365 supplies an old
+nonzero finite component
+
+```text
+chi=(a,b,h),                    a!=0,
+
+(b,a+h)!=(0,0).                                     (21a)
+```
+
+Take `b(y)` in (17) to be the scalar root-base density of this fixed
+component.  Its integral is the nonzero coefficient `B(a,b,h)`.  Equations
+(20)--(21), with the error threshold chosen for this scalar coefficient,
+retain that **same** old component in every future collision colour.  In
+particular choose the future colour
+
+```text
+k=a.                                                 (21b)
+```
+
+The two-scale joint tensor then has diagonal equality of the printed
+character labels.  This is not an identification of the two root fibres and
+does not retain the same ordinary frequency `X`, deep multiplier `m`, or
+relation address.  The old `a` and future `k` live at the two scales displayed
+in (18); only their finite character labels have been aligned.
+
 The direct graft of Section 3 and the collision graft here have different
 semantic strengths.  Section 3 puts the literal old orbit point `T^Lx` in
 `E_j`.  Section 4 attaches a canonical future collision ancestry stalk whose
@@ -399,8 +424,10 @@ The two phases are respectively
 0,                    1/13 mod 1.                  (26)
 ```
 
-At the strict `1/14` danger radius, the first is dangerous and the second is
-safe.  Hence no deep-root map depending only on `z` can replace (23).  A
+Here take the probe root `r=0`; for general `r` the two displayed probe
+arguments differ by `1/13`.  At the strict `1/14` danger radius with `r=0`,
+the first is dangerous and the second is safe.  Hence no deep-root map
+depending only on `z` can replace (23).  A
 future-owner rebase must retain the ancestry residue (25), exactly the kind
 of sheet coordinate isolated in THM-2471 Section 7.
 
@@ -466,23 +493,44 @@ M_(P_omega)mathcal L^K M_e
 =mathcal L^K M_e M_(U^K P_omega-P_omega).           (31)
 ```
 
-On the positive handoff source, `eP_O=e` and `eP_omega=0` for
-`omega!=O`.  The source atom algebra therefore acts with rank one, while the
-arrival projections `U^KP_omega` can split the source into several positive
-temporal cells.  More precisely, on the handoff-weighted source space an
-onto operator intertwining the source and arrival representations exists
-only if
+Let
 
 ```text
-P_O(T^Kx)=1                         almost everywhere. (32)
+d lambda(x)
+ =rho^(-1)e(x)Q(T^Kx)dx
+```
+
+be the probability measure on the positive handoff source, and work on
+`L^2(lambda)`.  Suppose `eP_O=e` and `eP_omega=0` for `omega!=O`.  Define
+the two representations of the finite atom algebra by
+
+```text
+pi_src(P_omega)=M_(P_omega),
+
+pi_arr(P_omega)=M_(U^K P_omega).                    (32)
+```
+
+The source representation is scalar: `pi_src(P_O)=I` and all its other atom
+projections vanish.  The arrival projections can split the same source into
+several positive temporal cells.  There exists a bounded **onto** operator
+`S:L^2(lambda)->L^2(lambda)` satisfying
+
+```text
+S pi_src(a)=pi_arr(a)S
+```
+
+for every atom-algebra element `a` if and only if
+
+```text
+P_O(T^Kx)=1                         lambda-almost everywhere. (33)
 ```
 
 Indeed, for `omega!=O` the source projection is zero.  Intertwining would
 make the arrival projection annihilate the range; surjectivity makes that
-arrival projection zero.  Conversely, if (29) holds, both representations
-are the same scalar one.  THM-2461's positive terminal words lie in different
-truth states, so the nontrivial handoff is precisely on the non-intertwining
-side.
+arrival projection zero.  Summing the atom projections gives (33).
+Conversely, if (33) holds, both representations are the same scalar one and
+`S=I` works.  THM-2461's positive terminal words lie in different truth
+states, so the nontrivial handoff is precisely on the non-intertwining side.
 
 Aggregate `H`-drift also does not force drift on the owner loop from the
 finite tensor identities alone.  On `F_13^3`, put
@@ -490,7 +538,7 @@ finite tensor identities alone.  On `F_13^3`, put
 ```text
 H_O(r,s,t)=(1/4)1_(r-t=1),
 
-H_N(r,s,t)=(1/4)1_((r,s,t)=(1,1,0)).                (33)
+H_N(r,s,t)=(1/4)1_((r,s,t)=(1,1,0)).                (34)
 ```
 
 Both are nonnegative and their sum vanishes on `r=t`.  The owner tensor is
@@ -513,7 +561,7 @@ with `r-t=1`.  Hence
 D(H_O+H_N)
  =(1/16)(168/169)/13^3
  =21/742586
->0.                                                  (34)
+>0.                                                  (35)
 ```
 
 This is an exact hostile at the current nonnegative-tensor interface, not a
@@ -532,7 +580,7 @@ fixed old nonzero endpoint drift + old root service
 
 fixed old nonzero endpoint drift
   -> delay one canonical first-collision stalk
-  -> retain that drift in all twelve future collision colours.    (35)
+  -> retain that drift in all twelve future collision colours.    (36)
 ```
 
 The construction removes prior owner support as a prerequisite for adding a
