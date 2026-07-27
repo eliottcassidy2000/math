@@ -2,7 +2,7 @@
 id: THM-2607
 title: "Constant-six rail-boundary holonomy invoice"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On THM-2600's literal common-x q=0 carrier, 138 of the 162 positive
   constant-six middle rails have unit primitive Bockstein.  Their complete
   seven-clock choice polytope has 900 selectors; 891 have nonzero oriented
@@ -43,7 +43,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2607 -- constant-six rail-boundary holonomy invoice
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2602 shows that a root chosen separately at every chart contributes
 only a telescoping vertex coboundary.  THM-2600 contains a different object:
@@ -295,7 +295,7 @@ Multiplication by thirteen on `Z/91Z` has kernel `iota(F_13)`, and
 ```
 
 In particular it sends both `78` and `85` to the same edge `13`, whose
-clock image is `-1 mod 7`.  Positive time reverses the quotient-clock
+clock image is `-1 mod 7`.  One positive time step reverses the quotient-clock
 orientation and annihilates exactly the kernel component that paid the
 marker invoice.  Section 5 shows that the corresponding physical overlap
 also vanishes on the retained constant-six carrier.
@@ -449,4 +449,10 @@ All decisions are exact and every check raises under optimized Python.
 Normal and optimized executions byte-match the stored transcript after LF
 normalization.
 
-QED (candidate; independent audit pending).
+Two independent hostile audits rederived the selector polytope, marker
+histogram, gauge torsors, physical digit obstruction, chronological
+two-antecedent boundary, and the complete `C_91` mapping-cylinder normal
+form.  Both independently replayed normal and optimized execution against
+the stored transcript and recovered the declared LF hashes.
+
+**QED.**
