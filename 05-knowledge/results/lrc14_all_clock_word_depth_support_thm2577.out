@@ -1,0 +1,27 @@
+== THM-2577: all-clock word-depth support law ==
+
+== exact typed-row atoms ==
+   E: intervals=57072, mass=1882176/28589561
+   a: intervals=22478, mass=143103830843/5727632650740
+   b: intervals=131762, mass=4839079319/190921088358
+  ab: intervals=22018, mass=11009/2599051
+
+== exact support images ==
+  word={a}: disjoint at exponents [1, 2, 3]; exponent 4: equal 26-interval images of mass 6/7
+  word={b}: disjoint at exponents [1, 2, 3, 4, 5]; exponent 6: both images are the full circle
+  word={a,b}: disjoint at exponents [1, 2, 3, 4, 5]; exponent 6: both images are the full circle
+
+== arbitrary returned-subpacket controls ==
+  word={a}: first/middle/last positive subintervals pass
+  word={b}: first/middle/last positive subintervals pass
+  word={a,b}: first/middle/last positive subintervals pass
+
+abstract consequence:
+  f_K = 1_Q P^(K)1_E nonzero => supp(f_K) subset Q
+  image separation gives I_s=0 before the word depth
+  terminal image inclusion gives I_depth>0 for every such K
+  therefore r({a},K)=3 and r({b},K)=r({a,b},K)=5
+
+typed-row scope only; no physical current or LRC(14) row exclusion
+
+all exact checks passed
