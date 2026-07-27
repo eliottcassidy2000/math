@@ -1,0 +1,49 @@
+THM-2365 (10) deep-coloured a != 0 mode lines: walk endpoints and exact phase-cone feasibility,
+bare tensor H_E, canonical typed row (extension of the gated a = 0 sidecar)
+script=04-computation/lrc14_deep_mode_cone_opus_20260728.py
+machine=opus  date=2026-07-28
+
+[1] conventions and exact mode index set (module docstring is the full log; files override summaries)
+    w=(1, 14, 27, 40, 53, 66, 13, 2197, 742586); grafts k_a=14, k_c=27; A_j=1, A_a=169, A_c=57122
+    endpoint(a,lam,mu) = sum Hnum(r,s,t) zeta^(a r - lam s - mu t) = 13^4*T_DEN*B(a,-lam,-mu), THM-2365 (10)
+    per-chamber contribution c_i = len_i * phi_i(a) * V_i(lam,mu),  phi_i(a) = sum_r dc_i[r] zeta^(a r)
+    (r,s,t all marginalised on the COMMON chamber base before any aggregation: MISTAKE-281)
+    target of endpoint(a,lam,mu) is (-lam, a-mu) (THM-2365 (13)); zero-target pair on line a is (lam,mu)=(0,a)
+    AMBIGUITY (logged): task count '2,184 = 12 x 182' = TOTAL nonzero-target modes over all a in F_13
+    (13 x 168 = 2184, including the 168 a=0 modes already decided); new a != 0 nonzero-target modes: 12 x 168 = 2016;
+    zero-target modes (13, one per line) are flagged separately and never counted as drift mechanisms.
+    all 13 x 169 = 2197 modes are computed; a = 0 reproduces the sidecar (gate F)
+    floats route/describe only; every decision (endpoint zero test, cone class, event index) is exact
+
+[2] chamber partition (sidecar machinery, re-run)
+    f1 owner d(y): 2 generated breakpoints
+    f2 target-a blocker (13 shifts): 4394 generated breakpoints
+    f3 target-c blocker+probe (13 shifts, shared): 1485172 generated breakpoints
+    f4 rooted A_y: 28 generated breakpoints
+    f5 rooted C_y: 54 generated breakpoints
+    f6 rooted guard: 2 generated breakpoints
+    f7 rooted units 40/53/66: 318 generated breakpoints
+    distinct breakpoints = chambers: 1489966 (anchor PASS)
+    contributing chambers in supp d(y) = (13/14, 15/14): 212845 (anchor PASS)
+    [     0.9s] partition done
+
+[3] exact 1-D sweep (sidecar machinery, re-run; states indexed)
+    chambers walked: 212845; rooted snapshots: 19; states (rooted,ga,dc): 10998 (anchors PASS)
+    [     2.1s] sweep done
+
+[4] rooted N tables, state arrays, per-character V tables
+    rooted words proper, |supp P| in [3,10]: PASS (19 snapshots)
+    state arrays built; Vall (169 characters x 13 zeta-classes per state) assembled
+    [     5.0s] state processing done
+
+[5] GATES (A)+(B)+(C) (sidecar gates, re-run verbatim)
+    E_1 measure anchor 1882176/28589561: PASS
+    (19b) successor identity at all 169 twists: PASS
+    (A) chamber reconstruction == independent 13^3 table (x13 scale), all 2197 cells: PASS
+    (B) row sums == byte-stored S_E numerators: PASS
+    (C) diagonal-plane zero H_E(t,s,t)=0 (all 169): PASS
+    [    42.3s] gates done
+
+[6] per-a-line walks, endpoints, exact cone decisions, events
+    aggregation (logged, identical to sidecar stage 2): contributions merged by primitive direction
+    in Z[zeta_13] (positive-rational-multiple classes)
