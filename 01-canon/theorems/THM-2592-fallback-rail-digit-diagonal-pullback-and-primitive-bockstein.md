@@ -2,16 +2,21 @@
 id: THM-2592
 title: "Fallback-rail digit-diagonal pullback and primitive Bockstein"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED core;
+  PROVISIONAL EXACT ADDENDUM UNDER INDEPENDENT HOSTILE AUDIT.
   On the canonical typed row, the literal route-two pullback of the 84
   THM-2586 theta-zero rail cells against all thirteen normalized THM-2585
   target sections is positive in exactly 39 of 1092 cases: precisely the
   three fallback cells (s4,ell4,v,t)=(7,4/5/6,6,12), for every q.  After one
   global primitive-content reduction, 38 of the 39 positive slices have a
   nonzero first Bockstein in all six owner colours and 37 have unit septimal
-  slice polynomial.  The construction is an actual common-x fibre product,
-  but is not uniform across the other 81 rails and does not identify the two
-  clock labels, a named old head, or a canonical semantic endpoint.
+  slice polynomial.  More sharply, all 81 primary rails are orthogonal to the
+  entire unconditioned delayed word, so no future-digit selector or affine
+  digit offset can attach them; the fallback digit support is exactly
+  h=1,...,11.  Boolean q-section aggregates and one-section-per-chart
+  transversals have the finite no-cancellation spectra stated below.  The
+  construction is an actual common-x fibre product, but does not identify the
+  two clock labels, a named old head, or a canonical semantic endpoint.
 source: codex-2026-07-28-joint-rail-projector-pullback
 depends_on:
   - THM-2584-b-word-depth-five-absolute-deep-root-tensor
@@ -22,16 +27,21 @@ related:
   - THM-2452-indicator-idempotent-aggregate-endpoint-restoration
   - THM-2459-four-atom-drift-and-root-service-coarsening
   - THM-2591-theta-zero-selector-cech-coboundary-and-c91-holonomy-no-go
+  - THM-2590-boolean-bockstein-and-theta-selector-incidence-spectrum
 script: 04-computation/lrc14_fallback_rail_digit_diagonal_pullback_thm2592.py
 output: 05-knowledge/results/lrc14_fallback_rail_digit_diagonal_pullback_thm2592.out
-script_sha256: e75123c09aafb3a2e500e3a68f37eed2dbed5466a24d181463d1e2b9e01f5edc
-output_sha256: 33443b6c0cb901d4c10cfb79a7f9555d200d6a5bc9ffefdabb218b6c2ec11827
-hash_basis: working-tree bytes (LF)
+script_sha256: 87aa2407d7c3417e093e4ab3d336c704dd8bc4ccf1dcc8e357c6671a60f8cce1
+output_sha256: 002ed091c79a96c084dc579ab149c815705a092e7a7eadadc381a0c15f8e5c33
+hash_basis: LF-normalized bytes
 ---
 
 # THM-2592 -- fallback-rail digit-diagonal pullback and primitive Bockstein
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED core.**
+
+**PROVISIONAL EXACT ADDENDUM UNDER INDEPENDENT HOSTILE AUDIT:** the
+union-first, affine-offset, Boolean-section, and cross-chart transversal
+statements in Sections 3 and 4 below.
 
 ## 1. The common physical carrier
 
@@ -267,6 +277,65 @@ Thus the attachment is genuine but maximally localized: the same digit
 gate that proves positivity on the fallback cell annihilates the 81-cell
 primary rail.
 
+### 3.1 The primary obstruction is the whole word, not digit zero
+
+The digit-zero explanation is true for the diagonal (9), but is not sharp.
+Replace `Q^+_(ell5,v)` in (9) by the whole unconditioned delayed word
+`Q^+_ell5`, and call the resulting nonnegative entries `J^all`.  Exact
+common-`x` integration gives
+
+```text
+sum_(ell5,r) J^all_(s4,ell4,q;ell5,r)=0                (23a)
+```
+
+for every one of the `81*13=1053` primary-rail/target-section pairs.
+Every summand and every underlying Boolean sheet in (9a) is nonnegative.
+Therefore (23a) implies that each fine primary entry is zero almost
+everywhere on the support of the **entire** delayed word.
+
+The thirteen digit pieces in (8) are a disjoint nonnegative partition of
+that word.  It follows at once that every digit selector vanishes on every
+primary rail.  This includes selectors depending arbitrarily on
+`(s4,ell4,q,ell5,r)`, arbitrary subsets of future digits, and arbitrary
+linear mixtures supported on those pieces.  No re-selection of the future
+digit inside the same delayed word can attach a primary rail.
+
+### 3.2 Complete affine-offset spectrum
+
+For `c in F_13`, define the affine graph section by replacing the last factor
+of (9) with
+
+```text
+Q^+_(ell5,v+c)(Rx),                                    (23b)
+```
+
+where the sum is modulo thirteen.  On all 81 primary rails it vanishes by
+(23a), for every `c`.  On the three fallback rails `v=6`; the exact positive
+pair census by literal future digit `h` is
+
+```text
+h=0: 0,   h=1,...,11: 39 each,   h=12: 0.              (23c)
+```
+
+Consequently the number of positive rail-by-`q` pairs for (23b) is
+
+```text
+39,  c in {0,1,2,3,4,5,8,9,10,11,12};
+ 0,  c in {6,7}.                                       (23d)
+```
+
+Whenever it is `39`, the support is again precisely the three cells (6),
+for all thirteen `q`.  Thus no fixed affine offset attaches even one primary
+rail.  In particular `c=6`, the most tempting translation from the old
+digit-zero hole to the observed fallback digit, instead sends the fallback
+digit `6` to the empty future digit `12` and kills the complete bank.
+
+Condition (23b) is a lawful literal affine correspondence between the two
+chosen `F_13` root-digit charts on the common physical coordinate.  It is
+not, without a further transported-head or root-gauge sidecar, equality of
+semantic old and future heads, a named deck transition, a relation residue,
+or a THM-2305 endpoint identification.
+
 ## 4. The globally primitive first Bockstein
 
 For a positive pair slice define
@@ -320,6 +389,68 @@ is
 whose multiplication determinant is zero mod 13.  Its six individual
 owner-colour Bocksteins are nevertheless all nonzero.
 
+### 4.1 Boolean sections and the three-chart transversal atlas
+
+The one global primitive normalization (15) permits coefficient sums across
+the thirteen literal `q` sections without reprimitivizing a slice.  For one
+fallback chart `ell4` and a Boolean subset `S subset F_13`, put
+
+```text
+Y_(ell4,S)=sum_(q in S) Y_(ell4,q) in R_7,
+R_7=F_13[z]/(Phi_7).                                   (28a)
+```
+
+The complete `2^13` census on each actual common-`x` fallback carrier is
+
+| `ell4` | distinct images | zero subsets | max fibre | units | nonunits |
+|---:|---:|:---|---:|---:|---:|
+| 4 | 864 | `empty` | 40 | 8118 | 74 |
+| 5 | 516 | `empty` | 88 | 8029 | 163 |
+| 6 | 328 | `empty,{10}` | 110 | 8114 | 78 |
+
+The unit/nonunit columns count all 8192 subsets, so the zero class is included
+among the nonunits.  Thus every nonempty Boolean aggregate on charts 4 and 5
+has nonzero first Bockstein in all six owner colours.  On chart 6 the only
+nonempty zero is the already known singleton `S={10}` from (26); adjoining
+any other target section repairs it.
+
+For completeness, this owner-colour conclusion is not an inference from a
+unit determinant.  For every `kappa in F_7^*`, substitution
+`z -> z^kappa` is an automorphism of `R_7`.  Moreover, with
+`u=zeta_13-1`, the factor in (25) is
+
+```text
+Omega=-u^11 in F_13[u]/(u^12),                         (28b)
+```
+
+so multiplication by `Omega` embeds `R_7` into the corresponding socle
+summand.  Hence every nonzero class in the table remains nonzero under every
+labelled owner substitution and after multiplication by `Omega`, including
+the displayed nonunit zero divisors.
+
+There is also no cancellation among chart transversals.  If exactly one
+section is selected on each of two distinct charts, all `13^2=169` sums are
+nonzero.  Their `(distinct images,max fibre)` data are
+
+```text
+(ell4,ell4')=(4,5): (47,15),
+              (4,6): (53,30),
+              (5,6): (50,20).                         (28c)
+```
+
+All `13^3=2197` three-chart sums are nonzero; they have
+
+```text
+295 distinct images, max fibre 103,
+2173 units and 24 nonunits.                             (28d)
+```
+
+Thus every nonempty one-section-per-chart transversal is charged except the
+single chart-6 section `q=10`.  This is a finite common-carrier
+coefficient/cosheaf no-cancellation statement.  It does not assert that the
+chosen sections share one positive Perron ancestry sheet, nor can it cross
+the primary whole-word orthogonality (23a).
+
 ## 5. Independent exact controls
 
 The companion uses only integer and `Fraction` arithmetic and contains the
@@ -336,7 +467,13 @@ following separate checks.
    THM-2585's original unweighted sweep term by term.
 5. Three unconditioned cells recover the original THM-2585 delayed-overlap
    formula before the rail factor is inserted.
-6. Normal and optimized execution reproduce the stored transcript exactly.
+6. All 1053 primary pairs are tested against the complete delayed word before
+   digit splitting.  The thirteen exact digit pieces re-sum to that word;
+   all thirteen affine offsets are then checked on the fallback cells.
+7. All 24,576 within-chart Boolean subsets, all 507 two-chart singleton
+   transversals, and all 2197 three-chart singleton transversals are enumerated
+   in `R_7`, including unit, fibre, zero, and owner-colour checks.
+8. Normal and optimized execution reproduce the stored transcript exactly.
 
 An independent hostile audit rederived the common-`x` and digit-time typing,
 the Boolean-sheet expansion behind the two Perron profiles, the single global
@@ -346,8 +483,9 @@ against the stored transcript and recomputed both declared LF hashes.  No
 theorem defect remained.
 
 The positive support census, both contents, primitive scalar, primitive
-digest, support histogram, Bockstein census, and the two exceptional slices
-(26)--(28) are executable assertions rather than printed approximations.
+digest, support histogram, Bockstein census, the two exceptional slices
+(26)--(28), whole-word zero, affine spectrum, and Boolean/transversal atlases
+are executable assertions rather than printed approximations.
 
 Reproduce with
 
@@ -366,8 +504,10 @@ pair-marginal hostile does not apply after (9) has been formed.
 
 It does **not** prove any of the following.
 
-- The other 81 theta-zero rail cells attach.  They are exactly zero by
-  (18), so no uniform 84-cell or Cech filler follows.
+- The other 81 theta-zero rail cells attach.  They are orthogonal to the
+  entire delayed word by (23a), not merely to digit zero.  Thus no
+  future-digit selector, affine offset, uniform 84-cell, or Cech filler
+  follows.
 - The owner clocks `ell4` and `ell5` are the same coordinate.  Both are
   retained, not identified.
 - The future digit in (10) is the preselected named `k_a` boundary, the old
@@ -377,8 +517,9 @@ It does **not** prove any of the following.
 - A relation residue, all-coordinate unit address, all-165 conclusion, row
   decrement, or LRC(14) closure follows.
 
-The sharp next problem is therefore relative rather than marginal: either
-transport the three fallback attachments across the digit-zero hole (18),
-or prove that the hole represents a genuine semantic/clock obstruction.
+The sharp next problem is therefore not transport across one missing digit.
+It is to change the physical rail/word support or supply a genuine
+semantic/clock/root intertwiner: every resection of the existing delayed word
+already lies inside the primary orthogonality obstruction (23a).
 
 QED.
