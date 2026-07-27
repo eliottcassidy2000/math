@@ -11,6 +11,10 @@ line_top_types=2;excluded=2
 quadratic_top_types=3;excluded=2;open=1
 open_quadratic_type=two_moving_cubic_roots
 open_type_top_next_determinant_factors=4
+open_type_determinant_walls_closed=2
+generic_compatibility_divisor_bidegree=(7,15)
+generic_compatibility_divisor_terms=69
+root_scaled_equation_max_total_degree=8
 conditional_square_lift_minimum_genus=2
 finite_hostile_parameters=324
 finite_hostile_reducible=0

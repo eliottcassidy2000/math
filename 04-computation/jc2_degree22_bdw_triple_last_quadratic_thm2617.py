@@ -203,6 +203,199 @@ expected_type3_determinant = (
 )
 require(type3_determinant == expected_type3_determinant, "last-type determinant changed")
 
+# The two genuine determinant walls are both empty after physical
+# saturation.  On the first, the complete ideal contains h^2.
+lambda_wall_1 = (560 * h - 693) / (384 * h**2)
+wall_1_equations = []
+for equation in type3_by_monomial.values():
+    numerator = s.cancel(equation.subs(lam, lambda_wall_1)).as_numer_denom()[0]
+    primitive = s.Poly(numerator, b, d, e, h).primitive()[1].as_expr()
+    if primitive != 0:
+        wall_1_equations.append(primitive)
+wall_1_gb = s.groebner(wall_1_equations, b, d, e, h, order="grevlex")
+require(wall_1_gb.reduce(h**2)[1] == 0, "first determinant wall stopped forcing h=0")
+
+# On the second wall the two top-next linear equations are parallel.  Their
+# consistency minors leave only four rational h-values, and every complete
+# specialized ideal is the unit ideal.
+lambda_wall_2 = (
+    25088 * h**2 + 44352 * h - 68607
+) / (114048 * h**2)
+wall_2_by_monomial: dict[tuple[int, int], s.Expr] = {}
+for monomial, equation in type3_by_monomial.items():
+    numerator = s.cancel(equation.subs(lam, lambda_wall_2)).as_numer_denom()[0]
+    primitive = s.Poly(numerator, b, d, e, h).primitive()[1].as_expr()
+    if primitive != 0:
+        wall_2_by_monomial[monomial] = primitive
+wall_2_top_a = wall_2_by_monomial[(1, 3)]
+wall_2_top_b = wall_2_by_monomial[(0, 4)]
+wall_2_rows = []
+for equation in (wall_2_top_a, wall_2_top_b):
+    wall_2_rows.append(
+        (
+            s.diff(equation, b),
+            s.diff(equation, d),
+            equation.subs({b: 0, d: 0}),
+        )
+    )
+wall_2_minor_1 = s.expand(
+    wall_2_rows[0][0] * wall_2_rows[1][2]
+    - wall_2_rows[1][0] * wall_2_rows[0][2]
+)
+wall_2_minor_2 = s.expand(
+    wall_2_rows[0][1] * wall_2_rows[1][2]
+    - wall_2_rows[1][1] * wall_2_rows[0][2]
+)
+wall_2_consistency_gcd = s.Poly(wall_2_minor_1, h).gcd(
+    s.Poly(wall_2_minor_2, h)
+)
+expected_wall_2_gcd = s.Poly(
+    h**6
+    * (8 * h - 99) ** 3
+    * (32 * h - 99)
+    * (56 * h - 99) ** 2
+    * (64 * h - 99) ** 4,
+    h,
+)
+require(
+    wall_2_consistency_gcd.monic() == expected_wall_2_gcd.monic(),
+    "second determinant-wall consistency atlas changed",
+)
+wall_2_candidates = (
+    s.Rational(99, 8),
+    s.Rational(99, 32),
+    s.Rational(99, 56),
+    s.Rational(99, 64),
+)
+for h_value in wall_2_candidates:
+    specialized_equations = []
+    for equation in wall_2_by_monomial.values():
+        specialized = equation.subs(h, h_value)
+        if specialized != 0:
+            specialized_equations.append(
+                s.Poly(specialized, b, d, e).primitive()[1].as_expr()
+            )
+    specialized_gb = s.groebner(
+        specialized_equations,
+        b,
+        d,
+        e,
+        order="grevlex",
+    )
+    require(
+        is_unit_basis(specialized_gb),
+        f"second determinant wall acquired a factor at h={h_value}",
+    )
+
+# Away from the determinant walls, the next two equations are linear in e.
+# Their exact compatibility resultant has only the already-inverted physical
+# factors, the two closed walls, and one residual bidegree-(7,15) polynomial.
+top_a_b = s.diff(eq13, b)
+top_a_d = s.diff(eq13, d)
+top_a_0 = eq13.subs({b: 0, d: 0})
+top_b_b = s.diff(eq04, b)
+top_b_d = s.diff(eq04, d)
+top_b_0 = eq04.subs({b: 0, d: 0})
+det_bd = s.expand(top_a_b * top_b_d - top_b_b * top_a_d)
+b_numerator = s.expand(top_a_d * top_b_0 - top_b_d * top_a_0)
+d_numerator = s.expand(top_b_b * top_a_0 - top_a_b * top_b_0)
+
+
+def after_top_solve(equation: s.Expr) -> s.Expr:
+    numerator = s.cancel(
+        equation.subs({b: b_numerator / det_bd, d: d_numerator / det_bd})
+    ).as_numer_denom()[0]
+    return s.Poly(numerator, e, lam, h).primitive()[1].as_expr()
+
+
+next_12 = after_top_solve(type3_by_monomial[(1, 2)])
+next_03 = after_top_solve(type3_by_monomial[(0, 3)])
+compatibility = s.Poly(
+    s.resultant(next_12, next_03, e),
+    lam,
+    h,
+).primitive()[1].as_expr()
+
+known_compatibility_factors = (
+    (h, 3),
+    (384 * lam * h**2 - 560 * h + 693, 2),
+    (384 * lam * h**2 - 280 * h + 231, 3),
+    (
+        114048 * lam * h**2
+        - 25088 * h**2
+        - 44352 * h
+        + 68607,
+        3,
+    ),
+)
+residual_compatibility = s.Poly(compatibility, lam, h)
+for factor, expected_exponent in known_compatibility_factors:
+    factor_poly = s.Poly(factor, lam, h)
+    actual_exponent = 0
+    while True:
+        quotient, remainder = residual_compatibility.div(factor_poly)
+        if not remainder.is_zero:
+            break
+        residual_compatibility = quotient
+        actual_exponent += 1
+    require(
+        actual_exponent == expected_exponent,
+        "generic compatibility multiplicity changed",
+    )
+residual_compatibility = residual_compatibility.primitive()[1]
+require(
+    s.degree(residual_compatibility.as_expr(), lam) == 7
+    and s.degree(residual_compatibility.as_expr(), h) == 15
+    and len(residual_compatibility.terms()) == 69,
+    "residual compatibility divisor changed",
+)
+
+# The root-scaled chart lowers all nine total degrees from 8--14 to at most
+# eight and is the preferred continuation coordinate for the residual curve.
+root_u, root_b, root_d, root_e = s.symbols("root_u root_b root_d root_e")
+unscaled_degrees = [
+    s.Poly(equation, b, d, e, lam, h).total_degree()
+    for equation in type3_by_monomial.values()
+]
+require(
+    (min(unscaled_degrees), max(unscaled_degrees)) == (8, 14),
+    "unscaled degree range changed",
+)
+root_scaled_degrees = []
+for equation in type3_by_monomial.values():
+    numerator = s.cancel(
+        equation.subs(
+            {
+                lam: root_u / h**2,
+                b: root_b * h,
+                d: root_d * h**2,
+                e: root_e * h**2,
+            }
+        )
+    ).as_numer_denom()[0]
+    scaled_poly = s.Poly(
+        numerator,
+        root_b,
+        root_d,
+        root_e,
+        root_u,
+        h,
+    )
+    # We work on h != 0.  Clearing the lambda=u/h^2 denominators can leave a
+    # common monomial h-factor, which is a localization artifact rather than
+    # part of the equation and must be saturated away before measuring degree.
+    common_h_order = min(monomial[-1] for monomial, _ in scaled_poly.terms())
+    primitive = s.Poly(
+        scaled_poly.as_expr() / h**common_h_order,
+        root_b,
+        root_d,
+        root_e,
+        root_u,
+        h,
+    ).primitive()[1]
+    root_scaled_degrees.append(primitive.total_degree())
+require(max(root_scaled_degrees) == 8, "root-scaled degree ceiling changed")
+
 # Conditional square-lift closure: if R is irreducible, p has five simple
 # zeros, so Y^2=1/p is connected and has at least six branch places.
 finite_simple_branches = s.degree(L5, v)
@@ -260,6 +453,10 @@ print("line_top_types=2;excluded=2")
 print("quadratic_top_types=3;excluded=2;open=1")
 print("open_quadratic_type=two_moving_cubic_roots")
 print("open_type_top_next_determinant_factors=4")
+print("open_type_determinant_walls_closed=2")
+print("generic_compatibility_divisor_bidegree=(7,15)")
+print("generic_compatibility_divisor_terms=69")
+print("root_scaled_equation_max_total_degree=8")
 print("conditional_square_lift_minimum_genus=2")
 print("finite_hostile_parameters=324")
 print("finite_hostile_reducible=0")
