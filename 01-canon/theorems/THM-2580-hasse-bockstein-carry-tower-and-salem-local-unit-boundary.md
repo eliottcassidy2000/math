@@ -2,7 +2,7 @@
 id: THM-2580
 title: "Hasse-Bockstein carry tower and Salem local-unit boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED (two ways).
   On the augmentation lattice of a prime cycle, the first r binomial Hasse
   moments are the complete integral obstructions to r-fold cyclic-difference
   or Cayley filling for 1<=r<=p-1; the Smith form is
@@ -34,8 +34,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2580 -- relation signatures are an integral carry spectrum
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
-PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED (two ways).**
 
 THM-2571 found one 13-primary obstruction after rational Cayley filling;
 THM-2579 found that target differences kill it.  The killed class is not the
@@ -220,7 +219,8 @@ For the second Hasse moment put
 H_2(r)=sum_m binom(m,2)zeta_13^(mr).                       (21)
 ```
 
-In `F_13[epsilon]/(epsilon^12)`, exact finite differentiation gives
+For `r!=0`, exact finite differentiation in
+`F_13[epsilon]/(epsilon^12)` gives
 
 ```text
 H_2(r)=zeta_13^(2r)(zeta_13^r-1)^10
@@ -408,6 +408,13 @@ byte-for-byte.  The exact companion verifies:
 - all `169` target-orthogonality cells giving the literal factor in (31).
 
 There are `3599` explicit checks, none implemented with `assert`.
+
+Two independent immutable audits rederived the prime-cycle Hasse exact
+sequence, every stated Smith form, the Cayley periodicity and orientation
+sign, the canonical secondary target cocycle (including all `468` edges and
+all `72` product coordinates), and the local/global Salem distinction.  Both
+replayed normal and optimized runs against the stored output, reproduced the
+declared LF hashes, and found no mathematical or scope defect.
 
 The theorem proves a complete prime-cycle integral carry filtration, its
 canonical secondary target-edge application, and the exact local/global
