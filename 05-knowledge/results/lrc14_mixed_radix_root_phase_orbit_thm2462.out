@@ -1,0 +1,19 @@
+THM2462 MIXED-RADIX ROOT-PHASE AUDIT
+ordinary_phase_checks=312
+guard_phase_checks=312
+speed_chain=14,644,27048,1190112,57125376,2856268800
+speed_residues=1,7,8,1,9,8
+atlas_rows=13 clean_cover_checks=13
+x0_width=1/476044800
+parent_width=1/6664627200
+minimum_center_gap=3341/102009600
+guard_counts=4,4,4,4,4,4,4,4,4,4,4,4,4
+normalized_guard_density=4/13
+labelled_bit_checks=26
+labelled_x0_width=1/4853114880768000
+primitive_speeds=14,657,27607,1214721,58306621,2915331063
+primitive_gcd=1
+primitive_final_cells=56
+primitive_max_cells=16
+mixed_radix_realization=PASS
+optimized_require_path=PASS
