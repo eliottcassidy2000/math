@@ -108,30 +108,7 @@ and the [recovered unbounded 2026-07-22--23 ledger](SESSION-LOG-HISTORICAL-2026-
   HYP-2430 gives an order-five-invariant signed design trade, so even frozen
   fixed blocks and all five-marginals do not identify formal code supports.
 
-## Cross-thread state (opus 2026-07-26 session)
-
-- **Bispectrum thread:** THM-2479 canonizes mac-mini's MSG-2153 two-colour
-  trichotomy after two independent adversarial audits (444k-pair exact probe):
-  every positive middle-owner word stratum has a 91-unit `c_3` edge with at
-  least one word-marked endpoint; load-bearing Lemma A (the `(31)`-free S7.2
-  fibre) awaits mac-mini countersign. Residual: address/gain participation.
-- **Word-current thread:** the THM-2334 (42) 169-twist variance object is
-  DECIDED positive on the canonical typed row THM-2309 (25) — first positive
-  nonzero-target survival object (exact cyclotomic certificate in
-  `Z[zeta_NN]`, two prime reductions; independent referee requested).
-- **Keller/JC:** THM-2473 computes the sporadic map's entire branch tower:
-  depressed core cubic `L x^3+(4-3bc)x-2c` (fiber x-sums vanish identically),
-  `S_F = Z(L)` with even escape parity, non-surjectivity curve, Mon(F)=S3
-  proved, F∘F full-wreath verified — HYP-9030 tests (i)+(iii) discharged; the
-  atom conjecture `{1,3}` survives. THM-2468 got its independent referee.
-  Nine of ten degree-22 support-two planes are closed; only `B,C` remains.
-- **D5:** HYP-9031 writes the dictionary: JC(2) = universal H^1-vanishing vs
-  LRC(14) = universal H^1-nonvanishing; abelianized JC class = Kummer class of
-  `-L`; twin orientation sidecars (THM-2473(6) sigma/tau twist ~ THM-2504
-  converse loss). Prediction 2 (root-restoring closures) confirmed on planes
-  8-9 in real time; watch `B,C`. Sylow-3 of Mon(F^k) = k-fold C3-wreath links
-  the Keller tower to THM-2450's rigid-tower Aut groups (loss: the fold
-  2-torsion vs non-uniform towers).
+The 2026-07-26 cross-thread handoff is archived in [its provenance reflection](../07-reflections/cross-thread-state-opus-2026-07-26.md).
 
 ## Durable method handoff
 
