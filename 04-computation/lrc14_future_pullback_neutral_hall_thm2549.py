@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Dependency-free exact referee for THM-2549.
 
-Checks the all-scale future-pullback translation identities, their sharp
-level-zero boundary, the carry-sheet and future-scale target laws, exact BV
-mixing on a rational positive control, and the cemetery-only Hall tables.
+Checks representative exact future-pullback translation identities through
+level seven, their sharp level-zero boundary, the carry-sheet and future-scale
+target laws, exact BV mixing on a rational positive control, and the
+cemetery-only Hall tables.  The all-level statement in THM-2549 is proved
+symbolically; the finite loops are regression controls rather than induction.
 """
 
 from fractions import Fraction
