@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 r"""
 metagraph_bicycle_spaces_kps_S134.py
-(kind-pasteur-2026-07-26-S134; companion to THM-2466)
+(kind-pasteur-2026-07-26-S134; companion to THM-2467)
 
 The bicycle spaces of the star-flip GF(2) split -- klein-S399's
 "named, never computed" top pick (TOURNAMENT-INVARIANT-ZOO-ATLAS
@@ -126,6 +126,14 @@ for n in range(4, 31):
     if bt != expect_t:
         fail(f"tile mod-12 law at n={n}: {bt} != {expect_t}")
     print(f"{n:2d}:      {bk if bk is not None else '-'}            {bt}")
+
+# extended verification for the PROOF upgrade: mod-12 law to n = 60
+for n in range(31, 61):
+    bt = bicycle_dim(n, False)
+    exp = 1 if n % 12 in (2, 3, 6, 9, 10) else 0
+    if bt != exp:
+        fail(f"mod-12 law extended check at n={n}")
+print("mod-12 law verified n = 5..60 (56 points): PASS")
 
 # hostile control: the mod-9 fit that matches through n=18 must break
 mod9 = [n for n in range(6, 31) if n % 9 in (0, 1, 5, 6)]

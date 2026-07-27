@@ -13,8 +13,14 @@ status: >
   mod-9 fit matches through n = 18 and BREAKS at n = 21, the
   MISTAKE-055 five-point-fit motif, kept as a hostile control).
   This computes klein-S399's 'named, never computed' top-pick
-  object (TOURNAMENT-INVARIANT-ZOO-ATLAS SS II.e #1). The mod-12
-  periodicity is not yet proved for all n.
+  object (TOURNAMENT-INVARIANT-ZOO-ATLAS SS II.e #1). UPGRADE
+  (S135): the mod-12 law is now PROVED for all n >= 5 -- the parity
+  system linearizes to the two-term recurrence
+  x_{v+1} = x_{v-1} + sigma + n x_v over GF(2) with endpoint and
+  sum-consistency constraints, so solvability depends only on
+  n mod 12; the function of the residue is evaluated by the
+  exhaustive table n = 5..60 (56 points, every residue class hit
+  at least four times).
 source: kind-pasteur-2026-07-26-S134
 depends_on:
   - THM-1405-star-quotient-is-the-cycle-space-transverse-to-isomorphism
@@ -23,8 +29,8 @@ related:
   - THM-2444-pure-blue-count-refutation-and-rigid-class-law
 script: 04-computation/metagraph_bicycle_spaces_kps_S134.py
 output: 05-knowledge/results/metagraph_bicycle_spaces_kps_S134.out
-script_sha256: a1e01a90b0b6d20ba2d094fd37d394b8e11e79a2138b0cf4ec6995555174fec6
-output_sha256: aa63d68b8b9e5e8899e9ee4e070a1eb284a026cfdf8e1fa8acbc87417427e3c9
+script_sha256: 8bf895460a726b965d8a80f1554119546a01e289d7a859e479b7c4d3929eb863
+output_sha256: 4a6a1915e757d192064a82df892d8882733d7e6affe0909425cb54eaf3740237
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -70,6 +76,31 @@ Hostile control kept in the companion: the mod-9 fit
 at `n = 21` -- the recorded five-point-fit failure mode
 (MISTAKE-055) caught by extension before adoption.
 
+## 2b. Proof of the mod-12 law (S135 upgrade)
+
+Write `x_v = [v in S]`, `sigma = |S| mod 2`. In the tile graph,
+`N(v) = V minus {v-1, v, v+1}`, so `delta(S)` has all degrees even
+iff
+
+```text
+interior v : x_{v-1} + x_{v+1} = sigma + n x_v        (mod 2)
+v = 1      : x_2 = sigma + (n+1) x_1;   v = n symmetric.       (3)
+```
+
+Given `(x_1, sigma)` the recurrence determines the whole sequence.
+For even `n` it reads `x_{v+1} = x_{v-1} + sigma`: period 2
+(`sigma = 0`) or 4 (`sigma = 1`). For odd `n` it is the
+Fibonacci-type `x_{v+1} = x_v + x_{v-1} + sigma`: period dividing 6
+(Pisano pi(2) = 3, doubled by the affine constant). The terminal
+condition at `v = n` and the consistency `sigma = sum x_v` are
+therefore functions of `n mod lcm(4, 6) = 12` only, for `n >= 5`
+(below 5 the endpoint and interior regimes overlap). Hence
+`dim bicycle` is a function of `n mod 12` on `n >= 5`, and the
+exhaustive table `n = 5..60` evaluates it: `1` on residues
+`{2, 3, 6, 9, 10}`, `0` elsewhere, dimension never exceeding one
+(at most the four seeds `(x_1, sigma)`, halved by
+`delta(S) = delta(V minus S)`, minus the trivial solutions). QED
+
 ## 3. Reading and open
 
 At the `n = 2, 3, 6, 9, 10 mod 12` positions there is exactly one
@@ -77,10 +108,7 @@ nonzero GF(2) vector that is simultaneously a star-flip combination
 and a tile-cycle holonomy -- a single "gauge-invariant Wilson loop"
 that THM-1405's transversality argument must except; everywhere
 else the star quotient and the cycle holonomies are cleanly
-complementary. Open: prove (2) for all n (the cut-parity conditions
-along the base path form a linear recurrence over GF(2); its
-solution-space periodicity should yield the modulus 12 directly),
-and identify the exceptional vector's tournament meaning at the
+complementary. Open: identify the exceptional vector's tournament meaning at the
 first hit `n = 6` (the same n where blue self-loops first appear,
 THM-648 -- possibly not a coincidence, unverified).
 
