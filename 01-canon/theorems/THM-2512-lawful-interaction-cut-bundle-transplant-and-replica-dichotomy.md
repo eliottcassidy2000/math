@@ -2,7 +2,8 @@
 id: THM-2512
 title: "Lawful interaction cut-bundle transplant and replica dichotomy"
 status: >
-  PROVED.  Transposing the doubly centred ANOVA interaction of any rational
+  PROVED + INDEPENDENTLY AUDITED.  Transposing the doubly centred ANOVA
+  interaction of any rational
   lawful THM-2449 owner table produces a row-zero F_13-by-F_7 defect to which
   the THM-2508 affine cut transform applies directly.  The anchored
   delta-plus-six-replicas branch is exactly the zero defect.  Off that branch,
@@ -10,11 +11,11 @@ status: >
   294 of the 504 toothpick components are nonzero; the construction is
   covariant under affine relabelling of both residue charts.  On each exact
   clock class it inherits the M+C/R law, so either the bundle is identically
-  zero or at most one positive clock is exceptional.  This moves the static
+  zero or at most one positive admissible clock is exceptional.  This moves the static
   cut-bundle algebra onto a lawful live response table, but the centred table
   is signed, its diagonal sums are not Boolean events, the non-replica branch
   is not forced, and no common owner/arrival/deep ancestry current or LRC(14)
-  row exclusion follows.  Independent audit requested.
+  row exclusion follows.
 source: codex-2026-07-27-lawful-interaction-cut-transplant
 depends_on:
   - THM-2449-coprime-owner-anova-and-delta-replica-boundary
@@ -28,7 +29,7 @@ related:
 
 # THM-2512 -- the affine cut bundle lives on the lawful interaction table
 
-**PROVED.  Independent audit requested.**
+**PROVED + INDEPENDENTLY AUDITED.**
 
 THM-2508 first arose on the punctured-stalk defect of THM-2436, a branch
 already emptied by the septimal argument.  THM-2449 supplies a different
@@ -261,7 +262,8 @@ There are two exact alternatives.
 
 1. If `d_(M_rho)=d_(C_rho)=0`, every clock in the class is replica and the
    whole cut bundle vanishes.
-2. Otherwise, at most one positive clock has `d_(A^R)=0`.  At every other
+2. Otherwise, at most one positive admissible clock in the fixed lawful class
+   has `d_(A^R)=0`.  At every other
    sufficiently large lawful clock, all `5,184` primitive coefficients in
    (17) and the component invoice (20) hold.
 
@@ -299,6 +301,12 @@ It does not close the LRC(14) proof, for four distinct reasons.
   probe.  THM-2449's deep witness may depend on the mixed colour.
 - Affine chart covariance does not supply address/gain participation,
   terminal phase, owner-loop drift, or a nonzero integrated scalar current.
+
+An independent audit rederived the transpose signs in (8) and (15), the
+Galois `iff` in (19), the `294/3,528` invoice, both affine phases in (25),
+and the two-root clock argument.  It also checked that the transported anchor
+is a marked chart coordinate and that no temporal affine action has been
+smuggled into the covariance statement.
 
 The cheapest next bridge test is therefore not another colour census.  It is
 whether one signed toothpick contraction in (12), or a phase-neutral paired
