@@ -1,0 +1,22 @@
+== THM-2559: universal target-informed chord ==
+  disjoint nonempty source/failure mask pairs: 1577940
+  Cayley sign checks: 1577940
+  nonzero chord-slope histogram: 1:42718,2:123695,3:153114,4:152139,5:159640,6:157664,7:157664,8:159640,9:152139,10:153114,11:123695,12:42718
+  every target-informed head is empty and every chord has p_t-p_s=-1
+
+== exact root-constancy and role-capacity interface ==
+  blocker root-constancy checks: 12870
+  terminal-word root-constancy checks: 130
+  translated-tooth identity checks: 364
+  ordinary target failure counts: 1 or 2; guard counts: 3 or 4
+
+== blind all-slope control and target-informed bypass ==
+  e={0,1,4}; all-slope heads={2,7,8,9,11,12}; failure root 3 is blind
+  target-informed chord: 0 -> 3 at slope 3, Cayley endpoint sum -1
+
+== inherited THM-2379 exact floors ==
+  ordinary k_a floor per head mass: 11/24336
+  guard k_a floor per head mass: 1/2704
+  paired blocker remains a static sidecar; future semantic root remains absent
+
+all exact checks passed
