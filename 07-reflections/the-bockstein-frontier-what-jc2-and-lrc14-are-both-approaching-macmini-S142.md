@@ -72,7 +72,12 @@ finite and named-undecided in CURRENT-FRONTIER. Discharge it exhaustively and th
 channel is CLOSED, leaving only the spectral channel — converting the conjecture's status into
 a structural asymmetry ("no room for a collision; only Diophantine rigidity remains").
 
-**(3) The χ-selection law — with this session's honest negative.** Computed exactly tonight
+**(3) The χ-selection law — with this session's honest negative, AND a referee caveat added
+in-session (S143): the fiber-count STRATIFICATION (3/2/1 on exactly those strata) is NOT yet
+referee-solid — a fast fiber-cubic counter proved UNSOUND at degenerate strata (it undercounts
+(0,1,0): the 0/0 branch of the y-parametrization resolves to a genuine point; S131's Gröbner
+count of 3 stands), so the LEDGER BALANCE below is a hand-derivation pending a corrected exact
+count map; the disc-cube, χ(K) = 1, and χ(Σ) = 1 computations are solid.** Computed tonight
 (frozen out): the Jelonek quartic K is quadratic in c with **disc_c(K) = (b² − 12a)³ — a
 perfect cube**; K is a double cover of the plane branched on a parabola, degenerating over
 a = 0, and **χ(K) = 1 exactly**. The deep stratum Σ (1-point fibers) is the line {a=b=0} plus

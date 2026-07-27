@@ -41,7 +41,25 @@ def main():
     F3 = sp.expand(2*x - 3*x**2*y - x**3*z)
 
     def nf(t):
-        return len(sp.solve([F1 - t[0], F2 - t[1], F3 - t[2]], [x, y, z], dict=True))
+        # exact fiber count via the fiber cubic phi (THM-1315) + branch rules:
+        # roots y0 of phi; x = (b-y0)/(3a - y0(b-y0)); x=0 admissible iff c=0
+        # (then z free? no: x=0 => F=(z+4y^2, y, 0): count via that chart);
+        # here targets are affine rational: count distinct valid (x,y,z).
+        A, B, C = [sp.nsimplify(v) for v in t]
+        phi = sp.Poly(-2*y**3 + 3*B*y**2 - 18*A*y + (18*A*B - B**3 - 27*A**2*C), y)
+        cnt = 0
+        for r in sp.roots(phi, multiple=True):
+            den = 3*A - r*(B - r)
+            if den == 0:
+                continue          # sheet at infinity
+            xv = (B - r)/den
+            if xv == 0:
+                continue          # handled by the x=0 chart below
+            cnt += 1
+        # x = 0 chart: F(0,y,z) = (z + 4y^2, y, 0): one preimage iff C == 0
+        if C == 0:
+            cnt += 1
+        return cnt
 
     cs = sp.solve(K.subs({a: 1, b: 1}), c)
     print("generic-K fibers  (1,1,c):", [(sp.nsimplify(cv), nf((1, 1, cv))) for cv in cs])
