@@ -1,0 +1,23 @@
+THM-2476 exact companion
+invariants=lambda=E^2/B^5,r=E/(B^2*y)
+resultant=28344976*lambda^2*P
+P_terms=25
+P_bidegree=(10,5)
+newton_polygon=conv{(0,0),(10,0),(0,5)}
+linear_factor_unit_ideal=YES
+quadratic_factor=fixed_L5_Hensel_forced_ansatz_unit_ideal
+uniform_absolute_irreducibility=lambda_nonzero
+wall=702768*r^5+23716*r^4-1694*lambda*r^2-315*lambda^2
+P_at_wall=256*wall^2
+disc_v(P)=constant*lambda^14*wall^2*K30
+K30_bidegree=(30,14)
+K30_terms=56
+disc_r(K30)=constant*lambda^379*A3^3*P12^2*Q12^3*R16
+exceptional_factor_degrees=2,3,12,12,16,5
+degree_drop_fibres=two_squarefree_degree_29_wall_disjoint
+minimum_simple_K_roots=24
+minimum_visible_simple_branches=19
+minimum_total_ramification=20
+minimum_normalization_genus=6
+y_zero_boundary=rational_Z_then_constant_field_quintic
+ALL CHECKS PASSED
