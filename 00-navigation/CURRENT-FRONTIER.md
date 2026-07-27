@@ -106,54 +106,32 @@ duty sees augmentation rather than weighted jet phase.  THM-2556's first
 non-product square is `duty curvature + fibre covariance`: all `168` gains
 are live, but a nonunit section can cancel them exactly.
 
-THM-2557 injects the signed THM-2550(B) interaction on the rank-72 doubly
-centred lattice; THM-2564 reconstructs it from any six teeth (`SNF 1^51 +
-13^21`) but proves the ordered-section carry is noncanonical.  Physical blind
-necklaces remain.  THM-2559 instead inserts the named `k_a` failure and gives
-all `165` rows a positive old-head deep/repair coefficient.  THM-2563 adds two
-moving dipoles and deep colour on a positive partial-bare `13^3` table; the
-fixed head is still not co-shifted.  THM-2565 gives a cemetery-free same-root
-future return with eventual floor `rho^2/26`, but for a changed
-target-informed selector rather than inherited head word.  THM-2568 proves
-that completing the old-danger/moving-safe endpoint and summing all physical
-frequencies annihilates every coarse target character; the independently
-twisted pair spectrum has a `156`-dimensional line-sum kernel.  THM-2569
-performs the positive composition before that loss: conditioning THM-2563 on
-the stationary return gives one common-ancestry partial-bare packet with mass
-at least `63rho^2/26` and coefficient floor `7rho^2/913952`.  But the root
-identity `h=b` remains a multiplicative spectator and the full-`X`
-annihilation holds root-stratumwise.  THM-2573 computes the first singular
-escape exactly: the logarithmically renormalized Abel normal is the Fourier
-moment of the positive total-layer handoff measure, but the allowed deep bank
-has an alternating-grid blind kernel and the frozen selector is not a lawful
-whole-layer orbit.  THM-2574 diagonalizes the missing physical tooth label; its connected component character selects `X mod k`, and a left/right
-fixed-frequency pair lands in the Euclidean-carry target colour
-`(r+M-t)/k`.  For `13|M` and a `13`-unit `k`, off resonance `k not|M` has a
-nonzero-colour/nonzero-amplitude component control; on resonance every carry
-is zero.  The pure Boolean danger/safe gate is sharper still: its uniform
-tooth weights make the Abel normal vanish off resonance and target-trivial on resonance.  Thus the exact live normal coordinate is the `(M mod k)` Fourier
-coefficient of the **actual covariant total-layer tooth weights**, not the
-bare gate or an unconnected complex component.  THM-2562 computes
-duty ranks `50/70/72/74` and forces six replicas from a nonzero anchor.
-THM-2567 shows every nonzero deep colour has that rigid face while their deep
-augmentation cancels exactly: the missing datum is a common coloured carrier,
-not more Fourier support.
+THM-2557/2564 recover the rank-72 signed interaction from six teeth but make
+its carry noncanonical.  THM-2559 gives all `165` rows an old-head deep/repair
+coefficient; THM-2563 adds moving dipoles and THM-2565 a same-root return only
+for a changed selector.  THM-2568 proves full-`X` completion annihilates every
+coarse target character (twisted-pair kernel dimension `156`).  THM-2569
+conditions first, yielding mass `>=63rho^2/26`, yet `h=b` stays a spectator
+and annihilation is rootwise.  THM-2562/2567 force six rigid deep replicas
+whose augmentation cancels.
 
-THM-2571 finds a primitive 13-primary carry class, and THM-2579 shows its
-target translates form one torsor: integral differences and unnormalized
-Fourier numerators fill, while normalized DFT division can restore the class.
+THM-2571 finds the primitive 13-primary carry class; THM-2579 makes its target
+translates one torsor: integral differences and unnormalized Fourier
+numerators fill, while normalized DFT division can restore the class.
+THM-2573 identifies the logarithmic Abel normal with a total-layer handoff
+moment but exhibits a deep blind kernel.  THM-2574 diagonalizes the tooth
+label: off resonance a connected fixed-frequency pair has nonzero carry
+colour, while the pure Boolean gate is still normal-blind.  Thus the live
+coordinate is a tooth mode of the **actual covariant total-layer weights**.
 
-THM-2575 constructs a common-base owner-clock host, while THM-2577 proves by
-exact support images that every positive-return packet has depth `r=3` on
-`{a}` and `r=5` on `{b},{a,b}`.  The host is on the distinct `{a}`, `r=3`
-packet, so these facts cannot be multiplied across word strata.
+THM-2575 constructs a common-base owner-clock host; THM-2577 puts every
+positive return at depth `3` on `{a}` and depth `5` on `{b},{a,b}`.  The host
+lives on the distinct `{a}`, depth-3 packet, so the facts do not multiply.
 
-Next: construct a covariant whole-layer old-head/future orbit with a nonzero
-tooth mode at an allowed deep offset, or rebuild the owner-clock array inside
-the `{b}`, `r=5` fibre and run the `theta=t-2u` contraction there.  Either
-connection must be physically supplied rather than gauge-declared, then put
-on THM-2569's common packet before the six-replica law and THM-2545.
-Selector/current identity and vertical semantic gluing remain.
+Next: build a covariant whole-layer old-head/future orbit with a nonzero tooth
+mode, or rebuild the host inside the `{b}`, depth-5 fibre and contract
+`theta=t-2u`.  Then place it on THM-2569 before the six-replica law and
+THM-2545.  Selector/current identity and vertical semantic gluing remain.
 More untyped nonvanishing is not progress.  No row is removed. Ledger: `165`.
 
 ### Independent routes that remain live
