@@ -9,6 +9,25 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-289 (2026-07-28, recurrent concurrent THM-2570 collision) -- a later theorem reused an ID after the earlier collision repair
+
+- **What was done:** the LRC word-depth/owner-clock theorem was committed as
+  `THM-2570` after the Jelonek cusp-cylinder normalization had already retained
+  that ID in the repair recorded by MISTAKE-288.  The live tree again contained
+  two distinct theorem files with one YAML ID.
+- **First failed implication:** a prior namespace repair is not a reservation
+  service for later concurrent writers.  Choosing an ID from an earlier local
+  view, without fetching and checking the complete remote filename/YAML
+  namespace immediately before the commit, did not establish uniqueness.
+- **Repair:** the earlier Jelonek theorem remains `THM-2570`; the already
+  reserved Cayley and deep-energy results remain `THM-2571` and `THM-2572`;
+  the pending Abel-normal endpoint result owns `THM-2573`; the oriented-tooth
+  component-holonomy reservation owns `THM-2574`; and the later
+  word-depth/owner-clock theorem is renamed `THM-2575`.  Its scripts, outputs,
+  mathematical statement, and exact constants are unchanged.  Future
+  reservations must fetch and scan the prefix `id: THM-` and matching
+  filenames immediately before both reservation and push.
+
 ## MISTAKE-288 (2026-07-27, concurrent THM-2570 reservation collision) -- an end-anchored ID scan missed a CRLF frontmatter line
 
 - **What was done:** the LRC deep-augmentation energy theorem was reserved as

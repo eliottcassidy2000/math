@@ -1,5 +1,5 @@
 ---
-id: THM-2570
+id: THM-2575
 title: "The word-depth collision law and the owner-clock host array: r = nu_13(deepest in-word blocker), and the first MISTAKE-281-clean 13x7 live-branch host"
 status: >
   PROVED CANDIDATE + VERIFIED-EXACT (two exact companions, each with
@@ -25,7 +25,7 @@ outputs:
   - 05-knowledge/results/lrc14_base_only_bridge_opus_20260728.out
 ---
 
-# THM-2570 -- the word decides the collision depth; the owner clock hosts
+# THM-2575 -- the word decides the collision depth; the owner clock hosts
 
 Row: `THM-2309 (25)`, `w = (1,14,27,40,53,66,13,2197,742586)`, owner
 `j = 1` (the only lawful owner).
