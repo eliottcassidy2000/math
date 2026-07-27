@@ -11,8 +11,9 @@ status: >
   (U^T U,U^T w), transforming by congruence under every GL_2(Z) basis
   move.  Equal endpoint defects do not determine the mediant: two acute
   unimodular flanks with endpoint values (-90,-89) have child defects -177
-  and +1.  Active order-three motion can likewise turn a safe vector into
-  a bad one, so LRC safety is not a modular invariant.  The three Berggren
+  and +1.  The active integral lift of the projective order-three generator
+  can likewise turn a safe vector into a bad one, so LRC safety is not a
+  modular invariant.  The three Berggren
   branches form a disjoint PGL_2(Z) reduction cross-section of (0,1), not
   a C_3 action; their triple matrices are identity mod 2 and not order
   three.  This repairs the binary/ternary "one object" analogy without
@@ -22,12 +23,13 @@ depends_on: []
 related:
   - THM-2056-kelvin-polar-farey-defect-certificate
   - THM-2467-bicycle-spaces-of-the-star-flip-split
+  - THM-2595-modular-v4-affine-lift-dichotomy-and-six-vertex-tournament-no-go
   - THM-2597-six-vertex-bicycle-modular-abelianization-cycle
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
 script: 04-computation/modular_farey_gram_owner_cocycle_thm2596.py
 output: 05-knowledge/results/modular_farey_gram_owner_cocycle_thm2596.out
-script_sha256: 096ec9b646794d981ec02951fa6144efb9496b1d7c1f80f6dfb5028944bbdf12
-output_sha256: 450d30bacdfdcc6b56353de1e608e5cec37f432abe4b3ccf36671fb8e66c831b
+script_sha256: 98c21e789fb8db463713b05ca17b4403290c101341b81173cf9974d7df668ea0
+output_sha256: cfdd76d8ff96fb91aad70bfbd755c4f997e665472d683ea67459ed35fc55e4de
 hash_basis: normalized repository blobs (LF)
 ---
 
@@ -36,7 +38,7 @@ hash_basis: normalized repository blobs (LF)
 **PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
 HOSTILE AUDIT.**  The group, matrix, and hostile statements are proved
 below.  The dependency-free companion checks the displayed identities and
-`582,340` exact integer/rational instances.  The LRC paragraph is a
+`587,290` exact integer/rational instances.  The LRC paragraph is a
 faithful reformulation of the proved THM-2056 defect, not a new LRC gate.
 
 The tempting slogan is that a binary fraction tree and a ternary triple
@@ -204,9 +206,11 @@ But the Euclidean norm is not:
 F_w(d)=2025,                 F_(w')(d')=-4140.             (18)
 ```
 
-Thus the order-three generator can take a certified vector to an
-uncertified one.  Passive basis covariance (8) is lawful; active invariance
-without the transformed Gram metric is false.
+Thus this integral lift of the projective order-three generator can take a
+certified vector to an uncertified one.  The matrix itself has order six in
+`GL_2(Z)` because `C^3=-I`; the point is the failure already on one lawful
+lift of the modular `C_3` class.  Passive basis covariance (8) is lawful;
+active invariance without the transformed Gram metric is false.
 
 ## 4. The ternary Pythagorean tree is a reduction cross-section
 
@@ -236,6 +240,26 @@ seams.  Their inverses are respectively
 ```text
 2-1/y,                   1/y-2,                  y/(1-2y). (21)
 ```
+
+There is an exact binary-prefix interpretation, but it uses the
+orientation-reversing PGL gauge.  On `(0,1)` put
+
+```text
+lambda(x)=x/(1+x),       rho(x)=1/(2-x),       j(x)=1-x.
+```
+
+The two maps `lambda,rho` are the positive Farey children.  Directly,
+
+```text
+A=rho,              B=lambda o rho o j,              C_0=lambda^2. (21a)
+```
+
+Thus the ternary cover is the prefix code `{rho, lambda rho j,
+lambda lambda}`: one old binary branch is retained, the other is refined
+into two cylinders, and the middle cylinder needs the reflection `j`.
+This is the precise sense in which the binary and ternary grammars cover
+the same rational interval.  Removing `j` changes the middle branch, so
+the identity is PGL/Farey reduction data, not a `C_3`-torsion action.
 
 Hence every non-seam positive rational has one reduction branch.  This is
 the positive meaning of the ternary tree “covering the same area”: it is a
@@ -327,7 +351,8 @@ S^2=-I, C^3=-I, L=-SC, R=SC^(-1);
 580,000 passive Gram-owner evaluations;
 the active C3 and matched-endpoint hostiles;
 all Lorentz/determinant/mod-two/order checks in (22)--(23);
-2,340 exact rational branch/intertwining cases.           (26)
+2,340 exact rational branch/intertwining cases;
+4,950 exact binary/ternary PGL prefix cases.               (26)
 ```
 
 All truth-bearing checks use explicit exceptions and remain active under

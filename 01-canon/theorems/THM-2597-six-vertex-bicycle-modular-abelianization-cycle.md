@@ -24,6 +24,7 @@ depends_on:
 related:
   - THM-648-blue-selfloops-only-at-even-n
   - THM-2587-deep-root-coshift-incidence-wall-and-theta-selector-no-go
+  - THM-2595-modular-v4-affine-lift-dichotomy-and-six-vertex-tournament-no-go
   - THM-2596-modular-free-factor-farey-gram-owner-cocycle
   - THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary
 external:

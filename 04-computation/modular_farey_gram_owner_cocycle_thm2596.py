@@ -202,5 +202,20 @@ for n in range(2, 41):
             require(mvec(M, triple) == child, "Berggren/parameter intertwining")
             branch_cases += 1
 print(f"Berggren ternary cross-section exact rational cases: {branch_cases}")
+
+farey_left = lambda x: x / (1 + x)
+farey_right = lambda x: Fraction(1, 2 - x)
+reflection = lambda x: 1 - x
+prefix_cases = 0
+for n in range(2, 101):
+    for m in range(1, n):
+        x = Fraction(m, n)
+        require(mobius[0][1](x) == farey_right(x), "A is the right Farey branch")
+        require(mobius[1][1](x) == farey_left(farey_right(reflection(x))),
+                "B is the reflected middle Farey prefix")
+        require(mobius[2][1](x) == farey_left(farey_left(x)),
+                "C is the double-left Farey prefix")
+        prefix_cases += 1
+print(f"binary/ternary PGL prefix-code exact rational cases: {prefix_cases}")
 print("all Berggren matrices are I mod 2 and none is order 3: V4/S3 torsor reading fails")
 print("ALL CHECKS PASSED")

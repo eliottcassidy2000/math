@@ -3,5 +3,6 @@ Gram-owner passive covariance exact cases: 580000
 active C3 hostile: F_(1,0)(91,-45)=2025, F_(1,1)(45,46)=-4140
 endpoint/V4/partial-cube hostile: (-90,-89) -> child defects -177 and +1
 Berggren ternary cross-section exact rational cases: 2340
+binary/ternary PGL prefix-code exact rational cases: 4950
 all Berggren matrices are I mod 2 and none is order 3: V4/S3 torsor reading fails
 ALL CHECKS PASSED
