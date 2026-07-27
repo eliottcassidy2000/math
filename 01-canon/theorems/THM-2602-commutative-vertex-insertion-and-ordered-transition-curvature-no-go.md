@@ -23,9 +23,9 @@ source: wild-holotopy-2026-07-28-ordered-transition-curvature
 depends_on:
   - THM-2591-theta-zero-selector-cech-coboundary-and-c91-holonomy-no-go
   - THM-2593-charged-target-section-atlas-and-minimal-c91-holonomy-trivialization
+  - THM-2594-realized-theta-slaved-contraction-at-the-r5-window
 related:
   - THM-2592-fallback-rail-digit-diagonal-pullback-and-primitive-bockstein
-  - THM-2594-realized-theta-slaved-contraction-at-the-r5-window
 script: 04-computation/lrc14_vertex_insertion_transition_curvature_thm2602.py
 output: 05-knowledge/results/lrc14_vertex_insertion_transition_curvature_thm2602.out
 script_sha256: bdaea9644d575554682d816ab2ed04d8437ebd5e4b34c6827f8b019b9f0825e8

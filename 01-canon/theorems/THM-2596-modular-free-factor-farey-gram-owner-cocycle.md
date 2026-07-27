@@ -1,6 +1,6 @@
 ---
 id: THM-2596
-title: "Modular free factors, Farey children, and the Gram-owner cocycle"
+title: "Modular free factors, Farey children, and Gram-owner covariance"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The Bass--Serre
   tree of PSL_2(Z)=C_2*C_3 is
@@ -15,7 +15,8 @@ status: >
   can likewise change a nonnegative defect into a negative one, so the
   THM-2056 Euclidean defect certificate is not invariant under active
   modular motion.  The three Berggren
-  branches form a disjoint PGL_2(Z) reduction cross-section of (0,1), not
+  branches form a PGL_2(Z) reduction cross-section of (0,1) up to the seams
+  {1/3,1/2}, not
   a C_3 action; their triple matrices are identity mod 2 and not order
   three.  This repairs the binary/ternary "one object" analogy without
   proving LRC(14) or identifying a V_4 torsor.
@@ -270,8 +271,12 @@ Hence every non-seam positive rational has one reduction branch.  This is
 the positive meaning of the ternary tree “covering the same area”: it is a
 three-cylinder PGL_2(Z) cross-section of the same rational line on which
 Farey bases live.  The middle matrix has determinant `-1`; the other two
-have determinant `+1`.  All three act lawfully on the same Gram-owner state
-by (8), because (8) holds for all of `GL_2(Z)`.
+have determinant `+1`.  All three admit the same **passive basis
+reinterpretation** on the Gram-owner state by (8), because (8) holds for all
+of `GL_2(Z)`: one must simultaneously replace the coordinate by
+`z'=g^(-1)z` as in (9).  This does not say that the active parameter move
+(20) preserves the fixed Euclidean defect predicate; Section 3 proves the
+contrary.
 
 On triples the corresponding Berggren matrices are
 
@@ -319,9 +324,10 @@ THM-2597 supplies the other natural order-six quotient,
 PSL_2(Z)_ab = C_2 x C_3 isomorphic to C_6.                (25)
 ```
 
-There the free factors commute and all commutator/word data are lost.  In
-`S_3` they do not commute.  The fork `(25)` versus `(24)` is the exact
-distinction hidden by cardinality six.
+There the free factors commute: commutators, reduced-word ordering, and
+Bass--Serre path history are lost, while exponent residues modulo two and
+three survive.  In `S_3` the two factor images do not commute.  The fork
+`(25)` versus `(24)` is the exact distinction hidden by cardinality six.
 
 ## 6. Transfer contract and stopping boundary
 

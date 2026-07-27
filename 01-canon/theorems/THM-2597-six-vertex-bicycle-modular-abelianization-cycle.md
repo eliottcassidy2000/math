@@ -258,7 +258,8 @@ Modulo two, however, the sum of absolute edge differences equals
 
 ```text
 sum_({u,v} in E) (f(u)+f(v))
- =sum_v deg(v) f(v)=0,                                   (21)
+ congruent sum_v deg(v) f(v)
+ congruent 0                                      (mod 2). (21)
 ```
 
 because every degree of `C_6` is two.  This contradicts (20).  The
@@ -277,14 +278,16 @@ advances the graceful tree conjecture beyond that example.
 
 ## 6. What does not transfer to LRC
 
-THM-2587 has six live wall pieces indexed by
+THM-2587 has six live wall pieces indexed physically by
 
 ```text
-theta in C2  times  {low,middle,high},                     (23)
+theta in {0,1} subset F_13  times  {low,middle,high}.      (23)
 ```
 
-with each `theta` rail carrying exact census counts `48,154,48`.  Its three-state
-factor is an ordered interval/reflection wall, not a cyclic `C_3` action.
+Here `{0,1}` records two values related by the reflection wall; it is not an
+additive `C_2` action on the LRC carrier.  Each `theta` rail carries exact
+census counts `48,154,48`.  Its three-state factor is an ordered
+interval/reflection wall, not a cyclic `C_3` action.
 Therefore the shared cardinality six does not identify the LRC selector
 wall with the bicycle `C_6` or with the `S_3` matching completion.
 

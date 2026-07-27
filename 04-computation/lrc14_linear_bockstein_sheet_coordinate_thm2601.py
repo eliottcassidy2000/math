@@ -216,6 +216,15 @@ def main():
         owner_lambdas.append(conjugate)
         require(tuple(dot(conjugate, sigma(factor, kappa)) for factor in factors)
                 == sheet_values, "owner-conjugate coordinate failed")
+        # Omega=-u^11, so [u^11] beta=-sigma_kappa(Y_q).  The sheet
+        # coordinate is the signed extraction -lambda_kappa([u^11] beta).
+        socle_coefficients = tuple(
+            tuple((-value) % P for value in sigma(factor, kappa))
+            for factor in factors
+        )
+        require(tuple((-dot(conjugate, coefficient)) % P
+                      for coefficient in socle_coefficients) == sheet_values,
+                "signed Bockstein coefficient extraction failed")
 
     # If mu(Y_q)=alpha*q+beta for all q, then
     # (mu_0,...,mu_5,alpha,beta) lies in the kernel of this 13x8 matrix.
@@ -267,12 +276,13 @@ def main():
           "degree 11")
     print("successor orbit: one 13-cycle; affine scalar realizations: 0/169")
     print("owner-conjugate lambda rows:", tuple(owner_lambdas))
+    print("signed socle extraction -lambda_kappa([u^11] beta):", sheet_values)
     print("affine-covariant linear system: rank", affine_rank,
           "certificate rows", minor_rows, "det", minor_det)
     print("CRT component fibres:", crt_data)
     print("Boolean scalar subset sums: zero=632 (631 nonempty), each nonzero=630;")
     print("singleton scalar-zero hostile: q=5, while Y_5 is a THM-2585 unit")
-    print("exact checks: separator/inverse/successor/owner/affine/CRT/subsets PASS")
+    print("exact checks: separator/inverse/successor/owner/socle-sign/affine/CRT/subsets PASS")
 
 
 if __name__ == "__main__":

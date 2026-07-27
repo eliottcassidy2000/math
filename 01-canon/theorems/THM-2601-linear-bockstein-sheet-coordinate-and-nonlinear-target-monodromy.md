@@ -9,7 +9,7 @@ status: >
   every labelled owner colour.  The inverse sheet map and target successor
   are explicit degree-eleven polynomials; the successor is one 13-cycle.
   A rank-eight affine system, certified by determinant 4, proves that no
-  F_13-linear functional can make target translation affine.  Two CRT
+  nonconstant F_13-linear observable can make target translation affine.  Two CRT
   components separately distinguish all sheets, while the third has exactly
   the collisions {1,9} and {4,12}.  The scalar is faithful only on singleton
   sections: 631 nonempty Boolean aggregates have scalar value zero.  This
@@ -24,8 +24,8 @@ related:
   - THM-2593-charged-target-section-atlas-and-minimal-c91-holonomy-trivialization
 script: 04-computation/lrc14_linear_bockstein_sheet_coordinate_thm2601.py
 output: 05-knowledge/results/lrc14_linear_bockstein_sheet_coordinate_thm2601.out
-script_sha256: 0e33382721fe55845787584f60f11d518147f9c022c64e6357974aabc0f17302
-output_sha256: ae76f41a5bbb047bcb8cbda45833fef9518c075450ef19e9e171c4dd684fecd1
+script_sha256: 3fbfce6606c04caf0b36317ef0b9cc59a06781f763ba1fbd1e4bd9eb48b743f8
+output_sha256: c00782a525182ae453ad91e6c8333ea5576195672655ddfc180764c6faf36a34
 hash_basis: LF-normalized bytes
 ---
 
@@ -184,9 +184,19 @@ beta(D^(kappa,q))=-sigma_kappa(Y_q) tensor u^11.           (16)
 ```
 
 Multiplication by `Omega` embeds `R_7` into that socle summand.  Hence, on
-the image of the first Bockstein, extracting the `u^11` coefficient and
-applying (14) recovers `t_q`, then (7) recovers `q`.  This is a linear
-coefficient operation on the Bockstein image; it is not division by `Omega`
+the image of the first Bockstein, the signed coefficient extraction is
+
+```text
+b_(kappa,q)
+ :=-lambda_kappa([u^11] beta(D^(kappa,q)))
+ =t_q,
+
+P(b_(kappa,q))=q.                                        (16a)
+```
+
+The minus sign is load-bearing because `[u^11]beta=-sigma_kappa(Y_q)`;
+omitting it gives `-t_q`.  Equation (16a) is a linear coefficient operation
+on the Bockstein image followed by the fixed sign, not division by `Omega`
 inside the nonreduced cyclotomic ring.
 
 ## 4. No linear coordinate can make target translation affine
