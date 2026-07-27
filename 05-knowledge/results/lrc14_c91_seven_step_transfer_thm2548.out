@@ -1,0 +1,13 @@
+field=F_547 generator=2 xi=81 zeta=475
+transfer_rank=85 kernel_rank=6 image_rank=85
+smith_form=1^85,0^6 primitive_image=1
+operator_identity_checks=91 kernel_basis_checks=6 integral_image_preimages=85
+positive_clock_sheet_collision=1
+character_checks=1092 factor_checks=1092
+root_charged_survive=1008/1008 clock_only_killed=72/72
+full_norm_nonconstant_killed=1080/1080
+zero_holonomy_clock_modes_killed=78/78
+signed_cut_amplification=1296/1296
+hall_transfer_margins=[7, 7] diagonal_aligned=14 diagonal_swap=0
+neutral_gain_invoice=6 flat=[0] hostile=[6] abundant=13
+active_shift_hall_diagonal=0
