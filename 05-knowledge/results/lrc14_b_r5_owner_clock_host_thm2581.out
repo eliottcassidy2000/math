@@ -1,0 +1,53 @@
+== THM-2581: the b-word depth-five owner-clock host ==
+row: (1, 14, 27, 40, 53, 66, 13, 2197, 742586)
+owner j=1; sigma={b}; packet clock K=2; r=5; d=13^5
+all owner-clock restrictions occur inside one common y-integral
+
+== hostile engine control ==
+    toy pipeline (grid 90, p=3, R'=9, d'=27, cells mod 5): all 3x5 entries == definitional brute force (15 nonzero): PASS
+
+== exact typed atoms ==
+E_1: intervals=57072 mass=1882176/28589561
+Q_1,{b}: intervals=131762 mass=4839079319/190921088358
+
+== b/r=5 table; route-doubled integration ==
+rho^2({b})=35505957232/16132831966251
+I_5({b},K=2)=48602521488933856/337437093630814766589
+DENC=6939029398456584394954868880=2^4 * 3^3 * 5 * 7^2 * 11 * 13^18 * 53
+U pieces=24 V pieces=15
+two integration routes agree on all 91 cells and 13 globals: PASS
+sum_ell W(k,ell)=J(k), J(0)=I_5: PASS
+sum_k W(k,ell)=0 for every ell: PASS
+all 12 global nonzero root colours survive: PASS
+Hermitian symmetry: PASS
+
+== reflection law and oriented H-drift ==
+C_ell(s)=C_{-ell}(-s): PASS
+Delta(s)=C_4(s)-C_3(s) is odd, nonzero, and mean-zero
+Delta numerator vector over DENC: [0, 2371250083334441400, -2372727465429080760, 0, 0, 7537663748160, 13943390382112070880, -13943390382112070880, -7537663748160, 0, 0, 2372727465429080760, -2371250083334441400]
+Delta(1)= 47817205/139928299245620886
+all 12 nonzero Fourier colours of Delta survive: PASS
+
+== exact mixedness ==
+cyclotomic reduction: 1638/1638 2x2 minors nonzero
+mod 79, primitive root 18: certifies 1625 new; remaining=13
+mod 131, primitive root 107: certifies 13 new; remaining=0
+independent two-prime certificate covers all 1638 minors: PASS
+Wc(k,ell)=W(k,ell)-J(k)/7: 91/91 entries nonzero
+each owner cell fires all 12 nonzero root colours
+rank_Q(zeta13)(W)=7; rank(Wc)=6 (maximal under row-zero): PASS
+T1 row/column zero; T2 nonvacuous k-dependence: PASS
+T3 universal denominator=184240653122424862557594=2 * 3^2 * 7^3 * 11 * 13^15 * 53
+T3 minimum nonzero coordinate=76/11823941286254964867 >= 1/D
+
+== hostile comparison: separate a/r=3 fibre ==
+a/r=3 has C_3(s)=C_4(s) and exactly 90 zero minors: PASS
+b/r=5 replaces that even central profile by the nonzero odd Delta
+
+== finite clock robustness; not part of the theorem quantifier ==
+K=3: stored return and 1638/1638 minors: PASS
+K=4: stored return and 1638/1638 minors: PASS
+
+SCOPE: canonical typed row, sigma={b}, K=2, r=5 host only
+No cross-word multiplication, slaved contraction, physical current,
+row exclusion, or LRC(14) conclusion.  All exact checks passed.
