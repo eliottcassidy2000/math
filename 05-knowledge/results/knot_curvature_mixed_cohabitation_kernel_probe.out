@@ -1,0 +1,10 @@
+hostile_rational_cells_checked=364
+interior_rational_points_detected=435
+kernel=clip((P+1)t-Q)-clip(Pt-Q)
+kernel_sign=nonnegative
+all_chamber_increments_zero_iff=interior_curvature_zero
+row_sum=integral_min(t,P*(1-t))_dkappa
+diagonal_plus_twice_row_sum=delta
+THM2348_sign=stable_sigma_side_positive_muU_side_negative
+scope=stable_chamber_bridge_not_finite_rectangularity
+status=KNOT_CURVATURE_COHABITATION_KERNEL_EXACT_AUDIT

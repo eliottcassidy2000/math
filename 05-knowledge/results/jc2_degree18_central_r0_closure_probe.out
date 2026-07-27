@@ -1,0 +1,40 @@
+central-wall substitution: F(yV,y)=y^3 H(V,y) [PASS]
+infinity cubic discriminant = -1972620783 [PASS]
+H_y(V,0) = -79380 B, so B!=0 makes every exceptional point smooth
+rho_+ = -250/13041+500/117369*sqrt(3)
+  r_+ = -35/2+21/2*sqrt(3)
+  B/y^2 = -7/15+7/36*sqrt(3)
+  C/y^3 = 119/1944-7/216*sqrt(3)
+  Hessian/y^2 = 5834430-4667544*sqrt(3)
+  S/B^5 = -41576/23+24000/23*sqrt(3)
+rho_- = -250/13041-500/117369*sqrt(3)
+  r_- = -35/2-21/2*sqrt(3)
+  B/y^2 = -7/15-7/36*sqrt(3)
+  C/y^3 = 119/1944+7/216*sqrt(3)
+  Hessian/y^2 = 5834430+4667544*sqrt(3)
+  S/B^5 = -41576/23-24000/23*sqrt(3)
+two conjugate affine singular ratios and nonzero nodal Hessians [PASS]
+S is nonzero at both singular ratios [PASS]
+central tangent-discriminant ratio = -250/15309; S/B^5 = -1112 [CORRECTED WARNING]
+line-through-node parameterization H=0 [PASS]
+Q3(lambda) = lambda^3 + 735 lambda - 3773
+Z_+(lambda) = (8/729) N_+(lambda) / Q3(lambda)^3
+N_+(lambda) coefficients, low degree first:
+  0: 3967243811384-2293376193024*sqrt(3)
+  1: 916257470940-532736790012*sqrt(3)
+  2: 10954768986-2475570258*sqrt(3)
+  3: -11405129358+6621991614*sqrt(3)
+  4: 185297175-319618719*sqrt(3)
+  5: 18237996+10847718*sqrt(3)
+  6: -3634428+1963332*sqrt(3)
+  7: 114660-82908*sqrt(3)
+  8: -5355+3339*sqrt(3)
+  9: -22+12*sqrt(3)
+N_- is the sqrt(3)-conjugate of N_+ [PASS]
+F_25 reduction of N_+, low degree first:
+  [(4, 1), (0, 3), (1, 2), (2, 4), (0, 1), (1, 3), (2, 2), (0, 2), (0, 4), (3, 2)]
+gcd degrees (N,N'), (N,Q3), (Q3,Q3') = (0, 0, 0)
+finite-field squarefree/coprime certificate [PASS]
+square cover branch count = 9+3+0 = 12
+square-cover genus = 5 [PASS]
+ALL EXACT R=0 CENTRAL-WALL PROBE CHECKS PASSED

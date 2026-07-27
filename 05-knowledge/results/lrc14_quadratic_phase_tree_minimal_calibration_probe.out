@@ -1,0 +1,29 @@
+LRC14 QUADRATIC PHASE-TREE / GLOBAL-TWIST AUDIT
+complete-pair identity Gaussian checks: 2400
+path hostile edge data: zero-mode=5 first-mode=-2 on both edges
+path hostile totals: (0, 0) (-3, 0)
+connected-graph signless-rank checks: 27475
+  n=2 bipartite=1 nonbipartite=0
+  n=3 bipartite=3 nonbipartite=1
+  n=4 bipartite=19 nonbipartite=19
+  n=5 bipartite=195 nonbipartite=533
+  n=6 bipartite=3031 nonbipartite=23673
+C13 unique-difference phase-tree census:
+  size= 1 connected=  13/  13 edge_hist=((0, 13),)
+  size= 2 connected=  78/  78 edge_hist=((1, 78),)
+  size= 3 connected= 208/ 286 edge_hist=((1, 78), (3, 208))
+  size= 4 connected= 364/ 715 edge_hist=((1, 78), (2, 273), (4, 312), (6, 52))
+  size= 5 connected=   0/1287 edge_hist=((1, 312), (2, 507), (3, 468))
+  size= 6 connected=   0/1716 edge_hist=((0, 702), (1, 858), (2, 156))
+  size= 7 connected=   0/1716 edge_hist=((0, 1638), (1, 78))
+  size= 8 connected=   0/1287 edge_hist=((0, 1287),)
+  size= 9 connected=   0/ 715 edge_hist=((0, 715),)
+  size=10 connected=   0/ 286 edge_hist=((0, 286),)
+  size=11 connected=   0/  78 edge_hist=((0, 78),)
+  size=12 connected=   0/  13 edge_hist=((0, 13),)
+  size=13 connected=   0/   1 edge_hist=((0, 1),)
+C13 unique-edge coefficient selector checks: 2964
+three-point failures are exactly the 78 cyclic 3-term APs: PASS
+positive controls: every 2-support; non-AP 3-support; 364 four-supports
+hostile controls: AP triple; every support of size at least 5; full C13
+ALL EXACT CHECKS PASSED

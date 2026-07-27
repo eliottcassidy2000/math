@@ -1,0 +1,14 @@
+LRC14 OWNER-SIDE ACUTE-CURRENT AUDIT
+unsplit owner-cone guaranteed multipliers: [1, 2, 3]
+one-sided open-cone guaranteed multipliers: [1, 2, 3, 4, 5, 6, 7]
+one-sided THM-2355 autocorrelation multipliers: [1, 2, 3]
+strict two-cell cross-cone pairs m+n<=6: 15
+two-side cancellation outer-strip thresholds: ((4, Fraction(3, 56)), (5, Fraction(1, 35)), (6, Fraction(1, 84)))
+first unsplit hostile m=4 centers: -1/16 1/16
+  both endpoint orientations are exact antipodal pairs: PASS
+first one-sided cone hostile m=8 intervals: (Fraction(15, 4096), Fraction(17, 4096)) (Fraction(271, 4096), Fraction(273, 4096))
+  both endpoint orientations are exact antipodal pairs: PASS
+deepest-comb geometric m=8 control theta: 1/448 29/448
+  Boolean activation is intentionally not asserted
+m=7 boundary uses strict open half-plane, no uniform margin
+ALL EXACT CHECKS PASSED

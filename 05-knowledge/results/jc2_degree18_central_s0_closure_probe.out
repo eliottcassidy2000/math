@@ -1,0 +1,11 @@
+JC2 DEGREE-18 CENTRAL S=0 CLOSURE PROBE
+S=1701(21W+8BC)^2+2888B^5 [PASS]
+R_tau boundary values and both rational factorizations [PASS]
+Disc_y R_tau = constant*(tau-19)^6*P7(tau) [PASS]
+P7 degree = 7
+P7 monic mod 37 = [10, 20, 6, 6, 20, 5, 34, 1]
+Rabin irreducibility certificate mod 37 [PASS]
+R4 and R7 squarefree/boundary checks [PASS]
+infinity discriminant = -1972620783 [PASS]
+genus ledger = {'generic': 4, 'ordinary-triple': 1, 'rational-node': 3, 'P7-node': 3}
+ALL EXACT CENTRAL S=0 PROBE CHECKS PASSED

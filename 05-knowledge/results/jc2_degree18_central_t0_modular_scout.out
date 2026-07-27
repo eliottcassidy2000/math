@@ -1,0 +1,6 @@
+JC2 DEGREE-18 CENTRAL T=0 MODULAR SCOUT
+{'prime': 1000003, 'resultant_degree_W': 18, 'R_order': 6, 'S_order': 3, 'residual_degree_W': 6, 'residual_squarefree_profile': [(6, 1)]}
+{'prime': 1000033, 'resultant_degree_W': 18, 'R_order': 6, 'S_order': 3, 'residual_degree_W': 6, 'residual_squarefree_profile': [(6, 1)]}
+{'prime': 1000037, 'resultant_degree_W': 18, 'R_order': 6, 'S_order': 3, 'residual_degree_W': 6, 'residual_squarefree_profile': [(6, 1)]}
+Exact finite-field diagnostic only; no C-factorization claim.
+PASS

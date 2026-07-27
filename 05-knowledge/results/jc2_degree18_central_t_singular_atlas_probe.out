@@ -1,0 +1,15 @@
+JC2 DEGREE-18 CENTRAL T SINGULAR ATLAS EXACT AUDIT
+Disc_W_T_degree_C=50
+factorization=constant*P8(C^2)^2*P3(C^2)^3
+P8_degree_X=8; P3_degree_X=3
+P8(C^2)_irreducible_mod_173_degree=16
+P3(C^2)_irreducible_mod_11_degree=6
+P8_stratum=16 singular points; local_type=node; residual=6_simple+2_double
+P3_stratum=6 singular points; local_type=cusp; residual=7_simple+1_triple
+R_and_S_nonzero_on_both_singular_strata=True
+smooth_T_locus_control=universal_discriminant_smooth_locus=>8_simple+1_double
+central_fibre=-26040609*(u-40/63)^3; G_y=-279936*R; delta_bar(0)=-27*26040609^2*(279936*R)^2
+infinity_cubic_discriminant=-153384762202971019112448
+spectral_irreducibility_control=y5=b*L'(a); b=0=>y3=-435456*C and y1=-279936*R; T(1,0,0)!=0
+genus_lower_bounds=smooth>=3; P8>=2; P3>=3
+PASS

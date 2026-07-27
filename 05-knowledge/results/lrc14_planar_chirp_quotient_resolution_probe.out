@@ -1,0 +1,7 @@
+LRC14 planar-chirp quotient-resolution exact probe
+affine plane: F_13^2, points=169, directions=14
+ordered distinct point/direction checks: 28392
+all 14 directions: exact point reconstruction PASS
+13 directions: omitted-direction zero-mean hostile PASS
+2 transverse directions: genuine-signal checkerboard hostile PASS
+VERDICT: one jet line yields 13-point derivative-coset sums, not atoms

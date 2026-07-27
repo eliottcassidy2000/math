@@ -1,0 +1,17 @@
+chart=B=1,C=0,W=0
+ratio_D_over_B2=4075/85176
+quotient_coordinate=x=y^2
+branch_degree=6
+branch_gcd=x+1215/91
+residual_quartic_primitive_ascending=-3037628182500,1389005982000,-147517112925,203464170,1577224103
+residual_quartic=squarefree_and_disjoint_from_triple_fibre
+triple_fibre_x=-1215/91
+triple_fibre_u=295/819
+triple_fibre_Hx=-16329600/169
+infinity_discriminant=-153384762202971019112448
+affine_singular_points=0
+infinity_points=3_distinct_smooth
+projective_spectral_curve=smooth_irreducible_plane_cubic
+finite_ramification=6
+genus=1
+status=BD_4075_RATIO_EXACT_CLOSURE_CERTIFICATE

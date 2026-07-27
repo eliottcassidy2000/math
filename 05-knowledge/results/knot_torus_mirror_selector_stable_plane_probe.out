@@ -1,0 +1,15 @@
+family=K_g=T(2,2g+1),g>=2
+selector_matrix=[[g,2-g],[2-g,g]]
+selector_determinant=4(g-1)
+context_floor=P+Q+(g-1)|P-Q|
+context_floor=real_Blanchfield_dimension
+full_two_frequency_inertia_bank=dominated_by_extreme_switched_pair_and_odd_axis
+balanced_selector_ceiling=2_per_copy
+defect_interval=0<=delta<=2(g-1)
+profile_bounds=delta*z<=h(z)<=min(2(g-1)z,delta(1+z)/2)
+curvature_budgets=A<=2(g-1)-delta,B<=delta/2
+rigid_endpoints=delta=0_and_delta=2(g-1)
+interior_defects=continuum_abstract_plane_ambiguity
+trefoil_boundary=selector_determinant_zero
+audit_range=g_2_to_30_exact_fraction_controls
+status=TORUS_MIRROR_SELECTOR_PLANE_EXACT_AUDIT

@@ -1,0 +1,11 @@
+LRC14 PRIME-TO-13 CURRENT HOSTILE -- exact audit
+speeds=(2, 1, 5198103, 3, 5198105, 4, 26, 4394, 742586)
+valuations=(0, 0, 0, 0, 0, 0, 1, 3, 5) gcd=1
+relative_address_count=169
+orientation=-1 active=49880 nontrivial=49536
+orientation=+1 active=49880 nontrivial=49536
+half_turn_gate_invariance=PASS
+odd_frequency_phase_reversal=PASS
+all_raw_orientation_address_currents=ZERO_BY_PAIRING
+fine_residue_lemma=phase_order_169; columns_13; owner_cap_2; forced_zero_11
+scope=primitive full scalar boundary trace; even guard; not LRC14

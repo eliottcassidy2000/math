@@ -1,0 +1,12 @@
+THM-2356 independent planar-chirp hostile audit
+prime-field off-diagonal selector controls: 68
+prime-field graph-restriction selector controls: 134003
+h=0 boundary: every diagonal site survives
+F_169 nonzero planar derivatives: 168
+F_169 nondegenerate trace-pairing controls: 168
+F_169 planar-graph partition cells: 28561
+diagonal boundary: support>=3 formula PASS; singleton/two-site hostiles PASS
+channel-difference Parseval identities: 35
+graph-singleton/vertical-tensor cells: 373
+joint-to-word energy bridge controls: 80
+VERDICT: formula signs, q^-2 normalization, graph restriction, and exact vertical residual PASS
