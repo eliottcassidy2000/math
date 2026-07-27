@@ -1,0 +1,16 @@
+THM-2511 AFFINE-CUT QUADRATIC ROOT-SERVICE ATLAS CENSUS
+universe=THM-2436_guard_[0,25]_plus_five_unit_AP13_supports_and_blocker_columns;all_28_source_multisets
+assignments=41379 flat=1736 nonflat=39643
+unique_nonflat_defects=14952
+constant_energy_pairs=10620
+defects_with_constant_pair=3586
+defects_with_all_pairs_constant=0
+minimum_nonconstant_pairs=64/72
+nonconstant_pair_histogram= 64:4 66:107 68:1498 70:1977 72:11366
+fixed_pair_nonconstant_range=14632..14903;constant_hostile_range=49..320
+minimum_witness_constant_pairs= (1,1) (1,2) (2,2) (3,6) (10,1) (11,5) (12,5) (12,6)
+minimum_witness_rows= h0=[-1,0,0,0,0,1,0] h7=[0,0,-1,0,0,1,0] h8=[0,0,0,0,-1,1,0]
+maximum_total_energy=316;universal_bound=2268
+fixed-pair_Fubini_floor=64/72=8/9;parent_floors=16/63,8/21
+nonconstant rational C13 vector iff all 12 nonzero colours;algebraic-integer floor=2268^-11
+ALL EXACT CHECKS PASSED

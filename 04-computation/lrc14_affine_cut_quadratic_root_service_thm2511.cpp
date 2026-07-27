@@ -1,5 +1,5 @@
 // Exact THM-2511 census: the positive cut-bundle energy retains a
-// nonconstant C_13 current on every nonflat THM-2436 atlas defect for at
+// nonconstant C_13 root vector on every nonflat THM-2436 atlas defect for at
 // least 64 of the 72 nonzero (tau,a) pairs.
 
 #if defined(__clang__)
@@ -93,6 +93,7 @@ int main() {
     uint64_t defects_with_constant_pair = 0;
     uint64_t defects_with_all_pairs_constant = 0;
     map<int, uint64_t> nonconstant_pair_histogram;
+    array<array<uint64_t, 7>, 13> fixed_pair_nonconstant{};
     int minimum_nonconstant_pairs = 72;
     long long maximum_total_energy = 0;
     Defect minimum_witness{};
@@ -119,6 +120,7 @@ int main() {
             ++constant_pairs;
           } else {
             ++nonconstant_pairs;
+            ++fixed_pair_nonconstant[tau][a];
           }
         }
       }
@@ -145,8 +147,24 @@ int main() {
             "64-of-72 quadratic invoice drifted");
     require(nonconstant_pair_histogram == expected_histogram,
             "nonconstant-pair histogram drifted");
+    uint64_t minimum_fixed_pair_nonconstant = patterns.size();
+    uint64_t maximum_fixed_pair_nonconstant = 0;
+    for (int tau = 1; tau < 13; ++tau) {
+      for (int a = 1; a < 7; ++a) {
+        minimum_fixed_pair_nonconstant =
+            min(minimum_fixed_pair_nonconstant,
+                fixed_pair_nonconstant[tau][a]);
+        maximum_fixed_pair_nonconstant =
+            max(maximum_fixed_pair_nonconstant,
+                fixed_pair_nonconstant[tau][a]);
+      }
+    }
+    require(minimum_fixed_pair_nonconstant == 14632,
+            "minimum fixed-pair count drifted");
+    require(maximum_fixed_pair_nonconstant == 14903,
+            "maximum fixed-pair count drifted");
 
-    cout << "THM-2510 AFFINE-CUT QUADRATIC ROOT-SERVICE ATLAS CENSUS\n";
+    cout << "THM-2511 AFFINE-CUT QUADRATIC ROOT-SERVICE ATLAS CENSUS\n";
     cout << "universe=THM-2436_guard_[0,25]_plus_five_unit_AP13_supports"
             "_and_blocker_columns;all_28_source_multisets\n";
     cout << "assignments=" << assignments << " flat=" << flat_assignments
@@ -162,6 +180,12 @@ int main() {
       cout << " " << count << ":" << defects;
     }
     cout << "\n";
+    cout << "fixed_pair_nonconstant_range="
+         << minimum_fixed_pair_nonconstant << ".."
+         << maximum_fixed_pair_nonconstant
+         << ";constant_hostile_range="
+         << patterns.size() - maximum_fixed_pair_nonconstant << ".."
+         << patterns.size() - minimum_fixed_pair_nonconstant << "\n";
     cout << "minimum_witness_constant_pairs=";
     for (int tau = 1; tau < 13; ++tau) {
       for (int a = 1; a < 7; ++a) {

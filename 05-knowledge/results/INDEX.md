@@ -19,6 +19,19 @@
   leg has rank `12`.  Twelve explicit integral, nonvertical, row-zero trace
   hostiles of `L1=168` are annihilated by both selected marginals.  Thus the
   joint `91`-entry chart is lossless, but its two marginal arrays are not.
+- `lrc14_affine_cut_quadratic_root_service_thm2511.cpp` -> matching `.out`
+  [THM-2511 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The nonnegative
+  cut-contracted vector `E_(tau,a)(v)=sum_c R_(tau,a,c)(v)^2` is equivariant,
+  not an invariant scalar; every nonconstant rational vector has all twelve
+  nonzero `C_13` colours.  The complete THM-2436 atlas has `14,952` nonflat
+  defect shapes, each nonconstant for at least `64/72` affine pairs, sharply;
+  the exact histogram is `64:4,66:107,68:1498,70:1977,72:11366`.  Fubini gives
+  a fixed-label `8/9` essential-locus floor in a chosen measurable bundle
+  trivialization, hence parent floors `16/63,8/21`, with coefficient floor
+  `2268^-11`.  O2/O3/stored outputs byte-match; hashes
+  are `cf5d6eb1...b3e0d` / `b6261657...cb45`.  The observable is nonlinear
+  signed pair-space data and loses sign, cut character, and owner orientation;
+  no Boolean owner/deep current or live-row exclusion follows.
 - `lrc14_antipodal_radon_cospan_thm2509.py` -> matching `.out`
   [THM-2509 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED;
   FINITE-EXACT ATLAS SHARPENING].  At least seven good toothpick slopes force
