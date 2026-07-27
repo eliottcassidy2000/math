@@ -113,33 +113,18 @@ quantitative near-fibre-uniformity test, not a proof.
 
 THM-2557 transfers the nonzero THM-2550(B) interaction injectively on the
 rank-72 doubly centred lattice (`SNF 1^66 + 13^6`), but the current is signed
-and outside the Hall cone.  THM-2558 forces the old target-active role on
-`428/630` visible root necklaces; `202` middle-layer necklaces are sharp
-blind controls.  THM-2561 realizes the canonical blind mask `{0,1,4}` on a
-positive physical exclusive-owner interval with an isolated `k_a` failure,
-`q_*=k_b` safe, and no neutral cofailure, so local six-comb geometry cannot
-eliminate that layer.  THM-2559 instead bypasses every blind mask: use the
-already named literal `k_a`-failure mask to select an occupied-to-failure
-chord, stratify its nonzero slope, and apply the Cayley endpoint identity.
-This works on all `165` rows and forces a positive old-predecessor
-deep-by-`k_a` complement-repair coefficient, with exact relative floor
-`11/24336` for an ordinary role and `1/2704` for the guard.  The paired
-blocker remains a static safe sidecar, not an oppositely co-shifted target
-dipole.  THM-2563 closes that local omission at the partial-bare level:
-inserting both full blocker--graft dipoles and a deepest danger probe gives a
-positive `13^3` table on every row, with simultaneous nonzero deep and moving-
-dipole colours and full-transform floor `7rho/35152`.  Its fixed old-head
-selector is not co-shifted, however, so the table sees the moving endpoint
-residue rather than the required left-minus-right target residue.  Complete-
-mask restoration is off-diagonal because the old head has `k_a` dangerous and
-the repair endpoint has it safe.  THM-2562 computes the canonical THM-2556 duty commutator exactly.
-Its ranks
-are `50/70/72/74`; because THM-2541 has `A(0)!=0`, every gain forces the same
-nonzero quotient scalar on six consecutive target fibres.  Full cancellation
-therefore requires an exact six-replica covariance residual.  Flat-arc
-nonnegative hostiles show why target support away from zero is insufficient.
-THM-2550 remains a typed non-cover and its two nondegeneracy arms are
-different packets.
+and outside the Hall cone.  THM-2558 has `202/630` blind necklaces, and
+THM-2561 realizes `{0,1,4}` physically, so local six-comb geometry cannot
+remove them.  THM-2559 bypasses all blinds by inserting the named `k_a`
+failure into an occupied-to-failure chord; on all `165` rows it forces a
+positive old-head deep-by-repair coefficient, with relative floor `11/24336`
+ordinary or `1/2704` guard.  THM-2563 adds both blocker--graft dipoles and a
+deep danger probe: its positive `13^3` partial-bare table has simultaneous
+deep/moving-dipole colour and floor `7rho/35152`.  The fixed old head is not
+co-shifted, so left-minus-right target residue and complete-mask restoration
+remain missing.  THM-2562 computes duty-commutator ranks `50/70/72/74`;
+THM-2541's nonzero anchor forces six equal target replicas under any complete
+cancellation.  Flat-arc hostiles show this invoice alone is not a proof.
 
 Next: retain the fixed head's target residue across THM-2563's charged
 danger-to-safe endpoint transition, or derive its exact full-`X` cancellation
