@@ -1,0 +1,12 @@
+THM-2562 duty-commutator holotopy referee
+line_blocks=2184 triple_incidence_sets=286 exceptional_gap_sets=13
+rank_histogram=50:36,70:12,72:24,74:96
+nullity_histogram=119:36,99:12,97:24,95:96
+block_patterns=axis_anti:2+12x4,diagonal:2+2x4+10x6,quadratic:2+2x5+10x6,generic:2+12x6
+exceptional_slopes=1,6,11 schur_equal_rank=4 schur_unequal_rank=5
+flat_arc_histogram=36:36,18:60,16:72 flat_arc_minimum=16 origin_flat=0
+nonnegative_kernel=flat_arc_coordinate_cone
+anchor_rows=1008 defects=229692,440232,440244
+kappa=1439676/27825593350009 reduced=205668/3975084764287
+explicit_require_checks=39540
+ALL CHECKS PASS
