@@ -32,13 +32,16 @@ related:
 > clock, packet, marked triangle, or common-root service. Sections below
 > retain the pre-resolution analysis.
 >
-> **SECOND RESOLUTION (2026-07-28, THM-2570):** prediction P2 is
+> **SECOND RESOLUTION (2026-07-28, THM-2575/2577):** prediction P2 is
 > CONFIRMED by construction -- the base-only bridge pairing yields the
 > first MISTAKE-281-clean 13x7 live-branch host W(k,ell) homed on the
 > OWNER CLOCK, whose centred array satisfies (T1)+(T2)+(T3); and the
 > word-depth collision law r = nu_13(deepest in-word blocker) opens
-> the r = 5 unique-intertwiner window at sigma = {b}: the u-slaved
-> THM-2512 bridge is LIVE on this row after all.
+> the r = 5 unique-intertwiner window at sigma = {b}.  THM-2577 strengthens
+> the finite clock census to every positive-return clock on both words
+> containing `b`.  The existing host is on the distinct `{a}`, `r=3`
+> packet, so the u-slaved THM-2512 bridge is a live **next construction**,
+> not yet a proved contraction on one common word fibre.
 
 ## 1. Why the packet cannot be re-run (PROVED anatomy)
 

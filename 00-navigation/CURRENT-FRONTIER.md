@@ -139,14 +139,17 @@ THM-2567 shows every nonzero deep colour has that rigid face while their deep
 augmentation cancels exactly: the missing datum is a common coloured carrier,
 not more Fourier support.
 
-Next: construct a covariant whole-layer orbit of the old selector/future
-packet and prove that its total-layer handoff weights have a nonzero tooth
-mode at the residue selected by an allowed deep offset.  Equivalently, retain
-THM-2574's connected fixed-`X` mode after all word/owner/deep convolutions;
-the connection must be physically supplied rather than gauge-declared.  Then
-place that relative sidecar on THM-2569's common packet, transport its word,
-owner, and carry to the canonical selector/current chart, test the
-six-replica law, and apply THM-2545.  Selector/current identity and vertical semantic gluing remain.
+THM-2575 constructs a common-base owner-clock host, while THM-2577 proves by
+exact support images that every positive-return packet has depth `r=3` on
+`{a}` and `r=5` on `{b},{a,b}`.  The host is on the distinct `{a}`, `r=3`
+packet, so these facts cannot be multiplied across word strata.
+
+Next: construct a covariant whole-layer old-head/future orbit with a nonzero
+tooth mode at an allowed deep offset, or rebuild the owner-clock array inside
+the `{b}`, `r=5` fibre and run the `theta=t-2u` contraction there.  Either
+connection must be physically supplied rather than gauge-declared, then put
+on THM-2569's common packet before the six-replica law and THM-2545.
+Selector/current identity and vertical semantic gluing remain.
 More untyped nonvanishing is not progress.  No row is removed. Ledger: `165`.
 
 ### Independent routes that remain live

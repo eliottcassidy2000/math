@@ -2,7 +2,7 @@
 id: THM-2577
 title: "All-clock word-depth collision law and support-image mechanism"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.  On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the
   canonical typed row, for every packet clock K whose prescribed word has
   positive return, the owner-normalized first-collision depth is exactly 3
   for sigma={a} and exactly 5 for sigma={b} or {a,b}.  The result is uniform
@@ -29,7 +29,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2577 -- the word-depth collision law is independent of the packet clock
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2575 computed the collision depth at packet clocks `K=2,3,4` and found
 the same pattern at all three clocks:
@@ -248,5 +248,15 @@ zero image intersection in (12), (14), proves the terminal equality/inclusion
 in (13), (15), and tests first, middle, and last positive subintervals of
 each word as hostile returned subpackets.  The support lemma (9) and the
 all-clock quantifier are symbolic; they are not finite extrapolations.
+
+The independent audit rederived the essential-support transfer identity and
+the exponent-to-collision-depth offset, checked that terminal inclusion forces
+positive overlap for every nonzero nonnegative returned subpacket, and
+verified that `K` enters only through a function supported in `Q_sigma`.  It
+also replayed the comb encodings, interval folds, terminal equality/full-circle
+claims, ordinary and optimized scripts, stored output, byte hashes, and
+bytecode compilation.  The auditor confirmed that the proof stays on one
+common normalized base and does not import the separate `{a}`, `r=3`
+owner-clock host into either `r=5` word.
 
 **QED.**
