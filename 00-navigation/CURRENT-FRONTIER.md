@@ -51,89 +51,24 @@ Its indispensable coordinates are primitive parameter, integral columns, transve
   removes longitudinal fibers, with a divisibility down-set and AP cutoff `156`.
   THM-2055 restricts failure to hull-owner sectors while non-hull deck sidecars
   remain essential. THM-2056 Kelvin-inverts them to `(1/91)R^{-1}K^o` and proves
-  `2u.v>=A_p(u)+A_p(v)` for whole acute unimodular cones. THM-2057 closes two
-  entire one-tail planes: `{a,2a,...,11a,13a,w}` by a `12a` / `14a` / `84a`
-  certificate, and `{a,2a,...,12a,w}` by a `13a` / `14a` / `182a` certificate.
-  More generally, a missing clock `N<=14` forces `Na|w` over `aC`. Despite
-  `640690` primitive determinant failures, its arithmetic carrier has three
-  leaves. THM-2059 makes arbitrary-`N` core/tail composition an exact CRT
-  histogram dot product; its zero-mode split isolates disjoint-support zeros.
-  THM-2060/2064 isolate the odd dyadic seam; THM-2061 folds it; THM-2066 closes
-  `59,880` cores through `24`; THM-2068 proves the minimum bank; THM-2072 rules
-  out a fixed uniform bank; THM-2073/2076 give a safe-child
-  tower. THM-2075 preserves nonempty-core component/Euler/owner data; THM-2078
-  closes terminal maximum `<=24`. MISTAKE-238 forbids descending the empty full
-  row across zero-child tails; THM-2079 pairs addresses `a,2^r-1-a` and flips
-  owner bits. THM-2080 gives the exact mixed `1/14`--`1/7` overlap fold. For an
-  odd guard every danger comb spends at least `1/42` of its mass inside the
-  guard, with equality only at speed `6h`; six distinct combs therefore cannot
-  cover the `5/7` guard complement. This eliminates terminal rank six at every
-  height and sharpens the tower to depth at most four. THM-2081 localizes
-  Hunter to the guard complement at terminal rank seven: containment forces
-  `tau_h(Q)<=2/7-sum_q measure(D_q intersect E_h)`, where `tau_h` is the
-  maximum spanning-tree weight of the outside-guard pair intersections. Its
-  exact three-frequency replay closes all `4,120` rank-seven pairs through
-  terminal height `24`; proving the same strict inequality at all heights is
-  the live depth-four target. At rank seven its scalar deficit is exactly the
-  negative signed-fold sum divided by `196`, hence equals outside-cover
-  multiplicity under containment. THM-2083 and THM-2085/2087 force a height-57 complete
-  relation cut: either `q/h=r/s`, `r,s<=57`, or a height-6498 guard star.
-  THM-2088 makes cut rank seven finite
-  (`max(h,max Q)<=91421508108581`); rank six is persistent, with THM-2089 flat
-  form `q_i=u_i(z+v_i h)`. THM-2082 retains residue incidence; THM-2086 closes
-  `7|h`, five `7|q`, and the lacunary cone. THM-2091 turns the remaining
-  containment into the centered triple-energy lower bound `2059/90090`, and
-  THM-2094 uses the full conditional law on the `1/7` grid to eliminate the
-  exactly-four-`7|q` profile. Thus this analytic residual is now `7 not|h`,
-  one to three `7|q`, nonlacunary templates. THM-2090 splices the persistent
-  cut to the
-  global rank-eleven code: the full row is finite, all thirteen speeds form a
-  height-`91^6` last-guard/terminal-anchor star, or `(h,Q)` is literally frozen
-  and only the three earlier guards plus two original tails move on one affine
-  lattice line. THM-2092 closes that apparent unbounded branch: the depth-four
-  needle gives `max(S)<=128 max(Q)/3`, so every frozen block has only finitely
-  many full rows. It also lifts THM-2088's bounded-terminal branch to
-  `max(S)<=3900651012632789`. THM-2093 closes the remaining global star:
-  its actual parameter has the exact support flag of weights `2,3,4,5,6`
-  modulo `2,4,8,16,32`; the five outer private coefficients pay dyadic factors
-  `16,16,8,4,2`; the six cut rows bound the common guard/anchor gcd by
-  `lcm(1,...,57)^6`; and a denominator-cleared THM-2053 gate gives
-  `max(S)<2912*lcm(1,...,57)^6*(91^6)^13`. Thus every no-pair rank-seven
-  branch is now finite. THM-2097's mixed-threshold two-torus escape also makes
-  the bounded guard-ratio branch `q/h=r/s`, `r,s<=57`, finite template-by-
-  template. THM-2095 makes its marked commensurate pair arithmetically finite:
-  the common scale has `240` choices, the reduced ratio has `1165`, and only
-  `279600` triples `(r,s,d)` survive before the other labels. THM-2112 gives
-  the explicit finite box `R_7=5*28^8*(7*57^42)^17` and
-  `max(S)<=floor((128/3)L_7^8)`; it is not an executed empty audit. At guarded
-  sizes `8..10`, THM-2098 has three lanes: pure transverse with budget
-  `5(n-7)/49`, low mixed with no inherited budget, and high vertical cover;
-  depth-zero size eleven is separate. THM-2099/2103 prove pair-tree data plus
-  signed affine rank miss exact dyadic rows. In pure-transverse rank eight,
-  THM-2119 eliminates complete signed lines and stated transverse near-pencils,
-  while projective directions and absolute quotient fibers are three-sparse. THM-2104
-  closes constant quotient valuations at `2,3,5`; THM-2105
-  forces affine clocks through denominator fourteen and opposite-parity
-  carriers at `3,5,7` in the all-transverse model. THM-2114 adds strict tree
-  surplus, all-maximum-basis connectivity, and finite-ring Kakeya needles. Its
-  prime row forces a `13`-content blocker through terminal rank `12` and an
-  `11`-content blocker through rank `10`, excluding all-primitive covers there;
-  specialization gives `13|h*product(Q)` and, through rank `10`,
-  `11|h*product(Q)`. THM-2115's half-fiber Toeplitz gate closes at frequency
-  `84` a row invisible to every THM-2105 clock and its saturated pair tree.
-  THM-2116/2120/2122/2123/2125 force a prime split: rank eight needs a guard
-  `13`-blocker or five guard-parallel nonblockers. THM-2124/2128/2131 empty both
-  no-terminal-blocker pencils; THM-2130 adds guard content, a sparse mod-11 triple,
-  or a `143` determinant through ranks `9..12`. THM-2133/2135 reduce simultaneous
-  blockers to scalar `6+1`/`5+2` tails, and THM-2138 empties both at every depth.
-  THM-2139/2141 close fivefold profiles `(1,5,2)` and `(2,5,1)`; the exact residual
-  is `(1,6,1)`, `(1,7,0)`, `(2,6,0)`, `(3,5,0)`. THM-2140 supplies one-blocker
-  depth/polar invoices. THM-2148/2168 classify the three-target Fano exception,
-  force top-two `13`-adic depth and a daughter-free common exact blocker pair,
-  and reduce guard-line incidence to `(0,0),(0,1),(4,3),(5,3)`.
-  Generated-lattice descent empties all-independent and scalar `4+3`; only the
-  rank-one scalar `5+3` tail survives inside `(3,5,0)`.
-  THM-2121's finite joint gate still requires its Toeplitz/Fejer and phase sidecars.
+  `2u.v>=A_p(u)+A_p(v)` on acute unimodular cones. THM-2057 closes two
+  one-tail planes; THM-2059 gives the exact arbitrary-`N` CRT histogram product
+  and isolates its disjoint-support zero. THM-2060--2080 reduce the dyadic
+  tower to depth four, with MISTAKE-238 forbidding empty-row descent.
+  THM-2081 gives the relative Hunter inequality and closes `4,120` small
+  rank-seven pairs; THM-2082 retains residue incidence. THM-2083 and
+  THM-2085/2087 force the height-57 cut, THM-2086 closes the modular/lacunary
+  lanes, and THM-2088 and THM-2089 make the persistent cut finite or flat.
+  THM-2090/THM-2092/THM-2093 close the apparent unbounded splice and global star;
+  THM-2091/2094 remove the four-`7|q` profile, while THM-2095/2097/2112 make
+  every remaining rank-seven template explicitly finite (not enumerated).
+  For guarded sizes `8..10`, THM-2098--2119 separate transverse, mixed, and
+  vertical lanes, force affine clocks and `11`/`13` content, and add the
+  Toeplitz sidecar. THM-2116--2138 reduce and empty the no-terminal and
+  simultaneous-blocker pencils. THM-2139/2141 leave profiles `(1,6,1)`,
+  `(1,7,0)`, `(2,6,0)`, `(3,5,0)`; THM-2148/2168 reduce the last to the
+  rank-one scalar `5+3` tail. THM-2121's joint gate still needs its
+  Toeplitz/Fejer and phase sidecars.
 - **PROVED relative decorrelation:** [THM-2054](../01-canon/theorems/THM-2054-relative-fejer-whole-product-decorrelation.md)
   lifts bounded scalar relations; `H=2^19` clears recorded margins.
   MISTAKE-080/082 still require shape-specific torus models.
