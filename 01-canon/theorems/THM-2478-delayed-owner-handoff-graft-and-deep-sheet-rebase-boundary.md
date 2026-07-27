@@ -408,6 +408,44 @@ The mixing horizon in (7) can be arbitrarily larger than the finite
 `lambda`.  Therefore no uniform choice of `L` simultaneously gives mixing
 and a sheet-free new-owner deep probe.
 
+### The time/charge cocycle
+
+The same natural-extension coordinate explains both the gain and the loss.
+Write
+
+```text
+x=(z+a)/13^L,                  a mod 13^L.           (27)
+```
+
+An old lawful target shift by `theta/13` sends
+
+```text
+x -> x-theta/13,
+
+z -> z,
+
+a -> a-13^(L-1)theta                  mod 13^L.      (28)
+```
+
+Thus the future base `z=T^Lx` is fixed and only the ancestry digit moves.
+This is exactly why a late handoff depending on `z` is target-neutral and
+mixes cleanly with the old charged table.
+
+A genuine target shift on the future owner leg would instead require
+
+```text
+z -> z-theta/13,
+
+x -> x-theta/13^(L+1).                              (29)
+```
+
+The shift in (29) is not the old THM-2365 target action.  Hence late renewal
+cannot transfer the old target charge into the future owner leg: it retains
+the old charged vector while adding a neutral future coupling.  When
+`L>lambda`, the same moving digit in (28) is read by the old deep comb through
+`a mod 13^(L-lambda)`, as in (25).  Target neutrality and the deep-sheet loss
+are therefore two faces of one cocycle, not unrelated caveats.
+
 ## 6. Crossed-product and owner-loop obstruction
 
 Let `mathcal L=P_13` be the Perron operator and let `U h=h composed_with T`
@@ -415,7 +453,7 @@ be Koopman pullback.  For every bounded mask `P_omega`,
 
 ```text
 M_(P_omega) mathcal L^K
- =mathcal L^K M_(U^K P_omega).                      (27)
+ =mathcal L^K M_(U^K P_omega).                      (30)
 ```
 
 Thus arrival refinement and source refinement differ by the exact temporal
@@ -425,7 +463,7 @@ commutator
 M_(P_omega)mathcal L^K M_e
  -mathcal L^K M_(P_omega)M_e
 
-=mathcal L^K M_e M_(U^K P_omega-P_omega).           (28)
+=mathcal L^K M_e M_(U^K P_omega-P_omega).           (31)
 ```
 
 On the positive handoff source, `eP_O=e` and `eP_omega=0` for
@@ -436,7 +474,7 @@ onto operator intertwining the source and arrival representations exists
 only if
 
 ```text
-P_O(T^Kx)=1                         almost everywhere. (29)
+P_O(T^Kx)=1                         almost everywhere. (32)
 ```
 
 Indeed, for `omega!=O` the source projection is zero.  Intertwining would
@@ -452,7 +490,7 @@ finite tensor identities alone.  On `F_13^3`, put
 ```text
 H_O(r,s,t)=(1/4)1_(r-t=1),
 
-H_N(r,s,t)=(1/4)1_((r,s,t)=(1,1,0)).                (30)
+H_N(r,s,t)=(1/4)1_((r,s,t)=(1,1,0)).                (33)
 ```
 
 Both are nonnegative and their sum vanishes on `r=t`.  The owner tensor is
@@ -475,7 +513,7 @@ with `r-t=1`.  Hence
 D(H_O+H_N)
  =(1/16)(168/169)/13^3
  =21/742586
- >0.                                                  (31)
+>0.                                                  (34)
 ```
 
 This is an exact hostile at the current nonnegative-tensor interface, not a
@@ -494,7 +532,7 @@ fixed old nonzero endpoint drift + old root service
 
 fixed old nonzero endpoint drift
   -> delay one canonical first-collision stalk
-  -> retain that drift in all twelve future collision colours.    (32)
+  -> retain that drift in all twelve future collision colours.    (35)
 ```
 
 The construction removes prior owner support as a prerequisite for adding a
