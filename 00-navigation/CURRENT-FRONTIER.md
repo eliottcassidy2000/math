@@ -131,12 +131,19 @@ colours and every nonzero endogenous `theta=t-2v` collision survive.
 THM-2586 then disintegrates the two theta-zero rails into literal Boolean
 ancestry sheets on all `84` nonzero-displacement/owner cells and continues
 `v=w=7t` to a genuinely later `k_a` physical root at exact time `N+5`.
+THM-2587 computes the exact comparison with translated deep gates: the
+absolute digit sees a three-state, two-neighbour danger-incidence wall, and
+`theta` cannot select an incident danger edge.  Eleven constant offsets per
+rail are uniformly safe but are only gauges.  Both projected danger and safe
+tensors are already spectrally saturated.  What they permanently omit is the
+oppositely translated `k_b` factor and THM-2334's left relation residue.
 
 Next: attach THM-2537's selected old head, or THM-2569's old-head/future
-packet, to a THM-2586 arrival sheet before proving a lawful co-shift or
-relation-residue map.  The frozen sheet is not old-action covariant, and the
-present typed-row tensor is spectrally saturated; more untyped nonvanishing
-is not progress.  No row is removed. Ledger: `165`.
+packet, to a THM-2586 arrival sheet, then insert the paired `k_b` translate
+and left endpoint residue on that same ancestry before full-`X` pushforward.
+The frozen sheet is not old-action covariant, and the present typed-row
+projection is spectrally saturated; more untyped nonvanishing is not
+progress.  No row is removed. Ledger: `165`.
 
 ### Independent routes that remain live
 

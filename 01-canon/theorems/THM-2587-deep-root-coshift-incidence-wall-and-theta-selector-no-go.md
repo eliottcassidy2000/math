@@ -1,17 +1,17 @@
 ---
 id: THM-2587
-title: "Deep-root/co-shift incidence wall and theta-selector no-go"
+title: "Deep-root/translated-gate incidence wall and theta danger-selector no-go"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On the canonical typed sigma={b}, K=2, depth-five packet, an absolute
   deepest-speed digit is not a THM-2365 deep-comb or endpoint co-shift
   label.  Writing its phase as (z+r)/13, the translated danger gate with
   label tau is active exactly at tau=r for z<13/14 and at tau=r+1 for
   z>1/14.  The middle wall has both incidences.  Each theta half of the
   THM-2584 packet has positive low, middle, and high mass, so no
-  diagonal-translation-equivariant selector tau=phi(r,theta) can preserve
-  danger incidence.  Retaining the three-state wall gives an exact
-  four-edge bipartite toothpick.  The projected danger and safe translate
+  diagonal-translation-equivariant selector tau=phi(r,theta) can select an
+  incident danger translate everywhere.  Retaining the three-state wall gives
+  an exact four-edge bipartite toothpick.  The projected danger and safe translate
   tensors have all 169 global, all 1,183 owner-cell, and all 1,183
   owner-centred joint characters nonzero.  This exhausts the deep-coordinate
   projection, but a lawful target co-shift is the paired dipole
@@ -28,6 +28,7 @@ related:
   - THM-2563-paired-dipole-deep-target-corner-and-partial-bare-boundary
   - THM-2569-stationary-diagonal-conditioned-paired-corner-and-frozen-future-role-boundary
   - THM-2586-depth-five-arrival-to-future-root-diagonal
+  - THM-2591-theta-zero-selector-cech-coboundary-and-c91-holonomy-no-go
 script: 04-computation/lrc14_deep_root_coshift_incidence_wall_thm2587.py
 output: 05-knowledge/results/lrc14_deep_root_coshift_incidence_wall_thm2587.out
 script_sha256: 63a83ac103cc50ec8c5bd3cdfe29a188ed918704adcc150f77b2c0e9743f59a4
@@ -35,9 +36,9 @@ output_sha256: b65340f6ca063c11ef86b52e721020b250daa201e6f1c89818beb07df4f81779
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2587 -- the absolute root sees a two-neighbour co-shift wall
+# THM-2587 -- the absolute root sees a two-neighbour translated-gate wall
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2584 retains an absolute deepest-speed root on the same positive
 `sigma={b}`, depth-five ancestry as the owner-clock host.  THM-2365 uses two
@@ -114,7 +115,7 @@ danger probe `Delta_r`, while its `t` indexes the complementary endpoint
 factor `1-d_1(cx-t/13)`.  Equation (4) therefore compares the THM-2584 digit
 with either **projected coordinate**, but identifies it with neither label.
 
-## 2. The binary theta rail cannot choose a translate
+## 2. The binary theta rail cannot choose an incident danger translate
 
 In the THM-2584 root chart,
 
@@ -127,7 +128,7 @@ r=2v+theta mod 13.                                      (6)
 ```
 
 The exact canonical packet has, for each fixed `theta`, positive mass in
-all three wall states.  The exact positive-cell census is
+all three wall states.  The exact `(s,r,ell)` positive-cell census is
 
 ```text
                          low    middle    high
@@ -163,6 +164,22 @@ single incident edge must be retained losslessly, the middle fibre has two
 elements, so one overlap-edge bit there is necessary and sufficient.  A
 convention can choose one edge, but the packet supplies no canonical physical
 choice between them.
+
+The quantifier "incident" is essential.  Every selector equivariant under
+(5) has the form `tau=r+c_theta`.  On a fixed `theta` rail it is safe for
+every `z` exactly when
+
+```text
+c_theta notin {0,1}.
+```
+
+Thus there are eleven uniformly safe offsets per rail, or `11^2` if the two
+rails are chosen independently.  These are undistinguished gauge choices,
+not a packet-defined target label, and they still translate only the `c_3`
+gate.  The no-go above concerns selecting one of the **active danger** labels
+in (4), as would be required to identify the absolute digit with the live
+translated danger probe.  It does not claim that projected safe translates
+do not exist.
 
 ## 3. The exact four-edge incidence toothpick
 
@@ -332,4 +349,13 @@ combs.  They agree on all `15,379` fine cells.  The companion then checks
 (7), (12), (15)--(18), the two selector controls, exact rational
 normalization, both modular certificates, and the complete loss ledger.
 
-**QED (candidate pending independent audit).**
+The independent `common-endpoint-seam` hostile audit rederived (4), checked
+the sign convention in the danger intervals, reran the exact companion, and
+recovered all `15,379` cells, the `48/154/48` census, and the four-edge
+support.  It also checked that the safe tensor is literally the same-integral
+complement and audited the projected-versus-lawful scope against THM-2365 and
+THM-2334.  A third physical-`x` reconstruction, independent of the root-chart
+wall split, reproduced the six rational wall masses and checked (4) at all
+`123,032` fine-cell midpoints.  No defect was found.
+
+**QED.**

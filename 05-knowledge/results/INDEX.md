@@ -20,12 +20,13 @@
   proves divisor parity, not exact multiplicities or a higher-iterate law.
   Hashes are `afcf930e...0a9c` / `d9a2b77f...1ff4`.
 - `lrc14_deep_root_coshift_incidence_wall_thm2587.py` -> matching `.out`
-  [THM-2587 PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT AUDIT PENDING].
+  [THM-2587 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   An absolute deepest-speed digit meets translated deep gates through a
   three-state wall: the incident labels are `tau=r`, `tau=r,r+1`, or
   `tau=r+1`.  Each THM-2584 `theta` half has positive mass in all three
-  states, so `theta` cannot select a translate equivariantly.  The retained
-  relation is a four-edge toothpick, and both its danger and safe projected
+  states, so `theta` cannot select an incident danger translate equivariantly;
+  the eleven uniformly safe offsets per rail remain undistinguished gauges.
+  The retained relation is a four-edge toothpick, and both its danger and safe projected
   translate tensors have `169/1183/1183` nonzero global/cell/centred joint
   characters.  This projects only `c_3`; it forgets the compensating `k_b`
   coordinate required by the lawful target dipole.  Hashes are
