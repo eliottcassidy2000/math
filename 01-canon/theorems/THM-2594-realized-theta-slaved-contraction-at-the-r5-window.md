@@ -2,11 +2,11 @@
 id: THM-2594
 title: "The realized theta-slaved contraction: S != 0 at the r = 5 window on a common ancestry base"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT (one common-base table, one
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED (one common-base table, one
   integral per entry; exact Phi_91 reduction with 5/5 split-prime
-  cross-checks; python/-O identical modulo elapsed fields; hostile
-  controls beta = 0 and flat-slaving vanish EXACTLY); independent
-  hostile audit REQUESTED.  MISTAKE-286 TYPING: this is a positive
+  cross-checks; python/-O identical modulo elapsed fields; beta-zero
+  and constant-column controls vanish exactly, while the genuine
+  fixed-absolute-root control is nonzero).  MISTAKE-286 TYPING: this is a positive
   instance of THM-2471's deep-root-sidecar CANDIDATE realization on
   the canonical typed row -- NOT a generic THM-2512 bridge theorem,
   NOT a physical current; no scalar row is excluded; ledger 165;
@@ -24,11 +24,11 @@ depends_on:
   - THM-2575 / THM-2577 (the r = 5 window at sigma = {b})
 related:
   - THM-2560 (the r = 3 base-only diagnostic this supersedes at {b})
-  - MISTAKE-281 / MISTAKE-286 / MISTAKE-293 (typing and discipline, obeyed)
+  - MISTAKE-281 / MISTAKE-286 / MISTAKE-293 / MISTAKE-295 (typing repaired)
 script: 04-computation/lrc14_stage2_theta_contraction_opus_20260728.py
 output: 05-knowledge/results/lrc14_stage2_theta_contraction_opus_20260728.out
-script_sha256: 377b520761ca64dd5964c60584d177dff70bd2367e12a61af5169f1d03218488
-output_sha256: 973e1479867900ad814f77106c4a87f12da6d55e971c5c412860fa1afecb7abf
+script_sha256: 09c43af0a0a56c7a0833bbfd13ed6a96bc5a7a3718aa1bc6b77a144bde101a06
+output_sha256: bef4ee9a18ff3e2f455bad66a95252dd9989b2f60953e26e8ea0c2dc6ae7f5df
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -75,11 +75,15 @@ Z_(u,a,b)=(X_(u,a)+b)/13^2,
 Y_(q,e')=(w_q+e')/d.
 ```
 
-Expanding `A(y,u)F(y,q)` as in THM-2471 (31) gives a normalized finite sum
-of the Boolean products
+Expanding `A(y,u)F(y,q)` as in THM-2471 (31) gives the exact formula
 
 ```text
-1_Q(X_(u,a)) 1_E(Z_(u,a,b)) 1_E(Y_(q,e')).
+N(u,q,ell,theta)
+ =1/(13^2 d^2) integral_T
+   sum_(a,e' mod d) sum_(b mod 13^2)
+    1_Q(X_(u,a)) 1_E(Z_(u,a,b)) 1_E(Y_(q,e'))
+    d_(1,ell)(w_u) Delta_(2u+theta)(X_(u,a))
+    Q^(+1)_ell(13^6 X_(u,a)) dy.
 ```
 
 At exponent `k=6`, direct identities give
@@ -97,13 +101,22 @@ marginalization.  This proves one common ancestry fibre.  It does not put the
 three factors at one circle point and does not identify `N` with THM-2449's
 one-variable table `H^R`.
 
-## The signal is the slaving
+## What the controls do and do not localize
 
-Both hostile controls vanish IDENTICALLY: `beta = 0` (row-zero) and
-the u-independent (flat) slaving. So the nonzero value is carried by
-the `theta = t - 2u` coupling itself -- the first exact instance where
-the collision root, deep phase, owner clock, word, and cut probe pair
-nonzero INSIDE one integral on a live-branch row.
+Two controls vanish identically: `beta = 0` by the row-zero law, and the
+constant-column table obtained by copying the deep marginal into every
+column.  The latter is only a deep-label-erasure control.  The genuine
+fixed-absolute-root table
+
+```text
+A_abs(ell,t)=sum_(u,q)N(u,q,ell,t-2u)
+```
+
+has nonzero centred interaction and nonzero `Psi_(1,1)(1,1)`.  Therefore the
+computation does **not** show that the affine slaving is the unique cause of
+nonvanishing (MISTAKE-295).  What it does show is the first exact instance
+where the collision root, deep phase, owner clock, word, and cut probe form a
+nonzero `theta`-indexed contraction inside one integral on a live-branch row.
 
 ## Structural facts
 
@@ -114,6 +127,9 @@ nonzero INSIDE one integral on a live-branch row.
   `cell_0`); reflection symmetry `(ell,theta) <-> (7-ell, 2-theta)`.
 - `34/169` ancestry fibres `(u,s)` carry nonzero interaction (none at
   `s = 0`).
+- The genuine fixed-absolute-root control has `18/91` nonzero raw cells,
+  `91/91` nonzero centred cells, and `66/72` nonzero reduced coordinates in
+  `Psi_(1,1)(1,1)`; it is the sharp hostile to any causal-slaving reading.
 - Gates: `J(0) = I_5 = 48602521488933856/337437093630814766589`
   reproduced from scratch; all colour/zero-sum/Hermitian laws;
   independent route-2 aggregate; toy-model pipeline validation;
@@ -129,3 +145,21 @@ candidate realization to THM-2512's generic bridge, to a target-active
 `B(q)`-type object, to THM-2449's one-point lawful response table, and to
 anything uniform over the 165 rows. NOT implied: a physical current, a
 transplant theorem, any row exclusion, or LRC(14).
+
+## Independent hostile audit
+
+An independent audit rederived the `1/(13^2 d^2)` Boolean expansion from
+THM-2471 (31), checked the three linked-node identities, and verified that
+`k=6` is used only by direct evaluation rather than an inference about
+THM-2449's `k_0`.  It separately rederived the THM-2512 factorization signs
+and rational Galois argument.  Normal, optimized, and stored runs agree after
+normalizing elapsed fields, and the stored hashes match the frontmatter.
+
+As a hostile exhaustive check, the auditor directly enumerated all `5,184`
+primitive quadruples of the theta table: all were nonzero (ordered reduced
+vector digest
+`0a1ba90d58076fea11f45690cd950092ee1da915167b99d3f473670de6d47ba0`).
+The audit also found MISTAKE-295 and then independently verified the repaired
+fixed-absolute-root table, including its nonzero primitive bundle.  Thus the
+promoted result is the narrow auxiliary linked-node contraction stated here,
+not a one-point lawful response, physical current, or row exclusion. **QED.**

@@ -55,11 +55,11 @@ as separately integrated controls; MISTAKE-281/293 discipline):
     k == K13 (mod ord_{D0}(13)) beyond an unspecified k_0, with
     T_DEN = 13^K13 D0 and K13 = 6.  The class arithmetic is word-independent,
     but does NOT prove 6 >= k_0.  Here k = 6 is instead evaluated directly
-    and exactly.  It is the smallest sheet-return exponent in the class,
+    and exactly.  It is the exact base-return/root-blind exponent,
     eps = 13^6 mod 7 = +1.  At k = 6 the word factor is SHEET-EXACT on the
     current branch:  R X_{u,a} = 13(w_u + a) = y + u + 13a == y (mod 1),
-    for every sheet a and root u; k = 6 is the unique clock with this
-    property (k = 5 gives w_u, k = 7 gives 13y).  Hence
+    for every sheet a and root u; k = 6 is the unique exponent with literal
+    return to y (k = 5 gives w_u, k = 7 gives 13y).  Hence
        Q^{+1}_ell(R X_{u,a}) = QW_ell(y) := T_b(y) * (1 - d(13y - ell/7)),
     T_b = the sigma={b} terminal word with its source-safe factor deleted
     (THM-2449 (15)):  T_b = A_0 n D_{c3} \\ D_{c2}.
@@ -120,10 +120,15 @@ CENTRING + CONTRACTION (THM-2512 (1)-(5), (12)-(14)):
 CONTROLS:
     HOSTILE H1 (must vanish): beta = 0 -- Psi_{1,1}(1,0) = 0 exactly by the
       row-zero law (THM-2512 (4)).
-    HOSTILE H2 (must vanish): u-independent slaving -- replace the slaved
-      column family by its theta-average (the deep label carries no
-      root-coupled information); the centred interaction is then 0
-      identically and the same pipeline must output S = 0 exactly.
+    HOSTILE H2 (must vanish): constant-column/deep-label erasure -- replace
+      every theta column by the same deep marginal.  The centred interaction
+      is then 0 identically and the same pipeline must output S = 0 exactly.
+      This is NOT a fixed-absolute-root control (MISTAKE-295).
+    HOSTILE H3 (must survive, disproving causal overreach): fix an absolute
+      deep root t independently of u, so the u-fibre reads theta=t-2u, and
+      aggregate A_abs(ell,t)=sum_(u,q)N(u,q,ell,t-2u).  Its interaction and
+      Psi_(1,1)(1,1) must both be nonzero.  Thus H2 cannot show that affine
+      slaving is the unique cause of the signal.
     POSITIVE: J(0) = I_5 anchor; sum_s C(s) = 169 I_5; int f = census rho;
       the (15) factorization identity; route-2 equality.
 
@@ -228,7 +233,7 @@ while x0 != 1:
     x0 = x0 * 13 % D0
     ORD += 1
     require(ORD < 10**7, "order search overflow")
-KRESP = 6                            # smallest exact sheet-return exponent
+KRESP = 6                            # exact base-return/root-blind exponent
 EPS = pow(13, KRESP, 7)
 require(EPS == 1, "eps = 13^6 mod 7 = +1")
 
@@ -963,15 +968,15 @@ def main():
     log("           DEEP_theta = EMPTY for theta in 3..12;")
     log("           law: sum_theta DEEP_theta = 2 - d(2y mod 1)  a.e.")
     log("           (per root u exactly t in {2u,2u+1,2u+2} mod 13 can fire)")
-    log("      word factor Q^eps_ell(R x) at x=X_(u,a), response clock"
+    log("      word factor Q^eps_ell(R x) at x=X_(u,a), response exponent"
         " R=13^k:")
     log(f"        CLOCK ARITHMETIC (THM-2449 (25)-(31) uses this class only")
     log(f"        eventually; no assertion that k=6 exceeds its k_0):")
     log(f"        T_DEN = 13^6 * D0, D0 = {D0}, ord_D0(13) = {ORD};")
-    log(f"        class k == 6 (mod {ORD}); smallest exact sheet-return")
+    log(f"        class k == 6 (mod {ORD}); exact base-return/root-blind")
     log(f"        exponent k = {KRESP}, evaluated directly; eps=+{EPS}")
     log("        at k=6: R X_(u,a) = 13(w_u+a) = y + u + 13a == y (mod 1)")
-    log("        (sheet-exact AND root-blind; unique such clock), so")
+    log("        (the unique literal return to base y), so")
     log("        Q^(+1)_ell(R X) = QW_ell(y) = T_b(y)(1 - d(13y - ell/7)),")
     log("        T_b = A_0 n D_c3 \\ D_c2 (source-safe factor deleted,")
     log("        THM-2449 (15); THM-2409 skew-diagonal mandatory)")
@@ -1398,7 +1403,7 @@ def stage2(state):
         log("    all five split primes consistent with S == 0: PASS")
     log("")
 
-    log("[11] hostile controls (both must vanish exactly)")
+    log("[11] attribution controls (MISTAKE-295 repaired)")
     B0 = psi_bucket(NUMT, TAU, A0, ALPHA, 0)
     S0 = poly_mod_phi91(bucket_to_poly91(B0))
     require(all(c == 0 for c in S0), "H1: beta=0 coefficient must vanish")
@@ -1407,16 +1412,44 @@ def stage2(state):
     Anum13 = [[sum(Anum[l]) for _t in range(13)] for l in range(7)]
     NUMflat = interaction_nums(Anum13)
     require(all(NUMflat[l][t] == 0 for l in range(7) for t in range(13)),
-            "H2: flat-slaved interaction must vanish identically")
+            "H2: constant-column interaction must vanish identically")
     Bf = psi_bucket(NUMflat, TAU, A0, ALPHA, BETA)
     Sf = poly_mod_phi91(bucket_to_poly91(Bf))
-    require(all(c == 0 for c in Sf), "H2: flat-slaved S must vanish")
-    log("    H2 (u-independent slaving): replacing the slaved column family")
-    log("    by its theta-average (deep label decoupled from the root, the")
-    log("    r<=4 base-only shape) kills the interaction AND the contraction")
-    log("    identically: PASS (vanishes)")
-    log("    => the nonzero signal (if any) is carried by the theta = t - 2u")
-    log("       coupling itself, not by the ell-structure alone.")
+    require(all(c == 0 for c in Sf), "H2: constant-column S must vanish")
+    log("    H2 (constant-column/deep-label erasure): copying the same")
+    log("    theta-marginal into every column kills the interaction and S:")
+    log("    PASS (vanishes).  This is NOT a fixed-absolute-root control.")
+
+    # Genuine u-independent physical-root control: t is fixed before u,
+    # hence the u-fibre reads theta=t-2u.  This is the control that the first
+    # draft incorrectly attributed to H2 (MISTAKE-295).
+    Aabs = [[0] * 13 for _ in range(7)]
+    for u in range(13):
+        for q in range(13):
+            gg = NG[u][q]
+            for l in range(7):
+                for t in range(13):
+                    theta = (t - 2 * u) % 13
+                    if theta < 3:
+                        Aabs[l][t] += gg[l][theta]
+    NUMabs = interaction_nums(Aabs)
+    require(any(NUMabs[l][t] for l in range(7) for t in range(13)),
+            "H3: fixed-absolute-root interaction unexpectedly vanished")
+    Sabs = poly_mod_phi91(bucket_to_poly91(
+        psi_bucket(NUMabs, TAU, A0, ALPHA, BETA)))
+    require(any(Sabs), "H3: fixed-absolute-root Psi unexpectedly vanished")
+    require(any(Sabs) == any(NUMabs[l][t]
+                              for l in range(7) for t in range(13)),
+            "H3: THM-2512 rational-table consistency failed")
+    log("    H3 (genuine fixed absolute root t, independent of u):")
+    log("      A_abs(ell,t)=sum_(u,q)N(u,q,ell,t-2u)")
+    log(f"      raw nonzero cells={sum(bool(Aabs[l][t]) for l in range(7) for t in range(13))}/91;")
+    log(f"      centred nonzero cells={sum(bool(NUMabs[l][t]) for l in range(7) for t in range(13))}/91;")
+    log(f"      Psi_(1,1)(1,1) reduced nonzero coordinates="
+        f"{sum(bool(c) for c in Sabs)}/72: PASS (NONZERO)")
+    log(f"      first eight reduced numerator coordinates={Sabs[:8]}")
+    log("    => the theta-indexed table survives, but H2 does NOT prove that")
+    log("       affine slaving is the unique cause of nonvanishing.")
     log("")
 
     log("[12] positive controls (marginals reproducing known exact values)")

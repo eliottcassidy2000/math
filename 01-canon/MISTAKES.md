@@ -9,6 +9,27 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-295 (2026-07-28, THM-2594 hostile control) -- constant-column erasure was mislabeled as fixed-root slaving
+
+- **What was claimed:** because replacing every deep column by the same
+  marginal made the centred contraction vanish, the first THM-2594 draft
+  said that its nonzero value was carried specifically by the affine coupling
+  `theta=t-2u`.
+- **First failed implication:** the coded control copied
+  `sum_theta A(ell,theta)` into every column.  This erases the deep label; it
+  is not the genuine `u`-independent experiment in which one fixes an
+  absolute root `t` and, on the `u` fibre, reads column `theta=t-2u`.
+- **Minimal hostile:** for the exact same table, define
+  `A_abs(ell,t)=sum_(u,q)N(u,q,ell,t-2u)`.  Its doubly centred interaction is
+  nonzero and `Psi_(1,1)(1,1)` is nonzero exactly in `Q(zeta_91)`; the tested
+  primitive companions are nonzero as well.
+- **Strongest survivor / repair:** THM-2594 still proves that its defined
+  rational `theta`-indexed table is non-replica and hence fires all `5,184`
+  primitive coefficients.  The beta-zero and constant-column controls remain
+  valid, but they do not identify the cause of nonvanishing.  The fixed-root
+  hostile is now computed explicitly, and every statement that the signal is
+  uniquely carried by slaving is removed.
+
 ## MISTAKE-294 (2026-07-28, concurrent theorem reservation) -- the audited theta contraction collided a third time at THM-2590
 
 - **What happened:** after the second namespace repair, the theta contraction

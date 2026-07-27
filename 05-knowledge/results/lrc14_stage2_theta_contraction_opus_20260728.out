@@ -24,14 +24,14 @@ machine=opus  script-date=2026-07-28  run-date=2026-07-27
            DEEP_theta = EMPTY for theta in 3..12;
            law: sum_theta DEEP_theta = 2 - d(2y mod 1)  a.e.
            (per root u exactly t in {2u,2u+1,2u+2} mod 13 can fire)
-      word factor Q^eps_ell(R x) at x=X_(u,a), response clock R=13^k:
+      word factor Q^eps_ell(R x) at x=X_(u,a), response exponent R=13^k:
         CLOCK ARITHMETIC (THM-2449 (25)-(31) uses this class only
         eventually; no assertion that k=6 exceeds its k_0):
         T_DEN = 13^6 * D0, D0 = 61704720, ord_D0(13) = 16380;
-        class k == 6 (mod 16380); smallest exact sheet-return
+        class k == 6 (mod 16380); exact base-return/root-blind
         exponent k = 6, evaluated directly; eps=+1
         at k=6: R X_(u,a) = 13(w_u+a) = y + u + 13a == y (mod 1)
-        (sheet-exact AND root-blind; unique such clock), so
+        (the unique literal return to base y), so
         Q^(+1)_ell(R X) = QW_ell(y) = T_b(y)(1 - d(13y - ell/7)),
         T_b = A_0 n D_c3 \ D_c2 (source-safe factor deleted,
         THM-2449 (15); THM-2409 skew-diagonal mandatory)
@@ -81,38 +81,38 @@ machine=opus  script-date=2026-07-28  run-date=2026-07-27
     verified against direct ||.|| Fraction tests: PASS
 
 [4] exact profiles f, U, V and their anchors
-    [     4.5s] f = 1_Q P^2 1_E: 120234 weighted pieces;
+    [     3.9s] f = 1_Q P^2 1_E: 120234 weighted pieces;
     int f = 35505957232/16132831966251 == census rho^(2)({b}): PASS
-    [     4.7s] U = P_(13^5) f: 24 pieces (num/den 62748517);
+    [     4.0s] U = P_(13^5) f: 24 pieces (num/den 62748517);
     V = P_(13^5) e: 15 pieces (num/den 371293);
     int U == int f and int V == mu(E_1) (P_m preserves integrals): PASS
     U*V == 0 IDENTICALLY as a profile (first-collision disjointness,
     THM-2471 (26)): PASS
-    [     4.7s] 13 chart windows extracted for U and V
+    [     4.0s] 13 chart windows extracted for U and V
 
 [5] THE ONE TABLE: 169 pair profiles x 46 refiner integrals (exact)
     entry denominators: DENC = 169 * 13^10 * T_DEN = 6939029398456584394954868880
     DENC factored: 2^4 * 3^3 * 5 * 7^2 * 11 * 13^18 * 53
-    [     6.7s] current root u= 0: 13 pairs done (gates PASS)
-    [     8.3s] current root u= 1: 13 pairs done (gates PASS)
-    [    10.0s] current root u= 2: 13 pairs done (gates PASS)
-    [    12.0s] current root u= 3: 13 pairs done (gates PASS)
-    [    13.5s] current root u= 4: 13 pairs done (gates PASS)
-    [    15.1s] current root u= 5: 13 pairs done (gates PASS)
-    [    17.4s] current root u= 6: 13 pairs done (gates PASS)
-    [    19.0s] current root u= 7: 13 pairs done (gates PASS)
-    [    20.6s] current root u= 8: 13 pairs done (gates PASS)
-    [    22.1s] current root u= 9: 13 pairs done (gates PASS)
-    [    23.7s] current root u=10: 13 pairs done (gates PASS)
-    [    25.3s] current root u=11: 13 pairs done (gates PASS)
-    [    27.7s] current root u=12: 13 pairs done (gates PASS)
+    [     6.1s] current root u= 0: 13 pairs done (gates PASS)
+    [     8.0s] current root u= 1: 13 pairs done (gates PASS)
+    [     9.5s] current root u= 2: 13 pairs done (gates PASS)
+    [    11.5s] current root u= 3: 13 pairs done (gates PASS)
+    [    13.0s] current root u= 4: 13 pairs done (gates PASS)
+    [    14.5s] current root u= 5: 13 pairs done (gates PASS)
+    [    16.9s] current root u= 6: 13 pairs done (gates PASS)
+    [    18.5s] current root u= 7: 13 pairs done (gates PASS)
+    [    20.1s] current root u= 8: 13 pairs done (gates PASS)
+    [    21.6s] current root u= 9: 13 pairs done (gates PASS)
+    [    23.1s] current root u=10: 13 pairs done (gates PASS)
+    [    24.6s] current root u=11: 13 pairs done (gates PASS)
+    [    26.5s] current root u=12: 13 pairs done (gates PASS)
     per-pair gates (cell partition, deep root-count law, refined
     deep law) all PASS at all 169 pairs; diagonal pairs vanish
     IDENTICALLY (zero-sum law (g2)): PASS
     total service sum_(u,q) int A F = 169*I_5 = 48602521488933856/1996669193081744181: PASS
 
 [6] route-2 independent aggregate (folded service profiles)
-    [    27.8s] a = fold_13 U (24 pieces), b = fold_13 V (16 pieces);
+    [    26.7s] a = fold_13 U (24 pieces), b = fold_13 V (16 pieces);
     EVERY aggregate refiner integral recomputed from the a*b
     profile (different pairing geometry) == pairwise sums: PASS
 
@@ -207,15 +207,20 @@ machine=opus  script-date=2026-07-28  run-date=2026-07-27
     p=2549: w(order 91)=266,  S mod p = 883  (NONZERO)
     5/5 split primes certify S != 0 independently: PASS
 
-[11] hostile controls (both must vanish exactly)
+[11] attribution controls (MISTAKE-295 repaired)
     H1 (beta = 0): Psi_(1,1)(1,0) = 0 exactly -- the row-zero law
     THM-2512 (4) kills the untwisted cut phase: PASS (vanishes)
-    H2 (u-independent slaving): replacing the slaved column family
-    by its theta-average (deep label decoupled from the root, the
-    r<=4 base-only shape) kills the interaction AND the contraction
-    identically: PASS (vanishes)
-    => the nonzero signal (if any) is carried by the theta = t - 2u
-       coupling itself, not by the ell-structure alone.
+    H2 (constant-column/deep-label erasure): copying the same
+    theta-marginal into every column kills the interaction and S:
+    PASS (vanishes).  This is NOT a fixed-absolute-root control.
+    H3 (genuine fixed absolute root t, independent of u):
+      A_abs(ell,t)=sum_(u,q)N(u,q,ell,t-2u)
+      raw nonzero cells=18/91;
+      centred nonzero cells=91/91;
+      Psi_(1,1)(1,1) reduced nonzero coordinates=66/72: PASS (NONZERO)
+      first eight reduced numerator coordinates=[-27835887799181509832453760, 27751873883481985792464000, 0, -14861715683333758350798960, -27751873883481985792464000, 55580522764856815796353920, 55580522764856815796353920, -27835887799181509832453760]
+    => the theta-indexed table survives, but H2 does NOT prove that
+       affine slaving is the unique cause of nonvanishing.
 
 [12] positive controls (marginals reproducing known exact values)
     * J(0) = I_5 (THM-2575/2577 anchor): PASS  ([7])
@@ -252,4 +257,4 @@ machine=opus  script-date=2026-07-28  run-date=2026-07-27
     applied to this rational array).  It is NOT a THM-2512
     bridge theorem and NOT a physical current.
 
-[    27.9s] all checks passed
+[    26.7s] all checks passed
