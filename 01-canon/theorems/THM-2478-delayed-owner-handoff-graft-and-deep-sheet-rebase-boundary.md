@@ -35,9 +35,10 @@ related:
   - THM-2452-indicator-idempotent-aggregate-endpoint-restoration
   - THM-2461-temporal-blocker-word-cocycle-and-diagonal-polarized-repair-boundary
   - THM-2474-squarefree-first-collision-primitive-character-saturation
+  - MISTAKE-276
 script: 04-computation/lrc14_delayed_owner_handoff_graft_thm2478.py
 output: 05-knowledge/results/lrc14_delayed_owner_handoff_graft_thm2478.out
-script_sha256: a611026c7920247b8c5949b38fd1906664d735972b23ff1f330c942f49ec2228
+script_sha256: f80552a6aeac9c29bc94f14f984f21910de265d613d43051ef792c543166850a
 output_sha256: b722d88df0c819ee066949e039ce8cce03d7fae4211cac80f5eed12e7fb17889
 hash_basis: working-tree bytes (LF)
 ---
@@ -193,9 +194,11 @@ event evaluated at `T^Lx`, the change is
 13^L theta_i/13=13^(L-1)theta_i in Z.                (11)
 ```
 
-Every base factor is one-periodic.  The later terminal word gains the still
-larger integer factor `13^(L+K-1)theta_i`.  Hence the whole `G(T^Lx)` is fixed
-under the lawful target action.  Multiplication by it therefore preserves:
+Every base factor is one-periodic.  This is a factor-wise statement: no common
+translation of the physical variable `x` is being asserted.  The later
+terminal word gains the still larger integer factor
+`13^(L+K-1)theta_i`.  Hence the whole `G(T^Lx)` is fixed under the lawful
+target action.  Multiplication by it therefore preserves:
 
 - the diagonal zero `H(t,s,t)=0`;
 - the target quotient `(b,a+h)` and its circulant projection;
@@ -332,8 +335,10 @@ Y_(v,e)=13^Lx+sheet.              bare source leg            (19a)
 
 The smallest multiplier is `13^(L-K)`, which is divisible by thirteen
 because `L>=K+1`.  Hence every old `/13` target co-shift becomes an integer
-in every atomic factor of the stalk.  The whole Boolean fibre product, not
-only its collision base, is target-neutral.
+in every atomic factor of the stalk.  Neutrality is checked separately at
+these Boolean ancestry leaves; no common physical translation of `x` is
+asserted.  The whole Boolean fibre product, not only its collision base, is
+target-neutral.
 
 For complex BV functions the same Fourier covariance proof gives
 
@@ -437,10 +442,13 @@ If `L>lambda`, the phase in (23) depends on
 a mod 13^(L-lambda).                                (25)
 ```
 
-This residue is essential.  Take `z=0`, `a_0=0`, and
+This residue is essential.  Choose representatives modulo
+`13^(L-lambda)` with
 
 ```text
-a_1=13^(L-lambda-1)u^(-1) mod 13^(L-lambda).
+a_0=r 13^(L-lambda-1)u^(-1),
+
+a_1=(r+1)13^(L-lambda-1)u^(-1).                    (25a)
 ```
 
 The two phases are respectively
@@ -449,9 +457,8 @@ The two phases are respectively
 0,                    1/13 mod 1.                  (26)
 ```
 
-Here take the probe root `r=0`; for general `r` the two displayed probe
-arguments differ by `1/13`.  At the strict `1/14` danger radius with `r=0`,
-the first is dangerous and the second is safe.  Thus the probe on the
+At the strict `1/14` danger radius the first is dangerous and the second is
+safe, uniformly for every root `r`.  Thus the probe on the
 natural-extension stalk is not measurable with respect to `sigma(z)`.  In
 particular there is no universal sheet-free factorization
 
@@ -474,43 +481,72 @@ The mixing horizon in (7) can be arbitrarily larger than the finite
 `lambda`.  Therefore no uniform choice of `L` simultaneously gives mixing
 and a sheet-free new-owner deep probe.
 
-### The time/charge cocycle
+### The factor-wise time/charge cocycle
 
-The same natural-extension coordinate explains both the gain and the loss.
-Write
-
-```text
-x=(z+a)/13^L,                  a mod 13^L.           (27)
-```
-
-An old lawful target shift by `theta/13` sends
+The lawful THM-2365 target action is not one common translation of `x`.
+For each atomic role `i`, put
 
 ```text
-x -> x-theta/13,
+y_i=w_i x,
 
-z -> z,
+z_i=T^L y_i,
 
-a -> a-13^(L-1)theta                  mod 13^L.      (28)
+y_i=(z_i+a_i)/13^L,                  a_i mod 13^L.  (27)
 ```
 
-Thus the future base `z=T^Lx` is fixed and only the ancestry digit moves.
-This is exactly why a late handoff depending on `z` is target-neutral and
-mixes cleanly with the old charged table.
-
-A genuine target shift on the future owner leg would instead require
+The old target phase acts by `y_i -> y_i-theta_i/13`, and therefore
 
 ```text
-z -> z-theta/13,
+z_i -> z_i,
 
-x -> x-theta/13^(L+1).                              (29)
+a_i -> a_i-13^(L-1)theta_i             mod 13^L.   (28)
 ```
 
-The shift in (29) is not the old THM-2365 target action.  Hence late renewal
-cannot transfer the old target charge into the future owner leg: it retains
-the old charged vector while adding a neutral future coupling.  When
-`L>lambda`, the same moving digit in (28) is read by the old deep comb through
-`a mod 13^(L-lambda)`, as in (25).  Target neutrality and the deep-sheet loss
-are therefore two faces of one cocycle, not unrelated caveats.
+Thus every delayed factor depending only on its future atomic base `z_i` is
+neutral under the old target action.  A genuine target shift on that future
+leg,
+
+```text
+z_i -> z_i-theta_i/13,
+```
+
+would instead require
+
+```text
+y_i -> y_i-theta_i/13^(L+1).                       (29)
+```
+
+This is a different action at a different scale.  Hence late renewal retains
+the old charged vector while adding a neutral future coupling; it does not
+transfer the old target charge into the future owner leg.
+
+The deep role identifies the charge-bearing sheet precisely.  Let
+`C=13^lambda u`, `13` not dividing `u`, and retain the base-sheet notation
+`x=(z+a)/13^L` from (23).  For this deep factor alone its atomic sheet obeys
+
+```text
+a_C=floor(Cz)+Ca                         mod 13^L.   (29a)
+```
+
+This is a factor-specific identification, not a simultaneous translation of
+the other roles.  The old deep target shift `Cx -> Cx-theta_C/13` sends it by
+
+```text
+a_C -> a_C-13^(L-1)theta_C              mod 13^L.
+```
+
+When `L>lambda`, this descends on the essential physical sheet quotient to
+
+```text
+a -> a-13^(L-lambda-1)u^(-1)theta_C
+                                      mod 13^(L-lambda). (29b)
+```
+
+For `theta_C!=0 mod 13`, it moves the top digit of exactly the residue in
+(25); for zero charge it is the identity.  Thus the future base is neutral
+while the old deep charge remains sheet-valued.  For
+`L<=lambda` the probe is sheet-free by (24); for `L>lambda` any future-owner
+rebase that retains the old charge must keep the residue (25).
 
 ## 6. Crossed-product and owner-loop obstruction
 
@@ -653,8 +689,8 @@ The dependency-free `Fraction` companion:
 - checks both BV invoices and simultaneous nonvanishing;
 - constructs five Boolean root-shift cells, verifies all twelve exact
   cyclotomic collision colours, and couples each to the same old drift;
-- verifies old-root constancy and target neutrality on the physical
-  collision-base multiplier;
+- verifies old-root constancy, factor-wise full-stalk target neutrality at
+  `L=K+1`, and its sharp failure at `L=K`;
 - tests the sheet-free and sheet-essential sides of (23)--(26); and
 - reproduces the exact `21/742586` aggregate-drift/owner-loop hostile.
 
@@ -664,9 +700,10 @@ Both runs reproduce
 05-knowledge/results/lrc14_delayed_owner_handoff_graft_thm2478.out
 ```
 
-byte-for-byte.  An independent hostile audit rederived the direct-graft BV
+byte-for-byte.  Independent hostile audits rederived the direct-graft BV
 lemma, full Boolean-stalk multiplier normalization, fixed-component all-colour
-argument, time/charge cocycle, natural-extension nonmeasurability boundary,
+argument, corrected factor-wise time/charge cocycle, natural-extension
+nonmeasurability boundary,
 and the exact `L^2(lambda)` representation obstruction.  It separately ran
 the companion normally and under `-O`, reproduced the stored transcript and
 both hashes, and accepted the explicit scope boundary that finite character

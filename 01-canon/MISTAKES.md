@@ -9,6 +9,33 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-276 (2026-07-27, THM-2478 promotion audit) -- a factor-wise target action was written as one common physical translation
+
+- **What was written:** after proving the delayed owner graft target-neutral,
+  THM-2478's promoted time/charge paragraph represented a lawful THM-2365
+  target co-shift as `x -> x-theta/13` on one physical variable.  It then
+  claimed that the resulting sheet displacement was the digit read by every
+  old deep probe.
+- **First failed implication:** THM-2365 acts independently on the atomic
+  phases `y_i=w_i x`, with role-dependent `theta_i`; there need not be one
+  physical translation of `x`.  Worse, the displayed common shift
+  `13^(L-1)theta` is zero modulo the claimed deep quotient
+  `13^(L-lambda)` whenever `lambda>=1`, so that formula could not move the
+  advertised digit.
+- **Strongest survivor and repair:** the graft, all-colour mixing, and sharp
+  sheet threshold survive.  On each atomic natural extension,
+  `a_i -> a_i-13^(L-1)theta_i (mod 13^L)`.  For the deep role
+  `C=13^lambda u`, this induces
+  `a -> a-13^(L-lambda-1)u^(-1)theta_C`
+  modulo `13^(L-lambda)`, which really moves the top digit of the essential
+  sheet.  THM-2478 now states this factor-wise cocycle, makes the Boolean-leaf
+  target-neutrality check explicit, and gives a root-uniform two-sheet
+  witness.
+- **Rule:** never turn a quotient-dual action on several atomic phases into a
+  common translation of the orbit variable unless the shift vector is proved
+  proportional to the coefficient vector.  Test any claimed moving digit in
+  the exact quotient where it is supposed to move before using its semantics.
+
 ## MISTAKE-275 (2026-07-27, concurrent THM-2479 reservation collision) -- a pushed reservation did not keep the theorem ID unique
 
 - **What happened:** the degree-twenty-two `B,C` plane closure reserved and

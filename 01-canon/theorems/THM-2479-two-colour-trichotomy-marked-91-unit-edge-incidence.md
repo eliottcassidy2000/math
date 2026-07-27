@@ -2,13 +2,12 @@
 id: THM-2479
 title: "Two-colour trichotomy: 91-unit c3-edge incidence with a word-marked endpoint on every positive middle-owner word stratum"
 status: >
-  PROVED, with one explicitly flagged extraction: the load-bearing
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. The load-bearing
   Lemma A (unconditional coherent fibre) is THM-2323 Section 7.2's own
-  construction (32)-(38), which two independent audits this session
+  construction (32)-(38), which two hostile audits and its original owner
   verified to be free of hypothesis (31) gcd(a,91)=1 -- (31) enters
-  only at the final unit conclusion (39)/(40).  Owner (mac-mini)
-  countersign of that extraction is requested before downstream use as
-  a proved dependency.  VERIFIED-EXACT companion: 444,000-pair exact
+  only at the final unit conclusion (39)/(40). VERIFIED-EXACT companion:
+  444,000-pair exact
   residue census + six fibre configurations in Z[zeta_364], zero
   failures.  NOT claimed: a two-word unit edge when 7|a; cubic/address
   participation; target-plane gain; terminal-component phase; any
@@ -27,6 +26,9 @@ related:
   - HYP-9031-d5-h1-dictionary-lrc-word-current-vs-jc-flux (prediction 1)
 script: 04-computation/msg2153_trichotomy_hostile_probe_opus.py
 output: 05-knowledge/results/msg2153_trichotomy_hostile_probe_opus.out
+script_sha256: 0ed1d8f44f8883077b9e9e3fe0214f256c32dd08148b1620e2e4b1aac325908e
+output_sha256: 8e5326a67b05afe9586d5b9c246e04ec6f1fb1f4288adfad69c91ba55f79814b
+hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2479 -- the two-colour trichotomy
@@ -87,7 +89,8 @@ used in the construction. (Verified independently by two audit lenses
 this session, reading (32)-(38) directly: `H_Q, H_E` are supported in
 `D_1` by S6, so the plain one-arc same-gauge theorem applies at
 `N = 91d'` for every `a`; `K_z` primitivity and the `K_7 x K_13` /
-`K_6 x K_13` adjacency use only `d'`. Countersign requested.)
+`K_6 x K_13` adjacency use only `d'`. The original owner independently
+countersigned this exact extraction after rereading S6--S7.2.)
 
 ## Lemma B (THM-2326 in its MSG-2152 repaired form)
 
@@ -123,5 +126,5 @@ single remaining open frontier of the bispectrum thread is the
 **address/gain participation** (THM-2321 (51), THM-2315 (30)) plus
 terminal-component phase -- i.e. exactly the `H^2`/incidence half in
 HYP-9031's language (prediction 1 of that file, existence half, is
-hereby fulfilled modulo the Lemma A countersign). No scalar row is
+hereby fulfilled). No scalar row is
 removed; LRC(14) remains open.

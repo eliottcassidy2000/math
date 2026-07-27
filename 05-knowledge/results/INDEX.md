@@ -2156,7 +2156,8 @@ HOSTILE-AUDITED**. It verifies whole-handoff BV retention of old endpoint
 drift and root service, all twelve future collision-colour grafts on a
 Boolean-before-DFT stalk, full-stalk target neutrality, the sharp deep-sheet
 rebase obstruction, and an exact positive-aggregate/zero-owner-drift tensor
-hostile. Normal and optimized runs byte-match and reproduce the stored
+hostile. The target audit is factor-wise and tests failure at `L=K`, success
+at `L=K+1`, and every deep root. Normal and optimized runs byte-match the stored
 `PASS` transcript. The theorem aligns finite character labels across two
 scales; it does not identify roots, `X`, `m`, addresses, or exclude a row.
 

@@ -157,7 +157,7 @@ by THM-2462. THM-2464 proves: `lambda=1` clean charts force the linked blocker
 safe, `lambda=2` is phase-before-speed universal, and fixed delays work iff the
 joint clock cell has interior. Next: intertwine the owner-collision stalk with
 the endpoint/deep current, prove owner-loop drift, or exclude a semantic joint
-cell. Owner-collision service, future semantic coupling, and delayed-word mixing are no longer missing; scale/sheet transport is.
+cell. Service, coupling, and mixing are closed; scale/sheet transport is not.
 THM-2479 gives each positive middle-owner word a word-marked `91`-unit edge;
 THM-2334's typed-row variance has all `168` nonzero twists positive. Address/gain participation and terminal phase remain; no row is removed.
 Ledger: `165`.

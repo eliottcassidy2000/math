@@ -163,24 +163,27 @@ def geometry_controls():
     }
     require(values == {(divisor * P**delay * y) % 1}, "old-root constancy")
 
-    # Every target co-shift theta/13 is killed by the collision multiplier.
-    x = F(5, 29)
-    for theta in range(P):
-        shifted = (P * divisor * P**delay * (x - F(theta, P))) % 1
-        unshifted = (P * divisor * P**delay * x) % 1
-        require(shifted == unshifted, "target neutrality")
-
     # Full THM-2471 stalk: with terminal clock K=1 and collision delay L=2,
     # the X,Y legs have multiplier 13^L and the ancestry Z leg has the
-    # smallest multiplier 13^(L-K).  Every atomic leg is target-neutral.
+    # smallest multiplier 13^(L-K).  Test each factor-wise target phase;
+    # no common physical translation of x is asserted.
     clock = 1
     for multiplier in (P**delay, P ** (delay - clock), P**delay):
         for theta in range(P):
             require(F(multiplier * theta, P).denominator == 1,
                     "full stalk target neutrality")
 
+    # Sharp boundary: at L=K the source-ancestry leg is not neutral, while
+    # the same leg becomes neutral at the first lawful delay L=K+1.
+    bad_delay = clock
+    require(any(F(P ** (bad_delay - clock) * theta, P).denominator != 1
+                for theta in range(1, P)), "L=K nonneutral hostile")
+    good_delay = clock + 1
+    require(all(F(P ** (good_delay - clock) * theta, P).denominator == 1
+                for theta in range(P)), "L=K+1 target-neutral boundary")
+
     # Rebase boundary for C=2*13^5.  At L=4 the deep probe is sheet-free;
-    # at L=6 the sheets a=0 and a=7 have phases 0 and 1/13.
+    # at L=6 every root r has two sheets with phases 0 and 1/13.
     deep = 2 * P**5
     z = F(4, 31)
     shallow_delay = 4
@@ -193,12 +196,31 @@ def geometry_controls():
             "descended deep coefficient")
 
     lost_delay = 6
-    a0 = 0
-    a1 = 7  # 2*7=1 mod 13
-    phase0 = F(deep * a0, P**lost_delay) % 1
-    phase1 = F(deep * a1, P**lost_delay) % 1
-    require(phase0 == 0 and phase1 == F(1, P), "essential ancestry residue")
-    require(phase0 < F(1, 14) and phase1 > F(1, 14), "danger/safe sheet hostile")
+    valuation = 5
+    lost_modulus = P ** (lost_delay - valuation)
+    unit = deep // P**valuation
+    unit_inverse = pow(unit, -1, lost_modulus)
+    phase0 = phase1 = None
+    for root in range(P):
+        a0 = (root * P ** (lost_delay - valuation - 1) * unit_inverse) % lost_modulus
+        a1 = ((root + 1) * P ** (lost_delay - valuation - 1) * unit_inverse) % lost_modulus
+        root_phase0 = (F(deep * a0, P**lost_delay) - F(root, P)) % 1
+        root_phase1 = (F(deep * a1, P**lost_delay) - F(root, P)) % 1
+        require(root_phase0 == 0 and root_phase1 == F(1, P),
+                "root-uniform essential ancestry residue")
+        require(root_phase0 < F(1, 14) and root_phase1 > F(1, 14),
+                "root-uniform danger/safe sheet hostile")
+        if root == 0:
+            phase0, phase1 = root_phase0, root_phase1
+
+    # Factor-specific cocycle: the deep atomic sheet a_C changes by
+    # -13^(L-1)theta.  Division by C induces exactly the top-digit motion
+    # on the scalar deep-relevant quotient; this is not a common x-shift.
+    for theta in range(P):
+        delta_a = (-P ** (lost_delay - valuation - 1)
+                   * unit_inverse * theta) % lost_modulus
+        require((deep * delta_a + P ** (lost_delay - 1) * theta)
+                % P**lost_delay == 0, "factor-specific deep cocycle")
     return next(iter(phases)), phase0, phase1, P ** (lost_delay - 5)
 
 
