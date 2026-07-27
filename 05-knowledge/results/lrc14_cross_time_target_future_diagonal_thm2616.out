@@ -1,0 +1,12 @@
+THM-2616 exact cross-time target/future diagonal controls
+full_nonzero_root_slots=2299752 retained_zero_root_slots=191646
+full_positive=649968 pre_route_global_content=26 physical_content=338
+shards=((0, 41, 171192, 26), (41, 82, 156960, 26), (82, 123, 156960, 26), (123, 162, 164856, 26)) cache_endpoints=380 scalar_route_controls=64
+future_digit_phase_support=(0, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 6, 0) future_support=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+diagonal_positive_fine=49872 positive_pairs=1703 unit_slices=1483
+diagonal_qset_size_hist=[(10, 8), (11, 76)]
+diagonal_qset_pattern_hist=[((1, 2, 3, 4, 5, 6, 7, 8, 9, 10), 4), ((1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), 76), ((1, 2, 3, 4, 5, 6, 7, 8, 9, 11), 2), ((1, 3, 4, 5, 6, 7, 8, 9, 10, 11), 2)]
+common_constant_sections=(1, 3, 4, 5, 6, 7, 8, 9)
+exceptional_diagonal_atlas=(((2, 2), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)), ((2, 3), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)), ((6, 5), (1, 3, 4, 5, 6, 7, 8, 9, 10, 11)), ((6, 6), (1, 2, 3, 4, 5, 6, 7, 8, 9, 11)), ((7, 2), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)), ((7, 3), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)), ((11, 5), (1, 3, 4, 5, 6, 7, 8, 9, 10, 11)), ((11, 6), (1, 2, 3, 4, 5, 6, 7, 8, 9, 11)))
+difference_full_cells=84 diagonal_stabilizer_size_hist=((1,84),)
+verdict=PASS: positive cross-time sections exist; no principal C13 future action
