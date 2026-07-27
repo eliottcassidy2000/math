@@ -400,6 +400,31 @@ on the same extended ancestry carrier.  Once (35) is available, their
 rootwise positivity can populate `L_ell(q,r,q')`; without it, the complete
 relation (31) is a sharp no-selection hostile.
 
+There is a useful Fourier-level survivor.  Let `f` be a marked source
+coefficient with `fhat(X)!=0`, fix one THM-2599 chamber `J`, and put
+
+```text
+c_s=1_J P_s,
+g_k=13^(-1) sum_s c_s zeta_13^(-ks).                       (36)
+```
+
+On `J`, the shift profile is constant and every `k!=0` has nonzero mean.
+Expanding-map/BV mixing therefore gives
+
+```text
+(f (g_k o T^L))hat(X) -> ghat_k(0) fhat(X) !=0            (37)
+```
+
+for every nonzero `k`; hence all sufficiently large `L` preserve the old
+marked coefficient while adjoining every future shift **character**.  This
+still does not provide `q'`.  The label `k` is Fourier-dual to the primal
+target-shift section, and the limiting product is rank one.  Moreover
+`T^L((x+h)/13)=T^(L-1)x` erases the old inverse-branch digit from the delayed
+factor.  Thus (37) proves joint coexistence of an old coefficient and a
+future character, not an `r_out -> q'_in` correspondence.  A finite-clock
+inverse target transform still needs the gauge and full-packet typing in
+(35).
+
 ## 8. Verification and exact scope
 
 Run
