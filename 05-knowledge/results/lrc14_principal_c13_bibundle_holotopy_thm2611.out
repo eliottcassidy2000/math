@@ -1,0 +1,8 @@
+THM-2611 exact principal-C13 bibundle controls
+c91_fibres=7 fibre_size=13 positive_edge_lifts=13
+crt_idempotents=(14,78) rail_lifts=(78,85) koopman_common_image=13
+fixed_action_identifications=13 semilinear_affine_identifications=156
+regular_c13_invariant_subset_sizes=(0,13) minimum_faithful_sidecar=13
+binary_cycle_marker_pairs=1664 closed_pairs=128 parallel_sections=1664
+thm2601_equivariant_maps=13 references=((0, 5), (1, 3), (2, 7), (3, 1), (4, 10), (5, 12), (6, 11), (7, 6), (8, 4), (9, 0), (10, 2), (11, 9), (12, 8))
+verdict=PASS: zero kernel holonomy iff thirteen sections; physical bibundle remains absent
