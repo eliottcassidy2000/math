@@ -19,8 +19,8 @@ related:
 # HYP-9032 -- the transplant trichotomy
 
 > **RESOLUTION UPDATE (same session, 2026-07-27):** both in-flight
-> computations returned the NONDEGENERATE branch (THM-2550, audit
-> requested): (A) owner-loop drift POSITIVE on the canonical typed row
+> computations returned the NONDEGENERATE branch (THM-2550, independently
+> audited with the MISTAKE-283 scope repair): (A) owner-loop drift POSITIVE on the canonical typed row
 > (both packet and bare tensors; exact rational drift energies; the
 > escalation ladder dies at rung one -- no circulant hostile), and
 > (B) NON-REPLICA (both additive defects nonzero, all 91/91 entries;
@@ -28,7 +28,9 @@ related:
 > floor supplied). Prediction P1 CONFIRMED. The live obligations are
 > now: the ancestry/Boolean realization of the ignited host, and
 > transporting the drift instance through THM-2368 (37) toward
-> covering rows. Sections below retain the pre-resolution analysis.
+> covering rows. The two computations share row/word labels but not a
+> clock, packet, marked triangle, or common-root service. Sections below
+> retain the pre-resolution analysis.
 
 ## 1. Why the packet cannot be re-run (PROVED anatomy)
 

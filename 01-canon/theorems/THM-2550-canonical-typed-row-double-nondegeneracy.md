@@ -4,11 +4,13 @@ title: "Double nondegeneracy of the canonical typed row: positive owner-loop dri
 status: >
   PROVED CANDIDATE + VERIFIED-EXACT (two independent exact companions,
   each with internal cross-checks anchored byte-exactly to the audited
-  THM-2541 artifact values; python/-O identical); independent hostile
-  audit REQUESTED.  Resolves BOTH arms of HYP-9032's decision tree in
-  the nondegenerate direction on the canonical typed row.  SCOPE: the
-  row is TYPED (THM-2309 (25)), not an asserted scalar cover; no
-  scalar row is removed; the ledger stays 165; LRC(14) remains OPEN.
+  THM-2541 artifact values; python/-O identical); INDEPENDENT HOSTILE AUDIT
+  ACCEPTED BOTH COMPUTATIONS WITH THE MISTAKE-283 SCOPE REPAIR.  Resolves
+  both computational arms of HYP-9032's decision tree in the nondegenerate
+  direction on the canonical typed row.  The two arms share row and word
+  labels, not a clock, packet, marked triangle, or supplied common-root
+  service.  The row is TYPED (THM-2309 (25)), not an asserted scalar cover;
+  no scalar row is removed; the ledger stays 165; LRC(14) remains OPEN.
 source: opus-2026-07-27 (the two decisive single-row computations
   named by THM-2368 Sec 8 / THM-2365 (32) and by THM-2512 (26)-(28))
 depends_on:
@@ -18,7 +20,7 @@ depends_on:
   - THM-2461 (source-refined packet, eq (9))
 related:
   - THM-2541 (full target-plane support, same row/word/triangle)
-  - THM-2466 / THM-2471 (the proved chain the drift feeds)
+  - THM-2466 / THM-2471 (nearby chain; their missing common-root hypotheses are not supplied here)
   - THM-2367 (the zero-drift hostile shape that did NOT occur)
   - HYP-9032 (the transplant trichotomy; both arms resolved here)
 scripts:
@@ -30,6 +32,12 @@ outputs:
 ---
 
 # THM-2550 -- the canonical typed row is doubly nondegenerate
+
+> **SCOPE CORRECTION (MISTAKE-283).**  The two nondegeneracy computations are
+> exact, but Part (A)'s `k=2` drift and Part (B)'s large-clock interaction are
+> not one packet or clock.  The former does not directly feed THM-2466 or
+> THM-2471: their common oriented root/service and collision-root
+> identification hypotheses remain open.
 
 Row: `THM-2309 (25)`, `w = (1,14,27,40,53,66,13,2197,742586)`, owner
 `j = 1`, word stratum `sigma = {a}` (the THM-2541 setting).
@@ -54,9 +62,9 @@ escalation ladder terminates at its first rung: **no zero-drift
 circulant hostile arises on this row.** Since the BARE tensor is
 drift-positive, THM-2365 (31) branch 1 applies: at every sufficiently
 large delayed clock some `gcd(m,91)=1` and ordinary `X` have a nonzero
-target fibre on this row; the packet-level positivity feeds THM-2466
-(32) and THM-2471 (48) directly in the same semantic-word-filtered
-packet.
+target fibre on this row.  This conclusion does not supply THM-2466's
+common oriented root base and positive service density, nor identify
+THM-2471's first-collision root with the endpoint/deep root used here.
 
 ## (B) The lawful table is NON-REPLICA (host array ignited)
 
@@ -88,13 +96,14 @@ supplied by `lcm(den) = 6823601362619167115089900800`.
 
 The canonical typed row now carries all three nondegeneracy
 certificates: full target-plane support (THM-2541), positive
-owner-loop drift (A), and an ignited live host array (B) -- exactly
-the inputs the target-landing chain and the transplant program
-consume. HYP-9032's prediction P1 is CONFIRMED (neither arm
-degenerate). NOT implied: any universal bypass, landing on the prior
-marked triangle, an all-91-unit mask, exclusion of any scalar row, or
-LRC(14). Next obligations per the files: transport the drift-positive
-instance through THM-2368 (37)'s phase/event word toward forced
-word-breaking of the rotating circulant class on covering rows; and
-the ancestry/Boolean realization of the ignited host (THM-2512's
-named bridge test).
+owner-loop drift (A), and an ignited live host array (B).  HYP-9032's
+prediction P1 is CONFIRMED in the componentwise sense that neither arm
+is degenerate.  They share the typed row and word label, but Part (A)
+uses the `k=2` packet while Part (B) uses `k=6 mod 16380`; no common
+clock, packet, marked triangle, or ancestry fibre has been proved.
+NOT implied: any universal bypass, direct entry into THM-2466/2471,
+landing on the prior marked triangle, an all-91-unit mask, exclusion of
+any scalar row, or LRC(14).  The next obligations are separately to
+transport the drift-positive instance through THM-2368 (37)'s
+phase/event word with the required common-root service, and to realize
+the ignited interaction on one nonnegative Boolean ancestry carrier.

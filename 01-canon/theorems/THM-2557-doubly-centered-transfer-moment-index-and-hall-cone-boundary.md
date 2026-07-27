@@ -2,9 +2,9 @@
 id: THM-2557
 title: "Doubly centered seven-step transfer, root-moment index, and the Hall-cone boundary"
 status: >
-  PROVED + VERIFIED-EXACT for the abstract lattice, moment, cone, and Hall
-  controls; VERIFIED-EXACT APPLICATION inheriting THM-2550(B)'s current
-  PROVED-CANDIDATE/audit-requested status.  On the integral doubly centered 7-by-13
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED for the abstract
+  lattice, moment, cone, and Hall controls; CONDITIONAL APPLICATION inheriting
+  THM-2550(B)'s current PROVED-CANDIDATE exact-input status.  On the integral doubly centered 7-by-13
   interaction lattice, every nonzero-slope seven-step transfer is injective
   with exact image the kernel of a six-dimensional mod-13 first-root-moment
   map; its Smith form is 1^66 direct-sum 13^6.  Consequently the nonzero
@@ -38,8 +38,9 @@ hash_basis: working-tree bytes (LF)
 # THM-2557 -- the transferred interaction has an exact moment invoice
 
 THM-2512 turns a lawful `7 x 13` response table into a doubly centered
-signed interaction.  THM-2550(B) verifies that both interactions extracted
-from the canonical typed row are nonzero.  THM-2548 proves that the
+signed interaction.  THM-2550(B)'s candidate exact computation reports that
+both interactions extracted from the canonical typed row are nonzero.
+THM-2548 proves that the
 seven-step `C91` transfer preserves every root-charged rational mode.
 
 There is a sharper integral statement on exactly the interaction lattice.
@@ -243,17 +244,19 @@ THM-2512 defines, for a rational response table `A_(ell,s)`,
 I_(ell,s)=A_(ell,s)-R_ell-C_s+bar A.                        (20)
 ```
 
-After transposition if desired, (20) lies in `V_00 tensor Q`.  THM-2550(B)
-computes two such tables, `d_M` and `d_C`, on the canonical typed row and
-proves both nonzero; in fact all `91` entries of each are nonzero.  Clearing
-denominators and applying (8) yields, for every `a in F_13^*`,
+After transposition if desired, (20) lies in `V_00 tensor Q`.  THM-2550(B)'s
+candidate exact computation reports two such tables, `d_M` and `d_C`, on the
+canonical typed row, both nonzero with all `91` entries nonzero.  Conditional
+on that exact input, clearing denominators and applying (8) yields, for every
+`a in F_13^*`,
 
 ```text
 D_a d_M !=0,                       D_a d_C !=0.              (21)
 ```
 
-This is an actual no-cancellation composition of THM-2550(B) with THM-2548.
-It is a statement about the labelled horizontal interaction table only.
+Conditional on THM-2550(B)'s candidate input, this is an exact
+no-cancellation composition with THM-2548.  It is a statement about the
+labelled horizontal interaction table only.
 The exact witnesses at `(ell,s)=(0,0)` are byte-anchored by the companion:
 
 ```text
@@ -441,10 +444,18 @@ The dependency-free referee constructs the rectangle basis and all twelve
 rank `66` modulo thirteen and rank `72` modulo two for every nonzero slope;
 computes all twelve exact determinants `13^6`; checks the six explicit
 moment lifts and hence the Smith form; exhibits signed transferred controls;
-byte-anchors the two THM-2550(B) witnesses; exhausts all `8,192` root subsets
+byte-anchors, but does not independently recompute, the two THM-2550(B)
+witnesses; exhausts all `8,192` root subsets
 for both the cemetery and offset zero-arrival Hall controls; and detects the
 diagonal singleton deficit.  It deliberately performs no large typed-row
 recomputation and no Lean build.
+
+An independent hostile audit rederived the pullback convention, moment
+annihilator, six explicit lifts, determinant product (16), index comparison,
+Smith form, and coprime rectangular generalization, and reran both normal and
+optimized companions against the stored hashes.  It also enforced the
+conditional status of the THM-2550(B) application: the present companion
+byte-anchors those reported witnesses but does not recompute its large table.
 
 The highest-leverage next experiment is consequently not another
 nonvanishing census.  It is to atomize the unique target-active unit failure

@@ -9,6 +9,31 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-283 (2026-07-27, THM-2550 consequence scope) -- two exact nondegeneracy computations were treated as one common-root packet
+
+- **What was claimed:** after separately computing positive owner-loop drift
+  and a non-replica lawful response table on the same canonical typed row and
+  word label, THM-2550 said the drift fed THM-2466 (32) and THM-2471 (48)
+  directly in the same semantic-word-filtered packet.
+- **First failed implication:** Part (A) uses the `k=2` owner packet, while
+  Part (B)'s lawful ANOVA law uses clocks `k=6 mod 16380`.  A common row and
+  word label do not identify their clocks, packets, marked triangles, or
+  ancestry atoms.  Independently, THM-2466 assumes a supplied common oriented
+  root base and positive service density, and THM-2471 does not identify its
+  first-collision root with THM-2365's endpoint/deep root.  None of these
+  hypotheses is created by drift positivity.
+- **Strongest survivor:** the independent hostile audit accepts both exact
+  computations: both drift tensors are positive; both large-clock ANOVA
+  defects are nonzero in all `91` cells and ignite all `5,184` primitive cut
+  modes.  THM-2365 branch 1 applies to Part (A), and THM-2557 conditionally
+  transports each Part (B) signed interaction without cancellation.  These
+  are separate typed non-cover controls, not one physical current.
+- **Repair rule:** equality of row, owner, or word labels is not a fibre
+  product.  Before composing two positive/nonzero certificates, name and
+  match their clock, packet, marked triangle, common base, root gauge, and
+  required semantic roles.  If any coordinate is absent, retain the results
+  componentwise and state the missing intertwiner.
+
 ## MISTAKE-281 (2026-07-27, THM-2547 cut/root pairing) -- a product of unrelated Fourier controls was promoted as a physical current
 
 - **What was claimed:** THM-2547 multiplied the synthetic weighted
