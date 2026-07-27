@@ -2,7 +2,9 @@
 id: THM-2600
 title: "Constant-six middle-rail common-x atlas and uniform primitive Bockstein section"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED for the core;
+  the projective owner-cycle coefficient-support addendum is VERIFIED-EXACT
+  with independent audit requested.  On the
   canonical typed row, the two arrival-root-six middle edges of THM-2584's
   depth-five toothpick have disjoint three-cell zero sets and together cover
   all 84 nonzero-displacement/owner-clock cells.  Pulling both edges against
@@ -27,10 +29,11 @@ related:
   - THM-2590-boolean-bockstein-and-theta-selector-incidence-spectrum
   - THM-2591-theta-zero-selector-cech-coboundary-and-c91-holonomy-no-go
   - THM-2593-charged-target-section-atlas-and-minimal-c91-holonomy-trivialization
+  - THM-2603-hurwitz-projective-root-owner-atlas-and-nonabelian-seven-edge-trivialization
 script: 04-computation/lrc14_constant_six_middle_rail_pullback_thm2600.py
 output: 05-knowledge/results/lrc14_constant_six_middle_rail_pullback_thm2600.out
-script_sha256: 319c568da68c869451121e183670a0585d12a5e27e68fdf201b78af0f76e6449
-output_sha256: 3b0274644fec46fab16c8037eeddde415bfa9ba4a0ef1fdf644629b47470cda2
+script_sha256: c85ecd26df053ad68362970d3d4056ad09d3668ba717fba5356a6968dff2e95e
+output_sha256: b89d10055b53b6cb43de216c11fce3bd198f9a4af08de6fa86a2e1af1cd61e41
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -235,6 +238,59 @@ The selector uses the theta-zero diagonal edge on `69` cells and the
 theta-one edge on `15`.  On those `15` cells arrival and future digits still
 equal six by (9), but the rescaled deepest root is `w=0`, not `w=v`.  This is
 the exact price of uniform attachment.
+
+### 4.1 Projective owner-cycle coefficient support
+
+THM-2603 puts the order-seven owner map into the affine root chart
+
+```text
+A(q)=(7q+5)/(10q+11)
+```
+
+with projective cycles
+
+```text
+O0=(0,4,6,10,7,5,3),
+O1=(1,8,infinity,2,9,12,11).                              (19)
+```
+
+There is no proved identification between that projective root coordinate
+and the target-section coordinate `q` of this theorem.  Nevertheless, a
+cheap hostile test is exact: treat the labels as a proposed interface, rotate
+each cycle against the seven clock positions, and ask at every **finite**
+vertex only whether the corresponding cell has a positive unit rail.  For
+each physical displacement `s`, minimize the number of forced theta-one
+choices over the seven phase rotations.
+
+The first cycle has support at all seven vertices for every `s`.  The second
+has support at all six finite vertices; `infinity` is not a zero but an absent
+target section, so it is outside the test.  In the order `s=1,...,12`, the
+minimum theta-one invoices are
+
+```text
+O0:        (0,0,0,0,0,5,0,1,0,0,7,0),
+O1 finite: (0,0,0,0,0,4,0,1,0,0,6,0).                   (20)
+```
+
+Thus nine displacement lanes admit theta-zero unit support at every tested
+vertex.  The exceptional set is exactly
+
+```text
+{6,8,11},                                                 (21)
+```
+
+the same displacement set on which the uniform `q=0` selector (16) uses a
+theta-one rail somewhere.  This is a structural positive signal: the
+coefficient bank nearly follows both projective owner cycles, and its only
+unrepresented projective vertex is the fourteenth boundary point already
+isolated by THM-2603.
+
+The quantifiers make the limitation equally sharp.  The phase is minimized
+separately for each displacement and cycle; (20) is vertex support, not one
+ordered seven-edge fibre product.  It supplies no `q -> q'` ancestry gluing,
+no physical root/projective intertwiner, no value at `infinity`, and no
+semantic endpoint.  It therefore does not define the transition kernels of
+THM-2602 or change the LRC verdict.
 
 ## 5. Sharp hostiles and loss ledger
 

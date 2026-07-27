@@ -367,6 +367,59 @@ def main():
             == "ab59b257dd3a9788d6108a46f1e01705caa2598fc9c47cee95f26165a0242110",
             "selected q=0 bank digest changed")
 
+    # Coefficient-level projective owner-cycle support test.  In the affine
+    # root chart of THM-2603, the owner map has two seven-cycles; the second
+    # passes through the projective boundary infinity, for which this bank has
+    # no target section.  Rotate each cycle against the seven clock positions
+    # and ask only whether every finite vertex admits a positive unit rail.
+    # This is deliberately not a composability or physical-intertwiner test.
+    projective_cycles = {
+        "O0": (0, 4, 6, 10, 7, 5, 3),
+        "O1_finite": (1, 8, None, 2, 9, 12, 11),
+    }
+    cycle_min_theta_one = {}
+    cycle_best_phases = {}
+    for name, cycle in projective_cycles.items():
+        minima = []
+        phases = []
+        for s in range(1, P):
+            phase_candidates = []
+            for phase in range(Q7):
+                forced_theta_one = 0
+                admissible = True
+                for ell in range(Q7):
+                    q = cycle[(ell + phase) % Q7]
+                    if q is None:
+                        continue
+                    choices = [
+                        t for j, t in by_cell[(s, ell)]
+                        if pair_totals[j * P + q] > 0 and is_unit[j][q]
+                    ]
+                    if not choices:
+                        admissible = False
+                        break
+                    forced_theta_one += int(12 not in choices)
+                if admissible:
+                    phase_candidates.append((forced_theta_one, phase))
+            require(phase_candidates,
+                    f"projective owner cycle lost finite unit support: {name}, s={s}")
+            best = min(phase_candidates)
+            minima.append(best[0])
+            phases.append(best[1])
+        cycle_min_theta_one[name] = tuple(minima)
+        cycle_best_phases[name] = tuple(phases)
+
+    require(cycle_min_theta_one["O0"]
+            == (0, 0, 0, 0, 0, 5, 0, 1, 0, 0, 7, 0),
+            "first projective owner-cycle theta invoice changed")
+    require(cycle_min_theta_one["O1_finite"]
+            == (0, 0, 0, 0, 0, 4, 0, 1, 0, 0, 6, 0),
+            "second projective owner-cycle theta invoice changed")
+    require({s for s in range(1, P)
+             if cycle_min_theta_one["O0"][s - 1]}
+            == {6, 8, 11},
+            "projective owner-cycle exceptional displacement set changed")
+
     print("== constant-v=6 middle-rail common-x pullback ==")
     print(f"common row/grid: {module.W} / {T}")
     print("middle-edge zero sets:", zero_sets[(6, 0)], zero_sets[(6, 12)])
@@ -423,6 +476,14 @@ def main():
     print(f"q=0 selected-bank gcd: {selected_content}; ratio to full {selected_content // content}")
     print(f"q=0 selected-bank units: {selected_unit_count}/84")
     print(f"q=0 selected-bank digest: {selected_digest}")
+    print("projective owner-cycle coefficient support: O0 all 7 finite; "
+          "O1 all 6 finite, with infinity absent from the target-section atlas")
+    print("projective cycle minimum theta-one switches, s=1..12:",
+          cycle_min_theta_one)
+    print("projective cycle first minimizing phases, s=1..12:",
+          cycle_best_phases)
+    print("projective cycle exceptional displacements: {6,8,11}; "
+          "coefficient support only, no ordered gluing")
     print("determinant histogram:", sorted(determinant_hist.items()))
     print("independent controls: "
           f"comb={comb_controls}, grouped zero/positive="

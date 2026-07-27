@@ -48,5 +48,9 @@ q=0 theta-one t=0 cells: [(6, 0), (6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6)
 q=0 selected-bank gcd: 4244240; ratio to full 1
 q=0 selected-bank units: 84/84
 q=0 selected-bank digest: ab59b257dd3a9788d6108a46f1e01705caa2598fc9c47cee95f26165a0242110
+projective owner-cycle coefficient support: O0 all 7 finite; O1 all 6 finite, with infinity absent from the target-section atlas
+projective cycle minimum theta-one switches, s=1..12: {'O0': (0, 0, 0, 0, 0, 5, 0, 1, 0, 0, 7, 0), 'O1_finite': (0, 0, 0, 0, 0, 4, 0, 1, 0, 0, 6, 0)}
+projective cycle first minimizing phases, s=1..12: {'O0': (0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0), 'O1_finite': (0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0)}
+projective cycle exceptional displacements: {6,8,11}; coefficient support only, no ordered gluing
 determinant histogram: [(0, 366), (1, 386), (2, 68), (3, 128), (4, 50), (5, 28), (6, 22), (7, 114), (8, 112), (9, 250), (10, 106), (11, 92), (12, 384)]
 independent controls: comb=3, grouped zero/positive=0/8
