@@ -14,7 +14,8 @@ status: >
   stalk.  The zero cut character vanishes identically, and transitivity of
   the affine gauge makes the uniform sum the only invariant linear scalar;
   it too vanishes.  Thus the cut character is a necessary linear sidecar,
-  while invariant quadratic energy loses target phase.  This closes the
+  while the full gauge-invariant scalar quadratic energy loses target phase.
+  This closes the
   static affine carry/coherence seam, not the temporal ancestry transplant,
   owner/arrival/deep-current coupling, any live scalar row, or LRC(14).
 source: codex-2026-07-27-affine-cut-bundle; mac-mini-2026-07-27 exact factorization
@@ -222,8 +223,10 @@ K_(alpha tau,beta)=(1-lambda^7)/(1-lambda)!=0.                  (16)
 ```
 
 For every fixed `tau,a!=0`, equations (13)--(16) give a diagonal
-isomorphism between the `72` mixed modes and the nontrivial cut-character
-part of the bundle.  In particular, THM-2506 says that on every essential
+isomorphism between the `72` mixed modes and the
+`alpha!=0,beta!=0` cut-character part of the bundle.  (The six
+`alpha=0,beta!=0` coordinates belong to the vertical/pure-`F_7` kernel.)
+In particular, THM-2506 says that on every essential
 THM-2436 defect
 
 ```text
@@ -284,10 +287,12 @@ sum_v R_(tau,a,c)(v)=sum_(h,r)d(h,r)=0.                          (21)
 ```
 
 Therefore every gauge-invariant linear scalar readout vanishes on the whole
-Radon image.  A quadratic norm of the bundle is invariant and positive, but
-it pairs each root phase with its conjugate and so destroys the target
-charge.  A successful linear observer must remain nontrivial equivariant
-data; the cut-character bundle supplies one such observer.
+Radon image.  The full gauge-invariant scalar quadratic norm of the bundle is
+positive, but it pairs each root phase with its conjugate and so destroys the
+target charge.  This does not say that every local quadratic contraction is
+constant or root-neutral.  A successful linear observer must remain
+nontrivial equivariant data; the cut-character bundle supplies one such
+observer.
 
 There is a complementary single-map no-go.  Suppose a map
 `pi:F_13 x F_7 -> F_13` is strictly translation-equivariant in the sense

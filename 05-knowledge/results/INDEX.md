@@ -1,7 +1,7 @@
 # Script Results Index
 
 - `lrc14_affine_cut_bundle_covariance_thm2508_referee.py` -> matching `.out`
-  [INDEPENDENT EXACT REFEREE for reserved THM-2508].  On the full affine-cut
+  [THM-2508 PROVED + INDEPENDENT EXACT REFEREE].  On the full affine-cut
   bank it verifies coefficientwise
   `C_(tau,a)(alpha,beta)=K(alpha tau,beta)dtilde(alpha,-beta a)`, with all
   `5,184` primitive geometric kernels nonzero.  The THM-2506 two-row hostile
@@ -2234,7 +2234,7 @@ slope one.  `-O2` and `-O3` runs byte-match the stored `PASS` transcript.
 
 ### lrc14_affine_cut_bundle_probe.out
 
-Independent exact referee for the **THM-2508 affine-cut-bundle candidate**,
+Independent exact referee for the **THM-2508 affine-cut-bundle theorem**,
 following the THM-2507 truncated-Radon audit; this artifact does not itself
 promote a reserved theorem.  The
 full `42`-cut, `504`-nonzero-slope bundle is equivariant under
