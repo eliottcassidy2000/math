@@ -26,6 +26,64 @@
   are `3f655868...6af4` / `28037c20...c9d` and
   `4ead051b...80b` / `e8c98cd7...125`.  The transverse sum need not retain
   the deep anchor, and no semantic arrival or owner loop follows.
+- `lrc14_weighted_live_event_kakeya_flux_thm2540.py` -> matching `.out`,
+  with companion `lrc14_transverse_gain_boundary_refinement_thm2540.py` ->
+  matching `.out` [THM-2540 PROVED + VERIFIED-EXACT].  An external
+  root-invariant density turns the Cayley pairing of a Boolean event into its
+  positive boundary mass and half its translation energy.  Each slope has
+  the sharp `13/42` run floor; the live unit guard improves this to the sharp
+  relative mass floor `1/10`.  On all `165` rows, all twelve boundary events
+  retain terminal word and delayed Boolean owner, have the explicit
+  `26J(W_R)-1` Prony bound, and give a `12 x 12` indexed carrier family (not
+  distinct or joint edges).  The conditional product-torus companion packs
+  the three old gain orbits into one nonnegative atomwise-boundary sum without
+  preserving the anchor or supplying one Boolean atom.  The referees make
+  `2,623,999` and `5,412,159` checks; hashes are
+  `645aad23...76c` / `12e55114...ba5` and
+  `864ee2eb...bbb` / `7ea5b301...7a5`.
+- `lrc14_diagonal_cubic_owner_clock_boundary_thm2539.py` -> matching `.out`
+  [THM-2539 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Conditional on
+  THM-2517's full phase support, every live row and sufficiently large even
+  delay has all `72` diagonal cubic source-target means.  The visible source
+  character is the opposite clock character; a guard Vandermonde gives three
+  target-aligned root slopes uniformly across the channels.  Atomwise
+  THM-2537 factorization gives two positive Boolean packet systems with `216`
+  incidences and retained terminal/deep endpoints.  A zero-phase branch and a
+  two-atom hostile forbid a universal fixed orientation or canonical selected
+  packet.  Updated hashes are `5ec56c19...e50` / `2cd425b6...62e`.
+- `lrc14_cayley_wall_scalarization_thm2537.py` -> matching `.out` [THM-2537
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The signless endpoint sum
+  of the actual Cayley current is the ordinary gradient, so every canonical
+  occupied-to-empty wall scalarizes owner-attached phase pointwise.  The
+  selected positive Boolean source packet retains the terminal word, late
+  owner, every root colour, and re-enters the `91`-unit carrier.  Its head is
+  still an empty predecessor, not semantic arrival.  Hashes are
+  `9654d07b...d7b` / `99a84966...ae6`.
+- `lrc14_selector_target_drift_toothpick_boundary_thm2536.py` -> matching
+  `.out`, with secondary selector-mass probe [THM-2536 PROVED + VERIFIED-EXACT
+  + INDEPENDENTLY AUDITED].  Start and terminal selector vectors jointly
+  recover the `23` anchored path rays; their divergence detects adjacent-pair
+  flow and target-triangle holonomy.  One canonical typed non-cover control
+  has all `168` target characters, while the singleton hostile makes general
+  target drift vanish.  The main referee makes `7,114,727` checks.  Hashes are
+  `6864b379...4d2` / `79770220...910`; secondary hashes are
+  `a5795aec...7d7` / `0177cf86...3a4`.
+- `lrc14_boundary_tooth_clock_intertwiner_thm2535.py` -> matching `.out`
+  [THM-2535 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The retained
+  affine-cut chart supplies the clock coordinate missing from root data and
+  preserves all `5,184` primitive cut modes in a `C_13 x C_7` local system.
+  Neutral clock character collapses sharply; a correlated full scheduler
+  orbit gives a positive clock-holonomy root dipole but no temporal handoff.
+  Hashes are `5b439d24...073` / `51ec45b3...232`.
+- `lrc14_positive_kakeya_boundary_transform_codex_20260727.py` -> matching
+  `.out` [THM-2534 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The
+  all-slope Boolean boundary is the complete occupied-to-empty directed cut,
+  the positive Jordan lift of the translation gradient, and a strict cyclic
+  variogram with exact Crofton variance.  It reconstructs the mask; with an
+  excluded root it reconstructs the full Gram matrix and on the deep path cone
+  all `23` ray masses.  Exact hostiles expose phase loss, the one-constant
+  unanchored gauge, `132` vanishing mixed modes, and absence of source/clock/
+  arrival semantics.  Hashes are `45a037bb...f9d` / `45bfe327...523`.
 - `lrc14_owner_weighted_collision_phase_thm2533.py` -> matching `.out`
   [THM-2533 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  A delayed
   `1/13`-periodic owner commutes with every root projector, so all twelve

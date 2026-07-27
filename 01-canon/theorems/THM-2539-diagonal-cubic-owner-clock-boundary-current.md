@@ -40,8 +40,8 @@ related:
   - THM-2540-weighted-live-event-kakeya-flux-and-transverse-gain-boundary-refinement
 script: 04-computation/lrc14_diagonal_cubic_owner_clock_boundary_thm2539.py
 output: 05-knowledge/results/lrc14_diagonal_cubic_owner_clock_boundary_thm2539.out
-script_sha256: 5442fd0b7f5e9f2b3a5638baa3ddd4fbf519f61b437c181af9b0a159c5ff59fd
-output_sha256: 34a40bb04bbae07bd49b5e70a1f2b3816dda5a041bb8aa51351fc712b4c8e0ba
+script_sha256: 5ec56c1966ee043c46b83fcf3d1daae1e12f5ff549fb9d2c66986fc80f4c5e50
+output_sha256: 2cd425b6e3c7608446066694a275169f0d9a1f4021eff7b942c6cb5322c5a62e
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -494,10 +494,9 @@ full phase support
   -> an owner-clock-attached positive Boolean boundary pair. (39)
 ```
 
-Reserved THM-2540 concerns a different proposed product-torus/weighted-live-
-event Kakeya refinement.  It is **RESERVED / UNPROVED** and is neither a
-dependency nor evidence for (39).  Conversely, the present O9c theorem does
-not claim THM-2540's broader uniform live-event scope.
+THM-2540 proves a separate product-torus/weighted-live-event Kakeya
+refinement.  It is not a dependency or evidence for (39).  Conversely, the
+present O9c theorem does not claim THM-2540's broader uniform live-event scope.
 
 It does not prove full phase support, one Boolean character-summed event, a
 row-independent slope triple, equality of the visible source and inherited

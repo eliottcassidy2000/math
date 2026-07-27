@@ -14,5 +14,5 @@ canonical_plus_zero_mixed_root_checks=936
 reflected_minus_zero_mixed_root_checks=936
 selector_mass_table=delta_plus_replicas mixed_means=0
 hostile_zero_basis=exact_integer_table_plus_single_root_support
-scope=full_support_O9c_only; THM-2540_reserved_unproved
+scope=full_support_O9c_only; THM-2540_proved_separate_scope
 THM-2539 PASS
