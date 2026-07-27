@@ -2,8 +2,8 @@
 id: THM-2460
 title: "Idempotent semantic-word copy and word-block cosupport boundary"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT. A fixed THM-2305 pure/fork word already retained by
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. A fixed
+  THM-2305 pure/fork word already retained by
   a THM-2452 packet is a target-neutral Boolean coordinate and can be
   copied to the bare endpoint with zero additional loss. If only the
   unsplit return residual is retained, the three word strata enlarge
@@ -42,8 +42,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2460 -- the future word is a free matched filter, not a new address
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2457 proves that the seven present local truth bits do not determine
 the future THM-2305 word: one live strict complete atom contains both a
@@ -334,9 +333,40 @@ The same word carries every nonzero root colour qualitatively.
 
 ## 4. The exact quantitative sidecar
 
-Suppose a selected matched table `T_(kappa,sigma)` has a physical
-entry support `S`. Because the table already contains `W_sigma`,
-equation (19) automatically gives
+Let the selected Boolean matched table be
+
+```text
+T_(kappa,sigma):G^3->[0,1],
+
+bar(T_(kappa,sigma))
+ =13^(-3)sum_z T_(kappa,sigma)(z).                 (26a)
+```
+
+As in THM-2457, orthogonal projection and `0<=T<=1` give
+
+```text
+D(T_(kappa,sigma))<=bar(T_(kappa,sigma)).
+```
+
+Choose a maximizing entry `z_*` with
+
+```text
+T_(kappa,sigma)(z_*)
+ >=bar(T_(kappa,sigma)),
+```
+
+and let `S=S_(kappa,sigma,z_*)` be its underlying Boolean physical
+support. Then
+
+```text
+mu(S)=T_(kappa,sigma)(z_*)
+     >=bar(T_(kappa,sigma))
+     >=D(T_(kappa,sigma)).                         (26b)
+```
+
+An arbitrary entry support need not satisfy (26b); the maximizing
+selection is load-bearing. Because this table already contains
+`W_sigma`, equation (19) automatically gives
 
 ```text
 pi_13(S) subset {y:w_sigma(y)=1}.                   (27)
@@ -349,6 +379,10 @@ Omega_(I,sigma)
  ={y:w_sigma(y)=1,
       sum_u A_I(y,u)>0,
       sum_u F_I(y,u)>0}.                            (28)
+
+M_sigma(I)
+ =integral_Y w_sigma(y)
+    (sum_u A_I(y,u))(sum_u F_I(y,u))dy.
 ```
 
 The word-preserving version of THM-2457's root-image hypothesis is
@@ -586,3 +620,11 @@ explicit `require` checks active under optimized mode. It verifies:
 Normal and optimized transcripts match the stored output
 byte-for-byte after LF normalization. LF hashes are recorded in the
 frontmatter.
+
+An independent hostile audit rederived the fixed-word diagonal,
+return-supported `384`-atom invoice, root-constant block
+decomposition, clock and source-skew typing, relation-address
+collapse, and both stopping hostiles. It caught and repaired the
+missing maximizing-entry quantifier in Section 4 before promotion,
+then independently replayed normal and optimized modes against the
+stored transcript and reproduced both LF hashes.
