@@ -2,7 +2,8 @@
 id: THM-2516
 title: "Anchored moment simplex disintegration and owner-star recovery"
 status: >
-  PROVED.  On a finite cyclic probability space, an unanchored m-th moment
+  PROVED + INDEPENDENTLY AUDITED.  On a finite cyclic probability space, an
+  unanchored m-th moment
   is the exact average of fibres with m-1 difference coordinates, reflecting
   C_D^m/C_D,diag.  Multiplying by one positive marked anchor adds one vertex
   and one difference: h A_j^m is the average of the nonnegative owner-supported
@@ -16,7 +17,6 @@ status: >
   carrier is an owner-rooted triangle/two-arm star.  Its arms remain unordered
   and need not be lawful phase-bank, clock, collision, or deep-ancestry edges;
   no one-point Boolean current, row exclusion, or LRC(14) follows.
-  Independent audit requested.
 source: codex-2026-07-27-anchored-moment-simplex
 depends_on:
   - THM-2449-coprime-owner-anova-and-delta-replica-boundary
@@ -30,7 +30,7 @@ related:
 
 # THM-2516 -- moments are difference simplices; an owner adds one arm
 
-**PROVED.  Independent audit requested.**
+**PROVED + INDEPENDENTLY AUDITED.**
 
 THM-2515 disintegrates an entrywise square into one-difference
 autocorrelation fibres.  Its sharp hostile shows why that operation can lose
@@ -131,15 +131,17 @@ For fixed `x`, each sum over `u_q` is `D A_j`.  Hence the left side of
  =h A_j^m.                                                    (11)
 ```
 
-Alternatively, `(x,u_1,...,u_m)` parametrizes the `m+1` points
+Alternatively, `(x,u_1,...,u_m)` parametrizes the full `m+1`-point
+configuration
 
 ```text
 x, x+u_1, ..., x+u_m                                        (12)
 ```
 
-modulo their common translation.  The function `H` marks the first point,
-so there is no legal gauge that sets one of the `u_q` to zero while leaving
-an arbitrary anchor density unchanged.
+while `u` alone parametrizes the quotient by common translation and `x`
+parametrizes the integrated diagonal fibre.  The function `H` marks the
+first point, so there is no legal gauge that sets one of the `u_q` to zero
+while leaving an arbitrary anchor density unchanged.
 
 Let `K` be a subfield of `C` and let
 
@@ -160,9 +162,9 @@ max_u |Lambda(T_u)|>=h|Lambda(A^(circ m))|                   (15)
 when `h>0`.  If `H` and all `F_j` are nonnegative rational functions, every
 selected table `T_u` is nonnegative and rational.  More importantly, every
 one of its entries is represented by an integrand containing the same
-positive anchor factor `H(x)`.  This is owner support at the marked base
-point; it is not a claim that the selected table's own untwisted anchor cell
-has positive triple overlap.
+nonnegative anchor factor `H(x)` of positive mean.  This is owner support at
+the marked base point; it is not a claim that the selected table's own
+untwisted anchor cell has positive triple overlap.
 
 ## 3. Circle and base-`13` versions
 
@@ -183,7 +185,9 @@ integral_(u_1,...,u_m) T_u(j) du_1...du_m
  =h A_j^m.                                                    (17)
 ```
 
-For `L^2` step data (bounded here), `u->Lambda(T_u)` is continuous.  If the
+For bounded step data, `u->Lambda(T_u)` is continuous: telescope the finite
+product and use translation continuity with all other factors bounded.
+Arbitrary `L^2` inputs alone are not claimed at higher moment order.  If the
 integral in (17) is nonzero, its nonzero locus contains an open subset of
 `T^m`.  Consequently, for arbitrarily large `L`, all arms can be chosen on
 one base-`13` grid:
@@ -236,11 +240,37 @@ for every nonzero `tau,a,alpha,beta`.  Thus all `5,184` primitive cut
 coefficients survive on one fibre whose every entry retains the common
 anchor factor `H(x)`.
 
-At a fixed lawful THM-2449 clock, take `H` to be the nonnegative step density
-whose integral is the marked owner anchor `A_(o,0)=a>0`, and take
-`F_(ell,s)` to be the response densities defining the whole table.  Then the
-selected fibre is literally supported on that marked owner base event.  This
-does not assert that its own `(o,0)` triple-overlap entry is positive.
+At a fixed lawful THM-2449 clock in its baseline owner chart, take the genuine
+Boolean owner/word event before the deep-label sum,
+
+```text
+H_own(x)=U_(0,0)(x)d_(j,0)(x)Q^epsilon_0(Rx).                 (22a)
+```
+
+If `N(x)=sum_r Delta_r(x)`, then `N in {1,2}` almost everywhere and
+
+```text
+F_(0,0)=H_own N,
+a=A_(0,0)=integral H_own N.                                  (22b)
+```
+
+Thus, with `h=integral H_own`,
+
+```text
+a/2<=h<=a.                                                    (22c)
+```
+
+Use `H=H_own` in (9) and the full response densities `F_(ell,s)` on its
+arms.  The selected fibre is then literally supported on the marked Boolean
+owner event, and its common-grid coefficient satisfies the strengthened
+invoice
+
+```text
+|Lambda(T_u)|>=(a/2)|Lambda(A^(circ m))|.                     (22d)
+```
+
+This still does not assert that the selected table's own `(0,0)`
+`(m+1)`-fold overlap entry is positive.
 
 The theorem is conditional only on the moment coefficient in (20).  It does
 not claim that every response table has such a coefficient at every order.
@@ -266,7 +296,12 @@ m-arm carrier
 ```
 
 For non-Boolean weights, the diagonal retains `F_j^2`; Boolean idempotence is
-load-bearing.
+load-bearing.  In particular, the live THM-2449 density after its deep-label
+sum can take the values one and two.  The recursive face law is an abstract
+Boolean boundary, not an assertion about that summed response bank.  Only an
+arm--arm collision `u_r=u_s` has this recursion.  An arm at the owner point
+`u_q=0` does not collapse unless the separate anchor `H` idempotently absorbs
+that particular `F_j`.
 
 At `m=2`, the three points are
 
@@ -291,22 +326,43 @@ label permutation only if
 p c u_q in Z.                                                  (25)
 ```
 
-A delayed word `Q(13^K x)` is literally unchanged only if
+This condition is also sufficient for bank-set preservation; keeping every
+label fixed requires the stronger `c u_q in Z`.  For a delayed word, define
 
 ```text
-13^K u_q in Z.                                                 (26)
+Stab_T(Q)={t in T:Q(x+t)=Q(x) almost everywhere}.              (26)
 ```
 
-Every arm must satisfy these conditions simultaneously.  The open spectral
+Then `Q(13^K x)` is literally unchanged under the arm exactly when
+
+```text
+13^K u_q mod 1 lies in Stab_T(Q).                              (27)
+```
+
+The simpler condition `13^K u_q in Z` is sufficient, and is necessary when
+`Q` has trivial translation stabilizer.  Every arm must satisfy these
+conditions simultaneously.  The open spectral
 locus in Section 3 need not meet this finite lawful product grid; a retained
 septimal factor with `13`-unit speed again forces each base-`13` arm to be
 zero.  Thus owner support has been restored algebraically, but lawful
 ancestry has not.
 
 The carrier (24) also does not identify its two arms with THM-2471 collision
-edges, THM-2478's old deep sheet, an address/gain edge, or a terminal word.
-It is a nonnegative three-point cospan observable, not a one-point Boolean
-current.  The next decisive test is now precise: realize both differences
+edges, THM-2478's old deep sheet, or an address/gain edge.  In the THM-2449
+application every vertex retains the same fixed terminal-word label and
+clock, but one common word phase is not proved; agreement is governed by
+the exact stabilizer test (27), with integrality only a sufficient shortcut.
+The carrier is a nonnegative
+three-point cospan observable, not a one-point Boolean current.  The next
+decisive test is now precise: realize both differences
 from one marked owner root inside the existing collision/ancestry graph, or
 prove that the surviving semantic rows forbid such a triangle.  No live row
-is removed and LRC(14) remains open. **QED.**
+is removed and LRC(14) remains open.
+
+Two independent audits rederived the all-`m` normalization (including exact
+rational controls through `m=4`), quotient coordinate count, magnitude
+selection, base-`13` density argument, Galois/cut signs, and Boolean
+arm-collision recursion.  They also repaired three scope points before final
+promotion: `x` parametrizes the diagonal fibre rather than the quotient;
+the live summed response is not Boolean; and word invariance is governed by
+the stabilizer (27), not by integrality as a necessary condition. **QED.**
