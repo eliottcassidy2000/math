@@ -1,0 +1,20 @@
+THM-2463 exact companion
+resultant_content=2^4*11^6
+resultant_terms=28
+resultant_bidegree=(4,5)
+newton_generic=Delta(4,1)
+newton_exception=lambda=49/33
+top_factor=v*(56p-99v)^2*(384lambda p^2-280pv+231v^2)
+linear_factor_shapes=2
+vertical_factors=NONE
+linear_factor_unit_ideals=2
+quadratic_top_types=3
+quadratic_factor_unit_ideals=5
+type_III_compatibility=(20h-33)*(448h^2-1320h+1089)^2
+p_zero_section=-567*L5
+L5_degree=5
+L5_squarefree=YES
+square_lift_minimum_branch_points=6
+square_lift_minimum_genus=2
+y_zero_boundary=Z_zero_on_open_first_flux
+ALL CHECKS PASSED
