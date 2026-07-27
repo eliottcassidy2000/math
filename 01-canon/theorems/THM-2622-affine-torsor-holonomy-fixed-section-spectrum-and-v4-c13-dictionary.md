@@ -2,7 +2,7 @@
 id: THM-2622
 title: "Affine-torsor holonomy fixed-section spectrum and V4/C13 dictionary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For a finite abelian deck torsor with cyclic affine holonomy x->Ax+c,
   compatible parallel sections are exactly the fixed points: none if
   c is not in im(I-A), otherwise one coset of ker(I-A).  Thus the C13
@@ -24,12 +24,14 @@ related:
   - THM-2612-d4-deck-pole-tax-and-depressed-resolvent-gcd-gate
 script: 04-computation/affine_torsor_holonomy_spectrum_thm2622.py
 output: 05-knowledge/results/affine_torsor_holonomy_spectrum_thm2622.out
+script_sha256: 6001c091451dba07ab92f940b3adbea867c6a3326d17294e81664527547857e0
+output_sha256: e78374167ca727e5c9d1e33c09d2f51774e7271f9a9612401683b70e672a53a5
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2622 -- affine holonomy counts the surviving sections
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The repeated holotopy failure in LRC and the quartic resolvent has one finite
 normal form.  A quotient remembers the linear action on its deck group but
@@ -218,10 +220,13 @@ The dependency-free companion exhausts all `156` affine maps of `F_13`, all
 affine conjugacy pairs, and all `576` two-edge cycle systems.  It checks the
 fixed-point counts, linear orders, full permutation cycle atlas, gauge
 invariance, and the equality between compatible sections and holonomy fixed
-points with optimized-mode-safe guards.
+points with optimized-mode-safe guards.  Two independent audits rederived the
+general coset theorem, every class in the `S_4` and `D_4` tables, the LRC
+fixed-generator boundary, and the quartic-subgroup scope.  Normal and
+optimized runs both byte-match the stored transcript.
 
 The theorem classifies an already supplied affine deck local system.  It does
 not construct THM-2611's missing physical ancestry carrier, identify the
 THM-2613 local shift with the THM-2585 next-target state, prove that a quartic
 resolvent comes from a Keller source, exclude any LRC row, prove JC(2), or
-prove LRC(14).  QED (candidate; independent hostile audit pending).
+prove LRC(14).  QED.
