@@ -1,0 +1,9 @@
+THM-2621 planar degree-four inverse-spectral exact controls
+quartic_remainder_coefficients=4 PASS
+rational_C4_hostile: Jacobian=-1 resultant=f companion=b PDE=PASS
+projection_discriminant=-256*u**3*(16*u*v**2 - 1)**2*(16*u*v**2 + 1)**4
+companion_denominator=-(16*u*v**2 - 1)*(16*u*v**2 + 1) Jelonek_lead=1
+sheet_defect_valuation_controls=12
+trace_form=4*v*du curvature=-4*du^dv for kappa=-1
+trace_Liouville_SL2_change=exact_quadratic
+exact assertions passed: 42

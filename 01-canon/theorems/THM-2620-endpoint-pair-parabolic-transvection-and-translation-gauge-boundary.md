@@ -2,8 +2,8 @@
 id: THM-2620
 title: "Endpoint-pair parabolic transvection and translation-gauge boundary"
 status: >
-  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; HOSTILE-AUDIT REPAIRS
-  INTEGRATED, FINAL RE-AUDIT PENDING.  After declaring a deep-leg allocation
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  After declaring a
+  deep-leg allocation
   gauge on the THM-2334 mod-thirteen target quotient, retain endpoint vectors
   L,R rather than only q=L-R.  Their
   determinant Delta is uniformly erased by common endpoint translation: for
@@ -19,7 +19,8 @@ status: >
   Left owner C7 and right endpoint C13 actions split PSL2 into twelve free
   91-point torsors without an internal order-91 element.  Endpoint reversal
   and target swap generate a V4 action, not globally a torsor.  The canonical
-  trace-two SL lift can close only at -I, exposing a central C2 scale invoice.
+  THM-2603 descending trace-two SL lift closes at -I, exposing a central C2
+  scale invoice.
   This is relation-address algebra, not a positive current or physical-root
   intertwiner; seven fixed transvection edges do not close.  LRC(14) remains
   open.
@@ -27,11 +28,11 @@ source: mac-mini-2026-07-28-endpoint-transition-lift
 depends_on:
   - THM-2309-owner-aligned-pivot-packets-and-visible-height-separation
   - THM-2334-relation-residue-current-and-character-twist-pushforward
+  - THM-2603-hurwitz-projective-root-owner-atlas-and-nonabelian-seven-edge-trivialization
 related:
   - THM-2315-marked-target-gain-corolla-and-pairwise-composition-boundary
   - THM-2321-prescribed-root-character-bispectrum-slice-positivity
   - THM-2602-commutative-vertex-insertion-and-ordered-transition-curvature-no-go
-  - THM-2603-hurwitz-projective-root-owner-atlas-and-nonabelian-seven-edge-trivialization
   - THM-2606-affine-v4-parity-channels-partial-cubes-and-feuerbach-origin
   - THM-2610-chronological-paired-slice-marked-triangle-graft-and-action-axis-boundary
   - THM-2615-physical-diagonal-toric-kernel-and-dipole-radon-invoice
@@ -46,10 +47,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2620 -- the target difference hides a parabolic endpoint transition
 
-**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; HOSTILE-AUDIT REPAIRS
-INTEGRATED, FINAL RE-AUDIT PENDING.**  Nothing in this file is available as a
-proved dependency until the repaired endpoint typing and enlarged companion
-receive final independent promotion audit.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The post-THM-2602 obstruction is not a shortage of vertex labels.  It is the
 absence of an ordered pair
@@ -58,10 +56,10 @@ absence of an ordered pair
 incoming root  ->  outgoing root.
 ```
 
-THM-2334 already begins with an ordered pair, but then subtracts it.  Its
-left and right endpoint modes determine a relation address; the target
-quotient retains their difference and discards the common endpoint origin.
-The discarded coordinate is exactly where a projective transition lives.
+THM-2334's atomic address can be allocated to an ordered endpoint pair before
+the target quotient subtracts it.  The quotient retains their difference and
+discards the common endpoint origin.  The discarded coordinate is exactly
+where a projective transition lives.
 
 This theorem isolates that finite object.  It yields all three structures
 requested repeatedly by the recent frontier:
@@ -73,7 +71,7 @@ thirteen root states:   one parabolic projective orbit;
 fourteenth state:       the target direction [q], fixed at the boundary.
 ```
 
-The construction is exact and intrinsic on relation-address data.  It is not
+The construction is exact after fixing the allocation gauge.  It is not
 yet physical LRC chronology: its projective vertices are endpoint target
 directions, not predecessor-sheet roots, and no current is proved nonzero on
 one fixed transition fibre.
@@ -383,16 +381,18 @@ C^(-1) T_(q,Delta) C=U^(Delta^(-1)).                     (22e)
 The `168` transvections therefore split into two `PSL_2` conjugacy classes of
 size `84`, distinguished exactly by the quadratic character of `Delta`.
 Square `Delta` gives the class of `U`; nonsquare `Delta` gives the class of
-`U^2`.  On either half,
+`U^2`.  Each half has
 
 ```text
 1,092=84*13,                                              (22f)
 ```
 
-and `PSL_2` itself is the pointed endpoint bundle.  In the square half,
-THM-2603's abstract homogeneous carrier `Omega=PSL_2/<C>` becomes, after
-conjugating `<C>` to `<U>`, the **unpointed** transvection class; the right
-`C_13` fibre restores the missing position on its thirteen-cycle.
+The square half is `PSL_2` itself as a pointed endpoint bundle; the nonsquare
+half is the other `PGL_2/PSL_2` coset, a `PSL_2` torsor rather than the group
+with a chosen identity.  In the square half, THM-2603's abstract homogeneous
+carrier `Omega=PSL_2/<C>` becomes, after conjugating `<C>` to `<U>`, the
+**unpointed** transvection class; the right `C_13` fibre restores the missing
+position on its thirteen-cycle.
 
 Finally let `A` be THM-2603's order-seven owner.  On `PSL_2`, left
 multiplication by `<A>` and right multiplication by `<U>` commute as actions
@@ -536,8 +536,8 @@ agreement with both (7) and (15).
 
 ### 7.1 Projective closure retains a central `C_2` scale invoice
 
-Exact endpoint vectors live in `SL_2`, not only `PSL_2`.  In THM-2603's
-affine chart put
+After determinant normalization, exact vector frames require an `SL_2` lift
+rather than only a `PSL_2` class.  In THM-2603's affine chart put
 
 ```text
 U=[[1,1],[0,1]],
@@ -614,9 +614,10 @@ Two further maps are still absent:
    (20) to THM-2603's abstract Hurwitz chart, followed by a separate map from
    that chart to a physical predecessor-root carrier.
 
-Such an intertwiner must send `[q]` to the chosen physical cusp, conjugate the
-parabolic transition to the physical root action, preserve endpoint order and
-clock, retain the central sign in Section 7.1, and carry a nonzero current
+Such an intertwiner must first send `[q]` to an abstract Hurwitz cusp and only
+then, through a separate proved map, to a physical cusp.  It must conjugate
+the parabolic transition to the physical root action, preserve endpoint order
+and clock, retain the central sign in Section 7.1, and carry a nonzero current
 rather than only labels.  THM-2603's nonabelian seven-edge norm suggests how
 clock-dependent conjugation can close; (27) proves that a fixed endpoint
 transvection cannot.
@@ -686,4 +687,10 @@ allocation is selected analytically, that the central sign is transported,
 that seven clocks close, that any scalar row is impossible, or that LRC(14)
 holds.
 
-QED, conditional on independent promotion audit.
+The final independent hostile audit checked the deep-leg allocation, every
+PGL/PSL and square-class assertion, the twelve left/right torsor orbits, all
+four Burnside tables, the six signed closure rows, and every scope boundary.
+Normal and optimized runs independently byte-match the stored transcript and
+the recorded hashes.
+
+QED.
