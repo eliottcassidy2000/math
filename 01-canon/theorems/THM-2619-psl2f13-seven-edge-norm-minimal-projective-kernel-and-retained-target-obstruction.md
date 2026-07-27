@@ -2,7 +2,7 @@
 id: THM-2619
 title: "PSL2(F13) seven-edge norm, minimal projective kernel, and retained-target obstruction"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   In PSL2(F13), U=[[1,1],[0,1]] and g_t=[[0,1],[-1,t]] for
   t=3,5,6 generate the full group and g_t has projective order seven.
   The forward/reverse products of the seven conjugates g_t^k U^a g_t^-k
@@ -47,7 +47,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2619 -- the nonabelian norm closes only after the target deck moves
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2602 isolates the live LRC transition test.  Seven ordered nonnegative
 kernels must contain a positive target-residue path
@@ -548,4 +548,13 @@ terminal word/owner/repair transport, or a reason to select one of the
 `13^6` corrections in (25).  No scalar row is excluded and LRC(14) remains
 open.
 
-**QED pending independent hostile audit.**
+An independent hostile audit rederived the trace/order criterion and all six
+success atlases, the target-deck normalizer obstruction, the degree-thirteen
+permutation-action contradiction, the cemetery-only twisted return, the
+adjacent-chart torsor and holonomy signs, and the Bruhat-square Fourier
+support.  It also checked that the real nonnegative `2 by 2` argument uses
+odd projective order and invertibility exactly where stated.  Every one of
+the thirty successful factor banks generates the full group, so deleting the
+displayed clock generator does not yield a smaller faithful carrier.
+Normal, optimized, and stored companions byte-match, and both declared hashes
+were reproduced independently.  **QED.**
