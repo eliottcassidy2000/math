@@ -1,10 +1,3 @@
-## mac-mini-2026-07-27-S148 -- THM-2570: THE FOLD CASCADE (owner: T-A/T-B promotions + plateau-past-7): the snap-fold recursion M(V) >= M(V minus max) - w/(2(h+w)) with settled LRC(<=13) floors closes EVERY separated multi-scale family at EVERY k -- sharp per-k ratios R_k = 134, 99, 85, 75, 66, 58, 51, 43, 36, 29, 22, 15, 8 (DECREASING; binding case k=1 = T-B, constant 533/4 = 13*41/4): THE APEX-7 WALL IS BROKEN in the separated regime, no Bonferroni charge, O(13) certificates at any height (refereed to v_max ~ 10^25). T-B INDEPENDENTLY PROVED (gap families have v_max < 134 v_2 -- no lonely top scale; agent derivation + own proof + referee = double-constructed, promotion complete). T-A PROMOTED two routes (one-far closure + the agent's THM-1290/corners/comb route; corners re-verified 5/5) -- the classical cores gap-empty at all heights, and the plateau lemma's independent-read request is discharged on this slice. Residual honest: clustered towers (all descent ratios below the per-position constants) = exactly the S147 adversarial pointer whose first three levels are verified empty; the clustered regime stays with the ladder induction + C1 + C2. FIRST DUTY DONE: both owed audits delivered as execution-countersigns + spot-reads (THM-2471 all_checks=PASS; THM-2479 ALL CHECKS PASSED incl. 7|a branch; Lemma A scope claim consistent).
-
-Prompt (owner): work the T-A/T-B promotions and the plateau-past-7 extension
-
-FILES: THM-2570 (canon), HYP-9070 (RESOLVED), referee script+out, audit countersigns,
-results INDEX, session log. -> all
-
 > **CURRENT-TRUTH WARNING (2026-07-22):** This bounded handoff is not proof
 > authority. Start with [START-HERE.md](START-HERE.md),
 > [CURRENT-FRONTIER.md](CURRENT-FRONTIER.md), and
@@ -14,6 +7,13 @@ results INDEX, session log. -> all
 
 Older chronology is in [the archive through 2026-07-21](SESSION-LOG-HISTORICAL-THROUGH-2026-07-21.md)
 and the [recovered unbounded 2026-07-22--23 ledger](SESSION-LOG-HISTORICAL-2026-07-22-23-UNBOUNDED.md).
+
+## mac-mini-2026-07-27-S148 -- THM-2570: THE FOLD CASCADE (owner: T-A/T-B promotions + plateau-past-7): the snap-fold recursion M(V) >= M(V minus max) - w/(2(h+w)) with settled LRC(<=13) floors closes EVERY separated multi-scale family at EVERY k -- sharp per-k ratios R_k = 134, 99, 85, 75, 66, 58, 51, 43, 36, 29, 22, 15, 8 (DECREASING; binding case k=1 = T-B, constant 533/4 = 13*41/4): THE APEX-7 WALL IS BROKEN in the separated regime, no Bonferroni charge, O(13) certificates at any height (refereed to v_max ~ 10^25). T-B INDEPENDENTLY PROVED (gap families have v_max < 134 v_2 -- no lonely top scale; agent derivation + own proof + referee = double-constructed, promotion complete). T-A PROMOTED two routes (one-far closure + the agent's THM-1290/corners/comb route; corners re-verified 5/5) -- the classical cores gap-empty at all heights, and the plateau lemma's independent-read request is discharged on this slice. Residual honest: clustered towers (all descent ratios below the per-position constants) = exactly the S147 adversarial pointer whose first three levels are verified empty; the clustered regime stays with the ladder induction + C1 + C2. FIRST DUTY DONE: both owed audits delivered as execution-countersigns + spot-reads (THM-2471 all_checks=PASS; THM-2479 ALL CHECKS PASSED incl. 7|a branch; Lemma A scope claim consistent).
+
+Prompt (owner): work the T-A/T-B promotions and the plateau-past-7 extension
+
+FILES: THM-2570 (canon), HYP-9070 (RESOLVED), referee script+out, audit countersigns,
+results INDEX, session log. -> all
 
 ## LRC(14): exact present frontier
 
