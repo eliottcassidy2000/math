@@ -1,0 +1,16 @@
+THM-2534 dependency-free exact referee
+field: F_13; masks: 8190 mixed Boolean masks
+matched oriented-edge identities: 1277640
+AGL generator covariance identities: 3832920
+sparse Newton/Prony reconstructions: 98280; maximum support 6
+exact Crofton/Wiener--Khinchin character checks: 98280
+directional-variance-zero masks by size: 1:13, 4:52, 9:52, 12:13
+directional-variance-zero rotation necklaces: 1+4+4+1 = 10
+fixed-slope run-length hostile: PASS
+homometric Crofton phase-loss hostile: PASS (all nonzero counts 3)
+weighted gauge hostile: PASS (singleton/co-singleton laws coincide)
+target-anchored mixed-mode hostile: PASS (132 exact zero modes)
+target-anchor reconstruction of (H,Gram): PASS
+deep-path collapse and 23-ray recovery: PASS
+all-slope zero-source-tooth hostile: PASS (72/72 source modes survive)
+ALL CHECKS PASSED
