@@ -1,7 +1,7 @@
 ---
 title: "Two and three on one object: the modular order-six fork and its missing sidecars"
 date: 2026-07-27
-status: RESEARCH SYNTHESIS; theorem claims are routed to THM-2595--2598 and THM-2606; the PSL2(F13) signal is routed to RESERVED THM-2603
+status: RESEARCH SYNTHESIS; theorem claims are routed to THM-2595--2598, THM-2603, THM-2606, and THM-2612
 source: codex-2026-07-27-modular-v4-session
 ---
 
@@ -170,8 +170,8 @@ projective-order-seven trace set in `F13` is
 Consequently the forward product is central exactly when `t-a` lies in
 (7c), and the reverse product is central exactly when `t+a` lies there.
 For `t=3,5,6`, the two orientations together hit every
-`a in F13^*`.  This explains the exact finite atlas reported to the owner of
-RESERVED THM-2603: the coverage is a trace-intersection theorem, not a
+`a in F13^*`.  THM-2603 proves the resulting exact finite atlas: the
+coverage is a trace-intersection theorem, not a
 coincidence of twelve matrix products.
 
 This is also the cleanest demonstration yet of why order cannot be
@@ -180,6 +180,21 @@ The construction is an exact noncommutative design target for the seven-edge
 LRC clock, but it is not yet a Boolean carrier, semantic owner path, positive
 kernel, or relation current.  A lawful use must realize the conjugating
 `g_t` motion and the parabolic `U^a` insertion on the same physical ancestry.
+
+The `84=14*6` frame count also has a stronger affine law.  Removing the six
+frames over infinity leaves `78` states which form a regular torsor for
+
+```text
+B=C13 semidirect C6,
+(c,kappa)(d,lambda)=(c+kappa d,kappa lambda).              (7d)
+```
+
+Thus proved THM-2611's thirteen chronological choices and the six tangent
+frames cannot simply be checked independently.  Their cyclic obstruction is
+a frame product together with a frame-weighted root sum.  The missing
+physical object is a lawful principal-B transition carrier; the abstract
+regular action does not identify the chronological `C13` with the root
+translation subgroup.
 
 # Geometry clues: what survives
 
@@ -246,10 +261,11 @@ The six-state resemblance is now a stopping rule.  THM-2587's
 six middle digit is a digit value, not an order-six group action.  A
 commutative gate algebra collapses free words to the `C6` shadow; it cannot
 manufacture the noncommuting adjacent-root transition demanded by
-THM-2602.  The next useful object remains one positive composable kernel
+THM-2602.  The next useful object is more sharply one positive composable
+`C13 semidirect C6` kernel
 
 ```text
-K_ell(q,q')
+K_ell((q,kappa),(q',kappa'))
 ```
 
 with the adjacent root, clock, owner, and order retained before
@@ -258,10 +274,21 @@ marginalization.
 ## Degree-four Keller / G1
 
 The cubic resolvent gives a normalized branch sub-divisor and an exact
-index tax, not a degree-three Keller map.  The next decisive calculation is
-the maximal resolvent order and normalized branch singularity on the live
-G1 strata.  Depression or discriminant equality alone cannot constrain a
-hypothetical degree-four witness.
+index tax, not a degree-three Keller map.  THM-2612 now separates the three
+live monodromy shadows exactly:
+
+```text
+D4 -> C2,        A4 -> C3,        S4 -> S3=S4/V4.          (11)
+```
+
+Only `A4,S4` are quotients of the modular `C2*C3`; `D4` has no element of
+order three and cannot occur as such a quotient.  Its replacement detector
+is geometric: the unique punctured-source deck involution cannot extend
+polynomially, so some source coordinate has a genuine Jelonek-boundary pole.
+For a depressed quartic its deck denominator has norm `S'(w)^2`, while a
+tame double-transposition/four-cycle index prime divides both `q` and
+`p^2-4r`.  This still does not exclude `D4`, but it turns the old cardinality
+analogy into two exact computational gates.
 
 # Reusable meta-pattern
 
@@ -273,6 +300,7 @@ free word -> mod-two linear action     -> S3;
 four affine sections -> forget origin -> three channels;
 choose channel -> C4;
 choose origin  -> K1,3 or one of four edge-state C6 cycles.
+root torsor + frame torsor -> C13 semidirect C6, not C13 x C6.
 ```
 
 The preserved cardinality is never enough.  The required sidecar is one of
