@@ -1,0 +1,13 @@
+THM-2580 Hasse-Bockstein carry tower
+Hasse exact depths 1..12, Smith p-multiplicities 1..12
+Cayley periodicity C^12 Lambda=13 Lambda; r13=13^11,169; r24=169^12
+signature Smith F1 1^10,13^2
+signature Smith F2 1^9,13^3
+signature Smith Salem 1^8,5^3,65^1; resultant=625=5^4
+13-primary signature depths cyclotomic2/cyclotomic3/Salem1
+canonical primitive digest a66ba96d31a33354468392b1dabc19865e6e925158efdab059fad9a98d4390f4
+secondary Z [0, 5, 3, 9, 4, 10, 8], inverse (4, 8, 5, 8, 0, 3)
+canonical carry: absolute beta1 78/78, pair beta2 468/468, owner span rank 3
+all pair-edge tensors have full 72-coordinate support
+unnormalized target Fourier numerator has literal factor13 and depth>=12
+explicit checks 3599
