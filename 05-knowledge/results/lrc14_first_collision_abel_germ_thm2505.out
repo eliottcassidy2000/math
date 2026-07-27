@@ -1,0 +1,13 @@
+THM-2505 FIRST-COLLISION ABEL-GERM EXACT COMPANION
+prime_controls=2,3,5,7,13;depth=4;first_collision=3
+p13_I=0,0,0,1/62748517,1/815730721
+p13_shell=0,0,-1/62748517,12/815730721
+p13_aggregate_germ=-z^2/13^7+12*z^3/13^8
+p13_germ_at_half=-7/3262922884;germ_at_one=-1/815730721
+coloured_germs_order=2;nonzero_leading_colours=12
+p13_colour1_lead=0,1/62748517,0,0,0,0,0,0,0,0,0,0
+gregory_corner_signs=-1,1,-1,1
+rational_radius_colours=all_nonzero;operator_covariance=PASS
+fixed_radius=1/2;equal_full_colour_vectors_at_depths=1,2
+ordinary_q1_product=nonzero;ordinary_q13^4=zero;base_root_residue_aggregates=zero
+all_checks=PASS

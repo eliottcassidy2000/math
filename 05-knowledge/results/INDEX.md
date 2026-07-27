@@ -2144,3 +2144,15 @@ It also replays the corrected THM-2313 Fano mass, THM-2318's three-prime
 corner, and the explicit grade-three root-four `m=1` edge. Normal and
 optimized outputs byte-match and end in `PASS`. The theorem closes
 primitive-colour selection, not the temporal owner/deep intertwiner or a row.
+
+### lrc14_first_collision_abel_germ_thm2505.out
+
+Exact companion for **THM-2505, PROVED + VERIFIED-EXACT + INDEPENDENTLY
+AUDITED**.  It realizes depth-three first collisions over five prime cylinder
+banks, verifies the Abel summation and valuation-clock operator identities,
+and checks that every primitive coloured germ has the same zero order.  At
+three rational radii every colour remains nonzero.  A sharp pair of prefix
+cylinders has collision depths one and two but identical complete colour
+vectors at radius `1/2`, proving that a fixed Abel evaluation loses depth.
+The squarefree top-corner Gregory signs, ordinary-frequency/residue-aggregate
+boundary, normal/optimized byte match, and stored `PASS` transcript are exact.
