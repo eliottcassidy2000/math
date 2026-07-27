@@ -1,0 +1,12 @@
+== THM-2586: depth-five arrival-to-later-root diagonal ==
+rebuild THM-2584 fine K tensor by both exact routes
+zero set K_ell(s,0,0): [(7, 4), (7, 5), (7, 6)]
+zero set K_ell(s,6,12): [(6, 4), (6, 5), (6, 6)]
+zero sets disjoint; all 84 (s!=0,ell) cells have a theta=0 edge
+deterministic choice counts (0,0)/(6,12): 81 / 3
+minimum selected mass: 13793820678/2120125746145771
+for every selection: theta=t-2v=0 and w=7t=v: PASS
+X=(x+a)/13^5 gives T^(N+5)X=T^N x: exact controls PASS
+scope: support theorem plus exact time map; branch selection and
+all-late cylinder continuation are symbolic, not finite extrapolation
+no old-head/co-shift/relation-residue identification; all checks passed
