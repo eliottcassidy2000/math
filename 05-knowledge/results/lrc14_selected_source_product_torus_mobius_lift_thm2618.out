@@ -1,0 +1,14 @@
+THM-2618 selected-source product-torus Mobius lift exact referee
+boolean_words=8192
+nonconstant_selected_words=8190
+mobius_truth_tables=13 inverse_reconstructions=13
+nonempty_proper_profiles=8190
+primitive_profile_coefficients=98280
+cyclotomic_certificate=F2[X]/(1+X+...+X^12)
+ordinary_graft_walls=26 chambers=26
+ordinary_graft_danger_histogram=1:39,2:13
+profile_orbit_size=13 stabilizer_size=1
+equal_mass_primitive_zero_colours=12
+permutation_square_controls=2
+exact_require_calls=475368
+status=PASS
