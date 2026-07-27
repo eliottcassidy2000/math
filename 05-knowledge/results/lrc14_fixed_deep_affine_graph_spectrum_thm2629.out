@@ -1,0 +1,13 @@
+THM-2629 exact fixed-deep affine-graph controls
+nonzero_labelled_row_deep_support_hist=((12, 4156),)
+rail_fixed_r_unit_count_hist=((0, 20), (76, 1), (78, 1), (102, 1), (108, 19), (110, 1), (120, 16), (122, 7), (126, 1), (130, 2), (131, 35), (132, 58))
+cell_qr_unit_count_hist=((108, 4), (120, 2), (122, 1), (130, 1), (131, 6), (132, 70))
+common_qr_pairs=72 common_r_by_q={0: (), 1: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), 2: (), 3: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), 4: (7, 8, 9, 10, 11, 12), 5: (7, 8, 9, 10, 11, 12), 6: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), 7: (1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12), 8: (1, 2, 3, 4, 5, 6), 9: (1, 2, 3, 4, 5, 6), 10: (1, 2), 11: (), 12: ()}
+affine_max_min=10 min_ten_maps=((12, 12, (1, 3, 4, 5, 6, 7, 8, 9, 10), ((10, 6), (11, 78))), (5, 0, (1, 3, 4, 5, 6, 7, 8, 9), ((10, 7), (11, 77))), (2, 0, (1, 3, 4, 5, 6, 7, 8, 9), ((10, 7), (11, 77))), (12, 0, (3, 4, 5, 6, 7, 8, 9), ((10, 9), (11, 75))))
+sharp_graph=(alpha,beta)=(-1,-1) min_cell=10 common_count=9 common=(1,3,4,5,6,7,8,9,10)
+sharp_graph_pattern_hist=(((1, 2, 3, 4, 5, 6, 7, 8, 9, 10), 4), ((1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), 78), ((1, 3, 4, 5, 6, 7, 8, 9, 10, 11), 2))
+sharp_graph_exceptional=(((2, 2), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)), ((2, 3), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)), ((6, 5), (1, 3, 4, 5, 6, 7, 8, 9, 10, 11)), ((7, 2), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)), ((7, 3), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)), ((11, 5), (1, 3, 4, 5, 6, 7, 8, 9, 10, 11)))
+sharp_graph_positive_pattern_hist=(((1, 2, 3, 4, 5, 6, 7, 8, 9, 10), 2), ((1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), 81), ((1, 3, 4, 5, 6, 7, 8, 9, 10, 11), 1))
+controls=identity:(8,4) inverse_two:(9,6) best_constant_r2:(8,7)
+verdict=PASS: fixed-deep unit refinement has a sharp opposite-affine graph and an unavoidable full-torsor puncture
+SCOPE: coefficient/unit atlas only; rail choices vary by cell and no chronological, semantic, or ordered gluing is inferred
