@@ -12,4 +12,5 @@ all_selector_gauges_checked=11583
 s8_combined_transition=(12, 12, 6, 12, 12, 12, 12) sum=0
 natural_rotation_digit_pairs={1: (4, 5), 2: (2, 3), 3: (0, 1), 4: (11, 12), 5: (9, 10), 6: (7, 8)}
 koopman_root_deck_images=(0, 0, 0, 0, 0, 0, 0) c91_generator_images=(1, 6, 1, 6, 1, 6, 1)
+crt_rail_lifts=(78,85) kernel_generator=14 koopman_common_image=13 quotient_clock_image=-1
 verdict=PASS: physical rail cochain pays seven forward marker classes abstractly; natural C91/chart-time transport fails

@@ -13,7 +13,9 @@ status: >
   a=6,...,12 on 57 displacement/marker/count lanes; the published THM-2600
   selector has sums 10 at s=6,11 and 7 at s=8, matching a=6,6,12.
   Each matched combined cochain is exact and has exactly thirteen vertex
-  gauges.  This is an abstract root/rail local-system intertwiner only:
+  gauges.  Equivalently, the two rail edges are the C91 lifts 78 and 85
+  of one C7 clock edge; the combined lifted loop closes exactly on the
+  same marker lanes.  This is an abstract root/rail local-system intertwiner only:
   the natural chart rotation x->x+m/91 moves future digit six into the
   pairs {4,5},{2,3},{0,1},{11,12},{9,10},{7,8}, giving zero adjacent-chart
   overlap with the entire depth-five arrival/future toothpick.  Chronological
@@ -34,8 +36,8 @@ related:
   - THM-2605-inverse-root-dipole-connection-and-mixed-square-invoice
 script: 04-computation/lrc14_constant_six_rail_holonomy_thm2607.py
 output: 05-knowledge/results/lrc14_constant_six_rail_holonomy_thm2607.out
-script_sha256: 7c3b4b935f9983461f5f2c062d2c55a31b9bf877d7b4b09c46ca82cdc9ace56f
-output_sha256: d486c338903b620010d0161f4cffe2c6b293c691bf44f376466527ac30290df1
+script_sha256: 92e73022d65aa44974a286079ab9759a60a5de7e93f156b2dfe931f1527772dd
+output_sha256: aacae8074f5707bec9c3e18b7de677517f5fa2864effec0069e9a81a635410b1
 hash_basis: LF-normalized bytes
 ---
 
@@ -234,6 +236,69 @@ The companion checks all `891*13=11,583` gauges.  This proves more than the
 necessary sum invoice: after granting the root/rail identification and the
 orientation (3), the tensor product of the constant-`a` root local system
 with the selected rail local system is abstractly trivial.
+
+### 4.1 The `C_91` mapping-cylinder normal form
+
+The same calculation has a canonical lifted-loop form.  Use the exact
+sequence
+
+```text
+0 -> F_13 --iota--> Z/91Z --pi--> F_7 -> 0,
+
+iota(r)=14r mod 91,                 pi(z)=z mod 7.           (20a)
+```
+
+Thus `iota(F_13)` is exactly the kernel of the clock projection `pi`.
+The unique lift of one positively oriented clock edge whose kernel/root
+correction is `c` is
+
+```text
+delta(c)=78+iota(c) mod 91,
+
+pi(delta(c))=1,                    delta(c)=c mod 13.        (20b)
+```
+
+The two physical constant-six rails are therefore
+
+```text
+theta-zero: delta(0)=78,
+theta-one:  delta(7)=85.                                  (20c)
+```
+
+For a selector with `n` theta-one edges,
+
+```text
+sum_ell delta(c_ell)=7n mod 91.                            (20d)
+```
+
+The constant marker contributes `iota(a)` on each of seven edges, hence
+
+```text
+sum_ell [delta(c_ell)+iota(a)]
+ =7(n+a) mod 91.                                          (20e)
+```
+
+The lifted loop closes exactly when `a=-n mod 13`, which is (9).  Once its
+quotient clock vertex is fixed, a lift has thirteen possible kernel-fibre
+origins.  These are precisely the thirteen additive vertex gauges in (20),
+after the same rail/deck identification has been granted.  This is a normal
+form for the conditional abstract intertwiner, not an additional physical
+identification.
+
+It also explains the chronological failure before any interval geometry.
+Multiplication by thirteen on `Z/91Z` has kernel `iota(F_13)`, and
+
+```text
+13 delta(c)=13 mod 91                  for every c in F_13,
+
+13 iota(r)=0 mod 91.                                      (20f)
+```
+
+In particular it sends both `78` and `85` to the same edge `13`, whose
+clock image is `-1 mod 7`.  Positive time reverses the quotient-clock
+orientation and annihilates exactly the kernel component that paid the
+marker invoice.  Section 5 shows that the corresponding physical overlap
+also vanishes on the retained constant-six carrier.
 
 ## 5. The natural physical chart edge is exactly zero
 

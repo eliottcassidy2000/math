@@ -9,6 +9,7 @@ import lrc14_fallback_rail_digit_diagonal_pullback_thm2592 as old
 
 P = 13
 N = 7
+MODULUS = P * N
 V = 6
 GLOBAL_CONTENT = 4244240  # THM-2600's one global primitive reduction
 
@@ -173,6 +174,16 @@ def koopman_translation_image(n, numerator):
     return (numerator * pow(13, n - 1, 7)) % 7
 
 
+def kernel_lift(r):
+    """The CRT embedding F_13 -> Z/91 with image ker(mod seven)."""
+    return (14 * r) % MODULUS
+
+
+def rail_clock_lift(c):
+    """The unique C91 lift with clock increment one and root correction c."""
+    return (78 + kernel_lift(c)) % MODULUS
+
+
 def main():
     unit_table, unit_edges, divisibility_checks = rebuild_q0_unit_choices()
 
@@ -251,6 +262,12 @@ def main():
                 cs = tuple(7 if t == 0 else 0 for t in ts)
                 require(sum(cs) % P == (-N * a) % P,
                         "full selector failed marker invoice")
+                lifted_rail = sum(rail_clock_lift(c) for c in cs) % MODULUS
+                lifted_marker = N * kernel_lift(a) % MODULUS
+                require(lifted_rail == 7 * n % MODULUS,
+                        "C91 lifted rail holonomy changed")
+                require((lifted_rail + lifted_marker) % MODULUS == 0,
+                        "C91 mapping-cylinder loop did not close")
                 all_selector_gauges += len(gauges(a, cs))
         attainable_counts[s] = tuple(sorted(counts))
         for n in sorted(counts - {0}):
@@ -303,6 +320,27 @@ def main():
     require(unit_table[1, 0] == (0, 12),
             "two-class chronological hostile lost a positive rail")
 
+    # CRT mapping-cylinder normal form.  Reduction modulo seven is the
+    # clock quotient; kernel_lift identifies its C13 fibre.  Positive
+    # Koopman time multiplies by thirteen, kills that fibre, and reverses
+    # the quotient-clock orientation.
+    require(tuple(kernel_lift(r) for r in range(P)) ==
+            tuple((14 * r) % MODULUS for r in range(P)),
+            "C13 kernel embedding changed")
+    require({z for z in range(MODULUS) if z % N == 0} ==
+            {kernel_lift(r) for r in range(P)},
+            "kernel lift is not the full mod-seven kernel")
+    require(rail_clock_lift(0) == 78 and rail_clock_lift(7) == 85,
+            "constant-six C91 rail lifts changed")
+    for c in range(P):
+        delta = rail_clock_lift(c)
+        require(delta % N == 1 and delta % P == c,
+                "rail lift has the wrong CRT coordinates")
+        require(13 * delta % MODULUS == 13,
+                "Koopman multiplication retained a kernel correction")
+        require(13 * kernel_lift(c) % MODULUS == 0,
+                "Koopman multiplication did not kill the C13 kernel")
+
     # The s=8 lane is globally but not edgewise flat.  Its combined
     # transition has one value 6 and six values 12, of total zero.
     _, _, c8, _ = endpoint_data(8)
@@ -336,6 +374,8 @@ def main():
         koopman_translation_image(n, 7) for n in range(1, 8))) +
         " c91_generator_images=" + str(tuple(
             koopman_translation_image(n, 1) for n in range(1, 8))))
+    print("crt_rail_lifts=(78,85) kernel_generator=14 "
+          "koopman_common_image=13 quotient_clock_image=-1")
     print("verdict=PASS: physical rail cochain pays seven forward marker "
           "classes abstractly; natural C91/chart-time transport fails")
 
