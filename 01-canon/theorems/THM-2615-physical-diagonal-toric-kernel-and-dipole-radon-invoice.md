@@ -1,8 +1,8 @@
 ---
 id: THM-2615
-title: "Physical-diagonal toric kernel and dipole Radon invoice"
+title: "Physical-diagonal toric kernel and bare-endpoint dipole Radon invoice"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Restriction from the independent endpoint torus T^E to the physical scalar
   curve D_w(x)=(w_e x) has group-algebra kernel generated exactly by the
   relation binomials chi_a-1, a in Lambda(w).  THM-2309's two explicit target
@@ -10,15 +10,18 @@ status: >
   F13^2 target quotient.  Strictly positive product-torus functions can
   therefore agree on the entire physical curve, every inverse root, and
   every temporal itinerary while having different nonzero target-residue
-  support.  The minimum natural repair retains independent source and future
-  dipole translations in a 13 by 13 square M(r,s).  Its lawful diagonal
+  support.  The smallest natural repair retains independent present and
+  conjugated bare-endpoint dipole translations in a 13 by 13 square M(r,s).
+  Its lawful diagonal
   H(t)=M(t,t) has Fourier transform equal to the exact Radon line sum
   Hhat(q)=sum_(lambda-nu=q) Mhat(lambda,nu).  Two explicit nonnegative
   permutation squares have identical row/column marginals and base axes but
   diagonals with respectively zero and all twelve primitive colours, proving
   that one-sided data cannot infer this target.  The theorem types the missing
-  carrier and decisive test; it does not construct a lawful source-axis lift,
-  prove a nonzero diagonal current, exclude a scalar row, or prove LRC(14).
+  carrier and decisive test for the present/bare-endpoint pair.  It does not
+  identify the bare endpoint with a chronological future paired shift,
+  construct a positive chronological lift of the square, prove a nonzero
+  diagonal current, exclude a scalar row, or prove LRC(14).
 source: root-long-frontiers-2026-07-28-diagonal-kernel
 depends_on:
   - THM-2309-owner-aligned-pivot-packets-and-visible-height-separation
@@ -38,12 +41,13 @@ hash_basis: LF-normalized bytes
 
 # THM-2615 -- the old target residue lives off the physical diagonal
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2610 retains an old marked coefficient beside every future paired-shift
 colour, and THM-2613 canonically identifies the physical future root with its
-local paired-shift state.  The remaining temptation is to read the old
-THM-2334 relation residue from this increasingly complete physical data.
+local paired-shift state.  The remaining temptation is to identify that future
+shift with the conjugated old bare endpoint and thereby read the THM-2334
+relation residue from this increasingly complete physical data.
 
 That is impossible in principle.  The relation lattice is exactly the kernel
 of restriction from the independent coordinate torus to the one-dimensional
@@ -51,9 +55,11 @@ physical orbit.  The kernel meets every target-residue class.  Recovering the
 old target therefore requires an off-diagonal lift with two independent
 coordinate actions, not another refinement of the physical root itinerary.
 
-Once that lift exists, its exact finite consumer is simple: form a `13 by 13`
-source/future response square and sum its Fourier transform along the lines
-`lambda-nu=q`.  This theorem proves both the no-go and that Radon invoice.
+For the actual THM-2334 present/bare-endpoint pair, the exact finite consumer
+is simple: form a `13 by 13` independent response square and sum its Fourier
+transform along the lines `lambda-nu=q`.  This theorem proves both the no-go
+and that lawful Radon invoice.  It does **not** prove that a chronological
+future paired shift is the square's second axis.
 
 ## 1. The exact physical-diagonal kernel
 
@@ -190,7 +196,7 @@ mathcal F(Z,Z')=sum_(u,v)c(u,v)chi_u(Z)chi_v(Z').         (16)
 ```
 
 Base-point phases may be absorbed into `c(u,v)`.  Define the independent
-source/future response
+present/bare-endpoint response
 
 ```text
 M(r,s)=mathcal F(r eta/13,-s eta/13)
@@ -199,7 +205,9 @@ M(r,s)=mathcal F(r eta/13,-s eta/13)
                                       r,s in F_13.        (17)
 ```
 
-The minus sign types the future opposite shift.  Use normalized transform
+The minus sign types the conjugated bare/right endpoint in the THM-2334
+left-minus-right current.  It is not a declaration that `s` is the
+chronological future local action.  Use normalized transform
 
 ```text
 Mhat(lambda,nu)
@@ -217,8 +225,9 @@ Thus the two axes retain the left and right dipole residues separately.
 
 ## 4. The lawful diagonal is an exact Radon line sum
 
-The left-minus-right target action uses the same translation at both
-endpoints.  Its response is the diagonal
+The lawful THM-2334 left-minus-right target action uses the same translation
+at the present endpoint and its conjugated bare/right endpoint.  Its response
+is the diagonal
 
 ```text
 H(t)=M(t,t).                                               (20)
@@ -234,15 +243,21 @@ Hhat(q)
 ```
 
 This is the exact finite Radon transform of the mixed square.  If the deepest
-axis contributes charge `m`, replace `H(t)` by `zeta^(mt)H(t)`; equation (21)
-is merely shifted from `q` to `q-m`.
+axis contributes charge `m`, replace `H(t)` by `zeta^(mt)H(t)`.  Then
+
+```text
+Hhat_new(q)=Hhat_old(q-m)
+           =sum_(lambda-nu=q-m)Mhat(lambda,nu),           (22)
+```
+
+or equivalently the selected charge equation is `lambda-nu+m=q`.
 
 Finite Parseval supplies the cheapest decisive test once a lawful square has
 been populated:
 
 ```text
 sum_(q!=0)|Hhat(q)|^2
- =1/13 sum_t |H(t)-mean(H)|^2.                            (22)
+ =1/13 sum_t |H(t)-mean(H)|^2.                            (23)
 ```
 
 Consequently the thirteen diagonal evaluations decide nonzero target residue
@@ -258,17 +273,17 @@ P(r,s)=1_(s=r+1),
 
 Q(r,s)=1_(s=sigma(r)),
 
-sigma=(0 1 12),                   sigma fixes 2,...,11.   (23)
+sigma=(0 1 12),                   sigma fixes 2,...,11.   (24)
 ```
 
 Both are permutation matrices, so all row and column marginals equal one.
-They also agree on the complete future base row `r=0` and complete source
+They also agree on the complete present base row `r=0` and complete bare/right
 base column `s=0`:
 
 ```text
 P(0,s)=Q(0,s)=1_(s=1),
 
-P(r,0)=Q(r,0)=1_(r=12).                                  (24)
+P(r,0)=Q(r,0)=1_(r=12).                                  (25)
 ```
 
 Their lawful diagonals are nevertheless
@@ -276,14 +291,14 @@ Their lawful diagonals are nevertheless
 ```text
 P(t,t)=0,
 
-Q(t,t)=1_(t in {2,...,11}).                              (25)
+Q(t,t)=1_(t in {2,...,11}).                              (26)
 ```
 
 The latter is a nonempty proper consecutive block, so each of its twelve
 primitive Fourier coefficients is nonzero.  Thus row marginals, column
-marginals, a complete future-only profile, and a complete source-only profile
-can all agree while the target residue changes from zero to full primitive
-spectrum.
+marginals, a complete present-only profile, and a complete bare-endpoint-only
+profile can all agree while the target residue changes from zero to full
+primitive spectrum.
 
 The `13 by 13` square is therefore the smallest **natural product carrier**
 which retains two independent `F_13` translation coordinates and on which the
@@ -300,20 +315,23 @@ physical root/local shift:        supplied canonically by THM-2613;
 
 old relation-coordinate action:  killed by physical restriction (5);
 
-left-minus-right target residue:  the diagonal Radon sum (21).    (26)
+left-minus-right target residue:  the diagonal Radon sum (21).    (27)
 ```
 
 THM-2610 proves coexistence of an old marked coefficient and all future local
-shift colours, but it does not populate `M(r,s)` under two independent lawful
-coordinate actions.  THM-2613 fixes the physical root-to-future-shift section,
-but (12)--(14) prove that this cannot recover the old source action.
+shift colours, but it neither populates `M(r,s)` under the independent present
+and bare-endpoint actions nor identifies its future action with the bare/right
+axis.  THM-2613 fixes the physical root-to-future-shift section, but
+(12)--(14) prove that physical restriction cannot recover the old relation
+action.
 
-The next constructive target is therefore exact: build a coordinate-covariant
-source translation of the THM-2537 selected packet on the same positive
-chronological carrier as the future paired shift, retain the full square
-before diagonal restriction, and prove that (21) is nonzero.  A root table,
-future-only row, or separate pair of primitive spectra cannot substitute for
-that construction.
+The next constructive target is therefore exact: retain the independently
+translated present and conjugated bare endpoints of the THM-2334 current on a
+positive chronological carrier, keep their full square before diagonal
+restriction, and prove that (21) is nonzero.  If a chronological future paired
+shift is to replace the bare/right axis, a separate lawful intertwiner must be
+constructed and audited.  A root table, one-axis row, or separate pair of
+primitive spectra cannot substitute for either construction.
 
 No physical mixed square or nonzero Radon sum is proved here.  No scalar row
 is excluded; the ledger remains `165` and LRC(14) remains open.
@@ -332,12 +350,15 @@ thirteenth root `16`, the dependency-free referee checks:
 
 - all `2,197` delta-basis instances of the Radon identity (21);
 - all `28,561` deepest-charge dephasings;
-- every row/column/base-axis equality in (24) and all twelve primitive
-  diagonal colours in (25);
+- every row/column/base-axis equality in (25) and all twelve primitive
+  diagonal colours in (26);
 - all `169` target residues generated by the explicit relations (8); and
 - collapse of the physical exponents of the positive hostile.
 
 The exact group-algebra kernel (5) and real positivity in (12) are analytic
-proofs above, not extrapolations from the finite companion.
-
-QED pending independent hostile audit.
+proofs above, not extrapolations from the finite companion.  An independent
+hostile audit rederived the kernel signs and quotient surjectivity, checked the
+DFT normalization, Radon sign, Parseval identity, deep-charge shift, and `P/Q`
+hostile, and caught the original draft's illicit naming of the second axis as
+chronological future.  The repaired theorem types it as the conjugated old
+bare endpoint throughout.  QED.
