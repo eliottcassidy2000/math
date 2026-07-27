@@ -1,0 +1,16 @@
+old_sheet_action_checks=402220
+equivariant_normal_form_checks=5228860
+unit_role_carry_identity_checks=14560
+unit_role_old_action_covariance_checks=189280
+13_divisible_role_erasure_checks=234
+future_immediate_digit_action_checks=169
+old_future_digit_independence_checks=402220
+old_future_pair_multiplicity_levels_1_to_4=1,13,169,2197
+displacement_convolution_checks=507
+positive_zero_arrival_hostile_word_checks=402234
+hostile_masses_levels_1_to_6=1/169,1/169,1/169,1/169,1/169,1/169
+hostile_head=0 future_root=1 displacement=1 diagonal=0
+orbit_symmetrized_hostile_checks=1014
+orbit_hostile_masses_levels_1_to_6=1/13,1/13,1/13,1/13,1/13,1/13
+orbit_hostile_uniform_margins=1/169 displacement=1 diagonal=0
+all_exact_checks=PASS
