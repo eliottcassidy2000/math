@@ -2,7 +2,7 @@
 id: THM-2578
 title: "Target-neutral boundary needle and all-colour Abel-normal carrier"
 status: >
-  PROVED + VERIFIED-EXACT.  For every positive integer tooth speed k and
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  For every positive integer tooth speed k and
   L in {1,2}, the 26k boundary points of the thirteen target translates
   d_L(kx+s/13), labelled by tooth, sign, and target shift, are pairwise
   distinct.  The obstruction is exactly the coprimality of 7 and 13: a
@@ -44,7 +44,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2578 -- one target-neutral boundary needle sees every colour
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2574 identifies why the bare `k_a` danger/safe normal is target-trivial
 in the live bank: equal physical tooth weights cancel off resonance, while

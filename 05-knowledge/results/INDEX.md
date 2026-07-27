@@ -16,7 +16,7 @@
   not yet a Boolean THM-2334 carrier.  Hashes are
   `7f020a329...d6a2` / `6c3f024d1...5dbc`.
 - `lrc14_boundary_needle_all_colour_thm2578.py` -> matching `.out`
-  [THM-2578 PROVED + VERIFIED-EXACT].  For every positive tooth speed and
+  [THM-2578 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For every positive tooth speed and
   both live gate widths, all target-labelled tooth boundaries are distinct;
   the cross-sign obstruction is `+/-13L != 0 mod 7`.  Hence one fixed
   target-neutral rational Boolean interval can isolate a single boundary
