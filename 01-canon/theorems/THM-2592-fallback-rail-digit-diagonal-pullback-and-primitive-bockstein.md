@@ -2,17 +2,16 @@
 id: THM-2592
 title: "Fallback-rail digit-diagonal pullback and primitive Bockstein"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED core;
-  PROVISIONAL EXACT ADDENDUM UNDER INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On the canonical typed row, the literal route-two pullback of the 84
   THM-2586 theta-zero rail cells against all thirteen normalized THM-2585
   target sections is positive in exactly 39 of 1092 cases: precisely the
   three fallback cells (s4,ell4,v,t)=(7,4/5/6,6,12), for every q.  After one
   global primitive-content reduction, 38 of the 39 positive slices have a
   nonzero first Bockstein in all six owner colours and 37 have unit septimal
-  slice polynomial.  More sharply, all 81 primary rails are orthogonal to the
-  entire unconditioned delayed word, so no future-digit selector or affine
-  digit offset can attach them; the fallback digit support is exactly
+  slice polynomial.  More sharply, all 81 priority-selected root-zero rails
+  are orthogonal to the entire unconditioned delayed word, so no future-digit
+  selector or affine digit offset can attach that fixed subbank; the fallback digit support is exactly
   h=1,...,11.  Boolean q-section aggregates and one-section-per-chart
   transversals have the finite no-cancellation spectra stated below.  The
   construction is an actual common-x fibre product, but does not identify the
@@ -37,11 +36,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2592 -- fallback-rail digit-diagonal pullback and primitive Bockstein
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED core.**
-
-**PROVISIONAL EXACT ADDENDUM UNDER INDEPENDENT HOSTILE AUDIT:** the
-union-first, affine-offset, Boolean-section, and cross-chart transversal
-statements in Sections 3 and 4 below.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. The common physical carrier
 
@@ -228,7 +223,7 @@ for every `ell5=0,...,6`, while every `Q^+_(ell5,6)` has positive
 measure.  This is checked directly as a half-open interval identity on the
 grid `T`; it is stronger than an integral cancellation.
 
-Every one of the 81 primary THM-2586 cells has `v=0`.  Equations (8) and
+Every one of the 81 priority-selected root-zero THM-2586 entries has `v=0`.  Equations (8) and
 (18) therefore make its complete pullback (9) identically zero for all
 thirteen `q`.  The three fallback cells have `v=6`, and exact integration
 gives
@@ -275,9 +270,9 @@ positive fine entries has histogram
 
 Thus the attachment is genuine but maximally localized: the same digit
 gate that proves positivity on the fallback cell annihilates the 81-cell
-primary rail.
+fixed priority subbank.
 
-### 3.1 The primary obstruction is the whole word, not digit zero
+### 3.1 The fixed priority-root-zero obstruction is the whole word
 
 The digit-zero explanation is true for the diagonal (9), but is not sharp.
 Replace `Q^+_(ell5,v)` in (9) by the whole unconditioned delayed word
@@ -288,17 +283,24 @@ common-`x` integration gives
 sum_(ell5,r) J^all_(s4,ell4,q;ell5,r)=0                (23a)
 ```
 
-for every one of the `81*13=1053` primary-rail/target-section pairs.
+for every one of the `81*13=1053` priority-root-zero/target-section pairs.
 Every summand and every underlying Boolean sheet in (9a) is nonnegative.
-Therefore (23a) implies that each fine primary entry is zero almost
+Therefore (23a) implies that each fine priority-root-zero entry is zero almost
 everywhere on the support of the **entire** delayed word.
 
 The thirteen digit pieces in (8) are a disjoint nonnegative partition of
 that word.  It follows at once that every digit selector vanishes on every
-primary rail.  This includes selectors depending arbitrarily on
+fixed rail.  This includes selectors depending arbitrarily on
 `(s4,ell4,q,ell5,r)`, arbitrary subsets of future digits, and arbitrary
 linear mixtures supported on those pieces.  No re-selection of the future
-digit inside the same delayed word can attach a primary rail.
+digit inside the same delayed word can attach a priority-root-zero entry.
+
+This conclusion holds only while the THM-2586 rail choice `(v,t)=(0,0)` is
+held fixed.  THM-2586 also supplies a root-six theta-zero rail `(6,12)`,
+simultaneously positive in 78 of these 81 cells and positive in the three
+priority fallback cells.  Replacing the rail is a change of physical support,
+not a future-digit resection, and is not ruled out by (23a).  Thus (23a) is
+not an intrinsic 81-cell obstruction for the complete two-rail tensor.
 
 ### 3.2 Complete affine-offset spectrum
 
@@ -309,7 +311,7 @@ of (9) with
 Q^+_(ell5,v+c)(Rx),                                    (23b)
 ```
 
-where the sum is modulo thirteen.  On all 81 primary rails it vanishes by
+where the sum is modulo thirteen.  On all 81 priority-root-zero rails it vanishes by
 (23a), for every `c`.  On the three fallback rails `v=6`; the exact positive
 pair census by literal future digit `h` is
 
@@ -325,8 +327,8 @@ Consequently the number of positive rail-by-`q` pairs for (23b) is
 ```
 
 Whenever it is `39`, the support is again precisely the three cells (6),
-for all thirteen `q`.  Thus no fixed affine offset attaches even one primary
-rail.  In particular `c=6`, the most tempting translation from the old
+for all thirteen `q`.  Thus no fixed affine offset attaches even one entry of
+the fixed priority-root-zero subbank.  In particular `c=6`, the most tempting translation from the old
 digit-zero hole to the observed fallback digit, instead sends the fallback
 digit `6` to the empty future digit `12` and kills the complete bank.
 
@@ -449,7 +451,7 @@ Thus every nonempty one-section-per-chart transversal is charged except the
 single chart-6 section `q=10`.  This is a finite common-carrier
 coefficient/cosheaf no-cancellation statement.  It does not assert that the
 chosen sections share one positive Perron ancestry sheet, nor can it cross
-the primary whole-word orthogonality (23a).
+the priority-root-zero whole-word orthogonality (23a).
 
 ## 5. Independent exact controls
 
@@ -467,7 +469,7 @@ following separate checks.
    THM-2585's original unweighted sweep term by term.
 5. Three unconditioned cells recover the original THM-2585 delayed-overlap
    formula before the rail factor is inserted.
-6. All 1053 primary pairs are tested against the complete delayed word before
+6. All 1053 priority-root-zero pairs are tested against the complete delayed word before
    digit splitting.  The thirteen exact digit pieces re-sum to that word;
    all thirteen affine offsets are then checked on the fallback cells.
 7. All 24,576 within-chart Boolean subsets, all 507 two-chart singleton
@@ -481,6 +483,13 @@ content and its 13-adic valuations, the complete support census, and both
 exceptional Bockstein slices.  It also replayed normal and optimized modes
 against the stored transcript and recomputed both declared LF hashes.  No
 theorem defect remained.
+
+A second independent hostile audit rederived the union-first zero, every
+affine offset, and all Boolean/transversal atlases.  Its alternative-selector
+control found the scope boundary above: the root-six theta-zero rail may be
+selected on different physical support, so (23a) is a theorem about the fixed
+priority-root-zero subbank and future-digit resections only.  The promoted
+wording incorporates that repair.
 
 The positive support census, both contents, primitive scalar, primitive
 digest, support histogram, Bockstein census, the two exceptional slices
@@ -504,10 +513,10 @@ pair-marginal hostile does not apply after (9) has been formed.
 
 It does **not** prove any of the following.
 
-- The other 81 theta-zero rail cells attach.  They are orthogonal to the
-  entire delayed word by (23a), not merely to digit zero.  Thus no
-  future-digit selector, affine offset, uniform 84-cell, or Cech filler
-  follows.
+- The 81 priority-root-zero entries attach.  They are orthogonal to the
+  entire delayed word by (23a), not merely to digit zero.  This says nothing
+  about changing to the other theta-zero rail where it is positive; hence no
+  uniform 84-cell or Cech filler follows from this theorem alone.
 - The owner clocks `ell4` and `ell5` are the same coordinate.  Both are
   retained, not identified.
 - The future digit in (10) is the preselected named `k_a` boundary, the old
@@ -520,6 +529,7 @@ It does **not** prove any of the following.
 The sharp next problem is therefore not transport across one missing digit.
 It is to change the physical rail/word support or supply a genuine
 semantic/clock/root intertwiner: every resection of the existing delayed word
-already lies inside the primary orthogonality obstruction (23a).
+already lies inside the fixed priority-root-zero obstruction (23a), while a
+change of rail lies outside it.
 
 QED.
