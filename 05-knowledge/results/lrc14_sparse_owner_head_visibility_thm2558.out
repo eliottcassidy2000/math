@@ -1,0 +1,33 @@
+== THM-2558: all-slope selected-head visibility on F_13 ==
+  weight : head-diversity histogram ; all-empty-visible count
+   1 : 12:13 ; 13
+   2 : 11:78 ; 78
+   3 : 6:52, 8:156, 10:78 ; 78
+   4 : 6:52, 7:390, 8:156, 9:117 ; 117
+   5 : 6:468, 7:468, 8:351 ; 351
+   6 : 5:78, 6:650, 7:988 ; 988
+   7 : 5:156, 6:1560 ; 1560
+   8 : 5:1287 ; 1287
+   9 : 4:715 ; 715
+  10 : 3:286 ; 286
+  11 : 2:78 ; 78
+  12 : 1:13 ; 13
+  labelled masks: visible 5564, blind 2626
+  rotation necklaces: visible 428, blind 202
+
+== sharp singleton and pair laws ==
+  singleton: all 12 empty roots, once each
+  pair {0,1}: all 11 empty roots; midpoint 7 twice, all others once
+  any neutral union of size <=10 misses a singleton/pair selected head
+
+== exact middle-layer blind control ==
+  mask {0,1,4}: selected heads {2,7,8,9,11,12}
+  blind empty roots: {3,5,6,10}
+  singleton target-active failure {3}: missed by all 12 slopes
+
+== unit and guard root-capacity controls ==
+  ordinary unit danger count: 1 or 2 (both attained)
+  guard failure count: 3 or 4 (both attained)
+  four neutral roles cover at most 4+2+2+2=10 roots
+
+all checks passed
