@@ -1,0 +1,52 @@
+joint rail progress 14/162
+joint rail progress 28/162
+joint rail progress 42/162
+joint rail progress 56/162
+joint rail progress 70/162
+joint rail progress 84/162
+joint rail progress 98/162
+joint rail progress 112/162
+joint rail progress 126/162
+joint rail progress 140/162
+joint rail progress 154/162
+joint rail progress 162/162
+== constant-v=6 middle-rail common-x pullback ==
+common row/grid: (1, 14, 27, 40, 53, 66, 13, 2197, 742586) / 297836897838480
+middle-edge zero sets: ((7, 1), (7, 2), (7, 3)) ((6, 4), (6, 5), (6, 6))
+selector theta histogram: {0: 81, 1: 81}
+digit controls: h=0 and h=12 empty; h=6 positive in all seven phases
+selected rails: 162; min numerator 22412041651453123509840
+positive rail x target-slice pairs: 2024/2106
+zero-pair groups: [((1, 2, 6, 12), [11]), ((1, 5, 6, 0), [2]), ((2, 2, 6, 12), [11]), ((2, 5, 6, 0), [2]), ((3, 2, 6, 12), [11]), ((3, 5, 6, 0), [2]), ((4, 2, 6, 12), [11]), ((4, 5, 6, 0), [2]), ((5, 2, 6, 12), [11]), ((5, 5, 6, 0), [2]), ((6, 0, 6, 12), [0, 12]), ((6, 1, 6, 12), [0, 12]), ((6, 2, 6, 12), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]), ((6, 3, 6, 12), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]), ((6, 5, 6, 0), [2]), ((7, 0, 6, 0), [0, 1]), ((7, 2, 6, 12), [11]), ((7, 4, 6, 0), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]), ((7, 5, 6, 0), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]), ((7, 6, 6, 0), [0, 1]), ((8, 2, 6, 12), [11]), ((8, 5, 6, 0), [2]), ((9, 2, 6, 12), [11]), ((9, 5, 6, 0), [2]), ((10, 2, 6, 12), [11]), ((10, 5, 6, 0), [2]), ((11, 2, 6, 12), [11]), ((11, 5, 6, 0), [2]), ((12, 2, 6, 12), [11]), ((12, 5, 6, 0), [2])]
+positive target sections per rail histogram: [(0, 4), (11, 4), (12, 22), (13, 132)]
+positive rails by fixed q: [154, 156, 147, 158, 158, 158, 158, 158, 158, 158, 158, 147, 156]
+positive fine entries: 61248/176904
+pair-support histogram: [(0, 82), (12, 154), (24, 814), (36, 902), (48, 154)]
+pre-route numerator global gcd: 4244240; v13=1
+actual raw global content: 55175120
+primitive common denominator: 607037547933467614874742741
+primitive tensor digest: 058e45bd039e8235add3d6b0eabbad0e57a90bfe9f2e4eebfc07e033c0f3fe8c
+primitive Bockstein-row digest: 5dd45705d4bd5e3654aa8152e6da75753e8b8060ae44ecc668a42a0e7e1fa191
+Bockstein owner profiles nonzero: 10452/12636
+good-Bockstein sections per rail histogram: [(0, 20), (9, 2), (10, 2), (11, 26), (12, 38), (13, 74)]
+good-Bockstein rails by fixed q: [138, 140, 131, 132, 132, 130, 137, 137, 130, 132, 132, 131, 140]
+zero-Bockstein slice count: 364
+unit slices: 1740/2106
+unit sections per rail histogram: [(0, 20), (9, 2), (10, 2), (11, 26), (12, 40), (13, 72)]
+unit rails by fixed q: [138, 140, 130, 132, 132, 130, 137, 137, 130, 132, 132, 130, 140]
+nonzero nonunit slices: [((6, 3, 6, 0), 2, (11, 0, 0, 0, 5, 0, 12)), ((7, 4, 6, 12), 11, (2, 1, 0, 8, 0, 0, 0))]
+cell-level positive-choice histogram: [(12, 2), (13, 8), (24, 4), (25, 20), (26, 50)]
+cell-level good-Bockstein-choice histogram: [(11, 2), (12, 6), (13, 18), (21, 4), (22, 8), (23, 2), (24, 4), (25, 28), (26, 12)]
+cell-level unit-choice histogram: [(11, 2), (12, 8), (13, 16), (21, 4), (22, 8), (23, 2), (24, 4), (25, 28), (26, 12)]
+cells with no positive choice: []
+cells with no good-Bockstein choice: []
+cells with no unit choice: []
+cells admitting a unit by fixed q: [84, 84, 81, 83, 83, 83, 84, 84, 83, 83, 83, 81, 84]
+q=0 selector: theta one exactly on s in {6,11} plus (s,ell)=(8,2);
+  theta zero on the other 69 cells
+q=0 theta-one t=0 cells: [(6, 0), (6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6), (8, 2), (11, 0), (11, 1), (11, 2), (11, 3), (11, 4), (11, 5), (11, 6)]
+q=0 selected-bank gcd: 4244240; ratio to full 1
+q=0 selected-bank units: 84/84
+q=0 selected-bank digest: ab59b257dd3a9788d6108a46f1e01705caa2598fc9c47cee95f26165a0242110
+determinant histogram: [(0, 366), (1, 386), (2, 68), (3, 128), (4, 50), (5, 28), (6, 22), (7, 114), (8, 112), (9, 250), (10, 106), (11, 92), (12, 384)]
+independent controls: comb=3, grouped zero/positive=0/8
