@@ -1,0 +1,12 @@
+field=547 generator=2 zeta13=475 xi7=81
+nonzero_general_cech_instances=936
+thm2535_special_classes=12
+gauge_basis_checks=6552
+minimal_trivializing_cover=13
+mapping_torus_checks=936 cycle_length=91
+primitive_local_modes=471744
+charted_root_modes=11232
+uncharted_cancellation_checks=85176
+uncharted_clock_boundary_zero=1 semantic_arrival_flags=0
+seven_stop_digit_itinerary_measure=1/62748517
+all_exact_checks=PASS
