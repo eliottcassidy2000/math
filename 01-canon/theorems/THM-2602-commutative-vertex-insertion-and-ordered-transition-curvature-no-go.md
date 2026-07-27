@@ -2,7 +2,7 @@
 id: THM-2602
 title: "Commutative vertex insertion and ordered-transition curvature no-go"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Common-base Boolean multiplication, linear marginalization, and terminal
   Fourier readout form a one-way vertex calculus: before the readout every
   root operation is diagonal, all such insertions commute, and every
@@ -35,7 +35,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2602 -- commutative vertex insertion versus ordered transition curvature
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2591 proves that choosing a root separately at each of seven charts is
 only a Cech zero-cochain and cannot cancel the nonzero root-deck holonomy.
@@ -327,4 +327,13 @@ or prove LRC(14).  The next positive object is now sharply specified: one
 ordered common-ancestry root correspondence satisfying (19), with a nonzero
 twisted return (15).
 
-QED (candidate; independent audit pending).
+## 8. Independent hostile audit
+
+An independent audit rederived the cospan-versus-kernel typing in Section 6,
+checked the row-vector orientation of `diag(K S_(7a))`, reconstructed the
+deterministic correction `K=S_(-7a)`, and verified every partial-fill sign.
+It also replayed the normal and optimized companion against the stored
+transcript and confirmed the declared LF-normalized hashes.  The audit found
+no theorem, constant, convergence, or scope defect.
+
+QED.

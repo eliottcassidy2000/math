@@ -2,7 +2,7 @@
 id: THM-2601
 title: "Linear Bockstein sheet coordinate and nonlinear target monodromy"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   One explicit F_13-linear functional of THM-2585's six-dimensional
   septimal Bockstein factor is a bijective coordinate on all thirteen target
   sections.  Its six owner-conjugate rows recover the same coordinate in
@@ -31,7 +31,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2601 -- a scalar Bockstein coordinate for the target-sheet atlas
 
-**PROVED CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2585 constructs thirteen pairwise distinct unit factors
 
@@ -331,7 +331,7 @@ printed seven-row table and performs all arithmetic over `F_13`.  It checks:
 - the inverse and successor polynomials at all field elements;
 - all thirteen length-thirteen successor orbits and all `169` affine maps;
 - all `78` owner-conjugate identities (15);
-- rank eight and the determinant certificate (19); and
+- rank eight and the determinant certificate (19);
 - every fibre in all three CRT factors (23); and
 - all `8192` Boolean scalar sums and the exact histogram (24).
 
@@ -351,4 +351,16 @@ Both modes must byte-match
 after LF normalization.  Every check raises explicitly under optimized
 Python; no assertion disappears under `-O`.
 
-QED pending independent hostile audit.
+## 8. Independent hostile audit
+
+An independent audit reconstructed the separator by a distinct search,
+replayed the inverse and successor interpolation, checked all owner
+conjugates and the socle embedding, recomputed the rank-eight certificate
+and affine-order-thirteen classification, and independently reproduced the
+CRT fibres and the complete Boolean subset histogram.  It also verified the
+sharp hostile (25): `Y_5` is a nonzero CRT unit although its scalar value is
+zero.  Normal and optimized runs byte-match the stored transcript after LF
+normalization, with the declared hashes.  No mathematical or scope defect
+remains.
+
+QED.
