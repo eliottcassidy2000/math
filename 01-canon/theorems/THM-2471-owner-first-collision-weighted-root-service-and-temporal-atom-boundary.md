@@ -29,17 +29,21 @@ depends_on:
   - THM-2461-temporal-blocker-word-cocycle-and-diagonal-polarized-repair-boundary
 related:
   - THM-2299-rooted-current-service-energy-and-base-phase-no-go
-  - THM-2315-witness-span-category-and-transport-depth
+  - THM-2315-marked-target-gain-corolla-and-pairwise-composition-boundary
   - THM-2334-relation-residue-current-and-character-twist-pushforward
   - THM-2365-lawful-target-coshift-and-h-drift-dichotomy
   - THM-2398-prime-cyclic-rational-restoration-dichotomy
   - THM-2457-complete-atom-root-cosupport-graph-and-semantic-word-hostile
   - THM-2459-four-atom-drift-and-root-service-coarsening
-  - THM-2466-delayed-word-simultaneous-drift-and-service-retention
+  - THM-2466-delayed-word-simultaneous-drift-service-retention
 script: 04-computation/lrc14_owner_first_collision_weighted_service_thm2471.py
 output: 05-knowledge/results/lrc14_owner_first_collision_weighted_service_thm2471.out
 script_sha256: 7112899f0d84198bca87d72e4f50ce9524382f13e9a72fbbcf5e426aabfca025
 output_sha256: 4050c40b1bcf584ee340fc3ca6d6111518d65fd675f7ff710eff4a111f3824a9
+independent_script: 04-computation/lrc14_first_collision_full_colour_landing_referee_thm2471.py
+independent_output: 05-knowledge/results/lrc14_first_collision_full_colour_landing_referee_thm2471.out
+independent_script_sha256: 638004272364368e90fabc66bd65c1b499a8ee4be72a64d8755a7a6350b34a7f
+independent_output_sha256: 822bc642a8ef9fe4fb5ee3f4788ed3294fd7042a52d34a0aebe83228c3a3566e
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -640,6 +644,22 @@ Both transcripts must reproduce
 
 ```text
 05-knowledge/results/lrc14_owner_first_collision_weighted_service_thm2471.out
+```
+
+byte-for-byte.
+
+The independently written companion named by `independent_script` tests the
+landing statement on a hostile complementary Boolean pair over `65` cells.
+All twelve root colours are nonzero, but the ordinary Fourier product is
+nonzero precisely when `5|q` and `65` does not divide `q`; consequently ten of
+the twelve base representatives `q=k` vanish.  Each progression
+`q=k+13h`, `k!=0`, nevertheless lands exactly once in every five consecutive
+gauges.  This separates a nonzero root colour from an immediate base-frequency
+atom and confirms that the syndetic endpoint-Prony step in Section 2 is
+load-bearing.  Normal and optimized runs reproduce
+
+```text
+05-knowledge/results/lrc14_first_collision_full_colour_landing_referee_thm2471.out
 ```
 
 byte-for-byte.

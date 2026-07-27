@@ -1,0 +1,9 @@
+THM-2471 INDEPENDENT FULL-COLOUR LANDING REFEREE
+grid=65;support_size=6;jumps=10,10
+correlation=0,5,3,2,6,1,4,4,1,6,2,3,5;service=42;I=42/169
+nonzero_root_colours=12;root_energy=602/28561;floor=147/28561
+base_ordinary_landings=2;base_vanishing_colours=10
+first_landing_h=3,1,4,2,0,3,1,4,2,0,3,1
+first_landing_q=40,15,55,30,5,45,20,60,35,10,50,25;max=60
+syndetic_gap=5;prony_bound=1299;sharp_max=I/12
+all_checks=PASS

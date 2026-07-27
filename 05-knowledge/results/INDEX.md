@@ -2122,3 +2122,14 @@ invoices, source-versus-arrival temporal transfer, the sharp three-atom
 coordinate hostile. Normal and optimized runs byte-match and end in `PASS`.
 The theorem constructs canonical owner-collision service but does not
 intertwine it with the THM-2365 endpoint/deep current or exclude a row.
+
+### lrc14_first_collision_full_colour_landing_referee_thm2471.out
+
+Independent exact hostile referee for **THM-2471**.  On a complementary
+Boolean pair over `65` cells it verifies all twelve nonzero root colours while
+ten of the twelve base ordinary frequencies vanish.  The ordinary product is
+nonzero exactly for `5|q`, `65` not dividing `q`, so every prescribed nonzero
+class `q=k mod 13` lands exactly once per five gauges.  This verifies the
+syndetic endpoint-Prony bridge and refutes the tempting shortcut from a root
+colour directly to the base representative `q=k`.  Normal and optimized runs
+byte-match and end in `PASS`.
