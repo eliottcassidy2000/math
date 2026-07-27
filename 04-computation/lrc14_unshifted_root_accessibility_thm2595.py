@@ -95,8 +95,28 @@ def translated_access_by_integer_inequalities(k, L, h, s):
     return any(
         182 * j - 14 * s - 13 * L < 14 * k * (h + 1)
         and 182 * j - 14 * s + 13 * L > 14 * k * h
-        for j in range(-1, k + 2)
+        for j in range(k + 2)
     )
+
+
+@lru_cache(maxsize=None)
+def translated_danger_intervals(k, L, s):
+    """D^s_{k,L} on [0,1], independently clipped from translated teeth."""
+    radius = Fraction(L, 14 * k)
+    intervals = []
+    # If 0<=s<=12 and 0<=y<=1, only integer tooth labels 0,...,k+1
+    # can lie within distance L/14 of ky+s/13.  The k+1 tooth is needed,
+    # e.g. at (k,L,s)=(1,2,12).
+    for j in range(k + 2):
+        centre = (Fraction(j) - Fraction(s, P)) / k
+        intervals.append((max(Fraction(0), centre - radius),
+                          min(Fraction(1), centre + radius)))
+    return merge_intervals(intervals)
+
+
+def translated_access_by_intervals(k, L, h, s):
+    return bool(intersect_intervals(
+        translated_danger_intervals(k, L, s), digit_interval(h)))
 
 
 @lru_cache(maxsize=None)
@@ -383,9 +403,17 @@ def main():
         for k in range(threshold, 201):
             for s in range(P):
                 for h in range(P):
-                    require(translated_access_by_integer_inequalities(k, L, h, s),
+                    by_inequalities = translated_access_by_integer_inequalities(k, L, h, s)
+                    by_intervals = translated_access_by_intervals(k, L, h, s)
+                    require(by_inequalities == by_intervals,
+                            f"translated routes disagree at {(k,L,h,s)}")
+                    require(by_inequalities,
                             f"translated all-root access failed at {(k,L,h,s)}")
                     translated_checks += 1
+    require(translated_access_by_integer_inequalities(1, 2, 12, 12),
+            "translated k+1 endpoint tooth was omitted")
+    require(translated_access_by_intervals(1, 2, 12, 12),
+            "translated interval route omitted the k+1 endpoint tooth")
     print(f"uniform translated access above the thresholds: {translated_checks} (k,h,s) cells PASS")
     require(not access_by_intervals(11, 1, 6), "k=11 ordinary hostile disappeared")
     require(not access_by_intervals(9, 2, 6), "k=9 guard hostile disappeared")

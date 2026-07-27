@@ -40,7 +40,7 @@ related:
   - THM-2583-self-similar-digit-needle-internalization-and-carrier-boundary
 script: 04-computation/lrc14_unshifted_root_accessibility_thm2595.py
 output: 05-knowledge/results/lrc14_unshifted_root_accessibility_thm2595.out
-script_sha256: e2630a86565533d0722532ca08fb037011b1238dc00b5848a98bf7918dda0d7e
+script_sha256: 4c84e638852076b5b622c226281eea4556026d56fe8390eb6e9e34a2e97677dc
 output_sha256: 93cc78455e7dc2c36b652b9a877ad3a02b641e16b80de5979016a1f994290541
 hash_basis: working-tree bytes (LF)
 ---
@@ -120,7 +120,10 @@ the corresponding exact inequalities are
 182j-14s+13L > 14kh.                                    (3a)
 ```
 
-Translation moves the tooth grid but does not change its gap length.
+Here `j` ranges over the integers; for the representatives
+`0<=s<=12` it is enough to take `0<=j<=k+1`.  The extra endpoint tooth is
+real: for example `(k,L,s,h)=(1,2,12,12)` is met by `j=2`.  Translation
+moves the tooth grid but does not change its gap length.
 
 Every safe gap between adjacent teeth has exact length
 
@@ -513,8 +516,9 @@ large `N`,
 integral A^head(x)1_(B_t)(T^N x)dx>0.                       (40)
 ```
 
-Put `k_a` first in THM-2445's freely ordered five-role bank.  Its first
-cell has no earlier safety factors and is exactly
+Put `k_a` first in THM-2445's freely ordered five-role bank.  Its
+first-failure gate on the unshifted (zero-target) slice has no earlier
+safety factors and is exactly
 
 ```text
 d_(L_a)(k_a y).                                            (41)
@@ -522,7 +526,8 @@ d_(L_a)(k_a y).                                            (41)
 
 THM-2461 identifies `k_a` as the unique target-active member of this bank.
 Hence (40) is a genuinely later target-active occurrence whose immediate
-physical root is the old canonical head `t`.
+physical root is the old canonical head `t`.  This gate statement does not
+put the future point in the full THM-2445 cell.
 
 More formally, define on the head branch
 

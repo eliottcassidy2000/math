@@ -13,7 +13,7 @@
   positive canonical THM-2537 head layer, a delayed analogue of equation
   (56).  Future word/full-`X`, paired blocker
   co-shift, left residue, and row exclusion remain open.  Hashes are
-  `e2630a86...0d7e` / `93cc7845...0541`.
+  `4c84e638...77dc` / `93cc7845...0541`.
 - `lrc14_depth_five_arrival_future_diagonal_thm2586.py` -> matching `.out`
   [THM-2586 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  In every one
   of the `12*7=84` nonzero-displacement/owner cells, one of the theta-zero
