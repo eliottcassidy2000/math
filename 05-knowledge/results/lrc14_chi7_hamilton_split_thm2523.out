@@ -1,0 +1,8 @@
+THM-2523 exact chi7 Hamilton split-form referee
+fano_selector: quadratic_residues=(1,2,4) dilation5_permutation=(5, 3, 2, 6, 1, 4) chi7_flipped=yes
+circulant_form: rank=12 first_row=(0, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, 1) matrix_checks=2028 anti_isometry_checks=2028
+cyclotomic_spectrum: minimal_polynomial=t^6-39*t^4+299*t^2-325 characteristic_on_augmentation=minimal_polynomial^2 squared_root_signs=((-64, 125), (83, -64), (-64, 545)) real_signature=(6,6)
+fano_slope_product: chi13=(0, 1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, 1) A1_A2_A4=(0, 5, -5, 5, 5, -5, -5, -5, -5, 5, 5, -5, 5) identity=A1*A2*A4=5*C13 C13_squared_on_augmentation=13*identity operator=symmetric_not_tournament
+isotropic_controls: delta_cycle_energies=(Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1)) translated_delta=(Fraction(0, 1), Fraction(1, 1), Fraction(-1, 1), Fraction(1, 1), Fraction(-1, 1), Fraction(-1, 1), Fraction(1, 1), Fraction(1, 1), Fraction(-1, 1), Fraction(-1, 1), Fraction(1, 1), Fraction(-1, 1), Fraction(1, 1)) dilation5_orbits=((1, 5, 12, 8), (2, 10, 11, 3), (4, 7, 9, 6)) fixed_dim=3 anti_fixed_dim=3 cross_determinant=-4160
+translated_polarization: position_identities=468 fourier_identities=144 nonzero_root_multipliers=144 Rhat_tau(k)=13*lambda_tau(k)*Bhat(k) response_even=yes
+VERIFIED: the chi7 diagonal is real-split and can vanish on nonzero profiles; FORWARD CROSS-CHECK: the translated collision bank has the lossless THM-2524 multiplier but remains unoriented.

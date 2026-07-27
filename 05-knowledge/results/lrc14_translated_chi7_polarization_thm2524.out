@@ -1,0 +1,7 @@
+THM-2524 exact translated chi7 Hamilton-polarization referee
+matrix_audit: slopes=12 centered_rank=12 inverse_polynomial=A5-39A3+299A inverse_entries=1872
+fourier_audit: nonzero_lambdas=144 factor_entries=1728 inverse_denominator=325
+binary_self_audit: profiles=8190 slope_profiles=49140 primitive_modes=589680 zero_diagonal_controls=9828
+delta_hostile: D13=12/169 R_tau(0)=0 translated_slopes=6 off_diagonal=6*(-1)+6*(+1)
+cross_orientation: direct_entries=13 reverse_entries=13 odd_component=preserved self_component=even
+VERIFIED: the full translated chi7 bank recovers the centred collision profile; a diagonal contrast may vanish, and no oriented Boolean owner current is created.

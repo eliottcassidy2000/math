@@ -1,5 +1,44 @@
 # Script Results Index
 
+- `lrc14_translated_chi7_polarization_thm2524.py` -> matching `.out`
+  [THM-2524 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For the
+  centred THM-2519 collision
+  profile `b`, the thirteen translated Hamilton polarizations at any fixed
+  nonzero slope are exactly `R_tau=13A_tau b`.  The THM-2523 operator is
+  invertible on the centred twelve-space with
+  `A_tau^(-1)=(A_tau^5-39A_tau^3+299A_tau)/325`, so the bank recovers `b`
+  and `D_13` even when its diagonal `chi_7` contrast vanishes.  Positive
+  rational drift gives all twelve scalar root modes.  Self-correlation stays
+  even; a supplied cross-cospan retains an odd part iff it already has one.
+  The referee checks the inverse on `1,872` entries, `1,728` Fourier factors,
+  all `8,190` nonconstant Boolean profiles, `589,680` exact primitive modes,
+  `9,828` zero-diagonal controls, and direct cross/reversal hostiles.  Hashes
+  are `e8c9ba91...1b49` / `8226cd9a...7d4e`.  THM-2522 applies the bank at
+  uniform live collision depth `L=1`, with shallow/deep banks separately
+  retained; no Boolean orientation, emission, or row exclusion follows.
+- `lrc14_chi7_hamilton_split_thm2523.py` -> matching `.out` [THM-2523
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The multiplicative
+  `chi_7` contrast of the six Hamilton energies is the quadratic form of a
+  symmetric circulant on the real `F_13` augmentation module.  Its minimal
+  polynomial is `t^6-39t^4+299t^2-325`, its characteristic polynomial is the
+  square, and its signature is `(6,6)`.  Dilation by five is an anti-isometry;
+  centred deltas and explicit rational three-spaces are isotropic.  The exact
+  Fano product is `A_1 A_2 A_4=5C_13`, where `C_13` is symmetric rather than a
+  tournament operator.  Normal/optimized/stored transcripts match; hashes are
+  `9ef9e16d...04b6` / `e5a61f9b...787d`.  Nondegeneracy of the polarization
+  does not force a nonzero diagonal or supply Boolean orientation.
+- `lrc14_intrinsic_collision_depth_thm2522.py` -> matching `.out` [THM-2522
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Perron replica defects
+  give the unique orthogonal base-13 Fourier-valuation decomposition; digit
+  `m` is exactly the first-collision toothpick bank at `L=m+1`.  On every one
+  of the `165` live THM-2349 owner-word events the unit guard forces `m=0`, so
+  `L=1`, all twelve rational colours fire, and both the shallow septimal and
+  old deep `c_3` banks survive.  A future positive BV owner may be delayed
+  independently beyond an explicit threshold.  Exact current recursion,
+  CRT, guard, sharp-replica, and owner-delay controls pass in normal and
+  optimized runs; hashes are `f26609a5...f941` / `79832e1a...b21a`.  The
+  drift is positive and even, not an oriented Boolean emission or row
+  exclusion.
 - `lrc14_k13_k14_potential_bridge_thm2521.py` -> matching `.out`
   [THM-2521 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The centred
   thirteen-predecessor profile embeds into the twelve-dimensional

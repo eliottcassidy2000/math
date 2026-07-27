@@ -1,0 +1,12 @@
+THM-2522 intrinsic collision-depth companion: PASS
+gapped_digit_pattern=[True, False, True, False]; sharp_first_pattern=[False, False, True]
+collision_energies=0,0,12/169
+orthogonal_centered_energy=60/169
+depth_two_shallow_energy=144/1183; empty_orbit_cells=0
+depth_two_collision_table=1/7,0,0,0,0,6/91,0,0,6/91,0,0,0,0
+guarded_depth_one_two_energies=174/5915,8724/142805; guard_orbit_cells=0
+unweighted_owner_control_drift=6/91; first_positive_owner_delay=1
+owner_delay_rows=R0:D=0:bank=0;R1:D=72/15379:bank=1;R2:D=72/15379:bank=1;R3:D=12240/2599051:bank=1
+horizon_period=4; current_recursion_checks=40; crt_checks=540
+horizon_labels=1,-1,0,0,0;1,0,0,-1,0;1,0,0,0,-1;1,0,-1,0,0
+collision depth is m+1; late owner delay changes no ancestry address
