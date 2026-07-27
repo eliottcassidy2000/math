@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `lrc14_target_active_self_return_thm2565.py` -> matching `.out`
+  [THM-2565 PROVED + VERIFIED-EXACT].  Resolve any positive THM-2559
+  target-informed head field by its physical first base-thirteen digit and
+  reuse the same field after a long iterate.  Exact BV mixing makes the
+  diagonal tend to `P=sum_h p_h^2>=rho^2/13`, and gives the explicit eventual
+  floor `rho^2/26`; one delay works on all `165` rows.  Ordering `k_a` first
+  types its literal future danger as the target-active first-failure label.
+  This is a cemetery-free THM-2545 table for the changed target-informed
+  selector.  The fixed word is source-sibling provenance, not a word emitted
+  by the head; canonical equation (56), the paired target co-shift, and row
+  exclusion remain open.  The referee includes a sharp delay-one offset
+  hostile which returns with mass `1/169` at delay two.  Hashes are
+  `4e11fc2c...f27` / `865a3651...bf5`.
 - `lrc14_paired_dipole_deep_corner_thm2563.py` -> matching `.out`
   [THM-2563 PROVED + VERIFIED-EXACT].  Every THM-2559 old head supports a
   nonnegative `13^3` partial-bare table containing a translated deepest probe

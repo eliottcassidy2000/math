@@ -1,0 +1,27 @@
+== THM-2565: target-active stationary self-return ==
+
+== thirteen-root overlap floor ==
+  diagonal coefficient checks: 13
+  unordered root-pair coefficient checks: 78
+  P=sum p_h^2 >= rho^2/13; equality exactly at uniform root mass
+
+== k_a-first categorical typing ==
+  five-role truth-table checks: 32
+  cell histogram 0..5: 1,16,8,4,2,1
+  every literal k_a danger is in cell 1 when k_a is ordered first
+
+== offset-one hostile versus later digit separation ==
+  base-thirteen triples checked: 2197
+  delay-one diagonal count: 0
+  delay-two diagonal count: 13; mass 1/169
+
+== exact covariance-threshold implication ==
+  rational threshold checks: 32860
+  largest sampled sufficient delay: 2
+  H_N >= P/2 >= rho^2/26 whenever 13^N P >= 2E
+
+semantic scope: target-informed Hall table, not canonical equation (56)
+terminal word remains a source-sibling stratum, not a head-emitted word
+paired blocker target co-shift and THM-2334 current remain open
+
+all exact checks passed

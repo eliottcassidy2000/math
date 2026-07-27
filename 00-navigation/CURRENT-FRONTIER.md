@@ -122,18 +122,27 @@ ordinary or `1/2704` guard.  THM-2563 adds both blocker--graft dipoles and a
 deep danger probe: its positive `13^3` partial-bare table has simultaneous
 deep/moving-dipole colour and floor `7rho/35152`.  The fixed old head is not
 co-shifted, so left-minus-right target residue and complete-mask restoration
-remain missing.  THM-2562 computes duty-commutator ranks `50/70/72/74`;
+remain missing.  THM-2565 resolves a positive THM-2559 head by its physical
+first digit and reuses the same target-active field at a long iterate.  Exact
+BV mixing then gives an actual cemetery-free same-root future return, with
+eventual floor `rho^2/26` and one delay for all `165` rows.  This closes
+future-root overlap only for the changed target-informed selector: its word
+is source-sibling provenance, not head inheritance, and it does not prove
+THM-2537 equation (56) or a target current.  THM-2562 computes
+duty-commutator ranks `50/70/72/74`;
 THM-2541's nonzero anchor forces six equal target replicas under any complete
 cancellation.  Flat-arc hostiles show this invoice alone is not a proof.
 
-Next: retain the fixed head's target residue across THM-2563's charged
-danger-to-safe endpoint transition, or derive its exact full-`X` cancellation
-law; then carry the resulting difference character through future root, word,
-owner, and carry.  On that common chart x semantic x ancestry carrier, test
-THM-2562's six-replica law and apply THM-2545.  Service, mixing, chronology,
-old repair, paired moving-endpoint action, and horizontal transport are
-closed; left-right target completion, future-root identification, and vertical
-semantic gluing are not.
+Next: retain THM-2565's positive stationary future-root diagonal while carrying
+the fixed head's target residue across THM-2563's charged danger-to-safe
+endpoint transition, or derive its exact full-`X` cancellation law.  Then
+transport the resulting difference character with the source-side word,
+owner, and carry into the canonical selector/current chart.  On that common
+chart x semantic x ancestry carrier, test THM-2562's six-replica law and apply
+THM-2545.  Service, mixing, chronology, old repair, target-informed future
+overlap, paired moving-endpoint action, and horizontal transport are closed;
+left-right target completion, canonical-selector/current identification, and
+vertical semantic gluing are not.
 More untyped nonvanishing is not progress.  No row is removed. Ledger: `165`.
 
 ### Independent routes that remain live
