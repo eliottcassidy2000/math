@@ -15,8 +15,9 @@ status: >
   nonrigid stratum has its own law -- see THM-2454's center law).
   rigid-SC(12) = 6 with [1,9,9,9,9,81] remains predicted. Within the tower grammar the converse is PROVED
   for all n (run-transfer expansion: C3[A,B,C] is rigid iff it is
-  C3 itself); only 'no rigid class outside the grammar' remains
-  OPEN beyond n = 10.
+  C3 itself); and 'no rigid class outside the grammar' is now
+  PROVED for all n <= 62 by THM-2477 (open only beyond 62, pending
+  its lemma ML).
 source: kind-pasteur-2026-07-26-S132
 depends_on:
   - THM-2450-rigid-self-converse-classes-are-cyclic-ternary-towers
