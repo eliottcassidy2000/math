@@ -1,8 +1,9 @@
 # Script Results Index
 
 - `lrc14_doubly_centered_transfer_hall_boundary_thm2557.py` -> matching
-  `.out` [THM-2557 PROVED + VERIFIED-EXACT abstractly; typed-row application
-  inherits THM-2550(B)'s candidate audit status].  On the rank-72 integral
+  `.out` [THM-2557 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
+  abstractly; typed-row application inherits THM-2550(B)'s candidate input
+  status].  On the rank-72 integral
   doubly centered `7 x 13` lattice, every nonzero-slope seven-step transfer is
   injective with exact sequence `0 -> V_00 -> V_00 -> F_13^6 -> 0`, image the
   kernel of the per-clock first-root-moment map, and Smith form
