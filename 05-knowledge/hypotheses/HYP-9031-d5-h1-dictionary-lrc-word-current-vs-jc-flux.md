@@ -157,6 +157,27 @@ Thus the convergence statement above remains deliberately one degree short:
 the missing incidence map must be built atomwise on each live row before
 marginalization and integration.
 
+## 2026-07-27 refinement: the channels separate in JC but MERGE in LRC
+
+mac-mini S143 (rank-12 box anatomy, refereed): pair-relation saturation
+makes the rank-12 box the all-small height box, and total mod-p
+invisibility (the support-3 zero-trick restores full sparse rank at
+p = 7, 13) means NO CRT/mod-p instrument sees it -- so there is no
+independent finite discharge of LRC's "geometric channel": its depth
+RE-MERGES with the spectral 91-line. This sharpens the dictionary's
+divergence axis: in JC the geometric channel genuinely fell separately
+(a collision realized the class in dim 3); in LRC the geometric and
+spectral channels are ONE at depth, and the only forcing primes are 7
+and 13. Same session: the mod-2 (palindrome/mirror) forcing of the
+91-line is IMPOSSIBLE (Smith theory: Z/2-equivariance with odd-order
+7 (x) 13 coefficients vanishes identically) -- the repaired forcing is
+Z/7 x Z/13 ROTATION equivariance, whose localization lemma (S144:
+covariant counts localize onto duty carriers, N(v) = 10 z_13(v) mod 13)
+is the correctly-primed Redei mechanism. Dictionary consequence: the
+"abelianized invariant" row's LRC entry should be read at the rotation
+fixed loci (degenerate-word/duty contributions), not at any 2-adic
+fixed locus.
+
 ## Hostile controls
 
 - MSG-2152's sharp signed-step boundary (spectral): disjointness +
