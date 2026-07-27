@@ -119,21 +119,15 @@ delayed word.  THM-2600 repairs that narrow failure with two constant-six
 middle rails and a fixed `q=0` unit Bockstein
 section on all `84` cells, but still supplies vertices rather than edges.
 
-THM-2593 trivializes the coefficient torsors on a minimal `C_91` cover, and
-THM-2594 has a nonzero common-base theta contraction; neither identifies a
-physical root output with the next target input.  THM-2601 compresses every
-singleton Bockstein section to one scalar, but target successor is an
-explicit nonlinear degree-11 cycle and `631` nonempty aggregates vanish.
-THM-2602 proves the resulting boundary: common-base gate insertions form a
-commutative diagonal vertex calculus, whereas curvature requires ordered
-nonnegative kernels `K_ell(q,q')` with a positive twisted return
-`diag(K_0...K_6 S_(7a))`.
+THM-2593/2594 supply coefficient torsors and theta contraction but no physical successor. THM-2601's successor is a nonlinear degree-11 cycle with `631` empty aggregates; THM-2602 proves that commutative vertex insertions cannot replace ordered positive kernels with twisted return `diag(K_0...K_6 S_(7a))`.
 
-The sharp target is therefore an ordered common-ancestry transition, not
-more marginal Fourier support: retain the adjacent target index (or a lawful
-root-to-target transport), the adjacent clock, positivity, and semantic
-owner/repair data before marginalization.  THM-2605 reserves the inverse-root
-dipole attempt.  No row is removed. Ledger: `165`.
+Post-THM-2602 canon separates four `F_13` axes. Audited THM-2605 gives one affine physical inverse-root/local-shift phase on all roots, and THM-2613 canonically chooses `q(r)=-kr`; these are cellwise positive-measure, not pointwise repair or an adjacent clock. THM-2610 retains one old `X,Y,m` triangle beside every future colour, but positive time kills the old deck; THM-2607--2611 classify the missing rail/bibundle sidecar without realizing it physically.
+
+Audited THM-2615 proves physical-diagonal restriction kills the relation lattice in every target class: the THM-2334 consumer is an independent present/conjugated-bare-endpoint square with a Radon diagonal, not a chronological future shift. Audited THM-2618 gives the THM-2537 selected source a presentation-relative Möbius orbit and free thirteen-atom spectrum, but MISTAKE-300 keeps THM-2569's distinct whole head `A_h(x)A_h(T^N x)` frozen.
+
+Audited THM-2614 gives dense punctured same-event cosupport but no deck. Candidate THM-2616 has a positive framed cross-time diagonal `q'=h`, yet omits digits `0,12`. Audited THM-2619's PSL2(F13) norm cycles seven decks and its Bruhat wall is target-zero. Provisional THM-2620 exposes endpoint-pair transvection data discarded by target difference, but is not a proved dependency.
+
+The target is a labelled orbit of `A_h(x)A_h(T^N x)`, an independent present/bare square before Radon restriction, and a nonzero fixed frequency or THM-2573 logarithmic normal at an allowed deep offset, all with adjacent clock, positivity, and semantic endpoint. Marginals, numerical diagonals, and projective identities do not suffice. No row is removed; ledger `165`.
 
 ### Independent routes that remain live
 
@@ -373,7 +367,7 @@ Classify profiles under support operations; study analytic continuation and auto
   `S_(F o F)=V(LH)` with `L,H` distinct irreducibles.  Composite
   discriminant parity is exact on three slices (`H` odd, `L` even) but remains
   outside global canon; all higher component counts remain open.
-  For G1, THM-2598/MISTAKE-297 correct the live list to `D4,A4,S4`; a `D4` survivor needs an antipodal unramified missing/included divisor pair. THM-2465 now classifies the whole affine point-cap face: every map is an automorphism or exactly a suspended planar Keller pair, while the rank-one scale-varying face is empty. Thus point-cap degree four is precisely planar degree four; general `z`-affine and other strata remain. G1 is open.
+  For G1, THM-2598/MISTAKE-297 leave `D4,A4,S4`. Audited THM-2612 proves the unique `D4` root-field involution is free on the finite-etale open and must have a pole over the Jelonek boundary; in depressed form `Norm(2w^2+p+z)=S'(z)^2`, while tame positive index tax lies in `V(gcd(q,p^2-4r))`, a necessary but not sufficient gate. Pole component/order remain open, so `D4` survives. THM-2465 makes the affine point-cap face exactly planar degree four; other strata and G1 remain open.
   At degree eighteen, THM-2314/2316 close sparse supports,
   THM-2371/2376 close `H_2`, and audited THM-2406 forces THM-2389's `H_4`
   pole system onto the closed common-root wall. The inherited nonsplit
@@ -410,7 +404,11 @@ Classify profiles under support operations; study analytic continuation and auto
   root-free charts on `H_4`; THM-2386 removes common roots; hostile-audited
   THM-2389 gives its pole-jet system. Independently hostile-audited THM-2406
   closes the reduced degree-eighteen wall. THM-2411 empties `A=0`; THM-2423/2425/2428 empty the five one-sparse axes.
-  THM-2429/2437/2463/2468 close `C,W`, `D,W`, `B,D`, `B,W`; THM-2469/2470/2472 close `C,D`, `E,W`, `D,E`; THM-2475/2476 close `C,E`, `B,E`; THM-2480 closes `B,C` by sparse Hensel irreducibility and wall-stratified ramification. All ten support-two planes are empty; only higher mixed strata remain.
+  THM-2429/2437/2463/2468 close `C,W`, `D,W`, `B,D`, `B,W`;
+  THM-2469/2470/2472 close `C,D`, `E,W`, `D,E`; THM-2475/2476 close
+  `C,E`, `B,E`; THM-2480 closes `B,C` by sparse Hensel irreducibility and
+  wall-stratified ramification.  All ten support-two planes are empty.
+  Candidate THM-2617 is the first support-three reduction: on `B,D,W!=0`, `C=E=0`, a `34`-term full-triangle eliminant has five simple fixed-section points; all line factors and two quadratic types are excluded. Only the two-moving-root quadratic and its nine-equation generic/two-wall ideal remain; uniform irreducibility and closure are open pending promotion of later reductions.
   Split/even edges and integral `2`-adic raising remain; THM-2206 blocks field-valued `C_2` Hasse repair.
   THM-2446 opens six-brackets; THM-2451 and extensions refute its cone shortcut off point/common-plane boundaries. `JC(2)` and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
@@ -430,6 +428,7 @@ The most reusable current bridges are not literal object identifications:
 | Support Dirichlet profile | integer sequences | Do tournament/LRC census supports have functional or automatic structure? |
 | Continuation congruence / min-plus kernel | Gordian connected-sum profile and THM-840/853 | Which finite sidecar is a target-preserving quotient under every named future operation? |
 | Relation-cone circuit/carry atlas | THM-2196/2199 | NC2 charge channels, ordered tournament joins, and invariant-null knot packets inherit affine carry charts, but respectively still need whole-face coefficient phase, SCC/block order, and the full continuation kernel; JC pole descent additionally loses residue roots and flux. |
+| Transverse-information tax | THM-2612; THM-2615; THM-2573 | When the preferred open/diagonal locus erases a symmetry or charge, retain a transverse object: Jelonek pole, independent endpoint axis, or singular boundary normal. These are parallel moves, not an identification of pole order with Fourier charge; each needs its own sidecar and zero control. |
 | Phase reconstruction | THM-2307/2022 | Scalar codes can be impostors; retain signed coefficient current. Not a GMC-to-LRC reduction. |
 | Integrality/support-hole spectrum | THM-2200 | Nineteen scalar holes fill bounded Hafnian powers while Frobenius kills prime dilates modulo the prime; tournament join similarly fills the doubled `(8,10)` hole, whereas the flow `K_3` obstruction is LP-separated. Retain semigroup coefficients and operation sidecars, not convex support alone. |
 | Weighted-sector obstruction | THM-2045 factorized `R` family | Does the unique constant-producing sector fail on a broader Lee–Li inner edge? |
