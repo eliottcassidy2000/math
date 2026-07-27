@@ -71,8 +71,16 @@ unramified-fiber checks).
 ## Open obligations (from the program's validity gate)
 
 - G1 (blocking): exhibit a field-degree-4 2-jet Keller map or prove
-  none exists; both known 2-jet Keller examples are tame with field
-  degree 1 and the THM-1310 wild map has degree 3.
+  none exists. STATUS UPDATE (THM-2465, S134): no witness found;
+  G1 pinned by a proved package (total degree >= 3 forced; universal
+  z-rationality; conic-cap emptied in four QQ-exact boxes; degrees
+  {1,3} realized on point/line caps, so unconditional degree-4
+  exclusion there implies the order-{1,3} degree-4 case -- a
+  hardness floor); any witness must satisfy the (N1)-(N5) resolvent
+  dossier, which upgrades clause 2 of this hypothesis from
+  conjecture to NECESSARY CONDITION on the S4 branch (purity forces
+  odd Jelonek valuation). Decisive pending: the (1,2,2)+fiber4 GB
+  box.
 - G5: prove the odd-exponent mechanism from lc-degeneration parity.
 - G6 (decoupling search, floors reported): a proper 2-jet map with
   Galois not contained in A_4 would decouple "square disc" from
