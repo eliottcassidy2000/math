@@ -14,7 +14,10 @@ status: >
   The resulting proved-field Hall table is cemetery-only, satisfies every
   Hall inequality, and has zero diagonal.  This is not the physical arrival
   table: an as-yet-unconstructed target-active field outside the future
-  algebra may coexist on the same atoms.  No lawful scalar-cover hostile,
+  algebra may coexist on the same atoms.  Conditionally, the top ancestry
+  digit and carry of a specified target-active unit role give an exact affine
+  diagonalizer, so its Hall cut collapses pointwise.  The canon has not yet
+  supplied that role on the selected packet.  No lawful scalar-cover hostile,
   row exclusion, or LRC(14) conclusion follows.
 source: codex-2026-07-27-future-pullback-neutrality
 depends_on:
@@ -35,8 +38,8 @@ related:
   - THM-2550-canonical-typed-row-double-nondegeneracy
 script: 04-computation/lrc14_future_pullback_neutral_hall_thm2549.py
 output: 05-knowledge/results/lrc14_future_pullback_neutral_hall_thm2549.out
-script_sha256: 6bbbbde3ef5241bc4a107bf281f951f8110eefa38a77ba8713926ddaedaccee1
-output_sha256: 3db594f333df74250cc222013c03791444ca951dd606a0fe62b699598c6a31d9
+script_sha256: 5786847a79b33432e0acb0b86288df1fc3983e25f763ea9ad4d7774abb4fdb4f
+output_sha256: 73bcdb9224317e93cb252c4492339579a06d180168c59adfbf48acb5029d7efe
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -225,6 +228,60 @@ carry target charge in either of two honest ways:
 Calling the future base “the later target” without one of these sidecars
 forgets exactly the coordinate on which the charge acts.
 
+### The unit-role sheet diagonalizer
+
+For a specified unit role, retaining the sheet does more than restore some
+target variation: it gives an exact common-root chart.  Let `w in Z` with
+`13` not dividing `w`, put `y={wx}`, and represent the depth-`L` sheet by
+
+```text
+a_L(y)=floor(13^L y) in {0,...,13^L-1},
+d_L(y)=floor(a_L(y)/13^(L-1))=floor(13y) in F_13.            (15a)
+```
+
+The top sheet digit is target-covariant:
+
+```text
+d_L({y-theta/13})=d_L(y)-theta                 mod 13.       (15b)
+```
+
+Now use the selected-head predecessor chart `x=(z+h)/13`.  Directly,
+
+```text
+d_L({wx})
+ =w h+floor(wz)                                  mod 13.    (15c)
+```
+
+Indeed, reducing `floor(13{wx})` modulo thirteen removes the multiple of
+thirteen introduced by the outer fractional part, while
+`floor(w(z+h))=wh+floor(wz)`.  Therefore the carry-corrected sheet root
+
+```text
+b_w(z,x)
+ =w^(-1)(d_L({wx})-floor(wz))                    mod 13     (15d)
+```
+
+obeys the pointwise identity
+
+```text
+b_w(z,x)=h.                                                  (15e)
+```
+
+This is the exact sidecar which the future-base quotient discards.  If a
+**genuinely later, semantically target-active unit role `w`** is placed on
+the selected-head common base and its depth-`L` sheet plus the carry
+`floor(wz)` are retained, then (15d) is an equivariant later-root chart and
+its THM-2545 compatibility graph is diagonal.  Every positive atom of that
+role is already a same-root hit; the second Hall cut collapses.
+
+Four qualifications are sharp.  The future base without `a_L` is neutral by
+(5).  The raw digit without `floor(wz)` is misaligned by a base-dependent
+carry.  If `13|w`, no inverse in (15d) exists; at `w=13`, `{wx}=z` is
+independent of `h`, so the head root is completely erased.  Finally, attaching
+the digit to a neutral owner or word does not make that role semantically
+target-active.  Equation (15e) solves root alignment **after** the active role
+and common ancestry have been supplied; it does not supply either one.
+
 ## 4. Positive same-base chronology on every live row
 
 Fix one of the `165` live first-depth-one rows `R`.  THM-2537, Section 7,
@@ -234,8 +291,14 @@ constructs a positive rational Boolean selected-head packet
 A_R=T^sel_(R,tau),              alpha_R=integral A_R>0.       (16)
 ```
 
-It marks one empty head root `h_R in F_13` on every active fibre.  It is an
-empty endpoint at the same predecessor horizon, not a semantic arrival.
+It marks a measurable empty-head root map
+
+```text
+h_R:support(A_R)->F_13.                                      (16a)
+```
+
+This map selects one root on every active fibre.  It is an empty endpoint at
+the same predecessor horizon, not a semantic arrival.
 
 Independently, THM-2349 supplies on the same row a positive literal whole
 handoff
@@ -323,10 +386,11 @@ q^sigma_R_s=0                           (s in F_13),
 H^(sigma_R,inh)=sum_t C^(sigma_R,inh)_(t,t)=0.               (25)
 ```
 
-Its exact compatibility graph consists of the cemetery edges
+The minimal support graph recorded by this inherited table consists of the
+cemetery edges
 
 ```text
-E^(sigma_R,inh)
+E^(sigma_R,inh)_support
  ={(t,partial):p^sigma_R_t>0}.                              (26)
 ```
 
@@ -354,8 +418,9 @@ Equations (24)--(27) are not the physical joint table
 `C^sigma_(t,s)` of THM-2545.  They say only that the proved future algebra
 has not supplied its map `b`.  An unknown physical target-active field can
 refine (23), split cemetery mass among roots, restrict the compatibility
-graph, and create a diagonal.  Therefore (24) is neither a counterexample to
-scalar cover nor evidence that THM-2537's physical `A_tar` vanishes.
+graph, and create a diagonal.  The graph in (26) is not a claim about those
+unknown physical edges.  Therefore (24) is neither a counterexample to scalar
+cover nor evidence that THM-2537's physical `A_tar` vanishes.
 
 ## 6. Inheritance audit through THM-2550
 
@@ -409,16 +474,24 @@ one typed row is an especially useful positive control, but its own scope
 still asks for the ancestry/Boolean realization; it does not define `b` on
 the selected-head packet.
 
-The next target should therefore be one of the following equivalent pieces of
-new structure.
+The most economical next target is now explicit:
+
+```text
+force the unique target-active unit role k_a on positive selected-head mass
+  + retain its top ancestry digit and carry on that same atom
+  -> equation (15e) gives the Hall diagonal pointwise.                 (29)
+```
+
+Absent that direct route, the next target should be one of the following
+pieces of new structure.
 
 1. A positive common-ancestry field retaining the sheet `a` in (12)--(13),
-   together with an equivariant projection to the later target root.
+   together with the unit-role projection (15d), or its nonunit replacement.
 2. A new-scale action (14) plus a lawful intertwiner from the selected-head
    root to that future action.
 3. THM-2548's directed gain automaton built on the actual `165` packets, with
-   a neutral-gain deficit forcing a target-active edge, followed by a
-   THM-2545 Hall deficit unless the edge is already diagonal.
+   a neutral-gain deficit forcing a target-active edge, followed either by
+   the sheet diagonalizer or by a separate THM-2545 Hall deficit.
 
 Any of these would create information absent from `A_+`.  A further delayed
 owner, word, collision colour, Fourier mode, or horizontal transfer without
@@ -442,11 +515,13 @@ Both executions reproduce
 byte-for-byte.  The dependency-free referee checks representative levels
 `1,...,7`, weights `-18,...,18`, and every old root; the old-target and
 future-scale action identities; ancestry-sheet transport; and the sharp
-depth-zero root-mask control.  It separately checks an exact rational BV
-mixing example at five scales and exhausts `1,703` cemetery margin tables,
-`77,940` small Hall subsets, and `24,576` full-`F_13` Hall subsets.  Every
-diagonal is zero.  The all-depth conclusion is the symbolic identity (5), not
-an extrapolation from those finite checks.
+depth-zero root-mask control.  It also checks `7,956` unit-role instances of
+the sheet diagonalizer, `103,428` top-digit covariance instances, and the
+sharp `13`-divisible root-erasure control.  Separately it checks an exact
+rational BV mixing example at five scales and exhausts `1,703` cemetery margin
+tables, `77,940` small Hall subsets, and `24,576` full-`F_13` Hall subsets.
+Every inherited diagonal is zero.  The all-depth conclusions are the symbolic
+identities (5) and (15a)--(15e), not extrapolations from finite checks.
 
 No statement here proves that the physical arrival indicator vanishes, that a
 live scalar row realizes a zero-arrival hostile, that the physical

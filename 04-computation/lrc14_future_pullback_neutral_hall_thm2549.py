@@ -85,6 +85,55 @@ def future_translation_referee():
     return root_checks, target_checks, sheet_checks, future_action_checks
 
 
+def ancestry_digit_diagonalizer_referee():
+    diagonalizer_checks = 0
+    digit_covariance_checks = 0
+    base_points = (Fraction(1, 101), Fraction(17, 101), Fraction(99, 101))
+
+    for level in range(1, 7):
+        scale = P ** level
+        top_scale = P ** (level - 1)
+        for weight in range(-18, 19):
+            if weight % P == 0:
+                continue
+            inverse_weight = pow(weight, -1, P)
+            for z in base_points:
+                carry = (weight * z).numerator // (weight * z).denominator
+                for head in range(P):
+                    x = (z + head) / P
+                    y = fractional_part(weight * x)
+                    sheet = (scale * y).numerator // (scale * y).denominator
+                    top_digit = sheet // top_scale
+                    recovered = inverse_weight * (top_digit - carry) % P
+                    require(recovered == head,
+                            "unit-role ancestry digit failed to recover head")
+                    diagonalizer_checks += 1
+
+                    for theta in range(P):
+                        shifted = fractional_part(y - Fraction(theta, P))
+                        shifted_sheet = (
+                            (scale * shifted).numerator
+                            // (scale * shifted).denominator
+                        )
+                        shifted_top = shifted_sheet // top_scale
+                        require(shifted_top % P == (top_digit - theta) % P,
+                                "top ancestry digit lost target covariance")
+                        digit_covariance_checks += 1
+
+    # Sharp nonunit boundary: multiplication by thirteen erases the old head
+    # before the top ancestry digit is read.
+    z = Fraction(17, 101)
+    nonunit_digits = {
+        (P * fractional_part(P * (z + head) / P)).numerator
+        // (P * fractional_part(P * (z + head) / P)).denominator
+        for head in range(P)
+    }
+    require(len(nonunit_digits) == 1,
+            "13-divisible role unexpectedly retained the predecessor root")
+
+    return diagonalizer_checks, digit_covariance_checks
+
+
 def in_intervals(x, intervals):
     x = fractional_part(x)
     return any(left <= x < right for left, right in intervals)
@@ -192,6 +241,7 @@ def hall_cemetery_referee():
 
 def main():
     root, target, sheet, future = future_translation_referee()
+    diagonalizer, digit_covariance = ancestry_digit_diagonalizer_referee()
     head, handoff, limit, values = exact_mixing_control()
     margins, subsets, full_subsets = hall_cemetery_referee()
 
@@ -200,6 +250,9 @@ def main():
     print(f"ancestry_sheet_transport_checks={sheet}")
     print(f"future_scale_target_action_checks={future}")
     print("level_zero_root_visible_and_target_active_control=PASS")
+    print(f"unit_role_sheet_diagonalizer_checks={diagonalizer}")
+    print(f"top_digit_target_covariance_checks={digit_covariance}")
+    print("13_divisible_role_root_erasure_control=PASS")
     print(f"mixing_head_mass={head} handoff_mass={handoff} limit={limit}")
     print("mixing_levels_1_to_5=" + ",".join(str(value) for value in values))
     print(f"cemetery_margin_tables={margins}")

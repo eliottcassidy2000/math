@@ -105,7 +105,10 @@ positive later field on that base belongs to the positive-depth pullback
 algebra. That algebra is old-target-neutral and old-root-constant, cannot
 define an equivariant later root selector, and therefore induces only a
 cemetery Hall table with zero diagonal. The physical arrival field remains
-unknown; THM-2549 is not a scalar-cover hostile. THM-2547 is only a
+unknown. Conversely, for a specified target-active unit role, the retained
+top ancestry digit and its base-dependent carry recover the selected head
+root pointwise; this collapses the Hall cut **after** that role and common
+ancestry are supplied. THM-2549 is not a scalar-cover hostile. THM-2547 is only a
 **FINITE-EXACT EXTERNAL CONTROL** after MISTAKE-281, and its `delta_2` hostile
 has `108/432` zero pairings in each convention; it retains no physical
 target/owner ancestry.
@@ -121,12 +124,13 @@ THM-2502/2503/2504 show tournaments and sidecar-free holonomy are not target
 currents. THM-2458's hostile is physically realized by THM-2462. THM-2464
 proves: `lambda=1` clean charts force the linked blocker safe, `lambda=2` is
 phase-before-speed universal, and fixed delays work iff the joint clock cell
-has interior. Next: retain the positive-depth ancestry sheet and project it
-equivariantly to a later target root, construct a lawful future-scale target
-action/intertwiner, or build THM-2548's directed gain automaton on the actual
-165 packets and then prove its Hall deficit. Service, mixing, chronology, and
-horizontal transport are closed; semantic vertical target action and
-source/deep alignment are not.
+has interior. Next: force THM-2461's unique target-active unit role `k_a` on
+positive selected-head mass and retain its top ancestry digit/carry, or build
+THM-2548's directed gain automaton on the actual `165` packets and then use
+that diagonalizer (falling back to a Hall deficit only if its sheet is lost).
+Service, mixing, chronology, root alignment conditional on a sheet, and
+horizontal transport are closed; semantic vertical role forcing and
+source/deep ancestry are not.
 THM-2479 gives each positive middle-owner word a word-marked `91`-unit edge;
 THM-2334's typed non-cover has every nontrivial twist differ from `H(0)`.
 Address/gain, terminal phase, and the directed semantic 2-cell remain; no row is removed.
