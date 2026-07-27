@@ -127,6 +127,8 @@ def build_signature_atlases(records):
     guard_atlas = defaultdict(set)
     ordinary_atlas = defaultdict(set)
     zero_atom_checks = 0
+    guard_one_checks = 0
+    ordinary_one_size_counts = {1: 0, 2: 0}
     two_atom_checks = 0
     high_atom_checks = 0
 
@@ -143,6 +145,15 @@ def build_signature_atlases(records):
                 if danger_count == 0:
                     require(support <= GATE, "zero-danger support escapes the factored gate")
                     zero_atom_checks += 1
+                elif danger_count == 1 and bits[0]:
+                    require(support == guard, "guard-danger support is not the guard")
+                    guard_one_checks += 1
+                elif danger_count == 1:
+                    require(
+                        len(support) in ordinary_one_size_counts,
+                        "ordinary one-danger support is not a one- or two-root chord",
+                    )
+                    ordinary_one_size_counts[len(support)] += 1
                 elif danger_count >= 3:
                     require(not support, "three-danger clean atom is nonempty")
                     high_atom_checks += 1
@@ -174,6 +185,8 @@ def build_signature_atlases(records):
         guard_atlas,
         ordinary_atlas,
         zero_atom_checks,
+        guard_one_checks,
+        ordinary_one_size_counts,
         two_atom_checks,
         high_atom_checks,
     )
@@ -594,9 +607,16 @@ def main():
         guard_atlas,
         ordinary_atlas,
         zero_checks,
+        guard_one_checks,
+        ordinary_one_size_counts,
         two_checks,
         high_checks,
     ) = build_signature_atlases(records)
+    require(guard_one_checks == 75600, "wrong guard one-danger check census")
+    require(
+        ordinary_one_size_counts == {1: 90720, 2: 136080},
+        "wrong ordinary one-danger size census",
+    )
     require(len(guard_atlas) == 1949, "wrong guard-danger signature census")
     require(len(ordinary_atlas) == 4430, "wrong ordinary-danger signature census")
     require(max(map(len, guard_atlas.values())) == 13, "wrong guard support maximum")
@@ -634,7 +654,10 @@ def main():
     )
     print(
         "support_checks="
-        f"zero:{zero_checks},two:{two_checks},three_or_four:{high_checks};max_size=4"
+        f"zero:{zero_checks},guard_one:{guard_one_checks},"
+        f"ordinary_one_size1:{ordinary_one_size_counts[1]},"
+        f"ordinary_one_size2:{ordinary_one_size_counts[2]},"
+        f"two:{two_checks},three_or_four:{high_checks};max_size=4"
     )
     print(
         "ordinary_danger="

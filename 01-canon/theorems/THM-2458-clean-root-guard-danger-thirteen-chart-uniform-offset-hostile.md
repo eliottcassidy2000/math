@@ -11,13 +11,14 @@ status: >
   rational span test. The signature (2,5,1,3,5) has an explicit
   positive thirteen-chart atlas; its guard circulant has determinant
   four, so the unique uniform weights are all 1/4 and every chart is
-  necessary. Adding one shared guard chart gives a nonconstant
+  necessary. Adding one shared guard support, with seven
+  source-labelled chart copies, gives a nonconstant
   delta-plus-six-replicas THM-2449 table with exact overlap word
   (0,0,1,1,0,1,1,1,1,0,1,1,0). This is a static fixed-residue
   root-atlas hostile; proved THM-2462 separately realizes all
-  thirteen charts on one fixed-speed phase orbit. No full scalar-row
-  embedding, linked semantic word, clock, endpoint current, or LRC
-  row is constructed.
+  thirteen charts on one fixed-speed phase orbit. No full
+  fourteen-speed scalar-row embedding, linked semantic word,
+  owner/valuation clock, endpoint current, or LRC row is constructed.
 source: codex-2026-07-26-clean-root-uniform-offset-atlas
 depends_on:
   - THM-2449-coprime-owner-anova-and-delta-replica-boundary
@@ -30,8 +31,8 @@ related:
   - THM-2462-mixed-radix-root-phase-orbit-universality
 script: 04-computation/lrc14_clean_root_guard_danger_thirteen_chart_thm2458.py
 output: 05-knowledge/results/lrc14_clean_root_guard_danger_thirteen_chart_thm2458.out
-script_sha256: 1cabfd915453d43d762a0a1d34e8611f48d20a17825aa4195618532637a4a90d
-output_sha256: 1d695057063fbe4b10e00de0d61514365424db69a22c3828f73de238cb2798fb
+script_sha256: 3bf2473e16863b8563ea0ad217e5565544a32c57901a396d282ab332e11e928b
+output_sha256: 03faaec9ffa99ab8c8b9fa49e08639d984bd63ff9639e22e7f89498802ce49f7
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -349,7 +350,8 @@ alpha_g=1/4                 for every g.                            (21)
 
 All thirteen weights are nonzero. Hence every positive uniform model
 using this fixed signature and these possible guard supports needs all
-thirteen charts. The global capacity lower bound (8) and the exact
+thirteen guard-support translations, and therefore all thirteen
+displayed charts. The global capacity lower bound (8) and the exact
 fixed-signature necessity (21) are different statements.
 
 ## 6. The delta-plus-six-replicas hostile
@@ -553,8 +555,9 @@ byte for byte. The dependency-free companion uses only integers and
 `fractions.Fraction`, with explicit `require` checks. It verifies:
 
 1. the `18,900` traversal-record and `15,120` distinct-cover censuses;
-2. every clean-cover incidence and all support impossibilities in
-   Section 2;
+2. every clean-cover incidence, including the exact guard one-danger
+   support and the ordinary one-danger size-one/size-two dichotomy,
+   and all other support impossibilities in Section 2;
 3. all `4,430` ordinary rational dual certificates;
 4. the `1,949/215` guard span census;
 5. every row of the thirteen-chart atlas;
@@ -590,12 +593,12 @@ ordinary-danger one-bit charts are span-obstructed;
 one guard-danger signature needs and admits thirteen charts.      (36)
 ```
 
-It does **not** prove that a scalar-cover packet supplies those
-thirteen charts with the required weights. In particular it does not
+THM-2462 proves that one fixed local speed tuple visits those thirteen
+charts with the required weights.  The two results still do **not**
 construct or preserve:
 
-- a single fixed integer speed tuple realizing all translations;
-- one common base-parent phase orbit;
+- a full fourteen-speed scalar covering packet;
+- its valuation and owner ancestry;
 - the two blocker truth bits as physical endpoint factors;
 - a THM-2305 semantic owner, pure/fork word, or delayed word;
 - a source clock, graft, or source skew;

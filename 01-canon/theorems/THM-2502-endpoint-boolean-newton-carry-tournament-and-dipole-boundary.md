@@ -40,6 +40,7 @@ related:
   - THM-2457-complete-atom-root-cosupport-graph-and-semantic-word-hostile
   - THM-2459-four-atom-drift-and-root-service-coarsening
   - THM-2460-idempotent-semantic-word-copy-and-word-block-cosupport-boundary
+  - THM-2462-mixed-radix-root-phase-orbit-universality
   - THM-2501-switching-fourth-moment-signed-c4-and-gram-energy
 script: 04-computation/lrc14_endpoint_newton_carry_boundary_thm2502.py
 output: 05-knowledge/results/lrc14_endpoint_newton_carry_boundary_thm2502.out
@@ -314,12 +315,15 @@ deliberately bypasses every quotient in (20).
 Subsequent THM-2457 proves that literal truth bits do not determine the
 semantic word and supplies common-root service from a directed atom
 edge.  THM-2459 retains aggregate drift and such service together in a
-Boolean union of at most four atoms.  THM-2460 is a proof-complete
-candidate for copying an already retained word, not yet an audited
-root-image coupling theorem.  The remaining LRC(14) obligation is to
-exclude the physical THM-2456 uniform-offset mixtures or couple the
-retained drift/service packet to a canonical same-word root image.
-No scalar row is removed, and LRC(14) is not proved.
+Boolean union of at most four atoms.  THM-2460 proves that an already
+retained word copies with no further loss and identifies maximizing-entry
+root-image inclusion as the exact sufficient sidecar; it does not make
+that inclusion automatic.  THM-2462 further shows that fixed-speed
+phase compatibility alone cannot exclude the finite uniform-offset
+atlas.  The remaining LRC(14) obligation is to use the full scalar-cover
+coupling to exclude the physical THM-2456 mixtures or force the retained
+drift/service packet into a canonical same-word root image.  No scalar
+row is removed, and LRC(14) is not proved.
 
 ## 7. Exact companion
 

@@ -174,8 +174,8 @@ residual:
 F_theta W_R=F_theta.                                (12)
 ```
 
-The complement of `R_j` is then a zero atom. The effective refined
-bank is
+The complement of `R_j` is then a zero atom.  The effective refined
+bank consists of `384` formal labelled cells (zero cells are allowed):
 
 ```text
 P_(omega,sigma)=P_omega W_sigma,
@@ -475,9 +475,11 @@ before Fourier expansion. The original THM-2334 address is then still
 r=u+R beta+m e_c-v.                                (34)
 ```
 
-The word harmonic `R beta` vanishes in the mod-`13` target quotient,
-but remains active modulo seven. With a lawful source transform, its
-septimal phase is retained exactly as in THM-2442.
+The word harmonic `R beta` vanishes in the mod-`13` target quotient.
+Because `gcd(R,7)=1`, multiplication by `R` permutes `C_7` and
+preserves every nonzero septimal residue; hence a nonzero word mode
+retains its septimal phase exactly as in THM-2442.  A `beta` divisible
+by seven is the inactive zero mode and is not being called active.
 
 If the two copies in (7) are expanded as independent physical word
 factors, one introduces two harmonics `beta,gamma` and apparent
@@ -511,8 +513,8 @@ Let the rational base be the disjoint union of three intervals
 Y_0=[0,1/3), Y_1=[1/3,2/3), Y_2=[2/3,1),
 ```
 
-carrying the three word labels. Put a fixed nonzero selected matched
-table entirely on `Y_0`. On the common root chart, let the semantic
+carrying the three word labels. Put a fixed nonzero-drift selected
+matched table entirely on `Y_0`. On the common root chart, let the semantic
 packet `A_0` occupy root `0` on `Y_0 union Y_1`, and let `F_0` occupy
 root `1` only on `Y_1`.
 

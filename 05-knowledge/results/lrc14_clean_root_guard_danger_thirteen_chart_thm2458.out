@@ -2,7 +2,7 @@ THM-2458 CLEAN-ROOT GUARD-DANGER AUDIT
 cover_traversal_records=18900
 distinct_clean_mask_families=15120
 traversal_split=gate_guard_double:3780,pair_pair_double:15120
-support_checks=zero:75600,two:453600,three_or_four:378000;max_size=4
+support_checks=zero:75600,guard_one:75600,ordinary_one_size1:90720,ordinary_one_size2:136080,two:453600,three_or_four:378000;max_size=4
 ordinary_danger=signatures:4430,exact_duals:4430,span_feasible:0,max_family:21
 ordinary_one_danger_sizes=1:68040,2:113400
 guard_danger=signatures:1949,span_feasible:215,max_family:13
