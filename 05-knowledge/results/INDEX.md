@@ -2133,3 +2133,13 @@ class `q=k mod 13` lands exactly once per five gauges.  This verifies the
 syndetic endpoint-Prony bridge and refutes the tempting shortcut from a root
 colour directly to the base representative `q=k`.  Normal and optimized runs
 byte-match and end in `PASS`.
+### lrc14_squarefree_collision_saturation_thm2474.out
+
+Exact companion for **THM-2474, PROVED + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED**. It reduces primitive transforms modulo cyclotomic
+polynomials for six squarefree moduli, verifies the Ramanujan signed and
+energy ledgers, and exhausts four sharp nonsquarefree Möbius-zero hostiles.
+It also replays the corrected THM-2313 Fano mass, THM-2318's three-prime
+corner, and the explicit grade-three root-four `m=1` edge. Normal and
+optimized outputs byte-match and end in `PASS`. The theorem closes
+primitive-colour selection, not the temporal owner/deep intertwiner or a row.

@@ -1,0 +1,7 @@
+THM-2474 exact companion: PASS
+squarefree_moduli=(6, 10, 15, 30, 42, 91); primitive_colours_checked=106
+nonsquarefree_hostiles=(4, 8, 9, 12); vanished_colours_checked=16
+corrected_Fano_corner_I=1/6365350748643250000000000; all_72_colours_nonzero
+three_prime_ell=65537; full_corner=(3,1,1); faces_zero=True
+explicit_root4_edge: X=37349; Y=779935; multiplier=1; unit_mod_91=True
+Ramanujan signed ledgers, energy floors, and squarefree sharpness verified
