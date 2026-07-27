@@ -243,6 +243,7 @@ def audit_charts_and_spectra():
     chart_count = 0
     basis_chart_count = 0
     radon_entries = 0
+    radon_accretive_entries = 0
     mixed_modes = 0
     for tau in range(1, P):
         for a in range(1, Q):
@@ -271,6 +272,28 @@ def audit_charts_and_spectra():
                     require(radon == expected, ("aligned Radon", tau, a, c))
                     radon_entries += P
 
+                    adjoint = tuple(
+                        7 * potential[v]
+                        + sum(potential[(v + 2 * tau * s) % P] for s in range(1, Q))
+                        for v in range(P)
+                    )
+                    require(
+                        tuple(x + y for x, y in zip(radon, adjoint))
+                        == tuple(P * x for x in potential[:P]),
+                        ("Radon self-adjoint part", tau, a, c),
+                    )
+                    skew_numerator = tuple(
+                        2 * value - P * base
+                        for value, base in zip(radon, potential[:P])
+                    )
+                    require(
+                        4 * dot(radon, radon)
+                        - P * P * dot(potential[:P], potential[:P])
+                        == dot(skew_numerator, skew_numerator),
+                        ("Radon 13/2 accretivity", tau, a, c),
+                    )
+                    radon_accretive_entries += P
+
                     for alpha in range(1, P):
                         p_hat = horizontal_transform(potential[:P], alpha)
                         require(p_hat != 0, ("basis root mode", alpha))
@@ -295,7 +318,13 @@ def audit_charts_and_spectra():
                             require(actual_mode != 0, "direct mixed nonvanishing")
                             mixed_modes += 1
                     basis_chart_count += 1
-    return chart_count, basis_chart_count, radon_entries, mixed_modes
+    return (
+        chart_count,
+        basis_chart_count,
+        radon_entries,
+        radon_accretive_entries,
+        mixed_modes,
+    )
 
 
 def cycle_bilinear(first, second, tau, s):
@@ -367,7 +396,9 @@ def main():
     constraint_rank, factor_dimension, degree_rank = matching_constraints_and_degree_rank()
     require((constraint_rank, factor_dimension, degree_rank) == (13, 78, 13), "rank ledger")
     audit_gram_and_splitting()
-    charts, chart_basis, radon_entries, mixed_modes = audit_charts_and_spectra()
+    charts, chart_basis, radon_entries, radon_accretive_entries, mixed_modes = (
+        audit_charts_and_spectra()
+    )
     energy_checks, star, cycles, additive_mode, chi_contrast = audit_energy_forms()
     cut_modes = audit_cut_lift()
 
@@ -386,6 +417,7 @@ def main():
         f"charts={charts}",
         f"basis_charts={chart_basis}",
         f"aligned_radon_entries={radon_entries}",
+        f"radon_accretive_entries={radon_accretive_entries}",
         f"mixed_mode_identities={mixed_modes}",
     )
     print(

@@ -5,16 +5,17 @@
   thirteen-predecessor profile embeds into the twelve-dimensional
   signless-potential submodule of THM-2514's factor-balanced `K_14` edge
   chart.  Ordinary degree is exactly `12p`; edge and degree norms are
-  `156D_13` and `1872D_13`.  One aligned Radon marginal is injective on this
-  submodule.  Rational nonuniform fibres give all `72` direct mixed modes
+  `156D_13` and `1872D_13`.  One aligned Radon marginal has self-adjoint
+  part and norm lower bound `13/2` on this submodule.  Rational nonuniform
+  fibres give all `72` direct mixed modes
   and all `5,184` cut modes as Hilbert-valued functions.  The star plus six
   Hamilton-cycle energies total `182D_13` and fire all six additive
   septimal characters, while a centred delta keeps the multiplicative
   `chi_7` contrast zero.  The referee checks factor-space ranks
-  `13/78/13/65`, all `504` charts, `78,624` aligned-Radon entries,
+  `13/78/13/65`, all `504` charts, `78,624` aligned-Radon/accretivity entries,
   `435,456` mixed identities, `5,184` cut modes, and `1,728` cycle-form
   identities.  Normal/optimized/stored transcripts byte-match; hashes are
-  `41b6f8b0...aefc` / `e41bdc28...16a9`.  The bridge is signed,
+  `548d82f2...bbc1` / `aa3d11d6...f6a7`.  The bridge is signed,
   pointwise/Hilbert-valued, and gauge-chosen; it supplies no Boolean owner
   charge or row exclusion.
 - `lrc14_rational_jump_crt_thm2520.py` -> matching `.out` [THM-2520

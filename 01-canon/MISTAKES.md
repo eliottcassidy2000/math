@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-278 (2026-07-27, THM-2521 complex Hilbert norm proof) -- the real part was omitted from a complex cross term
+
+- **What was written:** THM-2521 equation (15) asserted
+  `2 sum_(x<y)<p_x,p_y>=-sum_x||p_x||^2` for real or complex
+  Hilbert-valued centred potentials.
+- **Why it was wrong:** with a sesquilinear complex inner product the
+  unordered sum of cross terms need not be real.  For example
+  `(p_1,p_2,p_3)=(1,i,-1-i)` is centred, but the unordered cross-term sum
+  has a nonzero imaginary part (whose sign depends only on the inner-product
+  convention).  The norm expansion retains twice its **real part**, not the
+  complex sum itself.
+- **Strongest survivor and repair:** the claimed norm identity
+  `||Sp||^2=12||p||^2`, and hence every downstream constant `156` and
+  `1872`, was already correct: its proof uses
+  `2 Re sum_(x<y)<p_x,p_y>=-sum_x||p_x||^2`.  Equation (15) now states that
+  formula explicitly and notes that `Re` may be omitted over a real Hilbert
+  space.  The same audit sharpened the aligned Radon map to
+  `R+R^*=13I` and `||Rp||>=(13/2)||p||`, with exact companion checks.
+- **Rule:** whenever a real quadratic norm identity is extended
+  coefficientwise to a complex Hilbert space, write either an ordered
+  sesquilinear sum or the real part of the unordered cross terms; do not
+  copy the real bilinear expansion verbatim.
+
 ## MISTAKE-277 (2026-07-27, concurrent THM-2510 reservation collision) -- remote uniqueness was not rechecked after the final rebase
 
 - **What happened:** the quadratic affine-cut energy theorem was checked

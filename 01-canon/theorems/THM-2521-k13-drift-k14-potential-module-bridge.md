@@ -9,7 +9,8 @@ status: >
   dimension 12 on the marked physical slice; ordinary degree is exactly
   12p, its edge norm is 156 times the collision drift, and its degree norm
   is 1,872 times that drift.  In every affine cut chart one aligned Radon
-  marginal is injective on the submodule.  At every rational nonuniform
+  marginal has self-adjoint part 13/2 and norm lower bound 13/2 on the
+  submodule.  At every rational nonuniform
   predecessor fibre the pulled-back defect has all 72 mixed modes and all
   5,184 vector-cut modes.  The six Hamilton columns are exactly the six
   antipodal collision-gap energies; together with the star they give a
@@ -31,8 +32,8 @@ related:
   - THM-2520-rational-jump-crt-dichotomy-and-delayed-owner-forcing
 script: 04-computation/lrc14_k13_k14_potential_bridge_thm2521.py
 output: 05-knowledge/results/lrc14_k13_k14_potential_bridge_thm2521.out
-script_sha256: 41b6f8b0f9757981bf077661108664fc8d9c8a30d0929d8ca2426fbca560aefc
-output_sha256: e41bdc283ba88c3da185784ac846e3bef089494f8da6e89879b870a0dce316a9
+script_sha256: 548d82f2c1795009525c363272a38e6c9ac104fd733b4bd2c517812580f4bbc1
+output_sha256: aa3d11d6b9433332d420ae9b9e4644c29107f28ddb01be99b619a6311568f6a7
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -165,13 +166,16 @@ coefficientwise.  With the unnormalized vertex and edge norms,
  =144sum_v||p_v||^2.                                         (14)
 ```
 
-Indeed every `||p_v||^2` occurs thirteen times in (13), while
+Indeed every `||p_v||^2` occurs thirteen times in (13).  With the usual
+sesquilinear convention in a complex Hilbert space, the cross term is
 
 ```text
-2sum_(x<y)<p_x,p_y>
+2 Re sum_(x<y)<p_x,p_y>
  =||sum_vp_v||^2-sum_v||p_v||^2
  =-sum_v||p_v||^2.                                           (15)
 ```
+
+Over a real Hilbert space the `Re` may of course be omitted.
 
 ## 2. The physical twelve-dimensional slice
 
@@ -315,18 +319,32 @@ m_tau(alpha)
  =7+sum_(s=1)^6 zeta_13^(-2alpha tau rho(s)).                 (31)
 ```
 
-For every `alpha!=0`, the triangle inequality gives
+The lower bound is much stronger than the crude triangle estimate.  Let
+`R=R_(tau,a,c)` on the centred potential slice.  The adjoint of (29) is
 
 ```text
-|m_tau(alpha)|>=7-6=1.                                       (32)
+(R^*p)_v=7p_v+sum_(s=1)^6 p_(v+2tau rho(s)).                 (32a)
 ```
 
-Thus a single aligned oriented Radon marginal is injective on `S(U)`, for
-every one of the `504` affine cut charts.  In normalized `ell^2`, it even
-obeys
+The twelve residues `+-2tau rho(s)`, `s=1,...,6`, are exactly
+`F_13^*`.  Since `sum_v p_v=0`,
 
 ```text
-||R_(tau,a,c)d_p||_2>=||p||_2.                               (33)
+R+R^*=13I,                         Re m_tau(alpha)=13/2.      (32b)
+```
+
+Thus `K=R-(13/2)I` is skew-adjoint and
+
+```text
+||Rp||_2^2=(169/4)||p||_2^2+||Kp||_2^2.                     (32c)
+```
+
+In particular a single aligned oriented Radon marginal is injective on
+`S(U)`, for every one of the `504` affine cut charts, with the uniform
+normalized `ell^2` bound
+
+```text
+||R_(tau,a,c)d_p||_2>=(13/2)||p||_2.                          (33)
 ```
 
 In particular, the potential submodule intersects THM-2514's
@@ -569,7 +587,7 @@ The proved connection is now:
 positive rational last-digit collision drift
   -> nonzero centred predecessor profile in L^2(G)
   -> 12-dimensional signless-potential submodule of K_14
-  -> one nonzero ordinary degree and one injective aligned Radon marginal
+  -> one nonzero ordinary degree and one 13/2-coercive aligned Radon marginal
   -> all 72 pointwise mixed modes and all 5,184 H-valued cut modes
   -> all six nontrivial additive septimal column-energy characters.       (54)
 ```
@@ -633,7 +651,7 @@ roots.  It verifies:
 - the full and physical potential dimensions `13` and `12`, together with
   the edge and degree Gram scalars `12` and `144`;
 - all `504` affine charts on all twelve physical basis vectors, including
-  `78,624` aligned-Radon entries;
+  `78,624` aligned-Radon and `78,624` adjoint/accretivity entries;
 - `435,456` direct mixed-multiplier identities, with every geometric factor
   and mixed mode nonzero;
 - all `5,184` THM-2508 cut-lift factors on a physical potential control;
@@ -642,7 +660,7 @@ roots.  It verifies:
 
 Normal and optimized runs reproduce the stored transcript exactly.  The
 finite-field checks referee the algebraic identities; nonvanishing in the
-theorem is proved over the cyclotomic fields by (32), (37), and rational
+theorem is proved over the cyclotomic fields by (32b), (37), and rational
 irreducibility, not inferred from reduction modulo one prime.
 
 An independent line audit rederived the factor-balanced dimension and direct
