@@ -2,7 +2,7 @@
 id: THM-2579
 title: "Socle-flat target torsor and integral difference filling"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED (two ways).
   On the integral 13-colour augmentation lattice, every circulant filter
   acts on THM-2571's Cayley cokernel only through the sum of its coefficients
   modulo 13.  Translations fix the class and the punctured twelve-shift orbit
@@ -37,8 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2579 -- target differences fill, but the absolute class does not
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
-PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED (two ways).**
 
 THM-2571 identifies a nonzero integral first-moment class on every target
 colour of the canonical digit-diagonal carry tensor.  Surprisingly, this
@@ -360,6 +359,15 @@ byte-for-byte.  The dependency-free exact referee checks:
 - the punctured/full-orbit boundary and the extra-factor-13 hostile.
 
 There are `1414840` explicit checks, none implemented with `assert`.
+
+Two independent immutable audits rederived the circulant quotient action,
+the `468` pairwise primitives, the `78` unnormalized Fourier primitives, and
+the singleton normalization hostile.  Both replayed normal and optimized
+executions byte-for-byte against the stored transcript and independently
+matched the LF hashes above.  The audits required the explicit
+normalized-versus-unnormalized scope, the punctured-orbit sign, and the
+statement that the closed canonical evidence replays THM-2571's factorization
+rather than reconstructing its raw carrier.  Documentation checks pass.
 
 The theorem proves an integral target-torsor law and identifies the exact
 loss in passing from absolute profiles to differences, together with the
