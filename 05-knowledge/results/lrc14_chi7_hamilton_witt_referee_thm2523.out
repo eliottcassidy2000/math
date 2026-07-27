@@ -1,0 +1,9 @@
+THM-2523 rational Witt/coercive independent referee
+reversal: even_dim=6 odd_dim=6 orthogonal=yes; even_det=-270400 squareclass=-1
+even_hyperbolic: fixed_dim=3 anti_fixed_dim=3 cross_det=-4160 index=3
+odd_boundary: half_det=-325 squareclass=-13; isotropic_plane=2 hyperbolic_index=2
+augmentation: det=1373125 squareclass=13; rational_Witt_index=5 anisotropic_dimension=2
+slope_conjugacy: exact_entries=2028 slopes=12
+coercivity: g(13/10)=-13/1000 g_prime(13/10)=20267/100; inertia(10*A^2-13*I)=(12, 0, 0); partner_checks=24
+Hilbert_normalization: ||p||_G^2=13*D13; 13*(13/10)=169/10; finite_D13=9914/2145; strict_margin_10R-169D13=1087058/165
+VERIFIED: the rational form has Witt index five, not six; its canonical signed partner is universally 13/10-coercive, hence gives the normalized 169/10 detector, but this algebraic partner is not a Boolean ancestry event.

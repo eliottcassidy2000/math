@@ -9,6 +9,8 @@ cube_mixed_modes=72; primitive_cut_modes=5184; raw_cut_floor=294
 weighted_deep_lift=A^2*H; delayed_lift=three_epoch_Boolean_stalk
 one_hot_distinct_edges=42_zero; marked_star_raw_Fourier=-1/7
 Latin_owner_scheduler=7x7; disjoint_cells=7; minimal_invariant_phase_sets=1
-future_phase_means_zero_or_norm=63,1; full_norm_gate_mean=1/7^6; owner_clock_torsor=7
+Latin_diagonal_equivariance_checks=343+49; rowwise_cell_means=common_product; owner_slots=0,6,5,4,3,2,1
+fixed_clock_phase0_owner_rows=1,1,1,1,1,1,1; common_fixed_clock=impossible
+future_phase_means_zero_or_norm=63,1; full_norm_gate_mean=1/7^6; diagonal_gate_mean=1/7^7; owner_clock_torsor=7
 Lean kernel=TournamentH7.LRCAnchoredCube; Mathlib FLT(3)
 ALL EXACT CHECKS PASSED

@@ -10,7 +10,11 @@ status: >
   real signature (6,6).  Dilation by five is an exact anti-isometry.  Every
   centred point mass is nevertheless isotropic, and there are explicit
   three-dimensional rational fixed and anti-fixed totally isotropic spaces.
-  Polarization is nondegenerate but requires a second profile.  The Fano
+  Over Q the Witt index is exactly five, leaving one anisotropic binary
+  plane.  The canonical derived partner q=A_tau p gives the coercive scalar
+  beta_tau(p,q)=||A_tau p||^2>(13/10)||p||^2 on augmentation.  For the
+  THM-2521 collision profile this exceeds (169/10)D_13 whenever D_13>0,
+  although q is signed rather than one Boolean ancestry event.  The Fano
   slope product A_1 A_2 A_4 is 5 times the symmetric chi_13 Paley operator;
   because chi_13(-1)=+1 it is an undirected signed graph, not a tournament or
   an orientation of the physical self-cospan.  No Boolean owner charge,
@@ -29,6 +33,10 @@ script: 04-computation/lrc14_chi7_hamilton_split_thm2523.py
 output: 05-knowledge/results/lrc14_chi7_hamilton_split_thm2523.out
 script_sha256: 9ef9e16d423a0bdf3bc5eba834c9416025cc5329fc935962dc27ac6accf504b6
 output_sha256: e5a61f9bb91979f0eae9ae708ba3604bd38c327915199eec234857d026bf787d
+independent_script: 04-computation/lrc14_chi7_hamilton_witt_referee_thm2523.py
+independent_output: 05-knowledge/results/lrc14_chi7_hamilton_witt_referee_thm2523.out
+independent_script_sha256: 1c79b135582d06d6e09d31ad50c14c3ac4394125aac9f0a1147da3030b42b92f
+independent_output_sha256: 32ce81b72f11de09d508d19688cbd2eaff1be3376931b793215c55eb80bb5dc4
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -370,6 +378,59 @@ whose determinant is
 So these two hostile spaces pair nondegenerately with one another; (38) is
 genuine split geometry, not a hidden kernel.
 
+### The rational Witt boundary is one anisotropic binary plane
+
+The preceding six-dimensional hyperbolic piece is exactly the
+reversal-even half.  Indeed, `D_5^2=D_(-1)`, so both the `D_5`-fixed and
+`D_5`-anti-fixed spaces in (35)--(38) are fixed by reversal.  They have
+dimension three each and pair nondegenerately by (39)--(40).  Hence the
+reversal-even rational summand is three hyperbolic planes.
+
+For `tau=1`, use the reversal-odd basis
+
+```text
+o_r=e_r-e_(-r),                              r=1,...,6.
+```
+
+One half of its Gram matrix is
+
+```text
+G_odd=
+ [ 1  0  0  2 -2 -2]
+ [ 0  1  2 -2  0  0]
+ [ 0  2 -1  0  0  2]
+ [ 2 -2  0  1  2 -2]
+ [-2  0  0  2 -1  2]
+ [-2  0  2 -2  2 -1],                       det G_odd=-325.   (40a)
+```
+
+The two independent vectors
+
+```text
+v=(-1,-1,-1,0,-1,0),
+w=(-1, 0,-1,0, 0,0)                                         (40b)
+```
+
+satisfy
+
+```text
+v^T G_odd v=w^T G_odd w=v^T G_odd w=0.                      (40c)
+```
+
+Thus the odd Witt index is at least two.  It is not three: a
+six-dimensional rational hyperbolic form has determinant squareclass `-1`,
+whereas (40a) has squareclass `-13`.  Orthogonality of the reversal halves
+therefore gives
+
+```text
+Witt_index_Q(A_tau on augmentation)=3+2=5.                  (40d)
+```
+
+The remaining rational anisotropic part is a binary plane.  Multiplication
+by `tau` permutation-conjugates the form, so the conclusion holds for every
+nonzero chart slope.  This sharpens the word **split**: the form is real
+split, but not rationally hyperbolic.
+
 ## 5. What polarization recovers -- and what the diagonal loses
 
 The symmetric polarization of (10) is
@@ -391,6 +452,41 @@ not imply `Q_tau(p)!=0`; equations (31)--(33) are the exact obstruction.
 Using polarization physically requires either a lawfully coupled second
 ancestry profile or a translated copy whose cross-correlation is actually
 available.  It cannot be manufactured from the one diagonal scalar.
+
+Algebraically there is nevertheless one canonical derived partner:
+
+```text
+q=A_tau p,
+
+beta_tau(p,A_tau p)
+ =<p,A_tau^2p>
+ =||A_tau p||^2>0                         for p!=0.          (42a)
+```
+
+This is not extra input: it applies the known signed circulant once more.
+It is also quantitatively coercive.  With `g(Y)` from (21),
+
+```text
+g'(Y)=3Y^2-78Y+299>0                 on [0,13/10],
+g(13/10)=-13/1000<0.                                      (42b)
+```
+
+Since the three roots of `g` are the squared nonzero eigenvalues of
+`A_tau`, none lies in `[0,13/10]`.  Consequently
+
+```text
+||A_tau p||^2>(13/10)||p||^2            on augmentation.    (42c)
+```
+
+The first row of `A_1^2` is
+
+```text
+(12,-5,-1,-1,3,-5,3,3,-5,3,-1,-1,-5).                    (42d)
+```
+
+Thus (42a) is a rational, translation-covariant two-step signed stencil.
+Its positivity does not Booleanize that stencil or supply a chronological
+second ancestry event.
 
 The centred deltas make the lost coordinate explicit.  Since `A_tau`
 annihilates constants,
@@ -518,6 +614,24 @@ its diagonal has real signature (6,6),
 and the diagonal can vanish on a nonzero rational predecessor profile.   (56)
 ```
 
+THM-2521 normalizes the same profile by
+
+```text
+integral G(z)||p(z)||^2 dz=13D_13.
+```
+
+Applying (42a)--(42c) coefficientwise in its real Hilbert space gives the
+canonical polarized detector
+
+```text
+R_chi=integral G(z)||A_tau p(z)||^2 dz
+      >(169/10)D_13>0                         if D_13>0.      (56a)
+```
+
+The centred-delta hostile kills the one-application diagonal `Q_tau(p)`,
+not this derived norm.  The boundary remains semantic: `A_tau p` is a
+signed predecessor stencil, not a Boolean owner/source/deep event.
+
 Thus positive collision drift does **not** force a nonzero scalar
 multiplicative contrast.  The centred-delta control is already a pointwise
 rational positive-drift witness to that failure.
@@ -534,7 +648,8 @@ Specifically, THM-2523 does **not**:
 1. turn the signed centred potentials into Boolean owner or arrival events;
 2. identify predecessor, source, arrival, old-deep, and future-owner sheets;
 3. choose `tau` against `-tau` or orient a collision edge;
-4. make one diagonal value nonzero from positive `D_13`;
+4. make the original one-application diagonal value nonzero from positive
+   `D_13`, or realize the positive derived norm (56a) as one Boolean event;
 5. exclude a scalar row or prove LRC(14).
 
 The exact gain is a faithful algebraic boundary.  The multiplicative probe
@@ -591,5 +706,27 @@ polynomial, the real signature, the dilation anti-isometry, both rational
 isotropic spaces and their cross pairing, and the Paley product and square.
 It also reproduced the normal and optimized transcripts byte-for-byte and
 confirmed the recorded hashes.
+
+The rational Witt and coercive additions have a separate dependency-free
+referee:
+
+```bash
+python3 04-computation/lrc14_chi7_hamilton_witt_referee_thm2523.py
+python3 -O 04-computation/lrc14_chi7_hamilton_witt_referee_thm2523.py
+```
+
+Both runs byte-match
+
+```text
+05-knowledge/results/lrc14_chi7_hamilton_witt_referee_thm2523.out
+```
+
+It independently reconstructs `A_tau` over `Q`, verifies the orthogonal
+six-plus-six reversal decomposition, the three-dimensional even and
+two-dimensional odd hyperbolic pieces, determinant squareclasses `-1` and
+`-13`, rational Witt index five, all `2,028` slope-conjugacy entries, and
+the exact positive inertia of `10A_tau^2-13I` on augmentation.  It also
+checks the `169/10` THM-2521 normalization on a finite rational control.
+No Boolean or semantic input is assumed.
 
 **QED.**

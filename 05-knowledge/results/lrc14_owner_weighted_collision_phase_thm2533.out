@@ -1,0 +1,10 @@
+THM-2533 owner-weighted collision-phase referee
+projector-module identities=1404; Boolean owner identities=104; eventwise colours=12
+grouped-jump Prony minors=882; frequency bounds=240; sharp sequence=(0, 0, 0, 0, 5); coincident-jump hostile groups to L=0
+THM-2349 future-owner restart residues=12; marked 91-unit c3 edges=12; unmarked-only hostile edges=1
+guard phases=336 counts={3: 84, 4: 252}; consecutive Fourier minors=14196; four-mode stalk ranks=9295
+minimal k=4 stalk measures: C_H&T^-1E_H=20/91, C_H&T^-1C_H=45/91
+gain triples=220; each gives 3*72=216 modes; common-safe interval checks=39
+sharp cyclotomic fibre: zeros=(0, 5, 8); active=(0, 2, 5, 10); nonzero gains=(2, 5, 10)
+rational-table completion checks=1872; background=183; max_entry=456; exact mixed modes=216
+VERIFIED: periodic Boolean owners commute with root projectors; grouped jumps give the sharp Prony block bound; the inherited THM-2349 restart retains a future-owner mark on every nonzero root residue; guard support forces at least four root modes and three gain slices, while equality is confined to the one-step guard stalk and is sharp even for a nonnegative rational common-safe table (not a lawful anchored table).

@@ -1,0 +1,12 @@
+THM-2532 exact cyclic-tournament Cayley-derivative referee
+canonical_tournament: first_row=(0, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1) rank=12 switching=-transitive
+cayley_identity: (I+P_tau)C_tau=P_tau-I and P_tau=(I+C_tau)/(I-C_tau)
+spectrum: char=x*(x^12+78*x^10+715*x^8+1716*x^6+1287*x^4+286*x^2+13) trace(C^T*C)=156
+sawtooth_inverse: first_row=(1/13)*(0,-11,-9,-7,-5,-3,-1,1,3,5,7,9,11)
+augmentation_lattice: determinants=(13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13) Smith=(1^11,13) image=ker(sum_r r*y_r mod 13)
+cofactors: all 13 principal minors=1 adj(C)=J det(C+J)=169
+fano_bridge: 256*L=3*C^12+223*C^10+1294*C^8-2178*C^6-10545*C^4-5437*C^2
+inverse_even_bridge: 200*C^2=765*L-667*L^2-130*L^3+102*L^4+5*L^5-3*L^6
+algebras: Q[C]=Circ_13 rank=13; Q[L]=Q[C^2] rank=7; C*Q[L] rank=6
+exact_checks: radon_entries=2028 cayley_entries=6084 inverse_entries=4056 bridge_entries=2028 inverse_bridge_entries=2028 norm_probes=48
+VERIFIED: the oriented aligned-Radon difference is the cyclic-tournament Cayley derivative; chi7 is an even polynomial shadow and cannot recover the missing chart sign.

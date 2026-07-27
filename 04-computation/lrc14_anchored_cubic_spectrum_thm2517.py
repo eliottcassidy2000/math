@@ -239,10 +239,79 @@ def main() -> None:
         ),
         "distinct Latin cells meet at one epoch",
     )
+    owner_slots = tuple(row.index(0) for row in assignments)
     require(
-        tuple(row.index(0) for row in assignments) == (0, 6, 5, 4, 3, 2, 1),
+        owner_slots == (0, 6, 5, 4, 3, 2, 1),
         "phase-zero owner slot torsor drifted",
     )
+
+    # Source translation acts diagonally on the response-row and Latin-cell
+    # torsors.  Translating every phase in cell c by a sends it to cell c+a,
+    # so the graph c=ell is equivariant rather than a gauge-fixed choice.
+    latin_translation_checks = 0
+    diagonal_equivariance_checks = 0
+    for shift in range(ROWS):
+        for center in range(ROWS):
+            for slot in range(ROWS):
+                require(
+                    (assignments[center][slot] + shift) % ROWS
+                    == assignments[(center + shift) % ROWS][slot],
+                    "Latin cell failed source translation equivariance",
+                )
+                latin_translation_checks += 1
+        for ell in range(ROWS):
+            translated_row = (ell + shift) % ROWS
+            translated_cell = (ell + shift) % ROWS
+            require(
+                translated_row == translated_cell,
+                "diagonal row/cell graph failed equivariance",
+            )
+            diagonal_equivariance_checks += 1
+    require(latin_translation_checks == ROWS**3, "Latin equivariance count drifted")
+    require(
+        diagonal_equivariance_checks == ROWS**2,
+        "diagonal equivariance count drifted",
+    )
+
+    # Every Latin cell uses the same phase multiset, so rowwise diagonal
+    # gates have the common limiting mean product(q_gamma), even for a
+    # deliberately nonuniform positive phase bank.
+    phase_means = tuple(Fraction(gamma + 1, 56) for gamma in range(ROWS))
+    require(sum(phase_means) == Fraction(1, 2), "phase-mean control malformed")
+    common_cell_mean = Fraction(1)
+    for mean in phase_means:
+        common_cell_mean *= mean
+    rowwise_cell_means = []
+    for center in range(ROWS):
+        cell_mean = Fraction(1)
+        for slot in range(ROWS):
+            cell_mean *= phase_means[assignments[center][slot]]
+        rowwise_cell_means.append(cell_mean)
+    require(
+        tuple(rowwise_cell_means) == (common_cell_mean,) * ROWS,
+        "Latin diagonal row means are not the common phase product",
+    )
+
+    # Fixed-clock one-hot hostile: the phase-zero entries form the Latin
+    # anti-diagonal.  Every row has an owner slot, but every fixed slot sees
+    # exactly one owner row, never a common owner for all seven rows.
+    phase_zero_incidence = tuple(
+        tuple(int(assignments[ell][slot] == 0) for slot in range(ROWS))
+        for ell in range(ROWS)
+    )
+    require(
+        all(sum(row) == 1 for row in phase_zero_incidence),
+        "one-hot hostile lost a row owner",
+    )
+    fixed_clock_owner_counts = tuple(
+        sum(phase_zero_incidence[ell][slot] for ell in range(ROWS))
+        for slot in range(ROWS)
+    )
+    require(
+        fixed_clock_owner_counts == (1,) * ROWS,
+        "fixed-clock one-hot hostile acquired a common owner",
+    )
+
     invariant_owner_subsets = 0
     for mask in range(1 << ROWS):
         phases = {phase for phase in range(ROWS) if mask & (1 << phase)}
@@ -253,6 +322,7 @@ def main() -> None:
 
     orbit_mean_profiles = 0
     zero_orbit_profiles = 0
+    diagonal_full_support_mean = Fraction()
     orbit_table = square_hostile
     orbit_cube = hadamard_power(orbit_table, 3)
     for tail_mask in range(1 << (ROWS - 1)):
@@ -270,8 +340,21 @@ def main() -> None:
             for mean in means:
                 gate_mean *= mean
             require(gate_mean == Fraction(1, ROWS**6), "orbit norm mass drifted")
+            diagonal_full_support_mean = gate_mean / ROWS
+            require(
+                diagonal_full_support_mean == Fraction(1, ROWS**7),
+                "diagonal full-support gate mean drifted",
+            )
             gated = [[gate_mean * value for value in row] for row in orbit_cube]
             require(any(rectangles(gated)), "positive orbit norm lost cube interaction")
+            diagonal_gated = [
+                [diagonal_full_support_mean * value for value in row]
+                for row in orbit_cube
+            ]
+            require(
+                any(rectangles(diagonal_gated)),
+                "positive diagonal norm lost cube interaction",
+            )
             orbit_mean_profiles += 1
         else:
             zero_row = next(ell for ell in range(1, ROWS) if means[ell] == 0)
@@ -286,6 +369,10 @@ def main() -> None:
     require(
         (zero_orbit_profiles, orbit_mean_profiles) == (63, 1),
         "zero-or-norm orbit dichotomy drifted",
+    )
+    require(
+        diagonal_full_support_mean == Fraction(1, ROWS**7),
+        "full-support diagonal branch was not exercised",
     )
 
     print("THM-2517 anchored cubic spectrum exact companion: PASS")
@@ -312,8 +399,17 @@ def main() -> None:
         "minimal_invariant_phase_sets=1"
     )
     print(
+        "Latin_diagonal_equivariance_checks=343+49; rowwise_cell_means=common_product; "
+        "owner_slots=0,6,5,4,3,2,1"
+    )
+    print(
+        "fixed_clock_phase0_owner_rows=1,1,1,1,1,1,1; "
+        "common_fixed_clock=impossible"
+    )
+    print(
         "future_phase_means_zero_or_norm=63,1; "
-        "full_norm_gate_mean=1/7^6; owner_clock_torsor=7"
+        "full_norm_gate_mean=1/7^6; diagonal_gate_mean=1/7^7; "
+        "owner_clock_torsor=7"
     )
     print("Lean kernel=TournamentH7.LRCAnchoredCube; Mathlib FLT(3)")
     print("ALL EXACT CHECKS PASSED")
