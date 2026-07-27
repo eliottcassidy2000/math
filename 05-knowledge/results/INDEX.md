@@ -12,6 +12,13 @@
   deterministic full-cut hostiles; normal/optimized/stored transcripts
   byte-match.  Hashes are `8e5bcfe9...25fe` / `c2064f4c...9061`.
   This quadratic invariant forgets phase and does not produce a live current.
+- `lrc14_antipodal_marginal_loss_thm2509_referee.py` -> matching `.out`
+  [THM-2509 INDEPENDENT EXACT MARGINAL-LOSS REFEREE].  On the
+  `78`-dimensional row-zero strip, every one of the twelve fixed antipodal
+  marginal maps has exact rank `24` and kernel dimension `54`; each single
+  leg has rank `12`.  Twelve explicit integral, nonvertical, row-zero trace
+  hostiles of `L1=168` are annihilated by both selected marginals.  Thus the
+  joint `91`-entry chart is lossless, but its two marginal arrays are not.
 - `lrc14_antipodal_radon_cospan_thm2509.py` -> matching `.out`
   [THM-2509 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED;
   FINITE-EXACT ATLAS SHARPENING].  At least seven good toothpick slopes force

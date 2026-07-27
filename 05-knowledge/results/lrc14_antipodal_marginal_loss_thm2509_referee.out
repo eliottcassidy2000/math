@@ -1,0 +1,7 @@
+THM-2509 antipodal marginal-loss independent referee: PASS
+domain_dimension=78; output_dimension=26
+tau:rank_plus/rank_minus/rank_pair/kernel=1:12/12/24/54,2:12/12/24/54,3:12/12/24/54,4:12/12/24/54,5:12/12/24/54,6:12/12/24/54,7:12/12/24/54,8:12/12/24/54,9:12/12/24/54,10:12/12/24/54,11:12/12/24/54,12:12/12/24/54
+integral_trace_hostiles=12; row_zero=12; nonvertical=12
+annihilated_antipodal_marginals=24; hostile_L1=168
+the joint 91-entry chart is lossless; its two marginals are not
+ALL INDEPENDENT EXACT CHECKS PASSED
