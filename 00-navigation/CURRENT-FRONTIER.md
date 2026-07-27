@@ -420,8 +420,8 @@ Classify profiles under support operations; study analytic continuation and auto
   root-free charts on `H_4`; THM-2386 removes common roots; hostile-audited
   THM-2389 gives its pole-jet system. Independently hostile-audited THM-2406
   closes the reduced degree-eighteen wall. THM-2411 empties `A=0`; THM-2423/2425/2428 empty the five one-sparse axes.
-  THM-2429/2437/2463/2468 close `C,W`, `D,W`, `B,D`, `B,W`; THM-2469/2470/2472 close `C,D`, `E,W`, `D,E`; THM-2475/2476 close `C,E`, `B,E`.
-  Only `B,C` and mixed strata remain. Split/even edges and integral `2`-adic raising remain; THM-2206 blocks field-valued `C_2` Hasse repair.
+  THM-2429/2437/2463/2468 close `C,W`, `D,W`, `B,D`, `B,W`; THM-2469/2470/2472 close `C,D`, `E,W`, `D,E`; THM-2475/2476 close `C,E`, `B,E`; THM-2480 closes `B,C` by sparse Hensel irreducibility and wall-stratified ramification. All ten support-two planes are empty; only higher mixed strata remain.
+  Split/even edges and integral `2`-adic raising remain; THM-2206 blocks field-valued `C_2` Hasse repair.
   THM-2446 opens six-brackets; THM-2451 and extensions refute its cone shortcut off point/common-plane boundaries. `JC(2)` and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
