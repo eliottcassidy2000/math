@@ -1,0 +1,10 @@
+THM-2503 ACTIVE-DIPOLE SWEEP AUDIT
+a_safe_profiles=23;sizes=1:12,2:11
+L=1;v_profiles=3;profile_census=9:20,10:35,11:14;pointwise=9..11
+L=1;uniform_mixture_total=228/23;nonzero_shifts=12;max_shift=20/23;energy=5112/89401;energy_to_floor=426/361
+L=2;v_profiles=7;profile_census=7:32,8:69,9:52,10:8;pointwise=7..10
+L=2;uniform_mixture_total=1324/161;nonzero_shifts=12;max_shift=20/23;energy=51784/625807;energy_to_floor=226555/109561
+cyclotomic_evaluation_ranks=12x12;kernel=constants
+sharp_max_floors=L1:4/5,L2:2/3
+negative_real_floor=-T/156;sharp_energy=L1:T^2/2028,L2:T^2/1690
+all_checks=PASS
