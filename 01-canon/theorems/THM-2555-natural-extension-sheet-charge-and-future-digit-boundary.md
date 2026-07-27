@@ -36,8 +36,8 @@ related:
   - THM-2550-canonical-typed-row-double-nondegeneracy
 script: 04-computation/lrc14_natural_extension_sheet_charge_thm2555.py
 output: 05-knowledge/results/lrc14_natural_extension_sheet_charge_thm2555.out
-script_sha256: 5d197f060e2056e3e2ccb1395fa2cf7da81019b487a5cf8f854b05a4058d51c6
-output_sha256: 727fad41eb93eb93bd786b673de2a0b3469118d945935a5d8b4cb290ad82ac29
+script_sha256: 4406431dbd5e0ca66973b42bc44e7f05d120005cb7002b0398e1cdb1495c5b31
+output_sha256: 6a43221e4ee88be7f6f302b17a28c6b28a6ea766d95d32a5b13bd4464e3a1917
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -236,11 +236,27 @@ actions:
 old action O_theta:       d -> d-theta,      e -> e;
 
 future action F_phi:
-  z -> z-phi/p,
-  equivalently y -> y-phi/p^(L+1),
-                           d is old-sheet data,
+  y -> y-phi/p^(L+1),
+  z -> {z-phi/p},
+  a -> a-epsilon_phi(z) mod p^L,
+  epsilon_phi(z)=1_{z<phi/p},
+                           d can change by the sheet borrow,
                            e -> e-phi.                       (19)
 ```
+
+Here and below `phi` is represented by an integer in `{0,...,p-1}`, and the
+formula is read off the null set of digit endpoints.  Indeed
+
+```text
+z+a-phi/p
+ ={z-phi/p}+a-epsilon_phi(z).                             (19a)
+```
+
+Thus the future action is **not** a sheet-fixed translation of `z`: its
+wraparound borrows one unit from `a`, possibly propagating through the lower
+sheet digits into `d`.  What transforms uniformly is the immediate future
+digit `e`, since `floor(p{z-phi/p})=e-phi mod p`.  This makes the separation
+stronger: `d` has a pure old charge, whereas it has no uniform future charge.
 
 The normalized natural-extension measure is the product of Lebesgue measure
 in `z` and uniform counting measure in `a`.  Hence `d` and `e` are independent
@@ -399,8 +415,10 @@ base thirteen, for any `L>=1` take
 P_L={d_1=0, d_(L+1)=1}.                                    (35)
 ```
 
-All intervening digits `d_2,...,d_L` are free, so the complete depth-`L`
-sheet is retained.  The packet has
+The full depth-`L` sheet value is carried as a sidecar on every point of this
+packet.  Its top digit `d_1` is fixed, while all intervening digits
+`d_2,...,d_L` are free.  (Thus it is `P_L^orb` below, not `P_L`, that has full
+support in the top sheet digit.)  The packet has
 
 ```text
 mu(P_L)=1/p^2=1/169>0,

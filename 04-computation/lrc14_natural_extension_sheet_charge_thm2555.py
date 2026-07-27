@@ -4,8 +4,9 @@
 The symbolic proof in THM-2555 is all-depth.  This companion checks the
 sheet action and its complete affine-equivariant normal form on representative
 depths, the unit-role carry correction, the sharp nonunit erasure boundary,
-the separation of the old top digit from the future immediate digit, and the
-exact positive zero-arrival digit-cylinder hostile.
+the separation of the old top digit from the future immediate digit (including
+the future-action borrow into the old sheet), and the exact positive
+zero-arrival digit-cylinder hostile.
 """
 
 from fractions import Fraction
@@ -147,8 +148,10 @@ def nonunit_erasure_referee():
 
 def future_digit_referee():
     future_action_checks = 0
+    future_borrow_checks = 0
     digit_independence_checks = 0
     pair_counts_by_level = []
+    observed_top_deltas = set()
 
     # The immediate root of the future base z is charged by z -> z-theta/13.
     for future_digit in range(P):
@@ -161,6 +164,45 @@ def future_digit_referee():
                 "future action did not translate future immediate digit",
             )
             future_action_checks += 1
+
+    # In full natural-extension coordinates the same future action is not
+    # sheet-fixed.  If y=(z+a)/13^L, then
+    #
+    #   y-phi/13^(L+1)
+    #    = ({z-phi/13} + a - 1_{z<phi/13})/13^L  (mod 1).
+    #
+    # The borrow can propagate into the old top digit, so that digit has no
+    # uniform future charge even though the immediate digit of z does.
+    for level in range(1, 4):
+        modulus = P ** level
+        for sheet in range(modulus):
+            old_top, _ = split_sheet(sheet, level)
+            for future_digit in range(P):
+                z = (future_digit + Fraction(2, 5)) / P
+                y = (z + sheet) / modulus
+                for phi in range(P):
+                    epsilon = int(z < Fraction(phi, P))
+                    moved_z = fractional_part(z - Fraction(phi, P))
+                    moved_sheet = (sheet - epsilon) % modulus
+                    moved_y = fractional_part(
+                        y - Fraction(phi, P ** (level + 1))
+                    )
+                    reconstructed = fractional_part(
+                        (moved_z + moved_sheet) / modulus
+                    )
+                    require(moved_y == reconstructed,
+                            "future-action natural-extension borrow failed")
+                    require(
+                        floor_q(P * moved_z)
+                        == (future_digit - phi) % P,
+                        "borrow model lost future immediate-digit charge",
+                    )
+                    moved_top, _ = split_sheet(moved_sheet, level)
+                    observed_top_deltas.add((moved_top - old_top) % P)
+                    future_borrow_checks += 1
+
+    require(observed_top_deltas == {0, P - 1},
+            "old top digit falsely acquired a uniform future charge")
 
     # A finite base-13 word d_1...d_L e exhibits the exact split:
     # d_1 is the old charged top-sheet digit; e is the future immediate digit.
@@ -184,6 +226,8 @@ def future_digit_referee():
 
     return (
         future_action_checks,
+        future_borrow_checks,
+        sorted(observed_top_deltas),
         digit_independence_checks,
         pair_counts_by_level,
     )
@@ -272,7 +316,13 @@ def main():
     action, classification = sheet_action_and_classification_referee()
     carry, covariance = unit_role_carry_referee()
     nonunit = nonunit_erasure_referee()
-    future, independence, pair_counts = future_digit_referee()
+    (
+        future,
+        future_borrow,
+        future_top_deltas,
+        independence,
+        pair_counts,
+    ) = future_digit_referee()
     (
         convolution,
         hostile,
@@ -287,6 +337,9 @@ def main():
     print(f"unit_role_old_action_covariance_checks={covariance}")
     print(f"13_divisible_role_erasure_checks={nonunit}")
     print(f"future_immediate_digit_action_checks={future}")
+    print(f"future_natural_extension_borrow_checks={future_borrow}")
+    print("future_action_old_top_digit_deltas="
+          + ",".join(str(value) for value in future_top_deltas))
     print(f"old_future_digit_independence_checks={independence}")
     print("old_future_pair_multiplicity_levels_1_to_4="
           + ",".join(str(value) for value in pair_counts))
