@@ -2,7 +2,7 @@
 id: THM-2581
 title: "The b-word depth-five owner-clock host and reflection-breaking mixedness"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT REQUESTED.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On the canonical typed row, wholly inside the lawful sigma={b}, K=2,
   r=5 first-collision fibre, the common-base collision-root/owner-clock
   array satisfies both zero-margin laws after centring, is nonzero in all
@@ -31,7 +31,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2581 -- the owner clock lives on the depth-five `b` fibre
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT REQUESTED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2575 produced two adjacent facts on different word fibres: a
 `13 x 7` owner-clock host on the `sigma={a}`, `r=3` packet and an open
@@ -391,4 +391,12 @@ from `lrc14_base_only_bridge_opus_20260728.py`; its hash is recorded in the
 frontmatter.  It rebuilds both word fibres from their Boolean combs and runs
 all positive and hostile controls described above.
 
-**QED (candidate pending independent hostile audit).**
+The independent audit rederived the common-base normalization and both
+marginals, checked the `theta=floor(2y)` law and its gauge/reflection action,
+and verified that the modular minor cover proves nonvanishing in
+`Q(zeta_13)`.  It replayed the ordinary and optimized scripts, stored-output
+comparison, hashes, and bytecode compilation.  The auditor confirmed that
+the theorem stays on the `{b}`, `K=2`, `r=5` fibre and does not identify the
+retained root with THM-2365's still-missing quotient-dual target endpoint.
+
+**QED.**
