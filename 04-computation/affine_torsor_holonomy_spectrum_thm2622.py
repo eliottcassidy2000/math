@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Dependency-free exact referee for THM-2618.
+"""Dependency-free exact referee for THM-2622.
 
 The proof in the theorem is general.  This program exhausts the two live
 finite specializations: Aff(F_13) for the LRC deck and
@@ -99,7 +99,7 @@ def cycle_type(g):
 AFF2 = tuple((a, c) for a in GL2 for c in V4)
 
 
-print("THM-2618 exact affine-torsor holonomy controls")
+print("THM-2622 exact affine-torsor holonomy controls")
 
 c13_hist = Counter()
 c13_fixed_action = Counter()

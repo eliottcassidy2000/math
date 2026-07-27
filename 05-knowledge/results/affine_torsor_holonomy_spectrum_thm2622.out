@@ -1,4 +1,4 @@
-THM-2618 exact affine-torsor holonomy controls
+THM-2622 exact affine-torsor holonomy controls
 C13_affine_maps=156 fixed_section_hist=[(0, 12), (1, 143), (13, 1)]
 C13_fixed_action_hist=[(0, 12), (13, 1)] generator_twisted_unique=143
 V4_GL_size=6 affine_size=24 fixed_section_hist=[(0, 9), (1, 8), (2, 6), (4, 1)]

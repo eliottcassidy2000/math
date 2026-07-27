@@ -8,8 +8,9 @@ status: >
   c is not in im(I-A), otherwise one coset of ker(I-A).  Thus the C13
   spectrum is 0/13 for fixed-action transport and 1 for every nonidentity
   generator twist.  For V4=F2^2, AGL(2,2)=S4 gives the exact section-count
-  spectrum 0^9,1^8,2^6,4^1; its linear quotient GL(2,2)=S3 is precisely
-  quartic-resolvent monodromy.  Double transpositions are invisible pure
+  spectrum 0^9,1^8,2^6,4^1.  For quartic monodromy G<=S4, its image in
+  GL(2,2)=S3=S4/V4 is the cubic-resolvent monodromy (full S3 in the generic
+  full-S4 case).  Double transpositions are invisible pure
   translations, while transpositions and four-cycles have the same
   order-two linear shadow but different affine cocycles.  The D4 subgroup
   has spectrum 0^5,2^2,4^1.  This unifies the LRC C13 ancestry obstruction
@@ -21,10 +22,8 @@ depends_on:
   - THM-2611-principal-c13-bibundle-lift-torsor-and-holonomy-section-obstruction
 related:
   - THM-2612-d4-deck-pole-tax-and-depressed-resolvent-gcd-gate
-script: 04-computation/affine_torsor_holonomy_spectrum_thm2618.py
-output: 05-knowledge/results/affine_torsor_holonomy_spectrum_thm2618.out
-script_sha256: 0800917aea2fe4adbb50b8658439094be3cb35a026b4454fbc6f2554b0ef42d5
-output_sha256: e4850bb49b3e2dc6b4c70350844e55cf39ead520325128bd8013256b7156cfce
+script: 04-computation/affine_torsor_holonomy_spectrum_thm2622.py
+output: 05-knowledge/results/affine_torsor_holonomy_spectrum_thm2622.out
 hash_basis: LF-normalized bytes
 ---
 
@@ -156,8 +155,10 @@ AGL(2,2)=V_4 semidirect GL(2,2) isomorphic S_4.           (14)
 ```
 
 Under (14), the linear part is exactly the action on the three quartic
-pairings, hence the cubic-resolvent monodromy.  The affine translation is the
-lost root-origin sidecar.  Applying (7) gives the complete table:
+pairings.  For any quartic monodromy subgroup `G<=S_4`, its image in this
+`S_3` quotient is the cubic-resolvent monodromy; it is the full `S_3` only in
+the generic/full-`S_4` case.  The affine translation is the lost root-origin
+sidecar.  Applying (7) gives the complete table:
 
 | quartic class | number | linear shadow | affine condition | root sections |
 |:---|---:|:---|:---|---:|
@@ -208,8 +209,8 @@ exclude `D_4`, or close a Keller branch.
 Run
 
 ```text
-python 04-computation/affine_torsor_holonomy_spectrum_thm2618.py
-python -O 04-computation/affine_torsor_holonomy_spectrum_thm2618.py
+python 04-computation/affine_torsor_holonomy_spectrum_thm2622.py
+python -O 04-computation/affine_torsor_holonomy_spectrum_thm2622.py
 ```
 
 The dependency-free companion exhausts all `156` affine maps of `F_13`, all
