@@ -89,7 +89,15 @@ the cover — differing only in rank-type**: LRC's cocycle is **spectral** (valu
 91, the 7⊗13 tensor) while JC's is **geometric** (values in the `S₃`-monodromy of the degree-3 cover).
 If so, "prove the cocycle doesn't cancel around the cycle" is *one* method-target with two arithmetics.
 This is the concrete thing to test next (compare the LRC blocker-cycle holonomy to the JC Keller-flux
-as `H¹` classes). **[SPECULATIVE — no map written yet.]**
+as `H¹` classes). **[SHAPE-CONFIRMED this session; not a literal identity.]** Reading both live
+frontiers: LRC's word-current is explicitly *"a cyclic zero-divisor problem"* with a **first-Bockstein
+sidecar** (the `H¹→H²` connecting map — THM-2337/2356) on the **primitive-91** deepest edge; JC's
+degree-18/22 closures run on **flux (Keller one-form) / pole-descent** on the trigonal cover. So both
+frontiers *are* "nonvanishing of a signed 1-cocycle on a branched cover" — the `H¹` shape is real on
+both sides. They are **not the same class** (LRC's coefficients are the mod-91 character group; JC's
+are the `S₃` monodromy / dyadic tail), which is exactly the spectral-vs-geometric divergence: **same
+cohomological shape, different rank-type coefficients.** The map is not "LRC cocycle = JC cocycle"; it
+is "both are the `H¹`-coboundary question, one with arithmetic coefficients, one with geometric."
 
 ## Bottom line
 
