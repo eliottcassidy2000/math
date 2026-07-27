@@ -1,0 +1,27 @@
+THM-2534 transverse product-torus exact referee
+status=CONDITIONAL-ALGEBRA-VERIFIED
+cyclotomic_product_checks=169
+characteristic_checks=28561
+mixed_characteristic_checks=20736
+tangent_count=1728 transverse_count=19008
+basis_translation_checks=4112784
+gain_triples=220 transverse_triple_checks=2640
+transverse_gain_multiplier_checks=855360
+exclusive_boolean_checks=4
+invariant_factor_checks=8
+packing_cases=r1:42,r2:1764,r3:74088
+packing_first_choice_histogram=r1=1:36,2:6;r2=1:1296,2:444,3:24;r3=1:46656,2:24696,3:2592,4:144
+cyclotomic_pair_packing_checks=1560
+packing_candidates=t_in_{1,...,r+1} sharp_for_r=1,2,3
+galois_group_size=72
+galois_basis_checks=255528
+galois_gain_triples=220 incidences_per_triple=216
+boolean_simultaneous_selection_hostile=L1=x1,L2=x2,L3=x1-x2
+boolean_common_atom=IMPOSSIBLE nonnegative_pack=(2,1) values=(2,1,1)
+flux_invariant_checks=24576
+flux_noninvariant_mismatch_witnesses=4096
+live_three_gain_input=IMPORTED_FROM_THM2533_PROVED_DEPENDENCY
+semantic_arrival_or_owner_loop=NOT_VERIFIED
+anchor_and_zero_row_preservation=NOT_VERIFIED
+checks=5412159
+all_checks=PASS

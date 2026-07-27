@@ -6,6 +6,82 @@
 - `lrc14_cut_bundle_ancestry_pairing_opus_20260727.py` -> matching `.out` [THM-2547 FINITE-EXACT EXTERNAL CONTROL + REFUTED PHYSICAL INTERPRETATION; MISTAKE-281].  The displayed unrelated arrays have `432/432` nonzero pairings in each convention, but no common ancestry, target/owner retention, or live-row bridge was constructed.  The lawful Boolean `delta_2` control has positive service and full primitive root/cut support yet exactly `108/432` zeros in each convention, proving non-universality of the pairing.  Stored transcript: `lrc14_cut_bundle_ancestry_pairing_opus_20260727.out`.
 - `keller_integral_coordinate_parity_opus_20260727.py` -> matching `.out` [THM-2546; PROVED]. Integral-coordinate dichotomy and exact Jelonek-slice law for the sporadic Keller map: with `r=b-y`, the global identities `P_r=27a^2c-18ar+3br^2-2r^3=0`, `x(r^2-br+3a)=r`, and `P_r'=-6(r^2-br+3a)` make the sign convention explicit; an exact global annihilator `Q_z(W)=8W^3+q_2W^2+6LS_zW+LT_z` proves z-integrality (upgrading the former five-target sample), so x is the unique escape coordinate. On `L=0,q!=0`, `P_r=-2(r-r_0)^2(r-r_1)` and `D_r(r_0)=0`; simultaneously `Q_z=W^2(8W+q_2)`, so the double `(r,z)=(r_0,0)` is the compactified shadow of two escaping x-sheets, not two affine points. Complete fibre law: for `p=4-3bc!=0`, the unique survivor is `(2c/p, b-3c(b^2-12a)/(2p), -(9/8)(b^2p-2(b^2-12a)))`; `p=0` is exactly the omitted curve and has empty fibre. The `a=0` coordinate collision, `q=0` triple-shadow split, z-triple curves, generic witness `(2/27,1,1)`, and `c=0` boundary are separately hostile-audited. Pointwise parity rigidity still releases HYP-9030 test (ii).
 - `thm2542_audit_spotcheck_opus.py` -> matching `.out` [THM-2542 INDEPENDENT HOSTILE AUDIT: SURVIVES-WITH-REPAIRS]. From-scratch spot-check of the seven-chart Cech class: overlap maps constant translations (6,552 cases), all 35 triple overlaps empty per eta (nerve = 7-cycle), holonomy = fixed-point-free translation by 7(s-t) (936 triples), exhaustive 13^6 coboundary search (class never a coboundary), full AGL_1(F_13) gauge hostiles (13,104 exhaustive + 458 random), refinement/cover chase (nontrivial for n=1..12, trivializes exactly at n=13), char-0 cyclotomic certificates. Two one-line repairs: eq (11b) missing rep(.), chart domains must be declared {k, k+eta} (else the nerve collapses and H^1 = 0).
+- `lrc14_positive_kakeya_boundary_transform_thm2534.py` -> matching `.out`,
+  with independent referee
+  `lrc14_transverse_product_torus_boundary_referee_thm2534.py` -> matching
+  `.out` [THM-2534 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For a
+  Boolean thirteen-root event, every directed occupied-to-empty boundary
+  `K_tau=f(1-P_tau f)` is the positive matched-endpoint scalarization of the
+  cyclic-tournament derivative.  The twelve-slope bank has exact Crofton sum,
+  reconstructs the root mask from its mean, gives all primitive colours on
+  every nonconstant fibre, and is linearly equivalent to the full anchored
+  deep-Gram matrix.  Its edge antisymmetry is an exact gradient, not a
+  tournament circulation.  On the product root/target torus, every transverse
+  shift retains THM-2533's three gains and a finite positive combination of
+  exclusive atom boundaries retains all three selected frequencies, yielding
+  `216` Galois incidences; the characteristic tangent kills its gain exactly.
+  The primary referee exhausts `2,623,999` identities over all `98,280`
+  nonconstant mask--slope pairs; the independent referee exhausts `5,412,159`
+  product-torus checks.  Normal/optimized/stored transcripts match.  Hashes
+  are `3f655868...6af4` / `28037c20...c9d` and
+  `4ead051b...80b` / `e8c98cd7...125`.  The transverse sum need not retain
+  the deep anchor, and no semantic arrival or owner loop follows.
+- `lrc14_owner_weighted_collision_phase_thm2533.py` -> matching `.out`
+  [THM-2533 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  A delayed
+  `1/13`-periodic owner commutes with every root projector, so all twelve
+  positive collision energies on each of the `165` live Boolean events lift
+  to linear owner-attached phase ladders with finite grouped-jump Prony
+  bounds.  Reapplying the marked-triangle carrier gives twelve owner-marked
+  `91`-unit incidences.  Every lawful mixed table channel has at least three
+  gains and therefore `216` owner-attached phase ladders and three nonzero
+  slope-labelled Radon-difference currents; the eventwise predecessor has all
+  `72` strip and `5,184` cut modes.  Address and terminal/semantic arrival are
+  not recovered.  Hashes are `b811ed19...f41` / `add3a2d6...096`.
+- `lrc14_cyclic_tournament_cayley_derivative_thm2532.py` -> matching `.out`
+  [THM-2532 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The converse
+  aligned-Radon difference is the regular cyclic-tournament Cayley derivative
+  `C=(P-I)(P+I)^(-1)` and reconstructs the centred predecessor profile.  The
+  referee verifies its spectrum, characteristic polynomial, transitive
+  switching, unit cofactors, sawtooth inverse, Smith form
+  `(1^11,13)`, image congruence, and the exact algebra split
+  `Q[C]=Q[L] direct-sum C Q[L]`: the `chi_7` Hamilton algebra is precisely the
+  seven-dimensional converse-even quotient and the odd module has dimension
+  six.  The chart orientation still needs semantic typing.  Hashes are
+  `4db74967...68e` / `52d07d6f...222d`.
+- `lrc14_prime_necklace_boundary_selector_thm2531.py` -> matching `.out`
+  [THM-2531 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  A covariant
+  necklace marker selects one actual occupied-to-empty guard boundary on each
+  nonconstant root mask.  On the deep comb it becomes a quadratic Gram
+  coordinate and an occupied-to-excluded-target skew star with all twelve
+  primitive colours.  The excluded target is not semantic arrival.  Hashes
+  are `386ca6f9...693` / `9f8eb5ee...276`.
+- `lrc14_anchored_deep_gram_skew_refinement_thm2530.py` -> matching `.out`
+  [THM-2530 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The lawful
+  target-anchored deepest-comb Gram matrix lies in an exact lossless `23`-ray
+  singleton/adjacent-pair cone.  Its Hilbert anticommutator is an invertible
+  skew ordered-root lift, and target drift refines to adjacent-double drift or
+  invariance of the full path-mask law.  Hashes are `a5d4ff3a...192` /
+  `9a1e01ec...b98`.
+- `lrc14_deep_comb_odd_consumer_thm2529.py` -> matching `.out` [THM-2529
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The actual deep comb has
+  only singleton or adjacent-pair fibres, reducing the oriented cut to the
+  exact positive consumer `2+5d(13cx)` and forcing all twelve root modes.
+  A comb-compatible zero-target hostile shows that this alone cannot create
+  target charge.  Hashes are `ec8912b1...c9a` / `7d26ec6d...303`.
+- `lrc14_intrinsic_path_joint_autocorrelation_thm2528.py` -> matching `.out`
+  [THM-2528 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Retaining the
+  two convolution stages realizes every live odd coordinate as a difference
+  of disjoint Boolean four-arm path unions on the same owner/word/deep
+  ancestry object.  Joint autocorrelation independently scalarizes all `72`
+  mixed and `5,184` cut norm modes.  It does not identify source time with
+  arrival time.  Hashes are `335dadbc...4ac` / `d296c095...3ec`.
+- `lrc14_owner_weighted_odd_bank_thm2527.py` -> matching `.out` [THM-2527
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Rationality and
+  `Phi_13` irreducibility turn positive total delayed-owner drift into all
+  twelve weighted root colours on the same integrand.  The guard-selected
+  odd transform is lossless, and one fixed coordinate has the sharp positive
+  Boolean cut floor `13/42`; its layers do not yet name a semantic pair.
+  Hashes are `c7ec707e...e49` / `9fccaf4e...6d6`.
 - `lrc14_affine_skew_orientation_boundary_thm2526.py` -> matching `.out`
   [THM-2526 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The full
   `AGL(1,F_13)`-invariant skew sector is zero, but two covariant survivors
@@ -52,11 +128,18 @@
   symmetric circulant on the real `F_13` augmentation module.  Its minimal
   polynomial is `t^6-39t^4+299t^2-325`, its characteristic polynomial is the
   square, and its signature is `(6,6)`.  Dilation by five is an anti-isometry;
-  centred deltas and explicit rational three-spaces are isotropic.  The exact
+  centred deltas and explicit rational three-spaces are isotropic.  An
+  independent Witt referee proves that the rational Witt index is exactly
+  five, leaving one anisotropic binary plane.  The canonical derived partner
+  `q=A_tau p` satisfies
+  `beta_tau(p,q)=||A_tau p||^2>(13/10)||p||^2`, hence exceeds
+  `(169/10)D_13` on the live THM-2521 profile.  The exact
   Fano product is `A_1 A_2 A_4=5C_13`, where `C_13` is symmetric rather than a
   tournament operator.  Normal/optimized/stored transcripts match; hashes are
-  `9ef9e16d...04b6` / `e5a61f9b...787d`.  Nondegeneracy of the polarization
-  does not force a nonzero diagonal or supply Boolean orientation.
+  `9ef9e16d...04b6` / `e5a61f9b...787d`; independent hashes are
+  `1c79b135...b92f` / `32ce81b7...5dc4`.  The coercive partner is signed;
+  nondegeneracy of the polarization does not force a nonzero diagonal or
+  supply Boolean orientation.
 - `lrc14_intrinsic_collision_depth_thm2522.py` -> matching `.out` [THM-2522
   PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Perron replica defects
   give the unique orthogonal base-13 Fourier-valuation decomposition; digit
@@ -130,8 +213,11 @@
   fixed owner clock, but neither branch yet has the required owner loop.  The
   companion checks `7,500` integer, `6,734` rational-height, `60,000` local,
   `58` triple-BV, `182` delayed-table, `78` Pythagorean, and all `64`
-  zero-or-norm profiles, plus exact gauge/minimality hostiles.  Hashes are
-  `c9949791...b5d7` / `ceab24ad...2826` / `904c8e31...fec0`
+  zero-or-norm profiles, plus exact gauge/minimality hostiles.  The refined
+  source-covariant diagonal scheduler sends row `ell` to clock slot
+  `d=-ell` and retains its cubic signal, but still supplies neither one common
+  clock nor a transported future ancestry sheet.  Hashes are
+  `7eb9cab2...44c` / `a2303964...91c` / `904c8e31...fec0`
   (script/output/Lean).
 - `lrc14_rational_jump_crt_owner_forcing_thm2520.py` -> matching `.out`
   [THM-2520 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  After the

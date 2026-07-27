@@ -1188,7 +1188,7 @@ The proved maps and their first losses are:
 | THM-2522 event collision energy | invariant-multiplier identity (5) | twelve phase ladders on one Boolean event | terminal component and relation address |
 | the same late-owner event inside its THM-2349 carrier | abstract carrier triangle (30a)--(30f) | twelve owner-marked 91-unit deepest-comb incidences | target character, terminal component, unoriented quotient edge |
 | mixed lawful table channel | guard Vandermonde + Galois + phase-lifted Cayley derivative | at least three gains and 216 phase ladders; three slope-labelled nonzero aligned-Radon differences per channel; flat energy gives 864, nonflat gives a separate odd energy contrast | Boolean target/terminal intertwiner, THM-2508 cut/carry identification, prescribed gain, canonical atom |
-| eventwise Boolean predecessor | root-fibre map (68e)--(68g) + THM-2521 | rational nonuniform owner/terminal-word-attached `K_14` potential with all 72 pointwise mixed and 5,184 Hilbert cut modes | noncancelling scalar target twist and Boolean output |
+| eventwise Boolean predecessor | root-fibre map (68e)--(68g) + THM-2521 | rational nonuniform owner/terminal-word-attached `K_14` potential with all 72 pointwise mixed and 5,184 Hilbert cut modes | noncancelling scalar twist and a Boolean output proved to intertwine this direct phase with semantic target/arrival data |
 | one phase ladder | grouped endpoint current (15) | bounded positive integer lift | common lift across colours or gains |
 | complete diagonal energy bank | squared magnitude | collision power data | root address, by (69)--(74) |
 
