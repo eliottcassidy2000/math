@@ -26,8 +26,8 @@ related:
   - THM-2563-paired-dipole-deep-target-corner-and-partial-bare-boundary
 script: 04-computation/lrc14_six_tooth_v00_tomography_thm2564.py
 output: 05-knowledge/results/lrc14_six_tooth_v00_tomography_thm2564.out
-script_sha256: 2840072b6160c3b00f2bf26621e1caa2ed8ecc666a01f891e16cccafef26c85b
-output_sha256: b1b6fd4b02ab2bc4af87e4c0b99ffad9325f78f4f5a5c1ba8a267047670c0660
+script_sha256: ab74dfe96998ab2f5efef0b96562c5b87a504a1b6e2d5ab44a2f7b6bcb0bd4b8
+output_sha256: b17d69e9c9183b0e2a1394f5bc4fc6d4e2a5cde532fc80e83a55336d3da6fc29
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -345,9 +345,29 @@ Then exactly
 T_tau S_sigma=T_(tau+sigma).                                 (26)
 ```
 
-Thus the tooth slopes form a genuine affine chart atlas once the section is
-fixed.  But cyclically moving the owner/clock row crosses the section seam.
-For a row shift `c`,
+This identity lives on the ambient **row-zero** strip.  It is not an
+automorphism of `V_00`: the shear generally destroys the column margin.  For
+the rectangle
+
+```text
+e_(0,0)-e_(0,12)-e_(6,0)+e_(6,12),
+```
+
+`S_1` has column-margin vector
+
+```text
+(1,0,0,0,0,1,-1,0,0,0,0,0,-1).                              (26a)
+```
+
+The coordinate changes between two six-banks on `V_00` are the abstract
+rational isomorphisms
+
+```text
+T_(S') T_S^(-1),                                             (26b)
+```
+
+not the shears (25).  Cyclically moving the owner/clock row does preserve
+both margins, but crosses the section seam.  For a row shift `c`,
 
 ```text
 iota(k+c mod 7)=iota(k)+c-7 q_c(k),                           (27)
@@ -369,10 +389,10 @@ It is not a common root translation.  For `c=tau=1`, the wrap vector is
 and the companion gives an exact doubly centered witness whose rotated
 tooth is not any cyclic translate of the original tooth.
 
-Equations (26)--(29) are the precise section-holonomy boundary.  Six charts
-glue perfectly as rational coordinates on the **signed** vector space, but
-the gluing is not equivariant under the physical cyclic owner action unless
-the ordered cut and its carry are retained as sidecars.
+Equations (26)--(29) are the precise section-holonomy boundary.  Six-bank
+coordinates glue abstractly on the signed space, but the tempting geometric
+shear already leaves that space, and cyclic owner motion introduces the
+nonconstant wrap.  A physical gluing must retain the ordered cut and carry.
 
 ## 7. Two sharp composition no-goes
 
@@ -425,8 +445,9 @@ byte-for-byte.  The dependency-free companion constructs the `72`
 rectangle basis, verifies every bank in (24), checks rank `51` modulo
 thirteen for all `924` six-banks, computes three independent `72 x 72`
 Bareiss determinant controls equal to `13^21`, exhausts the `792` literal
-trace hostiles and all their good root colours, checks all `169` ordered-set
-shear identities, and exhibits the nonconstant seam carry.
+trace hostiles and all their good root colours, checks all `169` ambient
+ordered-set shear identities, exhibits their second-margin hostile, and
+verifies the nonconstant seam carry.
 
 The theorem reconstructs the whole rational interaction, determines its
 integral index, and identifies the exact chart holonomy.  It does not make a

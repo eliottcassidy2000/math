@@ -285,7 +285,16 @@ for sigma in range(P):
             tooth(moved, tau) == tooth(first_witness, (tau + sigma) % P),
             "nonaffine chart shear failed",
         )
-print("  ordered-set shear sends T_tau to T_(tau+sigma): 169/169 PASS")
+print("  ambient ordered-set shear sends T_tau to T_(tau+sigma): 169/169 PASS")
+
+shear_hostile = shear(rectangle(0, 0), 1)
+column_margin = [sum(shear_hostile[k][v] for k in range(Q)) for v in range(P)]
+expected_margin = [1, 0, 0, 0, 0, 1, -1, 0, 0, 0, 0, 0, -1]
+require(column_margin == expected_margin, "shear margin hostile drifted")
+require(not is_v00(shear_hostile), "ambient shear unexpectedly preserved V00")
+require(tooth(shear_hostile, 0) != [0] * P, "shear margin loss became invisible")
+print("  S_1 rectangle column margin: " + " ".join(map(str, column_margin)))
+print("  ambient shear does not preserve V00; bank transitions use abstract inverses")
 
 # Cyclic row translation crosses the chosen representative seam at k=6.
 c = 1

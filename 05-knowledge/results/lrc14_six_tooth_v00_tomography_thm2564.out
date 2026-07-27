@@ -13,10 +13,12 @@
   minimum support theorem: every nonzero interaction has >=7 good slopes
 
 == chart shear and section-holonomy boundary ==
-  ordered-set shear sends T_tau to T_(tau+sigma): 169/169 PASS
+  ambient ordered-set shear sends T_tau to T_(tau+sigma): 169/169 PASS
+  S_1 rectangle column margin: 1 0 0 0 0 1 -1 0 0 0 0 0 -1
+  ambient shear does not preserve V00; bank transitions use abstract inverses
   c=1 row rotation has wrap q=(0,0,0,0,0,0,1)
   induced -7*tau*q defect is nonconstant and physically nonaffine
   exact witness after rotation is not any cyclic root translate: PASS
 
-explicit checks: 388418
+explicit checks: 388421
 ALL EXACT CHECKS PASSED
