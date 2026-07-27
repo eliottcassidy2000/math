@@ -7,13 +7,15 @@ nonabelian_norm=PASS order=6,5,4,3,2,1,0 moving_cusps=(5, 11, 13, 4, 10, 7, 8) r
 affine_chart=C:q->q+1 owner_cycles=((0, 4, 6, 10, 7, 5, 3), (1, 8, 13, 2, 9, 12, 11)) owner_8->inf->2
 element_orders=1:1,2:91,3:182,6:182,7:468,13:168 order91=ABSENT
 order7_trace_square_classes=t3:9x156,t5:12x156,t6:10x156 exhaustive=468
+general_pair_closure_exhaustion=468_order7x12_exponentsx2_orientations coordinates=trace,gamma,orientation PASS
 norm_closure_t3=F:6,8,9,10,11 R:2,3,4,5,7 union:2,3,4,5,6,7,8,9,10,11
 norm_closure_t5=F:2,8,10,11,12 R:1,2,3,5,11 union:1,2,3,5,8,10,11,12
 norm_closure_t6=F:1,3,9,11,12 R:1,2,4,10,12 union:1,2,3,4,9,10,11,12
 norm_closure_total_union=1,2,3,4,5,6,7,8,9,10,11,12 orientation_R(a)=F(-a)^-1
 norm_signature_per_state=identity:5,unipotent_nonsquare:2,order3:2,order6:2,order2:1
-norm_selector_cover_number=3 minimal=3F+3R+6F;3F+3R+6R trace5=REDUNDANT
-norm_trace_orientation_physical_selector=NOT_CONSTRUCTED
+normalized_pair_norm_selector_cover_number=3 minimal=(U,g3,F)+(U,g3,R)+(U,g6,F);(U,g3,F)+(U,g3,R)+(U,g6,R) trace5=REDUNDANT gamma=-1
+root_scale_hostile=g3prime:(0,4,3,3) gamma=3 same_order7_class=YES same_forward_order=YES DUD^-1=U^4 closure_F:1,5,6,10,11!=6,8,9,10,11
+norm_connection_coordinates=trace,orientation,root_scale_gamma physical_selector=NOT_CONSTRUCTED
 centralizers=C7:7,C13:13 commuting_nontrivial_C7xC13_pairs=0
 root_normalizer=78=C13:13*C6:6 frame_conjugation_exponents=1,3,4,9,10,12
 homogeneous_carrier=G/H~G/U:84 projective_fibres=14x6 left_A_orbits=12x7 right_frame_orbits=14x6
@@ -24,4 +26,4 @@ anharmonic_stabilizers=2,2,1,3 transverse_split=3+6+2
 barning_mod2=swap,swap,identity ternary_arity_is_not_C3
 farey_hostile_defects=(10, -449, 711) safe->unsafe->safe
 physical_common_LRC_carrier=NOT_CONSTRUCTED
-ALL_CHECKS=PASS checks=260
+ALL_CHECKS=PASS checks=275

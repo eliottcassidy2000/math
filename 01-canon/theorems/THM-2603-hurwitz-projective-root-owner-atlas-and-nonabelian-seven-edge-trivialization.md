@@ -2,18 +2,21 @@
 id: THM-2603
 title: "Hurwitz projective root-owner atlas and nonabelian seven-edge trivialization"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE; INDEPENDENT HOSTILE AUDIT REQUESTED;
-  not yet promoted into the proved dependency graph.  There is an
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  There is an
   explicit surjective C_2*C_3 representation on P^1(F_13) in which the
   product A of the free-factor generators has order seven and two seven-point
   orbits, while their commutator C has order thirteen and one thirteen-point
   orbit plus one fixed point.  The transition-dependent product of the seven
   owner-conjugates of C, in the stated descending order, is the identity even
   though C^7 is nontrivial.  In the affine root chart, exhaustive ordered
-  norms for representatives of all three order-seven conjugacy classes close
-  on five nonzero root exponents per orientation; the six closure sets cover
-  all of F_13^*, and their sharp selector cover number is three.  Trace and
-  orientation are extra connection data, not physical labels supplied here.
+  norms for the six fixed normalized-pair states `(U,g_t,orientation)`, with
+  `t in {3,5,6}` and lower-left coordinate `gamma=-1`, close on five nonzero
+  root exponents each; their closure sets cover all of F_13^*, and their sharp
+  selector cover number is three.  Conjugacy class and orientation alone do
+  not determine closure: an exact diagonal-conjugacy hostile changes
+  `gamma` and the closure locus while preserving the order-seven class and
+  product order.  Trace, orientation, and root scale are extra connection
+  data, not physical labels supplied here.
   PSL_2(F_13) has no element of order 91 and the
   C_7 and C_13 centralizers are exactly those cyclic groups, so this closure
   is genuinely nonabelian and is not an internal C_91.  The homogeneous
@@ -45,17 +48,18 @@ related:
   - THM-2601-linear-bockstein-sheet-coordinate-and-nonlinear-target-monodromy
 script: 04-computation/lrc14_hurwitz_projective_root_owner_atlas_thm2603.py
 output: 05-knowledge/results/lrc14_hurwitz_projective_root_owner_atlas_thm2603.out
-script_sha256: ca6ea3b94811845395eaeb74c1352c13da41153d35c23dfa63ed70137faa8817
-output_sha256: 6006c4f3161de03a5471eaedcc247ad14f1118be8b2039b778d3b5f7d4175d47
+script_sha256: 8e941ffb124eae3f3ded782708626255b58f5e736d8670fe0d391eed4c2ac905
+output_sha256: 739982b852acf7518a71ce792d4fca6f153d471c5d25136ae3eb3dd6d8c252f6
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2603 -- one projective object carries the root and owner clocks
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE; INDEPENDENT HOSTILE AUDIT
-REQUESTED.**  Nothing in this file is available as a proved dependency until
-the exact companion and proof text pass independent hostile audit and this
-banner is explicitly promoted.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The audit found
+and repaired one normalization overclaim: the six-state ordered-norm table is
+an atlas of the fixed pairs `(U,g_t)`, not an invariant of the order-seven
+conjugacy class.  The repaired theorem retains the root-scale coordinate and
+includes the minimal exact witness where forgetting it changes the answer.
 
 The post-THM-2593 frontier has two coprime cyclic coordinates:
 
@@ -291,17 +295,18 @@ the exact abstract shape of a genuinely mixed correction: the transition
 must know the owner chart and rotate the root subgroup.  A physical use would
 need to realize (24) on one common positive ancestry carrier.
 
-### The complete trace-and-orientation norm atlas
+### The normalized-pair trace-and-orientation norm atlas
 
-The single relation (19) sits inside a larger exact family.  Work in the
-affine root chart (14), put
+The single relation (19) sits inside a larger exact family, but its
+normalization is part of the data.  Work in the affine root chart (14), put
 
 ```text
        [1 1]                 [ 0 1]
 U  =  [0 1],        g_t  =  [-1 t],       t in {3,5,6},    (24a)
 ```
 
-and, for `a in F_13^*`, define
+Thus every displayed pair `(U,g_t)` has the same lower-left owner coordinate
+`gamma=-1`.  For `a in F_13^*`, define
 
 ```text
 H_(t,k)(a)=g_t^k U^a g_t^(-k),
@@ -316,10 +321,23 @@ N_t^F(a)=(U^a g_t)^7 g_t^(-7),
 N_t^R(a)=g_t^7(g_t^(-1)U^a)^7.                            (24b1)
 ```
 
-Moreover,
+More generally, if
 
 ```text
-tr(U^a g_t)=t-a,              tr(g_t^(-1)U^a)=t+a.        (24b2)
+g=[alpha beta; gamma delta],
+```
+
+then direct multiplication gives the load-bearing relative-position law
+
+```text
+tr(U^a g)=tr(g)+a gamma,
+tr(g^(-1)U^a)=tr(g)-a gamma.                              (24b2)
+```
+
+For the normalized representatives `g_t`, this specializes to
+
+```text
+tr(U^a g_t)=t-a,              tr(g_t^(-1)U^a)=t+a.        (24b2a)
 ```
 
 The noncentral determinant-one matrices of projective order seven have
@@ -329,7 +347,7 @@ precisely the six traces
 {+-3,+-5,+-6}.                                             (24b3)
 ```
 
-The two moving matrices in (24b2) are visibly noncentral.  Since `g_t^7`
+The two moving matrices in (24b2a) are visibly noncentral.  Since `g_t^7`
 is central, (24b1) proves the exact criterion
 
 ```text
@@ -337,9 +355,10 @@ N_t^F(a)=1 iff t-a in {+-3,+-5,+-6},
 N_t^R(a)=1 iff t+a in {+-3,+-5,+-6}.                       (24b4)
 ```
 
-Thus the closure atlas is a trace-intersection theorem.  The exhaustive
-companion independently recomputes every product and then supplies the finer
-conjugacy classification below.
+Thus the closure atlas is a trace-intersection theorem **after fixing the
+relative pair normalization `gamma=-1`**.  The exhaustive companion
+independently recomputes every product and then supplies the finer conjugacy
+classification below.
 
 Each `g_t` has projective order seven.  Projective trace is defined only up
 to sign, so the invariant is trace square.  The three values are
@@ -349,16 +368,53 @@ t=3: tr^2=9,       t=5: tr^2=12,       t=6: tr^2=10.      (24c)
 ```
 
 Their conjugacy classes have size `156`, are pairwise disjoint, and exhaust
-all `468` elements of order seven in `G`.  Thus (24c) is one representative
-of each order-seven projective conjugacy class, not three arbitrary traces.
+all `468` elements of order seven in `G`.  Thus (24c) chooses one normalized
+representative of each order-seven projective conjugacy class.  This class
+exhaustion certifies the three owner types; it does **not** make the closure
+table a class invariant relative to a separately fixed `U`.
 
 Exhaustion of all twelve nonzero exponents gives the identity loci
 
-| trace | forward closure `N_t^F(a)=1` | reverse closure `N_t^R(a)=1` | union |
+| normalized pair | forward closure `N_t^F(a)=1` | reverse closure `N_t^R(a)=1` | union |
 |---|---|---|---|
-| `3` | `{6,8,9,10,11}` | `{2,3,4,5,7}` | `{2,3,4,5,6,7,8,9,10,11}` |
-| `5` | `{2,8,10,11,12}` | `{1,2,3,5,11}` | `{1,2,3,5,8,10,11,12}` |
-| `6` | `{1,3,9,11,12}` | `{1,2,4,10,12}` | `{1,2,3,4,9,10,11,12}` |
+| `(U,g_3)`, `gamma=-1` | `{6,8,9,10,11}` | `{2,3,4,5,7}` | `{2,3,4,5,6,7,8,9,10,11}` |
+| `(U,g_5)`, `gamma=-1` | `{2,8,10,11,12}` | `{1,2,3,5,11}` | `{1,2,3,5,8,10,11,12}` |
+| `(U,g_6)`, `gamma=-1` | `{1,3,9,11,12}` | `{1,2,4,10,12}` | `{1,2,3,4,9,10,11,12}` |
+
+The root-scale coordinate cannot be quotiented away.  Take
+
+```text
+D=diag(2,7),             D U D^(-1)=U^4,
+g'_3=D g_3 D^(-1)=[0 4;3 3].                              (24c1)
+```
+
+Then `g'_3` is conjugate to `g_3`, has the same projective order-seven class,
+and uses the same forward product ordering.  But its lower-left coordinate is
+`gamma=3`, so (24b2) changes, and exact multiplication gives
+
+```text
+{a:N_(U,g'_3)^F(a)=1}={1,5,6,10,11}
+                    !={6,8,9,10,11}
+                     ={a:N_(U,g_3)^F(a)=1}.               (24c2)
+```
+
+There is no contradiction with simultaneous conjugacy: `D` also sends the
+root generator from `U` to `U^4`.  The false move exposed by (24c2) is to
+conjugate the owner element while silently freezing the root generator and
+its exponent scale.  Consequently the **identity-closure selector** needs the
+normalized relative pair.  For this predicate, (24b2)--(24b4) compress that
+pair in the fixed affine chart to the three coordinates
+
+```text
+(trace, product orientation, root scale/lower-left gamma). (24c3)
+```
+
+The companion checks this compression exhaustively for all `468`
+order-seven projective owner matrices, all twelve nonzero exponents, and both
+product orientations.  It also verifies that `gamma` is nonzero for every
+order-seven owner relative to the fixed `U`; otherwise an upper-triangular
+element would lie in the order-`78` projective Borel, which has no
+seven-torsion.
 
 The orientation dependence is structural rather than a table accident:
 
@@ -382,8 +438,9 @@ There are two order-thirteen conjugacy classes, represented by `U` and
 `U^2`; each has size `84`.  Every nonidentity order-thirteen output in (24e)
 lies in the nonsquare class represented by `U^2`.  The order-two, order-three,
 and order-six outputs lie in their respective unique conjugacy classes.
-Thus trace changes *which* exponents close, but not the per-state conjugacy
-census.
+Thus, within the six normalized states, trace changes *which* exponents close
+but not the per-state conjugacy census.  No such class-invariance claim is
+made after changing `gamma`.
 
 The original relation is present with its exact pair data.  For
 
@@ -402,26 +459,29 @@ This is simultaneous conjugacy of the pair `(A',U)`, including the root
 rescaling.  Conjugating only the order-seven element while silently keeping
 the root chart fixed would discard load-bearing relative-position data.
 
-Across all six trace/orientation states, the closure loci cover every
-`a in F_13^*`.  The cover has a sharp selector invoice.  The two trace-three
-sets are disjoint and partition `{2,...,11}`, missing only `{1,12}`; either
-trace-six orientation supplies both missing exponents.  Exhaustion of the
-`2^6` state subsets gives
+Across all six **normalized-pair/orientation** states, the closure loci cover
+every `a in F_13^*`.  The cover has a sharp selector invoice.  The two
+`(U,g_3)` orientations are disjoint and partition `{2,...,11}`, missing only
+`{1,12}`; either `(U,g_6)` orientation supplies both missing exponents.
+Exhaustion of the `2^6` normalized state subsets gives
 
 ```text
 minimum universal state-cover size = 3,
-minimal covers = {3F,3R,6F} and {3F,3R,6R}.                (24g)
+minimal covers = {(U,g_3,F),(U,g_3,R),(U,g_6,F)}
+              and {(U,g_3,F),(U,g_3,R),(U,g_6,R)}.        (24g)
 ```
 
 No two connection states suffice, and trace five is redundant for universal
 exponent coverage.  This is stronger than the bare union statement, but it
 is also a sharper physical warning.  To use (24g), an LRC construction must
-produce a typed selector choosing trace class and orientation from the
-row/root transition.  Neither the Boolean packet nor the root sheet currently
-supplies those two coordinates.  Choosing a closing state after inspecting
-`a` would add an unlicensed sidecar, not prove a fixed connection.  The exact
-atlas therefore gives a three-state connection target and obstruction invoice;
-it does not yet trivialize the physical holonomy.
+produce a typed selector choosing a normalized relative pair, hence trace,
+orientation, and root scale, from the row/root transition.  Neither the
+Boolean packet nor the root sheet currently supplies those three coordinates.
+Choosing a closing state after inspecting `a` would add an unlicensed sidecar,
+not prove a fixed connection.  The exact atlas therefore gives a sharp
+three-state target **inside the specified `gamma=-1` normalization** and a
+stronger obstruction invoice outside it; it does not yet trivialize the
+physical holonomy.
 
 ## 4. Why this is not a hidden C91
 
@@ -566,14 +626,14 @@ Likewise `14*6` suggests projective target direction times nonzero owner
 colour, but identifying `B/H` with `F_7^*` requires a chosen `C_6`
 isomorphism and supplies no Boolean incidence.
 
-There is a second exact near-match with THM-2590 and the verified candidate
-THM-2601.  After choosing one frame over one affine point and an isomorphism
+There is a second exact near-match with THM-2590 and the proved THM-2601.
+After choosing one frame over one affine point and an isomorphism
 `B/H congruent F_7^*`, the big cell in (27j) may be indexed by
 `(q,kappa) in F_13 x F_7^*`; left `C` translates `q` and right `R` rotates
-the frame.  THM-2601's verified provisional calculation, however, finds that
+the frame.  THM-2601, however, proves that
 the thirteen physical coefficient sheets `Y_q` admit a separating linear
 scalar but that target successor is a degree-eleven permutation in that
-scalar, and its candidate proof rules out every linear functional that would
+scalar, and rules out every linear functional that would
 make successor affine.  Therefore the comparison from the
 Bockstein carrier to (27g) cannot be inferred from the shared `13*6`
 indexing.  A lawful comparison must be nonlinear in the coefficient factor
@@ -744,7 +804,7 @@ The exact maps and losses are:
 | `C=<[x,y]>` | root-deck model | a thirteen-cycle and affine translation chart | actual THM-2542 root label on one Boolean carrier |
 | `A=<xy>` | owner-clock model | two seven-cycles | actual THM-2584 owner-cell/rail identification |
 | conjugates `A^i C A^-i` | mixed transition cochain | exact seven-edge closure (19) | positivity, ancestry, word, theta, target role, Bockstein unit |
-| ordered norms `(t,orientation,a)` | sharp three-state cover of a six-state connection atlas | every nonzero root exponent closes in some state; sharp selector cover number three | typed trace/orientation selector; one fixed physical connection |
+| normalized ordered norms `(U,g_t,orientation,a)` with `gamma=-1` | sharp three-state cover of the specified six-state connection atlas | every nonzero root exponent closes in some normalized state; sharp selector cover number three | typed relative pair, including trace, orientation, and root scale; one fixed physical connection |
 | affine patch of `P^1` | THM-2585/2593 thirteen-section atlas | translation orbit after a chosen affine comparison | the fourteenth projective boundary section and owner covariance |
 | anharmonic `S_3` | THM-2329 rerootings | exact `3+3+6+2` gain stratification | no transport out of the proved physical boundary orbit |
 
@@ -784,11 +844,12 @@ zero holonomy, exactly as THM-2591 already proves for every root selector.
 
 ## 10. Scope and exact verification
 
-The exact candidate object is
+The proved exact object is
 
 ```text
 (P^1(F_13); Hurwitz generators x,y; owner A; root C;
- moving-cusp conjugates C_i; full trace/orientation ordered-norm atlas;
+ moving-cusp conjugates C_i; normalized-pair ordered-norm atlas and
+ root-scale hostile;
  homogeneous frame bundle G/<C>;
  anharmonic S_3 orbit atlas).                              (45)
 ```
@@ -811,10 +872,12 @@ open.
 The dependency-free exact companion enumerates every determinant-one matrix
 modulo `+-I`, reconstructs the generated subgroups, cycle actions, conjugate
 products, the symbolic norm telescopes and moving-trace criterion, all six
-trace/orientation tables and their sharp set-cover invoice, conjugacy-class
-census, element-order census, centralizers, normalizer, all `84` cosets and
-their three commuting orbit decompositions, and the anharmonic orbits, then
-checks the integral Barning hostile.  Reproduce with
+normalized-pair/orientation tables and their sharp set-cover invoice, the
+all-`468` pair-coordinate closure exhaustion, diagonal-conjugacy root-scale
+hostile, conjugacy-class census, element-order census, centralizers,
+normalizer, all `84` cosets and their three commuting orbit decompositions,
+and the anharmonic orbits, then checks the integral Barning hostile.  Reproduce
+with
 
 ```bash
 python3 04-computation/lrc14_hurwitz_projective_root_owner_atlas_thm2603.py
@@ -827,7 +890,7 @@ Both executions must byte-match
 05-knowledge/results/lrc14_hurwitz_projective_root_owner_atlas_thm2603.out.
 ```
 
-The script performs `260` exact assertions.  The group, centralizer, and
+The script performs `275` exact assertions.  The group, centralizer, and
 normalizer checks range over all `1092` projective matrices; the homogeneous
 checks construct all `84` cosets of size thirteen and exhaust their left and
 right actions; the base action checks range over all fourteen projective

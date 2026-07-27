@@ -321,10 +321,12 @@ def main() -> None:
     check(order_census == expected_census, "wrong PSL_2(F_13) order census")
     check(91 not in order_census, "an element of order 91 appeared")
 
-    # Full ordered norm atlas.  The three g_t represent all three projective
-    # conjugacy classes of elements of order seven (trace is projective only
-    # through its square).  For every nonzero root exponent, exhaust both
-    # orientations of the seven transported parabolic factors.
+    # Normalized-pair ordered norm atlas.  The three g_t represent all three
+    # projective conjugacy classes of elements of order seven (trace is
+    # projective only through its square), but the closure table belongs to
+    # the fixed relative pairs (U,g_t), all of which have lower-left entry
+    # gamma=-1.  Conjugacy class alone does not determine the table when U is
+    # held fixed; an exact hostile below records the missing root-scale.
     trace_generators = {trace: (0, 1, -1 % P, trace) for trace in (3, 5, 6)}
     expected_trace_squares = {3: 9, 5: 12, 6: 10}
     order_seven_elements = {
@@ -368,7 +370,43 @@ def main() -> None:
     ordered_products = {}
     closure_state_sets = {}
     order_seven_traces = {3, -3 % P, 5, -5 % P, 6, -6 % P}
+    check(
+        all(generator[2] != 0 for generator in order_seven_elements),
+        "an order-seven owner had zero lower-left coordinate relative to U",
+    )
+    check(
+        all(
+            psl_equal(
+                ordered_conjugate_norm(generator, translation, exponent, True),
+                IDENTITY,
+            )
+            == (
+                (matrix_trace(generator) + exponent * generator[2]) % P
+                in order_seven_traces
+            )
+            for generator in order_seven_elements
+            for exponent in range(1, 13)
+        ),
+        "the general forward trace/root-scale closure criterion failed",
+    )
+    check(
+        all(
+            psl_equal(
+                ordered_conjugate_norm(generator, translation, exponent, False),
+                IDENTITY,
+            )
+            == (
+                (matrix_trace(generator) - exponent * generator[2]) % P
+                in order_seven_traces
+            )
+            for generator in order_seven_elements
+            for exponent in range(1, 13)
+        ),
+        "the general reverse trace/root-scale closure criterion failed",
+    )
     for trace, generator in trace_generators.items():
+        gamma = generator[2]
+        check(gamma == -1 % P, f"g_{trace} lost the normalized gamma=-1")
         for orientation, forward in (("F", True), ("R", False)):
             products_by_exponent = {
                 exponent: ordered_conjugate_norm(
@@ -437,24 +475,24 @@ def main() -> None:
                 matrix_trace(
                     matrix_mul(matrix_power(translation, exponent), generator)
                 )
-                == (trace - exponent) % P
+                == (trace + exponent * gamma) % P
                 and matrix_trace(
                     matrix_mul(matrix_inverse(generator), matrix_power(translation, exponent))
                 )
-                == (trace + exponent) % P
+                == (trace - exponent * gamma) % P
                 for exponent in range(1, 13)
             ),
-            f"the trace-{trace} moving-trace formulas failed",
+            f"the trace-{trace},gamma={gamma} moving-trace formulas failed",
         )
         check(
             all(
                 (
                     psl_equal(ordered_products[trace, "F"][exponent], IDENTITY)
-                    == ((trace - exponent) % P in order_seven_traces)
+                    == ((trace + exponent * gamma) % P in order_seven_traces)
                 )
                 and (
                     psl_equal(ordered_products[trace, "R"][exponent], IDENTITY)
-                    == ((trace + exponent) % P in order_seven_traces)
+                    == ((trace - exponent * gamma) % P in order_seven_traces)
                 )
                 for exponent in range(1, 13)
             ),
@@ -472,6 +510,86 @@ def main() -> None:
             == {(-exponent) % P for exponent in expected_forward_closures[trace]},
             f"reverse closure is not the negative of forward closure for trace {trace}",
         )
+
+    # Hostile normalization test.  D conjugates g_3 inside its order-seven
+    # projective conjugacy class, and we keep the same forward factor order,
+    # but D does not fix the chosen root generator: D U D^-1=U^4.  Holding U
+    # fixed changes gamma from -1 to 3 and changes the forward closure locus.
+    # Thus (trace class, orientation) is not a complete connection state.
+    root_scale = (2, 0, 0, 7)
+    check(matrix_det(root_scale) == 1, "the root-scale witness is not in SL_2")
+    scaled_trace_three = matrix_mul(
+        matrix_mul(root_scale, trace_generators[3]), matrix_inverse(root_scale)
+    )
+    check(
+        scaled_trace_three == (0, 4, 3, 3),
+        "the conjugated trace-three witness is wrong",
+    )
+    check(
+        scaled_trace_three in trace_classes[3]
+        and psl_order(scaled_trace_three) == 7,
+        "the root-scale witness left the trace-three order-seven class",
+    )
+    check(
+        psl_equal(
+            matrix_mul(
+                matrix_mul(root_scale, translation), matrix_inverse(root_scale)
+            ),
+            matrix_power(translation, 4),
+        ),
+        "the diagonal witness has the wrong root rescaling",
+    )
+    scaled_gamma = scaled_trace_three[2]
+    check(scaled_gamma == 3, "the hostile witness has the wrong lower-left gamma")
+    scaled_forward_products = {
+        exponent: ordered_conjugate_norm(
+            scaled_trace_three, translation, exponent, True
+        )
+        for exponent in range(1, 13)
+    }
+    scaled_forward_closure = {
+        exponent
+        for exponent, value in scaled_forward_products.items()
+        if psl_equal(value, IDENTITY)
+    }
+    check(
+        scaled_forward_closure == {1, 5, 6, 10, 11},
+        "the root-scale hostile has the wrong forward closure locus",
+    )
+    check(
+        scaled_forward_closure != expected_forward_closures[3],
+        "conjugacy class and orientation incorrectly determined closure",
+    )
+    check(
+        all(
+            matrix_trace(
+                matrix_mul(matrix_power(translation, exponent), scaled_trace_three)
+            )
+            == (matrix_trace(scaled_trace_three) + exponent * scaled_gamma) % P
+            and matrix_trace(
+                matrix_mul(
+                    matrix_inverse(scaled_trace_three),
+                    matrix_power(translation, exponent),
+                )
+            )
+            == (matrix_trace(scaled_trace_three) - exponent * scaled_gamma) % P
+            for exponent in range(1, 13)
+        ),
+        "the general trace/root-scale formulas failed on the hostile witness",
+    )
+    check(
+        all(
+            (
+                psl_equal(scaled_forward_products[exponent], IDENTITY)
+                == (
+                    (matrix_trace(scaled_trace_three) + exponent * scaled_gamma) % P
+                    in order_seven_traces
+                )
+            )
+            for exponent in range(1, 13)
+        ),
+        "the trace/root-scale closure criterion failed on the hostile witness",
+    )
 
     all_nonzero_exponents = set(range(1, 13))
     check(
@@ -825,6 +943,10 @@ def main() -> None:
     print(f"affine_chart=C:q->q+1 owner_cycles={affine_a_cycles} owner_8->inf->2")
     print("element_orders=1:1,2:91,3:182,6:182,7:468,13:168 order91=ABSENT")
     print("order7_trace_square_classes=t3:9x156,t5:12x156,t6:10x156 exhaustive=468")
+    print(
+        "general_pair_closure_exhaustion=468_order7x12_exponentsx2_orientations "
+        "coordinates=trace,gamma,orientation PASS"
+    )
     print("norm_closure_t3=F:6,8,9,10,11 R:2,3,4,5,7 union:2,3,4,5,6,7,8,9,10,11")
     print("norm_closure_t5=F:2,8,10,11,12 R:1,2,3,5,11 union:1,2,3,5,8,10,11,12")
     print("norm_closure_t6=F:1,3,9,11,12 R:1,2,4,10,12 union:1,2,3,4,9,10,11,12")
@@ -833,8 +955,20 @@ def main() -> None:
         "norm_signature_per_state="
         "identity:5,unipotent_nonsquare:2,order3:2,order6:2,order2:1"
     )
-    print("norm_selector_cover_number=3 minimal=3F+3R+6F;3F+3R+6R trace5=REDUNDANT")
-    print("norm_trace_orientation_physical_selector=NOT_CONSTRUCTED")
+    print(
+        "normalized_pair_norm_selector_cover_number=3 "
+        "minimal=(U,g3,F)+(U,g3,R)+(U,g6,F);"
+        "(U,g3,F)+(U,g3,R)+(U,g6,R) trace5=REDUNDANT gamma=-1"
+    )
+    print(
+        "root_scale_hostile=g3prime:(0,4,3,3) gamma=3 same_order7_class=YES "
+        "same_forward_order=YES DUD^-1=U^4 "
+        "closure_F:1,5,6,10,11!=6,8,9,10,11"
+    )
+    print(
+        "norm_connection_coordinates=trace,orientation,root_scale_gamma "
+        "physical_selector=NOT_CONSTRUCTED"
+    )
     print("centralizers=C7:7,C13:13 commuting_nontrivial_C7xC13_pairs=0")
     print(
         "root_normalizer=78=C13:13*C6:6 "
