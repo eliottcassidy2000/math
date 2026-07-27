@@ -12,7 +12,9 @@ status: >
   consequently has a genuine mixed F_13 x F_7 character, hence a
   unit character modulo 91. THM-2435's essential-parent invoice
   yields one fixed mixed quotient mode on parent mass at least 1/252
-  uniformly, with typed k=2 floor 1/168. Exact enumeration gives
+  uniformly, with typed k=2 floor 1/168. THM-2506 later proves all
+  72 primitive modes are nonzero pointwise and upgrades those floors
+  to 2/7 and 3/7. Exact enumeration gives
   2,629 one-source cover assignments and 38,750 distinct-two-source
   assignments; every cover repeats an unsigned ordinary step. The
   one-source repeated-pair cell bank has maximum 75/91, excluding
@@ -33,6 +35,7 @@ related:
   - THM-2421-all-clock-septimal-ancestry-endpoint-event-detector
   - THM-2424-coprime-common-root-crt-and-unit-residue-spectrum
   - THM-2439-cyclic-marker-replica-degree-and-homometric-gram-boundary
+  - THM-2506-punctured-stalk-primitive-module-saturation-and-thirteen-primary-pushforward-no-go
 script:
   - 04-computation/lrc14_punctured_91_stalk_mixed_mode_thm2436.cpp
   - 04-computation/lrc14_punctured_91_fixed_spectrum_referee_thm2436.py
@@ -299,6 +302,12 @@ The typed floors are
 | `M>0,(2,5,1,8)` (`k=2`) | `>=1/168` |
 
 Thus the uniform floor is `1/252`.
+
+**Current upgrade (THM-2506).** Rational Galois transitivity makes all `72`
+mixed modes nonzero at every essential parent.  Thus each preassigned mode has
+nonvanishing locus exactly `P minus mathcal E`, with floors `2/7` for `k=1`
+and `3/7` for `k=2`.  Equations (21) and the table remain valid but are
+strictly superseded.
 
 This is a **discrete signed quotient-stalk mode**. It is linear in
 the guard/ordinary incidence defect and retains both prime

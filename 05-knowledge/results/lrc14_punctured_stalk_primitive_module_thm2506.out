@@ -1,0 +1,8 @@
+THM-2506 PUNCTURED-STALK PRIMITIVE-MODULE EXACT COMPANION
+cover_size=91;centres=84,71,33,47,58;blocker_source=5
+nonzero_defect_rows=0:e5-e3,1:e5-e4;l1=4;inherited_universal_l1_cap=18
+phi91_degree=72;primitive_colours=72;factorization=PASS
+fixed_mode_floors=2/7,3/7;old_union_floors=1/252,1/168
+unit_mask_convolution_primitive_colours=72;multiplier=mu(91)=1
+affine_13_primary_pushforwards=2366;nonzero_pushforwards=0
+all_checks=PASS

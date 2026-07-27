@@ -2159,3 +2159,13 @@ cylinders has collision depths one and two but identical complete colour
 vectors at radius `1/2`, proving that a fixed Abel evaluation loses depth.
 The squarefree top-corner Gregory signs, ordinary-frequency/residue-aggregate
 boundary, normal/optimized byte match, and stored `PASS` transcript are exact.
+
+### lrc14_punctured_stalk_primitive_module_thm2506.out
+
+Exact companion for **THM-2506, PROVED + VERIFIED-EXACT + INDEPENDENTLY
+AUDITED**.  It reconstructs a two-row punctured `91`-stalk defect and reduces
+all `72` primitive transforms modulo `Phi_91`, verifying their common exact
+factorization.  It checks the upgraded fixed-mode locus floors `2/7,3/7`,
+the unit-mask collision convolution on every primitive colour, and all `2,366`
+affine pushforwards to `Z/13` and `Z/169`; every pushforward is zero.  Normal
+and optimized runs byte-match the stored `PASS` transcript.
