@@ -1,0 +1,27 @@
+EXACT (symbolic over QQ): the r2a Euler kills, A = (x, y, 0)
+  D4(A=(x,y,0); any B with this B3) == (1 - 2x d/dx - 2y d/dy) B3   [EXACT, deg<=3 B3]
+  eigenvalue on degree-d monomials: 1-2d != 0  ==> D4=0 <=> B3=0. H1 IS EMPTY (r2a).
+  D3(A=(x,y,0), B3=0) == -2*(x d/dx + y d/dy) C3  [EXACT] ==> D3=0 <=> C3 = const.
+  and then D2 == D1 == D0 == 0 identically [EXACT] ==> det J == 0: H0 IS EMPTY (r2a).
+  ==> r2a Keller maps are exactly the T-shape ==> field degree 1 (Moh reduction).
+
+--- LIVE STRATUM r2b: A = A0 + ell*w (affine-line A, THM-2451 skeleton) ---
+  trial 0: rankB=3; D3&D2 INCONSISTENT in C (B-source obstructed)
+  trial 1: rankB=3; D3&D2 INCONSISTENT in C (B-source obstructed)
+  trial 2: rankB=3; D3&D2 INCONSISTENT in C (B-source obstructed)
+
+--- LIVE STRATUM r1: A = ellt*v, B in span(v,w) (D3 auto-zero), D2 linear in C ---
+  trial 0: rankC(D2)=9 solC=21
+  r1(span) + D5=D4=D3=D2=0                 N=[0, 0]  deg(D5..D0)=[None, None, None, None, None, None]
+  trial 1: rankC(D2)=9 solC=21
+  r1(span) + D5=D4=D3=D2=0                 N=[0, 0]  deg(D5..D0)=[None, None, None, None, None, None]
+  trial 2: rankC(D2)=9 solC=21
+  r1(span) + D5=D4=D3=D2=0                 N=[0, 0]  deg(D5..D0)=[None, None, None, None, None, None]
+
+--- box (2,3,4): plane-valued QUADRATIC A: does D4 still kill B3? ---
+  trial 0: rank(D4) = 10 on 30 unknowns; kernel dim 20; B3-direction free: False
+           sample kernel B: D4==0: True, deg B3 = None
+  trial 1: rank(D4) = 10 on 30 unknowns; kernel dim 20; B3-direction free: False
+           sample kernel B: D4==0: True, deg B3 = None
+
+PART4 DONE

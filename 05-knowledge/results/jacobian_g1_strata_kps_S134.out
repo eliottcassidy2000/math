@@ -1,0 +1,59 @@
+##############################################################################
+PART 2 (space engine): box (2,3,4) generic + strata tables + witnesses
+##############################################################################
+--- box (2,3,4) generic (space Groebner) ---
+  inst 0: N = 56 (3s), predicted 56
+  inst 1: N = 56 (3s), predicted 56
+  cross-prime 31013: N = 56 (6s)
+
+--- box (1,2,3) shape strata (D5=0 classification) ---
+  T  (A3=0, B3 const; Keller=>N=1)     N = [25, 25]   deg(D1,D0) = (5,6)  [1s]
+  H1 (A3=0, B3 nonconst) inst 0        N = [25, 25]   deg(D1,D0) = (5,6)  [1s]
+  H1 (A3=0, B3 nonconst) inst 1        N = [25, 25]   deg(D1,D0) = (5,6)  [5s]
+  [H1 D4-linear system on 18 B-coeffs: rank 6]
+  H1 + D4=0                            N = [24, 24]   deg(D1,D0) = (5,6)  [1s]
+  [H1 D3&D2 affine-linear on 30 C-coeffs: rank 9]
+  H1 + D4=D3=D2=0                      N = [0, 0]     deg(D1,D0) = (None,None)  [0s]
+  H0 (A3=B3=0, row 3 z-free) inst 0    N = [24, 24]   deg(D1,D0) = (5,6)  [2s]
+  H0 (A3=B3=0, row 3 z-free) inst 1    N = [24, 24]   deg(D1,D0) = (5,6)  [1s]
+  r1 (A = ell*v)                       N = [23, 23]   deg(D1,D0) = (5,6)  [1s]
+  r0 z-affine generic (B<=2,C<=3)      N = [19, 19]   deg(D1,D0) = (5,6)  [1s]
+  r0 + plane-valued B ([BxByB]=0)      N = [15, 15]   deg(D1,D0) = (5,6)  [1s]
+  [r0-plane D1-linear on 30 C-coeffs: rank 9]
+  r0 plane-B + D1=0                    N = [0, 0]     deg(D1,D0) = (None,None)  [0s]
+  r0 + conic(Veronese)-valued B        N = [15, 15]   deg(D1,D0) = (5,6)  [1s]
+  [r0-conic D1-linear on 30 C-coeffs: rank 15]
+  r0 conic-B + D1=0                    N = [6, 6]     deg(D1,D0) = (None,6)  [0s]
+
+--- box (2,3,4) doors ---
+  conic-cap A + free B,C               N = [52]       deg(D1,D0) = (8,9)  [4s]
+  [conic-cap D4-linear on 30 B-coeffs: rank 14]
+  conic-cap A + D4=0 B                 N = [48]       deg(D1,D0) = (8,9)  [17s]
+  [conic-cap D3&D2 affine-linear on 45 C-coeffs: rank 42]
+  conic-cap + D4=D3=D2=0               N = [0]        deg(D1,D0) = (None,None)  [0s]
+  r0(2,3,4): z-affine generic (3,4)    N = [37]       deg(D1,D0) = (8,9)  [2s]
+  r0(2,3,4): CUSP-ENGINE B, free C     N = [28, 28]   deg(D1,D0) = (8,9)  [4s]
+  [cusp-engine D1-linear on 45 C-coeffs: rank 26]
+  r0(2,3,4) cusp-B + D1=0              N = [12, 12]   deg(D1,D0) = (None,9)  [3s]
+
+--- box (0,1,2) witnesses + quartic S4 stats (early copy) ---
+  N=1  (x+z^2, y, z)              measured 1
+  N=2  (x^2, y, z)                measured 2
+  N=3  (x, z^2+y, yz)             measured 3
+  N=4  (x^2, y, z^2)              measured 4
+  N=4  Q4=(x, z^2+y^2+y, yz+x)    measured 4
+  observed spectrum in 300 samples (coeffs in {-1,0,1}): [4, 5, 6, 7, 8]
+    N=4 witness: A=[0, -1, 0] B=[-x - y, -x - y + 1, x + y] C=[-x - y, x**2 - x*y + x + y + 1, -x*y - x - y**2 - y + 1]
+    N=5 witness: A=[0, 1, 0] B=[-x, 1, -x + y + 1] C=[-x*y + x + y, -y**2 - y - 1, x**2 + x*y - x - y**2 + y + 1]
+    N=6 witness: A=[-1, 0, -1] B=[x + 1, x + y, -x - y] C=[x*y + x + 1, x + y**2, x*y - x + y**2 + y - 1]
+    N=7 witness: A=[0, -1, 0] B=[-x, 0, 1] C=[x**2 + x*y - y**2 - y - 1, x**2 + x + y**2 - y, x*y - x - y**2 - y]
+    N=8 witness: A=[1, 0, -1] B=[y + 1, -y - 1, x + y] C=[x*y + x + y**2 - y + 1, -x**2 - x*y + x - y**2 - y + 1, -x**2 + x*y - x + y**2]
+  Q4 eliminant z^4 - q z^2 + s z + s^2 cycle stats over 2500 samples:
+    (4,)         obs 0.2544   S4 0.2500
+    (1, 3)       obs 0.3244   S4 0.3333
+    (2, 2)       obs 0.1292   S4 0.1250
+    (1, 1, 2)    obs 0.2552   S4 0.2500
+    (1, 1, 1, 1) obs 0.0368   S4 0.0417
+  Delta4(Q4 family) = s_**2*(16*q_**4 + 4*q_**3 - 128*q_**2*s_**2 - 144*q_*s_**2 + 256*s_**4 - 27*s_**2)
+
+PART2 ALL CHECKS PASSED

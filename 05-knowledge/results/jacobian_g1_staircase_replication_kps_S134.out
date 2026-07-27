@@ -1,0 +1,20 @@
+PART 3: staircase replication, box (1,2,3); entries =
+(rankB, dim ker D4, rankC, dim sol D3&D2, deg D1, deg D0, N) -- deg None = identically 0
+  H1 trial 0: (6, 12, 9, 21, None, None, 0)
+  H1 trial 1: (6, 12, 9, 21, None, None, 0)
+  H1 trial 2: (6, 12, 9, 21, None, None, 0)
+  H1 trial 3: (6, 12, 9, 21, None, None, 0)
+  H0 trial 0: (0, 12, 9, 21, None, None, 0)
+  H0 trial 1: (0, 12, 9, 21, None, None, 0)
+  H0 trial 2: (0, 12, 9, 21, None, None, 0)
+  H0 trial 3: (0, 12, 9, 21, None, None, 0)
+  r1 trial 0: (0, 18, None, None, None, None, None)
+  r1 trial 1: (0, 18, None, None, None, None, None)
+  r1 trial 2: (0, 18, None, None, None, None, None)
+  r1 trial 3: (0, 18, None, None, None, None, None)
+
+Interpretation: if deg D1 = deg D0 = None across trials, the affine-linear
+staircase branch of {D5=D4=D3=D2=0} lies inside {det J == 0} for that shape;
+Keller solutions (D0 = const != 0) then require B outside the sampled kernel
+branch or joint (B,C) solving -- a hunt-design fact, not a box emptiness proof.
+PART3 DONE

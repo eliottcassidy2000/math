@@ -1,0 +1,57 @@
+========================================================================
+LEG A: point-cap graded system (A = f*e3), first-jet identities
+========================================================================
+PASS A1: det J has z-degree <= 3 on the point-cap stratum (D5=D4=0 auto)
+PASS A2: D3 = f_x j(b_y,b) - f_y j(b_x,b) + 2 f j(b_x,b_y)
+PASS A3: D2 formula
+PASS A4: D1 formula
+PASS A5: D0 formula
+PASS A6: X(B1) = -N2*B1  (first-jet identity)
+PASS A7: X(B2) = -N2*B2  (first-jet identity)
+PASS A8: D3 = X(f) + 2 f N2, hence B1^2 * X(f/B1^2) = B1 * D3 (f/B1^2 is a first integral of X iff D3 = 0)
+PASS A9: D2 = [X(B3) + B3 N2] + Y(f)   (transport cascade, B3-slot)
+PASS A10: b == 0  =>  det J = jac(C1,C2) * (2 f z + B3)  identically
+
+========================================================================
+LEG B: explicit degree-3 witnesses inside point-cap and line-cap
+========================================================================
+PASS B1: THM-1310 map has det J = -2
+PASS B2: W1 = T1 o F(1310) has det J = -2
+PASS B3: W1 z^2-part A = (0, 0, u^6): rank-1 POINT-CAP, A != 0
+PASS B4: W1 has b = (u^3, 3xu^2) != 0 and f/B1^2 = 1 (first integral, consistent with A8)
+PASS B5: T1 is a polynomial automorphism (explicit inverse)
+PASS B6: W2 = T2 o F(1310) has det J = -2
+PASS B7: W2 is z-quadratic with A = (-3x^4 u^2, x^6, 0): LINE-CAP (image of [A] = the line {w3=0}, direction [-3u^2 : x^2] nonconstant)
+PASS B8: W2 third component is z-affine with B3 = -x^3 != 0 (line-cap normal form; z = (P3 - C3)/B3 on the fiber)
+PASS B9: T2 is a polynomial automorphism (explicit inverse)
+
+========================================================================
+LEG C: frame identities and the universal z-rationality mechanism
+========================================================================
+PASS C1: A x (P - C) = z (A x B)   on the fiber (THM-2455 sign pin)
+PASS C2: B x (C - P) = z^2 (A x B) on the fiber (THM-2455 sign pin)
+PASS C3: g1 = [A,B,C-P] vanishes on the fiber
+PASS C4: if B = rho*A pointwise then F_z = 2Az+B vanishes at z = -rho/2 (so det J = 0 somewhere: no Keller map has A != 0 and A x B == 0)
+
+========================================================================
+LEG D: quartic/resolvent scaffold and THM-1310 disc class
+========================================================================
+PASS D1: 27 * disc(quartic) = 4 I^3 - J^2  (THM-2455 (1))
+PASS D2: disc(resolvent cubic) = disc(quartic), unit 1 (THM-2455 SS2)
+PASS D3: disc_x(N) = -4 Q^2 L for THM-1310 (quadratic resolvent field C(P)(sqrt(-L)), odd exponent of L)
+PASS D4: L is irreducible over Q (odd exponent is honest)
+PASS D5: shear-transported witness W1 sits over the SAME cubic: min poly of x for W1 over (a,b,g) is N(x; a, b, g-a^2), leading coefficient L(a,b,g-a^2) != 0 => field degree of W1 = 3
+
+========================================================================
+LEG E: group bookkeeping for the A4/S4 tower
+========================================================================
+PASS E1: S3 (point stabiliser) is MAXIMAL in S4: no intermediate field between C(P) and K4 in the S4 case
+PASS E2: C3 = A3 (point stabiliser) is MAXIMAL in A4: no intermediate field in the A4 case
+   inertia transposition         : quartic tame disc exp 1, resolvent exp 1  parity match True
+   inertia double-transposition  : quartic tame disc exp 2, resolvent exp 0  parity match True
+   inertia 3-cycle               : quartic tame disc exp 2, resolvent exp 2  parity match True
+   inertia 4-cycle               : quartic tame disc exp 3, resolvent exp 1  parity match True
+PASS E3: tame inertia table (quartic vs resolvent-cubic disc exponents; parities agree, as forced by disc(res) = disc(quartic))
+PASS E4: V4 acts trivially on the pairings (double-transpositions ramify the quartic but NOT the resolvent)
+
+FAILED CHECKS: NONE

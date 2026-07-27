@@ -1,0 +1,624 @@
+[    1.0s] stratum C1 degB=1: dim ker D4 = 6 (of 9), gauge 2*A*phi in kernel for phi in []
+[    3.8s] stratum C1 degB=2: dim ker D4 = 10 (of 18), gauge 2*A*phi in kernel for phi in ['1', 'y']
+[   16.4s] stratum C1 degB=3: dim ker D4 = 16 (of 30), gauge 2*A*phi in kernel for phi in ['1', 'x', 'y']
+[   16.4s]    C1 degB3 kernel basis[0] = [y, 0, 0]
+[   16.4s]    C1 degB3 kernel basis[1] = [x, 0, 0]
+[   16.4s]    C1 degB3 kernel basis[2] = [0, y, 0]
+[   16.4s]    C1 degB3 kernel basis[3] = [0, x, 0]
+[   16.4s]    C1 degB3 kernel basis[4] = [2*x*y, y**2, 0]
+[   16.4s]    C1 degB3 kernel basis[5] = [2*x**2, x*y, 0]
+[   16.6s]    C1 degB3 kernel basis[6] = [2*x*y**2, y**3, 0]
+[   16.6s]    C1 degB3 kernel basis[7] = [2*x**2*y, x*y**2, 0]
+[   16.6s]    C1 degB3 kernel basis[8] = [2*x**3, x**2*y, 0]
+[   16.6s]    C1 degB3 kernel basis[9] = [0, 0, y]
+[   16.6s]    C1 degB3 kernel basis[10] = [0, 0, x]
+[   16.6s]    C1 degB3 kernel basis[11] = [-x**2, 0, y**2]
+[   16.6s]    C1 degB3 kernel basis[12] = [0, x**2/2, x*y]
+[   16.6s]    C1 degB3 kernel basis[13] = [-x**2*y, 0, y**3]
+[   16.6s]    C1 degB3 kernel basis[14] = [-x**3, 0, x*y**2]
+[   16.6s]    C1 degB3 kernel basis[15] = [0, x**3/2, x**2*y]
+[   52.0s] stratum C1 degB=4: dim ker D4 = 24 (of 45), gauge 2*A*phi in kernel for phi in ['1', 'x', 'y']
+[   52.3s] stratum C2 degB=1: dim ker D4 = 6 (of 9), gauge 2*A*phi in kernel for phi in []
+[   53.2s] stratum C2 degB=2: dim ker D4 = 11 (of 18), gauge 2*A*phi in kernel for phi in ['1']
+[   56.6s] stratum C2 degB=3: dim ker D4 = 18 (of 30), gauge 2*A*phi in kernel for phi in ['1', 'x', 'y']
+[   56.6s]    C2 degB3 kernel basis[0] = [1, 0, 0]
+[   56.6s]    C2 degB3 kernel basis[1] = [x, 0, 0]
+[   56.6s]    C2 degB3 kernel basis[2] = [x**2, 0, 0]
+[   56.6s]    C2 degB3 kernel basis[3] = [x**3, 0, 0]
+[   56.6s]    C2 degB3 kernel basis[4] = [0, 1, 0]
+[   56.6s]    C2 degB3 kernel basis[5] = [2*x*y, y, 0]
+[   56.6s]    C2 degB3 kernel basis[6] = [0, x, 0]
+[   56.6s]    C2 degB3 kernel basis[7] = [2*x*y**2, y**2, 0]
+[   56.6s]    C2 degB3 kernel basis[8] = [2*x**2*y, x*y, 0]
+[   56.6s]    C2 degB3 kernel basis[9] = [0, x**2, 0]
+[   56.6s]    C2 degB3 kernel basis[10] = [0, x**3, 0]
+[   56.6s]    C2 degB3 kernel basis[11] = [0, 0, 1]
+[   56.7s]    C2 degB3 kernel basis[12] = [-x**2*y, 0, y]
+[   56.7s]    C2 degB3 kernel basis[13] = [0, 0, x]
+[   56.7s]    C2 degB3 kernel basis[14] = [0, x*y**2/2, y**2]
+[   56.7s]    C2 degB3 kernel basis[15] = [0, x**2*y/2, x*y]
+[   56.7s]    C2 degB3 kernel basis[16] = [0, 0, x**2]
+[   56.7s]    C2 degB3 kernel basis[17] = [0, 0, x**3]
+[   65.5s] stratum C2 degB=4: dim ker D4 = 27 (of 45), gauge 2*A*phi in kernel for phi in ['1', 'x', 'y']
+[   65.5s] STAGE kernels DONE
+[    5.2s] joint K1 stratum C1: 49 equations, 25 unknowns (B deg<=1, C deg<=2, C const dropped)
+[    5.7s] joint K1 C1: EMPTY mod 10007
+[    8.4s] joint K1 C1: mod 31013 -> EMPTY
+[   11.6s] joint K1 C1: QQ Groebner -> EMPTY (PROOF-GRADE)
+[   11.6s] STAGE joint1 DONE
+[    5.2s] joint K1 stratum C2: 41 equations, 25 unknowns (B deg<=1, C deg<=2, C const dropped)
+[   13.7s] joint K1 C2: EMPTY mod 10007
+[   25.5s] joint K1 C2: mod 31013 -> EMPTY
+[   36.1s] joint K1 C2: QQ Groebner -> EMPTY (PROOF-GRADE)
+[   36.1s] STAGE joint2 DONE
+[   21.0s] joint stratum C1 degB<=2 degC<=2: 67 equations, 34 unknowns (C const dropped)
+[   68.1s] joint K1 C1: EMPTY mod 10007
+[  112.8s] joint K1 C1: mod 31013 -> EMPTY
+[  155.9s] joint K1 C1: QQ Groebner -> EMPTY (PROOF-GRADE)
+[  155.9s] STAGE jointX DONE
+[   11.6s] C1 kernel dim (degB<=3) = 16, complement-of-gauge dim = 13, seed in kernel: True
+[   11.6s] --- instance 0: seed-THM2446S5, B = [-2*x**3, -2*x**2*y + x**2, -2*x*y**2 + 2*x*y + x]
+[   37.3s] C1[seed-THM2446S5] C-affine space after D3=D2=0: dim 6 (of 42); D1 eqs 15, D0 nonconst eqs 15
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 390, in stage_batchC1
+    v = solve_C_stage(A_C1, Bv, degC, tag)
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 260, in solve_C_stage
+    G1 = gb(eqsF + [w*d0c - 1], gens, p=PMOD1)
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 104, in gb
+    return sp.groebner(eqs, *gens, modulus=p, order='grevlex')
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 7535, in groebner
+    return GroebnerBasis(F, *gens, **args)
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 7565, in __new__
+    polys, opt = parallel_poly_from_expr(F, *gens, **args)
+                 ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 4687, in parallel_poly_from_expr
+    return _parallel_poly_from_expr(exprs, opt)
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 4765, in _parallel_poly_from_expr
+    coeffs_list = list(map(domain.from_sympy, coeffs_list))
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\domains\finitefield.py", line 273, in from_sympy
+    raise CoercionFailed("expected an integer, got %s" % a)
+sympy.polys.polyerrors.CoercionFailed: expected an integer, got 51/4
+[   37.8s] verdict: seed-THM2446S5 -> error
+[   37.8s] --- instance 1: kerbasis[0], B = [y, 0, 0]
+[   45.2s] C1[kerbasis[0]] C-affine space after D3=D2=0: dim 10 (of 42); D1 eqs 28, D0 nonconst eqs 0
+[   46.6s] C1[kerbasis[0]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   46.6s] verdict: kerbasis[0] -> kill-D1D0-QQ
+[   46.6s] --- instance 2: kerbasis[1], B = [x, 0, 0]
+[   54.0s] C1[kerbasis[1]] C-affine space after D3=D2=0: dim 10 (of 42); D1 eqs 28, D0 nonconst eqs 28
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 390, in stage_batchC1
+    v = solve_C_stage(A_C1, Bv, degC, tag)
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 260, in solve_C_stage
+    G1 = gb(eqsF + [w*d0c - 1], gens, p=PMOD1)
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 104, in gb
+    return sp.groebner(eqs, *gens, modulus=p, order='grevlex')
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 7535, in groebner
+    return GroebnerBasis(F, *gens, **args)
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 7565, in __new__
+    polys, opt = parallel_poly_from_expr(F, *gens, **args)
+                 ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 4687, in parallel_poly_from_expr
+    return _parallel_poly_from_expr(exprs, opt)
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 4765, in _parallel_poly_from_expr
+    coeffs_list = list(map(domain.from_sympy, coeffs_list))
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\domains\finitefield.py", line 273, in from_sympy
+    raise CoercionFailed("expected an integer, got %s" % a)
+sympy.polys.polyerrors.CoercionFailed: expected an integer, got 7/2
+[   54.2s] verdict: kerbasis[1] -> error
+[   54.4s] --- instance 3: kerbasis[2], B = [0, y, 0]
+[   58.8s] C1[kerbasis[2]] C-affine space after D3=D2=0: dim 10 (of 42); D1 eqs 28, D0 nonconst eqs 0
+[   59.9s] C1[kerbasis[2]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   59.9s] verdict: kerbasis[2] -> kill-D1D0-QQ
+[   59.9s] --- instance 4: kerbasis[3], B = [0, x, 0]
+[   62.0s] C1[kerbasis[3]] C-affine space after D3=D2=0: dim 10 (of 42); D1 eqs 28, D0 nonconst eqs 0
+[   62.1s] C1[kerbasis[3]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   62.1s] verdict: kerbasis[3] -> kill-D1D0-QQ
+[   62.1s] --- instance 5: kerbasis[4], B = [2*x*y, y**2, 0]
+[   69.7s] C1[kerbasis[4]] C-affine space after D3=D2=0: dim 6 (of 42); D1 eqs 6, D0 nonconst eqs 3
+[   69.8s] C1[kerbasis[4]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   69.8s] verdict: kerbasis[4] -> kill-D1D0-QQ
+[   69.8s] --- instance 6: kerbasis[5], B = [2*x**2, x*y, 0]
+[   77.8s] C1[kerbasis[5]] C-affine space after D3=D2=0: dim 6 (of 42); D1 eqs 6, D0 nonconst eqs 6
+[   78.0s] C1[kerbasis[5]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   78.0s] verdict: kerbasis[5] -> kill-D1D0-QQ
+[   78.0s] --- instance 7: kerbasis[6], B = [2*x*y**2, y**3, 0]
+[   86.2s] C1[kerbasis[6]] C-affine space after D3=D2=0: dim 6 (of 42); D1 eqs 6, D0 nonconst eqs 3
+[   86.4s] C1[kerbasis[6]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   86.4s] verdict: kerbasis[6] -> kill-D1D0-QQ
+[   86.4s] BATCH C1 SUMMARY [0:8] degC=4:
+[   86.4s]     seed-THM2446S5 -> error
+[   86.4s]     kerbasis[0] -> kill-D1D0-QQ
+[   86.4s]     kerbasis[1] -> error
+[   86.4s]     kerbasis[2] -> kill-D1D0-QQ
+[   86.4s]     kerbasis[3] -> kill-D1D0-QQ
+[   86.4s]     kerbasis[4] -> kill-D1D0-QQ
+[   86.4s]     kerbasis[5] -> kill-D1D0-QQ
+[   86.4s]     kerbasis[6] -> kill-D1D0-QQ
+[   86.4s] STAGE batchC1 DONE
+[   13.3s] C1 kernel dim (degB<=3) = 16, complement-of-gauge dim = 13, seed in kernel: True
+[   13.3s] --- instance 0: seed-THM2446S5, B = [-2*x**3, -2*x**2*y + x**2, -2*x*y**2 + 2*x*y + x]
+[   37.9s] C1[seed-THM2446S5] C-affine space after D3=D2=0: dim 6 (of 42); D1 eqs 15, D0 nonconst eqs 15
+[   39.6s] C1[seed-THM2446S5] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   39.6s] verdict: seed-THM2446S5 -> kill-D1D0-QQ
+[   39.6s] BATCH C1 SUMMARY [0:1] degC=4:
+[   39.6s]     seed-THM2446S5 -> kill-D1D0-QQ
+[   39.6s] STAGE batchC1 DONE
+[   11.0s] C1 kernel dim (degB<=3) = 16, complement-of-gauge dim = 13, seed in kernel: True
+[   11.0s] --- instance 2: kerbasis[1], B = [x, 0, 0]
+[   20.1s] C1[kerbasis[1]] C-affine space after D3=D2=0: dim 10 (of 42); D1 eqs 28, D0 nonconst eqs 28
+[   21.5s] C1[kerbasis[1]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   21.5s] verdict: kerbasis[1] -> kill-D1D0-QQ
+[   21.5s] BATCH C1 SUMMARY [2:3] degC=4:
+[   21.5s]     kerbasis[1] -> kill-D1D0-QQ
+[   21.5s] STAGE batchC1 DONE
+[   12.8s] C1 kernel dim (degB<=3) = 16, complement-of-gauge dim = 13, seed in kernel: True
+[   12.8s] --- instance 8: kerbasis[7], B = [2*x**2*y, x*y**2, 0]
+[   24.1s] C1[kerbasis[7]] C-affine space after D3=D2=0: dim 6 (of 42); D1 eqs 6, D0 nonconst eqs 5
+[   24.3s] C1[kerbasis[7]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   24.3s] verdict: kerbasis[7] -> kill-D1D0-QQ
+[   24.3s] --- instance 9: kerbasis[8], B = [2*x**3, x**2*y, 0]
+[   32.0s] C1[kerbasis[8]] C-affine space after D3=D2=0: dim 6 (of 42); D1 eqs 6, D0 nonconst eqs 6
+[   32.2s] C1[kerbasis[8]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   32.2s] verdict: kerbasis[8] -> kill-D1D0-QQ
+[   32.2s] --- instance 10: kerbasis[9], B = [0, 0, y]
+[   40.5s] C1[kerbasis[9]] C-affine space after D3=D2=0: dim 10 (of 42); D1 eqs 28, D0 nonconst eqs 28
+[   42.5s] C1[kerbasis[9]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   42.5s] verdict: kerbasis[9] -> kill-D1D0-QQ
+[   42.5s] --- instance 11: kerbasis[10], B = [0, 0, x]
+[   47.5s] C1[kerbasis[10]] C-affine space after D3=D2=0: dim 10 (of 42); D1 eqs 28, D0 nonconst eqs 0
+[   48.6s] C1[kerbasis[10]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   48.6s] verdict: kerbasis[10] -> kill-D1D0-QQ
+[   48.6s] --- instance 12: kerbasis[11], B = [0, x**2/2, x*y]
+[   55.2s] C1[kerbasis[11]] C-affine space after D3=D2=0: dim 6 (of 42); D1 eqs 6, D0 nonconst eqs 3
+[   55.3s] C1[kerbasis[11]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   55.3s] verdict: kerbasis[11] -> kill-D1D0-QQ
+[   55.3s] --- instance 13: kerbasis[12], B = [0, x**3/2, x**2*y]
+[   61.5s] C1[kerbasis[12]] C-affine space after D3=D2=0: dim 6 (of 42); D1 eqs 6, D0 nonconst eqs 3
+[   61.6s] C1[kerbasis[12]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   61.6s] verdict: kerbasis[12] -> kill-D1D0-QQ
+[   61.6s] --- instance 14: rand[0], B = [-2*x**3 + 2*x**2*y - 2*x**2 + 2*x*y**2 + 2*x*y - y, -x**2*y - x**2/2 + x*y**2 - x*y + y**3 + y**2 + y, -x*y + y]
+[   92.0s] C1[rand[0]] C-affine space after D3=D2=0: dim 0 (of 42); D1 eqs 0, D0 nonconst eqs 0
+[   92.0s] C1[rand[0]] D1,D0-nonconst vacuous but D0 const == 0: KILL
+[   92.0s] verdict: rand[0] -> kill-D0zero
+[   92.0s] --- instance 15: rand[1], B = [-2*x**3 + 2*x**2*y + 2*x**2 - 2*x*y**2 - x, -x**3/2 - x**2*y - x**2/2 + x*y**2 + x*y - x - y**3 + y, -x**2*y - x*y - x - y]
+[  124.9s] C1[rand[1]] C-affine space after D3=D2=0: dim 0 (of 42); D1 eqs 0, D0 nonconst eqs 0
+[  124.9s] C1[rand[1]] D1,D0-nonconst vacuous but D0 const == 0: KILL
+[  124.9s] verdict: rand[1] -> kill-D0zero
+[  124.9s] --- instance 16: rand[2], B = [-2*x**2*y + 2*x**2 - 2*x*y**2 - x - y, -x**3/2 - x**2/2 - x*y**2 + x*y - x - y**3 + y, -x**2*y - x*y + x + y]
+[  169.6s] C1[rand[2]] C-affine space after D3=D2=0: dim 0 (of 42); D1 eqs 0, D0 nonconst eqs 0
+[  169.6s] C1[rand[2]] D1,D0-nonconst vacuous but D0 const == 0: KILL
+[  169.6s] verdict: rand[2] -> kill-D0zero
+[  169.6s] --- instance 17: rand[3], B = [2*x**2 + 2*x*y**2 + 2*x*y - x, -x**2/2 + x*y + x + y**3 + y**2 - y, -x*y - x]
+[  194.6s] C1[rand[3]] C-affine space after D3=D2=0: dim 0 (of 42); D1 eqs 0, D0 nonconst eqs 0
+[  194.6s] C1[rand[3]] D1,D0-nonconst vacuous but D0 const == 0: KILL
+[  194.6s] verdict: rand[3] -> kill-D0zero
+[  194.6s] --- instance 18: rand[4], B = [2*x**3 - 2*x**2*y - 2*x*y**2 - 2*x*y, x**3/2 + x**2*y + x**2/2 - x*y**2 + x - y**3 - y**2 - y, x**2*y + x*y - x - y]
+[  233.8s] C1[rand[4]] C-affine space after D3=D2=0: dim 0 (of 42); D1 eqs 0, D0 nonconst eqs 0
+[  233.8s] C1[rand[4]] D1,D0-nonconst vacuous but D0 const == 0: KILL
+[  233.8s] verdict: rand[4] -> kill-D0zero
+[  233.8s] --- instance 19: rand[5], B = [2*x**2*y + 2*x**2 + x, -x**3/2 - x**2/2 + x*y**2 + x*y, -x**2*y - x*y - y]
+[  257.7s] C1[rand[5]] C-affine space after D3=D2=0: dim 0 (of 42); D1 eqs 0, D0 nonconst eqs 0
+[  257.7s] C1[rand[5]] D1,D0-nonconst vacuous but D0 const == 0: KILL
+[  257.7s] verdict: rand[5] -> kill-D0zero
+[  257.7s] --- instance 20: rand[6], B = [2*x**2*y - 2*x**2 - 2*x*y + x + y, -x**2/2 + x*y**2 - x*y + x - y**2, -x*y + x]
+[  285.2s] C1[rand[6]] C-affine space after D3=D2=0: dim 0 (of 42); D1 eqs 0, D0 nonconst eqs 0
+[  285.2s] C1[rand[6]] D1,D0-nonconst vacuous but D0 const == 0: KILL
+[  285.2s] verdict: rand[6] -> kill-D0zero
+[  285.2s] --- instance 21: rand[7], B = [-2*x**3 + 2*x**2*y + 2*x**2 - 2*x*y, -x**3/2 - x**2*y + x**2/2 + x*y**2 + x*y - y**2 - y, -x**2*y + x*y + y]
+[  318.1s] C1[rand[7]] C-affine space after D3=D2=0: dim 0 (of 42); D1 eqs 0, D0 nonconst eqs 0
+[  318.1s] C1[rand[7]] D1,D0-nonconst vacuous but D0 const == 0: KILL
+[  318.1s] verdict: rand[7] -> kill-D0zero
+[  318.1s] --- instance 22: rand[8], B = [-2*x**3 - 2*x**2*y - 2*x*y**2 + 2*x*y + x, -x**2*y - x*y**2 - x - y**3 + y**2 + y, y]
+[  345.0s] C1[rand[8]] C-affine space after D3=D2=0: dim 0 (of 42); D1 eqs 0, D0 nonconst eqs 0
+[  345.0s] C1[rand[8]] D1,D0-nonconst vacuous but D0 const == 0: KILL
+[  345.0s] verdict: rand[8] -> kill-D0zero
+[  345.0s] --- instance 23: rand[9], B = [2*x**3 + 2*x**2*y + 2*x**2 + 2*x*y**2 - 2*x*y - y, -x**3/2 + x**2*y + x**2/2 + x*y**2 + x*y + x + y**3 - y**2, -x**2*y + x*y + y]
+[  379.9s] C1[rand[9]] C-affine space after D3=D2=0: dim 0 (of 42); D1 eqs 0, D0 nonconst eqs 0
+[  379.9s] C1[rand[9]] D1,D0-nonconst vacuous but D0 const == 0: KILL
+[  379.9s] verdict: rand[9] -> kill-D0zero
+[  379.9s] BATCH C1 SUMMARY [8:24] degC=4:
+[  379.9s]     kerbasis[7] -> kill-D1D0-QQ
+[  379.9s]     kerbasis[8] -> kill-D1D0-QQ
+[  379.9s]     kerbasis[9] -> kill-D1D0-QQ
+[  379.9s]     kerbasis[10] -> kill-D1D0-QQ
+[  379.9s]     kerbasis[11] -> kill-D1D0-QQ
+[  379.9s]     kerbasis[12] -> kill-D1D0-QQ
+[  379.9s]     rand[0] -> kill-D0zero
+[  379.9s]     rand[1] -> kill-D0zero
+[  379.9s]     rand[2] -> kill-D0zero
+[  379.9s]     rand[3] -> kill-D0zero
+[  379.9s]     rand[4] -> kill-D0zero
+[  379.9s]     rand[5] -> kill-D0zero
+[  379.9s]     rand[6] -> kill-D0zero
+[  379.9s]     rand[7] -> kill-D0zero
+[  379.9s]     rand[8] -> kill-D0zero
+[  379.9s]     rand[9] -> kill-D0zero
+[  379.9s] STAGE batchC1 DONE
+[    6.8s] C2 kernel dim (degB<=3) = 18, complement-of-gauge dim = 15
+[    6.9s] --- instance 0: kerbasis[0], B = [1, 0, 0]
+[    8.1s] C2[kerbasis[0]] C-affine space after D3=D2=0: dim 18 (of 42); D1 eqs 27, D0 nonconst eqs 14
+[   53.7s] C2[kerbasis[0]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   53.7s] verdict: kerbasis[0] -> kill-D1D0-QQ
+[   53.7s] --- instance 1: kerbasis[1], B = [x, 0, 0]
+[   54.5s] C2[kerbasis[1]] C-affine space after D3=D2=0: dim 18 (of 42); D1 eqs 27, D0 nonconst eqs 24
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 427, in stage_batchC2
+    if any(coeffs):
+        ^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 260, in solve_C_stage
+    log(tag, 'C-affine space after D3=D2=0: dim %d (of %d); D1 eqs %d, D0 nonconst eqs %d'
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 104, in gb
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 7535, in groebner
+    return GroebnerBasis(F, *gens, **args)
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 7565, in __new__
+    polys, opt = parallel_poly_from_expr(F, *gens, **args)
+                 ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 4687, in parallel_poly_from_expr
+    return _parallel_poly_from_expr(exprs, opt)
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 4765, in _parallel_poly_from_expr
+    coeffs_list = list(map(domain.from_sympy, coeffs_list))
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\domains\finitefield.py", line 273, in from_sympy
+    raise CoercionFailed("expected an integer, got %s" % a)
+sympy.polys.polyerrors.CoercionFailed: expected an integer, got -3/2
+[   54.5s] verdict: kerbasis[1] -> error
+[   54.5s] --- instance 2: kerbasis[2], B = [x**2, 0, 0]
+[   58.9s] C2[kerbasis[2]] C-affine space after D3=D2=0: dim 15 (of 42); D1 eqs 16, D0 nonconst eqs 14
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 427, in stage_batchC2
+    if any(coeffs):
+        ^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 260, in solve_C_stage
+    log(tag, 'C-affine space after D3=D2=0: dim %d (of %d); D1 eqs %d, D0 nonconst eqs %d'
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 104, in gb
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 7535, in groebner
+    return GroebnerBasis(F, *gens, **args)
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 7565, in __new__
+    polys, opt = parallel_poly_from_expr(F, *gens, **args)
+                 ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 4687, in parallel_poly_from_expr
+    return _parallel_poly_from_expr(exprs, opt)
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 4765, in _parallel_poly_from_expr
+    coeffs_list = list(map(domain.from_sympy, coeffs_list))
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\domains\finitefield.py", line 273, in from_sympy
+    raise CoercionFailed("expected an integer, got %s" % a)
+sympy.polys.polyerrors.CoercionFailed: expected an integer, got -3/2
+[   59.1s] verdict: kerbasis[2] -> error
+[   59.1s] --- instance 3: kerbasis[3], B = [x**3, 0, 0]
+[   63.9s] C2[kerbasis[3]] C-affine space after D3=D2=0: dim 15 (of 42); D1 eqs 16, D0 nonconst eqs 14
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 427, in stage_batchC2
+    if any(coeffs):
+        ^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 260, in solve_C_stage
+    log(tag, 'C-affine space after D3=D2=0: dim %d (of %d); D1 eqs %d, D0 nonconst eqs %d'
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 104, in gb
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 7535, in groebner
+    return GroebnerBasis(F, *gens, **args)
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 7565, in __new__
+    polys, opt = parallel_poly_from_expr(F, *gens, **args)
+                 ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 4687, in parallel_poly_from_expr
+    return _parallel_poly_from_expr(exprs, opt)
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 4765, in _parallel_poly_from_expr
+    coeffs_list = list(map(domain.from_sympy, coeffs_list))
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\domains\finitefield.py", line 273, in from_sympy
+    raise CoercionFailed("expected an integer, got %s" % a)
+sympy.polys.polyerrors.CoercionFailed: expected an integer, got -4/3
+[   64.1s] verdict: kerbasis[3] -> error
+[   64.1s] --- instance 4: kerbasis[4], B = [0, 1, 0]
+[   68.1s] C2[kerbasis[4]] C-affine space after D3=D2=0: dim 18 (of 42); D1 eqs 27, D0 nonconst eqs 15
+[   72.7s] C2[kerbasis[4]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   72.7s] verdict: kerbasis[4] -> kill-D1D0-QQ
+[   72.7s] --- instance 5: kerbasis[5], B = [2*x*y, y, 0]
+[   80.8s] C2[kerbasis[5]] C-affine space after D3=D2=0: dim 9 (of 42); D1 eqs 7, D0 nonconst eqs 4
+[   80.9s] C2[kerbasis[5]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   80.9s] verdict: kerbasis[5] -> kill-D1D0-QQ
+[   80.9s] --- instance 6: kerbasis[6], B = [0, x, 0]
+[   84.2s] C2[kerbasis[6]] C-affine space after D3=D2=0: dim 18 (of 42); D1 eqs 27, D0 nonconst eqs 15
+[   87.3s] C2[kerbasis[6]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   87.3s] verdict: kerbasis[6] -> kill-D1D0-QQ
+[   87.3s] --- instance 7: kerbasis[7], B = [2*x*y**2, y**2, 0]
+[   93.4s] C2[kerbasis[7]] C-affine space after D3=D2=0: dim 9 (of 42); D1 eqs 7, D0 nonconst eqs 4
+[   93.4s] C2[kerbasis[7]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   93.4s] verdict: kerbasis[7] -> kill-D1D0-QQ
+[   93.4s] --- instance 8: kerbasis[8], B = [2*x**2*y, x*y, 0]
+[  100.3s] C2[kerbasis[8]] C-affine space after D3=D2=0: dim 9 (of 42); D1 eqs 7, D0 nonconst eqs 5
+[  100.5s] C2[kerbasis[8]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[  100.5s] verdict: kerbasis[8] -> kill-D1D0-QQ
+[  100.5s] --- instance 9: kerbasis[9], B = [0, x**2, 0]
+[  103.8s] C2[kerbasis[9]] C-affine space after D3=D2=0: dim 15 (of 42); D1 eqs 16, D0 nonconst eqs 16
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 427, in stage_batchC2
+    if any(coeffs):
+        ^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 260, in solve_C_stage
+    log(tag, 'C-affine space after D3=D2=0: dim %d (of %d); D1 eqs %d, D0 nonconst eqs %d'
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 104, in gb
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 7535, in groebner
+    return GroebnerBasis(F, *gens, **args)
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 7565, in __new__
+    polys, opt = parallel_poly_from_expr(F, *gens, **args)
+                 ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 4687, in parallel_poly_from_expr
+    return _parallel_poly_from_expr(exprs, opt)
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 4765, in _parallel_poly_from_expr
+    coeffs_list = list(map(domain.from_sympy, coeffs_list))
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\domains\finitefield.py", line 273, in from_sympy
+    raise CoercionFailed("expected an integer, got %s" % a)
+sympy.polys.polyerrors.CoercionFailed: expected an integer, got -3/2
+[  103.9s] verdict: kerbasis[9] -> error
+[  103.9s] --- instance 10: kerbasis[10], B = [0, x**3, 0]
+[  106.9s] C2[kerbasis[10]] C-affine space after D3=D2=0: dim 15 (of 42); D1 eqs 16, D0 nonconst eqs 16
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 427, in stage_batchC2
+    if any(coeffs):
+        ^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 260, in solve_C_stage
+    log(tag, 'C-affine space after D3=D2=0: dim %d (of %d); D1 eqs %d, D0 nonconst eqs %d'
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 104, in gb
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 7535, in groebner
+    return GroebnerBasis(F, *gens, **args)
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 7565, in __new__
+    polys, opt = parallel_poly_from_expr(F, *gens, **args)
+                 ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 4687, in parallel_poly_from_expr
+    return _parallel_poly_from_expr(exprs, opt)
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 4765, in _parallel_poly_from_expr
+    coeffs_list = list(map(domain.from_sympy, coeffs_list))
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\domains\finitefield.py", line 273, in from_sympy
+    raise CoercionFailed("expected an integer, got %s" % a)
+sympy.polys.polyerrors.CoercionFailed: expected an integer, got -4/3
+[  107.0s] verdict: kerbasis[10] -> error
+[  107.0s] --- instance 11: kerbasis[11], B = [0, x*y**2/2, y**2]
+[  113.2s] C2[kerbasis[11]] C-affine space after D3=D2=0: dim 9 (of 42); D1 eqs 7, D0 nonconst eqs 6
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 427, in stage_batchC2
+    if any(coeffs):
+        ^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 260, in solve_C_stage
+    log(tag, 'C-affine space after D3=D2=0: dim %d (of %d); D1 eqs %d, D0 nonconst eqs %d'
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 104, in gb
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 7535, in groebner
+    return GroebnerBasis(F, *gens, **args)
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 7565, in __new__
+    polys, opt = parallel_poly_from_expr(F, *gens, **args)
+                 ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 4687, in parallel_poly_from_expr
+    return _parallel_poly_from_expr(exprs, opt)
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 4765, in _parallel_poly_from_expr
+    coeffs_list = list(map(domain.from_sympy, coeffs_list))
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\domains\finitefield.py", line 273, in from_sympy
+    raise CoercionFailed("expected an integer, got %s" % a)
+sympy.polys.polyerrors.CoercionFailed: expected an integer, got -5/2
+[  113.2s] verdict: kerbasis[11] -> error
+[  113.2s] --- instance 12: kerbasis[12], B = [0, x**2*y/2, x*y]
+[  119.8s] C2[kerbasis[12]] C-affine space after D3=D2=0: dim 9 (of 42); D1 eqs 7, D0 nonconst eqs 5
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 427, in stage_batchC2
+    if any(coeffs):
+        ^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 260, in solve_C_stage
+    log(tag, 'C-affine space after D3=D2=0: dim %d (of %d); D1 eqs %d, D0 nonconst eqs %d'
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 104, in gb
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 7535, in groebner
+    return GroebnerBasis(F, *gens, **args)
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 7565, in __new__
+    polys, opt = parallel_poly_from_expr(F, *gens, **args)
+                 ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 4687, in parallel_poly_from_expr
+    return _parallel_poly_from_expr(exprs, opt)
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 4765, in _parallel_poly_from_expr
+    coeffs_list = list(map(domain.from_sympy, coeffs_list))
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\domains\finitefield.py", line 273, in from_sympy
+    raise CoercionFailed("expected an integer, got %s" % a)
+sympy.polys.polyerrors.CoercionFailed: expected an integer, got 3/2
+[  120.0s] verdict: kerbasis[12] -> error
+[  120.0s] --- instance 13: kerbasis[13], B = [0, 0, x**2]
+[  123.1s] C2[kerbasis[13]] C-affine space after D3=D2=0: dim 15 (of 42); D1 eqs 16, D0 nonconst eqs 14
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 427, in stage_batchC2
+    if any(coeffs):
+        ^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 260, in solve_C_stage
+    log(tag, 'C-affine space after D3=D2=0: dim %d (of %d); D1 eqs %d, D0 nonconst eqs %d'
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 104, in gb
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 7535, in groebner
+    return GroebnerBasis(F, *gens, **args)
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 7565, in __new__
+    polys, opt = parallel_poly_from_expr(F, *gens, **args)
+                 ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 4687, in parallel_poly_from_expr
+    return _parallel_poly_from_expr(exprs, opt)
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 4765, in _parallel_poly_from_expr
+    coeffs_list = list(map(domain.from_sympy, coeffs_list))
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\domains\finitefield.py", line 273, in from_sympy
+    raise CoercionFailed("expected an integer, got %s" % a)
+sympy.polys.polyerrors.CoercionFailed: expected an integer, got -3/2
+[  123.2s] verdict: kerbasis[13] -> error
+[  123.2s] --- instance 14: kerbasis[14], B = [0, 0, x**3]
+[  126.2s] C2[kerbasis[14]] C-affine space after D3=D2=0: dim 15 (of 42); D1 eqs 16, D0 nonconst eqs 14
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 427, in stage_batchC2
+    if any(coeffs):
+        ^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 260, in solve_C_stage
+    log(tag, 'C-affine space after D3=D2=0: dim %d (of %d); D1 eqs %d, D0 nonconst eqs %d'
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\.scratch\g1_conic_cap_hunt_kps.py", line 104, in gb
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 7535, in groebner
+    return GroebnerBasis(F, *gens, **args)
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 7565, in __new__
+    polys, opt = parallel_poly_from_expr(F, *gens, **args)
+                 ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 4687, in parallel_poly_from_expr
+    return _parallel_poly_from_expr(exprs, opt)
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 4765, in _parallel_poly_from_expr
+    coeffs_list = list(map(domain.from_sympy, coeffs_list))
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\domains\finitefield.py", line 273, in from_sympy
+    raise CoercionFailed("expected an integer, got %s" % a)
+sympy.polys.polyerrors.CoercionFailed: expected an integer, got -4/3
+[  126.3s] verdict: kerbasis[14] -> error
+[  126.3s] --- instance 15: rand[0], B = [-2*x**2*y - x**2 + 2*x*y**2 - x, x**3 - x**2*y/2 - x*y**2/2 - x*y + x + y**2 + 1, -x**3 - x**2 - x*y - y**2]
+[  152.0s] C2[rand[0]] KILL exact at D3/D2: linear system in C inconsistent (QQ)
+[  152.0s] verdict: rand[0] -> kill-D3D2
+[  152.0s] --- instance 16: rand[1], B = [-x**3 - 2*x**2*y - x**2 - 2*x*y - x, -x**3 - x**2*y/2 + x**2 - x*y**2/2 - x*y - y - 1, x**3 - x**2 - x*y - y**2]
+[  189.7s] C2[rand[1]] KILL exact at D3/D2: linear system in C inconsistent (QQ)
+[  189.7s] verdict: rand[1] -> kill-D3D2
+[  189.7s] --- instance 17: rand[2], B = [x**3 + 2*x**2*y - x - 1, x**2*y/2 + x*y, x**3 - x**2 + x*y]
+[  208.8s] C2[rand[2]] KILL exact at D3/D2: linear system in C inconsistent (QQ)
+[  208.8s] verdict: rand[2] -> kill-D3D2
+[  208.8s] --- instance 18: rand[3], B = [-x**3 - x**2 - 2*x*y**2 - 2*x*y + x - 1, -x**3 + x**2 + x*y**2/2 - x - y**2 - y - 1, x**3 + y**2]
+[  236.2s] C2[rand[3]] KILL exact at D3/D2: linear system in C inconsistent (QQ)
+[  236.2s] verdict: rand[3] -> kill-D3D2
+[  236.2s] --- instance 19: rand[4], B = [2*x**2*y + x**2 - 2*x*y - x, x**2*y/2 + x**2 - x*y**2/2 + x*y + x - y, -x**3 + x*y - y**2]
+[  262.9s] C2[rand[4]] KILL exact at D3/D2: linear system in C inconsistent (QQ)
+[  262.9s] verdict: rand[4] -> kill-D3D2
+[  262.9s] --- instance 20: rand[5], B = [x**3 + 2*x**2*y + 2*x*y**2 + 2*x*y + 1, -x**2 + x*y - x + y**2 + y, -x**3 - x**2]
+[  286.7s] C2[rand[5]] KILL exact at D3/D2: linear system in C inconsistent (QQ)
+[  286.7s] verdict: rand[5] -> kill-D3D2
+[  286.7s] --- instance 21: rand[6], B = [-2*x**2*y + x**2 + 2*x*y - x, -x**3 + x**2*y/2 - x**2 - x*y**2/2 - x*y + y - 1, x**3 + x**2 + x*y - y**2]
+[  316.9s] C2[rand[6]] KILL exact at D3/D2: linear system in C inconsistent (QQ)
+[  316.9s] verdict: rand[6] -> kill-D3D2
+[  316.9s] --- instance 22: rand[7], B = [x**3 + 2*x**2*y - 2*x*y + x + 1, -x**3 + x**2*y/2 + x*y**2/2 + x*y - y, x**3 + x**2 + x*y + y**2]
+[  346.9s] C2[rand[7]] KILL exact at D3/D2: linear system in C inconsistent (QQ)
+[  346.9s] verdict: rand[7] -> kill-D3D2
+[  346.9s] BATCH C2 SUMMARY degC=4:
+[  346.9s]     kerbasis[0] -> kill-D1D0-QQ
+[  346.9s]     kerbasis[1] -> error
+[  346.9s]     kerbasis[2] -> error
+[  346.9s]     kerbasis[3] -> error
+[  346.9s]     kerbasis[4] -> kill-D1D0-QQ
+[  346.9s]     kerbasis[5] -> kill-D1D0-QQ
+[  346.9s]     kerbasis[6] -> kill-D1D0-QQ
+[  346.9s]     kerbasis[7] -> kill-D1D0-QQ
+[  346.9s]     kerbasis[8] -> kill-D1D0-QQ
+[  346.9s]     kerbasis[9] -> error
+[  346.9s]     kerbasis[10] -> error
+[  346.9s]     kerbasis[11] -> error
+[  346.9s]     kerbasis[12] -> error
+[  346.9s]     kerbasis[13] -> error
+[  346.9s]     kerbasis[14] -> error
+[  346.9s]     rand[0] -> kill-D3D2
+[  346.9s]     rand[1] -> kill-D3D2
+[  346.9s]     rand[2] -> kill-D3D2
+[  346.9s]     rand[3] -> kill-D3D2
+[  346.9s]     rand[4] -> kill-D3D2
+[  346.9s]     rand[5] -> kill-D3D2
+[  346.9s]     rand[6] -> kill-D3D2
+[  346.9s]     rand[7] -> kill-D3D2
+[  346.9s] STAGE batchC2 DONE
+[   10.5s] C2 kernel dim (degB<=3) = 18, complement-of-gauge dim = 15
+[   10.8s] --- instance 1: kerbasis[1], B = [x, 0, 0]
+[   19.1s] C2[kerbasis[1]] C-affine space after D3=D2=0: dim 18 (of 42); D1 eqs 27, D0 nonconst eqs 24
+[   23.6s] C2[kerbasis[1]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   23.6s] verdict: kerbasis[1] -> kill-D1D0-QQ
+[   23.6s] --- instance 2: kerbasis[2], B = [x**2, 0, 0]
+[   28.3s] C2[kerbasis[2]] C-affine space after D3=D2=0: dim 15 (of 42); D1 eqs 16, D0 nonconst eqs 14
+[   30.2s] C2[kerbasis[2]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   30.2s] verdict: kerbasis[2] -> kill-D1D0-QQ
+[   30.2s] --- instance 3: kerbasis[3], B = [x**3, 0, 0]
+[   35.2s] C2[kerbasis[3]] C-affine space after D3=D2=0: dim 15 (of 42); D1 eqs 16, D0 nonconst eqs 14
+[   37.0s] C2[kerbasis[3]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   37.0s] verdict: kerbasis[3] -> kill-D1D0-QQ
+[   37.0s] BATCH C2 SUMMARY degC=4:
+[   37.0s]     kerbasis[1] -> kill-D1D0-QQ
+[   37.0s]     kerbasis[2] -> kill-D1D0-QQ
+[   37.0s]     kerbasis[3] -> kill-D1D0-QQ
+[   37.0s] STAGE batchC2 DONE
+[   11.0s] C2 kernel dim (degB<=3) = 18, complement-of-gauge dim = 15
+[   11.2s] --- instance 9: kerbasis[9], B = [0, x**2, 0]
+[   19.8s] C2[kerbasis[9]] C-affine space after D3=D2=0: dim 15 (of 42); D1 eqs 16, D0 nonconst eqs 16
+[   21.4s] C2[kerbasis[9]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   21.4s] verdict: kerbasis[9] -> kill-D1D0-QQ
+[   21.4s] --- instance 10: kerbasis[10], B = [0, x**3, 0]
+[   25.3s] C2[kerbasis[10]] C-affine space after D3=D2=0: dim 15 (of 42); D1 eqs 16, D0 nonconst eqs 16
+[   26.9s] C2[kerbasis[10]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   26.9s] verdict: kerbasis[10] -> kill-D1D0-QQ
+[   26.9s] --- instance 11: kerbasis[11], B = [0, x*y**2/2, y**2]
+[   33.8s] C2[kerbasis[11]] C-affine space after D3=D2=0: dim 9 (of 42); D1 eqs 7, D0 nonconst eqs 6
+[   34.0s] C2[kerbasis[11]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   34.0s] verdict: kerbasis[11] -> kill-D1D0-QQ
+[   34.0s] --- instance 12: kerbasis[12], B = [0, x**2*y/2, x*y]
+[   41.3s] C2[kerbasis[12]] C-affine space after D3=D2=0: dim 9 (of 42); D1 eqs 7, D0 nonconst eqs 5
+[   41.5s] C2[kerbasis[12]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   41.5s] verdict: kerbasis[12] -> kill-D1D0-QQ
+[   41.5s] --- instance 13: kerbasis[13], B = [0, 0, x**2]
+[   45.2s] C2[kerbasis[13]] C-affine space after D3=D2=0: dim 15 (of 42); D1 eqs 16, D0 nonconst eqs 14
+[   47.3s] C2[kerbasis[13]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   47.3s] verdict: kerbasis[13] -> kill-D1D0-QQ
+[   47.3s] --- instance 14: kerbasis[14], B = [0, 0, x**3]
+[   51.5s] C2[kerbasis[14]] C-affine space after D3=D2=0: dim 15 (of 42); D1 eqs 16, D0 nonconst eqs 14
+[   52.1s] C2[kerbasis[14]] KILL exact (QQ Groebner = <1>): no Keller completion, any C in box
+[   52.1s] verdict: kerbasis[14] -> kill-D1D0-QQ
+[   52.1s] BATCH C2 SUMMARY degC=4:
+[   52.1s]     kerbasis[9] -> kill-D1D0-QQ
+[   52.1s]     kerbasis[10] -> kill-D1D0-QQ
+[   52.1s]     kerbasis[11] -> kill-D1D0-QQ
+[   52.1s]     kerbasis[12] -> kill-D1D0-QQ
+[   52.1s]     kerbasis[13] -> kill-D1D0-QQ
+[   52.1s]     kerbasis[14] -> kill-D1D0-QQ
+[   52.1s] STAGE batchC2 DONE
+[   29.2s] C1 kernel dim (degB<=4) = 24; new-beyond-(degB3+quadratic gauge) directions = 5
+[   29.3s] --- enlarge instance 0: ker4basis[0], B = [2*x*y**3, y**4, 0]
+[   30.4s] C1e[ker4basis[0]] KILL exact at D3/D2: linear system in C inconsistent (QQ)
+[   30.4s] verdict: ker4basis[0] -> kill-D3D2
+[   30.4s] --- enlarge instance 1: ker4basis[1], B = [2*x**2*y**2, x*y**3, 0]
+[   34.6s] C1e[ker4basis[1]] KILL exact at D3/D2: linear system in C inconsistent (QQ)
+[   34.6s] verdict: ker4basis[1] -> kill-D3D2
+[   34.6s] --- enlarge instance 2: ker4basis[2], B = [2*x**3*y, x**2*y**2, 0]
+[   40.6s] C1e[ker4basis[2]] KILL exact at D3/D2: linear system in C inconsistent (QQ)
+[   40.6s] verdict: ker4basis[2] -> kill-D3D2
+[   40.6s] --- enlarge instance 3: ker4basis[3], B = [2*x**4, x**3*y, 0]
+[   45.4s] C1e[ker4basis[3]] KILL exact at D3/D2: linear system in C inconsistent (QQ)
+[   45.4s] verdict: ker4basis[3] -> kill-D3D2
+[   45.4s] --- enlarge instance 4: ker4basis[4], B = [0, x**4/2, x**3*y]
+[   50.1s] C1e[ker4basis[4]] KILL exact at D3/D2: linear system in C inconsistent (QQ)
+[   50.1s] verdict: ker4basis[4] -> kill-D3D2
+[   50.1s] --- enlarge instance 5: rand4[0], B = [-2*x**4 - 2*x*y**3, x**4/2 - x**3*y - y**4, x**3*y]
+[   65.7s] C1e[rand4[0]] KILL exact at D3/D2: linear system in C inconsistent (QQ)
+[   65.7s] verdict: rand4[0] -> kill-D3D2
+[   65.7s] --- enlarge instance 6: rand4[1], B = [2*x**3*y + 2*x**2*y**2 - 2*x*y**3, x**4/2 + x**2*y**2 + x*y**3 - y**4, x**3*y]
+[   83.3s] C1e[rand4[1]] KILL exact at D3/D2: linear system in C inconsistent (QQ)
+[   83.3s] verdict: rand4[1] -> kill-D3D2
+[   83.3s] --- enlarge instance 7: rand4[2], B = [2*x**3*y + 2*x*y**3, -x**4/2 + x**2*y**2 + y**4, -x**3*y]
+[   97.8s] C1e[rand4[2]] KILL exact at D3/D2: linear system in C inconsistent (QQ)
+[   97.8s] verdict: rand4[2] -> kill-D3D2
+[   97.8s] --- enlarge instance 8: rand4[3], B = [-2*x**4 - 2*x**3*y + 2*x**2*y**2, -x**3*y - x**2*y**2 + x*y**3, 0]
+[  110.7s] C1e[rand4[3]] KILL exact at D3/D2: linear system in C inconsistent (QQ)
+[  110.7s] verdict: rand4[3] -> kill-D3D2
+[  110.7s] --- enlarge instance 9: rand4[4], B = [-2*x**4 - 2*x**3*y - 2*x*y**3, -x**4/2 - x**3*y - x**2*y**2 - y**4, -x**3*y]
+[  126.2s] C1e[rand4[4]] KILL exact at D3/D2: linear system in C inconsistent (QQ)
+[  126.2s] verdict: rand4[4] -> kill-D3D2
+[  126.2s] --- enlarge instance 10: rand4[5], B = [2*x**4 + 2*x**3*y + 2*x**2*y**2 - 2*x*y**3, -x**4/2 + x**3*y + x**2*y**2 + x*y**3 - y**4, -x**3*y]
+[  139.9s] C1e[rand4[5]] KILL exact at D3/D2: linear system in C inconsistent (QQ)
+[  139.9s] verdict: rand4[5] -> kill-D3D2
+[  139.9s] ENLARGE SUMMARY [0:14]:
+[  139.9s]     ker4basis[0] -> kill-D3D2
+[  139.9s]     ker4basis[1] -> kill-D3D2
+[  139.9s]     ker4basis[2] -> kill-D3D2
+[  139.9s]     ker4basis[3] -> kill-D3D2
+[  139.9s]     ker4basis[4] -> kill-D3D2
+[  139.9s]     rand4[0] -> kill-D3D2
+[  139.9s]     rand4[1] -> kill-D3D2
+[  139.9s]     rand4[2] -> kill-D3D2
+[  139.9s]     rand4[3] -> kill-D3D2
+[  139.9s]     rand4[4] -> kill-D3D2
+[  139.9s]     rand4[5] -> kill-D3D2
+[  139.9s] STAGE enlarge DONE
+[   50.1s] joint stratum C1 degB<=2 degC<=3: 105 equations, 46 unknowns (C const dropped)
+[  286.5s] joint K1 C1: EMPTY mod 10007
+[  429.8s] joint K1 C1: mod 31013 -> EMPTY
+[  630.3s] joint K1 C1: QQ Groebner -> EMPTY (PROOF-GRADE)
+[  630.3s] STAGE jointX DONE
+[   12.5s] joint stratum C2 degB<=2 degC<=2: 63 equations, 34 unknowns (C const dropped)
+[final] joint C2 degB<=2 degC<=2: Groebner watchdog exceeded (>25 min mod 10007, 34 unknowns) -- NO VERDICT, killed. All other stages complete.
