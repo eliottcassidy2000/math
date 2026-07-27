@@ -32,6 +32,7 @@ related:
   - THM-2540-weighted-live-event-kakeya-flux-and-transverse-gain-boundary-refinement
   - THM-2543-augmentation-norm-relative-phase-local-system-dichotomy
   - THM-2548-seven-step-c91-transfer-and-full-norm-separation
+  - THM-2550-canonical-typed-row-double-nondegeneracy
 script: 04-computation/lrc14_future_pullback_neutral_hall_thm2549.py
 output: 05-knowledge/results/lrc14_future_pullback_neutral_hall_thm2549.out
 script_sha256: 6bbbbde3ef5241bc4a107bf281f951f8110eefa38a77ba8713926ddaedaccee1
@@ -342,6 +343,13 @@ Every weighted Hall inequality holds, while the diagonal is exactly zero.
 This is Hall-perfect in THM-2545's existence sense: it exhibits no deficit
 which could force a same-root hit from the retained fields.
 
+The cemetery column also blocks a tempting parity/reversal shortcut.  The
+swap `(t,s)->(s,t)` is typed only on root-to-root mass.  It is not defined on
+`(t,partial)`, because `partial` is not a possible selected-head vertex.
+Consequently cemetery atoms cannot be paired into reversal orbits, and no
+odd-total or tournament-parity argument can force a diagonal before genuine
+root-to-root target-active mass has first been constructed.
+
 Equations (24)--(27) are not the physical joint table
 `C^sigma_(t,s)` of THM-2545.  They say only that the proved future algebra
 has not supplied its map `b`.  An unknown physical target-active field can
@@ -349,7 +357,7 @@ refine (23), split cemetery mass among roots, restrict the compatibility
 graph, and create a diagonal.  Therefore (24) is neither a counterexample to
 scalar cover nor evidence that THM-2537's physical `A_tar` vanishes.
 
-## 6. Inheritance audit through THM-2548
+## 6. Inheritance audit through THM-2550
 
 The claim “currently constructed” has the following exact scope.  Each row
 states what the named theorem places after the selected or charged old packet,
@@ -369,6 +377,7 @@ and which coordinate is still absent.
 | THM-2540, `THM-2540-weighted-live-event-kakeya-flux-and-transverse-gain-boundary-refinement.md` | Positive spatial boundary events on all live rows | The empty head is at the same horizon, explicitly not a later arrival |
 | THM-2543, `THM-2543-augmentation-norm-relative-phase-local-system-dichotomy.md` | Branch-free labelled horizontal boundary local system | No vertical semantic/ancestry arrow and no literal phase-zero selection in the augmentation lane |
 | THM-2548, `THM-2548-seven-step-c91-transfer-and-full-norm-separation.md` | Root-charged horizontal `C_91` partial transfer and 1,296 signed cut coefficients | Transfer has vertical degree zero; its directed transition automaton is conditional and unconstructed |
+| THM-2550, `THM-2550-canonical-typed-row-double-nondegeneracy.md` | `PROVED CANDIDATE`: positive old owner-loop drift and a non-replica signed table on one canonical typed row | Not a scalar-cover row, selected-head field, categorical later root map, or ancestry/Boolean realization |
 
 THM-2517, THM-2527, and THM-2533 are intermediate future-owner/phase
 constructions in the same chain.  Their positive later factors occur through
@@ -395,7 +404,10 @@ same-root selected-head/arrival Hall diagonal  UNCONSTRUCTED physically. (28)
 More mixing cannot cross the second line: every extra positive-depth factor
 is still fixed by (5).  More root spectrum cannot cross it either: THM-2548
 retains every root-charged horizontal character while explicitly leaving the
-vertical edge absent.
+vertical edge absent.  THM-2550's newly computed nonzero old target fibre on
+one typed row is an especially useful positive control, but its own scope
+still asks for the ancestry/Boolean realization; it does not define `b` on
+the selected-head packet.
 
 The next target should therefore be one of the following equivalent pieces of
 new structure.

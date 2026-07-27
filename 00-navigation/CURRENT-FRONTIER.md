@@ -110,6 +110,13 @@ unknown; THM-2549 is not a scalar-cover hostile. THM-2547 is only a
 has `108/432` zero pairings in each convention; it retains no physical
 target/owner ancestry.
 
+THM-2550 is a **PROVED CANDIDATE + VERIFIED-EXACT** positive control on one
+canonical typed row: both old owner-loop drift tensors are nonzero and its
+lawful response table is non-replica with all `5,184` primitive cut modes.
+It is not a scalar-cover row and does not construct the selected-head/later-
+target ancestry map; its highest-value use is as a nondegenerate test input
+for the THM-2548 gain automaton or THM-2549 sheet-retaining bridge.
+
 THM-2502/2503/2504 show tournaments and sidecar-free holonomy are not target
 currents. THM-2458's hostile is physically realized by THM-2462. THM-2464
 proves: `lambda=1` clean charts force the linked blocker safe, `lambda=2` is
