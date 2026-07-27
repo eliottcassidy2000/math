@@ -127,12 +127,16 @@ coordinate is a tooth mode of the **actual covariant total-layer weights**.
 THM-2575 constructs a common-base owner-clock host; THM-2577 puts every
 positive return at depth `3` on `{a}` and depth `5` on `{b},{a,b}`.  The host
 lives on the distinct `{a}`, depth-3 packet, so the facts do not multiply.
+THM-2581 repairs that mismatch on the `{b}`, depth-5 fibre.  THM-2584 then
+retains the arrival/deep roots: in `w=t/2` every owner cell has the exact
+four-edge path `0--0--6--6--12`, all joint Fourier colours survive, and the
+signed endogenous `theta=t-2v` current keeps every nonzero collision colour.
 
-Next: build a covariant whole-layer old-head/future orbit with a nonzero tooth
-mode, or rebuild the host inside the `{b}`, depth-5 fibre and contract
-`theta=t-2u`.  Then place it on THM-2569 before the six-replica law and
-THM-2545.  Selector/current identity and vertical semantic gluing remain.
-More untyped nonvanishing is not progress.  No row is removed. Ledger: `165`.
+Next: transport that rail/reference onto THM-2569's old-head/future packet
+and prove a map from its deep root to the lawful target co-shift or relation
+residue before the full-`X` annihilation.  The present typed-row tensor is
+spectrally saturated; more untyped nonvanishing is not progress.  No row is
+removed. Ledger: `165`.
 
 ### Independent routes that remain live
 

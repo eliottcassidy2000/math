@@ -11,6 +11,16 @@
   unshifted moving factor, so its semantics cannot be combined with the
   shifted colours absent covariance or a comparison map.  Hashes are
   `a68bf5e2...8de9` / `eb882d15...c39d`.
+- `lrc14_b_r5_theta_target_tensor_thm2584.py` -> matching `.out`
+  [THM-2584 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Retaining the
+  arrival and deepest roots inside the same `{b}`, depth-five owner-clock
+  packet gives a positive two-rail tensor.  In `w=t/2` its support in every
+  owner cell is the four-edge path `0--0--6--6--12`; its pushforward has
+  exactly `t=0,-1`, all `169` global and cellwise joint Fourier colours, and
+  all `1,183` owner-centred colours.  The signed `theta=t-2v` current keeps
+  every nonzero collision colour.  This is not yet the THM-2365 target
+  co-shift or THM-2545 later root.  Hashes are `99cbb46c...849d` /
+  `69e2c32d...90a5`.
 - `lrc14_oriented_tooth_holonomy_thm2574.py` -> matching `.out`
   [THM-2574 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  The `k`
   physical components of a pulled-back interval have monodromy under the

@@ -203,8 +203,13 @@ def projective_zeros(C, ell=None):
     return zeros
 
 
+def eval_bucket(bucket, modulus, root):
+    return sum((coefficient % modulus) * pow(root, j, modulus)
+               for j, coefficient in enumerate(bucket)) % modulus
+
+
 def main():
-    print("== THM-2584 probe: b/r=5 theta and absolute deep-root tensor ==")
+    print("== THM-2584: b/r=5 theta and absolute deep-root tensor ==")
     print("row:", base.W)
     print("sigma={b}, K=2, r=5, d=13^5, Cdeep=2d")
     print("theta=t-2v=floor(2y) in {0,1}; all restrictions are pre-marginal")
@@ -234,10 +239,15 @@ def main():
                           for ell in range(QMOD)) for t in range(P)]
     target_mass = [sum(C[s][t][ell] for s in range(P)
                        for ell in range(QMOD)) for t in range(P)]
+    require(nonzero == 168, "positive tensor support count changed")
+    require(positive_per_t == [84] + [0] * 11 + [84],
+            "deep-root support is not exactly t={0,-1}")
     print(f"positive tensor cells: {nonzero}/1183")
     print("positive (s,ell) cells per deep root t:", positive_per_t)
     print("deep-root mass numerators:", target_mass)
-    require(len(set(target_mass)) > 1, "absolute deep-root marginal is uniform")
+    require(target_mass[0] == target_mass[12] > 0
+            and all(target_mass[t] == 0 for t in range(1, 12)),
+            "absolute deep-root marginal changed")
     target_hat = []
     for h in range(P):
         b = [0] * P
@@ -296,6 +306,9 @@ def main():
 
     global_zeros = projective_zeros(C)
     local_zeros = {ell: projective_zeros(C, ell) for ell in range(QMOD)}
+    require(not global_zeros, "a global two-dimensional colour vanished")
+    require(all(not local_zeros[ell] for ell in range(QMOD)),
+            "an owner-cell two-dimensional colour vanished")
     print("global 2D Fourier zeros (k,h):", global_zeros)
     print("per-owner-cell 2D Fourier zero counts:",
           [len(local_zeros[ell]) for ell in range(QMOD)])
@@ -314,6 +327,39 @@ def main():
                     centred_zero.append((k, h, ell))
     print(f"owner-centred 2D transform nonzero: {1183-len(centred_zero)}/1183")
     print("owner-centred zeros:", centred_zero)
+    require(not centred_zero, "an owner-centred two-dimensional colour vanished")
+
+    # Independent finite-field nonvanishing certificate.  A zero element of
+    # Q(zeta_13) vanishes at every primitive thirteenth root after reduction
+    # away from 13.  Mod 79 catches every global transform.  For the 1183
+    # centred entries it catches 1165; mod 131 catches the remaining 18.
+    roots = ((79, 18), (131, 107))
+    for modulus, root in roots:
+        require(pow(root, P, modulus) == 1 and root != 1,
+                "listed finite-field root is not primitive")
+    require(all(eval_bucket(bucket_transform(C, k, h), 79, 18)
+                for k in range(P) for h in range(P)),
+            "mod-79 global Fourier certificate failed")
+    remaining = []
+    caught79 = 0
+    for k in range(P):
+        for h in range(P):
+            global_b = bucket_transform(C, k, h)
+            for ell in range(QMOD):
+                centred = base.bsub(
+                    base.bscale(bucket_transform(C, k, h, ell), QMOD),
+                    global_b,
+                )
+                if eval_bucket(centred, 79, 18):
+                    caught79 += 1
+                else:
+                    remaining.append(centred)
+    require(caught79 == 1165 and len(remaining) == 18,
+            "mod-79 centred certificate count changed")
+    require(all(eval_bucket(bucket, 131, 107) for bucket in remaining),
+            "mod-131 centred certificate did not close")
+    print("finite-field certificate: 169 global mod79; centred 1165 mod79")
+    print("  plus remaining 18 mod131: PASS")
 
     # Signed theta half current and its exact reflection law.
     D = [[CE[1][s][ell] - CE[0][s][ell] for ell in range(QMOD)]
@@ -328,6 +374,9 @@ def main():
         [k for k in range(P) if base.is_zero_b(vector_transform(D, k, ell))]
         for ell in range(QMOD)
     ]
+    require(dzeros_global == [0], "signed theta global zero set changed")
+    require(dzeros_local == [[0], [], [], [], [], [], []],
+            "signed theta owner-cell zero sets changed")
     print("signed theta law D_ell(s)=-D_-ell(-s): PASS")
     print("signed theta global Fourier zeros k:", dzeros_global)
     print("signed theta per-cell Fourier zeros:", dzeros_local)
