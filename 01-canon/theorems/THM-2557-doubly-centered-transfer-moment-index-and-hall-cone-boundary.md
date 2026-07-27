@@ -2,7 +2,9 @@
 id: THM-2557
 title: "Doubly centered seven-step transfer, root-moment index, and the Hall-cone boundary"
 status: >
-  PROVED + VERIFIED-EXACT.  On the integral doubly centered 7-by-13
+  PROVED + VERIFIED-EXACT for the abstract lattice, moment, cone, and Hall
+  controls; VERIFIED-EXACT APPLICATION inheriting THM-2550(B)'s current
+  PROVED-CANDIDATE/audit-requested status.  On the integral doubly centered 7-by-13
   interaction lattice, every nonzero-slope seven-step transfer is injective
   with exact image the kernel of a six-dimensional mod-13 first-root-moment
   map; its Smith form is 1^66 direct-sum 13^6.  Consequently the nonzero
@@ -20,6 +22,7 @@ depends_on:
   - THM-2548-seven-step-c91-transfer-and-full-norm-separation
   - THM-2549-future-pullback-target-neutrality-and-cemetery-hall-boundary
   - THM-2550-canonical-typed-row-double-nondegeneracy
+  - THM-2555-natural-extension-sheet-charge-and-future-digit-boundary
 related:
   - THM-2538-anchored-transverse-gain-and-common-ancestry-arrival-boundary
   - THM-2551-horizontal-transfer-transverse-projector-bicomplex-boundary
@@ -218,13 +221,13 @@ abelian group `W`.
 
 ### Coprime rectangular form
 
-The mechanism is not accidental to `7` and `13`.  For coprime positive
-integers `q` and prime `p`, on `C_q x F_p` with nonzero skew `a`, the
+The mechanism is not accidental to `7` and `13`.  For an integer `q>=2` and
+a prime `p` coprime to `q`, on `C_q x F_p` with nonzero skew `a`, the
 `q`-step transfer restricted to the doubly centered lattice has
 
 ```text
 0 -> V_00 --D_a--> V_00 --mu--> {m in F_p^q:sum m=0} -> 0,
-Smith(D_a|V_00)=1^((q-1)(p-2)) direct-sum p^(q-1).           (19)
+Smith(D_a|V_00)=1^((q-1)(p-2)) direct-sum (q-1 copies of p). (19)
 ```
 
 The same proof applies: the full kernel is root-uniform clock augmentation,
@@ -349,9 +352,9 @@ C_(h,partial)=p_h,                    C_(h,b)=0 for b in F_13. (26)
 
 After deleting the semantic diagonal, (26) is unchanged.  Every nonempty
 source set has cemetery neighbourhood of mass `M>=p(S)`, so all Hall
-inequalities hold and the arrival mass is zero.  This is the minimal lawful
-completion of the **currently proved fields**: it records absence of a
-genuinely later root rather than inventing one.
+inequalities hold and the arrival mass is zero.  This is the only lawful
+completion furnished by the **currently proved fields**: it records absence
+of a genuinely later root rather than inventing one.
 
 ### The smallest all-root symmetric cemetery-free hostile
 
@@ -366,9 +369,12 @@ C(h,b)=1_(b=h+1),                         h,b in F_13.       (27)
 It has thirteen unit atoms, uniform margins, and zero diagonal.  On its
 matching support, every Hall inequality is an equality because
 `N(S)=S+1`.  Retaining all seven clock labels gives the analogous `91`-atom
-control.  It is a valid abstract THM-2545 coupling, but it is **not** claimed
-to be realized by the typed row.  Without the translation requirement, the
-two-atom aligned/swap hostile of THM-2545 is smaller still.
+control.  THM-2555 realizes (27) as the positive symbolic cylinder
+`d_(L+1)=d_1+1` with every intervening sheet digit free.  This makes it an
+exact natural-extension hostile, but still does **not** place the unique
+THM-2461 target-active role on that cylinder or realize it on the typed row.
+Without the translation requirement, the two-atom aligned/swap hostile of
+THM-2545 is smaller still.
 
 A diagonal-only support provides the positive control: after deleting the
 diagonal, a positive singleton source has empty neighbourhood and hence an
@@ -382,24 +388,27 @@ Write one natural-extension point schematically as
 y=0.d_1 d_2 ... d_L e_1 e_2 ...  in base 13.                (28)
 ```
 
-THM-2549 proves that, for a unit role `y={wx}` with
-`x=(u+h)/13`, the top old ancestry-sheet digit, corrected by its base carry,
-recovers `h` exactly.  That is an **old-action ancestry root**.  The immediate
-future digit
+THM-2555 proves that, for a unit role `y={wx}` with `x=(u+h)/13`,
+the top old ancestry-sheet digit, corrected by its base carry, recovers `h`
+exactly.  That is an **old-action ancestry root**.  The immediate future
+digit
 
 ```text
 e_1=floor(13 T^L y)                                         (29)
 ```
 
-is a distinct coordinate.  Current canon has no theorem making (29), with
-the role-dependent carry and target action, into the root of a genuinely
-later target-active role on the same atom.
+is a distinct coordinate.  With its later base carry it recovers the future
+root `h_L=floor(13T^Lx)`, not `h`.  Current canon has no theorem deciding
+whether the unique genuinely later target-active role on the selected packet
+is semantically typed by the old-action ancestry chart or this future-action
+chart, nor one fixing the invariant gauge between the relevant root torsors.
 
 The missing datum can therefore be stated in either of two equivalent typed
 forms:
 
 1. an atomwise common-base map `b:Omega->F_13` for the genuinely later
-   target-active role, together with its covariance and carry law; or
+   target-active role, together with the theorem selecting its old- or
+   future-action chart, covariance, carry, and invariant gauge; or
 2. after identifying the old head chart and the later chart as one root
    torsor, the displacement
 
@@ -438,10 +447,10 @@ diagonal singleton deficit.  It deliberately performs no large typed-row
 recomputation and no Lean build.
 
 The highest-leverage next experiment is consequently not another
-nonvanishing census.  It is to atomize one genuinely later target-active unit
-role together with the selected head on a common natural-extension sheet,
-compute its carry-corrected candidate `b` from (29), and tabulate the actual
-word-resolved displacement support (30).  A missing nonzero displacement
-would force Hall arrival; an allowed nonzero displacement would exhibit the
-precise zero-arrival escape.  Until that semantic object exists, LRC(14)
-remains open. **QED.**
+nonvanishing census.  It is to atomize the unique target-active unit failure
+together with the selected head on a common natural-extension sheet, decide
+whether its semantic root is THM-2555's old carry root or future carry root,
+and tabulate the actual word-resolved displacement support (30).  Support
+confined to zero would force Hall arrival; an actual permitted nonzero
+matching would exhibit the precise zero-arrival escape.  Until that semantic
+object exists, LRC(14) remains open. **QED.**
