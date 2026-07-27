@@ -1,5 +1,5 @@
 ---
-id: THM-2604
+id: THM-2608
 title: "Alternative-rail clock collapse and the missing transition index"
 status: RESERVED / UNPROVED EMPTY STUB
 source: deep-energy-audit-2026-07-28-clock-matched-cospan
@@ -10,7 +10,7 @@ related:
   - THM-2602-commutative-vertex-insertion-and-ordered-transition-curvature-no-go
 ---
 
-# THM-2604 -- reserved candidate
+# THM-2608 -- reserved candidate
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
