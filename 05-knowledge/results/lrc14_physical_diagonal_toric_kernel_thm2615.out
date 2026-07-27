@@ -1,0 +1,9 @@
+THM-2615 exact finite referee
+field=F_53; zeta13=16
+radon_delta_basis_checks=2197
+deep_charge_dephase_checks=28561
+permutation_hostile: row_marginals=same column_marginals=same base_axes=same
+diagonals: shift=empty sigma={2,...,11}; primitive_colours=12/12
+sigma_primitive_values=2,50,36,48,3,40,40,3,48,36,50,2
+target_relation_residues=169/169; physical_exponents=collapsed
+OK
