@@ -1,0 +1,9 @@
+THM-2530 exact anchored deep-Gram/skew audit: PASS
+point masks: 23 = 12 singleton stars + 11 adjacent occupied edges
+sample cone totals: singleton=662, adjacent-pair=165
+anti-diagonal polynomial: A + B(2+x+x^-1); all 12 primitive values positive
+lossless zero-row basis audits: 1872 = 12 slopes * 156 basis matrices
+explicit anticommutator ranks by recovery: [(1, 156), (2, 156), (3, 156), (4, 156), (5, 156), (6, 156), (7, 156), (8, 156), (9, 156), (10, 156), (11, 156), (12, 156)]
+zero-H-drift cone refinement: D_H=0, E_K=784164/28561, E_pair=392082/28561
+general drift control: D_H=676478/371293, E_K=1095246/28561; identity E_K=13 D_H+2 E_pair
+semantic boundary: skew Boolean fibre wedge, not uniformly two occupied deep legs

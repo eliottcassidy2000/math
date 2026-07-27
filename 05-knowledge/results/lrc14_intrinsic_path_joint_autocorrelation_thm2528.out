@@ -1,0 +1,6 @@
+THM-2528 intrinsic path and joint autocorrelation companion: PASS
+boolean_masks=8192; nonconstant_masks=8190; path_identity_checks=106496
+fixed_path_coordinate=-4tau; psi_range=1..98; sharp_floor_equality_masks=52
+four_arm_components=1872; matched_pair_extractions=8190; sidecar_shift_checks=312
+joint_potential_modes=72; wiener_khinchin_checks=72; joint_odd_modes=72
+affine_cut_scalar_modes=5184; affine_cut_norm_modes=5184; cyclotomic_certificate_modulus=547

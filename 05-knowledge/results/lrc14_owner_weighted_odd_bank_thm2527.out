@@ -1,0 +1,9 @@
+THM-2527 owner-weighted odd bank: PASS
+operator_rank=12; AH_row_l2_squared=316
+inverse_coordinate_l1=56/169; inverse_coordinate_l2_squared=8684/845^2
+boolean_masks=8192; zero_masks=2; min_positive_psi=1; max_psi=98
+sharp_cut_floor=13/42; equality_masks=52; equality_sizes=6,7
+equality_C13_necklaces=399,463,483,487; nonboolean_control=-1/4
+three_zero_run_masks=5434; sharp_guard_equalities=52
+fixed_positive_coordinate=-4*tau; owner_floor=(169/42)*weighted_drift
+rational total drift plus Phi_13 irreducibility gives all twelve modes
