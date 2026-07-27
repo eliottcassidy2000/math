@@ -1,0 +1,6 @@
+strong(7): |vals|=67 giant run (65, 105); islands below: [(25, 61)]
+strong(8): |vals|=297 giant run (69, 609); islands below: [(45, 45), (49, 53), (57, 65)]
+strong(9): |vals|=1482 giant run (85, 2881); islands below: [(75, 75), (81, 81)]
+junctions: 69 <= 105 and 85 <= 609: PASS
+union covers every odd in [65, 2881]
+ALL CHECKS PASSED
