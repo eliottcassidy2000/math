@@ -1,0 +1,8 @@
+THM-2520 rational-jump CRT exact companion: PASS
+endpoint_conductor=13^1*5; Perron_jump_controls=640; mean_controls=128
+zero_current_balanced_Boolean_tile=constant_1/13_at_levels_2,3
+nonzero_current_CRT_points=65; ladder_addresses=120
+all_12_high_frequency_ladders=nonzero_iff_prime_to_13_current_nonzero
+delayed_owner_scale=13^3; BV_invoice=strict; all_12_collision_colours=positive
+constant_branch=exact; future_owner_delay=quantitative; orientation=not_supplied
+ALL EXACT CHECKS PASSED

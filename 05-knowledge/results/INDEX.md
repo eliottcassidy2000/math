@@ -17,6 +17,34 @@
   `41b6f8b0...aefc` / `e41bdc28...16a9`.  The bridge is signed,
   pointwise/Hilbert-valued, and gauge-chosen; it supplies no Boolean owner
   charge or row exclusion.
+- `lrc14_rational_jump_crt_thm2520.py` -> matching `.out` [THM-2520
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For endpoint conductor
+  `13^nu d`, the true jumps aggregated modulo the coprime part `d` are
+  exactly the late Perron jump current.  Zero current is the exact balanced
+  constant-Perron branch; nonzero current gives every one of the twelve
+  last-digit ladders.  The cosecant/Parseval formula gives a common norm
+  floor, and any positive BV owner shifted beyond the collision sees all
+  twelve colours after the explicit THM-2520 threshold.  The primary checks
+  `640` jump cells, `128` means, a nonconstant Boolean balanced tile, all
+  `65` shifted CRT points, `120` ladder addresses, and delayed positivity at
+  scale `13^3`; an independent finite-grid referee checks `144` cases,
+  `540` Perron cells, `1,728` CRT rows, `144` variation contractions, three
+  lattice-fibre invoices, and the exact `42/169` drift.  For integer-valued
+  responses, a prime-to-`13` mean denominator now excludes the balanced
+  branch before endpoint enumeration.  This does not force every live
+  current nonzero or orient an owner loop.  Primary hashes
+  `c6a6bbd1...2f69c` / `6071f203...0c4aa`; independent hashes
+  `3f1deeb0...3ab9` / `34772271...db06`.
+- `lrc14_perron_collision_cospan_thm2518_2519_referee.py` -> matching `.out`
+  [THM-2518/2519 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Perron
+  powers disintegrate moments over genuine inverse-branch cospans with a
+  common future owner--word factor, prescribed distinct first-collision
+  residues, and an old-deep lift.  Averaging higher addresses at fixed last
+  digit gives the exact owner-weighted `K_13` conditional variance; positive
+  drift supplies all twelve rational root colours, while a future-measurable
+  Boolean replica is the sharp zero-drift hostile.  The cospan remains
+  antipodally even and sheeted.  Hashes `b09f9e89...5e39` /
+  `2818c04f...7898`.
 - `lrc14_anchored_cubic_spectrum_thm2517.py` -> matching `.out`, with Lean
   kernel `TournamentH7/LRCAnchoredCube.lean` [THM-2517 PROVED +
   VERIFIED-EXACT + LEAN-VERIFIED ARITHMETIC KERNEL + INDEPENDENTLY AUDITED].

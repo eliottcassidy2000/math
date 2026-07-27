@@ -2,528 +2,590 @@
 id: THM-2520
 title: "Rational-jump CRT dichotomy and delayed-owner forcing"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Once a Perron
-  depth contains the full 13-primary part of a rational step function's
-  endpoint grid, one nontrivial last-digit ladder vanishes if and only if
-  all of them vanish, if and only if the Perron average is exactly constant.
-  The equality branch is decided by one finite vector: the endpoint jump
-  current aggregated modulo the prime-to-13 part of the grid.  Off that
-  branch all twelve ladders are globally nonzero.  Any positive BV
-  owner--word event, delayed sufficiently far beyond the collision, then
-  gives all twelve weighted collision colours simultaneously; an explicit
-  endpoint/variation bound supplies one common delay.  A pure-13 interval
-  is a sharp zero-drift hostile.  For lattice-valued responses, the zero
-  branch is an exact constant-multiplicity inverse-fibre multisection; a
-  prime-to-13 denominator in the mean rules it out immediately.  The theorem
-  does not orient antipodal
-  cospans, rebase old source/deep sheets, prove nonzero mixed ANOVA drift on
-  a live response table, exclude a scalar row, or prove LRC(14).
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Let a periodic rational
+  step response have endpoint conductor D=13^nu d with gcd(d,13)=1, and
+  aggregate its true jumps modulo d.  Once the Perron depth clears nu, this
+  finite prime-to-13 current is exactly the jump current of the Perron
+  response, up to scaling and a CRT permutation.  It vanishes exactly when
+  the Perron response is constant and exactly when all twelve last-digit
+  Fourier ladders vanish; otherwise every ladder is nonzero.  An exact
+  cosecant/Parseval identity gives a common energy floor.  Moving any
+  positive BV future owner R further steps beyond the collision then makes
+  all twelve owner-weighted collision colours strictly positive at an
+  explicit O(13^(-R)) threshold.  The zero branch can contain a nonconstant
+  Boolean balanced inverse-fibre tile; for an integer-valued response it is
+  a constant-multiplicity inverse-fibre multisection, so a prime-to-thirteen
+  denominator in the mean excludes it immediately.  An undelayed owner can
+  still miss a nonzero ladder.  This proves a finite jump-current reduction,
+  not that every live LRC response has nonzero current, an oriented loop, a
+  C_7 owner-clock section, a row exclusion, or LRC(14).
 source: codex-2026-07-27-rational-jump-crt-dichotomy
 depends_on:
-  - THM-2478-delayed-owner-handoff-graft-and-deep-sheet-rebase-boundary
+  - THM-2518-perron-inverse-branch-owner-word-cospan-recovery
   - THM-2519-last-digit-collision-drift-and-k13-dirichlet-boundary
 related:
-  - THM-2449-coprime-owner-anova-and-delta-replica-boundary
-  - THM-2513-anchored-first-or-second-moment-spectrum-and-pair-space-boundary
-  - THM-2518-perron-inverse-branch-owner-word-cospan-recovery
-script: 04-computation/lrc14_rational_jump_crt_owner_forcing_thm2520.py
-output: 05-knowledge/results/lrc14_rational_jump_crt_owner_forcing_thm2520.out
-script_sha256: 3f1deeb09402a559f7ea29de59d024a134691f27e0ee38b08ec1be6890f83ab9
-output_sha256: 347722718137ec5e54c065807d59a13d65b3ce9fe177e5c2bfc47645fe20db06
+  - THM-2441-septimal-ancestry-event-period-collapse
+  - THM-2478-delayed-owner-handoff-graft-and-deep-sheet-rebase-boundary
+  - THM-2517-cubic-anchored-spectrum-flt3-and-three-time-boolean-lift
+script: 04-computation/lrc14_rational_jump_crt_thm2520.py
+output: 05-knowledge/results/lrc14_rational_jump_crt_thm2520.out
+script_sha256: c6a6bbd10d4e0e9003eeb424101894b633655a3926773bd7a266c1b5dc12f69c
+output_sha256: 6071f203e593cefde442bdd7722c9cb8d24cc7e1ba0572868f9474b82430c4aa
+independent_referee: 04-computation/lrc14_rational_jump_crt_owner_forcing_thm2520.py
+independent_output: 05-knowledge/results/lrc14_rational_jump_crt_owner_forcing_thm2520.out
+independent_referee_sha256: 3f1deeb09402a559f7ea29de59d024a134691f27e0ee38b08ec1be6890f83ab9
+independent_output_sha256: 347722718137ec5e54c065807d59a13d65b3ce9fe177e5c2bfc47645fe20db06
+typed_probe: 04-computation/lrc14_typed_owner_endpoint_current_thm2520_probe.py
+typed_probe_output: 05-knowledge/results/lrc14_typed_owner_endpoint_current_thm2520_probe.out
+typed_probe_sha256: 02d247bbe42f26b753916afeda3d83dd4e48b32f74d17b41cb2214abc54c3ec1
+typed_probe_output_sha256: e14f767c1e89b6b91c5491e367a0444781e01bc5e91ae252e8df39bea0df05a4
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2520 -- the non-thirteen endpoint current decides delayed collision drift
+# THM-2520 -- endpoint jumps decide delayed collision colour
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
-THM-2519 identifies last-digit collision drift with the weighted squared
-norms of twelve Perron frequency ladders.  Its sharp hostile is measurable
-at the marked future scale, so those norms can all vanish even when the bulk
-square table is fully charged.  Two questions remain:
+THM-2518 replaces free moment arms by lawful inverse-branch cospans.
+THM-2519 shows that their last collision digit is a `K_13` conditional
+variance, but a bulk mixed moment can lie in its zero branch.  For rational
+step responses, that branch is not diffuse or asymptotic.  It is a finite
+signed current on the part of the endpoint grid coprime to thirteen.
+
+The exact reduction is
 
 ```text
-when can a whole last-digit ladder vanish globally?
-
-if it does not vanish globally, can the future owner be made to see it?   (1)
+rational endpoint jumps
+  -> aggregate modulo the 13-free conductor d
+  -> zero: a balanced inverse-fibre tile and constant Perron response;
+  -> nonzero: all twelve last-digit ladders survive
+              and every sufficiently delayed owner sees them.             (1)
 ```
 
-For rational step data both questions have exact answers.  Strip the
-`13`-primary part from one common endpoint denominator and add the jumps in
-each remaining residue class.  That finite vector is zero exactly on the
-future-factor branch **after this Perron projection**; the original response
-can still vary in the Perron kernel.  Otherwise CRT forces every last digit,
-and one more owner delay supplies their common positive weight.
+The theorem does not assert which branch contains every live LRC packet.
+It replaces that analytic question by one finite CRT current.
 
-## 1. Endpoint grid, jumps, and Perron ladders
+## 1. The prime-to-thirteen jump current
 
-Let `F:T->R` be a periodic step function.  Choose a common endpoint grid
+Let `F:T->Q_(>=0)` be a periodic step function.  Use its true net jumps
 
 ```text
-D=13^K D_0,                    gcd(D_0,13)=1,                   (2)
+Delta_j=F(x_j+)-F(x_j-),                 x_j=b_j/D,             (2)
 ```
 
-so every discontinuity of `F` lies in `D^(-1)Z/Z`.  Minimality of `D` is
-not required.  At `j/D`, use the cyclic jump convention
+after combining repeated endpoints.  Choose a common endpoint conductor
 
 ```text
-Delta_j=F(j/D+)-F(j/D-),             j in Z/DZ.                 (3)
+D=13^nu d,                         gcd(d,13)=1.                 (3)
 ```
 
-The total jump is zero.  Aggregate the jump current after forgetting the
-`13`-primary sheet:
+Minimality of `D` is not required.  What is required is that (2) use the
+true net jump at each grid point and that (3) expose the full `13`-primary
+part of the chosen grid.
+
+The **coprime jump current** is the rational `C_d`-vector
 
 ```text
-C_r=sum_(j congruent r mod D_0)Delta_j,
-                                      r in Z/D_0Z.              (4)
+C_t=sum_(j: b_j=t mod d) Delta_j.                              (4)
 ```
 
-Fix
+Periodicity gives `sum_t C_t=0`.  Let
 
 ```text
-M=13^m,                         m>=K,
-
-h=P_MF,
-
-(P_MF)(y)=1/M sum_(r=0)^(M-1)F((y+r)/M),
-
-A=integral_T F.                                                (5)
+L-1>=nu,                 M=13^(L-1),
+U=13^(L-1-nu) mod d,     h=P_M F,                              (5)
 ```
 
-Let `zeta=exp(2 pi i/13)`.  The twelve nontrivial last-digit projections are
+where
 
 ```text
-H_a(y)=1/13 sum_(u in F_13)zeta^(-au)h(y+u/13),
-
-                                      a in F_13^*.              (6)
+(P_MF)(y)=1/M sum_(r=0)^(M-1)F((y+r)/M).                      (6)
 ```
 
-As in THM-2519, `H_a` contains exactly the Fourier frequencies of `h` which
-are congruent to `a mod 13`.
-
-## 2. The exact jump--CRT dichotomy
-
-The following conditions are equivalent:
+As an equality of periodic jump measures,
 
 ```text
-H_(a_*)=0 almost everywhere for some a_* in F_13^*;            (7a)
-
-H_a=0 almost everywhere for every a in F_13^*;                 (7b)
-
-C_r=0 for every r in Z/D_0Z;                                  (7c)
-
-P_MF=A almost everywhere.                                     (7d)
+dh=1/M sum_(v in C_d) C_(U^(-1)v) delta_(v/d).                (7)
 ```
 
-Consequently exactly one of the following occurs:
-
-```text
-constant branch:  h=A and all twelve last-digit ladders vanish;
-
-charged branch:   H_a!=0 in L^2 for every a in F_13^*.         (8)
-```
-
-### Proof
+Indeed, one branch of (6) crosses `x_j` precisely when
+`y=Mx_j mod 1`.  Equation (5) clears the complete `13`-primary endpoint
+denominator, so only `b_j mod d` remains; multiplication by `U` merely
+permutes that grid.
 
 Use the Fourier convention
 
 ```text
-Fhat(n)=integral_T F(x)exp(-2 pi i n x)dx.                     (9)
+Fhat(n)=integral_T F(x)exp(-2 pi i n x)dx,
+Chat(b)=sum_t C_t exp(-2 pi i bt/d).                           (8)
 ```
 
-Distributional integration by parts gives, for `n!=0`,
+Distributional integration by parts and `hhat(k)=Fhat(kM)` give, for
+`k!=0`,
 
 ```text
-2 pi i n Fhat(n)
- =sum_(j mod D)Delta_j exp(-2 pi i n j/D).                    (10)
+hhat(k)=Fhat(kM)=Chat(Uk)/(2 pi i kM).                         (9)
 ```
 
-Put `n=Mk`.  Since `m>=K`, grouping (10) by `j mod D_0` gives
+Thus the current is not merely a necessary endpoint statistic: it is the
+complete high-frequency Perron numerator.
+
+## 2. CRT all-or-all ladder dichotomy
+
+Let `zeta=exp(2 pi i/13)` and, for `a in F_13`, put
 
 ```text
-2 pi i Mk Fhat(Mk)
- =sum_(r mod D_0)C_r
-    exp(-2 pi i 13^(m-K) k r/D_0).                            (11)
+H_a(y)=1/13 sum_(u in F_13)zeta^(-au)h(y+u/13).              (10)
 ```
 
-The Perron Fourier identity is
+Then
 
 ```text
-hhat(k)=Fhat(Mk).                                              (12)
+H_a(y)=sum_(k=a mod 13)hhat(k)exp(2 pi i ky).                 (11)
 ```
 
-Suppose (7a) holds.  Then the right side of (11) vanishes for every
-integer `k` satisfying
+For any fixed `a!=0`, the congruence class `k=a mod 13` runs through every
+class modulo `d`, because `(13,d)=1`.  Equation (9) and finite Fourier
+inversion on `C_d` therefore prove the equivalent conditions
 
 ```text
-k=a_* mod 13.                                                  (13)
+C=0;
+
+h=integral_T F;
+
+H_a=0 for one prescribed a!=0;
+
+H_a=0 for every a!=0.                                        (12)
 ```
 
-As `k` ranges through (13), CRT says that `k mod D_0` ranges through all of
-`Z/D_0Z`.  Multiplication by `13^(m-K)` is also a permutation modulo `D_0`.
-Thus the `D_0`-point DFT of `(C_r)` vanishes at every character.  DFT
-invertibility gives (7c).
-
-If (7c) holds, (11)--(12) give
+Consequently,
 
 ```text
-hhat(k)=0                         for every k!=0.               (14)
+C!=0  iff  H_a!=0 for all twelve a in F_13^*.                (13)
 ```
 
-Hence `h=A` in `L^2`, proving (7d), which immediately gives (7b) and (7a).
-The reverse implications are included in this cycle.  This proves (7)--(8).
+This is a literal CRT mechanism.  It does not use rational Galois
+propagation: a single nonzero `d`-frequency of `C` can be paired with each
+prescribed nonzero residue modulo thirteen.
 
-The depth condition `m>=K` is load-bearing.  Before the Perron depth has
-passed the full `13`-primary endpoint grid, the residue reduction in (11)
-does not exist and a pure-`13` future factor can remain nonconstant.
-
-### Constant branch as an inverse-fibre multisection
-
-There is a cheaper necessary condition when the response is lattice-valued.
-Suppose, for some `lambda>0`,
+There is an equally useful position-space description.  If `h` jumps at
+`t/d`, then the thirteen translates in (10) jump at
 
 ```text
-F(x) in lambda Z                         almost everywhere.   (14a)
+t/d-u/13,                         u in F_13.                   (14)
 ```
 
-On the constant branch, multiply `P_MF=A` by `M`:
+The map `(t,u)->13t-du mod 13d` is bijective.  Hence no two translated
+jumps can cancel at one point.  This explains geometrically why every
+character sees a nonzero jump whenever `C!=0`.
+
+The branch type is stable for every `L-1>=nu`; increasing `L` only scales
+the current by `1/M` and permutes it by a power of thirteen modulo `d`.
+Its labelled form is periodic in `L` with period dividing `ord_d(13)`.
+
+## 3. Exact ladder energy and a quantitative floor
+
+Put
 
 ```text
-M A/lambda
- =sum_(r=0)^(M-1) F((y+r)/M)/lambda
- in Z.                                                       (14b)
+Q=13d.
 ```
 
-Thus every inverse fibre has the same integer lattice weight; for a
-nonnegative integer-valued response this is literally a constant
-multiplicity.  Moreover
+For `a!=0` and `b in C_d`, let `r_(a,b)` be the unique representative in
+`{1,...,Q-1}` satisfying
 
 ```text
-A in (lambda/M)Z.                                            (14c)
+r_(a,b)=a mod 13,                    U r_(a,b)=b mod d.        (15)
 ```
 
-For an integer-valued response and `A=p/q` in lowest terms, the constant
-branch forces `q|M`.  Since `M` is a power of thirteen, any prime factor of
-`q` other than `13` proves `C!=0` immediately.  So does a `13`-primary
-denominator deeper than `M`.  This condition is necessary, not sufficient:
-a mean in `M^(-1)Z` does not by itself make the fibre counts constant.
-
-## 3. An endpoint-explicit energy floor
-
-The dichotomy has a quantitative form.  Put
+Grouping (11) by residue classes modulo `Q` and using
 
 ```text
-S_C=sum_(r mod D_0)C_r^2.                                    (15)
+sum_(n in Z) 1/(r+nQ)^2
+ =pi^2/Q^2 csc^2(pi r/Q)                                      (16)
 ```
 
-Assume `S_C>0`.  For
+gives the exact identity
 
 ```text
-Q_t=sum_r C_r exp(-2 pi i tr/D_0),
+||H_a||_2^2
+ =1/(4M^2Q^2) sum_(b in C_d)
+    |Chat(b)|^2 csc^2(pi r_(a,b)/Q).                          (17)
 ```
 
-finite Parseval gives
+The `b=0` term is harmless: `Chat(0)=sum_t C_t=0`, while `a!=0` keeps
+`r_(a,0)` away from zero.  Unnormalized finite Parseval and
+`csc^2>=1` yield the common floor
 
 ```text
-sum_(t mod D_0)|Q_t|^2=D_0 S_C.                               (16)
+||H_a||_2^2
+ >= [sum_t C_t^2]/(4*13^2*M^2*d)                for all a!=0. (18)
 ```
 
-Choose `t_0` with `|Q_(t_0)|^2>=S_C`.  For each `a!=0`, CRT supplies a
-unique representative
-
-```text
-1<=k_a<=13D_0-1,
-
-k_a=a mod 13,
-
-13^(m-K)k_a=t_0 mod D_0.                                     (17)
-```
+This exact norm is stronger than a nonvanishing assertion.  It invoices the
+`M^(-2)` cost of asking a late inverse branch to remember its last digit.
 
 Let
 
 ```text
-E_a=integral_T |H_a|^2.                                      (18)
+B=||F||_infinity,                       V=Var(F).              (19)
 ```
 
-Equations (11)--(12), Parseval on the `a mod 13` ladder, and (17) imply the
-uniform floor
+The jump formula also gives
 
 ```text
-E_a>=|Fhat(Mk_a)|^2
-
-   >=S_C/[4 pi^2 M^2(13D_0-1)^2]
-
-                                      for every a!=0.          (19)
+||H_a||_infinity<=B,
+Var(H_a)<=Var(h)<=V/M,
+Var(|H_a|^2)<=2BV/M.                                         (20)
 ```
 
-This floor is deliberately coarse but completely explicit in the endpoint
-current.  No denominator-free floor is possible for arbitrary rational step
-heights.
+## 4. A sufficiently delayed common owner sees every colour
 
-There is also a BV invoice.  Perron averaging contracts variation:
+Let `G:T->[0,1]` be a positive BV future owner--word factor, and write
 
 ```text
-Var(P_MF)<=Var(F)/M.                                          (20)
+rho=integral_T G>0,                       W=Var(G).            (21)
 ```
 
-Indeed, each inverse branch traverses one of the `M` equal subintervals;
-after the normalized sum, their variations total at most `Var(F)/M`.
-Translation averaging in (6) therefore gives
+For `R>=0`, set
 
 ```text
-Var(H_a)<=Var(F)/M,
-
-||H_a||_infinity<=||F||_infinity,
-
-Var(|H_a|^2)
- <=2||F||_infinity Var(F)/M.                                  (21)
+K=13^(R+1).                                                    (22)
 ```
 
-## 4. One delayed owner forces all twelve colours
-
-Let `G:T->R_(>=0)` be BV with
+The fixed-last-digit collision table with the owner placed `R` steps after
+the collision is
 
 ```text
-rho=integral_T G>0.                                           (22)
+B_u^[L,R]
+ =1/M sum_(e=0)^(M-1) integral_T
+    G(13^(L+R)x)F(x)F(x+(u+13e)/13^L)dx.                     (23)
 ```
 
-For `R>=1`, put
+The exact THM-2519 reduction, with the later common factor retained, is
 
 ```text
-W_R(y)=G(13^R y),
-
-B^R_u=integral_T W_R(y)h(y)h(y+u/13)dy,
-
-Bhat^R(a)=1/13 sum_(u in F_13)B^R_u zeta^(-au).               (23)
+B_u^[L,R]
+ =integral_T G(Ky)h(y)h(y+u/13)dy.                           (24)
 ```
 
-The weight is invariant under every last-digit translation.  THM-2519's
-norm identity gives exactly
+Because `K/13` is an integer, `G(Ky)` is invariant under every
+`y->y+u/13`.  Therefore its normalized `u`-Fourier coefficients are exact
+weighted norms:
 
 ```text
-Bhat^R(a)=integral_T W_R(y)|H_a(y)|^2dy>=0.                   (24)
+Bhat^[L,R](a)
+ :=1/13 sum_u B_u^[L,R] zeta^(-au)
+ =integral_T G(Ky)|H_a(y)|^2dy
+ >=0.                                                        (25)
 ```
 
-The two-BV dilation estimate gives
+There is also an exact fixed-delay all-or-all law.  Away from its finite
+jump set, the thirteen numbers `h(y+u/13)` are rational.  If one nontrivial
+`H_a(y)` vanishes, then the degree-twelve rational polynomial
 
 ```text
-|Bhat^R(a)-rho E_a|
- <=Var(G)Var(|H_a|^2)/(12*13^R).                              (25)
+sum_(u=0)^12 h(y+u/13)X^u
 ```
 
-Hence, on the charged branch, one common sufficiently large `R` satisfies
+vanishes at a primitive thirteenth root.  Irreducibility of `Phi_13` forces
+all thirteen coefficients to be equal, so every nontrivial `H_a(y)`
+vanishes.  Since the weight in (25) is nonnegative,
 
 ```text
-Bhat^R(a)>0                       for every a in F_13^*.        (26)
+at every fixed R, either all twelve Bhat^[L,R](a) vanish
+or all twelve are strictly positive.                          (25a)
 ```
 
-Combining (19), (21), and (25), the following entirely explicit condition
-is sufficient:
+This pointwise form needs rational response values, but no rationality of
+the owner weight.
+
+The periodic BV covariance estimate and (20) give
 
 ```text
-3*13^R*rho*S_C
-
- >20 Var(G)||F||_infinity Var(F)
-      M(13D_0-1)^2.                                          (27)
+|Bhat^[L,R](a)-rho||H_a||_2^2|
+ <=BVW/(6MK).                                                 (26)
 ```
 
-Indeed, (27) uses the elementary safe bound `pi^2<10` in the sharper
-sufficient inequality
+Put
 
 ```text
-13^R
- >(2 pi^2/3)
-   Var(G)||F||_infinity Var(F)
-   M(13D_0-1)^2/(rho S_C).                                   (28)
+S_C=sum_t C_t^2.
 ```
 
-On the constant branch, no delay can help:
+If `C!=0`, then all twelve coefficients in (25) are strictly positive as
+soon as
 
 ```text
-B^R_u=rho A^2                         for every u and R.       (29)
+K > 2*13^2*d*M*B*V*W/(3*rho*S_C).                            (27)
 ```
 
-Thus the exact eventual equality boundary is
+When `W=0`, the error is zero and no delay threshold is needed.  Since
+arbitrarily large `R` are available in either parity class, (27) is
+compatible with either septimal orientation convention.
+
+If `F` and `G` are rational step functions with rational endpoints, every
+entry of (23) is rational.  In the lawful response setting, expand `F` into
+its packet factors before the old-root sums.  Then (25) is simultaneously a
+Boolean-before-Fourier construction, an analytic positive norm, and an exact
+rational collision table.
+
+In the zero branch, (12) makes (24) completely rigid:
+
+```text
+C=0  ->  B_u^[L,R]=rho (integral_T F)^2
+          for every u and every R.                            (28)
+```
+
+Equations (27)--(28) are the promised delayed-owner dichotomy.
+
+Equivalently, with `F` fixed,
 
 ```text
 C=0
- iff for every BV G>=0 of positive mean and every R>=1,
-     the delayed last-digit drift is zero;
+ iff every positive BV owner at every later delay has zero collision drift;
 
 C!=0
- implies every sufficiently delayed positive owner
-         has all twelve last-digit colours.                   (30)
+ implies every positive BV owner has all twelve colours
+         at every sufficiently large delay.                   (28a)
 ```
 
-If `F` and `G` are rational step functions, every `B^R_u` is rational.
-The prime-cyclotomic argument of THM-2519 then also gives, at each fixed
-`R`,
+For the reverse direction in the first line, take the constant owner
+`G=1`; a zero collision drift is the sum of the twelve unweighted ladder
+norms, so (12) forces `C=0`.
+
+### The constant branch is an inverse-fibre multisection
+
+There is a cheaper necessary test when the response is lattice-valued.
+Suppose that, for some `lambda>0`,
 
 ```text
-one Bhat^R(a_*)=0, a_*!=0
- iff every nontrivial Bhat^R(a)=0;
-
-otherwise every nontrivial Bhat^R(a)>0.                       (31)
+F(x) in lambda Z                         almost everywhere.  (28b)
 ```
 
-The delayed mixing theorem strengthens (31): when `C!=0`, it proves that
-the positive alternative must eventually occur.
-
-## 5. Lawful common-future cospan form
-
-Return to THM-2519's collision notation
+If `P_MF=A` is constant, then almost every inverse fibre has the same
+lattice weight:
 
 ```text
-N=13M,
-
-d=u+13e,                         e in Z/MZ.                    (32)
+M A/lambda
+ =sum_(r=0)^(M-1) F((y+r)/M)/lambda
+ in Z.                                                        (28c)
 ```
 
-Equation (23) is the exact reduction of the physical cospan average
+For a nonnegative integer-valued response this is literally a
+constant-multiplicity inverse-fibre multisection.  In particular,
 
 ```text
-mathcal B^R_u
- =1/M sum_e integral_T
-    G(13^(R-1)N x)
-    F(x)F(x+(u+13e)/N)dx.                                    (33)
+A in (lambda/M)Z.                                             (28d)
 ```
 
-Both endpoints in every summand have the same `T^L` future, and the later
-factor in (33) is evaluated at the same still-further future of both:
+If `F` is integer-valued and `A=p/q` is reduced, the zero-current branch
+forces `q|M`.  Since `M` is a power of thirteen, a prime-to-thirteen factor
+of `q`, or a thirteen-primary denominator deeper than `M`, proves `C!=0`
+without enumerating a single endpoint.  This condition is only necessary:
+a mean in `M^(-1)Z` does not force the fibre multiplicities to be constant.
+
+## 5. Sharp boundaries and hostile controls
+
+Each hypothesis has a concrete job.
+
+### The depth must clear the `13`-primary conductor
+
+Let
 
 ```text
-G(13^(R-1)N(x+d/N))
- =G(13^(R-1)(Nx+d))
- =G(13^(R-1)Nx).                                              (34)
+F(x)=1_[0,1/2)({13x}).
 ```
 
-Thus delaying `G` does not freeze one packet role or choose an absolute
-inverse branch.  For a THM-2478 owner--word block it is a lawful common
-future owner and its terminal word.  The delay `R` can be taken in either
-prescribed cofinal parity class after increasing the strict bound (27).
+Its endpoint conductor is `26=13*2`, and its aggregate coprime current is
+nonzero.  At `L=1`, however, `h=F` is `1/13`-periodic, so every nontrivial
+`H_a` vanishes.  The theorem begins at `L=2`, exactly as (5) requires.
 
-The construction remains a self-cospan.  It is antipodally even in `u`, so
-the twelve positive colours occur in six equal opposite pairs.  It supplies
-no orientation or tournament edge.
+### The constant branch can be nonconstant and Boolean upstairs
 
-## 6. Sharp controls and equality mechanisms
+For
 
-### Pure-`13` hostile
+```text
+F=1_[0,1/13),                       L=2,
+```
+
+the response is nonconstant but
+
+```text
+P_13F=1/13,                         C=0.                      (29)
+```
+
+Hence every collision entry is `rho/169`.  More generally, a Boolean
+response can choose the same number of active inverse branches over every
+coprime base cell.  The zero branch is an exact balanced fibre tile, not
+pointwise constancy of the original response.
+
+### A nonzero current need not meet the undelayed owner
 
 Take
 
 ```text
-F=1_[0,1/13),             D=13, K=1, D_0=1,
-
-M=13.                                                            (35)
+F=1_[0,1/14),                       L=1,
+G=1_[13/14,1).
 ```
 
-There is one positive and one negative endpoint jump, but after aggregation
-modulo `D_0=1`,
+The coprime current is nonzero, but over the support of the immediate future
+owner all thirteen predecessors miss `F`; every weighted colour in (25) is
+zero at `R=0`.  The extra mixing delay in (27) is therefore load-bearing.
+
+### Use true jumps, not a presentation ledger
+
+Repeated endpoint descriptions must first be combined into the net jump in
+(2).  Artificial subdivision creates zero jumps and cannot create a charged
+current.  Changing a valid common conductor only refines or permutes the
+same conclusion once its full `13`-part is cleared.
+
+### Rational response values are sharp for fixed-delay all-or-all
+
+Choose a small rational base interval `I`.  On its thirteen disjoint inverse
+images, prescribe the real step values
 
 ```text
-C_0=sum_j Delta_j=0.                                         (36)
+2+2 cos(2 pi a_0r/13),                       r in F_13,
 ```
 
-Exactly one of the thirteen inverse samples lies in the interval, so
+and take the future weight supported on `I`.  This fibre has Fourier support
+only at `+-a_0`, so the owner sees two positive colours and ten zeros.  Thus
+the rational `Phi_13` argument behind (25a) cannot be extended to arbitrary
+real step values.  The eventual delayed conclusion from the jump CRT and
+mixing still holds without this pointwise shortcut.
+
+## 6. Lawful cospan scope and the remaining LRC object
+
+In (23), the two histories first coalesce at depth `L`; the factor
+`G(13^(L+R)x)` is one genuine common owner `R` steps later.  If
 
 ```text
-P_13F=1/13.                                                   (37)
+G=E_j (Q o T^K_0),
 ```
 
-Every ladder and every delayed collision drift vanishes.  This is the
-minimal future-factor mechanism behind THM-2519's larger
-delta-plus-replicas hostile.  It also shows why the condition `m>=K` cannot
-be weakened: at a shallower Perron depth the same indicator is nonconstant.
+the entire block must be shifted together, and its terminal word occurs at
+depth `L+R+K_0`.  Expanding each response density before its root sum makes
+every summand a literal Boolean product on the inverse-branch fibre product.
+The distinguished old deep leg and its diagonal zero survive exactly as in
+THM-2518.
 
-### Prime-to-`13` positive control
-
-Take
+What THM-2520 closes is precise:
 
 ```text
-F=1_[0,1/2),              D=2, K=0, D_0=2,
-
-M=1.                                                             (38)
+nonzero rational-step last-digit ladder
+  -> some positive common future owner sees all twelve colours.             (30)
 ```
 
-The two jumps give
+What remains is equally precise.  For each live response packet, form (4).
+Either its current is nonzero and (27) applies, or its late Perron response
+is the balanced constant branch (28).  The latter must be excluded or used
+combinatorially; bulk cubic or square charge alone does not exclude it.
 
-```text
-(C_0,C_1)=(1,-1),                 S_C=2.                       (39)
-```
+The live test is sparse: choose one common endpoint denominator, list only
+actual boundary jumps, accumulate them by residue modulo `d`, and test the
+resulting rational vector for zero.  There is no need to expand the full
+`13^nu` inverse tower.  Different response cells can still have different
+currents, and signed mixed-table combinations can cancel; a marked-cell
+current is not automatically intrinsic ANOVA drift.
 
-Hence all twelve global ladders are nonzero, and every sufficiently delayed
-positive owner sees all of them.  With `G=1`, no delay is needed.
-
-The two controls isolate the exact coordinate: nonconstancy of `F` is not
-enough; the part of its endpoint current surviving the prime-to-`13`
-quotient is what matters.
-
-## 7. Exact live-row reduction and nonclaims
-
-At any fixed lawful THM-2449 clock, each response density is a rational step
-function on a finite endpoint grid.  To test its global last-digit ladders:
-
-```text
-1. choose one common endpoint denominator D=13^K D_0;
-2. enumerate only its actual boundary jumps Delta_j;
-3. accumulate C_(j mod D_0);
-4. test whether this sparse rational vector is zero.           (40)
-```
-
-There is no need to expand a `13^K`-cell tower.  When `C!=0`, equation (27)
-installs a sufficiently delayed common future owner--word factor and forces
-all twelve collision colours on that scalar response.  When `C=0`, the
-Perron response is exactly constant and no such delay can create drift.
-
-For the lawful densities
+For the lawful response densities used here,
 
 ```text
 F_j=sum_r h_(j,r),
 ```
 
-each summand is Boolean, so `F_j` is integer-valued.  Before enumerating any
-jumps, reduce the mean `A_j`: a prime-to-`13` denominator already excludes
-the constant branch by (14b)--(14c).  Only the remaining pure-`13`
-denominator cases need the sparse endpoint-current test (40).
+each summand is Boolean, so `F_j` is integer-valued.  Reduce its mean first:
+the denominator test (28c)--(28d) excludes the balanced branch whenever the
+reduced denominator has a prime-to-thirteen factor.  Only the remaining
+pure-thirteen cases require the sparse current computation.
 
-This reduces the analytic support problem to a finite endpoint-current
-test.  It does not finish the table semantics:
+### Canonical typed-row positive control
 
-- a drifting marked cell, zero-extended to the table, has every primitive
-  table character, but this is not an intrinsic ANOVA interaction;
-- different response cells can have different jump vectors, and signed
-  mixed combinations can still cancel;
-- the old deep label may be kept on an ancestry leg, but (34) does not rebase
-  it at the future owner;
-- a unit collision address eventually violates the old septimal/deep
-  phase-bank preservation bounds of THM-2518;
-- source-time and arrival-time atoms remain different projections;
-- positivity of the root-colour norm does not orient `u` against `-u`; and
-- no scalar row is excluded and LRC(14) remains open.
+The exact typed probe applies this two-stage test to the canonical
+THM-2309/2334/2349 numerical row
 
-The next cheapest live computation is now precise: form the vectors (4) for
-the owner-marked lawful response cells, then test their mixed table
-combinations before attempting any further analytic estimate.
+```text
+(H,q_1,...,q_5,c_1,c_2,c_3)
+ =(1,14,27,40,53,66,13,2197,742586),                         (31)
+```
 
-## 8. Exact referee
+with owner `c_1=13`, word clock `169`, and the three lawful word strata
+`Q_a,Q_b,Q_ab`.  The common grid has conductor
+`D=13^8*61,704,720`, and all `26` deep endpoints align with the `c_3` word
+boundary.  Before and after summing the old deep factor, respectively, the
+six current `(support,L1)` pairs are
+
+```text
+Q_a:  (14,376112),  (14,694328),
+Q_b:  (22,3867136), (22,7412064),
+Q_ab: (4,347100),   (4,665252).                              (32)
+```
+
+The mean-denominator screen already proves nonzero current in five cases.
+The deep-summed `Q_ab` mean has pure denominator `13^7`, so the screen is
+sharp there, but its explicit four-residue current is still nonzero.  Thus
+all three typed word strata have nonzero current both before and after the
+old deep sum, and THM-2520 supplies every collision colour after a common
+sufficiently late owner delay in this positive-control instance.
+
+The constructor explicitly does **not** identify (31) with one of the `165`
+scalar-cover rows.  Equation (32) is therefore a canonically typed lawful
+signal and a test of deep compatibility, not a row exclusion.  The scalar
+cover identification, mixed-table cancellation, and Boolean emission remain
+open.
+
+This theorem does not orient `u` against `-u`, turn the positive norm into a
+signed owner-loop current, or choose the free `C_7` owner clock of THM-2517.
+The next joint carrier should retain the seven disjoint Latin cells `P_c`
+before replacing them by the scalar union `sum_c P_c`.  Their clock character
+
+```text
+Z=sum_(c in C_7) zeta_7^c P_c                                (31)
+```
+
+has its own finite jump current.  A nonzero current would retain a
+`C_7`-typed ladder before the positive norm is taken; a zero current would
+mean exact clock balance on every late inverse fibre.  The norm in (25)
+forgets that phase, so a lawful polarization/emission sidecar is still
+required.  This is a sharper next object, not a claimed `C_91` closure.
+
+## 7. Exact companion
 
 Run
 
 ```bash
+python3 04-computation/lrc14_rational_jump_crt_thm2520.py
+python3 -O 04-computation/lrc14_rational_jump_crt_thm2520.py
 python3 04-computation/lrc14_rational_jump_crt_owner_forcing_thm2520.py
 python3 -O 04-computation/lrc14_rational_jump_crt_owner_forcing_thm2520.py
+python3 04-computation/lrc14_typed_owner_endpoint_current_thm2520_probe.py
+python3 -O 04-computation/lrc14_typed_owner_endpoint_current_thm2520_probe.py
 ```
 
-Both runs reproduce the stored transcript byte-for-byte.  The
-dependency-free `Fraction` referee checks the cyclic jump aggregation,
-direct Perron evaluation on rational grids, CRT coverage of every last
-digit, variation contraction, the constant/charged dichotomy, the two sharp
-controls, three integer/lattice fibre invoices, and exact finite
-conditional-variance identities.
+Both executions match the stored transcript.  The exact `Fraction`
+companion checks:
 
-An independent line audit rederived (10)--(14), including the CRT
-representative range, the finite-DFT energy floor (19), Perron variation
-contraction, the square-variation bound, the common-delay inequalities
-(25)--(28), and the universal quantifiers in the zero branch.  It found no
-unresolved proof defect.  **QED.**
+- `640` Perron jump-current cells and `128` mean identities at two legal
+  depths on deterministic rational `13*5` profiles;
+- a nonconstant Boolean balanced tile whose two late Perron profiles are
+  exactly constant `1/13`;
+- all `65` shifted-grid CRT points and all `120` source-by-coprime ladder
+  addresses at two levels; and
+- the strict BV/Parseval invoice at owner scale `13^3`, all twelve positive
+  collision toothpick energies, and all twelve exact cyclotomic
+  nonvanishing tests.
+
+The independent referee uses a separate finite-grid implementation.  It
+checks `144` conductor/depth cases, `540` direct Perron cells, `1,728` CRT
+coverage rows, `144` variation contractions, `74/70` constant/charged
+branches, the pure-`13` hostile, the prime-to-`13` control drift `42/169`,
+three lattice-fibre invoices, and the independent safe delay constant `20/3`
+obtained from `pi^2<10`.  The typed sparse-endpoint probe checks the six
+currents in (32), all `26` deep endpoint alignments, and both denominator
+controls.  All normal/optimized runs match their stored transcripts.
+
+Independent audits rederived (7), (9), every CRT quantifier, the exact
+cosecant identity (17), the Parseval normalization, the variation invoice,
+the threshold (27), all three hostile boundaries, and the physical timing
+`G(13^(L+R)x)`.  No live row is removed.  LRC(14) remains open. **QED.**
