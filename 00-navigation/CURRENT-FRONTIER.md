@@ -154,12 +154,14 @@ fresh `X` and `91`-unit `m`. THM-2449/2456 classify the mixed-zero locus as an
 averaged root offset; THM-2457 turns supplied root service into an atom graph.
 THM-2459 retains drift and root service in at most four atoms
 (`D_0/63001`, `M_0/16384`); THM-2460 copies an independently retained word.
+THM-2461 makes the word prescribed-time, separates owner/deep roots, and proves
+repair is off-diagonal with only one target-active first-failure role.
 THM-2502 shows that coarse tournaments/Newton faces forget the top atom and
 dipole partner. THM-2458's exact thirteen-chart hostile is physically realized
 by THM-2462. THM-2464 proves: `lambda=1` clean charts force the linked blocker
 safe, `lambda=2` is phase-before-speed universal, and fixed delays work iff the
-joint clock cell has interior. Next: identify the canonical owner/root section
-and retain drift plus service in one word, or force an incompatible cell.
+joint clock cell has interior. Next: retain drift plus service in one delayed
+word on a canonical owner/root section, or force an incompatible joint cell.
 Ledger: `165`.
 
 ### Independent routes that remain live

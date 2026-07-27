@@ -15,10 +15,11 @@ status: >
   be transported through an expanding clock except for null/full
   atoms. Common co-shifts keep a danger/safe pair identically zero,
   whereas THM-2379 repair is necessarily polarized and off-diagonal.
-  Only the two graft units have nonzero target covectors; after
-  q_*=k_b is fixed, only k_a among the five first-failure roles is
-  target-active. No semantic/root intertwiner, scalar-row exclusion,
-  or LRC(14) consequence is proved.
+  Among the six guard/unit roles, only the two graft units have
+  nonzero target covectors; after q_*=k_b is fixed, only k_a among
+  the five first-failure roles is target-active. No semantic/root
+  intertwiner, scalar-row exclusion, or LRC(14) consequence is
+  proved.
 source: codex-2026-07-26-temporal-word-repair-boundary
 depends_on:
   - THM-2305-canonical-blocker-word-handoff-hypergraph
@@ -339,6 +340,18 @@ Their first two base-thirteen digits are also identical:
 ```text
 (floor(13x_i),
  floor(13{13x_i}))=(5,0).                           (22)
+```
+
+Equivalently, writing the two-step inverse branch as
+
+```text
+x_i=(T^2x_i+r_owner+13a)/169,
+```
+
+all three points have the same ancestry sheet
+
+```text
+(a,r_owner)=(5,0).                                  (22a)
 ```
 
 But their terminal residues are
