@@ -1,5 +1,5 @@
 ---
-id: THM-2594
+id: THM-2595
 title: "Unshifted future-root accessibility and selector cross-mixing boundary"
 status: RESERVED / UNPROVED EMPTY STUB
 source: common-endpoint-seam-2026-07-28
@@ -12,7 +12,7 @@ related:
   - THM-2583-self-similar-digit-needle-internalization-and-carrier-boundary
 ---
 
-# THM-2594 -- unshifted accessibility before target covariance
+# THM-2595 -- unshifted accessibility before target covariance
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
