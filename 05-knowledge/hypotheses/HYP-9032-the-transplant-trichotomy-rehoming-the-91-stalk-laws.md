@@ -18,6 +18,18 @@ related:
 
 # HYP-9032 -- the transplant trichotomy
 
+> **RESOLUTION UPDATE (same session, 2026-07-27):** both in-flight
+> computations returned the NONDEGENERATE branch (THM-2550, audit
+> requested): (A) owner-loop drift POSITIVE on the canonical typed row
+> (both packet and bare tensors; exact rational drift energies; the
+> escalation ladder dies at rung one -- no circulant hostile), and
+> (B) NON-REPLICA (both additive defects nonzero, all 91/91 entries;
+> all 5,184 cut modes fire at every large lawful clock; denominator
+> floor supplied). Prediction P1 CONFIRMED. The live obligations are
+> now: the ancestry/Boolean realization of the ignited host, and
+> transporting the drift instance through THM-2368 (37) toward
+> covering rows. Sections below retain the pre-resolution analysis.
+
 ## 1. Why the packet cannot be re-run (PROVED anatomy)
 
 THM-2435/2436's punctured 91-stalk needs a fibre-constant deep blocker

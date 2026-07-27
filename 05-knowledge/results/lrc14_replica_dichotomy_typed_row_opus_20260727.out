@@ -1,0 +1,119 @@
+THM-2512 replica dichotomy on the canonical typed row -- exact decision
+script=04-computation/lrc14_replica_dichotomy_typed_row_opus_20260727.py
+machine=opus  date=2026-07-27
+
+[1] row and lawful-table conventions (logged choices)
+    w=(H,q1..q5,c1,c2,c3)=(1, 14, 27, 40, 53, 66, 13, 2197, 742586)   profile nu13(c1,c2,c3)=(1,3,5)
+    owner j=1 (c_1=13); targets a=c_2=2197, b=c_3=742586
+    dipole (THM-2403 (16), THM-2309 star+graft u0=q5, q1->a, q2->b):
+      eta = e_{c2} - e_{q1};  at t=0 only s*eta acts;
+      factor shift convention: safe(v x - theta_v s/13),
+      i.e. c2-safe = 1-d(c2 x - s/13),  q1-safe = 1-d(q1 x + s/13)
+    U_(s,0) = 8 retained safe factors, c_1 factor DELETED (THM-2407 Sec.1)
+    d_(1,ell)(x) = d(13x - ell/7);  Delta_r(x) = d(c3 x - r/13)
+    sum_r Delta_r = 2 - d(13 c3 x) exactly (THM-2403 (26)); r=0 term = 0
+    word sigma={a} (same stratum as THM-2541, first positive in THM-2305
+    order); T_a = Q_{1,{a}} minus its source-safe factor;
+    Q^eps_ell(y) = T_a(y)*(1 - d(13y - eps*ell/7))  (THM-2449 (15))
+
+[2] clock-class arithmetic (THM-2449 (25)-(31))
+    T = 182*lcm(w) = 297836897838480 = 13^6 * D0,  D0 = 61704720
+    ord_(D0)(13) = 16380
+    class rho: sigma={a}, eps=+1 (even k), k == 6 (mod 16380), k >= 6
+    extraction clocks: k1=6, k2=16386  (same class, guaranteed by (28))
+    verification clocks: k3=32766 (same class), k0=2 (sub-threshold, even)
+    eps = R mod 7 = (-1)^k = +1 for all four clocks: PASS
+
+[3] word sets (eps=+1)
+    T_a (source-safe factor deleted): intervals=32578  measure=207428797703/5727632650740  ~0.036215
+    Q^+_0 = T_a * (1-d(13y-0/7)): intervals=22478  measure=143103830843/5727632650740  ~0.024985
+    Q^+_1 = T_a * (1-d(13y-1/7)): intervals=29490  measure=751107266513/22910530602960  ~0.032784
+    Q^+_2 = T_a * (1-d(13y-2/7)): intervals=28603  measure=145697281469/4582106120592  ~0.031797
+    Q^+_3 = T_a * (1-d(13y-3/7)): intervals=28402  measure=180836059223/5727632650740  ~0.031573
+    Q^+_4 = T_a * (1-d(13y-4/7)): intervals=28402  measure=180836059223/5727632650740  ~0.031573
+    Q^+_5 = T_a * (1-d(13y-5/7)): intervals=28603  measure=145697281469/4582106120592  ~0.031797
+    Q^+_6 = T_a * (1-d(13y-6/7)): intervals=29490  measure=751107266513/22910530602960  ~0.032784
+    cross-check: Q^+_0 == Q_1,{a} of lrc14_169_twist_variance (measure
+    143103830843/5727632650740, 22478 intervals): PASS
+    [     0.2s]
+
+[4] exact tables A^R (91 cells; F and F n D swept at 4 clocks)
+    [    32.1s] ell=0 done (row |F| avg 16864950482640/T mass, intervals so far F:638270 FD:7652874)
+    [    46.0s] ell=1 done (row |F| avg 6900437483720/T mass, intervals so far F:899505 FD:10784147)
+    [    62.0s] ell=2 done (row |F| avg 8749414144017/T mass, intervals so far F:1230713 FD:14754413)
+    [    86.9s] ell=3 done (row |F| avg 9905181272136/T mass, intervals so far F:1605624 FD:19249127)
+    [   107.3s] ell=4 done (row |F| avg 9905181272136/T mass, intervals so far F:1980535 FD:23743841)
+    [   129.0s] ell=5 done (row |F| avg 8749414144017/T mass, intervals so far F:2311743 FD:27714107)
+    [   143.5s] ell=6 done (row |F| avg 6900437483720/T mass, intervals so far F:2572978 FD:30845380)
+
+[5] sanity checks
+    (a) I_R(full circle, Q^+_0) == mu(Q^+_0) at all 4 clocks: PASS
+    (b) F_(0,0) == E_1 (measure 1882176/28589561, 57072 intervals): PASS
+    (c) I_169(F_(0,0),Q^+_0) == stored measure(E_1 n T^-2 Q_1,{a})
+        = 21376087/17907461390: PASS  (independent machinery check)
+    (d) cell (ell=0,s=0): F n Delta_0 = empty; sum_r mu(F n Delta_r) == 2*mu(F)-mu(FD); sum_r I_R == A entry: PASS
+    (d) cell (ell=3,s=7): F n Delta_0 = empty; sum_r mu(F n Delta_r) == 2*mu(F)-mu(FD); sum_r I_R == A entry: PASS
+    (e) sum_ell mu(F_(ell,0)) == mu(U_(0,0)) (septimal partition): PASS
+    [   145.7s]
+
+[6] extraction of M_rho, C_rho from the two same-class clocks (k1,k2)
+    M_rho == [sum_r mu(F n Delta_r)] * mu(Q^+_ell) entrywise: PASS
+    third same-class clock k3=32766: A^R == M_rho + C_rho/R exact: PASS
+    sub-threshold clock k=2 (R=169, NOT guaranteed by (28)): law holds exactly = False
+
+[7] exact class matrices
+    M_rho: common denominator 6823601362619167115089900800
+           l1 norm = 565164792076424105846530223/3411800681309583557544950400  ~0.165650
+    C_rho: common denominator 1413687875907077971200
+           l1 norm = 15469489032739833238971697/706843937953538985600  ~21885.296318
+    lcm(den M, den C) = 6823601362619167115089900800
+    M_rho row ell=0 (s=0..3): 215477305357369663/70958551323366600894, 13482762828674981735/4470388733372095856322, 82497654543675652399/29802591555813972375480, 18727410614990137799/7450647888953493093870
+    C_rho row ell=0 (s=0..3): 14741919191332049/44102771410698, 1229886469658314357/3704632798498632, 62721174019263869/205812933249924, 854253386287893269/3087193998748860
+
+[8] owner-anchor status at the untwisted target column s=0 (THM-2449 (18);
+    NOT guaranteed here -- typed row is not an asserted scalar cover)
+    k=6: A_(ell,0) = ~3.106e-03, ~1.334e-03, ~1.597e-03, ~1.702e-03, ~1.702e-03, ~1.597e-03, ~1.334e-03
+    M_rho anchor (M_(0,0)>0, M_(ell,0)=0 for ell!=0): False
+    C_rho anchor column zero off owner: False
+    M_(0,0) = 215477305357369663/70958551323366600894  (positive owner overlap at large clocks: True)
+
+[9] DECISION: the two finite additive tests (THM-2449 (33), THM-2512 (27))
+    d_(M_rho) == 0 ?  NO   (nonzero interaction entries: 91/91)
+    d_(C_rho) == 0 ?  NO   (nonzero interaction entries: 91/91)
+    witness d_(M_rho): (ell,s)=(0,0)  I_(ell,s) = 27141080175744172866190363/51745643666528683956098414400  ~5.245e-04
+    min nonzero |I(M)| = 71086743872688610241801/25872821833264341978049207200  ~2.748e-06
+    witness d_(C_rho): (ell,s)=(0,0)  I_(ell,s) = 665502894989984158227797/10720466392295341281600  ~6.208e+01
+
+    VERDICT: NON-REPLICA BRANCH on the canonical typed row.
+    By THM-2512 (27)-(28) with the exact class law A^R=M_rho+C_rho/R:
+    at every sufficiently large lawful clock in the class rho
+    (k == 6 mod 16380, k >= 6, eps=+1, sigma={a}), with at most ONE
+    exceptional clock, d_(A^R) != 0, hence ALL 5,184 primitive cut
+    coefficients Psi^A_(tau,a0)(alpha,beta) fire (THM-2512 (17)-(19)),
+    and at least 294 toothpick components / 3,528 Theta entries are
+    nonzero (THM-2512 (20)).  The first three transplant laws hold on
+    a live-branch array.
+    The missing l1/denominator floor of THM-2512 Sec. 2 for THIS row:
+      common denominator of M_rho:      6823601362619167115089900800
+      common denominator of C_rho:      1413687875907077971200
+      common denominator (both, lcm):   6823601362619167115089900800
+      l1(M_rho) = 565164792076424105846530223/3411800681309583557544950400
+      l1(C_rho) = 15469489032739833238971697/706843937953538985600
+    (Any nonzero interaction entry of Den*M_rho resp. Den*C_rho is an
+    integer multiple of 1/91, so |nonzero d| >= 1/(91*Den).)
+    NOTE: the delta anchor (THM-2449 (18)) did NOT hold exactly on
+    this typed row (see [8]); the non-replica conclusion (17)/(19)
+    needs only rationality + d_A != 0, so it is unaffected; only
+    the replica-FORM normalization (10) would have needed the
+    anchor.
+
+[10] scope notes
+    * Typed row, not an asserted scalar cover; no scalar row is removed;
+      LRC(14) remains open.  The decision is about THIS row's lawful
+      THM-2449 response table on the class rho only.
+    * The tables are exact rationals (Fraction interval intersection on
+      the T grid); no floats enter any decision.
+    * Clock-law scope: guaranteed for k >= 6 in the class by THM-2449
+      (25)-(28); the k=2 status above is reported, not assumed.
+
+[   145.7s] all checks passed
