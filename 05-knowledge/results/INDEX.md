@@ -38,8 +38,8 @@
   distinct or joint edges).  The conditional product-torus companion packs
   the three old gain orbits into one nonnegative atomwise-boundary sum without
   preserving the anchor or supplying one Boolean atom.  The referees make
-  `2,623,999` and `5,412,159` checks; hashes are
-  `645aad23...76c` / `12e55114...ba5` and
+  `2,721,357` and `5,412,159` checks; hashes are
+  `45dc32a4...dc3` / `82f21452...4db` and
   `864ee2eb...bbb` / `7ea5b301...7a5`.
 - `lrc14_diagonal_cubic_owner_clock_boundary_thm2539.py` -> matching `.out`
   [THM-2539 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Conditional on
