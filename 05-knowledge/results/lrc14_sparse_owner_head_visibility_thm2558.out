@@ -30,4 +30,11 @@
   guard failure count: 3 or 4 (both attained)
   four neutral roles cover at most 4+2+2+2=10 roots
 
+== exact rational six-comb realization of the blind control ==
+  z=1/17; guard H=33 has failure roots {7,9,11}
+  ordinary (k_a,q2,q3,q4,k_b)=(17,44,18,28,42)
+  failure roots: {3}, {2,10}, {5}, {6,12}, {8,12}
+  A_0={0,1,4}; all-slope heads={2,7,8,9,11,12}
+  root 3 is a clean k_a failure with q_*=k_b safe, and is never selected
+
 all checks passed

@@ -162,4 +162,80 @@ print("  guard failure count: 3 or 4 (both attained)")
 print("  four neutral roles cover at most 4+2+2+2=10 roots")
 
 
+print("\n== exact rational six-comb realization of the blind control ==")
+z = Fraction(1, 17)
+H = 33
+k_a, q_2, q_3, q_4, k_b = 17, 44, 18, 28, 42
+
+
+def danger_mask(weight, radius):
+    return {
+        r
+        for r in range(P)
+        if circle_distance(Fraction(weight, P) * (z + r)) < radius
+    }
+
+
+guard_failure = danger_mask(H, Fraction(1, 7))
+ordinary_failures = {
+    weight: danger_mask(weight, Fraction(1, 14))
+    for weight in (k_a, q_2, q_3, q_4, k_b)
+}
+for r in range(P):
+    require(
+        circle_distance(Fraction(H, P) * (z + r)) != Fraction(1, 7),
+        "guard hostile lies on an endpoint",
+    )
+    for weight in (k_a, q_2, q_3, q_4, k_b):
+        require(
+            circle_distance(Fraction(weight, P) * (z + r)) != Fraction(1, 14),
+            "ordinary hostile lies on an endpoint",
+        )
+require(guard_failure == {7, 9, 11}, "guard hostile mask changed")
+require(
+    ordinary_failures
+    == {
+        17: {3},
+        44: {2, 10},
+        18: {5},
+        28: {6, 12},
+        42: {8, 12},
+    },
+    "ordinary hostile masks changed",
+)
+failure_union = set(guard_failure)
+for role_mask in ordinary_failures.values():
+    failure_union |= role_mask
+a0_mask = set(range(P)) - failure_union
+require(a0_mask == hostile, "six-comb A_0 is not the blind mask")
+require(ordinary_failures[k_a] == {3}, "k_a is not a singleton failure")
+require(
+    all(3 not in role_mask for weight, role_mask in ordinary_failures.items() if weight != k_a)
+    and 3 not in guard_failure,
+    "k_a hostile has a cofailure",
+)
+require(3 not in head_image(a0_mask), "six-comb hostile is selected")
+require(H % 2 == 1, "guard is not odd")
+require(len({H, k_a, q_2, q_3, q_4, k_b}) == 6, "roles are not distinct")
+require(all(weight % P for weight in (H, k_a, q_2, q_3, q_4, k_b)), "role is not a 13-unit")
+
+
+def valuation(n, prime):
+    value = 0
+    while n % prime == 0:
+        n //= prime
+        value += 1
+    return value
+
+
+septimal = {weight: valuation(weight, 7) for weight in (H, k_a, q_2, q_3, q_4, k_b)}
+require(max(septimal.values()) == 1, "septimal maximum changed")
+require(septimal[k_b] == septimal[q_4] == 1, "maximal septimal tie changed")
+print("  z=1/17; guard H=33 has failure roots {7,9,11}")
+print("  ordinary (k_a,q2,q3,q4,k_b)=(17,44,18,28,42)")
+print("  failure roots: {3}, {2,10}, {5}, {6,12}, {8,12}")
+print("  A_0={0,1,4}; all-slope heads={2,7,8,9,11,12}")
+print("  root 3 is a clean k_a failure with q_*=k_b safe, and is never selected")
+
+
 print("\nall checks passed")
