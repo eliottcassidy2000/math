@@ -1,5 +1,19 @@
 # Script Results Index
 
+- `lrc14_logarithmic_abel_normal_thm2573.py` -> matching `.out`
+  [THM-2573 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  For disjoint
+  finite step endpoint layers, one-sided whole-layer Abel smoothing has the
+  exact logarithmic normal `-B_M/(2pi^2)`, where `B_M` is the physical
+  Fourier moment of the aggregate common-jump pairing; equal-radius smoothing
+  of both endpoints doubles the normal.  For nonnegative layers this is the
+  Fourier transform of a positive handoff measure.  A common-target DFT
+  commutes with extraction and fires off zero exactly when the boundary-pair
+  measures vary, if all physical moments are allowed.  The LRC bank samples
+  only `M=m c_3`, `gcd(m,91)=1`, and an alternating fourteen-boundary hostile
+  is invisible to every such moment.  On THM-2569 the frozen selector still
+  prevents promotion to a lawful target current.  The survivor is a singular
+  high-frequency boundary normal, not the ordinary full-`X` sum or one fixed
+  `X`.  Hashes are `27406e4b...b749` / `d61b1a50...f75f`.
 - `lrc14_stationary_diagonal_paired_corner_thm2569.py` -> matching `.out`
   [THM-2569 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  Conditioning
   THM-2563 on THM-2565's stationary same-root return gives one common-ancestry

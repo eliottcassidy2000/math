@@ -2,7 +2,7 @@
 id: THM-2573
 title: "Logarithmic Abel normal and common-endpoint jump pairing"
 status: >
-  PROVED + VERIFIED-EXACT.  Let L_s,R_s be finite complex step layers on
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  Let L_s,R_s be finite complex step layers on
   the circle with L_s conjugate(R_s)=0 almost everywhere, and fix a physical
   frequency offset M.  Their ordinary full-X endpoint sum is zero.  If the
   left layer alone is Poisson weighted by rho^|X|, its first potentially nonzero boundary
@@ -40,7 +40,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2573 -- the first boundary term after full-X annihilation
 
-**PROVED + VERIFIED-EXACT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 
 THM-2568 proves that a complete danger-to-safe endpoint transition vanishes
 after the ordinary physical-frequency sum.  That is the value of the
@@ -470,4 +470,15 @@ The dependency-free exact referee checks:
 
 The Abel asymptotic, off-diagonal Dirichlet bound, finite-measure uniqueness,
 and lawfulness distinction are symbolic proofs above, not numerical
-extrapolations. **QED.**
+extrapolations.
+
+The independent root audit rederived the jump-expansion conjugation and
+physical-offset sign, the two-tail constant `-1/(2 pi^2)`, the
+`O(1-rho)` off-diagonal and denominator remainders, and the general
+`alpha+beta` Abel-speed factor.  It separately checked positivity only after
+forming total-layer jumps, finite-target DFT commutation and the
+finite-measure Fourier-uniqueness converse, and the `c_3` pushforward with
+its fourteen-grid deep-unit hostile.  Normal, optimized, and stored
+companions and both recorded hashes were reproduced independently.
+
+**QED.**
