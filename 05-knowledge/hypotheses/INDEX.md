@@ -111,10 +111,8 @@ its slug and [MISTAKES.md](../../01-canon/MISTAKES.md) before inheritance.
 
 ## Promotion rule
 
-Record quantifiers, direction, mechanism, boundary, dependencies, hostile
-witness, and non-consequences. Lean needs satisfiable hypotheses and root reach;
-computation needs a universe, controls, command, and output. Route `CLAIMED` and
-`RESERVED` files as unproved candidates, never canon.
+Record quantifiers, direction, mechanism, boundary, dependencies, hostile witness,
+and non-consequences. Lean needs satisfiable hypotheses and root reach; computation needs a universe, controls, command, and output. Route `CLAIMED` and `RESERVED` files as unproved candidates, never canon.
 - **[HYP-9040](HYP-9040-cancellation-completeness-synthesis.md) (PARTLY REFUTED / SUPERSEDED):** original parity, maximal-rank, and Euler-characteristic program; its first two lanes and first fast Euler stratification are repaired by HYP-9045.
 - **[HYP-9045](HYP-9045-parity-rank-box-refutations-and-rotation-redirect.md) (RESOLVED NEGATIVES / OPEN REDIRECTS):** mod-two forcing is blind on the odd `7 x 13` character group; the rank-twelve box is archimedean and CRT-invisible; MISTAKE-282 repairs THM-1315. Correctly primed rotations and the archimedean redirect remain live.
 - **HYP-9050 (RESOLVED FINITE SIDECAR):** the lead-eight integral normal form, sampled mod-eight splitting, and exact rotation-localization identity `N(v)=10 z_13(v) (mod 13)` are frozen in `lrc14_lead8_mod8_rotation_macmini_S144.{py,out}`; transfer to THM-2356's typed Gram/jet current remains open.

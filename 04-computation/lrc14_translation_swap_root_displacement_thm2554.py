@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact referee for THM-2551.
+"""Exact referee for THM-2554.
 
 The simultaneous C_13 action on ordered root pairs is free.  Its quotient is
 the displacement d=b-h, so the semantic diagonal is one free orbit rather
@@ -35,7 +35,7 @@ def orbit(pair):
     return {translate(pair, u) for u in range(P)}
 
 
-print("== THM-2551: diagonal C_13 action and displacement quotient ==")
+print("== THM-2554: diagonal C_13 action and displacement quotient ==")
 pairs = {(h, b) for h in range(P) for b in range(P)}
 orbits = {frozenset(orbit(pair)) for pair in pairs}
 require(len(orbits) == P, "wrong number of diagonal-translation orbits")

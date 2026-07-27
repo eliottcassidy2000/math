@@ -1,5 +1,5 @@
 ---
-id: THM-2551
+id: THM-2554
 title: "Translation-quotient root displacement and endpoint-swap parity"
 status: >
   PROVED + VERIFIED-EXACT. For a word stratum carrying a measure-preserving
@@ -26,14 +26,14 @@ related:
   - THM-2542-seven-chart-cech-holonomy-and-c91-arrival-obstruction
   - HYP-9045-parity-rank-box-refutations-and-rotation-redirect
   - HYP-9055-shifted-word-palindrome-layer
-script: 04-computation/lrc14_translation_swap_root_displacement_thm2551.py
-output: 05-knowledge/results/lrc14_translation_swap_root_displacement_thm2551.out
-script_sha256: b8023ce8fef05233e124df3cab8dbb646b20933f8ecd47bc6e671fab2d6c23ac
-output_sha256: 21b6f09a976c2ff1a175f6a0964ebe3929f70c95199ada8926bc00a3ba95e2b4
+script: 04-computation/lrc14_translation_swap_root_displacement_thm2554.py
+output: 05-knowledge/results/lrc14_translation_swap_root_displacement_thm2554.out
+script_sha256: d2ac6e35f992a757bd4bedc269be92f0c9efa30ac481e2c2c2f6efa464d0a0c6
+output_sha256: 78cd17ce25f7ae9f86e423fd42af3db7514998d5536f389089dadeff2a962391
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2551 -- translation quotient, root displacement, and endpoint-swap parity
+# THM-2554 -- translation quotient, root displacement, and endpoint-swap parity
 
 **PROVED + VERIFIED-EXACT.**
 
@@ -321,8 +321,8 @@ No scalar row is excluded. The LRC(14) ledger remains `165`.
 Run
 
 ```bash
-python3 04-computation/lrc14_translation_swap_root_displacement_thm2551.py
-python3 -O 04-computation/lrc14_translation_swap_root_displacement_thm2551.py
+python3 04-computation/lrc14_translation_swap_root_displacement_thm2554.py
+python3 -O 04-computation/lrc14_translation_swap_root_displacement_thm2554.py
 ```
 
 Both executions byte-match the stored output. The referee classifies all
