@@ -1,0 +1,30 @@
+== (a) the lead-8 integral model ==
+  -4*phi(Y/2) = Y**3 - 3*Y**2*b + 36*Y*a + 108*a**2*c - 72*a*b + 4*b**3  (leading coeff: 1 )
+  MONIC INTEGRAL in Y = 2y  (the 'cubic with leading coefficient 8':
+   8y^3 - 12by^2 + 72ay - 4(18ab-b^3-27a^2c) = (2y)^3 - ... )
+  depressed T^3 + pT + q: p = 3*(12*a - b**2)   q = 2*(54*a**2*c - 18*a*b + b**3)
+  disc = -4p^3 - 27q^2 = -11664*a**2*(27*a**2*c**2 - 18*a*b*c + 16*a + b**3*c - b**2)
+  disc / (a^2 K) = -11664  (2-3-smooth scalar: the -2^2 3^6-family)
+
+== (b) the mod-8 splitting table ==
+  (disc mod 8, #roots mod 2, #roots mod 8) -> count
+   (0, 1, 0): 60
+   (0, 1, 4): 163
+   (0, 2, 3): 180
+  NOTE: disc mod 8 classes observed: [0]
+  (the 8-thread face: 2-adic splitting is governed mod 8 — same
+   modulus as Milgram/Gauss-sum signatures and E8's even-lattice
+   quantum; det(F^k) = (-2)^k and the CD dims 2^k are the two
+   exponentiation towers. Rhyme FLAGGED, mechanism = the table.)
+
+== (c) the rotation localization lemma, refereed ==
+  AP             N = 49, degenerate coords z = 1: N mod 13 = 10, lemma predicts 10  OK
+  GW             N = 49, degenerate coords z = 1: N mod 13 = 10, lemma predicts 10  OK
+  deep well      N = 49, degenerate coords z = 1: N mod 13 = 10, lemma predicts 10  OK
+  {1..11,13,36}  N = 49, degenerate coords z = 1: N mod 13 = 10, lemma predicts 10  OK
+  LEMMA (proved above, referee 4/4): any rotation-covariant
+  band-incidence count ≡ its 13-degenerate contributions mod 13;
+  identically with 7. The correctly-primed Rédei mechanism —
+  nonvanishing mod 13 is FORCED whenever the degenerate sector
+  (the 13-divisible coordinates, i.e. the COVERING duties!) has
+  z with 10z ≢ N₀ ... i.e. localization onto the duty carriers.
