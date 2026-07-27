@@ -14,18 +14,20 @@ status: >
   Galois-saturates all 72 colours and all 5,184 THM-2508 cut coefficients.
   For Boolean densities, coincident arms collapse exactly to the previous
   moment order, giving a literal toothpick self-similarity.  At m=2 the
-  carrier is an owner-rooted triangle/two-arm star.  Its arms remain unordered
+  carrier is an owner-rooted triangle/two-arm star.  Combined with THM-2513,
+  its edge and triangle channels form one branch-free owner-supported
+  first/square-moment cut local system.  Its arms remain unordered
   and need not be lawful phase-bank, clock, collision, or deep-ancestry edges;
   no one-point Boolean current, row exclusion, or LRC(14) follows.
 source: codex-2026-07-27-anchored-moment-simplex
 depends_on:
   - THM-2449-coprime-owner-anova-and-delta-replica-boundary
   - THM-2508-affine-cut-bundle-covariance-and-carry-permutation
+  - THM-2513-anchored-first-or-second-moment-spectrum-and-pair-space-boundary
   - THM-2515-haar-self-correlation-disintegration-and-rational-shift-recovery
 related:
   - THM-2471-owner-first-collision-weighted-root-service-and-temporal-atom-boundary
   - THM-2478-delayed-owner-handoff-graft-and-deep-sheet-rebase-boundary
-  - THM-2513-anchored-first-or-second-moment-spectrum-and-pair-space-boundary
 ---
 
 # THM-2516 -- moments are difference simplices; an owner adds one arm
@@ -276,6 +278,58 @@ The theorem is conditional only on the moment coefficient in (20).  It does
 not claim that every response table has such a coefficient at every order.
 When a first-or-second-moment dichotomy supplies the square channel, `m=2`
 is the relevant application.
+
+### One branch-free edge--triangle channel
+
+For the lawful anchored table, THM-2513 gives the fixed mixed-character
+vector
+
+```text
+Vhat(kappa,b)=(Ahat(kappa,b),(A^(circ 2))hat(kappa,b))!=0     (V1)
+```
+
+for every `kappa,b!=0`.  Both channels can be put on one owner-rooted
+triangle without first choosing which component survives.  For `(u,v)` put
+
+```text
+S_(u,v)(j)=integral H_own(x)F_j(x+u)dx,
+
+T_(u,v)(j)=integral H_own(x)F_j(x+u)F_j(x+v)dx.               (V2)
+```
+
+The first table is independent of the dummy second arm `v`; retaining it
+places the edge and triangle on the same parameter space.  Equations (10)
+at orders one and two give
+
+```text
+average_(u,v)(S_(u,v),T_(u,v))
+ =h(A,A^(circ 2)).                                             (V3)
+```
+
+Apply one prescribed primitive mixed functional to (V3).  Its vector average
+is nonzero by (V1), so some rational pair `(u,v)` has a nonzero coefficient
+vector.  Both selected tables are rational; Galois conjugation makes that
+same vector nonzero on all `72` mixed characters.  Multiplication by the
+nonzero THM-2508 cut kernel then gives
+
+```text
+(Psi^S_(tau,a)(alpha,beta),
+ Psi^T_(tau,a)(alpha,beta))!=(0,0)                            (V4)
+```
+
+on every one of the `5,184` primitive cut indices.  No geometric branch
+choice remains.  With the Euclidean norm, the common-grid selection can be
+made with
+
+```text
+||(Lambda(S),Lambda(T))||_2
+ >=h||(Lambda(A),Lambda(A^(circ 2)))||_2
+ >=(a/2)||(Lambda(A),Lambda(A^(circ 2)))||_2.                 (V5)
+```
+
+Both raw channels are nonnegative and contain the same genuine Boolean owner
+factor at the base.  The first uses one arm and the second uses both; their
+ANOVA interactions remain signed.
 
 ## 5. Toothpick self-similarity and the triangle carrier
 
