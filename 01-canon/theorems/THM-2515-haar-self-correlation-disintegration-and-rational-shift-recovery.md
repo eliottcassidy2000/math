@@ -12,7 +12,9 @@ status: >
   fibre Galois-saturates all 72 mixed colours and, after ANOVA centring, all
   5,184 THM-2508 primitive cut coefficients.  The product pair space therefore
   disintegrates into a finite difference-marked family, one fibre of which
-  carries the signal.  Autocorrelation is antipodally even;
+  carries the signal.  On the lawful THM-2449 density that fibre retains a
+  positive overlap of the same terminal word, with an exact factor-four
+  coefficient invoice.  Autocorrelation is antipodally even;
   the selected shift need not preserve a positive marked anchor, need not be
   a lawful 91-root/temporal shift, and still does not give a one-point Boolean
   owner/deep current or LRC(14).
@@ -271,6 +273,74 @@ coefficient supplied on that table satisfies the hypotheses of Section 3.
 The finite family admits one common grid denominator after taking the least
 common multiple of all rational endpoints.  This makes `k/D` algebraically
 available; it does not make that shift a lawful physical clock.
+
+### The common terminal word survives quantitatively
+
+There is one semantic factor that the selected fibre retains automatically.
+Suppose generally that
+
+```text
+F_j=W f_j,                 0<=f_j<=M,              W>=0,      (25a)
+```
+
+and put
+
+```text
+H_W(t)=integral_T W(x)W(x+t)dx.                               (25b)
+```
+
+Then `C^t_j<=M^2H_W(t)`.  For a normalized Fourier functional with
+unit-modulus coefficients,
+
+```text
+|Lambda(C^t)|
+ <=1/|J| sum_j C^t_j
+ <=max_j C^t_j
+ <=M^2 H_W(t).                                                (25c)
+```
+
+Choose the common-grid fibre using (10).  It satisfies
+
+```text
+H_W(t)>=|Lambda(A^(circ 2))|/M^2.                             (25d)
+```
+
+For the THM-2449 density, write the deep-label sum explicitly:
+
+```text
+F_(ell,s)(x)
+ =sum_r U_(s,0)(x)d_(j,ell)(x)Delta_r(x)Q^epsilon_ell(Rx).
+                                                                   (25e)
+```
+
+The danger arc has length `1/7`.  Among its thirteen translates spaced by
+`1/13`, exactly one or two contain any point almost everywhere, since
+
+```text
+1/13<1/7<2/13.                                                (25f)
+```
+
+Moreover
+
+```text
+Q^epsilon_ell(Rx)
+ =T_sigma(Rx)g(c_jRx-epsilon ell/7).                          (25g)
+```
+
+All displayed factors are Boolean.  With the common terminal-word factor
+`W(x)=T_sigma(Rx)`, equations (25e)--(25g) give
+`0<=F_(ell,s)<=2W`.  Thus `M=2` in (25d), and the selected fibre obeys
+
+```text
+integral_T T_sigma(Rx)T_sigma(R(x+t))dx
+ >=(1/4)|Lambda(A^(circ 2))|.                                 (25h)
+```
+
+The same terminal word therefore has positive two-point overlap with no
+extra selection loss beyond the sharp factor four.  This does not identify
+the owner source, deep sheet, or target phase on the second leg.  Literal
+equality of the two word phases still requires `Rt in Z`.
+
 The conclusion replaces an unstructured independent pair by
 
 ```text
@@ -358,7 +428,9 @@ on one fibre.  An independent audit rederived the double-counting
 normalization, the Galois and cut-transform signs, the `5,184` count, and the
 equal-cell anchor hostile, and checked the exact distinction between common-grid and
 base-`13` shift selection together with the phase-bank criterion (27)--(28).
-The next
+It also caught and repaired the false simplification `sum_r Delta_r=1`:
+the exact multiplicity is one or two, producing the sharp factor four in
+(25h).  The next
 physical question is whether its retained difference can be identified with
 an existing collision/ancestry edge while preserving a positive owner mark.
 It does not supply that identification, remove any of the `165` live rows,
