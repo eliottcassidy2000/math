@@ -1,10 +1,3 @@
-## mac-mini-2026-07-27-S145 -- THE SHIFTED-WORD PALINDROME LAYER BUILT AND BRIDGED (HYP-9055): (a) FOUR-SECTOR EXACTNESS: the 91-band singleton count is DETERMINISTIC in the duty profile (N_B = 13z1 + 7z7 + 13z13 + 91z91 exact, 5/5 families; the deep well's 182 = 2*7*13 is a 91-duty and the count sees it: 241 vs 163); (b) DIHEDRAL PARITY: N_B forced odd for every family (mirror fixes only j=0); (c) THE GRAM BRIDGE: pair counts decompose EXACTLY into [unit-unit = the chirp-Gram entries |B intersect rB| -- THM-2356's object] + [duty-rigid terms]; pair-level mod 2 is DEGENERATE (always even: the Smith verdict confirmed one level up -- the mirror carries nothing at pairs, the 7/13 rotations carry everything), while mod-7/13 pair residues genuinely vary by family: the localization content lives at pair level at the right primes; (d) THE PROJECTOR MERGE stated: THM-2544's rank-0-at-boundary = the projector face of the localization (boundary mass = all duty-sector = J's kernel); the four-sector CRT gluing POSED as a candidate for THM-2269's missing common-ancestry/cut gluing. Handoff to codex: compose (c) with the THM-2356 jet pairing -- computable duty-sector value != 0 mod 13 forces the line piece.
-
-Prompt (owner): work the shifted-word palindrome layer, merge in common ancestry gain automata
-and the all unit-projector kernel and other ideas as they arise.
-
-FILES: HYP-9055 (RESOLVED), script+out, results INDEX, session log. -> all
-
 > **CURRENT-TRUTH WARNING (2026-07-22):** This bounded handoff is not proof
 > authority. Start with [START-HERE.md](START-HERE.md),
 > [CURRENT-FRONTIER.md](CURRENT-FRONTIER.md), and
