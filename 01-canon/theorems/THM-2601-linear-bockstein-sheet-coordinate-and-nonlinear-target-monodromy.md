@@ -19,9 +19,9 @@ status: >
 source: root-holotopy-2026-07-28-bockstein-sheet-coordinate
 depends_on:
   - THM-2585-saturated-normalized-target-projector-and-bockstein-noncommutation
+  - THM-2590-boolean-bockstein-and-theta-selector-incidence-spectrum
 related:
   - THM-2593-charged-target-section-atlas-and-minimal-c91-holonomy-trivialization
-  - THM-2590-boolean-bockstein-and-theta-selector-incidence-spectrum
 script: 04-computation/lrc14_linear_bockstein_sheet_coordinate_thm2601.py
 output: 05-knowledge/results/lrc14_linear_bockstein_sheet_coordinate_thm2601.out
 script_sha256: 0e33382721fe55845787584f60f11d518147f9c022c64e6357974aabc0f17302
