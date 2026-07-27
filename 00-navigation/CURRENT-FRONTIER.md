@@ -145,22 +145,22 @@ Its indispensable coordinates are primitive parameter, integral columns, transve
 ### Exact live obligation
 
 Finite rank-twelve boxes and rank-eleven stars remain undecided (HYP-8871).
-THM-2168--2397 leave `165` rows (THM-2356 kernel `28,393`; THM-2363/THM-2368). THM-2417/2426/2436 empty `nu_7(c_3)>M`; only the noncirculant graft `nu_7(c_3)<=M` survives.
-THM-2440 separates the sharp a.e. two-comb radius `15/182` from literal-open `15/196` (MISTAKE-274). THM-2441 makes each rational delayed-clock audit finite modulo `7D_0`.
-THM-2445/2442 give `24` partial-endpoint cells and restore the ghost word; THM-2452 copies one of `128` complete masks to the bare leg, kills all transitions after full-`X` summation, and reselects a fresh exact `X` and `91`-unit `m`.
-THM-2449/2456 classify mixed-zero failure: one Boolean root chart is rigid, but chart averaging has exact uniform-offset `8/20/104` controls. THM-2457 makes common-root service a directed atom graph: an edge gives service after at most three atoms, with sharp floor `M_0/16384`, but no drift floor without root-image coupling.
-THM-2459 repairs the drift/service split: aggregate endpoint drift and a positive
-THM-2457 atom edge survive together in a Boolean union of at most four atoms,
-with floors `D_0/63001` and `M_0/16384`. THM-2502 explains the
-lower-information obstruction: the endpoint cube's lex tournament and lower
-Newton faces forget its carry/top atom, while lawful target characters are
-dipoles rather than singleton repair directions. THM-2460 is a proof-complete
-candidate for copying an already retained semantic word, but still awaits
-independent hostile audit.
-Next: exclude the physical THM-2456 uniform-offset mixtures, or couple the
-retained drift/service packet to a canonical same-word root image. Local bits
-alone do not determine the word: a live strict atom supports both pure and fork
-strata. Ledger: `165`.
+Exactly `165` rows survive in `nu_7(c_3)<=M`; THM-2417/2426/2436 empty the
+complement (THM-2356 kernel `28,393`; THM-2363/THM-2368 remain typed sidecars).
+THM-2440 gives the a.e./literal two-comb split `15/182` versus `15/196`;
+THM-2441 makes rational delayed clocks finite. THM-2445/2442 give `24`
+word-restored cells, and THM-2452 copies one of `128` masks before reselecting
+fresh `X` and `91`-unit `m`. THM-2449/2456 classify the mixed-zero locus as an
+averaged root offset; THM-2457 turns supplied root service into an atom graph.
+THM-2459 retains drift and root service in at most four atoms
+(`D_0/63001`, `M_0/16384`); THM-2460 copies an independently retained word.
+THM-2502 shows that coarse tournaments/Newton faces forget the top atom and
+dipole partner. THM-2458's exact thirteen-chart hostile is physically realized
+by THM-2462. THM-2464 proves: `lambda=1` clean charts force the linked blocker
+safe, `lambda=2` is phase-before-speed universal, and fixed delays work iff the
+joint clock cell has interior. Next: identify the canonical owner/root section
+and retain drift plus service in one word, or force an incompatible cell.
+Ledger: `165`.
 
 ### Independent routes that remain live
 

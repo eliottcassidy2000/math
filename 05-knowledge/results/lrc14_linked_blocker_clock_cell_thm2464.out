@@ -1,0 +1,20 @@
+THM2464 LINKED-BLOCKER CLOCK-CELL AUDIT
+ordinary_multiplicity_checks=780
+ordinary_endpoint_exceptions=312
+guard_multiplicity_checks=1404
+lambda_two_phase_checks=1248
+lambda_two_min_phase_width=1/182
+joint_component_checks=12
+joint_component_widths_SS_SD_DS_DD=3/2254,1/4508,3/2254,1/4508
+common_clock_n=9 lambda=10
+linked_speeds_cK_cq=1930018885886,88780868750756
+linked_chart_checks=26
+linked_equal_width=1/47805083173484
+delayed_clock_n=13 k=14
+delayed_mesh_ratio=28561/4508
+delayed_word_checks=13
+delayed_word_width=1/2120125746145771
+shallow_fixed_clock_hostile=PASS
+same_factor_joint_cell_hostile=PASS
+conditional_bank_128_to_64=4096,15129,8306688,192
+optimized_require_path=PASS
