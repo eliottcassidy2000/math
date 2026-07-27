@@ -2,19 +2,19 @@
 id: THM-2542
 title: "Seven-chart Cech holonomy, the C91 mapping torus, and the semantic-arrival obstruction"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; independent hostile audit pending.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The theorem computes the finite root-deck local system already present in
   THM-2535.  It does not identify its abstract C91 mapping torus with a
   physical C91 endpoint/current, does not construct the semantic 2-cell, and
   does not remove an LRC(14) row.
 source: codex-2026-07-27-holotopy-groupoid
 depends_on:
+  - THM-2461-temporal-blocker-word-cocycle-and-diagonal-polarized-repair-boundary
   - THM-2535-boundary-tooth-clock-intertwiner-and-neutral-collapse
 related:
   - THM-2349-first-depth-one-delayed-shallow-restart
   - THM-2418-alternating-base-thirteen-septimal-carry-matrix-and-rank-one-boundary
   - THM-2424-coprime-common-root-crt-and-unit-residue-spectrum
-  - THM-2461-temporal-blocker-word-cocycle-and-diagonal-polarized-repair-boundary
   - THM-2535-boundary-tooth-clock-intertwiner-and-neutral-collapse
   - THM-2537-cayley-wall-scalarization-and-positive-selector-intertwiner
   - THM-2539-diagonal-cubic-owner-clock-boundary-current
@@ -22,6 +22,9 @@ related:
   - THM-2541-canonical-typed-row-full-target-plane-support
 script: 04-computation/lrc14_seven_chart_cech_holonomy_thm2542.py
 output: 05-knowledge/results/lrc14_seven_chart_cech_holonomy_thm2542.out
+script_sha256: 97aac5f1f9a600a93ce5d14f68c89402ad6f6633950211803c8850c521edd347
+output_sha256: fdc49019fa0a3fde0fe8f8406e5429411ec3da6c26abd20f71f8d7c99d5dc666
+hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2542 -- seven-chart Cech holonomy and the C91 arrival obstruction
@@ -228,7 +231,8 @@ characters can vanish.  Sections 1--3 are the instance `(p,q)=(13,7)`.
 ## 3. Full spectral holonomy still need not supply a semantic edge
 
 The distinction has a sharp rational finite hostile.  Take seven disjoint
-Boolean intervals of one common rational mass `epsilon>0` and put `x_k=epsilon`.
+Boolean intervals of one common rational mass `0<epsilon<=1/7` and put
+`x_k=epsilon`.
 Before applying the transported root chart, the local signed clock table is
 
 ```text
@@ -292,10 +296,12 @@ horizontal degree `(1,0)` and a directed semantic source-to-arrival arrow
 vertical degree `(0,1)`.  Gauge changes, finite Fourier transforms, Cayley
 inversion, scheduler summation, and the chart pushforwards used above all act
 inside vertical degree zero.  Their sums and compositions therefore remain in
-the horizontal path category.  A lawful physical coupling between a selected
-wall and an arrival is new data of bidegree `(1,1)`; it cannot be manufactured
-by iterating the existing degree-`(*,0)` operators.  The hostile is the exact
-nonzero-horizontal/empty-vertical control for this typing statement.
+the linearized horizontal path category (equivalently, the additive
+enrichment of the horizontal arrows).  A lawful physical coupling between a
+selected wall and an arrival is new data of bidegree `(1,1)`; it cannot be
+manufactured by iterating the existing degree-`(*,0)` operators.  The hostile
+is the exact nonzero-horizontal/empty-vertical control for this typing
+statement.
 
 ## 4. What one root-trivializing semantic 2-cell would have to do
 
@@ -436,4 +442,4 @@ the twelve THM-2535 special classes, all `85,176` uncharted cancellation
 cells, the empty semantic vertical-edge control, and the seven-stop rational
 digit cylinder.
 
-**QED (candidate; independent audit pending).**
+**QED.**
