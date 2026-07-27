@@ -90,6 +90,19 @@ of a mixed unit character must be certified jointly nonzero.
 
 ## Three falsifiable predictions
 
+**Scorecard (updated 2026-07-27):** prediction 1's existence half is
+fulfilled (THM-2479, countersign pending) and then STRENGTHENED beyond
+the prediction: the THM-2334 (42) variance object is positive on the
+canonical typed row and (klein + opus exact inverse DFT; two independent
+reruns) ALL 168 nonzero target aggregates `A(q)` are nonzero -- full
+target-plane support. Prediction 2 is CONFIRMED 10/10: every degree-22
+support-two plane closed by restoring a discarded root coordinate
+(`Y^2=1/p` Kummer lifts: THM-2463/2468; root-ratio normalizations
+`r = E/(Dy)`-style: THM-2429/2437/2469/2470/2472/2475/2476/2480; the
+'Hensel' steps are irreducibility subroutines, not new closure
+mechanisms). Prediction 3 (orientation 2-torsor per level) remains open
+and is now the live prediction.
+
 1. **(spectral)** If the MSG-2153 trichotomy survives audit, the
    H^1-existence half of the LRC crux is DONE at the marked-edge level,
    and everything remaining is the `H^2`/incidence half (Bockstein,

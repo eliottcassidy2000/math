@@ -28,7 +28,7 @@ machine=opus  date=2026-07-26
     measure(E_1 n T^-2 Q_1,{a,b}) = 6675/33787663  ~0.00019756
     chosen canonical word sigma={a} (first positive in THM-2305 order)
     stratum measure (exact rational) = 21376087/17907461390 > 0
-    [     2.1s]
+    [     1.9s]
 
 [5] marked triangle X, Y=X+m*c_3, gcd(m,91)=1 (THM-2349 (5)-(7), THM-2327 (32)-(33))
     X=13  m=1  Y=742599  kappa=1  nu13(X)=nu13(Y)=1  gcd(m,91)=1
@@ -37,7 +37,7 @@ machine=opus  date=2026-07-26
       (2 pi i X)*e_hat(X)  images=[134762822810074651, 132984161637315839]  |e_hat(X)| ~6.398e-02
       (2 pi i Y)*e_hat(Y)  images=[232748483765216368, 45310508088076021]  |e_hat(Y)| ~1.034e-02
     deep leg delta_hat(m)=sin(pi m/7)/(pi m) ~0.138109 != 0 (7 does not divide m)
-    [     7.3s]
+    [     6.5s]
 
 [6] target twist group G^ = L_13^perp/<w> (THM-2309 star+graft, u0=q5, grafts q1->a, q2->b)
     L rank=6; L^perp basis contains w; coset generators
@@ -48,19 +48,19 @@ machine=opus  date=2026-07-26
 [7] twist bank H(ell): per-twist exact images gamma(ell) mod p1 + numeric H(ell)
     gamma(ell) = e_13(m*ell_8) * (2 pi i X)hat(E_Q^ell)(X) * conj((2 pi i Y)hat(E^ell)(Y))
     H(ell) = C0*gamma(ell),  C0 = delta_hat(1)/(4 pi^2 X Y)  (real, nonzero)
-    [    24.7s] alpha=0 done (avg |E^ell| intervals so far: 48896)
-    [    41.7s] alpha=1 done (avg |E^ell| intervals so far: 48733)
-    [    56.3s] alpha=2 done (avg |E^ell| intervals so far: 47351)
-    [    70.9s] alpha=3 done (avg |E^ell| intervals so far: 45639)
-    [    86.6s] alpha=4 done (avg |E^ell| intervals so far: 44353)
-    [   100.3s] alpha=5 done (avg |E^ell| intervals so far: 43324)
-    [   116.0s] alpha=6 done (avg |E^ell| intervals so far: 42563)
-    [   134.3s] alpha=7 done (avg |E^ell| intervals so far: 41993)
-    [   153.6s] alpha=8 done (avg |E^ell| intervals so far: 41569)
-    [   170.8s] alpha=9 done (avg |E^ell| intervals so far: 41333)
-    [   192.2s] alpha=10 done (avg |E^ell| intervals so far: 41257)
-    [   216.0s] alpha=11 done (avg |E^ell| intervals so far: 41535)
-    [   244.8s] alpha=12 done (avg |E^ell| intervals so far: 42076)
+    [    22.0s] alpha=0 done (avg |E^ell| intervals so far: 48896)
+    [    37.0s] alpha=1 done (avg |E^ell| intervals so far: 48733)
+    [    50.2s] alpha=2 done (avg |E^ell| intervals so far: 47351)
+    [    62.7s] alpha=3 done (avg |E^ell| intervals so far: 45639)
+    [    76.6s] alpha=4 done (avg |E^ell| intervals so far: 44353)
+    [    90.1s] alpha=5 done (avg |E^ell| intervals so far: 43324)
+    [   106.7s] alpha=6 done (avg |E^ell| intervals so far: 42563)
+    [   124.5s] alpha=7 done (avg |E^ell| intervals so far: 41993)
+    [   135.6s] alpha=8 done (avg |E^ell| intervals so far: 41569)
+    [   149.3s] alpha=9 done (avg |E^ell| intervals so far: 41333)
+    [   163.2s] alpha=10 done (avg |E^ell| intervals so far: 41257)
+    [   177.4s] alpha=11 done (avg |E^ell| intervals so far: 41535)
+    [   202.9s] alpha=12 done (avg |E^ell| intervals so far: 42076)
 
 [8] gauge check: H(ell + w) = H(ell) exactly (THM-2334 representative independence)
     ell(alpha,beta)=(0, 0): mod-p1 equal=True  numeric rel err=0.00e+00
@@ -81,6 +81,23 @@ machine=opus  date=2026-07-26
     By THM-2334 (42)-(43), for this row/word stratum and triangle the
     nonzero-target mass is strictly positive:
         sum_{q != 0} |A(q)|^2 = (1/169) sum_ell |H(ell)-Hbar|^2 > 0.
+
+[9b] EXACT inverse DFT of the gamma bank (klein strengthening request):
+     Anum(q) := sum_ell gamma(ell) z13^-(ell[TA] qa + ell[TB] qb) mod p1,
+     z13 = H1^(NN/13) (exact order-13 root in F_p1);  Anum(q) = 169 A(q)/C0.
+     A nonzero F_p1 image proves the cyclotomic target-aggregate numerator
+     is a nonzero algebraic number, hence A(q) != 0 as a complex number.
+     pairing ell -> (ell[TA], ell[TB]) is a bijection onto F_13^2: PASS
+     nonzero A(q) images mod p1: 169 / 169  (nonzero targets q != 0: 168 / 168)
+     control A (sum_q A = H(0)):        PASS
+     control B (sign-reversal census):  PASS  (169 nonzero)
+     control C (forward at ell(0, 0)):  PASS
+     control C (forward at ell(2, 5)):  PASS
+     VERDICT: FULL TARGET-PLANE SUPPORT -- every one of the 168 nonzero
+     target aggregates A(q) is a NONZERO complex number (exact certificate).
+     This is strictly stronger than nonconstancy of the bank.  Scope is
+     unchanged: typed row (not a scalar cover), unrestricted A(q) (NOT the
+     all-91-unit projector B(q) of THM-2334 (49)); no row is removed.
 
 [10] descriptive numerics (floats; NOT part of the decision)
     H(0) ~ (-1.652681e-06+8.647731e-19j)
@@ -109,4 +126,4 @@ machine=opus  date=2026-07-26
       computation decides the variance object for THIS canonical typed row's
       marked current; it does not by itself close any covering row or LRC(14).
 
-[   258.2s] all checks passed
+[   213.7s] all checks passed

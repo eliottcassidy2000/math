@@ -667,6 +667,65 @@ def main():
         log("    cf. THM-2333/THM-2334 Sec. 10 hostiles). Constancy itself not proved.")
     log("")
 
+    # -- exact inverse DFT: ALL 169 target aggregates (klein MSG-2171/2172) --
+    log("[9b] EXACT inverse DFT of the gamma bank (klein strengthening request):")
+    log("     Anum(q) := sum_ell gamma(ell) z13^-(ell[TA] qa + ell[TB] qb) mod p1,")
+    log("     z13 = H1^(NN/13) (exact order-13 root in F_p1);  Anum(q) = 169 A(q)/C0.")
+    log("     A nonzero F_p1 image proves the cyclotomic target-aggregate numerator")
+    log("     is a nonzero algebraic number, hence A(q) != 0 as a complex number.")
+    z13 = pow(H1, NN // 13, P1)
+    z13p = [pow(z13, k, P1) for k in range(13)]
+    # pairing well-definedness: ell -> (ell[TA], ell[TB]) mod 13 must biject
+    pair_map = {(al, be): (reps[(al, be)][TA] % 13, reps[(al, be)][TB] % 13)
+                for al in range(13) for be in range(13)}
+    assert len(set(pair_map.values())) == 169, "TA/TB pairing degenerate on coset reps"
+    log("     pairing ell -> (ell[TA], ell[TB]) is a bijection onto F_13^2: PASS")
+    Aq_exact = {}
+    for qa in range(13):
+        for qb in range(13):
+            s = 0
+            for ab, g in gam_p1.items():
+                ta, tb = pair_map[ab]
+                s = (s + g * z13p[(-(ta * qa + tb * qb)) % 13]) % P1
+            Aq_exact[(qa, qb)] = s
+    nz = [q for q, s in Aq_exact.items() if s % P1 != 0]
+    nz_targets = [q for q in nz if q != (0, 0)]
+    log(f"     nonzero A(q) images mod p1: {len(nz)} / 169  "
+        f"(nonzero targets q != 0: {len(nz_targets)} / 168)")
+    # control A: sum_q Anum(q) = 169 gamma(0)  (forward DFT at ell = 0)
+    ctrlA = (sum(Aq_exact.values()) - 169 * gam_p1[(0, 0)]) % P1 == 0
+    log(f"     control A (sum_q A = H(0)):        {'PASS' if ctrlA else 'FAIL'}")
+    assert ctrlA
+    # control B: sign-reversal (positive-sign pairing = A(-q)): same census
+    nz_rev = 0
+    for qa in range(13):
+        for qb in range(13):
+            s = 0
+            for ab, g in gam_p1.items():
+                ta, tb = pair_map[ab]
+                s = (s + g * z13p[(ta * qa + tb * qb) % 13]) % P1
+            if s % P1 != 0:
+                nz_rev += 1
+    log(f"     control B (sign-reversal census):  {'PASS' if nz_rev == len(nz) else 'FAIL'}"
+        f"  ({nz_rev} nonzero)")
+    assert nz_rev == len(nz)
+    # control C: forward reconstruction 169 gamma(ell) = sum_q Anum(q) z13^{+<ell,q>}
+    for ab in ((0, 0), (2, 5)):
+        ta, tb = pair_map[ab]
+        s = 0
+        for (qa, qb), v in Aq_exact.items():
+            s = (s + v * z13p[(ta * qa + tb * qb) % 13]) % P1
+        ok = (s - 169 * gam_p1[ab]) % P1 == 0
+        log(f"     control C (forward at ell{ab}):  {'PASS' if ok else 'FAIL'}")
+        assert ok
+    if len(nz_targets) == 168:
+        log("     VERDICT: FULL TARGET-PLANE SUPPORT -- every one of the 168 nonzero")
+        log("     target aggregates A(q) is a NONZERO complex number (exact certificate).")
+        log("     This is strictly stronger than nonconstancy of the bank.  Scope is")
+        log("     unchanged: typed row (not a scalar cover), unrestricted A(q) (NOT the")
+        log("     all-91-unit projector B(q) of THM-2334 (49)); no row is removed.")
+    log("")
+
     # -- descriptive numerics ----------------------------------------------
     log("[10] descriptive numerics (floats; NOT part of the decision)")
     Hbar = sum(H_num.values()) / 169.0
