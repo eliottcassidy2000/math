@@ -2,9 +2,8 @@
 id: THM-2600
 title: "Constant-six middle-rail common-x atlas and uniform primitive Bockstein section"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED for the core;
-  the projective owner-cycle coefficient-support addendum is VERIFIED-EXACT
-  with independent audit requested.  On the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED, including the
+  projective owner-cycle coefficient-support addendum.  On the
   canonical typed row, the two arrival-root-six middle edges of THM-2584's
   depth-five toothpick have disjoint three-cell zero sets and together cover
   all 84 nonzero-displacement/owner-clock cells.  Pulling both edges against
@@ -23,13 +22,13 @@ depends_on:
   - THM-2584-b-word-depth-five-absolute-deep-root-tensor
   - THM-2585-saturated-normalized-target-projector-and-bockstein-noncommutation
   - THM-2592-fallback-rail-digit-diagonal-pullback-and-primitive-bockstein
+  - THM-2603-hurwitz-projective-root-owner-atlas-and-nonabelian-seven-edge-trivialization
 related:
   - THM-2595-modular-v4-affine-lift-dichotomy-and-six-vertex-tournament-no-go
   - THM-2586-depth-five-arrival-to-future-root-diagonal
   - THM-2590-boolean-bockstein-and-theta-selector-incidence-spectrum
   - THM-2591-theta-zero-selector-cech-coboundary-and-c91-holonomy-no-go
   - THM-2593-charged-target-section-atlas-and-minimal-c91-holonomy-trivialization
-  - THM-2603-hurwitz-projective-root-owner-atlas-and-nonabelian-seven-edge-trivialization
 script: 04-computation/lrc14_constant_six_middle_rail_pullback_thm2600.py
 output: 05-knowledge/results/lrc14_constant_six_middle_rail_pullback_thm2600.out
 script_sha256: c85ecd26df053ad68362970d3d4056ad09d3668ba717fba5356a6968dff2e95e
@@ -272,8 +271,8 @@ O0:        (0,0,0,0,0,5,0,1,0,0,7,0),
 O1 finite: (0,0,0,0,0,4,0,1,0,0,6,0).                   (20)
 ```
 
-Thus nine displacement lanes admit theta-zero unit support at every tested
-vertex.  The exceptional set is exactly
+Thus, for each cycle separately, nine displacement lanes admit theta-zero
+unit support at every tested vertex.  The exceptional set is exactly
 
 ```text
 {6,8,11},                                                 (21)
@@ -291,6 +290,11 @@ ordered seven-edge fibre product.  It supplies no `q -> q'` ancestry gluing,
 no physical root/projective intertwiner, no value at `infinity`, and no
 semantic endpoint.  It therefore does not define the transition kernels of
 THM-2602 or change the LRC verdict.
+
+An independent hostile audit rederived both projective cycles, checked every
+phase rotation and both invoice vectors, treated `infinity` as absent rather
+than zero, and independently byte-matched normal and optimized runs to the
+stored transcript.
 
 ## 5. Sharp hostiles and loss ledger
 

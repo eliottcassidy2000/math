@@ -2,9 +2,10 @@
 id: THM-2620
 title: "Endpoint-pair parabolic transvection and translation-gauge boundary"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE; INDEPENDENT HOSTILE AUDIT IN
-  FLIGHT.  On the THM-2334 mod-thirteen target quotient, retain the left and
-  right endpoint vectors L,R rather than only their difference q=L-R.  Their
+  PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; HOSTILE-AUDIT REPAIRS
+  INTEGRATED, FINAL RE-AUDIT PENDING.  After declaring a deep-leg allocation
+  gauge on the THM-2334 mod-thirteen target quotient, retain endpoint vectors
+  L,R rather than only q=L-R.  Their
   determinant Delta is uniformly erased by common endpoint translation: for
   q nonzero, every Delta occurs thirteen times in the 169-point translation
   orbit.  The 169 difference characters are only the anti-diagonal slice of
@@ -13,36 +14,42 @@ status: >
   to one.  For fixed q nonzero and Delta nonzero, the thirteen endpoint pairs
   form exactly the graph of the order-thirteen projective transvection
   x -> x + det(q,x)q/Delta on P^1(F_13) minus its unique fixed point [q].
-  Fixed q and Delta make projective adjacency equivalent to exact endpoint
-  gluing.  Endpoint reversal and target swap generate an intrinsic V4 and
-  act by inversion/conjugation on the transvection.  This constructs an exact
-  relation-address-side transition grammar, not a positive current or an
-  intertwiner with the physical LRC root chart; seven fixed transvection
-  edges do not close, while thirteen do.  LRC(14) remains open.
+  Modulo common scalar, the pointed fibres are PGL2(F13); the determinant-square
+  half is PSL2(F13), splitting the transvections into two 84-element classes.
+  Left owner C7 and right endpoint C13 actions split PSL2 into twelve free
+  91-point torsors without an internal order-91 element.  Endpoint reversal
+  and target swap generate a V4 action, not globally a torsor.  The canonical
+  trace-two SL lift can close only at -I, exposing a central C2 scale invoice.
+  This is relation-address algebra, not a positive current or physical-root
+  intertwiner; seven fixed transvection edges do not close.  LRC(14) remains
+  open.
 source: mac-mini-2026-07-28-endpoint-transition-lift
-depends_on: []
-related:
+depends_on:
   - THM-2309-owner-aligned-pivot-packets-and-visible-height-separation
+  - THM-2334-relation-residue-current-and-character-twist-pushforward
+related:
   - THM-2315-marked-target-gain-corolla-and-pairwise-composition-boundary
   - THM-2321-prescribed-root-character-bispectrum-slice-positivity
-  - THM-2334-relation-residue-current-and-character-twist-pushforward
   - THM-2602-commutative-vertex-insertion-and-ordered-transition-curvature-no-go
   - THM-2603-hurwitz-projective-root-owner-atlas-and-nonabelian-seven-edge-trivialization
   - THM-2606-affine-v4-parity-channels-partial-cubes-and-feuerbach-origin
   - THM-2610-chronological-paired-slice-marked-triangle-graft-and-action-axis-boundary
+  - THM-2615-physical-diagonal-toric-kernel-and-dipole-radon-invoice
+  - THM-2616-cross-time-target-future-diagonal-and-principal-action-no-go
+  - THM-2619-psl2f13-seven-edge-norm-minimal-projective-kernel-and-retained-target-obstruction
 script: 04-computation/lrc14_endpoint_pair_parabolic_transvection_thm2620.py
 output: 05-knowledge/results/lrc14_endpoint_pair_parabolic_transvection_thm2620.out
-script_sha256: 171bd9cbf92b2bbf2cb38b64f986d72be25080582d831af6880356e4f5f79458
-output_sha256: bcb9dfb60ee324fed6a6246a06778ed15444d3c38fece3e5d2e156158fb59e6f
+script_sha256: 7edadae89f99f190bc313c11759eb0fa0e252d2b1efb6baa226965fca520dabd
+output_sha256: 85f1e62c8dc43b079696051517dd69405db0f69a138f79b1d9d662991aadf8f4
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2620 -- the target difference hides a parabolic endpoint transition
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE; INDEPENDENT HOSTILE AUDIT IN
-FLIGHT.**  Nothing in this file is available as a proved dependency until an
-independent audit checks the exact companion, the endpoint typing, and every
-scope boundary, and the banner is explicitly promoted.
+**PROVISIONAL PROOF CANDIDATE + VERIFIED-EXACT; HOSTILE-AUDIT REPAIRS
+INTEGRATED, FINAL RE-AUDIT PENDING.**  Nothing in this file is available as a
+proved dependency until the repaired endpoint typing and enlarged companion
+receive final independent promotion audit.
 
 The post-THM-2602 obstruction is not a shortage of vertex labels.  It is the
 absence of an ordered pair
@@ -79,29 +86,55 @@ Put
 k=F_13,                       V=k^2.                       (1)
 ```
 
-In the specialization of THM-2334 §6, both endpoint frequency vectors lie in
-the mod-thirteen relation hyperplane because `13|X,Y`; the delayed-word
-dilation is target-neutral because `13|R`.  Apply the canonical quotient map
+In the specialization of THM-2334 §6, rename the delayed-word dilation `D`
+to avoid confusing it with the right endpoint, and write one atomic relation
+address as
+
+```text
+r=ell_0+d-r_0,
+
+ell_0=u+D beta,             d=m e_(c_3),             r_0=v.   (2a)
+```
+
+Here `13|D`, while the deep leg `d` is target-visible on the live branch.
+Apply the canonical quotient map
 
 ```text
 pi: K_13 -> K_13/L_13 = V
 ```
 
-separately to the left and right endpoints before taking their difference.
-Write the resulting row vectors as
+to the complete address.  To express its target label as an endpoint
+difference one must first declare where the deep leg lives.  This theorem
+uses the **left-deep allocation gauge**
 
 ```text
-L in V,                       R in V,
+L=pi(ell_0+d),                 R=pi(r_0),
 
              [ L ]
-E(L,R)  =   [ R ].                                      (2)
+E(L,R)  =   [ R ].                                     (2b)
 ```
 
-Linearity gives the target-vector label already retained by THM-2334:
+Then, and only with this declared allocation, linearity gives the
+THM-2334 target-vector label
 
 ```text
-q=L-R in V.                                               (3)
+q=pi(r)=L-R in V.                                         (3)
 ```
+
+The natural unshifted coefficient endpoints instead differ by
+`q-pi(d)`, not by `q`; since `pi(d)!=0` on the live branch, silently calling
+them `(L,R)` would be false.  More generally every allocation of the same
+difference has the form
+
+```text
+L_t=pi(ell_0+d)+t,               R_t=pi(r_0)+t,          (3a)
+```
+
+and THM-2334's decomposition gauge realizes every `t in V`.  The balanced
+choice `pi(ell_0)+pi(d)/2, pi(r_0)-pi(d)/2` is
+reversal-equivariant in the quotient, but need not be represented by two
+literal integer frequency modes.  The allocation is therefore a gauge
+choice, not an intrinsic splitting of the atomic address.
 
 Define the second endpoint coordinate
 
@@ -109,7 +142,7 @@ Define the second endpoint coordinate
 Delta=det(L,R) in k.                                      (4)
 ```
 
-Equation (2) is a termwise refinement.  It does not assert that the sum of
+Equation (2b) is a termwise refinement.  It does not assert that the sum of
 current terms in any prescribed `(L,R)` cell is nonzero.  That distinction is
 load-bearing because THM-2331 proves term occurrence, while THM-2334 §10 gives
 an exact cancellation hostile for grouped relation addresses.
@@ -294,6 +327,84 @@ nonidentity transvections: twelve with each fixed projective point.  The
 `2,016` parameter pairs `(q,Delta)` with both entries nonzero have scalar
 fibres of size twelve under (21).
 
+This homogeneity is only a classification of the projective transition.
+The target vectors `q` and `cq` are distinct THM-2334 target fibres, and the
+analytic current weights need not descend under common scaling.
+
+### 4.1 The pointed fibres are `PGL_2`, with a `PSL_2` square-class half
+
+Write columns rather than endpoint rows and put
+
+```text
+B=[q R],                   det(B)=Delta,
+
+U=[[1,1],[0,1]].                                           (22a)
+```
+
+Equation (17) is exactly
+
+```text
+T_(q,Delta)=B U B^(-1).                                   (22b)
+```
+
+Modulo common scalar, `B` is a point of `PGL_2(F_13)`.  The map
+
+```text
+[B] -> (B U B^(-1), [B e_2])
+
+PGL_2(F_13)
+  -> {(T,x): T nonidentity transvection,
+             x notin Fix(T)}                              (22c)
+```
+
+is a bijection.  The first component fixes `[q]=[Be_1]`, while the marked
+point is `[R]=[Be_2]`; conversely a transvection and one nonfixed point recover
+the unique projective frame.  Hence
+
+```text
+2,184=168*13.                                             (22d)
+```
+
+Projection to `T` is a principal right `C_13=<U>` bundle: right multiplication
+`B -> B U^s` preserves `T` and advances the marked point to `T^s[R]`.
+
+The determinant square class sharpens this to `PSL_2`.  Set
+
+```text
+C=[q,Delta^(-1)R] in SL_2(F_13).
+```
+
+Then
+
+```text
+C^(-1) T_(q,Delta) C=U^(Delta^(-1)).                     (22e)
+```
+
+The `168` transvections therefore split into two `PSL_2` conjugacy classes of
+size `84`, distinguished exactly by the quadratic character of `Delta`.
+Square `Delta` gives the class of `U`; nonsquare `Delta` gives the class of
+`U^2`.  On either half,
+
+```text
+1,092=84*13,                                              (22f)
+```
+
+and `PSL_2` itself is the pointed endpoint bundle.  In the square half,
+THM-2603's abstract homogeneous carrier `Omega=PSL_2/<C>` becomes, after
+conjugating `<C>` to `<U>`, the **unpointed** transvection class; the right
+`C_13` fibre restores the missing position on its thirteen-cycle.
+
+Finally let `A` be THM-2603's order-seven owner.  On `PSL_2`, left
+multiplication by `<A>` and right multiplication by `<U>` commute as actions
+and act jointly freely.  Thus
+
+```text
+1,092=12*7*13,                                            (22g)
+```
+
+giving twelve `C_7 x C_13` torsor orbits.  This is a shared carrier for the
+two cyclic grammars, not an element or internal subgroup of order `91`.
+
 ## 5. Fixed determinant turns projective adjacency into exact gluing
 
 Orient an endpoint matrix from its right row to its left row:
@@ -338,9 +449,9 @@ Thus the parabolic endpoint grammar does not itself cancel the seven-clock
 holonomy.  It realizes a genuine ordered transition and simultaneously shows
 why a clock-dependent conjugation or inverse action is still necessary.
 
-## 6. Endpoint reversal and target swap form an intrinsic `V4`
+## 6. Endpoint reversal and target swap give a `V4` action, not a torsor
 
-There are two independent involutions on (2):
+There are two independent involutions on the **allocated matrix** (2b):
 
 ```text
 rho: swap the endpoint rows L,R;
@@ -367,11 +478,35 @@ T_(Sq,-Delta)(Sx)=S T_(q,Delta)(x).                      (29)
 ```
 
 Therefore `Delta` is the sign character that changes under either basic
-involution and survives their product.  This is a genuine `V4` because both
-binary relations are intrinsic: endpoint order and target role.  It is not
-the quartic matching `V4` of THM-2598/2606, though the same origin-loss pattern
-is present.  Nor does (20) define a tournament: it supplies one directed
-neighbour at each vertex, not a pairwise observable on every unordered pair.
+involution and survives their product.  This is a genuine `V4` action, but it
+is not free.  In the operation order `(1,rho,kappa,rho kappa)`, exact Burnside
+censuses are
+
+| carrier | fixed counts | orbit-size census |
+|---|---:|---:|
+| all `28,561` endpoint matrices | `(28561,169,169,169)` | `1:13, 2:234, 4:7020` |
+| `26,208` nondegenerate matrices | `(26208,0,0,144)` | `2:72, 4:6516` |
+| `2,016` nonzero `(q,Delta)` pairs | `(2016,0,0,144)` | `2:72, 4:468` |
+| `168` transvections | `(168,0,0,24)` | `2:12, 4:36` |
+
+The `144` nondegenerate double-swap fixed matrices have the form
+
+```text
+[[a,b],[b,a]],                 (a-b)(a+b)!=0.             (29a)
+```
+
+Thus `V4` is a symmetry action with genuine size-two orbits, not a torsor.
+It is not the quartic matching `V4` of THM-2598/2606, though the same
+origin-loss pattern is present.
+
+The row-swap formula applies literally to the retained left-deep allocated
+matrix.  Reversing the analytic Fourier term and then reapplying the left-deep
+convention is a different operation: the deep leg moves, so an additional
+common translation may change `Delta`.  Likewise target-column swap is
+covariant only when the deep vector is swapped with its target coordinates.
+No analytic current symmetry is asserted without those sidecars.  Nor does
+(20) define a tournament: it supplies one directed neighbour at each vertex,
+not a pairwise observable on every unordered pair.
 
 ## 7. Degenerate boundary and exact census
 
@@ -399,6 +534,49 @@ q!=0, Delta!=0:                        26,208.             (31)
 For each fixed `q!=0`, every determinant fibre has thirteen matrices, in
 agreement with both (7) and (15).
 
+### 7.1 Projective closure retains a central `C_2` scale invoice
+
+Exact endpoint vectors live in `SL_2`, not only `PSL_2`.  In THM-2603's
+affine chart put
+
+```text
+U=[[1,1],[0,1]],
+
+G=[[7,5],[10,11]],                  G^7=-I.              (31a)
+```
+
+For the canonical trace-`+2` endpoint transvections, the descending ordered
+norm is
+
+```text
+product_(i=6,...,0) G^i U G^(-i)=-I.                    (31b)
+```
+
+The actual THM-2603 lift satisfies `P C P^(-1)=-U`; its seven negative
+factors multiply instead to `+I`.  Thus the same projective norm can carry
+opposite exact central signs.
+
+The complete signed refinement of the normalized six-state atlas is
+
+| state | `+I` exponents | `-I` exponents |
+|---|---|---|
+| `3F` | `{10,11}` | `{6,8,9}` |
+| `3R` | `{2,3}` | `{4,5,7}` |
+| `5F` | `{2,12}` | `{8,10,11}` |
+| `5R` | `{1,11}` | `{2,3,5}` |
+| `6F` | `{1,3}` | `{9,11,12}` |
+| `6R` | `{10,12}` | `{1,2,4}` |
+
+Here `F` is the algebraic order `A_0...A_6` and `R` is `A_6...A_0`, with
+`A_i=g_t^i U^a g_t^(-i)`.  The moving trace is `t-a` in the forward order
+and `t+a` in the reverse order.  Cayley--Hamilton gives seventh power `-I`
+for signed traces `{3,5,6}` and `+I` for their negatives; the telescope then
+gives the table.
+
+Consequently any intertwiner that lifts the projective atlas to literal
+endpoint vectors needs a central `C_2` scale/orientation sidecar.  Projective
+identity is not exact vector identity.
+
 ## 8. What this changes at the LRC frontier
 
 The theorem separates four projective lines that had the same cardinality but
@@ -407,7 +585,7 @@ different types:
 ```text
 THM-2315: target-gain directions;
 THM-2321: root-bispectrum shapes mapped abstractly to those gains;
-THM-2603: physical-root projective atlas in PSL_2(F_13);
+THM-2603: abstract Hurwitz root-owner projective atlas in PSL_2(F_13);
 here:     projectivized endpoint residues of one relation term.            (32)
 ```
 
@@ -433,18 +611,37 @@ Two further maps are still absent:
 1. an **action axis** from the two-dimensional target vector `q` to the
    scalar root correction required by THM-2602/2610;
 2. an **ancestry-preserving projective intertwiner** from the endpoint line in
-   (20) to the physical predecessor-root line of THM-2603.
+   (20) to THM-2603's abstract Hurwitz chart, followed by a separate map from
+   that chart to a physical predecessor-root carrier.
 
 Such an intertwiner must send `[q]` to the chosen physical cusp, conjugate the
 parabolic transition to the physical root action, preserve endpoint order and
-clock, and carry a nonzero current rather than only labels.  THM-2603's
-nonabelian seven-edge norm suggests how clock-dependent conjugation can close;
-(27) proves that a fixed endpoint transvection cannot.
+clock, retain the central sign in Section 7.1, and carry a nonzero current
+rather than only labels.  THM-2603's nonabelian seven-edge norm suggests how
+clock-dependent conjugation can close; (27) proves that a fixed endpoint
+transvection cannot.
 
 The determinant is also an exact origin invoice.  Choosing a representative
 inside one common-translation fibre chooses `Delta`; forgetting the origin
 makes every determinant equally possible by (7).  This parallels the
 affine-origin sidecar of THM-2606, but over `F_13^2` rather than `V4=F_2^2`.
+
+THM-2615's lawful `13 by 13` present/bare-endpoint square is a one-dipole
+projection of the joint `V x V` endpoint array in Section 3.  Its diagonal
+Radon sums recover one scalar target colour, but that projection necessarily
+forgets the two-axis determinant `Delta`.  Thus the two new objects are
+successive resolutions, not competitors:
+
+```text
+full allocated endpoint array J(L,R)
+   -> one-dipole 13 by 13 square
+   -> diagonal Radon target colour.                       (33a)
+```
+
+A constructive proof must populate the full array on one positive
+chronological carrier before using either the transvection grammar or the
+Radon consumer.  THM-2616's cross-time diagonal no-go rules out inferring
+that array from separately positive source/future marginals.
 
 ## 9. Exact companion and scope
 
@@ -462,15 +659,20 @@ Both executions byte-match
 ```
 
 The dependency-free companion enumerates all `28,561` endpoint matrices and
-checks `605,997` exact assertions, including:
+checks `672,925` exact assertions, including:
 
 1. the complete census (31) and every translation identity (6)--(7);
 2. the 169-character diagonal hostile (8)--(11);
 3. every fixed-`(q,Delta)` fibre and all `26,208` nondegenerate edges;
 4. all projective fixed points, thirteen-cycles, and exact gluing identities;
-5. all 168 transvections and their twelve-fold homogeneous parameter fibres;
-6. every row/column `V4` sign law and transvection conjugacy; and
-7. the seven-step nonclosure and thirteen-step closure in (27).
+5. all 168 transvections, their `84+84` determinant-square split, and the
+   pointed `PGL_2/PSL_2` bundle bijections;
+6. the twelve free left-`C_7`/right-`C_13` orbits on `PSL_2`;
+7. every row/column `V4` law, all four Burnside/orbit censuses, and every
+   transvection conjugacy;
+8. the six signed `SL_2` closure rows and the canonical central `C_2` defect;
+   and
+9. the seven-step nonclosure and thirteen-step closure in (27).
 
 No floating point, random fixture, external package, or literature claim is
 used.
@@ -479,7 +681,9 @@ The theorem proves a finite algebraic transition object and a sharp loss
 theorem.  It does not prove that a prescribed joint endpoint current survives
 Abel cancellation, that a positive Boolean carrier selects `Delta!=0`, that
 successive endpoint terms share ancestry, that endpoint directions are
-physical roots, that an action axis exists, that seven clocks close, that any
-scalar row is impossible, or that LRC(14) holds.
+physical roots, that an action axis exists, that the declared deep-leg
+allocation is selected analytically, that the central sign is transported,
+that seven clocks close, that any scalar row is impossible, or that LRC(14)
+holds.
 
 QED, conditional on independent promotion audit.
