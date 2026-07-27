@@ -1,7 +1,7 @@
 ---
 title: "Two and three on one object: the modular order-six fork and its missing sidecars"
 date: 2026-07-27
-status: RESEARCH SYNTHESIS; theorem claims are routed to THM-2595--2598 and THM-2606
+status: RESEARCH SYNTHESIS; theorem claims are routed to THM-2595--2598 and THM-2606; the PSL2(F13) signal is routed to RESERVED THM-2603
 source: codex-2026-07-27-modular-v4-session
 ---
 
@@ -134,6 +134,52 @@ selects the unique invariant connected partial cube `K1,3`.  On the six
 unordered pairs, the intrinsic object is the incident/disjoint association
 scheme, not a tournament.  Its four antipode-compatible `C6` structures are
 equivalent to the four possible origins.
+
+### 4. A nonabelian seven-edge quotient at the LRC prime
+
+The modular fork has a second exact finite shadow which is much closer to
+the live ordered-transition problem than either order-six quotient.  Work in
+`PSL2(F13)` with
+
+```text
+U^a=[[1,a],[0,1]],             g_t=[[0,1],[-1,t]],
+t in {3,5,6}.                                                (7a)
+```
+
+Each `g_t` has projective order seven.  Put
+
+```text
+A_k=g_t^k U^a g_t^(-k).
+```
+
+The forward and reverse ordered conjugation products telescope before any
+entrywise calculation:
+
+```text
+A_0 A_1 ... A_6=(U^a g_t)^7 g_t^(-7),
+A_6 A_5 ... A_0=g_t^7(g_t^(-1)U^a)^7.                       (7b)
+```
+
+The two moving traces are respectively `t-a` and `t+a`.  The noncentral
+projective-order-seven trace set in `F13` is
+
+```text
+{plus_or_minus 3, plus_or_minus 5, plus_or_minus 6}.         (7c)
+```
+
+Consequently the forward product is central exactly when `t-a` lies in
+(7c), and the reverse product is central exactly when `t+a` lies there.
+For `t=3,5,6`, the two orientations together hit every
+`a in F13^*`.  This explains the exact finite atlas reported to the owner of
+RESERVED THM-2603: the coverage is a trace-intersection theorem, not a
+coincidence of twelve matrix products.
+
+This is also the cleanest demonstration yet of why order cannot be
+marginalized.  Reversing the same seven conjugates changes `t-a` to `t+a`.
+The construction is an exact noncommutative design target for the seven-edge
+LRC clock, but it is not yet a Boolean carrier, semantic owner path, positive
+kernel, or relation current.  A lawful use must realize the conjugating
+`g_t` motion and the parabolic `U^a` insertion on the same physical ancestry.
 
 # Geometry clues: what survives
 
