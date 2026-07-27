@@ -2,10 +2,10 @@
 id: THM-2590
 title: "Boolean Bockstein and theta-selector incidence spectrum"
 status: >
-  RESERVED / PROVISIONAL PROOF CANDIDATE UNDER AUDIT.  On the fixed primitive
-  coefficient carrier of THM-2585, the thirteen septimal target-slice factors
-  span the full six-dimensional algebra over F_13.  The section map has rank
-  six and kernel dimension seven; 1,581 of its 1,716 six-column minors are
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED (two ways).  On the
+  fixed primitive coefficient carrier of THM-2585, the thirteen septimal
+  target-slice factors span the full six-dimensional algebra over F_13.  The
+  section map has rank six and kernel dimension seven; 1,581 of its 1,716 six-column minors are
   nonzero.  Its restriction to the 8,192 Boolean subsets has 8,184 images,
   with the empty set as the unique zero fibre and one reduced collision
   circuit, up to adjoining a common subset of three free indices.  Thus every
@@ -33,7 +33,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2590 -- Boolean Bockstein and theta-selector incidence spectrum
 
-**RESERVED / PROVISIONAL PROOF CANDIDATE UNDER AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED (two ways).**
 
 THM-2585 proves that every one of its thirteen literal target-shift sections
 has nonzero first Bockstein in every owner colour.  That does not by itself
@@ -366,5 +366,17 @@ Both modes must byte-match
 
 on the declared LF-normalized hash basis.
 
-QED for the provisional coefficient-incidence theorem, pending independent
-hostile audit and status promotion.
+### Independent hostile audit
+
+Two independent audits rederived the rank, kernel, minor census, Boolean
+fibres, factor profiles, selector restrictions, and priority norms.  The
+first caught a load-bearing interpretation error in the provisional draft:
+a quadratic factor kills a CRT component, not a labelled owner colour,
+because `z -> z^kappa` is an automorphism of the full etale algebra.  The
+second then identified the separate nilpotent question in (14).  Equation
+(14b), now also checked by the companion, proves that multiplication by
+`Omega` embeds `R_7` into the thirteenth-cyclotomic socle.  Both auditors
+replayed the repaired immutable script in normal and optimized modes against
+the stored transcript and accepted the declared hashes and scope.
+
+QED.
