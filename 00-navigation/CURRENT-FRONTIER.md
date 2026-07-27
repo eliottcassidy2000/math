@@ -115,22 +115,19 @@ conditions first, yielding mass `>=63rho^2/26`, yet `h=b` stays a spectator
 and annihilation is rootwise.  THM-2562/2567 force six rigid deep replicas
 whose augmentation cancels.
 
-THM-2571 finds the primitive 13-primary carry class; THM-2579 makes its target
-translates one torsor: integral differences and unnormalized Fourier
-numerators fill, while normalized DFT division can restore the class.
-THM-2573 identifies the logarithmic Abel normal with a total-layer handoff
-moment but exhibits a deep blind kernel.  THM-2574 diagonalizes the tooth
-label: off resonance a connected fixed-frequency pair has nonzero carry
-colour, while the pure Boolean gate is still normal-blind.  Thus the live
-coordinate is a tooth mode of the **actual covariant total-layer weights**.
+THM-2571 finds the primitive 13-primary carry; THM-2579 makes its target
+translates one torsor.  Differences and unnormalized numerators fill, while
+normalized division may restore the class.  THM-2573 identifies the Abel
+normal with a handoff moment but has a deep blind kernel.  THM-2574
+diagonalizes the tooth label; the pure Boolean gate stays normal-blind.  The
+live coordinate is a tooth mode of the **actual covariant layer weights**.
 
 THM-2575 constructs a common-base owner-clock host; THM-2577 puts every
 positive return at depth `3` on `{a}` and depth `5` on `{b},{a,b}`.  The host
 lives on the distinct `{a}`, depth-3 packet, so the facts do not multiply.
-THM-2581 repairs that mismatch on the `{b}`, depth-5 fibre.  THM-2584 then
-retains the arrival/deep roots: in `w=t/2` every owner cell has the exact
-four-edge path `0--0--6--6--12`, all joint Fourier colours survive, and the
-signed endogenous `theta=t-2v` current keeps every nonzero collision colour.
+THM-2581 repairs that mismatch on the `{b}`, depth-5 fibre.  THM-2584 retains
+the roots: in `w=t/2` every owner cell has path `0--0--6--6--12`; all joint
+colours and every nonzero endogenous `theta=t-2v` collision survive.
 
 Next: transport that rail/reference onto THM-2569's old-head/future packet
 and prove a map from its deep root to the lawful target co-shift or relation
