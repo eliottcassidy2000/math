@@ -1,0 +1,27 @@
+== THM-2551: diagonal C_13 action and displacement quotient ==
+  ordered pairs: 169
+  free orbits: 13 of size 13
+  orbit coordinate: d=b-h in F_13
+  semantic diagonal: d=0 is free, not rotation-fixed
+
+== invariant tables are exactly displacement ledgers ==
+  arbitrary 13-entry displacement ledger reconstructed the 169-entry table
+  common source/later-root margin: 61
+  diagonal hit: 13*m_0 = 39
+
+== rotation-blind and Hall-perfect zero-arrival controls ==
+  one-offset hostile: 13 atoms, odd orbit weight 1, hit 0
+  endpoint-swap hostile: 26 atoms, primitive orbit weight 2, hit 0
+  equal-mass symmetric controls: aligned hit 26, displaced hit 0
+  off-diagonal Hall checks: 8192/8192
+
+== exact mixed-character control for the +/-1 hostile ==
+  relative mixed modes nonzero: 12/12
+  both one-root marginals are uniform; all their nontrivial modes vanish
+
+== primitive endpoint-swap parity ==
+  endpoint-symmetric primitive-ledger checks: 2916
+  total quotient weight mod 2 = zero-displacement weight mod 2
+  odd primitive weight => positive semantic diagonal
+
+all checks passed
