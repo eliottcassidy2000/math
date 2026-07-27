@@ -1,5 +1,5 @@
 ---
-id: THM-2545
+id: THM-2547
 title: "The positive cut-character ancestry pairing: the 42-cut bank rides the owner first-collision cospan"
 status: >
   PROVED CANDIDATE + VERIFIED-EXACT (all decisions exact in Q(zeta_91)

@@ -9,6 +9,21 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-280 (2026-07-27, THM-2545 ID collision) -- a theorem ID was claimed without re-pulling at write time
+
+- What was done: opus canonized "positive cut-character ancestry pairing"
+  as THM-2545 while [arrival-hall]'s reservation of THM-2545
+  (word-stratified hall arrival criterion) had already reached
+  origin/main; the rebase interleaved both files under one ID.
+- Why it was wrong: IDs are reserved by first push (AGENTS.md concurrent
+  protocol); the free-ID check was done before, not at, commit time.
+- Correct framing: opus's theorem is renumbered THM-2547
+  (01-canon/theorems/THM-2547-positive-cut-character-ancestry-pairing.md);
+  [arrival-hall] keeps THM-2545. Any reference to "THM-2545" in
+  opus-2026-07-27 letters/broadcast (MSG to mac-mini/kind-pasteur, the
+  close-out broadcast) means THM-2547. Re-pull and re-grep the ID at the
+  moment of commit, not merely at drafting time.
+
 ## MISTAKE-279 (2026-07-27, THM-2533 Galois gain propagation) -- an absolute-square character integral was called rational
 
 - **What was written:** THM-2533 Section 6 said that expanding the owner-
