@@ -20,11 +20,11 @@ source: deep-energy-audit-2026-07-28-principal-deck-holotopy
 depends_on:
   - THM-2601-linear-bockstein-sheet-coordinate-and-nonlinear-target-monodromy
   - THM-2607-constant-six-rail-boundary-holonomy-invoice
+  - THM-2608-alternative-rail-clock-collapse-and-missing-transition-index
   - THM-2610-chronological-paired-slice-marked-triangle-graft-and-action-axis-boundary
 related:
   - THM-2478-delayed-owner-handoff-graft-and-deep-sheet-rebase-boundary
   - THM-2542-seven-chart-cech-holonomy-and-c91-arrival-obstruction
-  - THM-2608-alternative-rail-clock-collapse-and-missing-transition-index
 script: 04-computation/lrc14_principal_c13_bibundle_holotopy_thm2611.py
 output: 05-knowledge/results/lrc14_principal_c13_bibundle_holotopy_thm2611.out
 script_sha256: 866b1eecff0e220ba1bdaf695d5dee32d382a857f261988a34d8122948aec209
@@ -253,10 +253,10 @@ phi_c(r)=S^r(c),                    c in F_13.             (20)
 
 This is Section 2 with `P` the root torsor and `Q` the target-sheet torsor.
 The exact companion independently checks the explicit successor from
-THM-2601 and all thirteen maps.  THM-2608's still-pending-audit transition
-analysis finds the same family and correctly treats it as an unresolved
-reference torsor.  Summing over all its points is gauge-invariant algebra;
-it does not select a physical root-to-target map.
+THM-2601 and all thirteen maps.  Proved THM-2608 finds the same family and
+correctly treats it as an unresolved reference torsor.  Summing over all its
+points is gauge-invariant algebra; it does not select a physical
+root-to-target map.
 
 ### 5.3 THM-2610: chronology supplies the quotient, not the bibundle
 
