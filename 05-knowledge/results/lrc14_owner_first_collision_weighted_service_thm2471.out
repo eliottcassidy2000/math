@@ -1,0 +1,8 @@
+THM-2471 exact companion: PASS
+prime=13; nonzero_colours=12; weighted_matrix_support=39
+control_collision_I=24/4225; control_root_energy=1296/17850625
+temporal_transfer_arrival=5/21; source=1/7; distinct=True
+coarsening_factors: loop=253, nonloop=251
+deep_lost_sheet_modulus_control=13
+strict_hostile_deep_roots=(11, 12); endpoint_digits=(3, 4)
+all twelve cyclotomic colours, signed ledger, energy floor, and sharp control verified

@@ -2108,3 +2108,15 @@ the ghost's whole delayed-word branch. It does not align THM-2445's
 twenty-three repair/blocker cells with semantic terminal words, restore
 the fully masked endpoint, give an all-coordinate `91`-unit address,
 decrement a scalar row, or prove LRC(14).
+
+### lrc14_owner_first_collision_weighted_service_thm2471.out
+
+Exact companion for **THM-2471, PROVED + VERIFIED-EXACT + INDEPENDENTLY
+HOSTILE-AUDITED**. It checks a genuinely weighted finite ancestry stalk,
+all twelve primitive thirteenth-root transforms by exact cyclotomic
+reduction, the signed `-I_r` ledger and sharp `I_r^2/12`, `I_r/12`
+invoices, source-versus-arrival temporal transfer, the sharp three-atom
+`253/251` coarsening factors, deep-root sheet descent, and a strict-profile
+coordinate hostile. Normal and optimized runs byte-match and end in `PASS`.
+The theorem constructs canonical owner-collision service but does not
+intertwine it with the THM-2365 endpoint/deep current or exclude a row.
