@@ -117,8 +117,18 @@ def exact_tensor(E_iv, Q_iv):
         for ell in range(QMOD)
     ]
     deep = deep_cells()
+    arrival = [[(v * (GRID // P), (v + 1) * (GRID // P))]
+               for v in range(P)]
     owner_deep = [
         [intersect_lists(owner_pull[ell], deep[t]) for t in range(P)]
+        for ell in range(QMOD)
+    ]
+    owner_arrival_deep = [
+        [
+            [intersect_lists(owner_deep[ell][t], arrival[v])
+             for t in range(P)]
+            for v in range(P)
+        ]
         for ell in range(QMOD)
     ]
 
@@ -127,6 +137,8 @@ def exact_tensor(E_iv, Q_iv):
 
     # Route 1: root charts in y, split by owner cell and theta half.
     C1 = [[[0] * QMOD for _ in range(P)] for _ in range(P)]
+    K1 = [[[[0] * QMOD for _ in range(P)] for _ in range(P)]
+          for _ in range(P)]
     CE = [[[0] * QMOD for _ in range(P)] for _ in range(2)]
     for u0 in range(P):
         sF, vF = Fprof[u0]
@@ -140,9 +152,12 @@ def exact_tensor(E_iv, Q_iv):
                     CE[eps][s][ell] += mass
                     t = (2 * u1 + eps) % P
                     C1[s][t][ell] += mass
+                    K1[s][u1][t][ell] += mass
 
     # Route 2: one physical x-coordinate, absolute deep-root digit retained.
     C2 = [[[0] * QMOD for _ in range(P)] for _ in range(P)]
+    K2 = [[[[0] * QMOD for _ in range(P)] for _ in range(P)]
+          for _ in range(P)]
     for s in range(P):
         rVst, rVv = base.rotate_profile(Vst, Vv, s * (GRID // P), GRID)
         ps, pv, pc, _ = base.product_cum(Ust, Uv, rVst, rVv, GRID)
@@ -151,8 +166,13 @@ def exact_tensor(E_iv, Q_iv):
                 C2[s][t][ell] = P * integrate_profile(
                     ps, pv, pc, owner_deep[ell][t]
                 )
+                for v in range(P):
+                    K2[s][v][t][ell] = P * integrate_profile(
+                        ps, pv, pc, owner_arrival_deep[ell][v][t]
+                    )
     require(C1 == C2, "two-route deep-root tensor mismatch")
-    return C1, CE
+    require(K1 == K2, "two-route arrival/deep-root tensor mismatch")
+    return C1, CE, K1
 
 
 def bucket_transform(C, k, h, ell=None):
@@ -191,7 +211,7 @@ def main():
 
     E = base.build_set(base.PAT_E, base.ZELL)
     QB = base.build_set(host.PAT_QB, base.ZELL)
-    C, CE = exact_tensor(E, QB)
+    C, CE, K = exact_tensor(E, QB)
     DENC = RPACK * DEPTH * DEPTH * GRID
     print("two exact routes agree on all 13x13x7 tensor entries: PASS")
     print("common denominator:", DENC)
@@ -227,6 +247,52 @@ def main():
     require(all(not base.is_zero_b(target_hat[h]) for h in range(1, P)),
             "a nonzero absolute deep-root colour vanished")
     print("absolute deep-root marginal is nonuniform; all 12 colours survive: PASS")
+
+    # The finer tensor keeps the arrival collision root v.  After the unit
+    # reparametrization w=t/2=7t, theta=0 is the literal diagonal w=v and
+    # theta=1 is the parallel rail w=v+7.
+    edge_mass = [[sum(K[s][v][t][ell] for s in range(P)
+                      for ell in range(QMOD))
+                  for t in range(P)] for v in range(P)]
+    edges = [(v, t, edge_mass[v][t]) for v in range(P) for t in range(P)
+             if edge_mass[v][t]]
+    print("positive arrival/deep-root edges (v,t,numerator):", edges)
+    require(all(((7 * t - v) % P) in (0, 7) for v, t, _ in edges),
+            "arrival/deep-root tensor escaped the two affine rails")
+    rail_mass = [sum(m for v, t, m in edges if (7 * t - v) % P == shift)
+                 for shift in (0, 7)]
+    require(all(m > 0 for m in rail_mass), "one theta rail is empty")
+    require(sum(rail_mass) == sum(target_mass), "rail masses lost service")
+    print("in w=7t coordinates, support is w=v or w=v+7: PASS")
+    print("theta=0/1 rail mass numerators:", rail_mass)
+    for s in range(P):
+        for t in range(P):
+            for ell in range(QMOD):
+                require(sum(K[s][v][t][ell] for v in range(P))
+                        == C[s][t][ell], "arrival-root marginal lost C")
+    print("two exact routes agree on the finer 13x13x13x7 tensor: PASS")
+
+    expected_edges = {(0, 0), (6, 0), (6, 12), (12, 12)}
+    hall_diagonal = []
+    for ell in range(QMOD):
+        edge_ell = {
+            (v, t): sum(K[s][v][t][ell] for s in range(P))
+            for v in range(P) for t in range(P)
+            if sum(K[s][v][t][ell] for s in range(P))
+        }
+        require(set(edge_ell) == expected_edges,
+                "an owner cell changed the four-edge support graph")
+        # In w=7t coordinates the allowed edges are
+        # 0->0, 6->0, 6->6, 12->6.  Deleting equal-label edges leaves
+        # arrival vertex 0 with no neighbour, so weighted Hall forces its
+        # entire positive margin onto the diagonal 0->0.
+        hall_diagonal.append(edge_ell[(0, 0)])
+    require(all(value > 0 for value in hall_diagonal),
+            "an owner cell lost the forced diagonal")
+    print("each owner cell has exactly the four-edge path")
+    print("  v=0--w=0--v=6--w=6--v=12: PASS")
+    print("after deleting v=w, S={0} has empty neighbourhood;")
+    print("forced Hall diagonal numerators by owner cell:", hall_diagonal)
 
     global_zeros = projective_zeros(C)
     local_zeros = {ell: projective_zeros(C, ell) for ell in range(QMOD)}
@@ -277,6 +343,15 @@ def main():
                         == C[(-s) % P][(-t - 1) % P][(-ell) % QMOD],
                         "deep-root tensor reflection law failed")
     print("C_ell(s,t)=C_-ell(-s,-t-1): PASS")
+    for s in range(P):
+        for v in range(P):
+            for t in range(P):
+                for ell in range(QMOD):
+                    require(K[s][v][t][ell]
+                            == K[(-s) % P][(-v - 1) % P]
+                                 [(-t - 1) % P][(-ell) % QMOD],
+                            "fine tensor reflection law failed")
+    print("K_ell(s,v,t)=K_-ell(-s,-v-1,-t-1): PASS")
     print("SCOPE: exact positive ancestry tensor on one typed b/K=2 packet;")
     print("no THM-2365 target identification, physical current, row exclusion,")
     print("or LRC(14) conclusion. All exact checks passed.")
