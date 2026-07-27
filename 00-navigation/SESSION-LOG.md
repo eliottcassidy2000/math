@@ -1,3 +1,10 @@
+## mac-mini-2026-07-27-S146 -- THE RECIPROCAL SIGNATURE LAW + THE SALEM DISCOVERY (HYP-9060): the owner's three recurrence patterns decoded completely -- A+B-C = (x-1)^2(x+1) [impulse = repeated naturals ceil(n/2)]; A+B-C+D-E-F+G = (x-1)^3(x+1)^2(x^2+1), fully cyclotomic = the degree-2/period-4 quasi-polynomial family (klein's shadow shape at (r,g)=(0,3)) [impulse = DOUBLED QUARTER-SQUARES A002620 = bipartite relation counts -- the owner's 'triangular numbers arise from relation' third perspective confirmed]; A+B+C-D-E-F+G = (x-1) * palindromic sextic <-> y^3-4y-2 under y = x+1/x, and THE SEXTIC IS A SALEM POLYNOMIAL: lambda = 1.58234718, exactly two roots off the unit circle -- the wild signature is a SALEM RECURRENCE [impulse = 1,1,2,4,6,10,16,26,41,65,104,...; OEIS-check flagged to klein's pipeline]. The trio = two Mahler-measure-1 tames + the first Salem wildness = the recurrence-level face of 'the gap above the floor' => THE LEHMER/MAHLER BRIDGE filed to the portfolio. THE OP-COVARIANCE THEOREM stated with machine face: reversal-symmetric transfer (M ~ M^{-1}) forces +-reciprocal signatures; all three are +-reciprocal (verified symbolically; inversion-closure one line) => op-covariant C-finite tournament invariants carry +-palindromic characteristic polynomials: the mirror/palindrome technology's SPECTRAL face, with y = x+1/x the descent to the mirror quotient (the same halving as (b-a)(b+a) in the deficit law). All three signatures fix constants (p(1)=0, sum = 1): augmented difference operators. HONEST NEGATIVE CENSUS: W(n), Rosetta sums/columns, Proth rows, 2^n+1, 60H_n satisfy none -- the native sequences are elsewhere; impulse-fingerprint matching against the zoo atlas = named follow-up.
+
+Prompt (owner): long session; merge previous recurrence-based tournament work including
+A+B+C-D-E-F+G, A+B-C, A+B-C+D-E-F+G.
+
+FILES: HYP-9060 (RESOLVED, 5 parts), script+out, results INDEX, session log. -> all
+
 > **CURRENT-TRUTH WARNING (2026-07-22):** This bounded handoff is not proof
 > authority. Start with [START-HERE.md](START-HERE.md),
 > [CURRENT-FRONTIER.md](CURRENT-FRONTIER.md), and

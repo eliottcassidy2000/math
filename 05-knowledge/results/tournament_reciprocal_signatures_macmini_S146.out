@@ -1,0 +1,29 @@
+== (1) the algebra ==
+             A+B-C: (x - 1)**2*(x + 1)   [+recip]
+     A+B-C+D-E-F+G: (x - 1)**3*(x + 1)**2*(x**2 + 1)   [-recip]
+     A+B+C-D-E-F+G: (x - 1)*(x**6 - x**4 - 2*x**3 - x**2 + 1)   [-recip]
+  sextic S = x**6 - x**4 - 2*x**3 - x**2 + 1;  y-model: y^3 - 4y - 2 (irreducible: True, disc = 148)
+  y-roots ~ [-1.67513, -0.539189, 2.21432]; growth lambda ~ 1.5823472
+  inversion-closure of all three root multisets: PROVED by the
+  +-reciprocity identities checked above (no root arithmetic needed).
+  sextic |roots| = [0.6319725597, 1.0, 1.0, 1.0, 1.0, 1.5823471837]
+  roots off unit circle: 2 (Salem shape = 2) — lambda = 1.58234718: A DEGREE-6 SALEM NUMBER (Lehmer/Mahler bridge)
+
+== (3) the battery ==
+  W(n)                     [1, 2, 8, 32, 158, 928, 6350, 49752]...  satisfies: none of the three
+  Rosetta row sums         [1, 3, 7, 16, 39, 106, 317]...  satisfies: none of the three
+  Rosetta alt sums         [1, 1, 1, 2, 1, 0, 7]...  satisfies: none of the three
+  Rosetta col 2            [1, 3, 6, 10, 15, 21]...  satisfies: none of the three
+  Rosetta col 3            [1, 5, 14, 30, 55]...  satisfies: none of the three
+  Rosetta col 4            [1, 9, 37, 101]...  satisfies: none of the three
+  Proth n=3 row (3*2^x+1)  [4, 7, 13, 25, 49, 97, 193, 385]...  satisfies: none of the three
+  2^n+1                    [2, 3, 5, 9, 17, 33, 65, 129]...  satisfies: none of the three
+  H_n numerators/60-scale  [60, 90, 110, 125, 137]...  satisfies: none of the three
+== impulse responses (seed 0..0,1) — fingerprints for future matching ==
+             A+B-C: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8]
+     A+B-C+D-E-F+G: [1, 1, 2, 2, 4, 4, 6, 6, 9, 9, 12, 12, 16, 16, 20, 20]
+     A+B+C-D-E-F+G: [1, 1, 2, 4, 6, 10, 16, 26, 41, 65, 104, 164, 260, 412, 652, 1032]
+== all-ones-seed responses ==
+             A+B-C: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+     A+B-C+D-E-F+G: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+     A+B+C-D-E-F+G: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
