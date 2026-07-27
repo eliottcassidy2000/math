@@ -2,7 +2,7 @@
 id: THM-2614
 title: "Punctured target-root cosupport factorization and principal-deck no-go"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On THM-2600's complete constant-six two-rail bank, every active fine
   (rail,target-section,future-clock) fibre has every nonzero deep-probe root
   and no zero root.  After retaining exactly the globally primitive unit
@@ -34,7 +34,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2614 -- the available target/root cospan is a punctured product
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2609 proves that the external target sections have every additive
 difference but do not become the constant-six physical future digit.  The
@@ -303,4 +303,11 @@ unit Bockstein to a fine sheet, create a principal ancestry fibre, identify
 a semantic owner/repair endpoint, compose seven transitions, exclude a
 scalar row, or prove LRC(14).  The ledger remains `165`.
 
-QED (candidate; independent hostile audit pending).
+An independent audit rebuilt the bank in normal and optimized modes and
+byte-matched both runs to the stored transcript.  It separately checked that
+the absent `r=0` sheet is inherited from THM-2600's present `c_3`-safe factor,
+not manufactured by a late marginal; derived (11), (16), and the completion
+profiles directly from `Q x F_13^*`; and confirmed that aggregate unitness is
+never charged to an individual positive sheet.
+
+QED.

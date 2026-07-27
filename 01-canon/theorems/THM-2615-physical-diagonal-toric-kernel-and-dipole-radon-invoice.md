@@ -2,7 +2,7 @@
 id: THM-2615
 title: "Physical-diagonal toric kernel and dipole Radon invoice"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Restriction from the independent endpoint torus T^E to the physical scalar
   curve D_w(x)=(w_e x) has group-algebra kernel generated exactly by the
   relation binomials chi_a-1, a in Lambda(w).  THM-2309's two explicit target
@@ -38,7 +38,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2615 -- the old target residue lives off the physical diagonal
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2610 retains an old marked coefficient beside every future paired-shift
 colour, and THM-2613 canonically identifies the physical future root with its
@@ -340,4 +340,10 @@ thirteenth root `16`, the dependency-free referee checks:
 The exact group-algebra kernel (5) and real positivity in (12) are analytic
 proofs above, not extrapolations from the finite companion.
 
-QED pending independent hostile audit.
+An independent audit checked the quotient-group proof of (5), the two
+THM-2309 relations against THM-2350's target quotient, the strict positivity
+and same-data hostile in (12)--(14), every Fourier sign and normalization in
+(18)--(22), and the permutation-matrix boundary in (23)--(25).  Normal and
+optimized executions independently byte-match the stored transcript.
+
+QED.
