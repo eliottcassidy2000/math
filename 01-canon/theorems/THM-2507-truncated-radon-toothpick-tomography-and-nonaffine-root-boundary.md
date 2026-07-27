@@ -2,7 +2,8 @@
 id: THM-2507
 title: "Truncated Radon toothpick tomography and the nonaffine root boundary"
 status: >
-  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED. For a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; FINITE-EXACT ATLAS
+  SHARPENING. For a
   rational row-zero array on F_p x {0,...,q-1}, q<p, the q-point
   toothpick pushforwards in any q-1 distinct nonzero slopes determine the
   array modulo the exact (q-1)-dimensional h-independent kernel. Every
@@ -12,7 +13,9 @@ status: >
   almost every essential parent; every surviving pushforward has all twelve
   nonzero C_13 characters and coefficient floor 18^(-11). One fixed
   slope therefore survives on parent mass at least 1/6 or 1/4 in the two
-  residual shapes. The fold is deliberately nonaffine: it uses an ordered
+  residual shapes. Finite-exact enumeration of the complete THM-2436 atlas
+  strengthens seven-of-twelve to eleven-of-twelve and the fixed-slope
+  floors to 11/42 and 11/28. The fold is deliberately nonaffine: it uses an ordered
   representative cut on F_7, and THM-2436's carry translates the cut but
   does not sweep the slope. No standard thirteen-root, target, owner, or
   deep current is produced; physicalization requires the carry/cut sheet
@@ -32,11 +35,16 @@ output: 05-knowledge/results/lrc14_truncated_radon_escape_probe.out
 script_sha256: 7dc0e33a090905e05babeb82efeeed954e43fff10b638514ae2e9c7f8cbb3e9b
 output_sha256: fbf53503365231770e8a2b94c9b1727f2c513798764fcca393c7f38cb08b4393
 hash_basis: working-tree bytes (LF)
+secondary_script: 04-computation/lrc14_truncated_radon_atlas_thm2507.cpp
+secondary_output: 05-knowledge/results/lrc14_truncated_radon_atlas_thm2507.out
+secondary_script_sha256: 4dd02f59c2f64074cca7835df02c5be09aaf67060cefe4d7ba3248e073116b2f
+secondary_output_sha256: 8aba95fa9da47796c737b9f79fb4571fdc95cbdf5fad096069475cefbb38c15d
 ---
 
 # THM-2507 -- six toothpick directions detect the punctured stalk
 
-**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED; FINITE-EXACT ATLAS
+SHARPENING.**
 
 THM-2506 proves a sharp negative statement: every affine homomorphic
 pushforward of the punctured `C_13 x C_7` defect to a `13`-group vanishes.
@@ -340,6 +348,55 @@ k_shape=2:    integral_P |widehat(R_tau)(alpha)|^2 >=(1/4)18^(-22). (26)
 No union over the twelve `C_13` characters is paid.  The only remaining
 selection is one of the twelve geometric toothpick slopes.
 
+### Finite-exact sharpening on the complete THM-2436 atlas
+
+The formal theorem above is sharp for arbitrary integral row-zero arrays.
+The actual punctured-cover defects are much more rigid.  A separate exact
+census reuses the already audited THM-2436 enumeration engine and then derives
+the Radon zero mask independently of the proof above.  Its explicit universe
+is:
+
+```text
+guard {0,...,25};
+five unit AP13 supports;
+all exact covers after adding blocker columns;
+all 28 source multisets 0<=s_0<=s_1<=6.                           (26a)
+```
+
+The complete counts are
+
+```text
+cover assignments:                 41,379,
+flat assignments:                   1,736,
+nonflat assignments:               39,643,
+distinct nonflat defect matrices:  14,952.                       (26b)
+```
+
+**FINITE-EXACT:** every one of the `14,952` nonflat defects has eleven or
+twelve good nonzero slopes.  Exactly `14,711` have zero-slope set `{0}`;
+the remaining `241` have `{0,tau}` for one nonzero `tau`.  The boundary is
+realized inside the atlas by
+
+```text
+d(0)=-e_0+e_1,                d(12)=e_1-e_2,                     (26c)
+```
+
+whose zero slopes are `{0,1}`.
+
+Replacing seven by eleven in (23)--(24) gives the stronger finite-exact
+fixed-slope floors
+
+```text
+k_shape=1:             mu(E_tau)>=11/42,
+
+k_shape=2:             mu(E_tau)>=11/28,                         (26d)
+```
+
+and corresponding energy floors `(11/42)18^(-22)` and
+`(11/28)18^(-22)`.  These improvements inherit the complete THM-2436 finite
+atlas and its filters; they are not a second independent enumeration and are
+not promoted to a general `L^1<=18` classification theorem.
+
 ## 5. Why this evades the affine no-go but is not yet physical
 
 The map `pi_tau` for `tau!=0` is not an affine homomorphism
@@ -425,7 +482,7 @@ strip, and its destroyed information is explicit.
 
 ## 7. Exact gain and stopping boundary
 
-The proved candidate chain is
+The proved chain is
 
 ```text
 essential punctured-stalk defect
@@ -478,4 +535,17 @@ the `18^(-11)` norm floor, the `1/6` and `1/4` fixed-slope invoices, and the
 `q>=p+1` failure boundary.  It also verified that (28)--(30) expose a genuine
 row-dependent cut and make no target, owner, or deep-current claim.  Normal
 and optimized executions are byte-identical to the stored transcript, and
-the source/output hashes match the metadata. QED.
+the source/output hashes match the metadata.
+
+For the finite-exact atlas sharpening, compile the secondary companion with
+the repository's C++20 compiler at `-O2` and `-O3`; both runs must reproduce
+
+```text
+05-knowledge/results/lrc14_truncated_radon_atlas_thm2507.out
+```
+
+byte-for-byte.  The companion inherits the pre-existing exhaustive THM-2436
+cover generator, audits its full source-multiset and assignment counts, then
+computes and deduplicates the defect matrices and their thirteen Radon zero
+masks.  Its source/output hashes are recorded separately in the metadata.
+QED.
