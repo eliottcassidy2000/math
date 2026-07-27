@@ -1,0 +1,14 @@
+THM-2551 exact transfer/projector tensor-intersection referee
+relation_size=4702525276151521
+split_section_rank=4
+transfer_rank=85 root_charged_survive=84 clock_augmentation_killed=6
+J_intersection_rank=399714648472864920
+JD_rank=14365 JD_kernel_rank=427929800129774046 JD_cokernel_rank=1014
+Jstar_intersection_rank=399714648472865005
+JstarD_rank=14280 JstarD_kernel_rank=427929800129774131 JstarD_cokernel_rank=1008
+joint_intersection_rank=399714648472850555
+joint_rank=28730 joint_kernel_rank=427929800129759681 joint_cokernel_rank=2028
+positive_kernel_hostile_U_support=169 J_support=0 transfer_mass=7
+clock_visible_then_killed=1
+hall_equal_marginal_mass=2 aligned_diagonal=2 swapped_diagonal=0
+ALL CHECKS PASS

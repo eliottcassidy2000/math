@@ -1,0 +1,10 @@
+THM-2553 exact rotation-localization/weighted-jet boundary referee
+scalar_profile_z_checks=114688
+weighted_same_z_hostile=283,293
+charged_augmentation_checks=14
+derivative_incidence_entries=28392 profile=181,12
+annihilator_pairs=28224 annihilator_label_checks=4769856
+graph_preserving_orbits=28392
+singleton_signals=39 chirp_intensity_checks=1113879
+target_zero_signals=3 live_signals=36 detector_values=0,2 energy_values=0,1
+ALL CHECKS PASS
