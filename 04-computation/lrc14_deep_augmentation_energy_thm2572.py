@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact companion for THM-2570.
+"""Exact companion for THM-2572.
 
 The script uses only integer and Fraction arithmetic.  Cyclotomic
 nonvanishing is checked in the power basis of Q[zeta_13], where
@@ -175,7 +175,7 @@ def main() -> None:
     check(gaps == (4, 4, 5))
     check(max(gaps) * 2 < P)
 
-    print("THM-2570 deep-augmentation Parseval energy")
+    print("THM-2572 deep-augmentation Parseval energy")
     print(f"ternary profiles {ternary_profiles}, equality profiles {equality_profiles}")
     print(f"Boolean profiles with all 12 anchors {boolean_profiles}")
     print(f"diagonal-free singleton controls {singleton_controls}")

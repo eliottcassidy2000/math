@@ -9,6 +9,23 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-288 (2026-07-27, concurrent THM-2570 reservation collision) -- an end-anchored ID scan missed a CRLF frontmatter line
+
+- **What was done:** the LRC deep-augmentation energy theorem was reserved as
+  `THM-2570` after a filename/history scan appeared clear.  The earlier
+  `THM-2570-jelonek-cusp-cylinder-normalization-and-conductor.md` reservation
+  was already present, so the live tree temporarily contained two distinct
+  files with the same YAML ID.
+- **First failed implication:** the decisive YAML search used the pattern
+  `^id: THM-2570$`.  On this mixed-line-ending worktree, the earlier file's
+  CRLF carriage return prevented the end anchor from matching.  A clean
+  command result therefore did not imply a clean namespace.
+- **Repair:** the later LRC theorem and both exact artifacts were coherently
+  renamed to `THM-2572`; the first Jelonek claimant keeps `THM-2570`.
+  Namespace audits must search filenames, remote history, and YAML prefixes
+  without a line-ending-sensitive end anchor (or normalize line endings
+  first).  No mathematical statement or computed constant changed.
+
 ## MISTAKE-287 (2026-07-27, HYP-9033/HYP-9065 cusp and elliptic pullbacks) -- square coefficient factors were discarded in global zero-set claims
 
 - **What was claimed:** from the exact identity

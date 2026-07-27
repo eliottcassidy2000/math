@@ -1,5 +1,5 @@
 ---
-id: THM-2570
+id: THM-2572
 title: "Deep-augmentation Parseval energy and nonlinear holotopy obstruction"
 status: >
   PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
@@ -18,14 +18,14 @@ depends_on:
 related:
   - THM-2383-polarized-complete-subcube-gram-tomography
   - THM-2563-paired-dipole-deep-target-corner-and-partial-bare-boundary
-script: 04-computation/lrc14_deep_augmentation_energy_thm2570.py
-output: 05-knowledge/results/lrc14_deep_augmentation_energy_thm2570.out
-script_sha256: 40809dbb1f03bf48541ad32183ab7150e7d691d974d15939a7f47790b271ef20
-output_sha256: 7c52420949b10bd70338ac004aa5b7f3ae8fcb03937aa4ff0a175c1168e45cd5
+script: 04-computation/lrc14_deep_augmentation_energy_thm2572.py
+output: 05-knowledge/results/lrc14_deep_augmentation_energy_thm2572.out
+script_sha256: 99a6665c86f1f93ac34cc6df86e988805fd20897c20d9284bc79597ab8a8bc9d
+output_sha256: 004529d3ff7e87890033e3ec9489975579c99913f0f62c84cf280f5c8610de87
 hash_basis: LF-normalized bytes
 ---
 
-# THM-2570 -- the cancelled coloured cycle has positive Gram energy
+# THM-2572 -- the cancelled coloured cycle has positive Gram energy
 
 **PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
 PENDING.**
@@ -294,21 +294,22 @@ Reynolds/endpoint carrier and its physical phase reference.
 Run
 
 ```bash
-python3 04-computation/lrc14_deep_augmentation_energy_thm2570.py
-python3 -O 04-computation/lrc14_deep_augmentation_energy_thm2570.py
+python3 04-computation/lrc14_deep_augmentation_energy_thm2572.py
+python3 -O 04-computation/lrc14_deep_augmentation_energy_thm2572.py
 ```
 
 Both executions must reproduce
 
 ```text
-05-knowledge/results/lrc14_deep_augmentation_energy_thm2570.out
+05-knowledge/results/lrc14_deep_augmentation_energy_thm2572.out
 ```
 
 byte-for-byte.  The dependency-free exact companion exhausts all `531,440`
 nonzero ternary off-diagonal profiles and all `4,095` Boolean profiles,
 checks every nontrivial anchor on the latter, replays all `2,028`
-diagonal-free singleton cells, verifies both equality hostiles, all `168`
-gain classes, the global factor in (18), the two THM-2563 floors, and the
+diagonal-free singleton cells, verifies both equality hostiles, the three
+inherited THM-2562 duty classes and their `168`-gain census arithmetic, the
+global factor in (18), the two THM-2563 floors, and the
 strict triangle geometry behind the prescribed-colour infimum.  It executes
 `1,647,551` explicit integer/Fraction assertions under both normal and
 optimized Python.

@@ -7,7 +7,7 @@ depends_on: []
 related:
   - THM-2532-cyclic-tournament-cayley-derivative-algebra-and-chi7-even-quotient
   - THM-2567-deep-coloured-duty-replica-cycle-and-augmentation-cancellation
-  - THM-2570-deep-augmentation-parseval-energy-and-nonlinear-holotopy-obstruction
+  - THM-2572-deep-augmentation-parseval-energy-and-nonlinear-holotopy-obstruction
 ---
 
 # THM-2571 -- the coloured cycle is rationally fillable but has a Bockstein
