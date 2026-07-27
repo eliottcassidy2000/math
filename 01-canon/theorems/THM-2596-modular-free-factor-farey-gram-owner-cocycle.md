@@ -2,8 +2,8 @@
 id: THM-2596
 title: "Modular free factors, Farey children, and the Gram-owner cocycle"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  The Bass--Serre tree of PSL_2(Z)=C_2*C_3 is
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The Bass--Serre
+  tree of PSL_2(Z)=C_2*C_3 is
   (2,3)-biregular; contracting its degree-two vertices gives the trivalent
   Farey-dual tree, whose rooted noninitial branching is binary.  The two
   positive Farey children are parabolic words in the torsion generators.
@@ -36,9 +36,9 @@ hash_basis: normalized repository blobs (LF)
 
 # THM-2596 -- the modular tree needs a metric sidecar
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**  The group, matrix, and hostile statements are proved
-below.  The dependency-free companion checks the displayed identities and
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The group,
+matrix, and hostile statements are proved below.  The dependency-free
+companion checks the displayed identities and
 `587,290` exact integer/rational instances.  The LRC paragraph is a
 faithful reformulation of the proved THM-2056 defect, not a new LRC gate.
 

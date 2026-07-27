@@ -2,8 +2,8 @@
 id: THM-2597
 title: "The first six-vertex bicycle is the modular abelianization cycle"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT.  In the tile graph K_6 minus its frozen base path, the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In the tile
+  graph K_6 minus its frozen base path, the
   unique nonzero bicycle is delta({1,4,5})=delta({2,3,6}), supported on the
   spanning cycle (1,3,5,2,4,6).  It is K_3,3 minus the frozen perfect
   matching and splits into the two derangement perfect matchings.  Its
@@ -38,9 +38,9 @@ hash_basis: normalized repository blobs (LF)
 
 # THM-2597 -- the first bicycle is an order-six fork
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-HOSTILE AUDIT.**  The bicycle, matching, partial-cube, modular, and graceful
-claims have short proofs below.  The tile-mask, isomorphism, Hamiltonian,
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The bicycle,
+matching, partial-cube, modular, and graceful claims have short proofs
+below.  The tile-mask, isomorphism, Hamiltonian,
 automorphism, and blue-self-loop claims are finite-exact and reproduced by
 the dependency-free companion.
 
