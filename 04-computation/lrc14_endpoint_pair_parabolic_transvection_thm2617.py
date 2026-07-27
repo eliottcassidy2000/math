@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact finite audit for THM-2615.
+"""Exact finite audit for THM-2617.
 
 The calculation is dependency-free.  It enumerates every endpoint matrix over
 F_13 and independently checks the translation quotient, determinant fibres,
@@ -325,7 +325,7 @@ checked(point(walk[7]) != point(right_control),
         "seven-edge parabolic walk closed unexpectedly")
 checked(walk[P] == right_control, "thirteen-edge parabolic walk did not close")
 
-print("== endpoint-pair parabolic transvection ==")
+print("== THM-2617 endpoint-pair parabolic transvection ==")
 print(f"field: F_{P}")
 print(f"projective line: {len(PROJECTIVE)} = {P} affine points + 1 fixed boundary")
 print("endpoint matrix census:", dict(matrix_census))
