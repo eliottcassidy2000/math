@@ -77,9 +77,33 @@ universal-form Carmichael number and contains the LRC stalk modulus
 `91 = 7 * 13`; but `tc(QR_19) = 6,857,869,865` FAILS Korselt, so
 the Carmichael property is a p = 11 coincidence, not a law.
 
-Cheapest decisive tests: (i) compute `exc` for R_19, R_21 (bit-DP,
-C++) and check the `e(1 - alpha/n)` fit tightens; (ii) compute the
-first character-harmonic correction analytically at p -> infinity
-and compare with `e - exc(p)`; (iii) OEIS: the H(R_n) sequence's
-novelty is UNVERIFIED (lookups rate-limited); check before any
-submission claim.
+**Universality upgrade (same session, hostile control PASSED
+toward the conjecture).** The maximally structured regular family
+`C3[R_k, R_k, R_k]` (tower-composed, the opposite of quasirandom)
+also climbs to `e`:
+
+```text
+n    9        15        21
+exc  2.228571 2.420817  2.516651     (rotational at same n:
+                                      2.3048, 2.4866, 2.5767)
+```
+
+with the family gap shrinking `0.076 -> 0.066 -> 0.060`. So `e` is
+NOT a quasirandomness constant; the sharpened conjecture is
+**universality over regular tournaments**: every sequence of regular
+tournaments has `exc -> e`, with family-dependent `O(1/n)`
+coefficient. (The `n = 9` composed value `H = 3159` independently
+matches the S132 hand computation via the THM-2453 run-transfer
+expansion -- which is also the proof route: the run-transfer formula
+should PROPAGATE the `e`-limit through `C3`-composition, making the
+tower grammar an induction scheme for the conjecture.)
+
+Cheapest decisive tests: (i) DONE (R_19..23, alpha -> 1);
+(ii) compute the first character-harmonic correction analytically
+at p -> infinity and compare with `e - exc(p)`; (iii) OEIS: the
+H(R_n) sequence's novelty is UNVERIFIED (lookups rate-limited);
+(iv) prove the C3-composition transfer: if exc(A_k) -> e then
+exc(C3[A_k,A_k,A_k]) -> e via the run-transfer expansion --
+the first candidate PROOF route into the conjecture;
+(v) sample non-circulant regular tournaments at n = 13..17 for the
+spread's shrink rate.
