@@ -13,10 +13,11 @@ status: >
   zero.  Double finite-character summation therefore forces a coefficient
   with nonzero deepest colour A and nonzero a--k_a moving-endpoint colour
   B.  The normalized full-table real-part floor is 7 rho/35152, improving
-  to 9 rho/35152 when both graft roles are ordinary.  Every live deep
-  multiplier is coprime to 91.  This closes the previously missing paired-
-  blocker co-shift on an old-head partial-bare cospan, uniformly on all 165
-  rows.  It does not produce a completed THM-2334 target coefficient: the
+  to 9 rho/35152 when both graft roles are ordinary.  This closes the
+  previously missing paired-blocker co-shift on an old-head partial-bare
+  cospan, uniformly on all 165 rows.  Every live displayed deep-probe
+  multiplier is coprime to 91.  It does not produce a completed THM-2334
+  target coefficient: the
   fixed selector/head leg is not target-co-shifted, so its left residue is
   absent, and the danger-to-safe transition is off-diagonal under THM-2452
   complete-mask restoration.  No terminal word at the head, future root,
@@ -121,7 +122,8 @@ R_(r,s,t)
 
 The `s` pair is exactly the `eta` dipole and the `t` pair exactly the `ell`
 dipole.  Thus every positive cell contains both blockers and both graft
-roles safe on the moving endpoint.  No paired factor is frozen.
+roles safe on the moving endpoint.  No member of either pair on that moving
+endpoint is frozen; the old-leg anchors inside `w` remain fixed.
 
 ## 2. Exact capacity and three zero loci
 
@@ -263,11 +265,13 @@ the THM-2350 pivot with `k_b=q_*`; equations (3) and (7) are then the two
 actual paired dipoles.  Sections 1--3 apply on every one of the `165` rows.
 
 If desired, partition `w` by the five remaining guard/unit truth bits.  One
-of at most `32` pieces has mass at least `rho/32` and is a complete literal
-old-head atom: all blocker bits and all six role bits are then fixed.  The
-relative bounds (18)--(20) remain unchanged on that piece.  This refinement
-does not solve endpoint matching; it makes the mismatch in Section 5
-literal.
+of at most `32` pieces has mass at least `rho/32` and is a fully
+truth-resolved old-head atom: all blocker bits and all six role bits,
+including the separately retained `q_*=k_b` core bit, are then fixed.  This
+is a refinement of, not a synonym for, THM-2452's seven-bit complete-mask
+bank.  The relative bounds (18)--(20) remain unchanged on that piece.  The
+refinement does not solve endpoint matching; it makes the mismatch in
+Section 5 literal.
 
 ## 5. Why this is not yet a completed target current
 
@@ -279,10 +283,11 @@ dipole table** and a positive partial-bare cospan in THM-2445's sense.
 The fixed factor `w`, however, is the old selector/head leg.  It is not
 co-shifted in (7).  In an atomic endpoint refinement, let `u` be a left
 index coming from that fixed leg and `v` a moving endpoint index.  The
-`B`-character in (15) sees the moving residue
+`B`-character in (15) sees only the moving residue (up to the global choice
+of endpoint/Fourier sign)
 
 ```text
--eta.v.                                               (23)
+plus_or_minus eta.v.                                  (23)
 ```
 
 A completed THM-2334 target character must see the difference
@@ -401,7 +406,8 @@ The next exact object is a **charged endpoint transition cospan** retaining
 the old selector's left residue together with the moving repair residue.
 Either a nonzero difference character survives, or its full-`X`
 recombination gives a concrete off-diagonal cancellation law.  Only after
-that step can THM-2365/2452 land a completed target coefficient.  The
+that step could a THM-2365/2452 completed-endpoint landing be attempted;
+common-endpoint and semantic typing would still require audit.  The
 sheet/carry/future-root and Hall obligations remain subsequent.  No scalar
 row is removed and LRC(14) remains open.
 

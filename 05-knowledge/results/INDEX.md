@@ -1,5 +1,18 @@
 # Script Results Index
 
+- `lrc14_paired_dipole_deep_corner_thm2563.py` -> matching `.out`
+  [THM-2563 PROVED + VERIFIED-EXACT].  Every THM-2559 old head supports a
+  nonnegative `13^3` partial-bare table containing a translated deepest probe
+  and both full THM-2350 blocker--graft dipoles.  Paired safe capacities are
+  `9` (ordinary) and `7` (guard); at most one guard gives total mass at least
+  `63rho`.  The `r=0` and `s=0` planes and `r=t` diagonal vanish, forcing a
+  primitive-deep/nonzero moving-dipole coefficient with normalized full-table
+  floor `7rho/35152` (`9rho/35152` when both roles are ordinary).  The
+  THM-2561 interval realizes `1,330` positive cells and exact total
+  `(7385/39)rho`.  A finite-group hostile proves why this is not yet a
+  completed target coefficient: the fixed head's left residue is absent, and
+  danger-to-safe completion is off-diagonal.  Hashes are
+  `6f3bde89...294c` / `631d6fa0...2338`.
 - `lrc14_target_informed_chord_old_repair_thm2559.py` -> matching `.out`
   [THM-2559 PROVED + VERIFIED-EXACT].  On all `165` live owner rows, the
   already named target-active `k_a` failure mask is nonempty and disjoint from
