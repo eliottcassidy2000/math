@@ -7,4 +7,5 @@ annihilator_pairs=28224 annihilator_label_checks=4769856
 graph_preserving_orbits=28392
 singleton_signals=39 chirp_intensity_checks=1113879
 target_zero_signals=3 live_signals=36 detector_values=0,2 energy_values=0,1
+explicit_require_checks=6452941
 ALL CHECKS PASS

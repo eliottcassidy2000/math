@@ -2,7 +2,7 @@
 id: THM-2552
 title: "Flat common-base deck gain, free-wall saturation, and the coherent-face obstruction"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; independent hostile audit REQUESTED.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   The closest proved common-future groupoid carries only a deck coboundary,
   so every closed gain is zero.  The opposite relaxation, which composes the
   individually positive THM-2540 walls independently, has full F13 gain after
@@ -19,12 +19,16 @@ depends_on:
 related:
   - THM-2461-temporal-blocker-word-cocycle-and-diagonal-polarized-repair-boundary
   - THM-2466-delayed-word-simultaneous-drift-service-retention
-  - THM-2471-first-collision-root-pattern-and-factor-repair-spectrum
+  - THM-2471-owner-first-collision-weighted-root-service-and-temporal-atom-boundary
   - THM-2478-delayed-owner-handoff-graft-and-deep-sheet-rebase-boundary
-  - THM-2508-affine-cut-bundle-covariance-and-mixed-cyclotomic-factorization
+  - THM-2508-affine-cut-bundle-covariance-and-carry-permutation
   - THM-2537-cayley-wall-scalarization-and-positive-selector-intertwiner
+  - THM-2549-future-pullback-target-neutrality-and-cemetery-hall-boundary
 script: 04-computation/lrc14_common_base_gain_coherent_face_thm2552.py
 output: 05-knowledge/results/lrc14_common_base_gain_coherent_face_thm2552.out
+script_sha256: 1ebe5a8d30d57ef1b04a78f9f03998078e6f1b1ee261c8d7ce9d026215cb393b
+output_sha256: 07c57743c408b789885d7fa73e1b2b2573236054d2bb671609added4bfc2605a
+hash_basis: LF-normalized bytes
 ---
 
 # THM-2552 -- the current carrier is flat or unjoinably free
@@ -50,7 +54,7 @@ R_L={(x,x'):T^Lx=T^Lx'},          T(x)=13x mod 1.          (2)
 ```
 
 On one oriented fibre write its inverse branches as `x_r`,
-`r in Z/13^L Z`.  Project the deck arrow to its first root residue:
+`r in Z/13^L Z`.  The **pure deck projection** to the first root residue is
 
 ```text
 c(x_r -> x_s)=s-r mod 13.                                 (3)
@@ -87,6 +91,16 @@ This is not yet a positive THM-2548 cut.  THM-2518 does not identify its
 arrows with the seven chart layers, does not designate the one target-active
 role, and does not give the later semantic root used by THM-2545.  The result
 is a flatness theorem for the closest lawful carrier, not an arrival theorem.
+Indeed, on seven artificially layered copies the affine correction
+
+```text
+c_a(x_r->x_s)=s-r-a                                       (7a)
+```
+
+has closed gain `-7a`.  The extra `-a` is exactly the missing chart/clock
+one-cocycle: it is not supplied by THM-2518's pure deck arrow.  Thus THM-2518
+alone neither constructs nor rules out a correctly clock-twisted
+identification with THM-2548.
 
 ## 2. The positive wall atlas saturates when composition is forgotten
 
@@ -175,9 +189,10 @@ The current canon occupies the following sides of the missing fibre product.
 | THM-2518 | actual common-future inverse-branch groupoid | deck arrows, old owner/deep arm, common future word | correction is a coboundary; role-wise carries remain |
 | THM-2537/2540 | positive wall for each nonzero displacement | word, delayed owner, carrier re-entry | empty same-horizon head; walls are not temporally composable |
 | THM-2545 | exact Hall criterion once `(sigma,h,b)` exists | word-stratified diagonal arrival | construction of the genuinely later active root `b` |
+| THM-2549 | common-base selected head and strictly future owner-word algebra | positive chronology on all 165 typed rows | future algebra is root-constant/target-neutral; Hall table stops at the cemetery |
 
-THM-2549 is reserved and makes no proved claim.  THM-2550 is a typed-row
-nondegeneracy candidate, not a scalar-cover carrier.  Neither changes (11).
+THM-2550 is a typed-row nondegeneracy candidate, not a scalar-cover carrier.
+Neither it nor THM-2549 changes (11).
 
 ## 5. Cheapest decisive live test
 
@@ -193,7 +208,8 @@ On those *joint* rows, not on separately integrated marginals:
 
 1. run a seven-layer bitset DP on `(typed_vertex,gain in F_13)` using only
    neutral edges;
-2. test the diagonal state at gain `-7a` and its min-plus active count;
+2. in a separate all-edge min-plus pass, test the diagonal state at gain
+   `-7a` and its minimum active count;
 3. on forced active survivors, form THM-2545's exact transportation table
    and run weighted Hall/max-flow.
 
@@ -222,3 +238,15 @@ Both transcripts must match
 
 after LF normalization.  Every check raises explicitly under optimized
 Python.
+
+## 7. Independent hostile audit
+
+An independent audit rederived the deck coboundary and gauge invariance,
+the affine `-a` control, the two-wall sumset, all proper marginals of the
+coherent-face bank, and its complete Fourier law.  It separately checked the
+THM-2549 row and the separation between the neutral bitset and all-edge
+min-plus passes.  The companion contains no Python `assert`; `35,170`
+explicit checks execute under both ordinary and optimized Python, and both
+transcripts byte-match the stored output after LF normalization.  The audit
+reproduced the frontmatter hashes and found no remaining mathematical or
+typing defect.

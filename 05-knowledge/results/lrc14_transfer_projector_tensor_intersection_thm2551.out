@@ -11,4 +11,5 @@ joint_rank=28730 joint_kernel_rank=427929800129759681 joint_cokernel_rank=2028
 positive_kernel_hostile_U_support=169 J_support=0 transfer_mass=7
 clock_visible_then_killed=1
 hall_equal_marginal_mass=2 aligned_diagonal=2 swapped_diagonal=0
+explicit_require_checks=119
 ALL CHECKS PASS

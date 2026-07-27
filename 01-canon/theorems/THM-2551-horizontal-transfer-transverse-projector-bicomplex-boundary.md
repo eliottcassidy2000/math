@@ -21,8 +21,8 @@ related:
   - THM-2543-augmentation-norm-relative-phase-local-system-dichotomy
 script: 04-computation/lrc14_transfer_projector_tensor_intersection_thm2551.py
 output: 05-knowledge/results/lrc14_transfer_projector_tensor_intersection_thm2551.out
-script_sha256: 9eea54d9ed8f374589b263198aa89fc586809a50fa7f4938c968a4e18662c646
-output_sha256: 10ffad586382d3a8a0fb7a58607d83d360ec5236414586b789b985290a364e61
+script_sha256: 998789bc089070705e67d90da544bc97b81d052425fc02bad3100389dcfa4e1b
+output_sha256: e7ad184f22043dfce74b78a9d9725e215805703d167435006ae93f30aedd0622
 hash_basis: LF-normalized bytes
 ---
 
@@ -318,5 +318,6 @@ image, rank, and free-cokernel formula, and independently computed the
 boundary, and the semantic aligned/swap observation map.  The audit required
 the explicit semantic augmentation in Section 5 and broadened Section 6 from
 "mixed commutator" to any lawful non-product coupling.  Normal, optimized,
-and stored transcripts agree exactly after LF normalization; the hashes in
-frontmatter are independently reproduced.
+and stored transcripts agree exactly after LF normalization; all `119`
+explicit checks execute under optimization, and the hashes in frontmatter
+are independently reproduced.

@@ -2,7 +2,7 @@
 id: THM-2553
 title: "Rotation-duty localization stops at augmentation: the weighted jet-phase boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; independent hostile audit REQUESTED.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Prime rotation gives an exact scalar duty formula, but its nonzero residue
   lies in the augmentation component.  Nontrivial characters have zero
   augmentation, and THM-2356's required Gram weights replace the scalar count
@@ -22,6 +22,9 @@ related:
   - MISTAKE-282
 script: 04-computation/lrc14_rotation_localization_weighted_jet_boundary_thm2553.py
 output: 05-knowledge/results/lrc14_rotation_localization_weighted_jet_boundary_thm2553.out
+script_sha256: 0d9de6e7a39e3cf983f69f949a83744cf48014dcca148de2831c305f91089c44
+output_sha256: fb81e4c2d572205e2e29913be718f44f43a6c8456149299364c1e0fbad640168
+hash_basis: LF-normalized bytes
 ---
 
 # THM-2553 -- rotation localizes scalar duty, not charged jet phase
@@ -71,9 +74,11 @@ N_f(v)=10 z mod 13.                                       (5)
 This is an orbit-permutation identity, not a general Burnside statement
 about every rotation-covariant functional.
 
-There are three sharp hypotheses hidden in (5): equal coordinate weights,
-exactly `p` coordinates, and nonzero augmentation `A`.  With fixed coordinate
-weights `lambda_i`, the exact variant is
+For the zero-intercept congruence (5), the sharp hypotheses are equal
+coordinate weights, exactly `p` coordinates, and augmentation `A` invertible
+modulo `p` if one wants to recover `z`.  For known arbitrary `n`, (3) still
+gives an affine localization of `z` whenever `A` is invertible.  With fixed
+coordinate weights `lambda_i`, the exact variant is
 
 ```text
 N_(f,lambda)
@@ -82,8 +87,9 @@ N_(f,lambda)
 ```
 
 It localizes to `z` alone only under an additional total-weight law.  The
-atomic gauge in THM-2337 (38)--(39), with exact ratio `-1/9456`, already
-violates equal weighting before any graph Gram factor is inserted.
+atomic gauge in THM-2337 (38)--(39), with exact ratio `-1/9456`, shows that
+canonical atomic weights are not generally gauge-constant; it is not claimed
+to be a typed unequal-weight witness along this particular rotation orbit.
 
 ## 2. Charged profiles are rotation-invisible modulo p
 
@@ -162,10 +168,11 @@ has the form
 g_t=Z(y+t e+h) conjugate(Z(y+t e)).                         (14)
 ```
 
-The rotated contribution is therefore
+The rotated contribution is therefore, up to the displayed harmless scalar
+phase,
 
 ```text
-psi(aD_h phi(y))
+psi(bh+a(D_h phi(y)+phi(h)))
   sum_t g_t zeta^(t Tr(ahe)),                              (15)
 ```
 
@@ -250,7 +257,8 @@ No row is excluded.  LRC(14) remains open.
 The dependency-free companion verifies all `8192*14` Boolean scalar profiles,
 the unequal-weight hostile, the full `28,392` derivative-incidence table,
 all `28,224` annihilator lines, `28,392` graph-preserving orbits, and all
-`1,113,879` singleton chirp intensities in (20).  Run
+`1,113,879` singleton chirp intensities together with literal graph-label,
+word-mask, `D_graph`, and `E_sigma` calculations in (20).  Run
 
 ```bash
 python3 04-computation/lrc14_rotation_localization_weighted_jet_boundary_thm2553.py
@@ -265,3 +273,16 @@ Both transcripts must match
 
 after LF normalization.  Every check raises explicitly under optimized
 Python.
+
+## 8. Independent hostile audit
+
+An independent audit rederived the scalar and weighted prime-rotation
+formulas, the augmentation/charge split, the `F_169` trace derivative and
+`181/12` incidence law, every annihilator line, and the graph-preserving
+singleton orbit.  It specifically checked the constant phase
+`psi(bh+a(D_h phi(y)+phi(h)))`, the distinction between zero-intercept and
+affine localization, all three THM-2337 word masks, and literal calculations
+of `D_graph` and `E_sigma`.  Every executable test uses an explicit raising
+check; ordinary and optimized runs byte-match the stored output, and the
+audit independently reproduced the LF hashes above.  No row or masked
+landing consequence is inferred.

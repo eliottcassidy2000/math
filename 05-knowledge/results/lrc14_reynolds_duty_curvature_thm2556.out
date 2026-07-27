@@ -1,0 +1,12 @@
+THM-2556 exact Reynolds-duty curvature referee
+target_fibres=169 inclusion_exclusion_subsets_each=512
+duty_histogram=2756304:1,2526612:24,2316072:12,2316060:132
+N7=1439676 fibre_size=27825593350009
+residual_norm_sq=1932053149688864170956480/567869252041 residual_max_fibre=0,0
+duty_fourier_checks=169 nontrivial_support=168
+stabilizer_checks=168
+curvature_character_checks=28392 live=26208 live_per_gain=156
+energy_axis=24559042191264 energy_antidiagonal=49102678687104 energy_generic=49102698046752
+toy_raw_neutral_rank=24 toy_reynolds_target_rank=2 toy_target_colours=12
+explicit_require_checks=29430
+ALL CHECKS PASS

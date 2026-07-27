@@ -4,5 +4,6 @@ affine_gauge_triangle_checks=28561
 two_wall_sumset=13 seven_wall_sumset=13
 face_atoms_each=169 proper_marginal_cells_checked=546
 face_curvatures=0,1
-fourier_checks=4394 nonzero_genuinely_three_edge_modes=26
+fourier_checks=4394 nonzero_diagonal_modes=26 nonconstant_three_edge_modes=24
+explicit_require_checks=35170
 ALL CHECKS PASS

@@ -15,6 +15,14 @@ N = P * Q
 TARGETS = P * P
 RELATION_SIZE = 91**8
 FIELD = 547
+CHECKS = 0
+
+
+def require(condition: bool, message: str) -> None:
+    global CHECKS
+    CHECKS += 1
+    if not condition:
+        raise RuntimeError(message)
 
 
 def prime_factors(n: int) -> list[int]:
@@ -81,18 +89,25 @@ def check_split_blocks() -> int:
     # Coordinates are K0,K1,EU0,EU1,EJ0,EJ1.
     U = [[0, 0, 1, 0, 0, 0], [0, 0, 0, 1, 0, 0]]
     J = [[0, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 1]]
-    assert rank_mod(U, 101) == rank_mod(J, 101) == 2
-    assert rank_mod(U + J, 101) == 4
+    require(rank_mod(U, 101) == rank_mod(J, 101) == 2,
+            "toy U/J section ranks failed")
+    require(rank_mod(U + J, 101) == 4, "toy joint section rank failed")
     # EU and EJ are exact independent coordinate sections.
     for q in range(2):
         eu = [0] * 6
         ej = [0] * 6
         eu[2 + q] = 1
         ej[4 + q] = 1
-        assert [sum(row[i] * eu[i] for i in range(6)) for row in U] == [1 if i == q else 0 for i in range(2)]
-        assert [sum(row[i] * eu[i] for i in range(6)) for row in J] == [0, 0]
-        assert [sum(row[i] * ej[i] for i in range(6)) for row in U] == [0, 0]
-        assert [sum(row[i] * ej[i] for i in range(6)) for row in J] == [1 if i == q else 0 for i in range(2)]
+        require([sum(row[i] * eu[i] for i in range(6)) for row in U]
+                == [1 if i == q else 0 for i in range(2)],
+                "EU is not a U section")
+        require([sum(row[i] * eu[i] for i in range(6)) for row in J] == [0, 0],
+                "EU is not in ker J")
+        require([sum(row[i] * ej[i] for i in range(6)) for row in U] == [0, 0],
+                "EJ is not in ker U")
+        require([sum(row[i] * ej[i] for i in range(6)) for row in J]
+                == [1 if i == q else 0 for i in range(2)],
+                "EJ is not a J section")
     return 4
 
 
@@ -105,43 +120,51 @@ def check_hall_hostile() -> tuple[int, int, int]:
     row_b = [sum(row) for row in swapped]
     col_a = [sum(aligned[i][j] for i in range(P)) for j in range(P)]
     col_b = [sum(swapped[i][j] for i in range(P)) for j in range(P)]
-    assert row_a == row_b and col_a == col_b
+    require(row_a == row_b and col_a == col_b,
+            "Hall hostile marginals differ")
     diag_a = sum(aligned[i][i] for i in range(P))
     diag_b = sum(swapped[i][i] for i in range(P))
-    assert (diag_a, diag_b) == (2, 0)
+    require((diag_a, diag_b) == (2, 0), "Hall diagonal hostile failed")
     return sum(row_a), diag_a, diag_b
 
 
 def main() -> None:
     n = RELATION_SIZE
-    assert n == 4_702_525_276_151_521
+    require(n == 4_702_525_276_151_521, "relation-space size failed")
 
     # Exact rank arithmetic from the two integral split sequences.
     intersection = 85 * (n - TARGETS)
     kernel = 91 * n - TARGETS * 85
     image = TARGETS * 85
-    assert intersection == 399_714_648_472_864_920
-    assert kernel == 427_929_800_129_774_046
-    assert image == 14_365
-    assert TARGETS * 6 == 1_014
+    require(intersection == 399_714_648_472_864_920,
+            "J intersection arithmetic failed")
+    require(kernel == 427_929_800_129_774_046, "JD kernel arithmetic failed")
+    require(image == 14_365, "JD image arithmetic failed")
+    require(TARGETS * 6 == 1_014, "JD cokernel arithmetic failed")
 
     nonzero_intersection = 85 * (n - 168)
     nonzero_kernel = 91 * n - 168 * 85
-    assert nonzero_intersection == 399_714_648_472_865_005
-    assert nonzero_kernel == 427_929_800_129_774_131
-    assert 168 * 85 == 14_280 and 168 * 6 == 1_008
+    require(nonzero_intersection == 399_714_648_472_865_005,
+            "Jstar intersection arithmetic failed")
+    require(nonzero_kernel == 427_929_800_129_774_131,
+            "Jstar kernel arithmetic failed")
+    require(168 * 85 == 14_280 and 168 * 6 == 1_008,
+            "Jstar image/cokernel arithmetic failed")
 
     joint_intersection = 85 * (n - 338)
     joint_kernel = 91 * n - 338 * 85
-    assert joint_intersection == 399_714_648_472_850_555
-    assert joint_kernel == 427_929_800_129_759_681
-    assert 338 * 85 == 28_730 and 338 * 6 == 2_028
+    require(joint_intersection == 399_714_648_472_850_555,
+            "joint intersection arithmetic failed")
+    require(joint_kernel == 427_929_800_129_759_681,
+            "joint kernel arithmetic failed")
+    require(338 * 85 == 28_730 and 338 * 6 == 2_028,
+            "joint image/cokernel arithmetic failed")
 
     split_rank = check_split_blocks()
 
     matrix = transfer_matrix()
     transfer_rank = rank_mod(matrix, 1_000_003)
-    assert transfer_rank == 85
+    require(transfer_rank == 85, "transfer rank is not 85")
 
     # Fourier multiplier: all 84 root-charged modes survive, and exactly the
     # six root-uniform clock augmentations die.
@@ -156,29 +179,34 @@ def main() -> None:
                      * pow(zeta, (-alpha) % P, FIELD)) % FIELD
             multiplier = sum(pow(ratio, j, FIELD) for j in range(Q)) % FIELD
             expected_zero = alpha == 0 and beta != 0
-            assert (multiplier == 0) == expected_zero
+            require((multiplier == 0) == expected_zero,
+                    "transfer Fourier zero set failed")
             if alpha:
                 root_survive += 1
             elif beta:
                 clock_killed += 1
-    assert (root_survive, clock_killed) == (84, 6)
+    require((root_survive, clock_killed) == (84, 6),
+            "wrong root/clock Fourier census")
 
     # Positive nonunit-section hostile: its transfer is seven nonnegative
     # point masses and has every root-charged Fourier mode.
     e = [0] * N
     e[0] = 1
     de = transfer(e)
-    assert set(de) <= {0, 1} and sum(de) == 7
+    require(set(de) <= {0, 1} and sum(de) == 7,
+            "positive transfer hostile failed")
     c_host_U = [1] * TARGETS
     c_host_J = [0] * TARGETS
-    assert all(c_host_U) and not any(c_host_J)
+    require(all(c_host_U) and not any(c_host_J),
+            "projector-kernel hostile failed")
 
     # Sharp clock-augmentation loss.
     a_clk = [0] * N
     for t in range(P):
         a_clk[Q * t] = 1
         a_clk[1 + Q * t] = -1
-    assert any(a_clk) and transfer(a_clk) == [0] * N
+    require(any(a_clk) and transfer(a_clk) == [0] * N,
+            "clock augmentation sharp control failed")
 
     total_mass, hall_aligned, hall_swapped = check_hall_hostile()
 
@@ -195,6 +223,7 @@ def main() -> None:
     print(f"positive_kernel_hostile_U_support={sum(c_host_U)} J_support={sum(c_host_J)} transfer_mass={sum(de)}")
     print(f"clock_visible_then_killed={int(any(a_clk))}")
     print(f"hall_equal_marginal_mass={total_mass} aligned_diagonal={hall_aligned} swapped_diagonal={hall_swapped}")
+    print(f"explicit_require_checks={CHECKS}")
     print("ALL CHECKS PASS")
 
 
