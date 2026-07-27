@@ -8,6 +8,7 @@ coordinates, a full-rank affine-covariance obstruction, and the sharp CRT
 component collisions.
 """
 
+from collections import Counter
 from itertools import combinations
 
 
@@ -248,6 +249,15 @@ def main():
     }
     require(crt_data == expected_crt, "CRT collision boundary changed")
 
+    # Sharp additive boundary.  A separating scalar coordinate is faithful on
+    # singleton sheets but cannot be a Boolean-section charge detector.
+    subset_sums = Counter()
+    for mask in range(1 << P):
+        subset_sums[sum(sheet_values[q] for q in range(P) if mask >> q & 1) % P] += 1
+    require(subset_sums == Counter({0: 632, **{value: 630 for value in range(1, P)}}),
+            "Boolean scalar subset-sum histogram changed")
+    require(sheet_values[5] == 0, "singleton scalar-zero hostile changed")
+
     print("== exact THM-2601 linear Bockstein sheet-coordinate probe ==")
     print("lambda power-basis row:", LAMBDA)
     print("lambda(Y_q), q=0..12:", sheet_values)
@@ -260,7 +270,9 @@ def main():
     print("affine-covariant linear system: rank", affine_rank,
           "certificate rows", minor_rows, "det", minor_det)
     print("CRT component fibres:", crt_data)
-    print("exact checks: separator/inverse/successor/owner/affine/CRT PASS")
+    print("Boolean scalar subset sums: zero=632 (631 nonempty), each nonzero=630;")
+    print("singleton scalar-zero hostile: q=5, while Y_5 is a THM-2585 unit")
+    print("exact checks: separator/inverse/successor/owner/affine/CRT/subsets PASS")
 
 
 if __name__ == "__main__":
