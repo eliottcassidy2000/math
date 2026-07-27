@@ -2,21 +2,25 @@
 id: THM-2515
 title: "Haar self-correlation disintegration and rational-shift recovery"
 status: >
-  PROVED.  For any finite rational-step response bank, its entrywise square
+  PROVED + INDEPENDENTLY AUDITED.  For any finite rational-step response bank,
+  its entrywise square
   moment is the exact average of its same-circle translation-autocorrelation
   tables.  Hence every nonzero linear coefficient of the square moment is
-  already nonzero on one rational translation fibre, with no magnitude loss.
+  already nonzero on one rational translation fibre, with no magnitude loss
+  for that selected coefficient.
   On a rational C_7-by-C_13 table, one surviving mixed coefficient on that
   fibre Galois-saturates all 72 mixed colours and, after ANOVA centring, all
-  5,184 THM-2508 primitive cut coefficients.  The product square therefore
-  descends to a finite translation-marked cospan rather than requiring an
-  unstructured Cartesian pair space.  Autocorrelation is antipodally even;
+  5,184 THM-2508 primitive cut coefficients.  The product pair space therefore
+  disintegrates into a finite difference-marked family, one fibre of which
+  carries the signal.  Autocorrelation is antipodally even;
   the selected shift need not preserve a positive marked anchor, need not be
   a lawful 91-root/temporal shift, and still does not give a one-point Boolean
-  owner/deep current or LRC(14).  Independent audit requested.
+  owner/deep current or LRC(14).
 source: codex-2026-07-27-self-correlation-disintegration
 depends_on:
+  - THM-2449-coprime-owner-anova-and-delta-replica-boundary
   - THM-2508-affine-cut-bundle-covariance-and-carry-permutation
+  - THM-2512-lawful-interaction-cut-bundle-transplant-and-replica-dichotomy
 related:
   - THM-2449-coprime-owner-anova-and-delta-replica-boundary
   - THM-2471-owner-first-collision-weighted-root-service-and-temporal-atom-boundary
@@ -27,7 +31,7 @@ related:
 
 # THM-2515 -- a square moment is an average of translation cospans
 
-**PROVED.  Independent audit requested.**
+**PROVED + INDEPENDENTLY AUDITED.**
 
 The entrywise square of a table of masses appears to live on two independent
 copies of the underlying probability space.  On a compact group this pair
@@ -87,7 +91,7 @@ Consequently, for every linear functional
 Lambda:Q^J -> K                                               (7)
 ```
 
-into a normed characteristic-zero field embedded in `C`,
+into a subfield `K` of `C`, equipped with the usual absolute value,
 
 ```text
 Lambda(A^(circ 2))=1/D sum_k Lambda(C_k).                     (8)
@@ -144,8 +148,27 @@ same identity has the Haar form
 ```
 
 This follows from Haar invariance and Fubini.  The finite rational version is
-stronger for the present application because it produces an exact admissible
-grid shift without a limiting argument.
+stronger for the present application because it produces an exact common-grid
+shift without a limiting argument.
+
+There is also a useful base-`13` refinement.  For `L^2` functions the map
+
+```text
+t -> Lambda(C_t)                                             (14a)
+```
+
+is continuous, because translation is strongly continuous in `L^2`.  If its
+Haar integral is nonzero, its nonzero set contains a nonempty open interval.
+The grids `{k/13^L}` become dense, so for arbitrarily large `L` one may choose
+
+```text
+t=k/13^L                                                     (14b)
+```
+
+with `Lambda(C_t)!=0`.  Rational step functions still give a rational table
+at such a shift.  This choice guarantees exact nonvanishing; the finite
+common-grid choice is the one that directly gives the magnitude invoice
+(10).
 
 Geometrically, (1) is a one-direction finite needle foliation of the product
 torus: every ordered pair lies on exactly one slope-one diagonal, labelled
@@ -243,8 +266,11 @@ Galois conjugates.
 
 At any fixed finite THM-2449 clock, each response entry is the integral of a
 nonnegative rational step density: sum its finitely many nonnegative
-`r`-indexed integrands before integration.  Therefore any square-moment mixed
+integrands defining `A^R` before integration.  Therefore any square-moment mixed
 coefficient supplied on that table satisfies the hypotheses of Section 3.
+The finite family admits one common grid denominator after taking the least
+common multiple of all rational endpoints.  This makes `k/D` algebraically
+available; it does not make that shift a lawful physical clock.
 The conclusion replaces an unstructured independent pair by
 
 ```text
@@ -278,11 +304,17 @@ Three losses are sharp.
 3. **Physical shift type.**  The rational difference `t=k/D` need not be a
    canonical `1/91` root, a THM-2471 first-collision translation, a lawful
    target/deep action, or a delay already present among the fourteen speeds.
+   Choosing the alternative base-`13` form `k/13^L` does not by itself supply
+   any of those semantic identifications.
    Multiplying the two densities in (17) is a two-point cospan observable,
    not a one-point Boolean current.
 
-The theorem therefore converts pair space into a finite translation-marked
-local system and restores the full primitive cut spectrum there.  The next
+The theorem therefore disintegrates pair space into a finite
+translation-marked local system and restores the full primitive cut spectrum
+on one fibre.  An independent audit rederived the double-counting
+normalization, the Galois and cut-transform signs, the `5,184` count, and the
+`C_4` hostile, and checked the exact distinction between common-grid and
+base-`13` shift selection.  The next
 physical question is whether its retained difference can be identified with
 an existing collision/ancestry edge while preserving a positive owner mark.
 It does not supply that identification, remove any of the `165` live rows,
