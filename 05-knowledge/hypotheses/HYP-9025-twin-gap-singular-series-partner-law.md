@@ -12,8 +12,12 @@ status: >
   expectation 0.01; the exact mod-5 dead-channel law (differences
   = 4 mod 5, or = 1 mod 5 with d > 1, never hit -- 0 exceptions in
   the census) plus declining live-lag rates 0.54 -> 0.22 make the
-  honest model a residue-environment mixture). Prediction 2 remains
-  OPEN.
+  honest model a residue-environment mixture). Prediction 2 is VERIFIED
+  (twin_local_rule_rate_kps_S134: the window-fitted Cramer model
+  predicts the observed consecutive-rule rate within 1.5% in every
+  dyadic window 2^17..2^24, mostly within 0.2% -- the owner's ~42%
+  local-rule rate is fully explained by availability x harmonics).
+  All three predictions are now adjudicated at census scale.
 source: kind-pasteur-2026-07-26-S131
 related:
   - THM-2447-twin-gap-local-prime-harmonics-and-detrended-spectrum
