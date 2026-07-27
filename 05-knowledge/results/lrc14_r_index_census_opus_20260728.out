@@ -1,0 +1,269 @@
+r-index census across the lawful (j, sigma, K) space of the canonical typed row
+script=04-computation/lrc14_r_index_census_opus_20260728.py
+machine=opus  script-date=2026-07-28  run-date=2026-07-27
+
+[1] row, definitions, and logged conventions
+    w=(H,q1..q5,c1,c2,c3)=(1, 14, 27, 40, 53, 66, 13, 2197, 742586)   profile nu13(c1,c2,c3)=(1,3,5)
+    owner j=1: c = c_1 = 13, lambda = 1; canonical packet clock K = lambda+1 = 2
+    e = 1_(E_1);  f = 1_(Q_1,sigma) P^K 1_(E_1)   (THM-2471 (23),
+    full word, source-safe factor RETAINED; K generalized per
+    THM-2306 Sec.6 item 4 / THM-2471 Sec.3 positive-return clocks)
+    A = P_13 f, B = P_13 e;  I_s = int (P^s A)(P^s B) = int (P_(13^(s+1)) f)(P_(13^(s+1)) e)
+    r = min{s>=1 : I_s > 0}   (THM-2471 (24))
+    P_a h(y) = (1/a) sum_(b<a) h((y+b)/a); half-open [A,B) intervals
+    on the T_DEN = 182*lcm(w) = 297836897838480 grid
+    MAIN ENGINE (y-side reduction, = Stage-1 route (f), self-tested):
+      I_s = int_T 1_Q(x) (N_R(x)/R) Phi_s(x) dx,   R = 13^K,
+      N_R = multiplicity fold of R*E,
+      Phi_s(x) = (1/m) sum_(j<m) 1_E(x + j/m),  m = 13^(s+1)
+
+[2] licensing census from the files (exact checks)
+    OWNERS: THM-2309 (25) types (w_j,w_a,w_b) = (13, 13^3, 2*13^5):
+      owner j=1 is the depth-one blocker; a = c_2, b = c_3.
+      THM-2349 (2)/(23a): a SECOND shallow owner is licensed only on
+      repeated-first rows (nu13(c_2)=1); here nu13(c_2) = 3 (strict
+      profile 1<3<5)  =>  j = 2 is NOT LAWFUL.  Census owner: j=1 ONLY.
+    WORDS (THM-2305 (3), fixed order): sigma in {{a},{b},{a,b}}:
+      Q_1,{a}  = A_0 n D_c2 \ (D_c1 u D_c3)   (= E_2 literally)
+      Q_1,{b}  = A_0 n D_c3 \ (D_c1 u D_c2)   (= E_3 literally)
+      Q_1,{a,b}= A_0 n D_c2 n D_c3 \ D_c1
+      EMPTY WORD: not a THM-2305 canonical stratum (partition (4)
+      has exactly three cells under the cover reading; THM-2306
+      Sec.1 and THM-2471 (23) restrict Q to the three canonical
+      words)  =>  NOT LAWFUL; computed below as DIAGNOSTIC only.
+    CLOCKS: K = 2 canonical (THM-2471 (23)); K = 3, 4 lawful iff
+      rho^(K) = int_Q P^K 1_E > 0 (THM-2306 (41a) + Sec.6 item 4;
+      THM-2471 Sec.3), decided exactly in [5].
+
+[3] machinery self-test (hostile toy model, brute force)
+    toy brute-force == y-side N/Phi reduction at all
+    R' in {3,9,27} x m in {3,9,27} (wrap cases included): PASS
+    toy count_fold cellwise == brute multiplicity fold: PASS
+
+[4] exact interval sets, anchors, and the typed-row word partition
+    E_1: intervals=57072  measure=1882176/28589561: PASS
+    maxlen(E_1) = 343783440/T_DEN  (single-wrap F-walk lawful iff 13^K*maxlen < T_DEN)
+    Q_1,{a}:   intervals=22478  measure=143103830843/5727632650740: PASS (Stage-1 anchor)
+    Q_1,{b}:   intervals=131762  measure=4839079319/190921088358
+    Q_1,{a,b}: intervals=22018  measure=11009/2599051
+    empty-word residual A_0\(Dc1uDc2uDc3): intervals=132262  measure=174712906145/1145526530148
+    R_1 = A_0\Dc1: intervals=82  measure=29963/144690
+    partition R_1 = Q_{a} u Q_{b} u Q_{a,b} u empty-residual:
+    interval-exact, pairwise disjoint, measures additive: PASS
+    NOTE (typed row, MISTAKE-281): the empty-word residual has
+    POSITIVE measure 174712906145/1145526530148 ~ 1.525176e-01;
+    the scalar-cover identity THM-2305 (4) fails on this typed row
+    by exactly that mass.  This does not make the empty word a
+    lawful stratum; it quantifies the typed/cover gap.
+    DIAGNOSTIC (owner j=2): E_2 = Q_1,{a} literally (THM-2305 (3)),
+    mu(E_2) = 143103830843/5727632650740 > 0, yet j=2 stays UNLICENSED:
+    the THM-2349 second-owner license is profile-typed (repeated-first
+    only), and measure positivity is not a license.
+
+[5] structural I_0 = 0 and the exact returns rho^(K) (licensing)
+    E_1 subset D_c1 and every stratum n D_c1 = empty (interval-exact):
+    A = P_13 f and B = P_13 e are disjoint at EVERY (sigma,K)
+    => I_0 = 0 structurally (THM-2306 normalization premise).
+
+    K=2: rho^(2)({a}) = int_Q P^2 1_E = 21376087/17907461390  ~1.193697e-03
+    K=2: rho^(2)({b}) = int_Q P^2 1_E = 35505957232/16132831966251  ~2.200851e-03
+    K=2: rho^(2)({a,b}) = int_Q P^2 1_E = 6675/33787663  ~1.975573e-04
+    K=2: rho^(2)(empty*) = int_Q P^2 1_E = 8581111689457/645313278650040  ~1.329759e-02
+    K=2: rho^(2)(R_1*) = int_Q P^2 1_E = 64491982301/3818421767160  ~1.688970e-02
+         additivity sum(strata+empty) == rho(R_1): PASS
+    K=3: rho^(3)({a}) = int_Q P^3 1_E = 24905211339821/12583608933675780  ~1.979179e-03
+    K=3: rho^(3)({b}) = int_Q P^3 1_E = 269990565109/139817877040842  ~1.931016e-03
+    K=3: rho^(3)({a,b}) = int_Q P^3 1_E = 1917878/5710115047  ~3.358738e-04
+    K=3: rho^(3)(empty*) = int_Q P^3 1_E = 97445619271883/8389072622450520  ~1.161578e-02
+    K=3: rho^(3)(R_1*) = int_Q P^3 1_E = 2359762079/148769679240  ~1.586185e-02
+         additivity sum(strata+empty) == rho(R_1): PASS
+    K=4: rho^(4)({a}) = int_Q P^4 1_E = 172520125877441/109057944091856760  ~1.581913e-03
+    K=4: rho^(4)({b}) = int_Q P^4 1_E = 4377228237904/2726448602296419  ~1.605469e-03
+    K=4: rho^(4)({a,b}) = int_Q P^4 1_E = 19907627/74231495611  ~2.681830e-04
+    K=4: rho^(4)(empty*) = int_Q P^4 1_E = 790217840798261/81793458068892570  ~9.661137e-03
+    K=4: rho^(4)(R_1*) = int_Q P^4 1_E = 150255299087/11455265301480  ~1.311670e-02
+         additivity sum(strata+empty) == rho(R_1): PASS
+    anchor rho^(2)({a}) == Stage-1 mu(F) = 21376087/17907461390: PASS
+    LICENSE TABLE (lawful census configs = canonical word AND
+    rho^(K) > 0; empty word and R_1 are diagnostics, marked *):
+      (j=1, sigma={a}, K=2): rho>0 = True  =>  LAWFUL
+      (j=1, sigma={a}, K=3): rho>0 = True  =>  LAWFUL
+      (j=1, sigma={a}, K=4): rho>0 = True  =>  LAWFUL
+      (j=1, sigma={b}, K=2): rho>0 = True  =>  LAWFUL
+      (j=1, sigma={b}, K=3): rho>0 = True  =>  LAWFUL
+      (j=1, sigma={b}, K=4): rho>0 = True  =>  LAWFUL
+      (j=1, sigma={a,b}, K=2): rho>0 = True  =>  LAWFUL
+      (j=1, sigma={a,b}, K=3): rho>0 = True  =>  LAWFUL
+      (j=1, sigma={a,b}, K=4): rho>0 = True  =>  LAWFUL
+      (j=1, sigma=empty*, K=2): rho>0 = True  =>  DIAGNOSTIC ONLY
+      (j=1, sigma=empty*, K=3): rho>0 = True  =>  DIAGNOSTIC ONLY
+      (j=1, sigma=empty*, K=4): rho>0 = True  =>  DIAGNOSTIC ONLY
+      (j=1, sigma=R_1*, K=2): rho>0 = True  =>  DIAGNOSTIC ONLY
+      (j=1, sigma=R_1*, K=3): rho>0 = True  =>  DIAGNOSTIC ONLY
+      (j=1, sigma=R_1*, K=4): rho>0 = True  =>  DIAGNOSTIC ONLY
+
+[6] census: exact I_s per (sigma, K) until first positive (cap s<=7)
+    [     4.8s] K=2: N_R fold ready (7549 pieces, mass check PASS)
+    [     4.8s] K=3: N_R fold ready (589 pieces, mass check PASS)
+    [     4.9s] K=4: N_R fold ready (63 pieces, mass check PASS)
+    [     5.4s] K=2 s=0 m=13^1:  {a}:0  {b}:0  {a,b}:0  empty*:0  R_1*:0   [Phi control + additivity PASS]
+    [     5.9s] K=2 s=1 m=13^2:  {a}:0  {b}:0  {a,b}:0  empty*:POS  R_1*:POS   [Phi control + additivity PASS]
+    [     6.4s] K=2 s=2 m=13^3:  {a}:0  {b}:0  {a,b}:0  empty*:POS  R_1*:POS   [Phi control + additivity PASS]
+    [     6.9s] K=2 s=3 m=13^4:  {a}:POS  {b}:0  {a,b}:0  empty*:POS  R_1*:POS   [Phi control + additivity PASS]
+    [     7.3s] K=2 s=4 m=13^5:  {a}:POS  {b}:0  {a,b}:0  empty*:POS  R_1*:POS   [Phi control + additivity PASS]
+    [     7.7s] K=2 s=5 m=13^6:  {a}:POS  {b}:POS  {a,b}:POS  empty*:POS  R_1*:POS   [Phi control + additivity PASS]
+    [     8.2s] K=3 s=0 m=13^1:  {a}:0  {b}:0  {a,b}:0  empty*:0  R_1*:0   [Phi control + additivity PASS]
+    [     8.6s] K=3 s=1 m=13^2:  {a}:0  {b}:0  {a,b}:0  empty*:POS  R_1*:POS   [Phi control + additivity PASS]
+    [     9.0s] K=3 s=2 m=13^3:  {a}:0  {b}:0  {a,b}:0  empty*:POS  R_1*:POS   [Phi control + additivity PASS]
+    [     9.4s] K=3 s=3 m=13^4:  {a}:POS  {b}:0  {a,b}:0  empty*:POS  R_1*:POS   [Phi control + additivity PASS]
+    [     9.7s] K=3 s=4 m=13^5:  {a}:POS  {b}:0  {a,b}:0  empty*:POS  R_1*:POS   [Phi control + additivity PASS]
+    [    10.0s] K=3 s=5 m=13^6:  {a}:POS  {b}:POS  {a,b}:POS  empty*:POS  R_1*:POS   [Phi control + additivity PASS]
+    [    10.3s] K=4 s=0 m=13^1:  {a}:0  {b}:0  {a,b}:0  empty*:0  R_1*:0   [Phi control + additivity PASS]
+    [    10.6s] K=4 s=1 m=13^2:  {a}:0  {b}:0  {a,b}:0  empty*:POS  R_1*:POS   [Phi control + additivity PASS]
+    [    11.0s] K=4 s=2 m=13^3:  {a}:0  {b}:0  {a,b}:0  empty*:POS  R_1*:POS   [Phi control + additivity PASS]
+    [    11.2s] K=4 s=3 m=13^4:  {a}:POS  {b}:0  {a,b}:0  empty*:POS  R_1*:POS   [Phi control + additivity PASS]
+    [    11.5s] K=4 s=4 m=13^5:  {a}:POS  {b}:0  {a,b}:0  empty*:POS  R_1*:POS   [Phi control + additivity PASS]
+    [    11.7s] K=4 s=5 m=13^6:  {a}:POS  {b}:POS  {a,b}:POS  empty*:POS  R_1*:POS   [Phi control + additivity PASS]
+
+[7] independent verification matrix
+    (d) support-fold route (union folds only, no prefix engine):
+        K=2 {a}: zero/positive pattern s=0..5 agrees with engine: PASS
+        K=2 {b}: zero/positive pattern s=0..5 agrees with engine: PASS
+        K=2 {a,b}: zero/positive pattern s=0..5 agrees with engine: PASS
+        K=2 empty*: zero/positive pattern s=0..5 agrees with engine: PASS
+        K=2 R_1*: zero/positive pattern s=0..5 agrees with engine: PASS
+        K=3 {a}: zero/positive pattern s=0..5 agrees with engine: PASS
+        K=3 {b}: zero/positive pattern s=0..5 agrees with engine: PASS
+        K=3 {a,b}: zero/positive pattern s=0..5 agrees with engine: PASS
+        K=3 empty*: zero/positive pattern s=0..5 agrees with engine: PASS
+        K=3 R_1*: zero/positive pattern s=0..5 agrees with engine: PASS
+        K=4 {a}: zero/positive pattern s=0..5 agrees with engine: PASS
+        K=4 {b}: zero/positive pattern s=0..5 agrees with engine: PASS
+        K=4 {a,b}: zero/positive pattern s=0..5 agrees with engine: PASS
+        K=4 empty*: zero/positive pattern s=0..5 agrees with engine: PASS
+        K=4 R_1*: zero/positive pattern s=0..5 agrees with engine: PASS
+        (nonnegative step functions: null support overlap <=> zero
+         integral; positive overlap => strictly positive integral)
+    (e) correlation route s=0,1 (replica-dichotomy prefix identity),
+        four strata x three clocks (R_1 covered by additivity):
+        [    18.6s] s=0: all 12 (sigma,K) values == engine: PASS
+        [    58.4s] s=1: all 12 (sigma,K) values == engine: PASS
+    (f) packet-walk route (Stage-1 main engine, generalized R),
+        at s in {r-1, r} where the single-wrap precondition holds:
+        K=2 {a}: mu(F) == rho^(2), and packet-walk I_2, I_3 == engine: PASS
+        K=2 {b}: mu(F) == rho^(2), and packet-walk I_4, I_5 == engine: PASS
+        K=2 {a,b}: mu(F) == rho^(2), and packet-walk I_4, I_5 == engine: PASS
+        K=2 empty*: mu(F) == rho^(2), and packet-walk I_0, I_1 == engine: PASS
+        K=2 R_1*: mu(F) == rho^(2), and packet-walk I_0, I_1 == engine: PASS
+        K=3 {a}: mu(F) == rho^(3), and packet-walk I_2, I_3 == engine: PASS
+        K=3 {b}: skipped (expected F size ~19114881 intervals exceeds cap 5000000; three other exact routes cover this config)
+        K=3 {a,b}: mu(F) == rho^(3), and packet-walk I_4, I_5 == engine: PASS
+        K=3 empty*: skipped (expected F size ~19187200 intervals exceeds cap 5000000; three other exact routes cover this config)
+        K=3 R_1*: mu(F) == rho^(3), and packet-walk I_0, I_1 == engine: PASS
+        K=4 {a}: skipped (expected F size ~42322358 intervals exceeds cap 5000000; three other exact routes cover this config)
+        K=4 {b}: skipped (expected F size ~247808594 intervals exceeds cap 5000000; three other exact routes cover this config)
+        K=4 {a,b}: skipped (expected F size ~41457422 intervals exceeds cap 5000000; three other exact routes cover this config)
+        K=4 empty*: skipped (expected F size ~248748742 intervals exceeds cap 5000000; three other exact routes cover this config)
+        K=4 R_1*: mu(F) == rho^(4), and packet-walk I_0, I_1 == engine: PASS
+    verification matrix complete: engine values confirmed by the
+    support route (every s), correlation route (s=0,1), and the
+    packet-walk route (where lawful), plus partition additivity
+    and full-circle controls at every step.
+
+[8] THE CENSUS TABLE  (j=1, sigma, K) -> r, exact first-positive I_r
+    (columns: config | lawful | r | I_r exact | 169*I_r | deep-root branch)
+    anchor: (sigma={a}, K=2) reproduces the audited Stage-1 r = 3 and
+    I_3 = 9926558757352/109707098520974955: PASS
+
+    (j=1, sigma={a}   , K=2) LAWFUL :  r = 3
+        I_r = 9926558757352/109707098520974955  ~9.048237e-05
+        169*I_r = 9926558757352/649154429118195
+        zeros: I_1..I_2 = 0 exactly;  branch: BASE-ONLY (h = C/d = 338 = 2*13^2, 13 | h)
+    (j=1, sigma={a}   , K=3) LAWFUL :  r = 3
+        I_r = 108645303726885251/718800909509427905160  ~1.511480e-04
+        169*I_r = 108645303726885251/4253259819582413640
+        zeros: I_1..I_2 = 0 exactly;  branch: BASE-ONLY (h = C/d = 338 = 2*13^2, 13 | h)
+    (j=1, sigma={a}   , K=4) LAWFUL :  r = 3
+        I_r = 376173720783411409/3114803941207520922360  ~1.207696e-04
+        169*I_r = 376173720783411409/18430792551523792440
+        zeros: I_1..I_2 = 0 exactly;  branch: BASE-ONLY (h = C/d = 338 = 2*13^2, 13 | h)
+    (j=1, sigma={b}   , K=2) LAWFUL :  r = 5
+        I_r = 48602521488933856/337437093630814766589  ~1.440343e-04
+        169*I_r = 48602521488933856/1996669193081744181
+        zeros: I_1..I_4 = 0 exactly;  branch: r=5 WINDOW: unique affine invariant theta = t - 2u
+    (j=1, sigma={b}   , K=3) LAWFUL :  r = 5
+        I_r = 369577991380681007/2924454811467061310438  ~1.263750e-04
+        169*I_r = 369577991380681007/17304466340041782902
+        zeros: I_1..I_4 = 0 exactly;  branch: r=5 WINDOW: unique affine invariant theta = t - 2u
+    (j=1, sigma={b}   , K=4) LAWFUL :  r = 5
+        I_r = 5991791775842833040/57026868823607695553541  ~1.050696e-04
+        169*I_r = 5991791775842833040/337437093630814766589
+        zeros: I_1..I_4 = 0 exactly;  branch: r=5 WINDOW: unique affine invariant theta = t - 2u
+    (j=1, sigma={a,b} , K=2) LAWFUL :  r = 5
+        I_r = 3919820186838/303177981698845253  ~1.292911e-05
+        169*I_r = 3919820186838/1793952554431037
+        zeros: I_1..I_4 = 0 exactly;  branch: r=5 WINDOW: unique affine invariant theta = t - 2u
+    (j=1, sigma={a,b} , K=3) LAWFUL :  r = 5
+        I_r = 86634913938732/3941313762084988289  ~2.198123e-05
+        169*I_r = 86634913938732/23321383207603481
+        zeros: I_1..I_4 = 0 exactly;  branch: r=5 WINDOW: unique affine invariant theta = t - 2u
+    (j=1, sigma={a,b} , K=4) LAWFUL :  r = 5
+        I_r = 128467539563994/7319582701014978251  ~1.755121e-05
+        169*I_r = 128467539563994/43311140242692179
+        zeros: I_1..I_4 = 0 exactly;  branch: r=5 WINDOW: unique affine invariant theta = t - 2u
+    (j=1, sigma=empty*, K=2) DIAG   :  r = 1
+        I_r = 32360862022051/27264486022964190  ~1.186924e-03
+        169*I_r = 32360862022051/161328319662510
+        zeros: I_1..I_0 = 0 exactly;  branch: BASE-ONLY (h = C/d = 57122 = 2*13^4, 13 | h)
+    (j=1, sigma=empty*, K=3) DIAG   :  r = 1
+        I_r = 751825773078661/708876636597068940  ~1.060588e-03
+        169*I_r = 751825773078661/4194536311225260
+        zeros: I_1..I_0 = 0 exactly;  branch: BASE-ONLY (h = C/d = 57122 = 2*13^4, 13 | h)
+    (j=1, sigma=empty*, K=4) DIAG   :  r = 1
+        I_r = 5906688034678831/6911547206821422165  ~8.546115e-04
+        169*I_r = 5906688034678831/40896729034446285
+        zeros: I_1..I_0 = 0 exactly;  branch: BASE-ONLY (h = C/d = 57122 = 2*13^4, 13 | h)
+    (j=1, sigma=R_1*  , K=2) DIAG   :  r = 1
+        I_r = 32360862022051/27264486022964190  ~1.186924e-03
+        169*I_r = 32360862022051/161328319662510
+        zeros: I_1..I_0 = 0 exactly;  branch: BASE-ONLY (h = C/d = 57122 = 2*13^4, 13 | h)
+    (j=1, sigma=R_1*  , K=3) DIAG   :  r = 1
+        I_r = 751825773078661/708876636597068940  ~1.060588e-03
+        169*I_r = 751825773078661/4194536311225260
+        zeros: I_1..I_0 = 0 exactly;  branch: BASE-ONLY (h = C/d = 57122 = 2*13^4, 13 | h)
+    (j=1, sigma=R_1*  , K=4) DIAG   :  r = 1
+        I_r = 5906688034678831/6911547206821422165  ~8.546115e-04
+        169*I_r = 5906688034678831/40896729034446285
+        zeros: I_1..I_0 = 0 exactly;  branch: BASE-ONLY (h = C/d = 57122 = 2*13^4, 13 | h)
+
+[9] DECISION VALUE and pattern report
+    r = 5 WINDOW OPENS at lawful configs: [('{b}', 2), ('{b}', 3), ('{b}', 4), ('{a,b}', 2), ('{a,b}', 3), ('{a,b}', 4)]
+    lawful r-table: ({a,b},K=2)->r=5  ({a,b},K=3)->r=5  ({a,b},K=4)->r=5  ({a},K=2)->r=3  ({a},K=3)->r=3  ({a},K=4)->r=3  ({b},K=2)->r=5  ({b},K=3)->r=5  ({b},K=4)->r=5
+    PATTERN: r varies.  by clock K: K=2:[3, 5]  K=3:[3, 5]  K=4:[3, 5]
+             by word sigma: {a,b}:[5]  {a}:[3]  {b}:[5]
+    (compare nu13(c_2) = 3, nu13(c_3) = 5; exact table in [8]
+    is the record -- this paragraph is description, not claim)
+    diagnostic (NOT lawful): empty word at K=2 has r = 1
+    diagnostic (NOT lawful): empty word at K=3 has r = 1
+    diagnostic (NOT lawful): empty word at K=4 has r = 1
+
+[10] scope notes (MISTAKE-281/283 discipline)
+    * TYPED row (THM-2309 (25)); NOT an asserted scalar cover; the
+      empty-word residual mass in [4] is the exact typed/cover gap
+      on this row and licenses nothing.
+    * Census scope: owner j=1 only (THM-2349 profile-typed license);
+      words = the three THM-2305 canonical strata; clocks K=2,3,4
+      via THM-2306 (41a)/Sec.6-item-4 + THM-2471 Sec.3 with the
+      return positivity computed exactly.  Nothing beyond these
+      configurations is claimed lawful, and nothing about other
+      rows, physical currents, row exclusion, LRC(14) or JC(2)
+      follows from this census.
+    * Every I_s is one integral of a triple product at one common
+      base point (paired on one base BEFORE marginalization).
+    * No intertwiner was constructed and none is claimed; the
+      deep-root branches are THM-2471 (44)-(47) arithmetic applied
+      to the exact computed r values, nothing more.
+    * All decisions are integer/Fraction-exact on the T_DEN and
+      13^max(0,s-5)*T_DEN grids; floats appear only in ~displays.
+
+[    83.6s] all checks passed

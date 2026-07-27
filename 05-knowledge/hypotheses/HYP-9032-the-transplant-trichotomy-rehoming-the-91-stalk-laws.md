@@ -31,6 +31,14 @@ related:
 > covering rows. The two computations share row/word labels but not a
 > clock, packet, marked triangle, or common-root service. Sections below
 > retain the pre-resolution analysis.
+>
+> **SECOND RESOLUTION (2026-07-28, THM-2570):** prediction P2 is
+> CONFIRMED by construction -- the base-only bridge pairing yields the
+> first MISTAKE-281-clean 13x7 live-branch host W(k,ell) homed on the
+> OWNER CLOCK, whose centred array satisfies (T1)+(T2)+(T3); and the
+> word-depth collision law r = nu_13(deepest in-word blocker) opens
+> the r = 5 unique-intertwiner window at sigma = {b}: the u-slaved
+> THM-2512 bridge is LIVE on this row after all.
 
 ## 1. Why the packet cannot be re-run (PROVED anatomy)
 
