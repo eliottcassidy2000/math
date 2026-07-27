@@ -63,6 +63,14 @@ THM-1900 insertion-response calculus are the natural instruments.
 The single-arc-core family provably cannot do it (its gap density
 is 1/2, OPEN-Q-055), so the surgery must use a richer family.
 
+Independent-path note (same session): a LABELED brute-force
+enumeration (2^28 tournaments, different algorithm from monad's
+iso-class generation; strong_h_spectrum_m8_labeled_kps_S134.cpp)
+reproduces the m = 8 strong spectrum EXACTLY -- 297 values, min 45,
+max 661, identical sets -- independently re-verifying both the
+MISTAKE-055 correction (min 45, not the Leonardo 41) and this
+hypothesis's central interval [69, 609].
+
 Cheapest decisive tests: (i) m = 10 strong interval via canonical
 augmentation (the monad s6 generator extends; expect
 `c_10 ~ 100-130`, `d_10 ~ 15,000`); (ii) attempt the +-2 surgery
