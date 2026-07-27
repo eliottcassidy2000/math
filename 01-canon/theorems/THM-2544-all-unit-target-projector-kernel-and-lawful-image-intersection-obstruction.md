@@ -54,6 +54,7 @@ The answer is maximally hostile:
 
 ```text
 arbitrary residue currents:
+  when the septimal support has size at least two,
   (A,B) are independent coordinates;
 
 lawful Abel-boundary currents:
