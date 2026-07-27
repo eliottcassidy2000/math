@@ -2,7 +2,7 @@
 id: THM-2567
 title: "Deep-coloured duty-replica cycle and augmentation cancellation"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED (two ways).
   Every nonzero rational nonnegative C_13^3 table with the lawful paired
   diagonal zero has a nonzero physical target-zero anchor in every nonzero
   deep colour.  The canonical duty commutator therefore forces six equal
@@ -31,8 +31,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2567 -- the duty replicas form a deep-coloured cycle
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
-PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED (two ways).**
 
 THM-2563 supplies exactly the paired three-coordinate geometry that the
 THM-2562 duty calculation did not yet see.  The composition has a clean but
@@ -71,7 +70,7 @@ THM-2365's physical target is not the raw pair `(b,h)`.  Its coordinates are
 q=(q_1,q_2)=(b,m+h).                                        (4)
 ```
 
-For a fixed deep colour `m`, define the physical target density
+For a fixed deep colour `m`, define the partial-bare target amplitude
 
 ```text
 A_m(q_1,q_2)=B(m,q_1,q_2-m).                                (5)
@@ -284,7 +283,7 @@ co-shift, not deep colour to the physical target (4).  The correct next map
 must refine the Reynolds/duty square on one common deep-coloured endpoint
 carrier, not add another signed tomography bank.
 
-## 8. Exact companion and stopping boundary
+## 8. Exact companion, independent audits, and stopping boundary
 
 Run
 
@@ -305,6 +304,15 @@ identities, all `168*12*6` nonzero-colour replica rows, and all
 `168*169` augmented duty cancellations.  It also checks the three-zero-locus
 hostile (22) and all `2,028` diagonal-free singleton controls.  There are
 `67,233` explicit assertions.
+
+Two independent immutable audits rederived the physical reindexing
+`q=(b,m+h)`, the inverse-character anchor, the `Phi_13` divisibility step,
+all three duty classes and the sign in (14), the coefficientwise deep
+augmentation, and both nonnegative hostiles.  Each separately checked that
+Section 6 claims only an algebraic partial-bare face and does not identify a
+common deep-refined Reynolds carrier.  Normal, optimized, and stored output
+agree byte-for-byte after LF normalization; both audits reproduced the
+frontmatter hashes.
 
 The theorem proves that the paired-dipole corner has a deep-coloured duty
 cycle and isolates exact augmentation cancellation.  It does not build the

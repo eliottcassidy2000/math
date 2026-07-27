@@ -100,49 +100,31 @@ a distinct root; invariant gauges and offset-one cylinders make the gap
 sharp.  THM-2547 remains only a **FINITE-EXACT EXTERNAL CONTROL** after
 MISTAKE-281, not physical target/owner ancestry.
 
-The holotopy audits explain why horizontal success does not fill that gap.
-THM-2551 proves the abstract transfer preserves the all-unit projector
-kernel.  THM-2552 proves lawful common-future gain is a coboundary and that
-independently positive walls lose a genuinely three-edge coherent face.
-THM-2553 localizes unweighted rotation duty only in augmentation, not the
-weighted jet phase.  THM-2556 gives the first non-product square:
-`duty curvature + fibre covariance`; the canonical duty has all `168`
-nontrivial characters and `156` live modes per gain, but a nonunit section
-cancels it exactly.  Its exact covariance norm turns the open bridge into a
-quantitative near-fibre-uniformity test, not a proof.
+The holotopy audits explain the gap.  THM-2551--2553 show that transfer keeps
+the unit-projector kernel, common-future gain is a coboundary, and rotation
+duty sees augmentation rather than weighted jet phase.  THM-2556's first
+non-product square is `duty curvature + fibre covariance`: all `168` gains
+are live, but a nonunit section can cancel them exactly.
 
-THM-2557 transfers the nonzero THM-2550(B) interaction injectively on the
-rank-72 doubly centred lattice (`SNF 1^66 + 13^6`), but the current is signed
-and outside the Hall cone.  THM-2558 has `202/630` blind necklaces, and
-THM-2561 realizes `{0,1,4}` physically, so local six-comb geometry cannot
-remove them.  THM-2559 bypasses all blinds by inserting the named `k_a`
-failure into an occupied-to-failure chord; on all `165` rows it forces a
-positive old-head deep-by-repair coefficient, with relative floor `11/24336`
-ordinary or `1/2704` guard.  THM-2563 adds both blocker--graft dipoles and a
-deep danger probe: its positive `13^3` partial-bare table has simultaneous
-deep/moving-dipole colour and floor `7rho/35152`.  The fixed old head is not
-co-shifted, so left-minus-right target residue and complete-mask restoration
-remain missing.  THM-2565 resolves a positive THM-2559 head by its physical
-first digit and reuses the same target-active field at a long iterate.  Exact
-BV mixing then gives an actual cemetery-free same-root future return, with
-eventual floor `rho^2/26` and one delay for all `165` rows.  This closes
-future-root overlap only for the changed target-informed selector: its word
-is source-sibling provenance, not head inheritance, and it does not prove
-THM-2537 equation (56) or a target current.  THM-2562 computes
-duty-commutator ranks `50/70/72/74`;
-THM-2541's nonzero anchor forces six equal target replicas under any complete
-cancellation.  Flat-arc hostiles show this invoice alone is not a proof.
+THM-2557 injects the signed THM-2550(B) interaction on the rank-72 doubly
+centred lattice; THM-2564 reconstructs it from any six teeth (`SNF 1^51 +
+13^21`) but proves the ordered-section carry is noncanonical.  Physical blind
+necklaces remain.  THM-2559 instead inserts the named `k_a` failure and gives
+all `165` rows a positive old-head deep/repair coefficient.  THM-2563 adds two
+moving dipoles and deep colour on a positive partial-bare `13^3` table; the
+fixed head is still not co-shifted.  THM-2565 gives a cemetery-free same-root
+future return with eventual floor `rho^2/26`, but for a changed
+target-informed selector rather than inherited head word.  THM-2562 computes
+duty ranks `50/70/72/74` and forces six replicas from a nonzero anchor.
+THM-2567 shows every nonzero deep colour has that rigid face while their deep
+augmentation cancels exactly: the missing datum is a common coloured carrier,
+not more Fourier support.
 
-Next: retain THM-2565's positive stationary future-root diagonal while carrying
-the fixed head's target residue across THM-2563's charged danger-to-safe
-endpoint transition, or derive its exact full-`X` cancellation law.  Then
-transport the resulting difference character with the source-side word,
-owner, and carry into the canonical selector/current chart.  On that common
-chart x semantic x ancestry carrier, test THM-2562's six-replica law and apply
-THM-2545.  Service, mixing, chronology, old repair, target-informed future
-overlap, paired moving-endpoint action, and horizontal transport are closed;
-left-right target completion, canonical-selector/current identification, and
-vertical semantic gluing are not.
+Next: compose THM-2565's stationary diagonal with THM-2563's charged endpoint
+on one carrier (THM-2569 is reserved for that audit), then transport its
+difference character, word, owner, and carry to the canonical selector/current
+chart.  Test the six-replica law there and apply THM-2545.  Left-right target
+completion, selector/current identity, and vertical semantic gluing remain.
 More untyped nonvanishing is not progress.  No row is removed. Ledger: `165`.
 
 ### Independent routes that remain live
