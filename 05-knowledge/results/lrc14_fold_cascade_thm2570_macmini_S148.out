@@ -1,0 +1,41 @@
+== (1) fold identity, exact ==
+  200 random families x 3 grid points: dist_q(h j) = dist_q(w j)  OK
+
+== (2) snap inequality vs exact M (small separated, k <= 3) ==
+  V(k=2): exact M = 1/10, cascade certificate = 1172/12321 at t = 1232/12321: cert <= M: True, cert >= 3/41: True
+  V(k=3): exact M = 4723/40173, cascade certificate = 1762/15063 at t = 7972/45189: cert <= M: True, cert >= 3/41: True
+  (certificate is a true lower bound; both clear 3/41)
+
+== (3) the certificate at ANY height: separated towers k = 7..12 ==
+  k= 7: v_max ~ 10^15, certificate = 0.139668 >= 3/41 = 0.073171: True
+  k= 8: v_max ~ 10^17, certificate = 0.161710 >= 3/41 = 0.073171: True
+  k= 9: v_max ~ 10^19, certificate = 0.199997 >= 3/41 = 0.073171: True
+  k=10: v_max ~ 10^21, certificate = 0.246269 >= 3/41 = 0.073171: True
+  k=11: v_max ~ 10^23, certificate = 0.333324 >= 3/41 = 0.073171: True
+  k=12: v_max ~ 10^25, certificate = 0.500000 >= 3/41 = 0.073171: True
+  THE APEX-7 WALL IS BROKEN in the separated regime (any k).
+
+== (4) per-k sharp cascade constants R_k (need 1/(14-k) - k/(2(R+1)) >= 3/41) ==
+  k= 1: body floor 1/13, R_k = 134 (ratio >= 134 suffices)
+  k= 2: body floor 1/12, R_k = 99 (ratio >= 99 suffices)
+  k= 3: body floor 1/11, R_k = 85 (ratio >= 85 suffices)
+  k= 4: body floor 1/10, R_k = 75 (ratio >= 75 suffices)
+  k= 5: body floor 1/9, R_k = 66 (ratio >= 66 suffices)
+  k= 6: body floor 1/8, R_k = 58 (ratio >= 58 suffices)
+  k= 7: body floor 1/7, R_k = 51 (ratio >= 51 suffices)
+  k= 8: body floor 1/6, R_k = 43 (ratio >= 43 suffices)
+  k= 9: body floor 1/5, R_k = 36 (ratio >= 36 suffices)
+  k=10: body floor 1/4, R_k = 29 (ratio >= 29 suffices)
+  k=11: body floor 1/3, R_k = 22 (ratio >= 22 suffices)
+  k=12: body floor 1/2, R_k = 15 (ratio >= 15 suffices)
+  k=13: body floor 1, R_k = 8 (ratio >= 8 suffices)
+
+== (5) T-A corner values, re-verified exact ==
+   65 corner: M = 5/66 (agent claimed 5/66) OK
+   66 corner: M = 1/13 (agent claimed 1/13) OK
+   65 corner: M = 1/12 (agent claimed 1/12) OK
+   66 corner: M = 1/12 (agent claimed 1/12) OK
+   67 corner: M = 1/12 (agent claimed 1/12) OK
+  T-A corners confirmed; with THM-1290 (h <= 64) and the comb
+  pigeonhole (agent ledger) / one-far closure (S126), both
+  classical cores are gap-empty at all heights — two routes.
