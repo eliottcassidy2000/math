@@ -1,5 +1,17 @@
 # Script Results Index
 
+- `lrc14_truncated_radon_tight_frame_thm2510.py` -> matching `.out`
+  [THM-2510 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED].  On the
+  row-zero `13 x 7` strip, the full nonzero-slope bank satisfies
+  `sum_tau||R_tau d||^2=13||d-E_h d||^2`, has rank `72` and the exact
+  six-dimensional vertical kernel.  Nonvertical integral energy is at least
+  `24`, sharply, with equality exactly one horizontal unit dipole plus a
+  vertical kernel vector.  The `42`-cut bank multiplies energy by `42`; the
+  THM-2506 control gives `46` and `1932`.  The referee checks all `3,081`
+  Gram entries, `728` one-row integral controls, `546` equality controls and
+  deterministic full-cut hostiles; normal/optimized/stored transcripts
+  byte-match.  Hashes are `8e5bcfe9...25fe` / `c2064f4c...9061`.
+  This quadratic invariant forgets phase and does not produce a live current.
 - `lrc14_antipodal_radon_cospan_thm2509.py` -> matching `.out`
   [THM-2509 PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED;
   FINITE-EXACT ATLAS SHARPENING].  At least seven good toothpick slopes force

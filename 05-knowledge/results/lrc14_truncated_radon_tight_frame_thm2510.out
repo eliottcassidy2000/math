@@ -1,0 +1,10 @@
+THM-2510 truncated-Radon tight-frame exact companion: PASS
+row_zero_dimension=78; operator_rank=72; kernel_dimension=6
+exact_symmetric_Gram_checks=3081; image_coordinates=156
+single_row_integral_controls=728; minimum=24; equality_count=42
+sharp_dipole_plus_vertical_baseline_controls=546
+deterministic_row_zero_controls=200; full_42_cut_controls=20
+THM-2506_two_row_energy=46; full_42_cut_energy=1932
+counting_norm_identity=sum_tau||R_tau d||^2=13||d-E_h d||^2
+integral_nonvertical_floor=24; equality=one horizontal dipole plus vertical kernel
+ALL EXACT CHECKS PASSED
