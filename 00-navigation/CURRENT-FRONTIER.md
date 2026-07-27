@@ -139,6 +139,10 @@ THM-2567 shows every nonzero deep colour has that rigid face while their deep
 augmentation cancels exactly: the missing datum is a common coloured carrier,
 not more Fourier support.
 
+THM-2571 finds a primitive 13-primary carry class, and THM-2579 shows its
+target translates form one torsor: integral differences and unnormalized
+Fourier numerators fill, while normalized DFT division can restore the class.
+
 THM-2575 constructs a common-base owner-clock host, while THM-2577 proves by
 exact support images that every positive-return packet has depth `r=3` on
 `{a}` and `r=5` on `{b},{a,b}`.  The host is on the distinct `{a}`, `r=3`
