@@ -9,6 +9,37 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-297 (2026-07-28, degree-four Keller monodromy audit) -- Smith theory was applied across the omitted Jelonek divisor
+
+- **What was assumed:** T1549 and the first THM-1375/1440/2465 formulations
+  argued that the deck group of the finite etale cover over
+  `A^n minus A_F` acts freely on the contractible source `A^n`.  Smith
+  fixed-point theory was then used to require a self-normalizing point
+  stabilizer, leaving only `A4/S4` at degree four and hence no proper
+  intermediate field.
+- **First failed implication:** a deck transformation is regular and free on
+  the open source above `A^n minus A_F`; it need not extend regularly, let
+  alone freely, across the omitted divisor.  The toy map `z -> z^2` on
+  `C^*` already has a free deck involution which extends to `C` with the
+  fixed boundary point `0`.  Contractibility of the completed source
+  therefore cannot be fed to Smith without a separate extension theorem.
+- **Minimal algebraic hostile:** `T^4-2` has transitive Galois group `D4`.
+  Its quartic root field contains `Q(sqrt(2))`, while its squared-pair
+  resolvent `W(W^2+8)` exposes the different quadratic
+  `Q(sqrt(-2))`.  Thus degree four can have a proper intermediate field and
+  the resolvent quadratic need not be that field.
+- **Strongest survivor / repair:** Campbell's Galois-Keller theorem still
+  excludes degree two and the regular degree-four groups `C4,V4`.  A wild
+  degree-four Keller cover is restricted to `D4,A4,S4`; maximal
+  point-stabilizer arguments apply only in the `A4/S4` lanes.  The useful
+  primitive-coordinate conclusion survives in `D4` for a different reason:
+  a quartic `D4` root field has only one proper intermediate, so if
+  `K_4=K(x,y)` then at least one of `x,y` generates `K_4`.  The `S4/A4`
+  tower statements of THM-2465/2598 remain valid when lane-scoped, while
+  `D4` is restored as an open branch with a reducible `1+2` resolvent
+  algebra.  Historical Smith-selection tables are provenance, not current
+  canon, unless an extension-across-Jelonek theorem is supplied.
+
 ## MISTAKE-296 (2026-07-28, concurrent theorem reservation) -- a later empty stub reused the live THM-2604 accessibility ID
 
 - **What happened:** the independently audited future-root accessibility

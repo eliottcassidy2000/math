@@ -10,6 +10,7 @@ status: >
   from the three squared pair sums is an exact four-point V4 torsor.  The
   homogeneous leading-coefficient boundary has a forced 1+2 shadow and an
   explicit residual-quadratic valuation gate.  The S4/A4 field lattice,
+  the exact D4 intermediate-field hostile,
   tame inertia table, and local order-index tax prove that the cubic
   resolvent is a Galois-closure correspondence, not an intermediate cover
   of the quartic source.  Consequently no grade-three Keller anatomy
@@ -266,6 +267,22 @@ This is the exact lost-origin sidecar.  Even an abstract degree-three cover
 with the right discriminant is not automatically a polynomial source, an
 affine space, an etale/Keller map, or a chosen physical coordinate.
 
+The `D_4` lane is a different boundary, not a missing case of (24)--(26).
+For
+
+```text
+f(T)=T^4-2,                  R(W)=W(W^2+8),                  (26a)
+```
+
+the splitting group is `D_4`, the quartic root field
+`Q(2^(1/4))` contains `Q(sqrt(2))`, and the reducible resolvent algebra has
+nontrivial factor `Q(sqrt(-2))`.  Thus a proper intermediate field really
+can occur at degree four, and it need not be the resolvent quadratic.
+Campbell excludes the regular `C4/V4` monodromy lanes for a wild Keller map,
+but it does not exclude `D4`.  Any universal degree-four argument must
+therefore handle `D4`, `A4`, and `S4` separately unless a new extension
+theorem removes the first lane.
+
 ## 5. Tame inertia and the resolvent index tax
 
 At a tame divisorial valuation, the permutation discriminant exponent is
@@ -338,8 +355,9 @@ Their discriminants are respectively `-256t^3` and
 ## 6. The exact Keller/Jelonek survivor and stopping boundary
 
 For a hypothetical degree-four Keller map, let `B_4` be the branch divisor
-of the finite quartic normalization and `B_3` that of the normalized cubic
-resolvent correspondence.  The inertia table gives
+of the finite quartic normalization and `B_3` the union of the branch
+divisors of the nontrivial normalized factors of its cubic resolvent
+algebra.  The inertia table gives
 
 ```text
 B_3 subseteq B_4 subseteq A_F,                                 (31)
@@ -427,10 +445,12 @@ interpretive correspondences, not dependencies or Keller consequences.
 - THM-2455 proves the monic depressed discriminant/cusp scaffold.  This
   theorem adds the general integral formula, explicit reconstruction torsor,
   homogeneous leading drop, residual valuation gate, and normalization loss.
-- THM-2465 already records maximality/no-intermediate-field and the broad
-  `S_4/A_4` tower constraints.  The new content here is the exact field
-  lattice comparison, inertia-to-index ledger, and the proof that the cubic
-  is not a cover of the quartic source.
+- MISTAKE-297 repairs THM-2465's former unconditional
+  maximality/no-intermediate-field shortcut: the `D4` lane remains.  The
+  surviving `S4/A4` tower constraints are conditional on those lanes.  The
+  new content here is the exact field-lattice comparison, the `D4` hostile,
+  the inertia-to-index ledger, and the proof that the cubic is not a cover
+  of the quartic source.
 - HYP-9027 remains open.  Formula (22) identifies the first residual
   collision its odd-valuation strategy must control; it does not control it.
 - No degree-four Keller witness is constructed or excluded.

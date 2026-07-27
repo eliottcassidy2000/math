@@ -6,8 +6,10 @@ status: >
   A x B == 0; B != 0 always; universal z-rationality -- for A != 0
   the generic fiber injects into the (x,y)-plane, so field degree =
   degree of a plane 0-cycle and the z-quadratic never doubles it; at
-  degree 4 there are no proper intermediate fields (S3 max in S4,
-  A3 in A4); every quadratic Keller map is injective, so any G1
+  degree 4 a wild cover can have monodromy D4, A4, or S4 (regular
+  C4/V4 would be Galois and hence invertible), and at least one of
+  x,y is still primitive by the corrected subgroup argument; every
+  quadratic Keller map is injective, so any G1
   witness has total degree >= 3) + PROVED (stratum exclusions,
   QQ-exact Groebner with cross-prime adversarial re-derivation:
   point-cap b == 0 face empty; line-cap doubly-degenerate face
@@ -21,7 +23,8 @@ status: >
   order-{1,3} conjecture) + PROVED (tower constraints: purity forces
   a nonempty Jelonek set and the resolvent cubic cover to ramify
   over it; S4 witnesses need odd Jelonek valuation of Delta_4,
-  A4 witnesses a square Delta_4 with cyclic cubic layer; a
+  A4 witnesses a square Delta_4 with cyclic cubic layer; D4 witnesses
+  have a 1+2 resolvent algebra and a proper quadratic intermediate; a
   THM-1310-as-resolvent witness must satisfy the five conditions
   (N1)-(N5)). VERDICT: no witness found; G1 remains OPEN with
   detection floors recorded per box. Nothing here resolves G1,
@@ -64,10 +67,30 @@ identity `z (A x B) = A x (P - C)` (THM-2455) makes `z` rational
 over `C(P)(x,y)` on the generic fiber, which therefore injects into
 the `(x,y)`-plane: **field degree = degree of the plane 0-cycle
 `{g1 = 0} intersect {lambda = mu^2}`** -- the z-quadratic shape
-never doubles the degree; (U3) at degree 4 there is no proper
-intermediate field (`S3` maximal in `S4`, `A3` in `A4`), so `x` or
-`y` is a primitive element with a quartic minimal polynomial --
-THM-1310's pattern one degree up. Every quadratic Keller map is
+never doubles the degree; (U3) a wild degree-four cover has monodromy
+`D4`, `A4`, or `S4`.  Indeed the regular transitive groups `C4,V4`
+would make the original extension Galois and hence invertible by Campbell.
+In the `S4/A4` lanes the point stabilizer is maximal.  In the `D4` lane
+the quartic root field has exactly one proper intermediate `K_2`; since the
+frame identity gives `K_4=K(x,y)`, if neither coordinate were primitive then
+both `K(x)` and `K(y)` would be contained in `K_2` (with `K` allowed), forcing
+`K(x,y) subseteq K_2`, a contradiction.  Thus in all three surviving lanes
+**at least one of
+`x,y` is a primitive element with a quartic minimal polynomial**, but the
+old no-intermediate-field rationale was false.
+
+The elementary quartic
+
+```text
+f(T)=T^4-2,                 R(W)=W(W^2+8)                 (U4)
+```
+
+is the sharp field-theory hostile.  Its Galois group is `D4`;
+`Q(2^(1/4))` contains the proper intermediate `Q(sqrt(2))`, while
+the nontrivial resolvent factor gives `Q(sqrt(-2))`.  Thus even the
+two visible quadratic sidecars need not coincide.  This is not a
+Keller example; it refutes only the discarded Smith/maximality shortcut.
+Every quadratic Keller map is
 injective (midpoint argument), so **any G1 witness has total degree
 at least 3**; the staircase boxes have even BKK ceilings
 `(d+2)^3 - d^3 = 8, 26, 56, 98` with the excess over the realized
@@ -97,7 +120,8 @@ degree dropping by exactly 2 per rank-<=1 point of the fiber system.
 `W1 = (F1, F2, F3 + F1^2)` (point-cap) and
 `W2 = (F1 + F2 F3, F2 + F3^2, F3)` (line-cap), both built on the
 THM-1310 wild map, are 2-jet Keller maps of field degree 3; degree 2
-is impossible (Smith). Hence field degrees `{1, 3}` are realized on
+is impossible because a quadratic extension is Galois and Campbell's
+Galois-Keller theorem forces invertibility. Hence field degrees `{1, 3}` are realized on
 both residual strata, and **an unconditional degree-4 exclusion
 there would prove the degree-4 case of the z-affine order-{1,3}
 conjecture** -- no cheap all-strata resolution exists. Conversely
@@ -110,12 +134,16 @@ off-ray kernel families, deg >= 5 tails, and the pending GB boxes).
 
 Purity (Zariski-Nagata) plus `pi_1^et(A^3) = 1` re-proves that a
 wild Keller map has nonempty Jelonek set `A_F`, and forces the
-quartic field `K4`, its resolvent cubic `K3`, and the Galois closure
-to be unramified in codimension one off `A_F` while **`K3` must
-ramify over some Jelonek component**. `S4` witnesses have odd
-`v_D(Delta_4)` along a Jelonek component (the HYP-9027 shape);
-`A4` witnesses have square `Delta_4` and a cyclic cubic layer with
-order-3 inertia. A witness carrying THM-1310's map as its resolvent
+quartic field, every nontrivial normalized resolvent factor, and the
+Galois closure to be unramified in codimension one off `A_F`; every
+nontrivial connected factor must ramify over some Jelonek component.
+`S4` witnesses have odd `v_D(Delta_4)` along a Jelonek component (the
+HYP-9027 shape); `A4` witnesses have square `Delta_4` and a cyclic
+cubic layer with order-3 inertia.  In a `D4` lane the cubic resolvent
+has a rational section plus a quadratic factor, and the quartic root
+field has a proper quadratic intermediate which need not be that
+resolvent quadratic, as (U4) shows.  This lane remains open. A witness
+carrying THM-1310's map as its resolvent
 layer must satisfy: (N1) `G = S4`; (N2) `Delta_4 == -L o iota` mod
 squares; (N3) its Jelonek set contains a copy of `{L = 0}`;
 (N4) `v(Delta_4)` odd along it; (N5) its Galois closure contains
