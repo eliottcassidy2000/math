@@ -2,7 +2,7 @@
 id: THM-2612
 title: "D4 deck pole tax and depressed-resolvent gcd gate"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   For a hypothetical complex planar Keller map of generic degree four and
   geometric monodromy D4, the quartic root field has a unique nontrivial
   automorphism. It is a regular free deck involution over the finite-etale
@@ -33,7 +33,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2612 -- the D4 involution must pay at the omitted boundary
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 MISTAKE-297 repaired the old degree-four Smith argument: a deck action on the
 finite-etale open source cannot be applied to the contractible completed
@@ -203,10 +203,11 @@ F o tau=F                                             on A^2. (18)
 ```
 
 Because `F` is Keller, it is a local analytic biholomorphism at `a`.  Shrink
-to a neighborhood on which `F` is injective.  Equations (17)--(18) then give
-`tau=1` on a neighborhood of `a`, hence everywhere by polynomial identity.
-This contradicts (15).  Therefore the pole divisor is nonempty, proving
-(4)--(5).
+to a neighborhood `W` on which `F` is injective, and then use continuity of
+`tau` to choose a smaller neighborhood
+`W_0 subset W intersection tau^(-1)(W)`.  Equations (17)--(18) give
+`tau=1` on `W_0`, hence everywhere by polynomial identity.  This contradicts
+(15).  Therefore the pole divisor is nonempty, proving (4)--(5).
 
 This is exactly the missing hypothesis in the old Smith argument.  Smith
 does not exclude the open `D4` action; it proves that extending that action
@@ -236,7 +237,10 @@ Res_T(f(T),2T^2+p+z)-S'(z)^2
 ```
 
 Since the quartic is separable, so is the squared-pair resolvent, and hence
-`S'(z)!=0`.  Equations (19)--(22) prove (8)--(9).
+`S'(z)!=0`; thus (9) also proves `D!=0` in `L`.  The resulting root cannot
+equal `w`: otherwise `s=-2w`, so `4w^2=s^2=z in K`, contradicting
+`[K(w):K]=4`.  It is therefore the nonidentity element of (15), not the
+identity embedding.  Equations (19)--(22) prove (8)--(9).
 
 The norm formula is a useful functional description, but it is not yet a
 component-by-component pole formula on `A^2`: the primitive coordinate,
@@ -368,4 +372,27 @@ split/even short-edge descent or any degree-twenty-two mixed-support
 stratum.  No `D4` witness is constructed or excluded, and `JC(2)` and
 `DC(2)` remain open.
 
-**QED pending independent hostile audit.**
+**QED.**
+
+The independent hostile audit rederived the normalization/deck-extension
+step over the finite-etale Jelonek complement; checked freeness and the
+support of every pole prime; and verified the normal-affine
+codimension-one intersection argument before applying Smith theory.  It
+made the local-injectivity shrink in Section 3 explicit and checked that a
+fixed point forces the polynomial involution, rather than merely its germ,
+to be the identity.
+
+The same audit independently enumerated the `D_4` point-stabilizer
+normalizer and the complete strict subgroup interval; derived the depressed
+factorization signs in (8), including `q=z=0`; used (9) to certify the
+denominator is nonzero; and checked that the formula is the nonidentity
+root-field automorphism.  It rederived every tame inertia row, the
+double-transposition and four-cycle reductions, the direction of the index
+tax, and the zero-tax gcd hostile.  Finally it replayed ordinary and
+optimized companions against the stored transcript and recovered the
+declared LF hashes
+`ad6f6f02a119b9cb049274da99fdd47cf7f2fa824068292d7b45618753faf8cf`
+and
+`62370d58cc8a47df041609359e2befa72e0fde6c5cf916ca771a28264cd90a88`.
+No pole component, pole order, gcd converse, `D_4` exclusion, mixed-support
+closure, wild residue-two claim, or Jacobian conclusion entered the audit.
