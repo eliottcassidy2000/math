@@ -2,7 +2,7 @@
 id: THM-2609
 title: "External target-section itinerary saturation and root-state no-go"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On THM-2600's canonical typed row, let Q_(s,ell) be the union, over its
   two positive constant-six middle rails, of absolute target sections whose
   globally primitive septimal Bockstein is a unit.  The 84 sets have sizes
@@ -38,13 +38,14 @@ hash_basis: LF-normalized bytes
 
 # THM-2609 -- external sections saturate; the event state does not
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2600 supplies a positive unit-Bockstein vertex in every one of its 84
 base cells.  Keeping all thirteen absolute target sections reveals much more:
 the available sections already have every additive difference.  Base-13
-cylinder concatenation then realizes any finite seven-clock section itinerary
-on one physical orbit.
+cylinder concatenation then realizes every prescribed correction itinerary
+whose event labels lie in their corresponding available section sets, on one
+physical orbit.
 
 That is the strongest possible conclusion from these coordinates.  The
 section label `q` is an external intervention in the target factor, while the
@@ -148,7 +149,7 @@ Equation (11) is an **external-label correction**.  It is numerically the
 invoice appearing in THM-2542 and THM-2607, but no rail/deck or target/root
 identification is inferred from that numerical agreement.
 
-## 3. One-orbit realization of every seven-clock itinerary
+## 3. One-orbit realization of every prescribed correction itinerary
 
 There is no finite-word recurrence obstruction left.  Set
 
@@ -353,6 +354,15 @@ All theorem checks raise under optimized Python.
 Normal and optimized executions byte-match the stored transcript after LF
 normalization.
 
+Two independent immutable hostile audits replayed both executions from the
+candidate commit, confirmed the declared LF hashes, rederived the complete
+84-cell section census and difference-set argument, checked all 1,008
+itineraries and the depth-160 cylinder invoice, and separately audited the
+aggregate-versus-sheet unit distinction, the external-`q`/constant-`h=6`
+typing, and the deficient-fibre stabilizer obstruction.  The second audit also
+repaired the universal itinerary wording to its exact admissible-label
+quantifier.  No theorem defect remains.
+
 No row is removed and LRC(14) remains open.
 
-QED (candidate; independent audit pending).
+QED.
