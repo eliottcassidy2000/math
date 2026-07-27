@@ -9,6 +9,29 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-300 (2026-07-28, THM-2618 candidate scope) -- the canonical selected source was conflated with a distinct target-informed head
+
+- **What was assumed:** the first candidate form of THM-2618 proved a lawful
+  product-torus orbit for THM-2537's canonical selected source and then said
+  that this unfreezes the selector inside THM-2573's `w_(N,h)`, closing its
+  target-action type gate.
+- **First failed implication:** both objects choose a marked root, but they are
+  not the same Boolean event.  THM-2537 selects the occupied tail
+  `s_tau(e)` from the complete old-carrier root word.  THM-2565/2569 instead
+  use the target-informed head `A=T_delta`; its marker comes from a separate
+  `k_a` failure mask and slope stratum, and `w_(N,h)=A_h(x)A_h(T^N x)` also
+  contains a genuinely later occurrence.  Covariance of the first selector
+  says nothing formal about covariance of the second.
+- **Strongest survivor / repair:** THM-2618's product-torus restriction,
+  Boolean Mobius factorization, dipole covariance, proper-profile hole,
+  complete function-level source spectrum, and free profile-atom orbit all
+  survive independent hostile audit.  They form a lawful source-side model
+  and ingredient only.  Closing THM-2573 still requires a labelled
+  whole-event lift of `A_h(x)A_h(T^N x)`, including every failure-mask,
+  old-danger/safe, selector, and later-occurrence factor before any target DFT
+  or Abel smoothing.  Shared vocabulary such as "selector" is never a map;
+  equality of the underlying truth functions must be proved before transport.
+
 ## MISTAKE-299 (2026-07-28, THM-2603 proof-graph overwrite) -- a new theorem reused an already proved canonical ID
 
 - **What happened:** a concurrent PSL2(F13) transition audit replaced the

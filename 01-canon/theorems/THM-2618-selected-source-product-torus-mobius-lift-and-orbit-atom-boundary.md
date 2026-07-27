@@ -2,11 +2,12 @@
 id: THM-2618
 title: "Selected-source product-torus Mobius lift and orbit-atom boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED AFTER SCOPE REPAIR.
   Relative to the retained labelled endpoint-factor presentation, the
   THM-2537 selected-source truth function has a unique Boolean Mobius lift
   to the independent coordinate torus.  The full THM-2350 dipole translation
-  co-shifts every target-active factor and the selector itself.  On every
+  co-shifts every target-active factor occurring in that selected-source
+  construction and the selector itself.  On every
   positive untwisted selected-source point its thirteen-state source profile
   is nonempty and proper; a positive rational BV chamber has one fixed such
   profile, so all twelve primitive source-translation colours are nonzero.
@@ -16,20 +17,24 @@ status: >
   THM-2334 endpoint current.  The lift is canonical only relative to the
   labelled factor presentation: the relation-toric kernel gives strictly
   positive off-diagonal lifts with identical physical restriction and
-  different target residues.  The theorem closes THM-2573's source-selector
-  covariance/type gate, but proves no common fixed physical frequency, no
-  nonzero Abel jump/tooth coefficient, no populated old present/bare Radon
-  diagonal, no row exclusion, and no LRC(14).
+  different target residues.  This is a lawful model and source-side input
+  for THM-2573, not a closure of its type gate: the selector frozen there is
+  THM-2569's distinct target-informed head, including a failure mask and a
+  later occurrence.  The theorem proves no common fixed physical frequency,
+  no nonzero Abel jump/tooth coefficient, no populated old present/bare
+  Radon diagonal, no row exclusion, and no LRC(14).
 source: lrc-source-axis-2026-07-28-product-torus-mobius-lift
 depends_on:
   - THM-2350-owner-pivot-dual-dipole-normal-form
+  - THM-2349-first-depth-one-delayed-shallow-restart
   - THM-2531-prime-necklace-guard-boundary-selector
   - THM-2537-cayley-wall-scalarization-and-positive-selector-intertwiner
-  - THM-2573-logarithmic-abel-normal-and-common-endpoint-jump-pairing
 related:
   - THM-2334-relation-residue-current-and-character-twist-pushforward
   - THM-2502-endpoint-boolean-newton-carry-tournament-and-dipole-boundary
   - THM-2568-full-x-transition-annihilation-and-refined-pair-drift-boundary
+  - THM-2569-stationary-diagonal-conditioned-paired-corner-and-frozen-future-role-boundary
+  - THM-2573-logarithmic-abel-normal-and-common-endpoint-jump-pairing
   - THM-2574-oriented-tooth-component-holonomy-and-fixed-frequency-descent
   - THM-2610-chronological-paired-slice-marked-triangle-graft-and-action-axis-boundary
   - THM-2613-canonical-root-diagonal-opposite-shift-section
@@ -43,20 +48,21 @@ hash_basis: LF-normalized bytes
 
 # THM-2618 -- the selected source has a lawful coordinate-torus orbit
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED AFTER SCOPE
+REPAIR.**
 
 THM-2573 isolates a precise type gate.  A target colour is lawful only after
 **every** target-active factor, including a target-informed selector, has
-been co-shifted.  Freezing the selector and moving a duplicate gate creates
-an auxiliary colour of the kind excluded by THM-2568 and MISTAKE-266.
+been co-shifted.  Freezing a selector and moving a duplicate gate creates an
+auxiliary colour of the kind excluded by THM-2568 and MISTAKE-266.
 
-For the THM-2537 selected source, that whole-factor orbit exists.  The reason
-is that its selector is a finite Boolean function of the thirteen complete
-root truth values.  Boolean Mobius inversion lifts this function to the
-labelled independent-coordinate torus, where a THM-2350 dipole is an honest
-translation.  One ordinary graft factor then forces the source-translation
-profile to have a hole.  The result is the first lawful source-action sidecar
-at this frontier:
+For the THM-2537 selected source, its own whole-factor orbit exists.  The
+reason is that its selector is a finite Boolean function of the thirteen
+complete root truth values.  Boolean Mobius inversion lifts this function to
+the labelled independent-coordinate torus, where a THM-2350 dipole is an
+honest translation.  One ordinary graft factor then forces the
+source-translation profile to have a hole.  The result is a lawful
+source-action sidecar at this frontier:
 
 ```text
 labelled endpoint factors
@@ -69,7 +75,9 @@ labelled endpoint factors
 
 The construction is deliberately presentation-relative.  Restriction to the
 one-dimensional physical curve forgets the relation lattice, so the scalar
-truth function alone does not determine its off-diagonal lift.
+truth function alone does not determine its off-diagonal lift.  It is also
+selector-relative: THM-2569's later target-informed head is a different
+Boolean event, not an alias for the selector lifted here.
 
 Throughout, `p=13`, all equalities ignore the finite collection of strict
 interval walls, and additions in root or target-state labels are in
@@ -217,10 +225,11 @@ THM-2350's other displayed convention.  Directly from the definition,
 S_(rho,s)^#(T_t Z)=S_(rho,s+t)^#(Z).                       (15)
 ```
 
-This is the missing whole-factor covariance law.  It is stronger than
-co-shifting only the `a,k_a` factors visible at the final head: the complete
-root truth table is recomputed after the coordinate translation, and then
-the canonical wall is reselected from that translated table.
+This is the whole-factor covariance law for the THM-2537 selected source.  It
+is stronger than co-shifting only the `a,k_a` factors visible in one product:
+the complete root truth table is recomputed after the coordinate translation,
+and then the canonical wall is reselected from that translated table.  It is
+not the still-missing covariance law for THM-2569's target-informed head.
 
 For `alpha in F_13`, define the normalized source-action character
 
@@ -334,8 +343,15 @@ It is nonzero on `C`, and because `0 in L`,
 0<=K_L<=S_(rho,0)^#.                                      (27)
 ```
 
-Thus its physical restriction is a positive rational Boolean subset of the
-old THM-2537 carrier.  THM-2349's abstract shallow-carrier triangle may be
+The physical pullback used here is explicitly
+
+```text
+kappa_(rho,L)(z)=K_L(D_w(z/13)).
+```
+
+Although its factors with `s!=0` are evaluations off the physical diagonal,
+(27) says that this pullback is a positive rational Boolean subset of the old
+THM-2537 carrier.  THM-2349's abstract shallow-carrier triangle may be
 reapplied to this **base atom**.  This preserves the source word/owner and
 supplies its usual marked `X,Y,m` triangle for each prescribed shallow root
 colour.  Nothing here says that the same triangle survives every translated
@@ -386,7 +402,7 @@ pointwise product, at which point THM-2568's full-`X` boundary applies.
 Thus (31) may be used as a Hilbert-energy or relative-pair observer, not as a
 completed target current.
 
-## 6. The exact advance over THM-2573
+## 6. Comparison with THM-2573 and the exact remaining lift
 
 THM-2573 Section 6 requires a family of complete layers
 
@@ -395,25 +411,44 @@ THM-2573 Section 6 requires a family of complete layers
 ```
 
 formed by co-shifting every target-active factor, including the selector and
-the later occurrence, before Abel smoothing.  Equations (9)--(15) close the
-previously missing lawfulness/type gate for the **selected-source factor**:
-the selector now belongs to a genuine coordinate-covariant orbit rather than
-remaining frozen inside `w_(N,h)`.
+the later occurrence, before Abel smoothing.  The frozen selector there is
+**not** (7).  In THM-2565/2569 it is the target-informed head
 
-Consequently, once the remaining present and bare endpoint factors have been
-formed as complete co-shifted layers, THM-2573's logarithmic Abel normal and
-its target-state DFT are lawful target observables.  This theorem does not
-prove any of the analytic conclusions which would finish that route:
+```text
+A=T_delta,
+
+A_h(x)=A(x)1_(floor(13x)=h),
+
+w_(N,h)(x)=A_h(x)A_h(T^N x),                              (33)
+```
+
+whose marker is selected from the separate `k_a` failure mask and its slope
+stratum.  THM-2565 explicitly retains the old canonical word only as a
+sidecar; the two selectors can differ.  Therefore equations (9)--(15) do
+**not** unfreeze `w_(N,h)` and do not close THM-2573's type gate.
+
+What they supply is an exact construction pattern and a lawful source-side
+ingredient.  To close the gate one must give the complete event in (33) a
+labelled factor presentation, include the old danger/safe facts and every
+factor used to choose `delta`, apply the same Boolean-Mobius lift to that
+whole truth table, and translate both `A_h(x)` and its genuinely later
+occurrence `A_h(T^N x)` before forming either endpoint layer.  Only after that
+construction may THM-2573's logarithmic Abel normal and target-state DFT be
+read as lawful target observables.
+
+Even after that missing lift, one would still have to prove the analytic
+conclusions which could finish that route:
 
 ```text
 the total-layer common-jump measure is nonzero;
 its target-state profile is nonconstant;
 an allowed deep frequency M sees it;
-the connected tooth coefficient at r=M mod k is nonzero.   (33)
+the connected tooth coefficient at r=M mod k is nonzero.
 ```
 
-Those four clauses are now the narrowed computation/proof target.  The bare
-uniform gate in THM-2574 remains a sharp zero-colour hostile.
+Those four clauses come strictly after the whole-head lift.  The immediate
+proof target is (33) with full covariance; the bare uniform gate in THM-2574
+remains a sharp zero-colour hostile.
 
 ## 7. Three sharp boundaries
 
@@ -522,4 +557,12 @@ modulo `13`.  Nonvanishing after reduction modulo two is a one-way exact
 certificate of nonvanishing of the original integral cyclotomic sum; the
 referee never infers complex nonvanishing from a numerical root sample.
 
-QED pending independent hostile audit.
+The independent hostile audit rederived the physical restriction, Boolean
+Mobius signs and idempotence, dipole/character signs, ordinary-graft hole,
+cyclotomic function-level spectrum, profile-atom orbit, and autocorrelation
+boundary.  It found and repaired one semantic overreach: the initial
+candidate had conflated THM-2537's selected source with THM-2569's distinct
+target-informed head and therefore incorrectly claimed to close THM-2573's
+type gate.  Section 6 records the repaired scope and the exact missing event.
+
+**QED.**
