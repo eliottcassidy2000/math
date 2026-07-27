@@ -1,0 +1,186 @@
+================================================================================================
+STEP 0: structural facts (family-independent)
+================================================================================================
+  [OK ] B intersect 7Z = {0}   (no nonzero septimal residue is in the 1/14 band)
+  [OK ] B intersect 13Z = {0}  (same for the tredecimal sector)
+  [OK ] J(0) = 0 (a divided-difference jet vanishes at the basepoint)
+  [OK ] J is odd (balanced gauge)
+  [OK ] on 7Z the jet is section-free: J = <x>/7 and beta = 2x mod 13
+  [OK ] off 7Z the jet is gauge-dependent (balanced vs standard section differ) -- THM-2337 S5 sidecar
+  [OK ] on 7Z the two sections agree mod 13 (the strict Bockstein is canonical)
+  [OK ] STRICT jet x band weight is the ZERO function (B cap 7Z = {0}, J(0) = 0): F1 band-septimal collapse
+  [OK ] sectioned jet x band weight = +-1 exactly on the outer shell +-{4,5,6} (all units): [-6, -5, -4, 4, 5, 6]
+  [OK ] sum_B J = 0  (odd jet vs mirror-even band): F2 parity kill
+  [OK ] sum_B J^2 = 6 (the even repair survives, on the unit shell only)
+  [OK ] power sums: sum_{e in F13} e^k = 0 mod 13 for k = 1..11, = -1 for k = 12  (F3 orbit-moment kill)
+  [OK ] integer-carry weight takes different values on incidences with the SAME residue -> NOT rotation-covariant; repair = reduce first (J of the residue)
+
+================================================================================================
+STEP 1: family bank (canonical + controls + random covering 13-speed families)
+================================================================================================
+  [OK ] random covering families found: 24 (target >= 20)
+  AP {1..13}               z=(11,1,1,0)  covering=True
+  GW {1..11,13,24}         z=(11,1,1,0)  covering=True
+  deepwell {1..12,182}     z=(11,1,0,1)  covering=True
+  {1..11,13,36}            z=(11,1,1,0)  covering=True
+  loose {2..14}            z=(10,2,1,0)  covering=False   first uncovered j = 4
+  all-duty {91k}           z=(0,0,0,13)  covering=True
+  rand01 z=(11, 1, 1, 0)   z=(11,1,1,0)  covering=True
+  rand02 z=(11, 1, 1, 0)   z=(11,1,1,0)  covering=True
+  rand03 z=(11, 1, 1, 0)   z=(11,1,1,0)  covering=True
+  rand04 z=(11, 1, 1, 0)   z=(11,1,1,0)  covering=True
+  rand05 z=(11, 1, 1, 0)   z=(11,1,1,0)  covering=True
+  rand06 z=(10, 2, 1, 0)   z=(10,2,1,0)  covering=True
+  rand07 z=(10, 2, 1, 0)   z=(10,2,1,0)  covering=True
+  rand08 z=(10, 2, 1, 0)   z=(10,2,1,0)  covering=True
+  rand09 z=(10, 1, 2, 0)   z=(10,1,2,0)  covering=True
+  rand10 z=(10, 1, 2, 0)   z=(10,1,2,0)  covering=True
+  rand11 z=(10, 1, 2, 0)   z=(10,1,2,0)  covering=True
+  rand12 z=(9, 2, 2, 0)    z=(9,2,2,0)  covering=True
+  rand13 z=(9, 2, 2, 0)    z=(9,2,2,0)  covering=True
+  rand14 z=(9, 3, 1, 0)    z=(9,3,1,0)  covering=True
+  rand15 z=(10, 1, 1, 1)   z=(10,1,1,1)  covering=True
+  rand16 z=(10, 1, 1, 1)   z=(10,1,1,1)  covering=True
+  rand17 z=(11, 1, 0, 1)   z=(11,1,0,1)  covering=True
+  rand18 z=(11, 1, 0, 1)   z=(11,1,0,1)  covering=True
+  rand19 z=(11, 0, 1, 1)   z=(11,0,1,1)  covering=True
+  rand20 z=(11, 0, 1, 1)   z=(11,0,1,1)  covering=True
+  rand21 z=(12, 0, 0, 1)   z=(12,0,0,1)  covering=True
+  rand22 z=(12, 0, 0, 1)   z=(12,0,0,1)  covering=True
+  rand23 z=(10, 0, 2, 1)   z=(10,0,2,1)  covering=True
+  rand24 z=(8, 2, 2, 1)    z=(8,2,2,1)  covering=True
+  [OK ] all-unit family fails covering exactly at j = 7: covering FORCES z13+z91 >= 1 (j = 13 forces z7+z91 >= 1)
+  [OK ] every covering family in the bank (29) carries both covering duties (HYP-9050's duty carriers)
+
+================================================================================================
+STEP 2: sector-calculus referee (exact Z identities: per-pair orbit sums = classified Gram formulas)
+================================================================================================
+  [OK ] weight 1_B: all per-pair orbit sums match the sector/Gram classification (exact, all families)
+  [OK ] weight J*1_B: all per-pair orbit sums match the sector/Gram classification (exact, all families)
+  [OK ] weight J^2*1_B: all per-pair orbit sums match the sector/Gram classification (exact, all families)
+  [OK ] weight 1_{7Z\0}: all per-pair orbit sums match the sector/Gram classification (exact, all families)
+
+================================================================================================
+STEP 3: Gram spectra Gamma_w(rho) over the 72 unit ratios (mod-13 flatness = localization hypothesis)
+================================================================================================
+  1_B (unweighted)           distinct Gamma(rho) mod 13 over units: [0, 1, 3, 5, 7]   NON-FLAT
+  J*1_B (jet)                distinct Gamma(rho) mod 13 over units: [0, 2, 6, 7, 11]   NON-FLAT
+  J^2*1_B (jet-square)       distinct Gamma(rho) mod 13 over units: [0, 2, 6]   NON-FLAT
+  1_{7Z\0} (beta^12 proj)    distinct Gamma(rho) mod 13 over units: [12]   FLAT
+  beta^1 de-banded           distinct Gamma(rho) mod 13 over units: [0]   FLAT
+  beta^2 de-banded           distinct Gamma(rho) mod 13 over units: [0]   FLAT
+  beta^6 de-banded           distinct Gamma(rho) mod 13 over units: [1, 12]   NON-FLAT
+  [OK ] beta^6 x beta^6 spectrum: Gamma(rho) = -Legendre(rho mod 13) exactly (extremal non-flat case)
+  [OK ] beta^12 projector spectrum is FLAT = -1 mod 13 (the Fermat degeneration: the only flat escape)
+  [OK ] beta^1, beta^2 de-banded spectra are IDENTICALLY 0 mod 13 (power-sum kill: flat but ZERO)
+
+================================================================================================
+STEP 4: the pairings, family by family (duty-sector values = the forcing test)
+================================================================================================
+  family                   profile        NB%13  7z7 | N2%13 |  Gs    Gj  Gj%13 dtyJ | Gj2%13 dtyJ2 | P12%13  frm
+  ---------------------------------------------------------------------------------------------------------------
+  AP {1..13}               (11, 1, 1, 0)      7    7 |     8 |   0    10     10    0 |      9     0 |     12   12
+  GW {1..11,13,24}         (11, 1, 1, 0)      7    7 |     9 |   0     8      8    0 |      7     0 |     12   12
+  deepwell {1..12,182}     (11, 1, 0, 1)      7    7 |     3 |   0    10     10    0 |      9     0 |     12   12
+  {1..11,13,36}            (11, 1, 1, 0)      7    7 |     7 |   0     6      6    0 |      5     0 |     12   12
+  loose {2..14}            (10, 2, 1, 0)      1    1 |    11 |   0    10     10    0 |      9     0 |      6    6
+  all-duty {91k}           (0, 0, 0, 13)      0    0 |     0 |   0     0      0    0 |      0     0 |      0    0
+  rand01 z=(11, 1, 1, 0)   (11, 1, 1, 0)      7    7 |     1 |   0    -2     11    0 |      9     0 |     12   12
+  rand02 z=(11, 1, 1, 0)   (11, 1, 1, 0)      7    7 |    11 |   0    -6      7    0 |      1     0 |     12   12
+  rand03 z=(11, 1, 1, 0)   (11, 1, 1, 0)      7    7 |     9 |   0     6      6    0 |      0     0 |     12   12
+  rand04 z=(11, 1, 1, 0)   (11, 1, 1, 0)      7    7 |     9 |   0     6      6    0 |      5     0 |     12   12
+  rand05 z=(11, 1, 1, 0)   (11, 1, 1, 0)      7    7 |     4 |   0     6      6    0 |      5     0 |     12   12
+  rand06 z=(10, 2, 1, 0)   (10, 2, 1, 0)      1    1 |    12 |   0    -4      9    0 |      8     0 |      6    6
+  rand07 z=(10, 2, 1, 0)   (10, 2, 1, 0)      1    1 |     1 |   0     2      2    0 |      1     0 |      6    6
+  rand08 z=(10, 2, 1, 0)   (10, 2, 1, 0)      1    1 |     3 |   0    -6      7    0 |     10     0 |      6    6
+  rand09 z=(10, 1, 2, 0)   (10, 1, 2, 0)      7    7 |     9 |   0   -14     12    0 |      9     0 |     10   10
+  rand10 z=(10, 1, 2, 0)   (10, 1, 2, 0)      7    7 |    11 |   0     2      2    0 |     10     0 |     10   10
+  rand11 z=(10, 1, 2, 0)   (10, 1, 2, 0)      7    7 |    10 |   0    -6      7    0 |     10     0 |     10   10
+  rand12 z=(9, 2, 2, 0)    (9, 2, 2, 0)       1    1 |     8 |   0    -2     11    0 |      6     0 |      4    4
+  rand13 z=(9, 2, 2, 0)    (9, 2, 2, 0)       1    1 |     8 |   0     2      2    0 |     10     0 |      4    4
+  rand14 z=(9, 3, 1, 0)    (9, 3, 1, 0)       8    8 |    10 |   0     2      2    0 |      6     0 |      7    7
+  rand15 z=(10, 1, 1, 1)   (10, 1, 1, 1)      7    7 |     9 |   0    -2     11    0 |      9     0 |     10   10
+  rand16 z=(10, 1, 1, 1)   (10, 1, 1, 1)      7    7 |     4 |   0    10     10    0 |      9     0 |     10   10
+  rand17 z=(11, 1, 0, 1)   (11, 1, 0, 1)      7    7 |     7 |   0    24     11    0 |     10     0 |     12   12
+  rand18 z=(11, 1, 0, 1)   (11, 1, 0, 1)      7    7 |     7 |   0     8      8    0 |      2     0 |     12   12
+  rand19 z=(11, 0, 1, 1)   (11, 0, 1, 1)      0    0 |     9 |   0     2      2    0 |      9     0 |     10   10
+  rand20 z=(11, 0, 1, 1)   (11, 0, 1, 1)      0    0 |     1 |   0     4      4    0 |     11     0 |     10   10
+  rand21 z=(12, 0, 0, 1)   (12, 0, 0, 1)      0    0 |     4 |   0     8      8    0 |     11     0 |     12   12
+  rand22 z=(12, 0, 0, 1)   (12, 0, 0, 1)      0    0 |    10 |   0    -4      9    0 |      5     0 |     12   12
+  rand23 z=(10, 0, 2, 1)   (10, 0, 2, 1)      0    0 |     1 |   0     8      8    0 |      2     0 |      7    7
+  rand24 z=(8, 2, 2, 1)    (8, 2, 2, 1)       1    1 |     8 |   0    -8      5    0 |      8     0 |      1    1
+  [OK ] singleton projector localizes: N_B = 7 z7 mod 13 (13z1 + 13z13 + 91z91 = 0 mod 13)
+  [OK ] ORIGIN-PINNING: duty-involving part of every jet-weighted band pairing = 0 EXACTLY (in Z), every family
+  [OK ] beta^12 projector pairing localizes: P12 = -C(z1,2) - z1*z7 + 6*C(z7,2) mod 13, every family
+  [OK ] STRICT-jet rotation-Gram pairing == 0 identically (dies before any localization question)
+
+  [OK ] de-banded beta^k x beta^m pairings with 12 not| k+m vanish mod 13 for ALL families (F3)
+  beta^6 x beta^6 (Legendre pairing, 12 | k+m, NON-flat) values mod 13: {'AP': 6, 'GW': 4, 'deepwell': 6, '{1..11,13,36}': 6, 'loose': 12, 'all-duty': 0}
+
+================================================================================================
+STEP 5: localization verdicts (is T mod 13 a function of the duty profile alone?)
+================================================================================================
+  N2 (unweighted pair)     NOT localized: profile (11, 1, 1, 0) gives values [1, 4, 7, 8, 9, 11]
+        AP {1..13}                   -> 8
+        GW {1..11,13,24}             -> 9
+        {1..11,13,36}                -> 7
+        rand01 z=(11, 1, 1, 0)       -> 1
+  Gj (jet pair)            NOT localized: profile (11, 1, 1, 0) gives values [6, 7, 8, 10, 11]
+        AP {1..13}                   -> 10
+        GW {1..11,13,24}             -> 8
+        {1..11,13,36}                -> 6
+        rand01 z=(11, 1, 1, 0)       -> 11
+  Gj2 (jet-square pair)    NOT localized: profile (11, 1, 1, 0) gives values [0, 1, 5, 7, 9]
+        AP {1..13}                   -> 9
+        GW {1..11,13,24}             -> 7
+        {1..11,13,36}                -> 5
+        rand01 z=(11, 1, 1, 0)       -> 9
+  P12 (projector pair)     localized on this bank (constant within every duty profile)
+
+================================================================================================
+STEP 6: band-radius sweep -- where would jet duty content first appear?
+================================================================================================
+  radius  5: jet-pair duty part {'AP': 0, 'GW': 0, 'deepwell': 0, 'loose': 0}   jet^2-pair duty part {'AP': 0, 'GW': 0, 'deepwell': 0, 'loose': 0}
+  radius  6: jet-pair duty part {'AP': 0, 'GW': 0, 'deepwell': 0, 'loose': 0}   jet^2-pair duty part {'AP': 0, 'GW': 0, 'deepwell': 0, 'loose': 0}
+  radius  7: jet-pair duty part {'AP': 0, 'GW': 0, 'deepwell': 0, 'loose': 0}   jet^2-pair duty part {'AP': 12, 'GW': 12, 'deepwell': 12, 'loose': 24}
+  radius  8: jet-pair duty part {'AP': 0, 'GW': 0, 'deepwell': 0, 'loose': 0}   jet^2-pair duty part {'AP': 16, 'GW': 16, 'deepwell': 16, 'loose': 32}
+  radius 13: jet-pair duty part {'AP': -8, 'GW': -24, 'deepwell': 0, 'loose': 2}   jet^2-pair duty part {'AP': 600, 'GW': 600, 'deepwell': 56, 'loose': 614}
+  -> at the LRC(14) radius 6 the duty sector is identically 0.  Jet-square duty content first
+     exists at radius 7 = 91/13 (the LRC(13) band); the odd (jet-linear) layer stays mirror-
+     suppressed even there.  The 14-runner band is exactly one unit too narrow for any jet duty.
+
+================================================================================================
+STEP 7: antisymmetric difference-jet pairing (the other 'natural' jet weighting)
+================================================================================================
+  [OK ] ordered difference-jet pairing == 0 identically (antisymmetry of the jet under pair swap)
+  [OK ] i<i' difference-jet pairing == 0 identically as well: the mirror j -> -j sends each orbit contribution to its negative (odd jet, even band), and the fixed time j = 0 carries J(0) = 0
+  [OK ] mirror kill verified pointwise on AP: contribution(j) + contribution(-j) = 0 for every pair
+
+================================================================================================
+STEP 8: HYP-9050 13-grid tie-in and exceptional loci of the surviving projector forcings
+================================================================================================
+  [OK ] HYP-9050 on the 13-grid: N = 10*z13(v) mod 13 for every banked family
+  realizable covering duty profiles (z sums to 13, both duties present): 533
+  N_B = 7z7 = 0 mod 13 on 91 profiles (exactly z7 = 0 or 13); e.g. [(0, 0, 0, 13), (0, 0, 1, 12), (0, 0, 2, 11), (0, 0, 3, 10)]
+  P12 duty value = 0 mod 13 on 55 profiles; e.g. [(0, 0, 0, 13), (0, 0, 1, 12), (0, 0, 2, 11), (0, 0, 3, 10), (0, 0, 4, 9), (0, 0, 5, 8)]
+  S[J^2] = 6z1 = 0 mod 13 on 103 profiles (exactly z1 = 0): [(0, 0, 0, 13), (0, 0, 1, 12), (0, 0, 2, 11)]
+  profiles where BOTH projector forcings die mod 13 simultaneously: 25; e.g. [(0, 0, 0, 13), (0, 0, 1, 12), (0, 0, 2, 11), (0, 0, 3, 10), (0, 0, 4, 9), (0, 0, 5, 8)]
+
+================================================================================================
+VERDICT
+================================================================================================
+  (1) DUTY-SECTOR VALUE of every jet-weighted band pairing: 0 for EVERY family -- exactly, in Z,
+      for the strict jet, the sectioned jet, and the jet-square repair.  STRUCTURAL, two mechanisms:
+      B cap 7Z = B cap 13Z = {0} pins every duty-involving in-band incidence to the origin, and
+      every divided-difference jet has J(0) = 0.
+  (2) The gauge-free (strict) jet weight is the zero FUNCTION on the band: the strict rotation-Gram
+      pairing is identically 0 before any localization question.
+  (3) De-banded jet moments die mod 13 by the orbit power-sum kill (12 not| k+m); the only flat
+      escapes are the Fermat projectors beta^0, beta^12 = jet-free sector counts.
+  (4) Jet-faithful weights have NON-FLAT unit Gram spectra: the rotation lemma does not localize
+      them (Step 5 witnesses).  Empirically Gj = 0 mod 13 on 1/29 covering families,
+      Gj2 = 0 on 2/29: family-sensitive, NOT forced.
+  (5) What the rotation lemma DOES force on the 91-line is the projector layer:
+      N_B = 7*z7 and P12 = -C(z1,2) - z1*z7 + 6*C(z7,2) (mod 13), generically nonzero.
+
+TOTAL: ALL CHECKS PASSED
