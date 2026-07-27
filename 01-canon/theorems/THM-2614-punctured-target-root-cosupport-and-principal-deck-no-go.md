@@ -2,7 +2,7 @@
 id: THM-2614
 title: "Punctured target-root cosupport factorization and principal-deck no-go"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   On THM-2600's complete constant-six two-rail bank, every active fine
   (rail,target-section,future-clock) fibre has every nonzero deep-probe root
   and no zero root.  After retaining exactly the globally primitive unit
@@ -25,6 +25,7 @@ related:
   - THM-2608-alternative-rail-clock-collapse-and-missing-transition-index
   - THM-2609-external-target-section-itinerary-saturation-and-root-state-no-go
   - THM-2611-principal-c13-bibundle-lift-torsor-and-holonomy-section-obstruction
+  - THM-2613-canonical-root-diagonal-opposite-shift-section
 script: 04-computation/lrc14_punctured_target_root_cosupport_thm2614.py
 output: 05-knowledge/results/lrc14_punctured_target_root_cosupport_thm2614.out
 script_sha256: fb2631e1b482bc1062337976cbbed6952b5f7e0c5fdaf8ce9be1d380edc54c56
@@ -34,7 +35,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2614 -- the available target/root cospan is a punctured product
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2609 proves that the external target sections have every additive
 difference but do not become the constant-six physical future digit.  The
@@ -279,6 +280,48 @@ dependency here: (13)--(20) directly prove the physical-bank obstruction.
 Likewise THM-2609's chronology and THM-2610's later same-root character graft
 do not restore the absent same-event `r=0` point or select one graph in (16).
 
+### 5.1 The canonical inverse-root section becomes a constant strip
+
+THM-2613 supplies a genuine canonical graph, but on a different pair of
+coordinates.  Its root variable is the physical inverse-root digit `h`, and
+its local paired-shift section is
+
+```text
+q_local=-k h.                                             (22)
+```
+
+THM-2600's `r` in (2)--(3) is instead the independent deep-probe translate
+in `Delta_r`.  On the present carrier the physical digit is frozen at
+
+```text
+h=6,                                                       (23)
+```
+
+while `r` ranges through `F_13^*`.  With THM-2585's sign convention
+`s=-q'`, equation (22) therefore yields
+
+```text
+q'=k h=6k,                                                 (24)
+```
+
+a constant target section, not `q'=k r`.  For the literal first ordinary
+role `k=q1=14`, this is `q'=6`; the deficient atlas above shows
+
+```text
+{6} x F_13^* subset R_(s,ell)             on all 84 cells. (25)
+```
+
+Thus the THM-2613 section lands here as a positive constant strip.  The two
+points `(6,1)` and `(6,2)` are the minimal injectivity/equivariance hostile.
+They cannot be a root-to-next-target graph.
+
+There is also a physical same-time boundary.  The THM-2600 present packet
+`F_(ell,s)` contains the `q1`-safe factor, whereas the THM-2613 paired gate
+contains the corresponding `q1`-danger factor at that same shift.  Their
+same-time product is zero.  Any composition of the two results must therefore
+be chronological and retain a new transport sidecar; numerical agreement of
+their `F_13` labels is not a same-event graft.
+
 ## 6. Exact evidence and scope
 
 Run
@@ -303,4 +346,9 @@ unit Bockstein to a fine sheet, create a principal ancestry fibre, identify
 a semantic owner/repair endpoint, compose seven transitions, exclude a
 scalar row, or prove LRC(14).  The ledger remains `165`.
 
-QED (candidate; independent hostile audit pending).
+Two independent hostile audits replayed both execution modes, rederived the
+fine support factorization and every graph/completion count, and found no
+sheetwise-charge leak.  The second audit also checked the inverse-root versus
+deep-probe distinction in (22)--(25) and the same-time safe/danger boundary.
+
+QED.
