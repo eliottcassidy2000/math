@@ -65,14 +65,14 @@ c3=2*13^5=2S.                                             (2)
 For a physical point `x`, write
 
 ```text
-Sx=N+t,              0<=t<1.
+Sx=N+u,              0<=u<1.
 ```
 
 Then
 
 ```text
-c=floor(13t)=floor(Rx) mod 13,
-y={13t}={Rx}.                                                (3)
+c=floor(13u)=floor(Rx) mod 13,
+y={13u}={Rx}.                                                (3)
 ```
 
 Thus the thirteen half-open Boolean cells
@@ -109,19 +109,21 @@ where `epsilon=1` is the left half and `epsilon=0` the right half.
 The carry refinement can be evaluated without materializing `13^6` pullback
 intervals.  Let `Q_d` be either delayed guard-sector word restricted to the
 half-digit `d`, let `L_d` be its integer-grid length, and let `Phi_d` be its
-prefix function on the canonical `T` grid.  In the variable `t={Sx}`, its
+prefix function on the canonical `T` grid.  In the variable `u={Sx}`, its
 carry-`c` copy is
 
 ```text
-Q_(c,d)(t)=1_[c/13,(c+1)/13)(t) Q_d({13t}).               (7)
+Q_(c,d)(u)=1_[c/13,(c+1)/13)(u) Q_d({13u}).               (7)
 ```
 
-Consequently its prefix at `t` has the exact triangular form
+Fix an evaluation endpoint `u`, put `c=floor(13u)`, and index the vector of
+carry copies by `c'`.  The prefix of the `c'`-copy at `u` has the exact
+triangular form
 
 ```text
-L_d/13,             in every completed carry cell c'<c;
-Phi_d(13t-c)/13,    in the current carry cell c;
-0,                  in every later carry cell.            (8)
+L_d/13,             if c'<c;
+Phi_d(13u-c)/13,    if c'=c;
+0,                  if c'>c.                              (8)
 ```
 
 All displayed divisions are integral on the resolved grid.  The usual
@@ -177,7 +179,10 @@ companion checks all
 18,398,016                                                    (14)
 ```
 
-candidate off-graph entries and finds every one equal to zero.
+candidate `(configuration,r)` entries.  Of these, `1,415,232` are the
+possible on-graph slots selected by `(13)`, while the other `16,982,784`
+are off-graph slots; every off-graph slot is exactly zero.  Thus `(14)` is
+the total singleton-law test count, not the number of excluded slots.
 
 ## 4. The private unit atlas is maximally saturated
 
@@ -356,7 +361,8 @@ not supply a principal `C13` bibundle or a branch of the already selected
 target transition.
 
 There is a useful near miss which makes the failure completely physical.
-For `delta in F13^*`, translate the base circle by
+Choose the integer representative `delta in {1,...,12}` and translate the
+base circle by the canonical integer-linear lift
 
 ```text
 tau_delta=7 delta/R.                                      (23a)
@@ -392,9 +398,13 @@ Because `delta` and `7` are thirteenth-units, this lies on the lawful
 `1/13` phase grid exactly when `13^5` divides `v`.  Among the nine present
 speeds of the canonical row this selects only `c3=2*13^5`; the guard, five
 ordinary units, `c1`, and `c2` all acquire unresolved finer phases.  Hence
-even the unique obvious physical lift of the formal clutch
-changes the packet on positive measure; the obstruction is not merely a
-choice of notation for `c`.
+even this canonical small physical lift of the formal clutch changes the
+packet on positive measure; the obstruction is not merely a choice of
+notation for `c`.  It is not the only lift: THM-2657 classifies all global
+translation lifts as `tau=k/R` with `k=7 delta mod 13`.  Every such nonzero
+translation also moves the speed-one guard, whose rotational stabilizer is
+trivial.  Formula `(23c)` is the exact measure only for the displayed
+integer-linear representatives, for which `0<tau_delta<1/7`.
 
 This is exactly the hypothesis boundary in THM-2637.  Its derangement
 principle kills nonzero carry holonomy only after **one common transition**
@@ -467,8 +477,9 @@ and both executions must byte-match
 ```
 
 An independent hostile audit replayed both normal and optimized executions,
-reproducing all `1,415,232` carry partitions, all `18,398,016` off-graph
-singleton checks, the complete root/digit-edge censuses, and the stored
+reproducing all `1,415,232` carry partitions, all `18,398,016` singleton-law
+tests (split into `1,415,232` possible on-graph slots and `16,982,784`
+off-graph zero slots), the complete root/digit-edge censuses, and the stored
 transcript byte for byte.  It independently rederived `(3)`, `(9)`, `(13)`,
 the consecutive-digit identity `(24)`, the `Phi_13` argument in `(20c)`, and
 the slope-seven physical near miss `(23a)`--`(23c)`.  In particular, it
@@ -480,7 +491,9 @@ checked on the canonical speed tuple
 
 that `v(7 delta/R)` lies on the `1/13` phase grid exactly when `13^5|v`,
 so only `c3` survives.  The LF-normalized script/output hashes were reproduced
-as `a28b03a5...e71abf` and `b3c1f510...9a940`.  No theorem or scope defect was
-found.
+as `a28b03a5...e71abf` and `b3c1f510...9a940`.  A subsequent scope audit
+identified and repaired the total-versus-off-graph count, the overloaded
+prefix variable, and the nonuniqueness of the physical lift; none changes
+the private-root theorem or its exact computation.
 
 QED.
