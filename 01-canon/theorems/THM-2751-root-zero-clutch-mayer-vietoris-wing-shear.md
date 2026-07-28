@@ -2,16 +2,22 @@
 id: THM-2751
 title: "Frozen source-clock-one root-zero wing spectrum and positive quotient decoder"
 status: >
-  RESERVED PROOF-COMPLETE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  On the canonical rail-8 source_clock=1 fibre, the physical left
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the canonical
+  rail-8 source_clock=1 fibre, the physical left
   wing is nonempty but its marked delayed coefficient is identically zero,
-  while the right wing has a ten-label 91-unit target spectrum.  No linear
-  wing decoder exists.  Nevertheless a positive coefficient-derived
+  while the normalized right-wing target-window shape Q has a ten-label
+  91-unit spectrum.  The raw right-wing coefficient has nonunit scalar G.
+  No linear wing decoder exists.  Nevertheless a positive coefficient-derived
   convolution transports the full fixed-clock source profile to the target
   profile modulo the uniform target-null line.  This is not the full
   unclocked Mayer--Vietoris decomposition, a physical packet action, an
   endpoint current, a row exclusion, or LRC(14).
 source: root/fixed-clock-root-zero-wing-spectrum-2026-07-28
+audit: >
+  thm2751-final-referee-2026-07-28 (independent immutable carrier, prefix,
+  direct-target, terminal-annihilation, resultant, convolution,
+  raw-versus-normalized coefficient-ring scope, normal/-O/stored and hash
+  replay: ACCEPT)
 depends_on:
   - THM-2749-fully-marked-root-zero-clutch-and-target-character-profile
 related:
@@ -21,15 +27,14 @@ related:
   - THM-2750-arm-blind-clutch-no-go-and-minimal-marked-leakage
 script: 04-computation/lrc14_root_zero_clutch_mayer_vietoris_wing_shear_thm2751.py
 output: 05-knowledge/results/lrc14_root_zero_clutch_mayer_vietoris_wing_shear_thm2751.out
-script_sha256: 701ced99eb410dfbfa1f0a01b22469900ea019c20f42b3fee037cd5621c40dc5
-output_sha256: 4dc72c168fdee3927328124e04e2d149bdc9c0e17ff74f19100944ca6220ea81
+script_sha256: 25cbed38026d61891173c687006250a69fe38aea56d67439406bd8bb60fa2552
+output_sha256: 1f0facaa6184370ee38972e04c57557b79f5ab9e3cff93b52ec3d1ad5c20dfdb
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2751 -- the frozen source-clock-one wing is coefficientally one-sided
 
-> **RESERVED PROOF-COMPLETE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-> AUDIT.**  This candidate
+> **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  This theorem
 > repairs the fixed-clock boundary paragraph of promoted THM-2749 and the
 > numerical premise of the former THM-2751 provisional body.  It does not change the
 > proved two-sided common-section theorem.
@@ -139,6 +144,15 @@ label.  The raw fixed-clock shear is one-sided:
 T(B)-S(A) = T(R), not T(R)-S(L) with two charged endpoints. (2)
 ```
 
+The null left coefficient has a sharper support explanation.  For every
+`t=3,...,11` and all seven delayed clocks, `L_t` survives the relative-present
+and seam cuts with exact interval mass `26444880`, but its intersection with
+both actual delayed terminal half-prefixes is empty.  At `t=12`, `L_t` is
+already empty after the relative-present/seam cuts.  Thus “physical left
+wing” refers to the preterminal interval carrier; the fully marked terminal
+left packet is empty, rather than a nonempty signed current cancelling to
+zero.
+
 ## 3. Root units and target characters
 
 After content `26`, root normalization, and reduction modulo `Phi_7`, the
@@ -168,8 +182,18 @@ Norm(U)=1,
 Norm(Q)=8492431042211308167354471.                       (3)
 ```
 
-In particular `Norm(Q)=1 mod91`, so the right-wing target polynomial is a
-`91`-unit in every primitive target-character fibre.
+In particular `Norm(Q)=1 mod91`, so the **normalized target-window shape**
+`Q` is a `91`-unit in every primitive target-character fibre.  This does not
+make the raw polynomial `T(R)=GQ` a `91`-unit:
+
+```text
+gcd(G,91)=91,
+gcd(G/26,13)=1,                  gcd(G/26,91)=7.          (3a)
+```
+
+Canonical content/root normalization therefore leaves an invertible scalar
+over `F_13`, but it still leaves septimal content.  No raw or `C_91`-unit
+right-wing current is asserted.
 
 Therefore all twelve primitive target characters survive for `A`, `B`, both
 common rows, and `R`; every target character of `L` vanishes.  Factoring the
@@ -250,15 +274,20 @@ the companion checks the stronger typed identity
 Q*(9 K_Q) = delta_0 + 10N  modulo 91.                  (8)
 ```
 
-Thus the **right cofiber**, by itself, generates the rational/localized and
-mod-`91` `C_13` augmentation quotients coefficientwise.  In the mod-`91`
-quotient it can synthesize any prescribed correction, including one of the
-form `-7a`; this statement is not integral surjectivity.  This is the strongest
-holotopy survivor.  Its connection to the common-ancestry vertical edge debts
-of THM-2542 and THM-2591 is conditional on a new physical attachment theorem
-selecting one common-ancestry semantic vertical edge.  Nothing here realizes
-`K_Q` as a whole-packet action, retains an external arm or endpoint phase, or
-supplies that attachment.
+Thus the **shape `Q`**, by itself, generates the rational/localized and
+mod-`91` `C_13` augmentation quotients coefficientwise.  This shape statement
+does not pass through the physical scalar.  The raw right cofiber is `GQ`
+with `gcd(G,91)=91`; after canonical content division its scalar is `G/26`,
+which is a unit modulo `13` but remains divisible by `7`.  Therefore the
+canonically normalized **physical coefficient class** generates the
+`F_13[C_13]` augmentation quotient, but not the `F_7` or `C_91` quotient.  It
+can synthesize a correction of the form `-7a` only in that explicitly
+`F_13`-typed sense.  This is the strongest holotopy survivor.  Its connection
+to the common-ancestry vertical-edge debts of THM-2542 and THM-2591 is
+conditional on a new physical attachment theorem selecting one
+common-ancestry semantic vertical edge.  Nothing here realizes `K_Q` as a
+whole-packet action, retains an external arm or endpoint phase, or supplies
+that attachment.
 
 ## 5. Fixed fibre versus the full unclocked cover
 
@@ -288,10 +317,14 @@ The result is theorem-grade as a **repair/no-go**:
 - it retracts only the legacy single-sheet comparison and the reserved
   THM-2751 numerical premise;
 - it proves that the fixed-`e=1` defect is a coefficient-null physical left
-  wing paired with a charged right wing;
+  wing paired with a charged right wing, and identifies terminal-support
+  annihilation as the exact reason the left coefficient vanishes;
 - it supplies a positive coefficient-derived transporter on the target
-  augmentation quotient, and a right-cofiber correction generator after
-  rational/localized or mod-`91` scalar extension, but not integrally;
+  augmentation quotient, and a normalized `F_13` right-cofiber correction
+  generator whose target-window shape `Q` is separately a rational/localized
+  and mod-`91` unit, but not an integral unit;
+- it does **not** supply a raw, canonically normalized `F_7`, or `C_91`-unit
+  physical correction;
 - it supplies no endpoint current, physical target action, owner/root
   provenance, row exclusion, or LRC(14) decrement.
 
@@ -303,13 +336,13 @@ python -O 04-computation/lrc14_root_zero_clutch_mayer_vietoris_wing_shear_thm275
 ```
 
 The companion imports the promoted THM-2749 companion and its pinned proved
-dependencies.  It also imports the hash-pinned historical script solely to
-compare the fourteen terminal prefixes.  That comparator is evidence for the
-constructor diagnosis, not a proved mathematical dependency or truth source.
+dependencies.  It also hash-verifies the historical comparator before loading
+it solely to reconstruct and compare the fourteen terminal prefixes; that
+comparator is evidence for the correction boundary, not a proved dependency
+or truth source.
 
 Both modes must byte-match
 `05-knowledge/results/lrc14_root_zero_clutch_mayer_vietoris_wing_shear_thm2751.out`.
 No truth-bearing Python `assert` is used.
 
-`QED` for the proof-complete candidate; it remains reserved until independent
-hostile audit.
+QED.

@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import ast
 from hashlib import sha256
+import importlib.util
 import inspect
 from math import gcd
 from pathlib import Path
@@ -22,7 +23,6 @@ COMP = ROOT / "04-computation"
 sys.path.insert(0, str(COMP))
 
 import lrc14_fully_marked_root_zero_target_profile_thm2749 as marked
-import lrc14_semantic_root_zero_clutch_refinement_probe_20260728 as legacy
 
 
 P = marked.P
@@ -67,24 +67,28 @@ def constructor_audit():
             and "source_clock" not in legacy_names
             and {"clock_comb", "source_clock"} <= canonical_names,
             "source-one constructor distinction changed")
-    return legacy_hash
+    spec = importlib.util.spec_from_file_location(
+        "thm2751_hash_pinned_legacy_comparator", legacy_path
+    )
+    require(spec is not None and spec.loader is not None,
+            "legacy comparator could not be loaded after hash verification")
+    legacy = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(legacy)
+    return legacy_hash, legacy
 
 
-def prefix_audit(module, delayed):
-    """Compare the fourteen actual marked prefixes with the pinned legacy bank."""
+def prefix_audit(module, delayed, legacy):
+    """Verify the historical and canonical terminal prefixes exactly."""
     historical = legacy.build_q3_pair_prefixes(module)
-    masses = []
-    for ell in range(7):
-        for kappa in range(2):
-            old_prefix = historical[ell][6][kappa]
-            new_prefix = delayed[ell][kappa]
-            require(new_prefix == old_prefix,
-                    f"legacy/marked prefix mismatch at {(ell, kappa)}")
-            masses.append(new_prefix[2][-1])
-    require(tuple(masses[:2]) == (0, 0)
-            and tuple(masses[2:]) == (206986279500,) * 12,
-            "legacy/marked prefix masses changed")
-    return tuple(masses)
+    require(all(historical[ell][6] == delayed[ell] for ell in range(7)),
+            "historical and canonical terminal prefixes differ")
+    masses = tuple(
+        tuple(prefix[2][-1] for prefix in delayed[ell])
+        for ell in range(7)
+    )
+    require(masses == ((0, 0),) + ((206986279500, 206986279500),) * 6,
+            "canonical terminal-prefix masses changed")
+    return masses
 
 
 def difference(first, second):
@@ -299,7 +303,7 @@ def solve_circulant_over_q(source, target):
 
 
 def main():
-    legacy_hash = constructor_audit()
+    legacy_hash, legacy = constructor_audit()
     module, _prefixes, _a, _b, rails, present, _starts = (
         lift.m.core.build_carrier_data()
     )
@@ -310,7 +314,7 @@ def main():
         private.build_pair_prefixes(module),
         two.deepest_fork(module),
     )
-    prefix_masses = prefix_audit(module, delayed)
+    prefix_masses = prefix_audit(module, delayed, legacy)
     source = two.exclusive_source(module, 3)
     clock_comb = tuple(
         module.make_comb(module.C1, 182, 26 * ell - 13, 26 * ell + 13)
@@ -329,6 +333,7 @@ def main():
     reductions = {name: [] for name in scalar}
     row_lines = []
     physical_masses = []
+    direct_caches = [{} for _ in range(7)]
     for t in range(P):
         raw_A = tuple(module.subtract_comb(
             raw_static, module.W[2], 182,
@@ -361,10 +366,18 @@ def main():
             "A": packed["A"],
             "B": packed["B"],
             "Ms": packed["M"],
-            # THM-2749 independently recomputes this same common carrier with
-            # the pulled target rail weight and obtains exact raw equality.
-            "Mt": packed["M"],
         }
+        direct_B = direct_target_vector(
+            module, delayed, present, source_weight, B, direct_caches
+        )
+        direct_M = direct_target_vector(
+            module, delayed, present, source_weight, M, direct_caches
+        )
+        require(direct_B == vectors["B"],
+                f"pulled/direct target B disagreed at t={t}")
+        require(direct_M == vectors["Ms"],
+                f"direct target M disagreed with source M at t={t}")
+        vectors["Mt"] = direct_M
         vectors["L"] = tuple(vectors["A"][i] - vectors["Ms"][i]
                                for i in range(7))
         vectors["R"] = tuple(vectors["B"][i] - vectors["Mt"][i]
@@ -412,6 +425,24 @@ def main():
         mass_tuple = tuple(interval_mass(carrier)
                            for carrier in (A, B, M, L, Rwing))
         physical_masses.append(mass_tuple)
+        cut_left = tuple(
+            cut_carrier(module, present, L, ell) for ell in range(7)
+        )
+        cut_left_masses = tuple(interval_mass(row) for row in cut_left)
+        terminal_left = tuple(
+            tuple(marked.intersect(
+                cut_left[ell], marked.prefix_intervals(delayed[ell][kappa])
+            ) for kappa in range(2))
+            for ell in range(7)
+        )
+        require(all(not cell for pair in terminal_left for cell in pair),
+                f"left wing acquired terminal support at t={t}")
+        if 3 <= t <= 11:
+            require(cut_left_masses == (26444880,) * 7,
+                    f"left-wing present/seam mass changed at t={t}")
+        elif t == 12:
+            require(cut_left_masses == (0,) * 7,
+                    "terminal-label left wing survived present/seam cuts")
         row_lines.append(
             f"t={t} pre_relative_interval_mass=(A:{interval_mass(A)},B:{interval_mass(B)},"
             f"M:{interval_mass(M)},L:{interval_mass(L)},R:{interval_mass(Rwing)}) "
@@ -461,7 +492,13 @@ def main():
             and norm_Q == 8492431042211308167354471,
             "primitive target-window norm changed")
     require(norm_Q % 91 == 1,
-            "right-wing target norm lost its 91-unit class")
+            "normalized right-wing shape lost its 91-unit class")
+    normalized_scalar = G // CONTENT
+    require(G % CONTENT == 0
+            and gcd(G, 91) == 91
+            and gcd(normalized_scalar, 13) == 1
+            and gcd(normalized_scalar, 91) == 7,
+            "raw/normalized right-wing scalar boundary changed")
     require(resultants["A"] == resultants["Ms"] == resultants["Mt"]
             == C**12
             and resultants["B"] == B0**12
@@ -537,10 +574,9 @@ def main():
             "zero-left/nonzero-right decoder obstruction changed")
 
     print("THM-2751 FIXED-CLOCK ROOT-ZERO MAYER-VIETORIS WING TARGET SPECTRUM")
-    print("status=RESERVED PROOF-COMPLETE + VERIFIED-EXACT; AWAITING INDEPENDENT AUDIT")
+    print("status=PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED")
     print(f"constructor_audit=legacy_sha256:{legacy_hash} missing:(clock_comb,source_clock) canonical_present=True")
     print(f"prefix_audit=historical_and_actual_Q3_prefixes_equal_14/14 masses={prefix_masses}; first_failure_is_source-one_factor_not_terminal_prefix")
-    print("direct_target_audit=B:t3,t12 and M:t3 pulled_coefficients_equal_forward_coordinate_recomputation")
     for line in row_lines:
         print(line)
     print(f"supports={supports}")
@@ -549,7 +585,10 @@ def main():
     print("W=z^3+...+z^11; U=z^3+...+z^12; Q=2(z^3+...+z^11)+121z^12")
     print("root_profiles=A:R12->9/det1; B:L1->8/det12; Ms:R12->9/det1; Mt:L1->4/det1; L=zero; R:t3..11->4/det1,t12->8/det12")
     print("gains=common Mt/Ms=4/9=12; fixed-clock common-label B/A=8/9=11; global scalar/dihedral impossible because support sizes are 9 versus 10")
-    print(f"primitive_norms=(W:{norm_W},U:{norm_U},Q:{norm_Q}) Q_mod91={norm_Q % 91}")
+    print("direct_target_audit=B_and_M_pulled_equal_direct_for_all_13_labels")
+    print("left_terminal_annihilation=t3..11_present_seam_mass_26444880_each_clock_but_all_14_terminal_cells_empty; t12_present_seam_mass_zero")
+    print(f"normalized_shape_norms=(W:{norm_W},U:{norm_U},Q:{norm_Q}) Q_mod91={norm_Q % 91}")
+    print(f"raw_shape_boundary=gcd(G,91)={gcd(G,91)} normalized_scalar=G/26={normalized_scalar} gcd_normalized_scalar_13={gcd(normalized_scalar,13)} gcd_normalized_scalar_91={gcd(normalized_scalar,91)}")
     print("raw_resultants=(A:C^12,B:(121G)^12,M:C^12,L:0,R:G^12*Norm(Q))")
     print(f"cross_profile_L_times_R={cross} all_target_characters_zero=True resultant={cross_resultant}")
     print("positive_decoders=W^-1=(z2+z6+z10), U^-1=(z+z4+z7+z10) modulo uniform")
@@ -557,8 +596,8 @@ def main():
     print("fixed_profile_decoder_identity=121[A*K]=119[B] modulo the uniform target-null line; coefficient-derived only, not a physical packet action")
     print(f"Q_positive_decoder={decoder_Q}")
     print(f"Q_decoder_convolution={decoded_Q} primitive_delta={delta_Q} integral_index={norm_Q} delta_mod91={delta_Q % 91}")
-    print(f"Q_mod91_decoder=9*K_Q convolution={decoded_Q_mod91}=delta_0+10N; Q is a unit only after rational/localized or mod91 scalar extension")
-    print("conditional_holotopy=right cofiber generates the rational/localized and mod91 C13 augmentation quotients coefficientwise; integrally it contains delta_Q times the quotient but is not surjective; physical attachment to one common-ancestry semantic vertical edge remains absent")
+    print(f"Q_shape_mod91_decoder=9*K_Q convolution={decoded_Q_mod91}=delta_0+10N; Q alone is a unit after rational/localized or mod91 scalar extension")
+    print("conditional_holotopy=the normalized target-window shape Q generates the rational/localized and mod91 augmentation quotients, but the actual right-cofiber coefficient GQ is zero mod91 and G/26 is only an F13 unit; therefore the canonically normalized physical coefficient generates only the F13 augmentation quotient; physical attachment to one common-ancestry semantic vertical edge remains absent")
     print("wing_decoder=IMPOSSIBLE: L functional is identically zero while R is nonzero; no scalar, dihedral, linear convolution, or positive decoder sends L to R")
     print("full_unclocked_boundary=bd53dc4c5 has M=disjoint_union_e M_e and a target augmentation rank drop; this theorem is only the fixed e=1 fibre")
     print("SCOPE: fixed-e=1 rail8 marked source sheet and pulled target sheet; coefficient transport only, no whole-packet action or endpoint current")
