@@ -2,8 +2,8 @@
 id: THM-2714
 title: "C3 metabolic length parity and unique-plane four-adic escape"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Let a finite two-primary discriminant module with isometric C3
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Let a finite
+  two-primary discriminant module with isometric C3
   action admit a C3-stable metabolizer.  Its standard isotypic sector is a
   finite module over the unramified quadratic DVR O=Z_2[omega], and its
   total O-length is even.  Hence a two-elementary standard sector has even
@@ -27,15 +27,14 @@ related:
   - THM-2703-c3-boundary-tree-arm-determinant-standard-plane-gate
 script: 04-computation/c3_metabolic_length_parity_thm2714.py
 output: 05-knowledge/results/c3_metabolic_length_parity_thm2714.out
-script_sha256: 948ae7f5dfedd40d86e22e697744e7e57d293e906393d8d578c54ca2dc6347df
-output_sha256: f2e42da14d2bc17b7eb4017f9b232d02be981d8cf82b1eb30fb56a91a854b335
+script_sha256: 7007f8f6cd98af8e49424e4b243eacb5f5900a6d155739dd79eb26c53f7a72c6
+output_sha256: 92574ca937ea57a4b11c4e9b7d99b87d9f73aaef3fd8b978b86b38e9ba38dc59
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2714 -- C3 metabolic length parity and unique-plane four-adic escape
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2708 sees how many standard `F2[C3]` planes occur in discriminant
 two-torsion.  THM-2711 adds the discriminant pairing and the stable
@@ -456,4 +455,4 @@ This is a precise realization of the user's `2`/`3` clue: the order-three
 symmetry packages binary classes into `F4`, and unimodularity forces those
 packages to occur with even total two-adic depth.
 
-QED (candidate; independent hostile audit pending).
+QED.

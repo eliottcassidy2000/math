@@ -10,5 +10,5 @@ cyclic_r3_exponent6_Horder64_secondary=LIFTABLE
 elementary_W2_diagonal_metabolizer=YES
 s3_integral_nullity1_det=64 smith=(2,2,4,4) Horder=8 overlattice=I_(1,3)
 d4_single_W_length1_metabolizer=NO
-boundary_realization_and_reflection_not_tested
+general_boundary_realization_and_reflection_completion=NOT_TESTED
 PASS

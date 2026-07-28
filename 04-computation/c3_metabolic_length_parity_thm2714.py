@@ -313,7 +313,7 @@ def main() -> None:
     print("elementary_W2_diagonal_metabolizer=YES")
     print("s3_integral_nullity1_det=64 smith=(2,2,4,4) Horder=8 overlattice=I_(1,3)")
     print("d4_single_W_length1_metabolizer=NO")
-    print("boundary_realization_and_reflection_not_tested")
+    print("general_boundary_realization_and_reflection_completion=NOT_TESTED")
     print("PASS")
 
 

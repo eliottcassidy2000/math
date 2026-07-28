@@ -332,7 +332,11 @@ Classify profiles under support operations; study analytic continuation and auto
   restriction via an exact Hermitian `F4` gain-holonomy block.  THM-2711
   adds the mod-four gate: the standard plane must be isotropic inside a
   `C3`-stable discriminant metabolizer; `D4` triality fails, while a doubled
-  `-2` triple is sharp.  Boundary realization and reflection remain open.
+  `-2` triple is sharp.  THM-2714 proves that the standard `Z_2[omega]`
+  sector has even total length: a two-elementary carrier needs two planes,
+  while nullity one survives only through `O/2^(2r)`.  An explicit
+  `S3`-stable `r=1` lattice makes that four-adic escape sharp; effective
+  boundary realization remains open.
   At degree eighteen THM-2314/2316 close sparse supports, THM-2371/2376 close
   `H_2`, and THM-2406 sends `H_4` to the common-root wall; other branches open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
