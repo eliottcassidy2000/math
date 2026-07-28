@@ -1,0 +1,20 @@
+THM-2822 CENTERED SEXTIC LIFT AUDIT -- exact
+assert_nodes=0
+power degrees D/T/E/V/M/A_src = 6/4/3/14/7/7
+power A_src = -2*x*(x - 1)*(2*x**3 - 1)*(x**2 + x + 1)/3
+power square defect = -4*x**2*(x - 1)**2*(x**2 + x + 1)**2/9
+power 1/(1-F) = -4*x**3*(x - 1)*(x**2 + x + 1)
+Chebyshev degrees D/T/E/V/M/A_src = 6/4/3/14/7/7
+Chebyshev A_src = -y*(y - 1)*(y + 1)*(2*y - 1)*(2*y + 1)*(4*y**2 - 3)/3
+Chebyshev square defect = -(y - 1)**2*(y + 1)**2*(2*y - 1)**2*(2*y + 1)**2/9
+Chebyshev 1/(1-F) = -(y - 1)*(y + 1)*(2*y - 1)**2*(2*y + 1)**2
+Faber direct/formula rows checked: j=1..30
+Phi support: j=1 mod 3; Psi support: j=0 mod 3
+R support: j=2 mod 3; R/q lies in q^2 Q[q^4]
+sample K_2 = -q**2/4
+sample K_5 = 9*q**6/512
+sample K_8 = -195*q**10/131072
+centered zero section: P_x(x,0)=0, P_z(x,0)=A_src, deg A_src=7
+general boundary: gcd(2C0*C0'+E0', 2C0*B+A_src)=1 is only necessary
+lower-term hostile control: C0=0, E0=x makes that gcd equal to one
+ALL EXACT CONTROLS PASS
