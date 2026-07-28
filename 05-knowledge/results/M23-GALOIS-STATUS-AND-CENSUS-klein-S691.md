@@ -18,11 +18,18 @@ blur that line.
 - **Over number fields: PARTIAL.** M23 is realized over every number field
   K in which −1 is a sum of two squares (e.g. Q(i)); so the obstruction is
   genuinely arithmetic, not group-theoretic.
-- **Over F₂(t): PROVED (Abhyankar circle, 1990s).** The trinomial
-  **f_t(x) = x²³ + x + t** has Gal(f_t / F₂(t)) = M23; the splitting field
-  is an unramified M23-cover of the affine line in characteristic 2 — the
-  "nice equations for nice groups" phenomenon, tied to the binary Golay
-  code [23,12,7] whose automorphism group is M23.
+- **Over F₂(t): PROVED (Abhyankar, BAMS 27 (1992) / Israel J. Math 88
+  (1994)).** The trinomial **f_t(x) = x²³ + t·x³ + 1** has
+  Gal(f_t / F₂(t)) = M23; writing t = (x²³+1)/x³ gives dt/dx = x⁻⁴ ≠ 0, so
+  this is his celebrated UNRAMIFIED M23-cover of the affine line in
+  characteristic 2 — "nice equations for nice groups", tied to the binary
+  Golay code [23,12,7] whose automorphism group is M23.
+- **CORRECTION (census-caught, this session):** the session's first recall
+  named x²³ + x + t as the M23 trinomial. The census REFUTED that: its
+  factorization types over F_{2^k} are a clean A23 (218 alien types at
+  89.4% of samples; exact witness: over GF(2), x²³+x+1 = (deg 2)(deg 8)
+  (deg 13), and 13 is not an M23 cycle length). The wrong-recall family is
+  kept in the script as the hostile control it turned out to be.
 - **Char-2 ⇒ char-0 transfer is exactly what's missing:** wild ramification
   at infinity has no char-0 shadow; this is the same "the wall is the
   arithmetic of the base, not the group" shape as several repo walls.
@@ -30,19 +37,31 @@ blur that line.
 ## In-repo verification (FINITE-EXACT, not a new theorem)
 
 `04-computation/m23_census.py` (pure Python, no deps): GF(2^k) arithmetic,
-distinct-degree factorization of f_t over many k and t; the factorization
-type of squarefree f_t equals the cycle type of Frobenius on the 23 roots;
-by function-field Chebotarev the empirical distribution must converge to
-M23's class-fraction table (order 10 200 960; 12 cycle types on 23 points:
-1²³, 1⁷2⁸, 1⁵3⁶, 1³2²4⁴, 1³5⁴, 1·2²3²6², 1²7³, 1·2·4·8², 1·11², 2·7·14,
-3·5·15, 23). Decisive negative control: types that live in A23 but NOT in
-M23 (e.g. 1²⁰3, 1¹⁹2², 5·18) must NEVER occur. The 23-cycle frequency must
-approach 2/23 ≈ 0.08696 — note this particular statistic does NOT separate
-M23 from A23 (all 23-cycles are even); the separation is carried by the
-ABSENT types and by the 11², 14-, 15-type frequencies.
+distinct-degree factorization over k = 5..13 (exhaustive t through 2¹²,
+4000 random t at k=13; ≈24,300 factorizations, ~61 s); factorization type
+of squarefree f_t = cycle type of Frobenius on the 23 roots; function-field
+Chebotarev forces convergence to the class-fraction table. M23 (order
+10 200 960) has exactly 12 cycle types on 23 points: 1²³, 1⁷2⁸, 1⁵3⁶,
+1³2²4⁴, 1³5⁴, 1·2²3²6², 1²7³, 1·2·4·8², 1·11², 2·7·14, 3·5·15, 23.
+Decisive negative control: A23-only types (1²⁰3, 1¹⁹2², 2·8·13, …) must
+never occur. Note the 23-cycle frequency 2/23 does NOT separate M23 from
+A23; separation is carried by the absent types.
 
-Census output is frozen next to the script; see the run block at the end of
-this note.
+**Results (frozen in the script's context block + session scratch):**
+- x²³ + t·x³ + 1: **exactly the 12 M23 types, zero aliens, all 12 observed**
+  (rules out proper transitive subgroups such as 23:11); pooled N = 12,160;
+  best-field fit k=12 (exhaustive 4096): max deviation 0.0042, χ² ≈ 4.7 on
+  ~11 dof. Small-field bias is genuine O(q^{-1/2}) arithmetic — sharpest at
+  k=11 where 23 | 2¹¹−1 (that field supplied the lone totally-split 1²³
+  sample). Non-squarefree t: none (unramified over A¹, as the theorem
+  predicts).
+- x²³ + x + t: A23 census (224 types, frequencies fitting A23's 2/z_λ with
+  max |emp−pred| = 0.0129 over all 1255 partitions of 23); non-squarefree
+  only at t = 0, exactly as forced by the derivative identity.
+- Validation stack all green: Rabin irreducibility asserts for the 16
+  hardcoded moduli, exp/log table checks, table-vs-bitpoly multiplication
+  agreement, degree-1 counts vs direct root censuses (k ≤ 8), independent
+  GF(2) DDF transport at t = 1.
 
 ## Why this stays in the repo
 
