@@ -126,7 +126,7 @@ def algebra_check(N, d, x, s):
     )
 
     disc_e = sp.discriminant(data["E"], x)
-    disc_s = sp.discriminant(data["S"], x) if N >= 7 else sp.Integer(1)
+    disc_s = sp.discriminant(data["S"], x) if N >= 6 else sp.Integer(1)
     res_se = sp.resultant(data["S"], data["E"] * x * (x - 1), x)
     res_e = sp.resultant(data["E"], x * (x - 1), x)
     require(

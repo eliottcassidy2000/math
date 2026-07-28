@@ -2,8 +2,8 @@
 id: THM-2805
 title: "General two-pole e=2 Maxwell eliminant and complete Nielsen classification"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For every two-pole partition (d,N-d) with 2<=d<=N-d, the
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every
+  two-pole partition (d,N-d) with 2<=d<=N-d, the
   balanced e=2 response chamber is the common-bitangent locus of
   x^d(x-1)^(N-d).  After removing the two diagonal inflection collisions,
   an explicit Maxwell polynomial has degree N-4 and is saturated by the
@@ -19,15 +19,14 @@ related:
   - THM-2799-one-pole-two-double-zero-chebyshev-response-classification
 script: 04-computation/jc2_general_two_pole_e2_maxwell_thm2805.py
 output: 05-knowledge/results/jc2_general_two_pole_e2_maxwell_thm2805.out
-script_sha256: 58884312c9c704626ddc74fa85245f91411449c0e1f964f53a78c3dc65f4d37f
+script_sha256: bf1b1dcee6ef07920a80b16dcf2beb4be7c995b02eb341a27bda85171f36c9ab
 output_sha256: 10908b5aae6b3e4b746f58240b15f9909b583efd378ab738c48bf1f673bec798
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2805 -- general two-pole e=2 Maxwell eliminant and complete Nielsen classification
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2800 treats the edge partition `(N-1,1)`.  Nothing essential about the
 bitangent mechanism is confined to that edge.  For every two-pole
