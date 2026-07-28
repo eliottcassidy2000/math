@@ -2,15 +2,21 @@
 id: THM-2822
 title: "Sextic response centered-lift mod-three Faber obstruction"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Each of THM-2817's two sextic response carriers has a canonical
-  centered polynomial exact-square lift.  In every constant-coefficient
-  full even Faber bank, its first two flux conditions leave only rows
-  j=2 mod 3 and force R_Q/q to lie in q^2 C[q^4], whereas the carrier
-  requires R_Q/q=1.  Independently, the zero section makes a constant
-  Jacobian impossible.  This excludes only the centered lift, not another
-  multiplier or arbitrary Keller-chart entry of the abstract response.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Each of
+  THM-2817's two sextic response carriers has a canonical centered
+  polynomial exact-square lift.  In every constant-coefficient full even
+  Faber bank, its first two flux conditions leave only rows j=2 mod 3 and
+  force R_Q/q to lie in q^2 C[q^4], whereas the carrier requires R_Q/q=1.
+  Independently, the zero section makes a constant Jacobian impossible.
+  This excludes only the centered lift, not another multiplier or
+  arbitrary Keller-chart entry of the abstract response.
 source: root/sextic-centered-lift-faber-obstruction-2026-07-28
+audit: >
+  thm2822-hostile-audit-2026-07-28 independently rederived both carrier
+  packets, the deck normalization and anti-invariant integration constant,
+  all three mod-three Faber support classes, the zero-section sign, and the
+  exact boundary; it replayed normal, optimized, and stored transcripts and
+  verified both LF hashes: ACCEPT.
 depends_on:
   - THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient
   - THM-2760-exact-prefix-even-faber-flux-gcd-and-smooth-boundary-exclusion
@@ -29,8 +35,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2822 -- the canonical centered lifts miss every Faber degree
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2817 leaves two abstract sextic response carriers.  Both pass all
 universal response tests, so there is no contradiction at that quotient.
