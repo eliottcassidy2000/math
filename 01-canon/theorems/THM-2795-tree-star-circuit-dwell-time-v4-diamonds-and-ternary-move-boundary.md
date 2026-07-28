@@ -2,8 +2,8 @@
 id: THM-2795
 title: "Tree star-circuit dwell time, V4 diamonds, and ternary move boundary"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  The vertex-star vectors of an m-edge tree form one minimal binary
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The vertex-star
+  vectors of an m-edge tree form one minimal binary
   circuit.  Every vertex order is its simple closed prefix walk, and each
   edge difference is exactly that cut coordinate's dwell time; gracefulness
   means the m dwell times are 1,...,m.  An adjacent swap changes one prefix
@@ -28,8 +28,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2795 -- tree star-circuit dwell time, V4 diamonds, and ternary move boundary
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2787 turns graceful labeling into bounded signed path integration.
 THM-2793 turns its gap matrix back into a rooted vertex order.  There is a
@@ -41,6 +40,10 @@ object.  The binary move is literally an affine `V4` diamond.  A ternary
 rotation joins it into the six-state `S3` permutohedron.  The local action is
 a quotient of `C2*C3`, however, and the graceful locus is highly
 disconnected.
+
+The resulting disconnection is a fixed-tree, single-seed
+connectivity/ergodicity obstruction.  It does not rule out a proof that starts
+from several seeds, changes the underlying tree, or uses a nonlocal induction.
 
 ## 1. The vertex stars are one minimal binary circuit
 
