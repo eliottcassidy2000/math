@@ -11,10 +11,18 @@ theorem is the external benchmark's.
 
 | game | record | witness size | status |
 |---|---|---|---|
+| any game, k=1 paths | **2 exactly** | exhaustive n≤5, full POOL5 | floor conjectured; depth essential |
 | loose (literal spec text) | → 1 (unsound) | 14/9 at n=9 | spec bug, report upstream |
 | strict (= verifiable, fixed) | **13/7 ≈ 1.857** | n=8, two witnesses | robust attractor |
-| per-suffix labels, merge-free | **7/4 = 1.750 (= KT99 exponent)** | n=8 | this file |
+| per-suffix labels, merge-free | **7/4 = 1.750 (= KT99 exponent)** | n=8 (×2) and n=9 (t=1) | 3 independent witnesses — a plateau AT the human rung |
 | + legal-slot merges (mode3-v2) | **12/7 ≈ 1.714** | n=7 eff. | annealing → 5/3 |
+
+The 7/4 plateau is the session's most suggestive empirical fact: the
+superset game's merge-free descent stalls exactly at the Katz–Tao 1999
+exponent across three independent annealing runs and two shapes. Either
+the annealer's horizon is short (likely at some level), or the game
+genuinely prices the same difficulty the human ladder priced — both
+readings make the workbench a faithful instrument.
 
 ## The 7/4 witness (per-suffix game, [2,2,2], m=10, r=4, n=8, t=0)
 

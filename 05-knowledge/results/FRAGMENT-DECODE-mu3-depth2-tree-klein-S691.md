@@ -20,9 +20,13 @@ cyclic part μ₃ rotates the three slices**. A depth-2 ternary recursion
 rotation (call it P₀) has a **degenerate fiber — two p[oints/preimages
 coincide]** — the tree counts 3 + 3 + 1 = 7. In certificate-score terms
 (see `04-computation/ak_forcing_engine.py`): a collision in the symmetric
-branch is an *identification*, which lowers the effective vertex count of a
-glued construction from 9 to 7 while edge costs are shared — exactly the
-kind of saving that moves a score of the form (m+r)/(n−t) below a plateau.
+branch is an *identification*. SIGN CORRECTION (late-session, empirically
+settled): identification per se SHRINKS the denominator n − t, which alone
+RAISES the score; its real value is that a merged class inherits all its
+members' incident edges and becomes a species-rich junction hub, making
+forcing cheaper — the numerator savings (m + r) outweigh the denominator
+loss (measured exactly: merge worth 12 = 9+3 versus edge+seed 14 = 10+4 on
+the twin [2,2,2] witnesses at 12/7 vs 7/4).
 **Prediction:** the intended improved-score gadget is a depth-2, 3-branch
 constructible graph whose symmetric branch carries an identification;
 searching structures with dims [3,3] plus a forced two-vertex coincidence

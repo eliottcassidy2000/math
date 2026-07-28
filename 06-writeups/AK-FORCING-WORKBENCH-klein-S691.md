@@ -117,9 +117,11 @@ The three structural loopholes the plateau argument does not close:
    directions backward. Search class C.
 3. **Symmetric-branch degeneration (the owner's μ₃ fragment):** a depth-2
    3-branch recursion whose μ₃-fixed branch carries a coincidence counts
-   3+3+1 = 7 not 9 — an identification that shrinks the denominator's
-   effective n. The verifiable format has no identifications, but T-seeding
-   and shared labels can emulate; see
+   3+3+1 = 7 not 9. SIGN NOTE: the identification's value is NOT the
+   smaller denominator (shrinking n − t alone raises the score); it is hub
+   manufacture — the merged class inherits every member's incident species
+   and becomes a free junction. Measured: merge = 12/7 vs edge+seed = 7/4
+   on twin [2,2,2] witnesses. See
    `05-knowledge/results/FRAGMENT-DECODE-mu3-depth2-tree-klein-S691.md`.
 
 If the plateau is a theorem for ALL constructible graphs, then the strict
