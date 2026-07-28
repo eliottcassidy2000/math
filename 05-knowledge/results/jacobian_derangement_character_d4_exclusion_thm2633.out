@@ -1,6 +1,7 @@
 THM-2633 derangement-character exact controls
 quartic_group_orders=C4:4,V4:4,D4:8,A4:12,S4:24
 character_support_fixed_counts=C4:{0:2},V4:{0:2},D4:{0:4},A4:{1:8},S4:{0:6,2:6}
+fixed_point_normal_closure_orders=C4:1,V4:1,D4:4,A4:12,S4:24
 quartic_gate=C4:EXCLUDED,V4:EXCLUDED,D4:EXCLUDED,A4:NOT_EXCLUDED,S4:NOT_EXCLUDED
 D4_deck_kernel_order=4 deck_odd=4 deck_odd_survivor_rows=4
 residual_targets=A4:3cycle_k1,S4:transposition_k1_or_k2
@@ -8,4 +9,5 @@ dominant_nonetale_hostile=Jac:x;image_on_u0:only_(0,0);generic_k:0
 local_character_hostile=S3_transposition:k1
 local_D4_near_miss=edge:k0,fourcycle:k0
 source_unit_hostile=Gm_open_immersion_can_omit_divisor
-exact assertions passed: 44
+target_pi1_hostile=Gm_square_map:C2_finite_etale
+exact assertions passed: 46

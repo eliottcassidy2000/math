@@ -354,16 +354,21 @@ Classify profiles under support operations; study analytic continuation and auto
   For G1, THM-2598/MISTAKE-297 originally left `D4,A4,S4`.
   [THM-2633](../01-canon/theorems/THM-2633-derangement-character-obstruction-and-d4-keller-exclusion.md)
   now excludes `D4` geometric monodromy for polynomial Keller maps in every
-  dimension.  Equivalently, every Keller point stabilizer surjects onto
-  monodromy abelianization: openness and constant source units force
-  `1<=k_D<=d-1` and an inertia-fixed sheet over every Jelonek divisor, while
-  Kummer support forbids a character trivial on the stabilizer.  Thus
-  `C4,V4,D4` fail and only `A4,S4` remain at degree four.  `A4` character
+  dimension.  Openness and constant source units force
+  `1<=k_D<=d-1` and an inertia-fixed sheet over every Jelonek divisor; purity
+  then forces the actual affine Jelonek inertia subgroups to normally
+  generate monodromy.  Hence every point stabilizer normally generates `G`,
+  surjects onto `G^ab`, and detects every prime-cyclic character.  In `D4`
+  the fixed-point normal closure is only the order-four source-deck kernel,
+  equivalently the nonzero deck character is supported on derangements.
+  Thus `C4,V4,D4` fail and only `A4,S4` remain at degree four.  `A4` character
   support has three-cycle inertia and `k=1`; `S4` sign support has
-  transposition inertia and `k=1` or `2`.  THM-2612/2627/2628's `D4` ledgers
-  are conditional near-miss controls.  Corrected THM-2621's exact trace and
-  zero residues explain why residue refinement was downstream of this image-
-  incidence contradiction.  No `A4/S4`, `JC(2)`, or `DC(2)` closure follows.
+  transposition inertia and `k=1` or `2`.  THM-2612/2627/2628's `D4` pole,
+  character, and opposite-pair ledgers remain exact near-miss controls but
+  are no longer a live lane.  Corrected THM-2621's exact trace and zero
+  residues explain why residue refinement was downstream of this simpler
+  image-incidence contradiction.  No `A4/S4`, `JC(2)`, or `DC(2)` closure
+  follows.
   THM-2465 makes the affine point-cap face planar degree four; G1 remains open.
   At degree eighteen, THM-2314/2316 close sparse supports,
   THM-2371/2376 close `H_2`, and audited THM-2406 forces THM-2389's `H_4`

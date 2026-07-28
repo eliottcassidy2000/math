@@ -1,21 +1,23 @@
 ---
 id: THM-2633
-title: "Derangement-character / point-stabilizer obstruction and D4 Keller exclusion"
+title: "Affine inertia normal generation, point stabilizers, and D4 Keller exclusion"
 status: >
   PROVED + VERIFIED-EXACT + TWO INDEPENDENT HOSTILE AUDITS.  Let a complex
   polynomial Keller map of affine n-space have finite generic degree and
   geometric monodromy G on its generic
   sheets.  Every irreducible target divisor meets the open image in a dense
   open set, so every Jelonek component has at least one finite affine inverse
-  branch and its local inertia fixes a sheet.  On the other hand, every
-  nonzero prime-cyclic character of G has nonzero Kummer inertia on some
-  Jelonek component.  Equivalently, if H is a point stabilizer, restriction
-  Hom(G,C_l) -> Hom(H,C_l) is injective for every prime l, or H surjects onto
-  G^ab.  Also every Jelonek component has 1<=k_D<=d-1 finite branches.
-  Consequently G cannot admit a nonzero character whose nonzero elements are
-  all derangements in the sheet action.  The source-deck
-  character of D4 has exactly this property: its nonzero elements are the two
-  edge reflections and two four-cycles.  Hence D4 is impossible as the
+  branch and its local inertia fixes a sheet.  Purity and the trivial etale
+  fundamental group of affine space then force the actual affine Jelonek
+  inertia subgroups to normally generate G.  Hence every point stabilizer H
+  normally generates G and surjects onto G^ab; restriction
+  Hom(G,C_l)->Hom(H,C_l) is injective for every prime l.  Also every Jelonek
+  component has 1<=k_D<=d-1 finite branches.  Consequently G cannot admit any
+  nontrivial quotient killed by all sheet-fixing elements, in particular a
+  nonzero character supported on derangements.  In D4 the
+  normal closure of the sheet-fixing elements is the proper source-deck
+  kernel J, whose nonzero quotient coset consists of the two edge reflections
+  and two four-cycles.  Hence D4 is impossible as the
   geometric monodromy of a polynomial Keller map in every dimension.  Among
   transitive quartic groups the same gate excludes C4 and V4, while it does
   not exclude A4 or S4.  Thus the existing planar and G1 degree-four
@@ -33,12 +35,12 @@ related:
   - THM-2628-d4-opposite-pair-escape-and-deck-pole-census
 script: 04-computation/jacobian_derangement_character_d4_exclusion_thm2633.py
 output: 05-knowledge/results/jacobian_derangement_character_d4_exclusion_thm2633.out
-script_sha256: 69060647ee2b2f752225893974fc9182dfb298eb182d63ec2f86dc4585b14344
-output_sha256: 62a53652f9b3c8a864b7a658ce2cf2ab6cc2bf0ac8299d6d0de54f67dc293643
+script_sha256: 70535c0c85d949257b6a1af2a29358e83f603955fe6a5c75c95b6763971f2a83
+output_sha256: e949156e96895a1c6ceb5ecd8a8ea50d1207070ae319c7a3ff47b4bcc7fb7dfb
 hash_basis: working-tree bytes (LF)
 ---
 
-# THM-2633 -- a Keller boundary character must see a fixed sheet
+# THM-2633 -- affine boundary inertia normally generates Keller monodromy
 
 **PROVED + VERIFIED-EXACT + TWO INDEPENDENT HOSTILE AUDITS.**
 
@@ -49,9 +51,10 @@ nonconstant units.  Together these facts force a finite affine branch over
 the generic point of every target divisor.  This turns the deck-character
 support separation from a two-component normal form into a contradiction.
 
-The mechanism is group-theoretic and applies in every dimension.
+The mechanism is group-theoretic and applies in every dimension.  The
+character obstruction is its abelian shadow.
 
-## 1. General derangement-character obstruction
+## 1. General fixed-point normal-generation theorem
 
 Let
 
@@ -73,47 +76,75 @@ Let `Omega` be its `d` geometric generic inverse sheets and let
 G <= Sym(Omega)                                             (3)
 ```
 
-be the transitive geometric monodromy group.  Suppose that for some prime
-`ell` there is a nonzero character
+be the transitive geometric monodromy group.  Let `A_F` be the affine Jelonek
+set, let `I_D` be geometric inertia at each irreducible component `D`, and
+define
 
 ```text
-chi:G -> C_ell                                             (4)
+N_Jel=normal closure in G of {I_D:D component of A_F},     (4)
+
+N_fix=normal closure in G of {g:Fix_Omega(g)!=empty}.     (4a)
 ```
 
-with the derangement-support property
+Then the strongest form of the theorem is
 
 ```text
-chi(g)!=0  implies  Fix_Omega(g)=empty.                   (5)
+N_Jel=G,                    and therefore N_fix=G.         (5)
 ```
 
-Then no such Keller map exists.
+If `H` is the stabilizer of one sheet, an element fixes some sheet exactly
+when it lies in a conjugate of `H`.  Hence `N_fix` is the normal closure of
+`H`, and the point-stabilizer form of the primary theorem is
 
-Equivalently, a necessary group-theoretic condition for a transitive group
-to occur as Keller monodromy is:
+```text
+normal closure_G(H)=G.                                  (5a)
+```
+
+This gives the derangement-character obstruction as an immediate abelian
+corollary.  Suppose that for some prime `ell` there is a nonzero character
+
+```text
+chi:G -> C_ell                                           (5b)
+```
+
+with
+
+```text
+chi(g)!=0  implies  Fix_Omega(g)=empty.                  (5c)
+```
+
+Then `chi` vanishes on every generator of `N_fix`, so `N_fix` lies in the
+proper subgroup `ker(chi)`, contrary to (5).  Hence no such Keller map
+exists.
+
+In character language, this gives the following necessary condition for a
+transitive group to occur as Keller monodromy:
 
 > every nonzero prime-cyclic character is nonzero on at least one element
 > that fixes a generic sheet.
 
-If `H` is the stabilizer of one sheet, an element fixes some sheet exactly
-when it lies in a conjugate of `H`.  Since a character is conjugacy invariant,
-(5) is equivalent to `chi|_H=0`.  The obstruction can therefore be stated in
-either of the following equivalent forms:
+Since a character is conjugacy invariant, (5c) is equivalent to
+`chi|_H=0`.  The abelian shadow can therefore be stated in either of the
+following equivalent forms:
 
 ```text
 res_H^G:Hom(G,C_ell) -> Hom(H,C_ell) is injective
 for every prime ell;
 
-H -> G^ab is surjective.                                 (5a)
+H -> G^ab is surjective.                                 (5d)
 ```
 
 For the second equivalence, if the image of `H` in the finite abelian group
 `G^ab` were proper, the nonzero quotient would have a `C_ell` quotient for
 some prime `ell`; conversely such a character witnesses failure of
-surjectivity.  Thus the derangement theorem and the point-stabilizer
-abelianization gate are the same theorem, not two independent restrictions.
+surjectivity.  Thus the derangement-character theorem and point-stabilizer
+abelianization gate are the same abelian corollary.  The normal-generation
+law (5a) is strictly stronger: it also forbids nonabelian quotients killed by
+all point stabilizers.
 
 The proof has two independent halves: an open-image branch lemma and a
-Kummer localization lemma.
+purity/normal-generation lemma.  Kummer theory then localizes the abelian
+corollary to a specific Jelonek component.
 
 ## 2. Open image forces a branch over every divisor
 
@@ -215,7 +246,7 @@ codim(A^n minus F(A^n))>=2.                              (11)
 For `n=2`, a non-surjective Keller image can therefore miss only finitely
 many target points, never a curve.
 
-## 3. A nonzero character must occur at a Jelonek divisor
+## 3. Boundary inertia normally generates
 
 Let `A_F` be the nonproper-value set.  By the standard purity theorem for a
 generically finite polynomial map between affine spaces, it is empty or a
@@ -228,7 +259,47 @@ U=A^n minus A_F.                                         (12)
 ```
 
 Over `U`, the restriction of `F` is finite etale.  Its connected Galois
-closure is therefore a finite-etale `G`-cover.  Since
+closure is therefore a finite-etale `G`-cover.
+
+Let `N_Jel` be the normal subgroup generated by the geometric inertia groups
+`I_D` over all irreducible components of `A_F`.  The connected quotient cover
+with group `G/N_Jel` has trivial inertia at every affine codimension-one
+boundary valuation.  Normalize `A^n` in its function field.  The resulting
+finite map is unramified in codimension one, so Zariski--Nagata purity makes
+it finite etale everywhere over `A^n`.  But
+
+```text
+pi_1^et(A^n_C)=1.
+```
+
+Therefore the connected quotient is trivial and
+
+```text
+N_Jel=G.                                                 (12a)
+```
+
+Every `I_D` fixes the nonempty set `S_D` pointwise by (9)--(10).  Hence every
+element used to generate `N_Jel` is sheet-fixing, so
+
+```text
+G=N_Jel subseteq N_fix subseteq G.
+```
+
+This proves the primary assertion (5).  If `A_F` is empty, the same argument
+starts with `N_Jel=1` and says directly that `G=1`.
+
+There are two scope guardrails.  First, the quotient cover is connected
+because it is the quotient of the connected Galois closure by the normal
+subgroup `N_Jel`; triviality is not being inferred from a disconnected finite
+etale algebra.  Second, projective infinity is irrelevant to the purity step:
+the normalization is being extended over the affine target `A^n`, and every
+missing finite divisor is already a component of `A_F`.
+
+### 3.1 Kummer localization of the character corollary
+
+The stronger normal-generation proof does not need a character.  When a
+prime-cyclic character is present, Kummer theory says exactly where its
+abelian obstruction would have to occur.  Since
 
 ```text
 O(U)=C[y_1,...,y_n,1/(f_1...f_c)]
@@ -249,7 +320,7 @@ Surjective monodromy `pi_1(U)->G` makes pullback injective on characters:
 Hom(G,C_ell) -> H^1_et(U,mu_ell).                        (14)
 ```
 
-Thus the nonzero `chi` in (4) has a nonzero valuation coordinate at some
+Thus the nonzero `chi` in (5b) has a nonzero valuation coordinate at some
 component `D=V(f_i)`.  Equivalently, the restriction of `chi` to tame local
 inertia at `D` is nonzero.  For a generator `g_D` of the cyclic inertia image,
 
@@ -263,20 +334,22 @@ extend its cyclic quotient etale over all of `A^n`; affine space has no
 nontrivial connected finite-etale cover.  This is the same content as the
 affine Kummer calculation (13).
 
-Equation (10) says that `g_D` fixes a sheet, whereas (5) says that it is a
-derangement.  This contradiction proves the general theorem.  If `c=0`,
+Equation (10) says that `g_D` fixes a sheet, whereas (5c) says that it is a
+derangement.  This recovers the character corollary componentwise.  If `c=0`,
 (13)--(14) already give the contradiction before any component is chosen.
 
 The roles of the hypotheses are now explicit:
 
 - etaleness supplies openness and extension of every finite local inverse;
 - the trivial unit group of affine space forbids an omitted divisor;
-- Kummer theory forces every nonzero character to spend parity on an affine
-  Jelonek component; and
+- purity forces the affine boundary inertia groups to normally generate all
+  monodromy;
+- Kummer theory locates every nonzero abelian character on an affine Jelonek
+  component; and
 - the derangement-support condition converts that parity into loss of all
   finite branches.
 
-## 4. The `D_4` source-deck character is derangement-supported
+## 4. The `D_4` fixed-point closure is the deck kernel
 
 Use the square conventions
 
@@ -294,6 +367,16 @@ The point stabilizer is `H=<s>`, and
 J=N_G(H)=<s,z>.                                          (17)
 ```
 
+The only nonidentity elements of `D_4` fixing a sheet are the two diagonal
+reflections `s` and `zs`.  Their normal closure is
+
+```text
+N_fix=<s,zs>=J,                 |J|=4<8=|D4|.           (17a)
+```
+
+This already contradicts the primary normal-generation law (5).  The
+source-deck character is the exact abelian witness to the proper quotient.
+
 The quadratic source-deck intermediate has character
 
 ```text
@@ -308,7 +391,8 @@ G minus J={r,r^3,rs,r^3s}.                               (19)
 
 The first two elements are four-cycles.  The last two are the edge
 reflections `(0 1)(2 3)` and `(0 3)(1 2)`.  All four are fixed-point-free in
-the root action.  Thus `chi_deck` satisfies (5), and the general theorem gives
+the root action.  Thus `chi_deck` satisfies (5c), and either form of the
+general theorem gives
 
 ```text
 no polynomial Keller map A^n_C -> A^n_C
@@ -323,15 +407,15 @@ choice of primitive quartic coordinate.
 ## 5. Exact quartic group boundary
 
 There are five transitive subgroups of `S_4` up to conjugacy.  Applying the
-same character test gives
+normal-closure theorem and its character shadow gives
 
-| group | character used | nonzero support | result of THM-2633 |
-|---|---|---|---|
-| `C4` | quotient by `<r^2>` | two four-cycles | excluded |
-| `V4` | any nonzero `C2` character | two double transpositions | excluded |
-| `D4` | source-deck character (18) | edge reflections and four-cycles | excluded |
-| `A4` | quotient by the normal `V4` | three-cycles, each fixing one sheet | not excluded |
-| `S4` | sign | transpositions as well as four-cycles | not excluded |
+| group | `|N_fix|` | character used | nonzero support | result |
+|---|---:|---|---|---|
+| `C4` | `1` | quotient by `<r^2>` | two four-cycles | excluded |
+| `V4` | `1` | any nonzero `C2` character | two double transpositions | excluded |
+| `D4` | `4` | source-deck character (18) | edge reflections and four-cycles | excluded |
+| `A4` | `12` | quotient by the normal `V4` | three-cycles, each fixing one sheet | not excluded |
+| `S4` | `24` | sign | transpositions as well as four-cycles | not excluded |
 
 Thus the regular `C4,V4` lanes and the dihedral `D4` lane are removed by this
 one gate.  (The solvable group `A4` is not removed.)  In the existing
@@ -460,7 +544,7 @@ R_fix=tT^3-T=T(tT^2-1)                                  (24)
 has one finite branch `T=0` and two escaping branches `T=+-t^(-1/2)`.
 Inertia is a transposition: its `S_3` sign is nonzero, but it fixes the finite
 branch.  Thus Kummer parity plus `k_D>0` is not by itself contradictory.  The
-support condition (5) is load-bearing and fails exactly for `A_4` and `S_4`
+support condition (5c) is load-bearing and fails exactly for `A_4` and `S_4`
 in the quartic table.
 
 ### 7.4 The old `D_4` local rows are sharp but nonglobal
@@ -483,6 +567,21 @@ its image is open and surjective, but it is not Keller and its character
 ramification lies on a finite critical-value divisor rather than a Jelonek
 component.
 
+### 7.5 The affine target's trivial etale fundamental group is load-bearing
+
+After restricting the same map to
+
+```text
+G_m -> G_m,                    z |-> z^2,
+```
+
+it becomes a connected finite-etale `C_2`-cover with regular monodromy.  Its
+nonidentity element is a derangement and there is no finite boundary inertia
+inside `G_m`.  The quotient survives because `pi_1^et(G_m)` is nontrivial;
+the missing valuations `0` and infinity lie outside that target.  This is the
+sharp hostile to replacing the affine target `A^n` by an arbitrary smooth
+affine variety in the purity/normal-generation argument.
+
 ## 8. Exact verification and scope
 
 Run
@@ -493,11 +592,13 @@ python3 -O 04-computation/jacobian_derangement_character_d4_exclusion_thm2633.py
 ```
 
 Both modes byte-match the stored transcript.  The companion constructs all
-five transitive quartic groups, checks the displayed character kernels and
-fixed-point counts, proves that the `C4`, `V4`, and `D4` character supports
-consist entirely of derangements, and exhibits the fixed-point obstruction in
-`A4` and `S4`.  It also exhausts the `D4` deck-odd survivor rows and verifies
-the exact local and non-etale hostiles (23)--(25).
+five transitive quartic groups, computes the fixed-point normal-closure orders
+`1,1,4,12,24`, checks the displayed character kernels and fixed-point counts,
+proves that the `C4`, `V4`, and `D4` character supports consist entirely of
+derangements, and verifies that the `D4` normal closure is exactly `J`.  It
+also exhibits the surviving fixed-point types in `A4/S4`, exhausts the `D4`
+deck-odd survivor rows, and checks the exact local and non-etale hostiles
+(23)--(25).
 
 The theorem excludes one full geometric-monodromy lane in every dimension.
 The point-stabilizer formulation (5a) and strict branch bound (9a) are formal

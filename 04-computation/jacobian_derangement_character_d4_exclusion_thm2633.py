@@ -44,6 +44,14 @@ def generated(generators):
     return frozenset(out)
 
 
+def normal_closure(group, seeds):
+    conjugates = {
+        compose(compose(g, h), inverse(g))
+        for g in group for h in seeds
+    }
+    return generated(tuple(conjugates))
+
+
 def power(p, exponent):
     out = tuple(range(len(p)))
     for _ in range(exponent):
@@ -132,6 +140,23 @@ require(gate == {
     "S4": False,
 }, "quartic derangement-character boundary changed")
 
+# Stronger nonabelian gate: sheet-fixing elements must normally generate the
+# full monodromy group for a Keller cover.
+fixed_point_normal_closure_orders = {}
+for name, (group, _) in groups_and_kernels.items():
+    seeds = frozenset(g for g in group if fixed_points(g))
+    closure = normal_closure(group, seeds)
+    fixed_point_normal_closure_orders[name] = len(closure)
+require(fixed_point_normal_closure_orders == {
+    "C4": 1,
+    "V4": 1,
+    "D4": 4,
+    "A4": 12,
+    "S4": 24,
+}, "quartic fixed-point normal-closure boundary changed")
+require(normal_closure(D4, frozenset(g for g in D4 if fixed_points(g))) == J,
+        "D4 fixed-point normal closure is not the deck kernel")
+
 # Every D4 deck-odd element admits only the empty inertia-fixed survivor set.
 d4_deck_odd = D4 - J
 require(d4_deck_odd == frozenset((r, power(r, 3), edge, other_edge)),
@@ -215,6 +240,7 @@ require(sp.diff(q**2, q) == 2*q,
 print("THM-2633 derangement-character exact controls")
 print("quartic_group_orders=C4:4,V4:4,D4:8,A4:12,S4:24")
 print("character_support_fixed_counts=C4:{0:2},V4:{0:2},D4:{0:4},A4:{1:8},S4:{0:6,2:6}")
+print("fixed_point_normal_closure_orders=C4:1,V4:1,D4:4,A4:12,S4:24")
 print("quartic_gate=C4:EXCLUDED,V4:EXCLUDED,D4:EXCLUDED,A4:NOT_EXCLUDED,S4:NOT_EXCLUDED")
 print(f"D4_deck_kernel_order={len(J)} deck_odd={len(d4_deck_odd)} deck_odd_survivor_rows={d4_deck_odd_survivor_rows}")
 print("residual_targets=A4:3cycle_k1,S4:transposition_k1_or_k2")
@@ -222,4 +248,5 @@ print("dominant_nonetale_hostile=Jac:x;image_on_u0:only_(0,0);generic_k:0")
 print("local_character_hostile=S3_transposition:k1")
 print("local_D4_near_miss=edge:k0,fourcycle:k0")
 print("source_unit_hostile=Gm_open_immersion_can_omit_divisor")
+print("target_pi1_hostile=Gm_square_map:C2_finite_etale")
 print(f"exact assertions passed: {checks}")
