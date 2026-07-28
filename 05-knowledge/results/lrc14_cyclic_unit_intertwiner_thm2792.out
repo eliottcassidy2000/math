@@ -1,0 +1,16 @@
+THM-2792 CYCLIC UNIT INTERTWINER SCRATCH AUDIT
+dependency_invoice=THM2625 zero_modes=2184; THM2790 nonzero_modes=26208; total_modes=28392
+split_group_algebra=K[C13] -> K^13 by evaluation at all 13 characters; unit iff every Fourier coordinate is nonzero
+A_normalized=z^6(1+z); A_inverse=(1/2)z^7(1-z+z^2-...+z^12)
+integral_boundary=det(I+shift)=2; one_12x12_minor=1; Smith=(1^12,2)
+integrality_criterion=for integral J, J*A_normalized^(-1) is integral iff J(1) is divisible by 2; Boolean census integral/half=4096/4096
+intertwiner=the cyclic generators define the coordinate-free module isomorphism F(r*A)=r*J; in chosen origins its unique circulant kernel is T=J*A_inverse
+origin_law=169 source/target origin pairs obey T' = z^(h_A-h_E)T; endpoint-only row change is covariance of the same abstract F
+set_level_boundary=all 13 scalar-monomial transports preserve support(A)=2, while THM2790 gives inherited support(J)=13; F is not a pointwise torsor identification
+bipositive_boundary=only 13 singleton support patterns admit a coefficientwise-nonnegative inverse; bi-positive circulant isomorphisms are positive scalar monomials, while A_normalized is the sharp one-way-positive/signed-inverse control
+coordinate_law=a formal common polynomial reindexing z->z^(u^-1) carries T covariantly
+frame_hostile=tagged P_j=2^j,Q_j=3^j reject all 143 nonidentity-scaling/origin pairs; there is no formal frame-reindexing identity, but this is not a computation on the canonical current
+positive_hostile=J=delta0 has all 13 modes but T=A_inverse has signs +:7 -:6
+lower_central_hostile=1+u and 1+u^53028 have the same transfer 1+z, but the latter has first transgression 4079 mod13=10
+scope=origin-free characteristic-zero module isomorphism after choosing the oriented group action; no integral/bi-positive/set-level realization, one-way positivity decision, global frame-natural family, physical descent, or ancestry intertwiner
+ALL CHECKS PASSED
