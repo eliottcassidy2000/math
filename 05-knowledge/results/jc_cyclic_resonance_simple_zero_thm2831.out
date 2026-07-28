@@ -1,0 +1,16 @@
+THM-2831 CYCLIC RESONANCE SIMPLE-ZERO AUDIT
+
+zero-source active Faber rows
+R= 8 D=11 live= 3 top=T^5 coeff=-195/131072
+R=11 D=15 live= 4 top=T^7 coeff=2261/16777216
+R=14 D=19 live= 5 top=T^9 coeff=-108675/8589934592
+R=17 D=23 live= 6 top=T^11 coeff=1335015/1099511627776
+R=20 D=27 live= 7 top=T^13 coeff=-33296263/281474976710656
+
+simple-zero valuation dichotomy
+a=0 gives -e; a>=1 gives a+ell(2a-1)>=2: PASS
+
+top-only UFD resonance arithmetic
+S exponent=(D+1)/2 is nondivisible; c=0 merges to D(N+1): PASS
+
+RESULT: PASS
