@@ -111,6 +111,11 @@ the mixed `D`/slope face remains positive.  Ledger `165`.
   speed `55` (gap through `64`).  Extend only with a structural filter.
 - **Exact rows.** THM-1002/2047 reduce fixed rows to rational vertices;
   HYP-8900 is exact on examples, not uniform.
+- **Foreign-base delayed phase.** A finite-exact fixed-point scan of THM-2693's
+  raw word finds no recurrent integer multiplier below `18`, then finds exactly
+  `4/17,13/17` for multiplier `18`.  The first point is THM-789's old hostile
+  anchor.  This is a design target only: no admissible handoff is known to
+  induce multiplier `18` or even the congruence class `1 mod 17`.
 - **Artanh/Gibbs.** THM-2143's criterion is exact, but current fugacities fail
   defect-seven hostiles and signed log-Riesz shortcuts are unsound.
 
