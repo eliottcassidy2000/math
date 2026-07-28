@@ -29,8 +29,8 @@ related:
   - THM-2695-secondary-kummer-bockstein-picard-divisibility-spectrum-and-prime-alignment-boundary
 script: 04-computation/jacobian_s4_reflection_relative_different_thm2696.py
 output: 05-knowledge/results/jacobian_s4_reflection_relative_different_thm2696.out
-script_sha256: 7158a8cc523c5f75b8bfa6a2bbf502dc31dd762df15aa519d0a9a488f84dbfaa
-output_sha256: 2e55ad6ea545847f891fbc9cf04c99a90ffca5ea9f4818c9194b6627d2d2393f
+script_sha256: 56e954b84fd55c46692108a78e480917e2a204f751b58822390b51fbd3ab8ffc
+output_sha256: db38a15ba6d4d61cced3fcc8aff038a5b842c943b1e378f3e60dfce4d7439689
 hash_basis: LF-normalized bytes
 ---
 
@@ -463,5 +463,6 @@ Both commands reproduce, byte for byte after LF normalization,
 The script uses explicit `require` checks.  It verifies the `C2/C3`
 standard-plane action, all root and coefficient formulas, both discriminant
 normalizations, the relative Jacobian, one nontrivial generator change, one
-dominant sandwich, the planar resultant and linear subresultant, the singular
-gradient, and the two normalization preimages.
+dominant sandwich, the planar lexicographic elimination kernel, resultant and
+linear subresultant, the singular gradient, and the two normalization
+preimages.

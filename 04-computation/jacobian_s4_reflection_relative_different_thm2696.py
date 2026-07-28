@@ -156,6 +156,20 @@ R_c = (
 )
 require(sp.expand(R_c.subs({At: slice_A, Bt: slice_B, dt: slice_d})) == 0,
         "constant-different image relation failure")
+slice_groebner = sp.groebner(
+    (At - slice_A, Bt - slice_B, dt - slice_d),
+    u, v, At, Bt, dt,
+    order="lex",
+    domain=sp.QQ.frac_field(c),
+)
+elimination_rows = [
+    row.as_expr()
+    for row in slice_groebner.polys
+    if not row.as_expr().has(u) and not row.as_expr().has(v)
+]
+require(len(elimination_rows) == 1 and
+        sp.expand(4 * elimination_rows[0] - R_c) == 0,
+        "constant-different contraction kernel failure")
 
 w = dt + c
 slice_cubic = u**3 - At * u - 2 * w
@@ -194,6 +208,7 @@ for label, preimage in (("first", first_preimage), ("second", second_preimage)):
                     for value, target in zip(values, (-2 * t, t**2, -c)))
     require(reduced == (0, 0, 0), f"{label} singular preimage failure")
 print("constant_J0_slice_image_relation_resultant_and_birational_recovery: PASS")
+print("constant_J0_slice_lex_elimination_kernel=(Rc): PASS")
 print("constant_J0_slice_no_extraneous_component_gcd: PASS")
 print("constant_J0_slice_singular_double_preimage_t^3=-8c^2: PASS")
 print("scope=fixed_S4_quotient_and_polynomial_coordinate_family_only; general_S4_JC2_DC2_open")
