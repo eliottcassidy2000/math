@@ -2,13 +2,19 @@
 id: THM-2771
 title: "Joint C7-by-C13 right-wing spectrum, target-uniformizer decoder, and commuting-square boundary"
 status: >
-  RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING
-  INDEPENDENT AUDIT.  The physical 7-by-13 cofiber table, its primitive
-  cyclotomic sectors, the intrinsic mod-13 coefficient Bockstein decoder,
-  and the chart-by-target commuting-square boundary have exact companions
-  replayed byte-identically under normal and optimized Python.  Until an
-  independent audit promotes this file, no result may depend on it.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The physical
+  7-by-13 cofiber table, its primitive cyclotomic sectors, the intrinsic
+  mod-13 coefficient Bockstein decoder, and the chart-by-target
+  commuting-square boundary have exact companions replayed byte-identically
+  under normal and optimized Python.  The decoded chart cochain supplies the
+  exact coefficient-side correction -a on all seven charts; common physical
+  ancestry and the endpoint-dipole-to-root-deck intertwiner remain open.
 source: root/joint-clock-target-wing-holotopy-2026-07-28
+audit: >
+  root/audit-2771-bockstein-2026-07-28 independently reconstructed the raw
+  content and mod-13 table, epsilon expansion and socle-qualified decoder,
+  intrinsic Bockstein normalization, every decoded row, C*N7=-N7, physical
+  typing debts, all four LF hashes, and both normal/-O/stored replays: ACCEPT.
 depends_on:
   - THM-2749-fully-marked-root-zero-clutch-and-target-character-profile
   - THM-2751-root-zero-clutch-mayer-vietoris-wing-shear
@@ -31,8 +37,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2771 -- joint clock-target wing spectrum and target-uniformizer boundary
 
-**RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING
-INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The corrected THM-2751 right cofiber has substantially more structure than
 either of its one-variable shadows suggests.  Retaining the physical
@@ -230,7 +235,7 @@ where `I` is the full target augmentation ideal.  In particular
 Under the target displacement `u -> u^a`, this becomes
 `7a[u-1]`; orientation reversal gives the algebraic `-7a` tangent invoice.
 
-An explicit inverse factor is
+An explicit augmentation-ideal decoder is
 
 ```text
 K=(7,3,3,3,12,2,9,10,9,8,10,4,0) in the u basis,    (17)
@@ -242,8 +247,11 @@ and exact cyclic convolution proves
 S*K=u-1                    in F_13[C_13].             (18)
 ```
 
-This is an augmentation-ideal decoder, not an inverse of `S` in the whole
-local algebra and not a full `(Z/91)[C_91]` inverse.
+Equivalently, `K` is an inverse of `V` modulo `epsilon^12`; with the printed
+representatives one has `V*K=1+3 epsilon^12`, and multiplication by
+`epsilon` kills the socle error.  Thus `(18)` is exact, but `K` is not a
+full inverse of `V` or `S` in the whole local algebra and is not a full
+`(Z/91)[C_91]` inverse.
 
 ## 4. Intrinsic Bockstein and the sparse chart cochain
 
@@ -306,9 +314,9 @@ pointwise.  This makes the admissible-theta selector irrelevant **inside the
 coefficient algebra**.
 
 The qualification is load-bearing.  Operations `(20)--(25)` divide a raw
-coefficient by `13`, convolve its target labels, and uniformly average its
-chart coordinate.  No proved physical map carries those operations through
-one common-ancestry endpoint packet or transition square.  Uniform averaging
+coefficient by `13`, convolve its target labels, and take a uniform chart
+sum/convolution.  No proved physical map carries those operations through
+one common-ancestry endpoint packet or transition square.  The uniform sum
 also destroys local chart provenance.
 
 There are two different coordinate identifications here.  The physical
@@ -417,4 +425,12 @@ support, ranks, cyclotomic gcd degrees, resultants, decoder coefficients,
 rowwise Bockstein output, and the full four-corner census.  The LF-normalized
 addresses are pinned in the front matter.
 
-**Awaiting independent audit; not QED.**
+An independent hostile audit reconstructed the raw content and mod-thirteen
+table, the epsilon expansion and socle-qualified decoder, the intrinsic
+Bockstein normalization, every decoded row, and `(25)`.  It replayed both
+companions under normal and optimized Python against the stored outputs and
+verified all four LF-normalized hashes.  The audit also checked that the two
+remaining physical typing debts are stated without promotion by numerical
+identification.
+
+QED.
