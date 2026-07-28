@@ -1,0 +1,20 @@
+THM2819 SOURCE-TARGET NONWRAP/ODOMETER SHARP ELEVEN EXACT REFEREE
+first14_rail_metadata=((1, 0, 12), (1, 0, 0), (1, 1, 12), (1, 1, 0), (1, 2, 12), (1, 2, 0), (1, 3, 12), (1, 3, 0), (1, 4, 12), (1, 4, 0), (1, 5, 12), (1, 5, 0), (1, 6, 12), (1, 6, 0))
+tau_numerator_over_T=431933040; R*tau=7
+wrap_numerator_over_T=5615129520; R*wrap=91
+nonwrap_carry_rows=((1, 0, 6), (2, 1, 0), (3, 2, 7), (4, 3, 1), (5, 4, 8), (6, 5, 2), (7, 6, 9), (8, 7, 3), (9, 8, 10), (10, 9, 4), (11, 10, 11), (12, 11, 5))
+chart_conjugacy_checks=rails:168,present:84
+marked_endpoint_transport_checks=98
+unique_target0_source1_row=(1, 0, 1, 12, 6, 1, 0, (169, 182))
+target0_prefix_disjoint_rows=((0, 2017, 0, 0), (1, 2067, 625, 0), (2, 2067, 625, 0), (3, 2067, 625, 0), (4, 1526, 625, 0), (5, 1541, 625, 0), (6, 1117, 625, 0))
+canonical_target12_pullback=integer_source_lift13
+odometer_cocycle=91/R=7/13^5
+C3*91/R=14; wrapped_present_C3_safe_is_invariant
+wrapped_factor_stage_rows=((0, 784513810080, 728825300280, 0), (1, 356159643840, 330902579700, 0), (2, 473353040160, 439916713920, 0), (3, 625685860800, 581278296060, 0), (4, 620815595400, 578179396872, 0), (5, 438008061491, 407334158691, 0), (6, 394663389120, 366653853720, 0))
+first_universal_wrap_failure=strict_C3_safe_vs_marked_danger_(169,181)/182
+positive_target_eleven_labels=(1,2,3,4,5,6,7,8,9,10,11)
+positive_target_eleven_rows=(((1,), 399580256360672050023360), ((6,), 74205644260590152069760), ((2, 3), 724908063903933297548160), ((5,), 565104521676801927300480), ((2, 3), 1130171627188809393027840), ((4, 6), 682117240653421081629120), ((2, 3), 1267162127454119622485760), ((5, 6), 941819893732588135224960), ((1, 2, 3), 1449825103908006680574720), ((5,), 596479469905204957431360), ((1, 3), 676409208657101856256320), ((5,), 562231844838877400066880), ((2,), 582228901121553500855040), ((5,), 399555625773821502585600))
+target_twelve_face_census=12_containing_label0_die_at_future_digit+1_omitting_label0_dies_at_wrapped_C3_gate
+sharp_target_maximum_label_cardinality=11; simplex_dimension=10
+scope=first14 THM2749 marked endpoint rails; no outside-rail, row, or LRC14 exclusion
+ALL EXACT CHECKS PASSED
