@@ -89,90 +89,68 @@ collision colours, ancestry/clock carriers, scalar walls, and `216` boundary
 incidences.  These results retain strong observables but do not identify the
 later semantic root.
 
-The exact stopping complex is now small.  THM-2545 gives the word-stratified
-Hall criterion; THM-2548 retains every root-charged horizontal C91 mode but
-has semantic vertical degree zero.  THM-2549 supplies positive same-base
-chronology on all `165` rows, yet its future pullback algebra is old-target
-neutral/root-constant and yields only the cemetery Hall table.  THM-2555
-classifies the omitted natural-extension sheet: top digit plus old carry
-recovers the old head, whereas the immediate future digit plus new carry is
-a distinct root; invariant gauges and offset-one cylinders make the gap
-sharp.  THM-2547 remains only a **FINITE-EXACT EXTERNAL CONTROL** after
-MISTAKE-281, not physical target/owner ancestry.
+The stopping complex is now concentrated in one descent problem.  THM-2545
+gives the word-stratified Hall criterion and THM-2549 gives positive same-base
+chronology on all `165` rows, but its future algebra is old-target neutral.
+THM-2555 identifies the missing natural-extension datum exactly: top sheet
+digit plus physical carry recovers the old root, while the immediate future
+digit and its new carry define a different root.  THM-2547 remains only a
+**FINITE-EXACT EXTERNAL CONTROL** after MISTAKE-281.
 
-The holotopy chain THM-2551--2587 isolates the lost coordinate.  Transfer
-preserves the unit-projector kernel, vertex gains are coboundaries, and the
-first non-product square is `duty curvature + fibre covariance`; full-`X`
-completion still kills every coarse target character.  THM-2571/2579 retain
-the primitive 13-primary carry and its target torsor.  THM-2581/2584 put the
-`{b}`, depth-five packet on one ancestry base: its root support is the path
-`0--0--6--6--12`, with every joint colour and nonzero endogenous
-`theta=t-2v` mode.  THM-2586 reaches a genuinely later physical root, while
-THM-2587 proves that neither `theta` nor the spectrally saturated danger/safe
-projections select the needed translated edge.
+The audited holotopy chain THM-2551--2602 shows why local refinements have not
+descended.  Transfer preserves the unit-projector kernel; gains are
+coboundaries; the first non-product square is duty curvature plus fibre
+covariance; and commutative vertex insertions cannot replace an ordered
+positive seven-edge kernel.  THM-2571/2579 retain a primitive 13-primary carry
+torsor, while THM-2586 reaches a later physical root.  THM-2587/2591 prove
+that root/danger projections and chartwise selectors still omit the wall or
+represent only Cech coboundaries.  THM-2600 supplies unit vertices on all `84`
+cells, not transition edges.
 
-THM-2590 gives the exact Boolean Bockstein selector spectrum, but THM-2591
-proves every chartwise root choice is a Cech coboundary and cannot cancel the
-nonzero seven-chart class.  THM-2592 realizes the fallback pullback on one
-physical `x`; its priority root-zero subbank is orthogonal to the whole
-delayed word.  THM-2600 repairs that narrow failure with two constant-six
-middle rails and a fixed `q=0` unit Bockstein
-section on all `84` cells, but still supplies vertices rather than edges.
+Post-THM-2602, THM-2614 gives dense punctured same-event cosupport and
+THM-2616 gives a positive framed cross-time diagonal, but future digits
+`0,12` and deep root `0` are absent.  THM-2622 classifies the affine torsor
+holonomy.  Audited THM-2624 proves exact two-clock signed tomography and
+the private-row criterion: every current row is dense, so no positive decoder
+exists.  Audited THM-2629 finds the sharp coefficient graph `r=-q-1`
+(minimum ten sections, nine common), but every full affine graph hits the
+missing deep-zero sheet.  Candidate THM-2630 shows that the old wall does not
+determine the later successor; predecessor carry is load-bearing.
 
-THM-2593/2594 supply coefficient torsors and theta contraction but no physical successor. THM-2601's successor is a nonlinear degree-11 cycle with `631` empty aggregates; THM-2602 proves that commutative vertex insertions cannot replace ordered positive kernels with twisted return `diag(K_0...K_6 S_(7a))`.
+THM-2615/2618 show that Radon restriction and a free Möbius orbit still do not
+identify the distinct whole head `A_h(x)A_h(T^N x)` (MISTAKE-300).
 
-Post-THM-2602 canon separates four `F_13` axes. Audited THM-2605 gives one affine physical inverse-root/local-shift phase on all roots, and THM-2613 canonically chooses `q(r)=-kr`; these are cellwise positive-measure, not pointwise repair or an adjacent clock. THM-2610 retains one old `X,Y,m` triangle beside every future colour, but positive time kills the old deck; THM-2607--2611 classify the missing rail/bibundle sidecar without realizing it physically.
-
-Audited THM-2615 proves physical-diagonal restriction kills the relation lattice in every target class: the THM-2334 consumer is an independent present/conjugated-bare-endpoint square with a Radon diagonal, not a chronological future shift. Audited THM-2618 gives the THM-2537 selected source a presentation-relative Möbius orbit and free thirteen-atom spectrum, but MISTAKE-300 keeps THM-2569's distinct whole head `A_h(x)A_h(T^N x)` frozen.
-
-Audited THM-2614 gives dense same-event cosupport but no deck; audited THM-2616's positive cross-time diagonal structurally loses digits `0,12` to its guard.
-Audited THM-2619 cycles seven decks.  Audited THM-2620 restores the endpoint pair and determinant erased by target difference.
-Audited THM-2624 gives rank-12 two-clock tomography, but its signed inverse and positive rows forbid descent. THM-2629's unique best graph `r=-q-1` cancels -- rather than repairs -- the missing future/deep sheets. THM-2625's canonical current fills all `28,561` endpoint cells and all `2,016` nondegenerate parabolic sectors.
-
-The target remains a positive chronological whole-head lift preserving one THM-2625 sector through adjacent clocks to a semantic root.
-Marginals and numerical diagonals do not suffice.  No row is removed; `165`.
+On the endpoint side, THM-2620 restores the determinant discarded by target
+difference, and THM-2625 proves one canonical current fills all `28,561`
+endpoint cells and all `2,016` nondegenerate parabolic sectors.  The target is
+a positive chronological lift putting the natural-extension carry and one
+surviving endpoint sector on the same whole-head carrier, then gluing it
+through adjacent clocks to a semantic root.  Signed tomography, marginals,
+and numerical diagonals do not suffice.  Ledger `165`.
 
 ### Independent routes that remain live
 
-- **AP-core / tight-deletion supplier.**
-   [THM-1017](../01-canon/theorems/THM-1017-ap-core-bridge-reduction.md) proves
-   `AP core -> far element -> LRC(14)`. The extraction of that AP core from the
-   compact Cover14 residual is open (the current
-   [HYP-6820 audit](../05-knowledge/hypotheses/HYP-6820-q25-and-n12-uniformity-audit.md)).
-   Uniform emptiness of non-AP/deep multi-defect twelve-speed branches remains
-   open.
-- **Euler/global phase route.** THM-2047 proves the corresponding labelled phase-height carrier:
-  it retains sign, owner, side, height, and exact deletion;
-  `chi(G_delta)` detects isolated tight points. THM-2050 shows complete local
-  period-14 germs can agree while
-  global maxima differ, so first-exit magnitude or gluing is mandatory.
-- **Peel and comb routes.** Every zero-measure covering packet obeys THM-731's
-  necessary peel inequality `disc_v>=6|G'_{~v}|^2`; THM-2048's integer fiber tax
-  strictly sharpens it but is still a pruning gain, not a classifier. Local
-  six-comb return machinery is saturated; pursue endpoint/child transport or a
-  phase-located turn tax.
-- **Effective spectrum.** THM-1289 imports an ineffective one-sided isolated
-  gap. THM-1290 is exact through maximum speed 55 (and empties
-  `(1/14,3/41)` through 64). Extend computation only with a structural filter
-  or make the gap effective.
-- **Exact per-row pair-sum evaluator.** THM-1002/2047 reduce a fixed row's
-  maximum to rational pair-sum vertices; reflection halves the phase interval.
-  HYP-8900 replays several rows exactly, including value `14/183` for the deep
-  well. This is not a uniform finite family or a proof of its Wall-A restatement.
-- **Artanh/Gibbs boundary.** THM-2143 proves the strict criterion
-  `p_0>0 iff Z_V(z)>z` for some rational `0<z<1`; the supplied fugacities fail
-  hostile defect-seven controls, finite-temperature bounds miss tight APs, and unrestricted signed log-Riesz functionals are unsound.
+- **AP-core supplier.** THM-1017 proves `AP core -> far element -> LRC(14)`;
+  extraction from the compact residual remains HYP-6820.
+- **Euler/phase.** THM-2047 retains labelled phase height and detects isolated
+  tight components; THM-2050 makes first-exit magnitude or gluing mandatory.
+- **Peel/comb.** THM-731 and THM-2048 give necessary pruning taxes, not a
+  classifier.  Six-comb returns are saturated; pursue endpoint transport.
+- **Effective spectrum.** THM-1289 is ineffective; THM-1290 is exact through
+  speed `55` (gap through `64`).  Extend only with a structural filter.
+- **Exact rows.** THM-1002/2047 reduce fixed rows to rational vertices;
+  HYP-8900 is exact on examples, not uniform.
+- **Artanh/Gibbs.** THM-2143's criterion is exact, but current fugacities fail
+  defect-seven hostiles and signed log-Riesz shortcuts are unsound.
 
 ### Mandatory controls and perspective prompts
 
-- The rows `26*{1,...,12} union {339}` and `{1,...,12,5460}` refute uniform
-  `q<=25` and the old `q<=1200` scan. AP13 and its `12->26` lift also share
-  complete local germs but have maxima `1/14` and `1/12`.
+- `26*{1,...,12} union {339}` and `{1,...,12,5460}` refute the old bounded-`q`
+  scans; AP13 and its `12->26` lift share local germs but not maxima.
 - THM-2058 preserves every prescribed finite lift depth while escaping at
   `47/113`; raw jets, bad Farey rays, and fixed lift depth are not certificates.
-- Determinant polygons are basis-dependent, not Heegner discriminants.
-  THM-2047's slice is not an ordinary toric complement, and no Bessel-to-sinc
-  analogy proves LRC.
+- Determinant polygons are basis-dependent; no Heegner or Bessel analogy proves
+  LRC.
 - Test columns, gaps, clocks, residues, wall events, endpoints, circuits, and
   proof obligations as vertices; record each quotient's lost sidecar.
 
