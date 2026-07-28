@@ -11,11 +11,11 @@ status: >
   W tensor ker(M_C mod 2).  Thus its standard-plane multiplicity is the sum
   of the arm nullities, and a standard plane occurs iff some moving-arm
   determinant is even.  For a plumbing chain this determinant is the
-  negative-continued-fraction numerator.  Applied to a full-rank equivariant
-  boundary lattice on a rational surface, this is a necessary gate for the
-  class-group branch of the quartic V4 Kummer carrier.  D4 is sharp; an
-  odd-arm star has no standard plane.  The unit branch, non-tree and
-  non-full-rank boundaries, reflection completion, and all arbitrary
+  negative-continued-fraction numerator.  For the stated full-rank independent
+  rational-surface boundary, localization also kills nonconstant units, so
+  all-odd moving arms directly exclude the quartic V4 Kummer carrier.  D4 is
+  sharp; an odd-arm star fails.  Non-tree and non-full-rank boundaries,
+  positive realization, reflection completion, and all arbitrary
   A4/S4/JC2/DC2 conclusions remain open.
 source: a4-resolvent-next-gate-scout-2026-07-28
 depends_on:
@@ -272,11 +272,26 @@ L subset P=P^* subset L^*,
 Pic(U) injects C3-equivariantly into L^*/L=A_M.             (24)
 ```
 
+The unit row is not an additional escape under these same hypotheses.  The
+localization sequence begins
+
+```text
+C^* -> O(U)^* -> Z^D -> Pic(Xbar).                         (25)
+```
+
+Independence of the boundary component classes makes the last displayed map
+injective.  Hence `O(U)^*/C^*=0`; and over `C`, every constant is a square.
+Therefore
+
+```text
+O(U)^*/O(U)^(*)2=0.                                       (26)
+```
+
 It follows from `(14)` that
 
 ```text
 Pic(U)[2] contains W
- ==> some moving boundary component C has det(M_C) even.    (25)
+ ==> some moving boundary component C has det(M_C) even.    (27)
 ```
 
 Equivalently, if every moving arm determinant is odd, the class-group branch
@@ -289,22 +304,19 @@ a completion satisfying `(22)`--`(24)`.  The Kummer row is
 
 ```text
 0 -> O(U)^*/O(U)^(*)2 -> H^1_et(U,mu_2)
-  -> Pic(U)[2] -> 0.                                       (26)
+  -> Pic(U)[2] -> 0.                                       (28)
 ```
 
 Restriction to `C3` is semisimple, and the required `V4` character module is
-`W`.  Therefore:
+`W`.  Together with `(26)`, this gives the direct exclusion
 
 ```text
 all moving arms odd
- ==> the required W must lie in unit squareclasses;         (27)
-
-all moving arms odd and no unit-standard plane
- ==> this completion cannot be a quartic Keller resolvent.  (28)
+ ==> this completion cannot be a quartic Keller resolvent.  (29)
 ```
 
-This is a necessary boundary-lattice gate.  It is not an existence theorem
-for a Keller map when an even arm is present.
+An even arm remains only a necessary gate: it is not an existence theorem for
+a Keller map.
 
 ## 5. Sharp controls
 
@@ -317,7 +329,7 @@ two.  The full matrix has
 ```text
 det(M)=4,
 Smith(M)=(1,1,2,2),
-A_M[2]=W.                                                   (29)
+A_M[2]=W.                                                   (30)
 ```
 
 This is the smallest sharp model.  Its three nonzero discriminant classes
@@ -332,7 +344,7 @@ weight `-3`.  Then
 
 ```text
 abs(det M)=27,
-A_M[2]=0.                                                   (30)
+A_M[2]=0.                                                   (31)
 ```
 
 The graph still has literal triality, but there is no two-torsion on which
@@ -344,8 +356,8 @@ even arm determinant is load-bearing.
 The proof does not cover:
 
 - a boundary dual graph with cycles;
-- boundary components which do not form a full-rank independent lattice;
-- a standard plane carried by global units rather than divisor classes;
+- boundary components which do not form a full-rank independent lattice
+  (where nonconstant global units may reappear);
 - the reflection needed to upgrade the `C3` plane to a specified full `S3`
   action;
 - non-tree incidence complexes, virtual nerves, or coarse carry-forgetting
@@ -353,9 +365,8 @@ The proof does not cover:
 - realization of an even arm by an actual quartic resolvent;
 - arbitrary `A4`, `S4`, planar Jacobian, or Dixmier candidates.
 
-The first two failures destroy the direct-sum arm decomposition or the
-embedding `(24)`.  The third is the exact Kummer alternative, not a technical
-omission.  The fourth is why the theorem supplies a necessary `C3` gate but
+The first two failures destroy the direct-sum arm decomposition, the embedding
+`(24)`, or the unit vanishing `(26)`.  The reflection item is why an even arm
 does not classify the whole `S3` action.
 
 ## 6. Exact companion
@@ -398,7 +409,7 @@ preserved predicate:
   multiplicity of the nontrivial irreducible F2[C3] plane;
 
 destroyed information:
-  the reflection action, units, non-tree gluing, geometric realizability,
+  the reflection action, non-full-rank units, non-tree gluing, realizability,
   LRC owner/phase/height, and physical endpoint transport;
 
 needed sidecars:
@@ -418,5 +429,12 @@ decomposition, the exact standard-block identity, the discriminant-group and
 Picard-lattice steps, continuant parity, both sharp controls, and every scope
 boundary.  Normal and optimized runs byte-match the stored transcript, the LF
 hashes match, and the companion contains no optimized-away assertions.
+
+A subsequent independent localization audit sharpened the rational-surface
+corollary: the already-assumed independence of the boundary classes makes
+`Z^D -> Pic(Xbar)` injective, so the unit Kummer term vanishes as in
+`(25)`--`(26)`.  This changes the full-rank conclusion from a class-group-only
+gate to the direct all-odd exclusion `(29)`; it does not change the tree
+module formula or the exact companion.
 
 QED.

@@ -26,8 +26,9 @@
   the standard-plane multiplicity in its two-torsion discriminant module is
   exactly the sum of the mod-two nullities of one representative from every
   moving-arm triple.  A plumbing chain passes precisely when its continuant
-  numerator is even.  The full-rank rational-surface corollary is a necessary
-  class-group gate for THM-2655; units and reflection completion remain open.
+  numerator is even.  In the full-rank independent rational-surface case,
+  localization kills the unit branch, so all-odd arms directly exclude the
+  THM-2655 carrier; non-full-rank units and realization remain open.
   `D4` and determinant-`27` stars are the sharp controls.  Hashes begin
   `1db2ae94` / `8e6207f3`.
 - `c3_hermitian_gain_holonomy_discriminant_thm2708.py` -> matching `.out`
