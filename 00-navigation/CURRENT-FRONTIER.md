@@ -74,29 +74,21 @@ successor misses all `1134` rail/future placements.
 
 THM-2720 identifies the old wall as `t=0`; THM-2742 restores the second target:
 `936/1183` sections and every primitive `t`-character survive.  Edge transport
-reaches a root-zero label, but MISTAKE-310 retracts physical emptiness: the
-half-tooth charts overlap.  THM-2744 proves the resulting partial physical
-clutch: translation by `7/13^6` gives equal recomputed raw private-unit
-vectors on ten whole rail overlaps and all fourteen equal-weight loci; the
-root-normalized endpoint classes differ by `-1`.  THM-2749 inserts the literal
-`E3 -> D^6 -> Q_(3,{1,2})` fork, both lawful target pairs, both relative-present
-factors, rail, and seam inside a two-sided common-section integral.  Its frozen
-rail-8 source section has exact target window `t=3,...,11`, a norm-one
-cyclotomic unit with positive inverse `u^2+u^6+u^10`.  Separately, the
-clock-coindexed label `(0,4)` gives equal primitive vectors on all fourteen
-equal-weight rails with private-root gain `-1`.  That coindexed raw target
-support is `t=2,...,11`; attaching the explicit transported cylinder removes
-`t=2`, and both its linear and bilinear profiles retain all twelve primitive
-`C13` characters.  The distinction between frozen and coindexed sections is
-load-bearing.  The natural one-sided sheet shears, and no common-selector map
-into the canonical endpoint current or external semantic arm carrier is known.
-THM-2750 proves that this last qualifier is load-bearing: every clutch
-commuting with the external `C3` arm rotation, including the scalar `-1` and
-any target/clock operator confined to the auxiliary factor, has zero
-invariant-to-charged block.  The minimal escapes are an unequal marked-arm
-gain or a fourth fixed reference with a lawful swap; neither is yet physically
-typed.  The next debt is a fixed `R=13^6` THM-2334 triangle transplant
-retaining exact relation address and one THM-2625 endpoint determinant sector.
+reaches root zero, but MISTAKE-310 retracts emptiness because the half-tooth
+charts overlap.  THM-2744 gives a partial clutch: the `7/13^6` shift preserves
+raw private-unit vectors on ten rail overlaps/all fourteen equal-weight loci,
+while normalized endpoint classes differ by `-1`.  THM-2749 puts the full
+`E3 -> D^6 -> Q_(3,{1,2})` fork and both lawful target/present pairs in a
+two-sided integral.  Its frozen rail-8 window is `t=3..11` with a norm-one
+unit; its coindexed `(0,4)` bank has equal primitive vectors on all fourteen
+rails, gain `-1`, and raw support `t=2..11`, reduced to `3..11` by the
+transported cylinder, with all twelve primitive characters in linear and
+bilinear profiles.  Frozen and coindexed sections must not be conflated: the
+one-sided sheet shears and no common selector reaches the endpoint current or
+semantic arm.  THM-2750 proves every external-`C3`-equivariant clutch has zero
+invariant-to-charged block; the unbuilt escapes are a marked-arm gain or fixed
+fourth reference.  Next: transplant a fixed `R=13^6` THM-2334 triangle while
+retaining its exact address and a THM-2625 determinant sector.
 THM-2727 is **PROVED** as a fixed-rail realization no-go, but supplies no
 rail/owner/support/address map.  Ledger `165`; no row is excluded.
 
@@ -131,12 +123,11 @@ rail/owner/support/address map.  Ledger `165`; no row is excluded.
 - **REFUTED for higher dimensions:** explicit GMC(3) counterexamples now exist;
   GMC is false for every dimension at least 3. See the current external preprint
   entry in [`CORE-PAPERS.md`](../05-knowledge/reference/CORE-PAPERS.md).
-- **FORMALIZATION COMPLETE:** `GMC2Main` exposes unconditional, root-imported
-  `dvdK1`, `nc2`, and `gmc2`, each kernel-pure with only `propext`, `Classical.choice`, and `Quot.sound`.
-  Legacy implication endpoints retain `DvdK1`, while `GMC2DvdKOmegaWiring.singlePolyCrux_holds`
-  discharges the premise in the front-door theorem. THM-2101's three additive
-  routes remain valuable optional formalization targets, not proof blockers.
-  Its orbit/Lagrange core is kernel-checked; THM-2111 gives the effective seed, while THM-2067 is only the historical small-root-product route.
+- **FORMALIZATION COMPLETE:** `GMC2Main` exposes unconditional `dvdK1`, `nc2`,
+  and `gmc2`, kernel-pure up to `propext`, choice, and quotient soundness;
+  `singlePolyCrux_holds` discharges the legacy `DvdK1` premise.  THM-2101's
+  additive routes remain optional; THM-2111 is the effective seed and THM-2067
+  only the historical small-root-product route.
 
 ### Why THM-2022 works
 
@@ -181,20 +172,14 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
 
 ### Live work
 
-Package THM-2022 for publication and sharpen THM-2111's compound degree from
-the binomial bound toward the conjecturally sharp `M+N`. The external DvdK
-dependency is removed both on paper and in the unconditional Lean front door.
-Formalize THM-2639's ring identity and binomial sign as a compact independent
-leaf.  Formalizing THM-2101's additive monodromy, transcendental, and t-adic packet
-routes remains useful independent corroboration, not a dependency of
-`GMC2Main.gmc2`. Positive/two-charge/unique-channel leaves are reusable special cases, not the general mechanism.
-But HYP-8931's `LowestFaceUniqueChannel P` class is inconsistent by the empty
-level-set witness `lambda=0, delta=-1, F=empty` (MISTAKE-240), so its
-kernel-checked implication is vacuous and not wired into NC2. Its `98/116`
-figure is a bounded census, not a theorem. THM-2070 refutes HYP-8890's saddle/Watson bypass and
-HYP-8895's semigroup bypass; only their explicitly positive or two-charge
-subcases survive. Continue to transfer the `seed/selector/preserver/exit`
-design without pretending a preserver supplies the seed.
+Publish THM-2022; sharpen THM-2111's binomial degree toward `M+N`; formalize
+THM-2639's ring identity/sign.  THM-2101's additive routes are corroboration,
+not `GMC2Main.gmc2` dependencies, and positive/two-charge/unique-channel leaves
+are special cases.  HYP-8931's `LowestFaceUniqueChannel` is inconsistent by
+the empty level set (MISTAKE-240), so its implication is vacuous and `98/116`
+only a census.  THM-2070 refutes HYP-8890's saddle/Watson and HYP-8895's
+semigroup bypasses outside their positive/two-charge cases.  Transfer the
+`seed/selector/preserver/exit` design without treating a preserver as a seed.
 
 ## Tournaments
 
@@ -364,14 +349,11 @@ Classify profiles under support operations; study analytic continuation and auto
   rank `0/1`.  THM-2746 identifies the `A4` leakage plane with the `V4` Kummer
   character plane and proves every compatible reflection completes it to
   `S4`; neither supplies the completion or `delta`'s unit/saturation coordinate.
-  THM-2753 locates the exact six-edge information loss: the faithful `S4`
-  action on `E(K4)` lies in `A6`, and a transposition and double transposition
-  have the same one-generator cycle type, while the three-perfect-matching
-  quotient restores the quartic sign through `S4/V4=S3`.  The full six-edge
-  subgroup orbitals still recover opposite edges, and labelled or mixed-word
-  data separate the two generators.  Thus a six-vertex tournament needs an
-  explicit opposition/matching or address sidecar; ambient parity alone is
-  not a resolvent invariant and no Keller exclusion follows.
+  THM-2753 isolates the six-edge loss: faithful `S4 -> A6` gives a
+  transposition/double-transposition cycle collision, while the matching
+  quotient `S4/V4=S3` restores sign.  Full subgroup orbitals, labelled edges,
+  and mixed words still separate them; a six-vertex tournament therefore
+  needs an opposition/address sidecar, and no Keller exclusion follows.
   At degree eighteen THM-2314/2316 close sparse supports, THM-2371/2376 close
   `H_2`, and THM-2406 sends `H_4` to the common-root wall; other branches open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
@@ -382,29 +364,22 @@ Classify profiles under support operations; study analytic continuation and auto
   its sparse supports, `H_2`, reduced `H_4`, axes, and ten coefficient planes.
   THM-2671 closes every support-three degree-twenty-two chart, THM-2683 every
   support-four chart, and THM-2692 the full-support BCDEW chart by order-twelve
-  root/pair-field emptiness.  Hence the inherited polynomial exact-square-prefix
-  genuine nonsplit degree-twenty-two branch is empty.  On the chosen split
-  sheet, THM-2719 identifies the exact reduced degree-22 coefficient bank;
-  THM-2725 closes every all-even nonzero-first-flux member and THM-2745 closes
-  every member with an odd Faber coefficient, including reducible and
-  nonreduced intersections.  THM-2755 closes the last all-even zero-flux edge:
-  vertical components have zero third response, the five smooth infinity
-  points violate the exact-prefix resultant, and the uniform slope-four DVR
-  bound makes `q/h^3` a global regular function vanishing at infinity.  Thus
-  the entire chosen-sheet split polynomial exact-prefix reduced-degree-22
-  family is empty.  Independently, THM-2752 proves that the exceptional
-  response cancellation is a regularization mechanism: `R_25+(d/2)F_23`
-  gains one local Faber order, and its all-`M=4L+2` addendum identifies the
-  leading faces as the coprime even/odd parts of `(-s+iq)^k`.  THM-2755 uses
-  the simpler global function `q/h^3`; THM-2752 uses the third response.
+  root/pair-field emptiness, so the inherited nonsplit degree-22 branch is
+  empty.  On the chosen split sheet THM-2719 gives the coefficient bank,
+  THM-2725 closes all-even nonzero flux, THM-2745 closes any odd Faber
+  coefficient (also reducible/nonreduced), and THM-2755 closes zero flux by
+  its vertical-response, five-point resultant, and slope-four DVR argument
+  (`q/h^3` regular and zero at infinity).  Thus that split reduced degree-22
+  family is empty.  Independently THM-2752 regularizes the cancelled response:
+  `R_25+(d/2)F_23` gains one Faber order, with all-`M=4L+2` leading faces the
+  coprime even/odd parts of `(-s+iq)^k`.  THM-2755 uses `q/h^3`; THM-2752 uses
+  the third response.
 
-  This is not `JC(2)`: no theorem forces an arbitrary Keller pair into a
-  quartic source-fibre chart, derives splitness, or forces reduced degree `22`.
-  Split exact-prefix degrees `6,10,14,18` and all degrees at least `26` remain,
-  as do genuine-nonsplit degrees at least `26` and other Newton/Jelonek/source-
-  fibre branches.  There is no degree-raising or descent theorem; THM-2206's
-  canonical `2`-adic first-grade route is refuted.  THM-2446's six-bracket
-  shortcut is also refuted.  `JC(2)` and `DC(2)` remain open.
+  This is not `JC(2)`: arbitrary Keller pairs need not enter this quartic,
+  split, degree-22 chart.  Split exact-prefix degrees `6,10,14,18,>=26`,
+  nonsplit degrees `>=26`, and other Newton/Jelonek/source-fibre branches stay
+  open; no degree descent/raising exists.  THM-2206's `2`-adic first-grade and
+  THM-2446's six-bracket shortcuts are refuted.  `JC(2)`/`DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 
