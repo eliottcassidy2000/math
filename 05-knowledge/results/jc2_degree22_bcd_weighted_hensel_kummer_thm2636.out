@@ -1,13 +1,17 @@
-degree-22 BCD weighted-scale Hensel probe
+degree-22 BCD weighted-scale Hensel--Kummer closure
 universal_resultant_content=28344976
 universal_terms=60
 universal_degrees=t:10,v:5
 universal_t_support=0,2,3,4,5,6,7,8,9,10
 bcd_terms=44
+bcd_degrees=t:9,v:5
 constant_v_leading=-88239118492602
 fixed_quintic_degree=5
 fixed_quintic_irreducible=True
 fixed_quintic_squarefree=True
+fixed_t_uniformizers=5
+fixed_zeta_units=5
+first_flux_wall_identity=nonzero_square
 root_field_degree=5
 root_field_irreducible=True
 root_order11_equations=5
@@ -30,5 +34,14 @@ order11_support=c^3,c*d^2,c*d,c
 line_factor_scheme_for_c_nonzero=EMPTY
 quadratic_factor_scheme_for_c_nonzero=EMPTY
 bcd_eliminant_absolutely_irreducible_for_c_nonzero=True
-trajectory_closure_requires_separate_uniform_genus_or_rigidity_gate=True
+spectral_square_relation=T^2=rho^3*zeta/t^3
+kummer_fixed_valuation=-3
+kummer_visible_odd_places=5
+kummer_branch_floor=6
+kummer_genus_floor=2
+y0_eliminant_content=1104726788605792
+y0_primitive_factor=-u*Q4
+y0_Q4_degree=4
+y0_Q4_leading=2264031
+bcd_trajectory_stratum=EMPTY
 ALL CHECKS PASSED

@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
-"""Exact weighted-scale fixed-section Hensel probe for the degree-22 BCD stratum.
+"""Exact Hensel--Kummer closure companion for the degree-22 BCD stratum.
 
-This is deliberately a frontier companion rather than a theorem companion.
-It reconstructs the universal five-parameter eliminant, specializes E=W=0,
-and excludes every factor whose fixed section has degree one or two.  The
-remaining trajectory-closure issue is ramification/genus for the irreducible
-BCD curve; this script does not silently identify irreducibility with that
-missing step.
+The script reconstructs the universal five-parameter eliminant, specializes
+E=W=0, excludes every factor through the fixed root and root-pair fields,
+checks the five odd places of the retained spectral square class T^2=Z, and
+reconstructs the y=0 boundary quartic.
 """
 
 from __future__ import annotations
@@ -80,6 +78,8 @@ require(
 
 R_bcd = s.expand(R_universal.subs({e: 0, w: 0}))
 R_bcd_poly = s.Poly(R_bcd, t, v, c, d, domain=s.QQ)
+require(R_bcd_poly.degree(t) == 9, "BCD specialized t-degree changed")
+require(R_bcd_poly.degree(v) == 5, "BCD specialized v-degree changed")
 leading_v = s.Poly(R_bcd, v).coeff_monomial(v**5)
 require(leading_v == -88239118492602, "constant v-leading coefficient changed")
 P = s.expand(R_bcd / leading_v)
@@ -92,6 +92,114 @@ P5 = s.Poly(P5_expr, v, domain=s.QQ)
 require(P5.degree() == 5 and P5.LC() == 1, "fixed section is not monic quintic")
 require(P5.is_irreducible, "fixed quintic stopped being irreducible")
 require(s.gcd(P5, P5.diff()).degree() == 0, "fixed quintic stopped squarefree")
+require(
+    r_coefficients[1] == 0,
+    "fixed-section missing-order-one tangency changed",
+)
+
+# At t=0 the first flux is
+#   (83853-1449459*v)*zeta + (3689532*v^2-101640*v+252)=0.
+# Both coefficients are units at every root of the irreducible quintic, so
+# zeta has valuation zero at all five smooth fixed-section points.
+fixed_zeta_denominator = s.Poly(83853 - 1449459 * v, v, domain=s.QQ)
+fixed_zeta_numerator = s.Poly(
+    3689532 * v**2 - 101640 * v + 252, v, domain=s.QQ
+)
+require(
+    s.gcd(P5, fixed_zeta_denominator).degree() == 0,
+    "zeta acquired a pole at a fixed-section point",
+)
+require(
+    s.gcd(P5, fixed_zeta_numerator).degree() == 0,
+    "zeta acquired a zero at a fixed-section point",
+)
+
+# The first-flux wall is not a component of the irreducible eliminant.  This
+# identity also records the complete squared wall factor for later audits.
+wall_v = (616 * t**2 + 63) / 1089
+wall_polynomial = (
+    745360 * c * t**5
+    + (287496 * d - 71148) * t**4
+    + 43560 * c * t**3
+    + 5082 * t**2
+    + 945
+)
+require(
+    s.cancel(
+        P.subs(v, wall_v)
+        + s.Rational(128, 397076033216709) * wall_polynomial**2
+    )
+    == 0,
+    "first-flux wall identity changed",
+)
+
+# Since t=rho/y and zeta=Z/y^3, the retained base-field square T^2=Z is
+#   T^2=rho^3*zeta/t^3.
+# Each fixed point therefore has Kummer valuation -3, hence is an odd branch
+# place of the connected quadratic cover.  Five visible odd places and branch
+# parity force at least six; Riemann--Hurwitz gives genus at least two even if
+# the base curve has genus zero.
+kummer_fixed_places = P5.degree()
+kummer_valuation = -3
+kummer_visible_branch_places = kummer_fixed_places
+kummer_branch_floor = kummer_visible_branch_places + (
+    kummer_visible_branch_places % 2
+)
+kummer_genus_floor = -1 + kummer_branch_floor // 2
+require(
+    kummer_fixed_places == 5
+    and kummer_valuation % 2 != 0
+    and kummer_branch_floor == 6
+    and kummer_genus_floor == 2,
+    "spectral-square Kummer genus invoice changed",
+)
+
+# The identically-zero boundary y=0 must be treated before t is defined.
+# Normalize B=1.  The open chart has A=616-1089u != 0 and N1 reconstructs
+# Z=-9370240*c*u/(1331*A).  Substitution in N2 has the exact primitive factor
+# -u*Q4 below.  If u=0 then Z=0; otherwise Q4(u)=0, and its constant leading
+# coefficient makes u algebraic over the algebraically closed constants.
+u_boundary, Z_boundary = s.symbols("u_boundary Z_boundary")
+A_boundary = 616 - 1089 * u_boundary
+D_boundary = 1331 * A_boundary
+N1_boundary = D_boundary * Z_boundary + 9370240 * c * u_boundary
+N2_boundary = (
+    15944049 * Z_boundary**2
+    - 206145280 * c * Z_boundary
+    + 1443016960 * u_boundary**2
+    - 1978994688 * d * u_boundary
+    - 1190488992 * u_boundary**3
+)
+boundary_raw = s.cancel(
+    N2_boundary.subs(
+        Z_boundary, -9370240 * c * u_boundary / D_boundary
+    )
+    * D_boundary**2
+)
+boundary_content, boundary_primitive = s.Poly(
+    boundary_raw, u_boundary, c, d, domain=s.QQ
+).primitive()
+boundary_Q4 = (
+    1267200 * c**2 * u_boundary
+    - 1433600 * c**2
+    + 3763584 * d * u_boundary**2
+    - 4257792 * d * u_boundary
+    + 1204224 * d
+    + 2264031 * u_boundary**4
+    - 5305608 * u_boundary**3
+    + 3829056 * u_boundary**2
+    - 878080 * u_boundary
+)
+require(
+    boundary_content == 1104726788605792
+    and s.expand(boundary_primitive.as_expr() + u_boundary * boundary_Q4) == 0,
+    "y=0 eliminant changed",
+)
+require(
+    s.Poly(boundary_Q4, u_boundary).degree() == 4
+    and s.Poly(boundary_Q4, u_boundary).LC() == 2264031,
+    "y=0 boundary lost its constant nonzero leading coefficient",
+)
 
 
 @dataclass(frozen=True)
@@ -464,16 +572,20 @@ pair_r = [pair_system.expression_to_vpoly(expression) for expression in r_coeffi
 pair_result = pair_system.run(pair_r)
 
 
-print("degree-22 BCD weighted-scale Hensel probe")
+print("degree-22 BCD weighted-scale Hensel--Kummer closure")
 print(f"universal_resultant_content={raw_content}")
 print(f"universal_terms={len(primitive_poly.terms())}")
 print("universal_degrees=t:10,v:5")
 print("universal_t_support=0,2,3,4,5,6,7,8,9,10")
 print(f"bcd_terms={len(R_bcd_poly.terms())}")
+print("bcd_degrees=t:9,v:5")
 print(f"constant_v_leading={leading_v}")
 print("fixed_quintic_degree=5")
 print("fixed_quintic_irreducible=True")
 print("fixed_quintic_squarefree=True")
+print("fixed_t_uniformizers=5")
+print("fixed_zeta_units=5")
+print("first_flux_wall_identity=nonzero_square")
 for name, field, result in (
     ("root", root_field, root_result),
     ("pair", pair_field, pair_result),
@@ -491,5 +603,14 @@ print("order11_support=c^3,c*d^2,c*d,c")
 print("line_factor_scheme_for_c_nonzero=EMPTY")
 print("quadratic_factor_scheme_for_c_nonzero=EMPTY")
 print("bcd_eliminant_absolutely_irreducible_for_c_nonzero=True")
-print("trajectory_closure_requires_separate_uniform_genus_or_rigidity_gate=True")
+print("spectral_square_relation=T^2=rho^3*zeta/t^3")
+print(f"kummer_fixed_valuation={kummer_valuation}")
+print(f"kummer_visible_odd_places={kummer_visible_branch_places}")
+print(f"kummer_branch_floor={kummer_branch_floor}")
+print(f"kummer_genus_floor={kummer_genus_floor}")
+print(f"y0_eliminant_content={boundary_content}")
+print("y0_primitive_factor=-u*Q4")
+print("y0_Q4_degree=4")
+print("y0_Q4_leading=2264031")
+print("bcd_trajectory_stratum=EMPTY")
 print("ALL CHECKS PASSED")

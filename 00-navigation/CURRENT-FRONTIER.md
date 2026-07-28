@@ -391,43 +391,33 @@ Classify profiles under support operations; study analytic continuation and auto
   exact-square-prefix reduced degree-eighteen branch is closed; `JC(2)`,
   `DC(2)`, and branches outside THM-2262 remain open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
-- **Planar source fibers:** THM-2063/2071 close affine/quadratic pencil members;
+- **Planar source fibers:** THM-2063/2071 close affine/quadratic pencils;
   THM-2084/2110/2118 close cubics; THM-2102/2113 close power-free top faces;
   THM-2127--2136 reduce arbitrary tails to coarsened-power/short Newton edges.
-  THM-2158/2180 make deck descent automatic and reduce the twice-odd nonmonic
-  branch to `V|(4gamma-(beta/V)^2)`. THM-2189 forces this pole congruence on
-  every nonsplit deck and, without a deck hypothesis, in reduced mate degree
-  two, and THM-2194 closes reduced degree six. THM-2202 closes every twice-odd
-  reduced degree `4r-2`: below the cusp
-  `r nu(Lambda)=(2r-1)nu(c)` the first/second flux orders separate, while
-  above it the unique `c^(2r-1)` boundary tooth does. Thus no quartic
-  finite-pole survivor remains. THM-2181 closes monic depressed quartics;
-  THM-2214 closes nonsplit terminal degrees through ten, and THM-2217 forces
-  odd-leading survivors to degree `>=14` with `R deg(q)>=deg(V)`. THM-2245
-  forces degree fourteen onto a singular spectral quartic; THM-2247 closes it.
-  THM-2262 makes the degree-eighteen generic spectrum a genus-four trigonal
-  cover and leaves an explicit degree-twelve branch locus; THM-2297 removes
-  target translation, yields a weighted `(2,3,4,5)` cone, and closes every
-  one-sparse stratum plus the `B=D=0` plane by genus. THM-2311 reduces the
-  exactly two-sparse locus to `31` ratios; THM-2314/2316/2320/2324/2328
-  close all `31`. THM-2332 leaves Mordell square classes of degrees
-  `0,2,4`, and THM-2335 eliminates degree `0`. THM-2345/2347 close
-  `126D=25B^2` and `20BC+21W=0`; audited THM-2359 closes
-  `504D=115B^2`. THM-2357 gives `R_10=H_2S_4^2` and its exact pivot;
-  audited THM-2371 eliminates every common-root and singular-order
-  component, making THM-2360's linear-times-cube descent unconditional
-  on `H_2`; hostile-audited THM-2376 eliminates that coprime cube locus
-  and closes the full degree-eighteen `H_2S_5^2` stratum. THM-2373 gives
-  root-free charts on `H_4`; THM-2386 removes common roots; hostile-audited
-  THM-2389 gives its pole-jet system. Independently hostile-audited THM-2406
-  closes the reduced degree-eighteen wall. THM-2411 empties `A=0`; THM-2423/2425/2428 empty the five one-sparse axes.
-  THM-2429/2437/2463/2468 close `C,W`, `D,W`, `B,D`, `B,W`;
-  THM-2469/2470/2472 close `C,D`, `E,W`, `D,E`; THM-2475/2476 close
-  `C,E`, `B,E`; THM-2480 closes `B,C` by sparse Hensel irreducibility and
-  wall-stratified ramification.  All ten support-two planes are empty.
-  Audited THM-2617 is the first support-three closure: for `B,D,W!=0`, `C=E=0`, lines are excluded directly; the ten unordered fixed-root pairs form one reduced degree-ten field, Hensel lifting is unique through `p^2`, and a coprime `p^3` obstruction closes every quadratic factor and the square lift.
-  Split/even edges and integral `2`-adic raising remain; THM-2206 blocks field-valued `C_2` Hasse repair.
-  THM-2446 opens six-brackets; THM-2451 and extensions refute its cone shortcut off point/common-plane boundaries. `JC(2)` and `DC(2)` remain open.
+  THM-2158/2180 reduce the twice-odd nonmonic branch to
+  `V|(4gamma-(beta/V)^2)`; THM-2189 forces this pole congruence, THM-2194
+  closes degree six, and THM-2202 closes every twice-odd degree `4r-2` by
+  flux-order separation below the cusp and its unique boundary tooth above.
+  THM-2181 closes monic depressed quartics; THM-2214 closes nonsplit terminal
+  degrees through ten; THM-2217 forces odd-leading survivors to degree `>=14`;
+  THM-2245/2247 put degree fourteen on a singular quartic and close it.
+  THM-2262 gives the degree-eighteen genus-four trigonal reduction. THM-2297
+  removes translation and closes every one-sparse stratum plus `B=D=0`.
+  THM-2311 reduces two-sparse support to `31` ratios; THM-2314/2316/2320/2324/2328
+  close them. THM-2332/2335 leave only Mordell degrees `2,4`; THM-2345/2347
+  and audited THM-2359 close the three named coefficient walls.
+  THM-2357/2360 and hostile-audited THM-2371 plus THM-2376 close `H_2S_5^2`.
+  THM-2373/2386/2389 give the root-free `H_4` pole system; independently
+  audited THM-2406 closes its reduced wall. THM-2411 empties `A=0`.
+  THM-2423/2425/2428 empty the axes; THM-2429/2437/2463/2468,
+  THM-2469/2470/2472, THM-2475/2476, and THM-2480 empty all ten planes.
+  Audited THM-2617 closes `B,D,W!=0`, `C=E=0` by a degree-ten root-pair
+  field obstruction and square lift. Audited THM-2636 closes
+  `B,C,D!=0`, `E=W=0`: root/pair Hensel matrices have rank four, while
+  `T^2=Z=rho^3 zeta/t^3` has five odd places and a genus-at-least-two lift.
+  Split/even edges and integral `2`-adic raising remain; THM-2206 blocks
+  field-valued `C_2` Hasse repair. THM-2446 opens six-brackets; THM-2451 and
+  extensions refute its cone shortcut. `JC(2)` and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
   three-real-Gaussian examples supersede “dimension four is sharp.”
 

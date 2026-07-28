@@ -2,6 +2,29 @@
 
 **Status:** CURRENT. **Role/Use:** compact defaults from repeated successes and failures; scan triggers and evidence. Each card states applicability, action, mechanism, and counterindication; new cards require distinct-thread evidence or a severe repaired failure.
 
+## Inventory retained power classes before classifying base-curve genus
+
+**Trigger / action:** after an eliminant is proved irreducible but its uniform
+genus looks parameter-heavy, return to the pre-elimination coordinates and
+list every correctly typed square or higher-power class in the base function
+field.  At one smooth fixed fibre, compute the valuations of each class and
+lift the normalization by the cheapest connected Kummer cover.
+**Mechanism:** an odd valuation proves a square class nontrivial; several
+fixed odd places plus branch-divisor parity can force positive genus without
+factoring the full moving discriminant.  The lift preserves information that
+elimination deliberately forgot.
+**Counterindication:** field typing is load-bearing.  A deck-character root
+may live only in a quadratic extension even when its square lies in the base;
+use the base-field square, not a cosmetic fourth power.  Also verify that the
+fixed points are smooth, the reconstructed function is a unit there, the
+eliminant is irreducible, and the physical trajectory actually realizes the
+cover.
+**Evidence:** audited THM-2617 uses `y^2=B/p` at five fixed places; audited
+THM-2636 uses the distinct retained spectral square
+`T^2=Z=rho^3 zeta/t^3` after the signed `C`-scale destroys the first square
+coordinate.  The `q` versus `T` correction in THM-2636 is the sharp typing
+hostile.
+
 ## Globalize a moving-factor orbit before localizing positivity
 
 **Trigger / action:** if a clean cell or root pattern contains a factor moved by the proposed action, build the complete lawful orbit without that fixed projector; use the cell only to lower-bound a nonnegative global integral, or transport it covariantly.
