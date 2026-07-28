@@ -13,8 +13,8 @@
   zero; the scout is neither the full split branch nor `JC(2)`.  Hashes begin
   `1bbadb90` / `2c22072a`.
 - `jacobian_s4_affine_plane_linear_projection_thm2699.py` -> matching `.out`
-  [THM-2699 PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT
-  HOSTILE AUDIT].  The adjugate identity classifies every affine source plane
+  [THM-2699 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  The
+  adjugate identity classifies every affine source plane
   and affine-linear rank-two target projection of the THM-2696 quotient with
   nonzero constant planar Jacobian.  Exactly three projective families
   survive, and each has a displayed triangular polynomial inverse; nonlinear

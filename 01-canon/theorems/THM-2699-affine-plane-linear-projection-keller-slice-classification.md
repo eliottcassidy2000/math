@@ -2,8 +2,8 @@
 id: THM-2699
 title: "Affine-plane and linear-projection Keller slice classification"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  Every affine source plane and affine-linear rank-two target
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Every affine
+  source plane and affine-linear rank-two target
   projection of the THM-2696 S3<S4 reflection quotient whose induced planar
   Jacobian is a nonzero constant belongs to one of three explicit projective
   normal forms.  Each survivor is a triangular polynomial automorphism of
@@ -26,8 +26,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2699 -- every affine-linear Keller slice is triangular
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2696 proves that the three-dimensional reflection quotient itself has
 the intrinsic nonconstant different `s_1s_2-s_3`.  Its nonlinear level
@@ -62,7 +61,8 @@ linear rows `r_1,r_2`.  Its translation is irrelevant to the Jacobian.  Put
 ell=r_1 cross r_2 !=0.                                  (3)
 ```
 
-Both `n` and `ell` are projective data.  Choose oriented affine coordinates
+The pair `(n,delta)` is projective under simultaneous rescaling, while `ell`
+is projective by itself.  Choose oriented affine coordinates
 on `(2)` whose tangent vectors `p,q` satisfy `p cross q=n`; a different
 choice merely multiplies the planar Jacobian by a nonzero constant.  The
 cross-product/adjugate identity gives
@@ -270,6 +270,18 @@ coefficient test and the three-family predicate.  The finite-field census is
 an evidence cross-check; the characteristic-zero proof is the coefficient
 elimination above.
 
-Promotion awaits an independent hostile audit of the projective typing,
-case exhaustion, displayed inverses, scope boundary, and exact transcript.
+An independent hostile audit rederived the projective typing and every branch
+of the `n_3/n_2` split, checked the three target-row kernels and polynomial
+inverses, and obtained the closed census formulas
+
+```text
+I=p(p-1)^3,       II=p^2(p-1)^2,       III=(p-1)^4.       (24)
+```
+
+It independently replayed both modes against the stored ten-line transcript
+and matched both declared LF-normalized hashes.  The audit also confirmed
+that `(n,delta)` must be rescaled jointly and that the nonlinear-source and
+nonlinear-target exclusions are genuine scope boundaries.
+
+QED.
 
