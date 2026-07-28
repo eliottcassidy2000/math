@@ -77,6 +77,15 @@ Format per entry:
   fixed-clock carrier.  Thus the two valid repairs are distinct and neither
   supplies a physical `L -> R` map, relative phase, endpoint current, or LRC
   exclusion.
+- **All-label sharpening:** the forgotten-`e` target augmentation is zero at
+  the displayed `(s,t)=(0,3)` cell, not uniformly on the `81`-label bank.
+  Exact fixed-`j` reconstruction gives a source unit precisely on a Cartesian
+  `7 x 7` rectangle.  On its `49` cells the augmented gain census is
+  `0:10, 2:19, 11:20`; the target physical-clock profile is a `Phi_7` unit on
+  all `81` cells.  There are four coefficient-ring ratios, so neither the
+  chosen determinant-`11` ratio nor the revived gain `2` is a global action.
+  The strongest survivor is the exact rectangle/chamber law recorded in
+  `lrc14-physical-wing-rectangle-and-target-chamber-20260728.md`.
 - **Endpoint/address hostile:** on the fixed THM-2334 triangle, exhaustive
   search finds no scalar-times-character-times-quotient-shift covariance for
   either endpoint wing or even the two common carriers.  Transporting every

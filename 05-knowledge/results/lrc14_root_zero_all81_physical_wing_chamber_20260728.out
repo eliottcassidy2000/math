@@ -1,0 +1,28 @@
+all-81 physical-present wing census
+labels=81 literal_object_subtractions=567/567
+determinant_pairs={(0, 1): 2, (0, 3): 11, (0, 4): 5, (0, 8): 8, (0, 10): 2, (0, 12): 4, (1, 3): 4, (1, 5): 20, (1, 8): 15, (1, 11): 10}
+augmentation_pairs={(0, 7): 2, (0, 9): 4, (0, 10): 2, (0, 11): 19, (0, 12): 5, (12, 0): 10, (12, 2): 20, (12, 11): 19}
+support_pair_count=6 support_pairs={((3,), (1, 2, 3)): 30, ((), (1, 2)): 21, ((3,), (1, 3)): 19, ((), (1,)): 4, ((), (1, 2, 3)): 5, ((), (1, 3)): 2}
+unit_ratio_labels=49/81 distinct_ratios=4
+source_rectangle=S* x T*, S*=(0,2,8,9,10,11,12), T*=(3,4,5,6,7,10,11); profile=12z^3
+target_s_coefficients_(a,b,c)={0: (9, 2, 2), 1: (9, 2, 0), 2: (7, 0, 4), 3: (7, 2, 3), 8: (7, 4, 4), 9: (7, 4, 4), 10: (7, 4, 4), 11: (7, 4, 4), 12: (9, 2, 2)}
+target_chamber_profile=a_s*z+b_s*1_(t<=9)*z^2+c_s*1_(t_not_8,9)*z^3
+source_nontrivial_label_character_patterns={(False, False, False, True, False, False): 168}
+target_nontrivial_label_character_patterns={(False, True, True, True, False, False): 168}
+augmented_gain_on_49_source_unit_labels={0: 10, 2: 19, 11: 20}
+ratio=(0, 4, 4, 4, 4, 10) count=20 det=5
+ratio=(9, 0, 0, 0, 0, 6) count=15 det=8
+ratio=(0, 2, 2, 2, 2, 6) count=10 det=11
+ratio=(11, 0, 0, 0, 0, 4) count=4 det=3
+ratio_symbols={(0, 4, 4, 4, 4, 10): 'A', (9, 0, 0, 0, 0, 6): 'B', (0, 2, 2, 2, 2, 6): 'C', (11, 0, 0, 0, 0, 4): 'D'}; X=source-null/target-unit
+ratio_grid_s=0 C C C C C X X D D
+ratio_grid_s=1 X X X X X X X X X
+ratio_grid_s=2 B B B B B X X B B
+ratio_grid_s=3 X X X X X X X X X
+ratio_grid_s=8 A A A A A X X B B
+ratio_grid_s=9 A A A A A X X B B
+ratio_grid_s=10 A A A A A X X B B
+ratio_grid_s=11 A A A A A X X B B
+ratio_grid_s=12 C C C C C X X D D
+chosen_0_3=(0, 3, (0, 0, 0, 12, 0, 0), (0, 9, 2, 2, 0, 0), 1, 11, (0, 2, 2, 2, 2, 6))
+nonunit_labels=32

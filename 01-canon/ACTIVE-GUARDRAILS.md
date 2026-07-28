@@ -85,7 +85,7 @@
     `12/13` cap for the full slope-seven family.  Carry-forgetting still turns
     thirteen disjoint `Delta^11`s into a false `boundary Delta^12`; do not infer
     pointwise endpoint emptiness or export the cap to another carrier.
-27g. **Projection labels are not physical emptiness.** THM-2744/2749 give a marked overlap, not an endpoint current; MISTAKE-313 separates fixed-clock from forgotten-clock wings. THM-2763 proves the fixed carrier fails the old `169` gauge: exact address is `(r,k,l)`, `r.W=l-k`, of size `13^4` two-sided or `13^3` after common-harmonic loss. Neither is THM-2625's endpoint plane or a factor allocation; retain the labelled atomic sidecar.
+27g. **Projection labels are not physical emptiness.** THM-2744/2749 give an overlap, not an endpoint current.  The `81`-label audit is a `7 x 7` source rectangle feeding an everywhere-unit target, with four ratios and gains `0,2,11`; none is a carrier map.  THM-2763 restores address `(r,k,l)`, `r.W=l-k`, of size `13^4` two-sided or `13^3` after harmonic loss; neither is THM-2625's plane or a factor allocation.
 ## NC2 / GMC
 
 28. **Scalar moments do not linearly separate return atoms.** MISTAKE-211 and

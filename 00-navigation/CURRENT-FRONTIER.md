@@ -96,13 +96,18 @@ rank one and their diagonals equal `a` because `a_0=0`.  In the separate full
 forgotten-`e` union the literal intersection is `C+D+E`; both physical wing
 rows are `Phi_7` units with exact determinant-`11` ratio `g`, but the target
 augmentation is zero, so there is no scalar augmented gain or physical map.
+The all-`81` audit gives a `7 x 7` source-unit rectangle and `32`-cell null
+cross feeding an everywhere-unit target chamber.  Its `49` unit pairs have
+four multipliers and augmented gains `0:10,2:19,11:20`; all `168` nontrivial
+normalized label modes survive.  No multiplier is a carrier operation or
+exact-address current.
 THM-2750 blocks arm-blind charging; THM-2757's marked `K4` transgression has no
 physical carrier.  THM-2763 proves the exact gauge repair: address `(r,k,l)`,
-`r.W=l-k`, gives a two-sided quotient of size `13^4`; forgetting the common
-harmonic gives the one-sided/imbalance quotient of size `13^3`.  One diagonal
-fibre has raw dual support `{0,2,10}` but all thirteen primal residues.  The
-`13^4` object is not THM-2625's endpoint plane and still loses factor labels.
-Next: attach that sidecar to a marked carrier and one determinant sector.
+`r.W=l-k`, gives a two-sided quotient of size `13^4` and a `13^3` quotient
+after common-harmonic loss.  One diagonal fibre has dual support `{0,2,10}`
+but all thirteen primal residues.  This is not THM-2625's endpoint plane and
+still loses factor labels.  Next: attach the chamber selector and exact-address
+sidecar to one marked carrier and determinant sector.
 THM-2727 is **PROVED** as a fixed-rail realization no-go, but supplies no
 rail/owner/support/address map.  Ledger `165`; no row is excluded.
 
