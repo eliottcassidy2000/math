@@ -1,0 +1,28 @@
+THM-2772 carrier-allocation pullback and mixed-face certificate
+allocation_lift_fibre_histogram={1: 144, 2: 24, 4: 1}
+allocation_lift_harmonic_points=196
+allocation_lift_with_q=33124
+central_zero_harmonic_fibre=K4=(bare,source,target,both)
+admissible_sector_profiles=2185
+charged_affine_sector_profiles=2184
+affine_profile=(Delta,Delta+a,Delta+b,Delta+a+b)
+marked_difference_affine=(-2b,-2a,0); mixed_rectangle=0
+endpoint_parallelogram_mixed_face=det(source_increment,target_increment)
+ordered_frame_area_census={1: 2184, 2: 2184, 3: 2184, 4: 2184, 5: 2184, 6: 2184, 7: 2184, 8: 2184, 9: 2184, 10: 2184, 11: 2184, 12: 2184}
+normalized_det1_frames=2184; c_j=-a; sum_j_c_j=-7a
+Segre_Hadamard_census={('charged', 'mixed'): 24192, ('charged', 'mixed_zero'): 3744, ('flat', 'mixed'): 144, ('flat', 'mixed_zero'): 481}
+Segre_Hadamard_all_endpoint_factors_nonzero={('charged', 'mixed'): 17424, ('charged', 'mixed_zero'): 3168, ('flat', 'mixed_zero'): 144}
+Pluecker_gate_D0_D1_D2_nonzero=20736
+Pluecker_gate_all_endpoint_factors_nonzero=14400
+virtual_face_control_supports_(bare,source,target,both,Omega)=(1, 13, 13, 169, 169)
+virtual_face_mixed_addresses=144; at_each: bare=source=target=0 and Omega=both!=0
+spectral_one_corner_Pluecker_gate=144/144; common_atom_required_before_DFT
+charged_mixed_zero_hostile=(1, 1, 2, 2); D=(11, 0, 0)
+two_sided_mixed_positive=(1, 2, 3, 6); D=(7, 9, 2)
+carrier_address_size=28561
+endpoint_plane_size=28561
+canonical_common_pullback_size=4826809
+pullback_endpoint_origins_per_carrier_address=169
+POSITIVE CONDITIONAL: a common normalized endpoint-translation square has determinant mixed face 1 and gives c_j=-a, so seven coherent clocks pay sum_j c_j=-7a exactly.
+CONCLUSION: the determinant-sector affine K4 is charged on every q!=0 sector but has zero mixed curvature.  A physical THM-2591 correction must retain the Boolean allocation bits and endpoint origin on one common atom and make the third Segre-Hadamard component survive before paying the seven-clock Cech invoice.
+ALL EXACT CHECKS PASSED
