@@ -79,7 +79,7 @@
     The reflected `rho o D` swaps endpoint teeth but has the same raw return
     cylinders and the correctly reflected clock diagonal.
     No downstream restriction can revive that unshifted support. THM-2689
-    proves every nontrivial lift restores intrinsic support but none globally permutes clock labels; a phase-local full packet is still owed.
+    proves every nontrivial lift restores intrinsic support but none globally permutes clock labels; THM-2691 closes the canonical central lift at the sixth present layer, not other lifts or mixed edge words.
 27f. **A disconnected label nerve is not physical Cech topology.** THM-2672
     finds honest twelve-fold components in all `534` maximal fixed
     configurations.  Edge switching defeats its fixed root-zero proof, but

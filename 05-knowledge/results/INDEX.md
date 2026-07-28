@@ -1,5 +1,16 @@
 # Script Results Index
 
+- `lrc14_lawful_odometer_alternating_rail_horizon_probe.py` and
+  `lrc14_lawful_odometer_alternating_unit_line_boundary.py` -> matching
+  `.out` files [THM-2691 PROVED + VERIFIED-EXACT + INDEPENDENTLY
+  HOSTILE-AUDITED].  The lawful `+/-(13^5+1)` central cycle has a positive
+  selected `H`-event THM-2584 rail/clock cylinder of length
+  `1/(7*13^(H+1))` for every finite `H`.  Dynamically inserting every event's
+  THM-2640 current-present factor leaves `6380,4298,3207,1645,68` components
+  at `H=1..5` and none at `H=6`; an explicit `H=5` atom has length `13^-11`
+  and digit word `(7,0,0,0,0)`.  The reflected coefficient units choose the
+  wrong local private edge, and the geometric repair loses scalar covariance.
+  Hashes begin `39ea72b7` / `9a485470`, `66722656` / `5445d784`.
 - `affine_facet_normalization_quotient_holotopy_thm2688.py` and
   `affine_facet_normalization_quotient_holotopy_thm2688_referee.py` ->
   matching `.out` files [THM-2688 PROVED + VERIFIED-EXACT + INDEPENDENTLY

@@ -110,7 +110,11 @@ all `4,455,516` nontrivial THM-2657 odometer lifts escape the support zero, but
 none globally permutes the seven clock labels; global covariance selects only
 the root-trivial order-thirteen kernel `beta=j/13`.  Thus the next object is a
 phase-local present/word/unit fibre, not another unshifted support selector.
-Ledger `165`.
+THM-2691 follows the canonical `+/-(13^5+1)` central cycle: its selected
+rail/clock cylinders are positive for every finite horizon, but the fully
+dynamically typed current-present product is positive only through `H=5` and
+empty at `H=6`.  This closes that cycle, not other lifts/components or the
+positive mixed `D`/slope face.  Ledger `165`.
 
 ### Independent routes that remain live
 
