@@ -322,14 +322,11 @@ and the gap cross-product in the corpus atlas.
 
 ## Interpolant death, mechanism survival (the first-untested-point law)
 
-**Trigger:** a closed form or recurrence fitted to the available data points, adopted because it is the shortest consistent formula; especially when it predicts only "the next number" rather than structure.
-**Action:** before adoption, do exactly one of: (a) find the sub-lemma that upgrades it from number-prediction to structure-prediction (inventories, class lists, amplitudes), or (b) spend one session extending the data by one point with the explicit goal of killing it. Pre-register structural predictions in a committed `.out` before decisive runs.
-**Mechanism:** minimal interpolants are selected precisely for shortness, so they carry a large family of equally short competitors that agree on the fitted range and diverge at the first untested point; breaking there is the generic outcome conditional on the selection, not bad luck. Mechanism-backed conjectures have no such competitor family because the proved sub-lemma fixes the extension.
-**Counterindication:** a true local law can LOOK refuted if a decaying carrier is left in the comparison (THM-2447's naive class means were off 23% at p=19 until detrended); test laws only after removing the availability trend. Density/threshold statements (not closed forms) may survive many points before breaking (A014574's rule survived ~19).
-**Evidence:** 24 break instances and 6 survivor programs are tabulated in
-[`the-first-untested-point-law-a-maturation-retrospective-kps-S135.md`](../07-reflections/the-first-untested-point-law-a-maturation-retrospective-kps-S135.md).
-The sharpest arcs are Leonardo/Busch (MISTAKE-055); HYP-4997 -> THM-2444 ->
-THM-2453 -> THM-2454 (two first-point refutations, then three pre-registered
-exact hits once mechanized); and the mod-9 bicycle fit killed inside THM-2467.
-The survivor table records THM-2447's twelve amplitudes, THM-1286's eight
-two-directional gate confirmations, and THM-790's logged `n=8` inventory.
+**Trigger / action:** before adopting a fitted recurrence, either prove a
+structural sublemma or pre-register its next structural prediction and try to
+kill it at the first untested point.
+**Mechanism / counterindication:** short interpolants have many equally short
+competitors; a mechanism removes them. First detrend availability (THM-2447),
+and distinguish threshold laws from closed forms.
+**Evidence:** S135 tabulates 24 breaks and 6 survivors; see MISTAKE-055,
+THM-2444/2453/2454, THM-2467, THM-1286, and THM-790.

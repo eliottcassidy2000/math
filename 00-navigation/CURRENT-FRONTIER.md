@@ -80,14 +80,11 @@ Its indispensable coordinates are primitive parameter, integral columns, transve
 ### Exact live obligation
 
 Finite rank-twelve boxes and rank-eleven stars remain undecided (HYP-8871).
-Exactly `165` rows survive in `nu_7(c_3)<=M`; THM-2417/2426/2436 empty the
-complement (THM-2356 kernel `28,393`; THM-2363/THM-2368 remain typed sidecars).
-THM-2440--2466 close the local comb, endpoint, complete-mask, drift/service,
-word-copy, and delayed-mixing debts on supplied common root bases.  THM-2461
-isolates one target-active first-failure role, while THM-2471--2539 add its
-collision colours, ancestry/clock carriers, scalar walls, and `216` boundary
-incidences.  These results retain strong observables but do not identify the
-later semantic root.
+Exactly `165` rows survive in `nu_7(c_3)<=M`; THM-2417/2426/2436 empty its
+complement. THM-2440--2539 close local comb/endpoint/clock seams on supplied
+root bases and retain collision colours, scalar walls, and `216` boundary
+incidences, but do not identify the later semantic root (THM-2356 kernel
+`28,393`; THM-2363/THM-2368 remain typed sidecars).
 
 The stopping complex is now concentrated in one descent problem.  THM-2545
 gives the word-stratified Hall criterion and THM-2549 gives positive same-base
