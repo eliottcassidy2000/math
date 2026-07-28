@@ -2,8 +2,8 @@
 id: THM-2743
 title: "C2-C3 off-diagonal projector rank and S3-S4 compatibility defect"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For a C3 action r and an involution s, the operator
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For a C3 action r
+  and an involution s, the operator
   (I-Pi3)sPi3 is exactly the charged part created from the equal-arm sector.
   It vanishes for every S3-normalizing reflection.  On the eight affine
   C2*C3 lifts to the Klein-four torsor, it vanishes exactly on the four
@@ -13,6 +13,7 @@ status: >
   compatibility detector and an exact equal-arm mixing gate, not a Keller
   exclusion or an LRC endpoint-current construction.
 source: a4-resolvent-next-gate-scout-2026-07-28
+audit: thm2694-full-lift-fibre-scout-2026-07-28 (independent theorem, matrix, group-closure, scope, normal/-O/stored, and hash audit: ACCEPT)
 depends_on:
   - THM-2595-modular-v4-affine-lift-dichotomy-and-six-vertex-tournament-no-go
 related:
@@ -22,6 +23,7 @@ related:
   - THM-2714-c3-metabolic-length-parity-and-unique-plane-four-adic-escape
   - THM-2716-c4-arm-transporter-groupoid-and-relative-degree-holotopy-boundary
   - THM-2721-semantic-inner-triangle-equal-following-amplitude-and-current-reanchoring-no-go
+  - THM-2741-highest-odd-faber-response-pole-capacity-closure
 script: 04-computation/c2_c3_projector_compatibility_thm2743.py
 output: 05-knowledge/results/c2_c3_projector_compatibility_thm2743.out
 script_sha256: bf76bbcb60b5129643b9526bc009043455070cfad93532462d6a9e69d9128fff
@@ -31,8 +33,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2743 -- C2-C3 off-diagonal projector rank and the S3/S4 defect
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The modular free product has one binary and one ternary generator, but passing
 to its smallest symmetric quotient imposes an extra compatibility relation.
@@ -213,6 +214,8 @@ transitive affine lift / S4 extension <=> off-diagonal rank 1.             (19)
 This is the precise part of the proposed quartic--resolvent transfer that
 survives scrutiny.  It says where the missing `V4` extension class sits: not
 in the cubic equal-arm sector itself, but in its binary off-diagonal leakage.
+THM-2741's exact real/imaginary sixth-power response is a useful quadrature
+analogy, but neither theorem supplies the other's geometric realization.
 
 It does **not** construct a degree-four graph quartic for a Keller map,
 identify affine Jelonek inertia with the abstract generators, impose the
@@ -272,7 +275,7 @@ relation-defect value in `(12)--(13)`.
 ## 7. Boundary ledger
 
 ```text
-PROVED HERE (candidate):  abstract projector gate (4)--(6);
+PROVED HERE:              abstract projector gate (4)--(6);
                           exact eight-lift S3/S4 rank table (12)--(13);
                           one-dimensional nonzero-class leakage.
 
@@ -283,4 +286,4 @@ NOT PROVED:               a Keller quartic carries the marked affine action;
                           JC(2), DC(2), or LRC(14).                         (22)
 ```
 
-QED (candidate).
+QED.
