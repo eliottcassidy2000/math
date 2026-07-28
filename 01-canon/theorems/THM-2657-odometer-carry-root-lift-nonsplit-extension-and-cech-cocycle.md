@@ -7,8 +7,8 @@ status: >
   predecessor-carry/root increment delta has the form tau=k/13^6 with
   k=7 delta mod 13.  Every such k is a thirteenth-unit, so tau has order
   13^6, not 13.  Hence the physical translation extension
-  0 -> C_(13^5) -> C_(13^6) -> C_13 -> 0 is nonsplit.  The minimal
-  set-theoretic section k(delta)=7 delta has exact wrap cocycle
+  0 -> C_(13^5) -> C_(13^6) -> C_13 -> 0 is nonsplit.  The generator-linear
+  section fixed by the least positive generator lift k(1)=7 has wrap cocycle
   7 floor((delta_1+delta_2)/13)/13^5, representing the nonzero class 7
   modulo 13.  This is an odometer/Čech obstruction before any present-factor
   mismatch; it supplies no positive common-component relation or LRC exit.
@@ -135,8 +135,8 @@ impossible.  This proves `(10)` is nonsplit.
 
 ## 3. The exact wrap cocycle
 
-Choose representatives `delta in {0,...,12}` and the minimal set-theoretic
-section
+Choose representatives `delta in {0,...,12}` and the generator-linear
+set-theoretic section determined by the least positive lift `s(1)=7`:
 
 ```text
 s(delta)=7 delta in Z/RZ.                                  (12)
@@ -200,6 +200,9 @@ does not split.
 ## 5. Holotopy boundary and next test
 
 The theorem rules out a **translation action**, not a positive relation.
+The kernel is invisible on the reduced carry/root/delayed-prefix observables,
+so their quotient covariance survives; nonsplitting blocks a literal physical
+`C_13` subgroup and does not repair the full present packet.
 Distinct lifts may still have positive chart overlaps.  Those overlaps form
 a Čech nerve over the delayed base.  Pairwise positivity fills only its
 one-skeleton; lawful composition requires common higher simplices or a
@@ -243,5 +246,4 @@ byte-matched the declared output, and both declared SHA-256 hashes matched
 the LF-normalized artifacts.  The audit also checked the scope boundary:
 this excludes a physical translation action only, not a positive overlap
 relation or an adjacent-clock signed determinant.
-
 QED.

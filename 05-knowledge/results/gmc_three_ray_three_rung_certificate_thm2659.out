@@ -1,0 +1,11 @@
+THM2659 GMC FREE THREE-RAY THREE-RUNG EXACT REFEREE
+charges=(24,9,4,-6) rays=((1,0,0,4),(0,2,0,3),(0,0,3,2)) mass=5 index=1
+channel_checks=84 hilbert_through_30=((0, 1), (5, 3), (10, 6), (15, 10), (20, 15), (25, 21), (30, 28))
+T5=5*(x+2y+2z)
+T10=15*(3x^2+24xy+56xz+14y^2+168yz+14z^2)
+T15=455*(x^3+18x^2y+66x^2z+33xy^2+660xyz+99xz^2+11y^3+495y^2z+396yz^2+11z^3)
+reduced_Q=11t^2-16t+43 reduced_C=3t^3-169t^2-182t+23
+resultant_Q_C=1008757571 bezout_rhs=1008757571
+two_rung_torus_hostile=Q_disc:-1636,Q(0):43,Q(-1):70
+horizontal_support_W=(0,15,20,30) wick_checks=3876 common_factor=(24m)!
+PASS

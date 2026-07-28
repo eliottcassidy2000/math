@@ -163,7 +163,5 @@
 64. **A resolvent discriminant is not its Kummer carrier.** THM-2655 forces the live quartic `V4` kernel into a quasi-etale torsor on the full Galois resolvent normalization.  Test the `C3/S3`-equivariant unit squareclasses and `Cl(R)[2]`; do not transfer grade-three Keller anatomy from a shared discriminant or from one non-Galois cubic root field.
 
 ## Promotion checklist
-Audit types, quantifiers, dimensions, symmetries, logical direction, quotient
-loss, hostile controls, dependencies, correction lineage, and optimized versus
-ordinary replay. Preserve every false claim's witness, first failed step,
-surviving mechanism, repaired statement, and next question.
+Audit types, quantifiers, symmetries, direction, quotient loss, hostiles,
+dependencies, correction lineage, both replays, and every failure boundary.
