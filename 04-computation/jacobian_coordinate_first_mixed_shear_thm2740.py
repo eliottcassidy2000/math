@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact symbolic companion for THM-2718.
+"""Exact symbolic companion for THM-2740.
 
 The theorem is an all-degree coordinate-ring argument.  This script checks
 the coordinate chain rule on a generic bounded polynomial, two nonlinear
@@ -126,7 +126,7 @@ def main() -> None:
     require(char_three_derivative.as_expr() == 1, "characteristic-three Jacobian hostile")
     require(sp.degree(yy + yy**3, yy) == 3, "characteristic-three hostile degree")
 
-    print("THM-2718 POLYNOMIAL-COORDINATE FIRST-TARGET AUDIT")
+    print("THM-2740 POLYNOMIAL-COORDINATE FIRST-TARGET AUDIT")
     print(f"generic_degree4_coefficients={len(coefficients)} free_G_coefficients={len(free_t_coefficients)}")
     print("coordinate_identity=Jac(A,V)=2*dV/dx_at_fixed_t")
     print("generic_solution=V=kappa*x/2+G(t)")

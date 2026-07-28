@@ -1,4 +1,4 @@
-THM-2718 POLYNOMIAL-COORDINATE FIRST-TARGET AUDIT
+THM-2740 POLYNOMIAL-COORDINATE FIRST-TARGET AUDIT
 generic_degree4_coefficients=15 free_G_coefficients=5
 coordinate_identity=Jac(A,V)=2*dV/dx_at_fixed_t
 generic_solution=V=kappa*x/2+G(t)
