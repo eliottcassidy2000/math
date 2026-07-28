@@ -95,10 +95,13 @@ semantic root `r=6` is a non-dual packet label, and `q_b=1+tau` at
 
 The relative-present bank retains `12848` deepest
 semantic forks, `12582` unit endpoints, and `2,166,112` directed reverse-clock
-scalar pairs.  Every lift nevertheless reaches root zero on the same
-half-tooth edge while its lawful endpoint lies on the opposite edge; the
-private-root relation is empty.  The live choices are a root-zero clutch
-retaining `(ell,s,t)` and delayed carry, or the following partial `t`-Fourier
+scalar pairs.  Edge-preserving transport reaches the forbidden root-zero
+**label**, but MISTAKE-310 retracts the inference that its physical support is
+empty: the right-root-zero and left-root-one half-tooth charts overlap openly
+on `(1,13)/182`, and an exact restricted coefficient intertwiner has been
+found there.  The live task is to retain `(ell,s,t)`, delayed carry, and the
+semantic fork through this partial chart clutch and attach it to an endpoint
+current, or evaluate the following partial `t`-Fourier
 coefficient at fixed `(ell_7,s)`, where `m_L,m_R in A_red={n/13}`, `tau!=0`,
 `q_b=1+tau`, and `Y=38*13^4=1085318`:
 
@@ -111,7 +114,8 @@ coefficient at fixed `(ell_7,s)`, where `m_L,m_R in A_red={n/13}`, `tau!=0`,
 
 Nonzero marginals do not decide it.  **RESERVED / PROVISIONAL:** THM-2727
 leaves fixed-rail Frobenius banks disjoint except fourteen constant units; no
-rail/owner map is supplied.  THM-2744 is an **UNPROVED EMPTY STUB** for the clutch.
+rail/owner map is supplied.  THM-2744 is an **UNPROVED EMPTY STUB** for the
+corrected partial-clutch theorem pending its exact package and hostile audit.
 Ledger `165`; no row is excluded.
 
 ### Independent routes that remain live
