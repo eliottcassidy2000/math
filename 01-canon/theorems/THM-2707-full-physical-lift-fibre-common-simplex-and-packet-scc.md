@@ -24,7 +24,7 @@ related:
 script: 04-computation/lrc14_full_physical_lift_fibre_thm2707.py
 output: 05-knowledge/results/lrc14_full_physical_lift_fibre_thm2707.out
 script_sha256: f05a07b2fb22cb5b39ed7d14e66d26154ecc50fc214861dc6576c3bcfaed2412
-output_sha256: c5cf7eaef9393c2c551bb2bc8d1c01ff40f0bea763f473c6da11a9fb03d05173
+output_sha256: 614085b0dacae1d1d38bb2f0c66d6cf65ad60da81e44e64e3ddd6a2dbccb9542
 hash_basis: LF-normalized bytes
 ---
 
@@ -243,8 +243,9 @@ repeated indefinitely as a fixed-skeleton **support** word.
 Multiplying `(2)` by `R` kills the `7n/R` displacement modulo one, so the
 delayed Boolean coordinate and its future digit/half-digit are independent
 of `n`.  The integer part changes by `7n`, giving the carry in `(4)`.  The
-high-speed probe changes by `2n/13`, giving the private root in `(4)`.  This
-proves the covariant part of the packet algebraically.
+high-speed probe changes by `14n/13`, hence by `n/13` modulo one, giving the
+private root in `(4)`.  This proves the covariant part of the packet
+algebraically.
 
 For the two low-speed factors, scale the exact rational rail and present
 endpoints by the common denominator of `Tz`.  Advancing `n` then adds one
