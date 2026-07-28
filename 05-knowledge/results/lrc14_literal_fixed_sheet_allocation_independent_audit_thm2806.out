@@ -1,0 +1,51 @@
+literal carrier-absent/present constructor exact audit
+dependency_sha256=(('lrc14_extended_carrier_endpoint_lib.py', '4b3f9f195b1634e1e84a1bc8bccb878a1c8c44aec13f24d197f92547c9e36c57'), ('lrc14_root_zero_full_target_semantic_clutch_20260728.py', '208f71020efa19fa47f66d2da061ab03fa7bc87beeb077b4008c069f499736d8'))
+retained_source_sheet=((142004992589460, 142005019034340, 1),)
+retained_target_sheet=((142005424522500, 142005450967380, 1),)
+selected_one_sided_carrier_piece_counts_(source,target)=(240, 241)
+fixed_sheet_times_full_one_sided_carrier_twists=(sheet,empty,...,empty) on both endpoint sides
+representative_transport=(ell,xi,delta0)->(ell+W,Txi,source_delta1/target_delta12);central_k0_sum_is_cyclic_reindexing_invariant
+omitted_carrier_constructor=endpoint functional of the retained sheet with no carrier-twist factor and no twist variable
+selector_identity=absent_raw==present_raw_at_twist_0 for all 169 addresses in both fields and both endpoint sides
+central_absent_normalization=constant extension over 13 primal twists, then unnormalized k=0 DFT; factor 13 DERIVED
+field_prime=352341050142921841
+endpoint_support_(absent_left,right;present_left,right)=((169, 169), (169, 169))
+inverse_address_support_(P0,P1,Q0,Q1)=(81, 81, 81, 81)
+transported_replacement_address_support_(P1,Q1)=(121, 121)
+fixed_origin_factors_(P0,P1,Q0,Q1)=(161934023005863791, 175075409527953449, 300649489018742460, 50230041473974177)
+fixed_origin_products=(346389504894336138, 351883238969953710, 351883238969953710, 216790045382338969)
+fixed_origin_hadamard_(D0,D1,D2,D3)=(209922877787817004, 129599459511997169, 129599459511997169, 211754122479689528)
+primal_fourfold_cosupport_at_(a,b)=(0,0)=(216790045382338969, 216790045382338969, 216790045382338969, 216790045382338969);primal_hadamard=(162478081243512194, 0, 0, 0)
+primal_allocation_support_counts_(B,P,Q,H,Omega)=(169, 13, 13, 1, 144)
+translated_candidate_factors=(161934023005863791, 44764945482710722, 300649489018742460, 254351476220525733)
+translated_candidate_products=(346389504894336138, 212567688727555814, 122462567010893996, 54757114460427982)
+translated_candidate_hadamard=(31494774807370248, 29396462007648133, 201527268717246338, 66116363616314310)
+literal_affine_covariances_(source,target)=((((0, 0), (0, 0), 325237892439620161),), (((0, 0), (0, 0), 325237892439620161),))
+transported_replacement_covariances_(source,target)=((), ())
+claimed_source_step_smallest_failure=('second-generator-not-C13', (180805353600758387, 36004246934412208))
+claimed_target_step_smallest_failure=('first-generator-not-C13', (330704291569313545, 120626588822422926))
+all_169_shifts_refuted_(source,target)=(168, 168)
+marked_sheet_representative_rows_(source,target)=(169, 169)
+forgotten_marked_sheet_hostile=(27, 27, ((0, 0), 254455016269350867, 0), ((0, 0), 231164267889491750, 0))
+field_prime=956354278959359281
+endpoint_support_(absent_left,right;present_left,right)=((169, 169), (169, 169))
+inverse_address_support_(P0,P1,Q0,Q1)=(81, 81, 81, 81)
+transported_replacement_address_support_(P1,Q1)=(121, 121)
+fixed_origin_factors_(P0,P1,Q0,Q1)=(155560747474790541, 11966211344214657, 879469786637801433, 361914377113479889)
+fixed_origin_products=(17884554354397974, 295638590014756546, 295638590014756546, 96307143767239679)
+fixed_origin_hadamard_(D0,D1,D2,D3)=(705468878151150745, 877931689546517576, 877931689546517576, 479268797051483842)
+primal_fourfold_cosupport_at_(a,b)=(0,0)=(96307143767239679, 96307143767239679, 96307143767239679, 96307143767239679);primal_hadamard=(385228575068958716, 0, 0, 0)
+primal_allocation_support_counts_(B,P,Q,H,Omega)=(169, 13, 13, 1, 144)
+translated_candidate_factors=(155560747474790541, 754011861070156781, 879469786637801433, 659025017448095022)
+translated_candidate_products=(17884554354397974, 837631828341846575, 574225575517477659, 584707675162883455)
+translated_candidate_hadamard=(101741075457887101, 652937410975242716, 126124905326504884, 147089104617316476)
+literal_affine_covariances_(source,target)=((((0, 0), (0, 0), 882788565193254721),), (((0, 0), (0, 0), 882788565193254721),))
+transported_replacement_covariances_(source,target)=((), ())
+claimed_source_step_smallest_failure=('second-generator-not-C13', (432121794071977470, 861240345107094102))
+claimed_target_step_smallest_failure=('first-generator-not-C13', (441768659068876063, 928498739029172404))
+all_169_shifts_refuted_(source,target)=(168, 168)
+marked_sheet_representative_rows_(source,target)=(169, 169)
+forgotten_marked_sheet_hostile=(27, 27, ((0, 0), 318932490657369324, 0), ((0, 0), 630230755085920022, 0))
+true_fixed_origin_endpoint_labels=all four flags retain (L,R,q,Delta)=((0,0),(0,0),(0,0),0)
+no_go=the literal fixed-origin Boolean allocation square has nonzero D3, but each allocation toggle has intrinsic endpoint step zero and scalar 1/13; replacing xi by translated sheets has no shift-character covariance at all.  Hence the determinant-one parallelogram is a separate carried-sample control
+ALL EXACT CHECKS PASSED
