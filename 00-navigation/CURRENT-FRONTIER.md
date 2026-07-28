@@ -333,8 +333,15 @@ Classify profiles under support operations; study analytic continuation and auto
   `W(D3)=V4 semidirect S3 ~= S4` (`A4` over a cyclic cubic).  Independently,
   THM-2768 realizes `A4/S4` as the `(2,3,3)/(2,3,4)` finite quotients of
   `PSL2(Z)=C2*C3`, with free kernels `F3/F5`; these quotient frames do not
-  identify Keller monodromy or supply an affine cover.  The affine Kummer and
-  boundary-realization gates remain open.
+  identify Keller monodromy or supply an affine cover.  THM-2775/2777/2780
+  sharpen the resulting `D3` frame: a marked determinant-weight colouring is
+  exactly a quartic `V4`-torsor state, its determinant-two mod-two null word is
+  the corresponding affine inertia row, and the determinant-three `A2` defect
+  is mod-two invertible.  Forgetting the mark retains only opposition; even
+  complete zero divisor rows do not reconstruct an unramified torsor.  The
+  missing coordinate is the embedded equivariant Kummer `H1`-class and its
+  unit/class-group realization.  The affine Kummer and boundary-realization
+  gates remain open.
   At degree eighteen THM-2314/2316 close sparse supports, THM-2371/2376 close
   `H_2`, and THM-2406 sends `H_4` to the common-root wall; other branches open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.

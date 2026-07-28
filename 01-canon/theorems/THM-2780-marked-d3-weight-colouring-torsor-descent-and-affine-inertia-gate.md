@@ -428,7 +428,7 @@ large unramified kernel.
 
 ## 7. Connection contract and exact scope
 
-The proved candidate connection is
+The proved connection is
 
 ```text
 source:       one marked D3 determinant-weight colouring;
