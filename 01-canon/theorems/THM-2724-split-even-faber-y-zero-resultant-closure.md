@@ -2,16 +2,16 @@
 id: THM-2724
 title: "Split even-Faber y-zero resultant closure"
 status: >
-  RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT, AWAITING
-  INDEPENDENT HOSTILE AUDIT.  On the y identically zero, lambda!=0 chosen-
-  sheet split polynomial exact-square-prefix degree-twenty-two even-Faber
-  boundary, the first two fluxes have a degree-23 q-resultant with
-  parameter-independent leading coefficient 96059601 and constant term a
-  nonzero multiple of lambda^3.  Thus q and u lie in the constant field, so
-  the third Faber observable is constant, contradicting R_Q'=kappa/U.  The
-  y-nonzero chart, every odd Faber seed, lambda=0, the full split branch, and
-  JC(2) remain outside this candidate.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  On the y
+  identically zero, lambda!=0 chosen-sheet split polynomial exact-square-
+  prefix degree-twenty-two even-Faber boundary, the first two fluxes have a
+  degree-23 q-resultant with parameter-independent leading coefficient
+  96059601 and constant term a nonzero multiple of lambda^3.  Thus q and u
+  lie in the constant field, so the third Faber observable is constant,
+  contradicting R_Q'=kappa/U.  The y-nonzero chart, every odd Faber seed,
+  lambda=0, the full split branch, and JC(2) remain outside this theorem.
 source: root/split-even-y-zero-resultant-2026-07-28
+audit: coordinate-first-audit-2026-07-28-y-zero-resultant
 depends_on:
   - THM-2129-quartic-faber-three-coefficient-boundary-classification
   - THM-2214-nonsplit-terminal-quartic-spectral-curve-closure-through-degree-ten
@@ -29,9 +29,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2724 -- the split even-Faber `y=0` boundary is empty
 
-**RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT, AWAITING
-INDEPENDENT HOSTILE AUDIT.**  Nothing may depend on this candidate until its
-status is promoted.
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 ## 1. Exact statement
 
@@ -156,10 +154,13 @@ supp_q(P23)={0,1,2,3,5,6,7,10,11,15,19,23},
 terms(P23)=34.                                        (14)
 ```
 
-The companion computes (11) directly and independently reconstructs the
-same polynomial, up to the standard resultant sign convention, by
-substituting the unique linear root of (9) into the cubic (6).  Its canonical
-polynomial digest is
+The companion computes (11) directly.  On the open set where the linear
+coefficient in (9) is nonzero, it independently substitutes the generic
+linear root into (6), clears the cube of that coefficient, and obtains the
+same polynomial up to the standard resultant sign convention.  Since the
+cleared expression is a polynomial identity, the check extends across the
+special locus where the linear coefficient vanishes; the proof never divides
+there.  Its canonical polynomial digest is
 
 ```text
 e50e733ec85df8c1aff2bf805a6442424b82b3c3dbb4cb5563cea363c9f7b6e0.

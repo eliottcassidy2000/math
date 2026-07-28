@@ -1,0 +1,15 @@
+split prime-23 arbitrary B-scale extension
+base_split_lambda_sha256=1bbadb900e27112f57f600b0b5b73a3b85fc5b02f23e3f8f687dac4fa1c41fc3
+scale=B0=b*rho^2:C0=c*rho^3:D0=d*rho^4:E0=e*rho^5:W0=w*rho^6
+rho=arbitrary_nonzero_constant:cancelled=True
+f1_b-f1_1=-616*t^2*(b-1)*(4840*v-1331*zeta-40)
+f2_b-f2_1=49280*t^2*(b-1)*(29282*v^2-1452*v+1331*zeta+2)
+prime23_relation=zeta*f1_b^4=(7496192^4*lambda^4/rho^23)*t^23
+fixed_fibre_independent_of_b=True:G3*L5^4
+fixed_local_controls_inherited_exactly=True
+weighted_corner_independent_of_b=True:empty=True
+ambient_coordinate_values_independent_of_b=-1190488992,15944049
+component_budget_survivor=(5,3,23)_only
+b_zero_included=True
+scope=EXACT_RESPONSE_CURVE_EXTENSION_NOT_ODD_BANK_NOT_JC2
+ALL CHECKS PASSED

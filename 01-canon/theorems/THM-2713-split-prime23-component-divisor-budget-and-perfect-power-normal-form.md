@@ -3,7 +3,7 @@ id: THM-2713
 title: "Split prime-23 component divisor budget and perfect-power normal form"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For every eta!=0
-  and every c,d,e,w, the split even-Faber prime-23 weighted complete
+  and every b,c,d,e,w, the split even-Faber prime-23 weighted complete
   intersection is geometrically integral, not only generically integral.
   Its five old and three new branches exhaust the zero divisors of F1 and
   zeta: div_0(F1)=23O, div_0(zeta)=23N, and the rational chosen-sheet
@@ -15,6 +15,7 @@ status: >
   split branch, or JC(2).
 source: thm2704-hostile-audit-2026-07-28-component-budget
 audit: lrc-narrow-debt-queue-2026-07-28
+extension_audit: coordinate-first-audit-2026-07-28-arbitrary-b-scale
 depends_on:
   - THM-2704-split-even-prime23-generic-genus-eighty-nine
 related:
@@ -24,27 +25,59 @@ script: 04-computation/jc2_split_prime23_component_divisor_budget_20260728.py
 output: 05-knowledge/results/jc2_split_prime23_component_divisor_budget_20260728.out
 script_sha256: 81cb01e4dff454fc18417b3cfa2136fcab97901317d2b8d2df805a5a0c677350
 output_sha256: 483754f20a492b3a77892cfea2f6c06612459d4366dc52647ce3d07cd4b9468b
+extension_script: 04-computation/jc2_split_prime23_bscale_extension_20260728.py
+extension_output: 05-knowledge/results/jc2_split_prime23_bscale_extension_20260728.out
+extension_script_sha256: 9f8d8d6d14eff6d121f5ac45f070d4489d71a72f788ceb5f73db75c4fb63d216
+extension_output_sha256: 4ef3d75c3bf6e82f05cefc7a133b1efe4d5b79c87f0e165e1c3bcbc9c2f2460f
 hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2713 -- the split prime-23 curve cannot break its `3:5` divisor balance
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The theorem
-concerns the exact nonzero-`eta` curve of THM-2704 and does not exclude its
-rational specializations.
+includes the arbitrary-`b` scale extension of THM-2704's exact nonzero-`eta`
+curve, including `b=0`, and does not exclude its abstract rational
+specializations.
 
 ## 1. Statement
 
 Give `(h,t,v,zeta)` weights `(1,1,2,3)`, and let
 
 ```text
-C=C_(c,d,e,w,eta):
-F2=0,
-zeta F1^4=eta t^23,                       eta!=0,      (1)
+C=C_(b,c,d,e,w,eta):
+F2_b=0,
+zeta F1_b^4=eta t^23,                     eta!=0,      (1)
 ```
 
 be the split even-Faber complete intersection of degrees `(6,23)` in
-`P(1,1,2,3)`.  The parameters `c,d,e,w` are arbitrary complex numbers.
+`P(1,1,2,3)`.  The parameters `b,c,d,e,w` are arbitrary complex numbers.
+On the affine chart `h=1`, the arbitrary-`b` fluxes are defined from the
+previously normalized `b=1` pair by
+
+```text
+f1_b-f1_1=-616t^2(b-1)(4840v-1331zeta-40),
+
+f2_b-f2_1=49280t^2(b-1)
+                    (29282v^2-1452v+1331zeta+2).      (1a)
+```
+
+Here `F1_b,F2_b` denote their weighted homogenizations.  Equivalently, choose
+any `rho in C*` and put
+
+```text
+B_0=b rho^2, C_0=c rho^3, D_0=d rho^4,
+E_0=e rho^5, W_0=w rho^6,
+t=rho/y, v=u/y^2, zeta=Z/y^3.                         (1b)
+```
+
+The chosen-sheet equation then has
+
+```text
+eta=7496192^4 lambda^4/rho^23!=0.                     (1c)
+```
+
+Thus `rho` is a freely chosen nonzero scale; it need not be a square root of
+`B_0`, and `b=0` is allowed.
 Then:
 
 1. `C` is a reduced, geometrically integral projective curve for every such
@@ -84,7 +117,7 @@ Then:
 
    ```text
    (h,t,v,zeta)=(H, tau*alpha*beta^4, V, sigma*alpha^23),
-   F1=phi*beta^23,             sigma*phi^4=eta*tau^23. (5)
+   F1_b=phi*beta^23,           sigma*phi^4=eta*tau^23. (5)
    ```
 
    On the affine chart this becomes, up to nonzero constants,
@@ -93,16 +126,21 @@ Then:
    q=alpha^5/beta^3,
    t=alpha*beta^4/H,
    zeta=alpha^23/H^3,
-   f1=beta^23/H^5.                                   (6)
+   f1_b=beta^23/H^5.                                 (6)
    ```
 
-The forms in (5) must still satisfy the exact identities `F2=0` and the
-displayed `F1` equation.  No assertion here says that those identities have
+The forms in (5) must still satisfy the exact identities `F2_b=0` and the
+displayed `F1_b` equation.  No assertion here says that those identities have
 no solution.  In this rational case, `t` and `q` have degrees `23` and `15`;
 after the visible fibres, Riemann--Hurwitz leaves exactly `29` and `6`
 additional ramification units, respectively.
 
 ## 2. The curve is a pure complete intersection on the smooth ambient locus
+
+For readability, suppress the subscript `b` on `F1_b,F2_b` throughout the
+geometric proof.  Formula (1a) shows that every new `b`-term contains `t^2`.
+It therefore changes neither ambient coordinate-point value nor any datum on
+the fixed fibre `t=0`.
 
 The only singular points of `P(1,1,2,3)` are the `v`- and `zeta`-coordinate
 points.  Uniformly in the parameters, `F2` takes the nonzero values
@@ -144,9 +182,9 @@ This excludes both affine vertical components and components contained in
 
 ## 3. The eight fixed local domains
 
-Every parameter-bearing term of `F1,F2` contains `t`.  Consequently the
-fibre `t=0` and all its unit checks are parameter-independent.  Its reduced
-support is
+Every parameter-bearing term of `F1,F2`, including the arbitrary-`b`
+deformation (1a), contains `t`.  Consequently the fibre `t=0` and all its
+unit checks are parameter-independent.  Its reduced support is
 
 ```text
 new:  zeta=0, G3(v)=0,                 three points,
@@ -253,6 +291,14 @@ a nonzero constant,
 q=-t^5/F1.                                           (21)
 ```
 
+More precisely, before removing the scalar it is
+
+```text
+q_phys=-7496192 lambda t^5/(rho^5 f1_b).             (21a)
+```
+
+This formula is valid for every `b=B_0/rho^2`, including zero.
+
 Equations (2) and (21) give
 
 ```text
@@ -333,7 +379,43 @@ Riemann--Hurwitz gives total ramification `28`, leaving exactly `6` other
 units.  Thus the rational residual is simultaneously a `t`-cover with a
 `29`-unit residual and a `q`-cover with only a `6`-unit residual.
 
-## 7. Exact norm/trace sidecar and the first coupling order
+## 6A. Independently audited arbitrary-`b` addendum
+
+The extension companion derives (1a)--(1c) from the exact unscaled integer
+fluxes, not by interpolating the normalized family.  Since both differences
+in (1a) contain `t^2`, the following inputs to Sections 2--6 are literally
+independent of `b`:
+
+```text
+the two ambient coordinate-point values;
+the h=t=0 corner and basepoint-free pencil;
+the complete t=0 support G3+L5 and every local unit;
+the old/new orders (4,23,0) and (1,0,23);
+the weights deg(F1,zeta)=(5,3).                       (28a)
+```
+
+The regular-sequence proof uses the finite fixed fibre plus the empty corner.
+The component proof uses only (28a), ampleness of `O_C(1)`, and the opposing
+section budgets.  The reducedness and adjunction arguments then use only the
+resulting lci/integral curve and its unchanged degrees.  Therefore every
+conclusion of the theorem transfers to arbitrary `b`, including `b=0`.
+
+The full `h=0` face away from `t=0` is **not** asserted independent of `b`:
+some homogenized terms from (1a) survive there when `t!=0`.  No description
+of that face is needed.  Basepoint freeness of `[h:t]` and ampleness exclude
+vertical or `h=0` components uniformly.
+
+The independent audit replayed both execution modes, checked the exact
+deltas and scale cancellation, and re-audited every dependency in (28a).
+This is a theorem-level extension of the response geometry, not a claim about
+the separately omitted `y=0` or odd-Faber physical branches.
+
+## 7. The normalized `b=1` norm/trace sidecar
+
+This section records the exact norm/trace sidecar on the original normalized
+section `b=1`.  It is **not** used in the component, divisor, genus, or
+perfect-power arguments above, and the arbitrary-`b` addendum makes no claim
+that the displayed term counts remain unchanged away from `b=1`.
 
 Write the affine fluxes as
 
@@ -385,12 +467,19 @@ Run
 ```bash
 python3 04-computation/jc2_split_prime23_component_divisor_budget_20260728.py
 python3 -O 04-computation/jc2_split_prime23_component_divisor_budget_20260728.py
+
+python3 04-computation/jc2_split_prime23_bscale_extension_20260728.py
+python3 -O 04-computation/jc2_split_prime23_bscale_extension_20260728.py
 ```
 
-Both modes byte-match the declared output.  The script proves the universal
-norm identity over a polynomial ring, specializes every exact flux
-coefficient, verifies (31)--(33), exhausts all `23` nonzero naive component degrees
-to the sole budget survivor (19), and checks the exponent arithmetic in (6).
+Both modes of both companions byte-match their declared outputs.  The first
+script proves the universal norm identity over a polynomial ring, specializes
+every exact `b=1` flux coefficient, verifies (31)--(33), exhausts all `23`
+nonzero naive component degrees to the sole budget survivor (19), and checks
+the exponent arithmetic in (6).  The extension companion derives (1a)
+directly from the audited integer fluxes, verifies cancellation of arbitrary
+nonzero `rho`, rechecks the fixed fibre and weighted corner, and includes
+`b=0` in the same parameter-free budget.
 An independent hostile audit separately reconstructed the weighted corner,
 all fixed local units and completed branches, the nonvertical component
 argument, the opposing divisor budgets, geometric reducedness, perfect-power

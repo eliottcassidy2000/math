@@ -1,7 +1,6 @@
 # The split `y=0` boundary is a degree-23 constant-field trap
 
-**Status:** PROOF-COMPLETE + VERIFIED-EXACT CANDIDATE, awaiting independent
-hostile audit as
+**Status:** PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED as
 `THM-2724-split-even-faber-y-zero-resultant-closure.md`.
 This note concerns only the chosen-sheet split polynomial exact-square-prefix
 degree-twenty-two **even-Faber** bank with `lambda!=0` and `y` identically
@@ -49,8 +48,9 @@ shows the chosen sheet never reaches `q=0` when `lambda!=0`.  The remaining
 32 monomials describe the exceptional finite root positions but cannot
 restore a nonconstant trajectory.
 
-This is stronger than a generic resultant statement.  There is no leading-
-coefficient divisor and no saturation chart to recover.
+This is stronger than a generic resultant statement: there is no parameter
+divisor on which the `q`-eliminant vanishes identically, and no saturation
+chart is needed to recover one.
 
 ## 3. The two-stage constant descent
 
