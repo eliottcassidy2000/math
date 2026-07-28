@@ -1,0 +1,10 @@
+LRC14 MIXED D/SLOPE-SEVEN DIRECT EXACT REFEREE
+component=(Fraction(960117507257, 1930018885886), Fraction(324519717452867, 652346383429468))
+x=649039434905733/1304692766858936 z=D(x)=46873542509301/100360982066072
+D_clock_path=(3,1,0) D_digit_match=(h_current,j_following)=(2,2)
+D_current=(source1,rail2,j5,h2,epsilon0,kappa0)
+D_following=(source1,rail0,j2,h6,epsilon1,kappa1)
+private_base=(rail0,sector0,edge0,local_kappa1,h6,shallow1,carry2,root6)
+successful_slope_switches=((1, 9, 7, Fraction(46873688056157, 100360982066072)), (2, 3, 8, Fraction(46873833603013, 100360982066072)), (3, 10, 9, Fraction(46873979149869, 100360982066072)), (4, 4, 10, Fraction(46874124696725, 100360982066072)), (5, 11, 11, Fraction(46874270243581, 100360982066072)), (6, 5, 12, Fraction(46874415790437, 100360982066072)), (9, 0, 2, Fraction(46874852431005, 100360982066072)), (10, 7, 3, Fraction(46874997977861, 100360982066072)), (11, 1, 4, Fraction(46875143524717, 100360982066072)), (12, 8, 5, Fraction(46875289071573, 100360982066072)))
+sharp_failures=((7, 'root_zero', 12, 0), (8, 'unit', 6, 1))
+verdict=PASS: every printed factor holds strictly at one rational point
