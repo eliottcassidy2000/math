@@ -1,3 +1,13 @@
+> **CORRECTION — MISTAKE-310 (2026-07-28).**  Section 4 correctly computes
+> the edge-preserving root label `0`, but its conclusion that the physical
+> private-root lift relation is empty is false.  The right-root-`0` and
+> left-root-`1` half-tooth charts overlap on the open interval `(1,13)/182`;
+> an exact audit finds a restricted coefficient-preserving rechart there.
+> The census, unit tables, scalar-lift counts, and full-target coexistence
+> below survive.  The no-go survives only for the unrestricted
+> edge-preserving labelled row.  THM-2744 is reserved for the corrected
+> partial-clutch statement.
+
 # Relative present repairs the unit table, but every scalar lift hits the zero-root clutch
 
 **Status: FINITE-EXACT + VERIFIED in byte-matching normal and optimized

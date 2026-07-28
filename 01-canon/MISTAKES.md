@@ -9,6 +9,31 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-310 (2026-07-28, relative-present root-zero clutch) -- a forbidden root label was mistaken for empty physical support
+
+- **What was assumed:** the relative-present scout correctly found that every
+  edge-preserving translation from the residue-7 right-root-12 chart lands in
+  the right-root-0 chart.  Because root `0` is omitted from the private-root
+  label bank, the accompanying reflection then declared the induced
+  private-root lift relation empty and treated an unconstructed edge switch as
+  the terminal obstruction.
+- **Why it was wrong:** the private half-tooth labels form overlapping charts,
+  not a partition.  In the canonical `182`-grid,
+  `H_0^R=(0,13)/182` and `H_1^L=(1,14)/182`, so their open overlap is
+  `(1,13)/182`.  Translation by `7/13^6` sends right root `12` to right root
+  `0`, but a point in that overlap is simultaneously a lawful left-root-`1`
+  point.  The exact adjacent witness
+  `47850889647341/100360982066072 ->
+  47851035194197/100360982066072` lies strictly inside the overlap and has
+  common rail, clock, relative-present, semantic, and full-target support.
+- **Repair / survivor:** landing at the zero **label** proves only that the
+  full edge-preserving labelled row does not intertwine.  It does not prove
+  physical emptiness after a chart change.  THM-2744 is reserved for the
+  corrected partial Cech-clutch theorem.  The relative coefficient census,
+  unit tables, endpoint counts, full-target coexistence, and empty unrestricted
+  edge-preserving relation survive; a global target action, endpoint current,
+  row exclusion, and LRC(14) still do not follow.
+
 ## MISTAKE-308 (2026-07-28, THM-2636/2692 Kummer field typing) -- a spectral nonsquare was identified with its physical square before pullback
 
 - **What was recorded:** the first promoted THM-2692 text wrote
