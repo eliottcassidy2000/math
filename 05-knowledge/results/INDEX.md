@@ -98,7 +98,10 @@
   coverage census is `0:47,512`, `11:39,948`, `12:7,536`, `13:0`.  Since
   `delta -> c0+7delta` permutes `F_13`, no positive thirteen-label component
   exists in the full THM-2640 slope-seven family.  Isolated boundary contacts
-  are not classified.  Hashes begin `851a5d0a` / `b5778f7e`.
+  are not classified.  The independent integrated-row referee rebuilds all
+  `219,024` rows via a separate `Phi_7` gcd test and finds the sharp service
+  law `11^22,12^4` before component compatibility.  Hashes begin
+  `851a5d0a`/`b5778f7e`; referee `fe92e886`/`e16bb1f6`.
 - `lrc14_alternate_arrival_physical_rail_handoff.py` -> matching `.out`
   [THM-2684 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   The full `324`-profile THM-2584 bank has exact envelope
