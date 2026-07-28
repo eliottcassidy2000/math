@@ -15,10 +15,13 @@ status: >
   is not symplectic without a dh wedge dy correction.  For every polynomial
   Keller realization the trace-Liouville form Tr(x dy)-4 kappa^(-1)u dv is
   exact: it is d Tr(H), where x dy-kappa^(-1)P dQ=dH on the affine source.
-  Its poles are second-kind poles supported on the Jelonek boundary and every
-  divisor residue is zero; the branchwise Laurent residue before trace is the
-  surviving necessary condition; its power-sum form is an explicit
-  coefficient gate absent from the PDE alone.  An exact punctured C4 hostile satisfies the entire
+  Its affine poles are second-kind poles supported on the Jelonek boundary
+  and every divisor residue is zero.  Branchwise Laurent cancellation, a
+  localized power-sum potential, and in the D4 lane a relative opposite-pair
+  potential survive before the full trace; these are explicit realization
+  gates absent from the PDE alone.  A rational D4 sheet-defect hostile permits
+  arbitrary residue once polynomial realization is removed.  An exact
+  punctured C4 hostile also satisfies the entire
   PDE with c=1 but has primitive-coordinate discriminant and b-denominator
   divisors, proving that the PDE alone does not encode affine polynomial
   realization.  This reduces but does not solve the D4/A4/S4 planar degree-four
@@ -34,8 +37,8 @@ related:
   - MISTAKE-301
 script: 04-computation/jacobian_planar_degree4_inverse_spectral_thm2621.py
 output: 05-knowledge/results/jacobian_planar_degree4_inverse_spectral_thm2621.out
-script_sha256: b921f79d9066b011977f66b6da7922dc5a86f760c4d6f19c9c0e916036bb87b1
-output_sha256: 8ef20a15e2188f8603f095832cc18dcaaba46ea154147b3ddb6973a16ec4fe35
+script_sha256: baf7034775833a26f814cbf82e71df679bdec8919e3834d0a38bbbd08d4234b2
+output_sha256: d3e31d2ec9ca251d1e7bd4fd07e147f6335d388b4ce45fe7b72e042af73ea23c
 hash_basis: working-tree bytes (LF)
 ---
 
@@ -462,31 +465,68 @@ p_3=-a_3^3+3a_3a_2-3a_1,
 p_4=a_3^4-4a_3^2a_2+2a_2^2+4a_3a_1-4a_0.               (31g)
 ```
 
-Since `y=sum_(j=0)^3 b_j x^j`, direct differentiation on the four sheets
-gives
+Since `y=sum_(j=0)^3 b_j x^j`, put
+
+```text
+E=sum_(j=0)^3 b_j p_(j+1)=Tr_(L/K)(xy),
+
+C=sum_(j=0)^3 b_j/(j+1) dp_(j+1).                       (31h)
+```
+
+Direct differentiation on the four sheets gives
 
 ```text
 alpha=sum_(j=0)^3 [p_(j+1) db_j+j/(j+1)b_j dp_(j+1)],
 
+alpha=dE-C,
+
 d alpha=sum_(j=0)^3 1/(j+1) dp_(j+1) wedge db_j
-       =4 kappa^(-1)du wedge dv.                         (31h)
+       =4 kappa^(-1)du wedge dv.                         (31i)
 ```
 
-Modulo exact rational forms,
+Combining this with (31c) gives
 
 ```text
-alpha == -sum_(j=0)^3 b_j/(j+1) dp_(j+1).               (31i)
+Gamma_F:=C+4 kappa^(-1)u dv
+        =d(E-Phi_F).                                     (31j)
 ```
 
+This exactness has a support refinement.  Put
+
+```text
+V=A^2 minus A_F=D(c),                 U=F^(-1)(V).
+```
+
+Both `H_F` and `xy` are regular on `U`, and finite-algebra trace preserves
+regular functions.  Therefore
+
+```text
+Phi_F,E,E-Phi_F in O(V)=C[u,v,1/c].                     (31k)
+```
+
+Thus the **entire affine polar principal part** of `alpha`, `omega_F`, and
+`Gamma_F` cancels away from `c=0`.  Pure primitive-discriminant and pure
+power-basis reconstruction divisors cannot support the aggregate trace form,
+even when individual `a_i,b_j` have poles there.  At a Jelonek prime the
+remaining principal part is exact and has zero logarithmic residue.
+
 Because `u dv` is regular at every affine base prime, polynomial realization
-forces the explicit cancellation gate
+also forces the explicit residue shadow
 
 ```text
 boxed: Res_D sum_(j=0)^3 b_j/(j+1) dp_(j+1)=0
-                                             for every D. (31j)
+                           for every affine base prime D. (31l)
 ```
 
-At a Jelonek component, (31j) must coexist with the full inverse-coefficient
+If `b_j=sum_n b_(j,n)pi^n` and
+`p_(j+1)=sum_n p_(j+1,n)pi^n` in a uniformizer `pi`, this is
+
+```text
+sum_(j=0)^3 1/(j+1) sum_(r in Z)
+       r b_(j,-r)p_(j+1,r)=0.                            (31m)
+```
+
+At a Jelonek component, (31l)--(31m) must coexist with the full inverse-coefficient
 pole in (19).  It is a marked-companion constraint, not a consequence of the
 pole order or cubic resolvent alone.
 
@@ -556,6 +596,36 @@ descended square lives in the root-field
 quadratic intermediate `E_2`, not automatically in THM-2598's distinct
 matching quadratic.  This is a typed next object, not a monodromy exclusion.
 
+There is a complementary invariant-channel gate before the quadratic
+`M/K` trace.  Put
+
+```text
+M=L^tau,                       [L:M]=[M:K]=2,
+
+p_m^tau=x^m+tau(x)^m,
+
+C_tau=sum_(j=0)^3 b_j/(j+1) d p_(j+1)^tau.              (33c)
+```
+
+Taking the relative trace of `theta_F=dH_F` gives
+
+```text
+Gamma_tau:=C_tau+2 kappa^(-1)u dv
+ =d Tr_(L/M)(xy-H_F)                         in Omega^1_M. (33d)
+```
+
+On the finite-etale quotient `W=U/<tau>`, the pair potential on the right is
+regular.  Thus every divisor of `M` has zero residue **before** its two
+`M/K` conjugates can cancel, and its affine polar support is confined to the
+boundary omitted from `W`.  This is strictly finer than the base gate
+(31j)--(31m).  Together, (33b) and (33d) retain both the anti-invariant action
+potential and the invariant opposite-pair trace.
+
+THM-2612's deck-coordinate pole is compatible with these exactness laws.  A
+coordinate pullback can have a pole while the associated trace--Liouville
+differential has only exact higher-order principal parts and zero logarithmic
+residue.  The pole invoice and the residue invoice must not be identified.
+
 The polynomial hypothesis in (31a) is load-bearing.  On the punctured rational
 family
 
@@ -566,7 +636,7 @@ u=Y^4,                    v=(X-h(Y))/(4Y^3),
 one still has `kappa=-1`, but now
 
 ```text
-theta_F=X dY+u dv=d(uv)+h(Y)dY.                         (33c)
+theta_F=X dY+u dv=d(uv)+h(Y)dY.                         (33e)
 ```
 
 Taking `h(Y)=Y-4lambda/Y` gives
@@ -587,6 +657,160 @@ instead gives opposite branch residues over `u=1`, while
 traced residue does not recover branchwise polynomial exactness.  These are
 punctured rational controls, not polynomial maps of `A^2`.
 
+### 6.1 A `D_4` sheet-defect hostile with arbitrary residue
+
+The polynomial hypothesis remains load-bearing even after fixing `D_4`
+monodromy and THM-2621's exact sheet-defect pole.  On a rational symplectic
+chart put
+
+```text
+u=s^4+s^2,                         v=t/(4s^3+2s),
+
+X=1/(s-1),
+Y=-t(s-1)^2+lambda(s-1).                              (34a)
+```
+
+Then
+
+```text
+dX wedge dY=ds wedge dt=du wedge dv.                   (34b)
+```
+
+The primitive coordinate `X` has eliminant
+
+```text
+R=(2-u)X^4+6X^3+7X^2+4X+1=(2-u)f.                     (34c)
+```
+
+At `u=2`, `R` specializes to a cubic, so one sheet escapes and
+`a_3=6/(2-u)` has the full pole prescribed by (19).  The extension
+`C(s)/C(s^4+s^2)` has root involution `s -> -s`; its normal closure is
+obtained by adjoining `sqrt(-1-s^2)` and has degree eight.  Hence its
+geometric monodromy is `D_4`.  The squared-pair resolvent is
+
+```text
+U(U^2+2U+1+4u).                                         (34d)
+```
+
+The companion `Y=b(X)` has polynomial base coefficients
+
+```text
+b_0=2(-2lambda+10uv-3v),
+b_1=-7lambda+26uv-26v,
+b_2=2(-3lambda+11uv-16v),
+b_3=-(u-2)(-lambda+4uv-6v).                             (34e)
+```
+
+Exact reduction gives
+
+```text
+f_v b_u-f_u b_v == f_X,                                 (34f)
+
+disc_X(R)=-16u(4u+1)^2,
+disc_X(f)=-16u(4u+1)^2/(u-2)^6.                         (34g)
+```
+
+Thus `u=2` is neither a raw discriminant collision nor a companion
+denominator.  Nevertheless the coefficient trace is
+
+```text
+omega_F=d(-(20u+4)v)+lambda dlog(2-u),
+
+Res_(2-u)(omega_F)=lambda.                              (34h)
+```
+
+The deck involution itself is
+
+```text
+tau(X)=-X/(2X+1),
+
+tau(Y)=(2X+1)[2lambda-(2X+1)Y].                         (34i)
+```
+
+It fixes `u,v`, has `tau^2=1` and Jacobian one, and its pole lies over
+`u=2`.  The parameter `lambda` is arbitrary.  Thus the quartic PDE,
+one-sheet coefficient pole, polynomial companion coefficients, and `D_4`
+monodromy do not imply even the base residue gate.  At `lambda=0`, the deck
+pole remains while every logarithmic residue vanishes, proving that
+second-kind data can carry the pole invoice and that zero residue is not a
+`D_4` exclusion.
+
+### 6.2 Base exactness does not imply opposite-pair exactness
+
+A second `D_4` hostile proves that (33d) is strictly finer than the full base
+trace.  Put
+
+```text
+u=s^4+s^2,                    v=t/(4s^3+2s),
+
+x=s,                          y=t-6s/(u-2).              (35a)
+```
+
+Again `dx wedge dy=du wedge dv`.  Now
+
+```text
+f=T^4+T^2-u,
+
+b(T)=4vT^3+[2v-6/(u-2)]T,                               (35b)
+
+f_v b_u-f_u b_v == f_T modulo f.                        (35c)
+```
+
+The quartic is monic, so `c=1`, and
+
+```text
+disc_T(f)=-16u(4u+1)^2.                                 (35d)
+```
+
+Thus `u=2` is a pure companion-denominator divisor, not a Jelonek or
+primitive-discriminant divisor.  The full base trace is nevertheless exact:
+
+```text
+omega_F
+ =[12v-12/(u-2)^2]du+(12u+4)dv
+ =d([12u+4]v+12/(u-2)).                                 (35e)
+```
+
+So its de Rham class and residues vanish by cancellation.  Its pole at
+`u=2` violates the stronger support clause (31k), since `c=1` would require
+the physical trace potential to be polynomial.
+
+The intermediate quadratic field is `M=C(r,v)` with
+
+```text
+r=s^2,                         u=r^2+r.                  (35f)
+```
+
+After removing the exact term `d(2uv)`, the pair form (33d) is
+
+```text
+Gamma_tau-d(2uv)
+ =-2 dlog g(r),                g(r)=(r-1)/(r+2).         (35g)
+```
+
+It has residues `-2,+2` at `r=1,-2`.  The nontrivial `M/K` conjugation is
+`r -> -1-r` and sends `g` to `g^(-1)`, so these two classes cancel in the
+base trace:
+
+```text
+g(r)g(-1-r)=1.                                             (35h)
+```
+
+Hence base exactness cannot replace opposite-pair exactness.  Polynomial
+realization requires two refinements of the base class which must remain
+separate:
+
+```text
+                         base de Rham/residue cancellation
+                              /                    \
+ affine support in C[u,v,1/c]     D4 pair exactness before M/K trace.
+                                                               (35i)
+```
+
+This hostile fails both upper refinements, so it proves that each contains
+information absent from the base trace; it does not order the two refinements
+against each other.  The hostile is rational, not a polynomial Keller map.
+
 ## 7. Resolvent interface and exact residual
 
 THM-2598's matching cubic remembers the three pairings of the four roots and
@@ -595,12 +819,12 @@ quotients by `V_4`.  It forgets
 ```text
 the attached values y_i=b(x_i),
 the coefficientwise symplectic congruence (9),
-the trace--Liouville primitive, branch splitting, and coefficient gate (31c)--(31j),
-the anti-invariant action potential (33a),
+the trace--Liouville primitive, branch splitting, and localized coefficient gate (31c)--(31m),
+the anti-invariant action potential and invariant opposite-pair gate (33a)--(33d),
 and which normalization branches remain in the affine source.             (34)
 ```
 
-Thus `(b,(9),(31c)--(31j),(33a))` is the missing marked-origin sidecar for transferring any
+Thus `(b,(9),(31c)--(31m),(33a)--(33d))` is the missing marked-origin sidecar for transferring any
 grade-three resolvent anatomy back to a quartic Keller map.  In the `D_4`
 lane, it must coexist with THM-2612's birational deck-involution pole and the
 present/omitted boundary ownership of THM-2598.  These are compatible
@@ -608,7 +832,7 @@ invoices, not yet a contradiction.
 
 The degree-four planar frontier is now the following typed classification
 problem: classify rational pairs `(f,b)` satisfying (9), the pole law (19),
-the polynomial exactness and residue laws (31c)--(31j), monodromy
+the polynomial exactness, support, branch, and pair laws (31c)--(33d), monodromy
 `D_4,A_4`, or `S_4`, and extension of their total space to `A^2` with
 `u,v in C[x,y]`.  This is strictly smaller than an unrestricted planar
 coefficient search, but no lane is excluded here.
@@ -635,8 +859,12 @@ checks:
 6. the universal source-defect curvature cancellation under the Keller
    equation;
 7. the arbitrary traced-residue and norm-one branch-cancellation punctured
-   hostiles; and
-8. the determinant-one Liouville exact-differential identity.
+   hostiles;
+8. the `D_4` sheet-defect hostile's eliminant, companion, PDE, discriminants,
+   deck involution, and arbitrary residue;
+9. the strict opposite-pair hostile's exact base trace, pure companion
+   divisor, conjugate pair residues, and norm-one cancellation; and
+10. the determinant-one Liouville exact-differential identity.
 
 The generic-coordinate intersection, resultant factorization, valuation law,
 and trace argument are proofs above, not extrapolations from the fixtures.
@@ -650,7 +878,8 @@ failed implication and repair.
 No polynomial degree-four Keller map, monodromy lane exclusion, JC(2), DC(2),
 or GMC-to-JC interface follows.  In particular, a nonzero divisor residue of
 `omega_F` is impossible rather than merely unproved; useful residue data must
-be retained branchwise before trace as in (31e)--(31f).  No local mechanism
-forcing the coefficient cancellations in (31j) is proved here.
+be retained branchwise or pairwise before trace as in (31e)--(31f) and
+(33d).  No local mechanism forcing the support and exactness gates is proved
+here.
 
 QED.

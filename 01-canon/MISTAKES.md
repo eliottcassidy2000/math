@@ -30,8 +30,13 @@ Format per entry:
   anti-invariant potential `H_F-tau(H_F)` survives the trace.  For an abstract
   rational inverse-spectral pair, a nonzero traced residue is an obstruction
   to polynomial realization, never a feature of a polynomial Keller map.
-  Its power-sum form is the explicit coefficient residue gate in repaired
-  THM-2621.  Always pull a quotient-side closed form back to the claimed
+  The repaired theorem strengthens this to a localized power-sum potential
+  and, in the `D4` lane, an exact opposite-pair potential before the final
+  quadratic trace.  A rational `D4` one-sheet-defect family realizes arbitrary
+  residue despite the PDE, pole law, and polynomial companion coefficients;
+  a second `D4` family has exact base trace but cancelling nonzero pair
+  residues.  These are minimal hostiles to recovering polynomial realization
+  from the abstract inverse-spectral data.  Always pull a quotient-side closed form back to the claimed
   affine source before promoting it to an independent boundary invariant.
 
 ## MISTAKE-300 (2026-07-28, THM-2618 candidate scope) -- the canonical selected source was conflated with a distinct target-informed head
