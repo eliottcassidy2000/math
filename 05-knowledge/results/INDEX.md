@@ -44,6 +44,15 @@
   wraps equal to the nonzero odometer Bockstein `7`.  This is an abstract
   obstruction, not physical facet gluing.  Hashes begin
   `16685599`/`fecc6762` and `63ed1445`/`4add8f23`.
+  `32286298`/`2388dd0f` and `63ed1445`/`4add8f23`.
+- `jacobian_cyclic_cubic_normal_crossing_kummer_gate_thm2690.py` -> matching
+  `.out` [THM-2690 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  For
+  `R=C[x_1,...,x_n,z]/(z^3-x_1...x_m)`, the Nagata presentation has Smith
+  form `(1,3,...,3)`, hence `Cl(R)=(Z/3)^(m-1)` and no mod-two Kummer
+  carrier.  The exact hostile `d^2=abc` has a standard `Cl[2]` plane: its
+  `C3` quotient is singular, while the extra `C2` reflection gives
+  polynomial `S3` invariants.  Hashes: `c756eefa` / `f2e3f734`.
 - `lrc14_mixed_d_slope7_two_simplex_scout.py` and
   `lrc14_mixed_d_slope7_two_simplex_independent_referee.py` -> matching
   `.out` [FINITE-EXACT].  One rational point in THM-2680's `3->1->0` D-edge
@@ -201,6 +210,10 @@
   Macaulay map.  Both factor fields are uniform.  At that stage only full
   support remained; THM-2692 subsequently closes it.  Hashes begin
   `6f463672` / `3efbadaf`.
+  Macaulay map.  Both factor fields are uniform.  Only full support remains
+  in the inherited genuine nonsplit degree-twenty-two branch.  Hashes begin
+  The LF/CRLF-portable MISTAKE-305 dependency-lock repair changes no
+  mathematical output.  Hashes begin `453ca403` / `3efbadaf`.
 - `jacobian_thm1310_a4_resolvent_field_type_referee.py` -> matching `.out`
   [THM-2681 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED
   ADDENDUM].  The exact matching action has kernels `V4`, images `C3/S3`

@@ -39,9 +39,16 @@ BASE_PATH = HERE / "jc2_degree22_bcd_weighted_hensel_kummer_thm2636.py"
 BASE_SHA256 = "0866a29f665aedc6d2c226f35943852e56907ff821e705a0dbca2651e71fa15c"
 PARENT_PATH = HERE / "jc2_degree22_complete_support_three_hensel_thm2671.py"
 PARENT_SHA256 = "6245dd4cc85d0a70bdbc8e56a0511ffad7889b6274130aed759e5729f92472e6"
-require(hashlib.sha256(BASE_PATH.read_bytes()).hexdigest() == BASE_SHA256,
+
+
+def lf_sha256(path: Path) -> str:
+    """Hash repository text independently of LF/CRLF checkout policy."""
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
+
+
+require(lf_sha256(BASE_PATH) == BASE_SHA256,
         "audited THM-2636 dependency changed")
-require(hashlib.sha256(PARENT_PATH.read_bytes()).hexdigest() == PARENT_SHA256,
+require(lf_sha256(PARENT_PATH) == PARENT_SHA256,
         "audited THM-2671 parent changed")
 
 spec = importlib.util.spec_from_file_location("thm2636_base_support4", BASE_PATH)

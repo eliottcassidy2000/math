@@ -93,7 +93,19 @@ Format per entry:
   concurrent rebase or any hardening edit, recompute digests from `HEAD` and
   replay both interpreter modes; never carry pre-edit hashes across the
   checkpoint merely because the visible theorem statement is unchanged.
+## MISTAKE-305 (2026-07-28, THM-2683 dependency lock) -- LF hashes were compared to raw CRLF checkout bytes
 
+- **What failed:** THM-2683 declared LF-normalized hashes for its THM-2636
+  and THM-2671 executable dependencies but called `sha256(read_bytes())`.
+  The promoted companion therefore aborted before its mathematics on a
+  Windows CRLF checkout, even though both normalized dependency hashes were
+  exactly the declared values.
+- **Repair:** dependency text is normalized from CRLF to LF before hashing;
+  the theorem now describes LF-normalized transcript/dependency equality.
+  This is an evidence-portability defect only: no algebraic certificate,
+  stored output, or theorem conclusion changed.
+- **Rule:** a declared normalized hash basis must also be implemented at every
+  dependency lock, not merely when frontmatter hashes are computed.
 ## MISTAKE-303 (2026-07-28, THM-2648 edge-thinning sharpness) -- a minimum relative to the affine chart was promoted as the unrestricted minimum
 
 - **What was claimed:** the first repaired THM-2648 proved that no

@@ -21,7 +21,7 @@ depends_on:
   - THM-2671-degree-twenty-two-complete-support-three-weighted-hensel-closure
 script: 04-computation/jc2_degree22_support_four_toric_hensel_thm2683.py
 output: 05-knowledge/results/jc2_degree22_support_four_toric_hensel_thm2683.out
-script_sha256: 6f4636725542a7a3804be978bf9c4f3c79cd961d2c10f15c6af918ab0e353d1e
+script_sha256: 453ca40327f7da0520485da25f0edfd4de8e9a5957b2ca7d68190007973bf403
 output_sha256: 3efbadaffde08f978ef8b80df5b476f224c4e21a9b1c14884b46d816f82a2e59
 hash_basis: LF-normalized bytes
 ---
@@ -314,7 +314,9 @@ python3 04-computation/jc2_degree22_support_four_toric_hensel_thm2683.py
 python3 -O 04-computation/jc2_degree22_support_four_toric_hensel_thm2683.py
 ```
 
-Both executions byte-match the stored output and declared hashes.  An
+Both executions LF-normalized-byte-match the stored output and declared
+hashes.  The dependency locks are likewise LF-normalized, so they are stable
+under Windows checkout policy (MISTAKE-305).  An
 independent hostile audit reconstructed the five terminal supports and both
 factor fields, verified the native three-parameter ring and Hensel recursion,
 checked the BCDW cofactor ordering and toric defect, and independently derived
