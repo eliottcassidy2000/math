@@ -335,51 +335,30 @@ the Bertrand/iterated-log scales, while Egyptian splitting conserves mass.
 Classify profiles under support operations; study analytic continuation and automatic/Mahler structure; track collision taxes; and feed support identities into tournament laws and LRC residue packets.
 ## Other active portfolio
 
-- **Knots / operation-ready relations:** THM-2176 gives the continuation kernel; THM-2191 gives catalytic localization and stable group length; [THM-2281](../01-canon/theorems/THM-2281-common-optimal-context-for-finite-catalytic-families.md) puts every finite localized metric packet isometrically in one ordinary translated slice. THM-2220 gives fixed-context slopes; THM-2242 makes the kernel embedding isometric and identifies its atoms.
-  THM-2292 confines the Brittenham--Hermiller `T(2,7)`/mirror plane to two same-sign chambers. THM-2308 proves `u((#^P K)#(#^Q mirror(K)))>=P+Q`, puts the stable diagonal in `[2,5]`, and reduces the chambers to one concave profile between sharp abstract norm envelopes.
-  THM-2317 identifies factor forgetting as an exact metric quotient. [THM-2330](../01-canon/theorems/THM-2330-partition-lattice-gordian-lift-spectrum.md) inserts every intermediate factor partition and target: lift costs decrease under coarsening, merge drops form an exact coboundary, disjoint packets min-plus convolve, and the stable spectrum exists; its unknot slice is exactly THM-2248's partition transform.
-  [THM-2336](../01-canon/theorems/THM-2336-prime-target-gordian-owner-diagram-and-bypass-split.md) makes prime-target fibres weighted owner diagrams and splits two-prime translation from bypass.
-  [THM-2339](../01-canon/theorems/THM-2339-prime-owner-deletion-and-target-allocation-hypergraph.md) makes composite lifts finite prime-token allocations with a coloured Möbius hypergraph and exact fixed-owner deletion.
-  THM-2346 gives unique global ANOVA tensors and score-table gauge; pair couplings are symmetric cohabitation energies, not orientations.
-  [THM-2348](../01-canon/theorems/THM-2348-prime-type-rectangularity-and-target-token-conditioning.md) equates robust prime-type factorization with mixed-tensor/rectangle vanishing, gives exact token conditioning, and makes the two-prime correction a bounded continuation of `-sigma`.
-  THM-2374 inverts the squared complete-subcube Walsh bank; THM-2383 recovers complex coefficients exactly from labelled spanning references. Physical references, owners, and knot realization remain open.
-  THM-2351 proves the canonical self-target ANOVA is exactly an affine reparameterization of the directional catalysis--bypass ledger; its optimum and skew pair sector add no information. Positive catalysis and the stable diagonal remain open.
-  [THM-2646](../01-canon/theorems/THM-2646-braid-three-modular-central-pullback-and-full-twist-knot-fibre.md) proves `B3=PSL2(Z) x_(C6) Z`: modular class plus exponent classifies braid conjugacy. One fibre contains an unknot, trefoil, and torus knots of unbounded genus; at braid index three only the cited flype `C2` remains. Exponent is not Markov-invariant.
+- **Knots / operation-ready relations:** THM-2176/2191/2281 localize every
+  finite metric packet isometrically in one translated slice; THM-2242/2330
+  give the atomic kernel and partition-lift spectrum.  THM-2336/2339 encode
+  prime owners and composite token allocations.  THM-2346/2348/2351 identify
+  the ANOVA, rectangle, and catalysis gauges; THM-2374/2383 invert them given
+  labelled references.  Physical references, owners, positive catalysis,
+  knot realization, and the stable diagonal remain open.  THM-2292/2308 put
+  the `T(2,7)`/mirror diagonal in `[2,5]`.  THM-2646 proves
+  `B3=PSL2(Z) x_(C6) Z`; modular class plus exponent classifies conjugacy,
+  but exponent is not Markov-invariant and the cited index-three flype remains.
 - **Unsplittable cost flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture: a planar acyclic instance has fractional cost `58` but capacity-good integral cost at least `60`. Its carrier is the `K_3` stable-set facet; the planar `2d_max` theorem remains intact.
-- **Jacobian/Dixmier:** THM-1300/1315's three-dimensional collision has
-  unsettled provenance (MISTAKE-205); `DC(2)` remains open.  On that fixed
-  sporadic map, THM-2473/2546/2566/2570 give the saturated Jelonek, cusp,
-  conductor, and omitted-fibre laws, while THM-2576 gives the set-level
-  composition law `S_(F o F)=V(LH)`; higher component counts remain open.
-  [THM-2633](../01-canon/theorems/THM-2633-derangement-character-obstruction-and-d4-keller-exclusion.md)
-  proves that every Keller sheet stabilizer normally generates monodromy:
-  Jelonek inertia fixes a sheet and normally generates by purity.  Thus
-  `C4,V4,D4` fail and only `A4,S4` remain at degree four; the source field has
-  no nontrivial Galois subextension of the target.  [THM-2643](../01-canon/theorems/THM-2643-degree-five-six-keller-stabilizer-and-regular-block-quotient-census.md)
-  identifies failure exactly with a regular sheet quotient.  It excludes
-  regular `C5` and nine of sixteen sextic actions; an induced `S3` block
-  action is not fatal by itself, and quartic/resolvent actions must not be
-  conflated.  THM-2646 identifies monic cubic discriminant order as the
-  integer central height of the local resolvent root braid, but only after
-  its full modular braid class is retained; finite `S3` inertia plus height
-  is insufficient.  [THM-2655](../01-canon/theorems/THM-2655-quartic-keller-resolvent-v4-quasietale-torsor-and-kummer-class-group-gate.md)
-  gives the dual kernel gate: a semiregular normal monodromy kernel returns
-  as a quasi-etale torsor over its quotient normalization.  Thus each live
-  quartic `A4/S4` branch forces the standard rank-two `V4` character module
-  into either unit squareclasses or `Cl(R)[2]` on the full degree-three/six
-  Galois resolvent normalization.  The standard plane is projective over
-  `F2[C3]` and `F2[S3]`, so the converse also holds: either ambient copy is
-  exactly sufficient for an abstract equivariant connected `V4` Kummer
-  carrier, with `H^2(Q,W)=0`.  The exact even-sign-change hostile
-  realizes the class-group alternative on `d^2=abc`, whose trace-zero slice
-  is the `D4` surface singularity with triality, but its Jacobian is
-  nonconstant.  The remaining decisive test is therefore affine/Jelonek
-  realization of that carrier as the graph quartic of an actual Keller map,
-  not another module-extension or raw-discriminant computation.  No degree bound, `A4/S4`, `G1`, `JC(2)`, or
-  `DC(2)` closure follows.  At degree eighteen, THM-2314/2316 close sparse
-  supports,
-  THM-2371/2376 close `H_2`, and audited THM-2406 sends `H_4` to the closed
-  common-root wall; branches outside THM-2262 remain open.
+- **Jacobian/Dixmier:** THM-1300/1315 provenance is unsettled (MISTAKE-205),
+  and `DC(2)` is open.  THM-2473/2546/2566/2570/2576 give the fixed sporadic
+  map's boundary, fibre, and composition laws.  THM-2633 excludes `C4,V4,D4`
+  monodromy but leaves `A4,S4`; THM-2643 excludes regular `C5` and nine sextic
+  actions, while induced `S3` can survive.  THM-2646 needs the full modular
+  root braid.  THM-2655 makes the `V4` kernel quasi-etale; its standard plane
+  is projective over `F2[C3]` and `F2[S3]`, so an equivariant unit or `Cl(R)[2]`
+  copy is also sufficient for an abstract connected Kummer carrier and
+  `H^2(Q,W)=0`.  The `d^2=abc` hostile realizes the class-group branch but has
+  nonconstant Jacobian.  Next test affine/Jelonek realization in an actual
+  Keller graph quartic; no degree, `A4/S4`, `G1`, `JC(2)`, or `DC(2)` closure.
+  At degree eighteen THM-2314/2316 close sparse supports, THM-2371/2376 close
+  `H_2`, and THM-2406 sends `H_4` to the common-root wall; other branches open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.
 - **Planar source fibers:** THM-2063/2071 close affine/quadratic pencils;
   THM-2084/2110/2118 close cubics; THM-2102/2113 close power-free top faces;
