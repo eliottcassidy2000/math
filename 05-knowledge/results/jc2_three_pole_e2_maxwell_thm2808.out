@@ -1,0 +1,38 @@
+THM-2808 THREE-POLE E=2 MAXWELL AUDIT
+universe: 4 <= N <= 10, all 1 <= a <= b <= c, a+b+c=N
+N | partition | deg raw | deg Q | marked charts
+ 4 | (1,1,2) |       3 |     1 |             1
+ 5 | (1,1,3) |       4 |     2 |             2
+ 5 | (1,2,2) |       4 |     2 |             2
+ 6 | (1,1,4) |       5 |     3 |             3
+ 6 | (1,2,3) |       5 |     3 |             3
+ 6 | (2,2,2) |       5 |     3 |             3
+ 7 | (1,1,5) |       6 |     4 |             4
+ 7 | (1,2,4) |       6 |     4 |             4
+ 7 | (1,3,3) |       6 |     4 |             4
+ 7 | (2,2,3) |       6 |     4 |             4
+ 8 | (1,1,6) |       7 |     5 |             5
+ 8 | (1,2,5) |       7 |     5 |             5
+ 8 | (1,3,4) |       7 |     5 |             5
+ 8 | (2,2,4) |       7 |     5 |             5
+ 8 | (2,3,3) |       7 |     5 |             5
+ 9 | (1,1,7) |       8 |     6 |             6
+ 9 | (1,2,6) |       8 |     6 |             6
+ 9 | (1,3,5) |       8 |     6 |             6
+ 9 | (1,4,4) |       8 |     6 |             6
+ 9 | (2,2,5) |       8 |     6 |             6
+ 9 | (2,3,4) |       8 |     6 |             6
+ 9 | (3,3,3) |       8 |     6 |             6
+10 | (1,1,8) |       9 |     7 |             7
+10 | (1,2,7) |       9 |     7 |             7
+10 | (1,3,6) |       9 |     7 |             7
+10 | (1,4,5) |       9 |     7 |             7
+10 | (2,2,6) |       9 |     7 |             7
+10 | (2,3,5) |       9 |     7 |             7
+10 | (2,4,4) |       9 |     7 |             7
+10 | (3,3,4) |       9 |     7 |             7
+exact ordered-partition representatives checked: 30
+simple Maxwell roots represented: 153
+raw eliminant = collision discriminant * Maxwell polynomial
+all bounded converse gates and marked chord counts: PASS
+assert_nodes=0

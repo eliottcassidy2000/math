@@ -1,34 +1,346 @@
 ---
 id: THM-2808
 title: "Three-pole e=2 Maxwell polynomial and finite accessory classification"
-status: RESERVED / UNPROVED EMPTY STUB
+status: >
+  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
+  AUDIT.  The remaining balanced-response chamber e=2,h=3 is finite in
+  every degree.  For each ordered positive pole partition (a,b,c), the two
+  non-pole critical points of x^a(x-1)^b(x-lambda)^c have equal critical
+  value at exactly N-3 simple parameter values.  An explicit degree-(N-3)
+  Maxwell polynomial gives all of them, every root is automatically
+  admissible, and the same count is the marked noncrossing-chord Nielsen
+  count.  This is a response-layer theorem, not Keller-chart entry, JC(2),
+  or DC(2).
 source: root/jc-e2-three-pole-maxwell-2026-07-28
-depends_on: []
-related:
+depends_on:
   - THM-2796-balanced-response-stieltjes-pade-normal-form-and-one-double-zero-classification
+related:
   - THM-2800-two-pole-two-double-zero-stieltjes-recurrence-and-first-nielsen-pair
   - THM-2805-general-two-pole-e2-maxwell-eliminant-and-nielsen-classification
+script: 04-computation/jc2_three_pole_e2_maxwell_thm2808.py
+output: 05-knowledge/results/jc2_three_pole_e2_maxwell_thm2808.out
+script_sha256: 5fa77277cec460e8809cce4fa0e43f153f411fc5a20645d99c0e900ce12edded
+output_sha256: b3b0a1f043b3616a46c1fb0ea65e901805b9a5748b951434273f468bf8f4d1f8
+hash_basis: LF-normalized bytes
 ---
 
 # THM-2808 -- three-pole e=2 Maxwell polynomial and finite accessory classification
 
-**RESERVED / UNPROVED EMPTY STUB.**
+**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
+AUDIT.**
 
-Proposed scope: classify the remaining balanced-response chamber `e=2,h=3`
-for every ordered three-pole partition.  The intended object is the
-equal-critical-value locus of
+THM-2796 leaves one apparent accessory parameter in the last `e=2`
+balanced-response chamber.  It is not a positive-dimensional modulus.
+It is the parameter of a one-variable Maxwell polynomial, and that
+polynomial has exactly the degree predicted by the marked dessin atlas.
+
+## 1. Exact critical-value reduction
+
+Work over an algebraically closed field of characteristic zero.  In the
+balanced passport notation of THM-2796, fix
+
+```text
+e=2,                    h=3,
+pole partition=(a,b,c), a,b,c>=1,
+N=a+b+c,                s=N-4,                 r=N.    (1)
+```
+
+Order the three pole points and normalize them to `0,1,lambda`; normalize
+the high point over the third branch value to infinity and
+`F(infinity)=1`.  Put
 
 ```text
 D=x^a(x-1)^b(x-lambda)^c.
 ```
 
-Promotion requires an all-degree derivation of the critical quadratic,
-the removal of its diagonal-collision discriminant from the exact remainder
-coefficient, a proof that the residual Maxwell polynomial has degree `N-3`,
-an admissible algebraic converse, and an independently audited marked
-Nielsen count.  It must distinguish response-layer classification from
-Keller-chart entry, `JC(2)`, or `DC(2)`.
+The third fibre has partition `(N)`.  Therefore a monic numerator
+`B=S E^2` must satisfy
 
-Until a proof is written, exactly replayed, independently hostile-audited,
-and this status is promoted, this file is not a proved result or proved
-dependency.
+```text
+B-D=-v                                                   (2)
+```
+
+for a nonzero constant `v`.  Its two double zeros are consequently two
+distinct non-pole critical points `gamma,delta` of `D`, and
+
+```text
+D(gamma)=D(delta)=v.                                    (3)
+```
+
+Conversely, any two distinct non-pole critical points satisfying `(3)`
+give `(2)` with two double zeros.  Thus the whole chamber is the
+equal-critical-value, or Maxwell, locus of `D`.
+
+Remove the forced pole factors from `D'`.  The residual critical quadratic
+is
+
+```text
+D'
+ =x^(a-1)(x-1)^(b-1)(x-lambda)^(c-1) K,
+
+K=Nx^2-Ux+a lambda,
+U=(a+c)+(a+b)lambda.                                    (4)
+```
+
+Write
+
+```text
+E=K/N=x^2-(U/N)x+a lambda/N,
+Delta=U^2-4Na lambda.                                   (5)
+```
+
+The roots of `E` are exactly `gamma,delta` whenever `Delta!=0`.
+
+## 2. The exact degree-`N-3` Maxwell polynomial
+
+Divide `D` by the monic quadratic `E`:
+
+```text
+D=H E+v_0(lambda)+R(lambda)x.                           (6)
+```
+
+Then
+
+```text
+D(gamma)-D(delta)=R(lambda)(gamma-delta).               (7)
+```
+
+The raw secant coefficient has the exact factorization
+
+```text
+R(lambda)=Delta(lambda) Q_(a,b,c)(lambda),              (8)
+```
+
+where
+
+```text
+Q_(a,b,c) in Q[lambda],          deg Q_(a,b,c)=N-3.      (9)
+```
+
+This defines the three-pole Maxwell polynomial without roots or
+resultants.
+
+### Proof of the factor and degree
+
+Polynomial reduction by `E` shows `R in Q[lambda]`.  The recurrence
+
+```text
+x^k=h_(k-1)x-p h_(k-2)       modulo E,
+h_0=1, h_1=U/N,
+h_j=(U/N)h_(j-1)-(a lambda/N)h_(j-2)                  (10)
+```
+
+bounds its parameter degree by `N-1`.
+
+The quadratic `Delta` is squarefree as a polynomial in `lambda`, since
+
+```text
+Disc_lambda(Delta)=-16Nabc !=0.                         (11)
+```
+
+At a root of `Delta`, write `E=(x-u)^2`.  Differentiating `(6)` at `u`
+gives
+
+```text
+R=D'(u)=0,
+```
+
+because `(4)` has the factor `E`.  Both roots of `Delta` are therefore
+roots of `R`, proving divisibility in `(8)`.
+
+The factor occurs exactly once.  Near a collision put
+
+```text
+E=(x-u)^2-w^2,               w^2=Delta/(4N^2),
+P=x^(a-1)(x-1)^(b-1)(x-lambda)^(c-1).
+```
+
+Then `D'=NP E`, and the secant quotient gives
+
+```text
+R
+ =[D(u+w)-D(u-w)]/(2w)
+ =N/(2w) integral_(-w)^w P(u+t)(t^2-w^2) dt.           (12)
+```
+
+This is a polynomial identity, so the integral is only a compact notation
+for termwise antidifferentiation.  It yields
+
+```text
+lim_(Delta->0) R/Delta=-P(u)/(6N) !=0.                  (13)
+```
+
+The collision roots do not put `u` at a pole, so the last quantity is
+nonzero.  Hence `gcd(Q,Delta)=1`.
+
+Finally let `d=a+b` and send `lambda` to infinity.  One critical point is
+
+```text
+gamma=(d/N)lambda+O(1),
+```
+
+and the other is `delta=a/d+O(lambda^(-1))`.  Equation `(7)` gives
+
+```text
+R(lambda)
+ =[(d/N)^(d-1)(-c/N)^c] lambda^(N-1)
+  +O(lambda^(N-2)).                                    (14)
+```
+
+Thus `deg R=N-1`; removing the exact quadratic factor proves `(9)`.
+
+## 3. Every root is simple and admissible
+
+Neither `0` nor `1` is a root of `Q`.  At `lambda=0`, the critical
+quadratic has roots `0,(a+c)/N`, and the latter has nonzero value under
+`x^(a+c)(x-1)^b`.  At `lambda=1`, its roots are `1,a/N`, and the latter
+has nonzero value under `x^a(x-1)^(b+c)`.  Since `Delta` is nonzero at
+both parameters, `(7)--(8)` give
+
+```text
+Q(0)Q(1)!=0.                                           (15)
+```
+
+Let `lambda_0` be a root of `Q`.  By `(13)`, `Delta(lambda_0)!=0`, so the
+two critical points are distinct.  They avoid all three poles, because
+
+```text
+K(0)=a lambda,
+K(1)=b(1-lambda),
+K(lambda)=c lambda(lambda-1).                          (16)
+```
+
+Their common critical value `v` is therefore nonzero.
+
+There is also no hidden multiplicity in the parameter.  Continue the two
+simple critical points locally and set
+
+```text
+J(lambda)=D_lambda(gamma(lambda))-D_lambda(delta(lambda)).
+```
+
+At a zero of `J`, the critical-point derivatives drop out, and
+
+```text
+J'
+ =-cv/(gamma-lambda)+cv/(delta-lambda)
+ =cv(gamma-delta)/
+   [(gamma-lambda)(delta-lambda)] !=0.                 (17)
+```
+
+By `(7)`, `R` and hence `Q` have a simple zero.  Therefore
+
+```text
+Q_(a,b,c) has exactly N-3 distinct roots.               (18)
+```
+
+For any such root, equation `(6)` has `R=0` and
+`v_0=v`.  Define
+
+```text
+B=D-v,                    E=(x-gamma)(x-delta),
+S=B/E^2,                  T=x(x-1)(x-lambda).           (19)
+```
+
+The criticality in `(3)` gives `E^2|B`.  Any repeated root of `B` is a
+root of `D'`; the pole roots have `B=-v!=0`, while the only other critical
+points are `gamma,delta`.  Consequently `S` is squarefree and disjoint
+from `ET`, and every converse gate is automatic.
+
+Moreover,
+
+```text
+F=B/D,
+F'/F
+ =Nv/(SET).                                             (20)
+```
+
+Thus THM-2796 applies with `C=Nv`.  For a prescribed `kappa!=0`, one
+explicit response is
+
+```text
+G=(Nv/(2kappa)) E/(DT),
+V=(2kappa/(Nv))^2 S D T^2,
+F=VG^2,
+2VG'+V'G=2kappa.                                       (21)
+```
+
+Conversely, `(2)--(7)` show that every normalized response in `(1)` gives
+a root of `Q`.  Hence `(18)--(21)` are the complete ordered
+three-pole classification.
+
+## 4. Marked Nielsen atlas
+
+The same `N-3` has a direct dessin meaning.  Fix the full-cycle third
+inertia and draw the two disjoint zero transpositions as chords of its
+`N`-gon.  Crossing chords leave one cycle; noncrossing chords leave three.
+If their four cyclic gaps are
+
+```text
+g_1,g_2,g_3,g_4>0,
+```
+
+then one noncrossing pairing has pole-cycle lengths
+
+```text
+g_1,                    g_3,                    g_2+g_4. (22)
+```
+
+For a marked pole cycle of length `p_j`, choose it as the last cycle in
+`(22)` and split it into `g_2+g_4` in `p_j-1` positive ways.  The other
+two gaps are forced by the other two marked pole lengths.  Quotienting by
+the centralizer of the full cycle gives exactly
+
+```text
+sum_(j=1)^3 (p_j-1)=N-3                               (23)
+```
+
+marked Nielsen charts.  Their defects sum to `2N-2`, so they have genus
+zero.  This independently explains the algebraic degree.
+
+When pole multiplicities repeat, unmarked affine classes are the orbits of
+the `N-3` roots under the exponent-preserving anharmonic subgroup.  For
+example, exchanging the poles at `0` and `1` sends
+
+```text
+(a,b,c;lambda) -> (b,a,c;1-lambda).                    (24)
+```
+
+The theorem counts ordered normalized charts; it does not silently identify
+the roots in `(24)`.
+
+## 5. Consequence for the response frontier
+
+The inequality `h<=e+1` from THM-2796 leaves only `h=1,2,3` when `e=2`.
+THM-2799 handles one pole, THM-2800 and THM-2805 handle the two-pole
+corridors, and the present result removes the final three-pole accessory
+parameter.  Conditional only on the audit/promotion status of those
+separate files, the entire abstract `e=2` response layer is now a finite
+explicit atlas.
+
+This is not yet a planar Jacobian theorem.  The response construction is
+downstream of a particular nonsplit source-fibre chart; it neither proves
+that an arbitrary Keller pair enters that chart nor supplies the missing
+Faber-flux compatibility.  In particular, finiteness of the Maxwell atlas
+is not degree descent.
+
+## 6. Exact controls
+
+Run
+
+```bash
+python 04-computation/jc2_three_pole_e2_maxwell_thm2808.py
+python -O 04-computation/jc2_three_pole_e2_maxwell_thm2808.py
+```
+
+The companion uses exact rational polynomial arithmetic and checks every
+unordered positive pole partition through `N=10`:
+
+1. the raw degree `N-1` remainder coefficient and exact `Delta Q` quotient;
+2. `deg Q=N-3`, squarefreeness, and separation from `0,1,Delta`;
+3. the `E^2` division and every squarefree/disjoint converse gate;
+4. the cleared response derivative;
+5. the marked noncrossing-chord trace and count; and
+6. covariance under swapping the poles at `0` and `1`.
+
+The finite controls support but do not replace the all-degree proof.
