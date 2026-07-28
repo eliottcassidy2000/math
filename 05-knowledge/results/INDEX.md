@@ -1,5 +1,15 @@
 # Script Results Index
 
+- `lrc14_dilation_canonical_unit_atlas_no_go_20260728.py` -> matching `.out`
+  [VERIFIED-EXACT SCOUT; THM-2680 INPUT; NOT A PHYSICAL FIBRE PRODUCT].
+  Under only the numerical dilation handoff `j'=h`, the state-independent
+  THM-2635 atlas `U^0={9}`, `U^1={3,8,10}` has exactly three
+  formula-compatible canonical-unit children.  All three violate the
+  elementary successor-half constraint and are identically empty in both
+  safe and guard-free sectors.  Eight nonunit child rows remain positive.
+  Rail/source/base-cell/component transport and cell-dependent units remain
+  untested, so this is a closure obstruction rather than a physical no-go.
+  Hashes begin `02767cdb` / `e711c8a7`.
 - `jc2_degree22_complete_support_three_hensel_thm2671.py` -> matching `.out`
   [THM-2671 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   One pinned pre-scale eliminant and the fixed degree-five root/degree-ten

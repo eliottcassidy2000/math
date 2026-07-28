@@ -1,0 +1,28 @@
+LRC14 exact canonical-unit atlas / numerical D-handoff scout
+scope=state-independent THM-2635 unit labels under j'=h only
+not_tested=physical D fibre product; rail/source/cell/component transport; cell-dependent units
+canonical_units=U0(9,) U1(3, 8, 10)
+candidate_universe_per_source_and_bit=972 distinct_base_cells=504 partition_checks=15552
+table_columns=(source_epsilon,source_h,child_epsilon,child_kappa,r,h,positive_occurrences,positive_cells)
+row=(0, 9, 0, 0, 5, 7, 0, 0)
+row=(0, 9, 0, 1, 6, 6, 301, 301)
+row=(0, 9, 1, 0, 6, 6, 301, 301)
+row=(0, 9, 1, 1, 7, 5, 0, 0)
+row=(1, 3, 0, 0, 6, 6, 290, 290)
+row=(1, 3, 0, 1, 7, 5, 0, 0)
+row=(1, 3, 1, 0, 7, 5, 367, 347)
+row=(1, 3, 1, 1, 8, 4, 0, 0)
+row=(1, 8, 0, 0, 3, 9, 0, 0)
+row=(1, 8, 0, 1, 4, 8, 367, 347)
+row=(1, 8, 1, 0, 4, 8, 0, 0)
+row=(1, 8, 1, 1, 5, 7, 301, 301)
+row=(1, 10, 0, 0, 7, 5, 367, 347)
+row=(1, 10, 0, 1, 8, 4, 0, 0)
+row=(1, 10, 1, 0, 8, 4, 345, 325)
+row=(1, 10, 1, 1, 9, 3, 0, 0)
+danger_positive_rows=0; safe_equals_guard_free=exact
+formula_compatible_uniform_unit_children=((1, 8, 0, 0), (1, 8, 1, 0), (1, 10, 1, 1))
+positive_nonunit_rows=((0, 9, 0, 1), (0, 9, 1, 0), (1, 3, 0, 0), (1, 3, 1, 0), (1, 8, 0, 1), (1, 8, 1, 1), (1, 10, 0, 0), (1, 10, 1, 0))
+mechanism=every possible uniform-unit child violates kappa=0=>h<=6, kappa=1=>h>=6
+verdict=PASS: the canonical uniform unit atlas is not closed under the numerical D digit handoff
+boundary=this is not an emptiness theorem for the physical two-edge D fibre product
