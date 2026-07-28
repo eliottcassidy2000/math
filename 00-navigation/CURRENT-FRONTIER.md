@@ -86,26 +86,18 @@ THM-2642/2645 give thick hulls and all colours; THM-2647/2648 give signed
 two-set deconvolution and two rainbows.  THM-2656 isolates the forced midpoint
 cost, and THM-2670 shows formal Hamilton cycles do not glue physical clocks.
 
-THM-2658 is the exact component-level holotopy test: positive common overlap
-is equivalent to a complete triangle-balanced integer-gain section.  THM-2672
-then finds `534` fixed configurations with honest positive `Delta^11` faces.
-Rebasing one configuration supplies every missing-label facet: forgetting
-carry creates a coarse `boundary Delta^12`, whereas retaining carry gives
-thirteen disjoint filled `Delta^11`s and cocycle `7`.  The displayed component
-is nonextendable, and `0/534` fixed facets admit a same-cell opposite-edge unit.
-THM-2687 closes the remaining switching loophole: even after independently
-forgetting/unioning rail, base, present, clock, sector, edge, and component
-compatibility for each label, every open future-coordinate cell sees at most
-`12/13` carries.  Thus the full THM-2640 slope-seven family has no positive
-thirteen-label component; other carriers remain open.
+THM-2658 equates positive component overlap with a triangle-balanced
+integer-gain section.  THM-2672 finds `534` positive fixed `Delta^11` faces;
+carry-forgetting makes a coarse `boundary Delta^12`, while carry retention
+gives thirteen disjoint `Delta^11`s and cocycle `7`.  THM-2687 closes arbitrary
+labelwise switching even after unioning all rail/base/present/clock/sector/edge
+choices: each open future cell sees at most `12/13` carries.  Hence the full
+THM-2640 slope-seven family has dimension `11`; other carriers remain open.
 
-THM-2680's exact `D(x)={13x}` cospan has positive leg counts
-`17,160,4,488,3,696,0` (total `25,344`), but its Fibonacci sector quotient is
-not path-lifting.  THM-2682/2684 kill every third event on the full inherited
-three-tooth bank.  Its reflected `rho o D` variant only swaps endpoint teeth
-and returns to the same raw cylinders and correctly reflected clock diagonal.
-Change parent carrier, handoff, configuration, boundary, or edge grammar rather
-than decorating empty support; AP/phase/rank routes remain live. Ledger `165`.
+THM-2680's `D(x)={13x}` cospan has `25,344` positive legs but no path-lifting
+sector quotient.  THM-2682/2684 kill every third event on the full three-tooth
+bank; reflected `rho o D` only swaps endpoint teeth.  Change carrier, handoff,
+boundary, or edge grammar rather than decorating empty support. Ledger `165`.
 
 ### Independent routes that remain live
 
