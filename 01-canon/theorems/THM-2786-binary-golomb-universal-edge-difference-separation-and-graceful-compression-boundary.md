@@ -10,8 +10,9 @@ status: >
   below 8n^2.  Conversely any m-edge distinct-difference labeling has span
   at least m, and any labeling separating all vertex pairs has span at least
   binom(n,2).  Therefore a graceful n-vertex tree must deliberately allow
-  nonedge difference collisions: universal Golomb separation over-solves
-  the problem and cannot be compressed to the graceful span n-1.  The
+  collisions involving at least one nonedge difference: universal Golomb
+  separation over-solves the problem and cannot be compressed to the
+  graceful span n-1.  The
   already-proved rooted Nullstellensatz theorem THM-2765 does exploit this
   distinction to reach span 3n-5; the remaining debt is the exact
   factor-three-to-one compression.  This does not prove Graceful Tree.
@@ -192,7 +193,7 @@ binom(n,2)>n-1.                                          (17)
 Therefore no universal all-pair Golomb ruler—binary, prime-quadratic, or
 otherwise—can be compressed to the graceful tree span while retaining
 all-pair separation.  A graceful-tree argument must use the tree incidence
-and permit collisions between differences belonging to nonedges.
+and permit collisions involving at least one nonedge difference.
 
 This is the sharp conceptual boundary:
 
@@ -203,7 +204,7 @@ graceful tree:     separates only E(T), seeks exactly n-1 span.          (18)
 
 The missing operation is not generic collision avoidance.  It is
 tree-specific selective collision: preserve the `n-1` edge differences
-while folding the much larger nonedge difference family.
+while folding differences involving the much larger nonedge family.
 
 THM-2765 proves that this distinction already has force.  Its rooted
 coefficient-one construction labels every tree in `{0,...,3n-5}` while
@@ -214,7 +215,10 @@ binom(n,2)>3n-5,                                           (18a)
 ```
 
 so the counting bound `(16)` proves that every such linear-range route must
-allow some nonedge differences to collide.  The remaining graceful problem
+allow a collision involving at least one nonedge difference.  This need not
+be a nonedge--nonedge collision: the graceful `P3` labels `(0,2,1)` have
+edge differences two and one, while their sole nonedge difference one
+collides with the latter edge difference.  The remaining graceful problem
 is therefore not the quadratic-to-linear transition supplied by `(7)`.
 It is the sharper compression
 
@@ -266,7 +270,7 @@ target:       a nonzero tree edge-difference discriminant;
 preserved:    every edge difference, indeed every vertex-pair difference;
 destroyed
  by desired
- compression: nonedge difference identities may and must collide;
+ compression: identities involving at least one nonedge may and must collide;
 needed
  sidecar:      improve THM-2765's rooted 1+2 channel load without losing
                vertex injection or either mirror sign;
@@ -300,7 +304,8 @@ PROVED HERE (candidate):  binary and general-radix endpoint decoder;
                           explicit prime-quadratic Sidon/Golomb ruler;
                           span <2p^2 and, by Bertrand, <8n^2;
                           edge-count and all-pair span lower bounds;
-                          necessity of nonedge collisions for graceful span;
+                          necessity of a nonedge-involving collision for
+                          graceful span;
                           THM-2765 linear-range comparison and remaining
                           factor-three compression boundary;
                           complete-graph optima through six vertices.
