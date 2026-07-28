@@ -1,0 +1,37 @@
+THM-2627 D4 JELONEK PARITY-RANK AUDIT
+[PASS] D4 has order eight
+[PASS] point stabilizer H has order two
+[PASS] normalizer J has order four
+[PASS] sign kernel V has order four
+[PASS] V is the kernel on the three quartic pairings
+[PASS] J and V are distinct
+[PASS] J intersect V is the central derived C2
+[PASS] normal form r^i s^j is unique
+[PASS] deck-character kernel is J
+[PASS] discriminant-character kernel is V
+[PASS] deck character is a homomorphism
+[PASS] Delta character is a homomorphism
+[PASS] two characters fill C2 squared
+[PASS] tame inertia row identity is (0, 0, 0, 0)
+[PASS] tame inertia row central is (0, 0, 2, 0)
+[PASS] tame inertia row diagonal-reflection is (0, 1, 1, 1)
+[PASS] tame inertia row edge-reflection is (1, 0, 2, 0)
+[PASS] tame inertia row four-cycle is (1, 1, 3, 1)
+[PASS] character bits plus different distinguish the five rows
+[PASS] quartic and squared-pair resolvent discriminants agree
+[PASS] resolvent division has exact remainder S(w)
+[PASS] residual quadratic discriminant is 16r-4pw-3w^2
+[PASS] Disc(S)-S'(w)^2 delta is exactly divisible by S(w)
+[PASS] central hostile squared-root resolvent
+[PASS] central hostile reduced resolvent factor
+[PASS] central hostile discriminant has c-valuation six
+[PASS] central hostile deck and Delta classes are c-units
+[PASS] non-Keller hostile quartic discriminant
+[PASS] non-Keller hostile Jacobian exposes finite critical divisors
+[PASS] every point of u=0 has an exact escaping branch
+[PASS] non-Keller hostile still has independent parity rows
+[PASS] F2^0 cannot contain four character classes
+[PASS] F2^1 cannot contain four character classes
+[PASS] two components are the sharp Kummer rank threshold
+[PASS] companion contains zero Python assert statements
+ALL CHECKS PASSED
