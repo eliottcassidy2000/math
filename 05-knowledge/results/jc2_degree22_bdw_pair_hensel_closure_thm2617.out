@@ -1,0 +1,18 @@
+BDW pair-field Hensel closure
+pair_field_degree=10
+pair_field_irreducible=True
+pair_field_reduced=True
+unordered_root_pairs=10
+pair_complement_degree=3
+factor_cofactor_swap=quadratic_side_selected
+first_solve_determinant_nonzero=True
+second_solve_determinant_nonzero=True
+forced_reciprocal_scale_nonzero=True
+hensel_solve_units_coprime_to_pair_modulus=True
+product_scaling_checks=p0,p1,p2
+third_compatibility_zero=False
+third_obstruction_degree=9
+third_obstruction_terms=10
+third_obstruction_coprime_to_pair_modulus=True
+quadratic_factor_scheme=EMPTY
+ALL CHECKS PASSED

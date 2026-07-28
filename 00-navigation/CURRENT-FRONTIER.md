@@ -418,7 +418,7 @@ Classify profiles under support operations; study analytic continuation and auto
   THM-2469/2470/2472 close `C,D`, `E,W`, `D,E`; THM-2475/2476 close
   `C,E`, `B,E`; THM-2480 closes `B,C` by sparse Hensel irreducibility and
   wall-stratified ramification.  All ten support-two planes are empty.
-  Candidate THM-2617 is the first support-three reduction: on `B,D,W!=0`, `C=E=0`, a `34`-term full-triangle eliminant has five simple fixed-section points; all line factors and two quadratic types are excluded. Only the two-moving-root quadratic and its nine-equation generic/two-wall ideal remain; uniform irreducibility and closure are open pending promotion of later reductions.
+  Candidate THM-2617 is the first support-three closure: for `B,D,W!=0`, `C=E=0`, lines are excluded directly; pair-field Hensel lifting over the ten fixed-root pairs is unique through `p^2` and fails at `p^3` by a coprime obstruction. Uniform irreducibility and square-lift closure are proved candidate, pending hostile audit.
   Split/even edges and integral `2`-adic raising remain; THM-2206 blocks field-valued `C_2` Hasse repair.
   THM-2446 opens six-brackets; THM-2451 and extensions refute its cone shortcut off point/common-plane boundaries. `JC(2)` and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer

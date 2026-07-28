@@ -18,5 +18,6 @@ root_scaled_equation_max_total_degree=8
 conditional_square_lift_minimum_genus=2
 finite_hostile_parameters=324
 finite_hostile_reducible=0
-uniform_irreducibility=OPEN
+uniform_irreducibility_from_this_reduction=OPEN
+pair_field_hensel_closure=SEPARATE_COMPANION
 ALL CHECKS PASSED
