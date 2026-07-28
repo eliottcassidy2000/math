@@ -86,6 +86,17 @@
   one and no connected etale `V4` torsor, excluding it as an exact
   dimension-three quartic `S4` Keller resolvent.  Hashes begin `b1a4ad05` /
   `d16de1da`.
+- `jacobian_a4_cyclic_resolvent_mod2_gate.py` -> matching `.out`
+  [THM-2686 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  For a
+  finite affine-target Galois normalization of degree prime to `ell`,
+  `H^1_et(R_reg,mu_ell)` has no invariant character: generic Kummer descent,
+  coprime direct product, inertia, purity, and `pi_1^et(A^n_C)=1` force the
+  descended cyclic field to be trivial.  At `(ell,Q)=(2,C3)`, all mod-two
+  Kummer cohomology is a sum of standard planes.  Thus the quartic `A4`
+  abstract-carrier gate is exactly nonzero units/squares or `Cl(R)[2]`; an
+  actual `A^n` or `G_m x A^(n-1)` regular chart excludes the connected `V4`
+  torsor.  This does not exclude general `A4`.  Hashes begin `ca8aa0cf` /
+  `4d7ef2c1`.
 - `jc2_degree22_support_four_toric_hensel_thm2683.py` -> matching `.out`
   [THM-2683 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
   Native three-parameter Hensel systems close BDEW/CDEW by terminal rank,

@@ -324,7 +324,15 @@ Classify profiles under support operations; study analytic continuation and auto
   identification: its nonnormal `S3` field is not the cyclic `A4` resolvent,
   while its `S4` normalization has no global etale `V4` torsor.  The local
   `D(a)` Kummer plane ramifies when `r_i=0` returns, and the `A4` obstruction
-  disappears after discriminant base change.  Unrelated resolvents remain;
+  disappears after discriminant base change.  THM-2686 proves the general
+  coprime invariant-Kummer law
+  `H^1(R_reg,mu_ell)^Gal(E/K)=0` for affine-target Galois normalizations with
+  `ell` prime to the Galois degree.  In the cyclic cubic branch this removes
+  every trivial `F2[C3]` summand, so the quartic `A4` module gate is exactly
+  scalar Kummer nonvanishing: a nonzero unit squareclass or `Cl(R)[2]` class
+  automatically supplies an abstract standard plane.  An actual regular
+  `A^n` or `G_m x A^(n-1)` chart excludes the connected `V4` torsor.  Other
+  cyclic normalizations can still carry standard planes, so unrelated resolvents remain;
   no general degree, `A4/S4`, `G1`, `JC(2)`, or `DC(2)` closure.
   At degree eighteen THM-2314/2316 close sparse supports, THM-2371/2376 close
   `H_2`, and THM-2406 sends `H_4` to the common-root wall; other branches open.

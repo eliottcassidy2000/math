@@ -181,6 +181,9 @@
 63. **Degree-four `D4` is excluded, but not by Smith.** THM-2633 gives `normal_closure_G(H)=G` and `1<=k_D<=d-1`, leaving only `A4,S4`; retain old `D4` ledgers as hostiles and never reuse MISTAKE-297's deck extension.
 64. **A resolvent discriminant is not its Kummer carrier.** THM-2655 forces the live quartic `V4` kernel into a quasi-etale torsor on the full Galois resolvent normalization.  Test the `C3/S3`-equivariant unit squareclasses and `Cl(R)[2]`; do not transfer grade-three Keller anatomy from a shared discriminant or from one non-Galois cubic root field.
 65. **The actual THM-1310 field is excluded only as an exact `S4` resolvent.** THM-2681 identifies its full normalization on `g!=0` with `G_m x A^2`, whose procyclic etale fundamental group has no `V4` quotient. This survives polynomial target automorphisms or an explicit base-ring identification, not arbitrary birational transport. Shared `-L`, cusp/Jelonek, odd-valuation shadows, unrelated `S3` fields, and the quartic `A4` branch remain open.
+66. **Invariant Kummer vanishing is not total vanishing.** THM-2686 gives
+    `H^1(R_reg,mu_ell)^Q=0` in coprime degree; at `(2,C3)` it removes trivial
+    lines but permits standard planes.  Nonvanishing is only the abstract `A4` carrier gate; test units/`Cl[2]` and retain actual versus abstract torsors.
 
 ## Promotion checklist
 Audit types, quantifiers, symmetries, direction, quotient loss, hostiles,
