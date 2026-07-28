@@ -1,5 +1,5 @@
 ---
-id: THM-2796
+id: THM-2797
 title: "Fourteen-rail source-twelve configuration-switch semantic-base no-go"
 status: RESERVED / UNPROVED EMPTY STUB
 source: lrc-a12-carry-bridge/fourteen-rail-semantic-switch-scan-2026-07-28
@@ -10,7 +10,7 @@ related:
   - THM-2794-rail-eight-fixed-configuration-all-component-semantic-atom-no-go
 ---
 
-# THM-2796 -- fourteen-rail configuration switching still misses the semantic base
+# THM-2797 -- fourteen-rail configuration switching still misses the semantic base
 
 **RESERVED / UNPROVED EMPTY STUB.**
 
