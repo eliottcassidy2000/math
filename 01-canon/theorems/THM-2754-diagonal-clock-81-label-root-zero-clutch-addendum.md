@@ -316,6 +316,16 @@ coefficient is `345341652135823400016960`, and its right wing is
 `5708126481583857851520`.  The source, target, and right-wing profiles are
 `9`, `8`, and `4`; the folded target/source ratio is `11`, not `7`.
 
+A later `FINITE-EXACT + VERIFIED` source-clocked one-sided sidecar extends this
+comparison across the canonical endpoint bank: all `81` lawful labels have
+normalized natural target/source gain `11`, while the target has one extra
+global label `t=12`.  This is a fixed-`e=1` physical-chart coefficient bank,
+not the two-sided common carrier of this theorem, and it awaits independent
+hostile audit.  By contrast, the earlier `81`-sheet variable-gain/rank-three
+reference census never inserts a physical `c1` clock comb.  Its exact data are
+a clock-blind one-sided quotient hostile, not a coindexing `e=j` and not a
+counterexample to `(16)`.
+
 There is a second, forgotten-`e` repair.  The legacy clock-blind carrier is
 the disjoint union of all seven physical sections.  If that universe is
 retained intentionally, its matching common object is the full same-clock
@@ -380,11 +390,12 @@ Augmentation has a different truth value: `epsilon(s)=12` whereas
 first and then repeating over the delayed-clock mask gives reduced profiles
 `(1,0,0,0,0,0)` and zero, with determinants `1` and `0`.  Hence no
 **augmented scalar** wing gain exists.
-Together, the two repairs refute the gain-`2` frame of the THM-2751 candidate:
+Together, the two repairs refute the gain-`2` frame of the former THM-2751 body:
 it mixed the clock-blind union with the frozen `e=1` common slice.  In the
 fixed-`e` universe the left wing is null; in the forgotten-`e` universe the
 matching intersection is `C+D+E` and the strongest survivor is `(31)`.
-THM-2751 supplies no dependency here.
+The current THM-2751 slug is a separately rebuilt, reserved fixed-clock
+candidate; it and both one-sided sidecars supply no dependency here.
 
 The terminal fork is genuinely present in `(8)`, although removing it leaves
 the selected coefficient unchanged on this restricted carrier.  A separate

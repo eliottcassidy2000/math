@@ -44,14 +44,18 @@ Format per entry:
   carrier.  A hostile audit that checked the candidate only against its pinned
   legacy constructor reproduced the same error until the factor lists were
   compared directly.
-- **Repair / survivor:** THM-2751 is retracted before promotion.  With the
-  actual clocked constructor, the natural source coefficient equals the common
+- **Repair / survivor:** the former gain-`2` THM-2751 body was retracted before
+  promotion.  The current file at that slug is a separately rebuilt
+  `RESERVED PROOF-COMPLETE` fixed-clock candidate awaiting hostile audit.  With
+  the actual clocked constructor, the natural source coefficient equals the common
   coefficient `C=339633525654239542165440`, so its physically nonempty left
   wing is coefficient-null.  At `t=3` the target coefficient is
   `345341652135823400016960`; the right-wing coefficient is
   `5708126481583857851520`.  After content/root normalization the source,
   target, and right-wing profiles are `9,8,4`, respectively, and the actual
-  folded target/source ratio is `11`, not `7`.  THM-2749's two-sided common
+  folded target/source ratio is `11`, not `7`.  The source-clocked one-sided
+  bank extends gain `11` uniformly across all `81` canonical endpoint labels;
+  it is not THM-2749's two-sided fibre product.  THM-2749's two-sided common
   clutch, all-rail raw equality, normalized sign `-1`, target window/unit,
   open cylinder, and primitive target-character profiles are unaffected.
   General rule: before subtracting two exact interval tables, compare the

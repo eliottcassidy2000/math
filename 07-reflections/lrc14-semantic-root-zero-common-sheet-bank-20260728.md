@@ -1,16 +1,15 @@
-# The natural 81-sheet clutch has universal units, not a universal gain
+# The clock-blind one-sided 81-sheet quotient has variable gains and rank three
 
-> **STATUS: FINITE-EXACT CANDIDATE; AWAITING INDEPENDENT HOSTILE AUDIT.**
-> On canonical rail 8, identify the present and delayed clock labels, insert
-> the full `E3` mask and delayed `Q_(3,{1,2})` word, and scan the `9 x 9`
-> target sheets common to the two root-zero endpoint cylinders.  Every one of
-> the 81 natural one-sided source/target pairs is a constant-line private
-> unit at both roots.  The normalized target/source gain is nevertheless `7`
-> on only 22 sheets and takes five values overall.  The first hostile is
-> `(s,t)=(0,8)`, with `12 -> 3` rather than `12 -> 6`.  A type-correct
-> unipotent shear exists only after adjoining a pair-derived reference table;
-> no physical reference packet, endpoint current, or LRC(14) conclusion is
-> constructed.
+> **STATUS: FINITE-EXACT CLOCK-BLIND HOSTILE; PHYSICAL TYPING SUPERSEDED.**
+> The companion inserts the relative-present and delayed clock `ell` but never
+> inserts a physical `c1` clock comb or calls `source_present_section`.  Its
+> `81` one-sided source/target pairs are private units; their gain is `7` on
+> only `22` sheets and takes five values, while the pair-derived reference
+> table has tensor rank three.  These remain exact quotient data after
+> forgetting physical `e` and the two-sided cut.  They are not a natural
+> physical sheet, an `e=j` diagonal, a clutch, an endpoint current, or LRC(14).
+> The source-clocked replacement is
+> `lrc14-natural-single-sheet-root-zero-target-bank-20260728.md`.
 
 ## 1. Inheritance and question
 
@@ -36,11 +35,12 @@ two-sided common section has an exact raw intertwiner and normalized mirror
 gain `-1`.  The natural one-sided object and the two-sided fibre product must
 therefore remain distinct.
 
-The proposed THM-2754 addendum asks the next exact question: after identifying
-the present and delayed clock indices, is `(1)` a genuine clutch law on all
-common target sheets, a sheet character, or an accident of one sheet?
+Promoted THM-2754 answers the correctly typed question by retaining physical
+clock `e` and delayed clock `j` independently.  The present companion instead
+asks what numerical structure survives after deleting `e` and the pulled
+target copy.  Its answer is a hostile quotient, not a competing clutch law.
 
-## 2. Exact bank and typing
+## 2. Exact bank and forgotten coordinate
 
 The source and target semantic points have common label banks
 
@@ -56,14 +56,16 @@ For each of the 81 pairs, the companion independently:
    coordinates separately;
 3. inserts the four shifted safe factors defining the natural `U_(s,t)`;
 4. rebuilds delayed sector zero with both lower blockers dangerous, namely
-   `Q_(3,{1,2})`, and uses the same clock `ell` in the present and delayed
-   factors;
+   `Q_(3,{1,2})`, and uses the same `ell` in the relative-present and delayed
+   factors, but inserts no physical `c1`-present section;
 5. evaluates carry `12` at root `12` and carry `6` at root `1`, then divides
    by content `26`, root-normalizes, and reduces modulo `Phi_7`.
 
 Delayed prefix values are cached only within a fixed clock.  Source and target
-interval banks and weights remain separate.  Thus the scan neither freezes a
-source-coordinate mask on the target nor reuses a coefficient across charts.
+interval banks and weights remain separate.  But the absent physical `e`
+coordinate is load-bearing: no result below may be read as physical/delayed
+clock coindexing.  The source-clocked replacement restores that coordinate and
+finds uniform gain `11` on the same canonical endpoint window.
 
 ## 3. Universal survival and exact failure of gain seven
 
@@ -213,17 +215,16 @@ reference/profile doublet `(7)--(9)`.
 
 ## 6. Consequence and next test
 
-The natural sheet problem no longer has a survival debt: all 81 coefficients
-are units.  It has a reference/phase debt.  The cheapest decisive continuation
-is to decompose the pair-derived rank-three table into the three blocks in
-`(12)` and construct those three separable references directly on the same
-diagonal-clock carrier.  MISTAKE-313 and the repaired/refuted THM-2751 forbid
-obtaining them by subtracting THM-2749's fixed-present-clock common section:
-that comparison omits or folds incompatible clock factors, and the lawful
-full-unclocked target wing augments to zero.  A direct positive construction
-would produce a genuine marked unipotent clutch.  A negative result would
-identify the exact missing common-endpoint reference rather than another
-support or unit obstruction.
+The clock-blind quotient has no survival debt: all `81` coefficients are
+units.  Its rank-three reference/phase table is useful only as a hostile for
+what forgetting physical `e` can manufacture.  The source-clocked replacement
+shows that restoring `e=1` changes the endpoint gain census to uniform `11`;
+THM-2754 shows that retaining all `(e,j)` and the two-sided cut instead gives
+an object-level rank-one law.  Any physical rank-three reference construction
+must therefore start from one of those lawful carriers, not transplant this
+quotient table.  The rebuilt THM-2751 remains a reserved fixed-clock candidate,
+and the full forgotten-`e` target wing loses only its augmented scalar, not its
+physical `Phi_7` unit.
 
 ## 7. Exact reproduction
 

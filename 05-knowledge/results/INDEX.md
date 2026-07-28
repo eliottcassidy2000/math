@@ -22,18 +22,16 @@
   Normal and optimized controls through `k=18` byte-match; hashes
   `dd2fc28c...` / `5f09b3cb...`.
 - `lrc14_root_zero_clutch_mayer_vietoris_wing_shear_thm2751.py` -> matching
-  `.out` [THM-2751 RESERVED / REFUTED PROVISIONAL; VERIFIED-EXACT
-  CLOCK-BLIND CALCULATION; MISTAKE-313].  The legacy outer-sheet helper omits
-  THM-2749's source-one clock factor, so its exact `12/2/7` arithmetic cannot
-  be compared with the fully marked common section.  The properly clocked
-  left wing is coefficient-null and the folded ratio is `11`.  Independently,
-  treating the outer sheets as full unclocked unions requires
-  `M=disjoint-union_e M_e`; its target profile `(9,2,2)` augments to zero.
-  Its two physical wing rows are nevertheless `Phi_7` units, related by an
-  exact determinant-`11` coefficient ratio `g`; augmentation kills the target
-  scalar.  Thus neither repair supplies a physical or augmented-scalar gain
-  `2`, a cross-wing map, or an endpoint current.  Hashes: `aae8759f` /
-  `6ae353d3`.
+  `.out` [THM-2751 RESERVED PROOF-COMPLETE + VERIFIED-EXACT; AWAITING
+  INDEPENDENT HOSTILE AUDIT].  On fixed physical clock `e=1`, both wings are
+  nonempty interval unions but the left marked coefficient vanishes labelwise;
+  the right cofiber has a ten-label `91`-unit target spectrum.  No linear wing
+  decoder exists, while a positive coefficient convolution decodes only after
+  quotienting the uniform target-null line.  This rebuilt candidate is not the
+  former gain-`2` body or the full forgotten-`e` union.  In that separate full
+  union, THM-2754 finds two physical `Phi_7` wing units with determinant-`11`
+  ratio `g`, but zero target augmentation and no physical map.  Hashes:
+  `dbc0a309` / `43cb4e96`.
 - `jc2_degree22_all_even_zero_flux_componentwise_closure_thm2755.py` ->
   matching `.out` [THM-2755 PROVED + VERIFIED-EXACT + INDEPENDENTLY
   HOSTILE-AUDITED].  Every even first and third Faber response is globally
@@ -98,8 +96,10 @@
   determinant `11`.  But the target row
   `(0,9,2,2,0,0,0)` augments to zero, so its folded delayed profile has
   determinant zero and no scalar wing gain.  This is a common-section
-  coefficient theorem, not an endpoint current.  Hashes: `208f7102` /
-  `4f795d05`.
+  coefficient theorem, not an endpoint current.  The lawful source-clocked
+  one-sided bank separately has uniform gain `11` on the `81` endpoint labels;
+  the older variable-gain/rank-three bank omitted physical `e` and is only a
+  clock-blind quotient hostile.  Hashes: `208f7102` / `4f795d05`.
 - `jc2_one_pole_response_composition_thm2748.py` -> matching `.out`
   [PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED; THM-2748].  A
   one-pole response component dominated by the source

@@ -365,6 +365,15 @@ coefficient `C`, so the left wing is coefficient-null.  The target differs by
 `5708126481583857851520`; the source, target, and right-wing profiles are
 `9`, `8`, and `4`, and the folded target/source ratio is `11`.
 
+The later source-clocked one-sided bank extends this lawfully over the whole
+endpoint window: all `81` labels have natural target/source gain `11`, all
+primitive and mixed target characters survive, and the target alone has the
+extra global label `t=12`.  It remains `FINITE-EXACT + VERIFIED` pending an
+independent hostile audit, and it is not our two-sided common object.  The
+separate variable-gain/rank-three `81`-sheet scout omitted the physical `c1`
+clock comb entirely.  Its exact census is therefore a clock-blind one-sided
+quotient hostile, not a diagonal identification of physical and delayed clocks.
+
 If the legacy clock-blind universe is retained instead, the physical sections
 are pairwise disjoint, their union is the unclocked sheet, and after the
 two-sided cut every `e!=e'` cross piece is empty.  Hence the literal full
@@ -397,9 +406,9 @@ clock operation is known.  Augmentation destroys it: the two augmentations
 are `12` and `0`, the target cancellation `9+2+2=0` raises its scalar
 `13`-valuation from one to two, and the corresponding reduced delayed-clock
 determinants are `1` and `0`.  Thus there is no augmented scalar wing gain.
-Together with the fixed-`e` null left wing, this rejects the THM-2751
-candidate's gain-`2` frame, which mixed the clock-blind union with the frozen
-`e=1` common slice.
+Together with the fixed-`e` null left wing, this rejects the former THM-2751
+gain-`2` frame, which mixed the clock-blind union with the frozen `e=1` common
+slice.  The current THM-2751 slug is a separate reserved fixed-clock candidate.
 
 The proved chain is now
 
