@@ -1,0 +1,17 @@
+THM-2830 DISJOINT-CONE MATCHING REDUCTION -- exact referee
+status=FINITE-EXACT REDUCTION; UNIVERSAL MATCHING SIGN OPEN
+triple_tensor_cells=343
+pair_product_cells=64
+polarization_controls=105
+matching_cells=4950
+matching_strict=4935
+matching_equalities=15
+normalized_forward_cells=6600
+minimum_positive_matching_gap=30
+pair_factorial_phi=1467522360/901
+pair_factorial_endpoint=1629012
+pair_factorial_gap=-217452/901
+laguerre_t=1/1000_gap=-4099/781250
+cone_cells=3016
+cone_equalities=16
+all_exact_controls=PASS
