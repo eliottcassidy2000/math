@@ -2,7 +2,7 @@
 id: THM-2638
 title: "Radial-height graded Wick decoder and Laplace-forgetting boundary"
 status: >
-  PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.
   Before radial integration, the angular constant term of a Gaussian moment
   has a canonical radial-height grading.  Coefficient extraction at height A
   decodes a channel exactly when that channel is alone at height A; all
@@ -28,6 +28,7 @@ related:
   - THM-2020-gmc2-finite-place-channel-separation
   - THM-2022-gmc2-frobenius-lowest-balanced-face
   - THM-2623-guard-safe-danger-cospan-and-residual-unit-wall
+  - THM-2639-gmc-equal-mass-two-rung-persistent-collision-certificate
 script: 04-computation/gmc2_radial_height_graded_decoder_thm2638.py
 output: 05-knowledge/results/gmc2_radial_height_graded_decoder_thm2638.out
 script_sha256: 1bdf82cf3eab621781591b061f73610c7d3466ad19b47de7fc8d839714821521
@@ -37,7 +38,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2638 -- the radial shell lift restores exactly one forgotten grade
 
-**PROVED CANDIDATE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2631 proves that raw scalar moments cannot linearly decode two Wick
 channels in one homogeneous degree.  This theorem identifies a lawful lift in
@@ -237,6 +238,21 @@ Thus radial grading is a genuine positive lift but not a universal channel
 separator.  Equal-height collisions require a grading not induced by source
 exponents, or a nonlinear whole-face mechanism.
 
+THM-2639 proves that the nonlinear alternative is real.  On its horizontal
+support
+
+```text
+alpha Z^6+beta Z^6W^8+gamma Z^6W^24,                     (21a)
+```
+
+every balanced channel at moment `m` has the same height `A=6m`.  Hence the
+entire radial/source-torus graded bank still has one row at every return, and
+every positive return is collided.  Nevertheless THM-2639's two-rung Bezout
+identity makes the first two nonempty return polynomials incompatible on the
+coefficient torus.  This is a sharp complement to the present theorem: a
+source-character lift cannot separate (21a), but multiplication inside the
+moment ideal can.
+
 ## 5. External coefficient characters always separate a finite fibre
 
 For completeness, fix `m`, put `B=m+1`, and assign coefficient `c_i` the
@@ -296,6 +312,16 @@ proved identity (18), and verifies mixed-radix injectivity and exact
 root-orthogonality selectors.  All checks use explicit optimization-stable
 guards, and all computations are integer or rational; no floating point is
 used.  Normal and optimized runs LF-normalize to the stored transcript.
+
+An independent hostile audit rederived (3)--(9), the complete hostile height
+formula (12), the nonzero-shell/zero-pushforward control (14)--(15), and the
+universal source-torus reduction (18).  It separately proved the
+three-monomial, second-moment minimality of (19)--(21), checked the
+mixed-radix selector and its external-observable scope, replayed normal and
+optimized modes, and verified both declared LF hashes.  A promotion-blocking
+audit defect in the first candidate -- use of Python `assert` -- was repaired
+by replacing every logical gate with an explicit optimization-stable
+`require`; the immutable repaired companion was then re-audited.
 
 The theorem proves a statement about the shell polynomial before radial
 integration.  It does not infer shellwise vanishing from scalar moment
