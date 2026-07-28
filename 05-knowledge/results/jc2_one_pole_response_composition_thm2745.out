@@ -1,0 +1,11 @@
+THM-2745 ONE-POLE RESPONSE COMPOSITION AUDIT
+highest_odd_rows=11
+pole_orders=(144, 44, 120, 108, 32, 84, 72, 20, 48, 36, 8)
+constant_U_positive_degree_solutions=((1, 1),)
+monomial_U_law=m-1=e*P
+ramification_degrees_checked=(1,2,3,4,5)
+exact_derivative_and_composition_controls=55
+translated_control=R=2+5*(Z-7)^8,Z=7+3*X^3
+translated_pullback=2+32805*X^24
+scope=ONE_POLE_COMPONENT_NORMALIZATION_NOT_FACTORIZATION_CLOSURE
+PASS
