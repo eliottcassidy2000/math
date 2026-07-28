@@ -2,8 +2,8 @@
 id: THM-2807
 title: "Positive graded-address two-simplex and allocation-lift boundary"
 status: >
-  RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING
-  INDEPENDENT AUDIT.  Three literal positive semantic cylinders form a
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  Three literal
+  positive semantic cylinders form a
   commuting address-translation two-simplex with edges Z1, Z2^4079, and
   Z1 Z2^4079.  The THM-2791 tau-three unit is exactly its diagonal after
   deleting the pure-Z1 vertex from the selected tau-twelve three-vertex
@@ -12,8 +12,7 @@ status: >
   exponent class has thirteen full-depth affine lifts; all agree on the
   selected low-digit-seven sheet.  This is collapsed weighted-carrier/address
   holotopy, not factor covariance, endpoint allocation, a root/Cech map, row
-  exclusion, or LRC(14).  Until independent promotion, no proved result may
-  depend on this candidate.
+  exclusion, or LRC(14).
 source: root/positive-graded-address-simplex-2026-07-28
 depends_on:
   - THM-2782-semantic-arm-right-wing-local-unit-and-endpoint-deck-boundary
@@ -35,8 +34,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2807 -- the graded semantic chord bounds a positive address triangle
 
-**RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING
-INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2782 supplies a positive physical central arm and THM-2791 extends it to
 a two-point full-depth chord whose first nontrivial carry digit is `10`.
@@ -369,4 +367,14 @@ hostile point off that sheet.  It contains explicit exception gates, no
 truth-bearing Python assertions, no floating point, and no scratch
 dependency.
 
-**Awaiting independent audit; not QED.**
+An immutable independent hostile audit rebuilt all six selected cells from
+the THM-2782 carrier, verified their semantic/root/carry typing and exact
+stability radius, and independently recovered the global `tau=3` support.
+It rederived every whole-cylinder translation, lower-central edge, quotient
+collapse, discrete logarithm, all thirteen affine lifts, their common
+residue-seven restriction, and the off-sheet hostile.  Normal and optimized
+executions byte-match the stored transcript, and the declared LF hashes and
+documentation checks pass.  No remaining mathematical, evidence, or scope
+defect was found.
+
+QED.
