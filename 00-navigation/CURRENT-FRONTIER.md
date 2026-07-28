@@ -123,17 +123,13 @@ charts.  Its matched wall has a fourteen-edge ternary `S3` frame, while
 unrestricted nonlinear charts attain thirteen edges via a binary four-cycle
 (MISTAKE-302/303).  Audited THM-2656 proves selector moduli: equivariance pays
 a forced midpoint; dropping individual reflection permits edge-disjointness.
-Audited THM-2670 retains the predecessor state: 92 generic Hamilton cycles
-exist, but constant-step products hit zero, no positive edge is equivariant,
-and disjoint clock strata do not glue.  THM-2680's exact `D(x)={13x}` cospan
-has positive legs `17,160,4,488,3,696,0`, totaling `25,344`; its Fibonacci
-sector quotient is not path-lifting.  THM-2682 kills every third event at
-central arrival, and THM-2684 extends the clock-diagonal no-go to the full
-three-tooth THM-2584 rail bank, including both endpoints.  THM-2658 says a
-true refined simplex instead needs a complete balanced gain section.
-Decorations cannot repair empty support: a new chronology must change parent
-carrier, handoff, configuration, boundary semantics, or edge grammar.  The
-independent AP/phase/rank routes remain live. Ledger `165`.
+THM-2670's 92 generic cycles do not glue.  THM-2680's exact `D(x)={13x}`
+cospan has positive legs `17,160,4,488,3,696,0` (total `25,344`), but its
+Fibonacci sector quotient is not path-lifting.  THM-2682/2684 kill every
+third event, first centrally and then on the full three-tooth rail bank.
+THM-2658 requires a complete balanced gain section for a true simplex.
+Therefore change the parent carrier, handoff, configuration, boundary, or
+edge grammar rather than decorating empty support. Ledger `165`.
 
 ### Independent routes that remain live
 
@@ -350,22 +346,14 @@ Classify profiles under support operations; study analytic continuation and auto
 - **Unsplittable cost flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes Goemans' exact `d_max` cost conjecture: a planar acyclic instance has fractional cost `58` but capacity-good integral cost at least `60`. Its carrier is the `K_3` stable-set facet; the planar `2d_max` theorem remains intact.
 - **Jacobian/Dixmier:** THM-1300/1315 provenance is unsettled (MISTAKE-205),
   and `DC(2)` is open.  THM-2473/2546/2566/2570/2576 give the fixed sporadic
-  map's boundary, fibre, and composition laws.  THM-2633 excludes `C4,V4,D4`
-  monodromy but leaves `A4,S4`; THM-2643 excludes regular `C5` and nine sextic
-  actions, while induced `S3` can survive.  THM-2646 needs the full modular
-  root braid.  THM-2655 makes the `V4` kernel quasi-etale; its standard plane
-  is projective over `F2[C3]` and `F2[S3]`, so an equivariant unit or `Cl(R)[2]`
-  copy is also sufficient for an abstract connected Kummer carrier and
-  `H^2(Q,W)=0`.  The `d^2=abc` hostile realizes the class-group branch but has
-  nonconstant Jacobian.  THM-2681 excludes the actual THM-1310 cubic as an
-  `A4/S4` quartic resolvent under the stated target-field/base-ring
-  identification: the A4 quotient is cyclic cubic, while the actual cubic is
-  nonnormal `S3`; the S4 route lacks a global connected etale `V4` torsor.
-  Its `D(a)` hostile realizes the local Kummer plane but ramifies when the
-  `r_i=0` divisors return.  This is not a general monodromy result, and the A4
-  obstruction disappears after adjoining the discriminant square root.  Next
-  test unrelated affine/Jelonek resolvent realizations; no degree, `A4/S4`,
-  `G1`, `JC(2)`, or `DC(2)` closure.
+  map's boundary, fibre, and composition laws.  THM-2633 leaves `A4,S4`;
+  THM-2655 requires their `V4` kernel in unit squareclasses or `Cl[2]`.
+  THM-2681 excludes the actual THM-1310 cubic under the stated base
+  identification: its nonnormal `S3` field is not the cyclic `A4` resolvent,
+  while its `S4` normalization has no global etale `V4` torsor.  The local
+  `D(a)` Kummer plane ramifies when `r_i=0` returns, and the `A4` obstruction
+  disappears after discriminant base change.  Unrelated resolvents remain;
+  no general degree, `A4/S4`, `G1`, `JC(2)`, or `DC(2)` closure.
   At degree eighteen THM-2314/2316 close sparse supports, THM-2371/2376 close
   `H_2`, and THM-2406 sends `H_4` to the common-root wall; other branches open.
 - **Weyl boundary:** THM-2049 gives a formal beta-adic lift; finite termination remains.

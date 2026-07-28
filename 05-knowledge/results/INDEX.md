@@ -90,7 +90,7 @@
   The independent global atlas has 17,160 safe/safe, 4,488 safe/danger,
   3,696 danger/safe, and zero danger/danger labelled rows on the same ten
   clock triples; those triples cannot concatenate, so the full physical
-  three-edge chronology is empty.  THM-2682 independently gives the stronger
+  three-event chronology is empty.  THM-2682 independently gives the stronger
   central-arrival proof of that nilpotence; this companion's lasting content
   is the complete sharp two-edge cospan atlas.  Secondary hashes begin
   `a3f8d6ce` / `75e1733b`.
