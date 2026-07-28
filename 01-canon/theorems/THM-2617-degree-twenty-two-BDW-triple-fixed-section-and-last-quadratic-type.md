@@ -2,8 +2,8 @@
 id: THM-2617
 title: "Degree-twenty-two B-D-W triple pair-field Hensel closure"
 status: >
-  PROVED CANDIDATE CLOSURE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
-  PENDING. In the inherited genuine nonsplit degree-twenty-two branch on
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. In the inherited
+  genuine nonsplit degree-twenty-two branch on
   the open first-flux chart, the support-three stratum B,D,W nonzero and
   C=E=0 has a 34-term two-parameter eliminant of bidegree (5,5). Its fixed
   p=0 section is the squarefree quintic L_5. Every line factor is excluded
@@ -36,8 +36,7 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2617 -- the B-D-W triple closes over its fixed-section pair field
 
-**PROVED CANDIDATE CLOSURE + VERIFIED-EXACT; INDEPENDENT HOSTILE AUDIT
-PENDING.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 The ten support-two coefficient planes are closed, but a support-three torus
 has two independent weight-zero moduli.  The first low-complexity triple is
@@ -548,12 +547,24 @@ localized degree-eight chart, the square-lift genus invoice, the `y=0`
 boundary, and the frozen hostile universe.  All truth-bearing checks use
 `require` and remain active under optimized Python.
 
-Uniform irreducibility and the `B,D,W` closure are **PROVED CANDIDATE**.
-The residual `K(lambda,h)=0` chart is now a superseded intermediate
-description of an empty factor scheme, not an open dependency.
+An independent hostile audit rederived the coefficient recurrences (H7)
+directly from a monic quadratic times cubic product, checked that `mu!=0`
+makes every top line nonvertical and hence makes the line/quadratic inventory
+exhaustive, and verified that exchanging factor and cofactor still selects
+the unique quadratic side.  It separately checked the reduced ten-point
+pair scheme, every field division, the direct product identities through
+`p^2`, and the coprimality of `O_9` with `P_10`.  Normal and optimized runs
+of both exact companions byte-match their stored transcripts and hashes.
+Finally, the audit checked that the five simple `p=0` points are distinct
+odd branch places, so connectedness and the genus lower bound do not rely on
+a singular model or on counting multiplicity as separate places.
+
+Uniform irreducibility and the `B,D,W` closure are **PROVED**.  The residual
+`K(lambda,h)=0` chart is now a superseded intermediate description of an
+empty factor scheme, not an open dependency.
 
 Nothing here closes another support-three stratum, a branch outside the
 inherited nonsplit exact-square-prefix reduction, split/even short edges, or
 integral `2`-adic order raising.  It proves neither `JC(2)` nor `DC(2)`.
 
-**QED for the closure, pending independent hostile audit.**
+**QED.**
