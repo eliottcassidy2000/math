@@ -2,8 +2,8 @@
 id: THM-2632
 title: "Farey V4 theta channels and the full Hurwitz C6 CRT-lift sidecar"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  The six mod-two residue classes of oriented unimodular Farey
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The six mod-two
+  residue classes of oriented unimodular Farey
   flanks form the S3 permutahedral C6.  Its inversion-set embedding is the
   isometric Q3 minus the two cyclic tournaments; its three theta cuts are
   the three V4 parity/resolvent channels, and its edges are exactly
@@ -13,7 +13,7 @@ status: >
   Every normalized seven-edge Hurwitz norm returns its chosen root step in
   this quotient, and the six lifts a+13k exhaust all six C6 shadows.  This
   shadow is integral-lift data, not a PSL2(F13)-conjugacy invariant: the
-  original Hurwitz pair returns an order-three root shadow, while the
+  original Hurwitz pair returns a mod-two root shadow of order three, while the
   displayed normalizing matrix is singular modulo two and six.  The
   affine S4 detector h^7 h^-1=h^6 recovers exactly the six four-cycle
   cocycles, but no physical LRC connector or Keller exclusion follows.
@@ -31,16 +31,16 @@ related:
   - THM-2626-paley-borel-projective-frame-torsor-and-physical-c13-boundary
 script: 04-computation/farey_v4_theta_hurwitz_crt_thm2632.py
 output: 05-knowledge/results/farey_v4_theta_hurwitz_crt_thm2632.out
-script_sha256: 7677ad297989805ec0310f6c97b10c08b7c4ddd210c18dbb1fb5bbce58d82bb7
-output_sha256: 19e09f67840c75f17ae14954e9fd176c4dd74afe1724576c497f3572eba37e09
+script_sha256: f84ec9f806d960170868d144c510bbd5caa2da326d9414169445785f75a1cb16
+output_sha256: 050c8f3ac8c2d6827ea0a23703c6118fefa02656fa78930251fb933bfdc1c761
 hash_basis: LF-normalized bytes
 ---
 
 # THM-2632 -- two and three meet in a sixfold CRT lift, not in branch count
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**  The dependency-free companion checks every finite statement below
-with explicit optimized-mode-safe guards.  The LRC paragraphs are typed
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The
+dependency-free companion checks every finite statement below with explicit
+optimized-mode-safe guards.  The LRC paragraphs are typed
 consequences and boundaries of the cited theorems; they remove no row.
 
 There are two genuinely different six-state objects in the modular picture.
@@ -252,14 +252,17 @@ ord(C_bar)=3,             ord(U_bar)=2.                    (22)
 ```
 
 So the original relation does not have the normalized `U` parity shadow.
-The matrix used in THM-2603 to normalize the pair modulo thirteen is
+After THM-2603's unimodular chart `P`, the final matrix used there to
+normalize the pair modulo thirteen is
 
 ```text
 Q=[4 5;0 10],             det(Q)=40=1 mod 13,              (23)
 ```
 
 but it is singular modulo two and noninvertible modulo six.  It cannot
-transport the CRT shadow.  Equations (20)--(23) are the sharp boundary:
+transport the CRT shadow.  (The complete normalizing matrix is `QP`.)  In the
+full quotient `Q_6`, both `C` and `U` have order six: (22) distinguishes only
+their mod-two shadows.  Equations (20)--(23) are the sharp boundary:
 
 ```text
 the seven-edge norm remembers the chosen integral root step;
@@ -380,5 +383,5 @@ row; the ternary antipode/stay shadows; all `72*6*2=864` `Q_6` norm laws;
 the derived subgroup, semidirect action, fixed profile, thirty normalized
 mod-thirteen successes and all six lifts; the original-pair normalization
 hostile; all `24` affine `S_4` maps and `delta_7`; and the exact three-radius
-Farey hostile.  Normal and optimized output must byte-match the stored
-transcript and end in `ALL CHECKS PASSED`.
+Farey hostile.  After LF normalization, normal and optimized output must
+byte-match the stored transcript and end in `ALL CHECKS PASSED`.
