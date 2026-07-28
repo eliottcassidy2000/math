@@ -6,7 +6,9 @@ status: >
   characteristic-zero field, if U is a polynomial coordinate
   of k[x,y] and Jac(U,V) is a nonzero constant, then relative to a conjugate
   coordinate S one has V=(kappa/Jac(U,S))S+G(U); hence (U,V) is a polynomial
-  automorphism.  On every polynomial graph in the THM-2696 quotient,
+  automorphism.  More generally, if U=phi(C) for an independently certified
+  polynomial coordinate C, the Keller condition forces phi affine before the
+  same conclusion applies.  On every polynomial graph in the THM-2696 quotient,
   A=x^2-2y=-2t is a coordinate.  Therefore `(A,V)` is triangular for every
   restricted polynomial second target V, including every quotient-compatible
   V=Phi(A,B,d) and every mixed shear B+H(A,d).  The mixed primitive and
@@ -103,6 +105,35 @@ In particular, every hypothetical counterexample to the planar Jacobian
 conjecture must have **neither** component a polynomial coordinate.  This is
 a reduction of the search space, not a proof that one component of every
 Keller pair is a coordinate.
+
+### Composite-coordinate corollary
+
+Suppose `C` is a polynomial coordinate, `phi in k[T]`, and
+
+```text
+U=phi(C),                    Jac(U,V)=kappa in k^*.       (8a)
+```
+
+Then the chain rule factors the nonzero scalar as
+
+```text
+phi'(C) Jac(C,V)=kappa.                                  (8b)
+```
+
+Both factors are units of `k[x,y]`.  Since the substitution
+`k[T] -> k[x,y]`, `T |-> C`, is injective, `phi'(T)` is a nonzero constant.
+Characteristic zero therefore gives
+
+```text
+phi(T)=aT+b,                    a in k^*.                (8c)
+```
+
+Thus `U` is itself a polynomial coordinate, and `(8)` applies.  On every
+graph this closes `(P(A),V)` for arbitrary polynomial `P` and arbitrary
+restricted polynomial second target `V`: the Keller condition first forces
+`P` affine.  The qualification that `C` is independently certified is
+load-bearing; taking a general `C` would simply restate the live
+coordinate-detection problem.
 
 ## 2. The graph coordinate in the reflection quotient
 
@@ -340,6 +371,8 @@ literal coordinate pairs                 THM-2702;
 all linear target planes                 THM-2705/2709;
 one-variable nonlinear d-shears          THM-2715;
 every second target paired with A        THM-2740.        (31)
+every composite P(C) of a certified
+coordinate C (Keller forces P affine)    THM-2740.        (31a)
 ```
 
 The next meaningful graph target is not another polynomial added to the
@@ -360,7 +393,8 @@ graph lane.
 
 An independent hostile audit rederived the all-degree coordinate-ring proof,
 the graph-coordinate chain rule, and the mixed-shear primitive and inverse.
-It checked the zero-response and positive-characteristic boundaries, matched
-both declared hashes, and replayed normal, optimized, and stored transcripts.
+It also checked the composite-coordinate factorization `(8b)`, the
+zero-response and positive-characteristic boundaries, matched both declared
+hashes, and replayed normal, optimized, and stored transcripts.
 
 QED.
