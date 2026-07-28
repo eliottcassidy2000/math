@@ -1,0 +1,15 @@
+THM-2815 INDEPENDENT HOSTILE AUDIT
+engine=python-stdlib integers+fractions; no CAS
+laguerre_D_range=1..14
+exact_horizon=2D-1; first_readout_alias_degree=2D
+first_alias_value=(D!)^2
+first_alias_layer=L(q*ell_D)=lc(q)*(D!)^2 for deg(q)=D
+optimal_relation=unique monic factorial-orthogonal degree-D relation
+uniqueness_lock=ell_D+c*ell_(D-1) survives 2D-2; moment 2D-1 kills c
+all_horizons=min_dimension=floor(H/2)+1; even=affine-line; odd=unique
+selector_d_range=0..12; selector_columns=91
+hankel_checks=two-sided_inverse+bareiss_determinant
+mistake211_scalar=0
+mistake211_private_coefficients=(Fraction(4, 1), Fraction(-1, 2223046425600))
+scope=selectors require extra L(G*phi_j) observations; scalar nullity supplies only L(G)
+ALL INDEPENDENT HOSTILE CHECKS PASSED
