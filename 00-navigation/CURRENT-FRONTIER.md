@@ -114,7 +114,15 @@ THM-2691 follows the canonical `+/-(13^5+1)` central cycle: its selected
 rail/clock cylinders are positive for every finite horizon, but the fully
 dynamically typed current-present product is positive only through `H=5` and
 empty at `H=6`.  This closes that cycle, not other lifts/components or the
-positive mixed `D`/slope face.  Ledger `165`.
+positive mixed `D`/slope face.  THM-2693 then separates the odometer base from
+its fibre.  The nearby `+/-(13^5+2)` lift has a strict fully labelled
+three-event packet, but every integer lift induces the same delayed map
+`y->{13y}`.  The union of both inherited guard sectors is positive through
+three states and empty at four, uniformly over all lift sequences and clock
+words.  Analytically, three `D_(13^3)` target teeth contract the phase by
+`13^2`, so the fourth-state speed-14 safety is impossible.  Hence another
+integer lift cannot repair this delayed grammar; change the delayed word,
+base dynamics, or heterogeneous edge carrier.  Ledger `165`.
 
 ### Independent routes that remain live
 

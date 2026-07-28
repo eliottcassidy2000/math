@@ -78,8 +78,8 @@
     identity arrival adjacency and its raw three-returns are clock-diagonal.
     The reflected `rho o D` swaps endpoint teeth but has the same raw return
     cylinders and the correctly reflected clock diagonal.
-    No downstream restriction can revive that unshifted support. THM-2689
-    proves every nontrivial lift restores intrinsic support but none globally permutes clock labels; THM-2691 closes the canonical central lift at the sixth present layer, not other lifts or mixed edge words.
+    No downstream restriction revives that unshifted support. THM-2689 restores intrinsic support but not global clock labels; THM-2691 closes the central lift at present depth six.
+    THM-2693 has a labelled positive three-event lift but proves the inherited delayed word empty at four for every lift/clock word; change the word, base dynamics, or edge, not the carry alphabet.
 27f. **A disconnected label nerve is not physical Cech topology.** THM-2672
     finds honest twelve-fold components in all `534` maximal fixed
     configurations.  Edge switching defeats its fixed root-zero proof, but
