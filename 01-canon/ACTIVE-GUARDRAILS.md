@@ -73,21 +73,19 @@
     compose formally but only `10` physically. THM-2682 proves some two-event
     product survives while every three-event product is empty because the
     central arrival return preserves a forbidden repeated shallow clock.
-    THM-2684 closes the apparent endpoint bypass: all `324` rails have the
-    three-tooth envelope `[0,1/28)`, `[13/28,15/28)`, `[27/28,1)`; `D` has
+    THM-2684 closes the apparent endpoint bypass: all `324` rails have the three-tooth envelope `[0,1/28)`, `[13/28,15/28)`, `[27/28,1)`; `D` has
     identity arrival adjacency and its raw three-returns are clock-diagonal.
     The reflected `rho o D` swaps endpoint teeth but has the same raw return
     cylinders and the correctly reflected clock diagonal.
     No downstream restriction revives that unshifted support. THM-2689 restores intrinsic support but not global clock labels; THM-2691 closes the central lift at present depth six.
-    THM-2693 has a labelled positive three-event lift but proves the inherited delayed word empty at four for every integer lift/clock word.  One finer phase digit gives twelve recurrent nodes to the minimal target/speed-14 carrier, yet the full word is still uniformly empty at four because the unchanged high guard is `338` times the target; common translation only swaps the killer.  Change the relative factor phase, high guard, base slope, word, or edge, not merely the carry/phase alphabet.
-27f. **A disconnected label nerve is not physical Cech topology.** THM-2672
-    finds honest twelve-fold components in all `534` maximal fixed
+    THM-2693 has a labelled positive three-event lift but proves the inherited delayed word empty at four for every integer lift/clock word.  One finer phase digit gives twelve recurrent nodes to the minimal target/speed-14 carrier, yet the full word is still uniformly empty at four because the unchanged high guard is `338` times the target; common translation only swaps the killer.
+    THM-2701/2710 make the unshifted/half literal languages nilpotent by six and the half phase invisible at clocks `2,4,6`; THM-2707's packet SCC is support, not semantic current. The `BABA` quotient has integral debt `A->2B`, which Boolean/mod-two views erase. Change the relative factor phase, high guard, base slope, word, or edge, not merely the carry/phase alphabet. No row is excluded.
+27f. **A disconnected label nerve is not physical Cech topology.** THM-2672 finds honest twelve-fold components in all `534` maximal fixed
     configurations.  Edge switching defeats its fixed root-zero proof, but
     THM-2687's enlarged-envelope scan independently restores a global positive
     `12/13` cap for the full slope-seven family.  Carry-forgetting still turns
     thirteen disjoint `Delta^11`s into a false `boundary Delta^12`; do not infer
     pointwise endpoint emptiness or export the cap to another carrier.
-
 ## NC2 / GMC
 
 28. **Scalar moments do not linearly separate return atoms.** MISTAKE-211 and
@@ -180,10 +178,11 @@
     preserve Haar mass across opposite slopes, not a primitive recurrence.
 63. **Degree-four `D4` is excluded, but not by Smith.** THM-2633 gives `normal_closure_G(H)=G` and `1<=k_D<=d-1`, leaving only `A4,S4`; retain old `D4` ledgers as hostiles and never reuse MISTAKE-297's deck extension.
 64. **A resolvent discriminant is not its Kummer carrier.** THM-2655 forces the live quartic `V4` kernel into a quasi-etale torsor on the full Galois resolvent normalization. THM-2685's even-weight divisor code is the exact extension gate: test all boundary rows, unit squareclasses, and `Cl(R)[2]`; do not transfer grade-three Keller anatomy from a shared discriminant or one non-Galois root field. THM-2696 excludes proper reflection quotients and its constant-different slice, not arbitrary `S4`.
+    THM-2703/2708 compute the required standard-plane multiplicity by a moving-arm mod-two kernel or an `F4` Hermitian gain nullity; boundary relations, exceptional units outside the full-rank scope, and geometric realization remain.
 65. **The actual THM-1310 field is excluded only as an exact `S4` resolvent.** THM-2681 identifies its full normalization on `g!=0` with `G_m x A^2`, whose procyclic etale fundamental group has no `V4` quotient. This survives polynomial target automorphisms or an explicit base-ring identification, not arbitrary birational transport. Shared `-L`, cusp/Jelonek, odd-valuation shadows, unrelated `S3` fields, and the quartic `A4` branch remain open.
 66. **Invariant Kummer vanishing is not total vanishing.** THM-2686 gives
     `H^1(R_reg,mu_ell)^Q=0` in coprime degree; at `(2,C3)` it removes trivial
-    lines but permits standard planes.  Nonvanishing is only the abstract `A4` carrier gate; test units/`Cl[2]` and retain actual versus abstract torsors.
+    lines but permits standard planes.  Nonvanishing is only the abstract `A4` carrier gate; test units/`Cl[2]` and retain actual versus abstract torsors. THM-2704's split even-Faber genus `89` is generic and all-one, not uniform: an exceptional rational member must gain at least `89` delta, become reducible/nonflat, or leave the chart, and the eleven odd seeds are absent.
 
 ## Promotion checklist
 Audit types, quantifiers, symmetries, direction, quotient loss, hostiles,

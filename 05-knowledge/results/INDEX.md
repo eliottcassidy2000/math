@@ -1,5 +1,32 @@
 # Script Results Index
 
+- `lrc14_phase_cycle_semantic_gate_probe_20260728.py` -> matching `.out`
+  [THM-2710 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  The
+  central-half map is identical to ordinary dilation at prescribed clocks
+  `2,4,6`; its literal six-state word language is empty, while `bbba` is a
+  strict four-state control.  The half and selected `C_221` packet centres
+  reach the deepest fork but are not exclusive sources.  Hashes:
+  `a34618cf` / `e6e5c6db`.
+- `lrc14_literal_singleton_word_nilpotence_thm2701.py` -> matching `.out`
+  [THM-2701 PROVED + VERIFIED-EXACT + INDEPENDENTLY REPLAYED].  The literal
+  singleton terminal-word language for `B(y)={13y}` has sharp nilpotence
+  index six: all length-six words vanish and `bbbbb` is a strict length-five
+  witness.  Hashes: `52361827` / `c9776c5e`.
+- `lrc14_delayed_tail_scc_factor_diagnostic_20260728.py` and
+  `lrc14_target_b_successor_content_mixed_unit_20260728.py` -> matching
+  `.out` files [VERIFIED-EXACT ADDENDUM].  The intrinsic `BABA` debt carrier
+  is a physical recurrent packet, but the narrow-guard quotient has integral
+  boundary `A -> 2B`.  Its four normalized unit vectors have nonzero
+  determinants; a conditional six-step unit product has determinant `5` and
+  exact order `168`, without semantic target transport.  Hashes begin
+  `c610ae5d` / `9188b844` and `fdd0c708` / `3b5be772`.
+- `jc2_degree22_split_even_prime23_geometry.py` -> matching `.out`
+  [THM-2704 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  The
+  split even-Faber prime-23 weighted complete intersection has arithmetic
+  genus `254`, five universal `(4,23)` cusps of total delta `165`, and
+  integral generic normalization genus `89`.  The all-one q-plane has exactly
+  `69` additional ordinary projection nodes and the same normalization genus.
+  Hashes: `9c3b3c01` / `0713a478`.
 - `lrc14_full_physical_lift_fibre_thm2707.py` -> matching `.out` [THM-2707
   PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].  All `12*13^5`
   nonzero lifts are scanned: `3042` survive from the terminal vertex, all

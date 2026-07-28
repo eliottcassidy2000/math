@@ -69,25 +69,37 @@ THM-2680--2694 separate positive local legs, vertical slope length, and genuine
 chronology: every integral decoration induces the same delayed map, whose old
 word dies.  THM-2697 formalizes the affine germ/root filtration and this
 kernel no-go.  THM-2698 changes the base signature by a central half-turn and
-gets a strict full two-cycle.  THM-2706 identifies the exact fixed-grading
-defect `R1*R1 < R2`: its physical `D^2` macro cycle has a minimal ghost
-midpoint completion and thousands of strict pre-word/all-safe split lifts,
-but the inherited word is empty and the integral debt is `E -> 2G`.
-THM-2701/2710 prove both ordinary and half-shifted literal semantic languages
-nilpotent by six, so this recurrent ghost cannot be terminalized unchanged.
-THM-2707 separately gives `3346` common-cylinder packets and a complete
-eleven-partite lift SCC, but its following atom fails.  The residual is a new
-coloured transit/private-row grammar or semantic filter/amplitude restoration,
-not more endpoint recurrence.  Ledger `165`.
+gets a strict full two-cycle, but its parity-forgotten `D^2` endpoint loop has
+no allowed `D` midpoint.  THM-2706 identifies the exact fixed-grading defect
+`R1*R1 < R2`: the physical `D^2` macro cycle has a minimal ghost midpoint,
+thousands of strict pre-word/all-safe split lifts, and integral debt `E -> 2G`,
+but its inherited word is empty.  THM-2701 proves the ordinary literal word
+sharply nilpotent at six; THM-2710 proves the half-shifted word also vanishes
+by six and that the half phase is exactly invisible at prescribed clocks
+`2,4,6`.  Thus neither recurrent ghost is a THM-2305 word cospan unchanged.
+
+The intrinsic `BABA` guard-debt carrier likewise has integral quotient map
+`A -> 2B`; Boolean/mod-two support erases the nonnegative multiplicity.  Its
+conditional unit product has exact order `168`, still without target
+transport.  THM-2707 exhausts the physical lift fibre: `3346` packets share
+one interval and form a complete eleven-partite SCC with closed words and
+trivial bare translation holonomy, but the following semantic atom fails.
+The residual is a coloured transit/private-row grammar, common-ancestry cone,
+enriched `C2`/direct macro, or re-rooted exclusive-owner section that restores
+semantic current and amplitude—not more endpoint recurrence.  Ledger `165`;
+no row is excluded.
 
 ### Independent routes that remain live
 
 - **Orthogonal routes.** THM-1017's AP-core extraction remains HYP-6820;
   THM-2047/2050 retain phase/first exit; THM-731/2048 saturate six-comb
   pruning; THM-1290 is exact only through speed `55`; HYP-8900 is not uniform.
-- **Foreign-base phase.** THM-2693's raw word first recurs at multiplier `18`,
-  at `4/17,13/17` (the first is THM-789's hostile); no admissible handoff is
-  known to realize that multiplier or its mod-17 class.
+- **Foreign-base phase.** The exact `C_221` stalk combines delayed mod `17`
+  phase with the old carry/root coordinate and supports a reflection-symmetric,
+  rail/present/root/unit-typed two-cycle at `4/17 <-> 13/17`.  This is
+  FINITE-EXACT local support, not a lawful scalar-return operation: the
+  displayed centres are not exclusive sources and no semantic endpoint
+  current has yet been composed through the cycle.
 - **Artanh/Gibbs.** THM-2143's criterion is exact, but current fugacities fail
   defect-seven hostiles and signed log-Riesz shortcuts are unsound.
 
@@ -346,13 +358,18 @@ Classify profiles under support operations; study analytic continuation and auto
   support-four chart, and THM-2692 the full-support BCDEW chart by order-twelve
   root/pair-field emptiness.  Hence the inherited polynomial exact-square-prefix
   genuine nonsplit degree-twenty-two branch is empty.  Split/even edges and
-  integral `2`-adic raising remain.  An exact split **even-Faber subchart**
-  scout with nonzero
-  first-flux constant `lambda` gives a degree-23 curve whose `t=0`
-  normalization word is `4^5,1^3`; however its physical fourth root is
-  already rational, so THM-2636's Kummer genus gate is neutralized.  This
-  scout omits the eleven a priori split odd seeds `E1,E3,...,E21`; the full
-  frontier is `lambda + odd bank`, not the prime-23 curve alone.  THM-2206
+  integral `2`-adic raising remain.  In the exact split **even-Faber subchart**
+  with nonzero first-flux constant `lambda`, THM-2704 proves that the
+  prime-23 weighted complete intersection has arithmetic genus `254`, five
+  universal `(4,23)` cusps of total delta `165`, and integral generic
+  normalization genus `89`; the all-one specialization has the same genus,
+  with `69` additional ordinary projection nodes.  Hence a rational special
+  integral member must acquire at least `89` further delta, become reducible
+  or nonflat, or leave the chart.  Its physical fourth root is already
+  rational, so THM-2636's Kummer genus gate remains neutralized.  THM-2704
+  omits the eleven split odd seeds `E1,E3,...,E21`; the full frontier is the
+  exceptional genus-drop locus plus `lambda + odd bank`, not the generic
+  prime-23 curve alone.  THM-2206
   blocks field-valued `C_2` Hasse repair.  THM-2446's six-bracket cone shortcut
   is refuted.  `JC(2)` and `DC(2)` remain open.
 - THM-1490 is one verified higher-dimensional Gaussian construction; newer
