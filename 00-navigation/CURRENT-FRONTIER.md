@@ -97,7 +97,14 @@ THM-2640 slope-seven family has dimension `11`; other carriers remain open.
 THM-2680's `D(x)={13x}` cospan has `25,344` positive legs but no path-lifting
 sector quotient.  THM-2682/2684 kill every third event on the full three-tooth
 bank; reflected `rho o D` only swaps endpoint teeth.  Change carrier, handoff,
-boundary, or edge grammar rather than decorating empty support. Ledger `165`.
+boundary, or edge grammar rather than decorating empty support.  THM-2689
+classifies the affine escape exactly: for either sign, every shift except
+`beta=0,1/2` restores positive intrinsic three-event support.  In particular
+all `4,455,516` nontrivial THM-2657 odometer lifts escape the support zero, but
+none globally permutes the seven clock labels; global covariance selects only
+the root-trivial order-thirteen kernel `beta=j/13`.  Thus the next object is a
+phase-local present/word/unit fibre, not another unshifted support selector.
+Ledger `165`.
 
 ### Independent routes that remain live
 

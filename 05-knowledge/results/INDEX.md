@@ -6,6 +6,22 @@
   supports ten THM-2640 slope switches, including `(2,6)->(9,7)`.  This is a
   positive heterogeneous face, not a second D edge or endpoint transport.
   Hashes: `48113885`/`939e6e4f`, `1215b285`/`e87a211d`.
+- `lrc14_affine_three_tooth_full_clock_classification.py` -> matching `.out`
+  [THM-2689 PROVED + VERIFIED-EXACT + INDEPENDENTLY REPLAYED].  Exact rational
+  Fourier--Motzkin corridors prove positive three-event intrinsic support for
+  both affine signs exactly off `beta=0,1/2`.  All `4,455,516` nontrivial
+  THM-2657 lifts are positive, while global seven-clock covariance holds only
+  for `k in 13^5 Z/13^6`, hence for no root-moving lift.  Exact typed
+  `beta=1/13` rail controls and two independently rebuilt THM-2640 reflected
+  unit-line pairs are retained; the latter are coefficient-only.  Hashes
+  begin `b68fd1c7` / `860f8053`.
+- `lrc14_half_clock_affine_handoff_positive_triple_probe.py` -> matching `.out`
+  [THM-2689 POSITIVE CONTROL; VERIFIED-EXACT].  Uniformly for `q>=3`, the
+  half-clock affine orbit has low--central--low tooth word and clock prefix
+  `floor(q/2)->0->1`.  At `q=7`, two exact constructions give a literal
+  three-rail component of length `1/199927`.  The shift `1/14` is not a
+  THM-2657 lift and has no global seven-clock permutation.  Hashes begin
+  `3740dacd` / `16315041`.
 - `lrc14_odometer_twisted_central_clock_escape_20260728.py` -> matching `.out`
   [VERIFIED-EXACT SCOUT; ENVELOPE/INTRINSIC-CLOCK/STATE SCOPE].  The minimal
   alternating lifts `-14,+14` give only a cosmetic orbit-clock cycle: their
