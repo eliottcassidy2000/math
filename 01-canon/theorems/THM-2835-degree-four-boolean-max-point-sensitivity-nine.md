@@ -20,9 +20,9 @@ depends_on:
   - THM-2832-degree-three-boolean-max-point-sensitivity-six
 related: []
 script: 04-computation/sens_degree_fullsens_cpsat_macmini_S171.py
-output: 05-knowledge/results/sens_degree_fullsens_macmini_S171.out
-script_sha256: see THM-2832 companion files
-output_sha256: see THM-2832 companion files
+output: 05-knowledge/results/sens_degree_fullsens_m4_macmini_S171.out
+script_sha256: 87b02cd493e5daa957093bad84c13c8f9bfed978299142227db3a63d7913a61e
+output_sha256: 402aed3ff07dac3cddd1b7b525f09f8c2c15c2b42f898c98fe0344a5cc1b0eb8
 hash_basis: LF-normalized bytes
 ---
 

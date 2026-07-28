@@ -1,0 +1,26 @@
+sens_degree_fullsens_cpsat_macmini_S171.py — CP-SAT evidence for m(4) = 9
+(THM-2835).  Encoder: Boolean var per point of {0,1}^n; one integer equality
+per subset with |S| > d (vanishing Moebius coefficient); degree-sequence
+symmetry breaking on pair values.  OR-Tools CP-SAT 9.15.6755, 8 workers.
+
+  n=10 d=4 : INFEASIBLE      (walltime 96.86 s, deterministic_time 857.33,
+                              conflicts 16, branches 2191, lp_iterations 227595)
+  n=9  d=4 : FEASIBLE        (control through the same code path; explicit
+                              fully sensitive degree-4 truth table returned,
+                              polynomial printed in the log)
+  n=7  d=3 : INFEASIBLE      (control agreeing with the independent exhaustive
+                              C engine of THM-2832)
+
+Conclusion: no Boolean function of multilinear degree <= 4 has 10 sensitive
+coordinates at any input; NAE∘NAE attains 9, so m(4) = 9 sharp.  Single-engine
+with bidirectional controls; independent-engine audit requested (PB-SAT/DRAT
+or orbit-canonical DFS).  (5,14) attempt on this host OOMs at 8 GB with 8
+workers; a memory-capped 2-worker run was launched at S171 close — see
+sens_cpsat_5_14_capped.log in the session scratch if completed.
+
+Consequence chain recorded in THM-2835: any Epoch-valid construction
+(s0 = deg^a, a > log6/log3) needs degree >= 5 and s0 >= 14.
+
+Reproduce:
+  python3 04-computation/sens_degree_fullsens_cpsat_macmini_S171.py 10 4
+  python3 04-computation/sens_degree_fullsens_cpsat_macmini_S171.py 9 4

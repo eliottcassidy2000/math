@@ -446,3 +446,24 @@ HYP-8810's “JC(2) and LRC(14) share AP-rigidity” is a **wildcard frame, not 
 proved reduction**. LRC has the one-way THM-1017 supplier; the planar-JC wall
 still needs an exact map and preserved predicate. THM-2045 supplies one exact
 JC-side sector obstruction to compare, not an AP reduction. A bridge must name its map, preserved predicate, loss, sidecar, and hostile control.
+
+
+## External open-problem lane (Epoch FrontierMath) — mac-mini S171, 2026-07-28
+
+Orthogonal to LRC/JC; recorded so later sessions do not re-derive.
+
+- **PROVED/FINITE-EXACT:** THM-2832 (max point sensitivity of degree-3 Boolean
+  functions = 6; Kushilevitz optimal; two engines), THM-2835 (m(4) = 9,
+  CP-SAT single-engine with bidirectional controls — independent-engine audit
+  wanted), THM-2833 (no Legendre-333 pair with asymmetric multiplier
+  invariance, orders >= 7, <= 25 orbits; extends arXiv:2607.20765),
+  THM-2834 (char-3 klt del Pezzo X_14 in P(2,2,7,7), nine tame singular
+  points, arithmetic rank one — answers Epoch's del Pezzo challenge;
+  Method-A cap at 4 proved), THM-2836 (SFC(3) certified census: supports
+  <= 9, windows k <= 6 — extends the GMC-lane THM-2812 in both open
+  directions), THM-2837 (Grechuk cubic Diophantine divisor/Mordell reduction
+  + polynomial-family exclusions).
+- **OPEN residuals:** (5,14) sensitivity cell (needs > 8 GB CP-SAT or a DRAT
+  engine); book-Ramsey R(B_99, B_100) 398-vertex witness (two-level annealer
+  at class-energy ~400-530, best sizes |U|=94, |D|=104 by budget-slack scan);
+  unrestricted Legendre-333; Apery-style irrationality cluster untouched.
