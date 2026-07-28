@@ -2,8 +2,8 @@
 id: THM-2810
 title: "Factorial-Hankel faithfulness and bounded radial-carrier no-go"
 status: >
-  RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING
-  INDEPENDENT AUDIT.  In characteristic zero the factorial functional
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In
+  characteristic zero the factorial functional
   L(s^n)=n! has nondegenerate Hankel pairing in every finite degree, with
   determinant product_(j=0)^d(j!)^2.  Its algebra annihilator is therefore
   zero: it factors through no proper polynomial-algebra quotient and admits
@@ -12,8 +12,7 @@ status: >
   s^a(1-s^N) is explicit.  In characteristic p the annihilator is exactly
   (s^p), giving the sharp finite-carrier boundary.  This does not refute
   effective HYP-8765, replace THM-2022, globally de-factorialize Wick
-  channels, or prove a new GMC result.  Until independent promotion, no
-  proved result may depend on this candidate.
+  channels, or prove a new GMC result.
 source: root/gmc-factorial-carrier-boundary-2026-07-28
 depends_on: []
 related:
@@ -33,8 +32,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2810 -- the factorial tower has no bounded multiplicative carrier
 
-**RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING
-INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2638 identifies radial height as the coordinate forgotten by Gaussian
 radial integration.  A natural response is to seek a finite quotient,
@@ -303,15 +301,24 @@ They have identical exponent support, but
 L(H_-)=0,              L(H_-^2)=504,              L(H_+)=12. (31)
 ```
 
-Their two-charge lifts satisfy
+With `s=ZW`, define their two-charge lifts by
+
+```text
+P_-=W+Z(6-s^2),                    P_+=W+Z(6+s^2).       (32)
+```
+
+They satisfy
 
 ```text
 (E[P_-^2],E[P_-^4])=(0,3024),
-E[P_+^2]=24.                                            (32)
+E[P_+^2]=24.                                            (33)
 ```
 
-Thus support, periodic residue, or a one-bit sign-blind carrier cannot
-recover factorial nullity.  This is a control, not the headline novelty:
+Thus exponent support, even when its exponents are tagged by periodic
+residues, or any sign-blind carrier cannot recover factorial nullity.  This
+does not say that every coefficient-retaining periodic representation
+identifies `H_-` with `H_+`; the universal periodic-carrier no-go is instead
+the cyclic alias in Section 4.  This is a control, not the headline novelty:
 THM-2173 already gives the general sparse projective moment-floor mechanism.
 The new content here is the zero annihilator, quotient classification,
 finite-state rank invoice, and characteristic boundary.
@@ -334,7 +341,7 @@ claim.  A carrier whose dimension grows with that finite cutoff is compatible
 with `(16)`.  So is the clock-dependent recurrence
 
 ```text
-(n+1)!= (n+1)n!,                                       (33)
+(n+1)!= (n+1)n!,                                       (34)
 ```
 
 which is not time-homogeneous.  THM-2639's nonlinear resultant/cumulant ideal
@@ -371,4 +378,12 @@ than inferred from these finite controls.  The script has explicit exception
 gates, no truth-bearing Python assertions, no floating point, and no scratch
 dependency.
 
-**Awaiting independent audit; not QED.**
+An independent hostile audit rederived the Pascal factorization, determinant,
+nondegenerate pairing, quotient equivalence, finite-state invoice, cyclic
+alias, two-charge Wick lift, and the exact characteristic-`p` annihilator
+(including `p=2`).  It also checked the repaired same-support typing and every
+HYP-8765/THM-2022/MISTAKE-211/MISTAKE-215 scope boundary.  Normal and
+optimized executions byte-match the stored transcript, and the declared
+LF-normalized hashes and full documentation checks pass.
+
+**QED.**
