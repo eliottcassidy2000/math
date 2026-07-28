@@ -9,6 +9,30 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-302 (2026-07-28, THM-2648 rainbow atlas census) -- a selected nonlinear atlas was reported as the universe of nonlinear charts
+
+- **What was claimed:** promoted THM-2648 said that there are exhaustively
+  `11,154` affine and `1,014` nonlinear rainbow charts.  Its companion had in
+  fact enumerated every affine chart but had only *constructed one chosen
+  nonlinear repair per matched-step pair*.
+- **First failed implication:** counting the members selected by a complete
+  covering atlas does not count every chart that could occupy one atlas slot.
+  In each matched normal form there are `50,283` rainbow matchings and
+  `43,122` nonlinear second charts compatible with the affine hole pair.  A
+  minimal same-hole witness is the pair of target vectors
+  `(2,4,11,5,6,7,8,9,3,10,12)` and
+  `(2,10,3,5,6,7,8,9,11,4,12)`, both with holes `{6,9}`.
+- **Strongest survivor / repair:** the exact `11,154` affine census, existence
+  of a two-chart cover for every pair, two-chart minimality, `1^4 2^9`
+  incidence, and charged energy all survive.  THM-2648 now calls `1,014` the
+  chosen nonlinear-atlas size.  Its selected matched-wall chart was sharpened
+  to a minimal alternating six-cycle: three moved edges give a sharp
+  fourteen-edge union, and the affine chart plus the two inverse repairs are
+  the three one-factors of `K_(3,3)` with local `C_3 semidirect C_2=S_3`
+  symmetry.  The occurrence-level chart bit, not carry support or residual
+  reflection, is the missing physical selector.  Never label a constructed
+  atlas count as a universe count without enumerating the ambient objects.
+
 ## MISTAKE-301 (2026-07-28, THM-2621 trace--Liouville sidecar) -- closed was mistaken for possibly nonexact after forgetting the polynomial source primitive
 
 - **What was assumed:** the first promoted form of THM-2621 correctly proved

@@ -30,8 +30,11 @@ composition, and edge restriction coexist.
   two-set is supplied, the other endpoint is uniquely reconstructed by the
   signed inverse of `I+T_d`; its unavoidable total variation is `13/2`.
 - **New thin atlas:** THM-2648.  Two rainbow matchings cover all thirteen
-  carries, minimally, but the matching restriction is not yet a lawful LRC
-  event.
+  carries, minimally.  On the matched wall the cheapest repair is only an
+  alternating six-cycle: three old matching edges are exchanged for three
+  new ones, repairing two carry holes.  The restriction is not yet a lawful
+  LRC event, and MISTAKE-302 warns that the chosen nonlinear atlas is not the
+  universe of nonlinear charts.
 
 No item in this list lowers the `165`-row ledger by itself.
 
@@ -63,6 +66,8 @@ The theorem stack would act as follows.
 3. With `(A,B)` fixed, THM-2648 supplies two eleven-edge rainbow matchings
    whose two-point carry holes are disjoint.  Their union has multiplicity
    one on four carries and two on nine, hence retains all charged colours.
+   On the matched wall their union is sharply fourteen edges: eight common
+   edges plus one of the two oriented three-cycle repairs in `K_(3,3)`.
 
 This is an implication, not a construction.  The first arrow must preserve
 nonnegativity, a common middle, and the physical endpoint gauge.  The last
@@ -93,6 +98,11 @@ THM-2648's two charts are matchings with symmetric carry multiplicity.  The
 right external analogy is inherited vertex colouring of perfect matchings:
 endpoint labels survive a matching contraction only when they are carried
 with the edges.  An uncoloured union retains support but loses allocation.
+The affine chart and its two inverse minimal repairs are literally the three
+one-factors of `K_(3,3)`; reflection swaps the two repairs, giving the local
+`C3 semidirect C2=S3` frame requested in the prompt.  Retaining both repairs
+gives a reflection-stable three-chart atlas, while selecting one gives the
+minimal two-chart cover.  Either operation requires a chart occurrence bit.
 There is no intrinsic antisymmetric pair observable here, so orienting the
 two charts as a tournament would discard rather than recover information.
 
@@ -115,8 +125,10 @@ the physical predecessor carry of THM-2640, and then:
 3. test `E=M^2` and `R>delta` before any Fourier scalarization;
 4. verify that the selected root commutes with the lawful target action,
    rather than imposing the missing `c->c+7 delta` clutch;
-5. if the branch lands, reconstruct `(A,B)` by (2) and test whether both
-   THM-2648 edge indicators are events in the original sigma-algebra;
+5. if the branch lands, reconstruct `(A,B)` by (2) and first test the smaller
+   service: whether the alternating six-cycle switch has positive same-base
+   endpoint-labelled occurrences in the original sigma-algebra; only then
+   test the full rainbow edge indicators;
 6. if it fails, preserve the first failed predicate: impurity, absent return,
    gauge mismatch, or nonmeasurable edge restriction.
 

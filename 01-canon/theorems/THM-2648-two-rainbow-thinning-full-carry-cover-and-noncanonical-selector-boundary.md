@@ -8,12 +8,15 @@ status: >
   have disjoint two-point holes and hence cover all thirteen carries.  If the
   two missing-pair steps differ up to sign, both matchings are the two affine
   bijections A->B.  In the step-matched/high-energy THM-2645 class, exactly
-  one affine orientation is rainbow; an explicit nonlinear normal-form
-  matching supplies the second disjoint-hole chart.  Exhaustively there are
-  11,154 affine and 1,014 nonlinear charts, and every two-chart cover has
-  colour multiplicities 1 on four carries and 2 on nine.  Its chart-incidence
-  profile retains all twelve charged characters with centered energy 36/169.
-  Two charts are minimal.  This is an abstract rainbow thinning, not a physical LRC
+  one affine orientation is rainbow; an explicit three-cycle flip supplies
+  the second disjoint-hole chart.  Across all 6,084 relation pairs there are
+  exactly 11,154 affine rainbow charts, while the displayed atlas chooses
+  1,014 nonlinear charts, one for each matched-step pair.  Every two-chart
+  cover has colour multiplicities 1 on four carries and 2 on nine.  Both its
+  even and chart-swap sectors retain all twelve charged carry characters,
+  with energies 9/169 and 1/13 on C_2 x C_13.  Two charts are minimal, and
+  the matched-wall union is sharply only fourteen edges.  This is an abstract
+  rainbow thinning, not a physical LRC
   selector: current eleven-sheet rows do not provide a same-base positive
   product relation or a lawful measurable restriction to the selected
   edges.
@@ -27,8 +30,8 @@ related:
   - HYP-2233-missed-problem-frontier-carrier-atlas
 script: 04-computation/lrc14_two_rainbow_full_carry_cover_thm2648.py
 output: 05-knowledge/results/lrc14_two_rainbow_full_carry_cover_thm2648.out
-script_sha256: e71ae4c654c6efb512718a839f3f72d38d987f6e814123ddd5519dac14e79fcc
-output_sha256: 1e576ffa5c56f024c266159d9bb91f4e37564c63c75a368775a626f73ffd8504
+script_sha256: 3a81c3ee39738ac695dd505f15752c4bd8bf561185af57881cc93330aaf2b4f5
+output_sha256: e9ee94f42936a9f3d5a2075d97f1f361998bfdba464b1b5c185cc65705e36756
 hash_basis: LF-normalized bytes
 ---
 
@@ -132,7 +135,7 @@ On `t=1`, `f_+` is rainbow and `f_-` has constant colour.  On `t=-1`, the
 roles reverse.  The affine failure is real, but its two missing carries are
 not structural.  Over `F_13` there are explicit nonlinear second charts.
 
-### 3.1 Parallel normal form
+### 3.1 Parallel normal form: a ternary flip
 
 Take
 
@@ -141,16 +144,17 @@ A=B={0,1},                    S=T={2,3,...,12}.            (11)
 ```
 
 The affine rainbow is `f(x)=x`; its colour holes are `{0,2}`.  On the ordered
-domain `x=2,...,12`, define the second target vector
+domain `x=2,...,12`, rotate the three targets over `x=6,7,8` and leave the
+other eight edges fixed:
 
 ```text
-(f(x))=(11,12,5,2,6,3,8,9,4,10,7).                      (12)
+(f(x))=(2,3,4,5,7,8,6,9,10,11,12).                       (12)
 ```
 
 It is a permutation of `T`, its eleven sums are distinct, and
 
 ```text
-H_f={4,11}.                                               (13)
+H_f={3,12}.                                               (13)
 ```
 
 The holes (13) are disjoint from `{0,2}`.
@@ -168,18 +172,22 @@ The affine rainbow is `f(x)=x-1`; its holes are `{1,12}`.  On the same
 ordered source domain, define
 
 ```text
-(f(x))=(10,11,4,1,5,2,7,8,3,9,6).                       (15)
+(f(x))=(1,2,3,4,6,7,5,8,9,10,11).                        (15)
 ```
 
 This is a permutation of `T`, has eleven distinct sums, and has
 
 ```text
-H_f={3,10},                                               (16)
+H_f={2,11},                                               (16)
 ```
 
 again disjoint from the affine holes.  Both (12) and (15) are genuinely
 nonlinear: the affine map determined by their first two edges fails on later
-edges.
+edges.  Each is an alternating six-cycle flip between two perfect matchings:
+three old edges are replaced by three new edges.  Of the three old carry
+colours, one is retained and the other two are exchanged for the affine
+chart's two missing colours.  This is a literal `3`-move repairing a
+`2`-point defect.
 
 ### 3.3 Transport to arbitrary origins
 
@@ -200,7 +208,40 @@ an affine bijection of `G`.  Therefore it preserves rainbow injectivity and
 disjointness of hole sets.  Transporting (12) or (15) supplies the required
 second chart for every matched pair.
 
-## 4. Complete atlas and sharp chart count
+### 3.4 Sharpness and the local `C_2*C_3` frame
+
+No second rainbow chart can differ from the matched-wall affine chart in only
+two edges.  A two-edge change in a bijection is a transposition.  In the
+parallel form, transposing the targets at sources `x,y` makes both new carry
+colours equal `x+y`; in the antiparallel form both equal `x+y-1`.  Either way
+the result is not rainbow.  One moved edge is impossible for a permutation.
+The charts (12) and (15) move exactly three edges, so they are sharp.  They
+share eight of eleven edges with the affine chart and their union has
+
+```text
+11+11-8=14 edges.                                         (18a)
+```
+
+On the active triples the affine chart and the two inverse three-cycle
+repairs are exactly the three one-factors of `K_(3,3)`: after cyclically
+labelling the triples by `C_3`, they are `v=u+r` for `r=0,+1,-1`.  The field
+reflection fixes `r=0` and swaps `r=+-1`, producing the local symmetry
+
+```text
+C_3 semidirect C_2 = S_3.                                 (18b)
+```
+
+Keeping one nonlinear repair gives the sharp two-chart/fourteen-edge cover
+but chooses an orientation.  Keeping both gives a reflection-stable
+three-chart atlas: the eight outside edges are common and the active block is
+all nine edges of `K_(3,3)`, for seventeen union edges.  Its carry
+multiplicity is `1^2 2^2 3^9`, with centered `C_13` energy `94/169`; each
+nontrivial `C_3` chart character retains every nonzero carry mode and has
+energy `4/117`.  This is an exact co-occurrence of the binary reflection and
+ternary matching grammars, but it still requires an occurrence-level chart
+label.
+
+## 4. A complete two-chart atlas and its chart-type census
 
 Among the `78^2=6,084` ordered relation pairs, THM-2645's step census is
 
@@ -211,9 +252,21 @@ step-distinct: 5,070,          step-matched: 1,014.       (19)
 The construction above gives
 
 ```text
-affine rainbow charts:       2*5,070+1,014=11,154,
-nonlinear rainbow charts:                       1,014.   (20)
+affine rainbow charts (all):       2*5,070+1,014=11,154,
+nonlinear charts chosen in this atlas:              1,014.   (20)
 ```
+
+The second line is the size of the **selected atlas**, not a census of all
+nonlinear rainbow matchings.  Already in the parallel normal form the two
+target vectors
+
+```text
+(2,4,11,5,6,7,8,9,3,10,12),
+(2,10,3,5,6,7,8,9,11,4,12)                              (20a)
+```
+
+are distinct nonlinear rainbow bijections with the same hole pair `{6,9}`.
+Thus even the complete carry profile does not recover edge occurrences.
 
 For every pair the two hole sets are disjoint.  Hence the chart-colour union
 is all of `G`; exactly the four hole colours occur in one chart and the other
@@ -251,17 +304,41 @@ so some chart-incidence mode has square at least `3/169`.  Thus the rainbow
 thinning preserves THM-2645's full charged spectrum and regularizes both
 dense energy classes to the lower value.
 
+There is a stronger statement if the occurrence bit is retained.  Let
+`h_0,h_1` be the two chart-colour indicators and put
+
+```text
+w=h_0+h_1,                    d=h_0-h_1.                 (24a)
+```
+
+The signed profile `d` has two entries `+1`, two entries `-1`, and nine zero
+entries.  It too is rational and nonconstant, so `Phi_13` forces every
+nonzero Fourier mode of `d` to survive.  For the normalized transform on
+`C_2 x C_13`,
+
+```text
+Hhat(epsilon,k)
+ =1/26 sum_(j,c) h_j(c)(-1)^(epsilon j) zeta^(-kc),
+sum_(k!=0)|Hhat(0,k)|^2=9/169,
+sum_(k!=0)|Hhat(1,k)|^2=1/13.                            (24b)
+```
+
+Thus both the even and chart-swap charged sectors retain all twelve carry
+characters.  Swapping the two charts changes only the sign of the odd sector,
+but that sector exists only after adding an occurrence-level `C_2` chart bit.
+It is not present in the current physical LRC packet.
+
 The two charts need not be edge-disjoint.  They share exactly one selected
-edge in the `5,070` step-distinct pairs and exactly three in the `1,014`
+edge in the `5,070` step-distinct pairs and exactly eight in the `1,014`
 matched pairs.  Their union therefore retains respectively
 
 ```text
-21 of 121 edges       or       19 of 121 edges.           (25)
+21 of 121 edges       or       14 of 121 edges.           (25)
 ```
 
 Two charts are minimal: one eleven-edge rainbow matching has only eleven
 colours and cannot cover thirteen.  Thus (21) is a sharp two-chart thinning
-of the full `121`-edge relation.
+of the full `121`-edge relation, while (18a) is sharp on the matched wall.
 
 ## 5. Holotopy meaning and noncanonical boundary
 
@@ -272,12 +349,20 @@ explains exactly how a maximally saturated relation can contain private local
 branches without having one global holonomy permutation.
 
 The construction does not contradict THM-2644's purity/return no-go for the
-full multiplicity.  By (25) it first discards `100` or `102` of the `121`
-increment pairs.  Nor is the selector canonical.  The affine charts require
-the labelled missing pairs; on the matched wall the nonlinear templates
-additionally choose a normalization and break the residual affine symmetry.
-Different choices can give different thin branches with the same original
-relation.
+full multiplicity.  By (25) it first discards `100` or `107` of the `121`
+increment pairs.  Nor is the selector canonical.  The formulas label the two
+affine maps after orienting the missing pairs, although their unordered pair
+is intrinsic.  On the matched wall the displayed templates choose one of the
+two inverse three-cycle repairs.  Other nonlinear charts, including (20a),
+can have the same holes.  Thus the physical noncanonicity is occurrence
+selection, not a forced breaking of residual affine symmetry.
+
+Perfect-matching inherited colouring can isolate a chosen chart only after
+edge occurrences are duplicated and labelled by the chart bit: colour both
+endpoints of an occurrence `(s,t,j)` by `j`, and a monochromatic matching
+selects chart `j`.  The current LRC model contains no such chart-coloured
+same-base function-valued kernel.  Since the charts overlap, one unduplicated
+edge label cannot encode both occurrences.
 
 Most importantly, current LRC rows do not instantiate the product `S x T` as
 a same-base positive physical transition table.  A static coefficient row or
@@ -312,27 +397,33 @@ The dependency-free referee uses explicit optimization-safe guards.  It
 2. constructs both charts on all `6,084` relation pairs;
 3. checks all `12,168` rainbow matchings and `133,848` selected edges;
 4. verifies every affine and transported nonlinear hole formula, all
-   `1,014` degenerate affine controls, and the chart census (20); and
+   `1,014` degenerate affine controls, and the constructed-atlas chart-type
+   census (20); and
 5. proves disjoint holes, full thirteen-colour union, and (21) on every pair,
-   recovering the global census (22), verifies all `73,008` charged chart
-   characters and the energy (24), and checks the exact one/three-edge chart
-   overlaps and retained-edge counts (25).
+   recovering the global census (22), verifies both `w` and `d` in every
+   charged sector and the energies (24)/(24b), proves the distance-two
+   hostile and distance-three repair census in both normal forms, and checks
+   the exact one/eight-edge chart overlaps and retained-edge counts (25).
 
 The script and stored output have the LF-normalized SHA-256 hashes declared
 in the frontmatter.
 
 One independent immutable audit rederived both affine charts, the two
 matched-wall nonlinear templates, their transported hole formulas, the
-`11,154+1,014` chart census, the one/three-edge overlap split, the `21/19`
-retained-edge counts, and the abstract-selector versus physical-packet
-boundary.  It also replayed the exact companion in normal and optimized
-modes against the stored transcript.
+complete `11,154` affine census plus the chosen `1,014`-chart nonlinear
+atlas, the one/eight-edge overlap split, the `21/14` retained-edge counts,
+and the abstract-selector versus physical-packet boundary.  It also replayed
+the exact companion in normal and optimized modes against the stored
+transcript.
 
 A second independent immutable audit rederived the strengthened incidence
 claim from `w=1^4 2^9`: rational cyclotomic irreducibility forces every one
 of the twelve charged modes to survive, while normalized Parseval gives
-exactly `36/169` centered energy and hence a mode of square at least `3/169`.
-Both audits independently reproduced the `73,008` character guards and the
-declared LF-normalized hashes.
+exactly `36/169` centered energy.  It retained the occurrence bit and proved
+the chart-swap profile has every charged mode and energy `1/13` in the
+normalized `C_2 x C_13` transform.  The same audit caught and repaired the
+false reading of `1,014` as the total nonlinear census: it is only the chosen
+atlas size, as witnessed by (20a).  Both audits independently reproduced the
+character guards and the declared LF-normalized hashes.
 
 QED.

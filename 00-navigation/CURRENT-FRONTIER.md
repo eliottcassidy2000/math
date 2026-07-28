@@ -131,8 +131,14 @@ section.  THM-2640 makes every predecessor-carry root private but its target
 clutch is unsupported.  THM-2642 then saturates every eleven-sheet support, while THM-2645
 retains all charged colours in exact multiplicity.  Audited THM-2647 proves
 one absolute endpoint two-set uniquely deconvolves the other with unavoidable
-signed norm `13/2`; THM-2648 supplies two minimal rainbow charts covering all
-thirteen carries.  The live target is now a nonnegative same-base transition
+signed norm `13/2`; repaired THM-2648 supplies two minimal rainbow charts
+covering all thirteen carries.  On the matched wall a sharp alternating
+six-cycle changes three edges to repair two holes, leaving a fourteen-edge
+union; the affine chart and its two inverse repairs are the `C3` one-factors
+of `K_(3,3)`, with reflection giving local `C3 semidirect C2=S3`.  Both
+`C2 x C13` charged sectors survive, but only after adding an occurrence-level
+chart bit; MISTAKE-302 distinguishes the chosen `1,014`-chart nonlinear atlas
+from the much larger nonlinear universe.  The live target is now a nonnegative same-base transition
 whose common-middle return selects the `C13` origin via THM-2644 and makes
 rainbow edge restriction physical.  Marginals, support, and signed inversion
 do not supply that table.  Ledger `165`.
