@@ -1,0 +1,16 @@
+S4 OPPOSITE-EDGE PROJECTOR / INTEGRAL CLUTCH AUDIT
+class size tr_plus det_plus tr_minus det_minus tr_edge det_edge
+1^4      1 +3 +1 +3 +1 +6 +1
+1^2 2    6 +1 -1 +1 -1 +2 +1
+2^2      3 +3 +1 -1 +1 +2 +1
+1 3      8 +0 +1 +0 +1 +0 +1
+4        6 +1 -1 -1 -1 +0 +1
+opposition=central_involution rational_split=E_plus+E_minus
+E_plus=matching_permutation=1+[22] kernel=V4 quotient=S3
+E_minus=standard_[31] faithful_character=fixed_vertices-1
+determinants=det_plus=det_minus=quartic_sign product=+1
+trace_collision=transposition:(1+1) double:(3-1) total=2
+integral_basis_index=8 mod2_rank=3 smith=1^3,2^3
+integral_clutch=L/(L_plus+L_minus)=F2^3 matching_permutation_module
+SCOPE: exact finite representation/lattice theorem; no Keller or LRC exclusion
+FAILED CHECKS: NONE
