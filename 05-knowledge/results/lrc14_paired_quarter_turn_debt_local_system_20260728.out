@@ -7,8 +7,11 @@ endpoint_ghost_unsigned_incidence=((1, 1), (1, 1)) reflection_quotient_multiplie
 Phi7_F13_factors=((1, 3, 1), (1, 5, 1), (1, 6, 1))
 conditional_BABA_unit_product=(9, 2, 8, 7, 6, 9)
 unit_component_data=((3, (7, 0), 12, (12, 0), (11, 0)), (5, (4, 5), 168, (8, 0), (0, 0)), (6, (5, 4), 28, (12, 0), (11, 0)))
+Phi7_CRT_product=A=K3xK5xK6 component_dimensions=(2,2,2) middle_projection_rank=2 kernel_dimension=4
+global_U42=(8, 0, 10, 8, 8, 10) global_Uminus42=(5, 0, 11, 1, 1, 11)
+global_symmetric_debt=(0, 0, 8, 9, 9, 8) CRT_components=((11, 0), (0, 0), (11, 0))
 middle_component_quarter_turn=i13=8 i13^2=-1 inverse_sum=0
 integral_J_reductions=roots13=(5, 8) roots17=(4, 13) roots221=(21, 47, 174, 200) selected_i221=47
-loss_ledger=quarter cancellation uses signed/local coefficients; middle Phi7 projection discards the other two components; the four unit rows have no proved transport
+loss_ledger=quarter cancellation uses signed/local coefficients; middle projection has a 4-dimensional K3xK6 kernel and kills the nonzero global debt; U is a conditional four-row product and U^42 is cycle holonomy, not an edgewise gain; the four unit rows have no proved transport
 SCOPE: no nonnegative current, semantic cospan, row exclusion, or LRC14 conclusion
 ALL CHECKS PASSED

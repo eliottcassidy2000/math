@@ -72,6 +72,24 @@ from `(6)` to the trivial nonnegative rank-one coefficient system, precisely
 because `(5)` would restore the two units.  Hence `(4)` does not evade
 THM-2644's nonnegativity and common-middle requirements.
 
+There is a sharper pointed-cone obstruction.  Let `K` be a pointed cone in
+`L tensor R`, so `K intersection (-K)={0}`, and let `J` be invertible.  There
+are two useful forms:
+
+```text
+Jv,J^(-1)v in K and v!=0       => (J+J^(-1))v!=0;        (6a)
+
+v in K, J(K) subset K, v!=0    => (J+J^(-1))v!=0.        (6b)
+```
+
+For `(6a)`, cancellation would put `Jv=-J^(-1)v` in both `K` and `-K`,
+forcing `Jv=0`.  For `(6b)`, multiply a hypothetical cancellation by `J`:
+`J^2v=-v`; forward invariance puts `J^2v` in `K`, so pointedness forces
+`v=0`.  In particular `J^2=-I` cannot preserve a nonzero pointed cone, even
+under the one-sided condition `J(K) subset K`.  If `J(K)=K`, both proofs
+apply.  Thus quarter-turn cancellation is intrinsically signed; it cannot
+itself be the one nonnegative transition required by THM-2644.
+
 ## 3. The delayed phase already carries the quarter turn
 
 On the denominator-seventeen orbit, multiplication by `13` has exact order
@@ -93,7 +111,7 @@ giving exactly `(2)`.  Moreover
 Thus the transverse phase is the mod-17 eigenline of the integral complex
 structure `(6)`, with chosen eigenvalue `i_17=13`.
 
-## 4. The conditional unit holonomy contains the dual quarter turn
+## 4. The conditional unit holonomy contains the dual quarter turn, but only after a lossy projection
 
 The four normalized primitive-unit polynomials on the `BABA` carrier are
 
@@ -107,13 +125,26 @@ Their conditional product in `F_13[z]/(Phi_7)` is
 U=9+2z+8z^2+7z^3+6z^4+9z^5,                              (9)
 ```
 
-of exact order `168`.  The factorization
+“Conditional” is load-bearing: the four displayed unit rows do not yet have
+a proved common physical transport or gauge.  Equation `(9)` is their product
+after identifying the coefficient algebras by hand; it is not yet the
+holonomy of a constructed physical four-edge local system.
+
+The product has exact order `168`.  The factorization
 
 ```text
 Phi_7=(z^2+3z+1)(z^2+5z+1)(z^2+6z+1)       over F_13     (10)
 ```
 
-gives component orders
+is a product of three distinct irreducible quadratics.  Therefore the full
+six-dimensional algebra has the CRT decomposition
+
+```text
+A=F_13[z]/(Phi_7)  ~=  K_3 x K_5 x K_6,
+K_a=F_13[z]/(z^2+a z+1),             dim_F13(K_a)=2.    (10a)
+```
+
+The component orders of `U` are
 
 ```text
 12, 168, 28.                                               (11)
@@ -127,13 +158,34 @@ U^42=8,                    8^2=-1 mod13,
 8+8^(-1)=8+5=0 mod13.                                  (12)
 ```
 
-Hence the order-168 sidecar contains an exact order-four quotient realizing
-the same cancellation `(4)`, now with coefficient eigenvalue `i_13=8`.
+Hence the middle component contains an exact order-four quotient realizing
+the same scalar cancellation `(4)`, with eigenvalue `i_13=8`.  The global
+calculation is different.  In the polynomial basis `1,z,...,z^5`,
 
-The loss ledger is essential.  On the other two factors, `U^42=-1`, so their
-symmetric sums equal `-2`, not zero.  The whole `Phi_7` coefficient algebra
-does **not** cancel.  One must justify projection to the middle factor, and no
-transport identifying the four unit rows has yet been constructed.
+```text
+U^42     =(8,0,10,8,8,10),
+U^(-42) =(5,0,11,1,1,11),
+S=U^42+U^(-42)=(0,0,8,9,9,8) != 0.                      (12a)
+```
+
+Under `(10a)`, this surviving symmetric debt is
+
+```text
+S=(-2,0,-2) in K_3 x K_5 x K_6.                         (12b)
+```
+
+The middle projection `pi_5:A->K_5` has rank two and the four-dimensional
+kernel `K_3 x K_6`.  It sends the nonzero `S` in `(12a)` to zero, while both
+discarded components remain `-2`.  Thus middle cancellation is a quotient
+loss: the projection kills the whole displayed obstruction rather than
+proving it vanishes.  No target-preserving, gauge-covariant physical
+projector to `K_5` is known.
+
+There is a second type loss.  `U^42` is the order-four holonomy extracted
+from the conditional product of four rows; it is not an edgewise coefficient
+automorphism `J`.  Identifying it with the one-step `J` of Section 2 would
+require four actually transported edge gains, a common coefficient fibre,
+and a proof that their cycle product is `(9)`.  None is constructed here.
 
 ## 5. Why the modulus is exactly `221`
 
@@ -170,21 +222,44 @@ This is an exact structural alignment, not yet a physical map.  The affine
 Equation `(14)` therefore supplies a candidate coefficient gain, not a new
 chronology arrow.
 
-## 6. The next decisive construction
+## 6. The source-fibre wall is globally typed, not a failure of root search
 
-The source-fibre audit gives the appropriate hostile constraints:
+The full source-fibre audit first establishes genuine strict scalar cospans
+`E_3 -> D^6 Q_(3,{1,2})` on both the half and `C_221` fibres.  Their failure
+to attach to a present packet has a uniform structural reason.  In the exact
+present builder
+`04-computation/lrc14_replica_dichotomy_typed_row_opus_20260727.py::build_F`,
+every `F_(ell,s)` explicitly subtracts the unshifted `c_3`-danger comb:
+
+```text
+F_(ell,s) subset (D_(c_3))^c,
+E_3 subset D_(c_3),
+therefore E_3 intersection F_(ell,s)=empty.              (15a)
+```
+
+This holds for every `ell,s`, independently of phase, carry, private root,
+or clock.  The finite census did not merely miss a favourable root; it
+detected this global source/present type contradiction.
+
+The exact finite ledgers show how the contradiction manifests:
 
 ```text
 half carrier:
-  E_3 cospans exist, but dynamic present typing deletes them before the
-  reciprocal cycle;
+  each phase has 12,848 E_3 rows retaining shallow clock, rail, and private
+  root when present is removed; the union of all 13 present labels is empty;
 
 C_221 carrier:
-  E_3 cospans exist, but the forced-carry/root-6 subgenerator deletes them
-  before the reciprocal cycle.
+  each full phase has 131,752 E_3 rows; the inherited root-6 carries 3/9
+  contain none; the exhaustive all-carry re-root leaves only carries
+  (0,6) over 4/17 and (6,12) over 13/17, with nonzero private roots 1/12;
+  53,227 or 53,590 rows per surviving class pass clock/sector typing, but
+  every one fails present and no reciprocal pair remains.                (15b)
 ```
 
-The quarter-turn calculation says what a successful re-rooting should retain:
+## 7. The next decisive construction
+
+The quarter-turn calculation says what a successful replacement should
+retain:
 
 1. an actual `E_3 -> Q_(3,{1,2})` source cospan;
 2. the four-state endpoint/ghost or `BABA` incidence before reflection;
@@ -195,12 +270,15 @@ The quarter-turn calculation says what a successful re-rooting should retain:
 5. a separate nonnegative/current argument if the goal is to invoke
    THM-2644 rather than merely build a signed mapping cone.
 
-The cheapest positive experiment is therefore an all-carry, variable-root
-`C_221` re-root with the mod-221 gain `47` retained as a local coefficient.
-The cheapest hostile is to prove that dynamic present typing or the two
-discarded `Phi_7` factors make every such common-gauge square empty.
+The all-carry, variable-root experiment is now saturated by `(15a)--(15b)`.
+The cheapest positive experiment is a relative-present or present-free
+mapping cone that attaches the scalar `E_3` current before rebuilding a
+compatible unit sidecar.  It must alter the present object itself, not merely
+its phase/carry/root labels.  In parallel, any use of the middle `Phi_7`
+factor must construct a target-preserving projector and show why the
+`K_3 x K_6` obstruction is physically null.
 
-## 7. Exact reproduction
+## 8. Exact reproduction
 
 Run
 
@@ -215,8 +293,8 @@ Both modes byte-match
 SHA-256:
 
 ```text
-script  f5669cdf93b18cfe36a1edf997fe2bd2577dd2b093df620bfa97126e16fe8d24
-output  02cf323945444d7b49a42dc019e81a8f9d904ed36779400527be47ad5d338f64
+script  abf625bd6ba7c874e4f8b0fcddc70c8ee269277116fcf5c1365aa0a4b3b21fb6
+output  c8a8245272bc943dce12dcbb6483432d46d538e695f3f7e5e286a03171696bd1
 ```
 
 No unit transport, middle-factor projector, semantic cospan attachment,
