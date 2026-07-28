@@ -70,10 +70,10 @@ projective `13`-arcs; each pair is `[13,2,12]` MDS, excluding
 scalar-translation transport.  THM-2791/2807 give ancestry homotopy.
 THM-2806's raw point is flat and `D3=144w` bare-only.  Its audited tau-twelve
 addendum has `M=empty`; the separate common/right bank agrees on
-nonemptiness `567/567` but overlaps `0/567`.  THM-2813 conditionally decodes
-the address flags, but Rees `D3` is not its jet.  THM-2814 is a holonomy
-candidate; THM-2818 reserves the copy atlas.  Next: an off-sheet common atom
-and typed boundary.  Ledger `165`; no row is excluded.
+nonemptiness `567/567` but overlaps `0/567`.  THM-2813 decodes address flags
+conditionally; Rees `D3` is not its jet.  THM-2814 classifies contrast versus
+holonomy; THM-2818 proves positive-copy multipliers.  Next: typed off-sheet
+common atom.  Ledger `165`; no row is excluded.
 
 ### Independent routes that remain live
 
