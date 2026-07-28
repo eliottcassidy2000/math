@@ -2,8 +2,8 @@
 id: THM-2641
 title: "Modular abelianization theta blindness and the 637-residue no-go"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  In PSL2(Z), the parabolic T generates the cyclic abelianization
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  In PSL2(Z), the
+  parabolic T generates the cyclic abelianization
   C6.  For every odd M prime to three, right multiplication by T^(2M)
   preserves the mod-two Farey state and the full level-M residue while
   generating the ternary C3 fibre.  At the live LRC levels M=lcm(49,91)=637,
@@ -32,8 +32,8 @@ hash_basis: LF-normalized bytes
 
 # THM-2641 -- the current residue skeleton cannot see the ternary lift
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**  THM-2632 leaves one tempting possibility: identify the Farey
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  THM-2632 leaves
+one tempting possibility: identify the Farey
 six-edge address `{L,R} x {three theta channels}` with the cyclic modular
 abelianization `C_6`.  This theorem proves that neither natural
 identification survives.  The failure persists after retaining all current
@@ -87,7 +87,10 @@ level-`M` state.  Equivalently,
 ker(Gamma -> PSL_2(Z/2M)) -> C_3                         (8)
 ```
 
-is surjective.  In particular, no finite tower whose odd modulus has only
+is surjective.  Indeed, reduction modulo two followed by the sign of
+`S_3=PSL_2(F_2)` is `chi mod 2`, so the kernel lands in the even `C_3`
+subgroup; the element `T^(2M)` maps to its generator.  In particular, no
+finite tower whose odd modulus has only
 the primes `7` and `13`, even after adjoining the mod-two Farey state,
 determines the ternary coordinate in (3).
 
@@ -99,7 +102,7 @@ M=lcm(49,91)=637,
 ```
 
 The exponent `1274=lcm(2,49,91)` is the least positive parabolic shear that
-is invisible at all three residue levels.  The positive unimodular flanks
+is invisible at all three residue levels.  The nonnegative unimodular flanks
 
 ```text
 T,                  T^1275,                  T^2549       (10)
