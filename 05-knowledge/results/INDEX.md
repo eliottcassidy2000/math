@@ -1,5 +1,12 @@
 # Script Results Index
 
+- `jc2_degree22_complete_support_three_hensel_thm2671.py` -> matching `.out`
+  [THM-2671 PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED].
+  One pinned pre-scale eliminant and the fixed degree-five root/degree-ten
+  unordered-pair fields close `BCE,BCW,BDE,BEW,CDE,CDW,CEW,DEW` by full-rank
+  terminal Hensel systems.  Together with THM-2617/2636 this empties all ten
+  support-three degree-twenty-two strata; the uniform `B!=0` and `B=0`
+  boundary quintics close `y=0`.  Hashes begin `6245dd4c` / `189cc0b8`.
 - `lrc14_successor_private_sharp_graph_clock_collapse.py`,
   `lrc14_guard_cospan_successor_private_clock_collapse.py`, and
   `lrc14_clock_graph_hamiltonian_audit.py` -> matching `.out` files
@@ -3080,3 +3087,4 @@ optimized runs byte-match the stored transcript.
 | `lrc14_odd_torsor_purity_return_gate_thm2644.out` | [VERIFIED-EXACT; THM-2644 AUDITED] | Sharp involution-energy floor `J >= R-(M^2-E)`, odd-group identity decoder, exact purity plus coprime `k`-return specialization, exhaustive odd/C13 controls, and signed/even/inverse-pair hostiles. Reverse Gram and same-orientation return require one common physical transition. | wild-holotopy-mining-2026-07-28 |
 | `lrc14_endpoint_anchored_two_point_deconvolution_thm2647.out` | [VERIFIED-EXACT; THM-2647 AUDITED] | Explicit odd-cycle inverse of `I+T_d`; all 6,084 C13 endpoint pairs recovered uniquely from multiplicity plus one labelled endpoint; exact `13 -> 2 -> 1` common-origin sidecar ladder; unique signed inverse has total variation `13/2`, with even-cycle, energy-only, positivity, and chronology hostiles. | wild-holotopy-mining-2026-07-28 |
 | `jc2_degree22_bcd_weighted_hensel_kummer_thm2636.out` | [VERIFIED-EXACT; THM-2636 AUDITED/CLOSED] | The 44-term BCD eliminant is monic quintic in `v`; degree-five root and degree-ten unordered-pair Hensel systems both have rank-four order-eleven obstruction matrices.  The retained base-field square `T^2=Z=rho^3 zeta/t^3` has five valuation-minus-three fixed places, forcing branch floor six and genus at least two; the separate `y=0` boundary is `-u Q4` with constant leading coefficient `2264031`. | jc-degree22/root-long-frontiers-2026-07-28 |
+| `jc2_degree22_complete_support_three_hensel_thm2671.out` | [VERIFIED-EXACT; THM-2671 AUDITED/CLOSED] | Root- and pair-field terminal Hensel ranks close the eight previously open triples; with THM-2617/2636 all ten support-three strata are empty.  Exact uniform `B!=0` and `B=0` boundary quintics have constant leading coefficients `-2264031` and `-22869`. | root-long-frontiers-2026-07-28 |

@@ -156,7 +156,7 @@
 60. **THM-2071 closes the quadratic-fiber locus, not JC(2).** It makes the
     reduced complement fiber-linear; THM-2084's cubic floor is also a source-
     fiber statement, not generic degree, Jelonek geometry, VC(4), or JC(2).
-61. **Spectral/factor-support walls are not JC(2).** THM-2202/2214/2217 leave split/even descent, other short edges, `JC(2)`, and `DC(2)` open.
+61. **Spectral/factor-support walls are not JC(2).** THM-2671 empties the degree-twenty-two support-three strata but leaves support four/five, split/even descent, integral raising, `JC(2)`, and `DC(2)` open.
 62. **Safe-torus mass is not primitive-line recurrence.** THM-2188/2193
     preserve Haar mass across opposite slopes, not a primitive recurrence.
 63. **Degree-four `D4` is excluded, but not by Smith.** THM-2633 gives `normal_closure_G(H)=G` and `1<=k_D<=d-1`, leaving only `A4,S4`; retain old `D4` ledgers as hostiles and never reuse MISTAKE-297's deck extension.

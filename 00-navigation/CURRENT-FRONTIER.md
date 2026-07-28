@@ -380,10 +380,9 @@ Classify profiles under support operations; study analytic continuation and auto
   audited THM-2406 closes its reduced wall. THM-2411 empties `A=0`.
   THM-2423/2425/2428 empty the axes; THM-2429/2437/2463/2468,
   THM-2469/2470/2472, THM-2475/2476, and THM-2480 empty all ten planes.
-  Audited THM-2617 closes `B,D,W!=0`, `C=E=0` by a degree-ten root-pair
-  field obstruction and square lift. Audited THM-2636 closes
-  `B,C,D!=0`, `E=W=0`: root/pair Hensel matrices have rank four, while
-  `T^2=Z=rho^3 zeta/t^3` has five odd places and a genus-at-least-two lift.
+  Audited THM-2671 combines THM-2617/2636 with eight new root/pair Hensel
+  rank obstructions and two uniform boundary quintics: all ten support-three
+  strata are empty, so any survivor has support four or five.
   Split/even edges and integral `2`-adic raising remain; THM-2206 blocks
   field-valued `C_2` Hasse repair. THM-2446 opens six-brackets; THM-2451 and
   extensions refute its cone shortcut. `JC(2)` and `DC(2)` remain open.
