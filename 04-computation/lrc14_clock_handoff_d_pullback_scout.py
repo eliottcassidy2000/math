@@ -12,10 +12,10 @@ form ``B'(13x) 1_Q'(13y)``.  Both products are resolved exactly on the
 denominator ``13*T`` grid.  The existing prefix sweep then decides the
 intersection without expanding the 13^6 inverse images.
 
-This is deliberately a scout, not a theorem companion.  Its first target is
-the clock/source pair with the largest formal two-edge chain count in each
-guard sector.  It checks which of those formal chains are genuine physical
-intersections and records the surviving atom labels.
+The script checks the richest two-edge clock/source cell in each guard
+sector, exhausts the entire danger/danger bank, and resolves all four cospan
+legs in the canonical positive cell.  It records a raw labelled atom witness
+rather than inferring positivity from a Boolean matrix product.
 """
 
 from collections import Counter, defaultdict
@@ -32,6 +32,48 @@ T = old.T
 T2 = P * T
 R = P**6
 INV2 = 7
+
+EXPECTED_EVENT_SUMMARIES = {
+    "safe": (6_855, 1_797_403, 407),
+    "danger": (1_536, 385_929, 407),
+    "guard_free": (7_679, 2_001_882, 407),
+}
+EXPECTED_RICHEST = {
+    "safe": ((3, 1, 0, 1, 1), 36, 20, 2, 14),
+    "danger": ((0, 1, 0, 1, 1), 2, 0, 2, 0),
+    "guard_free": ((3, 1, 0, 1, 1), 43, 25, 7, 11),
+}
+EXPECTED_FIRST_WITNESSES = {
+    "safe": (
+        (5, 2, 6),
+        166_706_319_780,
+        (2, 12, 0, 0),
+        (0, 12, 1, 1),
+        126_816_337_986_097_204_341_478_787_325_120,
+        23,
+    ),
+    "guard_free": (
+        (12, 1, 9),
+        260_931_630_960,
+        (2, 12, 0, 0),
+        (0, 12, 0, 1),
+        198_496_045_051_817_934_627_393_332_745_600,
+        12,
+    ),
+}
+EXPECTED_COSPAN_HISTS = {
+    ("safe", "safe"): Counter({(36, 20): 132, (0, 0): 12}),
+    ("safe", "danger"): Counter({(5, 2): 132, (0, 0): 12}),
+    ("danger", "safe"): Counter({(10, 3): 121, (6, 3): 11,
+                                    (0, 0): 12}),
+    ("danger", "danger"): Counter({(2, 0): 121, (0, 0): 23}),
+}
+EXPECTED_COSPAN_SUPPORT_SIZES = {
+    ("safe", "safe"): 20,
+    ("safe", "danger"): 2,
+    ("danger", "safe"): 3,
+    ("danger", "danger"): 0,
+}
 
 
 def require(condition, message):
@@ -478,13 +520,18 @@ def main():
     print("THM-2670 physical D-pullback first scout")
     print(f"T={T} T2={T2} R={R}")
     print(f"positive_occurrences={tuple(sorted(positive_occurrences.items()))}")
+    richest_rows = {}
     for sector in guard.SECTORS:
         index = build_edge_index(events, sector)
         interval_counts = tuple(map(len, events[sector].values()))
+        summary = (
+            len(events[sector]), sum(interval_counts), max(interval_counts)
+        )
+        require(summary == EXPECTED_EVENT_SUMMARIES[sector],
+                f"{sector} event support summary changed")
         print(
-            f"sector={sector} event_keys={len(events[sector])} "
-            f"event_intervals_total={sum(interval_counts)} "
-            f"event_intervals_max={max(interval_counts)}"
+            f"sector={sector} event_summary="
+            f"(keys,total_intervals,max_intervals){summary}"
         )
         (a, b, c, source0, source1, chains), histogram = (
             richest_formal_cell(index)
@@ -501,32 +548,17 @@ def main():
                 base_zeros += 1
             else:
                 delayed_zeros += 1
-        print(
-            f"sector={sector} richest=(a,b,c,s0,s1)="
-            f"{(a,b,c,source0,source1)} formal={len(chains)} "
-            f"physical={len(positive)} base_zero={base_zeros} "
-            f"delayed_or_skew_zero={delayed_zeros}"
+        richest = (
+            (a, b, c, source0, source1), len(chains), len(positive),
+            base_zeros, delayed_zeros,
         )
-        print(
-            f"sector={sector} formal_chain_hist="
-            f"{tuple(sorted(histogram.items()))}"
-        )
-        print(
-            f"sector={sector} physical_state_chains="
-            f"{tuple(item[0] for item in positive)}"
-        )
-        # Every surviving union event has a finite labelled decomposition.
-        # Record the available source-side atom labels for later component
-        # refinement, without pretending that all pairs overlap.
-        used_keys = {
-            key for chain, *_ in positive
-            for key in (chains[[c[:3] for c in chains].index(chain)][3],
-                        chains[[c[:3] for c in chains].index(chain)][4])
-        }
-        print(
-            f"sector={sector} surviving_event_atom_counts="
-            f"{tuple(sorted((key, len(labels[sector][key])) for key in used_keys))}"
-        )
+        require(richest == EXPECTED_RICHEST[sector],
+                f"{sector} richest physical cell changed")
+        require(sum(count * multiplicity
+                    for count, multiplicity in histogram.items()) > 0,
+                f"{sector} formal atlas unexpectedly empty")
+        richest_rows[sector] = richest
+        print(f"sector={sector} richest={richest}")
         if positive:
             state = positive[0][0]
             selected = next(chain for chain in chains if chain[:3] == state)
@@ -535,16 +567,24 @@ def main():
             )
             require(witnesses,
                     "displayed physical chain has no labelled atom witness")
-            print(
-                f"sector={sector} first_atom_witness="
-                f"{(state, positive[0][1], witnesses[0])}"
+            displayed = (
+                state, positive[0][1], witnesses[0][0], witnesses[0][1],
+                witnesses[0][2], witnesses[0][3],
             )
+            require(displayed == EXPECTED_FIRST_WITNESSES[sector],
+                    f"{sector} first labelled witness changed")
+            print(f"sector={sector} first_atom_witness={displayed}")
     danger_totals, danger_states, danger_witness = exhaustive_sector_census(
         prefixes, events, occurrences, "danger"
     )
     print(f"danger_exhaustive_totals={tuple(sorted(danger_totals.items()))}")
     print(f"danger_exhaustive_state_support={danger_states}")
     print(f"danger_exhaustive_first_witness={danger_witness}")
+    require(danger_totals == Counter({"formal": 27_640,
+                                      "base_zero": 27_640}),
+            "danger/danger exhaustive zero atlas changed")
+    require(not danger_states and danger_witness is None,
+            "danger/danger acquired a physical state")
     for sector0, sector1 in (
         ("safe", "safe"),
         ("safe", "danger"),
@@ -554,13 +594,27 @@ def main():
         histogram, zero_sources, support, witness = fixed_cell_cross_census(
             prefixes, events, occurrences, sector0, sector1
         )
+        leg = (sector0, sector1)
+        require(histogram == EXPECTED_COSPAN_HISTS[leg],
+                f"{leg} source histogram changed")
+        require(len(support) == EXPECTED_COSPAN_SUPPORT_SIZES[leg],
+                f"{leg} state support changed")
+        if leg != ("danger", "danger"):
+            require(zero_sources == tuple((source0, 6)
+                                          for source0 in range(1, P)),
+                    f"{leg} inactive source column changed")
+            require(witness is not None, f"{leg} lost its atom witness")
+        else:
+            require(len(zero_sources) == 144 and witness is None,
+                    "danger/danger zero-source atlas changed")
         print(
             f"fixed_cell_310_legs={sector0}->{sector1} "
             f"source_hist={tuple(sorted(histogram.items()))} "
-            f"zero_source_pairs={zero_sources} "
+            f"zero_source_count={len(zero_sources)} "
             f"state_support_size={len(support)} witness={witness}"
         )
-    print("verdict=SCOUT: positive atomwise D-pullback exists; cospan and iteration remain open")
+    print("verdict=PASS: positive atomwise D-pullback exists; danger-square is physically zero")
+    print("scope=two-edge cospan; global safe atlas and three-edge chronology audited separately")
 
 
 if __name__ == "__main__":

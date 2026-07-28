@@ -1,0 +1,20 @@
+THM-2670 physical D-pullback first scout
+T=297836897838480 T2=3871879671900240 R=4826809
+positive_occurrences=(('danger', 1636), ('guard_free', 8360), ('safe', 7436))
+sector=safe event_summary=(keys,total_intervals,max_intervals)(6855, 1797403, 407)
+sector=safe richest=((3, 1, 0, 1, 1), 36, 20, 2, 14)
+sector=safe first_atom_witness=((5, 2, 6), 166706319780, (2, 12, 0, 0), (0, 12, 1, 1), 126816337986097204341478787325120, 23)
+sector=danger event_summary=(keys,total_intervals,max_intervals)(1536, 385929, 407)
+sector=danger richest=((0, 1, 0, 1, 1), 2, 0, 2, 0)
+sector=guard_free event_summary=(keys,total_intervals,max_intervals)(7679, 2001882, 407)
+sector=guard_free richest=((3, 1, 0, 1, 1), 43, 25, 7, 11)
+sector=guard_free first_atom_witness=((12, 1, 9), 260931630960, (2, 12, 0, 0), (0, 12, 0, 1), 198496045051817934627393332745600, 12)
+danger_exhaustive_totals=(('base_zero', 27640), ('formal', 27640))
+danger_exhaustive_state_support=()
+danger_exhaustive_first_witness=None
+fixed_cell_310_legs=safe->safe source_hist=(((0, 0), 12), ((36, 20), 132)) zero_source_count=12 state_support_size=20 witness=((1, 1), (5, 2, 6), ((2, 12, 0, 0), (0, 12, 1, 1), 126816337986097204341478787325120, 23))
+fixed_cell_310_legs=safe->danger source_hist=(((0, 0), 12), ((5, 2), 132)) zero_source_count=12 state_support_size=2 witness=((1, 1), (10, 5, 1), ((2, 12, 0, 0), (0, 12, 1, 0), 143357288616483640743079892656800, 26))
+fixed_cell_310_legs=danger->safe source_hist=(((0, 0), 12), ((6, 3), 11), ((10, 3), 121)) zero_source_count=12 state_support_size=3 witness=((1, 1), (12, 1, 9), ((2, 12, 0, 0), (0, 12, 0, 1), 198496045051817934627393332745600, 12))
+fixed_cell_310_legs=danger->danger source_hist=(((0, 0), 23), ((2, 0), 121)) zero_source_count=144 state_support_size=0 witness=None
+verdict=PASS: positive atomwise D-pullback exists; danger-square is physically zero
+scope=two-edge cospan; global safe atlas and three-edge chronology audited separately

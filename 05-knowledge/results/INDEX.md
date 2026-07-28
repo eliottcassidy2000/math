@@ -73,6 +73,17 @@
   Macaulay map.  Both factor fields are uniform.  Only full support remains
   in the inherited genuine nonsplit degree-twenty-two branch.  Hashes begin
   `6f463672` / `3efbadaf`.
+- `lrc14_clock_handoff_d_pullback_scout.py` -> matching `.out`
+  [THM-2680 PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT + INDEPENDENTLY
+  AUDITED; REFEREE EVIDENCE ATTACHMENT IN PROGRESS].  The exact `13T`-grid
+  pullback proves positive atomwise `D(x)={13x}` two-edge fibres, resolves
+  the richest guard cospan into physical state supports `20,2,3,0`, and
+  exhausts all 27,640 formal danger/danger chains as base-support zeros.
+  The independent global atlas has 17,160 safe/safe, 4,488 safe/danger,
+  3,696 danger/safe, and zero danger/danger labelled rows on the same ten
+  clock triples; those triples cannot concatenate, so the full physical
+  three-edge chronology is empty.  Primary hashes begin `18705509` /
+  `75e1733b`.
 - `lrc14_dilation_canonical_unit_atlas_no_go_20260728.py` -> matching `.out`
   [VERIFIED-EXACT SCOUT; THM-2680 INPUT; NOT A PHYSICAL FIBRE PRODUCT].
   Under only the numerical dilation handoff `j'=h`, the state-independent

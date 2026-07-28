@@ -125,22 +125,15 @@ unrestricted nonlinear charts attain thirteen edges via a binary four-cycle
 a forced midpoint; dropping individual reflection permits edge-disjointness.
 Audited THM-2670 retains the predecessor state: 92 generic Hamilton cycles
 exist, but constant-step products hit zero, no positive edge is equivariant,
-and disjoint clock strata do not glue.  Audited THM-2658 gives the exact
-holotopy test after component refinement: a common positive simplex is the
-same as a complete triangle-balanced integer-gain section, and its component
-mass is the least selected pair overlap.  THM-2680 types the canonical
-`D(x)={13x}` handoff: genuine two-event fibres exist, but only `10/252`
-generic clock triples survive versus `146` positive formal products, and a
-formal-positive all-source hostile is physically empty.  THM-2682 first closes
-the arrival-six iterate and classifies all `p=2q-1` same-arrival clock returns.
-THM-2684 then identifies the full inherited rail bank with the three-tooth
-envelope `[0,1/28) union [13/28,15/28) union [27/28,1)`: dilation has identity
-arrival adjacency, and every positive raw three-return cylinder lies on a
-forbidden clock diagonal.  Thus every clock-legal three-event `D`-chain in the
-complete THM-2584 parent bank is empty, including both endpoint candidates.
-Downstream units, rainbows, endpoints, and carries cannot repair it.  A new
-chronology must change the parent carrier, handoff, boundary semantics, or
-nonzero-step grammar; the independent AP/phase/rank routes remain live. Ledger `165`.
+and disjoint clock strata do not glue.  THM-2680's exact `D(x)={13x}` cospan
+has positive legs `17,160,4,488,3,696,0`, totaling `25,344`; its Fibonacci
+sector quotient is not path-lifting.  THM-2682 kills every third event at
+central arrival, and THM-2684 extends the clock-diagonal no-go to the full
+three-tooth THM-2584 rail bank, including both endpoints.  THM-2658 says a
+true refined simplex instead needs a complete balanced gain section.
+Decorations cannot repair empty support: a new chronology must change parent
+carrier, handoff, configuration, boundary semantics, or edge grammar.  The
+independent AP/phase/rank routes remain live. Ledger `165`.
 
 ### Independent routes that remain live
 
