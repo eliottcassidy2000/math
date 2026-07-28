@@ -11,11 +11,10 @@ Status: **PROVED** in-repo proof; **CITED** scoped import; **FINITE-EXACT** exha
 settles at most 13 total runners.  The residue is not a routine finite scan.
 
 THM-2051/2052 reduce a counterexample to a support-`3..5`, height-`2^20`
-relation and then a bounded sparse code of rank at least eleven.  Rank twelve
-is a finite maximal-minor box; rank eleven is a two-anchor star retaining
-deck, owner, clock, phase, endpoint, and THM-2053/2055/2056/2058/2059's
-gate/Farey/CRT sidecars.  The last clock, pair-sum, Fejer, Euler, or rank
-discharge is open; failed sufficient gates are **uncertified**, not unsafe.
+relation and a bounded sparse code of rank at least eleven.  Rank twelve is
+a finite maximal-minor box; rank eleven is a two-anchor star retaining the
+deck/owner/clock/phase/endpoint sidecars.  The final discharge is open;
+failed sufficient gates are **uncertified**, not unsafe.
 
 ### Proved reductions and terminals
 
@@ -26,8 +25,8 @@ discharge is open; failed sufficient gates are **uncertified**, not unsafe.
   recorded margins at `H=2^19`, subject to MISTAKE-080/082's shape-specific
   tori.  THM-1252--1274 saturate six-comb arguments, leaving endpoint/child
   transport as the live move.
-  Routed nodes: THM-2081, THM-2082, THM-2083, THM-2085/2087, THM-2085,
-  THM-2086, THM-2088, THM-2089, THM-2090, THM-2092.
+  Routes: THM-2081, THM-2082, THM-2083, THM-2085/2087, THM-2085, THM-2086,
+  THM-2088, THM-2089, THM-2090, THM-2092.
 
 ### Exact live obligation
 
@@ -36,11 +35,10 @@ THM-2417/2426/2436 close the other
 valuation lane; THM-2440--2539 close supplied-root seams but not semantic-root
 identification (kernel `28,393`).  THM-2545/2549 give Hall and chronology gates,
 still old-target neutral; THM-2547 is only an external control after
-MISTAKE-281.  THM-2551--2688 recover determinant, carries, private roots and
-quotient sidecars but no transverse physical gluing (Radon recovery is
-refuted by MISTAKE-300).  THM-2680--2712 make inherited word/chronology
-nilpotent by six; THM-2721's positive `C3` corolla is current-zero and misses
-all `1134` formal successor placements.
+MISTAKE-281.  THM-2551--2712 recover determinant/carry/root/quotient sidecars
+and six-step nilpotence, but no transverse physical gluing (MISTAKE-300).
+THM-2721's positive `C3` corolla is current-zero and misses all `1134`
+placements.
 
 THM-2720/2742 restore the missing target (`936/1183` sections and every
 primitive character); MISTAKE-310 preserves the half-tooth overlap.  The
@@ -55,12 +53,11 @@ and `G/26` is only an `F_13` unit.  Its all-label direct-target and terminal
 checks give no physical wing map.  The lawful one-sided endpoint bank has
 gain `11`; the older rank-three table is clock-blind.
 
-THM-2754's two-clock carrier has
-`B_(e,j)=a_e 1_(j!=0)` on all `3969` cells.  The full wing chamber is a
-`7 x 7` source rectangle feeding an everywhere-unit target: its `49` unit
-pairs have four multipliers and gains `0:10,2:19,11:20`, with all `168` label
-modes alive, but no carrier action.  THM-2750 blocks arm-blind charging and
-THM-2757's marked `K4` transgression still lacks a physical carrier.
+THM-2754's two-clock carrier has `B_(e,j)=a_e 1_(j!=0)` on all `3969` cells.
+Its `7 x 7` unit-pair chamber has four multipliers, gains
+`0:10,2:19,11:20`, and all `168` label modes, but no carrier action.
+THM-2750 blocks arm-blind charging; THM-2757's marked `K4` transgression
+still lacks a physical carrier.
 
 THM-2763's `(r,k,l)` address has size `13^4` (`13^3` after loss), not
 THM-2625's endpoint plane or factor allocation.  THM-2779's abstract
@@ -83,9 +80,9 @@ amplitude or filtered root/Cech lift.  Ledger `165`; no row is excluded.
 - **Orthogonal routes.** THM-1017's AP-core extraction remains HYP-6820;
   THM-2047/2050 retain phase/first exit; THM-731/2048 saturate six-comb
   pruning; THM-1290 is exact only through speed `55`; HYP-8900 is not uniform.
-- **Foreign-base phase.** The FINITE-EXACT `C_221` stalk carries a typed
-  two-cycle at `4/17 <-> 13/17`, but its centres are not exclusive sources and
-  no lawful scalar return or semantic endpoint current is known.
+- **Foreign-base phase.** The FINITE-EXACT `C_221` stalk has a typed
+  `4/17 <-> 13/17` two-cycle, but no exclusive source, lawful return, or
+  semantic endpoint current.
 - **Artanh/Gibbs.** THM-2143's criterion is exact, but current fugacities fail
   defect-seven hostiles and signed log-Riesz shortcuts are unsound.
 
@@ -96,8 +93,8 @@ amplitude or filtered root/Cech lift.  Ledger `165`; no row is excluded.
 - THM-2058 preserves every prescribed finite lift depth while escaping at
   `47/113`; raw jets, bad Farey rays, and fixed lift depth are not certificates.
 - Determinant polygons are basis-dependent; analogy does not prove LRC.
-- Test columns, gaps, clocks, residues, wall events, endpoints, circuits, and
-  proof obligations as vertices; record each quotient's lost sidecar.
+- Test gaps, clocks, residues, endpoints, circuits and proof obligations;
+  record every quotient loss.
 
 ## NC2 and Gaussian moments
 
@@ -156,6 +153,11 @@ and Lucas--Frobenius leaves `Q^p`: **whole-layer preservation**, not atoms.
   has `k+1` channels at level `k*ell`, yet its first two return polynomials
   generate a nonzero torus monomial by an explicit negative-determinant Bezout
   identity.  This is nonlinear ideal elimination, not a raw-moment decoder.
+- THM-2810/2815 give the finite-state boundary: no bounded factorial carrier;
+  at height `2D-1` the unique optimum is the `D`-dimensional Laguerre quotient,
+  but selectors need MISTAKE-211's missing multiplier observations.
+- THM-2812 closes consecutive three-slot envelopes in three powers and their
+  two-charge lifts sharply by moment six; arbitrary supports/channels remain open.
 ### Live work
 
 Publish THM-2022; sharpen THM-2111's binomial degree toward `M+N`; formalize

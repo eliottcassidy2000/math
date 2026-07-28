@@ -2,8 +2,8 @@
 id: THM-2815
 title: "Optimal finite Laguerre carrier and radial-selector access boundary"
 status: >
-  RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING
-  INDEPENDENT HOSTILE AUDIT.  The monic Laguerre quotient of dimension D
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The monic
+  Laguerre quotient of dimension D
   represents L(s^n)=n! exactly through degree 2D-1 and is the unique optimal
   s-generated multiplicative carrier at that horizon.  Its first alias is
   ell_D^2, with L(ell_D^2)=(D!)^2.  The inverse factorial-Hankel matrix gives
@@ -11,6 +11,9 @@ status: >
   not provide the required multiplier observations.  This is not arbitrary
   Wick-channel separation, HYP-8765, or a new GMC proof.
 source: root/optimal-finite-laguerre-carrier-2026-07-28
+audit: root/audit-2809-2026-07-28 (independent finite-difference,
+  quotient-horizon, optimality, uniqueness, selector, hostile,
+  normal/-O/stored/hash and docs audit: ACCEPT)
 depends_on: []
 related:
   - THM-1620-the-pochhammer-bridge-toral-legendre-radial-hermite
@@ -27,8 +30,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2815 -- the unique optimal finite factorial carrier is Laguerre
 
-**RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING
-INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2810 proves that no fixed finite-dimensional carrier can represent the
 whole factorial tower in characteristic zero.  This theorem identifies the
@@ -102,10 +104,8 @@ with readout equal to `L` on the unique representative of degree below `D`
 is an exact `D`-dimensional multiplicative carrier for every factorial
 moment through degree `2D-1`.
 
-Over any splitting field, `(9)` may equivalently be diagonalized into the
-usual finite Laguerre node evaluation.  The rational quotient `(9)` and
-identity `(8)`, not positivity or simplicity of those nodes, are the
-proved mechanism used here.
+The rational quotient `(9)` and identity `(8)` are the proved mechanism used
+here; no node-splitting, positivity, or simplicity claim is needed.
 
 ## 3. The first failure is exact
 
@@ -277,4 +277,4 @@ truth-bearing Python assertions, no floating point, and no scratch
 dependency.  The universal statements are proved above rather than inferred
 from these finite controls.
 
-**Awaiting independent hostile audit; not QED.**
+**QED.**

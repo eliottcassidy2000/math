@@ -2,8 +2,8 @@
 id: THM-2812
 title: "Consecutive three-slot factorial moment and Gaussian moment-six detection"
 status: >
-  RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING
-  INDEPENDENT HOSTILE AUDIT.  For L(s^k)=k!, every nonzero
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For L(s^k)=k!,
+  every nonzero
   H=s^n(x+ys+zs^2), n>=0, has a nonzero power moment among j=1,2,3.
   For n>=1 its polynomial two-charge lift has a nonzero Gaussian moment
   of order at most six, and an exact full-support witness first dies at
@@ -11,6 +11,8 @@ status: >
   three-slot two-charge envelopes only; arbitrary three-slot supports,
   arbitrary Wick channels, and the full effective conjecture remain open.
 source: root/consecutive-three-slot-factorial-detection-2026-07-28
+audit: root/audit-2809-2026-07-28 (independent elimination, boundary,
+  Wick-typing, sharp-witness, normal/-O/stored/hash and docs audit: ACCEPT)
 depends_on: []
 related:
   - THM-1790-the-emp-floor-detection-depth-at-least-degree-plus-one
@@ -27,8 +29,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2812 -- consecutive three-slot radial support closes at moment three
 
-**RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING
-INDEPENDENT HOSTILE AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2173 proves the sharp lower side: every prescribed three-dimensional
 radial envelope contains a full-support polynomial whose first two factorial
@@ -190,7 +191,8 @@ Thus three powers are necessary uniformly, not merely sufficient.
 
 ## 6. Two-charge Gaussian lift
 
-Assume `n>=1`, put `s=ZW`, and define the polynomial
+Assume `n>=1`; let `Z` be a standard complex Gaussian, put `W=conj(Z)` and
+`s=ZW`, and define the polynomial
 
 ```text
 h=s^(n-1)(x+y s+z s^2),
@@ -262,4 +264,4 @@ boundary through `n=200` as a hostile control in addition to the proof
 in `Q(sqrt(-3))`.  It has explicit exception gates, no truth-bearing Python
 assertions, no floating point, and no scratch dependency.
 
-**Awaiting independent hostile audit; not QED.**
+**QED.**
