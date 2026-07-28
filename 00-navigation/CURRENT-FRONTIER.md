@@ -69,13 +69,16 @@ THM-2680--2694 separate positive local legs, vertical slope length, and genuine
 chronology: every integral decoration induces the same delayed map, whose old
 word dies.  THM-2697 formalizes the affine germ/root filtration and this
 kernel no-go.  THM-2698 changes the base signature by a central half-turn and
-gets a strict full two-cycle, but its parity-forgotten `D^2` endpoint loop has
-no allowed `D` midpoint.  THM-2701 independently proves the literal semantic
-word sharply nilpotent at six.  THM-2707 exhausts the physical lift fibre:
-`3346` packets share one interval and form a complete eleven-partite SCC with
-closed words and trivial bare translation holonomy, but the following atom
-fails.  The residual is semantic filter/amplitude restoration, not more
-endpoint recurrence.  Ledger `165`.
+gets a strict full two-cycle.  THM-2706 identifies the exact fixed-grading
+defect `R1*R1 < R2`: its physical `D^2` macro cycle has a minimal ghost
+midpoint completion and thousands of strict pre-word/all-safe split lifts,
+but the inherited word is empty and the integral debt is `E -> 2G`.
+THM-2701/2710 prove both ordinary and half-shifted literal semantic languages
+nilpotent by six, so this recurrent ghost cannot be terminalized unchanged.
+THM-2707 separately gives `3346` common-cylinder packets and a complete
+eleven-partite lift SCC, but its following atom fails.  The residual is a new
+coloured transit/private-row grammar or semantic filter/amplitude restoration,
+not more endpoint recurrence.  Ledger `165`.
 
 ### Independent routes that remain live
 
