@@ -9,6 +9,28 @@ Format per entry:
 - Why it was wrong
 - The correct framing
 
+## MISTAKE-317 (2026-07-28, provisional THM-2827 all-pole extrapolation) -- a unique Newton face need not miss the prescribed response valuation
+
+- **What was assumed:** after the `nu=3` and `nu=4` local Faber obstructions,
+  the same polar/pure/regular trichotomy was claimed provisionally for every
+  `nu=ord(V)>=3`.  In the pure-`q` cone, exact controls verified that the
+  `Phi/H/Psi` top face is unique and strictly below every retained lower row.
+- **First failed implication / minimal resonance:** for `R=3k+2`, put
+  `delta=nu-2a>0`.  The unique `H` face has valuation `-2k delta`, while
+  `K=TH` prescribes `v(H)=nu+1-3a=1-a+delta`.  These are equal exactly when
+  `a=1+(2k+1)delta`, equivalently
+  `nu=2+(4k+3)delta`.  The first relevant ray is
+  `R=8,k=2,nu=13,a=6,delta=1` (with `b>=7`).  Face uniqueness prevents
+  coefficient cancellation but does not contradict an equal required
+  valuation.
+- **Repair / strongest survivor:** no false proved theorem was promoted.
+  The pushed empty THM-2827 reservation was immediately narrowed and is being
+  rebuilt as a nonresonance atlas: all `R!=2 mod 3` pole orders and all
+  off-ray `R=3k+2` pole orders remain candidates for the uniform argument;
+  `nu=4` is unconditionally off every ray.  Any resonant closure must use
+  the leading coefficient in `A_src K=lambda M` or a later response, not
+  pure-face valuation alone.
+
 ## MISTAKE-316 (2026-07-28, provisional THM-2784 passport wording) -- a distinguished degree-one cycle is not nontrivial inertia
 
 - **What was written:** the balanced square-potential passport was described
