@@ -57,23 +57,23 @@ Its `7 x 7` unit-pair chamber has four multipliers, gains
 THM-2750 blocks arm-blind charging; THM-2757's marked `K4` transgression
 still lacks a physical carrier.
 
-THM-2763's `(r,k,l)` address has size `13^4` (`13^3` after loss), not
-THM-2625's endpoint plane or factor allocation.  THM-2779's abstract
-Heisenberg center has sharp faithful degree `169`; a literal `13`-root action
-kills it.  THM-2782 has three positive physical arms, but all `567` opposite
-cofibres are disjoint and its surviving determinant sector is virtual.
-THM-2788 separates the physical modular odometer by its carry Bockstein;
-`+169` is `Z2`.  THM-2790 makes every canonical endpoint central response and
-mode nonzero, but only on the coefficient quotient.  THM-2792/2802 close
-abstract coefficient transport/origin.  THM-2803 makes thirteen profiles
-projective `13`-arcs; each pair is `[13,2,12]` MDS, excluding
-scalar-translation transport.  THM-2791/2807 give ancestry homotopy.
-THM-2806's raw point is flat and `D3=144w` bare-only.  Its audited tau-twelve
-addendum has `M=empty`; the separate common/right bank agrees on
-nonemptiness `567/567` but overlaps `0/567`.  THM-2813 decodes address flags
-conditionally; Rees `D3` is not its jet.  THM-2814 classifies contrast versus
-holonomy; THM-2818 proves positive-copy multipliers.  Next: typed off-sheet
-common atom.  Ledger `165`; no row is excluded.
+THM-2763's address has size `13^4` (`13^3` after loss), not THM-2625's
+endpoint plane.  THM-2779's Heisenberg center needs degree `169`; a literal
+`13`-root action kills it.  THM-2782's three positive arms have `567/567`
+disjoint opposite cofibres.  THM-2788--2803 close coefficient
+odometer/transport/origin/projective response, not physical gluing;
+THM-2791/2807 give ancestry homotopy.
+
+THM-2806's flat raw point has bare-only `D3=144w`; its tau-twelve common
+carrier is empty.  THM-2813's conditional address jet is not Rees `D3`;
+THM-2814 separates contrast from holonomy, THM-2818 proves positive-copy
+multipliers, and THM-2819 proves the sharp marked target eleven-face.
+THM-2820 proves Boolean tangent rigidity, the regular joint-absent Hasse
+torsor, and exact successor commutator: target-only is transverse, common
+rechart is gauge.  In its selected cell `q=3` keeps the section and `q=11`
+the endpoint edge, but neighboring `q=11` cells retain both endpoint origins
+and all six factors.  Carrier/ancestry/address retyping under semantic
+reselection is the live positive test.  Ledger `165`; no row is excluded.
 
 ### Independent routes that remain live
 
