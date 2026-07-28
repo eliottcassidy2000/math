@@ -2,8 +2,8 @@
 id: THM-2704
 title: "Split even-Faber prime-23 generic normalization genus eighty-nine"
 status: >
-  RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT, AWAITING INDEPENDENT
-  HOSTILE AUDIT. On the nonzero-lambda split even-Faber degree-twenty-two
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED. On the
+  nonzero-lambda split even-Faber degree-twenty-two
   subchart, with all eleven odd Faber seeds set to zero, the all-one
   prime-23 curve is geometrically integral and its normalization has genus
   89. The same holds on a nonempty Zariski-open parameter locus. The fixed
@@ -11,6 +11,7 @@ status: >
   has twenty-three simple poles. This is not uniform in all parameters, not
   the full split branch, and not JC(2).
 source: jc2655-referee-2026-07-28-prime23-geometry
+audit: thm2704-hostile-audit-2026-07-28 (independent proof audit; normal/-O/hash replay)
 depends_on:
   - THM-2411-degree-twenty-two-first-flux-pole-divisor-square-class-reduction
   - THM-2636-degree-twenty-two-BCD-triple-spectral-square-Kummer-closure
@@ -27,8 +28,8 @@ hash_basis: working-tree bytes (LF)
 
 # THM-2704 -- the split even-Faber prime-23 curve has generic genus 89
 
-**RESERVED / PROOF-COMPLETE CANDIDATE UNDER AUDIT.** Nothing in this file is
-yet a proved dependency.  The scope is the nonzero-`lambda` split
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**  The scope is
+the nonzero-`lambda` split
 **even-Faber** subchart only: the eleven allowed odd seeds
 `E1,E3,...,E21` are set to zero.
 
@@ -154,6 +155,12 @@ one exact factor over `Q`.  Its `zeta`-subresultant degrees are
 The penultimate member is linear and its coefficients have `v`-degree at
 most `11<23`; they cannot both vanish generically on `(R)`.  Hence the common
 `zeta` root has degree one over `Q(R)`, so (10) is birational to (1).
+The resultant occurs to exponent one.  Thus it also cannot conceal a second
+affine curve component: a component with one-dimensional `(t,v)` image would
+contribute another resultant factor, while a component with zero-dimensional
+image is impossible because the coefficient of `zeta^2` in `f2` is the
+nonzero constant `15944049`.  The exact finite infinity fibre below excludes
+a component contained in `h=0`.
 
 Irreducibility over `Q(t)` makes arithmetic monodromy transitive on the prime
 number `23` of sheets.  The normal geometric monodromy group has equal block
@@ -192,12 +199,18 @@ Res_t(A,B)=unit*q^5*(99q^4-640)*Q69(q),              (14)
 where `Q69` is irreducible and squarefree.  Four resultants coprime to `Q69`
 certify that each of its roots has two distinct finite `v` preimages, a
 transverse `(A,B)` collision, and nonzero plane Hessian.  Hence they are
-sixty-nine ordinary nodes.  Completeness is the exact identity
+sixty-nine ordinary nodes.  The `t`-leading coefficients of `A` and `B` have
+`q`-degree at most `9<69`; their shared factor is `99q^4-640`, while both are
+coprime to `Q69`.  Thus the quartic in (14) is the `t=infinity` collision and
+every `Q69` collision is finite.  Completeness is the exact identity
 
 ```text
 gcd(Res_t(F,F_t),Res_t(F,F_q))=unit*q^30*Q69^2.       (15)
 ```
 
+Every known ordinary node contributes at least order two to both local
+resultant factors.  Thus the exact exponent `Q69^2` in (15) leaves no room
+even for an additional singular point sharing one of the same `q`-values.
 The `q=0` factor and the quartic in (14) belong to the already squarefree
 toric boundary, so no other torus or boundary singularity remains.  The
 all-one normalization therefore has
