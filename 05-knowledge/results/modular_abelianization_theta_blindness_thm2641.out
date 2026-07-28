@@ -1,0 +1,10 @@
+THM-2641 MODULAR CONNECTOR EXACT REFEREE
+free_factors=S_order2,C_order3 T_class=+-1_in_C6
+invisibility_level M=637 step=1274 residues=(2,49,91)
+positive_parent_exponents=(1, 1275, 2549) chi_C6=(1, 3, 5)
+general_odd_M_not3_checks=83 ternary_kernel=surjective
+theta_conjugates=(((1, 1), (0, 1)), ((1, 0), (-1, 1)), ((2, 1), (-1, 0)))
+theta_fixed_directions=((1, 0), (0, 1), (1, 1)) common_abelian_class=+-1
+spectral_moduli post91=546 full637=3822 C3_only=(273,1911)
+boolean_hostile_mod91_classes=91 C6_support={0} max_frequency=1086
+ALL CHECKS PASSED
