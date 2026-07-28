@@ -328,6 +328,14 @@ kernel, two-clock edge, and consecutive window.  It checks every numerical
 claim with explicit optimized-mode guards.  Normal and optimized executions
 must byte-match the stored transcript after LF normalization.
 
+An independent immutable audit rebuilt the typed matrices from the proved
+unit rails, rechecked the global content, strict row positivity, exact
+cyclotomic criterion, all rational ranks and kernels, all `252` pair ranks,
+the consecutive-window census, and both directions of the private-row lemma.
+It also verified that the `ell_4` strata are physically disjoint and that
+Section 6 is purely conditional.  Normal and optimized runs byte-match the
+stored output, with the declared LF-normalized hashes.
+
 The theorem concerns the one canonical typed row and the collapsed integer
 matrices (2).  It does not assign unitness to a hidden sheet, retain one old
 root across clocks, build a principal `C_13` action, identify THM-2613's local
