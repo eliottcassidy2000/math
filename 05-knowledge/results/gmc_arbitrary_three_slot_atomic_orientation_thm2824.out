@@ -1,0 +1,10 @@
+THM-2824 ARBITRARY THREE-SLOT FACTORIAL ATOMIC ORIENTATION
+scan_max_c=50; support_triples=20825; atomic_triples=20825
+gram_positive=all; t111_positive=all; ratio_proof_checks=20825; wronskian_checks=20825
+divisibility_identity_checks=20825; atomic_telescoping_checks=20825
+atomic_nonnegative=20825/20825; atomic_positive=20776; atomic_zero=49
+atomic_zero_boundary=(i,b,c)=(j,j+1,j+2); j=0..48
+smallest_positive_atomic=288; index=(0, 2, 3)
+I1_negative=20825/20825; I2_negative=20825/20825; D_total_zero=49
+scope=finite exact evidence only for universal atomic D_i>=0; the quadratic/cubic divisibility reduction, t111 orientation, Wronskian formula, and conditional implication are exact
+ALL EXACT CHECKS PASSED
