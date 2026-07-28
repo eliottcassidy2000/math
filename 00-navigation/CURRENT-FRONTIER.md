@@ -123,19 +123,18 @@ the reverse orientation.  The affine graph is still imposed rather than
 decoded, and neither the THM-2625 allocation/current nor a second semantic
 root has been transported to this clock.
 
-THM-2615/2618 show that Radon restriction and a free Möbius orbit still do not
-identify the distinct whole head `A_h(x)A_h(T^N x)` (MISTAKE-300).
-
-On the endpoint side, THM-2620 restores the determinant discarded by target
-difference, and THM-2625 proves one canonical current fills all `28,561`
-endpoint cells and all `2,016` nondegenerate parabolic sectors.  Audited
-THM-2634 proves that its two factors carry separate digits `(c_L,c_R)`: the
-neutral character recovers the old current, but the matched diagonal requires
-a pair twist and a physical transverse section.  The target is
-a positive chronological lift putting the natural-extension carry and one
-surviving endpoint sector on the same whole-head carrier, then gluing it
-through adjacent clocks to a semantic root.  Signed tomography, marginals,
-and numerical diagonals do not suffice.  Ledger `165`.
+THM-2615/2618 show that Radon restriction and a free Möbius orbit do not
+identify the whole head (MISTAKE-300).  THM-2620/2625 restore the endpoint
+determinant and fill all endpoint/parabolic cells; THM-2634 keeps separate
+digits `(c_L,c_R)` but still needs a pair twist and physical transverse
+section.  THM-2642 then saturates every eleven-sheet support, while THM-2645
+retains all charged colours in exact multiplicity.  Audited THM-2647 proves
+one absolute endpoint two-set uniquely deconvolves the other with unavoidable
+signed norm `13/2`; THM-2648 supplies two minimal rainbow charts covering all
+thirteen carries.  The live target is now a nonnegative same-base transition
+whose common-middle return selects the `C13` origin via THM-2644 and makes
+rainbow edge restriction physical.  Marginals, support, and signed inversion
+do not supply that table.  Ledger `165`.
 
 ### Independent routes that remain live
 
