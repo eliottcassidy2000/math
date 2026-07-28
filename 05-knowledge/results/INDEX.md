@@ -93,7 +93,7 @@
   three-edge chronology is empty.  THM-2682 independently gives the stronger
   central-arrival proof of that nilpotence; this companion's lasting content
   is the complete sharp two-edge cospan atlas.  Secondary hashes begin
-  `18705509` / `75e1733b`.
+  `a3f8d6ce` / `75e1733b`.
 - `lrc14_dilation_canonical_unit_atlas_no_go_20260728.py` -> matching `.out`
   [VERIFIED-EXACT SCOUT; THM-2680 INPUT; NOT A PHYSICAL FIBRE PRODUCT].
   Under only the numerical dilation handoff `j'=h`, the state-independent

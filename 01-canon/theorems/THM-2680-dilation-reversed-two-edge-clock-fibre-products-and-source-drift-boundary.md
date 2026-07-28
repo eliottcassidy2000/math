@@ -38,7 +38,7 @@ script_sha256: 56347893caa028a8d9f1b72c6e886dd38c617019f53e746e966bee65cb91a2ad
 output_sha256: 1e7fb8babc74b52a4c18e05ff3604fae3282641df6bb4392a14db5bde266701a
 secondary_script: 04-computation/lrc14_clock_handoff_d_pullback_scout.py
 secondary_output: 05-knowledge/results/lrc14_clock_handoff_d_pullback_scout.out
-secondary_script_sha256: 1870550958dbff99122c1c222fc6719de6b971341b50dba59bb889e1a7baab0d
+secondary_script_sha256: a3f8d6ced6ded72ca4b4d4c00b6f0419b1960632346f6a561a49f08469948f3d
 secondary_output_sha256: 75e1733bee6d1bd25d857e0d989c0f0730a9d3676ccd158bacc51576fbecaffd
 referee_engine: 04-computation/lrc14_thm2670_physical_reversed_two_edge_scout.py
 referee_script: 04-computation/lrc14_clock_handoff_d_pullback_independent_referee.py
@@ -342,8 +342,8 @@ triples `(21)`.  Let `C` denote this common set.  Then
 ```
 
 Consequently there are no `(a,b,c),(b,c,d)` in `C`.  This gives an independent
-finite-atlas proof of THM-2682's structural conclusion: any positive three-edge
-event
+finite-atlas proof of THM-2682's structural conclusion: any positive
+three-event product
 
 ```text
 E_0 intersect D^(-1)E_1 intersect D^(-2)E_2              (31)

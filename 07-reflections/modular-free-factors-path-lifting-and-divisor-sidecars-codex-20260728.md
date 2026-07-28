@@ -1,7 +1,7 @@
 ---
 title: "Two and three are local generators; the theorem lives in the extension data"
 date: 2026-07-28
-status: RESEARCH SYNTHESIS FROM PROVED THM-2595/2596/2646/2680/2681/2682; NO LRC OR JACOBIAN CLOSURE
+status: RESEARCH SYNTHESIS FROM PROVED THM-2595/2596/2646/2680/2681/2682 AND SCOPED THM-2672 CANDIDATE SIGNAL; NO LRC OR JACOBIAN CLOSURE
 source: root-2026-07-28-modular-path-lifting-synthesis
 ---
 
@@ -148,9 +148,12 @@ The fixed arrival-six `D` chronology is finished by THM-2682.  Decorating its
 edges cannot create a missing two-simplex.  The next lawful target is a
 **configuration-switching** correspondence: change the arrival chart or the
 handoff itself, retain the predecessor/carry label, and ask for one positive
-three-event fibre.  The reserved THM-2672 slope-seven carry atlas is relevant
-only after promotion; its current signal concerns large simplices in the
-carry direction, not temporal path lifting.  The cheapest experiment is a
+three-event fibre.  The `PROVED CANDIDATE + VERIFIED-EXACT` THM-2672 signal is
+the higher-nerve version of the same warning: retaining source carry gives
+thirteen disjoint filled `Delta^11` pieces, while forgetting it manufactures
+a coarse `boundary Delta^12`.  It is not a proved dependency and its
+configuration-switching thirteen-fold problem remains open.  The cheapest
+experiment is a
 bigraded incidence table
 
 ```text
