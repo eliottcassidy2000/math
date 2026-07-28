@@ -1,0 +1,34 @@
+degree-22 BCD weighted-scale Hensel probe
+universal_resultant_content=28344976
+universal_terms=60
+universal_degrees=t:10,v:5
+universal_t_support=0,2,3,4,5,6,7,8,9,10
+bcd_terms=44
+constant_v_leading=-88239118492602
+fixed_quintic_degree=5
+fixed_quintic_irreducible=True
+fixed_quintic_squarefree=True
+root_field_degree=5
+root_field_irreducible=True
+root_order11_equations=5
+root_order11_rank=4
+root_nonzero_maximal_minors=2
+root_first_minor_degree=4
+root_first_minor_terms=5
+root_product_controls=11
+root_minor_coprime_to_field_modulus=True
+pair_field_degree=10
+pair_field_irreducible=True
+pair_order11_equations=5
+pair_order11_rank=4
+pair_nonzero_maximal_minors=2
+pair_first_minor_degree=9
+pair_first_minor_terms=10
+pair_product_controls=11
+pair_minor_coprime_to_field_modulus=True
+order11_support=c^3,c*d^2,c*d,c
+line_factor_scheme_for_c_nonzero=EMPTY
+quadratic_factor_scheme_for_c_nonzero=EMPTY
+bcd_eliminant_absolutely_irreducible_for_c_nonzero=True
+trajectory_closure_requires_separate_uniform_genus_or_rigidity_gate=True
+ALL CHECKS PASSED
