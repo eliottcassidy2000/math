@@ -2,8 +2,8 @@
 id: THM-2789
 title: "Interval Gram tomography and graceful gap-tail quadratic detector"
 status: >
-  PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-  AUDIT.  For intervals on a finite line, every nonempty higher
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  For intervals
+  on a finite line, every nonempty higher
   intersection equals the minimum pairwise Gram entry.  Boolean Mobius
   inversion therefore reconstructs the complete incidence-column
   multiset from the pairwise Gram matrix and ambient length.  Applied to a
@@ -27,8 +27,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2789 -- interval Gram tomography and graceful gap-tail quadratic detector
 
-**PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT; AWAITING INDEPENDENT HOSTILE
-AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2787 turns one-leaf graceful extension into a suffix-column problem in
 a consecutive-ones matrix.  A priori that still appears to require the
@@ -274,7 +273,7 @@ python -O 04-computation/interval_gram_gap_tail_tomography_thm2789.py
 The script uses explicit exceptions and no truth-bearing assertions.
 
 ```text
-PROVED HERE (candidate):
+PROVED HERE:
   quantitative interval Helly identity;
   complete incidence-column reconstruction from (G,N);
   exact graceful suffix-column count from the gap Gram matrix;
@@ -292,5 +291,9 @@ NOT PROVED:
   a Keller, JC(2), DC(2), knot, or tournament consequence.             (21)
 ```
 
-QED, conditional only on candidate status promotion after exact replay and
-independent hostile audit.
+The independent hostile audit rederived the quantitative Helly step,
+Möbius signs, internal/exterior graceful-gap typing, and all three failure
+boundaries.  It independently reproduced the finite counts, normal and
+optimized transcript, LF-normalized hashes, and documentation gate.
+
+QED.
