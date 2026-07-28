@@ -2,22 +2,29 @@
 id: THM-2779
 title: "Bockstein--symplectic decoder/frame torsor and Heisenberg root-degree gate"
 status: >
-  RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING
-  INDEPENDENT AUDIT.  The THM-2771 augmentation decoders and the THM-2772
-  normalized transverse frames are exact affine F13-torsors with the same
-  gauge-invariant -aN7 transgression.  Their determinant face is the central
-  phase of H_13: it survives on the thirteen-root coefficient space, dies
-  after forgetting phases to Boolean root permutations, and first admits a
-  faithful permutation carrier in degree 169, exactly the endpoint-origin
-  fibre size of THM-2772.  After a frame and two-digit section are chosen,
-  this action is exactly the carry-suppressed H_13 action on Z/169, whose
-  central step is +13 and whose +1 odometer differs at the carry wall.  A
-  flat dilation-natural target-to-root map must vanish; a graded digit lift
-  is the sharp survivor.  No physical
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The THM-2771
+  augmentation decoders and the THM-2772 normalized transverse frames are
+  exact affine F13-torsors with the same gauge-invariant -aN7 transgression.
+  Their determinant face is the central phase of H_13: it survives on the
+  thirteen-root coefficient space, dies after forgetting phases to Boolean
+  root permutations, and first admits a faithful permutation carrier in
+  degree 169, exactly the endpoint-origin fibre size of THM-2772.  All
+  62,377,224 normalized endpoint squares pass the exact coefficient gate.
+  After a frame and two-digit section are chosen, this action is exactly the
+  carry-suppressed H_13 action on Z/169, whose central step is +13 and whose
+  +1 odometer differs at the carry wall.  A flat dilation-natural
+  target-to-root map must vanish; a graded digit lift is the sharp survivor.
+  No physical
   same-ancestry lift, semantic edge, row exclusion, or LRC(14) conclusion is
-  proved.  Until independent promotion, no proved result may depend on this
-  candidate.
+  proved.
 source: root/bockstein-symplectic-twin-transgression-2026-07-28
+audit: >
+  root/audit-2779-2026-07-28 independently checked the decoder/frame torsors,
+  Heisenberg and two-digit odometer actions, permutation-degree gate,
+  dilation boundary, THM-2625 import signs and validity gates, both 28,392
+  endpoint-edge banks per field, the 62,377,224-square reduction, witnesses,
+  Pluecker identities, characteristic-zero inference, all four LF hashes,
+  and both companions under normal/-O/stored replay: ACCEPT.
 depends_on:
   - THM-2771-joint-c7-c13-right-wing-mixed-spectrum-and-commuting-square-no-go
   - THM-2772-carrier-allocation-pullback-k4-segre-and-mixed-face-obstruction
@@ -43,8 +50,7 @@ hash_basis: LF-normalized bytes
 
 # THM-2779 -- the twin transgressions have the same gauge space, but not yet the same carrier
 
-**RESERVED / PROOF-COMPLETE CANDIDATE + VERIFIED-EXACT / AWAITING
-INDEPENDENT AUDIT.**
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
 
 THM-2771 and THM-2772 independently reached the same seven-chart correction:
 
@@ -600,7 +606,15 @@ checks all `28,392` nonzero source edges and all `28,392` nonzero target
 edges in each field, and thereby certifies the `62,377,224` normalized
 endpoint squares in Section 5.1.
 
+An independent hostile audit reconstructed both affine torsors, the
+Heisenberg commutator and minimum permutation degree, the two-digit
+odometer conjugacy and carry wall, and the dilation-natural zero gate.  It
+also rederived the secondary endpoint DFT signs and factorization, checked
+the two exact edge banks and universal-square reduction, replayed both
+companions under normal and optimized Python against their stored outputs,
+and verified all four LF-normalized hashes.
+
 No physical same-ancestry endpoint lift, root-deck map, semantic transition,
 positive current, scalar-row exclusion, or LRC(14) conclusion is proved.
 
-**Awaiting independent audit; not QED.**
+QED.
